@@ -1,0 +1,13 @@
+
+span.C { font-size:2em; color:green; }
+span.V { vertical-align:super; font-size:0.8em; color:red; }
+span.addedArticle { color:grey; }
+span.addedCopula { color:pink; }
+span.addedDirectObject { color:brown; }
+span.addedExtra { color:lightGreen; }
+span.addedOwner { color:darkOrchid; }
+span.added { color:darkOrange; }
+span.ul { color:darkGrey; }
+p.rem { font-size:0.8em; color:grey; }
+p.mt1 { font-size:1.8em; }
+p.mt2 { font-size:1.3em; }
