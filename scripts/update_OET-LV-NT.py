@@ -51,7 +51,7 @@ from BibleOrgSys.Misc import CompareBibles
 LAST_MODIFIED_DATE = '2022-09-06' # by RJH
 SHORT_PROGRAM_NAME = "Update_OET-LV-NT"
 PROGRAM_NAME = "Update OET-LV New Testament"
-PROGRAM_VERSION = '0.10'
+PROGRAM_VERSION = '0.11'
 programNameVersion = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 debuggingThisModule = False
@@ -146,10 +146,10 @@ INDEX_HTML = '''<!DOCTYPE html>
         If you have difficulty following the names in the <em>Literal Version</em>,
         you can always look across to the <em>Readers’ Version</em>.
         (Most English readers looking at names in the Bible all the way from <i>Jericho</i> to <i>Jesus</i>
-        would have no idea that there's no <b>J</b> letter or sound in either Hebrew or Greek,
-        plus there's absolutely no such name as <i>James</i> in the New Testament!)</li>
+        would have no idea that there’s no <b>J</b> letter or sound in either Hebrew or Greek,
+        plus there’s absolutely no such name as <i>James</i> in the New Testament!)</li>
     <li>In addition to wanting to get names and placenames more accurate,
-        we've also attempted to modernise the spelling (transliterations) of these names,
+        we’ve also attempted to modernise the spelling (transliterations) of these names,
         e.g., using <b>f</b> instead of <b>ph</b>, so <i>Epafras</i> instead of <i>Epaphras</i>.</li>
     <li>With regular words, we’ve tried to do the opposite,
         i.e., to use less Greek rather than more wherever possible.
@@ -189,7 +189,7 @@ INDEX_HTML = '''<!DOCTYPE html>
         Added words like this are marked with a <span class="addedExtra">light colour</span>.</li>
     <li>If we have an original construction like <i>God spoke by son</i> (from Heb 1:2),
         in English we need to add a word like <i>God spoke by <span class="addedArticle">the</span> son</i> or <i>God spoke by <span class="addedOwner">his</span> son</i>.
-        In the latter case (where we don't just choose an article like <i><span class="addedArticle">the</span></i>),
+        In the latter case (where we don’t just choose an article like <i><span class="addedArticle">the</span></i>),
         we mark these added words with a <span class="addedOwner">light colour</span>.</li>
     <li>Other added words not in the above categories are also marked with a <span class="added">light colour</span>.</li>
     <li>All of this colouring is to be completely open by helping the reader to be able to see where the translators have chosen to
