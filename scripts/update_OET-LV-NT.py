@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-09-06' # by RJH
+LAST_MODIFIED_DATE = '2022-09-07' # by RJH
 SHORT_PROGRAM_NAME = "Update_OET-LV-NT"
 PROGRAM_NAME = "Update OET-LV New Testament"
-PROGRAM_VERSION = '0.11'
+PROGRAM_VERSION = '0.12'
 programNameVersion = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 debuggingThisModule = False
@@ -116,19 +116,22 @@ INDEX_HTML = '''<!DOCTYPE html>
         We suggest reading the <em>Readers’ Version</em>, and if something stands out and you think in your mind
         <i>Does it really say that?</i> or <i>Could it really mean that?</i>,
         then flick your eyes to the <em>Literal Version</em> and see for yourself what’s really there in the original texts.</p>
+      <p>On the other hand if you’ve been reading the Bible for a few decades already,
+        maybe it would be fun to work through the <em>Literal Version</em> to get fresh insight
+        into what’s actually written there in those original languages.</p>
   <h3>Goals</h3>
     <p>Put simply, the goal of the <em>Open English Translation</em> is simply to make the Bible more accessible
-        to this current generation with the best of an easy-to-understand <em>Readers’ Version</em>
+        to this current generation with the best of a free-and-open easy-to-understand <em>Readers’ Version</em>
         alongside a faithful <em>Literal Version</em> so that you yourself can checkout what was said and what is interpreted.</p>
   <h3>Distinctives</h3>
     <p>The OET has the following distinguishing points:</p>
-    <ul><li>A <em>Literal Version</em> and an easy-to-understand <em>Readers’ Version</em> side-by-side</li>
+    <ul><li>An easy-to-understand <em>Readers’ Version</em> side-by-side with a very <em>Literal Version</em></li>
     <li>A generous open license so that the <em>Open English Translation</em> can be
         freely used in any Bible app or website, or printed in your church Bible-study notes
         without even needing to request permission.</li>
     <li>The <em>Literal Version</em> has the minimum number of interpreted extras,
         so we’ve added basic sentence punctuation (mostly commas and periods/fullstops).
-        The the New Testament has no question or exclamation marks, no paragraphs,
+        The New Testament has no question or exclamation marks, no paragraphs,
         no speech marks (even the King James Bible didn’t have these), and no section headings.
         A limited number of footnotes relate mostly to the text of the source manuscripts
         that the OET-LV is translated from.</li>
@@ -147,7 +150,7 @@ INDEX_HTML = '''<!DOCTYPE html>
         you can always look across to the <em>Readers’ Version</em>.
         (Most English readers looking at names in the Bible all the way from <i>Jericho</i> to <i>Jesus</i>
         would have no idea that there’s no <b>J</b> letter or sound in either Hebrew or Greek,
-        plus there’s absolutely no such name as <i>James</i> in the New Testament!)</li>
+        plus there’s absolutely no such name as <i>James</i> in the New Testament manuscripts!)</li>
     <li>In addition to wanting to get names and placenames more accurate,
         we’ve also attempted to modernise the spelling (transliterations) of these names,
         e.g., using <b>f</b> instead of <b>ph</b>, so <i>Epafras</i> instead of <i>Epaphras</i>.</li>
@@ -155,6 +158,11 @@ INDEX_HTML = '''<!DOCTYPE html>
         i.e., to use less Greek rather than more wherever possible.
         So a word like <i>baptise</i> (which is an adapted transliteration of the Greek verb),
         actually gets translated, so this example becomes <i>immerse</i>.</li>
+    <li><i>Italics</i> are only used for <em>emphasis</em>, not to indicate <i>added words</i> as historically done in
+        older translations due to limitations of the original printing processes.
+        The <em>OEM</em> fixes the problem where most modern printing uses <i>italics</i> for <em>emphasis</em>
+        whereas older Bibles use <i>italics</i> for the words which should actually be <b>deemphasied</b>,
+        i.e., the words which actually <b>aren’t</b> in the original manuscripts!</li>
     </ul>
   <h3>Key for the OET-LV</h3>
     <p>You will notice the the <em>Literal Version</em> looks different from most Bibles that you’re used to:
@@ -172,7 +180,9 @@ INDEX_HTML = '''<!DOCTYPE html>
         is definite or indefinite.
         Other languages don’t necessarily work the same way.
         If we have to add an article to make the English sound correct, we indicate this by greying it,
-        e.g., <em><span class="addedArticle">the</span> man</em>.</li>
+        e.g., <em><span class="addedArticle">the</span> man</em>.
+        (We use lighter colours to deemphasise added words like these rather than using
+        <i>italics</i> which are mostly used these days for emphasis.)</li>
     <li>A copula is a word that links a subject and its complement (or description),
         e.g., the word <i><span class="addedCopula">is</span></i> in the sentence <i>The house <span class="addedCopula">is</span> white.</i>
         Other languages don’t necessarily work the same way and can say things like
@@ -194,7 +204,7 @@ INDEX_HTML = '''<!DOCTYPE html>
     <li>Other added words not in the above categories are also marked with a <span class="added">light colour</span>.</li>
     <li>All of this colouring is to be completely open by helping the reader to be able to see where the translators have chosen to
         add words to the Hebrew or Greek in order to make the English sound slightly better,
-        although this has been kept to an absolute minimum in the Literal Version.</li>
+        although this has been kept to an absolute minimum in the <em>Literal Version</em>.</li>
     <li>Where it is determined that a group of words was either definitely or most likely not in the original manuscripts (autographs),
         they are omitted in the OET-LV without any notes.
         These manuscript decisions were mostly made by the authors of the two main works that we relied on to translate
@@ -202,7 +212,11 @@ INDEX_HTML = '''<!DOCTYPE html>
     </ul>
   <h3>Acknowledgements</h3>
     <p>A work like this could not be done with building on the work of so many that have gone before, including:</p>
-    <ul><li>Those who took the time to write down their interactions with God,
+    <ul><li>The creator God who communicates with us in various ways,
+        but who specifically inspired the writing of the Scriptures
+        and caused it to be preserved throughout the millenia
+        despite the best efforts of some who tried to destroy them.</li>
+    <li>Those who took the time to write down their interactions with God,
         beginning with Moses and those before him who wrote down their experiences even though making the writing materials was so much work,
         all the way through to the disciples and others who wrote of their interactions with Jesus the Messiah, and the Holy Spirit.</li>
     <li>Those who faithfully copied and carefully stored those manuscripts over the centuries
@@ -218,11 +232,12 @@ INDEX_HTML = '''<!DOCTYPE html>
         which is also given to the world under a generous open licence.</li>
     </ul>
   <h3>Status</h3>
-    <p>English sentences have more limitation on their word order than Greek sentences do.
+    <p>English sentences have more limitations on their word order than Greek sentences do.
         So any word-for-word Greek literal translation has to be reordered to be readable in English.
         Currently, the following books (just over 50% of the NT) have been reordered:
         <b>Mat, Mark, Luke, John, Acts, 1 Peter, 2 Peter, 3 John, and Jude</b>,
-        leaving the following books which have not yet been reordered and will therefore be even harder to read:
+        leaving the following books which have not yet been reordered
+        and will therefore be even harder to read in the <em>Literal Version</em>:
         Rom, 1&2 Cor, Gal, Eph, Php, Col, 1&2 Thess, 1&2 Tim, Titus, Phlm, Heb, and 1&2 John.</p>
     <p>After completing sentence reordering and fixing capitalisation and punctuation,
         we then plan to do more investigation into word concordance.
@@ -233,7 +248,7 @@ INDEX_HTML = '''<!DOCTYPE html>
     <p>These web pages are a preliminary preview into a work still in progress.
         The <em>OET Literal Version</em> is not yet finished, and not yet publicly released,
         but we need to have it available online for easy access for our checkers and reviewers.
-        If you are reading this, and notice and problems or issues,
+        If you are reading this, and notice problems or issues,
         please do contact us by <a href="mailto:Freely.Given.org@gmail.com?subject=OET-LV Feedback">email</a>.
         Thanks.</p>
 </body></html>
