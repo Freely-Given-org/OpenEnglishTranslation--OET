@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-09-07' # by RJH
+LAST_MODIFIED_DATE = '2022-09-09' # by RJH
 SHORT_PROGRAM_NAME = "Update_OET-LV-NT"
 PROGRAM_NAME = "Update OET-LV New Testament"
-PROGRAM_VERSION = '0.12'
+PROGRAM_VERSION = '0.13'
 programNameVersion = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 debuggingThisModule = False
@@ -150,7 +150,8 @@ INDEX_HTML = '''<!DOCTYPE html>
         you can always look across to the <em>Readers’ Version</em>.
         (Most English readers looking at names in the Bible all the way from <i>Jericho</i> to <i>Jesus</i>
         would have no idea that there’s no <b>J</b> letter or sound in either Hebrew or Greek,
-        plus there’s absolutely no such name as <i>James</i> in the New Testament manuscripts!)</li>
+        plus there’s absolutely no such name as <i>James</i> in the New Testament manuscripts!
+        xxx)</li>
     <li>In addition to wanting to get names and placenames more accurate,
         we’ve also attempted to modernise the spelling (transliterations) of these names,
         e.g., using <b>f</b> instead of <b>ph</b>, so <i>Epafras</i> instead of <i>Epaphras</i>.</li>
@@ -210,6 +211,27 @@ INDEX_HTML = '''<!DOCTYPE html>
         These manuscript decisions were mostly made by the authors of the two main works that we relied on to translate
         the OET from—see the acknowledgements below for more details.)</li>
     </ul>
+  <h3>Biblical names</h3>
+    <p>Note that where Hebrew or Greek transliterations are given,
+        Engish speakers will have the most success pronouncing these names if you
+        look up the pronounciation of the five “pure” Spanish vowels in your search engine.
+        Individual vowels should be pronounced in this way,
+        e.g., each of the four vowels in <i>Eleazar</i>.</p>
+    <p>Macrons (overlines over the vowels, like ē or ō) indicate lengthened vowels,
+        so the pronounciation is the same as the Spanish vowels,
+        but just prolonged.</p>
+    <p>The vowel <a href="https://en.wikipedia.org/wiki/Schwa">schwa</a> <i>ə</i>
+        should be regarded as a fleeting (very short and unstressed), neutral vowel
+        which is the minimal vowel required to linguistically join the surrounding consonants
+        e.g., in <i>Yəhūdāh</i>.</p>
+    <p>Dipthongs (e.g., ai, au, ou)
+        are a limited set of two vowels,
+        where one vowel glides into the other,
+        so even though the spelling of a dipthong is two letters,
+        together they are the centre of only one syllable.<p>
+    <p>We use the symbol ' to mark a <a href="https://en.wikipedia.org/wiki/Glottal_stop">glottal stop<a/>
+        which is the sound that some UK speakers put in the middle of the word <i>butter</i> (ba'a),
+        so <i>Abra'am</i> (from the Greek) is three distinct syllables—that's not a long a.</p>
   <h3>Acknowledgements</h3>
     <p>A work like this could not be done with building on the work of so many that have gone before, including:</p>
     <ul><li>The creator God who communicates with us in various ways,
@@ -262,7 +284,7 @@ span.addedCopula { color:pink; }
 span.addedDirectObject { color:brown; }
 span.addedExtra { color:lightGreen; }
 span.addedOwner { color:darkOrchid; }
-span.added { color:darkOrange; }
+span.added { color:bisque; }
 span.ul { color:darkGrey; }
 p.rem { font-size:0.8em; color:grey; }
 p.mt1 { font-size:1.8em; }
