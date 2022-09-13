@@ -48,13 +48,13 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-09-09' # by RJH
+LAST_MODIFIED_DATE = '2022-09-13' # by RJH
 SHORT_PROGRAM_NAME = "Update_OET-LV-NT"
 PROGRAM_NAME = "Update OET-LV New Testament"
 PROGRAM_VERSION = '0.13'
-programNameVersion = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
+PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
-debuggingThisModule = False
+DEBUGGING_THIS_MODULE = False
 
 
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module
@@ -307,7 +307,7 @@ END_HTML = '</body></html>\n'
 whole_NT_html = ''
 
 def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> (str, str, str):
-    fnPrint( debuggingThisModule, f"convert_USFM_to_simple_HTML( ({len(usfm_text)}) )" )
+    fnPrint( DEBUGGING_THIS_MODULE, f"convert_USFM_to_simple_HTML( ({len(usfm_text)}) )" )
 
     links_html = f'<p>__PREVIOUS__<a href="index.html">OET-LV Index</a>__NEXT__{EM_SPACE}Whole <a href="OET-LV.html">New Testament</a> (for easy searching, etc.)</p>'
 
@@ -343,7 +343,7 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> (str, str, str):
         elif marker == 'v':
             try: V, rest = rest.split( ' ', 1 )
             except ValueError: V, rest = rest, ''
-            assert V.isdigit()
+            assert V.isdigit(), f"Expected a verse number digit with '{V=}' '{rest=}'"
             # Put sentences on new lines
             rest = rest.replace( '?)', 'COMBO' ) \
                         .replace( '.', '.<br>\n&nbsp;&nbsp;' ) \
@@ -369,20 +369,20 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> (str, str, str):
 
 global genericBookList
 def copy_in_NT_from_ScriptedBibleEditor() -> None:
-    fnPrint( debuggingThisModule, "copy_in_NT_from_ScriptedBibleEditor()" )
+    fnPrint( DEBUGGING_THIS_MODULE, "copy_in_NT_from_ScriptedBibleEditor()" )
     numFilesCopied = 0
     for BBB in genericBookList: # includes intro, etc.
         if BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB ):
             filename = f'OET-LV_{BBB}.usfm'
-            vPrint( 'Verbose', debuggingThisModule, f"  About to copy {BBB} file {filename} from {OETUSFMInputFolderPath} to {OETUSFMOutputFolderPath}")
+            vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  About to copy {BBB} file {filename} from {OETUSFMInputFolderPath} to {OETUSFMOutputFolderPath}")
             shutil.copy2( OETUSFMInputFolderPath.joinpath(filename), OETUSFMOutputFolderPath )
             numFilesCopied += 1
-    vPrint( 'Normal', debuggingThisModule, f"Finished copying {numFilesCopied} NT books\n  from {OETUSFMInputFolderPath}\n  to {OETUSFMOutputFolderPath}." )
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Finished copying {numFilesCopied} NT books\n  from {OETUSFMInputFolderPath}\n  to {OETUSFMOutputFolderPath}." )
 
 
 def produce_NT_HTML_files() -> None:
     global whole_NT_html
-    fnPrint( debuggingThisModule, "produce_NT_HTML_files()" )
+    fnPrint( DEBUGGING_THIS_MODULE, "produce_NT_HTML_files()" )
 
     numBooksProcessed = 0
     for BBB in genericBookList: # includes intro, etc.
@@ -423,14 +423,14 @@ def produce_NT_HTML_files() -> None:
                                 f'<p><a href="index.html">OET-LV Index</a></p>\n{whole_NT_html}\n'
                                 f'<p><a href="index.html">OET-LV Index</a></p>\n{END_HTML}' )
 
-    vPrint( 'Normal', debuggingThisModule, f"Finished processing {numBooksProcessed} HTML books." )
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Finished processing {numBooksProcessed} HTML books." )
 
 
 def main():
     """
     Main program to handle command line parameters and then run what they want.
     """
-    BibleOrgSysGlobals.introduceProgram( __name__, programNameVersion, LAST_MODIFIED_DATE )
+    BibleOrgSysGlobals.introduceProgram( __name__, PROGRAM_NAME_VERSION, LAST_MODIFIED_DATE )
 
     global genericBookList
     genericBibleOrganisationalSystem = BibleOrganisationalSystem( 'GENERIC-KJV-ENG' )

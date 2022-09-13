@@ -52,9 +52,9 @@ LAST_MODIFIED_DATE = '2022-09-01' # by RJH
 SHORT_PROGRAM_NAME = "Backfill_OET-LV"
 PROGRAM_NAME = "Backfill OET-LV from ULT"
 PROGRAM_VERSION = '0.13'
-programNameVersion = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
+PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
-debuggingThisModule = False
+DEBUGGING_THIS_MODULE = False
 
 
 ULTFolderPath = BibleOrgSysGlobals.DEFAULT_WRITEABLE_OUTPUT_FOLDERPATH.joinpath( 'unfoldingWordAlignedTexts/ULT_TextOnly_USFM/' )
@@ -73,10 +73,10 @@ def get_ULT_verse( BBB:str, C:str, V:str ) -> str:
     """
     """
     global loaded_ULT_BBB, loaded_ULT_dict
-    fnPrint( debuggingThisModule, f"get_ULT_verse( {BBB}, {C}, {V} )" )
+    fnPrint( DEBUGGING_THIS_MODULE, f"get_ULT_verse( {BBB}, {C}, {V} )" )
 
     if loaded_ULT_BBB != BBB:
-        vPrint( 'Info', debuggingThisModule, f"  Loading ULT {BBB}…")
+        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading ULT {BBB}…")
         loaded_ULT_dict = {}
         nn = BibleOrgSysGlobals.loadedBibleBooksCodes.getReferenceNumber( BBB )
         if nn > 39: nn += 1 # USFM has MAT at 41, not 40
@@ -96,12 +96,12 @@ def get_ULT_verse( BBB:str, C:str, V:str ) -> str:
                 if marker == 'c':
                     ultC, ultV = rest, '0'
                     if not ultC.isdigit():
-                        vPrint( 'Quiet', debuggingThisModule, f"  ULT {BBB} {ultC} has non-digit chapter" )
+                        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  ULT {BBB} {ultC} has non-digit chapter" )
                 elif marker == 'v':
                     vLine = rest
                     ultV, text = vLine.split( ' ', 1 )
                     if not ultC.isdigit():
-                        vPrint( 'Quiet', debuggingThisModule, f"  ULT {BBB} {ultC}:{ultV} has non-digit verse" )
+                        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  ULT {BBB} {ultC}:{ultV} has non-digit verse" )
                     loaded_ULT_dict[(ultC,ultV)] = text
                 elif marker == 'p':
                     haveP = True
@@ -116,7 +116,7 @@ def get_ULT_verse( BBB:str, C:str, V:str ) -> str:
 
     try: return loaded_ULT_dict[(C,V)]
     except KeyError: # presumably a versification mismatch
-        if V!='0': vPrint( 'Quiet', debuggingThisModule, f"Seems ULT doesn't have {BBB} {C}:{V} -- is this a versification mismatch?")
+        if V!='0': vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Seems ULT doesn't have {BBB} {C}:{V} -- is this a versification mismatch?")
         return ''
 #end of get_ULT_verse
 
@@ -125,7 +125,7 @@ def adjust_ULT_verse( BBB:str, C:str, V:str, raw_text:str ) -> str:
     Do some of the changes between ULT standards and the OET requirements:
         remove speech marks
     """
-    fnPrint( debuggingThisModule, f"adjust_ULT_verse( {BBB} {C}:{V} {raw_text} )" )
+    fnPrint( DEBUGGING_THIS_MODULE, f"adjust_ULT_verse( {BBB} {C}:{V} {raw_text} )" )
     # print( f"{BBB} {C}:{V} {raw_text}" )
 
     adjusted_text = ( raw_text
@@ -173,7 +173,7 @@ def adjust_ULT_verse( BBB:str, C:str, V:str, raw_text:str ) -> str:
                                 .replace( ';', ',' ) \
                                 .replace( '—', ', ' )
 
-    dPrint( 'Verbose', debuggingThisModule, f"{BBB} {C}:{V} {adjusted_text}" )
+    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{BBB} {C}:{V} {adjusted_text}" )
     return adjusted_text
 # end of adjust_ULT_verse
 
@@ -182,7 +182,7 @@ def backfill_OET_LV( BBB:str ) -> None:
     """
     The function that actually does the work for each book.
     """
-    fnPrint( debuggingThisModule, f"backfill_OET_LV( {BBB} )" )
+    fnPrint( DEBUGGING_THIS_MODULE, f"backfill_OET_LV( {BBB} )" )
 
     nn = BibleOrgSysGlobals.loadedBibleBooksCodes.getReferenceNumber( BBB )
     if nn > 39: nn += 1 # USFM has MAT at 41, not 40
@@ -205,7 +205,7 @@ def backfill_OET_LV( BBB:str ) -> None:
                 # We prepend a special character (~) to indicate a backfilled verse
                 if text := adjust_ULT_verse( BBB, C, V, get_ULT_verse( BBB, C, V ) ):
                     outputLines.append( line ) # The chapter number
-                    vPrint( 'Verbose', debuggingThisModule, f"Replacing empty OET {BBB} {C}:{V} with '{text}'")
+                    vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Replacing empty OET {BBB} {C}:{V} with '{text}'")
                     line = f'\\d ~{text}' # Prepend a tilde to make it clear that this is a back-filled line
                     verseFillCount += 1
         elif line.startswith( '\\v '):
@@ -216,7 +216,7 @@ def backfill_OET_LV( BBB:str ) -> None:
             if not text or text[0]=='~':
                 # We prepend a special character (~) to indicate a backfilled verse
                 text = adjust_ULT_verse( BBB, C, V, get_ULT_verse( BBB, C, V ) )
-                vPrint( 'Verbose', debuggingThisModule, f"Replacing empty OET {BBB} {C}:{V} with '{text}'")
+                vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Replacing empty OET {BBB} {C}:{V} with '{text}'")
                 line = f'\\v {V} ~{text}' # Prepend a tilde to make it clear that this is a back-filled line
                 verseFillCount += 1
         outputLines.append( line )
@@ -230,8 +230,8 @@ def backfill_OET_LV( BBB:str ) -> None:
     with open( OETOutputFolderPath.joinpath(f'{nn:02}{usfmBBB}OET-LV.ESFM'), 'wt' ) as OET_output_file:
         OET_output_file.write( outputText )
 
-    if verseFillCount: vPrint( 'Quiet', debuggingThisModule, f"  Backfilled {verseFillCount:,} empty or updated {BBB} verses" )
-    else: vPrint( 'Quiet', debuggingThisModule, f"  {BBB} appeared to be complete and no backfilling was required  :-)" )
+    if verseFillCount: vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Backfilled {verseFillCount:,} empty or updated {BBB} verses" )
+    else: vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {BBB} appeared to be complete and no backfilling was required  :-)" )
     return verseFillCount
 # end of backfill_OET_LV
 
@@ -240,7 +240,7 @@ def main():
     """
     Main program to handle command line parameters and then run what they want.
     """
-    BibleOrgSysGlobals.introduceProgram( __name__, programNameVersion, LAST_MODIFIED_DATE )
+    BibleOrgSysGlobals.introduceProgram( __name__, PROGRAM_NAME_VERSION, LAST_MODIFIED_DATE )
 
     genericBibleOrganisationalSystem = BibleOrganisationalSystem( 'GENERIC-KJV-ENG' )
     genericBookList = genericBibleOrganisationalSystem.getBookList()
@@ -251,7 +251,7 @@ def main():
         # or BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB ):
             numVersesBackfilled += backfill_OET_LV( BBB )
             numBooksProcessed += 1
-    vPrint( 'Normal', debuggingThisModule, f"Finished processing {numBooksProcessed} books (Backfilled {numVersesBackfilled:,} verses)" )
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Finished processing {numBooksProcessed} books (Backfilled {numVersesBackfilled:,} verses)" )
 # end of backfill_OET-LV.main
 
 if __name__ == '__main__':
