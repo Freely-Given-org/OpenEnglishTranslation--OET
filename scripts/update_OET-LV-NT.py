@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-09-13' # by RJH
+LAST_MODIFIED_DATE = '2022-09-21' # by RJH
 SHORT_PROGRAM_NAME = "Update_OET-LV-NT"
 PROGRAM_NAME = "Update OET-LV New Testament"
-PROGRAM_VERSION = '0.13'
+PROGRAM_VERSION = '0.14'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -256,7 +256,7 @@ INDEX_HTML = '''<!DOCTYPE html>
   <h3>Status</h3>
     <p>English sentences have more limitations on their word order than Greek sentences do.
         So any word-for-word Greek literal translation has to be reordered to be readable in English.
-        Currently, the following books (just over 50% of the NT) have been reordered:
+        Currently, the words in the following books (just over 50% of the NT) have been reordered:
         <b>Mat, Mark, Luke, John, Acts, 1 Peter, 2 Peter, 3 John, and Jude</b>,
         leaving the following books which have not yet been reordered
         and will therefore be even harder to read in the <em>Literal Version</em>:
