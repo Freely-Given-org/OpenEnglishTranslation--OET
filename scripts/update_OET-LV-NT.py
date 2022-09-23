@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-09-21' # by RJH
+LAST_MODIFIED_DATE = '2022-09-22' # by RJH
 SHORT_PROGRAM_NAME = "Update_OET-LV-NT"
 PROGRAM_NAME = "Update OET-LV New Testament"
-PROGRAM_VERSION = '0.14'
+PROGRAM_VERSION = '0.15'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -96,21 +96,24 @@ INDEX_HTML = '''<!DOCTYPE html>
     <a href="OET-LV_JN1.html">Yōannēs/John 1</a> &nbsp;&nbsp;<a href="OET-LV_JN2.html">Yōannēs/John 2</a> &nbsp;&nbsp;<a href="OET-LV_JN3.html">Yōannēs/John 3</a><br>
     <a href="OET-LV_JDE.html">Youdas/Jude</a><br>
     <a href="OET-LV_REV.html">Revelation</a></p>
-  <p>Whole <a href="OET-LV.html">New Testament</a> (for easy searching, etc.)</p>
+  <p>Whole <a href="OET-LV.html">New Testament</a>
+    (long and slower to load, but useful for easy searching, etc.)</p>
   <h2>Introduction</h2>
   <h3>The Open English Translation of the Bible (OET)</h3>
       <p>The <em>Literal Version</em> (OET-LV) forms just one-half of the new, forthcoming <em>Open English Translation</em> of the Bible (OET).
         The other half is the <em>Readers’ Version</em> (OET-RV) which work will resume on in 2023.
         These two versions, side-by-side, make up the OET.</p>
-      <p>So why two versions? Many people ask the question: <i>Which English Bible translation should I use?</i>
-        Well, often the answer is that there’s no single Bible translation which can meet all of the needs of the thoughtful reader.
+      <p>So why two versions? Well, many people ask the question:
+        <i>Which English Bible translation should I use?</i>
+        And often the answer is that there’s no single Bible translation which can meet
+        all of the needs of the thoughtful reader.
         Why not? It’s because we often have two related desires that we need answered:<p>
       <ol><li>What does the original (Hebrew or Greek) text actually say? and</li>
         <li>What did the original writer mean? (i.e., What should we understand from it?)</li></ol>
-      <p>Our traditional answer has always been that it’s best to use two translations—one more literal
+      <p>Our answer has always been that it’s best to use two translations—one more literal
         to give a window into the actual Hebrew or Greek words, and one more <i>dynamic</i>
         that’s easier for us modern readers to understand.</p>
-      <p>So the OET gives both side-by-side, and with the advantage that
+      <p>So the <em>OET</em> gives both side-by-side, and with the advantage that
         both the <em>Literal Version</em> and the <em>Readers’ Version</em>
         <b>have been specifically designed to be used together</b> in this way.
         We suggest reading the <em>Readers’ Version</em>, and if something stands out and you think in your mind
@@ -130,38 +133,41 @@ INDEX_HTML = '''<!DOCTYPE html>
         freely used in any Bible app or website, or printed in your church Bible-study notes
         without even needing to request permission.</li>
     <li>The <em>Literal Version</em> has the minimum number of interpreted extras,
-        so we’ve added basic sentence punctuation (mostly commas and periods/fullstops).
+        so we’ve added basic sentence punctuation (mostly just commas and periods/fullstops).
         The New Testament has no question or exclamation marks, no paragraphs,
         no speech marks (even the King James Bible didn’t have these), and no section headings.
         A limited number of footnotes relate mostly to the text of the source manuscripts
-        that the OET-LV is translated from.</li>
-    <li>The <em>Literal Version</em> retains the original units for all measurements (useful for historical and symbolic studies),
+        that the <em>OET-LV</em> is translated from.</li>
+    <li>The <em>Literal Version</em> retains the original units for all measurements
+        (useful for historical and symbolic studies),
         whereas the <em>Readers’ Version</em> converts them to modern units (easier to understand and visualise).</li>
-    <li>The <em>Literal Version</em> retains the original figurative language (even if it’s not a figure of speech that we are familiar with),
-        whereas the <em>Readers’ Version</em> converts some figures of speech to modern equivalents (easier to understand).</li>
+    <li>The <em>Literal Version</em> retains the original figurative language
+        (even if it’s not a figure of speech that we are familiar with),
+        whereas the <em>Readers’ Version</em> converts some figures of speech to modern equivalents
+        (easier to understand).</li>
     <li>Being a 21<span style="vertical-align:super;font-size:0.8em;">st</span> century translation done in an era
         when there is much more effort in general to respect speakers of other languages
         (including the languages of ethnic minorities in our own countries)
         and to pronounce their names and placenames correctly,
         the <em>OET</em> attempts to do the same for Biblical names and placenames.
-        (This is a little complex when we have both Hebrew and Greek versions of names and placenames.
-        A final strategy is yet to be decided.)
+        (This is a little complex when we have both Hebrew and Greek versions of names and placenames—more below.)
         If you have difficulty following the names in the <em>Literal Version</em>,
         you can always look across to the <em>Readers’ Version</em>.
         (Most English readers looking at names in the Bible all the way from <i>Jericho</i> to <i>Jesus</i>
         would have no idea that there’s no <b>J</b> letter or sound in either Hebrew or Greek,
-        plus there’s absolutely no such name as <i>James</i> in the New Testament manuscripts!
-        xxx)</li>
+        plus there’s absolutely no such name as <i>James</i> in the New Testament manuscripts!)</li>
     <li>In addition to wanting to get names and placenames more accurate,
         we’ve also attempted to modernise the spelling (transliterations) of these names,
-        e.g., using <b>f</b> instead of <b>ph</b>, so <i>Epafras</i> instead of <i>Epaphras</i>.</li>
+        e.g., using <b>f</b> instead of <b>ph</b>, so <i>Epafras</i> instead of <i>Epaphras</i>.
+        (Oddly, even traditional English Bible translations surprisingly
+        do use <i>Felix</i> and <i>Festus</i>.)</li>
     <li>With regular words, we’ve tried to do the opposite,
         i.e., to use less Greek rather than more wherever possible.
         So a word like <i>baptise</i> (which is an adapted transliteration of the Greek verb),
         actually gets translated, so this example becomes <i>immerse</i>.</li>
     <li><i>Italics</i> are only used for <em>emphasis</em>, not to indicate <i>added words</i> as historically done in
         older translations due to limitations of the original printing processes.
-        The <em>OEM</em> fixes the problem where most modern printing uses <i>italics</i> for <em>emphasis</em>
+        The <em>OET</em> fixes the problem where most modern printing uses <i>italics</i> for <em>emphasis</em>
         whereas older Bibles use <i>italics</i> for the words which should actually be <b>deemphasied</b>,
         i.e., the words which actually <b>aren’t</b> in the original manuscripts!</li>
     </ul>
@@ -175,15 +181,17 @@ INDEX_HTML = '''<!DOCTYPE html>
     <li>Words groups with hanging underlines mean that to make natural English,
         we needed to insert the translation of one word into the middle of another,
         e.g., <em>not he<span class="ul">_</span>is<span class="ul">_</span>walking</em> becomes much more natural in English if
-        rearranged to <em>he<span class="ul">_</span>is<span class="ul">_</span> &nbsp;not&nbsp; <span class="ul">_</span>walking</em>.</li>
-    <li>Grey words indicate added articles.
+        rearranged to <em>he<span class="ul">_</span>is<span class="ul">_</span> &nbsp;not&nbsp; <span class="ul">_</span>walking</em>.
+        But we can still figure out from the hanging underlines that the two parts either side of <em>not</em>
+        are translated from a single original language word.</li>
+    <li><span class="addedArticle">Grey</span> words indicate added articles.
         English uses <em>a</em> or <em>the</em> to indicate whether a noun
-        is definite or indefinite.
+        is indefinite or definite.
         Other languages don’t necessarily work the same way.
         If we have to add an article to make the English sound correct, we indicate this by greying it,
         e.g., <em><span class="addedArticle">the</span> man</em>.
-        (We use lighter colours to deemphasise added words like these rather than using
-        <i>italics</i> which are mostly used these days for emphasis.)</li>
+        (We use lighter colours to deemphasise added words like these rather than using <i>italics</i> like most Bibles,
+        because apart from Bibles, <i>italics</i> are mostly used these days for emphasis.)</li>
     <li>A copula is a word that links a subject and its complement (or description),
         e.g., the word <i><span class="addedCopula">is</span></i> in the sentence <i>The house <span class="addedCopula">is</span> white.</i>
         Other languages don’t necessarily work the same way and can say things like
@@ -195,7 +203,8 @@ INDEX_HTML = '''<!DOCTYPE html>
         Added direct objects are marked with a <span class="addedDirectObject">light colour</span>.</li>
     <li>In other languages it may be possible to say something like <i>The having<span class="ul">_</span>fallen</i>.
         In English, we must say something like <i>The <span class="addedExtra">one</span> having<span class="ul">_</span>fallen</i> or <i>The <span class="addedExtra">person</span> having fallen</i>.
-        If the article is marked as plural in the source language, we may be able to say <i>The <span class="addedExtra">ones</span> having<span class="ul">_</span>fallen</i>.
+        If the article and verb are marked as plural in the source language,
+        we may be able to say <i>The <span class="addedExtra">ones</span> having<span class="ul">_</span>fallen</i>.
         If the article is marked as feminine in the source language, we may be able to say <i>The <span class="addedExtra">woman</span> having<span class="ul">_</span>fallen</i>.
         Added words like this are marked with a <span class="addedExtra">light colour</span>.</li>
     <li>If we have an original construction like <i>God spoke by son</i> (from Heb 1:2),
@@ -205,33 +214,75 @@ INDEX_HTML = '''<!DOCTYPE html>
     <li>Other added words not in the above categories are also marked with a <span class="added">light colour</span>.</li>
     <li>All of this colouring is to be completely open by helping the reader to be able to see where the translators have chosen to
         add words to the Hebrew or Greek in order to make the English sound slightly better,
-        although this has been kept to an absolute minimum in the <em>Literal Version</em>.</li>
-    <li>Where it is determined that a group of words was either definitely or most likely not in the original manuscripts (autographs),
-        they are omitted in the OET-LV without any notes.
+        even though this has been kept to an absolute minimum in the <em>Literal Version</em>.</li>
+    <li>In the earliest copies of the original manuscripts,
+        it appears that the scribes marked a small set of words that they considered
+        to refer to <span class="nominaSacra">God</span>.
+        (These markings are known as <a href="https://en.wikipedia.org/wiki/Nomina_sacra"><em>nomina sacra</em></a>
+        or <em>sacred naming</em>.)
+        Most Bible translations do not indicate these special markings,
+        however in the <em>Literal Version</em> we help the reader by making
+        these marked words <span class="nominaSacra">stand out</span>.</li>
+    <li>Where it is determined that a group of words was either definitely or most likely
+        not in the original manuscripts (autographs),
+        they are omitted in the <em>OET-LV</em> without any notes.
         These manuscript decisions were mostly made by the authors of the two main works that we relied on to translate
-        the OET from—see the acknowledgements below for more details.)</li>
+        the <em>OET</em> from—see the acknowledgements below for more details.)</li>
     </ul>
   <h3>Biblical names</h3>
+    <p>As mentioned above, the <em>OET Literal Version</em> goes out of its way
+        to help English speakers to be able to pronounce Biblical names more correctly.
+        Because our English Bible traditions have often come from Hebrew through Koine Greek
+        through Latin with Germanic influence into modern English,
+        what we consider as Biblical names are sometimes quite far from reality.
+        Since most of us prefer it when people pronounce our names correctly,
+        we have made our best attempt at showing the same respect to Biblical characters.
+        Of course different languages have different sets of sounds
+        and also pronounciations have changed over the millenia
+        (think how much our languages have changed in the last few <em>decades</em>)
+        so we will never get perfect pronounciations,
+        but we’ll do better than our traditional Bible translations.</p>
+    <p>As a general rule, even if you started to think of the letter <i>J</i> in
+        Bible names like the Germans pronounce <i>Ja</i> (as <i>Ya</i>),
+        you’d already be taking a big step towards getting Biblical names correct.
+        (This deviation is not any kind of conspiracy—simply an unfortunate accident of history.)<p>
+    <p>In the New Testament, the situation is already complicated by the fact that
+        Old Testament (Hebrew) names have been written as Greek-speakers would think of them.
+        So English <i>Jesus</i>
+        (which you now realise should be pronounced more like <i>Yesus</i>
+        as there’s no <i>j</i> sound in either Hebrew or Greek)
+        is actually more like <i>Yēsous</i> in Greek.
+        But it’s likely that his “parents” (using Hebrew or the related Aramaic/Syrian language at the time)
+        named the child something more like <i>Yəhōshū'a</i>.
+        So which name should we call him in the text?
+        Because the New Testament manuscripts are written in Koine Greek,
+        we have chosen to give preference to the Greek forms of the names.
+        However, the first time a name is used, we show both like <i>Yēsous/(Yəhōshū'a)</i>.
+        Where the name is repeated nearby, we’ll only show the Greek form like <i>Yēsous</i>.
+        (Again, it’s an accident of history that English speakers will name a child <i>Joshua</i>,
+        but would not name him <i>Jesus</i> when they’re really just the same name in different forms.)
     <p>Note that where Hebrew or Greek transliterations are given,
         Engish speakers will have the most success pronouncing these names if you
         look up the pronounciation of the five “pure” Spanish vowels in your search engine.
         Individual vowels should be pronounced in this way,
         e.g., each of the four vowels in <i>Eleazar</i>.</p>
-    <p>Macrons (overlines over the vowels, like ē or ō) indicate lengthened vowels,
+    <p>Macrons (overlines over the vowels, like <i>ē</i> or <i>ō</i>) indicate lengthened vowels,
         so the pronounciation is the same as the Spanish vowels,
         but just prolonged.</p>
     <p>The vowel <a href="https://en.wikipedia.org/wiki/Schwa">schwa</a> <i>ə</i>
+        (in names that come from Hebrew)
         should be regarded as a fleeting (very short and unstressed), neutral vowel
         which is the minimal vowel required to linguistically join the surrounding consonants
         e.g., in <i>Yəhūdāh</i>.</p>
-    <p>Dipthongs (e.g., ai, au, ou)
+    <p>Dipthongs (e.g., <i>ai</i>, <i>au</i>, <i>ei</i>, <i>oi</i>, <i>ou</i>)
         are a limited set of two vowels,
         where one vowel glides into the other,
         so even though the spelling of a dipthong is two letters,
         together they are the centre of only one syllable.<p>
     <p>We use the symbol ' to mark a <a href="https://en.wikipedia.org/wiki/Glottal_stop">glottal stop<a/>
         which is the sound that some UK speakers put in the middle of the word <i>butter</i> (ba'a),
-        so <i>Abra'am</i> (from the Greek) is three distinct syllables—that's not a long a.</p>
+        so <i>Abra'am</i> (from the Greek) is three distinct syllables—those
+        two <i>a</i>’s side-by-side should not be made into a long <i>ā</i>.</p>
   <h3>Acknowledgements</h3>
     <p>A work like this could not be done with building on the work of so many that have gone before, including:</p>
     <ul><li>The creator God who communicates with us in various ways,
@@ -286,6 +337,7 @@ span.addedExtra { color:lightGreen; }
 span.addedOwner { color:darkOrchid; }
 span.added { color:bisque; }
 span.ul { color:darkGrey; }
+span.nominaSacra { font-weight:bold; }
 p.rem { font-size:0.8em; color:grey; }
 p.mt1 { font-size:1.8em; }
 p.mt2 { font-size:1.3em; }
@@ -354,6 +406,8 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> (str, str, str):
         else:
             book_html = f'{book_html}<p>GOT UNEXPECTED{marker}={rest}</p>'
 
+    book_html = book_html.replace( '\\nd ', '<span class="nominaSacra">' ) \
+                .replace( '\\nd*', '</span>' )
     book_html = book_html.replace( '\\add +', '<span class="addedArticle">' ) \
                 .replace( '\\add =', '<span class="addedCopula">' ) \
                 .replace( '\\add ~', '<span class="addedDirectObject">' ) \
