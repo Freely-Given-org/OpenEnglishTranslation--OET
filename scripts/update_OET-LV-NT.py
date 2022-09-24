@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-09-22' # by RJH
+LAST_MODIFIED_DATE = '2022-09-23' # by RJH
 SHORT_PROGRAM_NAME = "Update_OET-LV-NT"
 PROGRAM_NAME = "Update OET-LV New Testament"
-PROGRAM_VERSION = '0.15'
+PROGRAM_VERSION = '0.16'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -59,7 +59,8 @@ DEBUGGING_THIS_MODULE = False
 
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module
 FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos
-OETUSFMInputFolderPath = FG_folderpath.joinpath( 'ScriptedBibleEditor/TestFiles/edited_VLT_USFM/' )
+# OETUSFMInputFolderPath = FG_folderpath.joinpath( 'ScriptedBibleEditor/TestFiles/edited_VLT_USFM/' )
+OETUSFMInputFolderPath = project_folderpath.joinpath( 'derivedTexts/auto_edited_VLT_USFM/' )
 OETUSFMOutputFolderPath = project_folderpath.joinpath( 'translatedTexts/LiteralVersion/' )
 OETHTMLOutputFolderPath = project_folderpath.joinpath( 'derivedTexts/simpleHTML/LiteralVersion/' )
 assert OETUSFMInputFolderPath.is_dir()
@@ -170,6 +171,17 @@ INDEX_HTML = '''<!DOCTYPE html>
         The <em>OET</em> fixes the problem where most modern printing uses <i>italics</i> for <em>emphasis</em>
         whereas older Bibles use <i>italics</i> for the words which should actually be <b>deemphasied</b>,
         i.e., the words which actually <b>aren’t</b> in the original manuscripts!</li>
+    <li>The English <i>Christ</i> is the Koine Greek word
+        for the Hebrew <i>Messiah</i>.
+        (It’s not Jesus’ surname!)
+        It seems to make sense to only use one word rather than using two words for the same thing,
+        so the <em>OET</em> has elected to only use <i>Messiah</i>.
+        However, these words actually have a meaning, just as <i>President</i> is not just a title,
+        but someone who <i>presides</i> over governmental meetings.
+        So going a step further, we have chosen to use the contemporary
+        meaning of the word in the <em>Literal Version</em>.
+        The original meaning is <i>one who is anointed<i/> (by pouring a hornful of oil over them),
+        but we use the derived meaning which is <i>one who is selected/chosen (by God)</i>.</li>
     </ul>
   <h3>Key for the OET-LV</h3>
     <p>You will notice the the <em>Literal Version</em> looks different from most Bibles that you’re used to:
@@ -279,7 +291,7 @@ INDEX_HTML = '''<!DOCTYPE html>
         where one vowel glides into the other,
         so even though the spelling of a dipthong is two letters,
         together they are the centre of only one syllable.<p>
-    <p>We use the symbol ' to mark a <a href="https://en.wikipedia.org/wiki/Glottal_stop">glottal stop<a/>
+    <p>We use the symbol ' to mark a <a href="https://en.wikipedia.org/wiki/Glottal_stop">glottal stop</a>
         which is the sound that some UK speakers put in the middle of the word <i>butter</i> (ba'a),
         so <i>Abra'am</i> (from the Greek) is three distinct syllables—those
         two <i>a</i>’s side-by-side should not be made into a long <i>ā</i>.</p>
@@ -348,7 +360,6 @@ START_HTML = '''<!DOCTYPE html>
 <head>
   <title>__TITLE__</title>
   <meta charset="utf-8">
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="keywords" content="Bible, OET, literal, version">
   <link rel="stylesheet" type="text/css" href="BibleBook.css">
