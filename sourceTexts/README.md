@@ -11,10 +11,13 @@ indicate that we need to update our OET files.
 
 Open Scriptures Hebrew Bible (OSHB)
 
+The [rawOSHB folder](rawOSHB/) contains three files converted from the 39 OSHB
+XML files and hopefully containing all of the Scripture data.
+(They do not contain any of the attribution or other introductory data --
+to see that, go [here](https://github.com/Freely-Given-org/OS-morphhb/blob/master/wlc/Obad.xml) for example.)
+
 ## "New Testament"
 
 Center for New Testament Restoration (CNTR) Statistical Restoration (SR) Greek New Testament (GNT)
 
 Center for New Testament Restoration (CNTR) English Verifiable Literal Translation (VLT)
-
-
