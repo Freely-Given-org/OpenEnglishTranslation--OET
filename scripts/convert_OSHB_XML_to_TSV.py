@@ -25,6 +25,8 @@
 """
 Script extracting the data out of the OSHB XML files
     and putting them into a single TSV table and also a JSON file.
+
+OSHB morphology codes can be found at https://hb.openscriptures.org/parsing/HebrewMorphologyCodes.html.
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple
@@ -42,7 +44,7 @@ from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 LAST_MODIFIED_DATE = '2022-09-26' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OSHB_XML_to_TSV"
 PROGRAM_NAME = "Convert OSHB WLC OT XML into TSV/JSON files"
-PROGRAM_VERSION = '0.52'
+PROGRAM_VERSION = '0.53'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = True
@@ -139,6 +141,7 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
                     lemma = verse_element.attrib.get('lemma')
                     n = verse_element.attrib.get('n')
                     morph = verse_element.attrib.get('morph')
+                    assert morph[0] in 'HA' # Must be Hebrew or Aramaic
                     OS_id = verse_element.attrib.get('id')
                     word = verse_element.text
 
@@ -194,6 +197,7 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
                     halt
             verseArray.append(verse_element_array)
         chapter_array.append(verseArray)
+        assert len(set(id_list)) == len(id_list) # i.e., no duplicate IDs within book
 
     vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    Loaded {len(chapter_array):,} XML chapters." )
 

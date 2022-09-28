@@ -25,29 +25,40 @@
 """
 Script taking our OSHB morpheme table (TSV)
     and adding columns for glossing.
+
+OSHB morphology codes can be found at https://hb.openscriptures.org/parsing/HebrewMorphologyCodes.html.
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple
 from pathlib import Path
-from csv import DictReader
+from csv import DictReader, DictWriter
 from collections import defaultdict
 from datetime import datetime
+import logging
+import ast
+from pprint import pprint
 
-import BibleOrgSysGlobals
-from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
+if __name__ == '__main__':
+    import sys
+    sys.path.insert( 0, '../../BibleOrgSys/' )
+from BibleOrgSys import BibleOrgSysGlobals
+from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
+from BibleOrgSys.OriginalLanguages import Hebrew
+# from BibleOrgSys.OriginalLanguages import HebrewWLCBible
 
 
-LAST_MODIFIED_DATE = '2022-09-26' # by RJH
+LAST_MODIFIED_DATE = '2022-09-28' # by RJH
 SHORT_PROGRAM_NAME = "Prepare_OSHB_for_glossing"
 PROGRAM_NAME = "Prepare OSHB for glossing"
-PROGRAM_VERSION = '0.02'
+PROGRAM_VERSION = '0.20'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = True
 
 
 OSHB_TSV_INPUT_FILEPATH = Path( '../sourceTexts/rawOSHB/OSHB.original.flat.morphemes.tsv' )
-OUTPUT_FOLDERPATH = Path( '../translatedTexts/glossed_OSHB/' )
+PREDONE_GLOSSES_FILEPATH = Path( 'WLCHebrewGlosses.txt' )
+TSV_OUTPUT_FILEPATH = Path( '../translatedTexts/glossed_OSHB/WLC_glosses.morphemes.tsv' )
 
 
 state = None
@@ -57,7 +68,8 @@ class State:
         Constructor:
         """
         self.OSHB_TSV_input_filepath = OSHB_TSV_INPUT_FILEPATH
-        self.outputFolderpath = OUTPUT_FOLDERPATH
+        self.TSV_output_filepath = TSV_OUTPUT_FILEPATH
+        self.WLC_rows = []
     # end of prepare_OSHB_for_glossing.__init__
 
 
@@ -65,7 +77,6 @@ NEWLINE = '\n'
 BACKSLASH = '\\'
 
 NUM_EXPECTED_WLC_COLUMNS = 8
-WLC_tsv_rows = []
 WLC_tsv_column_max_length_counts = {}
 WLC_tsv_column_non_blank_counts = {}
 WLC_tsv_column_counts = defaultdict(lambda: defaultdict(int))
@@ -79,7 +90,7 @@ def main() -> None:
     global state
     state = State()
 
-    if loadWLCSourceTable():
+    if loadWLCSourceTable() and create_expanded_TSV_table() and prefill_known_glosses():
         save_expanded_TSV_file()
 # end of prepare_OSHB_for_glossing.main
 
@@ -112,8 +123,8 @@ def loadWLCSourceTable() -> bool:
     assembled_word = ''
     for n, row in enumerate(dict_reader):
         if len(row) != NUM_EXPECTED_WLC_COLUMNS:
-            print(f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_WLC_COLUMNS}!!!")
-        WLC_tsv_rows.append(row)
+            logging.error(f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_WLC_COLUMNS}!!!")
+        state.WLC_rows.append(row)
         row_type = row['Type']
         if row_type != 'm' and assembled_word:
             dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{assembled_word=}")
@@ -139,7 +150,7 @@ def loadWLCSourceTable() -> bool:
                     WLC_tsv_column_max_length_counts[key] = len(value)
                 WLC_tsv_column_non_blank_counts[key] += 1
             WLC_tsv_column_counts[key][value] += 1
-    print(f"  Loaded {len(WLC_tsv_rows):,} WLC tsv data rows.")
+    print(f"  Loaded {len(state.WLC_rows):,} (tsv) WLC data rows.")
     print(f"    Have {len(unique_words):,} unique Hebrew words.")
     print(f"    Have {len(unique_morphemes):,} unique Hebrew morphemes.")
     print(f"    Have {seg_count:,} Hebrew segment markers.")
@@ -149,86 +160,180 @@ def loadWLCSourceTable() -> bool:
 # end of prepare_OSHB_for_glossing.loadWLCSourceTable
 
 
+def removeCantillationMarks( text:str, removeMetegOrSiluq=False ):
+    """
+    Return the text with cantillation marks removed.
+    """
+    #dPrint( 'Quiet', DEBUGGING_THIS_MODULE, "removeCantillationMarks( {!r}, {} )".format( text, removeMetegOrSiluq ) )
+    h = Hebrew.Hebrew( text )
+    return h.removeCantillationMarks( removeMetegOrSiluq=removeMetegOrSiluq )
+# end of prepare_OSHB_for_glossing.removeCantillationMarks
+
+
+def create_expanded_TSV_table() -> bool:
+    """
+    Reorganise columns and add our extra columns
+
+    Also mark the last morpheme in a word-set with M (instead of m)
+    """
+    print("Creating TSV table with expanded columns…")
+    state.expanded_headers = ['Ref','OSHBid','Type','Strongs','n','Morphology','WordOrMorpheme','NoCantillations',
+                                            'MorphemeGloss','WordGloss','ContextualGloss',
+                                            'GlossCapitalisation','GlossPunctuation','GlossOrder']
+    new_rows = []
+    last_base_id, last_row = '', []
+    last_V = 0
+    glossCapitalisation = 'S' # First word is start of sentence
+    for row in state.WLC_rows:
+        V = int(row['FGID'][5:8])
+        if V != last_V:
+            glossOrderInt = 10
+            last_V = V
+        else: glossOrderInt += 10
+        base_id = row['OSHBid'][:5]
+        new_type = row['Type']
+        new_morphology = row['Morphology']
+        if base_id != last_base_id: # it's the start of a new word (or set of morphemes)
+            if last_row:
+                if last_row['Type'] == 'm': # we just finished that set of Hebrew morphemes
+                    last_row['Type'] = 'M' # Leave a marker for the last morpheme in a set
+                elif last_row['Type'] == 'Am': # we just finished that set of Aramaic morphemes
+                    last_row['Type'] = 'AM' # Leave a marker for the last morpheme in a set
+            if row['Type'] in 'wm': # word or morpheme
+                assert row['Morphology'].startswith('H') or row['Morphology'].startswith('A') # Hebrew or Aramaic
+                language_code, new_morphology = row['Morphology'][0], row['Morphology'][1:]
+                # print(f"  Got {language_code=} {new_morphology=} ")
+        if row['Type'] in 'wm' and language_code != 'H':
+            new_type = f'{language_code}{new_type}'
+        newRowDict = { 'Ref': row['Ref'], 'OSHBid': row['OSHBid'], 'Type': new_type,
+                        'Strongs': row['Strongs'], 'n': row['n'], 'Morphology': new_morphology,
+                        'WordOrMorpheme': row['Morpheme'],
+                        'NoCantillations': removeCantillationMarks(row['Morpheme'], removeMetegOrSiluq=True),
+                        'GlossCapitalisation': glossCapitalisation,
+                        'GlossOrder': str(glossOrderInt), }
+        new_rows.append( newRowDict )
+        glossCapitalisation = 'S' if new_morphology=='x-sof-pasuq' else ''
+        last_base_id, last_row = base_id, newRowDict
+
+    state.WLC_rows = new_rows
+    return True
+# end of prepare_OSHB_for_glossing.create_expanded_TSV_table
+
+
+def prefill_known_glosses() -> bool:
+    """
+    """
+    print("Prefilling TSV table with previously known glosses…")
+
+    print(f"  Loading previously done glosses from {PREDONE_GLOSSES_FILEPATH}…")
+    wordGlossDict = {}
+    morphemeGlossDict = defaultdict(set)
+    wordsSpecificGlossesDict, refsSpecificGlossesDict = {}, {}
+    with open( PREDONE_GLOSSES_FILEPATH, 'rt', encoding='utf-8' ) as predone_file:
+        for line in predone_file:
+            bits = line.rstrip('\n').split( '  ' )
+            assert len(bits) == 4
+            _referencesList = ast.literal_eval( bits[0] )
+            thisWordSpecificGlossesDict = ast.literal_eval( bits[1] )
+            genericGloss, word = bits[2], bits[3]
+            # print(f"{referencesList=} {wordSpecificGlossesDict=} {genericGloss=} {word=}")
+            assert word.count('=') == genericGloss.count('=')
+            if '=' in word:
+                for wordBit, genericGlossBit in zip( word.split('='), genericGloss.split('=') ):
+                    for genericGlossBitBit in genericGlossBit.split('/'):
+                        morphemeGlossDict[wordBit].add(genericGlossBitBit)
+                assert word not in wordGlossDict
+                wordGlossDict[word] = genericGloss
+            else:
+                assert word not in wordGlossDict
+                wordGlossDict[word] = genericGloss
+            if thisWordSpecificGlossesDict:
+                # print(f"{referencesList=} {wordSpecificGlossesDict=} {genericGloss=} {word=}")
+                assert len(thisWordSpecificGlossesDict) == 1 # Only one reference entry
+                for ref_4tuple,specificGloss in thisWordSpecificGlossesDict.items(): # only loops once so we use final values
+                    assert len(ref_4tuple) == 4
+                    ourRef = f'{ref_4tuple[0]}_{ref_4tuple[1]}:{ref_4tuple[2]}-{ref_4tuple[3]}'
+                assert word not in wordsSpecificGlossesDict
+                wordsSpecificGlossesDict[word] = (ourRef, specificGloss)
+                assert ourRef not in refsSpecificGlossesDict
+                refsSpecificGlossesDict[ourRef] = (word, specificGloss)
+    # pprint(wordsSpecificGlossesDict)
+    # pprint(refsSpecificGlossesDict)
+    assert len(wordsSpecificGlossesDict) == len(refsSpecificGlossesDict)
+
+    print(f"  Applying {len(wordGlossDict):,} word and {len(morphemeGlossDict):,} morpheme glosses and {len(refsSpecificGlossesDict):,} specific glosses…")
+    numAppliedWordGlosses = numAppliedMorphemeGlosses = numAppliedSpecificGlosses = numManualMorphemeGlosses = 0
+    combinedMorphemes = ''
+    for row in state.WLC_rows: # Alters these rows in place
+        thisBaseRef = row['Ref'] if row['Ref'][-1].isdigit() else row['Ref'][:-1] # drop suffix
+        wordOrMorpheme = row['NoCantillations']
+        if row['Type'] in ('w','Aw'): # A is Aramaic, w is (single-morpheme) word
+            try:
+                row['WordGloss'] = wordGlossDict[wordOrMorpheme]
+                numAppliedWordGlosses += 1
+            except KeyError: pass
+        elif row['Type'] in ('m','M','Am','AM'): # A is Aramaic, m is morpheme, M is last morpheme in word
+            if row['Strongs'] == 'b': # manual override for bet
+                # print( f" {row['Ref']} '{wordOrMorpheme}' Strongs={row['Strongs']} n={row['n']} morph={row['Morphology']}" )
+                # if row['n']: assert row['n'] == '1.0' # Fails: some a blank, some 1.0, some 1.2, etc.
+                # assert row['Morphology'] in ('R','Rd','HR') # is this an error: DEU_11:4-18a Strongs=b n=1.0 morph=HR ?
+                row['MorphemeGloss'] = 'in/on/at/with'
+                numManualMorphemeGlosses += 1
+            elif row['Strongs'] == 'c': # manual override for conjunction
+                # print( f" {row['Ref']} '{wordOrMorpheme}' Strongs={row['Strongs']} n={row['n']} morph={row['Morphology']}" )
+                # assert row['Morphology'] in ('C','HC') # is this an error: LEV_15:13-17a Strongs=c n=0 morph=HC ?
+                row['MorphemeGloss'] = 'and'
+                numManualMorphemeGlosses += 1
+            elif row['Strongs'] == 'd': # manual override for determiner
+                # print( f" {row['Ref']} '{wordOrMorpheme}' Strongs={row['Strongs']} n={row['n']} morph={row['Morphology']}" )
+                # assert row['Morphology'] in ('Td','Ti','HTd') # is this an error: NUM_13:29-17a Strongs=d n=0 morph=HTd ?
+                row['MorphemeGloss'] = 'the'
+                numManualMorphemeGlosses += 1
+            else: # general case
+                try:
+                    row['MorphemeGloss'] = '/'.join(morphemeGlossDict[wordOrMorpheme])
+                    numAppliedMorphemeGlosses += 1
+                except KeyError: print("skip morpheme")
+            combinedMorphemes = f"{combinedMorphemes}{'=' if combinedMorphemes else ''}{wordOrMorpheme}"
+            if row['Type'] in ('M','AM'): # A is Aramaic, M is last morpheme in word
+                # print( f" {row['Ref']} final morpheme='{wordOrMorpheme}' word='{combinedMorphemes}'" )
+                try:
+                    row['WordGloss'] = wordGlossDict[combinedMorphemes] # Contains = signs
+                    numAppliedWordGlosses += 1
+                except KeyError: pass
+        if thisBaseRef in refsSpecificGlossesDict:
+            specificWord, specificGloss = refsSpecificGlossesDict[thisBaseRef]
+            if 'w' in row['Type']:
+                # print( f"{row['Ref']=} {thisBaseRef=} {row['Type']} {specificWord=} {wordOrMorpheme=} {specificGloss=}" )
+                assert specificWord == wordOrMorpheme
+                row['ContextualGloss'] = specificGloss
+                numAppliedSpecificGlosses += 1
+            elif 'M' in row['Type']:
+                # print( f"{row['Ref']=} {thisBaseRef=} {row['Type']} {specificWord=} {combinedMorphemes=} {specificGloss=}" )
+                assert specificWord == combinedMorphemes
+                row['ContextualGloss'] = specificGloss
+                numAppliedSpecificGlosses += 1
+        if row['Type'] in ('M','AM'): # A is Aramaic, M is last morpheme in word
+            combinedMorphemes = '' # reset
+    print(f"    Applied {numAppliedWordGlosses:,} word and {numAppliedMorphemeGlosses:,} morpheme glosses\n"
+          f"      with {numManualMorphemeGlosses:,} manual morphome glosses and {numAppliedSpecificGlosses:,} specific glosses…")
+
+    return True
+# end of prepare_OSHB_for_glossing.prefill_known_glosses
+
+
 def save_expanded_TSV_file() -> bool:
     """
+    Reorganise columns and add our extra columns
     """
-    print("\nExporting expanded columns TSV file…")
-    expanded_headers = ['Ref','OSHBid','Type','Strongs','n','Morphology','WordOrMorpheme','GenericGloss','ContextualGloss']
-    for n, row in enumerate(WLC_tsv_rows):
-        collation_id, verse_id = row['CollationID'], row['VerseID']
-        assert len(collation_id) == 11 and collation_id.isdigit()
-        if collation_id == '99999999999':
-            this_verse_row_list = None
-        else:
-            assert len(verse_id) == 8 and verse_id.isdigit()
-            if verse_id != last_verse_id:
-                this_verse_row_list = get_verse_rows(WLC_tsv_rows, n)
-                last_verse_id = verse_id
+    print( f"Exporting adjusted WLC table as a single flat TSV file to {state.TSV_output_filepath}…" )
+    with open( state.TSV_output_filepath, 'wt', encoding='utf-8' ) as tsv_output_file:
+        tsv_output_file.write('\ufeff') # Write BOM
+        writer = DictWriter( tsv_output_file, fieldnames=state.expanded_headers, delimiter='\t' )
+        writer.writeheader()
+        writer.writerows( state.WLC_rows )
+    print( f"  {len(state.WLC_rows):,} data rows written." )
 
-        book_number, chapter_number, verse_number, word_number \
-            = int(collation_id[:2]), int(collation_id[2:5]), int(collation_id[5:8]), int(collation_id[8:])
-        if book_number != last_book_number:  # we've started a new book
-            if book_number != 99:
-                assert book_number == last_book_number + 1
-            if usfm_text:  # write out the book (including the last one)
-                usfm_text = usfm_text.replace('¶', '¶ ') # Looks nicer maybe
-                # Fix any punctuation problems
-                usfm_text = usfm_text.replace(',,',',').replace('..','.').replace(';;',';') \
-                            .replace(',.','.').replace('.”.”','.”').replace('?”?”','?”')
-                assert '  ' not in usfm_text
-                usfm_filepath = VLT_USFM_OUTPUT_FOLDERPATH.joinpath( f'{BOS_BOOK_ID_MAP[last_book_number]}_gloss.usfm' )
-                with open(usfm_filepath, 'wt', encoding='utf-8') as output_file:
-                    output_file.write(f"{usfm_text}\n")
-            if book_number == 99:
-                break  # all done!
-            USFM_book_code = USFM_BOOK_ID_MAP[book_number]
-            usfm_text = f"""\\id {USFM_book_code}
-\\usfm 3.0
-\\ide UTF-8
-\\rem USFM file created {datetime.now().strftime('%Y-%m-%d %H:%M')} by {PROGRAM_NAME_VERSION}
-\\rem The source table used to create this file is Copyright © 2022 by https://GreekCNTR.org
-\\h {BOOK_NAME_MAP[book_number]}
-\\toc1 {BOOK_NAME_MAP[book_number]}
-\\toc2 {BOOK_NAME_MAP[book_number]}
-\\toc3 {book_tsv_rows[book_number-1]['eAbbreviation']}
-\\mt1 {BOOK_NAME_MAP[book_number]}"""
-            last_book_number = book_number
-            last_chapter_number = last_verse_number = last_word_number = 0
-        if chapter_number != last_chapter_number:  # we've started a new chapter
-            assert chapter_number == last_chapter_number + 1
-            usfm_text = f"{usfm_text}\n\\c {chapter_number}"
-            last_chapter_number = chapter_number
-            last_verse_number = last_word_number = 0
-        if verse_number != last_verse_number:  # we've started a new verse
-            # assert verse_number == last_verse_number + 1 # Not always true (some verses are empty)
-            # print(f"{chapter_number}:{last_verse_number} {verse_word_dict}")
-            # Create the USFM verse text
-            usfm_text = f"{usfm_text}\n\\v {verse_number}"
-            for index_set in get_gloss_word_index_list(this_verse_row_list):
-                if len(index_set) == 1: # the normal and easiest case
-                    this_verse_row = this_verse_row_list[index_set[0]]
-                    greekWord = this_verse_row['Medieval']
-                    usfm_text += f" {preform_gloss(this_verse_row)}"
-                    assert '  ' not in usfm_text, f"ERROR: Have double spaces in usfm text: '{usfm_text[:200]} … {usfm_text[-200:]}'"
-                else: # we have multiple overlapping glosses
-                    sorted_index_set = sorted(index_set) # Some things we display by Greek word order
-                    greekWord = ' '.join(this_verse_row_list[ix]['Medieval'] for ix in sorted_index_set)
-                    greekWord = f'<b style="color:orange">{greekWord}</b>'
-                    preformed_word_string_bits = []
-                    last_verse_row = last_glossWord = None
-                    for ix in index_set:
-                        this_verse_row = this_verse_row_list[ix]
-                        some_result = preform_gloss(this_verse_row, last_verse_row, last_glossWord)
-                        if this_verse_row['GlossInsert']:
-                            last_glossWord = some_result
-                        else:
-                            preformed_word_string_bits.append(some_result)
-                        last_verse_row = this_verse_row
-                        # last_glossInsert = last_verse_row['GlossInsert']
-                    preformed_word_string = ' '.join(preformed_word_string_bits)
-                    usfm_text += f" {preformed_word_string}"
-                    assert '  ' not in usfm_text, f"ERROR: Have double spaces in usfm text: '{usfm_text[:200]} … {usfm_text[-200:]}'"
-            last_verse_number = verse_number
     return True
 # end of prepare_OSHB_for_glossing.save_expanded_TSV_file
 
