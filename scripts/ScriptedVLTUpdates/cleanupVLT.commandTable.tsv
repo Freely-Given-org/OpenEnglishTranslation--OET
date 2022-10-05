@@ -1,0 +1,30 @@
+Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	RCase	Replace	Name	Comment
+
+# Remove inserted word indicators
+									_> 			_ 	removeInsert1Start	Remove indicator of start of inserted words (like "not") after pre
+									 <_			 _	removeInsert1End	Remove indicator of end of inserted words (like "not") after pre
+
+									_=> 			_ 	removeInsert2Start	Remove indicator of start of inserted words (like "not") after helper
+#									*_=> 			_ 	removeInsert2Start	Remove indicator of start of inserted words (like "not") after helper now \add ..\add*
+#									/_=> 			_ 	removeInsert2Start	Remove indicator of start of inserted words (like "not") after split helper
+									 <=_			 _	removeInsert2End	Remove indicator of end of inserted words (like "not") after helper
+
+# Put underlines inside adds
+#									\add*_			_\add*	moveUnderlineInsideAddEnd
+
+# Punctuation and spaces
+				id					 - 			 	removeHyphenSpaces	Remove hyphen (untranslated article) surrounded by spaces
+				id					- 			 	removeHyphenSpace	Remove hyphen (untranslated article) followed by space
+				id					 -			 	removeSpaceHyphen	Remove hyphen (untranslated article) preceded by space
+
+#l				id					_ 			_	removeUnderlineSpace	Remove space after underline (rejoins words)
+l									__  			_ 	reduceDoubleUnderlines	Reduce double underlines in entire file
+l									  			 	reduceDoubleSpaces	Reduce double spaces in entire file
+
+#									__not 			_ not 	fixUnderlineBeforeNot	Fix a double underline before inserted words
+
+									_/_			_	fixUnknownPatthern	Fix an unexplained pattern _/_left in Matt 18:12
+
+# Some wording problems
+									 the the_			 the 		Trailing space
+									 the these			 these

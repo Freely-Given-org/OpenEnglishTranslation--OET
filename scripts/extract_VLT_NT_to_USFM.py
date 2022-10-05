@@ -45,16 +45,16 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-09-25' # by RJH
+LAST_MODIFIED_DATE = '2022-10-03' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_USFM"
 PROGRAM_NAME = "Extract VLT NT USFM files"
-PROGRAM_VERSION = '0.51'
+PROGRAM_VERSION = '0.52'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = True
 
 
-VLT_USFM_OUTPUT_FOLDERPATH = Path( '../sourceTexts/modified_source_VLT_USFM/' )
+VLT_USFM_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_VLT_USFM/' )
 
 
 state = None
@@ -137,14 +137,12 @@ def loadBookTable() -> bool:
 
     # Remove BOM
     if book_csv_lines[0].startswith("\ufeff"):
-        print("  Removing Byte Order Marker (BOM) from start of book CSV file…")
+        print("  Handling Byte Order Marker (BOM) at start of book CSV file…")
         book_csv_lines[0] = book_csv_lines[0][1:]
 
     # Get the headers before we start
     global book_csv_column_headers
-    book_csv_column_headers = [
-        header for header in book_csv_lines[0].strip().split(",")
-    ]  # assumes no commas in headings
+    book_csv_column_headers = [header for header in book_csv_lines[0].strip().split(",")] # assumes no commas in headings
     # print(f"Column headers: ({len(collation_csv_column_headers)}): {collation_csv_column_headers}")
     assert len(book_csv_column_headers) == NUM_EXPECTED_BOOK_COLUMNS
 
@@ -176,13 +174,11 @@ def loadSourceCollationTable() -> bool:
 
     # Remove BOM
     if csv_lines[0].startswith("\ufeff"):
-        print("  Removing Byte Order Marker (BOM) from start of collation CSV file…")
+        print("  Handling Byte Order Marker (BOM) at start of collation CSV file…")
         csv_lines[0] = csv_lines[0][1:]
 
     # Get the headers before we start
-    collation_csv_column_headers = [
-        header for header in csv_lines[0].strip().split(",")
-    ]  # assumes no commas in headings
+    collation_csv_column_headers = [header for header in csv_lines[0].strip().split(",")] # assumes no commas in headings
     # print(f"Column headers: ({len(collation_csv_column_headers)}): {collation_csv_column_headers}")
     assert len(collation_csv_column_headers) == NUM_EXPECTED_COLLATION_COLUMNS
 

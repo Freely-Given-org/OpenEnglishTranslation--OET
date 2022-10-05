@@ -1,0 +1,37 @@
+# This is a sample TOML control file for the ScriptedBibleEditor
+#
+# Available commands are:
+#
+#   title = "My Control File Title"
+#   description = "A longer description"
+#
+#   [commandTables]
+#   tableName = "filepath"
+#
+
+title = "ScriptedBibleEditor OET-LV Sample Control File"
+description = "To convert USFM files to create the draft OET-LV"
+
+inputFolder = "../../../OpenEnglishTranslation--OET/intermediateTexts/modified_source_VLT_USFM/"
+inputFilenameTemplate = "BBB_gloss.usfm"
+
+#outputFolder = "../../TestFiles/edited_VLT_USFM/"
+outputFolder = "../../../OpenEnglishTranslation--OET/intermediateTexts/auto_edited_VLT_USFM/"
+outputFilenameTemplate = "OET-LV_BBB.usfm"
+clearOutputFolder = true # Removes the folder and recreates it if createOutputFolder is true (else deletes all files in the folder)
+createOutputFolder = true
+
+applyOrder = "AllTablesFirst"
+
+# Command tables are applied in the given order
+[commandTables]
+wordingAdjustments = "wordingAdjustments.commandTable.tsv"
+adjustCapitalisation = "adjustCapitalisation.commandTable.tsv"
+adjustPunctuation = "adjustPunctuation.commandTable.tsv"
+changeFromUSSpelling = "changeFromUSSpelling.commandTable.tsv"
+restoreOTNames = "OTNames.commandTable.tsv"
+restoreNTNames = "NTNames.commandTable.tsv"
+fixGlossPre = "fixGlossPre.commandTable.tsv"
+fixGlossHelpers = "fixGlossHelpers.commandTable.tsv"
+fixGlossPost = "fixGlossPost.commandTable.tsv"
+cleanupVLT = "cleanupVLT.commandTable.tsv"

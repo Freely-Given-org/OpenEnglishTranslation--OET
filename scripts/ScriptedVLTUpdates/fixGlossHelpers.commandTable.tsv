@@ -1,0 +1,95 @@
+Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	RCase	Replace	Name	Comment
+									/a/			\add +a\add*
+									/A/			\add +A\add*
+									/an/			\add +an\add*
+									/An/			\add +An\add*
+									/any/			\add +any\add*		Luke 20:21
+									/its/			\add +its\add*		Acts 11:5
+									/the/			\add +the\add*
+									/The/			\add +The\add*
+
+									/am/			am
+									/am_being/			am_being
+									/are/			are
+									/Are/			Are
+									/are_being/			are_being
+									/be/			be
+									/Be/			Be
+									/be_being/			be_being
+									/Be_being/			Be_being
+									/being/			being
+									/Being/			Being
+									/going_to/			going_to
+									/going_to_be/			going_to_be
+									/had/			had
+									/had_been/			had_been
+									/has/			has
+									/has_been/			has_been
+									/have/			have
+									/have_been/			have_been
+									/having/			having
+									/Having/			Having
+									/having_been/			having_been
+									/Having_been/			Having_been
+									/is/			is
+									/Is/			Is
+									/is_being/			is_being
+									/let/			let
+									/may/			may
+									/May/			May
+									/may_be/			may_be
+									/may_have/			may_have
+									/might/			might
+									/Might/			Might
+									/might_be/			might_be
+									/might_have/			might_have
+									/was/			was
+									/was_being/			was_being
+									/were/			were
+									/were_being/			were_being
+									/will_be/			will_be
+									/will_be_being/			will_be_being
+
+									/to/			to
+									/To/			To
+									/to_be/			to_be
+									/to_be_being/			to_be_being
+									/to_have/			to_have
+
+# Split (after an insert)
+									 /are_			 are_
+									 /be_			 be_
+									 /Be_			 Be_
+									 /has_			 has_
+									_/has_			_has_
+									 /have_			 have_
+									 /having_			 having_
+									 /is_			 is_
+									 /let_			 let_
+									_/let_			 _let_
+									 /Let_			 Let_
+									 /may_			 may_
+									 /May_			 May_
+									_/may_			 _may_
+									 /might_			 might_
+									 /to_			 to_
+									 /To_			 To_
+									 /will_			 will_
+									 /Will_			 Will_
+									_/will_			 will_
+
+									_/been_			_been_
+									_been/_			_been_
+									_/being_			_being_
+									_being/_			_being_
+									_/be_			_be_
+									_be/_			_be_
+
+# Fix unusual ones
+									/his/			\add ^his\add*		Matt 12:41 his son
+									/my/			\add ^my\add*		Titus 1:4 my_genuine child
+									/one/			\add ^one\add*		Matt 12:41 one greater
+									/our/			\add ^our\add*		Titus 1:4 our common faith
+									/their/			\add ^their\add*		Matt 4:6 their hands
+									/they/			\add ^they\add*		Matt 21:27 they said
+									/your/			\add ^your\add*		Col 3:23 with your_heart, Jam 4:8

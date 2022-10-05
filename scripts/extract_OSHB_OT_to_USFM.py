@@ -25,6 +25,8 @@
 """
 Script extracting the OSHB USFM files
     directly out of the TSV table and with our modifications.
+
+Favors the literal glosses over the contextual ones.
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple
@@ -37,17 +39,17 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-09-28' # by RJH
+LAST_MODIFIED_DATE = '2022-10-06' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed-OSHB_OT_to_USFM"
 PROGRAM_NAME = "Extract glossed-OSHB OT USFM files"
-PROGRAM_VERSION = '0.02'
+PROGRAM_VERSION = '0.20'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
-DEBUGGING_THIS_MODULE = True
+DEBUGGING_THIS_MODULE = False
 
 
-TSV_SOURCE_TABLE_FILEPATH = Path( '../translatedTexts/glossed_OSHB/WLC_glosses.morphemes.tsv' )
-OT_USFM_OUTPUT_FOLDERPATH = Path( '../sourceTexts/modified_source_glossed_OSHB_USFM/' )
+TSV_SOURCE_TABLE_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/WLC_glosses.morphemes.tsv' )
+OT_USFM_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_glossed_OSHB_USFM/' )
 
 
 state = None
@@ -60,10 +62,7 @@ class State:
     # end of extract_OSHB_OT_to_USFM.__init__
 
 
-NEWLINE = '\n'
-BACKSLASH = '\\'
-
-NUM_EXPECTED_OSHB_COLUMNS = 14
+NUM_EXPECTED_OSHB_COLUMNS = 15
 source_tsv_rows = []
 source_tsv_column_max_length_counts = {}
 source_tsv_column_non_blank_counts = {}
@@ -94,13 +93,11 @@ def loadSourceGlossTable() -> bool:
 
     # Remove BOM
     if tsv_lines[0].startswith("\ufeff"):
-        print("  Removing Byte Order Marker (BOM) from start of source tsv file…")
+        print("  Handling Byte Order Marker (BOM) at start of source tsv file…")
         tsv_lines[0] = tsv_lines[0][1:]
 
     # Get the headers before we start
-    source_tsv_column_headers = [
-        header for header in tsv_lines[0].strip().split('\t')
-    ]  # assumes no commas in headings
+    source_tsv_column_headers = [header for header in tsv_lines[0].strip().split('\t')]
     # print(f"Column headers: ({len(source_tsv_column_headers)}): {source_tsv_column_headers}")
     assert len(source_tsv_column_headers) == NUM_EXPECTED_OSHB_COLUMNS, f"Found {len(source_tsv_column_headers)} columns! (Expecting {NUM_EXPECTED_OSHB_COLUMNS})"
 
@@ -129,18 +126,19 @@ def loadSourceGlossTable() -> bool:
 # end of extract_OSHB_OT_to_USFM.loadSourceGlossTable
 
 
+mmmCount = wwwwCount = 0
 def export_usfm_literal_English_gloss() -> bool:
     """
     Use the GlossOrder field to export the English gloss.
     """
-    print("\nExporting USFM plain text literal English files…")
+    print( f"\nExporting USFM plain text literal English files to {OT_USFM_OUTPUT_FOLDERPATH}…" )
     last_BBB = last_verse_id = None
     last_chapter_number = last_verse_number = last_word_number = 0
     num_exported_files = 0
     usfm_text = ""
     for n, row in enumerate(source_tsv_rows):
         source_id = row['Ref']
-        verse_id = source_id.split('-')[0]
+        verse_id = source_id.split('w')[0]
         if verse_id != last_verse_id:
             this_verse_row_list = get_verse_rows(source_tsv_rows, n)
             last_verse_id = verse_id
@@ -148,7 +146,7 @@ def export_usfm_literal_English_gloss() -> bool:
         BBB = verse_id[:3]
         chapter_number = int(verse_id[4:].split(':')[0])
         verse_number = int(verse_id.split(':')[1])
-        word_number = source_id.split('-')[1]
+        # word_number = source_id.split('w')[1] if 'w' in source_id else '0'
         if BBB != last_BBB:  # we've started a new book
             if usfm_text:  # write out the book
                 usfm_text = usfm_text.replace('¶', '¶ ') # Looks nicer maybe
@@ -232,6 +230,8 @@ def export_usfm_literal_English_gloss() -> bool:
         num_exported_files += 1
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {num_exported_files} USFM files exported" )
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    {wwwwCount:,} word glosses unknown (wwww)" )
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    {mmmCount:,} morpheme glosses unknown (mmm)" )
     return num_exported_files > 0
 # end of extract_OSHB_OT_to_USFM.export_usfm_literal_English_gloss
 
@@ -244,7 +244,7 @@ def get_verse_rows(given_source_rows: List[dict], row_index: int) -> List[list]:
     """
     # print(f"get_verse_rows({row_index})")
     this_verse_row_list = []
-    this_verseID = given_source_rows[row_index]['Ref'].split('-')[0]
+    this_verseID = given_source_rows[row_index]['Ref'].split('w')[0]
     if row_index > 0: assert not given_source_rows[row_index-1]['Ref'].startswith( this_verseID )
     for ix in range(row_index, len(given_source_rows)):
         row = given_source_rows[ix]
@@ -279,7 +279,7 @@ def get_gloss_word_index_list(given_verse_row_list: List[dict]) -> List[List[int
     Goes through the verse rows in gloss word order and produces a list of lists of row indexes
         Most entries only contain one index (for one gloss word)
     """
-    verse_id = given_verse_row_list[0]['Ref'].split('-')[0]
+    verse_id = given_verse_row_list[0]['Ref'].split('w')[0]
 
     # Make up the display order list for this new verse
     gloss_order_dict = {}
@@ -293,24 +293,24 @@ def get_gloss_word_index_list(given_verse_row_list: List[dict]) -> List[List[int
     # print(f"get_gloss_word_index_list for {verse_id} is got: ({len(base_gloss_display_order_list)}) {base_gloss_display_order_list}")
     return base_gloss_display_order_list
 
-    these_words_base_display_index_list, result_list = [], []
-    for index in base_gloss_display_order_list:
-        if 'm' in given_verse_row_list[index]['Type']:
-            these_words_base_display_index_list.append(index)
-        elif 'M' in given_verse_row_list[index]['Type']:
-            these_words_base_display_index_list.append(index)
-            result_list.append(these_words_base_display_index_list)
-            these_words_base_display_index_list = []
-        elif 'w' in given_verse_row_list[index]['Type']:
-            assert not these_words_base_display_index_list
-            result_list.append([index])
-    if these_words_base_display_index_list:
-        print(f"Why did get_gloss_word_index_list() for {given_verse_row_list[0]['Ref']} ({len(given_verse_row_list)} rows)"
-              f" have left-over words: ({len(these_words_base_display_index_list)}) {these_words_base_display_index_list}"
-              f" from glossInserts: {[row['GlossInsert'] for row in given_verse_row_list]}")
-    assert not these_words_base_display_index_list # at end of loop
-    # print(f"get_gloss_word_index_list for {verse_id} is returning: ({len(result_list)}) {result_list}")
-    return result_list
+    # these_words_base_display_index_list, result_list = [], []
+    # for index in base_gloss_display_order_list:
+    #     if 'm' in given_verse_row_list[index]['Type']:
+    #         these_words_base_display_index_list.append(index)
+    #     elif 'M' in given_verse_row_list[index]['Type']:
+    #         these_words_base_display_index_list.append(index)
+    #         result_list.append(these_words_base_display_index_list)
+    #         these_words_base_display_index_list = []
+    #     elif 'w' in given_verse_row_list[index]['Type']:
+    #         assert not these_words_base_display_index_list
+    #         result_list.append([index])
+    # if these_words_base_display_index_list:
+    #     print(f"Why did get_gloss_word_index_list() for {given_verse_row_list[0]['Ref']} ({len(given_verse_row_list)} rows)"
+    #           f" have left-over words: ({len(these_words_base_display_index_list)}) {these_words_base_display_index_list}"
+    #           f" from glossInserts: {[row['GlossInsert'] for row in given_verse_row_list]}")
+    # assert not these_words_base_display_index_list # at end of loop
+    # # print(f"get_gloss_word_index_list for {verse_id} is returning: ({len(result_list)}) {result_list}")
+    # return result_list
 # end of extract_OSHB_OT_to_USFM.get_gloss_word_index_list
 
 
@@ -321,34 +321,53 @@ def preform_gloss(given_verse_row: Dict[str,str], last_given_verse_row: Dict[str
         or the left-over preformatted GlossWord (if any)
     The calling function has to decide what to do with it.
     """
-    global saved_gloss
-    # print(f"preform_gloss({given_verse_row['Ref']}.{given_verse_row['Type']}, mg='{given_verse_row['MorphemeGloss']}' wg='{given_verse_row['WordGloss']}' cg='{given_verse_row['ContextualGloss']}' {saved_gloss=}, {last_glossWord=})…")
+    global saved_gloss, mmmCount, wwwwCount
+    dPrint('Verbose', DEBUGGING_THIS_MODULE, f"preform_gloss({given_verse_row['Ref']}.{given_verse_row['Type']},"
+            f" mg='{given_verse_row['MorphemeGloss']}' cmg='{given_verse_row['ContextualMorphemeGloss']}'"
+            f" wg='{given_verse_row['WordGloss']}' cwg='{given_verse_row['ContextualWordGloss']}' {saved_gloss=}, {last_glossWord=})…")
     gloss = ''
     if 'm' in given_verse_row['Type']:
-        gloss = given_verse_row['ContextualGloss'] if given_verse_row['ContextualGloss'] \
-                    else given_verse_row['MorphemeGloss']
-        if not gloss: gloss = 'mmm' # Sequence doesn't occur in any words
+        gloss = given_verse_row['MorphemeGloss'] if given_verse_row['MorphemeGloss'] \
+                    else given_verse_row['ContextualMorphemeGloss']
+        if not gloss:
+            gloss = 'mmm' # Sequence doesn't occur in any words
+            mmmCount += 1
+            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"{given_verse_row['Ref']}.{given_verse_row['Type']},"
+                                        f" needs a morpheme gloss for '{given_verse_row['WordOrMorpheme']}'"
+                                        f" (from '{given_verse_row['NoCantillations']}')" )
         saved_gloss = f"{saved_gloss}{'=' if saved_gloss else ''}{gloss}"
         return ''
     elif 'M' in given_verse_row['Type']:
-        if given_verse_row['ContextualGloss']:
-            gloss = given_verse_row['ContextualGloss']
-            saved_gloss = '' # Ignore it
-        elif given_verse_row['WordGloss']:
+        if given_verse_row['WordGloss']:
             gloss = given_verse_row['WordGloss']
             saved_gloss = '' # Ignore it
         elif given_verse_row['MorphemeGloss']:
             gloss = f"{saved_gloss}={given_verse_row['MorphemeGloss']}"
             saved_gloss = '' # Used it
+        elif given_verse_row['ContextualMorphemeGloss']:
+            gloss = f"{saved_gloss}={given_verse_row['ContextualMorphemeGloss']}"
+            saved_gloss = '' # Used it
+        elif given_verse_row['ContextualWordGloss']:
+            gloss = given_verse_row['ContextualWordGloss']
+            saved_gloss = '' # Ignore it
         if not gloss: # Sequence doesn't occur in any words
             gloss = f'{saved_gloss}=mmm'
+            mmmCount += 1
             saved_gloss = '' # Used it
+            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"{given_verse_row['Ref']}.{given_verse_row['Type']},"
+                                        f" needs a morpheme gloss for '{given_verse_row['WordOrMorpheme']}'"
+                                        f" (from '{given_verse_row['NoCantillations']}')" )
         assert not saved_gloss
     elif 'w' in given_verse_row['Type']:
         assert not saved_gloss
-        gloss = given_verse_row['ContextualGloss'] if given_verse_row['ContextualGloss'] \
-                    else given_verse_row['WordGloss']
-        if not gloss: gloss = 'wwww' # Sequence doesn't occur in any English words so easy to find
+        gloss = given_verse_row['WordGloss'] if given_verse_row['WordGloss'] \
+                    else given_verse_row['ContextualWordGloss']
+        if not gloss:
+            gloss = 'wwww' # Sequence doesn't occur in any English words so easy to find
+            wwwwCount += 1
+            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"{given_verse_row['Ref']}.{given_verse_row['Type']},"
+                                            f" needs a word gloss for '{given_verse_row['WordOrMorpheme']}'"
+                                            f" (from '{given_verse_row['NoCantillations']}')" )
 
     if gloss:
         if 'S' in given_verse_row['GlossCapitalisation']:

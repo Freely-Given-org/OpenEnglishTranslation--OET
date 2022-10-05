@@ -1,0 +1,8 @@
+Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	RCase	Replace	Name	Comment
+									\add <				removePreAdd
+									\add +				removeHelperAdd
+									\add >				removeMinorPostAdd
+									\add =				removeCopulaAdd
+									\add +				removeMajorPostAdd
+									\add ~				removeDirectObjectPostAdd
+									\add*				removeClosingAdd

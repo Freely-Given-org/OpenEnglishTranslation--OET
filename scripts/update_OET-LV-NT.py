@@ -29,8 +29,6 @@ Script to backport the ULT into empty verses of the OET-LV
 
 This script is designed to be able to be run over and over again,
     i.e., it should be able to update the OET-LV with more recent ULT edits.
-
-Updated Sept 2022 to not backfill the New Testament.
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -48,10 +46,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-09-23' # by RJH
+LAST_MODIFIED_DATE = '2022-10-04' # by RJH
 SHORT_PROGRAM_NAME = "Update_OET-LV-NT"
 PROGRAM_NAME = "Update OET-LV New Testament"
-PROGRAM_VERSION = '0.16'
+PROGRAM_VERSION = '0.18'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -77,7 +75,6 @@ INDEX_HTML = '''<!DOCTYPE html>
 <head>
   <title>OET Literal Version Development</title>
   <meta charset="utf-8">
-  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="keywords" content="Bible, OET, literal, version">
   <link rel="stylesheet" type="text/css" href="BibleBook.css">
@@ -99,7 +96,7 @@ INDEX_HTML = '''<!DOCTYPE html>
     <a href="OET-LV_REV.html">Revelation</a></p>
   <p>Whole <a href="OET-LV.html">New Testament</a>
     (long and slower to load, but useful for easy searching, etc.)</p>
-  <h2>Introduction</h2>
+  <h2 id="Intro">Introduction</h2>
   <h3>The Open English Translation of the Bible (OET)</h3>
       <p>The <em>Literal Version</em> (OET-LV) forms just one-half of the new, forthcoming <em>Open English Translation</em> of the Bible (OET).
         The other half is the <em>Readers’ Version</em> (OET-RV) which work will resume on in 2023.
@@ -127,7 +124,7 @@ INDEX_HTML = '''<!DOCTYPE html>
     <p>Put simply, the goal of the <em>Open English Translation</em> is simply to make the Bible more accessible
         to this current generation with the best of a free-and-open easy-to-understand <em>Readers’ Version</em>
         alongside a faithful <em>Literal Version</em> so that you yourself can checkout what was said and what is interpreted.</p>
-  <h3>Distinctives</h3>
+  <h3 id="Distinctives">Distinctives</h3>
     <p>The OET has the following distinguishing points:</p>
     <ul><li>An easy-to-understand <em>Readers’ Version</em> side-by-side with a very <em>Literal Version</em></li>
     <li>A generous open license so that the <em>Open English Translation</em> can be
@@ -158,7 +155,8 @@ INDEX_HTML = '''<!DOCTYPE html>
         would have no idea that there’s no <b>J</b> letter or sound in either Hebrew or Greek,
         plus there’s absolutely no such name as <i>James</i> in the New Testament manuscripts!)</li>
     <li>In addition to wanting to get names and placenames more accurate,
-        we’ve also attempted to modernise the spelling (transliterations) of these names,
+        we’ve also attempted to modernise and simplify the spelling (transliterations) of these names
+        to make it easier for readers to pronounce them as they come across them,
         e.g., using <b>f</b> instead of <b>ph</b>, so <i>Epafras</i> instead of <i>Epaphras</i>.
         (Oddly, even traditional English Bible translations surprisingly
         do use <i>Felix</i> and <i>Festus</i>.)</li>
@@ -180,10 +178,10 @@ INDEX_HTML = '''<!DOCTYPE html>
         but someone who <i>presides</i> over governmental meetings.
         So going a step further, we have chosen to use the contemporary
         meaning of the word in the <em>Literal Version</em>.
-        The original meaning is <i>one who is anointed<i/> (by pouring a hornful of oil over them),
+        The original meaning is <i>one who is anointed</i> (by pouring a hornful of oil over them),
         but we use the derived meaning which is <i>one who is selected/chosen (by God)</i>.</li>
     </ul>
-  <h3>Key for the OET-LV</h3>
+  <h3 id="Key">Key for the OET-LV</h3>
     <p>You will notice the the <em>Literal Version</em> looks different from most Bibles that you’re used to:
     </p>
     <ul><li>Words joined together by underlines are translated from a single original word,
@@ -241,7 +239,7 @@ INDEX_HTML = '''<!DOCTYPE html>
         These manuscript decisions were mostly made by the authors of the two main works that we relied on to translate
         the <em>OET</em> from—see the acknowledgements below for more details.)</li>
     </ul>
-  <h3>Biblical names</h3>
+  <h3 id="Names">Biblical names</h3>
     <p>As mentioned above, the <em>OET Literal Version</em> goes out of its way
         to help English speakers to be able to pronounce Biblical names more correctly.
         Because our English Bible traditions have often come from Hebrew through Koine Greek
@@ -295,7 +293,7 @@ INDEX_HTML = '''<!DOCTYPE html>
         which is the sound that some UK speakers put in the middle of the word <i>butter</i> (ba'a),
         so <i>Abra'am</i> (from the Greek) is three distinct syllables—those
         two <i>a</i>’s side-by-side should not be made into a long <i>ā</i>.</p>
-  <h3>Acknowledgements</h3>
+  <h3 id="Acknowledgements">Acknowledgements</h3>
     <p>A work like this could not be done with building on the work of so many that have gone before, including:</p>
     <ul><li>The creator God who communicates with us in various ways,
         but who specifically inspired the writing of the Scriptures
@@ -316,20 +314,20 @@ INDEX_HTML = '''<!DOCTYPE html>
         of the <a href="https://GreekCNTR.org">Center for New Testament Restoration</a>
         which is also given to the world under a generous open licence.</li>
     </ul>
-  <h3>Status</h3>
+  <h3 id="Status">Status</h3>
     <p>English sentences have more limitations on their word order than Greek sentences do.
         So any word-for-word Greek literal translation has to be reordered to be readable in English.
-        Currently, the words in the following books (just over 50% of the NT) have been reordered:
+        Currently, the words in the following books (just over 50% of the NT) have been mostly reordered:
         <b>Mat, Mark, Luke, John, Acts, 1 Peter, 2 Peter, 3 John, and Jude</b>,
         leaving the following books which have not yet been reordered
-        and will therefore be even harder to read in the <em>Literal Version</em>:
+        and will therefore be even harder to read in this preliminary <em>Literal Version</em>:
         Rom, 1&2 Cor, Gal, Eph, Php, Col, 1&2 Thess, 1&2 Tim, Titus, Phlm, Heb, and 1&2 John.</p>
     <p>After completing sentence reordering and fixing capitalisation and punctuation,
         we then plan to do more investigation into word concordance.
         For example, if an original language word can have multiple meanings,
         we want to indicate in the <em>OET Literal Version</em> where a
         translator has already made that interpretation.</p>
-  <h3>Feedback</h3>
+  <h3 id="Feedback">Feedback</h3>
     <p>These web pages are a preliminary preview into a work still in progress.
         The <em>OET Literal Version</em> is not yet finished, and not yet publicly released,
         but we need to have it available online for easy access for our checkers and reviewers.
@@ -372,7 +370,7 @@ whole_NT_html = ''
 def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> (str, str, str):
     fnPrint( DEBUGGING_THIS_MODULE, f"convert_USFM_to_simple_HTML( ({len(usfm_text)}) )" )
 
-    links_html = f'<p>__PREVIOUS__<a href="index.html">OET-LV Index</a>__NEXT__{EM_SPACE}Whole <a href="OET-LV.html">New Testament</a> (for easy searching, etc.)</p>'
+    links_html = f'<p>__PREVIOUS__OET-LV <a href="index.html">Index</a>, <a href="index.html#Intro">Intro</a> and <a href="index.html#Key">Key</a>__NEXT__{EM_SPACE}Whole <a href="OET-LV.html">New Testament</a> (for easy searching, etc.)</p>'
 
     previousBBB = None if BBB=='MAT' else BBB_LIST[BBB_LIST.index(BBB)-1]
     nextBBB = None if BBB=='REV' else BBB_LIST[BBB_LIST.index(BBB)+1]

@@ -26,6 +26,8 @@
 Script extracting the data out of the OSHB XML files
     and putting them into a single TSV table and also a JSON file.
 
+(This is run BEFORE prepare_OSHB_for_glossing.py.)
+
 OSHB morphology codes can be found at https://hb.openscriptures.org/parsing/HebrewMorphologyCodes.html.
 """
 from gettext import gettext as _
@@ -41,19 +43,22 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-09-26' # by RJH
+LAST_MODIFIED_DATE = '2022-10-06' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OSHB_XML_to_TSV"
 PROGRAM_NAME = "Convert OSHB WLC OT XML into TSV/JSON files"
-PROGRAM_VERSION = '0.53'
+PROGRAM_VERSION = '0.56'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
-DEBUGGING_THIS_MODULE = True
+DEBUGGING_THIS_MODULE = False
 
 
 BREAK_MORPHEMES = True
 OSHB_XML_INPUT_FOLDERPATH = Path( '../../Forked/OS-morphhb/wlc/' )
 OSHB_TSV_OUTPUT_FILEPATH_STRING = '../../OpenEnglishTranslation--OET/sourceTexts/rawOSHB/OSHB.original.tsv' # str so we can adjust it later
 OSHB_JSON_OUTPUT_FILEPATH_STRING = '../../OpenEnglishTranslation--OET/sourceTexts/rawOSHB/OSHB.original.json'
+
+OUTPUT_FIELDNAMES = ['FGID','Ref','Type','Special','Strongs','CantillationHierarchy','Morphology','OSHBid','WordOrMorpheme' if BREAK_MORPHEMES else 'Word']
+OUTPUT_FIELDNAMES_COUNT = len( OUTPUT_FIELDNAMES )
 
 
 state = None
@@ -64,11 +69,8 @@ class State:
         """
         self.OSHB_XML_input_folderpath = OSHB_XML_INPUT_FOLDERPATH
         self.sourceTableFilepath = Path( '../../CNTR-GNT/sourceExports/collation.updated.csv' )
+        self.numKetivs = 0
     # end of convert_OSHB_XML_to_TSV.__init__
-
-
-NEWLINE = '\n'
-BACKSLASH = '\\'
 
 
 def main() -> None:
@@ -99,7 +101,8 @@ def load_OSHB_XML() -> bool:
                 return False
             state.books_array.append( nested_chapter_array )
 
-    print(f"  Loaded {len(state.flat_array):,} total data rows{' (with breaks at morphemes)' if BREAK_MORPHEMES else ''}.")
+    vPrint( 'Quiet',  DEBUGGING_THIS_MODULE, f"  Loaded {len(state.flat_array):,} total data rows{' (with breaks at morphemes)' if BREAK_MORPHEMES else ''}.")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Found {state.numKetivs:,} total KETIV words used." )
 
     return True
 # end of convert_OSHB_XML_to_TSV.load_OSHB_XML
@@ -131,18 +134,25 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
             V = len(verseArray)+1
             assert V < 1000
             verse_element_array = []
+            word_number = 1
             for j,verse_element in enumerate( verse, start=1 ):
                 assert j < 100
-                numeric_ref = f"{str(nn).zfill(2)}{str(C).zfill(3)}{str(V).zfill(3)}{str(j).zfill(2)}"
-                readable_ref = f'{BBB}_{C}:{V}-{j}'
 
                 if verse_element.tag == f"{{{namespaces['osis']}}}w":
 
+                    numeric_ref = f"{str(nn).zfill(2)}{str(C).zfill(3)}{str(V).zfill(3)}{str(word_number).zfill(2)}"
+                    readable_ref = f'{BBB}_{C}:{V}w{word_number}'
+
                     lemma = verse_element.attrib.get('lemma')
-                    n = verse_element.attrib.get('n')
+                    n = verse_element.attrib.get('n') # See https://github.com/openscriptures/morphhb/issues/46
                     morph = verse_element.attrib.get('morph')
                     assert morph[0] in 'HA' # Must be Hebrew or Aramaic
                     OS_id = verse_element.attrib.get('id')
+                    wType = verse_element.attrib.get('type')
+                    if wType:
+                        assert wType == 'x-ketiv', f"Found {wType=}"
+                        state.numKetivs += 1
+                    ketiv = 'K' if wType else ''
                     word = verse_element.text
 
                     if OS_id:
@@ -160,8 +170,8 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
                         #           frequently one less (for possessive pronoun at end of word)
                         max_slash_count = max( wc, lc, mc )
                         if max_slash_count == 0: # no components (separated by /)
-                            verse_element_array.append([readable_ref, 'w', lemma, n, morph, OS_id, word])
-                            state.flat_array.append([numeric_ref, readable_ref, 'w', lemma, n, morph, OS_id, word])
+                            verse_element_array.append([readable_ref, 'w', ketiv, lemma, n, morph, OS_id, word])
+                            state.flat_array.append([numeric_ref, readable_ref, 'w', ketiv, lemma, n, morph, OS_id, word])
                         else: # there's multiple morphemes
                             letterDict = { 0:'a', 1:'b', 2:'c', 3:'d', 4:'e' }
                             word_bits, morph_bits, lemma_bits = word.split('/'), morph.split('/'), lemma.split('/')
@@ -176,21 +186,83 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
                                 adj_numeric_ref = f'{numeric_ref}{letter}'
                                 adj_readable_ref = f'{readable_ref}{letter}'
                                 adj_id = f'{OS_id}{letter}'
-                                verse_element_array.append([adj_readable_ref, 'm', lemma_bit, n, morph_bit, adj_id, word_bit])
-                                state.flat_array.append([adj_numeric_ref, adj_readable_ref, 'm', lemma_bit, n, morph_bit, adj_id, word_bit])
+                                verse_element_array.append([adj_readable_ref, 'm', ketiv, lemma_bit, n, morph_bit, adj_id, word_bit])
+                                entry = (adj_numeric_ref, adj_readable_ref, 'm', ketiv, lemma_bit, n, morph_bit, adj_id, word_bit)
+                                assert len(entry) == OUTPUT_FIELDNAMES_COUNT, f"Entry should have {OUTPUT_FIELDNAMES_COUNT} fields, not {len(entry)}: {entry}"
+                                state.flat_array.append( entry )
                     else: # it's simple
-                        verse_element_array.append([readable_ref, 'w', lemma, n, morph, OS_id, word])
-                        state.flat_array.append([numeric_ref, readable_ref, 'w', lemma, n, morph, OS_id, word])
+                        verse_element_array.append([readable_ref, 'w', ketiv, lemma, n, morph, OS_id, word])
+                        entry = (numeric_ref, readable_ref, 'w', ketiv, lemma, n, morph, OS_id, word)
+                        assert len(entry) == OUTPUT_FIELDNAMES_COUNT, f"Entry should have {OUTPUT_FIELDNAMES_COUNT} fields, not {len(entry)}: {entry}"
+                        state.flat_array.append( entry )
+                    word_number += 1
+                    
 
                 elif verse_element.tag == f"{{{namespaces['osis']}}}seg":
+                    numeric_ref = f"{str(nn).zfill(2)}{str(C).zfill(3)}{str(V).zfill(3)}"
+                    readable_ref = f'{BBB}_{C}:{V}'
+
                     seg_type = verse_element.attrib.get('type')
                     verse_element_array.append([readable_ref, 'seg', seg_type, verse_element.text])
-                    state.flat_array.append([numeric_ref, readable_ref, 'seg', '','', seg_type, '', verse_element.text])
+                    entry = (numeric_ref, readable_ref, 'seg', '','','', seg_type, '', verse_element.text)
+                    assert len(entry) == OUTPUT_FIELDNAMES_COUNT, f"Entry should have {OUTPUT_FIELDNAMES_COUNT} fields, not {len(entry)}: {entry}"
+                    state.flat_array.append( entry )
 
                 elif verse_element.tag == f"{{{namespaces['osis']}}}note":
+                    numeric_ref = f"{str(nn).zfill(2)}{str(C).zfill(3)}{str(V).zfill(3)}"
+                    readable_ref = f'{BBB}_{C}:{V}'
+
                     n = verse_element.attrib.get('n')
-                    verse_element_array.append([readable_ref, 'note', n, verse_element.text])
-                    state.flat_array.append([numeric_ref, readable_ref, 'note', '', n, verse_element.text])
+                    noteType = verse_element.attrib.get('type')
+                    noteText = verse_element.text
+                    if readable_ref=='JER_48:44': noteText = noteText.strip() # Need to strip multiline note
+                    vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Got note: {readable_ref} {n=} {noteType=} {noteText=}" )
+                    if noteType in ('variant','alternative','exegesis'):
+                        if noteType in ('variant','alternative'):
+                            assert not noteText
+                            noteText = '' # it probably was None
+                        for noteChild in verse_element:
+                            if noteChild.tag == f"{{{namespaces['osis']}}}catchWord":
+                                for attrib,value in noteChild.items():
+                                    print(attrib,value); halt # Should be no attributes
+                                noteText = f"{noteText}{' ' if noteText else ''}{noteChild.text}:"
+                                assert 'None' not in noteText, f"BAD note: {readable_ref} {n=} {noteType=} {noteText=}"
+                            elif noteChild.tag == f"{{{namespaces['osis']}}}rdg":
+                                for attrib,value in noteChild.items():
+                                    if attrib == 'type':
+                                        noteText = f"{noteText}{' ' if noteText else ''}({value})"
+                                        assert 'None' not in noteText, f"BAD note: {readable_ref} {n=} {noteType=} {noteText=}"
+                                    else: print(attrib,value); halt # Should be no attributes
+                                for rdgChild in noteChild:
+                                    if rdgChild.tag == f"{{{namespaces['osis']}}}w":
+                                        noteText = f"{noteText}{' ' if noteText and noteText[-1] not in '׀־' else ''}'{rdgChild.text}':"
+                                        assert 'None' not in noteText, f"BAD note: {readable_ref} {n=} {noteType=} {noteText=}"
+                                        for attrib,value in rdgChild.items():
+                                            noteText = f"{noteText}{' ' if noteText else ''}{attrib}={value}"
+                                            assert 'None' not in noteText, f"BAD note: {readable_ref} {n=} {noteType=} {noteText=}"
+                                    elif rdgChild.tag == f"{{{namespaces['osis']}}}seg":
+                                        assert rdgChild.get('type') in ('x-maqqef','x-paseq'), f"Seg is {rdgChild.get('type')} {rdgChild.text=}"
+                                        noteText = f"{noteText}{rdgChild.text}"
+                                        assert 'None' not in noteText, f"BAD note: {readable_ref} {n=} {noteType=} {noteText=}"
+                                    else: print(rdgChild); halt
+                                    if rdgChild.text:
+                                        noteText = f"{noteText}{' ' if noteText else ''}{rdgChild.text}"
+                                        assert 'None' not in noteText, f"BAD note: {readable_ref} {n=} {noteType=} {noteText=}"
+                                if noteChild.text:
+                                    noteText = f"{noteText}{noteChild.text}"
+                                    assert 'None' not in noteText, f"BAD note: {readable_ref} {n=} {noteType=} {noteText=}"
+                            else: print(noteChild); halt
+                        vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Now note: {readable_ref} {n=} {noteType=} {noteText=}" )
+                    else: # not 'variant'
+                        assert noteText
+                        for attrib,value in verse_element.items():
+                            assert attrib in ('n',), f"Unhandled {attrib}='{value}'"
+
+                    assert 'None' not in noteText, f"BAD note: {readable_ref} {n=} {noteType=} {noteText=}"
+                    verse_element_array.append([readable_ref, 'note', n, noteType, noteText])
+                    entry = (numeric_ref, readable_ref, 'note', noteType,'', n, '','', noteText)
+                    assert len(entry) == OUTPUT_FIELDNAMES_COUNT, f"Entry should have {OUTPUT_FIELDNAMES_COUNT} fields, not {len(entry)}: {entry}"
+                    state.flat_array.append( entry )
 
                 else:
                     logging.critical( f"Unknown verse element at {readable_ref}: {verse_element.tag}")
@@ -218,14 +290,13 @@ def export_table_to_files() -> bool:
     """
     OSHB_TSV_output_filepath = Path( OSHB_TSV_OUTPUT_FILEPATH_STRING.replace( '.original.', '.original.flat.morphemes.' )
                 if BREAK_MORPHEMES else OSHB_TSV_OUTPUT_FILEPATH_STRING.replace( '.original.', '.original.flat.words.' ) )
-    print( f"Exporting WLC table as a single flat TSV file to {OSHB_TSV_output_filepath}…" )
-    fieldnames = ['FGID','Ref','Type','Strongs','n','Morphology','OSHBid','Morpheme' if BREAK_MORPHEMES else 'Word']
+    print( f"Exporting WLC table as a single flat TSV file ({OUTPUT_FIELDNAMES_COUNT} columns) to {OSHB_TSV_output_filepath}…" )
     with open( OSHB_TSV_output_filepath, 'wt', encoding='utf-8' ) as tsv_output_file:
         tsv_output_file.write('\ufeff') # Write BOM
-        writer = DictWriter( tsv_output_file, fieldnames=fieldnames, delimiter='\t' )
+        writer = DictWriter( tsv_output_file, fieldnames=OUTPUT_FIELDNAMES, delimiter='\t' )
         writer.writeheader()
         for row in state.flat_array:
-            rowDict = {k:v for k,v in zip(fieldnames,row)}
+            rowDict = {k:v for k,v in zip(OUTPUT_FIELDNAMES,row)}
             writer.writerow( rowDict )
 
     OSHB_JSON_output_filepath = Path( OSHB_JSON_OUTPUT_FILEPATH_STRING.replace( '.original.', '.original.flat.morphemes.' )

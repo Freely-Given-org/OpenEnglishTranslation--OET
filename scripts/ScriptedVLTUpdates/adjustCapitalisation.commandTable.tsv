@@ -1,0 +1,67 @@
+Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	RCase	Replace	Name	Comment
+									Abyss			abyss		TODO: Not a modern English word
+									Advocate			advocate		John 14:26
+									Almighty			almighty		TODO: Not a modern English word
+									Alpha			first_letter
+									the Amen			the amen		Rev 3:14
+									the “Amen”			the amen		2 Cor 1:20
+									Anointed			anointed
+									Blood			blood		Field of Blood
+									Bread			bread		Bread of Presence
+									Creator			creator		1 Peter 4:19
+									Council			council
+									Deity			deity		Col 2:9
+									Devout			devout		Acts 2:27
+									Father			father
+									Field			field		Field of the Potter
+									Gate			gate		John 5:2 Sheep Gate
+									God			god
+									called Great			called great		Acts 8:10
+									the Great			the great		Rev 17:4
+									Holies			holies		Heb 9:3
+									Holy			holy
+									Heaven			heaven		Also gets Heavens, Heavenly
+									Highest			highest		God Luke 1:76
+									Instructors			instructors		Matt 23:10
+									King			king
+									Lamb			lamb
+									Majestic Glory			majestic glory		2 Pet 1:17
+									Majesty			majesty		Heb 8:1
+									˱of˲_Man”			˱of˲_man”		Rev 14:14
+w									˱of˲_Man			˱of˲_man		Don't want to get of_Manasseh
+									, Master			, master		Luke 2:29
+									only Master			only master		Jude 4
+									the Master			the master		Rev 6:10
+									, Oh 			, oh 		Not at the beginning of a sentence
+									Omega			last_letter
+w									One			one		Acts 2:27
+									Originator			originator		Acts 3:15
+									Paradise			paradise
+d									Passover			passover_\add feast\add*
+									Stone_Pavement			stone_pavement		John 19:13 Stone Pavement
+									Pentecost			pentecost
+									Place			place
+									Potter			potter		Field of the Potter
+									the Power			the power		Acts 8:10
+									Preparation			preparation		Day of Preparation
+									Presence			presence		Bread of Presence
+				id					Psalms			psalms		Luke 20:42
+									Python			python		Acts 16:16
+									Righteous			righteous		Acts 3:14
+									Sabbath			sabbath
+									Savior			savior
+									Scripture			scripture		Also gets Scriptures
+									Sheep			sheep		John 5:2 Sheep Gate
+									Skull			skull
+									Son			son
+									Spirit			spirit
+									True			true		1 Jn 5:20
+									Way			way		Acts 24:14
+									Word			word		Rev 19:13
+
+# Fix bugs
+									On_One_Hand			On_one_hand
+									You_All			You_all
+
+# Recapitalise sentence beginnings
+									? god			? God
