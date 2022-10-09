@@ -50,10 +50,10 @@ from BibleOrgSys.OriginalLanguages import Hebrew
 # from BibleOrgSys.OriginalLanguages import HebrewWLCBible
 
 
-LAST_MODIFIED_DATE = '2022-10-05' # by RJH
+LAST_MODIFIED_DATE = '2022-10-07' # by RJH
 SHORT_PROGRAM_NAME = "Prepare_OSHB_for_glossing"
 PROGRAM_NAME = "Prepare OSHB for glossing"
-PROGRAM_VERSION = '0.40'
+PROGRAM_VERSION = '0.41'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = True
@@ -225,6 +225,8 @@ def create_expanded_TSV_table() -> bool:
                         'GlossCapitalisation': glossCapitalisation,
                         'GlossOrder': str(glossOrderInt), }
         new_rows.append( newRowDict )
+
+        # Prepare for next row
         glossCapitalisation = 'S' if new_morphology=='x-sof-pasuq' else ''
         last_OSIS_base_id, last_row = OSIS_base_id, newRowDict
 

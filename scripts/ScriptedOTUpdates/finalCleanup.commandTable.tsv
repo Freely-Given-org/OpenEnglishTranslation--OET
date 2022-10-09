@@ -1,0 +1,17 @@
+Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	RCase	Replace	Name	Comment
+
+# Remove inserted word indicators
+									=			_	replaceEquals	Replace = morpheme divider with underlines
+
+# Punctuation and spaces
+				id					 - 			 	removeHyphenSpaces	Remove hyphen (untranslated article) surrounded by spaces
+				id					- 			 	removeHyphenSpace	Remove hyphen (untranslated article) followed by space
+				id					 -			 	removeSpaceHyphen	Remove hyphen (untranslated article) preceded by space
+
+#l				id					_ 			_	removeUnderlineSpace	Remove space after underline (rejoins words)
+l									__			_	reduceDoubleUnderlines	Reduce double underlines in entire file
+l									  			 	reduceDoubleSpaces	Reduce double spaces in entire file
+
+#									__not 			_ not 	fixUnderlineBeforeNot	Fix a double underline before inserted words
+
+#									_/_			_	fixUnknownPatthern	Fix an unexplained pattern _/_left in Matt 18:12

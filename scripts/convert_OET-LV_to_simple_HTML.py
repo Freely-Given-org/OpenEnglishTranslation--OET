@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# update_OET-LV-NT.py
+# convert_OET-LV_to_simple_HTML.py
 #
-# Script to backport the ULT OT into empty verses of the OET-LV OT
+# Script to take the OET-LV NT USFM files and convert to HTML
 #
 # Copyright (C) 2022 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org@gmail.com>
@@ -31,8 +31,10 @@ This script is designed to be able to be run over and over again,
     i.e., it should be able to update the OET-LV with more recent ULT edits.
 """
 from gettext import gettext as _
+from tracemalloc import start
 from typing import List, Tuple, Optional
 from pathlib import Path
+from datetime import datetime
 import shutil
 import re
 
@@ -46,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-10-04' # by RJH
-SHORT_PROGRAM_NAME = "Update_OET-LV-NT"
-PROGRAM_NAME = "Update OET-LV New Testament"
-PROGRAM_VERSION = '0.18'
+LAST_MODIFIED_DATE = '2022-10-09' # by RJH
+SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
+PROGRAM_NAME = "Convert OET-LV USFM to simple HTML"
+PROGRAM_VERSION = '0.21'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -57,18 +59,41 @@ DEBUGGING_THIS_MODULE = False
 
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module
 FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos
-# OETUSFMInputFolderPath = FG_folderpath.joinpath( 'ScriptedBibleEditor/TestFiles/edited_VLT_USFM/' )
-OETUSFMInputFolderPath = project_folderpath.joinpath( 'derivedTexts/auto_edited_VLT_USFM/' )
-OETUSFMOutputFolderPath = project_folderpath.joinpath( 'translatedTexts/LiteralVersion/' )
-OETHTMLOutputFolderPath = project_folderpath.joinpath( 'derivedTexts/simpleHTML/LiteralVersion/' )
-assert OETUSFMInputFolderPath.is_dir()
-assert OETUSFMOutputFolderPath.is_dir()
-assert OETHTMLOutputFolderPath.is_dir()
+OET_OT_USFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_OT_USFM/' )
+OET_NT_USFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_VLT_USFM/' )
+# OET_USFM_OutputFolderPath = project_folderpath.joinpath( 'translatedTexts/LiteralVersion/' )
+OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'derivedTexts/simpleHTML/LiteralVersion/' )
+assert OET_OT_USFM_InputFolderPath.is_dir()
+assert OET_NT_USFM_InputFolderPath.is_dir()
+# assert OET_USFM_OutputFolderPath.is_dir()
+assert OET_HTML_OutputFolderPath.is_dir()
 
 EN_SPACE, EM_SPACE = ' ', ' '
 NARROW_NON_BREAK_SPACE = ' '
-BBB_LIST = ('MAT','MRK','LUK','JHN','ACT','ROM','CO1','CO2','GAL','EPH','PHP','COL','TH1','TH2','TI1','TI2','TIT','PHM','HEB','JAM','PE1','PE2','JN1','JN2','JN3','JDE','REV')
-assert len(BBB_LIST) == 27
+OT_BBB_LIST = ('GEN','EXO','LEV','NUM','DEU','JOS','JDG','RUT','SA1','SA2','KI1','KI2','CH1','CH2',
+                'EZR','NEH','EST','JOB','PSA','PRO','ECC','SNG','ISA','JER','LAM','EZE',
+                'DAN','HOS','JOL','AMO','OBA','JNA','MIC','NAH','HAB','ZEP','HAG','ZEC','MAL')
+assert len(OT_BBB_LIST) == 39
+NT_BBB_LIST = ('MAT','MRK','LUK','JHN','ACT','ROM','CO1','CO2','GAL','EPH','PHP','COL','TH1','TH2','TI1','TI2','TIT','PHM','HEB','JAM','PE1','PE2','JN1','JN2','JN3','JDE','REV')
+assert len(NT_BBB_LIST) == 27
+BBB_LIST = OT_BBB_LIST + NT_BBB_LIST
+assert len(BBB_LIST) == 66
+
+
+def main():
+    """
+    Main program to handle command line parameters and then run what they want.
+    """
+    BibleOrgSysGlobals.introduceProgram( __name__, PROGRAM_NAME_VERSION, LAST_MODIFIED_DATE )
+
+    global genericBookList
+    genericBibleOrganisationalSystem = BibleOrganisationalSystem( 'GENERIC-KJV-ENG' )
+    genericBookList = genericBibleOrganisationalSystem.getBookList()
+
+    # Convert files to simple HTML
+    produce_HTML_files()
+# end of convert_OET-LV_to_simple_HTML.main
+
 
 INDEX_HTML = '''<!DOCTYPE html>
 <html lang="en-US">
@@ -76,13 +101,25 @@ INDEX_HTML = '''<!DOCTYPE html>
   <title>OET Literal Version Development</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="Bible, OET, literal, version">
+  <meta name="keywords" content="Bible, translation, OET, literal, version">
   <link rel="stylesheet" type="text/css" href="BibleBook.css">
 </head>
 <body>
   <p><a href="../">Up</a></p>
   <h1>Open English Translation Literal Version (OET-LV) Development</h1>
-  <h2>Very preliminary in-progress still-private test version</h2>
+  <h2>Very preliminary in-progress still-private test version v0.01</h2>
+  <h3>Last updated: __LAST_UPDATED__</h3>
+  <p id="Index"><a href="OET-LV_GEN.html">Genesis</a> &nbsp;&nbsp;<a href="OET-LV_EXO.html">Exodus</a> &nbsp;&nbsp;<a href="OET-LV_LEV.html">Leviticus</a> &nbsp;&nbsp;<a href="OET-LV_NUM.html">Numbers</a> &nbsp;&nbsp;<a href="OET-LV_DEU.html">Deuteronomy</a><br>
+    <a href="OET-LV_JOS.html">Y<span class="schwa">ə</span>hōshū'a/Joshua</a> &nbsp;&nbsp;<a href="OET-LV_JDG.html">Leaders/Judges</a> &nbsp;&nbsp;<a href="OET-LV_RUT.html">Rūt/Ruth</a><br>
+    <a href="OET-LV_SA1.html">Sh<span class="schwa">ə</span>mū'ēl/Samuel 1</a> &nbsp;&nbsp;<a href="OET-LV_SA2.html">Sh<span class="schwa">ə</span>mū'ēl/Samuel 2</a> &nbsp;&nbsp;<a href="OET-LV_KI1.html">Kings 1</a> &nbsp;&nbsp;<a href="OET-LV_KI2.html">Kings 2</a> &nbsp;&nbsp;<a href="OET-LV_CH1.html">Accounts/Chronicles 1</a> &nbsp;&nbsp;<a href="OET-LV_CH2.html">Accounts/Chronicles 2</a><br>
+    <a href="OET-LV_EZR.html">'Ez<span class="schwa">ə</span>rā'/Ezra</a> &nbsp;&nbsp;<a href="OET-LV_NEH.html">N<span class="schwa">ə</span>ḩem<span class="schwa">ə</span>yāh/Nehemiah</a> &nbsp;&nbsp;<a href="OET-LV_EST.html">'Eş<span class="schwa">ə</span>ttēr/Esther</a><br>
+    <a href="OET-LV_JOB.html">'Yuōv/Job</a> &nbsp;&nbsp;<a href="OET-LV_PSA.html">Songs/Psalms</a> &nbsp;&nbsp;<a href="OET-LV_PRO.html">Sayings/Proverbs</a> &nbsp;&nbsp;<a href="OET-LV_ECC.html">Ecclessiastes</a> &nbsp;&nbsp;<a href="OET-LV_SNG.html">Song of /Solomon</a><br>
+    <a href="OET-LV_ISA.html">Y<span class="schwa">ə</span>sha'<span class="schwa">ə</span>yāh/Isaiah</a> &nbsp;&nbsp;<a href="OET-LV_JER.html">Yir<span class="schwa">ə</span>m<span class="schwa">ə</span>yāh/Jeremiah</a> &nbsp;&nbsp;<a href="OET-LV_LAM.html">Wailings/Lamentations</a> &nbsp;&nbsp;<a href="OET-LV_EZE.html">Y<span class="schwa">ə</span>ḩez<span class="schwa">ə</span>qē'l/Ezekiel</a><br>
+    <a href="OET-LV_DAN.html">Dāniyyē'l/Daniel</a> &nbsp;&nbsp;<a href="OET-LV_HOS.html">Hōshē'a/Hosea</a> &nbsp;&nbsp;<a href="OET-LV_JOL.html">Yō'ēl/Joel</a> &nbsp;&nbsp;<a href="OET-LV_AMO.html">'Āmōʦ/Amos</a><br>
+    <a href="OET-LV_OBA.html">'Ovad<span class="schwa">ə</span>yāh/Obadiah</a> &nbsp;&nbsp;<a href="OET-LV_JNA.html">Yōnāh/Jonah</a> &nbsp;&nbsp;<a href="OET-LV_MIC.html">Mīkāh/Micah</a> &nbsp;&nbsp;<a href="OET-LV_NAH.html">Naḩūm/Nahum</a><br>
+    <a href="OET-LV_HAB.html">Ḩavaqqūq/Habakkuk</a> &nbsp;&nbsp;<a href="OET-LV_ZEP.html">Ts<span class="schwa">ə</span>fan<span class="schwa">ə</span>yāh/Zephaniah</a> &nbsp;&nbsp;<a href="OET-LV_HAG.html">Ḩaggay/Haggai</a> &nbsp;&nbsp;<a href="OET-LV_ZEC.html">Z<span class="schwa">ə</span>kar<span class="schwa">ə</span>yāh/Zechariah</a> &nbsp;&nbsp;<a href="OET-LV_MAL.html">Mal<span class="schwa">ə</span>'ākī/Malachi</a></p>
+  <p>Whole <a href="OET-LV-Torah.html">Torah/Pentateuch</a>
+    (long and slower to load, but useful for easy searching, etc.)</p>
   <p><a href="OET-LV_MAT.html">Matthaios/Matthew</a> &nbsp;&nbsp;<a href="OET-LV_MRK.html">Markos/Mark</a> &nbsp;&nbsp;<a href="OET-LV_LUK.html">Loukas/Luke</a> &nbsp;&nbsp;<a href="OET-LV_JHN.html">Yōannēs/John</a> &nbsp;&nbsp;<a href="OET-LV_ACT.html">Acts</a><br>
     <a href="OET-LV_ROM.html">Romans</a> &nbsp;&nbsp;<a href="OET-LV_CO1.html">Corinthians 1</a> &nbsp;&nbsp;<a href="OET-LV_CO2.html">Corinthians 2</a><br>
     <a href="OET-LV_GAL.html">Galatians</a> &nbsp;&nbsp;<a href="OET-LV_EPH.html">Ephesians</a> &nbsp;&nbsp;<a href="OET-LV_PHP.html">Philippians</a> &nbsp;&nbsp;<a href="OET-LV_COL.html">Colossians</a><br>
@@ -94,13 +131,13 @@ INDEX_HTML = '''<!DOCTYPE html>
     <a href="OET-LV_JN1.html">Yōannēs/John 1</a> &nbsp;&nbsp;<a href="OET-LV_JN2.html">Yōannēs/John 2</a> &nbsp;&nbsp;<a href="OET-LV_JN3.html">Yōannēs/John 3</a><br>
     <a href="OET-LV_JDE.html">Youdas/Jude</a><br>
     <a href="OET-LV_REV.html">Revelation</a></p>
-  <p>Whole <a href="OET-LV.html">New Testament</a>
+  <p>Whole <a href="OET-LV-NT.html">New Testament</a>
     (long and slower to load, but useful for easy searching, etc.)</p>
   <h2 id="Intro">Introduction</h2>
   <h3>The Open English Translation of the Bible (OET)</h3>
       <p>The <em>Literal Version</em> (OET-LV) forms just one-half of the new, forthcoming <em>Open English Translation</em> of the Bible (OET).
         The other half is the <em>Readers’ Version</em> (OET-RV) which work will resume on in 2023.
-        These two versions, side-by-side, make up the OET.</p>
+        These two versions, side-by-side, together make up the OET.</p>
       <p>So why two versions? Well, many people ask the question:
         <i>Which English Bible translation should I use?</i>
         And often the answer is that there’s no single Bible translation which can meet
@@ -124,6 +161,10 @@ INDEX_HTML = '''<!DOCTYPE html>
     <p>Put simply, the goal of the <em>Open English Translation</em> is simply to make the Bible more accessible
         to this current generation with the best of a free-and-open easy-to-understand <em>Readers’ Version</em>
         alongside a faithful <em>Literal Version</em> so that you yourself can checkout what was said and what is interpreted.</p>
+    <p>A secondary goal is to expose more people to some of the background of where our Bibles come from
+        and how translators make decisions,
+        i.e., to teach a little more about original manuscripts
+        and to challenge a little more about translation traditions that can possibly be improved.<p>
   <h3 id="Distinctives">Distinctives</h3>
     <p>The OET has the following distinguishing points:</p>
     <ul><li>An easy-to-understand <em>Readers’ Version</em> side-by-side with a very <em>Literal Version</em></li>
@@ -181,7 +222,7 @@ INDEX_HTML = '''<!DOCTYPE html>
         The original meaning is <i>one who is anointed</i> (by pouring a hornful of oil over them),
         but we use the derived meaning which is <i>one who is selected/chosen (by God)</i>.</li>
     </ul>
-  <h3 id="Key">Key for the OET-LV</h3>
+  <h3 id="Key">Key to symbols and colours in the OET-LV</h3>
     <p>You will notice the the <em>Literal Version</em> looks different from most Bibles that you’re used to:
     </p>
     <ul><li>Words joined together by underlines are translated from a single original word,
@@ -231,7 +272,7 @@ INDEX_HTML = '''<!DOCTYPE html>
         (These markings are known as <a href="https://en.wikipedia.org/wiki/Nomina_sacra"><em>nomina sacra</em></a>
         or <em>sacred naming</em>.)
         Most Bible translations do not indicate these special markings,
-        however in the <em>Literal Version</em> we help the reader by making
+        however in the <em>Literal Version New Testament</em> we help the reader by making
         these marked words <span class="nominaSacra">stand out</span>.</li>
     <li>Where it is determined that a group of words was either definitely or most likely
         not in the original manuscripts (autographs),
@@ -263,11 +304,11 @@ INDEX_HTML = '''<!DOCTYPE html>
         as there’s no <i>j</i> sound in either Hebrew or Greek)
         is actually more like <i>Yēsous</i> in Greek.
         But it’s likely that his “parents” (using Hebrew or the related Aramaic/Syrian language at the time)
-        named the child something more like <i>Yəhōshū'a</i>.
+        named the child something more like <i>Y<span class="schwa">ə</span>hōshū'a</i>.
         So which name should we call him in the text?
         Because the New Testament manuscripts are written in Koine Greek,
         we have chosen to give preference to the Greek forms of the names.
-        However, the first time a name is used, we show both like <i>Yēsous/(Yəhōshū'a)</i>.
+        However, the first time a name is used, we show both like <i>Yēsous/(Y<span class="schwa">ə</span>hōshū'a)</i>.
         Where the name is repeated nearby, we’ll only show the Greek form like <i>Yēsous</i>.
         (Again, it’s an accident of history that English speakers will name a child <i>Joshua</i>,
         but would not name him <i>Jesus</i> when they’re really just the same name in different forms.)
@@ -279,11 +320,11 @@ INDEX_HTML = '''<!DOCTYPE html>
     <p>Macrons (overlines over the vowels, like <i>ē</i> or <i>ō</i>) indicate lengthened vowels,
         so the pronounciation is the same as the Spanish vowels,
         but just prolonged.</p>
-    <p>The vowel <a href="https://en.wikipedia.org/wiki/Schwa">schwa</a> <i>ə</i>
-        (in names that come from Hebrew)
+    <p>The vowel <a href="https://en.wikipedia.org/wiki/Schwa">schwa</a> <i><span class="schwa">ə</span></i>
+        (in names that come from Hebrew with <a href="https://en.wikipedia.org/wiki/Shva">shva</a>)
         should be regarded as a fleeting (very short and unstressed), neutral vowel
         which is the minimal vowel required to linguistically join the surrounding consonants
-        e.g., in <i>Yəhūdāh</i>.</p>
+        e.g., in <i>Y<span class="schwa">ə</span>hūdāh</i>.</p>
     <p>Dipthongs (e.g., <i>ai</i>, <i>au</i>, <i>ei</i>, <i>oi</i>, <i>ou</i>)
         are a limited set of two vowels,
         where one vowel glides into the other,
@@ -347,6 +388,8 @@ span.addedExtra { color:lightGreen; }
 span.addedOwner { color:darkOrchid; }
 span.added { color:bisque; }
 span.ul { color:darkGrey; }
+span.dom { color:Gainsboro; }
+span.schwa { font-size:0.7em; }
 span.nominaSacra { font-weight:bold; }
 p.rem { font-size:0.8em; color:grey; }
 p.mt1 { font-size:1.8em; }
@@ -365,20 +408,111 @@ START_HTML = '''<!DOCTYPE html>
 <body>
 '''
 END_HTML = '</body></html>\n'
-whole_NT_html = ''
+whole_Torah_html = whole_NT_html = ''
 
-def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> (str, str, str):
-    fnPrint( DEBUGGING_THIS_MODULE, f"convert_USFM_to_simple_HTML( ({len(usfm_text)}) )" )
+genericBookList = []
+# def copy_in_NT_from_ScriptedBibleEditor() -> None:
+#     fnPrint( DEBUGGING_THIS_MODULE, "copy_in_NT_from_ScriptedBibleEditor()" )
+#     numFilesCopied = 0
+#     for BBB in genericBookList: # includes intro, etc.
+#         if BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB ):
+#             filename = f'OET-LV_{BBB}.usfm'
+#             vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  About to copy {BBB} file {filename} from {OET_USFM_InputFolderPath} to {OET_USFM_OutputFolderPath}")
+#             shutil.copy2( OET_USFM_InputFolderPath.joinpath(filename), OET_USFM_OutputFolderPath )
+#             numFilesCopied += 1
+#     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Finished copying {numFilesCopied} NT books\n  from {OET_USFM_InputFolderPath}\n  to {OET_USFM_OutputFolderPath}." )
 
-    links_html = f'<p>__PREVIOUS__OET-LV <a href="index.html">Index</a>, <a href="index.html#Intro">Intro</a> and <a href="index.html#Key">Key</a>__NEXT__{EM_SPACE}Whole <a href="OET-LV.html">New Testament</a> (for easy searching, etc.)</p>'
 
-    previousBBB = None if BBB=='MAT' else BBB_LIST[BBB_LIST.index(BBB)-1]
-    nextBBB = None if BBB=='REV' else BBB_LIST[BBB_LIST.index(BBB)+1]
-    links_html = links_html.replace( '__PREVIOUS__', '' if BBB=='MAT'
-        else f'<a href="OET-LV_{previousBBB}.html">Previous Book ({previousBBB})</a>{EM_SPACE}')
-    links_html = links_html.replace( '__NEXT__', '' if BBB=='REV'
-        else f'{EM_SPACE}<a href="OET-LV_{nextBBB}.html">Next Book ({nextBBB})</a>')
-    book_start_html = f'{START_HTML}{links_html}\n'
+def produce_HTML_files() -> None:
+    """
+    """
+    global whole_Torah_html, whole_NT_html
+    fnPrint( DEBUGGING_THIS_MODULE, "produce_HTML_files()" )
+
+    numBooksProcessed = 0
+    for BBB in genericBookList: # includes intro, etc.
+        bookType = None
+        if BibleOrgSysGlobals.loadedBibleBooksCodes.isOldTestament_NR( BBB ):
+            bookType = 'OT'
+        elif BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB ):
+            bookType = 'NT'
+
+        if bookType:
+            source_filename = f'OET-LV_{BBB}.usfm'
+            sourceFolderpath = OET_NT_USFM_InputFolderPath if bookType=='NT' else OET_OT_USFM_InputFolderPath
+            with open( sourceFolderpath.joinpath(source_filename), 'rt', encoding='utf-8' ) as usfm_input_file:
+                usfm_text = usfm_input_file.read()
+
+            book_start_html, book_html, book_end_html = convert_USFM_to_simple_HTML( BBB, usfm_text )
+
+            output_filename = f'OET-LV_{BBB}.html'
+            with open( OET_HTML_OutputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
+                html_output_file.write( f'{book_start_html}\n{book_html}\n{book_end_html}' )
+
+            # Adjust book_html to include BBB for chapters past chapter one (for better orientation within the entire NT)
+            bookAbbrev = BBB.title().replace('1','-1').replace('2','-2').replace('3','-3')
+            chapterRegEx = re.compile('<span class="C" id="C(\d{1,3})V1">(\d{1,3})</span>')
+            while True:
+                for match in chapterRegEx.finditer( book_html ):
+                    assert match.group(1) == match.group(2)
+                    if match.group(1) != '1': # We don't adjust chapter one
+                        # print(BBB,match,match.group(1),book_html[match.start():match.end()])
+                        insert_point = match.end() - len(match.group(2)) - 7 # len('</span>')
+                        book_html = f'{book_html[:insert_point]}{bookAbbrev} {book_html[insert_point:]}'
+                        break # redo the search
+                else: break
+            if BBB in ('GEN','EXO','LEV','NUM','DEU'):
+                whole_Torah_html = f'{whole_Torah_html}{book_html}'
+            elif bookType == 'NT':
+                whole_NT_html = f'{whole_NT_html}{book_html}'
+
+            numBooksProcessed += 1
+
+    # Output CSS and index and whole NT html
+    with open( OET_HTML_OutputFolderPath.joinpath('BibleBook.css'), 'wt', encoding='utf-8' ) as css_output_file:
+        css_output_file.write( CSS_TEXT )
+    indexHTML = INDEX_HTML.replace( '__LAST_UPDATED__', f"{datetime.now().strftime('%Y-%m-%d')} <small>by {PROGRAM_NAME_VERSION}</small>" )
+    with open( OET_HTML_OutputFolderPath.joinpath('index.html'), 'wt', encoding='utf-8' ) as html_index_file:
+        html_index_file.write( indexHTML )
+    
+    # Save our long book conglomerates
+    with open( OET_HTML_OutputFolderPath.joinpath('OET-LV-Torah.html'), 'wt', encoding='utf-8' ) as html_output_file:
+        html_output_file.write( f'{START_HTML.replace("__TITLE__","OET-LV-Torah (Preliminary)")}\n'
+                                f'<p><a href="index.html">OET-LV Index</a></p>\n{whole_Torah_html}\n'
+                                f'<p><a href="index.html">OET-LV Index</a></p>\n{END_HTML}' )
+    with open( OET_HTML_OutputFolderPath.joinpath('OET-LV-NT.html'), 'wt', encoding='utf-8' ) as html_output_file:
+        html_output_file.write( f'{START_HTML.replace("__TITLE__","OET-LV-NT (Preliminary)")}\n'
+                                f'<p><a href="index.html">OET-LV Index</a></p>\n{whole_NT_html}\n'
+                                f'<p><a href="index.html">OET-LV Index</a></p>\n{END_HTML}' )
+
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Finished processing {numBooksProcessed} HTML books." )
+
+
+def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str]:
+    fnPrint( DEBUGGING_THIS_MODULE, f"convert_USFM_to_simple_HTML( {BBB}, ({len(usfm_text)}) )" )
+
+    links_html_template = '<p>__PREVIOUS__OET-LV <a href="index.html#Index">Book index</a>,' \
+                 ' <a href="index.html#Intro">Intro</a>, and <a href="index.html#Key">Key</a>' \
+                 f'__NEXT__<br><br>__REST__</p>'
+    if BBB in OT_BBB_LIST:
+        links_html = links_html_template.replace('__REST__', 'Whole <a href="OET-LV-Torah.html">Torah/Pentateuch</a> (for easy searching, etc.)' )
+
+        previousBBB = OT_BBB_LIST[OT_BBB_LIST.index(BBB)-1] # Gives wrong value (@[-1]) for first book
+        try: nextBBB = OT_BBB_LIST[OT_BBB_LIST.index(BBB)+1]
+        except IndexError: nextBBB = 'MAT' # above line fails on final book
+        links_html = links_html.replace( '__PREVIOUS__', '' if BBB=='MAT'
+            else f'<a href="OET-LV_{previousBBB}.html">Previous Book ({previousBBB})</a>{EM_SPACE}')
+        links_html = links_html.replace( '__NEXT__', f'{EM_SPACE}<a href="OET-LV_{nextBBB}.html">Next Book ({nextBBB})</a>')
+    elif BBB in NT_BBB_LIST:
+        links_html = links_html_template.replace('__REST__', 'Whole <a href="OET-LV-NT.html">New Testament</a> (for easy searching, etc.)' )
+
+        previousBBB = 'MAL' if BBB=='MAT' else NT_BBB_LIST[NT_BBB_LIST.index(BBB)-1] # Gives wrong value (@[-1]) for first book
+        try: nextBBB = NT_BBB_LIST[NT_BBB_LIST.index(BBB)+1]
+        except IndexError: pass # above line fails on final book
+        links_html = links_html.replace( '__PREVIOUS__', f'<a href="OET-LV_{previousBBB}.html">Previous Book ({previousBBB})</a>{EM_SPACE}')
+        links_html = links_html.replace( '__NEXT__', '' if BBB=='REV'
+            else f'{EM_SPACE}<a href="OET-LV_{nextBBB}.html">Next Book ({nextBBB})</a>')
+    else: unexpected_BBB, BBB
 
     C = V = '0'
     book_html = ''
@@ -394,26 +528,31 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> (str, str, str):
         if marker in ('rem','mt1','mt2'):
             book_html = f'{book_html}<p class="{marker}">{rest}</p>\n'
         elif marker == 'toc1':
-            book_start_html = book_start_html.replace( '__TITLE__', rest )
+            start_html = START_HTML.replace( '__TITLE__', rest )
         elif marker == 'c':
             V = '0'
             C = rest
             # if C=='2': halt
             assert C.isdigit()
-            book_html = f'{book_html}<span class="C" id="C{C}V1">{C}</span>{EN_SPACE}'
+            start_c_bit = '<p class="BText">' if C=='1' else ''
+            book_html = f'{book_html}{start_c_bit}<span class="C" id="C{C}V1">{C}</span>{EN_SPACE}'
         elif marker == 'v':
             try: V, rest = rest.split( ' ', 1 )
             except ValueError: V, rest = rest, ''
             assert V.isdigit(), f"Expected a verse number digit with '{V=}' '{rest=}'"
             # Put sentences on new lines
             rest = rest.replace( '?)', 'COMBO' ) \
-                        .replace( '.', '.<br>\n&nbsp;&nbsp;' ) \
-                        .replace( '?', '?<br>\n&nbsp;&nbsp;' ) \
+                        .replace( '.', '.<br>\n' ) \
+                        .replace( '?', '?<br>\n' ) \
                         .replace( 'COMBO', '?)' )
             # We don't display the verse number for verse 1 (after chapter number)
             book_html = f'{book_html}{"" if book_html.endswith(">") else " "}{"" if V=="1" else f"""<span class="V" id="C{C}V{V}">{V}</span>{NARROW_NON_BREAK_SPACE}"""}{rest}'
         else:
             book_html = f'{book_html}<p>GOT UNEXPECTED{marker}={rest}</p>'
+
+    chapter_links = [f'<a href="#C{chapter_num}V1">C{chapter_num}</a>' for chapter_num in range( 1, int(C)+1 )]
+    chapter_html = f'<p>{EM_SPACE.join(chapter_links)}</p>'
+    book_start_html = f'{start_html}{links_html}\n{chapter_html}\n'
 
     book_html = book_html.replace( '\\nd ', '<span class="nominaSacra">' ) \
                 .replace( '\\nd*', '</span>' )
@@ -424,84 +563,21 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> (str, str, str):
                 .replace( '\\add ^', '<span class="addedOwner">' ) \
                 .replace( '\\add ', '<span class="added">' ) \
                 .replace( '\\add*', '</span>' )
+    # Make underlines grey with "ul" spans (except when already at end of a span)
     book_html = book_html.replace( '_</span>', '%%SPAN%%' ) \
                 .replace( '_', '<span class="ul">_</span>' ) \
                 .replace( '%%SPAN%%', '_</span>' )
-    return book_start_html, book_html, f'{links_html}\n{END_HTML}'
+    # Make schwas smaller
+    book_html = book_html.replace( 'ə', '<span class="schwa">ə</span>' )
+    if BBB in OT_BBB_LIST: # Hebrew direct object markers (DOMs)
+        book_html = book_html.replace( 'DOM', '<span class="dom">DOM</span>' ) \
+                        .replace( '[was]', '<span class="addedCopula">was</span>' ) \
+                        .replace( '[', '<span class="added">' ) \
+                        .replace( ']', '</span>' )
+    return ( book_start_html,
+            f"{book_html.rstrip().removesuffix('<br>').rstrip()}</p>",
+            f'{chapter_html}\n{links_html}\n{END_HTML}' )
 
-
-global genericBookList
-def copy_in_NT_from_ScriptedBibleEditor() -> None:
-    fnPrint( DEBUGGING_THIS_MODULE, "copy_in_NT_from_ScriptedBibleEditor()" )
-    numFilesCopied = 0
-    for BBB in genericBookList: # includes intro, etc.
-        if BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB ):
-            filename = f'OET-LV_{BBB}.usfm'
-            vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  About to copy {BBB} file {filename} from {OETUSFMInputFolderPath} to {OETUSFMOutputFolderPath}")
-            shutil.copy2( OETUSFMInputFolderPath.joinpath(filename), OETUSFMOutputFolderPath )
-            numFilesCopied += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Finished copying {numFilesCopied} NT books\n  from {OETUSFMInputFolderPath}\n  to {OETUSFMOutputFolderPath}." )
-
-
-def produce_NT_HTML_files() -> None:
-    global whole_NT_html
-    fnPrint( DEBUGGING_THIS_MODULE, "produce_NT_HTML_files()" )
-
-    numBooksProcessed = 0
-    for BBB in genericBookList: # includes intro, etc.
-        if BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB ):
-            source_filename = f'OET-LV_{BBB}.usfm'
-            with open( OETUSFMOutputFolderPath.joinpath(source_filename), 'rt', encoding='utf-8' ) as usfm_input_file:
-                usfm_text = usfm_input_file.read()
-
-            book_start_html, book_html, book_end_html = convert_USFM_to_simple_HTML( BBB, usfm_text )
-
-            output_filename = f'OET-LV_{BBB}.html'
-            with open( OETHTMLOutputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
-                html_output_file.write( f'{book_start_html}\n{book_html}\n{book_end_html}' )
-
-            # Adjust book_html to include BBB for chapters past chapter one (for better orientation within the entire NT)
-            bookAbbrev = BBB.title().replace('1','-1').replace('2','-2').replace('3','-3')
-            chapterRegEx = re.compile('<span class="C" id="C(\d{1,3})V1">(\d{1,3})</span>')
-            while True:
-                for match in chapterRegEx.finditer( book_html ):
-                    assert match.group(1) == match.group(2)
-                    if match.group(1) != '1': # We don't adjust chapter one
-                        # print(BBB,match,match.group(1),book_html[match.start():match.end()])
-                        insert_point = match.end() - len(match.group(2)) - 7 # len('</span>')
-                        book_html = f'{book_html[:insert_point]}{bookAbbrev} {book_html[insert_point:]}'
-                        break # redo the search
-                else: break
-            whole_NT_html = f'{whole_NT_html}{book_html}'
-
-            numBooksProcessed += 1
-
-    # Output CSS and index and whole NT html
-    with open( OETHTMLOutputFolderPath.joinpath('BibleBook.css'), 'wt', encoding='utf-8' ) as css_output_file:
-        css_output_file.write( CSS_TEXT )
-    with open( OETHTMLOutputFolderPath.joinpath('index.html'), 'wt', encoding='utf-8' ) as html_index_file:
-        html_index_file.write( INDEX_HTML )
-    with open( OETHTMLOutputFolderPath.joinpath('OET-LV.html'), 'wt', encoding='utf-8' ) as html_output_file:
-        html_output_file.write( f'{START_HTML.replace("__TITLE__","OET-LV (Preliminary)")}\n'
-                                f'<p><a href="index.html">OET-LV Index</a></p>\n{whole_NT_html}\n'
-                                f'<p><a href="index.html">OET-LV Index</a></p>\n{END_HTML}' )
-
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Finished processing {numBooksProcessed} HTML books." )
-
-
-def main():
-    """
-    Main program to handle command line parameters and then run what they want.
-    """
-    BibleOrgSysGlobals.introduceProgram( __name__, PROGRAM_NAME_VERSION, LAST_MODIFIED_DATE )
-
-    global genericBookList
-    genericBibleOrganisationalSystem = BibleOrganisationalSystem( 'GENERIC-KJV-ENG' )
-    genericBookList = genericBibleOrganisationalSystem.getBookList()
-
-    copy_in_NT_from_ScriptedBibleEditor()
-    produce_NT_HTML_files()
-# end of update_OET-LV-NT.main
 
 if __name__ == '__main__':
     # Configure basic Bible Organisational System (BOS) set-up
@@ -511,4 +587,4 @@ if __name__ == '__main__':
     main()
 
     BibleOrgSysGlobals.closedown( PROGRAM_NAME, PROGRAM_VERSION )
-# end of update_OET-LV-NT.py
+# end of convert_OET-LV_to_simple_HTML.py

@@ -39,10 +39,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-10-06' # by RJH
+LAST_MODIFIED_DATE = '2022-10-09' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed-OSHB_OT_to_USFM"
 PROGRAM_NAME = "Extract glossed-OSHB OT USFM files"
-PROGRAM_VERSION = '0.20'
+PROGRAM_VERSION = '0.22'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -165,12 +165,12 @@ def export_usfm_literal_English_gloss() -> bool:
 \\ide UTF-8
 \\rem USFM file created {datetime.now().strftime('%Y-%m-%d %H:%M')} by {PROGRAM_NAME_VERSION}
 \\rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
-\\rem The English glosses are released CC0 by https://Freely-Given.org
+\\rem Our English glosses are released CC0 by https://Freely-Given.org
 \\h {English_book_name}
 \\toc1 {English_book_name}
 \\toc2 {English_book_name}
 \\toc3 {USFM_book_code}
-\\mt1 {English_book_name}"""
+\\mt1 {'Songs/Psalms' if English_book_name=='Psalms' else English_book_name}"""
             last_BBB = BBB
             last_chapter_number = last_verse_number = last_word_number = 0
         if chapter_number != last_chapter_number:  # we've started a new chapter
@@ -188,7 +188,7 @@ def export_usfm_literal_English_gloss() -> bool:
                 HebrewWordOrMorpheme = this_verse_row['WordOrMorpheme']
                 this_row_gloss = preform_gloss(this_verse_row)
                 if this_row_gloss:
-                    usfm_text = f'{usfm_text} {this_row_gloss}'
+                    usfm_text = f"{usfm_text}{'' if this_row_gloss[0] in '.,' else ' '}{this_row_gloss}"
                 assert '  ' not in usfm_text, f"ERROR1: Have double spaces in usfm text: '{usfm_text[:200]} … {usfm_text[-200:]}'"
             # for index_set in get_gloss_word_index_list(this_verse_row_list):
             #     print(f"{source_id} {index_set=}")
@@ -314,15 +314,15 @@ def get_gloss_word_index_list(given_verse_row_list: List[dict]) -> List[List[int
 # end of extract_OSHB_OT_to_USFM.get_gloss_word_index_list
 
 
-saved_gloss = ''
+saved_gloss = saved_capitalisation = ''
 def preform_gloss(given_verse_row: Dict[str,str], last_given_verse_row: Dict[str,str]=None, last_glossWord:str=None) -> str:
     """
     Returns the gloss to display for this row (may be nothing if we have a current GlossInsert)
         or the left-over preformatted GlossWord (if any)
     The calling function has to decide what to do with it.
     """
-    global saved_gloss, mmmCount, wwwwCount
-    dPrint('Verbose', DEBUGGING_THIS_MODULE, f"preform_gloss({given_verse_row['Ref']}.{given_verse_row['Type']},"
+    global saved_gloss, saved_capitalisation, mmmCount, wwwwCount
+    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"preform_gloss({given_verse_row['Ref']}.{given_verse_row['Type']},"
             f" mg='{given_verse_row['MorphemeGloss']}' cmg='{given_verse_row['ContextualMorphemeGloss']}'"
             f" wg='{given_verse_row['WordGloss']}' cwg='{given_verse_row['ContextualWordGloss']}' {saved_gloss=}, {last_glossWord=})…")
     gloss = ''
@@ -335,8 +335,10 @@ def preform_gloss(given_verse_row: Dict[str,str], last_given_verse_row: Dict[str
             vPrint( 'Info', DEBUGGING_THIS_MODULE, f"{given_verse_row['Ref']}.{given_verse_row['Type']},"
                                         f" needs a morpheme gloss for '{given_verse_row['WordOrMorpheme']}'"
                                         f" (from '{given_verse_row['NoCantillations']}')" )
+        if not saved_gloss: #this must be the first morpheme
+            saved_capitalisation = given_verse_row['GlossCapitalisation']
         saved_gloss = f"{saved_gloss}{'=' if saved_gloss else ''}{gloss}"
-        return ''
+        return '' # Nothing to return just yet
     elif 'M' in given_verse_row['Type']:
         if given_verse_row['WordGloss']:
             gloss = given_verse_row['WordGloss']
@@ -368,10 +370,22 @@ def preform_gloss(given_verse_row: Dict[str,str], last_given_verse_row: Dict[str
             vPrint( 'Info', DEBUGGING_THIS_MODULE, f"{given_verse_row['Ref']}.{given_verse_row['Type']},"
                                             f" needs a word gloss for '{given_verse_row['WordOrMorpheme']}'"
                                             f" (from '{given_verse_row['NoCantillations']}')" )
+        saved_capitalisation = given_verse_row['GlossCapitalisation']
+    elif given_verse_row['Type'] == 'seg':
+        if given_verse_row['Morphology'] == 'x-sof-pasuq':
+            gloss = f'{gloss}.'
+        else:
+            assert given_verse_row['Morphology'] in ('x-maqqef','x-pe','x-paseq','x-samekh','x-reversednun'), f"Got seg '{given_verse_row['Morphology']}'"
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Ignoring {given_verse_row['Morphology']} seg!" )
+        saved_capitalisation = ''
 
     if gloss:
-        if 'S' in given_verse_row['GlossCapitalisation']:
+        # if saved_capitalisation: print(f"{saved_capitalisation=}")
+        if 'S' in saved_capitalisation:
+            # print(f"Capitalise ({saved_capitalisation}) '{gloss}'")
             gloss = f'{gloss[0].upper()}{gloss[1:]}'
+            # print( f"  Now '{gloss}'")
+            saved_capitalisation = ''
 
     return f"{gloss}{given_verse_row['GlossPunctuation']}"
 # end of extract_OSHB_OT_to_USFM.preform_gloss

@@ -9,13 +9,13 @@
 #   tableName = "filepath"
 #
 
-title = "ScriptedBibleEditor OET-LV-NT Sample Control File"
-description = "To convert USFM files to create the draft OET-LV-NT"
+title = "ScriptedBibleEditor OET-LV-OT Sample Control File"
+description = "To convert USFM files to create the draft OET-LV-OT"
 
-inputFolder = "../../intermediateTexts/modified_source_VLT_USFM/"
+inputFolder = "../../intermediateTexts/modified_source_glossed_OSHB_USFM/"
 inputFilenameTemplate = "BBB_gloss.usfm"
 
-outputFolder = "../../intermediateTexts/auto_edited_VLT_USFM/"
+outputFolder = "../../intermediateTexts/auto_edited_OT_USFM/"
 outputFilenameTemplate = "OET-LV_BBB.usfm"
 clearOutputFolder = true # Removes the folder and recreates it if createOutputFolder is true (else deletes all files in the folder)
 createOutputFolder = true
@@ -28,9 +28,8 @@ wordingAdjustments = "wordingAdjustments.commandTable.tsv"
 adjustCapitalisation = "adjustCapitalisation.commandTable.tsv"
 adjustPunctuation = "adjustPunctuation.commandTable.tsv"
 changeFromUSSpelling = "changeFromUSSpelling.commandTable.tsv"
-restoreOTNames = "OTNames.commandTable.tsv"
-restoreNTNames = "NTNames.commandTable.tsv"
-fixGlossPre = "fixGlossPre.commandTable.tsv"
-fixGlossHelpers = "fixGlossHelpers.commandTable.tsv"
-fixGlossPost = "fixGlossPost.commandTable.tsv"
-cleanupVLT = "cleanupVLT.commandTable.tsv"
+restoreNames = "restoreNames.commandTable.tsv"
+#fixGlossPre = "fixGlossPre.commandTable.tsv"
+#fixGlossHelpers = "fixGlossHelpers.commandTable.tsv"
+#fixGlossPost = "fixGlossPost.commandTable.tsv"
+finalCleanup = "finalCleanup.commandTable.tsv"

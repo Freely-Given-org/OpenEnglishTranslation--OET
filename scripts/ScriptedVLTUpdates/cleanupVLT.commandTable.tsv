@@ -18,7 +18,7 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 				id					 -			 	removeSpaceHyphen	Remove hyphen (untranslated article) preceded by space
 
 #l				id					_ 			_	removeUnderlineSpace	Remove space after underline (rejoins words)
-l									__  			_ 	reduceDoubleUnderlines	Reduce double underlines in entire file
+l									__			_	reduceDoubleUnderlines	Reduce double underlines in entire file
 l									  			 	reduceDoubleSpaces	Reduce double spaces in entire file
 
 #									__not 			_ not 	fixUnderlineBeforeNot	Fix a double underline before inserted words
