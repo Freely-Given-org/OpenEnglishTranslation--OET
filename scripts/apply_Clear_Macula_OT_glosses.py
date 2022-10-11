@@ -50,10 +50,10 @@ from BibleOrgSys.OriginalLanguages import Hebrew
 # from BibleOrgSys.OriginalLanguages import HebrewWLCBible
 
 
-LAST_MODIFIED_DATE = '2022-10-06' # by RJH
+LAST_MODIFIED_DATE = '2022-10-11' # by RJH
 SHORT_PROGRAM_NAME = "apply_Clear_Macula_OT_glosses"
 PROGRAM_NAME = "Extract and Apply Macula OT glosses"
-PROGRAM_VERSION = '0.40'
+PROGRAM_VERSION = '0.42'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -80,7 +80,7 @@ class State:
     # end of apply_Clear_Macula_OT_glosses.__init__
 
 
-NUM_EXPECTED_WLC_COLUMNS = 15
+NUM_EXPECTED_WLC_COLUMNS = 16
 WLC_tsv_column_max_length_counts = {}
 WLC_tsv_column_non_blank_counts = {}
 WLC_tsv_column_counts = defaultdict(lambda: defaultdict(int))
@@ -270,6 +270,7 @@ def prepass_on_Cherith_rows() -> bool:
 
 def loadLowFatGlosses() -> bool:
     """
+    Extract glosses out of fields 
     Reorganise columns and add our extra columns
     """
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading Clear.Bible 'low fat' glosses from {state.lowfat_XML_input_folderpath}/…" )
@@ -284,6 +285,7 @@ def loadLowFatGlosses() -> bool:
         if Uuu=='Hos': Uuu = 'HOS' # Fix inconsistency in naming patterns
         filenameTemplate = LOWFAT_XML_FILENAME_TEMPLATE.replace( 'NN', str(referenceNumber).zfill(2) ).replace( 'Uuu', Uuu )
 
+
         for chapterNumber in range(1, 150+1):
             filename = filenameTemplate.replace( 'CCC', str(chapterNumber).zfill(3) )
             try:
@@ -297,7 +299,7 @@ def loadLowFatGlosses() -> bool:
             for elem in chapterTree.getroot().iter():
                 if elem.tag == 'w': # ignore all the others -- there's enough info in here
                     wordOrMorpheme = elem.text
-                    ref = elem.get('ref')
+                    theirRef = elem.get('ref')
                     longID = elem.get('{http://www.w3.org/XML/1998/namespace}id') # e.g., o010010050031 = obbcccvvvwwws
                     longIDs.append( longID )
                     English = elem.get('english')
@@ -321,7 +323,7 @@ def loadLowFatGlosses() -> bool:
                     else:
                         assert len(longID) == 12
                         assert longID[:].isdigit()
-                    tempWordsAndMorphemes.append( (ref,longID,wordOrMorpheme,lang,English,gloss) )
+                    tempWordsAndMorphemes.append( (theirRef,longID,wordOrMorpheme,lang,English,gloss) )
             vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Got {len(tempWordsAndMorphemes):,} words/morphemes in {BBB} {chapterNumber}")
             assert len(set(longIDs)) == len(longIDs), f"Should be no duplicates in {longIDs=}"
 
@@ -331,6 +333,8 @@ def loadLowFatGlosses() -> bool:
             sortedTempWordsAndMorphemes = sorted( tempWordsAndMorphemes, key=lambda t: t[1] )
 
             # Adjust to our references and with just the data that we need to retain
+            # We reduce from six entries: theirRef, longID, wordOrMorpheme, lang, English, gloss
+            #   to five: ourRef, type, wordOrMorpheme, English, gloss
             for j,sixTuple in enumerate( sortedTempWordsAndMorphemes ):
                 longID = sixTuple[1]
                 # if longID.startswith('01003009'): print(j, sixTuple)
@@ -407,9 +411,12 @@ def fill_known_lowFat_English_contextual_glosses() -> bool:
         useGloss = theirGloss if theirGloss else theirEnglish
         useGloss = useGloss.replace('(dm)','DOM').replace('(et)','DOM') # Tidy up some inconsistences
         if not useGloss:
-            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Have no gloss for {ourRow['Ref']} {'word' if ourRow['Type'] in ('w','Aw') else 'morpheme'} gloss '{ourRow['ContextualWordGloss']}'" )
-            if ourRow['Type'] in ('w','Aw'): num_empty_word_glosses += 1
-            else: num_empty_morpheme_glosses += 1
+            if ourRow['Type'] in ('w','Aw','wK','AwK'):
+                vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Have no lowfat word gloss for {ourRow['Ref']} '{ourRow['WordOrMorpheme']}' gloss '{ourRow['ContextualWordGloss']}'" )
+                num_empty_word_glosses += 1
+            else:
+                vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Have no lowfat morpheme gloss for {ourRow['Ref']} '{ourRow['WordOrMorpheme']}' gloss '{ourRow['ContextualMorphemeGloss']}' {ourRow['ContextualWordGloss']=}" )
+                num_empty_morpheme_glosses += 1
             our_index += 1
             continue
         current_verse_reference = theirRef.split('w')[0] if 'w' in theirRef else theirRef
@@ -455,7 +462,7 @@ def fill_known_lowFat_English_contextual_glosses() -> bool:
                                 vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Skipping replacing {ourRow['Ref']} word gloss '{ourRow['ContextualWordGloss']}' with '{useGloss}'" )
                             num_word_glosses_skipped += 1
                         else:
-                            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Setting {ourRow['Ref']} '{ourRow['WordOrMorpheme']}' word gloss to '{useGloss}'" )
+                            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    Setting {ourRow['Ref']} '{ourRow['WordOrMorpheme']}' word gloss to '{useGloss}'" )
                             ourRow['ContextualWordGloss'] = useGloss
                             num_word_glosses_added += 1
                     else: # it's a morpheme
@@ -466,7 +473,7 @@ def fill_known_lowFat_English_contextual_glosses() -> bool:
                                 vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Skipping replacing {ourRow['Ref']} morpheme gloss '{ourRow['ContextualMorphemeGloss']}' with '{useGloss}'" )
                             num_morpheme_glosses_skipped += 1
                         else:
-                            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Setting {ourRow['Ref']} '{ourRow['WordOrMorpheme']}' morpheme gloss to '{useGloss}'" )
+                            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    Setting {ourRow['Ref']} '{ourRow['WordOrMorpheme']}' morpheme gloss to '{useGloss}'" )
                             ourRow['ContextualMorphemeGloss'] = useGloss
                             num_morpheme_glosses_added += 1
                     our_index += increment + 1 # Used it

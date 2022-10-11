@@ -53,7 +53,7 @@ on your system:
 
 - [OET](https://github.com/Freely-Given-org/OpenEnglishTranslation--OET)
 - [BibleOrgSys](https://github.com/Freely-Given-org/BibleOrgSys)
-- [ScriptedBibleEditor](https://github.com/Freely-Given-org/ScriptedBibleEditor))
+- [ScriptedBibleEditor](https://github.com/Freely-Given-org/ScriptedBibleEditor)
 - And in _Forked/_ subfolder:
   - [Open Scriptures Hebrew Bible](https://github.com/Freely-Given-org/OS-morphhb)
   - [Clear.Bible Macula Hebrew](https://github.com/Freely-Given-org/macula-hebrew)
@@ -76,11 +76,16 @@ Westminster Leningrad Codex (WLC) as our Hebrew (& Aramaic) source text.
 
 This is how we currently form the 39 Old Testament files for the OET-LV-OT:
 
-- # Take the OSHB WLC words, notes, and segments, and put them into a single TSV table
-- ./convert_OSHB_XML_to_TSV.py # words are broken into morphemes -- over half-a-million lines
-- ./prepare_OSHB_for_glossing.py # expand out the columns to add glossing information
+- echo Take the OSHB WLC words, notes, and segments, and put them into a single TSV table
+- ./convert_OSHB_XML_to_TSV.py # words are broken into morphemes -- nine columns -- over half-a-million lines
+- echo Expand out the columns ready to add glossing information
+- ./prepare_OSHB_for_glossing.py # goes from 9 to 16 columns
+- echo Take the Clear.Bible LowFat trees and flatten them into a TSV file -- 32 columns -- almost half-a-million lines
+- echo Also creates an abbreviated version with only xx columns
+- ./convert_ClearMaculaOT_to_TSV.py -e # Gives errors due to missing particles and word numbers in low-fat trees
 - ./apply_Clear_Macula_OT_glosses.py
-- ./extract_OSHB_OT_to_USFM.py
+- ./extract_OSHB_OT_to_USFM.py # TSV table ➔ USFM files
+- echo Do programmed word and other substitutions to the USFM files
 - ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py ScriptedVLTUpdates -qe
 
 ## New Testament
@@ -90,12 +95,14 @@ Verifiable Literal Translation (VLT) as our NT source text.
 
 This is how we currently form the 27 New Testament files for the OET-LV-NT:
 
-- ./extract_VLT_NT_to_USFM.py # Converts VLT glosses from still-private CNTR book and collation CSV files to NT USFM files
+- echo Convert VLT glosses from still-private CNTR book and collation CSV files to NT USFM files
+- ./extract_VLT_NT_to_USFM.py # TSV table ➔ USFM files
+- echo Do programmed word and other substitutions to the USFM files
 - ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py ScriptedOTUpdates -qe
 
 ## For both
 
-- ./convert_OET-LV_to_simple_HTML.py # converts USFM to simple HTML
+- ./convert_OET-LV_to_simple_HTML.py # USFM files ➔ simple HTML (incl. index) files
 
 ## To Do
 

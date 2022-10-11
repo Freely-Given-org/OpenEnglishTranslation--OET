@@ -50,10 +50,10 @@ from BibleOrgSys.OriginalLanguages import Hebrew
 # from BibleOrgSys.OriginalLanguages import HebrewWLCBible
 
 
-LAST_MODIFIED_DATE = '2022-10-07' # by RJH
+LAST_MODIFIED_DATE = '2022-10-10' # by RJH
 SHORT_PROGRAM_NAME = "Prepare_OSHB_for_glossing"
 PROGRAM_NAME = "Prepare OSHB for glossing"
-PROGRAM_VERSION = '0.41'
+PROGRAM_VERSION = '0.43'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = True
@@ -75,7 +75,7 @@ class State:
         self.WLC_rows = []
         self.expanded_headers = ['Ref','OSHBid','Type','Strongs','CantillationHierarchy','Morphology','WordOrMorpheme','NoCantillations',
                                             'MorphemeGloss','ContextualMorphemeGloss', 'WordGloss','ContextualWordGloss',
-                                            'GlossCapitalisation','GlossPunctuation','GlossOrder']
+                                            'GlossCapitalisation','GlossPunctuation','GlossOrder','GlossInsert']
     # end of prepare_OSHB_for_glossing.__init__
 
 
@@ -223,6 +223,7 @@ def create_expanded_TSV_table() -> bool:
                         'WordOrMorpheme': row['WordOrMorpheme'],
                         'NoCantillations': removeCantillationMarks(row['WordOrMorpheme'], removeMetegOrSiluq=True),
                         'GlossCapitalisation': glossCapitalisation,
+                        'GlossPunctuation': '.' if new_type=='seg' and new_morphology=='x-sof-pasuq' else '',
                         'GlossOrder': str(glossOrderInt), }
         new_rows.append( newRowDict )
 

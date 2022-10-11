@@ -39,10 +39,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-10-09' # by RJH
+LAST_MODIFIED_DATE = '2022-10-10' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed-OSHB_OT_to_USFM"
 PROGRAM_NAME = "Extract glossed-OSHB OT USFM files"
-PROGRAM_VERSION = '0.22'
+PROGRAM_VERSION = '0.23'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -62,7 +62,7 @@ class State:
     # end of extract_OSHB_OT_to_USFM.__init__
 
 
-NUM_EXPECTED_OSHB_COLUMNS = 15
+NUM_EXPECTED_OSHB_COLUMNS = 16
 source_tsv_rows = []
 source_tsv_column_max_length_counts = {}
 source_tsv_column_non_blank_counts = {}
@@ -131,7 +131,7 @@ def export_usfm_literal_English_gloss() -> bool:
     """
     Use the GlossOrder field to export the English gloss.
     """
-    print( f"\nExporting USFM plain text literal English files to {OT_USFM_OUTPUT_FOLDERPATH}…" )
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nExporting USFM plain text literal English files to {OT_USFM_OUTPUT_FOLDERPATH}…" )
     last_BBB = last_verse_id = None
     last_chapter_number = last_verse_number = last_word_number = 0
     num_exported_files = 0
@@ -157,6 +157,7 @@ def export_usfm_literal_English_gloss() -> bool:
                 usfm_filepath = OT_USFM_OUTPUT_FOLDERPATH.joinpath( f'{last_BBB}_gloss.usfm' )
                 with open(usfm_filepath, 'wt', encoding='utf-8') as output_file:
                     output_file.write(f"{usfm_text}\n")
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {len(usfm_text)+1:,} bytes to {last_BBB}_gloss.usfm" )
                 num_exported_files += 1
             USFM_book_code = BibleOrgSysGlobals.loadedBibleBooksCodes.getUSFMAbbreviation( BBB )
             English_book_name = BibleOrgSysGlobals.loadedBibleBooksCodes.getEnglishName_NR( BBB )
@@ -325,6 +326,8 @@ def preform_gloss(given_verse_row: Dict[str,str], last_given_verse_row: Dict[str
     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"preform_gloss({given_verse_row['Ref']}.{given_verse_row['Type']},"
             f" mg='{given_verse_row['MorphemeGloss']}' cmg='{given_verse_row['ContextualMorphemeGloss']}'"
             f" wg='{given_verse_row['WordGloss']}' cwg='{given_verse_row['ContextualWordGloss']}' {saved_gloss=}, {last_glossWord=})…")
+    assert given_verse_row['GlossInsert'] == '' # None yet
+    
     gloss = ''
     if 'm' in given_verse_row['Type']:
         gloss = given_verse_row['MorphemeGloss'] if given_verse_row['MorphemeGloss'] \
@@ -339,6 +342,7 @@ def preform_gloss(given_verse_row: Dict[str,str], last_given_verse_row: Dict[str
             saved_capitalisation = given_verse_row['GlossCapitalisation']
         saved_gloss = f"{saved_gloss}{'=' if saved_gloss else ''}{gloss}"
         return '' # Nothing to return just yet
+        
     elif 'M' in given_verse_row['Type']:
         if given_verse_row['WordGloss']:
             gloss = given_verse_row['WordGloss']
@@ -360,6 +364,7 @@ def preform_gloss(given_verse_row: Dict[str,str], last_given_verse_row: Dict[str
                                         f" needs a morpheme gloss for '{given_verse_row['WordOrMorpheme']}'"
                                         f" (from '{given_verse_row['NoCantillations']}')" )
         assert not saved_gloss
+
     elif 'w' in given_verse_row['Type']:
         assert not saved_gloss
         gloss = given_verse_row['WordGloss'] if given_verse_row['WordGloss'] \
@@ -371,12 +376,13 @@ def preform_gloss(given_verse_row: Dict[str,str], last_given_verse_row: Dict[str
                                             f" needs a word gloss for '{given_verse_row['WordOrMorpheme']}'"
                                             f" (from '{given_verse_row['NoCantillations']}')" )
         saved_capitalisation = given_verse_row['GlossCapitalisation']
+
     elif given_verse_row['Type'] == 'seg':
-        if given_verse_row['Morphology'] == 'x-sof-pasuq':
-            gloss = f'{gloss}.'
-        else:
-            assert given_verse_row['Morphology'] in ('x-maqqef','x-pe','x-paseq','x-samekh','x-reversednun'), f"Got seg '{given_verse_row['Morphology']}'"
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Ignoring {given_verse_row['Morphology']} seg!" )
+        # if given_verse_row['Morphology'] == 'x-sof-pasuq':
+        #     gloss = f'{gloss}.'
+        # else:
+        assert given_verse_row['Morphology'] in ('x-maqqef','x-sof-pasuq','x-pe','x-paseq','x-samekh','x-reversednun'), f"Got seg '{given_verse_row['Morphology']}'"
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Ignoring {given_verse_row['Morphology']} seg!" )
         saved_capitalisation = ''
 
     if gloss:

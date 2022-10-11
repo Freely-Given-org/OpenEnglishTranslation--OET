@@ -43,7 +43,7 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-10-06' # by RJH
+LAST_MODIFIED_DATE = '2022-10-10' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OSHB_XML_to_TSV"
 PROGRAM_NAME = "Convert OSHB WLC OT XML into TSV/JSON files"
 PROGRAM_VERSION = '0.56'
@@ -156,8 +156,8 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
                     word = verse_element.text
 
                     if OS_id:
-                        assert int(OS_id[:2]) == nn
-                        id_list.append( OS_id )
+                        assert int(OS_id[:2]) == nn # id field should start with 2-digit book number
+                        id_list.append( OS_id ) # we'll check later for duplicates
 
                     wc, lc, mc = word.count('/'), lemma.count('/'), morph.count('/')
                     assert wc == mc, f"{readable_ref} {word=} {morph=} {lemma=}"
