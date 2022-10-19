@@ -26,8 +26,10 @@
 Script taking our OSHB morpheme table (TSV)
     and adding columns for glossing.
 
+Also inserts our own glosses (Gen,Ruth,etc.) into some columns.
+
 (This is run AFTER convert_OSHB_XML_to_TSV.py
-    and BEFPRE extract_Clear_Cherith_glosses.py.)
+    and BEFORE apply_Clear_Macula_OT_glosses.py.)
 
 OSHB morphology codes can be found at https://hb.openscriptures.org/parsing/HebrewMorphologyCodes.html.
 """
@@ -36,10 +38,8 @@ from typing import Dict, List, Tuple
 from pathlib import Path
 from csv import DictReader, DictWriter
 from collections import defaultdict
-from datetime import datetime
 import logging
 import ast
-from pprint import pprint
 
 if __name__ == '__main__':
     import sys
@@ -47,20 +47,19 @@ if __name__ == '__main__':
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.OriginalLanguages import Hebrew
-# from BibleOrgSys.OriginalLanguages import HebrewWLCBible
 
 
-LAST_MODIFIED_DATE = '2022-10-10' # by RJH
+LAST_MODIFIED_DATE = '2022-10-19' # by RJH
 SHORT_PROGRAM_NAME = "Prepare_OSHB_for_glossing"
 PROGRAM_NAME = "Prepare OSHB for glossing"
-PROGRAM_VERSION = '0.43'
+PROGRAM_VERSION = '0.47'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
-DEBUGGING_THIS_MODULE = True
+DEBUGGING_THIS_MODULE = False
 
 
 OSHB_TSV_INPUT_FILEPATH = Path( '../sourceTexts/rawOSHB/OSHB.original.flat.morphemes.tsv' )
-PREDONE_GLOSSES_FILEPATH = Path( 'WLCHebrewGlosses.txt' )
+OUR_PREDONE_GLOSSES_FILEPATH = Path( 'WLCHebrewGlosses.txt' )
 TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/WLC_glosses.morphemes.tsv' )
 
 
@@ -71,9 +70,10 @@ class State:
         Constructor:
         """
         self.OSHB_TSV_input_filepath = OSHB_TSV_INPUT_FILEPATH
+        self.our_predone_glosses_filepath = OUR_PREDONE_GLOSSES_FILEPATH
         self.TSV_output_filepath = TSV_OUTPUT_FILEPATH
         self.WLC_rows = []
-        self.expanded_headers = ['Ref','OSHBid','Type','Strongs','CantillationHierarchy','Morphology','WordOrMorpheme','NoCantillations',
+        self.expanded_headers = ['Ref','OSHBid','RowType','Strongs','CantillationHierarchy','Morphology','WordOrMorpheme','NoCantillations',
                                             'MorphemeGloss','ContextualMorphemeGloss', 'WordGloss','ContextualWordGloss',
                                             'GlossCapitalisation','GlossPunctuation','GlossOrder','GlossInsert']
     # end of prepare_OSHB_for_glossing.__init__
@@ -102,14 +102,14 @@ def loadWLCSourceTable() -> bool:
     """
     """
     global WLC_tsv_column_headers
-    print(f"\nLoading WLC tsv file from {state.OSHB_TSV_input_filepath}…")
-    print(f"  Expecting {NUM_EXPECTED_WLC_COLUMNS} columns…")
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading WLC tsv file from {state.OSHB_TSV_input_filepath}…")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_WLC_COLUMNS} columns…")
     with open(state.OSHB_TSV_input_filepath, 'rt', encoding='utf-8') as tsv_file:
         tsv_lines = tsv_file.readlines()
 
-    # Remove BOM
+    # Remove any BOM
     if tsv_lines[0].startswith("\ufeff"):
-        print("  Handling Byte Order Marker (BOM) at start of WLC tsv file…")
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of WLC tsv file…")
         tsv_lines[0] = tsv_lines[0][1:]
 
     # Get the headers before we start
@@ -126,7 +126,7 @@ def loadWLCSourceTable() -> bool:
         if len(row) != NUM_EXPECTED_WLC_COLUMNS:
             logging.error(f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_WLC_COLUMNS}!!!")
         state.WLC_rows.append(row)
-        row_type = row['Type']
+        row_type = row['RowType']
         if row_type != 'm' and assembled_word:
             dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{assembled_word=}")
             unique_words.add(assembled_word)
@@ -151,11 +151,11 @@ def loadWLCSourceTable() -> bool:
                     WLC_tsv_column_max_length_counts[key] = len(value)
                 WLC_tsv_column_non_blank_counts[key] += 1
             WLC_tsv_column_counts[key][value] += 1
-    print(f"  Loaded {len(state.WLC_rows):,} (tsv) WLC data rows.")
-    print(f"    Have {len(unique_words):,} unique Hebrew words.")
-    print(f"    Have {len(unique_morphemes):,} unique Hebrew morphemes.")
-    print(f"    Have {seg_count:,} Hebrew segment markers.")
-    print(f"    Have {note_count:,} notes.")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.WLC_rows):,} (tsv) WLC data rows.")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Have {len(unique_words):,} unique Hebrew words.")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Have {len(unique_morphemes):,} unique Hebrew morphemes.")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Have {seg_count:,} Hebrew segment markers.")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Have {note_count:,} notes.")
 
     return True
 # end of prepare_OSHB_for_glossing.loadWLCSourceTable
@@ -177,7 +177,7 @@ def create_expanded_TSV_table() -> bool:
 
     Also mark the last morpheme in a word-set with M (instead of m)
     """
-    print( f"\nCreating expanded TSV table with {len(state.expanded_headers)} columns…" )
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE,  f"\nCreating expanded TSV table with {len(state.expanded_headers)} columns…" )
     new_rows = []
     last_OSIS_base_id, last_row = '', []
     last_V = 0
@@ -189,36 +189,36 @@ def create_expanded_TSV_table() -> bool:
             last_V = V
         else: glossOrderInt += 10
         OSIS_base_id = row['OSHBid'][:5]
-        new_type = row['Type']
+        new_type = row['RowType']
         if new_type in ('seg','note'): language_code = ''
         new_morphology = row['Morphology']
         if OSIS_base_id != last_OSIS_base_id: # it's the start of a new word (or set of morphemes)
             if last_row:
-                if last_row['Type'] == 'm': # we just finished that set of Hebrew morphemes
-                    last_row['Type'] = 'M' # Leave a marker for the last morpheme in a set
-                elif last_row['Type'] == 'mK': # we just finished that set of Hebrew morphemes
-                    last_row['Type'] = 'MK' # Leave a marker for the last morpheme in a set
-                elif last_row['Type'] == 'Am': # we just finished that set of Aramaic morphemes
-                    last_row['Type'] = 'AM' # Leave a marker for the last morpheme in a set
-                elif last_row['Type'] == 'AmK': # we just finished that set of Aramaic morphemes
-                    last_row['Type'] = 'AMK' # Leave a marker for the last morpheme in a set
-            if row['Type'] in 'wm': # word or morpheme
+                if last_row['RowType'] == 'm': # we just finished that set of Hebrew morphemes
+                    last_row['RowType'] = 'M' # Leave a marker for the last morpheme in a set
+                elif last_row['RowType'] == 'mK': # we just finished that set of Hebrew morphemes
+                    last_row['RowType'] = 'MK' # Leave a marker for the last morpheme in a set
+                elif last_row['RowType'] == 'Am': # we just finished that set of Aramaic morphemes
+                    last_row['RowType'] = 'AM' # Leave a marker for the last morpheme in a set
+                elif last_row['RowType'] == 'AmK': # we just finished that set of Aramaic morphemes
+                    last_row['RowType'] = 'AMK' # Leave a marker for the last morpheme in a set
+            if row['RowType'] in 'wm': # word or morpheme
                 assert row['Morphology'].startswith('H') or row['Morphology'].startswith('A') # Hebrew or Aramaic
                 language_code, new_morphology = row['Morphology'][0], row['Morphology'][1:]
-                # print(f"  Got {language_code=} {new_morphology=} ")
+                # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Got {language_code=} {new_morphology=} ")
         if language_code and language_code != 'H':
             assert language_code == 'A'
-            assert row['Type'] in 'mw', f"Got {row['FGID']} {language_code=} with {row['Type']=} {row['Morphology']=}"
+            assert row['RowType'] in 'mw', f"Got {row['FGID']} {language_code=} with {row['RowType']=} {row['Morphology']=}"
             new_type = f'{language_code}{new_type}'
         if row['Special']:
-            if row['Type'] in 'wm':
+            if row['RowType'] in 'wm':
                 assert row['Special'] == 'K', f"Got {row['FGID']} Ketiv {row['Special']=}"
                 new_type = f'{new_type}K'
             else:
-                assert row['Type'] == 'note'
+                assert row['RowType'] == 'note'
                 assert row['Special'] in ('variant','alternative','exegesis'), f"Got {row['FGID']} note {row['Special']=}"
                 new_type = f"{row['Special']} {new_type}"
-        newRowDict = { 'Ref': row['Ref'], 'OSHBid': row['OSHBid'], 'Type': new_type,
+        newRowDict = { 'Ref': row['Ref'], 'OSHBid': row['OSHBid'], 'RowType': new_type,
                         'Strongs': row['Strongs'], 'CantillationHierarchy': row['CantillationHierarchy'], 'Morphology': new_morphology,
                         'WordOrMorpheme': row['WordOrMorpheme'],
                         'NoCantillations': removeCantillationMarks(row['WordOrMorpheme'], removeMetegOrSiluq=True),
@@ -234,8 +234,8 @@ def create_expanded_TSV_table() -> bool:
     # A little check
     last_row = None
     for row in new_rows:
-        if row['Type']=='seg' or row['Type'].endswith( 'note' ):
-            assert 'm' not in last_row['Type'], f"Expected 'M' in\n{last_row}\nbefore\n{row}"
+        if row['RowType']=='seg' or row['RowType'].endswith( 'note' ):
+            assert 'm' not in last_row['RowType'], f"Expected 'M' in\n{last_row}\nbefore\n{row}"
         last_row = row
     state.WLC_rows = new_rows
     return True
@@ -244,21 +244,23 @@ def create_expanded_TSV_table() -> bool:
 
 def prefill_known_glosses() -> bool:
     """
+    Load our text file with our exported OT glosses (from our BibleOrgSys Interlineariser.py)
+        and apply the glosses to the OSHB TSV table.
     """
-    print("  Prefilling TSV table with previously known glosses…")
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "\n  Prefilling TSV table with our own previously known glosses…")
 
-    print(f"    Loading previously done glosses from {PREDONE_GLOSSES_FILEPATH}…")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loading previously done glosses from {state.our_predone_glosses_filepath}…")
     wordGlossDict = {}
     morphemeGlossDict = defaultdict(set)
     wordsSpecificGlossesDict, refsSpecificGlossesDict = {}, {}
-    with open( PREDONE_GLOSSES_FILEPATH, 'rt', encoding='utf-8' ) as predone_file:
+    with open( state.our_predone_glosses_filepath, 'rt', encoding='utf-8' ) as predone_file:
         for line in predone_file:
-            bits = line.rstrip('\n').split( '  ' )
+            bits = line.rstrip('\n').split('\t') if '\t' in line else line.rstrip('\n').split('  ')
             assert len(bits) == 4
             _referencesList = ast.literal_eval( bits[0] )
             thisWordSpecificGlossesDict = ast.literal_eval( bits[1] )
             genericGloss, word = bits[2], bits[3]
-            # print(f"{referencesList=} {wordSpecificGlossesDict=} {genericGloss=} {word=}")
+            # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{referencesList=} {wordSpecificGlossesDict=} {genericGloss=} {word=}")
             assert word.count('=') == genericGloss.count('=')
             if '=' in word:
                 for wordBit, genericGlossBit in zip( word.split('='), genericGloss.split('=') ):
@@ -270,7 +272,7 @@ def prefill_known_glosses() -> bool:
                 assert word not in wordGlossDict
                 wordGlossDict[word] = genericGloss
             if thisWordSpecificGlossesDict:
-                # print(f"{referencesList=} {wordSpecificGlossesDict=} {genericGloss=} {word=}")
+                # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{referencesList=} {wordSpecificGlossesDict=} {genericGloss=} {word=}")
                 assert len(thisWordSpecificGlossesDict) == 1 # Only one reference entry
                 for ref_4tuple,specificGloss in thisWordSpecificGlossesDict.items(): # only loops once so we use final values
                     assert len(ref_4tuple) == 4
@@ -279,11 +281,11 @@ def prefill_known_glosses() -> bool:
                 wordsSpecificGlossesDict[word] = (ourRef, specificGloss)
                 assert ourRef not in refsSpecificGlossesDict
                 refsSpecificGlossesDict[ourRef] = (word, specificGloss)
-    # pprint(wordsSpecificGlossesDict)
-    # pprint(refsSpecificGlossesDict)
+    # pvPrint( 'Normal', DEBUGGING_THIS_MODULE, wordsSpecificGlossesDict)
+    # pvPrint( 'Normal', DEBUGGING_THIS_MODULE, refsSpecificGlossesDict)
     assert len(wordsSpecificGlossesDict) == len(refsSpecificGlossesDict)
 
-    print(f"    Applying {len(wordGlossDict):,} word and {len(morphemeGlossDict):,} morpheme glosses and {len(refsSpecificGlossesDict):,} specific glosses…")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Applying {len(wordGlossDict):,} word and {len(morphemeGlossDict):,} morpheme glosses and {len(refsSpecificGlossesDict):,} specific glosses…")
     numAppliedWordGlosses = numAppliedMorphemeGlosses = numAppliedSpecificGlosses = numManualMorphemeGlosses = 0
     combinedMorphemes = ''
     verseSegNoteCount = 0
@@ -297,25 +299,25 @@ def prefill_known_glosses() -> bool:
             verseSegNoteCount = 0
 
         wordOrMorpheme = row['NoCantillations']
-        if row['Type'] in ('w','Aw','wK','AwK'): # A is Aramaic, w is (single-morpheme) word, K is Ketiv
+        if row['RowType'] in ('w','Aw','wK','AwK'): # A is Aramaic, w is (single-morpheme) word, K is Ketiv
             try:
                 row['WordGloss'] = wordGlossDict[wordOrMorpheme]
                 numAppliedWordGlosses += 1
             except KeyError: pass
-        elif row['Type'] in ('m','M','Am','AM','mK','MK','AmK','AMK'): # A is Aramaic, m is morpheme, M is last morpheme in word, K is Ketiv
+        elif row['RowType'] in ('m','M','Am','AM','mK','MK','AmK','AMK'): # A is Aramaic, m is morpheme, M is last morpheme in word, K is Ketiv
             if row['Strongs'] == 'b': # manual override for bet
-                # print( f" {row['Ref']} '{wordOrMorpheme}' Strongs={row['Strongs']} n={row['CantillationHierarchy']} morph={row['Morphology']}" )
+                # vPrint( 'Normal', DEBUGGING_THIS_MODULE,  f" {row['Ref']} '{wordOrMorpheme}' Strongs={row['Strongs']} n={row['CantillationHierarchy']} morph={row['Morphology']}" )
                 # if row['CantillationHierarchy']: assert row['CantillationHierarchy'] == '1.0' # Fails: some a blank, some 1.0, some 1.2, etc.
                 # assert row['Morphology'] in ('R','Rd','HR') # is this an error: DEU_11:4-18a Strongs=b n=1.0 morph=HR ?
                 row['MorphemeGloss'] = 'in/on/at/with'
                 numManualMorphemeGlosses += 1
             elif row['Strongs'] == 'c': # manual override for conjunction
-                # print( f" {row['Ref']} '{wordOrMorpheme}' Strongs={row['Strongs']} n={row['CantillationHierarchy']} morph={row['Morphology']}" )
+                # vPrint( 'Normal', DEBUGGING_THIS_MODULE,  f" {row['Ref']} '{wordOrMorpheme}' Strongs={row['Strongs']} n={row['CantillationHierarchy']} morph={row['Morphology']}" )
                 # assert row['Morphology'] in ('C','HC') # is this an error: LEV_15:13-17a Strongs=c n=0 morph=HC ?
                 row['MorphemeGloss'] = 'and'
                 numManualMorphemeGlosses += 1
             elif row['Strongs'] == 'd': # manual override for determiner
-                # print( f" {row['Ref']} '{wordOrMorpheme}' Strongs={row['Strongs']} n={row['CantillationHierarchy']} morph={row['Morphology']}" )
+                # vPrint( 'Normal', DEBUGGING_THIS_MODULE,  f" {row['Ref']} '{wordOrMorpheme}' Strongs={row['Strongs']} n={row['CantillationHierarchy']} morph={row['Morphology']}" )
                 # assert row['Morphology'] in ('Td','Ti','HTd') # is this an error: NUM_13:29-17a Strongs=d n=0 morph=HTd ?
                 row['MorphemeGloss'] = 'the'
                 numManualMorphemeGlosses += 1
@@ -323,39 +325,39 @@ def prefill_known_glosses() -> bool:
                 try:
                     row['MorphemeGloss'] = '/'.join(morphemeGlossDict[wordOrMorpheme])
                     numAppliedMorphemeGlosses += 1
-                except KeyError: print("skip morpheme")
+                except KeyError: vPrint( 'Normal', DEBUGGING_THIS_MODULE, "skip morpheme")
             combinedMorphemes = f"{combinedMorphemes}{'=' if combinedMorphemes else ''}{wordOrMorpheme}"
-            if row['Type'] in ('M','AM','MK','AMK'): # A is Aramaic, M is last morpheme in word, K is Ketiv
-                # print( f" {row['Ref']} final morpheme='{wordOrMorpheme}' word='{combinedMorphemes}'" )
+            if row['RowType'] in ('M','AM','MK','AMK'): # A is Aramaic, M is last morpheme in word, K is Ketiv
+                # vPrint( 'Normal', DEBUGGING_THIS_MODULE,  f" {row['Ref']} final morpheme='{wordOrMorpheme}' word='{combinedMorphemes}'" )
                 try:
                     row['WordGloss'] = wordGlossDict[combinedMorphemes] # Contains = signs
                     numAppliedWordGlosses += 1
                 except KeyError: pass
         else:
-            assert row['Type']=='seg' or row['Type'].endswith('note'), f"{row['Ref']} got {row['Type']=}"
+            assert row['RowType']=='seg' or row['RowType'].endswith('note'), f"{row['Ref']} got {row['RowType']=}"
             verseSegNoteCount += 1
 
         # Allow for the fact that the old interlineariser counted segs and notes as words (but we don't now)
-        # print(f"{thisBaseRef=} {thisVerseRef=} {wordNumberInt=} {row['Type']=} {verseSegNoteCount=}")
+        # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{thisBaseRef=} {thisVerseRef=} {wordNumberInt=} {row['RowType']=} {verseSegNoteCount=}")
         adjBaseRef = f'{thisVerseRef}w{wordNumberInt+verseSegNoteCount}'
-        # print(f"{adjBaseRef=}")
+        # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{adjBaseRef=}")
         if adjBaseRef in refsSpecificGlossesDict:
             specificWord, specificGloss = refsSpecificGlossesDict[adjBaseRef]
-            if 'w' in row['Type']:
-                # print( f"{row['Ref']=} {thisBaseRef=} {row['Type']} {specificWord=} {wordOrMorpheme=} {specificGloss=}" )
+            if 'w' in row['RowType']:
+                # vPrint( 'Normal', DEBUGGING_THIS_MODULE,  f"{row['Ref']=} {thisBaseRef=} {row['RowType']} {specificWord=} {wordOrMorpheme=} {specificGloss=}" )
                 assert specificWord == wordOrMorpheme
                 row['ContextualWordGloss'] = specificGloss
                 numAppliedSpecificGlosses += 1
-            elif 'M' in row['Type']:
-                # print( f"{row['Ref']=} {thisBaseRef=} {row['Type']} {specificWord=} {combinedMorphemes=} {specificGloss=}" )
+            elif 'M' in row['RowType']:
+                # vPrint( 'Normal', DEBUGGING_THIS_MODULE,  f"{row['Ref']=} {thisBaseRef=} {row['RowType']} {specificWord=} {combinedMorphemes=} {specificGloss=}" )
                 assert specificWord == combinedMorphemes
                 row['ContextualWordGloss'] = specificGloss
                 numAppliedSpecificGlosses += 1
-        if row['Type'] in ('M','AM','MK','AMK'): # A is Aramaic, M is last morpheme in word, K is Ketiv
+        if row['RowType'] in ('M','AM','MK','AMK'): # A is Aramaic, M is last morpheme in word, K is Ketiv
             combinedMorphemes = '' # reset
         lastVerseRef = thisVerseRef
 
-    print(f"      Applied {numAppliedWordGlosses:,} word and {numAppliedMorphemeGlosses:,} morpheme glosses\n"
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      Applied {numAppliedWordGlosses:,} word and {numAppliedMorphemeGlosses:,} morpheme glosses\n"
           f"        with {numManualMorphemeGlosses:,} manual morphome glosses and {numAppliedSpecificGlosses:,} specific glosses…")
 
     return True
@@ -366,13 +368,13 @@ def save_expanded_TSV_file() -> bool:
     """
     Reorganise columns and add our extra columns
     """
-    print( f"Exporting adjusted WLC table as a single flat TSV file to {state.TSV_output_filepath}…" )
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE,  f"\nExporting adjusted WLC table as a single flat TSV file to {state.TSV_output_filepath}…" )
     with open( state.TSV_output_filepath, 'wt', encoding='utf-8' ) as tsv_output_file:
         tsv_output_file.write('\ufeff') # Write BOM
         writer = DictWriter( tsv_output_file, fieldnames=state.expanded_headers, delimiter='\t' )
         writer.writeheader()
         writer.writerows( state.WLC_rows )
-    print( f"  {len(state.WLC_rows):,} data rows written." )
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE,  f"  {len(state.WLC_rows):,} data rows written." )
 
     return True
 # end of prepare_OSHB_for_glossing.save_expanded_TSV_file

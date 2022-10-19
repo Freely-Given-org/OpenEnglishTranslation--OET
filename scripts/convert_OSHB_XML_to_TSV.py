@@ -34,7 +34,6 @@ from gettext import gettext as _
 from typing import Dict, List, Tuple
 from pathlib import Path
 from csv import DictWriter
-from datetime import datetime
 from xml.etree import ElementTree
 import json
 import logging
@@ -43,10 +42,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-10-10' # by RJH
+LAST_MODIFIED_DATE = '2022-10-19' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OSHB_XML_to_TSV"
 PROGRAM_NAME = "Convert OSHB WLC OT XML into TSV/JSON files"
-PROGRAM_VERSION = '0.56'
+PROGRAM_VERSION = '0.57'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -57,7 +56,7 @@ OSHB_XML_INPUT_FOLDERPATH = Path( '../../Forked/OS-morphhb/wlc/' )
 OSHB_TSV_OUTPUT_FILEPATH_STRING = '../../OpenEnglishTranslation--OET/sourceTexts/rawOSHB/OSHB.original.tsv' # str so we can adjust it later
 OSHB_JSON_OUTPUT_FILEPATH_STRING = '../../OpenEnglishTranslation--OET/sourceTexts/rawOSHB/OSHB.original.json'
 
-OUTPUT_FIELDNAMES = ['FGID','Ref','Type','Special','Strongs','CantillationHierarchy','Morphology','OSHBid','WordOrMorpheme' if BREAK_MORPHEMES else 'Word']
+OUTPUT_FIELDNAMES = ['FGID','Ref','RowType','Special','Strongs','CantillationHierarchy','Morphology','OSHBid','WordOrMorpheme' if BREAK_MORPHEMES else 'Word']
 OUTPUT_FIELDNAMES_COUNT = len( OUTPUT_FIELDNAMES )
 
 
@@ -70,7 +69,7 @@ class State:
         self.OSHB_XML_input_folderpath = OSHB_XML_INPUT_FOLDERPATH
         self.sourceTableFilepath = Path( '../../CNTR-GNT/sourceExports/collation.updated.csv' )
         self.numKetivs = 0
-    # end of convert_OSHB_XML_to_TSV.__init__
+    # end of convert_OSHB_XML_to_TSV.State.__init__
 
 
 def main() -> None:

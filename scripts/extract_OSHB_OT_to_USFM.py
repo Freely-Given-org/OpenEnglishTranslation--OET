@@ -39,16 +39,16 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-10-10' # by RJH
+LAST_MODIFIED_DATE = '2022-10-18' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed-OSHB_OT_to_USFM"
 PROGRAM_NAME = "Extract glossed-OSHB OT USFM files"
-PROGRAM_VERSION = '0.23'
+PROGRAM_VERSION = '0.41'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
 
 
-TSV_SOURCE_TABLE_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/WLC_glosses.morphemes.tsv' )
+TSV_SOURCE_TABLE_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv' )
 OT_USFM_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_glossed_OSHB_USFM/' )
 
 
@@ -91,7 +91,7 @@ def loadSourceGlossTable() -> bool:
     with open(state.sourceTableFilepath, 'rt', encoding='utf-8') as tsv_file:
         tsv_lines = tsv_file.readlines()
 
-    # Remove BOM
+    # Remove any BOM
     if tsv_lines[0].startswith("\ufeff"):
         print("  Handling Byte Order Marker (BOM) at start of source tsv file…")
         tsv_lines[0] = tsv_lines[0][1:]
@@ -184,13 +184,15 @@ def export_usfm_literal_English_gloss() -> bool:
             # print(f"{chapter_number}:{last_verse_number} {verse_word_dict}")
             # Create the USFM verse text
             usfm_text = f"{usfm_text}\n\\v {verse_number}"
+            last_gloss_index = -1
             for gloss_index in get_gloss_word_index_list(this_verse_row_list):
                 this_verse_row = this_verse_row_list[gloss_index]
                 HebrewWordOrMorpheme = this_verse_row['WordOrMorpheme']
-                this_row_gloss = preform_gloss(this_verse_row)
+                this_row_gloss = preform_gloss(gloss_index==(last_gloss_index+1), this_verse_row)
                 if this_row_gloss:
                     usfm_text = f"{usfm_text}{'' if this_row_gloss[0] in '.,' else ' '}{this_row_gloss}"
                 assert '  ' not in usfm_text, f"ERROR1: Have double spaces in usfm text: '{usfm_text[:200]} … {usfm_text[-200:]}'"
+                last_gloss_index = gloss_index
             # for index_set in get_gloss_word_index_list(this_verse_row_list):
             #     print(f"{source_id} {index_set=}")
             #     if len(index_set) == 1: # single words -- the normal and easiest case
@@ -275,10 +277,9 @@ def check_verse_rows(given_verse_row_list: List[dict], stop_on_error:bool=False)
 # end of extract_OSHB_OT_to_USFM.check_verse_rows
 
 
-def get_gloss_word_index_list(given_verse_row_list: List[dict]) -> List[List[int]]:
+def get_gloss_word_index_list(given_verse_row_list: List[dict]) -> List[int]:
     """
-    Goes through the verse rows in gloss word order and produces a list of lists of row indexes
-        Most entries only contain one index (for one gloss word)
+    Goes through the verse rows in gloss word order and produces a list of row indexes.
     """
     verse_id = given_verse_row_list[0]['Ref'].split('w')[0]
 
@@ -286,6 +287,7 @@ def get_gloss_word_index_list(given_verse_row_list: List[dict]) -> List[List[int
     gloss_order_dict = {}
     for index,this_verse_row in enumerate(given_verse_row_list):
         assert this_verse_row['Ref'].startswith( verse_id )
+        # print(f"{this_verse_row['Ref']} {this_verse_row['GlossOrder']=}")
         gloss_order_int = int(this_verse_row['GlossOrder'])
         assert gloss_order_int not in gloss_order_dict, f"ERROR: {verse_id} has multiple GlossOrder={gloss_order_int} entries!"
         gloss_order_dict[gloss_order_int] = index
@@ -316,37 +318,61 @@ def get_gloss_word_index_list(given_verse_row_list: List[dict]) -> List[List[int
 
 
 saved_gloss = saved_capitalisation = ''
-def preform_gloss(given_verse_row: Dict[str,str], last_given_verse_row: Dict[str,str]=None, last_glossWord:str=None) -> str:
+just_had_insert = False
+def preform_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: #, last_given_verse_row: Dict[str,str]=None, last_glossWord:str=None) -> str:
     """
     Returns the gloss to display for this row (may be nothing if we have a current GlossInsert)
         or the left-over preformatted GlossWord (if any)
     The calling function has to decide what to do with it.
+
+    Note: because words and morphemes can be reordered,
+            we might now have a word between two morphemes
+            or two morphemes between another two morphemes.
     """
-    global saved_gloss, saved_capitalisation, mmmCount, wwwwCount
-    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"preform_gloss({given_verse_row['Ref']}.{given_verse_row['Type']},"
+    # DEBUGGING_THIS_MODULE = 99
+    global saved_gloss, saved_capitalisation, just_had_insert, mmmCount, wwwwCount
+    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"preform_gloss({given_verse_row['Ref']}.{given_verse_row['RowType']},"
             f" mg='{given_verse_row['MorphemeGloss']}' cmg='{given_verse_row['ContextualMorphemeGloss']}'"
-            f" wg='{given_verse_row['WordGloss']}' cwg='{given_verse_row['ContextualWordGloss']}' {saved_gloss=}, {last_glossWord=})…")
+            f" wg='{given_verse_row['WordGloss']}' cwg='{given_verse_row['ContextualWordGloss']}'"
+            f" {consecutive=} {saved_gloss=} {saved_capitalisation=} {just_had_insert=})…") # {last_glossWord=} 
     assert given_verse_row['GlossInsert'] == '' # None yet
+    # if given_verse_row['Ref'].startswith('GEN_3:14'): halt
     
     gloss = ''
-    if 'm' in given_verse_row['Type']:
+    if 'm' in given_verse_row['RowType']:
         gloss = given_verse_row['MorphemeGloss'] if given_verse_row['MorphemeGloss'] \
                     else given_verse_row['ContextualMorphemeGloss']
         if not gloss:
             gloss = 'mmm' # Sequence doesn't occur in any words
             mmmCount += 1
-            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"{given_verse_row['Ref']}.{given_verse_row['Type']},"
+            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"{given_verse_row['Ref']}.{given_verse_row['RowType']},"
                                         f" needs a morpheme gloss for '{given_verse_row['WordOrMorpheme']}'"
                                         f" (from '{given_verse_row['NoCantillations']}')" )
-        if not saved_gloss: #this must be the first morpheme
-            saved_capitalisation = given_verse_row['GlossCapitalisation']
-        saved_gloss = f"{saved_gloss}{'=' if saved_gloss else ''}{gloss}"
-        return '' # Nothing to return just yet
+        if consecutive:
+            if not saved_gloss: #this must be the first morpheme in the word (or after an inserted word)
+                saved_gloss = gloss
+                saved_capitalisation = given_verse_row['GlossCapitalisation']
+            else: # Append this to previously saved gloss
+                saved_gloss = f"{saved_gloss}={gloss}"
+            just_had_insert = False
+            return '' # Nothing to return just yet
+        else: # it's not consecutive!
+            if saved_gloss:
+                previousGloss = saved_gloss
+                if 'S' in saved_capitalisation:
+                    previousGloss = f'{previousGloss[0].upper()}{previousGloss[1:]}'
+                    # saved_capitalisation = ''
+                gloss, saved_gloss = f'{previousGloss}=', gloss
+                saved_capitalisation = given_verse_row['GlossCapitalisation']
+            else: # no saved gloss
+                saved_gloss = gloss
+                saved_capitalisation = given_verse_row['GlossCapitalisation']
+                return '' # Nothing to return just yet
         
-    elif 'M' in given_verse_row['Type']:
-        if given_verse_row['WordGloss']:
+    elif 'M' in given_verse_row['RowType']:
+        if given_verse_row['WordGloss'] and consecutive and not just_had_insert: # If we had an insert between morphemes, we can't use the word gloss
             gloss = given_verse_row['WordGloss']
-            saved_gloss = '' # Ignore it
+            saved_gloss = '' # Throw that away
         elif given_verse_row['MorphemeGloss']:
             gloss = f"{saved_gloss}={given_verse_row['MorphemeGloss']}"
             saved_gloss = '' # Used it
@@ -360,24 +386,35 @@ def preform_gloss(given_verse_row: Dict[str,str], last_given_verse_row: Dict[str
             gloss = f'{saved_gloss}=mmm'
             mmmCount += 1
             saved_gloss = '' # Used it
-            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"{given_verse_row['Ref']}.{given_verse_row['Type']},"
+            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"{given_verse_row['Ref']}.{given_verse_row['RowType']},"
                                         f" needs a morpheme gloss for '{given_verse_row['WordOrMorpheme']}'"
                                         f" (from '{given_verse_row['NoCantillations']}')" )
+        just_had_insert = False
         assert not saved_gloss
 
-    elif 'w' in given_verse_row['Type']:
-        assert not saved_gloss
-        gloss = given_verse_row['WordGloss'] if given_verse_row['WordGloss'] \
+    elif 'w' in given_verse_row['RowType']:
+        # assert not saved_gloss # NO LONGER TRUE
+        wordGloss = given_verse_row['WordGloss'] if given_verse_row['WordGloss'] \
                     else given_verse_row['ContextualWordGloss']
-        if not gloss:
-            gloss = 'wwww' # Sequence doesn't occur in any English words so easy to find
+        if not wordGloss:
+            wordGloss = 'wwww' # Sequence doesn't occur in any English words so easy to find
             wwwwCount += 1
-            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"{given_verse_row['Ref']}.{given_verse_row['Type']},"
+            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"{given_verse_row['Ref']}.{given_verse_row['RowType']},"
                                             f" needs a word gloss for '{given_verse_row['WordOrMorpheme']}'"
                                             f" (from '{given_verse_row['NoCantillations']}')" )
-        saved_capitalisation = given_verse_row['GlossCapitalisation']
+        if saved_gloss: # we must have reordered glosses with a word now between morphemes
+            gloss = f'{saved_gloss}= {wordGloss}'
+            saved_gloss = '' # Used it
+            if 'S' in saved_capitalisation:
+                gloss = f'{gloss[0].upper()}{gloss[1:]}'
+                saved_capitalisation = ''
+            just_had_insert = True
+        else: # no saved gloss -- just an ordinary word
+            assert not saved_capitalisation
+            gloss = wordGloss
+            saved_capitalisation = given_verse_row['GlossCapitalisation']
 
-    elif given_verse_row['Type'] == 'seg':
+    elif given_verse_row['RowType'] == 'seg':
         # if given_verse_row['Morphology'] == 'x-sof-pasuq':
         #     gloss = f'{gloss}.'
         # else:
@@ -393,6 +430,7 @@ def preform_gloss(given_verse_row: Dict[str,str], last_given_verse_row: Dict[str
             # print( f"  Now '{gloss}'")
             saved_capitalisation = ''
 
+    # if given_verse_row['Ref'].startswith('GEN_1:4'): halt
     return f"{gloss}{given_verse_row['GlossPunctuation']}"
 # end of extract_OSHB_OT_to_USFM.preform_gloss
 

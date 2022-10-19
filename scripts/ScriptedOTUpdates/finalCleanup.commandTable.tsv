@@ -14,4 +14,4 @@ l									  			 	reduceDoubleSpaces	Reduce double spaces in entire file
 
 #									__not 			_ not 	fixUnderlineBeforeNot	Fix a double underline before inserted words
 
-#									_/_			_	fixUnknownPatthern	Fix an unexplained pattern _/_left in Matt 18:12
+									|			/	replacePipes	Replace pipes like he|it_said to he/it_said

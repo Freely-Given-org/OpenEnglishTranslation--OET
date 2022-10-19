@@ -64,10 +64,16 @@ For most scripts, we use up-to-date Python versions (v3.10 as of Oct 2022)
 as we find Python code much more understandable and maintainable
 when we return to it and try to understand it again after a few months.
 We make no attempt at all to optimise these scripts for efficiency or memory use
-as mostly they are one-off type operations.
+or to use multiple threads or cores
+as they are mostly one-off type operations.
 We are unable to offer any support for other systems.
 
 We use the _intermediateTexts/_ folder for many of the intermediate data files.
+
+## Makefile
+
+Much of the flow creating the draft Literal Version texts can be found
+in the __makefile__.
 
 ## Old Testament
 
@@ -81,12 +87,12 @@ This is how we currently form the 39 Old Testament files for the OET-LV-OT:
 - echo Expand out the columns ready to add glossing information
 - ./prepare_OSHB_for_glossing.py # goes from 9 to 16 columns
 - echo Take the Clear.Bible LowFat trees and flatten them into a TSV file -- 32 columns -- almost half-a-million lines
-- echo Also creates an abbreviated version with only xx columns
-- ./convert_ClearMaculaOT_to_TSV.py -e # Gives errors due to missing particles and word numbers in low-fat trees
-- ./apply_Clear_Macula_OT_glosses.py
+- echo   Also creates an abbreviated version with only 25 columns
+- ./convert_ClearMaculaOT_to_TSV.py -e # Gives errors due to currently missing particles and word numbers in low-fat trees
+- ./apply_Clear_Macula_OT_glosses.py # Also does some automatic reordering, e.g., verb-subject to subject-verb
 - ./extract_OSHB_OT_to_USFM.py # TSV table ➔ USFM files
 - echo Do programmed word and other substitutions to the USFM files
-- ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py ScriptedVLTUpdates -qe
+- ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py ScriptedOTUpdates -qe
 
 ## New Testament
 
@@ -95,10 +101,11 @@ Verifiable Literal Translation (VLT) as our NT source text.
 
 This is how we currently form the 27 New Testament files for the OET-LV-NT:
 
+- ./convert_BibTags_USFM_to_TSV # We use the ID fields from BibleTags for the NT
 - echo Convert VLT glosses from still-private CNTR book and collation CSV files to NT USFM files
 - ./extract_VLT_NT_to_USFM.py # TSV table ➔ USFM files
 - echo Do programmed word and other substitutions to the USFM files
-- ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py ScriptedOTUpdates -qe
+- ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py ScriptedVLTUpdates -qe
 
 ## For both
 

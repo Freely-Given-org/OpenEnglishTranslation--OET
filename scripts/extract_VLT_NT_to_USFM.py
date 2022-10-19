@@ -45,13 +45,13 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-10-03' # by RJH
+LAST_MODIFIED_DATE = '2022-10-12' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_USFM"
 PROGRAM_NAME = "Extract VLT NT USFM files"
 PROGRAM_VERSION = '0.52'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
-DEBUGGING_THIS_MODULE = True
+DEBUGGING_THIS_MODULE = False
 
 
 VLT_USFM_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_VLT_USFM/' )
@@ -135,7 +135,7 @@ def loadBookTable() -> bool:
     with open(state.bookTableFilepath, 'rt', encoding='utf-8') as book_csv_file:
         book_csv_lines = book_csv_file.readlines()
 
-    # Remove BOM
+    # Remove any BOM
     if book_csv_lines[0].startswith("\ufeff"):
         print("  Handling Byte Order Marker (BOM) at start of book CSV file…")
         book_csv_lines[0] = book_csv_lines[0][1:]
@@ -172,7 +172,7 @@ def loadSourceCollationTable() -> bool:
     with open(state.sourceTableFilepath, 'rt', encoding='utf-8') as csv_file:
         csv_lines = csv_file.readlines()
 
-    # Remove BOM
+    # Remove any BOM
     if csv_lines[0].startswith("\ufeff"):
         print("  Handling Byte Order Marker (BOM) at start of collation CSV file…")
         csv_lines[0] = csv_lines[0][1:]
