@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-10-10' # by RJH
+LAST_MODIFIED_DATE = '2022-10-26' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV USFM to simple HTML"
-PROGRAM_VERSION = '0.22'
+PROGRAM_VERSION = '0.27'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -95,7 +95,25 @@ def main():
 # end of convert_OET-LV_to_simple_HTML.main
 
 
-INDEX_HTML = '''<!DOCTYPE html>
+# If you change any colours, etc., also need to adjust the Key above
+CSS_TEXT = '''span.upLink { font-size:1.5em; font-weight:bold; }
+span.C { font-size:1.1em; color:green; }
+span.V { vertical-align:super; font-size:0.5em; color:red; }
+span.addedArticle { color:grey; }
+span.addedCopula { color:pink; }
+span.addedDirectObject { color:brown; }
+span.addedExtra { color:lightGreen; }
+span.addedOwner { color:darkOrchid; }
+span.added { color:bisque; }
+span.ul { color:darkGrey; }
+span.dom { color:Gainsboro; }
+span.schwa { font-size:0.75em; }
+span.nominaSacra { font-weight:bold; }
+p.rem { font-size:0.8em; color:grey; }
+p.mt1 { font-size:1.8em; }
+p.mt2 { font-size:1.3em; }'''
+
+INDEX_INTRO_HTML = '''<!DOCTYPE html>
 <html lang="en-US">
 <head>
   <title>OET Literal Version Development</title>
@@ -146,9 +164,10 @@ INDEX_HTML = '''<!DOCTYPE html>
         Why not? It’s because we often have two related desires that we need answered:<p>
       <ol><li>What does the original (Hebrew or Greek) text actually say? and</li>
         <li>What did the original writer mean? (i.e., What should we understand from it?)</li></ol>
-      <p>Our answer has always been that it’s best to use two translations—one more literal
-        to give a window into the actual Hebrew or Greek words, and one more <i>dynamic</i>
-        that’s easier for us modern readers to understand.</p>
+      <p>Our answer has always been that it’s best to use <b>two</b> translations—one more <b>literal</b>
+        to give a window into the actual Hebrew or Greek words, and one more <b>dynamic</b>
+        that’s easier for us modern readers to understand—as much to do with our
+        totally different cultures as to do with our different languages.</p>
       <p>So the <em>OET</em> gives both side-by-side, and with the advantage that
         both the <em>Literal Version</em> and the <em>Readers’ Version</em>
         <b>have been specifically designed to be used together</b> in this way.
@@ -157,10 +176,13 @@ INDEX_HTML = '''<!DOCTYPE html>
         then flick your eyes to the <em>Literal Version</em> and see for yourself what’s really there in the original texts.</p>
       <p>On the other hand if you’ve been reading the Bible for a few decades already,
         maybe it would be fun to work through the <em>Literal Version</em> to get fresh insight
-        into what’s actually written there in those original languages.</p>
+        into what’s actually written there in those original languages.
+        It won’t be easy reading,
+        but it should be insightful as the different wording will require more concentration.</p>
   <h3>Goals</h3>
-    <p>Put simply, the goal of the <em>Open English Translation</em> is simply to make the Bible more accessible
-        to this current generation with the best of a free-and-open easy-to-understand <em>Readers’ Version</em>
+    <p>Put simply, the goal of the <em>Open English Translation</em> is simply to
+        <b>make the Bible more accessible to this current generation</b>
+        with the best of a free-and-open easy-to-understand <em>Readers’ Version</em>
         alongside a faithful <em>Literal Version</em> so that you yourself can checkout what was said and what is interpreted.</p>
     <p>A secondary goal is to expose more people to some of the background of where our Bibles come from
         and how translators make decisions,
@@ -174,7 +196,7 @@ INDEX_HTML = '''<!DOCTYPE html>
         without even needing to request permission.</li>
     <li>The <em>Literal Version</em> has the minimum number of interpreted extras,
         so we’ve added basic sentence punctuation (mostly just commas and periods/fullstops).
-        The New Testament has no question or exclamation marks, no paragraphs,
+        The New Testament has no exclamation marks, no paragraphs,
         no speech marks (even the King James Bible didn’t have these), and no section headings.
         A limited number of footnotes relate mostly to the text of the source manuscripts
         that the <em>OET-LV</em> is translated from.</li>
@@ -209,19 +231,97 @@ INDEX_HTML = '''<!DOCTYPE html>
     <li><i>Italics</i> are only used for <em>emphasis</em>, not to indicate <i>added words</i> as historically done in
         older translations due to limitations of the original printing processes.
         The <em>OET</em> fixes the problem where most modern printing uses <i>italics</i> for <em>emphasis</em>
-        whereas older Bibles use <i>italics</i> for the words which should actually be <b>deemphasied</b>,
+        whereas older Bibles use <i>italics</i> for the words which should actually be <b>deemphasised</b>,
         i.e., the words which actually <b>aren’t</b> in the original manuscripts!</li>
-    <li>The English <i>Christ</i> is the Koine Greek word
-        for the Hebrew <i>Messiah</i>.
+    <li>The English <i>Christ</i> is an adapted transliteration of the Koine Greek word <i>Kristos</i>
+            used for the original Hebrew <i>Messiah</i>.
         (It’s not Jesus’ surname!)
-        It seems to make sense to only use one word rather than using two words for the same thing,
-        so the <em>OET</em> has elected to only use <i>Messiah</i>.
+        It seems to make sense to only use one word consistently
+            rather than using two words for the same thing
+            (just because they came from two different languages),
+            so the <em>OET</em> has elected to only use <i>Messiah</i>.
         However, these words actually have a meaning, just as <i>President</i> is not just a title,
-        but someone who <i>presides</i> over governmental meetings.
+            but someone who <i>presides</i> over governmental meetings.
         So going a step further, we have chosen to use the contemporary
-        meaning of the word in the <em>Literal Version</em>.
+            <b>meaning</b> of the word in the <em>Literal Version</em>.
         The original meaning is <i>one who is anointed</i> (by pouring a hornful of oil over them),
-        but we use the derived meaning which is <i>one who is selected/chosen (by God)</i>.</li>
+            but we use the derived meaning which is <i>one who is selected/chosen (by God)</i>.</li>
+    <li>Most readers living in modern democracies
+            have never been familiar with the concept of an ancient king or <i>lord</i>
+            who has the power of life and death over them.
+        Thus the title <i>Lord Jesus</i> is easily said,
+            yet relatively few actually live with Jesus as the lord of their thoughts and actions and daily activities.
+        (Just think how many would embarrassingly rush to turn off the video they’re streaming
+            if Jesus appeared in the room.)
+        As a reaction to the word <i>Lord</i> seemingly becoming so cliché for many Christians,
+            we use the translation <i>master</i> as a way to get readers to at least
+            think a little more about what the concept might mean.
+        (The word <i>boss</i> felt a little informal.)</li>
+    <li>The <em>Literal Version</em> tries to add as little as possible
+            that’s not actually there in the original manuscripts.
+        Of course, we add spaces between words so we can read it faster,
+            and we add capitals at the start of sentences as per standard, modern English,
+        but we don’t capitalise words like <i>Kingdom of Heaven</i>
+            or even <i>He</i> when it refers to Jesus,
+            because the concept of capital and small letters didn’t even exist
+            when original manuscripts like
+            <a href="https://greekcntr.org/manuscripts/data/1G20001.htm">this portion</a> were written.
+        (Our policy has more to do with accuracy and education
+            than it does with “lack of respect” or any such thing.
+        Often this goes against religious tradition of the last few centuries,
+            but just because something is traditional,
+            does not necessarily mean that it is correct or even helpful.)</li>
+    <li>Most dialects of modern English don’t distinguish between <i>you (singular)</i> referring to just one person,
+        and <i>you (plural)</i> referring to a group of people.
+        However, the original languages clearly distinguish these,
+        so in order to indicate this to our readers
+        the <em>Literal Version</em> uses <i>you<span class="ul">_</span>all</i> for the plural form
+        (although we are aware that some modern dialects now prefer <i>yous</i>).</li>
+    <li>Because the <em>Literal Version</em> so closely follows the original languages,
+            it’s important to remember that words often don’t match one-to-one between languages.
+        This is one reason why the <em>LV</em> reads strangely:
+            because we try to avoid using different English words if we can;
+            knowing that the <em>LV</em> will not be natural English.
+        Again, this is because we want the <em>LV</em> to be
+            a window into what’s actually written in the original languages.
+        For fluent English (like in the <em>Readers’ Version</em>) the same Greek word
+            might require several different translations when used in different contexts.
+        For example, the Greek word translated <i>raise</i> in the <em>LV</em>
+            would likely require the following changes:
+        <ol>
+            <li>to <i>raise</i> from sitting, we’d want: <i>stand up</i></li>
+            <li>to <i>raise</i> from bed, we’d want: <i>get up</i></li>
+            <li>to <i>raise</i> from the grave, we’d want: <i>come back to life</i></li>
+            <li>to <i>raise</i> an object, we’d want: <i>lift up</i></li>
+        </ol>
+        However, we would also be able to understand <i>raise</i> in each of those cases.</li>
+    <li>These particular pages use British spelling,
+        but American spelling will also be available in the future.</li>
+    <li>Beware of some traps interpreting the <em>Literal Version</em>.
+        Because it’s not designed to be used alone (but rather alongside the <em>Readers’ Version</em>)
+        it’s <b>much more literal</b> than most other “literal versions”.
+        You will quickly notice the deemphasis of words that had to be added
+        to make the English sentences even make sense.
+        But there’s at least two other things that aren’t necessarily changed
+        in the English <em>Literal Version</em>:
+        <ol>
+            <li>Other languages use the negative differently,
+                especially when it’s doubled or tripled in the sentence.
+            If you don’t understand this,
+            you could easily think that the original means the opposite of what the words actually appear to say.
+            For example the double negative: “You are not caring about no one.” (adapted from Matthew 22:16).
+            In natural, fluent English, we would have to reverse the second negative to get the expected meaning,
+                ending up with <i>anyone</i> as you’ll find in the <em>Readers’ Version</em>.
+            But our <em>Literal Version</em> shows you the words that are actually there
+                (in the Greek in this case).</li>
+            <li>Other languages may omit (or <i>elide</i>) words which are clearly implied to the original reader,
+            but which the modern English reader finds strange,
+            e.g., a son may be divided against his father, and a daughter her mother.
+            The elided words are “may be divided against”.
+            </li>
+        </ul>
+        Always check the <em>Readers’ Version</em> carefully for how it is translated into modern, idiomatic English
+        before jumping to any conclusions of your own about what the original language says or doesn’t say.</li>
     </ul>
   <h3 id="Key">Key to symbols and colours in the OET-LV</h3>
     <p>You will notice the the <em>Literal Version</em> looks different from most Bibles that you’re used to:
@@ -248,23 +348,29 @@ INDEX_HTML = '''<!DOCTYPE html>
         e.g., the word <i><span class="addedCopula">is</span></i> in the sentence <i>The house <span class="addedCopula">is</span> white.</i>
         Other languages don’t necessarily work the same way and can say things like
         <i>White the house.</i>
-        Added copulas are marked with a <span class="addedCopula">light colour</span>.</li>
+        Added copulas are marked with this <span class="addedCopula">light colour</span>.</li>
     <li><span class="addedDirectObject">Light brown</span>: Certain English verbs require a direct object. Think of the difference between
         <i>He said, blah, blah</i> and <i>He told, blah, blah</i>.
         The second one feels like it requires something like <i>He told <span class="addedDirectObject">him</span>, blah, blah</i>.
-        Added direct objects are marked with a <span class="addedDirectObject">light colour</span>.</li>
-    <li><span class="addedExtra">Light green</span>: In other languages it may be possible to say something like <i>The having<span class="ul">_</span>fallen</i>.
-        In English, we must say something like <i>The <span class="addedExtra">one</span> having<span class="ul">_</span>fallen</i> or <i>The <span class="addedExtra">person</span> having fallen</i>.
-        If the article and verb are marked as plural in the source language,
-            we may be able to say <i>The <span class="addedExtra">ones</span> having<span class="ul">_</span>fallen</i>.
+        Added direct and indirect objects are marked with
+        a <span class="addedDirectObject">light colour</span>.</li>
+    <li><span class="addedExtra">Light green</span>:
+        In other languages it may be possible to say something
+        like <i>The having<span class="ul">_</span>fallen</i>….
+        In English, we must say something like
+        <i>The <span class="addedExtra">one</span> having<span class="ul">_</span>fallen</i>…
+        or <i>The <span class="addedExtra">person</span> having fallen</i>….
+        If the article and verb are marked as <b>plural</b> in the source language,
+            we may be able to say
+            <i>The <span class="addedExtra">ones</span> having<span class="ul">_</span>fallen</i>….
         If the article is marked as feminine in the source language, we may be able to say
-            <i>The <span class="addedExtra">woman</span> having<span class="ul">_</span>fallen</i>.
-        Added words like this are marked with a <span class="addedExtra">light colour</span>.</li>
+            <i>The <span class="addedExtra">woman</span> having<span class="ul">_</span>fallen</i>….
+        Added words like this are marked with this <span class="addedExtra">light colour</span>.</li>
     <li><span class="addedOwner">Light purple</span>: If we have an original construction like <i>God spoke by son</i> (from Heb 1:2),
         in English we need to add a word like <i>God spoke by <span class="addedArticle">the</span> son</i> or <i>God spoke by <span class="addedOwner">his</span> son</i>.
         In the latter case (where we don’t just choose an article like <i><span class="addedArticle">the</span></i>),
-        we mark these added words with a <span class="addedOwner">light colour</span>.</li>
-    <li><span class="added">Light orange</span>: Other added words not in the above categories are also marked with a <span class="added">light colour</span>.</li>
+        we mark these added words with this <span class="addedOwner">light colour</span>.</li>
+    <li><span class="added">Light orange</span>: Other added words not in the above categories are marked with this <span class="added">light colour</span>.</li>
     <li>All of this colouring is to be completely open by helping the reader to be able to see where the translators have chosen to
         add words to the Hebrew or Greek in order to make the English sound slightly better,
         even though this has been kept to an absolute minimum in the <em>Literal Version</em>.</li>
@@ -296,32 +402,42 @@ INDEX_HTML = '''<!DOCTYPE html>
         so we will never get perfect pronounciations,
         but we’ll do better than our traditional Bible translations.</p>
     <p>As a general rule, even if you started to think of the letter <i>J</i> in
-        Bible names like the Germans pronounce <i>Ja</i> (as <i>Ya</i>),
-        you’d already be taking a big step towards getting Biblical names correct.
-        (This deviation is not any kind of conspiracy—simply an unfortunate accident of history.)<p>
+        Bible names like the Germans or the Dutch (the two languages closest to English)
+        pronounce <i>Ja</i> (as <i>Ya</i>),
+        you’d already be taking a big step towards getting Biblical names more correct.
+        (This deviation is not any kind of conspiracy—simply
+        an unfortunate accident of history and continuous language change.)<p>
     <p>In the New Testament, the situation is already complicated by the fact that
         Old Testament (Hebrew) names have been written as Greek-speakers would think of them.
         So English <i>Jesus</i>
         (which you now realise should be pronounced more like <i>Yesus</i>
         as there’s no <i>j</i> sound in either Hebrew or Greek)
-        is actually more like <i>Yēsous</i> in Greek.
+        is actually more like <i>Yaysous</i> in Greek.
         But it’s likely that his “parents” (using Hebrew or the related Aramaic/Syrian language at the time)
-        named the child something more like <i>Y<span class="schwa">ə</span>hōshū'a</i>.
+        actually named the child something more like <i>Y<span class="schwa">ə</span>hōshū'a</i>
+        (from which we get <i>Joshua</i>).
         So which name should we call him in the text?
         Because the New Testament manuscripts are written in Koine Greek,
-        we have chosen to give preference to the Greek forms of the names.
-        However, the first time a name is used, we show both like <i>Yēsous/(Y<span class="schwa">ə</span>hōshū'a)</i>.
-        Where the name is repeated nearby, we’ll only show the Greek form like <i>Yēsous</i>.
+        we have chosen to give preference to the Greek forms of the names in the New Testament.
+        However, the first time a name is used, we show both forms
+        like <i>Yaʸsous/(Y<span class="schwa">ə</span>hōshū'a)</i>.
+        Where the name is repeated nearby, we’ll only show the Greek form like <i>Yaʸsous</i>.
         (Again, it’s an accident of history that English speakers will name a child <i>Joshua</i>,
-        but would not name him <i>Jesus</i> when they’re really just the same name in different forms.)
+        but would not name him <i>Jesus</i> when they’re really just the same name in different forms.
+        Speakers of languages with Spanish influence don’t have that same hesitation,
+        so <i>Jesus</i> is a common name in South America for example.)
     <p>Note that where Hebrew or Greek transliterations are given,
-        Engish speakers will have the most success pronouncing these names if you
+        English speakers will have the most success pronouncing these names if you
         look up the pronounciation of the five “pure” Spanish vowels in your search engine.
         Individual vowels should be pronounced in this way,
         e.g., each of the four vowels in <i>Eleazar</i>.</p>
     <p>Macrons (overlines over the vowels, like <i>ē</i> or <i>ō</i>) indicate lengthened vowels,
         so the pronounciation is the same as the Spanish vowels,
-        but just prolonged.</p>
+        but just prolonged.
+        (If you’re wondering which syllable to put the stress/emphasis on,
+            it’ll often be one of the ones with a long vowel.
+        We decided not to indicate stress on the names
+            or there would have been even more marks and squiggles on the letters!)</p>
     <p>The vowel <a href="https://en.wikipedia.org/wiki/Schwa">schwa</a> <i><span class="schwa">ə</span></i>
         (in names that come from Hebrew with <a href="https://en.wikipedia.org/wiki/Shva">shva</a>)
         should be regarded as a fleeting (very short and unstressed), neutral vowel
@@ -331,7 +447,10 @@ INDEX_HTML = '''<!DOCTYPE html>
         are a limited set of two vowels,
         where one vowel glides into the other,
         so even though the spelling of a dipthong is two letters,
-        together they are the centre of only one syllable.<p>
+        together they are the centre of only one syllable.
+        Note that we use <i>aʸ</i> for Greek letter (eta),
+        because it’s actually only one letter, not a dipthong,
+        even though it’s pronounced very much like <i>ai</i>.<p>
     <p>We use the symbol ' to mark a <a href="https://en.wikipedia.org/wiki/Glottal_stop">glottal stop</a>
         which is the sound that some UK speakers put in the middle of the word <i>butter</i> (ba'a),
         so <i>Abra'am</i> (from the Greek) is three distinct syllables—those
@@ -342,16 +461,16 @@ INDEX_HTML = '''<!DOCTYPE html>
         but who specifically inspired the writing of the Scriptures
         and caused it to be preserved throughout the millenia
         despite the best efforts of some who tried to destroy them.</li>
-    <li>Those who took the time to write down their interactions with God,
+    <li>Those who took the time to write down their interactions with God and his messengers,
         beginning with Moses and those before him who wrote down their experiences even though making the writing materials was so much work,
-        all the way through to the disciples and others who wrote of their interactions with Jesus the Messiah, and the Holy Spirit.</li>
+        all the way through to the disciples and others who wrote of their interactions with Yaʸsous the Messiah, and the Holy Spirit.</li>
     <li>Those who faithfully copied and carefully stored those manuscripts over the centuries
         and thus allowed the works of the original writers to be preserved for us to translate.</li>
     <li>Those who collected, preserved, photographed and digitized, and transcribed those manuscripts
         so that we could have access to them.</li>
     <li>Those who studied the variations in those copies and helped us to get the best evaluations of
         which words were most likely present in the original manuscripts (<a href="https://en.wikipedia.org/wiki/Autograph">autographs</a>).
-        For the (mostly) Hebrew Old Testament, we are especially reliant on the work
+        For the (mostly) Hebrew Old Testament, we are especially reliant on the Statistical Restoration work
         of <a href="https://hb.OpenScriptures.org/">Open Scriptures</a>, given to the world under a generous open licence.
         For the Greek New Testament, we are especially reliant on the work
         of the <a href="https://GreekCNTR.org">Center for New Testament Restoration</a>
@@ -362,7 +481,7 @@ INDEX_HTML = '''<!DOCTYPE html>
         So any word-for-word Greek literal translation has to be reordered to be readable in English.
         Currently, the words in the following books (just over 50% of the NT) have been mostly reordered:
         <b>Mat, Mark, Luke, John, Acts, 1 Peter, 2 Peter, 3 John, and Jude</b>,
-        leaving the following books which have not yet been reordered
+        leaving the following books which have not yet been reordered at all
         and will therefore be even harder to read in this preliminary <em>Literal Version</em>:
         Rom, 1&2 Cor, Gal, Eph, Php, Col, 1&2 Thess, 1&2 Tim, Titus, Phlm, Heb, and 1&2 John.</p>
     <p>After completing sentence reordering and fixing capitalisation and punctuation,
@@ -371,34 +490,61 @@ INDEX_HTML = '''<!DOCTYPE html>
         we want to indicate in the <em>OET Literal Version</em> where a
         translator has already made that interpretation.</p>
   <h3 id="Feedback">Feedback</h3>
-    <p>These web pages are a preliminary preview into a work still in progress.
+    <p>These web pages are a very preliminary preview into a work still in progress.
         The <em>OET Literal Version</em> is not yet finished, and not yet publicly released,
         but we need to have it available online for easy access for our checkers and reviewers.
-        If you are reading this, and notice problems or issues,
+        If you’re reading this and notice problems or issues,
         please do contact us by <a href="mailto:Freely.Given.org@gmail.com?subject=OET-LV Feedback">email</a>.
+        Also, if there’s something that we didn’t explain in this introduction, or didn’t explain very well.
         Thanks.</p>
-    <p>HTML last updated: __LAST_UPDATED__</p>
+  <p>HTML last updated: __LAST_UPDATED__</p>
 </body></html>
 '''
 
-# If you change any colours, etc., also need to adjust the Key above
-CSS_TEXT = '''
-span.C { font-size:2em; color:green; }
-span.V { vertical-align:super; font-size:0.8em; color:red; }
-span.addedArticle { color:grey; }
-span.addedCopula { color:pink; }
-span.addedDirectObject { color:brown; }
-span.addedExtra { color:lightGreen; }
-span.addedOwner { color:darkOrchid; }
-span.added { color:bisque; }
-span.ul { color:darkGrey; }
-span.dom { color:Gainsboro; }
-span.schwa { font-size:0.8em; }
-span.nominaSacra { font-weight:bold; }
-p.rem { font-size:0.8em; color:grey; }
-p.mt1 { font-size:1.8em; }
-p.mt2 { font-size:1.3em; }
+LV_FAQ_HTML = '''<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>OET Literal Version Development</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Bible, translation, OET, literal, version, FAQ">
+  <link rel="stylesheet" type="text/css" href="BibleBook.css">
+</head>
+<body>
+  <p><a href="../">Up</a></p>
+  <h1>Open English Translation Literal Version (OET-LV) Development</h1>
+  <h2>Frequently Asked Questions (FAQs)</h2>
+  <h3>What are the bolded words in the text?</h3>
+  <p>As explained in the <a href="index.html#Key">Key</a>, the bold text
+  indicates the use of <em>Nomina Sacra</em> on the original manuscripts.
+  These are special markings and abbreviations done by the scribes,
+  and in the earliest manuscripts, highlight words that are assumed to relate to God.</p>
+  <h3 id="Feedback">Feedback</h3>
+    <p>These web pages are a very preliminary preview into a work still in progress.
+        The <em>OET Literal Version</em> is not yet finished, and not yet publicly released,
+        but we need to have it available online for easy access for our checkers and reviewers.
+        If you’re reading this and have questions that aren’t discussed here,
+        please do contact us by <a href="mailto:Freely.Given.org@gmail.com?subject=OET-LV FAQs">email</a>.
+        Also, if there’s something that we didn’t explain in this introduction, or didn’t explain very well.
+        Thanks.</p>
+  <p>HTML last updated: __LAST_UPDATED__</p>
+</body></html>
 '''
+
+BOOK_INTRO_HTML = "<p>Note: This is still a very early look into the unfinished text of the Open English Translation.</p>"
+
+LV_BOOK_INTRO_HTML1 = '''<p>Note: This <em>Literal Version</em> is a somewhat technical translation
+designed to give the English reader a window into what is actually written in the original languages.
+(See the <a href="index.html#Intro">introduction</a> for more details—we
+recommend that you read it first if you’re wanting to read and understand the <em>Literal Version</em>.)
+For nice, modern, readable English you should look at the (forthcoming) <em>Readers’ Version</em>.
+(Between the two versions, you should be able to get an idea about how Bible Translation actually works.
+You can also compare your other favourite Bible translations with this <em>Literal Version</em>
+to get more insight into how they also interpreted the original texts in crafting their translation.)</p>'''
+
+LV_BOOK_INTRO_HTML2 = '''<p style="text-align:center">It is our prayer that this <em>Literal Version</em> of the
+<em>Open English Translation</em> of the Bible will give you fresh insight into
+the words of the inspired Biblical writers.</p>'''
 
 START_HTML = '''<!DOCTYPE html>
 <html lang="en-US">
@@ -412,8 +558,8 @@ START_HTML = '''<!DOCTYPE html>
 <body>
 '''
 END_HTML = '</body></html>\n'
-whole_Torah_html = whole_NT_html = ''
 
+whole_Torah_html = whole_NT_html = ''
 genericBookList = []
 # def copy_in_NT_from_ScriptedBibleEditor() -> None:
 #     fnPrint( DEBUGGING_THIS_MODULE, "copy_in_NT_from_ScriptedBibleEditor()" )
@@ -453,14 +599,16 @@ def produce_HTML_files() -> None:
             with open( OET_HTML_OutputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
                 html_output_file.write( f'{book_start_html}\n{book_html}\n{book_end_html}' )
 
-            # Adjust book_html to include BBB for chapters past chapter one (for better orientation within the entire NT)
+            # Having saved the book file, now for better orientation within the long file (wholeTorah or wholeNT),
+            #   adjust book_html to include BBB text for chapters past chapter one
             bookAbbrev = BBB.title().replace('1','-1').replace('2','-2').replace('3','-3')
             chapterRegEx = re.compile('<span class="C" id="C(\d{1,3})V1">(\d{1,3})</span>')
             while True:
                 for match in chapterRegEx.finditer( book_html ):
                     assert match.group(1) == match.group(2)
+                    # print('A',BBB,match,match.group(1),book_html[match.start():match.end()])
                     if match.group(1) != '1': # We don't adjust chapter one
-                        # print(BBB,match,match.group(1),book_html[match.start():match.end()])
+                        # print('B',BBB,match,match.group(1),book_html[match.start():match.end()])
                         insert_point = match.end() - len(match.group(2)) - 7 # len('</span>')
                         book_html = f'{book_html[:insert_point]}{bookAbbrev} {book_html[insert_point:]}'
                         break # redo the search
@@ -475,9 +623,12 @@ def produce_HTML_files() -> None:
     # Output CSS and index and whole NT html
     with open( OET_HTML_OutputFolderPath.joinpath('BibleBook.css'), 'wt', encoding='utf-8' ) as css_output_file:
         css_output_file.write( CSS_TEXT )
-    indexHTML = INDEX_HTML.replace( '__LAST_UPDATED__', f"{datetime.now().strftime('%Y-%m-%d')} <small>by {PROGRAM_NAME_VERSION}</small>" )
+    indexIntroHTML = INDEX_INTRO_HTML.replace( '__LAST_UPDATED__', f"{datetime.now().strftime('%Y-%m-%d')} <small>by {PROGRAM_NAME_VERSION}</small>" )
     with open( OET_HTML_OutputFolderPath.joinpath('index.html'), 'wt', encoding='utf-8' ) as html_index_file:
-        html_index_file.write( indexHTML )
+        html_index_file.write( indexIntroHTML )
+    faqHTML = LV_FAQ_HTML.replace( '__LAST_UPDATED__', f"{datetime.now().strftime('%Y-%m-%d')} <small>by {PROGRAM_NAME_VERSION}</small>" )
+    with open( OET_HTML_OutputFolderPath.joinpath('FAQs.html'), 'wt', encoding='utf-8' ) as html_FAQ_file:
+        html_FAQ_file.write( faqHTML )
     
     # Save our long book conglomerates
     with open( OET_HTML_OutputFolderPath.joinpath('OET-LV-Torah.html'), 'wt', encoding='utf-8' ) as html_output_file:
@@ -496,7 +647,8 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
     fnPrint( DEBUGGING_THIS_MODULE, f"convert_USFM_to_simple_HTML( {BBB}, ({len(usfm_text)}) )" )
 
     links_html_template = '<p>__PREVIOUS__OET-LV <a href="index.html#Index">Book index</a>,' \
-                 ' <a href="index.html#Intro">Intro</a>, and <a href="index.html#Key">Key</a>' \
+                 ' <a href="index.html#Intro">Intro</a>, <a href="index.html#Key">Key</a>,' \
+                 'and <a href="FAQs.html">FAQs</a>' \
                  f'__NEXT__<br><br>__REST__</p>'
     if BBB in OT_BBB_LIST:
         links_html = links_html_template.replace('__REST__', 'Whole <a href="OET-LV-Torah.html">Torah/Pentateuch</a> (for easy searching, etc.)' )
@@ -520,6 +672,7 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
 
     C = V = '0'
     book_html = ''
+    done_intro = False
     for usfm_line in usfm_text.split( '\n' ):
         if not usfm_line: continue # Ignore blank lines
         assert usfm_line.startswith( '\\' )
@@ -529,7 +682,12 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
         # print( f"{marker=} {rest=}")
         if marker in ('id','usfm','ide','h','toc2','toc3'):
             continue # We don't need to map those markers to HTML
-        if marker in ('rem','mt1','mt2'):
+        if marker in ('rem',):
+            book_html = f'{book_html}<p class="{marker}">{rest}</p>\n'
+        elif marker in ('mt1','mt2'):
+            if not done_intro: # Add an extra explanatory paragraph at the top
+                book_html = f'{book_html}{BOOK_INTRO_HTML}{LV_BOOK_INTRO_HTML1}'
+                done_intro = True
             book_html = f'{book_html}<p class="{marker}">{rest}</p>\n'
         elif marker == 'toc1':
             start_html = START_HTML.replace( '__TITLE__', rest )
@@ -538,7 +696,10 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
             C = rest
             # if C=='2': halt
             assert C.isdigit()
-            start_c_bit = '<p class="BText">' if C=='1' else ''
+            if C == '1': # Add an inspirational note
+                book_html = f'{book_html}{LV_BOOK_INTRO_HTML2}'
+            # Note: as well as CV id's, we make sure there are simple C id's there as well
+            start_c_bit = '<p class="BText" id="C1">' if C=='1' else f'<a class="upLink" href="#" id="C{C}">↑</a> '
             book_html = f'{book_html}{start_c_bit}<span class="C" id="C{C}V1">{C}</span>{EN_SPACE}'
         elif marker == 'v':
             try: V, rest = rest.split( ' ', 1 )

@@ -2,7 +2,8 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 #l									  			 	removeDoubleSpaces	Remove double spaces in entire file
 
 				rem					!			. 	replaceExclamationMark	Replace interpretive exclamation mark with period
-				rem					?			. 	replaceQuestionMark	Replace interpretive question mark with period
+# We need to sort out obvious questions (e.g., with question words) vs statements interpreted as questions
+#				rem					?			. 	replaceQuestionMark	Replace interpretive question mark with period
 				rem					;			, 	replaceDash	Replace interpretive semicolon with comma
 				rem					–			, 	replaceDash	Replace interpretive dash with comma
 

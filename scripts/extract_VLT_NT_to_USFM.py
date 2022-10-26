@@ -45,10 +45,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-10-12' # by RJH
+LAST_MODIFIED_DATE = '2022-10-26' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_USFM"
-PROGRAM_NAME = "Extract VLT NT USFM files"
-PROGRAM_VERSION = '0.52'
+PROGRAM_NAME = "Extract VLT NT USFM files from TSV"
+PROGRAM_VERSION = '0.56'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -89,12 +89,15 @@ BACKSLASH = '\\'
 PRE_WORD_PUNCTUATION_LIST = '[(¶“‘'
 ENGLISH_POST_WORD_PUNCTUATION_LIST_STRING = ',.?:;!”’–)…]' # Includes English question mark. Which list should en-dash be in??? -- I think is the right place
 
-SOLO_GLOSS_INSERT_CHARACTERS = '~?&%!' # Don't use digits or # here
+SOLO_GLOSS_INSERT_CHARACTERS = '?~@&%!' # Don't use digits or # here
     # ? is swap pre and helper,
     # ~ is put pre inside helper with underline
+    # @ is put pre inside word with underline
     # & is swap word and post
     # % is swap word and other field in any row with only one other gloss field (think of swapping the two little zeroes in % symbol)
-    # ! is insert post into gloss with underline, e.g., gave_over them
+    #           e.g., ˱it˲ revealed
+    #       Of course, this can be used instead of & if there's no pre and no helper.
+    # ! is insert post into word with underline, e.g., gave_over them
 COMBINATION_GLOSS_INSERT_CHARACTERS = '<-=_>' # Don't use digits or # here
     # < insert after pre
     # - insert inside helper parts
@@ -109,7 +112,7 @@ book_csv_column_counts = defaultdict(lambda: defaultdict(int))
 book_csv_column_headers = []
 
 
-NUM_EXPECTED_COLLATION_COLUMNS = 35
+NUM_EXPECTED_COLLATION_COLUMNS = 36
 collation_csv_rows = []
 collation_csv_column_max_length_counts = {}
 collation_csv_column_non_blank_counts = {}
@@ -155,6 +158,8 @@ def loadBookTable() -> bool:
         row['adjustedTitle'] = row['Title'].replace('Κατὰ ','').replace('Πρὸς ','')
         book_csv_rows.append(row)
         for key, value in row.items():
+            if value == 'NULL':
+                row[key] = value = None
             # book_csv_column_sets[key].add(value)
             book_csv_column_counts[key][value] += 1
     print(f"  Loaded {len(book_csv_rows):,} book CSV data rows.")
@@ -191,6 +196,8 @@ def loadSourceCollationTable() -> bool:
         collation_csv_rows.append(row)
         unique_words.add(row['Medieval'])
         for key, value in row.items():
+            if value == 'NULL':
+                row[key] = value = None
             # collation_csv_column_sets[key].add(value)
             if n==0: # We do it like this (rather than using a defaultdict(int)) so that all fields are entered into the dict in the correct order
                 collation_csv_column_max_length_counts[key] = 0
@@ -380,7 +387,9 @@ def preform_gloss(given_verse_row: Dict[str,str], last_given_verse_row: Dict[str
         or the left-over preformatted GlossWord (if any)
     The calling function has to decide what to do with it.
     """
-    # print(f"preform_gloss({given_verse_row['GlossPre']}.{given_verse_row['GlossHelper']}.{given_verse_row['GlossWord']}.{given_verse_row['GlossPost']}, {last_glossInsert=}, {last_glossWord=})…")
+    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"preform_gloss({given_verse_row['GlossPre']}"
+                        f".{given_verse_row['GlossHelper']}.{given_verse_row['GlossWord']}"
+                        f".{given_verse_row['GlossPost']}, {last_glossWord=})…")
     try: last_glossInsert = last_given_verse_row['GlossInsert']
     except (TypeError, KeyError): last_glossInsert = '' # last row not given or GlossInsert is not in Alan's tables yet
     last_pre_punctuation = last_post_punctuation = ''
@@ -406,6 +415,16 @@ def preform_gloss(given_verse_row: Dict[str,str], last_given_verse_row: Dict[str
         preformed_word_string = f"{last_glossWord+' ' if last_glossWord else ''}" \
                                 f"{pre_punctuation}/{glossHelper_bits[0]}_˱{glossPre}˲_/{glossHelper_bits[1]}_" \
                                 f"{glossWord}{' '+BACKSLASH+'add '+glossPost+BACKSLASH+'add*' if glossPost else ''}{post_punctuation}"
+    elif glossInsert == '@' and not last_glossInsert:
+        # Put GlossPre inside GlossWord
+        assert glossPre
+        assert '_' in glossWord
+        _, _, glossWord = apply_gloss_capitalization('', '', glossWord, glossCapitalization)
+        glossWord_bits = glossWord.split('_', 1)
+        preformed_word_string = f"{last_glossWord+' ' if last_glossWord else ''}" \
+                                f"{pre_punctuation}{'/'+glossHelper+'/ ' if glossHelper else ''}" \
+                                f"{glossWord_bits[0]}_ ˱{glossPre}˲ _{glossWord_bits[1]}" \
+                                f"{' '+BACKSLASH+'add '+glossPost+BACKSLASH+'add*' if glossPost else ''}{post_punctuation}"
     elif glossInsert == '?' and not last_glossInsert:
         # Swap GlossPre and GlossHelper
         assert glossPre
@@ -447,7 +466,7 @@ def preform_gloss(given_verse_row: Dict[str,str], last_given_verse_row: Dict[str
             glossPost, glossHelper, glossWord = apply_gloss_capitalization(glossPost, glossHelper, glossWord, glossCapitalization)
             preformed_word_string = f"{last_glossWord+' ' if last_glossWord else ''}" \
                                 f"{pre_punctuation}\\add {glossPost}\\add* {glossWord}{post_punctuation}"
-        else: bad_2_gloss_insert
+        else: raise Exception("bad_2_gloss_insert")
 
     elif last_glossInsert and last_glossInsert not in SOLO_GLOSS_INSERT_CHARACTERS and not glossInsert:
         # print(f"Here with {last_pre_punctuation=} {pre_punctuation=} {last_glossWord=}")
@@ -513,7 +532,7 @@ def preform_gloss(given_verse_row: Dict[str,str], last_given_verse_row: Dict[str
             glossPre, glossHelper, glossWord = apply_gloss_capitalization(glossPre, glossHelper, glossWord, glossCapitalization)
         preformed_word_string = f"{pre_punctuation}{last_glossWord+' ' if last_glossWord else ''}{'˱'+glossPre+'˲_' if glossPre else ''}{'/'+glossHelper+'/_' if glossHelper else ''}" \
                                 f"{glossWord}{' '+BACKSLASH+'add '+glossPost+BACKSLASH+'add*' if glossPost else ''}{post_punctuation}"
-    preformed_result_string = f"{preformed_word_string}"
+    preformed_result_string = preformed_word_string # f"{preformed_word_string}"
     assert not preformed_result_string.startswith(' '), preformed_result_string
     assert '  ' not in preformed_result_string, preformed_result_string
     # print(f"  returning '{preformed_result_string}'")
@@ -577,7 +596,8 @@ def apply_gloss_capitalization(gloss_pre:str, gloss_helper:str, gloss_word:str, 
         if 'G' in gloss_capitalization or 'U' in gloss_capitalization or 'W' in gloss_capitalization:
             gloss_word = f'{gloss_word[0].upper()}{gloss_word[1:]}' # Those are WORD punctuation characters
         if ('P' in gloss_capitalization or 'S' in gloss_capitalization # new paragraph or sentence
-        or 'D' in gloss_capitalization): # new dialog
+        or 'D' in gloss_capitalization # new dialog
+        or 'R' in gloss_capitalization): # other quotation, e.g., writing on board over cross
             if gloss_pre: gloss_pre = f'{gloss_pre[0].upper()}{gloss_pre[1:]}'
             elif gloss_helper: gloss_helper = f'{gloss_helper[0].upper()}{gloss_helper[1:]}'
             else: gloss_word = f'{gloss_word[0].upper()}{gloss_word[1:]}'
