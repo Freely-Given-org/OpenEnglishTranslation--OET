@@ -45,10 +45,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-10-26' # by RJH
+LAST_MODIFIED_DATE = '2022-10-31' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_USFM"
 PROGRAM_NAME = "Extract VLT NT USFM files from TSV"
-PROGRAM_VERSION = '0.56'
+PROGRAM_VERSION = '0.58'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -134,26 +134,26 @@ def main() -> None:
 
 def loadBookTable() -> bool:
     """ """
-    print(f"\nLoading book CSV file from {state.bookTableFilepath}…")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nLoading book CSV file from {state.bookTableFilepath}…")
     with open(state.bookTableFilepath, 'rt', encoding='utf-8') as book_csv_file:
         book_csv_lines = book_csv_file.readlines()
 
     # Remove any BOM
     if book_csv_lines[0].startswith("\ufeff"):
-        print("  Handling Byte Order Marker (BOM) at start of book CSV file…")
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of book CSV file…")
         book_csv_lines[0] = book_csv_lines[0][1:]
 
     # Get the headers before we start
     global book_csv_column_headers
     book_csv_column_headers = [header for header in book_csv_lines[0].strip().split(",")] # assumes no commas in headings
-    # print(f"Column headers: ({len(collation_csv_column_headers)}): {collation_csv_column_headers}")
+    # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Column headers: ({len(collation_csv_column_headers)}): {collation_csv_column_headers}")
     assert len(book_csv_column_headers) == NUM_EXPECTED_BOOK_COLUMNS
 
     # Read, check the number of columns, and summarise row contents all in one go
     dict_reader = DictReader(book_csv_lines)
     for n, row in enumerate(dict_reader):
         if len(row) != NUM_EXPECTED_BOOK_COLUMNS:
-            print(f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_BOOK_COLUMNS}")
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_BOOK_COLUMNS}")
         # Add an adjusted title
         row['adjustedTitle'] = row['Title'].replace('Κατὰ ','').replace('Πρὸς ','')
         book_csv_rows.append(row)
@@ -162,7 +162,7 @@ def loadBookTable() -> bool:
                 row[key] = value = None
             # book_csv_column_sets[key].add(value)
             book_csv_column_counts[key][value] += 1
-    print(f"  Loaded {len(book_csv_rows):,} book CSV data rows.")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(book_csv_rows):,} book CSV data rows.")
 
     return True
 # end of extract_VLT_NT_to_USFM.loadBookTable
@@ -172,19 +172,19 @@ def loadSourceCollationTable() -> bool:
     """
     """
     global collation_csv_column_headers
-    print(f"\nLoading {'UPDATED ' if 'updated' in str(state.sourceTableFilepath) else ''}collation CSV file from {state.sourceTableFilepath}…")
-    print(f"  Expecting {NUM_EXPECTED_COLLATION_COLUMNS} columns…")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nLoading {'UPDATED ' if 'updated' in str(state.sourceTableFilepath) else ''}collation CSV file from {state.sourceTableFilepath}…")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_COLLATION_COLUMNS} columns…")
     with open(state.sourceTableFilepath, 'rt', encoding='utf-8') as csv_file:
         csv_lines = csv_file.readlines()
 
     # Remove any BOM
     if csv_lines[0].startswith("\ufeff"):
-        print("  Handling Byte Order Marker (BOM) at start of collation CSV file…")
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of collation CSV file…")
         csv_lines[0] = csv_lines[0][1:]
 
     # Get the headers before we start
     collation_csv_column_headers = [header for header in csv_lines[0].strip().split(",")] # assumes no commas in headings
-    # print(f"Column headers: ({len(collation_csv_column_headers)}): {collation_csv_column_headers}")
+    # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Column headers: ({len(collation_csv_column_headers)}): {collation_csv_column_headers}")
     assert len(collation_csv_column_headers) == NUM_EXPECTED_COLLATION_COLUMNS
 
     # Read, check the number of columns, and summarise row contents all in one go
@@ -192,7 +192,7 @@ def loadSourceCollationTable() -> bool:
     unique_words = set()
     for n, row in enumerate(dict_reader):
         if len(row) != NUM_EXPECTED_COLLATION_COLUMNS:
-            print(f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_COLLATION_COLUMNS}!!!")
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_COLLATION_COLUMNS}!!!")
         collation_csv_rows.append(row)
         unique_words.add(row['Medieval'])
         for key, value in row.items():
@@ -207,9 +207,24 @@ def loadSourceCollationTable() -> bool:
                     collation_csv_column_max_length_counts[key] = len(value)
                 collation_csv_column_non_blank_counts[key] += 1
             collation_csv_column_counts[key][value] += 1
-    print(f"  Loaded {len(collation_csv_rows):,} collation CSV data rows.")
-    print(f"    Have {len(unique_words):,} unique Greek words.")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(collation_csv_rows):,} collation CSV data rows.")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Have {len(unique_words):,} unique Greek words.")
 
+    return True
+# end of extract_VLT_NT_to_USFM.loadSourceCollationTable
+
+
+def write_book(book_number:int, book_usfm: str) -> bool:
+    """
+    """
+    book_usfm = book_usfm.replace('¶', '¶ ') # Looks nicer maybe
+    # Fix any punctuation problems
+    book_usfm = book_usfm.replace(',,',',').replace('..','.').replace(';;',';') \
+                .replace(',.','.').replace('.”.”','.”').replace('?”?”','?”')
+    assert '  ' not in book_usfm
+    usfm_filepath = VLT_USFM_OUTPUT_FOLDERPATH.joinpath( f'{BOS_BOOK_ID_MAP[book_number]}_gloss.usfm' )
+    with open(usfm_filepath, 'wt', encoding='utf-8') as output_file:
+        output_file.write(f"{book_usfm}\n")
     return True
 # end of extract_VLT_NT_to_USFM.loadSourceCollationTable
 
@@ -220,11 +235,12 @@ def export_usfm_literal_English_gloss() -> bool:
 
     Also uses the GlossInsert field to adjust word order.
     """
-    print("\nExporting USFM plain text literal English files…")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nExporting USFM plain text literal English files…")
     last_book_number = 39 # Start here coz we only do NT
     last_chapter_number = last_verse_number = last_word_number = 0
     last_verse_id = None
     usfm_text = ""
+    num_books_written = 0
     for n, row in enumerate(collation_csv_rows):
         collation_id, verse_id = row['CollationID'], row['VerseID']
         assert len(collation_id) == 11 and collation_id.isdigit()
@@ -241,15 +257,10 @@ def export_usfm_literal_English_gloss() -> bool:
         if book_number != last_book_number:  # we've started a new book
             if book_number != 99:
                 assert book_number == last_book_number + 1
-            if usfm_text:  # write out the book (including the last one)
-                usfm_text = usfm_text.replace('¶', '¶ ') # Looks nicer maybe
-                # Fix any punctuation problems
-                usfm_text = usfm_text.replace(',,',',').replace('..','.').replace(';;',';') \
-                            .replace(',.','.').replace('.”.”','.”').replace('?”?”','?”')
-                assert '  ' not in usfm_text
-                usfm_filepath = VLT_USFM_OUTPUT_FOLDERPATH.joinpath( f'{BOS_BOOK_ID_MAP[last_book_number]}_gloss.usfm' )
-                with open(usfm_filepath, 'wt', encoding='utf-8') as output_file:
-                    output_file.write(f"{usfm_text}\n")
+            if usfm_text:  # write out the book (including the last one if final collation row 99999 exists)
+                if write_book( last_book_number, usfm_text ):
+                    num_books_written += 1
+                usfm_text = None
             if book_number == 99:
                 break  # all done!
             USFM_book_code = USFM_BOOK_ID_MAP[book_number]
@@ -272,7 +283,7 @@ def export_usfm_literal_English_gloss() -> bool:
             last_verse_number = last_word_number = 0
         if verse_number != last_verse_number:  # we've started a new verse
             # assert verse_number == last_verse_number + 1 # Not always true (some verses are empty)
-            # print(f"{chapter_number}:{last_verse_number} {verse_word_dict}")
+            # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{chapter_number}:{last_verse_number} {verse_word_dict}")
             # Create the USFM verse text
             usfm_text = f"{usfm_text}\n\\v {verse_number}"
             for index_set in get_gloss_word_index_list(this_verse_row_list):
@@ -300,6 +311,11 @@ def export_usfm_literal_English_gloss() -> bool:
                     usfm_text += f" {preformed_word_string}"
                     assert '  ' not in usfm_text, f"ERROR: Have double spaces in usfm text: '{usfm_text[:200]} … {usfm_text[-200:]}'"
             last_verse_number = verse_number
+    if usfm_text: # write the last book
+        if write_book( last_book_number, usfm_text ):
+            num_books_written += 1
+
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {num_books_written} books to {VLT_USFM_OUTPUT_FOLDERPATH}.")
     return True
 # end of extract_VLT_NT_to_USFM.export_usfm_literal_English_gloss
 
@@ -310,7 +326,7 @@ def get_verse_rows(given_collation_rows: List[dict], row_index: int) -> List[lis
 
     Returns a list of rows for the verse
     """
-    # print(f"get_verse_rows({row_index})")
+    # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"get_verse_rows({row_index})")
     this_verse_row_list = []
     this_verseID = given_collation_rows[row_index]['VerseID']
     if row_index > 0: assert given_collation_rows[row_index-1]['VerseID'] != this_verseID
@@ -335,9 +351,9 @@ def check_verse_rows(given_verse_row_list: List[dict], stop_on_error:bool=False)
             return
         gloss_order_set.add(row['GlossOrder'])
     if len(gloss_order_set) < len(given_verse_row_list):
-        print(f"ERROR: Verse rows for {given_verse_row_list[0]['VerseID']} have duplicate GlossOrder fields!")
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"ERROR: Verse rows for {given_verse_row_list[0]['VerseID']} have duplicate GlossOrder fields!")
         for some_row in given_verse_row_list:
-            print(f"  {some_row['CollationID']} {some_row['Variant']} {some_row['Align']} '{some_row['Koine']}' '{some_row['GlossWord']}' {some_row['GlossOrder']} Role={some_row['Role']} Syntax={some_row['Syntax']}")
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {some_row['CollationID']} {some_row['Variant']} {some_row['Align']} '{some_row['Koine']}' '{some_row['GlossWord']}' {some_row['GlossOrder']} Role={some_row['Role']} Syntax={some_row['Syntax']}")
         if stop_on_error: gloss_order_fields_for_verse_are_not_unique
 # end of extract_VLT_NT_to_USFM.check_verse_rows
 
@@ -359,7 +375,7 @@ def get_gloss_word_index_list(given_verse_row_list: List[dict]) -> List[List[int
             assert gloss_order_int not in gloss_order_dict, f"ERROR: {verse_id} has multiple GlossOrder={gloss_order_int} entries!"
             gloss_order_dict[gloss_order_int] = index
     base_gloss_display_order_list = [index for (_gloss_order,index) in sorted(gloss_order_dict.items())]
-    # print(f"get_gloss_word_index_list for {verse_id} is got: ({len(base_gloss_display_order_list)}) {base_gloss_display_order_list}")
+    # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"get_gloss_word_index_list for {verse_id} is got: ({len(base_gloss_display_order_list)}) {base_gloss_display_order_list}")
 
 
     these_words_base_display_index_list, result_list = [], []
@@ -372,11 +388,11 @@ def get_gloss_word_index_list(given_verse_row_list: List[dict]) -> List[List[int
             result_list.append(these_words_base_display_index_list)
             these_words_base_display_index_list = []
     if these_words_base_display_index_list:
-        print(f"Why did get_gloss_word_index_list() for {given_verse_row_list[0]['VerseID']} ({len(given_verse_row_list)} rows)"
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Why did get_gloss_word_index_list() for {given_verse_row_list[0]['VerseID']} ({len(given_verse_row_list)} rows)"
               f" have left-over words: ({len(these_words_base_display_index_list)}) {these_words_base_display_index_list}"
               f" from glossInserts: {[row['GlossInsert'] for row in given_verse_row_list]}")
     assert not these_words_base_display_index_list # at end of loop
-    # print(f"get_gloss_word_index_list for {verse_id} is returning: ({len(result_list)}) {result_list}")
+    # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"get_gloss_word_index_list for {verse_id} is returning: ({len(result_list)}) {result_list}")
     return result_list
 # end of extract_VLT_NT_to_USFM.get_gloss_word_index_list
 
@@ -469,7 +485,7 @@ def preform_gloss(given_verse_row: Dict[str,str], last_given_verse_row: Dict[str
         else: raise Exception("bad_2_gloss_insert")
 
     elif last_glossInsert and last_glossInsert not in SOLO_GLOSS_INSERT_CHARACTERS and not glossInsert:
-        # print(f"Here with {last_pre_punctuation=} {pre_punctuation=} {last_glossWord=}")
+        # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Here with {last_pre_punctuation=} {pre_punctuation=} {last_glossWord=}")
         if last_pre_punctuation and last_glossWord.startswith(last_pre_punctuation):
             last_glossWord = last_glossWord[len(last_pre_punctuation):] # Remove the pre-punctuation off the inserted word
         if pre_punctuation != last_pre_punctuation:
@@ -485,7 +501,7 @@ def preform_gloss(given_verse_row: Dict[str,str], last_given_verse_row: Dict[str
         elif last_glossInsert == '=': # insert after helper and before word
             assert last_glossWord
             assert glossHelper
-            # print(f"Here with {last_glossCapitalization=} {last_glossWord=} {glossCapitalization=} {glossPre=} {glossHelper=} {glossWord=}")
+            # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Here with {last_glossCapitalization=} {last_glossWord=} {glossCapitalization=} {glossPre=} {glossHelper=} {glossWord=}")
             glossPre, glossHelper, last_glossWord = apply_gloss_capitalization(glossPre, glossHelper, last_glossWord, last_glossCapitalization)
             _dummyPre, _dummyHelper, glossWord = apply_gloss_capitalization('', '', glossWord, glossCapitalization)
             preformed_word_string = f"{pre_punctuation}{'˱'+glossPre+'˲_' if glossPre else ''}/{glossHelper}/_=> " \
@@ -498,7 +514,7 @@ def preform_gloss(given_verse_row: Dict[str,str], last_given_verse_row: Dict[str
             if '_' in glossHelper:
                 glossHelper_bits = glossHelper.split('_', 1)
             else:
-                print(f"  Warning: Can't insert '{last_glossWord}' at underline in '{glossHelper}' at {given_verse_row['CollationID']}")
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Warning: Can't insert '{last_glossWord}' at underline in '{glossHelper}' at {given_verse_row['CollationID']}")
                 glossHelper_bits = glossHelper, ''
             preformed_word_string = f"{pre_punctuation}{'˱'+glossPre+'˲_' if glossPre else ''}/{glossHelper_bits[0]}_ {last_glossWord} _{glossHelper_bits[1]}/_" \
                                     f"{glossWord}{' '+BACKSLASH+'add '+glossPost+BACKSLASH+'add*' if glossPost else ''}{post_punctuation}"
@@ -506,7 +522,7 @@ def preform_gloss(given_verse_row: Dict[str,str], last_given_verse_row: Dict[str
         elif last_glossInsert == '_': # insert inside word parts
             assert last_glossWord
             # if glossWord.count('_') > 1:
-            #     print(f"  Warning: Inserting '{last_glossWord}' at first underline in '{glossWord}' but has {glossWord.count('_')} '_' characters")
+            #     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Warning: Inserting '{last_glossWord}' at first underline in '{glossWord}' but has {glossWord.count('_')} '_' characters")
             glossPre, glossHelper, last_glossWord = apply_gloss_capitalization(glossPre, glossHelper, last_glossWord, last_glossCapitalization)
             _dummyPre, _dummyHelper, glossWord = apply_gloss_capitalization('', '', glossWord, glossCapitalization)
             glossWord_bits = glossWord.split('_', 1)
@@ -522,11 +538,11 @@ def preform_gloss(given_verse_row: Dict[str,str], last_given_verse_row: Dict[str
                                     f"{glossWord}_> {last_glossWord} <_\\add {glossPost}\\add*{post_punctuation}"
             last_glossWord = ''
         else:
-            print(f"  Warning: Unexpected GlossInsert = '{last_glossInsert}' (ignored)")
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Warning: Unexpected GlossInsert = '{last_glossInsert}' (ignored)")
     else:
         if glossInsert and last_glossInsert and glossInsert != last_glossInsert:
             msg = f"ERROR: preform_gloss() for {given_verse_row['CollationID']} should not have {glossInsert=} but '{last_glossInsert}'"
-            print(msg)
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, msg)
             last_glossWord = f'{msg} {last_glossWord}' # Also insert the error into the returned text so it gets noticed
         if not glossInsert: # (If we do have glossInsert, leave the capitalization for the next round)
             glossPre, glossHelper, glossWord = apply_gloss_capitalization(glossPre, glossHelper, glossWord, glossCapitalization)
@@ -535,7 +551,7 @@ def preform_gloss(given_verse_row: Dict[str,str], last_given_verse_row: Dict[str
     preformed_result_string = preformed_word_string # f"{preformed_word_string}"
     assert not preformed_result_string.startswith(' '), preformed_result_string
     assert '  ' not in preformed_result_string, preformed_result_string
-    # print(f"  returning '{preformed_result_string}'")
+    # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  returning '{preformed_result_string}'")
     return preformed_result_string
 # end of extract_VLT_NT_to_USFM.preform_gloss
 
@@ -549,7 +565,7 @@ def separate_punctuation(given_punctuation:str) -> Tuple[str,str]:
     if given_punctuation not in ('.”’”','[[',']]',):
         for char in given_punctuation:
             if given_punctuation.count(char) > 1:
-                print(f"  WARNING: have duplicated '{char}' punctuation character(s) in '{given_punctuation}'.")
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  WARNING: have duplicated '{char}' punctuation character(s) in '{given_punctuation}'.")
     improved_given_punctuation = given_punctuation \
                                     .replace(',,',',').replace('..','.').replace('”“','”')
     temporary_copied_punctuation = improved_given_punctuation
@@ -561,7 +577,7 @@ def separate_punctuation(given_punctuation:str) -> Tuple[str,str]:
             post_punctuation = f'{temporary_copied_punctuation[-1]}{post_punctuation}'
             temporary_copied_punctuation = temporary_copied_punctuation[:-1]
         else:
-            print(f"ERROR: punctuation character(s) '{temporary_copied_punctuation}' is not handled yet!")
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"ERROR: punctuation character(s) '{temporary_copied_punctuation}' is not handled yet!")
             if __name__ == "__main__": stop_right_here
             break
     if __name__ == "__main__": # don't want this to fail when in the gloss editor
@@ -596,7 +612,9 @@ def apply_gloss_capitalization(gloss_pre:str, gloss_helper:str, gloss_word:str, 
         if 'G' in gloss_capitalization or 'U' in gloss_capitalization or 'W' in gloss_capitalization:
             gloss_word = f'{gloss_word[0].upper()}{gloss_word[1:]}' # Those are WORD punctuation characters
         if ('P' in gloss_capitalization or 'S' in gloss_capitalization # new paragraph or sentence
+        or 'B' in gloss_capitalization # new Biblical quotation
         or 'D' in gloss_capitalization # new dialog
+        or 'T' in gloss_capitalization # translated words
         or 'R' in gloss_capitalization): # other quotation, e.g., writing on board over cross
             if gloss_pre: gloss_pre = f'{gloss_pre[0].upper()}{gloss_pre[1:]}'
             elif gloss_helper: gloss_helper = f'{gloss_helper[0].upper()}{gloss_helper[1:]}'

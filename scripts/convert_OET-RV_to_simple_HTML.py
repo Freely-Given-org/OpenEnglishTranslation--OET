@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# convert_OET-LV_to_simple_HTML.py
+# convert_OET-RV_to_simple_HTML.py
 #
-# Script to take the OET-LV NT USFM files and convert to HTML
+# Script to take the OET-RV NT USFM files and convert to HTML
 #
 # Copyright (C) 2022 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org@gmail.com>
@@ -23,19 +23,19 @@
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 """
-Script to backport the ULT into empty verses of the OET-LV
+Script to backport the ULT into empty verses of the OET-RV
     in order to give us the text of all the Bible,
     even if we haven't manually worked through it all carefully yet.
 
 This script is designed to be able to be run over and over again,
-    i.e., it should be able to update the OET-LV with more recent ULT edits.
+    i.e., it should be able to update the OET-RV with more recent ULT edits.
 """
 from gettext import gettext as _
 from tracemalloc import start
 from typing import List, Tuple, Optional
 from pathlib import Path
 from datetime import datetime
-import shutil
+import logging
 import re
 
 if __name__ == '__main__':
@@ -49,9 +49,9 @@ from BibleOrgSys.Misc import CompareBibles
 
 
 LAST_MODIFIED_DATE = '2022-11-01' # by RJH
-SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
-PROGRAM_NAME = "Convert OET-LV USFM to simple HTML"
-PROGRAM_VERSION = '0.33'
+SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
+PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
+PROGRAM_VERSION = '0.10'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -59,13 +59,9 @@ DEBUGGING_THIS_MODULE = False
 
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module
 FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos
-OET_OT_USFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_OT_USFM/' )
-OET_NT_USFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_VLT_USFM/' )
-# OET_USFM_OutputFolderPath = project_folderpath.joinpath( 'translatedTexts/LiteralVersion/' )
-OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'derivedTexts/simpleHTML/LiteralVersion/' )
-assert OET_OT_USFM_InputFolderPath.is_dir()
-assert OET_NT_USFM_InputFolderPath.is_dir()
-# assert OET_USFM_OutputFolderPath.is_dir()
+OET_USFM_InputFolderPath = project_folderpath.joinpath( 'translatedTexts/ReadersVersion/' )
+OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'derivedTexts/simpleHTML/ReadersVersion/' )
+assert OET_USFM_InputFolderPath.is_dir()
 assert OET_HTML_OutputFolderPath.is_dir()
 
 EN_SPACE, EM_SPACE = ' ', ' '
@@ -95,7 +91,7 @@ def main():
 
     # Convert files to simple HTML
     produce_HTML_files()
-# end of convert_OET-LV_to_simple_HTML.main
+# end of convert_OET-RV_to_simple_HTML.main
 
 
 # If you change any colours, etc., also need to adjust the Key above
@@ -103,65 +99,66 @@ CSS_TEXT = '''div.BibleText { }
 span.upLink { font-size:1.5em; font-weight:bold; }
 span.C { font-size:1.1em; color:green; }
 span.V { vertical-align:super; font-size:0.5em; color:red; }
-span.addedArticle { color:grey; }
-span.addedCopula { color:pink; }
-span.addedDirectObject { color:brown; }
-span.addedExtra { color:lightGreen; }
-span.addedOwner { color:darkOrchid; }
-span.added { color:bisque; }
-span.ul { color:darkGrey; }
-span.dom { color:Gainsboro; }
-span.schwa { font-size:0.75em; }
-span.nominaSacra { font-weight:bold; }
+span.added { color:grey; }
 p.rem { font-size:0.8em; color:grey; }
 p.mt1 { font-size:1.8em; }
 p.mt2 { font-size:1.3em; }
+div.rightBox { float:right;
+        width:-moz-fit-content; width:fit-content;
+        border:3px solid #73AD21; padding:10px; }
+p.s1 { margin-top:0.1em; margin-bottom:0.1em; font-weight:bold; }
+p.r { margin-top:0; margin-bottom:0.1em; font-size:0.8em; }
+p.p {  }
+p.q1 { text-indent:2em; }
+p.q2 { text-indent:4em; }
+p.m {  }
 '''
+
 
 INDEX_INTRO_HTML = '''<!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <title>OET Literal Version Development</title>
+  <title>OET Readers’ Version Development</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="Bible, translation, OET, literal, version">
+  <meta name="keywords" content="Bible, translation, OET, readers, version">
   <link rel="stylesheet" type="text/css" href="BibleBook.css">
 </head>
 <body>
   <p><a href="../">Up</a></p>
-  <h1>Open English Translation Literal Version (OET-LV) Development</h1>
+  <h1>Open English Translation Readers’ Version (OET-RV) Development</h1>
   <h2>Very preliminary in-progress still-private test version</h2>
   <h3><b>OT</b> v0.00</h3>
-  <p id="Index"><a href="OET-LV_GEN.html">Genesis</a> &nbsp;&nbsp;<a href="OET-LV_EXO.html">Exodus</a> &nbsp;&nbsp;<a href="OET-LV_LEV.html">Leviticus</a> &nbsp;&nbsp;<a href="OET-LV_NUM.html">Numbers</a> &nbsp;&nbsp;<a href="OET-LV_DEU.html">Deuteronomy</a><br>
-    <a href="OET-LV_JOS.html">Y<span class="schwa">ə</span>hōshū'a/Joshua</a> &nbsp;&nbsp;<a href="OET-LV_JDG.html">Leaders/Judges</a> &nbsp;&nbsp;<a href="OET-LV_RUT.html">Rūt/Ruth</a><br>
-    <a href="OET-LV_SA1.html">Sh<span class="schwa">ə</span>mū'ēl/Samuel 1</a> &nbsp;&nbsp;<a href="OET-LV_SA2.html">Sh<span class="schwa">ə</span>mū'ēl/Samuel 2</a> &nbsp;&nbsp;<a href="OET-LV_KI1.html">Kings 1</a> &nbsp;&nbsp;<a href="OET-LV_KI2.html">Kings 2</a> &nbsp;&nbsp;<a href="OET-LV_CH1.html">Accounts/Chronicles 1</a> &nbsp;&nbsp;<a href="OET-LV_CH2.html">Accounts/Chronicles 2</a><br>
-    <a href="OET-LV_EZR.html">'Ez<span class="schwa">ə</span>rā'/Ezra</a> &nbsp;&nbsp;<a href="OET-LV_NEH.html">N<span class="schwa">ə</span>ḩem<span class="schwa">ə</span>yāh/Nehemiah</a> &nbsp;&nbsp;<a href="OET-LV_EST.html">'Eş<span class="schwa">ə</span>ttēr/Esther</a><br>
-    <a href="OET-LV_JOB.html">'Yuōv/Job</a> &nbsp;&nbsp;<a href="OET-LV_PSA.html">Songs/Psalms</a> &nbsp;&nbsp;<a href="OET-LV_PRO.html">Sayings/Proverbs</a> &nbsp;&nbsp;<a href="OET-LV_ECC.html">Orator/Ecclesiastes</a> &nbsp;&nbsp;<a href="OET-LV_SNG.html">Song of /Solomon</a><br>
-    <a href="OET-LV_ISA.html">Y<span class="schwa">ə</span>sha'<span class="schwa">ə</span>yāh/Isaiah</a> &nbsp;&nbsp;<a href="OET-LV_JER.html">Yir<span class="schwa">ə</span>m<span class="schwa">ə</span>yāh/Jeremiah</a> &nbsp;&nbsp;<a href="OET-LV_LAM.html">Wailings/Lamentations</a> &nbsp;&nbsp;<a href="OET-LV_EZE.html">Y<span class="schwa">ə</span>ḩez<span class="schwa">ə</span>qē'l/Ezekiel</a><br>
-    <a href="OET-LV_DAN.html">Dāniyyē'l/Daniel</a> &nbsp;&nbsp;<a href="OET-LV_HOS.html">Hōshē'a/Hosea</a> &nbsp;&nbsp;<a href="OET-LV_JOL.html">Yō'ēl/Joel</a> &nbsp;&nbsp;<a href="OET-LV_AMO.html">'Āmōʦ/Amos</a><br>
-    <a href="OET-LV_OBA.html">'Ovad<span class="schwa">ə</span>yāh/Obadiah</a> &nbsp;&nbsp;<a href="OET-LV_JNA.html">Yōnāh/Jonah</a> &nbsp;&nbsp;<a href="OET-LV_MIC.html">Mīkāh/Micah</a> &nbsp;&nbsp;<a href="OET-LV_NAH.html">Naḩūm/Nahum</a><br>
-    <a href="OET-LV_HAB.html">Ḩavaqqūq/Habakkuk</a> &nbsp;&nbsp;<a href="OET-LV_ZEP.html">Ts<span class="schwa">ə</span>fan<span class="schwa">ə</span>yāh/Zephaniah</a> &nbsp;&nbsp;<a href="OET-LV_HAG.html">Ḩaggay/Haggai</a> &nbsp;&nbsp;<a href="OET-LV_ZEC.html">Z<span class="schwa">ə</span>kar<span class="schwa">ə</span>yāh/Zechariah</a> &nbsp;&nbsp;<a href="OET-LV_MAL.html">Mal<span class="schwa">ə</span>'ākī/Malachi</a></p>
-  <p>Whole <a href="OET-LV-Torah.html">Torah/Pentateuch</a>
+  <p id="Index"><a href="OET-RV_GEN.html">Genesis</a> &nbsp;&nbsp;<a href="OET-RV_EXO.html">Exodus</a> &nbsp;&nbsp;<a href="OET-RV_LEV.html">Leviticus</a> &nbsp;&nbsp;<a href="OET-RV_NUM.html">Numbers</a> &nbsp;&nbsp;<a href="OET-RV_DEU.html">Deuteronomy</a><br>
+    <a href="OET-RV_JOS.html">Y<span class="schwa">ə</span>hōshū'a/Joshua</a> &nbsp;&nbsp;<a href="OET-RV_JDG.html">Leaders/Judges</a> &nbsp;&nbsp;<a href="OET-RV_RUT.html">Rūt/Ruth</a><br>
+    <a href="OET-RV_SA1.html">Sh<span class="schwa">ə</span>mū'ēl/Samuel 1</a> &nbsp;&nbsp;<a href="OET-RV_SA2.html">Sh<span class="schwa">ə</span>mū'ēl/Samuel 2</a> &nbsp;&nbsp;<a href="OET-RV_KI1.html">Kings 1</a> &nbsp;&nbsp;<a href="OET-RV_KI2.html">Kings 2</a> &nbsp;&nbsp;<a href="OET-RV_CH1.html">Accounts/Chronicles 1</a> &nbsp;&nbsp;<a href="OET-RV_CH2.html">Accounts/Chronicles 2</a><br>
+    <a href="OET-RV_EZR.html">'Ez<span class="schwa">ə</span>rā'/Ezra</a> &nbsp;&nbsp;<a href="OET-RV_NEH.html">N<span class="schwa">ə</span>ḩem<span class="schwa">ə</span>yāh/Nehemiah</a> &nbsp;&nbsp;<a href="OET-RV_EST.html">'Eş<span class="schwa">ə</span>ttēr/Esther</a><br>
+    <a href="OET-RV_JOB.html">'Yuōv/Job</a> &nbsp;&nbsp;<a href="OET-RV_PSA.html">Songs/Psalms</a> &nbsp;&nbsp;<a href="OET-RV_PRO.html">Sayings/Proverbs</a> &nbsp;&nbsp;<a href="OET-RV_ECC.html">Orator/Ecclesiastes</a> &nbsp;&nbsp;<a href="OET-RV_SNG.html">Song of /Solomon</a><br>
+    <a href="OET-RV_ISA.html">Y<span class="schwa">ə</span>sha'<span class="schwa">ə</span>yāh/Isaiah</a> &nbsp;&nbsp;<a href="OET-RV_JER.html">Yir<span class="schwa">ə</span>m<span class="schwa">ə</span>yāh/Jeremiah</a> &nbsp;&nbsp;<a href="OET-RV_LAM.html">Wailings/Lamentations</a> &nbsp;&nbsp;<a href="OET-RV_EZE.html">Y<span class="schwa">ə</span>ḩez<span class="schwa">ə</span>qē'l/Ezekiel</a><br>
+    <a href="OET-RV_DAN.html">Dāniyyē'l/Daniel</a> &nbsp;&nbsp;<a href="OET-RV_HOS.html">Hōshē'a/Hosea</a> &nbsp;&nbsp;<a href="OET-RV_JOL.html">Yō'ēl/Joel</a> &nbsp;&nbsp;<a href="OET-RV_AMO.html">'Āmōʦ/Amos</a><br>
+    <a href="OET-RV_OBA.html">'Ovad<span class="schwa">ə</span>yāh/Obadiah</a> &nbsp;&nbsp;<a href="OET-RV_JNA.html">Yōnāh/Jonah</a> &nbsp;&nbsp;<a href="OET-RV_MIC.html">Mīkāh/Micah</a> &nbsp;&nbsp;<a href="OET-RV_NAH.html">Naḩūm/Nahum</a><br>
+    <a href="OET-RV_HAB.html">Ḩavaqqūq/Habakkuk</a> &nbsp;&nbsp;<a href="OET-RV_ZEP.html">Ts<span class="schwa">ə</span>fan<span class="schwa">ə</span>yāh/Zephaniah</a> &nbsp;&nbsp;<a href="OET-RV_HAG.html">Ḩaggay/Haggai</a> &nbsp;&nbsp;<a href="OET-RV_ZEC.html">Z<span class="schwa">ə</span>kar<span class="schwa">ə</span>yāh/Zechariah</a> &nbsp;&nbsp;<a href="OET-RV_MAL.html">Mal<span class="schwa">ə</span>'ākī/Malachi</a></p>
+  <p>Whole <a href="OET-RV-Torah.html">Torah/Pentateuch</a>
     (long and slower to load, but useful for easy searching of multiple books, etc.)</p>
-  <h3><b>NT</b> v0.01</h3>
+  <h3><b>NT</b> v0.00</h3>
   <p>Note that the <em>OET</em> places Yōannēs/John before Matthaios/Matthew.</p>
-  <p><a href="OET-LV_JHN.html">Yōannēs/John</a> &nbsp;&nbsp;<a href="OET-LV_MAT.html">Matthaios/Matthew</a> &nbsp;&nbsp;<a href="OET-LV_MRK.html">Markos/Mark</a> &nbsp;&nbsp;<a href="OET-LV_LUK.html">Loukas/Luke</a> &nbsp;&nbsp;<a href="OET-LV_ACT.html">Acts</a><br>
-    <a href="OET-LV_ROM.html">Romans</a> &nbsp;&nbsp;<a href="OET-LV_CO1.html">Corinthians 1</a> &nbsp;&nbsp;<a href="OET-LV_CO2.html">Corinthians 2</a><br>
-    <a href="OET-LV_GAL.html">Galatians</a> &nbsp;&nbsp;<a href="OET-LV_EPH.html">Ephesians</a> &nbsp;&nbsp;<a href="OET-LV_PHP.html">Philippians</a> &nbsp;&nbsp;<a href="OET-LV_COL.html">Colossians</a><br>
-    <a href="OET-LV_TH1.html">Thessalonians 1</a> &nbsp;&nbsp;<a href="OET-LV_TH2.html">Thessalonians 2</a> &nbsp;&nbsp;<a href="OET-LV_TI1.html">Timotheos/Timothy 1</a> &nbsp;&nbsp;<a href="OET-LV_TI2.html">Timotheos/Timothy 2</a> &nbsp;&nbsp;<a href="OET-LV_TIT.html">Titos/Titus</a><br>
-    <a href="OET-LV_PHM.html">Filēmoni/Philemon</a><br>
-    <a href="OET-LV_HEB.html">Hebrews</a><br>
-    <a href="OET-LV_JAM.html">Yakōbos/James</a><br>
-    <a href="OET-LV_PE1.html">Petros/Peter 1</a> &nbsp;&nbsp;<a href="OET-LV_PE2.html">Petros/Peter 2</a><br>
-    <a href="OET-LV_JN1.html">Yōannēs/John 1</a> &nbsp;&nbsp;<a href="OET-LV_JN2.html">Yōannēs/John 2</a> &nbsp;&nbsp;<a href="OET-LV_JN3.html">Yōannēs/John 3</a><br>
-    <a href="OET-LV_JDE.html">Youdas/Jude</a><br>
-    <a href="OET-LV_REV.html">Revelation</a></p>
-  <p>Whole <a href="OET-LV-NT.html">New Testament</a>
+  <p><a href="OET-RV_JHN.html">Yōannēs/John</a> &nbsp;&nbsp;<a href="OET-RV_MAT.html">Matthaios/Matthew</a> &nbsp;&nbsp;<a href="OET-RV_MRK.html">Markos/Mark</a> &nbsp;&nbsp;<a href="OET-RV_LUK.html">Loukas/Luke</a> &nbsp;&nbsp;<a href="OET-RV_ACT.html">Acts</a><br>
+    <a href="OET-RV_ROM.html">Romans</a> &nbsp;&nbsp;<a href="OET-RV_CO1.html">Corinthians 1</a> &nbsp;&nbsp;<a href="OET-RV_CO2.html">Corinthians 2</a><br>
+    <a href="OET-RV_GAL.html">Galatians</a> &nbsp;&nbsp;<a href="OET-RV_EPH.html">Ephesians</a> &nbsp;&nbsp;<a href="OET-RV_PHP.html">Philippians</a> &nbsp;&nbsp;<a href="OET-RV_COL.html">Colossians</a><br>
+    <a href="OET-RV_TH1.html">Thessalonians 1</a> &nbsp;&nbsp;<a href="OET-RV_TH2.html">Thessalonians 2</a> &nbsp;&nbsp;<a href="OET-RV_TI1.html">Timotheos/Timothy 1</a> &nbsp;&nbsp;<a href="OET-RV_TI2.html">Timotheos/Timothy 2</a> &nbsp;&nbsp;<a href="OET-RV_TIT.html">Titos/Titus</a><br>
+    <a href="OET-RV_PHM.html">Filēmoni/Philemon</a><br>
+    <a href="OET-RV_HEB.html">Hebrews</a><br>
+    <a href="OET-RV_JAM.html">Yakōbos/James</a><br>
+    <a href="OET-RV_PE1.html">Petros/Peter 1</a> &nbsp;&nbsp;<a href="OET-RV_PE2.html">Petros/Peter 2</a><br>
+    <a href="OET-RV_JN1.html">Yōannēs/John 1</a> &nbsp;&nbsp;<a href="OET-RV_JN2.html">Yōannēs/John 2</a> &nbsp;&nbsp;<a href="OET-RV_JN3.html">Yōannēs/John 3</a><br>
+    <a href="OET-RV_JDE.html">Youdas/Jude</a><br>
+    <a href="OET-RV_REV.html">Revelation</a></p>
+  <p>Whole <a href="OET-RV-NT.html">New Testament</a>
     (long and slower to load, but useful for easy searching of multiple books, etc.)</p>
-  <h2 id="Intro">Literal Version Introduction</h2>
+  <h2 id="Intro">Readers’ Version Introduction</h2>
   <h3>The Open English Translation of the Bible (OET)</h3>
-      <p>This <em>Literal Version</em> (OET-LV) forms just one-half of the new, forthcoming <em>Open English Translation</em> of the Bible (OET).
-        The other half is the <em>Readers’ Version</em> (OET-RV) which work will resume on in 2023.
+      <p>This <em>Readers’ Version</em> (OET-RV) forms just one-half of the new, forthcoming <em>Open English Translation</em> of the Bible (OET).
+        The other half is the <em>Literal Version</em> (OET-LV).
         These two versions, side-by-side, together make up the OET.</p>
       <p>So why two versions? Well, many people ask the question:
         <i>Which English Bible translation should I use?</i>
@@ -175,13 +172,13 @@ INDEX_INTRO_HTML = '''<!DOCTYPE html>
         that’s easier for us modern readers to understand—as much to do with our
         totally different cultures as to do with our different languages.</p>
       <p>So the <em>OET</em> gives both side-by-side, and with the advantage that
-        both this <em>Literal Version</em> and the <em>Readers’ Version</em>
+        both the <em>Literal Version</em> and this <em>Readers’ Version</em>
         <b>have been specifically designed to be used together</b> in this way.
-        We suggest reading the <em>Readers’ Version</em>, and if something stands out and you think in your mind
+        We suggest reading this <em>Readers’ Version</em>, and if something stands out and you think in your mind
         <i>Does it really say that?</i> or <i>Could it really mean that?</i>,
-        then flick your eyes to this <em>Literal Version</em> and see for yourself what’s really there in the original texts.</p>
+        then flick your eyes to the <em>Literal Version</em> and see for yourself what’s really there in the original texts.</p>
       <p>On the other hand if you’ve been reading the Bible for a few decades already,
-        maybe it would be fun to work through this <em>Literal Version</em> to get fresh insight
+        maybe it would be fun to work through the <em>Literal Version</em> to get fresh insight
         into what’s actually written there in those original languages.
         It won’t be easy reading,
         but it should be insightful as the different wording will require more concentration.</p>
@@ -198,21 +195,28 @@ INDEX_INTRO_HTML = '''<!DOCTYPE html>
     <p>The OET has the following distinguishing points:</p>
     <ul><li>An easy-to-understand <em>Readers’ Version</em> side-by-side with a very <em>Literal Version</em></li>
     <li>A generous open license so that the <em>Open English Translation</em> can be
-        freely used in any Bible app or website, or printed in your church Bible-study notes
-        without even needing to request permission.</li>
-    <li>This <em>Literal Version</em> has the minimum number of interpreted extras,
-        so we’ve added basic sentence punctuation (mostly just commas and periods/fullstops).
-        The New Testament has no exclamation marks, no paragraphs,
-        no speech marks (even the King James Bible didn’t have these), and no section headings.
-        A limited number of footnotes relate mostly to the text of the source manuscripts
-        that the <em>OET-LV</em> is translated from.</li>
-    <li>This <em>Literal Version</em> retains the original units for all measurements
-        (useful for historical and symbolic studies),
-        whereas the <em>Readers’ Version</em> converts them to modern units (easier to understand and visualise).</li>
-    <li>This <em>Literal Version</em> retains the original figurative language
-        (even if it’s not a figure of speech that we are familiar with),
-        whereas the <em>Readers’ Version</em> converts some figures of speech to modern equivalents
-        (easier to understand).</li>
+            freely used in any Bible app or website, or printed in your church Bible-study notes
+            without even needing to request permission.</li>
+    <li>This <em>Readers’ Version</em> has section headings and cross-references
+            and most of the other features that help modern Bible readers.</li>
+    <li>This <em>Readers’ Version</em> uses modern units for all measurements (easy to understand and visualise),
+            whereas the <em>Literal Version</em> retains the ancient units (useful for historical and symbolic studies).</li>
+    <li>This <em>Readers’ Version</em> uses well-known figures of speech,
+            or if the original figure of speech is not readily understandable,
+            explains the point that the author appears to be trying to express.
+        On the other hand, the <em>Literal Version</em> retains the original figurative language
+            (even if it’s not a figure of speech that we are familiar with).</li>
+    <li>This <em>Readers’ Version</em> is less formal than most modern English Bible translations,
+            for example, we would use contracted words like <i>we’ll</i> and <i>didn’t</i>,
+            especially when it’s in direct speech.
+        (Always remember that the Bible was written in the languages of the common people.)</li>
+    <li>This <em>Readers’ Version</em> uses section headings
+            which are very helpful to skim through when trying to locate a certain passage.
+        However, you’ll quickly notice that they are formatted in such a way
+            as not to break the flow of the letter or narrative.
+        This is to visually help the reader to appreciate the full context
+            of the part they’re reading,
+            and not to ignore the connections with what came before and what follows.</li>
     <li>Being a 21<span style="vertical-align:super;font-size:0.8em;">st</span> century translation done in an era
         when there is much more effort in general to respect speakers of other languages
         (including the languages of ethnic minorities in our own countries)
@@ -221,8 +225,8 @@ INDEX_INTRO_HTML = '''<!DOCTYPE html>
         (All this is a little complex when we have both Hebrew and Greek versions of names and placenames—more below.)
         Certainly by showing a little more respect for Hebrew names,
             we hope to make this Bible translation a little more “Jew-friendly”.
-        If you have difficulty following the names in this <em>Literal Version</em>,
-        you can always look across to the <em>Readers’ Version</em>.
+        If you have difficulty following the names in the <em>Literal Version</em>,
+        you can always look across to the <em>Literal Version</em>.
         (Most English readers looking at names in the Bible all the way from <i>Jericho</i> to <i>Jesus</i>
         would have no idea that there’s no <b>J</b> letter or sound in either Hebrew or Greek,
         plus there’s absolutely no such name as <i>James</i> in the New Testament manuscripts!)</li>
@@ -251,7 +255,7 @@ INDEX_INTRO_HTML = '''<!DOCTYPE html>
         However, these words actually have a meaning, just as <i>President</i> is not just a title,
             but someone who <i>presides</i> over governmental meetings.
         So going a step further, we have chosen to use the contemporary
-            <b>meaning</b> of the word in this <em>Literal Version</em>.
+            <b>meaning</b> of the word in the <em>Literal Version</em>.
         The original meaning is <i>one who is anointed</i> (by pouring a hornful of oil over them),
             but we use the derived meaning which is <i>one who is selected/chosen (by God)</i>.</li>
     <li>Most readers living in modern democracies
@@ -265,7 +269,7 @@ INDEX_INTRO_HTML = '''<!DOCTYPE html>
             we use the translation <i>master</i> as a way to get readers to at least
             think a little more about what the concept might mean.
         (The word <i>boss</i> felt a little informal.)</li>
-    <li>This <em>Literal Version</em> tries to add as little as possible
+    <li>The <em>Literal Version</em> tries to add as little as possible
             that’s not actually there in the original manuscripts.
         Of course, we add spaces between words so we can read it faster,
             and we add capitals at the start of sentences as per standard, modern English,
@@ -283,16 +287,16 @@ INDEX_INTRO_HTML = '''<!DOCTYPE html>
         and <i>you (plural)</i> referring to a group of people.
         However, the original languages clearly distinguish these,
         so in order to indicate this to our readers
-        this <em>Literal Version</em> uses <i>you<span class="ul">_</span>all</i> for the plural form
+        the <em>Literal Version</em> uses <i>you<span class="ul">_</span>all</i> for the plural form
         (although we are aware that some modern dialects now prefer <i>yous</i>).</li>
-    <li>Because this <em>Literal Version</em> so closely follows the original languages,
+    <li>Because the <em>Literal Version</em> so closely follows the original languages,
             it’s important to remember that words often don’t match one-to-one between languages.
         This is one reason why the <em>LV</em> reads strangely:
             because we try to avoid using different English words if we can;
             knowing that the <em>LV</em> will not be natural English.
         Again, this is because we want the <em>LV</em> to be
             a window into what’s actually written in the original languages.
-        For fluent English (like in the <em>Readers’ Version</em>) the same Greek word
+        For fluent English (like in this <em>Readers’ Version</em>) the same Greek word
             might require several different translations when used in different contexts.
         For example, the Greek word translated <i>raise</i> in the <em>LV</em>
             would likely require the following changes:
@@ -318,8 +322,8 @@ INDEX_INTRO_HTML = '''<!DOCTYPE html>
             represent the lion, the calf, the man, and the eagle of Rev 4:6-7
             which allegedly match with the banners (not described in the Bible) of the four divisions
             of the tribes of Israel mentioned in Numbers 2.</li>
-    <li>Beware of some traps interpreting this <em>Literal Version</em>.
-        Because it’s not designed to be used alone (but rather alongside the <em>Readers’ Version</em>)
+    <li>Beware of some traps interpreting the <em>Literal Version</em>.
+        Because it’s not designed to be used alone (but rather alongside this <em>Readers’ Version</em>)
         it’s <b>much more literal</b> than most other “literal versions”.
         You will quickly notice the deemphasis of words that had to be added
         to make the English sentences even make sense.
@@ -332,7 +336,7 @@ INDEX_INTRO_HTML = '''<!DOCTYPE html>
                 you could easily think that the original means the opposite of what the words actually appear to say.
                 For example the double negative: “You are not caring about no one.” (adapted from Matthew 22:16).
                 In natural, fluent English, we would have to reverse the second negative to get the expected meaning,
-                    ending up with <i>anyone</i> as you’ll find in the <em>Readers’ Version</em>.
+                    ending up with <i>anyone</i> as you’ll find in this <em>Readers’ Version</em>.
                 But in Greek, the second negative adds emphasis rather than reversing the first negative.
                 So our <em>Literal Version</em> shows you the words that are actually there
                     (in the Greek in this case).</li>
@@ -341,11 +345,11 @@ INDEX_INTRO_HTML = '''<!DOCTYPE html>
                 e.g., a son may be divided against his father, and a daughter her mother.
                 The elided words are “may be divided against”.</li>
         </ul>
-        Always check the <em>Readers’ Version</em> carefully for how it is translated into modern, idiomatic English
+        Always check this <em>Readers’ Version</em> carefully for how it is translated into modern, idiomatic English
         before jumping to any conclusions of your own about what the original language says or doesn’t say.</li>
     </ul>
-  <h3 id="Key">Key to symbols and colours in the OET-LV</h3>
-    <p>You will notice that this <em>Literal Version</em> looks different from most Bibles that you’re used to:</p>
+  <h3 id="Key">Key to symbols and colours in the OET-RV</h3>
+    <p>You will notice the the <em>Literal Version</em> looks different from most Bibles that you’re used to:</p>
     <ul><li>Underline/underscore characters: Words joined together by underlines are translated from a single original word,
         e.g., <em>he<span class="ul">_</span>is<span class="ul">_</span>walking</em>.
         Both Hebrew and Greek can express the subject as part of the verb,
@@ -394,18 +398,18 @@ INDEX_INTRO_HTML = '''<!DOCTYPE html>
     <li><span class="added">Light orange</span>: Other added words not in the above categories are marked with this <span class="added">light colour</span>.</li>
     <li>All of this colouring is to be completely open by helping the reader to be able to see where the translators have chosen to
         add words to the Hebrew or Greek in order to make the English sound slightly better,
-        even though this has been kept to an absolute minimum in this <em>Literal Version</em>.</li>
+        even though this has been kept to an absolute minimum in the <em>Literal Version</em>.</li>
     <li><span class="nominaSacra">Bold text</span>: In the earliest copies of the original manuscripts,
         it appears that the scribes marked a small set of words that they considered
         to refer to <span class="nominaSacra">God</span>.
         (These markings are known as <a href="https://en.wikipedia.org/wiki/Nomina_sacra"><em>nomina sacra</em></a>
         or <em>sacred naming</em>.)
         Other Bible translations do not indicate these special markings,
-        however in this <em>Literal Version New Testament</em> we help the reader by making
+        however in the <em>Literal Version New Testament</em> we help the reader by making
         these marked words <span class="nominaSacra">stand out</span>.</li>
     <li>Where it is determined that a group of words was either definitely or most likely
         not in the original manuscripts (autographs),
-        they are omitted in the <em>OET-LV</em> without any notes.
+        they are omitted in the <em>OET-RV</em> without any notes.
         These manuscript decisions were mostly made by the authors of the two main works that we relied on to translate
         the <em>OET</em> from—see the acknowledgements below for more details.)</li>
     </ul>
@@ -483,9 +487,9 @@ INDEX_INTRO_HTML = '''<!DOCTYPE html>
     <ul><li>Biblical names are often very mangled in English translations.
             We’ve already covered this extensively <a href="#Names">above</a>.</li>
         <li>The <em>Open English Translation</em> makes it possible to learn how Bible translation is done.
-            This is because reading this <em>Literal Version</em> gives you a good insight into
+            This is because reading the <em>Literal Version</em> gives you a good insight into
                 what’s actually written in the original manuscripts.
-            Then you can read the same passage in the <em>Readers’ Version</em>
+            Then you can read the same passage in this <em>Readers’ Version</em>
                 or your favourite other translation,
                 and you’ll get a good idea of the rearranging and interpreting that
                 Bible translators have to do to get good, understandable translations
@@ -560,14 +564,14 @@ INDEX_INTRO_HTML = '''<!DOCTYPE html>
         The <em>OET Literal Version</em> is not yet finished, and not yet publicly released,
         but we need to have it available online for easy access for our checkers and reviewers.
         If you’re reading this and notice problems or issues,
-        please do contact us by <a href="mailto:Freely.Given.org@gmail.com?subject=OET-LV Feedback">email</a>.
+        please do contact us by <a href="mailto:Freely.Given.org@gmail.com?subject=OET-RV Feedback">email</a>.
         Also, if there’s something that we didn’t explain in this introduction, or didn’t explain very well.
         Thanks.</p>
   <p>HTML last updated: __LAST_UPDATED__</p>
 </body></html>
 '''
 
-LV_FAQ_HTML = '''<!DOCTYPE html>
+RV_FAQ_HTML = '''<!DOCTYPE html>
 <html lang="en-US">
 <head>
   <title>OET Literal Version Development</title>
@@ -578,7 +582,7 @@ LV_FAQ_HTML = '''<!DOCTYPE html>
 </head>
 <body>
   <p><a href="../">Up</a></p>
-  <h1>Open English Translation Literal Version (OET-LV) Development</h1>
+  <h1>Open English Translation Literal Version (OET-RV) Development</h1>
   <h2>Frequently Asked Questions (FAQs)</h2>
   <h3>What are the bolded words in the text?</h3>
   <p>As explained in the <a href="index.html#Key">Key</a>, the bold text
@@ -590,7 +594,7 @@ LV_FAQ_HTML = '''<!DOCTYPE html>
         The <em>OET Literal Version</em> is not yet finished, and not yet publicly released,
         but we need to have it available online for easy access for our checkers and reviewers.
         If you’re reading this and have questions that aren’t discussed here,
-        please do contact us by <a href="mailto:Freely.Given.org@gmail.com?subject=OET-LV FAQs">email</a>.
+        please do contact us by <a href="mailto:Freely.Given.org@gmail.com?subject=OET-RV FAQs">email</a>.
         Also, if there’s something that we didn’t explain in this introduction, or didn’t explain very well.
         Thanks.</p>
   <p>HTML last updated: __LAST_UPDATED__</p>
@@ -599,24 +603,23 @@ LV_FAQ_HTML = '''<!DOCTYPE html>
 
 DISCLAIMER_HTML = '''<p>Note: This is still a very early look into the unfinished text
 of the <em>Open English Translation</em> of the Bible.
-Please double-check the text before using in public.</p>
+Please double-check the text before using in public.</p>'''
+
+RV_BOOK_INTRO_HTML1 = '''<p>Note: This <em>Readers’ Version</em> is a translation
+into contemporary English aimed at <i>the person on the street</i> who
+hasn’t necessarily been brought up with exposure to Biblical jargon and/or King James English.
+It’s designed to be used alongside the <em>Literal Version</em> which gives
+the English reader a window into what is actually written in the original languages.
+(See the <a href="../LiteralVersion/index.html#Intro">introduction</a> for more details—we
+recommend that you read the introduction first if you’re wanting to read and understand the <em>Literal Version</em>.)
+Between the two versions you should be able to easily read the clear message of the text,
+while at the same time being able to check for yourself if that’s a fair translation
+of what the original authors had inked onto their ancient manuscripts.</p>
 '''
 
-
-LV_BOOK_INTRO_HTML1 = '''<p>Note: This <em>Literal Version</em> is a somewhat technical translation
-designed to give the English reader a window into what is actually written in the original languages.
-(See the <a href="index.html#Intro">introduction</a> for more details—we
-recommend that you read the introduction first if you’re wanting to read and understand this <em>Literal Version</em>.)
-For nice, modern, readable English you should look at the (forthcoming) <em>Readers’ Version</em>.
-(Between the two versions, you should also be able to get an idea about how Bible Translation
-actually <a href="index.html#Learning">works</a>.
-You can also compare your other favourite Bible translations with this <em>Literal Version</em>
-to get more insight into how they also interpreted the original texts in crafting their translation.)</p>
-'''
-
-INTRO_PRAYER_HTML = '''<p style="text-align:center">It is our prayer that this <em>Literal Version</em> of the
-<em>Open English Translation</em> of the Bible will give you fresh insight into
-the words of the inspired Biblical writers.</p>
+INTRO_PRAYER_HTML = '''<p style="text-align:center">It is our prayer that this <em>Readers’ Version</em> of the
+<em>Open English Translation</em> of the Bible will give you clear understanding of
+the messages written by the inspired Biblical writers.</p>
 '''
 
 START_HTML = '''<!DOCTYPE html>
@@ -625,7 +628,7 @@ START_HTML = '''<!DOCTYPE html>
   <title>__TITLE__</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="Bible, OET, literal, version">
+  <meta name="keywords" content="Bible, OET, readers, version">
   <link rel="stylesheet" type="text/css" href="BibleBook.css">
 </head>
 <body>
@@ -656,14 +659,13 @@ def produce_HTML_files() -> None:
             bookType = 'NT'
 
         if bookType:
-            source_filename = f'OET-LV_{BBB}.usfm'
-            sourceFolderpath = OET_NT_USFM_InputFolderPath if bookType=='NT' else OET_OT_USFM_InputFolderPath
-            with open( sourceFolderpath.joinpath(source_filename), 'rt', encoding='utf-8' ) as usfm_input_file:
+            source_filename = f'OET-RV_{BBB}.ESFM'
+            with open( OET_USFM_InputFolderPath.joinpath(source_filename), 'rt', encoding='utf-8' ) as usfm_input_file:
                 usfm_text = usfm_input_file.read()
 
             book_start_html, book_html, book_end_html = convert_USFM_to_simple_HTML( BBB, usfm_text )
 
-            output_filename = f'OET-LV_{BBB}.html'
+            output_filename = f'OET-RV_{BBB}.html'
             with open( OET_HTML_OutputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
                 html_output_file.write( f'{book_start_html}\n{book_html}\n{book_end_html}' )
 
@@ -695,55 +697,57 @@ def produce_HTML_files() -> None:
             .replace( '__LAST_UPDATED__', f"{datetime.now().strftime('%Y-%m-%d')} <small>by {PROGRAM_NAME_VERSION}</small>" )
     with open( OET_HTML_OutputFolderPath.joinpath('index.html'), 'wt', encoding='utf-8' ) as html_index_file:
         html_index_file.write( indexIntroHTML )
-    faqHTML = LV_FAQ_HTML.replace('   ',' ').replace('  ', ' ').replace('\n ', '\n') \
+    faqHTML = RV_FAQ_HTML.replace('   ',' ').replace('  ', ' ').replace('\n ', '\n') \
             .replace( '__LAST_UPDATED__', f"{datetime.now().strftime('%Y-%m-%d')} <small>by {PROGRAM_NAME_VERSION}</small>" )
     with open( OET_HTML_OutputFolderPath.joinpath('FAQs.html'), 'wt', encoding='utf-8' ) as html_FAQ_file:
         html_FAQ_file.write( faqHTML )
     
     # Save our long book conglomerates
-    with open( OET_HTML_OutputFolderPath.joinpath('OET-LV-Torah.html'), 'wt', encoding='utf-8' ) as html_output_file:
-        html_output_file.write( f'{START_HTML.replace("__TITLE__","OET-LV-Torah (Preliminary)")}\n'
-                                f'<p><a href="index.html">OET-LV Index</a></p>\n{whole_Torah_html}\n'
-                                f'<p><a href="index.html">OET-LV Index</a></p>\n{END_HTML}' )
-    with open( OET_HTML_OutputFolderPath.joinpath('OET-LV-NT.html'), 'wt', encoding='utf-8' ) as html_output_file:
-        html_output_file.write( f'{START_HTML.replace("__TITLE__","OET-LV-NT (Preliminary)")}\n'
-                                f'<p><a href="index.html">OET-LV Index</a></p>\n{whole_NT_html}\n'
-                                f'<p><a href="index.html">OET-LV Index</a></p>\n{END_HTML}' )
+    with open( OET_HTML_OutputFolderPath.joinpath('OET-RV-Torah.html'), 'wt', encoding='utf-8' ) as html_output_file:
+        html_output_file.write( f'{START_HTML.replace("__TITLE__","OET-RV-Torah (Preliminary)")}\n'
+                                f'<p><a href="index.html">OET-RV Index</a></p>\n{whole_Torah_html}\n'
+                                f'<p><a href="index.html">OET-RV Index</a></p>\n{END_HTML}' )
+    with open( OET_HTML_OutputFolderPath.joinpath('OET-RV-NT.html'), 'wt', encoding='utf-8' ) as html_output_file:
+        html_output_file.write( f'{START_HTML.replace("__TITLE__","OET-RV-NT (Preliminary)")}\n'
+                                f'<p><a href="index.html">OET-RV Index</a></p>\n{whole_NT_html}\n'
+                                f'<p><a href="index.html">OET-RV Index</a></p>\n{END_HTML}' )
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Finished processing {numBooksProcessed} HTML books." )
-# end of convert_OET-LV_to_simple_HTML.convert_USFM_to_simple_HTML function
+# end of convert_OET-RV_to_simple_HTML.produce_HTML_files()
 
 
 def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str]:
     fnPrint( DEBUGGING_THIS_MODULE, f"convert_USFM_to_simple_HTML( {BBB}, ({len(usfm_text)}) )" )
 
-    links_html_template = '<p>__PREVIOUS__OET-LV <a href="index.html#Index">Book index</a>,' \
+    links_html_template = '<p>__PREVIOUS__OET-RV <a href="index.html#Index">Book index</a>,' \
                  ' <a href="index.html#Intro">Intro</a>, <a href="index.html#Key">Key</a>,' \
                  'and <a href="FAQs.html">FAQs</a>' \
                  f'__NEXT__<br><br>__REST__</p>'
     if BBB in OT_BBB_LIST:
-        links_html = links_html_template.replace('__REST__', 'Whole <a href="OET-LV-Torah.html">Torah/Pentateuch</a> (for easy searching of multiple books, etc.)' )
+        links_html = links_html_template.replace('__REST__', 'Whole <a href="OET-RV-Torah.html">Torah/Pentateuch</a> (for easy searching of multiple books, etc.)' )
 
         previousBBB = OT_BBB_LIST[OT_BBB_LIST.index(BBB)-1] # Gives wrong value (@[-1]) for first book
         try: nextBBB = OT_BBB_LIST[OT_BBB_LIST.index(BBB)+1]
         except IndexError: nextBBB = NT_BBB_LIST[0] # above line fails on final book
         links_html = links_html.replace( '__PREVIOUS__', '' if BBB==NT_BBB_LIST[0]
-            else f'<a href="OET-LV_{previousBBB}.html">Previous Book ({previousBBB})</a>{EM_SPACE}')
-        links_html = links_html.replace( '__NEXT__', f'{EM_SPACE}<a href="OET-LV_{nextBBB}.html">Next Book ({nextBBB})</a>')
+            else f'<a href="OET-RV_{previousBBB}.html">Previous Book ({previousBBB})</a>{EM_SPACE}')
+        links_html = links_html.replace( '__NEXT__', f'{EM_SPACE}<a href="OET-RV_{nextBBB}.html">Next Book ({nextBBB})</a>')
     elif BBB in NT_BBB_LIST:
-        links_html = links_html_template.replace('__REST__', 'Whole <a href="OET-LV-NT.html">New Testament</a> (for easy searching of multiple books, etc.)' )
+        links_html = links_html_template.replace('__REST__', 'Whole <a href="OET-RV-NT.html">New Testament</a> (for easy searching of multiple books, etc.)' )
 
         previousBBB = OT_BBB_LIST[-1] if BBB==NT_BBB_LIST[0] else NT_BBB_LIST[NT_BBB_LIST.index(BBB)-1] # Gives wrong value (@[-1]) for first book
         try: nextBBB = NT_BBB_LIST[NT_BBB_LIST.index(BBB)+1]
         except IndexError: pass # above line fails on final book
-        links_html = links_html.replace( '__PREVIOUS__', f'<a href="OET-LV_{previousBBB}.html">Previous Book ({previousBBB})</a>{EM_SPACE}')
+        links_html = links_html.replace( '__PREVIOUS__', f'<a href="OET-RV_{previousBBB}.html">Previous Book ({previousBBB})</a>{EM_SPACE}')
         links_html = links_html.replace( '__NEXT__', '' if BBB==NT_BBB_LIST[-1]
-            else f'{EM_SPACE}<a href="OET-LV_{nextBBB}.html">Next Book ({nextBBB})</a>')
+            else f'{EM_SPACE}<a href="OET-RV_{nextBBB}.html">Next Book ({nextBBB})</a>')
     else: unexpected_BBB, BBB
 
     C = V = '0'
     book_html = ''
     done_intro = False
+    inParagraph = None
+    inRightDiv = False
     for usfm_line in usfm_text.split( '\n' ):
         if not usfm_line: continue # Ignore blank lines
         assert usfm_line.startswith( '\\' )
@@ -757,7 +761,7 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
             book_html = f'{book_html}<p class="{marker}">{rest}</p>\n'
         elif marker in ('mt1','mt2'):
             if not done_intro: # Add an extra explanatory paragraph at the top
-                book_html = f'{book_html}{DISCLAIMER_HTML}{LV_BOOK_INTRO_HTML1}'
+                book_html = f'{book_html}{DISCLAIMER_HTML}{RV_BOOK_INTRO_HTML1}'
                 done_intro = True
             book_html = f'{book_html}<p class="{marker}">{rest}</p>\n'
         elif marker == 'toc1':
@@ -765,56 +769,67 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
         elif marker == 'c':
             V = '0'
             C = rest
-            # if C=='2': halt
-            assert C.isdigit()
+            if C:
+                if C != C.strip():
+                    logging.warning( f"{BBB} C='{C}' needs cleaning")
+                    C = C.strip()
+                assert C.isdigit()
             if C == '1': # Add an inspirational note
                 book_html = f'{book_html}{INTRO_PRAYER_HTML}<div class="BibleText">\n'
-            # Note: as well as CV id's, we make sure there are simple C id's there as well
-            start_c_bit = '<p class="BText" id="C1">' if C=='1' else f'<a class="upLink" href="#" id="C{C}">↑</a> '
-            book_html = f'{book_html}{start_c_bit}<span class="C" id="C{C}V1">{C}</span>{EN_SPACE}'
         elif marker == 'v':
             try: V, rest = rest.split( ' ', 1 )
             except ValueError: V, rest = rest, ''
             assert V.isdigit(), f"Expected a verse number digit with '{V=}' '{rest=}'"
-            # Put sentences on new lines
-            rest = rest.replace( '?)', 'COMBO' ) \
-                        .replace( '.', '.<br>\n' ) \
-                        .replace( '?', '?<br>\n' ) \
-                        .replace( 'COMBO', '?)' )
+            if inRightDiv:
+                book_html = f'{book_html}</div>\n'
+                inRightDiv = False
             # We don't display the verse number for verse 1 (after chapter number)
-            book_html = f'{book_html}{"" if book_html.endswith(">") else " "}{"" if V=="1" else f"""<span class="V" id="C{C}V{V}">{V}</span>{NARROW_NON_BREAK_SPACE}"""}{rest}'
+            book_html = f'{book_html}{"" if book_html.endswith(">") else " "}' \
+                        f'{f"""<span id="C{C}"></span><span class="C" id="C{C}V1">{C}</span>""" if V=="1" else f"""<span class="V" id="C{C}V{V}">{V}</span>"""}' \
+                        f'{NARROW_NON_BREAK_SPACE}{rest}'
+        elif marker == 's1':
+            if inParagraph:
+                book_html = f'{book_html}</{inParagraph}>\n'
+                inParagraph = None
+            assert not inRightDiv
+            book_html = f'{book_html}<div class="rightBox"><p class="{marker}">{rest}</p>\n'
+            inRightDiv = True
+        elif marker == 'r':
+            assert rest[0]=='(' and rest[-1]==')'
+            assert inRightDiv
+            if inParagraph:
+                book_html = f'{book_html}</{inParagraph}>\n'
+                inParagraph = None
+            book_html = f'{book_html}<p class="{marker}">{rest}</p></div>\n'
+            inRightDiv = False
+        elif marker in ('p','q1','q2','m'):
+            if inParagraph:
+                assert not inRightDiv
+                book_html = f'{book_html}</{inParagraph}>\n'
+            elif inRightDiv:
+                book_html = f'{book_html}</div>\n'
+                inRightDiv = False
+            book_html = f'{book_html}<p class="{marker}">{rest}\n'
+            inParagraph = 'p'
         else:
             book_html = f'{book_html}<p>GOT UNEXPECTED{marker}={rest}</p>'
-    book_html = f"{book_html.rstrip().removesuffix('<br>').rstrip()}</p></div>"
+    assert not inRightDiv
+    if inParagraph:
+        book_html = f'{book_html}</{inParagraph}>\n'
+    book_html = f'{book_html}</div>'
 
     chapter_links = [f'<a href="#C{chapter_num}">C{chapter_num}</a>' for chapter_num in range( 1, int(C)+1 )]
     chapter_html = f'<p>{EM_SPACE.join(chapter_links)}</p>'
     book_start_html = f'{start_html}{links_html}\n{chapter_html}'
 
-    book_html = book_html.replace( '\\nd ', '<span class="nominaSacra">' ) \
-                .replace( '\\nd*', '</span>' )
-    book_html = book_html.replace( '\\add +', '<span class="addedArticle">' ) \
-                .replace( '\\add =', '<span class="addedCopula">' ) \
-                .replace( '\\add ~', '<span class="addedDirectObject">' ) \
-                .replace( '\\add >', '<span class="addedExtra">' ) \
-                .replace( '\\add ^', '<span class="addedOwner">' ) \
-                .replace( '\\add ', '<span class="added">' ) \
-                .replace( '\\add*', '</span>' )
-    # Make underlines grey with "ul" spans (except when already at end of a span)
-    book_html = book_html.replace( '_</span>', '%%SPAN%%' ) \
-                .replace( '_', '<span class="ul">_</span>' ) \
-                .replace( '%%SPAN%%', '_</span>' )
-    # Make schwas smaller
-    book_html = book_html.replace( 'ə', '<span class="schwa">ə</span>' )
-    if BBB in OT_BBB_LIST: # Hebrew direct object markers (DOMs)
-        book_html = book_html.replace( 'DOM', '<span class="dom">DOM</span>' ) \
-                        .replace( '[was]', '<span class="addedCopula">was</span>' ) \
-                        .replace( '[', '<span class="added">' ) \
-                        .replace( ']', '</span>' )
+    book_html = book_html.replace( '\\em ', '<em>' ) \
+                         .replace( '\\em*', '</em>' )
+    book_html = book_html.replace( '\\add ', '<span class="added">' ) \
+                         .replace( '\\add*', '</span>' )
     return ( book_start_html,
              book_html,
              f'{chapter_html}\n{links_html}\n{END_HTML}' )
-# end of convert_OET-LV_to_simple_HTML.produce_HTML_files()
+# end of convert_OET-RV_to_simple_HTML.convert_USFM_to_simple_HTML function
 
 
 if __name__ == '__main__':
@@ -825,4 +840,4 @@ if __name__ == '__main__':
     main()
 
     BibleOrgSysGlobals.closedown( PROGRAM_NAME, PROGRAM_VERSION )
-# end of convert_OET-LV_to_simple_HTML.py
+# end of convert_OET-RV_to_simple_HTML.py

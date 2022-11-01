@@ -1,10 +1,15 @@
-# HTML := $(wildcard ../derivedTexts/simpleHTML/LiteralVersion/*.html)
-OT_HTML := ../derivedTexts/simpleHTML/LiteralVersion/OET-LV_GEN.html ../derivedTexts/simpleHTML/LiteralVersion/OET-LV_MAL.html
-NT_HTML := ../derivedTexts/simpleHTML/LiteralVersion/OET-LV_MAT.html ../derivedTexts/simpleHTML/LiteralVersion/OET-LV_REV.html
-final_OT_USFM := $(wildcard ../intermediateTexts/auto_edited_OT_USFM/*.usfm)
-final_NT_USFM := $(wildcard ../intermediateTexts/auto_edited_VLT_USFM/*.usfm)
-intermediate_OT_USFM := $(wildcard ../intermediateTexts/modified_source_glossed_OSHB_USFM/*.usfm)
-intermediate_NT_USFM := $(wildcard ../intermediateTexts/modified_source_VLT_USFM/*.usfm)
+# OET makfile
+
+#=== Folder and file declarations =======================
+
+LV_OT_HTML := ../derivedTexts/simpleHTML/LiteralVersion/OET-LV_GEN.html ../derivedTexts/simpleHTML/LiteralVersion/OET-LV_MAL.html
+LV_NT_HTML := ../derivedTexts/simpleHTML/LiteralVersion/OET-LV_MAT.html ../derivedTexts/simpleHTML/LiteralVersion/OET-LV_REV.html
+RV_HTML := $(wildcard ../derivedTexts/simpleHTML/ReadersVersion/OET-RV_*.html)
+RV_ESFM := $(wildcard ../translatedTexts/ReadersVersion/*.ESFM)
+final_LV_OT_USFM := $(wildcard ../intermediateTexts/auto_edited_OT_USFM/*.usfm)
+final_LV_NT_USFM := $(wildcard ../intermediateTexts/auto_edited_VLT_USFM/*.usfm)
+intermediate_LV_OT_USFM := $(wildcard ../intermediateTexts/modified_source_glossed_OSHB_USFM/*.usfm)
+intermediate_LV_NT_USFM := $(wildcard ../intermediateTexts/modified_source_VLT_USFM/*.usfm)
 all_OT_TSV_table := ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv
 WLC_OT_TSV_table := ../intermediateTexts/glossed_OSHB/WLC_glosses.morphemes.tsv
 Clear_Bible_OT_lowfat_TSV := ../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTreesAbbrev.OT.morphemes.tsv
@@ -14,37 +19,42 @@ BibleTags_OT_TSV_table = ../sourceTexts/BibleTagsOriginals/BibTags.OT.words.tsv
 BibleTags_NT_TSV_table = ../sourceTexts/BibleTagsOriginals/BibTags.NT.words.tsv
 short_OSHB_TSV := ../sourceTexts/rawOSHB/OSHB.original.flat.morphemes.tsv
 
+#=== Script declarations =======================
+
 SBE = ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py
 BTranslit = ../../BibleTransliterations/Python/BibleTransliterations.py
 Hebrew = ../../BibleTransliterations/sourceTables/Hebrew.tsv
 Greek = ../../BibleTransliterations/sourceTables/Greek.tsv
 
-LV: OT NT
+#=== Top-level/Main stuff =======================
 
-OT: $(OT_HTML)
-NT: $(NT_HTML) $(Clear_Bible_NT_lowfat_TSV)
+ALL: BOTH SideBySide
+BOTH: LV RV
+LV: LV_OT LV_NT
 
-# $(HTML): $(final_OT_USFM) $(final_NT_USFM) convert_OET-LV_to_simple_HTML.py
-# 	@echo "\n\nConvert OT and NT LV USFM files to simple HTML…\n"
-# 	@python convert_OET-LV_to_simple_HTML.py
+LV_OT: $(LV_OT_HTML)
+LV_NT: $(LV_NT_HTML) $(Clear_Bible_NT_lowfat_TSV)
+RV: $(RV_HTML)
 
-$(OT_HTML): $(final_OT_USFM) convert_OET-LV_to_simple_HTML.py
+#=== LV stuff =======================
+
+$(LV_OT_HTML): $(final_LV_OT_USFM) convert_OET-LV_to_simple_HTML.py
 	@echo "\n\nConvert OT LV USFM files to simple HTML…\n"
 	@python convert_OET-LV_to_simple_HTML.py
 
-$(NT_HTML): $(final_NT_USFM) convert_OET-LV_to_simple_HTML.py
+$(LV_NT_HTML): $(final_LV_NT_USFM) convert_OET-LV_to_simple_HTML.py
 	@echo "\n\nConvert NT LV USFM files to simple HTML…\n"
 	@python convert_OET-LV_to_simple_HTML.py
 
-$(final_OT_USFM): $(intermediate_OT_USFM) $(SBE) $(wildcard ScriptedOTUpdates/*) $(BTranslit) $(Hebrew)
+$(final_LV_OT_USFM): $(intermediate_LV_OT_USFM) $(SBE) $(wildcard ScriptedOTUpdates/*) $(BTranslit) $(Hebrew)
 	@echo "\n\nRun ScriptedBibleEditor on OT USFM files…\n"
 	@python ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py ScriptedOTUpdates -qe
 
-$(final_NT_USFM): $(intermediate_NT_USFM) $(SBE) $(wildcard ScriptedVLTUpdates/*) $(BTranslit) $(Greek) $(Hebrew)
+$(final_LV_NT_USFM): $(intermediate_LV_NT_USFM) $(SBE) $(wildcard ScriptedVLTUpdates/*) $(BTranslit) $(Greek) $(Hebrew)
 	@echo "\n\nRun ScriptedBibleEditor on NT USFM files…\n"
 	@python ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py ScriptedVLTUpdates -qe
 
-$(intermediate_OT_USFM): $(all_OT_TSV_table) extract_OSHB_OT_to_USFM.py
+$(intermediate_LV_OT_USFM): $(all_OT_TSV_table) extract_OSHB_OT_to_USFM.py
 	@echo "\n\nExtract OT from TSV table to USFM files…\n"
 	@python extract_OSHB_OT_to_USFM.py
 
@@ -72,19 +82,38 @@ $(BibleTags_TSV): $(wildcard ../../Forked/bibletags-usfm/usfm/uhb/*.usfm) $(wild
 	@echo "\n\nConvert BibleTags USFM files to TSV…\n"
 	@python convert_BibTags_USFM_to_TSV.py
 
-$(intermediate_NT_USFM): ../../CNTR-GNT/sourceExports/book.csv ../../CNTR-GNT/sourceExports/collation.updated.csv extract_VLT_NT_to_USFM.py
+$(intermediate_LV_NT_USFM): ../../CNTR-GNT/sourceExports/book.csv ../../CNTR-GNT/sourceExports/collation.updated.csv extract_VLT_NT_to_USFM.py
 	@echo "\n\nExtract NT from TSV table to USFM files…\n"
 	@python extract_VLT_NT_to_USFM.py
 
-cleanBoth: cleanOT cleanNT
+#=== RV stuff =======================
 
-cleanOT:
+$(RV_HTML): $(RV_ESFM) convert_OET-RV_to_simple_HTML.py
+	@echo "\n\nConvert OT RV USFM files to simple HTML…\n"
+	@python convert_OET-RV_to_simple_HTML.py
+
+#=== Side-by-side stuff =======================
+
+SideBySide: $(LV_HTML) $(RV_HTML) pack_HTML_side-by-side.py
+	@echo "\n\nPack LV and RV HTML files side-by-side…\n"
+	@python pack_HTML_side-by-side.py
+
+
+#=== Clean up stuff =======================
+
+clean: clean_LT clean_RT
+clean_LT: clean_LT_OT cleanLT_NT
+
+clean_LT_OT:
 	rm ../intermediateTexts/modified_source_glossed_OSHB_USFM/*.usfm
 	rm ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv
 	rm ../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTreesAbbrev.OT.morphemes.tsv
 	rm ../intermediateTexts/glossed_OSHB/WLC_glosses.morphemes.tsv
 	rm ../sourceTexts/rawOSHB/OSHB.original.flat.morphemes.tsv
 
-cleanNT:
+clean_LT_NT:
 	rm ../intermediateTexts/auto_edited_VLT_USFM/*.usfm
 	rm ../intermediateTexts/modified_source_VLT_USFM/*.usfm
+
+clean_RT:
+	@echo "Nothing to clean for RT yet"

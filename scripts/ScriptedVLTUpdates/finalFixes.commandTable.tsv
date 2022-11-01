@@ -1,0 +1,11 @@
+Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	RCase	Replace	Name	Comment
+c					MAT_3:3,MRK_1:3				of_\add +a\add*_shouting \add >one\add*			of_ \add >one\add* _shouting		JtB's announcement
+c					MAT_3:3,MRK_1:3				desert: Prepare			desert prepare		JtB's announcement
+
+# a to an before a vowel
+									\add +a\add*_i			\add +an\add*_i		Mark 1:4
+									\add +a\add*_ o			\add +an\add*_ o		Mark 2:21
+									\add +a\add*_ u			\add +an\add*_ u		Mark 1:23
+
+# Fix English word order (Gloss Insert can currently only do one fix at a time)
+									send_out them 			send_ them _out 		Mark 5:10 after not
