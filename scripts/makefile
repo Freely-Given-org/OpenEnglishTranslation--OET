@@ -2,8 +2,7 @@
 
 #=== Folder and file declarations =======================
 
-LV_OT_HTML := ../derivedTexts/simpleHTML/LiteralVersion/OET-LV_GEN.html ../derivedTexts/simpleHTML/LiteralVersion/OET-LV_MAL.html
-LV_NT_HTML := ../derivedTexts/simpleHTML/LiteralVersion/OET-LV_MAT.html ../derivedTexts/simpleHTML/LiteralVersion/OET-LV_REV.html
+LV_HTML := $(wildcard ../derivedTexts/simpleHTML/LiteralVersion/OET-LV_*.html)
 RV_HTML := $(wildcard ../derivedTexts/simpleHTML/ReadersVersion/OET-RV_*.html)
 RV_ESFM := $(wildcard ../translatedTexts/ReadersVersion/*.ESFM)
 final_LV_OT_USFM := $(wildcard ../intermediateTexts/auto_edited_OT_USFM/*.usfm)
@@ -21,6 +20,7 @@ short_OSHB_TSV := ../sourceTexts/rawOSHB/OSHB.original.flat.morphemes.tsv
 
 #=== Script declarations =======================
 
+Python = python3.11
 SBE = ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py
 BTranslit = ../../BibleTransliterations/Python/BibleTransliterations.py
 Hebrew = ../../BibleTransliterations/sourceTables/Hebrew.tsv
@@ -38,65 +38,61 @@ RV: $(RV_HTML)
 
 #=== LV stuff =======================
 
-$(LV_OT_HTML): $(final_LV_OT_USFM) convert_OET-LV_to_simple_HTML.py
-	@echo "\n\nConvert OT LV USFM files to simple HTML…\n"
-	@python convert_OET-LV_to_simple_HTML.py
-
-$(LV_NT_HTML): $(final_LV_NT_USFM) convert_OET-LV_to_simple_HTML.py
-	@echo "\n\nConvert NT LV USFM files to simple HTML…\n"
-	@python convert_OET-LV_to_simple_HTML.py
+$(LV_HTML): $(final_LV_OT_USFM)  $(final_LV_NT_USFM) convert_OET-LV_to_simple_HTML.py
+	@echo "\n\nConvert LV USFM files to simple HTML…\n"
+	@$(Python) convert_OET-LV_to_simple_HTML.py
 
 $(final_LV_OT_USFM): $(intermediate_LV_OT_USFM) $(SBE) $(wildcard ScriptedOTUpdates/*) $(BTranslit) $(Hebrew)
 	@echo "\n\nRun ScriptedBibleEditor on OT USFM files…\n"
-	@python ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py ScriptedOTUpdates -qe
+	@$(Python) $(SBE) ScriptedOTUpdates -qe
 
 $(final_LV_NT_USFM): $(intermediate_LV_NT_USFM) $(SBE) $(wildcard ScriptedVLTUpdates/*) $(BTranslit) $(Greek) $(Hebrew)
 	@echo "\n\nRun ScriptedBibleEditor on NT USFM files…\n"
-	@python ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py ScriptedVLTUpdates -qe
+	@$(Python) $(SBE) ScriptedVLTUpdates -qe
 
 $(intermediate_LV_OT_USFM): $(all_OT_TSV_table) extract_OSHB_OT_to_USFM.py
 	@echo "\n\nExtract OT from TSV table to USFM files…\n"
-	@python extract_OSHB_OT_to_USFM.py
+	@$(Python) extract_OSHB_OT_to_USFM.py -e
 
 $(all_OT_TSV_table): $(WLC_OT_TSV_table) $(Clear_Bible_OT_lowfat_TSV) apply_Clear_Macula_OT_glosses.py
 	@echo "\n\nApply glosses from Macula to OT (and reorder)…\n"
-	@python apply_Clear_Macula_OT_glosses.py
+	@$(Python) apply_Clear_Macula_OT_glosses.py
 
 $(WLC_OT_TSV_table): $(short_OSHB_TSV) prepare_OSHB_for_glossing.py WLCHebrewGlosses.txt
 	@echo "\n\nExpand columns in OT TSV and add our custom glosses…\n"
-	@python prepare_OSHB_for_glossing.py
+	@$(Python) prepare_OSHB_for_glossing.py
 
 $(Clear_Bible_OT_lowfat_TSV): $(wildcard ../../Forked/macula-hebrew/lowfat/*.xml) $(WLC_OT_TSV_table) convert_ClearMaculaOT_to_TSV.py
 	@echo "\n\nConvert Macula Hebrew from XML files to TSV…\n"
-	@python convert_ClearMaculaOT_to_TSV.py
+	@$(Python) convert_ClearMaculaOT_to_TSV.py
 
 $(Clear_Bible_NT_lowfat_TSV): $(wildcard ../../Forked/macula-greek/Nestle1904/lowfat/*.xml) $(BibleTags_NT_TSV_table) convert_ClearMaculaNT_to_TSV.py
 	@echo "\n\nConvert Macula Greek from XML files to TSV…\n"
-	@python convert_ClearMaculaNT_to_TSV.py
+	@$(Python) convert_ClearMaculaNT_to_TSV.py
 
 $(short_OSHB_TSV): $(wildcard ../../Forked/OS-morphhb/wlc/*.xml) convert_OSHB_XML_to_TSV.py
 	@echo "\n\nConvert OSHB XML files to TSV…\n"
-	@python convert_OSHB_XML_to_TSV.py
+	@$(Python) convert_OSHB_XML_to_TSV.py
 
 $(BibleTags_TSV): $(wildcard ../../Forked/bibletags-usfm/usfm/uhb/*.usfm) $(wildcard ../../Forked/bibletags-usfm/usfm/ugnt/*.usfm) convert_BibTags_USFM_to_TSV.py
 	@echo "\n\nConvert BibleTags USFM files to TSV…\n"
-	@python convert_BibTags_USFM_to_TSV.py
+	@$(Python) convert_BibTags_USFM_to_TSV.py
 
 $(intermediate_LV_NT_USFM): ../../CNTR-GNT/sourceExports/book.csv ../../CNTR-GNT/sourceExports/collation.updated.csv extract_VLT_NT_to_USFM.py
 	@echo "\n\nExtract NT from TSV table to USFM files…\n"
-	@python extract_VLT_NT_to_USFM.py
+	@$(Python) extract_VLT_NT_to_USFM.py -e
 
 #=== RV stuff =======================
 
 $(RV_HTML): $(RV_ESFM) convert_OET-RV_to_simple_HTML.py
 	@echo "\n\nConvert OT RV USFM files to simple HTML…\n"
-	@python convert_OET-RV_to_simple_HTML.py
+	@$(Python) convert_OET-RV_to_simple_HTML.py
 
 #=== Side-by-side stuff =======================
 
 SideBySide: $(LV_HTML) $(RV_HTML) pack_HTML_side-by-side.py
 	@echo "\n\nPack LV and RV HTML files side-by-side…\n"
-	@python pack_HTML_side-by-side.py
+	@$(Python) pack_HTML_side-by-side.py
 
 
 #=== Clean up stuff =======================

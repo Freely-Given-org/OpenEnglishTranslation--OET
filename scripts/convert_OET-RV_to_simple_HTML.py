@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-11-01' # by RJH
+LAST_MODIFIED_DATE = '2022-11-03' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.10'
+PROGRAM_VERSION = '0.30'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -66,6 +66,7 @@ assert OET_HTML_OutputFolderPath.is_dir()
 
 EN_SPACE, EM_SPACE = ' ', ' '
 NARROW_NON_BREAK_SPACE = ' '
+BACKSLASH = '\\'
 OT_BBB_LIST = ('GEN','EXO','LEV','NUM','DEU','JOS','JDG','RUT','SA1','SA2','KI1','KI2','CH1','CH2',
                 'EZR','NEH','EST','JOB','PSA','PRO','ECC','SNG','ISA','JER','LAM','EZE',
                 'DAN','HOS','JOL','AMO','OBA','JNA','MIC','NAH','HAB','ZEP','HAG','ZEC','MAL')
@@ -100,7 +101,11 @@ span.upLink { font-size:1.5em; font-weight:bold; }
 span.C { font-size:1.1em; color:green; }
 span.V { vertical-align:super; font-size:0.5em; color:red; }
 span.added { color:grey; }
+span.bk { font-style:italic; }
+span.ior { font-style:italic; }
+span.xref { vertical-align: super; font-size:0.7em; color:blue; }
 p.rem { font-size:0.8em; color:grey; }
+p.shortPrayer { text-align:center; }
 p.mt1 { font-size:1.8em; }
 p.mt2 { font-size:1.3em; }
 div.rightBox { float:right;
@@ -206,6 +211,10 @@ INDEX_INTRO_HTML = '''<!DOCTYPE html>
             explains the point that the author appears to be trying to express.
         On the other hand, the <em>Literal Version</em> retains the original figurative language
             (even if it’s not a figure of speech that we are familiar with).</li>
+    <li><i>Up</i> and <i>down</i> in the original languages (and thus in the <em>Literal Version</em>)
+            refer to <i>uphill</i> and <i>downhill</i>.
+        However, in this <em>Readers’ Version</em>, <i>up</i> and <i>down</i> are used to refer
+            to <i>north</i> and <i>south</i> respectively as per our modern norm.</li>
     <li>This <em>Readers’ Version</em> is less formal than most modern English Bible translations,
             for example, we would use contracted words like <i>we’ll</i> and <i>didn’t</i>,
             especially when it’s in direct speech.
@@ -617,9 +626,9 @@ while at the same time being able to check for yourself if that’s a fair trans
 of what the original authors had inked onto their ancient manuscripts.</p>
 '''
 
-INTRO_PRAYER_HTML = '''<p style="text-align:center">It is our prayer that this <em>Readers’ Version</em> of the
+INTRO_PRAYER_HTML = '''<p class="shortPrayer">It is our prayer that this <em>Readers’ Version</em> of the
 <em>Open English Translation</em> of the Bible will give you clear understanding of
-the messages written by the inspired Biblical writers.</p>
+the messages written by the inspired Biblical writers.</p><!--shortPrayer-->
 '''
 
 START_HTML = '''<!DOCTYPE html>
@@ -662,6 +671,8 @@ def produce_HTML_files() -> None:
             source_filename = f'OET-RV_{BBB}.ESFM'
             with open( OET_USFM_InputFolderPath.joinpath(source_filename), 'rt', encoding='utf-8' ) as usfm_input_file:
                 usfm_text = usfm_input_file.read()
+            assert "'" not in usfm_text, f'''Why do we have single quote in {source_filename}: {usfm_text[usfm_text.index("'")-20:usfm_text.index("'")+22]}'''
+            assert '"' not in usfm_text, f'''Why do we have double quote in {source_filename}: {usfm_text[usfm_text.index('"')-20:usfm_text.index('"')+22]}'''
 
             book_start_html, book_html, book_end_html = convert_USFM_to_simple_HTML( BBB, usfm_text )
 
@@ -745,28 +756,29 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
 
     C = V = '0'
     book_html = ''
-    done_intro = False
+    done_disclaimer = False
     inParagraph = None
-    inRightDiv = False
+    inIntroduction = inRightDiv = inTable = False
     for usfm_line in usfm_text.split( '\n' ):
         if not usfm_line: continue # Ignore blank lines
         assert usfm_line.startswith( '\\' )
         usfm_line = usfm_line[1:] # Remove the leading backslash
         try: marker, rest = usfm_line.split( ' ', 1 )
         except ValueError: marker, rest = usfm_line, ''
-        # print( f"{marker=} {rest=}")
+        dPrint( 'Never', DEBUGGING_THIS_MODULE, f"{BBB} {marker}='{rest}'" )
         if marker in ('id','usfm','ide','h','toc2','toc3'):
             continue # We don't need to map those markers to HTML
         if marker in ('rem',):
             book_html = f'{book_html}<p class="{marker}">{rest}</p>\n'
         elif marker in ('mt1','mt2'):
-            if not done_intro: # Add an extra explanatory paragraph at the top
+            if not done_disclaimer: # Add an extra explanatory paragraph at the top
                 book_html = f'{book_html}{DISCLAIMER_HTML}{RV_BOOK_INTRO_HTML1}'
-                done_intro = True
+                done_disclaimer = True
             book_html = f'{book_html}<p class="{marker}">{rest}</p>\n'
         elif marker == 'toc1':
             start_html = START_HTML.replace( '__TITLE__', rest )
         elif marker == 'c':
+            assert not inIntroduction
             V = '0'
             C = rest
             if C:
@@ -781,51 +793,129 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
             except ValueError: V, rest = rest, ''
             assert V.isdigit(), f"Expected a verse number digit with '{V=}' '{rest=}'"
             if inRightDiv:
-                book_html = f'{book_html}</div>\n'
+                book_html = f'{book_html}</div><!--rightBox-->\n'
                 inRightDiv = False
             # We don't display the verse number for verse 1 (after chapter number)
             book_html = f'{book_html}{"" if book_html.endswith(">") else " "}' \
                         f'{f"""<span id="C{C}"></span><span class="C" id="C{C}V1">{C}</span>""" if V=="1" else f"""<span class="V" id="C{C}V{V}">{V}</span>"""}' \
                         f'{NARROW_NON_BREAK_SPACE}{rest}'
-        elif marker == 's1':
+        elif marker in ('s1','s2','s3'):
             if inParagraph:
+                assert not inTable
                 book_html = f'{book_html}</{inParagraph}>\n'
                 inParagraph = None
+            elif inTable:
+                book_html = f'{book_html}</table>\n'
+                inTable = False
             assert not inRightDiv
             book_html = f'{book_html}<div class="rightBox"><p class="{marker}">{rest}</p>\n'
             inRightDiv = True
         elif marker == 'r':
             assert rest[0]=='(' and rest[-1]==')'
             assert inRightDiv
+            assert not inTable
             if inParagraph:
                 book_html = f'{book_html}</{inParagraph}>\n'
                 inParagraph = None
-            book_html = f'{book_html}<p class="{marker}">{rest}</p></div>\n'
+            book_html = f'{book_html}<p class="{marker}">{rest}</p></div><!--rightBox-->\n'
             inRightDiv = False
-        elif marker in ('p','q1','q2','m'):
+        elif marker in ('p','q1','q2','m','mi','nb','pi1'):
             if inParagraph:
                 assert not inRightDiv
+                assert not inTable
                 book_html = f'{book_html}</{inParagraph}>\n'
             elif inRightDiv:
-                book_html = f'{book_html}</div>\n'
+                assert not inTable
+                book_html = f'{book_html}</div><!--rightBox-->\n'
                 inRightDiv = False
+            elif inTable:
+                book_html = f'{book_html}</table>\n'
+                inTable = False
             book_html = f'{book_html}<p class="{marker}">{rest}\n'
             inParagraph = 'p'
-        else:
+        elif marker in ('is1','ip','im','iot','io1','io2'):
+            assert C == '0'
+            assert rest
+            if not inIntroduction: # yet
+                book_html = f'{book_html}<div class="bookIntro">'
+                inIntroduction = True
+            book_html = f'{book_html}<p class="{marker}">{rest}</p>\n'
+        elif marker in ('d','sp', 'ms1','mr','sr'):
+            assert not inTable
+            if inRightDiv:
+                assert not inParagraph
+                book_html = f'{book_html}</div><!--rightBox-->\n'
+                inRightDiv = False
+            elif inParagraph:
+                book_html = f'{book_html}</{inParagraph}>\n'
+                inParagraph = None
+            assert rest
+            book_html = f'{book_html}<p class="{marker}">{rest}</p>\n'
+        elif marker in ('li1','li2'): # Needs more work here.....................................
+            assert not inRightDiv
+            if inParagraph:
+                book_html = f'{book_html}</{inParagraph}>\n'
+                inParagraph = None
+            if not inTable:
+                book_html = f'{book_html}<table>'
+                inTable = True
+            if rest.strip():
+                book_html = f'{book_html}<tr>{rest}</tr>\n'
+        elif marker in ('b'):
+            assert not inRightDiv
+            if inTable:
+                book_html = f'{book_html}</table>\n'
+                inTable = False
+            assert not rest
+            book_html = f'{book_html}<br>\n'
+        elif marker == 'ie':
+            assert inIntroduction
+            book_html = f'{book_html}</div><!--bookIntro-->\n'
+            inIntroduction = False
+        elif marker not in ('ie','cl'):
+            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Found unexpected {marker} marker in {BBB}" )
             book_html = f'{book_html}<p>GOT UNEXPECTED{marker}={rest}</p>'
     assert not inRightDiv
     if inParagraph:
         book_html = f'{book_html}</{inParagraph}>\n'
-    book_html = f'{book_html}</div>'
+    book_html = f'{book_html}</div><!--BibleText-->'
+
+    # Now handle all cross-references in one go (we don't check for matching \xo fields)
+    startIx = 0
+    while True:
+        xIx = book_html.find( '\\x ', startIx )
+        if xIx == -1: break # all done
+        xtIx = book_html.find( '\\xt ', startIx+3 )
+        assert xtIx != -1
+        xEndIx = book_html.find( '\\x*', xtIx+3 )
+        assert xEndIx != -1
+        xrefMiddle = book_html[xtIx+4:xEndIx].replace('\\xo ','').replace('\\xt ','') # Fix things like "Gen 25:9-10; \xo b \xt Gen 35:29."
+        xref = f'<span class="xref" title="See also {xrefMiddle}">[ref]</span>' # was †
+        # print( f"{BBB} {xref}" )
+        book_html = f'{book_html[:xIx]}{xref}{book_html[xEndIx+3:]}'
+        startIx = xEndIx + 3
+    assert '\\x' not in book_html, f"{book_html[book_html.index(f'{BACKSLASH}x')-10:book_html.index(f'{BACKSLASH}x')+12]}"
 
     chapter_links = [f'<a href="#C{chapter_num}">C{chapter_num}</a>' for chapter_num in range( 1, int(C)+1 )]
-    chapter_html = f'<p>{EM_SPACE.join(chapter_links)}</p>'
+    chapter_html = f'<p class="chapterLinks">{EM_SPACE.join(chapter_links)}</p><!--chapterLinks-->'
     book_start_html = f'{start_html}{links_html}\n{chapter_html}'
 
+    # Add character formatting
+    book_html = book_html.replace( '\\bk ', '<span class="bk">' ) \
+                         .replace( '\\bk*', '</span>' )
     book_html = book_html.replace( '\\em ', '<em>' ) \
                          .replace( '\\em*', '</em>' )
+    book_html = book_html.replace( '\\it ', '<i>' ) \
+                         .replace( '\\it*', '</i>' )
     book_html = book_html.replace( '\\add ', '<span class="added">' ) \
                          .replace( '\\add*', '</span>' )
+    book_html = book_html.replace( '\\ior ', '<span class="ior">' ) \
+                         .replace( '\\ior*', '</span>' )
+    # But just remove footnotes for now ........................... temp xxxxxxxxxxxxxxxxxxxxxx
+    footnoteRegex = '\\\\f (.+?)\\\\f\\*'
+    book_html = re.sub( footnoteRegex, '', book_html)
+    assert '\\' not in book_html, f"{book_html[book_html.index(f'{BACKSLASH}')-20:book_html.index(f'{BACKSLASH}')+22]}"
+                        
     return ( book_start_html,
              book_html,
              f'{chapter_html}\n{links_html}\n{END_HTML}' )

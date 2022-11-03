@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-11-01' # by RJH
+LAST_MODIFIED_DATE = '2022-11-02' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV USFM to simple HTML"
-PROGRAM_VERSION = '0.33'
+PROGRAM_VERSION = '0.34'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -114,8 +114,10 @@ span.dom { color:Gainsboro; }
 span.schwa { font-size:0.75em; }
 span.nominaSacra { font-weight:bold; }
 p.rem { font-size:0.8em; color:grey; }
+p.shortPrayer { text-align:center; }
 p.mt1 { font-size:1.8em; }
 p.mt2 { font-size:1.3em; }
+p.LVsentence { margin-top:0.2em; margin-bottom:0.2em; }
 '''
 
 INDEX_INTRO_HTML = '''<!DOCTYPE html>
@@ -614,9 +616,9 @@ You can also compare your other favourite Bible translations with this <em>Liter
 to get more insight into how they also interpreted the original texts in crafting their translation.)</p>
 '''
 
-INTRO_PRAYER_HTML = '''<p style="text-align:center">It is our prayer that this <em>Literal Version</em> of the
+INTRO_PRAYER_HTML = '''<p class="shortPrayer">It is our prayer that this <em>Literal Version</em> of the
 <em>Open English Translation</em> of the Bible will give you fresh insight into
-the words of the inspired Biblical writers.</p>
+the words of the inspired Biblical writers.</p><!--shortPrayer-->
 '''
 
 START_HTML = '''<!DOCTYPE html>
@@ -660,6 +662,8 @@ def produce_HTML_files() -> None:
             sourceFolderpath = OET_NT_USFM_InputFolderPath if bookType=='NT' else OET_OT_USFM_InputFolderPath
             with open( sourceFolderpath.joinpath(source_filename), 'rt', encoding='utf-8' ) as usfm_input_file:
                 usfm_text = usfm_input_file.read()
+            assert "'" not in usfm_text, f'''Why do we have single quote in {source_filename}: {usfm_text[usfm_text.index("'")-20:usfm_text.index("'")+22]}'''
+            assert '"' not in usfm_text, f'''Why do we have double quote in {source_filename}: {usfm_text[usfm_text.index('"')-20:usfm_text.index('"')+22]}'''
 
             book_start_html, book_html, book_end_html = convert_USFM_to_simple_HTML( BBB, usfm_text )
 
@@ -770,7 +774,7 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
             if C == '1': # Add an inspirational note
                 book_html = f'{book_html}{INTRO_PRAYER_HTML}<div class="BibleText">\n'
             # Note: as well as CV id's, we make sure there are simple C id's there as well
-            start_c_bit = '<p class="BText" id="C1">' if C=='1' else f'<a class="upLink" href="#" id="C{C}">↑</a> '
+            start_c_bit = '<p class="LVsentence" id="C1">' if C=='1' else f'<a class="upLink" href="#" id="C{C}">↑</a> '
             book_html = f'{book_html}{start_c_bit}<span class="C" id="C{C}V1">{C}</span>{EN_SPACE}'
         elif marker == 'v':
             try: V, rest = rest.split( ' ', 1 )
@@ -778,17 +782,17 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
             assert V.isdigit(), f"Expected a verse number digit with '{V=}' '{rest=}'"
             # Put sentences on new lines
             rest = rest.replace( '?)', 'COMBO' ) \
-                        .replace( '.', '.<br>\n' ) \
-                        .replace( '?', '?<br>\n' ) \
+                        .replace( '.', '.</p>\n<p class="LVsentence">' ) \
+                        .replace( '?', '?</p>\n<p class="LVsentence">' ) \
                         .replace( 'COMBO', '?)' )
             # We don't display the verse number for verse 1 (after chapter number)
             book_html = f'{book_html}{"" if book_html.endswith(">") else " "}{"" if V=="1" else f"""<span class="V" id="C{C}V{V}">{V}</span>{NARROW_NON_BREAK_SPACE}"""}{rest}'
         else:
             book_html = f'{book_html}<p>GOT UNEXPECTED{marker}={rest}</p>'
-    book_html = f"{book_html.rstrip().removesuffix('<br>').rstrip()}</p></div>"
+    book_html = f"{book_html}</p></div><!--BibleText-->"
 
     chapter_links = [f'<a href="#C{chapter_num}">C{chapter_num}</a>' for chapter_num in range( 1, int(C)+1 )]
-    chapter_html = f'<p>{EM_SPACE.join(chapter_links)}</p>'
+    chapter_html = f'<p class="chapterLinks">{EM_SPACE.join(chapter_links)}</p><!--chapterLinks-->'
     book_start_html = f'{start_html}{links_html}\n{chapter_html}'
 
     book_html = book_html.replace( '\\nd ', '<span class="nominaSacra">' ) \

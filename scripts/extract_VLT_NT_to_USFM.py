@@ -40,15 +40,16 @@ from pathlib import Path
 from csv import DictReader
 from collections import defaultdict
 from datetime import datetime
+import logging
 
 import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-10-31' # by RJH
+LAST_MODIFIED_DATE = '2022-11-03' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_USFM"
 PROGRAM_NAME = "Extract VLT NT USFM files from TSV"
-PROGRAM_VERSION = '0.58'
+PROGRAM_VERSION = '0.59'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -217,12 +218,17 @@ def loadSourceCollationTable() -> bool:
 def write_book(book_number:int, book_usfm: str) -> bool:
     """
     """
+    usfm_filepath = VLT_USFM_OUTPUT_FOLDERPATH.joinpath( f'{BOS_BOOK_ID_MAP[book_number]}_gloss.usfm' )
     book_usfm = book_usfm.replace('¶', '¶ ') # Looks nicer maybe
     # Fix any punctuation problems
     book_usfm = book_usfm.replace(',,',',').replace('..','.').replace(';;',';') \
                 .replace(',.','.').replace('.”.”','.”').replace('?”?”','?”')
+    if "another's" in book_usfm or "Lord's" in book_usfm:
+        logging.error( f'''Fixing "another's" in {usfm_filepath}''' )
+    book_usfm = book_usfm.replace("another's", 'another’s').replace("Lord's", 'Lord’s') # Where do these come from?
     assert '  ' not in book_usfm
-    usfm_filepath = VLT_USFM_OUTPUT_FOLDERPATH.joinpath( f'{BOS_BOOK_ID_MAP[book_number]}_gloss.usfm' )
+    assert "'" not in book_usfm, f'''Why do we have single quote in {usfm_filepath}: {book_usfm[book_usfm.index("'")-20:book_usfm.index("'")+22]}'''
+    assert '"' not in book_usfm, f'''Why do we have double quote in {usfm_filepath}: {book_usfm[book_usfm.index('"')-20:book_usfm.index('"')+22]}'''
     with open(usfm_filepath, 'wt', encoding='utf-8') as output_file:
         output_file.write(f"{book_usfm}\n")
     return True

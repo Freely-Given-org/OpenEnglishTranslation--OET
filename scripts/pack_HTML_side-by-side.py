@@ -48,13 +48,13 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-11-01' # by RJH
+LAST_MODIFIED_DATE = '2022-11-03' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.01'
+PROGRAM_VERSION = '0.11'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
-DEBUGGING_THIS_MODULE = 99
+DEBUGGING_THIS_MODULE = False
 
 
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module
@@ -73,7 +73,7 @@ OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'derivedTexts/simpleHTM
 assert OET_HTML_OutputFolderPath.is_dir()
 
 EN_SPACE, EM_SPACE = ' ', ' '
-NARROW_NON_BREAK_SPACE = ' '
+# NARROW_NON_BREAK_SPACE = ' '
 OT_BBB_LIST = ('GEN','EXO','LEV','NUM','DEU','JOS','JDG','RUT','SA1','SA2','KI1','KI2','CH1','CH2',
                 'EZR','NEH','EST','JOB','PSA','PRO','ECC','SNG','ISA','JER','LAM','EZE',
                 'DAN','HOS','JOL','AMO','OBA','JNA','MIC','NAH','HAB','ZEP','HAG','ZEC','MAL')
@@ -83,8 +83,8 @@ NT_BBB_LIST = ('JHN','MAT','MRK','LUK','ACT','ROM','CO1','CO2','GAL','EPH','PHP'
 assert len(NT_BBB_LIST) == 27
 BBB_LIST = OT_BBB_LIST + NT_BBB_LIST
 assert len(BBB_LIST) == 66
-TORAH_BOOKS_CODES = ('GEN','EXO','LEV','NUM','DEU')
-assert len(TORAH_BOOKS_CODES) == 5
+# TORAH_BOOKS_CODES = ('GEN','EXO','LEV','NUM','DEU')
+# assert len(TORAH_BOOKS_CODES) == 5
 
 
 def main():
@@ -103,7 +103,7 @@ def main():
 
 
 # If you change any colours, etc., also need to adjust the Key above
-CSS_TEXT = '''div.container { display:grid; column-gap:0.6em; grid-template-columns:1fr 1fr; }
+CSS_TEXT = '''div.container { display:grid; column-gap:0.6em; grid-template-columns:0.8fr 1.2fr; }
 div.BibleText { }
 span.upLink { font-size:1.5em; font-weight:bold; }
 span.C { font-size:1.1em; color:green; }
@@ -118,12 +118,17 @@ span.ul { color:darkGrey; }
 span.dom { color:Gainsboro; }
 span.schwa { font-size:0.75em; }
 span.nominaSacra { font-weight:bold; }
+span.bk { font-style:italic; }
+span.ior { font-style:italic; }
+span.xref { vertical-align: super; font-size:0.7em; color:blue; }
 p.rem { font-size:0.8em; color:grey; }
+p.shortPrayer { text-align:center; }
 p.mt1 { font-size:1.8em; }
 p.mt2 { font-size:1.3em; }
 div.rightBox { float:right; width:35%; border:3px solid #73AD21; padding:10px; }
 p.s1 { margin-top:0.1em; margin-bottom:0; font-weight:bold; }
 p.r { margin-top:0; margin-bottom:0; font-size:0.75em; }
+p.LVsentence {  margin-top:0.2em; margin-bottom:0.2em; }
 p.p {  margin-top:0.2em; margin-bottom:0.2em; }
 p.q1 { text-indent:2em; margin-top:0.2em; margin-bottom:0.2em; }
 p.q2 { text-indent:4em; margin-top:0.2em; margin-bottom:0.2em; }
@@ -222,6 +227,10 @@ INDEX_INTRO_HTML = '''<!DOCTYPE html>
             explains the point that the author appears to be trying to express.
         On the other hand, the <em>Literal Version</em> retains the original figurative language
             (even if it’s not a figure of speech that we are familiar with).</li>
+    <li><i>Up</i> and <i>down</i> in the original languages (and thus in the <em>Literal Version</em>)
+            refer to <i>uphill</i> and <i>downhill</i>.
+        However, in this <em>Readers’ Version</em>, <i>up</i> and <i>down</i> are used to refer
+            to <i>north</i> and <i>south</i> respectively as per our modern norm.</li>
     <li>The <em>Readers’ Version</em> is less formal than most modern English Bible translations,
             for example, we would use contracted words like <i>we’ll</i> and <i>didn’t</i>,
             especially when it’s in direct speech.
@@ -633,9 +642,9 @@ By comparing the left and right columns, you should be able to easily get the me
 while at the same time keeping an eye on what it was actually translated from.</p>
 '''
 
-INTRO_PRAYER_HTML = '''<p style="text-align:center">It is our prayer that the
+INTRO_PRAYER_HTML = '''<p class="shortPrayer">It is our prayer that the
 <em>Open English Translation</em> of the Bible will give you clear understanding of
-the messages written by the inspired Biblical writers.</p>
+the messages written by the inspired Biblical writers.</p><!--shortPrayer-->
 '''
 
 START_HTML = '''<!DOCTYPE html>
@@ -739,6 +748,7 @@ def pack_HTML_files() -> None:
 def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str ) -> Tuple[str, str, str]:
     """
     We use the RV USFM to find the book name, etc.
+        Also we use the intro from the RV HTML.
     """
     fnPrint( DEBUGGING_THIS_MODULE, f"extract_and_combine_simple_HTML( {BBB}, ({len(rvUSFM):,}), ({len(rvHTML):,}), ({len(lvHTML):,}) )" )
 
@@ -775,7 +785,7 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
         usfm_line = usfm_line[1:] # Remove the leading backslash
         try: marker, rest = usfm_line.split( ' ', 1 )
         except ValueError: marker, rest = usfm_line, ''
-        # print( f"{marker=} {rest=}")
+        # dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{marker=} {rest=}")
         if marker in ('id','usfm','ide','h','toc2','toc3'):
             continue # We don't need to map those markers to HTML
         if marker in ('rem',):
@@ -797,13 +807,20 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
             if C == '1': # Add an inspirational note
                 book_html = f'{book_html}{INTRO_PRAYER_HTML}\n'
 
-    # Get the guts of the chapter/verse HTML x2
+    # Get the intro of the RV chapter/verse HTML and append it
+    ourRVStartMarkerIndex = rvHTML.index( '<div class="bookIntro">' )
+    ourRVEndMarkerIndex = rvHTML.rindex( '</div><!--bookIntro-->' )
+    rvIntroHHTML = rvHTML[ourRVStartMarkerIndex:ourRVEndMarkerIndex+22]
+    book_html = f'{book_html}{rvIntroHHTML}\n'
+
+    # Get the guts of the RV chapter/verse HTML
     ourRVStartMarkerIndex = rvHTML.index( '<div class="BibleText">' )
-    ourRVEndMarkerIndex = rvHTML.rindex( '<p><a href="#C1">C1</a>' ) # This follows </div>
+    ourRVEndMarkerIndex = rvHTML.rindex( '<p class="chapterLinks"><a href="#C1">C1</a>' ) # This follows </div>
     rvMidHHTML = rvHTML[ourRVStartMarkerIndex:ourRVEndMarkerIndex]
 
+    # Get the guts of the LV chapter/verse HTML
     ourLVStartMarkerIndex = lvHTML.index( '<div class="BibleText">' )
-    ourLVEndMarkerIndex = lvHTML.rindex( '<p><a href="#C1">C1</a>' ) # This follows </div>
+    ourLVEndMarkerIndex = lvHTML.rindex( '<p class="chapterLinks"><a href="#C1">C1</a>' ) # This follows </div>
     lvMidHHTML = lvHTML[ourLVStartMarkerIndex:ourLVEndMarkerIndex]
 
     # Now break the RV up by section
@@ -817,58 +834,143 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
             CclassIndex8 = rvSectionHTML.rindex( 'id="C' )
             CclassIndex9 = rvSectionHTML.index( '"', CclassIndex8+4 )
             endCV = rvSectionHTML[CclassIndex8+4:CclassIndex9]
-            print( f"\n  {BBB} {n:,}: {startCV=} {endCV=}")
+            # dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"\n  {BBB} {n:,}: {startCV=} {endCV=}")
         except ValueError:
-            print( f"  {n:,}: No Cid in {rvSectionHTML=}" )
+            # dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n:,}: No Cid in {rvSectionHTML=}" )
             startCV, endCV = '', 'C1'
+        if n == 0:
+            rvSectionHTML = rvSectionHTML.replace( '<div class="BibleText">', '' )
+        # else: # actually only for the last one
+        rvSectionHTML = rvSectionHTML.replace( '</div><!--BibleText-->', '' )
+        if '</div><!--rightBox-->' in rvSectionHTML:
+            rvSectionHTML = f'<div class="rightBox">{rvSectionHTML}'
+        assert rvSectionHTML.count('<div ')+rvSectionHTML.count('<div>') == rvSectionHTML.count('</div'), f"{BBB} {n} RV {startCV} {endCV} {rvSectionHTML.count('<div ')}+{rvSectionHTML.count('<div>')}={rvSectionHTML.count('<div ')+rvSectionHTML.count('<div>')} != {rvSectionHTML.count('</div')} '{rvSectionHTML}'"
+        assert rvSectionHTML.count('<p ')+rvSectionHTML.count('<p>') == rvSectionHTML.count('</p'), f"{BBB} {n} RV {startCV} {endCV} {rvSectionHTML.count('<p ')}+{rvSectionHTML.count('<p>')}={rvSectionHTML.count('<p ')+rvSectionHTML.count('<p>')} != {rvSectionHTML.count('</p')} '{rvSectionHTML}'"
         rvHTMLExpandedSections.append( (startCV, endCV, rvSectionHTML) )
 
     # Now we need to break the LV into the same number of sections
     lvHTMLSections = []
     lastLVindex = 0
+    hadVersificationErrors = False
     for n, (startCV, endCV, rvSectionHTML) in enumerate( rvHTMLExpandedSections ):
         nextStartCV = rvHTMLExpandedSections[n+1][0] if n < len(rvHTMLExpandedSections)-1 else 'DONE'
-        print( f"\n{BBB} {n}: {lastLVindex=} lvSectionHTML start='{lvMidHHTML[lastLVindex:lastLVindex+2000]}'\n" )
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"\n{BBB} {n}/{len(rvHTMLExpandedSections)}: {startCV=} {endCV=} {nextStartCV=} {lastLVindex=} lvSectionHTML='{lvMidHHTML[lastLVindex:lastLVindex+60]}...'" )
         lvSectionHTML = lvMidHHTML[lastLVindex:]
         if not startCV:
-            assert n == 0
-            assert lastLVindex == 0
-            lastLVindex = lvSectionHTML.index( '<p class="BText" id="C1">' )
-            lvHTMLSections.append( lvMidHHTML[:lastLVindex] )
+            # assert n == 0 ??? No longer true now we have book introductions
+            # assert lastLVindex == 0 ??? No longer true now we have book introductions
+            LVindex1 = lvSectionHTML.index( '<p class="LVsentence" id="C1">' )
+            section = lvSectionHTML[:LVindex1]
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} '{lvSectionHTML[:LVindex1]}' then '{section[:60]}...{section[-30:]}'" )
+            if section == '<div class="BibleText">\n': section = ''
+            # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"A ({len(section):,}) '{section}'" ); halt
+            lastLVindex = LVindex1
         elif startCV == 'C1': # First CV section
-            LVindex1 = lvSectionHTML.index( f'<p class="BText" id="C1">' )
-            lvHTMLSections.append( lvMidHHTML[lastLVindex:LVindex1] )
+            LVindex1 = lvSectionHTML.index( f'<p class="LVsentence" id="C1">' )
+            if nextStartCV == 'DONE':
+                section = lvSectionHTML[LVindex1:]
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} remaining chars '{lvSectionHTML[:LVindex1]}' then '{lvSectionHTML[LVindex1:LVindex1+60]}...'" )
+                # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"B1 ({len(section):,}) '{section}'" ); halt
+            else:
+                LVindex9 = lvSectionHTML.index( f' id="{nextStartCV}"', LVindex1+24 )
+                # Find our way back to the start of the HTML marker
+                for x in range( 30 ):
+                    LVindex8 = LVindex9 - x
+                    if lvSectionHTML[LVindex8] == '<':
+                        break
+                else:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvSectionHTML[LVindex8-50:LVindex8+50]}")
+                    not_far_enough
+                section = lvSectionHTML[LVindex1:LVindex8].removesuffix( '\n<p class="LVsentence">' )
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} {LVindex8-LVindex1} chars '{lvSectionHTML[:LVindex1]}' then '{lvSectionHTML[LVindex1:LVindex1+60]}...'" )
+                # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"B2 ({len(section):,}) '{section}'" ); halt
             lastLVindex += LVindex1
-            # print( f"{n}: {startCV=} '{lvSectionHTML[:LVindex1]}' then '{lvSectionHTML[LVindex1:LVindex1+60]}...'" )
             # halt
-        elif n < len(rvHTMLExpandedSections)-1:
-            assert n > 1
-            LVindex1 = lvSectionHTML.index( f' id="{startCV}"' )
-            print( f"{BBB} {n}: {startCV=} '{lvSectionHTML[:LVindex1]}' then '{lvSectionHTML[LVindex1:LVindex1+60]}...'" )
-            halt
         else:
-            assert n == len(rvHTMLExpandedSections)-1
-            assert nextStartCV == 'DONE'
-            halt
+            assert n > 0
+            try: LVindex2 = lvSectionHTML.index( f' id="{startCV}"' )
+            except ValueError:
+                logging.critical( f"{BBB} Unable to find '{startCV}' in LV -- probable versification error" )
+                hadVersificationErrors = True
+                LVindex2 = lvSectionHTML.index( f' id="C' ) # Just find any suitable place -- we won't have the correct chunk
+            # Find our way back to the start of the HTML marker
+            for x in range( 30 ):
+                LVindex1 = LVindex2 - x
+                if lvSectionHTML[LVindex1] == '<':
+                    break
+            else: not_far_enough
+            if nextStartCV == 'DONE':
+                section = lvSectionHTML[LVindex1:]
+                assert section.startswith('<'), section[:10]
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} remaining chars '{lvSectionHTML[:LVindex1]}' then '{lvSectionHTML[LVindex1:LVindex1+60]}...'" )
+                # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"C1 ({len(section):,}) '{section}'" ); halt
+            else: # in the middle
+                try: LVindex9 = lvSectionHTML.index( f' id="{nextStartCV}"', LVindex2+6 )
+                except ValueError:
+                    logging.critical( f"{BBB} {startCV} Unable to find '{nextStartCV}' in LV -- probable versification error" )
+                    hadVersificationErrors = True
+                    LVindex9 = lvSectionHTML.index( f' id="C', LVindex2+8 ) # Just find any suitable place
+                # Find our way back to the start of the HTML marker
+                for x in range( 30 ):
+                    LVindex8 = LVindex9 - x
+                    if lvSectionHTML[LVindex8] == '<':
+                        break
+                else: not_far_enough
+                section = lvSectionHTML[LVindex1:LVindex8]
+                assert section.startswith('<'), section[:10]
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} {LVindex8=} {LVindex8-LVindex1} chars '{lvSectionHTML[LVindex1:LVindex1+40]}' then '{lvSectionHTML[LVindex8:LVindex8+60]}...'" )
+                # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"C2 ({len(section):,}) '{section}'" ); halt
+            lastLVindex += LVindex1
+            # halt
+        section = section.removesuffix( '\n' ).removesuffix( '</div><!--BibleText-->' ).removesuffix( '<p class="LVsentence">' ).removesuffix( '\n' )
+        if section.startswith( '<a class="upLink" ' ) or section.startswith( '<span class="V" ' ):
+            section = f'<p class="LVsentence">{section}'
+        assert section.count('<div ')+section.count('<div>') == section.count('</div'), f"{BBB} {n} LV {startCV} {endCV} {section.count('<div ')}+{section.count('<div>')}={section.count('<div ')+section.count('<div>')} != {section.count('</div')} '{section}'"
+# NEXT LINE TEMPORARILY DISABLED
+        if section.count('<p ')+section.count('<p>') != section.count('</p'):
+            logging.critical( f"{BBB} {n} LV {startCV} {endCV} has mismatching <p> openers: {section.count('<p ')}+{section.count('<p>')}={section.count('<p ')+section.count('<p>')} != {section.count('</p')}\n        '{section}'" )
+        # assert section.count('<p ')+section.count('<p>') == section.count('</p'), f"{BBB} {n} LV {startCV} {endCV} {section.count('<p ')}+{section.count('<p>')}={section.count('<p ')+section.count('<p>')} != {section.count('</p')} '{section}'"
+        lvHTMLSections.append( section )
 
-    print( f"  Got {len(rvHTMLExpandedSections)} RV section(s) and {len(lvHTMLSections)} LV section(s)")
+    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Got {len(rvHTMLExpandedSections)} RV section(s) and {len(lvHTMLSections)} LV section(s)")
     assert len(lvHTMLSections) == len(rvHTMLExpandedSections), f"{len(lvHTMLSections)} != {len(rvHTMLExpandedSections)}"
-    if lastLVindex < len(lvMidHHTML) - 1:
-        print( f"  Need to append last LV bit {len(lvMidHHTML)-lastLVindex} '{lvMidHHTML[lastLVindex:lastLVindex+40]}'")
-        lvHTMLSections[-1] = f'{lvHTMLSections[-1]}{lvMidHHTML[lastLVindex:]}'
-
-    # Now we need to remove the CV id (duplicate) fields from the LV
-    Cregex, CVregex = ' id="C\d{1,3}"', ' id="C\d{1,3}V\d{1,3}"'
-    lvMidHHTML = re.sub( CVregex, '', lvMidHHTML)
-    lvMidHHTML = re.sub( Cregex, '', lvMidHHTML)
+    # if lastLVindex < len(lvMidHHTML) - 1:
+    #     newSection = lvMidHHTML[lastLVindex:]
+    #     dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\n  Need to append last LV bit {len(lvMidHHTML)-lastLVindex:,} chars '{lvMidHHTML[lastLVindex:lastLVindex+40]}'")
+    #     lvHTMLSections[-1] = f'{lvHTMLSections[-1]}{newSection}'
+    #     # halt
 
     book_html = f'{book_html}<div class="container">\n' \
-                f'<div><h2>Readers’ Version</h2>{rvMidHHTML}</div>\n' \
-                f'<div><h2>Literal Version</h2>{lvMidHHTML}</div>\n' \
-                '</div>'
+                f'<h2>Readers’ Version</h2>\n' \
+                f'<h2>Literal Version</h2>\n'
+
+    # Now add each segment to the HTML
+    q = 0
+    for (_startCV,_endCV,rv),lv in zip( rvHTMLExpandedSections, lvHTMLSections, strict=True ):
+        if DEBUGGING_THIS_MODULE and BBB == 'MRK':
+            nextStartCV = rvHTMLExpandedSections[q+1][0] if q < len(rvHTMLExpandedSections)-1 else 'DONE'
+            with open( OET_HTML_OutputFolderPath.joinpath(f'{BBB}-RV-{q}.html'), 'wt', encoding='utf-8' ) as html_output_file:
+                html_output_file.write( f'<!DOCTYPE html><html lang="en-US"><head><title>RV {BBB} {q}</title></head><body>\n' \
+                                        f'<p>{_startCV} to {_endCV} (next {nextStartCV})</p>\n{rv}</body></html>' )
+            with open( OET_HTML_OutputFolderPath.joinpath(f'{BBB}-LV-{q}.html'), 'wt', encoding='utf-8' ) as html_output_file:
+                html_output_file.write( f'<!DOCTYPE html><html lang="en-US"><head><title>LV {BBB} {q}</title></head><body>\n' \
+                                        f'<p>{_startCV} to {_endCV} (next {nextStartCV})</p>\n{lv}</body></html>' )
+        # Before we make the page, we need to remove the CV id (duplicate) fields from the LV
+        Cregex, CVregex = ' id="C\d{1,3}"', ' id="C\d{1,3}V\d{1,3}"'
+        lv = re.sub( CVregex, '', lv)
+        lv = re.sub( Cregex, '', lv)
+        if DEBUGGING_THIS_MODULE:
+            rv = f'{rv}<hr style="height:2px;border-width:0;color:gray;background-color:red">'
+            lv = f'{lv}<hr style="height:2px;border-width:0;color:gray;background-color:orange">'
+            book_html = f'{book_html}<div class="chunkRV"><p>{q}</p>{rv}</div><!--chunkRV-->\n<div class="chunkLV"><p>{q}</p>{lv}</div><!--chunkLV-->\n'
+            q += 1
+        else:
+            book_html = f'{book_html}<div class="chunkRV">{rv}</div><!--chunkRV-->\n<div class="chunkLV">{lv}</div><!--chunkLV-->\n'
+    book_html = f'{book_html}</div><!--container-->\n'
+        
 
     chapter_links = [f'<a href="#C{chapter_num}">C{chapter_num}</a>' for chapter_num in range( 1, int(C)+1 )]
-    chapter_html = f'<p>{EM_SPACE.join(chapter_links)}</p>'
+    chapter_html = f'<p class="chapterLinks">{EM_SPACE.join(chapter_links)}</p><!--chapterLinks-->'
     book_start_html = f'{start_html}{links_html}\n{chapter_html}'
 
     return ( book_start_html,

@@ -34,15 +34,16 @@ from pathlib import Path
 from csv import DictReader
 from collections import defaultdict
 from datetime import datetime
+import logging
 
 import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-10-18' # by RJH
+LAST_MODIFIED_DATE = '2022-11-03' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed-OSHB_OT_to_USFM"
 PROGRAM_NAME = "Extract glossed-OSHB OT USFM files"
-PROGRAM_VERSION = '0.41'
+PROGRAM_VERSION = '0.42'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -149,12 +150,16 @@ def export_usfm_literal_English_gloss() -> bool:
         # word_number = source_id.split('w')[1] if 'w' in source_id else '0'
         if BBB != last_BBB:  # we've started a new book
             if usfm_text:  # write out the book
+                usfm_filepath = OT_USFM_OUTPUT_FOLDERPATH.joinpath( f'{last_BBB}_gloss.usfm' )
                 usfm_text = usfm_text.replace('¶', '¶ ') # Looks nicer maybe
                 # Fix any punctuation problems
                 usfm_text = usfm_text.replace(',,',',').replace('..','.').replace(';;',';') \
                             .replace(',.','.').replace('.”.”','.”').replace('?”?”','?”')
+                if "Kasda'e" in usfm_text: logging.error( f'''Fixing "Kasda'e" in {usfm_filepath}''' )
+                usfm_text = usfm_text.replace("Kasda'e", 'Kasda’e') # Where does this come from ???
                 assert '  ' not in usfm_text
-                usfm_filepath = OT_USFM_OUTPUT_FOLDERPATH.joinpath( f'{last_BBB}_gloss.usfm' )
+                assert "'" not in usfm_text, f'''Why do we have single quote in {usfm_filepath}: {usfm_text[usfm_text.index("'")-20:usfm_text.index("'")+22]}'''
+                assert '"' not in usfm_text, f'''Why do we have double quote in {usfm_filepath}: {usfm_text[usfm_text.index('"')-20:usfm_text.index('"')+22]}'''
                 with open(usfm_filepath, 'wt', encoding='utf-8') as output_file:
                     output_file.write(f"{usfm_text}\n")
                 vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {len(usfm_text)+1:,} bytes to {last_BBB}_gloss.usfm" )
