@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-11-03' # by RJH
+LAST_MODIFIED_DATE = '2022-11-04' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.30'
+PROGRAM_VERSION = '0.31'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -120,7 +120,7 @@ p.m {  }
 '''
 
 
-INDEX_INTRO_HTML = '''<!DOCTYPE html>
+RV_INDEX_INTRO_HTML = '''<!DOCTYPE html>
 <html lang="en-US">
 <head>
   <title>OET Readers’ Version Development</title>
@@ -131,7 +131,8 @@ INDEX_INTRO_HTML = '''<!DOCTYPE html>
 </head>
 <body>
   <p><a href="../">Up</a></p>
-  <h1>Open English Translation Readers’ Version (OET-RV) Development</h1>
+  <h1>Now obsolete! See <a href="../SideBySide/">here</a> instead.</h1>
+  <!--<h1>Open English Translation Readers’ Version (OET-RV) Development</h1>-->
   <h2>Very preliminary in-progress still-private test version</h2>
   <h3><b>OT</b> v0.00</h3>
   <p id="Index"><a href="OET-RV_GEN.html">Genesis</a> &nbsp;&nbsp;<a href="OET-RV_EXO.html">Exodus</a> &nbsp;&nbsp;<a href="OET-RV_LEV.html">Leviticus</a> &nbsp;&nbsp;<a href="OET-RV_NUM.html">Numbers</a> &nbsp;&nbsp;<a href="OET-RV_DEU.html">Deuteronomy</a><br>
@@ -219,7 +220,7 @@ INDEX_INTRO_HTML = '''<!DOCTYPE html>
             for example, we would use contracted words like <i>we’ll</i> and <i>didn’t</i>,
             especially when it’s in direct speech.
         (Always remember that the Bible was written in the languages of the common people.)</li>
-    <li>This <em>Readers’ Version</em> uses section headings
+    <li id="sectionHeadings">This <em>Readers’ Version</em> uses section headings
             which are very helpful to skim through when trying to locate a certain passage.
         However, you’ll quickly notice that they are formatted in such a way
             as not to break the flow of the letter or narrative.
@@ -321,8 +322,8 @@ INDEX_INTRO_HTML = '''<!DOCTYPE html>
     <li>Our preference in most editions is to place <em>The Gospel according to John</em>
             <b>before</b> <em>Matthew</em>.
         This has a couple of advantages:
-        <ol><li>The Old Testament starts with “In the beginning, God created…”
-            and the New Testament starts with “In the beginning was the Word…”.<li>
+        <ol><li>The Old Testament starts with “In the beginning, Elohim created…”
+            and the New Testament starts with “In the beginning was the Messenger…”.<li>
         <li><em>Acts</em> ends up right after the first book by its author <em>Luke</em>.</li>
         <li>It just reminds readers that the order of the “books” in the Bible
             is not set by sacred degree--only by tradition.</li>
@@ -583,24 +584,50 @@ INDEX_INTRO_HTML = '''<!DOCTYPE html>
 RV_FAQ_HTML = '''<!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <title>OET Literal Version Development</title>
+  <title>OET Readers’ Version Development</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="Bible, translation, OET, literal, version, FAQ">
+  <meta name="keywords" content="Bible, translation, OET, readers, version, FAQ">
   <link rel="stylesheet" type="text/css" href="BibleBook.css">
 </head>
 <body>
   <p><a href="../">Up</a></p>
-  <h1>Open English Translation Literal Version (OET-RV) Development</h1>
+  <h1>Open English Translation Readers’ Version (OET-RV) Development</h1>
   <h2>Frequently Asked Questions (FAQs)</h2>
-  <h3>What are the bolded words in the text?</h3>
+
+  <h3 id="sectionHeadings">Why are section headings in boxes in this <em>Readers’ Version</em>?</h3>
+  <p>As explained in the <a href="index.html#sectionHeadings">Introduction</a>,
+        many other English Bible translations break the text and put section headings right across the column.
+    This can tend to encourage the reader to read the text in unnatural chunks
+        that were never divided by the author.
+    The <em>OET</em> on the other hand wants to educate readers that the narratives
+        and prophecies and letters, etc., were written as contiguous documents.
+    Hence our section headings are designed not to break the text any more than necessary.</p>
+
+  <h3 id="paraphrase">Is the <em>Readers’ Version</em> a paraphrase?</h3>
+  <p>Well, it’s close, in fact you could debate all day about what a paraphrase is.
+    The short answer is that we don’t regard the <em>RV</em> as a paraphrase,
+        but rather as a modern language translation.
+    Our goal with the <em>RV</em> is to take both the words and cultural background
+        of the original authors, and express the meaning in the modern language of our generation.
+    We’ve tried to avoid <i>Bible jargon</i> (words that you’d only hear in church),
+        and to think carefully about how we might explain it on the street.
+    So we’ve done the hard work for you to make the Bible accessible
+        and understandable to the average person.
+    And always remember that the <em>OET</em> provides a <em>Literal Version</em>
+        that it’s intended be referred to alongside this <em>Readers’ Version</em>.
+    (This does mean that we were able to break away from ancient/traditional Bible wording
+        and think carefully about how we’d say that these days.)</p>
+
+  <h3 id="bold">What are the bolded words in the text?</h3>
   <p>As explained in the <a href="index.html#Key">Key</a>, the bold text
-  indicates the use of <em>Nomina Sacra</em> on the original manuscripts.
-  These are special markings and abbreviations done by the scribes,
-  and in the earliest manuscripts, highlight words that are assumed to relate to God.</p>
+        indicates the use of <em>Nomina Sacra</em> on the original manuscripts.
+    These are special markings and abbreviations done by the scribes,
+        and in the earliest manuscripts, highlight words that are assumed to relate to God.</p>
+
   <h3 id="Feedback">Feedback</h3>
     <p>These web pages are a very preliminary preview into a work still in progress.
-        The <em>OET Literal Version</em> is not yet finished, and not yet publicly released,
+        The <em>OET Readers’ Version</em> is not yet finished, and not yet publicly released,
         but we need to have it available online for easy access for our checkers and reviewers.
         If you’re reading this and have questions that aren’t discussed here,
         please do contact us by <a href="mailto:Freely.Given.org@gmail.com?subject=OET-RV FAQs">email</a>.
@@ -672,7 +699,8 @@ def produce_HTML_files() -> None:
             with open( OET_USFM_InputFolderPath.joinpath(source_filename), 'rt', encoding='utf-8' ) as usfm_input_file:
                 usfm_text = usfm_input_file.read()
             assert "'" not in usfm_text, f'''Why do we have single quote in {source_filename}: {usfm_text[usfm_text.index("'")-20:usfm_text.index("'")+22]}'''
-            assert '"' not in usfm_text, f'''Why do we have double quote in {source_filename}: {usfm_text[usfm_text.index('"')-20:usfm_text.index('"')+22]}'''
+            # TODO: This needs to be uncommented after removing fun text from RV
+            # assert '"' not in usfm_text, f'''Why do we have double quote in {source_filename}: {usfm_text[usfm_text.index('"')-20:usfm_text.index('"')+22]}'''
 
             book_start_html, book_html, book_end_html = convert_USFM_to_simple_HTML( BBB, usfm_text )
 
@@ -704,7 +732,7 @@ def produce_HTML_files() -> None:
     # Output CSS and index and whole NT html
     with open( OET_HTML_OutputFolderPath.joinpath('BibleBook.css'), 'wt', encoding='utf-8' ) as css_output_file:
         css_output_file.write( CSS_TEXT )
-    indexIntroHTML = INDEX_INTRO_HTML.replace('   ',' ').replace('  ', ' ').replace('\n ', '\n') \
+    indexIntroHTML = RV_INDEX_INTRO_HTML.replace('   ',' ').replace('  ', ' ').replace('\n ', '\n') \
             .replace( '__LAST_UPDATED__', f"{datetime.now().strftime('%Y-%m-%d')} <small>by {PROGRAM_NAME_VERSION}</small>" )
     with open( OET_HTML_OutputFolderPath.joinpath('index.html'), 'wt', encoding='utf-8' ) as html_index_file:
         html_index_file.write( indexIntroHTML )
@@ -833,7 +861,7 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
                 inTable = False
             book_html = f'{book_html}<p class="{marker}">{rest}\n'
             inParagraph = 'p'
-        elif marker in ('is1','ip','im','iot','io1','io2'):
+        elif marker in ('is1','is2','ip','im','iot','io1','io2'):
             assert C == '0'
             assert rest
             if not inIntroduction: # yet
@@ -874,6 +902,7 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
             inIntroduction = False
         elif marker not in ('ie','cl'):
             dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Found unexpected {marker} marker in {BBB}" )
+            logging.error( f"{BBB} {C}:{V} RV has unexpected USFM marker: \\{marker}='{rest}'" )
             book_html = f'{book_html}<p>GOT UNEXPECTED{marker}={rest}</p>'
     assert not inRightDiv
     if inParagraph:

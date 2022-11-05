@@ -1,6 +1,7 @@
 Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	RCase	Replace	Name	Comment
 c					MAT_3:3,MRK_1:3				of_\add +a\add*_shouting \add >one\add*			of_ \add >one\add* _shouting		JtB's announcement
-c					MAT_3:3,MRK_1:3				desert: Prepare			desert prepare		JtB's announcement
+c									wilderness: Prepare			wilderness prepare		JtB's announcement MAT_3:3,MRK_1:3
+c									wilderness: Straighten			wilderness straighten		JtB's announcement JHN_1:23
 
 # a to an before a vowel
 									\add +a\add*_i			\add +an\add*_i		Mark 1:4

@@ -35,7 +35,7 @@ from tracemalloc import start
 from typing import List, Tuple, Optional
 from pathlib import Path
 from datetime import datetime
-import shutil
+import logging
 import re
 
 if __name__ == '__main__':
@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-11-02' # by RJH
+LAST_MODIFIED_DATE = '2022-11-04' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV USFM to simple HTML"
-PROGRAM_VERSION = '0.34'
+PROGRAM_VERSION = '0.36'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -120,7 +120,7 @@ p.mt2 { font-size:1.3em; }
 p.LVsentence { margin-top:0.2em; margin-bottom:0.2em; }
 '''
 
-INDEX_INTRO_HTML = '''<!DOCTYPE html>
+LV_INDEX_INTRO_HTML = '''<!DOCTYPE html>
 <html lang="en-US">
 <head>
   <title>OET Literal Version Development</title>
@@ -131,7 +131,8 @@ INDEX_INTRO_HTML = '''<!DOCTYPE html>
 </head>
 <body>
   <p><a href="../">Up</a></p>
-  <h1>Open English Translation Literal Version (OET-LV) Development</h1>
+  <h1>Now obsolete! See <a href="../SideBySide/">here</a> instead.</h1>
+  <!--<h1>Open English Translation Literal Version (OET-LV) Development</h1>-->
   <h2>Very preliminary in-progress still-private test version</h2>
   <h3><b>OT</b> v0.00</h3>
   <p id="Index"><a href="OET-LV_GEN.html">Genesis</a> &nbsp;&nbsp;<a href="OET-LV_EXO.html">Exodus</a> &nbsp;&nbsp;<a href="OET-LV_LEV.html">Leviticus</a> &nbsp;&nbsp;<a href="OET-LV_NUM.html">Numbers</a> &nbsp;&nbsp;<a href="OET-LV_DEU.html">Deuteronomy</a><br>
@@ -290,7 +291,7 @@ INDEX_INTRO_HTML = '''<!DOCTYPE html>
     <li>Because this <em>Literal Version</em> so closely follows the original languages,
             it’s important to remember that words often don’t match one-to-one between languages.
         This is one reason why the <em>LV</em> reads strangely:
-            because we try to avoid using different English words if we can;
+            because the translators try to avoid using different English words if we can;
             knowing that the <em>LV</em> will not be natural English.
         Again, this is because we want the <em>LV</em> to be
             a window into what’s actually written in the original languages.
@@ -304,14 +305,16 @@ INDEX_INTRO_HTML = '''<!DOCTYPE html>
             <li>to <i>raise</i> from the grave, we’d want: <i>come back to life</i></li>
             <li>to <i>raise</i> an object, we’d want: <i>lift up</i></li>
         </ol>
-        However, we would also be able to understand <i>raise</i> in each of those cases.</li>
+        However, we would also be able to understand <i>raise</i> in each of those cases.
+        In addition, sometimes there’s a play on words in the Greek,
+            where <i>raise</i> can intentional mean two or more of the above simultaneously!</li>
     <li>These particular pages use British spelling,
         but American spelling will also be available in the future.</li>
     <li>Our preference in most editions is to place <em>The Gospel according to John</em>
             <b>before</b> <em>Matthew</em>.
         This has a couple of advantages:
-        <ol><li>The Old Testament starts with “In the beginning, God created…”
-            and the New Testament starts with “In the beginning was the Word…”.<li>
+        <ol><li>The Old Testament starts with “In the beginning, god created…”
+            and the New Testament starts with “In the beginning was the message…”.<li>
         <li><em>Acts</em> ends up right after the first book by its author <em>Luke</em>.</li>
         <li>It just reminds readers that the order of the “books” in the Bible
             is not set by sacred degree--only by tradition.</li>
@@ -695,7 +698,7 @@ def produce_HTML_files() -> None:
     # Output CSS and index and whole NT html
     with open( OET_HTML_OutputFolderPath.joinpath('BibleBook.css'), 'wt', encoding='utf-8' ) as css_output_file:
         css_output_file.write( CSS_TEXT )
-    indexIntroHTML = INDEX_INTRO_HTML.replace('   ',' ').replace('  ', ' ').replace('\n ', '\n') \
+    indexIntroHTML = LV_INDEX_INTRO_HTML.replace('   ',' ').replace('  ', ' ').replace('\n ', '\n') \
             .replace( '__LAST_UPDATED__', f"{datetime.now().strftime('%Y-%m-%d')} <small>by {PROGRAM_NAME_VERSION}</small>" )
     with open( OET_HTML_OutputFolderPath.joinpath('index.html'), 'wt', encoding='utf-8' ) as html_index_file:
         html_index_file.write( indexIntroHTML )
@@ -788,6 +791,7 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
             # We don't display the verse number for verse 1 (after chapter number)
             book_html = f'{book_html}{"" if book_html.endswith(">") else " "}{"" if V=="1" else f"""<span class="V" id="C{C}V{V}">{V}</span>{NARROW_NON_BREAK_SPACE}"""}{rest}'
         else:
+            logging.error( f"{BBB} {C}:{V} LV has unexpected USFM marker: \\{marker}='{rest}'" )
             book_html = f'{book_html}<p>GOT UNEXPECTED{marker}={rest}</p>'
     book_html = f"{book_html}</p></div><!--BibleText-->"
 
