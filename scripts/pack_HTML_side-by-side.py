@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-11-05' # by RJH
+LAST_MODIFIED_DATE = '2022-11-07' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.13'
+PROGRAM_VERSION = '0.15'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -105,7 +105,6 @@ def main():
 # If you change any colours, etc., also need to adjust the Key above
 SBS_CSS_TEXT = '''div.container { display:grid; column-gap:0.6em; grid-template-columns:0.8fr 1.2fr; }
 div.BibleText { }
-li.intro { margin-top:0.5em; margin-bottom:0.5em; }
 span.upLink { font-size:1.5em; font-weight:bold; }
 span.C { font-size:1.1em; color:green; }
 span.V { vertical-align:super; font-size:0.5em; color:red; }
@@ -120,7 +119,6 @@ span.dom { color:Gainsboro; }
 span.schwa { font-size:0.75em; }
 span.nominaSacra { font-weight:bold; }
 span.bk { font-style:italic; }
-span.ior { font-style:italic; }
 span.xref { vertical-align: super; font-size:0.7em; color:blue; }
 p.rem { font-size:0.8em; color:grey; }
 p.shortPrayer { text-align:center; }
@@ -129,10 +127,19 @@ p.mt2 { font-size:1.3em; }
 div.rightBox { float:right; width:35%; border:3px solid #73AD21; padding:10px; }
 p.s1 { margin-top:0.1em; margin-bottom:0; font-weight:bold; }
 p.r { margin-top:0; margin-bottom:0; font-size:0.75em; }
-p.LVsentence {  margin-top:0.2em; margin-bottom:0.2em; }
-p.p {  margin-top:0.2em; margin-bottom:0.2em; }
+p.LVsentence { margin-top:0.2em; margin-bottom:0.2em; }
+p.p { margin-top:0.2em; margin-bottom:0.2em; }
 p.q1 { text-indent:2em; margin-top:0.2em; margin-bottom:0.2em; }
 p.q2 { text-indent:4em; margin-top:0.2em; margin-bottom:0.2em; }
+p.m {  }
+
+/* Book intro */
+li.intro { margin-top:0.5em; margin-bottom:0.5em; }
+p.is1 { font-weight:bold; font-size:1.3em; }
+p.is2 { font-weight:bold; }
+p.iot { font-weight:bold; }
+p.io1 { text-indent:2em; margin-top:0.2em; margin-bottom:0.2em; }
+span.ior { font-weight:bold; } // font-style:italic;
 '''
 
 
@@ -150,30 +157,30 @@ SBS_INDEX_INTRO_HTML = '''<!DOCTYPE html>
   <h1>Open English Translation (OET) Development</h1>
   <h2>Very preliminary in-progress still-private test version</h2>
   <h3><b>OT</b> v0.00</h3>
-  <p id="Index"><a href="OET-RV-LV_GEN.html">Genesis</a> &nbsp;&nbsp;<a href="OET-RV-LV_EXO.html">Exodus</a> &nbsp;&nbsp;<a href="OET-RV-LV_LEV.html">Leviticus</a> &nbsp;&nbsp;<a href="OET-RV-LV_NUM.html">Numbers</a> &nbsp;&nbsp;<a href="OET-RV-LV_DEU.html">Deuteronomy</a><br>
-    <a href="OET-RV-LV_JOS.html">Y<span class="schwa">ə</span>hōshūʼa/Joshua</a> &nbsp;&nbsp;<a href="OET-RV-LV_JDG.html">Leaders/Judges</a> &nbsp;&nbsp;<a href="OET-RV-LV_RUT.html">Rūt/Ruth</a><br>
-    <a href="OET-RV-LV_SA1.html">Sh<span class="schwa">ə</span>mūʼēl/Samuel 1</a> &nbsp;&nbsp;<a href="OET-RV-LV_SA2.html">Sh<span class="schwa">ə</span>mūʼēl/Samuel 2</a> &nbsp;&nbsp;<a href="OET-RV-LV_KI1.html">Kings 1</a> &nbsp;&nbsp;<a href="OET-RV-LV_KI2.html">Kings 2</a> &nbsp;&nbsp;<a href="OET-RV-LV_CH1.html">Accounts/Chronicles 1</a> &nbsp;&nbsp;<a href="OET-RV-LV_CH2.html">Accounts/Chronicles 2</a><br>
-    <a href="OET-RV-LV_EZR.html">ʼEz<span class="schwa">ə</span>rāʼ/Ezra</a> &nbsp;&nbsp;<a href="OET-RV-LV_NEH.html">N<span class="schwa">ə</span>ḩem<span class="schwa">ə</span>yāh/Nehemiah</a> &nbsp;&nbsp;<a href="OET-RV-LV_EST.html">ʼEş<span class="schwa">ə</span>ttēr/Esther</a><br>
-    <a href="OET-RV-LV_JOB.html">ʼYuōv/Job</a> &nbsp;&nbsp;<a href="OET-RV-LV_PSA.html">Songs/Psalms</a> &nbsp;&nbsp;<a href="OET-RV-LV_PRO.html">Sayings/Proverbs</a> &nbsp;&nbsp;<a href="OET-RV-LV_ECC.html">Orator/Ecclesiastes</a> &nbsp;&nbsp;<a href="OET-RV-LV_SNG.html">Song of /Solomon</a><br>
-    <a href="OET-RV-LV_ISA.html">Y<span class="schwa">ə</span>shaʼ<span class="schwa">ə</span>yāh/Isaiah</a> &nbsp;&nbsp;<a href="OET-RV-LV_JER.html">Yir<span class="schwa">ə</span>m<span class="schwa">ə</span>yāh/Jeremiah</a> &nbsp;&nbsp;<a href="OET-RV-LV_LAM.html">Wailings/Lamentations</a> &nbsp;&nbsp;<a href="OET-RV-LV_EZE.html">Y<span class="schwa">ə</span>ḩez<span class="schwa">ə</span>qēʼl/Ezekiel</a><br>
-    <a href="OET-RV-LV_DAN.html">Dāniyyēʼl/Daniel</a> &nbsp;&nbsp;<a href="OET-RV-LV_HOS.html">Hōshēʼa/Hosea</a> &nbsp;&nbsp;<a href="OET-RV-LV_JOL.html">Yōʼēl/Joel</a> &nbsp;&nbsp;<a href="OET-RV-LV_AMO.html">ʼĀmōʦ/Amos</a><br>
-    <a href="OET-RV-LV_OBA.html">ʼOvad<span class="schwa">ə</span>yāh/Obadiah</a> &nbsp;&nbsp;<a href="OET-RV-LV_JNA.html">Yōnāh/Jonah</a> &nbsp;&nbsp;<a href="OET-RV-LV_MIC.html">Mīkāh/Micah</a> &nbsp;&nbsp;<a href="OET-RV-LV_NAH.html">Naḩūm/Nahum</a><br>
-    <a href="OET-RV-LV_HAB.html">Ḩavaqqūq/Habakkuk</a> &nbsp;&nbsp;<a href="OET-RV-LV_ZEP.html">Ts<span class="schwa">ə</span>fan<span class="schwa">ə</span>yāh/Zephaniah</a> &nbsp;&nbsp;<a href="OET-RV-LV_HAG.html">Ḩaggay/Haggai</a> &nbsp;&nbsp;<a href="OET-RV-LV_ZEC.html">Z<span class="schwa">ə</span>kar<span class="schwa">ə</span>yāh/Zechariah</a> &nbsp;&nbsp;<a href="OET-RV-LV_MAL.html">Mal<span class="schwa">ə</span>ʼākī/Malachi</a></p>
+  <p id="Index"><a href="GEN.html">Genesis</a> &nbsp;&nbsp;<a href="EXO.html">Exodus</a> &nbsp;&nbsp;<a href="LEV.html">Leviticus</a> &nbsp;&nbsp;<a href="NUM.html">Numbers</a> &nbsp;&nbsp;<a href="DEU.html">Deuteronomy</a><br>
+    <a href="JOS.html">Y<span class="schwa">ə</span>hōshūʼa/Joshua</a> &nbsp;&nbsp;<a href="JDG.html">Leaders/Judges</a> &nbsp;&nbsp;<a href="RUT.html">Rūt/Ruth</a><br>
+    <a href="SA1.html">Sh<span class="schwa">ə</span>mūʼēl/Samuel 1</a> &nbsp;&nbsp;<a href="SA2.html">Sh<span class="schwa">ə</span>mūʼēl/Samuel 2</a> &nbsp;&nbsp;<a href="KI1.html">Kings 1</a> &nbsp;&nbsp;<a href="KI2.html">Kings 2</a> &nbsp;&nbsp;<a href="CH1.html">Accounts/Chronicles 1</a> &nbsp;&nbsp;<a href="CH2.html">Accounts/Chronicles 2</a><br>
+    <a href="EZR.html">ʼEz<span class="schwa">ə</span>rāʼ/Ezra</a> &nbsp;&nbsp;<a href="NEH.html">N<span class="schwa">ə</span>ḩem<span class="schwa">ə</span>yāh/Nehemiah</a> &nbsp;&nbsp;<a href="EST.html">ʼEş<span class="schwa">ə</span>ttēr/Esther</a><br>
+    <a href="JOB.html">ʼYuōv/Job</a> &nbsp;&nbsp;<a href="PSA.html">Songs/Psalms</a> &nbsp;&nbsp;<a href="PRO.html">Sayings/Proverbs</a> &nbsp;&nbsp;<a href="ECC.html">Orator/Ecclesiastes</a> &nbsp;&nbsp;<a href="SNG.html">Song of /Solomon</a><br>
+    <a href="ISA.html">Y<span class="schwa">ə</span>shaʼ<span class="schwa">ə</span>yāh/Isaiah</a> &nbsp;&nbsp;<a href="JER.html">Yir<span class="schwa">ə</span>m<span class="schwa">ə</span>yāh/Jeremiah</a> &nbsp;&nbsp;<a href="LAM.html">Wailings/Lamentations</a> &nbsp;&nbsp;<a href="EZE.html">Y<span class="schwa">ə</span>ḩez<span class="schwa">ə</span>qēʼl/Ezekiel</a><br>
+    <a href="DAN.html">Dāniyyēʼl/Daniel</a> &nbsp;&nbsp;<a href="HOS.html">Hōshēʼa/Hosea</a> &nbsp;&nbsp;<a href="JOL.html">Yōʼēl/Joel</a> &nbsp;&nbsp;<a href="AMO.html">ʼĀmōʦ/Amos</a><br>
+    <a href="OBA.html">ʼOvad<span class="schwa">ə</span>yāh/Obadiah</a> &nbsp;&nbsp;<a href="JNA.html">Yōnāh/Jonah</a> &nbsp;&nbsp;<a href="MIC.html">Mīkāh/Micah</a> &nbsp;&nbsp;<a href="NAH.html">Naḩūm/Nahum</a><br>
+    <a href="HAB.html">Ḩavaqqūq/Habakkuk</a> &nbsp;&nbsp;<a href="ZEP.html">Ts<span class="schwa">ə</span>fan<span class="schwa">ə</span>yāh/Zephaniah</a> &nbsp;&nbsp;<a href="HAG.html">Ḩaggay/Haggai</a> &nbsp;&nbsp;<a href="ZEC.html">Z<span class="schwa">ə</span>kar<span class="schwa">ə</span>yāh/Zechariah</a> &nbsp;&nbsp;<a href="MAL.html">Mal<span class="schwa">ə</span>ʼākī/Malachi</a></p>
   <!--<p>Whole <a href="OET-RV-LV-Torah.html">Torah/Pentateuch</a>
     (long and slower to load, but useful for easy searching of multiple books, etc.)</p>-->
   <h3><b>NT</b> v0.01</h3>
   <p>Note that the <em>OET</em> places Yōannēs/John before Matthaios/Matthew.</p>
-  <p><a href="OET-RV-LV_JHN.html">Yōannēs/John</a> &nbsp;&nbsp;<a href="OET-RV-LV_MAT.html">Matthaios/Matthew</a> &nbsp;&nbsp;<a href="OET-RV-LV_MRK.html">Markos/Mark</a> &nbsp;&nbsp;<a href="OET-RV-LV_LUK.html">Loukas/Luke</a> &nbsp;&nbsp;<a href="OET-RV-LV_ACT.html">Acts</a><br>
-    <a href="OET-RV-LV_ROM.html">Romans</a> &nbsp;&nbsp;<a href="OET-RV-LV_CO1.html">Corinthians 1</a> &nbsp;&nbsp;<a href="OET-RV-LV_CO2.html">Corinthians 2</a><br>
-    <a href="OET-RV-LV_GAL.html">Galatians</a> &nbsp;&nbsp;<a href="OET-RV-LV_EPH.html">Ephesians</a> &nbsp;&nbsp;<a href="OET-RV-LV_PHP.html">Philippians</a> &nbsp;&nbsp;<a href="OET-RV-LV_COL.html">Colossians</a><br>
-    <a href="OET-RV-LV_TH1.html">Thessalonians 1</a> &nbsp;&nbsp;<a href="OET-RV-LV_TH2.html">Thessalonians 2</a> &nbsp;&nbsp;<a href="OET-RV-LV_TI1.html">Timotheos/Timothy 1</a> &nbsp;&nbsp;<a href="OET-RV-LV_TI2.html">Timotheos/Timothy 2</a> &nbsp;&nbsp;<a href="OET-RV-LV_TIT.html">Titos/Titus</a><br>
-    <a href="OET-RV-LV_PHM.html">Filēmoni/Philemon</a><br>
-    <a href="OET-RV-LV_HEB.html">Hebrews</a><br>
-    <a href="OET-RV-LV_JAM.html">Yakōbos/James</a><br>
-    <a href="OET-RV-LV_PE1.html">Petros/Peter 1</a> &nbsp;&nbsp;<a href="OET-RV-LV_PE2.html">Petros/Peter 2</a><br>
-    <a href="OET-RV-LV_JN1.html">Yōannēs/John 1</a> &nbsp;&nbsp;<a href="OET-RV-LV_JN2.html">Yōannēs/John 2</a> &nbsp;&nbsp;<a href="OET-RV-LV_JN3.html">Yōannēs/John 3</a><br>
-    <a href="OET-RV-LV_JDE.html">Youdas/Jude</a><br>
-    <a href="OET-RV-LV_REV.html">Revelation</a></p>
+  <p><a href="JHN.html">Yōannēs/John</a> &nbsp;&nbsp;<a href="MAT.html">Matthaios/Matthew</a> &nbsp;&nbsp;<a href="MRK.html">Markos/Mark</a> &nbsp;&nbsp;<a href="LUK.html">Loukas/Luke</a> &nbsp;&nbsp;<a href="ACT.html">Acts</a><br>
+    <a href="ROM.html">Romans</a> &nbsp;&nbsp;<a href="CO1.html">Corinthians 1</a> &nbsp;&nbsp;<a href="CO2.html">Corinthians 2</a><br>
+    <a href="GAL.html">Galatians</a> &nbsp;&nbsp;<a href="EPH.html">Ephesians</a> &nbsp;&nbsp;<a href="PHP.html">Philippians</a> &nbsp;&nbsp;<a href="COL.html">Colossians</a><br>
+    <a href="TH1.html">Thessalonians 1</a> &nbsp;&nbsp;<a href="TH2.html">Thessalonians 2</a> &nbsp;&nbsp;<a href="TI1.html">Timotheos/Timothy 1</a> &nbsp;&nbsp;<a href="TI2.html">Timotheos/Timothy 2</a> &nbsp;&nbsp;<a href="TIT.html">Titos/Titus</a><br>
+    <a href="PHM.html">Filēmoni/Philemon</a><br>
+    <a href="HEB.html">Hebrews</a><br>
+    <a href="JAM.html">Yakōbos/James</a><br>
+    <a href="PE1.html">Petros/Peter 1</a> &nbsp;&nbsp;<a href="PE2.html">Petros/Peter 2</a><br>
+    <a href="JN1.html">Yōannēs/John 1</a> &nbsp;&nbsp;<a href="JN2.html">Yōannēs/John 2</a> &nbsp;&nbsp;<a href="JN3.html">Yōannēs/John 3</a><br>
+    <a href="JDE.html">Youdas/Jude</a><br>
+    <a href="REV.html">Revelation</a></p>
   <!--<p>Whole <a href="OET-RV-LV-NT.html">New Testament</a>
     (long and slower to load, but useful for easy searching of multiple books, etc.)</p>-->
   <p>See also the <a href="FAQs.html">FAQs</a> and the <a href="Glossary.html">Glossary</a>.</p>
@@ -530,7 +537,7 @@ SBS_INDEX_INTRO_HTML = '''<!DOCTYPE html>
     <p>As mentioned in our <a href="#Goals">Goals above</a>, one of
         our main goals is to <a href="#LearningGoal">educate</a> our readers about how we get our Bibles.
         Here are some of the main points:</p>
-    <ul><li class="intro">Biblical names are often very mangled in English translations.
+    <ul><li class="intro" id="chaptersAndVerses">Biblical names are often very mangled in English translations.
             We’ve already covered this extensively <a href="#Names">above</a>.</li>
         <li class="intro">The <em>Open English Translation</em> makes it possible to learn how Bible translation is done.
             This is because reading the <em>Literal Version</em> gives you a good insight into
@@ -658,8 +665,37 @@ SBS_FAQ_HTML = '''<!DOCTYPE html>
     (This does mean that we were able to break away from ancient/traditional Bible wording
         and think carefully about how we say things these days.)</p>
 
+  <h3 id="bold">What are the bolded words in the <em>Literal Version</em>?</h3>
+  <p>As explained in the <a href="index.html#Key">Key</a>, the bold text
+          indicates the use of <em>Nomina Sacra</em> on the original manuscripts.
+    These are special markings and abbreviations done by the scribes,
+        and in the earliest manuscripts, highlight words that are assumed to relate to God.</p>
+
+  <h3 id="baptise">Why is the word <i>baptise</i> missing from the <em>OET</em>?</h3>
+  <p>Ha, the short answer is that <i>baptise</i> is a Greek word
+        and the “ET” in <em>OET</em> stands for <b>English Translation</b>
+        (so we try to use English words, not Greek ones).</p>
+  <p>The long answer is that the word <i>baptise</i> is not a translation
+        of the Greek word βαπτίζω (baptizo), but just a transliteration.
+    In other words, it was an invented English word that Bible readers have gotten used to in their jargon,
+        but which isn’t used outside of religious contexts.
+    However, the Koine Greek word means “to dip, dunk, immerse, or sink”
+        (but certainly doesn’t mean “to sprinkle”).
+    So the <em>Open English Translation</em> is one of the
+        <a href="https://biblehub.com/parallel/matthew/3-11.htm">very few</a>
+        to translate it correctly.</p>
+
+  <h3 id="chapterCount">How many chapters are there in the Bible?</h3>
+  <p>Well, it depends on which Bible you’re asking about,
+        but the <em>OET</em> has <b>929</b> chapters in the “Old Testament” and
+        <b>260</b> in the “New Testament”, so a total of <b>1,189</b> chapters.</p>
+  <p><a href="index.html#chaptersAndVerses">Note</a> that the <em>OET</em>
+        tries to downplay the use of chapters and verses
+        as chapters are artificial and often unnatural breaks,
+        and verse breaks are often even worse.</p>
+
   <h3 id="uW">Are the <em>OET-LV</em> and <em>OET-RV</em> replicating what uW is doing with the <em>ULT</em> and <em>UST</em>?</h3>
-  <p>No.</p>
+  <p>No, not at all!</p>
     <ol><li class="intro">The <a href="https://door43.org/u/unfoldingWord/en_ult/">unfoldingWord Literal Text</a>
             is not as literal as the <em>OET Literal Version</em>.
         The <em>ULT</em> is designed to be translated by those who don’t have English as their first language,
@@ -670,12 +706,6 @@ SBS_FAQ_HTML = '''<!DOCTYPE html>
             in order to help Bible translators access the meaning to translate into their languages.
         On the contrary, the <em>OET Readers’ Version</em> is aimed at the average 2020’s English speaker on the street.</li>
     </ol>
-
-  <h3 id="bold">What are the bolded words in the <em>Literal Version</em>?</h3>
-  <p>As explained in the <a href="index.html#Key">Key</a>, the bold text
-          indicates the use of <em>Nomina Sacra</em> on the original manuscripts.
-    These are special markings and abbreviations done by the scribes,
-        and in the earliest manuscripts, highlight words that are assumed to relate to God.</p>
 
   <h3 id="Feedback">Feedback</h3>
     <p>These web pages are a very preliminary preview into a work still in progress.
@@ -689,6 +719,8 @@ SBS_FAQ_HTML = '''<!DOCTYPE html>
   <p>HTML last updated: __LAST_UPDATED__</p>
 </body></html>
 '''
+assert "'" not in SBS_FAQ_HTML
+assert '--' not in SBS_FAQ_HTML
 
 SBS_GLOSSARY_HTML = '''<!DOCTYPE html>
 <html lang="en-US">
@@ -738,27 +770,37 @@ SBS_GLOSSARY_HTML = '''<!DOCTYPE html>
   <p>HTML last updated: __LAST_UPDATED__</p>
 </body></html>
 '''
+assert "'" not in SBS_GLOSSARY_HTML
+assert '--' not in SBS_GLOSSARY_HTML
 
 SBS_DISCLAIMER_HTML = '''<p>Note: This is still a very early look into the unfinished text
-of the <em>Open English Translation</em> of the Bible.
-Please double-check the text before using in public.</p>
+    of the <em>Open English Translation</em> of the Bible.
+Please double-check the text before using in public.
+Some things (like capitalisation of “him” referring to Jesus or “father” referring to God)
+    in the <em>RV</em> haven’t been decided yet so we’re still testing both ways.</p>
 '''
+assert "'" not in SBS_DISCLAIMER_HTML
+assert '--' not in SBS_DISCLAIMER_HTML
 
 SBS_BOOK_INTRO_HTML1 = '''<p>Note: The <em>Readers’ Version</em> on the left is a translation
 into contemporary English aimed at <i>the person on the street</i> who
 hasn’t necessarily been brought up with exposure to Biblical jargon and/or King James English.
 It’s designed to be used alongside the <em>Literal Version</em> on the right which gives
-the English reader a window into what is actually written in the original languages.
+the English reader a window into what’s actually written in the original languages.
 (See the <a href="index.html#Intro">introduction</a> for more details—we
 recommend that you read the introduction first if you’re wanting to fully understand the <em>Literal Version</em>.)
 By comparing the left and right columns, you should be able to easily get the message of the text,
 while at the same time keeping an eye on what it was actually translated from.</p>
 '''
+assert "'" not in SBS_BOOK_INTRO_HTML1
+assert '--' not in SBS_BOOK_INTRO_HTML1
 
 SBS_INTRO_PRAYER_HTML = '''<p class="shortPrayer">It is our prayer that the
 <em>Open English Translation</em> of the Bible will give you clear understanding of
-the messages written by the inspired Biblical writers.</p><!--shortPrayer-->
+the messages written by the inspired Biblical writers.</p>
 '''
+assert "'" not in SBS_INTRO_PRAYER_HTML
+assert '--' not in SBS_INTRO_PRAYER_HTML
 
 SBS_START_HTML = '''<!DOCTYPE html>
 <html lang="en-US">
@@ -766,12 +808,15 @@ SBS_START_HTML = '''<!DOCTYPE html>
   <title>__TITLE__</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="Bible, OET, translation, English, literal, readers, version, modern, free">
+  <meta name="keywords" content="Bible, OET, translation, English, literal, readers, version, modern, free, open">
   <link rel="stylesheet" type="text/css" href="BibleBook.css">
 </head>
 <body>
 '''
 END_HTML = '</body></html>\n'
+assert "'" not in SBS_START_HTML and "'" not in END_HTML
+assert '--' not in SBS_START_HTML and '--' not in END_HTML
+
 
 genericBookList = []
 def pack_HTML_files() -> None:
@@ -799,8 +844,8 @@ def pack_HTML_files() -> None:
             with open( OET_RV_USFM_InputFolderPath.joinpath(source_ESFM_filename), 'rt', encoding='utf-8' ) as usfm_input_file:
                 rv_usfm_text = usfm_input_file.read()
 
-            source_RV_filename = f'OET-RV_{BBB}.html'
-            source_LV_filename = f'OET-LV_{BBB}.html'
+            source_RV_filename = f'{BBB}.html'
+            source_LV_filename = f'{BBB}.html'
             with open( OET_RV_HTML_InputFolderPath.joinpath(source_RV_filename), 'rt', encoding='utf-8' ) as html_input_file:
                 rv_html = html_input_file.read()
             with open( OET_LV_HTML_InputFolderPath.joinpath(source_LV_filename), 'rt', encoding='utf-8' ) as html_input_file:
@@ -808,7 +853,7 @@ def pack_HTML_files() -> None:
 
             book_start_html, book_html, book_end_html = extract_and_combine_simple_HTML( BBB, rv_usfm_text, rv_html, lv_html )
 
-            output_filename = f'OET-RV-LV_{BBB}.html'
+            output_filename = f'{BBB}.html'
             with open( OET_HTML_OutputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
                 html_output_file.write( f'{book_start_html}\n{book_html}\n{book_end_html}' )
 
@@ -885,17 +930,17 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
         try: nextBBB = OT_BBB_LIST[OT_BBB_LIST.index(BBB)+1]
         except IndexError: nextBBB = NT_BBB_LIST[0] # above line fails on final book
         links_html = links_html.replace( '__PREVIOUS__', '' if BBB==NT_BBB_LIST[0]
-            else f'<a href="OET-RV-LV_{previousBBB}.html">Previous Book ({previousBBB})</a>{EM_SPACE}')
-        links_html = links_html.replace( '__NEXT__', f'{EM_SPACE}<a href="OET-RV-LV_{nextBBB}.html">Next Book ({nextBBB})</a>')
+            else f'<a href="{previousBBB}.html">Previous Book ({previousBBB})</a>{EM_SPACE}')
+        links_html = links_html.replace( '__NEXT__', f'{EM_SPACE}<a href="{nextBBB}.html">Next Book ({nextBBB})</a>')
     elif BBB in NT_BBB_LIST:
         links_html = links_html_template.replace('__REST__', '' ) #'Whole <a href="OET-RV-LV-NT.html">New Testament</a> (for easy searching of multiple books, etc.)' )
 
         previousBBB = OT_BBB_LIST[-1] if BBB==NT_BBB_LIST[0] else NT_BBB_LIST[NT_BBB_LIST.index(BBB)-1] # Gives wrong value (@[-1]) for first book
         try: nextBBB = NT_BBB_LIST[NT_BBB_LIST.index(BBB)+1]
         except IndexError: pass # above line fails on final book
-        links_html = links_html.replace( '__PREVIOUS__', f'<a href="OET-RV-LV_{previousBBB}.html">Previous Book ({previousBBB})</a>{EM_SPACE}')
+        links_html = links_html.replace( '__PREVIOUS__', f'<a href="{previousBBB}.html">Previous Book ({previousBBB})</a>{EM_SPACE}')
         links_html = links_html.replace( '__NEXT__', '' if BBB==NT_BBB_LIST[-1]
-            else f'{EM_SPACE}<a href="OET-RV-LV_{nextBBB}.html">Next Book ({nextBBB})</a>')
+            else f'{EM_SPACE}<a href="{nextBBB}.html">Next Book ({nextBBB})</a>')
     else: unexpected_BBB, BBB
 
     C = None

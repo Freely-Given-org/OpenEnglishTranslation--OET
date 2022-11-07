@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-11-04' # by RJH
+LAST_MODIFIED_DATE = '2022-11-07' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.31'
+PROGRAM_VERSION = '0.33'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -102,7 +102,6 @@ span.C { font-size:1.1em; color:green; }
 span.V { vertical-align:super; font-size:0.5em; color:red; }
 span.added { color:grey; }
 span.bk { font-style:italic; }
-span.ior { font-style:italic; }
 span.xref { vertical-align: super; font-size:0.7em; color:blue; }
 p.rem { font-size:0.8em; color:grey; }
 p.shortPrayer { text-align:center; }
@@ -117,6 +116,14 @@ p.p {  }
 p.q1 { text-indent:2em; }
 p.q2 { text-indent:4em; }
 p.m {  }
+
+/* Book intro */
+p.is1 { font-weight:bold; font-size:1.3em; }
+p.is2 { font-weight:bold; }
+p.iot { font-weight:bold; }
+p.io1 { text-indent:2em; margin-top:0.2em; margin-bottom:0.2em; }
+span.ior { font-weight:bold; } // font-style:italic;
+li.intro { margin-top:0.5em; margin-bottom:0.5em; }
 '''
 
 
@@ -135,30 +142,30 @@ RV_INDEX_INTRO_HTML = '''<!DOCTYPE html>
   <!--<h1>Open English Translation Readers’ Version (OET-RV) Development</h1>-->
   <h2>Very preliminary in-progress still-private test version</h2>
   <h3><b>OT</b> v0.00</h3>
-  <p id="Index"><a href="OET-RV_GEN.html">Genesis</a> &nbsp;&nbsp;<a href="OET-RV_EXO.html">Exodus</a> &nbsp;&nbsp;<a href="OET-RV_LEV.html">Leviticus</a> &nbsp;&nbsp;<a href="OET-RV_NUM.html">Numbers</a> &nbsp;&nbsp;<a href="OET-RV_DEU.html">Deuteronomy</a><br>
-    <a href="OET-RV_JOS.html">Y<span class="schwa">ə</span>hōshū'a/Joshua</a> &nbsp;&nbsp;<a href="OET-RV_JDG.html">Leaders/Judges</a> &nbsp;&nbsp;<a href="OET-RV_RUT.html">Rūt/Ruth</a><br>
-    <a href="OET-RV_SA1.html">Sh<span class="schwa">ə</span>mū'ēl/Samuel 1</a> &nbsp;&nbsp;<a href="OET-RV_SA2.html">Sh<span class="schwa">ə</span>mū'ēl/Samuel 2</a> &nbsp;&nbsp;<a href="OET-RV_KI1.html">Kings 1</a> &nbsp;&nbsp;<a href="OET-RV_KI2.html">Kings 2</a> &nbsp;&nbsp;<a href="OET-RV_CH1.html">Accounts/Chronicles 1</a> &nbsp;&nbsp;<a href="OET-RV_CH2.html">Accounts/Chronicles 2</a><br>
-    <a href="OET-RV_EZR.html">'Ez<span class="schwa">ə</span>rā'/Ezra</a> &nbsp;&nbsp;<a href="OET-RV_NEH.html">N<span class="schwa">ə</span>ḩem<span class="schwa">ə</span>yāh/Nehemiah</a> &nbsp;&nbsp;<a href="OET-RV_EST.html">'Eş<span class="schwa">ə</span>ttēr/Esther</a><br>
-    <a href="OET-RV_JOB.html">'Yuōv/Job</a> &nbsp;&nbsp;<a href="OET-RV_PSA.html">Songs/Psalms</a> &nbsp;&nbsp;<a href="OET-RV_PRO.html">Sayings/Proverbs</a> &nbsp;&nbsp;<a href="OET-RV_ECC.html">Orator/Ecclesiastes</a> &nbsp;&nbsp;<a href="OET-RV_SNG.html">Song of /Solomon</a><br>
-    <a href="OET-RV_ISA.html">Y<span class="schwa">ə</span>sha'<span class="schwa">ə</span>yāh/Isaiah</a> &nbsp;&nbsp;<a href="OET-RV_JER.html">Yir<span class="schwa">ə</span>m<span class="schwa">ə</span>yāh/Jeremiah</a> &nbsp;&nbsp;<a href="OET-RV_LAM.html">Wailings/Lamentations</a> &nbsp;&nbsp;<a href="OET-RV_EZE.html">Y<span class="schwa">ə</span>ḩez<span class="schwa">ə</span>qē'l/Ezekiel</a><br>
-    <a href="OET-RV_DAN.html">Dāniyyē'l/Daniel</a> &nbsp;&nbsp;<a href="OET-RV_HOS.html">Hōshē'a/Hosea</a> &nbsp;&nbsp;<a href="OET-RV_JOL.html">Yō'ēl/Joel</a> &nbsp;&nbsp;<a href="OET-RV_AMO.html">'Āmōʦ/Amos</a><br>
-    <a href="OET-RV_OBA.html">'Ovad<span class="schwa">ə</span>yāh/Obadiah</a> &nbsp;&nbsp;<a href="OET-RV_JNA.html">Yōnāh/Jonah</a> &nbsp;&nbsp;<a href="OET-RV_MIC.html">Mīkāh/Micah</a> &nbsp;&nbsp;<a href="OET-RV_NAH.html">Naḩūm/Nahum</a><br>
-    <a href="OET-RV_HAB.html">Ḩavaqqūq/Habakkuk</a> &nbsp;&nbsp;<a href="OET-RV_ZEP.html">Ts<span class="schwa">ə</span>fan<span class="schwa">ə</span>yāh/Zephaniah</a> &nbsp;&nbsp;<a href="OET-RV_HAG.html">Ḩaggay/Haggai</a> &nbsp;&nbsp;<a href="OET-RV_ZEC.html">Z<span class="schwa">ə</span>kar<span class="schwa">ə</span>yāh/Zechariah</a> &nbsp;&nbsp;<a href="OET-RV_MAL.html">Mal<span class="schwa">ə</span>'ākī/Malachi</a></p>
+  <p id="Index"><a href="GEN.html">Genesis</a> &nbsp;&nbsp;<a href="EXO.html">Exodus</a> &nbsp;&nbsp;<a href="LEV.html">Leviticus</a> &nbsp;&nbsp;<a href="NUM.html">Numbers</a> &nbsp;&nbsp;<a href="DEU.html">Deuteronomy</a><br>
+    <a href="JOS.html">Y<span class="schwa">ə</span>hōshū'a/Joshua</a> &nbsp;&nbsp;<a href="JDG.html">Leaders/Judges</a> &nbsp;&nbsp;<a href="RUT.html">Rūt/Ruth</a><br>
+    <a href="SA1.html">Sh<span class="schwa">ə</span>mū'ēl/Samuel 1</a> &nbsp;&nbsp;<a href="SA2.html">Sh<span class="schwa">ə</span>mū'ēl/Samuel 2</a> &nbsp;&nbsp;<a href="KI1.html">Kings 1</a> &nbsp;&nbsp;<a href="KI2.html">Kings 2</a> &nbsp;&nbsp;<a href="CH1.html">Accounts/Chronicles 1</a> &nbsp;&nbsp;<a href="CH2.html">Accounts/Chronicles 2</a><br>
+    <a href="EZR.html">'Ez<span class="schwa">ə</span>rā'/Ezra</a> &nbsp;&nbsp;<a href="NEH.html">N<span class="schwa">ə</span>ḩem<span class="schwa">ə</span>yāh/Nehemiah</a> &nbsp;&nbsp;<a href="EST.html">'Eş<span class="schwa">ə</span>ttēr/Esther</a><br>
+    <a href="JOB.html">'Yuōv/Job</a> &nbsp;&nbsp;<a href="PSA.html">Songs/Psalms</a> &nbsp;&nbsp;<a href="PRO.html">Sayings/Proverbs</a> &nbsp;&nbsp;<a href="ECC.html">Orator/Ecclesiastes</a> &nbsp;&nbsp;<a href="SNG.html">Song of /Solomon</a><br>
+    <a href="ISA.html">Y<span class="schwa">ə</span>sha'<span class="schwa">ə</span>yāh/Isaiah</a> &nbsp;&nbsp;<a href="JER.html">Yir<span class="schwa">ə</span>m<span class="schwa">ə</span>yāh/Jeremiah</a> &nbsp;&nbsp;<a href="LAM.html">Wailings/Lamentations</a> &nbsp;&nbsp;<a href="EZE.html">Y<span class="schwa">ə</span>ḩez<span class="schwa">ə</span>qē'l/Ezekiel</a><br>
+    <a href="DAN.html">Dāniyyē'l/Daniel</a> &nbsp;&nbsp;<a href="HOS.html">Hōshē'a/Hosea</a> &nbsp;&nbsp;<a href="JOL.html">Yō'ēl/Joel</a> &nbsp;&nbsp;<a href="AMO.html">'Āmōʦ/Amos</a><br>
+    <a href="OBA.html">'Ovad<span class="schwa">ə</span>yāh/Obadiah</a> &nbsp;&nbsp;<a href="JNA.html">Yōnāh/Jonah</a> &nbsp;&nbsp;<a href="MIC.html">Mīkāh/Micah</a> &nbsp;&nbsp;<a href="NAH.html">Naḩūm/Nahum</a><br>
+    <a href="HAB.html">Ḩavaqqūq/Habakkuk</a> &nbsp;&nbsp;<a href="ZEP.html">Ts<span class="schwa">ə</span>fan<span class="schwa">ə</span>yāh/Zephaniah</a> &nbsp;&nbsp;<a href="HAG.html">Ḩaggay/Haggai</a> &nbsp;&nbsp;<a href="ZEC.html">Z<span class="schwa">ə</span>kar<span class="schwa">ə</span>yāh/Zechariah</a> &nbsp;&nbsp;<a href="MAL.html">Mal<span class="schwa">ə</span>'ākī/Malachi</a></p>
   <p>Whole <a href="OET-RV-Torah.html">Torah/Pentateuch</a>
     (long and slower to load, but useful for easy searching of multiple books, etc.)</p>
   <h3><b>NT</b> v0.00</h3>
   <p>Note that the <em>OET</em> places Yōannēs/John before Matthaios/Matthew.</p>
-  <p><a href="OET-RV_JHN.html">Yōannēs/John</a> &nbsp;&nbsp;<a href="OET-RV_MAT.html">Matthaios/Matthew</a> &nbsp;&nbsp;<a href="OET-RV_MRK.html">Markos/Mark</a> &nbsp;&nbsp;<a href="OET-RV_LUK.html">Loukas/Luke</a> &nbsp;&nbsp;<a href="OET-RV_ACT.html">Acts</a><br>
-    <a href="OET-RV_ROM.html">Romans</a> &nbsp;&nbsp;<a href="OET-RV_CO1.html">Corinthians 1</a> &nbsp;&nbsp;<a href="OET-RV_CO2.html">Corinthians 2</a><br>
-    <a href="OET-RV_GAL.html">Galatians</a> &nbsp;&nbsp;<a href="OET-RV_EPH.html">Ephesians</a> &nbsp;&nbsp;<a href="OET-RV_PHP.html">Philippians</a> &nbsp;&nbsp;<a href="OET-RV_COL.html">Colossians</a><br>
-    <a href="OET-RV_TH1.html">Thessalonians 1</a> &nbsp;&nbsp;<a href="OET-RV_TH2.html">Thessalonians 2</a> &nbsp;&nbsp;<a href="OET-RV_TI1.html">Timotheos/Timothy 1</a> &nbsp;&nbsp;<a href="OET-RV_TI2.html">Timotheos/Timothy 2</a> &nbsp;&nbsp;<a href="OET-RV_TIT.html">Titos/Titus</a><br>
-    <a href="OET-RV_PHM.html">Filēmoni/Philemon</a><br>
-    <a href="OET-RV_HEB.html">Hebrews</a><br>
-    <a href="OET-RV_JAM.html">Yakōbos/James</a><br>
-    <a href="OET-RV_PE1.html">Petros/Peter 1</a> &nbsp;&nbsp;<a href="OET-RV_PE2.html">Petros/Peter 2</a><br>
-    <a href="OET-RV_JN1.html">Yōannēs/John 1</a> &nbsp;&nbsp;<a href="OET-RV_JN2.html">Yōannēs/John 2</a> &nbsp;&nbsp;<a href="OET-RV_JN3.html">Yōannēs/John 3</a><br>
-    <a href="OET-RV_JDE.html">Youdas/Jude</a><br>
-    <a href="OET-RV_REV.html">Revelation</a></p>
+  <p><a href="JHN.html">Yōannēs/John</a> &nbsp;&nbsp;<a href="MAT.html">Matthaios/Matthew</a> &nbsp;&nbsp;<a href="MRK.html">Markos/Mark</a> &nbsp;&nbsp;<a href="LUK.html">Loukas/Luke</a> &nbsp;&nbsp;<a href="ACT.html">Acts</a><br>
+    <a href="ROM.html">Romans</a> &nbsp;&nbsp;<a href="CO1.html">Corinthians 1</a> &nbsp;&nbsp;<a href="CO2.html">Corinthians 2</a><br>
+    <a href="GAL.html">Galatians</a> &nbsp;&nbsp;<a href="EPH.html">Ephesians</a> &nbsp;&nbsp;<a href="PHP.html">Philippians</a> &nbsp;&nbsp;<a href="COL.html">Colossians</a><br>
+    <a href="TH1.html">Thessalonians 1</a> &nbsp;&nbsp;<a href="TH2.html">Thessalonians 2</a> &nbsp;&nbsp;<a href="TI1.html">Timotheos/Timothy 1</a> &nbsp;&nbsp;<a href="TI2.html">Timotheos/Timothy 2</a> &nbsp;&nbsp;<a href="TIT.html">Titos/Titus</a><br>
+    <a href="PHM.html">Filēmoni/Philemon</a><br>
+    <a href="HEB.html">Hebrews</a><br>
+    <a href="JAM.html">Yakōbos/James</a><br>
+    <a href="PE1.html">Petros/Peter 1</a> &nbsp;&nbsp;<a href="PE2.html">Petros/Peter 2</a><br>
+    <a href="JN1.html">Yōannēs/John 1</a> &nbsp;&nbsp;<a href="JN2.html">Yōannēs/John 2</a> &nbsp;&nbsp;<a href="JN3.html">Yōannēs/John 3</a><br>
+    <a href="JDE.html">Youdas/Jude</a><br>
+    <a href="REV.html">Revelation</a></p>
   <p>Whole <a href="OET-RV-NT.html">New Testament</a>
     (long and slower to load, but useful for easy searching of multiple books, etc.)</p>
   <h2 id="Intro">Readers’ Version Introduction</h2>
@@ -645,7 +652,7 @@ RV_BOOK_INTRO_HTML1 = '''<p>Note: This <em>Readers’ Version</em> is a translat
 into contemporary English aimed at <i>the person on the street</i> who
 hasn’t necessarily been brought up with exposure to Biblical jargon and/or King James English.
 It’s designed to be used alongside the <em>Literal Version</em> which gives
-the English reader a window into what is actually written in the original languages.
+the English reader a window into what’s actually written in the original languages.
 (See the <a href="../LiteralVersion/index.html#Intro">introduction</a> for more details—we
 recommend that you read the introduction first if you’re wanting to read and understand the <em>Literal Version</em>.)
 Between the two versions you should be able to easily read the clear message of the text,
@@ -704,7 +711,7 @@ def produce_HTML_files() -> None:
 
             book_start_html, book_html, book_end_html = convert_USFM_to_simple_HTML( BBB, usfm_text )
 
-            output_filename = f'OET-RV_{BBB}.html'
+            output_filename = f'{BBB}.html'
             with open( OET_HTML_OutputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
                 html_output_file.write( f'{book_start_html}\n{book_html}\n{book_end_html}' )
 
@@ -769,17 +776,17 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
         try: nextBBB = OT_BBB_LIST[OT_BBB_LIST.index(BBB)+1]
         except IndexError: nextBBB = NT_BBB_LIST[0] # above line fails on final book
         links_html = links_html.replace( '__PREVIOUS__', '' if BBB==NT_BBB_LIST[0]
-            else f'<a href="OET-RV_{previousBBB}.html">Previous Book ({previousBBB})</a>{EM_SPACE}')
-        links_html = links_html.replace( '__NEXT__', f'{EM_SPACE}<a href="OET-RV_{nextBBB}.html">Next Book ({nextBBB})</a>')
+            else f'<a href="{previousBBB}.html">Previous Book ({previousBBB})</a>{EM_SPACE}')
+        links_html = links_html.replace( '__NEXT__', f'{EM_SPACE}<a href="{nextBBB}.html">Next Book ({nextBBB})</a>')
     elif BBB in NT_BBB_LIST:
         links_html = links_html_template.replace('__REST__', 'Whole <a href="OET-RV-NT.html">New Testament</a> (for easy searching of multiple books, etc.)' )
 
         previousBBB = OT_BBB_LIST[-1] if BBB==NT_BBB_LIST[0] else NT_BBB_LIST[NT_BBB_LIST.index(BBB)-1] # Gives wrong value (@[-1]) for first book
         try: nextBBB = NT_BBB_LIST[NT_BBB_LIST.index(BBB)+1]
         except IndexError: pass # above line fails on final book
-        links_html = links_html.replace( '__PREVIOUS__', f'<a href="OET-RV_{previousBBB}.html">Previous Book ({previousBBB})</a>{EM_SPACE}')
+        links_html = links_html.replace( '__PREVIOUS__', f'<a href="{previousBBB}.html">Previous Book ({previousBBB})</a>{EM_SPACE}')
         links_html = links_html.replace( '__NEXT__', '' if BBB==NT_BBB_LIST[-1]
-            else f'{EM_SPACE}<a href="OET-RV_{nextBBB}.html">Next Book ({nextBBB})</a>')
+            else f'{EM_SPACE}<a href="{nextBBB}.html">Next Book ({nextBBB})</a>')
     else: unexpected_BBB, BBB
 
     C = V = '0'
@@ -839,13 +846,34 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
             book_html = f'{book_html}<div class="rightBox"><p class="{marker}">{rest}</p>\n'
             inRightDiv = True
         elif marker == 'r':
-            assert rest[0]=='(' and rest[-1]==')'
-            assert inRightDiv
-            assert not inTable
             if inParagraph:
                 book_html = f'{book_html}</{inParagraph}>\n'
                 inParagraph = None
-            book_html = f'{book_html}<p class="{marker}">{rest}</p></div><!--rightBox-->\n'
+            assert inRightDiv
+            assert not inTable
+            assert rest[0]=='(' and rest[-1]==')'
+            linkedBits = []
+            for restBit in rest[1:-1].split( '; '):
+                print( f"{BBB} {C}:{V} r='{rest}' {restBit=}")
+                try:
+                    bkCode, linkCV = restBit.rsplit(' ', 1)
+                    linkBBB = BibleOrgSysGlobals.loadedBibleBooksCodes.getBBBFromText( bkCode )
+                except ValueError: linkCV = restBit # and use the last book code
+                print( f"  {bkCode=} {linkBBB=} {linkCV=}" )
+                firstCVRef = linkCV.replace('–','-').split('-')[0]
+                print( f"  {firstCVRef=}")
+                try: linkC, linkV = firstCVRef.split(':', 1)
+                except ValueError:
+                    if BBB == 'PSA': # Often a reference to an entire Psalm
+                        linkC, linkV = firstCVRef, '1'
+                    elif BBB in ('JDE'): # single-chapter books
+                        linkC, linkV = '1', firstCVRef
+                    else: # might just be a single verse
+                        linkV = firstCVRef
+                print( f"  {firstCVRef=} {linkC=}:{linkV=}")
+                link = f'<a href="{linkBBB}.html#C{linkC}V{linkV}">{restBit}</a>'
+                linkedBits.append(link)
+            book_html = f'{book_html}<p class="{marker}">({"; ".join( linkedBits )})</p></div><!--rightBox-->\n'
             inRightDiv = False
         elif marker in ('p','q1','q2','m','mi','nb','pi1'):
             if inParagraph:
@@ -938,8 +966,7 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
                          .replace( '\\it*', '</i>' )
     book_html = book_html.replace( '\\add ', '<span class="added">' ) \
                          .replace( '\\add*', '</span>' )
-    book_html = book_html.replace( '\\ior ', '<span class="ior">' ) \
-                         .replace( '\\ior*', '</span>' )
+    book_html = livenIORs( BBB, book_html )
     # But just remove footnotes for now ........................... temp xxxxxxxxxxxxxxxxxxxxxx
     footnoteRegex = '\\\\f (.+?)\\\\f\\*'
     book_html = re.sub( footnoteRegex, '', book_html)
@@ -949,6 +976,33 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
              book_html,
              f'{chapter_html}\n{links_html}\n{END_HTML}' )
 # end of convert_OET-RV_to_simple_HTML.convert_USFM_to_simple_HTML function
+
+
+def livenIORs( BBB:str, bookHTML:str ) -> str:
+    """
+    """
+    # return bookHTML.replace( '\\ior ', '<span class="ior">' ).replace( '\\ior*', '</span>' )
+    startIx = 0
+    while True:
+        ix = bookHTML.find( '\\ior ', startIx )
+        if ix == -1: break
+        ixEnd = bookHTML.find( '\\ior*', startIx+5 )
+        assert ixEnd != -1
+        guts = bookHTML[ix+5:ixEnd].replace('–','-') # Convert any en-dash to hyphen
+        # print(f"{BBB} {guts=} {bookHTML[ix-20:ix+20]} {startIx=} {ix=} {ixEnd=}")
+        startGuts = guts.split('-')[0]
+        # print(f"  Now {guts=}")
+        if ':' in startGuts:
+            assert startGuts.count(':') == 1 # We expect a single C:V at this stage
+            Cstr, Vstr = startGuts.strip().split( ':' )
+        else: Cstr, Vstr = startGuts.strip(), '1' # Only a chapter was given
+        new_guts = f'<a href="#C{Cstr}V{Vstr}">{guts}</a>'
+        bookHTML = f'{bookHTML[:ix]}{new_guts}{bookHTML[ixEnd+5:]}'
+        startIx = ixEnd + 10
+    assert '\\ior' not in bookHTML
+
+    return bookHTML.replace( '\\ior ', '<span class="ior">' ).replace( '\\ior*', '</span>' )
+# end of convert_OET-RV_to_simple_HTML.livenIORs function
 
 
 if __name__ == '__main__':

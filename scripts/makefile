@@ -2,8 +2,8 @@
 
 #=== Folder and file declarations =======================
 
-LV_HTML := $(wildcard ../derivedTexts/simpleHTML/LiteralVersion/OET-LV_*.html)
-RV_HTML := $(wildcard ../derivedTexts/simpleHTML/ReadersVersion/OET-RV_*.html)
+LV_HTML := $(wildcard ../derivedTexts/simpleHTML/LiteralVersion/*.html)
+RV_HTML := $(wildcard ../derivedTexts/simpleHTML/ReadersVersion/*.html)
 RV_ESFM := $(wildcard ../translatedTexts/ReadersVersion/*.ESFM)
 final_LV_OT_USFM := $(wildcard ../intermediateTexts/auto_edited_OT_USFM/*.usfm)
 final_LV_NT_USFM := $(wildcard ../intermediateTexts/auto_edited_VLT_USFM/*.usfm)
@@ -20,11 +20,11 @@ short_OSHB_TSV := ../sourceTexts/rawOSHB/OSHB.original.flat.morphemes.tsv
 
 #=== Script declarations =======================
 
-Python = python3.11
-SBE = ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py
-BTranslit = ../../BibleTransliterations/Python/BibleTransliterations.py
-Hebrew = ../../BibleTransliterations/sourceTables/Hebrew.tsv
-Greek = ../../BibleTransliterations/sourceTables/Greek.tsv
+Python := python3.11
+SBE := ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py
+BTranslit := ../../BibleTransliterations/Python/BibleTransliterations.py
+Hebrew := ../../BibleTransliterations/sourceTables/Hebrew.tsv
+Greek := ../../BibleTransliterations/sourceTables/Greek.tsv
 
 #=== Top-level/Main stuff =======================
 
