@@ -1,0 +1,29 @@
+div.BibleText { }
+span.upLink { font-size:1.5em; font-weight:bold; }
+span.C { font-size:1.1em; color:green; }
+span.V { vertical-align:super; font-size:0.5em; color:red; }
+span.CV { vertical-align:super; font-size:0.8em; color:orange; }
+span.added { color:grey; }
+span.bk { font-style:italic; }
+span.xref { vertical-align: super; font-size:0.7em; color:blue; }
+p.rem { font-size:0.8em; color:grey; }
+p.shortPrayer { text-align:center; }
+p.mt1 { font-size:1.8em; }
+p.mt2 { font-size:1.3em; }
+div.rightBox { float:right;
+        width:-moz-fit-content; width:fit-content;
+        border:3px solid #73AD21; padding:0.2em; }
+p.s1 { margin-top:0.1em; margin-bottom:0.1em; font-weight:bold; }
+p.r { margin-top:0; margin-bottom:0.1em; font-size:0.8em; }
+p.p {  }
+p.q1 { text-indent:1em; margin-top:0.2em; margin-bottom:0.2em; }
+p.q2 { text-indent:2em; margin-top:0.2em; margin-bottom:0.2em; }
+p.m {  }
+
+/* Book intro */
+p.is1 { font-weight:bold; font-size:1.3em; }
+p.is2 { font-weight:bold; }
+p.iot { font-weight:bold; }
+p.io1 { text-indent:2em; margin-top:0.2em; margin-bottom:0.2em; }
+span.ior { font-weight:bold; } // font-style:italic;
+li.intro { margin-top:0.5em; margin-bottom:0.5em; }

@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-11-07' # by RJH
+LAST_MODIFIED_DATE = '2022-11-10' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.15'
+PROGRAM_VERSION = '0.18'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -108,6 +108,7 @@ div.BibleText { }
 span.upLink { font-size:1.5em; font-weight:bold; }
 span.C { font-size:1.1em; color:green; }
 span.V { vertical-align:super; font-size:0.5em; color:red; }
+span.CV { vertical-align:super; font-size:0.8em; color:orange; }
 span.addedArticle { color:bisque; }
 span.addedCopula { color:pink; }
 span.addedDirectObject { color:brown; }
@@ -124,13 +125,13 @@ p.rem { font-size:0.8em; color:grey; }
 p.shortPrayer { text-align:center; }
 p.mt1 { font-size:1.8em; }
 p.mt2 { font-size:1.3em; }
-div.rightBox { float:right; width:35%; border:3px solid #73AD21; padding:10px; }
+div.rightBox { float:right; width:35%; border:3px solid #73AD21; padding:0.2em; }
 p.s1 { margin-top:0.1em; margin-bottom:0; font-weight:bold; }
 p.r { margin-top:0; margin-bottom:0; font-size:0.75em; }
 p.LVsentence { margin-top:0.2em; margin-bottom:0.2em; }
 p.p { margin-top:0.2em; margin-bottom:0.2em; }
-p.q1 { text-indent:2em; margin-top:0.2em; margin-bottom:0.2em; }
-p.q2 { text-indent:4em; margin-top:0.2em; margin-bottom:0.2em; }
+p.q1 { text-indent:1em; margin-top:0.2em; margin-bottom:0.2em; }
+p.q2 { text-indent:2em; margin-top:0.2em; margin-bottom:0.2em; }
 p.m {  }
 
 /* Book intro */
@@ -618,7 +619,7 @@ SBS_INDEX_INTRO_HTML = '''<!DOCTYPE html>
         but we need to have it available online for easy access for our checkers and reviewers.
         If you’re reading this and notice problems or issues,
         please do contact us by <a href="mailto:Freely.Given.org@gmail.com?subject=OET SBS Feedback">email</a>.
-        Also, if there’s something that we didn’t explain in this introduction, or didn’t explain very well.
+        Also if there’s something that we didn’t explain in this introduction, or didn’t explain very well.
         Thanks.</p>
   <p>See also the <a href="FAQs.html">FAQs</a> and the <a href="Glossary.html">Glossary</a>.</p>
   <p>HTML last updated: __LAST_UPDATED__</p>
@@ -689,22 +690,39 @@ SBS_FAQ_HTML = '''<!DOCTYPE html>
   <p>Well, it depends on which Bible you’re asking about,
         but the <em>OET</em> has <b>929</b> chapters in the “Old Testament” and
         <b>260</b> in the “New Testament”, so a total of <b>1,189</b> chapters.</p>
+  <p>And if you’re wondering, the <em>OET</em> has over <b>23,000</b> verses in the “Old Testament” and
+        very close to <b>8,000</b> in the “New Testament”, so a total of over <b>31,000</b> verses.
+    <small>(It’s hard to count exact numbers of verses in a modern Bible translation,
+        because some verse numbers are still there but don’t match any text in the older original texts,
+        so don’t actually have any content in the translation.)</small></p>
   <p><a href="index.html#chaptersAndVerses">Note</a> that the <em>OET</em>
         tries to downplay the use of chapters and verses
-        as chapters are artificial and often unnatural breaks,
-        and verse breaks are often even worse.</p>
+        as chapters are artificial and sometimes quite unnatural breaks in the flow of the text,
+        and verse breaks are sometimes even worse—often plonked right in the middle of a sentence.</p>
+
+  <h3 id="similar">Which other translations are the closest to the <em>OET</em>?</h3>
+  <p>Any English Bible translation which contains <i>Literal</i> in its name
+        is probably close to the <em>OET-LV</em>.
+    However, the <em>OET-LV</em> is probably more literal in a sense
+        because most other <i>Literal</i> translations are designed to be easy to read.
+        whereas the <em>OET-LV</em> is mostly designed as a reference tool for readers of the <em>OET-RV</em>.</p>
+  <p>The <i>Contemporary English Version (CEV)</i> and then the <i>New Living Translation (NLT)</i>
+        are probably the closest to the <em>OET-RV</em>.
+        But the <em>OET-LV</em> goes out of its way to remove church jargon more than
+            most other contemporary English Bible translations.</p>
 
   <h3 id="uW">Are the <em>OET-LV</em> and <em>OET-RV</em> replicating what uW is doing with the <em>ULT</em> and <em>UST</em>?</h3>
-  <p>No, not at all!</p>
+  <p>No, not at all.</p>
     <ol><li class="intro">The <a href="https://door43.org/u/unfoldingWord/en_ult/">unfoldingWord Literal Text</a>
             is not as literal as the <em>OET Literal Version</em>.
         The <em>ULT</em> is designed to be translated by those who don’t have English as their first language,
             whereas the <em>OET-LV</em> is quite a technical translation aimed at well-educated, native English speakers.</li>
     <li class="intro">The <a href="https://door43.org/u/unfoldingWord/en_ust/">unfoldingWord Simplified Text</a>
             is again designed for Bible translators don’t have English as their first language.
-        It’s a specialist translation tool that removes all figures of speech and passive constructions
+        The <em>UST</em> is a specialist translation tool that removes all figures of speech and passive constructions
             in order to help Bible translators access the meaning to translate into their languages.
-        On the contrary, the <em>OET Readers’ Version</em> is aimed at the average 2020’s English speaker on the street.</li>
+        On the contrary, the <em>OET Readers’ Version</em> is aimed at the average 2020’s English speaker on the street
+            (and certainly contains passive constructions and figures of speech).</li>
     </ol>
 
   <h3 id="Feedback">Feedback</h3>
@@ -713,7 +731,7 @@ SBS_FAQ_HTML = '''<!DOCTYPE html>
         but we need to have it available online for easy access for our checkers and reviewers.
         If you’re reading this and have questions that aren’t discussed here,
         please do contact us by <a href="mailto:Freely.Given.org@gmail.com?subject=OET FAQs">email</a>.
-        Also, if there’s something that we didn’t explain in these FAQs, or didn’t explain very well.
+        Also if there’s something that we didn’t explain in these FAQs, or didn’t explain very well.
         Thanks.</p>
   <p>See also the <a href="index.html">Introduction</a> and the <a href="Glossary.html">Glossary</a>.</p>
   <p>HTML last updated: __LAST_UPDATED__</p>
@@ -737,11 +755,37 @@ SBS_GLOSSARY_HTML = '''<!DOCTYPE html>
   <h2>Glossary</h2>
   <p>This page contains words which need further explanations.</p>
 
+  <h3 id="apostle">ambassador, apostle, missionary</h3>
+  <p><i>Missionary</i> (literally <i>sent-out one</i> would be the natural translation
+        of the Greek word (<a href="https://biblehub.com/greek/652.htm">ἀπόστολος</a>),
+        but that’s not always what it’s used for in the “New Testament”.
+    Sometimes it’s used as a synonym for the close disciples when they were sent out
+        (e.g., see <a href="MRK.html#C6V30">Mark 6:30</a>).
+    Other times it seems to be used for church authorities,
+        and it’s often used for that today,
+        although not generally used at all outside of church language.</p>
+
+  <h3 id="disciple">apprentice, disciple, follower</h3>
+  <p>While it is true that the word <i>disciple</i>
+        (<a href="https://biblehub.com/greek/3101.htm">μαθητής</a>)
+        can probably be understood by most modern readers,
+        it’s the concept more than the word that people aren’t really familiar with these days.
+    Some do indeed go to the East and place themselves under the teaching of various <i>guru</i>s,
+        but we wouldn’t usually use the term <i>disciple</i> for an intern in the church.
+    The term is complicated when it’s used in the Bible for thousands of Jesus followers,
+        and then used for the selected twelve close followers, and sometimes for other size groups in-between.
+    So the <em>Readers’ Version</em> has elected to use <i>followers</i> most of the time,
+        and the word <i>apprentices</i> for the twelve who stuck more closely with Jesus.
+    At least modern readers understand the work of an apprentice who works for the master tradesman
+        who takes responsibility for their work,
+        even if much of the actual teaching is done away at a block course in an institution these days.</p>
+
   <h3 id="name">name</h3>
   <p>In ancient days, if a group of horse riders turned up at your house and said,
         “We’ve come to arrest you in the name of King Henry!”,
         they meant that they have come with the <i>authority</i> of the king.
-    So too, sometimes when we read about <i>the name of Jesus</i>, it might not only be referring to his actual name,
+    So too, sometimes when we read about <i>the name of Jesus</i>,
+        it might not only be referring to his actual name,
         but also referring to his <i>authority</i>,
         for example his authority over demons.
     Thus when praying for healing, it’s not necessarily productive to shout “in the name of Jesus” over and over
@@ -758,13 +802,29 @@ SBS_GLOSSARY_HTML = '''<!DOCTYPE html>
      Remember that most of the priests mentioned in the Bible are Jewish priests,
         and had their own unique set of traditions.</p>
 
+  <h3 id="word">word</h3>
+  <p>John’s gospel account typically <a href="https://biblehub.com/parallel/john/1-1.htm">starts with</a>
+        “In the beginning was the Word…” but which word was it? “Tree?” “Apple?” “Snake?”
+    Of course it’s not talking about the normal meaning of the word <i>word</i>,
+        but a religious use of the word as it later refers to Jesus the Messiah.
+    But Jesus isn’t a word like the words on this page, but it refers to something totally different.
+    In fact, the meaning of Greek
+        <a href="https://biblehub.com/greek/3056.htm">λόγος</a> (‘logos’—but not the plural of logo),
+        more likely refers to a speech, message, statement, or account
+        and very rarely refers to a single word.
+    In other words, it would be extremely rare for modern speaker to use the word <i>word</i>
+        to describe a message: 
+        “The president read out a long word at the stadium opening ceremony.” Never!
+    So the <em>OET</em> breaks tradition and
+        tries to give a <b>modern</b> translation of what the Bible writers wrote.</p>
+
   <h3 id="Feedback">Feedback</h3>
     <p>These web pages are a very preliminary preview into a work still in progress.
         The <em>OET</em> is not yet finished, and not yet publicly released,
         but we need to have it available online for easy access for our checkers and reviewers.
         If you’re reading this and have questions that aren’t discussed here,
         please do contact us by <a href="mailto:Freely.Given.org@gmail.com?subject=OET Glossary">email</a>.
-        Also, if there’s something that we didn’t explain in this glossary, or didn’t explain very well.
+        Also if there’s something that we didn’t explain in this glossary, or didn’t explain very well.
         Thanks.</p>
   <p>See also the <a href="index.html">Introduction</a> and the <a href="FAQs.html">FAQs</a>.</p>
   <p>HTML last updated: __LAST_UPDATED__</p>

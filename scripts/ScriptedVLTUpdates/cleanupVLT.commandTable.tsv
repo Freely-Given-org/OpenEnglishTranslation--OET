@@ -23,7 +23,7 @@ l									  			 	reduceDoubleSpaces	Reduce double spaces in entire file
 
 #									__not 			_ not 	fixUnderlineBeforeNot	Fix a double underline before inserted words
 
-									_/_			_	fixUnknownPatthern	Fix an unexplained pattern _/_left in Matt 18:12
+									_/_			_	fixUnknownPattern	Fix an unexplained pattern _/_left in Matt 18:12
 
 # Some wording problems
 									 the the_			 the 		Trailing space

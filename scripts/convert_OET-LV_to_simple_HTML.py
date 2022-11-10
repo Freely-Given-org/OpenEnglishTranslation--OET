@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-11-07' # by RJH
+LAST_MODIFIED_DATE = '2022-11-09' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV USFM to simple HTML"
-PROGRAM_VERSION = '0.37'
+PROGRAM_VERSION = '0.38'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -566,7 +566,7 @@ LV_INDEX_INTRO_HTML = '''<!DOCTYPE html>
         but we need to have it available online for easy access for our checkers and reviewers.
         If you’re reading this and notice problems or issues,
         please do contact us by <a href="mailto:Freely.Given.org@gmail.com?subject=OET-LV Feedback">email</a>.
-        Also, if there’s something that we didn’t explain in this introduction, or didn’t explain very well.
+        Also if there’s something that we didn’t explain in this introduction, or didn’t explain very well.
         Thanks.</p>
   <p>HTML last updated: __LAST_UPDATED__</p>
 </body></html>
@@ -596,7 +596,7 @@ LV_FAQ_HTML = '''<!DOCTYPE html>
         but we need to have it available online for easy access for our checkers and reviewers.
         If you’re reading this and have questions that aren’t discussed here,
         please do contact us by <a href="mailto:Freely.Given.org@gmail.com?subject=OET-LV FAQs">email</a>.
-        Also, if there’s something that we didn’t explain in this introduction, or didn’t explain very well.
+        Also if there’s something that we didn’t explain in this introduction, or didn’t explain very well.
         Thanks.</p>
   <p>HTML last updated: __LAST_UPDATED__</p>
 </body></html>
@@ -789,7 +789,7 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
                         .replace( '?', '?</p>\n<p class="LVsentence">' ) \
                         .replace( 'COMBO', '?)' )
             # We don't display the verse number for verse 1 (after chapter number)
-            book_html = f'{book_html}{"" if book_html.endswith(">") else " "}{"" if V=="1" else f"""<span class="V" id="C{C}V{V}">{V}</span>{NARROW_NON_BREAK_SPACE}"""}{rest}'
+            book_html = f'{book_html}{"" if book_html.endswith(">") else " "}{"" if V=="1" else f"""<span class="V" id="C{C}V{V}">{V}{NARROW_NON_BREAK_SPACE}</span>"""}{rest}'
         else:
             logging.error( f"{BBB} {C}:{V} LV has unexpected USFM marker: \\{marker}='{rest}'" )
             book_html = f'{book_html}<p>GOT UNEXPECTED{marker}={rest}</p>'

@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-11-07' # by RJH
+LAST_MODIFIED_DATE = '2022-11-09' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.33'
+PROGRAM_VERSION = '0.35'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -100,6 +100,7 @@ CSS_TEXT = '''div.BibleText { }
 span.upLink { font-size:1.5em; font-weight:bold; }
 span.C { font-size:1.1em; color:green; }
 span.V { vertical-align:super; font-size:0.5em; color:red; }
+span.CV { vertical-align:super; font-size:0.8em; color:orange; }
 span.added { color:grey; }
 span.bk { font-style:italic; }
 span.xref { vertical-align: super; font-size:0.7em; color:blue; }
@@ -109,12 +110,12 @@ p.mt1 { font-size:1.8em; }
 p.mt2 { font-size:1.3em; }
 div.rightBox { float:right;
         width:-moz-fit-content; width:fit-content;
-        border:3px solid #73AD21; padding:10px; }
+        border:3px solid #73AD21; padding:0.2em; }
 p.s1 { margin-top:0.1em; margin-bottom:0.1em; font-weight:bold; }
 p.r { margin-top:0; margin-bottom:0.1em; font-size:0.8em; }
 p.p {  }
-p.q1 { text-indent:2em; }
-p.q2 { text-indent:4em; }
+p.q1 { text-indent:1em; margin-top:0.2em; margin-bottom:0.2em; }
+p.q2 { text-indent:2em; margin-top:0.2em; margin-bottom:0.2em; }
 p.m {  }
 
 /* Book intro */
@@ -582,7 +583,7 @@ RV_INDEX_INTRO_HTML = '''<!DOCTYPE html>
         but we need to have it available online for easy access for our checkers and reviewers.
         If you’re reading this and notice problems or issues,
         please do contact us by <a href="mailto:Freely.Given.org@gmail.com?subject=OET-RV Feedback">email</a>.
-        Also, if there’s something that we didn’t explain in this introduction, or didn’t explain very well.
+        Also if there’s something that we didn’t explain in this introduction, or didn’t explain very well.
         Thanks.</p>
   <p>HTML last updated: __LAST_UPDATED__</p>
 </body></html>
@@ -638,7 +639,7 @@ RV_FAQ_HTML = '''<!DOCTYPE html>
         but we need to have it available online for easy access for our checkers and reviewers.
         If you’re reading this and have questions that aren’t discussed here,
         please do contact us by <a href="mailto:Freely.Given.org@gmail.com?subject=OET-RV FAQs">email</a>.
-        Also, if there’s something that we didn’t explain in this introduction, or didn’t explain very well.
+        Also if there’s something that we didn’t explain in this introduction, or didn’t explain very well.
         Thanks.</p>
   <p>HTML last updated: __LAST_UPDATED__</p>
 </body></html>
@@ -832,8 +833,8 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
                 inRightDiv = False
             # We don't display the verse number for verse 1 (after chapter number)
             book_html = f'{book_html}{"" if book_html.endswith(">") else " "}' \
-                        f'{f"""<span id="C{C}"></span><span class="C" id="C{C}V1">{C}</span>""" if V=="1" else f"""<span class="V" id="C{C}V{V}">{V}</span>"""}' \
-                        f'{NARROW_NON_BREAK_SPACE}{rest}'
+                        f'{f"""<span id="C{C}"></span><span class="C" id="C{C}V1">{C}</span>""" if V=="1" else f"""<span class="V" id="C{C}V{V}">{V}{NARROW_NON_BREAK_SPACE}</span>"""}' \
+                        f'{rest}'
         elif marker in ('s1','s2','s3'):
             if inParagraph:
                 assert not inTable
@@ -843,7 +844,7 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
                 book_html = f'{book_html}</table>\n'
                 inTable = False
             assert not inRightDiv
-            book_html = f'{book_html}<div class="rightBox"><p class="{marker}">{rest}</p>\n'
+            book_html = f'{book_html}<div class="rightBox"><p class="{marker}"><span class="CV">{C}:{int(V)+1}</span> {rest}</p>\n'
             inRightDiv = True
         elif marker == 'r':
             if inParagraph:
@@ -854,23 +855,23 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
             assert rest[0]=='(' and rest[-1]==')'
             linkedBits = []
             for restBit in rest[1:-1].split( '; '):
-                print( f"{BBB} {C}:{V} r='{rest}' {restBit=}")
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{BBB} {C}:{V} r='{rest}' {restBit=}")
                 try:
                     bkCode, linkCV = restBit.rsplit(' ', 1)
                     linkBBB = BibleOrgSysGlobals.loadedBibleBooksCodes.getBBBFromText( bkCode )
                 except ValueError: linkCV = restBit # and use the last book code
-                print( f"  {bkCode=} {linkBBB=} {linkCV=}" )
+                dPrint( 'Never', DEBUGGING_THIS_MODULE, f"  {bkCode=} {linkBBB=} {linkCV=}" )
                 firstCVRef = linkCV.replace('–','-').split('-')[0]
-                print( f"  {firstCVRef=}")
+                dPrint( 'Never', DEBUGGING_THIS_MODULE, f"  {firstCVRef=}")
                 try: linkC, linkV = firstCVRef.split(':', 1)
                 except ValueError:
-                    if BBB == 'PSA': # Often a reference to an entire Psalm
+                    if linkBBB == 'PSA': # Often a reference to an entire Psalm
                         linkC, linkV = firstCVRef, '1'
-                    elif BBB in ('JDE'): # single-chapter books
+                    elif linkBBB in ('JDE',): # single-chapter books
                         linkC, linkV = '1', firstCVRef
                     else: # might just be a single verse
                         linkV = firstCVRef
-                print( f"  {firstCVRef=} {linkC=}:{linkV=}")
+                dPrint( 'Never', DEBUGGING_THIS_MODULE, f"  {firstCVRef=} {linkC=}:{linkV=}")
                 link = f'<a href="{linkBBB}.html#C{linkC}V{linkV}">{restBit}</a>'
                 linkedBits.append(link)
             book_html = f'{book_html}<p class="{marker}">({"; ".join( linkedBits )})</p></div><!--rightBox-->\n'

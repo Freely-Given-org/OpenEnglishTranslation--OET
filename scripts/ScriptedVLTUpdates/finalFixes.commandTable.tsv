@@ -8,5 +8,8 @@ c									wilderness: Straighten			wilderness straighten		JtB's announcement JHN
 									\add +a\add*_ o			\add +an\add*_ o		Mark 2:21
 									\add +a\add*_ u			\add +an\add*_ u		Mark 1:23
 
+# an to a before a consonant
+									\add +an\add*_ l			\add +a\add*_ l		Mark 6:35
+
 # Fix English word order (Gloss Insert can currently only do one fix at a time)
 									send_out them 			send_ them _out 		Mark 5:10 after not
