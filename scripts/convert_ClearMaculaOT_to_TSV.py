@@ -29,6 +29,9 @@ Script taking Clear.Bible low-fat trees and extracting and flattening the data
 We also add the ID fields that were originally adapted from the OSHB id fields.
 
 OSHB morphology codes can be found at https://hb.openscriptures.org/parsing/HebrewMorphologyCodes.html.
+
+(This is run AFTER convert_OSHB_XML_to_TSV.py and prepare_OSHB_for_glossing.py
+        and BEFORE apply_Clear_Macula_OT_glosses.py.)
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple
@@ -48,7 +51,7 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.OriginalLanguages import Hebrew
 
 
-LAST_MODIFIED_DATE = '2022-10-19' # by RJH
+LAST_MODIFIED_DATE = '2022-11-16' # by RJH
 SHORT_PROGRAM_NAME = "Convert_ClearMaculaOT_to_TSV"
 PROGRAM_NAME = "Extract and Apply Macula OT glosses"
 PROGRAM_VERSION = '0.31'

@@ -29,7 +29,7 @@ Script taking our OSHB morpheme table (TSV)
 Also inserts our own glosses (Gen,Ruth,etc.) into some columns.
 
 (This is run AFTER convert_OSHB_XML_to_TSV.py
-    and BEFORE apply_Clear_Macula_OT_glosses.py.)
+    and BEFORE convert_ClearMaculaOT_to_TSV.py and apply_Clear_Macula_OT_glosses.py.)
 
 OSHB morphology codes can be found at https://hb.openscriptures.org/parsing/HebrewMorphologyCodes.html.
 """
@@ -49,10 +49,10 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.OriginalLanguages import Hebrew
 
 
-LAST_MODIFIED_DATE = '2022-10-19' # by RJH
+LAST_MODIFIED_DATE = '2022-11-16' # by RJH
 SHORT_PROGRAM_NAME = "Prepare_OSHB_for_glossing"
 PROGRAM_NAME = "Prepare OSHB for glossing"
-PROGRAM_VERSION = '0.47'
+PROGRAM_VERSION = '0.48'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -263,9 +263,11 @@ def prefill_known_glosses() -> bool:
             # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{referencesList=} {wordSpecificGlossesDict=} {genericGloss=} {word=}")
             assert word.count('=') == genericGloss.count('=')
             if '=' in word:
-                for wordBit, genericGlossBit in zip( word.split('='), genericGloss.split('=') ):
-                    for genericGlossBitBit in genericGlossBit.split('/'):
-                        morphemeGlossDict[wordBit].add(genericGlossBitBit)
+                # TODO: Fix this coz it's wrong -- the gloss is often in a different order, e.g., 'גְּחֹנְ=ךָ' is glossed 'your(ms)=belly/abdomen'
+                #                                   or 'לַ=אֲמָתְ=ךָ' glossed 'to/for=your(ms)=female_slave'
+                # for wordBit, genericGlossBit in zip( word.split('='), genericGloss.split('=') ):
+                #     for genericGlossBitBit in genericGlossBit.split('/'):
+                #         morphemeGlossDict[wordBit].add(genericGlossBitBit)
                 assert word not in wordGlossDict
                 wordGlossDict[word] = genericGloss
             else:

@@ -30,7 +30,7 @@ Then we use some of the flattened tree information
 
 We discovered that the low-fat XML trees have the same information
     that's in the LowFat glosses TSV table
-    plus a contextual gloss, so we no longer use the LowFat.
+    plus a contextual gloss, so we no longer use the TSV.
 
 (This is run AFTER convert_OSHB_XML_to_TSV.py
                 and prepare_OSHB_for_glossing.py

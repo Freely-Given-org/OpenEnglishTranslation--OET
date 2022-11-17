@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-11-09' # by RJH
+LAST_MODIFIED_DATE = '2022-11-16' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.35'
+PROGRAM_VERSION = '0.36'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -427,7 +427,8 @@ RV_INDEX_INTRO_HTML = '''<!DOCTYPE html>
         these marked words <span class="nominaSacra">stand out</span>.</li>
     <li>Where it is determined that a group of words was either definitely or most likely
         not in the original manuscripts (autographs),
-        they are omitted in the <em>OET-RV</em> without any notes.
+        they are omitted in the <em>OET-RV</em> without any notes
+        but a <b>≈</b> symbol is inserted to show that the decision was intentional and not just an accidental ommision.
         These manuscript decisions were mostly made by the authors of the two main works that we relied on to translate
         the <em>OET</em> from—see the acknowledgements below for more details.)</li>
     </ul>
@@ -827,14 +828,25 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
         elif marker == 'v':
             try: V, rest = rest.split( ' ', 1 )
             except ValueError: V, rest = rest, ''
-            assert V.isdigit(), f"Expected a verse number digit with '{V=}' '{rest=}'"
             if inRightDiv:
                 book_html = f'{book_html}</div><!--rightBox-->\n'
                 inRightDiv = False
             # We don't display the verse number for verse 1 (after chapter number)
-            book_html = f'{book_html}{"" if book_html.endswith(">") else " "}' \
-                        f'{f"""<span id="C{C}"></span><span class="C" id="C{C}V1">{C}</span>""" if V=="1" else f"""<span class="V" id="C{C}V{V}">{V}{NARROW_NON_BREAK_SPACE}</span>"""}' \
-                        f'{rest}'
+            if '-' in V: # it's a verse range
+                assert V[0].isdigit() and V[-1].isdigit(), f"Expected a verse number digit with {V=} {rest=}"
+                assert ':' not in V # We don't handle chapter ranges here yet (and probably don't need to)
+                V1, V2 = V.split( '-' )
+                # We want both verse numbers to be searchable
+                assert int(V2)==int(V1)+1 # We don't handle three verse reordering yet
+                book_html = f'{book_html}{"" if book_html.endswith(">") else " "}' \
+                        + f'{f"""<span id="C{C}"></span><span class="C" id="C{C}V1">{C}</span>""" if V1=="1" else f"""<span class="V" id="C{C}V{V1}">{V1}-</span>"""}' \
+                        + f'<span class="V" id="C{C}V{V2}">{V2}{NARROW_NON_BREAK_SPACE}</span>' \
+                        + (rest if rest else '≈')
+            else: # it's a simple verse number
+                assert V.isdigit(), f"Expected a verse number digit with {V=} {rest=}"
+                book_html = f'{book_html}{"" if book_html.endswith(">") else " "}' \
+                        + f'{f"""<span id="C{C}"></span><span class="C" id="C{C}V1">{C}</span>""" if V=="1" else f"""<span class="V" id="C{C}V{V}">{V}{NARROW_NON_BREAK_SPACE}</span>"""}' \
+                        + (rest if rest else '≈')
         elif marker in ('s1','s2','s3'):
             if inParagraph:
                 assert not inTable
