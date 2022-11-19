@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-11-16' # by RJH
+LAST_MODIFIED_DATE = '2022-11-19' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.19'
+PROGRAM_VERSION = '0.20'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -262,10 +262,10 @@ SBS_INDEX_INTRO_HTML = '''<!DOCTYPE html>
         This is to visually help the reader to appreciate the full context
             of the part they’re reading,
             and not to ignore the connections with what came before and what follows.<br>
-        Do note that we don’t always choose the most important points to put into the section headings.
-        Rather we try to choose the <i>distinguishing</i> points (even if they’re more minor),
-            to try to help you in your search.<br>
-        We’ll also be providing a list of these section headings that you can quickly skim through.</li>
+        We’ve also tried to focus our section headings on principles that are being taught,
+            rather than just focusing on the events happening at the time.<br>
+        We’ll also be providing a list of these section headings that you can quickly skim through
+            (and we hope to include extra, alternative headings).</li>
     <li class="intro">Being a 21<span style="vertical-align:super;font-size:0.8em;">st</span> century translation done in an era
         when there is much more effort in general to respect speakers of other languages
         (including the languages of ethnic minorities in our own countries)
@@ -814,7 +814,7 @@ SBS_GLOSSARY_HTML = '''<!DOCTYPE html>
         more likely refers to a speech, message, statement, or account
         and very rarely refers to a single word.
     In other words, it would be extremely rare for modern speaker to use the word <i>word</i>
-        to describe a message: 
+        to describe a message:
         “The president read out a long word at the stadium opening ceremony.” Never!
     So the <em>OET</em> breaks tradition and
         tries to give a <b>modern</b> translation of what the Bible writers wrote.</p>
@@ -958,7 +958,7 @@ def pack_HTML_files() -> None:
     assert "'" not in glossaryHTML
     with open( OET_HTML_OutputFolderPath.joinpath('Glossary.html'), 'wt', encoding='utf-8' ) as html_glossary_file:
         html_glossary_file.write( glossaryHTML )
-    
+
     # # Save our long book conglomerates
     # with open( OET_HTML_OutputFolderPath.joinpath('OET-RV-LV-Torah.html'), 'wt', encoding='utf-8' ) as html_output_file:
     #     html_output_file.write( f'{START_HTML.replace("__TITLE__","OET-RV-LV-Torah (Preliminary)")}\n'
@@ -1197,7 +1197,7 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
         else:
             book_html = f'{book_html}<div class="chunkRV">{rv}</div><!--chunkRV-->\n<div class="chunkLV">{lv}</div><!--chunkLV-->\n'
     book_html = f'{book_html}</div><!--container-->\n'
-        
+
 
     chapter_links = [f'<a href="#C{chapter_num}">C{chapter_num}</a>' for chapter_num in range( 1, int(C)+1 )]
     chapter_html = f'<p class="chapterLinks">{EM_SPACE.join(chapter_links)}</p><!--chapterLinks-->'

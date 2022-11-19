@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-11-16' # by RJH
+LAST_MODIFIED_DATE = '2022-11-19' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.36'
+PROGRAM_VERSION = '0.37'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -234,7 +234,9 @@ RV_INDEX_INTRO_HTML = '''<!DOCTYPE html>
             as not to break the flow of the letter or narrative.
         This is to visually help the reader to appreciate the full context
             of the part they’re reading,
-            and not to ignore the connections with what came before and what follows.</li>
+            and not to ignore the connections with what came before and what follows.
+        We’ve also tried to focus our section headings on principles that are being taught,
+            rather than just focusing on the events happening at the time.</li>
     <li>Being a 21<span style="vertical-align:super;font-size:0.8em;">st</span> century translation done in an era
         when there is much more effort in general to respect speakers of other languages
         (including the languages of ethnic minorities in our own countries)
@@ -749,7 +751,7 @@ def produce_HTML_files() -> None:
             .replace( '__LAST_UPDATED__', f"{datetime.now().strftime('%Y-%m-%d')} <small>by {PROGRAM_NAME_VERSION}</small>" )
     with open( OET_HTML_OutputFolderPath.joinpath('FAQs.html'), 'wt', encoding='utf-8' ) as html_FAQ_file:
         html_FAQ_file.write( faqHTML )
-    
+
     # Save our long book conglomerates
     with open( OET_HTML_OutputFolderPath.joinpath('OET-RV-Torah.html'), 'wt', encoding='utf-8' ) as html_output_file:
         html_output_file.write( f'{START_HTML.replace("__TITLE__","OET-RV-Torah (Preliminary)")}\n'
@@ -984,7 +986,7 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
     footnoteRegex = '\\\\f (.+?)\\\\f\\*'
     book_html = re.sub( footnoteRegex, '', book_html)
     assert '\\' not in book_html, f"{book_html[book_html.index(f'{BACKSLASH}')-20:book_html.index(f'{BACKSLASH}')+22]}"
-                        
+
     return ( book_start_html,
              book_html,
              f'{chapter_html}\n{links_html}\n{END_HTML}' )
