@@ -3,8 +3,9 @@ span.upLink { font-size:1.5em; font-weight:bold; }
 span.C { font-size:1.1em; color:green; }
 span.V { vertical-align:super; font-size:0.5em; color:red; }
 span.CV { vertical-align:super; font-size:0.8em; color:orange; }
-span.added { color:grey; }
+span.RVadded { color:dimGrey; }
 span.bk { font-style:italic; }
+span.fn { vertical-align: super; font-size:0.7em; color:green; }
 span.xref { vertical-align: super; font-size:0.7em; color:blue; }
 p.rem { font-size:0.8em; color:grey; }
 p.shortPrayer { text-align:center; }

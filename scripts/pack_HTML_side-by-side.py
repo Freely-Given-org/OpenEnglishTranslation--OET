@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-11-19' # by RJH
+LAST_MODIFIED_DATE = '2022-11-25' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.20'
+PROGRAM_VERSION = '0.22'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -103,7 +103,7 @@ def main():
 
 
 # If you change any colours, etc., also need to adjust the Key above
-SBS_CSS_TEXT = '''div.container { display:grid; column-gap:0.6em; grid-template-columns:0.8fr 1.2fr; }
+SBS_CSS_TEXT = """div.container { display:grid; column-gap:0.6em; grid-template-columns:0.8fr 1.2fr; }
 div.BibleText { }
 span.upLink { font-size:1.5em; font-weight:bold; }
 span.C { font-size:1.1em; color:green; }
@@ -115,11 +115,13 @@ span.addedDirectObject { color:brown; }
 span.addedExtra { color:lightGreen; }
 span.addedOwner { color:darkOrchid; }
 span.added { color:grey; }
+span.RVadded { color:dimGrey; }
 span.ul { color:darkGrey; }
 span.dom { color:Gainsboro; }
 span.schwa { font-size:0.75em; }
 span.nominaSacra { font-weight:bold; }
 span.bk { font-style:italic; }
+span.fn { vertical-align: super; font-size:0.7em; color:green; }
 span.xref { vertical-align: super; font-size:0.7em; color:blue; }
 p.rem { font-size:0.8em; color:grey; }
 p.shortPrayer { text-align:center; }
@@ -141,10 +143,10 @@ p.is2 { font-weight:bold; }
 p.iot { font-weight:bold; }
 p.io1 { text-indent:2em; margin-top:0.2em; margin-bottom:0.2em; }
 span.ior { font-weight:bold; } // font-style:italic;
-'''
+"""
 
 
-SBS_INDEX_INTRO_HTML = '''<!DOCTYPE html>
+SBS_INDEX_INTRO_HTML = """<!DOCTYPE html>
 <html lang="en-US">
 <head>
   <title>OET Development Introduction</title>
@@ -306,7 +308,7 @@ SBS_INDEX_INTRO_HTML = '''<!DOCTYPE html>
         So going a step further, we have chosen to use the contemporary
             <b>meaning</b> of the word in the <em>Literal Version</em>.
         The original meaning is <i>one who is anointed</i> (by pouring a hornful of oil over them),
-            but we use the derived meaning which is <i>one who is selected/chosen (by God)</i>.</li>
+            but we use the extended meaning which is <i>one who is selected/chosen (by God)</i>.</li>
     <li class="intro">Most readers living in modern democracies
             have never been familiar with the concept of an ancient king or <i>lord</i>
             who has the power of life and death over them.
@@ -354,8 +356,18 @@ SBS_INDEX_INTRO_HTML = '''<!DOCTYPE html>
             <li>to <i>raise</i> from bed, we’d want: <i>get up</i></li>
             <li>to <i>raise</i> from the grave, we’d want: <i>come back to life</i></li>
             <li>to <i>raise</i> an object, we’d want: <i>lift up</i></li>
+            <li>to <i>raise</i> a person, we’d often want: <i>exalt</i> or <i>praise</i></li>
         </ol>
-        However, we would also be able to understand <i>raise</i> in each of those cases.</li>
+        <small>Alert readers might be aware that there’s a play on words here in the gospels.
+        When Jesus talked about himself <i>being raised up</i>, it was deliberately ambiguous
+            because his hearers didn’t understand until right near the end that he was going to be executed.
+        So we, looking back in history, know that he was talking about coming back to life,
+            but at the time, they were just very confused and didn’t understand what he meant.
+        But amazingly, as well as referring to his resurrection, <i>raising</i> also refers to his crucifixion
+            as the victims on the stakes were also <i>raised</i>. (See <a href="JHN.html#C3V14">John 3:14</a>.)
+        Sadly, it’s not usually possible to make a translation easy to read and understand in our current times,
+            without losing some of the underlying meaning or ambiguities or word-plays that were presented to the original hearers.
+        That’s exactly why it’s good to have <em>two</em> different translations side-by-side!</small></li>
     <li class="intro">These particular pages use British spelling,
         but American spelling will also be available in the future.</li>
     <li class="intro">Our preference in most editions is to place <em>The Gospel according to John</em>
@@ -374,8 +386,8 @@ SBS_INDEX_INTRO_HTML = '''<!DOCTYPE html>
     <li class="intro">Beware of some traps interpreting the <em>Literal Version</em>.
         Because it’s not designed to be used alone (but rather alongside the <em>Readers’ Version</em>)
         it’s <b>much more literal</b> than most other “literal versions”.
-        You will quickly notice the deemphasis of words that had to be added
-        to make the English sentences even make sense.
+        You’ll quickly notice lighter colours that mark the deemphasis of words
+        that had to be added to make the English sentences even make sense.
         But there’s at least two other things that aren’t necessarily changed
         in the English <em>Literal Version</em>:
         <ol>
@@ -426,8 +438,8 @@ SBS_INDEX_INTRO_HTML = '''<!DOCTYPE html>
         Other languages don’t necessarily work the same way and can say things like
         <i>White the house.</i>
         Added copulas are marked with this <span class="addedCopula">light colour</span>.</li>
-    <li class="intro"><span class="addedDirectObject">Light brown</span>: Certain English verbs require a direct object. Think of the difference between
-        <i>He said, blah, blah</i> and <i>He told, blah, blah</i>.
+    <li><span class="addedDirectObject">Light brown</span>: Certain English verbs require a direct or indirect object.
+        Think of the difference between <i>He said, blah, blah</i> and <i>He told, blah, blah</i>.
         The second one feels like it requires something like <i>He told <span class="addedDirectObject">him</span>, blah, blah</i>.
         Added direct and indirect objects are marked with
         a <span class="addedDirectObject">light colour</span>.</li>
@@ -441,7 +453,8 @@ SBS_INDEX_INTRO_HTML = '''<!DOCTYPE html>
             we may be able to say
             <i>The <span class="addedExtra">ones</span> having<span class="ul">_</span>fallen</i>….
         If the article is marked as feminine in the source language, we may be able to say
-            <i>The <span class="addedExtra">woman</span> having<span class="ul">_</span>fallen</i>….
+            <i>The <span class="addedExtra">female one</span> having<span class="ul">_</span>fallen</i>….
+            or <i>The <span class="addedExtra">woman</span> having<span class="ul">_</span>fallen</i>….
         Added words like this are marked with this <span class="addedExtra">light colour</span>.</li>
     <li class="intro"><span class="addedOwner">Light purple</span>: If we have an original construction like <i>God spoke by son</i> (from Heb 1:2),
         in English we need to add a word like <i>God spoke by <span class="addedArticle">the</span> son</i> or <i>God spoke by <span class="addedOwner">his</span> son</i>.
@@ -451,18 +464,27 @@ SBS_INDEX_INTRO_HTML = '''<!DOCTYPE html>
     <li class="intro">All of this colouring is to be completely open by helping the reader to be able to see where the translators have chosen to
         add words to the Hebrew or Greek in order to make the English sound slightly better,
         even though this has been kept to an absolute minimum in the <em>Literal Version</em>.</li>
-    <li class="intro"><span class="nominaSacra">Bold text</span>: In the earliest copies of the original manuscripts,
+    <li class="intro"><span class="nominaSacra">Bold text</span>: In the earliest copies of the original Koine Greek manuscripts,
         it appears that the scribes marked a small set of words that they considered
         to refer to <span class="nominaSacra">God</span>.
         (These markings are known as <a href="https://en.wikipedia.org/wiki/Nomina_sacra"><em>nomina sacra</em></a>
-        or <em>sacred naming</em>.)
+        or <em>sacred names</em>.)
         Other Bible translations do not indicate these special markings,
         however in the <em>Literal Version New Testament</em> we help the reader by making
         these marked words <span class="nominaSacra">stand out</span>.</li>
+    </ul>
+    <p>You will notice the the <em>Readers’ Version</em> also looks different from most Bibles that you’re used to:</p>
+    <ul><li class="intro">Sometimes the <em>Readers’ Version</em> adds words
+            that definitely aren’t in the original text, but are included to help
+            our readers understand what was probably being meant.
+        We put these words in a <span class="RVadded">lighter colour</span>
+            in order to be completely transparent about our translation decisions.
+        We also do this to encourage our readers to actually actively think about what
+            the original authors were trying to express to their listeners/readers.</li>
     <li class="intro">Where it is determined that a group of words was either definitely or most likely
         not in the original manuscripts (autographs),
         they are omitted in the <em>OET</em> without any notes
-        but a <b>≈</b> symbol is inserted to show that the decision was intentional and not just an accidental ommision.
+        but a <b>≈</b> symbol is inserted to show that the decision was intentional and not just an accidental omission.
         These manuscript decisions were mostly made by the authors of the two main works that we relied on to translate
         the <em>OET</em> from—see the acknowledgements below for more details.)</li>
     <li>You might also find more information in the <a href="FAQs.html">FAQs</a>
@@ -522,7 +544,7 @@ SBS_INDEX_INTRO_HTML = '''<!DOCTYPE html>
         (in names that come from Hebrew with <a href="https://en.wikipedia.org/wiki/Shva">shva</a>)
         should be regarded as a fleeting (very short and unstressed), neutral vowel
         which is the minimal vowel required to linguistically join the surrounding consonants
-        e.g., in <i>Y<span class="schwa">ə</span>hūdāh</i>.</p>
+        e.g., in <i>Y<span class="schwa">ə</span>hūdāh</i> (Judah).</p>
     <p>Dipthongs (e.g., <i>ai</i>, <i>au</i>, <i>ei</i>, <i>oi</i>, <i>ou</i>)
         are a limited set of two vowels,
         where one vowel glides into the other,
@@ -584,7 +606,7 @@ SBS_INDEX_INTRO_HTML = '''<!DOCTYPE html>
     <p>A work like this could not be done with building on the work of so many that have gone before, including:</p>
     <ul><li class="intro">The creator God who communicates with us in various ways,
         but who specifically inspired the writing of the Scriptures
-        and caused it to be preserved throughout the millenia
+        and caused them to be preserved throughout the millenia
         despite the best efforts of some who tried to destroy them.</li>
     <li class="intro">Those who took the time to write down their interactions with God and his messengers,
         beginning with Moses and those before him who wrote down their experiences even though making the writing materials was so much work,
@@ -595,16 +617,16 @@ SBS_INDEX_INTRO_HTML = '''<!DOCTYPE html>
         so that we could have access to them.</li>
     <li class="intro">Those who studied the variations in those copies and helped us to get the best evaluations of
         which words were most likely present in the original manuscripts (<a href="https://en.wikipedia.org/wiki/Autograph">autographs</a>).
-        For the (mostly) Hebrew Old Testament, we are especially reliant on the Statistical Restoration work
+        For the (mostly) Hebrew Old Testament, we are especially reliant on the team work
         of <a href="https://hb.OpenScriptures.org/">Open Scriptures</a>, given to the world under a generous open licence.
-        For the Greek New Testament, we are especially reliant on the work
+        For the Greek New Testament, we are especially reliant on the Statistical Restoration work
         of the <a href="https://GreekCNTR.org">Center for New Testament Restoration</a>
         which is also given to the world under a generous open licence.</li>
     </ul>
   <h3 id="Status">Status</h3>
     <p>English sentences have more limitations on their word order than Greek sentences do.
         So any word-for-word Greek literal translation has to be reordered to be readable in English.
-        Currently, the words in the following books (just over 50% of the NT) have been mostly reordered:
+        Currently, the words in the following <em>Literal Version</em> books (just over 50% of the NT) have been mostly reordered:
         <b>Mat, Mark, Luke, John, Acts, 1 Peter, 2 Peter, 3 John, and Jude</b>,
         leaving the following books which have not yet been reordered at all
         and will therefore be even harder to read in this preliminary <em>Literal Version</em>:
@@ -625,9 +647,9 @@ SBS_INDEX_INTRO_HTML = '''<!DOCTYPE html>
   <p>See also the <a href="FAQs.html">FAQs</a> and the <a href="Glossary.html">Glossary</a>.</p>
   <p>HTML last updated: __LAST_UPDATED__</p>
 </body></html>
-'''
+"""
 
-SBS_FAQ_HTML = '''<!DOCTYPE html>
+SBS_FAQ_HTML = """<!DOCTYPE html>
 <html lang="en-US">
 <head>
   <title>OET Development FAQs</title>
@@ -662,16 +684,60 @@ SBS_FAQ_HTML = '''<!DOCTYPE html>
     So we’ve done the hard work for you to make the Bible accessible
         and understandable to the average person.
     And always remember that the <em>OET</em> provides a <em>Literal Version</em>
-        that is intended be referred to alongside the <em>Readers’ Version</em>
+        that’s intended be referred to alongside the <em>Readers’ Version</em>
         if you’d really like a word-for-word rendering of the Hebrew or Greek.
-    (This does mean that we were able to break away from ancient/traditional Bible wording
+    (Having both side-by-side does mean that we were able to break away from ancient/traditional Bible wording
         and think carefully about how we say things these days.)</p>
+
+  <h3 id="informal">Why does the <em>Readers’ Version</em> seem so informal?</h3>
+  <p>Oh, that probably means that you’re already accustomed to more traditional Bible translations
+        that sometimes propogate decisions made in the 1500s by William Tyndale,
+        or even back in the 1300s by John Wycliffe.
+    Now those early English translators did many things very well,
+        and we’re not here to criticise more modern English translations either,
+        but nevertheless it’s a sad fact that established traditions
+        can make it hard for anyone to make improvements.
+    For example, most Christians don’t even blink at the title often printed on Bible covers: “God’s Word”.
+        That’s because in Christian circles, ‘word’ often means ‘statement’, ‘account’, or ‘message’.
+        Only someone on the street might wonder which ‘word’ it means.
+        (Generally these days, a ‘word’ is something on a page like this one.)
+    It’s because we’ve become so accustomed to this unusual or quaint (or archaic?) use of language
+        that a Bible that actually uses natural English sounds so ‘informal’ to many readers.</p>
+
+  <h3 id="bias">Is the <em>Open English Translation</em> theologically biased?</h3>
+  <p>Ha, we don’t think so, but if you find any slip-ups,
+        please do contact us.
+    Certainly we will have lost some readers by replacing ‘baptism’ (transliterated from the Greek word)
+        with ‘immersion’, but that’s primarily a translation decision
+        to use the regular meaning of the word rather than to put Greek into our English.
+    We certainly don’t have any intentional theological agenda in creating the <em>OET</em>
+        other than trying to use as little as possible of the language and terms
+        that you would only hear in church circles
+        and which don’t correspond with how other people would normally talk in the 2020s.<br>
+    In other words, the <em>OET</em> is aimed at sharing the Good News
+        with non-churched people without having to speak ‘Church English’ (or <i>jargon</i>) to them.
+    A side-effect is to express the message of the Biblical texts with fresh phrasing
+        that’s different from many traditional English translations
+        and thus encourage (or maybe even, <i>shock</i>) regular Bible readers
+        into seriously thinking about what the original writers were trying to communicate.</p>
 
   <h3 id="bold">What are the bolded words in the <em>Literal Version</em>?</h3>
   <p>As explained in the <a href="index.html#Key">Key</a>, the bold text
           indicates the use of <em>Nomina Sacra</em> on the original manuscripts.
     These are special markings and abbreviations done by the scribes,
         and in the earliest manuscripts, highlight words that are assumed to relate to God.</p>
+
+  <h3 id="uphill">Why does the <em>Literal Version</em> have uphill and downhill everywhere?</h3>
+  <p>In our culture, when we go <i>up</i> somewhere, it usually means to go north.
+    (Other cultures typically use ‘up’ and ‘down’ for ‘uphill’ and ‘downhill’,
+        or ‘upstream’ and ‘downstream’, etc., depending on the common modes of travel.)
+    The <em>LV</em> overtranslates <i>uphill</i> and <i>downhill</i>
+        in order to help our readers avoid misunderstanding the cultural cues.</p>
+  <p>And just a bonus tip: Most modern maps of our countries or of the world
+        have north at the top.
+    However, most maps from Biblical times had the east at the top!
+    (This actually makes quite a bit of sense as we’re all rapidly hurtling
+        towards the east as our planet spins us.)</p>
 
   <h3 id="baptise">Why is the word <i>baptise</i> missing from the <em>OET</em>?</h3>
   <p>Ha, the short answer is that <i>baptise</i> is a Greek word
@@ -685,7 +751,7 @@ SBS_FAQ_HTML = '''<!DOCTYPE html>
         (but certainly doesn’t mean “to sprinkle”).
     So the <em>Open English Translation</em> is one of the
         <a href="https://biblehub.com/parallel/matthew/3-11.htm">very few</a>
-        to translate it correctly.</p>
+        to actually translate the word.</p>
 
   <h3 id="chapterCount">How many chapters are there in the Bible?</h3>
   <p>Well, it depends on which Bible you’re asking about,
@@ -730,18 +796,18 @@ SBS_FAQ_HTML = '''<!DOCTYPE html>
     <p>These web pages are a very preliminary preview into a work still in progress.
         The <em>OET</em> is not yet finished, and not yet publicly released,
         but we need to have it available online for easy access for our checkers and reviewers.
-        If you’re reading this and have questions that aren’t discussed here,
+    If you’re reading this and have questions that aren’t discussed here,
         please do contact us by <a href="mailto:Freely.Given.org@gmail.com?subject=OET FAQs">email</a>.
-        Also if there’s something that we didn’t explain in these FAQs, or didn’t explain very well.
-        Thanks.</p>
+    Also if there’s something that we didn’t explain in these FAQs, or didn’t explain very well.
+    Thanks.</p>
   <p>See also the <a href="index.html">Introduction</a> and the <a href="Glossary.html">Glossary</a>.</p>
   <p>HTML last updated: __LAST_UPDATED__</p>
 </body></html>
-'''
+"""
 assert "'" not in SBS_FAQ_HTML
 assert '--' not in SBS_FAQ_HTML
 
-SBS_GLOSSARY_HTML = '''<!DOCTYPE html>
+SBS_GLOSSARY_HTML = """<!DOCTYPE html>
 <html lang="en-US">
 <head>
   <title>OET Development Glossary</title>
@@ -756,6 +822,9 @@ SBS_GLOSSARY_HTML = '''<!DOCTYPE html>
   <h2>Glossary</h2>
   <p>This page contains words which need further explanations.</p>
 
+  <h3 id="angel">angel, messenger</h3>
+  <p></p>
+
   <h3 id="apostle">ambassador, apostle, missionary</h3>
   <p><i>Missionary</i> (literally <i>sent-out one</i> would be the natural translation
         of the Greek word (<a href="https://biblehub.com/greek/652.htm">ἀπόστολος</a>),
@@ -765,6 +834,21 @@ SBS_GLOSSARY_HTML = '''<!DOCTYPE html>
     Other times it seems to be used for church authorities,
         and it’s often used for that today,
         although not generally used at all outside of church language.</p>
+
+  <h3 id="believe">believe, believe in, trust</h3>
+  <p>If you ‘believe’ someone, it usually means that what they just said wasn’t a lie.
+    But if you ‘believe <i>in</i>’ someone, that’s different—it’s often to do with capability,
+        i.e., usually that they’re able to do what they’re about to embark on,
+            e.g., believing in a child that’s learning to drive,
+            or an engineer trying to solve a difficult problem.</p>
+  <p>So what do the New Testament writers mean when they write
+        about ‘believing in Jesus’?
+    In most cases, they’re talking about ‘believing that Jesus is the messiah’,
+        or in other words,
+            ‘believing that Jesus is authentically sent from heaven and doing God’s work’.</p>
+  <p>Because belief in a coming messiah is not a basic staple of our modern culture,
+        sometimes we need to help our readers know what was at stake
+        as people of those times either rejected or ‘believed in’ Jesus.</p>
 
   <h3 id="disciple">apprentice, disciple, follower</h3>
   <p>While it is true that the word <i>disciple</i>
@@ -780,6 +864,53 @@ SBS_GLOSSARY_HTML = '''<!DOCTYPE html>
     At least modern readers understand the work of an apprentice who works for the master tradesman
         who takes responsibility for their work,
         even if much of the actual teaching is done away at a block course in an institution these days.</p>
+
+  <h3 id="glory">glory, glorify</h3>
+  <p>It’s not common to hear on the street about someone being ‘glorified’
+        and also difficult to find a single <a href="https://www.thesaurus.com/browse/glorify">synonym</a>
+        that captures the original meaning.
+    This leaves us with three main choices:</p>
+  <ol><li>Use the traditional word that’s not really understood by young English speakers,</li>
+    <li>Use a longer phrase that tries to capture the full meaning of the word,</li>
+    <li>Choose one synonym that will be understood, albeit inadequately expressing the full meaning.</li>
+  </ol>
+  <p>Sadly, we’ll often choose the latter compromise in the <em>Readers’ Version</em>.</p>
+
+  <h3 id="holy">holy, holy spirit</h3>
+  <p>Oh, what does the word ‘holy’ mean
+        to the average person in the 2020s?
+    On the street, we mostly hear it used along with a word for excrement!
+    Is there a better word, perhaps a <a href="https://www.thesaurus.com/browse/holy">synonym</a>
+        that we could use that would convey the right meaning?</p>
+  <p>We notice that the term ‘Holy Spirit’ is almost used like a name,
+        with users often not really considering the meaning of the term,
+        and possibly not even able to define it well.</p>
+  <p>Because of the mismatch of cultures, the <em>Readers’ Version</em>
+        has made the decision to downplay the word ‘holy’,
+        often referring to ‘God’s spirit’
+        or using ‘pure’ in other contexts.
+    We acknowledge that many will find this inadequate,
+        but we feel that words that have lost their cultural meaning
+        are also inadequate, so there’s no ideal solution.</p>
+
+  <h3 id="lord">lord, master</h3>
+  <p>In our modern, Western culture,
+        we don’t really have the ancient concept of our lives being
+        very much in the hands of our king or lord or master or boss or owner.
+    In general, our boss only has power over us for certain hours of the week.</p>
+    On the other hand, in churches you will hear a lot of talk about ‘the Lord’,
+        but we suspect that it’s mostly only jargon or cliche
+        because few of us can imagine a single person
+        in a position of the power of life or death over us.</p>
+  <p>Because of this mismatch of cultures, the <em>OET</em>
+        has made the decision not to use the word ‘lord’ or ‘Lord’,
+        and chosen the word ‘master’ to at least provoke more thought
+        about what the Biblical concept might mean.
+    (‘Boss’ was rejected as being too informal.)
+    Sometimes too, we will simply use ‘God’ or his name ‘Yahweh’
+        where it seems to fit better.
+    (Remember that the Jewish people traditionally also use the word ‘Lord’
+        as a substitute for the name of God.)</p>
 
   <h3 id="name">name</h3>
   <p>In ancient days, if a group of horse riders turned up at your house and said,
@@ -830,40 +961,40 @@ SBS_GLOSSARY_HTML = '''<!DOCTYPE html>
   <p>See also the <a href="index.html">Introduction</a> and the <a href="FAQs.html">FAQs</a>.</p>
   <p>HTML last updated: __LAST_UPDATED__</p>
 </body></html>
-'''
+"""
 assert "'" not in SBS_GLOSSARY_HTML
 assert '--' not in SBS_GLOSSARY_HTML
 
-SBS_DISCLAIMER_HTML = '''<p>Note: This is still a very early look into the unfinished text
+SBS_DISCLAIMER_HTML = """<p>Note: This is still a very early look into the unfinished text
     of the <em>Open English Translation</em> of the Bible.
-Please double-check the text before using in public.
+Please double-check the text in advance before using in public.
 Some things (like capitalisation of “him” referring to Jesus or “father” referring to God)
     in the <em>RV</em> haven’t been decided yet so we’re still testing both ways.</p>
-'''
+"""
 assert "'" not in SBS_DISCLAIMER_HTML
 assert '--' not in SBS_DISCLAIMER_HTML
 
-SBS_BOOK_INTRO_HTML1 = '''<p>Note: The <em>Readers’ Version</em> on the left is a translation
+SBS_BOOK_INTRO_HTML1 = """<p>Note: The <em>Readers’ Version</em> on the left is a translation
 into contemporary English aimed at <i>the person on the street</i> who
-hasn’t necessarily been brought up with exposure to Biblical jargon and/or King James English.
+hasn’t necessarily been brought up with exposure to Biblical jargon and/or 16<sup>th</sup> century English.
 It’s designed to be used alongside the <em>Literal Version</em> on the right which gives
 the English reader a window into what’s actually written in the original languages.
 (See the <a href="index.html#Intro">introduction</a> for more details—we
 recommend that you read the introduction first if you’re wanting to fully understand the <em>Literal Version</em>.)
 By comparing the left and right columns, you should be able to easily get the message of the text,
 while at the same time keeping an eye on what it was actually translated from.</p>
-'''
+"""
 assert "'" not in SBS_BOOK_INTRO_HTML1
 assert '--' not in SBS_BOOK_INTRO_HTML1
 
-SBS_INTRO_PRAYER_HTML = '''<p class="shortPrayer">It is our prayer that the
+SBS_INTRO_PRAYER_HTML = """<p class="shortPrayer">It is our prayer that the
 <em>Open English Translation</em> of the Bible will give you clear understanding of
-the messages written by the inspired Biblical writers.</p>
-'''
+the accounts and messages written by the God-inspired Biblical writers.</p>
+"""
 assert "'" not in SBS_INTRO_PRAYER_HTML
 assert '--' not in SBS_INTRO_PRAYER_HTML
 
-SBS_START_HTML = '''<!DOCTYPE html>
+SBS_START_HTML = """<!DOCTYPE html>
 <html lang="en-US">
 <head>
   <title>__TITLE__</title>
@@ -873,7 +1004,7 @@ SBS_START_HTML = '''<!DOCTYPE html>
   <link rel="stylesheet" type="text/css" href="BibleBook.css">
 </head>
 <body>
-'''
+"""
 END_HTML = '</body></html>\n'
 assert "'" not in SBS_START_HTML and "'" not in END_HTML
 assert '--' not in SBS_START_HTML and '--' not in END_HTML
@@ -1002,10 +1133,11 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
         links_html = links_html.replace( '__PREVIOUS__', f'<a href="{previousBBB}.html">Previous Book ({previousBBB})</a>{EM_SPACE}')
         links_html = links_html.replace( '__NEXT__', '' if BBB==NT_BBB_LIST[-1]
             else f'{EM_SPACE}<a href="{nextBBB}.html">Next Book ({nextBBB})</a>')
-    else: unexpected_BBB, BBB
+    else: raise Exception( f"unexpected_BBB '{BBB}'" )
 
+    # Create the introduction at the top of the book
     C = None
-    done_intro = False
+    done_intro = startedChapters = False
     book_html = ''
     for usfm_line in rvUSFM.split( '\n' ):
         if not usfm_line: continue # Ignore blank lines
@@ -1017,7 +1149,8 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
         if marker in ('id','usfm','ide','h','toc2','toc3'):
             continue # We don't need to map those markers to HTML
         if marker in ('rem',):
-            book_html = f'{book_html}<p class="{marker}">{rest}</p>\n'
+            if not startedChapters:
+                book_html = f'{book_html}<p class="{marker}">{rest}</p>\n'
         elif marker in ('mt1','mt2'):
             if not done_intro: # Add an extra explanatory paragraph at the top
                 book_html = f'{book_html}{SBS_DISCLAIMER_HTML}{SBS_BOOK_INTRO_HTML1}'
@@ -1034,6 +1167,7 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
                 assert C.isdigit()
             if C == '1': # Add an inspirational note
                 book_html = f'{book_html}{SBS_INTRO_PRAYER_HTML}\n'
+                startedChapters = True
 
     # Get the intro of the RV chapter/verse HTML and append it
     ourRVStartMarkerIndex = rvHTML.index( '<div class="bookIntro">' )
@@ -1058,7 +1192,6 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
             CclassIndex1 = rvSectionHTML.index( 'id="C' )
             CclassIndex2 = rvSectionHTML.index( '"', CclassIndex1+4 )
             startCV = rvSectionHTML[CclassIndex1+4:CclassIndex2]
-            # if 'V' not in startCV: startCV = f'{startCV}V1'
             CclassIndex8 = rvSectionHTML.rindex( 'id="C' )
             CclassIndex9 = rvSectionHTML.index( '"', CclassIndex8+4 )
             endCV = rvSectionHTML[CclassIndex8+4:CclassIndex9]

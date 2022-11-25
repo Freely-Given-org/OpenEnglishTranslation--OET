@@ -10,11 +10,13 @@ span.addedDirectObject { color:brown; }
 span.addedExtra { color:lightGreen; }
 span.addedOwner { color:darkOrchid; }
 span.added { color:grey; }
+span.RVadded { color:dimGrey; }
 span.ul { color:darkGrey; }
 span.dom { color:Gainsboro; }
 span.schwa { font-size:0.75em; }
 span.nominaSacra { font-weight:bold; }
 span.bk { font-style:italic; }
+span.fn { vertical-align: super; font-size:0.7em; color:green; }
 span.xref { vertical-align: super; font-size:0.7em; color:blue; }
 p.rem { font-size:0.8em; color:grey; }
 p.shortPrayer { text-align:center; }

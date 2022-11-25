@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-11-19' # by RJH
+LAST_MODIFIED_DATE = '2022-11-25' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.37'
+PROGRAM_VERSION = '0.39'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -96,13 +96,14 @@ def main():
 
 
 # If you change any colours, etc., also need to adjust the Key above
-CSS_TEXT = '''div.BibleText { }
+CSS_TEXT = """div.BibleText { }
 span.upLink { font-size:1.5em; font-weight:bold; }
 span.C { font-size:1.1em; color:green; }
 span.V { vertical-align:super; font-size:0.5em; color:red; }
 span.CV { vertical-align:super; font-size:0.8em; color:orange; }
-span.added { color:grey; }
+span.RVadded { color:dimGrey; }
 span.bk { font-style:italic; }
+span.fn { vertical-align: super; font-size:0.7em; color:green; }
 span.xref { vertical-align: super; font-size:0.7em; color:blue; }
 p.rem { font-size:0.8em; color:grey; }
 p.shortPrayer { text-align:center; }
@@ -125,10 +126,10 @@ p.iot { font-weight:bold; }
 p.io1 { text-indent:2em; margin-top:0.2em; margin-bottom:0.2em; }
 span.ior { font-weight:bold; } // font-style:italic;
 li.intro { margin-top:0.5em; margin-bottom:0.5em; }
-'''
+"""
 
 
-RV_INDEX_INTRO_HTML = '''<!DOCTYPE html>
+RV_INDEX_INTRO_HTML = """<!DOCTYPE html>
 <html lang="en-US">
 <head>
   <title>OET Readers’ Version Development</title>
@@ -277,7 +278,7 @@ RV_INDEX_INTRO_HTML = '''<!DOCTYPE html>
         So going a step further, we have chosen to use the contemporary
             <b>meaning</b> of the word in the <em>Literal Version</em>.
         The original meaning is <i>one who is anointed</i> (by pouring a hornful of oil over them),
-            but we use the derived meaning which is <i>one who is selected/chosen (by God)</i>.</li>
+            but we use the extended meaning which is <i>one who is selected/chosen (by God)</i>.</li>
     <li>Most readers living in modern democracies
             have never been familiar with the concept of an ancient king or <i>lord</i>
             who has the power of life and death over them.
@@ -325,8 +326,18 @@ RV_INDEX_INTRO_HTML = '''<!DOCTYPE html>
             <li>to <i>raise</i> from bed, we’d want: <i>get up</i></li>
             <li>to <i>raise</i> from the grave, we’d want: <i>come back to life</i></li>
             <li>to <i>raise</i> an object, we’d want: <i>lift up</i></li>
+            <li>to <i>raise</i> a person, we’d often want: <i>exalt</i> or <i>praise</i></li>
         </ol>
-        However, we would also be able to understand <i>raise</i> in each of those cases.</li>
+        <small>Alert readers might be aware that there’s a play on words here in the gospels.
+        When Jesus talked about himself <i>being raised up</i>, it was deliberately ambiguous
+            because his hearers didn’t understand until right near the end that he was going to be executed.
+        So we, looking back in history, know that he was talking about coming back to life,
+            but at the time, they were just very confused and didn’t understand what he meant.
+        But amazingly, as well as referring to his resurrection, <i>raising</i> also refers to his crucifixion
+            as the victims on the stakes were also <i>raised</i>. (See <a href="JHN.html#C3V14">John 3:14</a>.)
+        Sadly, it’s not usually possible to make a translation easy to read and understand in our current times,
+            without losing some of the underlying meaning or ambiguities or word-plays that were presented to the original hearers.
+        That’s exactly why it’s good to have <em>two</em> different translations side-by-side!</small></li>
     <li>These particular pages use British spelling,
         but American spelling will also be available in the future.</li>
     <li>Our preference in most editions is to place <em>The Gospel according to John</em>
@@ -345,8 +356,8 @@ RV_INDEX_INTRO_HTML = '''<!DOCTYPE html>
     <li>Beware of some traps interpreting the <em>Literal Version</em>.
         Because it’s not designed to be used alone (but rather alongside this <em>Readers’ Version</em>)
         it’s <b>much more literal</b> than most other “literal versions”.
-        You will quickly notice the deemphasis of words that had to be added
-        to make the English sentences even make sense.
+        You’ll quickly notice lighter colours that mark the deemphasis of words
+        that had to be added to make the English sentences even make sense.
         But there’s at least two other things that aren’t necessarily changed
         in the English <em>Literal Version</em>:
         <ol>
@@ -370,6 +381,7 @@ RV_INDEX_INTRO_HTML = '''<!DOCTYPE html>
     </ul>
   <h3 id="Key">Key to symbols and colours in the OET-RV</h3>
     <p>You will notice the the <em>Literal Version</em> looks different from most Bibles that you’re used to:</p>
+    <!--
     <ul><li>Underline/underscore characters: Words joined together by underlines are translated from a single original word,
         e.g., <em>he<span class="ul">_</span>is<span class="ul">_</span>walking</em>.
         Both Hebrew and Greek can express the subject as part of the verb,
@@ -394,8 +406,8 @@ RV_INDEX_INTRO_HTML = '''<!DOCTYPE html>
         Other languages don’t necessarily work the same way and can say things like
         <i>White the house.</i>
         Added copulas are marked with this <span class="addedCopula">light colour</span>.</li>
-    <li><span class="addedDirectObject">Light brown</span>: Certain English verbs require a direct object. Think of the difference between
-        <i>He said, blah, blah</i> and <i>He told, blah, blah</i>.
+    <li><span class="addedDirectObject">Light brown</span>: Certain English verbs require a direct or indirect object.
+        Think of the difference between <i>He said, blah, blah</i> and <i>He told, blah, blah</i>.
         The second one feels like it requires something like <i>He told <span class="addedDirectObject">him</span>, blah, blah</i>.
         Added direct and indirect objects are marked with
         a <span class="addedDirectObject">light colour</span>.</li>
@@ -409,28 +421,30 @@ RV_INDEX_INTRO_HTML = '''<!DOCTYPE html>
             we may be able to say
             <i>The <span class="addedExtra">ones</span> having<span class="ul">_</span>fallen</i>….
         If the article is marked as feminine in the source language, we may be able to say
-            <i>The <span class="addedExtra">woman</span> having<span class="ul">_</span>fallen</i>….
+            <i>The <span class="addedExtra">female one</span> having<span class="ul">_</span>fallen</i>….
+            or <i>The <span class="addedExtra">woman</span> having<span class="ul">_</span>fallen</i>….
         Added words like this are marked with this <span class="addedExtra">light colour</span>.</li>
     <li><span class="addedOwner">Light purple</span>: If we have an original construction like <i>God spoke by son</i> (from Heb 1:2),
         in English we need to add a word like <i>God spoke by <span class="addedArticle">the</span> son</i> or <i>God spoke by <span class="addedOwner">his</span> son</i>.
         In the latter case (where we don’t just choose an article like <i><span class="addedArticle">the</span></i>),
         we mark these added words with this <span class="addedOwner">light colour</span>.</li>
     <li><span class="added">Light orange</span>: Other added words not in the above categories are marked with this <span class="added">light colour</span>.</li>
+    -->
     <li>All of this colouring is to be completely open by helping the reader to be able to see where the translators have chosen to
         add words to the Hebrew or Greek in order to make the English sound slightly better,
         even though this has been kept to an absolute minimum in the <em>Literal Version</em>.</li>
-    <li><span class="nominaSacra">Bold text</span>: In the earliest copies of the original manuscripts,
+    <li class="intro"><span class="nominaSacra">Bold text</span>: In the earliest copies of the original Koine Greek manuscripts,
         it appears that the scribes marked a small set of words that they considered
         to refer to <span class="nominaSacra">God</span>.
         (These markings are known as <a href="https://en.wikipedia.org/wiki/Nomina_sacra"><em>nomina sacra</em></a>
-        or <em>sacred naming</em>.)
+        or <em>sacred names</em>.)
         Other Bible translations do not indicate these special markings,
         however in the <em>Literal Version New Testament</em> we help the reader by making
         these marked words <span class="nominaSacra">stand out</span>.</li>
     <li>Where it is determined that a group of words was either definitely or most likely
         not in the original manuscripts (autographs),
         they are omitted in the <em>OET-RV</em> without any notes
-        but a <b>≈</b> symbol is inserted to show that the decision was intentional and not just an accidental ommision.
+        but a <b>≈</b> symbol is inserted to show that the decision was intentional and not just an accidental omission.
         These manuscript decisions were mostly made by the authors of the two main works that we relied on to translate
         the <em>OET</em> from—see the acknowledgements below for more details.)</li>
     </ul>
@@ -488,7 +502,7 @@ RV_INDEX_INTRO_HTML = '''<!DOCTYPE html>
         (in names that come from Hebrew with <a href="https://en.wikipedia.org/wiki/Shva">shva</a>)
         should be regarded as a fleeting (very short and unstressed), neutral vowel
         which is the minimal vowel required to linguistically join the surrounding consonants
-        e.g., in <i>Y<span class="schwa">ə</span>hūdāh</i>.</p>
+        e.g., in <i>Y<span class="schwa">ə</span>hūdāh</i> (Judah).</p>
     <p>Dipthongs (e.g., <i>ai</i>, <i>au</i>, <i>ei</i>, <i>oi</i>, <i>ou</i>)
         are a limited set of two vowels,
         where one vowel glides into the other,
@@ -550,7 +564,7 @@ RV_INDEX_INTRO_HTML = '''<!DOCTYPE html>
     <p>A work like this could not be done with building on the work of so many that have gone before, including:</p>
     <ul><li>The creator God who communicates with us in various ways,
         but who specifically inspired the writing of the Scriptures
-        and caused it to be preserved throughout the millenia
+        and caused them to be preserved throughout the millenia
         despite the best efforts of some who tried to destroy them.</li>
     <li>Those who took the time to write down their interactions with God and his messengers,
         beginning with Moses and those before him who wrote down their experiences even though making the writing materials was so much work,
@@ -561,25 +575,15 @@ RV_INDEX_INTRO_HTML = '''<!DOCTYPE html>
         so that we could have access to them.</li>
     <li>Those who studied the variations in those copies and helped us to get the best evaluations of
         which words were most likely present in the original manuscripts (<a href="https://en.wikipedia.org/wiki/Autograph">autographs</a>).
-        For the (mostly) Hebrew Old Testament, we are especially reliant on the Statistical Restoration work
+        For the (mostly) Hebrew Old Testament, we are especially reliant on the team work
         of <a href="https://hb.OpenScriptures.org/">Open Scriptures</a>, given to the world under a generous open licence.
-        For the Greek New Testament, we are especially reliant on the work
+        For the Greek New Testament, we are especially reliant on the Statistical Restoration work
         of the <a href="https://GreekCNTR.org">Center for New Testament Restoration</a>
         which is also given to the world under a generous open licence.</li>
     </ul>
   <h3 id="Status">Status</h3>
-    <p>English sentences have more limitations on their word order than Greek sentences do.
-        So any word-for-word Greek literal translation has to be reordered to be readable in English.
-        Currently, the words in the following books (just over 50% of the NT) have been mostly reordered:
-        <b>Mat, Mark, Luke, John, Acts, 1 Peter, 2 Peter, 3 John, and Jude</b>,
-        leaving the following books which have not yet been reordered at all
-        and will therefore be even harder to read in this preliminary <em>Literal Version</em>:
-        Rom, 1&2 Cor, Gal, Eph, Php, Col, 1&2 Thess, 1&2 Tim, Titus, Phlm, Heb, and 1&2 John.</p>
-    <p>After completing sentence reordering and fixing capitalisation and punctuation,
-        we then plan to do more investigation into word concordance.
-        For example, if an original language word can have multiple meanings,
-        we want to indicate in the <em>OET Literal Version</em> where a
-        translator has already made that interpretation.</p>
+    <p>The books of John and Mark are our latest work.
+        Other books might contain work from previous years that needs to be updated.</p>
   <h3 id="Feedback">Feedback</h3>
     <p>These web pages are a very preliminary preview into a work still in progress.
         The <em>OET Literal Version</em> is not yet finished, and not yet publicly released,
@@ -590,9 +594,9 @@ RV_INDEX_INTRO_HTML = '''<!DOCTYPE html>
         Thanks.</p>
   <p>HTML last updated: __LAST_UPDATED__</p>
 </body></html>
-'''
+"""
 
-RV_FAQ_HTML = '''<!DOCTYPE html>
+RV_FAQ_HTML = """<!DOCTYPE html>
 <html lang="en-US">
 <head>
   <title>OET Readers’ Version Development</title>
@@ -615,7 +619,7 @@ RV_FAQ_HTML = '''<!DOCTYPE html>
         and prophecies and letters, etc., were written as contiguous documents.
     Hence our section headings are designed not to break the text any more than necessary.</p>
 
-  <h3 id="paraphrase">Is the <em>Readers’ Version</em> a paraphrase?</h3>
+  <h3 id="paraphrase">Is this <em>Readers’ Version</em> a paraphrase?</h3>
   <p>Well, it’s close, in fact you could debate all day about what a paraphrase is.
     The short answer is that we don’t regard the <em>RV</em> as a paraphrase,
         but rather as a modern language translation.
@@ -626,9 +630,42 @@ RV_FAQ_HTML = '''<!DOCTYPE html>
     So we’ve done the hard work for you to make the Bible accessible
         and understandable to the average person.
     And always remember that the <em>OET</em> provides a <em>Literal Version</em>
-        that it’s intended be referred to alongside this <em>Readers’ Version</em>.
-    (This does mean that we were able to break away from ancient/traditional Bible wording
+        that’s intended be referred to alongside this <em>Readers’ Version</em>
+        if you’d really like a word-for-word rendering of the Hebrew or Greek.
+    (Having both does mean that we were able to break away from ancient/traditional Bible wording
         and think carefully about how we’d say that these days.)</p>
+
+  <h3 id="informal">Why does this <em>Readers’ Version</em> seem so informal?</h3>
+  <p>Oh, that probably means that you’re already accustomed to more traditional Bible translations
+        that sometimes propogate decisions made in the 1500s by William Tyndale,
+        or even back in the 1300s by John Wycliffe.
+    Now those early English translators did many things very well,
+        and we’re not here to criticise more modern English translations either,
+        but nevertheless it’s a sad fact that established traditions
+        can make it hard for anyone to make improvements.
+    For example, most Christians don’t even blink at the title often printed on Bible covers: “God’s Word”.
+        That’s because in Christian circles, ‘word’ often means ‘statement’, ‘account’, or ‘message’.
+        Only someone on the street might wonder which ‘word’ it means.
+        (Generally these days, a ‘word’ is something on a page like this one.)
+    It’s because we’ve become so accustomed to this unusual or quaint (or archaic?) use of language
+        that a Bible that actually uses natural English sounds so ‘informal’ to many readers.</p>
+
+  <h3 id="bias">Is this <em>Readers’ Version</em> theologically biased?</h3>
+  <p>Ha, we don’t think so, but if you find any slip-ups,
+        please do contact us.
+    Certainly we will have lost some readers by replacing ‘baptism’ (transliterated from the Greek word)
+        with ‘immersion’, but that’s primarily a translation decision
+        to use the regular meaning of the word rather than to put Greek into our English.
+    We certainly don’t have any intentional theological agenda in creating the <em>RV</em>
+        other than trying to use as little as possible of the language and terms
+        that you would only hear in church circles
+        and which don’t correspond with how other people would normally talk in the 2020s.<br>
+    In other words, the <em>RV</em> is aimed at sharing the Good News
+        with non-churched people without having to speak ‘Church English’ (or <i>jargon</i>) to them.
+    A side-effect is to express the message of the Biblical texts with fresh phrasing
+        that’s different from many traditional English translations
+        and thus encourage (or maybe even, <i>shock</i>) regular Bible readers
+        into seriously thinking about what the original writers were trying to communicate.</p>
 
   <h3 id="bold">What are the bolded words in the text?</h3>
   <p>As explained in the <a href="index.html#Key">Key</a>, the bold text
@@ -646,15 +683,17 @@ RV_FAQ_HTML = '''<!DOCTYPE html>
         Thanks.</p>
   <p>HTML last updated: __LAST_UPDATED__</p>
 </body></html>
-'''
+"""
+assert "'" not in RV_FAQ_HTML
+assert '--' not in RV_FAQ_HTML
 
-DISCLAIMER_HTML = '''<p>Note: This is still a very early look into the unfinished text
+DISCLAIMER_HTML = """<p>Note: This is still a very early look into the unfinished text
 of the <em>Open English Translation</em> of the Bible.
-Please double-check the text before using in public.</p>'''
+Please double-check the text in advance before using in public.</p>"""
 
-RV_BOOK_INTRO_HTML1 = '''<p>Note: This <em>Readers’ Version</em> is a translation
+RV_BOOK_INTRO_HTML1 = """<p>Note: This <em>Readers’ Version</em> is a translation
 into contemporary English aimed at <i>the person on the street</i> who
-hasn’t necessarily been brought up with exposure to Biblical jargon and/or King James English.
+hasn’t necessarily been brought up with exposure to Biblical jargon and/or 16<sup>th</sup> century English.
 It’s designed to be used alongside the <em>Literal Version</em> which gives
 the English reader a window into what’s actually written in the original languages.
 (See the <a href="../LiteralVersion/index.html#Intro">introduction</a> for more details—we
@@ -662,14 +701,14 @@ recommend that you read the introduction first if you’re wanting to read and u
 Between the two versions you should be able to easily read the clear message of the text,
 while at the same time being able to check for yourself if that’s a fair translation
 of what the original authors had inked onto their ancient manuscripts.</p>
-'''
+"""
 
-INTRO_PRAYER_HTML = '''<p class="shortPrayer">It is our prayer that this <em>Readers’ Version</em> of the
+INTRO_PRAYER_HTML = """<p class="shortPrayer">It is our prayer that this <em>Readers’ Version</em> of the
 <em>Open English Translation</em> of the Bible will give you clear understanding of
-the messages written by the inspired Biblical writers.</p><!--shortPrayer-->
-'''
+the accounts and messages written by the God-inspired Biblical writers.</p><!--shortPrayer-->
+"""
 
-START_HTML = '''<!DOCTYPE html>
+START_HTML = """<!DOCTYPE html>
 <html lang="en-US">
 <head>
   <title>__TITLE__</title>
@@ -679,7 +718,7 @@ START_HTML = '''<!DOCTYPE html>
   <link rel="stylesheet" type="text/css" href="BibleBook.css">
 </head>
 <body>
-'''
+"""
 END_HTML = '</body></html>\n'
 
 whole_Torah_html = whole_NT_html = ''
@@ -709,9 +748,9 @@ def produce_HTML_files() -> None:
             source_filename = f'OET-RV_{BBB}.ESFM'
             with open( OET_USFM_InputFolderPath.joinpath(source_filename), 'rt', encoding='utf-8' ) as usfm_input_file:
                 usfm_text = usfm_input_file.read()
-            assert "'" not in usfm_text, f'''Why do we have single quote in {source_filename}: {usfm_text[usfm_text.index("'")-20:usfm_text.index("'")+22]}'''
+            assert "'" not in usfm_text, f"""Why do we have single quote in {source_filename}: {usfm_text[usfm_text.index("'")-20:usfm_text.index("'")+22]}"""
             # TODO: This needs to be uncommented after removing fun text from RV
-            # assert '"' not in usfm_text, f'''Why do we have double quote in {source_filename}: {usfm_text[usfm_text.index('"')-20:usfm_text.index('"')+22]}'''
+            # assert '"' not in usfm_text, f"""Why do we have double quote in {source_filename}: {usfm_text[usfm_text.index('"')-20:usfm_text.index('"')+22]}"""
 
             book_start_html, book_html, book_end_html = convert_USFM_to_simple_HTML( BBB, usfm_text )
 
@@ -791,7 +830,7 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
         links_html = links_html.replace( '__PREVIOUS__', f'<a href="{previousBBB}.html">Previous Book ({previousBBB})</a>{EM_SPACE}')
         links_html = links_html.replace( '__NEXT__', '' if BBB==NT_BBB_LIST[-1]
             else f'{EM_SPACE}<a href="{nextBBB}.html">Next Book ({nextBBB})</a>')
-    else: unexpected_BBB, BBB
+    else: raise Exception( f"unexpected_BBB '{BBB}'" )
 
     C = V = '0'
     book_html = ''
@@ -846,7 +885,7 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
                         + (rest if rest else '≈')
             else: # it's a simple verse number
                 assert V.isdigit(), f"Expected a verse number digit with {V=} {rest=}"
-                book_html = f'{book_html}{"" if book_html.endswith(">") else " "}' \
+                book_html = f'{book_html}{"" if book_html.endswith(">") or book_html.endswith("—") else " "}' \
                         + f'{f"""<span id="C{C}"></span><span class="C" id="C{C}V1">{C}</span>""" if V=="1" else f"""<span class="V" id="C{C}V{V}">{V}{NARROW_NON_BREAK_SPACE}</span>"""}' \
                         + (rest if rest else '≈')
         elif marker in ('s1','s2','s3'):
@@ -952,20 +991,39 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
         book_html = f'{book_html}</{inParagraph}>\n'
     book_html = f'{book_html}</div><!--BibleText-->'
 
+    # Handle all footnotes in one go (we don't check for matching \fr fields)
+    startIx = 0
+    while True:
+        xIx = book_html.find( '\\f ', startIx )
+        if xIx == -1: break # all done
+        ftIx = book_html.find( '\\ft ', startIx+3 )
+        assert ftIx != -1
+        fEndIx = book_html.find( '\\f*', ftIx+3 )
+        assert fEndIx != -1
+        fnoteMiddle = book_html[ftIx+4:fEndIx]
+        fnote = f'<span class="fn" title="Note: {fnoteMiddle}">[fn]</span>'
+        # print( f"{BBB} {fnote}" )
+        book_html = f'{book_html[:xIx]}{fnote}{book_html[fEndIx+3:]}'
+        startIx = fEndIx + 3
+    # # But just remove footnotes for now ........................... temp xxxxxxxxxxxxxxxxxxxxxx
+    # footnoteRegex = '\\\\f (.+?)\\\\f\\*'
+    # book_html = re.sub( footnoteRegex, '', book_html)
+    assert '\\f' not in book_html, f"{book_html[book_html.index(f'{BACKSLASH}f')-10:book_html.index(f'{BACKSLASH}f')+12]}"
+
     # Now handle all cross-references in one go (we don't check for matching \xo fields)
     startIx = 0
     while True:
         xIx = book_html.find( '\\x ', startIx )
         if xIx == -1: break # all done
-        xtIx = book_html.find( '\\xt ', startIx+3 )
-        assert xtIx != -1
-        xEndIx = book_html.find( '\\x*', xtIx+3 )
-        assert xEndIx != -1
-        xrefMiddle = book_html[xtIx+4:xEndIx].replace('\\xo ','').replace('\\xt ','') # Fix things like "Gen 25:9-10; \xo b \xt Gen 35:29."
-        xref = f'<span class="xref" title="See also {xrefMiddle}">[ref]</span>' # was †
+        ftIx = book_html.find( '\\xt ', startIx+3 )
+        assert ftIx != -1
+        fEndIx = book_html.find( '\\x*', ftIx+3 )
+        assert fEndIx != -1
+        fnoteMiddle = book_html[ftIx+4:fEndIx].replace('\\xo ','').replace('\\xt ','') # Fix things like "Gen 25:9-10; \xo b \xt Gen 35:29."
+        fnote = f'<span class="xref" title="See also {fnoteMiddle}">[ref]</span>' # was †
         # print( f"{BBB} {xref}" )
-        book_html = f'{book_html[:xIx]}{xref}{book_html[xEndIx+3:]}'
-        startIx = xEndIx + 3
+        book_html = f'{book_html[:xIx]}{fnote}{book_html[fEndIx+3:]}'
+        startIx = fEndIx + 3
     assert '\\x' not in book_html, f"{book_html[book_html.index(f'{BACKSLASH}x')-10:book_html.index(f'{BACKSLASH}x')+12]}"
 
     chapter_links = [f'<a href="#C{chapter_num}">C{chapter_num}</a>' for chapter_num in range( 1, int(C)+1 )]
@@ -979,12 +1037,9 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
                          .replace( '\\em*', '</em>' )
     book_html = book_html.replace( '\\it ', '<i>' ) \
                          .replace( '\\it*', '</i>' )
-    book_html = book_html.replace( '\\add ', '<span class="added">' ) \
+    book_html = book_html.replace( '\\add ', '<span class="RVadded">' ) \
                          .replace( '\\add*', '</span>' )
     book_html = livenIORs( BBB, book_html )
-    # But just remove footnotes for now ........................... temp xxxxxxxxxxxxxxxxxxxxxx
-    footnoteRegex = '\\\\f (.+?)\\\\f\\*'
-    book_html = re.sub( footnoteRegex, '', book_html)
     assert '\\' not in book_html, f"{book_html[book_html.index(f'{BACKSLASH}')-20:book_html.index(f'{BACKSLASH}')+22]}"
 
     return ( book_start_html,

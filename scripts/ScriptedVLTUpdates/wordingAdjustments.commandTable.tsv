@@ -46,8 +46,8 @@ H									Hallelujah			Praise_יָהּ		Rev 19:3
 w									magi			wise_men
 									millstone			grinding_stone		Matt 18:6
 w									O			Oh
-G									Pharisees			Φαρισαῖος_\add sect\add*		Luke 6:7
-G									Pharisee			Φαρισαῖος_\add sect_member\add*
+G									Pharisees			Φαρισαῖος_\add party\add*		Luke 6:7
+G									Pharisee			Φαρισαῖος_\add party_member\add*
 									physician			doctor		Mark 2:17
 									Portico			Veranda		Acts 5:12
 									praetorium			residence_of_the_governor		John 18:28 πραιτώριον
@@ -69,15 +69,20 @@ dG									talent			τάλαντον\add _of_silver\add*		Matt 25:25
 									thrice			three-times		Matt 26:34
 									Unleavened			non-fermented
 									winepress			wine-press
-									word			message		John 1:1, Mrk 4:15
+w									word			message		John 1:1, Mrk 4:15
+w									words			messages		John 1:1, Mrk 4:15
 									wrath			severe_anger
 G									Zealot			Φαρισαῖος_ζηλωτής_\add group_member\add*		Luke 6:15
 
 # Uphill/downhill
 									came_down			came_downhill		Jhn 2:12
-									come_down			come_downhill
-									going_up			going_uphill		Mrk 10:33
-									went_up			went_uphill		Jhn 2:13
+						MRK_13:15,MRK_15:30,MRK_15:32			come_down			come_downhill		(But not from rooftop or cross)
+									coming_down			coming_downhill		Jhn 1:10, 9:9
+									bringing_ them _up			bringing_ them _uphill		Mrk 9:2
+									come_up			come_uphill		Mrk 15:41
+					JHN_7:8				go_up			go_uphill		Whenever it refers to Jerusalem
+						MRK_4:8,MRK_4:32			going_up			going_uphill		Mrk 10:33
+						MRK_4:7,MRK_6:51			went_up			went_uphill		Jhn 2:13
 
 # Currency
 G									assarion			ἀσσάριον_\add coin\add*		Luke 12:6
