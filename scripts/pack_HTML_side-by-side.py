@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-11-25' # by RJH
+LAST_MODIFIED_DATE = '2022-11-30' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.22'
+PROGRAM_VERSION = '0.24'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -72,7 +72,8 @@ assert OET_LV_HTML_InputFolderPath.is_dir()
 OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'derivedTexts/simpleHTML/SideBySide/' )
 assert OET_HTML_OutputFolderPath.is_dir()
 
-EN_SPACE, EM_SPACE = ' ', ' '
+# EN_SPACE = ' '
+EM_SPACE = ' '
 # NARROW_NON_BREAK_SPACE = ' '
 OT_BBB_LIST = ('GEN','EXO','LEV','NUM','DEU','JOS','JDG','RUT','SA1','SA2','KI1','KI2','CH1','CH2',
                 'EZR','NEH','EST','JOB','PSA','PRO','ECC','SNG','ISA','JER','LAM','EZE',
@@ -131,7 +132,7 @@ div.rightBox { float:right; width:35%; border:3px solid #73AD21; padding:0.2em; 
 p.s1 { margin-top:0.1em; margin-bottom:0; font-weight:bold; }
 p.r { margin-top:0; margin-bottom:0; font-size:0.75em; }
 p.LVsentence { margin-top:0.2em; margin-bottom:0.2em; }
-p.p { margin-top:0.2em; margin-bottom:0.2em; }
+p.p { text-indent:0.5em; margin-top:0.2em; margin-bottom:0.2em; }
 p.q1 { text-indent:1em; margin-top:0.2em; margin-bottom:0.2em; }
 p.q2 { text-indent:2em; margin-top:0.2em; margin-bottom:0.2em; }
 p.m {  }
@@ -215,15 +216,30 @@ SBS_INDEX_INTRO_HTML = """<!DOCTYPE html>
         into what’s actually written there in those original languages.
         It won’t be easy reading,
         but it should be insightful as the different wording will require more concentration.</p>
-  <h3 id="Goals">Goals</h3>
-    <p>Put simply, the goal of the <em>Open English Translation</em> is simply to
-        <b>make the Bible more accessible to this current generation</b>
+  <h3 id="Goals">Goals and intended audience</h3>
+    <p>The OET has the following goals:</p>
+    <ul><li class="intro" id="Goal">The primary goal of the <em>Open English Translation</em>
+        is <b>to make the Bible more accessible to this current generation</b>
         with the best of a free-and-open easy-to-understand <em>Readers’ Version</em>
-        alongside a faithful <em>Literal Version</em> so that you yourself can checkout what was said and what is interpreted.</p>
-    <p id="LearningGoal">A secondary goal is to expose more people to some of the background of where our Bibles come from
+        alongside a faithful <em>Literal Version</em> so that readers themselves can checkout what was said and what is interpreted.</li>
+    <li class="intro">Part of the motivation comes from our work on the street and door-to-door
+            where we worked hard to explain the Good News about Jesus
+            to people without any church background.
+        The <em>Readers’ Version</em> strives to replace jargon and terminology that’s only
+            heard at church with words and phrases that should be understood by modern English speakers.</li>
+    <li class="intro" id="LearningGoal">A further goal is to expose more people to some of the background of where our Bibles come from
         and how translators make decisions,
         i.e., <b>to teach</b> a little more about original manuscripts
-        and to challenge a little more about translation traditions that can possibly be improved.<p>
+        and to challenge a little more about English translation traditions
+        (some going back to the 1500’s)
+        that can possibly be improved.</li>
+    <li class="intro">Finally, we also want a translation that can be read by Christians with
+        many years of Bible reading experience,
+        but who might benefit by reading the accounts in slightly different words
+        that make it fresh and interesting, and
+        even provokes deeper thought into what the original speakers or writers
+        likely meant.</li>
+    </ul>
   <h3 id="Distinctives">Distinctives</h3>
     <p>The OET has the following distinguishing points:</p>
     <ul><li class="intro">An easy-to-understand <em>Readers’ Version</em> side-by-side with a very <em>Literal Version</em></li>
@@ -557,6 +573,22 @@ SBS_INDEX_INTRO_HTML = """<!DOCTYPE html>
         which is the sound that some UK speakers put in the middle of the word <i>butter</i> (baʼa),
         so <i>Abraʼam</i> (from the Greek) is three distinct syllables—those
         two <i>a</i>’s side-by-side should not be made into a long <i>ā</i>.</p>
+  <h3 id="Language">Language and words</h3>
+    <p>As mentioned in our <a href="#Goals">Goals above</a>, two of
+            our goals relate to the kind of language that the Bible is translated into.
+        Here are some of the changes:</p>
+    <ul><li class="intro" id="genitives">It’s common in the original Biblical languages
+            for possessive pronouns to follow the head noun,
+            i.e., phrases like ‘the house of Zechariah’,
+            or even ‘the house of the father of me’.
+        Of course, we have shorter ways of saying those in modern English.
+        But consider ‘the kingdom of God’ or ‘the son of man’.
+        Could there be more up-to-date ways to express terms like this?
+        Certainly we’ve become so accustomed to phrases like those in the church context
+            that we forget that others don’t talk like that.
+        But that doesn’t mean that God wouldn’t want us to have the scriptures
+            in the language that we actually speak.</li>
+    </ul>
   <h3 id="Learning">Learning</h3>
     <p>As mentioned in our <a href="#Goals">Goals above</a>, one of
         our main goals is to <a href="#LearningGoal">educate</a> our readers about how we get our Bibles.
@@ -577,7 +609,7 @@ SBS_INDEX_INTRO_HTML = """<!DOCTYPE html>
                 and weren’t combined into a <a href="https://en.wikipedia.org/wiki/Codex">book form</a> similar to
                 what we’re accustomed to until many centuries later.
             But of course, the individual scrolls could easily be placed in a different order.
-            The traditional <a href="https://en.wikipedia.org/wiki/Hebrew_Bible">Hebrew Bible<a/>
+            The traditional <a href="https://en.wikipedia.org/wiki/Hebrew_Bible">Hebrew Bible</a>
             not only has what we typically refer to as the <i>Old Testament</i> “books” in a different order,
             they also have different names, are grouped into different categories,
             and are combined/separated into a different number of “books”.
@@ -845,7 +877,10 @@ SBS_GLOSSARY_HTML = """<!DOCTYPE html>
         about ‘believing in Jesus’?
     In most cases, they’re talking about ‘believing that Jesus is the messiah’,
         or in other words,
-            ‘believing that Jesus is authentically sent from heaven and doing God’s work’.</p>
+            ‘believing that Jesus is authentically sent from heaven and doing God’s work’.
+    This can be clearly seen when <a href="JHN.html#C11V27">Martha responds</a>
+        to Jesus’ statement about
+        those who ‘believe in me’.</p>
   <p>Because belief in a coming messiah is not a basic staple of our modern culture,
         sometimes we need to help our readers know what was at stake
         as people of those times either rejected or ‘believed in’ Jesus.</p>
@@ -864,6 +899,13 @@ SBS_GLOSSARY_HTML = """<!DOCTYPE html>
     At least modern readers understand the work of an apprentice who works for the master tradesman
         who takes responsibility for their work,
         even if much of the actual teaching is done away at a block course in an institution these days.</p>
+
+  <h3 id="father">father, ancestor</h3>
+  <p>In the biblical languages and cultures, they often used the term for ‘father’
+        to refer to any of their male ancestors.
+        Thus Abraham was considered the ‘father’ of the Jews.
+    We can use the term to mean ‘founder’ in English, e.g., ‘the father of jazz’,
+        but don’t usually use it for ancestors.</p>
 
   <h3 id="glory">glory, glorify</h3>
   <p>It’s not common to hear on the street about someone being ‘glorified’
@@ -965,6 +1007,38 @@ SBS_GLOSSARY_HTML = """<!DOCTYPE html>
 assert "'" not in SBS_GLOSSARY_HTML
 assert '--' not in SBS_GLOSSARY_HTML
 
+SBS_NOTES_HTML = """<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>OET Development Notes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Bible, open, translation, OET, English, literal, readers, modern, notes, outstanding, free">
+  <link rel="stylesheet" type="text/css" href="BibleBook.css">
+</head>
+<body>
+  <p><a href="../">Up</a></p>
+  <h1>Open English Translation (OET) Development</h1>
+  <h2>Notes</h2>
+  <p>This page contains a list of various issues that need further work
+        and/or consistency checking.</p>
+
+  <h3 id="believeIn">believe in me</h3>
+  <p>Need to check for consistency.</p>
+
+  <h3 id="age">will not die to the age</h3>
+  <p>Need to check for consistency—‘to the age’
+    just seems to be just omitted in most translations.</p>
+
+  <h3 id="Jesus">Jesus vs Yeshua</h3>
+  <p>Need to decide.</p>
+
+  <p>HTML last updated: __LAST_UPDATED__</p>
+</body></html>
+"""
+assert "'" not in SBS_NOTES_HTML
+assert '--' not in SBS_NOTES_HTML
+
 SBS_DISCLAIMER_HTML = """<p>Note: This is still a very early look into the unfinished text
     of the <em>Open English Translation</em> of the Bible.
 Please double-check the text in advance before using in public.
@@ -976,13 +1050,22 @@ assert '--' not in SBS_DISCLAIMER_HTML
 
 SBS_BOOK_INTRO_HTML1 = """<p>Note: The <em>Readers’ Version</em> on the left is a translation
 into contemporary English aimed at <i>the person on the street</i> who
-hasn’t necessarily been brought up with exposure to Biblical jargon and/or 16<sup>th</sup> century English.
+hasn’t necessarily been brought up with exposure to Biblical jargon and/or 500-year old English.
 It’s designed to be used alongside the <em>Literal Version</em> on the right which gives
 the English reader a window into what’s actually written in the original languages.
 (See the <a href="index.html#Intro">introduction</a> for more details—we
 recommend that you read the introduction first if you’re wanting to fully understand the <em>Literal Version</em>.)
 By comparing the left and right columns, you should be able to easily get the message of the text,
 while at the same time keeping an eye on what it was actually translated from.</p>
+<p>Note that <span class="RVadded">greyed words</span> in the <em>RV</em> are words that the translators
+consider were most probably implied, but as none of us can double-check
+with original speakers or writers, the reader is free to disagree.
+They are clearly marked because we have tried to be as honest / transparent as possible.</p>
+<p>The <span class="nominaSacra">bold words</span> in the <em>LV</em> are words that the orginal writers or copyists
+marked to indicate that they considered them to refer to God.
+The <span class="added">lighter coloured words</span> are words which aren’t needed
+in the grammar of the original languages but are required or implied in English.
+You need to read the <a href="index.html#Key">Key</a> to understand them.</p>
 """
 assert "'" not in SBS_BOOK_INTRO_HTML1
 assert '--' not in SBS_BOOK_INTRO_HTML1
@@ -1089,6 +1172,11 @@ def pack_HTML_files() -> None:
     assert "'" not in glossaryHTML
     with open( OET_HTML_OutputFolderPath.joinpath('Glossary.html'), 'wt', encoding='utf-8' ) as html_glossary_file:
         html_glossary_file.write( glossaryHTML )
+    notesHTML = SBS_NOTES_HTML.replace('   ',' ').replace('  ', ' ').replace('\n ', '\n') \
+            .replace( '__LAST_UPDATED__', f"{datetime.now().strftime('%Y-%m-%d')} <small>by {PROGRAM_NAME_VERSION}</small>" )
+    assert "'" not in notesHTML
+    with open( OET_HTML_OutputFolderPath.joinpath('Notes.html'), 'wt', encoding='utf-8' ) as html_notes_file:
+        html_notes_file.write( notesHTML )
 
     # # Save our long book conglomerates
     # with open( OET_HTML_OutputFolderPath.joinpath('OET-RV-LV-Torah.html'), 'wt', encoding='utf-8' ) as html_output_file:

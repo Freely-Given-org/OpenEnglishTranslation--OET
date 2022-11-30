@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-11-25' # by RJH
+LAST_MODIFIED_DATE = '2022-11-30' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.39'
+PROGRAM_VERSION = '0.42'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -64,7 +64,8 @@ OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'derivedTexts/simpleHTM
 assert OET_USFM_InputFolderPath.is_dir()
 assert OET_HTML_OutputFolderPath.is_dir()
 
-EN_SPACE, EM_SPACE = ' ', ' '
+# EN_SPACE = ' '
+EM_SPACE = ' '
 NARROW_NON_BREAK_SPACE = ' '
 BACKSLASH = '\\'
 OT_BBB_LIST = ('GEN','EXO','LEV','NUM','DEU','JOS','JDG','RUT','SA1','SA2','KI1','KI2','CH1','CH2',
@@ -114,7 +115,7 @@ div.rightBox { float:right;
         border:3px solid #73AD21; padding:0.2em; }
 p.s1 { margin-top:0.1em; margin-bottom:0.1em; font-weight:bold; }
 p.r { margin-top:0; margin-bottom:0.1em; font-size:0.8em; }
-p.p {  }
+p.p { text-indent:0.5em; margin-top:0.2em; margin-bottom:0.2em; }
 p.q1 { text-indent:1em; margin-top:0.2em; margin-bottom:0.2em; }
 p.q2 { text-indent:2em; margin-top:0.2em; margin-bottom:0.2em; }
 p.m {  }
@@ -693,14 +694,18 @@ Please double-check the text in advance before using in public.</p>"""
 
 RV_BOOK_INTRO_HTML1 = """<p>Note: This <em>Readers’ Version</em> is a translation
 into contemporary English aimed at <i>the person on the street</i> who
-hasn’t necessarily been brought up with exposure to Biblical jargon and/or 16<sup>th</sup> century English.
-It’s designed to be used alongside the <em>Literal Version</em> which gives
+hasn’t necessarily been brought up with exposure to Biblical jargon and/or 500-year old English.
+(It’s designed to be used alongside the <em>Literal Version</em> which gives
 the English reader a window into what’s actually written in the original languages.
 (See the <a href="../LiteralVersion/index.html#Intro">introduction</a> for more details—we
 recommend that you read the introduction first if you’re wanting to read and understand the <em>Literal Version</em>.)
 Between the two versions you should be able to easily read the clear message of the text,
 while at the same time being able to check for yourself if that’s a fair translation
-of what the original authors had inked onto their ancient manuscripts.</p>
+of what the original authors had inked onto their ancient manuscripts.)</p>
+<p>Note that <span class="RVadded">greyed words</span> are words that the translators
+consider were most probably implied, but as none of us can double-check
+with original speakers or writers, the reader is free to disagree.
+They are clearly marked because we have tried to be as honest / transparent as possible.</p>
 """
 
 INTRO_PRAYER_HTML = """<p class="shortPrayer">It is our prayer that this <em>Readers’ Version</em> of the
@@ -846,7 +851,13 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
         dPrint( 'Never', DEBUGGING_THIS_MODULE, f"{BBB} {marker}='{rest}'" )
         if marker in ('id','usfm','ide','h','toc2','toc3'):
             continue # We don't need to map those markers to HTML
-        if marker in ('rem',):
+        if marker == 'rem':
+            # print( f"{BBB} {C}:{V} {inRightDiv=} {inParagraph=} {inTable} {marker}={rest}")
+            assert not inRightDiv
+            assert not inTable
+            if inParagraph:
+                book_html = f'{book_html}</{inParagraph}>\n'
+                inParagraph = None
             book_html = f'{book_html}<p class="{marker}">{rest}</p>\n'
         elif marker in ('mt1','mt2'):
             if not done_disclaimer: # Add an extra explanatory paragraph at the top
@@ -886,7 +897,7 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
             else: # it's a simple verse number
                 assert V.isdigit(), f"Expected a verse number digit with {V=} {rest=}"
                 book_html = f'{book_html}{"" if book_html.endswith(">") or book_html.endswith("—") else " "}' \
-                        + f'{f"""<span id="C{C}"></span><span class="C" id="C{C}V1">{C}</span>""" if V=="1" else f"""<span class="V" id="C{C}V{V}">{V}{NARROW_NON_BREAK_SPACE}</span>"""}' \
+                        + f'{f"""<span id="C{C}"></span><span class="C" id="C{C}V1">{C}{NARROW_NON_BREAK_SPACE}</span>""" if V=="1" else f"""<span class="V" id="C{C}V{V}">{V}{NARROW_NON_BREAK_SPACE}</span>"""}' \
                         + (rest if rest else '≈')
         elif marker in ('s1','s2','s3'):
             if inParagraph:

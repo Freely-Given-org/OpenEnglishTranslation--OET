@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-11-24' # by RJH
+LAST_MODIFIED_DATE = '2022-11-30' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV USFM to simple HTML"
-PROGRAM_VERSION = '0.40'
+PROGRAM_VERSION = '0.41'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -68,7 +68,8 @@ assert OET_NT_USFM_InputFolderPath.is_dir()
 # assert OET_USFM_OutputFolderPath.is_dir()
 assert OET_HTML_OutputFolderPath.is_dir()
 
-EN_SPACE, EM_SPACE = ' ', ' '
+# EN_SPACE = ' '
+EM_SPACE = ' '
 NARROW_NON_BREAK_SPACE = ' '
 OT_BBB_LIST = ('GEN','EXO','LEV','NUM','DEU','JOS','JDG','RUT','SA1','SA2','KI1','KI2','CH1','CH2',
                 'EZR','NEH','EST','JOB','PSA','PRO','ECC','SNG','ISA','JER','LAM','EZE',
@@ -806,7 +807,7 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
                 book_html = f'{book_html}{INTRO_PRAYER_HTML}<div class="BibleText">\n'
             # Note: as well as CV id's, we make sure there are simple C id's there as well
             start_c_bit = '<p class="LVsentence" id="C1">' if C=='1' else f'<a class="upLink" href="#" id="C{C}">↑</a> '
-            book_html = f'{book_html}{start_c_bit}<span class="C" id="C{C}V1">{C}</span>{EN_SPACE}'
+            book_html = f'{book_html}{start_c_bit}<span class="C" id="C{C}V1">{C}</span>{NARROW_NON_BREAK_SPACE}'
         elif marker == 'v':
             try: V, rest = rest.split( ' ', 1 )
             except ValueError: V, rest = rest, ''
