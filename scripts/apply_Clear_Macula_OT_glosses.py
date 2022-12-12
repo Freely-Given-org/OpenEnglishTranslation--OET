@@ -55,10 +55,10 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-10-19' # by RJH
+LAST_MODIFIED_DATE = '2022-12-01' # by RJH
 SHORT_PROGRAM_NAME = "apply_Clear_Macula_OT_glosses"
 PROGRAM_NAME = "Apply Macula OT glosses"
-PROGRAM_VERSION = '0.56'
+PROGRAM_VERSION = '0.57'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -149,6 +149,9 @@ def loadOurSourceTable() -> bool:
             seg_count += 1
         elif row_type.endswith('note'):
             note_count += 1
+            # if row['Ref'].startswith('PSA_') and row['WordOrMorpheme'].startswith('KJV:Ps.') and row['WordOrMorpheme'].endswith('.1'):
+            #     # This signals the end of a Psalm description field (past of the first verse in the original Hebrew versification)
+            #     print(row)
         elif row_type in ('w','Aw','wK','AwK'): # w=word, A=Aramaic (rather than Hebrew), K=Ketiv
             unique_words.add(row['WordOrMorpheme'])
         elif row_type in ('m','M','Am','AM','mK','MK','AmK','AMK'): # m=morpheme, M=last morpheme in word, A=Aramaic (rather than Hebrew), K=Ketiv

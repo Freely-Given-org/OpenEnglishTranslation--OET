@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-11-30' # by RJH
+LAST_MODIFIED_DATE = '2022-12-02' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.42'
+PROGRAM_VERSION = '0.44'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -754,8 +754,9 @@ def produce_HTML_files() -> None:
             with open( OET_USFM_InputFolderPath.joinpath(source_filename), 'rt', encoding='utf-8' ) as usfm_input_file:
                 usfm_text = usfm_input_file.read()
             assert "'" not in usfm_text, f"""Why do we have single quote in {source_filename}: {usfm_text[usfm_text.index("'")-20:usfm_text.index("'")+22]}"""
-            # TODO: This needs to be uncommented after removing fun text from RV
+            # TODO: This might need to be uncommented if there's no URLs or other HTML in the RV
             # assert '"' not in usfm_text, f"""Why do we have double quote in {source_filename}: {usfm_text[usfm_text.index('"')-20:usfm_text.index('"')+22]}"""
+            assert '  ' not in usfm_text, f"""Why do we have doubled spaces in {source_filename}: {usfm_text[usfm_text.index('  ')-20:usfm_text.index('  ')+22]}"""
 
             book_start_html, book_html, book_end_html = convert_USFM_to_simple_HTML( BBB, usfm_text )
 
@@ -917,12 +918,18 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
             assert inRightDiv
             assert not inTable
             assert rest[0]=='(' and rest[-1]==')'
+            # Liven section reference links
             linkedBits = []
+            lastBBB = None
             for restBit in rest[1:-1].split( '; '):
                 dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{BBB} {C}:{V} r='{rest}' {restBit=}")
                 try:
                     bkCode, linkCV = restBit.rsplit(' ', 1)
                     linkBBB = BibleOrgSysGlobals.loadedBibleBooksCodes.getBBBFromText( bkCode )
+                    if not linkBBB:
+                        assert bkCode[0].isdigit(), f"{BBB} {C}:{V}: {restBit=} {bkCode=} {linkCV=} {linkBBB=} {lastBBB=}"
+                        linkBBB = lastBBB
+                    assert linkBBB, f"{BBB} {C}:{V}: {restBit=} {bkCode=} {linkCV=} {linkBBB=} {lastBBB=}"
                 except ValueError: linkCV = restBit # and use the last book code
                 dPrint( 'Never', DEBUGGING_THIS_MODULE, f"  {bkCode=} {linkBBB=} {linkCV=}" )
                 firstCVRef = linkCV.replace('–','-').split('-')[0]
@@ -938,6 +945,7 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
                 dPrint( 'Never', DEBUGGING_THIS_MODULE, f"  {firstCVRef=} {linkC=}:{linkV=}")
                 link = f'<a href="{linkBBB}.html#C{linkC}V{linkV}">{restBit}</a>'
                 linkedBits.append(link)
+                lastBBB = linkBBB
             book_html = f'{book_html}<p class="{marker}">({"; ".join( linkedBits )})</p></div><!--rightBox-->\n'
             inRightDiv = False
         elif marker in ('p','q1','q2','m','mi','nb','pi1'):
@@ -995,7 +1003,7 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
             inIntroduction = False
         elif marker not in ('ie','cl'):
             dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Found unexpected {marker} marker in {BBB}" )
-            logging.error( f"{BBB} {C}:{V} RV has unexpected USFM marker: \\{marker}='{rest}'" )
+            logging.critical( f"{BBB} {C}:{V} RV has unexpected USFM marker: \\{marker}='{rest}'" )
             book_html = f'{book_html}<p>GOT UNEXPECTED{marker}={rest}</p>'
     assert not inRightDiv
     if inParagraph:

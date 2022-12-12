@@ -49,10 +49,10 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.OriginalLanguages import Hebrew
 
 
-LAST_MODIFIED_DATE = '2022-11-16' # by RJH
+LAST_MODIFIED_DATE = '2022-12-01' # by RJH
 SHORT_PROGRAM_NAME = "Prepare_OSHB_for_glossing"
 PROGRAM_NAME = "Prepare OSHB for glossing"
-PROGRAM_VERSION = '0.48'
+PROGRAM_VERSION = '0.49'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -218,10 +218,14 @@ def create_expanded_TSV_table() -> bool:
                 assert row['RowType'] == 'note'
                 assert row['Special'] in ('variant','alternative','exegesis'), f"Got {row['FGID']} note {row['Special']=}"
                 new_type = f"{row['Special']} {new_type}"
+        # if row['RowType']=='seg' or row['RowType']=='note':
+        #     print(f"{row['Ref']=} {row['RowType']=} {row['WordOrMorpheme']=}")
+        #     noCants = ''
+        # else: noCants = removeCantillationMarks(row['WordOrMorpheme'], removeMetegOrSiluq=True)
         newRowDict = { 'Ref': row['Ref'], 'OSHBid': row['OSHBid'], 'RowType': new_type,
                         'Strongs': row['Strongs'], 'CantillationHierarchy': row['CantillationHierarchy'], 'Morphology': new_morphology,
                         'WordOrMorpheme': row['WordOrMorpheme'],
-                        'NoCantillations': removeCantillationMarks(row['WordOrMorpheme'], removeMetegOrSiluq=True),
+                        'NoCantillations': '' if row['RowType']=='seg' or row['RowType']=='note' else removeCantillationMarks(row['WordOrMorpheme'], removeMetegOrSiluq=True),
                         'GlossCapitalisation': glossCapitalisation,
                         'GlossPunctuation': '.' if new_type=='seg' and new_morphology=='x-sof-pasuq' else '',
                         'GlossOrder': str(glossOrderInt), }

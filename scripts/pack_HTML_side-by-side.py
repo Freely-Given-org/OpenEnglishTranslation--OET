@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-11-30' # by RJH
+LAST_MODIFIED_DATE = '2022-12-02' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.24'
+PROGRAM_VERSION = '0.26'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -103,8 +103,10 @@ def main():
 # end of pack_HTML_side-by-side.main
 
 
-# If you change any colours, etc., also need to adjust the Key above
-SBS_CSS_TEXT = """div.container { display:grid; column-gap:0.6em; grid-template-columns:0.8fr 1.2fr; }
+# If you change any colours, etc., may need to adjust the Key above
+# . selects class, # is id
+SBS_CSS_TEXT = """button#underlineButton { float:right; }
+div.container { display:grid; column-gap:0.6em; grid-template-columns:0.85fr 1.15fr; }
 div.BibleText { }
 span.upLink { font-size:1.5em; font-weight:bold; }
 span.C { font-size:1.1em; color:green; }
@@ -146,6 +148,43 @@ p.io1 { text-indent:2em; margin-top:0.2em; margin-bottom:0.2em; }
 span.ior { font-weight:bold; } // font-style:italic;
 """
 
+SBS_JS = """
+function hide_show_underlines() {
+    console.log('hide_show_underlines()');
+    ul_classes = ['ul', 'dom'];
+    // ul_colours = ['darkGrey'];
+    let btn = document.getElementById('underlineButton');
+    if (btn.textContent == 'Hide underlines') {
+        console.log('It was hide');
+        for (let cl of ul_classes) {
+            console.log(`  Hiding ${cl}`);
+            let underlines = document.getElementsByClassName(cl);
+            for (let i=0; i<underlines.length; i++) {
+                if (cl == 'ul') underlines[i].style.color = 'white';
+                // else underlines[i].style.visibility = 'hidden';
+                else underlines[i].style.display = 'none';
+                }
+        }
+        btn.textContent = 'Show underlines';
+    } else {
+        console.log('It was show');
+        for (let cl of ul_classes) {
+            console.log(`  Hiding ${cl}`);
+            let underlines = document.getElementsByClassName(cl);
+            for (let i=0; i<underlines.length; i++) {
+                if (cl == 'ul') underlines[i].style.color = 'darkGrey';
+                // else underlines[i].style.visibility = 'visible';
+                else underlines[i].style.display = 'revert';
+                }
+        }
+        btn.textContent = 'Hide underlines';
+    }
+}"""
+
+
+SBS_BUTTONS_HTML = """<div class="buttons">
+    <button type="button" id="underlineButton" onclick="hide_show_underlines()">Hide underlines</button>
+</div><!--buttons-->"""
 
 SBS_INDEX_INTRO_HTML = """<!DOCTYPE html>
 <html lang="en-US">
@@ -165,7 +204,7 @@ SBS_INDEX_INTRO_HTML = """<!DOCTYPE html>
     <a href="JOS.html">Y<span class="schwa">ə</span>hōshūʼa/Joshua</a> &nbsp;&nbsp;<a href="JDG.html">Leaders/Judges</a> &nbsp;&nbsp;<a href="RUT.html">Rūt/Ruth</a><br>
     <a href="SA1.html">Sh<span class="schwa">ə</span>mūʼēl/Samuel 1</a> &nbsp;&nbsp;<a href="SA2.html">Sh<span class="schwa">ə</span>mūʼēl/Samuel 2</a> &nbsp;&nbsp;<a href="KI1.html">Kings 1</a> &nbsp;&nbsp;<a href="KI2.html">Kings 2</a> &nbsp;&nbsp;<a href="CH1.html">Accounts/Chronicles 1</a> &nbsp;&nbsp;<a href="CH2.html">Accounts/Chronicles 2</a><br>
     <a href="EZR.html">ʼEz<span class="schwa">ə</span>rāʼ/Ezra</a> &nbsp;&nbsp;<a href="NEH.html">N<span class="schwa">ə</span>ḩem<span class="schwa">ə</span>yāh/Nehemiah</a> &nbsp;&nbsp;<a href="EST.html">ʼEş<span class="schwa">ə</span>ttēr/Esther</a><br>
-    <a href="JOB.html">ʼYuōv/Job</a> &nbsp;&nbsp;<a href="PSA.html">Songs/Psalms</a> &nbsp;&nbsp;<a href="PRO.html">Sayings/Proverbs</a> &nbsp;&nbsp;<a href="ECC.html">Orator/Ecclesiastes</a> &nbsp;&nbsp;<a href="SNG.html">Song of /Solomon</a><br>
+    <a href="JOB.html">ʼYuōv/Job</a> &nbsp;&nbsp;<a href="PSA_index.html">Songs/Psalms</a> &nbsp;&nbsp;<a href="PRO.html">Sayings/Proverbs</a> &nbsp;&nbsp;<a href="ECC.html">Orator/Ecclesiastes</a> &nbsp;&nbsp;<a href="SNG.html">Song of /Solomon</a><br>
     <a href="ISA.html">Y<span class="schwa">ə</span>shaʼ<span class="schwa">ə</span>yāh/Isaiah</a> &nbsp;&nbsp;<a href="JER.html">Yir<span class="schwa">ə</span>m<span class="schwa">ə</span>yāh/Jeremiah</a> &nbsp;&nbsp;<a href="LAM.html">Wailings/Lamentations</a> &nbsp;&nbsp;<a href="EZE.html">Y<span class="schwa">ə</span>ḩez<span class="schwa">ə</span>qēʼl/Ezekiel</a><br>
     <a href="DAN.html">Dāniyyēʼl/Daniel</a> &nbsp;&nbsp;<a href="HOS.html">Hōshēʼa/Hosea</a> &nbsp;&nbsp;<a href="JOL.html">Yōʼēl/Joel</a> &nbsp;&nbsp;<a href="AMO.html">ʼĀmōʦ/Amos</a><br>
     <a href="OBA.html">ʼOvad<span class="schwa">ə</span>yāh/Obadiah</a> &nbsp;&nbsp;<a href="JNA.html">Yōnāh/Jonah</a> &nbsp;&nbsp;<a href="MIC.html">Mīkāh/Micah</a> &nbsp;&nbsp;<a href="NAH.html">Naḩūm/Nahum</a><br>
@@ -702,7 +741,8 @@ SBS_FAQ_HTML = """<!DOCTYPE html>
         that were never divided by the author.
     The <em>OET</em> on the other hand wants to educate readers that the narratives
         and prophecies and letters, etc., were written as contiguous documents.
-    Hence our section headings are designed not to break the text any more than necessary.</p>
+    Hence our section headings are designed help the modern reader,
+        yet not to break the flow of the text any more than necessary.</p>
 
   <h3 id="paraphrase">Is the <em>Readers’ Version</em> a paraphrase?</h3>
   <p>Well, it’s close, in fact you could debate all day about
@@ -777,7 +817,8 @@ SBS_FAQ_HTML = """<!DOCTYPE html>
         (so we try to use English words, not Greek ones).</p>
   <p>The long answer is that the word <i>baptise</i> is not a translation
         of the Greek word βαπτίζω (baptizo), but just a transliteration.
-    In other words, it was an invented English word that Bible readers have gotten used to in their jargon,
+    In other words, it was an invented English word
+        that Bible readers have gotten used to in their jargon,
         but which isn’t used outside of religious contexts.
     However, the Koine Greek word means “to dip, dunk, immerse, or sink”
         (but certainly doesn’t mean “to sprinkle”).
@@ -823,6 +864,43 @@ SBS_FAQ_HTML = """<!DOCTYPE html>
         On the contrary, the <em>OET Readers’ Version</em> is aimed at the average 2020’s English speaker on the street
             (and certainly contains passive constructions and figures of speech).</li>
     </ol>
+
+  <h3 id="qualifications">Don’t Bible translations have to be done by seminary professors?</h3>
+  <p>It’s certainly true that many people these days think that any respectable Bible translation
+        must be done by Bible college or seminary or university professors
+        with advanced degrees in Biblical languages and
+        with decades of teaching experience in those institutions.
+    Well, you already have a wide choice of English Bible translations that would fit that description
+        but one of the main distinctives and benefits of the <em>Open English Translation</em>
+        is that it’s <b>not</b> done by those kinds of people—
+        rather the rendering of the text is done by those who have worked on the street
+        and in public schools and in prison and have expertise at
+        explaining the teaching of our saviour
+        to many people who have never heard this good news before.</p>
+  <p>That’s not to criticize or show any disrespect to those learned people
+        who write Bible dictionaries and Bible commentaries
+        and work on the committees of Bible translation projects.
+    It’s just that we need them to carefully check our work
+        and offer corrections and improvements,
+        but the <em>OET</em> speaks quite a different dialect of English than them.</p>
+
+  <h3 id="committee">Isn’t a large committee needed to create a Bible translation?</h3>
+  <p>John Wycliffe (1300s) and William Tyndale (1500s) were primarily responsible
+        for two of the earliest English New Testament translations,
+        along with Martin Luther (1500s) who translated the Bible into
+        what became ‘standard German’.
+    It may also be noted that the most powerful figures in the churches at that time
+        generally (and sometimes violently) resisted having the scriptures
+        translated into the ‘vulgar’ (ordinary) languages of the less-educated people.
+    (You can find other examples of Bible translations mostly associated with a
+        single translator <a href="https://en.wikipedia.org/wiki/Bible_translations#Reformation_and_Early_Modern_period">here</a>.)</p>
+  <p>After that time, many Bible translations were done in major world languages
+        by men such as William Carey (India, 1800s) and many others.</p>
+  <p>In more recent times, you might be familiar with the J.B.Phillips (mid-1900s)
+        and Kenneth Taylor (Living Bible, 1971) as well as many others.</p>
+  <p>The <em>Open English Translation</em> <b>follows a long history of
+        individuals taking the initiative to translate the Bible</b>
+        into a particular segment of the languages they worked in.</p>
 
   <h3 id="Feedback">Feedback</h3>
     <p>These web pages are a very preliminary preview into a work still in progress.
@@ -1042,7 +1120,7 @@ assert '--' not in SBS_NOTES_HTML
 SBS_DISCLAIMER_HTML = """<p>Note: This is still a very early look into the unfinished text
     of the <em>Open English Translation</em> of the Bible.
 Please double-check the text in advance before using in public.
-Some things (like capitalisation of “him” referring to Jesus or “father” referring to God)
+Some things (like capitalisation of ‘him’ referring to Jesus or ‘father’ referring to God)
     in the <em>RV</em> haven’t been decided yet so we’re still testing both ways.</p>
 """
 assert "'" not in SBS_DISCLAIMER_HTML
@@ -1060,15 +1138,25 @@ while at the same time keeping an eye on what it was actually translated from.</
 <p>Note that <span class="RVadded">greyed words</span> in the <em>RV</em> are words that the translators
 consider were most probably implied, but as none of us can double-check
 with original speakers or writers, the reader is free to disagree.
-They are clearly marked because we have tried to be as honest / transparent as possible.</p>
-<p>The <span class="nominaSacra">bold words</span> in the <em>LV</em> are words that the orginal writers or copyists
-marked to indicate that they considered them to refer to God.
-The <span class="added">lighter coloured words</span> are words which aren’t needed
-in the grammar of the original languages but are required or implied in English.
-You need to read the <a href="index.html#Key">Key</a> to understand them.</p>
+They are clearly marked because we’ve tried to be as honest and transparent as possible.</p>
+<p>The <span class="added">lighter coloured words</span> in the <em>LV</em> are words which
+aren’t needed in the grammar of the original languages but are required or implied in English.
+You can read the <a href="index.html#Key">Key</a> to learn more about them.
+The underlines show when one original language word needs to be translated into two or more English words.
+(Just hide them with the button if you don’t need that information and find it distracting.)
+Also, the majority of sentences in the <em>LV</em> don’t have the words
+put into a sensible English order yet.
+(This should be completed by the end of 2023.)</p>
 """
 assert "'" not in SBS_BOOK_INTRO_HTML1
 assert '--' not in SBS_BOOK_INTRO_HTML1
+
+SBS_NOMINA_SACRA_HTML = """<p>The <span class="nominaSacra">bold words</span>
+in the <em>LV New Testament</em> are words that the original writers or copyists
+marked to indicate that they considered them to refer to God.</p>
+"""
+assert "'" not in SBS_NOMINA_SACRA_HTML
+assert '--' not in SBS_NOMINA_SACRA_HTML
 
 SBS_INTRO_PRAYER_HTML = """<p class="shortPrayer">It is our prayer that the
 <em>Open English Translation</em> of the Bible will give you clear understanding of
@@ -1085,12 +1173,50 @@ SBS_START_HTML = """<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="keywords" content="Bible, OET, translation, English, literal, readers, version, modern, free, open">
   <link rel="stylesheet" type="text/css" href="BibleBook.css">
+  <script src="content.js"></script>
 </head>
 <body>
 """
 END_HTML = '</body></html>\n'
 assert "'" not in SBS_START_HTML and "'" not in END_HTML
 assert '--' not in SBS_START_HTML and '--' not in END_HTML
+
+BACK_FORTH_LINKS_HTML_TEMPLATE = '<p>' \
+     '__PREVIOUS__OET <a href="index.html#Index">Book index</a>,' \
+     ' <a href="index.html#Intro">Intro</a>, and <a href="index.html#Key">Key</a>__NEXT__' \
+    f'{EM_SPACE}<a href="FAQs.html">FAQs</a>' \
+    f'{EM_SPACE}<a href="Glossary.html">Glossary</a>' \
+     '<br><br>__REST__</p>'
+
+TWO_COLUMN_START_HTML = f"""<p>See also the <a href="FAQs.html">FAQs</a> and the <a href="Glossary.html">Glossary</a>.</p>
+<div class="container">
+<span> </span>
+{SBS_BUTTONS_HTML}
+<h2>Readers’ Version</h2>
+<h2>Literal Version</h2>"""
+assert "'" not in TWO_COLUMN_START_HTML
+
+SBS_PSALM_INDEX_HTML = """<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Songs (Psalms)</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Bible, open, translation, OET, English, literal, readers, modern, psalms, songs, outstanding, free">
+  <link rel="stylesheet" type="text/css" href="BibleBook.css">
+</head>
+<body>
+  <p><a href="../">Up</a></p>
+  <h1>Open English Translation (OET) Development</h1>
+  <h2>Songs (Psalms)</h2>
+
+  __PSALMS_INDEX_MIDDLE__
+
+  <p>HTML last updated: __LAST_UPDATED__</p>
+</body></html>
+"""
+assert "'" not in SBS_PSALM_INDEX_HTML
+assert '--' not in SBS_PSALM_INDEX_HTML
 
 
 genericBookList = []
@@ -1132,6 +1258,10 @@ def pack_HTML_files() -> None:
             with open( OET_HTML_OutputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
                 html_output_file.write( f'{book_start_html}\n{book_html}\n{book_end_html}' )
 
+            # We also save individual Psalms
+            if BBB == 'PSA':
+                handle_Psalms( book_start_html, book_html, book_end_html )
+
             # # Having saved the book file, now for better orientation within the long file (wholeTorah or wholeNT),
             # #   adjust book_html to include BBB text for chapters past chapter one
             # bookAbbrev = BBB.title().replace('1','-1').replace('2','-2').replace('3','-3')
@@ -1153,25 +1283,31 @@ def pack_HTML_files() -> None:
 
             numBooksProcessed += 1
 
-    # Output CSS and index and whole NT html
+    # Output CSS, JS, index, FAQs, glossary, and notes html
     assert "'" not in SBS_CSS_TEXT
     with open( OET_HTML_OutputFolderPath.joinpath('BibleBook.css'), 'wt', encoding='utf-8' ) as css_output_file:
         css_output_file.write( SBS_CSS_TEXT )
+    with open( OET_HTML_OutputFolderPath.joinpath('content.js'), 'wt', encoding='utf-8' ) as js_output_file:
+        js_output_file.write( SBS_JS )
+
     indexIntroHTML = SBS_INDEX_INTRO_HTML.replace('   ',' ').replace('  ', ' ').replace('\n ', '\n') \
             .replace( '__LAST_UPDATED__', f"{datetime.now().strftime('%Y-%m-%d')} <small>by {PROGRAM_NAME_VERSION}</small>" )
     assert "'" not in indexIntroHTML
     with open( OET_HTML_OutputFolderPath.joinpath('index.html'), 'wt', encoding='utf-8' ) as html_index_file:
         html_index_file.write( indexIntroHTML )
+
     faqHTML = SBS_FAQ_HTML.replace('   ',' ').replace('  ', ' ').replace('\n ', '\n') \
             .replace( '__LAST_UPDATED__', f"{datetime.now().strftime('%Y-%m-%d')} <small>by {PROGRAM_NAME_VERSION}</small>" )
     assert "'" not in faqHTML
     with open( OET_HTML_OutputFolderPath.joinpath('FAQs.html'), 'wt', encoding='utf-8' ) as html_FAQ_file:
         html_FAQ_file.write( faqHTML )
+
     glossaryHTML = SBS_GLOSSARY_HTML.replace('   ',' ').replace('  ', ' ').replace('\n ', '\n') \
             .replace( '__LAST_UPDATED__', f"{datetime.now().strftime('%Y-%m-%d')} <small>by {PROGRAM_NAME_VERSION}</small>" )
     assert "'" not in glossaryHTML
     with open( OET_HTML_OutputFolderPath.joinpath('Glossary.html'), 'wt', encoding='utf-8' ) as html_glossary_file:
         html_glossary_file.write( glossaryHTML )
+
     notesHTML = SBS_NOTES_HTML.replace('   ',' ').replace('  ', ' ').replace('\n ', '\n') \
             .replace( '__LAST_UPDATED__', f"{datetime.now().strftime('%Y-%m-%d')} <small>by {PROGRAM_NAME_VERSION}</small>" )
     assert "'" not in notesHTML
@@ -1189,6 +1325,7 @@ def pack_HTML_files() -> None:
     #                             f'<p><a href="index.html">OET-RV-LV Index</a></p>\n{END_HTML}' )
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Finished processing {numBooksProcessed} HTML books." )
+# end of pack_HTML_side-by-side.pack_HTML_files()
 
 
 def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str ) -> Tuple[str, str, str]:
@@ -1198,13 +1335,8 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
     """
     fnPrint( DEBUGGING_THIS_MODULE, f"extract_and_combine_simple_HTML( {BBB}, ({len(rvUSFM):,}), ({len(rvHTML):,}), ({len(lvHTML):,}) )" )
 
-    links_html_template = '<p>__PREVIOUS__OET <a href="index.html#Index">Book index</a>,' \
-                 ' <a href="index.html#Intro">Intro</a>, and <a href="index.html#Key">Key</a>__NEXT__' \
-                 f'{EM_SPACE}<a href="FAQs.html">FAQs</a>' \
-                 f'{EM_SPACE}<a href="Glossary.html">Glossary</a>' \
-                 '<br><br>__REST__</p>'
     if BBB in OT_BBB_LIST:
-        links_html = links_html_template.replace('__REST__', '' ) #'Whole <a href="OET-RV-LV-Torah.html">Torah/Pentateuch</a> (for easy searching of multiple books, etc.)' )
+        links_html = BACK_FORTH_LINKS_HTML_TEMPLATE.replace('__REST__', '' ) #'Whole <a href="OET-RV-LV-Torah.html">Torah/Pentateuch</a> (for easy searching of multiple books, etc.)' )
 
         previousBBB = OT_BBB_LIST[OT_BBB_LIST.index(BBB)-1] # Gives wrong value (@[-1]) for first book
         try: nextBBB = OT_BBB_LIST[OT_BBB_LIST.index(BBB)+1]
@@ -1213,7 +1345,7 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
             else f'<a href="{previousBBB}.html">Previous Book ({previousBBB})</a>{EM_SPACE}')
         links_html = links_html.replace( '__NEXT__', f'{EM_SPACE}<a href="{nextBBB}.html">Next Book ({nextBBB})</a>')
     elif BBB in NT_BBB_LIST:
-        links_html = links_html_template.replace('__REST__', '' ) #'Whole <a href="OET-RV-LV-NT.html">New Testament</a> (for easy searching of multiple books, etc.)' )
+        links_html = BACK_FORTH_LINKS_HTML_TEMPLATE.replace('__REST__', '' ) #'Whole <a href="OET-RV-LV-NT.html">New Testament</a> (for easy searching of multiple books, etc.)' )
 
         previousBBB = OT_BBB_LIST[-1] if BBB==NT_BBB_LIST[0] else NT_BBB_LIST[NT_BBB_LIST.index(BBB)-1] # Gives wrong value (@[-1]) for first book
         try: nextBBB = NT_BBB_LIST[NT_BBB_LIST.index(BBB)+1]
@@ -1242,6 +1374,8 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
         elif marker in ('mt1','mt2'):
             if not done_intro: # Add an extra explanatory paragraph at the top
                 book_html = f'{book_html}{SBS_DISCLAIMER_HTML}{SBS_BOOK_INTRO_HTML1}'
+                if BBB in NT_BBB_LIST:
+                    book_html = f'{book_html}{SBS_NOMINA_SACRA_HTML}'
                 done_intro = True
             book_html = f'{book_html}<p class="{marker}">{rest}</p>\n'
         elif marker == 'toc1':
@@ -1254,7 +1388,7 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
                     C = C.strip()
                 assert C.isdigit()
             if C == '1': # Add an inspirational note
-                book_html = f'{book_html}{SBS_INTRO_PRAYER_HTML}\n'
+                book_html = f'{book_html}{SBS_INTRO_PRAYER_HTML}'
                 startedChapters = True
 
     # Get the intro of the RV chapter/verse HTML and append it
@@ -1356,7 +1490,7 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
             else: # in the middle
                 try: LVindex9 = lvSectionHTML.index( f' id="{nextStartCV}"', LVindex2+6 )
                 except ValueError:
-                    logging.critical( f"{BBB} {startCV} Unable to find '{nextStartCV}' in LV -- probable versification error" )
+                    logging.error( f"{BBB} {startCV} Unable to find '{nextStartCV}' in LV -- probable versification error" )
                     hadVersificationErrors = True
                     LVindex9 = lvSectionHTML.index( f' id="C', LVindex2+8 ) # Just find any suitable place
                 # Find our way back to the start of the HTML marker
@@ -1377,7 +1511,7 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
         assert section.count('<div ')+section.count('<div>') == section.count('</div'), f"{BBB} {n} LV {startCV} {endCV} {section.count('<div ')}+{section.count('<div>')}={section.count('<div ')+section.count('<div>')} != {section.count('</div')} '{section}'"
 # NEXT LINE TEMPORARILY DISABLED
         if section.count('<p ')+section.count('<p>') != section.count('</p'):
-            logging.critical( f"{BBB} {n} LV {startCV} {endCV} has mismatching <p> openers: {section.count('<p ')}+{section.count('<p>')}={section.count('<p ')+section.count('<p>')} != {section.count('</p')}\n        '{section}'" )
+            logging.error( f"{BBB} {n} LV {startCV} {endCV} has mismatching <p> openers: {section.count('<p ')}+{section.count('<p>')}={section.count('<p ')+section.count('<p>')} != {section.count('</p')}\n        '{section}'" )
         # assert section.count('<p ')+section.count('<p>') == section.count('</p'), f"{BBB} {n} LV {startCV} {endCV} {section.count('<p ')}+{section.count('<p>')}={section.count('<p ')+section.count('<p>')} != {section.count('</p')} '{section}'"
         lvHTMLSections.append( section )
 
@@ -1389,11 +1523,7 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
     #     lvHTMLSections[-1] = f'{lvHTMLSections[-1]}{newSection}'
     #     # halt
 
-    book_html = f'{book_html}\n' \
-                 '<p>See also the <a href="FAQs.html">FAQs</a> and the <a href="Glossary.html">Glossary</a>.</p>' \
-                 '<div class="container">\n' \
-                 '<h2>Readers’ Version</h2>\n' \
-                 '<h2>Literal Version</h2>\n'
+    book_html = f'{book_html}\n{TWO_COLUMN_START_HTML}\n'
 
     # Now add each segment to the HTML
     q = 0
@@ -1417,7 +1547,7 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
             q += 1
         else:
             book_html = f'{book_html}<div class="chunkRV">{rv}</div><!--chunkRV-->\n<div class="chunkLV">{lv}</div><!--chunkLV-->\n'
-    book_html = f'{book_html}</div><!--container-->\n'
+    book_html = f'{book_html}\n</div><!--container-->\n'
 
 
     chapter_links = [f'<a href="#C{chapter_num}">C{chapter_num}</a>' for chapter_num in range( 1, int(C)+1 )]
@@ -1427,7 +1557,68 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
     return ( book_start_html,
              book_html,
              f'{chapter_html}\n{links_html}\n{END_HTML}' )
-# end of pack_HTML_side-by-side.pack_HTML_files()
+# end of pack_HTML_side-by-side.extract_and_combine_simple_HTML()
+
+
+def handle_Psalms( psa_start_html:str, psa_html:str, psa_end_html:str ) -> bool:
+    """
+    This code is a bit fragile coz it depends on the exact formatting.
+    """
+    fnPrint( DEBUGGING_THIS_MODULE, f"handle_Psalms( ({len(psa_start_html):,}), ({len(psa_html):,}), ({len(psa_end_html):,}) )" )
+
+    ITEM_NAME = 'Item'
+
+    # print(psa_start_html); halt
+    bodyIx = psa_start_html.index('<body>')
+    chapterLinksIx = psa_start_html.index('<p class="chapterLinks">')
+    psa_book_links_html = psa_start_html[bodyIx+6:chapterLinksIx]
+    psa_chapter_links_html = psa_start_html[chapterLinksIx:].replace( 'href="#C', 'href="PSA_' ).replace( '">C', '.html">C' )
+    # print(psa_top_links_html); halt
+
+    # print(psa_html); halt
+    SEARCH_CHUNK = '<span class="C" id="C' # Near the start of the RV chunk
+    psa_html_bits = psa_html.split( SEARCH_CHUNK )
+    assert len(psa_html_bits) == 151, len(psa_html_bits)
+
+    # print(psa_html_bits[0]); halt
+    endIntroIx = psa_html_bits[0].index( '<!--bookIntro-->' )
+    psa_intro_html = psa_html_bits[0][:endIntroIx+16]
+
+    for c in range( 1, 150+1):
+        start_html = SBS_START_HTML.replace( '__TITLE__', f"Song (Psalm) {c}" )
+        back_forth_links = BACK_FORTH_LINKS_HTML_TEMPLATE \
+            .replace( '__PREVIOUS__', f'<a href="JOB.html">Previous Book (JOB)</a>__PREVIOUS__{EM_SPACE}' ) \
+            .replace( '__PREVIOUS__', '' if c==1 else f'{EM_SPACE}<a href="PSA_{c-1}.html">PSA {c-1}</a>' ) \
+            .replace( '__NEXT__', f'{EM_SPACE}__NEXT__<a href="PRO.html">Next Book (PRO)</a>' ) \
+            .replace( '__NEXT__', '' if c==150 else f'<a href="PSA_{c+1}.html">PSA {c+1}</a>{EM_SPACE}' ) \
+            .replace( '__REST__', '')
+        psalmHTML = f'{start_html}{back_forth_links}\n<h1>Song (Psalm) {c}</h1>\n' \
+                    f'{SBS_DISCLAIMER_HTML}\n{SBS_BOOK_INTRO_HTML1}'
+        chunkEndIx = psa_html_bits[c-1].rindex( '<!--chunkLV-->' )
+        leftover_HTML = psa_html_bits[c-1][chunkEndIx+14:]
+        # print(leftover_HTML); halt
+        chunkEndIx = psa_html_bits[c].rindex( '<!--chunkLV-->' )
+        main_PSA_HTML = psa_html_bits[c][:chunkEndIx+14]
+        # print(main_PSA_HTML); halt
+        psalmHTML = f'{psalmHTML}{TWO_COLUMN_START_HTML}{leftover_HTML}{SEARCH_CHUNK}' \
+                    f'{main_PSA_HTML}\n</div><!--container-->\n{back_forth_links}\n{END_HTML}'
+        assert "'" not in psalmHTML
+        with open( OET_HTML_OutputFolderPath.joinpath(f'PSA_{c}.html'), 'wt', encoding='utf-8' ) as html_psalm_file:
+            html_psalm_file.write( psalmHTML )
+
+    psaBooksHTML = ''
+    for bookname, startC, endC in (('Book 1', 1, 41), ('Book 2', 42, 72), ('Book 3', 73, 89), ('Book 4', 90, 106), ('Book 5', 107, 150)):
+        psaBookHTMLrefs = f"{EM_SPACE}".join( [f'<a href="PSA_{c}.html">{ITEM_NAME} {c}</a>' for c in range( startC, endC+1 )] )
+        psaBooksHTML += f"<h2>{bookname}: {ITEM_NAME}s {startC}–{endC}</h2>\n<p>{psaBookHTMLrefs}</p>\n"
+    psalmsIndexHTML = SBS_PSALM_INDEX_HTML.replace('   ',' ').replace('  ', ' ').replace('\n ', '\n') \
+            .replace( '__PSALMS_INDEX_MIDDLE__', f"{psa_book_links_html}{psa_intro_html}{psaBooksHTML}{psa_book_links_html}" ) \
+            .replace( '__LAST_UPDATED__', f"{datetime.now().strftime('%Y-%m-%d')} <small>by {PROGRAM_NAME_VERSION}</small>" )
+    assert "'" not in psalmsIndexHTML
+    with open( OET_HTML_OutputFolderPath.joinpath('PSA_index.html'), 'wt', encoding='utf-8' ) as html_index_file:
+        html_index_file.write( psalmsIndexHTML )
+
+    return True
+# end of pack_HTML_side-by-side.handle_Psalms()
 
 
 if __name__ == '__main__':
