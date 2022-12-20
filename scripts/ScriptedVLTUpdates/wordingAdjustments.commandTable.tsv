@@ -16,6 +16,7 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 									been_cast			been_thrown		Mrk 9:42
 									being/_cast			being/_thrown		Matt 3:10 (cast can be present or past!)
 									was/_cast			was/_thrown		Jhn 15:6
+					JHN_19:24				cast			threw		(cast can be present or past!)
 									cast			throw		Matt 17:19 (cast can be present or past!)
 									Cherubim			heavenly_beings		Heb 9:5 (plural)
 									Christians			followers_of_the_messiah
@@ -85,6 +86,9 @@ G									Zealot			Φαρισαῖος_ζηλωτής_\add group_member\add*		Lu
 					JHN_7:8				go_up			go_uphill		Whenever it refers to Jerusalem
 						MRK_4:8,MRK_4:32,JHN_10:1			going_up			going_uphill		Mrk 10:33
 						MRK_4:7,MRK_6:51			went_up			went_uphill		Jhn 2:13
+
+# Counts
+									myriads			tens_of_thousands		Doesn't occur in the singular
 
 # Currency
 G									assarion			ἀσσάριον_\add coin\add*		Luke 12:6
