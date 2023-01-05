@@ -5,7 +5,7 @@
 #
 # Script to take the OET-RV NT USFM files and convert to HTML
 #
-# Copyright (C) 2022 Robert Hunt
+# Copyright (C) 2022-2023 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-12-02' # by RJH
+LAST_MODIFIED_DATE = '2023-01-03' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.44'
+PROGRAM_VERSION = '0.45'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -116,8 +116,8 @@ div.rightBox { float:right;
 p.s1 { margin-top:0.1em; margin-bottom:0.1em; font-weight:bold; }
 p.r { margin-top:0; margin-bottom:0.1em; font-size:0.8em; }
 p.p { text-indent:0.5em; margin-top:0.2em; margin-bottom:0.2em; }
-p.q1 { text-indent:1em; margin-top:0.2em; margin-bottom:0.2em; }
-p.q2 { text-indent:2em; margin-top:0.2em; margin-bottom:0.2em; }
+p.q1 { margin-left:1em; margin-top:0.2em; margin-bottom:0.2em; }
+p.q2 { margin-left:2em; margin-top:0.2em; margin-bottom:0.2em; }
 p.m {  }
 
 /* Book intro */

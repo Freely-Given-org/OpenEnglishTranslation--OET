@@ -5,7 +5,7 @@
 #
 # Script to take the OET-RV-LV NT USFM files and convert to HTML
 #
-# Copyright (C) 2022 Robert Hunt
+# Copyright (C) 2022-2023 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-12-02' # by RJH
+LAST_MODIFIED_DATE = '2023-01-06' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.26'
+PROGRAM_VERSION = '0.29'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -126,17 +126,18 @@ span.nominaSacra { font-weight:bold; }
 span.bk { font-style:italic; }
 span.fn { vertical-align: super; font-size:0.7em; color:green; }
 span.xref { vertical-align: super; font-size:0.7em; color:blue; }
+p.h { font-weight:bold; }
 p.rem { font-size:0.8em; color:grey; }
 p.shortPrayer { text-align:center; }
-p.mt1 { font-size:1.8em; }
-p.mt2 { font-size:1.3em; }
+p.mt1 { text-align:center; font-size:1.8em; }
+p.mt2 { text-align:center; font-size:1.3em; }
 div.rightBox { float:right; width:35%; border:3px solid #73AD21; padding:0.2em; }
 p.s1 { margin-top:0.1em; margin-bottom:0; font-weight:bold; }
 p.r { margin-top:0; margin-bottom:0; font-size:0.75em; }
 p.LVsentence { margin-top:0.2em; margin-bottom:0.2em; }
 p.p { text-indent:0.5em; margin-top:0.2em; margin-bottom:0.2em; }
-p.q1 { text-indent:1em; margin-top:0.2em; margin-bottom:0.2em; }
-p.q2 { text-indent:2em; margin-top:0.2em; margin-bottom:0.2em; }
+p.q1 { margin-left:1em; margin-top:0.2em; margin-bottom:0.2em; }
+p.q2 { margin-left:2em; margin-top:0.2em; margin-bottom:0.2em; }
 p.m {  }
 
 /* Book intro */
@@ -996,12 +997,28 @@ SBS_GLOSSARY_HTML = """<!DOCTYPE html>
   </ol>
   <p>Sadly, we’ll often choose the latter compromise in the <em>Readers’ Version</em>.</p>
 
-  <h3 id="holy">holy, holy spirit</h3>
+  <h3 id="holy">holy</h3>
   <p>Oh, what does the word ‘holy’ mean
         to the average person in the 2020s?
-    On the street, we mostly hear it used along with a word for excrement!
-    Is there a better word, perhaps a <a href="https://www.thesaurus.com/browse/holy">synonym</a>
-        that we could use that would convey the right meaning?</p>
+    On the street, we mostly hear it used as an exclamation (often along with a word for excrement)!</p>
+  <p>To the more serious reader, ‘holy’ seems to be associated with
+        purity, perfection, and sinlessness, and even with a halo.
+    So the ‘holy apostles’ (typical translation found in
+        <a href="https://biblehub.com/parallel/ephesians/3-5.htm">Eph. 3:5</a>) weren’t
+        necessarily any more perfect or sinless than us—in fact it’s quite misleading
+    because that is NOT the root meaning of the Greek word which is closer to
+        ‘different’, ‘separated’, or ‘set aside for a special purpose’.
+  <p>Is there a better word, perhaps a <a href="https://www.thesaurus.com/browse/holy">synonym</a>
+        that we could use that would convey the right meaning?
+    (We want to avoid misconceptions that have lead to concepts like ‘Saints’ in
+        the Roman church.
+    It’s so easy to wrongly think that somehow those now deceased were
+        somehow more pure or sinless than us.)</p>
+  <p>Some of the words used in the Readers’ Version include:
+        ‘dedicated (ones)’, and ‘pure’.</p>
+
+  <h3 id="holySpirit">holy spirit</h3>
+  <p><small>Please be sure to read about ‘<a href="#holy">holy</a>’ above first.</small></p>
   <p>We notice that the term ‘Holy Spirit’ is almost used like a name,
         with users often not really considering the meaning of the term,
         and possibly not even able to define it well.</p>
@@ -1017,20 +1034,26 @@ SBS_GLOSSARY_HTML = """<!DOCTYPE html>
   <p>In our modern, Western culture,
         we don’t really have the ancient concept of our lives being
         very much in the hands of our king or lord or master or boss or owner.
-    In general, our boss only has power over us for certain hours of the week.</p>
-    On the other hand, in churches you will hear a lot of talk about ‘the Lord’,
+    In general, our boss only has power over us for certain hours of the week,
+        and no person in our mostly
+        <a href="https://duckduckgo.com/?q=egalitarian+meaning&ia=definition">egalitarian</a>
+        culture considers anyone else to be their ‘master’.</p>
+  <p>On the other hand, in churches you will hear a lot of talk about ‘the Lord’,
         but we suspect that it’s mostly only jargon or cliche
-        because few of us can imagine a single person
+        because few of us can imagine a single person (or deity)
         in a position of the power of life or death over us.</p>
   <p>Because of this mismatch of cultures, the <em>OET</em>
         has made the decision not to use the word ‘lord’ or ‘Lord’,
-        and chosen the word ‘master’ to at least provoke more thought
+        and chosen the word ‘master’, while not ideal,
+        to at least provoke more thought
         about what the Biblical concept might mean.
     (‘Boss’ was rejected as being too informal.)
     Sometimes too, we will simply use ‘God’ or his name ‘Yahweh’
         where it seems to fit better.
-    (Remember that the Jewish people traditionally also use the word ‘Lord’
-        as a substitute for the name of God.)</p>
+    Remember that the Jewish people traditionally also say the word ‘Lord’
+        as a substitute for Yahweh, the name of God, in the Hebrew scriptures
+        (although that’s not a Biblical command—in fact
+        it seems to make God’s revelation of his name rather pointless).</p>
 
   <h3 id="name">name</h3>
   <p>In ancient days, if a group of horse riders turned up at your house and said,
@@ -1356,9 +1379,11 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
     else: raise Exception( f"unexpected_BBB '{BBB}'" )
 
     # Create the introduction at the top of the book
-    C = None
+    C, V = None, '0'
     done_intro = startedChapters = False
     book_html = ''
+    book_h_field = None
+    section1_headers = []
     for usfm_line in rvUSFM.split( '\n' ):
         if not usfm_line: continue # Ignore blank lines
         assert usfm_line.startswith( '\\' )
@@ -1367,6 +1392,7 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
         except ValueError: marker, rest = usfm_line, ''
         # dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{marker=} {rest=}")
         if marker in ('id','usfm','ide','h','toc2','toc3'):
+            if marker == 'h': book_h_field = rest
             continue # We don't need to map those markers to HTML
         if marker in ('rem',):
             if not startedChapters:
@@ -1390,12 +1416,20 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
             if C == '1': # Add an inspirational note
                 book_html = f'{book_html}{SBS_INTRO_PRAYER_HTML}'
                 startedChapters = True
+        elif marker == 'v':
+            try: V, rest = rest.split( ' ', 1 )
+            except ValueError: V, rest = rest, ''
+            if '-' in V: # for a verse range
+                V = V.split( '-', 1 )[0]
+        elif marker == 's1':
+            # print( f"{BBB} {C} {V} '{rest}'" )
+            section1_headers.append( (C,str(int(V)+1),rest) ) # We assume it will be the next verse -- right most of the time
 
     # Get the intro of the RV chapter/verse HTML and append it
     ourRVStartMarkerIndex = rvHTML.index( '<div class="bookIntro">' )
     ourRVEndMarkerIndex = rvHTML.rindex( '</div><!--bookIntro-->' )
-    rvIntroHHTML = rvHTML[ourRVStartMarkerIndex:ourRVEndMarkerIndex+22]
-    book_html = f'{book_html}{rvIntroHHTML}\n'
+    rvIntroHTML = rvHTML[ourRVStartMarkerIndex:ourRVEndMarkerIndex+22]
+    book_html = f'{book_html}{rvIntroHTML}\n'
 
     # Get the guts of the RV chapter/verse HTML
     ourRVStartMarkerIndex = rvHTML.index( '<div class="BibleText">' )
@@ -1550,13 +1584,16 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
     book_html = f'{book_html}\n</div><!--container-->\n'
 
 
-    chapter_links = [f'<a href="#C{chapter_num}">C{chapter_num}</a>' for chapter_num in range( 1, int(C)+1 )]
+    usfm_header_html = f'<p class="h">{book_h_field}</p>'
+    chapter_links = [f'<a href="#C{chapter_num}">C{chapter_num}</a>' for chapter_num in range( 1, int(C)+1 ) ]
     chapter_html = f'<p class="chapterLinks">{EM_SPACE.join(chapter_links)}</p><!--chapterLinks-->'
-    book_start_html = f'{start_html}{links_html}\n{chapter_html}'
+    section_heading_links = [f'{heading} <a href="#C{c}V{v}">{c}:{v}</a>' for c,v,heading in section1_headers ]
+    section_heading_html = f'<p class="sectionHeadingLinks">{"<br>".join(section_heading_links)}</p><!--sectionHeadingLinks-->'
+    book_start_html = f'{start_html}{links_html}\n{usfm_header_html}\n{chapter_html}\n{section_heading_html}'
 
     return ( book_start_html,
              book_html,
-             f'{chapter_html}\n{links_html}\n{END_HTML}' )
+             f'<h3>Quick links</h3>\n{chapter_html}\n{section_heading_html}\n{links_html}\n{END_HTML}' )
 # end of pack_HTML_side-by-side.extract_and_combine_simple_HTML()
 
 

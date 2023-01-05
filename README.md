@@ -1,10 +1,10 @@
 # OpenEnglishTranslation (OET)
 
-The **_Open English Translation_ of the Bible (OET)** -- a unique, completely free and open-licensed new modern-English Bible translation
+The **_Open English Translation_ of the Bible (OET)** -- a unique, completely free and open-licensed, new modern-English Bible translation
 
 ## Background
 
-The _Open English Translation_ project has been planned for over a decade (a draft of Jonah was done in 2010), although circumstances only now (mid-2022) allow for full-time development to begin.
+The _Open English Translation_ project has been planned for well over a decade (a draft of Jonah was done in 2010), although circumstances only allowed for full-time development to begin in mid-2022.
 
 The new website is forthcoming at https://OpenEnglishTranslation.Bible, but currently more information is still available at https://Freely-Given.org/BibleTranslations/English/OET/. Over the next few months, most of that information will transferred either to this repository or to the new website.
 
@@ -30,3 +30,15 @@ The _Open English Translation_ will eventually be available in six versions:
 - _Digest Version_ for those who want the essence without some of the trivia (like Paul forgetting his coat in Troas).
 
 If you’re a professional Bible translator or app developer and able to help us in this endeavour, please start a conversation with us via our [Contact Page](https://Freely-Given.org/Contact.html).
+
+## Schedule
+
+As of January 2023, the following books have been drafted (but still expecting to undergo much checking and revision): John (15,635~879~21), Mark (11,304~678~16), Ephesians (2,422~155~6), Titus (659~46~3), 3 John (219~15~1), and Jude (461~25~1). These represent 30,700/138,020 (22%) Greek words, 1,798/7956 (23%) NT verses, or 48/260 (18%) NT chapters.
+
+Our goal is to complete the first draft and first check of the _OET_ New Testament by the end of 2023.
+
+## The inevitable event
+
+It is my request to my family and executors of my will to place all of this work into the public domain, finished or unfinished, on the event of my death. It has always been my desire that the _Open English Translation_ be a gift to the world, including the _Literal Version_, the _Readers’ Version_, and any other versions made under my control or under the auspices of Freely-Given.org.
+
+Please note that any contributions by others to this project will only be accepted on these same grounds.
