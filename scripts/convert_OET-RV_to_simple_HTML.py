@@ -48,7 +48,7 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-01-03' # by RJH
+LAST_MODIFIED_DATE = '2023-01-08' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
 PROGRAM_VERSION = '0.45'
@@ -756,6 +756,7 @@ def produce_HTML_files() -> None:
             assert "'" not in usfm_text, f"""Why do we have single quote in {source_filename}: {usfm_text[usfm_text.index("'")-20:usfm_text.index("'")+22]}"""
             # TODO: This might need to be uncommented if there's no URLs or other HTML in the RV
             # assert '"' not in usfm_text, f"""Why do we have double quote in {source_filename}: {usfm_text[usfm_text.index('"')-20:usfm_text.index('"')+22]}"""
+            assert '--' not in usfm_text, f"""Why do we have doubled hyphens in {source_filename}: {usfm_text[usfm_text.index('--')-20:usfm_text.index('--')+22]}"""
             assert '  ' not in usfm_text, f"""Why do we have doubled spaces in {source_filename}: {usfm_text[usfm_text.index('  ')-20:usfm_text.index('  ')+22]}"""
 
             book_start_html, book_html, book_end_html = convert_USFM_to_simple_HTML( BBB, usfm_text )
@@ -845,7 +846,7 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
     inIntroduction = inRightDiv = inTable = False
     for usfm_line in usfm_text.split( '\n' ):
         if not usfm_line: continue # Ignore blank lines
-        assert usfm_line.startswith( '\\' )
+        assert usfm_line.startswith( '\\' ), f"{BBB} {C}:{V} '{usfm_line}'"
         usfm_line = usfm_line[1:] # Remove the leading backslash
         try: marker, rest = usfm_line.split( ' ', 1 )
         except ValueError: marker, rest = usfm_line, ''

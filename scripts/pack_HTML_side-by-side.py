@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-01-06' # by RJH
+LAST_MODIFIED_DATE = '2023-01-12' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.29'
+PROGRAM_VERSION = '0.33'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -433,7 +433,7 @@ SBS_INDEX_INTRO_HTML = """<!DOCTYPE html>
             and the New Testament starts with “In the beginning was the Messenger…”.</li>
         <li class="intro"><em>Acts</em> ends up right after the first book by its author <em>Luke</em>.</li>
         <li class="intro">It just reminds readers that the order of the “books” in the Bible
-            is not set by sacred degree--only by tradition.</li>
+            is not set by sacred degree—only by tradition.</li>
         </ol>
         Some do complain that the traditional order of the first four gospel accounts
             represent the lion, the calf, the man, and the eagle of Rev 4:6-7
@@ -911,7 +911,7 @@ SBS_FAQ_HTML = """<!DOCTYPE html>
         please do contact us by <a href="mailto:Freely.Given.org@gmail.com?subject=OET FAQs">email</a>.
     Also if there’s something that we didn’t explain in these FAQs, or didn’t explain very well.
     Thanks.</p>
-  <p>See also the <a href="index.html">Introduction</a> and the <a href="Glossary.html">Glossary</a>.</p>
+  <p>See also the <a href="index.html#Intro">Introduction</a> and the <a href="Glossary.html">Glossary</a>.</p>
   <p>HTML last updated: __LAST_UPDATED__</p>
 </body></html>
 """
@@ -933,11 +933,74 @@ SBS_GLOSSARY_HTML = """<!DOCTYPE html>
   <h2>Glossary</h2>
   <p>This page contains words which need further explanations.</p>
 
+  <h3 id="genitive">of</h3>
+  <p>The little explanation is placed at the top,
+        because it’s quite a wide issue that affects quite a bit
+        of the way that the <em>OET</em> phrases things.</p>
+  <p>First a little explanation:
+    In the New Testament Greek there’s a grammatical construction
+        (called the <i>genitive</i>, and it’s marked with suffixes on the words involved)
+        that allows the source or possessor of a noun to be expressed,
+        e.g., to say the ‘the house of God’ or ‘the right_hand of_him’ or
+        ‘the God of_the fathers of_us’.
+    Note that the source or possessor typically <b>follows</b> the head noun in Greek.
+    (You will see these kinds of expressions a lot in the <em>OET LV</em>.)
+    Note also that it can be ambiguous, such as ‘the love of God’
+        (which would require clues from the surrounding context to know
+        if it’s talking about someone’s love for God or
+        God’s love for someone or something).
+  <p>You should also note that in regular, modern English as spoken in the public arena,
+        we tend to put possessives <b>before</b> the head noun,
+        so taking the above examples we might get ‘God’s house’, ‘his right hand’,
+        and ‘the God of our fathers’ (or even ‘our fathers’ God’).</p>
+  <p>However, because of the ways that both Bible translation and English itself
+        have evolved over the centuries,
+        our Bibles tend to have lots of literal phrases that might
+        sound unnatural to newcomers, but long-time Bible readers
+        have become so accustomed to them that we tend to fail to even notice
+        their unnatural and/or archaic nature.</p>
+  <p>The following extracts are all taken from
+        <a href="https://BibleHub.com/niv/mark/1.htm">Mark 1</a> out of the
+        <a href="https://BibleHub.com/niv/version.htm">NIV Bible</a>
+        that was first translated in 1973, and then revised in 1978, 1984,
+        and, more recently, in 2011:</p>
+  <ul>
+    <li>1:1 Son <b>of</b> God (cf. the more natural: God’s Son)</li>
+    <li>1:14 the good news <b>of</b> God (cf. the good news about/from God???)</li>
+    <li>1:15 the kingdom <b>of</b> God (cf. God’s kingdom)</li>
+    <li>1:16 the Sea <b>of</b> Galilee (cf. the Galilee Sea, or Lake Galilee)</li>
+    <li>1:19 son <b>of</b> Zebedee (cf. Zebedee’s son)</li>
+    <li>1:22 the teachers <b>of</b> the law (cf. the law teachers)</li>
+    <li>1:24 Jesus <b>of</b> Nazareth (cf. Jesus from Nazareth)</li>
+    <li>1:24 the Holy One <b>of</b> God (cf. God’s Holy One, or the Holy One from God???)</li>
+    <li>1:28 the whole region <b>of</b> Galilee (cf. whole Galilee region)</li>
+    <li>1:29 the home <b>of</b> Simon and Andrew (cf. Andrew and Simon’s home)</li>
+  </ul>
+  <p>The aim here is not to criticise the NIV,
+        and certainly if you compared Mark 1 with the KJV
+        you’d find many more examples there that have been made more natural in the NIV.
+    Rather <b>we’re just trying to explain why the <em>OET RV</em> might
+        sound quite informal</b> or even ‘colloquial’ to you—<b>it’s because
+        we’ve made an effort to translate the Bible into our own language
+        that we speak every day</b>—not the quaint sounding language
+        of the literal Greek or six-hundred year old English.</p>
+  <p>And if you didn’t read our <a href="index.html#Intro">introduction</a> yet,
+        <b>the reason that we’ve wanted to translate the Bible into
+        our own modern English is that we want to make it easier for
+        you to share it with others</b>.</p>
+
+  <p>The remainder of these glossary words are listed in English alphabetical order…</p>
+
   <h3 id="angel">angel, messenger</h3>
-  <p></p>
+  <p>The Greek word translated ‘angel’ really means a <i>messenger</i> or <i>delegate</i>.
+        In fact, ‘angel’ is a transliteration of the Greek, not a translation.
+        The translators have to decide from the context if it’s referring to a human
+        or to a supernatural being (typically dressed in shining white).
+        Sometimes (e.g., <a href="https://BibleHub.com/parallel/revelation/1-20.htm">Rev 1:20</a>)
+        we don’t really know which of the two is meant.</p>
 
   <h3 id="apostle">ambassador, apostle, missionary</h3>
-  <p><i>Missionary</i> (literally <i>sent-out one</i> would be the natural translation
+  <p><i>Missionary</i> (literally <i>sent-out one</i>) would be the natural translation
         of the Greek word (<a href="https://biblehub.com/greek/652.htm">ἀπόστολος</a>),
         but that’s not always what it’s used for in the “New Testament”.
     Sometimes it’s used as a synonym for the close disciples when they were sent out
@@ -947,8 +1010,9 @@ SBS_GLOSSARY_HTML = """<!DOCTYPE html>
         although not generally used at all outside of church language.</p>
 
   <h3 id="believe">believe, believe in, trust</h3>
-  <p>If you ‘believe’ someone, it usually means that what they just said wasn’t a lie.
-    But if you ‘believe <i>in</i>’ someone, that’s different—it’s often to do with capability,
+  <p>If you ‘believe’ someone, it usually means that you consider
+        that what they just said wasn’t a lie.
+    But if you ‘believe <b>in</b>’ someone, that’s different—it’s often to do with capability,
         i.e., usually that they’re able to do what they’re about to embark on,
             e.g., believing in a child that’s learning to drive,
             or an engineer trying to solve a difficult problem.</p>
@@ -970,11 +1034,12 @@ SBS_GLOSSARY_HTML = """<!DOCTYPE html>
         can probably be understood by most modern readers,
         it’s the concept more than the word that people aren’t really familiar with these days.
     Some do indeed go to the East and place themselves under the teaching of various <i>guru</i>s,
-        but we wouldn’t usually use the term <i>disciple</i> for an intern in the church.
+        but we wouldn’t usually use the term <i>disciple</i> for an intern in a church.
     The term is complicated when it’s used in the Bible for thousands of Jesus followers,
         and then used for the selected twelve close followers, and sometimes for other size groups in-between.
     So the <em>Readers’ Version</em> has elected to use <i>followers</i> most of the time,
-        and the word <i>apprentices</i> for the twelve who stuck more closely with Jesus.
+        and the word <i>apprentices</i> or <i>trainees</i> (still to be decided)
+        for the twelve who stuck more closely with Jesus.
     At least modern readers understand the work of an apprentice who works for the master tradesman
         who takes responsibility for their work,
         even if much of the actual teaching is done away at a block course in an institution these days.</p>
@@ -995,12 +1060,14 @@ SBS_GLOSSARY_HTML = """<!DOCTYPE html>
     <li>Use a longer phrase that tries to capture the full meaning of the word,</li>
     <li>Choose one synonym that will be understood, albeit inadequately expressing the full meaning.</li>
   </ol>
-  <p>Sadly, we’ll often choose the latter compromise in the <em>Readers’ Version</em>.</p>
+  <p>Sadly (because we ourselves recognise that it’s not ideal),
+        we’ll often choose the latter compromise in the <em>Readers’ Version</em>.</p>
 
   <h3 id="holy">holy</h3>
   <p>Oh, what does the word ‘holy’ mean
         to the average person in the 2020s?
-    On the street, we mostly hear it used as an exclamation (often along with a word for excrement)!</p>
+    On the street, we mostly hear it used as part of an exclamation
+        (often along with a word for excrement or other profanity)!</p>
   <p>To the more serious reader, ‘holy’ seems to be associated with
         purity, perfection, and sinlessness, and even with a halo.
     So the ‘holy apostles’ (typical translation found in
@@ -1021,7 +1088,7 @@ SBS_GLOSSARY_HTML = """<!DOCTYPE html>
   <p><small>Please be sure to read about ‘<a href="#holy">holy</a>’ above first.</small></p>
   <p>We notice that the term ‘Holy Spirit’ is almost used like a name,
         with users often not really considering the meaning of the term,
-        and possibly not even able to define it well.</p>
+        and possibly not even able to define it well in their own words.</p>
   <p>Because of the mismatch of cultures, the <em>Readers’ Version</em>
         has made the decision to downplay the word ‘holy’,
         often referring to ‘God’s spirit’
@@ -1059,17 +1126,27 @@ SBS_GLOSSARY_HTML = """<!DOCTYPE html>
   <p>In ancient days, if a group of horse riders turned up at your house and said,
         “We’ve come to arrest you in the name of King Henry!”,
         they meant that they have come with the <i>authority</i> of the king.
+    The name ‘Henry’ has no particular power in its syllables.
+    And of course, the person that we refer to as ‘Jesus’ was <b>never ever</b>
+        referred to by those particular syllables when he walked on this earth.
     So too, sometimes when we read about <i>the name of Jesus</i>,
-        it might not only be referring to his actual name,
+        it might not only be referring to his actual name
+        (which likely differed depending on whether it was a Jew or a Roman or a Greek speaking),
         but also referring to his <i>authority</i>,
         for example his authority over demons.
-    Thus when praying for healing, it’s not necessarily productive to shout “in the name of Jesus” over and over
-        (not least because that’s not really anything like his actual name).
+    Thus when praying for healing, it’s not necessarily productive to shout
+        “in the name of Jesus” over and over
+        (not least because that was never his actual name).
     What if the traffic officer shouted, “Prime-minister, prime-minister” over and over again
-        in order to convince you that he has authority from the government to issue you a ticket?
-    Perhaps it might be more helpful to consider how you would pray if you worked for Jesus
-        and believed that he has given you his authority to command these things.</p>
-  <p>P.S. Look in the <em>Literal Version</em> to see how to properly pronounce the names of Biblical characters.</p>
+        in order to convince you that they have authority
+        from the government to issue you a speeding ticket?
+    No, you muffle your response because you know that the authority to issue tickets or instant fines
+        is part of their job description.
+    Perhaps it might be more helpful to consider how you would pray if you were employed by Jesus
+        and believed that in your job description,
+        he has given you his authority to command these certain things.</p>
+  <p>P.S. Look in the <em>Literal Version</em> to see how to more properly
+        pronounce the names of Biblical characters.</p>
 
   <h3 id="priest">priest</h3>
   <p>It’s important that you don’t picture a Roman Catholic or an Anglican or an Orthodox priest
@@ -1101,7 +1178,7 @@ SBS_GLOSSARY_HTML = """<!DOCTYPE html>
         please do contact us by <a href="mailto:Freely.Given.org@gmail.com?subject=OET Glossary">email</a>.
         Also if there’s something that we didn’t explain in this glossary, or didn’t explain very well.
         Thanks.</p>
-  <p>See also the <a href="index.html">Introduction</a> and the <a href="FAQs.html">FAQs</a>.</p>
+  <p>See also the <a href="index.html#Intro">Introduction</a> and the <a href="FAQs.html">FAQs</a>.</p>
   <p>HTML last updated: __LAST_UPDATED__</p>
 </body></html>
 """
@@ -1140,6 +1217,156 @@ SBS_NOTES_HTML = """<!DOCTYPE html>
 assert "'" not in SBS_NOTES_HTML
 assert '--' not in SBS_NOTES_HTML
 
+RV_CHECKING_HTML = """<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>OET Checking Instructions</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Bible, open, translation, OET, English, readers, modern, check, test, free">
+  <link rel="stylesheet" type="text/css" href="BibleBook.css">
+</head>
+<body>
+  <p><a href="../">Up</a></p>
+  <h1>Open English Translation (OET) Checking Instructions</h1>
+  <h2>Checking the <em>Readers’ Version</em></h2>
+
+  <p>If you’ve been asked to help with checking the <em>OET RV</em>,
+        this is how we suggest you work.
+    Please note that we suggest that you read the <em>OET RV</em>
+        on a wider screen, like a laptop or tablet (not a phone).
+    We will use the book of Mark as an example below.</p>
+
+  <p>Please note also that when you submit any corrections or suggestions for the <em>OET</em>
+        those comments and any changes that result from them
+        become the property of Freely-Given.org.
+    (If you would like your name added to the list of contributors to the <em>OET</em>,
+        we’re happy to do this and you should contact us for further details.)</p>
+
+  <h3>Set up</h3>
+  <ol>
+  <li>The starting page is
+        <a href="https://Freely-Given.org/OET/SideBySide/MRK.html">https://Freely-Given.org/OET/SideBySide/MRK.html</a>.
+        For other books, the three UPPERCASE characters have to be changed, e.g., JDE for Jude</li>
+  <li>You can always access the book index at
+        <a href="https://Freely-Given.org/OET/SideBySide/index.html#Index">https://Freely-Given.org/OET/SideBySide/index.html#Index</a></li>
+  <li>You can also jump directly to specific chapters by appending <b>#C4</b> or similar
+        to the book address like the Mark one above, getting
+        <a href="https://Freely-Given.org/OET/SideBySide/MRK#C4.html">https://Freely-Given.org/OET/SideBySide/MRK.html#C4</a></li>
+  <li>You can also jump directly to specific verses by appending <b>#C12V7</b> or similar
+        to the book address like the Mark one above, getting
+        <a href="https://Freely-Given.org/OET/SideBySide/MRK#C12V7.html">https://Freely-Given.org/OET/SideBySide/MRK.html#C12V7</a></li>
+  <li>The above views give the introduction to the book (and some other bits &amp; pieces)
+        then when it gets to the Bible text, it displays the <em>Readers’ Version</em>
+        on the left and the <em>Literal Version</em> on the right</li>
+  <li>You may want to print the book you are checking and then you can just circle errors
+        and write down your suggestions directly.
+        (Ask us if you need technical help doing that, and/or compensation for your costs.)</li>
+  <li>The <em>RV</em> has section headings which are enclosed in boxes on the right of the text
+        in such a way that they don’t interrupt the flow of the text</li>
+  <li>You should read the introduction at
+        <a href="https://Freely-Given.org/OET/SideBySide/index.html#Intro">https://Freely-Given.org/OET/SideBySide/index.html#Intro</a>
+        to get a good understanding of the goals of the <em>OET</em>.</li>
+  <li>We recommend that you look at the parallel Bible verse view on BibleHub at
+        <a href="https://BibleHub.com/parallel/mark/1-1.htm">https://BibleHub.com/parallel/mark/1-1.htm</a>
+        (and of course you can navigate from there to where you are working)</li>
+  <li>You can see the interlinear version of the Greek source text of the New Testament on the bottom lines of
+        <a href="https://GreekCNTR.org/collation/">https://GreekCNTR.org/collation/</a>.
+        (The blue Strong’s dictionary numbers there can be clicked to give some definitions of the Greek words.)</li>
+  </ol>
+
+  <h3>Things to look out for</h3>
+  <p>It wouldn’t hurt to re-read this section each day before starting a checking session
+        (to remind yourself what we’re looking for).</p>
+  <ol>
+  <li><b>Whole section</b>: Read the whole text of the <em>RV</em> down to the next section heading.
+            Check if
+    <ul>
+    <li>It reads fluently and naturally?</li>
+    <li>Any typos or missing words?</li>
+    <li>Did it have any words that you don’t normally use?
+            (We’re trying to avoid as much ‘churchy’ language as possible.)</li>
+    <li>Is there any sentence that you think you could say more clearly or more naturally
+            than what’s there?</li>
+    </ul></li>
+  <li><b>Section headings</b>: After finishing a section, go back up to the section heading and
+    <ul>
+    <li>See if the heading is a good summary of the main point of the section?</li>
+    <li>Look at the start of the section and see if there’s a natural break from the previous section
+            (i.e., that this current section starts in the best place)?</li>
+    <li>Do you think that the section should have been divided into two (or more) sections?</li>
+    </ul></li>
+  <li><b>Verse content</b>:
+    <ul>
+    <li>Check that all phrases are present in each verse,
+            e.g., if the verse in the <em>Literal Version</em> or in other versions
+            says that something happened at a certain time,
+            then the <em>RV</em> should usually also mention a time</li>
+    <li>Check that all the adjectives are present, e.g., if the <em>LV</em> says
+            it’s a <i>great storm</i>, then the <em>RV</em> should have <i><b>big</b> storm</i>
+            or <i><b>bad</b> storm</i> or use a single word that covers both like
+            <i>typhoon</i> or <i>tornado</i> or something</li>
+    <li>Does the <em>RV</em> seem to be saying something different from every other version?</li>
+    </ul></li>
+  <li><b>Key Terms</b>: These are important words that repeat in a Bible,
+        like <i>God</i>, <i>Jesus</i>, <i>Holy Spirit</i>, <i>sin/sinner</i>,
+        <i>save/salvation</i>, <i>redeem/redemption</i>, <i>heaven</i>, etc.
+    <ul>
+    <li>Did you notice anywhere where a particular Key Term was translated differently before?</li>
+    <li>Is that Key Term rendered well? Can you think of a better way of saying it?</li>
+    </ul></li>
+  <li><b>Theology</b>: Check that the <em>RV</em> is not accidentally
+            teaching something that you think it shouldn’t.
+        (Once there was a printed Bible nicknamed <a href="https://en.wikipedia.org/wiki/Wicked_Bible">The Wicked Bible</a>
+            because it accidentally missed typesetting the <i>not</i>
+            in <i>Thou shalt not commit adultery.</i>)</li>
+  <li><b>Literal Version</b>: The <em>LV</em> is not manually translated like the <em>RV</em>,
+        but instead it’s translated from the Hebrew (OT)
+        and Greek (NT) by a series of computer programs.
+        However, the words are reordered manually, e.g., <i>going he is now</i>
+        should be reordered to <i>he is now going</i> or <i>he is going now</i>.
+        If you notice words that should be reordered, please inform us.
+        However, not all of the NT has been reordered yet
+        (so far only Mark is completed), so please check first
+        before spending a lot of time on checking this.</li>
+  </ol>
+
+  <h3 id="Notes">Notes</h3>
+  <ol>
+    <li><b>RV and LV</b>: Generally the <em>RV</em> should represent
+        every important word that’s in the <em>LV</em> except for the following:
+        <ul><li>A pronoun (like ‘he’) might be changed to the person’s name in the <em>RV</em>
+                at the start of a new section, or if it’s helpful
+                to remind the readers or to clarify who it’s referring to</li>
+        <li>A name might be changed to a pronoun in the <em>RV</em> if it seems
+                unnecessary or unnatural in English to repeat the name again so soon</li>
+        <li>A phrase might be omitted in the <em>RV</em> if it was already mentioned previously,
+                and would seem unnatural or bad style in English
+                to repeat that information again so soon.</li>
+        <li>When the <em>RV</em> guesses at some information that’s not mentioned
+                in the <em>LV</em> and could possibly be wrong,
+                then we try to mark it in grey in the <em>RV</em> as something added.
+            However, if we think it’s obvious what was implied
+                (and thus very unlikely to be wrong),
+                we don’t always grey the text in that case.</li>
+        </ul></li>
+  </ol>
+
+  <h3 id="Feedback">Feedback</h3>
+    <p>The <em>OET</em> is not yet finalised, and not yet publicly released,
+        but it’s online here for easy access for our checkers and reviewers.
+    If you have corrections and suggestions,
+        please do contact us by <a href="mailto:Freely.Given.org@gmail.com?subject=OET RV Checking">email</a>.
+    Also if there’s something that we didn’t explain in these notes, or didn’t explain very well.
+    Thanks.</p>
+    <p>Please don’t be offended if we choose not to take your suggestion.</p>
+  <p>See also the <a href="index.html#Intro">Introduction</a>, the <a href="FAQs.html">FAQs</a>, and the <a href="Glossary.html">Glossary</a>.</p>
+  <p>HTML last updated: __LAST_UPDATED__</p>
+</body></html>
+"""
+assert "'" not in RV_CHECKING_HTML
+assert '--' not in RV_CHECKING_HTML
+
 SBS_DISCLAIMER_HTML = """<p>Note: This is still a very early look into the unfinished text
     of the <em>Open English Translation</em> of the Bible.
 Please double-check the text in advance before using in public.
@@ -1175,8 +1402,13 @@ assert "'" not in SBS_BOOK_INTRO_HTML1
 assert '--' not in SBS_BOOK_INTRO_HTML1
 
 SBS_NOMINA_SACRA_HTML = """<p>The <span class="nominaSacra">bold words</span>
-in the <em>LV New Testament</em> are words that the original writers or copyists
-marked to indicate that they considered them to refer to God.</p>
+in the <em>LV New Testament</em> are
+<a href="https://BibleQuestions.info/2020/01/25/what-are-nomina-sacra/">words</a>
+that the original writers or copyists
+marked to indicate that they considered them to refer to God.
+<small>(Sadly, this information is not displayed in most Bible translations,
+especially since it seems to clearly confirm that the earliest writers/copyists
+considered both Jesus and the Holy Spirit to be God.)</small></p>
 """
 assert "'" not in SBS_NOMINA_SACRA_HTML
 assert '--' not in SBS_NOMINA_SACRA_HTML
@@ -1321,21 +1553,27 @@ def pack_HTML_files() -> None:
 
     faqHTML = SBS_FAQ_HTML.replace('   ',' ').replace('  ', ' ').replace('\n ', '\n') \
             .replace( '__LAST_UPDATED__', f"{datetime.now().strftime('%Y-%m-%d')} <small>by {PROGRAM_NAME_VERSION}</small>" )
-    assert "'" not in faqHTML
+    assert "'" not in faqHTML and '--' not in faqHTML
     with open( OET_HTML_OutputFolderPath.joinpath('FAQs.html'), 'wt', encoding='utf-8' ) as html_FAQ_file:
         html_FAQ_file.write( faqHTML )
 
     glossaryHTML = SBS_GLOSSARY_HTML.replace('   ',' ').replace('  ', ' ').replace('\n ', '\n') \
             .replace( '__LAST_UPDATED__', f"{datetime.now().strftime('%Y-%m-%d')} <small>by {PROGRAM_NAME_VERSION}</small>" )
-    assert "'" not in glossaryHTML
+    assert "'" not in glossaryHTML and '--' not in glossaryHTML
     with open( OET_HTML_OutputFolderPath.joinpath('Glossary.html'), 'wt', encoding='utf-8' ) as html_glossary_file:
         html_glossary_file.write( glossaryHTML )
 
     notesHTML = SBS_NOTES_HTML.replace('   ',' ').replace('  ', ' ').replace('\n ', '\n') \
             .replace( '__LAST_UPDATED__', f"{datetime.now().strftime('%Y-%m-%d')} <small>by {PROGRAM_NAME_VERSION}</small>" )
-    assert "'" not in notesHTML
+    assert "'" not in notesHTML and '--' not in notesHTML
     with open( OET_HTML_OutputFolderPath.joinpath('Notes.html'), 'wt', encoding='utf-8' ) as html_notes_file:
         html_notes_file.write( notesHTML )
+
+    checkingHTML = RV_CHECKING_HTML.replace('   ',' ').replace('  ', ' ').replace('\n ', '\n') \
+            .replace( '__LAST_UPDATED__', f"{datetime.now().strftime('%Y-%m-%d')} <small>by {PROGRAM_NAME_VERSION}</small>" )
+    assert "'" not in checkingHTML and '--' not in checkingHTML
+    with open( OET_HTML_OutputFolderPath.joinpath('Checking.html'), 'wt', encoding='utf-8' ) as html_checking_file:
+        html_checking_file.write( checkingHTML )
 
     # # Save our long book conglomerates
     # with open( OET_HTML_OutputFolderPath.joinpath('OET-RV-LV-Torah.html'), 'wt', encoding='utf-8' ) as html_output_file:
