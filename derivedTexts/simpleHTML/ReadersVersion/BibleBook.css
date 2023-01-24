@@ -16,9 +16,9 @@ div.rightBox { float:right;
         border:3px solid #73AD21; padding:0.2em; }
 p.s1 { margin-top:0.1em; margin-bottom:0.1em; font-weight:bold; }
 p.r { margin-top:0; margin-bottom:0.1em; font-size:0.8em; }
-p.p {  }
-p.q1 { text-indent:1em; margin-top:0.2em; margin-bottom:0.2em; }
-p.q2 { text-indent:2em; margin-top:0.2em; margin-bottom:0.2em; }
+p.p { text-indent:0.5em; margin-top:0.2em; margin-bottom:0.2em; }
+p.q1 { margin-left:1em; margin-top:0.2em; margin-bottom:0.2em; }
+p.q2 { margin-left:2em; margin-top:0.2em; margin-bottom:0.2em; }
 p.m {  }
 
 /* Book intro */

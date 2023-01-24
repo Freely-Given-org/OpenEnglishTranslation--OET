@@ -6,46 +6,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="keywords" content="Bible, OET, translation, English, literal, readers, version, modern, free, open">
   <link rel="stylesheet" type="text/css" href="BibleBook.css">
+  <script src="content.js"></script>
 </head>
 <body>
 <p><a href="MIC.html">Previous Book (MIC)</a> OET <a href="index.html#Index">Book index</a>, <a href="index.html#Intro">Intro</a>, and <a href="index.html#Key">Key</a> <a href="HAB.html">Next Book (HAB)</a> <a href="FAQs.html">FAQs</a> <a href="Glossary.html">Glossary</a><br><br></p>
+<p class="h">Nahum quick links (Skip down to <a href="#Disclaimer">book intro</a> or <a href="#C1">start of text</a>)</p>
 <p class="chapterLinks"><a href="#C1">C1</a> <a href="#C2">C2</a> <a href="#C3">C3</a></p><!--chapterLinks-->
+<p class="sectionHeadingLinks">The pegkabelu of God of matig-Ninibi <a href="#C1V2">1:2</a><br>The pegkahuhus of Ninibi <a href="#C2V16">2:16</a></p><!--sectionHeadingLinks-->
 <p class="rem">ESFM v0.5 NAH</p>
-<p>Note: This is still a very early look into the unfinished text
+<p id="Disclaimer">Note: This is still a very early look into the unfinished text
     of the <em>Open English Translation</em> of the Bible.
 Please double-check the text in advance before using in public.
-Some things (like capitalisation of “him” referring to Jesus or “father” referring to God)
+Some things (like capitalisation of ‘him’ referring to Jesus or ‘father’ referring to God)
     in the <em>RV</em> haven’t been decided yet so we’re still testing both ways.</p>
 <p>Note: The <em>Readers’ Version</em> on the left is a translation
 into contemporary English aimed at <i>the person on the street</i> who
-hasn’t necessarily been brought up with exposure to Biblical jargon and/or 16<sup>th</sup> century English.
+hasn’t necessarily been brought up with exposure to Biblical jargon and/or 500-year old English.
 It’s designed to be used alongside the <em>Literal Version</em> on the right which gives
 the English reader a window into what’s actually written in the original languages.
 (See the <a href="index.html#Intro">introduction</a> for more details—we
 recommend that you read the introduction first if you’re wanting to fully understand the <em>Literal Version</em>.)
 By comparing the left and right columns, you should be able to easily get the message of the text,
 while at the same time keeping an eye on what it was actually translated from.</p>
+<p>Note that <span class="RVadded">greyed words</span> in the <em>RV</em> are words that the translators
+consider were most probably in the mind of the writer, but as none of us can double-check
+with the original speakers or writers, the reader is free to disagree.
+They are clearly marked because we’ve tried to be as honest and transparent as possible.</p>
+<p>The <span class="added">lighter coloured words</span> in the <em>LV</em> are words which
+aren’t needed in the grammar of the original languages but are required or implied in English.
+You can read the <a href="index.html#Key">Key</a> to learn more about them.
+The underlines in the <em>LV</em> show when one original language word needs to be translated into two or more English words.
+(Just hide them with the button if you don’t need that information and find it distracting.)
+Also, the majority of sentences in the <em>LV</em> don’t have the words
+put into a sensible English order yet.
+(This should be completed by the end of 2023.)</p>
 <p class="mt1">Nahum</p>
 <p class="shortPrayer">It is our prayer that the
-<em>Open English Translation</em> of the Bible will give you clear understanding of
+<em>Open English Translation</em> of the Bible will give you a clear understanding of
 the accounts and messages written by the God-inspired Biblical writers.</p>
-
 <div class="bookIntro"><p class="is1">Introduction</p>
-<p class="ip">This baseen, insulatan te story concerning the karereetan te Ninibi, ka iney siyudad te Asirya kuntere dengan te Israel. Nasulat this te me elat-elat te 663 and 612 leg‑un te ware pad neetew ka Kristu. Nahale si prupita Nahum te nareetan e ka Ninibi, su sika ka palinneu eglegparan iya te Master God ka sinners. Minsan ka people, migpalintutuu also inlegparan te God ka Ninibi su mabbulut ma and me hambuhen ka me mahinged te sika siyudad.</p>
+<p class="ip">This document, insulatan of story concerning the karereetan of Ninibi, the iney siyudad of Asirya enemy dengan of Israel. Nasulat this of me elat-elat of 663 and 612 leg‑un of not yet born the the messiah. Nahale si prupita Nahum of nareetan e the Ninibi, su sika the palinneu eglegparan iya of Master God the sinners. Minsan the people, migpalintutuu also inlegparan of God the Ninibi su mabbulut ma and me hambuhen the me mahinged of sika siyudad.</p>
 <p class="iot">Main components of this “book”</p>
-<p class="io1">The peglegpad te Master te Ninibi <a href="#C1V1">1:1-15</a></p>
-<p class="io1">The pegkahuhus te Ninibi <a href="#C2V1">2:1-3:19</a></p>
+<p class="io1">The peglegpad of Master of Ninibi <a href="#C1V1">1:1-15</a></p>
+<p class="io1">The pegkahuhus of Ninibi <a href="#C2V1">2:1-3:19</a></p>
 </div><!--bookIntro-->
 
-<p>See also the <a href="FAQs.html">FAQs</a> and the <a href="Glossary.html">Glossary</a>.</p><div class="container">
+<p>See also the <a href="FAQs.html">FAQs</a> and the <a href="Glossary.html">Glossary</a>.</p>
+<div class="container">
+<span> </span>
+<div class="buttons">
+    <button type="button" id="underlineButton" onclick="hide_show_underlines()">Hide underlines</button>
+</div><!--buttons-->
 <h2>Readers’ Version</h2>
 <h2>Literal Version</h2>
 <div class="chunkRV">
 <p class="p">
- <span id="C1"></span><span class="C" id="C1V1">1</span><span class="xref" title="See also Isa 10:5-34; 14:24-27; Zeph 2:13-15.">[ref]</span></p>
+ <span id="C1"></span><span class="C" id="C1V1">1 </span><span class="xref" title="See also Isa 10:5-34; 14:24-27; Zeph 2:13-15.">[ref]</span></p>
 </div><!--chunkRV-->
-<div class="chunkLV"><p class="LVsentence"><span class="C">1</span>  Oracle Nineveh writing vision Naḩūm the<span class="ul">_</span>Elkoshite.</p></div><!--chunkLV-->
-<div class="chunkRV"><div class="rightBox"><p class="s1"><span class="CV">1:2</span> The pegkabelu te God te matig-Ninibi</p>
+<div class="chunkLV"><p class="LVsentence"><span class="C">1</span>  Oracle Nineveh writing vision Naḩūm the<span class="ul">_</span>Elkoshite.</p></div><!--chunkLV-->
+<div class="chunkRV"><div class="rightBox"><p class="s1"><span class="CV">1:2</span> The pegkabelu of God of matig-Ninibi</p>
 </div><!--rightBox-->
 <p class="q1">
  <span class="V" id="C1V2">2 </span>◘</p>
@@ -174,10 +193,10 @@ the accounts and messages written by the God-inspired Biblical writers.</p>
 <p class="LVsentence"><span class="V">12 </span>thus YHWH he/it<span class="ul">_</span>had<span class="ul">_</span>said if full and<span class="ul">_</span>thus/so/as<span class="ul">_</span>follows many and<span class="ul">_</span>thus/so/as<span class="ul">_</span>follows cut<span class="ul">_</span>off and<span class="ul">_</span>pass<span class="ul">_</span>away and<span class="ul">_</span>afflicted<span class="ul">_</span>you not afflict<span class="ul">_</span>you again/more.</p>
 <p class="LVsentence"><span class="V">13 </span>And<span class="ul">_</span>now break yoke<span class="ul">_</span>his from<span class="ul">_</span>upon<span class="ul">_</span>you and<span class="ul">_</span>shackles<span class="ul">_</span>your snap.</p>
 <p class="LVsentence"><span class="V">14 </span>And<span class="ul">_</span>commanded concerning<span class="ul">_</span>you YHWH not perpetuated for<span class="ul">_</span>name<span class="ul">_</span>your again/more from<span class="ul">_</span>house gods<span class="ul">_</span>your cut<span class="ul">_</span>off carved<span class="ul">_</span>image and<span class="ul">_</span>image prepare grave<span class="ul">_</span>your that/for/because/then/when worthless.</p></div><!--chunkLV-->
-<div class="chunkRV"><div class="rightBox"><p class="s1"><span class="CV">2:1</span> The pegkahuhus te Ninibi</p>
+<div class="chunkRV"><div class="rightBox"><p class="s1"><span class="CV">2:1</span> The pegkahuhus of Ninibi</p>
 </div><!--rightBox-->
 <p class="q1">
- <span id="C2"></span><span class="C" id="C2V1">2</span>◘</p>
+ <span id="C2"></span><span class="C" id="C2V1">2 </span>◘</p>
 <p class="q2">...
 </p>
 <p class="q1">...
@@ -281,7 +300,7 @@ the accounts and messages written by the God-inspired Biblical writers.</p>
 <p class="p">
  <span class="V" id="C2V13">13 </span>◘</p>
 <p class="q1">
- <span id="C3"></span><span class="C" id="C3V1">3</span>◘</p>
+ <span id="C3"></span><span class="C" id="C3V1">3 </span>◘</p>
 <p class="q1">...
 </p>
 <p class="q2">...
@@ -422,7 +441,7 @@ the accounts and messages written by the God-inspired Biblical writers.</p>
 </p>
 
 </div><!--chunkRV-->
-<div class="chunkLV"><p class="LVsentence"><a class="upLink" href="#">↑</a> <span class="C">2</span>  see/lo/see.</p>
+<div class="chunkLV"><p class="LVsentence"><a class="upLink" href="#">↑</a> <span class="C">2</span>  see/lo/see.</p>
 <p class="LVsentence"> on/upon/above/on<span class="ul">_</span>account<span class="ul">_</span>of//he/it<span class="ul">_</span>went<span class="ul">_</span>in the<span class="ul">_</span>mountains feet brings<span class="ul">_</span>good<span class="ul">_</span>news proclaims peace celebrate Yehuda festivals<span class="ul">_</span>your fulfill vows<span class="ul">_</span>your that/for/because/then/when not he<span class="ul">_</span>will<span class="ul">_</span>repeat again/more to<span class="ul">_</span>invade on/over<span class="ul">_</span>you(fs) wicked completely<span class="ul">_</span>he cut<span class="ul">_</span>off.</p>
 <p class="LVsentence"><span class="V">2 </span>come<span class="ul">_</span>up scatters on/upon/above/on<span class="ul">_</span>account<span class="ul">_</span>of//he/it<span class="ul">_</span>went<span class="ul">_</span>in faces<span class="ul">_</span>of<span class="ul">_</span>you guard fortress watch road gird loins collect ability very.</p>
 <p class="LVsentence"><span class="V">3 </span>that/for/because/then/when YHWH restore <span class="dom">DOM</span> majesty Yaakob like<span class="ul">_</span>majesty Yisrael that/for/because/then/when ravaged<span class="ul">_</span>them ravagers and<span class="ul">_</span>branches<span class="ul">_</span>their ruined.</p>
@@ -437,7 +456,7 @@ the accounts and messages written by the God-inspired Biblical writers.</p>
 <p class="LVsentence"><span class="V">12 </span>wwww den lions and<span class="ul">_</span>feeding<span class="ul">_</span>place he/it of<span class="ul">_</span>the<span class="ul">_</span>young<span class="ul">_</span>lions which/who prowled lion lioness there cub lions and<span class="ul">_</span>nothing disturb.</p>
 <p class="LVsentence"><span class="V">13 </span>lion tore in/on/at/with<span class="ul">_</span>enough cubs<span class="ul">_</span>his and<span class="ul">_</span>strangled for<span class="ul">_</span>lionesses<span class="ul">_</span>his and<span class="ul">_</span>filled prey lairs<span class="ul">_</span>his and<span class="ul">_</span>dens<span class="ul">_</span>his torn<span class="ul">_</span>flesh.</p>
 <p class="LVsentence"><span class="V">14 </span>see<span class="ul">_</span>I against<span class="ul">_</span>you declares YHWH armies/angels and<span class="ul">_</span>burn in/on/at/with<span class="ul">_</span>smoke chariots<span class="ul">_</span>her and<span class="ul">_</span>young<span class="ul">_</span>lions<span class="ul">_</span>your sword you(ms)<span class="ul">_</span>will<span class="ul">_</span>eat and<span class="ul">_</span>cut<span class="ul">_</span>off from<span class="ul">_</span>earth prey<span class="ul">_</span>your and<span class="ul">_</span>not heard again/more sound/voice messengers<span class="ul">_</span>your.</p>
-<p class="LVsentence"><a class="upLink" href="#">↑</a> <span class="C">3</span>  woe (a)<span class="ul">_</span>city blood full<span class="ul">_</span>she lies plunder full not prey without.</p>
+<p class="LVsentence"><a class="upLink" href="#">↑</a> <span class="C">3</span>  woe (a)<span class="ul">_</span>city blood full<span class="ul">_</span>she lies plunder full not prey without.</p>
 <p class="LVsentence"><span class="V">2 </span>Sound/voice whip and<span class="ul">_</span>noise clatter wheel and<span class="ul">_</span>horse galloping and<span class="ul">_</span>chariot bounding.</p>
 <p class="LVsentence"><span class="V">3 </span>Horsemen charging and<span class="ul">_</span>flashing swords and<span class="ul">_</span>glittering spears and<span class="ul">_</span>many slain and<span class="ul">_</span>heaps corpses and<span class="ul">_</span>without end to<span class="ul">_</span>the<span class="ul">_</span>dead<span class="ul">_</span>bodies wwww in/on/at/with<span class="ul">_</span>dead<span class="ul">_</span>their.</p>
 <p class="LVsentence"><span class="V">4 </span>Because<span class="ul">_</span>of<span class="ul">_</span>all debaucheries prostitute gracefully graciousness/kindness/favour/beauty mistress sorcery the<span class="ul">_</span>enslaves nations in/on/at/with<span class="ul">_</span>prostitution<span class="ul">_</span>her and<span class="ul">_</span>peoples in/on/at/with<span class="ul">_</span>sorceries<span class="ul">_</span>her.</p>
@@ -461,8 +480,11 @@ the accounts and messages written by the God-inspired Biblical writers.</p>
 <p class="LVsentence"><span class="V">19 </span>Not remedy for<span class="ul">_</span>wound<span class="ul">_</span>your fatal wound<span class="ul">_</span>your all hear news<span class="ul">_</span>you clap hands over<span class="ul">_</span>you that/for/because/then/when on/upon/above/on<span class="ul">_</span>account<span class="ul">_</span>of//he/it<span class="ul">_</span>went<span class="ul">_</span>in who.</p>
 <p class="LVsentence"> not escaped cruelty<span class="ul">_</span>your endless.</p>
 <p class="LVsentence"></p></div><!--chunkLV-->
+
 </div><!--container-->
 
+<h3>Quick links</h3>
 <p class="chapterLinks"><a href="#C1">C1</a> <a href="#C2">C2</a> <a href="#C3">C3</a></p><!--chapterLinks-->
+<p class="sectionHeadingLinks">The pegkabelu of God of matig-Ninibi <a href="#C1V2">1:2</a><br>The pegkahuhus of Ninibi <a href="#C2V16">2:16</a></p><!--sectionHeadingLinks-->
 <p><a href="MIC.html">Previous Book (MIC)</a> OET <a href="index.html#Index">Book index</a>, <a href="index.html#Intro">Intro</a>, and <a href="index.html#Key">Key</a> <a href="HAB.html">Next Book (HAB)</a> <a href="FAQs.html">FAQs</a> <a href="Glossary.html">Glossary</a><br><br></p>
 </body></html>
