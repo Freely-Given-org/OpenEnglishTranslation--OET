@@ -223,11 +223,11 @@ def write_book(book_number:int, book_usfm: str) -> bool:
     # Fix any punctuation problems
     book_usfm = book_usfm.replace(',,',',').replace('..','.').replace(';;',';') \
                 .replace(',.','.').replace('.”.”','.”').replace('?”?”','?”')
-    if "another's" in book_usfm or "Lord's" in book_usfm:
-        logging.error( f'''Fixing "another's" in {usfm_filepath}''' )
-    book_usfm = book_usfm.replace("another's", 'another’s').replace("Lord's", 'Lord’s') # Where do these come from?
+    # if "another's" in book_usfm or "Lord's" in book_usfm:
+    #     logging.error( f'''Fixing "another's" in {usfm_filepath}''' )
+    # book_usfm = book_usfm.replace("another's", 'another’s').replace("Lord's", 'Lord’s') # Where do these come from?
     assert '  ' not in book_usfm
-    assert "'" not in book_usfm, f'''Why do we have single quote in {usfm_filepath}: {book_usfm[book_usfm.index("'")-20:book_usfm.index("'")+22]}'''
+    # assert "'" not in book_usfm, f'''Why do we have single quote in {usfm_filepath}: {book_usfm[book_usfm.index("'")-20:book_usfm.index("'")+22]}'''
     assert '"' not in book_usfm, f'''Why do we have double quote in {usfm_filepath}: {book_usfm[book_usfm.index('"')-20:book_usfm.index('"')+22]}'''
     with open(usfm_filepath, 'wt', encoding='utf-8') as output_file:
         output_file.write(f"{book_usfm}\n")
