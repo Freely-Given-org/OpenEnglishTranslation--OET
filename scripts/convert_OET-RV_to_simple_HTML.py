@@ -48,7 +48,7 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-01-25' # by RJH
+LAST_MODIFIED_DATE = '2023-01-30' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
 PROGRAM_VERSION = '0.46'
@@ -188,10 +188,10 @@ RV_INDEX_INTRO_HTML = """<!DOCTYPE html>
         that's easier for us modern readers to understand—as much to do with our
         totally different cultures as to do with our different languages.</p>
       <p>So the <em>OET</em> gives both side-by-side, and with the advantage that
-        both the <em>Literal Version</em> and this <em>Readers' Version</em>
+        both this <em>Readers' Version</em> and the <em>Literal Version</em>
         <b>have been specifically designed to be used together</b> in this way.
         We suggest reading this <em>Readers' Version</em>, and if something stands out and you think in your mind
-        <i>Does it really say that?</i> or <i>Could it really mean that?</i>,
+        “<i>Does it really say that?</i>” or “<i>Could it really mean that?</i>”,
         then flick your eyes to the <em>Literal Version</em> and see for yourself what's really there in the original texts.</p>
       <p>On the other hand if you've been reading the Bible for a few decades already,
         maybe it would be fun to work through the <em>Literal Version</em> to get fresh insight
@@ -209,7 +209,7 @@ RV_INDEX_INTRO_HTML = """<!DOCTYPE html>
         and to challenge a little more about translation traditions that can possibly be improved.<p>
   <h3 id="Distinctives">Distinctives</h3>
     <p>The OET has the following distinguishing points:</p>
-    <ul><li>An easy-to-understand <em>Readers' Version</em> side-by-side with a very <em>Literal Version</em></li>
+    <ul><li>An easy-to-understand <em>Readers' Version</em> alongside a very <em>Literal Version</em></li>
     <li>A generous open license so that the <em>Open English Translation</em> can be
             freely used in any Bible app or website, or printed in your church Bible-study notes
             without even needing to request permission.</li>
@@ -251,7 +251,10 @@ RV_INDEX_INTRO_HTML = """<!DOCTYPE html>
         you can always look across to the <em>Literal Version</em>.
         (Most English readers looking at names in the Bible all the way from <i>Jericho</i> to <i>Jesus</i>
         would have no idea that there's no <b>J</b> letter or sound in either Hebrew or Greek,
-        plus there's absolutely no such name as <i>James</i> in the New Testament manuscripts!)</li>
+        plus there's absolutely no such name as <i>James</i> in the New Testament manuscripts—it's
+        a historical accident carried through from an inconsistency by John Wycliffe—see
+        <a href="https://www.biblicalarchaeology.org/daily/biblical-topics/bible-versions-and-translations/james-or-jacob-in-the-bible/">this article</a>
+        for example.</li>
     <li>In addition to wanting to get names and placenames more accurate,
         we've also attempted to modernise and simplify the spelling (transliterations) of these names
         to make it easier for readers to pronounce them as they come across them,
