@@ -5,7 +5,7 @@
 #
 # Script to take the OET-LV NT USFM files and convert to HTML
 #
-# Copyright (C) 2022 Robert Hunt
+# Copyright (C) 2022-2023 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2022-12-02' # by RJH
+LAST_MODIFIED_DATE = '2023-01-25' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV USFM to simple HTML"
-PROGRAM_VERSION = '0.42'
+PROGRAM_VERSION = '0.43'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -102,8 +102,8 @@ def main():
 # If you change any colours, etc., also need to adjust the Key above
 CSS_TEXT = """div.BibleText { }
 span.upLink { font-size:1.5em; font-weight:bold; }
-span.C { font-size:1.1em; color:green; }
-span.V { vertical-align:super; font-size:0.5em; color:red; }
+span.c { font-size:1.1em; color:green; }
+span.v { vertical-align:super; font-size:0.5em; color:red; }
 span.addedArticle { color:grey; }
 span.addedCopula { color:pink; }
 span.addedDirectObject { color:brown; }
@@ -711,7 +711,7 @@ def produce_HTML_files() -> None:
             # Having saved the book file, now for better orientation within the long file (wholeTorah or wholeNT),
             #   adjust book_html to include BBB text for chapters past chapter one
             bookAbbrev = BBB.title().replace('1','-1').replace('2','-2').replace('3','-3')
-            chapterRegEx = re.compile('<span class="C" id="C(\d{1,3})V1">(\d{1,3})</span>')
+            chapterRegEx = re.compile('<span class="c" id="C(\d{1,3})V1">(\d{1,3})</span>')
             while True:
                 for match in chapterRegEx.finditer( book_html ):
                     assert match.group(1) == match.group(2)
@@ -812,7 +812,7 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
                 book_html = f'{book_html}{INTRO_PRAYER_HTML}<div class="BibleText">\n'
             # Note: as well as CV id's, we make sure there are simple C id's there as well
             start_c_bit = '<p class="LVsentence" id="C1">' if C=='1' else f'<a class="upLink" href="#" id="C{C}">↑</a> '
-            book_html = f'{book_html}{start_c_bit}<span class="C" id="C{C}V1">{C}</span>{NARROW_NON_BREAK_SPACE}'
+            book_html = f'{book_html}{start_c_bit}<span class="c" id="C{C}V1">{C}</span>{NARROW_NON_BREAK_SPACE}'
         elif marker == 'v':
             try: V, rest = rest.split( ' ', 1 )
             except ValueError: V, rest = rest, ''
@@ -823,7 +823,7 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
                         .replace( '?', '?</p>\n<p class="LVsentence">' ) \
                         .replace( 'COMBO', '?)' )
             # We don't display the verse number for verse 1 (after chapter number)
-            book_html = f'{book_html}{"" if book_html.endswith(">") or book_html.endswith("—") else " "}{"" if V=="1" else f"""<span class="V" id="C{C}V{V}">{V}{NARROW_NON_BREAK_SPACE}</span>"""}{rest}'
+            book_html = f'{book_html}{"" if book_html.endswith(">") or book_html.endswith("—") else " "}{"" if V=="1" else f"""<span class="v" id="C{C}V{V}">{V}{NARROW_NON_BREAK_SPACE}</span>"""}{rest}'
         else:
             logging.critical( f"{BBB} {C}:{V} LV has unexpected USFM marker: \\{marker}='{rest}'" )
             book_html = f'{book_html}<p>GOT UNEXPECTED{marker}={rest}</p>'

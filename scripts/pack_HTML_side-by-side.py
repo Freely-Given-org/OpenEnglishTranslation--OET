@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-01-17' # by RJH
+LAST_MODIFIED_DATE = '2023-01-25' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.34'
+PROGRAM_VERSION = '0.35'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -109,9 +109,9 @@ SBS_CSS_TEXT = """button#underlineButton { float:right; }
 div.container { display:grid; column-gap:0.6em; grid-template-columns:0.85fr 1.15fr; }
 div.BibleText { }
 span.upLink { font-size:1.5em; font-weight:bold; }
-span.C { font-size:1.1em; color:green; }
-span.V { vertical-align:super; font-size:0.5em; color:red; }
-span.CV { vertical-align:super; font-size:0.8em; color:orange; }
+span.c { font-size:1.1em; color:green; }
+span.v { vertical-align:super; font-size:0.5em; color:red; }
+span.cv { vertical-align:super; font-size:0.8em; color:orange; }
 span.addedArticle { color:bisque; }
 span.addedCopula { color:pink; }
 span.addedDirectObject { color:brown; }
@@ -138,7 +138,7 @@ p.LVsentence { margin-top:0.2em; margin-bottom:0.2em; }
 p.p { text-indent:0.5em; margin-top:0.2em; margin-bottom:0.2em; }
 p.q1 { margin-left:1em; margin-top:0.2em; margin-bottom:0.2em; }
 p.q2 { margin-left:2em; margin-top:0.2em; margin-bottom:0.2em; }
-p.m {  }
+/* p.m {  } */
 
 /* Book intro */
 li.intro { margin-top:0.5em; margin-bottom:0.5em; }
@@ -146,7 +146,7 @@ p.is1 { font-weight:bold; font-size:1.3em; }
 p.is2 { font-weight:bold; }
 p.iot { font-weight:bold; }
 p.io1 { text-indent:2em; margin-top:0.2em; margin-bottom:0.2em; }
-span.ior { font-weight:bold; } // font-style:italic;
+span.ior { font-weight:bold; } /* font-style:italic; */
 """
 
 SBS_JS = """
@@ -1380,8 +1380,7 @@ RV_CHECKING_HTML = RV_CHECKING_HTML.replace( "'", "’" ) # Replace hyphens
 assert "'" not in RV_CHECKING_HTML
 assert '--' not in RV_CHECKING_HTML
 
-SBS_DISCLAIMER_HTML = """<p id="Disclaimer">Note: This is still a very early look into the unfinished text
-    of the <em>Open English Translation</em> of the Bible.
+SBS_DISCLAIMER_HTML = """<p id="Disclaimer">Note: This is still a very early look into the unfinished text of the <em>Open English Translation</em> of the Bible.
 Please double-check the text in advance before using in public.
 Some things (like capitalisation of ‘him’ referring to Jesus or ‘father’ referring to God)
     in the <em>RV</em> haven't been decided yet so we're still testing both ways.</p>
@@ -1542,7 +1541,7 @@ def pack_HTML_files() -> None:
             # # Having saved the book file, now for better orientation within the long file (wholeTorah or wholeNT),
             # #   adjust book_html to include BBB text for chapters past chapter one
             # bookAbbrev = BBB.title().replace('1','-1').replace('2','-2').replace('3','-3')
-            # chapterRegEx = re.compile('<span class="C" id="C(\d{1,3})V1">(\d{1,3})</span>')
+            # chapterRegEx = re.compile('<span class="c" id="C(\d{1,3})V1">(\d{1,3})</span>')
             # while True:
             #     for match in chapterRegEx.finditer( book_html ):
             #         assert match.group(1) == match.group(2)
@@ -1800,7 +1799,7 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
             lastLVindex += LVindex1
             # halt
         section = section.removesuffix( '\n' ).removesuffix( '</div><!--BibleText-->' ).removesuffix( '<p class="LVsentence">' ).removesuffix( '\n' )
-        if section.startswith( '<a class="upLink" ' ) or section.startswith( '<span class="V" ' ):
+        if section.startswith( '<a class="upLink" ' ) or section.startswith( '<span class="v" ' ):
             section = f'<p class="LVsentence">{section}'
         assert section.count('<div ')+section.count('<div>') == section.count('</div'), f"{BBB} {n} LV {startCV} {endCV} {section.count('<div ')}+{section.count('<div>')}={section.count('<div ')+section.count('<div>')} != {section.count('</div')} '{section}'"
 # NEXT LINE TEMPORARILY DISABLED
@@ -1873,7 +1872,7 @@ def handle_Psalms( psa_start_html:str, psa_html:str, psa_end_html:str ) -> bool:
     # print(psa_top_links_html); halt
 
     # print(psa_html); halt
-    SEARCH_CHUNK = '<span class="C" id="C' # Near the start of the RV chunk
+    SEARCH_CHUNK = '<span class="c" id="C' # Near the start of the RV chunk
     psa_html_bits = psa_html.split( SEARCH_CHUNK )
     assert len(psa_html_bits) == 151, len(psa_html_bits)
 
