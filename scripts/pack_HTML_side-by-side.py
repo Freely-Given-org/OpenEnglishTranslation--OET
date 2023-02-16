@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-01-30' # by RJH
+LAST_MODIFIED_DATE = '2023-02-07' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.35'
+PROGRAM_VERSION = '0.36'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -1669,7 +1669,7 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
         elif marker == 'toc1':
             start_html = SBS_START_HTML.replace( '__TITLE__', rest )
         elif marker == 'c':
-            C = rest
+            C, V = rest, '0'
             if C:
                 if C != C.strip():
                     logging.warning( f"{BBB} C='{C}' needs cleaning")
@@ -1709,33 +1709,33 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
         try:
             CclassIndex1 = rvSectionHTML.index( 'id="C' )
             CclassIndex2 = rvSectionHTML.index( '"', CclassIndex1+4 )
-            startCV = rvSectionHTML[CclassIndex1+4:CclassIndex2]
+            rvStartCV = rvSectionHTML[CclassIndex1+4:CclassIndex2]
             CclassIndex8 = rvSectionHTML.rindex( 'id="C' )
             CclassIndex9 = rvSectionHTML.index( '"', CclassIndex8+4 )
-            endCV = rvSectionHTML[CclassIndex8+4:CclassIndex9]
+            rvEndCV = rvSectionHTML[CclassIndex8+4:CclassIndex9]
             # dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"\n  {BBB} {n:,}: {startCV=} {endCV=}")
         except ValueError:
             # dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n:,}: No Cid in {rvSectionHTML=}" )
-            startCV, endCV = '', 'C1'
+            rvStartCV, rvEndCV = '', 'C1'
         if n == 0:
             rvSectionHTML = rvSectionHTML.replace( '<div class="BibleText">', '' )
         # else: # actually only for the last one
         rvSectionHTML = rvSectionHTML.replace( '</div><!--BibleText-->', '' )
         if '</div><!--rightBox-->' in rvSectionHTML:
             rvSectionHTML = f'<div class="rightBox">{rvSectionHTML}'
-        assert rvSectionHTML.count('<div ')+rvSectionHTML.count('<div>') == rvSectionHTML.count('</div'), f"{BBB} {n} RV {startCV} {endCV} {rvSectionHTML.count('<div ')}+{rvSectionHTML.count('<div>')}={rvSectionHTML.count('<div ')+rvSectionHTML.count('<div>')} != {rvSectionHTML.count('</div')} '{rvSectionHTML}'"
-        assert rvSectionHTML.count('<p ')+rvSectionHTML.count('<p>') == rvSectionHTML.count('</p'), f"{BBB} {n} RV {startCV} {endCV} {rvSectionHTML.count('<p ')}+{rvSectionHTML.count('<p>')}={rvSectionHTML.count('<p ')+rvSectionHTML.count('<p>')} != {rvSectionHTML.count('</p')} '{rvSectionHTML}'"
-        rvHTMLExpandedSections.append( (startCV, endCV, rvSectionHTML) )
+        assert rvSectionHTML.count('<div ')+rvSectionHTML.count('<div>') == rvSectionHTML.count('</div'), f"{BBB} {n} RV {rvStartCV} {rvEndCV} {rvSectionHTML.count('<div ')}+{rvSectionHTML.count('<div>')}={rvSectionHTML.count('<div ')+rvSectionHTML.count('<div>')} != {rvSectionHTML.count('</div')} '{rvSectionHTML}'"
+        assert rvSectionHTML.count('<p ')+rvSectionHTML.count('<p>') == rvSectionHTML.count('</p'), f"{BBB} {n} RV {rvStartCV} {rvEndCV} {rvSectionHTML.count('<p ')}+{rvSectionHTML.count('<p>')}={rvSectionHTML.count('<p ')+rvSectionHTML.count('<p>')} != {rvSectionHTML.count('</p')} '{rvSectionHTML}'"
+        rvHTMLExpandedSections.append( (rvStartCV, rvEndCV, rvSectionHTML) )
 
     # Now we need to break the LV into the same number of sections
     lvHTMLSections = []
     lastLVindex = 0
     hadVersificationErrors = False
-    for n, (startCV, endCV, rvSectionHTML) in enumerate( rvHTMLExpandedSections ):
+    for n, (rvStartCV, rvEndCV, rvSectionHTML) in enumerate( rvHTMLExpandedSections ):
         nextStartCV = rvHTMLExpandedSections[n+1][0] if n < len(rvHTMLExpandedSections)-1 else 'DONE'
-        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"\n{BBB} {n}/{len(rvHTMLExpandedSections)}: {startCV=} {endCV=} {nextStartCV=} {lastLVindex=} lvSectionHTML='{lvMidHHTML[lastLVindex:lastLVindex+60]}...'" )
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"\n{BBB} {n}/{len(rvHTMLExpandedSections)}: {rvStartCV=} {rvEndCV=} {nextStartCV=} {lastLVindex=} lvSectionHTML='{lvMidHHTML[lastLVindex:lastLVindex+60]}...'" )
         lvSectionHTML = lvMidHHTML[lastLVindex:]
-        if not startCV:
+        if not rvStartCV:
             # assert n == 0 ??? No longer true now we have book introductions
             # assert lastLVindex == 0 ??? No longer true now we have book introductions
             LVindex1 = lvSectionHTML.index( '<p class="LVsentence" id="C1">' )
@@ -1744,7 +1744,7 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
             if section == '<div class="BibleText">\n': section = ''
             # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"A ({len(section):,}) '{section}'" ); halt
             lastLVindex = LVindex1
-        elif startCV == 'C1': # First CV section
+        elif rvStartCV == 'C1': # First CV section
             LVindex1 = lvSectionHTML.index( f'<p class="LVsentence" id="C1">' )
             if nextStartCV == 'DONE':
                 section = lvSectionHTML[LVindex1:]
@@ -1767,9 +1767,9 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
             # halt
         else:
             assert n > 0
-            try: LVindex2 = lvSectionHTML.index( f' id="{startCV}"' )
+            try: LVindex2 = lvSectionHTML.index( f' id="{rvStartCV}"' )
             except ValueError:
-                logging.critical( f"{BBB} Unable to find '{startCV}' in LV -- probable versification error" )
+                logging.critical( f"{BBB} Unable to find '{rvStartCV}' in LV -- probable versification error" )
                 hadVersificationErrors = True
                 LVindex2 = lvSectionHTML.index( f' id="C' ) # Just find any suitable place -- we won't have the correct chunk
             # Find our way back to the start of the HTML marker
@@ -1786,7 +1786,7 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
             else: # in the middle
                 try: LVindex9 = lvSectionHTML.index( f' id="{nextStartCV}"', LVindex2+6 )
                 except ValueError:
-                    logging.error( f"{BBB} {startCV} Unable to find '{nextStartCV}' in LV -- probable versification error" )
+                    logging.error( f"{BBB} {rvStartCV} Unable to find '{nextStartCV}' in LV -- probable versification error" )
                     hadVersificationErrors = True
                     LVindex9 = lvSectionHTML.index( f' id="C', LVindex2+8 ) # Just find any suitable place
                 # Find our way back to the start of the HTML marker
@@ -1804,10 +1804,10 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
         section = section.removesuffix( '\n' ).removesuffix( '</div><!--BibleText-->' ).removesuffix( '<p class="LVsentence">' ).removesuffix( '\n' )
         if section.startswith( '<a class="upLink" ' ) or section.startswith( '<span class="v" ' ):
             section = f'<p class="LVsentence">{section}'
-        assert section.count('<div ')+section.count('<div>') == section.count('</div'), f"{BBB} {n} LV {startCV} {endCV} {section.count('<div ')}+{section.count('<div>')}={section.count('<div ')+section.count('<div>')} != {section.count('</div')} '{section}'"
+        assert section.count('<div ')+section.count('<div>') == section.count('</div'), f"{BBB} {n} LV {rvStartCV} {rvEndCV} {section.count('<div ')}+{section.count('<div>')}={section.count('<div ')+section.count('<div>')} != {section.count('</div')} '{section}'"
 # NEXT LINE TEMPORARILY DISABLED
         if section.count('<p ')+section.count('<p>') != section.count('</p'):
-            logging.error( f"{BBB} {n} LV {startCV} {endCV} has mismatching <p> openers: {section.count('<p ')}+{section.count('<p>')}={section.count('<p ')+section.count('<p>')} != {section.count('</p')}\n        '{section}'" )
+            logging.error( f"{BBB} {n} LV {rvStartCV} {rvEndCV} has mismatching <p> openers: {section.count('<p ')}+{section.count('<p>')}={section.count('<p ')+section.count('<p>')} != {section.count('</p')}\n        '{section}'" )
         # assert section.count('<p ')+section.count('<p>') == section.count('</p'), f"{BBB} {n} LV {startCV} {endCV} {section.count('<p ')}+{section.count('<p>')}={section.count('<p ')+section.count('<p>')} != {section.count('</p')} '{section}'"
         lvHTMLSections.append( section )
 

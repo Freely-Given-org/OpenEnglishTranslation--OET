@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-01-30' # by RJH
+LAST_MODIFIED_DATE = '2023-02-07' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.46'
+PROGRAM_VERSION = '0.47'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -1027,11 +1027,11 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
     book_html = f'{book_html}</div><!--BibleText-->'
 
     # Handle all footnotes in one go (we don't check for matching \fr fields)
-    startIx = 0
+    searchStartIx = 0
     while True:
-        xIx = book_html.find( '\\f ', startIx )
+        xIx = book_html.find( '\\f ', searchStartIx )
         if xIx == -1: break # all done
-        ftIx = book_html.find( '\\ft ', startIx+3 )
+        ftIx = book_html.find( '\\ft ', searchStartIx+3 )
         assert ftIx != -1
         fEndIx = book_html.find( '\\f*', ftIx+3 )
         assert fEndIx != -1
@@ -1039,18 +1039,18 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
         fnote = f'<span class="fn" title="Note: {fnoteMiddle}">[fn]</span>'
         # print( f"{BBB} {fnote}" )
         book_html = f'{book_html[:xIx]}{fnote}{book_html[fEndIx+3:]}'
-        startIx = fEndIx + 3
+        searchStartIx = fEndIx + 3
     # # But just remove footnotes for now ........................... temp xxxxxxxxxxxxxxxxxxxxxx
     # footnoteRegex = '\\\\f (.+?)\\\\f\\*'
     # book_html = re.sub( footnoteRegex, '', book_html)
     assert '\\f' not in book_html, f"{book_html[book_html.index(f'{BACKSLASH}f')-10:book_html.index(f'{BACKSLASH}f')+12]}"
 
     # Now handle all cross-references in one go (we don't check for matching \xo fields)
-    startIx = 0
+    searchStartIx = 0
     while True:
-        xIx = book_html.find( '\\x ', startIx )
+        xIx = book_html.find( '\\x ', searchStartIx )
         if xIx == -1: break # all done
-        ftIx = book_html.find( '\\xt ', startIx+3 )
+        ftIx = book_html.find( '\\xt ', searchStartIx+3 )
         assert ftIx != -1
         fEndIx = book_html.find( '\\x*', ftIx+3 )
         assert fEndIx != -1
@@ -1058,7 +1058,7 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
         fnote = f'<span class="xref" title="See also {fnoteMiddle}">[ref]</span>' # was †
         # print( f"{BBB} {xref}" )
         book_html = f'{book_html[:xIx]}{fnote}{book_html[fEndIx+3:]}'
-        startIx = fEndIx + 3
+        searchStartIx = fEndIx + 3
     assert '\\x' not in book_html, f"{book_html[book_html.index(f'{BACKSLASH}x')-10:book_html.index(f'{BACKSLASH}x')+12]}"
 
     chapter_links = [f'<a href="#C{chapter_num}">C{chapter_num}</a>' for chapter_num in range( 1, int(C)+1 )]
@@ -1087,14 +1087,14 @@ def livenIORs( BBB:str, bookHTML:str ) -> str:
     """
     """
     # return bookHTML.replace( '\\ior ', '<span class="ior">' ).replace( '\\ior*', '</span>' )
-    startIx = 0
+    searchStartIx = 0
     while True:
-        ix = bookHTML.find( '\\ior ', startIx )
+        ix = bookHTML.find( '\\ior ', searchStartIx )
         if ix == -1: break
-        ixEnd = bookHTML.find( '\\ior*', startIx+5 )
+        ixEnd = bookHTML.find( '\\ior*', ix+5 )
         assert ixEnd != -1
         guts = bookHTML[ix+5:ixEnd].replace('–','-') # Convert any en-dash to hyphen
-        # print(f"{BBB} {guts=} {bookHTML[ix-20:ix+20]} {startIx=} {ix=} {ixEnd=}")
+        # print(f"{BBB} {guts=} {bookHTML[ix-20:ix+20]} {searchStartIx=} {ix=} {ixEnd=}")
         startGuts = guts.split('-')[0]
         # print(f"  Now {guts=}")
         if ':' in startGuts:
@@ -1102,9 +1102,8 @@ def livenIORs( BBB:str, bookHTML:str ) -> str:
             Cstr, Vstr = startGuts.strip().split( ':' )
         else: Cstr, Vstr = startGuts.strip(), '1' # Only a chapter was given
         new_guts = f'<a href="#C{Cstr}V{Vstr}">{guts}</a>'
-        bookHTML = f'{bookHTML[:ix]}{new_guts}{bookHTML[ixEnd+5:]}'
-        startIx = ixEnd + 10
-    assert '\\ior' not in bookHTML
+        bookHTML = f'{bookHTML[:ix+5]}{new_guts}{bookHTML[ixEnd:]}'
+        searchStartIx = ixEnd + 10
 
     return bookHTML.replace( '\\ior ', '<span class="ior">' ).replace( '\\ior*', '</span>' )
 # end of convert_OET-RV_to_simple_HTML.livenIORs function
