@@ -1029,16 +1029,16 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
     # Handle all footnotes in one go (we don't check for matching \fr fields)
     searchStartIx = 0
     while True:
-        xIx = book_html.find( '\\f ', searchStartIx )
-        if xIx == -1: break # all done
+        fIx = book_html.find( '\\f ', searchStartIx )
+        if fIx == -1: break # all done
         ftIx = book_html.find( '\\ft ', searchStartIx+3 )
         assert ftIx != -1
         fEndIx = book_html.find( '\\f*', ftIx+3 )
-        assert fEndIx != -1
+        assert fEndIx != -1, f"Bad RV footnote in {BBB} around '{book_html[fIx:fIx+30]}'"
         fnoteMiddle = book_html[ftIx+4:fEndIx]
         fnote = f'<span class="fn" title="Note: {fnoteMiddle}">[fn]</span>'
         # print( f"{BBB} {fnote}" )
-        book_html = f'{book_html[:xIx]}{fnote}{book_html[fEndIx+3:]}'
+        book_html = f'{book_html[:fIx]}{fnote}{book_html[fEndIx+3:]}'
         searchStartIx = fEndIx + 3
     # # But just remove footnotes for now ........................... temp xxxxxxxxxxxxxxxxxxxxxx
     # footnoteRegex = '\\\\f (.+?)\\\\f\\*'

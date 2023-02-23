@@ -48,7 +48,7 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-02-07' # by RJH
+LAST_MODIFIED_DATE = '2023-02-22' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
 PROGRAM_VERSION = '0.36'
@@ -276,9 +276,9 @@ SBS_INDEX_INTRO_HTML = """<!DOCTYPE html>
     <li class="intro">Finally, we also want a translation that can be read by Christians with
         many years of Bible reading experience,
         but who might benefit by reading the accounts in slightly different words
-        that make it fresh and interesting, and
-        even provokes deeper thought into what the original speakers or writers
-        likely meant.</li>
+        that make it fresh and interesting,
+        and hopefully it will provoke deeper thought into what the original
+        speakers or writers likely meant.</li>
     </ul>
   <h3 id="Distinctives">Distinctives</h3>
     <p>The OET has the following distinguishing points:</p>
