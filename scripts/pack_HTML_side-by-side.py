@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-02-22' # by RJH
+LAST_MODIFIED_DATE = '2023-02-26' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.36'
+PROGRAM_VERSION = '0.37'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -941,10 +941,11 @@ SBS_GLOSSARY_HTML = """<!DOCTYPE html>
   <p><a href="../">Up</a></p>
   <h1>Open English Translation (OET) Development</h1>
   <h2>Glossary</h2>
-  <p>This page contains words which need further explanations.</p>
+  <p>This page contains words which need further explanations.
+    <br><br></p>
 
   <h3 id="genitive">of</h3>
-  <p>The little explanation is placed at the top,
+  <p>This little explanation is placed at the top (out of alphabetical order),
         because it's quite a wide issue that affects quite a bit
         of the way that the <em>OET</em> phrases things.</p>
   <p>First a little explanation:
@@ -954,11 +955,14 @@ SBS_GLOSSARY_HTML = """<!DOCTYPE html>
         e.g., to say the ‘the house of God’ or ‘the right_hand of_him’ or
         ‘the God of_the fathers of_us’.
     Note that the source or possessor typically <b>follows</b> the head noun in Greek.
-    (You will see these kinds of expressions a lot in the <em>OET LV</em>.)
-    Note also that it can be ambiguous, such as ‘the love of God’
+    (You will see these kinds of expressions a lot in the <em>OET LV</em>
+        because the Literal Version intentionally tries to follow
+        each word of the Koine Greek very closely.)</p>
+  <p>Note also that <i>of</i> phrases can be ambiguous,
+        such as ‘the love of God’
         (which would require clues from the surrounding context to know
-        if it's talking about someone's love for God or
-        God's love for someone or something).
+        if it's talking about <b>someone's love for God</b> or
+        <b>the love that God has</b> for someone or something).</p>
   <p>You should also note that in regular, modern English as spoken in the public arena,
         we tend to put possessives <b>before</b> the head noun,
         so taking the above examples we might get ‘God's house’, ‘his right hand’,
@@ -999,7 +1003,9 @@ SBS_GLOSSARY_HTML = """<!DOCTYPE html>
         our own modern English is that we want to make it easier for
         you to share it with others</b>.</p>
 
-  <p>The remainder of these glossary words are listed in English alphabetical order…</p>
+  <p><br>
+    The remainder of these glossary words are listed in English alphabetical order…
+    <br><br></p>
 
   <h3 id="angel">angel, messenger</h3>
   <p>The Greek word translated ‘angel’ really means a <i>messenger</i> or <i>delegate</i>.
