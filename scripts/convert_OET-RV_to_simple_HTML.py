@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-02-07' # by RJH
+LAST_MODIFIED_DATE = '2023-03-01' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.47'
+PROGRAM_VERSION = '0.48'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -1067,12 +1067,14 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
 
     # Add character formatting
     book_html = book_html.replace( '\\bk ', '<span class="bk">' ) \
-                         .replace( '\\bk*', '</span>' )
-    book_html = book_html.replace( '\\em ', '<em>' ) \
-                         .replace( '\\em*', '</em>' )
-    book_html = book_html.replace( '\\it ', '<i>' ) \
-                         .replace( '\\it*', '</i>' )
-    book_html = book_html.replace( '\\add ', '<span class="RVadded">' ) \
+                         .replace( '\\bk*', '</span>' ) \
+                         .replace( '\\em ', '<em>' ) \
+                         .replace( '\\em*', '</em>' ) \
+                         .replace( '\\it ', '<i>' ) \
+                         .replace( '\\it*', '</i>' ) \
+                         .replace( '\\bd ', '<b>' ) \
+                         .replace( '\\bd*', '</b>' ) \
+                         .replace( '\\add ', '<span class="RVadded">' ) \
                          .replace( '\\add*', '</span>' )
     book_html = livenIORs( BBB, book_html )
     assert '\\' not in book_html, f"{book_html[book_html.index(f'{BACKSLASH}')-20:book_html.index(f'{BACKSLASH}')+22]}"
