@@ -13,9 +13,9 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 #									\add*_			_\add*	moveUnderlineInsideAddEnd
 
 # Punctuation and spaces
-				id					 - 			 	removeHyphenSpaces	Remove hyphen (untranslated article) surrounded by spaces
-				id					- 			 	removeHyphenSpace	Remove hyphen (untranslated article) followed by space
-				id					 -			 	removeSpaceHyphen	Remove hyphen (untranslated article) preceded by space
+				id					 -¦ 			 	removeHyphenSpaces	Remove hyphen (untranslated article) surrounded by spaces
+				id					-¦ 			 	removeHyphenSpace	Remove hyphen (untranslated article) followed by space
+				id					 -¦			 	removeSpaceHyphen	Remove hyphen (untranslated article) preceded by space
 
 #l				id					_ 			_	removeUnderlineSpace	Remove space after underline (rejoins words)
 l									__			_	reduceDoubleUnderlines	Reduce double underlines in entire file

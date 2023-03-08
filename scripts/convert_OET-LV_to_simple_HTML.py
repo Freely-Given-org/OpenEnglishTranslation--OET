@@ -3,7 +3,7 @@
 #
 # convert_OET-LV_to_simple_HTML.py
 #
-# Script to take the OET-LV NT USFM files and convert to HTML
+# Script to take the OET-LV NT ESFM files and convert to HTML
 #
 # Copyright (C) 2022-2023 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org@gmail.com>
@@ -23,16 +23,10 @@
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 """
-Script to backport the ULT into empty verses of the OET-LV
-    in order to give us the text of all the Bible,
-    even if we haven't manually worked through it all carefully yet.
-
-This script is designed to be able to be run over and over again,
-    i.e., it should be able to update the OET-LV with more recent ULT edits.
 """
 from gettext import gettext as _
 from tracemalloc import start
-from typing import List, Tuple, Optional
+from typing import List, Tuple, Set, Optional
 from pathlib import Path
 from datetime import datetime
 import logging
@@ -48,10 +42,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-01-30' # by RJH
+LAST_MODIFIED_DATE = '2023-03-09' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
-PROGRAM_NAME = "Convert OET-LV USFM to simple HTML"
-PROGRAM_VERSION = '0.43'
+PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
+PROGRAM_VERSION = '0.46'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -60,11 +54,11 @@ DEBUGGING_THIS_MODULE = False
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module
 FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos
 OET_OT_USFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_OT_USFM/' )
-OET_NT_USFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_VLT_USFM/' )
+OET_NT_ESFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_VLT_ESFM/' )
 # OET_USFM_OutputFolderPath = project_folderpath.joinpath( 'translatedTexts/LiteralVersion/' )
 OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'derivedTexts/simpleHTML/LiteralVersion/' )
 assert OET_OT_USFM_InputFolderPath.is_dir()
-assert OET_NT_USFM_InputFolderPath.is_dir()
+assert OET_NT_ESFM_InputFolderPath.is_dir()
 # assert OET_USFM_OutputFolderPath.is_dir()
 assert OET_HTML_OutputFolderPath.is_dir()
 
@@ -74,6 +68,10 @@ NARROW_NON_BREAK_SPACE = ' '
 OT_BBB_LIST = ('GEN','EXO','LEV','NUM','DEU','JOS','JDG','RUT','SA1','SA2','KI1','KI2','CH1','CH2',
                 'EZR','NEH','EST','JOB','PSA','PRO','ECC','SNG','ISA','JER','LAM','EZE',
                 'DAN','HOS','JOL','AMO','OBA','JNA','MIC','NAH','HAB','ZEP','HAG','ZEC','MAL')
+CNTR_BOOK_ID_MAP = {
+    'MAT':40, 'MRK':41, 'LUK':42, 'JHN':43, 'ACT':44,
+    'ROM':45, 'CO1':46, 'CO2':47, 'GAL':48, 'EPH':49, 'PHP':50, 'COL':51, 'TH1':52, 'TH2':53, 'TI1':54, 'TI2':55, 'TIT':56, 'PHM':57,
+    'HEB':58, 'JAM':58, 'PE1':60, 'PE2':61, 'JN1':62, 'JN2':63, 'JN3':64, 'JDE':65, 'REV':66}
 assert len(OT_BBB_LIST) == 39
 # NT_BBB_LIST = ('MAT','MRK','LUK','JHN','ACT','ROM','CO1','CO2','GAL','EPH','PHP','COL','TH1','TH2','TI1','TI2','TIT','PHM','HEB','JAM','PE1','PE2','JN1','JN2','JN3','JDE','REV')
 NT_BBB_LIST = ('JHN','MAT','MRK','LUK','ACT','ROM','CO1','CO2','GAL','EPH','PHP','COL','TH1','TH2','TI1','TI2','TIT','PHM','HEB','JAM','PE1','PE2','JN1','JN2','JN3','JDE','REV')
@@ -82,6 +80,16 @@ BBB_LIST = OT_BBB_LIST + NT_BBB_LIST
 assert len(BBB_LIST) == 66
 TORAH_BOOKS_CODES = ('GEN','EXO','LEV','NUM','DEU')
 assert len(TORAH_BOOKS_CODES) == 5
+CNTR_ROLE_NAME_DICT = {'N':'noun', 'S':'substantive adjective', 'A':'adjective', 'E':'determiner', 'R':'pronoun',
+                  'V':'verb', 'I':'interjection', 'P':'preposition', 'D':'adverb', 'C':'conjunction', 'T':'particle'}
+CNTR_MOOD_NAME_DICT = {'I':'indicative', 'M':'imperative', 'S':'subjunctive', 
+            'O':'optative', 'N':'infinitive', 'P':'participle', 'e':'e'}
+CNTR_TENSE_NAME_DICT = {'P':'present', 'I':'imperfect', 'F':'future', 'A':'aorist', 'E':'perfect', 'L':'pluperfect', 'U':'U', 'e':'e'}
+CNTR_VOICE_NAME_DICT = {'A':'active', 'M':'middle', 'P':'passive', 'p':'p', 'm':'m', 'a':'a'}
+CNTR_PERSON_NAME_DICT = {'1':'1st', '2':'2nd', '3':'3rd', 'g':'g'}
+CNTR_CASE_NAME_DICT = {'N':'nominative', 'G':'genitive', 'D':'dative', 'A':'accusative', 'V':'vocative', 'g':'g', 'n':'n', 'a':'a', 'd':'d', 'v':'v', 'U':'U'}
+CNTR_GENDER_NAME_DICT = {'M':'masculine', 'F':'feminine', 'N':'neuter', 'm':'m', 'f':'f', 'n':'n'}
+CNTR_NUMBER_NAME_DICT = {'S':'singular', 'P':'plural', 's':'s', 'p':'p'}
 
 
 def main():
@@ -101,6 +109,7 @@ def main():
 
 # If you change any colours, etc., also need to adjust the Key above
 CSS_TEXT = """div.BibleText { }
+
 span.upLink { font-size:1.5em; font-weight:bold; }
 span.c { font-size:1.1em; color:green; }
 span.v { vertical-align:super; font-size:0.5em; color:red; }
@@ -114,11 +123,14 @@ span.ul { color:darkGrey; }
 span.dom { color:Gainsboro; }
 span.schwa { font-size:0.75em; }
 span.nominaSacra { font-weight:bold; }
+
 p.rem { font-size:0.8em; color:grey; }
 p.shortPrayer { text-align:center; }
 p.mt1 { font-size:1.8em; }
 p.mt2 { font-size:1.3em; }
 p.LVsentence { margin-top:0.2em; margin-bottom:0.2em; }
+
+a { text-decoration: none; }
 """
 
 LV_INDEX_INTRO_HTML = """<!DOCTYPE html>
@@ -155,7 +167,7 @@ LV_INDEX_INTRO_HTML = """<!DOCTYPE html>
     <a href="TH1.html">Thessalonians 1</a> &nbsp;&nbsp;<a href="TH2.html">Thessalonians 2</a> &nbsp;&nbsp;<a href="TI1.html">Timotheos/Timothy 1</a> &nbsp;&nbsp;<a href="TI2.html">Timotheos/Timothy 2</a> &nbsp;&nbsp;<a href="TIT.html">Titos/Titus</a><br>
     <a href="PHM.html">Filēmoni/Philemon</a><br>
     <a href="HEB.html">Hebrews</a><br>
-    <a href="JAM.html">Yakōbos/James</a><br>
+    <a href="JAM.html">Yakōbos/Jacob/James</a><br>
     <a href="PE1.html">Petros/Peter 1</a> &nbsp;&nbsp;<a href="PE2.html">Petros/Peter 2</a><br>
     <a href="JN1.html">Yōannēs/John 1</a> &nbsp;&nbsp;<a href="JN2.html">Yōannēs/John 2</a> &nbsp;&nbsp;<a href="JN3.html">Yōannēs/John 3</a><br>
     <a href="JDE.html">Youdas/Jude</a><br>
@@ -672,6 +684,7 @@ END_HTML = '</body></html>\n'
 
 whole_Torah_html = whole_NT_html = ''
 genericBookList = []
+word_table_filenames = set()
 def produce_HTML_files() -> None:
     """
     """
@@ -693,19 +706,32 @@ def produce_HTML_files() -> None:
         elif BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB ):
             bookType = 'NT'
 
+        word_table = None
         if bookType:
-            source_filename = f'OET-LV_{BBB}.usfm'
-            sourceFolderpath = OET_NT_USFM_InputFolderPath if bookType=='NT' else OET_OT_USFM_InputFolderPath
-            with open( sourceFolderpath.joinpath(source_filename), 'rt', encoding='utf-8' ) as usfm_input_file:
-                usfm_text = usfm_input_file.read()
-            assert usfm_text.count('‘') == usfm_text.count('’'), f"Why do we have OET-LV_{BBB}.usfm {usfm_text.count('‘')=} and {usfm_text.count('’')=}"
-            assert usfm_text.count('“') >= usfm_text.count('”'), f"Why do we have OET-LV_{BBB}.usfm {usfm_text.count('“')=} and {usfm_text.count('”')=}"
-            usfm_text = usfm_text.replace( "'", "’" ) # Replace hyphens
-            assert "'" not in usfm_text, f"""Why do we have single quote in {source_filename}: {usfm_text[usfm_text.index("'")-20:usfm_text.index("'")+22]}"""
-            assert '"' not in usfm_text, f"""Why do we have double quote in {source_filename}: {usfm_text[usfm_text.index('"')-20:usfm_text.index('"')+22]}"""
-            assert '  ' not in usfm_text, f"""Why do we have doubled spaces in {source_filename}: {usfm_text[usfm_text.index('  ')-20:usfm_text.index('  ')+22]}"""
+            sourceFolderPath = OET_NT_ESFM_InputFolderPath if bookType=='NT' else OET_OT_USFM_InputFolderPath
+            source_filename = f'OET-LV_{BBB}.ESFM' if 'ESFM' in str(sourceFolderPath) else f'OET-LV_{BBB}.usfm'
+            source_filepath = sourceFolderPath.joinpath( source_filename )
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Reading {source_filepath}…" )
+            with open( source_filepath, 'rt', encoding='utf-8' ) as esfm_input_file:
+                esfm_text = esfm_input_file.read()
+            if source_filename.endswith( '.ESFM' ):
+                word_table_filename = 'LV_NT_words.tsv'
+                word_table_filenames.add( word_table_filename )
+                if f'\\rem WORDTABLE {word_table_filename}\n' in esfm_text:
+                    if word_table is None:
+                        word_table_filepath = sourceFolderPath.joinpath( word_table_filename )
+                        with open( word_table_filepath, 'rt', encoding='utf-8' ) as word_table_input_file:
+                            word_table = word_table_input_file.read().split( '\n' )
+                        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Read {len(word_table):,} lines from word table at {word_table_filepath}." )
+                else: logging.critical( f"Expected word-table '{word_table_filename}' {esfm_text}"); halt
+            assert esfm_text.count('‘') == esfm_text.count('’'), f"Why do we have OET-LV_{BBB}.usfm {esfm_text.count('‘')=} and {esfm_text.count('’')=}"
+            assert esfm_text.count('“') >= esfm_text.count('”'), f"Why do we have OET-LV_{BBB}.usfm {esfm_text.count('“')=} and {esfm_text.count('”')=}"
+            esfm_text = esfm_text.replace( "'", "’" ) # Replace hyphens
+            assert "'" not in esfm_text, f"""Why do we have single quote in {source_filename}: {esfm_text[esfm_text.index("'")-20:esfm_text.index("'")+22]}"""
+            assert '"' not in esfm_text, f"""Why do we have double quote in {source_filename}: {esfm_text[esfm_text.index('"')-20:esfm_text.index('"')+22]}"""
+            assert '  ' not in esfm_text, f"""Why do we have doubled spaces in {source_filename}: {esfm_text[esfm_text.index('  ')-20:esfm_text.index('  ')+22]}"""
 
-            book_start_html, book_html, book_end_html = convert_USFM_to_simple_HTML( BBB, usfm_text )
+            book_start_html, book_html, book_end_html = convert_ESFM_to_simple_HTML( BBB, esfm_text, word_table )
 
             output_filename = f'{BBB}.html'
             with open( OET_HTML_OutputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
@@ -714,7 +740,7 @@ def produce_HTML_files() -> None:
             # Having saved the book file, now for better orientation within the long file (wholeTorah or wholeNT),
             #   adjust book_html to include BBB text for chapters past chapter one
             bookAbbrev = BBB.title().replace('1','-1').replace('2','-2').replace('3','-3')
-            chapterRegEx = re.compile('<span class="c" id="C(\d{1,3})V1">(\d{1,3})</span>')
+            chapterRegEx = re.compile('<span class="c" id="C(\\d{1,3})V1">(\\d{1,3})</span>')
             while True:
                 for match in chapterRegEx.finditer( book_html ):
                     assert match.group(1) == match.group(2)
@@ -731,6 +757,9 @@ def produce_HTML_files() -> None:
                 whole_NT_html = f'{whole_NT_html}{book_html}'
 
             numBooksProcessed += 1
+
+    if word_table_filenames:
+        make_table_pages( sourceFolderPath, OET_HTML_OutputFolderPath, word_table_filenames )
 
     # Output CSS and index and whole NT html
     with open( OET_HTML_OutputFolderPath.joinpath('BibleBook.css'), 'wt', encoding='utf-8' ) as css_output_file:
@@ -755,11 +784,17 @@ def produce_HTML_files() -> None:
                                 f'<p><a href="index.html">OET-LV Index</a></p>\n{END_HTML}' )
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Finished processing {numBooksProcessed} HTML books." )
-# end of convert_OET-LV_to_simple_HTML.convert_USFM_to_simple_HTML function
+# end of convert_OET-LV_to_simple_HTML.produce_HTML_files function
 
 
-def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str]:
-    fnPrint( DEBUGGING_THIS_MODULE, f"convert_USFM_to_simple_HTML( {BBB}, ({len(usfm_text)}) )" )
+def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[List[str]] ) -> Tuple[str, str, str]:
+    """
+    The OET-LV contains no internal headings or paragraphs formattting at all.
+    Most of the conversion from the simple ESFM to HTML is done by simply replacing character markers with HTML spans.
+
+    The exception is the word numbers which are handled by RegEx replacements in a separate function.
+    """
+    fnPrint( DEBUGGING_THIS_MODULE, f"convert_ESFM_to_simple_HTML( {BBB}, ({len(usfm_text)}), ({'None' if word_table is None else len(word_table)}) )" )
 
     links_html_template = '<p>__PREVIOUS__OET-LV <a href="index.html#Index">Book index</a>,' \
                  ' <a href="index.html#Intro">Intro</a>, <a href="index.html#Key">Key</a>,' \
@@ -808,6 +843,8 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
             start_html = START_HTML.replace( '__TITLE__', rest )
         elif marker == 'c':
             V = '0'
+            assert rest
+            assert '¦' not in rest
             C = rest
             # if C=='2': halt
             assert C.isdigit()
@@ -817,6 +854,7 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
             start_c_bit = '<p class="LVsentence" id="C1">' if C=='1' else f'<a class="upLink" href="#" id="C{C}">↑</a> '
             book_html = f'{book_html}{start_c_bit}<span class="c" id="C{C}V1">{C}</span>{NARROW_NON_BREAK_SPACE}'
         elif marker == 'v':
+            assert rest
             try: V, rest = rest.split( ' ', 1 )
             except ValueError: V, rest = rest, ''
             assert V.isdigit(), f"Expected a verse number digit with '{V=}' '{rest=}'"
@@ -833,8 +871,8 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
     book_html = f"{book_html}</p></div><!--BibleText-->"
 
     chapter_links = [f'<a href="#C{chapter_num}">C{chapter_num}</a>' for chapter_num in range( 1, int(C)+1 )]
-    chapter_html = f'<p class="chapterLinks">{EM_SPACE.join(chapter_links)}</p><!--chapterLinks-->'
-    book_start_html = f'{start_html}{links_html}\n{chapter_html}'
+    chapters_html = f'<p class="chapterLinks">{EM_SPACE.join(chapter_links)}</p><!--chapterLinks-->'
+    book_start_html = f'{start_html}{links_html}\n{chapters_html}'
 
     book_html = book_html.replace( '\\nd ', '<span class="nominaSacra">' ) \
                 .replace( '\\nd*', '</span>' )
@@ -856,10 +894,109 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
                         .replace( '[was]', '<span class="addedCopula">was</span>' ) \
                         .replace( '[', '<span class="added">' ) \
                         .replace( ']', '</span>' )
+        
+    if word_table: # sort out word numbers like 'written¦21763'
+        book_html = convert_ESFM_words( BBB, book_html, word_table )
+
+    # All done
     return ( book_start_html,
              book_html,
-             f'{chapter_html}\n{links_html}\n{END_HTML}' )
-# end of convert_OET-LV_to_simple_HTML.produce_HTML_files()
+             f'{chapters_html}\n{links_html}\n{END_HTML}' )
+# end of convert_OET-LV_to_simple_HTML.produce_HTML_files function
+
+
+def convert_ESFM_words( BBB:str, book_html:str, word_table:List[str] ) -> str:
+    """
+    Handle ESFM word numbers like 'written¦21763'
+        which are handled by RegEx replacements.
+    """
+    fnPrint( DEBUGGING_THIS_MODULE, f"convert_ESFM_words( {BBB}, ({len(book_html)}), ({len(word_table)}) )" )
+
+    vPrint( 'Info', DEBUGGING_THIS_MODULE, f"convert_ESFM_words( {BBB}, ({len(book_html)}), ({len(word_table)}) )…" )
+    wordRegex = re.compile( "([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})" )
+    searchStartIndex = 0
+    count = 0
+    while True:
+        match = wordRegex.search( book_html, searchStartIndex )
+        if not match:
+            break
+        # print( f"{BBB} word match 1='{match.group(1)}' 2='{match.group(2)}' all='{book_html[match.start():match.end()]}'" )
+        assert match.group(2).isdigit()
+        row_number = int( match.group(2) )
+        try: greek = word_table[row_number].split('\t')[1]
+        except IndexError:
+            logging.critical( f"convert_ESFM_words( {BBB} ) index error: word='{match.group(1)}' {row_number=}/{len(word_table)} entries")
+            halt
+        book_html = f'{book_html[:match.start()]}<span title="{greek}"><a href="SB_{match.group(2)}.html">{match.group(1)}</a></span>{book_html[match.end():]}'
+        searchStartIndex = match.end() + 25 # We've added at least that many characters
+        count += 1
+
+    return book_html
+# end of convert_OET-LV_to_simple_HTML.convert_ESFM_words function
+
+
+def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_filenames:Set[str] ) -> int:
+    """
+    Make pages for all the words to link to.
+    """
+    fnPrint( DEBUGGING_THIS_MODULE, f"make_table_pages( {inputFolderPath}, {outputFolderPath}, {word_table_filenames} )" )
+
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Making table pages for {word_table_filenames}…" )
+    for word_table_filename in word_table_filenames:
+        word_table_filepath = inputFolderPath.joinpath( word_table_filename )
+        with open( word_table_filepath, 'rt', encoding='utf-8' ) as word_table_input_file:
+            word_table = word_table_input_file.read().split( '\n' )
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Read {len(word_table):,} lines from word table at {word_table_filepath}." )
+
+        columnHeaders = word_table[0]
+        dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Word table column headers = '{columnHeaders}'" )
+        for n, columns_string in enumerate( word_table[1:], start=1 ):
+            # print( n, columns_string )
+            output_filename = f'SB_{n}.html'
+            # dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Got '{columns_string}' for '{output_filename}'" )
+            if columns_string: # not a blank line (esp. at end)
+                ref, greek, extendedStrongs, roleLetter, morphology = columns_string.split( '\t' )
+                if extendedStrongs == 'None': extendedStrongs = None
+                if roleLetter == 'None': roleLetter = None
+                if morphology == 'None': morphology = None
+
+                BBB, CV = ref.split( '_', 1 )
+                C, V = CV.split( ':', 1 )
+                tidyBBB = BibleOrgSysGlobals.loadedBibleBooksCodes.tidyBBB( BBB )
+
+                strongs = extendedStrongs[:-1] if extendedStrongs else None # drop the last digit
+
+                roleField = ''
+                if roleLetter: roleField = f' Word role=<b>{CNTR_ROLE_NAME_DICT[roleLetter]}</b>'
+
+                moodField = tenseField = voiceField = personField = caseField = genderField = numberField = ''
+                if morphology:
+                    assert len(morphology) == 7, f"Got {ref} '{greek}' morphology ({len(morphology)}) = '{morphology}'"
+                    mood,tense,voice,person,case,gender,number = morphology
+                    if mood!='.': moodField = f' mood=<b>{CNTR_MOOD_NAME_DICT[mood]}</b>'
+                    if tense!='.': tenseField = f' tense=<b>{CNTR_TENSE_NAME_DICT[tense]}</b>'
+                    if voice!='.': voiceField = f' voice=<b>{CNTR_VOICE_NAME_DICT[voice]}</b>'
+                    if person!='.': personField = f' person=<b>{CNTR_PERSON_NAME_DICT[person]}</b>'
+                    if case!='.': caseField = f' case=<b>{CNTR_CASE_NAME_DICT[case]}</b>'
+                    if gender!='.': genderField = f' gender=<b>{CNTR_GENDER_NAME_DICT[gender]}</b>'
+                    if number!='.': numberField = f' number=<b>{CNTR_NUMBER_NAME_DICT[number]}</b>'
+
+                prevLink = f'<b><a href="SB_{n-1}.html">←</a></b> ' if n>1 else ''
+                nextLink = f' <b><a href="SB_{n+1}.html">→</a></b>' if n<len(word_table) else ''
+                oetLink = f'<b><a href="{BBB}.html#C{C}V{V}">Back to OET</a></b>'
+                html = f'''<h1>OET-LV Wordlink #{n}</h1>
+<p>{prevLink}{oetLink}{nextLink}</p>
+<p><span title="Goes to Statistical Restoration Greek page"><a href="https://GreekCNTR.org/collation/?{CNTR_BOOK_ID_MAP[BBB]}{C.zfill(3)}{V.zfill(3)}">SR GNT {tidyBBB} {C}:{V}</a></span>
+ <b>{greek}</b>
+ Strongs=<span title="Goes to Strongs dictionary"><a href="https://BibleHub.com/greek/{strongs}.htm">{extendedStrongs}</a></span>{roleField} Morphology=><b>{morphology}</b>:{moodField}{tenseField}{voiceField}{personField}{caseField}{genderField}{numberField}</p>'''
+                html = f'{START_HTML}\n{html}\n{END_HTML}'
+                with open( outputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
+                    html_output_file.write( html )
+                vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Wrote {len(html):,} characters to {output_filename}" )
+
+
+    return len(word_table) - 1
+# end of convert_OET-LV_to_simple_HTML.make_table_pages function
 
 
 if __name__ == '__main__':

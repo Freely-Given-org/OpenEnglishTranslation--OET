@@ -1,4 +1,7 @@
 # OET makfile
+#
+# Last updated: 2023-03-06 by RJH
+#
 
 #=== Folder and file declarations =======================
 
@@ -6,9 +9,9 @@ LV_HTML := $(wildcard ../derivedTexts/simpleHTML/LiteralVersion/*.html)
 RV_HTML := $(wildcard ../derivedTexts/simpleHTML/ReadersVersion/*.html)
 RV_ESFM := $(wildcard ../translatedTexts/ReadersVersion/*.ESFM)
 final_LV_OT_USFM := $(wildcard ../intermediateTexts/auto_edited_OT_USFM/*.usfm)
-final_LV_NT_USFM := $(wildcard ../intermediateTexts/auto_edited_VLT_USFM/*.usfm)
+final_LV_NT_ESFM := $(wildcard ../intermediateTexts/auto_edited_VLT_ESFM/*.ESFM)
 intermediate_LV_OT_USFM := $(wildcard ../intermediateTexts/modified_source_glossed_OSHB_USFM/*.usfm)
-intermediate_LV_NT_USFM := $(wildcard ../intermediateTexts/modified_source_VLT_USFM/*.usfm)
+intermediate_LV_NT_ESFM := $(wildcard ../intermediateTexts/modified_source_VLT_ESFM/*.ESFM)
 all_OT_TSV_table := ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv
 WLC_OT_TSV_table := ../intermediateTexts/glossed_OSHB/WLC_glosses.morphemes.tsv
 Clear_Bible_OT_lowfat_TSV := ../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTreesAbbrev.OT.morphemes.tsv
@@ -20,7 +23,7 @@ short_OSHB_TSV := ../sourceTexts/rawOSHB/OSHB.original.flat.morphemes.tsv
 
 #=== Script declarations =======================
 
-Python := python3.11
+Python := python3.12
 SBE := ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py
 BTranslit := ../../BibleTransliterations/Python/BibleTransliterations.py
 Hebrew := ../../BibleTransliterations/sourceTables/Hebrew.tsv
@@ -38,7 +41,7 @@ RV: $(RV_HTML)
 
 #=== LV stuff =======================
 
-$(LV_HTML): $(final_LV_OT_USFM)  $(final_LV_NT_USFM) convert_OET-LV_to_simple_HTML.py
+$(LV_HTML): $(final_LV_OT_USFM)  $(final_LV_NT_ESFM) convert_OET-LV_to_simple_HTML.py
 	@echo "\n\nConvert LV USFM files to simple HTML…\n"
 	@$(Python) convert_OET-LV_to_simple_HTML.py
 
@@ -46,8 +49,8 @@ $(final_LV_OT_USFM): $(intermediate_LV_OT_USFM) $(SBE) $(wildcard ScriptedOTUpda
 	@echo "\n\nRun ScriptedBibleEditor on OT USFM files…\n"
 	@$(Python) $(SBE) ScriptedOTUpdates -qe
 
-$(final_LV_NT_USFM): $(intermediate_LV_NT_USFM) $(SBE) $(wildcard ScriptedVLTUpdates/*) $(BTranslit) $(Greek) $(Hebrew)
-	@echo "\n\nRun ScriptedBibleEditor on NT USFM files…\n"
+$(final_LV_NT_ESFM): $(intermediate_LV_NT_ESFM) $(SBE) $(wildcard ScriptedVLTUpdates/*) $(BTranslit) $(Greek) $(Hebrew)
+	@echo "\n\nRun ScriptedBibleEditor on NT ESFM files…\n"
 	@$(Python) $(SBE) ScriptedVLTUpdates -qe
 
 $(intermediate_LV_OT_USFM): $(all_OT_TSV_table) extract_OSHB_OT_to_USFM.py
@@ -78,9 +81,9 @@ $(BibleTags_TSV): $(wildcard ../../Forked/bibletags-usfm/usfm/uhb/*.usfm) $(wild
 	@echo "\n\nConvert BibleTags USFM files to TSV…\n"
 	@$(Python) convert_BibTags_USFM_to_TSV.py
 
-$(intermediate_LV_NT_USFM): ../../CNTR-GNT/sourceExports/book.csv ../../CNTR-GNT/sourceExports/collation.updated.csv extract_VLT_NT_to_USFM.py
-	@echo "\n\nExtract NT from TSV table to USFM files…\n"
-	@$(Python) extract_VLT_NT_to_USFM.py -e
+$(intermediate_LV_NT_ESFM): ../../CNTR-GNT/sourceExports/book.csv ../../CNTR-GNT/sourceExports/collation.updated.csv extract_VLT_NT_to_ESFM.py
+	@echo "\n\nExtract NT from TSV table to ESFM files…\n"
+	@$(Python) extract_VLT_NT_to_ESFM.py -e
 
 #=== RV stuff =======================
 
@@ -108,8 +111,8 @@ clean_LT_OT:
 	rm ../sourceTexts/rawOSHB/OSHB.original.flat.morphemes.tsv
 
 clean_LT_NT:
-	rm ../intermediateTexts/auto_edited_VLT_USFM/*.usfm
-	rm ../intermediateTexts/modified_source_VLT_USFM/*.usfm
+	rm ../intermediateTexts/auto_edited_VLT_ESFM/*.ESFM
+	rm ../intermediateTexts/modified_source_VLT_ESFM/*.ESFM
 
 clean_RT:
 	@echo "Nothing to clean for RT yet"

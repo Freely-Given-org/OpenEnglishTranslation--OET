@@ -3,7 +3,7 @@
 #
 # pack_HTML_side-by-side.py
 #
-# Script to take the OET-RV-LV NT USFM files and convert to HTML
+# Script to take the OET-RV and OET-LV HTML files and display them side-by-side
 #
 # Copyright (C) 2022-2023 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org@gmail.com>
@@ -23,12 +23,12 @@
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 """
-Script to backport the ULT into empty verses of the OET-RV-LV
-    in order to give us the text of all the Bible,
-    even if we haven't manually worked through it all carefully yet.
-
-This script is designed to be able to be run over and over again,
-    i.e., it should be able to update the OET-RV-LV with more recent ULT edits.
+Uses the OET-RV USFM to create the headers
+    then takes the pre-existing RV HTML and divides it into section chunks
+    then find what verses each chunk contains
+    then gets the pre-existing LV HTML and extracts those verses
+    then places the related RV and LV chunks in a division
+        so they'll display side-by-side.
 """
 from gettext import gettext as _
 from tracemalloc import start
@@ -37,6 +37,9 @@ from pathlib import Path
 from datetime import datetime
 import logging
 import re
+import glob
+import shutil
+import os.path
 
 if __name__ == '__main__':
     import sys
@@ -48,10 +51,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-02-26' # by RJH
+LAST_MODIFIED_DATE = '2023-03-07' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.37'
+PROGRAM_VERSION = '0.39'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -65,8 +68,8 @@ OET_RV_HTML_InputFolderPath = project_folderpath.joinpath( 'derivedTexts/simpleH
 assert OET_RV_HTML_InputFolderPath.is_dir()
 # OET_LV_OT_USFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_OT_USFM/' )
 # assert OET_LV_OT_USFM_InputFolderPath.is_dir()
-# OET_LV_NT_USFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_VLT_USFM/' )
-# assert OET_LV_NT_USFM_InputFolderPath.is_dir()
+# OET_LV_NT_USFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_VLT_ESFM/' )
+# assert OET_LV_NT_ESFM_InputFolderPath.is_dir()
 OET_LV_HTML_InputFolderPath = project_folderpath.joinpath( 'derivedTexts/simpleHTML/LiteralVersion/' )
 assert OET_LV_HTML_InputFolderPath.is_dir()
 OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'derivedTexts/simpleHTML/SideBySide/' )
@@ -84,8 +87,6 @@ NT_BBB_LIST = ('JHN','MAT','MRK','LUK','ACT','ROM','CO1','CO2','GAL','EPH','PHP'
 assert len(NT_BBB_LIST) == 27
 BBB_LIST = OT_BBB_LIST + NT_BBB_LIST
 assert len(BBB_LIST) == 66
-# TORAH_BOOKS_CODES = ('GEN','EXO','LEV','NUM','DEU')
-# assert len(TORAH_BOOKS_CODES) == 5
 
 
 def main():
@@ -100,14 +101,18 @@ def main():
 
     # Pack RV and LT into simple side-by-side HTML
     pack_HTML_files()
+    copy_wordlink_files( OET_LV_HTML_InputFolderPath, OET_HTML_OutputFolderPath ) # The OET-LV has its words linked to the SR GNT
 # end of pack_HTML_side-by-side.main
 
 
 # If you change any colours, etc., may need to adjust the Key above
 # . selects class, # is id
 SBS_CSS_TEXT = """button#underlineButton { float:right; }
+
 div.container { display:grid; column-gap:0.6em; grid-template-columns:0.85fr 1.15fr; }
 div.BibleText { }
+div.rightBox { float:right; width:35%; border:3px solid #73AD21; padding:0.2em; }
+
 span.upLink { font-size:1.5em; font-weight:bold; }
 span.c { font-size:1.1em; color:green; }
 span.v { vertical-align:super; font-size:0.5em; color:red; }
@@ -126,12 +131,12 @@ span.nominaSacra { font-weight:bold; }
 span.bk { font-style:italic; }
 span.fn { vertical-align: super; font-size:0.7em; color:green; }
 span.xref { vertical-align: super; font-size:0.7em; color:blue; }
+
 p.h { font-weight:bold; }
 p.rem { font-size:0.8em; color:grey; }
 p.shortPrayer { text-align:center; }
 p.mt1 { text-align:center; font-size:1.8em; }
 p.mt2 { text-align:center; font-size:1.3em; }
-div.rightBox { float:right; width:35%; border:3px solid #73AD21; padding:0.2em; }
 p.s1 { margin-top:0.1em; margin-bottom:0; font-weight:bold; }
 p.r { margin-top:0; margin-bottom:0; font-size:0.75em; }
 p.LVsentence { margin-top:0.2em; margin-bottom:0.2em; }
@@ -140,7 +145,9 @@ p.q1 { margin-left:1em; margin-top:0.2em; margin-bottom:0.2em; }
 p.q2 { margin-left:2em; margin-top:0.2em; margin-bottom:0.2em; }
 /* p.m {  } */
 
-/* Book intro */
+a { text-decoration: none; }
+
+/* Book intro (OET-RV only) */
 li.intro { margin-top:0.5em; margin-bottom:0.5em; }
 p.is1 { font-weight:bold; font-size:1.3em; }
 p.is2 { font-weight:bold; }
@@ -220,7 +227,7 @@ SBS_INDEX_INTRO_HTML = """<!DOCTYPE html>
     <a href="TH1.html">Thessalonians 1</a> &nbsp;&nbsp;<a href="TH2.html">Thessalonians 2</a> &nbsp;&nbsp;<a href="TI1.html">Timotheos/Timothy 1</a> &nbsp;&nbsp;<a href="TI2.html">Timotheos/Timothy 2</a> &nbsp;&nbsp;<a href="TIT.html">Titos/Titus</a><br>
     <a href="PHM.html">Filēmoni/Philemon</a><br>
     <a href="HEB.html">Hebrews</a><br>
-    <a href="JAM.html">Yakōbos/James</a><br>
+    <a href="JAM.html">Yakōbos/Jacob/James</a><br>
     <a href="PE1.html">Petros/Peter 1</a> &nbsp;&nbsp;<a href="PE2.html">Petros/Peter 2</a><br>
     <a href="JN1.html">Yōannēs/John 1</a> &nbsp;&nbsp;<a href="JN2.html">Yōannēs/John 2</a> &nbsp;&nbsp;<a href="JN3.html">Yōannēs/John 3</a><br>
     <a href="JDE.html">Youdas/Jude</a><br>
@@ -1839,7 +1846,7 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
                 html_output_file.write( f'<!DOCTYPE html><html lang="en-US"><head><title>LV {BBB} {q}</title></head><body>\n' \
                                         f'<p>{_startCV} to {_endCV} (next {nextStartCV})</p>\n{lv}</body></html>' )
         # Before we make the page, we need to remove the CV id (duplicate) fields from the LV
-        Cregex, CVregex = ' id="C\d{1,3}"', ' id="C\d{1,3}V\d{1,3}"'
+        Cregex, CVregex = ' id="C\\d{1,3}"', ' id="C\\d{1,3}V\\d{1,3}"'
         lv = re.sub( CVregex, '', lv)
         lv = re.sub( Cregex, '', lv)
         if DEBUGGING_THIS_MODULE:
@@ -1923,6 +1930,21 @@ def handle_Psalms( psa_start_html:str, psa_html:str, psa_end_html:str ) -> bool:
         html_index_file.write( psalmsIndexHTML )
 
     return True
+# end of pack_HTML_side-by-side.handle_Psalms()
+
+
+def copy_wordlink_files( sourceFolder:Path, destinationFolder:Path ) -> bool:
+    """
+    Copy the SB_nnnnn.html wordlink HMTL files across.
+        (There's around 168,262 of these.)
+    """
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET-LV word-link HTML files from {sourceFolder}…")
+    copyCount = 0
+    for filename in glob.glob( os.path.join( sourceFolder, 'SB_*.html' ) ):
+        shutil.copy( filename, destinationFolder ) # Want the time to be updated or else "make" doesn't function correctly
+        # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
+        copyCount += 1
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET-LV word-link HTML files to {destinationFolder}.")
 # end of pack_HTML_side-by-side.handle_Psalms()
 
 

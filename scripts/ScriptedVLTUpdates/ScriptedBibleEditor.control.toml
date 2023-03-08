@@ -1,5 +1,7 @@
 # This is a sample TOML control file for the ScriptedBibleEditor
 #
+# Last updated: 2023-03-07 by RJH
+#
 # Available commands are:
 #
 #   title = "My Control File Title"
@@ -9,16 +11,18 @@
 #   tableName = "filepath"
 #
 
-title = "ScriptedBibleEditor OET-LV-NT Sample Control File"
-description = "To convert USFM files to create the draft OET-LV-NT"
+title = "ScriptedBibleEditor OET-LV-NT Control File"
+description = "To convert ESFM files to create the draft OET-LV-NT"
 
-inputFolder = "../../intermediateTexts/modified_source_VLT_USFM/"
-inputFilenameTemplate = "BBB_gloss.usfm"
+inputFolder = "../../intermediateTexts/modified_source_VLT_ESFM/"
+inputFilenameTemplate = "BBB_gloss.ESFM"
 
-outputFolder = "../../intermediateTexts/auto_edited_VLT_USFM/"
-outputFilenameTemplate = "OET-LV_BBB.usfm"
+outputFolder = "../../intermediateTexts/auto_edited_VLT_ESFM/"
+outputFilenameTemplate = "OET-LV_BBB.ESFM"
 clearOutputFolder = true # Removes the folder and recreates it if createOutputFolder is true (else deletes all files in the folder)
 createOutputFolder = true
+
+handleESFMWordNumbers = true
 
 applyOrder = "AllTablesFirst"
 

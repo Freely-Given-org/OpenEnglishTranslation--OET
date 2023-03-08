@@ -164,7 +164,7 @@ RV_INDEX_INTRO_HTML = """<!DOCTYPE html>
     <a href="TH1.html">Thessalonians 1</a> &nbsp;&nbsp;<a href="TH2.html">Thessalonians 2</a> &nbsp;&nbsp;<a href="TI1.html">Timotheos/Timothy 1</a> &nbsp;&nbsp;<a href="TI2.html">Timotheos/Timothy 2</a> &nbsp;&nbsp;<a href="TIT.html">Titos/Titus</a><br>
     <a href="PHM.html">Filēmoni/Philemon</a><br>
     <a href="HEB.html">Hebrews</a><br>
-    <a href="JAM.html">Yakōbos/James</a><br>
+    <a href="JAM.html">Yakōbos/Jacob/James</a><br>
     <a href="PE1.html">Petros/Peter 1</a> &nbsp;&nbsp;<a href="PE2.html">Petros/Peter 2</a><br>
     <a href="JN1.html">Yōannēs/John 1</a> &nbsp;&nbsp;<a href="JN2.html">Yōannēs/John 2</a> &nbsp;&nbsp;<a href="JN3.html">Yōannēs/John 3</a><br>
     <a href="JDE.html">Youdas/Jude</a><br>
