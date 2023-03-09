@@ -45,7 +45,7 @@ from BibleOrgSys.Misc import CompareBibles
 LAST_MODIFIED_DATE = '2023-03-09' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.46'
+PROGRAM_VERSION = '0.47'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -874,6 +874,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
     chapters_html = f'<p class="chapterLinks">{EM_SPACE.join(chapter_links)}</p><!--chapterLinks-->'
     book_start_html = f'{start_html}{links_html}\n{chapters_html}'
 
+    # Add our various spans to special text features
     book_html = book_html.replace( '\\nd ', '<span class="nominaSacra">' ) \
                 .replace( '\\nd*', '</span>' )
     book_html = book_html.replace( '\\add +', '<span class="addedArticle">' ) \
@@ -887,6 +888,10 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
     book_html = book_html.replace( '_</span>', '%%SPAN%%' ) \
                 .replace( '_', '<span class="ul">_</span>' ) \
                 .replace( '%%SPAN%%', '_</span>' )
+
+    if word_table: # sort out word numbers like 'written¦21763'
+        book_html = convert_ESFM_words( BBB, book_html, word_table )
+
     # Make schwas smaller
     book_html = book_html.replace( 'ə', '<span class="schwa">ə</span>' )
     if BBB in OT_BBB_LIST: # Hebrew direct object markers (DOMs)
@@ -895,9 +900,6 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                         .replace( '[', '<span class="added">' ) \
                         .replace( ']', '</span>' )
         
-    if word_table: # sort out word numbers like 'written¦21763'
-        book_html = convert_ESFM_words( BBB, book_html, word_table )
-
     # All done
     return ( book_start_html,
              book_html,
@@ -913,7 +915,38 @@ def convert_ESFM_words( BBB:str, book_html:str, word_table:List[str] ) -> str:
     fnPrint( DEBUGGING_THIS_MODULE, f"convert_ESFM_words( {BBB}, ({len(book_html)}), ({len(word_table)}) )" )
 
     vPrint( 'Info', DEBUGGING_THIS_MODULE, f"convert_ESFM_words( {BBB}, ({len(book_html)}), ({len(word_table)}) )…" )
-    wordRegex = re.compile( "([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})" )
+
+    # First find "compound" words like 'stood_up' or 'upper_room' or 'came_in or 'brought_up'
+    #   which have a wordlink number at the end,
+    #   and put the wordlink number after each individual word
+    wordRegex3 = re.compile( '([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)<span class="ul">_</span>([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)<span class="ul">_</span>([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
+    wordRegex2 = re.compile( '([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)<span class="ul">_</span>([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
+    count = 0
+    searchStartIndex = 0
+    while True: # Look for three-word compounds like 'with_one_accord' (Acts 1:14)
+        match = wordRegex3.search( book_html, searchStartIndex )
+        if not match:
+            break
+        # print( f"{BBB} word match 1='{match.group(1)}' 2='{match.group(2)}' 3='{match.group(3)}' all='{book_html[match.start():match.end()]}'" )
+        assert match.group(4).isdigit()
+        book_html = f'{book_html[:match.start()]}{match.group(1)}¦{match.group(4)}<span class="ul">_</span>{match.group(2)}¦{match.group(4)}<span class="ul">_</span>{match.group(3)}¦{match.group(4)}{book_html[match.end():]}'
+        searchStartIndex = match.end() + 2 # We've added at least that many characters
+        count += 1
+    searchStartIndex = 0
+    while True: # Look for two-word compounds
+        match = wordRegex2.search( book_html, searchStartIndex )
+        if not match:
+            break
+        # print( f"{BBB} word match 1='{match.group(1)}' 2='{match.group(2)}' 3='{match.group(3)}' all='{book_html[match.start():match.end()]}'" )
+        assert match.group(3).isdigit()
+        book_html = f'{book_html[:match.start()]}{match.group(1)}¦{match.group(3)}<span class="ul">_</span>{match.group(2)}¦{match.group(3)}{book_html[match.end():]}'
+        searchStartIndex = match.end() + 2 # We've added at least that many characters
+        count += 1
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Renumbered {count:,} OET-LV {BBB} 'compound' ESFM words." )
+
+    # Make each linked word into a html link
+    #   and then put a span around it so it can have a pop-up "title"
+    wordRegex = re.compile( '([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
     searchStartIndex = 0
     count = 0
     while True:
@@ -930,6 +963,7 @@ def convert_ESFM_words( BBB:str, book_html:str, word_table:List[str] ) -> str:
         book_html = f'{book_html[:match.start()]}<span title="{greek}"><a href="SB_{match.group(2)}.html">{match.group(1)}</a></span>{book_html[match.end():]}'
         searchStartIndex = match.end() + 25 # We've added at least that many characters
         count += 1
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Made {count:,} OET-LV {BBB} ESFM words into live links." )
 
     return book_html
 # end of convert_OET-LV_to_simple_HTML.convert_ESFM_words function
@@ -955,7 +989,7 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
             output_filename = f'SB_{n}.html'
             # dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Got '{columns_string}' for '{output_filename}'" )
             if columns_string: # not a blank line (esp. at end)
-                ref, greek, extendedStrongs, roleLetter, morphology = columns_string.split( '\t' )
+                ref, greek, glossWords, probability, extendedStrongs, roleLetter, morphology = columns_string.split( '\t' )
                 if extendedStrongs == 'None': extendedStrongs = None
                 if roleLetter == 'None': roleLetter = None
                 if morphology == 'None': morphology = None
@@ -979,7 +1013,7 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
                     if person!='.': personField = f' person=<b>{CNTR_PERSON_NAME_DICT[person]}</b>'
                     if case!='.': caseField = f' case=<b>{CNTR_CASE_NAME_DICT[case]}</b>'
                     if gender!='.': genderField = f' gender=<b>{CNTR_GENDER_NAME_DICT[gender]}</b>'
-                    if number!='.': numberField = f' number=<b>{CNTR_NUMBER_NAME_DICT[number]}</b>'
+                    if number!='.': numberField = f' number=<b>{CNTR_NUMBER_NAME_DICT[number]}</b>' # or № ???
 
                 prevLink = f'<b><a href="SB_{n-1}.html">←</a></b> ' if n>1 else ''
                 nextLink = f' <b><a href="SB_{n+1}.html">→</a></b>' if n<len(word_table) else ''
@@ -987,9 +1021,10 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
                 html = f'''<h1>OET-LV Wordlink #{n}</h1>
 <p>{prevLink}{oetLink}{nextLink}</p>
 <p><span title="Goes to Statistical Restoration Greek page"><a href="https://GreekCNTR.org/collation/?{CNTR_BOOK_ID_MAP[BBB]}{C.zfill(3)}{V.zfill(3)}">SR GNT {tidyBBB} {C}:{V}</a></span>
- <b>{greek}</b>
- Strongs=<span title="Goes to Strongs dictionary"><a href="https://BibleHub.com/greek/{strongs}.htm">{extendedStrongs}</a></span>{roleField} Morphology=><b>{morphology}</b>:{moodField}{tenseField}{voiceField}{personField}{caseField}{genderField}{numberField}</p>'''
-                html = f'{START_HTML}\n{html}\n{END_HTML}'
+ <b>{greek}</b> <small>originally translated to</small> ‘<b>{glossWords.replace('_','<span class="ul">_</span>')}</b>’
+ Strongs=<span title="Goes to Strongs dictionary"><a href="https://BibleHub.com/greek/{strongs}.htm">{extendedStrongs}</a></span><br>
+  {roleField} Morphology=<b>{morphology}</b>:{moodField}{tenseField}{voiceField}{personField}{caseField}{genderField}{numberField}</p>'''
+                html = f"{START_HTML.replace('__TITLE__',greek)}\n{html}\n{END_HTML}"
                 with open( outputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
                     html_output_file.write( html )
                 vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Wrote {len(html):,} characters to {output_filename}" )

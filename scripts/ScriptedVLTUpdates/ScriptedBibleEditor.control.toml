@@ -1,6 +1,6 @@
 # This is a sample TOML control file for the ScriptedBibleEditor
 #
-# Last updated: 2023-03-07 by RJH
+# Last updated: 2023-03-09 by RJH
 #
 # Available commands are:
 #
@@ -36,6 +36,7 @@ restoreOTNames = "OTNames.commandTable.tsv"
 restoreNTNames = "NTNames.commandTable.tsv"
 fixGlossPre = "fixGlossPre.commandTable.tsv"
 fixGlossHelpers = "fixGlossHelpers.commandTable.tsv"
+#fixGlossWords = "fixGlossWords.commandTable.tsv"
 fixGlossPost = "fixGlossPost.commandTable.tsv"
 cleanupVLT = "cleanupVLT.commandTable.tsv"
 finalFixes = "finalFixes.commandTable.tsv"
