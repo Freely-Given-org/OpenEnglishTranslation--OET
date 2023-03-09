@@ -46,10 +46,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-03-09' # by RJH
+LAST_MODIFIED_DATE = '2023-03-10' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
-PROGRAM_VERSION = '0.73'
+PROGRAM_VERSION = '0.74'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -600,11 +600,13 @@ def preform_gloss(thisList:List[Dict[str,str]], given_verse_row_index:int, last_
         = given_verse_row['GlossPre'], given_verse_row['GlossHelper'], given_verse_row['GlossWord'], given_verse_row['GlossPost'], given_verse_row['GlossPunctuation'], given_verse_row['GlossCapitalization']
     if row_offset is not None:
         this_row_offset = row_offset + given_verse_row_index + 1
-        if glossPre: glossPre = f'{glossPre}¦{this_row_offset}'
-        if glossHelper: glossHelper = f'{glossHelper}¦{this_row_offset}'
+        # Put in the ESFM wordlink row numbers
+        # NOTE: These are appended to each gloss word part, as well as to each part that's separated by an underline
+        if glossPre: glossPre = f"{glossPre.replace('_',f'¦{this_row_offset}_')}¦{this_row_offset}"
+        if glossHelper: glossHelper = f"{glossHelper.replace('_',f'¦{this_row_offset}_')}¦{this_row_offset}"
         assert glossWord
-        glossWord = f'{glossWord}¦{this_row_offset}'
-        if glossPost: glossPost = f'{glossPost}¦{this_row_offset}'
+        glossWord = f"{glossWord.replace('_',f'¦{this_row_offset}_')}¦{this_row_offset}"
+        if glossPost: glossPost = f"{glossPost.replace('_',f'¦{this_row_offset}_')}¦{this_row_offset}"
 
     try: glossInsert = given_verse_row['GlossInsert']
     except KeyError: glossInsert = '' # it's not in Alan's tables yet

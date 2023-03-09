@@ -42,10 +42,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-03-09' # by RJH
+LAST_MODIFIED_DATE = '2023-03-10' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.47'
+PROGRAM_VERSION = '0.48'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -112,6 +112,7 @@ CSS_TEXT = """div.BibleText { }
 
 span.upLink { font-size:1.5em; font-weight:bold; }
 span.c { font-size:1.1em; color:green; }
+span.cPsa { font-size:1.6em; font-weight:bold; color:green; }
 span.v { vertical-align:super; font-size:0.5em; color:red; }
 span.addedArticle { color:grey; }
 span.addedCopula { color:pink; }
@@ -740,7 +741,7 @@ def produce_HTML_files() -> None:
             # Having saved the book file, now for better orientation within the long file (wholeTorah or wholeNT),
             #   adjust book_html to include BBB text for chapters past chapter one
             bookAbbrev = BBB.title().replace('1','-1').replace('2','-2').replace('3','-3')
-            chapterRegEx = re.compile('<span class="c" id="C(\\d{1,3})V1">(\\d{1,3})</span>')
+            chapterRegEx = re.compile(f'''<span class="{'cPsa' if BBB=='PSA' else 'c'}" id="C(\\d{1,3})V1">(\\d{1,3})</span>''')
             while True:
                 for match in chapterRegEx.finditer( book_html ):
                     assert match.group(1) == match.group(2)
@@ -852,7 +853,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                 book_html = f'{book_html}{INTRO_PRAYER_HTML}<div class="BibleText">\n'
             # Note: as well as CV id's, we make sure there are simple C id's there as well
             start_c_bit = '<p class="LVsentence" id="C1">' if C=='1' else f'<a class="upLink" href="#" id="C{C}">↑</a> '
-            book_html = f'{book_html}{start_c_bit}<span class="c" id="C{C}V1">{C}</span>{NARROW_NON_BREAK_SPACE}'
+            book_html = f'''{book_html}{start_c_bit}<span class="{'cPsa' if BBB=='PSA' else 'c'}" id="C{C}V1">{C}</span>{NARROW_NON_BREAK_SPACE}'''
         elif marker == 'v':
             assert rest
             try: V, rest = rest.split( ' ', 1 )
@@ -919,15 +920,15 @@ def convert_ESFM_words( BBB:str, book_html:str, word_table:List[str] ) -> str:
     # First find "compound" words like 'stood_up' or 'upper_room' or 'came_in or 'brought_up'
     #   which have a wordlink number at the end,
     #   and put the wordlink number after each individual word
-    wordRegex3 = re.compile( '([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)<span class="ul">_</span>([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)<span class="ul">_</span>([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
-    wordRegex2 = re.compile( '([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)<span class="ul">_</span>([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
+    wordRegex3 = re.compile( '([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]{2,})<span class="ul">_</span>([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)<span class="ul">_</span>([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
+    wordRegex2 = re.compile( '([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]{2,})<span class="ul">_</span>([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
     count = 0
     searchStartIndex = 0
     while True: # Look for three-word compounds like 'with_one_accord' (Acts 1:14)
         match = wordRegex3.search( book_html, searchStartIndex )
         if not match:
             break
-        # print( f"{BBB} word match 1='{match.group(1)}' 2='{match.group(2)}' 3='{match.group(3)}' all='{book_html[match.start():match.end()]}'" )
+        logging.critical( f"Shouldn't still have {BBB} word match 1='{match.group(1)}' 2='{match.group(2)}' 3='{match.group(3)}' 4='{match.group(4)}'  all='{book_html[match.start()-5:match.end()]}'" )
         assert match.group(4).isdigit()
         book_html = f'{book_html[:match.start()]}{match.group(1)}¦{match.group(4)}<span class="ul">_</span>{match.group(2)}¦{match.group(4)}<span class="ul">_</span>{match.group(3)}¦{match.group(4)}{book_html[match.end():]}'
         searchStartIndex = match.end() + 2 # We've added at least that many characters
@@ -937,12 +938,13 @@ def convert_ESFM_words( BBB:str, book_html:str, word_table:List[str] ) -> str:
         match = wordRegex2.search( book_html, searchStartIndex )
         if not match:
             break
-        # print( f"{BBB} word match 1='{match.group(1)}' 2='{match.group(2)}' 3='{match.group(3)}' all='{book_html[match.start():match.end()]}'" )
+        logging.critical( f"Shouldn't still have {BBB} word match 1='{match.group(1)}' 2='{match.group(2)}' 3='{match.group(3)}'  all='{book_html[match.start()-5:match.end()]}'" )
         assert match.group(3).isdigit()
         book_html = f'{book_html[:match.start()]}{match.group(1)}¦{match.group(3)}<span class="ul">_</span>{match.group(2)}¦{match.group(3)}{book_html[match.end():]}'
         searchStartIndex = match.end() + 2 # We've added at least that many characters
         count += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Renumbered {count:,} OET-LV {BBB} 'compound' ESFM words." )
+    if count > 0:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Renumbered {count:,} OET-LV {BBB} 'compound' ESFM words." )
 
     # Make each linked word into a html link
     #   and then put a span around it so it can have a pop-up "title"
@@ -963,7 +965,7 @@ def convert_ESFM_words( BBB:str, book_html:str, word_table:List[str] ) -> str:
         book_html = f'{book_html[:match.start()]}<span title="{greek}"><a href="SB_{match.group(2)}.html">{match.group(1)}</a></span>{book_html[match.end():]}'
         searchStartIndex = match.end() + 25 # We've added at least that many characters
         count += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Made {count:,} OET-LV {BBB} ESFM words into live links." )
+    vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Made {count:,} OET-LV {BBB} ESFM words into live links." )
 
     return book_html
 # end of convert_OET-LV_to_simple_HTML.convert_ESFM_words function

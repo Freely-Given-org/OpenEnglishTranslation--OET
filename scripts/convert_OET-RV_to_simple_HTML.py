@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-03-01' # by RJH
+LAST_MODIFIED_DATE = '2023-03-10' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.48'
+PROGRAM_VERSION = '0.49'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -100,6 +100,7 @@ def main():
 CSS_TEXT = """div.BibleText { }
 span.upLink { font-size:1.5em; font-weight:bold; }
 span.c { font-size:1.1em; color:green; }
+span.cPsa { font-size:1.6em; font-weight:bold; color:green; }
 span.v { vertical-align:super; font-size:0.5em; color:red; }
 span.cv { vertical-align:super; font-size:0.8em; color:orange; }
 span.RVadded { color:dimGrey; }
@@ -783,7 +784,7 @@ def produce_HTML_files() -> None:
             # Having saved the book file, now for better orientation within the long file (wholeTorah or wholeNT),
             #   adjust book_html to include BBB text for chapters past chapter one
             bookAbbrev = BBB.title().replace('1','-1').replace('2','-2').replace('3','-3')
-            chapterRegEx = re.compile('<span class="c" id="C(\d{1,3})V1">(\d{1,3})</span>')
+            chapterRegEx = re.compile(f'''<span class="{'cPsa' if BBB=='PSA' else 'c'}" id="C(\d{1,3})V1">(\d{1,3})</span>''')
             while True:
                 for match in chapterRegEx.finditer( book_html ):
                     assert match.group(1) == match.group(2)
@@ -908,13 +909,13 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
                 # We want both verse numbers to be searchable
                 assert int(V2)==int(V1)+1 # We don't handle three verse reordering yet
                 book_html = f'{book_html}{"" if book_html.endswith(">") else " "}' \
-                        + f'{f"""<span id="C{C}"></span><span class="c" id="C{C}V1">{C}</span>""" if V1=="1" else f"""<span class="v" id="C{C}V{V1}">{V1}-</span>"""}' \
+                        + f'''{f"""<span id="C{C}"></span><span class="{'cPsa' if BBB=='PSA' else 'c'}" id="C{C}V1">{C}</span>""" if V1=="1" else f"""<span class="v" id="C{C}V{V1}">{V1}-</span>"""}''' \
                         + f'<span class="v" id="C{C}V{V2}">{V2}{NARROW_NON_BREAK_SPACE}</span>' \
                         + (rest if rest else '≈')
             else: # it's a simple verse number
                 assert V.isdigit(), f"Expected a verse number digit with {V=} {rest=}"
                 book_html = f'{book_html}{"" if book_html.endswith(">") or book_html.endswith("—") else " "}' \
-                        + f'{f"""<span id="C{C}"></span><span class="c" id="C{C}V1">{C}{NARROW_NON_BREAK_SPACE}</span>""" if V=="1" else f"""<span class="v" id="C{C}V{V}">{V}{NARROW_NON_BREAK_SPACE}</span>"""}' \
+                        + f'''{f"""<span id="C{C}"></span><span class="{'cPsa' if BBB=='PSA' else 'c'}" id="C{C}V1">{C}{NARROW_NON_BREAK_SPACE}</span>""" if V=="1" else f"""<span class="v" id="C{C}V{V}">{V}{NARROW_NON_BREAK_SPACE}</span>"""}''' \
                         + (rest if rest else '≈')
         elif marker in ('s1','s2','s3'):
             if inParagraph:

@@ -51,10 +51,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-03-07' # by RJH
+LAST_MODIFIED_DATE = '2023-03-10' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.39'
+PROGRAM_VERSION = '0.40'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -115,6 +115,7 @@ div.rightBox { float:right; width:35%; border:3px solid #73AD21; padding:0.2em; 
 
 span.upLink { font-size:1.5em; font-weight:bold; }
 span.c { font-size:1.1em; color:green; }
+span.cPsa { font-size:1.6em; font-weight:bold; color:green; }
 span.v { vertical-align:super; font-size:0.5em; color:red; }
 span.cv { vertical-align:super; font-size:0.8em; color:orange; }
 span.addedArticle { color:bisque; }
@@ -1557,7 +1558,7 @@ def pack_HTML_files() -> None:
             # # Having saved the book file, now for better orientation within the long file (wholeTorah or wholeNT),
             # #   adjust book_html to include BBB text for chapters past chapter one
             # bookAbbrev = BBB.title().replace('1','-1').replace('2','-2').replace('3','-3')
-            # chapterRegEx = re.compile('<span class="c" id="C(\d{1,3})V1">(\d{1,3})</span>')
+            # chapterRegEx = re.compile(f'''<span class="{'cPsa' if BBB=='PSA' else 'c'}" id="C(\d{1,3})V1">(\d{1,3})</span>''')
             # while True:
             #     for match in chapterRegEx.finditer( book_html ):
             #         assert match.group(1) == match.group(2)
@@ -1888,7 +1889,7 @@ def handle_Psalms( psa_start_html:str, psa_html:str, psa_end_html:str ) -> bool:
     # print(psa_top_links_html); halt
 
     # print(psa_html); halt
-    SEARCH_CHUNK = '<span class="c" id="C' # Near the start of the RV chunk
+    SEARCH_CHUNK = '<span class="cPsa" id="C' # Near the start of the RV chunk
     psa_html_bits = psa_html.split( SEARCH_CHUNK )
     assert len(psa_html_bits) == 151, len(psa_html_bits)
 
