@@ -1936,12 +1936,12 @@ def handle_Psalms( psa_start_html:str, psa_html:str, psa_end_html:str ) -> bool:
 
 def copy_wordlink_files( sourceFolder:Path, destinationFolder:Path ) -> bool:
     """
-    Copy the SB_nnnnn.html wordlink HMTL files across.
+    Copy the W_nnnnn.html wordlink HMTL files across.
         (There's around 168,262 of these.)
     """
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET-LV word-link HTML files from {sourceFolder}…")
     copyCount = 0
-    for filename in glob.glob( os.path.join( sourceFolder, 'SB_*.html' ) ):
+    for filename in glob.glob( os.path.join( sourceFolder, 'W_*.html' ) ):
         shutil.copy( filename, destinationFolder ) # Want the time to be updated or else "make" doesn't function correctly
         # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
         copyCount += 1
