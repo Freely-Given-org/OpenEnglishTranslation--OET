@@ -908,6 +908,9 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
 # end of convert_OET-LV_to_simple_HTML.produce_HTML_files function
 
 
+wordRegex1 = re.compile( '([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
+wordRegex2 = re.compile( '([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]{2,})<span class="ul">_</span>([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
+wordRegex3 = re.compile( '([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]{2,})<span class="ul">_</span>([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)<span class="ul">_</span>([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
 def convert_ESFM_words( BBB:str, book_html:str, word_table:List[str] ) -> str:
     """
     Handle ESFM word numbers like 'written¦21763'
@@ -920,8 +923,6 @@ def convert_ESFM_words( BBB:str, book_html:str, word_table:List[str] ) -> str:
     # First find "compound" words like 'stood_up' or 'upper_room' or 'came_in or 'brought_up'
     #   which have a wordlink number at the end,
     #   and put the wordlink number after each individual word
-    wordRegex3 = re.compile( '([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]{2,})<span class="ul">_</span>([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)<span class="ul">_</span>([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
-    wordRegex2 = re.compile( '([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]{2,})<span class="ul">_</span>([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
     count = 0
     searchStartIndex = 0
     while True: # Look for three-word compounds like 'with_one_accord' (Acts 1:14)
@@ -948,11 +949,10 @@ def convert_ESFM_words( BBB:str, book_html:str, word_table:List[str] ) -> str:
 
     # Make each linked word into a html link
     #   and then put a span around it so it can have a pop-up "title"
-    wordRegex = re.compile( '([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
     searchStartIndex = 0
     count = 0
     while True:
-        match = wordRegex.search( book_html, searchStartIndex )
+        match = wordRegex1.search( book_html, searchStartIndex )
         if not match:
             break
         # print( f"{BBB} word match 1='{match.group(1)}' 2='{match.group(2)}' all='{book_html[match.start():match.end()]}'" )
@@ -962,7 +962,7 @@ def convert_ESFM_words( BBB:str, book_html:str, word_table:List[str] ) -> str:
         except IndexError:
             logging.critical( f"convert_ESFM_words( {BBB} ) index error: word='{match.group(1)}' {row_number=}/{len(word_table)} entries")
             halt
-        book_html = f'{book_html[:match.start()]}<span title="{greek}"><a href="SB_{match.group(2)}.html">{match.group(1)}</a></span>{book_html[match.end():]}'
+        book_html = f'{book_html[:match.start()]}<span title="{greek}"><a href="W_{match.group(2)}.html">{match.group(1)}</a></span>{book_html[match.end():]}'
         searchStartIndex = match.end() + 25 # We've added at least that many characters
         count += 1
     vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Made {count:,} OET-LV {BBB} ESFM words into live links." )
@@ -986,9 +986,10 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
 
         columnHeaders = word_table[0]
         dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Word table column headers = '{columnHeaders}'" )
+        assert columnHeaders == 'Ref\tGreek\tGlossWords\tProbability\tStrongsExt\tRole\tMorphology' # If not, probably need to fix some stuff
         for n, columns_string in enumerate( word_table[1:], start=1 ):
             # print( n, columns_string )
-            output_filename = f'SB_{n}.html'
+            output_filename = f'W_{n}.html'
             # dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Got '{columns_string}' for '{output_filename}'" )
             if columns_string: # not a blank line (esp. at end)
                 ref, greek, glossWords, probability, extendedStrongs, roleLetter, morphology = columns_string.split( '\t' )
@@ -1017,8 +1018,8 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
                     if gender!='.': genderField = f' gender=<b>{CNTR_GENDER_NAME_DICT[gender]}</b>'
                     if number!='.': numberField = f' number=<b>{CNTR_NUMBER_NAME_DICT[number]}</b>' # or № ???
 
-                prevLink = f'<b><a href="SB_{n-1}.html">←</a></b> ' if n>1 else ''
-                nextLink = f' <b><a href="SB_{n+1}.html">→</a></b>' if n<len(word_table) else ''
+                prevLink = f'<b><a href="W_{n-1}.html">←</a></b> ' if n>1 else ''
+                nextLink = f' <b><a href="W_{n+1}.html">→</a></b>' if n<len(word_table) else ''
                 oetLink = f'<b><a href="{BBB}.html#C{C}V{V}">Back to OET</a></b>'
                 html = f'''<h1>OET-LV Wordlink #{n}</h1>
 <p>{prevLink}{oetLink}{nextLink}</p>
