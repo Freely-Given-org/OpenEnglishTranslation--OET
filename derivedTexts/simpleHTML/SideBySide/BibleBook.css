@@ -1,10 +1,14 @@
 button#underlineButton { float:right; }
+
 div.container { display:grid; column-gap:0.6em; grid-template-columns:0.85fr 1.15fr; }
 div.BibleText { }
+div.rightBox { float:right; width:35%; border:3px solid #73AD21; padding:0.2em; }
+
 span.upLink { font-size:1.5em; font-weight:bold; }
-span.C { font-size:1.1em; color:green; }
-span.V { vertical-align:super; font-size:0.5em; color:red; }
-span.CV { vertical-align:super; font-size:0.8em; color:orange; }
+span.c { font-size:1.1em; color:green; }
+span.cPsa { font-size:1.6em; font-weight:bold; color:green; }
+span.v { vertical-align:super; font-size:0.5em; color:red; }
+span.cv { vertical-align:super; font-size:0.8em; color:orange; }
 span.addedArticle { color:bisque; }
 span.addedCopula { color:pink; }
 span.addedDirectObject { color:brown; }
@@ -19,24 +23,26 @@ span.nominaSacra { font-weight:bold; }
 span.bk { font-style:italic; }
 span.fn { vertical-align: super; font-size:0.7em; color:green; }
 span.xref { vertical-align: super; font-size:0.7em; color:blue; }
+
 p.h { font-weight:bold; }
 p.rem { font-size:0.8em; color:grey; }
 p.shortPrayer { text-align:center; }
 p.mt1 { text-align:center; font-size:1.8em; }
 p.mt2 { text-align:center; font-size:1.3em; }
-div.rightBox { float:right; width:35%; border:3px solid #73AD21; padding:0.2em; }
 p.s1 { margin-top:0.1em; margin-bottom:0; font-weight:bold; }
 p.r { margin-top:0; margin-bottom:0; font-size:0.75em; }
 p.LVsentence { margin-top:0.2em; margin-bottom:0.2em; }
 p.p { text-indent:0.5em; margin-top:0.2em; margin-bottom:0.2em; }
 p.q1 { margin-left:1em; margin-top:0.2em; margin-bottom:0.2em; }
 p.q2 { margin-left:2em; margin-top:0.2em; margin-bottom:0.2em; }
-p.m {  }
+/* p.m {  } */
 
-/* Book intro */
+a { text-decoration: none; }
+
+/* Book intro (OET-RV only) */
 li.intro { margin-top:0.5em; margin-bottom:0.5em; }
 p.is1 { font-weight:bold; font-size:1.3em; }
 p.is2 { font-weight:bold; }
 p.iot { font-weight:bold; }
 p.io1 { text-indent:2em; margin-top:0.2em; margin-bottom:0.2em; }
-span.ior { font-weight:bold; } // font-style:italic;
+span.ior { font-weight:bold; } /* font-style:italic; */

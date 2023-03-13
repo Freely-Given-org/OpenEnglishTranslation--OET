@@ -38,14 +38,15 @@ if __name__ == '__main__':
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.Bible import Bible
+from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-03-10' # by RJH
+LAST_MODIFIED_DATE = '2023-03-12' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.48'
+PROGRAM_VERSION = '0.49'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -65,18 +66,18 @@ assert OET_HTML_OutputFolderPath.is_dir()
 # EN_SPACE = ' '
 EM_SPACE = ' '
 NARROW_NON_BREAK_SPACE = ' '
-OT_BBB_LIST = ('GEN','EXO','LEV','NUM','DEU','JOS','JDG','RUT','SA1','SA2','KI1','KI2','CH1','CH2',
-                'EZR','NEH','EST','JOB','PSA','PRO','ECC','SNG','ISA','JER','LAM','EZE',
-                'DAN','HOS','JOL','AMO','OBA','JNA','MIC','NAH','HAB','ZEP','HAG','ZEC','MAL')
 CNTR_BOOK_ID_MAP = {
     'MAT':40, 'MRK':41, 'LUK':42, 'JHN':43, 'ACT':44,
     'ROM':45, 'CO1':46, 'CO2':47, 'GAL':48, 'EPH':49, 'PHP':50, 'COL':51, 'TH1':52, 'TH2':53, 'TI1':54, 'TI2':55, 'TIT':56, 'PHM':57,
     'HEB':58, 'JAM':58, 'PE1':60, 'PE2':61, 'JN1':62, 'JN2':63, 'JN3':64, 'JDE':65, 'REV':66}
-assert len(OT_BBB_LIST) == 39
+# BOOKLIST_OT39 = ('GEN','EXO','LEV','NUM','DEU','JOS','JDG','RUT','SA1','SA2','KI1','KI2','CH1','CH2',
+#                 'EZR','NEH','EST','JOB','PSA','PRO','ECC','SNG','ISA','JER','LAM','EZE',
+#                 'DAN','HOS','JOL','AMO','OBA','JNA','MIC','NAH','HAB','ZEP','HAG','ZEC','MAL')
+# assert len(BOOKLIST_OT39) == 39
 # NT_BBB_LIST = ('MAT','MRK','LUK','JHN','ACT','ROM','CO1','CO2','GAL','EPH','PHP','COL','TH1','TH2','TI1','TI2','TIT','PHM','HEB','JAM','PE1','PE2','JN1','JN2','JN3','JDE','REV')
 NT_BBB_LIST = ('JHN','MAT','MRK','LUK','ACT','ROM','CO1','CO2','GAL','EPH','PHP','COL','TH1','TH2','TI1','TI2','TIT','PHM','HEB','JAM','PE1','PE2','JN1','JN2','JN3','JDE','REV')
 assert len(NT_BBB_LIST) == 27
-BBB_LIST = OT_BBB_LIST + NT_BBB_LIST
+BBB_LIST = BOOKLIST_OT39 + NT_BBB_LIST
 assert len(BBB_LIST) == 66
 TORAH_BOOKS_CODES = ('GEN','EXO','LEV','NUM','DEU')
 assert len(TORAH_BOOKS_CODES) == 5
@@ -801,11 +802,11 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                  ' <a href="index.html#Intro">Intro</a>, <a href="index.html#Key">Key</a>,' \
                  'and <a href="FAQs.html">FAQs</a>' \
                  f'__NEXT__<br><br>__REST__</p>'
-    if BBB in OT_BBB_LIST:
+    if BBB in BOOKLIST_OT39:
         links_html = links_html_template.replace('__REST__', 'Whole <a href="OET-LV-Torah.html">Torah/Pentateuch</a> (for easy searching of multiple books, etc.)' )
 
-        previousBBB = OT_BBB_LIST[OT_BBB_LIST.index(BBB)-1] # Gives wrong value (@[-1]) for first book
-        try: nextBBB = OT_BBB_LIST[OT_BBB_LIST.index(BBB)+1]
+        previousBBB = BOOKLIST_OT39[BOOKLIST_OT39.index(BBB)-1] # Gives wrong value (@[-1]) for first book
+        try: nextBBB = BOOKLIST_OT39[BOOKLIST_OT39.index(BBB)+1]
         except IndexError: nextBBB = NT_BBB_LIST[0] # above line fails on final book
         links_html = links_html.replace( '__PREVIOUS__', '' if BBB==NT_BBB_LIST[0]
             else f'<a href="{previousBBB}.html">Previous Book ({previousBBB})</a>{EM_SPACE}')
@@ -813,7 +814,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
     elif BBB in NT_BBB_LIST:
         links_html = links_html_template.replace('__REST__', 'Whole <a href="OET-LV-NT.html">New Testament</a> (for easy searching of multiple books, etc.)' )
 
-        previousBBB = OT_BBB_LIST[-1] if BBB==NT_BBB_LIST[0] else NT_BBB_LIST[NT_BBB_LIST.index(BBB)-1] # Gives wrong value (@[-1]) for first book
+        previousBBB = BOOKLIST_OT39[-1] if BBB==NT_BBB_LIST[0] else NT_BBB_LIST[NT_BBB_LIST.index(BBB)-1] # Gives wrong value (@[-1]) for first book
         try: nextBBB = NT_BBB_LIST[NT_BBB_LIST.index(BBB)+1]
         except IndexError: pass # above line fails on final book
         links_html = links_html.replace( '__PREVIOUS__', f'<a href="{previousBBB}.html">Previous Book ({previousBBB})</a>{EM_SPACE}')
@@ -895,7 +896,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
 
     # Make schwas smaller
     book_html = book_html.replace( 'ə', '<span class="schwa">ə</span>' )
-    if BBB in OT_BBB_LIST: # Hebrew direct object markers (DOMs)
+    if BBB in BOOKLIST_OT39: # Hebrew direct object markers (DOMs)
         book_html = book_html.replace( 'DOM', '<span class="dom">DOM</span>' ) \
                         .replace( '[was]', '<span class="addedCopula">was</span>' ) \
                         .replace( '[', '<span class="added">' ) \

@@ -22,7 +22,7 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 									Christians¦			followers¦_of¦_the¦_messiah¦
 									Christian¦			follower¦_of¦_the¦_messiah¦
 d									Christ¦			chosen¦_one¦/messiah¦
-									cross			stake
+w									cross			stake		Use w/word flag so it doesn't mess with words like "across"
 									crucified him			executed_ him _on_a_stake		Two word numbers still NOT HANDLED by ScriptedBibleEditor
 									crucified¦			executed¦_on¦_a¦_stake¦
 									crucifying¦			executing¦_on¦_a¦_stake¦

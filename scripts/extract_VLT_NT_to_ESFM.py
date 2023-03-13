@@ -41,15 +41,16 @@ from csv import DictReader
 from collections import defaultdict
 from datetime import datetime
 import logging
+import shutil
 
 import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-03-10' # by RJH
+LAST_MODIFIED_DATE = '2023-03-13' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
-PROGRAM_VERSION = '0.74'
+PROGRAM_VERSION = '0.75'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -57,6 +58,7 @@ DEBUGGING_THIS_MODULE = False
 
 # VLT_USFM_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_VLT_USFM/' )
 VLT_ESFM_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_VLT_ESFM/' )
+RV_ESFM_OUTPUT_FOLDERPATH = Path( '../translatedTexts/ReadersVersion/' ) # We also copy the wordfile to this folder
 
 
 state = None
@@ -482,8 +484,12 @@ def export_esfm_literal_English_gloss() -> bool:
     if esfm_text: # write the last book
         if write_esfm_book( last_book_number, esfm_text ):
             num_books_written += 1
-
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {num_books_written} books to {VLT_ESFM_OUTPUT_FOLDERPATH}.")
+
+    # Also use the same word file for the OET-RV
+    shutil.copy2( table_filepath, RV_ESFM_OUTPUT_FOLDERPATH.joinpath( table_filename ) )
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Also copied {table_filename} to {RV_ESFM_OUTPUT_FOLDERPATH}.")
+
     return True
 # end of extract_VLT_NT_to_ESFM.export_esfm_literal_English_gloss
 

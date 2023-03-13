@@ -47,14 +47,15 @@ if __name__ == '__main__':
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.Bible import Bible
+from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-03-10' # by RJH
+LAST_MODIFIED_DATE = '2023-03-12' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.40'
+PROGRAM_VERSION = '0.41'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -78,14 +79,14 @@ assert OET_HTML_OutputFolderPath.is_dir()
 # EN_SPACE = ' '
 EM_SPACE = ' '
 # NARROW_NON_BREAK_SPACE = ' '
-OT_BBB_LIST = ('GEN','EXO','LEV','NUM','DEU','JOS','JDG','RUT','SA1','SA2','KI1','KI2','CH1','CH2',
-                'EZR','NEH','EST','JOB','PSA','PRO','ECC','SNG','ISA','JER','LAM','EZE',
-                'DAN','HOS','JOL','AMO','OBA','JNA','MIC','NAH','HAB','ZEP','HAG','ZEC','MAL')
-assert len(OT_BBB_LIST) == 39
+# BOOKLIST_OT39 = ('GEN','EXO','LEV','NUM','DEU','JOS','JDG','RUT','SA1','SA2','KI1','KI2','CH1','CH2',
+#                 'EZR','NEH','EST','JOB','PSA','PRO','ECC','SNG','ISA','JER','LAM','EZE',
+#                 'DAN','HOS','JOL','AMO','OBA','JNA','MIC','NAH','HAB','ZEP','HAG','ZEC','MAL')
+# assert len(BOOKLIST_OT39) == 39
 # NT_BBB_LIST = ('MAT','MRK','LUK','JHN','ACT','ROM','CO1','CO2','GAL','EPH','PHP','COL','TH1','TH2','TI1','TI2','TIT','PHM','HEB','JAM','PE1','PE2','JN1','JN2','JN3','JDE','REV')
 NT_BBB_LIST = ('JHN','MAT','MRK','LUK','ACT','ROM','CO1','CO2','GAL','EPH','PHP','COL','TH1','TH2','TI1','TI2','TIT','PHM','HEB','JAM','PE1','PE2','JN1','JN2','JN3','JDE','REV')
 assert len(NT_BBB_LIST) == 27
-BBB_LIST = OT_BBB_LIST + NT_BBB_LIST
+BBB_LIST = BOOKLIST_OT39 + NT_BBB_LIST
 assert len(BBB_LIST) == 66
 
 
@@ -1634,11 +1635,11 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
     """
     fnPrint( DEBUGGING_THIS_MODULE, f"extract_and_combine_simple_HTML( {BBB}, ({len(rvUSFM):,}), ({len(rvHTML):,}), ({len(lvHTML):,}) )" )
 
-    if BBB in OT_BBB_LIST:
+    if BBB in BOOKLIST_OT39:
         links_html = BACK_FORTH_LINKS_HTML_TEMPLATE.replace('__REST__', '' ) #'Whole <a href="OET-RV-LV-Torah.html">Torah/Pentateuch</a> (for easy searching of multiple books, etc.)' )
 
-        previousBBB = OT_BBB_LIST[OT_BBB_LIST.index(BBB)-1] # Gives wrong value (@[-1]) for first book
-        try: nextBBB = OT_BBB_LIST[OT_BBB_LIST.index(BBB)+1]
+        previousBBB = BOOKLIST_OT39[BOOKLIST_OT39.index(BBB)-1] # Gives wrong value (@[-1]) for first book
+        try: nextBBB = BOOKLIST_OT39[BOOKLIST_OT39.index(BBB)+1]
         except IndexError: nextBBB = NT_BBB_LIST[0] # above line fails on final book
         links_html = links_html.replace( '__PREVIOUS__', '' if BBB==NT_BBB_LIST[0]
             else f'<a href="{previousBBB}.html">Previous Book ({previousBBB})</a>{EM_SPACE}')
@@ -1646,7 +1647,7 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
     elif BBB in NT_BBB_LIST:
         links_html = BACK_FORTH_LINKS_HTML_TEMPLATE.replace('__REST__', '' ) #'Whole <a href="OET-RV-LV-NT.html">New Testament</a> (for easy searching of multiple books, etc.)' )
 
-        previousBBB = OT_BBB_LIST[-1] if BBB==NT_BBB_LIST[0] else NT_BBB_LIST[NT_BBB_LIST.index(BBB)-1] # Gives wrong value (@[-1]) for first book
+        previousBBB = BOOKLIST_OT39[-1] if BBB==NT_BBB_LIST[0] else NT_BBB_LIST[NT_BBB_LIST.index(BBB)-1] # Gives wrong value (@[-1]) for first book
         try: nextBBB = NT_BBB_LIST[NT_BBB_LIST.index(BBB)+1]
         except IndexError: pass # above line fails on final book
         links_html = links_html.replace( '__PREVIOUS__', f'<a href="{previousBBB}.html">Previous Book ({previousBBB})</a>{EM_SPACE}')

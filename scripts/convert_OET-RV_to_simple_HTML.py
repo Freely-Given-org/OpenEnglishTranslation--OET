@@ -23,12 +23,6 @@
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 """
-Script to backport the ULT into empty verses of the OET-RV
-    in order to give us the text of all the Bible,
-    even if we haven't manually worked through it all carefully yet.
-
-This script is designed to be able to be run over and over again,
-    i.e., it should be able to update the OET-RV with more recent ULT edits.
 """
 from gettext import gettext as _
 from tracemalloc import start
@@ -44,14 +38,15 @@ if __name__ == '__main__':
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.Bible import Bible
+from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, BOOKLIST_66
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-03-10' # by RJH
+LAST_MODIFIED_DATE = '2023-03-12' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.49'
+PROGRAM_VERSION = '0.50'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -59,23 +54,23 @@ DEBUGGING_THIS_MODULE = False
 
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module
 FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos
-OET_USFM_InputFolderPath = project_folderpath.joinpath( 'translatedTexts/ReadersVersion/' )
+OET_ESFM_InputFolderPath = project_folderpath.joinpath( 'translatedTexts/ReadersVersion/' )
 OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'derivedTexts/simpleHTML/ReadersVersion/' )
-assert OET_USFM_InputFolderPath.is_dir()
+assert OET_ESFM_InputFolderPath.is_dir()
 assert OET_HTML_OutputFolderPath.is_dir()
 
 # EN_SPACE = ' '
 EM_SPACE = ' '
 NARROW_NON_BREAK_SPACE = ' '
 BACKSLASH = '\\'
-OT_BBB_LIST = ('GEN','EXO','LEV','NUM','DEU','JOS','JDG','RUT','SA1','SA2','KI1','KI2','CH1','CH2',
-                'EZR','NEH','EST','JOB','PSA','PRO','ECC','SNG','ISA','JER','LAM','EZE',
-                'DAN','HOS','JOL','AMO','OBA','JNA','MIC','NAH','HAB','ZEP','HAG','ZEC','MAL')
-assert len(OT_BBB_LIST) == 39
+# BOOKLIST_OT39 = ('GEN','EXO','LEV','NUM','DEU','JOS','JDG','RUT','SA1','SA2','KI1','KI2','CH1','CH2',
+#                 'EZR','NEH','EST','JOB','PSA','PRO','ECC','SNG','ISA','JER','LAM','EZE',
+#                 'DAN','HOS','JOL','AMO','OBA','JNA','MIC','NAH','HAB','ZEP','HAG','ZEC','MAL')
+# assert len(BOOKLIST_OT39) == 39
 # NT_BBB_LIST = ('MAT','MRK','LUK','JHN','ACT','ROM','CO1','CO2','GAL','EPH','PHP','COL','TH1','TH2','TI1','TI2','TIT','PHM','HEB','JAM','PE1','PE2','JN1','JN2','JN3','JDE','REV')
 NT_BBB_LIST = ('JHN','MAT','MRK','LUK','ACT','ROM','CO1','CO2','GAL','EPH','PHP','COL','TH1','TH2','TI1','TI2','TIT','PHM','HEB','JAM','PE1','PE2','JN1','JN2','JN3','JDE','REV')
 assert len(NT_BBB_LIST) == 27
-BBB_LIST = OT_BBB_LIST + NT_BBB_LIST
+BBB_LIST = BOOKLIST_OT39 + NT_BBB_LIST
 assert len(BBB_LIST) == 66
 TORAH_BOOKS_CODES = ('GEN','EXO','LEV','NUM','DEU')
 assert len(TORAH_BOOKS_CODES) == 5
@@ -756,7 +751,7 @@ def produce_HTML_files() -> None:
 
         if bookType:
             source_filename = f'OET-RV_{BBB}.ESFM'
-            with open( OET_USFM_InputFolderPath.joinpath(source_filename), 'rt', encoding='utf-8' ) as usfm_input_file:
+            with open( OET_ESFM_InputFolderPath.joinpath(source_filename), 'rt', encoding='utf-8' ) as usfm_input_file:
                 usfm_text = usfm_input_file.read()
             assert usfm_text.count('‘') == usfm_text.count('’'), f"Why do we have OET-RV_{BBB}.ESFM {usfm_text.count('‘')=} and {usfm_text.count('’')=}"
             assert usfm_text.count('“') >= usfm_text.count('”'), f"Why do we have OET-RV_{BBB}.ESFM {usfm_text.count('“')=} and {usfm_text.count('”')=}"
@@ -835,11 +830,11 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
                  ' <a href="index.html#Intro">Intro</a>, <a href="index.html#Key">Key</a>,' \
                  'and <a href="FAQs.html">FAQs</a>' \
                  f'__NEXT__<br><br>__REST__</p>'
-    if BBB in OT_BBB_LIST:
+    if BBB in BOOKLIST_OT39:
         links_html = links_html_template.replace('__REST__', 'Whole <a href="OET-RV-Torah.html">Torah/Pentateuch</a> (for easy searching of multiple books, etc.)' )
 
-        previousBBB = OT_BBB_LIST[OT_BBB_LIST.index(BBB)-1] # Gives wrong value (@[-1]) for first book
-        try: nextBBB = OT_BBB_LIST[OT_BBB_LIST.index(BBB)+1]
+        previousBBB = BOOKLIST_OT39[BOOKLIST_OT39.index(BBB)-1] # Gives wrong value (@[-1]) for first book
+        try: nextBBB = BOOKLIST_OT39[BOOKLIST_OT39.index(BBB)+1]
         except IndexError: nextBBB = NT_BBB_LIST[0] # above line fails on final book
         links_html = links_html.replace( '__PREVIOUS__', '' if BBB==NT_BBB_LIST[0]
             else f'<a href="{previousBBB}.html">Previous Book ({previousBBB})</a>{EM_SPACE}')
@@ -847,7 +842,7 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
     elif BBB in NT_BBB_LIST:
         links_html = links_html_template.replace('__REST__', 'Whole <a href="OET-RV-NT.html">New Testament</a> (for easy searching of multiple books, etc.)' )
 
-        previousBBB = OT_BBB_LIST[-1] if BBB==NT_BBB_LIST[0] else NT_BBB_LIST[NT_BBB_LIST.index(BBB)-1] # Gives wrong value (@[-1]) for first book
+        previousBBB = BOOKLIST_OT39[-1] if BBB==NT_BBB_LIST[0] else NT_BBB_LIST[NT_BBB_LIST.index(BBB)-1] # Gives wrong value (@[-1]) for first book
         try: nextBBB = NT_BBB_LIST[NT_BBB_LIST.index(BBB)+1]
         except IndexError: pass # above line fails on final book
         links_html = links_html.replace( '__PREVIOUS__', f'<a href="{previousBBB}.html">Previous Book ({previousBBB})</a>{EM_SPACE}')

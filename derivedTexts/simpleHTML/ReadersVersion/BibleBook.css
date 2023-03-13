@@ -1,8 +1,9 @@
 div.BibleText { }
 span.upLink { font-size:1.5em; font-weight:bold; }
-span.C { font-size:1.1em; color:green; }
-span.V { vertical-align:super; font-size:0.5em; color:red; }
-span.CV { vertical-align:super; font-size:0.8em; color:orange; }
+span.c { font-size:1.1em; color:green; }
+span.cPsa { font-size:1.6em; font-weight:bold; color:green; }
+span.v { vertical-align:super; font-size:0.5em; color:red; }
+span.cv { vertical-align:super; font-size:0.8em; color:orange; }
 span.RVadded { color:dimGrey; }
 span.bk { font-style:italic; }
 span.fn { vertical-align: super; font-size:0.7em; color:green; }

@@ -1,7 +1,9 @@
 div.BibleText { }
+
 span.upLink { font-size:1.5em; font-weight:bold; }
-span.C { font-size:1.1em; color:green; }
-span.V { vertical-align:super; font-size:0.5em; color:red; }
+span.c { font-size:1.1em; color:green; }
+span.cPsa { font-size:1.6em; font-weight:bold; color:green; }
+span.v { vertical-align:super; font-size:0.5em; color:red; }
 span.addedArticle { color:grey; }
 span.addedCopula { color:pink; }
 span.addedDirectObject { color:brown; }
@@ -12,8 +14,11 @@ span.ul { color:darkGrey; }
 span.dom { color:Gainsboro; }
 span.schwa { font-size:0.75em; }
 span.nominaSacra { font-weight:bold; }
+
 p.rem { font-size:0.8em; color:grey; }
 p.shortPrayer { text-align:center; }
 p.mt1 { font-size:1.8em; }
 p.mt2 { font-size:1.3em; }
 p.LVsentence { margin-top:0.2em; margin-bottom:0.2em; }
+
+a { text-decoration: none; }
