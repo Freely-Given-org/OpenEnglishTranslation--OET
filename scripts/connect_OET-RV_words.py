@@ -46,7 +46,7 @@ from BibleOrgSys.Formats.ESFMBible import ESFMBible
 LAST_MODIFIED_DATE = '2023-03-14' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.04'
+PROGRAM_VERSION = '0.05'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -74,8 +74,9 @@ class State:
     simpleNouns = ( # These are nouns that are likely to match one-to-one from the OET-LV to the OET-RV
                     #   i.e., there's really no other word for them.
         'boat','boats', 'camel','camels',
-        'daughter', 'donkey','donkeys', 'father', 'fish', 'foot','feet', 'goat','goats',
-        'hand','hands', 'honey', 'house','houses', 'lion','lions', 'locusts', 'mother', 'sea', 'sheep')
+        'daughter', 'donkey','donkeys', 'door','doors', 'father', 'fish', 'foot','feet', 'goat','goats', 'grain','grains',
+        'hand','hands', 'heart','hearts', 'honey', 'house','houses', 'lion','lions', 'locusts', 'mother',
+        'net','nets', 'sea', 'sheep')
 # end of State class
 
 state = State()
@@ -113,7 +114,7 @@ def connect_OET_RV( rv, lv ):
     """
     fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {rv}, {lv} )" )
     for BBB,bookObject in lv.books.items():
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Processing {}" )
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Processing OET {BBB}…" )
 
         wordFileName = bookObject.ESFMWordTableFilename
         if wordFileName:
@@ -183,10 +184,13 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ):
         if lvMarker in ('v~','p~'):
             lvText = f"{lvText}{' ' if lvText else ''}{lvRest.replace('+','')}"
     if not rvText or not lvText: return
-    rvAdjText = rvText.replace('≈','') \
-                .replace('.','').replace(',','').replace(':','').replace('—',' ').strip()
+    rvAdjText = rvText.replace('≈','').replace('…','') \
+                .replace('.','').replace(',','').replace(':','').replace('—',' ') \
+                .replace( '', '' ).replace( '”', '' ) \
+                .replace('  ',' ').strip()
     lvAdjText = lvText.replace('_',' ') \
-                .replace('.','').replace(',','').replace(':','').replace('  ',' ').strip()
+                .replace('.','').replace(',','').replace(':','') \
+                .replace('  ',' ').strip()
     # print( f"({len(rvAdjText)}) {rvAdjText=}")
     # print( f"({len(lvAdjText)}) {lvAdjText=}")
     if not rvAdjText or not lvAdjText: return
@@ -197,6 +201,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ):
     assert rvWords
     assert lvWords
     for rvWord in rvWords:
+        assert rvWord, f"{rvText=} {rvAdjText=}"
         assert rvWord.count( '¦' ) <= 1 # Check that we haven't been retagging already tagged RV words
     matchSimpleNouns( BBB, c,v, rvWords, lvWords )
 
@@ -233,11 +238,11 @@ def matchProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[str], lvC
     for rvN,rvCapitalisedWord in enumerate( rvCapitalisedWordList[:] ):
         if '¦' in rvCapitalisedWord:
             _rvCapitalisedWord, rvWordNumber = rvCapitalisedWord.split('¦')
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchProperNouns( {BBB} {c}:{v} ) removing already tagged '{rvCapitalisedWord}' from RV list")
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchProperNouns( {BBB} {c}:{v} ) removing already tagged '{rvCapitalisedWord}' from RV list…")
             rvCapitalisedWordList.pop( rvN )
             for lvN,lvCapitalisedWord in enumerate( lvCapitalisedWordList[:] ):
                 if lvCapitalisedWord.endswith( f'¦{rvWordNumber}' ):
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchProperNouns( {BBB} {c}:{v} ) removing already tagged '{lvCapitalisedWord}' from LV list")
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchProperNouns( {BBB} {c}:{v} ) removing already tagged '{lvCapitalisedWord}' from LV list…")
                     lvCapitalisedWordList.pop( lvN )
     if not rvCapitalisedWordList or not lvCapitalisedWordList:
         return # nothing left to do here
