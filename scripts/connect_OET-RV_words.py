@@ -73,10 +73,32 @@ class State:
     """
     simpleNouns = ( # These are nouns that are likely to match one-to-one from the OET-LV to the OET-RV
                     #   i.e., there's really no other word for them.
-        'boat','boats', 'camel','camels',
-        'daughter', 'donkey','donkeys', 'door','doors', 'father', 'fish', 'foot','feet', 'goat','goats', 'grain','grains',
-        'hand','hands', 'heart','hearts', 'honey', 'house','houses', 'lion','lions', 'locusts', 'mother',
-        'net','nets', 'sea', 'sheep')
+        # NOTE: Some of these nouns can also be verbs -- we may need to remove those???
+        # 'sons' causes problems
+        'ambassador','ambassadors', 'ancestor','ancestors', 'angel','angels', 'ankle','ankles',
+        'birth', 'blood', 'boat','boats', 'body','bodies', 'boy','boys', 'bread', 'bull','bulls',
+        'camel','camels', 'chair','chairs', 'chest','chests', 'child','children', 'city','cities', 'coat','coats', 'command','commands', 'country','countries',
+        'daughter','daughters', 'day','days', 'donkey','donkeys', 'door','doors', 'dream','dreams',
+        'eye','eyes',
+        'faith', 'father','fathers', 'fire','fires', 'fish', 'foot','feet',
+        'generation','generations', 'gift','gifts', 'girl','girls', 'goat','goats', 'gold', 'grace', 'grain','grains',
+        'hand','hands', 'heart','hearts', 'heaven','heavens', 'home','homes', 'honey', 'house','houses', 'husband','husbands',
+        'kiss','kisses',
+        'language','languages', 'letter','letters', 'life', 'light','lights', 'lion','lions', 'loaf','loaves', 'locusts',
+        'man','men', 'market','markets', 'message','messages', 'meeting','meetings', 'moon', 'mother','mothers',
+        'nation','nations', 'net','nets', 'noise','noises',
+        'peace', 'people', 'place','places', 'prayer','prayers', 'priest','priests', 'prison','prisons', 'promise','promises'
+        'road','roads', 'robe','robes', 'rope','ropes',
+        'sea', 'service','services', 'sheep', 'shepherd','shepherds', 'sign','signs', 'silver', 'sin','sins', 'sky', 'soldier','soldiers', 'sons', 'star','stars', 'stone','stones', 'street','streets', 'sun', 'sword','swords',
+        'table','tables', 'teacher','teachers', 'thing','things', 'time','times', 'tongue','tongues', 'town','towns', 'truth',
+        'vision','visions',
+        'week','weeks', 'widow','widows', 'wife','wives', 'woman','women', 'word','words',
+        )
+    # Don't use 'one' below because it has other meanings
+    simpleNumbers = ('two','three','four','five','six','seven','eight','nine',
+                     'ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen',
+                     'twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety')
+    simpleWords = simpleNouns + simpleNumbers
 # end of State class
 
 state = State()
@@ -120,7 +142,10 @@ def connect_OET_RV( rv, lv ):
         if wordFileName:
             assert wordFileName.endswith( '.tsv' )
             vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found ESFMBible filename '{wordFileName}' for {lv.abbreviation} {BBB}" )
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Found ESFMBible loaded word links: {lv.ESFMWordTables[wordFileName]}" )
+            if lv.ESFMWordTables[wordFileName]:
+                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found ESFMBible loaded '{wordFileName}' word link lines: {len(lv.ESFMWordTables[wordFileName]):,}" )
+            else:
+                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  No word links loaded yet for '{wordFileName}'" )
             if lv.ESFMWordTables[wordFileName] is None:
                 with open( OET_LV_NT_ESFM_InputFolderPath.joinpath(wordFileName), 'rt', encoding='UTF-8' ) as wordFile:
                     lv.ESFMWordTables[wordFileName] = wordFile.read().split( '\n' )
@@ -132,8 +157,8 @@ def connect_OET_RV( rv, lv ):
         rvESFMFilename = f'OET-RV_{BBB}.ESFM'
         rvESFMFilepath = OET_RV_ESFM_FolderPath.joinpath( rvESFMFilename )
         with open( rvESFMFilepath, 'rt', encoding='UTF-8' ) as esfmFile:
-            state.esfmText = esfmFile.read() # We keep the original (for later comparison)
-            state.esfmLines = state.esfmText.split( '\n' )
+            state.rvESFMText = esfmFile.read() # We keep the original (for later comparison)
+            state.rvESFMLines = state.rvESFMText.split( '\n' )
 
         numChapters = lv.getNumChapters( BBB )
         if numChapters >= 1:
@@ -157,14 +182,14 @@ def connect_OET_RV( rv, lv ):
             dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"connect_OET_RV {BBB} has {numChapters} chapters!!!" )
             assert BBB in ('INT','FRT',)
 
-        newESFMtext = '\n'.join( state.esfmLines )
-        if newESFMtext != state.esfmText:
-            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{BBB} ESFM text has changed {len(state.esfmText)} -> {len(newESFMtext)}" )
+        newESFMtext = '\n'.join( state.rvESFMLines )
+        if newESFMtext != state.rvESFMText:
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{BBB} ESFM text has changed {len(state.rvESFMText):,} -> {len(newESFMtext):,}" )
             with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
                 esfmFile.write( newESFMtext )
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Saved OET-RV {BBB} {len(newESFMtext):,} bytes to {rvESFMFilepath}" )
         else:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  No changes made to OET-RV {BBB}." )
+            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  No changes made to OET-RV {BBB}." )
 # end of connect_OET-RV_words.connect_OET_RV
 
 
@@ -175,7 +200,8 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ):
 
     rvText = ''
     for rvEntry in rvEntryList:
-        rvMarker,rvRest = rvEntry.getMarker(), rvEntry.getCleanText()
+        rvMarker, rvRest = rvEntry.getMarker(), rvEntry.getCleanText()
+        # print( f"OET-RV {BBB} {c}:{v} {rvMarker}='{rvRest}'")
         if rvMarker in ('v~','p~'):
             rvText = f"{rvText}{' ' if rvText else ''}{rvRest}"
     lvText = ''
@@ -185,11 +211,13 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ):
             lvText = f"{lvText}{' ' if lvText else ''}{lvRest.replace('+','')}"
     if not rvText or not lvText: return
     rvAdjText = rvText.replace('≈','').replace('…','') \
-                .replace('.','').replace(',','').replace(':','').replace('—',' ') \
-                .replace( '', '' ).replace( '”', '' ) \
+                .replace('.','').replace(',','').replace(':','').replace('?','').replace('!','').replace('—',' ') \
+                .replace( '(', '').replace( ')', '' ) \
+                .replace( '“', '' ).replace( '”', '' ).replace( '', '' ).replace( '’', '') \
                 .replace('  ',' ').strip()
     lvAdjText = lvText.replace('_',' ') \
-                .replace('.','').replace(',','').replace(':','') \
+                .replace('.','').replace(',','').replace(':','').replace('?','').replace('!','') \
+                .replace( '(', '').replace( ')', '' ) \
                 .replace('  ',' ').strip()
     # print( f"({len(rvAdjText)}) {rvAdjText=}")
     # print( f"({len(lvAdjText)}) {lvAdjText=}")
@@ -203,7 +231,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ):
     for rvWord in rvWords:
         assert rvWord, f"{rvText=} {rvAdjText=}"
         assert rvWord.count( '¦' ) <= 1 # Check that we haven't been retagging already tagged RV words
-    matchSimpleNouns( BBB, c,v, rvWords, lvWords )
+    matchSimpleWords( BBB, c,v, rvWords, lvWords )
 
     # Now get the uppercase words
     rvUpperWords = [rvWord for rvWord in rvWords if rvWord[0].isupper()]
@@ -271,13 +299,13 @@ def matchProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[str], lvC
 # end of connect_OET-RV_words.matchProperNouns
 
 
-def matchSimpleNouns( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:List[str] ):
+def matchSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:List[str] ):
     """
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"matchSimpleNouns( {BBB} {c}:{v} {rvWordList}, {lvWordList} )" )
+    fnPrint( DEBUGGING_THIS_MODULE, f"matchSimpleWords( {BBB} {c}:{v} {rvWordList}, {lvWordList} )" )
     assert rvWordList and lvWordList
 
-    for simpleNoun in state.simpleNouns:
+    for simpleNoun in state.simpleWords:
         # print( f"{simpleNoun}" )
         lvIndexList = []
         for lvN,lvWord in enumerate( lvWordList ):
@@ -304,9 +332,9 @@ def matchSimpleNouns( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:Lis
         assert len(lvNumbers) == 1 # NOT TRUE: If there's two 'camels' in the verse, we expect both to have the same word number
         for rvN in rvIndexList:
             rvNoun = rvWordList[rvN]
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchSimpleNouns() is adding a number to RV '{rvNoun}' at {BBB} {c}:{v} {rvN=}")
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchSimpleWords() is adding a number to RV '{rvNoun}' at {BBB} {c}:{v} {rvN=}")
             addNumberToRVWord( BBB, c,v, rvNoun, lvWordNumber )
-# end of connect_OET-RV_words.matchSimpleNouns
+# end of connect_OET-RV_words.matchSimpleWords
 
 
 def getLVWordRow( wordWithNumber:str ) -> Tuple[str,int,List[str]]:
@@ -314,9 +342,11 @@ def getLVWordRow( wordWithNumber:str ) -> Tuple[str,int,List[str]]:
     """
     fnPrint( DEBUGGING_THIS_MODULE, f"getLVWordRow( {wordWithNumber} )" )
 
+    # print( f"{wordWithNumber=}" )
     word,wordNumber = wordWithNumber.split( '¦' )
     # assert word.isalpha(), f"Non-alpha '{word}'" # not true, e.g., from 'Yaʸsous/(Yəhōshūˊa)¦21754'
     wordNumber = int( wordNumber )
+    assert wordNumber < len( state.wordTable )
     wordRow = state.wordTable[wordNumber].split( '\t' )
     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"'{word}' {wordRow}" )
     return word,wordNumber,wordRow
@@ -330,28 +360,29 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
 
     C = V = None
     found = False
-    for n,line in enumerate( state.esfmLines[:] ): # iterate through a copy
+    for n,line in enumerate( state.rvESFMLines[:] ): # iterate through a copy
         try: marker, rest = line.split( ' ', 1 )
         except ValueError: marker, rest = line, '' # Only a marker
-        # print( f"{marker}='{rest}'" )
+        # print( f"{BBB} {C}:{V} {marker}='{rest}'" )
         if marker == '\\c': C = int(rest)
         elif marker == '\\v':
+            # print( f"{BBB} {C}:{V} {marker}='{rest}'")
             Vstr, rest = rest.split( ' ', 1 )
             try: V = int(Vstr)
             except ValueError: # might be a range like 21-22
                 V = int(Vstr.split('-',1)[0])
             found = C==c and V==v
-            if found:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"addNumberToRVWord() found {BBB} {C}:{V}" )
-                assert word in rest
-                if rest.count( word ) > 1:
-                    return False
-                assert rest.count( word ) == 1, f"'{word}' {rest.count(word)} '{rest}'"
-                if f'{word}¦' not in rest:
-                    state.esfmLines[n] = line.replace( word, f'{word}¦{wordNumber}' )
-                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord() added ¦{wordNumber} to '{word}' in OET-RV {BBB} {c}:{v}" )
-                    return True
-                else: oops
+        if found and word in rest:
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"addNumberToRVWord() found {BBB} {C}:{V} {marker}" )
+            # assert word in rest, f"No {word=} in {rest=}"
+            if rest.count( word ) > 1:
+                return False
+            assert rest.count( word ) == 1, f"'{word}' {rest.count(word)} '{rest}'"
+            if f'{word}¦' not in rest:
+                state.rvESFMLines[n] = line.replace( word, f'{word}¦{wordNumber}' )
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord() added ¦{wordNumber} to '{word}' in OET-RV {BBB} {c}:{v}" )
+                return True
+            else: oops
 # end of connect_OET-RV_words.addNumberToRVWord
 
 

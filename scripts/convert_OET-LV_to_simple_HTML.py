@@ -41,9 +41,12 @@ from BibleOrgSys.Bible import Bible
 from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 from BibleOrgSys.Misc import CompareBibles
+import sys
+sys.path.append( '../../BibleTransliterations/Python/' )
+from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2023-03-12' # by RJH
+LAST_MODIFIED_DATE = '2023-03-14' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
 PROGRAM_VERSION = '0.49'
@@ -725,7 +728,7 @@ def produce_HTML_files() -> None:
                         with open( word_table_filepath, 'rt', encoding='utf-8' ) as word_table_input_file:
                             word_table = word_table_input_file.read().split( '\n' )
                         vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Read {len(word_table):,} lines from word table at {word_table_filepath}." )
-                else: logging.critical( f"Expected word-table '{word_table_filename}' {esfm_text}"); halt
+                else: logging.critical( f"Expected word-table '{word_table_filename}' {esfm_text}" ); halt
             assert esfm_text.count('‘') == esfm_text.count('’'), f"Why do we have OET-LV_{BBB}.usfm {esfm_text.count('‘')=} and {esfm_text.count('’')=}"
             assert esfm_text.count('“') >= esfm_text.count('”'), f"Why do we have OET-LV_{BBB}.usfm {esfm_text.count('“')=} and {esfm_text.count('”')=}"
             esfm_text = esfm_text.replace( "'", "’" ) # Replace hyphens
@@ -975,8 +978,11 @@ def convert_ESFM_words( BBB:str, book_html:str, word_table:List[str] ) -> str:
 def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_filenames:Set[str] ) -> int:
     """
     Make pages for all the words to link to.
+
+    Sadly, there's almost identical code in createOETGreekWordsPages() in OpenBibleData createWordPages.py
     """
     fnPrint( DEBUGGING_THIS_MODULE, f"make_table_pages( {inputFolderPath}, {outputFolderPath}, {word_table_filenames} )" )
+    load_transliteration_table( 'Greek' )
 
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Making table pages for {word_table_filenames}…" )
     for word_table_filename in word_table_filenames:
@@ -1018,6 +1024,7 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
                     if case!='.': caseField = f' case=<b>{CNTR_CASE_NAME_DICT[case]}</b>'
                     if gender!='.': genderField = f' gender=<b>{CNTR_GENDER_NAME_DICT[gender]}</b>'
                     if number!='.': numberField = f' number=<b>{CNTR_NUMBER_NAME_DICT[number]}</b>' # or № ???
+                translation = '<small>(no English gloss)</small>' if glossWords=='-' else f'''English gloss=‘<b>{glossWords.replace('_','<span class="ul">_</span>')}</b>’'''
 
                 prevLink = f'<b><a href="W_{n-1}.html">←</a></b> ' if n>1 else ''
                 nextLink = f' <b><a href="W_{n+1}.html">→</a></b>' if n<len(word_table) else ''
@@ -1025,6 +1032,7 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
                 html = f'''<h1>OET-LV Wordlink #{n}</h1>
 <p>{prevLink}{oetLink}{nextLink}</p>
 <p><span title="Goes to Statistical Restoration Greek page"><a href="https://GreekCNTR.org/collation/?{CNTR_BOOK_ID_MAP[BBB]}{C.zfill(3)}{V.zfill(3)}">SR GNT {tidyBBB} {C}:{V}</a></span>
+ <b>{greek}</b> ({transliterate_Greek(greek)}) {translation}
  <b>{greek}</b> <small>originally translated to</small> ‘<b>{glossWords.replace('_','<span class="ul">_</span>')}</b>’
  Strongs=<span title="Goes to Strongs dictionary"><a href="https://BibleHub.com/greek/{strongs}.htm">{extendedStrongs}</a></span><br>
   {roleField} Morphology=<b>{morphology}</b>:{moodField}{tenseField}{voiceField}{personField}{caseField}{genderField}{numberField}</p>'''

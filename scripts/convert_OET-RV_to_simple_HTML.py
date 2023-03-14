@@ -43,10 +43,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-03-12' # by RJH
+LAST_MODIFIED_DATE = '2023-03-14' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.50'
+PROGRAM_VERSION = '0.51'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -728,6 +728,7 @@ END_HTML = '</body></html>\n'
 
 whole_Torah_html = whole_NT_html = ''
 genericBookList = []
+word_table_filenames = set()
 def produce_HTML_files() -> None:
     """
     """
@@ -749,28 +750,40 @@ def produce_HTML_files() -> None:
         elif BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB ):
             bookType = 'NT'
 
+        word_table = None
         if bookType:
             source_filename = f'OET-RV_{BBB}.ESFM'
-            with open( OET_ESFM_InputFolderPath.joinpath(source_filename), 'rt', encoding='utf-8' ) as usfm_input_file:
-                usfm_text = usfm_input_file.read()
-            assert usfm_text.count('‘') == usfm_text.count('’'), f"Why do we have OET-RV_{BBB}.ESFM {usfm_text.count('‘')=} and {usfm_text.count('’')=}"
-            assert usfm_text.count('“') >= usfm_text.count('”'), f"Why do we have OET-RV_{BBB}.ESFM {usfm_text.count('“')=} and {usfm_text.count('”')=}"
-            usfm_text = usfm_text.replace( "'", "’" ) # Replace apostrophes
-            assert "'" not in usfm_text, f"""Why do we have single quote in {source_filename}: {usfm_text[usfm_text.index("'")-20:usfm_text.index("'")+22]}"""
+            with open( OET_ESFM_InputFolderPath.joinpath(source_filename), 'rt', encoding='utf-8' ) as esfm_input_file:
+                esfm_text = esfm_input_file.read()
+            if source_filename.endswith( '.ESFM' ):
+                word_table_filename = 'LV_NT_words.tsv'
+                word_table_filenames.add( word_table_filename )
+                if f'\\rem WORDTABLE {word_table_filename}\n' in esfm_text:
+                    if word_table is None:
+                        word_table_filepath = OET_ESFM_InputFolderPath.joinpath( word_table_filename )
+                        with open( word_table_filepath, 'rt', encoding='utf-8' ) as word_table_input_file:
+                            word_table = word_table_input_file.read().split( '\n' )
+                        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Read {len(word_table):,} lines from word table at {word_table_filepath}." )
+                else:
+                    logging.critical( f"No ESFM word-table defined in {BBB} book from {source_filename}" )
+            assert esfm_text.count('‘') == esfm_text.count('’'), f"Why do we have OET-RV_{BBB}.ESFM {esfm_text.count('‘')=} and {esfm_text.count('’')=}"
+            assert esfm_text.count('“') >= esfm_text.count('”'), f"Why do we have OET-RV_{BBB}.ESFM {esfm_text.count('“')=} and {esfm_text.count('”')=}"
+            esfm_text = esfm_text.replace( "'", "’" ) # Replace apostrophes
+            assert "'" not in esfm_text, f"""Why do we have single quote in {source_filename}: {esfm_text[esfm_text.index("'")-20:esfm_text.index("'")+22]}"""
             # TODO: This might need to be uncommented if there's no URLs or other HTML in the RV
             # assert '"' not in usfm_text, f"""Why do we have double quote in {source_filename}: {usfm_text[usfm_text.index('"')-20:usfm_text.index('"')+22]}"""
-            assert '--' not in usfm_text, f"""Why do we have doubled hyphens in {source_filename}: {usfm_text[usfm_text.index('--')-20:usfm_text.index('--')+22]}"""
-            assert '“ ' not in usfm_text, f"""Why do we have space after double opening quote in {source_filename}: {usfm_text[usfm_text.index('“ ')-20:usfm_text.index('“ ')+22]}"""
-            if '’ ”' not in usfm_text:
-                assert ' ”' not in usfm_text, f"""Why do we have space before double closing quote in {source_filename}: {usfm_text[usfm_text.index(' ”')-20:usfm_text.index(' ”')+22]}"""
-            assert '‘ ' not in usfm_text, f"""Why do we have space after single opening quote in {source_filename}: {usfm_text[usfm_text.index('‘ ')-20:usfm_text.index('‘ ')+22]}"""
-            if '” ’' not in usfm_text:
-                assert ' ’' not in usfm_text, f"""Why do we have space before single closing quote in {source_filename}: {usfm_text[usfm_text.index(' ’')-20:usfm_text.index(' ’')+22]}"""
-            assert '  ' not in usfm_text, f"""Why do we have doubled spaces in {source_filename}: {usfm_text[usfm_text.index('  ')-20:usfm_text.index('  ')+22]}"""
+            assert '--' not in esfm_text, f"""Why do we have doubled hyphens in {source_filename}: {esfm_text[esfm_text.index('--')-20:esfm_text.index('--')+22]}"""
+            assert '“ ' not in esfm_text, f"""Why do we have space after double opening quote in {source_filename}: {esfm_text[esfm_text.index('“ ')-20:esfm_text.index('“ ')+22]}"""
+            if '’ ”' not in esfm_text:
+                assert ' ”' not in esfm_text, f"""Why do we have space before double closing quote in {source_filename}: {esfm_text[esfm_text.index(' ”')-20:esfm_text.index(' ”')+22]}"""
+            assert '‘ ' not in esfm_text, f"""Why do we have space after single opening quote in {source_filename}: {esfm_text[esfm_text.index('‘ ')-20:esfm_text.index('‘ ')+22]}"""
+            if '” ’' not in esfm_text:
+                assert ' ’' not in esfm_text, f"""Why do we have space before single closing quote in {source_filename}: {esfm_text[esfm_text.index(' ’')-20:esfm_text.index(' ’')+22]}"""
+            assert '  ' not in esfm_text, f"""Why do we have doubled spaces in {source_filename}: {esfm_text[esfm_text.index('  ')-20:esfm_text.index('  ')+22]}"""
             invalid_text = '\\p\n\\s'
-            assert invalid_text not in usfm_text, f"""Why do we have a useless paragraph in {source_filename}: {usfm_text[usfm_text.index(invalid_text)-20:usfm_text.index(invalid_text)+22]}"""
+            assert invalid_text not in esfm_text, f"""Why do we have a useless paragraph in {source_filename}: {esfm_text[esfm_text.index(invalid_text)-20:esfm_text.index(invalid_text)+22]}"""
 
-            book_start_html, book_html, book_end_html = convert_USFM_to_simple_HTML( BBB, usfm_text )
+            book_start_html, book_html, book_end_html = convert_ESFM_to_simple_HTML( BBB, esfm_text, word_table )
 
             output_filename = f'{BBB}.html'
             with open( OET_HTML_OutputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
@@ -823,8 +836,8 @@ def produce_HTML_files() -> None:
 # end of convert_OET-RV_to_simple_HTML.produce_HTML_files()
 
 
-def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str]:
-    fnPrint( DEBUGGING_THIS_MODULE, f"convert_USFM_to_simple_HTML( {BBB}, ({len(usfm_text)}) )" )
+def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[List[str]] ) -> Tuple[str, str, str]:
+    fnPrint( DEBUGGING_THIS_MODULE, f"convert_ESFM_to_simple_HTML( {BBB}, ({len(usfm_text)}), ({'None' if word_table is None else len(word_table)}) )" )
 
     links_html_template = '<p>__PREVIOUS__OET-RV <a href="index.html#Index">Book index</a>,' \
                  ' <a href="index.html#Intro">Intro</a>, <a href="index.html#Key">Key</a>,' \
@@ -1061,6 +1074,9 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
     chapter_html = f'<p class="chapterLinks">{EM_SPACE.join(chapter_links)}</p><!--chapterLinks-->'
     book_start_html = f'{start_html}{links_html}\n{chapter_html}'
 
+    if word_table: # sort out word numbers like 'written¦21763'
+        book_html = convert_ESFM_words( BBB, book_html, word_table )
+
     # Add character formatting
     book_html = book_html.replace( '\\bk ', '<span class="bk">' ) \
                          .replace( '\\bk*', '</span>' ) \
@@ -1078,7 +1094,70 @@ def convert_USFM_to_simple_HTML( BBB:str, usfm_text:str ) -> Tuple[str, str, str
     return ( book_start_html,
              book_html,
              f'{chapter_html}\n{links_html}\n{END_HTML}' )
-# end of convert_OET-RV_to_simple_HTML.convert_USFM_to_simple_HTML function
+# end of convert_OET-RV_to_simple_HTML.convert_ESFM_to_simple_HTML function
+
+
+wordRegex1 = re.compile( '([-A-za-z/()]+)¦([1-9][0-9]{0,5})' )
+# wordRegex2 = re.compile( '([-A-za-z/()]{2,})<span class="ul">_</span>([-A-za-z/()]+)¦([1-9][0-9]{0,5})' )
+# wordRegex3 = re.compile( '([-A-za-z/()]{2,})<span class="ul">_</span>([-A-za-z/()]+)<span class="ul">_</span>([-A-za-z/()]+)¦([1-9][0-9]{0,5})' )
+def convert_ESFM_words( BBB:str, book_html:str, word_table:List[str] ) -> str:
+    """
+    Handle ESFM word numbers like 'written¦21763'
+        which are handled by RegEx replacements.
+    """
+    fnPrint( DEBUGGING_THIS_MODULE, f"convert_ESFM_words( {BBB}, ({len(book_html)}), ({len(word_table)}) )" )
+
+    vPrint( 'Info', DEBUGGING_THIS_MODULE, f"convert_ESFM_words( {BBB}, ({len(book_html)}), ({len(word_table)}) )…" )
+
+    # First find "compound" words like 'stood_up' or 'upper_room' or 'came_in or 'brought_up'
+    #   which have a wordlink number at the end,
+    #   and put the wordlink number after each individual word
+    # count = 0
+    # searchStartIndex = 0
+    # while True: # Look for three-word compounds like 'with_one_accord' (Acts 1:14)
+    #     match = wordRegex3.search( book_html, searchStartIndex )
+    #     if not match:
+    #         break
+    #     logging.critical( f"Shouldn't still have {BBB} word match 1='{match.group(1)}' 2='{match.group(2)}' 3='{match.group(3)}' 4='{match.group(4)}'  all='{book_html[match.start()-5:match.end()]}'" )
+    #     assert match.group(4).isdigit()
+    #     book_html = f'{book_html[:match.start()]}{match.group(1)}¦{match.group(4)}<span class="ul">_</span>{match.group(2)}¦{match.group(4)}<span class="ul">_</span>{match.group(3)}¦{match.group(4)}{book_html[match.end():]}'
+    #     searchStartIndex = match.end() + 2 # We've added at least that many characters
+    #     count += 1
+    # searchStartIndex = 0
+    # while True: # Look for two-word compounds
+    #     match = wordRegex2.search( book_html, searchStartIndex )
+    #     if not match:
+    #         break
+    #     logging.critical( f"Shouldn't still have {BBB} word match 1='{match.group(1)}' 2='{match.group(2)}' 3='{match.group(3)}'  all='{book_html[match.start()-5:match.end()]}'" )
+    #     assert match.group(3).isdigit()
+    #     book_html = f'{book_html[:match.start()]}{match.group(1)}¦{match.group(3)}<span class="ul">_</span>{match.group(2)}¦{match.group(3)}{book_html[match.end():]}'
+    #     searchStartIndex = match.end() + 2 # We've added at least that many characters
+    #     count += 1
+    # if count > 0:
+    #     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Renumbered {count:,} OET-LV {BBB} 'compound' ESFM words." )
+
+    # Make each linked word into a html link
+    #   and then put a span around it so it can have a pop-up "title"
+    searchStartIndex = 0
+    count = 0
+    while True:
+        match = wordRegex1.search( book_html, searchStartIndex )
+        if not match:
+            break
+        # print( f"{BBB} word match 1='{match.group(1)}' 2='{match.group(2)}' all='{book_html[match.start():match.end()]}'" )
+        assert match.group(2).isdigit()
+        row_number = int( match.group(2) )
+        try: greek = word_table[row_number].split('\t')[1]
+        except IndexError:
+            logging.critical( f"convert_ESFM_words( {BBB} ) index error: word='{match.group(1)}' {row_number=}/{len(word_table)} entries")
+            halt
+        book_html = f'{book_html[:match.start()]}<span title="{greek}"><a href="W_{match.group(2)}.html">{match.group(1)}</a></span>{book_html[match.end():]}'
+        searchStartIndex = match.end() + 25 # We've added at least that many characters
+        count += 1
+    vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Made {count:,} OET-RV {BBB} ESFM words into live links." )
+
+    return book_html
+# end of convert_OET-RV_to_simple_HTML.convert_ESFM_words function
 
 
 def livenIORs( BBB:str, bookHTML:str ) -> str:

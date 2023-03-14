@@ -42,7 +42,7 @@ RV: $(RV_HTML)
 #=== LV stuff =======================
 
 $(LV_HTML): $(final_LV_OT_USFM)  $(final_LV_NT_ESFM) convert_OET-LV_to_simple_HTML.py
-	@echo "\n\nConvert LV USFM files to simple HTML…\n"
+	@echo "\n\nConvert OET LV USFM files to simple HTML…\n"
 	@$(Python) convert_OET-LV_to_simple_HTML.py
 
 $(final_LV_OT_USFM): $(intermediate_LV_OT_USFM) $(SBE) $(wildcard ScriptedOTUpdates/*) $(BTranslit) $(Hebrew)
@@ -87,8 +87,10 @@ $(intermediate_LV_NT_ESFM): ../../CNTR-GNT/sourceExports/book.csv ../../CNTR-GNT
 
 #=== RV stuff =======================
 
-$(RV_HTML): $(RV_ESFM) convert_OET-RV_to_simple_HTML.py
-	@echo "\n\nConvert OT RV USFM files to simple HTML…\n"
+$(RV_HTML): $(RV_ESFM) connect_OET-RV_words.py convert_OET-RV_to_simple_HTML.py
+	@echo "\n\nConnect OET-RV words to OET-LV word numbers…\n"
+	@$(Python) connect_OET-RV_words.py
+	@echo "\n\nConvert OET RV USFM files to simple HTML…\n"
 	@$(Python) convert_OET-RV_to_simple_HTML.py
 
 #=== Side-by-side stuff =======================
