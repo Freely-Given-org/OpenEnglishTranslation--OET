@@ -46,10 +46,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2023-03-15' # by RJH
+LAST_MODIFIED_DATE = '2023-03-16' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.50'
+PROGRAM_VERSION = '0.51'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -724,7 +724,7 @@ def produce_HTML_files() -> None:
             illegalWordLinkRegex2 = re.compile( '¦[1-9][0-9]{0,5}[a-z]' ) # Has letters AFTER the wordlink number
             assert not illegalWordLinkRegex2.search( esfm_text), f"illegalWordLinkRegex2 failed when loading {BBB}" # Don't want double-ups of wordlink numbers
             if source_filename.endswith( '.ESFM' ):
-                word_table_filename = 'LV_NT_words.tsv'
+                word_table_filename = 'OET_NT_word_table.tsv'
                 word_table_filenames.add( word_table_filename )
                 if f'\\rem WORDTABLE {word_table_filename}\n' in esfm_text:
                     if word_table is None:
@@ -997,13 +997,13 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
 
         columnHeaders = word_table[0]
         dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Word table column headers = '{columnHeaders}'" )
-        assert columnHeaders == 'Ref\tGreek\tGlossWords\tProbability\tStrongsExt\tRole\tMorphology' # If not, probably need to fix some stuff
+        assert columnHeaders == 'Ref\tGreek\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology' # If not, probably need to fix some stuff
         for n, columns_string in enumerate( word_table[1:], start=1 ):
             # print( n, columns_string )
             output_filename = f'W_{n}.html'
             # dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Got '{columns_string}' for '{output_filename}'" )
             if columns_string: # not a blank line (esp. at end)
-                ref, greek, glossWords, probability, extendedStrongs, roleLetter, morphology = columns_string.split( '\t' )
+                ref, greek, glossWords, glossCaps,probability, extendedStrongs, roleLetter, morphology = columns_string.split( '\t' )
                 if extendedStrongs == 'None': extendedStrongs = None
                 if roleLetter == 'None': roleLetter = None
                 if morphology == 'None': morphology = None

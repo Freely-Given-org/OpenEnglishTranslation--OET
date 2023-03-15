@@ -47,10 +47,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-03-13' # by RJH
+LAST_MODIFIED_DATE = '2023-03-16' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
-PROGRAM_VERSION = '0.75'
+PROGRAM_VERSION = '0.77'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -117,12 +117,15 @@ book_csv_column_counts = defaultdict(lambda: defaultdict(int))
 book_csv_column_headers = []
 
 
-NUM_EXPECTED_COLLATION_COLUMNS = 37
+NUM_EXPECTED_COLLATION_COLUMNS = 38
 # Last time we looked (2023-03-06) with 168,262 rows, 36-column header was:
 # CollationID,VerseID,VariantID,Relation,Pattern,Translatable,Align,Span,Incomplete,Classic,Koine,Medieval,Probability,Historical,Capitalization,Punctuation,Role,Syntax,Morphology,Sic,Lemma,LexemeID,Sense,GlossPre,GlossHelper,GlossWord,GlossPost,GlossPunctuation,GlossCapitalization,GlossOrder,GlossInsert,Reference,Notes,If,Then,Timestamp
 # and table had many 'NULL' entries
 # Last time we looked (2023-03-09) with 168,263 rows, 37-column header was:
 # CollationID,VerseID,VariantID,VariantID1,Relation,Pattern,Translatable,Align,Span,Incomplete,Classic,Koine,Medieval,Probability,Historical,Capitalization,Punctuation,Role,Syntax,Morphology,Sic,Lemma,LexemeID,Sense,GlossPre,GlossHelper,GlossWord,GlossPost,GlossPunctuation,GlossCapitalization,GlossOrder,GlossInsert,Reference,Notes,If,Then,Timestamp
+# and table had many 'NULL' entries
+# Last time we looked (2023-03-16) with 168,263 rows, 38-column header was:
+# CollationID,VerseID,VariantID,VariantID1,Relation,Pattern,Translatable,Checking,Align,Span,Incomplete,Classic,Koine,Medieval,Probability,Historical,Capitalization,Punctuation,Role,Syntax,Morphology,Sic,Lemma,LexemeID,Sense,GlossPre,GlossHelper,GlossWord,GlossPost,GlossPunctuation,GlossCapitalization,GlossOrder,GlossInsert,Reference,Notes,If,Then,Timestamp
 # and table had many 'NULL' entries
 collation_csv_rows = []
 collation_csv_column_max_length_counts = {}
@@ -380,11 +383,11 @@ def export_esfm_literal_English_gloss() -> bool:
     last_verse_id = None
     esfm_text = ''
     num_books_written = 0
-    table_filename = 'LV_NT_words.tsv'
+    table_filename = 'OET_NT_word_table.tsv'
     table_filepath = VLT_ESFM_OUTPUT_FOLDERPATH.joinpath( table_filename )
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Exporting ESFM auxilliary word table to {table_filepath}…" )
     with open(table_filepath, 'wt', encoding='utf-8') as table_output_file:
-        table_output_file.write( 'Ref\tGreek\tGlossWords\tProbability\tStrongsExt\tRole\tMorphology\n' ) # Write TSV header row
+        table_output_file.write( 'Ref\tGreek\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\n' ) # Write TSV header row
         for collation_row_number, collation_row in enumerate(collation_csv_rows):
             collation_id, verse_id = collation_row['CollationID'], collation_row['VerseID']
             assert len(collation_id) == 11 and collation_id.isdigit()
@@ -475,7 +478,7 @@ def export_esfm_literal_English_gloss() -> bool:
                         logging.critical( f"{collation_row_number} Unexpected space in {gloss_part_name} '{collation_row[gloss_part_name]}' from {collation_row}" )
             gloss_list = [collation_row[gloss_part_name] for gloss_part_name in ('GlossPre', 'GlossHelper', 'GlossWord', 'GlossPost') if collation_row[gloss_part_name]]
             word_list_string = ' '.join(gloss_list) # Space-separated list of English gloss words for that Greek word
-            table_row = f"{ref}\t{collation_row['Medieval']}\t{word_list_string}\t{'' if collation_row['Probability'] is None else collation_row['Probability']}\t{collation_row['LexemeID']}\t{collation_row['Role']}\t{collation_row['Morphology']}"
+            table_row = f"{ref}\t{collation_row['Medieval']}\t{word_list_string}\t{'' if collation_row['GlossCapitalization'] is None else collation_row['GlossCapitalization']}\t{'' if collation_row['Probability'] is None else collation_row['Probability']}\t{collation_row['LexemeID']}\t{collation_row['Role']}\t{collation_row['Morphology']}"
             assert '"' not in table_row # Check in case we needed any escaping
             table_output_file.write( f'{table_row}\n' )
             # NOTE: The above code writes every table row, even for variants which aren't in the SR (but their probability column will be zero)
