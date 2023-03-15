@@ -38,15 +38,16 @@ if __name__ == '__main__':
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.Bible import Bible
+from BibleOrgSys.Internals.InternalBibleInternals import getLeadingInt
 from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, BOOKLIST_66
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-03-14' # by RJH
+LAST_MODIFIED_DATE = '2023-03-16' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.05'
+PROGRAM_VERSION = '0.07'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -75,30 +76,71 @@ class State:
                     #   i.e., there's really no other word for them.
         # NOTE: Some of these nouns can also be verbs -- we may need to remove those???
         # 'sons' causes problems
-        'ambassador','ambassadors', 'ancestor','ancestors', 'angel','angels', 'ankle','ankles',
-        'birth', 'blood', 'boat','boats', 'body','bodies', 'boy','boys', 'bread', 'bull','bulls',
-        'camel','camels', 'chair','chairs', 'chest','chests', 'child','children', 'city','cities', 'coat','coats', 'command','commands', 'country','countries',
-        'daughter','daughters', 'day','days', 'donkey','donkeys', 'door','doors', 'dream','dreams',
-        'eye','eyes',
-        'faith', 'father','fathers', 'fire','fires', 'fish', 'foot','feet',
-        'generation','generations', 'gift','gifts', 'girl','girls', 'goat','goats', 'gold', 'grace', 'grain','grains',
-        'hand','hands', 'heart','hearts', 'heaven','heavens', 'home','homes', 'honey', 'house','houses', 'husband','husbands',
-        'kiss','kisses',
-        'language','languages', 'letter','letters', 'life', 'light','lights', 'lion','lions', 'loaf','loaves', 'locusts',
-        'man','men', 'market','markets', 'message','messages', 'meeting','meetings', 'moon', 'mother','mothers',
-        'nation','nations', 'net','nets', 'noise','noises',
-        'peace', 'people', 'place','places', 'prayer','prayers', 'priest','priests', 'prison','prisons', 'promise','promises'
-        'road','roads', 'robe','robes', 'rope','ropes',
-        'sea', 'service','services', 'sheep', 'shepherd','shepherds', 'sign','signs', 'silver', 'sin','sins', 'sky', 'soldier','soldiers', 'sons', 'star','stars', 'stone','stones', 'street','streets', 'sun', 'sword','swords',
-        'table','tables', 'teacher','teachers', 'thing','things', 'time','times', 'tongue','tongues', 'town','towns', 'truth',
-        'vision','visions',
-        'week','weeks', 'widow','widows', 'wife','wives', 'woman','women', 'word','words',
+        'ambassadors','ambassador', 'ancestors','ancestor', 'angels','angel', 'ankles','ankle', 'authority',
+        'birth', 'blood', 'boats','boat', 'bodies','body', 'boys','boy', 'bread', 'branches','branch', 'brothers','brother', 'bulls','bull',
+        'camels','camel', 'chairs','chair', 'chariots','chariot', 'chests','chest', 'children','child', 'cities','city', 'coats','coat', 'commands','command', 'countries','country',
+        'daughters','daughter', 'days','day', 'donkeys','donkey', 'doors','door', 'dreams','dream',
+        'eyes','eye',
+        'faces','face', 'faith', 'farmers','farmer', 'fathers','father', 'fields','field', 'figs','fig', 'fingers','finger', 'fires','fire', 'fish', 'foot','feet',
+            'friends','friend', 'fruits','fruit',
+        'generations','generation', 'gifts','gift', 'girls','girl', 'goats','goat', 'gods','god', 'gold', 'grace', 'grains','grain', 'grapes','grape',
+        'hands','hand', 'happiness', 'hearts','heart', 'heavens','heaven', 'homes','home', 'honey', 'horses','horse', 'houses','house', 'husbands','husband',
+        'idols','idol', 'ink',
+        'kings','king', 'kingdoms','kingdom', 'kisses','kiss',
+        'languages','language', 'leaders','leader', 'letters','letter', 'life', 'lights','light', 'lions','lion', 'lips','lip', 'loaf','loaves', 'locusts','locust', 'love',
+        'man','men', 'markets','market', 'mercy', 'messages','message', 'meetings','meeting', 'moon', 'mothers','mother', 'mouths','mouth',
+        'names','name', 'nations','nation', 'nets','net', 'noises','noise',
+        'peace', 'pens','pen', 'people', 'places','place', 'powers','power', 'prayers','prayer', 'priests','priest', 'prisons','prison', 'promises','promise'
+        'rivers','river', 'roads','road', 'robes','robe', 'ropes','rope',
+        'sea', 'servants','servant', 'services','service', 'shame', 'sheep', 'shepherds','shepherd',
+            'signs','sign', 'silver', 'sinners','sinner', 'sins','sin', 'sisters','sister', 'sky', 'slaves','slave',
+            'soldiers','soldier', 'sons', 'souls','soul', 'spirits', 'spirit',
+            'stars','star', 'stones','stone', 'streets','street', 'sun', 'swords','sword',
+        'tables','table', 'teachers','teacher', 'things','thing', 'thrones','throne', 'times','time', 'tongues','tongue', 'towns','town', 'trees','tree', 'truth',
+        'vines','vine', 'visions','vision',
+        'water', 'weeks','week', 'widows','widow', 'wife','wives', 'woman','women', 'words','word',
         )
+    verbalNouns = ('distribution',)
+    # Verbs often don't work because we use the tenses differently between OET-RV and OET-LV/Greek
+    simpleVerbs = ('accepted','accepting','accepts','accept', 'asked','asking','asks','ask', 'answered','answering','answers','answer',
+                   'become','became','becomes','becoming', 'burnt','burning','burns','burn',
+                   'came','coming','comes','come',
+                   'distributed','distributing','distributes','distribute',
+                   'encouraged','encouraging','encourages','encourage',
+                   'followed','following','follows','follow', 'forbidding','forbids','forbid',
+                   'gathered','gathering','gathers','gather', 'gave','giving','gives','give', 'went','going','goes','go', 'greeted','greeting','greets','greet',
+                   'harvested','harvesting','harvests','harvest', 'hated','hating','hates','hate', 'healed','healing','heals','heal', 'helped','helping','helps','help',
+                   'imitated','imitating','imitates','imitate', 'immersed','immersing','immerses','immerse',
+                   'knew','knowing','knows','know',
+                   'learnt','learning','learns','learn', 'lived','living','lives','live', 'looked','looking','looks','look',
+                   'obeyed','obeying','obeys','obey',
+                   'praised','praising','praises','praise',
+                   'raised','raising','raises','raise',
+                        'received','receiving','receives','receive', 'recovered','recovering','recovers','recover', 'released','releasing','releases','release', 'remained','remaining','remains','remain', 'reminded','reminding','reminds','remind', 'requested','requesting','requests','request',
+                        'ran','running','runs','run',
+                   'said','saying','says','say', 'saved','saving','saves','save',
+                        'saw','seeing','seen','sees','see', 'sent','sending','sends','send', 'served','serving','serves','serve',
+                        'shared','sharing','shares','share', 'spoke','speaking','speaks','speak',
+                        'stayed','staying','stays','stay', 'supported','supporting','supports','support',
+                   'threw','throwing','throws','throw', 'turned','turning','turns','turn',
+                   'walked','walking','walks','walk', 'wanted','wanting','wants','want', 'warned','warning','warns','warn',
+                        'withered','withering','withers','wither',
+                        'wrote','writing','writes','write',
+                   )
+    simpleAdverbs = ('quickly', 'immediately', 'loudly', 'suddenly',)
+    simpleAdjectives = ('alive', 'angry', 'bad', 'clean',
+                        'dead', 'disobedient', 'evil', 'foolish', 'good', 'loud', 'obedient', 'sudden')
     # Don't use 'one' below because it has other meanings
     simpleNumbers = ('two','three','four','five','six','seven','eight','nine',
                      'ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen',
-                     'twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety')
-    simpleWords = simpleNouns + simpleNumbers
+                     'twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety',
+                     'none')
+    pronouns = ('he','she','it', 'him','her','its', 'you','we','they', 'your','our','their',
+                'himself','herself','itself', 'yourself','yourselves', 'ourselves', 'themselves',
+                'everyone')
+    # We don't expect connectors to work very well
+    connectors = ('and', 'but')
+    simpleWords = simpleNouns + verbalNouns + simpleVerbs + simpleAdverbs+ simpleAdjectives  + simpleNumbers + pronouns + connectors
 # end of State class
 
 state = State()
@@ -118,13 +160,13 @@ def main():
     rv.loadAuxilliaryFiles = True
     rv.loadBooks() # So we can iterate through them all later
     rv.lookForAuxilliaryFilenames()
-    dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{rv=}")
+    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{rv=}")
 
     lv = ESFMBible( OET_LV_NT_ESFM_InputFolderPath, givenAbbreviation='OET-LV' )
     lv.loadAuxilliaryFiles = True
     lv.loadBooks() # So we can iterate through them all later
     lv.lookForAuxilliaryFilenames()
-    dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{lv=}")
+    dPrint( 'verbose', DEBUGGING_THIS_MODULE, f"{lv=}")
 
     # Convert files to simple HTML
     connect_OET_RV( rv, lv )
@@ -136,7 +178,7 @@ def connect_OET_RV( rv, lv ):
     """
     fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {rv}, {lv} )" )
     for BBB,bookObject in lv.books.items():
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Processing OET {BBB}…" )
+        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Processing connect words for OET {BBB}…" )
 
         wordFileName = bookObject.ESFMWordTableFilename
         if wordFileName:
@@ -185,11 +227,15 @@ def connect_OET_RV( rv, lv ):
         newESFMtext = '\n'.join( state.rvESFMLines )
         if newESFMtext != state.rvESFMText:
             dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{BBB} ESFM text has changed {len(state.rvESFMText):,} -> {len(newESFMtext):,}" )
+            illegalWordLinkRegex1 = re.compile( '[0-9]¦' ) # Has digits BEFORE the broken pipe
+            assert not illegalWordLinkRegex1.search( newESFMtext), f"illegalWordLinkRegex1 failed before saving {BBB}" # Don't want double-ups of wordlink numbers
+            illegalWordLinkRegex2 = re.compile( '¦[1-9][0-9]{0,5}[a-z]' ) # Has letters AFTER the wordlink number
+            assert not illegalWordLinkRegex2.search( newESFMtext), f"illegalWordLinkRegex2 failed before saving {BBB}" # Don't want double-ups of wordlink numbers
             with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
                 esfmFile.write( newESFMtext )
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Saved OET-RV {BBB} {len(newESFMtext):,} bytes to {rvESFMFilepath}" )
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Saved OET-RV {BBB} {len(newESFMtext):,} bytes to {rvESFMFilepath}" )
         else:
-            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  No changes made to OET-RV {BBB}." )
+            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    No changes made to OET-RV {BBB}." )
 # end of connect_OET-RV_words.connect_OET_RV
 
 
@@ -301,6 +347,8 @@ def matchProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[str], lvC
 
 def matchSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:List[str] ):
     """
+    If the simple word (e.g., nouns) only occur once in the RV verse and once in the LV verse,
+        we assume that we can match them, i.e., copy the wordlink numbers from the LV into the RV.
     """
     fnPrint( DEBUGGING_THIS_MODULE, f"matchSimpleWords( {BBB} {c}:{v} {rvWordList}, {lvWordList} )" )
     assert rvWordList and lvWordList
@@ -345,7 +393,10 @@ def getLVWordRow( wordWithNumber:str ) -> Tuple[str,int,List[str]]:
     # print( f"{wordWithNumber=}" )
     word,wordNumber = wordWithNumber.split( '¦' )
     # assert word.isalpha(), f"Non-alpha '{word}'" # not true, e.g., from 'Yaʸsous/(Yəhōshūˊa)¦21754'
-    wordNumber = int( wordNumber )
+    try: wordNumber = int( wordNumber )
+    except ValueError:
+        logging.critical( f"getLVWordRow() got non-number '{wordNumber}' from '{wordWithNumber}'" )
+        wordNumber = getLeadingInt( wordNumber )
     assert wordNumber < len( state.wordTable )
     wordRow = state.wordTable[wordNumber].split( '\t' )
     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"'{word}' {wordRow}" )
@@ -372,17 +423,19 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
             except ValueError: # might be a range like 21-22
                 V = int(Vstr.split('-',1)[0])
             found = C==c and V==v
-        if found and word in rest:
+        if found and f' {word} ' in rest:
             dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"addNumberToRVWord() found {BBB} {C}:{V} {marker}" )
             # assert word in rest, f"No {word=} in {rest=}"
             if rest.count( word ) > 1:
                 return False
             assert rest.count( word ) == 1, f"'{word}' {rest.count(word)} '{rest}'"
-            if f'{word}¦' not in rest:
+            if f' {word}¦' not in rest:
                 state.rvESFMLines[n] = line.replace( word, f'{word}¦{wordNumber}' )
                 dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord() added ¦{wordNumber} to '{word}' in OET-RV {BBB} {c}:{v}" )
                 return True
-            else: oops
+            else:
+                logging.critical( f"addNumberToRVWord() found {BBB} {C}:{V} {marker} found ' {word}¦' already in {rest=}")
+                oops
 # end of connect_OET-RV_words.addNumberToRVWord
 
 
