@@ -9,81 +9,82 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 									/The¦/			\add +The¦\add*
 
 									/am¦/			am¦
-									/am_being¦/			am¦_being¦
+									/am¦_being¦/			am¦_being¦
 									/are¦/			are¦
 									/Are¦/			Are¦
-									/are_being¦/			are¦_being¦
+									/are¦_being¦/			are¦_being¦
 									/be¦/			be¦
 									/Be¦/			Be¦
-									/be_being¦/			be¦_being¦
-									/Be_being¦/			Be¦_being¦
+									/be¦_being¦/			be¦_being¦
+									/Be¦_being¦/			Be¦_being¦
 									/being¦/			being¦
 									/Being¦/			Being¦
-									/going_to¦/			going¦_to¦
-									/going_to_be¦/			going¦_to¦_be¦
+									/going¦_to¦/			going¦_to¦
+									/going¦_to¦_be¦/			going¦_to¦_be¦
 									/had¦/			had¦
-									/had_been¦/			had¦_been¦
+									/had¦_been¦/			had¦_been¦
 									/has¦/			has¦
-									/has_been¦/			has¦_been¦
+									/has¦_been¦/			has¦_been¦
 									/have¦/			have¦
-									/have_been¦/			have¦_been¦
+									/have¦_been¦/			have¦_been¦
 									/having¦/			having¦
 									/Having¦/			Having¦
-									/having_been¦/			having¦_been¦
-									/Having_been¦/			Having¦_been¦
+									/having¦_been¦/			having¦_been¦
+									/Having¦_been¦/			Having¦_been¦
 									/is¦/			is¦
 									/Is¦/			Is¦
-									/is_being¦/			is_being¦
+									/is¦_being¦/			is¦_being¦
 									/let¦/			let¦
 									/may¦/			may¦
 									/May¦/			May¦
-									/may_be¦/			may¦_be¦
-									/may_have¦/			may¦_have¦
+									/may¦_be¦/			may¦_be¦
+									/may¦_have¦/			may¦_have¦
 									/might¦/			might¦
 									/Might¦/			Might¦
-									/might_be¦/			might¦_be¦
-									/might_have¦/			might¦_have¦
+									/might¦_be¦/			might¦_be¦
+									/might¦_have¦/			might¦_have¦
 									/was¦/			was¦
-									/was_being¦/			was¦_being¦
+									/was¦_being¦/			was¦_being¦
 									/were¦/			were¦
-									/were_being¦/			were¦_being¦
-									/will_be¦/			will¦_be¦
-									/will_be_being¦/			will¦_be¦_being¦
+									/were¦_being¦/			were¦_being¦
+									/will¦_be¦/			will¦_be¦
+									/will¦_be¦_being¦/			will¦_be¦_being¦
 
 									/to¦/			to¦
 									/To¦/			To¦
-									/to_be¦/			to¦_be¦
-									/to_be_being¦/			to¦_be¦_being¦
-									/to_have¦/			to¦_have¦
+									/to¦_be¦/			to¦_be¦
+									/to¦_be¦_being¦/			to¦_be¦_being¦
+									/to¦_have¦/			to¦_have¦
 
 # Split (after an insert)
-									 /are_			 are_
-									 /be_			 be_
-									 /Be_			 Be_
-									 /has_			 has_
-									_/has_			_has_
-									 /have_			 have_
-									 /having_			 having_
-									 /is_			 is_
-									 /let_			 let_
-									_/let_			 _let_
-									 /Let_			 Let_
-									 /may_			 may_
-									 /May_			 May_
-									_/may_			 _may_
-									 /might_			 might_
-									 /to_			 to_
-									 /To_			 To_
-									 /will_			 will_
-									 /Will_			 Will_
-									_/will_			 will_
+									 /are¦_			 are¦_
+									 /be¦_			 be¦_
+									 /Be¦_			 Be¦_
+									 /has¦_			 has¦_
+									_/has¦_			_has¦_
+									 /have¦_			 have¦_
+									 /having¦_			 having¦_
+									 /is¦_			 is¦_
+									 /let¦_			 let¦_
+									_/let¦_			 _let¦_
+									 /Let¦_			 Let¦_
+									 /may¦_			 may¦_
+									 /May¦_			 May¦_
+									_/may¦_			 _may¦_
+									 /might¦_			 might¦_
+									 /to¦_			 to¦_
+									 /To¦_			 To¦_
+									 /were¦_			 were¦_
+									 /will¦_			 will¦_
+									 /Will¦_			 Will¦_
+									_/will¦_			 will¦_
 
-									_/been_			_been_
-									_been/_			_been_
-									_/being_			_being_
-									_being/_			_being_
-									_/be_			_be_
-									_be/_			_be_
+									_/been¦_			_been¦_
+									_been¦/_			_been¦_
+									_/being¦_			_being¦_
+									_being¦/_			_being¦_
+									_/be¦_			_be¦_
+									_be¦/_			_be¦_
 
 # Fix unusual ones
 									/his¦/			\add ^his¦\add*		Matt 12:41 his son

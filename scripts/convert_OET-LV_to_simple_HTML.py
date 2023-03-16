@@ -937,7 +937,7 @@ def convert_ESFM_words( BBB:str, book_html:str, word_table:List[str] ) -> str:
         match = wordRegex3.search( book_html, searchStartIndex )
         if not match:
             break
-        logging.critical( f"Shouldn't still have {BBB} word match 1='{match.group(1)}' 2='{match.group(2)}' 3='{match.group(3)}' 4='{match.group(4)}'  all='{book_html[match.start()-5:match.end()]}'" )
+        logging.critical( f"Shouldn't still have three-word compound {BBB} word match 1='{match.group(1)}' 2='{match.group(2)}' 3='{match.group(3)}' 4='{match.group(4)}'  all='{book_html[match.start()-5:match.end()]}'" )
         assert match.group(4).isdigit()
         book_html = f'{book_html[:match.start()]}{match.group(1)}¦{match.group(4)}<span class="ul">_</span>{match.group(2)}¦{match.group(4)}<span class="ul">_</span>{match.group(3)}¦{match.group(4)}{book_html[match.end():]}'
         searchStartIndex = match.end() + 2 # We've added at least that many characters
@@ -947,7 +947,7 @@ def convert_ESFM_words( BBB:str, book_html:str, word_table:List[str] ) -> str:
         match = wordRegex2.search( book_html, searchStartIndex )
         if not match:
             break
-        logging.critical( f"Shouldn't still have {BBB} word match 1='{match.group(1)}' 2='{match.group(2)}' 3='{match.group(3)}'  all='{book_html[match.start()-5:match.end()]}'" )
+        logging.critical( f"Shouldn't still have two-word compound {BBB} word match 1='{match.group(1)}' 2='{match.group(2)}' 3='{match.group(3)}'  all='{book_html[match.start()-5:match.end()]}'" )
         assert match.group(3).isdigit()
         book_html = f'{book_html[:match.start()]}{match.group(1)}¦{match.group(3)}<span class="ul">_</span>{match.group(2)}¦{match.group(3)}{book_html[match.end():]}'
         searchStartIndex = match.end() + 2 # We've added at least that many characters

@@ -78,8 +78,9 @@ class State:
         # 'sons' causes problems
         'ambassadors','ambassador', 'ancestors','ancestor', 'angels','angel', 'ankles','ankle', 'authority',
         'birth', 'blood', 'boats','boat', 'bodies','body', 'boys','boy', 'bread', 'branches','branch', 'brothers','brother', 'bulls','bull',
-        'camels','camel', 'chairs','chair', 'chariots','chariot', 'chests','chest', 'children','child', 'cities','city', 'coats','coat', 'commands','command', 'countries','country',
-        'daughters','daughter', 'days','day', 'donkeys','donkey', 'doors','door', 'dreams','dream',
+        'camels','camel', 'chairs','chair', 'chariots','chariot', 'chests','chest', 'children','child',
+            'cities','city', 'coats','coat', 'commands','command', 'councils','council', 'countries','country',
+        'daughters','daughter', 'days','day', 'donkeys','donkey', 'doors','door', 'dreams','dream', 'dyes','dye',
         'eyes','eye',
         'faces','face', 'faith', 'farmers','farmer', 'fathers','father', 'fields','field', 'figs','fig', 'fingers','finger', 'fires','fire', 'fish', 'foot','feet',
             'friends','friend', 'fruits','fruit',
@@ -91,22 +92,24 @@ class State:
         'languages','language', 'leaders','leader', 'letters','letter', 'life', 'lights','light', 'lions','lion', 'lips','lip', 'loaf','loaves', 'locusts','locust', 'love',
         'man','men', 'markets','market', 'mercy', 'messages','message', 'meetings','meeting', 'moon', 'mothers','mother', 'mouths','mouth',
         'names','name', 'nations','nation', 'nets','net', 'noises','noise',
+        'officers','officer', 'officials','official',
         'peace', 'pens','pen', 'people', 'places','place', 'powers','power', 'prayers','prayer', 'priests','priest', 'prisons','prison', 'promises','promise'
         'rivers','river', 'roads','road', 'robes','robe', 'ropes','rope',
         'sea', 'servants','servant', 'services','service', 'shame', 'sheep', 'shepherds','shepherd',
             'signs','sign', 'silver', 'sinners','sinner', 'sins','sin', 'sisters','sister', 'sky', 'slaves','slave',
             'soldiers','soldier', 'sons', 'souls','soul', 'spirits', 'spirit',
             'stars','star', 'stones','stone', 'streets','street', 'sun', 'swords','sword',
-        'tables','table', 'teachers','teacher', 'things','thing', 'thrones','throne', 'times','time', 'tongues','tongue', 'towns','town', 'trees','tree', 'truth',
+        'tables','table', 'teachers','teacher', 'things','thing', 'thrones','throne', 'times','time', 'tombs','tomb', 'tongues','tongue', 'towns','town', 'trees','tree', 'truth',
         'vines','vine', 'visions','vision',
         'water', 'weeks','week', 'widows','widow', 'wife','wives', 'woman','women', 'words','word',
         )
     verbalNouns = ('distribution',)
     # Verbs often don't work because we use the tenses differently between OET-RV and OET-LV/Greek
     simpleVerbs = ('accepted','accepting','accepts','accept', 'asked','asking','asks','ask', 'answered','answering','answers','answer',
-                   'become','became','becomes','becoming', 'burnt','burning','burns','burn',
+                   'become','became','becomes','becoming',
+                        'burnt','burning','burns','burn', 'buried','burying','buries','bury',
                    'came','coming','comes','come', 'caught','catching','catches','catch',
-                   'distributed','distributing','distributes','distribute',
+                   'died','dying','dies','die', 'distributed','distributing','distributes','distribute',
                    'encouraged','encouraging','encourages','encourage',
                    'followed','following','follows','follow', 'forbidding','forbids','forbid',
                    'gathered','gathering','gathers','gather', 'gave','giving','gives','give', 'went','going','goes','go', 'greeted','greeting','greets','greet',
@@ -120,17 +123,17 @@ class State:
                         'received','receiving','receives','receive', 'recovered','recovering','recovers','recover', 'released','releasing','releases','release', 'remained','remaining','remains','remain', 'reminded','reminding','reminds','remind', 'requested','requesting','requests','request', 'respected','respecting','respects','respect',
                         'ran','running','runs','run',
                    'said','saying','says','say', 'saved','saving','saves','save',
-                        'seduced','seducing','seduces','seduce', 'saw','seeing','seen','sees','see', 'sent','sending','sends','send', 'served','serving','serves','serve',
+                        'seated','seating','seats','seat', 'seduced','seducing','seduces','seduce', 'saw','seeing','seen','sees','see', 'sent','sending','sends','send', 'served','serving','serves','serve',
                         'shared','sharing','shares','share', 'shone','shining','shines','shine', 'spoke','speaking','speaks','speak',
                         'stayed','staying','stays','stay', 'supported','supporting','supports','support',
                    'took','taking','takes','take', 'talked','talking','talks','talk', 'threw','throwing','throws','throw', 'turned','turning','turns','turn',
-                   'walked','walking','walks','walk', 'wanted','wanting','wants','want', 'warned','warning','warns','warn',
+                   'walked','walking','walks','walk', 'wanted','wanting','wants','want', 'warned','warning','warns','warn', 'watched','watching','watches','watch',
                         'withered','withering','withers','wither',
                         'wrote','writing','writes','write',
                    )
     simpleAdverbs = ('quickly', 'immediately', 'loudly', 'suddenly',)
     simpleAdjectives = ('alive', 'angry', 'bad', 'clean',
-                        'dead', 'disobedient', 'evil', 'foolish', 'good', 'loud', 'obedient', 'sudden')
+                        'dead', 'disobedient', 'entire', 'evil', 'foolish', 'godly', 'good', 'happy', 'loud', 'obedient', 'sad', 'sudden', 'whole')
     # Don't use 'one' below because it has other meanings
     simpleNumbers = ('two','three','four','five','six','seven','eight','nine',
                      'ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen',
