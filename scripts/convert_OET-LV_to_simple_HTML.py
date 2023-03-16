@@ -46,10 +46,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2023-03-16' # by RJH
+LAST_MODIFIED_DATE = '2023-03-17' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.51'
+PROGRAM_VERSION = '0.52'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -66,6 +66,7 @@ assert OET_NT_ESFM_InputFolderPath.is_dir()
 # assert OET_USFM_OutputFolderPath.is_dir()
 assert OET_HTML_OutputFolderPath.is_dir()
 
+NEWLINE = '\n'
 # EN_SPACE = ' '
 EM_SPACE = ' '
 NARROW_NON_BREAK_SPACE = ' '
@@ -113,6 +114,7 @@ def main():
 
 # If you change any colours, etc., also need to adjust the Key above
 CSS_TEXT = """div.BibleText { }
+div.unusedWord { color:darkGrey; } /* For the word files */
 
 span.upLink { font-size:1.5em; font-weight:bold; }
 span.c { font-size:1.1em; color:green; }
@@ -674,6 +676,7 @@ INTRO_PRAYER_HTML = """<p class="shortPrayer">It is our prayer that this <em>Lit
 the words of the inspired Biblical writers.</p><!--shortPrayer-->
 """
 
+# NOTE: BibleBook.css is created from CSS_TEXT above
 START_HTML = """<!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -1015,7 +1018,13 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
                 strongs = extendedStrongs[:-1] if extendedStrongs else None # drop the last digit
 
                 roleField = ''
-                if roleLetter: roleField = f' Word role=<b>{CNTR_ROLE_NAME_DICT[roleLetter]}</b>'
+                if roleLetter:
+                    roleName = CNTR_ROLE_NAME_DICT[roleLetter]
+                    if roleName=='noun' and 'U' in glossCaps:
+                        roleName = 'proper noun'
+                    roleField = f' Word role=<b>{roleName}</b>'
+                    
+                probabilityField = f'<small>(P={probability})</small> ' if probability else ''
 
                 moodField = tenseField = voiceField = personField = caseField = genderField = numberField = ''
                 if morphology:
@@ -1033,13 +1042,13 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
                 prevLink = f'<b><a href="W_{n-1}.html">←</a></b> ' if n>1 else ''
                 nextLink = f' <b><a href="W_{n+1}.html">→</a></b>' if n<len(word_table) else ''
                 oetLink = f'<b><a href="{BBB}.html#C{C}V{V}">Back to OET</a></b>'
-                html = f'''<h1>OET-LV Wordlink #{n}</h1>
+                html = f'''{'' if probability else '<div class="unusedWord">'}<h1>OET-LV Wordlink #{n}{'' if probability else ' <small>(Unused variant)</small>'}</h1>
 <p>{prevLink}{oetLink}{nextLink}</p>
 <p><span title="Goes to Statistical Restoration Greek page"><a href="https://GreekCNTR.org/collation/?{CNTR_BOOK_ID_MAP[BBB]}{C.zfill(3)}{V.zfill(3)}">SR GNT {tidyBBB} {C}:{V}</a></span>
- <b>{greek}</b> ({transliterate_Greek(greek)}) {translation}
+ {probabilityField}<b>{greek}</b> ({transliterate_Greek(greek)}) {translation}
  <b>{greek}</b> <small>originally translated to</small> ‘<b>{glossWords.replace('_','<span class="ul">_</span>')}</b>’
  Strongs=<span title="Goes to Strongs dictionary"><a href="https://BibleHub.com/greek/{strongs}.htm">{extendedStrongs}</a></span><br>
-  {roleField} Morphology=<b>{morphology}</b>:{moodField}{tenseField}{voiceField}{personField}{caseField}{genderField}{numberField}</p>'''
+  {roleField} Morphology=<b>{morphology}</b>:{moodField}{tenseField}{voiceField}{personField}{caseField}{genderField}{numberField}</p>{'' if probability else f'{NEWLINE}</div><!--unusedWord-->'}'''
                 html = f"{START_HTML.replace('__TITLE__',greek)}\n{html}\n{END_HTML}"
                 with open( outputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
                     html_output_file.write( html )

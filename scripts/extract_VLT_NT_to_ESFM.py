@@ -47,10 +47,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-03-16' # by RJH
+LAST_MODIFIED_DATE = '2023-03-17' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
-PROGRAM_VERSION = '0.77'
+PROGRAM_VERSION = '0.78'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -117,7 +117,7 @@ book_csv_column_counts = defaultdict(lambda: defaultdict(int))
 book_csv_column_headers = []
 
 
-NUM_EXPECTED_COLLATION_COLUMNS = 38
+NUM_EXPECTED_COLLATION_COLUMNS = 37
 # Last time we looked (2023-03-06) with 168,262 rows, 36-column header was:
 # CollationID,VerseID,VariantID,Relation,Pattern,Translatable,Align,Span,Incomplete,Classic,Koine,Medieval,Probability,Historical,Capitalization,Punctuation,Role,Syntax,Morphology,Sic,Lemma,LexemeID,Sense,GlossPre,GlossHelper,GlossWord,GlossPost,GlossPunctuation,GlossCapitalization,GlossOrder,GlossInsert,Reference,Notes,If,Then,Timestamp
 # and table had many 'NULL' entries
@@ -126,6 +126,9 @@ NUM_EXPECTED_COLLATION_COLUMNS = 38
 # and table had many 'NULL' entries
 # Last time we looked (2023-03-16) with 168,263 rows, 38-column header was:
 # CollationID,VerseID,VariantID,VariantID1,Relation,Pattern,Translatable,Checking,Align,Span,Incomplete,Classic,Koine,Medieval,Probability,Historical,Capitalization,Punctuation,Role,Syntax,Morphology,Sic,Lemma,LexemeID,Sense,GlossPre,GlossHelper,GlossWord,GlossPost,GlossPunctuation,GlossCapitalization,GlossOrder,GlossInsert,Reference,Notes,If,Then,Timestamp
+# and table had many 'NULL' entries
+# Last time we looked (2023-03-17) with 168,263 rows, 37-column header was:
+# CollationID,VerseID,VariantID,Relation,Pattern,Translatable,Checking,Align,Span,Incomplete,Classic,Koine,Medieval,Probability,Historical,Capitalization,Punctuation,Role,Syntax,Morphology,Sic,Lemma,LexemeID,Sense,GlossPre,GlossHelper,GlossWord,GlossPost,GlossPunctuation,GlossCapitalization,GlossOrder,GlossInsert,Reference,Notes,If,Then,Timestamp
 # and table had many 'NULL' entries
 collation_csv_rows = []
 collation_csv_column_max_length_counts = {}

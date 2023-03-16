@@ -52,10 +52,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-03-14' # by RJH
+LAST_MODIFIED_DATE = '2023-03-17' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.42'
+PROGRAM_VERSION = '0.43'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -113,6 +113,7 @@ SBS_CSS_TEXT = """button#underlineButton { float:right; }
 div.container { display:grid; column-gap:0.6em; grid-template-columns:0.85fr 1.15fr; }
 div.BibleText { }
 div.rightBox { float:right; width:35%; border:3px solid #73AD21; padding:0.2em; }
+div.unusedWord { color:darkGrey; } /* For the word files */
 
 span.upLink { font-size:1.5em; font-weight:bold; }
 span.c { font-size:1.1em; color:green; }
@@ -1456,6 +1457,7 @@ the accounts and messages written by the God-inspired Biblical writers.</p>
 assert "'" not in SBS_INTRO_PRAYER_HTML
 assert '--' not in SBS_INTRO_PRAYER_HTML
 
+# NOTE: BibleBook.css is created from CSS_TEXT above
 SBS_START_HTML = """<!DOCTYPE html>
 <html lang="en-US">
 <head>

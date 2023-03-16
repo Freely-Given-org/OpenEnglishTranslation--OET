@@ -3,6 +3,7 @@ button#underlineButton { float:right; }
 div.container { display:grid; column-gap:0.6em; grid-template-columns:0.85fr 1.15fr; }
 div.BibleText { }
 div.rightBox { float:right; width:35%; border:3px solid #73AD21; padding:0.2em; }
+div.unusedWord { color:darkGrey; } /* For the word files */
 
 span.upLink { font-size:1.5em; font-weight:bold; }
 span.c { font-size:1.1em; color:green; }

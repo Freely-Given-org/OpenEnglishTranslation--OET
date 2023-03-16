@@ -1,4 +1,5 @@
 div.BibleText { }
+div.unusedWord { color:darkGrey; } /* For the word files */
 
 span.upLink { font-size:1.5em; font-weight:bold; }
 span.c { font-size:1.1em; color:green; }

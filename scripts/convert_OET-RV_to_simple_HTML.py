@@ -43,10 +43,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-03-15' # by RJH
+LAST_MODIFIED_DATE = '2023-03-17' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.52'
+PROGRAM_VERSION = '0.53'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -93,6 +93,8 @@ def main():
 
 # If you change any colours, etc., also need to adjust the Key above
 CSS_TEXT = """div.BibleText { }
+div.unusedWord { color:darkGrey; } /* For the word files */
+
 span.upLink { font-size:1.5em; font-weight:bold; }
 span.c { font-size:1.1em; color:green; }
 span.cPsa { font-size:1.6em; font-weight:bold; color:green; }
@@ -713,6 +715,7 @@ INTRO_PRAYER_HTML = """<p class="shortPrayer">It is our prayer that this <em>Rea
 the accounts and messages written by the God-inspired Biblical writers.</p><!--shortPrayer-->
 """
 
+# NOTE: BibleBook.css is created from CSS_TEXT above
 START_HTML = """<!DOCTYPE html>
 <html lang="en-US">
 <head>
