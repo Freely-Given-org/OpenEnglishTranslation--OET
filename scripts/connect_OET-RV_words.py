@@ -28,7 +28,7 @@ from gettext import gettext as _
 from tracemalloc import start
 from typing import List, Tuple, Optional
 from pathlib import Path
-from datetime import datetime
+# from datetime import datetime
 import logging
 import re
 
@@ -47,7 +47,7 @@ from BibleOrgSys.Formats.ESFMBible import ESFMBible
 LAST_MODIFIED_DATE = '2023-03-17' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.08'
+PROGRAM_VERSION = '0.09'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -55,10 +55,10 @@ DEBUGGING_THIS_MODULE = False
 
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module
 FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos
-OET_LV_OT_USFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_OT_USFM/' )
+# OET_LV_OT_USFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_OT_USFM/' )
 OET_LV_NT_ESFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_VLT_ESFM/' )
 OET_RV_ESFM_FolderPath = project_folderpath.joinpath( 'translatedTexts/ReadersVersion/' )
-assert OET_LV_OT_USFM_InputFolderPath.is_dir()
+# assert OET_LV_OT_USFM_InputFolderPath.is_dir()
 assert OET_LV_NT_ESFM_InputFolderPath.is_dir()
 assert OET_RV_ESFM_FolderPath.is_dir()
 
@@ -76,17 +76,18 @@ class State:
                     #   i.e., there's really no other word for them.
         # NOTE: Some of these nouns can also be verbs -- we may need to remove those???
         # 'sons' causes problems
-        'ambassadors','ambassador', 'ancestors','ancestor', 'angels','angel', 'ankles','ankle', 'authority',
+        'ambassadors','ambassador', 'ancestors','ancestor', 'angels','angel', 'ankles','ankle', 'authority', 'axes','axe',
         'belts','belt', 'birth', 'blood', 'boats','boat', 'bodies','body', 'boys','boy', 'bread', 'branches','branch', 'brothers','brother', 'bulls','bull',
         'camels','camel', 'chairs','chair', 'chariots','chariot', 'chests','chest', 'children','child',
             'cities','city', 'coats','coat', 'commands','command', 'compassion', 'councils','council', 'countries','country',
         'daughters','daughter', 'days','day', 'donkeys','donkey', 'doors','door', 'doves','dove', 'dreams','dream', 'dyes','dye',
-        'eyes','eye',
+        'eyes','eye', 'exorcists','exorcist',
         'faces','face', 'faith', 'farmers','farmer', 'fathers','father', 'fevers','fever', 'fields','field', 'figs','fig', 'fingers','finger', 'fires','fire', 'fish', 'foot','feet',
+            'followers','follower',
             'friends','friend', 'fruits','fruit',
         'generations','generation', 'gifts','gift', 'girls','girl', 'goats','goat', 'gods','god', 'gold',
             'grace', 'grains','grain', 'grapes','grape', 'greed',
-        'hands','hand', 'happiness', 'hearts','heart', 'heavens','heaven', 'homes','home', 'honey', 'horses','horse', 'houses','house', 'husbands','husband',
+        'handkerchiefs','handkerchief', 'hands','hand', 'happiness', 'hearts','heart', 'heavens','heaven', 'homes','home', 'honey', 'horses','horse', 'houses','house', 'husbands','husband',
         'idols','idol', 'ink',
         'kings','king', 'kingdoms','kingdom', 'kisses','kiss',
         'languages','language', 'leaders','leader', 'leather', 'letters','letter', 'life', 'lights','light', 'lions','lion', 'lips','lip', 'loaf','loaves', 'locusts','locust', 'love',
@@ -102,14 +103,15 @@ class State:
         'tables','table', 'teachers','teacher', 'things','thing', 'thrones','throne', 'times','time', 'tombs','tomb', 'tongues','tongue', 'towns','town', 'trees','tree', 'truth',
         'vines','vine', 'visions','vision',
         'waists','waist', 'water', 'weeks','week', 'wilderness', 'widows','widow', 'wife','wives', 'woman','women', 'words','word', 'workers','worker',
+        'years','year',
         )
-    verbalNouns = ('distribution',)
+    verbalNouns = ('discussion', 'distribution', 'immersion', 'repentance')
     # Verbs often don't work because we use the tenses differently between OET-RV and OET-LV/Greek
     simpleVerbs = ('accepted','accepting','accepts','accept', 'arrested','arresting','arrests','arrest', 'asked','asking','asks','ask', 'answered','answering','answers','answer',
                    'become','became','becomes','becoming',
                         'burnt','burning','burns','burn', 'buried','burying','buries','bury',
                    'came','coming','comes','come', 'caught','catching','catches','catch',
-                   'died','dying','dies','die', 'distributed','distributing','distributes','distribute',
+                   'died','dying','dies','die', 'discussed','discussing','discusses','discuss', 'distributed','distributing','distributes','distribute',
                    'encouraged','encouraging','encourages','encourage',
                    'followed','following','follows','follow', 'forbidding','forbids','forbid',
                    'gathered','gathering','gathers','gather', 'gave','giving','gives','give', 'went','going','goes','go', 'greeted','greeting','greets','greet',
@@ -129,11 +131,11 @@ class State:
                    'took','taking','takes','take', 'talked','talking','talks','talk',
                         'threw','throwing','throws','throw', 'travelled','travelling','travels','travel', 'turned','turning','turns','turn',
                    'walked','walking','walks','walk', 'wanted','wanting','wants','want', 'warned','warning','warns','warn', 'watched','watching','watches','watch',
-                        'withered','withering','withers','wither',
+                        'withdrew','withdrawing','withdraws','withdraw', 'withered','withering','withers','wither',
                         'wrote','writing','writes','write',
                    )
     simpleAdverbs = ('quickly', 'immediately', 'loudly', 'suddenly',)
-    simpleAdjectives = ('alive', 'angry', 'bad', 'clean',
+    simpleAdjectives = ('alive', 'angry', 'bad', 'clean', 'cold',
                         'dead', 'disobedient', 'entire', 'evil', 'foolish', 'godly', 'good', 'happy', 'loud', 'obedient', 'sad', 'sick', 'sudden', 'whole')
     # Don't use 'one' below because it has other meanings
     simpleNumbers = ('two','three','four','five','six','seven','eight','nine',
@@ -224,7 +226,7 @@ def connect_OET_RV( rv, lv ):
                         continue
                     # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"RV entries: ({len(rvVerseEntryList)}) {rvVerseEntryList}")
                     # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"LV entries: ({len(lvVerseEntryList)}) {lvVerseEntryList}")
-                    connect_OET_RV_Verse( BBB, c, v, rvVerseEntryList, lvVerseEntryList )
+                    connect_OET_RV_Verse( BBB, c, v, rvVerseEntryList, lvVerseEntryList ) # updates state.rvESFMLines
         else:
             dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"connect_OET_RV {BBB} has {numChapters} chapters!!!" )
             assert BBB in ('INT','FRT',)
@@ -299,7 +301,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ):
 
 CNTR_ROLE_NAME_DICT = {'N':'noun', 'S':'substantive adjective', 'A':'adjective', 'E':'determiner/case-marker', 'R':'pronoun',
                   'V':'verb', 'I':'interjection', 'P':'preposition', 'D':'adverb', 'C':'conjunction', 'T':'particle'}
-CNTR_MOOD_NAME_DICT = {'I':'indicative', 'M':'imperative', 'S':'subjunctive', 
+CNTR_MOOD_NAME_DICT = {'I':'indicative', 'M':'imperative', 'S':'subjunctive',
             'O':'optative', 'N':'infinitive', 'P':'participle', 'e':'e'}
 CNTR_TENSE_NAME_DICT = {'P':'present', 'I':'imperfect', 'F':'future', 'A':'aorist', 'E':'perfect', 'L':'pluperfect', 'U':'U', 'e':'e'}
 CNTR_VOICE_NAME_DICT = {'A':'active', 'M':'middle', 'P':'passive', 'p':'p', 'm':'m', 'a':'a'}
@@ -428,19 +430,46 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
             except ValueError: # might be a range like 21-22
                 V = int(Vstr.split('-',1)[0])
             found = C==c and V==v
-        if found and f' {word} ' in rest:
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"addNumberToRVWord() found {BBB} {C}:{V} {marker}" )
-            # assert word in rest, f"No {word=} in {rest=}"
-            if rest.count( word ) > 1:
-                return False
-            assert rest.count( word ) == 1, f"'{word}' {rest.count(word)} '{rest}'"
-            if f' {word}¦' not in rest:
-                state.rvESFMLines[n] = line.replace( word, f'{word}¦{wordNumber}' )
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord() added ¦{wordNumber} to '{word}' in OET-RV {BBB} {c}:{v}" )
-                return True
-            else:
-                logging.critical( f"addNumberToRVWord() found {BBB} {C}:{V} {marker} found ' {word}¦' already in {rest=}")
-                oops
+        if found:
+            wholeWordRegexStr = f'\\b{word}\\b'
+            allWordMatches = [match for match in re.finditer( wholeWordRegexStr, line )]
+            if len(allWordMatches) == 1:
+                match = allWordMatches[0]
+                # print( type(allWordMatches), type(match), match )
+                assert match.group(0) == word
+                # print( f"{word=} {line=}" )
+                try:
+                    if line[match.end()] != '¦': # next character after word
+                        state.rvESFMLines[n] = f'{line[:match.start()]}{word}¦{wordNumber}{line[match.end():]}'
+                        # print( f"{word=} {line=}" )
+                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord() added ¦{wordNumber} to '{word}' in OET-RV {BBB} {c}:{v}" )
+                        return True
+                    else: already_numbered
+                except IndexError:
+                    assert line.endswith( word )
+            # for _safetyCount in range( 4 ):
+            #     match = re.search( wholeWordRegexStr, rest )
+            #     if not match: break
+            #     print( match )
+            #     assert match.group(0) == word
+            #     if rest[match.end()] != '': # next character after word
+            #         rest = f'{rest[:match.start()]}{word}¦{wordNumber}{rest[:match.end():]}'
+            #         print( f"{word=} {rest=}" ); halt
+            # else: not_enough_loops
+
+            # if f' {word} ' in rest: # that's quite a restrictive match
+            #     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"addNumberToRVWord() found {BBB} {C}:{V} {marker}" )
+            #     # assert word in rest, f"No {word=} in {rest=}"
+            #     if rest.count( word ) > 1:
+            #         return False
+            #     assert rest.count( word ) == 1, f"'{word}' {rest.count(word)} '{rest}'"
+            #     if f' {word}¦' not in rest: # already
+            #         state.rvESFMLines[n] = line.replace( word, f'{word}¦{wordNumber}' )
+            #         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord() added ¦{wordNumber} to '{word}' in OET-RV {BBB} {c}:{v}" )
+            #         return True
+            #     else:
+            #         logging.critical( f"addNumberToRVWord() found {BBB} {C}:{V} {marker} found ' {word}¦' already in {rest=}")
+            #         oops
 # end of connect_OET-RV_words.addNumberToRVWord
 
 
