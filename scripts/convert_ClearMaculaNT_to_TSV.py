@@ -5,7 +5,7 @@
 #
 # Script handling convert_ClearMaculaNT_to_TSV functions
 #
-# Copyright (C) 2022 Robert Hunt
+# Copyright (C) 2022-2023 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -27,6 +27,10 @@ Script taking Clear.Bible low-fat NT trees and extracting and flattening the dat
     into a single, large TSV file.
 
 We also add the ID fields that were originally adapted from the BibleTags id fields.
+
+CHANGELOG:
+    2023-03-22 Shortened referent field in our output tables
+               Changed some fieldnames: Referent -> Referents, Frame -> Frames better reflecting the actual data contents
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple
@@ -43,10 +47,10 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-10-19' # by RJH
+LAST_MODIFIED_DATE = '2023-03-22' # by RJH
 SHORT_PROGRAM_NAME = "Convert_ClearMaculaNT_to_TSV"
 PROGRAM_NAME = "Extract and Apply Macula OT glosses"
-PROGRAM_VERSION = '0.20'
+PROGRAM_VERSION = '0.21'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -70,7 +74,7 @@ SHORTENED_TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_t
 OUTPUT_FIELDNAMES = ['FGRef','BibTagId','LFRef','LFNumRef','Role',
                     'Word','Unicode','After',
                     'WordClass','Person','Gender','Number','Tense','Voice','Mood','Degree',
-                    'WordType','Domain','Frame','Referent','SubjRef','Discontinuous',
+                    'WordType','Domain','Frames','Referents','SubjRef','Discontinuous',
                     'Morphology','Lemma',
                     'Strong',
                     'ContextualGloss',
@@ -271,6 +275,20 @@ def loadLowFatGlosses() -> bool:
                 if len(nestingBits) >= max_nesting_level:
                     max_nesting_level = len(nestingBits) + 1
 
+                # Convert pronoun referents (like 'n40001002014') to C:VwW (like '1:2w14')
+                referentsStr = elem.get('referent')
+                ourReferents = []
+                if referentsStr:
+                    for referent in referentsStr.split( ' ' ):
+                        # print( f"{BBB} {longID} {word=} {gloss=} {English=} {type(referent)} {referent=}")
+                        assert len(referent)==12 and referent[0]=='n' and referent[1:].isdigit()
+                        assert referent[1:3] == longID[:2] # Don't expect referent links to point into other books
+                        # referent = referent[3:] # remove 'n' prefix and predictable book number -- now down to nine digits: cccvvvwww
+                        # rC, rV, rW = int(referent[3:6]), int(referent[6:9]), int(referent[9:])
+                        ourReferent = f'{int(referent[3:6])}:{int(referent[6:9])}w{int(referent[9:])}' # Convert to 'C:VwW' form
+                        # print( f" Got {rC=} {rV=} {rW=} so now {referent=}" )
+                        ourReferents.append( ourReferent )
+
                 # Names have to match state.output_fieldnames:
                 # ['FGRef','BibTagId','LFRef','LFNumRef',
                 # 'Language','Word','Unicode','After',
@@ -286,7 +304,7 @@ def loadLowFatGlosses() -> bool:
                             'WordClass':wClass, 'Person':person, 'Gender':gender, 'Number':number,
                             'Tense':tense, 'Voice':voice, 'Mood':mood, 'Degree':degree,
                             'WordType':wType, 'Domain':elem.get('domain'),
-                            'Frame':elem.get('frame'), 'Referent':elem.get('referent'), 'SubjRef':elem.get('subjref'),
+                            'Frames':elem.get('frame'), 'Referents':';'.join(ourReferents), 'SubjRef':elem.get('subjref'),
                             'Strong':elem.get('strong'), 'Discontinuous':discontinuous,
                             'Morphology':morph, 'Lemma':elem.get('lemma'),
                             'ContextualGloss':gloss,
@@ -298,7 +316,7 @@ def loadLowFatGlosses() -> bool:
                     for fieldname in state.output_fieldnames:
                         if fieldname not in ('FGRef','BibTagId'): assert fieldname in entry, f"{fieldname} missing from entry"
 
-        vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Got {len(tempWordsAndMorphemes):,} words/morphemes in {BBB}")
+        vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Got {len(tempWordsAndMorphemes):,} words/morphemes in {BBB}" )
         assert len(set(longIDs)) == len(longIDs), f"Should be no duplicates in {longIDs=}"
 
         # Note that because of the phrase/clause nesting, we can get the word fields in the wrong order

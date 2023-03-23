@@ -44,10 +44,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-03-17' # by RJH
+LAST_MODIFIED_DATE = '2023-03-23' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.09'
+PROGRAM_VERSION = '0.11'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -76,78 +76,107 @@ class State:
                     #   i.e., there's really no other word for them.
         # NOTE: Some of these nouns can also be verbs -- we may need to remove those???
         # 'sons' causes problems
-        'ambassadors','ambassador', 'ancestors','ancestor', 'angels','angel', 'ankles','ankle', 'authority', 'axes','axe',
+        'ambassadors','ambassador', 'ancestors','ancestor', 'angels','angel', 'anger', 'ankles','ankle', 'authority', 'axes','axe',
         'belts','belt', 'birth', 'blood', 'boats','boat', 'bodies','body', 'boys','boy', 'bread', 'branches','branch', 'brothers','brother', 'bulls','bull',
         'camels','camel', 'chairs','chair', 'chariots','chariot', 'chests','chest', 'children','child',
             'cities','city', 'coats','coat', 'commands','command', 'compassion', 'councils','council', 'countries','country',
-        'daughters','daughter', 'days','day', 'donkeys','donkey', 'doors','door', 'doves','dove', 'dreams','dream', 'dyes','dye',
+            'craftsmen','craftsman', 'crowds','crowd',
+        'danger', 'darkness', 'daughters','daughter', 'days','day', 'donkeys','donkey', 'doors','door', 'doves','dove', 'dreams','dream', 'dyes','dye',
         'eyes','eye', 'exorcists','exorcist',
-        'faces','face', 'faith', 'farmers','farmer', 'fathers','father', 'fevers','fever', 'fields','field', 'figs','fig', 'fingers','finger', 'fires','fire', 'fish', 'foot','feet',
+        'faces','face', 'faith', 'farmers','farmer', 'fathers','father',
+            'fevers','fever',
+            'fields','field', 'figs','fig', 'fingers','finger', 'fires','fire', 'fish', 'foot','feet',
             'followers','follower',
             'friends','friend', 'fruits','fruit',
         'generations','generation', 'gifts','gift', 'girls','girl', 'goats','goat', 'gods','god', 'gold',
             'grace', 'grains','grain', 'grapes','grape', 'greed',
-        'handkerchiefs','handkerchief', 'hands','hand', 'happiness', 'hearts','heart', 'heavens','heaven', 'homes','home', 'honey', 'horses','horse', 'houses','house', 'husbands','husband',
+        'handkerchiefs','handkerchief', 'hands','hand', 'happiness', 'hearts','heart', 'heavens','heaven', 'homes','home', 'honey', 'horses','horse', 'hours','hour', 'houses','house', 'husbands','husband',
         'idols','idol', 'ink',
+        'joy',
         'kings','king', 'kingdoms','kingdom', 'kisses','kiss',
-        'languages','language', 'leaders','leader', 'leather', 'letters','letter', 'life', 'lights','light', 'lions','lion', 'lips','lip', 'loaf','loaves', 'locusts','locust', 'love',
+        'languages','language', 'leaders','leader', 'leather', 'letters','letter', 'life', 'lights','light', 'lions','lion', 'lips','lip', 'loaf','loaves', 'locusts','locust',
         'man','men', 'markets','market', 'mercy', 'messages','message', 'meetings','meeting', 'moon', 'mothers','mother', 'mouths','mouth',
         'names','name', 'nations','nation', 'nets','net', 'news', 'noises','noise',
         'officers','officer', 'officials','official',
-        'peace', 'pens','pen', 'people', 'places','place', 'powers','power', 'prayers','prayer', 'priests','priest', 'prisons','prison', 'promises','promise'
-        'rivers','river', 'roads','road', 'robes','robe', 'rocks','rock', 'ropes','rope',
-        'sandals','sandal', 'sea', 'servants','servant', 'services','service', 'shame', 'sheep', 'shepherds','shepherd',
-            'signs','sign', 'silver', 'sinners','sinner', 'sins','sin', 'sisters','sister', 'sky', 'slaves','slave',
-            'soldiers','soldier', 'sons', 'souls','soul', 'spirits', 'spirit',
+        'peace', 'pens','pen', 'people','person', 'places','place', 'powers','power', 'prayers','prayer', 'priests','priest', 'prisons','prison', 'promises','promise'
+        'rivers','river', 'roads','road', 'robes','robe', 'rocks','rock', 'ropes','rope', 'rulers','ruler',
+        'sandals','sandal', 'sea',
+            'scrolls','scroll',
+            'servants','servant', 'services','service', 'shame', 'sheep', 'shepherds','shepherd', 'ships','ship',
+            'signs','sign', 'silver', 'silversmiths','silversmith', 'sinners','sinner', 'sins','sin', 'sisters','sister', 'sky', 'slaves','slave',
+            'soldiers','soldier', 'sons', 'souls','soul', 'spirits','spirit',
             'stars','star', 'stones','stone', 'streets','street', 'sun', 'swords','sword',
-        'tables','table', 'teachers','teacher', 'things','thing', 'thrones','throne', 'times','time', 'tombs','tomb', 'tongues','tongue', 'towns','town', 'trees','tree', 'truth',
+        'tables','table', 'teachers','teacher',
+            'theatres','theatre', 'things','thing', 'thrones','throne', 'times','time', 'tombs','tomb', 'tongues','tongue', 'towns','town', 'trees','tree', 'truth',
         'vines','vine', 'visions','vision',
         'waists','waist', 'water', 'weeks','week', 'wilderness', 'widows','widow', 'wife','wives', 'woman','women', 'words','word', 'workers','worker',
         'years','year',
         )
-    verbalNouns = ('discussion', 'distribution', 'immersion', 'repentance')
+    assert len(set(simpleNouns)) == len(simpleNouns) # Check for accidental duplicates
+    verbalNouns = ('confession',
+                   'deception', 'discussion', 'distribution',
+                   'fellowship', 'fulfilment',
+                   'immersion', 'repentance')
+    assert len(set(verbalNouns)) == len(verbalNouns) # Check for accidental duplicates
     # Verbs often don't work because we use the tenses differently between OET-RV and OET-LV/Greek
     simpleVerbs = ('accepted','accepting','accepts','accept', 'arrested','arresting','arrests','arrest', 'asked','asking','asks','ask', 'answered','answering','answers','answer',
-                   'become','became','becomes','becoming',
+                   'become','became','becomes','becoming', 'believed','believing','believes','believe',
+                        'brought','bringing','brings','bring',
                         'burnt','burning','burns','burn', 'buried','burying','buries','bury',
                    'came','coming','comes','come', 'caught','catching','catches','catch',
-                   'died','dying','dies','die', 'discussed','discussing','discusses','discuss', 'distributed','distributing','distributes','distribute',
-                   'encouraged','encouraging','encourages','encourage',
+                        'chose','choosing','chooses','choose',
+                        'confessed','confessing','confesses','confess',
+                        'cried','crying','cries','cry',
+                   'deceived','deceiving','deceives','deceive', 'defended','defending','defends','defend',
+                        'died','dying','dies','die', 'discussed','discussing','discusses','discuss', 'distributed','distributing','distributes','distribute',
+                    'embraced','embracing','embraces','embrace',
+                        'encouraged','encouraging','encourages','encourage',
                    'followed','following','follows','follow', 'forbidding','forbids','forbid',
                    'gathered','gathering','gathers','gather', 'gave','giving','gives','give', 'went','going','goes','go', 'greeted','greeting','greets','greet',
                    'harvested','harvesting','harvests','harvest', 'hated','hating','hates','hate', 'healed','healing','heals','heal', 'helped','helping','helps','help',
                    'imitated','imitating','imitates','imitate', 'immersed','immersing','immerses','immerse',
+                   'judged','judging','judges','judge',
                    'knew','knowing','knows','know',
-                   'learnt','learning','learns','learn', 'lived','living','lives','live', 'looked','looking','looks','look',
+                   'learnt','learning','learns','learn', 'lived','living','lives','live', 'looked','looking','looks','look', 'loved','loving','loves','love',
+                   'magnified','magnifying','magnifies','magnify',
                    'obeyed','obeying','obeys','obey',
                    'praised','praising','praises','praise',
-                   'raised','raising','raises','raise',
-                        'received','receiving','receives','receive', 'recovered','recovering','recovers','recover', 'released','releasing','releases','release', 'remained','remaining','remains','remain', 'reminded','reminding','reminds','remind', 'requested','requesting','requests','request', 'respected','respecting','respects','respect',
+                   'raged','raging','rages','rage', 'raised','raising','raises','raise',
+                        'received','receiving','receives','receive', 'recognised','recognising','recognises','recognise', 'recovered','recovering','recovers','recover', 'released','releasing','releases','release', 'remained','remaining','remains','remain', 'reminded','reminding','reminds','remind', 'requested','requesting','requests','request', 'respected','respecting','respects','respect',
                         'ran','running','runs','run',
-                   'said','saying','says','say', 'saved','saving','saves','save',
+                   'sailed','sailing','sails','sail', 'said','saying','says','say', 'saved','saving','saves','save',
                         'seated','seating','seats','seat', 'seduced','seducing','seduces','seduce', 'saw','seeing','seen','sees','see', 'sent','sending','sends','send', 'served','serving','serves','serve',
                         'shared','sharing','shares','share', 'shone','shining','shines','shine', 'spoke','speaking','speaks','speak',
-                        'stayed','staying','stays','stay', 'supported','supporting','supports','support',
+                        'stayed','staying','stays','stay',
+                        'summoned','summoning','summons','summon', 'supported','supporting','supports','support',
                    'took','taking','takes','take', 'talked','talking','talks','talk',
                         'threw','throwing','throws','throw', 'travelled','travelling','travels','travel', 'turned','turning','turns','turn',
                    'walked','walking','walks','walk', 'wanted','wanting','wants','want', 'warned','warning','warns','warn', 'watched','watching','watches','watch',
                         'withdrew','withdrawing','withdraws','withdraw', 'withered','withering','withers','wither',
                         'wrote','writing','writes','write',
                    )
+    assert len(set(simpleVerbs)) == len(simpleVerbs) # Check for accidental duplicates
     simpleAdverbs = ('quickly', 'immediately', 'loudly', 'suddenly',)
+    assert len(set(simpleAdverbs)) == len(simpleAdverbs) # Check for accidental duplicates
     simpleAdjectives = ('alive', 'angry', 'bad', 'clean', 'cold',
-                        'dead', 'disobedient', 'entire', 'evil', 'foolish', 'godly', 'good', 'happy', 'loud', 'obedient', 'sad', 'sick', 'sudden', 'whole')
+                        'dangerous', 'dead', 'disobedient', 'entire', 'evil', 'foolish', 'foreign', 'friendly', 'godly', 'good', 'happy', 'local', 'loud', 'naked',
+                        'obedient', 'opposite', 'sad', 'same', 'sick', 'sudden', 'whole', 'wounded')
+    assert len(set(simpleAdjectives)) == len(simpleAdjectives) # Check for accidental duplicates
     # Don't use 'one' below because it has other meanings
     simpleNumbers = ('two','three','four','five','six','seven','eight','nine',
                      'ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen',
                      'twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety',
                      'none')
+    assert len(set(simpleNumbers)) == len(simpleNumbers) # Check for accidental duplicates
     pronouns = ('he','she','it', 'him','her','its', 'you','we','they', 'your','our','their',
                 'himself','herself','itself', 'yourself','yourselves', 'ourselves', 'themselves',
                 'everyone')
+    assert len(set(pronouns)) == len(pronouns) # Check for accidental duplicates
     # We don't expect connectors to work very well
     connectors = ('and', 'but')
+    assert len(set(connectors)) == len(connectors) # Check for accidental duplicates
     simpleWords = simpleNouns + verbalNouns + simpleVerbs + simpleAdverbs+ simpleAdjectives  + simpleNumbers + pronouns + connectors
+    # assert len(set(simpleWords)) == len(simpleWords) # Check for accidental duplicates -- but may be overlaps, e.g., love is a verb and a noun
 # end of State class
 
 state = State()
@@ -444,7 +473,9 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
                         # print( f"{word=} {line=}" )
                         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord() added ¦{wordNumber} to '{word}' in OET-RV {BBB} {c}:{v}" )
                         return True
-                    else: already_numbered
+                    else:
+                        logging.critical( f"Tried to append second number to {BBB} {C}:{V} {marker} '{line[match.start():match.end()]}' -> '{word}¦{wordNumber}'" )
+                        already_numbered
                 except IndexError:
                     assert line.endswith( word )
             # for _safetyCount in range( 4 ):

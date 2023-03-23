@@ -33,6 +33,9 @@ Puts markers around one gloss word inserted near another:
     ˱they˲_> would <_repent (after glossPre)
     /may/_=> not <=_worry (after glossHelper)
     ˱to˲ the_> first <_\\add one\\add* (before glossPost)
+
+CHANGELOG:
+    2023-03-22 Added word numbers to refs in 
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple, Optional
@@ -47,18 +50,19 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-03-17' # by RJH
+LAST_MODIFIED_DATE = '2023-03-22' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
-PROGRAM_VERSION = '0.78'
+PROGRAM_VERSION = '0.80'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
 
 
-# VLT_USFM_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_VLT_USFM/' )
 VLT_ESFM_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_VLT_ESFM/' )
 RV_ESFM_OUTPUT_FOLDERPATH = Path( '../translatedTexts/ReadersVersion/' ) # We also copy the wordfile to this folder
+
+OUR_EXPORT_TABLE_FILENAME = 'OET_NT_word_table.8columns.tsv' # We make this first 8-column version here (from the collation table)
 
 
 state = None
@@ -241,26 +245,6 @@ def loadSourceCollationTable() -> bool:
 # end of extract_VLT_NT_to_ESFM.loadSourceCollationTable
 
 
-# def write_usfm_book(book_number:int, book_usfm: str) -> bool:
-#     """
-#     """
-#     usfm_filepath = VLT_USFM_OUTPUT_FOLDERPATH.joinpath( f'{BOS_BOOK_ID_MAP[book_number]}_gloss.usfm' )
-#     book_usfm = book_usfm.replace('¶', '¶ ') # Looks nicer maybe
-#     # Fix any punctuation problems
-#     book_usfm = book_usfm.replace(',,',',').replace('..','.').replace(';;',';') \
-#                 .replace(',.','.').replace('.”.”','.”').replace('?”?”','?”')
-#     # if "another's" in book_usfm or "Lord's" in book_usfm:
-#     #     logging.error( f'''Fixing "another's" in {usfm_filepath}''' )
-#     # book_usfm = book_usfm.replace("another's", 'another’s').replace("Lord's", 'Lord’s') # Where do these come from?
-#     assert '  ' not in book_usfm
-#     # assert "'" not in book_usfm, f'''Why do we have single quote in {usfm_filepath}: {book_usfm[book_usfm.index("'")-20:book_usfm.index("'")+22]}'''
-#     assert '"' not in book_usfm, f'''Why do we have double quote in {usfm_filepath}: {book_usfm[book_usfm.index('"')-20:book_usfm.index('"')+22]}'''
-#     with open(usfm_filepath, 'wt', encoding='utf-8') as output_file:
-#         output_file.write(f"{book_usfm}\n")
-#     return True
-# # end of extract_VLT_NT_to_ESFM.loadSourceCollationTable
-
-
 def write_esfm_book(book_number:int, book_esfm: str) -> bool:
     """
     """
@@ -281,104 +265,13 @@ def write_esfm_book(book_number:int, book_esfm: str) -> bool:
 # end of extract_VLT_NT_to_ESFM.loadSourceCollationTable
 
 
-# def export_usfm_literal_English_gloss() -> bool:
-#     """
-#     Use the GlossOrder field to export the English gloss.
-
-#     Also uses the GlossInsert field to adjust word order.
-#     """
-#     vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nExporting USFM plain text literal English files…")
-#     last_book_number = 39 # Start here coz we only do NT
-#     last_chapter_number = last_verse_number = last_word_number = 0
-#     last_verse_id = None
-#     usfm_text = ""
-#     num_books_written = 0
-#     for n, row in enumerate(collation_csv_rows):
-#         collation_id, verse_id = row['CollationID'], row['VerseID']
-#         assert len(collation_id) == 11 and collation_id.isdigit()
-#         if collation_id == '99999999999':
-#             this_verse_row_list = None
-#         else:
-#             assert len(verse_id) == 8 and verse_id.isdigit()
-#             if verse_id != last_verse_id:
-#                 this_verse_row_list = get_verse_rows(collation_csv_rows, n)
-#                 last_verse_id = verse_id
-
-#         book_number, chapter_number, verse_number, word_number \
-#             = int(collation_id[:2]), int(collation_id[2:5]), int(collation_id[5:8]), int(collation_id[8:])
-#         if book_number != last_book_number:  # we've started a new book
-#             if book_number != 99:
-#                 assert book_number == last_book_number + 1
-#             if usfm_text:  # write out the book (including the last one if final collation row 99999 exists)
-#                 if write_usfm_book( last_book_number, usfm_text ):
-#                     num_books_written += 1
-#                 usfm_text = None
-#             if book_number == 99:
-#                 break  # all done!
-#             USFM_book_code = USFM_BOOK_ID_MAP[book_number]
-#             usfm_text = f"""\\id {USFM_book_code}
-# \\usfm 3.0
-# \\ide UTF-8
-# \\rem USFM file created {datetime.now().strftime('%Y-%m-%d %H:%M')} by {PROGRAM_NAME_VERSION}
-# \\rem The source table used to create this file is Copyright © 2022 by https://GreekCNTR.org
-# \\h {BOOK_NAME_MAP[book_number]}
-# \\toc1 {BOOK_NAME_MAP[book_number]}
-# \\toc2 {BOOK_NAME_MAP[book_number]}
-# \\toc3 {book_csv_rows[book_number-1]['eAbbreviation']}
-# \\mt1 {BOOK_NAME_MAP[book_number]}"""
-#             last_book_number = book_number
-#             last_chapter_number = last_verse_number = last_word_number = 0
-#         if chapter_number != last_chapter_number:  # we've started a new chapter
-#             assert chapter_number == last_chapter_number + 1
-#             usfm_text = f"{usfm_text}\n\\c {chapter_number}"
-#             last_chapter_number = chapter_number
-#             last_verse_number = last_word_number = 0
-#         if verse_number != last_verse_number:  # we've started a new verse
-#             # assert verse_number == last_verse_number + 1 # Not always true (some verses are empty)
-#             # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{chapter_number}:{last_verse_number} {verse_word_dict}")
-#             # Create the USFM verse text
-#             usfm_text = f"{usfm_text}\n\\v {verse_number}"
-#             for index_set in get_gloss_word_index_list(this_verse_row_list):
-#                 if len(index_set) == 1: # the normal and easiest case
-#                     # this_verse_row = this_verse_row_list[index_set[0]]
-#                     # greekWord = this_verse_row['Medieval']
-#                     usfm_text += f" {preform_gloss(this_verse_row_list, index_set[0])}"
-#                     assert '  ' not in usfm_text, f"ERROR: Have double spaces in usfm text: '{usfm_text[:200]} … {usfm_text[-200:]}'"
-#                 else: # we have multiple overlapping glosses
-#                     sorted_index_set = sorted(index_set) # Some things we display by Greek word order
-#                     # greekWord = ' '.join(this_verse_row_list[ix]['Medieval'] for ix in sorted_index_set)
-#                     # greekWord = f'<b style="color:orange">{greekWord}</b>'
-#                     preformed_word_string_bits = []
-#                     last_verse_row_index = last_glossWord = None
-#                     for this_verse_row_index in index_set:
-#                         # this_verse_row = this_verse_row_list[this_verse_row_index]
-#                         some_result = preform_gloss(this_verse_row_list, this_verse_row_index, last_verse_row_index, last_glossWord)
-#                         if this_verse_row_list[this_verse_row_index]['GlossInsert']:
-#                             last_glossWord = some_result
-#                         else:
-#                             preformed_word_string_bits.append(some_result)
-#                         last_verse_row_index = this_verse_row_index
-#                         # last_glossInsert = last_verse_row['GlossInsert']
-#                     preformed_word_string = ' '.join(preformed_word_string_bits)
-#                     usfm_text += f" {preformed_word_string}"
-#                     assert '  ' not in usfm_text, f"ERROR: Have double spaces in usfm text: '{usfm_text[:200]} … {usfm_text[-200:]}'"
-#             last_verse_number = verse_number
-#     if usfm_text: # write the last book
-#         if write_usfm_book( last_book_number, usfm_text ):
-#             num_books_written += 1
-
-#     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {num_books_written} books to {VLT_USFM_OUTPUT_FOLDERPATH}.")
-#     return True
-# # end of extract_VLT_NT_to_ESFM.export_usfm_literal_English_gloss
-
-
 def export_esfm_literal_English_gloss() -> bool:
     """
     Use the GlossOrder field to export the English gloss.
 
     Also uses the GlossInsert field to adjust word order.
 
-    Simultaneously makes the word data table (TSV).
+    Simultaneously creates the word data table (TSV) from the collation table.
     """
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nExporting ESFM plain text literal English files…" )
     last_book_number = 39 # Start here coz we only do NT
@@ -386,21 +279,23 @@ def export_esfm_literal_English_gloss() -> bool:
     last_verse_id = None
     esfm_text = ''
     num_books_written = 0
-    table_filename = 'OET_NT_word_table.tsv'
-    table_filepath = VLT_ESFM_OUTPUT_FOLDERPATH.joinpath( table_filename )
+    final_table_filename = 'OET_NT_word_table.tsv' # Will be made later by associate_LV_people_places.py
+    table_filepath = VLT_ESFM_OUTPUT_FOLDERPATH.joinpath( OUR_EXPORT_TABLE_FILENAME )
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Exporting ESFM auxilliary word table to {table_filepath}…" )
+    next_word_number = 1 # word count includes variants
     with open(table_filepath, 'wt', encoding='utf-8') as table_output_file:
         table_output_file.write( 'Ref\tGreek\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\n' ) # Write TSV header row
         for collation_row_number, collation_row in enumerate(collation_csv_rows):
             collation_id, verse_id = collation_row['CollationID'], collation_row['VerseID']
             assert len(collation_id) == 11 and collation_id.isdigit()
             assert collation_id.startswith( verse_id )
-            book_number, chapter_number, verse_number, _word_number \
+            book_number, chapter_number, verse_number, word_number \
                 = int(collation_id[:2]), int(collation_id[2:5]), int(collation_id[5:8]), int(collation_id[8:])
 
             # Use the original table row to put the gloss into the literal text
             if collation_id == '99999999999':
                 this_verse_row_list = None
+
             else:
                 assert len(verse_id) == 8 and verse_id.isdigit()
                 if verse_id != last_verse_id:
@@ -421,7 +316,7 @@ def export_esfm_literal_English_gloss() -> bool:
 \\usfm 3.0
 \\ide UTF-8
 \\rem ESFM v0.6 {BOS_BOOK_ID_MAP[book_number]}
-\\rem WORDTABLE {table_filename}
+\\rem WORDTABLE {final_table_filename}
 \\rem ESFM file created {datetime.now().strftime('%Y-%m-%d %H:%M')} by {PROGRAM_NAME_VERSION}
 \\rem The source table used to create this file is Copyright © 2022 by https://GreekCNTR.org
 \\h {BOOK_NAME_MAP[book_number]}
@@ -472,7 +367,7 @@ def export_esfm_literal_English_gloss() -> bool:
             # NOTE: It's very easy to add more columns if necessary
             #           -- just need to remember to update the header (above) as well.
             BBB = BOS_BOOK_ID_MAP[book_number]
-            ref = f'{BBB}_{chapter_number}:{verse_number}'
+            ref = f'{BBB}_{chapter_number}:{verse_number}w{word_number}'
 
             for gloss_part_name in ('GlossPre', 'GlossHelper', 'GlossWord', 'GlossPost'):
                 if collation_row[gloss_part_name]:
@@ -492,9 +387,10 @@ def export_esfm_literal_English_gloss() -> bool:
             num_books_written += 1
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {num_books_written} books to {VLT_ESFM_OUTPUT_FOLDERPATH}.")
 
-    # Also use the same word file for the OET-RV
-    shutil.copy2( table_filepath, RV_ESFM_OUTPUT_FOLDERPATH.joinpath( table_filename ) )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Also copied {table_filename} to {RV_ESFM_OUTPUT_FOLDERPATH}.")
+    # Now done in associate_LV_people_places.py
+    # # Also use the same word file for the OET-RV
+    # shutil.copy2( table_filepath, RV_ESFM_OUTPUT_FOLDERPATH.joinpath( table_filename ) )
+    # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Also copied {table_filename} to {RV_ESFM_OUTPUT_FOLDERPATH}.")
 
     return True
 # end of extract_VLT_NT_to_ESFM.export_esfm_literal_English_gloss

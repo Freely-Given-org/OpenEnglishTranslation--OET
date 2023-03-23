@@ -25,12 +25,13 @@
 """
 """
 from gettext import gettext as _
-from tracemalloc import start
 from typing import List, Tuple, Set, Optional
 from pathlib import Path
 from datetime import datetime
 import logging
 import re
+from collections import defaultdict
+import json
 
 if __name__ == '__main__':
     import sys
@@ -46,10 +47,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2023-03-17' # by RJH
+LAST_MODIFIED_DATE = '2023-03-24' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.52'
+PROGRAM_VERSION = '0.57'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -61,10 +62,12 @@ OET_OT_USFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/au
 OET_NT_ESFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_VLT_ESFM/' )
 # OET_USFM_OutputFolderPath = project_folderpath.joinpath( 'translatedTexts/LiteralVersion/' )
 OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'derivedTexts/simpleHTML/LiteralVersion/' )
+THEOGRAPHIC_INPUT_FOLDER_PATH = FG_folderpath.joinpath( 'Bible_speaker_identification/outsideSources/TheographicBibleData/derivedFiles/' )
 assert OET_OT_USFM_InputFolderPath.is_dir()
 assert OET_NT_ESFM_InputFolderPath.is_dir()
 # assert OET_USFM_OutputFolderPath.is_dir()
 assert OET_HTML_OutputFolderPath.is_dir()
+assert THEOGRAPHIC_INPUT_FOLDER_PATH.is_dir()
 
 NEWLINE = '\n'
 # EN_SPACE = ' '
@@ -733,9 +736,9 @@ def produce_HTML_files() -> None:
                     if word_table is None:
                         word_table_filepath = sourceFolderPath.joinpath( word_table_filename )
                         with open( word_table_filepath, 'rt', encoding='utf-8' ) as word_table_input_file:
-                            word_table = word_table_input_file.read().split( '\n' )
+                            word_table = word_table_input_file.read().rstrip( '\n' ).split( '\n' ) # Remove any blank line at the end then split
                         vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Read {len(word_table):,} lines from word table at {word_table_filepath}." )
-                else: logging.critical( f"Expected word-table '{word_table_filename}' {esfm_text}" ); halt
+                else: logging.critical( f"Expected {BBB} word-table '{word_table_filename}' {esfm_text[:500]}" ); halt
             assert esfm_text.count('‘') == esfm_text.count('’'), f"Why do we have OET-LV_{BBB}.usfm {esfm_text.count('‘')=} and {esfm_text.count('’')=}"
             assert esfm_text.count('“') >= esfm_text.count('”'), f"Why do we have OET-LV_{BBB}.usfm {esfm_text.count('“')=} and {esfm_text.count('”')=}"
             esfm_text = esfm_text.replace( "'", "’" ) # Replace hyphens
@@ -902,7 +905,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                 .replace( '%%SPAN%%', '_</span>' )
 
     if word_table: # sort out word numbers like 'written¦21763'
-        book_html = convert_ESFM_words( BBB, book_html, word_table )
+        book_html = convert_tagged_ESFM_words_to_links( BBB, book_html, word_table )
 
     # Make schwas smaller
     book_html = book_html.replace( 'ə', '<span class="schwa">ə</span>' )
@@ -922,14 +925,14 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
 wordRegex1 = re.compile( '([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
 wordRegex2 = re.compile( '([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]{2,})<span class="ul">_</span>([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
 wordRegex3 = re.compile( '([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]{2,})<span class="ul">_</span>([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)<span class="ul">_</span>([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
-def convert_ESFM_words( BBB:str, book_html:str, word_table:List[str] ) -> str:
+def convert_tagged_ESFM_words_to_links( BBB:str, book_html:str, word_table:List[str] ) -> str:
     """
     Handle ESFM word numbers like 'written¦21763'
         which are handled by RegEx replacements.
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"convert_ESFM_words( {BBB}, ({len(book_html)}), ({len(word_table)}) )" )
+    fnPrint( DEBUGGING_THIS_MODULE, f"convert_tagged_ESFM_words_to_links( {BBB}, ({len(book_html)}), ({len(word_table)}) )" )
 
-    vPrint( 'Info', DEBUGGING_THIS_MODULE, f"convert_ESFM_words( {BBB}, ({len(book_html)}), ({len(word_table)}) )…" )
+    vPrint( 'Info', DEBUGGING_THIS_MODULE, f"convert_tagged_ESFM_words_to_links( {BBB}, ({len(book_html)}), ({len(word_table)}) )…" )
 
     # First find "compound" words like 'stood_up' or 'upper_room' or 'came_in or 'brought_up'
     #   which have a wordlink number at the end,
@@ -971,7 +974,7 @@ def convert_ESFM_words( BBB:str, book_html:str, word_table:List[str] ) -> str:
         row_number = int( match.group(2) )
         try: greek = word_table[row_number].split('\t')[1]
         except IndexError:
-            logging.critical( f"convert_ESFM_words( {BBB} ) index error: word='{match.group(1)}' {row_number=}/{len(word_table)} entries")
+            logging.critical( f"convert_tagged_ESFM_words_to_links( {BBB} ) index error: word='{match.group(1)}' {row_number=}/{len(word_table)} entries")
             halt
         book_html = f'{book_html[:match.start()]}<span title="{greek}"><a href="W_{match.group(2)}.html">{match.group(1)}</a></span>{book_html[match.end():]}'
         searchStartIndex = match.end() + 25 # We've added at least that many characters
@@ -979,14 +982,16 @@ def convert_ESFM_words( BBB:str, book_html:str, word_table:List[str] ) -> str:
     vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Made {count:,} OET-LV {BBB} ESFM words into live links." )
 
     return book_html
-# end of convert_OET-LV_to_simple_HTML.convert_ESFM_words function
+# end of convert_OET-LV_to_simple_HTML.convert_tagged_ESFM_words_to_links function
 
 
 def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_filenames:Set[str] ) -> int:
     """
     Make pages for all the words to link to.
 
-    Sadly, there's almost identical code in createOETGreekWordsPages() in OpenBibleData createWordPages.py
+    Then make person and location pages.
+
+    There's almost identical code in createOETGreekWordsPages() in OpenBibleData createWordPages.py (sadly)
     """
     fnPrint( DEBUGGING_THIS_MODULE, f"make_table_pages( {inputFolderPath}, {outputFolderPath}, {word_table_filenames} )" )
     load_transliteration_table( 'Greek' )
@@ -995,65 +1000,171 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
     for word_table_filename in word_table_filenames:
         word_table_filepath = inputFolderPath.joinpath( word_table_filename )
         with open( word_table_filepath, 'rt', encoding='utf-8' ) as word_table_input_file:
-            word_table = word_table_input_file.read().split( '\n' )
+            word_table = word_table_input_file.read().rstrip( '\n' ).split( '\n' ) # Remove any blank line at the end then split
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Read {len(word_table):,} lines from word table at {word_table_filepath}." )
 
         columnHeaders = word_table[0]
         dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Word table column headers = '{columnHeaders}'" )
-        assert columnHeaders == 'Ref\tGreek\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology' # If not, probably need to fix some stuff
+        assert columnHeaders == 'Ref\tGreek\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\tTags', columnHeaders # If not, probably need to fix some stuff
+
+        # First make a list of each place the same Greek word (and matching morphology) is used
+        # TODO: The word table has Matthew at the beginning (whereas the OET places John at the beginning)
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Finding all uses of {len(word_table)-1:,} words in {word_table_filename}…" )
+        usageDict = defaultdict(list)
+        for n, columns_string in enumerate( word_table[1:], start=1 ):
+            wordRef, greek, glossWords, glossCaps,probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
+            if probability:
+                usageDict[(greek,None if morphology=='None' else morphology)].append( n )
+
+        # Now create the individual word pages
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f" Making pages for {len(word_table)-1:,} words in {word_table_filename}…" )
         for n, columns_string in enumerate( word_table[1:], start=1 ):
             # print( n, columns_string )
             output_filename = f'W_{n}.html'
             # dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Got '{columns_string}' for '{output_filename}'" )
-            if columns_string: # not a blank line (esp. at end)
-                ref, greek, glossWords, glossCaps,probability, extendedStrongs, roleLetter, morphology = columns_string.split( '\t' )
-                if extendedStrongs == 'None': extendedStrongs = None
-                if roleLetter == 'None': roleLetter = None
-                if morphology == 'None': morphology = None
+            wordRef, greek, glossWords, glossCaps,probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
+            if extendedStrongs == 'None': extendedStrongs = None
+            if roleLetter == 'None': roleLetter = None
+            if morphology == 'None': morphology = None
 
-                BBB, CV = ref.split( '_', 1 )
-                C, V = CV.split( ':', 1 )
-                tidyBBB = BibleOrgSysGlobals.loadedBibleBooksCodes.tidyBBB( BBB )
+            BBB, CVW = wordRef.split( '_', 1 )
+            C, VW = CVW.split( ':', 1 )
+            V, W = VW.split( 'w', 1 )
+            tidyBBB = BibleOrgSysGlobals.loadedBibleBooksCodes.tidyBBB( BBB )
 
-                strongs = extendedStrongs[:-1] if extendedStrongs else None # drop the last digit
+            strongs = extendedStrongs[:-1] if extendedStrongs else None # drop the last digit
 
-                roleField = ''
-                if roleLetter:
-                    roleName = CNTR_ROLE_NAME_DICT[roleLetter]
-                    if roleName=='noun' and 'U' in glossCaps:
-                        roleName = 'proper noun'
-                    roleField = f' Word role=<b>{roleName}</b>'
-                    
-                probabilityField = f'<small>(P={probability})</small> ' if probability else ''
+            roleField = ''
+            if roleLetter:
+                roleName = CNTR_ROLE_NAME_DICT[roleLetter]
+                if roleName=='noun' and 'U' in glossCaps: # What about G?
+                    roleName = 'proper noun'
+                roleField = f' Word role=<b>{roleName}</b>'
+                
+            probabilityField = f'<small>(P={probability})</small> ' if probability else ''
 
-                moodField = tenseField = voiceField = personField = caseField = genderField = numberField = ''
-                if morphology:
-                    assert len(morphology) == 7, f"Got {ref} '{greek}' morphology ({len(morphology)}) = '{morphology}'"
-                    mood,tense,voice,person,case,gender,number = morphology
-                    if mood!='.': moodField = f' mood=<b>{CNTR_MOOD_NAME_DICT[mood]}</b>'
-                    if tense!='.': tenseField = f' tense=<b>{CNTR_TENSE_NAME_DICT[tense]}</b>'
-                    if voice!='.': voiceField = f' voice=<b>{CNTR_VOICE_NAME_DICT[voice]}</b>'
-                    if person!='.': personField = f' person=<b>{CNTR_PERSON_NAME_DICT[person]}</b>'
-                    if case!='.': caseField = f' case=<b>{CNTR_CASE_NAME_DICT[case]}</b>'
-                    if gender!='.': genderField = f' gender=<b>{CNTR_GENDER_NAME_DICT[gender]}</b>'
-                    if number!='.': numberField = f' number=<b>{CNTR_NUMBER_NAME_DICT[number]}</b>' # or № ???
-                translation = '<small>(no English gloss)</small>' if glossWords=='-' else f'''English gloss=‘<b>{glossWords.replace('_','<span class="ul">_</span>')}</b>’'''
+            moodField = tenseField = voiceField = personField = caseField = genderField = numberField = ''
+            if morphology:
+                assert len(morphology) == 7, f"Got {wordRef} '{greek}' morphology ({len(morphology)}) = '{morphology}'"
+                mood,tense,voice,person,case,gender,number = morphology
+                if mood!='.': moodField = f' mood=<b>{CNTR_MOOD_NAME_DICT[mood]}</b>'
+                if tense!='.': tenseField = f' tense=<b>{CNTR_TENSE_NAME_DICT[tense]}</b>'
+                if voice!='.': voiceField = f' voice=<b>{CNTR_VOICE_NAME_DICT[voice]}</b>'
+                if person!='.': personField = f' person=<b>{CNTR_PERSON_NAME_DICT[person]}</b>'
+                if case!='.': caseField = f' case=<b>{CNTR_CASE_NAME_DICT[case]}</b>'
+                if gender!='.': genderField = f' gender=<b>{CNTR_GENDER_NAME_DICT[gender]}</b>'
+                if number!='.': numberField = f' number=<b>{CNTR_NUMBER_NAME_DICT[number]}</b>' # or № ???
+            translation = '<small>(no English gloss)</small>' if glossWords=='-' else f'''Typical English gloss=‘<b>{glossWords.replace('_','<span class="ul">_</span>')}</b>’'''
 
-                prevLink = f'<b><a href="W_{n-1}.html">←</a></b> ' if n>1 else ''
-                nextLink = f' <b><a href="W_{n+1}.html">→</a></b>' if n<len(word_table) else ''
-                oetLink = f'<b><a href="{BBB}.html#C{C}V{V}">Back to OET</a></b>'
-                html = f'''{'' if probability else '<div class="unusedWord">'}<h1>OET-LV Wordlink #{n}{'' if probability else ' <small>(Unused variant)</small>'}</h1>
+            # Add pointers to people, locations, etc.
+            semanticExtras = ''
+            if tagsStr:
+                for semanticTag in tagsStr.split( ';' ):
+                    prefix, tag = semanticTag[0], semanticTag[1:]
+                    # print( f"{BBB} {C}:{V} '{semanticTag}' from {tagsStr=}" )
+                    if prefix == 'P':
+                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Person=<a href="P_{tag}.html">{tag}</a>'''
+                    elif prefix == 'L':
+                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Location=<a href="L_{tag}.html">{tag}</a>'''
+                    elif prefix == 'Y':
+                        year = tag
+                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Year={year}{' AD' if int(year)>0 else ''}'''
+                    elif prefix == 'T':
+                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}TimeSeries={tag}'''
+                    elif prefix == 'E':
+                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Event={tag}'''
+                    elif prefix == 'G':
+                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Group={tag}'''
+                    elif prefix == 'F':
+                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Referred to from <a href="W_{tag}.html">Word #{tag}</a>'''
+                    elif prefix == 'R':
+                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Refers to <a href="W_{tag}.html">Word #{tag}</a>'''
+                    else:
+                        logging.critical( f"Unknown '{prefix}' word tag in {n}: {columns_string}")
+                        unknownTag
+
+            prevLink = f'<b><a href="W_{n-1}.html">←</a></b> ' if n>1 else ''
+            nextLink = f' <b><a href="W_{n+1}.html">→</a></b>' if n<len(word_table) else ''
+            oetLink = f'<b><a href="{BBB}.html#C{C}V{V}">Back to OET</a></b>'
+            html = f'''{'' if probability else '<div class="unusedWord">'}<h1>OET Wordlink #{n}{'' if probability else ' <small>(Unused Greek word variant)</small>'}</h1>
 <p>{prevLink}{oetLink}{nextLink}</p>
 <p><span title="Goes to Statistical Restoration Greek page"><a href="https://GreekCNTR.org/collation/?{CNTR_BOOK_ID_MAP[BBB]}{C.zfill(3)}{V.zfill(3)}">SR GNT {tidyBBB} {C}:{V}</a></span>
  {probabilityField}<b>{greek}</b> ({transliterate_Greek(greek)}) {translation}
- <b>{greek}</b> <small>originally translated to</small> ‘<b>{glossWords.replace('_','<span class="ul">_</span>')}</b>’
  Strongs=<span title="Goes to Strongs dictionary"><a href="https://BibleHub.com/greek/{strongs}.htm">{extendedStrongs}</a></span><br>
-  {roleField} Morphology=<b>{morphology}</b>:{moodField}{tenseField}{voiceField}{personField}{caseField}{genderField}{numberField}</p>{'' if probability else f'{NEWLINE}</div><!--unusedWord-->'}'''
-                html = f"{START_HTML.replace('__TITLE__',greek)}\n{html}\n{END_HTML}"
-                with open( outputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
-                    html_output_file.write( html )
-                vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Wrote {len(html):,} characters to {output_filename}" )
+ {roleField} Morphology=<b>{morphology}</b>:{moodField}{tenseField}{voiceField}{personField}{caseField}{genderField}{numberField}{f'<br>  {semanticExtras}' if semanticExtras else ''}</p>{'' if probability else f'{NEWLINE}</div><!--unusedWord-->'}'''
 
+            if probability: # Now list all the other places where this same Greek word is used
+                other_count = 0
+                thisWordNumberList = usageDict[(greek,morphology)]
+                for oN in thisWordNumberList:
+                    if oN==n: continue # don't duplicate the word we're making the page for
+                    oWordRef, oGreek, oGlossWords, oGlossCaps,oProbability, oExtendedStrongs, oRoleLetter, oMorphology, oTagsStr = word_table[oN].split( '\t' )
+                    oBBB, oCVW = oWordRef.split( '_', 1 )
+                    oC, oVW = oCVW.split( ':', 1 )
+                    oV, oW = oVW.split( 'w', 1 )
+                    oTidyBBB = BibleOrgSysGlobals.loadedBibleBooksCodes.tidyBBB( oBBB )
+                    if other_count == 0:
+                        html = f'{html}\n<h2>Other uses ({len(thisWordNumberList)-1:,}) of {greek} {morphology} in the NT</h2>'
+                    translation = '<small>(no English gloss)</small>' if oGlossWords=='-' else f'''English gloss=‘<b>{oGlossWords.replace('_','<span class="ul">_</span>')}</b>’'''
+                    html = f'{html}\n<p><a href="{oBBB}.html#C{oC}V{oV}">OET {oTidyBBB} {oC}:{oV}</a> {translation} <a href="https://GreekCNTR.org/collation/?{CNTR_BOOK_ID_MAP[oBBB]}{oC.zfill(3)}{oV.zfill(3)}">SR GNT {oTidyBBB} {oC}:{oV} word {oW}</a>'
+                    other_count += 1
+                    if other_count >= 120:
+                        html = f'{html}\n<p>({len(thisWordNumberList)-other_count-1:,} more examples not listed)</p>'
+                        break
+
+            # Now put it all together       
+            html = f"{START_HTML.replace('__TITLE__',greek)}\n{html}\n{END_HTML}"
+            with open( outputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
+                html_output_file.write( html )
+            vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Wrote {len(html):,} characters to {output_filename}" )
+
+
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Making person pages for {word_table_filenames}…" )
+    with open( THEOGRAPHIC_INPUT_FOLDER_PATH.joinpath( 'normalised_People.json' ), 'rb' ) as people_file:
+        peopleDict = json.load( people_file )
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(peopleDict):,} person entries." )
+    for personKey,entry in peopleDict.items():
+        if personKey == '__HEADERS__': continue
+        if personKey == '__COLUMN_HEADERS__': continue
+
+        personName = entry['displayTitle']
+        bornStr = f"Born: {entry['birthYear']}" if entry['birthYear'] else ''
+        diedStr = f"Died: {entry['deathYear']}" if entry['deathYear'] else ''
+
+        html = f'''<h1>{personName}</h1>
+<p>{entry['dictText']}</p>
+<p>{entry['gender']}{f' {bornStr}' if bornStr else ''}{f' {diedStr}' if diedStr else ''}</p>'''
+
+        # Now put it all together       
+        output_filename = f"{personKey[0]}_{personKey[1:]}.html"
+        html = f"{START_HTML.replace('__TITLE__',personName)}\n{html}\n{END_HTML}"
+        with open( outputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
+            html_output_file.write( html )
+        vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Wrote {len(html):,} characters to {output_filename}" )
+
+
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Making location pages for {word_table_filenames}…" )
+    with open( THEOGRAPHIC_INPUT_FOLDER_PATH.joinpath( 'normalised_Places.json' ), 'rb' ) as locations_file:
+        locationsDict = json.load( locations_file )
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(locationsDict):,} location entries." )
+    for placeKey,entry in locationsDict.items():
+        if placeKey == '__HEADERS__': continue
+        if placeKey == '__COLUMN_HEADERS__': continue
+
+        placeName = entry['displayTitle']
+        commentStr = f" {entry['comment']}" if entry['comment'] else ''
+
+        html = f'''<h1>{placeName}</h1>
+<p>{entry['dictText']}</p>
+<p>{entry['featureType']}/{entry['featureSubType']}{f' {commentStr}' if commentStr else ''}</p>
+<p>KJB=‘{entry['kjvName']}’ ESV=‘{entry['esvName']}’</p>'''
+
+        # Now put it all together       
+        output_filename = f"{placeKey[0]}_{placeKey[1:]}.html"
+        html = f"{START_HTML.replace('__TITLE__',placeName)}\n{html}\n{END_HTML}"
+        with open( outputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
+            html_output_file.write( html )
+        vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Wrote {len(html):,} characters to {output_filename}" )
 
     return len(word_table) - 1
 # end of convert_OET-LV_to_simple_HTML.make_table_pages function

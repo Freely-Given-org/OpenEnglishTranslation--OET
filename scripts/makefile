@@ -12,6 +12,8 @@ final_LV_OT_USFM := $(wildcard ../intermediateTexts/auto_edited_OT_USFM/*.usfm)
 final_LV_NT_ESFM := $(wildcard ../intermediateTexts/auto_edited_VLT_ESFM/*.ESFM)
 intermediate_LV_OT_USFM := $(wildcard ../intermediateTexts/modified_source_glossed_OSHB_USFM/*.usfm)
 intermediate_LV_NT_ESFM := $(wildcard ../intermediateTexts/modified_source_VLT_ESFM/*.ESFM)
+original_wordtable = ../intermediateTexts/modified_source_VLT_ESFM/OET_NT_word_table.8columns.tsv
+expanded_wordtable = ../intermediateTexts/modified_source_VLT_ESFM/OET_NT_word_table.tsv
 all_OT_TSV_table := ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv
 WLC_OT_TSV_table := ../intermediateTexts/glossed_OSHB/WLC_glosses.morphemes.tsv
 Clear_Bible_OT_lowfat_TSV := ../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTreesAbbrev.OT.morphemes.tsv
@@ -49,7 +51,7 @@ $(final_LV_OT_USFM): $(intermediate_LV_OT_USFM) $(SBE) $(wildcard ScriptedOTUpda
 	@echo "\n\nRun ScriptedBibleEditor on OT USFM files…\n"
 	@$(Python) $(SBE) ScriptedOTUpdates -qe
 
-$(final_LV_NT_ESFM): $(intermediate_LV_NT_ESFM) $(SBE) $(wildcard ScriptedVLTUpdates/*) $(BTranslit) $(Greek) $(Hebrew)
+$(final_LV_NT_ESFM): $(intermediate_LV_NT_ESFM) $(SBE) $(wildcard ScriptedVLTUpdates/*) $(BTranslit) $(Greek) $(Hebrew) $(expanded_wordtable)
 	@echo "\n\nRun ScriptedBibleEditor on NT ESFM files…\n"
 	@$(Python) $(SBE) ScriptedVLTUpdates -qe
 
@@ -81,9 +83,13 @@ $(BibleTags_TSV): $(wildcard ../../Forked/bibletags-usfm/usfm/uhb/*.usfm) $(wild
 	@echo "\n\nConvert BibleTags USFM files to TSV…\n"
 	@$(Python) convert_BibTags_USFM_to_TSV.py
 
-$(intermediate_LV_NT_ESFM): ../../CNTR-GNT/sourceExports/book.csv ../../CNTR-GNT/sourceExports/collation.updated.csv extract_VLT_NT_to_ESFM.py
+$(intermediate_LV_NT_ESFM) $(original_wordtable): ../../CNTR-GNT/sourceExports/book.csv ../../CNTR-GNT/sourceExports/collation.updated.csv extract_VLT_NT_to_ESFM.py
 	@echo "\n\nExtract NT from TSV table to ESFM files…\n"
 	@$(Python) extract_VLT_NT_to_ESFM.py -e
+
+$(expanded_wordtable): $(original_wordtable) add_tags_to_word_table.py
+	@echo "\n\nAdd people/places/referent tags to Word Table…\n"
+	@$(Python) add_tags_to_word_table.py -e
 
 #=== RV stuff =======================
 

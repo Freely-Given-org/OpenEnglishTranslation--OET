@@ -23,6 +23,8 @@
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 """
+CHANGELOG:
+    2023-03-21 Added handling for three verses at once (when verse content is reordered)
 """
 from gettext import gettext as _
 from tracemalloc import start
@@ -31,6 +33,9 @@ from pathlib import Path
 from datetime import datetime
 import logging
 import re
+import glob
+import shutil
+import os.path
 
 if __name__ == '__main__':
     import sys
@@ -43,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-03-17' # by RJH
+LAST_MODIFIED_DATE = '2023-03-23' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.53'
+PROGRAM_VERSION = '0.56'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -54,10 +59,12 @@ DEBUGGING_THIS_MODULE = False
 
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module
 FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos
-OET_ESFM_InputFolderPath = project_folderpath.joinpath( 'translatedTexts/ReadersVersion/' )
+OET_RV_ESFM_InputFolderPath = project_folderpath.joinpath( 'translatedTexts/ReadersVersion/' )
 OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'derivedTexts/simpleHTML/ReadersVersion/' )
-assert OET_ESFM_InputFolderPath.is_dir()
+OET_LV_HTML_InputFolderPath = project_folderpath.joinpath( 'derivedTexts/simpleHTML/LiteralVersion/' )
+assert OET_RV_ESFM_InputFolderPath.is_dir()
 assert OET_HTML_OutputFolderPath.is_dir()
+assert OET_LV_HTML_InputFolderPath.is_dir()
 
 # EN_SPACE = ' '
 EM_SPACE = ' '
@@ -88,6 +95,7 @@ def main():
 
     # Convert files to simple HTML
     produce_HTML_files()
+    copy_wordlink_files( OET_LV_HTML_InputFolderPath, OET_HTML_OutputFolderPath ) # The OET-LV has its words linked to the SR GNT
 # end of convert_OET-RV_to_simple_HTML.main
 
 
@@ -756,7 +764,7 @@ def produce_HTML_files() -> None:
         word_table = None
         if bookType:
             source_filename = f'OET-RV_{BBB}.ESFM'
-            with open( OET_ESFM_InputFolderPath.joinpath(source_filename), 'rt', encoding='utf-8' ) as esfm_input_file:
+            with open( OET_RV_ESFM_InputFolderPath.joinpath(source_filename), 'rt', encoding='utf-8' ) as esfm_input_file:
                 esfm_text = esfm_input_file.read()
             illegalWordLinkRegex1 = re.compile( '[0-9]¦' ) # Has digits BEFORE the broken pipe
             assert not illegalWordLinkRegex1.search( esfm_text), f"illegalWordLinkRegex1 failed when loading {BBB}" # Don't want double-ups of wordlink numbers
@@ -767,7 +775,7 @@ def produce_HTML_files() -> None:
                 word_table_filenames.add( word_table_filename )
                 if f'\\rem WORDTABLE {word_table_filename}\n' in esfm_text:
                     if word_table is None:
-                        word_table_filepath = OET_ESFM_InputFolderPath.joinpath( word_table_filename )
+                        word_table_filepath = OET_RV_ESFM_InputFolderPath.joinpath( word_table_filename )
                         with open( word_table_filepath, 'rt', encoding='utf-8' ) as word_table_input_file:
                             word_table = word_table_input_file.read().split( '\n' )
                         vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Read {len(word_table):,} lines from word table at {word_table_filepath}." )
@@ -921,11 +929,17 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                 assert V[0].isdigit() and V[-1].isdigit(), f"Expected a verse number digit with {V=} {rest=}"
                 assert ':' not in V # We don't handle chapter ranges here yet (and probably don't need to)
                 V1, V2 = V.split( '-' )
-                # We want both verse numbers to be searchable
-                assert int(V2)==int(V1)+1 # We don't handle three verse reordering yet
-                book_html = f'{book_html}{"" if book_html.endswith(">") else " "}' \
+                
+                if int(V2) == int(V1)+1: # we want both verse numbers to be searchable
+                    book_html = f'{book_html}{"" if book_html.endswith(">") else " "}' \
                         + f'''{f"""<span id="C{C}"></span><span class="{'cPsa' if BBB=='PSA' else 'c'}" id="C{C}V1">{C}</span>""" if V1=="1" else f"""<span class="v" id="C{C}V{V1}">{V1}-</span>"""}''' \
                         + f'<span class="v" id="C{C}V{V2}">{V2}{NARROW_NON_BREAK_SPACE}</span>' \
+                        + (rest if rest else '≈')
+                else:
+                    assert int(V2)==int(V1)+2 # We don't handle four verse reordering yet
+                    book_html = f'{book_html}{"" if book_html.endswith(">") else " "}' \
+                        + f'''{f"""<span id="C{C}"></span><span class="{'cPsa' if BBB=='PSA' else 'c'}" id="C{C}V1">{C}</span>""" if V1=="1" else f"""<span class="v" id="C{C}V{V1}">{V1}-</span>"""}''' \
+                        + f'<span class="v" id="C{C}V{int(V1)+1}"><span class="v" id="C{C}V{V2}">{V2}{NARROW_NON_BREAK_SPACE}</span></span>' \
                         + (rest if rest else '≈')
             else: # it's a simple verse number
                 assert V.isdigit(), f"Expected a verse number digit with {V=} {rest=}"
@@ -1047,8 +1061,9 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
     while True:
         fIx = book_html.find( '\\f ', searchStartIx )
         if fIx == -1: break # all done
+        assert book_html[fIx:].startswith( '\\f + \\fr ' )
         ftIx = book_html.find( '\\ft ', searchStartIx+3 )
-        assert ftIx != -1
+        assert ftIx != -1, f"Footnote without ft at {book_html[fIx:fIx+30]}…"
         fEndIx = book_html.find( '\\f*', ftIx+3 )
         assert fEndIx != -1, f"Bad RV footnote in {BBB} around '{book_html[fIx:fIx+30]}'"
         fnoteMiddle = book_html[ftIx+4:fEndIx]
@@ -1093,6 +1108,8 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                          .replace( '\\it*', '</i>' ) \
                          .replace( '\\bd ', '<b>' ) \
                          .replace( '\\bd*', '</b>' ) \
+                         .replace( '\\bdit ', '<b><i>' ) \
+                         .replace( '\\bdit*', '</i></b>' ) \
                          .replace( '\\add ', '<span class="RVadded">' ) \
                          .replace( '\\add*', '</span>' )
     book_html = livenIORs( BBB, book_html )
@@ -1191,6 +1208,39 @@ def livenIORs( BBB:str, bookHTML:str ) -> str:
 
     return bookHTML.replace( '\\ior ', '<span class="ior">' ).replace( '\\ior*', '</span>' )
 # end of convert_OET-RV_to_simple_HTML.livenIORs function
+
+
+def copy_wordlink_files( sourceFolder:Path, destinationFolder:Path ) -> bool:
+    """
+    Copy the W_nnnnn.html wordlink HMTL files across.
+        (There's around 168,262 of these.)
+
+    Also P_ and L_ person and location files.
+    """
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET-LV word-link HTML files from {sourceFolder}…")
+    copyCount = 0
+    for filename in glob.glob( os.path.join( sourceFolder, 'W_*.html' ) ):
+        shutil.copy( filename, destinationFolder ) # Want the time to be updated or else "make" doesn't function correctly
+        # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
+        copyCount += 1
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET-LV word-link HTML files to {destinationFolder}.")
+
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET-LV person HTML files from {sourceFolder}…")
+    copyCount = 0
+    for filename in glob.glob( os.path.join( sourceFolder, 'P_*.html' ) ):
+        shutil.copy( filename, destinationFolder ) # Want the time to be updated or else "make" doesn't function correctly
+        # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
+        copyCount += 1
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET-LV person HTML files to {destinationFolder}.")
+
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET-LV location HTML files from {sourceFolder}…")
+    copyCount = 0
+    for filename in glob.glob( os.path.join( sourceFolder, 'L_*.html' ) ):
+        shutil.copy( filename, destinationFolder ) # Want the time to be updated or else "make" doesn't function correctly
+        # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
+        copyCount += 1
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET-LV location HTML files to {destinationFolder}.")
+# end of convert_OET-RV_to_simple_HTML.copy_wordlink_files()
 
 
 if __name__ == '__main__':

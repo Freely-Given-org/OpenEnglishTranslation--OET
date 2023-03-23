@@ -52,10 +52,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-03-17' # by RJH
+LAST_MODIFIED_DATE = '2023-03-23' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.43'
+PROGRAM_VERSION = '0.44'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -1941,6 +1941,8 @@ def copy_wordlink_files( sourceFolder:Path, destinationFolder:Path ) -> bool:
     """
     Copy the W_nnnnn.html wordlink HMTL files across.
         (There's around 168,262 of these.)
+
+    Also P_ and L_ person and location files.
     """
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET-LV word-link HTML files from {sourceFolder}…")
     copyCount = 0
@@ -1949,7 +1951,23 @@ def copy_wordlink_files( sourceFolder:Path, destinationFolder:Path ) -> bool:
         # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
         copyCount += 1
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET-LV word-link HTML files to {destinationFolder}.")
-# end of pack_HTML_side-by-side.handle_Psalms()
+
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET-LV person HTML files from {sourceFolder}…")
+    copyCount = 0
+    for filename in glob.glob( os.path.join( sourceFolder, 'P_*.html' ) ):
+        shutil.copy( filename, destinationFolder ) # Want the time to be updated or else "make" doesn't function correctly
+        # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
+        copyCount += 1
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET-LV person HTML files to {destinationFolder}.")
+
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET-LV location HTML files from {sourceFolder}…")
+    copyCount = 0
+    for filename in glob.glob( os.path.join( sourceFolder, 'L_*.html' ) ):
+        shutil.copy( filename, destinationFolder ) # Want the time to be updated or else "make" doesn't function correctly
+        # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
+        copyCount += 1
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET-LV location HTML files to {destinationFolder}.")
+# end of pack_HTML_side-by-side.copy_wordlink_files()
 
 
 if __name__ == '__main__':
