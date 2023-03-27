@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# connect_OET-RV_words.py
+# connect_OET-RV_words_via_OET-LV.py
 #
-# Script to take the OET-RV NT USFM files and convert to HTML
+# Script to connect OET-RV words with OET-LV words that have word numbers.
 #
 # Copyright (C) 2023 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org@gmail.com>
@@ -23,6 +23,16 @@
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 """
+Every word in the OET-LV has a word number tag suffixed to it,
+    which connects it back to / aligns it with the Greek word it is translated from.
+
+This script attempts to deduce how some of those same word are translated in the OET-RV
+    and automatically connect them with the same word number tag.
+
+It does have the potential to make wrong connections that will need to be manually fixed
+        when the rest of the OET-RV words are aligned,
+    but hopefully this script is relatively conservative
+        so that the number of wrong alignments is not huge.
 """
 from gettext import gettext as _
 from tracemalloc import start
@@ -44,10 +54,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-03-23' # by RJH
-SHORT_PROGRAM_NAME = "connect_OET-RV_words"
+LAST_MODIFIED_DATE = '2023-03-27' # by RJH
+SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.11'
+PROGRAM_VERSION = '0.14'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -76,13 +86,18 @@ class State:
                     #   i.e., there's really no other word for them.
         # NOTE: Some of these nouns can also be verbs -- we may need to remove those???
         # 'sons' causes problems
-        'ambassadors','ambassador', 'ancestors','ancestor', 'angels','angel', 'anger', 'ankles','ankle', 'authority', 'axes','axe',
-        'belts','belt', 'birth', 'blood', 'boats','boat', 'bodies','body', 'boys','boy', 'bread', 'branches','branch', 'brothers','brother', 'bulls','bull',
+        'ambassadors','ambassador', 'ancestors','ancestor', 'angels','angel', 'anger', 'ankles','ankle',
+            'assemblies','assembly',
+            'authorities','authority', 'axes','axe',
+        'beginnings','beginning', 'belts','belt',
+            'birth', 'blood', 'boats','boat', 'bodies','body', 'boys','boy', 'bread', 'branches','branch', 'brothers','brother',
+            'bulls','bull', 'burials','burial',
         'camels','camel', 'chairs','chair', 'chariots','chariot', 'chests','chest', 'children','child',
             'cities','city', 'coats','coat', 'commands','command', 'compassion', 'councils','council', 'countries','country',
             'craftsmen','craftsman', 'crowds','crowd',
-        'danger', 'darkness', 'daughters','daughter', 'days','day', 'donkeys','donkey', 'doors','door', 'doves','dove', 'dreams','dream', 'dyes','dye',
-        'eyes','eye', 'exorcists','exorcist',
+        'danger', 'darkness', 'daughters','daughter', 'days','day', 'death',
+            'donkeys','donkey', 'doors','door', 'doves','dove', 'dreams','dream', 'dyes','dye',
+        'ears','ear', 'eyes','eye', 'exorcists','exorcist',
         'faces','face', 'faith', 'farmers','farmer', 'fathers','father',
             'fevers','fever',
             'fields','field', 'figs','fig', 'fingers','finger', 'fires','fire', 'fish', 'foot','feet',
@@ -92,10 +107,11 @@ class State:
             'grace', 'grains','grain', 'grapes','grape', 'greed',
         'handkerchiefs','handkerchief', 'hands','hand', 'happiness', 'hearts','heart', 'heavens','heaven', 'homes','home', 'honey', 'horses','horse', 'hours','hour', 'houses','house', 'husbands','husband',
         'idols','idol', 'ink',
-        'joy',
+        'joy', 'judgements','judgement',
         'kings','king', 'kingdoms','kingdom', 'kisses','kiss',
         'languages','language', 'leaders','leader', 'leather', 'letters','letter', 'life', 'lights','light', 'lions','lion', 'lips','lip', 'loaf','loaves', 'locusts','locust',
-        'man','men', 'markets','market', 'mercy', 'messages','message', 'meetings','meeting', 'moon', 'mothers','mother', 'mouths','mouth',
+        'man','men', 'markets','market', 'masters','master',
+            'mercy', 'messages','message', 'meetings','meeting', 'moon', 'mothers','mother', 'mouths','mouth',
         'names','name', 'nations','nation', 'nets','net', 'news', 'noises','noise',
         'officers','officer', 'officials','official',
         'peace', 'pens','pen', 'people','person', 'places','place', 'powers','power', 'prayers','prayer', 'priests','priest', 'prisons','prison', 'promises','promise'
@@ -106,20 +122,26 @@ class State:
             'signs','sign', 'silver', 'silversmiths','silversmith', 'sinners','sinner', 'sins','sin', 'sisters','sister', 'sky', 'slaves','slave',
             'soldiers','soldier', 'sons', 'souls','soul', 'spirits','spirit',
             'stars','star', 'stones','stone', 'streets','street', 'sun', 'swords','sword',
-        'tables','table', 'teachers','teacher',
-            'theatres','theatre', 'things','thing', 'thrones','throne', 'times','time', 'tombs','tomb', 'tongues','tongue', 'towns','town', 'trees','tree', 'truth',
+        'tables','table', 'teachers','teacher', 'testimonies','testimony',
+            'theatres','theatre', 'things','thing', 'thrones','throne',
+            'times','time', 'tombs','tomb', 'tongues','tongue', 'towns','town', 'trees','tree', 'truth',
         'vines','vine', 'visions','vision',
-        'waists','waist', 'water', 'weeks','week', 'wilderness', 'widows','widow', 'wife','wives', 'woman','women', 'words','word', 'workers','worker',
+        'waists','waist', 'waters','water', 'ways','way',
+            'weeks','week', 'wilderness', 'widows','widow', 'wife','wives', 'woman','women', 'words','word', 'workers','worker',
         'years','year',
         )
     assert len(set(simpleNouns)) == len(simpleNouns) # Check for accidental duplicates
-    verbalNouns = ('confession',
-                   'deception', 'discussion', 'distribution',
-                   'fellowship', 'fulfilment',
+    verbalNouns = ('confession', 'confidence',
+                   'deception', 'dedication', 'discussion', 'distribution',
+                   'fellowship', 'forgiveness', 'fulfilment',
                    'immersion', 'repentance')
     assert len(set(verbalNouns)) == len(verbalNouns) # Check for accidental duplicates
     # Verbs often don't work because we use the tenses differently between OET-RV and OET-LV/Greek
-    simpleVerbs = ('accepted','accepting','accepts','accept', 'arrested','arresting','arrests','arrest', 'asked','asking','asks','ask', 'answered','answering','answers','answer',
+    simpleVerbs = ('accepted','accepting','accepts','accept',
+                        'answered','answering','answers','answer',
+                        'arrested','arresting','arrests','arrest',
+                        'asked','asking','asks','ask', 'assembled','assembling','assembles','assemble',
+                        'attracted','attracting','attracts','attract', 'attacked','attacking','attacks','attack',
                    'become','became','becomes','becoming', 'believed','believing','believes','believe',
                         'brought','bringing','brings','bring',
                         'burnt','burning','burns','burn', 'buried','burying','buries','bury',
@@ -127,40 +149,66 @@ class State:
                         'chose','choosing','chooses','choose',
                         'confessed','confessing','confesses','confess',
                         'cried','crying','cries','cry',
-                   'deceived','deceiving','deceives','deceive', 'defended','defending','defends','defend',
-                        'died','dying','dies','die', 'discussed','discussing','discusses','discuss', 'distributed','distributing','distributes','distribute',
-                    'embraced','embracing','embraces','embrace',
-                        'encouraged','encouraging','encourages','encourage',
-                   'followed','following','follows','follow', 'forbidding','forbids','forbid',
+                   'deceived','deceiving','deceives','deceive', 'defended','defending','defends','defend', 'departed','departing','departs','depart',
+                        'died','dying','dies','die', 'discussed','discussing','discusses','discuss', 'disowned','disowning','disowns','disown', 'distributed','distributing','distributes','distribute',
+                        'drunk','drinking','drinks','drink',
+                    'ate','eating','eats','eat', 'embraced','embracing','embraces','embrace',
+                        'encouraged','encouraging','encourages','encourage', 'ended','ending','ends','end',
+                        'existed','existing','exists','exist', 'extended','extending','extends','extend',
+                    'feared','fearing','fears','fear',
+                        'filled','filling','fills','fill',
+                        'followed','following','follows','follow', 'forbidding','forbids','forbid', 'forgave','forgiven','forgiving','forgives','forgive',
                    'gathered','gathering','gathers','gather', 'gave','giving','gives','give', 'went','going','goes','go', 'greeted','greeting','greets','greet',
-                   'harvested','harvesting','harvests','harvest', 'hated','hating','hates','hate', 'healed','healing','heals','heal', 'helped','helping','helps','help',
+                   'harvested','harvesting','harvests','harvest', 'hated','hating','hates','hate',
+                        'healed','healing','heals','heal', 'helped','helping','helps','help', 'heard','hearing','hears','hear',
+                        'honoured','honouring','honours','honour',
                    'imitated','imitating','imitates','imitate', 'immersed','immersing','immerses','immerse',
                    'judged','judging','judges','judge',
-                   'knew','knowing','knows','know',
-                   'learnt','learning','learns','learn', 'lived','living','lives','live', 'looked','looking','looks','look', 'loved','loving','loves','love',
+                   'kept','keeping','keeps','keep', 'killed','killing','kills','kill', 'knew','known','knowing','knows','know',
+                   'learnt','learning','learns','learn',
+                        'listened','listening','listens','listen', 'lived','living','lives','live', 'looked','looking','looks','look', 'loved','loving','loves','love',
                    'magnified','magnifying','magnifies','magnify',
                    'obeyed','obeying','obeys','obey',
-                   'praised','praising','praises','praise',
+                   'passed','passing','passes','pass', 'persuaded','persuading','persuades','persuade',
+                        'practiced','practicing','practices','practice', 'praised','praising','praises','praise', 'promised','promising','promises','promise',
+                        'purified','purifying','purifies','purify',
                    'raged','raging','rages','rage', 'raised','raising','raises','raise',
-                        'received','receiving','receives','receive', 'recognised','recognising','recognises','recognise', 'recovered','recovering','recovers','recover', 'released','releasing','releases','release', 'remained','remaining','remains','remain', 'reminded','reminding','reminds','remind', 'requested','requesting','requests','request', 'respected','respecting','respects','respect',
+                        'received','receiving','receives','receive', 'recognised','recognising','recognises','recognise', 'recovered','recovering','recovers','recover',
+                            'released','releasing','releases','release',
+                            'remained','remaining','remains','remain', 'reminded','reminding','reminds','remind', 'removed','removing','removes','remove',
+                            'reported','reporting','reports','report',
+                            'requested','requesting','requests','request',
+                            'respected','respecting','respects','respect', 'restrained','restraining','restrains','restrain',
                         'ran','running','runs','run',
                    'sailed','sailing','sails','sail', 'said','saying','says','say', 'saved','saving','saves','save',
                         'seated','seating','seats','seat', 'seduced','seducing','seduces','seduce', 'saw','seeing','seen','sees','see', 'sent','sending','sends','send', 'served','serving','serves','serve',
-                        'shared','sharing','shares','share', 'shone','shining','shines','shine', 'spoke','speaking','speaks','speak',
+                        'shook','shaken','shaking','shakes','shake', 'shared','sharing','shares','share', 'shone','shining','shines','shine',
+                        'sat','sitting','sits','sit',
+                        'spoke','spoken','speaking','speaks','speak',
                         'stayed','staying','stays','stay',
                         'summoned','summoning','summons','summon', 'supported','supporting','supports','support',
                    'took','taking','takes','take', 'talked','talking','talks','talk',
-                        'threw','throwing','throws','throw', 'travelled','travelling','travels','travel', 'turned','turning','turns','turn',
+                        'testified','testifying','testifies','testify',
+                        'thought','thinking','thinks','think', 'threw','throwing','throws','throw',
+                        'touched','touching','touches','touch',
+                        'travelled','travelling','travels','travel', 'turned','turning','turns','turn',
+                   'united','uniting','unites','unite', 'untied','untying','unties','untie'
                    'walked','walking','walks','walk', 'wanted','wanting','wants','want', 'warned','warning','warns','warn', 'watched','watching','watches','watch',
                         'withdrew','withdrawing','withdraws','withdraw', 'withered','withering','withers','wither',
-                        'wrote','writing','writes','write',
+                        'wrote','written','writing','writes','write',
+                   'yelled','yelling','yells','yell',
                    )
-    assert len(set(simpleVerbs)) == len(simpleVerbs) # Check for accidental duplicates
+    assert len(set(simpleVerbs)) == len(simpleVerbs), [x for x in simpleVerbs if simpleVerbs.count(x)>1 ] # Check for accidental duplicates
     simpleAdverbs = ('quickly', 'immediately', 'loudly', 'suddenly',)
     assert len(set(simpleAdverbs)) == len(simpleAdverbs) # Check for accidental duplicates
-    simpleAdjectives = ('alive', 'angry', 'bad', 'clean', 'cold',
-                        'dangerous', 'dead', 'disobedient', 'entire', 'evil', 'foolish', 'foreign', 'friendly', 'godly', 'good', 'happy', 'local', 'loud', 'naked',
-                        'obedient', 'opposite', 'sad', 'same', 'sick', 'sudden', 'whole', 'wounded')
+    simpleAdjectives = ('alive', 'angry', 'bad', 'big', 'bitter',
+                        'clean', 'cold',
+                        'dangerous', 'dead', 'disobedient', 'entire', 'evil',
+                        'female', 'foolish', 'foreign', 'friendly', 'godly', 'good', 'happy',
+                        'impossible',
+                        'large', 'little', 'local', 'loud', 'male', 'naked',
+                        'obedient', 'opposite', 'possible', 'sad', 'same', 'sick', 'small', 'sudden', 'sweet',
+                        'whole', 'wounded')
     assert len(set(simpleAdjectives)) == len(simpleAdjectives) # Check for accidental duplicates
     # Don't use 'one' below because it has other meanings
     simpleNumbers = ('two','three','four','five','six','seven','eight','nine',
@@ -206,7 +254,7 @@ def main():
 
     # Convert files to simple HTML
     connect_OET_RV( rv, lv )
-# end of connect_OET-RV_words.main
+# end of connect_OET-RV_words_via_OET-LV.main
 
 
 def connect_OET_RV( rv, lv ):
@@ -272,7 +320,7 @@ def connect_OET_RV( rv, lv ):
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Saved OET-RV {BBB} {len(newESFMtext):,} bytes to {rvESFMFilepath}" )
         else:
             vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    No changes made to OET-RV {BBB}." )
-# end of connect_OET-RV_words.connect_OET_RV
+# end of connect_OET-RV_words_via_OET-LV.connect_OET_RV
 
 
 def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ):
@@ -325,7 +373,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ):
     # print( f"({len(lvUpperWords)}) {lvUpperWords}")
     if rvUpperWords and lvUpperWords:
         matchProperNouns( BBB, c,v, rvUpperWords, lvUpperWords )
-# end of connect_OET-RV_words.connect_OET_RV_Verse
+# end of connect_OET-RV_words_via_OET-LV.connect_OET_RV_Verse
 
 
 CNTR_ROLE_NAME_DICT = {'N':'noun', 'S':'substantive adjective', 'A':'adjective', 'E':'determiner/case-marker', 'R':'pronoun',
@@ -345,15 +393,20 @@ def matchProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[str], lvC
     assert rvCapitalisedWordList and lvCapitalisedWordList
 
     # But we don't want any rvWords that are already tagged
+    numRemovedRV = 0 # Extra work because we're deleting from same list that we're iterating through (a copy of)
     for rvN,rvCapitalisedWord in enumerate( rvCapitalisedWordList[:] ):
+        # print( f"{BBB} {c}:{v} {rvN} {rvCapitalisedWord=} from {rvCapitalisedWordList}")
         if '¦' in rvCapitalisedWord:
             _rvCapitalisedWord, rvWordNumber = rvCapitalisedWord.split('¦')
             dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchProperNouns( {BBB} {c}:{v} ) removing already tagged '{rvCapitalisedWord}' from RV list…")
-            rvCapitalisedWordList.pop( rvN )
+            rvCapitalisedWordList.pop( rvN - numRemovedRV )
+            numRemovedRV += 1
+            numRemovedLV = 0 # Extra work because we're deleting from same list that we're iterating through (a copy of)
             for lvN,lvCapitalisedWord in enumerate( lvCapitalisedWordList[:] ):
                 if lvCapitalisedWord.endswith( f'¦{rvWordNumber}' ):
                     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchProperNouns( {BBB} {c}:{v} ) removing already tagged '{lvCapitalisedWord}' from LV list…")
-                    lvCapitalisedWordList.pop( lvN )
+                    lvCapitalisedWordList.pop( lvN - numRemovedLV )
+                    numRemovedLV += 1
     if not rvCapitalisedWordList or not lvCapitalisedWordList:
         return # nothing left to do here
 
@@ -378,7 +431,7 @@ def matchProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[str], lvC
             capitalisedNoun,wordNumber,wordRow = getLVWordRow( capitalisedNounPair )
             dPrint( 'Info', f"'{capitalisedNoun}' {wordRow}" )
             halt
-# end of connect_OET-RV_words.matchProperNouns
+# end of connect_OET-RV_words_via_OET-LV.matchProperNouns
 
 
 def matchSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:List[str] ):
@@ -418,7 +471,7 @@ def matchSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:Lis
             rvNoun = rvWordList[rvN]
             dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchSimpleWords() is adding a number to RV '{rvNoun}' at {BBB} {c}:{v} {rvN=}")
             addNumberToRVWord( BBB, c,v, rvNoun, lvWordNumber )
-# end of connect_OET-RV_words.matchSimpleWords
+# end of connect_OET-RV_words_via_OET-LV.matchSimpleWords
 
 
 def getLVWordRow( wordWithNumber:str ) -> Tuple[str,int,List[str]]:
@@ -437,7 +490,7 @@ def getLVWordRow( wordWithNumber:str ) -> Tuple[str,int,List[str]]:
     wordRow = state.wordTable[wordNumber].split( '\t' )
     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"'{word}' {wordRow}" )
     return word,wordNumber,wordRow
-# end of connect_OET-RV_words.getLVWordRow
+# end of connect_OET-RV_words_via_OET-LV.getLVWordRow
 
 
 def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
@@ -501,7 +554,7 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
             #     else:
             #         logging.critical( f"addNumberToRVWord() found {BBB} {C}:{V} {marker} found ' {word}¦' already in {rest=}")
             #         oops
-# end of connect_OET-RV_words.addNumberToRVWord
+# end of connect_OET-RV_words_via_OET-LV.addNumberToRVWord
 
 
 if __name__ == '__main__':
@@ -512,4 +565,4 @@ if __name__ == '__main__':
     main()
 
     BibleOrgSysGlobals.closedown( PROGRAM_NAME, PROGRAM_VERSION )
-# end of connect_OET-RV_words.py
+# end of connect_OET-RV_words_via_OET-LV.py

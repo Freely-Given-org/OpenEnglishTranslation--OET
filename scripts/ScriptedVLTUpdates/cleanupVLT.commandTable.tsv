@@ -9,13 +9,15 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 #									/_=> 			_ 	removeInsert2Start	Remove indicator of start of inserted words (like "not") after split helper
 									 <=_			 _	removeInsert2End	Remove indicator of end of inserted words (like "not") after helper
 
-# Put underlines inside adds
-#									\add*_			_\add*	moveUnderlineInsideAddEnd
+#									\add*_			_\add*	moveUnderlineInsideAddEnd	Put underlines inside add markers
+
+									-¦			 \add -@¦\add*	tagUnusedWords	This can give an infinite loop so we change it to a temporary character
+									-@			--	fixUnusedWords	  and then change it back again
 
 # Punctuation and spaces
-				id					 -¦ 			 	removeHyphenSpaces	Remove hyphen (untranslated article) surrounded by spaces
-				id					-¦ 			 	removeHyphenSpace	Remove hyphen (untranslated article) followed by space
-				id					 -¦			 	removeSpaceHyphen	Remove hyphen (untranslated article) preceded by space
+#				id					 -¦ 			 	removeHyphenSpaces	Remove hyphen (untranslated article) surrounded by spaces
+#				id					-¦ 			 	removeHyphenSpace	Remove hyphen (untranslated article) followed by space
+#				id					 -¦			 	removeSpaceHyphen	Remove hyphen (untranslated article) preceded by space
 
 #l				id					_ 			_	removeUnderlineSpace	Remove space after underline (rejoins words)
 l									__			_	reduceDoubleUnderlines	Reduce double underlines in entire file
@@ -29,5 +31,6 @@ l									  			 	reduceDoubleSpaces	Reduce double spaces in entire file
 									Gazelle|Dorkas			Gazelle/Dorkas	replaceDorkasPipe	Acts 9:36
 
 # Some wording problems
+#  (these probably don't work anymore due to word numbers)
 									 the the_			 the 		Trailing space
 									 the these			 these

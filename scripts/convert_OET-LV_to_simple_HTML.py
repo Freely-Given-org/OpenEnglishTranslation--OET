@@ -47,10 +47,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2023-03-24' # by RJH
+LAST_MODIFIED_DATE = '2023-03-27' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.57'
+PROGRAM_VERSION = '0.59'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -115,20 +115,22 @@ def main():
 # end of convert_OET-LV_to_simple_HTML.main
 
 
-# If you change any colours, etc., also need to adjust the Key above
-CSS_TEXT = """div.BibleText { }
-div.unusedWord { color:darkGrey; } /* For the word files */
+# If you change any colours, etc., also need to adjust the Key below
+BOOK_CSS_TEXT = """a { color:inherit; text-decoration:none; }
+
+div.BibleText { }
 
 span.upLink { font-size:1.5em; font-weight:bold; }
 span.c { font-size:1.1em; color:green; }
 span.cPsa { font-size:1.6em; font-weight:bold; color:green; }
 span.v { vertical-align:super; font-size:0.5em; color:red; }
-span.addedArticle { color:grey; }
-span.addedCopula { color:pink; }
-span.addedDirectObject { color:brown; }
-span.addedExtra { color:lightGreen; }
-span.addedOwner { color:darkOrchid; }
-span.added { color:bisque; }
+span.addArticle { color:grey; }
+span.unusedArticle { color:lavender; }
+span.addCopula { color:pink; }
+span.addDirectObject { color:brown; }
+span.addExtra { color:lightGreen; }
+span.addOwner { color:darkOrchid; }
+span.add { color:bisque; }
 span.ul { color:darkGrey; }
 span.dom { color:Gainsboro; }
 span.schwa { font-size:0.75em; }
@@ -139,8 +141,11 @@ p.shortPrayer { text-align:center; }
 p.mt1 { font-size:1.8em; }
 p.mt2 { font-size:1.3em; }
 p.LVsentence { margin-top:0.2em; margin-bottom:0.2em; }
+"""
 
-a { text-decoration: none; }
+DATA_CSS_TEXT = """a { text-decoration:none; }
+
+div.unusedWord { color:darkGrey; }
 """
 
 LV_INDEX_INTRO_HTML = """<!DOCTYPE html>
@@ -395,43 +400,43 @@ LV_INDEX_INTRO_HTML = """<!DOCTYPE html>
         rearranged to <em>he<span class="ul">_</span>is<span class="ul">_</span> &nbsp;not&nbsp; <span class="ul">_</span>walking</em>.
         But we can still figure out from the hanging underlines that the two parts either side of <em>not</em>
         are translated from a single original language word.</li>
-    <li><span class="addedArticle">Grey</span> words indicate added articles.
+    <li><span class="addArticle">Grey</span> words indicate added articles.
         English uses <em>a</em> or <em>the</em> to indicate whether a noun
         is indefinite or definite.
         Other languages don't necessarily work the same way.
         Neither Hebrew nor Greek have a word for English “<i>a</i>”.
         If we have to add an article to make the English sound correct, we indicate this by greying it,
-        e.g., <em><span class="addedArticle">the</span> man</em>.
+        e.g., <em><span class="addArticle">the</span> man</em>.
         (We use lighter colours to deemphasise added words like these rather than using <i>italics</i> like most Bibles,
         because apart from Bibles, <i>italics</i> are mostly used these days for emphasis.)</li>
-    <li><span class="addedCopula">Light pink</span>: A copula is a word that links a subject and its complement (or description),
-        e.g., the word <i><span class="addedCopula">is</span></i> in the sentence <i>The house <span class="addedCopula">is</span> white.</i>
+    <li><span class="addCopula">Light pink</span>: A copula is a word that links a subject and its complement (or description),
+        e.g., the word <i><span class="addCopula">is</span></i> in the sentence <i>The house <span class="addCopula">is</span> white.</i>
         Other languages don't necessarily work the same way and can say things like
         <i>White the house.</i>
-        Added copulas are marked with this <span class="addedCopula">light colour</span>.</li>
-    <li><span class="addedDirectObject">Light brown</span>: Certain English verbs require a direct or indirect object.
+        Added copulas are marked with this <span class="addCopula">light colour</span>.</li>
+    <li><span class="addDirectObject">Light brown</span>: Certain English verbs require a direct or indirect object.
         Think of the difference between <i>He said, blah, blah</i> and <i>He told, blah, blah</i>.
-        The second one feels like it requires something like <i>He told <span class="addedDirectObject">him</span>, blah, blah</i>.
+        The second one feels like it requires something like <i>He told <span class="addDirectObject">him</span>, blah, blah</i>.
         Added direct and indirect objects are marked with
-        a <span class="addedDirectObject">light colour</span>.</li>
-    <li><span class="addedExtra">Light green</span>:
+        a <span class="addDirectObject">light colour</span>.</li>
+    <li><span class="addExtra">Light green</span>:
         In other languages it may be possible to say something
         like <i>The having<span class="ul">_</span>fallen</i>….
         In English, we must say something like
-        <i>The <span class="addedExtra">one</span> having<span class="ul">_</span>fallen</i>…
-        or <i>The <span class="addedExtra">person</span> having fallen</i>….
+        <i>The <span class="addExtra">one</span> having<span class="ul">_</span>fallen</i>…
+        or <i>The <span class="addExtra">person</span> having fallen</i>….
         If the article and verb are marked as <b>plural</b> in the source language,
             we may be able to say
-            <i>The <span class="addedExtra">ones</span> having<span class="ul">_</span>fallen</i>….
+            <i>The <span class="addExtra">ones</span> having<span class="ul">_</span>fallen</i>….
         If the article is marked as feminine in the source language, we may be able to say
-            <i>The <span class="addedExtra">female one</span> having<span class="ul">_</span>fallen</i>….
-            or <i>The <span class="addedExtra">woman</span> having<span class="ul">_</span>fallen</i>….
-        Added words like this are marked with this <span class="addedExtra">light colour</span>.</li>
-    <li><span class="addedOwner">Light purple</span>: If we have an original construction like <i>God spoke by son</i> (from Heb 1:2),
-        in English we need to add a word like <i>God spoke by <span class="addedArticle">the</span> son</i> or <i>God spoke by <span class="addedOwner">his</span> son</i>.
-        In the latter case (where we don't just choose an article like <i><span class="addedArticle">the</span></i>),
-        we mark these added words with this <span class="addedOwner">light colour</span>.</li>
-    <li><span class="added">Light orange</span>: Other added words not in the above categories are marked with this <span class="added">light colour</span>.</li>
+            <i>The <span class="addExtra">female one</span> having<span class="ul">_</span>fallen</i>….
+            or <i>The <span class="addExtra">woman</span> having<span class="ul">_</span>fallen</i>….
+        Added words like this are marked with this <span class="addExtra">light colour</span>.</li>
+    <li><span class="addOwner">Light purple</span>: If we have an original construction like <i>God spoke by son</i> (from Heb 1:2),
+        in English we need to add a word like <i>God spoke by <span class="addArticle">the</span> son</i> or <i>God spoke by <span class="addOwner">his</span> son</i>.
+        In the latter case (where we don't just choose an article like <i><span class="addArticle">the</span></i>),
+        we mark these added words with this <span class="addOwner">light colour</span>.</li>
+    <li><span class="add">Light orange</span>: Other added words not in the above categories are marked with this <span class="add">light colour</span>.</li>
     <li>All of this colouring is to be completely open by helping the reader to be able to see where the translators have chosen to
         add words to the Hebrew or Greek in order to make the English sound slightly better,
         even though this has been kept to an absolute minimum in this <em>Literal Version</em>.</li>
@@ -653,7 +658,7 @@ LV_FAQ_HTML = """<!DOCTYPE html>
   <p>HTML last updated: __LAST_UPDATED__</p>
 </body></html>
 """
-LV_FAQ_HTML = LV_FAQ_HTML.replace( "'", "’" ) # Replace hyphens
+LV_FAQ_HTML = LV_FAQ_HTML.replace( "'", "’" ) # Replace apostrophes
 assert "'" not in LV_FAQ_HTML
 assert '--' not in LV_FAQ_HTML
 
@@ -741,7 +746,7 @@ def produce_HTML_files() -> None:
                 else: logging.critical( f"Expected {BBB} word-table '{word_table_filename}' {esfm_text[:500]}" ); halt
             assert esfm_text.count('‘') == esfm_text.count('’'), f"Why do we have OET-LV_{BBB}.usfm {esfm_text.count('‘')=} and {esfm_text.count('’')=}"
             assert esfm_text.count('“') >= esfm_text.count('”'), f"Why do we have OET-LV_{BBB}.usfm {esfm_text.count('“')=} and {esfm_text.count('”')=}"
-            esfm_text = esfm_text.replace( "'", "’" ) # Replace hyphens
+            esfm_text = esfm_text.replace( "'", "’" ) # Replace apostrophes
             assert "'" not in esfm_text, f"""Why do we have single quote in {source_filename}: {esfm_text[esfm_text.index("'")-20:esfm_text.index("'")+22]}"""
             assert '"' not in esfm_text, f"""Why do we have double quote in {source_filename}: {esfm_text[esfm_text.index('"')-20:esfm_text.index('"')+22]}"""
             assert '  ' not in esfm_text, f"""Why do we have doubled spaces in {source_filename}: {esfm_text[esfm_text.index('  ')-20:esfm_text.index('  ')+22]}"""
@@ -778,7 +783,9 @@ def produce_HTML_files() -> None:
 
     # Output CSS and index and whole NT html
     with open( OET_HTML_OutputFolderPath.joinpath('BibleBook.css'), 'wt', encoding='utf-8' ) as css_output_file:
-        css_output_file.write( CSS_TEXT )
+        css_output_file.write( BOOK_CSS_TEXT )
+    with open( OET_HTML_OutputFolderPath.joinpath('BibleData.css'), 'wt', encoding='utf-8' ) as css_output_file:
+        css_output_file.write( DATA_CSS_TEXT )
     indexIntroHTML = LV_INDEX_INTRO_HTML.replace('   ',' ').replace('  ', ' ').replace('\n ', '\n') \
             .replace( '__LAST_UPDATED__', f"{datetime.now().strftime('%Y-%m-%d')} <small>by {PROGRAM_NAME_VERSION}</small>" )
     with open( OET_HTML_OutputFolderPath.joinpath('index.html'), 'wt', encoding='utf-8' ) as html_index_file:
@@ -892,12 +899,13 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
     # Add our various spans to special text features
     book_html = book_html.replace( '\\nd ', '<span class="nominaSacra">' ) \
                 .replace( '\\nd*', '</span>' )
-    book_html = book_html.replace( '\\add +', '<span class="addedArticle">' ) \
-                .replace( '\\add =', '<span class="addedCopula">' ) \
-                .replace( '\\add ~', '<span class="addedDirectObject">' ) \
-                .replace( '\\add >', '<span class="addedExtra">' ) \
-                .replace( '\\add ^', '<span class="addedOwner">' ) \
-                .replace( '\\add ', '<span class="added">' ) \
+    book_html = book_html.replace( '\\add +', '<span class="addArticle">' ) \
+                .replace( '\\add -', '<span class="unusedArticle">' ) \
+                .replace( '\\add =', '<span class="addCopula">' ) \
+                .replace( '\\add ~', '<span class="addDirectObject">' ) \
+                .replace( '\\add >', '<span class="addExtra">' ) \
+                .replace( '\\add ^', '<span class="addOwner">' ) \
+                .replace( '\\add ', '<span class="add">' ) \
                 .replace( '\\add*', '</span>' )
     # Make underlines grey with "ul" spans (except when already at end of a span)
     book_html = book_html.replace( '_</span>', '%%SPAN%%' ) \
@@ -911,8 +919,8 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
     book_html = book_html.replace( 'ə', '<span class="schwa">ə</span>' )
     if BBB in BOOKLIST_OT39: # Hebrew direct object markers (DOMs)
         book_html = book_html.replace( 'DOM', '<span class="dom">DOM</span>' ) \
-                        .replace( '[was]', '<span class="addedCopula">was</span>' ) \
-                        .replace( '[', '<span class="added">' ) \
+                        .replace( '[was]', '<span class="addCopula">was</span>' ) \
+                        .replace( '[', '<span class="add">' ) \
                         .replace( ']', '</span>' )
         
     # All done
@@ -922,7 +930,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
 # end of convert_OET-LV_to_simple_HTML.produce_HTML_files function
 
 
-wordRegex1 = re.compile( '([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
+wordRegex1 = re.compile( '([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' ) # Max of six total digits
 wordRegex2 = re.compile( '([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]{2,})<span class="ul">_</span>([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
 wordRegex3 = re.compile( '([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]{2,})<span class="ul">_</span>([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)<span class="ul">_</span>([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
 def convert_tagged_ESFM_words_to_links( BBB:str, book_html:str, word_table:List[str] ) -> str:
@@ -995,6 +1003,7 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
     """
     fnPrint( DEBUGGING_THIS_MODULE, f"make_table_pages( {inputFolderPath}, {outputFolderPath}, {word_table_filenames} )" )
     load_transliteration_table( 'Greek' )
+    our_start_html = START_HTML.replace( 'BibleBook.css', 'BibleData.css' )
 
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Making table pages for {word_table_filenames}…" )
     for word_table_filename in word_table_filenames:
@@ -1104,7 +1113,7 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
                     oV, oW = oVW.split( 'w', 1 )
                     oTidyBBB = BibleOrgSysGlobals.loadedBibleBooksCodes.tidyBBB( oBBB )
                     if other_count == 0:
-                        html = f'{html}\n<h2>Other uses ({len(thisWordNumberList)-1:,}) of {greek} {morphology} in the NT</h2>'
+                        html = f'{html}\n<h2>Other uses ({len(thisWordNumberList)-1:,}) of {greek} <small>{morphology}</small> in the NT</h2>'
                     translation = '<small>(no English gloss)</small>' if oGlossWords=='-' else f'''English gloss=‘<b>{oGlossWords.replace('_','<span class="ul">_</span>')}</b>’'''
                     html = f'{html}\n<p><a href="{oBBB}.html#C{oC}V{oV}">OET {oTidyBBB} {oC}:{oV}</a> {translation} <a href="https://GreekCNTR.org/collation/?{CNTR_BOOK_ID_MAP[oBBB]}{oC.zfill(3)}{oV.zfill(3)}">SR GNT {oTidyBBB} {oC}:{oV} word {oW}</a>'
                     other_count += 1
@@ -1113,61 +1122,153 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
                         break
 
             # Now put it all together       
-            html = f"{START_HTML.replace('__TITLE__',greek)}\n{html}\n{END_HTML}"
+            html = f"{our_start_html.replace('__TITLE__',greek)}\n{html}\n{END_HTML}"
             with open( outputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
                 html_output_file.write( html )
             vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Wrote {len(html):,} characters to {output_filename}" )
 
+    make_person_pages( outputFolderPath )
+    make_location_pages( outputFolderPath )
 
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Making person pages for {word_table_filenames}…" )
+    return len(word_table) - 1
+# end of convert_OET-LV_to_simple_HTML.make_table_pages function
+
+
+def make_person_pages( outputFolderPath:Path ) -> int:
+    """
+    Make pages for all the words to link to.
+
+    There's almost identical code in createOETGreekWordsPages() in OpenBibleData createWordPages.py (sadly)
+    """
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Making person pages…" )
+    our_start_html = START_HTML.replace( 'BibleBook.css', 'BibleData.css' )
+
     with open( THEOGRAPHIC_INPUT_FOLDER_PATH.joinpath( 'normalised_People.json' ), 'rb' ) as people_file:
         peopleDict = json.load( people_file )
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(peopleDict):,} person entries." )
-    for personKey,entry in peopleDict.items():
+
+    # Firstly, make a list of all the keys
+    peopleKeys = []
+    for personKey in peopleDict:
         if personKey == '__HEADERS__': continue
         if personKey == '__COLUMN_HEADERS__': continue
+        peopleKeys.append( personKey )
+
+    # Now make a page for each person
+    for n,(personKey,entry) in enumerate( peopleDict.items() ):
+        if personKey == '__HEADERS__': continue
+        if personKey == '__COLUMN_HEADERS__': continue
+
+        previousLink = f'''<a title="Previous person" href="P_{peopleKeys[n-3][1:]}.html">←</a>''' if n>3 else ''
+        nextLink = f'''<a title="Next person" href="P_{peopleKeys[n-1][1:]}.html">→</a>''' if n<len(peopleDict)-1 else ''
 
         personName = entry['displayTitle']
         bornStr = f"Born: {entry['birthYear']}" if entry['birthYear'] else ''
         diedStr = f"Died: {entry['deathYear']}" if entry['deathYear'] else ''
 
-        html = f'''<h1>{personName}</h1>
-<p>{entry['dictText']}</p>
+        bodyHtml = f'''<h1>OET person: {personName.replace( "'", '’' )}</h1>
+<p>{livenMD(entry['dictText'])}</p>
 <p>{entry['gender']}{f' {bornStr}' if bornStr else ''}{f' {diedStr}' if diedStr else ''}</p>'''
 
         # Now put it all together       
         output_filename = f"{personKey[0]}_{personKey[1:]}.html"
-        html = f"{START_HTML.replace('__TITLE__',personName)}\n{html}\n{END_HTML}"
+        html = f'''{our_start_html.replace('__TITLE__',personName)}
+<p>{previousLink} {nextLink}</p>
+{bodyHtml}
+<p><small>Grateful thanks to <a href="https://Viz.Bible">Viz.Bible</a> for this data.</small></p>
+{END_HTML}'''
         with open( outputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
             html_output_file.write( html )
-        vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Wrote {len(html):,} characters to {output_filename}" )
+        vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Wrote {len(bodyHtml):,} characters to {output_filename}" )
+# end of convert_OET-LV_to_simple_HTML.make_person_pages function
 
 
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Making location pages for {word_table_filenames}…" )
+def make_location_pages( outputFolderPath:Path ) -> int:
+    """
+    Make pages for all the words to link to.
+
+    There's almost identical code in createOETGreekWordsPages() in OpenBibleData createWordPages.py (sadly)
+    """
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Making location pages…" )
+    our_start_html = START_HTML.replace( 'BibleBook.css', 'BibleData.css' )
+
     with open( THEOGRAPHIC_INPUT_FOLDER_PATH.joinpath( 'normalised_Places.json' ), 'rb' ) as locations_file:
         locationsDict = json.load( locations_file )
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(locationsDict):,} location entries." )
-    for placeKey,entry in locationsDict.items():
+
+    # Firstly, make a list of all the keys
+    placeKeys = []
+    for placeKey in locationsDict:
         if placeKey == '__HEADERS__': continue
         if placeKey == '__COLUMN_HEADERS__': continue
+        placeKeys.append( placeKey )
+
+    # Now make a page for each location
+    for n,(placeKey,entry) in enumerate( locationsDict.items() ):
+        if placeKey == '__HEADERS__': continue
+        if placeKey == '__COLUMN_HEADERS__': continue
+
+        previousLink = f'''<a title="Previous location" href="L_{placeKeys[n-3][1:]}.html">←</a>''' if n>3 else ''
+        nextLink = f'''<a title="Next location" href="L_{placeKeys[n-1][1:]}.html">→</a>''' if n<len(locationsDict)-1 else ''
 
         placeName = entry['displayTitle']
         commentStr = f" {entry['comment']}" if entry['comment'] else ''
 
-        html = f'''<h1>{placeName}</h1>
-<p>{entry['dictText']}</p>
-<p>{entry['featureType']}/{entry['featureSubType']}{f' {commentStr}' if commentStr else ''}</p>
+        bodyHtml = f'''<h1>OET location: {placeName.replace( "'", '’' )}</h1>
+<p>{livenMD(entry['dictText'])}</p>
+<p>{entry['featureType']}{f"/{entry['featureSubType']}" if entry['featureSubType'] else ''}{f' {commentStr}' if commentStr else ''}</p>
 <p>KJB=‘{entry['kjvName']}’ ESV=‘{entry['esvName']}’</p>'''
 
         # Now put it all together       
         output_filename = f"{placeKey[0]}_{placeKey[1:]}.html"
-        html = f"{START_HTML.replace('__TITLE__',placeName)}\n{html}\n{END_HTML}"
+        html = f'''{our_start_html.replace('__TITLE__',placeName)}
+<p>{previousLink} {nextLink}</p>
+{bodyHtml}
+<p><small>Grateful thanks to <a href="https://Viz.Bible">Viz.Bible</a> for this data.</small></p>
+{END_HTML}'''
         with open( outputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
             html_output_file.write( html )
         vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Wrote {len(html):,} characters to {output_filename}" )
+# end of convert_OET-LV_to_simple_HTML.make_location_pages function
 
-    return len(word_table) - 1
-# end of convert_OET-LV_to_simple_HTML.make_table_pages function
+
+mdLinkRegex = re.compile( '\\[(.+?)\\]\\((.+?)\\)' )
+def livenMD( mdText:str ) -> str:
+    """
+    Take markdown style links like '[Gen. 35:16](/gen#Gen.35.16)'
+        and convert to HTML links.
+    """
+    fnPrint( DEBUGGING_THIS_MODULE, f"livenMD( {mdText[:140]}… )" )
+
+    # Firstly, try to improve the overall formatting
+    mdText = mdText.replace( '\n\n', '</p><p>' ).replace( '\n', '<br>' )
+    mdText = mdText.replace( "'", '’' ) # Improve apostrophes
+
+    # Now liven links
+    count = 0
+    searchStartIndex = 0
+    while True: # Look for links that we could maybe liven
+        match = mdLinkRegex.search( mdText, searchStartIndex )
+        if not match:
+            break
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {match=} {match.groups()=}" )
+        readableRef, mdLinkTarget = match.group(1), match.group(2)
+        mdLinkTarget = mdLinkTarget.split( '#', 1 )[1]
+        if mdLinkTarget.count( '.' ) == 2: # Then it's almost certainly an OSIS B/C/V ref
+            OSISBkCode, C, V = mdLinkTarget.split( '.' )
+            BBB = BibleOrgSysGlobals.loadedBibleBooksCodes.getBBBFromOSISAbbreviation( OSISBkCode )
+            ourLinkTarget = f'{BBB}.html#C{C}V{V}'
+        else:
+            assert mdLinkTarget.count( '.' ) == 1 # Then it's almost certainly an OSIS B/C ref
+            OSISBkCode, C = mdLinkTarget.split( '.' )
+            BBB = BibleOrgSysGlobals.loadedBibleBooksCodes.getBBBFromOSISAbbreviation( OSISBkCode )
+            ourLinkTarget = f'{BBB}.html#C{C}'
+        ourLink = f'<a href="{ourLinkTarget}">{readableRef}</a>'
+        mdText = f'''{mdText[:match.start()]}{ourLink}{mdText[match.end():]}'''
+        searchStartIndex = match.end() + 10 # We've added at least that many characters
+        count += 1
+    return mdText
+# end of convert_OET-LV_to_simple_HTML.livenMD function
 
 
 if __name__ == '__main__':

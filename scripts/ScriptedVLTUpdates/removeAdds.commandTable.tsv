@@ -1,6 +1,8 @@
 Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	RCase	Replace	Name	Comment
+# This file is unused
 									\add <				removePreAdd
 									\add +				removeHelperAdd
+									\add -				removeUnusedAdd
 									\add >				removeMinorPostAdd
 									\add =				removeCopulaAdd
 									\add +				removeMajorPostAdd

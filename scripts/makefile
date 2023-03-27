@@ -43,7 +43,7 @@ RV: $(RV_HTML)
 
 #=== LV stuff =======================
 
-$(LV_HTML): $(final_LV_OT_USFM)  $(final_LV_NT_ESFM) convert_OET-LV_to_simple_HTML.py
+$(LV_HTML): $(final_LV_OT_USFM)  $(final_LV_NT_ESFM) convert_OET-LV_to_simple_HTML.py $(expanded_wordtable)
 	@echo "\n\nConvert OET LV USFM files to simple HTML…\n"
 	@$(Python) convert_OET-LV_to_simple_HTML.py
 
@@ -83,19 +83,19 @@ $(BibleTags_TSV): $(wildcard ../../Forked/bibletags-usfm/usfm/uhb/*.usfm) $(wild
 	@echo "\n\nConvert BibleTags USFM files to TSV…\n"
 	@$(Python) convert_BibTags_USFM_to_TSV.py
 
-$(intermediate_LV_NT_ESFM) $(original_wordtable): ../../CNTR-GNT/sourceExports/book.csv ../../CNTR-GNT/sourceExports/collation.updated.csv extract_VLT_NT_to_ESFM.py
+$(intermediate_LV_NT_ESFM) $(original_wordtable): ../../CNTR-GNT/sourceExports/book.csv ../../CNTR-GNT/sourceExports/collation.csv extract_VLT_NT_to_ESFM.py
 	@echo "\n\nExtract NT from TSV table to ESFM files…\n"
 	@$(Python) extract_VLT_NT_to_ESFM.py -e
 
-$(expanded_wordtable): $(original_wordtable) add_tags_to_word_table.py
-	@echo "\n\nAdd people/places/referent tags to Word Table…\n"
-	@$(Python) add_tags_to_word_table.py -e
+$(expanded_wordtable): $(original_wordtable) add_tags_to_NT_word_table.py
+	@echo "\n\nAdd people/places/referent tags to OET NT word table…\n"
+	@$(Python) add_tags_to_NT_word_table.py -e
 
 #=== RV stuff =======================
 
-$(RV_HTML): $(RV_ESFM) connect_OET-RV_words.py convert_OET-RV_to_simple_HTML.py
+$(RV_HTML): $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py convert_OET-RV_to_simple_HTML.py $(expanded_wordtable)
 	@echo "\n\nConnect OET-RV words to OET-LV word numbers…\n"
-	@$(Python) connect_OET-RV_words.py
+	@$(Python) connect_OET-RV_words_via_OET-LV.py
 	@echo "\n\nConvert OET RV USFM files to simple HTML…\n"
 	@$(Python) convert_OET-RV_to_simple_HTML.py
 

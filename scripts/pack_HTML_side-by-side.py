@@ -52,10 +52,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-03-23' # by RJH
+LAST_MODIFIED_DATE = '2023-03-26' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.44'
+PROGRAM_VERSION = '0.47'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -108,7 +108,9 @@ def main():
 
 # If you change any colours, etc., may need to adjust the Key above
 # . selects class, # is id
-SBS_CSS_TEXT = """button#underlineButton { float:right; }
+SBS_CSS_TEXT = """a { color:inherit; text-decoration:none; }
+
+button#underlineButton { float:right; }
 
 div.container { display:grid; column-gap:0.6em; grid-template-columns:0.85fr 1.15fr; }
 div.BibleText { }
@@ -120,12 +122,13 @@ span.c { font-size:1.1em; color:green; }
 span.cPsa { font-size:1.6em; font-weight:bold; color:green; }
 span.v { vertical-align:super; font-size:0.5em; color:red; }
 span.cv { vertical-align:super; font-size:0.8em; color:orange; }
-span.addedArticle { color:bisque; }
-span.addedCopula { color:pink; }
-span.addedDirectObject { color:brown; }
-span.addedExtra { color:lightGreen; }
-span.addedOwner { color:darkOrchid; }
-span.added { color:grey; }
+span.addArticle { color:bisque; }
+span.unusedArticle { color:lavender; }
+span.addCopula { color:pink; }
+span.addDirectObject { color:brown; }
+span.addExtra { color:lightGreen; }
+span.addOwner { color:darkOrchid; }
+span.add { color:grey; }
 span.RVadded { color:dimGrey; }
 span.ul { color:darkGrey; }
 span.dom { color:Gainsboro; }
@@ -148,8 +151,6 @@ p.q1 { margin-left:1em; margin-top:0.2em; margin-bottom:0.2em; }
 p.q2 { margin-left:2em; margin-top:0.2em; margin-bottom:0.2em; }
 /* p.m {  } */
 
-a { text-decoration: none; }
-
 /* Book intro (OET-RV only) */
 li.intro { margin-top:0.5em; margin-bottom:0.5em; }
 p.is1 { font-weight:bold; font-size:1.3em; }
@@ -162,7 +163,7 @@ span.ior { font-weight:bold; } /* font-style:italic; */
 SBS_JS = """
 function hide_show_underlines() {
     console.log('hide_show_underlines()');
-    ul_classes = ['ul', 'dom'];
+    ul_classes = ['ul','dom','unusedWord'];
     // ul_colours = ['darkGrey'];
     let btn = document.getElementById('underlineButton');
     if (btn.textContent == 'Hide underlines') {
@@ -493,43 +494,43 @@ SBS_INDEX_INTRO_HTML = """<!DOCTYPE html>
         rearranged to <em>he<span class="ul">_</span>is<span class="ul">_</span> &nbsp;not&nbsp; <span class="ul">_</span>walking</em>.
         But we can still figure out from the hanging underlines that the two parts either side of <em>not</em>
         are translated from a single original language word.</li>
-    <li class="intro"><span class="addedArticle">Grey</span> words indicate added articles.
+    <li class="intro"><span class="addArticle">Grey</span> words indicate added articles.
         English uses <em>a</em> or <em>the</em> to indicate whether a noun
         is indefinite or definite.
         Other languages don't necessarily work the same way.
         Neither Hebrew nor Greek have a word for English “<i>a</i>”.
         If we have to add an article to make the English sound correct, we indicate this by greying it,
-        e.g., <em><span class="addedArticle">the</span> man</em>.
+        e.g., <em><span class="addArticle">the</span> man</em>.
         (We use lighter colours to deemphasise added words like these rather than using <i>italics</i> like most Bibles,
         because apart from Bibles, <i>italics</i> are mostly used these days for emphasis.)</li>
-    <li class="intro"><span class="addedCopula">Light pink</span>: A copula is a word that links a subject and its complement (or description),
-        e.g., the word <i><span class="addedCopula">is</span></i> in the sentence <i>The house <span class="addedCopula">is</span> white.</i>
+    <li class="intro"><span class="addCopula">Light pink</span>: A copula is a word that links a subject and its complement (or description),
+        e.g., the word <i><span class="addCopula">is</span></i> in the sentence <i>The house <span class="addCopula">is</span> white.</i>
         Other languages don't necessarily work the same way and can say things like
         <i>White the house.</i>
-        Added copulas are marked with this <span class="addedCopula">light colour</span>.</li>
-    <li><span class="addedDirectObject">Light brown</span>: Certain English verbs require a direct or indirect object.
+        Added copulas are marked with this <span class="addCopula">light colour</span>.</li>
+    <li><span class="addDirectObject">Light brown</span>: Certain English verbs require a direct or indirect object.
         Think of the difference between <i>He said, blah, blah</i> and <i>He told, blah, blah</i>.
-        The second one feels like it requires something like <i>He told <span class="addedDirectObject">him</span>, blah, blah</i>.
+        The second one feels like it requires something like <i>He told <span class="addDirectObject">him</span>, blah, blah</i>.
         Added direct and indirect objects are marked with
-        a <span class="addedDirectObject">light colour</span>.</li>
-    <li class="intro"><span class="addedExtra">Light green</span>:
+        a <span class="addDirectObject">light colour</span>.</li>
+    <li class="intro"><span class="addExtra">Light green</span>:
         In other languages it may be possible to say something
         like <i>The having<span class="ul">_</span>fallen</i>….
         In English, we must say something like
-        <i>The <span class="addedExtra">one</span> having<span class="ul">_</span>fallen</i>…
-        or <i>The <span class="addedExtra">person</span> having fallen</i>….
+        <i>The <span class="addExtra">one</span> having<span class="ul">_</span>fallen</i>…
+        or <i>The <span class="addExtra">person</span> having fallen</i>….
         If the article and verb are marked as <b>plural</b> in the source language,
             we may be able to say
-            <i>The <span class="addedExtra">ones</span> having<span class="ul">_</span>fallen</i>….
+            <i>The <span class="addExtra">ones</span> having<span class="ul">_</span>fallen</i>….
         If the article is marked as feminine in the source language, we may be able to say
-            <i>The <span class="addedExtra">female one</span> having<span class="ul">_</span>fallen</i>….
-            or <i>The <span class="addedExtra">woman</span> having<span class="ul">_</span>fallen</i>….
-        Added words like this are marked with this <span class="addedExtra">light colour</span>.</li>
-    <li class="intro"><span class="addedOwner">Light purple</span>: If we have an original construction like <i>God spoke by son</i> (from Heb 1:2),
-        in English we need to add a word like <i>God spoke by <span class="addedArticle">the</span> son</i> or <i>God spoke by <span class="addedOwner">his</span> son</i>.
-        In the latter case (where we don't just choose an article like <i><span class="addedArticle">the</span></i>),
-        we mark these added words with this <span class="addedOwner">light colour</span>.</li>
-    <li class="intro"><span class="added">Light orange</span>: Other added words not in the above categories are marked with this <span class="added">light colour</span>.</li>
+            <i>The <span class="addExtra">female one</span> having<span class="ul">_</span>fallen</i>….
+            or <i>The <span class="addExtra">woman</span> having<span class="ul">_</span>fallen</i>….
+        Added words like this are marked with this <span class="addExtra">light colour</span>.</li>
+    <li class="intro"><span class="addOwner">Light purple</span>: If we have an original construction like <i>God spoke by son</i> (from Heb 1:2),
+        in English we need to add a word like <i>God spoke by <span class="addArticle">the</span> son</i> or <i>God spoke by <span class="addOwner">his</span> son</i>.
+        In the latter case (where we don't just choose an article like <i><span class="addArticle">the</span></i>),
+        we mark these added words with this <span class="addOwner">light colour</span>.</li>
+    <li class="intro"><span class="add">Light orange</span>: Other added words not in the above categories are marked with this <span class="add">light colour</span>.</li>
     <li class="intro">All of this colouring is to be completely open by helping the reader to be able to see where the translators have chosen to
         add words to the Hebrew or Greek in order to make the English sound slightly better,
         even though this has been kept to an absolute minimum in the <em>Literal Version</em>.</li>
@@ -735,7 +736,7 @@ SBS_INDEX_INTRO_HTML = """<!DOCTYPE html>
 """
 assert SBS_INDEX_INTRO_HTML.count('‘') == SBS_INDEX_INTRO_HTML.count('’'), f"Why do we have {SBS_INDEX_INTRO_HTML.count('‘')=} and {SBS_INDEX_INTRO_HTML.count('’')=}"
 assert SBS_INDEX_INTRO_HTML.count('“') == SBS_INDEX_INTRO_HTML.count('”'), f"Why do we have {SBS_INDEX_INTRO_HTML.count('“')=} and {SBS_INDEX_INTRO_HTML.count('”')=}"
-SBS_INDEX_INTRO_HTML = SBS_INDEX_INTRO_HTML.replace( "'", "’" ) # Replace hyphens
+SBS_INDEX_INTRO_HTML = SBS_INDEX_INTRO_HTML.replace( "'", "’" ) # Replace apostrophes
 assert "'" not in SBS_INDEX_INTRO_HTML
 
 SBS_FAQ_HTML = """<!DOCTYPE html>
@@ -934,7 +935,7 @@ SBS_FAQ_HTML = """<!DOCTYPE html>
 """
 assert SBS_FAQ_HTML.count('‘') == SBS_FAQ_HTML.count('’')
 assert SBS_FAQ_HTML.count('“') == SBS_FAQ_HTML.count('”')
-SBS_FAQ_HTML = SBS_FAQ_HTML.replace( "'", "’" ) # Replace hyphens
+SBS_FAQ_HTML = SBS_FAQ_HTML.replace( "'", "’" ) # Replace apostrophes
 assert "'" not in SBS_FAQ_HTML
 assert '--' not in SBS_FAQ_HTML
 
@@ -1210,7 +1211,7 @@ SBS_GLOSSARY_HTML = """<!DOCTYPE html>
 """
 assert SBS_GLOSSARY_HTML.count('‘') == SBS_GLOSSARY_HTML.count('’'), f"Why do we have {SBS_GLOSSARY_HTML.count('‘')=} and {SBS_GLOSSARY_HTML.count('’')=}"
 assert SBS_GLOSSARY_HTML.count('“') == SBS_GLOSSARY_HTML.count('”'), f"Why do we have {SBS_GLOSSARY_HTML.count('“')=} and {SBS_GLOSSARY_HTML.count('”')=}"
-SBS_GLOSSARY_HTML = SBS_GLOSSARY_HTML.replace( "'", "’" ) # Replace hyphens
+SBS_GLOSSARY_HTML = SBS_GLOSSARY_HTML.replace( "'", "’" ) # Replace apostrophes
 assert "'" not in SBS_GLOSSARY_HTML
 assert '--' not in SBS_GLOSSARY_HTML
 
@@ -1395,7 +1396,7 @@ RV_CHECKING_HTML = """<!DOCTYPE html>
 """
 assert RV_CHECKING_HTML.count('‘') == RV_CHECKING_HTML.count('’')
 assert RV_CHECKING_HTML.count('“') == RV_CHECKING_HTML.count('”')
-RV_CHECKING_HTML = RV_CHECKING_HTML.replace( "'", "’" ) # Replace hyphens
+RV_CHECKING_HTML = RV_CHECKING_HTML.replace( "'", "’" ) # Replace apostrophes
 assert "'" not in RV_CHECKING_HTML
 assert '--' not in RV_CHECKING_HTML
 
@@ -1406,7 +1407,7 @@ Some things (like capitalisation of ‘him’ referring to Jesus or ‘father’
 """
 assert SBS_DISCLAIMER_HTML.count('‘') == SBS_DISCLAIMER_HTML.count('’')
 assert SBS_DISCLAIMER_HTML.count('“') == SBS_DISCLAIMER_HTML.count('”')
-SBS_DISCLAIMER_HTML = SBS_DISCLAIMER_HTML.replace( "'", "’" ) # Replace hyphens
+SBS_DISCLAIMER_HTML = SBS_DISCLAIMER_HTML.replace( "'", "’" ) # Replace apostrophes
 assert "'" not in SBS_DISCLAIMER_HTML
 assert '--' not in SBS_DISCLAIMER_HTML
 
@@ -1423,7 +1424,7 @@ while at the same time keeping an eye on what it was actually translated from.</
 consider were most probably in the mind of the writer, but as none of us can double-check
 with the original speakers or writers, the reader is free to disagree.
 They are clearly marked because we've tried to be as honest and transparent as possible.</p>
-<p>The <span class="added">lighter coloured words</span> in the <em>LV</em> are words which
+<p>The <span class="add">lighter coloured words</span> in the <em>LV</em> are words which
 aren't needed in the grammar of the original languages but are required or implied in English.
 You can read the <a href="index.html#Key">Key</a> to learn more about them.
 The underlines in the <em>LV</em> show when one original language word needs to be translated into two or more English words.
@@ -1434,7 +1435,7 @@ put into a sensible English order yet.
 """
 assert SBS_BOOK_INTRO_HTML1.count('‘') == SBS_BOOK_INTRO_HTML1.count('’'), f"Why do we have {SBS_BOOK_INTRO_HTML1.count('‘')=} and {SBS_BOOK_INTRO_HTML1.count('’')=}"
 assert SBS_BOOK_INTRO_HTML1.count('“') == SBS_BOOK_INTRO_HTML1.count('”'), f"Why do we have {SBS_BOOK_INTRO_HTML1.count('“')=} and {SBS_BOOK_INTRO_HTML1.count('”')=}"
-SBS_BOOK_INTRO_HTML1 = SBS_BOOK_INTRO_HTML1.replace( "'", "’" ) # Replace hyphens
+SBS_BOOK_INTRO_HTML1 = SBS_BOOK_INTRO_HTML1.replace( "'", "’" ) # Replace apostrophes
 assert "'" not in SBS_BOOK_INTRO_HTML1
 assert '--' not in SBS_BOOK_INTRO_HTML1
 
@@ -1489,7 +1490,7 @@ TWO_COLUMN_START_HTML = f"""<p>See also the <a href="FAQs.html">FAQs</a> and the
 <h2>Literal Version</h2>"""
 assert TWO_COLUMN_START_HTML.count('‘') == TWO_COLUMN_START_HTML.count('’'), f"Why do we have {TWO_COLUMN_START_HTML.count('‘')=} and {TWO_COLUMN_START_HTML.count('’')=}"
 assert TWO_COLUMN_START_HTML.count('“') == TWO_COLUMN_START_HTML.count('”'), f"Why do we have {TWO_COLUMN_START_HTML.count('“')=} and {TWO_COLUMN_START_HTML.count('”')=}"
-TWO_COLUMN_START_HTML = TWO_COLUMN_START_HTML.replace( "'", "’" ) # Replace hyphens
+TWO_COLUMN_START_HTML = TWO_COLUMN_START_HTML.replace( "'", "’" ) # Replace apostrophes
 assert "'" not in TWO_COLUMN_START_HTML
 
 SBS_PSALM_INDEX_HTML = """<!DOCTYPE html>
@@ -1944,29 +1945,29 @@ def copy_wordlink_files( sourceFolder:Path, destinationFolder:Path ) -> bool:
 
     Also P_ and L_ person and location files.
     """
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET-LV word-link HTML files from {sourceFolder}…")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET NT word-link HTML files from {sourceFolder}…")
     copyCount = 0
     for filename in glob.glob( os.path.join( sourceFolder, 'W_*.html' ) ):
         shutil.copy( filename, destinationFolder ) # Want the time to be updated or else "make" doesn't function correctly
         # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
         copyCount += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET-LV word-link HTML files to {destinationFolder}.")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET NT word-link HTML files to {destinationFolder}.")
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET-LV person HTML files from {sourceFolder}…")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET person HTML files from {sourceFolder}…")
     copyCount = 0
     for filename in glob.glob( os.path.join( sourceFolder, 'P_*.html' ) ):
         shutil.copy( filename, destinationFolder ) # Want the time to be updated or else "make" doesn't function correctly
         # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
         copyCount += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET-LV person HTML files to {destinationFolder}.")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET person HTML files to {destinationFolder}.")
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET-LV location HTML files from {sourceFolder}…")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET location HTML files from {sourceFolder}…")
     copyCount = 0
     for filename in glob.glob( os.path.join( sourceFolder, 'L_*.html' ) ):
         shutil.copy( filename, destinationFolder ) # Want the time to be updated or else "make" doesn't function correctly
         # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
         copyCount += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET-LV location HTML files to {destinationFolder}.")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET location HTML files to {destinationFolder}.")
 # end of pack_HTML_side-by-side.copy_wordlink_files()
 
 

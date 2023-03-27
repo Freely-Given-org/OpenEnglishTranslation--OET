@@ -5,7 +5,7 @@
 #
 # Script handling extract_OSHB_OT_to_USFM functions
 #
-# Copyright (C) 2022 Robert Hunt
+# Copyright (C) 2022-2023 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -40,7 +40,7 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-11-03' # by RJH
+LAST_MODIFIED_DATE = '2023-03-24' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed-OSHB_OT_to_USFM"
 PROGRAM_NAME = "Extract glossed-OSHB OT USFM files"
 PROGRAM_VERSION = '0.42'
@@ -438,40 +438,6 @@ def preform_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: #, l
     # if given_verse_row['Ref'].startswith('GEN_1:4'): halt
     return f"{gloss}{given_verse_row['GlossPunctuation']}"
 # end of extract_OSHB_OT_to_USFM.preform_gloss
-
-
-# def apply_gloss_capitalization(gloss_pre:str, gloss_helper:str, gloss_word:str, gloss_capitalization) -> Tuple[str,str,str]:
-#     """
-#     Some undocumented documentation:
-#         ●    U – lexical entry capitalized
-#         ●    W – proper noun
-#         ●    G – reference to deity
-#         ●    P – paragraph boundary
-#         ●    S – start of sentence
-#         ●    D – quoted dialog
-#         ●    V – vocative title
-#         ●    B – Biblical quotation
-#         ●    R – other quotation
-#         ●    T – translated words
-
-#         ●    h – partial word capitalized
-#         ●    n – named but not proper name
-#         ●    b – incorporated Biblical quotation
-#         ●    c – continuation of quotation
-#         ●    e – emphasized words (scare quotes)
-#     The lowercase letters mark other significant places where the words are not normally capitalized.
-#     """
-#     if gloss_capitalization.lower() != gloss_capitalization: # there's some UPPERCASE values
-#         # NOTE: We can't use the title() function here for capitalising or else words like 'you_all' become 'You_All'
-#         if 'G' in gloss_capitalization or 'U' in gloss_capitalization or 'W' in gloss_capitalization:
-#             gloss_word = f'{gloss_word[0].upper()}{gloss_word[1:]}' # Those are WORD punctuation characters
-#         if ('P' in gloss_capitalization or 'S' in gloss_capitalization # new paragraph or sentence
-#         or 'D' in gloss_capitalization): # new dialog
-#             if gloss_pre: gloss_pre = f'{gloss_pre[0].upper()}{gloss_pre[1:]}'
-#             elif gloss_helper: gloss_helper = f'{gloss_helper[0].upper()}{gloss_helper[1:]}'
-#             else: gloss_word = f'{gloss_word[0].upper()}{gloss_word[1:]}'
-#     return gloss_pre, gloss_helper, gloss_word
-# # end of extract_OSHB_OT_to_USFM.apply_gloss_capitalization
 
 
 

@@ -44,16 +44,15 @@ from csv import DictReader
 from collections import defaultdict
 from datetime import datetime
 import logging
-import shutil
 
 import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-03-22' # by RJH
+LAST_MODIFIED_DATE = '2023-03-26' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
-PROGRAM_VERSION = '0.80'
+PROGRAM_VERSION = '0.82'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -251,6 +250,10 @@ def write_esfm_book(book_number:int, book_esfm: str) -> bool:
     usfm_filepath = VLT_ESFM_OUTPUT_FOLDERPATH.joinpath( f'{BOS_BOOK_ID_MAP[book_number]}_gloss.ESFM' )
     book_esfm = book_esfm.replace('¶', '¶ ') # Looks nicer maybe
     # Fix any punctuation problems
+    if '..' in book_esfm:
+        ix = book_esfm.index( '..' )
+        print( f"Found periods in book {book_number}: '{book_esfm[ix-20:ix+20]}'" )
+        halt
     book_esfm = book_esfm.replace(',,',',').replace('..','.').replace(';;',';') \
                 .replace(',.','.').replace('.”.”','.”').replace('?”?”','?”')
     # if "another's" in book_usfm or "Lord's" in book_usfm:
@@ -376,7 +379,11 @@ def export_esfm_literal_English_gloss() -> bool:
                         logging.critical( f"{collation_row_number} Unexpected space in {gloss_part_name} '{collation_row[gloss_part_name]}' from {collation_row}" )
             gloss_list = [collation_row[gloss_part_name] for gloss_part_name in ('GlossPre', 'GlossHelper', 'GlossWord', 'GlossPost') if collation_row[gloss_part_name]]
             word_list_string = ' '.join(gloss_list) # Space-separated list of English gloss words for that Greek word
-            table_row = f"{ref}\t{collation_row['Medieval']}\t{word_list_string}\t{'' if collation_row['GlossCapitalization'] is None else collation_row['GlossCapitalization']}\t{'' if collation_row['Probability'] is None else collation_row['Probability']}\t{collation_row['LexemeID']}\t{collation_row['Role']}\t{collation_row['Morphology']}"
+            glossCapitalisationString = '' if collation_row['GlossCapitalization'] is None else collation_row['GlossCapitalization']
+            if collation_row['Koine'].startswith( '=' ): # it's a nomina sacra
+                assert 'N' not in glossCapitalisationString # already -- SR GNT doesn't currently use N -- see documentation of apply_gloss_capitalization() below
+                glossCapitalisationString = f'{glossCapitalisationString}N' # We add an extra letter
+            table_row = f"{ref}\t{collation_row['Medieval']}\t{word_list_string}\t{glossCapitalisationString}\t{'' if collation_row['Probability'] is None else collation_row['Probability']}\t{collation_row['LexemeID']}\t{collation_row['Role']}\t{collation_row['Morphology']}"
             assert '"' not in table_row # Check in case we needed any escaping
             table_output_file.write( f'{table_row}\n' )
             # NOTE: The above code writes every table row, even for variants which aren't in the SR (but their probability column will be zero)
@@ -506,6 +513,8 @@ def preform_gloss(thisList:List[Dict[str,str]], given_verse_row_index:int, last_
 
     glossPre, glossHelper, glossWord, glossPost, glossPunctuation, glossCapitalization \
         = given_verse_row['GlossPre'], given_verse_row['GlossHelper'], given_verse_row['GlossWord'], given_verse_row['GlossPost'], given_verse_row['GlossPunctuation'], given_verse_row['GlossCapitalization']
+    # if glossWord == '-':
+    #     glossWord = '-the-' # We want to know when potential articles are just dropped (i.e., considered as pure case markers)
     if row_offset is not None:
         this_row_offset = row_offset + given_verse_row_index + 1
         # Put in the ESFM wordlink row numbers
@@ -666,9 +675,14 @@ def separate_punctuation(given_punctuation:str) -> Tuple[str,str]:
     if given_punctuation not in ('.”’”','[[',']]',):
         for char in given_punctuation:
             if given_punctuation.count(char) > 1:
-                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  WARNING: have duplicated '{char}' punctuation character(s) in '{given_punctuation}'.")
+                logging.warning( f"Have duplicated '{char}' punctuation character(s) in '{given_punctuation}'." )
     improved_given_punctuation = given_punctuation \
                                     .replace(',,',',').replace('..','.').replace('”“','”')
+    if improved_given_punctuation not in ('.”’”','[[',']]',):
+        for char in improved_given_punctuation:
+            if improved_given_punctuation.count(char) > 1:
+                logging.critical( f"Still have duplicated '{char}' punctuation character(s) in '{improved_given_punctuation}'." )
+
     temporary_copied_punctuation = improved_given_punctuation
     while temporary_copied_punctuation:
         if temporary_copied_punctuation[0] in PRE_WORD_PUNCTUATION_LIST:

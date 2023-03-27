@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-03-23' # by RJH
+LAST_MODIFIED_DATE = '2023-03-26' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.56'
+PROGRAM_VERSION = '0.58'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -100,7 +100,9 @@ def main():
 
 
 # If you change any colours, etc., also need to adjust the Key above
-CSS_TEXT = """div.BibleText { }
+CSS_TEXT = """a { color:inherit; text-decoration:none; }
+
+div.BibleText { }
 div.unusedWord { color:darkGrey; } /* For the word files */
 
 span.upLink { font-size:1.5em; font-weight:bold; }
@@ -402,43 +404,43 @@ RV_INDEX_INTRO_HTML = """<!DOCTYPE html>
         rearranged to <em>he<span class="ul">_</span>is<span class="ul">_</span> &nbsp;not&nbsp; <span class="ul">_</span>walking</em>.
         But we can still figure out from the hanging underlines that the two parts either side of <em>not</em>
         are translated from a single original language word.</li>
-    <li><span class="addedArticle">Grey</span> words indicate added articles.
+    <li><span class="addArticle">Grey</span> words indicate added articles.
         English uses <em>a</em> or <em>the</em> to indicate whether a noun
         is indefinite or definite.
         Other languages don't necessarily work the same way.
         Neither Hebrew nor Greek have a word for English “<i>a</i>”.
         If we have to add an article to make the English sound correct, we indicate this by greying it,
-        e.g., <em><span class="addedArticle">the</span> man</em>.
+        e.g., <em><span class="addArticle">the</span> man</em>.
         (We use lighter colours to deemphasise added words like these rather than using <i>italics</i> like most Bibles,
         because apart from Bibles, <i>italics</i> are mostly used these days for emphasis.)</li>
-    <li><span class="addedCopula">Light pink</span>: A copula is a word that links a subject and its complement (or description),
-        e.g., the word <i><span class="addedCopula">is</span></i> in the sentence <i>The house <span class="addedCopula">is</span> white.</i>
+    <li><span class="addCopula">Light pink</span>: A copula is a word that links a subject and its complement (or description),
+        e.g., the word <i><span class="addCopula">is</span></i> in the sentence <i>The house <span class="addCopula">is</span> white.</i>
         Other languages don't necessarily work the same way and can say things like
         <i>White the house.</i>
-        Added copulas are marked with this <span class="addedCopula">light colour</span>.</li>
-    <li><span class="addedDirectObject">Light brown</span>: Certain English verbs require a direct or indirect object.
+        Added copulas are marked with this <span class="addCopula">light colour</span>.</li>
+    <li><span class="addDirectObject">Light brown</span>: Certain English verbs require a direct or indirect object.
         Think of the difference between <i>He said, blah, blah</i> and <i>He told, blah, blah</i>.
-        The second one feels like it requires something like <i>He told <span class="addedDirectObject">him</span>, blah, blah</i>.
+        The second one feels like it requires something like <i>He told <span class="addDirectObject">him</span>, blah, blah</i>.
         Added direct and indirect objects are marked with
-        a <span class="addedDirectObject">light colour</span>.</li>
-    <li><span class="addedExtra">Light green</span>:
+        a <span class="addDirectObject">light colour</span>.</li>
+    <li><span class="addExtra">Light green</span>:
         In other languages it may be possible to say something
         like <i>The having<span class="ul">_</span>fallen</i>….
         In English, we must say something like
-        <i>The <span class="addedExtra">one</span> having<span class="ul">_</span>fallen</i>…
-        or <i>The <span class="addedExtra">person</span> having fallen</i>….
+        <i>The <span class="addExtra">one</span> having<span class="ul">_</span>fallen</i>…
+        or <i>The <span class="addExtra">person</span> having fallen</i>….
         If the article and verb are marked as <b>plural</b> in the source language,
             we may be able to say
-            <i>The <span class="addedExtra">ones</span> having<span class="ul">_</span>fallen</i>….
+            <i>The <span class="addExtra">ones</span> having<span class="ul">_</span>fallen</i>….
         If the article is marked as feminine in the source language, we may be able to say
-            <i>The <span class="addedExtra">female one</span> having<span class="ul">_</span>fallen</i>….
-            or <i>The <span class="addedExtra">woman</span> having<span class="ul">_</span>fallen</i>….
-        Added words like this are marked with this <span class="addedExtra">light colour</span>.</li>
-    <li><span class="addedOwner">Light purple</span>: If we have an original construction like <i>God spoke by son</i> (from Heb 1:2),
-        in English we need to add a word like <i>God spoke by <span class="addedArticle">the</span> son</i> or <i>God spoke by <span class="addedOwner">his</span> son</i>.
-        In the latter case (where we don't just choose an article like <i><span class="addedArticle">the</span></i>),
-        we mark these added words with this <span class="addedOwner">light colour</span>.</li>
-    <li><span class="added">Light orange</span>: Other added words not in the above categories are marked with this <span class="added">light colour</span>.</li>
+            <i>The <span class="addExtra">female one</span> having<span class="ul">_</span>fallen</i>….
+            or <i>The <span class="addExtra">woman</span> having<span class="ul">_</span>fallen</i>….
+        Added words like this are marked with this <span class="addExtra">light colour</span>.</li>
+    <li><span class="addOwner">Light purple</span>: If we have an original construction like <i>God spoke by son</i> (from Heb 1:2),
+        in English we need to add a word like <i>God spoke by <span class="addArticle">the</span> son</i> or <i>God spoke by <span class="addOwner">his</span> son</i>.
+        In the latter case (where we don't just choose an article like <i><span class="addArticle">the</span></i>),
+        we mark these added words with this <span class="addOwner">light colour</span>.</li>
+    <li><span class="add">Light orange</span>: Other added words not in the above categories are marked with this <span class="add">light colour</span>.</li>
     -->
     <li>All of this colouring is to be completely open by helping the reader to be able to see where the translators have chosen to
         add words to the Hebrew or Greek in order to make the English sound slightly better,
@@ -1217,29 +1219,29 @@ def copy_wordlink_files( sourceFolder:Path, destinationFolder:Path ) -> bool:
 
     Also P_ and L_ person and location files.
     """
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET-LV word-link HTML files from {sourceFolder}…")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET NT word-link HTML files from {sourceFolder}…")
     copyCount = 0
     for filename in glob.glob( os.path.join( sourceFolder, 'W_*.html' ) ):
         shutil.copy( filename, destinationFolder ) # Want the time to be updated or else "make" doesn't function correctly
         # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
         copyCount += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET-LV word-link HTML files to {destinationFolder}.")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET NT word-link HTML files to {destinationFolder}.")
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET-LV person HTML files from {sourceFolder}…")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET person HTML files from {sourceFolder}…")
     copyCount = 0
     for filename in glob.glob( os.path.join( sourceFolder, 'P_*.html' ) ):
         shutil.copy( filename, destinationFolder ) # Want the time to be updated or else "make" doesn't function correctly
         # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
         copyCount += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET-LV person HTML files to {destinationFolder}.")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET person HTML files to {destinationFolder}.")
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET-LV location HTML files from {sourceFolder}…")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET location HTML files from {sourceFolder}…")
     copyCount = 0
     for filename in glob.glob( os.path.join( sourceFolder, 'L_*.html' ) ):
         shutil.copy( filename, destinationFolder ) # Want the time to be updated or else "make" doesn't function correctly
         # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
         copyCount += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET-LV location HTML files to {destinationFolder}.")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET location HTML files to {destinationFolder}.")
 # end of convert_OET-RV_to_simple_HTML.copy_wordlink_files()
 
 

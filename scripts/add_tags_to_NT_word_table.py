@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# add_tags_to_word_table.py
+# add_tags_to_NT_word_table.py
 #
-# Script handling add_tags_to_word_table functions
+# Script handling add_tags_to_NT_word_table functions
 #
 # Copyright (C) 2023 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
@@ -59,10 +59,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-03-23' # by RJH
-SHORT_PROGRAM_NAME = "Associate_LV_people_places"
-PROGRAM_NAME = "Associate People&Places with OET-LV Greek words"
-PROGRAM_VERSION = '0.11'
+LAST_MODIFIED_DATE = '2023-03-24' # by RJH
+SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
+PROGRAM_NAME = "Add People&Places tags to OET NT wordtable"
+PROGRAM_VERSION = '0.20'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -89,7 +89,7 @@ class State:
         Constructor:
         """
         newTable = None
-    # end of add_tags_to_word_table.__init__
+    # end of add_tags_to_NT_word_table.__init__
 
 
 def main() -> None:
@@ -111,8 +111,10 @@ def main() -> None:
 
     associate_Theographic_people_places()
 
+    tag_trinity_persons()
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Reading Greek Macula tsv entries from {MACULA_GREEK_TSV_FILEPATH}…" )
+
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nReading Greek Macula tsv entries from {MACULA_GREEK_TSV_FILEPATH}…" )
     with open( MACULA_GREEK_TSV_FILEPATH, 'rt', encoding='utf-8' ) as macula_tsv_file:
         macula_tsv_lines = macula_tsv_file.readlines()
     if macula_tsv_lines[0].startswith( '\ufeff' ): # remove any BOM
@@ -133,7 +135,7 @@ def main() -> None:
     tag_referents_from_macula_data()
 
     write_new_table()
-# end of add_tags_to_word_table.main
+# end of add_tags_to_NT_word_table.main
 
 
 def associate_Theographic_people_places() -> bool:
@@ -249,7 +251,70 @@ def associate_Theographic_people_places() -> bool:
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{numAddedPeople=:,} {numAddedPeopleGroups=:,} {numAddedLocations=:,} {numAddedEvents=:,} {numAddedYears=:,} {numAddedTimelines=:,}" )
     return True
-# end of add_tags_to_word_table.add_tags_to_word_table
+# end of add_tags_to_NT_word_table.associate_Theographic_people_places
+
+
+def tag_trinity_persons() -> bool:
+    """
+    Some undocumented documentation of the GlossCaps column:
+        ●    U – lexical entry capitalized
+        ●    W – proper noun
+        ●    G – reference to deity
+        ●    P – paragraph boundary
+        ●    S – start of sentence
+        ●    D – quoted dialog
+        ●    V – vocative title
+        ●    B – Biblical quotation
+        ●    R – other quotation
+        ●    T – translated words
+        ●    N – nomina sacra (our addition)
+
+        ●    h – partial word capitalized
+        ●    n – named but not proper name
+        ●    b – incorporated Biblical quotation
+        ●    c – continuation of quotation
+        ●    e – emphasized words (scare quotes)
+    The lowercase letters mark other significant places where the words are not normally capitalized.
+    """
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nTagging trinity persons in our table…" )
+
+    # Expect column headers 'Ref\tGreek\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\tTags'
+    columnHeaders = state.newTable[0].split( '\t' )
+    # assert columnHeaders[1] == 'Greek' # Check our index value of 1
+    assert columnHeaders[2] == 'GlossWords' # Check our index value of 2
+    assert columnHeaders[8] == 'Tags' # Check our index value of 8
+
+    numAddedGod = numAddedJesus = numAddedHolySpirit = 0
+    for n,rowStr in enumerate( state.newTable[1:], start=1 ):
+        rowFields = rowStr.split( '\t' )
+        srGlossWords = rowFields[2]
+        tagList = rowFields[8].split( ';' ) if rowFields[8] else []
+
+        madeChanges = False
+
+        # We rely on the SR capitalisation for these matches, e.g., difference between father/Father, son/Son, holy/Holy, spirit/Spirit
+        # Any of these have the potential for a false tag, e.g., if Father or Holy was capitalised at the start of a sentence in the SR
+        #   If it's a problem, we have the Caps column that we could also look at
+        if ('God' in srGlossWords or 'Father' in srGlossWords) and 'PGod' not in tagList:
+            tagList.append( 'PGod' )
+            numAddedGod += 1
+            madeChanges = True
+        if ('Messiah' in srGlossWords or 'Christ' in srGlossWords or 'Son' in srGlossWords) and 'PJesus' not in tagList:
+            tagList.append( 'PJesus' )
+            numAddedJesus += 1
+            madeChanges = True
+        if ('Holy' in srGlossWords or 'Spirit' in srGlossWords) and 'PHoly_Spirit' not in tagList:
+            tagList.append( 'PHoly_Spirit' )
+            numAddedHolySpirit += 1
+            madeChanges = True
+
+        if madeChanges:
+            rowFields[8] = ';'.join( tagList )
+            state.newTable[n] = '\t'.join( rowFields )
+
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {numAddedGod=:,} {numAddedJesus=:,} {numAddedHolySpirit=:,} Total added={numAddedGod+numAddedJesus+numAddedHolySpirit:,}" )
+    return True
+# end of add_tags_to_NT_word_table.tag_trinity_persons
 
 
 def tag_referents_from_macula_data() -> bool:
@@ -286,7 +351,7 @@ def tag_referents_from_macula_data() -> bool:
     assert state.macula_tsv_lines[0][5] == 'WordClass' # Check our index value of 5
     assert state.macula_tsv_lines[0][16] == 'Referents' # Check our index value of 16
 
-    totalAdds = totalReferencePairAdds = totalPersonAdds = totalLocationAdds = 0
+    totalAdds = totalReferencePairAdds = totalPersonAdds = totalLocationAdds = numUnmatched = 0
     lastBBB = None
     for n,maculaRowList in enumerate( state.macula_tsv_lines[1:], start=1 ):
         BBB = maculaRowList[0][:3]
@@ -372,7 +437,7 @@ def tag_referents_from_macula_data() -> bool:
                         # else: print( f"{rowItems[1][:4]} != {referredGreekWord[:4]}")
                     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Loosely found {len(possibleReferredRowIndices)} referred verse row(s) that might match {referentWordID} '{referredGreekWord}'")
 
-                def establishLinks( ixReferent:int, ixReferred:int ):
+                def appendNewTags( ixReferent:int, ixReferred:int ):
                     """
                     We establish a referred (R) and from (F) link for referents marked in Macula
 
@@ -385,7 +450,7 @@ def tag_referents_from_macula_data() -> bool:
                     Uses many global variables as well as a declared nonlocal ones.
                     """
                     nonlocal totalReferencePairAdds, totalPersonAdds, totalLocationAdds, totalAdds
-                    fnPrint( DEBUGGING_THIS_MODULE, f"establishLinks( {ixReferent=}, {ixReferred=} )" )
+                    fnPrint( DEBUGGING_THIS_MODULE, f"appendNewTags( {ixReferent=}, {ixReferred=} )" )
 
                     referrentRowIndex = possibleReferentRowIndices[ixReferent]
                     referredRowIndex = possibleReferredRowIndices[ixReferred]
@@ -425,7 +490,7 @@ def tag_referents_from_macula_data() -> bool:
                     state.newTable[possibleReferentRowIndices[ixReferent]] = '\t'.join( existingReferentRowFields )
                     existingReferredRowFields[8] = ';'.join( existingReferredRowTags )
                     state.newTable[possibleReferredRowIndices[ixReferred]] = '\t'.join( existingReferredRowFields )
-                # end of establishLinks function
+                # end of appendNewTags function
 
                 if not possibleReferentRowIndices:
                     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    <<< Unable to find referent {referentVerseID} '{referentGreek}' in {len(possibleReferentRowIndices)} rows >>>")
@@ -437,7 +502,7 @@ def tag_referents_from_macula_data() -> bool:
                         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
 
                 elif len(possibleReferentRowIndices)==1 and len(possibleReferredRowIndices)==1: # This is the easiest case
-                    establishLinks( ixReferent=0, ixReferred=0 )
+                    appendNewTags( ixReferent=0, ixReferred=0 )
                 elif len(possibleReferredRowIndices) == 1: # we know where we're going
                     assert len(possibleReferentRowIndices) > 1 # but don't know where we're coming from (yet)
                     referentWordNumber = int( referentWordID.split('w')[-1] )
@@ -449,33 +514,7 @@ def tag_referents_from_macula_data() -> bool:
                     minWordNumberDistance = min( wordNumberDistances )
                     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Have {referentWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
                     if wordNumberDistances.count( minWordNumberDistance ) == 1: # only one has this minimum distance
-                        establishLinks( ixReferent=wordNumberDistances.index( minWordNumberDistance ), ixReferred=0 )
-                        # ix = wordNumberDistances.index( minWordNumberDistance )
-                        # existingReferredRowTags = state.newTable[possibleReferredRowIndices[0]].split( '\t' )[8].split( ';' )
-                        # existingReferentRowStr = state.newTable[possibleReferentRowIndices[ix]]
-                        # existingReferentRowFields = existingReferentRowStr.split( '\t' )
-                        # existingReferentRowTags = existingReferentRowFields[8].split( ';' ) if existingReferentRowFields[8] else []
-                        # numAdded = 0
-                        # for referredTag in existingReferredRowTags:
-                        #     if referredTag.startswith( 'P' ): # Found a person tag
-                        #         # Add the person tag to our referent line
-                        #         existingReferentRowTags.append( f'P{referredTag}' )
-                        #         numAdded += 1
-                        #         totalPersonAdds += 1
-                        #         totalAdds += 1
-                        #     elif referredTag.startswith( 'L' ): # Found a location tag
-                        #         # Add the person tag to our referent line
-                        #         existingReferentRowTags.append( f'L{referredTag}' )
-                        #         numAdded += 1
-                        #         totalLocationAdds += 1
-                        #         totalAdds += 1
-                        # if numAdded: # then we have to update our table row
-                        #     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"      Added {numAdded} tag(s) so now {existingReferentRowTags}" )
-                        #     existingReferentRowFields[8] = ';'.join( existingReferentRowTags )
-                        #     state.newTable[possibleReferentRowIndices[ix]] = '\t'.join( existingReferentRowFields )
-                        # else:
-                        #     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      B: Unable to find any tags to add!" )
-
+                        appendNewTags( ixReferent=wordNumberDistances.index( minWordNumberDistance ), ixReferred=0 )
                 elif len(possibleReferentRowIndices) == 1: # we know where we're coming from
                     assert len(possibleReferredRowIndices) > 1 # but don't know where we're going to (yet)
                     referredWordNumber = int( referredWordID.split('w')[-1] )
@@ -487,33 +526,7 @@ def tag_referents_from_macula_data() -> bool:
                     minWordNumberDistance = min( wordNumberDistances )
                     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"      Have {referredWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
                     if wordNumberDistances.count( minWordNumberDistance ) == 1: # only one has this minimum distance
-                        establishLinks( ixReferent=0, ixReferred=wordNumberDistances.index( minWordNumberDistance ) )
-                        # ix = wordNumberDistances.index( minWordNumberDistance )
-                        # existingReferredRowTags = state.newTable[possibleReferredRowIndices[ix]].split( '\t' )[8].split( ';' )
-                        # existingReferentRowStr = state.newTable[possibleReferentRowIndices[0]]
-                        # existingReferentRowFields = existingReferentRowStr.split( '\t' )
-                        # existingReferentRowTags = existingReferentRowFields[8].split( ';' ) if existingReferentRowFields[8] else []
-                        # numAdded = 0
-                        # for referredTag in existingReferredRowTags:
-                        #     if referredTag.startswith( 'P' ): # Found a person tag
-                        #         # Add the person tag to our referent line
-                        #         existingReferentRowTags.append( f'P{referredTag}' )
-                        #         numAdded += 1
-                        #         totalPersonAdds += 1
-                        #         totalAdds += 1
-                        #     elif referredTag.startswith( 'L' ): # Found a location tag
-                        #         # Add the person tag to our referent line
-                        #         existingReferentRowTags.append( f'L{referredTag}' )
-                        #         numAdded += 1
-                        #         totalLocationAdds += 1
-                        #         totalAdds += 1
-                        # if numAdded: # then we have to update our table row
-                        #     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"      Added {numAdded} tag(s) so now {existingReferentRowTags}" )
-                        #     existingReferentRowFields[8] = ';'.join( existingReferentRowTags )
-                        #     state.newTable[possibleReferentRowIndices[0]] = '\t'.join( existingReferentRowFields )
-                        # else:
-                        #     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      C: Unable to find any tags to add!" )
-
+                        appendNewTags( ixReferent=0, ixReferred=wordNumberDistances.index( minWordNumberDistance ) )
                 else:
                     assert len(possibleReferentRowIndices)>1 and len(possibleReferredRowIndices)>1 # both!
                     # if len(possibleReferentRowIndices) != 1:
@@ -545,33 +558,10 @@ def tag_referents_from_macula_data() -> bool:
                         ixReferred = wordNumberDistances.index( minWordNumberDistance )
 
                     try: # will fail if both ixReferent and ixReferred are not declared
-                        establishLinks( ixReferent, ixReferred )
-                        # existingReferredRowTags = state.newTable[possibleReferredRowIndices[ixReferred]].split( '\t' )[8].split( ';' )
-                        # existingReferentRowStr = state.newTable[possibleReferentRowIndices[ixReferent]]
-                        # existingReferentRowFields = existingReferentRowStr.split( '\t' )
-                        # existingReferentRowTags = existingReferentRowFields[8].split( ';' ) if existingReferentRowFields[8] else []
-                        # numAdded = 0
-                        # for referredTag in existingReferredRowTags:
-                        #     if referredTag.startswith( 'P' ): # Found a person tag
-                        #         # Add the person tag to our referent line
-                        #         existingReferentRowTags.append( f'P{referredTag}' )
-                        #         numAdded += 1
-                        #         totalPersonAdds += 1
-                        #         totalAdds += 1
-                        #     elif referredTag.startswith( 'L' ): # Found a location tag
-                        #         # Add the person tag to our referent line
-                        #         existingReferentRowTags.append( f'L{referredTag}' )
-                        #         numAdded += 1
-                        #         totalLocationAdds += 1
-                        #         totalAdds += 1
-                        # if numAdded: # then we have to update our table row
-                        #     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Added {numAdded} tag(s) so now {existingReferentRowTags}" )
-                        #     existingReferentRowFields[8] = ';'.join( existingReferentRowTags )
-                        #     state.newTable[possibleReferentRowIndices[ixReferent]] = '\t'.join( existingReferentRowFields )
-                        # else:
-                        #     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      D: Unable to find any tags to add!" )
+                        appendNewTags( ixReferent, ixReferred )
                     except UnboundLocalError:
-                        logging.critical( f"XXXXXXXXX Unable to find a referent and a referrer row for {referentWordID=} {referentGreek=} {referredWordID=} {referredGreekWord=} XXXXXXXXXXXXXX")
+                        logging.critical( f"Unable to find a referent and a referrer row for {referentWordID=} {referentGreek=} {referredWordID=} {referredGreekWord=}" )
+                        numUnmatched += 1
                     # Make them both undefined again
                     try: del ixReferent
                     except UnboundLocalError: pass
@@ -582,8 +572,9 @@ def tag_referents_from_macula_data() -> bool:
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Added {totalLocationAdds:,} referred location tags")
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Added {totalAdds:,} total referred person/location tags")
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Added {totalReferencePairAdds:,} total back/forth referrent tag pairs")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Skipped {numUnmatched:,} referrent tag pairs (probably GNT differences)")
     return True
-# end of add_tags_to_word_table.tag_referents_from_macula_data
+# end of add_tags_to_NT_word_table.tag_referents_from_macula_data
 
 
 def write_new_table() -> bool:
@@ -601,7 +592,7 @@ def write_new_table() -> bool:
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Also copied {WORD_TABLE_FILENAME} to {RV_ESFM_OUTPUT_FOLDERPATH}.")
 
     return True
-# end of add_tags_to_word_table.write_new_table
+# end of add_tags_to_NT_word_table.write_new_table
 
 
 if __name__ == '__main__':
@@ -615,4 +606,4 @@ if __name__ == '__main__':
     main()
 
     BibleOrgSysGlobals.closedown( PROGRAM_NAME, PROGRAM_VERSION )
-# end of add_tags_to_word_table.py
+# end of add_tags_to_NT_word_table.py
