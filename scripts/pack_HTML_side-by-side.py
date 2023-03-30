@@ -29,6 +29,9 @@ Uses the OET-RV USFM to create the headers
     then gets the pre-existing LV HTML and extracts those verses
     then places the related RV and LV chunks in a division
         so they'll display side-by-side.
+
+CHANGELOG:
+    2023-03-29 Make entire top&bottom section headings into clickable links
 """
 from gettext import gettext as _
 from tracemalloc import start
@@ -47,15 +50,15 @@ if __name__ == '__main__':
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.Bible import Bible
-from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27
+from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39 #, BOOKLIST_NT27
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-03-26' # by RJH
+LAST_MODIFIED_DATE = '2023-03-29' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.47'
+PROGRAM_VERSION = '0.49'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -79,11 +82,8 @@ assert OET_HTML_OutputFolderPath.is_dir()
 # EN_SPACE = ' '
 EM_SPACE = ' '
 # NARROW_NON_BREAK_SPACE = ' '
-# BOOKLIST_OT39 = ('GEN','EXO','LEV','NUM','DEU','JOS','JDG','RUT','SA1','SA2','KI1','KI2','CH1','CH2',
-#                 'EZR','NEH','EST','JOB','PSA','PRO','ECC','SNG','ISA','JER','LAM','EZE',
-#                 'DAN','HOS','JOL','AMO','OBA','JNA','MIC','NAH','HAB','ZEP','HAG','ZEC','MAL')
-# assert len(BOOKLIST_OT39) == 39
-# NT_BBB_LIST = ('MAT','MRK','LUK','JHN','ACT','ROM','CO1','CO2','GAL','EPH','PHP','COL','TH1','TH2','TI1','TI2','TIT','PHM','HEB','JAM','PE1','PE2','JN1','JN2','JN3','JDE','REV')
+NL = '\n' # New line
+
 NT_BBB_LIST = ('JHN','MAT','MRK','LUK','ACT','ROM','CO1','CO2','GAL','EPH','PHP','COL','TH1','TH2','TI1','TI2','TIT','PHM','HEB','JAM','PE1','PE2','JN1','JN2','JN3','JDE','REV')
 assert len(NT_BBB_LIST) == 27
 BBB_LIST = BOOKLIST_OT39 + NT_BBB_LIST
@@ -1866,14 +1866,14 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
 
     usfm_header_html = f'<p class="h">{book_h_field} quick links (Skip down to <a href="#Disclaimer">book intro</a> or <a href="#C1">start of text</a>)</p>'
     chapter_links = [f'<a href="#C{chapter_num}">C{chapter_num}</a>' for chapter_num in range( 1, int(C)+1 ) ]
-    chapter_html = f'<p class="chapterLinks">{EM_SPACE.join(chapter_links)}</p><!--chapterLinks-->'
-    section_heading_links = [f'{heading} <a href="#C{c}V{v}">{c}:{v}</a>' for c,v,heading in section1_headers ]
+    chapter_html = f'<p class="chapterLinks">{EM_SPACE.join(chapter_links)}</p><!--chapterLinks-->' if len(chapter_links)>1 else ''
+    section_heading_links = [f'<a href="#C{c}V{v}">{heading} {c}:{v}</a>' for c,v,heading in section1_headers ]
     section_heading_html = f'<p class="sectionHeadingLinks">{"<br>".join(section_heading_links)}</p><!--sectionHeadingLinks-->'
-    book_start_html = f'{start_html}{links_html}\n{usfm_header_html}\n{chapter_html}\n{section_heading_html}'
+    book_start_html = f'''{start_html}{links_html}\n{usfm_header_html}\n{f'{chapter_html}{NL}' if chapter_html else ''}{section_heading_html}'''
 
     return ( book_start_html,
              book_html,
-             f'<h3>Quick links</h3>\n{chapter_html}\n{section_heading_html}\n{links_html}\n{END_HTML}' )
+             f'''<h3>Quick links</h3>\n{f'{chapter_html}{NL}' if chapter_html else ''}{section_heading_html}\n{links_html}\n{END_HTML}''' )
 # end of pack_HTML_side-by-side.extract_and_combine_simple_HTML()
 
 

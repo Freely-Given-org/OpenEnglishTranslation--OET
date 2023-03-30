@@ -104,6 +104,8 @@ $(RV_HTML): $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py convert_OET
 SideBySide: $(LV_HTML) $(RV_HTML) pack_HTML_side-by-side.py
 	@echo "\n\nPack LV and RV HTML files side-by-side…\n"
 	@$(Python) pack_HTML_side-by-side.py
+	@echo "\n\nCount our progress…\n"
+	@$(Python) count_completed_OET-RV_verses.py
 
 
 #=== Clean up stuff =======================
