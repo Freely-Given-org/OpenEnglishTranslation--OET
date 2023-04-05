@@ -10,6 +10,7 @@ RV_HTML := $(wildcard ../derivedTexts/simpleHTML/ReadersVersion/*.html)
 RV_ESFM := $(wildcard ../translatedTexts/ReadersVersion/*.ESFM)
 final_LV_OT_USFM := $(wildcard ../intermediateTexts/auto_edited_OT_USFM/*.usfm)
 final_LV_NT_ESFM := $(wildcard ../intermediateTexts/auto_edited_VLT_ESFM/*.ESFM)
+LV_ESFM := $(final_LV_NT_ESFM)
 intermediate_LV_OT_USFM := $(wildcard ../intermediateTexts/modified_source_glossed_OSHB_USFM/*.usfm)
 intermediate_LV_NT_ESFM := $(wildcard ../intermediateTexts/modified_source_VLT_ESFM/*.ESFM)
 original_wordtable = ../intermediateTexts/modified_source_VLT_ESFM/OET_NT_word_table.8columns.tsv
