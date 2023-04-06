@@ -33,7 +33,7 @@ If you’re a professional Bible translator or consultant or notes-writer, or if
 
 ## Schedule
 
-As of January 2023, the following books have been drafted (but still expecting to undergo much checking and revision): John (15,635~879~21), Mark (11,304~678~16), Ephesians (2,422~155~6), Titus (659~46~3), 3 John (219~15~1), and Jude (461~25~1). These represent 30,700/138,020 (22%) Greek words, 1,798/7956 (23%) NT verses, or 48/260 (18%) NT chapters.
+As of January 2023, the following books have been drafted (but still expecting to undergo much checking and revision): John (15,635~879~21), Mark (11,304--678--16), Ephesians (2,422--155--6), Titus (659--46--3), 3 John (219--15--1), and Jude (461--25--1). These represent 30,700/138,020 Greek words (22%), 1,798/7956 NT verses (23%), or 48/260 NT chapters (18%).
 
 Our goal is to complete the first draft and first check of the _OET_ New Testament by the end of 2023.
 
