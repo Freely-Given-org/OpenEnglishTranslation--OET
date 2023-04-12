@@ -55,10 +55,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-03-29' # by RJH
+LAST_MODIFIED_DATE = '2023-04-12' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.49'
+PROGRAM_VERSION = '0.51'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -344,7 +344,7 @@ SBS_INDEX_INTRO_HTML = """<!DOCTYPE html>
         Certainly by showing a little more respect for Hebrew names,
             we hope to make this Bible translation a little more “Jew-friendly”.
         If you have difficulty following the names in the <em>Literal Version</em>,
-        you can always look across to the <em>Literal Version</em>.
+        you can always look across to the <em>Readers' Version</em>.
         (Most English readers looking at names in the Bible all the way from <i>Jericho</i> to <i>Jesus</i>
         would have no idea that there's no <b>J</b> letter or sound in either Hebrew or Greek,
         plus there's absolutely no such name as <i>James</i> in the New Testament manuscripts—it's
@@ -951,12 +951,12 @@ SBS_GLOSSARY_HTML = """<!DOCTYPE html>
 <body>
   <p><a href="../">Up</a></p>
   <h1>Open English Translation (OET) Development</h1>
-  <h2>Glossary</h2>
-  <p>This page contains words which need further explanations.
-    <br><br></p>
+  <h1>Glossary</h1>
+  <p>This page contains words which need further explanations.</p>
 
+  <h2>Pinned entries</h2>
   <h3 id="genitive">of</h3>
-  <p>This little explanation is placed at the top (out of alphabetical order),
+  <p>This little explanation is pinned at the top (out of alphabetical order),
         because it's quite a wide issue that affects quite a bit
         of the way that the <em>OET</em> phrases things.</p>
   <p>First a little explanation:
@@ -999,7 +999,7 @@ SBS_GLOSSARY_HTML = """<!DOCTYPE html>
     <li>1:24 Jesus <b>of</b> Nazareth (cf. Jesus from Nazareth)</li>
     <li>1:24 the Holy One <b>of</b> God (cf. God's Holy One, or the Holy One from God???)</li>
     <li>1:28 the whole region <b>of</b> Galilee (cf. whole Galilee region)</li>
-    <li>1:29 the home <b>of</b> Simon and Andrew (cf. Andrew and Simon's home)</li>
+    <li>1:29 the home <b>of</b> Simon and Andrew (cf. Simon and Andrew's home)</li>
   </ul>
   <p>The aim here is not to criticise the NIV,
         and certainly if you compared Mark 1 with the KJV
@@ -1007,15 +1007,16 @@ SBS_GLOSSARY_HTML = """<!DOCTYPE html>
     Rather <b>we're just trying to explain why the <em>OET RV</em> might
         sound quite informal</b> or even ‘colloquial’ to you—<b>it's because
         we've made an effort to translate the Bible into our own language
-        that we speak every day</b>—not the quaint sounding language
-        of the literal Greek or six-hundred year old English.</p>
+        that we speak every day</b>—not the quaint-sounding word order
+        of the literal Greek or of five-hundred year old English
+        that feels more devout or ‘religious’ to some.</p>
   <p>And if you didn't read our <a href="index.html#Intro">introduction</a> yet,
         <b>the reason that we've wanted to translate the Bible into
         our own modern English is that we want to make it easier for
         you to share it with others</b>.</p>
 
-  <p><br>
-    The remainder of these glossary words are listed in English alphabetical order…
+  <h2>Alphabetical entries</h3>
+  <p>The remainder of these glossary words are listed in English alphabetical order…
     <br><br></p>
 
   <h3 id="angel">angel, messenger</h3>
@@ -1185,7 +1186,7 @@ SBS_GLOSSARY_HTML = """<!DOCTYPE html>
   <p>John's gospel account typically <a href="https://biblehub.com/parallel/john/1-1.htm">starts with</a>
         “In the beginning was the Word…” but which word was it? “Tree?” “Apple?” “Snake?”
     Of course it's not talking about the normal meaning of the word <i>word</i>,
-        but a religious use of the word as it later refers to Jesus the Messiah.
+        but an old-fashioned, religious use of the word as John's account later refers to Jesus the Messiah.
     But Jesus isn't a word like the words on this page, but it refers to something totally different.
     In fact, the meaning of Greek
         <a href="https://biblehub.com/greek/3056.htm">λόγος</a> (‘logos’—but not the plural of logo),

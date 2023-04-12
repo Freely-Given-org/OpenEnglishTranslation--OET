@@ -54,10 +54,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-04-03' # by RJH
+LAST_MODIFIED_DATE = '2023-04-05' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.17'
+PROGRAM_VERSION = '0.18'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -73,9 +73,9 @@ assert OET_LV_NT_ESFM_InputFolderPath.is_dir()
 assert OET_RV_ESFM_FolderPath.is_dir()
 
 # EN_SPACE = ' '
-EM_SPACE = ' '
-NARROW_NON_BREAK_SPACE = ' '
-BACKSLASH = '\\'
+# EM_SPACE = ' '
+# NARROW_NON_BREAK_SPACE = ' '
+# BACKSLASH = '\\'
 
 
 class State:
@@ -367,6 +367,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     The lowercase letters mark other significant places where the words are not normally capitalized.
     """
     # fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {BBB} {c}:{v} {len(rvEntryList)}, {len(lvEntryList)} )" )
+    assert state.tableHeaderList.index( 'GlossCaps' ) == 4 # Check we have the correct column below
 
     rvText = ''
     for rvEntry in rvEntryList:
@@ -426,8 +427,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
         # print( f"{lvUpperWords=} from {lvText=}")
         firstLVUpperWord, firstLVUpperNumber = lvUpperWords[0].split( '¦' )
         rowForFirstLVUpperWord = state.wordTable[int(firstLVUpperNumber)]
-        assert state.tableHeaderList.index( 'GlossCaps' ) == 3
-        firstLVUpperWordCapsFlags = rowForFirstLVUpperWord[3]
+        firstLVUpperWordCapsFlags = rowForFirstLVUpperWord[4]
         # print( f"{firstLVUpperWordCapsFlags=} from {rowForFirstLVUpperWord=}" )
         if 'G' not in firstLVUpperWordCapsFlags and 'W' not in firstLVUpperWordCapsFlags and firstLVUpperWord!='I':
             # print( f"Removing first LV Uppercase word: '{lvUpperWords[0]}' with '{firstLVUpperWordCapsFlags}'")

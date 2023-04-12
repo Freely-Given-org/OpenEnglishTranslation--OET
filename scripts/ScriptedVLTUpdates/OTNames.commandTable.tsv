@@ -216,3 +216,7 @@ dHG									Zion			Σιών/(צִיּוֹן)
 
 # Other
 dHG									Ephphatha			Ἐφφαθά/(פְתַח)
+
+# Post-processing -- we superscript people and place names that end with El or Yah
+									ʼēl)			\sup ʼēl\sup*)
+									yāh)			\sup yāh\sup*)

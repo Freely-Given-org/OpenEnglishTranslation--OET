@@ -49,10 +49,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-03-26' # by RJH
+LAST_MODIFIED_DATE = '2023-04-05' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
-PROGRAM_VERSION = '0.82'
+PROGRAM_VERSION = '0.83'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -61,7 +61,7 @@ DEBUGGING_THIS_MODULE = False
 VLT_ESFM_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_VLT_ESFM/' )
 RV_ESFM_OUTPUT_FOLDERPATH = Path( '../translatedTexts/ReadersVersion/' ) # We also copy the wordfile to this folder
 
-OUR_EXPORT_TABLE_FILENAME = 'OET_NT_word_table.8columns.tsv' # We make this first 8-column version here (from the collation table)
+OUR_EXPORT_TABLE_FILENAME = 'OET_NT_word_table.9columns.tsv' # We make this first 9-column version here (from the collation table)
 
 
 state = None
@@ -287,7 +287,7 @@ def export_esfm_literal_English_gloss() -> bool:
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Exporting ESFM auxilliary word table to {table_filepath}…" )
     next_word_number = 1 # word count includes variants
     with open(table_filepath, 'wt', encoding='utf-8') as table_output_file:
-        table_output_file.write( 'Ref\tGreek\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\n' ) # Write TSV header row
+        table_output_file.write( 'Ref\tGreek\tLemma\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\n' ) # Write TSV header row
         for collation_row_number, collation_row in enumerate(collation_csv_rows):
             collation_id, verse_id = collation_row['CollationID'], collation_row['VerseID']
             assert len(collation_id) == 11 and collation_id.isdigit()
@@ -383,7 +383,8 @@ def export_esfm_literal_English_gloss() -> bool:
             if collation_row['Koine'].startswith( '=' ): # it's a nomina sacra
                 assert 'N' not in glossCapitalisationString # already -- SR GNT doesn't currently use N -- see documentation of apply_gloss_capitalization() below
                 glossCapitalisationString = f'{glossCapitalisationString}N' # We add an extra letter
-            table_row = f"{ref}\t{collation_row['Medieval']}\t{word_list_string}\t{glossCapitalisationString}\t{'' if collation_row['Probability'] is None else collation_row['Probability']}\t{collation_row['LexemeID']}\t{collation_row['Role']}\t{collation_row['Morphology']}"
+            adjusted_lemma = adjust_lemma(collation_row['Lemma'], collation_row['Medieval'])
+            table_row = f"{ref}\t{collation_row['Medieval']}\t{adjusted_lemma}\t{word_list_string}\t{glossCapitalisationString}\t{'' if collation_row['Probability'] is None else collation_row['Probability']}\t{collation_row['LexemeID']}\t{collation_row['Role']}\t{collation_row['Morphology']}"
             assert '"' not in table_row # Check in case we needed any escaping
             table_output_file.write( f'{table_row}\n' )
             # NOTE: The above code writes every table row, even for variants which aren't in the SR (but their probability column will be zero)
@@ -401,6 +402,40 @@ def export_esfm_literal_English_gloss() -> bool:
 
     return True
 # end of extract_VLT_NT_to_ESFM.export_esfm_literal_English_gloss
+
+
+def adjust_lemma(given_lemma:str, given_Greek_word:str) -> str:
+    """
+    We need the actual Greek word as well
+        because the rough breathing is not indicated on the given_lemma form.
+    """
+    # print(f"adjust_lemma({given_lemma=}, {given_Greek_word=})…")
+    if not given_lemma or not given_Greek_word: return given_lemma
+
+    adjusted_lemma = given_lemma.replace('h','ē').replace('w','ō').replace('q','th').replace('gg','ŋg').replace('y','ps').replace('c','χ') # .replace('f','ph')
+    # Gloss word 'the' appears with 37 Greek words: {'τοὺς': 724, 'τὸν': 1247, 'ὁ': 1930, 'τῆς': 1006, 'τὴν': 1313, 
+    #       'αἱ': 130, 'τοῦ': 1720, 'ἡ': 813, 'τὸ': 1477, 'τῶν': 1158, 'τῇ': 690, 'τοῖς': 619, 'τὰ': 802, 'οἱ': 1029, 
+    #       'τὰς': 310, 'τῷ': 955, 'ταῖς': 177, 'τοῦς': 2, 'τόν': 4, 'τῶ': 1, 'τῆν': 1, 'τό': 5, 'τοὺ': 1, 'ἠ': 1, 
+    #       'τὴς': 2, 'οἳ': 4, 'του': 1, 'ἧ': 1, 'οἷ': 1, 'τὴ': 2, 'οἵ': 4, 'ᾧ': 1, 'τά': 2, 'ἥ': 3, 'τήν': 3, 'ὅ': 3, 'ἃ': 5}
+    if given_lemma == 'o' \
+    and given_Greek_word in ('ὁ','τοῦ','τὸ','τὸν','τῶν','τὴν','τῆς','οἱ','τῷ','τοὺς','ἡ','τῇ','τοῖς','τὰ','τὰς','αἱ','ταῖς','τοῦς','τό',
+                'τόν','τῶ','τῆν','τοὺ','ἠ','τὴς','οἳ','του','ἧ','οἷ','τὴ','οἵ','ᾧ','τά','ἥ','τήν','ὅ','ἃ'):
+        adjusted_lemma = 'ho' # article
+    elif given_lemma == 'os' \
+    and given_Greek_word in ('ὃς','ὁ','ἃ','ἡ','οὓς','οἱ','οἳ','αἳ','ὅς','ἣ','ὃν','οἷς','αἱ','ὃ','ὅ','οἵ','οὖ','οὗ'):
+        adjusted_lemma = 'hos' # relative pronoun
+    elif given_Greek_word[0] in 'ἁἅἑἡἣἧἵὁὅὃὑὡὥὧᾧ' \
+    or given_Greek_word.startswith('αἷ') \
+    or given_Greek_word.startswith('οἱ') or given_Greek_word.startswith('οἷ') \
+    or given_Greek_word.startswith('οὓ') or given_Greek_word.startswith('οὗ') or given_Greek_word.startswith('οὕ') \
+    or given_Greek_word.startswith('υἱ'):
+        adjusted_lemma = f'h{adjusted_lemma}'
+    elif given_Greek_word[0] in 'ἙἝὙ':
+        adjusted_lemma = f'H{adjusted_lemma}'
+    elif given_Greek_word[0] == 'ῥ' and adjusted_lemma.startswith('r'): # Don't understand ῥηθὲν,legw
+        adjusted_lemma = adjusted_lemma.replace('r','rh',1)
+    return adjusted_lemma
+# end of adjust_lemma function
 
 
 def get_verse_rows(given_collation_rows: List[dict], row_index: int) -> List[list]:

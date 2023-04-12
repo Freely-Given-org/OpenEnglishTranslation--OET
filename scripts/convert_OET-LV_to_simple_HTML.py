@@ -47,10 +47,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2023-03-27' # by RJH
+LAST_MODIFIED_DATE = '2023-04-11' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.59'
+PROGRAM_VERSION = '0.61'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -897,8 +897,8 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
     book_start_html = f'{start_html}{links_html}\n{chapters_html}'
 
     # Add our various spans to special text features
-    book_html = book_html.replace( '\\nd ', '<span class="nominaSacra">' ) \
-                .replace( '\\nd*', '</span>' )
+    book_html = book_html.replace( '\\nd ', '<span class="nominaSacra">' ).replace( '\\nd*', '</span>' ) \
+                .replace( '\\sup ', '<sup>' ).replace( '\\sup*', '</sup>' )
     book_html = book_html.replace( '\\add +', '<span class="addArticle">' ) \
                 .replace( '\\add -', '<span class="unusedArticle">' ) \
                 .replace( '\\add =', '<span class="addCopula">' ) \
@@ -1014,16 +1014,32 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
 
         columnHeaders = word_table[0]
         dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Word table column headers = '{columnHeaders}'" )
-        assert columnHeaders == 'Ref\tGreek\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\tTags', columnHeaders # If not, probably need to fix some stuff
+        assert columnHeaders == 'Ref\tGreek\tLemma\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\tTags', columnHeaders # If not, probably need to fix some stuff
 
         # First make a list of each place the same Greek word (and matching morphology) is used
-        # TODO: The word table has Matthew at the beginning (whereas the OET places John at the beginning)
+        # TODO: The word table has Matthew at the beginning (whereas the OET places John at the beginning) so we do JHN first
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Finding all uses of {len(word_table)-1:,} words in {word_table_filename}…" )
-        usageDict = defaultdict(list)
+        formUsageDict, lemmaDict = defaultdict(list), defaultdict(list)
+        formGlossesDict, lemmaGlossesDict = defaultdict(set), defaultdict(set)
         for n, columns_string in enumerate( word_table[1:], start=1 ):
-            wordRef, greek, glossWords, glossCaps,probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
-            if probability:
-                usageDict[(greek,None if morphology=='None' else morphology)].append( n )
+            if columns_string.startswith( 'JHN' ):
+                wordRef, greek, lemma, glossWords, glossCaps,probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
+                if probability:
+                    formKey2Tuple = (greek, None if morphology=='None' else morphology)
+                    formUsageDict[formKey2Tuple].append( n )
+                    lemmaDict[lemma].append( n )
+                    formGlossesDict[formKey2Tuple].add( glossWords )
+                    lemmaGlossesDict[lemma].add( glossWords )
+            elif formUsageDict: break # Must have already finished John
+        for n, columns_string in enumerate( word_table[1:], start=1 ):
+            if not columns_string.startswith( 'JHN' ):
+                wordRef, greek, lemma, glossWords, glossCaps,probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
+                if probability:
+                    formKey2Tuple = (greek, None if morphology=='None' else morphology)
+                    formUsageDict[formKey2Tuple].append( n )
+                    lemmaDict[lemma].append( n )
+                    formGlossesDict[formKey2Tuple].add( glossWords )
+                    lemmaGlossesDict[lemma].add( glossWords )
 
         # Now create the individual word pages
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f" Making pages for {len(word_table)-1:,} words in {word_table_filename}…" )
@@ -1031,7 +1047,7 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
             # print( n, columns_string )
             output_filename = f'W_{n}.html'
             # dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Got '{columns_string}' for '{output_filename}'" )
-            wordRef, greek, glossWords, glossCaps,probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
+            wordRef, greek, lemma, glossWords, glossCaps,probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
             if extendedStrongs == 'None': extendedStrongs = None
             if roleLetter == 'None': roleLetter = None
             if morphology == 'None': morphology = None
@@ -1099,15 +1115,15 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
 <p>{prevLink}{oetLink}{nextLink}</p>
 <p><span title="Goes to Statistical Restoration Greek page"><a href="https://GreekCNTR.org/collation/?{CNTR_BOOK_ID_MAP[BBB]}{C.zfill(3)}{V.zfill(3)}">SR GNT {tidyBBB} {C}:{V}</a></span>
  {probabilityField}<b>{greek}</b> ({transliterate_Greek(greek)}) {translation}
- Strongs=<span title="Goes to Strongs dictionary"><a href="https://BibleHub.com/greek/{strongs}.htm">{extendedStrongs}</a></span><br>
+ Strongs=<span title="Goes to Strongs dictionary"><a href="https://BibleHub.com/greek/{strongs}.htm">{extendedStrongs}</a></span> <small>Lemma={lemma}</small><br>
  {roleField} Morphology=<b>{morphology}</b>:{moodField}{tenseField}{voiceField}{personField}{caseField}{genderField}{numberField}{f'<br>  {semanticExtras}' if semanticExtras else ''}</p>{'' if probability else f'{NEWLINE}</div><!--unusedWord-->'}'''
 
             if probability: # Now list all the other places where this same Greek word is used
                 other_count = 0
-                thisWordNumberList = usageDict[(greek,morphology)]
+                thisWordNumberList = formUsageDict[(greek,morphology)]
                 for oN in thisWordNumberList:
                     if oN==n: continue # don't duplicate the word we're making the page for
-                    oWordRef, oGreek, oGlossWords, oGlossCaps,oProbability, oExtendedStrongs, oRoleLetter, oMorphology, oTagsStr = word_table[oN].split( '\t' )
+                    oWordRef, oGreek, oLemma, oGlossWords, oGlossCaps,oProbability, oExtendedStrongs, oRoleLetter, oMorphology, oTagsStr = word_table[oN].split( '\t' )
                     oBBB, oCVW = oWordRef.split( '_', 1 )
                     oC, oVW = oCVW.split( ':', 1 )
                     oV, oW = oVW.split( 'w', 1 )

@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-03-26' # by RJH
+LAST_MODIFIED_DATE = '2023-04-06' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.58'
+PROGRAM_VERSION = '0.59'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -256,7 +256,7 @@ RV_INDEX_INTRO_HTML = """<!DOCTYPE html>
         Certainly by showing a little more respect for Hebrew names,
             we hope to make this Bible translation a little more “Jew-friendly”.
         If you have difficulty following the names in the <em>Literal Version</em>,
-        you can always look across to the <em>Literal Version</em>.
+        you can always look across to the <em>Readers' Version</em>.
         (Most English readers looking at names in the Bible all the way from <i>Jericho</i> to <i>Jesus</i>
         would have no idea that there's no <b>J</b> letter or sound in either Hebrew or Greek,
         plus there's absolutely no such name as <i>James</i> in the New Testament manuscripts—it's
