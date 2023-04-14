@@ -38,7 +38,6 @@ from gettext import gettext as _
 from tracemalloc import start
 from typing import List, Tuple, Optional
 from pathlib import Path
-# from datetime import datetime
 import logging
 import re
 
@@ -54,10 +53,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-04-05' # by RJH
+LAST_MODIFIED_DATE = '2023-04-14' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.18'
+PROGRAM_VERSION = '0.19'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -270,11 +269,11 @@ def connect_OET_RV( rv, lv ):
     fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {rv}, {lv} )" )
 
     # Go through books chapters and verses
-    totalSimpleListedAdds = totalProperNounAdds = totalFirstPartMatchedAdds = 0
+    totalSimpleListedAdds = totalProperNounAdds = totalFirstPartMatchedAdds = totalManualMatchedAdds = 0
     for BBB,bookObject in lv.books.items():
         vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Processing connect words for OET {BBB}…" )
 
-        bookSimpleListedAdds = bookProperNounAdds = booksFirstPartMatchedAdds = 0
+        bookSimpleListedAdds = bookProperNounAdds = bookFirstPartMatchedAdds = bookManualMatchedAdds = 0
         wordFileName = bookObject.ESFMWordTableFilename
         if wordFileName:
             assert wordFileName.endswith( '.tsv' )
@@ -314,10 +313,11 @@ def connect_OET_RV( rv, lv ):
                         continue
                     # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"RV entries: ({len(rvVerseEntryList)}) {rvVerseEntryList}")
                     # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"LV entries: ({len(lvVerseEntryList)}) {lvVerseEntryList}")
-                    numSimpleListedAdds, numProperNounAdds, numFirstPartMatchedAdds = connect_OET_RV_Verse( BBB, c, v, rvVerseEntryList, lvVerseEntryList ) # updates state.rvESFMLines
+                    numSimpleListedAdds, numProperNounAdds, numFirstPartMatchedAdds, numManualMatchedAdds = connect_OET_RV_Verse( BBB, c, v, rvVerseEntryList, lvVerseEntryList ) # updates state.rvESFMLines
                     bookSimpleListedAdds += numSimpleListedAdds
                     bookProperNounAdds += numProperNounAdds
-                    booksFirstPartMatchedAdds += numFirstPartMatchedAdds
+                    bookFirstPartMatchedAdds += numFirstPartMatchedAdds
+                    bookManualMatchedAdds += numManualMatchedAdds
         else:
             dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"connect_OET_RV {BBB} has {numChapters} chapters!!!" )
             assert BBB in ('INT','FRT',)
@@ -338,9 +338,10 @@ def connect_OET_RV( rv, lv ):
             vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    No changes made to OET-RV {BBB}." )
         totalSimpleListedAdds += bookSimpleListedAdds
         totalProperNounAdds += bookProperNounAdds
-        totalFirstPartMatchedAdds += booksFirstPartMatchedAdds
+        totalFirstPartMatchedAdds += bookFirstPartMatchedAdds
+        totalManualMatchedAdds += bookManualMatchedAdds
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Did total of {totalSimpleListedAdds:,} simple listed adds, {totalProperNounAdds:,} proper noun adds, and {totalFirstPartMatchedAdds:,} first part adds." )
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Did total of {totalSimpleListedAdds:,} simple listed adds, {totalProperNounAdds:,} proper noun adds, {totalFirstPartMatchedAdds:,} first part adds and {totalManualMatchedAdds:,} manual adds." )
 # end of connect_OET-RV_words_via_OET-LV.connect_OET_RV
 
 
@@ -440,7 +441,9 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
 
     numFirstPartMatchedWords = matchWordsFirstParts( BBB, c,v, rvWords, lvWords )
 
-    return numSimpleListedAdds, numProperNounAdds, numFirstPartMatchedWords
+    numHandmatches = matchWordsManually( BBB, c,v, rvWords, lvWords )
+
+    return numSimpleListedAdds, numProperNounAdds, numFirstPartMatchedWords, numHandmatches
 # end of connect_OET-RV_words_via_OET-LV.connect_OET_RV_Verse
 
 
@@ -600,6 +603,63 @@ def matchWordsFirstParts( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList
 
     return numAdded
 # end of connect_OET-RV_words_via_OET-LV.matchWordsFirstParts
+
+
+def matchWordsManually( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:List[str] ) -> int:
+    """
+    """
+    fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsManually( {BBB} {c}:{v} {rvWordList}, {lvWordList} )" )
+    assert rvWordList and lvWordList
+
+    # Firstly make a matching list of LV words without the word numbers
+    simpleLVWordList = []
+    for lvWordStr in lvWordList:
+        try: lvWord, lvNumber = lvWordStr.split( '¦' )
+        except ValueError:
+            logging.critical( f"matchWordsManually failed on {lvWordStr=}" )
+            lvWord = lvWordStr # One or two little mess-ups
+        simpleLVWordList.append( lvWord )
+
+    numAdded = 0
+    # Match RV 'your' with LV 'of you'
+    if 1:
+        rvWord, lvWords = 'your', ['of','you']
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{rvWord=} {lvWords=}" )
+
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Looking for RV '{rvWord}'" )
+        rvIndexes = []
+        for rvIx,thisRvWord in enumerate( rvWordList ):
+            if thisRvWord == rvWord:
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Found RV '{rvWord}' in {BBB} {c}:{v}")
+                rvIndexes.append( rvIx )
+
+        if len(rvIndexes) == 1: # Only one RV word matches
+            rvWord = rvWordList[rvIndexes[0]]
+            if '¦' not in rvWord:
+                # Now see if we have the LV word(s)
+                matchedLvWordCount = 0
+                for lvIx, thisLvWord in enumerate( simpleLVWordList ):
+                    if thisLvWord == lvWords[0]: # matched one word
+                        matchedLvWordCount += 1
+                        if matchedLvWordCount == len(lvWords): break
+                        if lvIx < len(simpleLVWordList)-1:
+                            if simpleLVWordList[lvIx+1] == lvWords[1]:
+                                matchedLvWordCount += 1
+                                if matchedLvWordCount == len(lvWords): break
+                else: # no match (no break from above loop)
+                    return 0
+                print( f"matchWordsManually {BBB} {c}:{v} matched {rvWord=} {lvWords=}" )
+                lvWord,lvWordNumber,lvWordRow = getLVWordRow( lvWordList[lvIx] )
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManually() is adding a number to RV '{rvWord}' from '{lvWord}' at {BBB} {c}:{v} {rvIx=}")
+                result = addNumberToRVWord( BBB, c,v, rvWord, lvWordNumber )
+                if result:
+                    numAdded += 1
+                else:
+                    logging.warning( f"Got addNumberToRVWord( {BBB} {c}:{v} '{rvWord}' {lvWordNumber} ) result = {result}" )
+                    # why_did_we_fail
+
+    return numAdded
+# end of connect_OET-RV_words_via_OET-LV.matchWordsManually
 
 
 def getLVWordRow( wordWithNumber:str ) -> Tuple[str,int,List[str]]:

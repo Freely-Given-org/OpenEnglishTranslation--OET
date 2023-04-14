@@ -773,7 +773,7 @@ def produce_HTML_files() -> None:
             illegalWordLinkRegex2 = re.compile( '¦[1-9][0-9]{0,5}[a-z]' ) # Has letters AFTER the wordlink number
             assert not illegalWordLinkRegex2.search( esfm_text), f"illegalWordLinkRegex2 failed when loading {BBB}" # Don't want double-ups of wordlink numbers
             if source_filename.endswith( '.ESFM' ):
-                word_table_filename = 'OET_NT_word_table.tsv'
+                word_table_filename = 'OET-LV_NT_word_table.tsv'
                 word_table_filenames.add( word_table_filename )
                 if f'\\rem WORDTABLE {word_table_filename}\n' in esfm_text:
                     if word_table is None:

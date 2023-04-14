@@ -57,10 +57,10 @@ from BibleOrgSys.Reference.BibleVersificationSystems import BibleVersificationSy
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-03-28' # by RJH
+LAST_MODIFIED_DATE = '2023-04-13' # by RJH
 SHORT_PROGRAM_NAME = "count_completed_OET-RV_verses"
 PROGRAM_NAME = "Count completed OET-RV verses"
-PROGRAM_VERSION = '0.10'
+PROGRAM_VERSION = '0.15'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -98,10 +98,10 @@ def main():
     """
     BibleOrgSysGlobals.introduceProgram( __name__, PROGRAM_NAME_VERSION, LAST_MODIFIED_DATE )
 
-    finishedOTVerses = finishedNTVerses = 0
-    finishedOTChapters = finishedNTChapters = 0
-    totalOTVerses = totalNTVerses = 0
-    totalOTChapters = totalNTChapters = 0
+    finishedOTVerses = finishedNTVerses = finishedVerses = 0
+    finishedOTChapters = finishedNTChapters = finishedChapters = 0
+    totalOTVerses = totalNTVerses = totalVerses = 0
+    totalOTChapters = totalNTChapters = totalChapters = 0
 
     # Do OT first
     for filename in glob.glob( os.path.join( OET_RV_ESFM_InputFolderPath, 'OET-RV_???.ESFM' ) ):
@@ -109,19 +109,23 @@ def main():
         if BBB in BOOKLIST_OT39:
             totalBookChapters = state.versificationSystem.getNumChapters( BBB )
             totalOTChapters += totalBookChapters
+            totalChapters += totalBookChapters
             totalBookVerses = state.versificationSystem.getTotalNumVerses( BBB )
             totalOTVerses += totalBookVerses
+            totalVerses += totalBookVerses
             with open( OET_RV_ESFM_InputFolderPath.joinpath( filename ), 'rt', encoding='utf-8' ) as ESFMFile:
                 ESFMText = ESFMFile.read()
             unfinishedCount = ESFMText.count( '◘' )
             finishedVerseCount = totalBookVerses - min( unfinishedCount, totalBookVerses )
             finishedOTVerses += finishedVerseCount
+            finishedVerses += finishedVerseCount
             finishedPercentage = finishedVerseCount * 100 // totalBookVerses
             approxFinishedChapters = (finishedPercentage * totalBookChapters + 50) // 100
             finishedOTChapters += approxFinishedChapters
+            finishedChapters += approxFinishedChapters
             if unfinishedCount:
                 vPrint( 'Info' if finishedVerseCount==0 else 'Normal', DEBUGGING_THIS_MODULE, f"  OET-RV OT {BBB} has {finishedVerseCount:,}/{totalBookVerses:,} = {finishedPercentage}% verses finished (approx. {approxFinishedChapters}/{totalBookChapters} chapters finished)." )
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"OET-RV OT verses are {finishedOTVerses*100//totalOTVerses}% finished. (Approx {finishedOTChapters:,}/{totalOTChapters:,} = {finishedOTChapters*100//totalOTChapters}% chapters.)" )
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"OET-RV OT verses are {finishedOTVerses*100//totalOTVerses}% finished. (Approx {finishedOTChapters:,}/{totalOTChapters:,} = {finishedOTChapters*100//totalOTChapters}% chapters.)\n" )
 
     # Now do NT
     for filename in glob.glob( os.path.join( OET_RV_ESFM_InputFolderPath, 'OET-RV_???.ESFM' ) ):
@@ -129,19 +133,26 @@ def main():
         if BBB in BOOKLIST_NT27:
             totalBookChapters = state.versificationSystem.getNumChapters( BBB )
             totalNTChapters += totalBookChapters
+            totalChapters += totalBookChapters
             totalBookVerses = state.versificationSystem.getTotalNumVerses( BBB )
             totalNTVerses += totalBookVerses
+            totalVerses += totalBookVerses
             with open( OET_RV_ESFM_InputFolderPath.joinpath( filename ), 'rt', encoding='utf-8' ) as ESFMFile:
                 ESFMText = ESFMFile.read()
             unfinishedCount = ESFMText.count( '◘' )
             finishedVerseCount = totalBookVerses - min( unfinishedCount, totalBookVerses )
             finishedNTVerses += finishedVerseCount
+            finishedVerses += finishedVerseCount
             finishedPercentage = finishedVerseCount * 100 // totalBookVerses
             approxFinishedChapters = (finishedPercentage * totalBookChapters + 50) // 100
             finishedNTChapters += approxFinishedChapters
+            finishedChapters += approxFinishedChapters
             if unfinishedCount:
                 vPrint( 'Info' if finishedVerseCount==0 else 'Normal', DEBUGGING_THIS_MODULE, f"  OET-RV NT {BBB} has {finishedVerseCount:,}/{totalBookVerses:,} = {finishedPercentage}% verses finished (approx. {approxFinishedChapters}/{totalBookChapters} chapters finished)." )
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"OET-RV NT verses are {finishedNTVerses*100//totalNTVerses}% finished. (Approx {finishedNTChapters:,}/{totalNTChapters:,} = {finishedNTChapters*100//totalNTChapters}% chapters.)" )
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"OET-RV NT verses are {finishedNTVerses*100//totalNTVerses}% finished. (Approx {finishedNTChapters:,}/{totalNTChapters:,} = {finishedNTChapters*100//totalNTChapters}% chapters.)\n" )
+
+    # Now do whole Bible
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"OET-RV verses are {finishedVerses*100//totalVerses}% finished. (Approx {finishedChapters:,}/{totalChapters:,} = {finishedChapters*100//totalChapters}% chapters.)\n" )
 # end of count_completed_OET-RV_verses.main
 
 
