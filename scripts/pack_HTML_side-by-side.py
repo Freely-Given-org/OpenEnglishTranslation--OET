@@ -55,10 +55,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-04-12' # by RJH
+LAST_MODIFIED_DATE = '2023-04-16' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.51'
+PROGRAM_VERSION = '0.52'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -1428,7 +1428,7 @@ They are clearly marked because we've tried to be as honest and transparent as p
 <p>The <span class="add">lighter coloured words</span> in the <em>LV</em> are words which
 aren't needed in the grammar of the original languages but are required or implied in English.
 You can read the <a href="index.html#Key">Key</a> to learn more about them.
-The underlines in the <em>LV</em> show when one original language word needs to be translated into two or more English words.
+The underlines joining words in the <em>LV</em> show when one original language word needs to be translated into two or more English words.
 (Just hide them with the button if you don't need that information and find it distracting.)
 Also, the majority of sentences in the <em>LV</em> don't have the words
 put into a sensible English order yet.

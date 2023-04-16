@@ -53,10 +53,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-04-14' # by RJH
+LAST_MODIFIED_DATE = '2023-04-16' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.19'
+PROGRAM_VERSION = '0.20'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -345,7 +345,7 @@ def connect_OET_RV( rv, lv ):
 # end of connect_OET-RV_words_via_OET-LV.connect_OET_RV
 
 
-def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tuple[int,int,int]:
+def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tuple[int,int,int,int]:
     """
     Some undocumented documentation of the GlossCaps column from state.wordTable:
         ●    U – lexical entry capitalized
@@ -381,7 +381,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
         lvMarker,lvRest = lvEntry.getMarker(), lvEntry.getCleanText()
         if lvMarker in ('v~','p~'):
             lvText = f"{lvText}{' ' if lvText else ''}{lvRest.replace('+','')}"
-    if not rvText or not lvText: return 0, 0, 0
+    if not rvText or not lvText: return 0, 0, 0, 0
     rvAdjText = rvText.replace('≈','').replace('…','') \
                 .replace('.','').replace(',','').replace(':','').replace(';','').replace('?','').replace('!','').replace('—',' ') \
                 .replace( '(', '').replace( ')', '' ) \
@@ -396,7 +396,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     if lvAdjText.startswith( '/' ): lvAdjText = lvAdjText[1:]
     # print( f"({len(rvAdjText)}) {rvAdjText=}")
     # print( f"({len(lvAdjText)}) {lvAdjText=}")
-    if not rvAdjText or not lvAdjText: return 0, 0, 0
+    if not rvAdjText or not lvAdjText: return 0, 0, 0, 0
 
     lvWords = lvAdjText.split( ' ' )
     rvWords = rvAdjText.split( ' ' )
@@ -611,7 +611,7 @@ def matchWordsManually( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:L
     fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsManually( {BBB} {c}:{v} {rvWordList}, {lvWordList} )" )
     assert rvWordList and lvWordList
 
-    # Firstly make a matching list of LV words without the word numbers
+    # Firstly make matching lists of LV and RV words without the word numbers
     simpleLVWordList = []
     for lvWordStr in lvWordList:
         try: lvWord, lvNumber = lvWordStr.split( '¦' )
@@ -619,18 +619,28 @@ def matchWordsManually( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:L
             logging.critical( f"matchWordsManually failed on {lvWordStr=}" )
             lvWord = lvWordStr # One or two little mess-ups
         simpleLVWordList.append( lvWord )
+    simpleRVWordList = []
+    for rvWordStr in rvWordList:
+        try: rvWord, rvNumber = rvWordStr.split( '¦' )
+        except ValueError: # Lots of RV words don't have numbers yet
+            rvWord = rvWordStr
+        simpleRVWordList.append( rvWord )
 
     numAdded = 0
-    # Match RV 'your' with LV 'of you'
-    if 1:
-        rvWord, lvWords = 'your', ['of','you']
+
+    # This list is 1 RV from 1 or many LV
+    # Match things like RV 'your' with LV 'of you'
+    for rvWord, lvWords in (
+            ('my', ['of','me']), ('your', ['of','you']), ('his', ['of','him']), ('her', ['of','her']), ('our', ['of','us']), ('their', ['of','them'])
+            ):
         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{rvWord=} {lvWords=}" )
+        assert len(lvWords) <= 2, lvWords # if more, we need to add searching code down below
 
         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Looking for RV '{rvWord}'" )
         rvIndexes = []
         for rvIx,thisRvWord in enumerate( rvWordList ):
             if thisRvWord == rvWord:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Found RV '{rvWord}' in {BBB} {c}:{v}")
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  matchWordsManuallyA found RV '{rvWord}' in {BBB} {c}:{v}")
                 rvIndexes.append( rvIx )
 
         if len(rvIndexes) == 1: # Only one RV word matches
@@ -646,17 +656,64 @@ def matchWordsManually( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:L
                             if simpleLVWordList[lvIx+1] == lvWords[1]:
                                 matchedLvWordCount += 1
                                 if matchedLvWordCount == len(lvWords): break
-                else: # no match (no break from above loop)
-                    return 0
-                print( f"matchWordsManually {BBB} {c}:{v} matched {rvWord=} {lvWords=}" )
-                lvWord,lvWordNumber,lvWordRow = getLVWordRow( lvWordList[lvIx] )
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManually() is adding a number to RV '{rvWord}' from '{lvWord}' at {BBB} {c}:{v} {rvIx=}")
+                else: # no match (no break from above/inner loop)
+                    continue # in the outer loop
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManuallyA {BBB} {c}:{v} matched {rvWord=} {lvWords=}" )
+                lvWord,lvWordNumber,_lvWordRow = getLVWordRow( lvWordList[lvIx] )
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManuallyA is adding a number to RV '{rvWord}' from '{lvWord}' at {BBB} {c}:{v} {lvIx=}")
                 result = addNumberToRVWord( BBB, c,v, rvWord, lvWordNumber )
                 if result:
                     numAdded += 1
                 else:
                     logging.warning( f"Got addNumberToRVWord( {BBB} {c}:{v} '{rvWord}' {lvWordNumber} ) result = {result}" )
                     # why_did_we_fail
+
+    # This list is one LV word to many RV words
+    for lvWord, rvWords,  in (
+            ('brothers', ['brothers','and','sisters']), ('brothers', ['fellow','believers']),
+            ):
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvWord=} {rvWords=}" )
+        assert len(rvWords) <= 3, rvWords # if more, we need to add searching code down below
+
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Looking for LV '{lvWord}'" )
+        lvIndexes = []
+        for lvIx,thisLvWord in enumerate( simpleLVWordList ):
+            if thisLvWord == lvWord:
+                dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  matchWordsManuallyB found LV '{lvWord}' in {BBB} {c}:{v}")
+                lvIndexes.append( lvIx )
+
+        if len(lvIndexes) == 1: # Only one LV word matches
+            lvWord = lvWordList[lvIndexes[0]]
+            assert '¦' in lvWord
+            print( "    here")
+
+            # Now see if we have the RV word(s)
+            matchedRvWordCount = 0
+            for rvIx, thisRvWord in enumerate( simpleRVWordList ):
+                if thisRvWord == rvWords[0]: # matched one word
+                    matchedRvWordCount += 1
+                    if matchedRvWordCount == len(rvWords): break # matched one word
+                    if rvIx < len(rvWordList)-1:
+                        if rvWordList[rvIx+1] == rvWords[1]:
+                            matchedRvWordCount += 1
+                            if matchedRvWordCount == len(rvWords): break # matched two words
+                            if rvIx < len(rvWordList)-2:
+                                if rvWordList[rvIx+2] == rvWords[2]:
+                                    matchedRvWordCount += 1
+                                    if matchedRvWordCount == len(rvWords): break # matched three words
+            else: # no match (no break from above/inner loop)
+                continue # in the outer loop
+            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"matchWordsManuallyB {BBB} {c}:{v} matched {lvWord=} {rvWords=}" )
+            # lvWord,lvWordNumber,lvWordRow = getLVWordRow( lvWordList[lvIx] )
+            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"matchWordsManuallyB is adding a number to RV {rvWords} from '{lvWord}' at {BBB} {c}:{v} {rvIx=}")
+            for rvWord in rvWords:
+                result = addNumberToRVWord( BBB, c,v, rvWord, lvWordNumber )
+                if result:
+                    numAdded += 1
+                else:
+                    logging.warning( f"Got addNumberToRVWord( {BBB} {c}:{v} '{rvWord}' {lvWordNumber} ) result = {result}" )
+                # why_did_we_fail
+            halt
 
     return numAdded
 # end of connect_OET-RV_words_via_OET-LV.matchWordsManually
