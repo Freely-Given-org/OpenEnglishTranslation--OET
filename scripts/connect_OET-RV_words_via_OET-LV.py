@@ -331,7 +331,7 @@ def connect_OET_RV( rv, lv ):
             assert not illegalWordLinkRegex2.search( newESFMtext), f"illegalWordLinkRegex2 failed before saving {BBB}" # Don't want double-ups of wordlink numbers
             with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
                 esfmFile.write( newESFMtext )
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Did {bookSimpleListedAdds:,} simple listed adds and {bookProperNounAdds:,} proper noun adds for {BBB}." )
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Did {bookSimpleListedAdds:,} simple listed adds, {bookProperNounAdds:,} proper noun adds, {bookFirstPartMatchedAdds:,} first part adds and {bookManualMatchedAdds:,} manual adds for {BBB}." )
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Saved OET-RV {BBB} {len(newESFMtext):,} bytes to {rvESFMFilepath}" )
         else:
             # assert bookSimpleListedAdds == bookProperNounAdds == 0
@@ -631,7 +631,8 @@ def matchWordsManually( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:L
     # This list is 1 RV from 1 or many LV
     # Match things like RV 'your' with LV 'of you'
     for rvWord, lvWords in (
-            ('my', ['of','me']), ('your', ['of','you']), ('his', ['of','him']), ('her', ['of','her']), ('our', ['of','us']), ('their', ['of','them'])
+            ('my', ['of','me']), ('your', ['of','you']), ('his', ['of','him']), ('her', ['of','her']), ('our', ['of','us']), ('their', ['of','them']),
+            ('My', ['of','me']), ('Your', ['of','you']), ('His', ['of','him']), ('Her', ['of','her']), ('Our', ['of','us']), ('Their', ['of','them']),
             ):
         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{rvWord=} {lvWords=}" )
         assert len(lvWords) <= 2, lvWords # if more, we need to add searching code down below
@@ -669,8 +670,10 @@ def matchWordsManually( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:L
                     # why_did_we_fail
 
     # This list is one LV word to many RV words
-    for lvWord, rvWords,  in (
+    for lvWord, rvWords  in (
             ('brothers', ['brothers','and','sisters']), ('brothers', ['fellow','believers']),
+            ('Brothers', ['Brothers','and','sisters']), ('Brothers', ['Fellow','believers']),
+            ('Brothers', ['brothers','and','sisters']), ('Brothers', ['fellow','believers']),
             ):
         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvWord=} {rvWords=}" )
         assert len(rvWords) <= 3, rvWords # if more, we need to add searching code down below
@@ -679,33 +682,37 @@ def matchWordsManually( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:L
         lvIndexes = []
         for lvIx,thisLvWord in enumerate( simpleLVWordList ):
             if thisLvWord == lvWord:
-                dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  matchWordsManuallyB found LV '{lvWord}' in {BBB} {c}:{v}")
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  matchWordsManuallyB found LV '{lvWord}' in {BBB} {c}:{v}")
                 lvIndexes.append( lvIx )
 
         if len(lvIndexes) == 1: # Only one LV word matches
-            lvWord = lvWordList[lvIndexes[0]]
-            assert '¦' in lvWord
-            print( "    here")
+            lvWordStr = lvWordList[lvIndexes[0]]
+            assert '¦' in lvWordStr
+            lvWord, lvWordNumber = lvWordStr.split( '¦' )
+            # print( f"    here with {lvWordStr} -> '{lvWord}' and {lvWordNumber=}")
 
             # Now see if we have the RV word(s)
             matchedRvWordCount = 0
             for rvIx, thisRvWord in enumerate( simpleRVWordList ):
                 if thisRvWord == rvWords[0]: # matched one word
                     matchedRvWordCount += 1
+                    # print( f"      Matched 1/{len(rvWords)} @ {rvIx} with '{thisRvWord}' ({rvWordList[rvIx]})")
                     if matchedRvWordCount == len(rvWords): break # matched one word
-                    if rvIx < len(rvWordList)-1:
-                        if rvWordList[rvIx+1] == rvWords[1]:
+                    if rvIx < len(simpleRVWordList)-1:
+                        if simpleRVWordList[rvIx+1] == rvWords[1]:
                             matchedRvWordCount += 1
+                            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"        Matched 2/{len(rvWords)} @ {rvIx+1} with '{simpleRVWordList[rvIx+1]}' ({rvWordList[rvIx+1]})")
                             if matchedRvWordCount == len(rvWords): break # matched two words
-                            if rvIx < len(rvWordList)-2:
-                                if rvWordList[rvIx+2] == rvWords[2]:
+                            if rvIx < len(simpleRVWordList)-2:
+                                if simpleRVWordList[rvIx+2] == rvWords[2]:
                                     matchedRvWordCount += 1
+                                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"          Matched 3/{len(rvWords)} @ {rvIx+2} with '{simpleRVWordList[rvIx+2]}' ({rvWordList[rvIx+2]})")
                                     if matchedRvWordCount == len(rvWords): break # matched three words
             else: # no match (no break from above/inner loop)
                 continue # in the outer loop
-            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"matchWordsManuallyB {BBB} {c}:{v} matched {lvWord=} {rvWords=}" )
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    matchWordsManuallyB {BBB} {c}:{v} matched {lvWord=} {rvWords=}" )
             # lvWord,lvWordNumber,lvWordRow = getLVWordRow( lvWordList[lvIx] )
-            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"matchWordsManuallyB is adding a number to RV {rvWords} from '{lvWord}' at {BBB} {c}:{v} {rvIx=}")
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManuallyB is adding a number to RV {rvWords} from '{lvWord}' at {BBB} {c}:{v} {rvIx=}")
             for rvWord in rvWords:
                 result = addNumberToRVWord( BBB, c,v, rvWord, lvWordNumber )
                 if result:
@@ -713,7 +720,6 @@ def matchWordsManually( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:L
                 else:
                     logging.warning( f"Got addNumberToRVWord( {BBB} {c}:{v} '{rvWord}' {lvWordNumber} ) result = {result}" )
                 # why_did_we_fail
-            halt
 
     return numAdded
 # end of connect_OET-RV_words_via_OET-LV.matchWordsManually
