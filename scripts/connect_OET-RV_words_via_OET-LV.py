@@ -53,10 +53,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-04-17' # by RJH
+LAST_MODIFIED_DATE = '2023-04-18' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.21'
+PROGRAM_VERSION = '0.22'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -638,8 +638,10 @@ def matchWordsManually( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:L
             ('gave', 'given'),
             ('pleasing', 'acceptable'),
             # NT names
-            ('Jesus', 'Yaʸsous'),
             ('Paul', 'Paulos'),
+            ('Theophilus', 'Theofilos'),
+            ('Timothy', 'Timotheos'),
+            ('Yeshua', 'Yaʸsous'),
             # Vocab differences
             ('message', 'word'), ('messenger', 'word'),
             ):
@@ -714,17 +716,17 @@ def matchWordsManually( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:L
                     if rvIx < len(simpleRVWordList)-1:
                         if simpleRVWordList[rvIx+1] == rvWords[1]:
                             matchedRvWordCount += 1
-                            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"        Matched 2/{len(rvWords)} @ {rvIx+1} with '{simpleRVWordList[rvIx+1]}' ({rvWordList[rvIx+1]})")
+                            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"        Matched 2/{len(rvWords)} @ {rvIx+1} with '{rvWordList[rvIx+1]}' from '{rvWordStr}'")
                             if matchedRvWordCount == len(rvWords): break # matched two words
                             if rvIx < len(simpleRVWordList)-2:
                                 if simpleRVWordList[rvIx+2] == rvWords[2]:
                                     matchedRvWordCount += 1
-                                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"          Matched 3/{len(rvWords)} @ {rvIx+2} with '{simpleRVWordList[rvIx+2]}' ({rvWordList[rvIx+2]})")
+                                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"          Matched 3/{len(rvWords)} @ {rvIx+2} with '{rvWordList[rvIx+2]}' from '{rvWordStr}'")
                                     if matchedRvWordCount == len(rvWords): break # matched three words
                                     if rvIx < len(simpleRVWordList)-3:
                                         if simpleRVWordList[rvIx+3] == rvWords[3]:
                                             matchedRvWordCount += 1
-                                            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"          Matched 4/{len(rvWords)} @ {rvIx+3} with '{simpleRVWordList[rvIx+3]}' ({rvWordList[rvIx+3]})")
+                                            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"          Matched 4/{len(rvWords)} @ {rvIx+3} with '{rvWordList[rvIx+3]}' from '{rvWordStr}'")
                                             if matchedRvWordCount == len(rvWords): break # matched four words
             else: # no match (no break from above/inner loop)
                 continue # in the outer loop
