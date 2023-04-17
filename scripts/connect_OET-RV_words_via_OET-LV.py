@@ -53,10 +53,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-04-16' # by RJH
+LAST_MODIFIED_DATE = '2023-04-17' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.20'
+PROGRAM_VERSION = '0.21'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -630,11 +630,21 @@ def matchWordsManually( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:L
 
     # This list is 1 RV from 1 or many LV
     # Match things like RV 'your' with LV 'of you'
-    for rvWord, lvWords in (
-            ('my', ['of','me']), ('your', ['of','you']), ('his', ['of','him']), ('her', ['of','her']), ('our', ['of','us']), ('their', ['of','them']),
-            ('My', ['of','me']), ('Your', ['of','you']), ('His', ['of','him']), ('Her', ['of','her']), ('Our', ['of','us']), ('Their', ['of','them']),
+    for rvWord, lvWordStr in (
+            # Greek possessive pronouns usually appear after the head noun
+            ('my', 'of me'), ('your', 'of you'), ('his', 'of him'), ('her', 'of her'), ('our', 'of us'), ('their', 'of them'),
+            ('My', 'of me'), ('Your', 'of you'), ('His', 'of him'), ('Her', 'of her'), ('Our', 'of us'), ('Their', 'of them'),
+            # The following entries handle tense changes
+            ('gave', 'given'),
+            ('pleasing', 'acceptable'),
+            # NT names
+            ('Jesus', 'Yaʸsous'),
+            ('Paul', 'Paulos'),
+            # Vocab differences
+            ('message', 'word'), ('messenger', 'word'),
             ):
-        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{rvWord=} {lvWords=}" )
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{rvWord=} {lvWordStr=}" )
+        lvWords = lvWordStr.split( ' ' )
         assert len(lvWords) <= 2, lvWords # if more, we need to add searching code down below
 
         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Looking for RV '{rvWord}'" )
@@ -670,13 +680,16 @@ def matchWordsManually( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:L
                     # why_did_we_fail
 
     # This list is one LV word to many RV words
-    for lvWord, rvWords  in (
-            ('brothers', ['brothers','and','sisters']), ('brothers', ['fellow','believers']),
-            ('Brothers', ['Brothers','and','sisters']), ('Brothers', ['Fellow','believers']),
-            ('Brothers', ['brothers','and','sisters']), ('Brothers', ['fellow','believers']),
+    for lvWord, rvWordStr  in (
+            ('brothers', 'brothers and sisters'), ('brothers', 'fellow believers'),
+            ('Brothers', 'Brothers and sisters'), ('Brothers', 'Fellow believers'),
+            ('Brothers', 'brothers and sisters'), ('Brothers', 'fellow believers'),
+
+            ('Truly', 'May it be so')
             ):
-        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvWord=} {rvWords=}" )
-        assert len(rvWords) <= 3, rvWords # if more, we need to add searching code down below
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvWord=} {rvWordStr=}" )
+        rvWords = rvWordStr.split( ' ' )
+        assert len(rvWords) <= 4, rvWords # if more, we need to add searching code down below
 
         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Looking for LV '{lvWord}'" )
         lvIndexes = []
@@ -708,6 +721,11 @@ def matchWordsManually( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:L
                                     matchedRvWordCount += 1
                                     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"          Matched 3/{len(rvWords)} @ {rvIx+2} with '{simpleRVWordList[rvIx+2]}' ({rvWordList[rvIx+2]})")
                                     if matchedRvWordCount == len(rvWords): break # matched three words
+                                    if rvIx < len(simpleRVWordList)-3:
+                                        if simpleRVWordList[rvIx+3] == rvWords[3]:
+                                            matchedRvWordCount += 1
+                                            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"          Matched 4/{len(rvWords)} @ {rvIx+3} with '{simpleRVWordList[rvIx+3]}' ({rvWordList[rvIx+3]})")
+                                            if matchedRvWordCount == len(rvWords): break # matched four words
             else: # no match (no break from above/inner loop)
                 continue # in the outer loop
             dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    matchWordsManuallyB {BBB} {c}:{v} matched {lvWord=} {rvWords=}" )

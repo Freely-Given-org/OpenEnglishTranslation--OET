@@ -48,7 +48,7 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-04-06' # by RJH
+LAST_MODIFIED_DATE = '2023-04-17' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
 PROGRAM_VERSION = '0.59'
@@ -188,7 +188,7 @@ RV_INDEX_INTRO_HTML = """<!DOCTYPE html>
         <i>Which English Bible translation should I use?</i>
         And often the answer is that there's no single Bible translation which can meet
         all of the needs of the thoughtful reader.
-        Why not? It's because we often have two related desires that we need answered:<p>
+        Why not? It's because we often have two related desires that we need answered:</p>
       <ol><li>What does the original (Hebrew or Greek) text actually say? and</li>
         <li>What did the original writer mean? (i.e., What should we understand from it?)</li></ol>
       <p>Our answer has always been that it's best to use <b>two</b> translations—one more <b>literal</b>
@@ -214,7 +214,7 @@ RV_INDEX_INTRO_HTML = """<!DOCTYPE html>
     <p id="LearningGoal">A secondary goal is to expose more people to some of the background of where our Bibles come from
         and how translators make decisions,
         i.e., <b>to teach</b> a little more about original manuscripts
-        and to challenge a little more about translation traditions that can possibly be improved.<p>
+        and to challenge a little more about translation traditions that can possibly be improved.</p>
   <h3 id="Distinctives">Distinctives</h3>
     <p>The OET has the following distinguishing points:</p>
     <ul><li>An easy-to-understand <em>Readers' Version</em> alongside a very <em>Literal Version</em></li>
@@ -225,9 +225,9 @@ RV_INDEX_INTRO_HTML = """<!DOCTYPE html>
             and most of the other features that help modern Bible readers.</li>
     <li>This <em>Readers' Version</em> uses modern units for all measurements (easy to understand and visualise),
             whereas the <em>Literal Version</em> retains the ancient units (useful for historical and symbolic studies).</li>
-    <li>This <em>Readers' Version</em> uses well-known figures of speech,
-            or if the original figure of speech is not readily understandable,
-            explains the point that the author appears to be trying to express.
+    <li>This <em>Readers' Version</em> keeps well-known figures of speech,
+            but if the original figure of speech is not readily understandable,
+            it explains the point that the author appears to be trying to express.
         On the other hand, the <em>Literal Version</em> retains the original figurative language
             (even if it's not a figure of speech that we are familiar with).</li>
     <li><i>Up</i> and <i>down</i> in the original languages (and thus in the <em>Literal Version</em>)
@@ -275,7 +275,7 @@ RV_INDEX_INTRO_HTML = """<!DOCTYPE html>
         actually gets translated, so this example becomes <i>immerse</i>.</li>
     <li><i>Italics</i> are only used for <em>emphasis</em>, not to indicate <i>added words</i> as historically done in
         older translations due to limitations of the original printing processes.
-        The <em>OET</em> fixes the problem where most modern printing uses <i>italics</i> for <em>emphasis</em>
+        The <em>OET</em> fixes the problem where most modern books use <i>italics</i> for <em>emphasis</em>
         whereas older Bibles use <i>italics</i> for the words which should actually be <b>deemphasised</b>,
         i.e., the words which actually <b>aren't</b> in the original manuscripts!</li>
     <li>The English <i>Christ</i> is an adapted transliteration of the Koine Greek word <i>Kristos</i>
@@ -284,12 +284,12 @@ RV_INDEX_INTRO_HTML = """<!DOCTYPE html>
         It seems to make sense to only use one word consistently
             rather than using two words for the same thing
             (just because they came from two different languages),
-            so the <em>OET</em> has elected to only use <i>Messiah</i>.
+            so the <em>OET</em> has elected to only use <i>messiah</i>.
         However, these words actually have a meaning, just as <i>President</i> is not just a title,
             but someone who <i>presides</i> over governmental meetings.
         So going a step further, we have chosen to use the contemporary
             <b>meaning</b> of the word in the <em>Literal Version</em>.
-        The original meaning is <i>one who is anointed</i> (by pouring a hornful of oil over them),
+        The original meaning is <i>one who is anointed</i> (by having a hornful of oil poured over them),
             but we use the extended meaning which is <i>one who is selected/chosen (by God)</i>.</li>
     <li>Most readers living in modern democracies
             have never been familiar with the concept of an ancient king or <i>lord</i>
@@ -342,7 +342,7 @@ RV_INDEX_INTRO_HTML = """<!DOCTYPE html>
         </ol>
         <small>Alert readers might be aware that there's a play on words here in the gospels.
         When Jesus talked about himself <i>being raised up</i>, it was deliberately ambiguous
-            because his hearers didn't understand until right near the end that he was going to be executed.
+            because his hearers didn't understand until right near the end that he was going to be executed so coming back to life wasn't on their minds.
         So we, looking back in history, know that he was talking about coming back to life,
             but at the time, they were just very confused and didn't understand what he meant.
         But amazingly, as well as referring to his resurrection, <i>raising</i> also refers to his crucifixion
@@ -356,17 +356,17 @@ RV_INDEX_INTRO_HTML = """<!DOCTYPE html>
             <b>before</b> <em>Matthew</em>.
         This has a couple of advantages:
         <ol><li>The Old Testament starts with “In the beginning, Elohim created…”
-            and the New Testament starts with “In the beginning was the Messenger…”.<li>
+            and the New Testament starts with “In the beginning was the message…”.</li>
         <li><em>Acts</em> ends up right after the first book by its author <em>Luke</em>.</li>
         <li>It just reminds readers that the order of the “books” in the Bible
             is not set by sacred degree--only by tradition.</li>
         </ol>
-        Some do complain that the traditional order of the first four gospel accounts
+        <small>(Some do complain that the traditional order of the first four gospel accounts
             represent the lion, the calf, the man, and the eagle of Rev 4:6-7
             which allegedly match with the banners (not described in the Bible) of the four divisions
-            of the tribes of Israel mentioned in Numbers 2.</li>
+            of the tribes of Israel mentioned in Numbers 2.)</small></li>
     <li>Beware of some traps interpreting the <em>Literal Version</em>.
-        Because it's not designed to be used alone (but rather alongside this <em>Readers' Version</em>)
+        Because it's not designed to be used alone (but rather alongside this <em>Readers' Version</em>),
         it's <b>much more literal</b> than most other “literal versions”.
         You'll quickly notice lighter colours that mark the deemphasis of words
         that had to be added to make the English sentences even make sense.
@@ -478,7 +478,7 @@ RV_INDEX_INTRO_HTML = """<!DOCTYPE html>
         pronounce <i>Ja</i> (as <i>Ya</i>),
         you'd already be taking a big step towards getting Biblical names more correct.
         (This deviation is not any kind of conspiracy—simply
-        an unfortunate accident of history and continuous language change.)<p>
+        an unfortunate accident of history and continuous language change.)</p>
     <p>In the New Testament, the situation is already complicated by the fact that
         Old Testament (Hebrew) names have been written as Greek-speakers would think of them.
         So English <i>Jesus</i>
@@ -522,7 +522,7 @@ RV_INDEX_INTRO_HTML = """<!DOCTYPE html>
         together they are the centre of only one syllable.
         Note that we use <i>aʸ</i> for Greek letter (eta),
         because it's actually only one letter, not a dipthong,
-        even though it's pronounced very much like <i>ai</i>.<p>
+        even though it's pronounced very much like <i>ai</i>.</p>
     <p>We use the symbol ' to mark a <a href="https://en.wikipedia.org/wiki/Glottal_stop">glottal stop</a>
         which is the sound that some UK speakers put in the middle of the word <i>butter</i> (ba'a),
         so <i>Abra'am</i> (from the Greek) is three distinct syllables—those
@@ -672,7 +672,7 @@ RV_FAQ_HTML = """<!DOCTYPE html>
         other than trying to use as little as possible of the language and terms
         that you would only hear in church circles
         and which don't correspond with how other people would normally talk in the 2020s.<br>
-    In other words, the <em>RV</em> is aimed at sharing the Good News
+    In other words, the <em>RV</em> is aimed at sharing the Good Message
         with non-churched people without having to speak ‘Church English’ (or <i>jargon</i>) to them.
     A side-effect is to express the message of the Biblical texts with fresh phrasing
         that's different from many traditional English translations
