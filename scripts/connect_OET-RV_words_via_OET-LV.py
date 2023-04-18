@@ -638,6 +638,8 @@ def matchWordsManually( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:L
             ('gave', 'given'),
             ('pleasing', 'acceptable'),
             # NT names
+            ('Demetrius', 'Daʸmaʸtrios'), ('Diotrephes', 'Diotrefaʸs'),
+            ('Gaius', 'Gaios'),
             ('Paul', 'Paulos'),
             ('Theophilus', 'Theofilos'),
             ('Timothy', 'Timotheos'),
