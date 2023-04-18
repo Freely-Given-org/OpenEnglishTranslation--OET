@@ -605,22 +605,23 @@ def matchWordsFirstParts( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList
 # end of connect_OET-RV_words_via_OET-LV.matchWordsFirstParts
 
 
-def matchWordsManually( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:List[str] ) -> int:
+def matchWordsManually( BBB:str, c:int,v:int, rvVerseWordList:List[str], lvVerseWordList:List[str] ) -> int:
     """
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsManually( {BBB} {c}:{v} {rvWordList}, {lvWordList} )" )
-    assert rvWordList and lvWordList
+    fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsManually( {BBB} {c}:{v} {rvVerseWordList}, {lvVerseWordList} )" )
+    assert rvVerseWordList and lvVerseWordList
+    # if BBB=='JAM' and 'Jacob' in rvVerseWordList: print( lvVerseWordList ); halt
 
     # Firstly make matching lists of LV and RV words without the word numbers
     simpleLVWordList = []
-    for lvWordStr in lvWordList:
+    for lvWordStr in lvVerseWordList:
         try: lvWord, lvNumber = lvWordStr.split( '¦' )
         except ValueError:
             logging.critical( f"matchWordsManually failed on {lvWordStr=}" )
             lvWord = lvWordStr # One or two little mess-ups
         simpleLVWordList.append( lvWord )
     simpleRVWordList = []
-    for rvWordStr in rvWordList:
+    for rvWordStr in rvVerseWordList:
         try: rvWord, rvNumber = rvWordStr.split( '¦' )
         except ValueError: # Lots of RV words don't have numbers yet
             rvWord = rvWordStr
@@ -637,15 +638,24 @@ def matchWordsManually( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:L
             # The following entries handle tense changes
             ('gave', 'given'),
             ('pleasing', 'acceptable'),
-            # NT names
+            ('requested', 'requesting'),
+            # Names (parentheses have been deleted)
+            ('Abraham','Abraʼam/ʼAvərāhām'),('Abraham','Abraʼam'),
+            ('David','Dawid/Dāvid'),('David','Dawid'),
             ('Demetrius', 'Daʸmaʸtrios'), ('Diotrephes', 'Diotrefaʸs'),
             ('Gaius', 'Gaios'),
+            ('Jacob', 'Yakōbos'),('Jacob', 'Yakōbos/Yaˊaqov'),
             ('Paul', 'Paulos'),
             ('Theophilus', 'Theofilos'),
             ('Timothy', 'Timotheos'),
-            ('Yeshua', 'Yaʸsous'),
+            ('Yeshua', 'Yaʸsous'),('Yeshua', 'Yaʸsous/Yəhōshūˊa'),
             # Vocab differences
+            ('cheerful','joy'),
             ('message', 'word'), ('messenger', 'word'),
+            ('poor','humble'),
+            ('wealthy','rich'),
+            # Capitalisation differences
+            ('God','god'),
             ):
         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{rvWord=} {lvWordStr=}" )
         lvWords = lvWordStr.split( ' ' )
@@ -653,13 +663,13 @@ def matchWordsManually( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:L
 
         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Looking for RV '{rvWord}'" )
         rvIndexes = []
-        for rvIx,thisRvWord in enumerate( rvWordList ):
+        for rvIx,thisRvWord in enumerate( rvVerseWordList ):
             if thisRvWord == rvWord:
                 dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  matchWordsManuallyA found RV '{rvWord}' in {BBB} {c}:{v}")
                 rvIndexes.append( rvIx )
 
         if len(rvIndexes) == 1: # Only one RV word matches
-            rvWord = rvWordList[rvIndexes[0]]
+            rvWord = rvVerseWordList[rvIndexes[0]]
             if '¦' not in rvWord:
                 # Now see if we have the LV word(s)
                 matchedLvWordCount = 0
@@ -674,7 +684,7 @@ def matchWordsManually( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:L
                 else: # no match (no break from above/inner loop)
                     continue # in the outer loop
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManuallyA {BBB} {c}:{v} matched {rvWord=} {lvWords=}" )
-                lvWord,lvWordNumber,_lvWordRow = getLVWordRow( lvWordList[lvIx] )
+                lvWord,lvWordNumber,_lvWordRow = getLVWordRow( lvVerseWordList[lvIx] )
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManuallyA is adding a number to RV '{rvWord}' from '{lvWord}' at {BBB} {c}:{v} {lvIx=}")
                 result = addNumberToRVWord( BBB, c,v, rvWord, lvWordNumber )
                 if result:
@@ -703,7 +713,7 @@ def matchWordsManually( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:L
                 lvIndexes.append( lvIx )
 
         if len(lvIndexes) == 1: # Only one LV word matches
-            lvWordStr = lvWordList[lvIndexes[0]]
+            lvWordStr = lvVerseWordList[lvIndexes[0]]
             assert '¦' in lvWordStr
             lvWord, lvWordNumber = lvWordStr.split( '¦' )
             # print( f"    here with {lvWordStr} -> '{lvWord}' and {lvWordNumber=}")
@@ -718,17 +728,17 @@ def matchWordsManually( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:L
                     if rvIx < len(simpleRVWordList)-1:
                         if simpleRVWordList[rvIx+1] == rvWords[1]:
                             matchedRvWordCount += 1
-                            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"        Matched 2/{len(rvWords)} @ {rvIx+1} with '{rvWordList[rvIx+1]}' from '{rvWordStr}'")
+                            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"        Matched 2/{len(rvWords)} @ {rvIx+1} with '{rvVerseWordList[rvIx+1]}' from '{rvWordStr}'")
                             if matchedRvWordCount == len(rvWords): break # matched two words
                             if rvIx < len(simpleRVWordList)-2:
                                 if simpleRVWordList[rvIx+2] == rvWords[2]:
                                     matchedRvWordCount += 1
-                                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"          Matched 3/{len(rvWords)} @ {rvIx+2} with '{rvWordList[rvIx+2]}' from '{rvWordStr}'")
+                                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"          Matched 3/{len(rvWords)} @ {rvIx+2} with '{rvVerseWordList[rvIx+2]}' from '{rvWordStr}'")
                                     if matchedRvWordCount == len(rvWords): break # matched three words
                                     if rvIx < len(simpleRVWordList)-3:
                                         if simpleRVWordList[rvIx+3] == rvWords[3]:
                                             matchedRvWordCount += 1
-                                            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"          Matched 4/{len(rvWords)} @ {rvIx+3} with '{rvWordList[rvIx+3]}' from '{rvWordStr}'")
+                                            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"          Matched 4/{len(rvWords)} @ {rvIx+3} with '{rvVerseWordList[rvIx+3]}' from '{rvWordStr}'")
                                             if matchedRvWordCount == len(rvWords): break # matched four words
             else: # no match (no break from above/inner loop)
                 continue # in the outer loop

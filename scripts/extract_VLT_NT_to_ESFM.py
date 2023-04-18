@@ -49,13 +49,13 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-04-05' # by RJH
+LAST_MODIFIED_DATE = '2023-04-18' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
 PROGRAM_VERSION = '0.83'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
-DEBUGGING_THIS_MODULE = False
+DEBUGGING_THIS_MODULE = 99
 
 
 VLT_ESFM_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_VLT_ESFM/' )
@@ -387,7 +387,7 @@ def export_esfm_literal_English_gloss() -> bool:
             table_row = f"{ref}\t{collation_row['Medieval']}\t{adjusted_lemma}\t{word_list_string}\t{glossCapitalisationString}\t{'' if collation_row['Probability'] is None else collation_row['Probability']}\t{collation_row['LexemeID']}\t{collation_row['Role']}\t{collation_row['Morphology']}"
             assert '"' not in table_row # Check in case we needed any escaping
             table_output_file.write( f'{table_row}\n' )
-            # NOTE: The above code writes every table row, even for variants which aren't in the SR (but their probability column will be zero)
+            # NOTE: The above code writes every table row, even for variants which aren't in the SR (but their probability column will be negative)
             # (That's probably the best all-round solution, as it's capable of covering the apparatus as well.)
 
     if esfm_text: # write the last book
@@ -489,7 +489,7 @@ def get_gloss_word_index_list(given_verse_row_list: List[dict]) -> List[List[int
     # Make up the display order list for this new verse
     gloss_order_dict = {}
     for index,this_verse_row in enumerate(given_verse_row_list):
-        if this_verse_row['Probability'] and not this_verse_row['CollationID'].endswith('000'): # it's in the text and not word zero
+        if this_verse_row['Probability'] and int(this_verse_row['Probability'])>0 and not this_verse_row['CollationID'].endswith('000'): # it's in the text and not word zero
             try: gloss_order_int = int(this_verse_row['GlossOrder'])
             except ValueError: gloss_order_int = int(this_verse_row['CollationID'][8:]) # Use the word number if no GlossOrder field yet
             assert gloss_order_int not in gloss_order_dict, f"ERROR: {verse_id} has multiple GlossOrder={gloss_order_int} entries!"
@@ -544,7 +544,7 @@ def preform_gloss(thisList:List[Dict[str,str]], given_verse_row_index:int, last_
     if last_glossInsert:
         last_pre_punctuation, last_post_punctuation = separate_punctuation(last_given_verse_row['GlossPunctuation'])
         last_glossCapitalization = last_given_verse_row['GlossCapitalization']
-
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {last_glossInsert=}" )
 
     glossPre, glossHelper, glossWord, glossPost, glossPunctuation, glossCapitalization \
         = given_verse_row['GlossPre'], given_verse_row['GlossHelper'], given_verse_row['GlossWord'], given_verse_row['GlossPost'], given_verse_row['GlossPunctuation'], given_verse_row['GlossCapitalization']
@@ -645,7 +645,7 @@ def preform_gloss(thisList:List[Dict[str,str]], given_verse_row_index:int, last_
             last_glossWord = ''
         elif last_glossInsert == '=': # insert after helper and before word
             assert last_glossWord
-            assert glossHelper
+            assert glossHelper, given_verse_row
             # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Here with {last_glossCapitalization=} {last_glossWord=} {glossCapitalization=} {glossPre=} {glossHelper=} {glossWord=}")
             glossPre, glossHelper, last_glossWord = apply_gloss_capitalization(glossPre, glossHelper, last_glossWord, last_glossCapitalization)
             _dummyPre, _dummyHelper, glossWord = apply_gloss_capitalization('', '', glossWord, glossCapitalization)
