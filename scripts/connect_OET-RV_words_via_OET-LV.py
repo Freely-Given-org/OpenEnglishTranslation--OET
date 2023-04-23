@@ -53,10 +53,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-04-18' # by RJH
+LAST_MODIFIED_DATE = '2023-04-22' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.22'
+PROGRAM_VERSION = '0.26'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -92,7 +92,7 @@ class State:
             'birth', 'blood', 'boats','boat', 'bodies','body', 'boys','boy', 'bread', 'branches','branch', 'brothers','brother',
             'bulls','bull', 'burials','burial',
         'camels','camel', 'chairs','chair', 'chariots','chariot', 'chests','chest', 'children','child',
-            'cities','city', 'coats','coat', 'commands','command', 'compassion', 'councils','council', 'countries','country',
+            'cities','city', 'coats','coat', 'collectors','collector', 'commands','command', 'compassion', 'councils','council', 'countries','country',
             'craftsmen','craftsman', 'crowds','crowd',
         'danger', 'darkness', 'daughters','daughter', 'days','day',
             'death', 'deceivers','deceiver',
@@ -115,19 +115,20 @@ class State:
         'names','name', 'nations','nation', 'nets','net', 'news', 'noises','noise',
         'officers','officer', 'officials','official',
         'peace', 'pens','pen', 'people','person', 'places','place', 'powers','power', 'prayers','prayer', 'priests','priest', 'prisons','prison', 'promises','promise'
-        'rivers','river', 'roads','road', 'robes','robe', 'rocks','rock', 'ropes','rope', 'rulers','ruler',
+        'rivers','river', 'roads','road', 'robes','robe', 'rocks','rock', 'roofs','roof', 'ropes','rope', 'rulers','ruler',
         'sandals','sandal', 'sea',
             'scrolls','scroll',
             'servants','servant', 'services','service', 'shame', 'sheep', 'shepherds','shepherd', 'ships','ship',
             'signs','sign', 'silver', 'silversmiths','silversmith', 'sinners','sinner', 'sins','sin', 'sisters','sister', 'sky', 'slaves','slave',
             'soldiers','soldier', 'sons', 'souls','soul', 'spirits','spirit',
             'stars','star', 'stones','stone', 'streets','street', 'sun', 'swords','sword',
-        'tables','table', 'teachers','teacher', 'testimonies','testimony',
+        'tables','table', 'taxes','tax',
+            'teachers','teacher', 'testimonies','testimony',
             'theatres','theatre', 'things','thing', 'thrones','throne',
             'times','time', 'tombs','tomb', 'tongues','tongue', 'towns','town', 'trees','tree', 'truth',
         'vines','vine', 'visions','vision',
         'waists','waist', 'waters','water', 'ways','way',
-            'weeks','week', 'wilderness', 'widows','widow', 'wife','wives', 'woman','women', 'words','word', 'workers','worker',
+            'weeks','week', 'wilderness', 'widows','widow', 'wife','wives', 'winds','wind', 'woman','women', 'words','word', 'workers','worker',
         'years','year',
         )
     assert len(set(simpleNouns)) == len(simpleNouns) # Check for accidental duplicates
@@ -259,6 +260,8 @@ def main():
 # end of connect_OET-RV_words_via_OET-LV.main
 
 
+illegalWordLinkRegex1 = re.compile( '[0-9]¦' ) # Has digits BEFORE the broken pipe
+illegalWordLinkRegex2 = re.compile( '¦[1-9][0-9]{0,5}[a-z]' ) # Has letters immediately AFTER the wordlink number
 def connect_OET_RV( rv, lv ):
     """
     Firstly, load the OET-LV wordtable.
@@ -324,11 +327,11 @@ def connect_OET_RV( rv, lv ):
 
         newESFMtext = '\n'.join( state.rvESFMLines )
         if newESFMtext != state.rvESFMText:
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{BBB} ESFM text has changed {len(state.rvESFMText):,} -> {len(newESFMtext):,}" )
-            illegalWordLinkRegex1 = re.compile( '[0-9]¦' ) # Has digits BEFORE the broken pipe
-            assert not illegalWordLinkRegex1.search( newESFMtext), f"illegalWordLinkRegex1 failed before saving {BBB}" # Don't want double-ups of wordlink numbers
-            illegalWordLinkRegex2 = re.compile( '¦[1-9][0-9]{0,5}[a-z]' ) # Has letters AFTER the wordlink number
-            assert not illegalWordLinkRegex2.search( newESFMtext), f"illegalWordLinkRegex2 failed before saving {BBB}" # Don't want double-ups of wordlink numbers
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{BBB} ESFM text has changed {len(state.rvESFMText):,} chars -> {len(newESFMtext):,} chars" )
+            if BBB=='ACT': newESFMtext = newESFMtext.replace( ' 120¦', ' 12Z¦' ) # Avoid false alarm
+            assert not illegalWordLinkRegex1.search( newESFMtext), f"illegalWordLinkRegex1 failed before saving {BBB} with {illegalWordLinkRegex1.search( newESFMtext)}" # Don't want double-ups of wordlink numbers
+            if BBB=='ACT': newESFMtext = newESFMtext.replace( ' 12Z¦', ' 120¦' ) # Avoided false alarm
+            assert not illegalWordLinkRegex2.search( newESFMtext), f"illegalWordLinkRegex2 failed before saving {BBB} with {illegalWordLinkRegex2.search( newESFMtext)}" # Don't want double-ups of wordlink numbers
             with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
                 esfmFile.write( newESFMtext )
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Did {bookSimpleListedAdds:,} simple listed adds, {bookProperNounAdds:,} proper noun adds, {bookFirstPartMatchedAdds:,} first part adds and {bookManualMatchedAdds:,} manual adds for {BBB}." )
@@ -385,10 +388,10 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     rvAdjText = rvText.replace('≈','').replace('…','') \
                 .replace('.','').replace(',','').replace(':','').replace(';','').replace('?','').replace('!','').replace('—',' ') \
                 .replace( '(', '').replace( ')', '' ) \
-                .replace( '“', '' ).replace( '”', '' ).replace( '', '' ).replace( '’', '') \
+                .replace( '“', '' ).replace( '”', '' ).replace( '‘', '' ).replace( '’', '') \
                 .replace('  ',' ').strip()
-    lvAdjText = lvText.replace('XX/_',' ').replace('_',' ').replace('Bēyt ','Bēyt_') \
-                .replace('XX/(>',' ') \
+    lvAdjText = lvText.replace('_',' ') \
+                .replace('˲','') \
                 .replace('0/','0 ').replace('1/','1 ').replace('2/','2 ').replace('3/','3 ').replace('4/','4 ').replace('5/','5 ').replace('6/','6 ').replace('7/','7 ').replace('8/','8 ').replace('9/','9 ') \
                 .replace('.','').replace(',','').replace(':','').replace(';','').replace('?','').replace('!','') \
                 .replace( '(', '').replace( ')', '' ) \
@@ -461,6 +464,11 @@ def matchProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[str], lvC
     """
     Given a list of capitalised words from OET-RV and OET-LV,
         see if we can match any proper nouns
+
+    TODO: This function can add new numbers on repeated calls,
+        e.g., Acts 11:30 Barnabas and Saul are done one each call
+        but could both be added at the same time?
+        Jn 3:22, 4:3, 12:36,39, 21:10 Act 11:30,13:31,15:25,40,16:31,18:8
     """
     fnPrint( DEBUGGING_THIS_MODULE, f"matchProperNouns( {BBB} {c}:{v} {rvCapitalisedWordList}, {lvCapitalisedWordList} )" )
     assert rvCapitalisedWordList and lvCapitalisedWordList
@@ -490,6 +498,7 @@ def matchProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[str], lvC
         wordRole = wordRow[state.tableHeaderList.index('Role')]
         dPrint( 'Info', DEBUGGING_THIS_MODULE, f"'{capitalisedNoun}' {wordRole}" )
         if wordRole == 'N': # let's assume it's a proper noun
+            # print( f"matchProperNouns {BBB} {c}:{v} adding number to {rvCapitalisedWordList[0]}")
             result = addNumberToRVWord( BBB, c,v, rvCapitalisedWordList[0], wordNumber )
             if result:
                 numAdded += 1
@@ -628,52 +637,182 @@ def matchWordsManually( BBB:str, c:int,v:int, rvVerseWordList:List[str], lvVerse
         simpleRVWordList.append( rvWord )
 
     numAdded = 0
+    numAdded += doGroup1( BBB, c, v, rvVerseWordList, lvVerseWordList, simpleLVWordList )
+    numAdded += doGroup2( BBB, c, v, rvVerseWordList, lvVerseWordList, simpleRVWordList, simpleLVWordList )
 
-    # This list is 1 RV from 1 or many LV
-    # Match things like RV 'your' with LV 'of you'
+    return numAdded
+# end of connect_OET-RV_words_via_OET-LV.matchWordsManually
+
+
+def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:List[str], simpleLVWordList:List[str] ) -> int:
+    """
+    This list is 1 RV from 1 or many LV
+    Match things like RV 'your' with LV 'of you'
+    """
+    # if BBB=='JHN' and c==4 and v==6:
+    #     print( f"doGroup1( {BBB} {c}:{v} {rvVerseWordList=} {lvVerseWordList=} {simpleLVWordList=} )")
+    #     halt
+    
+    numAdded = 0
     for rvWord, lvWordStr in (
+            ('120', 'a hundred twenty'),
             # Greek possessive pronouns usually appear after the head noun
             ('my', 'of me'), ('your', 'of you'), ('his', 'of him'), ('her', 'of her'), ('our', 'of us'), ('their', 'of them'),
             ('My', 'of me'), ('Your', 'of you'), ('His', 'of him'), ('Her', 'of her'), ('Our', 'of us'), ('Their', 'of them'),
-            # The following entries handle tense changes
+            # The following nominal entries handle number changes
+            ('hair', 'hairs'),
+            # The following verbal entries handle tense changes
+            ('bend', 'bent'),
+            ('calling', 'called'),
             ('gave', 'given'),
+            ('hear', 'hearing'),
             ('pleasing', 'acceptable'),
             ('requested', 'requesting'),
-            # Names (parentheses have been deleted)
-            ('Abraham','Abraʼam/ʼAvərāhām'),('Abraham','Abraʼam'),
-            ('David','Dawid/Dāvid'),('David','Dawid'),
+            # Names including places (parentheses have already been deleted from the OET-LV at this stage)
+            ('Abijah','Abia'),('Abijah','Abia/ʼAvīāh'),
+            ('Abraham','Abraʼam'),('Abraham','Abraʼam/ʼAvərāhām'),
+            ('Aminadab','Aminadab'),('Amon','Aminadab/ˊAmmiynādāv'),
+            ('Amon','Amōs'),('Amon','Amōs/ʼĀmōʦ'),
+            ('Aram','Aram'),('Aram','Aram/Rām'),
+            ('Asa','Asaf'),('Asa','Asaf/ʼĀşāf'),
+            ('Babylon', 'Babulōn'),('Babylon', 'Babulōn/Bāvel'),
+            ('Bethany', 'Baʸthania'),
+            ('Bethlehem', 'Baʸthleʼem'),('Bethlehem', 'Baʸthleʼem/Bēyt-leḩem'),
+            ('Boaz','Boʼoz'),('Boaz','Boʼoz/Boˊaz'),
+            ('Capernaum', 'Kafarnaʼoum'),
+            ('Cappadocia', 'Kappadokia'),
+            ('David','Dawid'),('David','Dawid/Dāvid'),
             ('Demetrius', 'Daʸmaʸtrios'), ('Diotrephes', 'Diotrefaʸs'),
+            ('Egypt','Aiguptos'),('Egypt','Aiguptos/Miʦərayim'),
             ('Gaius', 'Gaios'),
-            ('Jacob', 'Yakōbos'),('Jacob', 'Yakōbos/Yaˊaqov'),
+            ('Galilee', 'Galilaia'),('Galilee', 'Galilaia/Gālīl'),
+            ("Herod's", 'Haʸrōdaʸs'),('Herod', 'Haʸrōdaʸs'),
+            ('Hezron', 'Hesrōm'),('Hezron', 'Hesrōm/Ḩeʦərōn'),
+            ('Idumea', 'Idoumaia'),
+            ('Immanuel', 'Emmanouaʸl'),('Immanuel', 'Emmanouaʸl/ˊImmānūʼēl'),
+            ('Isaac', 'Isaʼak'),('Isaac', 'Isaʼak/Yiʦəḩāq'),
+            ('Jacob', 'Yakōbos'),('Jacob', 'Yakōbos/Yaˊaqov'), ('Jacob', 'Yakōb'),('Jacob', 'Yakōb/Yaˊaqov'),("Jacob's", 'Yakōb'),("Jacob's", 'Yakōb/Yaˊaqov'),
+            ('Jehoshapat', 'Yōsafat'),('Jehoshapat', 'Yōsafat/Yəhōshāfāţ'),
+            ('Jerusalem', 'Hierousalaʸm'),('Jerusalem', 'Hierousalaʸm/Yərūshālayim'),
+            ('Jesse', 'Yessai'),('Jesse', 'Yessai/Yishay'),
+            ('Jew', 'Youdaios'),
+            ('Jews', 'Youdaiōns'),
+            ('John', 'Yōannaʸs'),
+            ('Jordan', 'Yordanaʸs'),('Jordan', 'Yordanaʸs/Yarəddēn'),
+            ('Joseph', 'Yōsaʸf'),('Joseph', 'Yōsaʸf/Yōşēf'),
+            ('Josiah', 'Yōsias'),('Josiah', 'Yōsias/Yʼoshiyyāh'),
+            ('Judah', 'Youda'),('Judah', 'Youda/Yəhūdāh'),
+            ('Judas', 'Youdas'),
+            ('Judea', 'Youdaia'),
+            ('Justus', 'Youstos'),
+            ('Lazarus', 'Lazaros'),
+            ('Levi', 'Leui'),('Levi', 'Leui/Lēvī'),
+            ('Manasseh', 'Manassaʸs'),('Manasseh', 'Manassaʸs/Mənashsheh'),
+            ('Maria', 'Maria'),('Maria', 'Maria/Mirəyām'),
+            ('Media', 'Maʸdia'),
+            ('Nahshon', 'Naʼassōn'),('Nahshon', 'Naʼassōn/Naḩəshōn'),
+            ('Obed', 'Yōbaʸd'),('Obed', 'Yōbaʸd/Ōbaʸd/ˊŌvēd'),
             ('Paul', 'Paulos'),
+            ('Perez', 'Fares'),('Perez', 'Fares/Fereʦ'),
+            ('Pharisee', 'Farisaios'),
+            ('Pontus', 'Pontos'),
+            ('Rehoboam', 'Ɽoboam'),('Rehoboam', 'Ɽoboam/Rəḩavəˊām'),
+            ('Ruth', 'Ɽouth'),('Ruth', 'Ɽouth/Rūt'),
+            ('Salmon', 'Salmōn'),('Salmon', 'Salmōn/Saləmōn'),
+            ('Samaria', 'Samareia'),('Samaria', 'Samareia/Shomərōn'),
+            ('Sidon', 'Sidōn'),('Sidon', 'Sidōn/Tsīdōn'),
+            ('Solomon', 'Solomōn'),('Solomon', 'Solomōn/Shəlomih'),
+            ('Tamar', 'Thamar'),('Tamar', 'Thamar/Tāmār'),
             ('Theophilus', 'Theofilos'),
             ('Timothy', 'Timotheos'),
-            ('Yeshua', 'Yaʸsous'),('Yeshua', 'Yaʸsous/Yəhōshūˊa'),
+            ('Tyre', 'Turos'),('Tyre', 'Turos/Tsor'),
+            ('Uzziah', 'Ozias'),('Uzziah', 'Ozias/ˊUzziyyāh'),
+            ('Yeshua', 'Yaʸsous'),('Yeshua', 'Yaʸsous/Yəhōshūˊa'), ("Yeshua's", 'Yaʸsous'),("Yeshua's", 'Yaʸsous/Yəhōshūˊa'),
+            ('Zerah', 'Zara'),('Zerah', 'Zara/Zeraḩ'),
             # Vocab differences
+            ('amazed','marvelling'),
+            ('ancestors','fathers'),
+            ('announced','proclaiming'),
+            ('appropriate','fitting'),
+            ('arrested','captured'),
+            ('astounded','amazed'),
+            ('because','for'),('Because','For'),
+            ('bedding','pallet'),
+            ('believers','brothers'),
+            ("don't",'not'),
+            ('carrying','carried'),
             ('cheerful','joy'),
+            ('confused','confounded'),
+            ('countries','nation'),
+            ('crowd','multitude'),
+            ('deserted','desolate'),
+            ('entire','all'),
+            ('forgive','forgiving'),
+            ('godly','devout'),
+            ('insulting','slandering'),
+            ('kill','destroy'),
+            ('knowing','known'),
+            ('lake','sea'),
+            ('listen','give ear'),
+            ('living','dwelling'),
+            ('languages','tongues'),
+            ('lowered','lowering'),
+            ('mister','master'),('Mister','Master'),
             ('message', 'word'), ('messenger', 'word'),
+            ('money','reward'),
+            ('Mount','mountain'),
+            ('necessary','fitting'),
+            ('paralysed','paralytic'),
+            ('path','way'),
+            ('people','multitude'),
             ('poor','humble'),
+            ('praised','glorifying'),
+            ('pure','holy'),
+            ('requested','prayed'),
+            ('room','place'),
+            ('scoffed','mocking'),
+            ('sitting','reclining'),
+            ('small','little'),
+            ('songs','psalms'),
+            ('spoken','said'),
+            ('staying','dwelling'),
+            ('strong','forceful'),
+            ('talking','speaking'),
+            ('taught','teaching'),
+            ('themselves','hearts'),
+            ('thinking','reasoning'),
+            ('thinking','supposing'),
+            ('undesirables','sinners'),
+            ('upstairs','upper'),
+            ('walk','walking'),
             ('wealthy','rich'),
-            # Capitalisation differences
+            ("What's",'What'),
+            ('work','service'),
+            ('yourselves','hearts'),
+            # Capitalisation differences (sometimes just due to a change of word order)
+            ('Brothers','brothers'),
+            ('Four','four'),
             ('God','god'),
+            ('Master','master'),
+            ("We've",'We'),
             ):
         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{rvWord=} {lvWordStr=}" )
         lvWords = lvWordStr.split( ' ' )
-        assert len(lvWords) <= 2, lvWords # if more, we need to add searching code down below
+        assert len(lvWords) <= 3, lvWords # if more, we need to add searching code down below
 
         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Looking for RV '{rvWord}'" )
         rvIndexes = []
         for rvIx,thisRvWord in enumerate( rvVerseWordList ):
             if thisRvWord == rvWord:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  matchWordsManuallyA found RV '{rvWord}' in {BBB} {c}:{v}")
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  matchWordsManually group1 found RV '{rvWord}' in {BBB} {c}:{v}")
                 rvIndexes.append( rvIx )
 
         if len(rvIndexes) == 1: # Only one RV word matches
             rvWord = rvVerseWordList[rvIndexes[0]]
             if '¦' not in rvWord:
                 # Now see if we have the LV word(s)
-                matchedLvWordCount = 0
                 for lvIx, thisLvWord in enumerate( simpleLVWordList ):
+                    matchedLvWordCount = 0
                     if thisLvWord == lvWords[0]: # matched one word
                         matchedLvWordCount += 1
                         if matchedLvWordCount == len(lvWords): break
@@ -681,25 +820,40 @@ def matchWordsManually( BBB:str, c:int,v:int, rvVerseWordList:List[str], lvVerse
                             if simpleLVWordList[lvIx+1] == lvWords[1]:
                                 matchedLvWordCount += 1
                                 if matchedLvWordCount == len(lvWords): break
+                                if lvIx < len(simpleLVWordList)-2:
+                                    if simpleLVWordList[lvIx+2] == lvWords[2]:
+                                        matchedLvWordCount += 1
+                                        if matchedLvWordCount == len(lvWords): break
                 else: # no match (no break from above/inner loop)
                     continue # in the outer loop
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManuallyA {BBB} {c}:{v} matched {rvWord=} {lvWords=}" )
+                assert matchedLvWordCount == len(lvWords)
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManually group1 {BBB} {c}:{v} matched {rvWord=} {lvWords=}" )
                 lvWord,lvWordNumber,_lvWordRow = getLVWordRow( lvVerseWordList[lvIx] )
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManuallyA is adding a number to RV '{rvWord}' from '{lvWord}' at {BBB} {c}:{v} {lvIx=}")
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManually group1 is adding a number to RV '{rvWord}' from '{lvWord}' at {BBB} {c}:{v} {lvIx=}")
                 result = addNumberToRVWord( BBB, c,v, rvWord, lvWordNumber )
                 if result:
                     numAdded += 1
                 else:
                     logging.warning( f"Got addNumberToRVWord( {BBB} {c}:{v} '{rvWord}' {lvWordNumber} ) result = {result}" )
                     # why_did_we_fail
+    return numAdded
+# end of connect_OET-RV_words_via_OET-LV.doGroup1
 
-    # This list is one LV word to many RV words
+
+def doGroup2( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:List[str], simpleRVWordList:List[str], simpleLVWordList:List[str] ) -> int:
+    """
+    This list is one LV word to many RV words
+    """
+    numAdded = 0
     for lvWord, rvWordStr  in (
             ('brothers', 'brothers and sisters'), ('brothers', 'fellow believers'),
             ('Brothers', 'Brothers and sisters'), ('Brothers', 'Fellow believers'),
             ('Brothers', 'brothers and sisters'), ('Brothers', 'fellow believers'),
 
-            ('Truly', 'May it be so')
+            ('Truly', 'May it be so'),
+
+            ('scribes', 'religious teachers'),
+            ('synagogue', 'Jewish meeting hall'), ('synagogue', 'meeting hall'),
             ):
         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvWord=} {rvWordStr=}" )
         rvWords = rvWordStr.split( ' ' )
@@ -709,7 +863,7 @@ def matchWordsManually( BBB:str, c:int,v:int, rvVerseWordList:List[str], lvVerse
         lvIndexes = []
         for lvIx,thisLvWord in enumerate( simpleLVWordList ):
             if thisLvWord == lvWord:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  matchWordsManuallyB found LV '{lvWord}' in {BBB} {c}:{v}")
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  matchWordsManually group2 found LV '{lvWord}' in {BBB} {c}:{v}")
                 lvIndexes.append( lvIx )
 
         if len(lvIndexes) == 1: # Only one LV word matches
@@ -719,8 +873,8 @@ def matchWordsManually( BBB:str, c:int,v:int, rvVerseWordList:List[str], lvVerse
             # print( f"    here with {lvWordStr} -> '{lvWord}' and {lvWordNumber=}")
 
             # Now see if we have the RV word(s)
-            matchedRvWordCount = 0
             for rvIx, thisRvWord in enumerate( simpleRVWordList ):
+                matchedRvWordCount = 0
                 if thisRvWord == rvWords[0]: # matched one word
                     matchedRvWordCount += 1
                     # print( f"      Matched 1/{len(rvWords)} @ {rvIx} with '{thisRvWord}' ({rvWordList[rvIx]})")
@@ -742,9 +896,9 @@ def matchWordsManually( BBB:str, c:int,v:int, rvVerseWordList:List[str], lvVerse
                                             if matchedRvWordCount == len(rvWords): break # matched four words
             else: # no match (no break from above/inner loop)
                 continue # in the outer loop
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    matchWordsManuallyB {BBB} {c}:{v} matched {lvWord=} {rvWords=}" )
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    matchWordsManually group2 {BBB} {c}:{v} matched {lvWord=} {rvWords=}" )
             # lvWord,lvWordNumber,lvWordRow = getLVWordRow( lvWordList[lvIx] )
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManuallyB is adding a number to RV {rvWords} from '{lvWord}' at {BBB} {c}:{v} {rvIx=}")
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManually group2 is adding a number to RV {rvWords} from '{lvWord}' at {BBB} {c}:{v} {rvIx=}")
             for rvWord in rvWords:
                 result = addNumberToRVWord( BBB, c,v, rvWord, lvWordNumber )
                 if result:
@@ -752,9 +906,8 @@ def matchWordsManually( BBB:str, c:int,v:int, rvVerseWordList:List[str], lvVerse
                 else:
                     logging.warning( f"Got addNumberToRVWord( {BBB} {c}:{v} '{rvWord}' {lvWordNumber} ) result = {result}" )
                 # why_did_we_fail
-
     return numAdded
-# end of connect_OET-RV_words_via_OET-LV.matchWordsManually
+# end of connect_OET-RV_words_via_OET-LV.doGroup1
 
 
 def getLVWordRow( wordWithNumber:str ) -> Tuple[str,int,List[str]]:

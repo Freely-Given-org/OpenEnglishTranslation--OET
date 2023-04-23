@@ -47,10 +47,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2023-04-17' # by RJH
+LAST_MODIFIED_DATE = '2023-04-22' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.61'
+PROGRAM_VERSION = '0.64'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -698,6 +698,11 @@ START_HTML = """<!DOCTYPE html>
 """
 END_HTML = '</body></html>\n'
 
+illegalWordLinkRegex1 = re.compile( '[0-9]¦' ) # Has digits BEFORE the broken pipe
+illegalWordLinkRegex2 = re.compile( '¦[1-9][0-9]{0,5}[a-z]' ) # Has letters immediately AFTER the wordlink number
+chapterRegEx = re.compile(f'''<span class="c" id="C(\\d{1,3})V1">(\\d{1,3})</span>''')
+psalmRegEx = re.compile(f'''<span class="cPsa" id="C(\\d{1,3})V1">(\\d{1,3})</span>''')
+
 whole_Torah_html = whole_NT_html = ''
 genericBookList = []
 word_table_filenames = set()
@@ -730,9 +735,7 @@ def produce_HTML_files() -> None:
             dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Reading {source_filepath}…" )
             with open( source_filepath, 'rt', encoding='utf-8' ) as esfm_input_file:
                 esfm_text = esfm_input_file.read()
-            illegalWordLinkRegex1 = re.compile( '[0-9]¦' ) # Has digits BEFORE the broken pipe
             assert not illegalWordLinkRegex1.search( esfm_text), f"illegalWordLinkRegex1 failed when loading {BBB}" # Don't want double-ups of wordlink numbers
-            illegalWordLinkRegex2 = re.compile( '¦[1-9][0-9]{0,5}[a-z]' ) # Has letters AFTER the wordlink number
             assert not illegalWordLinkRegex2.search( esfm_text), f"illegalWordLinkRegex2 failed when loading {BBB}" # Don't want double-ups of wordlink numbers
             if source_filename.endswith( '.ESFM' ):
                 word_table_filename = 'OET-LV_NT_word_table.tsv'
@@ -760,9 +763,9 @@ def produce_HTML_files() -> None:
             # Having saved the book file, now for better orientation within the long file (wholeTorah or wholeNT),
             #   adjust book_html to include BBB text for chapters past chapter one
             bookAbbrev = BBB.title().replace('1','-1').replace('2','-2').replace('3','-3')
-            chapterRegEx = re.compile(f'''<span class="{'cPsa' if BBB=='PSA' else 'c'}" id="C(\\d{1,3})V1">(\\d{1,3})</span>''')
+            thisRegEx = psalmRegEx if BBB=='PSA' else chapterRegEx
             while True:
-                for match in chapterRegEx.finditer( book_html ):
+                for match in thisRegEx.finditer( book_html ):
                     assert match.group(1) == match.group(2)
                     # print('A',BBB,match,match.group(1),book_html[match.start():match.end()])
                     if match.group(1) != '1': # We don't adjust chapter one
@@ -930,9 +933,13 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
 # end of convert_OET-LV_to_simple_HTML.produce_HTML_files function
 
 
-wordRegex1 = re.compile( '([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' ) # Max of six total digits
-wordRegex2 = re.compile( '([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]{2,})<span class="ul">_</span>([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
-wordRegex3 = re.compile( '([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]{2,})<span class="ul">_</span>([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)<span class="ul">_</span>([-A-za-zⱤḩⱪşʦāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
+# Regexs for a single word followed by a wordnumber,
+#   or 2 or 3 words joined by an underline like he_was_saying
+#   (although the underline is already inside a span at this point).
+# Note that single words might include a <sup></sup> span as in 'Aʸsaias/(Yəshaˊə<sup>yāh</sup>)' (but we handle that below by substitions)
+wordRegex1 = re.compile( '([-A-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' ) # Max of six total digits
+wordRegex2 = re.compile( '([-A-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]{2,})<span class="ul">_</span>([-A-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
+wordRegex3 = re.compile( '([-A-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]{2,})<span class="ul">_</span>([-A-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]+)<span class="ul">_</span>([-A-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
 def convert_tagged_ESFM_words_to_links( BBB:str, book_html:str, word_table:List[str] ) -> str:
     """
     Handle ESFM word numbers like 'written¦21763'
@@ -973,6 +980,8 @@ def convert_tagged_ESFM_words_to_links( BBB:str, book_html:str, word_table:List[
     #   and then put a span around it so it can have a pop-up "title"
     searchStartIndex = 0
     count = 0
+    # Note that single words might include a <sup></sup> span as in 'Aʸsaias/(Yəshaˊə<sup>yāh</sup>)'
+    book_html = book_html.replace( '<sup>', 'SSsupP' ).replace( '</sup>', 'ESsupP' ) # We have to temporarily make these into normal word-formation chars
     while True:
         match = wordRegex1.search( book_html, searchStartIndex )
         if not match:
@@ -987,6 +996,7 @@ def convert_tagged_ESFM_words_to_links( BBB:str, book_html:str, word_table:List[
         book_html = f'{book_html[:match.start()]}<span title="{greek}"><a href="W_{match.group(2)}.html">{match.group(1)}</a></span>{book_html[match.end():]}'
         searchStartIndex = match.end() + 25 # We've added at least that many characters
         count += 1
+    book_html = book_html.replace( 'SSsupP', '<sup>' ).replace( 'ESsupP', '</sup>' ) # Restores our 'hidden' HTML markup
     vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Made {count:,} OET-LV {BBB} ESFM words into live links." )
 
     return book_html

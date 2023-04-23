@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-04-17' # by RJH
+LAST_MODIFIED_DATE = '2023-04-20' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.59'
+PROGRAM_VERSION = '0.60'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -739,6 +739,9 @@ START_HTML = """<!DOCTYPE html>
 """
 END_HTML = '</body></html>\n'
 
+illegalWordLinkRegex1 = re.compile( '[0-9]¦' ) # Has digits BEFORE the broken pipe
+illegalWordLinkRegex2 = re.compile( '¦[1-9][0-9]{0,5}[a-z]' ) # Has letters immediately AFTER the wordlink number
+
 whole_Torah_html = whole_NT_html = ''
 genericBookList = []
 word_table_filenames = set()
@@ -768,9 +771,9 @@ def produce_HTML_files() -> None:
             source_filename = f'OET-RV_{BBB}.ESFM'
             with open( OET_RV_ESFM_InputFolderPath.joinpath(source_filename), 'rt', encoding='utf-8' ) as esfm_input_file:
                 esfm_text = esfm_input_file.read()
-            illegalWordLinkRegex1 = re.compile( '[0-9]¦' ) # Has digits BEFORE the broken pipe
+            if BBB=='ACT': esfm_text = esfm_text.replace( ' 120¦', ' 12Z¦' ) # Avoid false alarm
             assert not illegalWordLinkRegex1.search( esfm_text), f"illegalWordLinkRegex1 failed when loading {BBB}" # Don't want double-ups of wordlink numbers
-            illegalWordLinkRegex2 = re.compile( '¦[1-9][0-9]{0,5}[a-z]' ) # Has letters AFTER the wordlink number
+            if BBB=='ACT': esfm_text = esfm_text.replace( ' 12Z¦', ' 120¦' ) # Avoided false alarm
             assert not illegalWordLinkRegex2.search( esfm_text), f"illegalWordLinkRegex2 failed when loading {BBB}" # Don't want double-ups of wordlink numbers
             if source_filename.endswith( '.ESFM' ):
                 word_table_filename = 'OET-LV_NT_word_table.tsv'

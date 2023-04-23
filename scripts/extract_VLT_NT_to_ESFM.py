@@ -49,13 +49,13 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-04-18' # by RJH
+LAST_MODIFIED_DATE = '2023-04-21' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
-PROGRAM_VERSION = '0.83'
+PROGRAM_VERSION = '0.84'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
-DEBUGGING_THIS_MODULE = 99
+DEBUGGING_THIS_MODULE = False
 
 
 VLT_ESFM_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_VLT_ESFM/' )
@@ -489,7 +489,7 @@ def get_gloss_word_index_list(given_verse_row_list: List[dict]) -> List[List[int
     # Make up the display order list for this new verse
     gloss_order_dict = {}
     for index,this_verse_row in enumerate(given_verse_row_list):
-        if this_verse_row['Probability'] and int(this_verse_row['Probability'])>0 and not this_verse_row['CollationID'].endswith('000'): # it's in the text and not word zero
+        if this_verse_row['Probability'] and not this_verse_row['CollationID'].endswith('000'): # it's in the text and not word zero
             try: gloss_order_int = int(this_verse_row['GlossOrder'])
             except ValueError: gloss_order_int = int(this_verse_row['CollationID'][8:]) # Use the word number if no GlossOrder field yet
             assert gloss_order_int not in gloss_order_dict, f"ERROR: {verse_id} has multiple GlossOrder={gloss_order_int} entries!"
