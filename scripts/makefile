@@ -88,7 +88,7 @@ $(intermediate_LV_NT_ESFM) $(original_wordtable): ../../CNTR-GNT/sourceExports/b
 	@echo "\n\nExtract NT from TSV table to ESFM files…\n"
 	@$(Python) extract_VLT_NT_to_ESFM.py -e
 
-$(expanded_wordtable): $(original_wordtable) add_tags_to_NT_word_table.py
+$(expanded_wordtable): $(original_wordtable) $(Clear_Bible_NT_lowfat_TSV) add_tags_to_NT_word_table.py
 	@echo "\n\nAdd people/places/referent tags to OET NT word table…\n"
 	@$(Python) add_tags_to_NT_word_table.py -e
 

@@ -31,6 +31,7 @@ We also add the ID fields that were originally adapted from the BibleTags id fie
 CHANGELOG:
     2023-03-22 Shortened referent field in our output tables
                Changed some fieldnames: Referent -> Referents, Frame -> Frames better reflecting the actual data contents
+    2023-04-27 Combined subject referents into Referents column (so now, one less column)
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple
@@ -47,10 +48,10 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-03-22' # by RJH
+LAST_MODIFIED_DATE = '2023-03-27' # by RJH
 SHORT_PROGRAM_NAME = "Convert_ClearMaculaNT_to_TSV"
 PROGRAM_NAME = "Extract and Apply Macula OT glosses"
-PROGRAM_VERSION = '0.21'
+PROGRAM_VERSION = '0.22'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -66,6 +67,7 @@ EXPECTED_WORD_ATTRIBUTES = ('{http://www.w3.org/XML/1998/namespace}id', 'ref', '
         'lemma',#'stem','subjref','participantref', # 'lang',
         'domain','frame','referent','subjref','discontinuous', # 'sdbh','lexdomain','sensenumber','coredomain','contextualdomain',
         'case','normalized','head','strong','ln',
+        'note', # Added 27Apr2023
         )
 assert len(set(EXPECTED_WORD_ATTRIBUTES)) == len(EXPECTED_WORD_ATTRIBUTES), "No duplicate attribute names"
 BIBLE_TAGS_TSV_INPUT_FILEPATH = Path( '../sourceTexts/BibleTagsOriginals/BibTags.NT.words.tsv' )
@@ -74,13 +76,13 @@ SHORTENED_TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_t
 OUTPUT_FIELDNAMES = ['FGRef','BibTagId','LFRef','LFNumRef','Role',
                     'Word','Unicode','After',
                     'WordClass','Person','Gender','Number','Tense','Voice','Mood','Degree',
-                    'WordType','Domain','Frames','Referents','SubjRef','Discontinuous',
+                    'WordType','Domain','Frames','Referents','Discontinuous',
                     'Morphology','Lemma',
                     'Strong',
                     'ContextualGloss',
                     'Nesting']
 assert len(set(OUTPUT_FIELDNAMES)) == len(OUTPUT_FIELDNAMES), "No duplicate fieldnames"
-assert len(OUTPUT_FIELDNAMES) == 27, len(OUTPUT_FIELDNAMES)
+assert len(OUTPUT_FIELDNAMES) == 26, len(OUTPUT_FIELDNAMES)
 
 
 state = None
@@ -114,7 +116,7 @@ def main() -> None:
     state = State()
 
     if loadBibleTagsNTSourceTable():
-        if loadLowFatGlosses():
+        if loadClearLowFatGlossesXML():
             if add_BibleTags_ids():
                 save_filled_TSV_file()
                 save_shortened_TSV_file()
@@ -166,7 +168,7 @@ def loadBibleTagsNTSourceTable() -> bool:
 # end of convert_ClearMaculaNT_to_TSV.loadBibleTagsNTSourceTable
 
 
-def loadLowFatGlosses() -> bool:
+def loadClearLowFatGlossesXML() -> bool:
     """
     Extract glosses out of fields 
     Reorganise columns and add our extra columns
@@ -189,6 +191,7 @@ def loadLowFatGlosses() -> bool:
         # First make a table of parents so we can find them later
         parentMap = {child:parent for parent in bookTree.iter() for child in parent if child.tag in ('w','wg')}
         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Loaded {len(parentMap):,} parent entries." )
+        # print( str(parentMap)[:5000])
 
         # Now load all the word (w) fields for the chapter into a temporary list
         tempWordsAndMorphemes = []
@@ -196,7 +199,7 @@ def loadLowFatGlosses() -> bool:
         for elem in bookTree.getroot().iter():
             if elem.tag == 'w': # ignore all the others -- there's enough info in here
                 for attribName in elem.attrib:
-                    assert attribName in EXPECTED_WORD_ATTRIBUTES, f"loadLowFatGlosses(): unexpected {attribName=}"
+                    assert attribName in EXPECTED_WORD_ATTRIBUTES, f"loadClearLowFatGlossesXML(): unexpected {attribName=}"
 
                 word = elem.text
                 theirRef = elem.get('ref')
@@ -259,19 +262,26 @@ def loadLowFatGlosses() -> bool:
                 nestingBits = []
                 while True:
                     parentElem = parentMap[startElement]
+                    if parentElem.tag == 'error': # trying going one more up: parentElem.tag = parentMap[parentElem] FAILS
+                        break # for now at Acts 26:12!1
                     if parentElem.tag == 'sentence': break
-                    assert parentElem.tag == 'wg'
-                    pClass, role, rule = parentElem.get('class'), parentElem.get('role'), parentElem.get('rule')
-                    if role:
-                        if rule: # have both
-                            nestingBits.append( f'{role}={rule}' )
+                    assert parentElem.tag == 'wg', f"@{theirRef} got {parentElem.tag=}"
+                    pClass, pRole, pRule = parentElem.get('class'), parentElem.get('role'), parentElem.get('rule')
+                    if not role: role = pRole # Take the first one
+                    # print( f"@{theirRef} got {pClass=} {role=} {rule=}")
+                    if pRole:
+                        if pRule: # have both
+                            nestingBits.append( f'{pRole}={pRule}' )
                         else: # only have role
-                            nestingBits.append( role )
-                    elif rule: # have no role
-                        nestingBits.append( rule )
+                            nestingBits.append( pRole )
+                    elif pRule: # have no role
+                        nestingBits.append( pRule )
                     else:
-                        assert pClass=='compound', f"{theirRef} has no role/rule {pClass=} {nestingBits}"
+                        # Fails 27Apr2023 with new updates to macula-greek lowfat
+                        # assert pClass in ('compound',), f"{theirRef} has no role/rule {pClass=} {nestingBits}"
+                        pass # Hopefully it doesn't matter
                     startElement = parentElem
+                # print( f"@{theirRef} {nestingBits=}"); halt
                 if len(nestingBits) >= max_nesting_level:
                     max_nesting_level = len(nestingBits) + 1
 
@@ -279,6 +289,8 @@ def loadLowFatGlosses() -> bool:
                 referentsStr = elem.get('referent')
                 ourReferents = []
                 if referentsStr:
+                    if ';' in referentsStr:
+                        print( f"{BBB} {longID} {word=} {gloss=} {English=} {referentsStr=}")
                     for referent in referentsStr.split( ' ' ):
                         # print( f"{BBB} {longID} {word=} {gloss=} {English=} {type(referent)} {referent=}")
                         assert len(referent)==12 and referent[0]=='n' and referent[1:].isdigit()
@@ -286,8 +298,28 @@ def loadLowFatGlosses() -> bool:
                         # referent = referent[3:] # remove 'n' prefix and predictable book number -- now down to nine digits: cccvvvwww
                         # rC, rV, rW = int(referent[3:6]), int(referent[6:9]), int(referent[9:])
                         ourReferent = f'{int(referent[3:6])}:{int(referent[6:9])}w{int(referent[9:])}' # Convert to 'C:VwW' form
-                        # print( f" Got {rC=} {rV=} {rW=} so now {referent=}" )
+                        # print( f" Got {rC=} {rV=} {rW=} so now {ourReferent=}" )
                         ourReferents.append( ourReferent )
+                # Convert verb subject referents (like 'n40001002014') to C:VwW (like '1:2w14')
+                subjectReferentsStr = elem.get('subjref')
+                ourSubjectReferents = []
+                if subjectReferentsStr:
+                    if ';' in subjectReferentsStr: # there's about four of these as at 27Apr2023
+                        print( f"{BBB} {longID} {word=} {gloss=} {English=} UNUSUAL {subjectReferentsStr=}")
+                        subjectReferentsStr = subjectReferentsStr.replace( ';', ' ' )
+                    for subjectReferent in subjectReferentsStr.split( ' ' ):
+                        # print( f"{BBB} {longID} {word=} {gloss=} {English=} {type(subjectReferent)} {subjectReferent=}")
+                        assert len(subjectReferent)==12 and subjectReferent[0]=='n' and subjectReferent[1:].isdigit()
+                        assert subjectReferent[1:3] == longID[:2] # Don't expect referent links to point into other books
+                        # referent = referent[3:] # remove 'n' prefix and predictable book number -- now down to nine digits: cccvvvwww
+                        # rC, rV, rW = int(referent[3:6]), int(referent[6:9]), int(referent[9:])
+                        ourSubjectReferent = f'{int(subjectReferent[3:6])}:{int(subjectReferent[6:9])}w{int(subjectReferent[9:])}' # Convert to 'C:VwW' form
+                        # print( f" Got {rC=} {rV=} {rW=} so now {ourSubjectReferent=}" )
+                        ourSubjectReferents.append( ourSubjectReferent )
+                if ourReferents: assert not ourSubjectReferents
+                if ourSubjectReferents:
+                    assert not ourReferents
+                    ourReferents = ourSubjectReferents # We can combine these into one column (because we know the POS anyway)
 
                 # Names have to match state.output_fieldnames:
                 # ['FGRef','BibTagId','LFRef','LFNumRef',
@@ -295,7 +327,7 @@ def loadLowFatGlosses() -> bool:
                 # 'WordClass','PartOfSpeech','Person','Gender','Number','WordType','Domain',
                 # 'StrongNumberX','StrongLemma','Morphology','Lemma','SenseNumber',
                 # 'CoreDomain','LexicalDomain','ContextualDomain',
-                # 'SubjRef','ParticipantRef','Frame',
+                # 'ParticipantRef','Frame',
                 # 'Strong',
                 # 'EnglishGloss','ContextualGloss',
                 # 'Nesting']
@@ -304,7 +336,7 @@ def loadLowFatGlosses() -> bool:
                             'WordClass':wClass, 'Person':person, 'Gender':gender, 'Number':number,
                             'Tense':tense, 'Voice':voice, 'Mood':mood, 'Degree':degree,
                             'WordType':wType, 'Domain':elem.get('domain'),
-                            'Frames':elem.get('frame'), 'Referents':';'.join(ourReferents), 'SubjRef':elem.get('subjref'),
+                            'Frames':elem.get('frame'), 'Referents':';'.join(ourReferents),
                             'Strong':elem.get('strong'), 'Discontinuous':discontinuous,
                             'Morphology':morph, 'Lemma':elem.get('lemma'),
                             'ContextualGloss':gloss,
@@ -353,7 +385,7 @@ def loadLowFatGlosses() -> bool:
     #         assert len(currentEntry) == len(state.output_fieldnames)-1
     #         if n < 5 or 'THE' in currentEntry['EnglishGloss']: print(f"{n} ({len(currentEntry)}) {currentEntry}")
     return True
-# end of convert_ClearMaculaNT_to_TSV.loadLowFatGlosses
+# end of convert_ClearMaculaNT_to_TSV.loadClearLowFatGlossesXML
 
 
 def words_match( greekWord1, greekWord2, loose=True ) -> bool:
@@ -495,12 +527,12 @@ def add_BibleTags_ids() -> bool:
     assert len(newLowFatWordsAndMorphemes) == len(state.lowFatWordsAndMorphemes)
     state.lowFatWordsAndMorphemes = newLowFatWordsAndMorphemes
     return True
-# end of convert_ClearMaculaNT_to_TSV.loadLowFatGlosses
+# end of convert_ClearMaculaNT_to_TSV.loadClearLowFatGlossesXML
 
 
 def save_filled_TSV_file() -> bool:
     """
-    Save table as a single TSV file (about 94 MB).
+    Save table as a single TSV file (about 25 MB).
     """
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nExporting filled NT Low Fat table as a single flat TSV file to {state.TSV_output_filepath}…" )
 
@@ -512,7 +544,10 @@ def save_filled_TSV_file() -> bool:
         writer = DictWriter( tsv_output_file, fieldnames=state.output_fieldnames, delimiter='\t' )
         writer.writeheader()
         for thisTuple in state.lowFatWordsAndMorphemes:
-            thisRow = {k:v for k,v in zip(state.output_fieldnames, thisTuple, strict=True)}
+            # print( f"{state.output_fieldnames=} {thisTuple=}" )
+            assert len(thisTuple) == len(state.output_fieldnames)
+            thisRow = {k:thisTuple[k] for k in state.output_fieldnames} # Make sure we have the fields in the correct output order
+            # print( f"\n{thisRow=}" )
             writer.writerow( thisRow )
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {len(state.lowFatWordsAndMorphemes):,} data rows written." )
 

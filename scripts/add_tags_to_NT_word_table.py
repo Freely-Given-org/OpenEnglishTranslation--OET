@@ -44,6 +44,9 @@ We determine pronoun referents from the Clear.Bible "lowfat" xml files
 
 We use this information to update our OET word-table
     that was created by extract_VLT_NT_to_ESFM.py
+
+CHANGELOG:
+    2023-04-27 Clear table now has combined subject referents into Referents column (so now, one less column but more information)
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple, Optional
@@ -59,10 +62,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-04-05' # by RJH
+LAST_MODIFIED_DATE = '2023-04-27' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET NT wordtable"
-PROGRAM_VERSION = '0.21'
+PROGRAM_VERSION = '0.22'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -122,7 +125,7 @@ def main() -> None:
         macula_tsv_lines[0] = macula_tsv_lines[0][1:]
     # Get the headers before we start
     column_line_string = macula_tsv_lines[0].rstrip( '\n' )
-    assert column_line_string == 'FGRef\tBibTagId\tRole\tWord\tAfter\tWordClass\tPerson\tGender\tNumber\tTense\tVoice\tMood\tDegree\tWordType\tDomain\tFrames\tReferents\tSubjRef\tDiscontinuous\tMorphology\tLemma\tStrong\tContextualGloss\tNesting', f'{column_line_string=}' # otherwise we probably need to change some code
+    assert column_line_string == 'FGRef\tBibTagId\tRole\tWord\tAfter\tWordClass\tPerson\tGender\tNumber\tTense\tVoice\tMood\tDegree\tWordType\tDomain\tFrames\tReferents\tDiscontinuous\tMorphology\tLemma\tStrong\tContextualGloss\tNesting', f'{column_line_string=}' # otherwise we probably need to change some code
     # source_tsv_column_headers = [header for header in column_line_string.split('\t')]
     # # print(f"Column headers: ({len(source_tsv_column_headers)}): {source_tsv_column_headers}")
     # assert len(source_tsv_column_headers) == NUM_EXPECTED_OSHB_COLUMNS, f"Found {len(source_tsv_column_headers)} columns! (Expecting {NUM_EXPECTED_OSHB_COLUMNS})"
