@@ -53,7 +53,7 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-04-28' # by RJH
+LAST_MODIFIED_DATE = '2023-05-03' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.29'
@@ -782,10 +782,12 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Bethany', 'Baʸthania'),
             ('Bethlehem', 'Baʸthleʼem'),('Bethlehem', 'Baʸthleʼem/Bēyt-leḩem'),
             ('Boaz','Boʼoz'),('Boaz','Boʼoz/Boˊaz'),
+            ('Caesarea', 'Kaisareia'),
             ('Capernaum', 'Kafarnaʼoum'),
             ('Cappadocia', 'Kappadokia'),
             ('David','Dawid'),('David','Dawid/Dāvid'),
             ('Demetrius', 'Daʸmaʸtrios'), ('Diotrephes', 'Diotrefaʸs'),
+            ('Dorcas', 'The_Gazelle/Dorkas'),
             ('Egypt','Aiguptos'),('Egypt','Aiguptos/Miʦərayim'),
             ('Ephesus', 'Efesos'),
             ('Eve','Eua'),('Eve','Eua/Ḩavvāh'),
@@ -803,6 +805,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Jew', 'Youdaios'),
             ('Jews', 'Youdaiōns'),
             ('John', 'Yōannaʸs'),
+            ('Joppa', 'Yoppaʸ'),
             ('Jordan', 'Yordanaʸs'),('Jordan', 'Yordanaʸs/Yarəddēn'),
             ('Joseph', 'Yōsaʸf'),('Joseph', 'Yōsaʸf/Yōşēf'),
             ('Josiah', 'Yōsias'),('Josiah', 'Yōsias/Yʼoshiyyāh'),
@@ -812,6 +815,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Justus', 'Youstos'),
             ('Lazarus', 'Lazaros'),
             ('Levi', 'Leui'),('Levi', 'Leui/Lēvī'),
+            ('Lydda', 'Ludda'),('Lydda', 'Ludda/Lod'),
             ('Macedonia', 'Makedonia'),
             ('Manasseh', 'Manassaʸs'),('Manasseh', 'Manassaʸs/Mənashsheh'),
             ('Maria', 'Maria'),('Maria', 'Maria/Mirəyām'),
@@ -828,10 +832,13 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Salmon', 'Salmōn'),('Salmon', 'Salmōn/Saləmōn'),
             ('Samaria', 'Samareia'),('Samaria', 'Samareia/Shomərōn'),
             ('Sapphira', 'Sapfeiraʸ'),
+            ('Saul', 'Saulos'),
             ('Sidon', 'Sidōn'),('Sidon', 'Sidōn/Tsīdōn'),
             ('Simon', 'Simōn'),
             ('Solomon', 'Solomōn'),('Solomon', 'Solomōn/Shəlomih'),
+            ('Tabitha', 'Tabaʸtha'),
             ('Tamar', 'Thamar'),('Tamar', 'Thamar/Tāmār'),
+            ('Tarsus', 'Tarsos'),
             ('Theophilus', 'Theofilos'),
             ('Timothy', 'Timotheos'),
             ('Tyre', 'Turos'),('Tyre', 'Turos/Tsor'),
