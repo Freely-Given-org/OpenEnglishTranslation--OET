@@ -90,7 +90,7 @@ TORAH_BOOKS_CODES = ('GEN','EXO','LEV','NUM','DEU')
 assert len(TORAH_BOOKS_CODES) == 5
 CNTR_ROLE_NAME_DICT = {'N':'noun', 'S':'substantive adjective', 'A':'adjective', 'E':'determiner', 'R':'pronoun',
                   'V':'verb', 'I':'interjection', 'P':'preposition', 'D':'adverb', 'C':'conjunction', 'T':'particle'}
-CNTR_MOOD_NAME_DICT = {'I':'indicative', 'M':'imperative', 'S':'subjunctive', 
+CNTR_MOOD_NAME_DICT = {'I':'indicative', 'M':'imperative', 'S':'subjunctive',
             'O':'optative', 'N':'infinitive', 'P':'participle', 'e':'e'}
 CNTR_TENSE_NAME_DICT = {'P':'present', 'I':'imperfect', 'F':'future', 'A':'aorist', 'E':'perfect', 'L':'pluperfect', 'U':'U', 'e':'e'}
 CNTR_VOICE_NAME_DICT = {'A':'active', 'M':'middle', 'P':'passive', 'p':'p', 'm':'m', 'a':'a'}
@@ -925,7 +925,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                         .replace( '[was]', '<span class="addCopula">was</span>' ) \
                         .replace( '[', '<span class="add">' ) \
                         .replace( ']', '</span>' )
-        
+
     # All done
     return ( book_start_html,
              book_html,
@@ -1075,7 +1075,7 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
                 if roleName=='noun' and 'U' in glossCaps: # What about G?
                     roleName = 'proper noun'
                 roleField = f' Word role=<b>{roleName}</b>'
-                
+
             probabilityField = f'<small>(P={probability})</small> ' if probability else ''
 
             moodField = tenseField = voiceField = personField = caseField = genderField = numberField = ''
@@ -1147,7 +1147,7 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
                         html = f'{html}\n<p>({len(thisWordNumberList)-other_count-1:,} more examples not listed)</p>'
                         break
 
-            # Now put it all together       
+            # Now put it all together
             html = f"{our_start_html.replace('__TITLE__',greek)}\n{html}\n{END_HTML}"
             with open( outputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
                 html_output_file.write( html )
@@ -1196,7 +1196,7 @@ def make_person_pages( outputFolderPath:Path ) -> int:
 <p>{livenMD(entry['dictText'])}</p>
 <p>{entry['gender']}{f' {bornStr}' if bornStr else ''}{f' {diedStr}' if diedStr else ''}</p>'''
 
-        # Now put it all together       
+        # Now put it all together
         output_filename = f"{personKey[0]}_{personKey[1:]}.html"
         html = f'''{our_start_html.replace('__TITLE__',personName)}
 <p>{previousLink} {nextLink}</p>
@@ -1245,7 +1245,7 @@ def make_location_pages( outputFolderPath:Path ) -> int:
 <p>{entry['featureType']}{f"/{entry['featureSubType']}" if entry['featureSubType'] else ''}{f' {commentStr}' if commentStr else ''}</p>
 <p>KJB=‘{entry['kjvName']}’ ESV=‘{entry['esvName']}’</p>'''
 
-        # Now put it all together       
+        # Now put it all together
         output_filename = f"{placeKey[0]}_{placeKey[1:]}.html"
         html = f'''{our_start_html.replace('__TITLE__',placeName)}
 <p>{previousLink} {nextLink}</p>

@@ -52,10 +52,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-04-18' # by RJH
+LAST_MODIFIED_DATE = '2023-05-09' # by RJH
 SHORT_PROGRAM_NAME = "delete_OET-RV_word_numbers"
 PROGRAM_NAME = "Delete word numbers from OET-RV NT"
-PROGRAM_VERSION = '0.01'
+PROGRAM_VERSION = '0.02'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -67,7 +67,7 @@ OET_RV_ESFM_FolderPath = project_folderpath.joinpath( 'translatedTexts/ReadersVe
 assert OET_RV_ESFM_FolderPath.is_dir()
 
 
-numberRegex = re.compile( '¦[1-9][0-9]{0,5}' ) # 1..6 digits
+ESFMWordNumberRegex = re.compile( '¦[1-9][0-9]{0,5}' ) # 1..6 digits
 def main():
     """
     Main program to handle command line parameters and then run what they want.
@@ -84,7 +84,7 @@ def main():
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading {rvESFMFilepath}…" )
         with open( rvESFMFilepath, 'rt', encoding='UTF-8' ) as esfmFile:
             rvESFMText = esfmFile.read() # We keep the original (for later comparison)
-        adjText, count = numberRegex.subn( '', rvESFMText )
+        adjText, count = ESFMWordNumberRegex.subn( '', rvESFMText )
         if count:
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"   Deleted {count:,} word numbers from {BBB}." )
             with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
