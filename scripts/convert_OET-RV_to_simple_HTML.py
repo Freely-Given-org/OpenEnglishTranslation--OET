@@ -25,6 +25,7 @@
 """
 CHANGELOG:
     2023-03-21 Added handling for three verses at once (when verse content is reordered)
+    2023-05-28 Remove USFM fig fields
 """
 from gettext import gettext as _
 from tracemalloc import start
@@ -48,10 +49,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-04-20' # by RJH
+LAST_MODIFIED_DATE = '2023-05-28' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.60'
+PROGRAM_VERSION = '0.61'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -883,6 +884,11 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
             else f'{EM_SPACE}<a href="{nextBBB}.html">Next Book ({nextBBB})</a>')
     else: raise Exception( f"unexpected_BBB '{BBB}'" )
 
+    # Remove \\figs
+    usfm_text, count = re.subn( '\\\\fig [^\\\\]+?\\\\fig\\*', '', usfm_text )
+    if count > 0:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Removed {count:,} figure fields from {BBB} USFM" )
+
     C = V = '0'
     book_html = ''
     done_disclaimer = False
@@ -1117,6 +1123,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                          .replace( '\\bdit*', '</i></b>' ) \
                          .replace( '\\add ', '<span class="RVadded">' ) \
                          .replace( '\\add*', '</span>' )
+    book_html = livenJMPs( BBB, book_html )
     book_html = livenIORs( BBB, book_html )
     assert '\\' not in book_html, f"{book_html[book_html.index(f'{BACKSLASH}')-20:book_html.index(f'{BACKSLASH}')+22]}"
 
@@ -1189,10 +1196,48 @@ def convert_ESFM_words( BBB:str, book_html:str, word_table:List[str] ) -> str:
 # end of convert_OET-RV_to_simple_HTML.convert_ESFM_words function
 
 
+def livenJMPs( BBB:str, bookHTML:str ) -> str:
+    """
+    Liven USFM \\jmp links.
+    """
+    searchStartIx = 0
+    for _safetyCount in range( 99 ):
+        jmpStartIx = bookHTML.find( '\\jmp ', searchStartIx )
+        if jmpStartIx == -1: break # no more to find -- all done
+        jmpPipeIx = bookHTML.find( '|', jmpStartIx+5 )
+        assert jmpPipeIx != -1
+        jmpEndIx = bookHTML.find( '\\jmp*', jmpPipeIx+1 )
+        assert jmpEndIx != -1
+        # dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Handling jmp {BBB} {searchStartIx} {jmpStartIx} {jmpPipeIx} {jmpEndIx} '{html[jmpStartIx:jmpEndIx+5]}'" )
+        jmpDisplay, jmpLinkBit = bookHTML[jmpStartIx+5:jmpPipeIx], bookHTML[jmpPipeIx+1:jmpEndIx]
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Got jmp {BBB} {jmpDisplay=} and {jmpLinkBit=} from '{bookHTML[jmpStartIx:jmpEndIx+5]}'" )
+        assert jmpLinkBit.startswith( 'link-href="' ) and jmpLinkBit.endswith( '"' )
+        jmpLink = jmpLinkBit[11:-1]
+        if jmpLink.startswith( 'http' ): # then it's an external internet link
+            newLink = f'<a title="Go to external jump link" href="{jmpLink}">{jmpDisplay}</a>'
+        else: # it's likely to be a link into another work
+            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"What is this '{jmpDisplay}' link to '{jmpLink}' expecting to jump to?" )
+            if jmpLink.startswith( '#' ):
+                assert jmpLink.startswith( '#C' ), f"Got internal jmp {BBB} {jmpDisplay=} and {jmpLink=} from '{bookHTML[jmpStartIx:jmpEndIx+5]}'"
+                assert 'V' in jmpLink, f"Got internal jmp {BBB} {jmpDisplay=} and {jmpLink=} from '{bookHTML[jmpStartIx:jmpEndIx+5]}'"
+                Vix = jmpLink.index( 'V' )
+                refC, refV = jmpLink[2:Vix], jmpLink[Vix+1:]
+                # print( f"{jmpLink=} {BBB=} {refC=} {refV=}")
+                newLink = f'<a title="Go to internal jump link" href="{jmpLink}">{jmpDisplay}</a>'
+                # print( f"Got {newLink=}")
+            else: # unknown link type
+                unknown_jmp_link_type
+        bookHTML = f'{bookHTML[:jmpStartIx]}{newLink}{bookHTML[jmpEndIx+5:]}'
+        searchStartIx = jmpStartIx + len(newLink) # coz we've changed the size of the html
+    else: jmp_loop_needed_to_break
+    return bookHTML
+# end of convert_OET-RV_to_simple_HTML.livenJMPs function
+
+
 def livenIORs( BBB:str, bookHTML:str ) -> str:
     """
+    Liven \\ior fields in introduction \\iot lines
     """
-    # return bookHTML.replace( '\\ior ', '<span class="ior">' ).replace( '\\ior*', '</span>' )
     searchStartIx = 0
     while True:
         ix = bookHTML.find( '\\ior ', searchStartIx )
