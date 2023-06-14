@@ -46,10 +46,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-05-20' # by RJH
+LAST_MODIFIED_DATE = '2023-05-29' # by RJH
 SHORT_PROGRAM_NAME = "OET-LV-RV_ESFM_to_USFM"
 PROGRAM_NAME = "Convert OET LV & RV ESFM files to USFM"
-PROGRAM_VERSION = '0.04'
+PROGRAM_VERSION = '0.05'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -96,7 +96,9 @@ def main():
                                 .replace( '\\add >', '\\add ' ) \
                                 .replace( '\\add ^', '\\add ' )
                 adjText = adjText.replace( '\\add -\\add*', '' ) # Remove those added hyphens
-            elif VV == 'RV': # Turn section headings into USFM Extended Study Content sidebars
+            elif VV == 'RV':
+                adjText = adjText.replace( "'", '’' ) # Convert apostrophes
+                # Turn section headings into USFM Extended Study Content sidebars
                 # See https://ubsicap.github.io/usfm/master/notes_study/sidebars.html
                 inESB = False
                 # newLines = []
