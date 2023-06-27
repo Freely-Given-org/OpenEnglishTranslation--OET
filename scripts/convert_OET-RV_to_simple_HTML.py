@@ -49,10 +49,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-06-23' # by RJH
+LAST_MODIFIED_DATE = '2023-06-27' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.62'
+PROGRAM_VERSION = '0.63'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -940,7 +940,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                 assert V[0].isdigit() and V[-1].isdigit(), f"Expected a verse number digit with {V=} {rest=}"
                 assert ':' not in V # We don't handle chapter ranges here yet (and probably don't need to)
                 V1, V2 = V.split( '-' )
-                
+
                 if int(V2) == int(V1)+1: # we want both verse numbers to be searchable
                     book_html = f'{book_html}{"" if book_html.endswith(">") else " "}' \
                         + f'''{f"""<span id="C{C}"></span><span class="{'cPsa' if BBB=='PSA' else 'c'}" id="C{C}V1">{C}</span>""" if V1=="1" else f"""<span class="v" id="C{C}V{V1}">{V1}-</span>"""}''' \
@@ -1122,7 +1122,9 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                          .replace( '\\bdit ', '<b><i>' ) \
                          .replace( '\\bdit*', '</i></b>' ) \
                          .replace( '\\add ', '<span class="RVadded">' ) \
-                         .replace( '\\add*', '</span>' )
+                         .replace( '\\add*', '</span>' ) \
+                         .replace( '\\wj ', '<span class="wj">' ) \
+                         .replace( '\\wj*', '</span>' )
     book_html = livenJMPs( BBB, book_html )
     book_html = livenIORs( BBB, book_html )
     assert '\\' not in book_html, f"{BBB} {book_html[book_html.index(f'{BACKSLASH}')-20:book_html.index(f'{BACKSLASH}')+22]}"
