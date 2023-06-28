@@ -17,6 +17,8 @@ span.ul { color:darkGrey; }
 span.dom { color:Gainsboro; }
 span.schwa { font-size:0.75em; }
 span.nominaSacra { font-weight:bold; }
+span.nd { font-weight:bold; }
+span.untr { background-color:ivory; color:yellowGreen; }
 
 p.rem { font-size:0.8em; color:grey; }
 p.shortPrayer { text-align:center; }

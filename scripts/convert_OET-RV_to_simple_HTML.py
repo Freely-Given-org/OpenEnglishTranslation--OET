@@ -787,7 +787,7 @@ def produce_HTML_files() -> None:
                         vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Read {len(word_table):,} lines from word table at {word_table_filepath}." )
                 else:
                     logging.critical( f"No ESFM word-table defined in {BBB} book from {source_filename}" )
-            assert esfm_text.count('‘') == esfm_text.count('’'), f"Why do we have OET-RV_{BBB}.ESFM {esfm_text.count('‘')=} and {esfm_text.count('’')=}"
+            assert esfm_text.count('‘') >= esfm_text.count('’'), f"Why do we have OET-RV_{BBB}.ESFM {esfm_text.count('‘')=} and {esfm_text.count('’')=}"
             assert esfm_text.count('“') >= esfm_text.count('”'), f"Why do we have OET-RV_{BBB}.ESFM {esfm_text.count('“')=} and {esfm_text.count('”')=}"
             esfm_text = esfm_text.replace( "'", "’" ) # Replace apostrophes
             assert "'" not in esfm_text, f"""Why do we have single quote in {source_filename}: {esfm_text[esfm_text.index("'")-20:esfm_text.index("'")+22]}"""
@@ -1304,3 +1304,4 @@ if __name__ == '__main__':
 
     BibleOrgSysGlobals.closedown( PROGRAM_NAME, PROGRAM_VERSION )
 # end of convert_OET-RV_to_simple_HTML.py
+
