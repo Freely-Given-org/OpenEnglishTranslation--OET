@@ -47,10 +47,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2023-06-27' # by RJH
+LAST_MODIFIED_DATE = '2023-06-28' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.65'
+PROGRAM_VERSION = '0.66'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -937,9 +937,9 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
 #   or 2 or 3 words joined by an underline like he_was_saying
 #   (although the underline is already inside a span at this point).
 # Note that single words might include a <sup></sup> span as in 'Aʸsaias/(Yəshaˊə<sup>yāh</sup>)' (but we handle that below by substitions)
-wordRegex1 = re.compile( '([-øA-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' ) # Max of six total digits
-wordRegex2 = re.compile( '([-øA-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]{2,})<span class="ul">_</span>([-øA-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
-wordRegex3 = re.compile( '([-øA-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]{2,})<span class="ul">_</span>([-øA-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]+)<span class="ul">_</span>([-øA-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
+wordRegex1 = re.compile( '([-¬A-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' ) # Max of six total digits
+wordRegex2 = re.compile( '([-¬A-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]{2,})<span class="ul">_</span>([-¬A-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
+wordRegex3 = re.compile( '([-¬A-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]{2,})<span class="ul">_</span>([-¬A-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]+)<span class="ul">_</span>([-¬A-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
 def convert_tagged_ESFM_words_to_links( BBB:str, book_html:str, word_table:List[str] ) -> str:
     """
     Handle ESFM word numbers like 'written¦21763'
