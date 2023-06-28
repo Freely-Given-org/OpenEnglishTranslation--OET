@@ -135,6 +135,8 @@ span.ul { color:darkGrey; }
 span.dom { color:Gainsboro; }
 span.schwa { font-size:0.75em; }
 span.nominaSacra { font-weight:bold; }
+span.nd { font-weight:bold; }
+span.untr { background-color:ivory; color:yellowGreen; }
 
 p.rem { font-size:0.8em; color:grey; }
 p.shortPrayer { text-align:center; }
@@ -901,7 +903,8 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
 
     # Add our various spans to special text features
     book_html = book_html.replace( '\\nd ', '<span class="nominaSacra">' ).replace( '\\nd*', '</span>' ) \
-                .replace( '\\sup ', '<sup>' ).replace( '\\sup*', '</sup>' )
+                .replace( '\\sup ', '<sup>' ).replace( '\\sup*', '</sup>' ) \
+                .replace( '\\untr ', '<span class="untr">' ).replace( '\\untr*', '</span>' ) # untranslated words
     book_html = book_html.replace( '\\add +', '<span class="addArticle">' ) \
                 .replace( '\\add -', '<span class="unusedArticle">' ) \
                 .replace( '\\add =', '<span class="addCopula">' ) \

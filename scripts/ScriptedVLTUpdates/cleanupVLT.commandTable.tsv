@@ -11,7 +11,7 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 
 #									\add*_			_\add*	moveUnderlineInsideAddEnd	Put underlines inside add markers
 
-									-¦			 \add ¬¦\add*	tagUnusedWords	Mark untranslated Greek words with this
+									-¦			 \untr ¬¦\untr*	tagUnusedWords	Mark untranslated Greek words with this (non-standard USFM)
 #									-¦			 \add -@¦\add*	tagUnusedWords	This can give an infinite loop so we change it to a temporary character
 #									-@			--	fixUnusedWords	  and then change it back again
 
