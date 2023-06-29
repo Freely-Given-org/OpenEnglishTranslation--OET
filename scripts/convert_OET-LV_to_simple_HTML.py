@@ -918,10 +918,13 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                 .replace( '_', '<span class="ul">_</span>' ) \
                 .replace( '%%SPAN%%', '_</span>' )
 
+    if word_table: # sort out word numbers like 'written¦21763'
+        book_html = convert_tagged_ESFM_words_to_links( BBB, book_html, word_table )
+
     # Add "untranslated" to titles/popup-boxes for untranslated words
     count = 0
     searchStartIndex = 0
-    for _safetyCount in range( 100 ):
+    for _safetyCount in range( 1000 ):
         ix = book_html.find( '<span class="untr"><span title="', searchStartIndex )
         if ix == -1: break # all done
         ixEnd = book_html.index( '"><', ix+32 )
@@ -929,9 +932,6 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
         count += 1
         searchStartIndex = ixEnd + 5
     else: need_to_increase_loop_count_for_untranslated_words
-
-    if word_table: # sort out word numbers like 'written¦21763'
-        book_html = convert_tagged_ESFM_words_to_links( BBB, book_html, word_table )
 
     # Make schwas smaller
     book_html = book_html.replace( 'ə', '<span class="schwa">ə</span>' )
