@@ -50,7 +50,7 @@ from BibleTransliterations import load_transliteration_table, transliterate_Gree
 LAST_MODIFIED_DATE = '2023-06-29' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.67'
+PROGRAM_VERSION = '0.68'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -917,6 +917,18 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
     book_html = book_html.replace( '_</span>', '%%SPAN%%' ) \
                 .replace( '_', '<span class="ul">_</span>' ) \
                 .replace( '%%SPAN%%', '_</span>' )
+
+    # Add "untranslated" to titles/popup-boxes for untranslated words
+    count = 0
+    searchStartIndex = 0
+    for _safetyCount in range( 100 ):
+        ix = book_html.find( '<span class="untr"><span title="', searchStartIndex )
+        if ix == -1: break # all done
+        ixEnd = book_html.index( '"><', ix+32 )
+        book_html = f'{book_html[:ixEnd]} (untranslated){book_html[ixEnd:]}'
+        count += 1
+        searchStartIndex = ixEnd + 5
+    else: need_to_increase_loop_count_for_untranslated_words
 
     if word_table: # sort out word numbers like 'written¦21763'
         book_html = convert_tagged_ESFM_words_to_links( BBB, book_html, word_table )
