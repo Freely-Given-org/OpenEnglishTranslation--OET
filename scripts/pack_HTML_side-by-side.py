@@ -55,10 +55,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-04-17' # by RJH
+LAST_MODIFIED_DATE = '2023-06-29' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.52'
+PROGRAM_VERSION = '0.53'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -134,6 +134,8 @@ span.ul { color:darkGrey; }
 span.dom { color:Gainsboro; }
 span.schwa { font-size:0.75em; }
 span.nominaSacra { font-weight:bold; }
+span.nd { font-weight:bold; }
+span.untr { background-color:ivory; color:yellowGreen; font-variant-position:sub; }
 span.bk { font-style:italic; }
 span.fn { vertical-align: super; font-size:0.7em; color:green; }
 span.xref { vertical-align: super; font-size:0.7em; color:blue; }

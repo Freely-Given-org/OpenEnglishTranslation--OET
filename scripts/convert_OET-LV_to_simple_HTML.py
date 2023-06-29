@@ -47,10 +47,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2023-06-28' # by RJH
+LAST_MODIFIED_DATE = '2023-06-29' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.66'
+PROGRAM_VERSION = '0.67'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -136,7 +136,7 @@ span.dom { color:Gainsboro; }
 span.schwa { font-size:0.75em; }
 span.nominaSacra { font-weight:bold; }
 span.nd { font-weight:bold; }
-span.untr { background-color:ivory; color:yellowGreen; }
+span.untr { background-color:ivory; color:yellowGreen; font-variant-position:sub; }
 
 p.rem { font-size:0.8em; color:grey; }
 p.shortPrayer { text-align:center; }
@@ -940,6 +940,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
 #   or 2 or 3 words joined by an underline like he_was_saying
 #   (although the underline is already inside a span at this point).
 # Note that single words might include a <sup></sup> span as in 'Aʸsaias/(Yəshaˊə<sup>yāh</sup>)' (but we handle that below by substitions)
+# NOTE: If you are making any changes, the same regex is in the ESFM module of BibleOrgSys
 wordRegex1 = re.compile( '([-¬A-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' ) # Max of six total digits
 wordRegex2 = re.compile( '([-¬A-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]{2,})<span class="ul">_</span>([-¬A-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
 wordRegex3 = re.compile( '([-¬A-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]{2,})<span class="ul">_</span>([-¬A-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]+)<span class="ul">_</span>([-¬A-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
