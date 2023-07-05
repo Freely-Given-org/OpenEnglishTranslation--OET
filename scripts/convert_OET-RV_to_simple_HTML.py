@@ -46,13 +46,12 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.Bible import Bible
 from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, BOOKLIST_66
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
-from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-06-27' # by RJH
+LAST_MODIFIED_DATE = '2023-07-05' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.63'
+PROGRAM_VERSION = '0.64'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -803,6 +802,12 @@ def produce_HTML_files() -> None:
             assert '  ' not in esfm_text, f"""Why do we have doubled spaces in {source_filename}: {esfm_text[esfm_text.index('  ')-20:esfm_text.index('  ')+22]}"""
             invalid_text = '\\p\n\\s'
             assert invalid_text not in esfm_text, f"""Why do we have a useless paragraph in {source_filename}: {esfm_text[esfm_text.index(invalid_text)-20:esfm_text.index(invalid_text)+22]}"""
+            for lineNumber,line in enumerate( esfm_text.split( '\n' ), start=1 ):
+                for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
+                    assert line.count( f'\\{characterMarker} ') == line.count( f'\\{characterMarker}*'), f"{characterMarker} marker mismatch in {source_filename} {lineNumber}: '{line}'"
+                if '\\x* ' in line: # this can be ok if the xref directly follows other text
+                    logger = logging.critical if ' \\x ' in line else logging.warning
+                    logger( f"Double-check space after xref in {source_filename} {lineNumber}: '{line}'" )
 
             book_start_html, book_html, book_end_html = convert_ESFM_to_simple_HTML( BBB, esfm_text, word_table )
 
@@ -1304,4 +1309,3 @@ if __name__ == '__main__':
 
     BibleOrgSysGlobals.closedown( PROGRAM_NAME, PROGRAM_VERSION )
 # end of convert_OET-RV_to_simple_HTML.py
-
