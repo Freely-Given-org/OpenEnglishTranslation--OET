@@ -53,10 +53,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-05-03' # by RJH
+LAST_MODIFIED_DATE = '2023-07-05' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.29'
+PROGRAM_VERSION = '0.30'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -418,8 +418,8 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
 
     assert rvWords
     for rvWord in rvWords:
-        assert rvWord, f"{rvText=} {rvAdjText=}"
-        assert rvWord.count( '¦' ) <= 1 # Check that we haven't been retagging already tagged RV words
+        assert rvWord, f"{BBB} {c}:{v} {rvText=} {rvAdjText=}"
+        assert rvWord.count( '¦' ) <= 1, f"{BBB} {c}:{v} {rvWord=} {rvText=} {rvAdjText=}" # Check that we haven't been retagging already tagged RV words
     numSimpleListedAdds = matchOurListedSimpleWords( BBB, c,v, rvWords, lvWords )
 
     # Now get the uppercase words
