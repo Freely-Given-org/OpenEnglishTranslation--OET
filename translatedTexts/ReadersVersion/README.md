@@ -15,9 +15,11 @@ Currently (July 2023), around 50% of the ‘New Testament’ has been rough draf
 ## TODO list
 
 - Replace "whoever" with anyone
+- Manually mark nomina sacra in OET-RV???
 - Do a spell-check
 - Consider replacing J with Y, e.g., Jacob -> Yacob, John -> Yohn
 - Check consistency of keyterms, e.g., how is ‘son of God’, ‘holy spirit’, ‘kingdom of the heavens’ translated everywhere?
 - Compare parallel passages
 - Define and check style of s1 section headings
+- Add "alternative" section headings for searches
 - Define and implement footnote classes
