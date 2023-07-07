@@ -31,6 +31,9 @@ l									  			 	reduceDoubleSpaces	Reduce double spaces in entire file
 									Stone|Petros			Stone/Petros	replacePetrosPipe	John 1:42
 									Gazelle|Dorkas			Gazelle/Dorkas	replaceDorkasPipe	Acts 9:36
 
+# Reduce markers
+									\nd* \nd 			 		Consecutive nomina sacra like \nd Yaʸsous¦299\nd* \nd chosen¦300_one¦300/messiah¦300\nd* Matt 1:18
+
 # Some wording problems
 #  (these probably don't work anymore due to word numbers)
 									 the the_			 the 		Trailing space
