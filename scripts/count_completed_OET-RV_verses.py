@@ -57,10 +57,10 @@ from BibleOrgSys.Reference.BibleVersificationSystems import BibleVersificationSy
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-04-13' # by RJH
+LAST_MODIFIED_DATE = '2023-07-10' # by RJH
 SHORT_PROGRAM_NAME = "count_completed_OET-RV_verses"
 PROGRAM_NAME = "Count completed OET-RV verses"
-PROGRAM_VERSION = '0.15'
+PROGRAM_VERSION = '0.16'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -125,7 +125,7 @@ def main():
             finishedChapters += approxFinishedChapters
             if unfinishedCount:
                 vPrint( 'Info' if finishedVerseCount==0 else 'Normal', DEBUGGING_THIS_MODULE, f"  OET-RV OT {BBB} has {finishedVerseCount:,}/{totalBookVerses:,} = {finishedPercentage}% verses finished (approx. {approxFinishedChapters}/{totalBookChapters} chapters finished)." )
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"OET-RV OT verses are {finishedOTVerses*100//totalOTVerses}% finished. (Approx {finishedOTChapters:,}/{totalOTChapters:,} = {finishedOTChapters*100//totalOTChapters}% chapters.)\n" )
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"OET-RV OT has {finishedOTVerses:,}/{totalOTVerses:,} verses finished = {finishedOTVerses*100//totalOTVerses}%. (Approx {finishedOTChapters:,}/{totalOTChapters:,} = {finishedOTChapters*100//totalOTChapters}% chapters.)\n" )
 
     # Now do NT
     for filename in glob.glob( os.path.join( OET_RV_ESFM_InputFolderPath, 'OET-RV_???.ESFM' ) ):
@@ -149,7 +149,7 @@ def main():
             finishedChapters += approxFinishedChapters
             if unfinishedCount:
                 vPrint( 'Info' if finishedVerseCount==0 else 'Normal', DEBUGGING_THIS_MODULE, f"  OET-RV NT {BBB} has {finishedVerseCount:,}/{totalBookVerses:,} = {finishedPercentage}% verses finished (approx. {approxFinishedChapters}/{totalBookChapters} chapters finished)." )
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"OET-RV NT verses are {finishedNTVerses*100//totalNTVerses}% finished. (Approx {finishedNTChapters:,}/{totalNTChapters:,} = {finishedNTChapters*100//totalNTChapters}% chapters.)\n" )
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"OET-RV NT has {finishedNTVerses:,}/{totalNTVerses:,} verses finished = {finishedNTVerses*100//totalNTVerses}%. (Approx {finishedNTChapters:,}/{totalNTChapters:,} = {finishedNTChapters*100//totalNTChapters}% chapters.)\n" )
 
     # Now do whole Bible
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"OET-RV verses are {finishedVerses*100//totalVerses}% finished. (Approx {finishedChapters:,}/{totalChapters:,} = {finishedChapters*100//totalChapters}% chapters.)\n" )
