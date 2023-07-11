@@ -23,3 +23,4 @@ Currently (July 2023), around 50% of the ‘New Testament’ has been rough draf
 - Define and check style of s1 section headings
 - Add "alternative" section headings for searches
 - Define and implement footnote classes
+- Add word numbers for all remaining OET-RV words
