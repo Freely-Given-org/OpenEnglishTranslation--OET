@@ -36,6 +36,7 @@ Puts markers around one gloss word inserted near another:
 
 CHANGELOG:
     2023-03-22 Added word numbers to refs in 
+    2023-07-24 Reduce columns in SR GNT source table
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple, Optional
@@ -49,10 +50,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-04-21' # by RJH
+LAST_MODIFIED_DATE = '2023-07-24' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
-PROGRAM_VERSION = '0.84'
+PROGRAM_VERSION = '0.85'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -121,6 +122,9 @@ book_csv_column_headers = []
 
 
 NUM_EXPECTED_COLLATION_COLUMNS = 37
+# Last time we looked (2023-07-24) with 168,224 rows, 35-column header was:
+# CollationID,VerseID,VariantID,Relation,Pattern,Translatable,Align,Span,Incomplete,Classic,Koine,Medieval,Probability,Historical,Capitalization,Punctuation,Role,Syntax,Morphology,Sic,LexemeID,Sense,GlossPre,GlossHelper,GlossWord,GlossPost,GlossPunctuation,GlossCapitalization,GlossOrder,GlossInsert,Reference,Notes,If,Then,Timestamp
+# and table had many 'NULL' entries
 # Last time we looked (2023-03-06) with 168,262 rows, 36-column header was:
 # CollationID,VerseID,VariantID,Relation,Pattern,Translatable,Align,Span,Incomplete,Classic,Koine,Medieval,Probability,Historical,Capitalization,Punctuation,Role,Syntax,Morphology,Sic,Lemma,LexemeID,Sense,GlossPre,GlossHelper,GlossWord,GlossPost,GlossPunctuation,GlossCapitalization,GlossOrder,GlossInsert,Reference,Notes,If,Then,Timestamp
 # and table had many 'NULL' entries
@@ -206,7 +210,7 @@ def loadSourceCollationTable() -> bool:
     # Get the headers before we start
     collation_csv_column_headers = [header for header in csv_lines[0].strip().split(",")] # assumes no commas in headings
     # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Column headers: ({len(collation_csv_column_headers)}): {collation_csv_column_headers}")
-    assert len(collation_csv_column_headers) == NUM_EXPECTED_COLLATION_COLUMNS
+    assert len(collation_csv_column_headers) == NUM_EXPECTED_COLLATION_COLUMNS, f"{len(collation_csv_column_headers)=} {NUM_EXPECTED_COLLATION_COLUMNS=}"
     # Check that the columns we use are still there somewhere
     assert 'CollationID' in collation_csv_column_headers
     assert 'VerseID' in collation_csv_column_headers
@@ -550,6 +554,9 @@ def preform_gloss(thisList:List[Dict[str,str]], given_verse_row_index:int, last_
         = given_verse_row['GlossPre'], given_verse_row['GlossHelper'], given_verse_row['GlossWord'], given_verse_row['GlossPost'], given_verse_row['GlossPunctuation'], given_verse_row['GlossCapitalization']
     # if glossWord == '-':
     #     glossWord = '-the-' # We want to know when potential articles are just dropped (i.e., considered as pure case markers)
+    # Table encoding seems to have changed
+    if glossPunctuation is None: glossPunctuation = ''
+    if glossCapitalization is None: glossCapitalization = ''
     if row_offset is not None:
         this_row_offset = row_offset + given_verse_row_index + 1
         # Put in the ESFM wordlink row numbers

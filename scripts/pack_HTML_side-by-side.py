@@ -32,6 +32,7 @@ Uses the OET-RV USFM to create the headers
 
 CHANGELOG:
     2023-03-29 Make entire top&bottom section headings into clickable links
+    2023-07-24 Expand out Checking instructions
 """
 from gettext import gettext as _
 from tracemalloc import start
@@ -55,10 +56,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-06-29' # by RJH
+LAST_MODIFIED_DATE = '2023-07-24' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.53'
+PROGRAM_VERSION = '0.54'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -1023,7 +1024,7 @@ SBS_GLOSSARY_HTML = """<!DOCTYPE html>
 
   <h3 id="angel">angel, messenger</h3>
   <p>The Greek word translated ‘angel’ really means a <i>messenger</i> or <i>delegate</i>.
-        In fact, ‘angel’ is a transliteration of the Greek, not a translation.
+        In fact, ‘angel’ is a <em>transliteration</em> of the Greek, not a translation.
         The translators have to decide from the context if it's referring to a human
         or to a supernatural being (typically dressed in shining white).
         Sometimes (e.g., <a href="https://BibleHub.com/parallel/revelation/1-20.htm">Rev 1:20</a>)
@@ -1266,7 +1267,7 @@ RV_CHECKING_HTML = """<!DOCTYPE html>
 
   <p>If you've been asked to help with checking the <em>OET RV</em>,
         this is how we suggest you work.
-    Please note that we suggest that you read the <em>OET RV</em>
+    Please note that we suggest that you read these <em>OET</em> pages
         on a wider screen, like a laptop or tablet (not a phone).
     We will use the book of Mark as an example below.</p>
 
@@ -1276,13 +1277,18 @@ RV_CHECKING_HTML = """<!DOCTYPE html>
     (If you would like your name added to the list of contributors to the <em>OET</em>,
         we're happy to do this and you should contact us for further details.)</p>
 
+  <p>We'd also appreciate it if errors can be separated from suggestions.
+        (This is because we'll try to fix errors immediately,
+            but would like to take more time to consider and evaluate suggestions.)</p>
+
   <h3>Set up</h3>
   <ol>
   <li>The starting page is
         <a href="https://Freely-Given.org/OET/SideBySide/MRK.html">https://Freely-Given.org/OET/SideBySide/MRK.html</a>.
         For other books, the three UPPERCASE characters have to be changed, e.g., JDE for Jude</li>
   <li>You can always access the book index at
-        <a href="https://Freely-Given.org/OET/SideBySide/index.html#Index">https://Freely-Given.org/OET/SideBySide/index.html#Index</a></li>
+        <a href="https://Freely-Given.org/OET/SideBySide/index.html#Index">https://Freely-Given.org/OET/SideBySide/index.html#Index</a>.
+        If you hover your mouse over a book name, most browsers will show the file name (with the THREE-CHARACTER book codes)</li>
   <li>You can also jump directly to specific chapters by appending <b>#C4</b> or similar
         to the book address like the Mark one above, getting
         <a href="https://Freely-Given.org/OET/SideBySide/MRK#C4.html">https://Freely-Given.org/OET/SideBySide/MRK.html#C4</a></li>
@@ -1299,7 +1305,9 @@ RV_CHECKING_HTML = """<!DOCTYPE html>
         in such a way that they don't interrupt the flow of the text</li>
   <li>You should read the introduction at
         <a href="https://Freely-Given.org/OET/SideBySide/index.html#Intro">https://Freely-Given.org/OET/SideBySide/index.html#Intro</a>
-        to get a good understanding of the goals of the <em>OET</em>.</li>
+        to get a good understanding of the goals of the <em>OET</em>
+        as well as reading the <a href="https://Freely-Given.org/OET/SideBySide/FAQs.html">FAQs</a>
+        and the <a href="https://Freely-Given.org/OET/SideBySide/Glossary.html">Glossary</a></li>
   <li>We recommend that you look at the parallel Bible verse view on BibleHub at
         <a href="https://BibleHub.com/parallel/mark/1-1.htm">https://BibleHub.com/parallel/mark/1-1.htm</a>
         (and of course you can navigate from there to where you are working)</li>
@@ -1313,14 +1321,19 @@ RV_CHECKING_HTML = """<!DOCTYPE html>
         (to remind yourself what we're looking for).</p>
   <ol>
   <li><b>Whole section</b>: Read the whole text of the <em>RV</em> down to the next section heading.
+            Don't worry about accuracy initially—just think about how it sounds in English.
             Check if
     <ul>
     <li>It reads fluently and naturally?</li>
     <li>Any typos or missing words?</li>
-    <li>Did it have any words that you don't normally use?
+    <li>Did it have any words that you wouldn't normally use in a secular office?
             (We're trying to avoid as much ‘churchy’ language as possible.)</li>
+    <li>Did it sound too colloquial or like slang or disrespectful for the text?</li>
     <li>Is there any sentence that you think you could say more clearly or more naturally
             than what's there?</li>
+    <li>Do the sentences follow each other naturally?
+            Greek sentences might begin with ‘And’ or ‘Because’,
+                but there shouldn't be too many English sentences like that.</li>
     </ul></li>
   <li><b>Section headings</b>: After finishing a section, go back up to the section heading and
     <ul>
@@ -1328,6 +1341,20 @@ RV_CHECKING_HTML = """<!DOCTYPE html>
     <li>Look at the start of the section and see if there's a natural break from the previous section
             (i.e., that this current section starts in the best place)?</li>
     <li>Do you think that the section should have been divided into two (or more) sections?</li>
+    <li>Is the heading style consistent?
+            We're more interested in impact that bland descriptions of what happened,
+                cf. (bland) "Rich young man asks questions"
+                vs. (impact) "Rich young man can't make the personal sacrifice".</li>
+    <li>We don't mind using synonyms that aren't actually in the text.
+            This gives us an opportunity to put different pictures into the reader's mind.
+            e.g., pouring the ‘perfume’ or whatever over Jesus:
+                if we use ‘lotion’ in the text,
+                then maybe we could use ‘skin-cream’ in the heading
+                to show the range of words which could have been used.
+            (Note: perfume as we know it is liquid and would have just puddled on the floor.
+                Lotion would need to be rubbed in, as she did with her hair.
+                Get the visual picture in your head of what happened,
+                    then think what words would describe that for us in the 2020's.)</li>
     </ul></li>
   <li><b>Verse content</b>:
     <ul>
@@ -1353,6 +1380,14 @@ RV_CHECKING_HTML = """<!DOCTYPE html>
         (Once there was a printed Bible nicknamed <a href="https://en.wikipedia.org/wiki/Wicked_Bible">The Wicked Bible</a>
             because it accidentally missed typesetting the <i>not</i>
             in <i>Thou shalt not commit adultery.</i>)</li>
+  <li>There are some words that we specifically try not to use, e.g., ‘great’.
+        It is a word we use in modern English, yet we wouldn't say ‘a great crowd’
+        because we'd collocate ‘large’ with crowd.
+        Someone who ‘rejoiced greatly’ might be ‘very happy’ or ‘very excited’.</li>
+  <li>Hebrew and Greek genitive constructions are often translated using ‘of’,
+        e.g., house of Simon.
+        This is one grammatical feature that makes Bibles sound old-fashioned,
+        so we try to use the natural English construction which is like ‘Simon's house’.</li>
   <li><b>Literal Version</b>: The <em>LV</em> is not manually translated like the <em>RV</em>,
         but instead it's translated from the Hebrew (OT)
         and Greek (NT) by a series of computer programs.
@@ -1386,7 +1421,7 @@ RV_CHECKING_HTML = """<!DOCTYPE html>
   </ol>
 
   <h3 id="Feedback">Feedback</h3>
-    <p>The <em>OET</em> is not yet finalised, and not yet publicly released,
+    <p>The <em>OET</em> is not yet finalised
         but it's online here for easy access for our checkers and reviewers.
     If you have corrections and suggestions,
         please do contact us by <a href="mailto:Freely.Given.org@gmail.com?subject=OET RV Checking">email</a>.
