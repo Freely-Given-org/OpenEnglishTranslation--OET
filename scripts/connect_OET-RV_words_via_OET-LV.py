@@ -33,6 +33,9 @@ It does have the potential to make wrong connections that will need to be manual
         when the rest of the OET-RV words are aligned,
     but hopefully this script is relatively conservative
         so that the number of wrong alignments is not huge.
+
+CHANGELOG:
+    2023-07-31 Added character marker checks for each RV line
 """
 from gettext import gettext as _
 from tracemalloc import start
@@ -53,10 +56,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-07-05' # by RJH
+LAST_MODIFIED_DATE = '2023-07-31' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.30'
+PROGRAM_VERSION = '0.31'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -298,6 +301,13 @@ def connect_OET_RV( rv, lv ):
         with open( rvESFMFilepath, 'rt', encoding='UTF-8' ) as esfmFile:
             state.rvESFMText = esfmFile.read() # We keep the original (for later comparison)
             state.rvESFMLines = state.rvESFMText.split( '\n' )
+            # Do some basic checking (better to find common editing errors sooner rather than later)
+            for lineNumber,line in enumerate( state.rvESFMLines, start=1 ):
+                for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
+                    assert line.count( f'\\{characterMarker} ') == line.count( f'\\{characterMarker}*'), f"{characterMarker} marker mismatch in {rvESFMFilename} {lineNumber}: '{line}'"
+                if '\\x* ' in line: # this can be ok if the xref directly follows other text
+                    logger = logging.critical if ' \\x ' in line else logging.warning
+                    logger( f"Double-check space after xref in {rvESFMFilename} {lineNumber}: '{line}'" )
 
         numChapters = lv.getNumChapters( BBB )
         if numChapters >= 1:

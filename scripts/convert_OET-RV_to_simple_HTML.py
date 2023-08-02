@@ -48,10 +48,10 @@ from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, 
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 
 
-LAST_MODIFIED_DATE = '2023-07-05' # by RJH
+LAST_MODIFIED_DATE = '2023-07-31' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.64'
+PROGRAM_VERSION = '0.65'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -794,7 +794,7 @@ def produce_HTML_files() -> None:
             # assert '"' not in usfm_text, f"""Why do we have double quote in {source_filename}: {usfm_text[usfm_text.index('"')-20:usfm_text.index('"')+22]}"""
             assert '--' not in esfm_text, f"""Why do we have doubled hyphens in {source_filename}: {esfm_text[esfm_text.index('--')-20:esfm_text.index('--')+22]}"""
             assert '“ ' not in esfm_text, f"""Why do we have space after double opening quote in {source_filename}: {esfm_text[esfm_text.index('“ ')-20:esfm_text.index('“ ')+22]}"""
-            if '’ ”' not in esfm_text:
+            if '’ ”' not in esfm_text and '’\\wj* ”' not in esfm_text:
                 assert ' ”' not in esfm_text, f"""Why do we have space before double closing quote in {source_filename}: {esfm_text[esfm_text.index(' ”')-20:esfm_text.index(' ”')+22]}"""
             assert '‘ ' not in esfm_text, f"""Why do we have space after single opening quote in {source_filename}: {esfm_text[esfm_text.index('‘ ')-20:esfm_text.index('‘ ')+22]}"""
             if '” ’' not in esfm_text:
