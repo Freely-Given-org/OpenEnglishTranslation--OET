@@ -46,6 +46,7 @@ w									For			Because		Jhn 3:16 Would be nice to do for 'for' also, but don't 
 									; for			; because		Matt 2:5 & 6 Would be nice to do for 'for' also, but don't want to accidentally change the preposition (looking 'for')
 									, for			, because		Matt 1:20 & 21, 18:10 Would be nice to do for 'for' also, but don't want to accidentally change the preposition (looking 'for')
 					MAT_26:28,LUK_12:12,LUK_14:24				for			because		All at start of verse
+									becausegive			forgive		Luke 17:3 REPAIR after comma
 #									glory			what?????		Matt 16:27 How do we handle this????
 									gnashing			grating		Matt 22:13 or "grinding, biting"? What about "chattering"???
 									Hail			Greetings		Matt 26:29
@@ -113,7 +114,9 @@ G									denarii¦			δηνάριον¦_\add coins¦\add*		Luke 7:41
 G									denarius¦			δηνάριον¦_\add coin¦\add*		Rev 6:6
 G									two_drachmas			δίδραχμον		Matt 17:24
 G									lepton¦			λεπτόν¦_\add coin¦\add*		Luke 21:2
-wG									mina¦			\add silver¦\add*_μνᾶ¦		Luke 19:13-27
+#wG									mina¦			\add silver¦\add*_μνᾶ¦		Luke 19:13-27
+wG									minas¦			μνᾶs¦\add _of¦_silver¦\add*		Luke 19:13-27
+wG									mina¦			μνᾶ¦\add _of¦_silver¦\add*		Luke 19:13-27
 
 # Weights and measures
 wdGH									baths¦			βάτος/(בַּת)¦_\add measures¦\add*		Luke 16:6
