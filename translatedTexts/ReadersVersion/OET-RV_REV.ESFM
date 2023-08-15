@@ -27,11 +27,17 @@
 \rem This is still a very early look into the unfinished text of the \em Open English Translation\em* of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
+\rem /s1 Introduction and Salutation
+\rem /s1 Prologue
 \p
 \v 1 ◘
 \v 2 ◘
 \v 3 ◘
 \s1 The greetings there to seven group of believers
+\rem /s1 Christ's messages to seven churches
+\rem /s1 John's Greeting to the Seven Churches
+\rem /s1 Greetings to the Seven Churches
+\rem /s1 Greetings and doxology
 \p
 \v 4 \x + \xo 1:4: a \xt Exo 3:14; \xo b \xt Rev 4:5.\x*◘
 \p …◘
@@ -43,6 +49,9 @@
 \p
 \v 8 \x + \xo 1:8: a \xt Rev 22:13; \xo b \xt Exo 3:14.\x*◘
 \s1 The showing of Yeshua ki Yohan
+\rem /s1 Vision of the Son of Man
+\rem /s1 A Vision of Christ
+\rem /s1 One like a Son of Man
 \p
 \v 9 ◘
 \v 10 ◘
@@ -59,6 +68,9 @@
 \v 20 ◘
 \c 2
 \s1 The letter going to believers there to Ephesus
+\rem /s1 The Message to Ephesus
+\rem /s1 To the church in Ephesus
+\rem /s1 The Message to the Church in Ephesus
 \p
 \v 1 ◘
 \p …◘
@@ -69,6 +81,9 @@
 \v 6 ◘
 \p
 \v 7 \x + \xo 2:7: a \xt Gen 2:9; Rev 22:2; \xo b \xt Eze 28:13; 31:8 (LXX).\x*◘
+\rem /s1 The Message to the Church in Smyrna
+\rem /s1 To the Church in Smyrna
+\rem /s1 The Message to Smyrna
 \p …◘
 \s1 The letter going to believers there to Ismirna
 \p
@@ -78,6 +93,9 @@
 \v 10 ◘
 \p
 \v 11 \x + \xo 2:11: \xt Rev 20:14; 21:8.\x*◘
+\rem /s1 To the Church in Pergamum
+\rem /s1 The Message to the Church in Pergamum
+\rem /s1 The Message to Pergamum
 \p …◘
 \s1 The letter going to believers there to Pirgamu
 \p
@@ -89,6 +107,9 @@
 \v 16 ◘
 \p
 \v 17 \x + \xo 2:17: a \xt Exo 16:14-15; 16:33-34; Jn 6:48-50; \xo b \xt Isa 62:2; 65:15.\x*◘
+\rem /s1 The Message to the Church in Thyatira
+\rem /s1 To the Church in Thyatira
+\rem /s1 The Message to Thyatira
 \p …◘
 \s1 The letter going to believers there to Tiyatira
 \p
@@ -109,6 +130,9 @@
 \v 29 ◘
 \c 3
 \s1 The letter going to believers there to Sardis
+\rem /s1 The Message to the Church in Sardis
+\rem /s1 The Message to Sardis
+\rem /s1 To the Church in Sardis
 \p
 \v 1 ◘
 \p …◘
@@ -119,8 +143,11 @@
 \p
 \v 6 ◘
 \s1 The letter going to believers there to Piladilpiya
+\rem /s1 To the Church in Philadelphia
+\rem /s1 The Message to the Church in Philadelphia
+\rem /s1 The Message to Philadelphia
 \p
-\v 7 \x + \xo 3:7: \xt Isa 22:22; Job 12:14.\x*◘
+\v 7 \x + \xo 3:7: \xt Isa 22:22; Yob 12:14.\x*◘
 \p …◘
 \v 8 ◘
 \v 9 \x + \xo 3:9: a \xt Isa 49:23; 60:14; \xo b \xt Isa 43:4.\x*◘
@@ -130,6 +157,9 @@
 \p
 \v 13 ◘
 \s1 The letter going to believers there to Lawdisya
+\rem /s1 The Message to the Church in Laodicea
+\rem /s1 To the Church in Laodicea
+\rem /s1 The Message to Laodicea
 \p
 \v 14 \x + \xo 3:14: \xt Prv 8:22.\x*◘
 \p …◘
@@ -144,6 +174,10 @@
 \v 22 ◘
 \c 4
 \s1 The worshipping there to sky/heaven
+\rem /s1 Visions of heaven
+\rem /s1 Worship in Heaven
+\rem /s1 The Heavenly Worship
+\rem /s1 The Throne in Heaven
 \p
 \v 1 ◘
 \v 2 \x + \xo 4:2-3: \xt Eze 1:26-28; 10:1.\x*◘
@@ -168,6 +202,8 @@
 \q2 …
 \c 5
 \s1 The linulun document and the Nati Karniru
+\rem /s1 The Lamb Opens the Scroll
+\rem /s1 The Scroll and the Lamb
 \p
 \v 1 \x + \xo 5:1: \xt Eze 2:9-10; Isa 29:11.\x*◘
 \v 2 ◘
@@ -203,6 +239,10 @@
 \v 14 ◘
 \c 6
 \s1 The peglekat of me piket
+\rem /s1 The Lamb Breaks the First Six Seals
+\rem /s1 The Seven Seals
+\rem /s1 The Seals
+\rem /s1 The seven seals
 \p
 \v 1 ◘
 \v 2 \x + \xo 6:2: \xt Zech 1:8; 6:3,6.\x*◘
@@ -218,24 +258,32 @@
 \v 10 ◘
 \v 11 ◘
 \p
-\v 12 \x + \xo 6:12: a \xt Rev 11:13; 16:18; \xo b \xt Isa 13:10; Joel 2:10,31; 3:15; Mat 24:29; Mrk 13:24-25; Luk 21:25.\x*◘
+\v 12 \x + \xo 6:12: a \xt Rev 11:13; 16:18; \xo b \xt Isa 13:10; Yoel 2:10,31; 3:15; Mat 24:29; Mrk 13:24-25; Luk 21:25.\x*◘
 \v 13 \x + \xo 6:13-14: \xt Isa 34:4.\x*◘
 \v 14 \x + \xo 6:14: \xt Rev 16:20.\x*◘
 \v 15 \x + \xo 6:15: \xt Isa 2:19,21.\x*◘
 \v 16 \x + \xo 6:16: \xt Hos 10:8; Luk 23:30.\x*◘
-\v 17 \x + \xo 6:17: \xt Joel 2:11; Mal 3:2.\x*◘
+\v 17 \x + \xo 6:17: \xt Yoel 2:11; Mal 3:2.\x*◘
 \c 7
 \s1 The 144,000 person nakulitan
+\rem /s1 The 144,000 of Israel Sealed
+\rem /s1 The 144,000 People of Israel
+\rem /s1 144,000 Sealed
+\rem /s1 God's People Will Be Preserved
 \p
 \v 1 \x + \xo 7:1: \xt Jer 49:36; Dan 7:2; Zech 6:5.\x*◘
 \v 2 ◘
 \v 3 \x + \xo 7:3: \xt Eze 9:4,6.\x*◘
 \v 4 ◘
 \v 5 ◘
+\rem /s1 The Enormous Crowd
 \v 6 ◘
+\rem /s1 Praise from the Great Multitude
 \v 7 ◘
 \v 8 ◘
 \s1 The susuluhi person nangukumbale of maangkag
+\rem /s1 The Great Multitude in White Robes
+\rem /s1 The Multitude from Every Nation
 \p
 \v 9 ◘
 \v 10 ◘
@@ -251,14 +299,21 @@
 \v 17 \x + \xo 7:17: a \xt Psa 23:1; Eze 34:23; \xo b \xt Psa 23:2; Isa 49:10; \xo c \xt Isa 25:8.\x*◘
 \c 8
 \s1 The peglekat of igkapitu piket
+\rem /s1 The Seventh Seal and the Golden Censer
+\rem /s1 The Seventh Seal
+\rem /s1 The Lamb Breaks the Seventh Seal
 \p
 \v 1 ◘
+\rem /s1 The seven trumpets
 \v 2 ◘
 \p
 \v 3 \x + \xo 8:3: a \xt Amos 9:1; \xo b \xt Exo 30:1,3.\x*◘
 \v 4 ◘
 \v 5 \x + \xo 8:5: a \xt Lev 16:12; Eze 10:2; \xo b \xt Exo 19:16; Rev 11:19; 16:18.\x*◘
 \s1 The seven trumpita
+\rem /s1 The First Four Trumpets
+\rem /s1 The Trumpets
+\rem /s1 The Seven Trumpets
 \p
 \v 6 ◘
 \p
@@ -270,25 +325,27 @@
 \v 10 \x + \xo 8:10: \xt Isa 14:12.\x*◘
 \v 11 \x + \xo 8:11: \xt Jer 9:15.\x*◘
 \p
-\v 12 \x + \xo 8:12: \xt Isa 13:10; Eze 32:7; Joel 2:10,31; 3:15.\x*◘
+\v 12 \x + \xo 8:12: \xt Isa 13:10; Eze 32:7; Yoel 2:10,31; 3:15.\x*◘
 \p
 \v 13 ◘
 \c 9
+\rem /s1 The Fifth Trumpet Brings the First Terror
 \p
 \v 1 ◘
 \v 2 \x + \xo 9:2: \xt Gen 19:8.\x*◘
 \v 3 \x + \xo 9:3: \xt Exo 10:12-15.\x*◘
 \v 4 \x + \xo 9:4: \xt Eze 9:4.\x*◘
 \v 5 ◘
-\v 6 \x + \xo 9:6: \xt Job 3:21; Jer 8:3.\x*◘
+\v 6 \x + \xo 9:6: \xt Yob 3:21; Jer 8:3.\x*◘
 \p
-\v 7 \x + \xo 9:7: \xt Joel 2:4.\x*◘
-\v 8 \x + \xo 9:8: \xt Joel 1:6.\x*◘
-\v 9 \x + \xo 9:9: \xt Joel 2:5.\x*◘
+\v 7 \x + \xo 9:7: \xt Yoel 2:4.\x*◘
+\v 8 \x + \xo 9:8: \xt Yoel 1:6.\x*◘
+\v 9 \x + \xo 9:9: \xt Yoel 2:5.\x*◘
 \v 10 ◘
 \v 11 ◘
 \p
 \v 12 ◘
+\rem /s1 The Sixth Trumpet Brings the Second Terror
 \p
 \v 13 \x + \xo 9:13: \xt Exo 30:1-3.\x*◘
 \v 14 ◘
@@ -302,6 +359,9 @@
 \v 21 ◘
 \c 10
 \s1 The panalihan and the deisek linulun document
+\rem /s1 The Angel with the Little Scroll
+\rem /s1 The Angel and the Little Scroll
+\rem /s1 The Angel and the Small Scroll
 \p
 \v 1 ◘
 \v 2 ◘
@@ -318,6 +378,7 @@
 \v 11 ◘
 \c 11
 \s1 The two talagpamalehet
+\rem /s1 The Two Witnesses
 \p
 \v 1 \x + \xo 11:1: \xt Exo 40:3; Zech 2:1-2.\x*◘
 \v 2 \x + \xo 11:2: \xt Luk 21:24.\x*◘
@@ -337,6 +398,8 @@
 \p
 \v 14 ◘
 \s1 The igkapitu trumpita
+\rem /s1 The Seventh Trumpet
+\rem /s1 The Seventh Trumpet Brings the Third Terror
 \p
 \v 15 \x + \xo 11:15: \xt Exo 15:18; Dan 2:44; 7:14,27.\x*◘
 \v 16 ◘
@@ -357,6 +420,8 @@
 \v 19 \x + \xo 11:19: a \xt Rev 8:5; 16:18; \xo b \xt Rev 16:21.\x*◘
 \c 12
 \s1 The woman and the salimbaweng
+\rem /s1 The Woman and the Dragon
+\rem /s1 Seven visions
 \p
 \v 1 ◘
 \v 2 ◘
@@ -365,25 +430,31 @@
 \v 4 \x + \xo 12:4: \xt Dan 8:10.\x*◘
 \v 5 \x + \xo 12:5: a \xt Isa 66:7; \xo b \xt Psa 2:9.\x*◘
 \v 6 ◘
+\rem /s1 Michael Defeats the Dragon
 \p
 \v 7 \x + \xo 12:7: \xt Dan 10:13,21; 12:1; Hud 9.\x*◘
 \v 8 ◘
 \v 9 \x + \xo 12:9: a \xt Gen 3:1; \xo b \xt Luk 10:18.\x*◘
 \p
-\v 10 \x + \xo 12:10: \xt Job 1:9-11; Zech 3:1.\x*◘
+\v 10 \x + \xo 12:10: \xt Yob 1:9-11; Zech 3:1.\x*◘
 \v 11 ◘
 \v 12 ◘
+\rem /s1 The Dragon Fights Again on Earth
 \p
 \v 13 ◘
 \v 14 \x + \xo 12:14: \xt Dan 7:25; 12:7.\x*◘
 \v 15 ◘
 \v 16 ◘
 \v 17 ◘
+\rem /s1 The First Beast
+\rem /s1 The Beast out of the Sea
 \v 18 ◘
 \c 13
 \s1 The two mananap makaliyas-liyas
+\rem /s1 The Two Beasts
 \p
 \v 1 \x + \xo 13:1: a \xt Dan 7:3; \xo b \xt Rev 17:3,7-12.\x*◘
+\rem /s1 The Beast out of the Sea
 \v 2 \x + \xo 13:2: \xt Dan 7:4-6.\x*◘
 \v 3 ◘
 \v 4 ◘
@@ -395,6 +466,8 @@
 \p
 \v 9 ◘
 \v 10 \x + \xo 13:10: \xt Jer 15:2; 43:11.\x*◘
+\rem /s1 The Second Beast
+\rem /s1 The Beast out of the Earth
 \p
 \v 11 ◘
 \v 12 ◘
@@ -407,6 +480,8 @@
 \v 18 ◘
 \c 14
 \s1 The Nati Karniru and the 144,000 people
+\rem /s1 The Lamb and the 144,000
+\rem /s1 The Lamb and His People
 \p
 \v 1 \x + \xo 14:1: \xt Eze 9:4; Rev 7:3.\x*◘
 \v 2 ◘
@@ -414,6 +489,8 @@
 \v 4 ◘
 \v 5 \x + \xo 14:5: \xt Zeph 3:13.\x*◘
 \s1 The three panalihan
+\rem /s1 The Messages of the Three Angels
+\rem /s1 The Three Angels
 \p
 \v 6 ◘
 \v 7 ◘
@@ -426,11 +503,13 @@
 \v 12 ◘
 \p
 \v 13 ◘
+\rem /s1 The Harvest of the Earth
+\rem /s1 Reaping the Earth's Harvest
 \p …◘
 \s1 The peggaani of world
 \p
 \v 14 \x + \xo 14:14: \xt Dan 7:13.\x*◘
-\v 15 \x + \xo 14:15: \xt Joel 3:13.\x*◘
+\v 15 \x + \xo 14:15: \xt Yoel 3:13.\x*◘
 \v 16 ◘
 \p
 \v 17 ◘
@@ -440,6 +519,11 @@
 \v 20 \x + \xo 14:20: \xt Isa 63:3; Lam 1:15; Rev 19:15.\x*◘
 \c 15
 \s1 The me panalihan mig-uyan of ending me salerep
+\rem /s1 The Song of Moses and of the Lamb
+\rem /s1 The Angels with the Last Plagues
+\rem /s1 The Angels with the Seven Last Plagues
+\rem /s1 The seven bowls
+\rem /s1 Seven Angels with Seven Plagues
 \p
 \v 1 ◘
 \p
@@ -455,6 +539,7 @@
 \q1 …
 \q1 …
 \q2 …
+\rem /s1 The Seven Bowls of the Seven Plagues
 \p
 \v 5 \x + \xo 15:5: \xt Exo 38:21.\x*◘
 \v 6 ◘
@@ -462,6 +547,9 @@
 \v 8 \x + \xo 15:8: \xt Exo 40:34; 1Ki 8:10-11; 2Ch 5:13-14; Isa 6:4.\x*◘
 \c 16
 \s1 The me yahung intahuan of langet of God
+\rem /s1 The Bowls of God's Anger
+\rem /s1 The Seven Bowls of God's Wrath
+\rem /s1 The Bowls of God's Wrath
 \p
 \v 1 ◘
 \p
@@ -490,11 +578,16 @@
 \p
 \v 17 ◘
 \v 18 \x + \xo 16:18: \xt Rev 8:5; 11:13,19.\x*◘
+\rem /s1 The destruction of Babylon
 \v 19 \x + \xo 16:19: \xt Isa 51:17.\x*◘
 \v 20 \x + \xo 16:20: \xt Rev 6:14.\x*◘
 \v 21 \x + \xo 16:21: \xt Exo 9:23; Rev 11:19.\x*◘
 \c 17
 \s1 The egkahuhud woman egpamelegye of body
+\rem /s1 The Woman and the Beast
+\rem /s1 The Great Prostitute
+\rem /s1 The Great Whore and the Beast
+\rem /s1 The Famous Prostitute
 \p
 \v 1 \x + \xo 17:1: \xt Jer 51:13.\x*◘
 \v 2 \x + \xo 17:2: \xt Isa 23:17; Jer 51:7.\x*◘
@@ -522,6 +615,7 @@
 \v 18 ◘
 \c 18
 \s1 The demolition of Babilunya
+\rem /s1 The Fall of Babylon
 \p
 \v 1 ◘
 \v 2 \x + \xo 18:2: a \xt Isa 21:9; Jer 51:8; Rev 14:8; \xo b \xt Isa 13:21; Jer 50:39.\x*◘
@@ -573,12 +667,16 @@
 \p
 \v 24 \x + \xo 18:24: \xt Jer 51:49.\x*◘
 \c 19
+\rem /s1 Hallelujah!
+\rem /s1 The Rejoicing in Heaven
+\rem /s1 Songs of Victory in Heaven
 \p
 \v 1 ◘
 \v 2 \x + \xo 19:2: \xt Deu 32:43; 2Ki 9:7.\x*◘
 \v 3 \x + \xo 19:3: \xt Isa 34:10.\x*◘
 \v 4 ◘
 \s1 The feast of wedding of Nati Karniru
+\rem /s1 The Wedding Feast of the Lamb
 \p
 \v 5 \x + \xo 19:5: \xt Psa 115:13.\x*◘
 \v 6 \x + \xo 19:6: a \xt Eze 1:24; \xo b \xt Psa 93:1; 97:1; 99:1.\x*◘
@@ -588,6 +686,8 @@
 \v 9 \x + \xo 19:9: \xt Mat 22:2-3.\x*◘
 \p
 \v 10 ◘
+\rem /s1 The Rider on the White Horse
+\rem /s1 More visions
 \p …◘
 \s1 The migpangudde of maangkag kudde
 \p
@@ -595,8 +695,9 @@
 \v 12 \x + \xo 19:12: \xt Dan 10:6.\x*◘
 \v 13 ◘
 \v 14 ◘
-\v 15 \x + \xo 19:15: a \xt Psa 2:9; \xo b \xt Isa 63:3; Joel 3:13; Rev 14:20.\x*◘
+\v 15 \x + \xo 19:15: a \xt Psa 2:9; \xo b \xt Isa 63:3; Yoel 3:13; Rev 14:20.\x*◘
 \v 16 ◘
+\rem /s1 The Beast and Its Armies Defeated
 \p
 \v 17 \x + \xo 19:17-18: \xt Eze 39:17-20.\x*◘
 \v 18 ◘
@@ -606,6 +707,7 @@
 \v 21 ◘
 \c 20
 \s1 The 1,000 leg‑un
+\rem /s1 The Thousand Years
 \p
 \v 1 ◘
 \v 2 \x + \xo 20:2: \xt Gen 3:1.\x*◘
@@ -615,12 +717,16 @@
 \v 5 ◘
 \v 6 ◘
 \s1 The pegkatalu of Satan
+\rem /s1 The Defeat of Satan
+\rem /s1 Satan's Doom
 \p
 \v 7 ◘
 \v 8 \x + \xo 20:8: a \xt Eze 7:2; \xo b \xt Eze 38:2,9,15.\x*◘
 \v 9 ◘
 \v 10 ◘
 \s1 The ending judging
+\rem /s1 The Final Judgment
+\rem /s1 The Dead Are Judged
 \p
 \v 11 \x + \xo 20:11-12: \xt Dan 7:9-10.\x*◘
 \v 12 ◘
@@ -629,6 +735,8 @@
 \v 15 ◘
 \c 21
 \s1 The new sky/heaven and the new tane
+\rem /s1 The New Heaven and the New Earth
+\rem /s1 The New Jerusalem
 \p
 \v 1 \x + \xo 21:1: \xt Isa 65:17; 66:22; 2Pe 3:13.\x*◘
 \v 2 \x + \xo 21:2: a \xt Isa 52:1; \xo b \xt Rev 3:12; \xo c \xt Isa 61:10.\x*◘
@@ -640,6 +748,9 @@
 \v 7 \x + \xo 21:7: \xt 2Sam 7:14; Psa 89:26-27.\x*◘
 \v 8 ◘
 \s1 The new Yerusalem
+\rem /s1 Vision of the New Jerusalem
+\rem /s1 The new Jerusalem
+\rem /s1 The New Jerusalem
 \p
 \v 9 ◘
 \v 10 \x + \xo 21:10: \xt Eze 40:2.\x*◘
@@ -663,6 +774,7 @@
 \v 26 ◘
 \v 27 \x + \xo 21:27: \xt Isa 52:1; Eze 44:9.\x*◘
 \c 22
+\rem /s1 The River of Life
 \p
 \v 1 \x + \xo 22:1: \xt Eze 47:1; Zech 14:8.\x*◘
 \v 2 \x + \xo 22:2: \xt Gen 2:9.\x*◘
@@ -671,10 +783,14 @@
 \v 4 ◘
 \v 5 \x + \xo 22:5: a \xt Isa 60:19; \xo b \xt Dan 7:18.\x*◘
 \s1 The return of Yeshua
+\rem /s1 Conclusion
+\rem /s1 The Coming of Jesus
 \p
 \v 6 ◘
+\rem /s1 Jesus Is Coming
 \p
 \v 7 ◘
+\rem /s1 Epilogue and Benediction
 \p
 \v 8 ◘
 \v 9 ◘
@@ -690,6 +806,7 @@
 \v 16 \x + \xo 22:16: \xt Isa 11:1,10.\x*◘
 \p
 \v 17 The spirit¦168128 and the bride¦168131 say, “Come.”\x + \xo 22:17: \xt Isa 55:1.\x*
+\rem /s1 Conclusion
 \p Anyone who hears this should also say, “Come.”
 \p Anyone who's thirsty¦168143 \add to live forever\add* should come. Anyone who wants it can take the water¦168152 that gives life¦168153 free of charge.
 \s1 The pegpanaha-taha
