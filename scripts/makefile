@@ -1,11 +1,13 @@
 # OET makfile
 #
-# Last updated: 2023-03-06 by RJH
+# Last updated: 2023-08-16 by RJH
 #
 
 #=== Folder and file declarations =======================
 
-LV_HTML := $(wildcard ../derivedTexts/simpleHTML/LiteralVersion/*.html)
+# LV_HTML := $(wildcard ../derivedTexts/simpleHTML/LiteralVersion/*.html)
+LV_OT_HTML := ../derivedTexts/simpleHTML/LiteralVersion/GEN.html ../derivedTexts/simpleHTML/LiteralVersion/MAL.html
+LV_NT_HTML := ../derivedTexts/simpleHTML/LiteralVersion/MAT.html ../derivedTexts/simpleHTML/LiteralVersion/REV.html
 RV_HTML := $(wildcard ../derivedTexts/simpleHTML/ReadersVersion/*.html)
 RV_ESFM := $(wildcard ../translatedTexts/ReadersVersion/*.ESFM)
 final_LV_OT_USFM := $(wildcard ../intermediateTexts/auto_edited_OT_USFM/*.usfm)
@@ -44,7 +46,9 @@ RV: $(RV_HTML)
 
 #=== LV stuff =======================
 
-$(LV_HTML): $(final_LV_OT_USFM)  $(final_LV_NT_ESFM) convert_OET-LV_to_simple_HTML.py $(expanded_wordtable)
+
+# $(LV_HTML): $(LV_OT_HTML) $(LV_NT_HTML)
+$(LV_OT_HTML) $(LV_NT_HTML): $(final_LV_OT_USFM)  $(final_LV_NT_ESFM) convert_OET-LV_to_simple_HTML.py $(expanded_wordtable)
 	@echo "\n\nConvert OET LV USFM files to simple HTML…\n"
 	@$(Python) convert_OET-LV_to_simple_HTML.py
 
@@ -102,7 +106,7 @@ $(RV_HTML): $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py convert_OET
 
 #=== Side-by-side stuff =======================
 
-SideBySide: $(LV_HTML) $(RV_HTML) pack_HTML_side-by-side.py
+SideBySide: $(LV_OT_HTML) $(LV_NT_HTML) $(RV_HTML) pack_HTML_side-by-side.py
 	@echo "\n\nPack LV and RV HTML files side-by-side…\n"
 	@$(Python) pack_HTML_side-by-side.py
 	@echo "\n\nCount our progress…\n"

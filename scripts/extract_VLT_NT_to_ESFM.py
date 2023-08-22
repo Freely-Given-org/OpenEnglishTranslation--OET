@@ -35,8 +35,10 @@ Puts markers around one gloss word inserted near another:
     ˱to˲ the_> first <_\\add one\\add* (before glossPost)
 
 CHANGELOG:
-    2023-03-22 Added word numbers to refs in 
+    2023-03-22 Added word numbers to refs in
     2023-07-24 Reduce columns in SR GNT source table
+    2023-08-15 Update for new collation table columns plus use of word table for lexemes
+    2023-08-16 Puts markers around gloss parts in 9columns exported table
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple, Optional
@@ -50,10 +52,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-07-24' # by RJH
+LAST_MODIFIED_DATE = '2023-08-16' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
-PROGRAM_VERSION = '0.85'
+PROGRAM_VERSION = '0.87'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -72,8 +74,9 @@ class State:
         Constructor:
         """
         self.bookTableFilepath = Path( '../../CNTR-GNT/sourceExports/book.csv' )
-        self.sourceTableFilepath = Path( '../../CNTR-GNT/sourceExports/collation.csv' ) # Use the latest download (symbolic link)
-        # self.sourceTableFilepath = Path( '../../CNTR-GNT/sourceExports/collation.updated.csv' )
+        self.sourceCollationTableFilepath = Path( '../../CNTR-GNT/sourceExports/collation.csv' ) # Use the latest download (symbolic link)
+        # self.sourceCollationTableFilepath = Path( '../../CNTR-GNT/sourceExports/collation.updated.csv' )
+        self.sourceWordTableFilepath = Path( '../../CNTR-GNT/sourceExports/word.csv' ) # Use the latest download (symbolic link)
     # end of extract_VLT_NT_to_ESFM.__init__
 
 
@@ -120,8 +123,10 @@ book_csv_rows = []
 book_csv_column_counts = defaultdict(lambda: defaultdict(int))
 book_csv_column_headers = []
 
-
-NUM_EXPECTED_COLLATION_COLUMNS = 37
+NUM_EXPECTED_COLLATION_COLUMNS = 35
+# Last time we looked (2023-08-15) with 168,229 rows, 35-column header was:
+# CollationID,VerseID,VariantID,Relation,Pattern,Translatable,Align,Span,Incomplete,Classic,Koine,Medieval,Probability,Historical,Capitalization,Punctuation,Role,Syntax,Morphology,Sic,LexemeID,Sense,GlossPre,GlossHelper,GlossWord,GlossPost,GlossPunctuation,GlossCapitalization,GlossOrder,GlossInsert,Reference,Notes,If,Then,Timestamp
+# and table had many 'NULL' entries
 # Last time we looked (2023-07-24) with 168,224 rows, 35-column header was:
 # CollationID,VerseID,VariantID,Relation,Pattern,Translatable,Align,Span,Incomplete,Classic,Koine,Medieval,Probability,Historical,Capitalization,Punctuation,Role,Syntax,Morphology,Sic,LexemeID,Sense,GlossPre,GlossHelper,GlossWord,GlossPost,GlossPunctuation,GlossCapitalization,GlossOrder,GlossInsert,Reference,Notes,If,Then,Timestamp
 # and table had many 'NULL' entries
@@ -143,6 +148,14 @@ collation_csv_column_non_blank_counts = {}
 collation_csv_column_counts = defaultdict(lambda: defaultdict(int))
 collation_csv_column_headers = []
 
+NUM_EXPECTED_WORD_COLUMNS = 13 # and 22,398 rows
+word_csv_rows = []
+word_csv_column_max_length_counts = {}
+word_csv_column_non_blank_counts = {}
+word_csv_column_counts = defaultdict(lambda: defaultdict(int))
+word_csv_column_headers = []
+
+
 
 def main() -> None:
     """
@@ -151,7 +164,7 @@ def main() -> None:
     global state
     state = State()
 
-    if loadBookTable() and loadSourceCollationTable():
+    if loadBookTable() and loadSourceCollationTable() and loadSourceWordTable():
         # export_usfm_literal_English_gloss()
         export_esfm_literal_English_gloss()
 # end of extract_VLT_NT_to_ESFM.main
@@ -197,9 +210,9 @@ def loadSourceCollationTable() -> bool:
     """
     """
     global collation_csv_column_headers
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nLoading {'UPDATED ' if 'updated' in str(state.sourceTableFilepath) else ''}collation CSV file from {state.sourceTableFilepath}…")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nLoading {'UPDATED ' if 'updated' in str(state.sourceCollationTableFilepath) else ''}collation CSV file from {state.sourceCollationTableFilepath}…")
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_COLLATION_COLUMNS} columns…")
-    with open(state.sourceTableFilepath, 'rt', encoding='utf-8') as csv_file:
+    with open(state.sourceCollationTableFilepath, 'rt', encoding='utf-8') as csv_file:
         csv_lines = csv_file.readlines()
 
     # Remove any BOM
@@ -214,6 +227,7 @@ def loadSourceCollationTable() -> bool:
     # Check that the columns we use are still there somewhere
     assert 'CollationID' in collation_csv_column_headers
     assert 'VerseID' in collation_csv_column_headers
+    assert 'Classic' in collation_csv_column_headers
     assert 'Medieval' in collation_csv_column_headers
     assert 'GlossPre' in collation_csv_column_headers
     assert 'GlossHelper' in collation_csv_column_headers
@@ -226,7 +240,7 @@ def loadSourceCollationTable() -> bool:
     unique_words = set()
     for n, row in enumerate(dict_reader):
         if len(row) != NUM_EXPECTED_COLLATION_COLUMNS:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_COLLATION_COLUMNS}!!!")
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Collation line {n} has {len(row)} columns instead of {NUM_EXPECTED_COLLATION_COLUMNS}!!!")
         collation_csv_rows.append(row)
         unique_words.add(row['Medieval'])
         for key, value in row.items():
@@ -246,6 +260,56 @@ def loadSourceCollationTable() -> bool:
 
     return True
 # end of extract_VLT_NT_to_ESFM.loadSourceCollationTable
+
+
+def loadSourceWordTable() -> bool:
+    """
+    """
+    global word_csv_column_headers
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nLoading {'UPDATED ' if 'updated' in str(state.sourceWordTableFilepath) else ''}word CSV file from {state.sourceWordTableFilepath}…")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_WORD_COLUMNS} columns…")
+    with open(state.sourceWordTableFilepath, 'rt', encoding='utf-8') as csv_file:
+        csv_lines = csv_file.readlines()
+
+    # Remove any BOM
+    if csv_lines[0].startswith("\ufeff"):
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of word CSV file…")
+        csv_lines[0] = csv_lines[0][1:]
+
+    # Get the headers before we start
+    word_csv_column_headers = [header for header in csv_lines[0].strip().split(",")] # assumes no commas in headings
+    # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Column headers: ({len(word_csv_column_headers)}): {word_csv_column_headers}")
+    assert len(word_csv_column_headers) == NUM_EXPECTED_WORD_COLUMNS, f"{len(word_csv_column_headers)=} {NUM_EXPECTED_WORD_COLUMNS=}"
+    # Check that the columns we use are still there somewhere
+    assert 'LexemeID' in word_csv_column_headers
+    assert 'Lemma' in word_csv_column_headers
+    assert 'Medieval' in word_csv_column_headers
+
+    # Read, check the number of columns, and summarise row contents all in one go
+    dict_reader = DictReader(csv_lines)
+    unique_words = set()
+    for n, row in enumerate(dict_reader):
+        if len(row) != NUM_EXPECTED_WORD_COLUMNS:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Word line {n} has {len(row)} columns instead of {NUM_EXPECTED_WORD_COLUMNS}!!!")
+        word_csv_rows.append(row)
+        unique_words.add(row['Medieval'])
+        for key, value in row.items():
+            if value == 'NULL':
+                row[key] = value = None
+            # word_csv_column_sets[key].add(value)
+            if n==0: # We do it like this (rather than using a defaultdict(int)) so that all fields are entered into the dict in the correct order
+                word_csv_column_max_length_counts[key] = 0
+                word_csv_column_non_blank_counts[key] = 0
+            if value:
+                if len(value) > word_csv_column_max_length_counts[key]:
+                    word_csv_column_max_length_counts[key] = len(value)
+                word_csv_column_non_blank_counts[key] += 1
+            word_csv_column_counts[key][value] += 1
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(word_csv_rows):,} word CSV data rows.")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Have {len(unique_words):,} unique Greek words.")
+
+    return True
+# end of extract_VLT_NT_to_ESFM.loadSourceWordTable
 
 
 def write_esfm_book(book_number:int, book_esfm: str) -> bool:
@@ -381,14 +445,17 @@ def export_esfm_literal_English_gloss() -> bool:
                     # Check because we use a space-separated list just below
                     if ' ' in collation_row[gloss_part_name]:
                         logging.critical( f"{collation_row_number} Unexpected space in {gloss_part_name} '{collation_row[gloss_part_name]}' from {collation_row}" )
-            gloss_list = [collation_row[gloss_part_name] for gloss_part_name in ('GlossPre', 'GlossHelper', 'GlossWord', 'GlossPost') if collation_row[gloss_part_name]]
-            word_list_string = ' '.join(gloss_list) # Space-separated list of English gloss words for that Greek word
+            # gloss_list = [collation_row[gloss_part_name] for gloss_part_name in ('GlossPre', 'GlossHelper', 'GlossWord', 'GlossPost') if collation_row[gloss_part_name]]
+            # word_list_string = ' '.join(gloss_list) # Space-separated list of English gloss words for that Greek word
+            preformed_gloss_string = f"{'˱'+collation_row['GlossPre']+'˲ ' if collation_row['GlossPre'] else ''}{'/'+collation_row['GlossHelper']+'/ ' if collation_row['GlossHelper'] else ''}" \
+                            f"{collation_row['GlossWord']}{' ‹'+collation_row['GlossPost']+'›' if collation_row['GlossPost'] else ''}"
             glossCapitalisationString = '' if collation_row['GlossCapitalization'] is None else collation_row['GlossCapitalization']
             if collation_row['Koine'].startswith( '=' ): # it's a nomina sacra
                 assert 'N' not in glossCapitalisationString # already -- SR GNT doesn't currently use N -- see documentation of apply_gloss_capitalization() below
                 glossCapitalisationString = f'{glossCapitalisationString}N' # We add an extra letter
-            adjusted_lemma = adjust_lemma(collation_row['Lemma'], collation_row['Medieval'])
-            table_row = f"{ref}\t{collation_row['Medieval']}\t{adjusted_lemma}\t{word_list_string}\t{glossCapitalisationString}\t{'' if collation_row['Probability'] is None else collation_row['Probability']}\t{collation_row['LexemeID']}\t{collation_row['Role']}\t{collation_row['Morphology']}"
+            their_lemma = '' if collation_row['LexemeID']=='99999' else find_lemma( collation_row['LexemeID'], collation_row['Morphology'], collation_row['Classic'] )
+            adjusted_lemma = adjust_lemma( their_lemma, collation_row['Medieval'])
+            table_row = f"{ref}\t{collation_row['Medieval']}\t{adjusted_lemma}\t{preformed_gloss_string}\t{glossCapitalisationString}\t{'' if collation_row['Probability'] is None else collation_row['Probability']}\t{collation_row['LexemeID']}\t{collation_row['Role']}\t{collation_row['Morphology']}"
             assert '"' not in table_row # Check in case we needed any escaping
             table_output_file.write( f'{table_row}\n' )
             # NOTE: The above code writes every table row, even for variants which aren't in the SR (but their probability column will be negative)
@@ -408,6 +475,30 @@ def export_esfm_literal_English_gloss() -> bool:
 # end of extract_VLT_NT_to_ESFM.export_esfm_literal_English_gloss
 
 
+lemma_index = {}
+def find_lemma(given_lexemeID:str, given_morphology:str, given_classic_word:str) -> str:
+    """
+    Using the word table
+        and given the above two fields from the collation table,
+        find the CNTR romanised lemma.
+    """
+    # print(f"find_lemma( {given_lexemeID=}, {given_morphology=}, {given_classic_word=} )…")
+    assert given_lexemeID.isdigit()
+    assert given_morphology
+    assert given_classic_word
+    if not lemma_index: # index the lemmas the first time
+        # print( f"{word_csv_column_headers=}" )
+        for word_row in word_csv_rows:
+            # print( f"{word_row=}" )
+            new_key = (word_row['LexemeID'],word_row['Morphology'],word_row['Classic'])
+            assert new_key not in lemma_index # Check for unexpected duplicates
+            lemma_index[new_key] = word_row['Lemma']
+        print( f"    Created {len(lemma_index)=:,}" )
+
+    return lemma_index[(given_lexemeID,given_morphology,given_classic_word)]
+# end of extract_VLT_NT_to_ESFM.find_lemma
+
+
 def adjust_lemma(given_lemma:str, given_Greek_word:str) -> str:
     """
     We need the actual Greek word as well
@@ -417,9 +508,9 @@ def adjust_lemma(given_lemma:str, given_Greek_word:str) -> str:
     if not given_lemma or not given_Greek_word: return given_lemma
 
     adjusted_lemma = given_lemma.replace('h','ē').replace('w','ō').replace('q','th').replace('gg','ŋg').replace('y','ps').replace('c','χ') # .replace('f','ph')
-    # Gloss word 'the' appears with 37 Greek words: {'τοὺς': 724, 'τὸν': 1247, 'ὁ': 1930, 'τῆς': 1006, 'τὴν': 1313, 
-    #       'αἱ': 130, 'τοῦ': 1720, 'ἡ': 813, 'τὸ': 1477, 'τῶν': 1158, 'τῇ': 690, 'τοῖς': 619, 'τὰ': 802, 'οἱ': 1029, 
-    #       'τὰς': 310, 'τῷ': 955, 'ταῖς': 177, 'τοῦς': 2, 'τόν': 4, 'τῶ': 1, 'τῆν': 1, 'τό': 5, 'τοὺ': 1, 'ἠ': 1, 
+    # Gloss word 'the' appears with 37 Greek words: {'τοὺς': 724, 'τὸν': 1247, 'ὁ': 1930, 'τῆς': 1006, 'τὴν': 1313,
+    #       'αἱ': 130, 'τοῦ': 1720, 'ἡ': 813, 'τὸ': 1477, 'τῶν': 1158, 'τῇ': 690, 'τοῖς': 619, 'τὰ': 802, 'οἱ': 1029,
+    #       'τὰς': 310, 'τῷ': 955, 'ταῖς': 177, 'τοῦς': 2, 'τόν': 4, 'τῶ': 1, 'τῆν': 1, 'τό': 5, 'τοὺ': 1, 'ἠ': 1,
     #       'τὴς': 2, 'οἳ': 4, 'του': 1, 'ἧ': 1, 'οἷ': 1, 'τὴ': 2, 'οἵ': 4, 'ᾧ': 1, 'τά': 2, 'ἥ': 3, 'τήν': 3, 'ὅ': 3, 'ἃ': 5}
     if given_lemma == 'o' \
     and given_Greek_word in ('ὁ','τοῦ','τὸ','τὸν','τῶν','τὴν','τῆς','οἱ','τῷ','τοὺς','ἡ','τῇ','τοῖς','τὰ','τὰς','αἱ','ταῖς','τοῦς','τό',
@@ -475,7 +566,7 @@ def check_verse_rows(given_verse_row_list: List[dict], stop_on_error:bool=False)
     if len(gloss_order_set) < len(given_verse_row_list):
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"ERROR: Verse rows for {given_verse_row_list[0]['VerseID']} have duplicate GlossOrder fields!")
         for some_row in given_verse_row_list:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {some_row['CollationID']} {some_row['Variant']} {some_row['Align']} '{some_row['Koine']}' '{some_row['GlossWord']}' {some_row['GlossOrder']} Role={some_row['Role']} Syntax={some_row['Syntax']}")
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {some_row['CollationID']} {some_row['VariantID']} {some_row['Align']} '{some_row['Koine']}' '{some_row['GlossWord']}' {some_row['GlossOrder']} Role={some_row['Role']} Syntax={some_row['Syntax']}")
         if stop_on_error: gloss_order_fields_for_verse_are_not_unique
 # end of extract_VLT_NT_to_ESFM.check_verse_rows
 
@@ -543,7 +634,7 @@ def preform_gloss(thisList:List[Dict[str,str]], given_verse_row_index:int, last_
     try:
         last_given_verse_row = thisList[last_given_verse_row_index]
         last_glossInsert = last_given_verse_row['GlossInsert']
-    except (TypeError, KeyError): last_glossInsert = '' # last row not given or GlossInsert is not in Alan's tables yet
+    except (TypeError, KeyError): last_glossInsert = '' # last row not given
     last_pre_punctuation = last_post_punctuation = ''
     if last_glossInsert:
         last_pre_punctuation, last_post_punctuation = separate_punctuation(last_given_verse_row['GlossPunctuation'])
@@ -714,31 +805,32 @@ def separate_punctuation(given_punctuation:str) -> Tuple[str,str]:
     """
     # fnPrint( DEBUGGING_THIS_MODULE, f"separate_punctuation({given_punctuation})" )
     pre_punctuation = post_punctuation = ''
-    if given_punctuation not in ('.”’”','[[',']]',):
-        for char in given_punctuation:
-            if given_punctuation.count(char) > 1:
-                logging.warning( f"Have duplicated '{char}' punctuation character(s) in '{given_punctuation}'." )
-    improved_given_punctuation = given_punctuation \
-                                    .replace(',,',',').replace('..','.').replace('”“','”')
-    if improved_given_punctuation not in ('.”’”','[[',']]',):
-        for char in improved_given_punctuation:
-            if improved_given_punctuation.count(char) > 1:
-                logging.critical( f"Still have duplicated '{char}' punctuation character(s) in '{improved_given_punctuation}'." )
+    if given_punctuation:
+        if given_punctuation not in ('.”’”','[[',']]',):
+            for char in given_punctuation:
+                if given_punctuation.count(char) > 1:
+                    logging.warning( f"Have duplicated '{char}' punctuation character(s) in '{given_punctuation}'." )
+        improved_given_punctuation = given_punctuation \
+                                        .replace(',,',',').replace('..','.').replace('”“','”')
+        if improved_given_punctuation not in ('.”’”','[[',']]',):
+            for char in improved_given_punctuation:
+                if improved_given_punctuation.count(char) > 1:
+                    logging.critical( f"Still have duplicated '{char}' punctuation character(s) in '{improved_given_punctuation}'." )
 
-    temporary_copied_punctuation = improved_given_punctuation
-    while temporary_copied_punctuation:
-        if temporary_copied_punctuation[0] in PRE_WORD_PUNCTUATION_LIST:
-            pre_punctuation += temporary_copied_punctuation[0]
-            temporary_copied_punctuation = temporary_copied_punctuation[1:]
-        elif temporary_copied_punctuation[-1] in ENGLISH_POST_WORD_PUNCTUATION_LIST_STRING:
-            post_punctuation = f'{temporary_copied_punctuation[-1]}{post_punctuation}'
-            temporary_copied_punctuation = temporary_copied_punctuation[:-1]
-        else:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"ERROR: punctuation character(s) '{temporary_copied_punctuation}' is not handled yet!")
-            if __name__ == "__main__": stop_right_here
-            break
-    if __name__ == "__main__": # don't want this to fail when in the gloss editor
-        assert f'{pre_punctuation}{post_punctuation}' == improved_given_punctuation
+        temporary_copied_punctuation = improved_given_punctuation
+        while temporary_copied_punctuation:
+            if temporary_copied_punctuation[0] in PRE_WORD_PUNCTUATION_LIST:
+                pre_punctuation += temporary_copied_punctuation[0]
+                temporary_copied_punctuation = temporary_copied_punctuation[1:]
+            elif temporary_copied_punctuation[-1] in ENGLISH_POST_WORD_PUNCTUATION_LIST_STRING:
+                post_punctuation = f'{temporary_copied_punctuation[-1]}{post_punctuation}'
+                temporary_copied_punctuation = temporary_copied_punctuation[:-1]
+            else:
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"ERROR: punctuation character(s) '{temporary_copied_punctuation}' is not handled yet!")
+                if __name__ == "__main__": stop_right_here
+                break
+        if __name__ == "__main__": # don't want this to fail when in the gloss editor
+            assert f'{pre_punctuation}{post_punctuation}' == improved_given_punctuation
     return pre_punctuation, post_punctuation
 # end of extract_VLT_NT_to_ESFM.separate_punctuation
 
@@ -764,18 +856,19 @@ def apply_gloss_capitalization(gloss_pre:str, gloss_helper:str, gloss_word:str, 
         ●    e – emphasized words (scare quotes)
     The lowercase letters mark other significant places where the words are not normally capitalized.
     """
-    if gloss_capitalization.lower() != gloss_capitalization: # there's some UPPERCASE values
-        # NOTE: We can't use the title() function here for capitalising or else words like 'you_all' become 'You_All'
-        if 'G' in gloss_capitalization or 'U' in gloss_capitalization or 'W' in gloss_capitalization:
-            gloss_word = f'{gloss_word[0].upper()}{gloss_word[1:]}' # Those are WORD punctuation characters
-        if ('P' in gloss_capitalization or 'S' in gloss_capitalization # new paragraph or sentence
-        or 'B' in gloss_capitalization # new Biblical quotation
-        or 'D' in gloss_capitalization # new dialog
-        or 'T' in gloss_capitalization # translated words
-        or 'R' in gloss_capitalization): # other quotation, e.g., writing on board over cross
-            if gloss_pre: gloss_pre = f'{gloss_pre[0].upper()}{gloss_pre[1:]}'
-            elif gloss_helper: gloss_helper = f'{gloss_helper[0].upper()}{gloss_helper[1:]}'
-            else: gloss_word = f'{gloss_word[0].upper()}{gloss_word[1:]}'
+    if gloss_capitalization:
+        if gloss_capitalization.lower() != gloss_capitalization: # there's some UPPERCASE values
+            # NOTE: We can't use the title() function here for capitalising or else words like 'you_all' become 'You_All'
+            if 'G' in gloss_capitalization or 'U' in gloss_capitalization or 'W' in gloss_capitalization:
+                gloss_word = f'{gloss_word[0].upper()}{gloss_word[1:]}' # Those are WORD punctuation characters
+            if ('P' in gloss_capitalization or 'S' in gloss_capitalization # new paragraph or sentence
+            or 'B' in gloss_capitalization # new Biblical quotation
+            or 'D' in gloss_capitalization # new dialog
+            or 'T' in gloss_capitalization # translated words
+            or 'R' in gloss_capitalization): # other quotation, e.g., writing on board over cross
+                if gloss_pre: gloss_pre = f'{gloss_pre[0].upper()}{gloss_pre[1:]}'
+                elif gloss_helper: gloss_helper = f'{gloss_helper[0].upper()}{gloss_helper[1:]}'
+                else: gloss_word = f'{gloss_word[0].upper()}{gloss_word[1:]}'
     return gloss_pre, gloss_helper, gloss_word
 # end of extract_VLT_NT_to_ESFM.apply_gloss_capitalization
 

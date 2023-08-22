@@ -26,6 +26,8 @@
 CHANGELOG:
     2023-03-21 Added handling for three verses at once (when verse content is reordered)
     2023-05-28 Remove USFM fig fields
+    2023-08-07 Handle ESFM multiple section headings, move MRK before MAT
+    2023-08-21 Add lemma pages
 """
 from gettext import gettext as _
 from tracemalloc import start
@@ -48,10 +50,10 @@ from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, 
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 
 
-LAST_MODIFIED_DATE = '2023-07-31' # by RJH
+LAST_MODIFIED_DATE = '2023-08-22' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.65'
+PROGRAM_VERSION = '0.68'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -70,16 +72,11 @@ assert OET_LV_HTML_InputFolderPath.is_dir()
 EM_SPACE = ' '
 NARROW_NON_BREAK_SPACE = ' '
 BACKSLASH = '\\'
-# BOOKLIST_OT39 = ('GEN','EXO','LEV','NUM','DEU','JOS','JDG','RUT','SA1','SA2','KI1','KI2','CH1','CH2',
-#                 'EZR','NEH','EST','JOB','PSA','PRO','ECC','SNG','ISA','JER','LAM','EZE',
-#                 'DAN','HOS','JOL','AMO','OBA','JNA','MIC','NAH','HAB','ZEP','HAG','ZEC','MAL')
-# assert len(BOOKLIST_OT39) == 39
-# NT_BBB_LIST = ('MAT','MRK','LUK','JHN','ACT','ROM','CO1','CO2','GAL','EPH','PHP','COL','TH1','TH2','TI1','TI2','TIT','PHM','HEB','JAM','PE1','PE2','JN1','JN2','JN3','JDE','REV')
-NT_BBB_LIST = ('JHN','MAT','MRK','LUK','ACT','ROM','CO1','CO2','GAL','EPH','PHP','COL','TH1','TH2','TI1','TI2','TIT','PHM','HEB','JAM','PE1','PE2','JN1','JN2','JN3','JDE','REV')
+NT_BBB_LIST = ['JHN','MRK','MAT','LUK','ACT','ROM','CO1','CO2','GAL','EPH','PHP','COL','TH1','TH2','TI1','TI2','TIT','PHM','HEB','JAM','PE1','PE2','JN1','JN2','JN3','JDE','REV']
 assert len(NT_BBB_LIST) == 27
 BBB_LIST = BOOKLIST_OT39 + NT_BBB_LIST
 assert len(BBB_LIST) == 66
-TORAH_BOOKS_CODES = ('GEN','EXO','LEV','NUM','DEU')
+TORAH_BOOKS_CODES = ['GEN','EXO','LEV','NUM','DEU']
 assert len(TORAH_BOOKS_CODES) == 5
 
 
@@ -103,7 +100,7 @@ def main():
 CSS_TEXT = """a { color:inherit; text-decoration:none; }
 
 div.BibleText { }
-div.unusedWord { color:darkGrey; } /* For the word files */
+div.unusedOLWord { color:darkGrey; } /* For the word files */
 
 span.upLink { font-size:1.5em; font-weight:bold; }
 span.c { font-size:1.1em; color:green; }
@@ -111,6 +108,8 @@ span.cPsa { font-size:1.6em; font-weight:bold; color:green; }
 span.v { vertical-align:super; font-size:0.5em; color:red; }
 span.cv { vertical-align:super; font-size:0.8em; color:orange; }
 span.RVadded { color:dimGrey; }
+span.wj { color:fireBrick; }
+span.wj span.RVadded { color:lightCoral; }
 span.bk { font-style:italic; }
 span.fn { vertical-align: super; font-size:0.7em; color:green; }
 span.xref { vertical-align: super; font-size:0.7em; color:blue; }
@@ -122,6 +121,7 @@ div.rightBox { float:right;
         width:-moz-fit-content; width:fit-content;
         border:3px solid #73AD21; padding:0.2em; }
 p.s1 { margin-top:0.1em; margin-bottom:0.1em; font-weight:bold; }
+p.added_s1 { margin-top:0.1em; margin-bottom:0.1em; text-align:right; font-size:0.7em; color:grey; font-weight:bold; }
 p.r { margin-top:0; margin-bottom:0.1em; font-size:0.8em; }
 p.p { text-indent:0.5em; margin-top:0.2em; margin-bottom:0.2em; }
 p.q1 { margin-left:1em; margin-top:0.2em; margin-bottom:0.2em; }
@@ -165,8 +165,8 @@ RV_INDEX_INTRO_HTML = """<!DOCTYPE html>
   <p>Whole <a href="OET-RV-Torah.html">Torah/Pentateuch</a>
     (long and slower to load, but useful for easy searching of multiple books, etc.)</p>
   <h3><b>NT</b> v0.00</h3>
-  <p>Note that the <em>OET</em> places Yōannēs/John before Matthaios/Matthew.</p>
-  <p><a href="JHN.html">Yōannēs/John</a> &nbsp;&nbsp;<a href="MAT.html">Matthaios/Matthew</a> &nbsp;&nbsp;<a href="MRK.html">Markos/Mark</a> &nbsp;&nbsp;<a href="LUK.html">Loukas/Luke</a> &nbsp;&nbsp;<a href="ACT.html">Acts</a><br>
+  <p>Note that the <em>OET</em> places Yōannēs/John and Markos/Mark before Matthaios/Matthew.</p>
+  <p><a href="JHN.html">Yōannēs/John</a> &nbsp;&nbsp;<a href="MRK.html">Markos/Mark</a> &nbsp;&nbsp;<a href="MAT.html">Matthaios/Matthew</a> &nbsp;&nbsp;<a href="LUK.html">Loukas/Luke</a> &nbsp;&nbsp;<a href="ACT.html">Acts</a><br>
     <a href="ROM.html">Romans</a> &nbsp;&nbsp;<a href="CO1.html">Corinthians 1</a> &nbsp;&nbsp;<a href="CO2.html">Corinthians 2</a><br>
     <a href="GAL.html">Galatians</a> &nbsp;&nbsp;<a href="EPH.html">Ephesians</a> &nbsp;&nbsp;<a href="PHP.html">Philippians</a> &nbsp;&nbsp;<a href="COL.html">Colossians</a><br>
     <a href="TH1.html">Thessalonians 1</a> &nbsp;&nbsp;<a href="TH2.html">Thessalonians 2</a> &nbsp;&nbsp;<a href="TI1.html">Timotheos/Timothy 1</a> &nbsp;&nbsp;<a href="TI2.html">Timotheos/Timothy 2</a> &nbsp;&nbsp;<a href="TIT.html">Titos/Titus</a><br>
@@ -756,8 +756,8 @@ def produce_HTML_files() -> None:
 
         # Swap book orders to put JHN before MAT
         if   BBB == 'MAT': BBB = 'JHN'
-        elif BBB == 'MRK': BBB = 'MAT'
-        elif BBB == 'LUK': BBB = 'MRK'
+        # elif BBB == 'MRK': BBB = 'MRK'
+        elif BBB == 'LUK': BBB = 'MAT'
         elif BBB == 'JHN': BBB = 'LUK'
 
         bookType = None
@@ -909,9 +909,20 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
         if marker in ('id','usfm','ide','h','toc2','toc3'):
             continue # We don't need to map those markers to HTML
         if marker == 'rem':
-            # print( f"{BBB} {C}:{V} {inRightDiv=} {inParagraph=} {inTable} {marker}={rest}")
-            assert not inRightDiv
+            # print( f"{BBB} {C}:{V} {inRightDiv=} {inParagraph=} {inTable} {marker}={rest}" )
+            # assert not inRightDiv, f"{BBB} {C}:{V} {inRightDiv=} {inParagraph=} {inTable} {marker}={rest}"
             assert not inTable
+            if inRightDiv:
+                assert rest.startswith('/'), f"{BBB} {C}:{V} {inRightDiv=} {inParagraph=} {inTable} {marker}={rest}"
+                given_marker = rest[1:].split( ' ', 1 )[0]
+                assert given_marker in ('s1','r','s2','s3','d')
+                marker = f"added_{given_marker}" # Sets the html <p> class below
+                rest = rest[len(given_marker)+2:] # Drop the '/marker ' from the displayed portion
+            elif rest.startswith('/'): # it's probably a section marker added at a different spot
+                given_marker = rest[1:].split( ' ', 1 )[0]
+                assert given_marker in ('s1','r','s2','s3','d')
+                marker = f"added_{given_marker}" # Sets the html <p> class below
+                rest = rest[len(given_marker)+2:] # Drop the '/marker ' from the displayed portion
             if inParagraph:
                 book_html = f'{book_html}</{inParagraph}>\n'
                 inParagraph = None
@@ -1108,7 +1119,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
         searchStartIx = fEndIx + 3
     assert '\\x' not in book_html, f"{BBB} {book_html[book_html.index(f'{BACKSLASH}x')-10:book_html.index(f'{BACKSLASH}x')+12]}"
 
-    chapter_links = [f'<a href="#C{chapter_num}">C{chapter_num}</a>' for chapter_num in range( 1, int(C)+1 )]
+    chapter_links = [f'<a title="Go to chapter" href="#C{chapter_num}">C{chapter_num}</a>' for chapter_num in range( 1, int(C)+1 )]
     chapter_html = f'<p class="chapterLinks">{EM_SPACE.join(chapter_links)}</p><!--chapterLinks-->'
     book_start_html = f'{start_html}{links_html}\n{chapter_html}'
 
@@ -1129,7 +1140,9 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                          .replace( '\\add ', '<span class="RVadded">' ) \
                          .replace( '\\add*', '</span>' ) \
                          .replace( '\\wj ', '<span class="wj">' ) \
-                         .replace( '\\wj*', '</span>' )
+                         .replace( '\\wj*', '</span>' ) \
+                         .replace( '\\tl ', '<span class="tl">' ) \
+                         .replace( '\\tl*', '</span>' )
     book_html = livenJMPs( BBB, book_html )
     book_html = livenIORs( BBB, book_html )
     assert '\\' not in book_html, f"{BBB} {book_html[book_html.index(f'{BACKSLASH}')-20:book_html.index(f'{BACKSLASH}')+22]}"
@@ -1194,7 +1207,7 @@ def convert_ESFM_words( BBB:str, book_html:str, word_table:List[str] ) -> str:
         except IndexError:
             logging.critical( f"convert_ESFM_words( {BBB} ) index error: word='{match.group(1)}' {row_number=}/{len(word_table)} entries")
             halt
-        book_html = f'{book_html[:match.start()]}<span title="{greek}"><a href="W_{match.group(2)}.html">{match.group(1)}</a></span>{book_html[match.end():]}'
+        book_html = f'{book_html[:match.start()]}<a  title="{greek}" href="W/{match.group(2)}.html">{match.group(1)}</a>{book_html[match.end():]}'
         searchStartIndex = match.end() + 25 # We've added at least that many characters
         count += 1
     vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Made {count:,} OET-RV {BBB} ESFM words into live links." )
@@ -1259,7 +1272,7 @@ def livenIORs( BBB:str, bookHTML:str ) -> str:
             assert startGuts.count(':') == 1 # We expect a single C:V at this stage
             Cstr, Vstr = startGuts.strip().split( ':' )
         else: Cstr, Vstr = startGuts.strip(), '1' # Only a chapter was given
-        new_guts = f'<a href="#C{Cstr}V{Vstr}">{guts}</a>'
+        new_guts = f'<a title="Go to start of section" href="#C{Cstr}V{Vstr}">{guts}</a>'
         bookHTML = f'{bookHTML[:ix+5]}{new_guts}{bookHTML[ixEnd:]}'
         searchStartIx = ixEnd + 10
 
@@ -1269,34 +1282,50 @@ def livenIORs( BBB:str, bookHTML:str ) -> str:
 
 def copy_wordlink_files( sourceFolder:Path, destinationFolder:Path ) -> bool:
     """
-    Copy the W_nnnnn.html wordlink HMTL files across.
+    Copy the W_nnnnn.html wordlink and lemma HMTL files across.
         (There's around 168,262 of these.)
 
     Also P_ and L_ person and location files.
     """
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET NT word-link HTML files from {sourceFolder}…")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET NT word-link HTML files from {sourceFolder}…" )
+    try: os.makedirs( destinationFolder.joinpath( 'W/' ) )
+    except FileExistsError: pass # it was already there
     copyCount = 0
-    for filename in glob.glob( os.path.join( sourceFolder, 'W_*.html' ) ):
-        shutil.copy( filename, destinationFolder ) # Want the time to be updated or else "make" doesn't function correctly
+    for filename in glob.glob( os.path.join( sourceFolder.joinpath( 'W/' ), '*.html' ) ):
+        shutil.copy( filename, destinationFolder.joinpath( 'W/' ) ) # Want the time to be updated or else "make" doesn't function correctly
         # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
         copyCount += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET NT word-link HTML files to {destinationFolder}.")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET NT word-link HTML files to {destinationFolder.joinpath( 'W/' )}.")
+
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET NT word-link HTML files from {sourceFolder}…")
+    try: os.makedirs( destinationFolder.joinpath( 'Lm/' ) )
+    except FileExistsError: pass # it was already there
+    copyCount = 0
+    for filename in glob.glob( os.path.join( sourceFolder.joinpath( 'Lm/' ), '*.html' ) ):
+        shutil.copy( filename, destinationFolder.joinpath( 'Lm/' ) ) # Want the time to be updated or else "make" doesn't function correctly
+        # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
+        copyCount += 1
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET NT lexeme HTML files to {destinationFolder.joinpath( 'Lm/' )}.")
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET person HTML files from {sourceFolder}…")
+    try: os.makedirs( destinationFolder.joinpath( 'Pe/' ) )
+    except FileExistsError: pass # it was already there
     copyCount = 0
-    for filename in glob.glob( os.path.join( sourceFolder, 'P_*.html' ) ):
-        shutil.copy( filename, destinationFolder ) # Want the time to be updated or else "make" doesn't function correctly
+    for filename in glob.glob( os.path.join( sourceFolder.joinpath( 'Pe/' ), 'P_*.html' ) ):
+        shutil.copy( filename, destinationFolder.joinpath( 'Pe/' ) ) # Want the time to be updated or else "make" doesn't function correctly
         # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
         copyCount += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET person HTML files to {destinationFolder}.")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET person HTML files to {destinationFolder.joinpath( 'Pe/' )}.")
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET location HTML files from {sourceFolder}…")
+    try: os.makedirs( destinationFolder.joinpath( 'Loc/' ) )
+    except FileExistsError: pass # it was already there
     copyCount = 0
-    for filename in glob.glob( os.path.join( sourceFolder, 'L_*.html' ) ):
-        shutil.copy( filename, destinationFolder ) # Want the time to be updated or else "make" doesn't function correctly
+    for filename in glob.glob( os.path.join( sourceFolder.joinpath( 'Loc/' ), 'L_*.html' ) ):
+        shutil.copy( filename, destinationFolder.joinpath( 'Loc/' ) ) # Want the time to be updated or else "make" doesn't function correctly
         # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
         copyCount += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET location HTML files to {destinationFolder}.")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET location HTML files to {destinationFolder.joinpath( 'Loc/' )}.")
 # end of convert_OET-RV_to_simple_HTML.copy_wordlink_files()
 
 

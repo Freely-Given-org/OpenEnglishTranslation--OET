@@ -56,10 +56,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-07-31' # by RJH
+LAST_MODIFIED_DATE = '2023-08-10' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.31'
+PROGRAM_VERSION = '0.32'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -234,6 +234,7 @@ class State:
 state = State()
 
 
+forList = []
 def main():
     """
     Main program to handle command line parameters and then run what they want.
@@ -258,8 +259,13 @@ def main():
     lv.lookForAuxilliaryFilenames()
     dPrint( 'verbose', DEBUGGING_THIS_MODULE, f"{lv=}")
 
+    # Display anywhere where we still have 'for' that should perhaps be 'because'
+    # show_fors( lv )
+
     # Connect linked words in the OET-LV to the OET-RV
     connect_OET_RV( rv, lv )
+
+    # if forList: print( "For list:", ','.join( forList ) )
 # end of connect_OET-RV_words_via_OET-LV.main
 
 
@@ -276,11 +282,11 @@ def connect_OET_RV( rv, lv ):
 
     # Go through books chapters and verses
     totalSimpleListedAdds = totalProperNounAdds = totalFirstPartMatchedAdds = totalManualMatchedAdds = 0
-    for BBB,bookObject in lv.books.items():
+    for BBB,lvBookObject in lv.books.items():
         vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Processing connect words for OET {BBB}…" )
 
         bookSimpleListedAdds = bookProperNounAdds = bookFirstPartMatchedAdds = bookManualMatchedAdds = 0
-        wordFileName = bookObject.ESFMWordTableFilename
+        wordFileName = lvBookObject.ESFMWordTableFilename
         if wordFileName:
             assert wordFileName.endswith( '.tsv' )
             vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found ESFMBible filename '{wordFileName}' for {lv.abbreviation} {BBB}" )
@@ -339,9 +345,11 @@ def connect_OET_RV( rv, lv ):
         if newESFMtext != state.rvESFMText:
             dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{BBB} ESFM text has changed {len(state.rvESFMText):,} chars -> {len(newESFMtext):,} chars" )
             if BBB=='ACT': newESFMtext = newESFMtext.replace( ' 120¦', ' 12Z¦' ) # Avoid false alarm
-            assert not illegalWordLinkRegex1.search( newESFMtext), f"illegalWordLinkRegex1 failed before saving {BBB} with {illegalWordLinkRegex1.search( newESFMtext)}" # Don't want double-ups of wordlink numbers
+            illegalWordLinkRegex1Match = illegalWordLinkRegex1.search( newESFMtext)
+            assert not illegalWordLinkRegex1Match, f"illegalWordLinkRegex1 failed before saving {BBB} with '{newESFMtext[illegalWordLinkRegex1Match.start()-5:illegalWordLinkRegex1Match.end()+5]}'" # Don't want double-ups of wordlink numbers
             if BBB=='ACT': newESFMtext = newESFMtext.replace( ' 12Z¦', ' 120¦' ) # Avoided false alarm
-            assert not illegalWordLinkRegex2.search( newESFMtext), f"illegalWordLinkRegex2 failed before saving {BBB} with {illegalWordLinkRegex2.search( newESFMtext)}" # Don't want double-ups of wordlink numbers
+            illegalWordLinkRegex2Match = illegalWordLinkRegex2.search( newESFMtext)
+            assert not illegalWordLinkRegex2Match, f"illegalWordLinkRegex2 failed before saving {BBB} with '{newESFMtext[illegalWordLinkRegex2Match.start()-5:illegalWordLinkRegex2Match.end()+5]}'" # Don't want double-ups of wordlink numbers
             with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
                 esfmFile.write( newESFMtext )
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Did {bookSimpleListedAdds:,} simple listed adds, {bookProperNounAdds:,} proper noun adds, {bookFirstPartMatchedAdds:,} first part adds and {bookManualMatchedAdds:,} manual adds for {BBB}." )
@@ -380,6 +388,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
         ●    e – emphasized words (scare quotes)
     The lowercase letters mark other significant places where the words are not normally capitalized.
     """
+    global forList
     # fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {BBB} {c}:{v} {len(rvEntryList)}, {len(lvEntryList)} )" )
     assert state.tableHeaderList.index( 'GlossCaps' ) == 4 # Check we have the correct column below
 
@@ -394,6 +403,15 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
         lvMarker,lvRest = lvEntry.getMarker(), lvEntry.getCleanText()
         if lvMarker in ('v~','p~'):
             lvText = f"{lvText}{' ' if lvText else ''}{lvRest.replace('+','')}"
+            # lvTextSimplified = lvText.replace('¦','').replace('0','').replace('1','').replace('2','').replace('3','').replace('4','').replace('5','').replace('6','').replace('7','').replace('8','').replace('9','') \
+            #                     .replace('¬','').replace('_',' ').replace('  ',' ') \
+            #                     .replace('before','').replace('forget','').replace('forgive','').replace('forty','').replace('therefore','').replace('fore','') \
+            #                     .replace('tolerable for','').replace('account for','').replace('prepared for','').replace('waiting for','').replace('ing for','').replace('ous for','') \
+            #                     .replace('for all','').replace('for her','').replace('for him','').replace('for me','').replace('for them','').replace('for you','').replace('for us','') \
+            #                     .replace('for days','').replace('for months','')
+            # if lvTextSimplified.startswith( 'for ' ) or lvTextSimplified.startswith( 'For ' ) or ' for ' in lvTextSimplified or 'For ' in lvTextSimplified:
+            #     print( f"FOR: {BBB}_{c}:{v}, '{lvTextSimplified.replace('for','FOR').replace('For','FOR')}'" )
+            #     forList.append( f"{BBB}_{c}:{v}" )
     if not rvText or not lvText: return 0, 0, 0, 0
     rvAdjText = rvText.replace('≈','').replace('…','') \
                 .replace('.','').replace(',','').replace(':','').replace(';','').replace('?','').replace('!','').replace('—',' ') \
@@ -683,7 +701,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('prayed', 'praying'),
             ('pleasing', 'acceptable'),
             ('requested', 'requesting'),
-            # Vocab differences
+            # Vocab differences / synonyms
             ('agreeing','confirming'),
             ('amazed','astonished'),
             ('amazed','marvelling'),
@@ -713,6 +731,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('existence','became'),
             ('fitting','befitting'),
             ('forgive','forgiving'),
+            ('fulfilled','accomplished'),
             ('godly','devout'),
             ('insulting','slandering'),
             ('kill','destroy'),
@@ -769,6 +788,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('upstairs','upper'),
             ('urged','implored'),
             ('walk','walking'),
+            ('wallet','purse'),
             ('wealthy','rich'),
             ("What's",'What'),
             ('work','service'),
@@ -808,16 +828,16 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Idumea', 'Idoumaia'),
             ('Immanuel', 'Emmanouaʸl'),('Immanuel', 'Emmanouaʸl/ˊImmānūʼēl'),
             ('Isaac', 'Isaʼak'),('Isaac', 'Isaʼak/Yiʦəḩāq'),
-            ('Jacob', 'Yakōbos'),('Jacob', 'Yakōbos/Yaˊaqov'), ('Jacob', 'Yakōb'),('Jacob', 'Yakōb/Yaˊaqov'),("Jacob's", 'Yakōb'),("Jacob's", 'Yakōb/Yaˊaqov'),
-            ('Jehoshapat', 'Yōsafat'),('Jehoshapat', 'Yōsafat/Yəhōshāfāţ'),
-            ('Jerusalem', 'Hierousalaʸm'),('Jerusalem', 'Hierousalaʸm/Yərūshālayim'),
+            ('Yacob', 'Yakōbos'),('Yacob', 'Yakōbos/Yaˊaqov'), ('Yacob', 'Yakōb'),('Yacob', 'Yakōb/Yaˊaqov'),("Yacob's", 'Yakōb'),("Yacob's", 'Yakōb/Yaˊaqov'),
+            ('Yehoshapat', 'Yōsafat'),('Yehoshapat', 'Yōsafat/Yəhōshāfāţ'),
+            ('Yerusalem', 'Hierousalaʸm'),('Yerusalem', 'Hierousalaʸm/Yərūshālayim'),
             ('Jesse', 'Yessai'),('Jesse', 'Yessai/Yishay'),
             ('Jew', 'Youdaios'),
             ('Jews', 'Youdaiōns'),
-            ('John', 'Yōannaʸs'),
-            ('Joppa', 'Yoppaʸ'),
+            ('Yohan', 'Yōannaʸs'),
+            ('Yoppa', 'Yoppaʸ'),
             ('Jordan', 'Yordanaʸs'),('Jordan', 'Yordanaʸs/Yarəddēn'),
-            ('Joseph', 'Yōsaʸf'),('Joseph', 'Yōsaʸf/Yōşēf'),
+            ('Yoseph', 'Yōsaʸf'),('Yoseph', 'Yōsaʸf/Yōşēf'),
             ('Josiah', 'Yōsias'),('Josiah', 'Yōsias/Yʼoshiyyāh'),
             ('Judah', 'Youda'),('Judah', 'Youda/Yəhūdāh'),
             ('Judas', 'Youdas'),
@@ -916,8 +936,8 @@ def doGroup2( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('risen', 'got up'),
             ('scribes', 'religious teachers'),
             ('seeking', 'looking for'),
-            ('synagogue', 'Jewish meeting hall'), ('synagogue', 'meeting hall'),
             ('synagogues', 'Jewish meeting halls'), ('synagogues', 'meeting halls'),
+            ('synagogue', 'Jewish meeting hall'), ('synagogue', 'meeting hall'),
             ):
         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvWord=} {rvWordStr=}" )
         rvWords = rvWordStr.split( ' ' )

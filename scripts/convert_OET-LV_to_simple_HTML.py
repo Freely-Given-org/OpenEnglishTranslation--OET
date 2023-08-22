@@ -23,12 +23,17 @@
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 """
+CHANGELOG:
+    2023-08-07 Move MRK before MAT
+    2023-08-16 Handle gloss pre/helper/post markings from updated wordtables
+    2023-08-21 Add lemma pages
 """
 from gettext import gettext as _
 from typing import List, Tuple, Set, Optional
 from pathlib import Path
 from datetime import datetime
 import logging
+import os
 import re
 from collections import defaultdict
 import json
@@ -47,10 +52,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2023-06-29' # by RJH
+LAST_MODIFIED_DATE = '2023-08-22' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.68'
+PROGRAM_VERSION = '0.72'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -77,16 +82,11 @@ CNTR_BOOK_ID_MAP = {
     'MAT':40, 'MRK':41, 'LUK':42, 'JHN':43, 'ACT':44,
     'ROM':45, 'CO1':46, 'CO2':47, 'GAL':48, 'EPH':49, 'PHP':50, 'COL':51, 'TH1':52, 'TH2':53, 'TI1':54, 'TI2':55, 'TIT':56, 'PHM':57,
     'HEB':58, 'JAM':58, 'PE1':60, 'PE2':61, 'JN1':62, 'JN2':63, 'JN3':64, 'JDE':65, 'REV':66}
-# BOOKLIST_OT39 = ('GEN','EXO','LEV','NUM','DEU','JOS','JDG','RUT','SA1','SA2','KI1','KI2','CH1','CH2',
-#                 'EZR','NEH','EST','JOB','PSA','PRO','ECC','SNG','ISA','JER','LAM','EZE',
-#                 'DAN','HOS','JOL','AMO','OBA','JNA','MIC','NAH','HAB','ZEP','HAG','ZEC','MAL')
-# assert len(BOOKLIST_OT39) == 39
-# NT_BBB_LIST = ('MAT','MRK','LUK','JHN','ACT','ROM','CO1','CO2','GAL','EPH','PHP','COL','TH1','TH2','TI1','TI2','TIT','PHM','HEB','JAM','PE1','PE2','JN1','JN2','JN3','JDE','REV')
-NT_BBB_LIST = ('JHN','MAT','MRK','LUK','ACT','ROM','CO1','CO2','GAL','EPH','PHP','COL','TH1','TH2','TI1','TI2','TIT','PHM','HEB','JAM','PE1','PE2','JN1','JN2','JN3','JDE','REV')
+NT_BBB_LIST = ['JHN','MRK','MAT','LUK','ACT','ROM','CO1','CO2','GAL','EPH','PHP','COL','TH1','TH2','TI1','TI2','TIT','PHM','HEB','JAM','PE1','PE2','JN1','JN2','JN3','JDE','REV']
 assert len(NT_BBB_LIST) == 27
 BBB_LIST = BOOKLIST_OT39 + NT_BBB_LIST
 assert len(BBB_LIST) == 66
-TORAH_BOOKS_CODES = ('GEN','EXO','LEV','NUM','DEU')
+TORAH_BOOKS_CODES = ['GEN','EXO','LEV','NUM','DEU']
 assert len(TORAH_BOOKS_CODES) == 5
 CNTR_ROLE_NAME_DICT = {'N':'noun', 'S':'substantive adjective', 'A':'adjective', 'E':'determiner', 'R':'pronoun',
                   'V':'verb', 'I':'interjection', 'P':'preposition', 'D':'adverb', 'C':'conjunction', 'T':'particle'}
@@ -126,7 +126,7 @@ span.cPsa { font-size:1.6em; font-weight:bold; color:green; }
 span.v { vertical-align:super; font-size:0.5em; color:red; }
 span.addArticle { color:grey; }
 span.unusedArticle { color:lavender; }
-span.addCopula { color:pink; }
+span.addCopula { color:grey; }
 span.addDirectObject { color:brown; }
 span.addExtra { color:lightGreen; }
 span.addOwner { color:darkOrchid; }
@@ -147,7 +147,15 @@ p.LVsentence { margin-top:0.2em; margin-bottom:0.2em; }
 
 DATA_CSS_TEXT = """a { text-decoration:none; }
 
-div.unusedWord { color:darkGrey; }
+div.unusedOLWord { color:darkGrey; }
+
+p.wordLine { text-indent:2em; margin-top:0.2em; margin-bottom:0.2em; font-size:0.9em; }
+
+span.glossPre { color:lightGreen; }
+span.glossHelper { color:grey; }
+span.glossPost { color:brown; }
+
+span.ul { color:darkGrey; }
 """
 
 LV_INDEX_INTRO_HTML = """<!DOCTYPE html>
@@ -177,8 +185,8 @@ LV_INDEX_INTRO_HTML = """<!DOCTYPE html>
   <p>Whole <a href="OET-LV-Torah.html">Torah/Pentateuch</a>
     (long and slower to load, but useful for easy searching of multiple books, etc.)</p>
   <h3><b>NT</b> v0.01</h3>
-  <p>Note that the <em>OET</em> places Yōannēs/John before Matthaios/Matthew.</p>
-  <p><a href="JHN.html">Yōannēs/John</a> &nbsp;&nbsp;<a href="MAT.html">Matthaios/Matthew</a> &nbsp;&nbsp;<a href="MRK.html">Markos/Mark</a> &nbsp;&nbsp;<a href="LUK.html">Loukas/Luke</a> &nbsp;&nbsp;<a href="ACT.html">Acts</a><br>
+  <p>Note that the <em>OET</em> places Yōannēs/John and Markos/Mark before Matthaios/Matthew.</p>
+  <p><a href="JHN.html">Yōannēs/John</a> &nbsp;&nbsp;<a href="MRK.html">Markos/Mark</a> &nbsp;&nbsp;<a href="MAT.html">Matthaios/Matthew</a> &nbsp;&nbsp;<a href="LUK.html">Loukas/Luke</a> &nbsp;&nbsp;<a href="ACT.html">Acts</a><br>
     <a href="ROM.html">Romans</a> &nbsp;&nbsp;<a href="CO1.html">Corinthians 1</a> &nbsp;&nbsp;<a href="CO2.html">Corinthians 2</a><br>
     <a href="GAL.html">Galatians</a> &nbsp;&nbsp;<a href="EPH.html">Ephesians</a> &nbsp;&nbsp;<a href="PHP.html">Philippians</a> &nbsp;&nbsp;<a href="COL.html">Colossians</a><br>
     <a href="TH1.html">Thessalonians 1</a> &nbsp;&nbsp;<a href="TH2.html">Thessalonians 2</a> &nbsp;&nbsp;<a href="TI1.html">Timotheos/Timothy 1</a> &nbsp;&nbsp;<a href="TI2.html">Timotheos/Timothy 2</a> &nbsp;&nbsp;<a href="TIT.html">Titos/Titus</a><br>
@@ -719,8 +727,8 @@ def produce_HTML_files() -> None:
 
         # Swap book orders to put JHN before MAT
         if   BBB == 'MAT': BBB = 'JHN'
-        elif BBB == 'MRK': BBB = 'MAT'
-        elif BBB == 'LUK': BBB = 'MRK'
+        # elif BBB == 'MRK': BBB = 'MRK'
+        elif BBB == 'LUK': BBB = 'MAT'
         elif BBB == 'JHN': BBB = 'LUK'
 
         bookType = None
@@ -784,7 +792,11 @@ def produce_HTML_files() -> None:
             numBooksProcessed += 1
 
     if word_table_filenames:
-        make_table_pages( sourceFolderPath, OET_HTML_OutputFolderPath, word_table_filenames )
+        make_word_pages( sourceFolderPath, OET_HTML_OutputFolderPath.joinpath( 'W/'), word_table_filenames )
+        make_lemma_pages( sourceFolderPath, OET_HTML_OutputFolderPath.joinpath( 'Lm/'), word_table_filenames )
+        make_person_pages( OET_HTML_OutputFolderPath.joinpath( 'Pe/') )
+        make_location_pages( OET_HTML_OutputFolderPath.joinpath( 'Loc/') )
+
 
     # Output CSS and index and whole NT html
     with open( OET_HTML_OutputFolderPath.joinpath('BibleBook.css'), 'wt', encoding='utf-8' ) as css_output_file:
@@ -897,7 +909,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
             book_html = f'{book_html}<p>GOT UNEXPECTED{marker}={rest}</p>'
     book_html = f"{book_html}</p></div><!--BibleText-->"
 
-    chapter_links = [f'<a href="#C{chapter_num}">C{chapter_num}</a>' for chapter_num in range( 1, int(C)+1 )]
+    chapter_links = [f'<a title="Go to chapter" href="#C{chapter_num}">C{chapter_num}</a>' for chapter_num in range( 1, int(C)+1 )]
     chapters_html = f'<p class="chapterLinks">{EM_SPACE.join(chapter_links)}</p><!--chapterLinks-->'
     book_start_html = f'{start_html}{links_html}\n{chapters_html}'
 
@@ -925,9 +937,9 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
     # count = 0
     searchStartIndex = 0
     for _safetyCount in range( 1000 ):
-        ix = book_html.find( '<span class="untr"><span title="', searchStartIndex )
+        ix = book_html.find( '<span class="untr"><a title="', searchStartIndex )
         if ix == -1: break # all done
-        ixEnd = book_html.index( '"><', ix+32 )
+        ixEnd = book_html.index( '"><', ix+29 )
         book_html = f'{book_html[:ixEnd]} (untranslated){book_html[ixEnd:]}'
         # count += 1
         searchStartIndex = ixEnd + 5
@@ -952,7 +964,8 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
 #   or 2 or 3 words joined by an underline like he_was_saying
 #   (although the underline is already inside a span at this point).
 # Note that single words might include a <sup></sup> span as in 'Aʸsaias/(Yəshaˊə<sup>yāh</sup>)' (but we handle that below by substitions)
-# NOTE: If you are making any changes, the same regex is in the ESFM module of BibleOrgSys
+# NOTE: If you are making any changes, a similar regex is in the ESFM module of BibleOrgSys
+#           except this one don't handle digits (like 'feeding 5,000') because that shouldn't occur in the LV
 wordRegex1 = re.compile( '([-¬A-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' ) # Max of six total digits
 wordRegex2 = re.compile( '([-¬A-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]{2,})<span class="ul">_</span>([-¬A-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
 wordRegex3 = re.compile( '([-¬A-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]{2,})<span class="ul">_</span>([-¬A-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]+)<span class="ul">_</span>([-¬A-za-zḨŌⱤḩⱪşţʦĀĒāēīōūəʸʼˊ/()]+)¦([1-9][0-9]{0,5})' )
@@ -1009,7 +1022,7 @@ def convert_tagged_ESFM_words_to_links( BBB:str, book_html:str, word_table:List[
         except IndexError:
             logging.critical( f"convert_tagged_ESFM_words_to_links( {BBB} ) index error: word='{match.group(1)}' {row_number=}/{len(word_table)} entries")
             halt
-        book_html = f'{book_html[:match.start()]}<span title="{greek}"><a href="W_{match.group(2)}.html">{match.group(1)}</a></span>{book_html[match.end():]}'
+        book_html = f'{book_html[:match.start()]}<a title="{greek}" href="W/{match.group(2)}.html">{match.group(1)}</a>{book_html[match.end():]}'
         searchStartIndex = match.end() + 25 # We've added at least that many characters
         count += 1
     book_html = book_html.replace( 'SSsupP', '<sup>' ).replace( 'ESsupP', '</sup>' ) # Restores our 'hidden' HTML markup
@@ -1019,7 +1032,9 @@ def convert_tagged_ESFM_words_to_links( BBB:str, book_html:str, word_table:List[
 # end of convert_OET-LV_to_simple_HTML.convert_tagged_ESFM_words_to_links function
 
 
-def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_filenames:Set[str] ) -> int:
+formUsageDict, lemmaDict = defaultdict(list), defaultdict(list)
+lemmaFormsDict, formGlossesDict, lemmaGlossesDict = defaultdict(set), defaultdict(set), defaultdict(set)
+def make_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_filenames:Set[str] ) -> int:
     """
     Make pages for all the words to link to.
 
@@ -1027,11 +1042,16 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
 
     There's almost identical code in createOETGreekWordsPages() in OpenBibleData createWordPages.py (sadly)
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"make_table_pages( {inputFolderPath}, {outputFolderPath}, {word_table_filenames} )" )
+    global formUsageDict, lemmaDict, lemmaFormsDict, formGlossesDict, lemmaGlossesDict
+
+    fnPrint( DEBUGGING_THIS_MODULE, f"make_word_pages( {inputFolderPath}, {outputFolderPath}, {word_table_filenames} )" )
     load_transliteration_table( 'Greek' )
     our_start_html = START_HTML.replace( 'BibleBook.css', 'BibleData.css' )
 
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Making table pages for {word_table_filenames}…" )
+    try: os.makedirs( outputFolderPath )
+    except FileExistsError: pass # it was already there
+
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Making word table pages for {word_table_filenames}…" )
     for word_table_filename in word_table_filenames:
         word_table_filepath = inputFolderPath.joinpath( word_table_filename )
         with open( word_table_filepath, 'rt', encoding='utf-8' ) as word_table_input_file:
@@ -1043,37 +1063,64 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
         assert columnHeaders == 'Ref\tGreek\tLemma\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\tTags', columnHeaders # If not, probably need to fix some stuff
 
         # First make a list of each place the same Greek word (and matching morphology) is used
-        # TODO: The word table has Matthew at the beginning (whereas the OET places John at the beginning) so we do JHN first
+        # TODO: The word table has Matthew at the beginning (whereas the OET places John and Mark at the beginning) so we do JHN first
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Finding all uses of {len(word_table)-1:,} words in {word_table_filename}…" )
-        formUsageDict, lemmaDict = defaultdict(list), defaultdict(list)
-        formGlossesDict, lemmaGlossesDict = defaultdict(set), defaultdict(set)
         for n, columns_string in enumerate( word_table[1:], start=1 ):
             if columns_string.startswith( 'JHN' ):
                 wordRef, greek, lemma, glossWords, glossCaps,probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
+                formattedGlossWords = glossWords \
+                                        .replace( '/', '<span class="glossHelper">', 1 ).replace( '/', '</span>', 1 ) \
+                                        .replace( '˱', '<span class="glossPre">', 1 ).replace( '˲', '</span>', 1 ) \
+                                        .replace( '‹', '<span class="glossPost">', 1 ).replace( '›', '</span>', 1 )
                 if probability:
                     formKey2Tuple = (greek, None if morphology=='None' else morphology)
                     formUsageDict[formKey2Tuple].append( n )
                     lemmaDict[lemma].append( n )
-                    formGlossesDict[formKey2Tuple].add( glossWords )
-                    lemmaGlossesDict[lemma].add( glossWords )
+                    lemmaFormsDict[lemma].add( formKey2Tuple )
+                    formGlossesDict[formKey2Tuple].add( formattedGlossWords )
+                    lemmaGlossesDict[lemma].add( formattedGlossWords )
             elif formUsageDict: break # Must have already finished John
         for n, columns_string in enumerate( word_table[1:], start=1 ):
-            if not columns_string.startswith( 'JHN' ):
+            if columns_string.startswith( 'MRK' ):
                 wordRef, greek, lemma, glossWords, glossCaps,probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
+                formattedGlossWords = glossWords \
+                                        .replace( '/', '<span class="glossHelper">', 1 ).replace( '/', '</span>', 1 ) \
+                                        .replace( '˱', '<span class="glossPre">', 1 ).replace( '˲', '</span>', 1 ) \
+                                        .replace( '‹', '<span class="glossPost">', 1 ).replace( '›', '</span>', 1 )
                 if probability:
                     formKey2Tuple = (greek, None if morphology=='None' else morphology)
                     formUsageDict[formKey2Tuple].append( n )
                     lemmaDict[lemma].append( n )
-                    formGlossesDict[formKey2Tuple].add( glossWords )
-                    lemmaGlossesDict[lemma].add( glossWords )
+                    lemmaFormsDict[lemma].add( formKey2Tuple )
+                    formGlossesDict[formKey2Tuple].add( formattedGlossWords )
+                    lemmaGlossesDict[lemma].add( formattedGlossWords )
+            elif columns_string.startswith( 'LUK' ): break # Must have already finished Mark
+        for n, columns_string in enumerate( word_table[1:], start=1 ):
+            if not columns_string.startswith( 'JHN' ) and not columns_string.startswith( 'MRK' ):
+                wordRef, greek, lemma, glossWords, glossCaps,probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
+                formattedGlossWords = glossWords \
+                                        .replace( '/', '<span class="glossHelper">', 1 ).replace( '/', '</span>', 1 ) \
+                                        .replace( '˱', '<span class="glossPre">', 1 ).replace( '˲', '</span>', 1 ) \
+                                        .replace( '‹', '<span class="glossPost">', 1 ).replace( '›', '</span>', 1 )
+                if probability:
+                    formKey2Tuple = (greek, None if morphology=='None' else morphology)
+                    formUsageDict[formKey2Tuple].append( n )
+                    lemmaDict[lemma].append( n )
+                    lemmaFormsDict[lemma].add( formKey2Tuple )
+                    formGlossesDict[formKey2Tuple].add( formattedGlossWords )
+                    lemmaGlossesDict[lemma].add( formattedGlossWords )
 
         # Now create the individual word pages
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f" Making pages for {len(word_table)-1:,} words in {word_table_filename}…" )
         for n, columns_string in enumerate( word_table[1:], start=1 ):
             # print( n, columns_string )
-            output_filename = f'W_{n}.html'
+            output_filename = f'{n}.html'
             # dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Got '{columns_string}' for '{output_filename}'" )
             wordRef, greek, lemma, glossWords, glossCaps,probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
+            formattedGlossWords = glossWords \
+                                    .replace( '/', '<span class="glossHelper">', 1 ).replace( '/', '</span>', 1 ) \
+                                    .replace( '˱', '<span class="glossPre">', 1 ).replace( '˲', '</span>', 1 ) \
+                                    .replace( '‹', '<span class="glossPost">', 1 ).replace( '›', '</span>', 1 )
             if extendedStrongs == 'None': extendedStrongs = None
             if roleLetter == 'None': roleLetter = None
             if morphology == 'None': morphology = None
@@ -1105,7 +1152,7 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
                 if case!='.': caseField = f' case=<b>{CNTR_CASE_NAME_DICT[case]}</b>'
                 if gender!='.': genderField = f' gender=<b>{CNTR_GENDER_NAME_DICT[gender]}</b>'
                 if number!='.': numberField = f' number=<b>{CNTR_NUMBER_NAME_DICT[number]}</b>' # or № ???
-            translation = '<small>(no English gloss)</small>' if glossWords=='-' else f'''Typical English gloss=‘<b>{glossWords.replace('_','<span class="ul">_</span>')}</b>’'''
+            translation = '<small>(no English gloss)</small>' if glossWords=='-' else f'''Typical English gloss=‘<b>{formattedGlossWords.replace('_','<span class="ul">_</span>')}</b>’'''
 
             # Add pointers to people, locations, etc.
             semanticExtras = ''
@@ -1114,9 +1161,9 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
                     prefix, tag = semanticTag[0], semanticTag[1:]
                     # print( f"{BBB} {C}:{V} '{semanticTag}' from {tagsStr=}" )
                     if prefix == 'P':
-                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Person=<a href="P_{tag}.html">{tag}</a>'''
+                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Person=<a href="../Pe/P_{tag}.html">{tag}</a>'''
                     elif prefix == 'L':
-                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Location=<a href="L_{tag}.html">{tag}</a>'''
+                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Location=<a href="../Loc/L_{tag}.html">{tag}</a>'''
                     elif prefix == 'Y':
                         year = tag
                         semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Year={year}{' AD' if int(year)>0 else ''}'''
@@ -1127,22 +1174,25 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
                     elif prefix == 'G':
                         semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Group={tag}'''
                     elif prefix == 'F':
-                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Referred to from <a href="W_{tag}.html">Word #{tag}</a>'''
+                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Referred to from <a href="{tag}.html">Word #{tag}</a>'''
                     elif prefix == 'R':
-                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Refers to <a href="W_{tag}.html">Word #{tag}</a>'''
+                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Refers to <a href="{tag}.html">Word #{tag}</a>'''
                     else:
                         logging.critical( f"Unknown '{prefix}' word tag in {n}: {columns_string}")
                         unknownTag
+            lemmaLink = f'<a title="View Greek root word" href="../Lm/{lemma}.html">{lemma}</a>'
+            lemmaGlossesList = sorted( lemmaGlossesDict[lemma] )
+            wordGlossesList = sorted( formGlossesDict[(greek,morphology)] )
 
-            prevLink = f'<b><a href="W_{n-1}.html">←</a></b> ' if n>1 else ''
-            nextLink = f' <b><a href="W_{n+1}.html">→</a></b>' if n<len(word_table) else ''
-            oetLink = f'<b><a href="{BBB}.html#C{C}V{V}">Back to OET</a></b>'
-            html = f'''{'' if probability else '<div class="unusedWord">'}<h1>OET Wordlink #{n}{'' if probability else ' <small>(Unused Greek word variant)</small>'}</h1>
+            prevLink = f'<b><a href="{n-1}.html">←</a></b> ' if n>1 else ''
+            nextLink = f' <b><a href="{n+1}.html">→</a></b>' if n<len(word_table) else ''
+            oetLink = f'<b><a href="../{BBB}.html#C{C}V{V}">Back to OET</a></b>'
+            html = f'''{'' if probability else '<div class="unusedOLWord">'}<h1>OET Wordlink #{n}{'' if probability else ' <small>(Unused Greek word variant)</small>'}</h1>
 <p>{prevLink}{oetLink}{nextLink}</p>
-<p><span title="Goes to Statistical Restoration Greek page"><a href="https://GreekCNTR.org/collation/?{CNTR_BOOK_ID_MAP[BBB]}{C.zfill(3)}{V.zfill(3)}">SR GNT {tidyBBB} {C}:{V}</a></span>
+<p><a title="View Statistical Restoration Greek page" href="https://GreekCNTR.org/collation/?{CNTR_BOOK_ID_MAP[BBB]}{C.zfill(3)}{V.zfill(3)}">SR GNT {tidyBBB} {C}:{V}</a>
  {probabilityField}<b>{greek}</b> ({transliterate_Greek(greek)}) {translation}
- Strongs=<span title="Goes to Strongs dictionary"><a href="https://BibleHub.com/greek/{strongs}.htm">{extendedStrongs}</a></span> <small>Lemma={lemma}</small><br>
- {roleField} Morphology=<b>{morphology}</b>:{moodField}{tenseField}{voiceField}{personField}{caseField}{genderField}{numberField}{f'<br>  {semanticExtras}' if semanticExtras else ''}</p>{'' if probability else f'{NEWLINE}</div><!--unusedWord-->'}'''
+ Strongs=<a title="View Strongs dictionary entry" href="https://BibleHub.com/greek/{strongs}.htm">{extendedStrongs}</a> <small>Lemma={lemmaLink}</small><br>
+ {roleField} Morphology=<b>{morphology}</b>:{moodField}{tenseField}{voiceField}{personField}{caseField}{genderField}{numberField}{f'<br>  {semanticExtras}' if semanticExtras else ''}</p>{'' if probability else f'{NEWLINE}</div><!--unusedOLWord-->'}'''
 
             if probability: # Now list all the other places where this same Greek word is used
                 other_count = 0
@@ -1150,18 +1200,24 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
                 for oN in thisWordNumberList:
                     if oN==n: continue # don't duplicate the word we're making the page for
                     oWordRef, oGreek, oLemma, oGlossWords, oGlossCaps,oProbability, oExtendedStrongs, oRoleLetter, oMorphology, oTagsStr = word_table[oN].split( '\t' )
+                    oFormattedGlossWords = oGlossWords \
+                                            .replace( '/', '<span class="glossHelper">', 1 ).replace( '/', '</span>', 1 ) \
+                                            .replace( '˱', '<span class="glossPre">', 1 ).replace( '˲', '</span>', 1 ) \
+                                            .replace( '‹', '<span class="glossPost">', 1 ).replace( '›', '</span>', 1 )
                     oBBB, oCVW = oWordRef.split( '_', 1 )
                     oC, oVW = oCVW.split( ':', 1 )
                     oV, oW = oVW.split( 'w', 1 )
                     oTidyBBB = BibleOrgSysGlobals.loadedBibleBooksCodes.tidyBBB( oBBB )
                     if other_count == 0:
                         html = f'{html}\n<h2>Other uses ({len(thisWordNumberList)-1:,}) of {greek} <small>{morphology}</small> in the NT</h2>'
-                    translation = '<small>(no English gloss)</small>' if oGlossWords=='-' else f'''English gloss=‘<b>{oGlossWords.replace('_','<span class="ul">_</span>')}</b>’'''
-                    html = f'{html}\n<p><a href="{oBBB}.html#C{oC}V{oV}">OET {oTidyBBB} {oC}:{oV}</a> {translation} <a href="https://GreekCNTR.org/collation/?{CNTR_BOOK_ID_MAP[oBBB]}{oC.zfill(3)}{oV.zfill(3)}">SR GNT {oTidyBBB} {oC}:{oV} word {oW}</a>'
+                    translation = '<small>(no English gloss)</small>' if oGlossWords=='-' else f'''English gloss=‘<b>{oFormattedGlossWords.replace('_','<span class="ul">_</span>')}</b>’'''
+                    html = f'{html}\n<p class="wordLine"><a href="../{oBBB}.html#C{oC}V{oV}">OET {oTidyBBB} {oC}:{oV}</a> {translation} <a href="https://GreekCNTR.org/collation/?{CNTR_BOOK_ID_MAP[oBBB]}{oC.zfill(3)}{oV.zfill(3)}">SR GNT {oTidyBBB} {oC}:{oV} word {oW}</a>'
                     other_count += 1
                     if other_count >= 120:
-                        html = f'{html}\n<p>({len(thisWordNumberList)-other_count-1:,} more examples not listed)</p>'
+                        html = f'{html}\n<p class="Note">({len(thisWordNumberList)-other_count-1:,} more examples not listed)</p>'
                         break
+                if len(lemmaGlossesList) > len(wordGlossesList):
+                    html = f'''{html}\n<p class="lemmaGlossesSummary">The various word forms of the root word (lemma) ‘{lemmaLink}’ have {len(lemmaGlossesList):,} different glosses: ‘<b>{"</b>’, ‘<b>".join(lemmaGlossesList)}</b>’.</p>'''
 
             # Now put it all together
             html = f"{our_start_html.replace('__TITLE__',greek)}\n{html}\n{END_HTML}"
@@ -1169,11 +1225,87 @@ def make_table_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
                 html_output_file.write( html )
             vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Wrote {len(html):,} characters to {output_filename}" )
 
-    make_person_pages( outputFolderPath )
-    make_location_pages( outputFolderPath )
-
     return len(word_table) - 1
-# end of convert_OET-LV_to_simple_HTML.make_table_pages function
+# end of convert_OET-LV_to_simple_HTML.make_word_pages function
+
+
+def make_lemma_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_filenames:Set[str] ) -> int:
+    """
+    """
+    global lemmaDict, lemmaFormsDict, lemmaGlossesDict, formUsageDict
+
+    fnPrint( DEBUGGING_THIS_MODULE, f"make_lemma_pages( {inputFolderPath}, {outputFolderPath}, {word_table_filenames} )" )
+    our_start_html = START_HTML.replace( 'BibleBook.css', 'BibleData.css' )
+
+    try: os.makedirs( outputFolderPath )
+    except FileExistsError: pass # it was already there
+
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Making lemma table pages for {word_table_filenames}…" )
+    for word_table_filename in word_table_filenames:
+        word_table_filepath = inputFolderPath.joinpath( word_table_filename )
+        with open( word_table_filepath, 'rt', encoding='utf-8' ) as word_table_input_file:
+            word_table = word_table_input_file.read().rstrip( '\n' ).split( '\n' ) # Remove any blank line at the end then split
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Read {len(word_table):,} lines from word table at {word_table_filepath}." )
+
+        columnHeaders = word_table[0]
+        dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Word table column headers = '{columnHeaders}'" )
+        assert columnHeaders == 'Ref\tGreek\tLemma\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\tTags', columnHeaders # If not, probably need to fix some stuff
+
+
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Making {len(lemmaDict):,} lemma pages…" )
+
+    lemmaList = sorted( [lemma for lemma in lemmaDict] )
+
+    # Now make a page for each Greek lemma (including the variants not used in the translation)
+    for ll, lemma in enumerate( lemmaList ):
+        # print( ll, lemma )
+        lemmaRowsList = lemmaDict[lemma]
+        lemmaFormsList = sorted( lemmaFormsDict[lemma] )
+        lemmaGlossesList = sorted( lemmaGlossesDict[lemma] )
+        def getFirstWordNumber(grk,morph): return formUsageDict[(grk,morph)][0]
+
+        output_filename = f'{lemma}.html'
+
+        prevLink = f'<b><a title="Previous lemma" href="{lemmaList[ll-1]}.html">←</a></b> ' if ll>0 else ''
+        nextLink = f' <b><a title="Next lemma" href="{lemmaList[ll+1]}.html">→</a></b>' if ll<len(lemmaList)-1 else ''
+        html = f'''<h1 id="Top">Greek root word (lemma) ‘{lemma}’</h1>
+<p class="pNav">{prevLink}<b>{lemma}</b>{nextLink}</p>
+<p class="summary">This root form (lemma) is used in {len(lemmaFormsList):,} different forms in the NT: {', '.join([f'<a title="View Greek word form" href="../W/{getFirstWordNumber(grk,morph)}.html">{grk}</a> <small>({morph[4:] if morph.startswith("....") else morph})</small>' for grk,morph in lemmaFormsList])}.</p>
+<p class="summary">It is glossed in {len(lemmaGlossesList):,}{'' if len(lemmaGlossesList)==1 else ' different'} way{'' if len(lemmaGlossesList)==1 else 's'}: ‘<b>{"</b>’, ‘<b>".join(lemmaGlossesList)}</b>’.</p>
+'''
+
+        if len(lemmaRowsList) > 100: # too many to list
+            maxWordsToShow = 40
+            html = f'{html}\n<h2>Showing the first {maxWordsToShow} out of ({len(lemmaRowsList)-1:,}) uses of Greek root word (lemma) ‘{lemma}’ in the NT</h2>'
+        else: # we can list all uses of the word
+            maxWordsToShow = 100
+            html = f'''{html}\n<h2>Have {len(lemmaRowsList):,} {'use' if len(lemmaRowsList)==1 else 'uses'} of Greek root word (lemma) ‘{lemma}’ in the NT</h2>'''
+        for displayCounter,oN in enumerate( lemmaRowsList, start=1 ):
+            oWordRef, oGreek, oLemma, oGlossWords, oGlossCaps,oProbability, oExtendedStrongs, oRoleLetter, oMorphology, oTagsStr = word_table[oN].split( '\t' )
+            oFormattedGlossWords = oGlossWords \
+                                    .replace( '/', '<span class="glossHelper">', 1 ).replace( '/', '</span>', 1 ) \
+                                    .replace( '˱', '<span class="glossPre">', 1 ).replace( '˲', '</span>', 1 ) \
+                                    .replace( '‹', '<span class="glossPost">', 1 ).replace( '›', '</span>', 1 )
+            oBBB, oCVW = oWordRef.split( '_', 1 )
+            oC, oVW = oCVW.split( ':', 1 )
+            oV, oW = oVW.split( 'w', 1 )
+            oTidyBBB = BibleOrgSysGlobals.loadedBibleBooksCodes.tidyBBB( oBBB )
+            oTidyMorphology = oMorphology[4:] if oMorphology.startswith('....') else oMorphology
+            # if other_count == 0:
+            translation = '<small>(no English gloss here)</small>' if oGlossWords=='-' else f'''English gloss=‘<b>{oFormattedGlossWords.replace('_','<span class="ul">_</span>')}</b>’'''
+            html = f'''{html}\n<p class="lemmaLine"><a title="View OET {oTidyBBB} text" href="../OET/byC/{oBBB}_C{oC}.html#C{oC}V{oV}">OET {oTidyBBB} {oC}:{oV}</a> Greek word=<b><a title="Go to word page" href="../W/{oN}.html">{oGreek}</a></b> ({transliterate_Greek(oGreek)}) <small>Morphology={oTidyMorphology}</small> {translation} <a title="Go to Statistical Restoration Greek page" href="https://GreekCNTR.org/collation/?{CNTR_BOOK_ID_MAP[oBBB]}{oC.zfill(3)}{oV.zfill(3)}">SR GNT {oTidyBBB} {oC}:{oV} word {oW}</a></p>'''
+            # other_count += 1
+            # if other_count >= 120:
+            #     html = f'{html}\n<p class="summary">({len(thisWordNumberList)-other_count-1:,} more examples not listed)</p>'
+            #     break
+            if displayCounter >= maxWordsToShow: break
+
+        # Now put it all together
+        html = f"{our_start_html.replace('__TITLE__',f'Greek lemma ‘{lemma}’')}\n{html}\n{END_HTML}"
+        with open( outputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
+            html_output_file.write( html )
+        vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Wrote {len(html):,} characters to {output_filename}" )
+# end of createOETReferencePages.make_lemma_pages
 
 
 def make_person_pages( outputFolderPath:Path ) -> int:
@@ -1184,6 +1316,9 @@ def make_person_pages( outputFolderPath:Path ) -> int:
     """
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Making person pages…" )
     our_start_html = START_HTML.replace( 'BibleBook.css', 'BibleData.css' )
+
+    try: os.makedirs( outputFolderPath )
+    except FileExistsError: pass # it was already there
 
     with open( THEOGRAPHIC_INPUT_FOLDER_PATH.joinpath( 'normalised_People.json' ), 'rb' ) as people_file:
         peopleDict = json.load( people_file )
@@ -1209,15 +1344,15 @@ def make_person_pages( outputFolderPath:Path ) -> int:
         diedStr = f"Died: {entry['deathYear']}" if entry['deathYear'] else ''
 
         bodyHtml = f'''<h1>OET person: {personName.replace( "'", '’' )}</h1>
-<p>{livenMD(entry['dictText'])}</p>
-<p>{entry['gender']}{f' {bornStr}' if bornStr else ''}{f' {diedStr}' if diedStr else ''}</p>'''
+<p class="personName">{livenMD(entry['dictText'])}</p>
+<p class="personGender">{entry['gender']}{f' {bornStr}' if bornStr else ''}{f' {diedStr}' if diedStr else ''}</p>'''
 
         # Now put it all together
         output_filename = f"{personKey[0]}_{personKey[1:]}.html"
         html = f'''{our_start_html.replace('__TITLE__',personName)}
 <p>{previousLink} {nextLink}</p>
 {bodyHtml}
-<p><small>Grateful thanks to <a href="https://Viz.Bible">Viz.Bible</a> for this data.</small></p>
+<p class="thanks"><small>Grateful thanks to <a href="https://Viz.Bible">Viz.Bible</a> for this data.</small></p>
 {END_HTML}'''
         with open( outputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
             html_output_file.write( html )
@@ -1233,6 +1368,9 @@ def make_location_pages( outputFolderPath:Path ) -> int:
     """
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Making location pages…" )
     our_start_html = START_HTML.replace( 'BibleBook.css', 'BibleData.css' )
+
+    try: os.makedirs( outputFolderPath )
+    except FileExistsError: pass # it was already there
 
     with open( THEOGRAPHIC_INPUT_FOLDER_PATH.joinpath( 'normalised_Places.json' ), 'rb' ) as locations_file:
         locationsDict = json.load( locations_file )
@@ -1257,16 +1395,16 @@ def make_location_pages( outputFolderPath:Path ) -> int:
         commentStr = f" {entry['comment']}" if entry['comment'] else ''
 
         bodyHtml = f'''<h1>OET location: {placeName.replace( "'", '’' )}</h1>
-<p>{livenMD(entry['dictText'])}</p>
-<p>{entry['featureType']}{f"/{entry['featureSubType']}" if entry['featureSubType'] else ''}{f' {commentStr}' if commentStr else ''}</p>
-<p>KJB=‘{entry['kjvName']}’ ESV=‘{entry['esvName']}’</p>'''
+<p class="locationName">{livenMD(entry['dictText'])}</p>
+<p class="locationType">{entry['featureType']}{f"/{entry['featureSubType']}" if entry['featureSubType'] else ''}{f' {commentStr}' if commentStr else ''}</p>
+<p class="locationVersions">KJB=‘{entry['kjvName']}’ ESV=‘{entry['esvName']}’</p>'''
 
         # Now put it all together
         output_filename = f"{placeKey[0]}_{placeKey[1:]}.html"
         html = f'''{our_start_html.replace('__TITLE__',placeName)}
 <p>{previousLink} {nextLink}</p>
 {bodyHtml}
-<p><small>Grateful thanks to <a href="https://Viz.Bible">Viz.Bible</a> for this data.</small></p>
+<p class="thanks"><small>Grateful thanks to <a href="https://Viz.Bible">Viz.Bible</a> for this data.</small></p>
 {END_HTML}'''
         with open( outputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
             html_output_file.write( html )
@@ -1299,12 +1437,12 @@ def livenMD( mdText:str ) -> str:
         if mdLinkTarget.count( '.' ) == 2: # Then it's almost certainly an OSIS B/C/V ref
             OSISBkCode, C, V = mdLinkTarget.split( '.' )
             BBB = BibleOrgSysGlobals.loadedBibleBooksCodes.getBBBFromOSISAbbreviation( OSISBkCode )
-            ourLinkTarget = f'{BBB}.html#C{C}V{V}'
+            ourLinkTarget = f'../{BBB}.html#C{C}V{V}'
         else:
             assert mdLinkTarget.count( '.' ) == 1 # Then it's almost certainly an OSIS B/C ref
             OSISBkCode, C = mdLinkTarget.split( '.' )
             BBB = BibleOrgSysGlobals.loadedBibleBooksCodes.getBBBFromOSISAbbreviation( OSISBkCode )
-            ourLinkTarget = f'{BBB}.html#C{C}'
+            ourLinkTarget = f'../{BBB}.html#C{C}'
         ourLink = f'<a href="{ourLinkTarget}">{readableRef}</a>'
         mdText = f'''{mdText[:match.start()]}{ourLink}{mdText[match.end():]}'''
         searchStartIndex = match.end() + 10 # We've added at least that many characters

@@ -33,6 +33,9 @@ Uses the OET-RV USFM to create the headers
 CHANGELOG:
     2023-03-29 Make entire top&bottom section headings into clickable links
     2023-07-24 Expand out Checking instructions
+    2023-08-07 Move MRK before MAT, add some more styles
+    2023-08-09 Rename 'underlines' button to 'marks'
+    2023-08-21 Add lemma pages
 """
 from gettext import gettext as _
 from tracemalloc import start
@@ -56,10 +59,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-07-24' # by RJH
+LAST_MODIFIED_DATE = '2023-08-22' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.54'
+PROGRAM_VERSION = '0.58'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -85,7 +88,7 @@ EM_SPACE = ' '
 # NARROW_NON_BREAK_SPACE = ' '
 NL = '\n' # New line
 
-NT_BBB_LIST = ('JHN','MAT','MRK','LUK','ACT','ROM','CO1','CO2','GAL','EPH','PHP','COL','TH1','TH2','TI1','TI2','TIT','PHM','HEB','JAM','PE1','PE2','JN1','JN2','JN3','JDE','REV')
+NT_BBB_LIST = ['JHN','MRK','MAT','LUK','ACT','ROM','CO1','CO2','GAL','EPH','PHP','COL','TH1','TH2','TI1','TI2','TIT','PHM','HEB','JAM','PE1','PE2','JN1','JN2','JN3','JDE','REV']
 assert len(NT_BBB_LIST) == 27
 BBB_LIST = BOOKLIST_OT39 + NT_BBB_LIST
 assert len(BBB_LIST) == 66
@@ -111,12 +114,12 @@ def main():
 # . selects class, # is id
 SBS_CSS_TEXT = """a { color:inherit; text-decoration:none; }
 
-button#underlineButton { float:right; }
+button#marksButton { float:right; }
 
 div.container { display:grid; column-gap:0.6em; grid-template-columns:0.85fr 1.15fr; }
 div.BibleText { }
 div.rightBox { float:right; width:35%; border:3px solid #73AD21; padding:0.2em; }
-div.unusedWord { color:darkGrey; } /* For the word files */
+div.unusedOLWord { color:darkGrey; } /* For the word files */
 
 span.upLink { font-size:1.5em; font-weight:bold; }
 span.c { font-size:1.1em; color:green; }
@@ -131,6 +134,8 @@ span.addExtra { color:lightGreen; }
 span.addOwner { color:darkOrchid; }
 span.add { color:grey; }
 span.RVadded { color:dimGrey; }
+span.wj { color:fireBrick; }
+span.wj span.RVadded { color:lightCoral; }
 span.ul { color:darkGrey; }
 span.dom { color:Gainsboro; }
 span.schwa { font-size:0.75em; }
@@ -147,6 +152,7 @@ p.shortPrayer { text-align:center; }
 p.mt1 { text-align:center; font-size:1.8em; }
 p.mt2 { text-align:center; font-size:1.3em; }
 p.s1 { margin-top:0.1em; margin-bottom:0; font-weight:bold; }
+p.added_s1 { margin-top:0.1em; margin-bottom:0.1em; text-align:right; font-size:0.7em; color:grey; font-weight:bold; }
 p.r { margin-top:0; margin-bottom:0; font-size:0.75em; }
 p.LVsentence { margin-top:0.2em; margin-bottom:0.2em; }
 p.p { text-indent:0.5em; margin-top:0.2em; margin-bottom:0.2em; }
@@ -164,12 +170,12 @@ span.ior { font-weight:bold; } /* font-style:italic; */
 """
 
 SBS_JS = """
-function hide_show_underlines() {
-    console.log('hide_show_underlines()');
-    ul_classes = ['ul','dom','unusedWord'];
+function hide_show_marks() {
+    console.log('hide_show_marks()');
+    ul_classes = ['ul','dom','untr'];
     // ul_colours = ['darkGrey'];
-    let btn = document.getElementById('underlineButton');
-    if (btn.textContent == 'Hide underlines') {
+    let btn = document.getElementById('marksButton');
+    if (btn.textContent == 'Hide marks') {
         console.log('It was hide');
         for (let cl of ul_classes) {
             console.log(`  Hiding ${cl}`);
@@ -180,7 +186,7 @@ function hide_show_underlines() {
                 else underlines[i].style.display = 'none';
                 }
         }
-        btn.textContent = 'Show underlines';
+        btn.textContent = 'Show marks';
     } else {
         console.log('It was show');
         for (let cl of ul_classes) {
@@ -192,13 +198,13 @@ function hide_show_underlines() {
                 else underlines[i].style.display = 'revert';
                 }
         }
-        btn.textContent = 'Hide underlines';
+        btn.textContent = 'Hide marks';
     }
 }"""
 
 
 SBS_BUTTONS_HTML = """<div class="buttons">
-    <button type="button" id="underlineButton" onclick="hide_show_underlines()">Hide underlines</button>
+    <button type="button" id="marksButton" onclick="hide_show_marks()">Hide marks</button>
 </div><!--buttons-->"""
 
 SBS_INDEX_INTRO_HTML = """<!DOCTYPE html>
@@ -227,8 +233,8 @@ SBS_INDEX_INTRO_HTML = """<!DOCTYPE html>
   <!--<p>Whole <a href="OET-RV-LV-Torah.html">Torah/Pentateuch</a>
     (long and slower to load, but useful for easy searching of multiple books, etc.)</p>-->
   <h3><b>NT</b> v0.01</h3>
-  <p>Note that the <em>OET</em> places Yōannēs/John before Matthaios/Matthew.</p>
-  <p><a href="JHN.html">Yōannēs/John</a> &nbsp;&nbsp;<a href="MAT.html">Matthaios/Matthew</a> &nbsp;&nbsp;<a href="MRK.html">Markos/Mark</a> &nbsp;&nbsp;<a href="LUK.html">Loukas/Luke</a> &nbsp;&nbsp;<a href="ACT.html">Acts</a><br>
+  <p>Note that the <em>OET</em> places Yōannēs/John and Markos/Mark before Matthaios/Matthew.</p>
+  <p><a href="JHN.html">Yōannēs/John</a> &nbsp;&nbsp;<a href="MRK.html">Markos/Mark</a> &nbsp;&nbsp;<a href="MAT.html">Matthaios/Matthew</a> &nbsp;&nbsp;<a href="LUK.html">Loukas/Luke</a> &nbsp;&nbsp;<a href="ACT.html">Acts</a><br>
     <a href="ROM.html">Romans</a> &nbsp;&nbsp;<a href="CO1.html">Corinthians 1</a> &nbsp;&nbsp;<a href="CO2.html">Corinthians 2</a><br>
     <a href="GAL.html">Galatians</a> &nbsp;&nbsp;<a href="EPH.html">Ephesians</a> &nbsp;&nbsp;<a href="PHP.html">Philippians</a> &nbsp;&nbsp;<a href="COL.html">Colossians</a><br>
     <a href="TH1.html">Thessalonians 1</a> &nbsp;&nbsp;<a href="TH2.html">Thessalonians 2</a> &nbsp;&nbsp;<a href="TI1.html">Timotheos/Timothy 1</a> &nbsp;&nbsp;<a href="TI2.html">Timotheos/Timothy 2</a> &nbsp;&nbsp;<a href="TIT.html">Titos/Titus</a><br>
@@ -1565,8 +1571,8 @@ def pack_HTML_files() -> None:
 
         # Swap book orders to put JHN before MAT
         if   BBB == 'MAT': BBB = 'JHN'
-        elif BBB == 'MRK': BBB = 'MAT'
-        elif BBB == 'LUK': BBB = 'MRK'
+        # elif BBB == 'MRK': BBB = 'MRK'
+        elif BBB == 'LUK': BBB = 'MAT'
         elif BBB == 'JHN': BBB = 'LUK'
 
         bookType = None
@@ -1751,12 +1757,12 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
 
     # Get the guts of the RV chapter/verse HTML
     ourRVStartMarkerIndex = rvHTML.index( '<div class="BibleText">' )
-    ourRVEndMarkerIndex = rvHTML.rindex( '<p class="chapterLinks"><a href="#C1">C1</a>' ) # This follows </div>
+    ourRVEndMarkerIndex = rvHTML.rindex( '<p class="chapterLinks"><a title="Go to chapter" href="#C1">C1</a>' ) # This follows </div>
     rvMidHHTML = rvHTML[ourRVStartMarkerIndex:ourRVEndMarkerIndex]
 
     # Get the guts of the LV chapter/verse HTML
     ourLVStartMarkerIndex = lvHTML.index( '<div class="BibleText">' )
-    ourLVEndMarkerIndex = lvHTML.rindex( '<p class="chapterLinks"><a href="#C1">C1</a>' ) # This follows </div>
+    ourLVEndMarkerIndex = lvHTML.rindex( '<p class="chapterLinks"><a title="Go to chapter" href="#C1">C1</a>' ) # This follows </div>
     lvMidHHTML = lvHTML[ourLVStartMarkerIndex:ourLVEndMarkerIndex]
 
     # Now break the RV up by section
@@ -1903,9 +1909,9 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
 
 
     usfm_header_html = f'<p class="h">{book_h_field} quick links (Skip down to <a href="#Disclaimer">book intro</a> or <a href="#C1">start of text</a>)</p>'
-    chapter_links = [f'<a href="#C{chapter_num}">C{chapter_num}</a>' for chapter_num in range( 1, int(C)+1 ) ]
+    chapter_links = [f'<a title="Go to chapter" href="#C{chapter_num}">C{chapter_num}</a>' for chapter_num in range( 1, int(C)+1 ) ]
     chapter_html = f'<p class="chapterLinks">{EM_SPACE.join(chapter_links)}</p><!--chapterLinks-->' if len(chapter_links)>1 else ''
-    section_heading_links = [f'<a href="#C{c}V{v}">{heading} {c}:{v}</a>' for c,v,heading in section1_headers ]
+    section_heading_links = [f'<a title="Go to start of section" href="#C{c}V{v}">{heading} {c}:{v}</a>' for c,v,heading in section1_headers ]
     section_heading_html = f'<p class="sectionHeadingLinks">{"<br>".join(section_heading_links)}</p><!--sectionHeadingLinks-->'
     book_start_html = f'''{start_html}{links_html}\n{usfm_header_html}\n{f'{chapter_html}{NL}' if chapter_html else ''}{section_heading_html}'''
 
@@ -1976,37 +1982,55 @@ def handle_Psalms( psa_start_html:str, psa_html:str, psa_end_html:str ) -> bool:
 # end of pack_HTML_side-by-side.handle_Psalms()
 
 
+# NOTE: An identical function exists in convert_OET-RV_to_simple_HTML.py
+#   but we can't import that one because of the hyphen in the name
 def copy_wordlink_files( sourceFolder:Path, destinationFolder:Path ) -> bool:
     """
-    Copy the W_nnnnn.html wordlink HMTL files across.
+    Copy the W_nnnnn.html wordlink and lemma HMTL files across.
         (There's around 168,262 of these.)
 
     Also P_ and L_ person and location files.
     """
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET NT word-link HTML files from {sourceFolder}…")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET NT word-link HTML files from {sourceFolder}…" )
+    try: os.makedirs( destinationFolder.joinpath( 'W/' ) )
+    except FileExistsError: pass # it was already there
     copyCount = 0
-    for filename in glob.glob( os.path.join( sourceFolder, 'W_*.html' ) ):
-        shutil.copy( filename, destinationFolder ) # Want the time to be updated or else "make" doesn't function correctly
+    for filename in glob.glob( os.path.join( sourceFolder.joinpath( 'W/' ), '*.html' ) ):
+        shutil.copy( filename, destinationFolder.joinpath( 'W/' ) ) # Want the time to be updated or else "make" doesn't function correctly
         # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
         copyCount += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET NT word-link HTML files to {destinationFolder}.")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET NT word-link HTML files to {destinationFolder.joinpath( 'W/' )}.")
+
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET NT word-link HTML files from {sourceFolder}…")
+    try: os.makedirs( destinationFolder.joinpath( 'Lm/' ) )
+    except FileExistsError: pass # it was already there
+    copyCount = 0
+    for filename in glob.glob( os.path.join( sourceFolder.joinpath( 'Lm/' ), '*.html' ) ):
+        shutil.copy( filename, destinationFolder.joinpath( 'Lm/' ) ) # Want the time to be updated or else "make" doesn't function correctly
+        # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
+        copyCount += 1
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET NT lexeme HTML files to {destinationFolder.joinpath( 'Lm/' )}.")
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET person HTML files from {sourceFolder}…")
+    try: os.makedirs( destinationFolder.joinpath( 'Pe/' ) )
+    except FileExistsError: pass # it was already there
     copyCount = 0
-    for filename in glob.glob( os.path.join( sourceFolder, 'P_*.html' ) ):
-        shutil.copy( filename, destinationFolder ) # Want the time to be updated or else "make" doesn't function correctly
+    for filename in glob.glob( os.path.join( sourceFolder.joinpath( 'Pe/' ), 'P_*.html' ) ):
+        shutil.copy( filename, destinationFolder.joinpath( 'Pe/' ) ) # Want the time to be updated or else "make" doesn't function correctly
         # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
         copyCount += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET person HTML files to {destinationFolder}.")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET person HTML files to {destinationFolder.joinpath( 'Pe/' )}.")
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET location HTML files from {sourceFolder}…")
+    try: os.makedirs( destinationFolder.joinpath( 'Loc/' ) )
+    except FileExistsError: pass # it was already there
     copyCount = 0
-    for filename in glob.glob( os.path.join( sourceFolder, 'L_*.html' ) ):
-        shutil.copy( filename, destinationFolder ) # Want the time to be updated or else "make" doesn't function correctly
+    for filename in glob.glob( os.path.join( sourceFolder.joinpath( 'Loc/' ), 'L_*.html' ) ):
+        shutil.copy( filename, destinationFolder.joinpath( 'Loc/' ) ) # Want the time to be updated or else "make" doesn't function correctly
         # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
         copyCount += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET location HTML files to {destinationFolder}.")
-# end of pack_HTML_side-by-side.copy_wordlink_files()
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET location HTML files to {destinationFolder.joinpath( 'Loc/' )}.")
+# end of convert_OET-RV_to_simple_HTML.copy_wordlink_files()
 
 
 if __name__ == '__main__':
