@@ -59,10 +59,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-08-22' # by RJH
+LAST_MODIFIED_DATE = '2023-08-27' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.58'
+PROGRAM_VERSION = '0.59'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -141,7 +141,7 @@ span.dom { color:Gainsboro; }
 span.schwa { font-size:0.75em; }
 span.nominaSacra { font-weight:bold; }
 span.nd { font-weight:bold; }
-span.untr { background-color:ivory; color:yellowGreen; font-variant-position:sub; }
+span.untr { font-size:0.8em; color:grey; text-decoration:line-through; }
 span.bk { font-style:italic; }
 span.fn { vertical-align: super; font-size:0.7em; color:green; }
 span.xref { vertical-align: super; font-size:0.7em; color:blue; }
@@ -1718,8 +1718,9 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
         if marker in ('id','usfm','ide','h','toc2','toc3'):
             if marker == 'h': book_h_field = rest
             continue # We don't need to map those markers to HTML
-        if marker in ('rem',):
+        if marker == 'rem':
             if not startedChapters:
+                rest = rest.replace('\\em ','<em>').replace('\\em*','</em>')
                 book_html = f'{book_html}<p class="{marker}">{rest}</p>\n'
         elif marker in ('mt1','mt2'):
             if not done_intro: # Add an extra explanatory paragraph at the top

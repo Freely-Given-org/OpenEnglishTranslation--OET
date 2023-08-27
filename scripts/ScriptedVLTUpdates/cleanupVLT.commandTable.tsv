@@ -11,9 +11,23 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 
 #									\add*_			_\add*	moveUnderlineInsideAddEnd	Put underlines inside add markers
 
-									-¦			 \untr ¬¦\untr*	tagUnusedWords	Mark untranslated Greek words with this (non-standard USFM)
-#									-¦			 \add -@¦\add*	tagUnusedWords	This can give an infinite loop so we change it to a temporary character
-#									-@			--	fixUnusedWords	  and then change it back again
+#										NOTE: Some untranslated words have already been put back into OET-LV_NT_word_table.9columns.tsv by extract_VLT_NT_to_ESFM.py
+#											They will already be something like '¬the' or '¬of_the'
+									¬the¦			 \untr the¦\untr*	tagUnusedArticles	Mark untranslated Greek articles with this (non-standard USFM)
+#									¬of_the¦			 \untr of_the¦\untr*	tagUnusedGenitiveArticles	Mark untranslated Greek articles with this (non-standard USFM)
+#									¬to/from_the¦			 \untr to/from_the¦\untr*	tagUnusedDativeArticles	Mark untranslated Greek articles with this (non-standard USFM)
+									¬that¦			 \untr that¦\untr*	tagUnusedWords	Mark untranslated Greek words with this (non-standard USFM)
+									¬if¦			 \untr if¦\untr*	tagUnusedConditionals	Mark untranslated Greek words with this (non-standard USFM)
+									¬wishfully¦			 \untr wishfully¦\untr*	tagUnusedOptatives	Mark untranslated Greek words with this (non-standard USFM)
+									¬not/lest¦			 \untr not/lest¦\untr*	tagUnusedWords	Mark untranslated Greek words with this (non-standard USFM)
+									¬or/than¦			 \untr or/than¦\untr*	tagUnusedWords	Mark untranslated Greek words with this (non-standard USFM)
+									¬who/which/what/that¦			 \untr who/which/what/that¦\untr*	tagUnusedWords	Mark untranslated Greek words with this (non-standard USFM)
+									¬no/not¦			 \untr no/not¦\untr*	tagUnusedNegatives	Mark untranslated Greek words with this (non-standard USFM)
+									¬down/against/according_to¦			 \untr down/against/according_to¦\untr*	tagUnusedWords	Mark untranslated Greek words with this (non-standard USFM)
+									¬and/both¦			 \untr and/both¦\untr*	tagUnusedConjunctions	Mark untranslated Greek words with this (non-standard USFM)
+									¬/anxiety/¦			 \untr /anxiety/¦\untr*	tagUnusedParticles	Mark untranslated Greek words with this (non-standard USFM)
+									¬neither/nor¦			 \untr neither/nor¦\untr*	tagUnusedWords	Mark untranslated Greek words with this (non-standard USFM)
+#									-¦			 \untr ¬¦XXXXXX\untr*	tagUnusedWords	SHOULDN'T EVER OCCUR Mark untranslated Greek words with this (non-standard USFM)
 
 # Punctuation and spaces
 #				id					 -¦ 			 	removeHyphenSpaces	Remove hyphen (untranslated article) surrounded by spaces

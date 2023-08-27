@@ -38,7 +38,8 @@ CHANGELOG:
     2023-03-22 Added word numbers to refs in
     2023-07-24 Reduce columns in SR GNT source table
     2023-08-15 Update for new collation table columns plus use of word table for lexemes
-    2023-08-16 Puts markers around gloss parts in 9columns exported table
+    2023-08-16 Puts punctuation markers around gloss parts in 9columns exported table
+    2023-08-24 Put some untranslated articles and other words back into the gloss preceded by ¬, e.g., ¬the, ¬of_the
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple, Optional
@@ -52,10 +53,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-08-16' # by RJH
+LAST_MODIFIED_DATE = '2023-08-25' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
-PROGRAM_VERSION = '0.87'
+PROGRAM_VERSION = '0.88'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -333,7 +334,7 @@ def write_esfm_book(book_number:int, book_esfm: str) -> bool:
     with open(usfm_filepath, 'wt', encoding='utf-8') as output_file:
         output_file.write(f"{book_esfm}\n")
     return True
-# end of extract_VLT_NT_to_ESFM.loadSourceCollationTable
+# end of extract_VLT_NT_to_ESFM.write_esfm_book
 
 
 def export_esfm_literal_English_gloss() -> bool:
@@ -409,10 +410,14 @@ def export_esfm_literal_English_gloss() -> bool:
                 # Create the USFM verse text
                 esfm_text = f"{esfm_text}\n\\v {verse_number}"
                 for index_set in get_gloss_word_index_list(this_verse_row_list):
+                    # print( f"{index_set=}" )
                     if len(index_set) == 1: # the normal and easiest case
                         # this_verse_row = this_verse_row_list[index_set[0]]
                         # greekWord = this_verse_row['Medieval']
-                        esfm_text += f" {preform_gloss(this_verse_row_list, index_set[0], row_offset=collation_row_number)}"
+                        preformedGloss = preform_gloss_and_word_number(this_verse_row_list, index_set[0], row_offset=collation_row_number)
+                        _adjusted_lemma, preformedGloss = process_untranslated_words( this_verse_row_list[index_set[0]], preformedGloss )
+                        # esfm_text += f" {preform_gloss_and_word_number(this_verse_row_list, index_set[0], row_offset=collation_row_number)}"
+                        esfm_text = f"{esfm_text} {preformedGloss}"
                         assert '  ' not in esfm_text, f"ERROR: Have double spaces in esfm text: '{esfm_text[:200]} … {esfm_text[-200:]}'"
                     else: # we have multiple overlapping glosses
                         sorted_index_set = sorted(index_set) # Some things we display by Greek word order
@@ -422,7 +427,8 @@ def export_esfm_literal_English_gloss() -> bool:
                         last_verse_row_index = last_glossWord = None
                         for this_verse_row_index in index_set:
                             # this_verse_row = this_verse_row_list[this_verse_row_index]
-                            preformedGloss = preform_gloss(this_verse_row_list, this_verse_row_index, last_verse_row_index, last_glossWord, row_offset=collation_row_number)
+                            preformedGloss = preform_gloss_and_word_number(this_verse_row_list, this_verse_row_index, last_verse_row_index, last_glossWord, row_offset=collation_row_number)
+                            _adjusted_lemma, preformedGloss = process_untranslated_words( this_verse_row_list[this_verse_row_index], preformedGloss )
                             if this_verse_row_list[this_verse_row_index]['GlossInsert']:
                                 last_glossWord = preformedGloss
                             else:
@@ -453,8 +459,7 @@ def export_esfm_literal_English_gloss() -> bool:
             if collation_row['Koine'].startswith( '=' ): # it's a nomina sacra
                 assert 'N' not in glossCapitalisationString # already -- SR GNT doesn't currently use N -- see documentation of apply_gloss_capitalization() below
                 glossCapitalisationString = f'{glossCapitalisationString}N' # We add an extra letter
-            their_lemma = '' if collation_row['LexemeID']=='99999' else find_lemma( collation_row['LexemeID'], collation_row['Morphology'], collation_row['Classic'] )
-            adjusted_lemma = adjust_lemma( their_lemma, collation_row['Medieval'])
+            adjusted_lemma, preformed_gloss_string = process_untranslated_words( collation_row, preformed_gloss_string )
             table_row = f"{ref}\t{collation_row['Medieval']}\t{adjusted_lemma}\t{preformed_gloss_string}\t{glossCapitalisationString}\t{'' if collation_row['Probability'] is None else collation_row['Probability']}\t{collation_row['LexemeID']}\t{collation_row['Role']}\t{collation_row['Morphology']}"
             assert '"' not in table_row # Check in case we needed any escaping
             table_output_file.write( f'{table_row}\n' )
@@ -514,10 +519,10 @@ def adjust_lemma(given_lemma:str, given_Greek_word:str) -> str:
     #       'τὴς': 2, 'οἳ': 4, 'του': 1, 'ἧ': 1, 'οἷ': 1, 'τὴ': 2, 'οἵ': 4, 'ᾧ': 1, 'τά': 2, 'ἥ': 3, 'τήν': 3, 'ὅ': 3, 'ἃ': 5}
     if given_lemma == 'o' \
     and given_Greek_word in ('ὁ','τοῦ','τὸ','τὸν','τῶν','τὴν','τῆς','οἱ','τῷ','τοὺς','ἡ','τῇ','τοῖς','τὰ','τὰς','αἱ','ταῖς','τοῦς','τό',
-                'τόν','τῶ','τῆν','τοὺ','ἠ','τὴς','οἳ','του','ἧ','οἷ','τὴ','οἵ','ᾧ','τά','ἥ','τήν','ὅ','ἃ'):
+                'τόν','τῶ','τῆν','τοὺ','ἠ','τὴς','οἳ','του','ἧ','οἷ','τὴ','οἵ','ᾧ','τά','ἥ','τήν','ὅ','ἃ','αἵ'):
         adjusted_lemma = 'ho' # article
     elif given_lemma == 'os' \
-    and given_Greek_word in ('ὃς','ὁ','ἃ','ἡ','οὓς','οἱ','οἳ','αἳ','ὅς','ἣ','ὃν','οἷς','αἱ','ὃ','ὅ','οἵ','οὖ','οὗ'):
+    and given_Greek_word in ('ὃς','ὁ','ἃ','ἡ','οὓς','οἱ','οἳ','αἳ','ὅς','ἣ','ᾗ','ὃν','οἷς','αἱ','ὃ','ὅ','οἵ','οὖ','οὗ','οὑ'):
         adjusted_lemma = 'hos' # relative pronoun
     elif given_Greek_word[0] in 'ἁἅἑἡἣἧἵὁὅὃὑὡὥὧᾧ' \
     or given_Greek_word.startswith('αἷ') \
@@ -531,6 +536,36 @@ def adjust_lemma(given_lemma:str, given_Greek_word:str) -> str:
         adjusted_lemma = adjusted_lemma.replace('r','rh',1)
     return adjusted_lemma
 # end of adjust_lemma function
+
+
+def process_untranslated_words( given_collation_row, given_preformed_gloss_string:str ) -> Tuple[str, str]:
+    """
+    """
+    their_lemma = '' if given_collation_row['LexemeID']=='99999' else find_lemma( given_collation_row['LexemeID'], given_collation_row['Morphology'], given_collation_row['Classic'] )
+    adjusted_lemma = adjust_lemma( their_lemma, given_collation_row['Medieval'])
+    if given_preformed_gloss_string == '-' or given_preformed_gloss_string.startswith( '-¦' ): # an untranslated word from the VLT
+        # NOTE: All of these new gloss strings also have to be entered into cleanupVLT.commandTable.tsv
+        if adjusted_lemma == 'ho':
+            # NOTE: Need to check for lowercase as well!
+            # if given_collation_row['Morphology'].startswith( '....G' ): given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬of_the', 1 )
+            # if given_collation_row['Morphology'].startswith( '....D' ): given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬to/from_the', 1 )
+            # else:
+            given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬the', 1 )
+        elif adjusted_lemma == 'hoti': given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬that', 1 )
+        elif adjusted_lemma in ('ean','ei'): given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬if', 1 ) # Strongs #1437, #1487
+        elif adjusted_lemma == 'an': given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬wishfully', 1 ) # Strongs #302
+        elif adjusted_lemma == 'mē': given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬not/lest', 1 )
+        elif adjusted_lemma == 'ē': given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬or/than', 1 ) # Strongs #2228
+        elif adjusted_lemma == 'hos': given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬who/which/what/that', 1 ) # Strongs #3739
+        elif adjusted_lemma == 'ou': given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬no/not', 1 ) # Strongs #3756
+        elif adjusted_lemma == 'kata': given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬down/against/according_to', 1 ) # Strongs #2596
+        elif adjusted_lemma == 'te': given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬and/both', 1 ) # Strongs #5037
+        elif adjusted_lemma == 'ara': given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬/anxiety/', 1 ) # Strongs #687 (only occurs once)
+        elif adjusted_lemma == 'mēte': given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬neither/nor', 1 ) # Strongs #3383 (only occurs once)
+        else: print( f"      What is untranslated word from '{given_preformed_gloss_string}' and '{adjusted_lemma}' in {given_collation_row['CollationID']} {given_collation_row['Medieval']} {adjusted_lemma} {given_collation_row['Morphology']}?" )
+
+    return adjusted_lemma, given_preformed_gloss_string
+# end of process_untranslated_words function
 
 
 def get_verse_rows(given_collation_rows: List[dict], row_index: int) -> List[list]:
@@ -611,7 +646,7 @@ def get_gloss_word_index_list(given_verse_row_list: List[dict]) -> List[List[int
 # end of extract_VLT_NT_to_ESFM.get_gloss_word_index_list
 
 
-def preform_gloss(thisList:List[Dict[str,str]], given_verse_row_index:int, last_given_verse_row_index:int=None, last_glossWord:Optional[str]=None, row_offset:Optional[int]=None) -> str:
+def preform_gloss_and_word_number(thisList:List[Dict[str,str]], given_verse_row_index:int, last_given_verse_row_index:int=None, last_glossWord:Optional[str]=None, row_offset:Optional[int]=None) -> str:
     """
     Returns the gloss to display for this row (may be nothing if we have a current GlossInsert)
         or the left-over preformatted GlossWord (if any)
@@ -735,7 +770,7 @@ def preform_gloss(thisList:List[Dict[str,str]], given_verse_row_index:int, last_
             pre_punctuation = f'{last_pre_punctuation}{pre_punctuation}'
         if last_glossInsert == '<': # insert after pre
             assert last_glossWord
-            assert glossPre
+            assert glossPre, f"Expected glossPre after '<' at {given_verse_row_index} with {given_verse_row}"
             glossPre, _dummyHelper, last_glossWord = apply_gloss_capitalization(glossPre, '', last_glossWord, last_glossCapitalization)
             _dummyPre, glossHelper, glossWord = apply_gloss_capitalization('', glossHelper, glossWord, glossCapitalization)
             preformed_word_string = f"{pre_punctuation}˱{glossPre}˲_> {last_glossWord} <_{'/'+glossHelper+'/_' if glossHelper else ''}" \
@@ -806,6 +841,7 @@ def separate_punctuation(given_punctuation:str) -> Tuple[str,str]:
     # fnPrint( DEBUGGING_THIS_MODULE, f"separate_punctuation({given_punctuation})" )
     pre_punctuation = post_punctuation = ''
     if given_punctuation:
+        assert 'None' not in given_punctuation and 'NULL' not in given_punctuation, f"{given_punctuation=}"
         if given_punctuation not in ('.”’”','[[',']]',):
             for char in given_punctuation:
                 if given_punctuation.count(char) > 1:
@@ -826,7 +862,7 @@ def separate_punctuation(given_punctuation:str) -> Tuple[str,str]:
                 post_punctuation = f'{temporary_copied_punctuation[-1]}{post_punctuation}'
                 temporary_copied_punctuation = temporary_copied_punctuation[:-1]
             else:
-                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"ERROR: punctuation character(s) '{temporary_copied_punctuation}' is not handled yet!")
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"ERROR: punctuation character(s) '{temporary_copied_punctuation}' is not handled yet! ({given_punctuation=})")
                 if __name__ == "__main__": stop_right_here
                 break
         if __name__ == "__main__": # don't want this to fail when in the gloss editor

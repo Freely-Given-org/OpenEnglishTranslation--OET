@@ -52,10 +52,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2023-08-22' # by RJH
+LAST_MODIFIED_DATE = '2023-08-27' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.72'
+PROGRAM_VERSION = '0.73'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -136,7 +136,7 @@ span.dom { color:Gainsboro; }
 span.schwa { font-size:0.75em; }
 span.nominaSacra { font-weight:bold; }
 span.nd { font-weight:bold; }
-span.untr { background-color:ivory; color:yellowGreen; font-variant-position:sub; }
+span.untr { font-size:0.8em; color:grey; text-decoration:line-through; }
 
 p.rem { font-size:0.8em; color:grey; }
 p.shortPrayer { text-align:center; }
@@ -871,7 +871,8 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
         # print( f"{marker=} {rest=}")
         if marker in ('id','usfm','ide','h','toc2','toc3'):
             continue # We don't need to map those markers to HTML
-        if marker in ('rem',):
+        if marker == 'rem':
+            rest = rest.replace('\\em ','<em>').replace('\\em*','</em>')
             book_html = f'{book_html}<p class="{marker}">{rest}</p>\n'
         elif marker in ('mt1','mt2'):
             if not done_intro: # Add an extra explanatory paragraph at the top
