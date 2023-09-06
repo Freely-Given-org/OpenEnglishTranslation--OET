@@ -59,10 +59,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-08-27' # by RJH
+LAST_MODIFIED_DATE = '2023-09-05' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.59'
+PROGRAM_VERSION = '0.61'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -136,10 +136,11 @@ span.add { color:grey; }
 span.RVadded { color:dimGrey; }
 span.wj { color:fireBrick; }
 span.wj span.RVadded { color:lightCoral; }
+span.nominaSacra { font-weight:bold; }
+span.sig { font-family:cursive; }
 span.ul { color:darkGrey; }
 span.dom { color:Gainsboro; }
 span.schwa { font-size:0.75em; }
-span.nominaSacra { font-weight:bold; }
 span.nd { font-weight:bold; }
 span.untr { font-size:0.8em; color:grey; text-decoration:line-through; }
 span.bk { font-style:italic; }
@@ -1484,12 +1485,12 @@ assert "'" not in SBS_BOOK_INTRO_HTML1
 assert '--' not in SBS_BOOK_INTRO_HTML1
 
 SBS_NOMINA_SACRA_HTML = """<p>The <span class="nominaSacra">bold words</span>
-in the <em>LV New Testament</em> are
+in the <em>OET New Testament</em> are
 <a href="https://BibleQuestions.info/2020/01/25/what-are-nomina-sacra/">words</a>
 that the original writers or copyists
 marked to indicate that they considered them to refer to God.
 <small>(Sadly, this information is not displayed in most Bible translations,
-especially since it seems to clearly confirm that the earliest writers/copyists
+especially since it seems to confirm that the earliest writers/copyists
 considered both Jesus and the Holy Spirit to be God.)</small></p>
 """
 assert "'" not in SBS_NOMINA_SACRA_HTML

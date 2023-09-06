@@ -27,6 +27,7 @@ CHANGELOG:
     2023-08-07 Move MRK before MAT
     2023-08-16 Handle gloss pre/helper/post markings from updated wordtables
     2023-08-21 Add lemma pages
+    2023-08-30 Add nomina sacra to word pages
 """
 from gettext import gettext as _
 from typing import List, Tuple, Set, Optional
@@ -52,10 +53,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2023-08-27' # by RJH
+LAST_MODIFIED_DATE = '2023-08-30' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.73'
+PROGRAM_VERSION = '0.74'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -1140,6 +1141,8 @@ def make_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fil
                     roleName = 'proper noun'
                 roleField = f' Word role=<b>{roleName}</b>'
 
+            nominaSacraField = 'Marked with <b>Nomina Sacra</b>' if 'N' in glossCaps else ''
+
             probabilityField = f'<small>(P={probability})</small> ' if probability else ''
 
             moodField = tenseField = voiceField = personField = caseField = genderField = numberField = ''
@@ -1156,28 +1159,28 @@ def make_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fil
             translation = '<small>(no English gloss)</small>' if glossWords=='-' else f'''Typical English gloss=‘<b>{formattedGlossWords.replace('_','<span class="ul">_</span>')}</b>’'''
 
             # Add pointers to people, locations, etc.
-            semanticExtras = ''
+            semanticExtras = nominaSacraField
             if tagsStr:
                 for semanticTag in tagsStr.split( ';' ):
                     prefix, tag = semanticTag[0], semanticTag[1:]
                     # print( f"{BBB} {C}:{V} '{semanticTag}' from {tagsStr=}" )
                     if prefix == 'P':
-                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Person=<a href="../Pe/P_{tag}.html">{tag}</a>'''
+                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Person=<a href="../Pe/P_{tag}.html">{tag}</a>'''
                     elif prefix == 'L':
-                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Location=<a href="../Loc/L_{tag}.html">{tag}</a>'''
+                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Location=<a href="../Loc/L_{tag}.html">{tag}</a>'''
                     elif prefix == 'Y':
                         year = tag
-                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Year={year}{' AD' if int(year)>0 else ''}'''
+                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Year={year}{' AD' if int(year)>0 else ''}'''
                     elif prefix == 'T':
-                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}TimeSeries={tag}'''
+                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}TimeSeries={tag}'''
                     elif prefix == 'E':
-                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Event={tag}'''
+                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Event={tag}'''
                     elif prefix == 'G':
-                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Group={tag}'''
+                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Group={tag}'''
                     elif prefix == 'F':
-                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Referred to from <a href="{tag}.html">Word #{tag}</a>'''
+                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Referred to from <a href="{tag}.html">Word #{tag}</a>'''
                     elif prefix == 'R':
-                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Refers to <a href="{tag}.html">Word #{tag}</a>'''
+                        semanticExtras = f'''{semanticExtras}{' ' if semanticExtras else ''}Refers to <a href="{tag}.html">Word #{tag}</a>'''
                     else:
                         logging.critical( f"Unknown '{prefix}' word tag in {n}: {columns_string}")
                         unknownTag

@@ -28,6 +28,8 @@ CHANGELOG:
     2023-05-28 Remove USFM fig fields
     2023-08-07 Handle ESFM multiple section headings, move MRK before MAT
     2023-08-21 Add lemma pages
+    2023-08-29 Added style for nomina sacra
+    2023-09-05 Allow for /sig style
 """
 from gettext import gettext as _
 from tracemalloc import start
@@ -50,10 +52,10 @@ from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, 
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 
 
-LAST_MODIFIED_DATE = '2023-08-27' # by RJH
+LAST_MODIFIED_DATE = '2023-09-05' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.69'
+PROGRAM_VERSION = '0.71'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -110,6 +112,8 @@ span.cv { vertical-align:super; font-size:0.8em; color:orange; }
 span.RVadded { color:dimGrey; }
 span.wj { color:fireBrick; }
 span.wj span.RVadded { color:lightCoral; }
+span.nominaSacra { font-weight:bold; }
+span.sig { font-family:cursive; }
 span.bk { font-style:italic; }
 span.fn { vertical-align: super; font-size:0.7em; color:green; }
 span.xref { vertical-align: super; font-size:0.7em; color:blue; }
@@ -1138,10 +1142,14 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                          .replace( '\\bd*', '</b>' ) \
                          .replace( '\\bdit ', '<b><i>' ) \
                          .replace( '\\bdit*', '</i></b>' ) \
-                         .replace( '\\add ', '<span class="RVadded">' ) \
-                         .replace( '\\add*', '</span>' ) \
+                         .replace( '\\add ', '<span class="RVadded">' ).replace( '\\+add ', '<span class="RVadded">' ) \
+                         .replace( '\\add*', '</span>' ).replace( '\\+add*', '</span>' ) \
+                         .replace( '\\nd ', '<span class="nominaSacra">' ).replace( '\\+nd ', '<span class="nominaSacra">' ) \
+                         .replace( '\\nd*', '</span>' ).replace( '\\+nd*', '</span>' ) \
                          .replace( '\\wj ', '<span class="wj">' ) \
                          .replace( '\\wj*', '</span>' ) \
+                         .replace( '\\sig ', '<span class="sig">' ) \
+                         .replace( '\\sig*', '</span>' ) \
                          .replace( '\\tl ', '<span class="tl">' ) \
                          .replace( '\\tl*', '</span>' )
     book_html = livenJMPs( BBB, book_html )

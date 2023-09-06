@@ -14,6 +14,7 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 #										NOTE: Some untranslated words have already been put back into OET-LV_NT_word_table.9columns.tsv by extract_VLT_NT_to_ESFM.py
 #											They will already be something like '¬the' or '¬of_the'
 									¬the¦			 \untr the¦\untr*	tagUnusedArticles	Mark untranslated Greek articles with this (non-standard USFM)
+									¬which¦			 \untr which¦\untr*	tagUnusedRelativeArticles	Mark untranslated Greek articles with this (non-standard USFM)
 #									¬of_the¦			 \untr of_the¦\untr*	tagUnusedGenitiveArticles	Mark untranslated Greek articles with this (non-standard USFM)
 #									¬to/from_the¦			 \untr to/from_the¦\untr*	tagUnusedDativeArticles	Mark untranslated Greek articles with this (non-standard USFM)
 									¬that¦			 \untr that¦\untr*	tagUnusedWords	Mark untranslated Greek words with this (non-standard USFM)

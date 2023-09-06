@@ -36,6 +36,7 @@ It does have the potential to make wrong connections that will need to be manual
 
 CHANGELOG:
     2023-07-31 Added character marker checks for each RV line
+    2023-08-29 Added nomina sacra for connected words in RV
 """
 from gettext import gettext as _
 from tracemalloc import start
@@ -56,10 +57,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-08-10' # by RJH
+LAST_MODIFIED_DATE = '2023-09-05' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.32'
+PROGRAM_VERSION = '0.42'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -282,10 +283,12 @@ def connect_OET_RV( rv, lv ):
 
     # Go through books chapters and verses
     totalSimpleListedAdds = totalProperNounAdds = totalFirstPartMatchedAdds = totalManualMatchedAdds = 0
+    totalSimpleListedAddsNS = totalProperNounAddsNS = totalFirstPartMatchedAddsNS = totalManualMatchedAddsNS = 0
     for BBB,lvBookObject in lv.books.items():
         vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Processing connect words for OET {BBB}…" )
 
         bookSimpleListedAdds = bookProperNounAdds = bookFirstPartMatchedAdds = bookManualMatchedAdds = 0
+        bookSimpleListedAddsNS = bookProperNounAddsNS = bookFirstPartMatchedAddsNS = bookManualMatchedAddsNS = 0
         wordFileName = lvBookObject.ESFMWordTableFilename
         if wordFileName:
             assert wordFileName.endswith( '.tsv' )
@@ -332,11 +335,16 @@ def connect_OET_RV( rv, lv ):
                         continue
                     # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"RV entries: ({len(rvVerseEntryList)}) {rvVerseEntryList}")
                     # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"LV entries: ({len(lvVerseEntryList)}) {lvVerseEntryList}")
-                    numSimpleListedAdds, numProperNounAdds, numFirstPartMatchedAdds, numManualMatchedAdds = connect_OET_RV_Verse( BBB, c, v, rvVerseEntryList, lvVerseEntryList ) # updates state.rvESFMLines
+                    (numSimpleListedAdds,numSimpleListedAddsNS), (numProperNounAdds,numProperNounAddsNS), (numFirstPartMatchedAdds,numFirstPartMatchedAddsNS), (numManualMatchedAdds,numManualMatchedAddsNS) \
+                                = connect_OET_RV_Verse( BBB, c, v, rvVerseEntryList, lvVerseEntryList ) # updates state.rvESFMLines
                     bookSimpleListedAdds += numSimpleListedAdds
+                    bookSimpleListedAddsNS += numSimpleListedAddsNS
                     bookProperNounAdds += numProperNounAdds
+                    bookProperNounAddsNS += numProperNounAddsNS
                     bookFirstPartMatchedAdds += numFirstPartMatchedAdds
+                    bookFirstPartMatchedAddsNS += numFirstPartMatchedAddsNS
                     bookManualMatchedAdds += numManualMatchedAdds
+                    bookManualMatchedAddsNS += numManualMatchedAddsNS
         else:
             dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"connect_OET_RV {BBB} has {numChapters} chapters!!!" )
             assert BBB in ('INT','FRT',)
@@ -353,20 +361,26 @@ def connect_OET_RV( rv, lv ):
             with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
                 esfmFile.write( newESFMtext )
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Did {bookSimpleListedAdds:,} simple listed adds, {bookProperNounAdds:,} proper noun adds, {bookFirstPartMatchedAdds:,} first part adds and {bookManualMatchedAdds:,} manual adds for {BBB}." )
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Did {bookSimpleListedAddsNS:,} simple listed NS, {bookProperNounAddsNS:,} proper noun NS, {bookFirstPartMatchedAddsNS:,} first part NS and {bookManualMatchedAddsNS:,} manual NS for {BBB}." )
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Saved OET-RV {BBB} {len(newESFMtext):,} bytes to {rvESFMFilepath}" )
         else:
             # assert bookSimpleListedAdds == bookProperNounAdds == 0
             vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    No changes made to OET-RV {BBB}." )
         totalSimpleListedAdds += bookSimpleListedAdds
+        totalSimpleListedAddsNS += bookSimpleListedAddsNS
         totalProperNounAdds += bookProperNounAdds
+        totalProperNounAddsNS += bookProperNounAddsNS
         totalFirstPartMatchedAdds += bookFirstPartMatchedAdds
+        totalFirstPartMatchedAddsNS += bookFirstPartMatchedAddsNS
         totalManualMatchedAdds += bookManualMatchedAdds
+        totalManualMatchedAddsNS += bookManualMatchedAddsNS
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Did total of {totalSimpleListedAdds:,} simple listed adds, {totalProperNounAdds:,} proper noun adds, {totalFirstPartMatchedAdds:,} first part adds and {totalManualMatchedAdds:,} manual adds." )
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Did total of {totalSimpleListedAddsNS:,} simple listed NS, {totalProperNounAddsNS:,} proper noun NS, {totalFirstPartMatchedAddsNS:,} first part NS and {totalManualMatchedAddsNS:,} manual NS." )
 # end of connect_OET-RV_words_via_OET-LV.connect_OET_RV
 
 
-def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tuple[int,int,int,int]:
+def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tuple[Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int]]:
     """
     Some undocumented documentation of the GlossCaps column from state.wordTable:
         ●    U – lexical entry capitalized
@@ -412,7 +426,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
             # if lvTextSimplified.startswith( 'for ' ) or lvTextSimplified.startswith( 'For ' ) or ' for ' in lvTextSimplified or 'For ' in lvTextSimplified:
             #     print( f"FOR: {BBB}_{c}:{v}, '{lvTextSimplified.replace('for','FOR').replace('For','FOR')}'" )
             #     forList.append( f"{BBB}_{c}:{v}" )
-    if not rvText or not lvText: return 0, 0, 0, 0
+    if not rvText or not lvText: return (0,0), (0,0), (0,0), (0,0)
     rvAdjText = rvText.replace('≈','').replace('…','') \
                 .replace('.','').replace(',','').replace(':','').replace(';','').replace('?','').replace('!','').replace('—',' ') \
                 .replace( '(', '').replace( ')', '' ) \
@@ -427,7 +441,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     if lvAdjText.startswith( '/' ): lvAdjText = lvAdjText[1:]
     # print( f"({len(rvAdjText)}) {rvAdjText=}")
     # print( f"({len(lvAdjText)}) {lvAdjText=}")
-    if not rvAdjText or not lvAdjText: return 0, 0, 0, 0
+    if not rvAdjText or not lvAdjText: return (0,0), (0,0), (0,0), (0,0)
 
     lvWords = lvAdjText.split( ' ' )
     rvWords = rvAdjText.split( ' ' )
@@ -448,7 +462,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     for rvWord in rvWords:
         assert rvWord, f"{BBB} {c}:{v} {rvText=} {rvAdjText=}"
         assert rvWord.count( '¦' ) <= 1, f"{BBB} {c}:{v} {rvWord=} {rvText=} {rvAdjText=}" # Check that we haven't been retagging already tagged RV words
-    numSimpleListedAdds = matchOurListedSimpleWords( BBB, c,v, rvWords, lvWords )
+    numSimpleListedAdds,numSimpleListedNS = matchOurListedSimpleWords( BBB, c,v, rvWords, lvWords )
 
     # Now get the uppercase words
     rvUpperWords = [rvWord for rvWord in rvWords if rvWord[0].isupper()]
@@ -468,13 +482,13 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     #   rvUpperWords.pop(0) # Throw away the first word because it might just be capitalised for being at the beginning of the sentence.
     # print( f"({len(rvUpperWords)}) {rvUpperWords=}")
     # print( f"({len(lvUpperWords)}) {lvUpperWords=}")
-    numProperNounAdds = matchProperNouns( BBB, c,v, rvUpperWords, lvUpperWords ) if rvUpperWords and lvUpperWords else 0
+    numProperNounAdds,numProperNounNS = matchProperNouns( BBB, c,v, rvUpperWords, lvUpperWords ) if rvUpperWords and lvUpperWords else (0,0)
 
-    numFirstPartMatchedWords = matchWordsFirstParts( BBB, c,v, rvWords, lvWords )
+    numFirstPartMatchedWords,numFirstPartMatchedWordsNS = matchWordsFirstParts( BBB, c,v, rvWords, lvWords )
 
-    numHandmatches = matchWordsManually( BBB, c,v, rvWords, lvWords )
+    numHandmatches,numHandmatchesNS = matchWordsManually( BBB, c,v, rvWords, lvWords )
 
-    return numSimpleListedAdds, numProperNounAdds, numFirstPartMatchedWords, numHandmatches
+    return (numSimpleListedAdds,numSimpleListedNS), (numProperNounAdds,numProperNounNS), (numFirstPartMatchedWords,numFirstPartMatchedWordsNS), (numHandmatches,numHandmatchesNS)
 # end of connect_OET-RV_words_via_OET-LV.connect_OET_RV_Verse
 
 
@@ -488,7 +502,7 @@ CNTR_PERSON_NAME_DICT = {'1':'1st', '2':'2nd', '3':'3rd', 'g':'g'}
 CNTR_CASE_NAME_DICT = {'N':'nominative', 'G':'genitive', 'D':'dative', 'A':'accusative', 'V':'vocative', 'g':'g', 'n':'n', 'a':'a', 'd':'d', 'v':'v', 'U':'U'}
 CNTR_GENDER_NAME_DICT = {'M':'masculine', 'F':'feminine', 'N':'neuter', 'm':'m', 'f':'f', 'n':'n'}
 CNTR_NUMBER_NAME_DICT = {'S':'singular', 'P':'plural', 's':'s', 'p':'p'}
-def matchProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[str], lvCapitalisedWordList:List[str] ) -> int:
+def matchProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[str], lvCapitalisedWordList:List[str] ) -> Tuple[int,int]:
     """
     Given a list of capitalised words from OET-RV and OET-LV,
         see if we can match any proper nouns
@@ -502,7 +516,7 @@ def matchProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[str], lvC
     assert rvCapitalisedWordList and lvCapitalisedWordList
 
     # But we don't want any rvWords that are already tagged
-    numAdded = 0
+    numAdded = numNS = 0
     numRemovedRV = 0 # Extra work because we're deleting from same list that we're iterating through (a copy of)
     for rvN,rvCapitalisedWord in enumerate( rvCapitalisedWordList[:] ):
         # print( f"{BBB} {c}:{v} {rvN} {rvCapitalisedWord=} from {rvCapitalisedWordList}")
@@ -518,7 +532,7 @@ def matchProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[str], lvC
                     lvCapitalisedWordList.pop( lvN - numRemovedLV )
                     numRemovedLV += 1
     if not rvCapitalisedWordList or not lvCapitalisedWordList:
-        return numAdded # nothing left to do here
+        return numAdded,numNS # nothing left to do here
 
     if len(rvCapitalisedWordList)==1 and len(lvCapitalisedWordList)==1: # easy case!
         assert rvCapitalisedWordList[0].replace("'",'').isalpha(), f"{rvCapitalisedWordList=}" # It might contain an apostrophe
@@ -530,9 +544,11 @@ def matchProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[str], lvC
             result = addNumberToRVWord( BBB, c,v, rvCapitalisedWordList[0], wordNumber )
             if result:
                 numAdded += 1
+                if 'N' in wordRow[4]:
+                    numNS += 1
     elif len(rvCapitalisedWordList) == len(lvCapitalisedWordList):
         dPrint( 'Info', DEBUGGING_THIS_MODULE, f"Lists are equal size ({len(rvCapitalisedWordList)})" )
-        return numAdded
+        return numAdded,numNS
         for capitalisedNounPair in lvCapitalisedWordList:
             capitalisedNoun,wordNumber,wordRow = getLVWordRow( capitalisedNounPair )
             dPrint( 'Info', f"'{capitalisedNoun}' {wordRow}" )
@@ -543,11 +559,11 @@ def matchProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[str], lvC
         #     capitalisedNoun,wordNumber,wordRow = getLVWordRow( capitalisedNounPair )
         #     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"'{capitalisedNoun}' {wordRow}" )
         #     halt
-    return numAdded
+    return numAdded,numNS
 # end of connect_OET-RV_words_via_OET-LV.matchProperNouns
 
 
-def matchOurListedSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:List[str] ) -> int:
+def matchOurListedSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:List[str] ) -> Tuple[int,int]:
     """
     If the simple word (e.g., nouns) only occur once in the RV verse and once in the LV verse,
         we assume that we can match them, i.e., copy the wordlink numbers from the LV into the RV.
@@ -555,7 +571,7 @@ def matchOurListedSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWor
     fnPrint( DEBUGGING_THIS_MODULE, f"matchOurListedSimpleWords( {BBB} {c}:{v} {rvWordList}, {lvWordList} )" )
     assert rvWordList and lvWordList
 
-    numAdded = 0
+    numAdded = numNS = 0
     for simpleNoun in state.simpleWords:
         # print( f"{simpleNoun}" )
         lvIndexList = []
@@ -573,7 +589,7 @@ def matchOurListedSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWor
         if not rvIndexList: continue
 
         if len(rvIndexList) != 1 or len(lvIndexList) != 1: # then I don't think we can guarantee matching the right words
-            return numAdded
+            return numAdded,numNS
         assert len(rvIndexList) == len(lvIndexList), f"{BBB} {c}:{v} {simpleNoun=} {rvIndexList=} {lvIndexList=}"
 
         lvNumbers = []
@@ -587,12 +603,14 @@ def matchOurListedSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWor
             result = addNumberToRVWord( BBB, c,v, rvNoun, lvWordNumber )
             if result:
                 numAdded += 1
+                if 'N' in state.wordTable[lvWordNumber][4]:
+                    numNS += 1
 
-    return numAdded
+    return numAdded,numNS
 # end of connect_OET-RV_words_via_OET-LV.matchOurListedSimpleWords
 
 
-def matchWordsFirstParts( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:List[str] ) -> int:
+def matchWordsFirstParts( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:List[str] ) -> Tuple[int,int]:
     """
     If the longish word only occurs once in the LV word list
         and a similar starting word only occurs on in the RV word list
@@ -612,7 +630,7 @@ def matchWordsFirstParts( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList
             lvWord = lvWordStr # One or two little mess-ups
         simpleLVWordList.append( lvWord )
 
-    numAdded = 0
+    numAdded = numNS = 0
     for lvIx,lvWord in enumerate( simpleLVWordList ):
         if len(lvWord) < 5: continue # We only process longer words
         if simpleLVWordList.count( lvWord ) != 1: continue # We can't distinguish between two usages in one verse
@@ -634,15 +652,17 @@ def matchWordsFirstParts( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList
                 result = addNumberToRVWord( BBB, c,v, rvWord, lvWordNumber )
                 if result:
                     numAdded += 1
+                    if 'N' in lvWordRow[4]:
+                        numNS += 1
                 else:
                     logging.warning( f"Got addNumberToRVWord( {BBB} {c}:{v} '{rvWord}' {lvWordNumber} ) result = {result}" )
                     # why_did_we_fail
 
-    return numAdded
+    return numAdded,numNS
 # end of connect_OET-RV_words_via_OET-LV.matchWordsFirstParts
 
 
-def matchWordsManually( BBB:str, c:int,v:int, rvVerseWordList:List[str], lvVerseWordList:List[str] ) -> int:
+def matchWordsManually( BBB:str, c:int,v:int, rvVerseWordList:List[str], lvVerseWordList:List[str] ) -> Tuple[int,int]:
     """
     """
     fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsManually( {BBB} {c}:{v} {rvVerseWordList}, {lvVerseWordList} )" )
@@ -664,15 +684,19 @@ def matchWordsManually( BBB:str, c:int,v:int, rvVerseWordList:List[str], lvVerse
             rvWord = rvWordStr
         simpleRVWordList.append( rvWord )
 
-    numAdded = 0
-    numAdded += doGroup1( BBB, c, v, rvVerseWordList, lvVerseWordList, simpleLVWordList )
-    numAdded += doGroup2( BBB, c, v, rvVerseWordList, lvVerseWordList, simpleRVWordList, simpleLVWordList )
+    numAdded = numNS = 0
+    result1,result1NS = doGroup1( BBB, c, v, rvVerseWordList, lvVerseWordList, simpleLVWordList )
+    numAdded += result1
+    numNS += result1NS
+    result2,result2NS = doGroup2( BBB, c, v, rvVerseWordList, lvVerseWordList, simpleRVWordList, simpleLVWordList )
+    numAdded += result2
+    numNS += result2NS
 
-    return numAdded
+    return numAdded,numNS
 # end of connect_OET-RV_words_via_OET-LV.matchWordsManually
 
 
-def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:List[str], simpleLVWordList:List[str] ) -> int:
+def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:List[str], simpleLVWordList:List[str] ) -> Tuple[int,int]:
     """
     This list is 1 RV from 1 or many LV
     Match things like RV 'your' with LV 'of you'
@@ -681,7 +705,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
     #     print( f"doGroup1( {BBB} {c}:{v} {rvVerseWordList=} {lvVerseWordList=} {simpleLVWordList=} )")
     #     halt
     
-    numAdded = 0
+    numAdded = numNS = 0
     for rvWord, lvWordStr in (
             ('120', 'a hundred twenty'),
             # Greek possessive pronouns usually appear after the head noun
@@ -851,6 +875,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Maria', 'Maria'),('Maria', 'Maria/Mirəyām'),
             ('Media', 'Maʸdia'),
             ('Nahshon', 'Naʼassōn'),('Nahshon', 'Naʼassōn/Naḩəshōn'),
+            ('Nazareth', 'Nazaret'),
             ('Obed', 'Yōbaʸd'),('Obed', 'Yōbaʸd/Ōbaʸd/ˊŌvēd'),
             ('Paul', 'Paulos'),
             ('Perez', 'Fares'),('Perez', 'Fares/Fereʦ'),
@@ -909,23 +934,25 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
                     continue # in the outer loop
                 assert matchedLvWordCount == len(lvWords)
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManually group1 {BBB} {c}:{v} matched {rvWord=} {lvWords=}" )
-                lvWord,lvWordNumber,_lvWordRow = getLVWordRow( lvVerseWordList[lvIx] )
+                lvWord,lvWordNumber,lvWordRow = getLVWordRow( lvVerseWordList[lvIx] )
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManually group1 is adding a number to RV '{rvWord}' from '{lvWord}' at {BBB} {c}:{v} {lvIx=}")
                 result = addNumberToRVWord( BBB, c,v, rvWord, lvWordNumber )
                 if result:
                     numAdded += 1
+                    if 'N' in lvWordRow[4]:
+                        numNS += 1
                 else:
                     logging.warning( f"Got addNumberToRVWord( {BBB} {c}:{v} '{rvWord}' {lvWordNumber} ) result = {result}" )
                     # why_did_we_fail
-    return numAdded
+    return numAdded,numNS
 # end of connect_OET-RV_words_via_OET-LV.doGroup1
 
 
-def doGroup2( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:List[str], simpleRVWordList:List[str], simpleLVWordList:List[str] ) -> int:
+def doGroup2( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:List[str], simpleRVWordList:List[str], simpleLVWordList:List[str] ) -> Tuple[int,int]:
     """
     This list is one LV word to many RV words
     """
-    numAdded = 0
+    numAdded = numNS = 0
     for lvWord, rvWordStr  in (
             ('brothers', 'brothers and sisters'), ('brothers', 'fellow believers'),
             ('Brothers', 'Brothers and sisters'), ('Brothers', 'Fellow believers'),
@@ -954,6 +981,7 @@ def doGroup2( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             lvWordStr = lvVerseWordList[lvIndexes[0]]
             assert '¦' in lvWordStr
             lvWord, lvWordNumber = lvWordStr.split( '¦' )
+            lvWordNumber = int( lvWordNumber )
             # print( f"    here with {lvWordStr} -> '{lvWord}' and {lvWordNumber=}")
 
             # Now see if we have the RV word(s)
@@ -990,7 +1018,7 @@ def doGroup2( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
                 else:
                     logging.warning( f"Got addNumberToRVWord( {BBB} {c}:{v} '{rvWord}' {lvWordNumber} ) result = {result}" )
                 # why_did_we_fail
-    return numAdded
+    return numAdded,numNS
 # end of connect_OET-RV_words_via_OET-LV.doGroup1
 
 
@@ -1013,22 +1041,31 @@ def getLVWordRow( wordWithNumber:str ) -> Tuple[str,int,List[str]]:
 # end of connect_OET-RV_words_via_OET-LV.getLVWordRow
 
 
+ndStartMarker, ndEndMarker = '\\nd ', '\\nd*'
 def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
     """
+    Go through the RV USFM for BBBB and find the lines for c:v
+
+    Then try to find the word in the line.
+
+    If there's only one word that it can be,
+        then append the word number
+        and also surround it with a nomina sacra span if necessary
     """
     fnPrint( DEBUGGING_THIS_MODULE, f"addNumberToRVWord( {BBB} {c}:{v} '{word}' {wordNumber} )" )
+    assert isinstance( wordNumber, int )
 
     C = V = None
     found = False
     for n,line in enumerate( state.rvESFMLines[:] ): # iterate through a copy
         try: marker, rest = line.split( ' ', 1 )
         except ValueError: marker, rest = line, '' # Only a marker
-        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"addNumberToRVWord A searching {BBB} {C}:{V} {marker}='{rest}'" )
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"addNumberToRVWord A searching {BBB} {C}:{V} {marker}='{rest}'" )
         if marker == '\\c':
             C = int(rest)
             if C > c: return False # Gone too far
         elif marker == '\\v':
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"addNumberToRVWord B searching {BBB} {C}:{V} {marker}='{rest}'")
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"addNumberToRVWord B searching {BBB} {C}:{V} {marker}='{rest}'")
             Vstr, rest = rest.split( ' ', 1 )
             try: V = int(Vstr)
             except ValueError: # might be a range like 21-22
@@ -1042,11 +1079,14 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, type(allWordMatches), type(match), match )
                 assert match.group(0) == word
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found {word=} {line=}" )
+                wordRow = state.wordTable[wordNumber]
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found {word=} {line=} {wordRow=}" )
+                haveNominaSacra = 'N' in wordRow[4]
                 try:
                     if line[match.end()] != '¦': # next character after word
-                        state.rvESFMLines[n] = f'{line[:match.start()]}{word}¦{wordNumber}{line[match.end():]}'
+                        state.rvESFMLines[n] = f'''{line[:match.start()]}{ndStartMarker if haveNominaSacra else ''}{word}¦{wordNumber}{ndEndMarker if haveNominaSacra else ''}{line[match.end():]}'''
                         # print( f"{word=} {line=}" )
-                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord() added ¦{wordNumber} to '{word}' in OET-RV {BBB} {c}:{v}" )
+                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord() added ¦{wordNumber}{' and nomina sacra' if haveNominaSacra else ''} to '{word}' in OET-RV {BBB} {c}:{v}" )
                         return True
                     else:
                         logging.warning( f"Tried to append second number to {BBB} {C}:{V} {marker} '{line[match.start():match.end()]}' -> '{word}¦{wordNumber}'" )
@@ -1054,8 +1094,8 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
                         return False
                 except IndexError:
                     assert line.endswith( word )
-                    state.rvESFMLines[n] = f'{line}¦{wordNumber}'
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord() added ¦{wordNumber} to final '{word}' in OET-RV {BBB} {c}:{v}" )
+                    state.rvESFMLines[n] = f'''{line[:-len(word)]}{ndStartMarker if haveNominaSacra else ''}{word}¦{wordNumber}{ndEndMarker if haveNominaSacra else ''}'''
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord() added ¦{wordNumber}{' and nomina sacra' if haveNominaSacra else ''} to final '{word}' in OET-RV {BBB} {c}:{v}" )
                     return True
             else:
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord {BBB} {c}:{v} '{word}' found {len(allWordMatches)=}" )

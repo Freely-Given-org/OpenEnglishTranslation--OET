@@ -53,10 +53,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-08-25' # by RJH
+LAST_MODIFIED_DATE = '2023-08-29' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
-PROGRAM_VERSION = '0.88'
+PROGRAM_VERSION = '0.89'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -549,8 +549,10 @@ def process_untranslated_words( given_collation_row, given_preformed_gloss_strin
             # NOTE: Need to check for lowercase as well!
             # if given_collation_row['Morphology'].startswith( '....G' ): given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬of_the', 1 )
             # if given_collation_row['Morphology'].startswith( '....D' ): given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬to/from_the', 1 )
-            # else:
-            given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬the', 1 )
+            if given_collation_row['Role'] == 'R':
+                given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬which', 1 )
+            else:
+                given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬the', 1 )
         elif adjusted_lemma == 'hoti': given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬that', 1 )
         elif adjusted_lemma in ('ean','ei'): given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬if', 1 ) # Strongs #1437, #1487
         elif adjusted_lemma == 'an': given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬wishfully', 1 ) # Strongs #302
