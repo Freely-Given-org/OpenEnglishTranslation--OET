@@ -37,6 +37,8 @@ It does have the potential to make wrong connections that will need to be manual
 CHANGELOG:
     2023-07-31 Added character marker checks for each RV line
     2023-08-29 Added nomina sacra for connected words in RV
+    2023-09-11 Fix bug that connected the wrong (not the same) simple words
+    2023-09-12 Fix bug that caused two nested /nd markers (after numbers had been deleted)
 """
 from gettext import gettext as _
 from tracemalloc import start
@@ -57,10 +59,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-09-05' # by RJH
+LAST_MODIFIED_DATE = '2023-09-16' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.42'
+PROGRAM_VERSION = '0.53'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -433,7 +435,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
                 .replace( '“', '' ).replace( '”', '' ).replace( '‘', '' ).replace( '’', '') \
                 .replace('  ',' ').strip()
     lvAdjText = lvText.replace('_',' ') \
-                .replace('˲','') \
+                .replace('˱','').replace('˲','') \
                 .replace('0/','0 ').replace('1/','1 ').replace('2/','2 ').replace('3/','3 ').replace('4/','4 ').replace('5/','5 ').replace('6/','6 ').replace('7/','7 ').replace('8/','8 ').replace('9/','9 ') \
                 .replace('.','').replace(',','').replace(':','').replace(';','').replace('?','').replace('!','') \
                 .replace( '(', '').replace( ')', '' ) \
@@ -599,12 +601,15 @@ def matchOurListedSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWor
         assert len(lvNumbers) == 1 # NOT TRUE: If there's two 'camels' in the verse, we expect both to have the same word number
         for rvN in rvIndexList:
             rvNoun = rvWordList[rvN]
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchOurListedSimpleWords() is adding a number to RV '{rvNoun}' at {BBB} {c}:{v} {rvN=}")
-            result = addNumberToRVWord( BBB, c,v, rvNoun, lvWordNumber )
-            if result:
-                numAdded += 1
-                if 'N' in state.wordTable[lvWordNumber][4]:
-                    numNS += 1
+            if rvNoun.lower() == lvNoun.lower():
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchOurListedSimpleWords() is adding a number to RV '{rvNoun}' at {BBB} {c}:{v} {rvN=}")
+                result = addNumberToRVWord( BBB, c,v, rvNoun, lvWordNumber )
+                if result:
+                    numAdded += 1
+                    if 'N' in state.wordTable[lvWordNumber][4]:
+                        numNS += 1
+            # else:
+            #     dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"ERROR matchOurListedSimpleWords() would have connected LV '{lvNoun}' to RV '{rvNoun}' at {BBB} {c}:{v} {rvN=}")
 
     return numAdded,numNS
 # end of connect_OET-RV_words_via_OET-LV.matchOurListedSimpleWords
@@ -823,6 +828,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Four','four'),
             ('God','god'),
             ('Master','master'),
+            ('Messiah','messiah'),('messiah','messiah'),
             ("We've",'We'),
             # Names including places (parentheses have already been deleted from the OET-LV at this stage)
             ('Abijah','Abia'),('Abijah','Abia/ʼAvīāh'),
@@ -889,12 +895,14 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Sapphira', 'Sapfeiraʸ'),
             ('Saul', 'Saulos'),
             ('Sidon', 'Sidōn'),('Sidon', 'Sidōn/Tsīdōn'),
+            ('Silas', 'Silouanos'),
             ('Simon', 'Simōn'),
             ('Solomon', 'Solomōn'),('Solomon', 'Solomōn/Shəlomih'),
             ('Tabitha', 'Tabaʸtha'),
             ('Tamar', 'Thamar'),('Tamar', 'Thamar/Tāmār'),
             ('Tarsus', 'Tarsos'),
             ('Theophilus', 'Theofilos'),
+            ('Thessalonica', 'Thessalonikaʸ'),
             ('Timothy', 'Timotheos'),
             ('Tyre', 'Turos'),('Tyre', 'Turos/Tsor'),
             ('Uzziah', 'Ozias'),('Uzziah', 'Ozias/ˊUzziyyāh'),
@@ -994,7 +1002,7 @@ def doGroup2( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
                     if rvIx < len(simpleRVWordList)-1:
                         if simpleRVWordList[rvIx+1] == rvWords[1]:
                             matchedRvWordCount += 1
-                            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"        Matched 2/{len(rvWords)} @ {rvIx+1} with '{rvVerseWordList[rvIx+1]}' from '{rvWordStr}'")
+                            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"        Matched 2/{len(rvWords)} @ {rvIx+1} with '{rvVerseWordList[rvIx+1]}' from '{rvWordStr}'")
                             if matchedRvWordCount == len(rvWords): break # matched two words
                             if rvIx < len(simpleRVWordList)-2:
                                 if simpleRVWordList[rvIx+2] == rvWords[2]:
@@ -1004,7 +1012,7 @@ def doGroup2( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
                                     if rvIx < len(simpleRVWordList)-3:
                                         if simpleRVWordList[rvIx+3] == rvWords[3]:
                                             matchedRvWordCount += 1
-                                            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"          Matched 4/{len(rvWords)} @ {rvIx+3} with '{rvVerseWordList[rvIx+3]}' from '{rvWordStr}'")
+                                            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"          Matched 4/{len(rvWords)} @ {rvIx+3} with '{rvVerseWordList[rvIx+3]}' from '{rvWordStr}'")
                                             if matchedRvWordCount == len(rvWords): break # matched four words
             else: # no match (no break from above/inner loop)
                 continue # in the outer loop
@@ -1081,21 +1089,29 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found {word=} {line=}" )
                 wordRow = state.wordTable[wordNumber]
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found {word=} {line=} {wordRow=}" )
-                haveNominaSacra = 'N' in wordRow[4]
+                addNominaSacra = False
+                if 'N' in wordRow[4]: # Check that the RV doesn't already have it marked (with /nd)
+                                      #   (This can happen after word numbers are deleted.)
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Have NS on {word=} {line[match.start()-6:match.start()]=} {line[match.end():match.end()+6]=} {line=}" )
+                    if (match.end()==len(line) or not line[match.end()]=='¦') \
+                    and not line[match.end():match.end()+4] == '\\nd*':
+                        addNominaSacra = True
+                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Adding NS on {word=} {line[match.start()-6:match.start()]=} {line[match.end():match.end()+6]=} {line=}" )
+
                 try:
                     if line[match.end()] != '¦': # next character after word
-                        state.rvESFMLines[n] = f'''{line[:match.start()]}{ndStartMarker if haveNominaSacra else ''}{word}¦{wordNumber}{ndEndMarker if haveNominaSacra else ''}{line[match.end():]}'''
+                        state.rvESFMLines[n] = f'''{line[:match.start()]}{ndStartMarker if addNominaSacra else ''}{word}¦{wordNumber}{ndEndMarker if addNominaSacra else ''}{line[match.end():]}'''
                         # print( f"{word=} {line=}" )
-                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord() added ¦{wordNumber}{' and nomina sacra' if haveNominaSacra else ''} to '{word}' in OET-RV {BBB} {c}:{v}" )
+                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord() added ¦{wordNumber}{' and nomina sacra' if addNominaSacra else ''} to '{word}' in OET-RV {BBB} {c}:{v}" )
                         return True
                     else:
                         logging.warning( f"Tried to append second number to {BBB} {C}:{V} {marker} '{line[match.start():match.end()]}' -> '{word}¦{wordNumber}'" )
                         # already_numbered
                         return False
-                except IndexError:
+                except IndexError: # if the word is at the END OF THE LINE
                     assert line.endswith( word )
-                    state.rvESFMLines[n] = f'''{line[:-len(word)]}{ndStartMarker if haveNominaSacra else ''}{word}¦{wordNumber}{ndEndMarker if haveNominaSacra else ''}'''
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord() added ¦{wordNumber}{' and nomina sacra' if haveNominaSacra else ''} to final '{word}' in OET-RV {BBB} {c}:{v}" )
+                    state.rvESFMLines[n] = f'''{line[:-len(word)]}{ndStartMarker if addNominaSacra else ''}{word}¦{wordNumber}{ndEndMarker if addNominaSacra else ''}'''
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord() added ¦{wordNumber}{' and nomina sacra' if addNominaSacra else ''} to final '{word}' in OET-RV {BBB} {c}:{v}" )
                     return True
             else:
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord {BBB} {c}:{v} '{word}' found {len(allWordMatches)=}" )

@@ -52,10 +52,10 @@ from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, 
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 
 
-LAST_MODIFIED_DATE = '2023-09-05' # by RJH
+LAST_MODIFIED_DATE = '2023-09-12' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.71'
+PROGRAM_VERSION = '0.72'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -118,9 +118,11 @@ span.bk { font-style:italic; }
 span.fn { vertical-align: super; font-size:0.7em; color:green; }
 span.xref { vertical-align: super; font-size:0.7em; color:blue; }
 p.rem { font-size:0.8em; color:grey; }
+p.id + p.rem, p.rem + p.rem { margin-top:-1.1em; }
 p.shortPrayer { text-align:center; }
 p.mt1 { font-size:1.8em; }
 p.mt2 { font-size:1.3em; }
+p.mt1 + p.mt2, p.mt2 + p.mt1 { margin-top:-0.5em; }
 div.rightBox { float:right;
         width:-moz-fit-content; width:fit-content;
         border:3px solid #73AD21; padding:0.2em; }

@@ -1,4 +1,4 @@
-\id REV - Open English Translation—Readers' Version (OET-RV) v0.0.02
+\id REV - Open English Translation—Readers' Version (OET-RV) v0.0.03
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 REV
@@ -13,7 +13,7 @@
 \is1 Introduction
 \ip \bk Yohan's (John's) revelation of Yeshua (Jesus) the messiah\bk* concerns events that will happen in the future. This was written long ago in a time when the believers were persecuted due to their faith in the master Yeshua, the messiah. Yohan's main purpose for writing this was to give hope to the believers and to encourage them to persevere in their faith despite their persecution.
 \ip Iyan kinarakelan part of it's written here document the impakita of Yeshua the messiah ki Yohan the me palinneu very kein-inuwan. Ne that all palinneu, due iya meaning/salvation and igpasabut. Te that time, nasabut buwa of Christians but kuntee, due other me palinneu very malised egkasabut, and various the me suman-suman of people of pegluwas here. But minsan pad iling due, due also me palinneu malemu just egkasabut like sungey iyan igpasabut the power and katenged, and the kampilan iyan igpasabut the samuk. Inlibed-libed of kamasulug and of various paahi the me theme of this document by means of me palinneu. But malemu just egkasabut the very important it's written here: egdereetan iya of God the all enemy din pinaahi ki the messiah Yeshua, and egdasahan din also the people din migpabulus migpamakey, and egpakalemung sikandan kandin of without ending. Ne due egpakapahale our there to ending kapitulu, this concerning the new sky and planet that God will create and concerning the new Yerusalem that will descend from the sky.
-\iot Main components of this “book”
+\iot Main components of this document
 \io1 Introduction \ior 1:1-8\ior*
 \io1 Yohan's first revelation in the form of a dream \ior 1:9-20\ior*
 \io1 The letters sent to seven assemblies of believers \ior 2:1–3:22\ior*
@@ -29,17 +29,13 @@
 \rem This is still a very early look into the unfinished text of the \em Open English Translation\em* of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
-\rem /s1 Introduction and Salutation
-\rem /s1 Prologue
+\rem /s1 Introduction and Salutation; Prologue
 \p
 \v 1 \add This is\add* the revelation¦156323 that \nd God¦156330\nd* gave¦156327 to \nd Yeshua¦156324\nd* the \nd messiah¦156325\nd* to show to his slaves¦156334 \add to explain\add* what must happen soon. He communicated it by sending it via his messenger¦156346 to his slave¦156350, Yohan¦156353
-\v 2 who \add then\add* faithfully passed on everything he saw¦156367 of \nd God's¦156363\nd* message¦156357 and the testimony¦156362 of \nd Yeshua¦156363\nd* the \nd messiah¦156364\nd*.
+\v 2 who \add then\add* faithfully passed on everything he saw¦156367 of \nd God's\nd* message¦156357 and the testimony¦156362 of \nd Yeshua¦156363\nd* the \nd messiah¦156364\nd*.
 \v 3 \add God will \add* bless anyone who reads or listens to the messages¦156376 of this prophecy¦156380 and obeys what it written¦156386 in it, because¦156388 the time¦156389 \add of these events happening\add* is close.
 \s1 The greetings to seven assemblies of believers
-\rem /s1 Christ's messages to seven churches
-\rem /s1 John's Greeting to the Seven Churches
-\rem /s1 Greetings to the Seven Churches
-\rem /s1 Greetings and doxology
+\rem /s1 Christ's messages to seven churches; John's Greeting to the Seven Churches; Greetings to the Seven Churches; Greetings and doxology
 \p
 \v 4 \x + \xo 1:4: a \xt Exo 3:14; \xo b \xt Rev 4:5.\x*\add This letter is from\add* Yohan¦156391 to the seven assemblies¦156394 in Asia \add Minor\add*:
 \p Grace and peace¦156402 to you all from the \add God\add* who is and was and will be, and from the seven spirits¦156418 who are in front of this throne¦156424,
@@ -51,9 +47,7 @@
 \p
 \v 8 \x + \xo 1:8: a \xt Rev 22:13; \xo b \xt Exo 3:14.\x*“I am the A and the Z,” says Yahweh \nd God¦156543\nd*, the one who is and was and will be—the most powerful one.
 \s1 The showing of Yeshua ki Yohan
-\rem /s1 Vision of the Son of Man
-\rem /s1 A Vision of Christ
-\rem /s1 One like a Son of Man
+\rem /s1 Vision of the Son of Man; A Vision of Christ; One like a Son of Man
 \p
 \v 9 ◘
 \v 10 ◘
@@ -70,8 +64,6 @@
 \v 20 ◘
 \c 2
 \s1 The letter going to believers there to Ephesus
-\rem /s1 The Message to Ephesus
-\rem /s1 To the church in Ephesus
 \rem /s1 The Message to the Church in Ephesus
 \p
 \v 1 ◘
@@ -84,8 +76,6 @@
 \p
 \v 7 \x + \xo 2:7: a \xt Gen 2:9; Rev 22:2; \xo b \xt Eze 28:13; 31:8 (LXX).\x*◘
 \rem /s1 The Message to the Church in Smyrna
-\rem /s1 To the Church in Smyrna
-\rem /s1 The Message to Smyrna
 \p …◘
 \s1 The letter going to believers there to Ismirna
 \p
@@ -95,9 +85,7 @@
 \v 10 ◘
 \p
 \v 11 \x + \xo 2:11: \xt Rev 20:14; 21:8.\x*◘
-\rem /s1 To the Church in Pergamum
 \rem /s1 The Message to the Church in Pergamum
-\rem /s1 The Message to Pergamum
 \p …◘
 \s1 The letter going to believers there to Pirgamu
 \p
@@ -110,8 +98,6 @@
 \p
 \v 17 \x + \xo 2:17: a \xt Exo 16:14-15; 16:33-34; Jn 6:48-50; \xo b \xt Isa 62:2; 65:15.\x*◘
 \rem /s1 The Message to the Church in Thyatira
-\rem /s1 To the Church in Thyatira
-\rem /s1 The Message to Thyatira
 \p …◘
 \s1 The letter going to believers there to Tiyatira
 \p
@@ -133,8 +119,6 @@
 \c 3
 \s1 The letter going to believers there to Sardis
 \rem /s1 The Message to the Church in Sardis
-\rem /s1 The Message to Sardis
-\rem /s1 To the Church in Sardis
 \p
 \v 1 ◘
 \p …◘
@@ -145,9 +129,7 @@
 \p
 \v 6 ◘
 \s1 The letter going to believers there to Piladilpiya
-\rem /s1 To the Church in Philadelphia
 \rem /s1 The Message to the Church in Philadelphia
-\rem /s1 The Message to Philadelphia
 \p
 \v 7 \x + \xo 3:7: \xt Isa 22:22; Yob 12:14.\x*◘
 \p …◘
@@ -160,8 +142,6 @@
 \v 13 ◘
 \s1 The letter going to believers there to Lawdisya
 \rem /s1 The Message to the Church in Laodicea
-\rem /s1 To the Church in Laodicea
-\rem /s1 The Message to Laodicea
 \p
 \v 14 \x + \xo 3:14: \xt Prv 8:22.\x*◘
 \p …◘
@@ -176,10 +156,7 @@
 \v 22 ◘
 \c 4
 \s1 The worshipping there to sky/heaven
-\rem /s1 Visions of heaven
-\rem /s1 Worship in Heaven
-\rem /s1 The Heavenly Worship
-\rem /s1 The Throne in Heaven
+\rem /s1 Visions of heaven; Worship in Heaven; The Heavenly Worship; The Throne in Heaven
 \p
 \v 1 ◘
 \v 2 \x + \xo 4:2-3: \xt Eze 1:26-28; 10:1.\x*◘
@@ -204,8 +181,7 @@
 \q2 …
 \c 5
 \s1 The linulun document and the Nati Karniru
-\rem /s1 The Lamb Opens the Scroll
-\rem /s1 The Scroll and the Lamb
+\rem /s1 The Lamb Opens the Scroll; The Scroll and the Lamb
 \p
 \v 1 \x + \xo 5:1: \xt Eze 2:9-10; Isa 29:11.\x*◘
 \v 2 ◘
@@ -241,10 +217,7 @@
 \v 14 ◘
 \c 6
 \s1 The peglekat of me piket
-\rem /s1 The Lamb Breaks the First Six Seals
-\rem /s1 The Seven Seals
-\rem /s1 The Seals
-\rem /s1 The seven seals
+\rem /s1 The Lamb Breaks the First Six Seals; The Seven Seals
 \p
 \v 1 ◘
 \v 2 \x + \xo 6:2: \xt Zech 1:8; 6:3,6.\x*◘
@@ -268,10 +241,7 @@
 \v 17 \x + \xo 6:17: \xt Yoel 2:11; Mal 3:2.\x*◘
 \c 7
 \s1 The 144,000 person nakulitan
-\rem /s1 The 144,000 of Israel Sealed
-\rem /s1 The 144,000 People of Israel
-\rem /s1 144,000 Sealed
-\rem /s1 God's People Will Be Preserved
+\rem /s1 The 144,000 of Israel Sealed; The 144,000 People of Israel; God's People Will Be Preserved
 \p
 \v 1 \x + \xo 7:1: \xt Jer 49:36; Dan 7:2; Zech 6:5.\x*◘
 \v 2 ◘
@@ -284,8 +254,7 @@
 \v 7 ◘
 \v 8 ◘
 \s1 The susuluhi person nangukumbale of maangkag
-\rem /s1 The Great Multitude in White Robes
-\rem /s1 The Multitude from Every Nation
+\rem /s1 The Great Multitude in White Robes; The Multitude from Every Nation
 \p
 \v 9 ◘
 \v 10 ◘
@@ -301,9 +270,7 @@
 \v 17 \x + \xo 7:17: a \xt Psa 23:1; Eze 34:23; \xo b \xt Psa 23:2; Isa 49:10; \xo c \xt Isa 25:8.\x*◘
 \c 8
 \s1 The peglekat of igkapitu piket
-\rem /s1 The Seventh Seal and the Golden Censer
-\rem /s1 The Seventh Seal
-\rem /s1 The Lamb Breaks the Seventh Seal
+\rem /s1 The Seventh Seal and the Golden Censer; The Lamb Breaks the Seventh Seal
 \p
 \v 1 ◘
 \rem /s1 The seven trumpets
@@ -313,9 +280,7 @@
 \v 4 ◘
 \v 5 \x + \xo 8:5: a \xt Lev 16:12; Eze 10:2; \xo b \xt Exo 19:16; Rev 11:19; 16:18.\x*◘
 \s1 The seven trumpita
-\rem /s1 The First Four Trumpets
-\rem /s1 The Trumpets
-\rem /s1 The Seven Trumpets
+\rem /s1 The First Four Trumpets; The Seven Trumpets
 \p
 \v 6 ◘
 \p
@@ -361,9 +326,7 @@
 \v 21 ◘
 \c 10
 \s1 The panalihan and the deisek linulun document
-\rem /s1 The Angel with the Little Scroll
-\rem /s1 The Angel and the Little Scroll
-\rem /s1 The Angel and the Small Scroll
+\rem /s1 The Angel with the Little Scroll; The Angel and the Small Scroll
 \p
 \v 1 ◘
 \v 2 ◘
@@ -400,7 +363,6 @@
 \p
 \v 14 ◘
 \s1 The igkapitu trumpita
-\rem /s1 The Seventh Trumpet
 \rem /s1 The Seventh Trumpet Brings the Third Terror
 \p
 \v 15 \x + \xo 11:15: \xt Exo 15:18; Dan 2:44; 7:14,27.\x*◘
@@ -422,8 +384,7 @@
 \v 19 \x + \xo 11:19: a \xt Rev 8:5; 16:18; \xo b \xt Rev 16:21.\x*◘
 \c 12
 \s1 The woman and the salimbaweng
-\rem /s1 The Woman and the Dragon
-\rem /s1 Seven visions
+\rem /s1 The Woman and the Dragon; Seven visions
 \p
 \v 1 ◘
 \v 2 ◘
@@ -448,8 +409,7 @@
 \v 15 ◘
 \v 16 ◘
 \v 17 ◘
-\rem /s1 The First Beast
-\rem /s1 The Beast out of the Sea
+\rem /s1 The First Beast; The Beast out of the Sea
 \v 18 ◘
 \c 13
 \s1 The two mananap makaliyas-liyas
@@ -468,8 +428,7 @@
 \p
 \v 9 ◘
 \v 10 \x + \xo 13:10: \xt Jer 15:2; 43:11.\x*◘
-\rem /s1 The Second Beast
-\rem /s1 The Beast out of the Earth
+\rem /s1 The Second Beast; The Beast out of the Earth
 \p
 \v 11 ◘
 \v 12 ◘
@@ -482,8 +441,7 @@
 \v 18 ◘
 \c 14
 \s1 The Nati Karniru and the 144,000 people
-\rem /s1 The Lamb and the 144,000
-\rem /s1 The Lamb and His People
+\rem /s1 The Lamb and the 144,000; The Lamb and His People
 \p
 \v 1 \x + \xo 14:1: \xt Eze 9:4; Rev 7:3.\x*◘
 \v 2 ◘
@@ -492,7 +450,6 @@
 \v 5 \x + \xo 14:5: \xt Zeph 3:13.\x*◘
 \s1 The three panalihan
 \rem /s1 The Messages of the Three Angels
-\rem /s1 The Three Angels
 \p
 \v 6 ◘
 \v 7 ◘
@@ -505,8 +462,7 @@
 \v 12 ◘
 \p
 \v 13 ◘
-\rem /s1 The Harvest of the Earth
-\rem /s1 Reaping the Earth's Harvest
+\rem /s1 The Harvest of the Earth; Reaping the Earth's Harvest
 \p …◘
 \s1 The peggaani of world
 \p
@@ -521,11 +477,7 @@
 \v 20 \x + \xo 14:20: \xt Isa 63:3; Lam 1:15; Rev 19:15.\x*◘
 \c 15
 \s1 The me panalihan mig-uyan of ending me salerep
-\rem /s1 The Song of Moses and of the Lamb
-\rem /s1 The Angels with the Last Plagues
-\rem /s1 The Angels with the Seven Last Plagues
-\rem /s1 The seven bowls
-\rem /s1 Seven Angels with Seven Plagues
+\rem /s1 The Song of Moses and of the Lamb; The Angels with the Last Plagues; The Angels with the Seven Last Plagues; The seven bowls; Seven Angels with Seven Plagues
 \p
 \v 1 ◘
 \p
@@ -549,9 +501,7 @@
 \v 8 \x + \xo 15:8: \xt Exo 40:34; 1Ki 8:10-11; 2Ch 5:13-14; Isa 6:4.\x*◘
 \c 16
 \s1 The me yahung intahuan of langet of God
-\rem /s1 The Bowls of God's Anger
-\rem /s1 The Seven Bowls of God's Wrath
-\rem /s1 The Bowls of God's Wrath
+\rem /s1 The Bowls of God's Anger; The Seven Bowls of God's Wrath
 \p
 \v 1 ◘
 \p
@@ -586,10 +536,7 @@
 \v 21 \x + \xo 16:21: \xt Exo 9:23; Rev 11:19.\x*◘
 \c 17
 \s1 The egkahuhud woman egpamelegye of body
-\rem /s1 The Woman and the Beast
-\rem /s1 The Great Prostitute
-\rem /s1 The Great Whore and the Beast
-\rem /s1 The Famous Prostitute
+\rem /s1 The Woman and the Beast; The Great Prostitute; The Great Whore and the Beast; The Famous Prostitute
 \p
 \v 1 \x + \xo 17:1: \xt Jer 51:13.\x*◘
 \v 2 \x + \xo 17:2: \xt Isa 23:17; Jer 51:7.\x*◘
@@ -669,9 +616,7 @@
 \p
 \v 24 \x + \xo 18:24: \xt Jer 51:49.\x*◘
 \c 19
-\rem /s1 Hallelujah!
-\rem /s1 The Rejoicing in Heaven
-\rem /s1 Songs of Victory in Heaven
+\rem /s1 Hallelujah!; The Rejoicing in Heaven; Songs of Victory in Heaven
 \p
 \v 1 ◘
 \v 2 \x + \xo 19:2: \xt Deu 32:43; 2Ki 9:7.\x*◘
@@ -688,8 +633,7 @@
 \v 9 \x + \xo 19:9: \xt Mat 22:2-3.\x*◘
 \p
 \v 10 ◘
-\rem /s1 The Rider on the White Horse
-\rem /s1 More visions
+\rem /s1 The Rider on the White Horse; More visions
 \p …◘
 \s1 The migpangudde of maangkag kudde
 \p
@@ -719,16 +663,14 @@
 \v 5 ◘
 \v 6 ◘
 \s1 The pegkatalu of Satan
-\rem /s1 The Defeat of Satan
-\rem /s1 Satan's Doom
+\rem /s1 The Defeat of Satan; Satan's Doom
 \p
 \v 7 ◘
 \v 8 \x + \xo 20:8: a \xt Eze 7:2; \xo b \xt Eze 38:2,9,15.\x*◘
 \v 9 ◘
 \v 10 ◘
 \s1 The ending judging
-\rem /s1 The Final Judgment
-\rem /s1 The Dead Are Judged
+\rem /s1 The Final Judgment; The Dead Are Judged
 \p
 \v 11 \x + \xo 20:11-12: \xt Dan 7:9-10.\x*◘
 \v 12 ◘
@@ -737,8 +679,7 @@
 \v 15 ◘
 \c 21
 \s1 The new sky/heaven and the new tane
-\rem /s1 The New Heaven and the New Earth
-\rem /s1 The New Jerusalem
+\rem /s1 The New Heaven and the New Earth; The New Jerusalem
 \p
 \v 1 \x + \xo 21:1: \xt Isa 65:17; 66:22; 2Pe 3:13.\x*◘
 \v 2 \x + \xo 21:2: a \xt Isa 52:1; \xo b \xt Rev 3:12; \xo c \xt Isa 61:10.\x*◘
@@ -751,8 +692,6 @@
 \v 8 ◘
 \s1 The new Yerusalem
 \rem /s1 Vision of the New Jerusalem
-\rem /s1 The new Jerusalem
-\rem /s1 The New Jerusalem
 \p
 \v 9 ◘
 \v 10 \x + \xo 21:10: \xt Eze 40:2.\x*◘
@@ -784,9 +723,8 @@
 \p …◘
 \v 4 ◘
 \v 5 \x + \xo 22:5: a \xt Isa 60:19; \xo b \xt Dan 7:18.\x*◘
-\s1 The return of Yeshua
-\rem /s1 Conclusion
-\rem /s1 The Coming of Jesus
+\s1 Yeshua's return
+\rem /s1 Conclusion; The Coming of Jesus
 \p
 \v 6 ◘
 \rem /s1 Jesus Is Coming
@@ -807,16 +745,16 @@
 \p
 \v 16 \x + \xo 22:16: \xt Isa 11:1,10.\x*◘
 \p
-\v 17 The \nd spirit¦168097\nd* and the bride¦168100 say, “Come.”\x + \xo 22:17: \xt Isa 55:1.\x*
-\rem /s1 Conclusion
-\p Anyone who hears this should also say, “Come.”
+\v 17 The \nd spirit¦168097\nd* and the bride¦168100 say, ‘Come.’\x + \xo 22:17: \xt Isa 55:1.\x*
+\p Anyone who hears this should also say, ‘Come.’
 \p Anyone who's thirsty¦168112 \add to live forever\add* should come. Anyone who wants it can take the water¦168121 that gives life¦168122 free of charge.
-\s1 The pegpanaha-taha
+\s1 Farewell
+\rem /s1 Conclusion
 \p
-\v 18 \x + \xo 22:18-19: \xt Deu 4:2; 12:32.\x*◘
-\v 19 ◘
+\v 18 \x + \xo 22:18-19: \xt Deu 4:2; 12:32.\x*I am testifying¦168125 to everyone¦168129 who hears the prophecies¦168135 written in this document: If anyone¦168140 adds to these words, then \nd God¦168155\nd* will add to them the plagues¦168157 written in this document.
+\v 19 And if anyone¦168167 takes away any of this prophetic¦168178 document, then \nd God¦168184\nd* will take¦168168 away their share in the tree¦168190 of life¦168193 and¦168194 in the holy city¦168197 that's written¦168202 about in this document.
 \p
-\v 20 ◘
-\p …◘
+\v 20 The one who testified¦168209 about these¦168210 things¦168210 says: ‘Yes, I'm coming quickly¦168214.’
+\p May¦168215 it¦168215 be¦168215 so¦168215. Come, \nd master¦168218\nd* \nd Yeshua¦168219\nd*.
 \p
-\v 21 ◘
+\v 21 \add May\add* the grace¦168221 from the \nd master¦168223\nd* \nd Yeshua¦168225\nd* be with the godly people.

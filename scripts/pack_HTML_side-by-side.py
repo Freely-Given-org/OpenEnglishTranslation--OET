@@ -59,10 +59,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-09-05' # by RJH
+LAST_MODIFIED_DATE = '2023-09-12' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.61'
+PROGRAM_VERSION = '0.62'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -149,9 +149,11 @@ span.xref { vertical-align: super; font-size:0.7em; color:blue; }
 
 p.h { font-weight:bold; }
 p.rem { font-size:0.8em; color:grey; }
+p.id + p.rem, p.rem + p.rem { margin-top:-1.1em; }
 p.shortPrayer { text-align:center; }
 p.mt1 { text-align:center; font-size:1.8em; }
 p.mt2 { text-align:center; font-size:1.3em; }
+p.mt1 + p.mt2, p.mt2 + p.mt1 { margin-top:-0.5em; }
 p.s1 { margin-top:0.1em; margin-bottom:0; font-weight:bold; }
 p.added_s1 { margin-top:0.1em; margin-bottom:0.1em; text-align:right; font-size:0.7em; color:grey; font-weight:bold; }
 p.r { margin-top:0; margin-bottom:0; font-size:0.75em; }

@@ -53,10 +53,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-08-29' # by RJH
+LAST_MODIFIED_DATE = '2023-09-15' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
-PROGRAM_VERSION = '0.89'
+PROGRAM_VERSION = '0.90'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -818,7 +818,7 @@ def preform_gloss_and_word_number(thisList:List[Dict[str,str]], given_verse_row_
                                     f"{glossWord}_> {last_glossWord} <_\\add {glossPost}\\add*{post_punctuation}"
             last_glossWord = ''
         else:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Warning: Unexpected GlossInsert = '{last_glossInsert}' (ignored)")
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Warning: Unexpected GlossInsert = '{last_glossInsert}' (ignored) {thisList=} {given_verse_row_index=}")
     else:
         if glossInsert and last_glossInsert and glossInsert != last_glossInsert:
             msg = f"ERROR: preform_gloss() for {given_verse_row['CollationID']} should not have {glossInsert=} but '{last_glossInsert}'"

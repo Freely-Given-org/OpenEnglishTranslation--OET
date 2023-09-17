@@ -53,10 +53,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2023-08-30' # by RJH
+LAST_MODIFIED_DATE = '2023-09-12' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.74'
+PROGRAM_VERSION = '0.75'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -140,9 +140,11 @@ span.nd { font-weight:bold; }
 span.untr { font-size:0.8em; color:grey; text-decoration:line-through; }
 
 p.rem { font-size:0.8em; color:grey; }
+p.id + p.rem, p.rem + p.rem { margin-top:-1.1em; }
 p.shortPrayer { text-align:center; }
 p.mt1 { font-size:1.8em; }
 p.mt2 { font-size:1.3em; }
+p.mt1 + p.mt2, p.mt2 + p.mt1 { margin-top:-0.5em; }
 p.LVsentence { margin-top:0.2em; margin-bottom:0.2em; }
 """
 
