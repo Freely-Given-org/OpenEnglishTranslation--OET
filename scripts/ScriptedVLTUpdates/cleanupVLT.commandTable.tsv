@@ -4,10 +4,15 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 									_> 			_ 	removeInsert1Start	Remove indicator of start of inserted words (like "not") after pre
 									 <_			 _	removeInsert1End	Remove indicator of end of inserted words (like "not") after pre
 
-									_=> 			_ 	removeInsert2Start	Remove indicator of start of inserted words (like "not") after helper
-#									*_=> 			_ 	removeInsert2Start	Remove indicator of start of inserted words (like "not") after helper now \add ..\add*
-#									/_=> 			_ 	removeInsert2Start	Remove indicator of start of inserted words (like "not") after split helper
-									 <=_			 _	removeInsert2End	Remove indicator of end of inserted words (like "not") after helper
+									_˱			_	removeInsert2uStart	Remove indicator of start of inserted words (like "you_all") on pre
+									 ˱			 	removeInsert2sStart	Remove indicator of start of inserted words (like "you_all") on pre
+									˲_			_	removeInsert2uEnd	Remove indicator of end of inserted words (like "you_all") on pre
+									˲ 			 	removeInsert2sEnd	Remove indicator of end of inserted words (like "you_all") on pre
+
+									_=> 			_ 	removeInsert3Start	Remove indicator of start of inserted words (like "not") after helper
+#									*_=> 			_ 	removeInsert3Start	Remove indicator of start of inserted words (like "not") after helper now \add ..\add*
+#									/_=> 			_ 	removeInsert3Start	Remove indicator of start of inserted words (like "not") after split helper
+									 <=_			 _	removeInsert3End	Remove indicator of end of inserted words (like "not") after helper
 
 #									\add*_			_\add*	moveUnderlineInsideAddEnd	Put underlines inside add markers
 

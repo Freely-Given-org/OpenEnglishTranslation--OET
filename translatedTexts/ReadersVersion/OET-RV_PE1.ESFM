@@ -1,4 +1,4 @@
-\id 1PE - Open English Translation—Readers' Version (OET-RV) v0.0.04
+\id 1PE - Open English Translation—Readers' Version (OET-RV) v0.1.01
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 PE1
@@ -7,10 +7,10 @@
 \toc1 1 Peter
 \toc2 1 Peter
 \toc3 1 Ptr
-\mt2 The first letter of
+\mt2 The first letter from
 \mt1 Simon ‘the Rock’ (Peter)
 \is1 Introduction
-\ip \bk The first letter of Simon ‘Peter’\bk* was written to believers scattered throughout Asia Minor (also called Anatolia, now part of modern Turkey). Peter wrote to encourage the believers that it's necessary for them to be strong even in the middle of much persecution that comes because of their faith in the messiah. He reminds them about their salvation, the death of Yeshua the messiah, and of his coming back to life. Because Peter told them that there must always remember their hope in heaven, then they can persevere even throught all the difficulties here on earth. He also reminds them that if their faith holds strong through their suffering of difficulties and persecutions, they will receive a gift at “The time when Yeshua the messiah is revealed.” (1:7,13)
+\ip \bk The first letter from Simon ‘Peter’\bk* was written to believers scattered throughout Asia Minor (also called Anatolia, now part of modern Turkey). Peter wrote to encourage the believers that it's necessary for them to be strong even in the middle of much persecution that comes because of their faith in the messiah. He reminds them about their salvation, the death of Yeshua the messiah, and of his coming back to life. Because Peter told them that there must always remember their hope in heaven, then they can persevere even through all the difficulties here on earth. He also reminds them that if their faith holds strong through their suffering of difficulties and persecutions, they will receive a gift at “The time when Yeshua the messiah is revealed.” (1:7,13)
 \ip He also warns them that it's necessary to watch their behaviour as followers of the messiah and it's necessary that they follow the guidance of their elders.
 \iot Main components of Peter's letter
 \io1 Introduction \ior 1:1-2\ior*
@@ -26,7 +26,7 @@
 \rem /s1 Salutation; Greetings from Peter
 \p
 \v 1 \add This letter is from\add* Peter, a missionary for \nd Yeshua¦149423\nd* the \nd messiah¦149424\nd*.
-\p \add It's written\add* to those who've been chosen \add by God\add* and dispersed¦149428 \add by persecution\add* throughout \add the provinces of\add* Pontus¦149429, Galatia¦149430, Cappadocia¦149431, Asia and Bithynia.
+\p \add It's written\add* to those who've been chosen \add by God\add* and dispersed¦149428 \add by persecution\add* throughout \add the provinces of\add* Pontus¦149429, Galatia¦149430, Cappadocia¦149431, Asia \add Minor\add* and Bithynia.
 \v 2 \add They were \nd chosen¦149448\nd*\add* in advance by God the father¦149438 by his pure \nd spirit¦149441\nd*, thanks to the obedience¦149443 of \nd Yeshua¦149447\nd* the \nd messiah¦149448\nd* and the sprinkling¦149445 of his blood¦149446.
 \rem /s1 Praise to God for a Living Hope; The Hope of Eternal Life; Peter gives thanks
 \p May \add God give\add* you¦149450 all grace¦149449 and multiplied¦149453 peace¦149452.
@@ -37,7 +37,7 @@
 \v 5 who are guarded¦149504 through¦149505 faith¦149506 by God's power¦149502, because¦149507 salvation¦149508 is ready¦149510 to be revealed¦149511 in the final age.
 \p
 \v 6 \add This salvation\add* brings some happiness now, although offset by the sorrow¦149524 of various¦149528 trials¦149530 \add that you¦149517 all go through\add*
-\v 7 in order¦149531 that your faith will be purified by fire, like gold but \add even\add* more precious¦149539 because gold perishes¦149544. \nd Then\nd* your faith will lead to praise¦149552 and glory¦149555 and honour¦149559 when \nd Yeshua¦149562\nd* the \nd messiah¦149563\nd* is revealed,
+\v 7 in order¦149531 that your faith will be purified by fire, like gold but \add even\add* more precious¦149539 because gold perishes¦149544. Then your faith will lead to praise¦149552 and glory¦149555 and honour¦149559 when \nd Yeshua¦149562\nd* the \nd messiah¦149563\nd* is revealed,
 \v 8 the one you all love although you've never seen¦149567 him. Yet you all believe¦149575 and because of that you are more happy than you all can even show AND HAVING BEEN GLORIFIED, 
 \v 9 you'll receive¦149583 the result of your faith¦149587 which is the salvation¦149589 of your souls¦149590.
 \rem /s1 The calling of a Christian
@@ -48,7 +48,7 @@
 \s1 The holy behaviour of believers
 \rem /s1 A Call to Holy Living; Be Holy
 \p
-\v 13 \nd So\nd* take this seriously and get your minds prepared, and putting your full hope on the grace¦149673 that will be brought¦149671 to you all by the revelation¦149675 of \nd Yeshua¦149676\nd* the \nd messiah¦149677\nd*.
+\v 13 So take this seriously and get your minds prepared, and putting your full hope on the grace¦149673 that will be brought¦149671 to you all by the revelation¦149675 of \nd Yeshua¦149676\nd* the \nd messiah¦149677\nd*.
 \v 14 As people who want to obey, don't¦149681 conform¦149682 to your earlier¦149684 desires¦149689 that came from your ignorance¦149687,
 \v 15 but¦149690 just as \add God\add* who called¦149693 you¦149694 is holy, your yourselves¦149697 need to be holy in all your conduct¦149701,
 \v 16 \x + \xo 1:16: \xt Lev 11:44-45; 19:2.\x*because it's been written¦149705 that ‘you¦149708 all will be holy because I am holy.’
@@ -106,7 +106,7 @@
 \v 14 or the governors¦150152 that he sends to punish those who do evil and to praise¦150161 those who do good.
 \v 15 It's God's will that you all silence¦150174 the ignorant¦150181 \add talk\add* of foolish¦150178 people¦150179 by doing¦150171 good¦150171.
 \v 16 Live as if you're all free, but¦150194 don't¦150185 use that freedom¦150193 to cover¦150187 up evil¦150191—use it as God's slaves¦150198.
-\v 17 Honour others and be loving¦150204 towards your fellow believers.Reverse \nd God¦150208\nd* as well as honouring¦150212 the king¦150211.
+\v 17 Honour others and be loving¦150204 towards your fellow believers. Revere \nd God¦150208\nd* as well as honouring¦150212 the king¦150211.
 \s1 Doing good despite suffering
 \rem /s1 Slaves; Servants; The Example of Christ's Suffering
 \p
@@ -182,7 +182,7 @@
 \v 12 Dear friends, don't¦151033 be surprised¦151034 as the fiery¦151039 trials that you all will have to face as a test, as though¦151044 it's something unusual that's happening¦151047 to you,
 \v 13 but rather as you all share in the sufferings¦151054 of the \nd messiah¦151053\nd*, stay positive so that you will all be happy as you're also glad to see his¦151063 honour revealed.
 \v 14 You all \add will be\add* blessed¦151071 if you are derided¦151067 in the name¦151069 of the \nd messiah¦151070\nd* because¦151072 God's spirit rests on you all—the spirit that honours \add him\add*.
-\v 15 None of you should suffer¦151102 \add persecution\add* because you're a murderer¦151104 or a thief¦151108 or a trouble-maker or nosey-parker,
+\v 15 None of you should suffer¦151102 \add persecution\add* because you're a murderer¦151104 or a thief¦151108 or a troublemaker or nosey-parker,
 \v 16 but if you \add suffer\add* for being¦151124 a follower¦151122 of the messiah¦151122, then there's no need to feel ashamed¦151124 but \add instead\add* be praising \nd God¦151128\nd* in that name¦151131.
 \p
 \v 17 It's time¦151136 to begin judgement and to begin with God's people, and if we're judged first¦151148, what will the outcome¦151154 be for those who refuse to believe in God's good¦151161 message¦151161?

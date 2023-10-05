@@ -1,4 +1,4 @@
-\id MRK - Open English Translation—Readers' Version (OET-RV) v0.1.02
+\id MRK - Open English Translation—Readers' Version (OET-RV) v0.1.03
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 MRK
@@ -19,7 +19,7 @@
 \ip The ending of this account is often disputed, and scholars are still \jmp debating|link-href="https://textandcanon.org/a-case-for-the-longer-ending-of-mark"\jmp* about whether or not the longer ending (16:9-20) is original. The \em OET\em* includes the disputed longer ending, but displays it in a lighter colour to indicate its debatable status.
 \iot Main components of Mark's account
 \io1 Preparation for and arrival of the messiah \ior 1:1-13\ior*
-\io1 Yeshua's activites in and around Galilee \ior 1:14–9:50\ior*
+\io1 Yeshua's activities in and around Galilee \ior 1:14–9:50\ior*
 \io1 The transition from Galilee to Yerusalem \ior 10:1-52\ior*
 \io1 The final week in Yerusalem \ior 11:1–15:47\ior*
 \io1 Yeshua comes back to life \ior 16:1-20\ior*
@@ -29,7 +29,7 @@
 \rem /s1 The Proclamation of John the Baptist; John the Baptist and Jesus; The Preaching of John the Baptist; John the Baptist Prepares the Way
 \rem /r (Matthew 3.1-12; Luke 3.1-18; John 1.19-28)
 \m
-\v 1 \nd Here\nd* begins¦21749 the good¦21751 message¦21751 about \nd Yeshua¦21752\nd* the \nd messiah¦21754\nd*—the son of \nd God¦21757\nd*:
+\v 1 Here begins¦21749 the good¦21751 message¦21751 about \nd Yeshua¦21752\nd* the \nd messiah¦21754\nd*—the son of \nd God¦21757\nd*:
 \s1 The ministry of Yohan the immerser (The return of ‘Eliyah’)
 \r (Mat. 3:1-12; Luk. 3:1-18; Jhn. 1:19-28)
 \p
@@ -62,7 +62,7 @@
 \rem /s1 Proclaiming the kingdom; The Calling of the First Disciples; The Beginning of the Galilean Ministry; Jesus Calls Four Fishermen
 \r (Mat. 4:12-22; Luk. 4:14-15; 5:1-11)
 \p
-\v 14 \nd After\nd* Yohan¦22114 had been arrested, \nd Yeshua¦22117\nd* went back up to Galilee¦22120 announcing¦22121 the good¦22123 news from \nd God¦22127\nd*
+\v 14 After Yohan¦22114 had been arrested, \nd Yeshua¦22117\nd* went back up to Galilee¦22120 announcing¦22121 the good¦22123 news from \nd God¦22127\nd*
 \v 15 \x + \xo 1:15: \xt Mat 3:2.\x*saying¦22129, “\wj The promised time¦22135 is here, and God's kingdom¦22140 is now near. Turn from your sins and believe¦22147 this good¦22150 news.\wj*”
 \rem /s1 Jesus Calls the First Disciples
 \p
@@ -137,7 +137,7 @@
 \p
 \v 8 Then \nd Yeshua¦22964\nd*, knowing¦22962 in his¦22968 spirit¦22967 that they are thinking like that, said to them, “\wj Why are you thinking that to yourselves¦22986?\wj*
 \v 9 \wj Which¦22988 is easier¦22991: to tell the paralysed¦22994 man that his sins¦23001 have been forgiven¦22997, or to tell him to pick up his bedding¦23011 and walk¦23015?\wj*
-\v 10 \wj But¦23038 so you all can see that humanity's child \em does\em* have authority¦23032 here on the earth¦23043 to forgive¦23044 sins¦23045,\wj*” he turned and said to the paralysed¦23048 man,
+\v 10 \wj But¦23038 so you all can see that humanity's child \em does\em* have authority¦23032 here on the earth¦23043 to forgive¦23044 sins¦23045,\wj*” he turned and said to the paralysed¦23048 man¦23038,
 \v 11 “\wj Listen. Get up, take¦23055 your¦23059 bedding¦23057, and¦23060 go home¦23064!\wj*”
 \p
 \v 12 So the man stood up, and picked up his bedding¦23080, and went out of the house where everyone saw¦23104 him and marvelled¦23088 and praised¦23094 \nd God¦23096\nd* saying¦23098, “We've¦23104 never¦23103 seen anything happen like this before¦23083!”
@@ -268,7 +268,7 @@
 \v 13 Then Yeshua said to them, “\wj If you didn't understand this parable¦24715, how will you understand any others?\wj*
 \v 14 \wj The one spreading seed is spreading the Good News.\wj*
 \v 15 \wj And there are some along¦24735 the path where¦24739 the Good News is being¦24740 spread, who hear, but Satan¦24752 turns up immediately¦24748 and snatches the message from them.\wj*
-\v 16 \wj And similarly, there's some the falls onto rocky¦24780 places¦24780 where the people who hear¦24786 the Good News happily accept it¦24794,\wj*
+\v 16 \wj And similarly, there's some that falls onto rocky¦24780 places¦24780 where the people who hear¦24786 the Good News happily accept it¦24794,\wj*
 \v 17 \wj but don't¦24796 make strong roots, just temporary¦24802 \add changes\add*. So when they get mocked or attacked about accepting the Good News, they quickly stumble¦24816.\wj*
 \v 18 \wj Others are the ones where the seed was spread among¦24825 the thistles. They heard¦24837 the Good News,\wj*
 \v 19 \wj but contemporary topics, or the lure of money, or the appetite for other¦24861 things¦24861 choke their good intentions and the message¦24866 becomes¦24870 unfruitful¦24868 in them.\wj*
@@ -315,7 +315,7 @@
 \p
 \v 41 But now they were very afraid¦25347 \add again\add* and asked each other, “Who could this man be that both the wind¦25363 and waves obey¦25373 him¦25372?”
 \c 5
-\s1 Yeshua send the demons into the pigs
+\s1 Yeshua sends the demons into the pigs
 \rem /s1 Jesus Heals a Demon-Possessed Man; Jesus Heals the Gerasene Demoniac; Jesus Heals a Man with Evil Spirits; The Healing of a Demon-possessed Man
 \r (Mat. 8:28-34; Luk. 8:26-39)
 \p
@@ -325,7 +325,7 @@
 \v 4 because¦25440 he had often¦25443 been tied up in the past with shackles and chains but had always pulled the chains apart¦25456 and smashed the shackles, and no one was able to subdue him.
 \v 5 All through¦25482 the day¦25487 and night¦25484, whether in the tombs¦25492 or up in the hills, he was yelling out and hurting himself¦25505 with stones¦25507.
 \p
-\v 6 \nd So\nd* when he had seen¦25509 \nd Yeshua¦25512\nd* in the distance, he ran¦25515 and \add as a sign of honour\add* fell to the ground in front of him.
+\v 6 So when he had seen¦25509 \nd Yeshua¦25512\nd* in the distance, he ran¦25515 and \add as a sign of honour\add* fell to the ground in front of him.
 \v 7 Then he called out very loudly¦25524, “What will happen between us, \nd Yeshua¦25532\nd*, the son of the highest¦25537 God? I beg you in God's name not to torment¦25545 me.”
 \v 8 Because¦25548 Yeshua had already started saying¦25547, “\wj Come out of the man¦25561 you ungodly spirit¦25554!\wj*”
 \p
@@ -352,7 +352,7 @@
 \rem /s1 A Girl Restored to Life and a Woman Healed; A Dead Girl and a Sick Woman; Jesus Heals in Response to Faith; Jairus' Daughter and the Woman Who Touched Jesus' Cloak
 \r (Mat. 9:18-26; Luk. 8:40-56)
 \p
-\v 21 \nd When\nd* \nd Yeshua¦25850\nd* had crossed¦25847 in the boat¦25853 to the other side of the lake, a large crowd¦25863 of people came out to the lake edge to see him¦25867.
+\v 21 When \nd Yeshua¦25850\nd* had crossed¦25847 in the boat¦25853 to the other side of the lake, a large crowd¦25863 of people came out to the lake edge to see him¦25867.
 \v 22 A religious leader¦25879 named Jairus came out, and when he found Yeshua he fell down at his¦25893 feet¦25892
 \v 23 and pleaded, “My¦25905 young daughter¦25904 is critical and just hanging on for you¦25912 to come¦25909 and touch her¦25922 so that she¦25925 can be healed¦25925 and live¦25927.”
 \p
@@ -438,7 +438,7 @@
 \rem /s1 Miracles of feeding and their significance; Jesus Feeds Five Thousand; Feeding the Five Thousand
 \r (Jn 6:1-14; Mat. 14:13-21; Luk. 9:10-17)
 \p
-\v 30 \nd Now\nd* the apprentices who had been sent out returned back to \nd Yeshua¦27079\nd* and they reported¦27081 back everything they had done and what they had been teaching \add people\add*.
+\v 30 Now the apprentices who had been sent out returned back to \nd Yeshua¦27079\nd* and they reported¦27081 back everything they had done and what they had been teaching \add people\add*.
 \v 31 Then he told them, “\wj Let's just all of us head for a quiet¦27106 place¦27107 and take a break.\wj*” This was because there were so many people always coming¦27117 and going¦27120, and sometimes they didn't even have a chance to eat¦27124.
 \v 32 So they¦27131 went¦27131 by boat¦27136 away to a quiet¦27140 place¦27141 by themselves¦27145.
 \p
@@ -457,7 +457,7 @@
 \v 40 So they sat¦27342 down in rows of fifty¦27352 to a hundred¦27348.
 \v 41 Then holding the five buns and two fish, he looking up to the sky¦27365 and blessed¦27366 \add God\add*, and then broke¦27370 up the buns and gave pieces to his¦27378 apprentices¦27377 so they could do likewise to the people, and he also divided¦27389 up the two fish,
 \v 42 and all the people ate¦27392 and were satisfied¦27395.
-\v 43 Then they¦27397 collected the left-over pieces of bread, filling¦27403 twelve¦27400 baskets¦27402, as well as the left-over pieces of fish.
+\v 43 Then they¦27397 collected the leftover pieces of bread, filling¦27403 twelve¦27400 baskets¦27402, as well as the leftover pieces of fish.
 \v 44 And the headcount of men¦27420 who ate that evening was five¦27418 thousand¦27418.
 \s1 Yeshua walks on the lake surface
 \rem /s1 Jesus Walks on the Water
@@ -566,14 +566,14 @@
 \p
 \v 6 So Yeshua instructed the crowd to sit down on the ground¦28690. Then he took the seven¦28694 buns, gave thanks¦28697 and broke¦28698 them and gave pieces to his¦28704 apprentices¦28703 to then distribute to the crowd.
 \v 7 They also had a few small¦28715 cooked fish, so he¦28723 blessed¦28720 them too and¦28717 got them to distribute them as well.
-\v 8 After all the people had eaten and were full, they collected seven¦28750 basketfulls¦28751 of leftovers.
+\v 8 After all the people had eaten and were full, they collected seven¦28750 basketfuls¦28751 of leftovers.
 \v 9 There were some four¦28759 thousand¦28759 people there that day, and Yeshua sent¦28761 them home after they'd eaten¦28757.
 \v 10 And he and his¦28777 apprentices¦28776 climbed into the boat¦28773 and headed for the Dalmanutha¦28789 region.
 \s1 The religious leaders want to see a miracle
 \rem /s1 The Demand for a Sign; Pharisees Demand a Miraculous Sign; The Pharisees Ask for a Miracle
 \r (Mat. 16:1-4)
 \p
-\v 11 \x + \xo 8:11: \xt Mat 12:38; Luk 11:16.\x*Some men from the Pharisee¦28797 party¦28797 came¦28794 out to Yeshua amd started arguing with him. They were checking him out and wanted to see a miracle.
+\v 11 \x + \xo 8:11: \xt Mat 12:38; Luk 11:16.\x*Some men from the Pharisee¦28797 party¦28797 came¦28794 out to Yeshua and started arguing with him. They were checking him out and wanted to see a miracle.
 \v 12 \x + \xo 8:12: \xt Mat 12:39; Luk 11:29.\x*Yeshua grieved inside and asked, “\wj Why do you people need to see a miracle before you'll believe me? Actually, no miracle will be done for this generation.\wj*”
 \p
 \v 13 So Yeshua left in the boat again¦28851 and crossed to the other side of the lake.
@@ -588,7 +588,7 @@
 \p
 \v 17 But \nd Yeshua¦28919\nd* knew what they were saying¦28920 and asked, “\wj Why are you all discussing about not having food? Can't you figure it¦28917 out? Or are your¦28949 minds completely closed?\wj*
 \v 18 \x + \xo 8:18: \xt Jer 5:21; Eze 12:2; Mrk 4:12.\x*\wj You all have eyes¦28950 but can't seem to see and have ears¦28959 but can't seem to listen. Have you already forgotten what just happened?\wj*
-\v 19 \wj When I broke¦28979 up the five buns to feed five thousand¦28982 people, how many basketfulls¦28985 of leftovers did you collect?\wj*”
+\v 19 \wj When I broke¦28979 up the five buns to feed five thousand¦28982 people, how many basketfuls¦28985 of leftovers did you collect?\wj*”
 \p “Twelve¦28993,” they answered.
 \p
 \v 20 “And when we fed four¦29002 thousand¦29002 with seven¦28998 buns, how many full baskets¦29005 of leftovers then?”
@@ -643,7 +643,7 @@
 \v 6 He said that because¦29647 they¦29648 were terrified¦29646 and didn't know what to say.
 \p
 \v 7 \x + \xo 9:7: \xt Mat 3:17; Mrk 1:11; Luk 3:22.\x*Then a cloud came over the sun and a voice¦29660 came out of the cloud saying, “This is my¦29671 dear son. Listen to him.”
-\v 8 \nd When\nd* they looked¦29683 around¦29683, they couldn't see anyone else there any more, except¦29690 for \nd Yeshua¦29694\nd* himself.
+\v 8 When they looked¦29683 around¦29683, they couldn't see anyone else there any more, except¦29690 for \nd Yeshua¦29694\nd* himself.
 \rem /s1 The Coming of Elijah
 \p
 \v 9 As they descended again, Yeshua told them to tell no one what had happened up there until after humanity's child came back to life.
@@ -678,7 +678,7 @@
 \v 25 Then \nd Yeshua¦30080\nd* noticing that a big crowd¦30085 was quickly forming, scolded the evil spirit, “\wj You spirit who causes muteness and deafness. Leave this boy now and never return to him.\wj*”
 \p
 \v 26 There was yelling and strong convulsions¦30120, and then the demon left¦30122 him and the boy lay still as if dead¦30129, and many people thought he was.
-\v 27 \nd But\nd* \nd Yeshua¦30139\nd* took his¦30144 hand¦30143 and lifted it, and the boy got up.
+\v 27 But \nd Yeshua¦30139\nd* took his¦30144 hand¦30143 and lifted it, and the boy got up.
 \p
 \v 28 When Yeshua and his¦30163 apprentices¦30162 had gone into the house¦30157 by themselves¦30167, they asked him, “How come¦30152 we couldn't drive it¦30184 out?”
 \p
@@ -841,7 +841,7 @@
 \v 4 So they went ahead and found¦32014 a donkey tied up on the path just outside¦32021 the door¦32020 of a house, and so they went to untie it.
 \v 5 But some of the people standing around there¦32032 said, “Hoy! What do you think you're doing¦32038 untying that donkey?”
 \p
-\v 6 \nd So\nd* they responded just as \nd Yeshua¦32053\nd* had told them, and the people allowed¦32055 them to proceed.
+\v 6 So they responded just as \nd Yeshua¦32053\nd* had told them, and the people allowed¦32055 them to proceed.
 \v 7 They brought the young donkey to Yeshua, placing their¦32074 coats¦32072 over it before Yeshua mounted it.
 \v 8 \add As Yeshua rode it into Yerusalem,\add* many people laid their¦32090 coats¦32088 on the road¦32097, while others¦32099 lay down leafy¦32101 branches¦32101 cut from trees in nearby fields¦32107.
 \v 9 \x + \xo 11:9: \xt Psa 118:25-26.\x*Some went ahead and others came along behind, shouting, “This is the saviour¦32123 who comes with the authority and blessing¦32124 from God—
@@ -910,7 +910,7 @@
 \v 8 \wj So they took him and killed¦32893 him, and threw the body outside¦32899 the vineyard¦32901 fence.\wj*
 \p
 \v 9 “\wj Now, what do you think the owner of the vineyard will do? Yes, he'll come and eliminate those \add evil\add* tenants¦32913, and give the contract to others¦32918.\wj*
-\v 10 \x + \xo 12:10-11: \xt Psa 118:22-23.\x*\wj Haven't you all read this in the scriptures¦32921:\wj*
+\v 10 \x + \xo 12:10-11: \xt Psa 118:22-23.\x*\wj Haven't¦32925 you all read this in the scriptures¦32921:\wj*
 \q1 \wj ‘the stone¦32925 that the builders¦32929 rejected¦32927\wj*
 \q1 \wj became the \add important\add* cornerstone¦32934\wj*
 \q1
@@ -996,7 +996,7 @@
 \p
 \v 1 As they were leaving the temple¦33810 area, one of Yeshua's followers noted, “Teacher¦33819, look at these \add large\add* stones¦33822 and¦33823 the \add beautiful\add* buildings¦33825 that they've been made into.”
 \p
-\v 2 But \nd Yeshua¦33831\nd* responded, “\wj Yes, incredible buildings¦33843, but \add the time will come\add* when they're torn down—not a single stone¦33854 will be left sitting in its place.\wj*”
+\v 2 But \nd Yeshua¦33831\nd* responded, “\wj Yes, incredible buildings¦33843, but \add the time will come\add* when they're torn down—not a single \add piece of\add* stone¦33854 will be left sitting in its place.\wj*”
 \s1 Yeshua talks about coming hardships
 \rem /s1 Troubles and Persecutions
 \r (Mat. 24:3-14; Luk. 21:7-19)
@@ -1004,7 +1004,7 @@
 \v 3 Later when they were over on the Mount¦33878 of Olives¦33880 overlooking the temple¦33883, Peter and Yacob¦33893 and Yohan¦33895 and Andrew¦33897 were with Yeshua and asked
 \v 4 when all this destruction would happen, and¦33904 what indications there would be that it's about to happen.
 \p
-\v 5 So \nd Yeshua¦33921\nd* told them, “\wj Be careful so that you¦33932 aren't mislead¦33933 by others.\wj*
+\v 5 So \nd Yeshua¦33921\nd* told them, “\wj Be careful so that you¦33932 aren't misled¦33933 by others.\wj*
 \v 6 \wj Plenty of people will say that they're coming¦33937 under my¦33941 authority, or that they're me, and¦33948 they'll mislead¦33951 many others.\wj*
 \v 7 \wj And whenever¦33952 you¦33954 hear¦33954 about wars or about battles about to begin, don't¦33961 be worried—these things will certainly happen, but¦33966 there's more to follow.\wj*
 \v 8 \wj Countries will take up arms against other countries¦33972, and kingdoms against other kingdom. There'll¦33980 be earthquakes¦33981 in \add many\add* places¦33983 and there'll¦33985 be famines¦33986, but these¦33992 will be just like the beginning¦33990 of birth¦33991 pains¦33991.\wj*
@@ -1062,7 +1062,7 @@
 \r (Jn 11:45-53; Mat. 26:1-5; Luk. 22:1-2)
 \p
 \v 1 \x + \xo 14:1: \xt Exo 12:1-27.\x*Now it was two¦34627 days¦34628 before the Passover Feast and the Feast of Flat Bread, and the chief¦34632 priests¦34632 and the religious¦34636 teachers¦34636 were trying to figure out how they could have Yeshua set up so they could arrest him and have him executed,
-\v 2 but they¦34645 knew that the Feast wouldn't be a good time because the people¦34658 would protest in Yeshua's favour.
+\v 2 but they¦34645 knew that the Feast wouldn't be a good time because the people¦34658 would protest \add in Yeshua's favour\add*.
 \s1 The woman anoints Yeshua for his burial
 \rem /s1 Jesus Is Anointed at Bethany; The Anointing at Bethany
 \r (Jn 12:1-8; Mat. 26:6-13)
@@ -1164,9 +1164,9 @@
 \rem /s1 Jesus before the Council; Before the Sanhedrin
 \r (Jn 18:13-14,19-24; Mat. 26:57-68; Luk. 22:54-55,63-71)
 \p
-\v 53 \nd The\nd* guards led \nd Yeshua¦35747\nd* away to the chief priest's residence, and all the chief priests¦35760 and the elders¦35765 and the religious¦35769 teachers¦35769 gathered there also.
+\v 53 The guards led \nd Yeshua¦35747\nd* away to the chief priest's residence, and all the chief priests¦35760 and the elders¦35765 and the religious¦35769 teachers¦35769 gathered there also.
 \v 54 Peter¦35772 followed¦35775 along from a distance and went in as far as the courtyard¦35782 of the residence where he joined the servants who were sitting¦35788 around the fire¦35797 keeping warm.
-\v 55 \nd Inside\nd*, the chief¦35800 priests¦35800 and all the council¦35804 were trying to establish a case against¦35806 \nd Yeshua¦35808\nd* so he could be sentenced to death¦35814, but they weren't coming up with anything.
+\v 55 Inside, the chief¦35800 priests¦35800 and all the council¦35804 were trying to establish a case against¦35806 \nd Yeshua¦35808\nd* so he could be sentenced to death¦35814, but they weren't coming up with anything.
 \v 56 Several were making up charges against¦35825 him¦35826, but¦35827 none of the accusers' stories agreed with each other.
 \p
 \v 57 Eventually some of them stood¦35836 up and offered this false¦35837 charge:
@@ -1177,7 +1177,7 @@
 \p
 \v 61 But Yeshua didn't say anything. So the chief¦35910 priest¦35910 asked again, “Is it true that you're the \nd chosen¦35924\nd* one that God promised to send—the son of the blessed¦35930 \add God\add*?”
 \p
-\v 62 \x + \xo 14:62: \xt Dan 7:13.\x*\nd Yeshua¦35934\nd* replied, “I am. And you¦35942 will all see humanity's child sitting¦35950 in the honoured postion by the powerful¦35952 God and¦35953 coming¦35954 through the clouds¦35958 in the sky¦35961.”
+\v 62 \x + \xo 14:62: \xt Dan 7:13.\x*\nd Yeshua¦35934\nd* replied, “I am. And you¦35942 will all see humanity's child sitting¦35950 in the honoured position by the powerful¦35952 God and¦35953 coming¦35954 through the clouds¦35958 in the sky¦35961.”
 \p
 \v 63 Then the chief¦35964 priest¦35964 tore his own robe \add to show his disgust\add* and shouted, “We certainly don't need any more witnesses¦35976 now!
 \v 64 \x + \xo 14:64: \xt Lev 24:16.\x*You yourselves all heard¦35979 him¦35999 insult God. What sentence does that deserve?”
@@ -1213,7 +1213,7 @@
 \v 3 Then the chief¦36289 priests¦36289 started hurling accusations¦36285 against¦36287 Yeshua.
 \v 4 So Pilate¦36297 asked¦36299 him¦36301 again, “Don't you have anything to say? Listen to all these accusations¦36311 they're making against you.”
 \p
-\v 5 \nd But\nd* Pilate¦36322 was astounded that \nd Yeshua¦36315\nd* didn't answer¦36318 any further.
+\v 5 But Pilate¦36322 was astounded that \nd Yeshua¦36315\nd* didn't answer¦36318 any further.
 \s1 Pilate agrees to execute an innocent man
 \rem /s1 Jesus Is Sentenced to Death; Pilate Hands Jesus over to Be Crucified
 \r (Jn 18:39–19:16; Mat. 27:15-26; Luk. 23:13-25)
@@ -1231,7 +1231,7 @@
 \v 14 Pilate¦36448 demanded, “What has he even done wrong?”
 \p But they just yelled¦36460 louder, “Execute¦36463 him on a pole!”
 \p
-\v 15 \nd Now\nd* Pilate¦36467 wanted to placate the crowd¦36470, so he had Barabbas¦36481 released while he had \nd Yeshua¦36487\nd* flogged¦36488 and then handed over to the execution¦36492 squad.
+\v 15 Now Pilate¦36467 wanted to placate the crowd¦36470, so he had Barabbas¦36481 released while he had \nd Yeshua¦36487\nd* flogged¦36488 and then handed over to the execution¦36492 squad.
 \s1 The battalion plays with their mock “king”
 \rem /s1 The Soldiers Make Fun of Jesus; The Soldiers Mock Jesus
 \r (Jn 19:2-3; Mat. 27:27-31)
@@ -1247,7 +1247,7 @@
 \p
 \v 21 \x + \xo 15:21: \xt Rom 16:13.\x*As they walked out of the city, they came across a man¦36586 coming¦36592 in from the country¦36595. He was Simon¦36588 from Cyrene, the father¦36597 of Alexander¦36598 and Rufus, and the soldiers forced him¦36605 to carry¦36602 the execution pole,
 \v 22 and so they¦36608 all arrived at Golgotha¦36614 (which¦36616 means “Place¦36621 of the skull¦36621”).
-\v 23 There the soliders went to give some spiced wine to Yeshua, but¦36633 he¦36635 declined it.
+\v 23 There the soldiers went to give some spiced wine to Yeshua, but¦36633 he¦36635 declined it.
 \v 24 \x + \xo 15:24: \xt Psa 22:18.\x*So they¦36641 carried out the execution¦36637, taking Yeshua's clothes¦36644 and¦36651 drawing straws to see who would get what.
 \v 25 By now it¦36654 was 9am, and¦36659 they¦36661 affixed Yeshua to the pole.
 \v 26 The charge¦36669 had been written out and attached \add at the top\add*: “The King of the Jews¦36677.”
@@ -1270,7 +1270,7 @@
 \v 35 Some of the people standing nearby thought he was calling¦36847 the prophet Eliyah.
 \v 36 \x + \xo 15:36: \xt Psa 69:21.\x*One of them ran, and soaked a sponge¦36857 in some sour wine, then put it on a stick and held it up for Yeshua to drink¦36863, saying¦36865, “Hang on. Let's see¦36869 if Eliyah does come to get him down.”
 \p
-\v 37 \nd But\nd* just then \nd Yeshua¦36877\nd* uttered a loud¦36880 cry¦36879 and exhaled his last breath.
+\v 37 But just then \nd Yeshua¦36877\nd* uttered a loud¦36880 cry¦36879 and exhaled his last breath.
 \p
 \v 38 \x + \xo 15:38: \xt Exo 26:31-33.\x*(Back in the temple¦36886, the curtain¦36884 tore down the middle from the top to the bottom¦36895.)
 \v 39 The Roman centurion¦36899 who had been standing back watching everything, said¦36915 when Yeshua died, “This man¦36919 was definitely God's son.”

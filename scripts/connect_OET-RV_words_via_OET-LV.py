@@ -38,7 +38,8 @@ CHANGELOG:
     2023-07-31 Added character marker checks for each RV line
     2023-08-29 Added nomina sacra for connected words in RV
     2023-09-11 Fix bug that connected the wrong (not the same) simple words
-    2023-09-12 Fix bug that caused two nested /nd markers (after numbers had been deleted)
+    2023-09-12 Fix bug that caused two nested /nd markers (when rerunning after numbers had been deleted)
+    2023-09-28 Concatenate consecutive /nd fields
 """
 from gettext import gettext as _
 from tracemalloc import start
@@ -59,10 +60,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-09-16' # by RJH
+LAST_MODIFIED_DATE = '2023-09-29' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.53'
+PROGRAM_VERSION = '0.55'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -351,7 +352,8 @@ def connect_OET_RV( rv, lv ):
             dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"connect_OET_RV {BBB} has {numChapters} chapters!!!" )
             assert BBB in ('INT','FRT',)
 
-        newESFMtext = '\n'.join( state.rvESFMLines )
+        newESFMtext = '\n'.join( state.rvESFMLines ) \
+                          .replace( '\\nd* \\nd ', ' ' ) # Concatenate consecutive nd fields
         if newESFMtext != state.rvESFMText:
             dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{BBB} ESFM text has changed {len(state.rvESFMText):,} chars -> {len(newESFMtext):,} chars" )
             if BBB=='ACT': newESFMtext = newESFMtext.replace( ' 120¦', ' 12Z¦' ) # Avoid false alarm
@@ -968,6 +970,7 @@ def doGroup2( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
 
             ('Truly', 'May it be so'),
 
+            ('members', 'body parts'),
             ('risen', 'got up'),
             ('scribes', 'religious teachers'),
             ('seeking', 'looking for'),
@@ -1094,7 +1097,8 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
                                       #   (This can happen after word numbers are deleted.)
                     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Have NS on {word=} {line[match.start()-6:match.start()]=} {line[match.end():match.end()+6]=} {line=}" )
                     if (match.end()==len(line) or not line[match.end()]=='¦') \
-                    and not line[match.end():match.end()+4] == '\\nd*':
+                    and not line[match.end():match.end()+4] == '\\nd*' \
+                    and not line[match.end():match.end()+5] == '\\+nd*':
                         addNominaSacra = True
                         dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Adding NS on {word=} {line[match.start()-6:match.start()]=} {line[match.end():match.end()+6]=} {line=}" )
 

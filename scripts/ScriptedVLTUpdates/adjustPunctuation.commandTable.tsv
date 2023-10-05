@@ -1,4 +1,7 @@
 Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	RCase	Replace	Name	Comment
+					JHN_10:14				.			,	replacePeriod	Replace period with comma
+					JHN_10:15				As			as	removeCapital	Remove capital letter
+
 #l									  			 	removeDoubleSpaces	Remove double spaces in entire file
 
 				rem					!			. 	replaceExclamationMark	Replace interpretive exclamation mark with period
