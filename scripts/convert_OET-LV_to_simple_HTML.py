@@ -53,10 +53,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2023-09-12' # by RJH
+LAST_MODIFIED_DATE = '2023-10-15' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.75'
+PROGRAM_VERSION = '0.76'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -1064,55 +1064,58 @@ def make_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fil
 
         columnHeaders = word_table[0]
         dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Word table column headers = '{columnHeaders}'" )
-        assert columnHeaders == 'Ref\tGreek\tLemma\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\tTags', columnHeaders # If not, probably need to fix some stuff
+        assert columnHeaders == 'Ref\tGreekWord\tSRLemma\tGreekLemma\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\tTags', columnHeaders # If not, probably need to fix some stuff
 
         # First make a list of each place the same Greek word (and matching morphology) is used
         # TODO: The word table has Matthew at the beginning (whereas the OET places John and Mark at the beginning) so we do JHN first
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Finding all uses of {len(word_table)-1:,} words in {word_table_filename}…" )
+        # Process John first
         for n, columns_string in enumerate( word_table[1:], start=1 ):
             if columns_string.startswith( 'JHN' ):
-                wordRef, greek, lemma, glossWords, glossCaps,probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
+                wordRef, greekWord, SRLemma, _GrkLemma, glossWords, glossCaps, probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
                 formattedGlossWords = glossWords \
                                         .replace( '/', '<span class="glossHelper">', 1 ).replace( '/', '</span>', 1 ) \
                                         .replace( '˱', '<span class="glossPre">', 1 ).replace( '˲', '</span>', 1 ) \
                                         .replace( '‹', '<span class="glossPost">', 1 ).replace( '›', '</span>', 1 )
                 if probability:
-                    formKey2Tuple = (greek, None if morphology=='None' else morphology)
+                    formKey2Tuple = (greekWord, None if morphology=='None' else morphology)
                     formUsageDict[formKey2Tuple].append( n )
-                    lemmaDict[lemma].append( n )
-                    lemmaFormsDict[lemma].add( formKey2Tuple )
+                    lemmaDict[SRLemma].append( n )
+                    lemmaFormsDict[SRLemma].add( formKey2Tuple )
                     formGlossesDict[formKey2Tuple].add( formattedGlossWords )
-                    lemmaGlossesDict[lemma].add( formattedGlossWords )
+                    lemmaGlossesDict[SRLemma].add( formattedGlossWords )
             elif formUsageDict: break # Must have already finished John
+        # Process Mark second
         for n, columns_string in enumerate( word_table[1:], start=1 ):
             if columns_string.startswith( 'MRK' ):
-                wordRef, greek, lemma, glossWords, glossCaps,probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
+                wordRef, greekWord, SRLemma, _GrkLemma, glossWords, glossCaps, probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
                 formattedGlossWords = glossWords \
                                         .replace( '/', '<span class="glossHelper">', 1 ).replace( '/', '</span>', 1 ) \
                                         .replace( '˱', '<span class="glossPre">', 1 ).replace( '˲', '</span>', 1 ) \
                                         .replace( '‹', '<span class="glossPost">', 1 ).replace( '›', '</span>', 1 )
                 if probability:
-                    formKey2Tuple = (greek, None if morphology=='None' else morphology)
+                    formKey2Tuple = (greekWord, None if morphology=='None' else morphology)
                     formUsageDict[formKey2Tuple].append( n )
-                    lemmaDict[lemma].append( n )
-                    lemmaFormsDict[lemma].add( formKey2Tuple )
+                    lemmaDict[SRLemma].append( n )
+                    lemmaFormsDict[SRLemma].add( formKey2Tuple )
                     formGlossesDict[formKey2Tuple].add( formattedGlossWords )
-                    lemmaGlossesDict[lemma].add( formattedGlossWords )
+                    lemmaGlossesDict[SRLemma].add( formattedGlossWords )
             elif columns_string.startswith( 'LUK' ): break # Must have already finished Mark
+        # Now do the other books in their normal order
         for n, columns_string in enumerate( word_table[1:], start=1 ):
             if not columns_string.startswith( 'JHN' ) and not columns_string.startswith( 'MRK' ):
-                wordRef, greek, lemma, glossWords, glossCaps,probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
+                wordRef, greekWord, SRLemma, _GrkLemma, glossWords, glossCaps, probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
                 formattedGlossWords = glossWords \
                                         .replace( '/', '<span class="glossHelper">', 1 ).replace( '/', '</span>', 1 ) \
                                         .replace( '˱', '<span class="glossPre">', 1 ).replace( '˲', '</span>', 1 ) \
                                         .replace( '‹', '<span class="glossPost">', 1 ).replace( '›', '</span>', 1 )
                 if probability:
-                    formKey2Tuple = (greek, None if morphology=='None' else morphology)
+                    formKey2Tuple = (greekWord, None if morphology=='None' else morphology)
                     formUsageDict[formKey2Tuple].append( n )
-                    lemmaDict[lemma].append( n )
-                    lemmaFormsDict[lemma].add( formKey2Tuple )
+                    lemmaDict[SRLemma].append( n )
+                    lemmaFormsDict[SRLemma].add( formKey2Tuple )
                     formGlossesDict[formKey2Tuple].add( formattedGlossWords )
-                    lemmaGlossesDict[lemma].add( formattedGlossWords )
+                    lemmaGlossesDict[SRLemma].add( formattedGlossWords )
 
         # Now create the individual word pages
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f" Making pages for {len(word_table)-1:,} words in {word_table_filename}…" )
@@ -1120,11 +1123,12 @@ def make_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fil
             # print( n, columns_string )
             output_filename = f'{n}.html'
             # dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Got '{columns_string}' for '{output_filename}'" )
-            wordRef, greek, lemma, glossWords, glossCaps,probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
+            wordRef, greekWord, SRLemma, _GrkLemma, glossWords, glossCaps, probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
             formattedGlossWords = glossWords \
                                     .replace( '/', '<span class="glossHelper">', 1 ).replace( '/', '</span>', 1 ) \
                                     .replace( '˱', '<span class="glossPre">', 1 ).replace( '˲', '</span>', 1 ) \
                                     .replace( '‹', '<span class="glossPost">', 1 ).replace( '›', '</span>', 1 )
+            # if probability: assert probability.isdigit(), f"{wordRef} {probability=}" # Fails on negative numbers, e.g., -43
             if extendedStrongs == 'None': extendedStrongs = None
             if roleLetter == 'None': roleLetter = None
             if morphology == 'None': morphology = None
@@ -1149,7 +1153,7 @@ def make_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fil
 
             moodField = tenseField = voiceField = personField = caseField = genderField = numberField = ''
             if morphology:
-                assert len(morphology) == 7, f"Got {wordRef} '{greek}' morphology ({len(morphology)}) = '{morphology}'"
+                assert len(morphology) == 7, f"Got {wordRef} '{greekWord}' morphology ({len(morphology)}) = '{morphology}'"
                 mood,tense,voice,person,case,gender,number = morphology
                 if mood!='.': moodField = f' mood=<b>{CNTR_MOOD_NAME_DICT[mood]}</b>'
                 if tense!='.': tenseField = f' tense=<b>{CNTR_TENSE_NAME_DICT[tense]}</b>'
@@ -1186,9 +1190,9 @@ def make_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fil
                     else:
                         logging.critical( f"Unknown '{prefix}' word tag in {n}: {columns_string}")
                         unknownTag
-            lemmaLink = f'<a title="View Greek root word" href="../Lm/{lemma}.html">{lemma}</a>'
-            lemmaGlossesList = sorted( lemmaGlossesDict[lemma] )
-            wordGlossesList = sorted( formGlossesDict[(greek,morphology)] )
+            lemmaLink = f'<a title="View Greek root word" href="../Lm/{SRLemma}.html">{SRLemma}</a>'
+            lemmaGlossesList = sorted( lemmaGlossesDict[SRLemma] )
+            wordGlossesList = sorted( formGlossesDict[(greekWord,morphology)] )
 
             prevLink = f'<b><a href="{n-1}.html">←</a></b> ' if n>1 else ''
             nextLink = f' <b><a href="{n+1}.html">→</a></b>' if n<len(word_table) else ''
@@ -1196,16 +1200,16 @@ def make_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fil
             html = f'''{'' if probability else '<div class="unusedOLWord">'}<h1>OET Wordlink #{n}{'' if probability else ' <small>(Unused Greek word variant)</small>'}</h1>
 <p>{prevLink}{oetLink}{nextLink}</p>
 <p><a title="View Statistical Restoration Greek page" href="https://GreekCNTR.org/collation/?{CNTR_BOOK_ID_MAP[BBB]}{C.zfill(3)}{V.zfill(3)}">SR GNT {tidyBBB} {C}:{V}</a>
- {probabilityField}<b>{greek}</b> ({transliterate_Greek(greek)}) {translation}
+ {probabilityField}<b>{greekWord}</b> ({transliterate_Greek(greekWord)}) {translation}
  Strongs=<a title="View Strongs dictionary entry" href="https://BibleHub.com/greek/{strongs}.htm">{extendedStrongs}</a> <small>Lemma={lemmaLink}</small><br>
  {roleField} Morphology=<b>{morphology}</b>:{moodField}{tenseField}{voiceField}{personField}{caseField}{genderField}{numberField}{f'<br>  {semanticExtras}' if semanticExtras else ''}</p>{'' if probability else f'{NEWLINE}</div><!--unusedOLWord-->'}'''
 
             if probability: # Now list all the other places where this same Greek word is used
                 other_count = 0
-                thisWordNumberList = formUsageDict[(greek,morphology)]
+                thisWordNumberList = formUsageDict[(greekWord,morphology)]
                 for oN in thisWordNumberList:
                     if oN==n: continue # don't duplicate the word we're making the page for
-                    oWordRef, oGreek, oLemma, oGlossWords, oGlossCaps,oProbability, oExtendedStrongs, oRoleLetter, oMorphology, oTagsStr = word_table[oN].split( '\t' )
+                    oWordRef, _oGreekWord, _oSRLemma, _oGrkLemma, oGlossWords, oGlossCaps,oProbability, oExtendedStrongs, oRoleLetter, oMorphology, oTagsStr = word_table[oN].split( '\t' )
                     oFormattedGlossWords = oGlossWords \
                                             .replace( '/', '<span class="glossHelper">', 1 ).replace( '/', '</span>', 1 ) \
                                             .replace( '˱', '<span class="glossPre">', 1 ).replace( '˲', '</span>', 1 ) \
@@ -1215,7 +1219,7 @@ def make_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fil
                     oV, oW = oVW.split( 'w', 1 )
                     oTidyBBB = BibleOrgSysGlobals.loadedBibleBooksCodes.tidyBBB( oBBB )
                     if other_count == 0:
-                        html = f'{html}\n<h2>Other uses ({len(thisWordNumberList)-1:,}) of {greek} <small>{morphology}</small> in the NT</h2>'
+                        html = f'{html}\n<h2>Other uses ({len(thisWordNumberList)-1:,}) of {greekWord} <small>{morphology}</small> in the NT</h2>'
                     translation = '<small>(no English gloss)</small>' if oGlossWords=='-' else f'''English gloss=‘<b>{oFormattedGlossWords.replace('_','<span class="ul">_</span>')}</b>’'''
                     html = f'{html}\n<p class="wordLine"><a href="../{oBBB}.html#C{oC}V{oV}">OET {oTidyBBB} {oC}:{oV}</a> {translation} <a href="https://GreekCNTR.org/collation/?{CNTR_BOOK_ID_MAP[oBBB]}{oC.zfill(3)}{oV.zfill(3)}">SR GNT {oTidyBBB} {oC}:{oV} word {oW}</a>'
                     other_count += 1
@@ -1226,7 +1230,7 @@ def make_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fil
                     html = f'''{html}\n<p class="lemmaGlossesSummary">The various word forms of the root word (lemma) ‘{lemmaLink}’ have {len(lemmaGlossesList):,} different glosses: ‘<b>{"</b>’, ‘<b>".join(lemmaGlossesList)}</b>’.</p>'''
 
             # Now put it all together
-            html = f"{our_start_html.replace('__TITLE__',greek)}\n{html}\n{END_HTML}"
+            html = f"{our_start_html.replace('__TITLE__',greekWord)}\n{html}\n{END_HTML}"
             with open( outputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
                 html_output_file.write( html )
             vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Wrote {len(html):,} characters to {output_filename}" )
@@ -1255,7 +1259,7 @@ def make_lemma_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
 
         columnHeaders = word_table[0]
         dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Word table column headers = '{columnHeaders}'" )
-        assert columnHeaders == 'Ref\tGreek\tLemma\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\tTags', columnHeaders # If not, probably need to fix some stuff
+        assert columnHeaders == 'Ref\tGreekWord\tSRLemma\tGreekLemma\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\tTags', columnHeaders # If not, probably need to fix some stuff
 
 
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Making {len(lemmaDict):,} lemma pages…" )
@@ -1287,7 +1291,7 @@ def make_lemma_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
             maxWordsToShow = 100
             html = f'''{html}\n<h2>Have {len(lemmaRowsList):,} {'use' if len(lemmaRowsList)==1 else 'uses'} of Greek root word (lemma) ‘{lemma}’ in the NT</h2>'''
         for displayCounter,oN in enumerate( lemmaRowsList, start=1 ):
-            oWordRef, oGreek, oLemma, oGlossWords, oGlossCaps,oProbability, oExtendedStrongs, oRoleLetter, oMorphology, oTagsStr = word_table[oN].split( '\t' )
+            oWordRef, oGreek, _oSRLemma, _oGrkLemma, oGlossWords, _oGlossCaps, _oProbability, _oExtendedStrongs, _oRoleLetter, oMorphology, _oTagsStr = word_table[oN].split( '\t' )
             oFormattedGlossWords = oGlossWords \
                                     .replace( '/', '<span class="glossHelper">', 1 ).replace( '/', '</span>', 1 ) \
                                     .replace( '˱', '<span class="glossPre">', 1 ).replace( '˲', '</span>', 1 ) \

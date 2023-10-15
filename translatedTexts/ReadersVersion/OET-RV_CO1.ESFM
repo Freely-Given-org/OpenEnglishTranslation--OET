@@ -1,4 +1,4 @@
-\id 1CO - Open English Translation—Readers' Version (OET-RV) v0.0.01
+\id 1CO - Open English Translation—Readers' Version (OET-RV) v0.0.03
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 CO1
@@ -7,24 +7,25 @@
 \toc1 1 Corinthians
 \toc2 1 Corinthians
 \toc3 1 Cor.
-\mt1 1 Corinthians
+\mt2 Paul's first letter to the believers in
+\mt1 Corinth
 \is1 Introduction
-\ip \bk The first letter of Paul of Matig-Corinth\bk*, wrote din of time there sikandin of Ephesus the egwali. Written din this in order to helping of me prublima nabayaan of various group of believers impes-ek din there to Corinth. The Corinth the mother siyudad of province of Akaya, the Akaya, one of province sakup of Rome. Te that time, one dakel siyudad the Corinth nangugpaan of Greeks, Romans, and Jews. Ne puun because ilis sika of dahat, masalig also the egmangendiye eg-untud of me barku the egpamelegye and egpameli. Nabantug the sika siyudad tenged of karatu din, and masalig the various rilihiyun of mahinged dutu, and masalig also the egmeyibhilabetey dutu and the eg-ikul of tapey batasan iling due. Hapit migdaruwa leg‑un Paul the mig-ugpe there in order to preaching, and masalig the believed (Acts 18).
-\ip Peglihad of me three leg‑un, taheed of there Paul of Ephesus the egwali, nakarawat sikandin of letter puun of believers there to Corinth (1 Cor. 7:1). Nakarineg again sikandin concerning the ehetanan of believers and of other pad me prublima ran there to group of believers. Te this letter, advised din sikandan concerning due and egpepaaween din that egmeyibhilabetey sakup of group dan of believers. Intabak din again that questions concerning the egmaas-asaweey, widows, me gift of Spirit of God, and the peg-uyag of me minatey.
+\ip In \bk Paul's first letter to the believers in Corinth\bk*, he wrote about his time preaching in Ephesus. Written din this in order to helping of problems nabayaan of various group of believers founded din there to Corinth. The Corinth the mother city of province of Achaia, the Achaia, one of province sakup of Rome. Te that time, one large city the Corinth nangugpaan of Greeks, Romans, and Jews. Ne from because ilis sika of dahat, many also the egmangendiye board of ships the egpamelegye and egpameli. Nabantug the sika city tenged of karatu din, and many the various religion of mahinged dutu, and many also the egmeyibhilabetey dutu and the following of tapey batasan like that. Hapit migdaruwa year(s) Paul the Lived there in order to preaching, and many the believed (Acts 18).
+\ip Peglihad of me three year(s), while of there Paul of Ephesus the egwali, nakarawat sikandin of letter from believers there to Corinth (1 Cor. 7:1). Nakarineg again sikandin concerning the ehetanan of believers and of other pad problems ran there to group of believers. Te this letter, advised din them concerning due and egpepaaween din that egmeyibhilabetey sakup of group dan of believers. He answered again that questions concerning the marriage, widows, gifts of Spirit of God, and the peg-uyag of me minatey.
 \ip Te chapter 13, nahuhud due that love, iyan sika the subla good gift of God there to people din. Ne kema ke sika iya the very ipanengneng of this document.
 \iot Main components of Paul's letter
 \io1 Introduction \ior 1:1-9\ior*
 \io1 The pegkabaad-part of believers \ior 1:10–4:21\ior*
-\io1 The pegsapad of Paul of believers tenged of pegbalahad dan of migpeyilabetey \ior 5:1-13\ior*
+\io1 The pegsapad of Paul of believers tenged of ignoring dan of migpeyilabetey \ior 5:1-13\ior*
 \io1 The correct peggusey of ehetanan \ior 6:1-11\ior*
 \io1 The correct peggamit of kaligwangan isip believers \ior 6:12-20\ior*
 \io1 The question about the asaweey \ior 7:1-40\ior*
-\io1 The respecting of God du of me false gods \ior 8:1–11:1\ior*
-\io1 The correct eggimuwen of woman there to libulunganan of believers \ior 11:2-16\ior*
+\io1 The respecting of God du of false gods \ior 8:1–11:1\ior*
+\io1 The correct eggimuwen of woman there to gathering of believers \ior 11:2-16\ior*
 \io1 The correct eg-ikulen of making of Peglabung of Master \ior 11:17-34\ior*
-\io1 The me wisdom/knowledge given by Spirit and the peggamit due there to libulunganan of believers \ior 12:1–14:40\ior*
+\io1 The wisdom/knowledge given by Spirit and the peggamit due there to gathering of believers \ior 12:1–14:40\ior*
 \io1 The peg-uyag of the messiah and of believers \ior 15:1-58\ior*
-\io1 The pegpanlimud of igbulig of Christians there to Hudiya \ior 16:1-4\ior*
+\io1 The pegpanlimud of igbulig of Christians there to Yudea \ior 16:1-4\ior*
 \io1 The plan of Paul and the ending \ior 16:5-24\ior*
 \rem This is still a very early look into the unfinished text of the \em Open English Translation\em* of the Bible. Please double-check the text in advance before using in public.
 \ie
@@ -32,9 +33,9 @@
 \rem /s1 Greetings from Paul
 \rem /s1 Salutation
 \p
-\v 1 ◘
+\v 1 \add This letter is from\add* Paul¦113931, a missionary of \nd Messiah¦113934 Yeshua¦113935\nd* by God's will, and¦113940 from our¦113942 brother¦113943, Sosthenes.
 \p
-\v 2 \x + \xo 1:2: \xt Acts 18:1.\x*◘
+\v 2 \x + \xo 1:2: \xt Acts 18:1.\x*\add It's written\add* to God's assembly¦113945 there in Corinth—to those believers in Messiah Yeshua who've been declared sinless, along with all those who appeal to the power of our¦113970 and¦113978 their¦113976 \nd master¦113969\nd* Yeshua Messiah, everywhere¦113974.
 \p
 \v 3 ◘
 \s1 The thanking of Paul there to God
@@ -181,7 +182,7 @@
 \p
 \v 14 ◘
 \v 15 ◘
-\v 16 \x + \xo 4:16: \xt 1Cor 11:1; Pil 3:17.\x*◘
+\v 16 \x + \xo 4:16: \xt 1Cor 11:1; Php 3:17.\x*◘
 \v 17 ◘
 \p
 \v 18 ◘
@@ -433,7 +434,7 @@
 \v 33 ◘
 \c 11
 \p
-\v 1 \x + \xo 11:1: \xt 1Cor 4:16; Pil 3:17.\x*◘
+\v 1 \x + \xo 11:1: \xt 1Cor 4:16; Php 3:17.\x*◘
 \s1 The pegbubunbun of ulu of worshipping
 \rem /s1 Covering the Head in Worship
 \rem /s1 Public worship
@@ -505,7 +506,7 @@
 \v 9 ◘
 \v 10 ◘
 \v 11 ◘
-\s1 Sabeka just the body ta but masalig part
+\s1 Sabeka just the body ta but many part
 \rem /s1 One Body with Many Members
 \rem /s1 One Body with Many Parts
 \rem /s1 One Body, Many Parts
@@ -694,16 +695,16 @@
 \v 49 ◘
 \v 50 ◘
 \p
-\v 51 \x + \xo 15:51-52: \xt 1Tis 4:15-17.\x*◘
+\v 51 \x + \xo 15:51-52: \xt 1Th 4:15-17.\x*◘
 \v 52 ◘
 \v 53 ◘
 \v 54 \x + \xo 15:54: \xt Isa 25:8.\x*◘
 \q1
-\v 55 \x + \xo 15:55: \xt Hos 13:14 (LXX).\x*◘
-\q2 …
+\v 55 \x + \xo 15:55: \xt Hos 13:14 (LXX).\x*‘Death, where is your victory¦121117?
+\q1 \add Yes\add* death, where is your sting¦121122?’
 \m
-\v 56 ◘
-\v 57 ◘
+\v 56 Sin is the sting¦121130 of death¦121132, and¦121137 sin's power¦121138 is The Law,
+\v 57 but be thankful¦121146 to \nd God¦121145\nd* because it's him who gives us the victory¦121152 through¦121153 our¦121156 \nd master¦121155 Yeshua¦121157 Messiah¦121158\nd*.
 \p
 \v 58 ◘
 \c 16
@@ -739,20 +740,20 @@
 \rem /s1 Final Words
 \rem /s1 Final Messages and Greetings
 \p
-\v 13 ◘
-\v 14 ◘
+\v 13 Stay alert and stay grounded in the faith¦121401. Be strong and courageous.
+\v 14 Everything you¦121406 do, do in love¦121408.
 \p
 \v 15 \x + \xo 16:15: \xt 1Cor 1:16.\x*◘
 \v 16 ◘
 \p
-\v 17 ◘
-\v 18 ◘
+\v 17 I'm pleased that Stephanas, Fortunatus, and Achaicus came because¦121458 they've given what you¦121461 all couldn't,
+\v 18 because they¦121466 refreshed¦121466 my spirit¦121470 and¦121471 yours also, so you¦121473 should show appreciation to such people.
 \rem /s1 Paul's Final Greetings
 \rem /s1 Final Greetings
 \p
-\v 19 \x + \xo 16:19: \xt Acts 18:2.\x*◘
-\v 20 ◘
-\p …◘
+\v 19 \x + \xo 16:19: \xt Acts 18:2.\x*The assemblies¦121481 in \add the province of\add* Asia \add Minor\add* send their¦121500 greetings.
+\v 20 All the brothers¦121505 and¦121505 sisters¦121505 here send their greetings¦121502.
+\p Greet¦121507 each other with an innocent kiss¦121510.
 \p
 \v 21 ◘
 \p

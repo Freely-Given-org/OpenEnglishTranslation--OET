@@ -62,10 +62,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-04-27' # by RJH
+LAST_MODIFIED_DATE = '2023-10-15' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET NT wordtable"
-PROGRAM_VERSION = '0.22'
+PROGRAM_VERSION = '0.24'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -74,15 +74,15 @@ DEBUGGING_THIS_MODULE = False
 JSON_VERSES_DB_FILEPATH = Path( '../../Bible_speaker_identification/outsideSources/TheographicBibleData/derivedFiles/normalised_Verses.json' )
 MACULA_GREEK_TSV_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTreesAbbrev.NT.words.tsv' )
 
-WORD_TABLE_INPUT_FILEPATH = Path( '../intermediateTexts/modified_source_VLT_ESFM/OET-LV_NT_word_table.9columns.tsv' )
-WORD_TABLE_FILENAME = 'OET-LV_NT_word_table.tsv'
+WORD_TABLE_INPUT_FILEPATH = Path( '../intermediateTexts/modified_source_VLT_ESFM/OET-LV_NT_word_table.10columns.tsv' )
+WORD_TABLE_OUTPUT_FILENAME = 'OET-LV_NT_word_table.tsv'
 WORD_TABLE_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_VLT_ESFM/' )
-WORD_TABLE_OUTPUT_FILEPATH = WORD_TABLE_OUTPUT_FOLDERPATH.joinpath( WORD_TABLE_FILENAME )
+WORD_TABLE_OUTPUT_FILEPATH = WORD_TABLE_OUTPUT_FOLDERPATH.joinpath( WORD_TABLE_OUTPUT_FILENAME )
 RV_ESFM_OUTPUT_FOLDERPATH = Path( '../translatedTexts/ReadersVersion/' ) # We also copy the wordfile to this folder
 
-NEWLINE = '\n'
+# NEWLINE = '\n'
 TAB = '\t'
-BACKSLASH = '\\'
+# BACKSLASH = '\\'
 
 
 state = None
@@ -150,14 +150,14 @@ def associate_Theographic_people_places() -> bool:
 
     columnHeaders = state.oldTable[0]
     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Old word table column headers = '{columnHeaders}'" )
-    assert columnHeaders == 'Ref\tGreek\tLemma\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology' # If not, probably need to fix some stuff
+    assert columnHeaders == 'Ref\tGreekWord\tSRLemma\tGreekLemma\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology' # If not, probably need to fix some stuff
 
     numAddedPeople = numAddedPeopleGroups = numAddedLocations = numAddedEvents = numAddedYears = numAddedTimelines = 0
     state.newTable = [ f"{columnHeaders}\tTags" ]
     lastVerseRef = None
     for n, columns_string in enumerate( state.oldTable[1:], start=1 ):
         tags:List[str] = []
-        wordRef, greek, lemma, glossWords, glossCaps,probability, extendedStrongs, roleLetter, morphology = columns_string.split( '\t' )
+        wordRef, greekWord, _srLemma, _greekLemma, glossWords, glossCaps,probability, _extendedStrongs, _roleLetter, _morphology = columns_string.split( '\t' )
         verseRef = wordRef.split('w')[0]
         newVerse = verseRef != lastVerseRef
         # print( f"{wordRef=} {verseRef} {lastVerseRef=} {newVerse=}" )
@@ -172,7 +172,7 @@ def associate_Theographic_people_places() -> bool:
         if 'U' in glossCaps: # or 'G' in glossCaps: ???
             dPrint( 'Never', DEBUGGING_THIS_MODULE, f"{wordRef} {verseLinkEntry=}" )
             if verseLinkEntry['people']:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Need to add people: {n} {wordRef} ({probability}) '{greek}' {glossCaps} '{glossWords}' {verseLinkEntry['people']}")
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Need to add people: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{glossWords}' {verseLinkEntry['people']}")
                 assert isinstance( verseLinkEntry['people'], list )
                 for personID in verseLinkEntry['people']:
                     assert personID[0] == 'P' and ' ' not in personID and ';' not in personID
@@ -193,7 +193,7 @@ def associate_Theographic_people_places() -> bool:
                                 numAddedPeople += 1
                                 break
             if verseLinkEntry['places']:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Need to add places: {n} {wordRef} ({probability}) '{greek}' {glossCaps} '{glossWords}' {verseLinkEntry['places']}")
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Need to add places: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{glossWords}' {verseLinkEntry['places']}")
                 assert isinstance( verseLinkEntry['places'], list )
                 for placeID in verseLinkEntry['places']:
                     assert placeID[0] == 'L'
@@ -221,7 +221,7 @@ def associate_Theographic_people_places() -> bool:
                 #     dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Added '{pgID}' to {ref}")
                 #     halt
             if verseLinkEntry['yearNum']:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add year number: {n} {wordRef} ({probability}) '{greek}' {glossCaps} '{glossWords}' {verseLinkEntry['yearNum']}")
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add year number: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{glossWords}' {verseLinkEntry['yearNum']}")
                 assert isinstance( verseLinkEntry['yearNum'], str )
                 tag = f"Y{verseLinkEntry['yearNum']}"
                 assert ' ' not in tag and ';' not in tag
@@ -229,7 +229,7 @@ def associate_Theographic_people_places() -> bool:
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
                 numAddedYears += 1
             if verseLinkEntry['eventsDescribed']:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add events: {n} {wordRef} ({probability}) '{greek}' {glossCaps} '{glossWords}' {verseLinkEntry['eventsDescribed']}")
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add events: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{glossWords}' {verseLinkEntry['eventsDescribed']}")
                 assert isinstance( verseLinkEntry['eventsDescribed'], list )
                 for eventID in verseLinkEntry['eventsDescribed']:
                     # personName = personID[1:] # First prefix letter is P for person
@@ -241,7 +241,7 @@ def associate_Theographic_people_places() -> bool:
                     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
                     numAddedEvents += 1
             if verseLinkEntry['timeline']:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add timeline: {n} {wordRef} ({probability}) '{greek}' {glossCaps} '{glossWords}' {verseLinkEntry['timeline']}")
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add timeline: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{glossWords}' {verseLinkEntry['timeline']}")
                 assert isinstance( verseLinkEntry['timeline'], str )
                 tag = f"T{verseLinkEntry['timeline'].replace(' ','_')}"
                 assert ' ' not in tag and ';' not in tag
@@ -257,6 +257,8 @@ def associate_Theographic_people_places() -> bool:
 # end of add_tags_to_NT_word_table.associate_Theographic_people_places
 
 
+GLOSS_COLUMN_NUMBER = 4
+TAG_COLUMN_NUMBER = 10
 def tag_trinity_persons() -> bool:
     """
     Some undocumented documentation of the GlossCaps column:
@@ -281,17 +283,16 @@ def tag_trinity_persons() -> bool:
     """
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nTagging trinity persons in our table…" )
 
-    # Expect column headers 'Ref\tGreek\tLemma\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\tTags'
+    # Expect column headers 'Ref\tGreekWord\tSRLemma\tGreekLemma\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\tTags'
     columnHeaders = state.newTable[0].split( '\t' )
-    # assert columnHeaders[1] == 'Greek' # Check our index value of 1
-    assert columnHeaders[3] == 'GlossWords' # Check our index value of 3
-    assert columnHeaders[9] == 'Tags' # Check our index value of 9
+    assert columnHeaders[GLOSS_COLUMN_NUMBER] == 'GlossWords' # Check our index value of 4
+    assert columnHeaders[TAG_COLUMN_NUMBER] == 'Tags' # Check our index value of 10
 
     numAddedGod = numAddedJesus = numAddedHolySpirit = 0
     for n,rowStr in enumerate( state.newTable[1:], start=1 ):
         rowFields = rowStr.split( '\t' )
-        srGlossWords = rowFields[3]
-        tagList = rowFields[9].split( ';' ) if rowFields[9] else []
+        srGlossWords = rowFields[GLOSS_COLUMN_NUMBER]
+        tagList = rowFields[TAG_COLUMN_NUMBER].split( ';' ) if rowFields[TAG_COLUMN_NUMBER] else []
 
         madeChanges = False
 
@@ -312,7 +313,7 @@ def tag_trinity_persons() -> bool:
             madeChanges = True
 
         if madeChanges:
-            rowFields[9] = ';'.join( tagList )
+            rowFields[TAG_COLUMN_NUMBER] = ';'.join( tagList )
             state.newTable[n] = '\t'.join( rowFields )
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {numAddedGod=:,} {numAddedJesus=:,} {numAddedHolySpirit=:,} Total added={numAddedGod+numAddedJesus+numAddedHolySpirit:,}" )
@@ -463,8 +464,8 @@ def tag_referents_from_macula_data() -> bool:
                     existingReferentRowFields = existingReferentRowStr.split( '\t' )
                     existingReferredRowFields = existingReferredRowStr.split( '\t' )
 
-                    existingReferentRowTags = existingReferentRowFields[9].split( ';' ) if existingReferentRowFields[9] else []
-                    existingReferredRowTags = existingReferredRowFields[9].split( ';' ) if existingReferredRowFields[9] else []
+                    existingReferentRowTags = existingReferentRowFields[TAG_COLUMN_NUMBER].split( ';' ) if existingReferentRowFields[TAG_COLUMN_NUMBER] else []
+                    existingReferredRowTags = existingReferredRowFields[TAG_COLUMN_NUMBER].split( ';' ) if existingReferredRowFields[TAG_COLUMN_NUMBER] else []
 
                     # We decided that the row number is a better link
                     # elReferentWordID = existingReferentRowFields[0][4:] # } We drop the BBB_ because referent/referred pairs
@@ -489,9 +490,9 @@ def tag_referents_from_macula_data() -> bool:
                             totalLocationAdds += 1
                             totalAdds += 1
                     # dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Added {numAdded} tag(s) so now {existingReferentRowTags}" )
-                    existingReferentRowFields[9] = ';'.join( existingReferentRowTags )
+                    existingReferentRowFields[TAG_COLUMN_NUMBER] = ';'.join( existingReferentRowTags )
                     state.newTable[possibleReferentRowIndices[ixReferent]] = '\t'.join( existingReferentRowFields )
-                    existingReferredRowFields[9] = ';'.join( existingReferredRowTags )
+                    existingReferredRowFields[TAG_COLUMN_NUMBER] = ';'.join( existingReferredRowTags )
                     state.newTable[possibleReferredRowIndices[ixReferred]] = '\t'.join( existingReferredRowFields )
                 # end of appendNewTags function
 
@@ -591,8 +592,8 @@ def write_new_table() -> bool:
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Wrote {len(state.newTable):,} lines to {WORD_TABLE_OUTPUT_FILEPATH} ({state.newTable[0].count(TAB)+1} columns).")
 
     # Also use the same word file for the OET-RV
-    shutil.copy2( WORD_TABLE_OUTPUT_FILEPATH, RV_ESFM_OUTPUT_FOLDERPATH.joinpath( WORD_TABLE_FILENAME ) )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Also copied {WORD_TABLE_FILENAME} to {RV_ESFM_OUTPUT_FOLDERPATH}.")
+    shutil.copy2( WORD_TABLE_OUTPUT_FILEPATH, RV_ESFM_OUTPUT_FOLDERPATH.joinpath( WORD_TABLE_OUTPUT_FILENAME ) )
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Also copied {WORD_TABLE_OUTPUT_FILENAME} to {RV_ESFM_OUTPUT_FOLDERPATH}.")
 
     return True
 # end of add_tags_to_NT_word_table.write_new_table

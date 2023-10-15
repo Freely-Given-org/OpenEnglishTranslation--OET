@@ -38,8 +38,9 @@ CHANGELOG:
     2023-03-22 Added word numbers to refs in
     2023-07-24 Reduce columns in SR GNT source table
     2023-08-15 Update for new collation table columns plus use of word table for lexemes
-    2023-08-16 Puts punctuation markers around gloss parts in 9columns exported table
+    2023-08-16 Puts punctuation markers around gloss parts in 10columns exported table
     2023-08-24 Put some untranslated articles and other words back into the gloss preceded by ¬, e.g., ¬the, ¬of_the
+    2023-10-11 Fix a few more lemma transliterations (esp. concerning rough breathings)
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple, Optional
@@ -53,10 +54,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-09-15' # by RJH
+LAST_MODIFIED_DATE = '2023-10-13' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
-PROGRAM_VERSION = '0.90'
+PROGRAM_VERSION = '0.92'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -65,7 +66,7 @@ DEBUGGING_THIS_MODULE = False
 VLT_ESFM_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_VLT_ESFM/' )
 RV_ESFM_OUTPUT_FOLDERPATH = Path( '../translatedTexts/ReadersVersion/' ) # We also copy the wordfile to this folder
 
-OUR_EXPORT_TABLE_FILENAME = 'OET-LV_NT_word_table.9columns.tsv' # We make this first 9-column version here (from the collation table)
+OUR_EXPORT_TABLE_FILENAME = 'OET-LV_NT_word_table.10columns.tsv' # We make this first 9-column version here (from the collation table)
 
 
 state = None
@@ -356,7 +357,7 @@ def export_esfm_literal_English_gloss() -> bool:
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Exporting ESFM auxilliary word table to {table_filepath}…" )
     next_word_number = 1 # word count includes variants
     with open(table_filepath, 'wt', encoding='utf-8') as table_output_file:
-        table_output_file.write( 'Ref\tGreek\tLemma\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\n' ) # Write TSV header row
+        table_output_file.write( 'Ref\tGreekWord\tSRLemma\tGreekLemma\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\n' ) # Write TSV header row
         for collation_row_number, collation_row in enumerate(collation_csv_rows):
             collation_id, verse_id = collation_row['CollationID'], collation_row['VerseID']
             assert len(collation_id) == 11 and collation_id.isdigit()
@@ -460,7 +461,8 @@ def export_esfm_literal_English_gloss() -> bool:
                 assert 'N' not in glossCapitalisationString # already -- SR GNT doesn't currently use N -- see documentation of apply_gloss_capitalization() below
                 glossCapitalisationString = f'{glossCapitalisationString}N' # We add an extra letter
             adjusted_lemma, preformed_gloss_string = process_untranslated_words( collation_row, preformed_gloss_string )
-            table_row = f"{ref}\t{collation_row['Medieval']}\t{adjusted_lemma}\t{preformed_gloss_string}\t{glossCapitalisationString}\t{'' if collation_row['Probability'] is None else collation_row['Probability']}\t{collation_row['LexemeID']}\t{collation_row['Role']}\t{collation_row['Morphology']}"
+            medieval_lemma = '' # Can't find one yet
+            table_row = f"{ref}\t{collation_row['Medieval']}\t{adjusted_lemma}\t{medieval_lemma}\t{preformed_gloss_string}\t{glossCapitalisationString}\t{'' if collation_row['Probability'] is None else collation_row['Probability']}\t{collation_row['LexemeID']}\t{collation_row['Role']}\t{collation_row['Morphology']}"
             assert '"' not in table_row # Check in case we needed any escaping
             table_output_file.write( f'{table_row}\n' )
             # NOTE: The above code writes every table row, even for variants which aren't in the SR (but their probability column will be negative)
@@ -481,11 +483,11 @@ def export_esfm_literal_English_gloss() -> bool:
 
 
 lemma_index = {}
-def find_lemma(given_lexemeID:str, given_morphology:str, given_classic_word:str) -> str:
+def find_lemma(given_lexemeID:str, given_morphology:str, given_classic_word:str) -> Tuple[str,str]:
     """
     Using the word table
         and given the above two fields from the collation table,
-        find the CNTR romanised lemma.
+        find the CNTR romanised lemma and the medieval form.
     """
     # print(f"find_lemma( {given_lexemeID=}, {given_morphology=}, {given_classic_word=} )…")
     assert given_lexemeID.isdigit()
@@ -524,7 +526,10 @@ def adjust_lemma(given_lemma:str, given_Greek_word:str) -> str:
     elif given_lemma == 'os' \
     and given_Greek_word in ('ὃς','ὁ','ἃ','ἡ','οὓς','οἱ','οἳ','αἳ','ὅς','ἣ','ᾗ','ὃν','οἷς','αἱ','ὃ','ὅ','οἵ','οὖ','οὗ','οὑ'):
         adjusted_lemma = 'hos' # relative pronoun
-    elif given_Greek_word[0] in 'ἁἅἑἡἣἧἵὁὅὃὑὡὥὧᾧ' \
+    elif given_lemma == 'su' \
+    and given_Greek_word in ('ὑμῖν','ὑμᾶς','ὑμῶν','ὑμεῖς'): # Don't want to wrongly carry across this rough breathing
+        adjusted_lemma = 'su' # relative pronoun
+    elif given_Greek_word[0] in 'ἁἅἑἓἕἡἣἧἵὁὅὃὑὡὥὧᾧ' \
     or given_Greek_word.startswith('αἷ') \
     or given_Greek_word.startswith('οἱ') or given_Greek_word.startswith('οἷ') \
     or given_Greek_word.startswith('οὓ') or given_Greek_word.startswith('οὗ') or given_Greek_word.startswith('οὕ') \
@@ -538,7 +543,7 @@ def adjust_lemma(given_lemma:str, given_Greek_word:str) -> str:
 # end of adjust_lemma function
 
 
-def process_untranslated_words( given_collation_row, given_preformed_gloss_string:str ) -> Tuple[str, str]:
+def process_untranslated_words( given_collation_row, given_preformed_gloss_string:str ) -> Tuple[str,str]:
     """
     """
     their_lemma = '' if given_collation_row['LexemeID']=='99999' else find_lemma( given_collation_row['LexemeID'], given_collation_row['Morphology'], given_collation_row['Classic'] )

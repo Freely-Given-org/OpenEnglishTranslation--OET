@@ -60,10 +60,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-09-29' # by RJH
+LAST_MODIFIED_DATE = '2023-10-15' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.55'
+PROGRAM_VERSION = '0.56'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -384,6 +384,7 @@ def connect_OET_RV( rv, lv ):
 # end of connect_OET-RV_words_via_OET-LV.connect_OET_RV
 
 
+GLOSS_COLUMN__NUMBER = 5
 def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tuple[Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int]]:
     """
     Some undocumented documentation of the GlossCaps column from state.wordTable:
@@ -408,7 +409,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     """
     global forList
     # fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {BBB} {c}:{v} {len(rvEntryList)}, {len(lvEntryList)} )" )
-    assert state.tableHeaderList.index( 'GlossCaps' ) == 4 # Check we have the correct column below
+    assert state.tableHeaderList.index( 'GlossCaps' ) == GLOSS_COLUMN__NUMBER # Check we have the correct column below
 
     rvText = ''
     for rvEntry in rvEntryList:
@@ -477,7 +478,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
         # print( f"{lvUpperWords=} from {lvText=}")
         firstLVUpperWord, firstLVUpperNumber = lvUpperWords[0].split( '¦' )
         rowForFirstLVUpperWord = state.wordTable[int(firstLVUpperNumber)]
-        firstLVUpperWordCapsFlags = rowForFirstLVUpperWord[4]
+        firstLVUpperWordCapsFlags = rowForFirstLVUpperWord[5]
         # print( f"{firstLVUpperWordCapsFlags=} from {rowForFirstLVUpperWord=}" )
         if 'G' not in firstLVUpperWordCapsFlags and 'W' not in firstLVUpperWordCapsFlags and firstLVUpperWord!='I':
             # print( f"Removing first LV Uppercase word: '{lvUpperWords[0]}' with '{firstLVUpperWordCapsFlags}'")
@@ -548,7 +549,7 @@ def matchProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[str], lvC
             result = addNumberToRVWord( BBB, c,v, rvCapitalisedWordList[0], wordNumber )
             if result:
                 numAdded += 1
-                if 'N' in wordRow[4]:
+                if 'N' in wordRow[5]:
                     numNS += 1
     elif len(rvCapitalisedWordList) == len(lvCapitalisedWordList):
         dPrint( 'Info', DEBUGGING_THIS_MODULE, f"Lists are equal size ({len(rvCapitalisedWordList)})" )
@@ -608,7 +609,7 @@ def matchOurListedSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWor
                 result = addNumberToRVWord( BBB, c,v, rvNoun, lvWordNumber )
                 if result:
                     numAdded += 1
-                    if 'N' in state.wordTable[lvWordNumber][4]:
+                    if 'N' in state.wordTable[lvWordNumber][5]:
                         numNS += 1
             # else:
             #     dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"ERROR matchOurListedSimpleWords() would have connected LV '{lvNoun}' to RV '{rvNoun}' at {BBB} {c}:{v} {rvN=}")
@@ -659,7 +660,7 @@ def matchWordsFirstParts( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList
                 result = addNumberToRVWord( BBB, c,v, rvWord, lvWordNumber )
                 if result:
                     numAdded += 1
-                    if 'N' in lvWordRow[4]:
+                    if 'N' in lvWordRow[5]:
                         numNS += 1
                 else:
                     logging.warning( f"Got addNumberToRVWord( {BBB} {c}:{v} '{rvWord}' {lvWordNumber} ) result = {result}" )
@@ -949,7 +950,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
                 result = addNumberToRVWord( BBB, c,v, rvWord, lvWordNumber )
                 if result:
                     numAdded += 1
-                    if 'N' in lvWordRow[4]:
+                    if 'N' in lvWordRow[5]:
                         numNS += 1
                 else:
                     logging.warning( f"Got addNumberToRVWord( {BBB} {c}:{v} '{rvWord}' {lvWordNumber} ) result = {result}" )
@@ -1093,7 +1094,7 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
                 wordRow = state.wordTable[wordNumber]
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found {word=} {line=} {wordRow=}" )
                 addNominaSacra = False
-                if 'N' in wordRow[4]: # Check that the RV doesn't already have it marked (with /nd)
+                if 'N' in wordRow[5]: # Check that the RV doesn't already have it marked (with /nd)
                                       #   (This can happen after word numbers are deleted.)
                     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Have NS on {word=} {line[match.start()-6:match.start()]=} {line[match.end():match.end()+6]=} {line=}" )
                     if (match.end()==len(line) or not line[match.end()]=='¦') \

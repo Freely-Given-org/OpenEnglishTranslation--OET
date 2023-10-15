@@ -16,7 +16,7 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 
 #									\add*_			_\add*	moveUnderlineInsideAddEnd	Put underlines inside add markers
 
-#										NOTE: Some untranslated words have already been put back into OET-LV_NT_word_table.9columns.tsv by extract_VLT_NT_to_ESFM.py
+#										NOTE: Some untranslated words have already been put back into OET-LV_NT_word_table.10columns.tsv by extract_VLT_NT_to_ESFM.py
 #											They will already be something like '¬the' or '¬of_the'
 									¬the¦			 \untr the¦\untr*	tagUnusedArticles	Mark untranslated Greek articles with this (non-standard USFM)
 									¬which¦			 \untr which¦\untr*	tagUnusedRelativeArticles	Mark untranslated Greek articles with this (non-standard USFM)

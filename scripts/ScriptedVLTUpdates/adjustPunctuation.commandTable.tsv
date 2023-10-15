@@ -2,7 +2,7 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 					JHN_9:3				.			,	replaceJhn9Period	Replace period at end of verse with comma
 					JHN_9:3				but			But	startJhn9Sentence	Capitalise after period
 					JHN_9:3				˱of¦˲_him¦,			˱of¦˲_him¦.\f + \fr 9:3 \ft Traditionally, most translations have placed a comma here (which is also a good possibility—remember that the original Greek manuscripts contain no punctuation), but this interpretation is equally valid and perhaps gives a more acceptable interpretation.\f*	replaceJhn9Comma	Replace first comma with period and footnote
-					JHN_9:4				It¦_is¦_fitting¦			it¦_is¦_fitting¦	continueJhn9Sentence	Remove capital after comma
+					JHN_9:4				˱It¦˲_is¦_fitting¦			˱it¦˲_is¦_fitting¦	continueJhn9Sentence	Remove capital after comma
 					JHN_10:14				.			,	replaceJhn10Period	Replace period with comma
 					JHN_10:15				As			as	removeJhn10Capital	Remove capital letter
 
