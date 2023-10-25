@@ -60,10 +60,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-10-15' # by RJH
+LAST_MODIFIED_DATE = '2023-10-19' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.56'
+PROGRAM_VERSION = '0.57'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -867,14 +867,9 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Jesse', 'Yessai'),('Jesse', 'Yessai/Yishay'),
             ('Jew', 'Youdaios'),
             ('Jews', 'Youdaiōns'),
-            ('Yohan', 'Yōannaʸs'),
-            ('Yoppa', 'Yoppaʸ'),
-            ('Jordan', 'Yordanaʸs'),('Jordan', 'Yordanaʸs/Yarəddēn'),
-            ('Yoseph', 'Yōsaʸf'),('Yoseph', 'Yōsaʸf/Yōşēf'),
             ('Josiah', 'Yōsias'),('Josiah', 'Yōsias/Yʼoshiyyāh'),
             ('Judah', 'Youda'),('Judah', 'Youda/Yəhūdāh'),
             ('Judas', 'Youdas'),
-            ('Judea', 'Youdaia'),
             ('Justus', 'Youstos'),
             ('Lazarus', 'Lazaros'),
             ('Levi', 'Leui'),('Levi', 'Leui/Lēvī'),
@@ -910,6 +905,11 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Tyre', 'Turos'),('Tyre', 'Turos/Tsor'),
             ('Uzziah', 'Ozias'),('Uzziah', 'Ozias/ˊUzziyyāh'),
             ('Yeshua', 'Yaʸsous'),('Yeshua', 'Yaʸsous/Yəhōshūˊa'), ("Yeshua's", 'Yaʸsous'),("Yeshua's", 'Yaʸsous/Yəhōshūˊa'),
+            ('Yohan', 'Yōannaʸs'),
+            ('Yoppa', 'Yoppaʸ'),
+            ('Yordan', 'Yordanaʸs'),('Yordan', 'Yordanaʸs/Yarəddēn'),
+            ('Yoseph', 'Yōsaʸf'),('Yoseph', 'Yōsaʸf/Yōşēf'),
+            ('Yudea', 'Youdaia'),
             ("Zebedee's", 'Zebedaios'),
             ('Zerah', 'Zara'),('Zerah', 'Zara/Zeraḩ'),
             ):

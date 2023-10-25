@@ -1,19 +1,21 @@
 Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	RCase	Replace	Name	Comment
+# Not sure why we had to remove the final asterisks in the following lines (they ended up being doubled)
+# Must be a bug in ScriptedBibleEditor ???
 #  > indicates GlossPost attributive
-									holy \add One\add*			holy \add >one\add*
-									\add one\add*			\add >one\add*
-									\add ones\add*			\add >ones\add*
-									\add thing\add*			\add >thing\add*
-									\add things\add*			\add >things\add*
+									holy \add One¦\add			holy \add >one¦\add
+									\add one¦\add			\add >one¦\add
+									\add ones¦\add			\add >ones¦\add
+									\add thing¦\add			\add >thing¦\add
+									\add things¦\add			\add >things¦\add
 
 # = indicates GlossPost copula
-									\add am\add*			\add =am\add*
-									\add are\add*			\add =are\add*
-									\add is\add*			\add =is\add*
-									\add than\add*			\add =than\add*
+									\add am¦\add			\add =am¦\add
+									\add are¦\add			\add =are¦\add
+									\add is¦\add			\add =is¦\add
+									\add than¦\add			\add =than¦\add
 
 # ~ indicates GlossPost direct object
-									\add him\add*			\add ~him\add*
+									\add him¦\add			\add ~him¦\add
 
 # Add for the remainder (mostly nouns like "clothes" or "water")
 #									‹day¦›			\add >day¦\add*

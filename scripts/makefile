@@ -89,7 +89,7 @@ $(BibleTags_TSV): $(wildcard ../../Forked/bibletags-usfm/usfm/uhb/*.usfm) $(wild
 	@$(Python) convert_BibTags_USFM_to_TSV.py
 
 $(intermediate_LV_NT_ESFM) $(original_wordtable): ../../CNTR-GNT/sourceExports/book.csv ../../CNTR-GNT/sourceExports/collation.csv extract_VLT_NT_to_ESFM.py
-	@echo "\n\nExtract NT from TSV table to ESFM files…\n"
+	@echo "\n\nExtract NT from TSV table to {BBB}_gloss.ESFM files…\n"
 	@$(Python) extract_VLT_NT_to_ESFM.py -e
 
 $(expanded_wordtable): $(original_wordtable) $(Clear_Bible_NT_lowfat_TSV) add_tags_to_NT_word_table.py

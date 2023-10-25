@@ -54,16 +54,16 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-10-13' # by RJH
+LAST_MODIFIED_DATE = '2023-10-20' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
-PROGRAM_VERSION = '0.92'
+PROGRAM_VERSION = '0.93'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
 
 
-VLT_ESFM_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_VLT_ESFM/' )
+VLT_ESFM_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_VLT_ESFM/' ) # We copy our {BBB}_gloss.ESFM files into this folder
 RV_ESFM_OUTPUT_FOLDERPATH = Path( '../translatedTexts/ReadersVersion/' ) # We also copy the wordfile to this folder
 
 OUR_EXPORT_TABLE_FILENAME = 'OET-LV_NT_word_table.10columns.tsv' # We make this first 9-column version here (from the collation table)
@@ -379,6 +379,7 @@ def export_esfm_literal_English_gloss() -> bool:
                 if book_number != 99:
                     assert book_number == last_book_number + 1
                 if esfm_text:  # write out the book (including the last one if final collation row 99999 exists)
+                    assert '**' not in esfm_text
                     if write_esfm_book( last_book_number, esfm_text ):
                         num_books_written += 1
                     esfm_text = None
@@ -390,8 +391,8 @@ def export_esfm_literal_English_gloss() -> bool:
 \\ide UTF-8
 \\rem ESFM v0.6 {BOS_BOOK_ID_MAP[book_number]}
 \\rem WORDTABLE {final_table_filename}
+\\rem The VLT source table used to create this file is Copyright © 2022 by https://GreekCNTR.org
 \\rem ESFM file created {datetime.now().strftime('%Y-%m-%d %H:%M')} by {PROGRAM_NAME_VERSION}
-\\rem The source table used to create this file is Copyright © 2022 by https://GreekCNTR.org
 \\h {BOOK_NAME_MAP[book_number]}
 \\toc1 {BOOK_NAME_MAP[book_number]}
 \\toc2 {BOOK_NAME_MAP[book_number]}
@@ -705,6 +706,7 @@ def preform_gloss_and_word_number(thisList:List[Dict[str,str]], given_verse_row_
     if given_verse_row['Koine'].startswith( '=' ): # it's a nomina sacra
         glossWord = f"\\nd {glossWord}\\nd*" # we use the USFM divine name style
     pre_punctuation, post_punctuation = separate_punctuation(glossPunctuation)
+    assert '*' not in post_punctuation
 
     # These first ones are different cases coz they all work internally on a single row
     if glossInsert == '~' and not last_glossInsert:
