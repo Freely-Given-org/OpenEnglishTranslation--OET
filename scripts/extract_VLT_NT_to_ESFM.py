@@ -41,6 +41,7 @@ CHANGELOG:
     2023-08-16 Puts punctuation markers around gloss parts in 10columns exported table
     2023-08-24 Put some untranslated articles and other words back into the gloss preceded by ¬, e.g., ¬the, ¬of_the
     2023-10-11 Fix a few more lemma transliterations (esp. concerning rough breathings)
+    2023-12-14 Add in lemma table that came from CNTR and handle a few more exceptions
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple, Optional
@@ -54,10 +55,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-10-20' # by RJH
+LAST_MODIFIED_DATE = '2023-12-15' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
-PROGRAM_VERSION = '0.93'
+PROGRAM_VERSION = '0.94'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -79,6 +80,7 @@ class State:
         self.sourceCollationTableFilepath = Path( '../../CNTR-GNT/sourceExports/collation.csv' ) # Use the latest download (symbolic link)
         # self.sourceCollationTableFilepath = Path( '../../CNTR-GNT/sourceExports/collation.updated.csv' )
         self.sourceWordTableFilepath = Path( '../../CNTR-GNT/sourceExports/word.csv' ) # Use the latest download (symbolic link)
+        self.CNTRLemmaTableFilepath = Path( '../../CNTR-GNT/derivedFormats/lemmas.alphabetical.tsv' )
     # end of extract_VLT_NT_to_ESFM.__init__
 
 
@@ -157,6 +159,11 @@ word_csv_column_non_blank_counts = {}
 word_csv_column_counts = defaultdict(lambda: defaultdict(int))
 word_csv_column_headers = []
 
+NUM_EXPECTED_LEMMA_COLUMNS = 4 # and 6,416 total rows
+lemma_tsv_rows = []
+lemma_tsv_column_headers = []
+lexemeID_CNTRLemma_dict = {}
+
 
 
 def main() -> None:
@@ -166,7 +173,7 @@ def main() -> None:
     global state
     state = State()
 
-    if loadBookTable() and loadSourceCollationTable() and loadSourceWordTable():
+    if loadBookTable() and loadSourceCollationTable() and loadSourceWordTable() and loadLemmaTable():
         # export_usfm_literal_English_gloss()
         export_esfm_literal_English_gloss()
 # end of extract_VLT_NT_to_ESFM.main
@@ -223,7 +230,7 @@ def loadSourceCollationTable() -> bool:
         csv_lines[0] = csv_lines[0][1:]
 
     # Get the headers before we start
-    collation_csv_column_headers = [header for header in csv_lines[0].strip().split(",")] # assumes no commas in headings
+    collation_csv_column_headers = [header for header in csv_lines[0].strip().split(',')] # assumes no commas in headings
     # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Column headers: ({len(collation_csv_column_headers)}): {collation_csv_column_headers}")
     assert len(collation_csv_column_headers) == NUM_EXPECTED_COLLATION_COLUMNS, f"{len(collation_csv_column_headers)=} {NUM_EXPECTED_COLLATION_COLUMNS=}"
     # Check that the columns we use are still there somewhere
@@ -279,7 +286,7 @@ def loadSourceWordTable() -> bool:
         csv_lines[0] = csv_lines[0][1:]
 
     # Get the headers before we start
-    word_csv_column_headers = [header for header in csv_lines[0].strip().split(",")] # assumes no commas in headings
+    word_csv_column_headers = [header for header in csv_lines[0].strip().split(',')] # assumes no commas in headings
     # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Column headers: ({len(word_csv_column_headers)}): {word_csv_column_headers}")
     assert len(word_csv_column_headers) == NUM_EXPECTED_WORD_COLUMNS, f"{len(word_csv_column_headers)=} {NUM_EXPECTED_WORD_COLUMNS=}"
     # Check that the columns we use are still there somewhere
@@ -312,6 +319,41 @@ def loadSourceWordTable() -> bool:
 
     return True
 # end of extract_VLT_NT_to_ESFM.loadSourceWordTable
+
+
+def loadLemmaTable() -> bool:
+    """ """
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nLoading lemma TSV file from {state.CNTRLemmaTableFilepath}…")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_LEMMA_COLUMNS} columns…")
+    with open(state.CNTRLemmaTableFilepath, 'rt', encoding='utf-8') as lemma_tsv_file:
+        lemma_tsv_lines = lemma_tsv_file.readlines()
+
+    # Remove any BOM
+    if lemma_tsv_lines[0].startswith("\ufeff"):
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of lemma TSV file…")
+        lemma_tsv_lines[0] = lemma_tsv_lines[0][1:]
+
+    # Get the headers before we start
+    global lemma_tsv_column_headers
+    lemma_tsv_column_headers = [header for header in lemma_tsv_lines[0].strip().split('\t')]
+    # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Column headers: ({len(collation_csv_column_headers)}): {collation_csv_column_headers}")
+    assert len(lemma_tsv_column_headers) == NUM_EXPECTED_LEMMA_COLUMNS, f"{lemma_tsv_column_headers=} {NUM_EXPECTED_LEMMA_COLUMNS=}"
+
+    # Read, check the number of columns, and summarise row contents all in one go
+    dict_reader = DictReader(lemma_tsv_lines, delimiter='\t')
+    for n, row in enumerate(dict_reader):
+        if len(row) != NUM_EXPECTED_LEMMA_COLUMNS:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_LEMMA_COLUMNS}")
+        lemma_tsv_rows.append(row)
+        
+        ld_key = (row['LexemeID'],row['Lemma'])
+        assert ld_key not in lexemeID_CNTRLemma_dict
+        lexemeID_CNTRLemma_dict[ld_key] = row['Greek']
+        
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(lemma_tsv_rows):,} lemma TSV data rows.")
+
+    return True
+# end of extract_VLT_NT_to_ESFM.loadLemmaTable
 
 
 def write_esfm_book(book_number:int, book_esfm: str) -> bool:
@@ -462,7 +504,8 @@ def export_esfm_literal_English_gloss() -> bool:
                 assert 'N' not in glossCapitalisationString # already -- SR GNT doesn't currently use N -- see documentation of apply_gloss_capitalization() below
                 glossCapitalisationString = f'{glossCapitalisationString}N' # We add an extra letter
             adjusted_lemma, preformed_gloss_string = process_untranslated_words( collation_row, preformed_gloss_string )
-            medieval_lemma = '' # Can't find one yet
+            medieval_lemma = '' if collation_row['LexemeID']=='99999' else find_lemma_forms(collation_row['LexemeID'], collation_row['Morphology'], collation_row['Classic'])[1]
+            # medieval_lemma = '' if collation_row['LexemeID']=='99999' else lexeme_ID_lemma_dict[collation_row['LexemeID']]
             table_row = f"{ref}\t{collation_row['Medieval']}\t{adjusted_lemma}\t{medieval_lemma}\t{preformed_gloss_string}\t{glossCapitalisationString}\t{'' if collation_row['Probability'] is None else collation_row['Probability']}\t{collation_row['LexemeID']}\t{collation_row['Role']}\t{collation_row['Morphology']}"
             assert '"' not in table_row # Check in case we needed any escaping
             table_output_file.write( f'{table_row}\n' )
@@ -483,28 +526,31 @@ def export_esfm_literal_English_gloss() -> bool:
 # end of extract_VLT_NT_to_ESFM.export_esfm_literal_English_gloss
 
 
-lemma_index = {}
-def find_lemma(given_lexemeID:str, given_morphology:str, given_classic_word:str) -> Tuple[str,str]:
+find_lemma_forms_lemma_index = {}
+def find_lemma_forms(given_lexemeID:str, given_morphology:str, given_classic_word:str) -> Tuple[str,str]:
     """
     Using the word table
         and given the above two fields from the collation table,
         find the CNTR romanised lemma and the medieval form.
     """
-    # print(f"find_lemma( {given_lexemeID=}, {given_morphology=}, {given_classic_word=} )…")
+    # print(f"find_lemma_forms( {given_lexemeID=}, {given_morphology=}, {given_classic_word=} )…")
     assert given_lexemeID.isdigit()
     assert given_morphology
     assert given_classic_word
-    if not lemma_index: # index the lemmas the first time
+    if not find_lemma_forms_lemma_index: # index the lemmas the first time
         # print( f"{word_csv_column_headers=}" )
         for word_row in word_csv_rows:
             # print( f"{word_row=}" )
             new_key = (word_row['LexemeID'],word_row['Morphology'],word_row['Classic'])
-            assert new_key not in lemma_index # Check for unexpected duplicates
-            lemma_index[new_key] = word_row['Lemma']
-        print( f"    Created {len(lemma_index)=:,}" )
+            assert new_key not in find_lemma_forms_lemma_index # Check for unexpected duplicates
+            find_lemma_forms_lemma_index[new_key] = word_row['Lemma']
+        print( f"    Created {len(find_lemma_forms_lemma_index)=:,}" )
 
-    return lemma_index[(given_lexemeID,given_morphology,given_classic_word)]
-# end of extract_VLT_NT_to_ESFM.find_lemma
+    found_CNTR_lemma = find_lemma_forms_lemma_index[(given_lexemeID,given_morphology,given_classic_word)]
+    found_medieval_lemma = lexemeID_CNTRLemma_dict[(given_lexemeID,found_CNTR_lemma)]
+    # print( f"{given_lexemeID=} {given_morphology=} {given_classic_word=} --> {found_CNTR_lemma=} {found_medieval_lemma=}")
+    return found_CNTR_lemma, found_medieval_lemma
+# end of extract_VLT_NT_to_ESFM.find_lemma_forms
 
 
 def adjust_lemma(given_lemma:str, given_Greek_word:str) -> str:
@@ -530,8 +576,12 @@ def adjust_lemma(given_lemma:str, given_Greek_word:str) -> str:
     elif given_lemma == 'su' \
     and given_Greek_word in ('ὑμῖν','ὑμᾶς','ὑμῶν','ὑμεῖς'): # Don't want to wrongly carry across this rough breathing
         adjusted_lemma = 'su' # relative pronoun
+    elif given_lemma == 'eis' \
+    and given_Greek_word in ('μία','μίαν','μιᾶς','μιᾷ'):
+        adjusted_lemma = 'heis' # 'one' not the preposition 'eis'
     elif given_Greek_word[0] in 'ἁἅἑἓἕἡἣἧἵὁὅὃὑὡὥὧᾧ' \
     or given_Greek_word.startswith('αἷ') \
+    or given_Greek_word.startswith('εἷ') \
     or given_Greek_word.startswith('οἱ') or given_Greek_word.startswith('οἷ') \
     or given_Greek_word.startswith('οὓ') or given_Greek_word.startswith('οὗ') or given_Greek_word.startswith('οὕ') \
     or given_Greek_word.startswith('υἱ'):
@@ -547,7 +597,7 @@ def adjust_lemma(given_lemma:str, given_Greek_word:str) -> str:
 def process_untranslated_words( given_collation_row, given_preformed_gloss_string:str ) -> Tuple[str,str]:
     """
     """
-    their_lemma = '' if given_collation_row['LexemeID']=='99999' else find_lemma( given_collation_row['LexemeID'], given_collation_row['Morphology'], given_collation_row['Classic'] )
+    their_lemma,medieval_lemma = ('','') if given_collation_row['LexemeID']=='99999' else find_lemma_forms( given_collation_row['LexemeID'], given_collation_row['Morphology'], given_collation_row['Classic'] )
     adjusted_lemma = adjust_lemma( their_lemma, given_collation_row['Medieval'])
     if given_preformed_gloss_string == '-' or given_preformed_gloss_string.startswith( '-¦' ): # an untranslated word from the VLT
         # NOTE: All of these new gloss strings also have to be entered into cleanupVLT.commandTable.tsv

@@ -1,6 +1,6 @@
-# OET makfile
+# OET makefile
 #
-# Last updated: 2023-08-16 by RJH
+# Last updated: 2023-12-14 by RJH
 #
 
 #=== Folder and file declarations =======================
@@ -15,15 +15,23 @@ final_LV_NT_ESFM := $(wildcard ../intermediateTexts/auto_edited_VLT_ESFM/OET-LV_
 LV_ESFM := $(final_LV_NT_ESFM)
 intermediate_LV_OT_USFM := $(wildcard ../intermediateTexts/modified_source_glossed_OSHB_USFM/*.usfm)
 intermediate_LV_NT_ESFM := $(wildcard ../intermediateTexts/modified_source_VLT_ESFM/???_gloss.ESFM)
-original_wordtable = ../intermediateTexts/modified_source_VLT_ESFM/OET-LV_NT_word_table.10columns.tsv
 expanded_wordtable = ../intermediateTexts/modified_source_VLT_ESFM/OET-LV_NT_word_table.tsv
+original_wordtable = ../intermediateTexts/modified_source_VLT_ESFM/OET-LV_NT_word_table.10columns.tsv
+CNTR_lemma_table = ../../CNTR-GNT/derivedFormats/lemmas.alphabetical.tsv
+CNTR_book_table = ../../CNTR-GNT/sourceExports/book.csv
+CNTR_collation_table = ../../CNTR-GNT/sourceExports/collation.csv extract_VLT_NT_to_ESFM.py
 all_OT_TSV_table := ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv
 WLC_OT_TSV_table := ../intermediateTexts/glossed_OSHB/WLC_glosses.morphemes.tsv
 Clear_Bible_OT_lowfat_TSV := ../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTreesAbbrev.OT.morphemes.tsv
 Clear_Bible_NT_lowfat_TSV := ../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTreesAbbrev.NT.words.tsv
+Clear_Bible_OT_lowfat_XML := $(wildcard ../../Forked/macula-hebrew/lowfat/*.xml)
+Clear_Bible_NT_lowfat_XML := $(wildcard ../../Forked/macula-greek/Nestle1904/lowfat/*.xml)
+WLC_XML := $(wildcard ../../Forked/OS-morphhb/wlc/*.xml)
 BibleTags_TSV = ../sourceTexts/BibleTagsOriginals/BibTags.OT.words.tsv ../sourceTexts/BibleTagsOriginals/BibTags.NT.words.tsv
 BibleTags_OT_TSV_table = ../sourceTexts/BibleTagsOriginals/BibTags.OT.words.tsv
 BibleTags_NT_TSV_table = ../sourceTexts/BibleTagsOriginals/BibTags.NT.words.tsv
+BibleTags_OT_USFM := $(wildcard ../../Forked/bibletags-usfm/usfm/uhb/*.usfm)
+BibleTags_NT_USFM := $(wildcard ../../Forked/bibletags-usfm/usfm/ugnt/*.usfm)
 short_OSHB_TSV := ../sourceTexts/rawOSHB/OSHB.original.flat.morphemes.tsv
 
 #=== Script declarations =======================
@@ -33,6 +41,8 @@ SBE := ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py
 BTranslit := ../../BibleTransliterations/Python/BibleTransliterations.py
 Hebrew := ../../BibleTransliterations/sourceTables/Hebrew.tsv
 Greek := ../../BibleTransliterations/sourceTables/Greek.tsv
+scripted_OT_updates := $(wildcard ScriptedOTUpdates/*)
+scripted_NT_updates := $(wildcard ScriptedVLTUpdates/*)
 
 #=== Top-level/Main stuff =======================
 
@@ -52,11 +62,11 @@ $(LV_OT_HTML) $(LV_NT_HTML): $(final_LV_OT_USFM)  $(final_LV_NT_ESFM) convert_OE
 	@echo "\n\nConvert OET LV USFM files to simple HTML…\n"
 	@$(Python) convert_OET-LV_to_simple_HTML.py
 
-$(final_LV_OT_USFM): $(intermediate_LV_OT_USFM) $(SBE) $(wildcard ScriptedOTUpdates/*) $(BTranslit) $(Hebrew)
+$(final_LV_OT_USFM): $(intermediate_LV_OT_USFM) $(SBE) $(scripted_OT_updates) $(BTranslit) $(Hebrew)
 	@echo "\n\nRun ScriptedBibleEditor on OT USFM files…\n"
 	@$(Python) $(SBE) ScriptedOTUpdates -qe
 
-$(final_LV_NT_ESFM): $(intermediate_LV_NT_ESFM) $(SBE) $(wildcard ScriptedVLTUpdates/*) $(BTranslit) $(Greek) $(Hebrew) $(expanded_wordtable)
+$(final_LV_NT_ESFM): $(intermediate_LV_NT_ESFM) $(SBE) $(scripted_NT_updates) $(BTranslit) $(Greek) $(Hebrew) $(expanded_wordtable)
 	@echo "\n\nRun ScriptedBibleEditor on NT ESFM files…\n"
 	@$(Python) $(SBE) ScriptedVLTUpdates -qe
 
@@ -72,23 +82,23 @@ $(WLC_OT_TSV_table): $(short_OSHB_TSV) prepare_OSHB_for_glossing.py WLCHebrewGlo
 	@echo "\n\nExpand columns in OT TSV and add our custom glosses…\n"
 	@$(Python) prepare_OSHB_for_glossing.py
 
-$(Clear_Bible_OT_lowfat_TSV): $(wildcard ../../Forked/macula-hebrew/lowfat/*.xml) $(WLC_OT_TSV_table) convert_ClearMaculaOT_to_TSV.py
+$(Clear_Bible_OT_lowfat_TSV): $(Clear_Bible_OT_lowfat_XML) $(WLC_OT_TSV_table) convert_ClearMaculaOT_to_TSV.py
 	@echo "\n\nConvert Macula Hebrew from XML files to TSV…\n"
 	@$(Python) convert_ClearMaculaOT_to_TSV.py
 
-$(Clear_Bible_NT_lowfat_TSV): $(wildcard ../../Forked/macula-greek/Nestle1904/lowfat/*.xml) $(BibleTags_NT_TSV_table) convert_ClearMaculaNT_to_TSV.py
+$(Clear_Bible_NT_lowfat_TSV): $(Clear_Bible_NT_lowfat_XML) $(BibleTags_NT_TSV_table) convert_ClearMaculaNT_to_TSV.py
 	@echo "\n\nConvert Macula Greek from XML files to TSV…\n"
 	@$(Python) convert_ClearMaculaNT_to_TSV.py
 
-$(short_OSHB_TSV): $(wildcard ../../Forked/OS-morphhb/wlc/*.xml) convert_OSHB_XML_to_TSV.py
+$(short_OSHB_TSV): $(WLC_XML) convert_OSHB_XML_to_TSV.py
 	@echo "\n\nConvert OSHB XML files to TSV…\n"
 	@$(Python) convert_OSHB_XML_to_TSV.py
 
-$(BibleTags_TSV): $(wildcard ../../Forked/bibletags-usfm/usfm/uhb/*.usfm) $(wildcard ../../Forked/bibletags-usfm/usfm/ugnt/*.usfm) convert_BibTags_USFM_to_TSV.py
+$(BibleTags_TSV): $(BibleTags_OT_USFM) $(BibleTags_NT_USFM) convert_BibTags_USFM_to_TSV.py
 	@echo "\n\nConvert BibleTags USFM files to TSV…\n"
 	@$(Python) convert_BibTags_USFM_to_TSV.py
 
-$(intermediate_LV_NT_ESFM) $(original_wordtable): ../../CNTR-GNT/sourceExports/book.csv ../../CNTR-GNT/sourceExports/collation.csv extract_VLT_NT_to_ESFM.py
+$(intermediate_LV_NT_ESFM) $(original_wordtable): $(CNTR_book_table) $(CNTR_collation_table) $(CNTR_lemma_table)
 	@echo "\n\nExtract NT from TSV table to {BBB}_gloss.ESFM files…\n"
 	@$(Python) extract_VLT_NT_to_ESFM.py -e
 
