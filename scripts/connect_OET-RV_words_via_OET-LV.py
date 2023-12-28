@@ -40,6 +40,7 @@ CHANGELOG:
     2023-09-11 Fix bug that connected the wrong (not the same) simple words
     2023-09-12 Fix bug that caused two nested /nd markers (when rerunning after numbers had been deleted)
     2023-09-28 Concatenate consecutive /nd fields
+    2023-12-20 Check for unwanted trailing spaces on OET-RV lines
 """
 from gettext import gettext as _
 from tracemalloc import start
@@ -60,10 +61,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-10-19' # by RJH
+LAST_MODIFIED_DATE = '2023-12-21' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.57'
+PROGRAM_VERSION = '0.58'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -308,6 +309,22 @@ def connect_OET_RV( rv, lv ):
         state.wordTable = [row.split('\t') for row in lv.ESFMWordTables[wordFileName]]
         state.tableHeaderList = state.wordTable[0]
 
+        lvESFMFilename = f'OET-LV_{BBB}.ESFM'
+        lvESFMFilepath = OET_LV_NT_ESFM_InputFolderPath.joinpath( lvESFMFilename )
+        with open( lvESFMFilepath, 'rt', encoding='UTF-8' ) as esfmFile:
+            state.lvESFMText = esfmFile.read() # We keep the original (for later comparison)
+            state.lvESFMLines = state.lvESFMText.split( '\n' )
+            # Do some basic checking (better to find common editing errors sooner rather than later)
+            for lineNumber,line in enumerate( state.lvESFMLines, start=1 ):
+                # assert not line.endswith(' '), f"Unexpected space at end in {lvESFMFilename} {lineNumber}: '{line}'"
+                if line.endswith(' '):
+                    logging.warning( f"Unexpected space at end in {lvESFMFilename} {lineNumber}: '{line}'" )
+                for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
+                    assert line.count( f'\\{characterMarker} ') == line.count( f'\\{characterMarker}*'), f"{characterMarker} marker mismatch in {rvESFMFilename} {lineNumber}: '{line}'"
+                if '\\x* ' in line: # this can be ok if the xref directly follows other text
+                    logger = logging.critical if ' \\x ' in line else logging.warning
+                    logger( f"Double-check space after xref in {lvESFMFilename} {lineNumber}: '{line}'" )
+
         rvESFMFilename = f'OET-RV_{BBB}.ESFM'
         rvESFMFilepath = OET_RV_ESFM_FolderPath.joinpath( rvESFMFilename )
         with open( rvESFMFilepath, 'rt', encoding='UTF-8' ) as esfmFile:
@@ -315,6 +332,10 @@ def connect_OET_RV( rv, lv ):
             state.rvESFMLines = state.rvESFMText.split( '\n' )
             # Do some basic checking (better to find common editing errors sooner rather than later)
             for lineNumber,line in enumerate( state.rvESFMLines, start=1 ):
+                assert not line.endswith(' '), f"Unexpected space at end in {rvESFMFilename} {lineNumber}: '{line}'"
+                assert '“ ' not in line, f"Unexpected space at beginning of speech in {rvESFMFilename} {lineNumber}: '{line}'"
+                if '’ ”' not in line and '’\\wj* ”' not in line:
+                    assert ' ”' not in line, f"Unexpected space at end of speech in {rvESFMFilename} {lineNumber}: '{line}'"
                 for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
                     assert line.count( f'\\{characterMarker} ') == line.count( f'\\{characterMarker}*'), f"{characterMarker} marker mismatch in {rvESFMFilename} {lineNumber}: '{line}'"
                 if '\\x* ' in line: # this can be ok if the xref directly follows other text

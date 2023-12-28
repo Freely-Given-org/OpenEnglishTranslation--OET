@@ -1,4 +1,4 @@
-\id 2CO - Open English Translation—Readers' Version (OET-RV) v0.0.07
+\id 2CO - Open English Translation—Readers' Version (OET-RV) v0.1.00
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 CO2
@@ -304,7 +304,7 @@
 \s1 Paul's defence of his authority
 \rem /s1 The challenge to Paul's authority; Paul Defends His Ministry; Paul's Defense of His Ministry; Paul Defends His Authority
 \p
-\v 1 Now I myself¦124910, Paul¦124913, am indeed¦124927 humble¦124928 when I'm with you all, but when I'm absent¦124931 I'm bolder. I implore you all by the humility and gentleness of the \nd messiah¦124923\nd* 
+\v 1 Now I myself¦124910, Paul¦124913, am indeed¦124927 humble¦124928 when I'm with you all, but when I'm absent¦124931 I'm bolder. I implore you all by the humility and gentleness of the \nd messiah¦124923\nd*
 \v 2 and I beg you¦124937 so that when I come I won't have to be as bold as I'm expecting to counter those who consider us to be motivated by worldly desires.
 \v 3 We might be living in this world, but it's not people that we're at war with,
 \v 4 because the weapons¦124969 that we use in war are not physical but¦124976 \add come with\add* God's power¦124977 for tearing¦124981 down \add anti-God institutions\add* and nullifying \add their\add* arguments¦124983.
@@ -326,7 +326,7 @@
 \v 17 But \x + \xo 10:17: \xt Jer 9:24.\x*‘if anyone does boast, they should boast in the \nd master¦125236\nd*’,
 \v 18 because it's not the people who commend themselves that are approved¦125247, but¦125249 those who the \nd master¦125252\nd* commends.
 \c 11
-\s1 Paul and the not true/correct apostles
+\s1 Paul and the fake missionaries
 \rem /s1 Paul speaks as a fool; Paul and the False Apostles
 \p
 \v 1 I wish you all could tolerate a bit of foolishness¦125261 from me, but yes, you do tolerate me,
@@ -347,75 +347,76 @@
 \v 13 because¦125476 they are false¦125472 ambassadors¦125477 \add and deceitful¦125474 workers¦125473\add*—masquerading¦125475 themselves¦125475 as Messiah's missionaries,
 \v 14 and that's no surprise because¦125484 Satan¦125486 himself¦125483 masquerades¦125487 as \add a\add* messenger¦125489 of light¦125490.
 \v 15 So then it's no great¦125492 \add surprise\add* if his¦125498 servants are masquerading¦125499 as God's servants, \add but\add* their end will be the consequence of their actions.
-\s1 The boasting of Paul concerning the suffering din
+\s1 Paul's boasting about his sufferings
 \rem /s1 Paul's Sufferings as an Apostle; Paul Boasts About His Sufferings; Paul's Many Trials
 \p
-\v 16 ◘
-\v 17 ◘
-\v 18 ◘
-\v 19 ◘
-\v 20 ◘
-\v 21 ◘
-\v 22 ◘
-\v 23 \x + \xo 11:23: \xt Acts 16:23.\x*◘
-\v 24 \x + \xo 11:24: \xt Deu 25:3.\x*◘
-\v 25 \x + \xo 11:25: a \xt Acts 16:22; \xo b \xt Acts 14:19.\x*◘
-\v 26 \x + \xo 11:26: a \xt Acts 9:23; \xo b \xt Acts 14:5.\x*◘
-\v 27 ◘
-\v 28 ◘
-\v 29 ◘
+\v 16 I'll say it again: no one should suppose¦125516 that I'm foolish, but if they do, at least accept me as foolish so that I can also boast¦125534 a little¦125531.
+\v 17 When I say that, I'm not talking¦125536 \add words from\add* the \nd master¦125540\nd*, but¦125542 like a fool confidently¦125549 boasting¦125551.
+\v 18 Many boast like worldly \add people\add*, so I'll boast as well,
+\v 19 because you¦125562 prudent¦125565 \add ones\add* happily tolerate¦125562 foolish¦125564 people.
+\v 20 Yes, you tolerate¦125567 those who'll enslave¦125572 you all, those who'll exploit¦125575 you, those who'll take \add advantage of\add* you all, those who promote themselves, and anyone whacks you in the face¦125586.
+\v 21 I'm talking¦125605 about dishonour¦125590 as if we¦125594 were weak, but¦125599 (speaking¦125605 foolishly¦125604 again), anything that anyone¦125601 else is brave enough to do, then I will also be brave enough \add to match\add*.
+\v 22 Are they Hebrews? I am too. Are they Israelis? So am I. Are they descendants of Abraham¦125616? Me also.
+\v 23 \x + \xo 11:23: \xt Acts 16:23.\x*Are they¦125621 Messiah's servants? \add Well,\add* I'm above¦125624 them (speaking¦125623 insanely¦125622 now): I've worked harder, been in prison¦125633 more often, \add endured\add* uncountable beatings¦125637, and been close to death¦125641 more often.
+\v 24 \x + \xo 11:24: \xt Deu 25:3.\x*I've received¦125649 the thirty-nine lashes from the Jewish \add leadership\add* five¦125645 times¦125645,
+\v 25 \x + \xo 11:25: a \xt Acts 16:22; \xo b \xt Acts 14:19.\x*was beaten three times with rods, was stoned¦125653 once, shipwrecked¦125655 three times, and I was in the ocean for a day¦125656 and a night¦125656.
+\v 26 \x + \xo 11:26: a \xt Acts 9:23; \xo b \xt Acts 14:5.\x*I've done \add many long\add* trips, crossed dangerous rivers¦125664, risked being robbed¦125666, \add was persecuted\add* by my own people as well as by non-Jews¦125672, have been in danger in the city¦125675, in the wilderness¦125678 and on the ocean, \add as well as being attacked\add* by false¦125684 \add teachers\add*.
+\v 27 I've worked often and worked hard, often needing to keep guard, \add suffered\add* famine¦125693 and thirst¦125695, fasted often, and been cold¦125700 and lacking clothing.
+\v 28 \add Then\add* apart from all those external¦125705 things, I've been opposed¦125707 every day¦125713—\add not to mention\add* my concern for all the assemblies¦125718.
+\v 29 What person falters and I don't falter with them? Who stumbles¦125725 \add in their walk with God\add* and I don't suffer with them?
 \p
-\v 30 If it's appropriate¦125732 to be boasting, what I'll boast about would be my¦125736 weaknesses¦125735.
-\v 31 ◘
-\v 32 \x + \xo 11:32-33: \xt Acts 9:23-25.\x*◘
-\v 33 ◘
+\v 30 If it's appropriate¦125732 to be boasting, what I'd boast about would be my¦125736 weaknesses¦125735.
+\v 31 The \nd god¦125739\nd* and¦125740 father¦125741 of the \nd master¦125743 Yeshua¦125745\nd*—the one who should be praised for all the ages—knows that I'm not lying¦125756.
+\v 32 \x + \xo 11:32-33: \xt Acts 9:23-25.\x*The governor¦125760 of Aretas¦125761 (appointed by the king¦125763) had guards¦125764 \add around\add* the city¦125767 of Damascus to try to arrest¦125769 me,
+\v 33 but¦125772 I was lowered¦125777 down from a window¦125774 in the \add city\add* wall in a basket¦125776 and¦125781 thus able to escape¦125782 his¦125785 clutch.
 \c 12
-\s1 The impakita of God ki Paul
+\s1 What God showed Paul
 \rem /s1 Paul's Visions and Revelations; Paul's Vision and His Thorn in the Flesh
 \p
-\v 1 http://bibledifferences.net/2019/04/24/156-boast/
-\v 2 ◘
-\v 3 ◘
-\v 4 ◘
-\v 5 ◘
-\v 6 ◘
+\v 1 It's not appropriate¦125788 or beneficial¦125792 to be boasting¦125786, so I'll come to \add the\add* visions¦125800 and revelations¦125802 from the \nd master¦125803\nd*.\f + \fr 12:1 \ft See http://bibledifferences.net/2019/04/24/156-boast.\f*
+\v 2 Fourteen years¦125809 ago I observed a man¦125805 who was a believer in \nd Messiah¦125807\nd* who was pulled \add up\add* to the third¦125830 heaven¦125831. (I didn't know whether¦125811 this physically happened or just in the spiritual \add realm\add*.)
+\v 3 And I know that man¦125836 (\nd God¦125848\nd* only knows if it was in the physical or \add just\add* the spiritual \add realm\add*)
+\v 4 was pulled \add up\add* into paradise¦125854 and¦125855 heard¦125856 messages¦125858 which¦125859 can't be put into words (because \add living\add* people aren't allow to speak¦125863 them).
+\v 5 I'm \add prepared\add* to boast about that man¦125866, but¦125869 I won't boast about myself¦125870 because I won't boast \add at all\add* except¦125874 \add about\add* my weaknesses¦125878,
+\v 6 because even if I did want¦125882 to boast¦125884, I wouldn't be being foolish¦125888, because I would be speaking¦125891 the truth¦125889. But I'll refrain¦125892 in case anyone¦125895 reckons that I'm more than what they can see or hear¦125904 about me.
 \p
-\v 7 ◘
-\v 8 ◘
-\v 9 ◘
-\v 10 ◘
-\s1 The pegkasasew of Paul of from-Corinth
+\v 7 So to keep my head from getting too big because of those incredible revelations¦125912, I was given¦125917 a ‘thorn¦125919’ in my body—Satan's¦125924 messenger¦125922 to harass me and keep me from becoming conceited.
+\v 8 Three times I begged the \nd master¦125936\nd* that it might leave me
+\v 9 and he told me, “Is my grace¦125948 good enough for you? \add My¦125949\add* power reaches its conclusion through weakness.” Therefore¦125959 I'll quite gladly¦125958 boast¦125961 about my weaknesses so that the \nd messiah's¦125973\nd* power can take residence¦125967 in me.
+\v 10 So then I take pleasure¦125975 in weaknesses¦125977, in insults¦125979 and hardships, in persecutions¦125984 and distresses for \nd Messiah¦125989\nd* because¦125991 whenever¦125990 I might be faltering¦125992, that's when I'm powerful¦125994.
+\s1 Paul's concerns about the believers there
 \rem /s1 Paul's final appeal; Paul's Concern for the Corinthian Church; Paul's Concern for the Corinthians
 \p
-\v 11 ◘
-\v 12 ◘
-\v 13 ◘
+\v 11 You have forced me to become¦125996 foolish¦125997, because I should have been commended¦126009 by you all because I'm no less than those ‘super¦126016 missionaries’ even if I am \add just\add* ‘nothing’.
+\v 12 Indeed, I persevered to deliver missionary results among¦126028 you all, as well as signs, wonders¦126037, and miracles¦126039.
+\v 13 In what way were you all treated less than the rest of the assemblies¦126049, except¦126050 that I didn't load you with any burdens¦126056? Forgive¦126058 me for this mistake.
 \p
-\v 14 ◘
-\v 15 ◘
+\v 14 Now listen, I'm ready¦126066 to visit you all for the third¦126064 time and I won't be aiming to burden¦126073 you down because¦126088 I'm not after what you have, but rather \add my interest is in\add* you yourselves. The children shouldn't be saving \add to support\add* the parents, but the parents \add should support\add* the children.
+\v 15 I'm happy to invest everything I have, including all of myself, for the sake of your¦126105 souls¦126104. Am I being loved¦126114 less the more that I love you all?
 \p
-\v 16 ◘
-\v 17 ◘
-\v 18 ◘
+\v 16 So that's that. I'm didn't burden¦126121 you all, but being¦126125 crafty¦126126 \add by nature\add*, I took¦126129 you all by trickery.
+\v 17 Did any of those that I sent¦126133 to you exploit¦126138 you all?
+\v 18 I urged¦126140 Titos \add to go there\add* along with another believer. Surely¦126146 Titos must have exploited¦126147 you all? \add No,\add* didn't we all do the same things as \add guided by\add* the same spirit¦126153.
 \p
-\v 19 ◘
-\v 20 ◘
-\v 21 ◘
+\v 19 \add Now\add* you're already supposing¦126162 that we're defending¦126165 \add ourselves\add*? \add Actually,\add* we're speaking¦126172 \add as followers of\add* \nd Messiah¦126171\nd* knowing that \nd God¦126169\nd* is watching, and dear friends, everything has been \add with the aim of\add* building¦126180 you up.
+\v 20 You see, I'm worried that when I come¦126185, I might not find you \add living\add* how I'd want, and you all might not find me how you'd want. \add I'm worried that I might find\add* strife¦126199 and jealousy¦126200, anger and selfish¦126203 ambition¦126203, slander¦126204 and gossip¦126205, and conceit¦126206 and disturbances¦126207.
+\v 21 \add I'm worried that\add* when I come¦126211, \nd God¦126218\nd* will humble¦126215 me there with you¦126221 all, and I might be upset about many who've sinned¦126226 in the past and haven't repented¦126229 from the impurity¦126232 and sexual¦126234 immorality¦126234 and self-centred living that they¦126238 practiced¦126238.
 \c 13
-\s1 The ending teaching and greetings
+\s1 Testing yourselves
 \rem /s1 Paul's Final Advice; Final Warnings and Greetings; Further Warning
 \p
-\v 1 \x + \xo 13:1: \xt Deu 17:6; 19:15.\x*◘
-\v 2 ◘
-\v 3 ◘
-\v 4 ◘
+\v 1 This is the third time¦126240 that I'll be coming¦126244 there to you¦126247 all. ‘Every account must be confirmed by at least two¦126251, \add preferably\add* three¦126255, witnesses¦126252.’\x + \xo 13:1: \xt Deu 17:6; 19:15.\x*
+\v 2 I said¦126259 previously on my second¦126265 visit and while I'm absent¦126267 I'll say it again to those who sinned¦126271 previously and to all the rest \add as well\add*: if I come¦126278 back \add to find\add* the same¦126280 again, I won't be sparing¦126283 anyone¦126283,
+\v 3 because you're all wanting proof¦126286 that I speak¦126291 from \nd Messiah¦126292\nd* who isn't incapable of \add handling\add* you all but is quite able \add to do what he wants\add*.
+\v 4 Although he was executed¦126306 in weakness¦126308, \add now\add* he's living by God's power. We also falter¦126317 in him, but will be living with him by God's power towards¦126331 you all.
 \p
-\v 5 ◘
-\v 6 ◘
-\v 7 ◘
-\v 8 ◘
-\v 9 ◘
-\v 10 ◘
+\v 5 Test yourselves to check if you're \add living\add* in the faith¦126339—you yourselves can decide that. Or can't you all recognise¦126344 whether¦126335 or not \nd Messiah¦126347 Yeshua¦126348\nd* is living in you? Surely you're not that unqualified¦126355?
+\v 6 But I'm hoping¦126357 that you¦126360 all will know that we're not unqualified¦126365.
+\v 7 And we're asking \nd God¦126371\nd* that you won't do evil¦126375—not so that we'll be seen¦126381 to be approved¦126380, but so that you all will be doing¦126388 good¦126387, \add even if\add* we may seem unqualified¦126392,
+\v 8 because¦126402 we're not able \add to do\add* anything¦126397 against¦126398 the truth—only \em for\em* the truth.
+\v 9 So we're glad whenever¦126407 we falter¦126409, but you all might be quite capable as we also desire that you all \add grow to\add* perfection.
+\v 10 I'm writing¦126426 these¦126423 things while I'm absent¦126424, so that when I'm present¦126428 I won't have to treat¦126431 \add you all\add* severely¦126430 according¦126432 to the authority¦126434 that the \nd master¦126439\nd* gave¦126440 me for building¦126443 and¦126444 not for tearing¦126447 down.
+\s1 Paul's final greetings and prayer
 \rem /s1 Paul's Final Greetings; Final Greetings and Benediction
 \p
 \v 11 Finally¦126448, brothers¦126449 and sisters¦126449, stay happy, be prepared¦126452 and be comforted¦126453, be united with each other and at peace. \add May\add* \nd God¦126460\nd* \add who's the source\add* of love and peace be with all of you.
