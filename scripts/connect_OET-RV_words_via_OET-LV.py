@@ -5,7 +5,7 @@
 #
 # Script to connect OET-RV words with OET-LV words that have word numbers.
 #
-# Copyright (C) 2023 Robert Hunt
+# Copyright (C) 2023-2024 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -41,6 +41,7 @@ CHANGELOG:
     2023-09-12 Fix bug that caused two nested /nd markers (when rerunning after numbers had been deleted)
     2023-09-28 Concatenate consecutive /nd fields
     2023-12-20 Check for unwanted trailing spaces on OET-RV lines
+    2024-01-24 Check for doubled punctuation and wrong xref punctuation in OET-RV lines
 """
 from gettext import gettext as _
 from tracemalloc import start
@@ -333,6 +334,10 @@ def connect_OET_RV( rv, lv ):
             # Do some basic checking (better to find common editing errors sooner rather than later)
             for lineNumber,line in enumerate( state.rvESFMLines, start=1 ):
                 assert not line.endswith(' '), f"Unexpected space at end in {rvESFMFilename} {lineNumber}: '{line}'"
+                assert ',,' not in line and '..' not in line, f"Unexpected doubled punctuation in {rvESFMFilename} {lineNumber}: '{line}'"
+                assert '\\x*,' not in line and '\\x*.' not in line, f"Bad xref formatting in {rvESFMFilename} {lineNumber}: '{line}'"
+                if line.count(' \\x ') < line.count('\\x '):
+                    assert '\\x* ' in line or line.endswith('\\x*') or '\\x*—' in line, f"Missing xref space in {rvESFMFilename} {lineNumber}: '{line}'"
                 assert '“ ' not in line, f"Unexpected space at beginning of speech in {rvESFMFilename} {lineNumber}: '{line}'"
                 if '’ ”' not in line and '’\\wj* ”' not in line:
                     assert ' ”' not in line, f"Unexpected space at end of speech in {rvESFMFilename} {lineNumber}: '{line}'"
