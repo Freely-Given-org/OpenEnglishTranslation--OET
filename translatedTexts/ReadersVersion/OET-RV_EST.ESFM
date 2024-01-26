@@ -1,4 +1,4 @@
-\id EST - Open English Translation—Readers' Version (OET-RV) v0.0.05
+\id EST - Open English Translation—Readers' Version (OET-RV) v0.0.08
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 EST
@@ -20,6 +20,7 @@
 \ie
 \c 1
 \s1 Queen Vashti refuses King Ahasuerus
+\rem /s1 King Ahasuerus's banquet; Queen Vashti Deposed; Queen Vashti Defies King Xerxes; King Ahasuerus Deposes Queen Vashti; The King's Banquet
 \p
 \v 1 The following events happened during the reign of \add King\add* Ahasuerus.\x + \xo 1:1: \xt Ezr 4:6.\x* (\add Also known as King Xerxes,\add* he ruled \add the empire of Persia\add* with 127 provinces from India all the way across to Ethiopia.)
 \v 2 In those days, he ruled his empire from \add a city called\add* Susa, \add Persia's\add* capital.
@@ -33,6 +34,7 @@
 \v 8 and it was served according to his rule: There is no compulsion to drink, but all of his servants were to give each guest however much they wanted.
 \p
 \v 9 Meanwhile, Queen Vashti was hosting a celebration for the women \add in a different part\add* of the king's royal palace.
+\rem /s1 Queen Vashti Deposed
 \p
 \v 10 On the seventh day of the celebrations, when the king was feeling cheery from his wine-drinking, he ordered seven of his chief servants (Mehuman, Biztha, Harbona, Bigtha, Abagtha, Zethar, and Karkas)
 \v 11 to bring Queen Vashti, wearing her royal crown, to him in order to show her beauty to the people and the officials, because she was very attractive.
@@ -50,7 +52,8 @@
 \v 21 This seemed like a good idea to the king and his officials, so King Ahasuerus followed the advice of Memukan
 \v 22 and sent letters to every province in his empire. He wrote to every province using its own alphabet and to each people group in its own language. The letters said that men should be the masters over their wives and children, and that a husband should be able to give orders to his wife in his own native language \add that she should understand and obey\add*.
 \c 2
-\s1 Esther becomes queen
+\s1 Beautiful Esther enters the king's harem
+\rem /s1 Esther becomes queen; Esther Becomes Queen; Esther Made Queen
 \p
 \v 1 Some time later when King Ahasuerus no longer felt so angry, he \add started to miss\add* Vashti. But when she'd disobeyed his command, he had made a decree \add that she could never come into his presence again\add*.
 \v 2 So some of the young men who served the king suggested to him, “\add Your majesty, you should get a new wife for yourself.\add* You could tell your servants to look for young virgins who are very beautiful.
@@ -63,7 +66,7 @@
 \v 7 Now Mordecai was taking care of his cousin, who was an orphan. When her father and mother had died, Mordecai had adopted her as his own daughter. Her \add Hebrew\add* name was Hadassah, and her \add Persian\add* name was Esther. Esther was now a young woman and she was exceptionally attractive.
 \p
 \v 8 So when the king's command and decree became known, many young women were being brought into the capital city of Susa and placed under Hegai's charge, and this is what happened to Esther. (Hegai was the overseer of the women.)
-\v 9 Hegai was very impressed with Esther, and he treated her favorably. He quickly arranged for Esther to receive her beauty treatments and her allotment of food, as well as choosing seven female servants from the king’s palace and assigning them to be her personal attendants. He also moved Esther and her attendants to the best rooms in the harem for virgins.
+\v 9 Hegai was very impressed with Esther, and he treated her favorably. He quickly arranged for Esther to receive her beauty treatments and her allotment of food, as well as choosing seven female servants from the king's palace and assigning them to be her personal attendants. He also moved Esther and her attendants to the best rooms in the harem for virgins.
 \v 10 (Esther hadn't revealed her family ties or her Jewishness to anyone, because Mordecai had instructed her not to.)
 \p
 \v 11 Every day Mordecai would walk around in front of the courtyard of the women's harem to find out \add from others\add* how Esther was doing and how she was being treated.
@@ -71,68 +74,74 @@
 \v 12 Each young woman would get twelve months of beauty treatment according to the \add Persian\add* law for women—there would be six months of applying oil of myrrh, then six months of perfumes and other lotions \add designed for\add* women. Then their turn would come, one at a time, to be taken to King Ahasuerus.
 \v 13 The young woman was allowed to take whatever she wanted from the harem when she went to the king's house.
 \v 14 She'd be taken across in the evening, and in the morning she'd be led out to the other harem which was for the concubines. (That harem was overseen by Shaashgaz, another castrated royal guardian.) The women taken there wouldn't go again to the king's house unless he had especially liked them and summoned her back by name.
+\s1 Esther becomes queen
 \p
-\v 15 ◘
-\v 16 ◘
-\v 17 ◘
-\v 18 ◘
-\s1 The pegpangabangan of Mordecai of King
+\v 15 Now Esther was the daughter of Mordecai's uncle, Abihail, from whom Mordecai had adopted her as his own daughter. When it was her turn to go to the king, she didn't ask for anything other than what Hegai, the king's trusted official in charge of the harem, had advised, and everyone who saw Esther liked her.
+\v 16 So Esther was taken to King Ahasuerus at his royal palace in January, in the seventh year of his reign,
+\v 17 and the king loved Esther more than any of the other women. He treated her more kindly and more favorably than any of the other young women \add who had become his concubines\add*. He put a royal crown on her head and made her the \add new\add* queen to replace Vashti.
+\v 18 Then the king hosted a large celebration and invited all his officials and servants to a feast to celebrate Esther \add becoming queen\add*. He proclaimed that this would be a time to celebrate for people in all of the provinces of his empire when they wouldn't have to pay taxes, and he gave \add many\add* generous gifts.
+\s1 Mordecai and Esther earn the king's favour
+\rem /s1 Mordecai Discovers a Plot; Mordecai and Haman; Mordecai Saves the King's Life; Mordecai Uncovers a Conspiracy
 \p
-\v 19 ◘
-\v 20 ◘
+\v 19 \add Later on,\add* King Ahasuerus had \add his officers\add* bring more virgins \add to Susa\add*. During this time, Mordecai \add had been given a position by the king so\add* he sat \add there\add* at the king's gate.
+\v 20 Esther had still not told anyone that \add she was Jewish\add* because Mordecai had warned her not to tell anyone. \add What's more,\add* she continued to follow all of Mordecai's instructions, just as she had done when she was still under his guardianship.
+\rem /s1 Mordecai's Loyalty to the King
 \p
-\v 21 ◘
-\v 22 ◘
-\v 23 ◘
+\v 21 One day when Mordecai was \add on duty\add* at the king's gate, two of the king's guards who protected the doorway \add to the king's private rooms\add* became angry with the king and so they planned to assassinate King Ahasuerus. (Their names were Bigthan and Teresh.)
+\v 22 But when Mordecai heard what they were planning, he told Queen Esther about it and she told the king, explaining that Mordecai had given her the information.
+\v 23 When the matter was investigated and \add the facts\add* discovered, both conspirators were impaled on \add sharpened wooden\add* poles, and in the presence of the king, the incident was recorded in the royal record of events.
 \c 3
-\s1 The pegbebentaan of Haman egguleen the Jews
+\s1 Haman plans to annihilate the Jews
+\rem /s1 Haman's Plot against the Jews; Haman Plots to Destroy the Jews; Haman Undertakes to Destroy the Jews; Haman's Plot to Destroy the Jews
 \p
-\v 1 ◘
-\v 2 ◘
-\v 3 ◘
-\v 4 ◘
-\v 5 ◘
-\v 6 ◘
+\v 1 Some time later, King Ahasuerus promoted Haman, one of his officials (and the son of Hammedatha \add who was a descendant\add* of Agag). The king gave Haman a very important position—more important than any of his other officials.
+\v 2 Then the king commanded that all his other officials had to bow down in front of Haman to honour him, and they were doing this at the king's gate, except for Mordecai who refused to bow down to reverence Haman.
+\v 3 “Why are you disobeying the king's command?” asked the other royal servants at the king's gate.
+\v 4 Mordecai told them that it was because he was a Jew \add (and Jews only worship Yahweh)\add*. He didn't listen to their \add warnings\add* so they told Haman about it to see if he would tolerate Mordecai in keeping refusing to bow down.
+\v 5 When Haman saw that Mordecai would not bow down to him or show him reverence, he was furious.
+\v 6 But Hamas despised the idea of just punishing Mordecai because he'd been told that Mordecai \add didn't bow to him because\add* Mordecai was a Jew. So Haman decided to annihilate all of Mordecai's people, i.e., all the Jews throughout the kingdom of Ahasuerus.
 \p
-\v 7 ◘
+\v 7 In early April of the twelfth year of King Ahasuerus' reign, Haman got his servants to throw dice \add to select the best month and the best day to kill the Jews\add*, and the 13th of March was chosen.
 \p
-\v 8 ◘
-\v 9 ◘
+\v 8 Then Haman \add went to\add* King Ahasuerus and said, “\add Your Majesty,\add* there is a certain group of people who live among the other peoples in every province of your empire. They have their own set of laws, so they don't obey your laws. It's not good for you to allow them to continue to live in your empire.
+\v 9 Your majesty, if you approve of this plan, then write a decree saying that all of the Jews must be destroyed. \add When they're dead, we can take all of their possessions, and from that\add* I will give 300 tons of silver to your administrators for them to put into your royal treasuries.”
 \p
-\v 10 ◘
-\v 11 ◘
+\v 10 \add This seemed sensible to\add* the king so he removed his signet ring from his finger and he gave it\f + \fr 3:10 \ft Having the king's signet ring enabled Haman to stamp the king's seal (like a signature) onto the newly drafted laws.\f* to Haman (the son of Hammedatha, the Agagite, the adversary of the Jews).
+\v 11 The king told Haman, “You can keep the money for yourself, and you can do whatever you want to do with those people.”
 \p
-\v 12 ◘
-\v 13 ◘
-\v 14 ◘
+\v 12 On the thirteenth day of that same month, Haman called in the royal scribes, and he dictated a letter to them. He told them to send copies to the royal officials, the governors of each province, and the leaders of each people group \add within the empire\add*. The scribes translated the letter so it could be sent to each province using its own alphabet and to each people group in its own language. To show that he was sending the letter under the king's own authority, Haman sealed each copy of the letter with the ring that had the king's official seal on it.
+\v 13 Couriers delivered the letters to the officials in every province in the empire. The letters said to completely destroy all the Jews, including the children and women, on a single day. That was to be the thirteenth day of March early in the following year. The letters also stated that those who killed the Jews could take everything that belonged to them.
+\v 14 The letter told the officials to display copies where everyone could see them—that way all the people in every single province would know that the king had commanded this, and they could get ready for when the day came.
 \p
-\v 15 ◘
+\v 15 So couriers hurried off with the letters as the king had commanded. A herald in the capital city of Susa also proclaimed what the letters said. Then the king and Haman relaxed and drank together, but there was \add total\add* confusion in Susa \add about how all of this would work out\add*.
 \c 4
-\s1 Migpabulig Mordecai ki Esther
+\s1 Mordecai asks the queen for help
+\rem /s1 Mordecai Asks for Esther's Help; Esther Agrees to Help the Jews; Esther plans to rescue the Jews; Mordecai Requests Esther's Help; Mordecai Persuades Esther to Help
 \p
-\v 1 ◘
-\v 2 ◘
-\v 3 ◘
+\v 1 When Mordecai found out about what had been done, he tore his clothes and dressed in sackcloth and \add threw\add* ashes \add over himself (as a sign of mourning or distress)\add* and went out into the city centre, wailing loudly and bitterly.
+\v 2 But no one was wearing mourning garb was allowed inside the king's gate, so when Mordecai reached the gate, he had to stay just outside it.
+\v 3 In every province of the empire, the letter that said to destroy the Jews was publicly displayed and when the Jews heard about it, they were incredibly upset. They skipped meals and wailed loudly, and many of them also wore sackcloth and threw ashes on themselves and lay on the ground.
 \p
-\v 4 ◘
-\v 5 ◘
-\v 6 ◘
-\v 7 ◘
-\v 8 ◘
-\v 9 ◘
-\v 10 ◘
-\v 11 ◘
+\v 4 When \add Queen\add* Esther's young female attendants came with her guardians and told her \add what was going on outside\add*, even the queen became very scared. She sent Mordecai some good clothes to wear instead of the sackcloth, but he wouldn't accept them.
+\v 5 The king had assigned some of the royal guardians to Esther personally, so Esther called for one of them—a man named Hathak. She told him to go out and speak with Mordecai and find out what he was so distressed about.
+\v 6 So Hathak went out to \add talk to\add* Mordecai who was out in the plaza in front of the king's gate.
+\v 7 Mordecai told him everything that Haman was planning to do and even told him how much money Haman had said the king would get for his treasuries if \add the king commanded people\add* to kill all the Jews.
+\v 8 Mordecai also gave Hathak a copy of the letter that the announcers had read out loud in Susa, that said that people must kill all the Jews. He told Hathak to show the letter to Esther so that she would know exactly what it said and also told him to urge her to go to the king personally and to beg him desperately to save her people \add from destruction\add*.
+\v 9 So Hathak returned to the queen and told her what Mordecai had said,
+\v 10 and Esther told him to go back to Mordecai with this message:
+\v 11 “There's a law about going to the king that applies to everyone in the kingdom, both men and women. If anyone goes into the inner courtyard of the palace, where the king can see them, and the king has not summoned them, that person will be executed. Only if the king holds out his golden scepter to them, then they will live. (Everyone in the whole empire knows this law.) The king hasn't called for me in over a month\add , and if I go in without being summoned, I could be put to death\add*.”
 \p
-\v 12 ◘
-\v 13 ◘
-\v 14 ◘
+\v 12 \add So Hathak\add* went back to Mordecai and told him what the queen had said.
+\v 13 Mordecai told \add Hathak\add* to tell this to Esther: “Don't imagine that just because you live there in the king's palace that you'll be safe when they kill all the other Jews.
+\v 14 If you say nothing at all now, someone from some other place will rescue the Jews, but you and your relatives will not survive. Who knows, perhaps it was for a time just like this that \add God allowed\add* you to become queen?”
 \p
-\v 15 ◘
-\v 16 ◘
+\v 15 Then Esther sent this reply to Mordecai:
+\v 16 “Go and assemble all the Jews who live here in Susa, and tell them to fast and pray for my sake—tell them to not eat or drink anything for three days and three nights. My female attendants and I will also fast in the same way. At the end of the three days, I will go in to talk to the king even though it's against the law. I will do that even if it costs me my life.”
 \p
 \v 17 ◘
 \c 5
 \s1 The going of Esther of sinabeng of King
+\rem /s1 Esther's Banquet; Esther Invites the King and Haman to a Banquet; Esther's Request to the King
 \p
 \v 1 ◘
 \v 2 ◘
@@ -146,6 +155,7 @@
 \v 7 ◘
 \v 8 ◘
 \s1 The pegbebentaan of Haman of killing ki Mordecai
+\rem /s1 Haman Plots to Kill Mordecai; Haman's Plan to Kill Mordecai; Haman Plans to Have Mordecai Hanged; Haman's Rage Against Mordecai
 \p
 \v 9 ◘
 \v 10 ◘
@@ -157,6 +167,7 @@
 \p …◘
 \c 6
 \s1 The pegpabantug of King ki Mordecai
+\rem /s1 Haman executed; The King Honors Mordecai; Mordecai Honored
 \p
 \v 1 ◘
 \v 2 ◘
@@ -182,9 +193,11 @@
 \v 12 ◘
 \v 13 ◘
 \s1 The killing ki Haman
+\rem /s1 Haman Is Put to Death; Haman's Downfall and Mordecai's Advancement
 \p
 \v 14 ◘
 \c 7
+\rem /s1 The King Executes Haman; Haman Hanged
 \p
 \v 1 ◘
 \v 2 ◘
@@ -205,9 +218,11 @@
 \v 10 ◘
 \c 8
 \s1 The pegnangen of Jews egpasukulen
+\rem /s1 Esther Saves the Jews; The King's Edict in Behalf of the Jews; A Decree to Help the Jews; The Jews Are Told to Fight Back
 \p
 \v 1 ◘
 \v 2 ◘
+\rem /s1 The triumphant Jews destroy their enemies
 \p
 \v 3 ◘
 \v 4 ◘
@@ -230,6 +245,7 @@
 \v 17 ◘
 \c 9
 \s1 The pegpangimatey of Jews of enemies dan
+\rem /s1 The Jews Destroy Their Enemies; Triumph of the Jews; The Victory of the Jews; Destruction of the Enemies of the Jews
 \p
 \v 1 ◘
 \v 2 ◘
@@ -252,9 +268,11 @@
 \p
 \v 16 ◘
 \v 17 ◘
+\rem /s1 Purim Celebrated; The Feast of Purim Inaugurated
 \v 18 ◘
 \v 19 ◘
 \s1 The pegsahakeen named of Purim
+\rem /s1 The Festival of Purim; The feast of Purim
 \p
 \v 20 ◘
 \v 21 ◘
@@ -273,6 +291,7 @@
 \v 32 ◘
 \c 10
 \s1 The kabantug of King Ahasuerus and of Mordecai
+\rem /s1 The Greatness of Mordecai; The Greatness of Xerxes and Mordecai
 \p
 \v 1 ◘
 \v 2 ◘

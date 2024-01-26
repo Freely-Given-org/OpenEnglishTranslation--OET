@@ -800,6 +800,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('left','came out'),
             ('listen','give ear'),
             ('living','dwelling'),
+            ('Listen','Behold'),('Look','Behold'),
             ('looking','searched'),
             ('looking','seeking'),
             ('loudly','loud'),

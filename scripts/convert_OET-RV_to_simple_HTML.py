@@ -5,7 +5,7 @@
 #
 # Script to take the OET-RV NT USFM files and convert to HTML
 #
-# Copyright (C) 2022-2023 Robert Hunt
+# Copyright (C) 2022-2024 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -52,10 +52,10 @@ from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, 
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 
 
-LAST_MODIFIED_DATE = '2023-09-12' # by RJH
+LAST_MODIFIED_DATE = '2024-01-26' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.72'
+PROGRAM_VERSION = '0.73'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -917,7 +917,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
         if marker == 'rem':
             # print( f"{BBB} {C}:{V} {inRightDiv=} {inParagraph=} {inTable} {marker}={rest}" )
             # assert not inRightDiv, f"{BBB} {C}:{V} {inRightDiv=} {inParagraph=} {inTable} {marker}={rest}"
-            assert not inTable
+            assert not inTable, f"{BBB} {C}:{V} rem inside table"
             if inRightDiv:
                 assert rest.startswith('/'), f"{BBB} {C}:{V} {inRightDiv=} {inParagraph=} {inTable} {marker}={rest}"
                 given_marker = rest[1:].split( ' ', 1 )[0]
@@ -926,7 +926,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                 rest = rest[len(given_marker)+2:] # Drop the '/marker ' from the displayed portion
             elif rest.startswith('/'): # it's probably a section marker added at a different spot
                 given_marker = rest[1:].split( ' ', 1 )[0]
-                assert given_marker in ('s1','r','s2','s3','d')
+                assert given_marker in ('s1','r','s2','s3','d','qa'), f"{rest=} {given_marker=}"
                 marker = f"added_{given_marker}" # Sets the html <p> class below
                 rest = rest[len(given_marker)+2:] # Drop the '/marker ' from the displayed portion
             if inParagraph:
@@ -1153,7 +1153,9 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                          .replace( '\\sig ', '<span class="sig">' ) \
                          .replace( '\\sig*', '</span>' ) \
                          .replace( '\\tl ', '<span class="tl">' ) \
-                         .replace( '\\tl*', '</span>' )
+                         .replace( '\\tl*', '</span>' ) \
+                         .replace( '\\no ', '<span class="no">' ) \
+                         .replace( '\\no*', '</span>' )
     book_html = livenJMPs( BBB, book_html )
     book_html = livenIORs( BBB, book_html )
     assert '\\' not in book_html, f"{BBB} {book_html[book_html.index(f'{BACKSLASH}')-20:book_html.index(f'{BACKSLASH}')+22]}"
