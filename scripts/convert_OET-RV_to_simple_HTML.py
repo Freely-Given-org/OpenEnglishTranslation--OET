@@ -30,6 +30,7 @@ CHANGELOG:
     2023-08-21 Add lemma pages
     2023-08-29 Added style for nomina sacra
     2023-09-05 Allow for /sig style
+    2024-01-27 Check for unexpected USFM character formatting in /rem lines
 """
 from gettext import gettext as _
 from tracemalloc import start
@@ -52,7 +53,7 @@ from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, 
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 
 
-LAST_MODIFIED_DATE = '2024-01-26' # by RJH
+LAST_MODIFIED_DATE = '2024-01-27' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
 PROGRAM_VERSION = '0.73'
@@ -932,7 +933,8 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
             if inParagraph:
                 book_html = f'{book_html}</{inParagraph}>\n'
                 inParagraph = None
-            rest = rest.replace('\\em ','<em>').replace('\\em*','</em>')
+            rest = rest.replace('\\em ','<em>').replace('\\em*','</em>').replace('\\it ','<i>').replace('\\it*','</i>')
+            assert '\\' not in rest, f"{BBB} {C}:{V} {inRightDiv=} {inParagraph=} {inTable} {marker}={rest}"
             book_html = f'{book_html}<p class="{marker}">{rest}</p>\n'
         elif marker in ('mt1','mt2'):
             if not done_disclaimer: # Add an extra explanatory paragraph at the top

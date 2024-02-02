@@ -42,6 +42,7 @@ CHANGELOG:
     2023-09-28 Concatenate consecutive /nd fields
     2023-12-20 Check for unwanted trailing spaces on OET-RV lines
     2024-01-24 Check for doubled punctuation and wrong xref punctuation in OET-RV lines
+    2024-01-27 Don't allow section headings to be marked with word numbers
 """
 from gettext import gettext as _
 from tracemalloc import start
@@ -62,10 +63,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-12-21' # by RJH
+LAST_MODIFIED_DATE = '2024-02-01' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.58'
+PROGRAM_VERSION = '0.59'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -240,7 +241,7 @@ class State:
 state = State()
 
 
-forList = []
+# forList = []
 def main():
     """
     Main program to handle command line parameters and then run what they want.
@@ -433,7 +434,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
         ●    e – emphasized words (scare quotes)
     The lowercase letters mark other significant places where the words are not normally capitalized.
     """
-    global forList
+    # global forList
     # fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {BBB} {c}:{v} {len(rvEntryList)}, {len(lvEntryList)} )" )
     assert state.tableHeaderList.index( 'GlossCaps' ) == GLOSS_COLUMN__NUMBER # Check we have the correct column below
 
@@ -829,6 +830,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('requested','prayed'),
             ('room','place'),
             ('scoffed','mocking'),
+            ('See','Behold'),
             ('sick','sickly'),
             ('Similarly','Likewise'),
             ('sitting','reclining'),
@@ -851,6 +853,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('wealthy','rich'),
             ("What's",'What'),
             ('work','service'),
+            ('wrote','written'),
             ('yelled','cried'),
             ('yourselves','hearts'),
             # Capitalisation differences (sometimes just due to a change of word order)
@@ -860,6 +863,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Master','master'),
             ('Messiah','messiah'),('messiah','messiah'),
             ("We've",'We'),
+            ('Yahweh','master'),
             # Names including places (parentheses have already been deleted from the OET-LV at this stage)
             ('Abijah','Abia'),('Abijah','Abia/ʼAvīāh'),
             ('Abraham','Abraʼam'),('Abraham','Abraʼam/ʼAvərāhām'),
@@ -888,6 +892,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Idumea', 'Idoumaia'),
             ('Immanuel', 'Emmanouaʸl'),('Immanuel', 'Emmanouaʸl/ˊImmānūʼēl'),
             ('Isaac', 'Isaʼak'),('Isaac', 'Isaʼak/Yiʦəḩāq'),
+            ('Isayah', 'Aʸsaias'),('Isayah', 'Aʸsaias/Yəshaˊəyāh'),
             ('Yacob', 'Yakōbos'),('Yacob', 'Yakōbos/Yaˊaqov'), ('Yacob', 'Yakōb'),('Yacob', 'Yakōb/Yaˊaqov'),("Yacob's", 'Yakōb'),("Yacob's", 'Yakōb/Yaˊaqov'),
             ('Yehoshapat', 'Yōsafat'),('Yehoshapat', 'Yōsafat/Yəhōshāfāţ'),
             ('Yerusalem', 'Hierousalaʸm'),('Yerusalem', 'Hierousalaʸm/Yərūshālayim'),
@@ -911,6 +916,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Paul', 'Paulos'),
             ('Perez', 'Fares'),('Perez', 'Fares/Fereʦ'),
             ('Pharisee', 'Farisaios'),
+            ('Philadelphia', 'Filadelfeia'),
             ('Pontus', 'Pontos'),
             ('Rehoboam', 'Ɽoboam'),('Rehoboam', 'Ɽoboam/Rəḩavəˊām'),
             ('Ruth', 'Ɽouth'),('Ruth', 'Ɽouth/Rūt'),
@@ -918,16 +924,19 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Salmon', 'Salmōn'),('Salmon', 'Salmōn/Saləmōn'),
             ('Samaria', 'Samareia'),('Samaria', 'Samareia/Shomərōn'),
             ('Sapphira', 'Sapfeiraʸ'),
+            ('Sardis', 'Sardeis'),
             ('Saul', 'Saulos'),
             ('Sidon', 'Sidōn'),('Sidon', 'Sidōn/Tsīdōn'),
             ('Silas', 'Silouanos'),
             ('Simon', 'Simōn'),
+            ('Smyrna', 'Smurna'),
             ('Solomon', 'Solomōn'),('Solomon', 'Solomōn/Shəlomih'),
             ('Tabitha', 'Tabaʸtha'),
             ('Tamar', 'Thamar'),('Tamar', 'Thamar/Tāmār'),
             ('Tarsus', 'Tarsos'),
             ('Theophilus', 'Theofilos'),
             ('Thessalonica', 'Thessalonikaʸ'),
+            ('Thyatira', 'Thuateira'),
             ('Timothy', 'Timotheos'),
             ('Tyre', 'Turos'),('Tyre', 'Turos/Tsor'),
             ('Uzziah', 'Ozias'),('Uzziah', 'Ozias/ˊUzziyyāh'),
@@ -1100,6 +1109,8 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
         try: marker, rest = line.split( ' ', 1 )
         except ValueError: marker, rest = line, '' # Only a marker
         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"addNumberToRVWord A searching {BBB} {C}:{V} {marker}='{rest}'" )
+        if marker in ('\\s1','\\r','\\rem') or not rest:
+            continue # Skip these fields (so we don't add word numbers to headings, etc.)
         if marker == '\\c':
             C = int(rest)
             if C > c: return False # Gone too far
