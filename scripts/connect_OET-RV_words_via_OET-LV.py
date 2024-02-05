@@ -63,7 +63,7 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2024-02-01' # by RJH
+LAST_MODIFIED_DATE = '2024-02-04' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.59'
@@ -743,6 +743,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
     numAdded = numNS = 0
     for rvWord, lvWordStr in (
             ('120', 'a hundred twenty'),
+            ('wants', 'having an ear'),('understand', 'having an ear'),
             # Greek possessive pronouns usually appear after the head noun
             ('my', 'of me'), ('your', 'of you'), ('his', 'of him'), ('her', 'of her'), ('our', 'of us'), ('their', 'of them'),
             ('My', 'of me'), ('Your', 'of you'), ('His', 'of him'), ('Her', 'of her'), ('Our', 'of us'), ('Their', 'of them'),
@@ -766,6 +767,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('amazed','marvelling'),
             ('ancestors','fathers'),
             ('announced','proclaiming'), ('announcing','proclaiming'),
+            ('Anyone','one'),('anyone','one'),
             ('appropriate','fitting'),
             ('arrested','captured'),('arrested','laid'),
             ('astounded','amazed'),
@@ -786,7 +788,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('deserted','desolate'),
             ('driving','throwing'),
             ('entire','all'),
-            ('everyone','people'),
+            ('everyone','people'), ('Everyone','one'),('everyone','one'),
             ('existence','became'),
             ('fitting','befitting'),
             ('forgive','forgiving'),
@@ -799,9 +801,9 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('lake','sea'),
             ('languages','tongues'),
             ('left','came out'),
-            ('listen','give ear'),
-            ('living','dwelling'),
+            ('listen','give ear'),('listen','hear'),
             ('Listen','Behold'),('Look','Behold'),
+            ('living','dwelling'),
             ('looking','searched'),
             ('looking','seeking'),
             ('loudly','loud'),
@@ -814,6 +816,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('money','reward'),
             ('Mount','mountain'),
             ('necessary','fitting'),
+            ('needs','let'),
             ('news','report'),
             ('non-Jews','pagans'),
             ('obey','submitting'),
@@ -831,10 +834,12 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('room','place'),
             ('scoffed','mocking'),
             ('See','Behold'),
+            ('should','let'),
             ('sick','sickly'),
             ('Similarly','Likewise'),
             ('sitting','reclining'),
             ('small','little'),
+            ('So','Therefore'),
             ('songs','psalms'),
             ('spoken','said'),
             ('staying','dwelling'),

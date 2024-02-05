@@ -53,10 +53,10 @@ from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, 
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 
 
-LAST_MODIFIED_DATE = '2024-01-27' # by RJH
+LAST_MODIFIED_DATE = '2024-02-04' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
-PROGRAM_VERSION = '0.73'
+PROGRAM_VERSION = '0.74'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -1051,7 +1051,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                 book_html = f'{book_html}<div class="bookIntro">'
                 inIntroduction = True
             book_html = f'{book_html}<p class="{marker}">{rest}</p>\n'
-        elif marker in ('d','sp', 'ms1','mr','sr'):
+        elif marker in ('d','sp','qa', 'ms1','mr','sr'):
             assert not inTable
             if inRightDiv:
                 assert not inParagraph
