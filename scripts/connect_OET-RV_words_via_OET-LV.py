@@ -63,7 +63,7 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2024-02-04' # by RJH
+LAST_MODIFIED_DATE = '2024-02-07' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.59'
@@ -789,6 +789,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('driving','throwing'),
             ('entire','all'),
             ('everyone','people'), ('Everyone','one'),('everyone','one'),
+            ('execution','stake'),
             ('existence','became'),
             ('fitting','befitting'),
             ('forgive','forgiving'),
@@ -851,6 +852,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('thinking','reasoning'),
             ('thinking','supposing'),
             ('undesirables','sinners'),
+            ('ungodly','unclean'),
             ('upstairs','upper'),
             ('urged','implored'),
             ('walk','walking'),
