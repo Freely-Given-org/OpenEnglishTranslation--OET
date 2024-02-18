@@ -63,7 +63,7 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2024-02-07' # by RJH
+LAST_MODIFIED_DATE = '2024-02-18' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.59'
@@ -771,9 +771,10 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('appropriate','fitting'),
             ('arrested','captured'),('arrested','laid'),
             ('astounded','amazed'),
-            ('because','for'),('Because','For'),
+            ('because','for/because'),('Because','For/Because'),('because','For/Because'),
             ('bedding','pallet'),
             ('believers','brothers'),
+            ('but','But'),
             ("don't",'not'),
             ('carrying','carried'),
             ('cheerful','joy'),
@@ -795,6 +796,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('forgive','forgiving'),
             ('fulfilled','accomplished'),
             ('godly','devout'),
+            ('honour','glorify'),
             ('insulting','slandering'),
             ('kill','destroy'),
             ('know','knowledge'),
@@ -858,6 +860,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('walk','walking'),
             ('wallet','purse'),
             ('wealthy','rich'),
+            ('went','came'),
             ("What's",'What'),
             ('work','service'),
             ('wrote','written'),
