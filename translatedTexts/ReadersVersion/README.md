@@ -38,6 +38,7 @@ Currently (February 2024), over 90% of the ‘New Testament’ has been rough-dr
 
 We use USFM \add markers but need to differentiate further—probably by using an additional symbol inside the marked-up text (similarly to what we do for the OET-LV). Some possibilities are:
 
+- grammatical additions, e.g., replacing a pronoun with the (obvious) referrent (or vice versa)
 - cultural additions, e.g., \add Roman\add* soldier
 - contextual additions, e.g., and \add after that\add* he said
 - application/interpretational additions, e.g., when we reword the concept to what we think the author was trying to say, but the final words that we use are not there at all in the original.

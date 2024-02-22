@@ -5,7 +5,7 @@
 #
 # Script to connect OET-RV words with OET-LV words that have word numbers.
 #
-# Copyright (C) 2023 Robert Hunt
+# Copyright (C) 2023-2024 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -57,10 +57,10 @@ from BibleOrgSys.Reference.BibleVersificationSystems import BibleVersificationSy
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-07-10' # by RJH
+LAST_MODIFIED_DATE = '2024-02-20' # by RJH
 SHORT_PROGRAM_NAME = "count_completed_OET-RV_verses"
 PROGRAM_NAME = "Count completed OET-RV verses"
-PROGRAM_VERSION = '0.16'
+PROGRAM_VERSION = '0.20'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -152,7 +152,7 @@ def main():
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"OET-RV NT has {finishedNTVerses:,}/{totalNTVerses:,} verses finished = {finishedNTVerses*100//totalNTVerses}%. (Approx {finishedNTChapters:,}/{totalNTChapters:,} = {finishedNTChapters*100//totalNTChapters}% chapters.)\n" )
 
     # Now do whole Bible
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"OET-RV verses are {finishedVerses*100//totalVerses}% finished. (Approx {finishedChapters:,}/{totalChapters:,} = {finishedChapters*100//totalChapters}% chapters.)\n" )
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"OET-RV has {finishedVerses:,}/{totalVerses:,} verses finished = {finishedVerses*100//totalVerses}%. (Approx {finishedChapters:,}/{totalChapters:,} = {finishedChapters*100//totalChapters}% chapters.)\n" )
 # end of count_completed_OET-RV_verses.main
 
 
