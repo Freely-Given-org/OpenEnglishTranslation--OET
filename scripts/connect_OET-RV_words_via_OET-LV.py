@@ -36,7 +36,7 @@ It does have the potential to make wrong connections that will need to be manual
 
 CHANGELOG:
     2023-07-31 Added character marker checks for each RV line
-    2023-08-29 Added nomina sacra for connected words in RV
+    2023-08-29 Added nomina sacra (NS) for connected words in RV
     2023-09-11 Fix bug that connected the wrong (not the same) simple words
     2023-09-12 Fix bug that caused two nested /nd markers (when rerunning after numbers had been deleted)
     2023-09-28 Concatenate consecutive /nd fields
@@ -63,10 +63,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2024-02-18' # by RJH
+LAST_MODIFIED_DATE = '2024-02-24' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
-PROGRAM_NAME = "Convert OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.59'
+PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
+PROGRAM_VERSION = '0.61'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -289,12 +289,12 @@ def connect_OET_RV( rv, lv ):
 
     # Go through books chapters and verses
     totalSimpleListedAdds = totalProperNounAdds = totalFirstPartMatchedAdds = totalManualMatchedAdds = 0
-    totalSimpleListedAddsNS = totalProperNounAddsNS = totalFirstPartMatchedAddsNS = totalManualMatchedAddsNS = 0
+    totalSimpleListedAddsNS = totalProperNounAddsNS = totalFirstPartMatchedAddsNS = totalManualMatchedAddsNS = 0 # Nomina sacra
     for BBB,lvBookObject in lv.books.items():
         vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Processing connect words for OET {BBB}…" )
 
         bookSimpleListedAdds = bookProperNounAdds = bookFirstPartMatchedAdds = bookManualMatchedAdds = 0
-        bookSimpleListedAddsNS = bookProperNounAddsNS = bookFirstPartMatchedAddsNS = bookManualMatchedAddsNS = 0
+        bookSimpleListedAddsNS = bookProperNounAddsNS = bookFirstPartMatchedAddsNS = bookManualMatchedAddsNS = 0 # Nomina sacra
         wordFileName = lvBookObject.ESFMWordTableFilename
         if wordFileName:
             assert wordFileName.endswith( '.tsv' )
@@ -334,7 +334,9 @@ def connect_OET_RV( rv, lv ):
             state.rvESFMLines = state.rvESFMText.split( '\n' )
             # Do some basic checking (better to find common editing errors sooner rather than later)
             for lineNumber,line in enumerate( state.rvESFMLines, start=1 ):
+                assert not line.startswith(' '), f"Unexpected space at start in {rvESFMFilename} {lineNumber}: '{line}'"
                 assert not line.endswith(' '), f"Unexpected space at end in {rvESFMFilename} {lineNumber}: '{line}'"
+                assert '  ' not in line, f"Unexpected doubled spaces in {rvESFMFilename} {lineNumber}: '{line}'"
                 assert ',,' not in line and '..' not in line, f"Unexpected doubled punctuation in {rvESFMFilename} {lineNumber}: '{line}'"
                 assert '\\x*,' not in line and '\\x*.' not in line, f"Bad xref formatting in {rvESFMFilename} {lineNumber}: '{line}'"
                 if line.count(' \\x ') < line.count('\\x '):
@@ -406,8 +408,12 @@ def connect_OET_RV( rv, lv ):
         totalManualMatchedAdds += bookManualMatchedAdds
         totalManualMatchedAddsNS += bookManualMatchedAddsNS
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Did total of {totalSimpleListedAdds:,} simple listed adds, {totalProperNounAdds:,} proper noun adds, {totalFirstPartMatchedAdds:,} first part adds and {totalManualMatchedAdds:,} manual adds." )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Did total of {totalSimpleListedAddsNS:,} simple listed NS, {totalProperNounAddsNS:,} proper noun NS, {totalFirstPartMatchedAddsNS:,} first part NS and {totalManualMatchedAddsNS:,} manual NS." )
+    if totalSimpleListedAdds or totalProperNounAdds or totalFirstPartMatchedAdds or totalManualMatchedAdds:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Did total of {totalSimpleListedAdds:,} simple listed adds, {totalProperNounAdds:,} proper noun adds, {totalFirstPartMatchedAdds:,} first part adds and {totalManualMatchedAdds:,} manual adds." )
+    else: vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  No new word connections made." )
+    if totalSimpleListedAddsNS or totalProperNounAddsNS or totalFirstPartMatchedAddsNS or totalManualMatchedAddsNS:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Did total of {totalSimpleListedAddsNS:,} simple listed nomina sacra (NS), {totalProperNounAddsNS:,} proper noun NS, {totalFirstPartMatchedAddsNS:,} first part NS and {totalManualMatchedAddsNS:,} manual NS." )
+    else: vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  No new nomina sacra connections made." )
 # end of connect_OET-RV_words_via_OET-LV.connect_OET_RV
 
 

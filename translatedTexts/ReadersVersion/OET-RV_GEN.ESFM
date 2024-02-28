@@ -1,4 +1,4 @@
-\id GEN - Open English Translation—Readers' Version (OET-RV) v0.0.03
+\id GEN - Open English Translation—Readers' Version (OET-RV) v0.0.06
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 GEN
@@ -9,9 +9,9 @@
 \toc3 Gen.
 \mt1 Genesis
 \is1 Introduction
-\ip The meaning of the word \bk Hinisis\bk* is ‘source’ or ‘beginning’. This document, here it's written the making of sky/heaven and of land, the source of person, and the beginning of sin and suffering here of world. Written again here the account concerning the people chosen by God and the carrying din them there to place he promised them.
+\ip The meaning of the word \bk Genesis\bk* is ‘source’ or ‘beginning’. This document describes the creation of space and of our planet and its contents, the origin of people, and the beginning of sin and suffering here in the world. XXXX Written again here the account concerning the people chosen by God and the carrying din them there to place he promised them.
 \ip Divided of two this the document:
-\ip 1.) The making of world and the account concerning the people. Here can be read the account concerning Adam and ki Eve, the concerning Kain and ki Abil, and the concerning Noah and the pegsipuk of water, and the concerning the tall house there to Babil.
+\ip 1.) The making of world and the account concerning the people. Here can be read the account concerning Adam and ki Eve, the concerning Kayin and ki Abil, and the concerning Noah and the pegsipuk of water, and the concerning the tall house there to Babil.
 \ip 2.) The account concerning the first elders of Israilita. Abraham the first elder of Israilita became famous due to faith and trusting din and of obedience din of suhu of God. Egpakasinundul also the account concerning his child Isaac, and the apu din Yacob (named ded also ki Israel), and the ten and two (12) child of Yacob iyan source of ten and two (12) descendants of Israel. Told also here the concerning the child of Yacob Yosef and the what happened kandin iyan reason of went to of Egypt Yacob other of his children.
 \ip Egkabasa ta again here the account concerning the various people proliferated here of ampew of land and migmannenasud e. Labew of all, told here the large work of God making of sky/heaven and land and of all nakatahu here.
 \ip There in final of account, is told the without ending promise of God of his people. Not forgotten of God his promise and not din indeed ignore the his people because taught and helping din them. And/Now he the judging and punishing of all doing of bad.
@@ -79,7 +79,7 @@
 \p
 \v 4 What follows tells\f + \fr 2:4 \ft This little formula is sometimes known as a ‘toledoth’ (or ‘tōlədōt’, from the Hebrew word) and seems to mark a new section, but it's debated whether this part belongs at the bottom of the previous section, or at the top of the following section. We're assuming the later here.\f* \add more details about\add* the history of what God did when he created the heavens and the earth: 
 \rem /s1 The Garden of Eden; The Man and Woman in Eden; Another Account of the Creation
-\p During the time when Yahweh God made the earth and the heavens,
+\p During the time when Yahweh God\f + \fr 2:4 \ft This is the first occurrence of the Hebrew letters ‘יהוה’ (YHWH) in the Bible, which we find out later (in Exodus 3, also compiled by Moses) is God's actual name. Although the vowels which go with those four consonants have been lost over the millenia, most scholars believe ‘Yahweh’ to be the best guess that we can make. (It's certainly NOT ‘Jehovah’, which was a historical mistake made by confusing the vowels of two different words.) Some older translations use \sc LORD\sc* which is NOT a translation of ‘יהוה’ (which means ‘I am’), but which represents confusion over the more recent Jewish (but non-Biblical) custom of not pronouncing God's name (and which makes one wonder what's the use of telling people your name if they're then not allowed to use it).\f* made the earth and the heavens,
 \v 5 there weren't yet any bushes growing on the earth, and no plants had yet sprung up in the fields, because Yahweh God had not yet made it rain, and nor were there any people yet to till the ground.
 \v 6 However, a mist came up from the ground and watered the entire surface of the land.
 \p
@@ -140,215 +140,236 @@
 \p
 \v 13 Then Yahweh God asked the woman, “What did you do?”\x + \xo 3:13: \xt 2Cor 11:3; 1Tim 2:14.\x*
 \p “The snake tricked me, so I ate \add some of the fruit\add*,” the woman replied.
-\s1 The peglegpad of God due to sin
+\s1 God's judgements after they disobeyed
 \rem /s1 God Pronounces Judgment
 \p
-\v 14 ◘
-\q1 …
+\v 14 Then Yahweh God said to the snake,
+\q1 “Because you've done this you'll be cursed more than all the livestock,
+\q2 and more than every living thing in the fields.
+\q1 \add Now\add* you'll move along on your belly,
+\q2 and you'll eat dust all the rest of your life.
 \q1
-\v 15 \x + \xo 3:15: \xt Rev 12:17.\x*◘
+\v 15 I'll put hostility between you and the woman
+\q2 between your descendants and hers.
+\q1 He will crush your head
+\q2 and you'll strike his heel.”\x + \xo 3:15: \xt Rev 12:17.\x*
 \p
-\v 16 ◘
-\q1 …
+\v 16 To the woman God said,
+\q1 “I'll sharply increase your pain in childbirth.
+\q2 You'll produce children in pain.
+\q1 Your desire will be for your husband
+\q2 and he will rule over you.”
 \p
-\v 17 \x + \xo 3:17-18: \xt Heb 6:8.\x*◘
-\q1 …
-\q1 …
+\v 17 Then \add God\add* said to the man,\x + \xo 3:17-18: \xt Heb 6:8.\x*
+\q1 “Because you did what your wife told you
+\q2 and ate from that tree
+\q2 that I'd told you not to eat from,
+\q1 then the ground will be cursed because of you.
+\q1 You'll have to work hard to get food from it
+\q2 all the rest of your life.
 \q1
-\v 18 ◘
-\v 19 ◘
+\v 18 It'll produce thorns and thistles for you
+\q2 although you'll eat the crops of the fields.
+\q1
+\v 19 You'll eat bread with sweat drops on your nose
+\q2 until you return to the ground
+\q2 because you were taken out of the ground.
+\q1 \add Yes,\add* you were \add created\add* from dust,
+\q2 and you'll return back to dust.”
 \p
-\v 20 ◘
-\v 21 ◘
-\s1 The scolding of Adam and ki Eve ligkat of pinamulaan
+\v 20 Then the man named his wife ‘Havvah’ \add (which means ‘living’)\add* because she would become the mother of all future people.
+\v 21 Then Yahweh God made clothes from \add animal\add* skins for Adam and his wife and he dressed them.
+\s1 The humans get expelled from the garden
 \rem /s1 Adam and Eve Are Sent Out of the Garden
 \p
-\v 22 \x + \xo 3:22: \xt Rev 22:14.\x*◘
-\v 23 ◘
+\v 22 Then Yahweh God said, “See, the man has become like one of us, being aware of good and evil. But now, he mustn't \add be allowed\add* to reach out his hand and also take \add fruit\add* from the tree of life and eat it and live forever.”\x + \xo 3:22: \xt Rev 22:14.\x*
+\v 23 So Yahweh God expelled \add them\add* out of the garden in Eden to work the soil from which \add Adam\add* had been taken.
 \p
-\v 24 ◘
+\v 24 After he expelled them, he placed sentries on the east side of the garden in Eden, as well as a fiery sword that swung around in every direction to guard the path to the tree of life.
 \c 4
-\s1 Kain and Abil
+\s1 Kayin and Abel
 \rem /s1 Cain Murders Abel; Cain, Abel, and Seth; Cain and Abel
 \p
-\v 1 ◘
-\v 2 ◘
-\v 3 ◘
-\v 4 \x + \xo 4:4: \xt Heb 11:4.\x*◘
-\v 5 ◘
-\v 6 ◘
-\v 7 ◘
+\v 1 Then Adam slept with his wife, and she conceived and \add in due course \add* gave birth to Kayin (Cain). “Yahweh has enabled me to produce a man,” she said.
+\v 2 \add Eventually\add* she also gave birth to Kayin's brother, Abel. Abel became a shepherd, while Kayin became a crop farmer.
+\v 3 Some \add months\add* later, Kayin brought some of what he'd grown in the ground as an offering to Yahweh,
+\v 4 and also Abel brought the best portions from some of the firstborn of his flock. Now Yahweh was pleased with Abel and his offering,\x + \xo 4:4: \xt Heb 11:4.\x*
+\v 5 but he didn't even look towards Kayin and his offering. Kayin got very angry and his face showed his displeasure.
+\v 6 Then Yahweh said to Kayin, “Why are you so angry? And why are you frowning like that?
+\v 7 If you do what's right, won't you be honoured? But if you don't do what's right, sin is crouching in the doorway wanting to have you, but you have the control over it.”
 \p
-\v 8 \x + \xo 4:8: \xt Mat 23:35; Luk 11:51; 1Jn 3:12.\x*◘
+\v 8 \add One day,\add* Kayin spoke to his brother Abel when they were \add out\add* in the field, and then Kayin attacked him and killed him.\x + \xo 4:8: \xt Mat 23:35; Luk 11:51; 1Jn 3:12.\x*
 \p
-\v 9 ◘
-\p …◘
+\v 9 \add Later\add* Yahweh asked Kayin, “Where's your brother Abel?”
+\p “I don't know,” he replied, “It's not my job to look after my brother.”
 \p
-\v 10 \x + \xo 4:10: \xt Heb 12:24.\x*◘
-\v 11 ◘
-\v 12 ◘
+\v 10 “What have you done?” Yahweh asked. “Your brother's blood is calling out to me from the ground.\x + \xo 4:10: \xt Heb 12:24.\x*
+\v 11 So now you're cursed and banished from the soil that your brother's blood soaked into as a result of your actions.
+\v 12 Whenever you till \add and plant\add* the ground, it will no longer produce good yields for you. You'll be a fugitive and wandering \add refugee\add* on the earth.”
 \p
-\v 13 ◘
-\v 14 ◘
+\v 13 “My punishment is more than I can bear,” Kayin \add complained\add* to Yahweh.
+\v 14 “Look, you're now driving me \add away\add* from the ground \add I've been cultivating\add* to somewhere where you won't be able to see me. I'll be a wandering \add refugee\add* on the earth, and anyone who finds me will kill me.”
 \p
-\v 15 ◘
-\v 16 ◘
-\s1 The descendants of Kain
+\v 15 “Very well,”, replied Yahweh and declared, “If anyone kills Kayin, then that person will receive a seven times greater \add sentence\add*.” Then Yahweh marked Kayin so that no one who found him would kill him,
+\v 16 and Kayin left Yahweh's presence and settled in the land of Nod to the east of Eden.
+\s1 Kayin's descendants
 \rem /s1 Beginnings of Civilization; The Descendants of Cain
 \p
-\v 17 ◘
-\v 18 ◘
-\v 19 ◘
-\v 20 ◘
-\v 21 ◘
-\v 22 ◘
-\v 23 ◘
-\q1 …
-\q1 …
+\v 17 Then Kayin slept with his wife and and she conceived and gave birth to Hanoch (Enoch). Then Kayin founded a town and named it Hanoch after his son.
+\v 18 \add Eventually\add* Hanoch fathered Irad, and Irad fathered Mehuyael, and Mehuyael father Methushael, and Methushael fathered Lemech (Lamech).
+\v 19 Lemech had two wives: the first was named Adah and the second was Tsillah (Zillah).
+\v 20 Adah gave birth to Yaval (Jabal) who became the ancestor of people who live in tents and rear cattle.
+\v 21 His brother's name was Yuval (Jubal) and he became the ancestor of people who play stringed and wind instruments.
+\v 22 Tsillah gave birth to Tuval-Kayin (Tubal-Cain) who forged all \add kinds of\add* tools out of bronze and iron. His sister was \add named\add* Naamah.
+\v 23 Then Lemech said to his wives:
+\q1 “Adah and Tsillah, listen to me.
+\q2 My wives, take notice of my words;
+\q1 I killed a man who had wounded me;
+\q2 I killed a young man who hurt me.
 \q1
-\v 24 ◘
-\q1 …
-\s1 The descendants of Sit
+\v 24 If \add killers of\add* Kayin would be sentenced seven times as much,
+\q2 then \add anyone who kills me\add* should be sentenced \em seventy-seven\em* times as much.”
+\s1 Shet's descendants
 \rem /s1 Seth and Enosh
 \p
-\v 25 ◘
-\v 26 ◘
+\v 25 Then Adam slept with his wife again and she bore a son and named him Shet (Seth) \add (which means ‘given’)\add* because she had said, “God has given me another son in place of Abel who was killed by Kayin.”
+\v 26 \add Eventually\add* Shet also fathered a son and named him Enosh. That was when people began using Yahweh's name in worship.
 \c 5
-\s1 The descendants of Adam
+\s1 Adam's (important) descendants
 \rem /s1 From Adam to Noah; Adam's Descendants to Noah and His Sons; The Descendants of Adam
 \r (1 Chr. 1:1-4)
 \rem /r (1 Chronicles 1.1-4)
 \p
-\v 1 \x + \xo 5:1-2: \xt Gen 1:27-28.\x*◘
-\v 2 \x + \xo 5:2: \xt Mat 19:4; Mrk 10:6.\x*◘
-\v 3 ◘
-\v 4 ◘
-\v 5 ◘
+\v 1 This is the list of Adam's descendants. When God had created humankind, he made them in his own likeness.\x + \xo 5:1-2: \xt Gen 1:27-28.\x*
+\v 2 He created them as male and female, and he blessed them and named them ‘humans’.\x + \xo 5:2: \xt Mat 19:4; Mrk 10:6.\x*
+\v 3 When Adam was 130 years old, he had \add a son\add* who was like him in many ways, and he named him Shet (Seth).
+\v 4 After Shet's birth, Adam lived \add another\add* 800 years and had \add other\add* sons and daughters.
+\v 5 So Adam lived a total of 930 years, and \add then\add* he died.
 \p
-\v 6 ◘
-\v 7 ◘
-\v 8 ◘
+\v 6 When Shet was 105 years old, he had \add a son named\add* Enosh.
+\v 7 After Enosh's birth, Seth lived \add another\add* 807 years and had \add other\add* sons and daughters.
+\v 8 So Shet lived a total of 912 years, and \add then\add* he died.
 \p
-\v 9 ◘
-\v 10 ◘
-\v 11 ◘
+\v 9 When Enosh was 90 years old, he had \add a son named\add* Kenan.
+\v 10 After Kenan's birth, Enosh lived \add another\add* 815 years and had \add other\add* sons and daughters.
+\v 11 So Enosh lived a total of 905 years, and \add then\add* he died.
 \p
-\v 12 ◘
-\v 13 ◘
-\v 14 ◘
+\v 12 When Kenan was 70 years old, he had \add a son named\add* Mahalalel.
+\v 13 After Mahalalel's birth, Kenan lived \add another\add* 840 years and had \add other\add* sons and daughters.
+\v 14 So Kenan lived a total of 910 years, and \add then\add* he died.
 \p
-\v 15 ◘
-\v 16 ◘
-\v 17 ◘
+\v 15 When Mahalalel was 65 years old, he had \add a son named\add* Yared (Jared).
+\v 16 After Yared's birth, Mahalalel lived \add another\add* 830 years and had \add other\add* sons and daughters.
+\v 17 So Mahalalel lived a total of 895 years, and \add then\add* he died.
 \p
-\v 18 ◘
-\v 19 ◘
-\v 20 ◘
+\v 18 When Yared was 162 years old, he had \add a son named\add* Hanoch (Enoch).
+\v 19 After Hanoch's birth, Yared lived \add another\add* 800 years and had \add other\add* sons and daughters.
+\v 20 So Yared lived a total of 962 years, and \add then\add* he died.
 \p
-\v 21 ◘
-\v 22 ◘
-\v 23 ◘
-\v 24 \x + \xo 5:24: \xt Heb 11:5; Yud 14.\x*◘
+\v 21 When Hanoch was 65 years old, he had \add a son named\add* Metushalah (Methuselah).
+\v 22 After Metushalah's birth, Hanoch walked with God for 300 years and had \add other\add* sons and daughters.
+\v 23 So Hanoch lived a total of 365 years.
+\v 24 Hanoch walked with God, and \add then\add* he was not \add there\add*, because God took him \add away\add*.\x + \xo 5:24: \xt Heb 11:5; Yud 14.\x*
 \p
-\v 25 ◘
-\v 26 ◘
-\v 27 ◘
+\v 25 When Metushalah was 187 years old, he had \add a son named\add* Lemek (Lamech).
+\v 26 After Lemek's birth, Metushalah lived \add another\add* 782 years and had \add other\add* sons and daughters.
+\v 27 So Metushalah lived a total of 969 years, and \add then\add* he died.
 \p
-\v 28 ◘
-\v 29 ◘
-\v 30 ◘
-\v 31 ◘
+\v 28 When Lemek was 182 years old, he had a son
+\v 29 and he named him Noak (Noah) \add (which sounds like the Hebrew word for ‘relief’) because\add* he said, “This son will give us relief from the difficult work that we have to do because Yahweh has cursed the ground.”
+\v 30 After Noak's birth, Lemek lived \add another\add* 595 years and had \add other\add* sons and daughters.
+\v 31 So Lemek lived a total of 777 years, and \add then\add* he died.
 \p
-\v 32 ◘
+\v 32 After Noak was 500 years old, he had \add sons whose names were\add* Shem, Ham, and Yafet (Japheth).
 \c 6
-\s1 The bad me work of people
+\s1 Humankind's evil
 \rem /s1 Noah and the Flood; Human Wickedness; The Wickedness of Humankind; The Flood; The flood and the tower of Babel
 \p
-\v 1 \x + \xo 6:1-4: \xt Yob 1:6; 2:1.\x*◘
-\v 2 ◘
-\v 3 ◘
-\v 4 \x + \xo 6:4: \xt Num 13:33.\x*◘
+\v 1 When people began to multiply on the earth's surface, and they were having daughters,\x + \xo 6:1-4: \xt Yob 1:6; 2:1.\x*
+\v 2 God's sons saw that men's daughters were beautiful, and they took any that they wanted for themselves as wives.
+\v 3 Then Yahweh said, “My Spirit won't tolerate people forever, because they are physical beings, therefore their \add remaining\add* time will be 120 years.”
+\v 4 The NEFILIM were on the earth in those days and also after that, when the sons of God went to the daughters of mankind and they bore children for them. INVESTIGATE They were the mighty \add warriors\add* of long ago—those famous men.\x + \xo 6:4: \xt Num 13:33.\x*
 \p
-\v 5 \x + \xo 6:5-8: \xt Mat 24:37; Luk 17:26; 1Pe 3:20.\x*◘
-\v 6 ◘
-\v 7 ◘
-\v 8 ◘
-\s1 The making of Noah of arka
+\v 5 Then Yahweh saw that the humankind's wickedness on the earth was extensive, and that every inclination of their inner thoughts was only evil all day long.\x + \xo 6:5-8: \xt Mat 24:37; Luk 17:26; 1Pe 3:20.\x*
+\v 6 So Yahweh regretted that he had made humankind on the earth and he was deeply saddened,
+\v 7 so he said, “This humankind that I created, I will completely destroy them from the surface of the ground, along with the animals, and crawling creatures and the birds of the sky, because I regret that I made them.”
+\v 8 However, Yahweh noticed Noak (Noah) and was pleased with him.
+\s1 Noak makes a barge
 \rem /s1 Noah; Noah Pleases God
 \p
-\v 9 \x + \xo 6:9: \xt 2Pe 2:5.\x*◘
-\v 10 ◘
+\v 9 This is the account of Noak: He was a man who obeyed God, blameless among the people of his time and he walked around with God.\x + \xo 6:9: \xt 2Pe 2:5.\x*
+\v 10 Noak had three sons: Shem, Ham, and Yafet (Japheth).
 \p
-\v 11 ◘
-\v 12 ◘
+\v 11 Now God noticed that \add humankind\add* was corrupt and very violent.
+\v 12 \add Yes,\add* God looked at the earth, and wow, all the living creatures on the earth had corrupted their behaviour.
 \p
-\v 13 ◘
-\v 14 ◘
-\v 15 ◘
-\v 16 ◘
-\v 17 ◘
-\v 18 ◘
-\v 19 ◘
-\v 20 ◘
-\v 21 ◘
-\v 22 \x + \xo 6:22: \xt Heb 11:7.\x*◘
+\v 13 So God told Noak, “I've decided to put an end to all people on earth because the earth is filled with violence because of them. So listen, I myself am going to destroy all of them, along with the earth.
+\v 14 Make yourself a wooden chest\f + \fr 6:14 \ft The reader might have expected the word ‘ark’ here, but sadly the Latin word ‘arca’ meaning ‘large box, chest’ led to the English word ‘ark’ being invented, and why we can't use it here, is that now for most English readers, they picture a large boat in their minds when they hear that word. If you think about the ‘ark of the covenant’ that uses the same word, hopefully you can understand how anything like a ‘boat’ is the wrong word picture, hence we've gone back to translating the actual Hebrew word here.\f* out of cypress. Build rooms inside it, and seal it both inside and outside with resin.
+\v 15 These are the dimensions for it: 140m long, 23m wide, and 14m high.
+\v 16 It must have a roof, but the last half a metre between the sides and the roof should remain open. Put the door in its side, and build lower, middle, and upper decks.
+\v 17 You see, I'm going to flood the earth with water to destroy every creature that breathes. Everything that's on the earth will die.
+\v 18 \add But\add* I'll make an agreement with you, so you must go into this chest along with your wife and sons and their wives,
+\v 19 and you must take a pair, male and female, of everything that lives into the chest to keep alive with you.
+\v 20 Pairs of every kind of bird and animal, including every kind of creature that moves on the ground, will come to you so that you keep them alive,
+\v 21 and you must take with you some of every different kind of food and store it in there for you and them to eat.
+\v 22 So Noak did \add that\add* exactly as God had specified.\x + \xo 6:22: \xt Heb 11:7.\x*
 \c 7
-\s1 The pegsipuk of water
+\s1 The global flood
 \rem /s1 The Flood Covers the Earth; The Flood; The Great Flood
 \p
-\v 1 ◘
-\v 2 ◘
-\v 3 ◘
-\v 4 ◘
-\v 5 ◘
+\v 1 Then Yahweh said to Noak, “Go into the ark, you and all your household, because I've seen that you're the \add only\add* one who obeys me in this generation.
+\v 2 Take in seven male and female pairs of every kind of ‘clean’ animal, and one male and female pair of the ‘unclean’ animals,
+\v 3 as well as seven male and female pairs of every kind of flying bird \add in order\add* to preserve their kinds on the earth.
+\v 4 Seven days from now I'll send forty days and nights of rain on the earth, and I'll eliminate every living thing that I've made that's \add still\add* on the ground.
+\v 5 So Noak did everything that Yahweh had instructed him to do.
 \p
-\v 6 ◘
-\v 7 \x + \xo 7:7: \xt Mat 24:38-39; Luk 17:27.\x*◘
-\v 8 ◘
-\v 9 ◘
-\v 10 ◘
+\v 6 Noak was 600 years old when the flood covered the earth,
+\v 7 and he went into the \add wooden\add* chest along with his wife, his \add three\add* sons and their wives, \add in order\add* to escape from the floodwaters.\x + \xo 7:7: \xt Mat 24:38-39; Luk 17:27.\x*
+\v 8 ‘Clean’ and ‘unclean’ animals, the birds, and everything that lived on the ground
+\v 9 came to Noak in male and female pairs and went into the chest, just like God had instructed Noak.
+\v 10 Then when the seven days were up, water \add started\add* to flood the earth.
 \p
-\v 11 \x + \xo 7:11: \xt 2Pe 3:6.\x*◘
-\v 12 ◘
-\v 13 ◘
-\v 14 ◘
-\v 15 ◘
-\v 16 ◘
+\v 11 When Noak was 600 years old (and around the beginning of May), deep underwater geysers in the ocean started spouting out water, and the skies began to drop heavy rain\x + \xo 7:11: \xt 2Pe 3:6.\x*
+\v 12 that continued day and night for forty days.
+\v 13 That was the very day that Noak and Shem and Ham and Yafet and their wives had all entered the \add wooden\add* chest.
+\v 14 They had with them every kind of living creature, including every kind of livestock and every \add other\add* kind of creature that lives on the land, and every kind of bird \add and\add* everything \add else\add* that flies.
+\v 15 They had come to Noak \add in order\add* to enter the chest—two by two of every creature with the breath of life.
+\v 16 So \add pairs of\add* males and females of every creature entered just as God had instructed \add Noak\add*, then Yahweh \add closed the door and\add* they were shut in.
 \p
-\v 17 ◘
-\v 18 ◘
-\v 19 ◘
-\v 20 ◘
-\v 21 ◘
-\v 22 ◘
-\v 23 ◘
-\v 24 ◘
+\v 17 Then the flood came onto the earth for forty days, and the water rose so that the \add wooden\add* chest was lifted up right off the land.
+\v 18 The water continued to rise and get deeper on the earth, and the chest floated along on top of the water.
+\v 19 \add Eventually\add* the water on the earth got so deep that all the high mountains everywhere under the sky were under water—
+\v 20 \add in fact\add* the water rose over seven metres above the tops of them.
+\v 21 \add By\add* then every living creature that lived on the earth had drowned—birds, livestock, animals, every creature that swarms upon the earth, and all humankind.
+\v 22 Everything that \add had\add* the breath of the spirit of life in its nostrils, everything that \add lived\add* on dry land, died.
+\v 23 That's how \add Yahweh\add* completely annihilated every living creature off the earth, including humankind and livestock and crawling creatures and \add even\add* the birds. Everything was annihilated except for Noak and those with him in the \add floating\add* chest,
+\v 24 and the earth remained in full flood for 150 days.
 \c 8
-\s1 The pegtigkus of water
+\s1 Waiting for the land to dry
 \rem /s1 The End of the Flood; The Flood Recedes; The Flood Subsides
 \p
-\v 1 ◘
-\v 2 ◘
-\v 3 ◘
-\v 4 ◘
-\v 5 ◘
+\v 1 Then God considered Noak and and all the living things and all the livestock that were with him in the \add floating\add* chest, and he caused a wind to pass over the earth, and the waters \add started to\add* subside
+\v 2 and the underwater geysers and the rain was stopped.
+\v 3 Then the water steadily receded from the earth and after five months the water had gone down \add enough\add*
+\v 4 that by October the \add wooden\add* chest was left sitting on one of the Ararat mountains.
+\v 5 The water continued to recede until December when the tops of the mountains became visible.
 \p
-\v 6 ◘
-\v 7 ◘
-\v 8 ◘
-\v 9 ◘
-\v 10 ◘
-\v 11 ◘
-\v 12 ◘
+\v 6 Then after another forty days, Noak opened a window near the \add top\add* of the chest
+\v 7 and he released a raven which kept flying out and returning until the land started to dry out.
+\v 8 Then Noak \add also\add* released a dove to see if the land was really out of the water,
+\v 9 but the dove didn't find anywhere to land so it returned to the window because the surface of the earth was still wet, and he stretched out his arm and brought the dove back inside.
+\v 10 Noak waited another week and then he released the dove again
+\v 11 and it returned to him in the evening and wow, it had a fresh, green olive leaf in its beak. So now Noak knew that the land was out of the water.
+\v 12 Then he waited another week, and released the dove \add again\add*, but this time it didn't come back to him.
 \p
-\v 13 ◘
-\v 14 ◘
+\v 13 So it was when Noak was 601 years old (in the month of WHAT MONTH on the first day of the \add Jewish\add* new year) the land was still drying out. So Noak made an opening in the top of the \add wooden\add* chest and saw that the land surface \add there\add* was \add almost\add* dry.
+\v 14 By the end of the next month, the land was fully dry.
 \p
-\v 15 ◘
-\v 16 ◘
-\v 17 ◘
-\v 18 ◘
-\v 19 ◘
+\v 15 Then God said to Noak,
+\v 16 “Leave the \add wooden\add* chest along with your sons and each of your wives.
+\v 17 Take out all the living creatures that are with you, including the birds and livestock, and everything that crawls (CHECK FOR WORD CONSISTENCY) on the ground, so that they'll proliferate and increase their numbers \add all\add* over the earth.
+\v 18 So Noak went outside, along with his sons and each of their wives.
+\v 19 Every living creature, every crawling thing and every bird, everything moving on the earth, went outside kind by kind.
 \s1 The sacrificing of Noah
 \rem /s1 Noah Offers a Sacrifice; God's Promise to Noah
 \p
@@ -1146,7 +1167,7 @@
 \v 24 ◘
 \v 25 ◘
 \v 26 ◘
-\s1 The sin of Esau of katenged din isip panganey
+\s1 The sin of Esau of authority din isip panganey
 \rem /s1 Esau Sells His Rights as the First-Born Son; Esau Sells His Birthright
 \p
 \v 27 ◘
@@ -1318,7 +1339,7 @@
 \v 43 ◘
 \v 44 ◘
 \v 45 ◘
-\s1 The pegpeyipanew of Isaac ki Yacob peendiye ki Laban
+\s1 The journey of Isaac ki Yacob peendiye ki Laban
 \rem /s1 Isaac Sends Jacob to Laban
 \p
 \v 46 ◘
