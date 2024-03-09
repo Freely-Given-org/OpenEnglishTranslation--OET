@@ -5,7 +5,7 @@
 #
 # Script handling extract_VLT_NT_to_ESFM functions
 #
-# Copyright (C) 2022-2023 Robert Hunt
+# Copyright (C) 2022-2024 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -55,10 +55,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-12-15' # by RJH
+LAST_MODIFIED_DATE = '2024-03-08' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
-PROGRAM_VERSION = '0.94'
+PROGRAM_VERSION = '0.95'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -399,7 +399,7 @@ def export_esfm_literal_English_gloss() -> bool:
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Exporting ESFM auxilliary word table to {table_filepath}…" )
     next_word_number = 1 # word count includes variants
     with open(table_filepath, 'wt', encoding='utf-8') as table_output_file:
-        table_output_file.write( 'Ref\tGreekWord\tSRLemma\tGreekLemma\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\n' ) # Write TSV header row
+        table_output_file.write( 'Ref\tGreekWord\tSRLemma\tGreekLemma\tVLTGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\n' ) # Write TSV header row
         for collation_row_number, collation_row in enumerate(collation_csv_rows):
             collation_id, verse_id = collation_row['CollationID'], collation_row['VerseID']
             assert len(collation_id) == 11 and collation_id.isdigit()

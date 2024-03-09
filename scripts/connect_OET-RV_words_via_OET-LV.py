@@ -63,10 +63,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2024-02-24' # by RJH
+LAST_MODIFIED_DATE = '2024-03-08' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.61'
+PROGRAM_VERSION = '0.62'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -442,7 +442,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     """
     # global forList
     # fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {BBB} {c}:{v} {len(rvEntryList)}, {len(lvEntryList)} )" )
-    assert state.tableHeaderList.index( 'GlossCaps' ) == GLOSS_COLUMN__NUMBER # Check we have the correct column below
+    assert state.tableHeaderList.index( 'VLTGlossWords' )+1 == GLOSS_COLUMN__NUMBER, f"{state.tableHeaderList.index('VLTGlossWords')+1=} {GLOSS_COLUMN__NUMBER=} {state.tableHeaderList=}" # Check we have the correct column below
 
     rvText = ''
     for rvEntry in rvEntryList:
@@ -751,8 +751,8 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('120', 'a hundred twenty'),
             ('wants', 'having an ear'),('understand', 'having an ear'),
             # Greek possessive pronouns usually appear after the head noun
-            ('my', 'of me'), ('your', 'of you'), ('his', 'of him'), ('her', 'of her'), ('our', 'of us'), ('their', 'of them'),
-            ('My', 'of me'), ('Your', 'of you'), ('His', 'of him'), ('Her', 'of her'), ('Our', 'of us'), ('Their', 'of them'),
+            ('my', 'of me'), ('your', 'of you'), ('his', 'of him'), ('her', 'of her'), ('its', 'of it'), ('our', 'of us'), ('their', 'of them'),
+            ('My', 'of me'), ('Your', 'of you'), ('His', 'of him'), ('Her', 'of her'), ('Its', 'of it'), ('Our', 'of us'), ('Their', 'of them'),
             # Contractions
             ("you're", 'you are'),
             # Other word number changes

@@ -5,7 +5,7 @@
 #
 # Script to take the OET-LV NT ESFM files and convert to HTML
 #
-# Copyright (C) 2022-2023 Robert Hunt
+# Copyright (C) 2022-2024 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -53,10 +53,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2023-10-15' # by RJH
+LAST_MODIFIED_DATE = '2024-03-08' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.76'
+PROGRAM_VERSION = '0.77'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -76,6 +76,7 @@ assert OET_HTML_OutputFolderPath.is_dir()
 assert THEOGRAPHIC_INPUT_FOLDER_PATH.is_dir()
 
 NEWLINE = '\n'
+TAB = '\t'
 # EN_SPACE = ' '
 EM_SPACE = ' '
 NARROW_NON_BREAK_SPACE = ' '
@@ -1064,7 +1065,7 @@ def make_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fil
 
         columnHeaders = word_table[0]
         dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Word table column headers = '{columnHeaders}'" )
-        assert columnHeaders == 'Ref\tGreekWord\tSRLemma\tGreekLemma\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\tTags', columnHeaders # If not, probably need to fix some stuff
+        assert columnHeaders == 'Ref\tGreekWord\tSRLemma\tGreekLemma\tVLTGlossWords\tOETGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\tTags', columnHeaders # If not, probably need to fix some stuff
 
         # First make a list of each place the same Greek word (and matching morphology) is used
         # TODO: The word table has Matthew at the beginning (whereas the OET places John and Mark at the beginning) so we do JHN first
@@ -1072,8 +1073,9 @@ def make_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fil
         # Process John first
         for n, columns_string in enumerate( word_table[1:], start=1 ):
             if columns_string.startswith( 'JHN' ):
-                wordRef, greekWord, SRLemma, _GrkLemma, glossWords, glossCaps, probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
-                formattedGlossWords = glossWords \
+                assert columns_string.count( '\t' ) == 11, f"{n} ({columns_string.count(TAB)}) '{columns_string}'" # Be wary of editors that truncate trailing whitespace / tabs
+                wordRef, greekWord, SRLemma, _GrkLemma, _VLTGlossWords, OETGlossWords, glossCaps, probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
+                formattedGlossWords = OETGlossWords \
                                         .replace( '/', '<span class="glossHelper">', 1 ).replace( '/', '</span>', 1 ) \
                                         .replace( '˱', '<span class="glossPre">', 1 ).replace( '˲', '</span>', 1 ) \
                                         .replace( '‹', '<span class="glossPost">', 1 ).replace( '›', '</span>', 1 )
@@ -1088,8 +1090,9 @@ def make_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fil
         # Process Mark second
         for n, columns_string in enumerate( word_table[1:], start=1 ):
             if columns_string.startswith( 'MRK' ):
-                wordRef, greekWord, SRLemma, _GrkLemma, glossWords, glossCaps, probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
-                formattedGlossWords = glossWords \
+                assert columns_string.count( '\t' ) == 11, f"{n} ({columns_string.count(TAB)}) '{columns_string}'" # Be wary of editors that truncate trailing whitespace / tabs
+                wordRef, greekWord, SRLemma, _GrkLemma, _VLTGlossWords, OETGlossWords, glossCaps, probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
+                formattedGlossWords = OETGlossWords \
                                         .replace( '/', '<span class="glossHelper">', 1 ).replace( '/', '</span>', 1 ) \
                                         .replace( '˱', '<span class="glossPre">', 1 ).replace( '˲', '</span>', 1 ) \
                                         .replace( '‹', '<span class="glossPost">', 1 ).replace( '›', '</span>', 1 )
@@ -1104,8 +1107,9 @@ def make_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fil
         # Now do the other books in their normal order
         for n, columns_string in enumerate( word_table[1:], start=1 ):
             if not columns_string.startswith( 'JHN' ) and not columns_string.startswith( 'MRK' ):
-                wordRef, greekWord, SRLemma, _GrkLemma, glossWords, glossCaps, probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
-                formattedGlossWords = glossWords \
+                assert columns_string.count( '\t' ) == 11, f"{n} ({columns_string.count(TAB)}) '{columns_string}'" # Be wary of editors that truncate trailing whitespace / tabs
+                wordRef, greekWord, SRLemma, _GrkLemma, _VLTGlossWords, OETGlossWords, glossCaps, probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
+                formattedGlossWords = OETGlossWords \
                                         .replace( '/', '<span class="glossHelper">', 1 ).replace( '/', '</span>', 1 ) \
                                         .replace( '˱', '<span class="glossPre">', 1 ).replace( '˲', '</span>', 1 ) \
                                         .replace( '‹', '<span class="glossPost">', 1 ).replace( '›', '</span>', 1 )
@@ -1120,11 +1124,12 @@ def make_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fil
         # Now create the individual word pages
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f" Making pages for {len(word_table)-1:,} words in {word_table_filename}…" )
         for n, columns_string in enumerate( word_table[1:], start=1 ):
+            assert columns_string.count( '\t' ) == 11, f"{n} ({columns_string.count(TAB)}) '{columns_string}'" # Be wary of editors that truncate trailing whitespace / tabs
             # print( n, columns_string )
             output_filename = f'{n}.html'
             # dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Got '{columns_string}' for '{output_filename}'" )
-            wordRef, greekWord, SRLemma, _GrkLemma, glossWords, glossCaps, probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
-            formattedGlossWords = glossWords \
+            wordRef, greekWord, SRLemma, _GrkLemma, _VLTGlossWords, OETGlossWords, glossCaps, probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
+            formattedGlossWords = OETGlossWords \
                                     .replace( '/', '<span class="glossHelper">', 1 ).replace( '/', '</span>', 1 ) \
                                     .replace( '˱', '<span class="glossPre">', 1 ).replace( '˲', '</span>', 1 ) \
                                     .replace( '‹', '<span class="glossPost">', 1 ).replace( '›', '</span>', 1 )
@@ -1162,7 +1167,7 @@ def make_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fil
                 if case!='.': caseField = f' case=<b>{CNTR_CASE_NAME_DICT[case]}</b>'
                 if gender!='.': genderField = f' gender=<b>{CNTR_GENDER_NAME_DICT[gender]}</b>'
                 if number!='.': numberField = f' number=<b>{CNTR_NUMBER_NAME_DICT[number]}</b>' # or № ???
-            translation = '<small>(no English gloss)</small>' if glossWords=='-' else f'''Typical English gloss=‘<b>{formattedGlossWords.replace('_','<span class="ul">_</span>')}</b>’'''
+            translation = '<small>(no English gloss)</small>' if OETGlossWords=='-' else f'''Typical English gloss=‘<b>{formattedGlossWords.replace('_','<span class="ul">_</span>')}</b>’'''
 
             # Add pointers to people, locations, etc.
             semanticExtras = nominaSacraField
@@ -1209,8 +1214,8 @@ def make_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fil
                 thisWordNumberList = formUsageDict[(greekWord,morphology)]
                 for oN in thisWordNumberList:
                     if oN==n: continue # don't duplicate the word we're making the page for
-                    oWordRef, _oGreekWord, _oSRLemma, _oGrkLemma, oGlossWords, oGlossCaps,oProbability, oExtendedStrongs, oRoleLetter, oMorphology, oTagsStr = word_table[oN].split( '\t' )
-                    oFormattedGlossWords = oGlossWords \
+                    oWordRef, _oGreekWord, _oSRLemma, _oGrkLemma, _oVLTGlossWords, oOETGlossWords, oGlossCaps,oProbability, oExtendedStrongs, oRoleLetter, oMorphology, oTagsStr = word_table[oN].split( '\t' )
+                    oFormattedGlossWords = oOETGlossWords \
                                             .replace( '/', '<span class="glossHelper">', 1 ).replace( '/', '</span>', 1 ) \
                                             .replace( '˱', '<span class="glossPre">', 1 ).replace( '˲', '</span>', 1 ) \
                                             .replace( '‹', '<span class="glossPost">', 1 ).replace( '›', '</span>', 1 )
@@ -1220,7 +1225,7 @@ def make_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fil
                     oTidyBBB = BibleOrgSysGlobals.loadedBibleBooksCodes.tidyBBB( oBBB )
                     if other_count == 0:
                         html = f'{html}\n<h2>Other uses ({len(thisWordNumberList)-1:,}) of {greekWord} <small>{morphology}</small> in the NT</h2>'
-                    translation = '<small>(no English gloss)</small>' if oGlossWords=='-' else f'''English gloss=‘<b>{oFormattedGlossWords.replace('_','<span class="ul">_</span>')}</b>’'''
+                    translation = '<small>(no English gloss)</small>' if oOETGlossWords=='-' else f'''English gloss=‘<b>{oFormattedGlossWords.replace('_','<span class="ul">_</span>')}</b>’'''
                     html = f'{html}\n<p class="wordLine"><a href="../{oBBB}.html#C{oC}V{oV}">OET {oTidyBBB} {oC}:{oV}</a> {translation} <a href="https://GreekCNTR.org/collation/?{CNTR_BOOK_ID_MAP[oBBB]}{oC.zfill(3)}{oV.zfill(3)}">SR GNT {oTidyBBB} {oC}:{oV} word {oW}</a>'
                     other_count += 1
                     if other_count >= 120:
@@ -1259,7 +1264,7 @@ def make_lemma_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
 
         columnHeaders = word_table[0]
         dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Word table column headers = '{columnHeaders}'" )
-        assert columnHeaders == 'Ref\tGreekWord\tSRLemma\tGreekLemma\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\tTags', columnHeaders # If not, probably need to fix some stuff
+        assert columnHeaders == 'Ref\tGreekWord\tSRLemma\tGreekLemma\tVLTGlossWords\tOETGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\tTags', columnHeaders # If not, probably need to fix some stuff
 
 
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Making {len(lemmaDict):,} lemma pages…" )
@@ -1291,8 +1296,8 @@ def make_lemma_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
             maxWordsToShow = 100
             html = f'''{html}\n<h2>Have {len(lemmaRowsList):,} {'use' if len(lemmaRowsList)==1 else 'uses'} of Greek root word (lemma) ‘{lemma}’ in the NT</h2>'''
         for displayCounter,oN in enumerate( lemmaRowsList, start=1 ):
-            oWordRef, oGreek, _oSRLemma, _oGrkLemma, oGlossWords, _oGlossCaps, _oProbability, _oExtendedStrongs, _oRoleLetter, oMorphology, _oTagsStr = word_table[oN].split( '\t' )
-            oFormattedGlossWords = oGlossWords \
+            oWordRef, oGreek, _oSRLemma, _oGrkLemma, _oVLTGlossWords, oOETGlossWords, _oGlossCaps, _oProbability, _oExtendedStrongs, _oRoleLetter, oMorphology, _oTagsStr = word_table[oN].split( '\t' )
+            oFormattedGlossWords = oOETGlossWords \
                                     .replace( '/', '<span class="glossHelper">', 1 ).replace( '/', '</span>', 1 ) \
                                     .replace( '˱', '<span class="glossPre">', 1 ).replace( '˲', '</span>', 1 ) \
                                     .replace( '‹', '<span class="glossPost">', 1 ).replace( '›', '</span>', 1 )
@@ -1302,7 +1307,7 @@ def make_lemma_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
             oTidyBBB = BibleOrgSysGlobals.loadedBibleBooksCodes.tidyBBB( oBBB )
             oTidyMorphology = oMorphology[4:] if oMorphology.startswith('....') else oMorphology
             # if other_count == 0:
-            translation = '<small>(no English gloss here)</small>' if oGlossWords=='-' else f'''English gloss=‘<b>{oFormattedGlossWords.replace('_','<span class="ul">_</span>')}</b>’'''
+            translation = '<small>(no English gloss here)</small>' if oOETGlossWords=='-' else f'''English gloss=‘<b>{oFormattedGlossWords.replace('_','<span class="ul">_</span>')}</b>’'''
             html = f'''{html}\n<p class="lemmaLine"><a title="View OET {oTidyBBB} text" href="../OET/byC/{oBBB}_C{oC}.html#C{oC}V{oV}">OET {oTidyBBB} {oC}:{oV}</a> Greek word=<b><a title="Go to word page" href="../W/{oN}.html">{oGreek}</a></b> ({transliterate_Greek(oGreek)}) <small>Morphology={oTidyMorphology}</small> {translation} <a title="Go to Statistical Restoration Greek page" href="https://GreekCNTR.org/collation/?{CNTR_BOOK_ID_MAP[oBBB]}{oC.zfill(3)}{oV.zfill(3)}">SR GNT {oTidyBBB} {oC}:{oV} word {oW}</a></p>'''
             # other_count += 1
             # if other_count >= 120:

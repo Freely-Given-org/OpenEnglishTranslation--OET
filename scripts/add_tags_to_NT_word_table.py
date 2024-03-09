@@ -5,7 +5,7 @@
 #
 # Script handling add_tags_to_NT_word_table functions
 #
-# Copyright (C) 2023 Robert Hunt
+# Copyright (C) 2023-2024 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -47,29 +47,36 @@ We use this information to update our OET word-table
 
 CHANGELOG:
     2023-04-27 Clear table now has combined subject referents into Referents column (so now, one less column but more information)
+    2024-03-08 Add OETGlossWords column and apply .tsv transforms similar to how Scripted Bible Editor does
 """
 from gettext import gettext as _
-from typing import Dict, List, Tuple, Optional
+from typing import Dict, List, Tuple, NamedTuple, Optional
 from pathlib import Path
-# from csv import DictReader
-# from collections import defaultdict
-# from datetime import datetime
 import json
+import tomllib
 import logging
 import shutil
+import os
+import unicodedata
+import re
 
 import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
+import sys
+sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitted to PyPI
+from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
-LAST_MODIFIED_DATE = '2023-10-15' # by RJH
+LAST_MODIFIED_DATE = '2024-03-08' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET NT wordtable"
-PROGRAM_VERSION = '0.24'
+PROGRAM_VERSION = '0.30'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
 
+
+SCRIPTED_UPDATES_TABLES_INPUT_FOLDERPATH = Path( 'ScriptedVLTUpdates/' )
 
 JSON_VERSES_DB_FILEPATH = Path( '../../Bible_speaker_identification/outsideSources/TheographicBibleData/derivedFiles/normalised_Verses.json' )
 MACULA_GREEK_TSV_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTreesAbbrev.NT.words.tsv' )
@@ -80,9 +87,7 @@ WORD_TABLE_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_VLT_E
 WORD_TABLE_OUTPUT_FILEPATH = WORD_TABLE_OUTPUT_FOLDERPATH.joinpath( WORD_TABLE_OUTPUT_FILENAME )
 RV_ESFM_OUTPUT_FOLDERPATH = Path( '../translatedTexts/ReadersVersion/' ) # We also copy the wordfile to this folder
 
-# NEWLINE = '\n'
 TAB = '\t'
-# BACKSLASH = '\\'
 
 
 state = None
@@ -107,6 +112,10 @@ def main() -> None:
         state.oldTable = old_table_file.read().rstrip( '\n' ).split( '\n' )
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.oldTable):,} old table entries ({state.oldTable[0].count(TAB)+1} columns)." )
 
+    expand_table_columns() # Creates state.newTable from state.oldTable
+
+    apply_VLT_scripted_gloss_updates()
+
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Reading Theographic Bible Data json entries from {JSON_VERSES_DB_FILEPATH}…" )
     with open( JSON_VERSES_DB_FILEPATH, 'rt', encoding='utf-8' ) as json_file:
         state.verseIndex = json.load( json_file )
@@ -115,7 +124,6 @@ def main() -> None:
     associate_Theographic_people_places()
 
     tag_trinity_persons()
-
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nReading Greek Macula tsv entries from {MACULA_GREEK_TSV_FILEPATH}…" )
     with open( MACULA_GREEK_TSV_FILEPATH, 'rt', encoding='utf-8' ) as macula_tsv_file:
@@ -141,6 +149,245 @@ def main() -> None:
 # end of add_tags_to_NT_word_table.main
 
 
+def expand_table_columns() -> bool:
+    """
+    Using state.oldTable, add the following columns and save in state.newTable:
+        OETGlossWords (initialised to a copy of VLTGlossWords)
+        Tags (left empty)
+    """
+    columnHeaders = state.oldTable[0]
+    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Old word table column headers = '{columnHeaders}'" )
+    assert columnHeaders == 'Ref\tGreekWord\tSRLemma\tGreekLemma\tVLTGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology' # If not, probably need to fix some stuff
+
+    state.newTable = [ f"{columnHeaders.replace(f'{TAB}VLTGlossWords{TAB}',f'{TAB}VLTGlossWords{TAB}OETGlossWords{TAB}')}{TAB}Tags" ]
+    for _n, columns_string in enumerate( state.oldTable[1:], start=1 ):
+        oldColumns = columns_string.split( '\t' )
+        assert len(oldColumns) == 10
+        newColumns = oldColumns.copy()
+        newColumns.insert( 5, oldColumns[4] ) # Copy the VLTGlossWords column to the OETGlossWords column 
+        newColumns.append( '' ) # Append new final Tags column
+        # print( f"({len(newColumns)}) {newColumns=}" )
+        assert len(newColumns) == 12, len(newColumns)
+        newLine = '\t'.join( newColumns )
+        assert newLine.count( '\t' ) == 11, f"{newLine.count(TAB)} {newLine=}"
+        state.newTable.append( newLine )
+        
+    return True
+# end of add_tags_to_NT_word_table.expand_table_columns
+
+
+COMMAND_TABLE_NUM_COLUMNS = 15
+COMMAND_HEADER_LINE = 'Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	RCase	Replace	Name	Comment'
+assert ' ' not in COMMAND_HEADER_LINE
+assert COMMAND_HEADER_LINE.count( '\t' ) == COMMAND_TABLE_NUM_COLUMNS - 1
+class EditCommand(NamedTuple):
+    tags: str           # 0
+    iBooks: list        # 1
+    eBooks: list        # 2
+    iMarkers: list      # 3
+    eMarkers: list      # 4
+    iRefs: list         # 5
+    eRefs: list         # 6
+    preText: str        # 7
+    sCase: str          # 8
+    searchText: str     # 9
+    postText: str       # 10
+    rCase: str          # 11
+    replaceText: str    # 12
+    name: str           # 13
+    comment: str        # 14
+def apply_VLT_scripted_gloss_updates() -> bool:
+    """
+    Go through the .tsv files used by Scripted Bible Editor
+        and apply them to the OETGlossWords column in state.newTable
+    """
+    columnHeaders = state.newTable[0].split( '\t' )
+    assert columnHeaders[5] == 'OETGlossWords' # If not, probably need to fix some stuff
+
+    # Firstly we read the TOML control file
+    filepath = SCRIPTED_UPDATES_TABLES_INPUT_FOLDERPATH.joinpath( 'ScriptedBibleEditor.control.toml' )
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Loading control file: {filepath}…" )
+    with open( filepath, 'rb' ) as controlFile:
+        controlData = tomllib.load( controlFile )
+
+    load_transliteration_table( 'Hebrew' )
+    load_transliteration_table( 'Greek' )
+
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loading and applying transforms to {columnHeaders[5]} column…" )
+    totalChangedGlosses = 0
+    commandTables = {}
+    for commandTableName, givenFilepath in controlData['commandTables'].items():
+        if commandTableName in ('fixGlossPre','fixGlossHelpers','fixGlossPost','cleanupVLT','finalFixes'): # These ones aren't relevant
+            vPrint( 'Info', DEBUGGING_THIS_MODULE, f" Completely ignoring command table file: {commandTableName}" )
+            continue
+        completeFilepath = SCRIPTED_UPDATES_TABLES_INPUT_FOLDERPATH.joinpath( givenFilepath )
+        if os.path.isfile(completeFilepath):
+            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading command table file: {completeFilepath}…" )
+            assert commandTableName not in commandTables
+            commandTables[commandTableName] = []
+            with open( completeFilepath, 'rt', encoding='utf-8' ) as commandTableFile:
+                line_number = 0
+                for line in commandTableFile:
+                    line_number += 1
+                    line = line.rstrip( '\r\n' )
+                    if not line or line.startswith( '#' ): continue
+                    tab_count = line.count( '\t' )
+                    if tab_count>9 and tab_count < (COMMAND_TABLE_NUM_COLUMNS - 1): # Some editors delete trailing columns
+                        line += '\t' * (COMMAND_TABLE_NUM_COLUMNS - 1 - tab_count) # Add back the empty columns
+                        tab_count = line.count( '\t' )
+                    if tab_count != (COMMAND_TABLE_NUM_COLUMNS - 1):
+                        logging.critical( f"Skipping line {line_number} which contains {tab_count} tabs (instead of {COMMAND_TABLE_NUM_COLUMNS - 1})" )
+                    if line == COMMAND_HEADER_LINE:
+                        continue # as no need to save this
+
+                    # Get the fields and check some of them
+                    fields = line.split( '\t' ) # 0:Tags 1:IBooks 2:EBooks 3:IMarkers 4:EMarkers 5:IRefs 6:ERefs 7:PreText 8:SCase 9:Search 10:PostText 11:RCase 12:Replace 13:Name 14:Comment
+                    tags, searchText, replaceText = fields[0], fields[9], fields[12]
+                    iBooks, eBooks = fields[1].split(',') if fields[1] else [], fields[2].split(',') if fields[2] else []
+                    iMarkers, eMarkers = fields[3].split(',') if fields[3] else [], fields[4].split(',') if fields[4] else []
+                    iRefs, eRefs = fields[5].split(',') if fields[5] else [], fields[6].split(',') if fields[6] else []
+                    for iBook in iBooks:
+                        assert iBook in BibleOrgSysGlobals.loadedBibleBooksCodes, iBook
+                    for eBook in eBooks:
+                        assert eBook in BibleOrgSysGlobals.loadedBibleBooksCodes, eBook
+                    for iRef in iRefs:
+                        assert iRef.count('_')==1 and iRef.count(':')==1, iRef
+                        iRefBits = iRef.split('_')
+                        assert iRefBits[0] in BibleOrgSysGlobals.loadedBibleBooksCodes, iRef
+                        iRefC, iRefV = iRefBits[1].split(':')
+                        assert iRefC[0].isdigit() and iRefV[0].isdigit(), iRef
+                    for eRef in eRefs:
+                        assert eRef.count('_')==1 and eRef.count(':')==1, eRef
+                        eRefBits = eRef.split('_')
+                        assert eRefBits[0] in BibleOrgSysGlobals.loadedBibleBooksCodes, eRef
+                        eRefC, eRefV = eRefBits[1].split(':')
+                        assert eRefC[0].isdigit() and eRefV[0].isdigit(), eRef
+                    # print( f"From '{name}' ({givenFilepath}) have {searchText=} {replaceText=} {tags=}" )
+
+                    # Adjust and save the fields
+                    if 'H' in tags:
+                        newReplaceText = transliterate_Hebrew( replaceText, searchText[0].isupper() )
+                        if newReplaceText != replaceText:
+                            # print(f" Converted Hebrew '{replaceText}' to '{newReplaceText}'")
+                            replaceText = newReplaceText
+                        for char in replaceText:
+                            if 'HEBREW' in unicodedata.name(char):
+                                logging.critical(f"Have some Hebrew left-overs in '{replaceText}'")
+                                break
+                        tags = tags.replace( 'H', '' ) # Don't need this tag any longer
+                    if 'G' in tags:
+                        newReplaceText = transliterate_Greek( replaceText )
+                        if newReplaceText != replaceText:
+                            # print(f" Converted Greek '{replaceText}' to '{newReplaceText}'")
+                            replaceText = newReplaceText
+                        for char in replaceText:
+                            if 'GREEK' in unicodedata.name(char):
+                                logging.critical(f"Have some Greek left-overs in '{replaceText}'")
+                                break
+                        tags = tags.replace( 'G', '' ) # Don't need this tag any longer
+
+                    # Our glosses have no word numbers yet, so remove those markers
+                    replaceText = replaceText.replace( '¦', '' )
+                    searchText = searchText.replace( '¦', '' )
+                    editCommand = EditCommand( tags,
+                            iBooks, eBooks, iMarkers, eMarkers, iRefs, eRefs,
+                            fields[7], fields[8], searchText, fields[10], fields[11],
+                            replaceText, fields[13], fields[14] )
+                    commandTables[commandTableName].append( editCommand )
+
+                    # We only have the actual scripture words (no headers, headings, or cross-references, etc.) so
+                    try: eMarkers.remove( 'id' )  # } No need for these because we don't have any of this stuff
+                    except ValueError: pass # There wasn't one
+                    try: eMarkers.remove( 'h' )  # } No need for these because we don't have any of this stuff
+                    except ValueError: pass # There wasn't one
+                    try: eMarkers.remove( 'toc1' )  # } No need for these because we don't have any of these
+                    except ValueError: pass # There wasn't one
+                    try: eMarkers.remove( 'toc2' )  # } No need for these because we don't have any of these
+                    except ValueError: pass # There wasn't one
+                    try: eMarkers.remove( 'mt1' )  # } No need for these because we don't have any of these
+                    except ValueError: pass # There wasn't one
+                    try: eMarkers.remove( 'rem' )  # } No need for these because we don't have any of this stuff
+                    except ValueError: pass # There wasn't one
+                    tags = tags.replace( 'd', '' ) # No use for 'distance' tag
+                    tags = tags.replace( 'c', '' ) # Can't even remember what this tag is from finalFixes 'JtB's announcement'
+                    
+                    # We're going to do the changes to the entire word table right here!
+                    vPrint( 'Info', DEBUGGING_THIS_MODULE, f"Applying {commandTableName}: {tags=} {iBooks=} {eBooks=} {iMarkers=} {eMarkers=} {iRefs=} {eRefs=} {editCommand.preText=} {editCommand.sCase=} {searchText=} {editCommand.postText=} {editCommand.rCase=} {replaceText=} {editCommand.name=} {editCommand.comment}" )
+                    if iMarkers or eMarkers:
+                        print( f"  Unable to apply '{commandTableName}' {iMarkers=} or {eMarkers=}" )
+                        halt
+
+                    if 'w' in tags: # whole words
+                        myRegexSearchString = f'\\b{searchText}\\b'
+                        compiledSearchRegex = re.compile( myRegexSearchString )
+
+                    numChangedGlosses = 0
+                    for n, columns_string in enumerate( state.newTable[1:], start=1 ):
+                        columnDataList = columns_string.split( '\t' )
+                        assert len(columnDataList) == 12
+                        bcvwRef = columnDataList[0]
+                        BBB, CV = bcvwRef.split( '_' )
+                        if (iBooks and BBB not in iBooks) \
+                        or BBB in eBooks:
+                            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Skipping {BBB} at {bcvwRef} with {iBooks=} {eBooks=}" )
+                            continue
+                        C, VW = CV.split( ':' )
+                        V, W = VW.split( 'w' )
+                        bcvRef = f'{BBB}_{C}:{V}'
+                        if (iRefs and bcvRef not in iRefs) \
+                        or bcvRef in eRefs:
+                            if eRefs:
+                                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Skipping {bcvRef} at {bcvwRef} with {iRefs=} {eRefs=}" )
+                            continue 
+                        assert C.isdigit(), f"{C=}"
+                        assert V.isdigit(), f"{V=}"
+                        assert W.isdigit(), f"{W=}"
+                        newGloss = oldGloss = columnDataList[5]
+
+                        if not tags:
+                            newGloss = newGloss.replace( searchText, replaceText )
+                        elif tags == 'l': # loop
+                            for _safetyCount in range( 10_000 ): # Prevent infinite loops
+                                if searchText in newGloss:
+                                    newGloss = newGloss.replace( searchText, replaceText )
+                                else: break
+                        elif tags == 'w': # whole words -- we use regex here
+                            searchStartIndex = numReplacements = 0
+                            while True:
+                                # print( f"  Searching '{newGloss}' for {compiledSearchRegex.pattern=}")
+                                match = compiledSearchRegex.search( newGloss, searchStartIndex )
+                                if not match:
+                                    break
+                                # print( f"    {searchStartIndex}/{len(newGloss)} {numReplacements=} {match=}" )
+                                # print( f"    guts='{newGloss[match.start()-10:match.end()+10]}'" )
+                                newGloss = f'{newGloss[:match.start()]}{replaceText}{newGloss[match.end():]}'
+                                # print( f"    {newGloss=}")
+                                searchStartIndex = match.start() + len(replaceText)
+                                numReplacements += 1
+                        else:
+                            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Ignored {commandTableName} '{editCommand.name}' {editCommand.comment} {tags=}" )
+                            halt
+
+                        if newGloss != oldGloss:
+                            columnDataList[5] = newGloss
+                            newLine = '\t'.join( columnDataList )
+                            assert newLine.count( '\t' ) == 11, f"{newLine.count(TAB)} {newLine=}"
+                            state.newTable[n] = newLine
+                            numChangedGlosses += 1
+                            totalChangedGlosses += 1
+                    if numChangedGlosses:
+                        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"Made {numChangedGlosses:,} '{commandTableName}' OET gloss changes from scripted tables" )
+                    
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded and applied {len(commandTables[commandTableName])} command{'' if len(commandTables[commandTableName])==1 else 's'} for '{commandTableName}'." )
+        else: vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      '{completeFilepath}' is not a file!" )
+
+    if totalChangedGlosses:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Made total {totalChangedGlosses:,} OET gloss changes from scripted tables" )
+
+    return True
+# end of add_tags_to_NT_word_table.apply_VLT_scripted_gloss_updates
+
+
 def associate_Theographic_people_places() -> bool:
     """
     Using the Theographic Bible Data, tag Greek word lines in our table
@@ -148,23 +395,23 @@ def associate_Theographic_people_places() -> bool:
     """
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nAssociating Greek words with json keys…" )
 
-    columnHeaders = state.oldTable[0]
-    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Old word table column headers = '{columnHeaders}'" )
-    assert columnHeaders == 'Ref\tGreekWord\tSRLemma\tGreekLemma\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology' # If not, probably need to fix some stuff
+    # columnHeaders = state.oldTable[0]
+    # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Old word table column headers = '{columnHeaders}'" )
+    # assert columnHeaders == 'Ref\tGreekWord\tSRLemma\tGreekLemma\tVLTGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology' # If not, probably need to fix some stuff
 
     numAddedPeople = numAddedPeopleGroups = numAddedLocations = numAddedEvents = numAddedYears = numAddedTimelines = 0
-    state.newTable = [ f"{columnHeaders}\tTags" ]
     lastVerseRef = None
-    for n, columns_string in enumerate( state.oldTable[1:], start=1 ):
+    for n, columns_string in enumerate( state.newTable[1:], start=1 ):
+        wordRef, greekWord, _srLemma, _greekLemma, VLTglossWords, OETGlossWords, glossCaps,probability, _extendedStrongs, _roleLetter, _morphology, _tags = columns_string.split( '\t' )
         tags:List[str] = []
-        wordRef, greekWord, _srLemma, _greekLemma, glossWords, glossCaps,probability, _extendedStrongs, _roleLetter, _morphology = columns_string.split( '\t' )
         verseRef = wordRef.split('w')[0]
         newVerse = verseRef != lastVerseRef
         # print( f"{wordRef=} {verseRef} {lastVerseRef=} {newVerse=}" )
         try: verseLinkEntry = state.verseIndex[verseRef]
         except KeyError: # versification difference ???
             logging.critical( f"Versification error: Unable to find {verseRef} in Theographic json" )
-            state.newTable.append( f"{columns_string}\t" )
+            assert columns_string.count( '\t' ) == 11, f"{columns_string.count(TAB)} {columns_string=}"
+            state.newTable.append( columns_string )
             lastVerseRef = verseRef
             continue
         assert not verseLinkEntry['peopleGroups'] # Why is this true??? Ah, because only has a handful of OT references!!!
@@ -172,38 +419,38 @@ def associate_Theographic_people_places() -> bool:
         if 'U' in glossCaps: # or 'G' in glossCaps: ???
             dPrint( 'Never', DEBUGGING_THIS_MODULE, f"{wordRef} {verseLinkEntry=}" )
             if verseLinkEntry['people']:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Need to add people: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{glossWords}' {verseLinkEntry['people']}")
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Need to add people: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{VLTglossWords}' {verseLinkEntry['people']}")
                 assert isinstance( verseLinkEntry['people'], list )
                 for personID in verseLinkEntry['people']:
                     assert personID[0] == 'P' and ' ' not in personID and ';' not in personID
                     personName = personID[1:] # First prefix letter is P for person
                     while personName[-1].isdigit(): # it has a suffix
                         personName = personName[:-1] # Drop the final digit
-                    if personName in glossWords:
+                    if personName in VLTglossWords:
                         tags.append( personID )
-                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{personID}' to {wordRef} for '{glossWords}'")
+                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{personID}' to {wordRef} for '{VLTglossWords}'")
                         numAddedPeople += 1
                     else:
                         for thgName,srName in (('Israel','Jacob'),('Pharez','Perez'),('Zerah','Zara'),('Tamar','Thamar'),('Hezron','Esrom'),('Ram','Aram'),('Amminadab','Aminadab'),('Nahshon','Naasson'),
                                                ('Jehoshaphat','Josaphat'),('Jehoram','Joram'),('Uzziah','Ozias'),('Jotham','Joatham'),('Ahaz','Achaz'),
                                                ('Jehoiachin','Jechonias'),('Shealtiel','Salathiel'),('Zerubbabel','Zorobabel'),('Sadoc','Zadok')):
-                            if personName==thgName and srName in glossWords:
+                            if personName==thgName and srName in VLTglossWords:
                                 tags.append( personID )
-                                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{personID}' to {wordRef} for '{glossWords}'")
+                                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{personID}' to {wordRef} for '{VLTglossWords}'")
                                 numAddedPeople += 1
                                 break
             if verseLinkEntry['places']:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Need to add places: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{glossWords}' {verseLinkEntry['places']}")
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Need to add places: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{VLTglossWords}' {verseLinkEntry['places']}")
                 assert isinstance( verseLinkEntry['places'], list )
                 for placeID in verseLinkEntry['places']:
                     assert placeID[0] == 'L'
                     placeName = placeID[1:] # First prefix letter is L for location
                     while placeName[-1].isdigit(): # it has a suffix
                         placeName = placeName[:-1] # Drop the final digit
-                    if placeName in glossWords:
+                    if placeName in VLTglossWords:
                         assert ' ' not in placeID and ';' not in placeID
                         tags.append( placeID )
-                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{placeID}' to {wordRef} for '{glossWords}'")
+                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{placeID}' to {wordRef} for '{VLTglossWords}'")
                         numAddedLocations += 1
         if probability and newVerse:
             newVerse = False
@@ -221,7 +468,7 @@ def associate_Theographic_people_places() -> bool:
                 #     dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Added '{pgID}' to {ref}")
                 #     halt
             if verseLinkEntry['yearNum']:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add year number: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{glossWords}' {verseLinkEntry['yearNum']}")
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add year number: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{VLTglossWords}' {verseLinkEntry['yearNum']}")
                 assert isinstance( verseLinkEntry['yearNum'], str )
                 tag = f"Y{verseLinkEntry['yearNum']}"
                 assert ' ' not in tag and ';' not in tag
@@ -229,7 +476,7 @@ def associate_Theographic_people_places() -> bool:
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
                 numAddedYears += 1
             if verseLinkEntry['eventsDescribed']:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add events: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{glossWords}' {verseLinkEntry['eventsDescribed']}")
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add events: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{VLTglossWords}' {verseLinkEntry['eventsDescribed']}")
                 assert isinstance( verseLinkEntry['eventsDescribed'], list )
                 for eventID in verseLinkEntry['eventsDescribed']:
                     # personName = personID[1:] # First prefix letter is P for person
@@ -241,15 +488,20 @@ def associate_Theographic_people_places() -> bool:
                     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
                     numAddedEvents += 1
             if verseLinkEntry['timeline']:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add timeline: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{glossWords}' {verseLinkEntry['timeline']}")
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add timeline: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{VLTglossWords}' {verseLinkEntry['timeline']}")
                 assert isinstance( verseLinkEntry['timeline'], str )
                 tag = f"T{verseLinkEntry['timeline'].replace(' ','_')}"
                 assert ' ' not in tag and ';' not in tag
                 tags.append( tag )
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
                 numAddedTimelines += 1
-        # Add the new column to the table
-        state.newTable.append( f"{columns_string}\t{';'.join(tags)}" )
+        # Put the new column in the table
+        # print( f"{n=} {columns_string=} {tags=}" )
+        assert columns_string.endswith( '\t' ) # because the newly created tags column was empty
+        newLine = f"{columns_string}{';'.join(tags)}"
+        assert newLine.count( '\t' ) == 11, f"{newLine.count(TAB)} {newLine=}"
+        state.newTable[n] = newLine
+        # print( f"  {state.newTable[n]=}")
         lastVerseRef = verseRef
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{numAddedPeople=:,} {numAddedPeopleGroups=:,} {numAddedLocations=:,} {numAddedEvents=:,} {numAddedYears=:,} {numAddedTimelines=:,}" )
@@ -258,7 +510,7 @@ def associate_Theographic_people_places() -> bool:
 
 
 GLOSS_COLUMN_NUMBER = 4
-TAG_COLUMN_NUMBER = 10
+TAG_COLUMN_NUMBER = 11
 def tag_trinity_persons() -> bool:
     """
     Some undocumented documentation of the GlossCaps column:
@@ -283,9 +535,9 @@ def tag_trinity_persons() -> bool:
     """
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nTagging trinity persons in our table…" )
 
-    # Expect column headers 'Ref\tGreekWord\tSRLemma\tGreekLemma\tGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\tTags'
+    # Expect column headers 'Ref\tGreekWord\tSRLemma\tGreekLemma\tVLTGlossWords\tOETGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\tTags'
     columnHeaders = state.newTable[0].split( '\t' )
-    assert columnHeaders[GLOSS_COLUMN_NUMBER] == 'GlossWords' # Check our index value of 4
+    assert columnHeaders[GLOSS_COLUMN_NUMBER] == 'VLTGlossWords' # Check our index value of 4
     assert columnHeaders[TAG_COLUMN_NUMBER] == 'Tags' # Check our index value of 10
 
     numAddedGod = numAddedJesus = numAddedHolySpirit = 0
@@ -314,7 +566,9 @@ def tag_trinity_persons() -> bool:
 
         if madeChanges:
             rowFields[TAG_COLUMN_NUMBER] = ';'.join( tagList )
-            state.newTable[n] = '\t'.join( rowFields )
+            newLine = '\t'.join( rowFields )
+            assert newLine.count( '\t' ) == 11, f"{newLine.count(TAB)} {newLine=}"
+            state.newTable[n] = newLine
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {numAddedGod=:,} {numAddedJesus=:,} {numAddedHolySpirit=:,} Total added={numAddedGod+numAddedJesus+numAddedHolySpirit:,}" )
     return True
@@ -491,9 +745,13 @@ def tag_referents_from_macula_data() -> bool:
                             totalAdds += 1
                     # dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Added {numAdded} tag(s) so now {existingReferentRowTags}" )
                     existingReferentRowFields[TAG_COLUMN_NUMBER] = ';'.join( existingReferentRowTags )
-                    state.newTable[possibleReferentRowIndices[ixReferent]] = '\t'.join( existingReferentRowFields )
+                    newLine = '\t'.join( existingReferentRowFields )
+                    assert newLine.count( '\t' ) == 11, f"{newLine.count(TAB)} {newLine=}"
+                    state.newTable[possibleReferentRowIndices[ixReferent]] = newLine
                     existingReferredRowFields[TAG_COLUMN_NUMBER] = ';'.join( existingReferredRowTags )
-                    state.newTable[possibleReferredRowIndices[ixReferred]] = '\t'.join( existingReferredRowFields )
+                    newLine = '\t'.join( existingReferredRowFields )
+                    assert newLine.count( '\t' ) == 11, f"{newLine.count(TAB)} {newLine=}"
+                    state.newTable[possibleReferredRowIndices[ixReferred]] = newLine
                 # end of appendNewTags function
 
                 if not possibleReferentRowIndices:
@@ -588,6 +846,7 @@ def write_new_table() -> bool:
     """
     with open( WORD_TABLE_OUTPUT_FILEPATH, 'wt', encoding='utf-8' ) as new_table_output_file:
         for line in state.newTable:
+            assert line.count( '\t' ) == 11, f"{line.count(TAB)} {line=}"
             new_table_output_file.write( f'{line}\n' )
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Wrote {len(state.newTable):,} lines to {WORD_TABLE_OUTPUT_FILEPATH} ({state.newTable[0].count(TAB)+1} columns).")
 
@@ -597,6 +856,7 @@ def write_new_table() -> bool:
 
     return True
 # end of add_tags_to_NT_word_table.write_new_table
+
 
 
 if __name__ == '__main__':

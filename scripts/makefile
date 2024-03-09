@@ -1,6 +1,6 @@
 # OET makefile
 #
-# Last updated: 2023-12-14 by RJH
+# Last updated: 2024-03-08 by RJH
 #
 
 #=== Folder and file declarations =======================
@@ -99,10 +99,10 @@ $(BibleTags_TSV): $(BibleTags_OT_USFM) $(BibleTags_NT_USFM) convert_BibTags_USFM
 	@$(Python) convert_BibTags_USFM_to_TSV.py
 
 $(intermediate_LV_NT_ESFM) $(original_wordtable): $(CNTR_book_table) $(CNTR_collation_table) $(CNTR_lemma_table)
-	@echo "\n\nExtract NT from TSV table to {BBB}_gloss.ESFM files…\n"
+	@echo "\n\nExtract NT from TSV table to the various {BBB}_gloss.ESFM files…\n"
 	@$(Python) extract_VLT_NT_to_ESFM.py -e
 
-$(expanded_wordtable): $(original_wordtable) $(Clear_Bible_NT_lowfat_TSV) add_tags_to_NT_word_table.py
+$(expanded_wordtable): $(original_wordtable) $(Clear_Bible_NT_lowfat_TSV) $(scripted_NT_updates) add_tags_to_NT_word_table.py
 	@echo "\n\nAdd people/places/referent tags to OET NT word table…\n"
 	@$(Python) add_tags_to_NT_word_table.py -e
 
