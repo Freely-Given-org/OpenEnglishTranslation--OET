@@ -2,7 +2,7 @@
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 NEH
-\rem disabledWORDTABLE OET_OT_word_table.tsv
+\rem WORDTABLE OET-LV_OT_word_table.tsv
 \h Nehemiah
 \toc1 Nehemiah
 \toc2 Nehemiah
@@ -25,7 +25,7 @@
 \v 1 ◘
 \s1 The praying for Nihimiyas for of Yerusalem
 \rem /s1 Nehemiah's Concern for Jerusalem
-\p …◘
+\p …
 \v 2 ◘
 \v 3 ◘
 \p
@@ -38,17 +38,17 @@
 \p
 \v 10 ◘
 \v 11 ◘
-\p …◘
+\p …
 \c 2
 \s1 The going of Nihimiyas of Yerusalem
 \rem /s1 Nehemiah Goes to Jerusalem; Nehemiah Sent to Judah; Artaxerxes Sends Nehemiah to Jerusalem
 \p
 \v 1 ◘
 \v 2 ◘
-\p …◘
+\p …
 \v 3 \x + \xo 2:3: \xt 2Ki 25:8-10; 2Ch 36:19; Jer 52:12-14.\x*◘
 \v 4 ◘
-\p …◘
+\p …
 \v 5 ◘
 \p
 \v 6 ◘
@@ -71,7 +71,7 @@
 \rem /s1 Decision to Restore the Walls
 \v 17 ◘
 \v 18 ◘
-\p …◘
+\p …
 \v 19 ◘
 \p
 \v 20 ◘
@@ -86,7 +86,7 @@
 \v 3 ◘
 \p
 \v 4 ◘
-\p …◘
+\p …
 \v 5 ◘
 \p
 \v 6 ◘
@@ -94,12 +94,12 @@
 \v 7 ◘
 \p
 \v 8 ◘
-\p …◘
+\p …
 \p
 \v 9 ◘
 \p
 \v 10 ◘
-\p …◘
+\p …
 \p
 \v 11 ◘
 \p
@@ -115,7 +115,7 @@
 \rem /s1 Levites Who Worked on the Wall
 \p
 \v 17 ◘
-\p …◘
+\p …
 \p
 \v 18 ◘
 \p
@@ -130,13 +130,13 @@
 \v 22 ◘
 \p
 \v 23 ◘
-\p …◘
+\p …
 \p
 \v 24 ◘
 \p
 \v 25 ◘
 \rem /s1 Other Builders
-\p …◘
+\p …
 \v 26 ◘
 \s1 The people maid of peg-ayad-ayad of alad
 \p
@@ -145,10 +145,10 @@
 \v 28 ◘
 \p
 \v 29 ◘
-\p …◘
+\p …
 \p
 \v 30 ◘
-\p …◘
+\p …
 \p
 \v 31 ◘
 \p
@@ -203,7 +203,7 @@
 \p
 \v 6 ◘
 \v 7 \x + \xo 5:7: \xt Exo 22:25; Lev 25:35-37; Deu 23:19-20.\x*◘
-\p …◘
+\p …
 \v 8 ◘
 \p
 \v 9 ◘
@@ -211,10 +211,10 @@
 \v 11 ◘
 \p
 \v 12 ◘
-\p …◘
+\p …
 \v 13 ◘
 \rem /s1 The Generosity of Nehemiah; Nehemiah's Unselfishness
-\p …◘
+\p …
 \s1 The helping of Nihimiyas
 \p
 \v 14 ◘
@@ -444,7 +444,7 @@
 \v 17 ◘
 \v 18 ◘
 \c 9
-\s1 The peg-angken of me Israilita of sins dan
+\s1 The acceptance of me Israilita of sins dan
 \rem /s1 The People Confess Their Sins; National Confession; The Israelites Confess Their Sins
 \p
 \v 1 ◘
@@ -627,7 +627,7 @@
 \p
 \v 1 ◘
 \s1 The me priest
-\rem /s3 
+\rem /s3
 \p
 \v 2 ◘
 \li1 …
@@ -638,7 +638,7 @@
 \li1 …
 \li1 …
 \s1 The me Libita
-\rem /s3 
+\rem /s3
 \p
 \v 3 ◘
 \v 4 ◘
@@ -655,7 +655,7 @@
 \li1 …
 \li1 …
 \s1 The teachers
-\rem /s3 
+\rem /s3
 \p
 \v 10 ◘
 \v 11 ◘
@@ -711,10 +711,10 @@
 \v 36 \x + \xo 10:36: \xt Exo 13:2.\x*◘
 \p
 \v 37 \x + \xo 10:37: \xt Num 18:21.\x*◘
-\p …◘
+\p …
 \v 38 \x + \xo 10:38: \xt Num 18:26.\x*◘
 \v 39 ◘
-\p …◘
+\p …
 \c 11
 \s1 The people nangugpe of Yerusalem
 \rem /s1 The People Who Lived in Jerusalem; The People Occupy Jerusalem; The New Residents of Jerusalem; Population of the City Increased
@@ -722,50 +722,50 @@
 \v 1 ◘
 \v 2 ◘
 \v 3 \x + \xo 11:3-4: \xt Neh 7:73.\x*◘
-\rem /s3 
-\p …◘
+\rem /s3
+\p …
 \s2 The descendants of Huda
 \p
 \v 4 ◘
-\p …◘
+\p …
 \v 5 ◘
 \p
 \v 6 ◘
 \s2 The descendants of Benyamin
-\rem /s3 
+\rem /s3
 \p
 \v 7 ◘
-\p …◘
+\p …
 \p
 \v 8 ◘
 \v 9 ◘
 \s2 The me priest
-\rem /s3 
+\rem /s3
 \p
 \v 10 ◘
-\p …◘
+\p …
 \v 11 ◘
 \v 12 ◘
-\p …◘
+\p …
 \v 13 ◘
 \v 14 ◘
 \s2 The me Libita
-\rem /s3 
+\rem /s3
 \p
 \v 15 ◘
-\p …◘
+\p …
 \p
 \v 16 ◘
 \p
 \v 17 ◘
-\p …◘
+\p …
 \p
 \v 18 ◘
 \s2 The me talagbantey of gumawan
-\rem /s3 
+\rem /s3
 \p
 \v 19 ◘
-\p …◘
+\p …
 \p
 \v 20 ◘
 \v 21 ◘
@@ -794,7 +794,7 @@
 \rem /s1 Priests and Levites; A History of the Priests and Levites; A List of Priests and Levites; List of Priests and Levites
 \p
 \v 1 ◘
-\rem /s3 
+\rem /s3
 \p
 \v 2 ◘
 \li1 …
@@ -805,8 +805,8 @@
 \li1 …
 \li1 …
 \li1 …
-\p …◘
-\rem /s3 
+\p …
+\rem /s3
 \p
 \v 3 ◘
 \v 4 ◘
@@ -814,7 +814,7 @@
 \v 6 ◘
 \v 7 ◘
 \v 8 ◘
-\p …◘
+\p …
 \v 9 ◘
 \s1 The descendants of Josh.
 \rem /s1 Descendants of the High Priest Joshua
@@ -856,7 +856,7 @@
 \v 30 ◘
 \p
 \v 31 ◘
-\p …◘
+\p …
 \v 32 ◘
 \v 33 ◘
 \v 34 ◘
@@ -879,7 +879,7 @@
 \v 46 ◘
 \v 47 ◘
 \c 13
-\s1 The pegsuwey of me Israilita from me lapu
+\s1 The pegsuwey of me Israilita from foreigners
 \rem /s1 Nehemiah's religious reforms; Nehemiah's Final Reforms; Separation from Foreigners; Foreigners Separated from Israel; Nehemiah's Various Reforms
 \p
 \v 1 \x + \xo 13:1-2: \xt Deu 23:3-5.\x*◘
@@ -913,7 +913,7 @@
 \v 21 ◘
 \v 22 ◘
 \rem /s1 Mixed Marriages Condemned
-\p …◘
+\p …
 \s1 The scolding of marriage of lapu
 \p
 \v 23 ◘
@@ -928,4 +928,4 @@
 \p
 \v 30 ◘
 \v 31 ◘
-\p …◘
+\p …

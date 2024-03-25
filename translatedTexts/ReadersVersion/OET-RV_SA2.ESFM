@@ -2,7 +2,7 @@
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 SA2
-\rem disabledWORDTABLE OET_OT_word_table.tsv
+\rem WORDTABLE OET-LV_OT_word_table.tsv
 \h 2 Samuel
 \toc1 2 Samuel
 \toc2 2 Samuel
@@ -27,9 +27,9 @@
 \v 1 ◘
 \v 2 ◘
 \v 3 ◘
-\p …◘
+\p …
 \v 4 ◘
-\p …◘
+\p …
 \p
 \v 5 ◘
 \p
@@ -43,7 +43,7 @@
 \v 12 ◘
 \p
 \v 13 ◘
-\p …◘
+\p …
 \v 14 ◘
 \v 15 ◘
 \v 16 ◘
@@ -103,13 +103,13 @@
 \rem /s1 David Anointed King of Judah; David Is Made King of Judah; David Anointed King Over Judah
 \p
 \v 1 ◘
-\p …◘
-\p …◘
-\p …◘
+\p …
+\p …
+\p …
 \v 2 \x + \xo 2:2: \xt 1Sam 25:42-43.\x*◘
 \v 3 ◘
 \v 4 \x + \xo 2:4: \xt 1Sam 31:11-13.\x*◘
-\p …◘
+\p …
 \v 5 ◘
 \v 6 ◘
 \v 7 ◘
@@ -119,14 +119,14 @@
 \v 8 ◘
 \v 9 ◘
 \v 10 ◘
-\p …◘
+\p …
 \v 11 ◘
 \rem /s1 The Battle of Gibeon; War between Israel and Judah
 \p
 \v 12 ◘
 \v 13 ◘
 \v 14 ◘
-\p …◘
+\p …
 \p
 \v 15 ◘
 \v 16 ◘
@@ -136,7 +136,7 @@
 \v 18 ◘
 \v 19 ◘
 \v 20 ◘
-\p …◘
+\p …
 \p
 \v 21 ◘
 \v 22 ◘
@@ -274,7 +274,7 @@
 \v 17 ◘
 \v 18 ◘
 \v 19 ◘
-\p …◘
+\p …
 \p
 \v 20 ◘
 \v 21 ◘
@@ -400,17 +400,17 @@
 \v 1 \x + \xo 9:1: \xt 1Sam 20:15-17.\x*◘
 \p
 \v 2 ◘
-\p …◘
+\p …
 \p
 \v 3 \x + \xo 9:3: \xt 2Sam 4:4.\x*◘
-\p …◘
+\p …
 \p
 \v 4 ◘
-\p …◘
+\p …
 \v 5 ◘
 \p
 \v 6 ◘
-\p …◘
+\p …
 \p
 \v 7 ◘
 \p
@@ -420,7 +420,7 @@
 \v 10 ◘
 \p
 \v 11 ◘
-\p …◘
+\p …
 \v 12 ◘
 \v 13 ◘
 \c 10
@@ -431,7 +431,7 @@
 \p
 \v 1 ◘
 \v 2 ◘
-\p …◘
+\p …
 \v 3 ◘
 \p
 \v 4 ◘
@@ -520,13 +520,13 @@
 \v 15 ◘
 \s1 The death of child of David
 \rem /s1 David's Son Dies; Bathsheba's Child Dies
-\p …◘
+\p …
 \v 16 ◘
 \v 17 ◘
 \v 18 ◘
 \p
 \v 19 ◘
-\p …◘
+\p …
 \p
 \v 20 ◘
 \p
@@ -558,11 +558,11 @@
 \v 2 ◘
 \v 3 ◘
 \v 4 ◘
-\p …◘
+\p …
 \p
 \v 5 ◘
 \v 6 ◘
-\p …◘
+\p …
 \p
 \v 7 ◘
 \v 8 ◘
@@ -577,10 +577,10 @@
 \v 15 ◘
 \p
 \v 16 ◘
-\p …◘
+\p …
 \v 17 ◘
 \v 18 ◘
-\p …◘
+\p …
 \v 19 ◘
 \v 20 ◘
 \p
@@ -595,7 +595,7 @@
 \v 25 ◘
 \p
 \v 26 ◘
-\p …◘
+\p …
 \v 27 ◘
 \v 28 ◘
 \v 29 ◘
@@ -606,7 +606,7 @@
 \v 33 ◘
 \p
 \v 34 ◘
-\p …◘
+\p …
 \v 35 ◘
 \v 36 ◘
 \p
@@ -624,7 +624,7 @@
 \v 4 ◘
 \p
 \v 5 ◘
-\p …◘
+\p …
 \v 6 ◘
 \v 7 ◘
 \p
@@ -635,10 +635,10 @@
 \v 10 ◘
 \p
 \v 11 ◘
-\p …◘
+\p …
 \p
 \v 12 ◘
-\p …◘
+\p …
 \p
 \v 13 ◘
 \v 14 ◘
@@ -647,10 +647,10 @@
 \v 17 \x + \xo 14:17: \xt 2Sam 19:27.\x*◘
 \p
 \v 18 ◘
-\p …◘
+\p …
 \p
 \v 19 ◘
-\p …◘
+\p …
 \v 20 ◘
 \p
 \v 21 ◘
@@ -736,14 +736,14 @@
 \p
 \v 1 \x + \xo 16:1: \xt 2Sam 9:9-10.\x*◘
 \v 2 ◘
-\p …◘
+\p …
 \p
 \v 3 \x + \xo 16:3: \xt 2Sam 19:25-27.\x*◘
-\p …◘
+\p …
 \p
 \v 4 ◘
 \rem /s1 David and Shimei; Shimei Curses David
-\p …◘
+\p …
 \s1 The pegdilus of Simii ki David
 \p
 \v 5 ◘
@@ -807,8 +807,8 @@
 \v 18 ◘
 \v 19 ◘
 \v 20 ◘
-\p …◘
-\p …◘
+\p …
+\p …
 \p
 \v 21 ◘
 \v 22 ◘
@@ -862,24 +862,24 @@
 \v 21 ◘
 \p
 \v 22 ◘
-\p …◘
+\p …
 \p
 \v 23 ◘
-\p …◘
+\p …
 \p
 \v 24 ◘
 \v 25 ◘
-\p …◘
+\p …
 \v 26 ◘
-\p …◘
+\p …
 \p
 \v 27 ◘
-\p …◘
+\p …
 \p
 \v 28 ◘
 \p
 \v 29 ◘
-\p …◘
+\p …
 \p
 \v 30 ◘
 \p
@@ -887,7 +887,7 @@
 \p
 \v 32 ◘
 \rem /s1 David Mourns for Absalom
-\p …◘
+\p …
 \p
 \v 33 ◘
 \c 19
@@ -905,7 +905,7 @@
 \v 8 ◘
 \s1 The return of David there to Yerusalem
 \rem /s1 David Starts Back to Jerusalem; David Recalled to Jerusalem; David Returns to Jerusalem
-\p …◘
+\p …
 \v 9 ◘
 \v 10 ◘
 \p
@@ -922,7 +922,7 @@
 \v 18 ◘
 \s1 The pegkeyid‑u of David ki Simii
 \rem /s1 David's Mercy to Shimei; David Shows Kindness to Shimei
-\p …◘
+\p …
 \v 19 ◘
 \v 20 ◘
 \p
@@ -966,7 +966,7 @@
 \v 42 ◘
 \p
 \v 43 ◘
-\p …◘
+\p …
 \c 20
 \s1 The rebellion of Siyiba ki David
 \rem /s1 Sheba Rebels Against David; The Revolt of Sheba; Sheba's Rebellion; The Rebellion of Sheba
@@ -987,7 +987,7 @@
 \v 8 ◘
 \v 9 ◘
 \v 10 ◘
-\p …◘
+\p …
 \v 11 ◘
 \v 12 ◘
 \v 13 ◘
@@ -996,16 +996,16 @@
 \v 15 ◘
 \v 16 ◘
 \v 17 ◘
-\p …◘
-\p …◘
-\p …◘
+\p …
+\p …
+\p …
 \p
 \v 18 ◘
 \v 19 ◘
 \p
 \v 20 ◘
 \v 21 ◘
-\p …◘
+\p …
 \v 22 ◘
 \s1 The officials of David
 \rem /s1 David's Officials; Stories of David's reign
@@ -1023,11 +1023,11 @@
 \v 3 ◘
 \p
 \v 4 ◘
-\p …◘
+\p …
 \p
 \v 5 ◘
 \v 6 ◘
-\p …◘
+\p …
 \p
 \v 7 \x + \xo 21:7: \xt 1Sam 20:15-17; 2Sam 9:1-7.\x*◘
 \v 8 \x + \xo 21:8: \xt 1Sam 18:19.\x*◘
@@ -1283,7 +1283,7 @@
 \v 16 ◘
 \v 17 ◘
 \rem /s1 David's Thirty Mighty Men
-\p …◘
+\p …
 \p
 \v 18 ◘
 \v 19 ◘
@@ -1339,7 +1339,7 @@
 \v 38 ◘
 \li1
 \v 39 ◘
-\p …◘
+\p …
 \c 24
 \s1 The pegseel of David of people
 \rem /s1 David's Census of Israel and Judah; David Counts the Fighting Men; David Takes a Census; David's census
@@ -1377,7 +1377,7 @@
 \v 19 ◘
 \v 20 ◘
 \v 21 ◘
-\p …◘
+\p …
 \p
 \v 22 ◘
 \v 23 ◘
