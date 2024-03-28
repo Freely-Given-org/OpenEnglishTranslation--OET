@@ -5,7 +5,7 @@
 #
 # Script handling convert_ClearMaculaNT_to_TSV functions
 #
-# Copyright (C) 2022-2023 Robert Hunt
+# Copyright (C) 2022-2024 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -48,16 +48,17 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2023-03-27' # by RJH
+LAST_MODIFIED_DATE = '2024-03-19' # by RJH
 SHORT_PROGRAM_NAME = "Convert_ClearMaculaNT_to_TSV"
 PROGRAM_NAME = "Extract and Apply Macula OT glosses"
-PROGRAM_VERSION = '0.22'
+PROGRAM_VERSION = '0.23'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
 
 
-LOWFAT_XML_INPUT_FOLDERPATH = Path( '../../Forked/macula-greek/Nestle1904/lowfat/' )
+# LOWFAT_XML_INPUT_FOLDERPATH = Path( '../../Forked/macula-greek/Nestle1904/lowfat/' )
+LOWFAT_XML_INPUT_FOLDERPATH = Path( '../../Forked/macula-greek/SBLGNT/lowfat/' )
 LOWFAT_XML_FILENAME_TEMPLATE = 'NN-wwww.xml' # e.g., 01-matthew.xml, 25-3john.xml
 EXPECTED_WORD_ATTRIBUTES = ('{http://www.w3.org/XML/1998/namespace}id', 'ref', 'role',
         'gloss', # 'mandarin', 'english',
@@ -68,6 +69,8 @@ EXPECTED_WORD_ATTRIBUTES = ('{http://www.w3.org/XML/1998/namespace}id', 'ref', '
         'domain','frame','referent','subjref','discontinuous', # 'sdbh','lexdomain','sensenumber','coredomain','contextualdomain',
         'case','normalized','head','strong','ln',
         'note', # Added 27Apr2023
+        'junction', # Added 19Mar2024
+        'english','mandarin' # For SBLGNT only
         )
 assert len(set(EXPECTED_WORD_ATTRIBUTES)) == len(EXPECTED_WORD_ATTRIBUTES), "No duplicate attribute names"
 BIBLE_TAGS_TSV_INPUT_FILEPATH = Path( '../sourceTexts/BibleTagsOriginals/BibTags.NT.words.tsv' )
@@ -77,12 +80,12 @@ OUTPUT_FIELDNAMES = ['FGRef','BibTagId','LFRef','LFNumRef','Role',
                     'Word','Unicode','After',
                     'WordClass','Person','Gender','Number','Tense','Voice','Mood','Degree',
                     'WordType','Domain','Frames','Referents','Discontinuous',
-                    'Morphology','Lemma',
+                    'Morphology','Lemma','Junction',
                     'Strong',
                     'ContextualGloss',
                     'Nesting']
 assert len(set(OUTPUT_FIELDNAMES)) == len(OUTPUT_FIELDNAMES), "No duplicate fieldnames"
-assert len(OUTPUT_FIELDNAMES) == 26, len(OUTPUT_FIELDNAMES)
+assert len(OUTPUT_FIELDNAMES) == 27, len(OUTPUT_FIELDNAMES)
 
 
 state = None
@@ -203,6 +206,7 @@ def loadClearLowFatGlossesXML() -> bool:
 
                 word = elem.text
                 theirRef = elem.get('ref')
+                # print( f"{word=} {theirRef=}" )
 
                 longID = elem.get('{http://www.w3.org/XML/1998/namespace}id') # e.g., o010010050031 = obbcccvvvwwws
                 longIDs.append( longID )
@@ -242,6 +246,8 @@ def loadClearLowFatGlossesXML() -> bool:
                 column_counts['mood'][mood] += 1
                 degree = elem.get('degree')
                 column_counts['degree'][degree] += 1
+                junction = elem.get('junction')
+                column_counts['junction'][junction] += 1
 
                 discontinuous = elem.get('discontinuous')
                 column_counts['discontinuous'][discontinuous] += 1
@@ -253,8 +259,11 @@ def loadClearLowFatGlossesXML() -> bool:
 
                 English = elem.get('english')
                 if English:
-                    assert '.' not in English
-                    assert English.strip() == English # No leading or trailing spaces
+                    # if theirRef in ('MAT 15:4!18','MAT 19:9!22','MAT 21:19!30') and 
+                    if English.endswith('.'): English = English[:-1]
+                    assert '.' not in English, f"{theirRef} {word=} {English=}"
+                    # assert English.strip() == English, f"{theirRef} '{word}' {English=}" # No leading or trailing spaces
+                    English = English.strip() # for LUK 2:48!22 'ἐγὼ' English=' I'
                     English = English.replace( ' ', '_' )
                 else: English = '' # Instead of None
 
@@ -265,6 +274,7 @@ def loadClearLowFatGlossesXML() -> bool:
                     if parentElem.tag == 'error': # trying going one more up: parentElem.tag = parentMap[parentElem] FAILS
                         break # for now at Acts 26:12!1
                     if parentElem.tag == 'sentence': break
+                    if parentElem.tag == 'error_unknown_complex_node': break # @ROM 11:22!1 got parentElem.tag='error_unknown_complex_node'
                     assert parentElem.tag == 'wg', f"@{theirRef} got {parentElem.tag=}"
                     pClass, pRole, pRule = parentElem.get('class'), parentElem.get('role'), parentElem.get('rule')
                     if not role: role = pRole # Take the first one
@@ -292,9 +302,10 @@ def loadClearLowFatGlossesXML() -> bool:
                     if ';' in referentsStr:
                         print( f"{BBB} {longID} {word=} {gloss=} {English=} {referentsStr=}")
                     for referent in referentsStr.split( ' ' ):
+                        if referent == 'n00000000000': continue # Ignore it. Why is this in MRK 10:3!5 'αὐτοῖς' referent='n00000000000'
                         # print( f"{BBB} {longID} {word=} {gloss=} {English=} {type(referent)} {referent=}")
                         assert len(referent)==12 and referent[0]=='n' and referent[1:].isdigit()
-                        assert referent[1:3] == longID[:2] # Don't expect referent links to point into other books
+                        assert referent[1:3] == longID[:2], f"{theirRef} '{word}' {referent=}" # Don't expect referent links to point into other books
                         # referent = referent[3:] # remove 'n' prefix and predictable book number -- now down to nine digits: cccvvvwww
                         # rC, rV, rW = int(referent[3:6]), int(referent[6:9]), int(referent[9:])
                         ourReferent = f'{int(referent[3:6])}:{int(referent[6:9])}w{int(referent[9:])}' # Convert to 'C:VwW' form
@@ -316,7 +327,14 @@ def loadClearLowFatGlossesXML() -> bool:
                         ourSubjectReferent = f'{int(subjectReferent[3:6])}:{int(subjectReferent[6:9])}w{int(subjectReferent[9:])}' # Convert to 'C:VwW' form
                         # print( f" Got {rC=} {rV=} {rW=} so now {ourSubjectReferent=}" )
                         ourSubjectReferents.append( ourSubjectReferent )
-                if ourReferents: assert not ourSubjectReferents
+                if ourReferents and ourSubjectReferents: # they have both!!!
+                    print( f"{theirRef} Found both {ourReferents=} and {ourSubjectReferents=} for '{word}'" )
+                    # assert theirRef in ('MAT 4:19!4','MAT 11:28!1'), f"{theirRef=}"
+                    ourReferents = list(set(ourReferents+ourSubjectReferents)) # But this loses the order sadly
+                    print( f"    From the above got {ourReferents}" )
+                    # if ourReferents != ourSubjectReferents: halt
+                    ourSubjectReferents = []
+                if ourReferents: assert not ourSubjectReferents, f"{ourReferents=} {ourSubjectReferents=}"
                 if ourSubjectReferents:
                     assert not ourReferents
                     ourReferents = ourSubjectReferents # We can combine these into one column (because we know the POS anyway)
@@ -339,7 +357,7 @@ def loadClearLowFatGlossesXML() -> bool:
                             'Frames':elem.get('frame'), 'Referents':';'.join(ourReferents),
                             'Strong':elem.get('strong'), 'Discontinuous':discontinuous,
                             'Morphology':morph, 'Lemma':elem.get('lemma'),
-                            'ContextualGloss':gloss,
+                            'Junction':junction, 'ContextualGloss':gloss,
                             'Nesting':'/'.join(reversed(nestingBits)) }
                 assert len(entry) == len(state.output_fieldnames)-2, f"{len(entry)=} vs {len(state.output_fieldnames)=}" # Two more fields to be added below
                 tempWordsAndMorphemes.append( entry )

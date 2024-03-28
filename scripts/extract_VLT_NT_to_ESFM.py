@@ -394,7 +394,7 @@ def export_esfm_literal_English_gloss() -> bool:
     last_verse_id = None
     esfm_text = ''
     num_books_written = 0
-    final_table_filename = 'OET-LV_NT_word_table.tsv' # Will be made later by associate_LV_people_places.py
+    final_table_filename = 'OET-LV_NT_word_table.tsv' # Will be made later by add_tags_to_NT_word_table.py
     table_filepath = VLT_ESFM_OUTPUT_FOLDERPATH.joinpath( OUR_EXPORT_TABLE_FILENAME )
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Exporting ESFM auxilliary word table to {table_filepath}…" )
     next_word_number = 1 # word count includes variants
@@ -517,7 +517,7 @@ def export_esfm_literal_English_gloss() -> bool:
             num_books_written += 1
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {num_books_written} books to {VLT_ESFM_OUTPUT_FOLDERPATH}.")
 
-    # Now done in associate_LV_people_places.py
+    # Now done in add_tags_to_NT_word_table.py
     # # Also use the same word file for the OET-RV
     # shutil.copy2( table_filepath, RV_ESFM_OUTPUT_FOLDERPATH.joinpath( table_filename ) )
     # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Also copied {table_filename} to {RV_ESFM_OUTPUT_FOLDERPATH}.")

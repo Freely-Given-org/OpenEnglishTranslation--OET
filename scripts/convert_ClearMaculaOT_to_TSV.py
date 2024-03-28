@@ -5,7 +5,7 @@
 #
 # Script handling convert_ClearMaculaOT_to_TSV functions
 #
-# Copyright (C) 2022 Robert Hunt
+# Copyright (C) 2022-2024 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -51,10 +51,10 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.OriginalLanguages import Hebrew
 
 
-LAST_MODIFIED_DATE = '2022-11-16' # by RJH
+LAST_MODIFIED_DATE = '2024-03-21' # by RJH
 SHORT_PROGRAM_NAME = "Convert_ClearMaculaOT_to_TSV"
 PROGRAM_NAME = "Extract and Apply Macula OT glosses"
-PROGRAM_VERSION = '0.31'
+PROGRAM_VERSION = '0.33'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -63,27 +63,40 @@ DEBUGGING_THIS_MODULE = False
 LOWFAT_XML_INPUT_FOLDERPATH = Path( '../../Forked/macula-hebrew/lowfat/' )
 LOWFAT_XML_FILENAME_TEMPLATE = 'NN-Uuu-CCC-lowfat.xml' # e.g., 01-Gen-001-lowfat.xml
 EXPECTED_WORD_ATTRIBUTES = ('{http://www.w3.org/XML/1998/namespace}id', 'ref',
-        'mandarin', 'english', 'gloss',
-        'class','morph','pos','person','gender','number','type','state',
+        'mandarin', 'english', 'gloss', 'compound',
+        'class','morph','pos','person','gender','number','type','state','role',
         'transliteration','unicode','after',
         'strongnumberx', 'stronglemma','greek','greekstrong',
         'lang','lemma','stem','subjref','participantref',
-        'sdbh','lexdomain','sensenumber','coredomain','contextualdomain','frame',)
+        'sdbh','lexdomain','sensenumber','coredomain','frame',) # 'contextualdomain',
 assert len(set(EXPECTED_WORD_ATTRIBUTES)) == len(EXPECTED_WORD_ATTRIBUTES), "No duplicate attribute names"
 TSV_INPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/WLC_glosses.morphemes.tsv' )
 TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTrees.OT.morphemes.tsv' )
-SHORTENED_TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTreesAbbrev.OT.morphemes.tsv' )
 OUTPUT_FIELDNAMES = ['FGRef','OSHBid','RowType','LFRef','LFNumRef',
                     'Language','WordOrMorpheme','Unicode','Transliteration','After',
-                    'WordClass','PartOfSpeech','Person','Gender','Number','WordType','State','SDBH',
+                    'Compound','WordClass','PartOfSpeech','Person','Gender','Number','WordType','State','Role','SDBH',
                     'StrongNumberX','StrongLemma','Stem','Morphology','Lemma','SenseNumber',
-                    'CoreDomain','LexicalDomain','ContextualDomain',
+                    'CoreDomain','LexicalDomain',# 'ContextualDomain',
                     'SubjRef','ParticipantRef','Frame',
                     'Greek','GreekStrong',
                     'EnglishGloss','MandarinGloss','ContextualGloss',
                     'Nesting']
 assert len(set(OUTPUT_FIELDNAMES)) == len(OUTPUT_FIELDNAMES), "No duplicate fieldnames"
-assert len(OUTPUT_FIELDNAMES) == 36, len(OUTPUT_FIELDNAMES)
+assert len(OUTPUT_FIELDNAMES) == 37, len(OUTPUT_FIELDNAMES)
+SHORTENED_TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTreesAbbrev.OT.morphemes.tsv' )
+COLUMNS_TO_REMOVE_FOR_SHORTENING = ('LFRef','LFNumRef', # Don't need their references
+        'Language', # Aramaic is in already in RowType field
+        'Unicode', # Not sure what this was anyway
+        'Transliteration', # We can do this on the fly
+        'SDBH', # Resource is not open source -- no use to us
+        'MandarinGloss', # Not needed for our specific task
+        'CoreDomain','LexicalDomain',#'ContextualDomain', # What do all these numbers refer to?
+        )
+for something in COLUMNS_TO_REMOVE_FOR_SHORTENING:
+    assert something in OUTPUT_FIELDNAMES, something
+assert len(set(COLUMNS_TO_REMOVE_FOR_SHORTENING)) == len(COLUMNS_TO_REMOVE_FOR_SHORTENING), "No duplicate fieldnames"
+assert len(COLUMNS_TO_REMOVE_FOR_SHORTENING) == 9, len(COLUMNS_TO_REMOVE_FOR_SHORTENING)
+assert len(OUTPUT_FIELDNAMES) - len(COLUMNS_TO_REMOVE_FOR_SHORTENING) == 28, f"{len(OUTPUT_FIELDNAMES)=} {len(COLUMNS_TO_REMOVE_FOR_SHORTENING)=}"
 
 
 state = None
@@ -226,6 +239,7 @@ def loadLowFatGlosses() -> bool:
 
                     wordOrMorpheme = elem.text
                     theirRef = elem.get('ref')
+                    # print( f"{theirRef=} {wordOrMorpheme=}" )
 
                     longID = elem.get('{http://www.w3.org/XML/1998/namespace}id') # e.g., o010010050031 = obbcccvvvwwws
                     longIDs.append( longID )
@@ -240,7 +254,9 @@ def loadLowFatGlosses() -> bool:
                         assert longID[:].isdigit()
 
                     gloss = elem.get('gloss')
-                    if gloss: gloss = gloss.replace( '.', '_' ) # Change to our system
+                    if gloss:
+                        gloss = gloss.replace( '.', '_' ) # Change to our system
+                        assert '’' not in gloss, f"{theirRef=} {wordOrMorpheme=} {gloss=}"
                     lang = elem.get('lang')
                     column_counts['lang'][lang] += 1
                     assert lang in 'HA'
@@ -252,6 +268,9 @@ def loadLowFatGlosses() -> bool:
                         # What is 'determined' in Ezra 4:8!5, etc.
                         assert wState in ('absolute','construct','determined'), f"Found unexpected {wState=}"
                     # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    {ref} {longID} {lang} '{wordOrMorpheme}' {English=} {gloss=}")
+
+                    compound = elem.get('compound')
+                    column_counts['compound'][compound] += 1
 
                     stem = elem.get('stem')
                     column_counts['stem'][stem] += 1
@@ -275,6 +294,8 @@ def loadLowFatGlosses() -> bool:
                     column_counts['gender'][gender] += 1
                     number = elem.get('number')
                     column_counts['number'][number] += 1
+                    role = elem.get('role')
+                    column_counts['role'][role] += 1
 
                     # Cross-checking
                     # TODO: Could do much more of this
@@ -286,7 +307,8 @@ def loadLowFatGlosses() -> bool:
                     if English:
                         assert '.' not in English
                         assert English.strip() == English # No leading or trailing spaces
-                        English = English.replace( ' ', '_' )
+                        English = English.replace( ' ', '_' ).replace('’s',"'s").replace('s’',"s'").replace('’t',"'t").replace('’S',"'S") # brother's sons' don't LORD'S
+                        assert '’' not in English, f"{theirRef=} {wordOrMorpheme=} {English=}"
                     else: English = '' # Instead of None
 
                     startElement = elem
@@ -295,16 +317,17 @@ def loadLowFatGlosses() -> bool:
                         parentElem = parentMap[startElement]
                         if parentElem.tag == 'sentence': break
                         assert parentElem.tag == 'wg'
-                        pClass, role, rule = parentElem.get('class'), parentElem.get('role'), parentElem.get('rule')
-                        if role:
-                            if rule: # have both
-                                nestingBits.append( f'{role}={rule}' )
+                        pClass, pRole, pRule = parentElem.get('class'), parentElem.get('role'), parentElem.get('rule')
+                        if pRole:
+                            if pRule: # have both
+                                nestingBits.append( f'{pRole}={pRule}' )
                             else: # only have role
-                                nestingBits.append( role )
-                        elif rule: # have no role
-                            nestingBits.append( rule )
-                        else:
-                            assert pClass=='compound', f"{theirRef} has no role/rule {pClass=} {nestingBits}"
+                                nestingBits.append( pRole )
+                        elif pRule: # have no role
+                            nestingBits.append( pRule )
+                        # else: # no role or rule attributes on parent <wg>
+                        #     # assert pClass=='compound', f"{theirRef} has no role/rule {pClass=} {nestingBits}"
+                        #     print( f"{theirRef} has no role/rule {pClass=} {nestingBits}" ) # We now have empty wg's around the words for the entire sentence (but not including the <p> with <milestone>)
                         startElement = parentElem
                     if len(nestingBits) >= max_nesting_level:
                         max_nesting_level = len(nestingBits) + 1
@@ -314,19 +337,19 @@ def loadLowFatGlosses() -> bool:
                     # 'Language','WordOrMorpheme','Unicode','Transliteration','After',
                     # 'WordClass','PartOfSpeech','Person','Gender','Number','WordType','State','SDBH',
                     # 'StrongNumberX','StrongLemma','Stem','Morphology','Lemma','SenseNumber',
-                    # 'CoreDomain','LexicalDomain','ContextualDomain',
+                    # 'CoreDomain','LexicalDomain', # 'ContextualDomain',
                     # 'SubjRef','ParticipantRef','Frame',
                     # 'Greek','GreekStrong',
                     # 'EnglishGloss','MandarinGloss','ContextualGloss',
                     # 'Nesting']
                     entry = {'LFRef':theirRef, 'LFNumRef':longID, 'Language':lang, 'WordOrMorpheme':wordOrMorpheme,
                                 'Unicode':elem.get('unicode'), 'Transliteration':elem.get('transliteration'), 'After':after,
-                                'WordClass':wClass, 'PartOfSpeech':PoS, 'Person':person, 'Gender':gender, 'Number':number,
-                                'WordType':wType, 'State':wState, 'SDBH':elem.get('sdbh'),
+                                'WordClass':wClass, 'Compound':compound, 'PartOfSpeech':PoS, 'Person':person, 'Gender':gender, 'Number':number,
+                                'WordType':wType, 'State':wState, 'Role':role, 'SDBH':elem.get('sdbh'),
                                 'StrongNumberX':elem.get('strongnumberx'), 'StrongLemma':elem.get('stronglemma'),
                                 'Stem':stem, 'Morphology':morph, 'Lemma':elem.get('lemma'), 'SenseNumber':senseNumber,
                                 'CoreDomain':elem.get('coredomain'), 'LexicalDomain':elem.get('lexdomain'), 'Frame':elem.get('frame'),
-                                'SubjRef':elem.get('subjref'), 'ParticipantRef':elem.get('participantref'), 'ContextualDomain':elem.get('contextualdomain'),
+                                'SubjRef':elem.get('subjref'), 'ParticipantRef':elem.get('participantref'), # 'ContextualDomain':elem.get('contextualdomain'),
                                 'Greek':elem.get('greek'), 'GreekStrong':elem.get('greekstrong'),
                                 'EnglishGloss':English, 'MandarinGloss':elem.get('mandarin'), 'ContextualGloss':gloss,
                                 'Nesting':'/'.join(reversed(nestingBits)) }
@@ -527,7 +550,8 @@ def save_filled_TSV_file() -> bool:
         writer = DictWriter( tsv_output_file, fieldnames=state.output_fieldnames, delimiter='\t' )
         writer.writeheader()
         for thisTuple in state.lowFatWordsAndMorphemes:
-            thisRow = {k:v for k,v in zip(state.output_fieldnames, thisTuple, strict=True)}
+            thisRow = {k:thisTuple[k] for k in state.output_fieldnames}
+            # print( f"{state.output_fieldnames=} {thisTuple=} {thisRow=}" )
             writer.writerow( thisRow )
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {len(state.lowFatWordsAndMorphemes):,} data rows written ({len(state.output_fieldnames)} fields)." )
 
@@ -565,15 +589,7 @@ def save_shortened_TSV_file() -> bool:
 
     BibleOrgSysGlobals.backupAnyExistingFile( state.shortened_TSV_output_filepath, numBackups=5 )
 
-    columnsToRemove = ('LFRef','LFNumRef', # Don't need their references
-        'Language', # Aramaic is in already in RowType field
-        'Unicode', # Not sure what this was anyway
-        'Transliteration', # We can do this on the fly
-        'SDBH', # Resource is not open source -- no use to us
-        'MandarinGloss', # Not needed for our specific task
-        'CoreDomain','LexicalDomain','ContextualDomain', # What do all these numbers refer to?
-        )
-    shortenedFieldnameList = [fieldname for fieldname in state.output_fieldnames if fieldname not in columnsToRemove]
+    shortenedFieldnameList = [fieldname for fieldname in state.output_fieldnames if fieldname not in COLUMNS_TO_REMOVE_FOR_SHORTENING]
     # print(f"({len(state.output_fieldnames)}) {state.output_fieldnames} -> ({len(shortenedFieldnames)}) {shortenedFieldnames}")
 
     # print(len(state.lowFatWordsAndMorphemes[0]), state.lowFatWordsAndMorphemes[0]);halt
@@ -584,7 +600,7 @@ def save_shortened_TSV_file() -> bool:
         writer = DictWriter( tsv_output_file, fieldnames=shortenedFieldnameList, delimiter='\t' )
         writer.writeheader()
         for thisEntryDict in state.lowFatWordsAndMorphemes:
-            for columnName in columnsToRemove:
+            for columnName in COLUMNS_TO_REMOVE_FOR_SHORTENING:
                 del thisEntryDict[columnName]
             # Abbreviate wordy fields -- they can always be reconstituted later
             # Try to use the same abbreviations as already used in other fields
@@ -605,12 +621,12 @@ def save_shortened_TSV_file() -> bool:
                 thisEntryDict['Number'] = {'singular':'s','plural':'p','dual':'d', 'unknown: x':'?'}[thisEntryDict['Number']]
             if thisEntryDict['State']: # Abbreviate
                 thisEntryDict['State'] = {'absolute':'a','construct':'c','determined':'d'}[thisEntryDict['State']]
-            assert len(thisEntryDict) == len(state.output_fieldnames) - len(columnsToRemove)
+            assert len(thisEntryDict) == len(state.output_fieldnames) - len(COLUMNS_TO_REMOVE_FOR_SHORTENING)
             writer.writerow( thisEntryDict )
             for fieldname,value in thisEntryDict.items():
                 if value: non_blank_counts[fieldname] += 1
                 sets[fieldname].add( value )
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {len(state.lowFatWordsAndMorphemes):,} shortened ({len(state.output_fieldnames)} - {len(columnsToRemove)} = {len(thisEntryDict)} fields) data rows written." )
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {len(state.lowFatWordsAndMorphemes):,} shortened ({len(state.output_fieldnames)} - {len(COLUMNS_TO_REMOVE_FOR_SHORTENING)} = {len(thisEntryDict)} fields) data rows written." )
 
     if 1: # Print stats
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nCounts of non-blank fields for {len(state.lowFatWordsAndMorphemes):,} rows:" )

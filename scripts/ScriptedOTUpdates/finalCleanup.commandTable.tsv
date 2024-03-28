@@ -1,7 +1,16 @@
 Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	RCase	Replace	Name	Comment
 
+# Make DOM consistent from various sources and mark as untranslatable
+									(et)			DOM	replaceEt	Replace (et) with DOM
+									(dm)			DOM	replaceDm	Replace (dm) with DOM
+									DOM¦			\untr DOM¦\untr*	makeDOMuntr	Mark DOM as untranslatable (into English)
+
+# Mark YHWH as divine name
+									YHWH¦			\nd YHWH¦\nd*	makeYHWHnd	Mark YHWH as divine name
+
 # Remove inserted word indicators
-									=			_	replaceEquals	Replace = morpheme divider with underlines
+#									=			_	replaceEquals	Replace = morpheme divider with underlines
+#									≈			_	replaceDoubleTilde	Replace ≈ morpheme divider with underlines
 
 # Punctuation and spaces
 				id					 - 			 	removeHyphenSpaces	Remove hyphen (untranslated article) surrounded by spaces

@@ -5,7 +5,7 @@
 #
 # Script to take the OET-RV and OET-LV HTML files and display them side-by-side
 #
-# Copyright (C) 2022-2023 Robert Hunt
+# Copyright (C) 2022-2024 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -59,7 +59,7 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2023-09-12' # by RJH
+LAST_MODIFIED_DATE = '2024-03-19' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
 PROGRAM_VERSION = '0.62'
@@ -74,10 +74,6 @@ OET_RV_ESFM_InputFolderPath = project_folderpath.joinpath( 'translatedTexts/Read
 assert OET_RV_ESFM_InputFolderPath.is_dir()
 OET_RV_HTML_InputFolderPath = project_folderpath.joinpath( 'derivedTexts/simpleHTML/ReadersVersion/' )
 assert OET_RV_HTML_InputFolderPath.is_dir()
-# OET_LV_OT_USFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_OT_USFM/' )
-# assert OET_LV_OT_USFM_InputFolderPath.is_dir()
-# OET_LV_NT_USFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_VLT_ESFM/' )
-# assert OET_LV_NT_ESFM_InputFolderPath.is_dir()
 OET_LV_HTML_InputFolderPath = project_folderpath.joinpath( 'derivedTexts/simpleHTML/LiteralVersion/' )
 assert OET_LV_HTML_InputFolderPath.is_dir()
 OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'derivedTexts/simpleHTML/SideBySide/' )

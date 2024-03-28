@@ -5,7 +5,7 @@
 #
 # Script handling apply_Clear_Macula_OT_glosses functions
 #
-# Copyright (C) 2022 Robert Hunt
+# Copyright (C) 2022-2024 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -40,9 +40,13 @@ We also now convert the low-fat XML trees to a shortened TSV table
     so we now use that table here instead of the XML trees directly.
 
 OSHB morphology codes can be found at https://hb.openscriptures.org/parsing/HebrewMorphologyCodes.html.
+
+CHANGELOG:
+    2024-03-20 Create a word table as well as the morpheme table
+    2024-03-27 Substitute KJB for KJV in 2000+ OSHB notes
 """
 from gettext import gettext as _
-from typing import Dict, List, Tuple
+# from typing import Dict, List, Tuple
 from pathlib import Path
 from csv import DictReader, DictWriter
 from collections import defaultdict
@@ -55,18 +59,20 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-12-01' # by RJH
+LAST_MODIFIED_DATE = '2024-03-27' # by RJH
 SHORT_PROGRAM_NAME = "apply_Clear_Macula_OT_glosses"
 PROGRAM_NAME = "Apply Macula OT glosses"
-PROGRAM_VERSION = '0.57'
+PROGRAM_VERSION = '0.61'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
 
 
 OUR_TSV_INPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/WLC_glosses.morphemes.tsv' )
-OUR_TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv' )
 LOWFAT_TSV_INPUT_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTreesAbbrev.OT.morphemes.tsv' ) # We use the smaller, abbreviated table
+
+OUR_MORPHEME_TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv' )
+OUR_WORD_TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/all_glosses.words.tsv' )
 
 
 state = None
@@ -76,8 +82,11 @@ class State:
         Constructor:
         """
         self.our_TSV_input_filepath = OUR_TSV_INPUT_FILEPATH
-        self.our_TSV_output_filepath = OUR_TSV_OUTPUT_FILEPATH
         self.lowfat_TSV_input_folderpath = LOWFAT_TSV_INPUT_FILEPATH
+
+        self.our_morpheme_TSV_output_filepath = OUR_MORPHEME_TSV_OUTPUT_FILEPATH
+        self.our_word_TSV_output_filepath = OUR_WORD_TSV_OUTPUT_FILEPATH
+
         self.WLC_rows = []
         self.lowFatRows = []
     # end of apply_Clear_Macula_OT_glosses.__init__
@@ -89,7 +98,7 @@ WLC_tsv_column_non_blank_counts = {}
 WLC_tsv_column_counts = defaultdict(lambda: defaultdict(int))
 WLC_tsv_column_headers = []
 
-NUM_EXPECTED_LOWFAT_COLUMNS = 26
+NUM_EXPECTED_LOWFAT_COLUMNS = 28
 LowFat_tsv_column_max_length_counts = {}
 LowFat_tsv_column_non_blank_counts = {}
 LowFat_tsv_column_counts = defaultdict(lambda: defaultdict(int))
@@ -104,10 +113,11 @@ def main() -> None:
     state = State()
 
     if loadOurSourceTable():
-        if loadLowFatTable():
+        if loadOurLowFatTable():
             if fill_known_lowFat_English_contextual_glosses():
                 if do_auto_reordering():
-                    save_filled_TSV_file()
+                    save_filled_morpheme_TSV_file()
+                    save_filled_word_TSV_file()
 # end of apply_Clear_Macula_OT_glosses.main
 
 
@@ -127,9 +137,12 @@ def loadOurSourceTable() -> bool:
         tsv_lines[0] = tsv_lines[0][1:]
 
     # Get the headers before we start
-    WLC_tsv_column_headers = [header for header in tsv_lines[0].strip().split('\t')]
+    WLC_tsv_header_line = tsv_lines[0].strip()
+    assert WLC_tsv_header_line == 'Ref\tOSHBid\tRowType\tStrongs\tCantillationHierarchy\tMorphology\tWordOrMorpheme\tNoCantillations\tMorphemeGloss\tContextualMorphemeGloss\tWordGloss\tContextualWordGloss\tGlossCapitalisation\tGlossPunctuation\tGlossOrder\tGlossInsert', f"{WLC_tsv_header_line=}"
+    WLC_tsv_column_headers = [header for header in WLC_tsv_header_line.split('\t')]
     dPrint('Info', DEBUGGING_THIS_MODULE, f"Column headers: ({len(WLC_tsv_column_headers)}): {WLC_tsv_column_headers}")
     assert len(WLC_tsv_column_headers) == NUM_EXPECTED_WLC_COLUMNS
+
 
     # Read, check the number of columns, and summarise row contents all in one go
     dict_reader = DictReader(tsv_lines, delimiter='\t')
@@ -178,7 +191,7 @@ def loadOurSourceTable() -> bool:
 # end of apply_Clear_Macula_OT_glosses.loadOurSourceTable
 
 
-def loadLowFatTable() -> bool:
+def loadOurLowFatTable() -> bool:
     """
     Load the "LowFat" TSV table.
     """
@@ -194,7 +207,9 @@ def loadLowFatTable() -> bool:
         tsv_lines[0] = tsv_lines[0][1:]
 
     # Get the headers before we start
-    LowFat_tsv_column_headers = [header for header in tsv_lines[0].strip().split('\t')]
+    our_TSV_header_line = tsv_lines[0].strip()
+    assert our_TSV_header_line == 'FGRef\tOSHBid\tRowType\tWordOrMorpheme\tAfter\tCompound\tWordClass\tPartOfSpeech\tPerson\tGender\tNumber\tWordType\tState\tRole\tStrongNumberX\tStrongLemma\tStem\tMorphology\tLemma\tSenseNumber\tSubjRef\tParticipantRef\tFrame\tGreek\tGreekStrong\tEnglishGloss\tContextualGloss\tNesting', f"{our_TSV_header_line=}"
+    LowFat_tsv_column_headers = [header for header in our_TSV_header_line.split('\t')]
     dPrint('Info', DEBUGGING_THIS_MODULE, f"Column headers: ({len(LowFat_tsv_column_headers)}): {LowFat_tsv_column_headers}")
     assert len(LowFat_tsv_column_headers) == NUM_EXPECTED_LOWFAT_COLUMNS, f"{len(LowFat_tsv_column_headers)=} vs {NUM_EXPECTED_LOWFAT_COLUMNS=}"
 
@@ -232,51 +247,53 @@ def loadLowFatTable() -> bool:
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Have {len(unique_morphemes):,} unique Hebrew morphemes.")
 
     return True
-# end of apply_Clear_Macula_OT_glosses.loadLowFatTable
+# end of apply_Clear_Macula_OT_glosses.loadOurLowFatTable
 
 
-def loadLowFatGlossTable() -> bool:
-    """
-    """
-    global LowFat_tsv_column_headers
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading Clear.Bible LowFat tsv file from {state.lowfat_TSV_input_folderpath}…")
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_LOWFAT_COLUMNS} columns…")
-    with open(state.lowfat_TSV_input_folderpath, 'rt', encoding='utf-8') as tsv_file:
-        tsv_lines = tsv_file.readlines()
+# def loadLowFatGlossTable() -> bool:
+#     """
+#     """
+#     global LowFat_tsv_column_headers
+#     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading Clear.Bible LowFat tsv file from {state.lowfat_TSV_input_folderpath}…")
+#     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_LOWFAT_COLUMNS} columns…")
+#     with open(state.lowfat_TSV_input_folderpath, 'rt', encoding='utf-8') as tsv_file:
+#         tsv_lines = tsv_file.readlines()
 
-    # Remove any BOM
-    if tsv_lines[0].startswith("\ufeff"):
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of LowFat tsv file…")
-        tsv_lines[0] = tsv_lines[0][1:]
+#     # Remove any BOM
+#     if tsv_lines[0].startswith("\ufeff"):
+#         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of LowFat tsv file…")
+#         tsv_lines[0] = tsv_lines[0][1:]
 
-    # # Get the headers before we start
-    # LowFat_tsv_column_headers = [header for header in tsv_lines[0].strip().split('\t')]
-    # dPrint('Info', DEBUGGING_THIS_MODULE, f"Column headers: ({len(LowFat_tsv_column_headers)}): {LowFat_tsv_column_headers}")
-    # assert len(LowFat_tsv_column_headers) == NUM_EXPECTED_CHERITH_COLUMNS
+#     # Get the headers before we start
+#     tsv_header_line = tsv_lines[0].strip()
+#     assert tsv_header_line == 'xx', f"{tsv_header_line=}"
+#     # LowFat_tsv_column_headers = [header for header in tsv_lines[0].strip().split('\t')]
+#     # dPrint('Info', DEBUGGING_THIS_MODULE, f"Column headers: ({len(LowFat_tsv_column_headers)}): {LowFat_tsv_column_headers}")
+#     # assert len(LowFat_tsv_column_headers) == NUM_EXPECTED_CHERITH_COLUMNS
 
-    # Read, check the number of columns, and summarise row contents all in one go
-    dict_reader = DictReader(tsv_lines, fieldnames=LowFat_tsv_column_headers, delimiter='\t')
-    unique_morphemes = set()
-    for n, row in enumerate(dict_reader):
-        if len(row) != NUM_EXPECTED_LOWFAT_COLUMNS:
-            logging.error(f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_LOWFAT_COLUMNS}!!!")
-        state.LowFat_rows.append(row)
-        unique_morphemes.add(row['WLC_word_or_morpheme'])
-        for key, value in row.items():
-            # LowFat_tsv_column_sets[key].add(value)
-            if n==0: # We do it like this (rather than using a defaultdict(int)) so that all fields are entered into the dict in the correct order
-                LowFat_tsv_column_max_length_counts[key] = 0
-                LowFat_tsv_column_non_blank_counts[key] = 0
-            if value:
-                if len(value) > LowFat_tsv_column_max_length_counts[key]:
-                    LowFat_tsv_column_max_length_counts[key] = len(value)
-                LowFat_tsv_column_non_blank_counts[key] += 1
-            LowFat_tsv_column_counts[key][value] += 1
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.LowFat_rows):,} (tsv) LowFat data rows.")
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Have {len(unique_morphemes):,} unique Hebrew morphemes.")
+#     # Read, check the number of columns, and summarise row contents all in one go
+#     dict_reader = DictReader(tsv_lines, fieldnames=LowFat_tsv_column_headers, delimiter='\t')
+#     unique_morphemes = set()
+#     for n, row in enumerate(dict_reader):
+#         if len(row) != NUM_EXPECTED_LOWFAT_COLUMNS:
+#             logging.error(f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_LOWFAT_COLUMNS}!!!")
+#         state.LowFat_rows.append(row)
+#         unique_morphemes.add(row['WLC_word_or_morpheme'])
+#         for key, value in row.items():
+#             # LowFat_tsv_column_sets[key].add(value)
+#             if n==0: # We do it like this (rather than using a defaultdict(int)) so that all fields are entered into the dict in the correct order
+#                 LowFat_tsv_column_max_length_counts[key] = 0
+#                 LowFat_tsv_column_non_blank_counts[key] = 0
+#             if value:
+#                 if len(value) > LowFat_tsv_column_max_length_counts[key]:
+#                     LowFat_tsv_column_max_length_counts[key] = len(value)
+#                 LowFat_tsv_column_non_blank_counts[key] += 1
+#             LowFat_tsv_column_counts[key][value] += 1
+#     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.LowFat_rows):,} (tsv) LowFat data rows.")
+#     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Have {len(unique_morphemes):,} unique Hebrew morphemes.")
 
-    return False
-# end of apply_Clear_Macula_OT_glosses.loadLowFatGlossTable
+#     return False
+# # end of apply_Clear_Macula_OT_glosses.loadLowFatGlossTable
 
 
 def fill_known_lowFat_English_contextual_glosses() -> bool:
@@ -293,6 +310,7 @@ def fill_known_lowFat_English_contextual_glosses() -> bool:
     num_empty_lowfat_word_glosses = num_word_glosses_added = num_word_glosses_skipped = num_contextual_word_glosses_added = 0
     num_empty_lowfat_morpheme_glosses = num_morpheme_glosses_added = num_morpheme_glosses_skipped = num_contextual_morpheme_glosses_added = 0
     for lowFatRow in state.lowFatRows:
+        # print( f"{lowFatRow=}" )
         if not lowFatRow['EnglishGloss'] and not lowFatRow['ContextualGloss']:
             if 'w' in lowFatRow['RowType']:
                 num_empty_lowfat_word_glosses += 1
@@ -316,7 +334,7 @@ def fill_known_lowFat_English_contextual_glosses() -> bool:
             # if WLC_row['RowType']!='mK' or lowFatRow['RowType']!='M': # We still have some problems, e.g., at 'JOS_24:8w1','SA1_2:3w13','SA1_7:9w6'
             #     assert WLC_row['RowType'][:-1] == lowFatRow['RowType'], f"Should be equal: '{WLC_row['RowType'][:-1]}(K)' vs '{lowFatRow['RowType']}'"
         else:
-            if WLC_row['Ref'] != 'AMO_6:14w14b':
+            if WLC_row['Ref'] not in ('JER_11:15w10b','AMO_6:14w14b'): # Why ???
                 assert WLC_row['RowType'] == lowFatRow['RowType'], f"Should be equal: '{WLC_row['RowType']}' vs '{lowFatRow['RowType']}'"
         if not WLC_row['WordOrMorpheme'] == lowFatRow['WordOrMorpheme']:
             dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Should be equal: '{WLC_row['WordOrMorpheme']}' vs '{lowFatRow['WordOrMorpheme']}'" )
@@ -527,23 +545,177 @@ def do_auto_reordering() -> bool:
 # end of apply_Clear_Macula_OT_glosses.do_auto_reordering
 
 
-def save_filled_TSV_file() -> bool:
+def save_filled_morpheme_TSV_file() -> bool:
     """
-    Save the TSV table.
+    Save the filled TSV table with a row for each morpheme
+
+    We do some final fixes
     """
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nExporting filled WLC table as a single flat TSV file to {state.our_TSV_output_filepath}…" )
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nExporting filled WLC morpheme table as a single flat TSV file to {state.our_morpheme_TSV_output_filepath}…" )
 
-    BibleOrgSysGlobals.backupAnyExistingFile( state.our_TSV_output_filepath, numBackups=5 )
+    BibleOrgSysGlobals.backupAnyExistingFile( state.our_morpheme_TSV_output_filepath, numBackups=5 )
 
-    with open( state.our_TSV_output_filepath, 'wt', encoding='utf-8' ) as tsv_output_file:
+    with open( state.our_morpheme_TSV_output_filepath, 'wt', encoding='utf-8' ) as tsv_output_file:
         tsv_output_file.write('\ufeff') # Write BOM
         writer = DictWriter( tsv_output_file, fieldnames=WLC_tsv_column_headers, delimiter='\t' )
         writer.writeheader()
-        writer.writerows( state.WLC_rows )
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {len(state.WLC_rows):,} data rows written." )
+        for n,row_dict in enumerate( state.WLC_rows, start=1 ):
+            if row_dict['RowType']=='m' and not row_dict['MorphemeGloss']:
+                # if 0 and row_dict['NoCantillations'] in ('אֹתָ','אֹת'):
+                if row_dict['Strongs'] == '853':
+                    row_dict['MorphemeGloss'] = 'DOM'
+                elif row_dict['Strongs'] == 'k':
+                    row_dict['MorphemeGloss'] = 'as/like'
+                elif row_dict['Strongs'] == 'l':
+                    row_dict['MorphemeGloss'] = 'to/for'
+                elif row_dict['Strongs'] == 'm':
+                    row_dict['MorphemeGloss'] = 'from'
+                elif row_dict['Strongs'] == '6440':
+                    row_dict['MorphemeGloss'] = 'face/front'
+                # assert row_dict['MorphemeGloss'], f"{n} {row_dict}"
+            writer.writerow( row_dict )
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {len(state.WLC_rows):,} morpheme data rows written." )
 
     return True
-# end of apply_Clear_Macula_OT_glosses.save_filled_TSV_file
+# end of apply_Clear_Macula_OT_glosses.save_filled_morpheme_TSV_file
+
+
+def save_filled_word_TSV_file() -> bool:
+    """
+    Save the TSV table with a row for each word
+    """
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nExporting filled WLC word table as a single flat TSV file to {state.our_word_TSV_output_filepath}…" )
+
+    BibleOrgSysGlobals.backupAnyExistingFile( state.our_word_TSV_output_filepath, numBackups=5 )
+
+    # Firstly adjust the column headers
+    WLC_tsv_header_line = '\t'.join( WLC_tsv_column_headers )
+    word_tsv_column_header_line = ( WLC_tsv_header_line.replace( '\tRowType\t', '\tRowType\tMorphemeRowList\t') # Add column
+                                                .replace( 'WordOrMorpheme', 'Word' ) # rename this column
+                                                # .replace( '\tMorphemeGloss', '' ) # delete this column
+                                                # .replace( '\tContextualMorphemeGloss', '' ) # delete this column
+                                                .replace( 'MorphemeGloss', 'MorphemeGlosses' ) # rename these two columns
+                                )
+    assert word_tsv_column_header_line == 'Ref\tOSHBid\tRowType\tMorphemeRowList\tStrongs\tCantillationHierarchy\tMorphology\tWord\tNoCantillations\tMorphemeGlosses\tContextualMorphemeGlosses\tWordGloss\tContextualWordGloss\tGlossCapitalisation\tGlossPunctuation\tGlossOrder\tGlossInsert', f"{word_tsv_column_header_line=}"
+    word_tsv_column_headers = word_tsv_column_header_line.split( '\t' )
+    assert len(word_tsv_column_headers) == len(WLC_tsv_column_headers)+1 == 17, f"{len(word_tsv_column_headers)=} {len(WLC_tsv_column_headers)=}"
+    
+    with open( state.our_word_TSV_output_filepath, 'wt', encoding='utf-8' ) as tsv_output_file:
+        tsv_output_file.write('\ufeff') # Write BOM
+        writer = DictWriter( tsv_output_file, fieldnames=word_tsv_column_headers, delimiter='\t' )
+        writer.writeheader()
+
+        num_data_rows_written = 0
+        morpheme_row_list, morpheme_strongs_list, morpheme_morphology_list, morpheme_list, morpheme_noCantillations_list, morpheme_glosses_list, contextual_morpheme_glosses_list = [], [], [], [], [], [], []
+        morpheme_gloss_capitalisation = ''
+        ref = OSHB_id = morpheme_cantillation_hierarchy = morpheme_gloss_order = None
+        for n,original_column_dict in enumerate( state.WLC_rows, start=1 ):
+            # print( f"{n} {original_column_dict}" )
+            if 'w' in original_column_dict['RowType']:
+                for column_name in ('MorphemeGloss','ContextualMorphemeGloss','GlossPunctuation','GlossInsert'):
+                    assert not original_column_dict[column_name], f"{n} {column_name=} {original_column_dict[column_name]=}"
+                word_entry = {}
+                for new_header in word_tsv_column_headers:
+                    word_entry[new_header] = original_column_dict['RowType'].replace('w','') if new_header=='RowType' \
+                                            else n if new_header=='MorphemeRowList' \
+                                            else original_column_dict['WordOrMorpheme' if new_header=='Word'
+                                                                       else 'MorphemeGloss' if new_header=='MorphemeGlosses'
+                                                                       else 'ContextualMorphemeGloss' if new_header=='ContextualMorphemeGlosses'
+                                                                       else new_header]
+                # print( f"{n} {original_column_dict=} {word_entry=}")
+                writer.writerow( word_entry )
+                num_data_rows_written += 1
+            elif 'm' in original_column_dict['RowType']:
+                if ref is None:
+                    assert original_column_dict['Ref'][-1] in 'abcde'
+                    ref = original_column_dict['Ref'][:-1] # Remove the lowercase letter suffix
+                    assert len(ref) >= 9
+                else:
+                    assert ref == original_column_dict['Ref'][:-1]
+                if OSHB_id is None:
+                    assert original_column_dict['OSHBid'][-1] in 'abcde'
+                    OSHB_id = original_column_dict['OSHBid'][:-1] # Remove the lowercase letter suffix
+                    assert len(OSHB_id) == 5
+                else:
+                    assert OSHB_id == original_column_dict['OSHBid'][:-1]
+                morpheme_row_list.append( str(n) )
+                for column_name in ('Strongs','Morphology','WordOrMorpheme','NoCantillations','MorphemeGloss','ContextualMorphemeGloss'):
+                    assert ',' not in original_column_dict[column_name], f"{n} {column_name=} {original_column_dict[column_name]=}"
+                morpheme_strongs_list.append( original_column_dict['Strongs'] )
+                morpheme_morphology_list.append( original_column_dict['Morphology'] )
+                morpheme_list.append( original_column_dict['WordOrMorpheme'] )
+                morpheme_noCantillations_list.append( original_column_dict['NoCantillations'] )
+                morpheme_glosses_list.append( original_column_dict['MorphemeGloss'] )
+                # assert morpheme_glosses_list[0], f"{ref} {morpheme_glosses_list=} will end up starting with a comma separator"
+                contextual_morpheme_glosses_list.append( original_column_dict['ContextualMorphemeGloss'] )
+                if morpheme_cantillation_hierarchy is None:
+                    morpheme_cantillation_hierarchy = original_column_dict['CantillationHierarchy']
+                else:
+                    assert morpheme_cantillation_hierarchy == original_column_dict['CantillationHierarchy']
+                for column_name in ('WordGloss','ContextualWordGloss','GlossPunctuation','GlossInsert'):
+                    assert not original_column_dict[column_name], f"{n} {column_name=} {original_column_dict[column_name]=}"
+                if original_column_dict['GlossCapitalisation']:
+                    assert not morpheme_gloss_capitalisation
+                    morpheme_gloss_capitalisation = original_column_dict['GlossCapitalisation']
+                if morpheme_gloss_order is None:
+                    morpheme_gloss_order = original_column_dict['GlossOrder'] # We take the first one and ignore the rest
+            elif 'M' in original_column_dict['RowType']: # the final morpheme in the word
+                assert ref == original_column_dict['Ref'][:-1]
+                assert OSHB_id == original_column_dict['OSHBid'][:-1]
+                morpheme_row_list.append( str(n) )
+                for column_name in ('Strongs','Morphology','WordOrMorpheme','NoCantillations','MorphemeGloss','ContextualMorphemeGloss'):
+                    assert ',' not in original_column_dict[column_name], f"{n} {column_name=} {original_column_dict[column_name]=}"
+                morpheme_strongs_list.append( original_column_dict['Strongs'] )
+                morpheme_morphology_list.append( original_column_dict['Morphology'] )
+                morpheme_list.append( original_column_dict['WordOrMorpheme'] )
+                morpheme_noCantillations_list.append( original_column_dict['NoCantillations'] )
+                morpheme_glosses_list.append( original_column_dict['MorphemeGloss'] )
+                if not any(morpheme_glosses_list): morpheme_glosses_list = [] # Don't want to end up with just a comma separator there
+                contextual_morpheme_glosses_list.append( original_column_dict['ContextualMorphemeGloss'] )
+                assert morpheme_cantillation_hierarchy == original_column_dict['CantillationHierarchy']
+                for column_name in ('GlossCapitalisation','GlossPunctuation','GlossInsert'):
+                    assert not original_column_dict[column_name], f"{n} {column_name=} {original_column_dict[column_name]=}"
+                word_entry = {}
+                for new_header in word_tsv_column_headers:
+                    word_entry[new_header] = ( ref if new_header=='Ref'
+                                        else OSHB_id if new_header=='OSHBid'
+                                        else original_column_dict['RowType'].replace('M','') if new_header=='RowType'
+                                        else ','.join(morpheme_row_list) if new_header=='MorphemeRowList'
+                                        else ','.join(morpheme_strongs_list) if new_header=='Strongs'
+                                        else ','.join(morpheme_morphology_list) if new_header=='Morphology'
+                                        else ','.join(morpheme_list) if new_header=='Word'
+                                        else ','.join(morpheme_noCantillations_list) if new_header=='NoCantillations'
+                                        else ','.join(morpheme_glosses_list) if new_header=='MorphemeGlosses'
+                                        else (','.join(contextual_morpheme_glosses_list) if any(contextual_morpheme_glosses_list) else '') if new_header=='ContextualMorphemeGlosses' # Don't just put commas in if all empty strings
+                                        else morpheme_gloss_capitalisation if new_header=='GlossCapitalisation'
+                                        else morpheme_gloss_order if new_header=='GlossOrder'
+                                        else original_column_dict['WordOrMorpheme' if new_header=='Word' else new_header]
+                                        )
+                # print( f"{n} {original_column_dict=} {word_entry=}")
+                writer.writerow( word_entry )
+                num_data_rows_written += 1
+                morpheme_row_list, morpheme_strongs_list, morpheme_morphology_list, morpheme_list, morpheme_noCantillations_list, morpheme_glosses_list, contextual_morpheme_glosses_list = [], [], [], [], [], [], []
+                morpheme_gloss_capitalisation = ''
+                ref = OSHB_id = morpheme_cantillation_hierarchy = morpheme_gloss_order = None
+            elif original_column_dict['RowType'] in ('seg','note','variant note','alternative note','exegesis note'):
+                assert not original_column_dict['OSHBid']
+                # print( f"{n}: {original_column_dict}" )
+                word_entry = {}
+                for new_header in word_tsv_column_headers:
+                    word_entry[new_header] = ( n if new_header=='MorphemeRowList'
+                                            else original_column_dict['WordOrMorpheme'].replace('KJV:','KJB: ') if new_header=='Word'
+                                            else original_column_dict['MorphemeGloss' if new_header=='MorphemeGlosses'
+                                                                    else 'ContextualMorphemeGloss' if new_header=='ContextualMorphemeGlosses'
+                                                                    else new_header]
+                                            )
+                writer.writerow( word_entry )
+                num_data_rows_written += 1
+            else: halt
+
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {num_data_rows_written:,} word data rows written." )
+
+    return True
+# end of apply_Clear_Macula_OT_glosses.save_filled_word_TSV_file
 
 
 if __name__ == '__main__':

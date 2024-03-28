@@ -1,6 +1,6 @@
 # OET makefile
 #
-# Last updated: 2024-03-08 by RJH
+# Last updated: 2024-03-21 by RJH
 #
 
 #=== Folder and file declarations =======================
@@ -10,17 +10,19 @@ LV_OT_HTML := ../derivedTexts/simpleHTML/LiteralVersion/GEN.html ../derivedTexts
 LV_NT_HTML := ../derivedTexts/simpleHTML/LiteralVersion/MAT.html ../derivedTexts/simpleHTML/LiteralVersion/REV.html
 RV_HTML := $(wildcard ../derivedTexts/simpleHTML/ReadersVersion/*.html)
 RV_ESFM := $(wildcard ../translatedTexts/ReadersVersion/*.ESFM)
-final_LV_OT_USFM := $(wildcard ../intermediateTexts/auto_edited_OT_USFM/*.usfm)
+# final_LV_OT_USFM := $(wildcard ../intermediateTexts/auto_edited_OT_USFM/*.usfm)
+final_LV_OT_ESFM := $(wildcard ../intermediateTexts/auto_edited_OT_ESFM/*.ESFM)
 final_LV_NT_ESFM := $(wildcard ../intermediateTexts/auto_edited_VLT_ESFM/OET-LV_???.ESFM)
 LV_ESFM := $(final_LV_NT_ESFM)
-intermediate_LV_OT_USFM := $(wildcard ../intermediateTexts/modified_source_glossed_OSHB_USFM/*.usfm)
+# intermediate_LV_OT_USFM := $(wildcard ../intermediateTexts/modified_source_glossed_OSHB_USFM/*.usfm)
+intermediate_LV_OT_ESFM := $(wildcard ../intermediateTexts/modified_source_glossed_OSHB_ESFM/???_gloss.ESFM)
 intermediate_LV_NT_ESFM := $(wildcard ../intermediateTexts/modified_source_VLT_ESFM/???_gloss.ESFM)
-expanded_wordtable = ../intermediateTexts/modified_source_VLT_ESFM/OET-LV_NT_word_table.tsv
-original_wordtable = ../intermediateTexts/modified_source_VLT_ESFM/OET-LV_NT_word_table.10columns.tsv
+expanded_NT_wordtable = ../intermediateTexts/modified_source_VLT_ESFM/OET-LV_NT_word_table.tsv
+original_NT_wordtable = ../intermediateTexts/modified_source_VLT_ESFM/OET-LV_NT_word_table.10columns.tsv
 CNTR_lemma_table = ../../CNTR-GNT/derivedFormats/lemmas.alphabetical.tsv
 CNTR_book_table = ../../CNTR-GNT/sourceExports/book.csv
 CNTR_collation_table = ../../CNTR-GNT/sourceExports/collation.csv extract_VLT_NT_to_ESFM.py
-all_OT_TSV_table := ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv
+all_OT_TSV_tables := ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv ../intermediateTexts/glossed_OSHB/all_glosses.words.tsv
 WLC_OT_TSV_table := ../intermediateTexts/glossed_OSHB/WLC_glosses.morphemes.tsv
 Clear_Bible_OT_lowfat_TSV := ../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTreesAbbrev.OT.morphemes.tsv
 Clear_Bible_NT_lowfat_TSV := ../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTreesAbbrev.NT.words.tsv
@@ -58,25 +60,40 @@ RV: $(RV_HTML)
 
 
 # $(LV_HTML): $(LV_OT_HTML) $(LV_NT_HTML)
-$(LV_OT_HTML) $(LV_NT_HTML): $(final_LV_OT_USFM)  $(final_LV_NT_ESFM) convert_OET-LV_to_simple_HTML.py $(expanded_wordtable)
-	@echo "\n\nConvert OET LV USFM files to simple HTML…\n"
+$(LV_OT_HTML) $(LV_NT_HTML): $(final_LV_OT_ESFM)  $(final_LV_NT_ESFM) convert_OET-LV_to_simple_HTML.py $(expanded_NT_wordtable)
+	@echo "\n\nConvert OET LV ESFM files to simple HTML…\n"
 	@$(Python) convert_OET-LV_to_simple_HTML.py
 
-$(final_LV_OT_USFM): $(intermediate_LV_OT_USFM) $(SBE) $(scripted_OT_updates) $(BTranslit) $(Hebrew)
-	@echo "\n\nRun ScriptedBibleEditor on OT USFM files…\n"
-	@$(Python) $(SBE) ScriptedOTUpdates -qe
+# $(final_LV_OT_USFM): $(intermediate_LV_OT_USFM) $(SBE) $(scripted_OT_updates) $(BTranslit) $(Hebrew)
+# 	@echo "\n\nRun ScriptedBibleEditor on OT USFM files…\n"
+# 	@$(Python) $(SBE) ScriptedOTUpdates -qe
 
-$(final_LV_NT_ESFM): $(intermediate_LV_NT_ESFM) $(SBE) $(scripted_NT_updates) $(BTranslit) $(Greek) $(Hebrew) $(expanded_wordtable)
+$(final_LV_OT_ESFM): $(intermediate_LV_OT_ESFM) $(SBE) $(scripted_OT_updates) $(BTranslit) $(Hebrew)
+	@echo "\n\nRun ScriptedBibleEditor on OT ESFM files…\n"
+	@$(Python) $(SBE) ScriptedOTUpdates -qe
+	@echo "\n\nCopying OT word and morpheme tables from modified_source_glossed_OSHB_ESFM/ to auto_edited_OT_ESFM/…\n"
+	@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_word_table.tsv
+	@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv
+	# Does SBE automatically do some of the above copying steps??? Well, it certainly wouldn't do both
+
+$(final_LV_NT_ESFM): $(intermediate_LV_NT_ESFM) $(SBE) $(scripted_NT_updates) $(BTranslit) $(Greek) $(Hebrew) $(expanded_NT_wordtable)
 	@echo "\n\nRun ScriptedBibleEditor on NT ESFM files…\n"
 	@$(Python) $(SBE) ScriptedVLTUpdates -qe
 
-$(intermediate_LV_OT_USFM): $(all_OT_TSV_table) extract_OSHB_OT_to_USFM.py
-	@echo "\n\nExtract OT from TSV table to USFM files…\n"
-	@$(Python) extract_OSHB_OT_to_USFM.py -e
+# $(intermediate_LV_OT_USFM): $(all_OT_TSV_table) extract_OSHB_OT_to_USFM.py
+# 	@echo "\n\nExtract OT from TSV table to USFM files…\n"
+# 	@$(Python) extract_OSHB_OT_to_USFM.py -e
 
-$(all_OT_TSV_table): $(WLC_OT_TSV_table) $(Clear_Bible_OT_lowfat_TSV) apply_Clear_Macula_OT_glosses.py
+$(intermediate_LV_OT_ESFM): $(all_OT_TSV_tables) extract_OSHB_OT_to_ESFM.py
+	@echo "\n\nExtract OT from TSV table to ESFM files…\n"
+	@$(Python) extract_OSHB_OT_to_ESFM.py -e
+
+$(all_OT_TSV_tables): $(WLC_OT_TSV_table) $(Clear_Bible_OT_lowfat_TSV) apply_Clear_Macula_OT_glosses.py
 	@echo "\n\nApply glosses from Macula to OT (and reorder)…\n"
 	@$(Python) apply_Clear_Macula_OT_glosses.py
+	@echo "\n\nCopying and renaming OT word and morpheme tables from glossed_OSHB/ to modified_source_glossed_OSHB_ESFM/…\n"
+	@cp -a ../intermediateTexts/glossed_OSHB/all_glosses.words.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv
+	@cp -a ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv
 
 $(WLC_OT_TSV_table): $(short_OSHB_TSV) prepare_OSHB_for_glossing.py WLCHebrewGlosses.txt
 	@echo "\n\nExpand columns in OT TSV and add our custom glosses…\n"
@@ -98,20 +115,23 @@ $(BibleTags_TSV): $(BibleTags_OT_USFM) $(BibleTags_NT_USFM) convert_BibTags_USFM
 	@echo "\n\nConvert BibleTags USFM files to TSV…\n"
 	@$(Python) convert_BibTags_USFM_to_TSV.py
 
-$(intermediate_LV_NT_ESFM) $(original_wordtable): $(CNTR_book_table) $(CNTR_collation_table) $(CNTR_lemma_table)
+$(intermediate_LV_NT_ESFM) $(original_NT_wordtable): $(CNTR_book_table) $(CNTR_collation_table) $(CNTR_lemma_table)
 	@echo "\n\nExtract NT from TSV table to the various {BBB}_gloss.ESFM files…\n"
 	@$(Python) extract_VLT_NT_to_ESFM.py -e
 
-$(expanded_wordtable): $(original_wordtable) $(Clear_Bible_NT_lowfat_TSV) $(scripted_NT_updates) add_tags_to_NT_word_table.py
+$(expanded_NT_wordtable): $(original_NT_wordtable) $(Clear_Bible_NT_lowfat_TSV) $(scripted_NT_updates) add_tags_to_NT_word_table.py
 	@echo "\n\nAdd people/places/referent tags to OET NT word table…\n"
 	@$(Python) add_tags_to_NT_word_table.py -e
 
 #=== RV stuff =======================
 
-$(RV_HTML): $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py convert_OET-RV_to_simple_HTML.py $(expanded_wordtable)
+$(RV_HTML): $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py convert_OET-RV_to_simple_HTML.py $(expanded_NT_wordtable)
+	@echo "\n\nCopying OT word and morpheme tables from auto_edited_OT_ESFM/ to ReadersVersion/…\n"
+	@cp -a ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_word_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_word_table.tsv
+	@cp -a ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_morpheme_table.tsv
 	@echo "\n\nConnect OET-RV words to OET-LV word numbers…\n"
 	@$(Python) connect_OET-RV_words_via_OET-LV.py
-	@echo "\n\nConvert OET RV USFM files to simple HTML…\n"
+	@echo "\n\nConvert OET RV ESFM files to simple HTML…\n"
 	@$(Python) convert_OET-RV_to_simple_HTML.py
 
 #=== Side-by-side stuff =======================
@@ -130,6 +150,7 @@ clean_LT: clean_LT_OT cleanLT_NT
 
 clean_LT_OT:
 	rm ../intermediateTexts/modified_source_glossed_OSHB_USFM/*.usfm
+	rm ../intermediateTexts/modified_source_glossed_OSHB_ESFM/*.ESFM
 	rm ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv
 	rm ../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTreesAbbrev.OT.morphemes.tsv
 	rm ../intermediateTexts/glossed_OSHB/WLC_glosses.morphemes.tsv

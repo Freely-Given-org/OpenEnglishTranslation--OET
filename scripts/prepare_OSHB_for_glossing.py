@@ -5,7 +5,7 @@
 #
 # Script handling prepare_OSHB_for_glossing functions
 #
-# Copyright (C) 2022 Robert Hunt
+# Copyright (C) 2022-2024 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -32,9 +32,12 @@ Also inserts our own glosses (Gen,Ruth,etc.) into some columns.
     and BEFORE convert_ClearMaculaOT_to_TSV.py and apply_Clear_Macula_OT_glosses.py.)
 
 OSHB morphology codes can be found at https://hb.openscriptures.org/parsing/HebrewMorphologyCodes.html.
+
+CHANGELOG:
+    2024-03-21 Replace some \\u05c4 and \\u05c5 characters in some notes
 """
 from gettext import gettext as _
-from typing import Dict, List, Tuple
+# from typing import Dict, List, Tuple
 from pathlib import Path
 from csv import DictReader, DictWriter
 from collections import defaultdict
@@ -49,10 +52,10 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.OriginalLanguages import Hebrew
 
 
-LAST_MODIFIED_DATE = '2022-12-01' # by RJH
+LAST_MODIFIED_DATE = '2024-03-26' # by RJH
 SHORT_PROGRAM_NAME = "Prepare_OSHB_for_glossing"
 PROGRAM_NAME = "Prepare OSHB for glossing"
-PROGRAM_VERSION = '0.49'
+PROGRAM_VERSION = '0.50'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -134,6 +137,7 @@ def loadWLCSourceTable() -> bool:
         if row_type == 'seg':
             seg_count += 1
         elif row_type == 'note':
+            row['WordOrMorpheme'] = row['WordOrMorpheme'].replace('\\u05c4','◌ׄ').replace('\\u05c5','◌ׅ')
             note_count += 1
         elif row_type == 'w':
             unique_words.add(row['WordOrMorpheme'])

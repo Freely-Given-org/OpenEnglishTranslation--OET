@@ -3,7 +3,7 @@
 #
 # convert_OET-LV_to_simple_HTML.py
 #
-# Script to take the OET-LV NT ESFM files and convert to HTML
+# Script to take the OET-LV ESFM files and convert to HTML
 #
 # Copyright (C) 2022-2024 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org@gmail.com>
@@ -28,6 +28,7 @@ CHANGELOG:
     2023-08-16 Handle gloss pre/helper/post markings from updated wordtables
     2023-08-21 Add lemma pages
     2023-08-30 Add nomina sacra to word pages
+    2024-03-21 Handle OT word table as well
 """
 from gettext import gettext as _
 from typing import List, Tuple, Set, Optional
@@ -53,10 +54,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2024-03-08' # by RJH
+LAST_MODIFIED_DATE = '2024-03-26' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.77'
+PROGRAM_VERSION = '0.79'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -64,14 +65,12 @@ DEBUGGING_THIS_MODULE = False
 
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module
 FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos
-OET_OT_USFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_OT_USFM/' )
+OET_OT_ESFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_OT_ESFM/' )
 OET_NT_ESFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_VLT_ESFM/' )
-# OET_USFM_OutputFolderPath = project_folderpath.joinpath( 'translatedTexts/LiteralVersion/' )
 OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'derivedTexts/simpleHTML/LiteralVersion/' )
 THEOGRAPHIC_INPUT_FOLDER_PATH = FG_folderpath.joinpath( 'Bible_speaker_identification/outsideSources/TheographicBibleData/derivedFiles/' )
-assert OET_OT_USFM_InputFolderPath.is_dir()
+assert OET_OT_ESFM_InputFolderPath.is_dir()
 assert OET_NT_ESFM_InputFolderPath.is_dir()
-# assert OET_USFM_OutputFolderPath.is_dir()
 assert OET_HTML_OutputFolderPath.is_dir()
 assert THEOGRAPHIC_INPUT_FOLDER_PATH.is_dir()
 
@@ -743,16 +742,20 @@ def produce_HTML_files() -> None:
 
         word_table = None
         if bookType:
-            sourceFolderPath = OET_NT_ESFM_InputFolderPath if bookType=='NT' else OET_OT_USFM_InputFolderPath
+            sourceFolderPath = OET_NT_ESFM_InputFolderPath if bookType=='NT' else OET_OT_ESFM_InputFolderPath
             source_filename = f'OET-LV_{BBB}.ESFM' if 'ESFM' in str(sourceFolderPath) else f'OET-LV_{BBB}.usfm'
             source_filepath = sourceFolderPath.joinpath( source_filename )
             dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Reading {source_filepath}…" )
             with open( source_filepath, 'rt', encoding='utf-8' ) as esfm_input_file:
                 esfm_text = esfm_input_file.read()
+            if bookType == 'OT': # We have three different morpheme break characters (which all have their own word numbers pre-applied)
+                esfm_text = esfm_text.replace( '=', '_' ).replace( '÷', '_' ) # Convert them all to underlines
+                # NOTE: It also has / separating word options, e.g., 'in/at/on' but these don't matter to us here
+                #           (and they all don't have separate word numbers applied to them)
             assert not illegalWordLinkRegex1.search( esfm_text), f"illegalWordLinkRegex1 failed when loading {BBB}" # Don't want double-ups of wordlink numbers
             assert not illegalWordLinkRegex2.search( esfm_text), f"illegalWordLinkRegex2 failed when loading {BBB}" # Don't want double-ups of wordlink numbers
             if source_filename.endswith( '.ESFM' ):
-                word_table_filename = 'OET-LV_NT_word_table.tsv'
+                word_table_filename = 'OET-LV_NT_word_table.tsv' if bookType=='NT' else 'OET-LV_OT_word_table.tsv'
                 word_table_filenames.add( word_table_filename )
                 if f'\\rem WORDTABLE {word_table_filename}\n' in esfm_text:
                     if word_table is None:
@@ -796,8 +799,9 @@ def produce_HTML_files() -> None:
             numBooksProcessed += 1
 
     if word_table_filenames:
-        make_word_pages( sourceFolderPath, OET_HTML_OutputFolderPath.joinpath( 'W/'), word_table_filenames )
-        make_lemma_pages( sourceFolderPath, OET_HTML_OutputFolderPath.joinpath( 'Lm/'), word_table_filenames )
+        # TODO: We don't make OT word or lemma pages yet
+        make_NT_word_pages( OET_NT_ESFM_InputFolderPath, OET_HTML_OutputFolderPath.joinpath( 'W/'), word_table_filenames )
+        make_NT_lemma_pages( OET_NT_ESFM_InputFolderPath, OET_HTML_OutputFolderPath.joinpath( 'Lm/'), word_table_filenames )
         make_person_pages( OET_HTML_OutputFolderPath.joinpath( 'Pe/') )
         make_location_pages( OET_HTML_OutputFolderPath.joinpath( 'Loc/') )
 
@@ -901,7 +905,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
             assert rest
             try: V, rest = rest.split( ' ', 1 )
             except ValueError: V, rest = rest, ''
-            assert V.isdigit(), f"Expected a verse number digit with '{V=}' '{rest=}'"
+            assert V.isdigit(), f"Expected a verse number digit with {BBB} '{V=}' '{rest=}'"
             # Put sentences on new lines
             rest = rest.replace( '?)', 'COMBO' ) \
                         .replace( '.', '.</p>\n<p class="LVsentence">' ) \
@@ -1039,7 +1043,7 @@ def convert_tagged_ESFM_words_to_links( BBB:str, book_html:str, word_table:List[
 
 formUsageDict, lemmaDict = defaultdict(list), defaultdict(list)
 lemmaFormsDict, formGlossesDict, lemmaGlossesDict = defaultdict(set), defaultdict(set), defaultdict(set)
-def make_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_filenames:Set[str] ) -> int:
+def make_NT_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_filenames:Set[str] ) -> int:
     """
     Make pages for all the words to link to.
 
@@ -1049,7 +1053,7 @@ def make_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fil
     """
     global formUsageDict, lemmaDict, lemmaFormsDict, formGlossesDict, lemmaGlossesDict
 
-    fnPrint( DEBUGGING_THIS_MODULE, f"make_word_pages( {inputFolderPath}, {outputFolderPath}, {word_table_filenames} )" )
+    fnPrint( DEBUGGING_THIS_MODULE, f"make_NT_word_pages( {inputFolderPath}, {outputFolderPath}, {word_table_filenames} )" )
     load_transliteration_table( 'Greek' )
     our_start_html = START_HTML.replace( 'BibleBook.css', 'BibleData.css' )
 
@@ -1058,6 +1062,7 @@ def make_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fil
 
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Making word table pages for {word_table_filenames}…" )
     for word_table_filename in word_table_filenames:
+        if '_OT_' in word_table_filename: continue # We only do NT here
         word_table_filepath = inputFolderPath.joinpath( word_table_filename )
         with open( word_table_filepath, 'rt', encoding='utf-8' ) as word_table_input_file:
             word_table = word_table_input_file.read().rstrip( '\n' ).split( '\n' ) # Remove any blank line at the end then split
@@ -1241,15 +1246,15 @@ def make_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fil
             vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Wrote {len(html):,} characters to {output_filename}" )
 
     return len(word_table) - 1
-# end of convert_OET-LV_to_simple_HTML.make_word_pages function
+# end of convert_OET-LV_to_simple_HTML.make_NT_word_pages function
 
 
-def make_lemma_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_filenames:Set[str] ) -> int:
+def make_NT_lemma_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_filenames:Set[str] ) -> int:
     """
     """
     global lemmaDict, lemmaFormsDict, lemmaGlossesDict, formUsageDict
 
-    fnPrint( DEBUGGING_THIS_MODULE, f"make_lemma_pages( {inputFolderPath}, {outputFolderPath}, {word_table_filenames} )" )
+    fnPrint( DEBUGGING_THIS_MODULE, f"make_NT_lemma_pages( {inputFolderPath}, {outputFolderPath}, {word_table_filenames} )" )
     our_start_html = START_HTML.replace( 'BibleBook.css', 'BibleData.css' )
 
     try: os.makedirs( outputFolderPath )
@@ -1257,6 +1262,7 @@ def make_lemma_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
 
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Making lemma table pages for {word_table_filenames}…" )
     for word_table_filename in word_table_filenames:
+        if '_OT_' in word_table_filename: continue # We only do NT here
         word_table_filepath = inputFolderPath.joinpath( word_table_filename )
         with open( word_table_filepath, 'rt', encoding='utf-8' ) as word_table_input_file:
             word_table = word_table_input_file.read().rstrip( '\n' ).split( '\n' ) # Remove any blank line at the end then split
@@ -1320,7 +1326,7 @@ def make_lemma_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_fi
         with open( outputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
             html_output_file.write( html )
         vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Wrote {len(html):,} characters to {output_filename}" )
-# end of createOETReferencePages.make_lemma_pages
+# end of createOETReferencePages.make_NT_lemma_pages
 
 
 def make_person_pages( outputFolderPath:Path ) -> int:

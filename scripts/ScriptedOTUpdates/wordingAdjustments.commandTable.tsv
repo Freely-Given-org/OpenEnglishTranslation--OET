@@ -4,7 +4,6 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 
 									Abba			Father		Gal 4:6 Aramaic that wasn't translated
 									Amen			Truly		Rev 19:4
-									Baptist			immerser
 									baptize			immerse
 									baptizing			immersing
 									baptism			immersion
@@ -34,39 +33,25 @@ H									Hallelujah			Praise_יָהּ		Rev 19:3
 									Lord			master
 									lord			master		1 Pet 3:6
 w									magi			wise_men
-									millstone			grinding_stone		Matt 18:6
+									millstone¦			grinding¦_stone¦		Matt 18:6
 w									O			Oh
-#G									Pharisees			Φαρισαῖος_\add sect\add*		Luke 6:7
-#G									Pharisee			Φαρισαῖος_\add sect_member\add*
 									Portico			Veranda		Acts 5:12
-									praetorium			residence_of_the_governor		John 18:28 πραιτώριον
-									, Rabbi			, my_great_\add >one\add*
-									Rabbi			My_great_\add >one\add*
-									, “Rabboni,			, “My_teacher,		Mrk 10:51 And the blind man said to_him: Rabboni, that I_may_receive_sight.
-#									, “Rabboni			NOT CHANGED		John 20:16 In_Hebrew: Rabboni (that is_being_called: Teacher).
-									Sabaoth			armies		Rom 9:29
-#G									Sadducees			Σαδδουκαῖος_\add sect\add*		Matt 3:7
-#G									Sadducee			Σαδδουκαῖος_\add sect_member\add*
+									, Rabbi¦			, my¦_great¦_\add >one¦\add*
+									Rabbi¦			My¦_great¦_\add >one¦\add*
 									Sanhedrin			council		Luke 22:66
 									Tabernacle			tent		John 7:2 also works for plural
-dG									talents			τάλαντονs_\add of_silver\add*		Matt 25:25
-dG									talent			τάλαντον_\add of_silver\add*		Matt 25:25
+dG									talents¦			τάλαντονs¦_\add of¦_silver¦\add*		Matt 25:25
+dG									talent¦			τάλαντον¦_\add of¦_silver¦\add*		Matt 25:25
 									Tartarus			\add +the\add*_underworld		2 Peter 2:4
-									tetrarch			quarter_ruler		Matt 14:1
 									Unleavened			non-fermented
-									wrath			severe_anger
-G									Zealot			Φαρισαῖος_ζηλωτής_\add group_member\add*		Luke 6:15
+									wrath¦			severe¦_anger¦
 
 # Currency
-G									assarion			ἀσσάριον_\add coin\add*		Luke 12:6
-G									denarii			δηνάριον_\add coins\add*		Luke 7:41
-G									denarius			δηνάριον_\add coin\add*		Rev 6:6
-G									two_drachmas			δίδραχμον		Matt 17:24
-G									lepton			λεπτόν_\add coin\add*		Luke 21:2
-wG									mina			\add silver\add*_μνᾶ		Luke 19:13-27
+#G									denarius			δηνάριον_\add coin\add*		Rev 6:6
+#wG									mina			\add silver\add*_μνᾶ		Luke 19:13-27
 
 # Weights and measures
-wdGH									baths			βάτος/(בַּת)_\add measures\add*		Luke 16:6
-wG									choenix			χοῖνιξ_\add measure\add*		Rev 6:6
-wdGH									cors			κόρος/(כֹּר)_\add measures\add*		Luke 16:7
-GH						CO1_9:24			stadium			στάδιον_\add measure\add*		Luke 24:13 one eighth of a Roman mile
+wdGH									baths¦			בַּת¦_\add measures¦\add*		Luke 16:6
+#wG									choenix¦			χοῖνιξ¦_\add measure¦\add*		Rev 6:6
+wdH									cors¦			כֹּר¦_\add measures¦\add*		2 Chr. 2:9, (Luke 16:7)
+#GH						CO1_9:24			stadium¦			στάδιον¦_\add measure¦\add*		Luke 24:13 one eighth of a Roman mile

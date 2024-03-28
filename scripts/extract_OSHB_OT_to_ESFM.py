@@ -40,10 +40,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2024-03-25' # by RJH
+LAST_MODIFIED_DATE = '2024-03-28' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed-OSHB_OT_to_ESFM"
 PROGRAM_NAME = "Extract glossed-OSHB OT ESFM files"
-PROGRAM_VERSION = '0.46'
+PROGRAM_VERSION = '0.49'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -477,8 +477,20 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
                     else given_verse_row['WordGloss'] if given_verse_row['WordGloss'] \
                     else given_verse_row['ContextualMorphemeGlosses'] if given_verse_row['ContextualMorphemeGlosses'] \
                     else given_verse_row['MorphemeGlosses']
-        while gloss.startswith( ',' ): gloss = gloss[1:] # Remove any leading comma separators
-        if not gloss:
+        if gloss:
+            gloss = gloss.replace( '_~_', '_' ) # TODO: What did these mean? Place to insert direct object, e.g, make_~_great,him ???
+            gloss = gloss.replace( '==', '=' ).replace( ',?,', ',' ).replace( ',,', ',' ) # TODO: How/Why do we have these?
+            gloss = gloss.replace( '!', '' ).replace( '=?', '' ).replace( '?', '' ) # e.g., on gloss for 'behold!', 'what?', 'will_you(fs)_be_drunk=?'
+            # assert '.' not in gloss and '!' not in gloss, f"{given_verse_row}"
+            while gloss.endswith( '~' ): gloss = gloss[:-1] # Remove any trailing tildes
+            while gloss.startswith( '_' ): gloss = gloss[1:] # Remove any leading underline separators
+            while gloss.startswith( ',' ): gloss = gloss[1:] # Remove any leading comma separators
+            while gloss.endswith( ',' ): gloss = gloss[:-1] # Remove any trailing comma separators
+            while gloss.startswith( '=' ): gloss = gloss[1:] # Remove any leading equal sign separators
+            assert gloss[0]!=',' and gloss[-1]!=',', f"{given_verse_row=}" # Shouldn't be at start or end of word
+            assert gloss[0]!='=' and gloss[-1]!='=', f"{given_verse_row=}" # Shouldn't be at start or end of word
+            assert gloss[0]!='÷' and gloss[-1]!='÷', f"{given_verse_row=}" # Shouldn't be at start or end of word
+        else: # no gloss
             gloss = 'mmm' # Sequence doesn't occur in any words
             mmmCount += 1
             vPrint( 'Info', DEBUGGING_THIS_MODULE, f"{given_verse_row['Ref']}.{given_verse_row['MorphemeRowList']},"
@@ -486,59 +498,16 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
                                         f" (from '{given_verse_row['NoCantillations']}')" )
         if 'S' in given_verse_row['GlossCapitalisation']: # Start of Sentence
             gloss = f'{gloss[0].upper()}{gloss[1:]}'
-        assert gloss[-1] != '=' # Shouldn't be at end of word
         wn = f"¦{given_verse_row['n']}"
-        gloss = f"{gloss.replace('=',f'{wn}=').replace(',',f'{wn}≈').replace('_',f'{wn}_')}{wn}" # Append the word (row) number(s) and replace comma morpheme separator
-
-        # Old code
-        # if consecutive:
-        #     if not saved_gloss: #this must be the first morpheme in the word (or after an inserted word)
-        #         saved_gloss = gloss
-        #         saved_capitalisation = given_verse_row['GlossCapitalisation']
-        #     else: # Append this to previously saved gloss
-        #         saved_gloss = f"{saved_gloss}={gloss}"
-        #     just_had_insert = False
-        #     return '' # Nothing to return just yet
-        # else: # it's not consecutive!
-        #     if saved_gloss:
-        #         previousGloss = saved_gloss
-        #         if 'S' in saved_capitalisation:
-        #             previousGloss = f'{previousGloss[0].upper()}{previousGloss[1:]}'
-        #             # saved_capitalisation = ''
-        #         gloss, saved_gloss = f'{previousGloss}=', gloss
-        #         saved_capitalisation = given_verse_row['GlossCapitalisation']
-        #     else: # no saved gloss
-        #         saved_gloss = gloss
-        #         saved_capitalisation = given_verse_row['GlossCapitalisation']
-        #         return '' # Nothing to return just yet
-        
-    # elif 'M' in given_verse_row['RowType']:
-    #     if given_verse_row['WordGloss'] and consecutive and not just_had_insert: # If we had an insert between morphemes, we can't use the word gloss
-    #         gloss = given_verse_row['WordGloss']
-    #         saved_gloss = '' # Throw that away
-    #     elif given_verse_row['MorphemeGloss']:
-    #         gloss = f"{saved_gloss}={given_verse_row['MorphemeGloss']}"
-    #         saved_gloss = '' # Used it
-    #     elif given_verse_row['ContextualMorphemeGloss']:
-    #         gloss = f"{saved_gloss}={given_verse_row['ContextualMorphemeGloss']}"
-    #         saved_gloss = '' # Used it
-    #     elif given_verse_row['ContextualWordGloss']:
-    #         gloss = given_verse_row['ContextualWordGloss']
-    #         saved_gloss = '' # Ignore it
-    #     if not gloss: # Sequence doesn't occur in any words
-    #         gloss = f'{saved_gloss}=mmm'
-    #         mmmCount += 1
-    #         saved_gloss = '' # Used it
-    #         vPrint( 'Info', DEBUGGING_THIS_MODULE, f"{given_verse_row['Ref']}.{given_verse_row['RowType']},"
-    #                                     f" needs a morpheme gloss for '{given_verse_row['Word']}'"
-    #                                     f" (from '{given_verse_row['NoCantillations']}')" )
-    #     just_had_insert = False
-    #     assert not saved_gloss
+        gloss = f"{gloss.replace('=',f'{wn}=').replace(',',f'{wn}÷').replace('_',f'{wn}_')}{wn}" # Append the word (row) number(s) and replace comma morpheme separator
 
     else: # it's only a single morpheme word
         # assert not saved_gloss # NO LONGER TRUE
         wordGloss = given_verse_row['ContextualWordGloss'] if given_verse_row['ContextualWordGloss'] \
                     else given_verse_row['WordGloss']
+        wordGloss = wordGloss.replace( '!', '' ).replace( '?', '' ) # e.g., on gloss for 'behold!', 'what?'
+        wordGloss = wordGloss.replace( '==', '=' ).replace( ',,', ',' ) # TODO: How/Why do we have these?
+        while wordGloss.startswith( '_' ): wordGloss = wordGloss[1:] # Remove any leading underline separators
         if not wordGloss:
             wordGloss = 'wwww' # Sequence doesn't occur in any English words so easy to find
             wwwwCount += 1
@@ -548,7 +517,7 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
         if 'S' in given_verse_row['GlossCapitalisation']:
             wordGloss = f'{wordGloss[0].upper()}{wordGloss[1:]}'
         wn = f"¦{given_verse_row['n']}"
-        wordGloss = f"{wordGloss.replace('=',f'{wn}=').replace(',',f'{wn}≈').replace('_',f'{wn}_')}{wn}" # Append the word (row) number(s) and replace comma morpheme separator
+        wordGloss = f"{wordGloss.replace('=',f'{wn}=').replace(',',f'{wn}÷').replace('_',f'{wn}_')}{wn}" # Append the word (row) number(s) and replace comma morpheme separator
 
         if saved_gloss: # we must have reordered glosses with a word now between morphemes
             halt
@@ -572,7 +541,9 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
             saved_capitalisation = ''
 
     # if given_verse_row['Ref'].startswith('GEN_1:4'): halt
-    return f"{gloss}{given_verse_row['GlossPunctuation']}"
+    result = f"{gloss}{given_verse_row['GlossPunctuation']}"
+    assert '!¦' not in result, f"{given_verse_row}"
+    return result
 # end of extract_OSHB_OT_to_ESFM.preform_row_gloss
 
 

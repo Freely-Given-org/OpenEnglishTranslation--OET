@@ -43,6 +43,7 @@ CHANGELOG:
     2023-12-20 Check for unwanted trailing spaces on OET-RV lines
     2024-01-24 Check for doubled punctuation and wrong xref punctuation in OET-RV lines
     2024-01-27 Don't allow section headings to be marked with word numbers
+    2024-03-25 Add OT connections
 """
 from gettext import gettext as _
 from tracemalloc import start
@@ -63,10 +64,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2024-03-08' # by RJH
+LAST_MODIFIED_DATE = '2024-03-26' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.62'
+PROGRAM_VERSION = '0.65'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -74,10 +75,10 @@ DEBUGGING_THIS_MODULE = False
 
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module
 FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos
-# OET_LV_OT_USFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_OT_USFM/' )
+OET_LV_OT_ESFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_OT_ESFM/' )
 OET_LV_NT_ESFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_VLT_ESFM/' )
 OET_RV_ESFM_FolderPath = project_folderpath.joinpath( 'translatedTexts/ReadersVersion/' )
-# assert OET_LV_OT_USFM_InputFolderPath.is_dir()
+assert OET_LV_OT_ESFM_InputFolderPath.is_dir()
 assert OET_LV_NT_ESFM_InputFolderPath.is_dir()
 assert OET_RV_ESFM_FolderPath.is_dir()
 
@@ -259,18 +260,26 @@ def main():
     rv.lookForAuxilliaryFilenames()
     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{rv=}")
 
-    # Load the OET-LV
-    lv = ESFMBible( OET_LV_NT_ESFM_InputFolderPath, givenAbbreviation='OET-LV' )
-    lv.loadAuxilliaryFiles = True
-    lv.loadBooks() # So we can iterate through them all later
-    lv.lookForAuxilliaryFilenames()
-    dPrint( 'verbose', DEBUGGING_THIS_MODULE, f"{lv=}")
+    # Load the OET-LV OT
+    lvOT = ESFMBible( OET_LV_OT_ESFM_InputFolderPath, givenAbbreviation='OET-LV' )
+    lvOT.loadAuxilliaryFiles = True
+    lvOT.loadBooks() # So we can iterate through them all later
+    lvOT.lookForAuxilliaryFilenames()
+    dPrint( 'verbose', DEBUGGING_THIS_MODULE, f"{lvOT=}")
+
+    # Load the OET-LV NT
+    lvNT = ESFMBible( OET_LV_NT_ESFM_InputFolderPath, givenAbbreviation='OET-LV' )
+    lvNT.loadAuxilliaryFiles = True
+    lvNT.loadBooks() # So we can iterate through them all later
+    lvNT.lookForAuxilliaryFilenames()
+    dPrint( 'verbose', DEBUGGING_THIS_MODULE, f"{lvNT=}")
 
     # Display anywhere where we still have 'for' that should perhaps be 'because'
     # show_fors( lv )
 
     # Connect linked words in the OET-LV to the OET-RV
-    connect_OET_RV( rv, lv )
+    connect_OET_RV( rv, lvOT, OET_LV_OT_ESFM_InputFolderPath )
+    connect_OET_RV( rv, lvNT, OET_LV_NT_ESFM_InputFolderPath )
 
     # if forList: print( "For list:", ','.join( forList ) )
 # end of connect_OET-RV_words_via_OET-LV.main
@@ -278,10 +287,10 @@ def main():
 
 illegalWordLinkRegex1 = re.compile( '[0-9]¦' ) # Has digits BEFORE the broken pipe
 illegalWordLinkRegex2 = re.compile( '¦[1-9][0-9]{0,5}[a-z]' ) # Has letters immediately AFTER the wordlink number
-def connect_OET_RV( rv, lv ):
+def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
     """
     Firstly, load the OET-LV wordtable.
-        Loads into state.tableHeaderList and state.wordTable.
+        Loads into state.wordTableHeaderList and state.wordTable.
 
     Then connect linked words in the OET-LV to the OET-RV.
     """
@@ -304,15 +313,15 @@ def connect_OET_RV( rv, lv ):
             else:
                 vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  No word links loaded yet for '{wordFileName}'" )
             if lv.ESFMWordTables[wordFileName] is None:
-                with open( OET_LV_NT_ESFM_InputFolderPath.joinpath(wordFileName), 'rt', encoding='UTF-8' ) as wordFile:
+                with open( OET_LV_ESFM_InputFolderPath.joinpath(wordFileName), 'rt', encoding='UTF-8' ) as wordFile:
                     lv.ESFMWordTables[wordFileName] = wordFile.read().split( '\n' )
                 vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  connect_OET_RV loaded {len(lv.ESFMWordTables[wordFileName]):,} total rows from {wordFileName}" )
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  connect_OET_RV loaded column names were: ({len(lv.ESFMWordTables[wordFileName][0])}) {lv.ESFMWordTables[wordFileName][0]}" )
         state.wordTable = [row.split('\t') for row in lv.ESFMWordTables[wordFileName]]
-        state.tableHeaderList = state.wordTable[0]
+        state.wordTableHeaderList = state.wordTable[0]
 
         lvESFMFilename = f'OET-LV_{BBB}.ESFM'
-        lvESFMFilepath = OET_LV_NT_ESFM_InputFolderPath.joinpath( lvESFMFilename )
+        lvESFMFilepath = OET_LV_ESFM_InputFolderPath.joinpath( lvESFMFilename )
         with open( lvESFMFilepath, 'rt', encoding='UTF-8' ) as esfmFile:
             state.lvESFMText = esfmFile.read() # We keep the original (for later comparison)
             state.lvESFMLines = state.lvESFMText.split( '\n' )
@@ -420,7 +429,7 @@ def connect_OET_RV( rv, lv ):
 GLOSS_COLUMN__NUMBER = 5
 def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tuple[Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int]]:
     """
-    Some undocumented documentation of the GlossCaps column from state.wordTable:
+    Some undocumented documentation of the NT GlossCaps column from state.wordTable:
         ●    U – lexical entry capitalized
         ●    W – proper noun
         ●    G – reference to deity
@@ -442,7 +451,9 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     """
     # global forList
     # fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {BBB} {c}:{v} {len(rvEntryList)}, {len(lvEntryList)} )" )
-    assert state.tableHeaderList.index( 'VLTGlossWords' )+1 == GLOSS_COLUMN__NUMBER, f"{state.tableHeaderList.index('VLTGlossWords')+1=} {GLOSS_COLUMN__NUMBER=} {state.tableHeaderList=}" # Check we have the correct column below
+    NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
+    if NT:
+        assert state.wordTableHeaderList.index('VLTGlossWords')+1 == GLOSS_COLUMN__NUMBER, f"{state.wordTableHeaderList.index('VLTGlossWords')+1=} {GLOSS_COLUMN__NUMBER=} {state.wordTableHeaderList=}" # Check we have the correct column below
 
     rvText = ''
     for rvEntry in rvEntryList:
@@ -470,7 +481,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
                 .replace( '(', '').replace( ')', '' ) \
                 .replace( '“', '' ).replace( '”', '' ).replace( '‘', '' ).replace( '’', '') \
                 .replace('  ',' ').strip()
-    lvAdjText = lvText.replace('_',' ') \
+    lvAdjText = lvText.replace('_',' ').replace('=',' ').replace('÷',' ') \
                 .replace('˱','').replace('˲','') \
                 .replace('0/','0 ').replace('1/','1 ').replace('2/','2 ').replace('3/','3 ').replace('4/','4 ').replace('5/','5 ').replace('6/','6 ').replace('7/','7 ').replace('8/','8 ').replace('9/','9 ') \
                 .replace('.','').replace(',','').replace(':','').replace(';','').replace('?','').replace('!','') \
@@ -485,6 +496,9 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     rvWords = rvAdjText.split( ' ' )
     # print( f"({len(rvWords)}) {rvWords=}")
     # print( f"({len(lvWords)}) {lvWords=}")
+    while 'DOM' in lvWords:
+        lvWords.remove( 'DOM' ) # These are capitalised, but untranslated, so remove them here
+        # print( f"({len(lvWords)}) {lvWords=}")
     assert lvWords
     # if 0: # Mostly works but a couple of exceptions
     #     badIx = None
@@ -508,14 +522,21 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     # print( f"'{rvText=}' '{lvText=}'" )
 
     if lvText[0].isupper(): # Try to determine why the first word was capitalised
-        # print( f"{lvUpperWords=} from {lvText=}")
+        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{lvUpperWords=} from {lvText=}")
         firstLVUpperWord, firstLVUpperNumber = lvUpperWords[0].split( '¦' )
         rowForFirstLVUpperWord = state.wordTable[int(firstLVUpperNumber)]
-        firstLVUpperWordCapsFlags = rowForFirstLVUpperWord[5]
-        # print( f"{firstLVUpperWordCapsFlags=} from {rowForFirstLVUpperWord=}" )
-        if 'G' not in firstLVUpperWordCapsFlags and 'W' not in firstLVUpperWordCapsFlags and firstLVUpperWord!='I':
-            # print( f"Removing first LV Uppercase word: '{lvUpperWords[0]}' with '{firstLVUpperWordCapsFlags}'")
-            lvUpperWords.pop(0) # Throw away the first word because it might just be capitalised for being at the beginning of the sentence.
+        if NT:
+            firstLVUpperWordCapsFlags = rowForFirstLVUpperWord[state.wordTableHeaderList.index('GlossCaps')]
+            # print( f"{firstLVUpperWordCapsFlags=} from {rowForFirstLVUpperWord=}" )
+            if 'G' not in firstLVUpperWordCapsFlags and 'W' not in firstLVUpperWordCapsFlags and firstLVUpperWord!='I':
+                # print( f"Removing first LV Uppercase word: '{lvUpperWords[0]}' with '{firstLVUpperWordCapsFlags}'")
+                lvUpperWords.pop(0) # Throw away the first word because it might just be capitalised for being at the beginning of the sentence.
+        else: # OT
+            firstLVUpperWordCapsFlags = rowForFirstLVUpperWord[state.wordTableHeaderList.index('GlossCapitalisation')]
+            # print( f"{firstLVUpperWordCapsFlags=} from {rowForFirstLVUpperWord=}" )
+            if 'S' in firstLVUpperWordCapsFlags and firstLVUpperWord!='I':
+                # print( f"Removing first LV Uppercase word: '{lvUpperWords[0]}' with '{firstLVUpperWordCapsFlags}'")
+                lvUpperWords.pop(0) # Throw away the first word because it might just be capitalised for being at the beginning of the sentence.
     # if rvText[0].isupper():
     #   rvUpperWords.pop(0) # Throw away the first word because it might just be capitalised for being at the beginning of the sentence.
     # print( f"({len(rvUpperWords)}) {rvUpperWords=}")
@@ -553,6 +574,8 @@ def matchProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[str], lvC
     fnPrint( DEBUGGING_THIS_MODULE, f"matchProperNouns( {BBB} {c}:{v} {rvCapitalisedWordList}, {lvCapitalisedWordList} )" )
     assert rvCapitalisedWordList and lvCapitalisedWordList
 
+    NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
+
     # But we don't want any rvWords that are already tagged
     numAdded = numNS = 0
     numRemovedRV = 0 # Extra work because we're deleting from same list that we're iterating through (a copy of)
@@ -574,23 +597,34 @@ def matchProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[str], lvC
 
     if len(rvCapitalisedWordList)==1 and len(lvCapitalisedWordList)==1: # easy case!
         assert rvCapitalisedWordList[0].replace("'",'').isalpha(), f"{rvCapitalisedWordList=}" # It might contain an apostrophe
+        # print( f"{rvCapitalisedWordList=} {lvCapitalisedWordList=}" )
+        assert '¦' in lvCapitalisedWordList[0], f"{lvCapitalisedWordList[0]=} from {lvCapitalisedWordList=}"
         capitalisedNoun,wordNumber,wordRow = getLVWordRow( lvCapitalisedWordList[0] )
-        wordRole = wordRow[state.tableHeaderList.index('Role')]
-        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"'{capitalisedNoun}' {wordRole}" )
-        if wordRole == 'N': # let's assume it's a proper noun
-            # print( f"matchProperNouns {BBB} {c}:{v} adding number to {rvCapitalisedWordList[0]}")
-            result = addNumberToRVWord( BBB, c,v, rvCapitalisedWordList[0], wordNumber )
-            if result:
-                numAdded += 1
-                if 'N' in wordRow[5]:
-                    numNS += 1
+        if NT:
+            wordRole = wordRow[state.wordTableHeaderList.index('Role')]
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"'{capitalisedNoun}' {wordRole}" )
+            if wordRole == 'N': # let's assume it's a proper noun
+                # print( f"matchProperNouns {BBB} {c}:{v} adding number to {rvCapitalisedWordList[0]}")
+                result = addNumberToRVWord( BBB, c,v, rvCapitalisedWordList[0], wordNumber )
+                if result:
+                    numAdded += 1
+                    if 'N' in wordRow[state.wordTableHeaderList.index('GlossCaps')]:
+                        numNS += 1
+        else: # OT
+            glossCaps = wordRow[state.wordTableHeaderList.index('GlossCapitalisation')]
+            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"'{capitalisedNoun=}' {glossCaps=}" )
+            if glossCaps != 'S': # start of sentence
+                result = addNumberToRVWord( BBB, c,v, rvCapitalisedWordList[0], wordNumber )
+                if result:
+                    numAdded += 1
     elif len(rvCapitalisedWordList) == len(lvCapitalisedWordList):
         dPrint( 'Info', DEBUGGING_THIS_MODULE, f"Lists are equal size ({len(rvCapitalisedWordList)})" )
         return numAdded,numNS
-        for capitalisedNounPair in lvCapitalisedWordList:
-            capitalisedNoun,wordNumber,wordRow = getLVWordRow( capitalisedNounPair )
-            dPrint( 'Info', f"'{capitalisedNoun}' {wordRow}" )
-            halt
+        # for capitalisedNounPair in capitalisedNounPair:
+        #     assert '¦' in capitalisedNounPair, f"{capitalisedNounPair=} from {capitalisedNounPair=}"
+        #     capitalisedNoun,wordNumber,wordRow = getLVWordRow( capitalisedNounPair )
+        #     dPrint( 'Info', f"'{capitalisedNoun}' {wordRow}" )
+        #     halt
     else:
         dPrint( 'Info', DEBUGGING_THIS_MODULE, f"Lists are different sizes {len(rvCapitalisedWordList)=} and {len(lvCapitalisedWordList)=}" )
         # for capitalisedNounPair in lvCapitalisedWordList:
@@ -608,6 +642,8 @@ def matchOurListedSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWor
     """
     fnPrint( DEBUGGING_THIS_MODULE, f"matchOurListedSimpleWords( {BBB} {c}:{v} {rvWordList}, {lvWordList} )" )
     assert rvWordList and lvWordList
+
+    NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
 
     numAdded = numNS = 0
     for simpleNoun in state.simpleWords:
@@ -632,6 +668,7 @@ def matchOurListedSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWor
 
         lvNumbers = []
         for lvN in lvIndexList:
+            assert '¦' in lvWordList[lvN], f"{lvN=} {lvWordList[lvN]=} from {lvWordList=}"
             lvNoun,lvWordNumber,lvWordRow = getLVWordRow( lvWordList[lvN] )
             lvNumbers.append( lvWordNumber )
         assert len(lvNumbers) == 1 # NOT TRUE: If there's two 'camels' in the verse, we expect both to have the same word number
@@ -642,7 +679,7 @@ def matchOurListedSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWor
                 result = addNumberToRVWord( BBB, c,v, rvNoun, lvWordNumber )
                 if result:
                     numAdded += 1
-                    if 'N' in state.wordTable[lvWordNumber][5]:
+                    if NT and 'N' in state.wordTable[lvWordNumber][state.wordTableHeaderList.index('GlossCaps')]:
                         numNS += 1
             # else:
             #     dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"ERROR matchOurListedSimpleWords() would have connected LV '{lvNoun}' to RV '{rvNoun}' at {BBB} {c}:{v} {rvN=}")
@@ -661,6 +698,8 @@ def matchWordsFirstParts( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList
     """
     fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsFirstParts( {BBB} {c}:{v} {rvWordList}, {lvWordList} )" )
     assert rvWordList and lvWordList
+
+    NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
 
     # Firstly make a matching list of LV words without the word numbers
     simpleLVWordList = []
@@ -688,12 +727,13 @@ def matchWordsFirstParts( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList
         if len(rvIndexes) == 1: # Only one RV word starts with those same letters
             rvWord = rvWordList[rvIndexes[0]]
             if '¦' not in rvWord:
+                assert '¦' in lvWordList[lvIx], f"{lvIx=} {lvWordList[lvIx]=} from {lvWordList=}"
                 lvWord,lvWordNumber,lvWordRow = getLVWordRow( lvWordList[lvIx] )
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsFirstParts() is adding a number to RV '{rvWord}' from '{lvWord}' at {BBB} {c}:{v} {rvIx=}")
                 result = addNumberToRVWord( BBB, c,v, rvWord, lvWordNumber )
                 if result:
                     numAdded += 1
-                    if 'N' in lvWordRow[5]:
+                    if NT and 'N' in lvWordRow[state.wordTableHeaderList.index('GlossCaps')]:
                         numNS += 1
                 else:
                     logging.warning( f"Got addNumberToRVWord( {BBB} {c}:{v} '{rvWord}' {lvWordNumber} ) result = {result}" )
@@ -745,7 +785,8 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
     # if BBB=='JHN' and c==4 and v==6:
     #     print( f"doGroup1( {BBB} {c}:{v} {rvVerseWordList=} {lvVerseWordList=} {simpleLVWordList=} )")
     #     halt
-    
+    NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
+
     numAdded = numNS = 0
     for rvWord, lvWordStr in (
             ('120', 'a hundred twenty'),
@@ -997,12 +1038,13 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
                     continue # in the outer loop
                 assert matchedLvWordCount == len(lvWords)
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManually group1 {BBB} {c}:{v} matched {rvWord=} {lvWords=}" )
+                assert '¦' in lvVerseWordList[lvIx], f"{lvIx=} {lvVerseWordList[lvIx]=} from {lvVerseWordList=}"
                 lvWord,lvWordNumber,lvWordRow = getLVWordRow( lvVerseWordList[lvIx] )
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManually group1 is adding a number to RV '{rvWord}' from '{lvWord}' at {BBB} {c}:{v} {lvIx=}")
                 result = addNumberToRVWord( BBB, c,v, rvWord, lvWordNumber )
                 if result:
                     numAdded += 1
-                    if 'N' in lvWordRow[5]:
+                    if NT and 'N' in lvWordRow[state.wordTableHeaderList.index('GlossCaps')]:
                         numNS += 1
                 else:
                     logging.warning( f"Got addNumberToRVWord( {BBB} {c}:{v} '{rvWord}' {lvWordNumber} ) result = {result}" )
@@ -1090,9 +1132,10 @@ def getLVWordRow( wordWithNumber:str ) -> Tuple[str,int,List[str]]:
     """
     """
     fnPrint( DEBUGGING_THIS_MODULE, f"getLVWordRow( {wordWithNumber} )" )
+    assert '¦' in wordWithNumber
 
     # print( f"{wordWithNumber=}" )
-    word,wordNumber = wordWithNumber.split( '¦' )
+    word,wordNumber = wordWithNumber.split( '¦' ) # Gives a ValueError if the wordNumber separator character is missing
     # assert word.isalpha(), f"Non-alpha '{word}'" # not true, e.g., from 'Yaʸsous/(Yəhōshūˊa)¦21754'
     try: wordNumber = int( wordNumber )
     except ValueError:
@@ -1118,6 +1161,8 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
     """
     fnPrint( DEBUGGING_THIS_MODULE, f"addNumberToRVWord( {BBB} {c}:{v} '{word}' {wordNumber} )" )
     assert isinstance( wordNumber, int )
+
+    NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
 
     C = V = None
     found = False
@@ -1148,7 +1193,7 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
                 wordRow = state.wordTable[wordNumber]
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found {word=} {line=} {wordRow=}" )
                 addNominaSacra = False
-                if 'N' in wordRow[5]: # Check that the RV doesn't already have it marked (with /nd)
+                if NT and 'N' in wordRow[state.wordTableHeaderList.index('GlossCaps')]: # Check that the RV doesn't already have it marked (with /nd)
                                       #   (This can happen after word numbers are deleted.)
                     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Have NS on {word=} {line[match.start()-6:match.start()]=} {line[match.end():match.end()+6]=} {line=}" )
                     if (match.end()==len(line) or not line[match.end()]=='¦') \
