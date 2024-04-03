@@ -36,7 +36,7 @@ H									Boaz			בֹּעַז
 H									Buzi			בּוּזִי		Eze 1:3 father of Ezekiel
 wH									Cain			קַיִן/(Cain)		Gen 4:1-3
 H									Cainan			קֵינָן/(Cainan)
-wH									Canaan			כִּנַעַן		Acts 7:11
+wH									Canaan			כִּנַעַן		Gen, Acts 7:11
 H									Chilion			כִּלְיוֹן		Ruth 1:2
 H									Cosam			קָסַםה		?
 H									Cushi			כּוּשִׁי		Zeph 1:1
@@ -61,7 +61,7 @@ H									Emmor			חֲמוֹר/(Emmor)		Acts 7:16
 H									Enoch			חֲנוֹךְ/(Enoch)		Gen 4:17
 H									Enos			אֱנוֹשׁ
 wH									Er			עֵר
-H									Esau			עֵשָׂו		Obad 1:6, Heb 11:20
+H									Esau			עֵשָׂו		Gen Obad 1:6, Heb 11:20
 H									Esli			אֶלְיְהוֹעֵינַיה		?
 H									Esrom			חֶצְרוֹן
 H									Esther			אֶסְתֵּר		Esther 2:7
@@ -84,9 +84,9 @@ H									Hezekiah			חִזְקִיָּה		Mic 1:1
 H									Hezron			חֶצְרוֹן		Ruth 4:18
 H									Hezekiah			חִזְקִיָּה
 H									Hosea			הוֹשֵׁעַ		Hos 1:1
-H									Isaac			יִצְחָק
+H									Isaac			יִצְחָק		Gen 20?
 H									Isaiah			יְשַׁעְיָה
-wH									Israel			יִשְׂרָאֵל
+wH									Israel			יִשְׂרָאֵל		Gen 32:28
 H									Issachar			יִשָּׂשׂכָר		Rev 7:7
 H									Jacobus			יַעֲקֹב
 H									Jacob			יַעֲקֹב		Mal 1:2
@@ -104,29 +104,27 @@ H									Jesus			יְהוֹשׁוּעַ
 #H									Joanan			?		Luke 3:27
 H									Joash			יוֹאָשׁ		Hos 1:1
 H									Joatham			יוֹתָם
-H				id					Job			אִיּוֹב		Jam 5:11
-H									Joel			יוֹאֵל		Acts 2:16
-H									Jonah			יוֹנָה		Matt 16:4
+H				id					Job			אִיּוֹב		Job, Jam 5:11
+H									Joel			יוֹאֵל		Joel, Acts 2:16
+H									Jonah			יוֹנָה		Jonah, Matt 16:4
 #H									Jonam			?		Luke 3:30
 H									Joram			יוֹרָם
 H									Jorim			יוֹרָםה		?
 H									Josaphat			יְהוֹשָׁפָט
-H									Joseph			יוֹסֵף
+H									Joseph			יוֹסֵף		Gen
 H									Joses			יוֹסֵףה		?
 H									Joshua			יְהוֹשׁוּעַ
 H									Josiah			יאֹשִׁיָּה		Zeph 1:1
 H									Jotham			יוֹתָם		Hos 1:1
 H									Jodah			יֻטָּה/יְהוּדָה		Luke 3:26
 H									Judah			יְהוּדָה		Ezra 1:3
-H									Judas			יְהוּדָה
-wH									Jude			יְהוּדָה
 wH									Kis			קִישׁ		Acts 13:21
 wH									Kore			קֹרַח		Jude 11
 H									Laban			לָבָן		Gen 24:29
-H									Lamech			לֶמֶךְ
-H									Leah			לֵאָה		Ruth 4:11
-wH									Levi			לֵוִי
-wH									Lot			לוֹט		Luke 17:28
+H									Lamech			לֶמֶךְ		Gen
+H									Leah			לֵאָה		Gen, Ruth 4:11
+wH									Levi			לֵוִיה		Gen
+wH									Lot			לוֹט		Gen, Luke 17:28
 wH									Maat			מָעַטה		?
 H									Maath			מָעַטה		?
 H									Magog			מָגוֹג
@@ -135,7 +133,6 @@ H									Malachi			מַלְאָכִי		Mal 1:1
 H									Maleleel			מַהֲלַלְאֵל
 H									Manasseh			מְנַשֶּׁה		Rev 7:6
 H									Manoah			מָנוֹחַ		Judges 13:2 father of Samson
-H									Mary			מִרְיָם
 H									Mathusala			מְתוּשֶׁלַח
 H									Matthan			מַתָּן
 H									Matthat			מַתָּת
@@ -175,7 +172,7 @@ H									Ozias			עֻזִּיָּה
 H									Peleg			פֶלֶג
 H									Perez			פֶרֶץ
 H									Pharaoh			פַרְעֹה		Acts 7:13
-H									Rachel			רָחֵל		Matt 2:18
+H									Rachel			רָחֵל		Gen
 H									Ragau			רְעוּ
 H									Rahab			רָחָב
 wH									Ram			רָם		Ruth 4:19
@@ -231,12 +228,13 @@ H									Samaritans			שֹׁמְרוֹן
 H									Tyrians			צֹר		Acts 12:20
 
 # Places
+H									Aram			אֲרָם		Gen, esp. Paddan Aram
 H									Azotus			אַשְׁדּוֹד		Acts 8:40 Ashdod
 H									Babylon			בָּבֶלה		?
 H									Bethel			בֵּֽית-אֵ֑ל		Gen 28:19 (Maqaf changed to hyphen)
 H									Bethlehem			בֵּית-לֶחֶם		Ruth 1:1
 H									Bosor			בְּעוֹר		2 Pet 2:15
-#									Canaan			כִּנַעַן		Acts 7:11 but entered as a person above
+#									Canaan			כִּנַעַן		Gen, Acts 7:11 but entered as a person above
 H									Damascus			דַּמֶּשֶׂק
 H									Eden			עֵדֶן		Gen 2:15
 wH									Edom			אֱדֹם		Obad 1:1
@@ -256,17 +254,22 @@ H									Jordan			יַרְדֵּן
 H									Kedron			קִדְרוֹן		John 18:1
 H									Lydda			לֹד		Acts 9:32
 wH									Nod			נוֹד		Gen 4:16
+H									Paddan			פַּדַּ֣ן		Gen (as Paddan Aram)
+H									Peniel			פְּנִיאֵל		Gen 32:31
+H									Penuel			פְּנוּאֵ֑ל		Gen 32:31
 H									Persia			פָרַס		Ezra 1:1
 H									Rama			רָמָה		Matt 2:18
 H									Salem			שָׁלֵם
 H									Samaria			שֹׁמְרוֹן		Luke 17:11
 H									Sarepta			צֱרְפַת		Luke 4:26
 H									Saron			שָׁרוֹן		Acts 9:35
-H									Shechem			שְׁכֶם		Acts 7:16
+H									Seir			שֵׂעִיר		Gen 33:14
+H									Shechem			שְׁכֶם		Gen 12:6, 33:18, Acts 7:16
 H									Shushan			שׁוּשַׁן		Neh 1:1
 H									Sidon			צִידוֹן		Acts 12:20
 H									Sinai			סִינַי		Acts 7:30
-H									Sodom			סְדֹם
+H									Sodom			סְדֹם		Gen
+H									Succoth			סֻכּֽוֹת		Gen 33:17
 wdH									Syria			אֲרָם/(Syria)
 wH									Teman			תֵּימָן		Obad 1:9 district of Edom
 H									Tyre			צֹר
@@ -279,3 +282,7 @@ H									Chislev			כִּסְלֵו		Neh 1:1
 # Other
 dH									Ecclesiastes			קֹהֶלֶת/(orator)
 H									Ephphatha			פְתַח
+
+# Post-processing -- we superscript people and place names that end with El or Yah
+									ʼēl			\sup ʼēl\sup*)
+									yāh			\sup yāh\sup*)
