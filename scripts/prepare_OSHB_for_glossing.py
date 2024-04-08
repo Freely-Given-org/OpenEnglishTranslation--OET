@@ -29,7 +29,7 @@ Script taking our OSHB morpheme table (TSV)
 Also inserts our own glosses (Gen,Ruth,etc.) into some columns.
 
 (This is run AFTER convert_OSHB_XML_to_TSV.py
-    and BEFORE convert_ClearMaculaOT_to_TSV.py and apply_Clear_Macula_OT_glosses.py.)
+    and BEFORE convert_ClearMaculaOT_to_our_TSV.py and apply_Clear_Macula_OT_glosses.py.)
 
 OSHB morphology codes can be found at https://hb.openscriptures.org/parsing/HebrewMorphologyCodes.html.
 
@@ -61,9 +61,9 @@ PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 DEBUGGING_THIS_MODULE = False
 
 
-OSHB_TSV_INPUT_FILEPATH = Path( '../sourceTexts/rawOSHB/OSHB.original.flat.morphemes.tsv' )
-OUR_PREDONE_GLOSSES_FILEPATH = Path( 'WLCHebrewGlosses.txt' )
-TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/WLC_glosses.morphemes.tsv' )
+OSHB_TSV_INPUT_FILEPATH = Path( '../sourceTexts/rawOSHB/OSHB.parsedOriginal.flat.morphemes.tsv' )
+OUR_PREDONE_GLOSSES_FILEPATH = Path( 'ourWLCHebrewGlosses.txt' )
+TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/our_WLC_glosses.morphemes.tsv' )
 
 
 state = None

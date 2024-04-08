@@ -22,11 +22,12 @@ original_NT_wordtable = ../intermediateTexts/modified_source_VLT_ESFM/OET-LV_NT_
 CNTR_lemma_table = ../../CNTR-GNT/derivedFormats/lemmas.alphabetical.tsv
 CNTR_book_table = ../../CNTR-GNT/sourceExports/book.csv
 CNTR_collation_table = ../../CNTR-GNT/sourceExports/collation.csv extract_VLT_NT_to_ESFM.py
-all_OT_TSV_tables := ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv ../intermediateTexts/glossed_OSHB/all_glosses.words.tsv
-WLC_OT_TSV_table := ../intermediateTexts/glossed_OSHB/WLC_glosses.morphemes.tsv
+expanded_OT_TSV_tables := ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv
+initial_OT_TSV_tables := ../intermediateTexts/glossed_OSHB/all_glosses.words.tsv ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv
+WLC_OT_TSV_table := ../intermediateTexts/glossed_OSHB/our_WLC_glosses.morphemes.tsv
 Clear_Bible_OT_lowfat_TSV := ../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTreesAbbrev.OT.morphemes.tsv
 Clear_Bible_NT_lowfat_TSV := ../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTreesAbbrev.NT.words.tsv
-Clear_Bible_OT_lowfat_XML := $(wildcard ../../Forked/macula-hebrew/lowfat/*.xml)
+Clear_Bible_OT_lowfat_XML := $(wildcard ../../Forked/macula-hebrew/WLC/lowfat/*.xml)
 Clear_Bible_NT_lowfat_XML := $(wildcard ../../Forked/macula-greek/Nestle1904/lowfat/*.xml)
 WLC_XML := $(wildcard ../../Forked/OS-morphhb/wlc/*.xml)
 BibleTags_TSV = ../sourceTexts/BibleTagsOriginals/BibTags.OT.words.tsv ../sourceTexts/BibleTagsOriginals/BibTags.NT.words.tsv
@@ -34,7 +35,7 @@ BibleTags_OT_TSV_table = ../sourceTexts/BibleTagsOriginals/BibTags.OT.words.tsv
 BibleTags_NT_TSV_table = ../sourceTexts/BibleTagsOriginals/BibTags.NT.words.tsv
 BibleTags_OT_USFM := $(wildcard ../../Forked/bibletags-usfm/usfm/uhb/*.usfm)
 BibleTags_NT_USFM := $(wildcard ../../Forked/bibletags-usfm/usfm/ugnt/*.usfm)
-short_OSHB_TSV := ../sourceTexts/rawOSHB/OSHB.original.flat.morphemes.tsv
+short_OSHB_TSV := ../sourceTexts/rawOSHB/OSHB.parsedOriginal.flat.morphemes.tsv
 
 #=== Script declarations =======================
 
@@ -80,28 +81,28 @@ $(final_LV_NT_ESFM): $(intermediate_LV_NT_ESFM) $(SBE) $(scripted_NT_updates) $(
 	@echo "\n\nRun ScriptedBibleEditor on NT ESFM files…\n"
 	@$(Python) $(SBE) ScriptedVLTUpdates -qe
 
-# $(intermediate_LV_OT_USFM): $(all_OT_TSV_table) extract_OSHB_OT_to_USFM.py
-# 	@echo "\n\nExtract OT from TSV table to USFM files…\n"
-# 	@$(Python) extract_OSHB_OT_to_USFM.py -e
+$(expanded_OT_TSV_tables): $(initial_OT_TSV_tables) $(Clear_Bible_OT_lowfat_TSV) $(scripted_OT_updates) add_tags_to_OT_word_table.py
+	@echo "\n\nAdd people/places/referent tags to OET OT word table…\n"
+	@$(Python) add_tags_to_OT_word_table.py -e
 
-$(intermediate_LV_OT_ESFM): $(all_OT_TSV_tables) extract_OSHB_OT_to_ESFM.py
+$(intermediate_LV_OT_ESFM): $(expanded_OT_TSV_tables) extract_glossed_OSHB_OT_to_ESFM.py
 	@echo "\n\nExtract OT from TSV table to ESFM files…\n"
-	@$(Python) extract_OSHB_OT_to_ESFM.py -e
+	@$(Python) extract_glossed_OSHB_OT_to_ESFM.py -e
 
-$(all_OT_TSV_tables): $(WLC_OT_TSV_table) $(Clear_Bible_OT_lowfat_TSV) apply_Clear_Macula_OT_glosses.py
+$(initial_OT_TSV_tables): $(WLC_OT_TSV_table) $(Clear_Bible_OT_lowfat_TSV) apply_Clear_Macula_OT_glosses.py
 	@echo "\n\nApply glosses from Macula to OT (and reorder)…\n"
 	@$(Python) apply_Clear_Macula_OT_glosses.py
-	@echo "\n\nCopying and renaming OT word and morpheme tables from glossed_OSHB/ to modified_source_glossed_OSHB_ESFM/…\n"
-	@cp -a ../intermediateTexts/glossed_OSHB/all_glosses.words.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv
-	@cp -a ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv
+	# @echo "\n\nCopying and renaming OT word and morpheme tables from glossed_OSHB/ to modified_source_glossed_OSHB_ESFM/…\n"
+	# @cp -a ../intermediateTexts/glossed_OSHB/all_glosses.words.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv
+	# @cp -a ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv
 
-$(WLC_OT_TSV_table): $(short_OSHB_TSV) prepare_OSHB_for_glossing.py WLCHebrewGlosses.txt
+$(WLC_OT_TSV_table): $(short_OSHB_TSV) prepare_OSHB_for_glossing.py ourWLCHebrewGlosses.txt
 	@echo "\n\nExpand columns in OT TSV and add our custom glosses…\n"
 	@$(Python) prepare_OSHB_for_glossing.py
 
-$(Clear_Bible_OT_lowfat_TSV): $(Clear_Bible_OT_lowfat_XML) $(WLC_OT_TSV_table) convert_ClearMaculaOT_to_TSV.py
+$(Clear_Bible_OT_lowfat_TSV): $(Clear_Bible_OT_lowfat_XML) $(WLC_OT_TSV_table) convert_ClearMaculaOT_to_our_TSV.py
 	@echo "\n\nConvert Macula Hebrew from XML files to TSV…\n"
-	@$(Python) convert_ClearMaculaOT_to_TSV.py
+	@$(Python) convert_ClearMaculaOT_to_our_TSV.py
 
 $(Clear_Bible_NT_lowfat_TSV): $(Clear_Bible_NT_lowfat_XML) $(BibleTags_NT_TSV_table) convert_ClearMaculaNT_to_TSV.py
 	@echo "\n\nConvert Macula Greek from XML files to TSV…\n"
@@ -126,9 +127,9 @@ $(expanded_NT_wordtable): $(original_NT_wordtable) $(Clear_Bible_NT_lowfat_TSV) 
 #=== RV stuff =======================
 
 $(RV_HTML): $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py convert_OET-RV_to_simple_HTML.py $(expanded_NT_wordtable)
-	@echo "\n\nCopying OT word and morpheme tables from auto_edited_OT_ESFM/ to ReadersVersion/…\n"
-	@cp -a ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_word_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_word_table.tsv
-	@cp -a ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_morpheme_table.tsv
+	# @echo "\n\nCopying OT word and morpheme tables from auto_edited_OT_ESFM/ to ReadersVersion/…\n"
+	# @cp -a ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_word_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_word_table.tsv
+	# @cp -a ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_morpheme_table.tsv
 	@echo "\n\nConnect OET-RV words to OET-LV word numbers…\n"
 	@$(Python) connect_OET-RV_words_via_OET-LV.py
 	@echo "\n\nConvert OET RV ESFM files to simple HTML…\n"
@@ -153,8 +154,8 @@ clean_LT_OT:
 	rm ../intermediateTexts/modified_source_glossed_OSHB_ESFM/*.ESFM
 	rm ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv
 	rm ../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTreesAbbrev.OT.morphemes.tsv
-	rm ../intermediateTexts/glossed_OSHB/WLC_glosses.morphemes.tsv
-	rm ../sourceTexts/rawOSHB/OSHB.original.flat.morphemes.tsv
+	rm ../intermediateTexts/glossed_OSHB/our_WLC_glosses.morphemes.tsv
+	rm ../sourceTexts/rawOSHB/OSHB.parsedOriginal.flat.morphemes.tsv
 
 clean_LT_NT:
 	rm ../intermediateTexts/auto_edited_VLT_ESFM/*.ESFM

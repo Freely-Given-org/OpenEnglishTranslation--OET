@@ -34,9 +34,9 @@ We discovered that the low-fat XML trees have the same information
 
 (This is run AFTER convert_OSHB_XML_to_TSV.py
                 and prepare_OSHB_for_glossing.py
-                and convert_ClearMaculaOT_to_TSV.py.)
+                and convert_ClearMaculaOT_to_our_TSV.py.)
 
-We also now convert the low-fat XML trees to a shortened TSV table
+We also now convert the low-fat XML trees to an abbreviated TSV table (dropping some unnecessary columns)
     so we now use that table here instead of the XML trees directly.
 
 OSHB morphology codes can be found at https://hb.openscriptures.org/parsing/HebrewMorphologyCodes.html.
@@ -59,19 +59,20 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2024-03-27' # by RJH
+LAST_MODIFIED_DATE = '2024-04-05' # by RJH
 SHORT_PROGRAM_NAME = "apply_Clear_Macula_OT_glosses"
 PROGRAM_NAME = "Apply Macula OT glosses"
-PROGRAM_VERSION = '0.61'
+PROGRAM_VERSION = '0.64'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
 
 
-OUR_TSV_INPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/WLC_glosses.morphemes.tsv' )
+OUR_TSV_INPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/our_WLC_glosses.morphemes.tsv' )
 LOWFAT_TSV_INPUT_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTreesAbbrev.OT.morphemes.tsv' ) # We use the smaller, abbreviated table
 
 OUR_MORPHEME_TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv' )
+OUR_LEMMA_TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/lemmas.tsv' )
 OUR_WORD_TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/all_glosses.words.tsv' )
 
 
@@ -85,6 +86,7 @@ class State:
         self.lowfat_TSV_input_folderpath = LOWFAT_TSV_INPUT_FILEPATH
 
         self.our_morpheme_TSV_output_filepath = OUR_MORPHEME_TSV_OUTPUT_FILEPATH
+        self.our_lemma_TSV_output_filepath = OUR_LEMMA_TSV_OUTPUT_FILEPATH
         self.our_word_TSV_output_filepath = OUR_WORD_TSV_OUTPUT_FILEPATH
 
         self.WLC_rows = []
@@ -117,6 +119,7 @@ def main() -> None:
             if fill_known_lowFat_English_contextual_glosses():
                 if do_auto_reordering():
                     save_filled_morpheme_TSV_file()
+                    save_lemma_TSV_file()
                     save_filled_word_TSV_file()
 # end of apply_Clear_Macula_OT_glosses.main
 
@@ -193,7 +196,7 @@ def loadOurSourceTable() -> bool:
 
 def loadOurLowFatTable() -> bool:
     """
-    Load the "LowFat" TSV table.
+    Load the abbreviated "LowFat" TSV table.
     """
     global LowFat_tsv_column_headers
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading our LowFat tsv file from {state.lowfat_TSV_input_folderpath}…")
@@ -310,7 +313,10 @@ def fill_known_lowFat_English_contextual_glosses() -> bool:
     num_empty_lowfat_word_glosses = num_word_glosses_added = num_word_glosses_skipped = num_contextual_word_glosses_added = 0
     num_empty_lowfat_morpheme_glosses = num_morpheme_glosses_added = num_morpheme_glosses_skipped = num_contextual_morpheme_glosses_added = 0
     for lowFatRow in state.lowFatRows:
-        # print( f"{lowFatRow=}" )
+        if DEBUGGING_THIS_MODULE:
+            print( f"{lowFatRow=}" )
+            if lowFatRow['FGRef'].startswith( 'GEN_13:11' ): missing_glosses_in_GEN_13_10
+
         if not lowFatRow['EnglishGloss'] and not lowFatRow['ContextualGloss']:
             if 'w' in lowFatRow['RowType']:
                 num_empty_lowfat_word_glosses += 1
@@ -321,20 +327,28 @@ def fill_known_lowFat_English_contextual_glosses() -> bool:
 
         if lowFatRow['OSHBid']:
             n = WLC_dict[lowFatRow['OSHBid']]
+            guessed = False
         else:
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Skipped low fat row without OSHBid: {lowFatRow['FGRef']}")
-            continue
+            # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Skipped low fat row without OSHBid: {lowFatRow['FGRef']} '{lowFatRow['WordOrMorpheme']}'")
+            n += 1 # Try the next row after the one using in the previous loop
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Next row is: {state.WLC_rows[n]}")
+            if state.WLC_rows[n]['NoCantillations'] != lowFatRow['WordOrMorpheme']:
+                logging.critical( f"Next row guess didn't match {lowFatRow['FGRef']} '{lowFatRow['WordOrMorpheme']}' '{state.WLC_rows[n]['NoCantillations']}'" )
+                continue
+            guessed = True
 
         WLC_row = state.WLC_rows[n]
         dPrint('Info', DEBUGGING_THIS_MODULE, f"  Matched row: {WLC_row['Ref']}")
 
-        assert WLC_row['OSHBid'] == lowFatRow['OSHBid'], f"Should be equal: '{WLC_row['OSHBid']}' vs '{lowFatRow['OSHBid']}'"
+        # Not true if we just guessed above
+        if not guessed:
+            assert WLC_row['OSHBid'] == lowFatRow['OSHBid'], f"Should be equal: '{WLC_row['OSHBid']}' vs '{lowFatRow['OSHBid']}'"
         if WLC_row['RowType'].endswith('K'):
             pass
             # if WLC_row['RowType']!='mK' or lowFatRow['RowType']!='M': # We still have some problems, e.g., at 'JOS_24:8w1','SA1_2:3w13','SA1_7:9w6'
             #     assert WLC_row['RowType'][:-1] == lowFatRow['RowType'], f"Should be equal: '{WLC_row['RowType'][:-1]}(K)' vs '{lowFatRow['RowType']}'"
         else:
-            if WLC_row['Ref'] not in ('JER_11:15w10b','AMO_6:14w14b'): # Why ???
+            if not guessed and WLC_row['Ref'] not in ('JER_11:15w10b','AMO_6:14w14b'): # Why ???
                 assert WLC_row['RowType'] == lowFatRow['RowType'], f"Should be equal: '{WLC_row['RowType']}' vs '{lowFatRow['RowType']}'"
         if not WLC_row['WordOrMorpheme'] == lowFatRow['WordOrMorpheme']:
             dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Should be equal: '{WLC_row['WordOrMorpheme']}' vs '{lowFatRow['WordOrMorpheme']}'" )
@@ -580,6 +594,42 @@ def save_filled_morpheme_TSV_file() -> bool:
 # end of apply_Clear_Macula_OT_glosses.save_filled_morpheme_TSV_file
 
 
+def save_lemma_TSV_file() -> bool:
+    """
+    Save the filled TSV table with a row for each lemma
+
+    We do some final fixes
+    """
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nWILL BE Exporting filled WLC lemma table as a single flat TSV file to {state.our_lemma_TSV_output_filepath}…" )
+
+    return
+    BibleOrgSysGlobals.backupAnyExistingFile( state.our_lemma_TSV_output_filepath, numBackups=5 )
+
+    with open( state.our_lemma_TSV_output_filepath, 'wt', encoding='utf-8' ) as tsv_output_file:
+        tsv_output_file.write('\ufeff') # Write BOM
+        writer = DictWriter( tsv_output_file, fieldnames=WLC_tsv_column_headers, delimiter='\t' )
+        writer.writeheader()
+        for n,row_dict in enumerate( state.WLC_rows, start=1 ):
+            if row_dict['RowType']=='m' and not row_dict['MorphemeGloss']:
+                # if 0 and row_dict['NoCantillations'] in ('אֹתָ','אֹת'):
+                if row_dict['Strongs'] == '853':
+                    row_dict['MorphemeGloss'] = 'DOM'
+                elif row_dict['Strongs'] == 'k':
+                    row_dict['MorphemeGloss'] = 'as/like'
+                elif row_dict['Strongs'] == 'l':
+                    row_dict['MorphemeGloss'] = 'to/for'
+                elif row_dict['Strongs'] == 'm':
+                    row_dict['MorphemeGloss'] = 'from'
+                elif row_dict['Strongs'] == '6440':
+                    row_dict['MorphemeGloss'] = 'face/front'
+                # assert row_dict['MorphemeGloss'], f"{n} {row_dict}"
+            writer.writerow( row_dict )
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {len(state.WLC_rows):,} morpheme data rows written." )
+
+    return True
+# end of apply_Clear_Macula_OT_glosses.save_lemma_TSV_file
+
+
 def save_filled_word_TSV_file() -> bool:
     """
     Save the TSV table with a row for each word
@@ -590,13 +640,13 @@ def save_filled_word_TSV_file() -> bool:
 
     # Firstly adjust the column headers
     WLC_tsv_header_line = '\t'.join( WLC_tsv_column_headers )
-    word_tsv_column_header_line = ( WLC_tsv_header_line.replace( '\tRowType\t', '\tRowType\tMorphemeRowList\t') # Add column
+    word_tsv_column_header_line = ( WLC_tsv_header_line.replace( '\tRowType\t', '\tRowType\tLemmaRowList\t') # Add column
                                                 .replace( 'WordOrMorpheme', 'Word' ) # rename this column
                                                 # .replace( '\tMorphemeGloss', '' ) # delete this column
                                                 # .replace( '\tContextualMorphemeGloss', '' ) # delete this column
                                                 .replace( 'MorphemeGloss', 'MorphemeGlosses' ) # rename these two columns
                                 )
-    assert word_tsv_column_header_line == 'Ref\tOSHBid\tRowType\tMorphemeRowList\tStrongs\tCantillationHierarchy\tMorphology\tWord\tNoCantillations\tMorphemeGlosses\tContextualMorphemeGlosses\tWordGloss\tContextualWordGloss\tGlossCapitalisation\tGlossPunctuation\tGlossOrder\tGlossInsert', f"{word_tsv_column_header_line=}"
+    assert word_tsv_column_header_line == 'Ref\tOSHBid\tRowType\tLemmaRowList\tStrongs\tCantillationHierarchy\tMorphology\tWord\tNoCantillations\tMorphemeGlosses\tContextualMorphemeGlosses\tWordGloss\tContextualWordGloss\tGlossCapitalisation\tGlossPunctuation\tGlossOrder\tGlossInsert', f"{word_tsv_column_header_line=}"
     word_tsv_column_headers = word_tsv_column_header_line.split( '\t' )
     assert len(word_tsv_column_headers) == len(WLC_tsv_column_headers)+1 == 17, f"{len(word_tsv_column_headers)=} {len(WLC_tsv_column_headers)=}"
     
@@ -617,7 +667,7 @@ def save_filled_word_TSV_file() -> bool:
                 word_entry = {}
                 for new_header in word_tsv_column_headers:
                     word_entry[new_header] = original_column_dict['RowType'].replace('w','') if new_header=='RowType' \
-                                            else n if new_header=='MorphemeRowList' \
+                                            else n if new_header=='LemmaRowList' \
                                             else original_column_dict['WordOrMorpheme' if new_header=='Word'
                                                                        else 'MorphemeGloss' if new_header=='MorphemeGlosses'
                                                                        else 'ContextualMorphemeGloss' if new_header=='ContextualMorphemeGlosses'
@@ -680,7 +730,7 @@ def save_filled_word_TSV_file() -> bool:
                     word_entry[new_header] = ( ref if new_header=='Ref'
                                         else OSHB_id if new_header=='OSHBid'
                                         else original_column_dict['RowType'].replace('M','') if new_header=='RowType'
-                                        else ','.join(morpheme_row_list) if new_header=='MorphemeRowList'
+                                        else ','.join(morpheme_row_list) if new_header=='LemmaRowList'
                                         else ','.join(morpheme_strongs_list) if new_header=='Strongs'
                                         else ','.join(morpheme_morphology_list) if new_header=='Morphology'
                                         else ','.join(morpheme_list) if new_header=='Word'
@@ -702,7 +752,7 @@ def save_filled_word_TSV_file() -> bool:
                 # print( f"{n}: {original_column_dict}" )
                 word_entry = {}
                 for new_header in word_tsv_column_headers:
-                    word_entry[new_header] = ( n if new_header=='MorphemeRowList'
+                    word_entry[new_header] = ( n if new_header=='LemmaRowList'
                                             else original_column_dict['WordOrMorpheme'].replace('KJV:','KJB: ') if new_header=='Word'
                                             else original_column_dict['MorphemeGloss' if new_header=='MorphemeGlosses'
                                                                     else 'ContextualMorphemeGloss' if new_header=='ContextualMorphemeGlosses'

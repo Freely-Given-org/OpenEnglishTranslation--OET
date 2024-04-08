@@ -55,7 +55,7 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2024-03-08' # by RJH
+LAST_MODIFIED_DATE = '2024-04-05' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
 PROGRAM_VERSION = '0.95'
@@ -67,7 +67,7 @@ DEBUGGING_THIS_MODULE = False
 VLT_ESFM_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_VLT_ESFM/' ) # We copy our {BBB}_gloss.ESFM files into this folder
 RV_ESFM_OUTPUT_FOLDERPATH = Path( '../translatedTexts/ReadersVersion/' ) # We also copy the wordfile to this folder
 
-OUR_EXPORT_TABLE_FILENAME = 'OET-LV_NT_word_table.10columns.tsv' # We make this first 9-column version here (from the collation table)
+OUR_EXPORT_TABLE_FILENAME = 'OET-LV_NT_word_table.10columns.tsv' # We make this first 10-column version here (from the collation table)
 
 
 state = None

@@ -5,7 +5,7 @@
 #
 # Script handling convert_OSHB_XML_to_TSV function
 #
-# Copyright (C) 2022 Robert Hunt
+# Copyright (C) 2022-2024 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -31,7 +31,7 @@ Script extracting the data out of the OSHB XML files
 OSHB morphology codes can be found at https://hb.openscriptures.org/parsing/HebrewMorphologyCodes.html.
 """
 from gettext import gettext as _
-from typing import Dict, List, Tuple
+# from typing import Dict, List, Tuple
 from pathlib import Path
 from csv import DictWriter
 from xml.etree import ElementTree
@@ -42,10 +42,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2022-10-19' # by RJH
+LAST_MODIFIED_DATE = '2024-04-04' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OSHB_XML_to_TSV"
 PROGRAM_NAME = "Convert OSHB WLC OT XML into TSV/JSON files"
-PROGRAM_VERSION = '0.57'
+PROGRAM_VERSION = '0.58'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -53,8 +53,8 @@ DEBUGGING_THIS_MODULE = False
 
 BREAK_MORPHEMES = True
 OSHB_XML_INPUT_FOLDERPATH = Path( '../../Forked/OS-morphhb/wlc/' )
-OSHB_TSV_OUTPUT_FILEPATH_STRING = '../../OpenEnglishTranslation--OET/sourceTexts/rawOSHB/OSHB.original.tsv' # str so we can adjust it later
-OSHB_JSON_OUTPUT_FILEPATH_STRING = '../../OpenEnglishTranslation--OET/sourceTexts/rawOSHB/OSHB.original.json'
+OSHB_TSV_OUTPUT_FILEPATH_STRING = '../../OpenEnglishTranslation--OET/sourceTexts/rawOSHB/OSHB.parsedOriginal.tsv' # str so we can adjust it later
+OSHB_JSON_OUTPUT_FILEPATH_STRING = '../../OpenEnglishTranslation--OET/sourceTexts/rawOSHB/OSHB.parsedOriginal.json'
 
 OUTPUT_FIELDNAMES = ['FGID','Ref','RowType','Special','Strongs','CantillationHierarchy','Morphology','OSHBid','WordOrMorpheme' if BREAK_MORPHEMES else 'Word']
 OUTPUT_FIELDNAMES_COUNT = len( OUTPUT_FIELDNAMES )
@@ -214,7 +214,11 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
                     n = verse_element.attrib.get('n')
                     noteType = verse_element.attrib.get('type')
                     noteText = verse_element.text
-                    if readable_ref=='JER_48:44': noteText = noteText.strip() # Need to strip multiline note
+                    # if readable_ref=='JER_48:44':
+                    #     noteText = noteText.strip() # Need to strip multiline note
+                    #     # NOTE: This doesn't work! We had to edit Jer.xml in Forked/OS-morphhb/wlc/
+                    #     while '  ' in noteText: noteText = noteText.replace( '  ', ' ' )
+                    #     print( f"{readable_ref} {noteText=}" )
                     vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Got note: {readable_ref} {n=} {noteType=} {noteText=}" )
                     if noteType in ('variant','alternative','exegesis'):
                         if noteType in ('variant','alternative'):
@@ -251,7 +255,14 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
                                     noteText = f"{noteText}{noteChild.text}"
                                     assert 'None' not in noteText, f"BAD note: {readable_ref} {n=} {noteType=} {noteText=}"
                             else: print(noteChild); halt
+                        # if readable_ref=='JER_48:44':
+                        #     noteText = noteText.strip() # Need to strip multiline note
+                        #     # NOTE: This doesn't work! We had to edit Jer.xml in Forked/OS-morphhb/wlc/
+                        #     while '  ' in noteText: noteText = noteText.replace( '  ', ' ' )
+                        #     print( f"{readable_ref} {noteText=}" )
                         vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Now note: {readable_ref} {n=} {noteType=} {noteText=}" )
+                        assert '  ' not in noteText and noteText.strip()==noteText
+                        # if readable_ref=='JER_49:25': halt # Next note afterwards
                     else: # not 'variant'
                         assert noteText
                         for attrib,value in verse_element.items():
@@ -287,8 +298,8 @@ def export_table_to_files() -> bool:
     """
     Use state.flat_array to export the TSV and JSON.
     """
-    OSHB_TSV_output_filepath = Path( OSHB_TSV_OUTPUT_FILEPATH_STRING.replace( '.original.', '.original.flat.morphemes.' )
-                if BREAK_MORPHEMES else OSHB_TSV_OUTPUT_FILEPATH_STRING.replace( '.original.', '.original.flat.words.' ) )
+    OSHB_TSV_output_filepath = Path( OSHB_TSV_OUTPUT_FILEPATH_STRING.replace( '.parsedOriginal.', '.parsedOriginal.flat.morphemes.' )
+                if BREAK_MORPHEMES else OSHB_TSV_OUTPUT_FILEPATH_STRING.replace( '.parsedOriginal.', '.parsedOriginal.flat.words.' ) )
     print( f"Exporting WLC table as a single flat TSV file ({OUTPUT_FIELDNAMES_COUNT} columns) to {OSHB_TSV_output_filepath}…" )
     with open( OSHB_TSV_output_filepath, 'wt', encoding='utf-8' ) as tsv_output_file:
         tsv_output_file.write('\ufeff') # Write BOM
@@ -298,13 +309,13 @@ def export_table_to_files() -> bool:
             rowDict = {k:v for k,v in zip(OUTPUT_FIELDNAMES,row)}
             writer.writerow( rowDict )
 
-    OSHB_JSON_output_filepath = Path( OSHB_JSON_OUTPUT_FILEPATH_STRING.replace( '.original.', '.original.flat.morphemes.' )
-                if BREAK_MORPHEMES else OSHB_JSON_OUTPUT_FILEPATH_STRING.replace( '.original.', '.original.flat.words.' ) )
+    OSHB_JSON_output_filepath = Path( OSHB_JSON_OUTPUT_FILEPATH_STRING.replace( '.parsedOriginal.', '.parsedOriginal.flat.morphemes.' )
+                if BREAK_MORPHEMES else OSHB_JSON_OUTPUT_FILEPATH_STRING.replace( '.parsedOriginal.', '.parsedOriginal.flat.words.' ) )
     print( f"Exporting WLC table as a single flat JSON file to {OSHB_JSON_output_filepath}…" )
     with open( OSHB_JSON_output_filepath, 'wt', encoding='utf-8' ) as json_output_file:
         json.dump( state.flat_array, json_output_file, indent=2 )
-    OSHB_JSON_output_filepath = Path( OSHB_JSON_OUTPUT_FILEPATH_STRING.replace( '.original.', '.original.nested.morphemes.' )
-                if BREAK_MORPHEMES else OSHB_JSON_OUTPUT_FILEPATH_STRING.replace( '.original.', '.original.nested.words.' ) )
+    OSHB_JSON_output_filepath = Path( OSHB_JSON_OUTPUT_FILEPATH_STRING.replace( '.parsedOriginal.', '.parsedOriginal.nested.morphemes.' )
+                if BREAK_MORPHEMES else OSHB_JSON_OUTPUT_FILEPATH_STRING.replace( '.parsedOriginal.', '.parsedOriginal.nested.words.' ) )
     print( f"Exporting WLC table as a single nested book/chapter/verse JSON file to {OSHB_JSON_output_filepath}…" )
     with open( OSHB_JSON_output_filepath, 'wt', encoding='utf-8' ) as json_output_file:
         json.dump( state.books_array, json_output_file, indent=2 )
