@@ -55,10 +55,10 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.OriginalLanguages import Hebrew
 
 
-LAST_MODIFIED_DATE = '2024-04-05' # by RJH
+LAST_MODIFIED_DATE = '2024-04-11' # by RJH
 SHORT_PROGRAM_NAME = "convert_ClearMaculaOT_to_our_TSV"
 PROGRAM_NAME = "Extract and Apply Macula OT glosses"
-PROGRAM_VERSION = '0.35'
+PROGRAM_VERSION = '0.36'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -252,7 +252,7 @@ def loadLowFatXMLGlosses() -> bool:
                 break # gone beyond the number of chapters
 
             # First make a table of parents so we can find them later
-            parentMap = {child:parent for parent in chapterTree.iter() for child in parent if child.tag in ('w','wg')}
+            parentMap = {child:parent for parent in chapterTree.iter() for child in parent if child.tag in ('w','wg','c')}
             dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Loaded {len(parentMap):,} parent entries." )
 
             # Now load all the word (w) fields for the chapter into a temporary list
@@ -296,6 +296,7 @@ def loadLowFatXMLGlosses() -> bool:
                     # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    {ref} {longID} {lang} '{wordOrMorpheme}' {English=} {gloss=}")
 
                     compound = elem.get('compound')
+                    assert not compound # it seems to have gone
                     column_counts['compound'][compound] += 1
 
                     stem = elem.get('stem')
@@ -337,13 +338,19 @@ def loadLowFatXMLGlosses() -> bool:
                         assert '’' not in English, f"{theirRef=} {wordOrMorpheme=} {English=}"
                     else: English = '' # Instead of None
 
+                    # Get all the parent elements so we can determine the nesting
                     startElement = elem
                     nestingBits = []
-                    while True:
+                    for _safetyCheck in range( 22 ): # This is the max number of expected nesting levels -- unexpectedly high
                         parentElem = parentMap[startElement]
                         if parentElem.tag == 'sentence': break
-                        assert parentElem.tag == 'wg'
+                        assert parentElem.tag in ('wg','c'), f"{elem.tag=} {theirRef=} {wordOrMorpheme=} {gloss=} {English=} {parentElem.tag=}"
                         pClass, pRole, pRule = parentElem.get('class'), parentElem.get('role'), parentElem.get('rule')
+                        if parentElem.tag == 'c':
+                            # assert not pClass and not pRole and not pRule, f"{pClass=} {pRole=} {pRule=}" # Had pRole='o' somewhere
+                            compound = True
+                        else:
+                            assert parentElem.tag == 'wg'
                         if pRole:
                             if pRule: # have both
                                 nestingBits.append( f'{pRole}={pRule}' )
@@ -355,6 +362,7 @@ def loadLowFatXMLGlosses() -> bool:
                         #     # assert pClass=='compound', f"{theirRef} has no role/rule {pClass=} {nestingBits}"
                         #     print( f"{theirRef} has no role/rule {pClass=} {nestingBits}" ) # We now have empty wg's around the words for the entire sentence (but not including the <p> with <milestone>)
                         startElement = parentElem
+                    else: we_ran_out_of_loops
                     if len(nestingBits) >= max_nesting_level:
                         max_nesting_level = len(nestingBits) + 1
 
@@ -855,7 +863,7 @@ def save_filled_TSV_file() -> bool:
                 else: blank_counts[fieldname] += 1
                 sets[fieldname].add( value )
         for fieldname,count in blank_counts.items():
-            assert count < len(state.lowFatWordsAndMorphemes), f"Field is never filled: '{fieldname}'"
+            assert count < len(state.lowFatWordsAndMorphemes), f"save_filled_TSV_file: '{fieldname}' field is never filled"
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nCounts of non-blank fields for {len(state.lowFatWordsAndMorphemes):,} rows:" )
         for fieldname,count in non_blank_counts.items():
             non_blank_count_str = 'all' if count==len(state.lowFatWordsAndMorphemes) else f'{count:,}'

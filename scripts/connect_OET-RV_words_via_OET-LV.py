@@ -64,10 +64,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2024-03-26' # by RJH
+LAST_MODIFIED_DATE = '2024-04-10' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.65'
+PROGRAM_VERSION = '0.66'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -934,6 +934,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Bethlehem', 'Baʸthleʼem'),('Bethlehem', 'Baʸthleʼem/Bēyt-leḩem'),
             ('Boaz','Boʼoz'),('Boaz','Boʼoz/Boˊaz'),
             ('Caesarea', 'Kaisareia'),
+            ('Canaan', 'Kinaˊan'),
             ('Capernaum', 'Kafarnaʼoum'),
             ('Cappadocia', 'Kappadokia'),
             ('David','Dawid'),('David','Dawid/Dāvid'),
@@ -997,6 +998,8 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Timothy', 'Timotheos'),
             ('Tyre', 'Turos'),('Tyre', 'Turos/Tsor'),
             ('Uzziah', 'Ozias'),('Uzziah', 'Ozias/ˊUzziyyāh'),
+            ('Yacob', 'Yaˊaqov'),
+            ('Yehuda', 'Yəhūdāh'),
             ('Yeshua', 'Yaʸsous'),('Yeshua', 'Yaʸsous/Yəhōshūˊa'), ("Yeshua's", 'Yaʸsous'),("Yeshua's", 'Yaʸsous/Yəhōshūˊa'),
             ('Yohan', 'Yōannaʸs'),
             ('Yoppa', 'Yoppaʸ'),

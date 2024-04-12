@@ -1,4 +1,4 @@
-\id GEN - Open English Translation—Readers' Version (OET-RV) v0.0.18
+\id GEN - Open English Translation—Readers' Version (OET-RV) v0.0.20
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 GEN
@@ -9,10 +9,10 @@
 \toc3 Gen.
 \mt1 Genesis
 \is1 Introduction
-\ip The meaning of the word \bk Genesis\bk* is ‘source’ or ‘beginning’. This document describes the creation of space and of our planet and its contents, the origin of people, and the beginning of sin and suffering here in the world. XXXX Written again here the account concerning the people chosen by God and the carrying din them there to place he promised them.
-\ip Divided of two this the document:
-\ip 1.) The making of world and the account concerning the people. Here can be read the account concerning Adam and ki Eve, the concerning Kayin and ki Abil, and the concerning Noah and the pegsipuk of water, and the concerning the tall house there to Babil.
-\ip 2.) The account concerning the first elders of Israilita. Abraham the first elder of Israilita became famous due to faith and trusting din and of obedience din of suhu of God. Egpakasinundul also the account concerning his son Yitshak (Isaac), and his grandson Yacob (Jacob, also called ‘Yisra'el’ or ‘Israel’), and the ten and two (12) child of Yacob iyan source of ten and two (12) descendants of Yisra'el. Told also here the concerning the child of Yacob Yosef and the what happened him iyan reason of went to of Egypt Yacob other of his children.
+\ip The meaning of the word \bk Genesis\bk* is ‘source’ or ‘beginning’. This document describes the creation of space and of our planet and its contents, the origin of people, and the beginning of sin and suffering here in the world. This account also describes how God chose one particular people group and how we brought them to the land that he had promised them.
+\ip This document has two main parts:
+\ip 1.) The making of world and the account of the first two people and then the first ten generations of their descendants. Here can be read the account concerning Adam and ki Eve, the concerning Kayin and ki Abil, and the concerning Noah and the pegsipuk of water, and the concerning the tall house there to Babil.
+\ip 2.) The account concerning the first elders of Israilita. Abraham the first elder of Israilita became famous due to faith and trusting din and of obedience din of suhu of God. Egpakasinundul also the account concerning his son Yitshak (Isaac), and his grandson Yacob (Jacob, also called ‘Yisra'el’ or ‘Israel’), and the ten and two (12) child of Yacob iyan source of ten and two (12) descendants of Yisra'el. Told also here the concerning the child of Yacob Yosef and the what happened him iyan reason of went to of Mitsrayim \add (Egypt)\add* Yacob other of his children.
 \ip Read ta again here the account concerning the various people proliferated here of ampew of land and migmannenasud e. Labew of all, told here the large work of God making of sky/heaven and land and of all nakatahu here.
 \ip There in final of account, is told the without ending promise of God of his people. Not forgotten of God his promise and not din indeed ignore the his people because taught and helping din them. And/Now he the judging and punishing of all doing of bad.
 \iot Main components of this account
@@ -25,7 +25,7 @@
 \io1 The Hebrews patriarchs: Abraham, Yitshak, and Yacob \ior 12:1–35:29\ior*
 \io1 The descendants of Esau \ior 36:1-43\ior*
 \io1 Yosef and his brothers \ior 37:1–45:28\ior*
-\io1 The Hebrews in Egypt \ior 46:1–50:26\ior*
+\io1 The Hebrews in Mitsrayim \add (Egypt)\add* \ior 46:1–50:26\ior*
 \rem This is still a very early look into the unfinished text of the \em Open English Translation\em* of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
@@ -182,7 +182,7 @@
 \s1 The humans get expelled from the garden
 \rem /s1 Adam and Eve Are Sent Out of the Garden
 \p
-\v 22 Then Yahweh¦1318 God¦1319 said¦1316, “See, the man has become like one of us, being aware of good¦1326 and evil. But now, he mustn't \add be allowed\add* to reach out his hand¦1333 and also take¦1334 \add fruit\add* from the tree¦1336 of life¦1337 and eat¦1338 it and live¦1339 forever¦1340.”\x + \xo 3:22: \xt Rev 22:14.\x*
+\v 22 Then Yahweh¦1318 God¦1319 said¦1316, “See, the man has become¦1322 like one of us, being aware of good¦1326 and evil. But now, he mustn't \add be allowed\add* to reach out his hand¦1333 and also take¦1334 \add fruit\add* from the tree¦1336 of life¦1337 and eat¦1338 it and live¦1339 forever¦1340.”\x + \xo 3:22: \xt Rev 22:14.\x*
 \v 23 So Yahweh¦1343 God¦1344 expelled \add them\add* out of the garden¦1345 in Eden to work the soil from which \add Adam\add* had been taken¦1353.
 \p
 \v 24 After he expelled them, he placed sentries on the east side of the garden¦1362 in Eden, as well as a fiery sword¦1370 that swung around in every direction to guard¦1372 the path¦1375 to the tree¦1376 of life¦1377.
@@ -203,7 +203,7 @@
 \v 9 \add Later\add* Yahweh¦1505 asked Kayin, “Where's your brother Abel?”
 \p “I don't¦1513 know¦1514,” he replied, “It's not my job to look after my brother.”
 \p
-\v 10 “What have you done?” Yahweh asked. “Your brother's¦1524 blood¦1523 is calling out to me from the ground.\x + \xo 4:10: \xt Heb 12:24.\x*
+\v 10 “What have you¦1521 done?” Yahweh asked. “Your brother's¦1524 blood¦1523 is calling out to me from the ground.\x + \xo 4:10: \xt Heb 12:24.\x*
 \v 11 So now you're cursed¦1532 and banished from the soil that your brother's¦1546 blood¦1545 soaked into as a result of your actions.
 \v 12 Whenever you till \add and plant\add* the ground, it¦1556 will no longer produce good yields for you. You'll be a fugitive and wandering¦1561 \add refugee\add* on the earth¦1564.”
 \p
@@ -286,8 +286,8 @@
 \rem /s1 Noah and the Flood; Human Wickedness; The Wickedness of Humankind; The Flood; The flood and the tower of Babel
 \p
 \v 1 When¦2255 people began¦2257 to multiply on the earth's surface¦2262, and¦2264 they¦2265 were having daughters¦2264,\x + \xo 6:1-4: \xt Yob 1:6; 2:1.\x*
-\v 2 God's sons¦2269 saw¦2268 that men's daughters¦2274 were beautiful, and they took¦2279 any that they wanted for themselves as wives.
-\v 3 Then Yahweh¦2287 said¦2286, “My Spirit won't tolerate people forever, because they¦2297 are physical beings, therefore their \add remaining\add* time will be 120 years.”
+\v 2 God's sons¦2269 saw¦2268 that men's daughters¦2274 were beautiful, and they took¦2279 any that they wanted for themselves as wives¦2281.
+\v 3 Then Yahweh¦2287 said¦2286, “My Spirit won't tolerate people forever, because they¦2297 are physical beings, therefore their \add remaining¦2290\add* time will be 120 years.”
 \v 4 The NEFILIM were on the earth¦2305 in those days¦2306 and also after¦2309 that, when the sons¦2314 of God went¦2313 to the daughters¦2318 of mankind and they bore children for them. INVESTIGATE They were the mighty \add warriors\add* of long ago—those famous men¦2326.\x + \xo 6:4: \xt Num 13:33.\x*
 \p
 \v 5 Then¦2332 Yahweh¦2331 saw¦2330 that the humankind's¦2335 wickedness on the earth¦2336 was extensive, and that every¦2344 inclination¦2339 of their inner thoughts¦2340 was only evil all day¦2346 long.\x + \xo 6:5-8: \xt Mat 24:37; Luk 17:26; 1Pe 3:20.\x*
@@ -310,7 +310,7 @@
 \v 17 You see¦2530, I'm going to flood¦2534 the earth with water¦2535 to destroy¦2539 every creature that breathes¦2546. Everything that's on the earth will die¦2554.
 \v 18 \add But\add* I'll make an agreement with you, so you must go into this chest along with your wife¦2567 and sons¦2566 and their wives¦2568,
 \v 19 and you must take a pair, male and female¦2588, of everything¦2573 that lives into the chest to keep¦2585 alive¦2585 with you.
-\v 20 Pairs of every kind of bird and animal, including every kind of creature that moves on the ground, will come to you so that you keep¦2605 them alive¦2605,
+\v 20 Pairs of every kind of bird and animal, including every kind of creature that moves on the ground, will come¦2603 to you so that you keep¦2605 them alive¦2605,
 \v 21 and you must take¦2608 with you some of every different kind of food and store it in there for you and them to eat.
 \v 22 So Noah did \add that\add* exactly as God¦2629 had specified.\x + \xo 6:22: \xt Heb 11:7.\x*
 \c 7
@@ -415,9 +415,9 @@
 \v 22 Then Ham (Canaan's father) saw his father's nakedness¦3788 then went outside¦3794 and told his brothers¦3793 \add what he'd seen\add*.
 \v 23 So Shem and Yafet took¦3796 a robe, and holding it between their shoulders¦3805 they walked¦3807 backwards into the tent and covered¦3809 their father's¦3812 nakedness. (Their¦3806 faces¦3813 were towards the tent entrance, so they didn't see his nakedness.)
 \v 24 \add Eventually,\add* Noah woke up from his drunken sleep and¦3823 found out what his youngest¦3831 son (Ham) had done to him
-\v 25 and said¦3833, “May Canaan be cursed¦3834 and become a slave¦3836 of slaves¦3837 to his brothers¦3839!”
-\v 26 Then he added, “Praise Yahweh¦3843 who's Shem's God¦3844. May Canaan become Shem's slave¦3848.
-\v 27 May God¦3852 expand Yafet's territory and¦3858 may he¦3851 live in Shem's tents¦3855. May Canaan also become a slave¦3860 of Yafet.”
+\v 25 and said¦3833, “May Canaan¦3835 be cursed¦3834 and become a slave¦3836 of slaves¦3837 to his brothers¦3839!”
+\v 26 Then he added, “Praise Yahweh¦3843 who's Shem's God¦3844. May Canaan¦3847 become Shem's slave¦3848.
+\v 27 May God¦3852 expand Yafet's territory and¦3858 may he¦3851 live in Shem's tents¦3855. May Canaan¦3859 also become a slave¦3860 of Yafet.”
 \p
 \v 28 After the flood¦3867, Noah lived¦3863 another 350 years,
 \v 29 and so he was 950 years old when he died¦3885.
@@ -440,7 +440,7 @@
 \rem /s1 Descendants of Ham
 \rem /s2 The Hamites
 \p
-\v 6 Ham's sons¦3935 were Cush, Mizrayim¦3938\f + \fr 10:6 \ft Known to us as ‘Egypt’.\f*, Put, and Canaan.
+\v 6 Ham's sons¦3935 were Cush, Mitsrayim¦3938 \add (Egypt)\add*, Put, and Canaan.
 \v 7 Cush's sons were Seba, Havilah, Sabtah¦3946, Raamah, and Sabtekah¦3948. Then Raamah's sons were Sheba¦3951 and Dedan¦3952.
 \v 8 Cush was \add also\add* the father¦3955 of Nimrod¦3958 who became a mighty¦3962 \add warrior\add* on the earth¦3963.
 \v 9 Nimrod also became a terrific hunter \add noticed\add* by Yahweh, so people said¦3976, “Like Nimrod, a terrific hunter \add noticed\add* by Yahweh.”
@@ -448,7 +448,7 @@
 \v 11 From that area he \add extended\add* to Asshur\f + \fr 10:11 \ft Known to us as ‘Assyria’.\f* where he built¦3999 \add the cities of\add* Nineveh¦4002, Rehoboth-Ir¦4005, Calah¦4009,
 \v 12 and Resen¦4013, between Nineveh¦4015 and the large city¦4019 of Calah¦4017.
 \p
-\v 13 Mizrayim¦4022 fathered¦4023 Ludim, Anamim¦4029, Lehabim¦4032, Naftuhim,
+\v 13 Mitsrayim¦4022 fathered¦4023 Ludim, Anamim¦4029, Lehabim¦4032, Naftuhim,
 \v 14 Pathrusim¦4039, and Casluhim¦4042 (who the Philistines¦4046 came¦4044 from), and Caftorim.
 \p
 \v 15 Canaan fathered¦4053 Tsidon his firstborn¦4057, then Het,\f + \fr 10:15 \ft The ancestor of the Hittites.\f*
@@ -526,7 +526,7 @@
 \v 29 Meanwhile Abram married Sarai¦4686 and Nahor married Milcah. (Milcah and \add her sister\add* Iscah¦4699 were the daughters¦4692 of \add Nahor's brother\add* Haran.)
 \v 30 However, Sarai¦4702 wasn't able to get pregnant \add so they\add* didn't have any children¦4706.
 \p
-\v 31 Then one day, Terah¦4709 gathered his son Abram and his grandson Lot (who was Haran's son), and his daughter-in-law¦4725 Sarai¦4724 (who was Abram's wife¦4726), and they \add all\add* left from \add the city of\add* Ur (where the Chaldeans lived¦4740), to travel to the region of Canaan, \add but\add* when they arrived at \add the city of\add* Haran, they \add decided to\add* live there¦4741.
+\v 31 Then one day, Terah¦4709 gathered his son Abram and his grandson Lot (who was Haran's son), and his daughter-in-law¦4725 Sarai¦4724 (who was Abram's wife¦4726), and they \add all\add* left from \add the city of\add* Ur (where the Chaldeans lived¦4740), to travel to the region of Canaan¦4735, \add but\add* when they arrived at \add the city of\add* Haran, they \add decided to\add* live there¦4741.
 \v 32 Then when Terah was 205 years¦4748 old, he \add died¦4751\add* there in Haran.
 \c 12
 \s1 God commissions Abram to go
@@ -543,26 +543,26 @@
 \v 7 Then Yahweh came to Abram and told him, “I'll give¦4866 this land to your¦4865 descendants.” So Abram built¦4871 an altar¦4873 there¦4872 \add and made a burnt offering\add* to Yahweh, who had appeared to him.\x + \xo 12:7: \xt Acts 7:5; Gal 3:16.\x*
 \v 8 Then from there he went on to the hills to the east of Beyt-el (Bethel) and pitched¦4885 his tents, with Beyt-el on the west and Ai on the east. He built¦4894 an altar¦4897 to Yahweh there, and \add sacrificed and\add* prayed to Yahweh
 \v 9 before continuing¦4906 \add south¦4907 down\add* toward¦4907 the Negev¦4904 \add desert\add*.
-\s1 Abram goes to Egypt
+\s1 Abram goes to Mitsrayim \add (Egypt)\add*
 \rem /s1 Abram in Egypt; Abram and Sarai in Egypt
 \p
-\v 10 \add One time when\add* there was \add a drought causing\add* a severe food shortage, Abram¦4914 \add and his household\add* travelled \add west\add* across to Egypt to stay there.
-\v 11 Just before they arrived in Egypt, \add Abram\add* said¦4929 to his wife Sarai¦4932, “Listen, you're a very beautiful¦4940 woman¦4939,
+\v 10 \add One time when\add* there was \add a drought causing\add* a severe food shortage, Abram¦4914 \add and his household\add* travelled \add west\add* across to Mitsrayim \add (Egypt)\add* to stay there.
+\v 11 Just before they arrived in Mitsrayim, \add Abram\add* said¦4929 to his wife Sarai¦4932, “Listen, you're a very beautiful¦4940 woman¦4939,
 \v 12 so when the Egyptians see¦4948 you they'll say¦4951, ‘This is his wife,’ and they'll kill¦4954 me but let you live¦4957.
 \v 13 \add Please\add* tell them that you're my sister¦4962 so they'll treat me well because of you and let me live.”\x + \xo 12:13: \xt Gen 20:2; 26:7.\x*
-\v 14 So that's what happened when they¦4977 entered Egypt—the Egyptians \add indeed\add* noticed that Sarai was very beautiful,
-\v 15 and \add when\add* Pharaoh's officials¦4990 saw¦4988 her, so they¦4988 told him \add about her beauty\add*, and she was taken¦4997 into Pharaoh's \add palace\add*.
+\v 14 So that's what happened when they¦4977 entered Mitsrayim—the Egyptians \add indeed\add* noticed that Sarai was very beautiful¦4984,
+\v 15 and \add when\add* Far'oh's \add (Pharaoh's)\add* officials¦4990 saw¦4988 her, so they¦4988 told him \add about her beauty\add*, and she was taken¦4997 into Far'oh's \add palace\add*.
 \v 16 He treated Abram¦5002 well \add (thinking he was the brother)\add*, so he \add was given\add* flocks and herds, male and female donkeys, male and female slaves, and camels¦5015.
 \p
-\v 17 \add But\add* Yahweh¦5018 directed terrible plagues¦5023 onto Pharaoh and¦5025 his househouse¦5027 \add because of his taking\add* Abram's¦5033 wife¦5032 Sarai¦5031.
-\v 18 So Pharaoh called¦5035 for Abram¦5037 and said¦5038, “What's this you've done to me? Why didn't you tell me that she's your wife¦5050?
+\v 17 \add But\add* Yahweh¦5018 directed terrible plagues¦5023 onto Far'oh and¦5025 his househouse¦5027 \add because of his taking\add* Abram's¦5033 wife¦5032 Sarai¦5031.
+\v 18 So Far'oh called¦5035 for Abram¦5037 and said¦5038, “What's this you've done to me? Why didn't you tell me that she's your wife¦5050?
 \v 19 Why did you¦5054 say¦5054, ‘She's my sister¦5055,’ so that I took her in as a wife? Now then, here's your wife. Take her and¦5061 get out of here.”
-\v 20 Then Pharaoh commanded¦5067 his \add officers\add*, and they sent¦5071 Abram and his wife away and everything that belonged to him.
+\v 20 Then Far'oh commanded¦5067 his \add officers\add*, and they sent¦5071 Abram and his wife away and everything that belonged to him.
 \c 13
 \s1 Abram and Lot part ways
 \rem /s1 Abram and Lot Separate
 \p
-\v 1 Then Abram¦5085 left Egypt with his wife and everything that belonged to him, and \add their nephew\add* Lot. \add They returned\add* to the Negev
+\v 1 Then Abram¦5085 left Mitsrayim \add (Egypt)\add* with his wife and everything that belonged to him, and \add their nephew\add* Lot. \add They returned\add* to the Negev
 \v 2 and \add now\add* Abram had become very wealthy¦5099, with \add both\add* livestock¦5101, and silver¦5102 and gold¦5103.
 \v 3 Then they continued \add north\add* through the Negev¦5107 as far as Beyt-el, to the place¦5115 where¦5116 his tents had been at the beginning¦5122—between Beyt-el and Ai—
 \v 4 to the place¦5132 where he'd previously built an altar¦5133,\x + \xo 13:4: \xt Gen 12:8.\x* and Abram¦5141 \add sacrificed and\add* prayed to Yahweh¦5143 there.
@@ -573,16 +573,16 @@
 \p
 \v 8 So Abram¦5195 said¦5194 to Lot, “Let's not have quarrelling between you¦5205 and I, or between yours herdsmen¦5207 and mine, because we're \add relatives\add*.
 \v 9 Isn't the whole land available to you? So let's separate¦5221. If you go to the left then I'll go right, or if you go to the right then I'll go left.”
-\v 10 Lot looked \add all around\add* and saw¦5239 that all the plain of the Jordan \add river valley\add* was well-watered through towards Tso'ar, \add just\add* like Yahweh's garden \add had been\add* before he destroyed Sodom and Gomorrah, and like the land of Egypt.\x + \xo 13:10: \xt Gen 2:10.\x*
+\v 10 Lot looked \add all around\add* and saw¦5239 that all the plain of the Jordan \add river valley¦5244\add* was well-watered¦5248 through towards Tso'ar, \add just\add* like Yahweh's garden¦5259 \add had been\add* before he destroyed¦5251 Sodom and Gomorrah, and like the land of Mitsrayim \add (Egypt)\add*.\x + \xo 13:10: \xt Gen 2:10.\x*
 \v 11 Lot chose¦5267 all of the Jordan plain for himself, and so he travelled to the east and they separated¦5279 from each other.
-\v 12 \add So\add* Abram¦5284 settled in the land of Canaan, and Lot settled in the cities¦5291 of the plain¦5292 and moved¦5293 his tents as far as Sodom.
+\v 12 \add So\add* Abram¦5284 settled in the land of Canaan¦5288, and Lot settled in the cities¦5291 of the plain¦5292 and moved¦5293 his tents as far as Sodom.
 \v 13 \add However,\add* the people of Sodom were extremely wicked¦5300, \add constantly\add* disobeying Yahweh.
 \s1 God promises Abram the land
 \rem /s1 Abram Moves to Hebron
 \p
 \v 14 After Lot had left, Yahweh told Abram¦5309, “Look all around you¦5324 towards the north¦5326, the south¦5327, the east, and the west,
-\v 15 because all that land that you can see, I'll¦5332 give it to you and to your descendants to have forever.\x + \xo 13:15: \xt Acts 7:5.\x*
-\v 16 I'll make your descendants \add as numerous\add* as dust \add particles\add*. Your descendants will only be able to be counted if someone's able to all the dust \add particles\add* on the earth.
+\v 15 because all that land that you can see, I'll¦5332 give¦5342 it¦5342 to you and to your descendants to have forever.\x + \xo 13:15: \xt Acts 7:5.\x*
+\v 16 I'll make your descendants \add as numerous\add* as dust \add particles\add*. Your descendants will only be able to be counted¦5360 if someone's able to all the dust \add particles\add* on the earth.
 \v 17 \add So,\add* go and \add start\add* walking throughout the land—through its length¦5373 and its width, because I'm giving it¦5377 \add all\add* to you.”
 \v 18 \add So\add* Abram¦5380 moved¦5379 his tents and went¦5381 and settled by the terebinth trees at Mamre¦5384 (near Hebron¦5386), and he built¦5387 an altar¦5390 to Yahweh there¦5389.
 \c 14
@@ -634,8 +634,8 @@
 \p
 \v 1 After those events, Yahweh¦5830 spoke to Abram in a vision¦5834, telling him, “Don't be afraid, Abram, because I'll protect you and I'll generously and richly reward¦5843 you.”
 \p
-\v 2 “My master¦5849 Yahweh¦5850,” replied Abram¦5848, “what will you give me, since we have no children¦5858 and it's Eliezer (\add my chief slave\add* from Damascus) who'll inherit all my possesions?”
-\v 3 Then he continued, \add Yes,\add* you haven't given me a child so wow, my heir is a slave from my household¦5877!”
+\v 2 “My master¦5849 Yahweh¦5850,” replied Abram¦5848, “what will you¦5853 give¦5853 me, since we have no children¦5858 and it's Eliezer (\add my chief slave\add* from Damascus) who'll inherit all my possesions?”
+\v 3 Then he continued, \add Yes,\add* you¦5872 haven't given¦5872 me a child so wow, my heir is a slave from my household¦5877!”
 \p
 \v 4 Then listen, Yahweh's¦5884 word¦5882 came to \add Abram\add* saying, “That man won't be your heir, but on the contrary, it'll be your biological son.”
 \v 5 Then \add Yahweh\add* took \add Abram\add* outside¦5901 and said, “Look up at the sky and see if you can count the stars¦5908.” Then he said to him, “Your descendants will be like that.”\x + \xo 15:5: \xt Rom 4:18; Heb 11:12.\x*
@@ -644,7 +644,7 @@
 \p
 \v 7 Then Yahweh told \add Abram\add*, “I'm Yahweh who brought¦5931 you out of Ur (where the Chaldeans lived) so I could give¦5934 you this land to possess¦5940 it.”
 \p
-\v 8 “My master¦5943 Yahweh¦5944,” Abram asked, “how will I know that I will possess¦5948 it¦5948?”
+\v 8 “My master¦5943 Yahweh¦5944,” Abram asked, “how will I know¦5946 that I will possess¦5948 it¦5948?”
 \p
 \v 9 “Bring me a three-year-old heifer¦5954,” Yahweh replied, “and a three-year-old she-goat and a three-year-old ram and a turtledove¦5960 and a young¦5961 pigeon¦5961.”
 \v 10 So \add Abram\add* brought all those to \add Yahweh\add*, and then he¦5985 cut the animals (but not the birds¦5982) in half down the middle and laid the halves opposite¦5978 to each other.
@@ -657,7 +657,7 @@
 \v 16 Then in the fourth¦6057 generation¦6056 \add your descendants\add* will come back here, because the Amorites' sins won't be complete¦6063 until¦6066 then.”
 \p
 \v 17 Then the sun went down and darkness came, and wow, there was a smoking fire pot and a flaming torch¦6078 that passed¦6081 between¦6082 those \add animal halves\add*.
-\v 18 On that day¦6086 Yahweh¦6089 made an agreement with Abram¦6092, saying, “I've given this land to your descendants¦6095, from the Egypt's river to the famous Euphrates¦6109 River.\x + \xo 15:18: \xt Acts 7:5.\x*
+\v 18 On that day¦6086 Yahweh¦6089 made an agreement with Abram¦6092, saying, “I've given this land to your descendants¦6095, from Egypt's river to the famous Euphrates¦6109 River.\x + \xo 15:18: \xt Acts 7:5.\x*
 \v 19 \add That includes the land of \add* the Kenites¦6113, the Kenizzites¦6116, the Kadmonites¦6118,
 \v 20 the Hittites¦6122, the Perizzites¦6125, the Rephaim¦6128,
 \v 21 the Amorites, the Canaanites, the Girgashites¦6138, and the Jebusites.”
@@ -666,8 +666,8 @@
 \rem /s1 The Birth of Ishmael; Hagar and Ishmael
 \p
 \v 1 Now Abram's¦6146 wife¦6145 Sarai¦6144 hadn't been able to give him any children¦6148, but she had an Egyptian slave named Hagar,
-\v 2 so Sarai said¦6156 to Abram, “Listen, Yahweh has prevented me from having children¦6166 so please¦6163 sleep with my slave¦6172. Perhaps I can have a family through her.” Abram agreed to what Sarai had suggested.
-\v 3 So Sarai¦6183, the wife of Abram, took Hagar, her Egyptian slave¦6191, after Abram had lived¦6195 ten years¦6194 in the land of Canaan, and gave her to Abram her husband¦6202 as a wife for him.
+\v 2 so Sarai said¦6156 to Abram, “Listen, Yahweh¦6165 has prevented¦6164 me from having children¦6166 so please¦6163 sleep with my slave¦6172. Perhaps I can have a family through her.” Abram agreed to what Sarai had suggested.
+\v 3 So Sarai¦6183, the wife of Abram, took Hagar, her Egyptian slave¦6191, after Abram had lived¦6195 ten years¦6194 in the land of Canaan¦6198, and gave her to Abram her husband¦6202 as a wife for him.
 \v 4 So he slept with Hagar and she got pregnant¦6210, but once she realised that she began to despise her mistress¦6215.
 \p
 \v 5 So Sarai¦6219 \add complained\add* to Abram¦6222, “This is all your fault. I let you sleep with my slave¦6227, but now that she's pregnant she looks down on me. May Yahweh¦6235 judge¦6234 between¦6236 me and you.”
@@ -707,7 +707,7 @@
 \v 6 I'll¦6484 make you \add and your descendants\add* very fruitful¦6483 so that they form nations¦6488 and some of them will become kings¦6489.
 \p
 \v 7 I'll establish¦6493 my agreement with you and your future descendants for all the following generations¦6502. It will be an agreement that never ends, that I'll be the your God and God of your future descendants.\x + \xo 17:7: \xt Luk 1:55.\x*
-\v 8 I'll give¦6511 this land that you're staying in—the entire¦6520 region of Canaan—to you and your descendants as a permanent possession¦6524, and I'll be their God¦6528.”\x + \xo 17:8: \xt Acts 7:5.\x*
+\v 8 I'll give¦6511 this land that you're staying in—the entire¦6520 region of Canaan¦6523—to you and your descendants as a permanent possession¦6524, and I'll be their God¦6528.”\x + \xo 17:8: \xt Acts 7:5.\x*
 \rem /s1 The Sign of Circumcision
 \p
 \v 9 Then God¦6531 told Abraham, “\add For your part,\add*, you and your descendants after¦6542 you throughout¦6543 \add all\add* their¦6543 generations¦6543 must follow the requirements of our agreement.
@@ -739,7 +739,7 @@
 \rem /s1 A Son Is Promised to Abraham; The Three Visitors; A Son Promised to Sarah; A Son Promised to Abraham and Sarah
 \p
 \v 1 Then \add one day\add* Yahweh¦6846 appeared¦6844 \add again\add* to Abraham at the oak trees on Mamre's¦6848 \add land\add*, while \add Abraham\add* was sitting¦6850 at the entrance of his tent during the hottest part of the day.
-\v 2 \add Abraham\add* looked up and \add was surprised\add* to see three¦6861 men¦6862 standing \add a short distance away\add*. He ran¦6866 from the tent opening to meet them and bowed¦6870 \add respectfully\add*,\x + \xo 18:2a: \xt Heb 13:2.\x*
+\v 2 \add Abraham\add* looked up and \add was surprised\add* to see three¦6861 men¦6862 standing¦6863 \add a short distance away\add*. He ran¦6866 from the tent opening to meet them and bowed¦6870 \add respectfully\add*,\x + \xo 18:2a: \xt Heb 13:2.\x*
 \v 3 and said¦6873, “My masters¦6874, if I've found¦6878 favour¦6879 in your eyes¦6880, please¦6877 don't¦6881 \add just carry on\add* past your slave¦6886.
 \v 4 Let me get some water¦6893 so that you can wash your¦6895 feet¦6895 and rest \add here\add* under¦6897 this tree¦6898.
 \v 5 I'll go and get some food so that you can refresh¦6904 yourselves¦6905 before you leave, since you've come to your slave¦6916.”
@@ -773,7 +773,7 @@
 \v 20 Then Yahweh¦7135 said¦7134, “Because there's \add so many people\add* crying out about Sodom and Gomorrah, and because their¦7142 sin¦7142 is very grievous,
 \v 21 I'll go¦7147 down \add there\add* now and see¦7150 if what I've heard about them is true, and if not, I'll also find that out.”
 \p
-\v 22 Then the \add other two\add* men¦7164 left and starting descending toward¦7166 Sodom, and Abraham was still standing there¦7163 in front¦7170 of Yahweh¦7171,
+\v 22 Then the \add other two\add* men¦7164 left and starting descending toward¦7166 Sodom, and Abraham was still standing¦7169 there¦7163 in front¦7170 of Yahweh¦7171,
 \v 23 so he went¦7173 closer \add to Yahweh\add* and¦7175 asked, “Will you¦7177 really destroy obedient people along with those who're evil?
 \v 24 What if there¦7184 were fifty people in the city \add who've obeyed you\add*? Would you really¦7189 destroy the city and all its people and not save it for the sake of those fifty?
 \v 25 Surely you wouldn't do anything like that—killing the good people along with the evil ones, so that they all just get treated the same? Certainly you wouldn't do that? Wouldn't the one who judges¦7217 the entire¦7218 world be more fair?”
@@ -809,7 +809,7 @@
 \v 5 and they called¦7443 out to Lot, “Where are the men¦7450 who came¦7453 to your place tonight? Bring them out to us so that we can ‘use’ them.”\x + \xo 19:5-8: \xt Jdg 19:22-24.\x*
 \p
 \v 6 So Lot went¦7461 out to them at the entrance¦7464 \add of the house\add* and¦7465 shut the door¦7465 behind¦7467 him¦7467
-\v 7 and said¦7469, “My brothers¦7473, don't¦7470 do this evil.
+\v 7 and said¦7469, “My brothers¦7473, don't¦7470 do this evil¦7474.
 \v 8 Listen, I've got two¦7480 virgin daughters¦7481. Please let me bring¦7487 them out to you and you can treat them however you like. But don't¦7483 do anything¦7502 to these¦7498 men¦7497, because they've entered my house \add and so I'm responsible for them\add*.”
 \p
 \v 9 But they insisted, “Stand back!” Then they said \add to each other\add*, “This guy came to stay with us, and now he's judging us. We'll treat you worse than them!” Then they started pushing hard against Lot and came closer to break¦7533 down the door¦7534.
@@ -832,7 +832,7 @@
 \v 20 Listen, there's a small town nearby that I could flee to. Let me escape¦7753 there. It's only small. Then my life¦7760 would be saved¦7759.”
 \p
 \v 21 “Ok then,” the man replied, “I'll also grant your request about this so I won't overthrow¦7771 the town that you're talking about.
-\v 22 Hurry up, escape¦7779 there, because I am not able to do a thing until¦7786 you¦7788 go there.”
+\v 22 Hurry¦7778 up, escape¦7779 there, because I am not able to do a thing until¦7786 you¦7788 go there.”
 \p That's why they \add renamed\add* the town to ‘Zoar’ \add (which means ‘small’)\add*.
 \s1 The destruction of Sodom and Gomorrah
 \rem /s1 The Destruction of Sodom and Gomorrah
@@ -853,7 +853,7 @@
 \v 32 So let's get Dad drunk and then we can lie with him, so that at least we can have some descendants through¦7956 our father¦7951.”
 \v 33 So¦7960 then, they got their¦7962 father to drink¦7959 wine that evening, and the oldest daughter went and lay with her father, but he wasn't aware of her coming or going.
 \p
-\v 34 Then the next day¦7980, the older girl said¦7981 to the younger¦7985, Listen, last night¦7997 I lay with my father. Let's get him drunk again tonight then you go lie with him so that we'll give life to descendants through our father.”
+\v 34 Then the next day¦7980, the older girl said¦7981 to the younger¦7985, Listen, last night¦7997 I lay with my father. Let's get him drunk again tonight then you go lie with him so that we'll give life to descendants through¦8002 our father.”
 \v 35 So¦8009 that next evening also, they got their¦8011 father¦8011 to drink¦8005 wine and the younger¦8014 girl went and lay with him, but \add again\add* he wasn't aware of her coming or going.
 \v 36 In that way, both of Lot's daughters¦8025 got themselves pregnant¦8023 through their¦8028 father¦8028.
 \v 37 Then the eldest daughter gave¦8030 birth¦8030 to a son and¦8033 she named him Moab \add (which means ‘from my father’)\add*. (He's the ancestor¦8037 of the Moabites to this day¦8042.)
@@ -895,7 +895,7 @@
 \v 3 Abraham named their son Yitshak,
 \v 4 and he circumcised¦8457 him when he was eight¦8465 days¦8466 old, just as God¦8470 had commanded¦8468 him.\x + \xo 21:4: \xt Gen 17:12; Acts 7:8.\x*
 \v 5 Abraham was one hundred¦8475 years old when his son Yitshak was born,
-\v 6 and Sarah said¦8483, “God has brought laughter to me. Everyone who hears¦8491 will laugh with me.”
+\v 6 and Sarah said¦8483, “God¦8488 has brought laughter to me. Everyone who hears¦8491 will laugh with me.”
 \v 7 And she continued, “Who would have said to Abraham that Sarah would breastfeed children¦8501, yet I have \add given him\add* a son in his old age.”
 \s1 Hagar is expelled with Ishma'el
 \rem /s1 Hagar and Ishmael Are Sent Away
@@ -932,7 +932,7 @@
 \v 28 and \add then\add* he separated seven¦8871 female lambs from the rest of the flock¦8873.
 \v 29 “Why did you¦8887 pen those seven¦8883 lambs,” Abimelech¦8877 asked.
 \p
-\v 30 “Because I want you¦8899 to take them,” Abraham insisted. “I want them to be the verification that it was \em me\em* who dug this well.”
+\v 30 “Because I want you¦8899 to take¦8896 them,” Abraham insisted. “I want them to be the verification that it was \em me\em* who dug this well.”
 \v 31 So that's why the place¦8914 was named ‘Beersheba’ \add (which means ‘Well of the seven’ or ‘Well of the oath’)\add*, because that's where the two¦8921 of them made their agreement.
 \p
 \v 32 So the agreement was made at Beersheba, then Abimelech¦8928 and Phicol¦8929, the commander¦8930 of his army, got up and returned¦8933 \add home\add* to the Philistine¦8937 region.
@@ -956,7 +956,7 @@
 \p “Yes, son?”, he replied.
 \p “We've got the fire and the wood,”, he continued, “but where's¦9112 the lamb for the burnt¦9114 offering¦9114?”
 \p
-\v 8 “God will provide the lamb for the burnt¦9123 offering¦9123 himself, my son,” Abraham answered, and¦9125 then the two of them continued on together¦9127.
+\v 8 “God¦9118 will provide the lamb for the burnt¦9123 offering¦9123 himself, my son,” Abraham answered, and¦9125 then the two of them continued on together¦9127.
 \p
 \v 9 Then they came¦9129 to the place¦9132 that God had told him, and Abraham built¦9138 an altar there¦9139 and arranged¦9144 the firewood \add on it\add*. Then he tied up his son Yitshak and laid him on the altar on top of the wood.\x + \xo 22:9: \xt Jam 2:21.\x*
 \v 10 Then Abraham took¦9166 the knife¦9169 and raised his arm to kill his son,
@@ -965,13 +965,13 @@
 \p
 \v 12 “Don't lift up your hand¦9193 against¦9194 the boy¦9196,” \add the messenger\add* continued. “And don't¦9190 do anything¦9201 to him, because now I know¦9206 that you \add respect and obey\add* God¦9210, since you haven't withheld¦9213 your son, your only son, from me.”
 \p
-\v 13 Then Abraham raised his head and looked around, and wow, there was a ram was behind him, caught by its horns¦9234 in the thicket¦9233. So Abraham went¦9235 and grabbed the ram and sacrificed it as a burnt¦9242 offering¦9242 instead of his son.
-\v 14 So Abraham named that place ‘Yahweh will provide’, and to this day¦9257 it's still said, “Yahweh will provide on his mountain.”
+\v 13 Then Abraham raised his head and looked around, and wow, there was a ram was behind¦9231 him, caught¦9232 by its horns¦9234 in the thicket¦9233. So Abraham went¦9235 and grabbed the ram and sacrificed it as a burnt¦9242 offering¦9242 instead of his son.
+\v 14 So Abraham named that place¦9250 ‘Yahweh will provide’, and to this day¦9257 it's still said¦9256, “Yahweh will provide on his mountain¦9258.”
 \p
 \v 15 Then the Yahweh's¦9264 messenger called¦9262 Abraham from the sky a second¦9268 time
 \v 16 saying, “I, Yahweh¦9278, make this declaration by my \add authority and truth\add* that because¦9280 you did that and didn't withhold¦9288 your only son,\x + \xo 22:16-17: \xt Heb 6:13-14.\x*
 \v 17 I'll bless¦9298 you¦9299 tremendously and I'll cause your descendants to be \add as numerous\add* as the stars¦9305 in the sky and as the sand on the beach, and your descendants will be victorious over their¦9317 enemies¦9317.\x + \xo 22:17: \xt Heb 11:12.\x*
-\v 18 Because you obeyed what I said, all the nations of the earth¦9323 will be blessed through your descendants.”\x + \xo 22:18: \xt Acts 3:25.\x*
+\v 18 Because you¦9326 obeyed what I said, all the nations¦9322 of the earth¦9323 will be blessed¦9319 through your¦9320 descendants.”\x + \xo 22:18: \xt Acts 3:25.\x*
 \v 19 Then Abraham returned¦9329 to his young¦9333 men¦9333 and they all continued on \add home\add* together¦9336 to Beersheba, and Abraham \add continued\add* living \add there\add*.
 \s1 Nahor's descendants
 \rem /s1 Nahor's Sons; The Descendants of Nahor; The Children of Nahor
@@ -986,7 +986,7 @@
 \rem /s1 Sarah Dies and Abraham Buys a Burial Ground; The Burial of Sarah; Sarah's Death and Burial; The Death of Sarah
 \p
 \v 1 Sarah went on to be 127 years old
-\v 2 when she died¦9440 in \add the city of\add* Kiriath Arba (now \add called\add* Hebron¦9445) in the Canaan region. Abraham went¦9448 in \add by her bed\add* to weep and mourn¦9450 for her.
+\v 2 when she died¦9440 in \add the city of\add* Kiriath Arba (now \add called\add* Hebron¦9445) in the Canaan¦9447 region. Abraham went¦9448 in \add by her bed\add* to weep and mourn¦9450 for her.
 \p
 \v 3 \add After a time,\add* Abraham got up from beside his dead¦9458 \add wife\add* and he spoke¦9459 to Heth's sons, \add requesting\add*,
 \v 4 “I'm a foreigner and just staying among you. Give me property for a burial¦9476 place \add on your land\add* so that I can bury¦9478 my dead¦9479 \add wife\add*.”\x + \xo 23:4: \xt Heb 11:9,13; Acts 7:16.\x*
@@ -1005,18 +1005,18 @@
 \v 13 and he told Ephron¦9626 while all the others were listening, “But if you would, please listen¦9637 to me. I'll \add pay\add* the \add value\add* of the field¦9640. Accept it from me, then I'll bury¦9643 my dead¦9646 there¦9647.”
 \p
 \v 14 Ephron¦9650 responded to Abraham¦9651,
-\v 15 “My master¦9657, listen to me. That land's worth 400 shekels¦9662 of silver¦9664, but that's nothing between¦9665 me and you¦9666. \add Just go ahead\add* and bury¦9673 your¦9672 dead¦9672.”
+\v 15 “My master¦9657, listen¦9658 to me. That land's worth 400 shekels¦9662 of silver¦9664, but that's nothing between¦9665 me and you¦9666. \add Just go ahead\add* and bury¦9673 your¦9672 dead¦9672.”
 \v 16 So Abraham accepted Ephron's words and weighed¦9680 out for Ephron the price that he had mentioned in the hearing¦9688 of Heth's sons: 400 shekels¦9694 of silver¦9695 (the currency among the merchants¦9697).
 \p
 \v 17 So Ephron's¦9702 field that was in Machpelah¦9704 which faced Mamre¦9707 (including the field and the cave that was in it, and all the trees that were in the field that was within all of its surrounding borders) was deeded
 \v 18 to Abraham as the new owner as witnessed by Heth's son and everyone¦9727 \add else\add* who had come to the city¦9734 gate.
-\v 19 Then after¦9736 that, Abraham \add laid the body of\add* his wife Sarah to rest in the cave in Machpelah's¦9749 field¦9748 facing Mamre¦9753 (also called Hebron¦9755, in the Canaan region).
+\v 19 Then after¦9736 that, Abraham \add laid the body of\add* his wife Sarah to rest in the cave in Machpelah's¦9749 field¦9748 facing Mamre¦9753 (also called Hebron¦9755, in the Canaan¦9757 region).
 \v 20 So the field¦9760 was deeded as property¦9766 to Abraham by Heth's sons, including the cave in it for a burial¦9768 place.
 \c 24
 \s1 Yitshak's marriage
 \rem /s1 A Wife for Isaac; Isaac and Rebecca; Isaac and Rebekah; The Marriage of Isaac and Rebekah; Isaac Marries Rebekah
 \p
-\v 1 Abraham was now getting very old, and Yahweh had blessed him in every way.
+\v 1 Abraham was now getting very old, and Yahweh had blessed¦9780 him in every¦9784 way.
 \v 2 Then Abraham said¦9786 to his oldest slave¦9790 of his household¦9792 who was in charge¦9793 of everything that belonged to him, “Please put your¦9802 hand¦9802 under¦9803 my thigh¦9804,
 \v 3 and I want you to vow by Yahweh, the God of the heavens¦9809 and the God of the earth¦9811, that you won't select a wife¦9816 for my son \add Yitshak\add* from any of the Canaanite¦9819 women in this area where we're living¦9822.
 \v 4 Rather¦9836, you¦9832 should go¦9832 \add back\add* to my country¦9828 and to my relatives, and find a wife¦9834 for \add him there\add*.”
@@ -1031,17 +1031,17 @@
 \v 10 Then the slave¦9947 took¦9946 ten¦9948 of his master's camels¦9949 and \add loaded them with\add* all kinds of good¦9955 things¦9955 from his master, and \add with his own slaves,\add* he travelled to the city¦9966 of Nahor¦9967 in the Aram Naharaim \add region\add*.
 \v 11 Then on that first evening¦9978, he made the camels¦9970 kneel¦9969 down outside¦9971 the city¦9972 by the well. It was the time that women come out to fetch water¦9976,
 \v 12 and he prayed, “Yahweh¦9985, God¦9986 of my master Abraham, please¦9991 cause it to happen¦9989 right in front of me today that you show kindness toward my master Abraham.
-\v 13 See, I'm standing by this \add well\add*, and¦10008 the young women from the city¦10010 will be coming¦10011 out \add here\add* to fetch water¦10013.
-\v 14 Let it be that if I say to a young woman, ‘Please let me have a drink from your water jar,’ and she says, ‘Sure, and I'll also get more for your camels¦10029,’ let her be the one you have appointed for your slave¦10033 Yitshak. And by \add finding\add* her, I'll know that you've shown kindness toward my master¦10043.”
+\v 13 See, I'm standing¦10003 by this \add well\add*, and¦10008 the young women from the city¦10010 will be coming¦10011 out \add here\add* to fetch water¦10013.
+\v 14 Let it be that if I say to a young woman, ‘Please let me have a drink from your water jar,’ and she says, ‘Sure, and I'll also get more for your camels¦10029,’ let her be the one you have appointed¦10032 for your slave¦10033 Yitshak. And by \add finding\add* her, I'll know that you've shown kindness toward my master¦10043.”
 \p
 \v 15 Now before he'd even finished¦10049 speaking¦10050, then wow, Rebekah¦10052 arrived with her \add empty\add* water jar on her shoulder¦10067. (She was Bethuel's daughter—Bethuel being the son of Abraham's brother¦10062 Nahor¦10061 and his wife¦10060 Milcah¦10059.)
 \v 16 The young woman was very beautiful and a virgin¦10073 who hadn't slept with a man¦10074. She went¦10077 down to the well and filled¦10079 her jar and came¦10081 \add back\add* up.
 \v 17 The slave¦10084 ran¦10083 to meet her¦10085 and¦10086 said¦10086, “Can I have a small¦10089 drink¦10087 of water¦10091 from your¦10092 jar.”
 \p
-\v 18 “Drink, my master¦10096,” she said¦10094 and quickly¦10097 lowered¦10098 her jar to her hands and gave¦10103 him¦10103 a drink,
-\v 19 and¦10107 after she'd finished giving¦10106 him¦10106 a drink, she said¦10107, “I'll also get water for your¦10109 camels¦10109 until¦10111 they¦10114 have finished drinking¦10115.”
+\v 18 “Drink, my master¦10096,” she said¦10094 and quickly¦10097 lowered¦10098 her jar to her hands and gave¦10103 him¦10103 a drink¦10095,
+\v 19 and¦10107 after she'd finished giving¦10106 him¦10106 a drink, she said¦10107, “I'll¦10110 also get water¦10110 for your¦10109 camels¦10109 until¦10111 they¦10114 have finished drinking¦10115.”
 \v 20 Then she hurried and emptied¦10118 her jar into the trough¦10122 and ran back to the well to draw \add more\add* water, and she drew \add enough\add* water for all his camels¦10132
-\v 21 \add while Abraham's slave\add* watched her silently¦10137 to determine whether Yahweh¦10140 had made his journey successful¦10139 or not.
+\v 21 \add while Abraham's slave\add* watched her silently¦10137 to determine whether¦10139 Yahweh¦10140 had made his journey successful¦10139 or not.
 \p
 \v 22 Then when the camels¦10149 had finished¦10148 drinking¦10150, the slave took out an \add expensive\add* gold nose ring and two \add solid\add* gold bracelets¦10158 for her arms.
 \v 23 “Tell me, whose daughter¦10167 are you?” he asked her. “Is there¦10174 room at your father's¦10177 house¦10175 for us to stay?”
@@ -1054,7 +1054,7 @@
 \p
 \v 28 Then the young woman ran¦10237 \add home\add* and¦10239 told her¦10241 mother's¦10241 household¦10240 what had happened.
 \v 29 Now Rebekah¦10245 had a brother¦10246 named Lavan (Laban), and¦10247 he ran¦10249 out to the man¦10253 at the well.
-\v 30 He had seen the nose ring and the bracelets¦10267 on his sister's arms, and when he'd heard¦10272 his sister Rebekah's¦10276 words¦10275 saying, “This is what the man said to me,” then he went to the man, and indeed, he was \add there\add* standing by the camels¦10292 at the spring¦10295
+\v 30 He had seen the nose ring and the bracelets¦10267 on his sister's arms, and when he'd heard¦10272 his sister Rebekah's¦10276 words¦10275 saying, “This is what the man said to me,” then he went to the man, and indeed, he was \add there\add* standing¦10289 by the camels¦10292 at the spring¦10295
 \v 31 and he \add invited him\add*, “Come, you who're blessed¦10299 by Yahweh¦10300. Why are you standing¦10302 out here? I've \add already\add* prepared the house¦10306 and a place¦10307 for the camels¦10308.”
 \p
 \v 32 So \add Abraham's slave\add* went¦10310 to the house¦10312. Then he unloaded¦10313 the camels and gave them straw¦10316 and fodder¦10317, and water¦10319 to wash his feet and the feet of the men who were with him.\f + \fr 24:32 \ft It's not certain from the pronouns in the text here, just who did what in this second sentence—whether it was the slave (the guest) or Lavan (the host), so other translations might vary.\f*
@@ -1071,15 +1071,15 @@
 \v 41 Then you'll be free of your promise: When you go¦10451 to my clan, and if they won't allow her to \add return with\add* you, then you'll be clear from \add this promise\add*.’
 \p
 \v 42 “Then today I came¦10464 to the well, and¦10469 I said¦10469, ‘Yahweh¦10470, God¦10471 of my master¦10472 Abraham, if it's what you¦10476 want, make my journey¦10480 succeed¦10479 that I have come on.
-\v 43 Listen, I'm standing by this well, so let it be that the young¦10494 woman¦10494 who comes¦10495 out to fetch water and I say to her, “Please give me a little¦10502 water to drink from your jar,”
+\v 43 Listen, I'm standing¦10488 by this well, so let it be that the young¦10494 woman¦10494 who comes¦10495 out to fetch water and I say to her, “Please give me a little¦10502 water to drink from your jar,”
 \v 44 and she¦10516 replies to me, “Sure, drink¦10512, and I will also get water¦10515 for your¦10514 camels¦10514,” let her be the wife that Yahweh¦10521 has chosen for the my master's¦10524 son.’
-\v 45 Before I'd finished¦10528 speaking¦10529 in my heart¦10532, then wow, Rebekah was coming out with her jar on her shoulder¦10539. And she went¦10540 down to the well and drew water¦10542, and I asked her, ‘Can I have a drink¦10545.’
+\v 45 Before I'd finished¦10528 speaking¦10529 in my heart¦10532, then wow, Rebekah was coming¦10535 out with her jar on her shoulder¦10539. And she went¦10540 down to the well and drew water¦10542, and I asked her, ‘Can I have a drink¦10545.’
 \v 46 So she hurried and lowered¦10549 her jar from her \add shoulder\add* and said, ‘Drink, and I'll also water your camels.’ So I drank¦10558 and she also watered the camels.
 \v 47 Then I asked¦10563 her, ‘Whose daughter are you?’ And she said, ‘The daughter of Bethuel¦10573, a son of Nahor¦10576 and his wife Milcah¦10581.’ Then I put the ring on her nose and the bracelets¦10587 on her arms.
 \v 48 Then I bowed¦10592 down and worshipped¦10593 and praised my master Abraham's God¦10599 Yahweh¦10598, who led me on the right way to \add find\add* the daughter¦10609 of my master's brother¦10611 for his son.
 \v 49 And now if you¦10618 all want to show kindness and¦10627 faithfulness to my master¦10624, tell me. But if not, tell me, so that I \add can decide what to do next\add*.”
 \p
-\v 50 Then Lavan¦10642 and¦10644 Bethuel¦10643 answered¦10641, “This matter¦10647 has come from Yahweh, \add so\add* we're not able to tell you¦10651 bad or good¦10655.
+\v 50 Then Lavan¦10642 and¦10644 Bethuel¦10643 answered¦10641, “This matter¦10647 has come¦10646 from Yahweh, \add so\add* we're not able to tell you¦10651 bad or good¦10655.
 \v 51 \add But\add* listen, Rebekah's \add right here\add*. Take her and go¦10662, and let her become the wife¦10664 of your master's¦10667 son, as Yahweh¦10670 has \add indicated\add*.”
 \v 52 \add Now\add* when Abraham's slave¦10675 heard¦10674 their¦10679 \add reply\add*, he bowed¦10680 down to the ground before Yahweh.
 \v 53 Then \add he\add* brought¦10684 out silver¦10688 and gold¦10690 jewelry, and clothing, and gave them to Rebekah¦10693. And he gave valuable things to her brother¦10696 and her mother¦10697.
@@ -1102,7 +1102,7 @@
 \v 61 Then Rebekah got up with her¦10793 maids¦10793, and they mounted¦10794 the camels¦10797 and went¦10798 with the man¦10800. So the slave¦10802 took¦10801 Rebekah and left.
 \p
 \v 62 Meanwhile Yitshak was living¦10815 in the Negev¦10817 region, and \add had just returned from visiting\add* Be'er-Lahai-Roi.
-\v 63 Late¦10820 on afternoon, he went¦10819 out to a field¦10822 to meditate¦10821, and when he looked up, he saw¦10827 some camels approaching.
+\v 63 Late¦10820 on afternoon, he went¦10819 out to a field¦10822 to meditate¦10821, and when he looked up, he saw¦10827 some camels¦10829 approaching.
 \v 64 Rebekah¦10833 \add also\add* looked up and saw¦10837 Yitshak, and dismounted from her¦10836 camel¦10843,
 \v 65 asking the slave, “Who's that man¦10851 in the field¦10854 who is coming to meet us?”
 \p “He's my master¦10859,” the slave replied, so she took¦10860 the veil and covered¦10862 herself.
@@ -1137,8 +1137,8 @@
 \v 14 Mishma¦11092, Dumah¦11093, Massa¦11094,
 \v 15 Hadad¦11096, Tema, Jetur¦11098, Naphish¦11099, and Kedermah.
 \v 16 Those were Ishma'el's¦11105 sons¦11104, and those are their names¦11107 by their settlements and by their camps—twelve rulers according¦11114 to their tribes¦11114.
-\v 17 Ishma'el went on to live to be 137 years¦11125 old, before breathing his last and dying and joining those who'd gone before.
-\v 18 \add His descendants\add* settled¦11133 from Havilah to Shur (which¦11138 is near Egypt as you go toward¦11144 Asshur¦11144). He fell in the face of all his brothers.\f + \fr 25:18 \ft We've left this unusual sentence in here, because we don't really know now what this ancient idiom meant. Possibilities include being hostile to the brothers, living opposite them, or even dying in their presence.\f*
+\v 17 Ishma'el¦11119 went on to live to be 137 years¦11125 old, before breathing¦11126 his last and dying and joining those who'd gone before.
+\v 18 \add His descendants\add* settled¦11133 from Havilah to Shur (which¦11138 is near Mitsrayim \add (Egypt)\add* as you go toward¦11144 Asshur¦11144). He fell in the face of all his brothers.\f + \fr 25:18 \ft We've left this unusual sentence in here, because we don't really know now what this ancient idiom meant. Possibilities include being hostile to the brothers, living opposite them, or even dying in their presence.\f*
 \s1 The birth of Esaw and Yacob
 \rem /s1 The Birth and Youth of Esau and Jacob; The Births of Jacob and Esau; Jacob and Esau; The Birth of Esau and Jacob
 \p
@@ -1177,7 +1177,7 @@
 \rem /s1 Isaac and Abimelech; Isaac Lives at Gerar; Isaac at Gerar and Beersheba; Isaac Deceives Abimelech
 \p
 \v 1 Then there was a famine in the region (a different one from the earlier famine that was in the days¦11397 of Abraham) so Yitshak \add moved\add* to Gerar¦11408, \add the region of\add* Abimelech¦11403, the Philistines¦11407 king¦11405.
-\v 2 Then Yahweh¦11412 appeared¦11410 to \add Yitshak\add* and¦11413 told him, “Don't go down to Egypt—stay in the area that I'll tell you¦11422.
+\v 2 Then Yahweh¦11412 appeared¦11410 to \add Yitshak\add* and¦11413 told him, “Don't go¦11416 down to Mitsrayim \add (Egypt)\add*—stay in the area that I'll tell you¦11422.
 \v 3 Stay as a guest in this region, and I'll be with you and bless¦11429 you, because I'll give¦11434 all this land to you and to your descendants¦11433, and I'll confirm the oath that I made to your father Abraham.\x + \xo 26:3-4: \xt Gen 22:16-18.\x*
 \v 4 I'll multiply your descendants \add to be as numerous¦11450\add* as the stars¦11454 in the sky, and I'll give¦11456 all this region to them. And all the nations¦11466 on the earth¦11467 will be blessed¦11463 through your descendants,
 \v 5 because Abraham obeyed me by keeping my requirements, my commands¦11477, my decrees, and my laws.”
@@ -1193,7 +1193,7 @@
 \rem /s1 Conflict over Water Rights
 \p
 \v 12 Then Yitshak \add planted a crop\add* in that land and Yahweh¦11596 blessed¦11595 him and gave him one hundred¦11593 times as much as he'd planted.
-\v 13 Hence he became \add wealthier\add* and that repeated until¦11603 \add eventually\add* he was \add very powerful\add*.
+\v 13 Hence¦11604 he became¦11606 \add wealthier\add* and that repeated until¦11603 \add eventually\add* he was \add very powerful\add*.
 \v 14 He \add also\add* owned sheep and goats, and cattle, and many slaves¦11617. \add Because\add* the Philistines¦11621 \add now\add* envied¦11619 him,
 \v 15 they blocked up all the wells¦11625 that his father's slaves¦11628 had dug when his father Abraham¦11634 had been alive, and they filled them with dirt.
 \p
@@ -1237,19 +1237,19 @@
 \p
 \v 2 “Please listen,” Yitshak \add continued\add*, “I'm old and don't¦11977 know¦11978 how long I've got before I die.
 \v 3 So please¦11985 take¦11983 your weapons¦11986—your quiver¦11987, and your bow—and go¦11989 out into the field\add s\add* and hunt game for me
-\v 4 and cook me a tasty meal in the way that I love¦12001 it, and bring¦12002 it to me so I can eat it, so that \add I\add* can bless you before I die.”
+\v 4 and cook me a tasty meal in the way that I love¦12001 it, and bring¦12002 it to me so I can eat¦12004 it, so that \add I\add* can bless¦12006 you¦12006 before¦12008 I die¦12009.”
 \p
 \v 5 \add Now\add* Rebekah¦12011 had been listening¦12012 while Yitshak spoke¦12013 to Esau. Then Esau went¦12019 \add out\add* to the field\add s\add* to hunt game and¦12019 bring¦12024 it back.
 \v 6 \add Meanwhile\add* Rebekah¦12026 said¦12027 to her¦12031 son Yacob, “Listen, I heard¦12034 your father speaking¦12038 to your brother¦12042 Esau, saying,
 \v 7 ‘Get \add some\add* game \add meat\add* for me and prepare¦12048 me a tasty meal so that I can eat¦12052 it, and \add then\add* I can bless¦12053 you¦12053 in Yahweh's¦12055 presence before I die¦12057.’
-\v 8 So now \add Yacob\add*, listen to what I tell you¦12066:
+\v 8 So now \add Yacob\add*, listen¦12061 to what I tell you¦12066:
 \v 9 Go \add out\add* to the flock¦12073 and get me two¦12078 of the \add best\add* young goats¦12080 so that I can prepare¦12082 a tasty meal from them that your¦12085 father¦12085 loves¦12087.
-\v 10 Then you \add can\add* take¦12089 it \add in\add* to your¦12090 father¦12090, and¦12091 \add after\add* he's eaten it he'll bless you before he dies.”
+\v 10 Then you \add can\add* take¦12089 it \add in\add* to your¦12090 father¦12090, and¦12091 \add after\add* he's eaten it he'll bless¦12094 you before he dies¦12096.”
 \p
 \v 11 “Look,” Yacob said¦12098 to his mother¦12103, “My brother¦12106 Esau is \add very\add* hairy¦12108, whereas \add my skin\add* is smooth¦12111.
 \v 12 What if my father¦12115 touches me? Then he'll think of me as a deceiver¦12118 and \add he'll\add* curse¦12121 me rather than bless¦12123 me.”
 \p
-\v 13 “Let your¦12129 curse¦12129 be on me, my son,” his mother¦12127 \add replied\add*, “Just \add do\add* what I said¦12125 and¦12134 go get \add the young goats\add* for me.”
+\v 13 “Let your¦12129 curse¦12129 be on me, my son,” his mother¦12127 \add replied\add*, “Just \add do\add* what I said¦12125 and¦12134 go¦12134 get \add the young goats\add* for me.”
 \v 14 \add So\add* he went and \add slaughtered them\add* and brought¦12141 \add them\add* to his mother. Then \add she\add* prepared¦12143 tasty food the way his father¦12148 loved¦12147 \add it\add*.
 \v 15 \add She then\add* got Esau's best clothes¦12154 that were in the house¦12161 and \add got\add* her younger¦12167 son Yacob to put \add them\add* on,
 \v 16 then she¦12173 \add tied\add* the skins¦12170 of the young goats¦12172 \add over\add* his hands¦12176 and¦12177 \add around\add* the smooth¦12178 part of his neck.
@@ -1261,9 +1261,9 @@
 \v 20 “How did you find it so quickly, my son?” Yitshak \add asked\add*.
 \p “Because your God¦12243 Yahweh¦12242 \add helped me when I went out hunting\add*,” Yacob \add answered\add*.
 \p
-\v 21 Then Yitshak said¦12246 to Yacob, “Please come¦12251 close so that I can touch you, my son, and \add to be sure\add* whether you're really my son Esau or not.”
+\v 21 Then Yitshak said¦12246 to Yacob, “Please come¦12251 close so that I can touch you, my son, and \add to be sure\add* whether¦12256 you're really my son Esau or not.”
 \v 22 So Yacob went close to his father¦12269 and \add Yitshak\add* felt \add his skin\add* and said \add to himself\add*, “It's Yacob's voice, but \add these\add* are \add definitely\add* Esau's hands.”
-\v 23 So he didn't recognize¦12280 \add that it was Yacob\add*, because his hands were hairy¦12288 like Easu's hands, so he was about to bless¦12289 him
+\v 23 So he didn't recognise¦12280 \add that it was Yacob\add*, because his hands were hairy¦12288 like Easu's hands, so he was about to bless¦12289 him
 \v 24 \add but asked once more,\add* “Are you¦12292 really my son Esau?”
 \p “\add Yes,\add* I am,” Yacob answered.
 \p
@@ -1293,7 +1293,7 @@
 \v 32 But Yitshak asked him, “Which son \add are\add* you¦12427?”
 \p “I'm your oldest son Esau.” he \add answered\add*.
 \p
-\v 33 Then Yitshak \add started to\add* trembled¦12434 \add badly\add* and he said¦12441, “Then who was it that hunted game and brought¦12449 it to me? I ate it all just before you came \add in\add*, and I blessed \add that man\add* and indeed, he'll be blessed.”
+\v 33 Then Yitshak \add started to\add* trembled¦12434 \add badly\add* and he said¦12441, “Then who was it that hunted game and brought¦12449 it to me? I ate¦12451 it all just before¦12453 you came¦12454 \add in\add*, and I blessed \add that man\add* and indeed, he'll be blessed.”
 \p
 \v 34 When Esau heard¦12461 \add that\add*, then he let out a very loud and exceedingly bitter¦12470 wail, and \add then begged\add* his father, “Bless me too, my father.”
 \p
@@ -1320,7 +1320,7 @@
 \p
 \v 42 But Rebekah¦12613 got to hear about Esau's \add plans\add*, so she sent¦12620 for her younger¦12624 son Yacob and told him, “Listen, your brother¦12629 Esau is \add coping with what happened by\add* planning to kill¦12632 you.
 \v 43 So my son, listen¦12636 to what I'm saying: for your own sake, \add pack\add* up and¦12638 flee to my brother¦12645 Lavan's place in Haran
-\v 44 and stay with him for a \add while\add* until¦12652 your brother¦12657 \add cools down\add*.
+\v 44 and stay¦12648 with him for a \add while\add* until¦12652 your brother¦12657 \add cools down\add*.
 \v 45 When \add he's\add* no longer angry with you and forgets¦12666 what you did to him, then I'll send¦12672 for you from there¦12674 \add so you can return here\add*. I \add don't want to\add* lose both of you on the \add same\add* day¦12680?”
 \s1 Yitshak sends Yacob off to Lavan's
 \rem /s1 Isaac Sends Jacob to Laban
@@ -1346,9 +1346,9 @@
 \v 10 \add Meanwhile,\add* Yacob had left Beersheba and was enroute to Haran.
 \v 11 \add One¦12883 night¦12881\add* after he'd stopped when the sun had gone down, he laid down in that place and used one of the stones¦12888 there¦12882 to put under¦12891 his head \add for a pillow\add*.
 \v 12 \add While he was sleeping,\add* he had a dream¦12896, and wow, a stairway¦12898 was set up on the earth and its top reached¦12902 to the heavens¦12903, and look, God's messengers were ascending and descending¦12908 on it.\x + \xo 28:12: \xt Jn 1:51.\x*
-\v 13 And look, Yahweh was standing above it and he said¦12915, “I am Yahweh, the God of Abraham your grandfather and the God of Yitshak. I will give the land that you are lying¦12926 on to you and to your descendants¦12930\x + \xo 28:13: \xt Gen 13:14-15.\x*
+\v 13 And look, Yahweh was standing¦12913 above it and he said¦12915, “I am Yahweh, the God of Abraham your grandfather and the God of Yitshak. I will give¦12929 the land that you are lying¦12926 on to you and to your descendants¦12930\x + \xo 28:13: \xt Gen 13:14-15.\x*
 \v 14 and \add they\add* will be \add as numerous as\add* dust \add particles\add*, and you'll \add all\add* spread¦12936 out to the west and to the east and to the north¦12939 and to the south¦12940. And all the families of the earth¦12935 will be blessed¦12941 \add through\add* you and your¦12947 offspring¦12947.\x + \xo 28:14: \xt Gen 12:3; 22:18.\x*
-\v 15 \add So\add* listen, I'm with you and I'll watch over you everywhere you go¦12956. I'll bring¦12957 you back to this land because I won't leave you until¦12965 I've done what I told you.”
+\v 15 \add So\add* listen, I'm with you and I'll watch over you everywhere you go¦12956. I'll bring¦12957 you back to this land because I won't leave¦12964 you until¦12965 I've done what I told you.”
 \p
 \v 16 Then Yacob woke up and said¦12979 \add to himself\add*, “Yahweh¦12982 is certainly \add here\add* in this place¦12983, but I didn't realise¦12987 it.”
 \v 17 So he was afraid¦12989 and said¦12990 \add to himself\add*, “This place¦12994 is spine-chilling—it's nothing other than God's house¦13001, and it's heaven's¦13005 gateway.”
@@ -1363,10 +1363,10 @@
 \rem /s1 Jacob Arrives in Paddan Aram; Jacob Arrives at Laban's Home; Jacob Meets Rachel; Jacob Arrives at Paddan-Aram
 \p
 \v 1 Then Yacob \add got on the road again\add* and went¦13099 to the land of the eastern peoples¦13101.
-\v 2 \add Close¦13118 to his destination,\add* he looked \add ahead\add*, and wow, there was a well in the field¦13108, and what's more, three¦13112 flocks of sheep¦13115 and goats were lying there near it, because the flocks were watered¦13123 from that well \add but\add* the stone¦13125 over the mouth¦13129 of the well was large¦13126 \add and heavy\add*.
+\v 2 \add Close¦13118 to his destination,\add* he looked \add ahead\add*, and wow, there was a well in the field¦13108, and what's more, three¦13112 flocks of sheep¦13115 and goats were lying¦13116 there near it, because the flocks were watered¦13123 from that well \add but\add* the stone¦13125 over the mouth¦13129 of the well was large¦13126 \add and heavy\add*.
 \v 3 \add Once\add* all the flocks¦13137 were gathered¦13132 there¦13134, then they would roll the stone from over the mouth of the well and water¦13145 the \add animals\add*. Then they would return the stone to its place¦13157 over the mouth of the well.
 \p
-\v 4 \add So\add* Yacob \add asked the farmers\add*, “My brothers¦13162, where¦13163 are you from?”
+\v 4 \add So\add* Yacob \add asked the farmers\add*, “My brothers¦13162, where¦13163 are you¦13164 from?”
 \p “We're from Haran,” they¦13165 \add replied\add*.
 \p
 \v 5 “Do you know Nahor's¦13177 grandson Lavan?” Yacob asked.
@@ -1375,9 +1375,9 @@
 \v 6 “Is he doing well?” Yacob asked.
 \p “\add Yes,\add* he's fine,” they said, “and here comes his daughter¦13189 Rachel with \add their\add* flock.”
 \p
-\v 7 “Look, it's still \add broad daylight\add*,” Yacob told them. “It's not time¦13202 for the livestock¦13204 to be brought it. Water the flock, and¦13207 go¦13207 pasture¦13208 them.”
+\v 7 “Look, it's still¦13197 \add broad daylight\add*,” Yacob told them. “It's not time¦13202 for the livestock¦13204 to be brought it. Water the flock, and¦13207 go¦13207 pasture¦13208 them.”
 \p
-\v 8 “We can't,” they said¦13210, “until¦13213 \em all\em* the flocks¦13218 are gathered¦13215 \add here\add* and they roll the stone¦13222 off the \add top\add* of the well. Then we will water¦13226 the sheep¦13227.”
+\v 8 “We can't,” they said¦13210, “until¦13213 \em all\em* the flocks¦13218 are gathered¦13215 \add here\add* and they roll the stone¦13222 off the \add top\add* of the well. Then we¦13212 will water¦13226 the sheep¦13227.”
 \p
 \v 9 He was still talking¦13230 with them when Rachel came¦13234 with her father's¦13239 flock, because she was \add the one who looked after\add* them.
 \v 10 When Yacob saw Rachel (the daughter¦13251 of his mother's brother, Lavan) with Lavan's flock, \add he\add* went over and rolled¦13264 the stone¦13267 \add off the top\add* of the well and watered¦13271 the sheep and goats.
@@ -1446,7 +1446,7 @@
 \v 16 \add So that\add* evening¦13898 \add when\add* Yacob came¦13893 \add home\add* from the field¦13897, Leah went¦13899 out to meet him and told \add him\add*, “You must come¦13904 to me \add tonight\add* because I've hired¦13907 you with my son's¦13909 mandrakes¦13908.” So he \add slept¦13910\add* with her that night¦13912.
 \p
 \v 17 God¦13916 listened¦13915 to Le'ah and she \add got pregnant¦13920\add* and \add produced\add* a fifth¦13924 son for Yacob,
-\v 18 saying, “God has given me my reward because I gave my slave to my husband¦13935 \add to sleep with\add*.” So she named him ‘Yissakar’ \add (which means ‘reward’)\add*.
+\v 18 saying, “God¦13929 has given¦13928 me my reward because I gave¦13933 my slave to my husband¦13935 \add to sleep with\add*.” So she named him ‘Yissakar’ \add (which means ‘reward’)\add*.
 \v 19 Then Le'ah \add got pregnant¦13940\add* again¦13941 and¦13943 \add produced\add* a sixth¦13946 son for Yacob,
 \v 20 saying, “God¦13953 has \add given\add* me a nice present. This time¦13958 my husband¦13960 will honour me because I have \add produced\add* six¦13965 sons¦13966 for him.” So she called¦13967 his name¦13970 ‘Zebulun¦13971’ \add (which might mean ‘honour’)\add*.
 \v 21 Later on, Le'ah had a daughter¦13975 and¦13976 named her Dinah¦13980.
@@ -1468,18 +1468,18 @@
 \p
 \v 31 “What should I give you?” Lavan \add asked\add*.
 \p “You don't¦14119 have to \em give\em* me anything¦14124,” Yacob \add replied\add*. “If you'll do this \add one\add* thing¦14130 for me, I'll continue \add taking care of\add* your flocks¦14134:
-\v 32 Let me look through all your¦14140 flocks¦14140 today and separate out from them all the lambs¦14155 that are speckled, spotted, or dark-colored, and all the young goats¦14158 that are spotted or speckled. They will be my pay.
-\v 33 \add So\add* in the future¦14167, you'll be able to see that I've been honest¦14165 because you'll be able to see it for yourself: any goat that's not speckled¦14179 and spotted¦14180, and any sheep that's not dark-colored, if it's in my flock then it must have been stolen.”
+\v 32 Let me look through all your¦14140 flocks¦14140 today and separate out from them all the lambs¦14155 that are speckled, spotted, or dark-coloured, and all the young goats¦14158 that are spotted or speckled. They will be my pay.
+\v 33 \add So\add* in the future¦14167, you'll be able to see that I've been honest¦14165 because you'll be able to see it for yourself: any goat that's not speckled¦14179 and spotted¦14180, and any sheep that's not dark-coloured, if it's in my flock then it must have been stolen¦14184.”
 \p
 \v 34 “Ok then, let's \add do it your way\add*.” Lavan \add agreed\add*.
-\v 35 \add But\add* that \add very\add* day¦14196, he removed¦14195 the male goats that were streaked¦14201 and spotted, and all the female¦14206 goats that were speckled¦14207 and spotted, any that had white¦14212 on it, and all the dark-colored ones among the lambs¦14217. Then he gave them to his sons \add to look after\add*,
+\v 35 \add But\add* that \add very\add* day¦14196, he removed¦14195 the male goats that were streaked¦14201 and spotted, and all the female¦14206 goats that were speckled¦14207 and spotted, any that had white¦14212 on it, and all the dark-coloured ones among the lambs¦14217. Then he gave them to his sons \add to look after\add*,
 \v 36 and \add they took them\add* a three-day¦14225 journey¦14224 \add away from where\add* Yacob \add was\add*, \add so\add* Yacob was\add left just\add* tending \em the rest\em* of Lavan's flocks¦14234.
 \p
 \v 37 Then Yacob \add got some\add* freshly¦14244 cut branches of poplar¦14243 and almond¦14245 and plane¦14246 trees¦14246, and peeled¦14248 white stripes¦14250 in them \add by\add* exposing the white that was inside the branches.
 \v 38 Then¦14260 he put the branches¦14262 that he had peeled in the water¦14267 troughs¦14265 where the flocks \add would see them when they\add* came to drink, and they mated when they came to drink.
 \v 39 \add Thus\add* the flocks would mate by the \add striped¦14285\add* branches¦14282, and \add they\add* would bear young who were streaked, speckled¦14286, and spotted¦14287.
 \p
-\v 40 Then Yacob \add separated out those young animals into a separate flock\add*, and he made the \add older\add* flocks look at the streaked and all the dark-colored animals in Lavan's flocks. \add So\add* he kept his own flocks by themselves and didn't \add mix\add* them with Lavan's flocks.
+\v 40 Then Yacob \add separated out those young animals into a separate flock\add*, and he made the \add older\add* flocks look at the streaked and all the dark-coloured animals in Lavan's flocks. \add So\add* he kept his own flocks by themselves and didn't \add mix\add* them with Lavan's flocks.
 \p
 \v 41 So whenever the strong¦14320 animals were \add ready to mate\add*, then Yacob put the branches in the troughs¦14328 \add in front\add* of the flocks so that they would mate by the branches,
 \v 42 \add but\add* when the animals were weak, he didn't put them in. So the weak animals went to Lavan and the strong¦14339 ones to Yacob
@@ -1509,7 +1509,7 @@
 \v 16 so all the wealth¦14606 that God took from our father¦14610 \add belonged\add* to us and to our children¦14613 \add anyway\add*. So \add yes\add*, \add go ahead and\add* do everything that God's told you¦14619 \add to do\add*.”
 \p
 \v 17 So Yacob \add packed\add* up and put his wives¦14630 and children¦14627 on the camels¦14633.
-\v 18 Then he drove¦14635 all his livestock and all his property¦14645 that he had acquired—the livestock in his possession¦14649 that he had acquired in Paddan Aram—to go¦14654 \add back\add* to Isaac his father¦14658 in the Canaan region.
+\v 18 Then he drove¦14635 all his livestock and all his property¦14645 that he had acquired—the livestock in his possession¦14649 that he had acquired in Paddan Aram—to go¦14654 \add back\add* to Isaac his father¦14658 in the Canaan¦14660 region.
 \v 19 \add Now\add* Lavan had gone \add off for several days\add* to shear¦14664 his sheep¦14667, so Rachel stole¦14668 the idols that belonged¦14674 to her father¦14674,
 \v 20 and Yacob \add deceived\add* Lavan (the Syrian) by not telling him that \add they all\add* were leaving.
 \v 21 \add So\add* Yacob \add took his household\add* and everything that belonged to \add them\add* and crossed the \add Euphrates\add* River and \add headed upward\add* toward the hill-country of Gilead¦14709.
@@ -1553,7 +1553,7 @@
 \v 47 Lavan gave the pile \add the Aramaic name\add* ‘Jegar Sahadutha’ \add (which means ‘pile that reminds’)\add* while Yacob gave it \add the Hebrew name\add* ‘Gale'ed’ \add (which has the same meaning)\add*.
 \p
 \v 48 Then Lavan said¦15166, “This pile is a witness¦15170 \add of the agreement\add* between me and you today.” (That's why he'd named it Galeed¦15181.)
-\v 49 It's also \add named\add* ‘Mizpah’ \add (which¦15184 means ‘watchtower’)\add*, because he said¦15185, “May Yahweh watch between me and¦15189 you when we are hidden one from the other.
+\v 49 It's also \add named\add* ‘Mizpah¦15183’ \add (which¦15184 means ‘watchtower’)\add*, because he said¦15185, “May Yahweh¦15187 watch¦15186 between me and¦15189 you when we are hidden¦15191 one from the other¦15193.
 \v 50 If¦15198 you \add mistreat¦15197\add* my daughters, or if you take \add other\add* wives¦15204 besides my daughters, even though there's not someone \add there to see it\add*, listen, God¦15212 \add will be\add* a witness¦15213 between me and you.”
 \v 51 Then Lavan said¦15217 to Yacob, “Look at this pile \add of stones\add*, and look at the pillar¦15225 which¦15227 I set up between me and you¦15230.
 \v 52 This pile is a witness and the pillar is a witness that I won't go past these to you, and that you won't go past these to me to do harm.
@@ -1635,7 +1635,7 @@
 \v 12 and said, “\add Ok,\add* let's get moving and go, and I'll go ahead of you.”
 \p
 \v 13 But \add Yacob replied\add*, “My master¦16087 knows that the children are tender plus I have flocks and herds¦16094 \add with young animals\add*. If they¦16097 drive¦16097 them \add harder today\add*, then all the flocks will die¦16100.
-\v 14 Please let my master go on before his servant¦16110, and I'll lead them on at my gentle pace—at the pace of the livestock that are ahead of me and at the pace of the children—until¦16122 I come to my master's \add place\add* in Se'ir.”
+\v 14 Please let my master go on before his servant¦16110, and I'll lead them on at my gentle pace—at the pace of the livestock¦16116 that are ahead of me and at the pace of the children—until¦16122 I come to my master's \add place\add* in Se'ir.”
 \p
 \v 15 “\add At least\add* let me leave some of my men with you \add all\add*,” said Esau.
 \p “Why do that?” \add contradicted Yacob\add*. “May my master¦16149 \add allow me to decide\add*.”
@@ -1644,7 +1644,7 @@
 \s1 Yacob begins to settle at Shekem
 \rem /s1 Jacob Reaches Shechem
 \p
-\v 18 Then Yacob, having come from Paddan Aram, arrived peacefully at the city of Shekem in the Canaan region, and he camped¦16188 \add outside\add* the city.
+\v 18 Then Yacob, having come from Paddan Aram, arrived peacefully at the city of Shekem in the Canaan¦16184 region, and he camped¦16188 \add outside\add* the city.
 \v 19 \add In due course,\add* he bought¦16194 the portion¦16197 of the field¦16198 where¦16199 he'd pitched¦16200 his tents from the sons¦16205 of Hamor¦16207, the father¦16208 of Shekem, for a hundred¦16210 \add pieces¦16211 of silver\add*.\x + \xo 33:19: \xt Josh 24:32; Jn 4:5.\x*
 \v 20 He set up an altar¦16216 there¦16215 and he named it ‘El Elohe¦16221 Yisra'el’ \add (which means ‘God, the God of Yisra'el’)\add*.
 \c 34
@@ -1666,7 +1666,7 @@
 \v 11 Then Shekem spoke to \add Dinah's\add* father¦16383 and brothers¦16387, “\add Look kindly on my request\add* and I'll give¦16395 \add whatever you¦16393 ask for\add*.
 \v 12 \add Set any very high amount for\add* the bride-price¦16400 and gifts \add from\add* me, and I'll give \add whatever you ask\add*—\add just\add* give the young woman¦16412 to me as a wife.”
 \p
-\v 13 \add But because\add* Shekem had \add abused\add* their sister Dinah, Yacob's sons¦16415 \add gave a false answer¦16414\add* to Shekem and his father¦16424,
+\v 13 \add But because\add* Shekem had \add abused\add* their¦16431 sister¦16431 Dinah, Yacob's sons¦16415 \add gave a false answer¦16414\add* to Shekem and his father¦16424,
 \v 14 \add stating\add*, “\add Sorry,\add* we can't do that because it would be a disgrace \add in our culture\add* to allow a man¦16444 with a foreskin¦16448 \add to marry her\add*.
 \v 15 We'd only consent \add to your proposal\add* if you'd become like us by circumcising¦16463 every¦16465 male¦16467 among you,
 \v 16 Then we'd give our daughters to you \add to marry\add*, and we'd take your daughters for us \add to marry\add*. And we'd settle among you, and we \add all\add* would become¦16482 one \add united\add* people¦16483.
@@ -1676,10 +1676,10 @@
 \v 19 \add so Shekem\add* didn't delay¦16510 \add implementing the plan\add* because he was the most honoured son in his father's¦16523 household¦16522, and he was so delighted¦16515 with Yacob's daughter¦16516.
 \p
 \v 20 So Hamor and Shekem went¦16525 to \add the city elders at\add* the gate of their city, and they spoke¦16533 to them, saying,
-\v 21 “These men are peaceful towards us, so let them settle in the land, and let them trade¦16547 in it. And look, the land \add is plenty wide enough for them as well\add*. We can take their¦16557 daughters for ourselves as wives¦16561, and we can give our daughters to them \add to marry\add*.
+\v 21 “These men are peaceful¦16542 towards us, so let them settle in the land, and let them trade¦16547 in it. And look, the land \add is plenty wide enough for them as well\add*. We can take their¦16557 daughters for ourselves as wives¦16561, and we can give our daughters to them \add to marry\add*.
 \v 22 \add But\add* they'll only consent to settle among us and unite with us on this \add condition\add*: we would need to circumcise all of the males amongst us, just like they're circumcised.
 \v 23 Won't all of their livestock and their property¦16589 and all their animals¦16592 then belong to us? \add So\add* let's agree¦16597 with \add their condition\add* and then they'll settle among¦16600 us.”
-\v 24 All \add the elders\add* at the city gate \add agreed with\add* Hamor and his son Shechem, and \add so\add* every¦16616 male who \add passed through\add* the city gate was circumcised¦16615.
+\v 24 All \add the elders\add* at the city gate \add agreed with\add* Hamor and his son Shekem, and \add so\add* every¦16616 male who \add passed through\add* the city gate was circumcised¦16615.
 \rem /s1 Dinah's Brothers Avenge Their Sister
 \p
 \v 25 Three days later when \add all those men\add* were in pain \add from the cutting\add*, two¦16631 of Yacob's sons¦16633, Simeon and Levi who were Dinah's brothers¦16638, took¦16630 their swords¦16641 and boldly attacked the city¦16645 and slaughtered every¦16648 male¦16650,
@@ -1702,7 +1702,7 @@
 \v 4 So they gave¦16824 Yacob all \add their idols and their earrings\add*, and \add he buried\add* them under¦16843 the terebinth tree that was near Shekem.
 \p
 \v 5 Then they \add started their journey but\add* and the \add people¦16861 of\add* the cities¦16857 around¦16859 them \add were afraid of Yacob's God¦16854\add* so they didn't \add attack them\add*.
-\v 6 \add So\add* Yacob and everyone¦16879 with him \add eventually arrived\add* at Luz in the Canaan region (which is \add now named\add* Beyt-el).
+\v 6 \add So\add* Yacob and everyone¦16879 with him \add eventually arrived\add* at Luz in the Canaan¦16871 region (which is \add now named\add* Beyt-el).
 \v 7 He built¦16884 an altar¦16886 there and named the place¦16888 ‘El Beyt-el’ \add (which means ‘the God of Beyt-el’)\add*, because God had revealed¦16895 himself to him there when he was fleeing from his brother \add Esau\add*.
 \v 8 Then Rebekah's nurse¦16904 Deborah¦16903 died¦16902 and was buried¦16906 under the oak tree below Beyt-el \add so\add* he named \add the place\add* ‘Allon Bakut’ \add (which means ‘oak of weeping’)\add*.
 \p
@@ -1745,13 +1745,13 @@
 \r (1 Chr. 1:34-37)
 \p
 \v 1 These are the descendants of Esau (who's also known as Edom):
-\v 2 Esau had \add married two local women¦17234 from the Canaan region\add*: Adah (the Hittite¦17242 Elon's daughter) and Oholibamah¦17245 (Anah's daughter and granddaughter of the Hivite Zibeon¦17251)\x + \xo 36:2: \xt Gen 26:34.\x*
+\v 2 Esau had \add married two local women¦17234 from the Canaan¦17235 region\add*: Adah (the Hittite¦17242 Elon's daughter) and Oholibamah¦17245 (Anah's daughter and granddaughter of the Hivite Zibeon¦17251)\x + \xo 36:2: \xt Gen 26:34.\x*
 \v 3 and Basemat (Ishmael's¦17259 daughter¦17257 and the sister¦17260 of Nevayot).\x + \xo 36:3: \xt Gen 28:9.\x*
 \p
 \v 4 Esau's \add wife\add* Adah gave birth to Elifaz, and Basemat gave birth to Reuel.
-\v 5 Oholibamah gave birth to Jeush¦17279 and Jalam¦17283 and Korah. Those were Esau's sons¦17288 who were born in the Canaan region.
+\v 5 Oholibamah gave birth to Jeush¦17279 and Jalam¦17283 and Korah. Those were Esau's sons¦17288 who were born in the Canaan¦17295 region.
 \p
-\v 6 Then Esau took¦17297 his wives¦17301 and his sons¦17304 and daughters¦17307 and all his household¦17313, and his livestock and all his animals and all his possessions that he had acquired in the Canaan region, and he went¦17330 to a place \add far away\add* from his brother Yisra'el,
+\v 6 Then Esau took¦17297 his wives¦17301 and his sons¦17304 and daughters¦17307 and all his household¦17313, and his livestock and all his animals and all his possessions that he had acquired in the Canaan¦17329 region, and he went¦17330 to a place \add far away\add* from his brother Yisra'el,
 \v 7 because they had too many possessions for them to remain together¦17344, and the land they were staying in wasn't able to support¦17349 \add both of\add* them because of \add all\add* their livestock¦17352.
 \v 8 \add So\add* Esau (\add also known\add* as Edom) settled \add his household\add* in the Se'ir hills.
 \p
@@ -1810,146 +1810,147 @@
 \s1 Yosef's dreams cause conflict
 \rem /s1 Joseph; Joseph Dreams of Greatness; Joseph's Dreams; Joseph and His Brothers
 \p
-\v 1 Yisra'el \add (Israel/Yacob/Jacob)\add* lived in the area where his father¦17822 \add Yitshak\add* had stayed, in the Canaan region.
+\v 1 Yisra'el \add (Israel/Yacob/Jacob)\add* lived in the area where his father¦17822 \add Yitshak\add* had stayed, in the Canaan¦17824 region.
 \v 2 This is \add the record of his\add* descendants:
 \p When Yosef \add (Joseph)\add* was seventeen¦17833, he was shepherding¦17838 the flocks¦17842 with his brothers. He was \add younger than his brothers\add* who were the sons of his father's \add slave\add* wives¦17853 Bilhah and Zilpah¦17852. \add One day\add* Yosef gave a \add tell-tale\add* bad report¦17859 about them to their¦17863 father.
 \p
-\v 3 \add Now\add* Yisra'el loved¦17866 Yosef more than all of his \add other\add* sons¦17872 because he was \add born to him when he was already old\add*, so he made a multicolored robe for him.
-\v 4 \add When\add* his brothers saw that their father loved \add Yosef\add* more than all of his brothers, they hated him and couldn't \add make themselves say anything nice\add* to him.
+\v 3 \add Now\add* Yisra'el loved¦17866 Yosef more than all of his \add other\add* sons¦17872 because he was \add born to him when he was already old\add*, so he made a multicoloured robe for him.
+\v 4 \add When\add* his brothers saw that their¦17891 father¦17891 loved¦17890 \add Yosef\add* more than all of his brothers, they hated¦17895 him and couldn't \add make themselves say anything nice\add* to him.
 \p
-\v 5 \add One night\add* Yosef had a dream, and he told his brothers about it, \add but\add* that made them hate him even more.
-\v 6 He \add told\add* them, “Please \add listen about\add* this dream that I \add had\add*:
-\v 7 See, we were \add tying up bundles of grain stalks\add* in the middle of a field, and wow, my bundle got up and stood upright. Then \add would you believe it\add*, your bundles gathered around and bowed down to my \add one\add*.”
+\v 5 \add One night\add* Yosef had a dream¦17904, and he told his brothers¦17906 about it, \add but\add* that made them hate¦17909 him even more.
+\v 6 He \add told\add* them, “Please \add listen¦17914 about\add* this dream¦17917 that I \add had\add*:
+\v 7 See, we were \add tying up bundles of grain stalks\add* in the middle¦17926 of a field¦17927, and wow, my bundle got up and stood¦17933 upright¦17933. Then \add would you believe it\add*, your bundles gathered¦17935 around and bowed¦17937 down to my \add one\add*.”
 \p
-\v 8 “Will you really reign over us?” his brothers \add retorted\add*. “\add Do you think\add* you'll really rule over us?” \add So\add* they continued to hate him even more because of his dreams and because of \add what he said\add*.
+\v 8 “Will you really reign over us?” his brothers¦17942 \add retorted\add*. “\add Do you think\add* you'll really rule over us?” \add So\add* they continued to hate¦17953 him even more because of his dreams¦17957 and because of \add what he said¦17940\add*.
 \p
-\v 9 Then \add Yosef had\add* another dream, and \add again\add* he told his brothers, “Listen, I \add had\add* another dream, and wow, the sun and the moon and eleven stars were bowing down to me.”
+\v 9 Then \add Yosef had\add* another dream, and \add again¦17963\add* he told his brothers¦17968, “Listen, I \add had\add* another dream, and wow, the sun and the moon and eleven stars¦17979 were bowing¦17980 down to me.”
 \p
-\v 10 \add When\add* he told his father and his brothers, his father scolded him, “What's this dream that you \add had\add*? Will your mother and I and your brothers \add actually\add* come to bow down to the ground to you?”
-\v 11 \add Consequently\add* his brothers envied him, but his father \add kept thinking it over\add*.\x + \xo 37:11: \xt Acts 7:9.\x*
+\v 10 \add When\add* he told his father and his brothers, his father scolded him, “What's this dream¦17997 that you \add had\add*? Will your mother¦18004 and I and your brothers \add actually\add* come to bow down to the ground¦18008 to you?”
+\v 11 \add Consequently¦18016\add* his brothers¦18013 envied him, but his father¦18014 \add kept¦18015 pondering it\add*.\x + \xo 37:11: \xt Acts 7:9.\x*
 \s1 Yosef is sold by his brothers
 \rem /s1 Joseph Is Sold and Taken to Egypt; Joseph Is Sold by His Brothers; Joseph Sold by His Brothers
 \p
-\v 12 ◘
-\v 13 ◘
-\p …
+\v 12 \add Sometime after that, Yosef's\add* brothers¦18021 went¦18020 to shepherd their¦18027 father's¦18027 flocks¦18025 near Shekem.
+\v 13 \add One day,\add* Yisra'el said to Yosef, “Aren't your brothers¦18036 \add away\add* shepherding near Shekem? Come \add we'll get some supplies\add* and I'll send you to them.”
+\p “\add Sure\add*,” Yosef \add replied\add*.
 \p
-\v 14 ◘
-\p …
-\v 15 ◘
+\v 14 Then he \add told\add* him, “Please go¦18048 and see¦18051 \add how\add* your brothers¦18055 \add are doing\add* and the flocks¦18059 \add as well\add*, then \add come and let me know\add*.”
+\p So he sent¦18062 \add Yosef off\add* from the Hebron¦18064 valley¦18063, and he went¦18065 to Shekem.
+\v 15 \add When he got there,\add* a man \add noticed\add* him wandering¦18071 around the fields¦18072 and asked¦18073 him, “What are you looking¦18078 for¦18078?”
 \p
-\v 16 ◘
+\v 16 “I'm looking for¦18085 my brothers¦18083,” he answered. “Please tell me where¦18090 they're \add looking after our flocks\add*.”
 \p
-\v 17 ◘
+\v 17 “They've left here,” the man¦18095 responded. “I heard¦18099 them say, ‘Let's go¦18101 to Dothan.’ ”
 \rem /s1 Joseph Sold into Slavery
+\p So Yosef continued on after¦18105 his brothers¦18106 and found¦18107 them at Dotan,
+\v 18 \add but\add* they saw¦18110 him from a distance¦18112 and before¦18113 he¦18114 \add got close\add* to them, they \add made plans among themselves\add* to kill¦18118 him.
+\v 19 “Look, that master¦18126 \add dreamer¦18127\add* is coming¦18129,” they¦18120 said¦18120 to each other.
+\v 20 “\add Here's our chance to\add* kill¦18134 him and throw¦18135 \add his body\add* into one of the pits \add around here\add*. We'll say¦18138 that a \add wild\add* animal¦18139 \add attacked\add* him. \em Then\em* we'll see¦18142 what his dreams¦18146 \add turn into\add*.”
 \p
-\v 18 ◘
-\v 19 ◘
-\v 20 ◘
+\v 21 But Reuben heard \add what they were saying\add*, and he \add tried to\add* rescue \add Yosef by insisting\add*, “Let's not \add take¦18154\add* his life¦18155.”
+\v 22 “Don't shed blood¦18165,” he continued. “Throw him into \add that\add* pit in the wilderness¦18173, but don't¦18161 \add wound\add* him.” \add He said¦18157 this\add* because he was planning to rescue¦18181 Yosef \add later\add* and return him \add home\add* to \add their¦18183\add* father¦18187.
+\v 23 \add So\add* when Yosef \add reached\add* his brothers¦18196, they \add grabbed him and ripped\add* off the coloured robe¦18203 that \add he was wearing\add*.
+\v 24 Then they took¦18211 him and \add dropped\add* him into the pit. (The pit was empty¦18216 with no water¦18219 in \add the bottom\add*).
 \p
-\v 21 ◘
-\v 22 ◘
-\v 23 ◘
-\v 24 ◘
+\v 25 Then they sat down to eat¦18222, and \add a bit later when they looked up\add*, look, \add there was\add* a caravan¦18229 of Ishmaelites¦18230 coming¦18231 \add towards¦18240 them\add*. \add They had left\add* Gilead carrying¦18239 spices¦18235 and balm and myrrh¦18237 on their camels¦18233 that they were going to take down to Mitsrayim \add (Egypt)\add*.
+\v 26 Then Yehudah \add (Judah)\add* said¦18242 to his brothers¦18246, “What will we gain if we kill¦18251 our brother¦18254 and cover¦18255 up his blood¦18258?
+\v 27 Let's sell him to \add these\add* Ishmaelites¦18262 \add so we won't be guilty of killing\add* him. \add After all,\add* he's our brother¦18271—our \add own\add* flesh¦18272 \add and blood\add*.” And his brothers¦18275 \add agreed\add*.
+\v 28 \add So when\add* the Midianite traders came past, \add the brothers\add* pulled Yosef up and lifted¦18282 him out of the pit and sold \add him\add* to the Ishmaelites¦18293 for twenty¦18294 \add pieces\add* of silver¦18295. Then \add the traders took¦18296\add* Yosef \add onwards with them\add* to Mitsrayim.\x + \xo 37:28: \xt Acts 7:9.\x*
 \p
-\v 25 ◘
-\v 26 ◘
-\v 27 ◘
-\v 28 \x + \xo 37:28: \xt Acts 7:9.\x*◘
+\v 29 \add Later on,\add* Reuben returned¦18302 to the pit, but wow, Joseph wasn't \add down there\add*, so he tore his clothes¦18315 \add in despair\add*
+\v 30 and returned¦18317 to his brothers¦18320 and said¦18321, “The boy¦18322 isn't there. \add What am I going¦18328 to do\add*?”
 \p
-\v 29 ◘
-\v 30 ◘
+\v 31 Then they¦18330 slaughtered¦18335 a young goat¦18336 and took¦18330 Yosef's robe¦18341 and dipped¦18338 \add it\add* in the blood¦18342.
+\v 32 Then they sent the coloured robe \add back\add* to their¦18352 father¦18352 with this message: “We found¦18355 this. Please examine whether or not it's your son's¦18360 robe.”
 \p
-\v 31 ◘
-\v 32 ◘
+\v 33 \add Yisra'el\add* recognised¦18366 it and said¦18367, “It \em is\em* my son's¦18369 robe. A \add wild\add* animal¦18370 \add must have eaten\add* him. Yosef was \add almost\add* certainly torn to pieces¦18374.”
+\v 34 Then Jacob ripped his clothes¦18379 and put sackcloth¦18381 \add around\add* his \add waist\add*, and he mourned¦18383 for his son many days¦18387.
+\v 35 All his \add other\add* sons¦18393 and all his daughters¦18396 \add came\add* to comfort him, but he refused¦18398 to be comforted and said¦18400, “I will go¦18403 down to my son in \add the grave\add* mourning¦18407.” So his father¦18411 wept for him.
 \p
-\v 33 ◘
-\v 34 ◘
-\v 35 ◘
-\p
-\v 36 ◘
+\v 36 Meanwhile, the Midianites \add arrived\add* in Mitsrayim \add (Egypt)\add* and sold him to Potiphar¦18419—Far'oh's captain of the guards¦18423.
 \c 38
-\s1 Huda and Tamar
+\s1 Yehudah and Tamar
 \rem /s1 Judah and Tamar
 \p
-\v 1 ◘
-\v 2 ◘
-\v 3 ◘
-\v 4 ◘
-\v 5 ◘
+\v 1 \add Around that time¦18427\add*, Yehudah \add (Judah)\add* went down \add the hills\add* from \add where\add* his brothers¦18432 \add were\add* and settled¦18433 near an Adullamite¦18437 man¦18436 named Hirah.
+\v 2 There Yehudah saw¦18441 the daughter¦18445 of a Canaanite¦18448 man¦18447 named Shua, and he took¦18451 her \add as a wife\add*. He \add slept with\add* her
+\v 3 and she got pregnant¦18455 and \add in due course\add*, gave¦18456 birth¦18456 to a son who Yehudah named Er.
+\v 4 Then she got pregnant¦18464 again¦18465 and gave¦18466 birth¦18466 a \add another\add* son, and she named him Onan.
+\v 5 Then she \add got pregnant yet again¦18475\add* and gave¦18476 birth¦18476 to a \add third\add* son, and she named him Shelah. (\add Yehudah\add* was in Kezib when she \add Onan was born\add*.)
 \p
-\v 6 ◘
-\v 7 ◘
-\v 8 ◘
-\v 9 ◘
-\v 10 ◘
-\v 11 ◘
+\v 6 \add In due course,\add* Yehudah took¦18488 a wife¦18490 for Er his firstborn¦18492, and¦18493 her¦18493 name¦18493 was Tamar.
+\v 7 But Er was evil¦18500 in Yahweh's eyes¦18501, so Yahweh killed him¦18503.
+\v 8 Then Yehudah said¦18506 to Onan, “Go to your brother's wife¦18512 and perform¦18514 your \add brotherly\add* duty to her \add to\add* produce \add children\add* for your brother.”
+\v 9 However, Onan knew¦18520 that \add any children\add* wouldn't be his, so \add whenever\add* he \add slept with\add* his brother's wife¦18534, he spilled¦18536 \add his semen¦18536\add* on the ground so that he wouldn't give¦18539 \add children\add* to his \add late\add* brother.
+\v 10 \add But¦18552\add* Yahweh¦18546 \add considered\add* what he did to be evil, so he killed him also.
+\v 11 Then Judah \add told\add* his daughter-in-law¦18557 Tamar, “Remain a widow¦18559 in your father's house until¦18563 my son Shelah grows up.” \add This was\add* because he'd said, “So that he doesn't also die like his brothers¦18576!” So Tamar went and lived in the house of her father.
 \p
-\v 12 ◘
-\v 13 ◘
-\v 14 ◘
+\v 12 \add A long time afterwards\add*, Yehudah's wife¦18589 (Shua's daughter¦18586) died¦18585. \add After\add* Yehudah \add had finished mourning\add*, he and his friend Hirah (the Adullamite¦18602) went to Timnah to \add where\add* the men were shearing¦18597 his sheep¦18598.
+\v 13 Then Tamar was told, “Look, your¦18609 father-in-law¦18609 is going¦18610 to Timnah to shear¦18612 his sheep¦18613.”
+\v 14 \add So\add* she \add changed out of\add* her widow's¦18617 clothes¦18616 and covered¦18619 herself with a veil and wrapped¦18621 herself \add up\add*. Then she sat¦18622 at the entrance¦18623 of Enaim¦18624 which¦18625 is on the road¦18628 to Timnah. \add She was doing this\add* because she had seen¦18631 that Shelah had grown¦18634 up, but she hadn't been given¦18639 to him as a wife.
 \p
-\v 15 ◘
-\v 16 ◘
-\p …
+\v 15 \add In due course,\add* Yehudah saw¦18643 her and because she had covered¦18648 her face¦18649, he thought she was a prostitute¦18646.
+\v 16 \add So\add* he turned to her beside the road and asked, “Please let me \add lie with\add* you,” because he didn't know that she was his daughter-in-law¦18666.
+\p “What will you give¦18671 me \add in exchange\add*?” she \add asked\add*.
 \p
-\v 17 ◘
-\p …
+\v 17 “I'll send \add you\add* a young goat from my flock¦18687,” he replied.
+\p “But what about \add something to keep now as\add* a pledge¦18692 until¦18693 you send it,” she \add bartered\add*.
 \p
-\v 18 ◘
-\p …
-\v 19 ◘
+\v 18 “What pledge¦18698 \add should\add* I give¦18700 you?” he \add asked\add*.
+\p “Your signet \add ring\add* and \add its\add* cord, and your staff¦18706 that \add you're holding\add*.” \add So\add* he \add handed\add* them to her and went¦18712 and lay with her, and she became pregnant¦18714 \add as a result\add*.
+\v 19 Then \add Tamar\add* got up and left, and she took off her veil and put her widow's¦18724 clothes¦18723 \add back\add* on.
 \p
-\v 20 ◘
-\v 21 ◘
-\p …
+\v 20 Then Yehudah sent¦18726 his friend the Adullamite¦18734 to take the young goat and get the pledge¦18736 back from the woman¦18738, but he couldn't find her,
+\v 21 \add so\add* he asked¦18742 \add some of the local\add* men¦18745, “Where's the temple prostitute who was at Enaim¦18751 beside the road¦18754?”
+\p \add But\add* they answered, “There's \add never\add* been a temple prostitute \add around here\add*.”
 \p
-\v 22 ◘
+\v 22 \add So Hirah\add* returned¦18762 to Yehudah and \add told him\add*, “I couldn't find her. \add What's more\add*, the men¦18770 of the place said that there hasn't been a temple prostitute¦18777 at that place.”
 \p
-\v 23 ◘
+\v 23 “\add Oh well,\add*” said¦18779 Yehudah. “Let her \add keep those\add* things for herself so that we don't¦18792 become¦18785 a laughingstock¦18786. Anyway, I \add did my duty by sending the goat¦18789\add*, but you couldn't find her.”
 \p
-\v 24 ◘
+\v 24 About three months¦18799 later, Yehudah was told, “Your daughter-in-law¦18805 Tamar has prostituted¦18803 herself, and \add not only that\add*, she's pregnant¦18808 from doing it.”
+\p “Bring her out and let her be burnt \add to death\add*.” Yehudah \add demanded\add*.
 \p
-\v 25 ◘
+\v 25 \add So they got her and\add* brought¦18816 her out, \add but\add* she sent¦18818 a message to her father-in-law¦18821, saying, “It was the man¦18823 who these things belong to that got me pregnant¦18829.” Then she \add added\add*, “Please identify whose signet ring and cords and staff¦18837 these are.”
 \p
-\v 26 ◘
+\v 26 \add When\add* Yehudah recognised¦18840 \add the items\add*, he admitted, “She's more \add in the right¦18843\add* than I am,\x + \xo 38:26: \xt 37:11.\x* because I didn't give¦18852 my son Shelah to her.” \add But\add* he didn't \add lie with her again¦18858\add*.
 \p
-\v 27 ◘
-\v 28 ◘
-\v 29 ◘
-\v 30 ◘
+\v 27 When the time¦18863 came for \add Tamar\add* to give¦18864 birth¦18864, wow, \add she was going to have twins¦18866\add*.
+\v 28 \add While\add* she was giving¦18870 birth¦18870, one \add of the babies poked\add* out a hand and the midwife¦18875 tied a scarlet¦18880 thread¦18880 \add around its wrist\add*, saying, “This one came out first¦18884.”
+\v 29 \add However,\add* it pulled its hand¦18889 back in, then wow, its brother \add was delivered first\add*. Then she\f + \fr 38:28 \ft It's not clear from the text who ‘she’ was—either the mother or the midwife. Similarly, the ‘he’ in the next sentence (and in the next verse) is presumably the father.\f* said¦18893, “How \add did you manage to\add* break out first?” So he named him ‘Perez’ \add (which means ‘break out’)\add*.
+\v 30 After that, his brother who had the scarlet¦18910 thread¦18910 on his \add wrist\add* was delivered, and he named him Zerah.
 \c 39
-\s1 Yosef and the spouse of Putipar
+\s1 Yosef and Potifar's wife
 \rem /s1 Joseph and Potiphar's Wife; Joseph in Potiphar's House
 \p
-\v 1 ◘
-\v 2 \x + \xo 39:2: \xt Acts 7:9.\x*◘
-\v 3 ◘
-\v 4 ◘
-\v 5 ◘
-\v 6 ◘
-\p …
-\v 7 ◘
-\v 8 ◘
-\v 9 ◘
-\v 10 ◘
+\v 1 \add Meanwhile,\add* Yosef had been taken down to Mitsrayim \add (Egypt)\add*, and an Egyptian man¦18925 named Potifar had bought¦18919 him from the Ishmaelites¦18928 who had taken him down there¦18931. \add Potifar was\add* the chief of the guards¦18924 for Far'oh \add (Pharaoh)\add*.
+\v 2 Yosef \add lived\add* in the house¦18942 of his Egyptian master¦18943, and Yahweh¦18934 was with him and he was successful¦18940 \add at his work\add*.\x + \xo 39:2: \xt Acts 7:9.\x*
+\v 3 His master¦18947 \add noticed\add* that Yahweh was with him and that Yahweh made everything that he¦18954 did succeed¦18957,
+\v 4 \add so\add* Yosef earned his favour¦18962 as he served him. Then \add Potifar\add* put him in charge of his \add entire¦18970\add* household¦18969 and \add everything that he owned\add*.
+\v 5 \add From that time¦18979 onwards,\add* Yahweh blessed that Egyptian household¦18994 because¦18996 of Yosef, and Yahweh's blessing \add even extended\add* from everything in the home \add all the way out\add* to \add their\add* fields¦19008.
+\v 6 \add Potifar\add* left all his belonging in Yosef's charge¦19016, \add so much so that\add* he didn't have to think about anything¦19023 else beyond \add what he wanted to eat\add*.
+\p \add Now\add* Yosef \add had developed\add* into a well-built and handsome¦19034 \add young man\add*,
+\v 7 and after¦19041 a while, his master's¦19047 wife¦19045 \add started to develop a crush on\add* him and told \add him\add*, “Come to bed with me.”
+\v 8 \add But\add* he refused¦19058 and told \add her\add*, “Listen, with me here, my master¦19064 doesn't \add have to\add* think about what's in the house¦19073 and \add he's put me in charge of everything\add*.
+\v 9 In this house¦19085, he doesn't \add even\add* have more authority than I do and he hasn't kept anything¦19092 back from me, except for you, his wife. How could I do this very wicked¦19103 thing and sin¦19106 against¦19107 God¦19107.
+\v 10 \add But\add* she kept persisting with Yosef day \add after\add*, \add but\add* he wouldn't lie with her like she wanted.
 \p
-\v 11 ◘
-\v 12 ◘
-\v 13 ◘
-\v 14 ◘
-\v 15 ◘
+\v 11 Then \add one\add* day¦19127 when he went into the house to do his work and there¦19137 were no other men of the house \add around\add*,
+\v 12 \add Potifar's wife\add* grabbed Yosef's cloak and demanded, “\add Come to bed\add* with me.” \add But\add* he \add pulled away and \add* fled outside¦19150 \add the house\add*, leaving her¦19147 \add there\add* holding his cloak.
+\v 13 \add As¦19154 soon as it registered\add* that he'd fled outside¦19160 leaving his cloak \add behind\add*,
+\v 14 she \add yelled\add* for the other male slaves and told them, “Look, he brought¦19169 a Hebrew¦19172 \add here\add* man¦19171 to \add mock\add* at us. He \add tried to get me onto the bed\add*, but I yelled out loudly.
+\v 15 When he \add grasped\add* that \add I was screaming for help\add*, he left his cloak here and \add just took off\add* outside¦19195.”
 \p
-\v 16 ◘
-\v 17 ◘
-\v 18 ◘
+\v 16 \add Potifar's wife\add* kept the cloak beside¦19199 her until¦19200 \add her husband\add*, Yosef's master¦19203, got home¦19206,
+\v 17 then she told him \add the same story¦19210\add*, “\add That\add* Hebrew¦19217 slave¦19216 that you¦19220 brought¦19220 \add into our home\add* came¦19213 to me to \add mock\add* me,
+\v 18 \add but\add* when I¦19226 yelled¦19228 out, he left his cloak here and \add took off\add* outside¦19233.”
 \rem /s1 Joseph Put in Prison
 \p
-\v 19 ◘
-\v 20 ◘
-\v 21 \x + \xo 39:21: \xt Acts 7:9.\x*◘
-\v 22 ◘
-\v 23 ◘
+\v 19 When Yosef's master¦19237 heard¦19236 his wife tell what his slave¦19251 \add had tried\add* to do to her, he \add became furious\add*.
+\v 20 \add He\add* took him and threw him into the prison \add built\add* for the king's prisoners.
+\v 21 \add But\add* Yahweh¦19278 was with Yosef and was kind to him and \add caused the prison¦19291 warden to be pleased with him\add*,\x + \xo 39:21: \xt Acts 7:9.\x*
+\v 22 \add so\add* the warden put him in charge of all the \add other\add* prisoners¦19304 and¦19308 \add Yosef ended up being in charge\add* of everything that happened inside.
+\v 23 Then the warden didn't need to \add concern himself\add* with anything¦19329 that was going on because Yahweh was with \add Yosef\add* and helped him succeed¦19339 in \add everything\add* he did.
 \c 40
 \s1 The telling of Yosef of meaning/salvation of dream of two prisoners
 \rem /s1 The Dreams of Two Prisoners; Joseph Interprets Two Dreams; The Cupbearer and the Baker; Joseph Interprets the Prisoners' Dreams
@@ -1985,7 +1986,7 @@
 \v 22 ◘
 \v 23 ◘
 \c 41
-\s1 The pegluwas of Yosef of dream of King of Egypt
+\s1 The pegluwas of Yosef of dream of King of Mitsrayim \add (Egypt)\add*
 \rem /s1 Pharaoh's Dreams; Joseph Interprets Pharaoh's Dream; Joseph Interprets the King's Dreams
 \p
 \v 1 ◘
@@ -2030,7 +2031,7 @@
 \v 34 ◘
 \v 35 ◘
 \v 36 ◘
-\s1 The pegpiyal ki Yosef of place Egypt
+\s1 The pegpiyal ki Yosef of place Mitsrayim \add (Egypt)\add*
 \rem /s1 Joseph's Rise to Power; Joseph Is Made Governor over Egypt; Joseph Made Ruler of Egypt
 \p
 \v 37 ◘
@@ -2059,7 +2060,7 @@
 \v 56 ◘
 \v 57 ◘
 \c 42
-\s1 The going of siblings of Yosef of Egypt
+\s1 The going of siblings of Yosef of Mitsrayim \add (Egypt)\add*
 \rem /s1 Joseph's Brothers Go to Egypt to Buy Grain; Joseph's Brothers Go to Egypt
 \p
 \v 1 ◘
@@ -2116,7 +2117,7 @@
 \v 37 ◘
 \v 38 ◘
 \c 43
-\s1 The return of brothers of Yosef there to Egypt migduruma ki Benyamin
+\s1 The return of brothers of Yosef there to Mitsrayim \add (Egypt)\add* migduruma ki Benyamin
 \rem /s1 Joseph's Brothers Return to Egypt with Benjamin; The Brothers Come Again, Bringing Benjamin; The Brothers Return to Egypt; The Second Journey to Egypt
 \p
 \v 1 ◘
@@ -2252,7 +2253,7 @@
 \v 27 ◘
 \v 28 ◘
 \c 46
-\s1 The going of Yacob of Egypt
+\s1 The going of Yacob to Mitsrayim \add (Egypt)\add*
 \rem /s1 Jacob Brings His Whole Family to Egypt; Jacob's Journey to Egypt; Jacob and His Family Go to Egypt; Jacob Goes to Egypt; The Israelites in Egypt
 \p
 \v 1 ◘
@@ -2289,7 +2290,7 @@
 \p
 \v 26 ◘
 \v 27 \x + \xo 46:27: \xt Acts 7:14.\x*◘
-\s1 The arrival of Yacob there to Egypt
+\s1 The arrival of Yacob there to Mitsrayim \add (Egypt)\add*
 \rem /s1 Jacob and His Family in Egypt; Jacob Settles in Goshen; Jacob's Family Arrives in Goshen
 \p
 \v 28 ◘
@@ -2603,8 +2604,8 @@
 \s1 Yosef's death
 \rem /s1 Joseph's Last Days and Death; The Death of Joseph
 \p
-\v 22 Yosef continued to live in Egypt, along with \add the rest of\add* his father¦25321 Yacob's family¦25320, until he¦25319 was 110 years¦25326 old.
+\v 22 Yosef continued to live in Mitsrayim \add (Egypt)\add*, along with \add the rest of\add* his father¦25321 Yacob's family¦25320, until he¦25319 was 110 years¦25326 old.
 \v 23 He lived long enough to see his son Ephraim's¦25330 children, grandchildren, and great-grandchildren. The children of his grandson Machir, who was Manasseh's son, also grew up around him.
 \v 24 Then \add one day\add* Yosef said¦25345 to his brothers¦25349, “I'm about¦25351 to die¦25351, but God¦25352 will definitely help you all and take you \add and your descendants\add* from this country to the land that he vowed to give to Abraham, Yitshak, and Yacob.
 \v 25 When God¦25380 does that, you must take my body \add back to Canaan with you and bury it there\add*.” Then Yosef had \add his brothers and the rest of the descendants of Yisra'el\add* vow \add that they would do that\add*.\x + \xo 50:25: \xt Exo 13:19; Josh 24:32; Heb 11:22.\x*
-\v 26 Then Yosef died¦25388 at the age of 110, and \add the specialists\add* embalmed¦25395 \add his body\add* and it was put in a coffin¦25398 in \add a tomb in\add* Egypt.
+\v 26 Then Yosef died¦25388 at the age of 110, and \add the specialists\add* embalmed¦25395 \add his body\add* and it was put in a coffin¦25398 in \add a tomb in\add* Mitsrayim.

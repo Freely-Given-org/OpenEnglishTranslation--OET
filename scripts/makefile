@@ -73,8 +73,8 @@ $(final_LV_OT_ESFM): $(intermediate_LV_OT_ESFM) $(SBE) $(scripted_OT_updates) $(
 	@echo "\n\nRun ScriptedBibleEditor on OT ESFM files…\n"
 	@$(Python) $(SBE) ScriptedOTUpdates -qe
 	@echo "\n\nCopying OT word and morpheme tables from modified_source_glossed_OSHB_ESFM/ to auto_edited_OT_ESFM/…\n"
-	@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_word_table.tsv
-	@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv
+	@cp ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_word_table.tsv
+	@cp ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv
 	# Does SBE automatically do some of the above copying steps??? Well, it certainly wouldn't do both
 
 $(final_LV_NT_ESFM): $(intermediate_LV_NT_ESFM) $(SBE) $(scripted_NT_updates) $(BTranslit) $(Greek) $(Hebrew) $(expanded_NT_wordtable)
@@ -84,6 +84,8 @@ $(final_LV_NT_ESFM): $(intermediate_LV_NT_ESFM) $(SBE) $(scripted_NT_updates) $(
 $(expanded_OT_TSV_tables): $(initial_OT_TSV_tables) $(Clear_Bible_OT_lowfat_TSV) $(scripted_OT_updates) add_tags_to_OT_word_table.py
 	@echo "\n\nAdd people/places/referent tags to OET OT word table…\n"
 	@$(Python) add_tags_to_OT_word_table.py -e
+	@echo "\n\nCopying and renaming OT morpheme table from glossed_OSHB/ to modified_source_glossed_OSHB_ESFM/…\n"
+	@cp ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv
 
 $(intermediate_LV_OT_ESFM): $(expanded_OT_TSV_tables) extract_glossed_OSHB_OT_to_ESFM.py
 	@echo "\n\nExtract OT from TSV table to ESFM files…\n"
@@ -93,8 +95,8 @@ $(initial_OT_TSV_tables): $(WLC_OT_TSV_table) $(Clear_Bible_OT_lowfat_TSV) apply
 	@echo "\n\nApply glosses from Macula to OT (and reorder)…\n"
 	@$(Python) apply_Clear_Macula_OT_glosses.py
 	# @echo "\n\nCopying and renaming OT word and morpheme tables from glossed_OSHB/ to modified_source_glossed_OSHB_ESFM/…\n"
-	# @cp -a ../intermediateTexts/glossed_OSHB/all_glosses.words.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv
-	# @cp -a ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv
+	# @cp ../intermediateTexts/glossed_OSHB/all_glosses.words.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv
+	# @cp ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv
 
 $(WLC_OT_TSV_table): $(short_OSHB_TSV) prepare_OSHB_for_glossing.py ourWLCHebrewGlosses.txt
 	@echo "\n\nExpand columns in OT TSV and add our custom glosses…\n"
@@ -126,10 +128,10 @@ $(expanded_NT_wordtable): $(original_NT_wordtable) $(Clear_Bible_NT_lowfat_TSV) 
 
 #=== RV stuff =======================
 
+# @echo "\n\nCopying OT word and morpheme tables from auto_edited_OT_ESFM/ to ReadersVersion/…\n"
+# @cp ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_word_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_word_table.tsv
+# @cp ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_morpheme_table.tsv
 $(RV_HTML): $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py convert_OET-RV_to_simple_HTML.py $(expanded_NT_wordtable)
-	# @echo "\n\nCopying OT word and morpheme tables from auto_edited_OT_ESFM/ to ReadersVersion/…\n"
-	# @cp -a ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_word_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_word_table.tsv
-	# @cp -a ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_morpheme_table.tsv
 	@echo "\n\nConnect OET-RV words to OET-LV word numbers…\n"
 	@$(Python) connect_OET-RV_words_via_OET-LV.py
 	@echo "\n\nConvert OET RV ESFM files to simple HTML…\n"

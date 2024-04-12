@@ -1,4 +1,4 @@
-\id JOB - Open English Translation—Readers' Version (OET-RV) v0.0.04
+\id JOB - Open English Translation—Readers' Version (OET-RV) v0.0.05
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 JOB
@@ -120,11 +120,11 @@
 \q1 May a cloud¦232972 dwell over it.
 \q1 May the blacknesses of the day¦232975 terrify¦232973 it.
 \q1
-\v 6 May gloom take that night¦232977.
+\v 6 May gloom¦232980 take that night¦232977.
 \q1 May it not be happy among the days¦232984 of the year¦232985.
 \q1 May it not enter into the number¦232986 of months¦232987.
 \q1
-\v 7 Listen, may that night¦232993 be barren.
+\v 7 Listen, may that night¦232993 be barren¦232996.
 \q1 May a happy shout never enter it.
 \q1
 \v 8 May¦233009 those who curse days, curse that one—
@@ -138,11 +138,11 @@
 \q1 to hide the sorrow from my eyes¦233032.
 \b
 \q1
-\v 11 Why didn't I die \add at birth¦233036\add*?
+\v 11 Why didn't I die¦233037 \add at birth¦233036\add*?
 \q1 \add Just\add* come out then stop breathing?
 \q1
 \v 12 Why was I accepted onto \add her lap\add*?
-\q1 And onto those breasts to suckle?
+\q1 And onto those breasts¦233047 to suckle?
 \q1
 \v 13 \add Yes,\add* I'd be peacefully lying down now.
 \q1 I would have slept¦233056 and¦233055 been at rest,
@@ -192,7 +192,6 @@
 \s1 Elifaz responds to Iyyov
 \rem /s1 The First Dialogue; Eliphaz; Eliphaz's First Response to Job; Eliphaz Speaks: Job Has Sinned; First cycle of speeches
 \sr (4:1–14:22)
-\rem /r (4.1—14.22)
 \p
 \v 1 Then Elifaz from Teman¦233184 \add replied¦233182\add*:
 \q1
@@ -229,7 +228,7 @@
 \q1
 \v 12 \add Now\add* a message¦233272 was brought¦233273 secretly¦233273 to me,
 \q1 and my ears caught a whisper¦233276 of it.
-\q2
+\q1
 \v 13 When troubled by thoughts¦233279 from dreams in the night¦233281,
 \q1 when people¦233286 have fallen into deep sleep¦233283,
 \q1
@@ -250,7 +249,7 @@
 \q1 and he accuses his \add own\add* messengers of making mistakes.
 \q1
 \v 19 How much less for those whose bodies were made from the clay,
-\q2 whose foundations¦233343 was made from the dust.
+\q2 whose foundations¦233343 were made from the dust.
 \q1 They're crushed¦233344 \add even easier\add* than a moth \add is\add*.
 \q1
 \v 20 They're destroyed from morning¦233349 to evening¦233350.
@@ -307,93 +306,95 @@
 \v 14 \add Even\add* in the daytime, they \add remain in\add* darkness¦233503.
 \q1 \add Even\add* at midday, they feel \add their way around\add* as if it's nighttime¦233504.
 \q1
-\v 15 ◘
-\q2 …
+\v 15 He saves¦233508 the poor from the \add plans of those smart people\add*,
+\q1 and from the \add actions\add* of powerful \add people\add*.
 \q1
-\v 16 ◘
-\q2 …
+\v 16 \add So\add* the poor have hope,
+\q1 and¦233518 injustice¦233518 \add is silenced\add*.
 \b
 \q1
-\v 17 ◘
-\q2 …
+\v 17 Listen, the person¦233524 who's corrected by God is blessed¦233523.
+\q1 Don't despise chastening from \add God\add* the provider.
 \q1
-\v 18 ◘
-\q2 …
+\v 18 He wounds and he \add also\add* bandages up.
+\q1 He strikes \add but\add* his hands¦233538 \add also\add* heal¦233540.
 \q1
-\v 19 ◘
+\v 19 \add If you get in\add* trouble¦233543 six¦233542 \add times\add*, he'll rescue you.
+\q1 \add Even\add* seven¦233545 \add times, he'll prevent\add* you \add from being\add* harmed.
 \q1
-\v 20 ◘
-\q2 …
+\v 20 During famines¦233553, he'll \add rescue\add* you from death¦233555,
+\q1 and in war, he'll \add save you from slaughter\add*.
 \q1
-\v 21 ◘
-\q2 …
+\v 21 He'll¦233567 hide you away from \add hurting words\add*,
+\q1 and when destruction¦233566 comes, you won't be afraid¦233565.
 \q1
-\v 22 ◘
-\q1 …
+\v 22 You'll laugh¦233572 at destruction¦233570 and at famine¦233571,
+\q1 and you¦233572 won't be afraid¦233577 of wild animals,
 \q1
-\v 23 ◘
+\v 23 because you¦233584'll have an agreement with the stones¦233582 in the fields \add for walls\add*,
+\q1 and¦233585 the wild animals¦233585 will be at peace¦233587 with you.
 \q1
-\v 24 ◘
-\q2 …
+\v 24 You'll¦233592 know¦233591 that your \add home\add* is \add secure\add*,
+\q1 and you'll inspect¦233596 your animal shelters and nothing will be missing.
 \q1
-\v 25 ◘
-\q2 …
+\v 25 You'll¦233602 know¦233601 that your descendants¦233606 will be numerous,
+\q1 and your offspring¦233605 like the grass¦233607 on the land.
 \q1
-\v 26 ◘
-\q2 …
+\v 26 You'll \add reach\add* an old age before you \add get\add* to the grave¦233614,
+\q1 like grain that's harvested at the right time.
 \q1
-\v 27 ◘
-\q1 …
+\v 27 Listen to this: we've investigated and it's true.
+\q1 Listen to it \add so\add* you'll know¦233628 for yourself.
 \c 6
 \rem /s1 Job; Job Replies: My Complaint Is Just; Job's Second Speech: A Response to Eliphaz
 \p
-\v 1 ◘
+\v 1 Then Iyyov \add (Job) responded\add*:
 \q1
-\v 2 ◘
-\q2 …
+\v 2 If only my anguish could be truly weighed¦233638,
+\q1 and¦233641 my calamity¦233641 could be \add put\add* together¦233646 \add with it¦233639 on the scales\add*.
 \q1
-\v 3 ◘
-\q2 …
+\v 3 Because now it would be heavier than the sand \add on the beaches\add*
+\q1 \add so\add* that's why my words¦233657 have been \add so\add* rash.
 \q1
-\v 4 ◘
-\q2 …
-\q2 …
-\q1
-\v 5 ◘
-\q2 …
-\q1
-\v 6 ◘
-\q2 …
-\q1
-\v 7 ◘
-\q2 …
+\v 4 Because the arrows¦233661 of \add God¦233669\add* the provider are in me.
+\q1 My spirit is drinking¦233666 in their¦233665 poison¦233665.
+\q1 God's terrors¦233668 are set out against me.
 \b
 \q1
-\v 8 ◘
-\q2 …
+\v 5 \add Does\add* a wild doney bray \add when it has\add* fresh¦233677 grass¦233677 \add to eat\add*,
+\q1 or a ox bellow \add when it has\add* its fodder¦233684?
 \q1
-\v 9 ◘
+\v 6 \add Do people\add* eat tasteless food without¦233688 \add adding\add* salt,
+\q1 or \add enjoy\add* the taste of purslane¦233697 \add leaves by itself\add*?
 \q1
-\v 10 ◘
-\q1 …
-\q1
-\v 11 ◘
-\q2 …
-\q1
-\v 12 ◘
-\q2 …
-\q1
-\v 13 ◘
-\q2 …
+\v 7 My soul refuses¦233699 to touch¦233700 them—
+\q1 they¦233702 are like detestable food to me.
 \b
 \q1
-\v 14 ◘
-\q2 …
-\q2 …
+\v 8 Who will give me my request¦233710?
+\q1 May God¦233713 give me what I hope for.
 \q1
-\v 15 ◘
-\q2 …
-\q2 …
+\v 9 \add If only\add* God¦233716 would be willing¦233715 to crush¦233717 me.
+\q1 May he¦233718 \add play\add* his hand¦233719 and cut me off.
+\q1
+\v 10 It still¦233723 comforts me and¦233726 gives me \add inner\add* joy through never-ending pain,
+\q1 that I haven't \add denied\add* the words¦233734 of the holy one.
+\q1
+\v 11 \add I don't have the\add* strength¦233739 to \add keep\add* waiting.
+\q1 What \add future\add* do I have, that I should \add want to\add* go on living?
+\q1
+\v 12 Am I strong like rock?
+\q1 Is my body \add made of\add* bronze¦233759?
+\q1
+\v 13 Am I \add in a position\add* to help¦233763 myself¦233763?
+\q1 \add It seems that\add* success¦233765 has been driven away from me.
+\b
+\q1
+\v 14 When a man's in despair¦233769, \add surely\add* his friend¦233770 should be kind
+\q1 \add even if the man\add* stops honouring \add God\add* the provider.
+\q1
+\v 15 My ‘brothers’ have been a treacherous¦233777 as a \add river that dries up in the summer\add*.
+\q1 They \add disappear\add* again like dry river beds.
 \q1
 \v 16 ◘
 \q2
