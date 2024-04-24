@@ -67,10 +67,10 @@ import sys
 sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitted to PyPI
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
-LAST_MODIFIED_DATE = '2024-03-19' # by RJH
+LAST_MODIFIED_DATE = '2024-04-16' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET NT wordtable"
-PROGRAM_VERSION = '0.31'
+PROGRAM_VERSION = '0.32'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -79,7 +79,7 @@ DEBUGGING_THIS_MODULE = False
 SCRIPTED_UPDATES_TABLES_INPUT_FOLDERPATH = Path( 'ScriptedVLTUpdates/' )
 
 JSON_VERSES_DB_FILEPATH = Path( '../../Bible_speaker_identification/outsideSources/TheographicBibleData/derivedFiles/normalised_Verses.json' )
-MACULA_GREEK_TSV_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTreesAbbrev.NT.words.tsv' )
+MACULA_GREEK_TSV_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTrees.NT.words.abbrev.tsv' )
 
 WORD_TABLE_INPUT_FILEPATH = Path( '../intermediateTexts/modified_source_VLT_ESFM/OET-LV_NT_word_table.10columns.tsv' )
 WORD_TABLE_OUTPUT_FILENAME = 'OET-LV_NT_word_table.tsv'
@@ -129,7 +129,7 @@ def main() -> None:
     with open( MACULA_GREEK_TSV_FILEPATH, 'rt', encoding='utf-8' ) as macula_tsv_file:
         macula_tsv_lines = macula_tsv_file.readlines()
     if macula_tsv_lines[0].startswith( '\ufeff' ): # remove any BOM
-        print( "  Handling Byte Order Marker (BOM) at start of source tsv file…" )
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of source tsv file…" )
         macula_tsv_lines[0] = macula_tsv_lines[0][1:]
     # Get the headers before we start
     column_line_string = macula_tsv_lines[0].rstrip( '\n' )

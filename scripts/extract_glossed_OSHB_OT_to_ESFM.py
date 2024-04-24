@@ -40,10 +40,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2024-04-04' # by RJH
+LAST_MODIFIED_DATE = '2024-04-16' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed_OSHB_OT_to_ESFM"
 PROGRAM_NAME = "Extract glossed OSHB OT ESFM files"
-PROGRAM_VERSION = '0.50'
+PROGRAM_VERSION = '0.51'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -69,14 +69,14 @@ class State:
     # end of extract_glossed_OSHB_OT_to_ESFM.__init__
 
 
-NUM_EXPECTED_OSHB_MORPHEME_COLUMNS = 17
+NUM_EXPECTED_OSHB_MORPHEME_COLUMNS = 16
 source_morpheme_tsv_rows = []
 source_morpheme_tsv_column_max_length_counts = {}
 source_morpheme_tsv_column_non_blank_counts = {}
 source_morpheme_tsv_column_counts = defaultdict(lambda: defaultdict(int))
 source_morpheme_tsv_column_headers = []
 
-NUM_EXPECTED_OSHB_WORD_COLUMNS = 16
+NUM_EXPECTED_OSHB_WORD_COLUMNS = 17
 source_word_tsv_rows = []
 source_word_tsv_column_max_length_counts = {}
 source_word_tsv_column_non_blank_counts = {}
@@ -92,7 +92,7 @@ def main() -> None:
     global state
     state = State()
 
-    if 1: # or loadSourceMorphemeGlossTable():
+    if loadSourceMorphemeGlossTable():
         if loadSourceWordGlossTable():
             export_esfm_literal_English_gloss()
         else: print( f"\nFAILED to load words!\n" )
@@ -182,17 +182,17 @@ def loadSourceWordGlossTable() -> bool:
 
     # Get the headers before we start
     source_word_tsv_column_header_line = tsv_lines[0].strip()
-    assert source_word_tsv_column_header_line == 'Ref\tOSHBid\tRowType\tLemmaRowList\tStrongs\tCantillationHierarchy\tMorphology\tWord\tNoCantillations\tMorphemeGlosses\tContextualMorphemeGlosses\tWordGloss\tContextualWordGloss\tGlossCapitalisation\tGlossPunctuation\tGlossOrder\tGlossInsert', f"{source_word_tsv_column_header_line=}"
+    assert source_word_tsv_column_header_line == 'Ref\tOSHBid\tRowType\tMorphemeRowList\tStrongs\tCantillationHierarchy\tMorphology\tWord\tNoCantillations\tMorphemeGlosses\tContextualMorphemeGlosses\tWordGloss\tContextualWordGloss\tGlossCapitalisation\tGlossPunctuation\tGlossOrder\tGlossInsert', f"{source_word_tsv_column_header_line=}"
     source_word_tsv_column_headers = [header for header in source_word_tsv_column_header_line.split('\t')]
     # print(f"Column headers: ({len(source_word_tsv_column_headers)}): {source_word_tsv_column_headers}")
-    assert len(source_word_tsv_column_headers) == NUM_EXPECTED_OSHB_MORPHEME_COLUMNS, f"Found {len(source_word_tsv_column_headers)} columns! (Expecting {NUM_EXPECTED_OSHB_MORPHEME_COLUMNS})"
+    assert len(source_word_tsv_column_headers) == NUM_EXPECTED_OSHB_WORD_COLUMNS, f"Found {len(source_word_tsv_column_headers)} columns! (Expecting {NUM_EXPECTED_OSHB_MORPHEME_COLUMNS})"
 
     # Read, check the number of columns, and summarise row contents all in one go
     dict_reader = DictReader(tsv_lines, delimiter='\t')
     unique_words = set()
     for n, row in enumerate(dict_reader):
-        if len(row) != NUM_EXPECTED_OSHB_MORPHEME_COLUMNS:
-            logging.critical(f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_OSHB_MORPHEME_COLUMNS}!!!")
+        if len(row) != NUM_EXPECTED_OSHB_WORD_COLUMNS:
+            logging.critical(f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_OSHB_WORD_COLUMNS}!!!")
         source_word_tsv_rows.append(row)
         unique_words.add(row['NoCantillations'])
         for key, value in row.items():
@@ -446,7 +446,7 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
     """
     # DEBUGGING_THIS_MODULE = 99
     global saved_gloss, saved_capitalisation, just_had_insert, mmmCount, wwwwCount
-    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"preform_row_gloss({given_verse_row['Ref']}.{given_verse_row['LemmaRowList']},"
+    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"preform_row_gloss({given_verse_row['Ref']}.{given_verse_row['MorphemeRowList']},"
             f" mg='{given_verse_row['MorphemeGlosses']}' cmg='{given_verse_row['ContextualMorphemeGlosses']}'"
             f" wg='{given_verse_row['WordGloss']}' cwg='{given_verse_row['ContextualWordGloss']}'"
             f" {consecutive=} {saved_gloss=} {saved_capitalisation=} {just_had_insert=})…") # {last_glossWord=} 
@@ -472,7 +472,7 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
         #     assert not gloss # otherwise we'd be losing it
         #     gloss = saved_gloss
 
-    elif ',' in given_verse_row['LemmaRowList']: # then the word consists of two or more morphemes
+    elif ',' in given_verse_row['MorphemeRowList']: # then the word consists of two or more morphemes
         gloss = given_verse_row['ContextualWordGloss'] if given_verse_row['ContextualWordGloss'] \
                     else given_verse_row['WordGloss'] if given_verse_row['WordGloss'] \
                     else given_verse_row['ContextualMorphemeGlosses'] if given_verse_row['ContextualMorphemeGlosses'] \
@@ -494,7 +494,7 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
         else: # no gloss
             gloss = 'mmm' # This sequence doesn't occur in any words
             mmmCount += 1
-            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"{given_verse_row['Ref']}.{given_verse_row['LemmaRowList']},"
+            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"{given_verse_row['Ref']}.{given_verse_row['MorphemeRowList']},"
                                         f" needs a word gloss for '{given_verse_row['Word']}'"
                                         f" (from '{given_verse_row['NoCantillations']}')" )
         if 'S' in given_verse_row['GlossCapitalisation']: # Start of Sentence
@@ -512,7 +512,7 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
         if not wordGloss:
             wordGloss = 'wwww' # Sequence doesn't occur in any English words so easy to find
             wwwwCount += 1
-            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"{given_verse_row['Ref']}.{given_verse_row['LemmaRowList']},"
+            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"{given_verse_row['Ref']}.{given_verse_row['MorphemeRowList']},"
                                             f" needs a word gloss for '{given_verse_row['Word']}'"
                                             f" (from '{given_verse_row['NoCantillations']}')" )
         if 'S' in given_verse_row['GlossCapitalisation']:

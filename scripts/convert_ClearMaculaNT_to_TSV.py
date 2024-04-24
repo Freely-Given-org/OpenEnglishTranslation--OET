@@ -75,7 +75,7 @@ EXPECTED_WORD_ATTRIBUTES = ('{http://www.w3.org/XML/1998/namespace}id', 'ref', '
 assert len(set(EXPECTED_WORD_ATTRIBUTES)) == len(EXPECTED_WORD_ATTRIBUTES), "No duplicate attribute names"
 BIBLE_TAGS_TSV_INPUT_FILEPATH = Path( '../sourceTexts/BibleTagsOriginals/BibTags.NT.words.tsv' )
 TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTrees.NT.words.tsv' )
-SHORTENED_TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTreesAbbrev.NT.words.tsv' )
+SHORTENED_TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTrees.NT.words.abbrev.tsv' )
 OUTPUT_FIELDNAMES = ['FGRef','BibTagId','LFRef','LFNumRef','Role',
                     'Word','Unicode','After',
                     'WordClass','Person','Gender','Number','Tense','Voice','Mood','Degree',

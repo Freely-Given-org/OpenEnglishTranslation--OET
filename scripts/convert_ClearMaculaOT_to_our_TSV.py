@@ -35,6 +35,7 @@ OSHB morphology codes can be found at https://hb.openscriptures.org/parsing/Hebr
 
 CHANGELOG:
     2024-04-04 Tried using macula Hebrew TSV files instead of 'low-fat' XML but it seemed to be lacking the 'role' info
+    2024-04-15 Also output Hebrew lemma table
 """
 from gettext import gettext as _
 # from typing import Dict, List, Tuple
@@ -55,17 +56,17 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.OriginalLanguages import Hebrew
 
 
-LAST_MODIFIED_DATE = '2024-04-11' # by RJH
+LAST_MODIFIED_DATE = '2024-04-16' # by RJH
 SHORT_PROGRAM_NAME = "convert_ClearMaculaOT_to_our_TSV"
 PROGRAM_NAME = "Extract and Apply Macula OT glosses"
-PROGRAM_VERSION = '0.36'
+PROGRAM_VERSION = '0.40'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
 
 
-LOWFAT_XML_INPUT_FOLDERPATH = Path( '../../Forked/macula-hebrew/WLC/lowfat/' )
-LOWFAT_XML_FILENAME_TEMPLATE = 'NN-Uuu-CCC-lowfat.xml' # e.g., 01-Gen-001-lowfat.xml
+LOWFAT_XML_INPUT_FOLDERPATH = Path( '../../Forked/macula-hebrew/WLC/lowfat/' ) # In
+LOWFAT_XML_INPUT_FILENAME_TEMPLATE = 'NN-Uuu-CCC-lowfat.xml' # In, e.g., 01-Gen-001-lowfat.xml
 EXPECTED_WORD_ATTRIBUTES = ('{http://www.w3.org/XML/1998/namespace}id', 'ref',
         'mandarin', 'english', 'gloss', 'compound',
         'class','morph','pos','person','gender','number','type','state','role',
@@ -74,12 +75,12 @@ EXPECTED_WORD_ATTRIBUTES = ('{http://www.w3.org/XML/1998/namespace}id', 'ref',
         'lang','lemma','stem','subjref','participantref',
         'sdbh','lexdomain','sensenumber','coredomain','frame',) # 'contextualdomain',
 assert len(set(EXPECTED_WORD_ATTRIBUTES)) == len(EXPECTED_WORD_ATTRIBUTES), "No duplicate attribute names"
-MACULA_HEBREW_TSV_INPUT_FOLDERPATH = Path( '../../Forked/macula-hebrew/WLC/tsv/' )
-MACULA_HEBREW_TSV_FILENAME = 'macula-hebrew.tsv'
+MACULA_HEBREW_TSV_INPUT_FOLDERPATH = Path( '../../Forked/macula-hebrew/WLC/tsv/' ) # In
+MACULA_HEBREW_TSV_INPUT_FILENAME = 'macula-hebrew.tsv' # In
 MACULA_HEBREW_EXPECTED_COLUMN_HEADER = 'xml:id\tref\tclass\ttext\ttransliteration\tafter\tstrongnumberx\tstronglemma\tsensenumber\tgreek\tgreekstrong\tgloss\tenglish\tmandarin\tstem\tmorph\tlang\tlemma\tpos\tperson\tgender\tnumber\tstate\ttype\tlexdomain\tcontextualdomain\tcoredomain\tsdbh\textends\tframe\tsubjref\tparticipantref'
-OUR_TSV_INPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/our_WLC_glosses.morphemes.tsv' )
-TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTrees.OT.morphemes.tsv' )
-OUTPUT_FIELDNAMES = ['FGRef','OSHBid','RowType','LFRef','LFNumRef',
+OUR_WLC_GLOSSES_TSV_INPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/our_WLC_glosses.morphemes.tsv' ) # In
+MORPHEME_TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTrees.OT.morphemes.tsv' ) # Out
+MORPHEME_OUTPUT_FIELDNAMES = ['FGRef','OSHBid','RowType','LFRef','LFNumRef',
                     'Language','WordOrMorpheme','Unicode','Transliteration','After',
                     'Compound','WordClass','PartOfSpeech','Person','Gender','Number','WordType','State','Role','SDBH',
                     'StrongNumberX','StrongLemma','Stem','Morphology','Lemma','SenseNumber',
@@ -88,10 +89,11 @@ OUTPUT_FIELDNAMES = ['FGRef','OSHBid','RowType','LFRef','LFNumRef',
                     'Greek','GreekStrong',
                     'EnglishGloss','MandarinGloss','ContextualGloss',
                     'Nesting']
-assert len(set(OUTPUT_FIELDNAMES)) == len(OUTPUT_FIELDNAMES), "No duplicate fieldnames"
-assert len(OUTPUT_FIELDNAMES) == 37, len(OUTPUT_FIELDNAMES)
-SHORTENED_TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTreesAbbrev.OT.morphemes.tsv' )
-COLUMNS_TO_REMOVE_FOR_SHORTENING = ('LFRef','LFNumRef', # Don't need their references
+assert len(set(MORPHEME_OUTPUT_FIELDNAMES)) == len(MORPHEME_OUTPUT_FIELDNAMES), "No duplicate fieldnames"
+assert len(MORPHEME_OUTPUT_FIELDNAMES) == 37, len(MORPHEME_OUTPUT_FIELDNAMES)
+
+MORPHEME_SHORTENED_TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTrees.OT.morphemes.abbrev.tsv' ) # Out
+MORPHEME_COLUMNS_TO_REMOVE_FOR_SHORTENING = ('LFRef','LFNumRef', # Don't need their references
         'Language', # Aramaic is in already in RowType field
         'Transliteration', # We can do this on the fly (and we like our own system better anyway)
         'Unicode', # Is this just a repetition?
@@ -99,11 +101,14 @@ COLUMNS_TO_REMOVE_FOR_SHORTENING = ('LFRef','LFNumRef', # Don't need their refer
         'MandarinGloss', # Not needed for our specific task
         'CoreDomain','LexicalDomain',#'ContextualDomain', # What do all these numbers refer to?
         )
-for something in COLUMNS_TO_REMOVE_FOR_SHORTENING:
-    assert something in OUTPUT_FIELDNAMES, something
-assert len(set(COLUMNS_TO_REMOVE_FOR_SHORTENING)) == len(COLUMNS_TO_REMOVE_FOR_SHORTENING), "No duplicate fieldnames"
-assert len(COLUMNS_TO_REMOVE_FOR_SHORTENING) == 9, len(COLUMNS_TO_REMOVE_FOR_SHORTENING)
-assert len(OUTPUT_FIELDNAMES) - len(COLUMNS_TO_REMOVE_FOR_SHORTENING) == 28, f"{len(OUTPUT_FIELDNAMES)=} {len(COLUMNS_TO_REMOVE_FOR_SHORTENING)=}"
+for something in MORPHEME_COLUMNS_TO_REMOVE_FOR_SHORTENING:
+    assert something in MORPHEME_OUTPUT_FIELDNAMES, something
+assert len(set(MORPHEME_COLUMNS_TO_REMOVE_FOR_SHORTENING)) == len(MORPHEME_COLUMNS_TO_REMOVE_FOR_SHORTENING), "No duplicate fieldnames"
+assert len(MORPHEME_COLUMNS_TO_REMOVE_FOR_SHORTENING) == 9, len(MORPHEME_COLUMNS_TO_REMOVE_FOR_SHORTENING)
+assert len(MORPHEME_OUTPUT_FIELDNAMES) - len(MORPHEME_COLUMNS_TO_REMOVE_FOR_SHORTENING) == 28, f"{len(MORPHEME_OUTPUT_FIELDNAMES)=} {len(MORPHEME_COLUMNS_TO_REMOVE_FOR_SHORTENING)=}"
+
+LEMMA_TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTrees.OT.lemmas.tsv' ) # Out
+LEMMA_OUTPUT_FIELDNAMES = ['Lemma','Glosses']
 
 SUFFIX_DICT = {'1':'a', '2':'b', '3':'c', '4':'d', '5':'e'} # Max of 5 morphemes in one word
 
@@ -115,15 +120,20 @@ class State:
         Constructor:
         """
         self.lowfat_XML_input_folderpath = LOWFAT_XML_INPUT_FOLDERPATH
-        self.macula_TSV_input_filepath = MACULA_HEBREW_TSV_INPUT_FOLDERPATH.joinpath( MACULA_HEBREW_TSV_FILENAME )
-        self.our_TSV_input_filepath = OUR_TSV_INPUT_FILEPATH
-        self.TSV_output_filepath = TSV_OUTPUT_FILEPATH
-        self.shortened_TSV_output_filepath = SHORTENED_TSV_OUTPUT_FILEPATH
+        self.macula_TSV_input_filepath = MACULA_HEBREW_TSV_INPUT_FOLDERPATH.joinpath( MACULA_HEBREW_TSV_INPUT_FILENAME )
+        self.our_TSV_input_filepath = OUR_WLC_GLOSSES_TSV_INPUT_FILEPATH
+        self.morpheme_TSV_output_filepath = MORPHEME_TSV_OUTPUT_FILEPATH
+        self.morpheme_shortened_TSV_output_filepath = MORPHEME_SHORTENED_TSV_OUTPUT_FILEPATH
+        self.lemma_TSV_output_filepath = LEMMA_TSV_OUTPUT_FILEPATH
         self.our_WLC_rows = []
-        self.macula_rows = []
+        # self.macula_rows = [] # For TSV input
         self.lowFatWordsAndMorphemes = []
-        self.output_rows = []
-        self.output_fieldnames = OUTPUT_FIELDNAMES
+        self.morpheme_output_rows = []
+        self.morpheme_output_fieldnames = MORPHEME_OUTPUT_FIELDNAMES
+        self.lemma_formation_dict = {}
+        self.lemma_output_rows = []
+        self.lemma_output_fieldnames = LEMMA_OUTPUT_FIELDNAMES
+        # self.lemma_index_dict = {} # Maybe we don't need this?
     # end of convert_ClearMaculaOT_to_our_TSV.State.__init__()
 
 
@@ -150,8 +160,9 @@ def main() -> None:
     if loadOurSourceTable():
         if loadLowFatXMLGlosses(): # loadMaculaHebrewTSVTable()
             if LF_add_OSHB_ids(): # TSV_add_OSHB_ids()
-                save_filled_TSV_file()
-                save_shortened_TSV_file()
+                save_lemma_TSV_file()
+                save_filled_morpheme_TSV_file()
+                save_shortened_morpheme_TSV_file()
 # end of convert_ClearMaculaOT_to_our_TSV.main
 
 
@@ -242,7 +253,7 @@ def loadLowFatXMLGlosses() -> bool:
         vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading {BBB} XML files…")
         Uuu = BibleOrgSysGlobals.loadedBibleBooksCodes.getUSFMAbbreviation( BBB )
         if Uuu=='Hos': Uuu = 'HOS' # Fix inconsistency in naming patterns
-        filenameTemplate = LOWFAT_XML_FILENAME_TEMPLATE.replace( 'NN', str(referenceNumber).zfill(2) ).replace( 'Uuu', Uuu )
+        filenameTemplate = LOWFAT_XML_INPUT_FILENAME_TEMPLATE.replace( 'NN', str(referenceNumber).zfill(2) ).replace( 'Uuu', Uuu )
 
         for chapterNumber in range(1, 150+1):
             filename = filenameTemplate.replace( 'CCC', str(chapterNumber).zfill(3) )
@@ -387,7 +398,7 @@ def loadLowFatXMLGlosses() -> bool:
                                 'Greek':elem.get('greek'), 'GreekStrong':elem.get('greekstrong'),
                                 'EnglishGloss':English, 'MandarinGloss':elem.get('mandarin'), 'ContextualGloss':gloss,
                                 'Nesting':'/'.join(reversed(nestingBits)) }
-                    assert len(entry) == len(state.output_fieldnames)-3, f"{len(entry)=} vs {len(state.output_fieldnames)=}" # Three more fields to be added below
+                    assert len(entry) == len(state.morpheme_output_fieldnames)-3, f"{len(entry)=} vs {len(state.morpheme_output_fieldnames)=}" # Three more fields to be added below
                     # for k,v in entry.items():
                     #     if v: non_blank_counts[k] += 1
                     tempWordsAndMorphemes.append( entry )
@@ -444,7 +455,7 @@ def loadLowFatXMLGlosses() -> bool:
                     refDict[longID] = ourRef # Create dict for next loop
                     # print(f"{longID=} {nextLongID=} {mwType=} {ourRef=}")
                     newExpandedDictEntry = {'FGRef':ourRef, 'RowType':mwType, **firstEntryAttempt}
-                    assert len(newExpandedDictEntry) == len(state.output_fieldnames)-1, f"{len(newExpandedDictEntry)=} vs {len(state.output_fieldnames)=}" # OSHBid field to be added below
+                    assert len(newExpandedDictEntry) == len(state.morpheme_output_fieldnames)-1, f"{len(newExpandedDictEntry)=} vs {len(state.morpheme_output_fieldnames)=}" # OSHBid field to be added below
                     state.lowFatWordsAndMorphemes.append( newExpandedDictEntry )
 
     # Adjust frames to our references
@@ -750,7 +761,7 @@ def LF_add_OSHB_ids() -> bool:
     lastVerseID = None
     newLowFatWordsAndMorphemes = []
     for _n,secondEntryAttempt in enumerate(state.lowFatWordsAndMorphemes):
-        assert len(secondEntryAttempt) == len(state.output_fieldnames)-1
+        assert len(secondEntryAttempt) == len(state.morpheme_output_fieldnames)-1
         ourID, wordOrMorpheme, morphology = secondEntryAttempt['FGRef'], removeCantillationMarks(secondEntryAttempt['WordOrMorpheme'], removeMetegOrSiluq=True), secondEntryAttempt['Morphology']
         verseID, wordPart = ourID.split('w')
         if wordPart.isdigit():
@@ -773,7 +784,7 @@ def LF_add_OSHB_ids() -> bool:
             # print(f"({len(secondEntryAttempt)}) {secondEntryAttempt=}")
             newMoreExpandedDictEntry = {'FGRef':ourID, 'OSHBid':foundID, **secondEntryAttempt}
             # print(f"({len(newMoreExpandedDictEntry)}) {newMoreExpandedDictEntry=}")
-            assert len(newMoreExpandedDictEntry) == len(state.output_fieldnames), f"{len(newMoreExpandedDictEntry)=} vs {len(state.output_fieldnames)=}" # OSHBid field to be added below
+            assert len(newMoreExpandedDictEntry) == len(state.morpheme_output_fieldnames), f"{len(newMoreExpandedDictEntry)=} vs {len(state.morpheme_output_fieldnames)=}" # OSHBid field to be added below
             newLowFatWordsAndMorphemes.append( newMoreExpandedDictEntry )
         except KeyError:
             logging.warning( f"Failed to find OSHB id for {offset=} {ourID}: '{wordOrMorpheme}' {morphology}" )
@@ -788,12 +799,12 @@ def LF_add_OSHB_ids() -> bool:
                     assert foundWordOrMorpheme==wordOrMorpheme, f"ID's now matched {adjustedRowID} from {ourID} and got {foundID}, but not text ({len(foundWordOrMorpheme)}) '{foundWordOrMorpheme}' != ({len(wordOrMorpheme)}) '{wordOrMorpheme}'"
                     assert foundMorphology==morphology, f"ID's now matched {adjustedRowID} from {ourID} and got {foundID}, but not morphology '{foundMorphology}'!='{morphology}'"
                 newMoreExpandedDictEntry = {'FGRef':ourID, 'OSHBid':foundID, **secondEntryAttempt}
-                assert len(newMoreExpandedDictEntry) == len(state.output_fieldnames), f"{len(newMoreExpandedDictEntry)=} vs {len(state.output_fieldnames)=}" # OSHBid field to be added below
+                assert len(newMoreExpandedDictEntry) == len(state.morpheme_output_fieldnames), f"{len(newMoreExpandedDictEntry)=} vs {len(state.morpheme_output_fieldnames)=}" # OSHBid field to be added below
                 newLowFatWordsAndMorphemes.append( newMoreExpandedDictEntry )
             except (KeyError, AssertionError):
                 logging.error( f"Failed to find OSHB id for {offset=} {adjustedRowID} from {ourID}: '{secondEntryAttempt['WordOrMorpheme']}'")
                 newMoreExpandedDictEntry = {'FGRef':ourID, 'OSHBid':'', **secondEntryAttempt}
-                assert len(newMoreExpandedDictEntry) == len(state.output_fieldnames), f"{len(newMoreExpandedDictEntry)=} vs {len(state.output_fieldnames)=}" # OSHBid field to be added below
+                assert len(newMoreExpandedDictEntry) == len(state.morpheme_output_fieldnames), f"{len(newMoreExpandedDictEntry)=} vs {len(state.morpheme_output_fieldnames)=}" # OSHBid field to be added below
                 newLowFatWordsAndMorphemes.append( newMoreExpandedDictEntry )
                 if DEBUGGING_THIS_MODULE:
                     print( f"{_n} {state.lowFatWordsAndMorphemes[_n]}" )
@@ -814,18 +825,18 @@ def LF_add_OSHB_ids() -> bool:
                     assert foundWordOrMorpheme==wordOrMorpheme, f"ID's now matched {adjustedRowID} from {ourID} and got {foundID}, but not text ({len(foundWordOrMorpheme)}) '{foundWordOrMorpheme}' != ({len(wordOrMorpheme)}) '{wordOrMorpheme}'"
                     assert foundMorphology==morphology, f"ID's now matched {adjustedRowID} from {ourID} and got {foundID}, but not morphology '{foundMorphology}'!='{morphology}'"
                 newMoreExpandedDictEntry = {'FGRef':ourID, 'OSHBid':foundID, **secondEntryAttempt}
-                assert len(newMoreExpandedDictEntry) == len(state.output_fieldnames), f"{len(newMoreExpandedDictEntry)=} vs {len(state.output_fieldnames)=}" # OSHBid field to be added below
+                assert len(newMoreExpandedDictEntry) == len(state.morpheme_output_fieldnames), f"{len(newMoreExpandedDictEntry)=} vs {len(state.morpheme_output_fieldnames)=}" # OSHBid field to be added below
                 newLowFatWordsAndMorphemes.append( newMoreExpandedDictEntry )
             except (KeyError, AssertionError):
                 logging.error( f"Failed to find OSHB id for {offset=} {adjustedRowID} from {ourID}: '{secondEntryAttempt['WordOrMorpheme']}'")
                 newMoreExpandedDictEntry = {'FGRef':ourID, 'OSHBid':'', **secondEntryAttempt}
-                assert len(newMoreExpandedDictEntry) == len(state.output_fieldnames), f"{len(newMoreExpandedDictEntry)=} vs {len(state.output_fieldnames)=}" # OSHBid field to be added below
+                assert len(newMoreExpandedDictEntry) == len(state.morpheme_output_fieldnames), f"{len(newMoreExpandedDictEntry)=} vs {len(state.morpheme_output_fieldnames)=}" # OSHBid field to be added below
                 newLowFatWordsAndMorphemes.append( newMoreExpandedDictEntry )
                 if DEBUGGING_THIS_MODULE:
                     haltB
         # Check we haven't ended up with anything missing or any extra stuff
-        for fieldname in newLowFatWordsAndMorphemes[-1]: assert fieldname in state.output_fieldnames
-        for fieldname in state.output_fieldnames: assert fieldname in newLowFatWordsAndMorphemes[-1]
+        for fieldname in newLowFatWordsAndMorphemes[-1]: assert fieldname in state.morpheme_output_fieldnames
+        for fieldname in state.morpheme_output_fieldnames: assert fieldname in newLowFatWordsAndMorphemes[-1]
         lastVerseID = verseID
 
     assert len(newLowFatWordsAndMorphemes) == len(state.lowFatWordsAndMorphemes)
@@ -835,24 +846,24 @@ def LF_add_OSHB_ids() -> bool:
 # end of convert_ClearMaculaOT_to_our_TSV.LF_add_OSHB_ids
 
 
-def save_filled_TSV_file() -> bool:
+def save_filled_morpheme_TSV_file() -> bool:
     """
     Save table as a single TSV file (about 94 MB).
     """
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nExporting filled OT Low Fat table as a single flat TSV file to {state.TSV_output_filepath}…" )
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nExporting filled OT Low Fat table as a single flat TSV file to {state.morpheme_TSV_output_filepath}…" )
 
-    BibleOrgSysGlobals.backupAnyExistingFile( state.TSV_output_filepath, numBackups=5 )
+    BibleOrgSysGlobals.backupAnyExistingFile( state.morpheme_TSV_output_filepath, numBackups=5 )
 
     # print(len(state.lowFatWordsAndMorphemes[0]), state.lowFatWordsAndMorphemes[0]);halt
-    with open( state.TSV_output_filepath, 'wt', encoding='utf-8' ) as tsv_output_file:
+    with open( state.morpheme_TSV_output_filepath, 'wt', encoding='utf-8' ) as tsv_output_file:
         tsv_output_file.write('\ufeff') # Write BOM
-        writer = DictWriter( tsv_output_file, fieldnames=state.output_fieldnames, delimiter='\t' )
+        writer = DictWriter( tsv_output_file, fieldnames=state.morpheme_output_fieldnames, delimiter='\t' )
         writer.writeheader()
         for thisTuple in state.lowFatWordsAndMorphemes:
-            thisRow = {k:thisTuple[k] for k in state.output_fieldnames}
+            thisRow = {k:thisTuple[k] for k in state.morpheme_output_fieldnames}
             # print( f"{state.output_fieldnames=} {thisTuple=} {thisRow=}" )
             writer.writerow( thisRow )
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {len(state.lowFatWordsAndMorphemes):,} data rows written ({len(state.output_fieldnames)} fields)." )
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {len(state.lowFatWordsAndMorphemes):,} data rows written ({len(state.morpheme_output_fieldnames)} fields) to {state.morpheme_TSV_output_filepath}." )
 
     if 1: # Collect and print stats
         non_blank_counts, blank_counts = defaultdict(int), defaultdict(int)
@@ -863,7 +874,7 @@ def save_filled_TSV_file() -> bool:
                 else: blank_counts[fieldname] += 1
                 sets[fieldname].add( value )
         for fieldname,count in blank_counts.items():
-            assert count < len(state.lowFatWordsAndMorphemes), f"save_filled_TSV_file: '{fieldname}' field is never filled"
+            assert count < len(state.lowFatWordsAndMorphemes), f"save_filled_morpheme_TSV_file: '{fieldname}' field is never filled"
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nCounts of non-blank fields for {len(state.lowFatWordsAndMorphemes):,} rows:" )
         for fieldname,count in non_blank_counts.items():
             non_blank_count_str = 'all' if count==len(state.lowFatWordsAndMorphemes) else f'{count:,}'
@@ -874,32 +885,32 @@ def save_filled_TSV_file() -> bool:
                 vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    being: {sets[fieldname]}" )
 
     return True
-# end of convert_ClearMaculaOT_to_our_TSV.save_filled_TSV_file
+# end of convert_ClearMaculaOT_to_our_TSV.save_filled_morpheme_TSV_file
 
 
-def save_shortened_TSV_file() -> bool:
+def save_shortened_morpheme_TSV_file() -> bool:
     """
     Save table as a single TSV file
         but with a number of fields deleted or abbreviated to make it smaller.
 
     Of course, this makes the table less self-documenting!
     """
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nExporting shortened OT Low Fat table as a single flat TSV file to {state.TSV_output_filepath}…" )
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nExporting shortened OT Low Fat table as a single flat TSV file to {state.morpheme_TSV_output_filepath}…" )
 
-    BibleOrgSysGlobals.backupAnyExistingFile( state.shortened_TSV_output_filepath, numBackups=5 )
+    BibleOrgSysGlobals.backupAnyExistingFile( state.morpheme_shortened_TSV_output_filepath, numBackups=5 )
 
-    shortenedFieldnameList = [fieldname for fieldname in state.output_fieldnames if fieldname not in COLUMNS_TO_REMOVE_FOR_SHORTENING]
+    shortenedFieldnameList = [fieldname for fieldname in state.morpheme_output_fieldnames if fieldname not in MORPHEME_COLUMNS_TO_REMOVE_FOR_SHORTENING]
     # print(f"({len(state.output_fieldnames)}) {state.output_fieldnames} -> ({len(shortenedFieldnames)}) {shortenedFieldnames}")
 
     # print(len(state.lowFatWordsAndMorphemes[0]), state.lowFatWordsAndMorphemes[0]);halt
     non_blank_counts = defaultdict(int)
     sets = defaultdict(set)
-    with open( state.shortened_TSV_output_filepath, 'wt', encoding='utf-8' ) as tsv_output_file:
+    with open( state.morpheme_shortened_TSV_output_filepath, 'wt', encoding='utf-8' ) as tsv_output_file:
         tsv_output_file.write('\ufeff') # Write BOM
         writer = DictWriter( tsv_output_file, fieldnames=shortenedFieldnameList, delimiter='\t' )
         writer.writeheader()
         for thisEntryDict in state.lowFatWordsAndMorphemes:
-            for columnName in COLUMNS_TO_REMOVE_FOR_SHORTENING:
+            for columnName in MORPHEME_COLUMNS_TO_REMOVE_FOR_SHORTENING:
                 del thisEntryDict[columnName]
             # Abbreviate wordy fields -- they can always be reconstituted later
             # Try to use the same abbreviations as already used in other fields
@@ -920,12 +931,12 @@ def save_shortened_TSV_file() -> bool:
                 thisEntryDict['Number'] = {'singular':'s','plural':'p','dual':'d', 'unknown: x':'?'}[thisEntryDict['Number']]
             if thisEntryDict['State']: # Abbreviate
                 thisEntryDict['State'] = {'absolute':'a','construct':'c','determined':'d'}[thisEntryDict['State']]
-            assert len(thisEntryDict) == len(state.output_fieldnames) - len(COLUMNS_TO_REMOVE_FOR_SHORTENING)
+            assert len(thisEntryDict) == len(state.morpheme_output_fieldnames) - len(MORPHEME_COLUMNS_TO_REMOVE_FOR_SHORTENING)
             writer.writerow( thisEntryDict )
             for fieldname,value in thisEntryDict.items():
                 if value: non_blank_counts[fieldname] += 1
                 sets[fieldname].add( value )
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {len(state.lowFatWordsAndMorphemes):,} shortened ({len(state.output_fieldnames)} - {len(COLUMNS_TO_REMOVE_FOR_SHORTENING)} = {len(thisEntryDict)} fields) data rows written." )
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {len(state.lowFatWordsAndMorphemes):,} shortened ({len(state.morpheme_output_fieldnames)} - {len(MORPHEME_COLUMNS_TO_REMOVE_FOR_SHORTENING)} = {len(thisEntryDict)} fields) data rows written to {state.morpheme_shortened_TSV_output_filepath}." )
 
     if 1: # Print stats
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nCounts of non-blank fields for {len(state.lowFatWordsAndMorphemes):,} rows:" )
@@ -938,7 +949,84 @@ def save_shortened_TSV_file() -> bool:
                 vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    being: {sets[fieldname]}" )
 
     return True
-# end of convert_ClearMaculaOT_to_our_TSV.save_shortened_TSV_file
+# end of convert_ClearMaculaOT_to_our_TSV.save_shortened_morpheme_TSV_file
+
+
+def save_lemma_TSV_file() -> bool:
+    """
+    Create the lemma table from the low-fat morpheme table.
+
+    Save table as a single TSV file
+
+    TODO: Why is the same code in apply_Clear_Macula_OT_glosses.py???
+    """
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nCreating and exporting OT lemma table from Low Fat table as a single flat TSV file to {state.lemma_TSV_output_filepath}…" )
+
+
+    # Firstly, let's create the lemma table
+    state.lemma_formation_dict = defaultdict(set)
+    num_missing_lemmas = 0
+    morphemes_with_missing_lemmas = set()
+    for thisTuple in state.lowFatWordsAndMorphemes:
+        thisRow = {k:thisTuple[k] for k in state.morpheme_output_fieldnames}
+        # print( f"{thisRow=}" )
+        fgRef, wordOrMorpheme, lemma, gloss = thisRow['FGRef'], thisRow['WordOrMorpheme'], thisRow['Lemma'], thisRow['EnglishGloss']
+        # assert ',' not in gloss, thisRow # Check our separator's not in the data -- fails on "1,000"
+        assert ';' not in gloss
+        if lemma:
+            if gloss:
+                state.lemma_formation_dict[lemma].add( gloss )
+        else: # no lemma
+            if fgRef.startswith( 'GEN_1:'):
+                print( f"Why do we have no lemma for {fgRef} {wordOrMorpheme=}?" )
+            morphemes_with_missing_lemmas.add( wordOrMorpheme )
+            num_missing_lemmas += 1
+    print( f"{num_missing_lemmas:,} morphemes with no lemmas => {len(morphemes_with_missing_lemmas):,} unique morphemes_with_missing_lemmas={sorted(morphemes_with_missing_lemmas)}")
+    print( f"Extracted {len(state.lemma_formation_dict):,} Hebrew lemmas from {len(state.lowFatWordsAndMorphemes):,} morphemes" )
+    # print( f"{state.lemma_formation_dict=}" )
+    
+    # Preprocess it in the sorted order
+    new_dict = {}
+    # state.lemma_index_dict = {}
+    for n, hebrew_lemma in enumerate( sorted( state.lemma_formation_dict ), start=1 ):
+        new_dict[hebrew_lemma] = ';'.join( sorted( state.lemma_formation_dict[hebrew_lemma], key=str.casefold ) )
+        # state.lemma_index_dict[hebrew_lemma] = n
+    state.lemma_formation_dict = new_dict
+    # print( f"{state.lemma_formation_dict=}" )
+    # print( f"{state.lemma_index_dict=}" )
+
+
+    BibleOrgSysGlobals.backupAnyExistingFile( state.lemma_TSV_output_filepath, numBackups=5 )
+
+    non_blank_counts = defaultdict(int)
+    sets = defaultdict(set)
+    with open( state.lemma_TSV_output_filepath, 'wt', encoding='utf-8' ) as tsv_output_file:
+        tsv_output_file.write('\ufeff') # Write BOM
+        writer = DictWriter( tsv_output_file, fieldnames=state.lemma_output_fieldnames, delimiter='\t' )
+        writer.writeheader()
+        for lemma,glosses in state.lemma_formation_dict.items():
+            thisEntryDict = {}
+            thisEntryDict['Lemma'] = lemma
+            thisEntryDict['Glosses'] = glosses
+            assert len(thisEntryDict) == len(state.lemma_output_fieldnames)
+            writer.writerow( thisEntryDict )
+            for fieldname,value in thisEntryDict.items():
+                if value: non_blank_counts[fieldname] += 1
+                sets[fieldname].add( value )
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {len(state.lemma_formation_dict):,} lemma ({len(state.lemma_output_fieldnames)} fields) data rows written to {state.lemma_TSV_output_filepath}." )
+
+    # if 1: # Print stats
+    #     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nCounts of non-blank fields for {len(state.lemma_formation_dict):,} rows:" )
+    #     for fieldname,count in non_blank_counts.items():
+    #         non_blank_count_str = 'all' if count==len(state.lemma_formation_dict) else f'{count:,}'
+    #         unique_count_str = 'all' if len(sets[fieldname])==len(state.lemma_formation_dict) else f'{len(sets[fieldname]):,}'
+    #         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {fieldname}: {non_blank_count_str} non-blank entries (with {unique_count_str} unique entries)" )
+    #         assert count # Otherwise we're including a field that contains nothing!
+    #         if len(sets[fieldname]) < 50:
+    #             vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    being: {sets[fieldname]}" )
+
+    return True
+# end of convert_ClearMaculaOT_to_our_TSV.save_lemma_TSV_file
 
 
 if __name__ == '__main__':

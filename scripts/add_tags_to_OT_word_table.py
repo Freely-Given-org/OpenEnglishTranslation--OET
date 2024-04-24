@@ -65,10 +65,10 @@ import sys
 sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitted to PyPI
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
-LAST_MODIFIED_DATE = '2024-04-08' # by RJH
+LAST_MODIFIED_DATE = '2024-04-17' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET OT wordtable"
-PROGRAM_VERSION = '0.02'
+PROGRAM_VERSION = '0.11'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -76,14 +76,16 @@ DEBUGGING_THIS_MODULE = False
 
 SCRIPTED_UPDATES_TABLES_INPUT_FOLDERPATH = Path( 'ScriptedOTUpdates/' ) # The control files folder for Scripted Bible Editor
 
-JSON_VERSES_DB_FILEPATH = Path( '../../Bible_speaker_identification/outsideSources/TheographicBibleData/derivedFiles/normalised_Verses.json' )
-MACULA_HEBREW_TSV_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTreesAbbrev.OT.morphemes.tsv' )
+JSON_VERSES_DB_INPUT_FILEPATH = Path( '../../Bible_speaker_identification/outsideSources/TheographicBibleData/derivedFiles/normalised_Verses.json' ) # In
+MACULA_HEBREW_TSV_INPUT_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTrees.OT.morphemes.abbrev.tsv' ) # In
 
-WORD_TABLE_INPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/all_glosses.words.tsv' )
-WORD_TABLE_OUTPUT_FILENAME = 'OET-LV_OT_word_table.tsv'
-WORD_TABLE_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_glossed_OSHB_ESFM/' )
-WORD_TABLE_OUTPUT_FILEPATH = WORD_TABLE_OUTPUT_FOLDERPATH.joinpath( WORD_TABLE_OUTPUT_FILENAME )
-RV_ESFM_OUTPUT_FOLDERPATH = Path( '../translatedTexts/ReadersVersion/' ) # We also copy the wordfile to this folder
+LEMMA_TABLE_INPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/all_glosses.lemmas.tsv' ) # In
+MORPHEME_TABLE_INPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv' ) # In
+WORD_TABLE_INPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/all_glosses.words.tsv' ) # In
+WORD_TABLE_OUTPUT_FILENAME = 'OET-LV_OT_word_table.tsv' # Out
+WORD_TABLE_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_glossed_OSHB_ESFM/' ) # Out
+WORD_TABLE_OUTPUT_FILEPATH = WORD_TABLE_OUTPUT_FOLDERPATH.joinpath( WORD_TABLE_OUTPUT_FILENAME ) # Out
+RV_ESFM_OUTPUT_FOLDERPATH = Path( '../translatedTexts/ReadersVersion/' ) # Out (we copy the outputted wordfile to this folder)
 
 TAB = '\t'
 
@@ -94,7 +96,7 @@ class State:
         """
         Constructor:
         """
-        newTable = None
+        newWordTable = None
     # end of add_tags_to_OT_word_table.__init__
 
 
@@ -105,37 +107,58 @@ def main() -> None:
     global state
     state = State()
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Reading existing table entries from {WORD_TABLE_INPUT_FILEPATH}…" )
+    # Read the existing lemma table
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Reading existing lemma table entries from {LEMMA_TABLE_INPUT_FILEPATH}…" )
+    with open( LEMMA_TABLE_INPUT_FILEPATH, 'rt', encoding='utf-8' ) as old_table_file:
+        file_data = old_table_file.read()
+        if file_data.startswith( '\ufeff' ): # remove any BOM
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of source lemma table tsv file…" )
+            file_data = file_data[1:]
+        state.lemmaTable = file_data.rstrip( '\n' ).split( '\n' )
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.lemmaTable):,} existing lemma table entries ({state.lemmaTable[0].count(TAB)+1} columns)." )
+
+    # Read the existing morpheme table
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Reading existing morpheme table entries from {MORPHEME_TABLE_INPUT_FILEPATH}…" )
+    with open( MORPHEME_TABLE_INPUT_FILEPATH, 'rt', encoding='utf-8' ) as old_table_file:
+        file_data = old_table_file.read()
+        if file_data.startswith( '\ufeff' ): # remove any BOM
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of source morpheme table tsv file…" )
+            file_data = file_data[1:]
+        state.morphemeTable = file_data.rstrip( '\n' ).split( '\n' )
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.morphemeTable):,} existing morpheme table entries ({state.morphemeTable[0].count(TAB)+1} columns)." )
+
+    # Read our old word table
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Reading existing word table entries from {WORD_TABLE_INPUT_FILEPATH}…" )
     with open( WORD_TABLE_INPUT_FILEPATH, 'rt', encoding='utf-8' ) as old_table_file:
         file_data = old_table_file.read()
         if file_data.startswith( '\ufeff' ): # remove any BOM
-            print( "  Handling Byte Order Marker (BOM) at start of source word table tsv file…" )
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of source word table tsv file…" )
             file_data = file_data[1:]
-        state.oldTable = file_data.rstrip( '\n' ).split( '\n' )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.oldTable):,} old table entries ({state.oldTable[0].count(TAB)+1} columns)." )
+        state.oldWordTable = file_data.rstrip( '\n' ).split( '\n' )
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.oldWordTable):,} old word table entries ({state.oldWordTable[0].count(TAB)+1} columns)." )
 
-    expand_table_columns() # Creates state.newTable from state.oldTable
+    expand_table_columns() # Creates state.newWordTable from state.oldWordTable
 
     if not DEBUGGING_THIS_MODULE: apply_OT_scripted_gloss_updates()
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Reading Theographic Bible Data json entries from {JSON_VERSES_DB_FILEPATH}…" )
-    with open( JSON_VERSES_DB_FILEPATH, 'rt', encoding='utf-8' ) as json_file:
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Reading Theographic Bible Data json entries from {JSON_VERSES_DB_INPUT_FILEPATH}…" )
+    with open( JSON_VERSES_DB_INPUT_FILEPATH, 'rt', encoding='utf-8' ) as json_file:
         state.verseIndex = json.load( json_file )
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.verseIndex):,} json verse entries." )
 
-    # associate_Theographic_people_places()
+    associate_Theographic_people_places()
 
-    # tag_trinity_persons()
+    tag_trinity_persons()
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nReading Hebrew Macula tsv entries from {MACULA_HEBREW_TSV_FILEPATH}…" )
-    with open( MACULA_HEBREW_TSV_FILEPATH, 'rt', encoding='utf-8' ) as macula_tsv_file:
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nReading Hebrew Macula tsv entries from {MACULA_HEBREW_TSV_INPUT_FILEPATH}…" )
+    with open( MACULA_HEBREW_TSV_INPUT_FILEPATH, 'rt', encoding='utf-8' ) as macula_tsv_file:
         macula_tsv_lines = macula_tsv_file.readlines()
     if macula_tsv_lines[0].startswith( '\ufeff' ): # remove any BOM
-        print( "  Handling Byte Order Marker (BOM) at start of source tsv file…" )
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of source tsv file…" )
         macula_tsv_lines[0] = macula_tsv_lines[0][1:]
     # Get the headers before we start
     column_line_string = macula_tsv_lines[0].rstrip( '\n' )
-    print( f"{column_line_string=}")
+    # print( f"{column_line_string=}")
     assert column_line_string == 'FGRef\tOSHBid\tRowType\tWordOrMorpheme\tAfter\tCompound\tWordClass\tPartOfSpeech\tPerson\tGender\tNumber\tWordType\tState\tRole\tStrongNumberX\tStrongLemma\tStem\tMorphology\tLemma\tSenseNumber\tSubjRef\tParticipantRef\tFrame\tGreek\tGreekStrong\tEnglishGloss\tContextualGloss\tNesting', f'{column_line_string=}' # otherwise we probably need to change some code
     state.macula_tsv_lines = []
     for macula_line in macula_tsv_lines:
@@ -151,18 +174,21 @@ def main() -> None:
 
 def expand_table_columns() -> bool:
     """
-    Using state.oldTable, add the following columns and save in state.newTable:
-        OETGlossWords (initialised to a copy of gloss)
-        Tags (left empty)
+    Using state.oldWordTable, add the following empty columns and save in state.newWordTable:
+        LemmaRowList
+        Role
+        Nesting
+        Tags
     """
-    columnHeaders = state.oldTable[0]
+    assert len(state.oldWordTable) < 382_000, f"{len(state.oldWordTable)=}"
+    columnHeaders = state.oldWordTable[0]
     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Old word table column headers = '{columnHeaders!r}'" )
-    assert columnHeaders == 'Ref\tOSHBid\tRowType\tLemmaRowList\tStrongs\tCantillationHierarchy\tMorphology\tWord\tNoCantillations\tMorphemeGlosses\tContextualMorphemeGlosses\tWordGloss\tContextualWordGloss\tGlossCapitalisation\tGlossPunctuation\tGlossOrder\tGlossInsert' # If not, probably need to fix some stuff
+    assert columnHeaders == 'Ref\tOSHBid\tRowType\tMorphemeRowList\tStrongs\tCantillationHierarchy\tMorphology\tWord\tNoCantillations\tMorphemeGlosses\tContextualMorphemeGlosses\tWordGloss\tContextualWordGloss\tGlossCapitalisation\tGlossPunctuation\tGlossOrder\tGlossInsert' # If not, probably need to fix some stuff
 
-    # We'll remove the CantillationHierarchy column, and add Role, Nesting, and Tags columns
-    state.newTable = [ f"{columnHeaders}{TAB}Role{TAB}Nesting{TAB}Tags" ] # .replace(f'{TAB}OSHBid{TAB}',f'{TAB}').replace(f'{TAB}CantillationHierarchy{TAB}',f'{TAB}')
-    assert state.newTable[0].count( '\t' ) == 19, f"{state.newTable[0].count(TAB)} {state.newTable[0]=}"
-    for _n, columns_string in enumerate( state.oldTable[1:], start=1 ):
+    # We'll insert a LemmaRowList column and at the end, append Role, Nesting, and Tags columns
+    state.newWordTable = [ f"{columnHeaders.replace(f'{TAB}MorphemeRowList{TAB}',f'{TAB}MorphemeRowList{TAB}LemmaRowList{TAB}')}{TAB}Role{TAB}Nesting{TAB}Tags" ]
+    assert state.newWordTable[0].count( '\t' ) == 20, f"{state.newWordTable[0].count(TAB)} {state.newWordTable[0]=}"
+    for _n, columns_string in enumerate( state.oldWordTable[1:], start=1 ):
         oldColumns = columns_string.split( '\t' )
         assert len(oldColumns) == 17
         newColumns:List[str] = oldColumns.copy()
@@ -170,13 +196,15 @@ def expand_table_columns() -> bool:
         # assert columnHeaders.split('\t')[1] == 'OSHBid' # If not, probably need to fix some stuff
         # del newColumns[5] # Remove CantillationHierarchy
         # del newColumns[1] # Remove OSHBid
+        newColumns.insert( 4, '' ) # Insert empty LemmaRowList column
         newColumns.append(''); newColumns.append(''); newColumns.append('') # Append new final three columns
         # print( f"({len(newColumns)}) {newColumns=}" )
-        assert len(newColumns) == 20, len(newColumns)
+        assert len(newColumns) == 21, len(newColumns)
         newLine = '\t'.join( newColumns )
-        assert newLine.count( '\t' ) == 19, f"{newLine.count(TAB)} {newLine=}"
-        state.newTable.append( newLine )
+        assert newLine.count( '\t' ) == 20, f"{newLine.count(TAB)} {newLine=}"
+        state.newWordTable.append( newLine )
         
+    assert 381_000 < len(state.newWordTable) < 382_000, f"{len(state.newWordTable)=}"
     return True
 # end of add_tags_to_OT_word_table.expand_table_columns
 
@@ -204,16 +232,19 @@ class EditCommand(NamedTuple):
 def apply_OT_scripted_gloss_updates() -> bool:
     """
     Go through the .tsv files used by Scripted Bible Editor
-        and apply them to the WordGloss column in state.newTable
+        and apply them to the WordGloss column in state.newWordTable
     """
-    # 0    1       2        3             4        5                      6           7     8                9                10                         11         12                   13                   14                15          16           17    18       19
-    # Ref\tOSHBid\tRowType\tLemmaRowList\tStrongs\tCantillationHierarchy\tMorphology\tWord\tNoCantillations\tMorphemeGlosses\tContextualMorphemeGlosses\tWordGloss\tContextualWordGloss\tGlossCapitalisation\tGlossPunctuation\tGlossOrder\tGlossInsert\tRole\tNesting\tTags
-    columnHeaders = state.newTable[0].split( '\t' )
+    assert 381_000 < len(state.newWordTable) < 382_000, f"{len(state.newWordTable)=}"
+
+    # 0    1       2        3                4             5        6                      7           8     9                10               11                         12         13                   14                   15                16          17          18     19       20
+    # Ref\tOSHBid\tRowType\tMorphemeRowList\tLemmaRowList\tStrongs\tCantillationHierarchy\tMorphology\tWord\tNoCantillations\tMorphemeGlosses\tContextualMorphemeGlosses\tWordGloss\tContextualWordGloss\tGlossCapitalisation\tGlossPunctuation\tGlossOrder\tGlossInsert\tRole\tNesting\tTags
+    columnHeaders = state.newWordTable[0].split( '\t' )
+    assert columnHeaders[0] == 'Ref' # If not, probably need to fix some stuff below
     assert columnHeaders[2] == 'RowType' # If not, probably need to fix some stuff below
-    assert columnHeaders[9] == 'MorphemeGlosses' # If not, probably need to fix some stuff below
-    assert columnHeaders[10] == 'ContextualMorphemeGlosses' # If not, probably need to fix some stuff below
-    assert columnHeaders[11] == 'WordGloss' # If not, probably need to fix some stuff below
-    assert columnHeaders[12] == 'ContextualWordGloss' # If not, probably need to fix some stuff below
+    # assert columnHeaders[10] == 'MorphemeGlosses' # If not, probably need to fix some stuff below
+    # assert columnHeaders[11] == 'ContextualMorphemeGlosses' # If not, probably need to fix some stuff below
+    assert columnHeaders[12] == 'WordGloss' # If not, probably need to fix some stuff below
+    # assert columnHeaders[13] == 'ContextualWordGloss' # If not, probably need to fix some stuff below
 
     # Firstly we read the TOML control file
     filepath = SCRIPTED_UPDATES_TABLES_INPUT_FOLDERPATH.joinpath( 'ScriptedBibleEditor.control.toml' )
@@ -222,9 +253,8 @@ def apply_OT_scripted_gloss_updates() -> bool:
         controlData = tomllib.load( controlFile )
 
     load_transliteration_table( 'Hebrew' )
-    # load_transliteration_table( 'Hebrew' )
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loading and applying transforms to {columnHeaders[11]} column…" )
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loading and applying transforms to {columnHeaders[12]} column…" )
     totalChangedGlosses = 0
     commandTables = {}
     for commandTableName, givenFilepath in controlData['commandTables'].items():
@@ -336,9 +366,9 @@ def apply_OT_scripted_gloss_updates() -> bool:
                         compiledSearchRegex = re.compile( myRegexSearchString )
 
                     numChangedGlosses = 0
-                    for n, columns_string in enumerate( state.newTable[1:], start=1 ):
+                    for n, columns_string in enumerate( state.newWordTable[1:], start=1 ):
                         columnDataList = columns_string.split( '\t' )
-                        assert len(columnDataList) == 20
+                        assert len(columnDataList) == 21
                         bcvwRef = columnDataList[0]
                         BBB, CV = bcvwRef.split( '_' )
                         if (iBooks and BBB not in iBooks) \
@@ -360,7 +390,7 @@ def apply_OT_scripted_gloss_updates() -> bool:
                         assert C.isdigit(), f"{C=}"
                         assert V.isdigit(), f"{V=}"
                         assert W.isdigit(), f"{W=}"
-                        newGloss = oldGloss = columnDataList[11]
+                        newGloss = oldGloss = columnDataList[12]
 
                         if not tags:
                             newGloss = newGloss.replace( searchText, replaceText )
@@ -387,10 +417,10 @@ def apply_OT_scripted_gloss_updates() -> bool:
                             halt
 
                         if newGloss != oldGloss:
-                            columnDataList[11] = newGloss
+                            columnDataList[12] = newGloss
                             newLine = '\t'.join( columnDataList )
-                            assert newLine.count( '\t' ) == 19, f"{newLine.count(TAB)} {newLine=}"
-                            state.newTable[n] = newLine
+                            assert newLine.count( '\t' ) == 20, f"{newLine.count(TAB)} {newLine=}"
+                            state.newWordTable[n] = newLine
                             numChangedGlosses += 1
                             totalChangedGlosses += 1
                     if numChangedGlosses:
@@ -402,6 +432,7 @@ def apply_OT_scripted_gloss_updates() -> bool:
     if totalChangedGlosses:
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Made total {totalChangedGlosses:,} OET gloss changes from scripted tables" )
 
+    assert 381_000 < len(state.newWordTable) < 382_000, f"{len(state.newWordTable)=}"
     return True
 # end of add_tags_to_OT_word_table.apply_OT_scripted_gloss_updates
 
@@ -412,18 +443,15 @@ def associate_Theographic_people_places() -> bool:
         with keys for people, places, etc.
     """
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nAssociating Hebrew words with json keys…" )
-
-    # columnHeaders = state.oldTable[0]
-    # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Old word table column headers = '{columnHeaders}'" )
-    # assert columnHeaders == 'Ref\tnoCantillations\tSRLemma\tGreekLemma\tgloss\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology' # If not, probably need to fix some stuff
+    assert 381_000 < len(state.newWordTable) < 382_000, f"{len(state.newWordTable)=}"
 
     numAddedPeople = numAddedPeopleGroups = numAddedLocations = numAddedEvents = numAddedYears = numAddedTimelines = 0
     lastVerseRef = None
-    for n, columns_string in enumerate( state.newTable[1:], start=1 ):
-        wordRef, rowType, _lemmaRowList, _strongs, _morphology, _word, noCantillations, morphemeGlosses, contextualMorphemeGlosses, wordGloss, contextualWordGloss, glossCaps, _glossPunctuation, _glossOrder, _glossInsert, _role, _nesting, _tags = columns_string.split( '\t' )
+    for n, columns_string in enumerate( state.newWordTable[1:], start=1 ):
+        wordRef, _OSHBid, rowType, _morphemeRowList, _lemmaRowList, _strongs, _cantillationHierarchy, _morphology, _word, noCantillations, morphemeGlosses, contextualMorphemeGlosses, wordGloss, contextualWordGloss, glossCaps, _glossPunctuation, _glossOrder, _glossInsert, _role, _nesting, _tags = columns_string.split( '\t' )
         if rowType in ('seg','note','variant note','alternative note','exegesis note'):
-            assert columns_string.count( '\t' ) == 17, f"{columns_string.count(TAB)} {columns_string=}"
-            state.newTable.append( columns_string )
+            assert columns_string.count( '\t' ) == 20, f"{columns_string.count(TAB)} {columns_string=}"
+            # state.newWordTable.append( columns_string )
             lastVerseRef = verseRef
             continue
         tags:List[str] = []
@@ -433,8 +461,8 @@ def associate_Theographic_people_places() -> bool:
         try: verseLinkEntry = state.verseIndex[verseRef]
         except KeyError: # versification difference ???
             logging.critical( f"Versification error: Unable to find {verseRef} in Theographic json" )
-            assert columns_string.count( '\t' ) == 17, f"{columns_string.count(TAB)} {columns_string=}"
-            state.newTable.append( columns_string )
+            assert columns_string.count( '\t' ) == 20, f"{columns_string.count(TAB)} {columns_string=}"
+            # state.newWordTable.append( columns_string )
             lastVerseRef = verseRef
             continue
 
@@ -459,10 +487,10 @@ def associate_Theographic_people_places() -> bool:
                         dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{personID}' to {wordRef} for '{gloss}'")
                         numAddedPeople += 1
                     else:
-                        for thgName,srName in (('Israel','Jacob'),('Pharez','Perez'),('Zerah','Zara'),('Tamar','Thamar'),('Hezron','Esrom'),('Ram','Aram'),('Amminadab','Aminadab'),('Nahshon','Naasson'),
+                        for thgName,oetName in (('Israel','Jacob'),('Pharez','Perez'),('Zerah','Zara'),('Tamar','Thamar'),('Hezron','Esrom'),('Ram','Aram'),('Amminadab','Aminadab'),('Nahshon','Naasson'),
                                             ('Jehoshaphat','Josaphat'),('Jehoram','Joram'),('Uzziah','Ozias'),('Jotham','Joatham'),('Ahaz','Achaz'),
                                             ('Jehoiachin','Jechonias'),('Shealtiel','Salathiel'),('Zerubbabel','Zorobabel'),('Sadoc','Zadok')):
-                            if personName==thgName and srName in gloss:
+                            if personName==thgName and oetName in gloss:
                                 tags.append( personID )
                                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{personID}' to {wordRef} for '{gloss}'")
                                 numAddedPeople += 1
@@ -528,49 +556,33 @@ def associate_Theographic_people_places() -> bool:
         # print( f"{n=} {columns_string=} {tags=}" )
         assert columns_string.endswith( '\t' ) # because the newly created tags column was empty
         newLine = f"{columns_string}{';'.join(tags)}"
-        assert newLine.count( '\t' ) == 17, f"{newLine.count(TAB)} {newLine=}"
-        state.newTable[n] = newLine
-        # print( f"  {state.newTable[n]=}")
+        assert newLine.count( '\t' ) == 20, f"{newLine.count(TAB)} {newLine=}"
+        state.newWordTable[n] = newLine
+        # print( f"  {state.newWordTable[n]=}")
         lastVerseRef = verseRef
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{numAddedPeople=:,} {numAddedPeopleGroups=:,} {numAddedLocations=:,} {numAddedEvents=:,} {numAddedYears=:,} {numAddedTimelines=:,}" )
+    assert 381_000 < len(state.newWordTable) < 382_000, f"{len(state.newWordTable)=}"
     return True
 # end of add_tags_to_OT_word_table.associate_Theographic_people_places
 
 
-TAG_COLUMN_NUMBER = 17
+TAG_COLUMN_NUMBER = 20
 def tag_trinity_persons() -> bool:
     """
-    Some undocumented documentation of the GlossCaps column:
-        ●    U – lexical entry capitalized
-        ●    W – proper noun
-        ●    G – reference to deity
-        ●    P – paragraph boundary
-        ●    S – start of sentence
-        ●    D – quoted dialog
-        ●    V – vocative title
-        ●    B – Biblical quotation
-        ●    R – other quotation
-        ●    T – translated words
-        ●    N – nomina sacra (our addition)
-
-        ●    h – partial word capitalized
-        ●    n – named but not proper name
-        ●    b – incorporated Biblical quotation
-        ●    c – continuation of quotation
-        ●    e – emphasized words (scare quotes)
-    The lowercase letters mark other significant places where the words are not normally capitalized.
     """
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nTagging trinity persons in our table…" )
+    assert 381_000 < len(state.newWordTable) < 382_000, f"{len(state.newWordTable)=}"
 
-    # Expect column headers 'Ref\tnoCantillations\tSRLemma\tGreekLemma\tgloss\tOETGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\tTags'
-    columnHeaders = state.newTable[0].split( '\t' )
-    assert columnHeaders[TAG_COLUMN_NUMBER] == 'Tags' # Check our index value of 17
+    # 0    1       2        3                4             5        6                      7           8     9                10               11                         12         13                   14                   15                16          17          18     19       20
+    # Ref\tOSHBid\tRowType\tMorphemeRowList\tLemmaRowList\tStrongs\tCantillationHierarchy\tMorphology\tWord\tNoCantillations\tMorphemeGlosses\tContextualMorphemeGlosses\tWordGloss\tContextualWordGloss\tGlossCapitalisation\tGlossPunctuation\tGlossOrder\tGlossInsert\tRole\tNesting\tTags
+    columnHeaders = state.newWordTable[0].split( '\t' )
+    assert columnHeaders[TAG_COLUMN_NUMBER] == 'Tags' # Check our index value
 
     numAddedGod = numAddedHolySpirit = 0
-    for n,rowStr in enumerate( state.newTable[1:], start=1 ):
+    for n,rowStr in enumerate( state.newWordTable[1:], start=1 ):
         rowFields = rowStr.split( '\t' )
-        wordRef, rowType, _lemmaRowList, _strongs, _morphology, _word, noCantillations, morphemeGlosses, contextualMorphemeGlosses, wordGloss, contextualWordGloss, glossCaps, _glossPunctuation, _glossOrder, _glossInsert, _role, _nesting, tags = rowFields
+        wordRef, _OSHBid, rowType, _morphemeRowList, _lemmaRowList, _strongs, _cantillationHierarchy, _morphology, _word, noCantillations, morphemeGlosses, contextualMorphemeGlosses, wordGloss, contextualWordGloss, glossCaps, _glossPunctuation, _glossOrder, _glossInsert, _role, _nesting, tags = rowFields
 
         gloss = contextualWordGloss if contextualWordGloss \
                 else wordGloss if wordGloss \
@@ -588,10 +600,6 @@ def tag_trinity_persons() -> bool:
             tagList.append( 'PGod' )
             numAddedGod += 1
             madeChanges = True
-        # if ('Messiah' in srGlossWords or 'Christ' in srGlossWords or 'Son' in srGlossWords) and 'PJesus' not in tagList:
-        #     tagList.append( 'PJesus' )
-        #     numAddedJesus += 1
-        #     madeChanges = True
         if 'Spirit' in gloss and 'PHoly_Spirit' not in tagList:
             tagList.append( 'PHoly_Spirit' )
             numAddedHolySpirit += 1
@@ -600,8 +608,8 @@ def tag_trinity_persons() -> bool:
         if madeChanges:
             rowFields[TAG_COLUMN_NUMBER] = ';'.join( tagList )
             newLine = '\t'.join( rowFields )
-            assert newLine.count( '\t' ) == 17, f"{newLine.count(TAB)} {newLine=}"
-            state.newTable[n] = newLine
+            assert newLine.count( '\t' ) == 20, f"{newLine.count(TAB)} {newLine=}"
+            state.newWordTable[n] = newLine
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {numAddedGod=:,} {numAddedHolySpirit=:,} Total added={numAddedGod+numAddedHolySpirit:,}" )
     return True
@@ -621,11 +629,12 @@ def tag_referents_from_macula_data() -> bool:
     # global DEBUGGING_THIS_MODULE
     # DEBUGGING_THIS_MODULE = 99
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nAssociating Macula referents with our table entries…" )
+    assert 381_000 < len(state.newWordTable) < 382_000, f"{len(state.newWordTable)=}"
 
     # First make a book index into our table (for greater search efficiency down below)
     lastBBB = None
     ourBBBIndex = {}
-    for p,ourRowStr in enumerate( state.newTable[1:], start=1 ):
+    for p,ourRowStr in enumerate( state.newWordTable[1:], start=1 ):
         BBB = ourRowStr[:3]
         if BBB != lastBBB:
             if lastBBB is not None:
@@ -692,7 +701,7 @@ def tag_referents_from_macula_data() -> bool:
                 # Find the parts of our table for this verse / verses
                 referentVerseID, referredVerseID = referentWordID.split('w')[0], referredWordID.split('w')[0]
                 ourReferentVerseRowIndices, ourReferredVerseRowIndices = [], []
-                for p,ourRowStr in enumerate( state.newTable[bookStartIndex:bookEndIndex], start=bookStartIndex ):
+                for p,ourRowStr in enumerate( state.newWordTable[bookStartIndex:bookEndIndex], start=bookStartIndex ):
                     if ourRowStr.startswith( f'{referredVerseID}w' ):
                         # print( f"  to REFERRED {p} {ourRowStr}" )
                         ourReferredVerseRowIndices.append( p )
@@ -703,7 +712,7 @@ def tag_referents_from_macula_data() -> bool:
                 # First try to find our referent Hebrew word
                 possibleReferentRowIndices = []
                 for p in ourReferentVerseRowIndices:
-                    rowItems = state.newTable[p].split( '\t' )
+                    rowItems = state.newWordTable[p].split( '\t' )
                     if rowItems[1] == referentGreek:
                         # print( f"  REFERENT {p} {rowItems}" )
                         possibleReferentRowIndices.append( p )
@@ -712,7 +721,7 @@ def tag_referents_from_macula_data() -> bool:
                 # Now try to find the referred Hebrew word
                 possibleReferredRowIndices = []
                 for p in ourReferredVerseRowIndices:
-                    rowItems = state.newTable[p].split( '\t' )
+                    rowItems = state.newWordTable[p].split( '\t' )
                     if rowItems[1] == referrednoCantillations:
                         # print( f"  REFERRED {p} {rowItems}" )
                         possibleReferredRowIndices.append( p )
@@ -720,7 +729,7 @@ def tag_referents_from_macula_data() -> bool:
                 
                 if not possibleReferredRowIndices: # have a second attempt
                     for p in ourReferredVerseRowIndices:
-                        rowItems = state.newTable[p].split( '\t' )
+                        rowItems = state.newWordTable[p].split( '\t' )
                         if rowItems[1][:3] == referrednoCantillations[:3]: # Last letters might be different?
                             # print( f"  REFERRED {p} {rowItems}" )
                             possibleReferredRowIndices.append( p )
@@ -744,8 +753,8 @@ def tag_referents_from_macula_data() -> bool:
 
                     referrentRowIndex = possibleReferentRowIndices[ixReferent]
                     referredRowIndex = possibleReferredRowIndices[ixReferred]
-                    existingReferentRowStr = state.newTable[referrentRowIndex]
-                    existingReferredRowStr = state.newTable[referredRowIndex]
+                    existingReferentRowStr = state.newWordTable[referrentRowIndex]
+                    existingReferredRowStr = state.newWordTable[referredRowIndex]
 
                     existingReferentRowFields = existingReferentRowStr.split( '\t' )
                     existingReferredRowFields = existingReferredRowStr.split( '\t' )
@@ -779,21 +788,21 @@ def tag_referents_from_macula_data() -> bool:
                     existingReferentRowFields[TAG_COLUMN_NUMBER] = ';'.join( existingReferentRowTags )
                     newLine = '\t'.join( existingReferentRowFields )
                     assert newLine.count( '\t' ) == 11, f"{newLine.count(TAB)} {newLine=}"
-                    state.newTable[possibleReferentRowIndices[ixReferent]] = newLine
+                    state.newWordTable[possibleReferentRowIndices[ixReferent]] = newLine
                     existingReferredRowFields[TAG_COLUMN_NUMBER] = ';'.join( existingReferredRowTags )
                     newLine = '\t'.join( existingReferredRowFields )
                     assert newLine.count( '\t' ) == 11, f"{newLine.count(TAB)} {newLine=}"
-                    state.newTable[possibleReferredRowIndices[ixReferred]] = newLine
+                    state.newWordTable[possibleReferredRowIndices[ixReferred]] = newLine
                 # end of appendNewTags function
 
                 if not possibleReferentRowIndices:
                     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    <<< Unable to find referent {referentVerseID} '{referentGreek}' in {len(possibleReferentRowIndices)} rows >>>")
                     for p in ourReferentVerseRowIndices:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
+                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newWordTable[p].split( TAB )}" )
                 elif not possibleReferredRowIndices:
                     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    <<< Unable to find referred {referredVerseID} '{referrednoCantillations}' in {len(possibleReferredRowIndices)} rows >>>")
                     for p in ourReferredVerseRowIndices:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
+                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newWordTable[p].split( TAB )}" )
 
                 elif len(possibleReferentRowIndices)==1 and len(possibleReferredRowIndices)==1: # This is the easiest case
                     appendNewTags( ixReferent=0, ixReferred=0 )
@@ -802,8 +811,8 @@ def tag_referents_from_macula_data() -> bool:
                     referentWordNumber = int( referentWordID.split('w')[-1] )
                     possibleWordNumbers = []
                     for p in possibleReferentRowIndices:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
-                        possibleWordNumbers.append( int( state.newTable[p].split(TAB)[0].split('w')[-1] ) )
+                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newWordTable[p].split( TAB )}" )
+                        possibleWordNumbers.append( int( state.newWordTable[p].split(TAB)[0].split('w')[-1] ) )
                     wordNumberDistances = [abs(referentWordNumber-possibleWordNumber) for possibleWordNumber in possibleWordNumbers]
                     minWordNumberDistance = min( wordNumberDistances )
                     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Have {referentWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
@@ -814,8 +823,8 @@ def tag_referents_from_macula_data() -> bool:
                     referredWordNumber = int( referredWordID.split('w')[-1] )
                     possibleWordNumbers = []
                     for p in possibleReferredRowIndices:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
-                        possibleWordNumbers.append( int( state.newTable[p].split(TAB)[0].split('w')[-1] ) )
+                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newWordTable[p].split( TAB )}" )
+                        possibleWordNumbers.append( int( state.newWordTable[p].split(TAB)[0].split('w')[-1] ) )
                     wordNumberDistances = [abs(referredWordNumber-possibleWordNumber) for possibleWordNumber in possibleWordNumbers]
                     minWordNumberDistance = min( wordNumberDistances )
                     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"      Have {referredWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
@@ -825,15 +834,15 @@ def tag_referents_from_macula_data() -> bool:
                     assert len(possibleReferentRowIndices)>1 and len(possibleReferredRowIndices)>1 # both!
                     # if len(possibleReferentRowIndices) != 1:
                     #     for p in possibleReferentRowIndices:
-                    #         print( f"       {state.newTable[p].split( TAB )}" )
+                    #         print( f"       {state.newWordTable[p].split( TAB )}" )
                     # if len(possibleReferredRowIndices) != 1:
                     #     for p in possibleReferredRowIndices:
-                    #         print( f"       {state.newTable[p].split( TAB )}" )
+                    #         print( f"       {state.newWordTable[p].split( TAB )}" )
                     referentWordNumber = int( referentWordID.split('w')[-1] )
                     possibleWordNumbers = []
                     for p in possibleReferentRowIndices:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
-                        possibleWordNumbers.append( int( state.newTable[p].split(TAB)[0].split('w')[-1] ) )
+                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newWordTable[p].split( TAB )}" )
+                        possibleWordNumbers.append( int( state.newWordTable[p].split(TAB)[0].split('w')[-1] ) )
                     wordNumberDistances = [abs(referentWordNumber-possibleWordNumber) for possibleWordNumber in possibleWordNumbers]
                     minWordNumberDistance = min( wordNumberDistances )
                     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Have {referentWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
@@ -843,8 +852,8 @@ def tag_referents_from_macula_data() -> bool:
                     referredWordNumber = int( referredWordID.split('w')[-1] )
                     possibleWordNumbers = []
                     for p in possibleReferredRowIndices:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
-                        possibleWordNumbers.append( int( state.newTable[p].split(TAB)[0].split('w')[-1] ) )
+                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newWordTable[p].split( TAB )}" )
+                        possibleWordNumbers.append( int( state.newWordTable[p].split(TAB)[0].split('w')[-1] ) )
                     wordNumberDistances = [abs(referredWordNumber-possibleWordNumber) for possibleWordNumber in possibleWordNumbers]
                     minWordNumberDistance = min( wordNumberDistances )
                     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Have {referredWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
@@ -881,104 +890,170 @@ def fill_extra_columns_and_remove_some() -> bool:
 
     Finally, we remove the OSHBid and CantillationHierarchy columns from our table
     """
-    # 0    1       2        3             4        5                      6           7     8                9                10                         11         12                   13                   14                15          16           17    18       19
-    # Ref\tOSHBid\tRowType\tLemmaRowList\tStrongs\tCantillationHierarchy\tMorphology\tWord\tNoCantillations\tMorphemeGlosses\tContextualMorphemeGlosses\tWordGloss\tContextualWordGloss\tGlossCapitalisation\tGlossPunctuation\tGlossOrder\tGlossInsert\tRole\tNesting\tTags
-    ourHeaderColumns = state.newTable[0].split( '\t' )
+    # DEBUGGING_THIS_MODULE = 99
+    assert 381_000 < len(state.newWordTable) < 382_000, f"{len(state.newWordTable)=}"
+
+    # 0    1       2        3                4             5        6                      7           8     9                10               11                         12         13                   14                   15                16          17          18     19       20
+    # Ref\tOSHBid\tRowType\tMorphemeRowList\tLemmaRowList\tStrongs\tCantillationHierarchy\tMorphology\tWord\tNoCantillations\tMorphemeGlosses\tContextualMorphemeGlosses\tWordGloss\tContextualWordGloss\tGlossCapitalisation\tGlossPunctuation\tGlossOrder\tGlossInsert\tRole\tNesting\tTags
+    ourHeaderColumns = state.newWordTable[0].split( '\t' )
+    assert ourHeaderColumns[1] == 'OSHBid' # If not, we need to make changes below -- we delete this column
     assert ourHeaderColumns[2] == 'RowType' # If not, we need to make changes below
-    assert ourHeaderColumns[17] == 'Role' # If not, we need to make changes below
-    assert ourHeaderColumns[18] == 'Nesting' # If not, we need to make changes below
+    assert ourHeaderColumns[3] == 'MorphemeRowList' # If not, we need to make changes below
+    assert ourHeaderColumns[4] == 'LemmaRowList' # If not, we need to make changes below -- we fill this column
+    assert ourHeaderColumns[6] == 'CantillationHierarchy' # If not, we need to make changes below -- we delete this column
+    assert ourHeaderColumns[18] == 'Role' # If not, we need to make changes below -- we fill this column
+    assert ourHeaderColumns[19] == 'Nesting' # If not, we need to make changes below -- we fill this column
     # 0      1       2        3               4       5        6          7             8       9       10      11        12     13    14             15           16    17          18     19           20       21              22     23     24           25            26               27
     # FGRef\tOSHBid\tRowType\tWordOrMorpheme\tAfter\tCompound\tWordClass\tPartOfSpeech\tPerson\tGender\tNumber\tWordType\tState\tRole\tStrongNumberX\tStrongLemma\tStem\tMorphology\tLemma\tSenseNumber\tSubjRef\tParticipantRef\tFrame\tGreek\tGreekStrong\tEnglishGloss\tContextualGloss\tNesting
     theirHeaderColumns = state.macula_tsv_lines[0] # Already in a list
     assert theirHeaderColumns[2] == 'RowType' # If not, we need to make changes below
     assert theirHeaderColumns[13] == 'Role' # If not, we need to make changes below
+    assert theirHeaderColumns[18] == 'Lemma' # If not, we need to make changes below
     assert theirHeaderColumns[27] == 'Nesting' # If not, we need to make changes below
+
+    # First build a dictionary to lemma row numbers
+    state.lemmaDict = {}
+    for n,lemmaStr in enumerate( state.lemmaTable[1:], start=1 ):
+        lemma, _glosses = lemmaStr.split('\t')
+        # print( f"{n} {lemma=} {_glosses=}")
+        state.lemmaDict[lemma] = str(n)
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Loaded {len(state.lemmaDict):,} lemma index entries into state.lemmaDict." )
 
     # Fill in the role and nesting columns
     mIx = 1 # Macula index
     numConsecutiveMismatches = 0
-    for ix, ourLine in enumerate( state.newTable[1:], start=1 ):
+    for ix, ourLine in enumerate( state.newWordTable[1:], start=1 ):
+        lemmaList, lemmaRowList = [], []
         for dummyRange in range( 4 ):
             if dummyRange > 0: dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{dummyRange=}" )
-            theirColumns = state.macula_tsv_lines[mIx] # Already in a list
+            if mIx >= len(state.macula_tsv_lines):
+                dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"RanA out of Macula lines at {ix}/{len(state.newWordTable)} {ourLine}" )
+                break # no more macula lines
+            theirMaculaColumns = state.macula_tsv_lines[mIx] # Already in a list
             # print( f"\n{ix}: {ourLine}\n{mIx}: {theirLine}")
-            assert ourLine.count( '\t' ) == 19, f"{ourLine.count(TAB)} {ourLine=}"
-            assert len(theirColumns) == 28, f"{len(theirColumns)} {theirColumns=}"
-
+            assert ourLine.count( '\t' ) == 20, f"{ourLine.count(TAB)} {ourLine=}"
             ourColumns = ourLine.split( '\t' )
+            assert len(theirMaculaColumns) == 28, f"{len(theirMaculaColumns)} {theirMaculaColumns=}"
+
             if ourColumns[2] in ('seg','note','variant note','alternative note','exegesis note'):
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Skipping our {ourColumns[0]} {ourColumns[2]}")
-                break # from dummy loop
-                # continue
-            elif theirColumns[0] == ourColumns[0]: # then it's a word
                 numConsecutiveMismatches = 0
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Matched word {ourColumns[0]}=={theirColumns[0]} {theirColumns[1]} {ourColumns[1]} {theirColumns[2]} {ourColumns[2]} R='{theirColumns[13]}' N='{theirColumns[27]}'")
-                assert 'w' in theirColumns[2] # Might be 'Aw'
-                ourColumns[17], ourColumns[18] = theirColumns[13], theirColumns[27]
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Skipping our {ourColumns[0]} {ourColumns[2]}")
+                break # from inner dummy loop because we were successful
+            elif theirMaculaColumns[0] == ourColumns[0]: # then it's a word
+                numConsecutiveMismatches = 0
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Matched word {ourColumns[0]}=={theirMaculaColumns[0]} {theirMaculaColumns[1]} {ourColumns[1]} {theirMaculaColumns[2]} {ourColumns[2]} R='{theirMaculaColumns[13]}' N='{theirMaculaColumns[27]}'")
+                assert 'w' in theirMaculaColumns[2] # Might be 'Aw'
+                ourColumns[18], ourColumns[19] = theirMaculaColumns[13], theirMaculaColumns[27]
+                theirMaculaLemma = theirMaculaColumns[18]
+                # print( f"{ourColumns[0]} {theirMaculaColumns[0]} {theirMaculaLemma=}" )
+                lemmaList.append( theirMaculaLemma )
+                if theirMaculaLemma:
+                    try: lemmaRowList.append( state.lemmaDict[theirMaculaLemma] ) # Save the lemma row number(s)
+                    except KeyError: lemmaRowList.append( '<<<MISSING-A1>>>' )
+                else: lemmaRowList.append( '<<<MISSING-B1>>>' )
                 mIx += 1
-                break # from dummy loop
-            elif theirColumns[0].startswith( ourColumns[0] ): # then theirs is a morpheme that's part of our word
+                break # from inner dummy loop because we were successful
+            elif theirMaculaColumns[0].startswith( ourColumns[0] ): # then theirs is a morpheme that's part of our word
                 numConsecutiveMismatches = 0
                 role = nesting = ''
-                while 'm' in theirColumns[2]:
-                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Matched morpheme {ourColumns[0]} in {theirColumns[0]} {theirColumns[1]} {ourColumns[1]} {theirColumns[2]} {ourColumns[2]} R='{theirColumns[13]}' N='{theirColumns[27]}'")
-                    assert not role or theirColumns[13] == role
+                while 'm' in theirMaculaColumns[2]:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Matched morpheme {ourColumns[0]} in {theirMaculaColumns[0]} {theirMaculaColumns[1]} {ourColumns[1]} {theirMaculaColumns[2]} {ourColumns[2]} R='{theirMaculaColumns[13]}' N='{theirMaculaColumns[27]}'")
+                    assert not role or theirMaculaColumns[13]==role or ourColumns[0].startswith( 'ECC_4:10' ) # TODO: dunno why ???
                     # assert nesting is None or theirLine[27] == nesting
                     # Above failed on
                     #   morpheme GEN_1:2w1a 01LN3a  m 13,14,15 R='' N='cj2cjp'
                     #   morpheme GEN_1:2w1b 01LN3b  m 13,14,15 R='' N='cj2cjp/s-v-o/s=detnp'
-                    role, nesting = theirColumns[13], theirColumns[27]
+                    role, nesting = theirMaculaColumns[13], theirMaculaColumns[27]
+                    theirMaculaLemma = theirMaculaColumns[18]
+                    # print( f"{ourColumns[0]} {theirMaculaColumns[0]} {theirMaculaLemma=}" )
+                    lemmaList.append( theirMaculaLemma )
+                    if theirMaculaLemma:
+                        try: lemmaRowList.append( state.lemmaDict[theirMaculaLemma] ) # Save the lemma row number(s)
+                        except KeyError: lemmaRowList.append( '<<<MISSING-A2>>>' )
+                    else: lemmaRowList.append( '<<<MISSING-B2>>>' )
                     mIx += 1
-                    theirColumns = state.macula_tsv_lines[mIx] # Already in a list
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Matched Morpheme {ourColumns[0]} in {theirColumns[0]} {theirColumns[1]} {ourColumns[1]} {theirColumns[2]} {ourColumns[2]} R='{theirColumns[13]}' N='{theirColumns[27]}'")
-                assert 'M' in theirColumns[2] # Might be 'AM'
-                if theirColumns[13] != role:
-                    role = f'{role}{theirColumns[13]}' # Append the different role onto the end
+                    theirMaculaColumns = state.macula_tsv_lines[mIx] # Already in a list
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Matched Morpheme {ourColumns[0]} in {theirMaculaColumns[0]} {theirMaculaColumns[1]} {ourColumns[1]} {theirMaculaColumns[2]} {ourColumns[2]} R='{theirMaculaColumns[13]}' N='{theirMaculaColumns[27]}'")
+                assert 'M' in theirMaculaColumns[2] # Might be 'AM'
+                if theirMaculaColumns[13] != role:
+                    role = f'{role}{theirMaculaColumns[13]}' # Append the different role onto the end
                 # assert theirLine[27] == nesting
                 # Above failed on
                 #   morpheme GEN_1:1w6a 01k5Pa  m 8,9 R='' N='pp-v-s-o/o=npanp/cj2cjp'
                 #   Morpheme GEN_1:1w6b 01k5Pb  M 8,9 R='' N='pp-v-s-o/o=npanp/cj2cjp/ompnp'
-                ourColumns[17], ourColumns[18] = role, nesting
+                ourColumns[18], ourColumns[19] = role, nesting
+                theirMaculaLemma = theirMaculaColumns[18]
+                # print( f"{ourColumns[0]} {theirMaculaColumns[0]} {theirMaculaLemma=}" )
+                lemmaList.append( theirMaculaLemma )
+                if theirMaculaLemma:
+                    try: lemmaRowList.append( state.lemmaDict[theirMaculaLemma] ) # Save the lemma row number(s)
+                    except KeyError: lemmaRowList.append( '<<<MISSING-A3>>>' )
+                else: lemmaRowList.append( '<<<MISSING-B3>>>' )
                 mIx += 1
-                break # from dummy loop
+                break # from inner dummy loop because we were successful
             else:
                 numConsecutiveMismatches += 1
                 if numConsecutiveMismatches > 25:
-                    # logging.critical( f"Aborted around {ourColumns[0]} {theirColumns[0]}")
+                    # logging.critical( f"Aborted around {ourColumns[0]} {theirMaculaColumns[0]}")
                     break # Gen 39:9 after w7 missing has about 25 rows
                 ourBBB, ourCVW = ourColumns[0].split( '_', 1 )
-                theirBBB, theirCVW = theirColumns[0].split( '_', 1 )
-                assert ourBBB == theirBBB
-                ourC, ourVW = ourCVW.split( ':', 1 )
-                theirC, theirVW = theirCVW.split( ':', 1 )
-                less = int(ourC) < int(theirC)
-                more = int(ourC) > int(theirC)
+                theirMaculaBBB, theirMaculaCVW = theirMaculaColumns[0].split( '_', 1 )
+                less = more = False
+                # assert ourBBB == theirMaculaBBB, f"{ourBBB=} {theirMaculaBBB=} {lastBBB=}"
+                if ourBBB != theirMaculaBBB:
+                    if ourBBB != lastBBB: more = True
+                    else: halt
+                if not more or less:
+                    ourC, ourVW = ourCVW.split( ':', 1 )
+                    theirMaculaC, theirVW = theirMaculaCVW.split( ':', 1 )
+                    less = int(ourC) < int(theirMaculaC)
+                    more = int(ourC) > int(theirMaculaC)
                 if not more or less:
                     ourV, ourW = ourVW.split( 'w', 1 )
-                    theirV, theirW = theirVW.split( 'w', 1 )
-                    less = int(ourV) < int(theirV)
-                    more = int(ourV) > int(theirV)
+                    theirMaculaV, theirMaculaW = theirVW.split( 'w', 1 )
+                    less = int(ourV) < int(theirMaculaV)
+                    more = int(ourV) > int(theirMaculaV)
+                if not more or less:
+                    ourWint = int(ourW)
+                    try: theirMaculaWint = int(theirMaculaW)
+                    except ValueError: theirMaculaWint = int(theirMaculaW[:-1]) # Remove suffix
+                    less = ourWint < theirMaculaWint
+                    more = ourWint > theirMaculaWint
                 # NOTE: Can also happen with versification issues
                 # We currently get as far as DEU_22:16
-                if less: #ourColumns[0] < theirColumns[0]: # string comparison
-                    logging.critical( f"Missing word in Macula Hebrew??? We have a mismatch ({numConsecutiveMismatches}) with \n  {ix}: {ourLine}\n  {mIx}: {theirColumns}")
-                    break
+                if less: #ourColumns[0] < theirMaculaColumns[0]: # string comparison
+                    logging.critical( f"Missing word in Macula Hebrew??? {ourC}:{ourV}w{ourW}<{theirMaculaC}:{theirMaculaV}w{theirMaculaW} {dummyRange=} {numConsecutiveMismatches=}\n We have a mismatch ({numConsecutiveMismatches}) with \n  {ix}: {ourLine}\n  {mIx}: {theirMaculaColumns}")
+                    break # from inner dummy loop (which uses mIx but we haven't changed it)
                 elif more: # it might be the opposite
-                    logging.critical( f"Extra word in Macula Hebrew??? We have a mismatch ({numConsecutiveMismatches}) with \n  {ix}: {ourLine}\n  {mIx}: {theirColumns}")
-                    mIx += 1
-        state.newTable[ix] = '\t'.join( ourColumns )
-        if numConsecutiveMismatches > 25:
-            logging.critical( f"Aborted around {ourColumns[0]} {theirColumns[0]}")
-            break # Gen 39:9 after w7 missing has about 25 rows
+                    logging.critical( f"Extra word in Macula Hebrew??? {ourC}:{ourV}w{ourW}>{theirMaculaC}:{theirMaculaV}w{theirMaculaW} {dummyRange=} {numConsecutiveMismatches=}\n We have a mismatch ({numConsecutiveMismatches}) with \n  {ix}: {ourLine}\n  {mIx}: {theirMaculaColumns}")
+                    mIx += 1 # Advance 'their' row
+                else:
+                    print( f"Neither more nor less {ourC}:{ourV}w{ourW} vs {theirMaculaC}:{theirMaculaV}w{theirMaculaW} {dummyRange=} {numConsecutiveMismatches=}" )
+            lastBBB = ourBBB
+        if lemmaRowList:
+            # print( lemmaRowList )
+            ourColumns[4] = ','.join( lemmaRowList )
+            if ourColumns[4].count(',') != ourColumns[3].count(','):
+                logging.critical( f"LemmaRowList count doesn't match MorphemeRowList count at {ourColumns[0]} {lemmaList=} {ourColumns[3]=} {ourColumns[4]=}" )
+        state.newWordTable[ix] = '\t'.join( ourColumns )
+        if mIx >= len(state.macula_tsv_lines):
+            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"RanB out of Macula lines at {ix}/{len(state.newWordTable)} {ourLine}" )
+            break # no more macula lines
+        if numConsecutiveMismatches > 25: # Gen 39:9 after w7 missing has about 25 rows
+            logging.critical( f"Aborted around {ourColumns[0]} {theirMaculaColumns[0]}")
+            halt
+            break # from outer loop
 
     # Remove the OSHBid and CantillationHierarchy columns
-    state.newTable[0] = state.newTable[0].replace(f'{TAB}OSHBid{TAB}',f'{TAB}').replace(f'{TAB}CantillationHierarchy{TAB}',f'{TAB}')
-    for ix, ourLine in enumerate( state.newTable[1:], start=1 ):
-        assert ourLine.count( '\t' ) == 19, f"{ourLine.count(TAB)} {ourLine=}"
+    assert 381_000 < len(state.newWordTable) < 382_000, f"{len(state.newWordTable)=}"
+    state.newWordTable[0] = state.newWordTable[0].replace(f'{TAB}OSHBid{TAB}',f'{TAB}').replace(f'{TAB}CantillationHierarchy{TAB}',f'{TAB}')
+    for ix, ourLine in enumerate( state.newWordTable[1:], start=1 ):
+        assert ourLine.count( '\t' ) == 20, f"{ourLine.count(TAB)} {ourLine=}"
         ourColumns = ourLine.split( '\t' )
-        del ourColumns[5] # CantillationHierarchy
+        del ourColumns[6] # CantillationHierarchy
         del ourColumns[1] # OSHBid
-        state.newTable[ix] = '\t'.join( ourColumns )
+        state.newWordTable[ix] = '\t'.join( ourColumns )
+    assert 381_000 < len(state.newWordTable) < 382_000, f"{len(state.newWordTable)=}"
 
     return True
 # end of add_tags_to_OT_word_table.write_new_table
@@ -987,14 +1062,16 @@ def fill_extra_columns_and_remove_some() -> bool:
 def write_new_table() -> bool:
     """
     Write the new TSV table (already with an extra Tags column)
-        using the data in state.newTable
+        using the data in state.newWordTable
     """
+    assert 381_000 < len(state.newWordTable) < 382_000, f"{len(state.newWordTable)=}"
+    
     with open( WORD_TABLE_OUTPUT_FILEPATH, 'wt', encoding='utf-8' ) as new_table_output_file:
-        for line in state.newTable:
-            assert line.count( '\t' ) == 17, f"{line.count(TAB)} {line=}"
+        for line in state.newWordTable:
+            assert line.count( '\t' ) == 18, f"{line.count(TAB)} {line=}"
             new_table_output_file.write( f'{line}\n' )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Wrote {len(state.newTable):,} lines to {WORD_TABLE_OUTPUT_FILEPATH} ({state.newTable[0].count(TAB)+1} columns).")
-
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Wrote {len(state.newWordTable):,} lines to {WORD_TABLE_OUTPUT_FILEPATH} ({state.newWordTable[0].count(TAB)+1} columns).")
+    
     # Also use the same word file for the OET-RV
     shutil.copy2( WORD_TABLE_OUTPUT_FILEPATH, RV_ESFM_OUTPUT_FOLDERPATH.joinpath( WORD_TABLE_OUTPUT_FILENAME ) )
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Also copied {WORD_TABLE_OUTPUT_FILENAME} to {RV_ESFM_OUTPUT_FOLDERPATH}.")

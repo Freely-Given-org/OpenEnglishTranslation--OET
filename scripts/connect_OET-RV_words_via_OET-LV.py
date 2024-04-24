@@ -64,7 +64,7 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2024-04-10' # by RJH
+LAST_MODIFIED_DATE = '2024-04-12' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.66'
@@ -422,7 +422,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
     else: vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  No new word connections made." )
     if totalSimpleListedAddsNS or totalProperNounAddsNS or totalFirstPartMatchedAddsNS or totalManualMatchedAddsNS:
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Did total of {totalSimpleListedAddsNS:,} simple listed nomina sacra (NS), {totalProperNounAddsNS:,} proper noun NS, {totalFirstPartMatchedAddsNS:,} first part NS and {totalManualMatchedAddsNS:,} manual NS." )
-    else: vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  No new nomina sacra connections made." )
+    else: vPrint( 'Info', DEBUGGING_THIS_MODULE, "  No new nomina sacra connections made." )
 # end of connect_OET-RV_words_via_OET-LV.connect_OET_RV
 
 
@@ -940,9 +940,10 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('David','Dawid'),('David','Dawid/Dāvid'),
             ('Demetrius', 'Daʸmaʸtrios'), ('Diotrephes', 'Diotrefaʸs'),
             ('Dorcas', 'The_Gazelle/Dorkas'),
-            ('Egypt','Aiguptos'),('Egypt','Aiguptos/Miʦərayim'),
+            ('Egypt','Aiguptos'),('Egypt','Aiguptos/Miʦərayim'),('Egypt', 'Miʦərayim/(Egypt)'),
             ('Ephesus', 'Efesos'),
             ('Eve','Eua'),('Eve','Eua/Ḩavvāh'),
+            ("Far'oh", 'Farəˊoh'),
             ('Gaius', 'Gaios'),
             ('Galilee', 'Galilaia'),('Galilee', 'Galilaia/Gālīl'),
             ("Herod's", 'Haʸrōdaʸs'),('Herod', 'Haʸrōdaʸs'),
@@ -951,6 +952,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Immanuel', 'Emmanouaʸl'),('Immanuel', 'Emmanouaʸl/ˊImmānūʼēl'),
             ('Isaac', 'Isaʼak'),('Isaac', 'Isaʼak/Yiʦəḩāq'),
             ('Isayah', 'Aʸsaias'),('Isayah', 'Aʸsaias/Yəshaˊəyāh'),
+            ('Iyyov', 'ʼIuōv'),
             ('Yacob', 'Yakōbos'),('Yacob', 'Yakōbos/Yaˊaqov'), ('Yacob', 'Yakōb'),('Yacob', 'Yakōb/Yaˊaqov'),("Yacob's", 'Yakōb'),("Yacob's", 'Yakōb/Yaˊaqov'),
             ('Yehoshapat', 'Yōsafat'),('Yehoshapat', 'Yōsafat/Yəhōshāfāţ'),
             ('Yerusalem', 'Hierousalaʸm'),('Yerusalem', 'Hierousalaʸm/Yərūshālayim'),
@@ -968,14 +970,17 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Manasseh', 'Manassaʸs'),('Manasseh', 'Manassaʸs/Mənashsheh'),
             ('Maria', 'Maria'),('Maria', 'Maria/Mirəyām'),
             ('Media', 'Maʸdia'),
+            ('Mitsrayim', 'Miʦərayim/(Egypt)'),
             ('Nahshon', 'Naʼassōn'),('Nahshon', 'Naʼassōn/Naḩəshōn'),
             ('Nazareth', 'Nazaret'),
             ('Obed', 'Yōbaʸd'),('Obed', 'Yōbaʸd/Ōbaʸd/ˊŌvēd'),
             ('Paul', 'Paulos'),
             ('Perez', 'Fares'),('Perez', 'Fares/Fereʦ'),
+            ('Pharaoh', 'Farəˊoh'),
             ('Pharisee', 'Farisaios'),
             ('Philadelphia', 'Filadelfeia'),
             ('Pontus', 'Pontos'),
+            ('Potifar', 'Fōţīfar'),
             ('Rehoboam', 'Ɽoboam'),('Rehoboam', 'Ɽoboam/Rəḩavəˊām'),
             ('Ruth', 'Ɽouth'),('Ruth', 'Ɽouth/Rūt'),
             ('Sadducees', 'Saddoukaios'),
@@ -1004,7 +1009,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Yohan', 'Yōannaʸs'),
             ('Yoppa', 'Yoppaʸ'),
             ('Yordan', 'Yordanaʸs'),('Yordan', 'Yordanaʸs/Yarəddēn'),
-            ('Yoseph', 'Yōsaʸf'),('Yoseph', 'Yōsaʸf/Yōşēf'),
+            ('Yosef', 'Yōsaʸf'),('Yosef', 'Yōsaʸf/Yōşēf'),('Yosef', 'Yōşēf'),
             ('Yudea', 'Youdaia'),
             ("Zebedee's", 'Zebedaios'),
             ('Zerah', 'Zara'),('Zerah', 'Zara/Zeraḩ'),

@@ -1,4 +1,4 @@
-\id LUK - Open English Translation—Readers' Version (OET-RV) v0.1.09
+\id LUK - Open English Translation—Readers' Version (OET-RV) v0.1.10
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 LUK
@@ -70,7 +70,7 @@
 \rem /s1 The Birth of Jesus Foretold; The Birth of Jesus Is Announced
 \p
 \v 26 When Elizabeth was six months¦38085 pregnant, \nd God¦38096\nd* sent¦38089 his messenger¦38091 Gabriel¦38092 to \nd Nazareth¦38105\nd*, a city¦38098 in the Galilee¦38101 region.
-\v 27 \x + \xo 1:27: \xt Mat 1:18.\x*Gabriel went to a young woman named Maria¦38125 who was engaged to be married to Yosef, a descendant of \add King\add* David¦38119,
+\v 27 \x + \xo 1:27: \xt Mat 1:18.\x*Gabriel went to a young woman named Maria¦38125 who was engaged to be married to Yosef¦38114, a descendant of \add King\add* David¦38119,
 \v 28 and entering the room, spoke to her¦38132, “Hello there. The \nd master¦38139\nd* is with you and he's chosen you to be honoured.”
 \v 29 Maria was very puzzled by the statement¦38153 and¦38157 wondered what kind of greeting¦38165 it could be
 \v 30 as the messenger¦38171 continued, “Don't be scared, Maria¦38177, because¦38180 you¦38179 have found¦38179 God's favour¦38181
@@ -197,7 +197,7 @@
 \v 2 (This census was conducted when Quirinius was the governor¦39020 of Syria.)
 \v 3 Everyone had to \add officially\add* register¦39029 in the city¦39038 of their \add birth\add*.
 \p
-\v 4 Because Yosef was a descendant of \add King\add* David, he left the town of \nd Nazareth¦39048\nd* in the Galilee¦39045 \add region\add* and went¦39039 down to David's town of Bethlehem¦39060 in Yudea¦39052
+\v 4 Because Yosef¦39042 was a descendant of \add King\add* David, he left the town of \nd Nazareth¦39048\nd* in the Galilee¦39045 \add region\add* and went¦39039 down to David's town of Bethlehem¦39060 in Yudea¦39052
 \v 5 to register¦39070 along with Maria¦39073, his pregnant¦39082 fiancée.
 \v 6 While they were in Bethlehem, the time¦39097 came for her¦39107 to give birth
 \v 7 and so Maria bore her¦39112 first¦39114 son and wrapped him in strips of cloth and slept him in an \add empty\add* feeding trough, because¦39125 they had missed out on the guest¦39132 room¦39129.
@@ -216,7 +216,7 @@
 \p
 \v 15 Then as the messengers¦39264 left them and¦39279 went¦39255 \add up\add* into the sky, the shepherds¦39269 said to each other, “Well, we'll certainly go into Bethlehem¦39278 so we can see¦39280 what this was about that \nd Yahweh¦39288\nd* has let us know about.”
 \p
-\v 16 So they hurried¦39294 \add into town\add* and asked around to find Maria¦39302 and Yosef, and \add also\add* the baby sleeping in the feeding trough.
+\v 16 So they hurried¦39294 \add into town\add* and asked around to find Maria¦39302 and Yosef¦39305, and \add also\add* the baby sleeping in the feeding trough.
 \v 17 When they met them, the explained what they had been told about the young baby.
 \v 18 Everyone who heard¦39330 this was amazed at what the shepherds¦39339 told them,
 \v 19 but¦39343 Maria¦39345 treasured¦39347 all of these¦39351 messages¦39350 in her¦39357 heart¦39355 and \add often\add* thought about them.
@@ -335,14 +335,14 @@
 \r (Mat. 1:1-17)
 \rem /r (Matthew 1.1-17)
 \p
-\v 23 \nd Yeshua¦40587\nd* was about¦40589 thirty¦40592 when he started \add his ministry\add*. He was the son (as it was thought¦40597) of Yosef, son of Heli,
-\v 24 the son of Matthat, the son of Levi¦40610, the son of Melki, the son of Yannai¦40616, the son of Yosef,
+\v 23 \nd Yeshua¦40587\nd* was about¦40589 thirty¦40592 when he started \add his ministry\add*. He was the son (as it was thought¦40597) of Yosef¦40600, son of Heli,
+\v 24 the son of Matthat, the son of Levi¦40610, the son of Melki, the son of Yannai¦40616, the son of Yosef¦40620,
 \v 25 the son of Mattathias, the son of Amos, the son of Nahum, the son of Esli, the son of Naggai,
 \v 26 the son of Maath, the son of Mattathias, the son of Semein¦40645, the son of Yosek, the son of Yoda,
 \v 27 the son of Joanan, the son of Rhesa, the son of Zerubbabel, the son of Shealtiel, the son of Neri,
 \v 28 the son of Melki, the son of Addi, the son of Cosam, the son of Elmadam, the son of Er,
 \v 29 the son of Joshua, the son of Eliezer¦40693, the son of Jorim, the son of Matthat¦40700, the son of Levi¦40703,
-\v 30 the son of Simeon, the son of Yudah, the son of Yosef, the son of Yonam, the son of Eliakim¦40714,
+\v 30 the son of Simeon, the son of Yudah, the son of Yosef¦40709, the son of Yonam, the son of Eliakim¦40714,
 \v 31 the son of Melea¦40716, the son of Menna, the son of Mattatha, the son of \nd Nathan¦40723\nd*, the son of David¦40725,
 \v 32 the son of Yesse, the son of Obed¦40731, the son of Boaz¦40733, the son of Salmon, the son of \nd Nahshon¦40738\nd*,
 \v 33 the son of Amminadab, the son of Ram, the son of Hezron¦40748, the son of Perez¦40750, the son of Yudah,
@@ -734,7 +734,7 @@
 \v 40 “Simon¦45055,” \nd Yeshua¦45051\nd* asked him, “I need to tell you something¦45058.”
 \p “Tell me, teacher,” he replied.
 \p
-\v 41 \add Then Yeshua told him this story:\add* “\wj Once there were two¦45073 people who had borrowed from a money¦45076 lender: one borrow five-hundred coins¦45081 and¦45084 the other¦45085 borrowed fifty¦45087.\wj*
+\v 41 \add Then Yeshua told him this story:\add* “\wj Once there were two¦45073 people who had borrowed from a money¦45076 lender: one borrowed five-hundred coins¦45081 and¦45084 the other¦45085 borrowed fifty¦45087.\wj*
 \v 42 \wj But neither of them was able to repay him, so he¦45094 wrote-off both of their¦45097 debts. Now after that, which¦45095 one of them do you think would appreciate him more?\wj*”
 \p
 \v 43 “I suppose¦45112,” answered¦45106 Simon¦45110, “that it was the one who was forgiven the biggest debt.”
@@ -2311,7 +2311,7 @@
 \rem /s1 Jesus' Burial
 \r (Jn 19:38-42; Mark 15:42-47; Mat. 27:57-61)
 \p
-\v 50 Then, look, there was a man named Yosef on the local council¦61697. (He was a good man and godly,
+\v 50 Then, look, there was a man named Yosef¦61696 on the local council¦61697. (He was a good man and godly,
 \v 51 and hadn't agreed with what the council had decided and done. He was from the Jewish city¦61719 of Arimathea¦61717 and was waiting¦61726 for God's kingdom¦61730 \add to come\add*.)
 \v 52 He went in to see Pilate¦61737 and requested¦61738 \nd Yeshua's¦61742\nd* body¦61740,
 \v 53 then he¦61746 took it down \add from the stake\add* and wrapped¦61746 it in some linen¦61753 cloth¦61753 and put the body into a \add new\add* tomb¦61760 hollowed into the rock¦61761 that hadn't been used yet.
