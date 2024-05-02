@@ -53,7 +53,7 @@ from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, 
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 
 
-LAST_MODIFIED_DATE = '2024-03-18' # by RJH
+LAST_MODIFIED_DATE = '2024-04-26' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
 PROGRAM_VERSION = '0.76'
@@ -463,7 +463,7 @@ RV_INDEX_INTRO_HTML = """<!DOCTYPE html>
     <li>Where it is determined that a group of words was either definitely or most likely
         not in the original manuscripts (autographs),
         they are omitted in the <em>OET-RV</em> without any notes
-        but a <b>≈</b> symbol is inserted to show that the decision was intentional and not just an accidental omission.
+        but a <b>◘</b> symbol is inserted to show that the decision was intentional and not just an accidental omission.
         These manuscript decisions were mostly made by the authors of the two main works that we relied on to translate
         the <em>OET</em> from—see the acknowledgements below for more details.)</li>
     </ul>
@@ -968,18 +968,18 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                     book_html = f'{book_html}{"" if book_html.endswith(">") else " "}' \
                         + f'''{f"""<span id="C{C}"></span><span class="{'cPsa' if BBB=='PSA' else 'c'}" id="C{C}V1">{C}</span>""" if V1=="1" else f"""<span class="v" id="C{C}V{V1}">{V1}-</span>"""}''' \
                         + f'<span class="v" id="C{C}V{V2}">{V2}{NARROW_NON_BREAK_SPACE}</span>' \
-                        + (rest if rest else '≈')
+                        + (rest if rest else '◘')
                 else:
                     assert int(V2)==int(V1)+2 # We don't handle four verse reordering yet
                     book_html = f'{book_html}{"" if book_html.endswith(">") else " "}' \
                         + f'''{f"""<span id="C{C}"></span><span class="{'cPsa' if BBB=='PSA' else 'c'}" id="C{C}V1">{C}</span>""" if V1=="1" else f"""<span class="v" id="C{C}V{V1}">{V1}-</span>"""}''' \
                         + f'<span class="v" id="C{C}V{int(V1)+1}"><span class="v" id="C{C}V{V2}">{V2}{NARROW_NON_BREAK_SPACE}</span></span>' \
-                        + (rest if rest else '≈')
+                        + (rest if rest else '◘')
             else: # it's a simple verse number
                 assert V.isdigit(), f"Expected a verse number digit with {V=} {rest=}"
                 book_html = f'{book_html}{"" if book_html.endswith(">") or book_html.endswith("—") else " "}' \
                         + f'''{f"""<span id="C{C}"></span><span class="{'cPsa' if BBB=='PSA' else 'c'}" id="C{C}V1">{C}{NARROW_NON_BREAK_SPACE}</span>""" if V=="1" else f"""<span class="v" id="C{C}V{V}">{V}{NARROW_NON_BREAK_SPACE}</span>"""}''' \
-                        + (rest if rest else '≈')
+                        + (rest if rest else '◘')
         elif marker in ('s1','s2','s3'):
             if inParagraph:
                 assert not inTable

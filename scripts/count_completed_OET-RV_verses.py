@@ -57,10 +57,10 @@ from BibleOrgSys.Reference.BibleVersificationSystems import BibleVersificationSy
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2024-02-20' # by RJH
+LAST_MODIFIED_DATE = '2024-04-26' # by RJH
 SHORT_PROGRAM_NAME = "count_completed_OET-RV_verses"
 PROGRAM_NAME = "Count completed OET-RV verses"
-PROGRAM_VERSION = '0.20'
+PROGRAM_VERSION = '0.21'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -115,7 +115,7 @@ def main():
             totalVerses += totalBookVerses
             with open( OET_RV_ESFM_InputFolderPath.joinpath( filename ), 'rt', encoding='utf-8' ) as ESFMFile:
                 ESFMText = ESFMFile.read()
-            unfinishedCount = ESFMText.count( '◘' )
+            unfinishedCount = ESFMText.count( '◙' )
             finishedVerseCount = totalBookVerses - min( unfinishedCount, totalBookVerses )
             finishedOTVerses += finishedVerseCount
             finishedVerses += finishedVerseCount
@@ -139,7 +139,7 @@ def main():
             totalVerses += totalBookVerses
             with open( OET_RV_ESFM_InputFolderPath.joinpath( filename ), 'rt', encoding='utf-8' ) as ESFMFile:
                 ESFMText = ESFMFile.read()
-            unfinishedCount = ESFMText.count( '◘' )
+            unfinishedCount = ESFMText.count( '◙' )
             finishedVerseCount = totalBookVerses - min( unfinishedCount, totalBookVerses )
             finishedNTVerses += finishedVerseCount
             finishedVerses += finishedVerseCount

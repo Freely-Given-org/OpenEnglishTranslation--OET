@@ -44,6 +44,7 @@ OSHB morphology codes can be found at https://hb.openscriptures.org/parsing/Hebr
 CHANGELOG:
     2024-03-20 Create a word table as well as the morpheme table
     2024-03-27 Substitute KJB for KJV in 2000+ OSHB notes
+    2024-04-26 Change 'you' to 'you_all' if morphology shows it's plural
 """
 from gettext import gettext as _
 # from typing import Dict, List, Tuple
@@ -59,10 +60,10 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2024-04-16' # by RJH
+LAST_MODIFIED_DATE = '2024-04-28' # by RJH
 SHORT_PROGRAM_NAME = "apply_Clear_Macula_OT_glosses"
 PROGRAM_NAME = "Apply Macula OT glosses"
-PROGRAM_VERSION = '0.65'
+PROGRAM_VERSION = '0.67'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -119,10 +120,11 @@ def main() -> None:
     if loadOurSourceTable():
         if loadOurLowFatTable():
             if fill_known_lowFat_English_contextual_glosses():
-                if do_auto_reordering():
-                    save_filled_morpheme_TSV_file()
-                    save_lemma_TSV_file()
-                    save_filled_word_TSV_file()
+                if do_yalls():
+                    if do_auto_reordering():
+                        save_filled_morpheme_TSV_file()
+                        save_lemma_TSV_file()
+                        save_filled_word_TSV_file()
 # end of apply_Clear_Macula_OT_glosses.main
 
 
@@ -404,12 +406,96 @@ def fill_known_lowFat_English_contextual_glosses() -> bool:
 # end of apply_Clear_Macula_OT_glosses.fill_known_lowFat_English_contextual_glosses
 
 
+def do_yalls() -> bool:
+    """
+    Go through all our OT glosses and change 'you' to 'you_all' if the morphology is plural
+    """
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "\nConverting to 'you_all' for plural and dual 2nd person pronouns plus marking plural/dual verbs…" )
+
+    num_rows_changed = num_fields_changed = 0
+    num_plurals = num_duals = 0
+    for WLC_row_dict in state.WLC_rows:
+        morphology = originalMorphology = WLC_row_dict['Morphology']
+        if not morphology: continue # probably a seg or a note
+        # print( f"{morphology=} from {WLC_row_dict}")
+        PoS = morphology[0]
+        if PoS in 'ART': # adjectives, prepositions, particles
+            continue
+        if morphology=='Sn':
+            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Why Sn??? Ignoring {WLC_row_dict}" ) # paragogic nun
+            continue
+
+        if PoS=='V':
+            if len(morphology)==3 and morphology[-1] in 'ac':
+                continue # no person marked in infinitives
+            elif len(morphology)==6 and morphology[-1] in 'acd':
+                morphology = morphology[:-1] # Remove the final 'state' character
+        else: # not a verb
+            combinedGlosses = f"{WLC_row_dict['MorphemeGloss']} {WLC_row_dict['ContextualMorphemeGloss']} {WLC_row_dict['WordGloss']} {WLC_row_dict['ContextualWordGloss']}"
+            if 'you' not in combinedGlosses:
+                continue
+            if 'young' in combinedGlosses \
+            or 'youth' in combinedGlosses \
+            or '[you]' in combinedGlosses:
+                continue
+
+            if PoS=='N':
+                if len(morphology)==5 and morphology[-1] in 'acd':
+                    morphology = morphology[:-1] # Remove the final 'state' character
+            assert PoS in 'SVPN' and morphology[-1] in 'sp', f"{WLC_row_dict=}"
+
+        numberIndicator = morphology[-1]
+        if numberIndicator == 's': continue # not interested in singulars
+        assert numberIndicator in 'pd', f"{numberIndicator=} from {morphology=} from {originalMorphology=}" # plural or dual
+
+        row_changed = False
+        for fieldname in ('MorphemeGloss', 'ContextualMorphemeGloss', 'WordGloss', 'ContextualWordGloss'):
+            newField = originalField = WLC_row_dict[fieldname]
+
+            if numberIndicator == 'p': # plural
+                if 'you' not in originalField or 'you_all' in originalField or 'yourselves' in originalField: continue
+                if 'yourself' in newField:
+                    newField = newField.replace( 'yourself', 'yourselves' )
+                elif 'your' in newField:
+                    newField = newField.replace( 'your(pl)', "your_all's" ) if 'your(pl)' in newField else newField.replace( 'your', "your_all's" )
+                else:
+                    newField = newField.replace( 'you(pl)', 'you_all' ) if 'you(pl)' in newField else newField.replace( 'you', 'you_all' )
+                if morphology[0]=='V' and 'you_all' not in newField and '(pl)' not in newField:
+                    newField = f'{newField}(pl)' # append a plural indicator
+                num_plurals += 1
+
+            elif numberIndicator == 'd': # dual
+                if 'you' not in originalField or 'you_two' in originalField or 'yourtwoselves' in originalField: continue
+                if 'yourself' in newField:
+                    newField = newField.replace( 'yourself', 'yourtwoselves' )
+                elif 'yourselves' in newField:
+                    newField = newField.replace( 'yourselves', 'yourtwoselves' )
+                elif 'your' in newField:
+                    newField = newField.replace( 'your(2)', "your_two's" ) if 'your(2)' in newField else newField.replace( 'your', "your_two's" )
+                else:
+                    newField = newField.replace( 'you(pl)', 'you_two' ) if 'you(pl)' in newField else newField.replace( 'you', 'you_two' )
+                if morphology[0]=='V' and 'you_two' not in newField and '(2)' not in newField:
+                    newField = f'{newField}(2)' # append a dual indicator
+                num_duals += 1
+
+            assert newField != originalField
+            WLC_row_dict[fieldname] = newField
+            num_fields_changed += 1
+            row_changed = True
+        # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{changed} {WLC_row_dict=}")
+        if row_changed: num_rows_changed += 1
+
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  do_yalls() changed {num_fields_changed:,} fields in {num_rows_changed:,} table rows ({num_plurals:,} plurals and {num_duals:,} duals)." )
+    return num_fields_changed > 0
+# end of apply_Clear_Macula_OT_glosses.do_yalls
+
+
 def do_auto_reordering() -> bool:
     """
     Reordering OT glosses to try to put subjects before their verbs, etc.
     """
     # DEBUGGING_THIS_MODULE = 99
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nTrying to reorder OT glosses…" )
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "\nTrying to reorder OT glosses…" )
 
     # First make a dictionary to easily get to our LowFat rows
     LF_dict = {row['OSHBid']:n for n,row in enumerate(state.lowFatRows) if row['OSHBid']}
@@ -420,7 +506,7 @@ def do_auto_reordering() -> bool:
     last3_WLC_row = state.WLC_rows[1]
     last2_WLC_row = state.WLC_rows[2]
     last1_WLC_row = state.WLC_rows[3]
-    for WLC_row in state.WLC_rows[4:]:
+    for WLC_row in state.WLC_rows[4:]: # these 'rows' are dictionaries
         # if WLC_row['Ref'].startswith( 'GEN_3:12w5'):
         #     break
         

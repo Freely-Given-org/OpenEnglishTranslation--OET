@@ -64,7 +64,7 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2024-04-12' # by RJH
+LAST_MODIFIED_DATE = '2024-04-29' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.66'
@@ -476,7 +476,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
             #     print( f"FOR: {BBB}_{c}:{v}, '{lvTextSimplified.replace('for','FOR').replace('For','FOR')}'" )
             #     forList.append( f"{BBB}_{c}:{v}" )
     if not rvText or not lvText: return (0,0), (0,0), (0,0), (0,0)
-    rvAdjText = rvText.replace('≈','').replace('…','') \
+    rvAdjText = rvText.replace('◘','').replace('≈','').replace('…','') \
                 .replace('.','').replace(',','').replace(':','').replace(';','').replace('?','').replace('!','').replace('—',' ') \
                 .replace( '(', '').replace( ')', '' ) \
                 .replace( '“', '' ).replace( '”', '' ).replace( '‘', '' ).replace( '’', '') \
@@ -943,7 +943,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Egypt','Aiguptos'),('Egypt','Aiguptos/Miʦərayim'),('Egypt', 'Miʦərayim/(Egypt)'),
             ('Ephesus', 'Efesos'),
             ('Eve','Eua'),('Eve','Eua/Ḩavvāh'),
-            ("Far'oh", 'Farəˊoh'),
+            ('Far’oh', 'Farəˊoh'),
             ('Gaius', 'Gaios'),
             ('Galilee', 'Galilaia'),('Galilee', 'Galilaia/Gālīl'),
             ("Herod's", 'Haʸrōdaʸs'),('Herod', 'Haʸrōdaʸs'),
@@ -976,7 +976,6 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Obed', 'Yōbaʸd'),('Obed', 'Yōbaʸd/Ōbaʸd/ˊŌvēd'),
             ('Paul', 'Paulos'),
             ('Perez', 'Fares'),('Perez', 'Fares/Fereʦ'),
-            ('Pharaoh', 'Farəˊoh'),
             ('Pharisee', 'Farisaios'),
             ('Philadelphia', 'Filadelfeia'),
             ('Pontus', 'Pontos'),

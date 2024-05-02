@@ -59,7 +59,7 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 
 
-LAST_MODIFIED_DATE = '2024-03-19' # by RJH
+LAST_MODIFIED_DATE = '2024-04-26' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
 PROGRAM_VERSION = '0.62'
@@ -562,7 +562,7 @@ SBS_INDEX_INTRO_HTML = """<!DOCTYPE html>
     <li class="intro">Where it is determined that a group of words was either definitely or most likely
         not in the original manuscripts (autographs),
         they are omitted in the <em>OET</em> without any notes
-        but a <b>≈</b> symbol is inserted to show that the decision was intentional and not just an accidental omission.
+        but a <b>◘</b> symbol is inserted to show that the decision was intentional and not just an accidental omission.
         These manuscript decisions were mostly made by the authors of the two main works that we relied on to translate
         the <em>OET</em> from—see the acknowledgements below for more details.)</li>
     <li>You might also find more information in the <a href="FAQs.html">FAQs</a>
