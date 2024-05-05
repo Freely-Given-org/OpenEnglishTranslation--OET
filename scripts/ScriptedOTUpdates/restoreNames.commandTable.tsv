@@ -91,6 +91,7 @@ wH									Gad			גָּד		Rev 7:5
 H									Gamaliel			גַּמְלִיאֵל		Acts 5:34
 H									Gedaliah			גְּדַּלְיָה		Zeph 1:1
 wH									Gera			גֵּרָא		Gen 46:21. Jdg 3:15, 2Sam 16:15, ...
+H									Gershom			גֵּרְשׁם		Exo 2:22, 18:3,30, Jdg 28:30, ..., Heb 11:32
 H									Gideon			גִּדְעוֹן		Heb 11:32
 H									Gog			גּוֹג
 H									Gomer			גֹּמֶר		Hos 1:3
@@ -121,6 +122,7 @@ H									Jephtha			יִפְתָּח		Heb 11:32
 H									Jeremiah			יִרְמְיָה		Matt 27:9
 H									Jeroboam			יָרָבְעָם		Hos 1:1
 H									Jesse			יִשַׁי
+H									Jethro			יִתְרוֹ		Exo 3:1, 4:18, 18:1-12*
 H									Joash			יוֹאָשׁ		Hos 1:1
 H									Joatham			יוֹתָם
 wH				id					Job			אִיּוֹב		Job, Jam 5:11
@@ -167,7 +169,7 @@ wH									Melchi			מֶלֶךְ
 #H									Menna			?
 H									Micah			מִיכָה		Mic 1:1
 H									Michael			מִיכָאֵל
-H									Midian			מִדְיָן		Acts 7:29
+H									Midian			מִדְיָן		Exo 2:15, Acts 7:29
 H									Moab			מוֹאָב		Gen 19:37, Ruth 1:1 son of Lot
 H									Moloch			מֹלֶךְ		Acts 7:43
 H									Mordecai			מָרְדְּכַי		Esther 2:7
@@ -198,7 +200,8 @@ H									Peleg			פֶלֶג
 H									Perez			פֶרֶץ
 H									Pharaoh			פַרְעֹה		Gen 39:1, Acts 7:13
 H									Potiphar			פוֹטִיפַר		Gen 37:36, 39:1*
-H									Potiphera			פוֹטִי פֶרַע		Gen 41:45,50, 46"20*
+H									Potiphera			פוֹטִי פֶרַע		Gen 41:45,50, 46:20*
+H									Puah			פוּעָה		Exo 1:15*
 H									Rachel			רָחֵל		Gen
 H									Ragau			רְעוּ
 H									Rahab			רָחָב
@@ -227,6 +230,7 @@ H									Shealtiel			שְׁאַלְתִּיאֵל		Hag 1:1
 H									Shechem			שְׁכֶם		Gen 12:6, 33:18, Acts 7:16
 H									Shelah			שֵׁלָה		Gen 38:5,11,14,26
 H									Sheshbazzar			שֵׁשְׁבַּצַּר		Ezra 1:8
+H									Shiphrah			שִׁפְרָה		Exo 1:15*
 H									Shua			שׁוּעַ		Gen 38:2,12*
 H									Simeon			שִׁמְעוֹן		Gen 42:36
 H									Solomon			שְׁלמֹה		2 Sam 5:4
@@ -243,8 +247,10 @@ H									Zerah			זֶרַח		Gen 36:13,17,33, 38:30
 H									Zechariah			זְכַרְיָה
 dH									Zephaniah			צְפַנְיָה/(Zephaniah)		Zeph 1:1
 H									Zerubbabel			זְרֻבָּבֶל		Hag 1:1
+# Note: because the first letter changes for the following names, we also include the English spelling
 H									Zibeon			צִבְעוֹן/(Zibeon)		Gen 36:2,14
 H									Zillah			צִלָּה/(Zillah)		Gen 4:19
+H									Zipporah			צִפֹּרָה/(Zipporah)		Exo 2:21
 H									Zorobabel			זְרֻבָּבֶל
 
 # Tribes/Groups
@@ -325,5 +331,5 @@ H									Elohim			אֱלהִיםו		Usually translated as ‘God’
 H									Ephphatha			פְתַח
 
 # Post-processing -- we superscript people and place names that end with El or Yah
-									ʼēl			\sup ʼēl\sup*)
-									yāh			\sup yāh\sup*)
+									ʼēl			\sup ʼēl\sup*
+									yāh			\sup yāh\sup*
