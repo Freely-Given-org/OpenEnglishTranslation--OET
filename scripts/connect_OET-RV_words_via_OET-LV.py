@@ -64,10 +64,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2024-04-29' # by RJH
+LAST_MODIFIED_DATE = '2024-05-08' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.66'
+PROGRAM_VERSION = '0.67'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -351,6 +351,8 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
                 if line.count(' \\x ') < line.count('\\x '):
                     assert '\\x* ' in line or line.endswith('\\x*') or '\\x*—' in line, f"Missing xref space in {rvESFMFilename} {lineNumber}: '{line}'"
                 assert '“ ' not in line, f"Unexpected space at beginning of speech in {rvESFMFilename} {lineNumber}: '{line}'"
+                assert '’“' not in line, f"Unexpected consecutive speech marks in {rvESFMFilename} {lineNumber}: '{line}'"
+                assert '“’' not in line, f"Unexpected consecutive speech marks in {rvESFMFilename} {lineNumber}: '{line}'"
                 if '’ ”' not in line and '’\\wj* ”' not in line:
                     assert ' ”' not in line, f"Unexpected space at end of speech in {rvESFMFilename} {lineNumber}: '{line}'"
                 for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
@@ -790,6 +792,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
     numAdded = numNS = 0
     for rvWord, lvWordStr in (
             ('120', 'a hundred twenty'),
+            ('Israelis', 'of Yisərāʼēl/Israel'),
             ('wants', 'having an ear'),('understand', 'having an ear'),
             # Greek possessive pronouns usually appear after the head noun
             ('my', 'of me'), ('your', 'of you'), ('his', 'of him'), ('her', 'of her'), ('its', 'of it'), ('our', 'of us'), ('their', 'of them'),
@@ -925,6 +928,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Abijah','Abia'),('Abijah','Abia/ʼAvīāh'),
             ('Abraham','Abraʼam'),('Abraham','Abraʼam/ʼAvərāhām'),
             ('Adam','Adam'),('Adam','Adam/ʼĀdām'),
+            ('Aharon', 'ʼAharon'),
             ('Aminadab','Aminadab'),('Amon','Aminadab/ˊAmmiynādāv'),
             ('Amon','Amōs'),('Amon','Amōs/ʼĀmōʦ'),
             ('Aram','Aram'),('Aram','Aram/Rām'),
@@ -940,10 +944,10 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('David','Dawid'),('David','Dawid/Dāvid'),
             ('Demetrius', 'Daʸmaʸtrios'), ('Diotrephes', 'Diotrefaʸs'),
             ('Dorcas', 'The_Gazelle/Dorkas'),
-            ('Egypt','Aiguptos'),('Egypt','Aiguptos/Miʦərayim'),('Egypt', 'Miʦərayim/(Egypt)'),
+            ('Egypt','Aiguptos'),('Egypt','Aiguptos/Miʦərayim'),('Egypt', 'Miʦərayim/Egypt'),
             ('Ephesus', 'Efesos'),
             ('Eve','Eua'),('Eve','Eua/Ḩavvāh'),
-            ('Far’oh', 'Farəˊoh'),
+            ("Far'oh", 'Farəˊoh'),
             ('Gaius', 'Gaios'),
             ('Galilee', 'Galilaia'),('Galilee', 'Galilaia/Gālīl'),
             ("Herod's", 'Haʸrōdaʸs'),('Herod', 'Haʸrōdaʸs'),
@@ -970,6 +974,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Manasseh', 'Manassaʸs'),('Manasseh', 'Manassaʸs/Mənashsheh'),
             ('Maria', 'Maria'),('Maria', 'Maria/Mirəyām'),
             ('Media', 'Maʸdia'),
+            ('Midian', 'Midəyān'),
             ('Mitsrayim', 'Miʦərayim/(Egypt)'),
             ('Nahshon', 'Naʼassōn'),('Nahshon', 'Naʼassōn/Naḩəshōn'),
             ('Nazareth', 'Nazaret'),
@@ -1005,6 +1010,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Yacob', 'Yaˊaqov'),
             ('Yehuda', 'Yəhūdāh'),
             ('Yeshua', 'Yaʸsous'),('Yeshua', 'Yaʸsous/Yəhōshūˊa'), ("Yeshua's", 'Yaʸsous'),("Yeshua's", 'Yaʸsous/Yəhōshūˊa'),
+            ('Yito', 'Yitərō'),
             ('Yohan', 'Yōannaʸs'),
             ('Yoppa', 'Yoppaʸ'),
             ('Yordan', 'Yordanaʸs'),('Yordan', 'Yordanaʸs/Yarəddēn'),

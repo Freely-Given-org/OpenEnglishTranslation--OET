@@ -42,6 +42,7 @@ CHANGELOG:
     2023-08-24 Put some untranslated articles and other words back into the gloss preceded by ¬, e.g., ¬the, ¬of_the
     2023-10-11 Fix a few more lemma transliterations (esp. concerning rough breathings)
     2023-12-14 Add in lemma table that came from CNTR and handle a few more exceptions
+    2024-05-07 Make capitalization work when '-' has been changed to '¬the'
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple, Optional
@@ -55,10 +56,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2024-04-05' # by RJH
+LAST_MODIFIED_DATE = '2024-04-07' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
-PROGRAM_VERSION = '0.95'
+PROGRAM_VERSION = '0.96'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -597,32 +598,39 @@ def adjust_lemma(given_lemma:str, given_Greek_word:str) -> str:
 def process_untranslated_words( given_collation_row, given_preformed_gloss_string:str ) -> Tuple[str,str]:
     """
     """
+    adjusted_preformed_gloss_string = given_preformed_gloss_string
     their_lemma,medieval_lemma = ('','') if given_collation_row['LexemeID']=='99999' else find_lemma_forms( given_collation_row['LexemeID'], given_collation_row['Morphology'], given_collation_row['Classic'] )
     adjusted_lemma = adjust_lemma( their_lemma, given_collation_row['Medieval'])
-    if given_preformed_gloss_string == '-' or given_preformed_gloss_string.startswith( '-¦' ): # an untranslated word from the VLT
+    if adjusted_preformed_gloss_string=='-' or adjusted_preformed_gloss_string.startswith( '-¦' ) or adjusted_preformed_gloss_string.startswith( '¶-¦' ): # an untranslated word from the VLT
         # NOTE: All of these new gloss strings also have to be entered into cleanupVLT.commandTable.tsv
         if adjusted_lemma == 'ho':
             # NOTE: Need to check for lowercase as well!
             # if given_collation_row['Morphology'].startswith( '....G' ): given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬of_the', 1 )
             # if given_collation_row['Morphology'].startswith( '....D' ): given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬to/from_the', 1 )
             if given_collation_row['Role'] == 'R':
-                given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬which', 1 )
+                adjusted_preformed_gloss_string = adjusted_preformed_gloss_string.replace( '-', '¬which', 1 )
             else:
-                given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬the', 1 )
-        elif adjusted_lemma == 'hoti': given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬that', 1 )
-        elif adjusted_lemma in ('ean','ei'): given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬if', 1 ) # Strongs #1437, #1487
-        elif adjusted_lemma == 'an': given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬wishfully', 1 ) # Strongs #302
-        elif adjusted_lemma == 'mē': given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬not/lest', 1 )
-        elif adjusted_lemma == 'ē': given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬or/than', 1 ) # Strongs #2228
-        elif adjusted_lemma == 'hos': given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬who/which/what/that', 1 ) # Strongs #3739
-        elif adjusted_lemma == 'ou': given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬no/not', 1 ) # Strongs #3756
-        elif adjusted_lemma == 'kata': given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬down/against/according_to', 1 ) # Strongs #2596
-        elif adjusted_lemma == 'te': given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬and/both', 1 ) # Strongs #5037
-        elif adjusted_lemma == 'ara': given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬/anxiety/', 1 ) # Strongs #687 (only occurs once)
-        elif adjusted_lemma == 'mēte': given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬neither/nor', 1 ) # Strongs #3383 (only occurs once)
-        else: print( f"      What is untranslated word from '{given_preformed_gloss_string}' and '{adjusted_lemma}' in {given_collation_row['CollationID']} {given_collation_row['Medieval']} {adjusted_lemma} {given_collation_row['Morphology']}?" )
+                adjusted_preformed_gloss_string = adjusted_preformed_gloss_string.replace( '-', '¬the', 1 )
+        elif adjusted_lemma == 'hoti': adjusted_preformed_gloss_string = adjusted_preformed_gloss_string.replace( '-', '¬that', 1 )
+        elif adjusted_lemma in ('ean','ei'): adjusted_preformed_gloss_string = adjusted_preformed_gloss_string.replace( '-', '¬if', 1 ) # Strongs #1437, #1487
+        elif adjusted_lemma == 'an': adjusted_preformed_gloss_string = adjusted_preformed_gloss_string.replace( '-', '¬wishfully', 1 ) # Strongs #302
+        elif adjusted_lemma == 'mē': adjusted_preformed_gloss_string = adjusted_preformed_gloss_string.replace( '-', '¬not/lest', 1 )
+        elif adjusted_lemma == 'ē': adjusted_preformed_gloss_string = adjusted_preformed_gloss_string.replace( '-', '¬or/than', 1 ) # Strongs #2228
+        elif adjusted_lemma == 'hos': adjusted_preformed_gloss_string = adjusted_preformed_gloss_string.replace( '-', '¬who/which/what/that', 1 ) # Strongs #3739
+        elif adjusted_lemma == 'ou': adjusted_preformed_gloss_string = adjusted_preformed_gloss_string.replace( '-', '¬no/not', 1 ) # Strongs #3756
+        elif adjusted_lemma == 'kata': adjusted_preformed_gloss_string = adjusted_preformed_gloss_string.replace( '-', '¬down/against/according_to', 1 ) # Strongs #2596
+        elif adjusted_lemma == 'te': adjusted_preformed_gloss_string = adjusted_preformed_gloss_string.replace( '-', '¬and/both', 1 ) # Strongs #5037
+        elif adjusted_lemma == 'ara': adjusted_preformed_gloss_string = adjusted_preformed_gloss_string.replace( '-', '¬/anxiety/', 1 ) # Strongs #687 (only occurs once)
+        elif adjusted_lemma == 'mēte': adjusted_preformed_gloss_string = adjusted_preformed_gloss_string.replace( '-', '¬neither/nor', 1 ) # Strongs #3383 (only occurs once)
+        else: print( f"      What is untranslated word from '{adjusted_preformed_gloss_string}' and '{adjusted_lemma}' in {given_collation_row['CollationID']} {given_collation_row['Medieval']} {adjusted_lemma} {given_collation_row['Morphology']}?" )
 
-    return adjusted_lemma, given_preformed_gloss_string
+    # The problem is that capitalization has already been applied
+    if adjusted_preformed_gloss_string != given_preformed_gloss_string:
+        # Let's try capitalizing again
+        _, _, adjusted_preformed_gloss_string = apply_gloss_capitalization( '', '', adjusted_preformed_gloss_string, given_collation_row['GlossCapitalization'] )
+        # if '134824' in given_preformed_gloss_string: print( f"{given_preformed_gloss_string=} {given_collation_row['GlossCapitalization']=} {adjusted_preformed_gloss_string=}" ); halt
+
+    return adjusted_lemma, adjusted_preformed_gloss_string
 # end of process_untranslated_words function
 
 
@@ -951,19 +959,38 @@ def apply_gloss_capitalization(gloss_pre:str, gloss_helper:str, gloss_word:str, 
         ●    e – emphasized words (scare quotes)
     The lowercase letters mark other significant places where the words are not normally capitalized.
     """
+    def capitalize_it( something:str ) -> str:
+        if something[0] == '¶':
+            assert something[1] != ' ', f"{something=}"
+            if something[1] == '¬':
+                something = f'¶¬{something[2].upper()}{something[3:]}' # Those are WORD punctuation characters
+                # print( f"{something=}"); halt
+            else:
+                something = f'¶{something[1].upper()}{something[2:]}' # Those are WORD punctuation characters
+                # print( f"{gloss_word=}"); halt
+        elif something[0] == '¬':
+            something = f'¬{something[1].upper()}{something[2:]}' # Those are WORD punctuation characters
+            # print( f"{gloss_word=}"); halt
+        else:
+            something = f'{something[0].upper()}{something[1:]}' # Those are WORD punctuation characters
+        assert '¬the' not in something
+        return something
+
     if gloss_capitalization:
         if gloss_capitalization.lower() != gloss_capitalization: # there's some UPPERCASE values
             # NOTE: We can't use the title() function here for capitalising or else words like 'you_all' become 'You_All'
             if 'G' in gloss_capitalization or 'U' in gloss_capitalization or 'W' in gloss_capitalization:
-                gloss_word = f'{gloss_word[0].upper()}{gloss_word[1:]}' # Those are WORD punctuation characters
+                gloss_word = capitalize_it( gloss_word )
             if ('P' in gloss_capitalization or 'S' in gloss_capitalization # new paragraph or sentence
             or 'B' in gloss_capitalization # new Biblical quotation
             or 'D' in gloss_capitalization # new dialog
             or 'T' in gloss_capitalization # translated words
             or 'R' in gloss_capitalization): # other quotation, e.g., writing on board over cross
-                if gloss_pre: gloss_pre = f'{gloss_pre[0].upper()}{gloss_pre[1:]}'
-                elif gloss_helper: gloss_helper = f'{gloss_helper[0].upper()}{gloss_helper[1:]}'
-                else: gloss_word = f'{gloss_word[0].upper()}{gloss_word[1:]}'
+                if gloss_pre: gloss_pre = capitalize_it( gloss_pre )
+                elif gloss_helper: gloss_helper = capitalize_it( gloss_helper )
+                else: gloss_word = capitalize_it( gloss_word )
+
+    # assert '134824' not in  gloss_pre and '134824' not in gloss_helper and '134824' not in gloss_word, f"{gloss_pre=} {gloss_helper=} {gloss_word=} {gloss_capitalization=}"
     return gloss_pre, gloss_helper, gloss_word
 # end of extract_VLT_NT_to_ESFM.apply_gloss_capitalization
 

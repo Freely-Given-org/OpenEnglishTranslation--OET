@@ -1,4 +1,4 @@
-\id EXO - Open English Translation—Readers' Version (OET-RV) v0.0.02
+\id EXO - Open English Translation—Readers' Version (OET-RV) v0.0.05
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 EXO
@@ -17,7 +17,7 @@
 \io1 Israel's descendants are driven out of Egypt \ior 1:1–15:21\ior*
 \io2 a. The people are enslaved there in Egypt \ior 1:1-22\ior*
 \io2 b. The birth and early life of Mosheh \ior 2:1–4:31\ior*
-\io2 c. The pegpakannekal pegpakig-apul of Moses and of Aarun of Far'oh (Pharaoh) King of Egypt \ior 5:1–11:10\ior*
+\io2 c. The pegpakannekal pegpakig-apul of Moses and of Aharon of Far'oh (Pharaoh) King of Egypt \ior 5:1–11:10\ior*
 \io2 d. The Peglihad of Messenger and the peg-awe of descendants of Israel there to Egypt \ior 12:1–15:21\ior*
 \io1 The departure there to Red Sea going to Mountain Sinay \ior 15:22–18:27\ior*
 \io1 The Law and the agreement of God \ior 19:1–24:18\ior*
@@ -28,7 +28,7 @@
 \s1 The peg-slave of Israel's descendants
 \rem /s1 The Israelites Are Treated Cruelly in Egypt; The Israelites Oppressed; The Israelites in Egypt
 \p
-\v 1 These are the names¦25402 of Yisra'el's descendants who accompanied Yacob (Jacob) when he moved his household¦25410 to Egypt:\x + \xo 1:1-4: \xt Gen 46:8-27.\x*
+\v 1 These are the names¦25402 of Yisra'el's descendants who accompanied Yacob (Jacob) when he moved his household¦25410 to Egypt¦25406:\x + \xo 1:1-4: \xt Gen 46:8-27.\x*
 \v 2 Reuben, Simeon, Levi, Yehudah,
 \v 3 Issachar, Zebulun¦25419, Benyamin¦25420,
 \v 4 Dan, Naftali¦25424, Gad, and Asher¦25426.
@@ -41,9 +41,9 @@
 \v 8 \add Eventually\add* a new king¦25465 came to power in Egypt who had never known Yosef¦25477\x + \xo 1:8: \xt Acts 7:18.\x*
 \v 9 and he told his people, “Listen, those descendants of Israel are becoming more numerous¦25487 and powerful¦25488 than us.
 \v 10 \add So\add*, let's deal wisely¦25492 with them, in case they \add continue to\add* multiply. Then if war was to break out, they could easily take the other side and fight¦25509 against us, and then leave our country.”\x + \xo 1:10: \xt Acts 7:19.\x*
-\v 11 Then they appointed¦25517 overseers¦25519 to work them in slave¦25520 gangs¦25520, and using them as forced¦25523 labour¦25523, they built¦25524 the store¦25526 cities¦25525 at Pithon¦25530 and Rameses¦25533 for Far'oh (Pharaoh).
-\v 12 \add However,\add* the more they oppressed them, the more they multiplied and spread¦25541 out, and \add the more\add* the Egyptians came¦25542 to dread¦25542 the Israelis.
-\v 13 \add So they\add* made the Israelis work \add long, hard hours\add*,
+\v 11 Then they appointed¦25517 overseers¦25519 to work them in slave¦25520 gangs¦25520, and using them as forced¦25523 labour¦25523, they built¦25524 the store¦25526 cities¦25525 at Pithon¦25530 and Rameses¦25533 for Far'oh¦25527 (Pharaoh).
+\v 12 \add However,\add* the more they oppressed them, the more they multiplied and spread¦25541 out, and \add the more\add* the Egyptians came¦25542 to dread¦25542 the Israelis¦25545.
+\v 13 \add So they\add* made the Israelis¦25552 work \add long, hard hours\add*,
 \v 14 and they made their lives¦25558 bitter¦25555 with the hard slavery. \add They were forced to make\add* mortar¦25561 and bricks¦25562, as well as all kinds of slave labour¦25573 in the fields¦25566—all the work they had to do was \add strenuous and tiring\add*.
 \p
 \v 15 Then the king¦25578 of Egypt spoke to Shiphrah and¦25586 Puah, the two Hebrew¦25581 midwives¦25580,
@@ -54,7 +54,7 @@
 \v 19 “Because the Hebrew¦25653 women aren't like Egyptian women,” the midwives \add answered\add*. “They're \add more active\add* and give birth¦25662 before¦25658 the midwife \add even\add* gets to them.”
 \v 20 \add So\add* God¦25665 rewarded the midwives¦25666, and \add meanwhile,\add* the people¦25668 \add continued to increase in number\add* and become more powerful,
 \v 21 and because the midwives¦25676 had \add demonstrated their desire to obey\add* God, he gave them families \add of their own\add*.
-\v 22 Then Far'oh commanded¦25684 all of his people¦25688, “You \add all need to\add* toss¦25695 every¦25690 newborn boy into the river, but you can let the girls live¦25699.”\x + \xo 1:22: \xt Acts 7:19.\x*
+\v 22 Then Far'oh¦25685 commanded¦25684 all of his people¦25688, “You \add all need to\add* toss¦25695 every¦25690 newborn boy into the river, but you can let the girls live¦25699.”\x + \xo 1:22: \xt Acts 7:19.\x*
 \c 2
 \s1 The birth of Mosheh (Moses)
 \rem /s1 Moses; The Birth of Moses; Birth and Youth of Moses
@@ -80,9 +80,9 @@
 \v 13 The next day¦25917, he went¦25916 out again and wow, two¦25920 Hebrew men¦25922 were fighting each other, and he said¦25925 to the man in the wrong¦25926, “Why are you hitting your \add fellow Hebrew\add*?”
 \p
 \v 14 “Who made you the ruler and judge¦25936 over us?” \add the man¦25934 replied\add*. “Are you \add planning\add* to kill¦25938 me like you killed¦25942 \add that\add* Egyptian?” Then Mosheh¦25947 was afraid¦25946 because he realised that what he'd done had \add probably become widely\add* known¦25950.
-\v 15 \add Indeed,\add* when Far'oh heard about it, he \add ordered\add* Mosheh to be killed. \add So\add* Mosheh had to flee from \add the king\add* and he \add took off east\add* to live in Midian and he stayed near the well.\x + \xo 2:15: \xt Acts 7:29; Heb 11:27.\x*
+\v 15 \add Indeed,\add* when Far'oh¦25954 heard about it, he \add ordered\add* Mosheh to be killed. \add So\add* Mosheh had to flee from \add the king\add* and he \add took off east\add* to live in Midian¦25971 and he stayed near the well.\x + \xo 2:15: \xt Acts 7:29; Heb 11:27.\x*
 \p
-\v 16 The priest¦25977 there in Midian had seven¦25979 daughters¦25980, and they would come to the well to draw water out and fill up the troughs¦25986 there so their¦25989 father's¦25989 \add sheep and goats\add* could drink.
+\v 16 The¦25984 priest¦25977 there in Midian¦25978 had seven¦25979 daughters¦25980, and they would come to the well to draw water out and fill up the troughs¦25986 there so their¦25989 father's¦25989 \add sheep and goats\add* could drink.
 \v 17 Now¦25998 some male shepherds¦25992 came along and \add started to\add* shoo their flock¦26000 away, but Mosheh¦25995 got involved and helped them so that their animals could drink.
 \v 18 \add When\add* they \add got home\add* to their¦26006 father¦26006 Reuel, he \add asked\add*, “How come¦26010 you¦26009 \add got home\add* so early today?”
 \p
@@ -93,14 +93,14 @@
 \v 21 \add Later it turned out that\add* Mosheh was prepared to live with the man¦26050, and¦26051 \add in due course\add* he gave¦26051 his daughter¦26055 Zipporah to Mosheh \add in marriage\add*.
 \v 22 \add When\add* she gave¦26058 birth¦26058 to a son, he named him ‘Gershom’ \add (which means ‘foreigner’)\add* because he said¦26066, “I've become¦26068 a foreigner \add living\add* in a foreign¦26070 land.”
 \p
-\v 23 \add Eventually\add* Egypt's king¦26078 died¦26077, \add but\add* the Israelis groaned¦26080 from the slavery \add they were still under\add* and they cried¦26087 out, and their¦26089 cry¦26089 \add for freedom\add* from slavery went¦26088 up to God.
+\v 23 \add Eventually\add* Egypt's king¦26078 died¦26077, \add but\add* the Israelis¦26083 groaned¦26080 from the slavery \add they were still under\add* and they cried¦26087 out, and their¦26089 cry¦26089 \add for freedom\add* from slavery went¦26088 up to God.
 \v 24 \add He\add* heard their¦26101 groaning¦26101 and remembered¦26102 his agreement with Abraham, with Yitshak, and with Yacob,\x + \xo 2:24: \xt Gen 15:13-14.\x*
-\v 25 and he \add looked down on\add* the Israelis and he \add was concerned about them\add*.
+\v 25 and he \add looked down on\add* the Israelis¦26122 and he \add was concerned about them\add*.
 \c 3
 \s1 God calls Mosheh from a burning bush
 \rem /s1 God Calls Moses; Moses at the Burning Bush; Moses and the Burning Bush
 \p
-\v 1 \add One time\add* Mosheh¦26127 (Moses) was shepherding the flock of his father-in-law¦26134 Yetro (or Jethro, the priest¦26135 at Midian), and he led the flock beyond the wilderness¦26142 and came¦26143 to a hill. (\add This was later known as\add* the mountain¦26146 of God at Horeb¦26148).
+\v 1 \add One time\add* Mosheh¦26127 (Moses) was shepherding the flock of his father-in-law¦26134 Yetro (or Jethro, the priest¦26135 at Midian¦26136), and he led the flock beyond the wilderness¦26142 and came¦26143 to a hill. (\add This was later known as\add* the mountain¦26146 of God at Horeb¦26148).
 \v 2 \add While he was there.\add* Yahweh's¦26152 messenger appeared¦26150 to him in a flame¦26154 coming from the middle of a bush, and as \add Mosheh\add* looked, to his surprise \add he saw that\add* the bush was burning¦26162 in the fire yet not \add actually\add* being burnt up.\x + \xo 3:2-10: \xt Acts 7:30-34.\x*
 \v 3 “I've got to go and¦26173 see¦26173 this amazing sight¦26176,” Mosheh¦26169 said¦26168 \add to himself\add*. “How come the bush isn't burning¦26182 up?”
 \p
@@ -110,21 +110,21 @@
 \v 5 “Don't come any closer,” \add Yahweh\add* said¦26201. “Take off your sandals¦26208 because the place¦26212 where you'e standing¦26215 is HOLY ground¦26217.
 \v 6 I'm the God of your father and the God of Abraham, Yitshak, and Yacob.” \add So\add* Mosheh¦26233 covered hid his face because he was scared to look¦26237 at God.
 \p
-\v 7 “I've certainly noticed the suffering¦26262 of my people¦26249 in Egypt,” Yahweh¦26243 \add continued\add*, “I've heard¦26255 their cries as the \add slave drivers\add* oppress them—I'm unmistakingly aware of their pain.
+\v 7 “I've certainly noticed the suffering¦26262 of my people¦26249 in Egypt¦26251,” Yahweh¦26243 \add continued\add*, “I've heard¦26255 their cries as the \add slave drivers\add* oppress them—I'm unmistakingly aware of their pain.
 \v 8 \add So\add* I've come¦26264 down to set them free from Egyptian control and to bring¦26269 them up from \add there\add* to a good¦26277 and wide land—a land flowing¦26282 with milk and honey¦26284. \add It's currently\add* the place¦26287 of the Canaanites¦26288, the Hittites¦26289, the Amorites¦26290, the Perizzites¦26291, the Hivites¦26292, and the Jebusites¦26293.
-\v 9 \add Yes,\add* the cry¦26297 of the Israelis has now \add reached\add* me and¦26303 what's more, I've seen¦26305 \add how much\add* the Egyptians are oppressing¦26308 them.
-\v 10 \add So\add* go now and I'll send you to Far'oh (Pharaoh) and bring¦26320 my people—Yisra'el's descendants—out from Egypt.”
+\v 9 \add Yes,\add* the cry¦26297 of the Israelis¦26300 has now \add reached\add* me and¦26303 what's more, I've seen¦26305 \add how much\add* the Egyptians are oppressing¦26308 them.
+\v 10 \add So\add* go now and I'll send you to Far'oh¦26319 (Pharaoh) and bring¦26320 my people—Yisra'el's descendants—out from Egypt.”
 \p
-\v 11 “Who am I, that I should go¦26337 to Far'oh,” Mosheh¦26330 \add asked\add* God, “and¦26341 that I should \add be the one to\add* bring¦26342 out the Israelis out from Egypt?”
+\v 11 “Who am I, that I should go¦26337 to Far'oh¦26340,” Mosheh¦26330 \add asked\add* God, “and¦26341 that I should \add be the one to\add* bring¦26342 out the Israelis¦26346 out from Egypt?”
 \p
 \v 12 “I'll certainly be with you,” \add God replied,\add* “and this will be your sign¦26357 \add so that you'll know\add* that I have sent¦26360 you: when you bring the people¦26364 out from Egypt, you all will serve God on this \add very\add* hill.”
 \rem /s1 The Divine Name Revealed
 \p
-\v 13 “\add But listen\add*,” Mosheh¦26375 told God, “\add If\add* I'm about¦26381 to go¦26381 to the Israelis and if I told them, ‘The God of your¦26389 ancestors¦26389 has sent¦26390 me to you¦26391.’ then they'd \add ask¦26392\add* me, ‘\add Oh yeah,\add* what's his name¦26397?’ then what would I tell them?”\x + \xo 3:13: \xt Exo 6:2-3.\x*
+\v 13 “\add But listen\add*,” Mosheh¦26375 told God, “\add If\add* I'm about¦26381 to go¦26381 to the Israelis¦26385 and if I told them, ‘The God of your¦26389 ancestors¦26389 has sent¦26390 me to you¦26391.’ then they'd \add ask¦26392\add* me, ‘\add Oh yeah,\add* what's his name¦26397?’ then what would I tell them?”\x + \xo 3:13: \xt Exo 6:2-3.\x*
 \p
 \v 14 “I AM WHO I AM,” God¦26403 told Mosheh¦26406. “You'll \add tell them this\add*: ‘I AM sent¦26416 me to you.’ ”\x + \xo 3:14: \xt Rev 1:4,8.\x*
-\v 15 Then he \add continued\add*, “This is what you \add need\add* to tell the Israelis: ‘Yahweh¦26432, the God of your ancestors¦26434, the God of Abraham, Yitshak, and Yacob, sent me to you. This is my name forever, and this is my memorial from generation to generation.’
-\v 16 Go and gather the Israeli elders¦26456, and tell them, ‘Yahweh¦26460, the God of your ancestors¦26462, appeared¦26463 to me, the God of Abraham, Yitshak, and Yacob, to say, “I've certainly noticed you all and \add how you're all being treated\add* in Egypt,
+\v 15 Then he \add continued\add*, “This is what you \add need\add* to tell the Israelis¦26431: ‘Yahweh¦26432, the God of your ancestors¦26434, the God of Abraham, Yitshak, and Yacob, sent me to you. This is my name forever, and this is my memorial from generation to generation.’
+\v 16 Go and gather the Israeli elders¦26456, and tell them, ‘Yahweh¦26460, the God of your ancestors¦26462, appeared¦26463 to me, the God of Abraham, Yitshak, and Yacob, to say, “I've certainly noticed you all and \add how you're all being treated\add* in Egypt¦26477,
 \v 17 and I've promised¦26479 to take you¦26481 all from your mistreatment in Egypt, away to the land where the Canaanites¦26487, Hittites¦26488, Amorites¦26489, Perizzites¦26490, Hivites¦26491, and the Jebusites¦26492 \add are currently living\add*—to a land flowing¦26496 with milk and honey¦26498.” ’
 \p
 \v 18 Then \add the people\add* will listen¦26500 to what you tell them, and you and the Israeli elders¦26504 will go to the Egyptian king¦26508 and you'll all tell him, ‘Yahweh, the God of the Hebrews¦26514, has met with us. \add So\add* now, please¦26520 let us go three¦26522 days' journey¦26521 into the wilderness¦26524, so we can sacrifice¦26525 to Yahweh, our God.’
@@ -134,158 +134,161 @@
 \v 21 Then I'll \add make\add* the Egyptian \add people¦26566 favour¦26565 you all in such a way that \add* when you go, you \add won't leave empty-handed¦26576\add*.\x + \xo 3:21-22: \xt Exo 12:35-36.\x*
 \v 22 \add For example,\add* an \add Israeli\add* woman¦26579 will ask¦26578 her \add Egyptian\add* neighbour¦26580 (or from someone staying \add where she lives¦26581\add*) for gold¦26587 and silver¦26585 items and for clothing¦26588. Then you'll put them on your sons¦26592 and daughters¦26595, and \add in this way\add* you'll all plunder¦26596 the Egyptians.”
 \c 4
-\s1 The giving of God to Moses of power
+\s1 God gives Mosheh three miracles
 \rem /s1 Signs for Moses; Moses' Miraculous Power; Signs of the Lord's Power; God Gives Moses Miraculous Power
 \p
-\v 1 ◙
-\v 2 ◙
-\p …
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
+\v 1 “But listen,” Mosheh¦26602 responded, “they won't believe¦26607 me and won't listen to \add what I say\add*, because they'll say, ‘Yahweh¦26618 never showed himself to you.’”
+\v 2 “\add Well,\add* what's that in your hand¦26626?” Yahweh¦26622 \add asked\add*.
+\p “\add My shepherd's\add* staff¦26628,” he said.
+\v 3 “Throw it on the ground,” \add Yahweh\add* said¦26630. \add So Mosheh¦26638\add* he threw¦26633 it onto the ground and it became a snake¦26636, and \add he quickly moved back away from it\add*.
+\v 4 “Pick it up by its tail.” Yahweh¦26642 told him. \add So Mosheh¦26645\add* picked it up by the tail and it became a staff¦26655 in his hand \add again\add*.
+\v 5 “That's so that they'll believe¦26659 that \add I\add* appeared¦26662 to you¦26663: Yahweh¦26664—the God of their¦26666 ancestors¦26666—the God of Abraham, Yitshak, and¦26671 Yacob.”
 \p
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
+\v 6 “\add Now\add* put your hand \add on your chest—\add*inside your robe.” Yahweh¦26675 added. \add So Mosheh did that\add*, and when he pulled it out again¦26677, his hand had gone \add totally\add* white with disease.
+\v 7 Then Yahweh said, “\add Now, put\add* your hand \add back in again\add*.” \add So Mosheh did it again,\add* and when he pulled it out, wow, it had \add returned¦26693 to normal\add*.
+\v 8 “\add So,\add* if they don't¦26713 believe you, and \add if the first¦26720 miracle doesn't convince them\add*, then they'll believe \add that second¦26724 miracle\add*.
+\v 9 And then, even if they don't¦26729 believe those two miracles and \add won't believe what you tell them\add*, then you should take some water from the river and pour it onto the dry land. Then the water which¦26745 came from the river will \add turn into\add* blood¦26751 \add there\add* on the dry land.”
 \p
-\v 10 ◙
+\v 10 “Oh my master¦26760,” Mosheh¦26755 \add responded\add*, “I'm not \add very good at speaking to others—I never have been and¦26780 still aren't. I seem to get tongue-tied¦26781 easily\add*.”
 \p
-\v 11 ◙
-\v 12 ◙
+\v 11 “Who \add was it that made people's mouths¦26789\add*?” Yahweh said¦26784. “Who makes \add someone\add* mute or deaf, or seeing¦26799 or blind¦26801? Isn't it me, Yahweh?
+\v 12 \add So\add* get going now, and I'll \add look after\add* your mouth¦26812 and \add show\add* you what you to say¦26815.”
 \p
-\v 13 ◙
+\v 13 \add But Mosheh replied\add*, “Oh master¦26819, please¦26822 send \add someone¦26823 else\add*.”
 \p
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\s1 The return of Moses there to Egypt
+\v 14 Then Yahweh¦26830 got angry with Moses and told him, “Isn't Aharon¦26834 (Aaron) a fellow Levite and your brother¦26835? I know¦26837 that he can speak¦26840 well, and \add what's\add* more, he'll come¦26847 \add from Egypt\add* to meet you, and \add when he does, he'll be very happy\add*.
+\v 15 \add He'll become your speaker\add* and you'll be able to talk to him and \add tell him what to say\add*. I'll be \add helping both of you speak¦26853\add* and I'll teach¦26868 you both what you should do.
+\v 16 \add So in that way,\add* he'll be like a mouth¦26886 for you and speak¦26874 to the people¦26880 for you, and you'll be like God¦26891 to him.
+\v 17 \add In addition,\add* you'll have that staff¦26895 with you in order to do those miracles.”
+\s1 Mosheh returns to Egypt
 \rem /s1 Moses Returns to Egypt
 \p
-\v 18 ◙
+\v 18 Then Mosheh went¦26908 back to his father-in-law¦26915 Yetro (Jethro), and told him, “Can I please¦26919 leave so I can return¦26920 to my \add relatives\add* in Egypt¦26926 and see¦26927 whether they're still¦26928 alive.”
+\p “Go in peace¦26934,” Yetro \add answered\add*.
 \p
-\v 19 ◙
-\v 20 ◙
+\v 19 \add Meanwhile\add* Yahweh¦26937 had told Mosheh¦26940 in Midian¦26941, “Leave here and return¦26943 to Egypt because all those who \add wanted to kill you\add* are \add now\add* dead.”
+\v 20 Then Mosheh took his wife and sons¦26963 and put them on a donkey¦26967 and returned¦26968 towards¦26969 Egypt \add with them\add*, and Mosheh took the staff¦26975 \add that God had turned into a snake\add*.
 \p
-\v 21 ◙
-\v 22 ◙
-\v 23 \x + \xo 4:23: \xt Exo 12:29.\x*◙
+\v 21 \add On the way,\add* Yahweh¦26980 said¦26979 to Moses, “When you return to Egypt, all those miracles that I gave you, you'll be able to \add demonstrate\add* them in front¦26996 of Far'oh¦26997 (Pharaoh), but as for me, I'm going to \add make him stubborn so that\add* he won't let \add your\add* people¦27007 leave.
+\v 22 \add But\add* tell Far'oh¦27012, ‘Yahweh¦27015 has stated that Yisra'el is \add like\add* his oldest son
+\v 23 and he asked you to let that son go so that he can serve him. But you refused¦27027 to let \add Yisra'el\add* go, so \add Yahweh\add* will kill \em your\em* oldest son.’ ”\x + \xo 4:23: \xt Exo 12:29.\x*
 \p
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
+\v 24 \add One night\add* as they were \add overnighting at\add* a lodging¦27039 place¦27039 near the road, Yahweh¦27041 \add confronted Mosheh\add* and would have killed him,
+\v 25 \add but his wife\add* Zipporah took¦27045 a flint¦27047 \add knife\add* and cut off her son's¦27052 foreskin¦27051 and \add threw\add* it at \add Mosheh's\add* feet¦27054 saying, “You're definitely a bloody¦27059 \add husband\add* to me.”
+\v 26 (That was referring to circumcision¦27069.) \add So\add* then \add Yahweh left them alone¦27063\add*.
 \p
-\v 27 ◙
-\v 28 ◙
+\v 27 \add Meanwhile\add* Yahweh¦27073 had told Aaron, “Go \add out\add* into the wilderness¦27080 to meet Mosheh¦27079.” \add So\add* he went¦27081 and met him at the hill of God, and he kissed¦27085 him.
+\v 28 Then Mosheh¦27090 told Aharon¦27091 \add everything\add* that Yahweh¦27096 had told him and how he had sent¦27098 him, and all the miracles that he commanded¦27104 him \add to demonstrate\add*.
 \p
-\v 29 ◙
-\v 30 ◙
-\v 31 ◙
+\v 29 Then Mosheh¦27107 and Aharon¦27108 went¦27106 \add to Egypt\add* and they assembled¦27109 all the \add Israeli\add* elders¦27114
+\v 30 and¦27131 Aharon¦27119 told them \add everything\add* that Yahweh¦27127 had spoken¦27126 to Mosheh. Then \add Mosheh\add* did the miracles in front of \add them\add*,
+\v 31 and the people believed¦27136. Then they heard¦27138 how Yahweh¦27142 had paid attention to the Israelis¦27146 and that he had seen their¦27151 suffering, and they bowed¦27152 and prostrated themselves \add in thankfulness\add*.
 \c 5
-\s1 The pegpakiglalag of Moses of Far'oh King of Egypt
+\s1 Mosheh challenges the Egyptian king
 \rem /s1 Bricks Without Straw; Moses and Aaron Speak to Pharaoh; Moses and Aaron before the King of Egypt; Bricks without Straw
 \p
-\v 1 ◙
+\v 1 After that, Mosheh¦27158 and Aharon¦27159 went¦27157 in and said¦27160 to Far'oh¦27163, “This is what Israel's God¦27168 Yahweh¦27167 says¦27166: ‘Let my people¦27173 go¦27170, \add so\add* they can celebrate me \add out\add* in the wilderness¦27176.’ ”
 \p
-\v 2 ◙
+\v 2 \add But the king\add* said, “Who's \add this\add* ‘Yahweh’ that I should¦27185 listen¦27183 to \add him telling me\add* to let Israel go? I don't¦27189 know Yahweh, and what's more, I won't let \add the Israelis\add* go \add anywhere\add*.”
 \p
-\v 3 ◙
+\v 3 “The God of \add us\add* Hebrews¦27203 has met with us,” they¦27201 \add replied\add*, “Please, let us go¦27206 three¦27209 days¦27210 into the wilderness¦27211 so we can sacrifice¦27212 to our¦27214 God Yahweh, \add because we don't want him to strike¦27217\add* us with the plague or with \add war\add*.”
 \p
-\v 4 ◙
-\v 5 ◙
+\v 4 “Mosheh¦27227 and¦27228 Aharon¦27228,” the king¦27224 of Egypt¦27225 answered, “why are you¦27229 causing¦27229 the people¦27232 to \add slacken\add* off from their¦27233 tasks? \add Get¦27230 back\add* to your¦27235 \add work\add*.”
+\v 5 And Far'oh¦27238 \add continued\add*, “Listen, there's many \add of you\add* and you \add two\add* have caused them to rest from their¦27247 \add duties\add*.”
 \rem /s1 Making Bricks without Straw
 \p
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
+\v 6 Then on that \add very same\add* day¦27251, Far'oh¦27250 ordered the people's¦27256 slave masters and¦27257 supervisors,
+\v 7 “Don't give¦27264 straw to the people¦27266 to make bricks¦27268 with as \add you've done up till now\add*. They can go and gather¦27273 straw for themselves.
+\v 8 But \add keep\add* the \add same\add* quota of bricks¦27280 \add as before\add*—don't¦27288 decrease it because they \add must be\add* idle \add if they have time to say\add*, ‘Let us go—let us sacrifice¦27302 to our God¦27303.’
+\v 9 \add Give the men¦27309 more work so they'll be too busy to worry about deceptive words¦27316\add*.”
 \p
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
+\v 10 \add So\add* the slave masters and supervisors of the people went out and told \add them all\add*, “\add The king\add* has said that he won't give you any more straw¦27335,
+\v 11 \add so\add* you'll \add all have to\add* go¦27338 and get your own straw¦27341 from wherever you can find it, because there'll¦27345 be no reduction to your \add quota\add*.”
+\v 12 So the people¦27351 dispersed throughout all of Egypt¦27355 to gather¦27356 stubble¦27357 for straw¦27358,
+\v 13 and the taskmasters¦27360 were \add hassling\add* them, saying, “\add Hurry up and\add* finish your¦27364 day's work, the same as when \add you were given\add* straw¦27371.”
+\v 14 Then the Israeli foremen¦27374 that Far'oh's slave masters had appointed¦27379 were beaten¦27373 and told, “Why haven't you¦27386 met your¦27387 required¦27387 brick¦27388 making \add quota\add* yesterday or today? \add It's just the same as in the past\add*.”
 \p
-\v 15 ◙
-\v 16 ◙
+\v 15 \add So\add* the Israeli foremen¦27399 went¦27398 and¦27402 complained to Far'oh¦27405, “Why are you¦27408 treating your¦27410 servants¦27410 like this?
+\v 16 We haven't been given¦27414 any straw and yet they're telling us to keep making bricks¦27416. And see, we your servants get beaten, but it's your people's¦27424 mistake.”
 \p
-\v 17 ◙
-\v 18 ◙
+\v 17 “You're all lazy—plain lazy!” \add the king responded\add*. “That's why you're saying¦27434, ‘Let us go¦27435 sacrifice¦27436 to Yahweh.’
+\v 18 \add So\add* go¦27440 now! \add Back to\add* work! And you won't be given¦27445 straw¦27442, but you \add still have to meet the quota¦27447\add* of bricks¦27448.”
 \p
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
-\s1 The pegsagsahukul of Moses there to God
+\v 19 \add When\add* the Israeli foremen¦27452 heard that the quota wasn't going to be reduced, they¦27451 \add realised how serious their problem was\add*,
+\v 20 \add so\add* when they left Far'oh¦27479 they \add confronted\add* Mosheh¦27471 and Aharon¦27474 who were waiting to meet them,
+\v 21 “May Yahweh¦27484 \add see what you've done and judge¦27486 you for it\add* because you've \add raised a big stink¦27488 in Far'oh's mind\add* and with his servants. \add Now they have their¦27499 excuse\add* to kill¦27500 us!”
+\s1 Mosheh complains to God
 \rem /s1 Moses Complains to the Lord; God Promises Deliverance
 \p
-\v 22 ◙
-\v 23 ◙
+\v 22 Then Mosheh¦27503 went back to Yahweh¦27506 and \add asked\add*, “My master¦27508, why have you \add taken it out on our\add* people¦27511? Was this why you sent me?
+\v 23 \add Ever\add* since¦27517 I went to Far'oh¦27521 to \add deliver¦27530 your message\add*, he's \add made\add* these people \add suffer\add* and you \add clearly\add* haven't rescued \add them\add*.”
 \c 6
 \rem /s1 Israel's Deliverance Assured; Promises of Deliverance
 \p
-\v 1 ◙
-\s1 The promise of God egluwasen the people
+\v 1 Then Yahweh¦27536 said¦27535 to Mosheh¦27539, “Now you'll see¦27541 what I'll do to Far'oh¦27544. \add I'll use my power to force him to\add* let them go¦27548, and then \add using my power again\add* he'll \add actually\add* drive¦27551 them out of his \add country\add*.”
+\s1 God promises to rescue the people
 \rem /s1 God Calls Moses
 \p
-\v 2 \x + \xo 6:2-3: \xt Gen 17:1; 28:3; 35:11; Exo 3:13-15.\x*◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
+\v 2 Then God¦27556 spoke¦27555 to Mosheh¦27559 \add again\add*, “I am Yahweh¦27563\x + \xo 6:2-3: \xt Gen 17:1; 28:3; 35:11; Exo 3:13-15.\x*
+\v 3 and I \add revealed myself¦27580\add* to Abraham, to Isaac, and to Yacob as El Shaddai (God¦27575 the provider) but they didn't know me by my name¦27577 Yahweh¦27578.
+\v 4 \add What's more,\add* I made an agreement with them: to give¦27589 them the Canaan¦27594 region—the area which¦27598 they¦27600 had been staying in.
+\v 5 \add Furthermore,\add* I've heard¦27606 the complaints from the Israelis¦27611 who have been enslaved by the Egyptians, and¦27616 I have remembered¦27616 my agreement.
+\v 6 Therefore, tell the Israelis¦27625, ‘I am Yahweh¦27628 and I will \add help you escape from\add* the \add control\add* of the Egyptians and rescue you from their slavery. I'll buy you out of slavery using my power and by \add punishing the Egyptians for this injustice\add*.
+\v 7 I'll take¦27644 you all to be my own people¦27647, and I'll be your God. Then you'll know¦27651 that I am Yahweh¦27654 your God—the one rescuing you all from the Egyptian oppression.
+\v 8 Then I'll \add take\add* you all to the land that I \add promised\add* to give to Abraham, to Yitshak, and to Yacob, and I'll give it to you as \add your own\add*. I am Yahweh¦27682.’ ”
+\v 9 \add So\add* Mosheh \add passed all that on\add* to the Israelis¦27690, but they wouldn't listen¦27692 to Moses, because they were \add both discouraged and worn out from the slavery\add*.
 \p
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
+\v 10 Then Yahweh¦27703 told Mosheh¦27706,
+\v 11 “Go and speak¦27710 to the Egyptian king¦27714 Far'oh¦27713 and \add tell him\add* that he needs¦27716 to let the Israelis¦27721 leave his country.”
+\v 12 And Mosheh¦27725 said in front¦27726 of Yahweh¦27727, “Look, the Israelis¦27732 haven't listened¦27735 to me, so why would Far'oh¦27739 listen¦27738? And I have \add difficulty speaking\add*.”
 \rem /s1 Family Record of Moses and Aaron
-\v 13 ◙
-\s1 The elder of Moses and of Aarun
+\v 13 Then Yahweh¦27746 spoke¦27745 to Mosheh¦27749 and Aharon¦27752, and he gave them a command¦27753 to \add pass on to\add* the Israelis and to the Egyptian king¦27761 Far'oh¦27760: to \add take\add* the Israelis out of Egypt¦27762.
+\s1 The ancestors of Mosheh and Aharon
 \rem /s1 The Ancestors of Moses and Aaron; The Family Record of Moses and Aaron; The Genealogy of Moses and Aaron
 \p
-\v 14 ◙
-\v 15 ◙
-\v 16 \x + \xo 6:16-19: \xt Num 3:17-20; 26:57-58; 1Ch 6:16-19.\x*◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
+\v 14 The following were the leaders of the clans:
+\p The sons¦27778 of \bd Reuben\bd* (Yisra'el's eldest son) were Hanoch¦27782, Pallu¦27783, Hezron, and Karmi, and \add they headed\add* the clans of Reuben.
 \p
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
+\v 15 \bd Simeon\bd*'s sons¦27790 were Yemuel, Yamin, Ohad, Yakin, Zohar¦27796, and Shaul¦27797—the son of a Canaanite¦27800 woman, and \add they headed\add* the clans¦27802 of Simeon.
 \p
-\v 23 ◙
-\v 24 ◙
-\v 25 ◙
-\p …
+\v 16 \bd Levi\bd*'s sons¦27807 were Gershon¦27811, Kohath¦27812, and Merari¦27813. Levi was 137 years¦27814 old when he died.\x + \xo 6:16-19: \xt Num 3:17-20; 26:57-58; 1Ch 6:16-19.\x*
+\v 17 Gershon's¦27823 sons¦27822 were Libni¦27824 and Shimei¦27825, and \add they headed\add* their¦27826 clans¦27826.
+\v 18 Kohath's sons¦27828 were Amram¦27830, Izhar¦27831, Hebron¦27832, and Uzziel¦27833. Kohath was 133 years¦27834 old when he died.
+\v 19 Merari's¦27843 sons¦27842 were Mahli¦27844 and Mushi¦27845, and \add all of those headed\add* the clans¦27847 of Levi¦27848.
+\v 20 Amram married his aunt Yochebed, and she gave¦27859 birth¦27859 to Aharon¦27863 and Mosheh¦27866. Amram lived to be 137 years¦27867 old.
+\v 21 Izhar's¦27876 sons¦27875 were Korah, Nefeg, and Zichri¦27879.
+\v 22 Uzziel's sons¦27881 were Mishael, Elzafan, and Sithri¦27885.
 \p
-\v 26 ◙
-\v 27 ◙
-\s1 The pegsuhu of God of Moses
+\v 23 Aharon¦27888 \add married\add* Elisheba, Amminadab's daughter¦27892 and the sister¦27895 of Nahshon, and she gave¦27899 birth¦27899 to Nadab¦27903, Abihu¦27906, Eleazar, and Ithamar¦27912.
+\v 24 Korah's sons¦27914 were Assir¦27916, Elkanah¦27917, and Abiasaph¦27918, and \add they headed\add* the clans¦27920 of Korah.
+\v 25 Aharon's son Eleazar took¦27927 a wife for himself from the daughters¦27930 of Putiel and¦27934 she gave¦27934 birth¦27934 to Finehas.
+\p \add All of\add* those \add headed\add* the clans¦27943 of Levi.
+\p
+\v 26 It was to Aharon¦27946 and Mosheh¦27947 that Yahweh¦27950 had said¦27949, “Bring the Israelis¦27956 out of Egypt¦27958 by their¦27961 \add tribes\add*.”
+\v 27 They were the ones who spoke¦27964 to the Egyptian king¦27968 Far'oh¦27967, to bring¦27971 the Israelis¦27976 out of Egypt.
+\s1 God's reassurances to Mosheh and Aharon
 \rem /s1 Moses and Aaron Obey God's Commands; Aaron to Speak for Moses; The Lord's Command to Moses and Aaron; The struggle with Pharaoh
 \p
-\v 28 ◙
-\v 29 ◙
+\v 28 On the day¦27983 that Yahweh¦27985 spoke¦27984 to Mosheh¦27988 in Egypt,
+\v 29 he said, “I am Yahweh. Tell the Egyptian king Far'oh¦28004 everything that I tell you.”
 \p
-\v 30 ◙
+\v 30 “Please listen to me,” Mosheh¦28016 \add responded\add*. “I'm \add not a good speaker\add*, so why should Far'oh¦28026 listen to me?”
 \c 7
 \rem /s1 Aaron's Staff Becomes a Snake
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 \x + \xo 7:3: \xt Acts 7:36.\x*◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\s1 The tuked of Aarun
+\v 1 Yahweh¦28030 \add answered\add*, “Listen, I've made you¦28035 \add like\add* God¦28036 to Far'oh¦28037, and your brother¦28039 Aharon¦28038 will be your prophet¦28041.
+\v 2 You'll \add quietly\add* say everything that I tell you to and then your brother¦28051 Aharon¦28050 will \add relay it\add* to Far'oh¦28055 \add and tell him\add* that he must let the Israelis¦28061 leave his country.
+\v 3 \add But\add* I'll \add make\add* Far'oh¦28069 \add stubborn¦28065\add* and \add so\add* I'll increase the signs¦28073 and miracles \add that I'll do\add* in Egypt.\x + \xo 7:3: \xt Acts 7:36.\x*
+\v 4 Far'oh¦28084 won't listen¦28082 to you so I'll \add pressure\add* Egypt, and I'll use severe judgements \add to ensure that I\add* bring¦28090 my armies—my people the Israelis¦28099—out Egypt.
+\v 5 The Egyptians will know¦28105 that I am Yahweh¦28110 when I \add demonstrate my power to\add* Egypt¦28117 \add by taking\add* the Israelis¦28123 out from the middle of them.”
+\v 6 \add So\add* Mosheh¦28127 and¦28128 Aharon¦28128 did everything that Yahweh¦28131 told them to do.
+\v 7 (Mosheh¦28136 was eighty and Aharon¦28141 was eighty-three when they were \add interacting with\add* Far'oh¦28150.)
+\s1 The shepherd's staff turns into a snake
 \rem /s1 Aaron's Staff Becomes a Snake; Aaron's Walking Stick; Aaron's Miraculous Rod
 \p
-\v 8 ◙
-\v 9 ◙
-\v 10 ◙
+\v 8 Then Yahweh¦28154 told Mosheh¦28157 and Aharon¦28160,
+\v 9 “\add When\add* Far'oh tells you to perform a miracle \add as a sign\add*, then \add just\add* tell Aharon to take¦28175 his\f + \fr 7:9 \ft It's not clear here in this account, or even in the following events, if Mosheh and Aharon had separate miraculous sticks, or if Mosheh had (temporarily?) entrusted his original staff/rod/stick to his brother and spokesman Aharon.\f*staff and throw¦28179 it down in front¦28180 of Far'oh so it turns into a snake¦28184.”
+\v 10 \add So\add* Mosheh¦28187 and Aharon went¦28186 in to Far'oh's \add court\add* and did what Yahweh¦28197 had told them: Aharon threw¦28198 his staff¦28202 down in front¦28203 of Far'oh and his servants and it turned into a snake¦28208.
 \v 11 ◙
 \v 12 ◙
 \v 13 ◙
@@ -523,7 +526,7 @@
 \v 27 ◙
 \p …
 \v 28 ◙
-\s1 The pegpangimatey of me panganey child
+\s1 The killing of me panganey child
 \rem /s1 The Tenth Plague: Death of the Firstborn; The Death of the First-Born
 \p
 \v 29 \x + \xo 12:29: \xt Exo 4:22-23.\x*◙
@@ -1705,7 +1708,7 @@
 \v 17 ◙
 \v 18 ◙
 \v 19 ◙
-\s1 The pegdasag of people
+\s1 The gifting of people
 \rem /s1 The People Bring Their Offerings; Offerings for the Tabernacle
 \p
 \v 20 ◙
