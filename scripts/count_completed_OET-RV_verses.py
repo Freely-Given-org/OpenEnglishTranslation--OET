@@ -35,12 +35,11 @@ It does have the potential to make wrong connections that will need to be manual
         so that the number of wrong alignments is not huge.
 """
 from gettext import gettext as _
-from tracemalloc import start
 from typing import List, Tuple, Optional
 from pathlib import Path
 # from datetime import datetime
-import logging
-import re
+# import logging
+# import re
 import glob
 import os.path
 
@@ -57,10 +56,10 @@ from BibleOrgSys.Reference.BibleVersificationSystems import BibleVersificationSy
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2024-04-26' # by RJH
+LAST_MODIFIED_DATE = '2024-05-13' # by RJH
 SHORT_PROGRAM_NAME = "count_completed_OET-RV_verses"
 PROGRAM_NAME = "Count completed OET-RV verses"
-PROGRAM_VERSION = '0.21'
+PROGRAM_VERSION = '0.22'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -152,7 +151,7 @@ def main():
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"OET-RV NT has {finishedNTVerses:,}/{totalNTVerses:,} verses finished = {finishedNTVerses*100//totalNTVerses}%. (Approx {finishedNTChapters:,}/{totalNTChapters:,} = {finishedNTChapters*100//totalNTChapters}% chapters.)\n" )
 
     # Now do whole Bible
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"OET-RV has {finishedVerses:,}/{totalVerses:,} verses finished = {finishedVerses*100//totalVerses}%. (Approx {finishedChapters:,}/{totalChapters:,} = {finishedChapters*100//totalChapters}% chapters.)\n" )
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"OET-RV has {finishedVerses:,}/{totalVerses:,} verses finished = {finishedVerses*100/totalVerses:.1f}%. (Approx {finishedChapters:,}/{totalChapters:,} = {finishedChapters*100//totalChapters}% chapters.)\n" )
 # end of count_completed_OET-RV_verses.main
 
 

@@ -6,6 +6,8 @@
 #=== Folder and file declarations =======================
 
 # LV_HTML := $(wildcard ../derivedTexts/simpleHTML/LiteralVersion/*.html)
+derived_USFM := $(wildcard ../derivedTexts/cleanedUSFM/ReadersVersion/*.USFM) $(wildcard ../derivedTexts/cleanedUSFM/LiteralVersion/*.USFM)
+sideBySide_HTML := $(wildcard derivedTexts/simpleHTML/SideBySide/*.html)
 LV_OT_HTML := ../derivedTexts/simpleHTML/LiteralVersion/GEN.html ../derivedTexts/simpleHTML/LiteralVersion/MAL.html
 LV_NT_HTML := ../derivedTexts/simpleHTML/LiteralVersion/MAT.html ../derivedTexts/simpleHTML/LiteralVersion/REV.html
 RV_HTML := $(wildcard ../derivedTexts/simpleHTML/ReadersVersion/*.html)
@@ -51,7 +53,7 @@ scripted_NT_updates := $(wildcard ScriptedVLTUpdates/*)
 
 #=== Top-level/Main stuff =======================
 
-ALL: BOTH SideBySide
+ALL: BOTH $(sideBySide_HTML) $(derived_USFM)
 BOTH: LV RV
 LV: LV_OT LV_NT
 
@@ -152,11 +154,17 @@ $(RV_HTML): $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py convert_OET
 
 #=== Side-by-side stuff =======================
 
-SideBySide: $(LV_OT_HTML) $(LV_NT_HTML) $(RV_HTML) pack_HTML_side-by-side.py
+$(sideBySide_HTML): $(LV_OT_HTML) $(LV_NT_HTML) $(RV_HTML) pack_HTML_side-by-side.py
 	@echo "\n\nPack LV and RV HTML files side-by-side…\n"
 	@$(Python) pack_HTML_side-by-side.py
 	@echo "\n\nCount our progress…\n"
 	@$(Python) count_completed_OET-RV_verses.py
+
+#=== USFM conversion =======================
+
+$(derived_USFM): $(LV_ESFM) $(RV_ESFM) OET-LV-RV_ESFM_to_USFM.py
+	@echo "\n\nCreate clean USFM files…\n"
+	@$(Python) OET-LV-RV_ESFM_to_USFM.py
 
 
 #=== Clean up stuff =======================

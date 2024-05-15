@@ -38,7 +38,6 @@ CHANGELOG:
     2023-08-21 Add lemma pages
 """
 from gettext import gettext as _
-from tracemalloc import start
 from typing import List, Tuple, Optional
 from pathlib import Path
 from datetime import datetime

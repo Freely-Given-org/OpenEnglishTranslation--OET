@@ -34,10 +34,9 @@ TODO: A better alternative might be one that can add an offset to any word numbe
         that's above a certain word number.
 """
 from gettext import gettext as _
-from tracemalloc import start
 from typing import List, Tuple, Optional
 from pathlib import Path
-import logging
+# import logging
 import re
 
 if __name__ == '__main__':

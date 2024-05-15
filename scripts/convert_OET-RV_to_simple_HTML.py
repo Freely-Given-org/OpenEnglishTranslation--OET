@@ -33,7 +33,6 @@ CHANGELOG:
     2024-01-27 Check for unexpected USFM character formatting in /rem lines
 """
 from gettext import gettext as _
-from tracemalloc import start
 from typing import List, Tuple, Optional
 from pathlib import Path
 from datetime import datetime
@@ -53,9 +52,9 @@ from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, 
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 
 
-LAST_MODIFIED_DATE = '2024-04-26' # by RJH
+LAST_MODIFIED_DATE = '2024-05-15' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
-PROGRAM_NAME = "Convert OET-RV USFM to simple HTML"
+PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
 PROGRAM_VERSION = '0.76'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 

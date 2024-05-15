@@ -46,7 +46,6 @@ CHANGELOG:
     2024-03-25 Add OT connections
 """
 from gettext import gettext as _
-from tracemalloc import start
 from typing import List, Tuple, Optional
 from pathlib import Path
 import logging
