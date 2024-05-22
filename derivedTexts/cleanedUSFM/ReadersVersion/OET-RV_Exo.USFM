@@ -1,4 +1,4 @@
-\id EXO - Open English Translation—Readers’ Version (OET-RV) v0.0.06
+\id EXO - Open English Translation—Readers’ Version (OET-RV) v0.0.09
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 EXO
@@ -27,7 +27,6 @@
 \ie
 \c 1
 \s1 Israel’s descendants are driven into slavery
-\rem /s1 The Israelites Are Treated Cruelly in Egypt; The Israelites Oppressed; The Israelites in Egypt
 \p
 \v 1 These are the names of Yisra’el’s descendants who accompanied Yacob (Jacob) when he moved his household to Egypt:\x + \xo 1:1-4: \xt Gen 46:8-27.\x*
 \v 2 Reuben, Simeon, Levi, Yehudah,
@@ -37,7 +36,6 @@
 \p
 \v 6 \add As the years progressed,\add* Yosef and his brothers died—all of that generation,
 \v 7 \add but they’d had many children who went on to have their own children and grandchildren,\add* and so they became a large and powerful group \add there in Egypt\add*.\x + \xo 1:7: \xt Acts 7:17.\x*
-\rem /s1 The Israelites Are Oppressed
 \p
 \v 8 \add Eventually\add* a new king came to power in Egypt who had never known Yosef\x + \xo 1:8: \xt Acts 7:18.\x*
 \v 9 and he told his people, “Listen, those descendants of Israel are becoming more numerous and powerful than us.
@@ -58,7 +56,6 @@
 \v 22 Then Far’oh commanded all of his people, “You \add all need to\add* toss every newborn boy into the river, but you can let the girls live.”\x + \xo 1:22: \xt Acts 7:19.\x*
 \c 2
 \s1 The birth of Mosheh (Moses)
-\rem /s1 Moses; The Birth of Moses; Birth and Youth of Moses
 \p
 \v 1 \add During this period,\add* a man from the tribe of Levi married a woman who was also a Levite,
 \v 2 and she conceived and gave birth to a son. When she saw that he was a \add healthy\add* boy, she hid him away for three months,\x + \xo 2:2: \xt Acts 7:20; Heb 11:23.\x*
@@ -74,7 +71,6 @@
 \v 9 “Take this baby,” said the \add princess\add*, “and breastfeed him for me, and I’ll pay you \add for doing it\add*.” \add So\add* the woman took the baby and \add looked after\add* him.
 \v 10 \add When\add* the boy had grown \add enough\add*, she brought him \add back\add* to Far’oh’s daughter and he became her son. She named him ‘Mosheh’\f + \fr 2:10 \ft More familiar to most English readers as ‘Moses’ from the Greek ‘Μωσῆς’ (Mōsaʸs) but Greek doesn’t have an ‘h’ or a ‘sh’ so by going through Greek we ended up with something quite different from his real name. However, English does have those sounds and letters, so there’s no reason why we can’t get this name correct.\f* \add (which means ‘pulled out’)\add* because she said that she’d \add plucked\add* him out of the \add river\add*.\x + \xo 2:10: \xt Acts 7:21.\x*
 \s1 Mosheh escapes to Midiyan
-\rem /s1 Moses Escapes to Midian; Moses Flees to Midian
 \p
 \v 11 \add Later on\add* when Mosheh was fully grown, he went out to visit \add the Hebrews\add* and saw their \add forced labour\add*, and he saw an Egyptian man beating a Hebrew man—one of his own people.\x + \xo 2:11-14: \xt Acts 7:23-28.\x*
 \v 12 \add Mosheh\add* looked around to check that no one was watching, then he hit the Egyptian, \add killing him,\add* then he hid his body in the sand.
@@ -99,7 +95,6 @@
 \v 25 and he \add looked down on\add* the Israelis and he \add was concerned about them\add*.
 \c 3
 \s1 God calls Mosheh from a burning bush
-\rem /s1 God Calls Moses; Moses at the Burning Bush; Moses and the Burning Bush
 \p
 \v 1 \add One time\add* Mosheh (Moses) was shepherding the flock of his father-in-law Yetro (or Jethro, the priest at Midian), and he led the flock beyond the wilderness and came to a hill. (\add This was later known as\add* the mountain of God at Horeb).
 \v 2 \add While he was there.\add* Yahweh’s messenger appeared to him in a flame coming from the middle of a bush, and as \add Mosheh\add* looked, to his surprise \add he saw that\add* the bush was burning in the fire yet not \add actually\add* being burnt up.\x + \xo 3:2-10: \xt Acts 7:30-34.\x*
@@ -119,7 +114,6 @@
 \v 11 “Who am I, that I should go to Far’oh,” Mosheh \add asked\add* God, “and that I should \add be the one to\add* bring out the Israelis out from Egypt?”
 \p
 \v 12 “I’ll certainly be with you,” \add God replied,\add* “and this will be your sign \add so that you’ll know\add* that I have sent you: when you bring the people out from Egypt, you all will serve God on this \add very\add* hill.”
-\rem /s1 The Divine Name Revealed
 \p
 \v 13 “\add But listen\add*,” Mosheh told God, “\add If\add* I’m about to go to the Israelis and if I told them, ‘The God of your ancestors has sent me to you.’ then they’d \add ask\add* me, ‘\add Oh yeah,\add* what’s his name?’ then what would I tell them?”\x + \xo 3:13: \xt Exo 6:2-3.\x*
 \p
@@ -136,7 +130,6 @@
 \v 22 \add For example,\add* an \add Israeli\add* woman will ask her \add Egyptian\add* neighbour (or from someone staying \add where she lives\add*) for gold and silver items and for clothing. Then you’ll put them on your sons and daughters, and \add in this way\add* you’ll all plunder the Egyptians.”
 \c 4
 \s1 God gives Mosheh three miracles
-\rem /s1 Signs for Moses; Moses’ Miraculous Power; Signs of the Lord’s Power; God Gives Moses Miraculous Power
 \p
 \v 1 “But listen,” Mosheh responded, “they won’t believe me and won’t listen to \add what I say\add*, because they’ll say, ‘Yahweh never showed himself to you.’”
 \v 2 “\add Well,\add* what’s that in your hand?” Yahweh \add asked\add*.
@@ -162,7 +155,6 @@
 \v 16 \add So in that way,\add* he’ll be like a mouth for you and speak to the people for you, and you’ll be like God to him.
 \v 17 \add In addition,\add* you’ll have that staff with you in order to do those miracles.”
 \s1 Mosheh returns to Egypt
-\rem /s1 Moses Returns to Egypt
 \p
 \v 18 Then Mosheh went back to his father-in-law Yetro (Jethro), and told him, “Can I please leave so I can return to my \add relatives\add* in Egypt and see whether they’re still alive.”
 \p “Go in peace,” Yetro \add answered\add*.
@@ -186,7 +178,6 @@
 \v 31 and the people believed. Then they heard how Yahweh had paid attention to the Israelis and that he had seen their suffering, and they bowed and prostrated themselves \add in thankfulness\add*.
 \c 5
 \s1 Mosheh challenges the Egyptian king
-\rem /s1 Bricks Without Straw; Moses and Aaron Speak to Pharaoh; Moses and Aaron before the King of Egypt; Bricks without Straw
 \p
 \v 1 After that, Mosheh and Aharon went in and said to Far’oh, “This is what Israel’s God Yahweh says: ‘Let my people go, \add so\add* they can celebrate me \add out\add* in the wilderness.’ ”
 \p
@@ -196,7 +187,6 @@
 \p
 \v 4 “Mosheh and Aharon,” the king of Egypt answered, “why are you causing the people to \add slacken\add* off from their tasks? \add Get back\add* to your \add work\add*.”
 \v 5 And Far’oh \add continued\add*, “Listen, there’s many \add of you\add* and you \add two\add* have caused them to rest from their \add duties\add*.”
-\rem /s1 Making Bricks without Straw
 \p
 \v 6 Then on that \add very same\add* day, Far’oh ordered the people’s slave masters and supervisors,
 \v 7 “Don’t give straw to the people to make bricks with as \add you’ve done up till now\add*. They can go and gather straw for themselves.
@@ -219,16 +209,13 @@
 \v 20 \add so\add* when they left Far’oh they \add confronted\add* Mosheh and Aharon who were waiting to meet them,
 \v 21 “May Yahweh \add see what you’ve done and judge you for it\add* because you’ve \add raised a big stink in Far’oh’s mind\add* and with his servants. \add Now they have their excuse\add* to kill us!”
 \s1 Mosheh complains to God
-\rem /s1 Moses Complains to the Lord; God Promises Deliverance
 \p
 \v 22 Then Mosheh went back to Yahweh and \add asked\add*, “My master, why have you \add taken it out on our\add* people? Was this why you sent me?
 \v 23 \add Ever\add* since I went to Far’oh to \add deliver your message\add*, he’s \add made\add* these people \add suffer\add* and you \add clearly\add* haven’t rescued \add them\add*.”
 \c 6
-\rem /s1 Israel’s Deliverance Assured; Promises of Deliverance
 \p
 \v 1 Then Yahweh said to Mosheh, “Now you’ll see what I’ll do to Far’oh. \add I’ll use my power to force him to\add* let them go, and then \add using my power again\add* he’ll \add actually\add* drive them out of his \add country\add*.”
 \s1 God promises to rescue the people
-\rem /s1 God Calls Moses
 \p
 \v 2 Then God spoke to Mosheh \add again\add*, “I am Yahweh\x + \xo 6:2-3: \xt Gen 17:1; 28:3; 35:11; Exo 3:13-15.\x*
 \v 3 and I \add revealed myself\add* to Abraham, to Isaac, and to Yacob as El Shaddai (God the provider) but they didn’t know me by my name Yahweh.
@@ -242,10 +229,8 @@
 \v 10 Then Yahweh told Mosheh,
 \v 11 “Go and speak to the Egyptian king Far’oh and \add tell him\add* that he needs to let the Israelis leave his country.”
 \v 12 And Mosheh said in front of Yahweh, “Look, the Israelis haven’t listened to me, so why would Far’oh listen? And I have \add difficulty speaking\add*.”
-\rem /s1 Family Record of Moses and Aaron
 \v 13 Then Yahweh spoke to Mosheh and Aharon, and he gave them a command to \add pass on to\add* the Israelis and to the Egyptian king Far’oh: to \add take\add* the Israelis out of Egypt.
 \s1 The ancestors of Mosheh and Aharon
-\rem /s1 The Ancestors of Moses and Aaron; The Family Record of Moses and Aaron; The Genealogy of Moses and Aaron
 \p
 \v 14 The following were the leaders of the clans:
 \p The sons of \bd Reuben\bd* (Yisra’el’s eldest son) were Hanoch, Pallu, Hezron, and Karmi, and \add they headed\add* the clans of Reuben.
@@ -268,14 +253,12 @@
 \v 26 It was to Aharon and Mosheh that Yahweh had said, “Bring the Israelis out of Egypt by their \add tribes\add*.”
 \v 27 They were the ones who spoke to the Egyptian king Far’oh, to bring the Israelis out of Egypt.
 \s1 God’s reassurances to Mosheh and Aharon
-\rem /s1 Moses and Aaron Obey God’s Commands; Aaron to Speak for Moses; The Lord’s Command to Moses and Aaron; The struggle with Pharaoh
 \p
 \v 28 On the day that Yahweh spoke to Mosheh in Egypt,
 \v 29 he said, “I am Yahweh. Tell the Egyptian king Far’oh everything that I tell you.”
 \p
 \v 30 “Please listen to me,” Mosheh \add responded\add*. “I’m \add not a good speaker\add*, so why should Far’oh listen to me?”
 \c 7
-\rem /s1 Aaron’s Staff Becomes a Snake
 \p
 \v 1 Yahweh \add answered\add*, “Listen, I’ve made you \add like\add* God to Far’oh, and your brother Aharon will be your prophet.
 \v 2 You’ll \add quietly\add* say everything that I tell you to and then your brother Aharon will \add relay it\add* to Far’oh \add and tell him\add* that he must let the Israelis leave his country.
@@ -285,7 +268,6 @@
 \v 6 \add So\add* Mosheh and Aharon did everything that Yahweh told them to do.
 \v 7 (Mosheh was eighty and Aharon was eighty-three when they were \add interacting with\add* Far’oh.)
 \s1 Staffs and snakes
-\rem /s1 Aaron’s Staff Becomes a Snake; Aaron’s Walking Stick; Aaron’s Miraculous Rod
 \p
 \v 8 Then Yahweh told Mosheh and Aharon,
 \v 9 “\add When\add* Far’oh tells you to perform a miracle \add as a sign\add*, then \add just\add* tell Aharon to take his\f + \fr 7:9 \ft It’s not clear here in this account, or even in the following events, if Mosheh and Aharon had separate miraculous sticks, or if Mosheh had (temporarily?) entrusted his original staff/rod/stick to his brother and spokesman Aharon.\f*staff and throw it down in front of Far’oh so it turns into a snake.”
@@ -294,7 +276,6 @@
 \v 12 each \add of them\add* threw down his staff and they became snakes, \add except that\add* Aharon’s staff swallowed up their staffs.
 \v 13 \add But\add* Far’oh’s \add mind was made up\add* and he \add took no notice of them\add* as Yahweh had said \add earlier\add*.
 \s1 Plague 1: Water to blood
-\rem /s1 A Plague of Blood; The Plague of Blood; The First Plague: Water Turned to Blood; Disasters Strike Egypt
 \p
 \v 14 Then Yahweh told Mosheh, “Far’oh \add is very stubborn and\add* he’s refused to let the people go.
 \v 15 \add So\add* go to Far’oh. Listen, \add every\add* morning he goes \add down\add* to the \add river\add*, so station yourself to meet him on the bank. Take the staff with you that turned into a snake,
@@ -313,8 +294,6 @@
 \p
 \v 25 \add So\add* a week went by since Yahweh had struck the river
 \c 8
-\rem /s2 Frogs
-\rem /s1 The Second Plague: Frogs; A Plague of Frogs
 \v 1 and \add he\add* said to Mosheh, “Go to Far’oh and tell him, ‘Yahweh says that you \add must\add* let my people go \add so \add* they can serve me.\f + \fr 8:1 \ft This is 7:26 in some versifications (and the following three verses are 7:27, 28, & 29).\f*
 \v 2 \add But\add* if you refuse to let \add them\add* go, then look, I’m about to pound your entire territory with frogs.
 \v 3 The frogs will swarm in the river, then they’ll climb out and go into your house and in your bedroom and onto your bed. They’ll go into your servants’ houses and among your people, and in your \add cooking\add* bowls and into your ovens.
@@ -336,14 +315,12 @@
 \v 14 \add The people\add* collected them into many piles and the \add whole country\add* stank.
 \v 15 \add But when\add* Far’oh saw that there was \add relief from the frogs\add*, he \add firmed his resolve\add* and didn’t listen to \add Mosheh and Aharon\add*, just as Yahweh had said \add previously\add*.
 \s1 Plague 3: Lice
-\rem /s1 A Plague of Gnats; The Third Plague: Gnats; The Plague of Gnats
 \p
 \v 16 Then Yahweh said to Mosheh, “Tell Aharon: Stretch out your staff and strike the dust on the ground, and it will turn into lice\f + \fr 8:16 \ft The Hebrew word ‘כֵּן/כִּנִּם’ (kēn/kinnim) could refer to either lice, gnats, or fleas. However, unlike lice, gnats don’t usually \em reside\em* on people and animals (which seems to be implied by the text).\f* all over Egypt.”
 \v 17 So Aharon held out his staff and struck the dust \add with it\add*, and \add the dust\add* became lice on the people and on the animals. All over Egypt, the dust turned into lice
 \v 18 and the sorcerers tried to do the same with their magic but they were unable to. \add So\add* there were lice on people and animals
 \v 19 and the magicians said to Far’oh, “This is God’s finger.” \add But Far’oh was stubborn\add* and he didn’t listen to them, just as Yahweh had said \add previously\add*.\x + \xo 8:19: \xt Luk 11:20.\x*
 \s1 Plague 4: The swarm
-\rem /s1 The Fourth Plague: Flies; A Plague of Flies; The Plague of Flies
 \p
 \v 20 Then Yahweh said to Mosheh, “Get up early in the morning and \add when you see Far’oh\add* coming down to the river, station yourself in front of \add him\add* and tell him, ‘Yahweh saw that you \add must\add* let my people go \add so \add* they can serve me.
 \v 21 Certainly if you don’t release my people immediately, then take note: I’m about to send the swarm\f + \fr 8:21 \ft The Hebrew word ‘עָרֹב’ (ˊārov) probably meaning ‘mixture’ is sometimes translated as ‘swarm’. This plague could have been anything from flies to other insects (hornets or mosquitoes???) all the way to a mixture of wild animals.\f* at you and your servants and at your people and into your houses. The Egyptians’ houses will be full of the swarm and even the ground that they’re on.
@@ -365,8 +342,6 @@
 \v 32 \add But\add* Far’oh \add changed his mind and remained stubborn and he wouldn’t let the Israelis leave\add*.
 \c 9
 \s1 Plague 5: The stock disease
-\rem /s2 Death of the Animals
-\rem /s1 The Fifth Plague: Livestock Diseased; The Plague on Livestock; A Plague against Livestock
 \p
 \v 1 Then Yahweh said to Mosheh, “Go in to Far’oh and tell him: ‘This is what the God of the Hebrews. Yahweh, says: Let my people go \add so\add* they can serve me.
 \v 2 Certainly if you’re unwilling to release them and if you keep holding onto them,
@@ -377,7 +352,6 @@
 \v 6 \add So\add* the next day Yahweh did \add what he’d said\add* and all of the livestock of the Egyptians died, yet none at all from the livestock of the Israelis died.
 \v 7 Far’oh sent \add people to investigate\add*, and wow, not even one of the livestock of the Israelis had died. \add But\add* Far’oh was strong-willed and wouldn’t let the people go.
 \s1 Plague 6: Boils
-\rem /s1 The Plague of Boils; The Sixth Plague: Boils; A Plague of Boils
 \p
 \v 8 Then Yahweh told Mosheh and Aharon, “Take handfuls of ash out of a furnace, then Mosheh should \add toss it up in the air in front\add* of Far’oh.
 \v 9 It will become a powder over all Egypt and then it will turn into boils—bursting blisters—on people and on animals all over Egypt.”
@@ -385,7 +359,6 @@
 \v 11 Because of the boils, the sorcerers weren’t \add even\add* able to stand \add there with\add* Mosheh because the sorcerers \add suffered with them\add* along with all the Egyptians.
 \v 12 \add But\add* Yahweh caused Far’oh to remain stubborn and he didn’t listen to them, just as Yahweh had told Mosheh \add previously\add*.
 \s1 Plague 7: Hail
-\rem /s1 A Plague of Hail; The Seventh Plague: Thunder and Hail; The Plague of Hail
 \p
 \v 13 Then Yahweh told Mosheh, “Get up early in the morning, and stand in front of Far’oh and say to him, ‘This is what Yahweh, the God of the Hebrews, says: Let my people go so they can serve me
 \v 14 because this time, I’m about to send all my plagues to you and your servants, and your people. \add You’ll all be deeply distressed by them\add*, in order that you might know that there is no \add one else\add* like me in all the world.
@@ -417,7 +390,6 @@
 \v 35 And \add so\add* Far’oh \add remained stubborn\add* and didn’t let the Israelis leave, just as Yahweh had said through Mosheh \add previously\add*.
 \c 10
 \s1 Plague 8: Locusts
-\rem /s1 A Plague of Locusts; The Plague of Locusts; The Eighth Plague: Locusts
 \p
 \v 1 Then Yahweh told Mosheh, “Go in to Far’oh because I’ve made him and his servants \add stubborn\add* in order to \add be able to\add* demonstrate these miracles of mine among them,
 \v 2 and so that \add in the future you’ll be able to tell your descendants\add* that I \add made\add* Egypt \add look foolish\add*, and my miracles which I demonstrated among them—and \add so that\add* you will know that I am Yahweh.”
@@ -447,7 +419,6 @@
 \v 19 and Yahweh \add caused\add* a very strong sea wind. \add The wind\add* carried away the locusts and drove them into the Red Sea—not a single locust remained anywhere in Egyptian territory.
 \v 20 \add But\add* Yahweh caused Far’oh \add to remain stubborn\add* and he would’t release the Israelis.
 \s1 Plague 9: Darkness
-\rem /s1 The Plague of Darkness; The Ninth Plague: Darkness; A Plague of Darkness
 \p
 \v 21 Then Yahweh told Mosheh, “Raise your hand up toward the sky and let it become dark over all Egypt—darkness \add that can be felt\add*.”
 \v 22 \add So\add* Mosheh stretched his hand out \add towards\add* the sky, and a \add thick\add* darkness was in all Egypt for three days.\x + \xo 10:22: \xt Psa 105:28; Rev 16:10.\x*
@@ -463,187 +434,165 @@
 \p
 \v 29 “\add Yes,\add*” Mosheh responded. “It’s just as you say: I’ll never see you again!”
 \c 11
-\s1 Plague 10: Death of eldest sons
-\rem /s1 Moses Announces the Death of the First-Born; The Plague on the Firstborn; Warning of the Final Plague; Death for Egypt’s Firstborn
+\s1 Plague 10: Death of oldest sons
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
+\v 1 Then Yahweh told Mosheh, “I’ll send one more plague to Far’oh and Egypt. After that he’ll let you all go from here. \add What’s more,\add* when he does he’ll actually chase you all right out of here.
+\v 2 \add Go and\add* quietly tell the people that both men and women should ask their \add Egyptian\add* neighbors for items of gold and silver.”
+\v 3 Then Yahweh gave the \add Israelis\add* favour in the eyes of the Egyptians. What’s more, Mosheh was very prestigious in the eyes of Far’oh’s servants and in the eyes of the Egyptian people.
 \p
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
+\v 4 Then Mosheh told \add Far’oh\add*, “This is what Yahweh says: Sometime around the middle of the night I’ll go out \add around\add* Egypt,
+\v 5 and every oldest son in Egypt will die, from the oldest son of Far’oh who sits on his throne, to the oldest son of the slave girl who \add lives\add* behind the mill, as well as every oldest male offspring of \add your livestock\add*.
+\v 6 Then there’ll be loud wailing right across Egypt which will be nothing anything that’s ever happened before, and nothing like it will \add ever\add* happen again.
+\v 7 But \add amongst the Israelis\add*, \add the dogs won’t growl at any person or animals\add* so that you’ll know that Yahweh distinguishes between Egypt and Israel.
+\v 8 Then all your servants will come down to me, and they’ll bow to me, \add pleading\add*, ‘Go, you and all the people who \add follow you\add*.’ And after that I’ll \add leave Egypt\add*.” Then \add Mosheh\add* \add left\add* Far’oh \add in a fiery rage\add*.
 \p
-\v 9 ◙
-\v 10 ◙
+\v 9 Then Yahweh told Mosheh, “Far’oh \add refused to\add* listen to you, so that I’m able to multiply my miracles in Egypt.”
+\v 10 Mosheh and Aharon had done all those miracles in front of Far’oh \add but\add* Yahweh \add had made Far’oh stubborn so\add* he hadn’t let the \add Israelis leave his country\add*.
 \c 12
-\s1 The peglihad of Messenger
-\rem /s1 The Passover; The First Passover Instituted; The First Passover; The institution of the Passover
+\s1 Meal preparations to avoid death
 \p
-\v 1 \x + \xo 12:1-13: \xt Lev 23:5; Num 9:1-5; 28:16; Deu 16:1-2.\x*◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
-\v 10 ◙
-\v 11 ◙
+\v 1 Then Yahweh told Mosheh and Aharon Egypt,\x + \xo 12:1-13: \xt Lev 23:5; Num 9:1-5; 28:16; Deu 16:1-2.\x*
+\v 2 “This month is to become the beginning of the months for you all—\add from now on\add* it will be the first month of the \add new\add* year.
+\v 3 Assemble the people and tell them that on the tenth of this month, every man who’s the head of the household must select a lamb or young goat \add for his family\add*.
+\v 4 \add But\add* if the household’s too small \add to cook\add* a whole animal, then \add neighbours can combine and share—budgeting\add* on how much each person eats.
+\v 5 You all can choose either a sheep or a goat, but it must be a perfect, one-year-old male—without any defects.
+\v 6 You all must \add take special care of those animals\add* until the fourteenth day of this month, then \add every Israeli household\add* will slaughter \add their animal early\add* that evening.
+\v 7 Then they must take some of the blood and put it on both doorposts and on the lintel of the houses that they’ll be in when they eat it.
+\v 8 They must roast them on the fire and eat the meat that night, along with flat bread and bitter herbs.
+\v 9 Don’t eat any of the meat raw and don’t boil it in water—it must be roasted over the fire with its head, legs, and internal organs.
+\v 10 Nothing must be left by morning—anything that’s \add not eaten\add* must be burnt in the fire.
+\v 11 And this is how you all must eat it: with your belts fastened on your waists, your sandals on your feet, and your staffs in your hands. You all must eat it in a hurry. It is the Passover to Yahweh.
 \p
-\v 12 ◙
-\v 13 ◙
-\v 14 \x + \xo 12:14-20: \xt Exo 23:15; 34:18; Lev 23:6-8; Num 28:17-25; Deu 16:3-8.\x*◙
-\s1 The Feast of Paan Not/None Patulin
-\rem /s1 The Festival of Unleavened Bread
+\v 12 Then during that night, I will move throughout Egypt and I will \add kill\add* all the \add oldest males\add*—\add both people and animals\add*. I will \add execute\add* judgment on all the gods of Egypt. I am Yahweh.
+\v 13 That blood \add on the doorposts and lintel\add* will be your sign on the houses which you are all in. I will see the blood and will pass over above you all, and the plague won’t \add affect\add* you all with destruction as I strike against Egypt.
+\v 14 Then this day will become a memorial for you all, and you’ll celebrate it as a festival to Yahweh for \add future\add* generations—a statute that you’ll all celebrate forever.\x + \xo 12:14-20: \xt Exo 23:15; 34:18; Lev 23:6-8; Num 28:17-25; Deu 16:3-8.\x*
+\s1 The ‘Festival of Flat Bread’
 \p
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
-\rem /s1 The First Passover
-\v 20 ◙
-\s1 The first feast of peglihad of Messenger
+\v 15 For seven days you all must only eat flat bread \add made without yeast\add*. Yes, on the first day you all must remove any yeast from your houses, because anyone who eats bread with yeast during those seven days, that person must be permanently driven out of Israel.
+\v 16 On the first day, you all must gather for a sacred assembly, and \add similarly\add* on the seventh day. No work can be done on those \add days\add* \add other than meal preparation\add*.
+\v 17 You all must \add regularly\add* observe the ‘\add Festival of\add* Flat Bread’, because on this very day I will have brought your divisions out from Egypt. You all must observe this day throughout \add future\add* generations—a statute that you’ll all celebrate forever.
+\v 18 Starting on 14th of the first month in the evening, you all must eat \add only\add* flat bread until the 21st day of the month in the evening.
+\v 19 For seven days you all must have no yeast in your homes, because anyone who eats bread with yeast in it, that person \add must be driven out\add* from the Israeli people whether they’re a foreigner or a native.
+\v 20 You all mustn’t eat \add anything made with\add* yeast. Wherever you live, you all must only eat flat bread.
+\s1 The first ever ‘pass-over’ festival
 \p
-\v 21 ◙
-\v 22 ◙
-\v 23 \x + \xo 12:23: \xt Heb 11:28.\x*◙
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
-\p …
-\v 28 ◙
-\s1 The killing of me panganey child
-\rem /s1 The Tenth Plague: Death of the Firstborn; The Death of the First-Born
+\v 21 Then Mosheh summoned the Israeli elders and told them, “Go ahead and select a lamb or young goat for each family and slaughter it.
+\v 22 Then you all must take a bunch of \add leafy\add* hyssop \add stalks\add*, and dip it in the basin \add with the blood from the sacrifice\add* and paint the blood onto the lintel and both doorposts. \add After that\add*, \add absolutely no one\add* should go out the door of your houses until morning.
+\v 23 Then Yahweh will pass through\add out Egypt\add* to strike the Egyptians and \add when\add* he sees the blood on the lintel and on the two doorposts, \add he’ll\add* ‘pass over’ that doorway and won’t permit ‘the destroyer’ to enter into your houses to strike.\x + \xo 12:23: \xt Heb 11:28.\x*
+\v 24 All of you and your descendants must maintain this as a law and celebrate it forever,
+\v 25 \add so\add* when you all enter into the land that Yahweh will give to you just as he \add promised\add*, then you must \add observe\add* this ceremony.
+\v 26 Then when it occurs, your children will ask, ‘What does this ceremony \add mean\add* to you?’
+\v 27 you all must tell \add them\add*, ‘It’s the sacrifice of ‘pass-over’ to Yahweh, who passed over the houses of the Israelis in Egypt \add when he\add* struck the Egyptians and rescued our families.’ ”
+\p And the people bowed their heads and prostrated themselves,
+\v 28 and the Israelis went and did \add just\add* as Yahweh had commanded \add through\add* Mosheh and Aharon.
+\s1 The death of all the oldest male offspring
 \p
-\v 29 \x + \xo 12:29: \xt Exo 4:22-23.\x*◙
-\v 30 ◙
-\rem /s1 The Exodus; Israel’s Exodus from Egypt
-\v 31 ◙
-\v 32 ◙
-\rem /s1 The Exodus: From Rameses to Succoth
+\v 29 Then, in the middle of the night, Yahweh struck all the oldest males in Egypt, from the oldest son of Far’oh who sat on his throne, to the firstborn of the \add prisoner in the dungeon\add* and all \add oldest male offspring\add* of the animals.\x + \xo 12:29: \xt Exo 4:22-23.\x*
+\v 30 During the night, all the Egyptians got up, including Far’oh and all his servants. There was \add tremendous wailing throughout\add* Egypt because \add it was a very rare house\add* where there wasn’t someone dead.
+\v 31 \add Far’oh\add* called for Mosheh and Aharon in the night and told \add them\add*, “Pack up and get out from among my people—you \add two\add* and all the other Israelis. Go and serve Yahweh as you’ve said.
+\v 32 Also take your flocks and your herds as you’ve said, and go. And bless me as well.
 \p
-\v 33 ◙
+\v 33 The Egyptians urged the \add Israelis\add*, hurrying to let them go from the land because they said, “We’re all dying.”
 \p
-\v 34 ◙
+\v 34 \add So\add* the people carried their \add bread\add* dough before it \add could rise\add*. Their bread-making bowls were wrapped in their clothes on their shoulders.
 \p
-\v 35 \x + \xo 12:35-36: \xt Exo 3:21-22.\x*◙
+\v 35 The Israelis did everything that Mosheh had instructed them, \add including\add* asking for items of gold and silver, and clothing from the Egyptians.\x + \xo 12:35-36: \xt Exo 3:21-22.\x*
+\v 36 Yahweh gave the people favour in the eyes of the Egyptians, \add so by\add* their requests, they were able to strip the Egyptians of their wealth.
 \p
-\v 36 ◙
-\rem /s1 The Israelites Leave Egypt; The exodus from Egypt
+\v 37 Then the Israelis walked from Rameses toward Succoth—about 600,000 strong men on foot, not counting \add women and\add* children.
+\v 38 A large assortment of other people also went with them, along with large numbers of sheep and goats, and cattle.
 \p
-\v 37 ◙
+\v 39 They baked the dough that they brought from Egypt into flat bread since it \add hadn’t had time to rise\add*,\f + \fr 12:39 \ft Most modern readers probably visualise yeast bought from a supermarket when ‘leaven’ (or even ‘yeast’) is mentioned in a Bible translation. However, it’s much more likely that each day, a portion of the bread dough was set aside for the natural yeasts (think ‘sour dough’ bread) to accumulate, and then mixed into the new batch of dough the next day and left for the natural yeasts to work and rise the dough. The text here implies that it’s possible that the Hebrew word translated ‘unleavened’ really meant ‘unrisen’ on that first ‘pass-over’ night.\f* because they were driven out of Egypt \add in a hurry\add* and hadn’t \add had time to prepare food to take\add*.
 \p
-\v 38 ◙
+\v 40 The descendants of Yisra’el \add (Yacob)\add* had lived in Egypt for 430 years\x + \xo 12:40: \xt Gen 15:13; Gal 3:17.\x*
+\v 41 to the day, because that very day was when all the \add various\add* divisions of Yahweh’s \add people\add* left Egypt.
+\v 42 It was a \add time\add* when they stayed awake all night as Yahweh took them out of Egypt—a night to be observed in that same way by every future generation.
+\s1 Instructions for observing the ‘pass-over’
 \p
-\v 39 ◙
-\p
-\v 40 \x + \xo 12:40: \xt Gen 15:13; Gal 3:17.\x*◙
-\p
-\v 41 ◙
-\p
-\v 42 ◙
-\s1 The tulumanen of feast of peglihad of Messenger
-\rem /s1 Instructions for the Passover; Passover Restrictions; Directions for the Passover; Regulations about Passover
-\p
-\v 43 ◙
-\v 44 ◙
-\v 45 ◙
-\v 46 \x + \xo 12:46: \xt Num 9:12; Jn 19:36.\x*◙
-\v 47 ◙
-\v 48 ◙
-\v 49 ◙
-\v 50 ◙
-\v 51 ◙
+\v 43 Then Yahweh told Mosheh and Aharon, “This is the statute of the ‘pass-over’: No foreigners may \add share in\add* the meal \add that night\add*,
+\v 44 unless it’s a slave that you bought and who’s been circumcised—
+\v 45 no foreigner or hired helper can \add join in\add* the meal.
+\v 46 \add Each animal\add* must be eaten in only one house—don’t take any of the meat outside. And don’t break any of the animals bones.\x + \xo 12:46: \xt Num 9:12; Jn 19:36.\x*
+\v 47 Every Israeli must observe it,
+\v 48 and if someone is living among you and wants to join in Yahweh’s ‘pass-over’, then every male in their family must be circumcised. Only then will they be allowed to observe it, and then they should be considered like a native of the land. No uncircumcised person may eat it.
+\v 49 This one law shall apply to both the natives, and those who live among you all.”
+\v 50 All the Israelis followed those instructions that Yahweh had given through Mosheh and Aharon,
+\v 51 and \add so\add* on that very day, Yahweh took all the Israelis out of Egypt \add grouped\add* by their \add family\add* divisions.
 \c 13
-\s1 The panganey child male
-\rem /s1 Dedication of the Firstborn; Dedication of the First-Born; Consecration of the Firstborn
+\s1 God owns the first child
 \p
-\v 1 ◙
-\v 2 \x + \xo 13:2: \xt Num 3:13; Luk 2:23.\x*◙
-\s1 The Feast of Paan Not/None Patulin
-\rem /s1 The Festival of Unleavened Bread
+\v 1 Then Yahweh told Mosheh,
+\v 2 “All firstborn \add offspring\add* are to be consecrated to me—the first product of every womb, whether human or animal, belongs to me.”\x + \xo 13:2: \xt Num 3:13; Luk 2:23.\x*
+\s1 The festival of unrisen bread
 \p
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
-\v 10 ◙
-\s1 The panganey child
-\rem /s1 The Consecration of the Firstborn; The First-Born
+\v 3 Then Mosheh told the people, “\add Always\add* remember this day, that you went out of Egypt, \add rescued\add* from slavery, because Yahweh \add used his power\add* to bring you out from there. And \add nothing with yeast in it\add* can be eaten \add when you celebrate this\add*.
+\v 4 Today you are leaving in the month of Aviv,
+\v 5 and \add when\add* Yahweh brings you to the land of the Canaanites, Hittites, Amorites, Hivites, and the Jebusites (which he swore to your fathers to give to you—a land flowing with milk and honey) you must observe this ceremony in this \add same\add* month.
+\v 6 You must eat \add only\add* flat bread for seven days, and then on the seventh day, it will be a festival to \add honour\add* Yahweh.
+\v 7 \add Again,\add* you must only eat flat bread for seven days—\add not only that\add* you must not \add even have\add* any risen bread, nor must you have any yeast within any of your borders.
+\v 8 On that \add festival\add* day, you must tell your \add children\add*, ‘This is because of what Yahweh did for \add us\add* when \add we left\add* Egypt.’
+\v 9 It’ll be \add like a reminder written\add* on your hand and a \add prompt in front\add* of your eyes, so that \add you’ll remember to pass on\add* Yahweh’s instructions because \add he\add* \add used his power\add* to bring you out of Egypt.
+\v 10 \add So\add* you must \add follow those instructions\add* at the appointed time \add year after year\add*.
+\s1 Offering up the oldest children
 \p
-\v 11 ◙
-\v 12 \x + \xo 13:12: \xt Exo 34:19-20; Luk 2:23.\x*◙
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\s1 The gapun and the hapuy
-\rem /s1 Crossing the Sea; The Pillars of Cloud and Fire; The Pillar of Cloud and the Pillar of Fire; Israel’s Wilderness Detour
+\v 11 Later, when Yahweh brings you into the land of the Canaanites as he promised to you and your ancestors, and he gives it to you,
+\v 12 then hand over to Yahweh all oldest children, and all the oldest animal offspring that are yours. The males are for Yahweh.\x + \xo 13:12: \xt Exo 34:19-20; Luk 2:23.\x*
+\v 13 In the case of the oldest donkey foal, you must buy it back \add by killing a lamb\add* instead of it. If you don’t buy it back, you must kill the donkey by breaking its neck. You \em must\em* buy back every one of your oldest sons,
+\v 14 and \add in the future\add* when your son asks you, ‘What’s that about?’ then you must tell him, ‘\add We were enslaved in Egypt, but Yahweh used his incredible power\add* to bring us out.
+\v 15 And so it was that when Far’oh was too stubborn to let us go, then Yahweh struck all of the oldest sons and oldest male animals in Egypt. That’s why \add we\add* offer all the oldest offspring to Yahweh, and why \add we need to buy back\add* all our oldest sons.’
+\v 16 \add So\add* you must place a reminder on your hand and hanging on your forehead that Yahweh used his incredible power to bring us out of Egypt.”
+\s1 Led by cloud and fire
 \p
-\v 17 ◙
-\v 18 ◙
+\v 17 When Far’oh released the people, God didn’t lead them through the land of the Philistines, although \add that way\add* was shorter, because \add he\add* said, “\add It’s best if the people don’t have to face war immediately, or they might change their minds\add* and \add then want to\add* return to Egypt.”
+\v 18 \add So\add* God caused the people to take the path going towards the wilderness and the Red Sea.\f + \fr 13:18 \ft Probably towards the \em Gulf of Suez\em*: see https://armstronginstitute.org/339-where-did-the-red-sea-crossing-take-place.\f* The Israeli left Egypt \add in formation as if ready for battle\add*.
 \p
-\v 19 \x + \xo 13:19: \xt Gen 50:25; Josh 24:32.\x*◙
+\v 19 Mosheh \add ensured that\add* the bones of Yosef were taken with \add them\add*, because \add many years back\add* \add Yosef\add* had made the Israelis vow, saying, “God will certainly take notice of you all, and you must take my bones up with you from here.”\x + \xo 13:19: \xt Gen 50:25; Josh 24:32.\x*
 \p
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
+\v 20 The people travelled on from Succoth and camped at Etham on the edge of the wilderness.
+\v 21 During the day, Yahweh went ahead of them in a pillar of cloud to lead them on the way, and at nighttime, he went in a pillar of fire to be light to them, \add so they could travel both\add* in the daytime and at night.
+\v 22 The daytime pillar of cloud and the nighttime pillar of fire didn’t ever leave their place in front of the people.
 \c 14
 \s1 The crossing of Red Sea
-\rem /s1 Crossing the Red Sea
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\rem /s1 The Egyptians Pursue Israel
+\v 1 Then Yahweh told Mosheh,
+\v 2 “Tell the Israelis that they should turn and camp in front of Pi Hahiroth, between Migdol and the sea, in front of Baal-Zephon. You all are to camp by the sea opposite it.
+\v 3 Then Far’oh will say, ‘They are confused \add and lost\add*—the wilderness has boxed them in.’
+\v 4 I’ll strengthen Far’oh’s \add resolve\add* and he’ll chase after them. Then because of Far’oh and all his army, I’ll be \add honoured\add* and the Egyptians will know that I am Yahweh.” \add So the Israelis camped where they were instructed\add*.
 \p
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
+\v 5 When the king of Egypt was told that the Israelis had fled, \add he\add* and his servants \add started thinking about their own\add* people and they asked, “What have we done by letting the Israeli slaves go free?”
+\v 6 Then he hitched up his chariot and took his \add army\add* with him.
+\v 7 He took 600 of the best chariots as well as all the other Egyptian chariots and officers\add to supervise\add* them.
+\v 8 Yahweh strengthened the Egyptian king’s resolve and so Far’oh pursued after the Israelis after they had confidently marched out \add of Egypt\add*.
+\v 9 The Egyptians pursued them and all of Far’oh’s horses and chariots, along with his mounted soldiers and his foot army, overtook them camping above the sea above Pi Hahiroth, across from Baal-Zephon.
 \p
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
+\v 10 As \add the Egyptians\add* approached, the Israelis looked back, and \add to their horror\add*, saw the army coming after them. They were extremely afraid and cried out to Yahweh.
+\v 11 They \add complained\add* to Mosheh, “Is it because there weren’t any graves in Egypt that you brought us here to die in the wilderness? What have you done to us? Why did you bring us out from Egypt?
+\v 12 Isn’t this \add exactly what we told\add* you in Egypt when we said, ‘\add Just leave us alone\add* and let us serve the Egyptians’? Because serving the Egyptians \add sounds a lot\add* better to us than dying \add out here\add* in the wilderness.”
 \p
-\v 13 ◙
-\v 14 ◙
-\rem /s1 Escape through the Red Sea
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
+\v 13 Then Mosheh told the people, “You must not be afraid. Stand still and see how Yahweh saves you all—he’s going to do it today, because any Egyptians that you see today, you’ll never, ever see them again.
+\v 14 Yahweh himself will fight for you all—all you need to do is to remain calm.”
+\v 15 Then Yahweh \add scolded\add* Mosheh, “Why are you \add still here\add* crying out to me? Talk to the Israelis and get them moving forward.
+\v 16 As for you, raise your staff and stretch your arm out over the sea and divide it. Then the Israelis will go on onto dry ground through the middle of the sea.
+\v 17 \add Yes, watch me!\add* I’ll strengthen the resolve of the Egyptians and they’ll enter \add between the sea\add* after them. Then I’ll be honoured because of \add what will happen to\add* Far’oh and all his army, and his chariots and his horsemen.
+\v 18 \add Because of that,\add* the Egyptians will know that I’m Yahweh.”
 \p
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
-\v 22 \x + \xo 14:22: \xt 1Cor 10:1-2; Heb 11:29.\x*◙
-\v 23 ◙
-\v 24 ◙
-\v 25 ◙
-\rem /s1 The Pursuers Drowned
+\v 19 Then God’s messenger who travelled ahead of the Israelis, moved and went behind them. \add Also\add* the pillar of cloud moved from in front of them and stood behind them
+\v 20 and \add so\add* it was then between the \add coming\add* Egyptians and the Israelis. Then the cloud became darkness \add on the Egyptian side\add*, \add yet it lit up the other side\add*, and no one could approach it all night.
+\v 21 Then Mosheh stretched his arm out over the sea and Yahweh sent a strong east wind. It blew all night and divided the sea \add on each side\add* and dried the \add strip of\add* land in the middle.
+\v 22 \add So\add* then the Israelis entered through the middle of the sea on dry ground with a wall of water on each side of them.\x + \xo 14:22: \xt 1Cor 10:1-2; Heb 11:29.\x*
+\v 23 \add However,\add* the Egyptians pursued after them. Every one of Far’oh’s horses and chariots and his horsemen \add also\add* entered into the middle of the sea.
+\v 24 \add By now morning was coming\add* and Yahweh looked down through the pillar of fire and cloud, and he caused confusion for the Egyptian army.
+\v 25 He caused the wheels of their chariots to turn unevenly \add so they became difficult\add* to drive, and the Egyptians \add complained\add*, “Let’s retreat from \add following\add* the Israelis, because Yahweh is fighting against Egypt and for them.”
 \p
-\v 26 ◙
-\v 27 ◙
-\v 28 ◙
-\v 29 ◙
+\v 26 \add On the other side,\add* Yahweh told Mosheh, “Stretch your arm out over the sea and the waters will \add flow back\add* onto the Egyptians and onto \add Far’oh’s\add* chariots and his horsemen.”
+\v 27 \add So\add* Mosheh stretched his arm out over the sea, and as the day broke, the sea began to return to its normal place. The Egyptians \add turned and\add* fled before its impact \add but\add* Yahweh shook the Egyptians \add off their horses and chariots\add* in the middle of the sea.
+\v 28 \add So\add* the sea returned and covered the chariots and the horsemen—even Far’oh’s entire army that had entered into the sea after \add the Israelis\add*. Not even one of \add the pursuers\add* remained.
+\v 29 \add But\add* the Israelis had walked through the middle of the sea on dry land with a wall of water on each side of them.
 \p
-\v 30 ◙
-\v 31 ◙
+\v 30 \add So\add* Yahweh saved Israel from Egypt’s power that day, and the Israelis saw the Egyptians’ bodies \add washed up\add* on the shore.
+\v 31 \add All of\add* Israel saw the \add incredible power\add* that Yahweh had used against the Egyptians, and the people revered Yahweh, and put their trust in him and his servant Mosheh.
 \c 15
-\s1 The singing of Moses
-\rem /s1 The Song of Moses; A Song of Deliverance; The Song of Moses and Miriam
+\s1 The singing of Mosheh
 \p
 \v 1 \x + \xo 15:1: \xt Rev 15:3.\x*◙
 \q1 …
@@ -714,17 +663,14 @@
 \q1
 \v 18 ◙
 \s1 The singing of Miryam
-\rem /s1 The Song of Miriam
 \p
 \v 19 ◙
-\rem /s1 The Song of Miriam
 \p
 \v 20 ◙
 \v 21 ◙
 \q1 …
 \q2 …
-\s1 The mapeit water
-\rem /s1 Bitter Water; In the wilderness; The Waters of Marah and Elim; Bitter Water Made Sweet; Bitter Water at Marah
+\s1 The bitter water
 \p
 \v 22 ◙
 \v 23 ◙
@@ -736,7 +682,6 @@
 \v 27 ◙
 \c 16
 \s1 The mana and the me puhu
-\rem /s1 Manna and Quail; Manna and Quail from Heaven; Bread from Heaven; The Manna and the Quails
 \p
 \v 1 ◙
 \v 2 ◙
@@ -784,10 +729,8 @@
 \v 35 \x + \xo 16:35: \xt Josh 5:12.\x*◙
 \v 36 ◙
 \c 17
-\s1 The water there to batu
-\rem /s1 Water From the Rock; Water from the Rock
+\s1 The water there to rock
 \r (Num. 20:1-13)
-\rem /r (Numbers 20.1-13)
 \p
 \v 1 \x + \xo 17:1-7: \xt Num 20:2-13.\x*◙
 \v 2 ◙
@@ -801,8 +744,7 @@
 \v 6 ◙
 \p
 \v 7 ◙
-\s1 The peggira of Hebrews and of Amalikanen
-\rem /s1 The Amalekites Defeated; Israel Defeats the Amalekites; Amalek Attacks Israel and Is Defeated; War with the Amalekites
+\s1 The war between Hebrews and of Amalikanen
 \p
 \v 8 ◙
 \v 9 ◙
@@ -814,8 +756,7 @@
 \v 15 ◙
 \v 16 ◙
 \c 18
-\s1 The pegpanumbaley of anuhang of Moses
-\rem /s1 Jethro’s Visit to Moses; Jethro’s Advice; Jethro Visits Moses
+\s1 The visiting of anuhang of Moses
 \p
 \v 1 ◙
 \v 2 \x + \xo 18:2-3: \xt Exo 2:21-22.\x*◙
@@ -831,9 +772,7 @@
 \v 11 ◙
 \v 12 ◙
 \s1 The advice of Hitru to Moses
-\rem /s1 Jethro’s Wise Advice; The Appointment of Judges
 \r (Deu. 1:9-18)
-\rem /r (Deuteronomy 1.9-18)
 \p
 \v 13 ◙
 \v 14 ◙
@@ -856,7 +795,6 @@
 \v 27 ◙
 \c 19
 \s1 The living there to Mountain Sinai
-\rem /s1 At Mount Sinai; The Lord Reveals Himself at Sinai; The Israelites at Mount Sinai; The Israelites Reach Mount Sinai; Israel at Mount Sinai
 \p
 \v 1 ◙
 \p
@@ -870,7 +808,6 @@
 \v 8 ◙
 \p
 \v 9 ◙
-\rem /s1 The People Consecrated
 \p …
 \v 10 ◙
 \v 11 ◙
@@ -891,9 +828,7 @@
 \v 25 ◙
 \c 20
 \s1 The Ten Law
-\rem /s1 The Ten Commandments
 \r (Deu. 5:1-21)
-\rem /r (Deuteronomy 5.1-21)
 \p
 \v 1 ◙
 \v 2 ◙
@@ -923,9 +858,7 @@
 \p
 \v 17 \x + \xo 20:17: \xt Rom 7:7; 13:9.\x*◙
 \s1 The fear of people
-\rem /s1 The People’s Fear
 \r (Deu. 5:22-33)
-\rem /r (Deuteronomy 5.22-33)
 \p
 \v 18 \x + \xo 20:18-19: \xt Heb 12:18-19.\x*◙
 \v 19 ◙
@@ -933,7 +866,6 @@
 \v 20 ◙
 \v 21 ◙
 \s1 The law concerning the sacrificing
-\rem /s1 The Law concerning the Altar; Proper Use of Altars; Idols and Altars; Laws about Altars
 \p
 \v 22 ◙
 \v 23 ◙
@@ -942,12 +874,9 @@
 \v 26 ◙
 \c 21
 \s1 The law concerning the slave
-\rem /s1 The Law concerning Slaves; The Treatment of Slaves; Fair Treatment of Slaves
 \r (Deu. 15:12-18)
-\rem /r (Deuteronomy 15.12-18)
 \p
 \v 1 ◙
-\rem /s1 Hebrew Servants
 \v 2 \x + \xo 21:2-6: \xt Lev 25:39-46.\x*◙
 \v 3 ◙
 \v 4 ◙
@@ -960,7 +889,6 @@
 \v 10 ◙
 \v 11 ◙
 \s1 The laws concerning the bad me work
-\rem /s1 The Law concerning Violence; Laws about Violent Acts; Cases of Personal Injury; Personal Injuries
 \p
 \v 12 \x + \xo 21:12: \xt Lev 24:17.\x*◙
 \v 13 \x + \xo 21:13: \xt Num 35:10-34; Deu 19:1-13; Josh 20:1-9.\x*◙
@@ -987,7 +915,6 @@
 \p
 \v 27 ◙
 \s1 The law concerning the me ayam
-\rem /s1 Laws concerning Property; The Responsibility of Owners
 \p
 \v 28 ◙
 \v 29 ◙
@@ -1001,7 +928,6 @@
 \v 36 ◙
 \c 22
 \s1 The law concerning the me wealth
-\rem /s1 Laws of Restitution; Protection of Property; Laws about Repayment
 \p
 \v 1 ◙
 \v 2 ◙
@@ -1025,7 +951,6 @@
 \v 14 ◙
 \v 15 ◙
 \s1 The law concerning the living
-\rem /s1 Social and Religious Laws; Moral and Religious Laws; Social Responsibility
 \p
 \v 16 \x + \xo 22:16-17: \xt Deu 22:28-29.\x*◙
 \v 17 ◙
@@ -1054,7 +979,6 @@
 \v 31 \x + \xo 22:31: \xt Lev 17:15.\x*◙
 \c 23
 \s1 The teaching concerning the good behaviour
-\rem /s1 Justice for All; Justice and Fairness; Laws of Justice and Mercy; A Call for Justice
 \p
 \v 1 \x + \xo 23:1: \xt Exo 20:16; Lev 19:11-12; Deu 5:20.\x*◙
 \v 2 ◙
@@ -1069,7 +993,6 @@
 \p
 \v 9 \x + \xo 23:9: \xt Exo 22:21; Lev 19:33-34; Deu 24:17-18; 27:19.\x*◙
 \s1 The seventh year(s) and the seventh day
-\rem /s1 Sabbath Laws; Sabbatical Year and Sabbath; The Seventh Year and the Seventh Day
 \p
 \v 10 \x + \xo 23:10-11: \xt Lev 25:1-7.\x*◙
 \v 11 ◙
@@ -1078,9 +1001,7 @@
 \p
 \v 13 ◙
 \s1 The three feast of each year(s)
-\rem /s1 Three Annual Festivals; The Annual Festivals; The Three Great Festivals; The Three Annual Festivals
 \r (Exo. 34:18-26; Deu. 16:1-17)
-\rem /r (Exodus 34.18-26; Deuteronomy 16.1-17)
 \p
 \v 14 ◙
 \v 15 \x + \xo 23:15: \xt Exo 12:14-20; Lev 23:6-8; Num 28:17-25.\x*◙
@@ -1092,9 +1013,8 @@
 \v 18 ◙
 \p
 \v 19 \x + \xo 23:19: \xt Deu 26:2; Exo 34:26; Deu 14:21.\x*◙
-\rem /s1 The Conquest of Canaan Promised; A Promise of the Lord’s Presence; Promises and Instructions; God’s Angel to Prepare the Way
 \p …
-\s1 The me promise and me teaching
+\s1 The promises and teachings
 \p
 \v 20 ◙
 \v 21 ◙
@@ -1113,7 +1033,6 @@
 \v 33 ◙
 \c 24
 \s1 The peggehet of agreement
-\rem /s1 Israel Accepts the Lord’s Covenant; The Covenant Is Sealed; The Blood of the Covenant; The Covenant Confirmed
 \p
 \v 1 ◙
 \v 2 ◙
@@ -1125,13 +1044,11 @@
 \v 7 ◙
 \p
 \v 8 \x + \xo 24:8: a \xt Mat 26:28; Mrk 14:24; Luk 22:20; 1Cor 11:25; Heb 10:29; \xo b \xt Heb 9:19-20.\x*◙
-\rem /s1 On the Mountain with God
 \p
 \v 9 ◙
 \v 10 ◙
 \v 11 ◙
 \s1 The pegtalun of Moses there to Mountain Sinai
-\rem /s1 Moses on Mount Sinai
 \p
 \v 12 ◙
 \v 13 ◙
@@ -1143,9 +1060,7 @@
 \v 18 \x + \xo 24:18: \xt Deu 9:9.\x*◙
 \c 25
 \s1 The me igmandasag for of Balungbalung
-\rem /s1 Offerings for the Sacred Tent; Offerings for the Tabernacle
 \r (Exo. 35:4-9)
-\rem /r (Exodus 35.4-9)
 \p
 \v 1 ◙
 \v 2 ◙
@@ -1157,9 +1072,7 @@
 \v 8 ◙
 \v 9 ◙
 \s1 The Tahuanan of Kasabutan
-\rem /s1 Plans for the Ark; The Ark of the Covenant; The Covenant Box; The Ark
 \r (Exo. 37:1-9)
-\rem /r (Exodus 37.1-9)
 \p
 \v 10 ◙
 \v 11 ◙
@@ -1176,9 +1089,7 @@
 \v 21 ◙
 \v 22 ◙
 \s1 The lamisa
-\rem /s1 The Table for the Bread of the Presence; Plans for the Table; The Table for the Bread Offered to God; The Table
 \r (Exo. 37:10-16)
-\rem /r (Exodus 37.10-16)
 \p
 \v 23 ◙
 \v 24 ◙
@@ -1189,9 +1100,7 @@
 \v 29 ◙
 \v 30 \x + \xo 25:30: \xt Lev 24:5-8.\x*◙
 \s1 The tahuanan of lamp
-\rem /s1 The Lampstand; Plans for the Lampstand
 \r (Exo. 37:17-24)
-\rem /r (Exodus 37.17-24)
 \p
 \v 31 ◙
 \v 32 ◙
@@ -1205,9 +1114,7 @@
 \v 40 \x + \xo 25:40: \xt Acts 7:44; Heb 8:5.\x*◙
 \c 26
 \s1 The holy balungbalung
-\rem /s1 Plans for the Tabernacle; The Tabernacle; The Tent of the Lord’s Presence
 \r (Exo. 36:8-38)
-\rem /r (Exodus 36.8-38)
 \p
 \v 1 ◙
 \v 2 ◙
@@ -1225,7 +1132,6 @@
 \v 13 ◙
 \p
 \v 14 ◙
-\rem /s1 The Framework
 \p
 \v 15 ◙
 \v 16 ◙
@@ -1244,7 +1150,6 @@
 \v 28 ◙
 \v 29 ◙
 \v 30 ◙
-\rem /s1 The Curtain
 \p
 \v 31 ◙
 \v 32 ◙
@@ -1256,9 +1161,7 @@
 \v 37 ◙
 \c 27
 \s1 The altar egtutungan of sacrifice
-\rem /s1 Plans for the Altar of Burnt Offering; The Altar of Burnt Offering; The Altar
 \r (Exo. 38:1-7)
-\rem /r (Exodus 38.1-7)
 \p
 \v 1 ◙
 \v 2 ◙
@@ -1269,9 +1172,7 @@
 \v 7 ◙
 \v 8 ◙
 \s1 The lama of holy balungbalung
-\rem /s1 Plans for the Courtyard; The Enclosure for the Tent of the Lord’s Presence; The Courtyard; The Court and Its Hangings
 \r (Exo. 38:9-20)
-\rem /r (Exodus 38.9-20)
 \p
 \v 9 ◙
 \v 10 ◙
@@ -1285,24 +1186,19 @@
 \v 18 ◙
 \v 19 ◙
 \s1 The lana igtubil of me lamp
-\rem /s1 Oil for the Lampstand; The Oil for the Lamp; Taking Care of the Lamp
 \r (Lev. 24:1-4)
-\rem /r (Leviticus 24.1-4)
 \p
 \v 20 ◙
 \v 21 ◙
 \c 28
 \s1 The igsaluub of priests
-\rem /s1 Vestments for the Priesthood; The Priestly Garments; Garments for the Priests; Clothing for the Priests
 \r (Exo. 39:1-7)
-\rem /r (Exodus 39.1-7)
 \p
 \v 1 ◙
 \v 2 ◙
 \v 3 ◙
 \v 4 ◙
 \v 5 ◙
-\rem /s1 The Ephod; Design of the Ephod
 \p
 \v 6 ◙
 \v 7 ◙
@@ -1314,9 +1210,7 @@
 \v 13 ◙
 \v 14 ◙
 \s1 The hagpi of kumeng
-\rem /s1 Design of the Chestpiece; The Breastpiece; The Breastplate
 \r (Exo. 39:8-21)
-\rem /r (Exodus 39.8-21)
 \p
 \v 15 ◙
 \v 16 ◙
@@ -1336,9 +1230,7 @@
 \v 29 ◙
 \v 30 \x + \xo 28:30: \xt Num 27:21; Deu 33:8; Ezr 2:63; Neh 7:65.\x*◙
 \s1 The other pad me kumbale
-\rem /s1 Additional Clothing for the Priests; Other Priestly Vestments; Other Priestly Garments; The Other Priestly Garments
 \r (Exo. 39:22-31)
-\rem /r (Exodus 39.22-31)
 \p
 \v 31 ◙
 \v 32 ◙
@@ -1358,9 +1250,7 @@
 \v 43 ◙
 \c 29
 \s1 The priests impanubaran
-\rem /s1 Instructions for Ordaining Aaron and His Sons as Priests; The Ordination of the Priests; Dedication of the Priests; Consecration of the Priests
 \r (Lev. 8:1-36)
-\rem /r (Leviticus 8.1-36)
 \p
 \v 1 ◙
 \v 2 ◙
@@ -1410,9 +1300,7 @@
 \v 36 ◙
 \v 37 ◙
 \s1 The gift each day
-\rem /s1 The Daily Offerings
 \r (Num. 28:1-8)
-\rem /r (Numbers 28.1-8)
 \p
 \v 38 ◙
 \v 39 ◙
@@ -1425,9 +1313,7 @@
 \v 46 ◙
 \c 30
 \s1 The altar egtutungan of insinsu
-\rem /s1 The Altar for Burning Incense; The Altar of Incense; Plans for the Incense Altar
 \r (Exo. 37:25-28)
-\rem /r (Exodus 37.25-28)
 \p
 \v 1 ◙
 \v 2 ◙
@@ -1441,7 +1327,6 @@
 \v 9 ◙
 \v 10 ◙
 \s1 The tax for of making of balungbalung
-\rem /s1 The Tax for the Tent of the Lord’s Presence; Money for the Tabernacle; The Half Shekel for the Sanctuary; Atonement Money
 \p
 \v 11 ◙
 \v 12 ◙
@@ -1450,7 +1335,6 @@
 \v 15 ◙
 \v 16 ◙
 \s1 The pelenggana lu‑luanan
-\rem /s1 Basin for Washing; Plans for the Washbasin; The Bronze Basin
 \p
 \v 17 ◙
 \v 18 \x + \xo 30:18: \xt Exo 38:8.\x*◙
@@ -1458,7 +1342,6 @@
 \v 20 ◙
 \v 21 ◙
 \s1 The lana igbaluhu
-\rem /s1 The Anointing Oil; The Anointing Oil and Incense; Anointing Oil
 \p
 \v 22 \x + \xo 30:22-38: \xt Exo 37:29.\x*◙
 \v 23 ◙
@@ -1474,7 +1357,6 @@
 \v 32 ◙
 \v 33 ◙
 \s1 The insinsu
-\rem /s1 The Incense; Incense
 \p
 \v 34 ◙
 \v 35 ◙
@@ -1483,9 +1365,7 @@
 \v 38 ◙
 \c 31
 \s1 Bisalil and Uhuliab
-\rem /s1 Craftsmen for the Tent of the Lord’s Presence; Bezalel and Oholiab; Craftsmen: Bezalel and Oholiab
 \r (Exo. 35:30–36:1)
-\rem /r (Exodus 35.30—36.1)
 \p
 \v 1 ◙
 \v 2 ◙
@@ -1511,7 +1391,6 @@
 \li1 …
 \m …
 \s1 The Day of Resting
-\rem /s1 Instructions for the Sabbath; The Sabbath; Sabbath, the Day of Rest; The Sabbath Law
 \p
 \v 12 ◙
 \v 13 ◙
@@ -1519,14 +1398,11 @@
 \v 15 \x + \xo 31:15: \xt Exo 20:8-11; 23:12; 34:21; 35:2; Lev 23:3; Deu 5:12-14.\x*◙
 \v 16 ◙
 \v 17 \x + \xo 31:17: \xt Exo 20:11.\x*◙
-\rem /s1 The Two Tablets of the Covenant
 \p
 \v 18 ◙
 \c 32
 \s1 The larawan of nati of baka bulawan
-\rem /s1 The Gold Bull-Calf; The Golden Calf; The Calf of Gold
 \r (Deu. 9:6-29)
-\rem /r (Deuteronomy 9.6-29)
 \p
 \v 1 \x + \xo 32:1: \xt Acts 7:40.\x*◙
 \p
@@ -1563,7 +1439,6 @@
 \v 27 ◙
 \v 28 ◙
 \v 29 ◙
-\rem /s1 Moses Intercedes for Israel
 \p
 \v 30 ◙
 \v 31 ◙
@@ -1574,7 +1449,6 @@
 \v 35 ◙
 \c 33
 \s1 The pegpaawe them there to Sinai
-\rem /s1 The Command to Leave Sinai; The Lord Orders Israel to Leave Mount Sinai
 \p
 \v 1 \x + \xo 33:1: a \xt Gen 12:7; \xo b \xt Gen 26:3; \xo c \xt Gen 28:13.\x*◙
 \v 2 ◙
@@ -1584,7 +1458,6 @@
 \v 5 ◙
 \v 6 ◙
 \s1 The Balungbalung Temuwanan
-\rem /s1 The Tent of Meeting; The Tent of the Lord’s Presence; The Tent outside the Camp
 \p
 \v 7 ◙
 \v 8 ◙
@@ -1592,7 +1465,6 @@
 \v 10 ◙
 \v 11 ◙
 \s1 The pegkita of Moses of katelesan of Master
-\rem /s1 Moses and the Glory of the Lord; Moses Sees the Lord’s Glory; The Lord Promises to Be with His People; Moses’ Intercession
 \p
 \v 12 ◙
 \v 13 ◙
@@ -1612,10 +1484,8 @@
 \v 22 ◙
 \v 23 ◙
 \c 34
-\s1 The new malumpayag batu
-\rem /s1 A New Copy of the Covenant; The Second Set of Stone Tablets; The New Stone Tablets; Moses Makes New Tablets
+\s1 The new malumpayag rock
 \r (Deu. 10:1-5)
-\rem /r (Deuteronomy 10.1-5)
 \p
 \v 1 ◙
 \v 2 ◙
@@ -1627,8 +1497,6 @@
 \p
 \v 8 ◙
 \v 9 ◙
-\rem /s1 The Covenant Is Renewed; The Covenant Renewed
-\rem /r (Exodus 23.14-19; Deuteronomy 7.1-5; 16.1-17)
 \p
 \v 10 ◙
 \v 11 ◙
@@ -1658,7 +1526,6 @@
 \p
 \v 27 ◙
 \v 28 ◙
-\rem /s1 The Shining Face of Moses; Moses Goes Down from Mount Sinai; The Radiant Face of Moses
 \p
 \v 29 \x + \xo 34:29-35: \xt 2Cor 3:7-16.\x*◙
 \v 30 ◙
@@ -1669,15 +1536,12 @@
 \v 35 ◙
 \c 35
 \s1 The law of Day of Resting
-\rem /s1 Regulations for the Sabbath; Sabbath Regulations; Instructions for the Sabbath
 \p
 \v 1 ◙
 \v 2 \x + \xo 35:2: \xt Exo 20:8-11; 23:12; 31:15; 34:21; Lev 23:3; Deu 5:12-14.\x*◙
 \v 3 ◙
 \s1 The igmandasag of God
-\rem /s1 Preparations for Making the Tabernacle; Offerings for the Sacred Tent; Materials for the Tabernacle; Gifts for the Tabernacle
 \r (Exo. 25:1-9)
-\rem /r (Exodus 25.1-9)
 \p
 \v 4 ◙
 \v 5 ◙
@@ -1686,9 +1550,7 @@
 \v 8 ◙
 \v 9 ◙
 \s1 The things/objects there to holy balungbalung
-\rem /s1 Articles for the Tent of the Lord’s Presence
 \r (Exo. 39:32-43)
-\rem /r (Exodus 39.32-43)
 \p
 \v 10 ◙
 \v 11 ◙
@@ -1701,7 +1563,6 @@
 \v 18 ◙
 \v 19 ◙
 \s1 The gifting of people
-\rem /s1 The People Bring Their Offerings; Offerings for the Tabernacle
 \p
 \v 20 ◙
 \v 21 ◙
@@ -1714,9 +1575,7 @@
 \v 28 ◙
 \v 29 ◙
 \s1 The giving of wisdom/knowledge to Bisalil and to Uhuliab
-\rem /s1 Bezalel and Oholiab; Workers to Make the Tent of the Lord’s Presence
 \r (Exo. 31:1-11)
-\rem /r (Exodus 31.1-11)
 \p
 \v 30 ◙
 \v 31 ◙
@@ -1728,7 +1587,6 @@
 \p
 \v 1 ◙
 \s1 The many gifts of people
-\rem /s1 The People Bring Many Gifts
 \p
 \v 2 ◙
 \v 3 ◙
@@ -1738,9 +1596,7 @@
 \v 6 ◙
 \v 7 ◙
 \s1 The pegpasasindeg of balungbalung
-\rem /s1 Making the Tent of the Lord’s Presence; Building the Tabernacle; Construction of the Tabernacle; The Tabernacle
 \r (Exo. 26:1-37)
-\rem /r (Exodus 26.1-37)
 \p
 \v 8 ◙
 \v 9 ◙
@@ -1779,9 +1635,7 @@
 \v 38 ◙
 \c 37
 \s1 The making of Tahuanan of Kasabutan
-\rem /s1 Making the Covenant Box; Making the Ark of the Covenant; The Ark; Building the Ark
 \r (Exo. 25:10-22)
-\rem /r (Exodus 25.10-22)
 \p
 \v 1 ◙
 \v 2 ◙
@@ -1794,8 +1648,6 @@
 \v 8 ◙
 \v 9 ◙
 \s1 The making of lamisa
-\rem /s1 Making the Table for the Bread of the Presence; Making the Table for the Bread Offered to God; The Table; Building the Table
-\rem /r (Exodus 25.23-30)
 \p
 \v 10 ◙
 \v 11 ◙
@@ -1805,9 +1657,7 @@
 \v 15 ◙
 \v 16 ◙
 \s1 The making of tahuanan of lamp
-\rem /s1 Building the Lampstand; The Lampstand; Making the Lampstand
 \r (Exo. 25:31-40)
-\rem /r (Exodus 25.31-40)
 \p
 \v 17 ◙
 \v 18 ◙
@@ -1818,22 +1668,16 @@
 \v 23 ◙
 \v 24 ◙
 \s1 The making of altar egtutungan of insinsu
-\rem /s1 Building the Incense Altar; Making the Altar of Incense; The Altar of Incense; Making the Altar for Burning Incense
 \r (Exo. 30:1-5)
-\rem /r (Exodus 30.1-5)
 \p
 \v 25 ◙
 \v 26 ◙
 \v 27 ◙
 \v 28 ◙
-\rem /s1 Making the Anointing Oil and the Incense
-\rem /r (Exodus 30.22-38)
 \v 29 \x + \xo 37:29: \xt Exo 30:22-38.\x*◙
 \c 38
 \s1 The making of altar egtutungan of sacrifice
-\rem /s1 The Altar of Burnt Offering; Building the Altar of Burnt Offering; Making the Altar for Burning Offerings; Making the Altar of Burnt Offering
 \r (Exo. 27:1-8)
-\rem /r (Exodus 27.1-8)
 \p
 \v 1 ◙
 \v 2 ◙
@@ -1843,15 +1687,11 @@
 \v 6 ◙
 \v 7 ◙
 \s1 The making of pelenggana lu‑luanan
-\rem /s1 Basin for Washing; Building the Washbasin; Making the Bronze Basin
 \r (Exo. 30:18)
-\rem /r (Exodus 30.18)
 \p
 \v 8 \x + \xo 38:8: \xt Exo 30:18.\x*◙
 \s1 The lama of holy balungbalung
-\rem /s1 Making the Court of the Tabernacle; The Enclosure for the Tent of the Lord’s Presence; The Courtyard; Building the Courtyard
 \r (Exo. 27:9-19)
-\rem /r (Exodus 27.9-19)
 \p
 \v 9 ◙
 \v 10 ◙
@@ -1866,7 +1706,6 @@
 \v 19 ◙
 \v 20 ◙
 \s1 The things/objects of making of balungbalung
-\rem /s1 The Materials Used; Materials of the Tabernacle; Metals Used in the Tent of the Lord’s Presence; Inventory of Materials
 \p
 \v 21 ◙
 \p
@@ -1883,12 +1722,9 @@
 \v 31 ◙
 \c 39
 \s1 The making of igsaluub of priests
-\rem /s1 Making the Vestments for the Priesthood; The Priestly Garments; Clothing for the Priests; Making the Garments for the Priests
 \r (Exo. 28:1-14)
-\rem /r (Exodus 28.1-14)
 \p
 \v 1 ◙
-\rem /s1 The Ephod; Making the Ephod
 \p
 \v 2 ◙
 \v 3 ◙
@@ -1897,9 +1733,7 @@
 \v 6 ◙
 \v 7 ◙
 \s1 The making of hagpi of kumeng
-\rem /s1 Making the Breastpiece; The Breastpiece; Making the Chestpiece
 \r (Exo. 28:15-30)
-\rem /r (Exodus 28.15-30)
 \p
 \v 8 ◙
 \v 9 ◙
@@ -1916,9 +1750,7 @@
 \v 20 ◙
 \v 21 ◙
 \s1 The making of other pad me kumbale
-\rem /s1 Additional Clothing for the Priests; Other Priestly Garments; Making the Other Priestly Garments
 \r (Exo. 28:31-43)
-\rem /r (Exodus 28.31-43)
 \p
 \v 22 ◙
 \v 23 ◙
@@ -1933,9 +1765,7 @@
 \v 30 ◙
 \v 31 ◙
 \s1 The pegkapenga of making of balungbalung
-\rem /s1 The Completion of the Work; Moses Inspects the Work; The Work Completed; Moses Inspects the Tabernacle
 \r (Exo. 35:10-19)
-\rem /r (Exodus 35.10-19)
 \p
 \v 32 ◙
 \v 33 ◙
@@ -1952,7 +1782,6 @@
 \v 43 ◙
 \c 40
 \s1 The pegpasasindeg of balungbalung
-\rem /s1 Setting Up the Tabernacle; The Tabernacle Erected and Its Equipment Installed; The Tabernacle Completed; Setting Up and Dedicating the Tent of the Lord’s Presence
 \p
 \v 1 ◙
 \v 2 ◙
@@ -1992,9 +1821,7 @@
 \v 32 ◙
 \v 33 ◙
 \s1 The katelesan of Master God
-\rem /s1 The Cloud and the Glory; The Glory of the Lord; The Lord’s Glory Fills the Tabernacle; The Cloud over the Tent of the Lord’s Presence
 \r (Num. 9:15-23)
-\rem /r (Numbers 9.15-23)
 \p
 \v 34 \x + \xo 40:34: \xt 1Ki 8:10-11; Isa 6:4; Eze 43:4-5; Rev 15:8.\x*◙
 \v 35 ◙

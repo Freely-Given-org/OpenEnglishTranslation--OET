@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2024-05-08 21:19 by extract_glossed_OSHB_OT_to_ESFM v0.51
+\rem ESFM file created 2024-05-20 21:15 by extract_glossed_OSHB_OT_to_ESFM v0.51
 \rem USFM file edited by ScriptedBibleEditor v0.31
 \h Exodus
 \toc1 Exodus
@@ -13,11 +13,11 @@
 \toc3 Exo
 \mt1 Exodus
 \c 1
-\v 1 And=these [are]_the_names of_the_sons of_Yisərā\sup ʼēl\sup*/(Israel) the=(ones_who)_went towards=Miʦərayim/(Egypt) with Yaˊaqov/(Jacob) everyone and=his/its=house(hold) they_went.
-\v 2 Rəʼūvēn Shiməˊōn Lēvīh and=Yihudah.
+\v 1 And=these [are]_the_names of_the_sons of_Yisərā\sup ʼēl\sup*/(Israel) the=(ones_who)_went towards=Miʦərayim/(Egypt) with Yaˊₐqoⱱ/(Jacob) everyone and=his/its=house(hold) they_went.
+\v 2 Rəʼūⱱēn Shiməˊōn Lēvīh and=Yihudah.
 \v 3 Yissāskār Zebulun and=Benyamin.\f + \fr 1:3 \ft Note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f*
 \v 4 Dān and=Naftali Gād and=Asher.
-\v 5 And=he/it_was every person [who]_came_out of_the_thigh of_Yaˊaqov/(Jacob) seventy person[s] and÷Yōşēf he_was in/on/at/with÷Miʦərayim.
+\v 5 And=he/it_was every person [who]_came_out of_the_thigh of_Yaˊₐqoⱱ/(Jacob) seventy person[s] and÷Yōşēf he_was in/on/at/with÷Miʦərayim.
 \v 6 And=he/it_died Yōşēf and=all brothers÷his and=all/each/any/every the÷generation (the)=that.
 \v 7 And=the_sons of_Yisərā\sup ʼēl\sup*/(Israel) they_were_fruitful and÷multiplied and÷multiplied and÷grew_strong in/on/at/with÷very muchness and=she/it_was_filled the=earth/land DOM=them.
 \v 8 and=he/it_rose_up a_king new over Miʦərayim who not he_knew DOM Yōşēf.
@@ -29,11 +29,11 @@
 \v 14 And÷made_bitter DOM lives÷their in/on/at/with÷labour hard in/on/at/with÷mortar and÷in/on/at/with÷brick and=on/over=all labour in_the=field DOM all work÷their which they_laboured in/among=them in/on/at/with÷ruthlessly.
 \v 15 And=he/it_said the_king of_Miʦərayim to_the÷midwives the÷Hebrew who the_name the=one(f) [was]_Shifərāh and=name_of the=second(fs) [was]_Fūˊāh.
 \v 16 And=he/it_said in/on/at/with÷act_as_midwives÷you_all DOM the÷Hebrew and÷see at the÷birthstool if [is]_a_son he and÷kill DOM=him/it and=if [is]_a_daughter she and÷live.
-\v 17 And÷feared the÷midwives DOM the=ʼElhīmv and=not they_did just=as he_had_spoken to÷them the_king of_Miʦərayim and÷live DOM the=youths.
+\v 17 And÷feared the÷midwives DOM the=ʼₑlhīmv and=not they_did just=as he_had_spoken to÷them the_king of_Miʦərayim and÷live DOM the=youths.
 \v 18 And=he/it_called the_king of_Miʦərayim for_the÷midwives and=he/it_said to÷them why have_you_all_done the÷thing the=this and÷live DOM the=youths.
 \v 19 And÷said the÷midwives to Farəˊoh DOM not like_the÷women the÷from_Miʦərayim/(Miʦərayim) the÷Hebrew DOM [are]_vigorous they in/on/at/with÷before she_comes to÷them the÷midwife and÷give_birth.
 \v 20 And÷dealt_well god to_the÷midwives and÷multiplied the÷people and÷numerous exceedingly.
-\v 21 And=he/it_was DOM they_feared the÷midwives DOM the=ʼElhīmv and=he/it_made to/for=them households.
+\v 21 And=he/it_was DOM they_feared the÷midwives DOM the=ʼₑlhīmv and=he/it_made to/for=them households.
 \v 22 And=he/it_commanded Farəˊoh to/from=all/each/any/every people÷his to=say every the÷son the÷born the÷Nile÷into throw÷him and=all the÷daughter live.
 \c 2
 \v 1 and=he/it_went a_man from÷house of_Lēvīh and=he/it_took DOM the_daughter of_Lēvīh.
@@ -58,26 +58,26 @@
 \v 20 And=he/it_said to daughters÷his and÷where÷he to/for=what this have_you_all_left DOM the=man invite to=him/it and÷eat food.
 \v 21 And÷agreed Mosheh to÷stay with the=man and=he/it_gave DOM Tsiporāh/(Zipporah) daughter÷his to÷Mosheh.
 \v 22 And=she/it_gave_birth a_son and=he/it_called DOM his/its=name Gērəshm DOM he_said a_sojourner I_have_become in=land foreign.
-\v 23 and=he/it_was in/on/at/with÷days the÷many the=those and=he/it_died the_king of_Miʦərayim and÷groaned the_people of_Yisərā\sup ʼēl\sup*/(Israel) from the÷slavery and÷cried_out and÷went_up cry_for_help÷their to the=ʼElhīmv from the÷slavery.
-\v 24 And=he/it_listened god DOM groaning÷their and÷remembered god DOM covenant÷his with ʼAvərāhām with Yiʦəḩāq/(Isaac) and÷with Yaˊaqov/(Jacob).
+\v 23 and=he/it_was in/on/at/with÷days the÷many the=those and=he/it_died the_king of_Miʦərayim and÷groaned the_people of_Yisərā\sup ʼēl\sup*/(Israel) from the÷slavery and÷cried_out and÷went_up cry_for_help÷their to the=ʼₑlhīmv from the÷slavery.
+\v 24 And=he/it_listened god DOM groaning÷their and÷remembered god DOM covenant÷his with ʼAⱱərāhām with Yiʦəḩāq/(Isaac) and÷with Yaˊₐqoⱱ/(Jacob).
 \v 25 And=he/it_saw god DOM the_people of_Yisərā\sup ʼēl\sup*/(Israel) and=he/it_knew god.
 \c 3
-\v 1 and÷Mosheh he_was pasturing DOM the_flock of_Yitərō father-in-law÷his the_priest of_Midəyān and÷led DOM the÷flock behind the÷wilderness and÷came to the_mountain the=ʼElhīmv Horeb÷to.
+\v 1 and÷Mosheh he_was pasturing DOM the_flock of_Yitərō father-in-law÷his the_priest of_Midəyān and÷led DOM the÷flock behind the÷wilderness and÷came to the_mountain the=ʼₑlhīmv Horeb÷to.
 \v 2 And÷appeared the_angel of_Yahweh to=him/it in/on/at/with÷flame of_fire from÷midst the÷bush and=he/it_saw and=see/lo/see the÷bush [was]_burning in/on/at/with÷fire and÷the÷bush not÷it [was]_consumed.
 \v 3 And=he/it_said Mosheh I_will_turn_aside please and÷see DOM the÷sight the=big/great(sg) the=this why not is_it_burning the÷bush.
 \v 4 And=he/it_saw Yahweh DOM_that he_had_turned_aside to=see and=he/it_called to=him/it god from÷midst the÷bush and=he/it_said Oh_Mosheh Mosheh and=he/it_said here÷I.
 \v 5 And=he/it_said do_not draw_near here take_off sandals÷your from=under feet÷your DOM the÷place which you [are]_standing on/upon/above=him/it [is]_ground of_holiness it.
-\v 6 And=he/it_said I [am]_the_god I_will_show=you(ms) the_god of_ʼAvərāhām the_god of_Yiʦəḩāq/(Isaac) and÷god of_Yaˊaqov/(Jacob) and÷hid Mosheh his/its=faces/face DOM he_was_afraid to÷look to the=ʼElhīmv.
+\v 6 And=he/it_said I [am]_the_god I_will_show=you(ms) the_god of_ʼAⱱərāhām the_god of_Yiʦəḩāq/(Isaac) and÷god of_Yaˊₐqoⱱ/(Jacob) and÷hid Mosheh his/its=faces/face DOM he_was_afraid to÷look to the=ʼₑlhīmv.
 \v 7 And=he/it_said Yahweh indeed_(see) I_have_seen DOM the_affliction people÷my which in/on/at/with÷Miʦərayim/(Egypt) and=DOM cry÷their I_have_heard from=face/in_front_of taskmasters÷their DOM I_know DOM sufferings÷their.
 \v 8 And÷come_down to÷deliver÷them from÷hand of_Miʦərayim and÷to÷bring_up÷them from the=earth/land the=that into a_land good and÷spacious into a_land flowing of_milk and÷honey to the_place the÷Canaanites and÷the÷Hittites and÷the÷Amorites and÷the÷Perizzites and÷the÷Hivites and÷the÷Jebusites.
 \v 9 And=now there the_cry_of_distress of_the_people of_Yisərā\sup ʼēl\sup*/(Israel) it_has_come to÷me and=also I_have_seen DOM the÷oppression which Miʦərayim [are]_oppressing DOM=them.
 \v 10 And=now come and÷send÷you to Farəˊoh and÷bring DOM people÷my the_people of_Yisərā\sup ʼēl\sup*/(Israel) out_of÷Miʦərayim.
-\v 11 And=he/it_said Mosheh to the=ʼElhīmv who [am]_I (cmp) I_will_go to Farəˊoh and=because/when I_will_bring_out DOM the_people of_Yisərā\sup ʼēl\sup*/(Israel) of÷Miʦərayim.
-\v 12 And=he/it_said DOM I_will_be with÷you and=this to÷you the÷sign DOM_that I sent÷you in/on/at/with÷brought_out÷you DOM the÷people from=Miʦrayim/Miʦərayim worship DOM the=ʼElhīmv on the÷mountain the÷this.
-\v 13 And=he/it_said Mosheh to the=ʼElhīmv here I [am]_about_to_go to the_people of_Yisərā\sup ʼēl\sup*/(Israel) and÷say to/for=them the_god fathers÷your_all's sent÷me to÷you_all and÷ask to=me what name÷his what will_I_say to÷them.
+\v 11 And=he/it_said Mosheh to the=ʼₑlhīmv who [am]_I (cmp) I_will_go to Farəˊoh and=because/when I_will_bring_out DOM the_people of_Yisərā\sup ʼēl\sup*/(Israel) of÷Miʦərayim.
+\v 12 And=he/it_said DOM I_will_be with÷you and=this to÷you the÷sign DOM_that I sent÷you in/on/at/with÷brought_out÷you DOM the÷people from=Miʦrayim/Miʦərayim worship DOM the=ʼₑlhīmv on the÷mountain the÷this.
+\v 13 And=he/it_said Mosheh to the=ʼₑlhīmv here I [am]_about_to_go to the_people of_Yisərā\sup ʼēl\sup*/(Israel) and÷say to/for=them the_god fathers÷your_all's sent÷me to÷you_all and÷ask to=me what name÷his what will_I_say to÷them.
 \v 14 And=he/it_said god to Mosheh I_am [that]_which I_am and=he/it_said thus you_will_say to÷sons of_Yisərā\sup ʼēl\sup*/(Israel) I_am sent÷me to÷you_all.
-\v 15 And=he/it_said again god to Mosheh thus you_will_say to the_people of_Yisərā\sup ʼēl\sup*/(Israel) Yahweh the_god fathers÷your_all's the_god of_ʼAvərāhām the_god of_Yiʦəḩāq/(Isaac) and÷god of_Yaˊaqov/(Jacob) sent÷me to÷you_all this name÷my to=vanishing_point and=this remembered÷my for÷generation generation.
-\v 16 Go and÷assemble DOM the_elders of_Yisərā\sup ʼēl\sup*/(Israel) and÷say to÷them Yahweh the_god fathers÷your_all's he_appeared to=me the_god of_ʼAvərāhām Yiʦəḩāq/(Isaac) and÷Yaˊaqov/(Jacob) to=say closely_(observe) I_have_observed DOM÷you_all and=DOM the÷done to/for=you_all in/on/at/with÷Miʦərayim/(Egypt).
+\v 15 And=he/it_said again god to Mosheh thus you_will_say to the_people of_Yisərā\sup ʼēl\sup*/(Israel) Yahweh the_god fathers÷your_all's the_god of_ʼAⱱərāhām the_god of_Yiʦəḩāq/(Isaac) and÷god of_Yaˊₐqoⱱ/(Jacob) sent÷me to÷you_all this name÷my to=vanishing_point and=this remembered÷my for÷generation generation.
+\v 16 Go and÷assemble DOM the_elders of_Yisərā\sup ʼēl\sup*/(Israel) and÷say to÷them Yahweh the_god fathers÷your_all's he_appeared to=me the_god of_ʼAⱱərāhām Yiʦəḩāq/(Isaac) and÷Yaˊₐqoⱱ/(Jacob) to=say closely_(observe) I_have_observed DOM÷you_all and=DOM the÷done to/for=you_all in/on/at/with÷Miʦərayim/(Egypt).
 \v 17 And÷promised I_will_bring_up DOM÷you_all out_of÷misery of_Miʦərayim into the_land the÷Canaanites and÷the÷Hittites and÷the÷Amorites and÷the÷Perizzites and÷the÷Hivites and÷the÷Jebusites into a_land flowing of_milk and÷honey.
 \v 18 And÷listen to÷voice÷you and÷go you and÷elders of_Yisərā\sup ʼēl\sup*/(Israel) to the_king of_Miʦərayim and÷say to=him/it Yahweh the_god the÷Hebrews he_has_met with÷us and=now let_us_go please a_journey of_three days in/on/at/with÷wilderness and÷sacrifice to/for=\nd YHWH\nd* god÷our.
 \v 19 And÷I I_know DOM_that not he_will_permit DOM÷you_all the_king of_Miʦərayim to÷go and=not in/on/at/with÷hand strong.
@@ -89,7 +89,7 @@
 \v 2 And=he/it_said to=him/it Yahweh mmm\f + \fr 4:2 \ft Variant note: מ/זה: (x-qere) 'מַה': lemma=4100 morph=HTi id=02Hmd מַה־ ־'זֶּ֣ה': lemma=2088 morph=HPdxms id=024Yz זֶּ֣ה\f*\f + \fr 4:2 \ft Note: Adaptations to a Qere which L and BHS, by their design, do not indicate. \f* in/on/at/with÷hand÷your and=he/it_said a_staff.
 \v 3 And=he/it_said throw÷it towards=land and÷threw÷it towards=land and=he/it_was into÷snake and÷ran Mosheh from÷before÷it.
 \v 4 And=he/it_said Yahweh to Mosheh stretch_out hand÷your and÷grasp in/on/at/with÷tail÷its and÷reached_out his/its=hand and÷caught in/on/over=him/it and=he/it_was into÷staff in/on/at/with÷hand÷his.
-\v 5 So_that they_may_believe DOM_that he_appeared to÷you Yahweh the_god fathers÷their the_god of_ʼAvərāhām the_god of_Yiʦəḩāq/(Isaac) and÷god of_Yaˊaqov/(Jacob).
+\v 5 So_that they_may_believe DOM_that he_appeared to÷you Yahweh the_god fathers÷their the_god of_ʼAⱱərāhām the_god of_Yiʦəḩāq/(Isaac) and÷god of_Yaˊₐqoⱱ/(Jacob).
 \v 6 And=he/it_said Yahweh to=him/it again put please hand÷your in/on/at/with÷cloak÷your and=he/it_brought his/its=hand in/on/at/with÷cloak÷his and÷took_out÷it and=see/lo/see his/its=hand [was]_leprous like_the÷snow.
 \v 7 And=he/it_said return hand÷your into cloak÷your and÷put_back his/its=hand into cloak÷his and÷took_out÷it of÷rest÷his and=see/lo/see it_had_turned_back like÷flesh÷his.
 \v 8 And=it_was if not they_will_believe to/for=you(fs) and=not they_will_listen to÷voice the÷sign the÷first and÷believe in÷voice the÷sign the÷second.
@@ -98,29 +98,29 @@
 \v 11 And=he/it_said Yahweh to=him/it who did_he_make a_mouth to_THE÷mortals or who does_he_make dumb or deaf or seeing or blind not [do]_I Yahweh.
 \v 12 And=now go and÷I I_will_be with mouth÷your and÷teach÷you [that]_which you_will_say.
 \v 13 And=he/it_said pardon_me my=master/master send please in/on/at/with÷someone_else of_[whomever]_you_will_send.
-\v 14 And=it_glowed/burned the_anger of_Yahweh in/on/at/with÷Mosheh and=he/it_said not [is]_ʼAharon your(ms)=brother/kindred the÷from_tribe_of_Lēvī I_know DOM_that well_(speak) he_speaks he and=also there he [is]_about_to_come_out to÷meet÷you and÷sees÷you and÷glad in/on/at/with÷heart÷his.
+\v 14 And=it_glowed/burned the_anger of_Yahweh in/on/at/with÷Mosheh and=he/it_said not [is]_ʼAhₐron your(ms)=brother/kindred the÷from_tribe_of_Lēvī I_know DOM_that well_(speak) he_speaks he and=also there he [is]_about_to_come_out to÷meet÷you and÷sees÷you and÷glad in/on/at/with÷heart÷his.
 \v 15 And÷speak to=him/it and÷put DOM the÷words in/on/at/with÷mouth÷his and÷I I_will_be with mouth÷your and÷with mouth÷his and÷teach DOM÷you_all DOM [that]_which do.
 \v 16 And÷speak he to/for=yourself(m) to the÷people and=it_was he he_will_become for÷you as÷mouth and=you(ms) you_will_become for=him/it as÷god.
 \v 17 And=DOM the÷staff the=this you_will_take in/on/at/with÷hand÷your which you_will_do in/on/over=him/it DOM the÷signs.
 \v 18 and=he/it_went Mosheh and÷back to Yitərō father-in-law÷his and=he/it_said to=him/it let_me_go please and÷return to brothers÷my who in/on/at/with÷Miʦərayim/(Egypt) and÷see if÷still÷they living and=he/it_said Yitərō to÷Mosheh go in÷peace.
 \v 19 And=he/it_said Yahweh to Mosheh in/on/at/with÷Midəyān go return Miʦərayim DOM they_have_died all the÷men the÷seeking DOM life÷your.
-\v 20 And=he/it_took Mosheh DOM his/its=wife/woman and=DOM sons÷his and÷put÷them on the÷donkey and÷returned towards=land of_Miʦərayim and=he/it_took Mosheh DOM the_staff the=ʼElhīmv in=his/its=hand.
+\v 20 And=he/it_took Mosheh DOM his/its=wife/woman and=DOM sons÷his and÷put÷them on the÷donkey and÷returned towards=land of_Miʦərayim and=he/it_took Mosheh DOM the_staff the=ʼₑlhīmv in=his/its=hand.
 \v 21 And=he/it_said Yahweh to Mosheh in/on/at/with÷go÷you to÷back Miʦərayim÷to see all the÷wonders which I_have_put in/on/at/with÷power÷your and÷perform÷them to=(the)_face_of/in_front_of/before Farəˊoh and÷I I_will_make_strong DOM his/its=heart and=not he_will_let_go DOM the÷people.
 \v 22 And÷say to Farəˊoh thus he_says Yahweh son÷my firstborn÷my Yisərā\sup ʼēl\sup*/(Israel).
 \v 23 And÷said to÷you let_go DOM son÷my and÷worship÷me and÷refused to÷let_go÷him here I [am]_about_to_kill DOM son÷your firstborn÷your.
 \v 24 And=he/it_was in/on/at/with÷way in/on/at/with÷lodging_place and÷met÷him Yahweh and=he/it_sought kill÷him.
 \v 25 And=she/it_took Tsiporāh/(Zipporah) a_flint and÷cut_off DOM the_foreskin son's÷her and÷touched at÷feet÷his and=she/it_said DOM [are]_a_bridegroom of_blood(s) you to=me.
 \v 26 And÷let_alone from=him/it then she_said a_bridegroom of_blood(s) because_of_the÷circumcision.
-\v 27 and=he/it_said Yahweh to ʼAharon go to÷meet Mosheh the÷wilderness÷into and=he/it_went and÷met÷him in/on/at/with÷mountain the=ʼElhīmv and÷kissed to=him/it.
-\v 28 And÷told Mosheh to÷ʼAharon DOM all the_words of_Yahweh which sent÷him and=DOM all the÷signs which commanded÷him.
-\v 29 And=he/it_went Mosheh and÷ʼAharon and÷assembled DOM all the_elders of_the_people of_Yisərā\sup ʼēl\sup*/(Israel).
-\v 30 And=he/it_spoke ʼAharon DOM all the÷words which he_had_spoken Yahweh to Mosheh and=he/it_made the÷signs in÷sight the÷people.
+\v 27 and=he/it_said Yahweh to ʼAhₐron go to÷meet Mosheh the÷wilderness÷into and=he/it_went and÷met÷him in/on/at/with÷mountain the=ʼₑlhīmv and÷kissed to=him/it.
+\v 28 And÷told Mosheh to÷ʼAhₐron DOM all the_words of_Yahweh which sent÷him and=DOM all the÷signs which commanded÷him.
+\v 29 And=he/it_went Mosheh and÷ʼAhₐron and÷assembled DOM all the_elders of_the_people of_Yisərā\sup ʼēl\sup*/(Israel).
+\v 30 And=he/it_spoke ʼAhₐron DOM all the÷words which he_had_spoken Yahweh to Mosheh and=he/it_made the÷signs in÷sight the÷people.
 \v 31 And÷believed the÷people and=they_heard DOM_that he_had_observed Yahweh DOM the_people of_Yisərā\sup ʼēl\sup*/(Israel) and=because/when he_had_seen DOM misery÷their and÷bowed_down and÷worshiped.\f + \fr 4:31 \ft Note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f*
 \c 5
-\v 1 and=after they_went Mosheh and÷ʼAharon and=they_said to Farəˊoh thus he_says Yahweh the_god of_Yisərā\sup ʼēl\sup*/(Israel) let_go DOM people÷my and÷hold_a_festival to=me in/on/at/with÷wilderness.
+\v 1 and=after they_went Mosheh and÷ʼAhₐron and=they_said to Farəˊoh thus he_says Yahweh the_god of_Yisərā\sup ʼēl\sup*/(Israel) let_go DOM people÷my and÷hold_a_festival to=me in/on/at/with÷wilderness.
 \v 2 And=he/it_said Farəˊoh who [is]_Yahweh (cmp) I_will_listen in/on/at/with÷voice÷him to÷let_go DOM Yisərā\sup ʼēl\sup*/(Israel) not I_know DOM Yahweh and=also DOM Yisərā\sup ʼēl\sup*/(Israel) not I_will_let_go.
 \v 3 And=they_said the_god the÷Hebrews he_has_met with÷us let_us_go please a_journey of_three days in/on/at/with÷wilderness and÷sacrifice to/for=\nd YHWH\nd* god÷our lest strike÷us in/on/at/with÷pestilence or in/on/at/with÷sword.
-\v 4 And=he/it_said to÷them the_king of_Miʦərayim/(Egypt) to/for=what Oh_Mosheh and÷ʼAharon are_you_all_causing_to_refrain DOM the÷people from÷work÷their go to÷labours÷your_all's.
+\v 4 And=he/it_said to÷them the_king of_Miʦərayim/(Egypt) to/for=what Oh_Mosheh and÷ʼAhₐron are_you_all_causing_to_refrain DOM the÷people from÷work÷their go to÷labours÷your_all's.
 \v 5 And=he/it_said Farəˊoh here [is]_many now the_people the=earth/land and÷stop DOM=them from÷working÷their.
 \v 6 And=he/it_commanded Farəˊoh in_the=day (the)=that DOM the÷taskmasters in/on/at/with÷people and=DOM foremen÷their to=say.
 \v 7 Not continue to÷give straw to_the÷people to÷making the÷bricks as÷yesterday three_days_ago they let_them_go and÷gather to/for=them straw.
@@ -136,62 +136,62 @@
 \v 17 And=he/it_said [are]_idle you_all [are]_idle on/upon/above/on_account_of//he/it_went_in yes/correct/thus/so you_all [are]_saying let_us_go let_us_sacrifice to/for=\nd YHWH\nd*.
 \v 18 And=now go work and÷straw not it_will_be_given to/for=you_all and÷quota of_bricks you_all_will_give.
 \v 19 And=they_saw the_foremen of_the_people of_Yisərā\sup ʼēl\sup*/(Israel) DOM=them in/on/at/with÷trouble to=say not you_all_will_diminish of÷bricks÷your_all's a_matter of_a_day in=its=day.
-\v 20 And÷met DOM Mosheh and ʼAharon standing to÷meet÷them in/on/at/with÷left÷they from Farəˊoh.
+\v 20 And÷met DOM Mosheh and ʼAhₐron standing to÷meet÷them in/on/at/with÷left÷they from Farəˊoh.
 \v 21 And=they_said to÷them may_he_look Yahweh upon÷you_all and÷judge that you_all_have_made_stink DOM bad_odor÷us in/on=both_eyes_of of_Farəˊoh and÷in/on/at/with÷eyes officials÷his to÷put a_sword in/on/at/with÷hand÷their to÷kill÷us.
 \v 22 And÷returned Mosheh to Yahweh and÷said my=master/master to/for÷why have_you_done_harm to_the÷people the=this to/for=what this send÷me.
 \v 23 And÷ever÷since I_went to Farəˊoh to÷speak in/on/at/with÷name÷your he_has_done_harm to_the÷people the=this and÷to_increase not you_have_delivered DOM people÷your.
 \c 6
 \v 1 And=he/it_said Yahweh to Mosheh now you_will_see [that]_which I_will_do to÷Farəˊoh DOM in/on/at/with÷hand strong let_go÷them and÷in/on/at/with÷hand strong drive_out÷them from÷land÷his.
 \v 2 and=he/it_spoke god to Mosheh and=he/it_said to=him/it I [am]_Yahweh.
-\v 3 And÷appeared to ʼAvərāhām to Yiʦəḩāq/(Isaac) and÷to Yaˊaqov/(Jacob) in/on/at/with÷god almighty and÷name÷my Yahweh not I_made_myself_known to/for=them.
+\v 3 And÷appeared to ʼAⱱərāhām to Yiʦəḩāq/(Isaac) and÷to Yaˊₐqoⱱ/(Jacob) in/on/at/with÷god almighty and÷name÷my Yahweh not I_made_myself_known to/for=them.
 \v 4 And=also I_established DOM covenant÷my with=them to÷give to/for=them DOM the_land of_Kinaˊan DOM the_land sojournings÷their which they_sojourned in/on/at/with÷her.
 \v 5 And=also I I_have_heard DOM the_groaning of_the_people of_Yisərā\sup ʼēl\sup*/(Israel) whom Miʦərayim/(Egypt) [are]_compelling_to_labour DOM=them and÷remembered DOM covenant÷my.
 \v 6 For=so/thus/hence say to÷sons of_Yisərā\sup ʼēl\sup*/(Israel)\f + \fr 6:6 \ft Note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f* I [am]_Yahweh and÷bring_out DOM÷you_all from=under the_forced_labour of_Miʦərayim and÷deliver DOM÷you_all from÷slavery÷them and÷redeem DOM÷you_all in/on/at/with÷arm outstretched and÷in/on/at/with÷acts_of_judgment great.
 \v 7 And÷take DOM÷you_all to=me as÷people and=I_will_be to/for=you_all as÷god and÷know DOM_that I [am]_Yahweh god÷your_all's the÷brought_out DOM÷you_all from=under the_forced_labour of_Miʦərayim.
-\v 8 And÷bring DOM÷you_all into the=earth/land which I_lifted_up DOM hand_of÷me to÷give DOM=her/it to÷ʼAvərāhām to÷Yiʦəḩāq/(Isaac) and÷to÷Yaˊaqov/(Jacob) and÷give DOM=her/it to/for=you_all a_possession I [am]_Yahweh.
+\v 8 And÷bring DOM÷you_all into the=earth/land which I_lifted_up DOM hand_of÷me to÷give DOM=her/it to÷ʼAⱱərāhām to÷Yiʦəḩāq/(Isaac) and÷to÷Yaˊₐqoⱱ/(Jacob) and÷give DOM=her/it to/for=you_all a_possession I [am]_Yahweh.
 \v 9 And=he/it_spoke Mosheh thus to the_people of_Yisərā\sup ʼēl\sup*/(Israel) and=not they_listened to Mosheh because_of÷shortness_of of_spirit and÷because_of÷bondage hard.
 \v 10 and=he/it_spoke Yahweh to Mosheh to÷saying.
 \v 11 Go speak to Farəˊoh the_king of_Miʦərayim and÷let_go DOM the_people of_Yisərā\sup ʼēl\sup*/(Israel) out_of÷land÷his.
 \v 12 And=he/it_spoke Mosheh to=(the)_face_of/in_front_of/before Yahweh to=say here the_people of_Yisərā\sup ʼēl\sup*/(Israel) not they_have_listened to=me and÷how listen÷me Farəˊoh and÷I [am]_uncircumcised of_lips.
-\v 13 and=he/it_spoke Yahweh to Mosheh and÷to ʼAharon and÷commanded÷them to the_people of_Yisərā\sup ʼēl\sup*/(Israel) and=near/to Farəˊoh the_king of_Miʦərayim/(Egypt) to÷bring_out DOM the_people of_Yisərā\sup ʼēl\sup*/(Israel) of÷land of_Miʦərayim.
-\v 14 these [were]_the_heads of_the_house fathers'÷their the_sons of_Rəʼūvēn the_firstborn of_Yisərā\sup ʼēl\sup*/(Israel) [were]_Hanoch and÷Pallu Ḩeʦərōn and÷Carmi these [were]_the_clans of_Rəʼūvēn.
+\v 13 and=he/it_spoke Yahweh to Mosheh and÷to ʼAhₐron and÷commanded÷them to the_people of_Yisərā\sup ʼēl\sup*/(Israel) and=near/to Farəˊoh the_king of_Miʦərayim/(Egypt) to÷bring_out DOM the_people of_Yisərā\sup ʼēl\sup*/(Israel) of÷land of_Miʦərayim.
+\v 14 these [were]_the_heads of_the_house fathers'÷their the_sons of_Rəʼūⱱēn the_firstborn of_Yisərā\sup ʼēl\sup*/(Israel) [were]_Hanoch and÷Pallu Ḩeʦərōn and÷Carmi these [were]_the_clans of_Rəʼūⱱēn.
 \v 15 And=the_sons of_Shiməˊōn [were]_Jemuel and÷Jamin and÷Ohad and÷Jachin and÷Zohar and÷Shaul the_son the÷Canaanite these [were]_the_clans of_Shiməˊōn.
 \v 16 And=these [were]_the_names of_the_sons of_Lēvīh according_to÷genealogies÷their Gershon and÷Kohath and÷Merari and÷years of_the_life of_Lēvīh [were]_seven and=thirty and=one_hundred year[s].
 \v 17 The_sons of_Gershon [were]_Libni and÷Shimei to=their=clans.
 \v 18 And=the_sons of_Kohath [were]_ˊAmərām and÷Izhar and÷Hebron and÷ˊUzziy\sup ʼēl\sup* and÷years of_the_life of_Kohath [were]_three and=thirty and=one_hundred year[s].
 \v 19 And=the_sons of_Merari [were]_Mahli and÷Mushi these [were]_the_clans the÷Levites according_to÷genealogies÷their.
-\v 20 And=he/it_took ˊAmərām DOM Yōkeved father's_sister÷his to=him/it to/for=(a)_woman and=she/it_gave_birth to=him/it DOM ʼAharon and=DOM Mosheh and÷years of_the_life of_ˊAmərām [were]_seven and=thirty and=one_hundred year[s].
+\v 20 And=he/it_took ˊAmərām DOM Yōkeⱱed father's_sister÷his to=him/it to/for=(a)_woman and=she/it_gave_birth to=him/it DOM ʼAhₐron and=DOM Mosheh and÷years of_the_life of_ˊAmərām [were]_seven and=thirty and=one_hundred year[s].
 \v 21 And=the_sons of_Izhar [were]_Qoraḩ and÷Nepheg and÷Zichri.
 \v 22 And=the_sons of_ˊUzziy\sup ʼēl\sup* [were]_Mīshā\sup ʼēl\sup* and÷Elzaphan and÷Sithri.
-\v 23 And=he/it_took ʼAharon DOM ʼElīshevaˊ the_daughter of_ˊAmmiynādāv the_sister of_Naḩəshōn to=him/it to/for=(a)_woman and=she/it_gave_birth to=him/it DOM Nadab and=DOM Abihu DOM ʼEləˊāzār and=DOM Ithamar.
+\v 23 And=he/it_took ʼAhₐron DOM ʼₑlīsheⱱaˊ the_daughter of_ˊAmmiynādāⱱ the_sister of_Naḩəshōn to=him/it to/for=(a)_woman and=she/it_gave_birth to=him/it DOM Nadab and=DOM Abihu DOM ʼEləˊāzār and=DOM Ithamar.
 \v 24 And=the_sons of_Qoraḩ [were]_Assir and÷Elkanah and÷Abiasaph these [were]_the_clans the÷Qoraḩites.
-\v 25 And÷ʼEləˊāzār the_son of_ʼAharon he_took to=him/it one_of÷daughters of_Fūţī\sup ʼēl\sup* to=him/it to/for=(a)_woman and=she/it_gave_birth to=him/it DOM Fīnəḩāş these [were]_the_heads of_the_fathers the÷Levites to=their=clans.
-\v 26 That ʼAharon and÷Mosheh [were_those]_whom he_said Yahweh to/for=them bring_out DOM the_people of_Yisərā\sup ʼēl\sup*/(Israel) of÷land of_Miʦərayim/(Egypt) on divisions÷their.
-\v 27 They the÷spoke to Farəˊoh the_king of_Miʦərayim about÷bring_out DOM the_people of_Yisərā\sup ʼēl\sup*/(Israel) of÷Miʦərayim that Mosheh and÷ʼAharon.
+\v 25 And÷ʼEləˊāzār the_son of_ʼAhₐron he_took to=him/it one_of÷daughters of_Fūţī\sup ʼēl\sup* to=him/it to/for=(a)_woman and=she/it_gave_birth to=him/it DOM Fīnəḩāş these [were]_the_heads of_the_fathers the÷Levites to=their=clans.
+\v 26 That ʼAhₐron and÷Mosheh [were_those]_whom he_said Yahweh to/for=them bring_out DOM the_people of_Yisərā\sup ʼēl\sup*/(Israel) of÷land of_Miʦərayim/(Egypt) on divisions÷their.
+\v 27 They the÷spoke to Farəˊoh the_king of_Miʦərayim about÷bring_out DOM the_people of_Yisərā\sup ʼēl\sup*/(Israel) of÷Miʦərayim that Mosheh and÷ʼAhₐron.
 \v 28 And=he/it_was in/on=day [when]_he_spoke Yahweh to Mosheh in=land of_Miʦərayim.
 \v 29 and=he/it_spoke Yahweh to Mosheh to÷saying I [am]_Yahweh speak to Farəˊoh the_king of_Miʦərayim DOM all that I [am]_speaking to÷you.
 \v 30 And=he/it_said Mosheh to=(the)_face_of/in_front_of/before Yahweh here I [am]_uncircumcised of_lips and÷how will_he_listen to=me Farəˊoh.
 \c 7
-\v 1 and=he/it_said Yahweh to Mosheh see made÷you a_god to÷Farəˊoh and÷ʼAharon your(ms)=brother/kindred he_will_be prophet÷your.
-\v 2 You you_will_speak DOM all that command÷you and÷ʼAharon your(ms)=brother/kindred he_will_speak to Farəˊoh and÷let_go DOM the_people of_Yisərā\sup ʼēl\sup*/(Israel) out_of÷land÷his.
+\v 1 and=he/it_said Yahweh to Mosheh see made÷you a_god to÷Farəˊoh and÷ʼAhₐron your(ms)=brother/kindred he_will_be prophet÷your.
+\v 2 You you_will_speak DOM all that command÷you and÷ʼAhₐron your(ms)=brother/kindred he_will_speak to Farəˊoh and÷let_go DOM the_people of_Yisərā\sup ʼēl\sup*/(Israel) out_of÷land÷his.
 \v 3 And÷I I_will_make_stubborn DOM the_heart of_Farəˊoh and÷multiply DOM signs÷my and=DOM wonders÷my in=land of_Miʦərayim.
 \v 4 And=not he_will_listen to÷you_all Farəˊoh and÷lay DOM hand÷my in/on/at/with÷Miʦərayim and÷bring_out DOM divisions÷my DOM people÷my the_people of_Yisərā\sup ʼēl\sup*/(Israel) out_of÷land of_Miʦərayim in/on/at/with÷acts_of_judgment great.
 \v 5 And÷know Miʦərayim DOM_that I [am]_Yahweh in/on/at/with÷stretch_out÷I DOM hand÷my on Miʦərayim/(Egypt) and÷bring_out DOM the_people of_Yisərā\sup ʼēl\sup*/(Israel) from÷among÷them.
-\v 6 And=he/it_made Mosheh and÷ʼAharon just=as he_commanded Yahweh DOM=them so they_did.
-\v 7 And÷Mosheh [was]_a_son of_eighty year[s] and÷ʼAharon [was]_a_son of_three and=eighty year[s] in/on/at/with÷spoke÷they to Farəˊoh.
-\v 8 and=he/it_said Yahweh to Mosheh and÷to ʼAharon to=say.
-\v 9 DOM he_will_say to÷you_all Farəˊoh to=say give to/for=you_all a_wonder and÷say to ʼAharon take DOM staff÷your and÷throw_down to=(the)_face_of/in_front_of/before Farəˊoh it_will_become into÷snake.
-\v 10 And÷went Mosheh and÷ʼAharon to Farəˊoh and÷did\f + \fr 7:10 \ft Note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f* so just=as he_had_commanded Yahweh and÷threw_down ʼAharon DOM staff÷his to=(the)_face_of/in_front_of/before Farəˊoh and÷before officials÷his and=he/it_was into÷snake.
+\v 6 And=he/it_made Mosheh and÷ʼAhₐron just=as he_commanded Yahweh DOM=them so they_did.
+\v 7 And÷Mosheh [was]_a_son of_eighty year[s] and÷ʼAhₐron [was]_a_son of_three and=eighty year[s] in/on/at/with÷spoke÷they to Farəˊoh.
+\v 8 and=he/it_said Yahweh to Mosheh and÷to ʼAhₐron to=say.
+\v 9 DOM he_will_say to÷you_all Farəˊoh to=say give to/for=you_all a_wonder and÷say to ʼAhₐron take DOM staff÷your and÷throw_down to=(the)_face_of/in_front_of/before Farəˊoh it_will_become into÷snake.
+\v 10 And÷went Mosheh and÷ʼAhₐron to Farəˊoh and÷did\f + \fr 7:10 \ft Note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f* so just=as he_had_commanded Yahweh and÷threw_down ʼAhₐron DOM staff÷his to=(the)_face_of/in_front_of/before Farəˊoh and÷before officials÷his and=he/it_was into÷snake.
 \v 11 And=he/it_called also Farəˊoh for_THE÷wise and=to_the=sorcerers and÷did also they the_soothsayer-priests of_Miʦərayim in/on/at/with÷secret_arts÷their thus.
-\v 12 And÷threw_down each_one staff÷his and=they_were into÷snakes and÷swallowed_up the_staff of_ʼAharon DOM staffs÷their.
+\v 12 And÷threw_down each_one staff÷his and=they_were into÷snakes and÷swallowed_up the_staff of_ʼAhₐron DOM staffs÷their.
 \v 13 And÷hardened the_heart of_Farəˊoh and=not he_listened to÷them just=as he_had_said Yahweh.
 \v 14 and=he/it_said Yahweh to Mosheh [is]_heavy the_heart of_Farəˊoh he_has_refused to÷let_go the÷people.
 \v 15 Go to Farəˊoh in/on/at/with÷morning there [he_is]_going_out the÷water÷to and÷wait to÷meet÷him on the_bank the÷Nile and÷the÷staff which it_was_changed into÷snake you_will_take in/on/at/with÷hand÷your.
 \v 16 And÷say to=him/it Yahweh the_god the÷Hebrews sent÷me to÷you to=say let_go DOM people÷my and÷worship÷me in/on/at/with÷wilderness and=see/lo/see not you_have_listened until thus.
 \v 17 Thus he_says Yahweh in/on/at/with÷this you_will_know DOM_that I [am]_Yahweh here I [am]_about_to_strike in/on/at/with÷staff which in/on/at/with÷hand÷my (on) the=waters which in/on/at/with÷Nile and÷changed to÷blood.
 \v 18 And÷the÷fish which in/on/at/with÷Nile it_will_die and÷stink the÷river and÷unable Miʦərayim/(Egypt) to÷drink water from the÷Nile.
-\v 19 and=he/it_said Yahweh to Mosheh say to ʼAharon take staff÷your and÷stretch_out hand÷your over the_waters of_Miʦərayim over rivers÷their over canals÷their and÷over ponds÷their and÷over every (the)_collecting_place water÷their and÷become blood and=it_was blood in=all the_land of_Miʦərayim and÷in/on/at/with÷vessels_of_wood and÷in/on/at/with÷vessels_of_stone.
-\v 20 And÷did so Mosheh and÷ʼAharon just=as he_had_commanded Yahweh and÷raised in/on/at/with÷staff and÷struck DOM the=waters which in/on/at/with÷Nile in÷sight of_Farəˊoh and÷in÷sight officials÷his and÷turned all the=waters which in/on/at/with÷Nile to÷blood.
+\v 19 and=he/it_said Yahweh to Mosheh say to ʼAhₐron take staff÷your and÷stretch_out hand÷your over the_waters of_Miʦərayim over rivers÷their over canals÷their and÷over ponds÷their and÷over every (the)_collecting_place water÷their and÷become blood and=it_was blood in=all the_land of_Miʦərayim and÷in/on/at/with÷vessels_of_wood and÷in/on/at/with÷vessels_of_stone.
+\v 20 And÷did so Mosheh and÷ʼAhₐron just=as he_had_commanded Yahweh and÷raised in/on/at/with÷staff and÷struck DOM the=waters which in/on/at/with÷Nile in÷sight of_Farəˊoh and÷in÷sight officials÷his and÷turned all the=waters which in/on/at/with÷Nile to÷blood.
 \v 21 And÷the÷fish which in/on/at/with÷Nile it_died and÷stank the÷river and=not they_were_able Miʦərayim to÷drink water from the÷Nile and=he/it_was the÷blood in=all the_land of_Miʦərayim.
 \v 22 And÷did thus the_soothsayer-priests of_Miʦərayim in/on/at/with÷secret_arts÷their and÷hardened the_heart of_Farəˊoh and=not he_listened to÷them just=as he_had_said Yahweh.
 \v 23 And÷turned Farəˊoh and÷went into house÷his and=not he_set his/its=heart also for÷this.
@@ -202,19 +202,19 @@
 \v 28 \f + \fr 7:28 \ft Note: KJB: Exod.8.3\f* and÷swarm the÷Nile frogs and÷come_up and÷go in/on/at/with÷palace÷your and÷in/on/at/with÷room_of sleep_of÷your and÷on bed÷your and÷in/on/at/with÷houses your=servants and÷in/on/at/with÷people÷your and÷in/on/at/with÷ovens÷your and÷in/on/at/with÷kneading_bowls÷your.
 \v 29 \f + \fr 7:29 \ft Note: KJB: Exod.8.4\f* and÷in/on/at/with÷you and÷in/on/at/with÷people÷your and=on/over=all your=servants they_will_go_up the÷frogs.
 \c 8
-\v 1 \f + \fr 8:1 \ft Note: KJB: Exod.8.5\f* and=he/it_said Yahweh to Mosheh say to ʼAharon stretch_out DOM hand÷your in/on/at/with÷staff÷your over the÷rivers over the÷canals and÷over the÷pools and÷come_up DOM the÷frogs on the_land of_Miʦərayim/(Egypt).
-\v 2 \f + \fr 8:2 \ft Note: KJB: Exod.8.6\f* and÷stretched_out ʼAharon DOM his/its=hand over the_waters of_Miʦərayim and÷came_up the÷frogs and÷covered DOM the_land of_Miʦərayim.
+\v 1 \f + \fr 8:1 \ft Note: KJB: Exod.8.5\f* and=he/it_said Yahweh to Mosheh say to ʼAhₐron stretch_out DOM hand÷your in/on/at/with÷staff÷your over the÷rivers over the÷canals and÷over the÷pools and÷come_up DOM the÷frogs on the_land of_Miʦərayim/(Egypt).
+\v 2 \f + \fr 8:2 \ft Note: KJB: Exod.8.6\f* and÷stretched_out ʼAhₐron DOM his/its=hand over the_waters of_Miʦərayim and÷came_up the÷frogs and÷covered DOM the_land of_Miʦərayim.
 \v 3 \f + \fr 8:3 \ft Note: KJB: Exod.8.7\f* and÷did thus the÷magicians in/on/at/with÷secret_arts÷their and÷come_up DOM the÷frogs on the_land of_Miʦərayim.
-\v 4 \f + \fr 8:4 \ft Note: KJB: Exod.8.8\f* and=he/it_called Farəˊoh for÷Mosheh and÷to÷ʼAharon and=he/it_said pray to Yahweh and÷remove the÷frogs from÷me and÷from÷people÷my and÷let_go DOM the÷people and÷sacrifice to/for=\nd YHWH\nd*.
+\v 4 \f + \fr 8:4 \ft Note: KJB: Exod.8.8\f* and=he/it_called Farəˊoh for÷Mosheh and÷to÷ʼAhₐron and=he/it_said pray to Yahweh and÷remove the÷frogs from÷me and÷from÷people÷my and÷let_go DOM the÷people and÷sacrifice to/for=\nd YHWH\nd*.
 \v 5 \f + \fr 8:5 \ft Note: KJB: Exod.8.9\f* and=he/it_said Mosheh to÷Farəˊoh honor_yourself over÷me as÷when will_I_pray to/for=yourself(m) and÷for÷officials÷your and÷for÷people÷your that÷cut_off the÷frogs from÷you and÷from÷houses÷your only in/on/at/with÷Nile they_will_remain.
 \v 6 \f + \fr 8:6 \ft Note: KJB: Exod.8.10\f* and=he/it_said on÷tomorrow and=he/it_said as÷say÷you so_that you_may_know DOM_that there_[is]_not like÷LORD god÷our.
 \v 7 \f + \fr 8:7 \ft Note: KJB: Exod.8.11\f* and÷leave the÷frogs from÷you and÷from÷houses÷your and÷from÷officials÷your and÷from÷people÷your only in/on/at/with÷Nile they_will_remain.
-\v 8 \f + \fr 8:8 \ft Note: KJB: Exod.8.12\f* and=he/it_went_out Mosheh and÷ʼAharon from÷with Farəˊoh and÷cried_out Mosheh to Yahweh on the_matter the÷frogs which he_had_appointed on÷Farəˊoh.
+\v 8 \f + \fr 8:8 \ft Note: KJB: Exod.8.12\f* and=he/it_went_out Mosheh and÷ʼAhₐron from÷with Farəˊoh and÷cried_out Mosheh to Yahweh on the_matter the÷frogs which he_had_appointed on÷Farəˊoh.
 \v 9 \f + \fr 8:9 \ft Note: KJB: Exod.8.13\f* and=he/it_made Yahweh according_to÷word of_Mosheh and÷died the÷frogs from the÷houses from the÷courtyards and=from the÷fields.
 \v 10 \f + \fr 8:10 \ft Note: KJB: Exod.8.14\f* and÷piled DOM=them heaps heaps and÷stank the=earth/land.
 \v 11 \f + \fr 8:11 \ft Note: KJB: Exod.8.15\f* and=he/it_saw Farəˊoh DOM_that it_had_come the÷relief and÷hardened DOM his/its=heart and=not he_listened to÷them just=as he_had_said Yahweh.
-\v 12 \f + \fr 8:12 \ft Note: KJB: Exod.8.16\f* and=he/it_said Yahweh to Mosheh say to ʼAharon stretch_out DOM staff÷your and÷strike DOM the_dust the=earth/land and=it_was into÷gnats in=all the_land of_Miʦərayim/(Egypt).
-\v 13 \f + \fr 8:13 \ft Note: KJB: Exod.8.17\f* and÷did so and÷stretched_out ʼAharon DOM his/its=hand in/on/at/with÷staff÷his and÷struck DOM the_dust the=earth/land and=it_became the÷gnats in/on/at/with÷humans and=on/over=cattle/livestock all the_dust the=earth/land it_was gnats in=all the_land of_Miʦərayim.
+\v 12 \f + \fr 8:12 \ft Note: KJB: Exod.8.16\f* and=he/it_said Yahweh to Mosheh say to ʼAhₐron stretch_out DOM staff÷your and÷strike DOM the_dust the=earth/land and=it_was into÷gnats in=all the_land of_Miʦərayim/(Egypt).
+\v 13 \f + \fr 8:13 \ft Note: KJB: Exod.8.17\f* and÷did so and÷stretched_out ʼAhₐron DOM his/its=hand in/on/at/with÷staff÷his and÷struck DOM the_dust the=earth/land and=it_became the÷gnats in/on/at/with÷humans and=on/over=cattle/livestock all the_dust the=earth/land it_was gnats in=all the_land of_Miʦərayim.
 \v 14 \f + \fr 8:14 \ft Note: KJB: Exod.8.18\f* and=they_made thus the÷magicians in/on/at/with÷secret_arts÷their to÷produce DOM the÷gnats and=not they_were_able and=it_became the÷gnats in/on/at/with÷humans and=on/over=cattle/livestock.
 \v 15 \f + \fr 8:15 \ft Note: KJB: Exod.8.19\f* and=they_said the=magicians/soothsayers to Farəˊoh [is]_the_finger of_god it and÷hardened the_heart of_Farəˊoh and=not he_listened to÷them just=as he_had_said Yahweh.
 \v 16 \f + \fr 8:16 \ft Note: KJB: Exod.8.20\f* and=he/it_said Yahweh to Mosheh rise_early in/on/at/with÷morning and÷present to=(the)_face_of/in_front_of/before Farəˊoh there [he_is]_going_out the÷water÷to and÷say to=him/it thus he_says Yahweh let_go people÷my and÷worship÷me.
@@ -222,7 +222,7 @@
 \v 18 \f + \fr 8:18 \ft Note: KJB: Exod.8.22\f* and÷set_apart in/on/at/with÷day (the)=that DOM the_land of_Gshen which people÷my [is]_standing on/upon=it(f) to=not to_be there a_swarm so_that you_may_know DOM_that I Yahweh in/on/at/with÷midst the=earth/land.
 \v 19 \f + \fr 8:19 \ft Note: KJB: Exod.8.23\f* and÷make a_ransom between people÷my and=between people÷your on÷tomorrow it_will_happen the÷sign the÷this.
 \v 20 \f + \fr 8:20 \ft Note: KJB: Exod.8.24\f* and=he/it_made Yahweh so and÷came a_swarm massive house÷into of_Farəˊoh and÷houses officials'÷his and=on/over=all the_land of_Miʦərayim/(Egypt) it_was_ruined the=earth/land from=face/in_front_of the÷flies.
-\v 21 \f + \fr 8:21 \ft Note: KJB: Exod.8.25\f* and=he/it_called Farəˊoh (to) Mosheh and÷to÷ʼAharon and=he/it_said go sacrifice to÷god÷your_all's on_the=earth.
+\v 21 \f + \fr 8:21 \ft Note: KJB: Exod.8.25\f* and=he/it_called Farəˊoh (to) Mosheh and÷to÷ʼAhₐron and=he/it_said go sacrifice to÷god÷your_all's on_the=earth.
 \v 22 \f + \fr 8:22 \ft Note: KJB: Exod.8.26\f* and=he/it_said Mosheh not [is]_established for=doing thus DOM the_abomination of_Miʦərayim we_will_sacrifice to/for=\nd YHWH\nd* god÷our here we_will_sacrifice DOM the_abomination of_Miʦərayim before÷eyes÷their and=not stone÷us.
 \v 23 \f + \fr 8:23 \ft Note: KJB: Exod.8.27\f* a_journey of_three days we_will_go in/on/at/with÷wilderness and÷sacrifice to/for=\nd YHWH\nd* god÷our just=as he_says to÷us.
 \v 24 \f + \fr 8:24 \ft Note: KJB: Exod.8.28\f* and=he/it_said Farəˊoh I I_will_let_go DOM÷you_all and÷sacrifice to/for=\nd YHWH\nd* god÷your_all's in/on/at/with÷wilderness only definitely_(be_far_away) not you_all_must_be_far_away to=go pray for÷me.
@@ -238,7 +238,7 @@
 \v 5 And=he/it_assigned Yahweh an_appointed_time to=say tomorrow he_will_do Yahweh the÷thing the=this on_the=earth.
 \v 6 And=he/it_made Yahweh DOM the÷thing the=this on÷next_day and=he/it_died all the_livestock of_Miʦərayim and÷of÷livestock of_the_people of_Yisərā\sup ʼēl\sup*/(Israel) not it_died one.
 \v 7 And÷sent Farəˊoh and=see/lo/see not it_had_died of÷livestock of_Yisərā\sup ʼēl\sup*/(Israel) up_to one and÷hardened the_heart of_Farəˊoh and=not he_let_go DOM the÷people.
-\v 8 and=he/it_said Yahweh to Mosheh and÷to ʼAharon take to/for=you_all the_fullness hands_of÷you_all soot of_a_kiln and÷throw÷it Mosheh the÷air÷toward in÷sight of_Farəˊoh.
+\v 8 and=he/it_said Yahweh to Mosheh and÷to ʼAhₐron take to/for=you_all the_fullness hands_of÷you_all soot of_a_kiln and÷throw÷it Mosheh the÷air÷toward in÷sight of_Farəˊoh.
 \v 9 And=it_was into÷fine_dust over all the_land of_Miʦərayim and=it_was on the=humankind and÷on the=cattle/livestock in÷boils breaking_out blisters in=all the_land of_Miʦərayim.
 \v 10 And=they_took DOM the_soot the÷kiln and=they_stood to=(the)_face_of/in_front_of/before Farəˊoh and÷threw DOM=him/it Mosheh the÷air÷toward and=he/it_was boil[s] blisters breaking_out in/on/at/with÷humans and=on/over=cattle/livestock.
 \v 11 And=not they_were_able the÷magicians to=stand to=(the)_face_of/in_front_of/before Mosheh from=face/in_front_of the÷boils DOM it_was the÷boils in/on/at/with and=on/over=all wwww.
@@ -257,7 +257,7 @@
 \v 24 And=he/it_was hail and÷fire [was]_flashing in_the=middle the÷hail heavy very which not it_had_been like÷it in=all the_land of_Miʦərayim since÷when it_had_become to=(a)_nation.
 \v 25 And÷struck the÷hail in=all the_land of_Miʦərayim/(Egypt) DOM all that in_the=field from=humankind and=unto livestock and=DOM all the_vegetation the=field it_struck the÷hail and=DOM every (the)_tree the=field it_shattered.
 \v 26 Only in=land of_Gshen where [were]_there the_people of_Yisərā\sup ʼēl\sup*/(Israel) not it_was hail.
-\v 27 And÷sent Farəˊoh and=he/it_called to÷Mosheh and÷to÷ʼAharon and=he/it_said to÷them I_have_sinned the÷time Yahweh the÷righteous and÷I and÷people÷my the÷wrong.
+\v 27 And÷sent Farəˊoh and=he/it_called to÷Mosheh and÷to÷ʼAhₐron and=he/it_said to÷them I_have_sinned the÷time Yahweh the÷righteous and÷I and÷people÷my the÷wrong.
 \v 28 Pray to Yahweh and÷enough of÷been the_thunder_claps of_god and÷hail and÷let_go DOM÷you_all and=not longer to=stand.
 \v 29 And=he/it_said to=him/it Mosheh as_soon_as÷gone_out÷I DOM the=city I_will_spread_out DOM hands÷my to Yahweh the÷thunder cease and÷the÷hail not it_will_happen again so_that you_may_know DOM_that to/for=\nd YHWH\nd* the=earth/land.
 \v 30 And=you(ms) and÷officials÷your I_know DOM_that not_yet fear from=face/in_front_of Yahweh god.
@@ -269,12 +269,12 @@
 \c 10
 \v 1 and=he/it_said Yahweh to Mosheh go to Farəˊoh DOM I I_have_made_unresponsive DOM his/its=heart and=DOM the_heart officials÷his so_as perform÷I signs÷mine these in/on/at/with÷midst÷them.\f + \fr 10:1 \ft Note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS. \f*
 \v 2 and÷that you_may_recount in/on/at/with÷ears son÷your and÷child_of child_of÷your DOM how I_have_dealt_ruthlessly in/on/at/with÷Miʦərayim/(Egypt)ians and=DOM signs÷my which I_performed in/on/at/with÷them and÷know DOM_that I [am]_Yahweh.
-\v 3 And÷went Mosheh and÷ʼAharon to Farəˊoh and=they_said to=him/it thus he_says Yahweh the_god the÷Hebrews until when have_you_refused to÷humble from÷before÷me let_go people÷my and÷worship÷me.
+\v 3 And÷went Mosheh and÷ʼAhₐron to Farəˊoh and=they_said to=him/it thus he_says Yahweh the_god the÷Hebrews until when have_you_refused to÷humble from÷before÷me let_go people÷my and÷worship÷me.
 \v 4 DOM if [are]_refusing you to÷let_go DOM people÷my see÷I [am]_about_to_bring tomorrow locust[s] in/on/at/with÷territory÷your.
 \v 5 And÷cover DOM the_eye the=earth/land and=not anyone_will_be_able for=seeing DOM the=earth/land and=he/it_will_eat DOM the_remainder the÷remnant the÷left to/for=you_all from the÷hail and=he/it_will_eat DOM every the=tree the÷growing to/for=you_all from the=field.
 \v 6 And÷fill houses÷your and÷houses of_all your=servants and÷houses of_all Miʦərayim which not they_saw fathers÷your and÷fathers_of fathers_of÷your from÷day came÷they on the=soil until the=day the=this and÷turned and=he/it_went_out from÷with Farəˊoh.
 \v 7 And=they_said the_servants of_Farəˊoh to=him/it until when will_he_become this_[man] to/for=us as÷snare let_go DOM the÷men and÷worship DOM Yahweh god÷their not_yet do_you_know DOM_that it_will_perish Miʦərayim.
-\v 8 And÷brought_back DOM Mosheh and ʼAharon to Farəˊoh and=he/it_said to÷them go serve DOM Yahweh god÷your_all's who and÷who the÷going.
+\v 8 And÷brought_back DOM Mosheh and ʼAhₐron to Farəˊoh and=he/it_said to÷them go serve DOM Yahweh god÷your_all's who and÷who the÷going.
 \v 9 And=he/it_said Mosheh in/on/at/with÷young÷our and÷in/on/at/with÷old÷our we_will_go in/on/at/with÷sons÷our and÷in/on/at/with÷daughters÷our in/on/at/with÷flocks÷our and÷in/on/at/with÷herds÷our we_will_go DOM (the)_festival of_Yahweh to/for=us.
 \v 10 And=he/it_said to÷them may_he_be thus Yahweh with÷you_all just=as I_will_let_go DOM÷you_all and little_ones÷your_all's see DOM evil [is]_before faces÷you_all.
 \v 11 Not so go please the÷men and÷worship DOM Yahweh DOM DOM=her/it you_all [are]_requesting and=he/it_drove_out DOM=them from the_face of_Farəˊoh.
@@ -282,7 +282,7 @@
 \v 13 And÷stretched_out Mosheh DOM staff÷his over the_land of_Miʦərayim and÷LORD he_drove a_wind of_[the]_east on_the=earth all the=day (the)=that and=all the=night the÷morning it_was and=spirit the÷east it_carried DOM the÷locusts.
 \v 14 And=he/it_ascended the÷locusts on all the_land of_Miʦərayim and÷settled in/on/at/with÷whole the_territory of_Miʦərayim heavy very before÷face/front÷it not it_had_been thus locust[s] as÷them and÷again÷it not it_will_be thus.
 \v 15 And÷covered DOM the_eye of_all the=earth/land and÷black the=earth/land and÷ate DOM all the_vegetation the=earth/land and=DOM all the_fruit the=tree which it_had_left_over the÷hail and=not it_was_left_behind any greenery in/on/at/with÷tree and÷in/on/at/with÷plant the=field in=all the_land of_Miʦərayim.
-\v 16 And÷hurriedly Farəˊoh to=call for÷Mosheh and÷to÷ʼAharon and=he/it_said I_have_sinned to/for=\nd YHWH\nd* god÷your_all's and÷against÷you_all.
+\v 16 And÷hurriedly Farəˊoh to=call for÷Mosheh and÷to÷ʼAhₐron and=he/it_said I_have_sinned to/for=\nd YHWH\nd* god÷your_all's and÷against÷you_all.
 \v 17 And=now forgive please sin÷my only the=time//this_time and÷pray to/for=\nd YHWH\nd* god÷your_all's and÷remove away÷from÷me only DOM the÷death the÷this.
 \v 18 And=he/it_went_out from÷with Farəˊoh and÷prayed to Yahweh.
 \v 19 And÷changed Yahweh a_wind west strong very and÷lifted DOM the÷locusts and÷drove÷them sea÷into of_reed[s] not it_remained a_locust one in/on/at/with÷all the_territory of_Miʦərayim/(Egypt).
@@ -306,9 +306,9 @@
 \v 7 And=to/for=all the_people of_Yisərā\sup ʼēl\sup*/(Israel) not it_will_sharpen a_dog tongue_of÷him at÷whether÷man and=unto livestock so_that know (cmp) he_distinguishes Yahweh between Miʦərayim and=between Yisərā\sup ʼēl\sup*/(Israel).
 \v 8 And÷come_down all your=servants these to=me and÷bow to=me\f + \fr 11:8 \ft Note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f* to=say go_out you and=all the÷people which in/on/at/with÷feet÷you and=after thus I_will_go_out and=he/it_went_out from÷with Farəˊoh in/on/at/with÷hot of_anger.
 \v 9 and=he/it_said Yahweh to Mosheh not he_will_listen to÷you_all Farəˊoh so_as to_be_many wonders÷my in=land of_Miʦərayim/(Egypt).
-\v 10 And÷Mosheh and÷ʼAharon they_did DOM all the÷wonders the=these to=(the)_face_of/in_front_of/before Farəˊoh and÷hardened Yahweh DOM the_heart of_Farəˊoh and=not he_let_go DOM the_people of_Yisərā\sup ʼēl\sup*/(Israel) out_of÷land÷his.
+\v 10 And÷Mosheh and÷ʼAhₐron they_did DOM all the÷wonders the=these to=(the)_face_of/in_front_of/before Farəˊoh and÷hardened Yahweh DOM the_heart of_Farəˊoh and=not he_let_go DOM the_people of_Yisərā\sup ʼēl\sup*/(Israel) out_of÷land÷his.
 \c 12
-\v 1 and=he/it_said Yahweh to Mosheh and÷to ʼAharon in=land of_Miʦərayim to=say.
+\v 1 and=he/it_said Yahweh to Mosheh and÷to ʼAhₐron in=land of_Miʦərayim to=say.
 \v 2 The÷month the=this to/for=you_all [will_be_the]_beginning of_months [will_be]_first it to/for=you_all of÷month the÷year.
 \v 3 Speak to all the_congregation of_Yisərā\sup ʼēl\sup*/(Israel) to=say in/on/at/with of_the the=this and to/for=them (a)_man wwww for÷families wwww wwww to/for.
 \v 4 And=if it_will_be_[too]_small the÷household too_for÷is for÷lamb and=he/it_will_take he and÷neighbor÷his the÷nearest to house÷his in/on/at/with÷number of_people each_one according_to÷amount_of eat÷it you_all_will_estimate on the÷lamb.
@@ -335,29 +335,29 @@
 \v 25 And=it_was DOM you_all_will_come into the=earth/land which he_will_give Yahweh to/for=you_all just=as he_said and÷observe DOM the÷ceremony the÷this.
 \v 26 And=it_was DOM they_will_say to÷you_all children÷your_all's what the÷ceremony the÷this to÷you_all.
 \v 27 And÷say [is]_a_sacrifice of_passover it to/for=\nd YHWH\nd* who he_passed_over over the_houses of_the_people of_Yisərā\sup ʼēl\sup*/(Israel) in/on/at/with÷Miʦərayim/(Egypt) in/on/at/with÷struck÷he DOM Miʦərayim and=DOM homes÷our he_delivered and÷bowed_down the÷people and÷worshiped.
-\v 28 And÷went and=they_made the_people of_Yisərā\sup ʼēl\sup*/(Israel) just=as he_had_commanded Yahweh DOM Mosheh and÷ʼAharon so they_did.
+\v 28 And÷went and=they_made the_people of_Yisərā\sup ʼēl\sup*/(Israel) just=as he_had_commanded Yahweh DOM Mosheh and÷ʼAhₐron so they_did.
 \v 29 and=he/it_was in/on/at/with÷middle the=night and=\nd YHWH\nd* he_struck_down every firstborn in=land of_Miʦərayim from÷firstborn of_Farəˊoh the÷sat on throne÷his unto the_firstborn the÷prisoner who in=house_of the÷prison and=all/each/any/every firstborn of_livestock.
 \v 30 And=he/it_rose_up Farəˊoh night he and=all officials÷his and=all Miʦərayim and=it_became a_cry great in/on/at/with÷Miʦərayim DOM there_[was]_not a_house where there_[was]_not there a_dead_[person].
-\v 31 And=he/it_called for÷Mosheh and÷to÷ʼAharon night and=he/it_said arise go_out from÷among people÷my both you_all as_well_as the_people of_Yisərā\sup ʼēl\sup*/(Israel) and÷go serve DOM Yahweh as÷said÷you_all.
+\v 31 And=he/it_called for÷Mosheh and÷to÷ʼAhₐron night and=he/it_said arise go_out from÷among people÷my both you_all as_well_as the_people of_Yisərā\sup ʼēl\sup*/(Israel) and÷go serve DOM Yahweh as÷said÷you_all.
 \v 32 Both flocks÷your_all's as_well_as herds÷your_all's take just=as you_all_said and÷go and÷bless also DOM=me.
 \v 33 And÷urged Miʦərayim on the÷people to÷hurry to÷send÷them from the=earth/land DOM they_said all÷we [are]_about_to_die.
 \v 34 And÷took the÷people DOM dough÷their before it_was_leavened kneading_bowls÷their [were]_bound_up in/on/at/with÷cloaks÷their on shoulders÷their.
 \v 35 And=the_sons of_Yisərā\sup ʼēl\sup*/(Israel) they_did as÷word of_Mosheh and÷asked from=Miʦrayim/Miʦərayim/(Egypt) articles of_silver and÷objects of_gold and÷clothing.
 \v 36 And=\nd YHWH\nd* he_gave DOM the_favour the÷people in/on=both_eyes_of of_Miʦərayim and÷asked÷them and÷plundered DOM Miʦərayim.
-\v 37 and÷journeyed the_people of_Yisərā\sup ʼēl\sup*/(Israel) from÷Rameses Şukōt÷to about÷six hundred(s) thousand foot_soldier[s] the÷men to/for÷beside from÷children.
+\v 37 and÷journeyed the_people of_Yisərā\sup ʼēl\sup*/(Israel) from÷Rameses Şuⱪōt÷to about÷six hundred(s) thousand foot_soldier[s] the÷men to/for÷beside from÷children.
 \v 38 And=also a_mixed_company numerous it_went_up with=them and÷flocks and÷herds livestock numerous very.
 \v 39 And÷baked DOM the÷dough which they_had_brought_out from=Miʦrayim/Miʦərayim bread_cakes unleavened_bread(s) DOM not it_was_leavened DOM they_had_been_driven_out from=Miʦrayim/Miʦərayim and=not they_had_been_able to÷delay and=also provision[s] not they_had_made to/for=them.
 \v 40 And÷time of_the_people of_Yisərā\sup ʼēl\sup*/(Israel) which they_dwelt in/on/at/with÷Miʦərayim [was]_thirty year[s] and=four hundred(s) year[s].
 \v 41 And=he/it_was from_the=end/extremity of_thirty year[s] and=four hundred(s) year[s] and=he/it_was in/on/at/with÷very the=day the=this they_went_out all the_hosts of_Yahweh from÷land of_Miʦərayim.
 \v 42 [was]_a_night of_vigil(s) it to/for=\nd YHWH\nd* to÷bring_out÷them of÷land of_Miʦərayim that the=night the=this to/for=\nd YHWH\nd* [will_be]_vigil(s) to/from=all/each/any/every the_people of_Yisərā\sup ʼēl\sup*/(Israel) throughout÷generations÷their.
-\v 43 and=he/it_said Yahweh to Mosheh and÷ʼAharon this [is]_the_statute the÷passover any son of_foreignness not he_will_eat in/on/over=him/it.
+\v 43 and=he/it_said Yahweh to Mosheh and÷ʼAhₐron this [is]_the_statute the÷passover any son of_foreignness not he_will_eat in/on/over=him/it.
 \v 44 And=all slave of_anyone [the]_purchase of_silver and÷circumcised DOM=him/it then he_will_eat in/on/over=him/it.
 \v 45 A_resident_alien and÷hired_worker not he_will_eat in/on/over=him/it.
 \v 46 In/on/at/with÷house one it_will_be_eaten not you_will_bring_out from the÷house any_of the÷meat outside÷to and÷bones not you_all_will_break in=him/it.
 \v 47 All the_congregation of_Yisərā\sup ʼēl\sup*/(Israel) they_will_do DOM=him/it.
 \v 48 And=because/when he_will_sojourn with÷you a_sojourner and÷celebrate a_passover to/for=\nd YHWH\nd* he_will_be_circumcised to=him/it every male and÷then he_will_draw_near to÷celebrate÷it and=it_was like÷native the=earth/land and=all uncircumcised_[man] not he_will_eat in/on/over=him/it.
 \v 49 Law one it_will_belong to_the÷native and÷for_the÷alien the÷resides in/on/at/with÷midst÷you_all.
-\v 50 And=they_made all the_people of_Yisərā\sup ʼēl\sup*/(Israel) just=as he_had_commanded Yahweh DOM Mosheh and ʼAharon so they_did.
+\v 50 And=they_made all the_people of_Yisərā\sup ʼēl\sup*/(Israel) just=as he_had_commanded Yahweh DOM Mosheh and ʼAhₐron so they_did.
 \v 51 and=he/it_was in/on/at/with÷very the=day the=this he_brought_out Yahweh DOM the_people of_Yisərā\sup ʼēl\sup*/(Israel) of÷land of_Miʦərayim/(Egypt) on hosts÷their.
 \c 13
 \v 1 and=he/it_spoke Yahweh to Mosheh to÷saying.
@@ -379,12 +379,12 @@
 \v 17 and=he/it_was in/on/at/with÷let_go Farəˊoh DOM the÷people and=not lead÷them god the_way of_the_land of_[the]_Philistines DOM [was]_near it DOM he_said god lest it_should_regret the÷people in/on/at/with÷face÷they battle and÷return towards=Miʦərayim.
 \v 18 And÷led_around god DOM the÷people the_way the÷wilderness [the]_sea of_reed[s] and÷prepared_for_battle they_went_up the_people of_Yisərā\sup ʼēl\sup*/(Israel) out_of÷land of_Miʦərayim.
 \v 19 And=he/it_took Mosheh DOM the_bones of_Yōşēf with=him/it DOM solemnly_(make_swear) he_had_made_swear DOM the_people of_Yisərā\sup ʼēl\sup*/(Israel) to=say surely_(visit) he_will_visit god DOM÷you_all and÷carry DOM bones÷my from÷here with÷you_all.
-\v 20 And÷set_out from÷Şukōt and÷camped in/on/at/with÷Etham in/on/at/with÷edge the÷wilderness.
+\v 20 And÷set_out from÷Şuⱪōt and÷camped in/on/at/with÷Etham in/on/at/with÷edge the÷wilderness.
 \v 21 And=\nd YHWH\nd* [was]_going in÷front÷them by_day in/on/at/with÷pillar of_cloud to÷lead÷them the÷way and÷night in/on/at/with÷pillar of_fire to=give_light to/for=them to=go by_day and÷night.
 \v 22 Not it_departed the_pillar the÷cloud by_day and÷pillar the÷fire night to=(the)_face_of/in_front_of/before the÷people.
 \c 14
 \v 1 and=he/it_spoke Yahweh to Mosheh to÷saying.
-\v 2 Speak to the_people of_Yisərā\sup ʼēl\sup*/(Israel) and÷turn_back and÷camp to=(the)_face_of/in_front_of/before wwww wwww between Migdol and=between the=sea to=(the)_face_of/in_front_of/before wwww wwww opposite÷it you_all_will_encamp at the=sea.
+\v 2 Speak to the_people of_Yisərā\sup ʼēl\sup*/(Israel) and÷turn_back and÷camp to=(the)_face_of/in_front_of/before wwww wwww between Migəddōl and=between the=sea to=(the)_face_of/in_front_of/before wwww wwww opposite÷it you_all_will_encamp at the=sea.
 \v 3 And=saying(ms) Farəˊoh of÷sons of_Yisərā\sup ʼēl\sup*/(Israel) [are]_wandering_in_confusion they on_the=earth it_has_shut on÷them the÷wilderness.
 \v 4 And÷harden DOM the_heart of_Farəˊoh and÷pursue after÷them and÷gain_glory in/on/at/with÷Farəˊoh and=on/over=all army÷his and÷know Miʦərayim/(Egypt) DOM_that I [am]_Yahweh and=they_made so.
 \v 5 And÷told to÷king of_Miʦərayim DOM_that it_had_fled the÷people and÷changed the_heart of_Farəˊoh and÷officials÷his to the÷people and÷said what this have_we_done (cmp) we_have_let_go DOM Yisərā\sup ʼēl\sup*/(Israel) from÷serving÷us.
@@ -401,7 +401,7 @@
 \v 16 And=you(ms) raise DOM staff÷your and÷stretch_out DOM hand÷your over the=sea and÷divide÷it and÷go the_people of_Yisərā\sup ʼēl\sup*/(Israel) in_the=middle the=sea in/on/at/with÷dry_ground.
 \v 17 And÷me look÷I [am]_about_to_make_strong DOM the_heart of_Miʦərayim and÷go_in after÷them and÷gain_glory in/on/at/with÷Farəˊoh and=on/over=all army÷his in/on/at/with÷chariots÷his and÷in/on/at/with÷horsemen÷his.
 \v 18 And÷know Miʦərayim DOM_that I [am]_Yahweh in/on/at/with÷gained_glory÷I in/on/at/with÷Farəˊoh in/on/at/with÷chariots÷his and÷in/on/at/with÷horsemen÷his.
-\v 19 And÷moved the_angel the=ʼElhīmv the÷going to=(the)_face_of/in_front_of/before the_camp of_Yisərā\sup ʼēl\sup*/(Israel) and=he/it_went to÷behind÷them and÷moved the_pillar the÷cloud from=their=face/front and÷stood at÷behind÷them.
+\v 19 And÷moved the_angel the=ʼₑlhīmv the÷going to=(the)_face_of/in_front_of/before the_camp of_Yisərā\sup ʼēl\sup*/(Israel) and=he/it_went to÷behind÷them and÷moved the_pillar the÷cloud from=their=face/front and÷stood at÷behind÷them.
 \v 20 And÷came between the_camp of_Miʦərayim/(Egypt) and=between the_camp of_Yisərā\sup ʼēl\sup*/(Israel) and=he/it_was the÷cloud and÷the÷darkness and÷lit_up DOM the=night and=not it_drew_near this to this all the=night.
 \v 21 And÷stretched_out Mosheh DOM his/its=hand over the=sea and÷drove_back Yahweh DOM the=sea in/on/at/with÷wind an_east_wind strong all the=night and=he/it_assigned DOM the=sea into_the÷dry_land and÷divided the=waters.
 \v 22 And=they_came the_people of_Yisərā\sup ʼēl\sup*/(Israel) in_the=middle the=sea in/on/at/with÷dry_ground and÷the÷waters to/for=them [was]_a_wall on÷right÷their and÷on÷left÷their.
@@ -429,12 +429,12 @@
 \v 12 You_stretched_out right_hand÷your swallowed÷them [the]_earth.
 \v 13 You_have_guided in/on/at/with÷steadfast_love÷your [the]_people which you_have_redeemed you_have_led_[them] in/on/at/with÷strength÷your to the_abode holy÷your.
 \v 14 They_have_heard peoples tremble anguish it_has_seized the_inhabitants of_Philistia.
-\v 15 Then they_are_terrified the_chiefs of_ʼEdōm the_leaders of_Mōʼāv seized÷them trembling they_have_melted_away all the_inhabitants of_Kinaˊan.
+\v 15 Then they_are_terrified the_chiefs of_ʼₑdōm the_leaders of_Mōʼāⱱ seized÷them trembling they_have_melted_away all the_inhabitants of_Kinaˊan.
 \v 16 It_has_fallen upon÷them terror and÷dread in/on/at/with÷greatness arm÷your they_have_become_still as_the÷stone until it_has_passed_by people÷your Oh_Yahweh until it_has_passed_by [the]_people which you_have_bought.
 \v 17 Bring_in÷them and÷plant÷them in/on/at/with÷mountain inheritance÷your a_place for÷dwelling÷your you_have_made Oh_Yahweh a_sanctuary my=master/master they_have_established hands÷your.
 \v 18 Yahweh he_will_reign to=vanishing_point and÷ever.
 \v 19 DOM it_came the_horse[s] of_Farəˊoh in/on/at/with÷chariots÷his and÷in/on/at/with÷horsemen÷his in/on/at/with÷sea and÷brought_back Yahweh upon÷them DOM the_waters the=sea and=the_sons of_Yisərā\sup ʼēl\sup*/(Israel) they_walked in/on/at/with÷dry_ground in_the=middle the=sea.
-\v 20 and=she/it_took Miriam the÷prophetess the_sister of_ʼAharon DOM the÷tambourine in/on/at/with÷hand÷her and÷went_out all the÷women after÷her in/on/at/with÷tambourines and÷in/on/at/with÷dancing.
+\v 20 and=she/it_took Miriam the÷prophetess the_sister of_ʼAhₐron DOM the÷tambourine in/on/at/with÷hand÷her and÷went_out all the÷women after÷her in/on/at/with÷tambourines and÷in/on/at/with÷dancing.
 \v 21 And÷sang to/for=them Miriam sing to/for=\nd YHWH\nd* DOM highly_(exalted) he_is_exalted horse and÷rider÷its he_has_thrown in/on/at/with÷sea.
 \v 22 and÷led Mosheh DOM Yisərā\sup ʼēl\sup*/(Israel) from÷sea of_reed[s] and=they_went_out into the_wilderness of_Shur and÷went three days in/on/at/with÷wilderness and=not they_found water.
 \v 23 And=they_came Marah÷to and=not they_were_able to÷drink waters of÷Marah DOM [were]_bitter they on/upon/above/on_account_of//he/it_went_in yes/correct/thus/so someone_called his/its=name Marah.
@@ -444,15 +444,15 @@
 \v 27 and=they_came Elim÷to and=there two_plus ten springs of_water and=seventy palm_trees and÷camped there at the=waters.
 \c 16
 \v 1 And÷set_out from÷Elim and=they_came all the_congregation of_the_people of_Yisərā\sup ʼēl\sup*/(Israel) to the_wilderness of_Sin which [is]_between Elim and=between Şīnay in/on/at/with÷five teen day of_the÷month the=second after÷departed÷they from÷land of_Miʦərayim.
-\v 2 And÷grumbled\f + \fr 16:2 \ft Variant note: ו/ילינו: (x-qere) 'וַ/יִּלּ֜וֹנוּ': lemma=c/3885 b n=0.0.0.0 morph=HC/VNw3mp id=02iJj וַ/יִּלּ֜וֹנוּ\f* all the_congregation of_the_people of_Yisərā\sup ʼēl\sup*/(Israel) on Mosheh and÷against ʼAharon in/on/at/with÷wilderness.
+\v 2 And÷grumbled\f + \fr 16:2 \ft Variant note: ו/ילינו: (x-qere) 'וַ/יִּלּ֜וֹנוּ': lemma=c/3885 b n=0.0.0.0 morph=HC/VNw3mp id=02iJj וַ/יִּלּ֜וֹנוּ\f* all the_congregation of_the_people of_Yisərā\sup ʼēl\sup*/(Israel) on Mosheh and÷against ʼAhₐron in/on/at/with÷wilderness.
 \v 3 And=they_said to÷them the_people of_Yisərā\sup ʼēl\sup*/(Israel) who will_he_give died÷we in/on/at/with÷hand of_Yahweh in=land of_Miʦərayim in/on/at/with÷sat÷we at the_pot the÷meat in/on/at/with÷ate÷we food to÷full DOM you_all_have_brought_out DOM÷us into the÷wilderness the=this to÷kill DOM all the÷assembly the=this in/on/at/with÷hunger.
 \v 4 and=he/it_said Yahweh to Mosheh see÷I [am]_about_to_rain_down to/for=you_all bread from the=heavens and÷go_out the÷people and÷gather a_matter of_a_day in=its=day so_that test÷them whether÷walk in/on/at/with÷instructions÷my or not.
 \v 5 And=it_was in_the=day the=sixth and÷prepare DOM [that]_which they_will_bring and=it_was double to [that]_which they_will_gather day day.
-\v 6 and=he/it_said Mosheh and÷ʼAharon to all the_people of_Yisərā\sup ʼēl\sup*/(Israel) evening and÷know DOM_that Yahweh he_brought_out DOM÷you_all of÷land of_Miʦərayim/(Egypt).
+\v 6 and=he/it_said Mosheh and÷ʼAhₐron to all the_people of_Yisərā\sup ʼēl\sup*/(Israel) evening and÷know DOM_that Yahweh he_brought_out DOM÷you_all of÷land of_Miʦərayim/(Egypt).
 \v 7 And÷morning and÷see DOM the_glory of_Yahweh in/on/at/with÷heard÷he DOM grumblings÷your_all's on Yahweh and÷we what (cmp) you_all_will_grumble\f + \fr 16:7 \ft Variant note: תלונו: (x-qere) 'תַלִּ֖ינוּ': lemma=3885 b n=0.0 morph=HVhi2mp id=02yoM תַלִּ֖ינוּ\f* against÷us.
 \v 8 And=he/it_said Mosheh in/on/at/with÷gives Yahweh to/for=you_all in/on/at/with÷evening meat to÷eat and÷bread in/on/at/with÷morning to÷full in/on/at/with÷heard Yahweh DOM grumblings÷your_all's which you_all [are]_grumbling on/upon/above=him/it and÷we what not against÷us grumblings÷your_all's DOM on Yahweh.
-\v 9 And=he/it_said Mosheh to ʼAharon say to all the_congregation of_the_people of_Yisərā\sup ʼēl\sup*/(Israel) draw_near to=(the)_face_of/in_front_of/before Yahweh DOM he_has_heard DOM grumblings÷your_all's.
-\v 10 And=he/it_was as÷speaking ʼAharon to all the_congregation of_the_people of_Yisərā\sup ʼēl\sup*/(Israel) and÷looked to the÷wilderness and=see/lo/see the_glory of_Yahweh it_appeared in/on/at/with÷cloud.
+\v 9 And=he/it_said Mosheh to ʼAhₐron say to all the_congregation of_the_people of_Yisərā\sup ʼēl\sup*/(Israel) draw_near to=(the)_face_of/in_front_of/before Yahweh DOM he_has_heard DOM grumblings÷your_all's.
+\v 10 And=he/it_was as÷speaking ʼAhₐron to all the_congregation of_the_people of_Yisərā\sup ʼēl\sup*/(Israel) and÷looked to the÷wilderness and=see/lo/see the_glory of_Yahweh it_appeared in/on/at/with÷cloud.
 \v 11 and=he/it_spoke Yahweh to Mosheh to÷saying.
 \v 12 I_have_heard DOM the_grumblings of_the_people of_Yisərā\sup ʼēl\sup*/(Israel) speak to÷them to=say between the÷twilight you_all_will_eat meat and÷in/on/at/with÷morning you_all_will_be_satisfied bread and÷know DOM_that I [am]_Yahweh god÷your_all's.
 \v 13 And=he/it_was in/on/at/with÷evening and÷came_up the÷quail and÷covered DOM the÷camp and÷in/on/at/with÷morning it_was the_layer the÷dew around to_the÷camp.
@@ -475,8 +475,8 @@
 \v 30 And÷rested the÷people in_the=day the÷seventh.
 \v 31 And÷called the_household of_Yisərā\sup ʼēl\sup*/(Israel) DOM his/its=name manna and=he like÷seed of_coriander [was]_white and÷taste÷its like÷wafers in/on/at/with÷honey.
 \v 32 And=he/it_said Mosheh this the÷word which he_has_commanded Yahweh the_fullness the÷omer from=him/it for÷kept throughout÷generations÷your_all's so_that they_may_see DOM the÷bread which I_caused_to_eat DOM÷you_all in/on/at/with÷wilderness in/on/at/with÷brought_out÷I DOM÷you_all of÷land of_Miʦərayim/(Egypt).
-\v 33 And=he/it_said Mosheh to ʼAharon take a_jar one and÷put it÷in the_fullness the÷omer manna and÷place DOM=him/it to=(the)_face_of/in_front_of/before Yahweh to÷kept throughout÷generations÷your_all's.
-\v 34 Just=as he_had_commanded Yahweh to Mosheh and÷placed÷it ʼAharon to=(the)_face_of/in_front_of/before the÷testimony for÷kept.
+\v 33 And=he/it_said Mosheh to ʼAhₐron take a_jar one and÷put it÷in the_fullness the÷omer manna and÷place DOM=him/it to=(the)_face_of/in_front_of/before Yahweh to÷kept throughout÷generations÷your_all's.
+\v 34 Just=as he_had_commanded Yahweh to Mosheh and÷placed÷it ʼAhₐron to=(the)_face_of/in_front_of/before the÷testimony for÷kept.
 \v 35 And=the_sons of_Yisərā\sup ʼēl\sup*/(Israel) they_ate DOM the÷manna forty year[s] until came÷they into a_land inhabited DOM the÷manna they_ate until came÷they to the_border of_the_land of_Kinaˊan.
 \v 36 And÷the÷omer [is]_the_tenth_[part] the÷ephah it.
 \c 17
@@ -487,35 +487,35 @@
 \v 5 And=he/it_said Yahweh to Mosheh pass_on to=(the)_face_of/in_front_of/before the÷people and÷take with÷you some_of÷elders of_Yisərā\sup ʼēl\sup*/(Israel) and÷staff÷your which you_struck in/on/over=him/it DOM the÷Nile take in/on/at/with÷hand÷your and÷go.
 \v 6 Behold÷I [will_be]_standing to=your=face there on the÷rock in/on/at/with÷Horeb and÷strike in/on/at/with÷rock and÷come_out from=him/it waters and÷drink the÷people and=he/it_made so Mosheh in÷sight of_the_elders of_Yisərā\sup ʼēl\sup*/(Israel).
 \v 7 And=he/it_called the_name the÷place Massah and÷Meribah on the_quarrel of_the_people of_Yisərā\sup ʼēl\sup*/(Israel) and÷because tested÷they DOM Yahweh to=say is [is]_Yahweh in/on/at/with÷midst÷us or not.
-\v 8 and÷came ˊAmālēq and÷fought with Yisərā\sup ʼēl\sup*/(Israel) in/on/at/with÷Rephidim.
-\v 9 And=he/it_said Mosheh to Yəhōshūˊa choose to/for=us men and÷go_out fight in/on/at/with÷ˊAmālēq tomorrow I [will_be]_standing on the_top the÷hill and÷staff the=ʼElhīmv in/on/at/with÷hand÷my.
-\v 10 And=he/it_made Yəhōshūˊa just=as he_had_said to=him/it Mosheh to÷fought in/on/at/with÷ˊAmālēq and÷Mosheh ʼAharon and÷Hur they_went_up the_top the÷hill.
-\v 11 And=it_was just=as he_lifted_up Mosheh his/its=hand and÷prevailed Yisərā\sup ʼēl\sup*/(Israel) and=as=which he_gave_rest his/its=hand and÷prevailed ˊAmālēq.
-\v 12 And÷hands of_Mosheh [were]_heavy and=they_took a_stone and÷put under÷him and=he/it_sat_down//remained//lived on/upon=it(f) and÷ʼAharon and÷Hur they_supported in/on/at/with÷hands÷his on÷one one and÷on÷the_other_side one and=he/it_was hands÷his steadiness until went the÷sun.
-\v 13 And÷defeated Yəhōshūˊa DOM ˊAmālēq and=DOM people÷his with÷edge of_[the]_sword.
-\v 14 and=he/it_said Yahweh to Mosheh write this memorial in/on/at/with÷scroll and÷recite in/on/at/with÷hearing of_Yəhōshūˊa DOM_that completely_(wipe_out) I_will_wipe_out DOM the_remembrance of_ˊAmālēq from=under the=heavens.
+\v 8 and÷came ˊₐmālēq and÷fought with Yisərā\sup ʼēl\sup*/(Israel) in/on/at/with÷Rephidim.
+\v 9 And=he/it_said Mosheh to Yəhōshūˊa choose to/for=us men and÷go_out fight in/on/at/with÷ˊₐmālēq tomorrow I [will_be]_standing on the_top the÷hill and÷staff the=ʼₑlhīmv in/on/at/with÷hand÷my.
+\v 10 And=he/it_made Yəhōshūˊa just=as he_had_said to=him/it Mosheh to÷fought in/on/at/with÷ˊₐmālēq and÷Mosheh ʼAhₐron and÷Hur they_went_up the_top the÷hill.
+\v 11 And=it_was just=as he_lifted_up Mosheh his/its=hand and÷prevailed Yisərā\sup ʼēl\sup*/(Israel) and=as=which he_gave_rest his/its=hand and÷prevailed ˊₐmālēq.
+\v 12 And÷hands of_Mosheh [were]_heavy and=they_took a_stone and÷put under÷him and=he/it_sat_down//remained//lived on/upon=it(f) and÷ʼAhₐron and÷Hur they_supported in/on/at/with÷hands÷his on÷one one and÷on÷the_other_side one and=he/it_was hands÷his steadiness until went the÷sun.
+\v 13 And÷defeated Yəhōshūˊa DOM ˊₐmālēq and=DOM people÷his with÷edge of_[the]_sword.
+\v 14 and=he/it_said Yahweh to Mosheh write this memorial in/on/at/with÷scroll and÷recite in/on/at/with÷hearing of_Yəhōshūˊa DOM_that completely_(wipe_out) I_will_wipe_out DOM the_remembrance of_ˊₐmālēq from=under the=heavens.
 \v 15 And=he/it_built Mosheh an_altar and=he/it_called his/its=name Yahweh banner÷my.
-\v 16 And=he/it_said DOM a_hand [was]_on the_throne of_Yahweh war to/for=\nd YHWH\nd* in/on/at/with÷ˊAmālēq from÷generation generation.
+\v 16 And=he/it_said DOM a_hand [was]_on the_throne of_Yahweh war to/for=\nd YHWH\nd* in/on/at/with÷ˊₐmālēq from÷generation generation.
 \c 18
 \v 1 and=he/it_listened Yitərō the_priest of_Midəyān the_father-in-law of_Mosheh DOM all that he_had_done god for÷Mosheh and÷for÷Yisərā\sup ʼēl\sup*/(Israel) people÷his DOM_that he_had_brought_out Yahweh DOM Yisərā\sup ʼēl\sup*/(Israel) of÷Miʦərayim/(Egypt).
 \v 2 And=he/it_took Yitərō the_father-in-law of_Mosheh DOM Tsiporāh/(Zipporah) the_wife of_Mosheh after had_sent_away÷her.
 \v 3 And=DOM the_two sons÷her who the_name the=one [was]_Gērəshm DOM he_had_said a_sojourner I_have_become in=land foreign.
 \v 4 And=name_of the=one [was]_ʼElīˊezer DOM the_god father÷my in/on/at/with÷help÷my and÷delivered÷me from÷sword of_Farəˊoh.
-\v 5 And÷came Yitərō the_father-in-law of_Mosheh and÷sons÷his and=his/its=woman/wife to Mosheh into the÷wilderness where he [was]_encamping there the_mountain the=ʼElhīmv.
+\v 5 And÷came Yitərō the_father-in-law of_Mosheh and÷sons÷his and=his/its=woman/wife to Mosheh into the÷wilderness where he [was]_encamping there the_mountain the=ʼₑlhīmv.
 \v 6 And=he/it_said to Mosheh I father-in-law÷your Yitərō [am]_coming to÷you and÷wife÷your and÷two sons÷her with=her/it.
 \v 7 And=he/it_went_out Mosheh to÷meet father-in-law÷his and÷bowed_down and÷kissed to=him/it and÷asked each after÷other÷him of÷welfare and=they_came the÷tent÷into.
 \v 8 And÷told Mosheh to÷father-in-law÷his DOM all that he_had_done Yahweh to÷Farəˊoh and÷to÷Miʦərayimians on the_causes of_Yisərā\sup ʼēl\sup*/(Israel) DOM all the÷hardship which beset÷them in/on/at/with÷way and÷delivered÷them Yahweh.
 \v 9 And÷rejoiced Yitərō on all the÷good which he_had_done Yahweh for÷Yisərā\sup ʼēl\sup*/(Israel) whom delivering÷them from÷hand of_Miʦərayim.
 \v 10 And=he/it_said Yitərō [be]_blessed Yahweh who he_has_delivered DOM÷you_all from÷hand of_Miʦərayim/(Egypt) and÷from÷hand of_Farəˊoh who he_has_delivered DOM the÷people from=under the_hand of_Miʦərayim.
-\v 11 Now I_know DOM_that [is]_great Yahweh from=all the=ʼElhīmv DOM in/on/at/with÷matter which they_have_acted_presumptuously against÷them.
-\v 12 And=he/it_took Yitərō the_father-in-law of_Mosheh a_burnt_offering and÷sacrifices to÷god and÷came ʼAharon and=all/each/any/every the_elders of_Yisərā\sup ʼēl\sup*/(Israel) to÷eat food with the_father-in-law of_Mosheh to=(the)_face_of/in_front_of/before the=ʼElhīmv.
+\v 11 Now I_know DOM_that [is]_great Yahweh from=all the=ʼₑlhīmv DOM in/on/at/with÷matter which they_have_acted_presumptuously against÷them.
+\v 12 And=he/it_took Yitərō the_father-in-law of_Mosheh a_burnt_offering and÷sacrifices to÷god and÷came ʼAhₐron and=all/each/any/every the_elders of_Yisərā\sup ʼēl\sup*/(Israel) to÷eat food with the_father-in-law of_Mosheh to=(the)_face_of/in_front_of/before the=ʼₑlhīmv.
 \v 13 And=he/it_was on÷next_day and=he/it_sat_down//remained//lived Mosheh to÷judge DOM the÷people and÷stood the÷people at Mosheh from the÷morning until the÷evening.
 \v 14 And=he/it_saw the_father-in-law of_Mosheh DOM all that he [was]_doing for_the÷people and=he/it_said what the÷thing the=this which you [are]_doing for_the÷people why [are]_you sitting by÷yourself and=all the÷people [is]_standing around÷you from morning until evening.
 \v 15 And=he/it_said Mosheh to÷father-in-law÷his DOM it_comes to=me the÷people to÷inquire_of god.
-\v 16 DOM it_will_belong to/for=them a_matter [it_is]_coming to=me and÷decide between each and=between his/its=neighbour and÷known DOM the_statutes the=ʼElhīmv and=DOM laws÷his.
+\v 16 DOM it_will_belong to/for=them a_matter [it_is]_coming to=me and÷decide between each and=between his/its=neighbour and÷known DOM the_statutes the=ʼₑlhīmv and=DOM laws÷his.
 \v 17 And=he/it_said the_father-in-law of_Mosheh to=him/it not [is]_good the÷thing which you [are]_doing.
 \v 18 Surely_(wear_out) you_will_wear_yourself_out both you as_well_as the÷people the=this which with÷you DOM [is_too]_heavy for÷you the÷task not you_are_able do÷it by÷yourself.
-\v 19 Now listen in/on/at/with÷voice÷me give_advice÷you and=let_it_be god with÷you be you for_the÷people in_front_of the=ʼElhīmv and÷bring you DOM the÷cases to the=ʼElhīmv.
+\v 19 Now listen in/on/at/with÷voice÷me give_advice÷you and=let_it_be god with÷you be you for_the÷people in_front_of the=ʼₑlhīmv and÷bring you DOM the÷cases to the=ʼₑlhīmv.
 \v 20 And÷teach DOM÷them DOM the÷statutes and=DOM the÷laws and÷known to/for=them DOM the÷way [which]_they_will_walk in/on/at/with÷which and=DOM the÷work which do.
 \v 21 And=you(ms) you_will_select from=all the÷people men of_ability [those]_fearing (of)_god men of_faithfulness [who]_hate (of)_unjust_gain and÷place over÷them leaders of_thousands leaders of_hundreds leaders of_fifties and÷commanders of_tens.
 \v 22 And÷judge DOM the÷people in=all time and=it_was every the÷case the=big/great(sg) they_will_bring to÷you and=all the÷case the=small(sg) they_will_judge they and÷easier from÷on÷you and÷bear_the_burden with÷you.
@@ -527,7 +527,7 @@
 \c 19
 \v 1 in/on/at/with÷month the=third after÷gone_out of_the_people of_Yisərā\sup ʼēl\sup*/(Israel) of÷land of_Miʦərayim/(Egypt) in_the=day the=this they_came the_wilderness of_Şīnay.
 \v 2 And÷set_out from÷Rephidim and=they_came the_wilderness of_Şīnay and÷camped in/on/at/with÷wilderness and÷camped there Yisərā\sup ʼēl\sup*/(Israel) before the÷mountain.
-\v 3 And÷Mosheh he_went_up to the=ʼElhīmv and=he/it_called to=him/it Yahweh from the÷mountain to=say thus you_will_say to÷house of_Yaˊaqov/(Jacob) and÷tell to÷people of_Yisərā\sup ʼēl\sup*/(Israel).
+\v 3 And÷Mosheh he_went_up to the=ʼₑlhīmv and=he/it_called to=him/it Yahweh from the÷mountain to=say thus you_will_say to÷house of_Yaˊₐqoⱱ/(Jacob) and÷tell to÷people of_Yisərā\sup ʼēl\sup*/(Israel).
 \v 4 You_all you_all_have_seen [that]_which I_did to÷Miʦərayimians and÷bore DOM÷you_all on wings of_eagles and÷brought DOM÷you_all to÷myself.
 \v 5 And=now if carefully_(listen) you_all_will_listen in/on/at/with÷voice÷my and÷keep DOM covenant÷my and=you_all_will_be to=me a_possession from=all the÷peoples DOM to=me all the=earth/land.
 \v 6 And÷you_all you_all_will_be to=me a_kingdom of_priests and÷nation holy these the÷words which you_will_speak to the_people of_Yisərā\sup ʼēl\sup*/(Israel).
@@ -541,14 +541,14 @@
 \v 14 And=he/it_descended Mosheh from the÷mountain to the÷people and=he/it_consecrated DOM the÷people and÷washed clothes÷their.
 \v 15 And=he/it_said to the÷people be prepared for÷third days do_not draw_near to a_woman.
 \v 16 And=he/it_was in/on/at/with÷day the=third in/on/at/with÷was the÷morning and=he/it_was thunder_claps and÷lightning and÷cloud heavy on the÷mountain and÷sound of_a_ram's_horn strong very and÷trembled all the÷people which in/on/at/with÷camp.
-\v 17 And÷brought_out Mosheh DOM the÷people to÷meet the=ʼElhīmv from the÷camp and÷stood in/on/at/with÷foot the÷mountain.
+\v 17 And÷brought_out Mosheh DOM the÷people to÷meet the=ʼₑlhīmv from the÷camp and÷stood in/on/at/with÷foot the÷mountain.
 \v 18 And÷mount of_Şīnay it_was_smoking all÷him from=face/in_front_of that he_had_come_down on/upon/above=him/it Yahweh in/on/at/with÷fire and=he/it_ascended smoke÷its like÷smoke the÷furnace and÷trembled all the÷mountain exceedingly.
 \v 19 And=he/it_was the_sound the÷trumpet going and÷louder_and_louder very Mosheh he_spoke and÷the÷god answered÷him in/on/at/with÷thunder.
 \v 20 And=he/it_descended Yahweh on the_mountain of_Şīnay to the_top the÷mountain and=he/it_called Yahweh to÷Mosheh to the_top the÷mountain and=he/it_ascended Mosheh.
 \v 21 And=he/it_said Yahweh to Mosheh go_down warn in/on/at/with÷people lest they_should_break_through to Yahweh to=see and÷perish from=him/it many.
 \v 22 And=also the÷priests the÷come_near to Yahweh they_will_make_themselves_holy lest he_should_break_out (is)_in=them Yahweh.
 \v 23 And=he/it_said Mosheh to Yahweh not it_is_able the÷people to÷come_up to the_mountain of_Şīnay DOM you you_warned in/on/at/with÷us to=say set_bounds_for DOM the÷mountain and÷consecrate÷it.
-\v 24 And=he/it_said to=him/it Yahweh go go_down and÷come_up you and÷ʼAharon with÷you and÷the÷priests and÷the÷people not let_them_break_through to÷come_up to Yahweh lest he_should_break_out in/on/at/with÷them.
+\v 24 And=he/it_said to=him/it Yahweh go go_down and÷come_up you and÷ʼAhₐron with÷you and÷the÷priests and÷the÷people not let_them_break_through to÷come_up to Yahweh lest he_should_break_out in/on/at/with÷them.
 \v 25 And=he/it_descended Mosheh to the÷people and=he/it_said to÷them.
 \c 20
 \v 1 and=he/it_spoke god DOM all the÷words the=these to=say.
@@ -570,8 +570,8 @@
 \v 17 not you_must_covet the_house neighbor's÷your not you_must_covet the_wife neighbor's÷your and÷male_servant÷his and÷female_servant÷his and÷ox÷his and÷donkey÷his and=all/each/any/every that belongs_to÷neighbor÷your.
 \v 18 and=all the÷people [were]_seeing DOM the÷thunder and=DOM the÷lightning and=DOM the_sound the÷trumpet and=DOM the÷mountain smoking and=he/it_saw the÷people and÷trembled and÷stood at÷distance.
 \v 19 And=they_said to Mosheh speak you to÷us and÷listen and÷not let_him_speak to÷us god lest we_should_die.
-\v 20 And=he/it_said Mosheh to the÷people do_not be_afraid DOM in÷in/on/at/with÷order_to to_put_to_the_test DOM÷you_all he_has_come the=ʼElhīmv and÷in/on/at/with÷so_that it_may_be fear÷him on your_all's=faces to=not you_all_will_sin.
-\v 21 And÷stood the÷people at÷distance and÷Mosheh he_drew_near to the÷thick_darkness where [was]_there the=ʼElhīmv.
+\v 20 And=he/it_said Mosheh to the÷people do_not be_afraid DOM in÷in/on/at/with÷order_to to_put_to_the_test DOM÷you_all he_has_come the=ʼₑlhīmv and÷in/on/at/with÷so_that it_may_be fear÷him on your_all's=faces to=not you_all_will_sin.
+\v 21 And÷stood the÷people at÷distance and÷Mosheh he_drew_near to the÷thick_darkness where [was]_there the=ʼₑlhīmv.
 \v 22 and=he/it_said Yahweh to Mosheh thus you_will_say to the_people of_Yisərā\sup ʼēl\sup*/(Israel) you_all you_all_have_seen DOM_that from the=heavens I_have_spoken to÷you_all.
 \v 23 Not make alongside÷me gods of_silver and÷gods of_gold not you_all_must_make for÷yourselves.
 \v 24 An_altar of_earth you_will_make to/for=me and÷sacrifice on/upon/above=him/it DOM burnt_offerings÷your and=DOM fellowship_offerings÷your DOM sheep÷your and=DOM oxen÷your in=all the÷place where I_will_cause_to_be_remembered DOM name÷my I_will_come to÷you and÷bless÷you.
@@ -583,7 +583,7 @@
 \v 3 If in/on/at/with÷single he_will_come in/on/at/with÷single he_will_go_out if [is_the]_husband of_a_wife he and÷go_out his/its=wife/woman with=him/it.
 \v 4 If master÷his he_will_give to=him/it a_wife and÷bears to=him/it sons or daughters the=woman and÷children÷her she_will_belong to÷master÷her and=he he_will_go_out in/on/at/with÷single.
 \v 5 And=if explicitly_(say) he_will_say the÷slave I_love DOM my=master/master DOM wife÷my and=DOM children÷my not I_will_go_out a_free_[person].
-\v 6 And÷bring÷him master÷his to the=ʼElhīmv and÷bring÷him to the÷door or to the÷doorpost and÷pierce master÷his DOM ear÷his in/on/at/with÷awl and÷serve÷him to=vanishing_point.
+\v 6 And÷bring÷him master÷his to the=ʼₑlhīmv and÷bring÷him to the÷door or to the÷doorpost and÷pierce master÷his DOM ear÷his in/on/at/with÷awl and÷serve÷him to=vanishing_point.
 \v 7 and=because/when he_will_sell a_man DOM daughter÷his as÷slave not she_will_go_out as÷go_out the÷male_slaves.
 \v 8 If [she_is]_displeasing in/on=both_eyes_of master÷her who wwww\f + \fr 21:8 \ft Variant note: לא: (x-qere) 'ל֥/וֹ': lemma=l morph=HR/Sp3ms id=023Mv ל֥/וֹ\f* designated÷her and÷redeemed÷her to÷people foreign not he_will_have_dominion to÷sell÷her in/on/at/with÷broken_faith÷he in/on/at/with÷her.
 \v 9 And=if for÷son÷his designates÷her according_to÷customary_treatment the÷daughters he_will_do with÷her.
@@ -622,8 +622,8 @@
 \v 4 \f + \fr 22:4 \ft Note: KJB: Exod.22.5\f* DOM he_will_cause_to_be_grazed_over anyone a_field or a_vineyard and÷lets_untie/release DOM livestock÷his\f + \fr 22:4 \ft Variant note: בעיר/ה: (x-qere) 'בְּעִיר֔/וֹ': lemma=1165 n=1.1 morph=HNcmsc/Sp3ms id=02ADR בְּעִיר֔/וֹ\f* and÷graze in/on/at/with÷field of_another_[person] the_best field÷his_own and÷best vineyard÷his_own he_will_make_compensation.
 \v 5 \f + \fr 22:5 \ft Note: KJB: Exod.22.6\f* DOM it_will_go_forth a_fire and÷spreads thorns and÷consumed a_stack_of_sheaves or the÷standing_grain or the=field certainly_(make_compensation) he_will_make_compensation the÷started DOM the÷fire.
 \v 6 \f + \fr 22:6 \ft Note: KJB: Exod.22.7\f* DOM he_will_give anyone to his/its=neighbour money or articles to=guard/protect and÷stolen from÷house the=man if he_will_be_found the÷thief he_will_make_restitution twofold.
-\v 7 \f + \fr 22:7 \ft Note: KJB: Exod.22.8\f* if not he_will_be_found the÷thief and÷brought the_master the÷house to the=ʼElhīmv if not he_had_stretched_out his/its=hand in/on/at/with÷property his/its=neighbour.
-\v 8 \f + \fr 22:8 \ft Note: KJB: Exod.22.9\f* on every matter of_transgression on an_ox on a_donkey on a_sheep on a_garment on every thing_lost which anyone_will_say DOM [is]_it this to the=ʼElhīmv it_will_come the_case both_of=them [the_one]_whom condemn [the]_judges he_will_make_restitution twofold to÷neighbor÷his.
+\v 7 \f + \fr 22:7 \ft Note: KJB: Exod.22.8\f* if not he_will_be_found the÷thief and÷brought the_master the÷house to the=ʼₑlhīmv if not he_had_stretched_out his/its=hand in/on/at/with÷property his/its=neighbour.
+\v 8 \f + \fr 22:8 \ft Note: KJB: Exod.22.9\f* on every matter of_transgression on an_ox on a_donkey on a_sheep on a_garment on every thing_lost which anyone_will_say DOM [is]_it this to the=ʼₑlhīmv it_will_come the_case both_of=them [the_one]_whom condemn [the]_judges he_will_make_restitution twofold to÷neighbor÷his.
 \v 9 \f + \fr 22:9 \ft Note: KJB: Exod.22.10\f* DOM he_will_give anyone to his/its=neighbour a_donkey or an_ox or a_sheep and=all animal to=guard/protect and÷dies or it_was_maimed or it_was_captured there_[was]_not [one_who]_saw.
 \v 10 \f + \fr 22:10 \ft Note: KJB: Exod.22.11\f* the_oath of_Yahweh it_will_be between both_of=them if not he_had_stretched_out his/its=hand in/on/at/with÷property his/its=neighbour and=he/it_will_take owner÷its and=not he_will_make_compensation.
 \v 11 \f + \fr 22:11 \ft Note: KJB: Exod.22.12\f* and=if actually_(steal) it_will_be_stolen from÷with÷him he_will_make_restitution to÷owner÷its.
@@ -681,7 +681,7 @@
 \v 32 Not you_must_make to/for=them and÷with÷gods÷their a_covenant.
 \v 33 Not they_will_dwell in/on/at/with÷land÷your lest they_should_cause_to_sin DOM÷you to=me DOM you_will_serve DOM gods÷their DOM it_will_become to/for=yourself(m) as÷snare.
 \c 24
-\v 1 and=near/to Mosheh he_said come_up to Yahweh you and÷ʼAharon Nadab and÷Abihu and=seventy of÷elders of_Yisərā\sup ʼēl\sup*/(Israel) and÷worship at÷distance.
+\v 1 and=near/to Mosheh he_said come_up to Yahweh you and÷ʼAhₐron Nadab and÷Abihu and=seventy of÷elders of_Yisərā\sup ʼēl\sup*/(Israel) and÷worship at÷distance.
 \v 2 And÷come_near Mosheh for=him/it=being_alone to Yahweh and÷they not they_will_draw_near and÷the÷people not they_will_come_up with=him/it.
 \v 3 And÷came Mosheh and÷told to_the÷people DOM all the_words of_Yahweh and=DOM all the÷ordinances and÷answered all the÷people a_voice one and=they_said all the÷words which he_has_spoken Yahweh we_will_do.
 \v 4 And÷wrote_down Mosheh DOM all the_words of_Yahweh and÷rose_early in/on/at/with÷morning and=he/it_built an_altar under the÷mountain and÷two ten pillar[s] for÷two ten the_tribes of_Yisərā\sup ʼēl\sup*/(Israel).
@@ -689,12 +689,12 @@
 \v 6 And=he/it_took Mosheh (the)_half the÷blood and=he/it_assigned in/on/at/with÷basins and÷half the÷blood he_sprinkled on the÷altar.
 \v 7 And=he/it_took the_book the÷covenant and=he/it_called in/on/at/with÷hearing the÷people and=they_said all that he_has_spoken Yahweh we_will_do and÷obey.
 \v 8 And=he/it_took Mosheh DOM the÷blood and÷sprinkled on the÷people and=he/it_said here the_blood the÷covenant which he_has_made Yahweh with÷you_all on all the÷words the=these.
-\v 9 And=he/it_ascended Mosheh and÷ʼAharon Nadab and÷Abihu and=seventy of÷elders of_Yisərā\sup ʼēl\sup*/(Israel).
+\v 9 And=he/it_ascended Mosheh and÷ʼAhₐron Nadab and÷Abihu and=seventy of÷elders of_Yisərā\sup ʼēl\sup*/(Israel).
 \v 10 And=they_saw DOM the_god of_Yisərā\sup ʼēl\sup*/(Israel) and÷under feet÷his like÷pavement of_(the)_pavement the÷sapphire and÷like÷very the=heavens for÷clear.
-\v 11 And=near/to the_nobles of_the_people of_Yisərā\sup ʼēl\sup*/(Israel) not he_stretched_out his/its=hand and÷saw DOM the=ʼElhīmv and÷ate and÷drank.
+\v 11 And=near/to the_nobles of_the_people of_Yisərā\sup ʼēl\sup*/(Israel) not he_stretched_out his/its=hand and÷saw DOM the=ʼₑlhīmv and÷ate and÷drank.
 \v 12 and=he/it_said Yahweh to Mosheh come_up to=me the÷mountain÷on and=be there and÷give to/for=yourself(m) DOM the_tablets the÷stone and÷the÷law and÷the÷commandment which I_have_written for÷instruction÷their.
-\v 13 And=he/it_rose_up Mosheh and÷Yəhōshūˊa assistant÷his and=he/it_ascended Mosheh to the_mountain the=ʼElhīmv.
-\v 14 And=near/to the÷elders he_said remain to/for=us in/on/at/with÷here until that we_will_return to÷you_all and=see/lo/see ʼAharon and÷Hur with÷you_all whoever [is]_a_master of_matters he_will_draw_near to÷them.
+\v 13 And=he/it_rose_up Mosheh and÷Yəhōshūˊa assistant÷his and=he/it_ascended Mosheh to the_mountain the=ʼₑlhīmv.
+\v 14 And=near/to the÷elders he_said remain to/for=us in/on/at/with÷here until that we_will_return to÷you_all and=see/lo/see ʼAhₐron and÷Hur with÷you_all whoever [is]_a_master of_matters he_will_draw_near to÷them.
 \v 15 And=he/it_ascended Mosheh to the÷mountain and÷covered the÷cloud DOM the÷mountain.
 \v 16 And÷settled the_glory of_Yahweh on the_mountain of_Şīnay and÷covered÷it the÷cloud six days and=he/it_called (to) Mosheh in_the=day the=seventh from÷midst the÷cloud.
 \v 17 And=appearance of_the_glory of_Yahweh like÷fire consuming in/on/at/with÷top the÷mountain to÷eyes of_the_people of_Yisərā\sup ʼēl\sup*/(Israel).
@@ -799,12 +799,12 @@
 \v 18 The_length the÷courtyard [will_be]_one_hundred in/on/at/with÷cubits and÷width [will_be]_fifty in/on/at/with÷fifty and÷height [will_be]_five cubits fine_linen twisted and÷bases÷their [will_be]_bronze.
 \v 19 To=all/each/any/every the_articles the÷tabernacle in/on/at/with÷every service÷its and=all pegs÷its and=all the_tent_pegs the÷courtyard [will_be]_bronze.
 \v 20 and=you(ms) you_will_command DOM the_people of_Yisərā\sup ʼēl\sup*/(Israel) and÷bring to÷you oil of_olive[s] pure pressed for_the÷light so_that÷set_up a_lamp continually.
-\v 21 In/on/at/with÷tent of_meeting from÷outside of_the÷curtain which [is]_on the÷testimony he_will_arrange DOM=him/it ʼAharon and÷sons÷his from÷evening until morning to=(the)_face_of/in_front_of/before Yahweh a_statute of_perpetuity throughout÷generations÷their among the_people of_Yisərā\sup ʼēl\sup*/(Israel).
+\v 21 In/on/at/with÷tent of_meeting from÷outside of_the÷curtain which [is]_on the÷testimony he_will_arrange DOM=him/it ʼAhₐron and÷sons÷his from÷evening until morning to=(the)_face_of/in_front_of/before Yahweh a_statute of_perpetuity throughout÷generations÷their among the_people of_Yisərā\sup ʼēl\sup*/(Israel).
 \c 28
-\v 1 and=you(ms) bring_near to÷you DOM ʼAharon your(ms)=brother/kindred and=DOM sons÷his with=him/it from÷among the_people of_Yisərā\sup ʼēl\sup*/(Israel) to÷serve_aspriests÷they to=me ʼAharon Nadab and÷Abihu ʼEləˊāzār and÷Ithamar the_sons of_ʼAharon.
-\v 2 And÷make garments of_holiness for÷ʼAharon your(ms)=brother/kindred for÷glory and÷for÷beauty.
-\v 3 And=you(ms) you_will_speak to all [people]_skillful of_heart which given÷him a_spirit of_wisdom and÷make DOM the_garments of_ʼAharon to÷consecrate÷him for÷serve_aspriest÷he to=me.
-\v 4 And=these the÷garments which they_will_make a_breastpiece and÷ephod and÷robe and÷tunic of_checkered_work a_turban and÷sash and÷make garments of_holiness for÷ʼAharon your(ms)=brother/kindred and÷for÷sons÷his to÷serve_aspriests÷they to=me.
+\v 1 and=you(ms) bring_near to÷you DOM ʼAhₐron your(ms)=brother/kindred and=DOM sons÷his with=him/it from÷among the_people of_Yisərā\sup ʼēl\sup*/(Israel) to÷serve_aspriests÷they to=me ʼAhₐron Nadab and÷Abihu ʼEləˊāzār and÷Ithamar the_sons of_ʼAhₐron.
+\v 2 And÷make garments of_holiness for÷ʼAhₐron your(ms)=brother/kindred for÷glory and÷for÷beauty.
+\v 3 And=you(ms) you_will_speak to all [people]_skillful of_heart which given÷him a_spirit of_wisdom and÷make DOM the_garments of_ʼAhₐron to÷consecrate÷him for÷serve_aspriest÷he to=me.
+\v 4 And=these the÷garments which they_will_make a_breastpiece and÷ephod and÷robe and÷tunic of_checkered_work a_turban and÷sash and÷make garments of_holiness for÷ʼAhₐron your(ms)=brother/kindred and÷for÷sons÷his to÷serve_aspriests÷they to=me.
 \v 5 And÷they they_will_take DOM the=gold and=DOM the÷blue and=DOM the÷purple and=DOM the_scarlet_stuff the÷yarn and=DOM the÷fine_linen.
 \v 6 and÷make DOM the÷ephod gold violet_stuff and÷purple scarlet_stuff of_scarlet and÷fine_linen twisted [the]_work of_a_skillful_worker.
 \v 7 Two shoulder-pieces joined it_will_belong for=him/it to the_two edges÷its and÷joined_together.
@@ -812,7 +812,7 @@
 \v 9 And÷take DOM two stones of_onyx and÷engrave on÷them the_names of_the_sons of_Yisərā\sup ʼēl\sup*/(Israel).
 \v 10 Six of÷names÷their [will_be]_on the÷stone the÷one and=DOM the_names the÷six the÷remaining [will_be]_on the÷stone the=second(fs) in_the_order_of÷birth÷their.
 \v 11 [the]_work of_an_engraver of_stone [the]_engravings of_a_seal you_will_engrave DOM the_two the÷stones on the_names of_the_sons of_Yisərā\sup ʼēl\sup*/(Israel) surrounded filigree_settings of_gold you_will_make DOM=them.
-\v 12 And÷set DOM the_two the÷stones on the_shoulder-pieces the÷ephod stones of_remembrance for÷sons of_Yisərā\sup ʼēl\sup*/(Israel) and÷bear ʼAharon DOM names÷their to=(the)_face_of/in_front_of/before Yahweh on the_two shoulders÷his for÷remembrance.
+\v 12 And÷set DOM the_two the÷stones on the_shoulder-pieces the÷ephod stones of_remembrance for÷sons of_Yisərā\sup ʼēl\sup*/(Israel) and÷bear ʼAhₐron DOM names÷their to=(the)_face_of/in_front_of/before Yahweh on the_two shoulders÷his for÷remembrance.
 \v 13 and÷make filigree_settings of_gold.
 \v 14 And÷two chains of_gold pure twisted_cords you_will_make DOM=them a_work of_cordage and=you(ms)_will_give DOM the_chains the÷corded on the÷settings.
 \v 15 and÷make a_breastpiece of_judgment [the]_work of_a_skillful_worker like÷style of_[the]_ephod make÷it gold violet_stuff and÷purple and÷scarlet_of of_scarlet and÷fine_linen twisted you_will_make DOM=him/it.
@@ -829,57 +829,57 @@
 \v 26 And÷make two rings of_gold and÷put DOM=them on the_two the_ends the÷breastpiece on edge÷its which [is]_to the_side the÷ephod inner÷to.
 \v 27 And÷make two rings of_gold and=you(ms)_will_give DOM=them on the_two the_shoulder-pieces the÷ephod at÷to/for÷below on÷front his/its=faces/face by÷close_to seam÷its just÷above to÷waistband the÷ephod.
 \v 28 And÷tie DOM the÷breastpiece by÷rings÷its\f + \fr 28:28 \ft Variant note: מ/טבעת/ו: (x-qere) 'מִֽ/טַּבְּעֹתָ֞י/ו': lemma=m/2885 n=1.1.0.0 morph=HR/Ncfpc/Sp3ms id=02Kuy מִֽ/טַּבְּעֹתָ֞י/ו\f* to the_rings the÷ephod in/on/at/with÷cord of_violet_stuff to=be on the_girdle the÷ephod and=not it_will_become_detached the÷breastpiece from=under the÷ephod.
-\v 29 And÷bear ʼAharon DOM the_names of_the_sons of_Yisərā\sup ʼēl\sup*/(Israel) in/on/at/with÷breastpiece the÷judgment over his/its=heart in/on/at/with÷goes÷he into the÷sanctuary for÷remembrance to=(the)_face_of/in_front_of/before Yahweh continually.
-\v 30 And÷put into the_breastpiece the÷judgment DOM the÷urim and=DOM the÷thummim and=they_will_be over the_heart of_ʼAharon in/on/at/with÷goes_in÷he to=(the)_face_of/in_front_of/before Yahweh and÷bear ʼAharon DOM the_judgment of_the_people of_Yisərā\sup ʼēl\sup*/(Israel) over his/its=heart to=(the)_face_of/in_front_of/before Yahweh continually.
+\v 29 And÷bear ʼAhₐron DOM the_names of_the_sons of_Yisərā\sup ʼēl\sup*/(Israel) in/on/at/with÷breastpiece the÷judgment over his/its=heart in/on/at/with÷goes÷he into the÷sanctuary for÷remembrance to=(the)_face_of/in_front_of/before Yahweh continually.
+\v 30 And÷put into the_breastpiece the÷judgment DOM the÷urim and=DOM the÷thummim and=they_will_be over the_heart of_ʼAhₐron in/on/at/with÷goes_in÷he to=(the)_face_of/in_front_of/before Yahweh and÷bear ʼAhₐron DOM the_judgment of_the_people of_Yisərā\sup ʼēl\sup*/(Israel) over his/its=heart to=(the)_face_of/in_front_of/before Yahweh continually.
 \v 31 and÷make DOM the_robe the÷ephod an_entirety of_violet_stuff.
 \v 32 And=it_was the_opening his/its=head in/on/at/with÷middle÷it an_edge it_will_belong with÷opening÷its all_around [the]_work a_weaver like÷opening of_a_collar it_will_belong for=him/it not it_will_be_torn.
 \v 33 And÷make on hem÷its pomegranates of_violet_stuff and÷purple and÷scarlet_of of_scarlet on hem÷its all_around and÷bells of_gold in/on/at/with÷midst÷them all_around.
 \v 34 A_bell of_gold and÷pomegranate a_bell of_gold and÷pomegranate [will_be]_on the_skirts the÷robe all_around.
-\v 35 And=it_was on ʼAharon when÷ministers and÷heard sound÷its in/on/at/with÷goes÷he into the÷sanctuary to=(the)_face_of/in_front_of/before Yahweh and÷in/on/at/with÷comes_out÷he and=not he_will_die.
+\v 35 And=it_was on ʼAhₐron when÷ministers and÷heard sound÷its in/on/at/with÷goes÷he into the÷sanctuary to=(the)_face_of/in_front_of/before Yahweh and÷in/on/at/with÷comes_out÷he and=not he_will_die.
 \v 36 and÷make a_plate of_gold pure and÷engrave on/upon/above=him/it [the]_engravings of_a_seal holiness to/for=\nd YHWH\nd*.
 \v 37 And÷fasten DOM=him/it on a_cord of_violet_stuff and=it_was on the÷turban to the_front of_the_face the÷turban it_will_be.
-\v 38 And=it_was on the_forehead of_ʼAharon and÷bear ʼAharon DOM the_guilt the÷holy_things which they_will_consecrate the_people of_Yisərā\sup ʼēl\sup*/(Israel) to/from=all/each/any/every the_gifts holy÷their and=it_was on forehead÷his continually so_that÷acceptance to/for=them to=(the)_face_of/in_front_of/before Yahweh.
+\v 38 And=it_was on the_forehead of_ʼAhₐron and÷bear ʼAhₐron DOM the_guilt the÷holy_things which they_will_consecrate the_people of_Yisərā\sup ʼēl\sup*/(Israel) to/from=all/each/any/every the_gifts holy÷their and=it_was on forehead÷his continually so_that÷acceptance to/for=them to=(the)_face_of/in_front_of/before Yahweh.
 \v 39 And÷weave the÷tunic fine_linen and÷make a_turban of_fine_linen and÷sash you_will_make [the]_work of_a_worker_in_colours.
-\v 40 And÷for÷sons of_ʼAharon you_will_make tunics and÷make to/for=them sashes and÷headdresses you_will_make to/for=them for÷glory and÷for÷beauty.
-\v 41 And÷put_on DOM=them DOM ʼAharon your(ms)=brother/kindred and=DOM sons÷his with=him/it and÷anoint DOM=them and÷you_ordain DOM hand_of÷them and÷consecrate DOM=them and÷serve_aspriests to=me.
+\v 40 And÷for÷sons of_ʼAhₐron you_will_make tunics and÷make to/for=them sashes and÷headdresses you_will_make to/for=them for÷glory and÷for÷beauty.
+\v 41 And÷put_on DOM=them DOM ʼAhₐron your(ms)=brother/kindred and=DOM sons÷his with=him/it and÷anoint DOM=them and÷you_ordain DOM hand_of÷them and÷consecrate DOM=them and÷serve_aspriests to=me.
 \v 42 And÷make to/for=them undergarments of_linen to÷cover [the]_flesh of_nakedness from÷waist and=unto [the]_thighs they_will_be.
-\v 43 And=they_will_be on ʼAharon and÷on sons÷his in/on/at/with÷go÷they into the_tent of_meeting or in/on/at/with÷approach÷they to the÷altar to÷minister in/on/at/with÷sanctuary and=not they_will_bear guilt and÷die [it_will_be]_a_statute of_perpetuity to=him/it and÷for÷descendants÷his after÷him.
+\v 43 And=they_will_be on ʼAhₐron and÷on sons÷his in/on/at/with÷go÷they into the_tent of_meeting or in/on/at/with÷approach÷they to the÷altar to÷minister in/on/at/with÷sanctuary and=not they_will_bear guilt and÷die [it_will_be]_a_statute of_perpetuity to=him/it and÷for÷descendants÷his after÷him.
 \c 29
 \v 1 and=this the÷thing which you_will_do to/for=them to÷consecrate DOM=them to÷serve_aspriests to=me take a_young_bull one a_young_one of_[the]_herd and÷rams two unblemished.
 \v 2 And÷bread of_unleavened_bread(s) and÷cakes of_unleavened_bread(s) mixed in/on/at/with÷oil and÷wafers of_unleavened_bread(s) smeared in/on/at/with÷oil fine_flour of_wheat(s) you_will_make DOM=them.
 \v 3 And÷put DOM÷them on a_basket one and÷bring DOM=them in/on/at/with÷basket and=DOM the÷bull and=DOM the_two the÷rams.
-\v 4 And=DOM ʼAharon and=DOM sons÷his you_will_bring_near to the_entrance of_the_tent of_meeting and÷wash DOM=them in/on/at/with÷water.
-\v 5 And÷take DOM the÷garments and÷put_on DOM ʼAharon DOM the÷tunic and=DOM the_robe the÷ephod and=DOM the÷ephod and=DOM the÷breastpiece and÷fasten to=him/it in/on/at/with÷skillfully_woven_band the÷ephod.
+\v 4 And=DOM ʼAhₐron and=DOM sons÷his you_will_bring_near to the_entrance of_the_tent of_meeting and÷wash DOM=them in/on/at/with÷water.
+\v 5 And÷take DOM the÷garments and÷put_on DOM ʼAhₐron DOM the÷tunic and=DOM the_robe the÷ephod and=DOM the÷ephod and=DOM the÷breastpiece and÷fasten to=him/it in/on/at/with÷skillfully_woven_band the÷ephod.
 \v 6 And÷set the÷turban on his/its=head and÷put DOM the_crown the÷holy on the÷turban.
 \v 7 And÷take DOM the_oil the÷anointing and÷pour on his/its=head and÷anoint DOM=him/it.
 \v 8 And=DOM sons÷his you_will_bring_near and÷put_on÷them tunics.
-\v 9 And÷gird DOM=them a_sash ʼAharon and÷sons÷his and÷bind to/for=them headdresses and÷be to/for=them priesthood by÷statute of_perpetuity and÷you_shall_ordain the_hand of_ʼAharon and÷hand_of sons÷his.
-\v 10 And÷bring DOM the÷bull to=(the)_face_of/in_front_of/before the_tent of_meeting and÷lay ʼAharon and÷sons÷his DOM hands÷their on the_head the÷bull.
+\v 9 And÷gird DOM=them a_sash ʼAhₐron and÷sons÷his and÷bind to/for=them headdresses and÷be to/for=them priesthood by÷statute of_perpetuity and÷you_shall_ordain the_hand of_ʼAhₐron and÷hand_of sons÷his.
+\v 10 And÷bring DOM the÷bull to=(the)_face_of/in_front_of/before the_tent of_meeting and÷lay ʼAhₐron and÷sons÷his DOM hands÷their on the_head the÷bull.
 \v 11 And÷slaughter DOM the÷bull to=(the)_face_of/in_front_of/before Yahweh the_entrance of_the_tent of_meeting.
 \v 12 And÷take some_of÷blood the÷bull and=you(ms)_will_give on the_horns the÷altar in/on/at/with÷finger÷your and=DOM all the÷blood you_will_pour_out to the_base the÷altar.
 \v 13 And÷take DOM all the÷fat the÷covers DOM the÷entrails and=DOM the÷lobe on the÷liver and=DOM the_two the÷kidneys and=DOM the÷fat which on÷them and÷burn the÷altar÷on.
 \v 14 And=DOM the_flesh the÷bull and=DOM hide÷its and=DOM offal÷its you_will_burn in/on/at/with÷fire from÷outside of_the÷camp [is]_a_sin_offering it.
-\v 15 And=DOM the÷ram the=one you_will_take and÷lay ʼAharon and÷sons÷his DOM hands÷their on the_head the÷ram.
+\v 15 And=DOM the÷ram the=one you_will_take and÷lay ʼAhₐron and÷sons÷his DOM hands÷their on the_head the÷ram.
 \v 16 And÷slaughter DOM the÷ram and÷take DOM blood÷its and÷sprinkle on the÷altar all_around.
 \v 17 And=DOM the÷ram you_will_cut_in_pieces into÷pieces÷its and÷wash entrails÷its and÷legs÷its and÷put with pieces÷its and÷with his/its=head.
 \v 18 And÷burn DOM all the÷ram the÷altar÷on [is]_a_burnt_offering it to/for=\nd YHWH\nd* [is]_an_odor of_soothing a_fire_offering to/for=\nd YHWH\nd* it.
-\v 19 And÷take DOM the÷ram the=second and÷lay ʼAharon and÷sons÷his DOM hands÷their on the_head the÷ram.
-\v 20 And÷slaughter DOM the÷ram and÷take some_of÷blood÷its and=you(ms)_will_give on the_lobe of_the_ear of_ʼAharon and÷on the_lobe of_the_ear sons÷his the÷right and÷on the_thumb hands÷their the÷right and÷on the_big_toe feet÷their the÷right and÷sprinkle DOM the÷blood on the÷altar all_around.
-\v 21 And÷take some_of the÷blood which [is]_on the÷altar and÷some_of÷oil the÷anointing and÷sprinkle on ʼAharon and÷on garments÷his and÷on sons÷his and÷on the_garments sons'÷his with=him/it and÷consecrated he and÷garments÷his and÷sons÷his and÷garments sons'÷his with=him/it.
+\v 19 And÷take DOM the÷ram the=second and÷lay ʼAhₐron and÷sons÷his DOM hands÷their on the_head the÷ram.
+\v 20 And÷slaughter DOM the÷ram and÷take some_of÷blood÷its and=you(ms)_will_give on the_lobe of_the_ear of_ʼAhₐron and÷on the_lobe of_the_ear sons÷his the÷right and÷on the_thumb hands÷their the÷right and÷on the_big_toe feet÷their the÷right and÷sprinkle DOM the÷blood on the÷altar all_around.
+\v 21 And÷take some_of the÷blood which [is]_on the÷altar and÷some_of÷oil the÷anointing and÷sprinkle on ʼAhₐron and÷on garments÷his and÷on sons÷his and÷on the_garments sons'÷his with=him/it and÷consecrated he and÷garments÷his and÷sons÷his and÷garments sons'÷his with=him/it.
 \v 22 And÷take from the÷ram the÷fat and÷the÷fat_tail and=DOM the÷fat the÷covers DOM the÷entrails and=DOM the_lobe the÷liver and=DOM the_two the÷kidneys and=DOM the÷fat which on÷them and=DOM the_thigh the÷right DOM [is]_a_ram of_installation_offering(s) it.
 \v 23 And÷loaf of_bread one and÷cake of_bread of_oil one and÷wafer one from÷basket the÷unleavened_bread which to=(the)_face_of/in_front_of/before Yahweh.
-\v 24 And÷put the÷all on the_palms of_ʼAharon and÷on the_palms sons÷his and÷wave DOM=them a_wave-offering to=(the)_face_of/in_front_of/before Yahweh.
+\v 24 And÷put the÷all on the_palms of_ʼAhₐron and÷on the_palms sons÷his and÷wave DOM=them a_wave-offering to=(the)_face_of/in_front_of/before Yahweh.
 \v 25 And÷take DOM=them from÷hands÷their and÷burn the÷altar÷on on the÷burnt_offering as÷aroma of_soothing to=(the)_face_of/in_front_of/before Yahweh [is]_a_fire_offering it to/for=\nd YHWH\nd*.
-\v 26 And÷take DOM the÷breast of÷ram the÷ordination which for÷ʼAharon and÷wave DOM=him/it a_wave-offering to=(the)_face_of/in_front_of/before Yahweh and=it_was to/for=yourself(m) for÷portion.
-\v 27 And÷consecrate DOM the_breast the÷wave_offering and=DOM the_thigh the÷contribution [that]_which it_was_waved and=which it_was_raised from÷ram the÷ordination from÷that for÷ʼAharon and÷from÷which for÷sons÷his.
-\v 28 And=it_was for÷ʼAharon and÷for÷sons÷his as÷portion of_perpetuity from the_people of_Yisərā\sup ʼēl\sup*/(Israel) DOM [is]_a_contribution it and÷contribution it_will_be from the_people of_Yisərā\sup ʼēl\sup*/(Israel) from÷sacrifices fellowship÷their contribution÷their to/for=\nd YHWH\nd*.
-\v 29 And÷garments the÷holy which of÷ʼAharon they_will_belong for÷sons÷his after÷him so_that÷anointed in/among=them and÷to÷ordain in/on/at/with÷them DOM hand_of÷they.
+\v 26 And÷take DOM the÷breast of÷ram the÷ordination which for÷ʼAhₐron and÷wave DOM=him/it a_wave-offering to=(the)_face_of/in_front_of/before Yahweh and=it_was to/for=yourself(m) for÷portion.
+\v 27 And÷consecrate DOM the_breast the÷wave_offering and=DOM the_thigh the÷contribution [that]_which it_was_waved and=which it_was_raised from÷ram the÷ordination from÷that for÷ʼAhₐron and÷from÷which for÷sons÷his.
+\v 28 And=it_was for÷ʼAhₐron and÷for÷sons÷his as÷portion of_perpetuity from the_people of_Yisərā\sup ʼēl\sup*/(Israel) DOM [is]_a_contribution it and÷contribution it_will_be from the_people of_Yisərā\sup ʼēl\sup*/(Israel) from÷sacrifices fellowship÷their contribution÷their to/for=\nd YHWH\nd*.
+\v 29 And÷garments the÷holy which of÷ʼAhₐron they_will_belong for÷sons÷his after÷him so_that÷anointed in/among=them and÷to÷ordain in/on/at/with÷them DOM hand_of÷they.
 \v 30 Seven days wear÷them the=priest/officer succeeds÷him of÷sons÷his who he_will_come into the_tent of_meeting to÷minister in/on/at/with÷sanctuary.
 \v 31 And=DOM the_ram the÷ordination you_will_take and÷boil DOM flesh÷its in/on/at/with÷place holy.
-\v 32 And=he/it_will_eat ʼAharon and÷sons÷his DOM the_meat the÷ram and=DOM the÷bread which in/on/at/with÷basket the_entrance of_the_tent of_meeting.
+\v 32 And=he/it_will_eat ʼAhₐron and÷sons÷his DOM the_meat the÷ram and=DOM the÷bread which in/on/at/with÷basket the_entrance of_the_tent of_meeting.
 \v 33 And÷eat DOM=them which it_was_atoned (is)_in=them to÷ordain DOM hand_of÷their to÷consecration DOM=them and÷unauthorized not he_will_eat_[them] DOM [are]_a_holy_thing they.
 \v 34 And=if it_will_be_left_over any_of÷meat the÷ordination and=from the÷bread until the÷morning and÷burn DOM the÷remainder in/on/at/with÷fire not it_will_be_eaten DOM [is]_a_holy_thing it.
-\v 35 And÷do for÷ʼAharon and÷to÷sons÷his thus according_to÷all that I_have_commanded DOM÷you seven days you_will_fill hand_of÷them.
+\v 35 And÷do for÷ʼAhₐron and÷to÷sons÷his thus according_to÷all that I_have_commanded DOM÷you seven days you_will_fill hand_of÷them.
 \v 36 And÷bull of_a_sin_offering you_will_offer each_the÷day on the÷atonement and÷purify on the÷altar in/on/at/with÷make_atonement÷you on/upon/above=him/it and÷anoint DOM=him/it to÷consecrate÷it.
 \v 37 Seven days you_will_make_atonement on the÷altar and÷consecrate DOM=him/it and=it_was the÷altar holiness of_holiness(es) every the÷touches in/on/at/with÷altar it_will_be_holy.
 \v 38 and=this [is_that]_which you_will_offer on the÷altar lambs sons of_a_year two each_the÷day continually.
@@ -888,7 +888,7 @@
 \v 41 And=DOM the÷lamb the=second you_will_offer between the÷twilight as÷grain_offering the÷morning and÷as÷drink_offering÷its you_will_offer with÷it for÷aroma of_soothing a_fire_offering to/for=\nd YHWH\nd*.
 \v 42 A_burnt_offering of_continuity throughout÷generations÷your_all's the_entrance of_the_tent of_meeting to=(the)_face_of/in_front_of/before Yahweh where I_will_meet to/for=you_all there÷at to÷speak to÷you there.
 \v 43 And÷meet there÷at with÷sons of_Yisərā\sup ʼēl\sup*/(Israel) and÷consecrated in/on/at/with÷glory÷my.
-\v 44 And÷consecrate DOM the_tent of_meeting and=DOM the÷altar and=DOM ʼAharon and=DOM sons÷his I_will_consecrate to÷serve_aspriests to=me.
+\v 44 And÷consecrate DOM the_tent of_meeting and=DOM the÷altar and=DOM ʼAhₐron and=DOM sons÷his I_will_consecrate to÷serve_aspriests to=me.
 \v 45 And÷dwell in_the=middle the_people of_Yisərā\sup ʼēl\sup*/(Israel) and=I_will_be to/for=them as÷god.
 \v 46 And÷know DOM_that I [am]_Yahweh god÷their who I_brought_out DOM=them of÷land of_Miʦərayim/(Egypt) that÷dwell÷I in/on/at/with÷midst÷them I [am]_Yahweh god÷their.
 \c 30
@@ -898,10 +898,10 @@
 \v 4 And÷two rings of_gold you_will_make for=him/it from=under to÷molding÷its on the_two sides÷its you_will_make_[them] on the_two sides÷it and=it_was as÷holders for÷poles to÷carry DOM=him/it in/on/at/with÷which.
 \v 5 And÷make DOM the÷poles wood(s) of_acacia and÷overlay DOM=them gold.
 \v 6 And=you(ms)_will_give DOM=him/it to=(the)_face_of/in_front_of/before the÷curtain which [is]_on the_ark the÷testimony to=(the)_face_of/in_front_of/before the÷mercy_seat which [is]_on the÷testimony where I_will_meet to/for=yourself(m) there÷at.
-\v 7 And÷burn on/upon/above=him/it ʼAharon incense of_perfume(s) in/on/at/with÷morning in/on/at/with÷morning in/on/at/with÷tends÷he DOM the÷lamps burn÷it.
-\v 8 And÷in/on/at/with÷sets_up ʼAharon DOM the÷lamps between the÷twilight burn÷it incense of_continuity to=(the)_face_of/in_front_of/before Yahweh throughout÷generations÷your_all's.
+\v 7 And÷burn on/upon/above=him/it ʼAhₐron incense of_perfume(s) in/on/at/with÷morning in/on/at/with÷morning in/on/at/with÷tends÷he DOM the÷lamps burn÷it.
+\v 8 And÷in/on/at/with÷sets_up ʼAhₐron DOM the÷lamps between the÷twilight burn÷it incense of_continuity to=(the)_face_of/in_front_of/before Yahweh throughout÷generations÷your_all's.
 \v 9 Not you_all_must_offer_up on/upon/above=him/it incense strange and÷burnt_offering and÷grain_offering and÷drink_offering not you_all_must_pour_out on/upon/above=him/it.
-\v 10 And÷make_atonement ʼAharon on horns÷its one_[time] in/on/at/with÷year with÷blood of_the_sin_offering the÷atonement one_[time] in/on/at/with÷year he_will_make_atonement on/upon/above=him/it throughout÷generations÷your_all's [is]_holiness of_holiness(es) it to/for=\nd YHWH\nd*.
+\v 10 And÷make_atonement ʼAhₐron on horns÷its one_[time] in/on/at/with÷year with÷blood of_the_sin_offering the÷atonement one_[time] in/on/at/with÷year he_will_make_atonement on/upon/above=him/it throughout÷generations÷your_all's [is]_holiness of_holiness(es) it to/for=\nd YHWH\nd*.
 \v 11 and=he/it_spoke Yahweh to Mosheh to÷saying.
 \v 12 DOM you_will_lift_up DOM the_head of_the_people of_Yisərā\sup ʼēl\sup*/(Israel)\f + \fr 30:12 \ft Note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f* to÷register÷them and÷give everyone the_ransom life÷his to/for=\nd YHWH\nd* in/on/at/with÷number DOM=them and=not it_will_be in/among=them a_plague in/on/at/with÷number DOM=them.
 \v 13 This they_will_pay every the÷crosses_over to the÷registered the_half the÷shekel in/on/at/with÷shekel the÷sanctuary [is]_twenty gerah[s] the÷shekel (the)_half the÷shekel [is]_a_contribution to/for=\nd YHWH\nd*.
@@ -910,7 +910,7 @@
 \v 16 And÷take DOM the_money the÷atonement from the_people of_Yisərā\sup ʼēl\sup*/(Israel) and÷give DOM=him/it on the_service of_the_tent of_meeting and=it_was for÷sons of_Yisərā\sup ʼēl\sup*/(Israel) as÷memorial to=(the)_face_of/in_front_of/before Yahweh to÷make_atonement on lives÷your_all's.
 \v 17 and=he/it_spoke Yahweh to Mosheh to÷saying.
 \v 18 And÷make a_laver of_bronze and÷stand÷its bronze for÷washing and÷put DOM=him/it between the_tent of_meeting and=between the÷altar and÷put it÷in water.
-\v 19 And÷wash ʼAharon and÷sons÷his from=him/it DOM hands÷their and=DOM feet÷their.
+\v 19 And÷wash ʼAhₐron and÷sons÷his from=him/it DOM hands÷their and=DOM feet÷their.
 \v 20 In/on/at/with÷go÷they into the_tent of_meeting they_will_wash water and=not they_will_die or in/on/at/with÷approach÷they to the÷altar to÷minister by÷burning a_fire_offering to/for=\nd YHWH\nd*.
 \v 21 And÷wash hands÷their and÷feet÷their and=not they_will_die and÷be to/for=them a_decree of_perpetuity to=him/it and÷to÷descendants÷his throughout÷generations÷their.
 \v 22 and=he/it_spoke Yahweh to Mosheh to÷saying.
@@ -921,7 +921,7 @@
 \v 27 And=DOM the÷table and=DOM all utensils÷its and=DOM the÷lampstand and=DOM utensils÷its and=DOM the_altar the÷incense.
 \v 28 And=DOM the_altar the÷burnt_offering and=DOM all utensils÷its and=DOM the÷basin and=DOM stand÷its.
 \v 29 And÷consecrate DOM=them and=they_will_be holiness of_holiness(es) every the÷touches (is)_in=them it_will_be_holy.
-\v 30 And=DOM ʼAharon and=DOM sons÷his you_will_anoint and÷consecrate DOM=them to÷serve_aspriests to=me.
+\v 30 And=DOM ʼAhₐron and=DOM sons÷his you_will_anoint and÷consecrate DOM=them to÷serve_aspriests to=me.
 \v 31 And=near/to the_people of_Yisərā\sup ʼēl\sup*/(Israel) you_will_speak to=say oil of_anointing of_holiness it_will_be this to=me throughout÷generations÷your_all's.
 \v 32 On [the]_body of_a_person not it_will_be_poured and÷in/on/at/with÷formula÷its not you_all_must_make like÷it [is]_a_holy_thing it a_holy_thing it_will_be to÷you_all.
 \v 33 Anyone who he_will_mix like÷it and=which he_will_put from=him/it on a_stranger and÷cut_off from÷people÷his.
@@ -940,7 +940,7 @@
 \v 7 DOM the_tent of_meeting and=DOM the÷ark of_the÷testimony and=DOM the÷mercy_seat which on/upon/above=him/it and=DOM all the_articles the÷tent.
 \v 8 And=DOM the÷table and=DOM utensils÷its and=DOM the÷lampstand the÷pure and=DOM all utensils÷its and=DOM the_altar the÷incense.
 \v 9 And=DOM the_altar the÷burnt_offering and=DOM all utensils÷its and=DOM the÷basin and=DOM stand÷its.
-\v 10 And=DOM the_garments the÷woven and=DOM the_garments the÷holy for÷ʼAharon the=priest/officer and=DOM the_garments sons÷his to÷serve_as_priests.
+\v 10 And=DOM the_garments the÷woven and=DOM the_garments the÷holy for÷ʼAhₐron the=priest/officer and=DOM the_garments sons÷his to÷serve_as_priests.
 \v 11 And=DOM the_oil the÷anointing and=DOM the_incense the÷fragrant for_the÷sanctuary according_to÷all that commanded÷you they_will_do.
 \v 12 and=he/it_said Yahweh to Mosheh to÷said.
 \v 13 And=you(ms) speak to the_people of_Yisərā\sup ʼēl\sup*/(Israel) to=say surely DOM sabbaths÷my you_all_will_observe DOM [is]_a_sign it between÷me and÷between÷you_all throughout÷generations÷your_all's to=know DOM_that I [am]_Yahweh consecrates÷you_all.
@@ -950,11 +950,11 @@
 \v 17 Between÷me and=between the_people of_Yisərā\sup ʼēl\sup*/(Israel) [is]_a_sign it to=vanishing_point DOM six days he_made Yahweh DOM the=heavens and=DOM the=earth/land and÷in/on/at/with÷day the=seventh he_rested and÷refreshed.
 \v 18 and=he/it_gave to Mosheh when÷finished÷he to÷speaking with=him/it in/on/at/with÷mount of_Şīnay the_two the_tablets the÷testimony tablets of_stone written in/on/at/with÷finger of_god.
 \c 32
-\v 1 And=he/it_saw the÷people DOM_that he_delayed Mosheh to÷come_down from the÷mountain and÷gathered the÷people to ʼAharon and=they_said to=him/it arise make to/for=us gods which they_will_go before÷face/front÷us DOM this Mosheh the=man who brought_up÷us from÷land of_Miʦərayim/(Egypt) not we_know what has_it_happened to=him/it.
-\v 2 And=he/it_said to÷them ʼAharon tear_off the_rings the=gold which in/on/at/with÷ears wives÷your_all's sons÷your_all's and÷daughters÷your_all's and÷bring to÷me.
-\v 3 And÷took_off all the÷people DOM the_rings the=gold which in/on/at/with÷ears÷their and÷brought to ʼAharon.
+\v 1 And=he/it_saw the÷people DOM_that he_delayed Mosheh to÷come_down from the÷mountain and÷gathered the÷people to ʼAhₐron and=they_said to=him/it arise make to/for=us gods which they_will_go before÷face/front÷us DOM this Mosheh the=man who brought_up÷us from÷land of_Miʦərayim/(Egypt) not we_know what has_it_happened to=him/it.
+\v 2 And=he/it_said to÷them ʼAhₐron tear_off the_rings the=gold which in/on/at/with÷ears wives÷your_all's sons÷your_all's and÷daughters÷your_all's and÷bring to÷me.
+\v 3 And÷took_off all the÷people DOM the_rings the=gold which in/on/at/with÷ears÷their and÷brought to ʼAhₐron.
 \v 4 And=he/it_took from÷hand÷their and=he/it_laid_seige DOM=him/it in/on/at/with÷tool and÷made÷it a_calf of_molten_metal and=they_said these gods÷your Oh_Yisərā\sup ʼēl\sup*/(Israel) who brought_up÷you from÷land of_Miʦərayim.
-\v 5 And=he/it_saw ʼAharon and=he/it_built an_altar in÷front÷it and=he/it_called ʼAharon and÷said a_festival to/for=\nd YHWH\nd* [will_be]_tomorrow.
+\v 5 And=he/it_saw ʼAhₐron and=he/it_built an_altar in÷front÷it and=he/it_called ʼAhₐron and÷said a_festival to/for=\nd YHWH\nd* [will_be]_tomorrow.
 \v 6 And÷rose_early on÷next_day and÷offered burnt_offerings and÷presented peace_offerings and=he/it_sat_down//remained//lived the÷people to÷eat and÷drink and÷rose_up to÷revel.
 \v 7 and=he/it_spoke Yahweh to Mosheh go go_down DOM it_has_behaved_corruptly people÷your which you_brought_up from÷land of_Miʦərayim.
 \v 8 They_have_turned_aside quickly from the÷way which commanded÷them they_have_made to/for=them a_calf of_molten_metal and÷worshiped to=him/it and÷sacrificed to=him/it and=they_said these gods÷your Oh_Yisərā\sup ʼēl\sup*/(Israel) who brought_up÷you from÷land of_Miʦərayim/(Egypt).
@@ -962,7 +962,7 @@
 \v 10 And=now leave_alone to/for=me and÷burn anger÷my in/among=them and÷destroy÷them and÷make DOM÷you to=(a)_nation great.
 \v 11 And÷sought Mosheh DOM the_face of_Yahweh his/its=god and=he/it_said to/for÷why Oh_Yahweh does_it_burn anger÷your in/on/at/with÷people÷your which you_brought_out of÷land of_Miʦərayim in/on/at/with÷power great and÷in/on/at/with÷hand strong.
 \v 12 To/for=what will_they_say Miʦərayim to=say in/on/at/with÷evil_intent brought_out÷them to÷kill DOM=them in/on/at/with÷mountains and÷to÷wipe÷them from=under the_surface the=soil turn from÷fierce anger÷your and÷relent on the÷disaster for÷people÷your.
-\v 13 Remember to÷ʼAvərāhām to÷Yiʦəḩāq/(Isaac) and÷to÷Yisərā\sup ʼēl\sup*/(Israel) your=servants whom you_swore to/for=them on/over=you(fs) and÷said to÷them I_will_increase DOM descendants÷your_all's like÷stars the=heavens and=all the=earth/land the÷this which I_have_promised I_will_give to÷descendants÷your_all's and÷inherit to=vanishing_point.
+\v 13 Remember to÷ʼAⱱərāhām to÷Yiʦəḩāq/(Isaac) and÷to÷Yisərā\sup ʼēl\sup*/(Israel) your=servants whom you_swore to/for=them on/over=you(fs) and÷said to÷them I_will_increase DOM descendants÷your_all's like÷stars the=heavens and=all the=earth/land the÷this which I_have_promised I_will_give to÷descendants÷your_all's and÷inherit to=vanishing_point.
 \v 14 And=he/it_sighed/regretted Yahweh on the÷disaster which he_had_spoken for=doing on÷people÷his.
 \v 15 and÷turned and=he/it_descended Mosheh from the÷mountain and÷two the_tablets the÷testimony in=his/its=hand tablets written on÷both sides÷their on÷one_side and÷on÷the_other they [were]_written.
 \v 16 And÷the÷tablets [were]_the_work of_god they and÷the÷writing [was]_the_writing of_god it engraved on the÷tablets.
@@ -970,11 +970,11 @@
 \v 18 and=he/it_said [it_is]_not a_sound of_singing of_strength and÷not a_sound of_singing of_weakness a_sound of_singing I [am]_hearing.
 \v 19 And=he/it_was just=as he_drew_near to the÷camp and=he/it_saw DOM the÷calf and÷dancing and=it_glowed/burned the_anger of_Mosheh and÷threw from÷hands÷his\f + \fr 32:19 \ft Variant note: מ/יד/ו: (x-qere) 'מִ/יָּדָי/ו֙': lemma=m/3027 n=0.1.0 morph=HR/Ncbdc/Sp3ms id=02Qza מִ/יָּדָי/ו֙\f* DOM the÷tablets and÷broke DOM=them under the÷mountain.
 \v 20 And=he/it_took DOM the÷calf which they_had_made and÷burned in/on/at/with÷fire and÷ground until that it_was_fine and÷scattered on the_surface the=waters and÷drink DOM the_people of_Yisərā\sup ʼēl\sup*/(Israel).
-\v 21 And=he/it_said Mosheh to ʼAharon what did_it_do to/for=yourself(m) the÷people the=this (cmp) you_have_brought on/upon/above=him/it a_sin great.
-\v 22 And=he/it_said ʼAharon not let_it_burn the_anger my=master/master you you_know DOM the÷people DOM_that in/on/at/with÷evil it.
+\v 21 And=he/it_said Mosheh to ʼAhₐron what did_it_do to/for=yourself(m) the÷people the=this (cmp) you_have_brought on/upon/above=him/it a_sin great.
+\v 22 And=he/it_said ʼAhₐron not let_it_burn the_anger my=master/master you you_know DOM the÷people DOM_that in/on/at/with÷evil it.
 \v 23 And=they_said to=me make to/for=us gods which they_will_go before÷face/front÷us DOM this Mosheh the=man who brought_up÷us from÷land of_Miʦərayim/(Egypt) not we_know what has_it_happened to=him/it.
 \v 24 And÷said to/for=them has÷whoever gold tear_[it]_off_from_yourselves and÷gave to=me and÷threw÷it in/on/at/with÷fire and=he/it_went_out the÷calf the÷this.
-\v 25 And=he/it_saw Mosheh DOM the÷people DOM_that [was]_running_wild it DOM get_out_of_control÷them ʼAharon to÷laughingstock in/on/at/with÷enemies÷their.
+\v 25 And=he/it_saw Mosheh DOM the÷people DOM_that [was]_running_wild it DOM get_out_of_control÷them ʼAhₐron to÷laughingstock in/on/at/with÷enemies÷their.
 \v 26 And÷stood Mosheh in/on/at/with÷entrance the÷camp and=he/it_said who to/for=\nd YHWH\nd* to÷me and÷gathered to=him/it all the_descendants of_Lēvīh.
 \v 27 And=he/it_said to/for=them thus he_says Yahweh the_god of_Yisərā\sup ʼēl\sup*/(Israel) put everyone sword÷his on side÷his pass and÷go_forth from÷gate to÷gate in/on/at/with÷camp and÷kill everyone DOM his/its=woman and÷each DOM his/its=neighbour and÷each DOM neighbor÷his.
 \v 28 And÷did the_descendants of_Lēvīh as÷commanded of_Mosheh and÷fell of the÷people in_the=day (the)=that about÷three thousand(s) person[s].
@@ -984,9 +984,9 @@
 \v 32 And=now if you_will_forgive sin÷their and=if not blot_out÷me please from÷book÷your which you_have_written.
 \v 33 And=he/it_said Yahweh to Mosheh who [is_the_one]_who he_has_sinned to=me blot_out÷him of÷book÷my.
 \v 34 And=now go lead DOM the÷people to where I_have_spoken to/for=you(fs) there angel÷my he_will_go to=your=face and÷in/on/at/with÷day punish÷I and÷punish upon÷them sin÷their.
-\v 35 And÷sent_a_plague Yahweh DOM the÷people on that they_had_made DOM the÷calf which he_had_made ʼAharon.
+\v 35 And÷sent_a_plague Yahweh DOM the÷people on that they_had_made DOM the÷calf which he_had_made ʼAhₐron.
 \c 33
-\v 1 and=he/it_spoke Yahweh to Mosheh go go_up from÷here you and÷the÷people which you_have_brought_up from÷land of_Miʦərayim/(Egypt) to the=earth/land which I_swore to÷ʼAvərāhām to÷Yiʦəḩāq/(Isaac) and÷to÷Yaˊaqov/(Jacob) to=say to÷descendants÷your give÷it.
+\v 1 and=he/it_spoke Yahweh to Mosheh go go_up from÷here you and÷the÷people which you_have_brought_up from÷land of_Miʦərayim/(Egypt) to the=earth/land which I_swore to÷ʼAⱱərāhām to÷Yiʦəḩāq/(Isaac) and÷to÷Yaˊₐqoⱱ/(Jacob) to=say to÷descendants÷your give÷it.
 \v 2 And÷send to=your=face an_angel and÷drive_out DOM the÷Canaanites the=Emori and÷the÷Hittites and÷the÷Perizzites the=Hivvi and÷the÷Jebusites.
 \v 3 To a_land flowing of_milk and÷honey DOM not I_will_go_up in/on/at/with÷midst÷you DOM [are]_a_people stiff of_neck you lest destroy÷you in/on/at/with÷way.
 \v 4 And=he/it_listened the÷people DOM the÷word the÷harsh the=this and÷mourned and=not they_placed anyone ornaments÷their on/upon/above=him/it.
@@ -1039,8 +1039,8 @@
 \v 27 and=he/it_said Yahweh to Mosheh write to/for=yourself(m) DOM the÷words the=these DOM on the_mouth the÷words the=these I_have_made with÷you a_covenant and=DOM Yisərā\sup ʼēl\sup*/(Israel).
 \v 28 And=he/it_was there with Yahweh forty day[s] and÷forty night[s] food not he_ate and=water not he_drank and÷wrote on the÷tablets DOM the_words the÷covenant the_ten the÷commandments.
 \v 29 And=he/it_was in/on/at/with÷came_down Mosheh from=hill of_Şīnay and÷two the_tablets the÷testimony in/on/at/with÷hand of_Mosheh in/on/at/with÷came_down÷he from the÷mountain and÷Mosheh not he_knew DOM_that it_shone the_skin his/its=faces/face in/on/at/with÷speaking÷his with=him/it.
-\v 30 And=he/it_saw ʼAharon and=all the_people of_Yisərā\sup ʼēl\sup*/(Israel) DOM Mosheh and=see/lo/see it_shone the_skin his/its=faces/face and÷afraid to÷come_near to=him/it.
-\v 31 And=he/it_called to÷them Mosheh and÷returned to=him/it ʼAharon and=all the÷leaders in/on/at/with÷community and=he/it_spoke Mosheh to÷them.
+\v 30 And=he/it_saw ʼAhₐron and=all the_people of_Yisərā\sup ʼēl\sup*/(Israel) DOM Mosheh and=see/lo/see it_shone the_skin his/its=faces/face and÷afraid to÷come_near to=him/it.
+\v 31 And=he/it_called to÷them Mosheh and÷returned to=him/it ʼAhₐron and=all the÷leaders in/on/at/with÷community and=he/it_spoke Mosheh to÷them.
 \v 32 And=after thus they_drew_near all the_people of_Yisərā\sup ʼēl\sup*/(Israel) and÷commanded÷them DOM all that he_had_spoken Yahweh with=him/it in/on/at/with÷mount of_Şīnay.
 \v 33 And=they_were_ended/finished Mosheh from÷speaking with=them and=he/it_gave over his/its=faces/face a_veil.
 \v 34 And÷in/on/at/with÷went_in Mosheh to=(the)_face_of/in_front_of/before Yahweh to÷speak with=him/it he_removed DOM the÷veil until came_out÷he and÷came_out and÷told to the_people of_Yisərā\sup ʼēl\sup*/(Israel) DOM [that]_which he_was_commanded.
@@ -1064,7 +1064,7 @@
 \v 16 DOM the_altar the÷burnt_offering and=DOM the_grating the÷bronze which to=him/it DOM poles÷its and=DOM all utensils÷its DOM the÷basin and=DOM stand÷its.
 \v 17 DOM the_curtains the÷courtyard DOM pillars÷its and=DOM bases÷its and=DOM the_screen of_the_gate the÷courtyard.
 \v 18 DOM the_tent_pegs the÷tabernacle and=DOM the_tent_pegs the÷courtyard and=DOM cords÷their.
-\v 19 DOM the_garments the÷woven for÷ministering in/on/at/with÷sanctuary DOM the_garments the÷holy for÷ʼAharon the=priest/officer and=DOM the_garments sons÷his to÷serve_as_priests.
+\v 19 DOM the_garments the÷woven for÷ministering in/on/at/with÷sanctuary DOM the_garments the÷holy for÷ʼAhₐron the=priest/officer and=DOM the_garments sons÷his to÷serve_as_priests.
 \v 20 And=they_went_out all the_congregation of_the_people of_Yisərā\sup ʼēl\sup*/(Israel) from=to/for=face/front/presence Mosheh.
 \v 21 And=they_came every person whom stirred÷him his/its=heart and=all/each/any/every [one]_whom it_impelled his/its=breath/wind/spirit DOM=him/it they_brought DOM the_contribution of_Yahweh for÷work of_the_tent of_meeting and=to/for=all service÷its and÷for÷garments the÷holy.
 \v 22 And=they_came the÷men with the÷women every [person]_willing of_heart they_brought nose_ring[s] and÷earrings and÷signet_rings and÷ornaments every article of_gold and=all person who he_waved a_wave-offering of_gold to/for=\nd YHWH\nd*.
@@ -1171,7 +1171,7 @@
 \v 18 And÷screen of_the_gate the÷courtyard [was_the]_work of_a_worker_in_colours violet_stuff and÷purple and÷scarlet of_scarlet and÷fine_linen twisted and=twenty cubit[s] [the]_length and÷high in/on/at/with÷width [was]_five cubits just÷like the_curtains the÷courtyard.
 \v 19 And÷pillars÷their [were]_four and÷bases÷their four [were]_bronze hooks÷their [were]_silver and÷overlaying tops÷their and÷bands÷their [were]_silver.
 \v 20 And=all the÷pegs for_the÷tabernacle and÷for_the÷courtyard all_around [were]_bronze.
-\v 21 these [were]_the_expenses the÷tabernacle the_tabernacle the÷testimony which it_was_recorded on the_mouth of_Mosheh the_service the÷Levites in/on/at/with÷direction of_Ithamar the_son of_ʼAharon the=priest/officer.
+\v 21 these [were]_the_expenses the÷tabernacle the_tabernacle the÷testimony which it_was_recorded on the_mouth of_Mosheh the_service the÷Levites in/on/at/with÷direction of_Ithamar the_son of_ʼAhₐron the=priest/officer.
 \v 22 And÷Bezalel the_son of_Uri the_son of_Hur of÷tribe of_Yəhūdāh he_made DOM all that he_had_commanded Yahweh DOM Mosheh.
 \v 23 And÷with÷him Oholiab the_son of_Ahisamach of÷tribe of_Dān an_engraver and÷designer and÷embroiderer in/on/at/with÷blue and÷in/on/at/with÷purple and÷in/on/at/with÷scarlet_of the÷yarn and÷in/on/at/with÷fine_linen.
 \v 24 all the=gold the÷used for_the÷work in/on/at/with÷all the_work the÷sanctuary and=he/it_was the_gold the÷wave_offering nine and=twenty talent[s] and=seven hundred(s) and=thirty shekel[s] in/on/at/with÷shekel the÷sanctuary.
@@ -1183,7 +1183,7 @@
 \v 30 And=he/it_made in/on/at/with÷it DOM the_bases of_the_entrance of_the_tent of_meeting and=DOM the_altar the÷bronze and=DOM the_grating the÷bronze which to=him/it and=DOM all the_articles the÷altar.
 \v 31 And=DOM the_bases the÷courtyard all_around and=DOM the_bases of_the_gate the÷court and=DOM all the_tent_pegs the÷tabernacle and=DOM all the_tent_pegs the÷courtyard all_around.
 \c 39
-\v 1 And=from the÷blue and÷the÷purple and÷scarlet_of the÷yarn they_made garments of_woven_material for÷ministering in/on/at/with÷sanctuary and÷made DOM the_garments the÷holy which for÷ʼAharon just=as he_had_commanded Yahweh DOM Mosheh.
+\v 1 And=from the÷blue and÷the÷purple and÷scarlet_of the÷yarn they_made garments of_woven_material for÷ministering in/on/at/with÷sanctuary and÷made DOM the_garments the÷holy which for÷ʼAhₐron just=as he_had_commanded Yahweh DOM Mosheh.
 \v 2 and=he/it_made DOM the÷ephod gold violet_stuff and÷purple and÷scarlet_of of_scarlet and÷fine_linen twisted.
 \v 3 And÷hammered_out DOM the_thin_plates the=gold and÷cut threads for=doing in_the=middle the÷blue and÷in/on/at/with÷midst the÷purple and÷in/on/at/with÷midst the_scarlet_stuff the÷yarn and÷in/on/at/with÷midst the÷fine_linen [the]_work of_a_skillful_worker.
 \v 4 Shoulder-pieces they_made to=him/it joined on the_two edges÷its\f + \fr 39:4 \ft Variant note: קצוות/ו: (x-qere) 'קְצוֹתָ֖י/ו': lemma=7098 n=0.0 morph=HNcbpc/Sp3ms id=02fC7 קְצוֹתָ֖י/ו\f* it_was_joined.
@@ -1209,7 +1209,7 @@
 \v 24 And÷made on the_skirts the÷robe pomegranates of_violet_stuff and÷purple and÷scarlet_of of_scarlet twisted.
 \v 25 And=they_made bells of_gold pure and÷put DOM the÷bells in_the=middle the÷pomegranates on the_skirts the÷robe all_around in_the=middle the÷pomegranates.
 \v 26 A_bell and÷pomegranate a_bell and÷pomegranate [were]_on the_skirts the÷robe all_around for÷ministering just=as he_had_commanded Yahweh DOM Mosheh.
-\v 27 and=they_made DOM the÷tunics fine_linen [the]_work of_a_weaver for÷ʼAharon and÷for÷sons÷his.
+\v 27 and=they_made DOM the÷tunics fine_linen [the]_work of_a_weaver for÷ʼAhₐron and÷for÷sons÷his.
 \v 28 And=DOM the÷turban fine_linen and=DOM the_head-wraps the÷headbands fine_linen and=DOM the_undergarments the÷linen fine_linen twisted.
 \v 29 And=DOM the÷sash fine_linen twisted and÷blue and÷purple and÷scarlet_of of_scarlet [the]_work of_a_worker_in_colours just=as he_had_commanded Yahweh DOM Mosheh.
 \v 30 and=they_made DOM the_plate of_the_crown the÷holy gold pure and÷wrote on/upon/above=him/it an_inscription of_[the]_engravings of_a_seal holiness to/for=\nd YHWH\nd*.
@@ -1223,7 +1223,7 @@
 \v 38 And=DOM the_altar the=gold and=DOM the_oil the÷anointing and=DOM the_incense the÷fragrant and=DOM the_screen of_the_entrance the÷tent.
 \v 39 DOM the_altar the÷bronze and=DOM the_grating the÷bronze which to=him/it DOM poles÷its and=DOM all utensils÷its DOM the÷basin and=DOM stand÷its.
 \v 40 DOM the_curtains the÷courtyard DOM pillars÷its and=DOM bases÷its and=DOM the÷screen for÷gate the÷courtyard DOM cords÷its and÷pegs÷its and=DOM all the_articles of_the_service the÷tabernacle for÷tent of_meeting.
-\v 41 DOM the_garments the÷woven for÷ministering in/on/at/with÷sanctuary DOM the_garments the÷holy for÷ʼAharon the=priest/officer and=DOM the_garments sons÷his to÷serve_as_priests.
+\v 41 DOM the_garments the÷woven for÷ministering in/on/at/with÷sanctuary DOM the_garments the÷holy for÷ʼAhₐron the=priest/officer and=DOM the_garments sons÷his to÷serve_as_priests.
 \v 42 According_to÷all that he_had_commanded Yahweh DOM Mosheh so they_did the_people of_Yisərā\sup ʼēl\sup*/(Israel) DOM all the÷work.
 \v 43 And=he/it_saw Mosheh DOM all the÷work and=see/lo/see they_had_done DOM=her/it just=as he_had_commanded Yahweh so they_had_done and=he/it_blessed DOM=them Mosheh.
 \c 40
@@ -1238,8 +1238,8 @@
 \v 9 And÷take DOM the_oil the÷anointing and÷anoint DOM the÷tabernacle and=DOM all that in/on/over=him/it and÷consecrate DOM=him/it and=DOM all furnishings÷its and=it_was a_holy_thing.
 \v 10 And÷anoint DOM the_altar the÷burnt_offering and=DOM all utensils÷its and÷consecrate DOM the÷altar and=it_was the÷altar holiness of_holiness(es).
 \v 11 And÷anoint DOM the÷basin and=DOM stand÷its and÷consecrate DOM=him/it.
-\v 12 And÷bring DOM ʼAharon and=DOM sons÷his to the_entrance of_the_tent of_meeting and÷wash DOM=them in/on/at/with÷water.
-\v 13 And÷clothe DOM ʼAharon DOM the_garments the÷holy and÷anoint DOM=him/it and÷consecrate DOM=him/it and÷serve_aspriest to=me.
+\v 12 And÷bring DOM ʼAhₐron and=DOM sons÷his to the_entrance of_the_tent of_meeting and÷wash DOM=them in/on/at/with÷water.
+\v 13 And÷clothe DOM ʼAhₐron DOM the_garments the÷holy and÷anoint DOM=him/it and÷consecrate DOM=him/it and÷serve_aspriest to=me.
 \v 14 And=DOM sons÷his you_will_bring_near and÷put_on DOM=them tunics.
 \v 15 And÷anoint DOM=them just=as you_anointed DOM father÷their and÷serve_aspriests to=me and÷be to÷come to/for=them anointing÷their to÷priesthood of_perpetuity throughout÷generations÷their.
 \v 16 And=he/it_made Mosheh according_to÷everything that he_had_commanded Yahweh DOM=him/it so he_did.
@@ -1257,7 +1257,7 @@
 \v 28 and=he/it_assigned DOM the_screen the÷entrance of_the÷tabernacle.
 \v 29 And=DOM the_altar the÷burnt_offering he_set_up the_entrance of_the_tabernacle of_the_tent of_meeting and=he/it_ascended on/upon/above=him/it DOM the÷burnt_offering and=DOM the÷grain_offering just=as he_had_commanded Yahweh DOM Mosheh.
 \v 30 and=he/it_assigned DOM the÷basin between the_tent of_meeting and=between the÷altar and=he/it_gave it÷in water for÷washing.
-\v 31 And÷washed from=him/it Mosheh and÷ʼAharon and÷sons÷his DOM hands÷their and=DOM feet÷their.
+\v 31 And÷washed from=him/it Mosheh and÷ʼAhₐron and÷sons÷his DOM hands÷their and=DOM feet÷their.
 \v 32 In/on/at/with÷went÷they into the_tent of_meeting and÷in/on/at/with÷approached÷they to the÷altar they_washed just=as he_had_commanded Yahweh DOM Mosheh.
 \v 33 and÷set_up DOM the÷courtyard around for_the÷tabernacle and÷to_the÷altar and=he/it_gave DOM the_screen of_the_gate the÷courtyard and=they_were_ended/finished Mosheh DOM the÷work.
 \v 34 and÷covered the÷cloud DOM the_tent of_meeting and÷glory of_Yahweh it_filled DOM the÷tabernacle.

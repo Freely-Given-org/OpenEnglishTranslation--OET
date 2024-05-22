@@ -1,4 +1,4 @@
-\id JOB - Open English Translation—Readers’ Version (OET-RV) v0.0.20
+\id JOB - Open English Translation—Readers’ Version (OET-RV) v0.0.22
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 JOB
@@ -32,7 +32,6 @@
 \ms1 SECTION ONE: The introduction
 \mr (1:1–2:13)
 \s1 Iyyov’s prosperous life
-\rem /s1 Prologue; Job and His Family; Satan Tests Job
 \p
 \v 1 \add Once\add* there was a man called Iyyov \add (Job)\add* who lived in the Uz region. \add He\add* was blameless and righteous—both obeying God and avoiding evil.
 \v 2 He had seven sons and three daughters,
@@ -40,7 +39,6 @@
 \v 4 \add Iyyov’s\add* sons \add regularly\add* held feasts in their homes, and whenever any of them held a feast, he would invite all his brothers and sisters to share the meal with him.
 \v 5 \add Then once a feast was over\add*, Iyyov would send \add for his children\add* and consecrate them—he got up early in the morning and offered burnt offerings for each of them, because Iyyov said, “Perhaps my \add children\add* have sinned and blessed God in their hearts.” Thus Job did all the days.
 \s1 Satan’s first attack on Iyyov
-\rem /s1 Attack on Job’s Character; Job’s First Test
 \p
 \v 6 It was the day that God’s sons\f + \fr 1:6 \ft It’s not clear from the text who these are.\f* came to present themselves to Yahweh, and the adversary (Satan) was also there among them.\x + \xo 1:6: \xt Gen 6:2.\x*
 \v 7 Yahweh asked him, “Where have you just come from?”
@@ -54,7 +52,6 @@
 \p
 \v 12 “Listen, \add I’ll cede you control over\add* everything he has,” Yahweh replied. “Only \add just\add* don’t do \add anything\add* against \add Iyyov himself\add*.” \add So\add* the adversary went away from Yahweh’s \add presence\add*.
 \s1 Satan destroys Iyyov’s wealth and children
-\rem /s1 Job Loses Property and Children; Job’s Children and Wealth Are Destroyed
 \p
 \v 13 \add So one\add* day when \add Iyyov’s\add* sons and his daughters were eating and drinking wine in their eldest brother’s house,
 \v 14 a messenger came to Iyyov and \add reported\add*, “\add While\add* the oxen were plowing and the donkeys were feeding \add nearby\add*,
@@ -73,7 +70,6 @@
 \v 22 \add Through\add* all of that, Iyyov didn’t \add disobey\add* God or \add accuse him of being evil\add*.
 \c 2
 \s1 Satan’s second attack on Iyyov
-\rem /s1 Job’s Second Test; Attack on Job’s Health; Satan Tests Job Again
 \p
 \v 1 It was the day that God’s sons came to present themselves to Yahweh and the adversary (Satan) was also there among them.
 \v 2 “Where have you come from?” Yahweh \add asked\add* the adversary.
@@ -93,7 +89,6 @@
 \p
 \v 10 “You’re talking like a foolish \add person\add*,” Iyyov \add replied\add*. “Should we \add only\add* accept good from God and not receive the bad?” In all of that, Iyyov didn’t sin \add in what he said\add*.
 \s1 Iyyov’s three friends come
-\rem /s1 Job’s Friends Come; Job’s Three Friends Share His Anguish; Job’s Three Friends
 \p
 \v 11 \add When\add* Iyyov’s three friends heard \add about all the troubles that had happened to\add* him, they each came from his place: Elifaz from Teman, Bildad from Shuah, and Zofar from Naamah. They gathered together to come to console and comfort him.
 \v 12 \add but when\add* they saw him from a distance, they \add barely\add* recognised him. They \add wailed loudly\add*, and they \add ripped their own clothes\add*, and they threw dust \add into the air so that it would fall\add* on their heads. \add (All three of those were traditional signs of mourning.)\add*
@@ -102,7 +97,6 @@
 \ms1 SECTION TWO: Iyyov talking with his friends
 \mr (3:1–27:33)
 \s1 Iyyov’s complaint
-\rem /s1 Job’s Complaint to God; Job Speaks; Job’s First Speech; Job Curses the Day He Was Born; Job’s complaint to God
 \p
 \v 1 After that, Iyyov spoke up and cursed \add the\add* day \add of\add* his \add conception\add*.\x + \xo 3:1-19: \xt Jer 20:14-18.\x*
 \p
@@ -138,13 +132,13 @@
 \b
 \q1
 \v 11 Why didn’t I die \add at birth\add*?
-\q1 ≈\add Just\add* come out then stop breathing?
+\q1 \add Just\add* come out then stop breathing?
 \q1
 \v 12 Why was I accepted onto \add her lap\add*?
-\q1 ≈And onto those breasts to suckle?
+\q1 And onto those breasts to suckle?
 \q1
 \v 13 \add Yes,\add* I’d be peacefully lying down now.
-\q1 ≈I would have slept and been at rest,
+\q1 I would have slept and been at rest,
 \q1
 \v 14 along with kings and counsellors of the earth—
 \q1 \add yes,\add* those who built momuments for themselves.
@@ -153,7 +147,7 @@
 \q1 those who filled their houses with silver.
 \q1
 \v 16 I might never have been—like a stillborn child.
-\q1 ≈Like some infants who never see the light.
+\q1 Like some infants who never see the light.
 \q1
 \v 17 Wicked \add people\add* don’t cause any more trouble there.
 \q1 Those who’ve run out of strength rest there.
@@ -166,7 +160,7 @@
 \b
 \q1
 \v 20 Why is light given to \add those\add* who’re miserable?
-\q1 ≈And why’s life \add given to those\add* who’re bitter inside?
+\q1 And why’s life \add given to those\add* who’re bitter inside?
 \q1
 \v 21 They wish for death but it won’t come.\x + \xo 3:21: \xt Rev 9:6.\x*
 \q1 They dig for it more than for hidden treasure.
@@ -179,16 +173,15 @@
 \b
 \q1
 \v 24 Sighing has \add become more important\add* than eating.
-\q1 ≈My groans \add just\add* pour out like water.
+\q1 My groans \add just\add* pour out like water.
 \q1
 \v 25 I had my fears and they’ve \add come to pass\add*.
-\q1 ≈What I dreaded has come to me.
+\q1 What I dreaded has come to me.
 \q1
 \v 26 I’m not relaxed or peaceful.
-\q1 ≈I can’t rest \add because only\add* trouble comes.
+\q1 I can’t rest \add because only\add* trouble comes.
 \c 4
 \s1 Elifaz’s first response to Iyyov
-\rem /s1 The First Dialogue; Eliphaz; Eliphaz’s First Response to Job; Eliphaz Speaks: Job Has Sinned; First cycle of speeches
 \sr (4:1–14:22)
 \p
 \v 1 Then Elifaz from Teman \add replied\add*:
@@ -200,7 +193,7 @@
 \q1 And you’ve \add encouraged those who were\add* weak.
 \q1
 \v 4 Your words have encouraged those who were stumbling.
-\q1 You’ve strenthened \add those\add* whose knees were buckling.
+\q1 You’ve strengthened \add those\add* whose knees were buckling.
 \q1
 \v 5 But now it’s you \add in trouble\add* and you’re \add depressed\add*.
 \q1 \add Troubles\add* touch you and you’re discouraged.
@@ -256,7 +249,6 @@
 \v 21 Their tent cords are pulled out on them.
 \q1 They die and \add don’t even know why\add*.
 \c 5
-\rem /s1 Job Is Corrected by God; Eliphaz’s Response Continues
 \q1
 \v 1 Call out \add to God\add* now. Does anyone answer?
 \q1 Which of the holy ones will you turn to?
@@ -321,22 +313,22 @@
 \q1 \add Even\add* seven \add times, he’ll prevent\add* you \add from being\add* harmed.
 \q1
 \v 20 During famines, he’ll \add rescue\add* you from death,
-\q1 ≈and in war, he’ll \add save you from slaughter\add*.
+\q1 and in war, he’ll \add save you from slaughter\add*.
 \q1
 \v 21 He’ll hide you away from \add hurting words\add*,
-\q1 ≈and when destruction comes, you won’t be afraid.
+\q1 and when destruction comes, you won’t be afraid.
 \q1
 \v 22 You’ll laugh at destruction and at famine,
-\q1 ≈and you won’t be afraid of wild animals,
+\q1 and you won’t be afraid of wild animals,
 \q1
 \v 23 because you’ll have an agreement with the stones in the fields \add for walls\add*,
-\q1 ≈and the wild animals will be at peace with you.
+\q1 and the wild animals will be at peace with you.
 \q1
 \v 24 You’ll know that your \add home\add* is \add secure\add*,
-\q1 ≈and you’ll inspect your animal shelters and nothing will be missing.
+\q1 and you’ll inspect your animal shelters and nothing will be missing.
 \q1
 \v 25 You’ll know that your descendants will be numerous,
-\q1 ≈and your offspring like the grass on the land.
+\q1 and your offspring like the grass on the land.
 \q1
 \v 26 You’ll \add reach\add* an old age before you \add get\add* to the grave,
 \q1 like grain that’s harvested at the right time.
@@ -345,7 +337,6 @@
 \q1 Listen to it \add so\add* you’ll know for yourself.
 \c 6
 \s1 Iyyov’s first response to Elifaz
-\rem /s1 Job; Job Replies: My Complaint Is Just; Job’s Second Speech: A Response to Eliphaz
 \p
 \v 1 Then Iyyov \add (Job) responded\add*:
 \q1
@@ -360,30 +351,30 @@
 \q1 God’s terrors are set out against me.
 \b
 \q1
-\v 5 \add Does\add* a wild doney bray \add when it has\add* fresh grass \add to eat\add*,
+\v 5 \add Does\add* a wild donkey bray \add when it has\add* fresh grass \add to eat\add*,
 \q1 or a ox bellow \add when it has\add* its fodder?
 \q1
 \v 6 \add Do people\add* eat tasteless food without \add adding\add* salt,
-\q1 ≈or \add enjoy\add* the taste of purslane \add leaves by itself\add*?
+\q1 or \add enjoy\add* the taste of purslane \add leaves by itself\add*?
 \q1
 \v 7 My soul refuses to touch them—
 \q1 they are like detestable food to me.
 \b
 \q1
 \v 8 Who will give me my request?
-\q1 ≈May God give me what I hope for.
+\q1 May God give me what I hope for.
 \q1
 \v 9 \add If only\add* God would be willing to crush me.
-\q1 ≈May he \add play\add* his hand and cut me off.
+\q1 May he \add play\add* his hand and cut me off.
 \q1
 \v 10 It still comforts me and gives me \add inner\add* joy through never-ending pain,
 \q1 that I haven’t \add denied\add* the words of the holy one.
 \q1
 \v 11 \add I don’t have the\add* strength to \add keep\add* waiting.
-\q1 ≈What \add future\add* do I have, that I should \add want to\add* go on living?
+\q1 What \add future\add* do I have, that I should \add want to\add* go on living?
 \q1
 \v 12 Am I strong like rock?
-\q1 ≈Is my body \add made of\add* bronze?
+\q1 Is my body \add made of\add* bronze?
 \q1
 \v 13 Am I \add in a position\add* to help myself?
 \q1 \add It seems that\add* success has been driven away from me.
@@ -414,7 +405,7 @@
 \q1 You see the terror and \add you’re\add* afraid.
 \q1
 \v 22 Have I ever \add asked you\add* to give me something?
-\q1 ≈Or to give me a reward from your wealth?
+\q1 Or to give me a reward from your wealth?
 \q1
 \v 23 Or to save me from my enemy \add in battle\add*?
 \q1 Or to pay a ransom to ruthless people in order to free me?
@@ -437,13 +428,12 @@
 \q1 \add Would\add* I lie to your face?
 \q1
 \v 29 Please turn back—don’t let there be injustice.
-\q1 ≈Turn \add now\add*—my \add cause\add* is righteous.
+\q1 Turn \add now\add*—my \add cause\add* is righteous.
 \q1
 \v 30 \add Am I being unfair\add*?
 \q1 \add Am I incapable of\add* discerning \add evil\add*?
 \c 7
 \q1
-\rem /s1 Job: My Suffering Is without End
 \v 1 Aren’t \add people expected to work\add* on earth?
 \q1 Aren’t a person’s days like the days of a hired labourer?
 \q1
@@ -457,9 +447,8 @@
 \q1 \add Thus\add* evening drags on \add followed by\add* restlessness until dawn.
 \q1
 \v 5 My body is clothed with maggots and encrusted with dust.
-\q1 ≈My skin has become brittle and breaks apart.
+\q1 My skin has become brittle and breaks apart.
 \q1
-\rem /s1 Job Cries Out to God
 \v 6 \add In the past\add* the days flew by faster than a weaver’s shuttle,
 \q1 \add but now\add* they’ve come to an end without \add any\add* hope.
 \b
@@ -515,7 +504,6 @@
 \q1 You’ll search for me but I’ll no longer exist.
 \c 8
 \s1 Bildad’s first response to Iyyov
-\rem /s1 Bildad; Bildad Speaks: Job Should Repent; Bildad’s First Response to Job
 \p
 \v 1 Then Bildad from Shuah answered:
 \q1
@@ -589,7 +577,6 @@
 \q2 and the \add homes\add* of wicked \add people will cease to exist\add*.
 \c 9
 \s1 Iyyov’s first response to Bildad
-\rem /s1 Job; Job’s Third Speech: A Response to Bildad; Job Replies: There Is No Mediator
 \p
 \v 1 Then Iyyov answered saying:
 \q1
@@ -663,10 +650,10 @@
 \b
 \q1
 \v 25 My days \add go\add* by faster than a sprinter.
-\q1 ≈They’ve fled by without seeing any good.
+\q1 They’ve fled by without seeing any good.
 \q1
 \v 26 They pass like boats \add made with\add* reeds—
-\q1 ≈like an eagle \add swooping down\add* on its food.
+\q1 like an eagle \add swooping down\add* on its food.
 \q1
 \v 27 If I said that I would forget my complaint,
 \q2 and \add soften\add* my expression and smile,
@@ -695,7 +682,6 @@
 \v 35 I would speak and not fear him,
 \q2 \add but\add* it’s not like that with me.
 \c 10
-\rem /s1 Job Frames His Plea to God; Job: I Loathe My Life
 \p
 \v 1 Inside, I loathe my life.
 \q1 I’ll release my complaints.
@@ -767,7 +753,6 @@
 \q2 disorderly and with gloomy light.
 \c 11
 \s1 Zofar’s first response to Iyyov
-\rem /s1 Zophar Speaks: Job’s Guilt Deserves Punishment; Zophar; Zophar’s First Response to Job
 \p
 \v 1 Then Zofar from Naamah answered:
 \q1
@@ -833,7 +818,6 @@
 \q1 Their hope will \add be limited to their last\add* gasp of life.
 \c 12
 \s1 Iyyov’s first response to Zofar
-\rem /s1 Job; Job’s Fourth Speech: A Response to Zophar; Job Replies: I Am a Laughingstock
 \p
 \v 1 Then Iyyov responded \add to Zofar\add*:
 \q1
@@ -914,29 +898,28 @@
 \q2 and he makes them stagger around as if they’re drunk.
 \c 13
 \s1 Iyyov argues that he hasn’t sinned
-\rem /s1 Job Wants to Argue His Case with God
 \p
 \v 1 Look here, my eyes have seen all \add that\add*,
-\q1 ≈my ears have heard it and understood.
+\q1 my ears have heard it and understood.
 \q1
 \v 2 I also know everything that you know,
-\q1 ≈I’m not \add way behind\add* you.
+\q1 I’m not \add way behind\add* you.
 \q1
 \v 3 But I \add would like\add* to talk to the provider,
-\q1 ≈and I desire to plead with God.
+\q1 and I desire to plead with God.
 \q1
 \v 4 But you’re all smearers of lies,
-\q1 ≈all of you are worthless healers.
+\q1 all of you are worthless healers.
 \q1
 \v 5 If only \add you all\add* would remain silent,
 \q1 then you all might be considered wise.
 \b
 \q1
 \v 6 Please listen to my argument,
-\q1 ≈and pay attention to the pleading of my lips.
+\q1 and pay attention to the pleading of my lips.
 \q1
 \v 7 Will you all speak \add faithlessly\add* on God’s behalf,
-\q1 ≈and will you talk deceitfully for him?
+\q1 and will you talk deceitfully for him?
 \q1
 \v 8 Will you show partiality to him,
 \q2 or argue the case for God?
@@ -948,17 +931,17 @@
 \q2 if you were secretly showing partiality.
 \q1
 \v 11 Shouldn’t his majesty make you all afraid,
-\q1 ≈and his dread fall on you all?
+\q1 and his dread fall on you all?
 \q1
 \v 12 Your \add traditional\add* sayings are proverbs of ashes.
-\q1 ≈Your defenses \add might as well be made\add* of clay.
+\q1 Your defenses \add might as well be made\add* of clay.
 \b
 \q1
 \v 13 Be silent in my presence and let me speak,
 \q1 and let come to me what may.
 \q1
 \v 14 Why should I \add bite\add* my flesh with my \add own\add* teeth,
-\q1 ≈and take my life in my \add own\add* hands?
+\q1 and take my life in my \add own\add* hands?
 \q1
 \v 15 Even if he kills me, my hope will still be in him.
 \q1 I will certainly defend my behaviour to him in person.
@@ -967,7 +950,7 @@
 \q1 A godless person wouldn’t enter his presence.
 \q1
 \v 17 Listen carefully to my words,
-\q1 ≈and may my declaration be in the ears of you all.
+\q1 and may my declaration be in the ears of you all.
 \q1
 \v 18 I’ve now arranged \add my case\add*.
 \q1 I know that I’m in the right.
@@ -975,7 +958,6 @@
 \v 19 Who will conduct my case?
 \q1 I’ll keep silent now and die.
 \q1
-\rem /s1 Job’s Despondent Prayer; Job Asks How He Has Sinned
 \v 20 Just don’t do these two things to me,
 \q1 then I won’t hide myself from your presence:
 \q2
@@ -992,7 +974,7 @@
 \q1 and treating me like an enemy?
 \q1
 \v 25 Would you terrify a leaf blown by the wind?
-\q1 ≈Would you chase a dry stalk \add to punish it\add*?
+\q1 Would you chase a dry stalk \add to punish it\add*?
 \q1
 \v 26 You write bitter things against me,
 \q1 and \add even recall\add* the \add errors\add* of my youth.
@@ -1001,14 +983,14 @@
 \q1 You watch all my paths and mark the soles of my feet.
 \q1
 \v 28 He decays like something rotten.
-\q1 ≈He’s like a garment that’s eaten by moths.
+\q1 He’s like a garment that’s eaten by moths.
 \c 14
 \p
 \v 1 Humans, born from women,
 \q2 live relatively short lives with lots of turmoil.
 \q1
 \v 2 \add People\add* appear and then wither, just like the flowers.
-\q1 ≈They don’t stay around, but rush away like shadows.
+\q1 They don’t stay around, but rush away like shadows.
 \q1
 \v 3 Do you watch over even \add creatures\add* like this?
 \q1 Do you bring me in to be judged?
@@ -1017,7 +999,7 @@
 \q2 No one.
 \q1
 \v 5 Since a person’s lifespan is \add already\add* determined,
-\q1 ≈then you already know the number of months.
+\q1 then you already know the number of months.
 \q1 You’ve set the limit and \add we\add* won’t live past that.
 \q1
 \v 6 Stop watching \add us\add*.
@@ -1028,20 +1010,20 @@
 \q1 It will sprout again and its \add new\add* shoots won’t fail.
 \q1
 \v 8 Even when its roots in the ground get old,
-\q1 ≈and its base is rotting in the soil,
+\q1 and its base is rotting in the soil,
 \q1
 \v 9 when it detects water it’ll send up branches like a \add young\add* plant.
 \b
 \q1
 \v 10 \add But a person\add* dies and is laid out—
-\q1 ≈a person breathes their last and now where are they?
+\q1 a person breathes their last and now where are they?
 \q1
 \v 11 The water disappears from a \add lake\add*,
-\q1 ≈and the river \add level\add* goes down then dries up.
+\q1 and the river \add level\add* goes down then dries up.
 \q1
 \v 12 \add So too\add* people lie down and don’t get up again.
-\q1 ≈They won’t wake up until the sky no longer exists.
-\q1 ≈\add For now\add* they can’t be roused out of their sleep.
+\q1 They won’t wake up until the sky no longer exists.
+\q1 \add For now\add* they can’t be roused out of their sleep.
 \b
 \q1
 \v 13 If only you’d allow me to be hidden in the grave,
@@ -1058,14 +1040,14 @@
 \q1 You won’t keep watch on my sins.
 \q1
 \v 17 My disobedience would be sealed up in a bag,
-\q1 ≈and you’d plaster over my wickedness.
+\q1 and you’d plaster over my wickedness.
 \b
 \q1
 \v 18 But mountains fall and crumble,
-\q1 ≈and rocks move out of their places.
+\q1 and rocks move out of their places.
 \q1
 \v 19 \add Flowing\add* water wears down stones,
-\q1 ≈and its torrents wash away the soil.
+\q1 and its torrents wash away the soil.
 \q1 You destroy humankind’s hope.
 \q1
 \v 20 You’re forever overpowering \add us\add* and \add we\add* depart.
@@ -1075,73 +1057,71 @@
 \q1 Or if they’re put to shame, we wouldn’t \add be there to\add* see it.
 \q1
 \v 22 Only our own bodies feel the pain.
-\q1 ≈Only our inner selves mourn.
+\q1 Only our inner selves mourn.
 \c 15
 \s1 Elifaz’s second response to Iyyov
-\rem /s1 The Second Dialogue; Eliphaz’s Second Response to Job; Second cycle of speeches; Eliphaz; Eliphaz Speaks: Job Undermines Religion
 \sr (15:1–21:34)
-\rem /r (15.1—21.34)
 \p
 \v 1 Then Elifaz (from Teman) replied:
 \q1
 \v 2 Do wise people \add just\add* answer with knowledge \add full\add* of wind?
-\q1 ≈Do they just fill \add themselves\add* with the east wind?
+\q1 Do they just fill \add themselves\add* with the east wind?
 \q1
 \v 3 Should a person argue \add against\add* useless talk,
-\q1 ≈\add or against\add* words that have no \add value\add*?
+\q1 \add or against\add* words that have no \add value\add*?
 \q1
 \v 4 You \add turn people\add* from the fear \add of God\add*,
-\q1 ≈and discourage \add them\add* from godly meditation.
+\q1 and discourage \add them\add* from godly meditation.
 \q1
 \v 5 \add Thus\add* your wickedness \add drives your words\add*,
-\q1 ≈and you choose the language of crafty \add people\add*.
+\q1 and you choose the language of crafty \add people\add*.
 \q1
 \v 6 It’s not me who condemns you, but it’s your own mouth.
-\q1 ≈Your own lips testify against you.
+\q1 Your own lips testify against you.
 \b
 \q1
 \v 7 Were you the first person \add ever\add* born?
-\q1 ≈Were you \add created\add* before the hills were made?
+\q1 Were you \add created\add* before the hills were made?
 \q1
 \v 8 Do you listen to God’s advice,
 \q1 \add or\add* limit wisdom to your \add own experience\add*?
 \q1
 \v 9 What do you know that we don’t?
-\q1 ≈What do you understand that’s not \add clear\add* to us?
+\q1 What do you understand that’s not \add clear\add* to us?
 \q1
 \v 10 Both the gray-haired and the elderly are on our \add side\add*,
-\q1 ≈\add People\add* who’ve lived longer than your father.
+\q1 \add People\add* who’ve lived longer than your father.
 \q1
 \v 11 Isn’t it enough when God comforts you?
-\q1 ≈\add Aren’t\add* his gentle words \add enough\add* for you?
+\q1 \add Aren’t\add* his gentle words \add enough\add* for you?
 \q1
 \v 12 Why do your \add emotions\add* get carried away?
-\q1 ≈Why do your eyes flash \add with anger\add*?
+\q1 Why do your eyes flash \add with anger\add*?
 \q1
 \v 13 Are you turning your spirit against God
 \q2 as your words \add pour\add* out of your mouth?
 \q1
 \v 14 What person \add could ever\add* be pure,\x + \xo 15:14-16: \xt Yob 25:4-6.\x*
-\q1 ≈and how could someone born from a woman be righteous?
+\q1 and how could someone born from a woman be righteous?
 \q1
 \v 15 He doesn’t \add even\add* trust his holy \add ones\add*,
 \q1 and the heavens aren’t pure \add from his viewpoint\add*.
 \q2
 \v 16 Certainly not \add someone who’s\add* corrupt and abhorent,
-\q1 ≈or a person who drinks wickedness like water.
+\q1 or a person who drinks wickedness like water.
 \b
 \q1
 \v 17 I’ll show you—listen to me—
 \q1 what I’ve seen and will tell \add everyone\add*.
 \q1
 \v 18 What’s been told by wise \add people\add*—
-\q1 ≈that hasn’t been hidden from their ancestors.
+\q1 that hasn’t been hidden from their ancestors.
 \q1
 \v 19 The land was given to them alone,
-\q1 ≈and no stranger \add had come in\add* among them.
+\q1 and no stranger \add had come in\add* among them.
 \q1
 \v 20 Wicked \add people\add* squirm in pain for their entire lifetime.
-\q1 ≈Those who oppress \add others\add* have a number of years \add of pain\add* stored up for them.
+\q1 Those who oppress \add others\add* have a number of years \add of pain\add* stored up for them.
 \q1
 \v 21 Sounds of terrors are in their ears.
 \q1 The destroyer comes \add while they’re enjoying\add* prosperity.
@@ -1153,10 +1133,10 @@
 \q1 They know that dark days are ahead—already prepared.
 \q1
 \v 24 They’re terrified by distress and anguish.
-\q1 ≈\add That dread\add* overwhelms them like a king who’s ready for a battle.
+\q1 \add That dread\add* overwhelms them like a king who’s ready for a battle.
 \q1
 \v 25 \add These things happen to wicked people because they oppose\add* God.
-\q1 ≈They’ve behaved arrogantly to the provider.
+\q1 They’ve behaved arrogantly to the provider.
 \q1
 \v 26 They rush against him in defiance,
 \q2 \add trusting\add* the thick reinforcing of \add their\add* shields.
@@ -1169,7 +1149,7 @@
 \q2 which people normally wouldn’t live in because they’re marked for demolition.
 \q1
 \v 29 They won’t be rich and their wealth won’t endure,
-\q1 ≈and their \add herds and flocks\add* won’t spread across the land.
+\q1 and their \add herds and flocks\add* won’t spread across the land.
 \q1
 \v 30 \add Wicked people\add* will never escape the darkness.
 \q1 A flame will wither their branches,
@@ -1191,7 +1171,6 @@
 \q1 and they give birth to deceitful \add plots\add*.
 \c 16
 \s1 Iyyov’s second response to Elifaz
-\rem /s1 Job; Job’s Fifth Speech: A Response to Eliphaz; Job Reaffirms His Innocence
 \p
 \v 1 Then Iyyov answered \add Elifaz\add*:
 \q1
@@ -1216,10 +1195,10 @@
 \q1 My entire household has been devastated.
 \q1
 \v 8 \add You’ve made me lose so much weight that everyone can’t help notice it\add*.
-\q1 ≈My being so thin \add is used against me so people think\add* from my face \add that I must be guilty.\add*
+\q1 My being so thin \add is used against me so people think\add* from my face \add that I must be guilty.\add*
 \q1
 \v 9 \add His anger\add* has ripped \add my body\add* open
-\q1 ≈and in his hate he’s gnashed at me with his teeth.
+\q1 and in his hate he’s gnashed at me with his teeth.
 \q1 \add Even\add* my enemy locks his eyes on me.
 \q1
 \v 10 People \add stare\add* at me with their mouths wide open.
@@ -1229,18 +1208,18 @@
 \q1 and he throws me into the hands of wicked \add people\add*.
 \q1
 \v 12 I was \add just living my life\add* and he shattered me.
-\q1 ≈He grabbed me by the neck and dashed me to pieces.
+\q1 He grabbed me by the neck and dashed me to pieces.
 \q1 He set me up as a \add his\add* target.
 \q1
 \v 13 ≈Soldiers with bows and arrows surround me.
 \q1 He pierces my kidneys \add but\add* doesn’t care.
-\q1 ≈He \add splits my gallbladder\add* and pours my bile out on the ground.
+\q1 He \add splits my gallbladder\add* and pours my bile out on the ground.
 \q1
 \v 14 He keeps breaking through \add my protective walls\add*.
-\q1 ≈He charges against me like a warrior.
+\q1 He charges against me like a warrior.
 \q1
 \v 15 I’ve \add dressed in\add* sackcloth \add to show I’m mourning\add*.
-\q1 ≈I’ve tossed my horn into the dust \add to show I’m defeated\add*.
+\q1 I’ve tossed my horn into the dust \add to show I’m defeated\add*.
 \q1
 \v 16 My face is red from so much crying.
 \q1 My eyelids \add are surrounded by dark shadows\add*.
@@ -1253,7 +1232,7 @@
 \q1 Don’t \add just\add* become a hiding place for my cries.
 \q1
 \v 19 Even now, my witness is there in the heavens,\x + \xo 16:19: \xt Yob 19:25.\x*
-\q1 ≈and my advocate is \add up\add* on high.
+\q1 and my advocate is \add up\add* on high.
 \q1
 \v 20 My friends scorn me.
 \q1 The \add tears of\add* my eyes \add are directed\add* to God.
@@ -1264,11 +1243,10 @@
 \v 22 When a \add certain\add* number of years have passed,
 \q1 I’ll go on a path that I won’t return from.
 \c 17
-\rem /s1 Job Continues to Defend His Innocence; Job Prays for Relief
 \p
 \v 1 My spirit is broken,
 \q1 my days are extinguished,
-\q1 ≈only the grave is left.
+\q1 only the grave is left.
 \q1
 \v 2 Surely there’s mockers with me.
 \q1 My eye \add is held\add* by their provocations.
@@ -1288,13 +1266,13 @@
 \q1 \add Someone\add* to spit at in the face.
 \q1
 \v 7 My eyes have become dark from \add my\add* grief.
-\q1 ≈Every one of my body parts is \add just\add* like a shadow.
+\q1 Every one of my body parts is \add just\add* like a shadow.
 \q1
 \v 8 \add Godly people\add* are appalled by this,
-\q1 ≈and innocent people are stirred up against those who’re godless.
+\q1 and innocent people are stirred up against those who’re godless.
 \q1
 \v 9 But \add those who obey\add* will be able to stay on the correct road,
-\q1 ≈and those who \add haven’t done anything wrong\add* will become stronger.
+\q1 and those who \add haven’t done anything wrong\add* will become stronger.
 \q1
 \v 10 But all of them \add and\add* you all may return now and come,
 \q1 and I wouldn’t find a wise person among you all.
@@ -1305,7 +1283,7 @@
 \q2 \add even\add* my secret desires.
 \q1
 \v 12 They change night into day \add in their minds\add*—
-\q1 ≈making light seem near \add while staring into the\add* darkness.
+\q1 making light seem near \add while staring into the\add* darkness.
 \q1
 \v 13 If I wait for the grave to become my home,
 \q1 \add if\add* I’ve spread out my blankets \add ready to sleep\add* in the darkness,
@@ -1317,10 +1295,9 @@
 \q1 Who \add would know that I had any\add* hope?
 \q1
 \v 16 Will they go down to the \add gates\add* of the grave?
-\q1 ≈Will we go down together into the ground?
+\q1 Will we go down together into the ground?
 \c 18
 \s1 Bildad’s second response to Iyyov
-\rem /s1 Bildad; Bildad’s Second Response to Job; Bildad Speaks: God Punishes the Wicked
 \p
 \v 1 Then Bildad from Shuah responded \add again\add*:
 \q1
@@ -1336,22 +1313,22 @@
 \b
 \q1
 \v 5 Indeed, the light of wicked \add people\add*\f + \fr 18:5 \ft This segment is about ‘the wicked man’ (somewhat general, but also obviously referring to Iyyov), but we’ve generalised it into ‘wicked people’ as being more relevant to the average reader (of both sexes).\f* is extinguished.
-\q1 ≈the flame of \add their\add* fire won’t shine.
+\q1 the flame of \add their\add* fire won’t shine.
 \q1
 \v 6 The light in \add their\add* tents will go dark.
-\q1 ≈and the lamps that hang \add over their heads\add* will go out.
+\q1 and the lamps that hang \add over their heads\add* will go out.
 \q1
 \v 7 \add Their\add* strong steps will get shorter,
 \q1 and their own schemes \add make them depressed\add*.
 \q1
 \v 8 \add Yes, they’ll\add* get their feet caught in a net,
-\q1 ≈and they’ll wander around in a maze.
+\q1 and they’ll wander around in a maze.
 \q1
 \v 9 They’ll get their heels caught in traps,
-\q1 ≈the \add sprung jaws\add* will keep hold of \add them\add*.
+\q1 the \add sprung jaws\add* will keep hold of \add them\add*.
 \q1
 \v 10 A rope is hidden in the ground,
-\q1 ≈and a \add noose\add* lies \add there\add* on \add their\add* paths.
+\q1 and a \add noose\add* lies \add there\add* on \add their\add* paths.
 \q1
 \v 11 Sudden \add noises\add* around them will \add terrify them\add*,
 \q2 and follow their steps \add as they run away\add*.
@@ -1360,7 +1337,7 @@
 \q1 and disaster \add has been\add* prepared for them to stumble \add into\add*.
 \q1
 \v 13 It devours parts of \add their\add* skin,
-\q1 ≈death \add begins by\add* devouring their body parts.
+\q1 death \add begins by\add* devouring their body parts.
 \q1
 \v 14 They’re pulled from their tents \add where they felt\add* secure,
 \q2 and taken away to the king of terrors.
@@ -1369,25 +1346,24 @@
 \q1 Sulfur is scattered over their homes.
 \q1
 \v 16 Their roots dry up underneath them,
-\q1 ≈and their branches above them \add all\add* wither.
+\q1 and their branches above them \add all\add* wither.
 \q1
 \v 17 No one on the earth will remember them \add any more\add*,
-\q1 ≈and no streets \add will be named after them\add*.\f + \fr 18:17 \ft That was a paraphrase (and probably an anachronism) that we couldn’t resist (and will probably delete again). It’s really something more like ‘no one will mention their names on the streets’.\f*
+\q1 and no streets \add will be named after them\add*.\f + \fr 18:17 \ft That was a paraphrase (and probably an anachronism) that we couldn’t resist (and will probably delete again). It’s really something more like ‘no one will mention their names on the streets’.\f*
 \q1
 \v 18 They’ll be driven from the light out into the darkness,
-\q1 ≈and they’ll be chased out of this world.
+\q1 and they’ll be chased out of this world.
 \q1
 \v 19 \add You won’t find\add* any of their children or grandchildren \add in their town\add*.
-\q1 ≈nor \add find\add* any survivor where \add they previously\add* lived.
+\q1 nor \add find\add* any survivor where \add they previously\add* lived.
 \q1
 \v 20 Those in the west are appalled at \add their\add* fate,
-\q1 ≈and those in the east are getting the shudders.
+\q1 and those in the east are getting the shudders.
 \q1
 \v 21 That’s certainly how the homes of wicked \add people end up\add*,
-\q1 ≈and that’s the place for \add people\add* who don’t know God.
+\q1 and that’s the place for \add people\add* who don’t know God.
 \c 19
 \s1 Iyyov’s second response to Bildad
-\rem /s1 Job’s Sixth Speech: A Response to Bildad; Job; Job Replies: I Know That My Redeemer Lives
 \p
 \v 1 Iyyov \add responded to Bildad and companions again\add*:
 \q1
@@ -1407,10 +1383,10 @@
 \q2 and he’s closed his net around me.
 \q1
 \v 7 There, I cry out that I’m being attacked and get no answer.
-\q1 ≈I call for help but there’s no justice.
+\q1 I call for help but there’s no justice.
 \q1
 \v 8 He’s blocked my road so I can’t get past,
-\q1 ≈and he places darkness over my paths.
+\q1 and he places darkness over my paths.
 \q1
 \v 9 He’s taken away \add all\add* my honour,
 \q2 and removed the crown from on my head.
@@ -1427,16 +1403,16 @@
 \b
 \q1
 \v 13 He’s moved my brothers far away from me,
-\q1 ≈and my acquaintances have certainly kept out of my way.
+\q1 and my acquaintances have certainly kept out of my way.
 \q1
 \v 14 My relatives have deserted me,
-\q1 ≈and my close friends have forgotten me.
+\q1 and my close friends have forgotten me.
 \q1
 \v 15 Those who’ve stayed in my home, and \add even\add* the female servants regard me as a stranger.
-\q1 ≈I’ve become a foreigner in their eyes.
+\q1 I’ve become a foreigner in their eyes.
 \q1
 \v 16 When I call my servant, he doesn’t answer.
-\q1 ≈I try to persuade him with my \add words\add*.
+\q1 I try to persuade him with my \add words\add*.
 \q1
 \v 17 My breath is repugnant to my wife,
 \q1 and abhorrent to my \add siblings\add*.
@@ -1459,10 +1435,10 @@
 \b
 \q1
 \v 23 Who will permit that my words be written down?
-\q1 ≈Who will allow them to be inscribed onto a scroll
+\q1 Who will allow them to be inscribed onto a scroll
 \q2
 \v 24 with a pen made of iron and lead,
-\q2 ≈or engraved onto stone with a chisel.
+\q2 or engraved onto stone with a chisel.
 \q1
 \v 25 I \add do\add* know that my redeemer lives,
 \q2 and that he will stand on the dust at the end.
@@ -1483,7 +1459,6 @@
 \q2 so that \add you\add* will know that \add there is\add* judgement.
 \c 20
 \s1 Zofar’s second response to Iyyov
-\rem /s1 Zophar Speaks: Wickedness Receives Just Retribution; Zophar; Zophar’s Second Response to Job
 \p
 \v 1 Then Zofar from Naamah \add responded to Iyyov\add*:
 \q1
@@ -1494,25 +1469,25 @@
 \q2 and a spirit beyond my understanding answers me.
 \q1
 \v 4 Do you know this from long ago,
-\q1 ≈from back when humankind was placed on the earth:
+\q1 from back when humankind was placed on the earth:
 \q1
 \v 5 that the excited shout of wicked \add people\add* is brief,
-\q1 ≈and the happiness of godless \add people\add* only lasts a moment?
+\q1 and the happiness of godless \add people\add* only lasts a moment?
 \q1
 \v 6 Although \add their\add* arrogance rises up to the sky,
 \q1 and \add their\add* heads reach into the clouds,
 \q1
 \v 7 \add they\add* will vanish forever like \add their\add* own dung—
-\q1 ≈those who had seen them will ask, ‘Where are \add they now\add*?’
+\q1 those who had seen them will ask, ‘Where are \add they now\add*?’
 \q1
 \v 8 \add They’ll\add* fly away like a dream that can’t be found \add again\add*,
-\q1 ≈and be chased away like a vision in the night.
+\q1 and be chased away like a vision in the night.
 \q1
 \v 9 Whoever saw \add them\add* won’t \add see them again\add*,
-\q1 ≈and \add even\add* the place \add where they lived\add* won’t see \add them\add* again.
+\q1 and \add even\add* the place \add where they lived\add* won’t see \add them\add* again.
 \q1
 \v 10 \add Their\add* children will be seeking the favour of poor \add people\add*,
-\q1 ≈\add because their own\add* hands \add must\add* return \add their\add* wealth.
+\q1 \add because their own\add* hands \add must\add* return \add their\add* wealth.
 \q1
 \v 11 \add Although their\add* bones were full of youthful vigour,
 \q1 that \add same strength\add* will lie down with \add them\add* in the dust.
@@ -1525,22 +1500,22 @@
 \q1 and they keep it \add there\add* in the middle of \add their\add* mouths.
 \q1
 \v 14 \add But that\add* food changes in \add their\add* stomachs.
-\q1 ≈It becomes like snake venom inside \add them\add*.
+\q1 It becomes like snake venom inside \add them\add*.
 \q1
 \v 15 \add They\add* swallow up wealth \add but then\add* vomit it up.
-\q1 ≈God forces it out of \add their\add* stomachs.
+\q1 God forces it out of \add their\add* stomachs.
 \q1
 \v 16 \add They’ll\add* suck on cobra poison.
-\q1 ≈The viper’s fangs will kill \add them\add*.
+\q1 The viper’s fangs will kill \add them\add*.
 \q1
 \v 17 \add Those wicked people\add* won’t enjoy the streams,
 \q2 \add or the\add* fast-flowing rivers of honey and yoghurt.
 \q1
 \v 18 \add They\add* will return what \add they’ve gained\add* and not swallow it \add down\add*.
-\q1 ≈\add They\add* won’t get any enjoyment from the profits of \add their\add* trading.
+\q1 \add They\add* won’t get any enjoyment from the profits of \add their\add* trading.
 \q1
 \v 19 \add They’ve\add* oppressed \add others\add* and ignored the poor.
-\q1 ≈\add They’ve\add* seized homes that they didn’t build.
+\q1 \add They’ve\add* seized homes that they didn’t build.
 \b
 \q1
 \v 20 \add Their\add* bellies are never at ease.
@@ -1557,7 +1532,7 @@
 \q1 raining down on \add them and their\add* meal.
 \q1
 \v 24 \add They\add* flee from weapons made of iron.
-\q1 ≈A bow made of brass \add sends its arrows\add* right through \add them\add*.
+\q1 A bow made of brass \add sends its arrows\add* right through \add them\add*.
 \q1
 \v 25 \add They\add* pull them through and out \add their\add* backs.
 \q1 The tips have shiny liver on them—terrors come over \add them\add*.
@@ -1573,10 +1548,9 @@
 \q2 washed away in his severe anger.
 \q1
 \v 29 That’s what God serves up to wicked people,
-\q1 ≈and the heritage that God has decreed for them.
+\q1 and the heritage that God has decreed for them.
 \c 21
 \s1 Iyyov’s second response to Zofar
-\rem /s1 Job; Job Replies: The Wicked Often Go Unpunished; Job’s Seventh Speech: A Response to Zophar
 \p
 \v 1 Then Iyyov \add responded to Zofar and the others\add*:
 \q1
@@ -1590,28 +1564,28 @@
 \q1 If it was, then \add you\add* might expect \add me to be impatient\add*.
 \q1
 \v 5 Turn \add and look\add* at me and be appalled.
-\q1 ≈\add Yes,\add* put your hands over your mouths \add in shock\add*.
+\q1 \add Yes,\add* put your hands over your mouths \add in shock\add*.
 \q1
 \v 6 When I remember \add what happened\add*, I’m horrified,
 \q2 and my body starts shuddering.
 \q1
 \v 7 Why do wicked \add people\add* live?
-\q1 ≈\add Why\add* do they grow old and become more powerful?
+\q1 \add Why\add* do they grow old and become more powerful?
 \q1
 \v 8 Their children become established around them,
-\q1 ≈and their offspring \add become settled\add* in front of them.
+\q1 and their offspring \add become settled\add* in front of them.
 \q1
 \v 9 Their homes are safe and \add free from\add* fear.
-\q1 ≈God isn’t punishing them.
+\q1 God isn’t punishing them.
 \q1
 \v 10 Their bulls mate \add productively\add*,
-\q1 ≈and their cows calve without miscarrying.
+\q1 and their cows calve without miscarrying.
 \q1
 \v 11 They send out their little ones like a flock,
-\q1 ≈and their children dance \add all around\add*.
+\q1 and their children dance \add all around\add*.
 \q1
 \v 12 They pick up their tambourines and harps,
-\q1 ≈and they’re happy to hear the sound of the flutes.
+\q1 and they’re happy to hear the sound of the flutes.
 \q1
 \v 13 They spend their days in prosperity,
 \q1 and they go peacefully down \add to the grave\add*.
@@ -1631,7 +1605,7 @@
 \q1 In his anger, does he dole out pain to them?
 \q1
 \v 18 Are they \add just\add* like straw \add blown by\add* the wind,
-\q1 ≈and like chaff that’s carried away by a gale.
+\q1 and like chaff that’s carried away by a gale.
 \b
 \q1
 \v 19 God saves up \add their\add* evil for \add their\add* children.
@@ -1641,7 +1615,7 @@
 \q1 and let \add them\add* drink the severe anger of the provider.
 \q1
 \v 21 After they’re gone, why would \add they\add* care about their families?
-\q1 ≈Why would they count the months after they’ve already been cut off?
+\q1 Why would they count the months after they’ve already been cut off?
 \q1
 \v 22 Can any \add person\add* teach knowledge to God
 \q2 since he judges the \add high and mighty\add*?
@@ -1673,49 +1647,47 @@
 \q2 that they are led away from \add that\add* day of anger?
 \q1
 \v 31 Who will denounce \add their\add* actions to \add their\add* faces?
-\q1 ≈Who will repay \add them\add* for \add the evil they’ve\add* done?
+\q1 Who will repay \add them\add* for \add the evil they’ve\add* done?
 \q1
-\v 32 They’ll be carried off to the cemetary,
-\q1 ≈and someone will keep watch over \add their\add* tombs.
+\v 32 They’ll be carried off to the cemetery,
+\q1 and someone will keep watch over \add their\add* tombs.
 \q1
 \v 33 The clods of the riverbed will be sweet to \add them\add*.
 \q1 Everyone will follow along behind \add them\add*,
-\q2 ≈and \add no one\add* can count those who go in front of \add them\add*.
+\q2 and \add no one\add* can count those who go in front of \add them\add*.
 \b
 \q1
 \v 34 \add So\add* how can vanity be of comfort to me?
 \q1 It’s only faithlessness that remains from the replies that you all \add have given\add*.
 \c 22
 \s1 Elifaz’s third response to Iyyov
-\rem /s1 Eliphaz’s Third Response to Job; Eliphaz Speaks: Job’s Wickedness Is Great; The Third Dialogue; Third cycle of speeches; Eliphaz
 \sr (22:1–27:23)
-\rem /r (22.1—27.23)
 \p
 \v 1 Then Elifaz from Teman responded \add to Iyyov\add*:
 \q1
 \v 2 Can a human be of use to God?\x + \xo 22:2-3: \xt Yob 35:6-8.\x*
-\q1 ≈Might a wise \add person\add* be of any use to him?
+\q1 Might a wise \add person\add* be of any use to him?
 \q1
 \v 3 Does it give pleasure to the provider if you’re innocent?
-\q1 ≈Will he benefit if you’re blameless in your actions?
+\q1 Will he benefit if you’re blameless in your actions?
 \q1
 \v 4 Does he scold you for your religiosity?
-\q1 ≈Does he go with you into judgement?
+\q1 Does he go with you into judgement?
 \q1
 \v 5 Your wickness is really bad,
-\q1 ≈and there’s no end to your evil actions.
+\q1 and there’s no end to your evil actions.
 \q1
 \v 6 You’ve forced your brothers into unnecessary debt to you.
-\q1 ≈You’ve demanded clothes \add in payment\add* and left \add people\add* naked.
+\q1 You’ve demanded clothes \add in payment\add* and left \add people\add* naked.
 \q1
 \v 7 You \add never\add* gave exhausted \add people\add* anything to drink,
-\q1 ≈and you refused to give food to those who were hungry.
+\q1 and you refused to give food to those who were hungry.
 \q1
 \v 8 The land belongs to a powerful man.
-\q1 ≈A man who \add was\add* honoured lives on it.
+\q1 A man who \add was\add* honoured lives on it.
 \q1
 \v 9 You sent widows away empty-handed,
-\q1 ≈and the strength of orphans has been crushed.
+\q1 and the strength of orphans has been crushed.
 \q1
 \v 10 Because of that there’s traps set all around you,
 \q2 and sudden fear terrifies you,
@@ -1746,7 +1718,7 @@
 \q1 and I keep far away from the advice of wicked \add people\add*.
 \q1
 \v 19 \add Godly people\add* are happy when they see that, WHAT?
-\q1 ≈and innocent \add people\add* mock them. WHO?
+\q1 and innocent \add people\add* mock them. WHO?
 \q1
 \v 20 If he didn’t destroy our enemies, MEANING?
 \q1 and fire has destroyed what was left. MEANING?
@@ -1755,48 +1727,47 @@
 \q1 Doing that will bring good to you.
 \q1
 \v 22 \add Just\add* accept his advice,
-\q1 ≈and keep thinking about his words.
+\q1 and keep thinking about his words.
 \q1
 \v 23 If you return to the provider, you’ll be encouraged.
 \q1 He’ll remove injustice from your \add living situation\add*.
 \q1
 \v 24 \add Throw your\add* gold onto the dust \add on the ground\add*,
-\q1 ≈and fine gold onto the stones in the riverbed.
+\q1 and fine gold onto the stones in the riverbed.
 \q1
 \v 25 Then the provider will be your gold,
-\q1 ≈and \add be\add* heaps of silver to you.
+\q1 and \add be\add* heaps of silver to you.
 \q1
 \v 26 Then you’ll enjoy your relationship with the provider,
-\q1 ≈and you’ll raise your head towards God.
+\q1 and you’ll raise your head towards God.
 \q1
 \v 27 You’ll pray to him and he’ll listen to you,
 \q1 and you’ll fulfill your promises \add to him\add*.
 \q1
 \v 28 Once you decide on something, it’ll be done for you,
-\q1 ≈and light will shine on all your paths.
+\q1 and light will shine on all your paths.
 \q1
 \v 29 People are humbled and \add then honoured again\add*,
-\q1 ≈and he will save \add those\add* who humble themselves.
+\q1 and he will save \add those\add* who humble themselves.
 \q1
 \v 30 He will set free \add those\add* who aren’t innocent,
-\q1 ≈and they’ll be rescued with the cleanness of your hands.
+\q1 and they’ll be rescued with the cleanness of your hands.
 \c 23
 \s1 Iyyov’s third response to Elifaz
-\rem /s1 Job; Job Replies: My Complaint Is Bitter; Job’s Eighth Speech: A Response to Eliphaz
 \p
 \v 1 Then Iyyov responded \add to Elifaz and the others\add*:
 \q1
 \v 2 Even today my complaint is bitter.
-\q1 ≈I’m groaning \add because my situation is so difficult\add*.
+\q1 I’m groaning \add because my situation is so difficult\add*.
 \q1
 \v 3 If only I knew where to find him
 \q2 I would have gone to his place.
 \q1
 \v 4 I would \add present\add* my case to him,
-\q1 ≈and I would \add expound all my\add* arguments,
+\q1 and I would \add expound all my\add* arguments,
 \q1
 \v 5 I want to know how he’d answer,
-\q1 ≈and to understand what he’ll say to me.
+\q1 and to understand what he’ll say to me.
 \q1
 \v 6 Would he use his incredible power to \add dispute my\add* case?
 \q1 No, surely he’d pay attention to me.
@@ -1805,92 +1776,91 @@
 \q1 and I would be set free forever by the one judging me.
 \q1
 \v 8 Look, I go to the east but he isn’t there,
-\q1 ≈and to the west but I can’t detect him \add there\add*.
+\q1 and to the west but I can’t detect him \add there\add*.
 \q1
 \v 9 He works in the north, but I can’t see him,
-\q1 ≈and when he turned south, I didn’t spot him.
+\q1 and when he turned south, I didn’t spot him.
 \q1
 \v 10 Nevertheless, he knows the path that I’ve taken.
 \q1 He’s tested me and I’ve come out like \add refined\add* gold.
 \q1
 \v 11 My feet have followed in his tracks.
-\q1 ≈I’ve kept to the path without wavering.
+\q1 I’ve kept to the path without wavering.
 \q1
 \v 12 I’ve \add always obeyed\add* what he commanded,
 \q1 and I’ve valued his words more than my daily food.
 \b
 \q1
 \v 13 \add But\add* he’s independent \add so\add* who could dissuade him?
-\q1 ≈He does whatever he wants to do.
+\q1 He does whatever he wants to do.
 \q1
 \v 14 He carries out what’s been decided for me,
-\q1 ≈and he \add knows so much about me\add*.
+\q1 and he \add knows so much about me\add*.
 \q1
 \v 15 That’s why I’m terrified in his presence,
-\q1 ≈I’m afraid of him when I consider \add all that\add*.
+\q1 I’m afraid of him when I consider \add all that\add*.
 \q1
 \v 16 God has caused me to be faint-hearted.
-\q1 ≈The provider has terrified me.
+\q1 The provider has terrified me.
 \q1
 \v 17 I haven’t been silenced \add when\add* facing the darkness,
 \q2 or by the fog that covers my face.
 \c 24
 \s2 Iyyov complains about continued evil
-\rem /s1 Job Complains of Violence on the Earth; Job Asks Why the Wicked Are Not Punished
 \p
-\v 1 Why doesn’t the provider \add ?store up the times\add*,
-\q1 and those who know him \add ?≈never see him age\add*?
+\v 1 Why doesn’t the provider \add store up the times\add*,
+\q1 and those who know him \add never see him age\add*?
 \b
 \q1
 \v 2 \add People\add* move boundaries.
-\q1 They steal \add ≈sheep and goats\add* and graze \add ~them\add*.
+\q1 They steal \add sheep and goats\add* and graze \add them\add*.
 \q1
-\v 3 They drive away the donkey of \add ≈a family who lost the husband\add*.
-\q1 ≈They take the widow’s ox as \add payment for\add* a pledge.
+\v 3 They drive away the donkey of \add a family who lost the husband\add*.
+\q1 They take the widow’s ox as \add payment for\add* a pledge.
 \q1
 \v 4 They turn needy people off the road.
-\q1 ≈The poor people in the land \add ≈mustn’t be seen\add*.
+\q1 The poor people in the land \add mustn’t be seen\add*.
 \q1
-\v 5 Indeed, \add @the poor\add* work in the desert.
-\q1 ≈The wilderness is their field where they search for something to eat.
+\v 5 Indeed, \add the poor\add* work in the desert.
+\q1 The wilderness is their field where they search for something to eat.
 \q1
 \v 6 They harvest \add whatever they can find\add* in the countryside,
-\q1 ≈and they \add ≈gather grapes left behind\add* in the wicked peoples’ vineyards.
+\q1 and they \add gather grapes left behind\add* in the wicked peoples’ vineyards.
 \q1
-\v 7 They spend the night \add ≈under-dressed\add* from lack of clothing,
-\q1 ≈and have nothing to cover themselves with in the cold.
+\v 7 They spend the night \add under-dressed\add* from lack of clothing,
+\q1 and have nothing to cover themselves with in the cold.
 \q1
 \v 8 They get soaked by the showers in the hills,
-\q1 ≈and huddle against the rocky \add ledge\add* for shelter.
+\q1 and huddle against the rocky \add ledge\add* for shelter.
 \b
 \q1
-\v 9 They pull the fatherless \add >baby\add* from the breast,
-\q1 ≈and take the \add children\add* from poor \add families\add* to pay their debt.
+\v 9 They pull the fatherless \add baby\add* from the breast,
+\q1 and take the \add children\add* from poor \add families\add* to pay their debt.
 \q1
 \v 10 Without clothing, they walk around under-dressed.
-\q1 ≈Harvesting \add for others\add*, they’re feeling hungry.
+\q1 Harvesting \add for others\add*, they’re feeling hungry.
 \q1
 \v 11 They squeeze out \add olive\add* oil at the press.
-\q1 ≈They tread the \add juice out of the grapes\add* while they thirst.
+\q1 They tread the \add juice out of the grapes\add* while they thirst.
 \q1
 \v 12 People groan in the cities,
-\q1 ≈and wounded souls cry out.
+\q1 and wounded souls cry out.
 \q2 \add but\add* God seems to not be offended.
 \b
 \q1
 \v 13 They’re in with those rebelling against the light.
 \q1 They take no notice of his ways,
-\q1 ≈and they don’t stay on his paths.
+\q1 and they don’t stay on his paths.
 \q1
 \v 14 At \add first\add* light, the murderer gets up and kills the poor,
-\q1 ≈and in the night he’s like a thief.
+\q1 and in the night he’s like a thief.
 \q1
-\v 15 The adulter watches out for the twilight,
+\v 15 The adulterer watches out for the twilight,
 \q2 saying that no one will see him,
 \q2 and he puts a covering over his face.
 \q1
 \v 16 They dig into \add people’s\add* houses in the dark,
-\q1 \add ≈but\add* they stay hidden away during the day—
+\q1 \add but\add* they stay hidden away during the day—
 \q2 they don’t know what daylight is.
 \q1
 \v 17 To them, morning is like deep darkness.
@@ -1902,29 +1872,28 @@
 \q1 No one goes in the direction of their vineyards.
 \q1
 \v 19 Drought as well as heat will snatch away the snow.
-\q1 ≈The grave \add will do the same to those who\add* have sinned.
+\q1 The grave \add will do the same to those who\add* have sinned.
 \q1
 \v 20 The womb will forget them—the worm will dine on them.
-\q1 ≈They won’t be remembered again—injustice is like a broken tree.
+\q1 They won’t be remembered again—injustice is like a broken tree.
 \q1
-\v 21 He devours the barren \add >woman\add* who’s never had a child.
+\v 21 He devours the barren \add woman\add* who’s never had a child.
 \q1 He doesn’t do \add anything\add* good to the widow.
 \q1
-\v 22 He uses his strength to drag powerful \add >people\add* away.
+\v 22 He uses his strength to drag powerful \add people\add* away.
 \q1 He rises \add but\add* no one trusts in life. WHAT???
 \q1
 \v 23 He gives him support and security,
-\q1 and his eyes \add =are\add* on their ways.
+\q1 and his eyes \add are\add* on their ways.
 \q1
 \v 24 They’re promoted for a while then they’re gone.
 \q1 Then they’re cut down and gathered up \add like wheat\add*,
-\q1 ≈then they wither like the stalks of grain.
+\q1 then they wither like the stalks of grain.
 \q1
 \v 25 If that isn’t true, then who will prove me a liar
-\q1 ≈and demonstrate that my words \add mean\add* nothing?
+\q1 and demonstrate that my words \add mean\add* nothing?
 \c 25
 \s1 Bildad’s third response to Iyyov
-\rem /s1 Bildad; Bildad Speaks: How Can a Mortal Be Righteous Before God?; Bildad’s Third Response to Job
 \p
 \v 1 Then Bildad from Shua \add responded to Iyyov\add*:
 \q1
@@ -1935,24 +1904,23 @@
 \q1 Is there anyone who his light doesn’t shine on?
 \q1
 \v 4 How can a person be innocent before God?
-\q1 ≈How could a human born from a women be pure?
+\q1 How could a human born from a women be pure?
 \q1
-\v 5 Look, even the moon isn’t clear \add ?to us\add*,
-\q1 ≈and the stars aren’t pure in \add our\add* sight.
+\v 5 Look, even the moon isn’t clear \add to us\add*,
+\q1 and the stars aren’t pure in \add our\add* sight.
 \q1
 \v 6 Indeed, a person’s \add just like\add* an \add insect\add*,
-\q1 ≈and human offspring \add ?are as insignificant as\add* worms.
+\q1 and human offspring \add are as insignificant as\add* worms.
 \c 26
 \s1 Iyyov’s response to Bildad
-\rem /s1 Job; Job Replies: God’s Majesty Is Unsearchable; Job’s Ninth Speech: A Response to Bildad
 \p
 \v 1 Then Iyyov responded \add to Bildad\add*:
 \q1
 \v 2 How have you helped \add those\add* without power?
-\q1 ≈\add How have\add* you saved \add those\add* \add ≈who are weak\add*?
+\q1 \add How have\add* you saved \add those\add* \add who are weak\add*?
 \q1
 \v 3 How \add well\add* you have advised \add those\add* without wisdom,
-\q1 ≈and displayed many good \add ?things\add*.
+\q1 and displayed many good \add things\add*.
 \q1
 \v 4 Who did you tell \add all that\add* to,
 \q1 and whose spirit spoke through you?
@@ -1961,409 +1929,379 @@
 \q2 from beneath the water and their inhabitants. ???
 \q1
 \v 6 The grave is wide open before him,
-\q1 ≈and ABADDON has no covering.
+\q1 and ABADDON has no covering.
 \q1
-\v 7 ◙
-\q2 …
+\v 7 He stretches out the north over \add empty space\add*.
+\q1 He hangs the earth upon nothing at all.
 \q1
-\v 8 ◙
-\q2 …
+\v 8 He attaches the water into his clouds,
+\q2 \add but\add* the cloud isn’t torn apart by it.
 \q1
-\v 9 ◙
+\v 9 He covers the surface of the THRONE/MOON.
+\q1 He spreads his cloud above it.
 \q1
-\v 10 ◙
-\q2 …
+\v 10 He’s drawn a circle \add to mark\add* the limit of the waters,
+\q2 \add and to mark\add* the boundary between light and darkness.
 \q1
-\v 11 ◙
-\q2 …
+\v 11 The pillars of heaven shake,
+\q2 and they’re astounded when he scolds them.
 \q1
-\v 12 ◙
-\q2 …
+\v 12 He stirs up the sea with his power,
+\q2 and using his know-how he smashed RAHAB.
 \q1
-\v 13 ◙
-\q2 …
-\q2 …
-\q2 …
+\v 13 By his breath he makes the skies clear.
+\q1 His hand pierced the fleeing snake.
 \q1
-\v 14 ◙
-\q2 …
-\q1 …
+\v 14 Listen, those are the ends of his ways,
+\q2 and how we hear \add just\add* a whisper of a word.
+\q1 And who can interpret the thunder of his power?
 \c 27
-\rem /s1 Job’s Final Speech; Job Maintains His Integrity
 \p
-\v 1 ◙
+\v 1 Then Iyyov continued speaking:
 \q1
-\v 2 ◙
-\q2 …
-\q2 …
-\q2
-\v 3 ◙
-\q2 …
-\q2
-\v 4 ◙
-\q2 …
+\v 2 \add Although\add* God lives, who’s taken justice away from me,
+\q1 and the provider who’s made my soul bitter,
 \q1
-\v 5 ◙
-\q1 …
-\q2 …
+\v 3 I still have my breath in me,
+\q1 and God’s breath \add remains\add* in my nostrils.
 \q1
-\v 6 ◙
-\q2 …
-\q2 …
+\v 4 If my lips speak wickedness,
+\q1 if my tongue speaks deceitfully,
+\q1
+\v 5 I’ll never say that you all are correct—
+\q1 I won’t set aside my integrity before I expire.
+\q1
+\v 6 I’m holding tight to my \add innocence\add* and won’t let it go.
+\q1 \add There hasn’t been a single day\add* \add when\add* my \add conscience\add* has reproached me.
 \b
 \q1
-\v 7 ◙
-\q2 …
+\v 7 May my enemies \add get the same reward\add* as wicked \add people\add*,
+\q1 and may my opponents \add receive the same\add* as unjust \add people\add*.
 \q1
-\v 8 ◙
-\q2 …
+\v 8 What hope do godless \add people\add* have
+\q2 \add when\add* he cuts \add them\add* off,
+\q2 \add when\add* God takes away their lives?
 \q1
-\v 9 ◙
-\q2 …
+\v 9 Will God hear their cries
+\q2 when troubles \add hit\add* them?
 \q1
-\v 10 ◙
-\q2 …
+\v 10 If they delight themselves in the provider,
+\q2 will they call on God at all times?
 \b
 \q1
-\v 11 ◙
-\q2 …
+\v 11 I’ll teach you all about God’s power.
+\q1 I won’t hide \add anything\add* about the provider.
 \q1
-\v 12 ◙
-\q1 …
+\v 12 Yes, all of you have seen this for yourselves,
+\q1 \add so\add* why do you vainly speak such vain \add words\add*?
 \q1
-\v 13 ◙
-\q2 …
+\v 13 This is the wicked people’s portion from God,
+\q1 and the inheritance that ruthless \add people\add* will receive from the provider:
 \q1
-\v 14 ◙
-\q2 …
-\q2 …
+\v 14 If they have many children, they’ll die in battle,
+\q1 and their offspring won’t have enough food \add to eat\add*.
 \q1
-\v 15 ◙
-\q2 …
-\q1 …
+\v 15 Those who remain will be buried by the plague,
+\q1 and their widows won’t weep \add for them\add*.
 \q1
-\v 16 ◙
-\q2 …
-\q2
-\v 17 ◙
-\q2 …
+\v 16 If if they heap up silver like the dust,
+\q1 and pile up clothes like clay mounds,
 \q1
-\v 18 ◙
-\q2 …
-\q2 …
+\v 17 although the wicked piled it up, the godly people will wear them,
+\q1 and innocent \add people\add* will divide up the silver.
 \q1
-\v 19 ◙
-\q2 …
-\q2 …
+\v 18 \add The wicked\add* build \add easily-broken\add* houses like the moths do,
+\q1 and like \add temporary\add* shelters that a guard makes.
 \q1
-\v 20 ◙
-\q2 …
+\v 19 \add them\add* wealthy when they lie down, but that’s that—
+\q1 when \add them\add* open their eyes, it’s gone.
 \q1
-\v 21 ◙
-\q2 …
+\v 20 Terrors overtake \add them\add* like a flood.
+\q1 A gale carries \add them\add* away in the night.
 \q1
-\v 22 ◙
-\q2 …
+\v 21 The east wind carries \add them\add* away then they’re gone,
+\q1 and it sweeps \add them\add* out from their places.
 \q1
-\v 23 ◙
-\q2 …
-\q2 …
+\v 22 It hurls itself against \add them\add*without mercy.
+\q1 They hurriedly flee from its power.
+\q1
+\v 23 \add That wind\add* claps its hands at \add them\add*,
+\q1 and hisses at them from its place.
 \c 28
 \ms1 SECTION THREE:
 \mr (28:1-28)
-\s1 Praised the wisdom
-\rem /s1 Job Speaks of Wisdom and Understanding; Interlude: Where Wisdom Is Found; God’s unfathomable wisdom; In Praise of Wisdom
+\s1 Praising wisdom
 \q1
-\v 1 ◙
-\q2 …
+\v 1 Surely there’s a mine where silver \add is extracted\add*,
+\q1 and a place where gold is refined.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 Iron is taken from the ground,
+\q1 and copper is smelted from rock.
 \q1
-\v 3 ◙
-\q2 …
-\q2 …
+\v 3 \add People have ways\add* to end the darkness.
+\q1 \add They\add* search \add the furtherest places\add*
+\q2 for the stone of gloom and deep darkness. ???
 \q1
-\v 4 ◙
-\q2 …
-\q1 …
+\v 4 \add They\add* break open a shaft \add far\add* from \add villages\add*—
+\q2 where feet have forgotten \add to go\add*.
+\q1 They hang down \add on ropes\add* and swing around \add far\add* from people.
 \q1
-\v 5 ◙
-\q2 …
+\v 5 Food comes from \add the land on the surface of\add* the earth,
+\q1 \add but\add* underneath it \add keeps changing\add* like fire.
 \q1
-\v 6 ◙
-\q2 …
+\v 6 Its rocks are a source of sapphires,
+\q1 and its dust \add a source\add* of gold.
 \q1
-\v 7 ◙
-\q2 …
+\v 7 The birds of prey don’t know \add that\add* path,
+\q1 and the falcon’s eye hasn’t seen it.
 \q1
-\v 8 ◙
-\q2 …
+\v 8 The sons of pride haven’t walked on it.
+\q1 The lion hasn’t passed over it.
 \q1
-\v 9 ◙
-\q2 …
+\v 9 \add  The miner works\add* the flinty rock with his hands.
+\q1 He overturns mountains by their roots.
 \q1
-\v 10 ◙
-\q2 …
+\v 10 He splits open shafts in the rocks,
+\q1 and his eyes \add notice\add* everything that’s valuable.
 \q1
-\v 11 ◙
-\q2 …
+\v 11 He \add dams up\add* rivers \add upstream towards the\add* source,
+\q1 then hidden things are brought into the light.
 \b
 \q1
-\v 12 ◙
-\q2 …
+\v 12 \add But\add* where can \bd wisdom\bd* be found,
+\q1 and where does understanding \add live\add*?
 \q1
-\v 13 ◙
-\q2 …
+\v 13 \add People\add* don’t know their worth,
+\q1 and it’s not found in the land of the living.
 \q1
-\v 14 ◙
-\q2 …
+\v 14 The deep \add waters\add* say, ‘I don’t have it,’
+\q1 and the ocean says, ‘It’s not in me.’
 \q1
-\v 15 ◙
-\q2 …
+\v 15 Gold can’t be used to obtain it,
+\q1 and silver can’t be weighed out to match its price.
 \q1
-\v 16 ◙
-\q2 …
+\v 16 \add Even\add* the gold from Ofir can’t be used to pay for \add wisdom\add*,
+\q1 \add nor can\add* precious onyx stones and sapphires.
 \q1
-\v 17 ◙
-\q2 …
-\q2 …
+\v 17 Neither gold nor \add clear\add* glass can equal it,
+\q1 and it can’t be exchanged for a gold \add goblet\add*.
 \q1
-\v 18 ◙
-\q2 …
+\v 18 It’s not even worth mentioning coral and jasper.
+\q1 Yes, \bd wisdom\bd* is \add way\add* more expensive than pearls.
 \q2
-\v 19 ◙
-\q2 …
-\s1 The fear of God iyan wisdom
+\v 19 The \add good\add* topaz from Ethiopia can’t be compared with it.
+\q1 It can’t be paid for with gold.
+\s1 Wisdom is obeying God
 \q1
-\v 20 ◙
-\q2 …
+\v 20 \add So\add* then, where does \bd wisdom\bd* come from?
+\q1 Where then, does understanding \add live\add*?
 \q1
-\v 21 ◙
-\q2 …
-\q2 …
+\v 21 It’s hidden from the eyes of every living creature.
+\q1 It’s even concealed from the birds in the sky.
 \q1
-\v 22 ◙
-\q2 …
+\v 22 Destruction and death say,
+\q2 ‘We’ve heard a rumour about it with our ears.’
 \q1
-\v 23 ◙
-\q2 …
-\q2
-\v 24 ◙
-\q2 …
-\q2 …
+\v 23 \add But\add* God understands the path \add to wisdom\add*,
+\q1 and he knows where it lives,
 \q1
-\v 25 ◙
-\q2 …
+\v 24 because he can see \add right around\add* the earth,
+\q1 and he notices everything under the sky.
 \q1
-\v 26 ◙
-\q2 …
+\v 25 \add God\add* determined the weight of the \add atmosphere\add*,
+\q1 and he \add dished\add* out the ocean \add with his measuring cup\add*.
 \q1
-\v 27 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 26 He told the rain how to behave,
+\q1 and made the paths for the lightning bolts when it thunders.
 \q1
-\v 28 \x + \xo 28:28: \xt Psa 111:10; Prv 1:7; 9:10.\x*◙
-\q2 …
+\v 27 Then he saw \add wisdom\add* and declared it.
+\q1 and He established it then searched it out.
+\q1
+\v 28 Then he told humankind,\x + \xo 28:28: \xt Psa 111:10; Prv 1:7; 9:10.\x*
+\q2 ‘Listen, obeying the master—that’s \bd wisdom\bd*,
+\q2 along with turning away from \add doing\add* evil.’
 \c 29
 \ms1 SECTION FOUR: Final speech of Iyyov
 \mr (29:1–31:40)
-\s1 The remembering of Iyyov of his old living
-\rem /s1 Job’s final survey of his case; Job Finishes His Defense; Job Speaks of His Former Blessings; Job’s Final Statement of His Case
+\s1 Iyyov remembers his earlier life
 \p
-\v 1 ◙
+\v 1 Then Iyyov continued speaking:
 \q1
-\v 2 ◙
-\q2 …
+\v 2 How I wish for \add my life\add* in the months of the past,
+\q1 in the days when God watched over me.
 \q1
-\v 3 ◙
-\q2 …
-\q2 …
+\v 3 When his lamp shone over my head.
+\q1 When I walked in the darkness by his light.
 \q1
-\v 4 ◙
-\q2 …
-\q2 …
+\v 4 I was \add still\add* in my prime in those days,
+\q1 when God’s friendship \add could be noticed in my home\add*.
 \q1
-\v 5 ◙
-\q2 …
+\v 5 When the provider was still with me.
+\q1 When my children were all around me.
 \q1
-\v 6 ◙
-\q2 …
-\q2 …
+\v 6 When my path was greased with butter,
+\q1 and the rock poured streams of olive oil out for me.
 \q1
-\v 7 ◙
-\q2 …
+\v 7 When I went to \add the gathering of the city elders at\add* the city gate.
+\q1 When I took my seat in the public square.
 \q2
-\v 8 ◙
-\q2 …
+\v 8 Young men saw me and go out of the way,
+\q1 and the old people got up and remained standing.
 \q1
-\v 9 ◙
-\q2
-\v 10 ◙
+\v 9 The leaders would stop their conversations,
+\q2 and put their hands over their mouths.
+\q1
+\v 10 The voices of the nobles were hushed,
+\q1 and their tongues stayed on the roofs of their mouths.
 \b
 \q1
-\v 11 ◙
-\q2 …
-\q2
-\v 12 ◙
-\q2 …
+\v 11 \add Those who listened to me\add* commended me,
+\q1 and \add those wo saw me\add* approved of me,
 \q1
-\v 13 ◙
-\q2 …
+\v 12 because I rescued the poor who cried out,
+\q1 and the fatherless who had no one to help them.
 \q1
-\v 14 ◙
-\q2 …
-\q1 …
+\v 13 Those who were close to dying gave me their blessing,
+\q1 and widows were very pleased \add that I’d helped them\add*.
 \q1
-\v 15 ◙
-\q2 …
+\v 14 I put on obedience like a cloak.
+\q1 My justice was like a robe and a turban.
 \q1
-\v 16 ◙
-\q2 …
+\v 15 I was the eyes for the blind,
+\q1 and the feet for the lame.
 \q1
-\v 17 ◙
-\q2 …
+\v 16 I was a father for the needy,
+\q1 and I helped strangers \add present\add* their cases.
+\q1
+\v 17 I broke the jaws\f + \fr 29:17 \ft Of course this is figurative language as you can see from the second line of the doublet.\f* of unjust \add people\add*,
+\q1 \add so\add* they had to drop their prey from their teeth.
 \b
 \q1
-\v 18 ◙
-\q2 …
+\v 18 I had thought that I would \add die in my own home\add*,
+\q1 having multiplied my days like the sand.
 \q1
-\v 19 ◙
-\q2 …
+\v 19 My roots are spread out to \add reach\add* water,
+\q1 and the dew will lie on my branches overnight.
 \q1
-\v 20 ◙
-\q2 …
+\v 20 \add People were always honouring me\add*,
+\q1 and the bow in my hand will \add always\add* seem new.
 \q1
-\v 21 ◙
-\q2 …
+\v 21 They listened to me and they waited,
+\q1 and they kept silent \add ready to hear\add* my advice.
 \q1
-\v 22 ◙
-\q2 …
-\q2 …
+\v 22 After my talk, they \add still\add* didn’t speak,
+\q1 \add because\add* my words slowly sunk into them like the dew.
 \q1
-\v 23 ◙
-\q2 …
+\v 23 They waited for me like \add a farmer\add* waits for rain,
+\q1 and they opened their mouths wide like \add soil\add* expecting the wet weather.
 \q1
-\v 24 ◙
-\q2 …
-\q1 …
+\v 24 I smiled at them \add even when\add* they didn’t believe \add me\add*,
+\q1 and they didn’t cause the \add delight\add* on my face to falter.
 \q1
-\v 25 ◙
-\q2 …
-\q1 …
-\q1 …
+\v 25 I chose their path and I sat as a chief,
+\q1 and I lived like a king with \add his\add* troops,
+\q2 like when someone comforts those who’re mourning.
 \c 30
-\rem /s1 Job Speaks of His Anguish
-\p
-\v 1 ◙
-\p …
-\q2 …
-\q1 …
 \q1
-\v 2 ◙
-\q2 …
+\v 1 But now those who’re younger than me laugh at me—
+\q1 those whose fathers I would have refused to have join my sheepdogs!
 \q1
-\v 3 ◙
-\q1 …
-\q2 …
+\v 2 What use was the strength of their arms to me?
+\q1 \add Their contentment with life\add* has gone.
 \q1
-\v 4 ◙
-\q2 …
+\v 3 \add They’re useless\add* due to poverty and hunger.
+\q1 Gnawing at the dry land that’s devastated and uninhabited.
 \q1
-\v 5 ◙
-\q2 …
+\v 4 They pick mallow \add leaves\add* off the \add wild\add* bushes,
+\q1 and roots of broom trees have become their food.
 \q1
-\v 6 ◙
-\q2 …
+\v 5 They’re driven away from the community,
+\q1 and people shout at them as if \add they’re\add* thieves,
 \q1
-\v 7 ◙
-\q2 …
+\v 6 They live \add out\add* in the river valleys—
+\q1 in holes in the ground and \add caves in the cliffs\add*.
 \q1
-\v 8 ◙
-\q2 …
-\q2 …
+\v 7 They bray \add like animals out\add* between the shrubs.
+\q1 They’re huddled together under the thorn bushes.
 \q1
-\v 9 ◙
-\q2 …
+\v 8 They’re the children of fools, without any name to them.
+\q1 They’ve been driven out of the land.
 \q1
-\v 10 ◙
-\q2 …
-\q1 …
+\v 9 \add But\add* now I’m mocked in their songs,
+\q1 and \add my name has been made into a joke\add* by them.
 \q1
-\v 11 ◙
-\q2 …
+\v 10 They despise me and keep their distance,
+\q1 \add yet\add* don’t hesitate to spit in my face.
 \q1
-\v 12 ◙
-\q2 …
-\q2 …
+\v 11 \add God\add* has unstrung my bow and humbled me,
+\q2 so they don’t restrain themselves in my presence.
 \q1
-\v 13 ◙
-\q2 …
-\q2 …
+\v 12 A rabble appears on one side and push my feet away.
+\q1 They pile up their destructive paths against me.
 \q1
-\v 14 ◙
-\q2 …
+\v 13 They’ve torn down my path.
+\q1 They benefit from my destruction—
+\q2 there’s no helper for them.
 \q1
-\v 15 ◙
-\q2 …
-\q2 …
+\v 14 They come \add quickly\add* like \add through\add* a wide breach \add in the wall\add*.
+\q2 They have rolled themselves under the devastation.
 \q1
-\v 16 ◙
-\q2 …
+\v 15 Terrors have been turned against me.
+\q1 They persue my honour like the wind.
+\q1 and my prosperity has disappeared like cloud.
 \q1
-\v 17 ◙
-\q2 …
+\v 16 Now my life pours itself out within me.
+\q1 Days of suffering have taken hold of me.
 \q1
-\v 18 ◙
-\q2 …
+\v 17 Night pierces my bones from upon me,
+\q1 and the pains that gnaw at me never rest.
 \q1
-\v 19 ◙
-\q2 …
+\v 18 My clothing is transformed through great strength.
+\q1 My garment ties me up by the collar.
+\q1
+\v 19 He throws me into the mud,
+\q1 and I’ve become like dust and ashes.
 \b
 \q1
-\v 20 ◙
-\q2 …
-\q1 …
+\v 20 I call out to you for help
+\q2 \add but\add* you don’t answer me.
+\q1 I’ve stood here and you \add just\add* look at me.
 \q1
-\v 21 ◙
-\q2 …
+\v 21 You’ve changed yourself to become cruel to me.
+\q1 \add You use your strength\add* to persecute me.
 \q1
-\v 22 ◙
-\q2 …
+\v 22 You hold me up to the wind and let it take me.
+\q1 You toss me around in the storm.
 \q1
-\v 23 ◙
-\q2 …
+\v 23 I know you are bringing me towards death,
+\q1 and to the \add final\add* appointment that everyone has.
 \q1
-\v 24 ◙
-\q2 …
+\v 24 Doesn’t someone who’s collapsed into a heap stretch out their hand.
+\q1 In a disaster they cry out for help.
 \q1
-\v 25 ◙
-\q2 …
+\v 25 Didn’t I weep for those having a troubled day?
+\q1 I was upset \add when I saw\add* the poor.
 \q1
-\v 26 ◙
-\q2 …
-\q2 …
+\v 26 I waited for good, but it was evil that came.
+\q1 I waited for light, but it was gloom that came.
 \q1
-\v 27 ◙
-\q2 …
+\v 27 My insides feel like they’re boiling—
+\q2 they never feel settled,
+\q1 and my suffering confronts me \add every\add* day.
 \q1
-\v 28 ◙
-\q2 …
-\q1 …
+\v 28 I go around being dark, but not from the sun.
+\q1 I’ve stood in the assembly and called out for help.
 \q1
-\v 29 ◙
-\q2 …
-\q2 …
+\v 29 I’ve become a brother to jackals,
+\q1 and a companion of \add young\add* ostriches.
 \q1
-\v 30 ◙
-\q2 …
+\v 30 My skin has turned black,
+\q1 and my bones are burning with \add fever\add*.
 \q1
-\v 31 ◙
-\q2 …
+\v 31 \add So\add* my harp is used for mourning.
+\q1 My flute \add accompanies\add* those who’re weeping.
 \c 31
 \s1 The me pahunlibet of Iyyov of not/none indeed sin din
-\rem /s1 Job’s Final Protest of Innocence
 \p
 \v 1 ◙
 \q1 …
@@ -2505,8 +2443,6 @@
 \ms1 SECTION FIVE: The speeches of Elihu
 \mr (32:1–37:24)
 \s1 The pegkalangeti of Elihu
-\rem /s1 The Speeches of Elihu; Speeches of Elihu; Elihu Rebukes Job’s Friends; Elihu; Elihu Responds to Job’s Friends
-\rem /r (32.1—37.24)
 \p
 \v 1 ◙
 \v 2 ◙
@@ -2574,7 +2510,6 @@
 \q1 …
 \c 33
 \s1 The pegginalig of Elihu to Iyyov listens him
-\rem /s1 Elihu Rebukes Job; Elihu Presents His Case against Job
 \p
 \v 1 ◙
 \q1 …
@@ -2692,7 +2627,6 @@
 \q2 …
 \q1 …
 \c 34
-\rem /s1 Elihu Accuses Job of Arrogance; Elihu Proclaims God’s Justice
 \p
 \v 1 ◙
 \q1
@@ -2822,7 +2756,6 @@
 \q1 …
 \q2 …
 \c 35
-\rem /s1 Elihu Reminds Job of God’s Justice; Elihu Condemns Self-Righteousness
 \p
 \v 1 ◙
 \q1
@@ -2881,7 +2814,6 @@
 \q1 …
 \c 36
 \s1 The continuation of Elihu of speaks
-\rem /s1 Elihu Exalts God’s Goodness
 \p
 \v 1 ◙
 \q1
@@ -2949,14 +2881,12 @@
 \q1 …
 \b
 \q1
-\rem /s1 Elihu Reminds Job of God’s Power
 \v 22 ◙
 \q1 …
 \q1
 \v 23 ◙
 \q1 …
 \q1
-\rem /s1 Elihu Proclaims God’s Majesty
 \v 24 ◙
 \q1 …
 \q1
@@ -3073,7 +3003,6 @@
 \ms1 SECTION SIX: The speeches of God
 \mr (38:1–42:6)
 \s1 The speaking of God
-\rem /s1 God’s answer and Job’s submission; The Lord Answers Job; The Lord Challenges Job; The Lord Speaks
 \p
 \v 1 ◙
 \q1
@@ -3204,7 +3133,6 @@
 \q1 …
 \c 39
 \q1
-\rem /s1 The Lord’s Challenge Continues
 \v 1 ◙
 \q1 …
 \q1
@@ -3312,7 +3240,6 @@
 \q1 …
 \q1 …
 \s1 The answer of Iyyov
-\rem /s1 Job Responds to the Lord; Job’s Response to God
 \p
 \v 3 ◙
 \q1
@@ -3323,7 +3250,6 @@
 \v 5 ◙
 \q1 …
 \s1 The answer of God to Iyyov
-\rem /s1 God’s Challenge to Job; The Lord Challenges Job Again
 \p
 \v 6 ◙
 \q1
@@ -3382,7 +3308,6 @@
 \v 24 ◙
 \q1 …
 \c 41
-\rem /s1 The Lord’s Challenge Continues
 \p
 \v 1 \x + \xo 41:1: \xt Psa 74:14; 104:26; Isa 27:1.\x*◙
 \q1 …
@@ -3489,7 +3414,6 @@
 \q1 …
 \c 42
 \s1 The requesting of Iyyov of forgiveness of God
-\rem /s1 Job; Job Responds to the Lord; Job Is Humbled and Satisfied
 \p
 \v 1 ◙
 \q1
@@ -3515,14 +3439,12 @@
 \ms1 SECTION SEVEN: Final speech
 \mr (42:7-17)
 \s1 The obedience of Elifaz, Bildad, and of Zofar of God
-\rem /s1 Conclusion; Conclusion: The Lord Blesses Job; Epilogue; Job’s Friends Are Humiliated
 \p
 \v 7 ◙
 \v 8 ◙
 \p
 \v 9 ◙
 \s1 Iyyov’s doubled restoration
-\rem /s1 Job’s Fortunes Are Restored Twofold
 \p
 \v 10 \x + \xo 42:10: \xt Yob 1:1-3.\x*◙
 \v 11 ◙
