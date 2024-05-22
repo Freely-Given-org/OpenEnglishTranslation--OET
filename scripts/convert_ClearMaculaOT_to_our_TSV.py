@@ -47,6 +47,7 @@ import re
 import logging
 # from pprint import pprint
 from xml.etree import ElementTree
+import unicodedata
 
 if __name__ == '__main__':
     import sys
@@ -55,11 +56,13 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.OriginalLanguages import Hebrew
 
+sys.path.append( '../../BibleTransliterations/Python/' )
+from BibleTransliterations import load_transliteration_table, transliterate_Hebrew
 
-LAST_MODIFIED_DATE = '2024-04-16' # by RJH
+LAST_MODIFIED_DATE = '2024-05-19' # by RJH
 SHORT_PROGRAM_NAME = "convert_ClearMaculaOT_to_our_TSV"
 PROGRAM_NAME = "Extract and Apply Macula OT glosses"
-PROGRAM_VERSION = '0.40'
+PROGRAM_VERSION = '0.41'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -157,6 +160,8 @@ def main() -> None:
     global state
     state = State()
 
+    load_transliteration_table( 'Hebrew' )
+
     if loadOurSourceTable():
         if loadLowFatXMLGlosses(): # loadMaculaHebrewTSVTable()
             if LF_add_OSHB_ids(): # TSV_add_OSHB_ids()
@@ -193,6 +198,8 @@ def loadOurSourceTable() -> bool:
     for n, row in enumerate(dict_reader):
         if len(row) != NUM_EXPECTED_OUR_WLC_COLUMNS:
             logging.error(f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_OUR_WLC_COLUMNS}!!!")
+        for char in row['NoCantillations']:
+            assert 'ACCENT' not in unicodedata.name(char), f"{unicodedata.name(char)=} {row['NoCantillations']=} {row=}"
         state.our_WLC_rows.append(row)
         row_type = row['RowType']
         if row_type != 'm' and assembled_word:
@@ -269,6 +276,7 @@ def loadLowFatXMLGlosses() -> bool:
             # Now load all the word (w) fields for the chapter into a temporary list
             tempWordsAndMorphemes = []
             longIDs = []
+            transliteratedLemmas = {}
             for elem in chapterTree.getroot().iter():
                 if elem.tag == 'w': # ignore all the others -- there's enough info in here
                     for attribName in elem.attrib:
@@ -314,7 +322,21 @@ def loadLowFatXMLGlosses() -> bool:
                     column_counts['stem'][stem] += 1
                     morph = elem.get('morph')
                     # column_counts['morph'][morph] += 1 # There's over 700 different variations
-
+                    lemma = elem.get('lemma')
+                    if lemma:
+                        # I think this is a Clear.Bible error
+                        # AssertionError: unicodedata.name(char)='HEBREW ACCENT OLE' lemma='אֶ֫רֶץ' longID='010010010072'
+                        for char in lemma:
+                            if 'ACCENT' in unicodedata.name(char):
+                                logging.critical( f"Unexpected character in LowFat lemma '{unicodedata.name(char)}' {lemma=} {longID=}" )
+                        lemma = removeCantillationMarks( lemma )
+                        for char in lemma:
+                            assert 'ACCENT' not in unicodedata.name(char), f"{unicodedata.name(char)=} {lemma=} {longID=}"
+                        transliteratedLemma = transliterate_Hebrew( lemma )
+                        # If the following fails, our lemmas aren't unique
+                        if transliteratedLemma in transliteratedLemmas:
+                            assert transliteratedLemmas[transliteratedLemma] == lemma, f"Multiple transcriptions of lemma {longID} {lemma=} {transliteratedLemma=} {transliteratedLemmas[transliteratedLemma]=}"
+                        else: transliteratedLemmas[transliteratedLemma] = lemma
                     senseNumber = elem.get('sensenumber')
                     column_counts['sensenumber'][senseNumber] += 1
 
@@ -392,7 +414,7 @@ def loadLowFatXMLGlosses() -> bool:
                                 'WordClass':wClass, 'Compound':compound, 'PartOfSpeech':PoS, 'Person':person, 'Gender':gender, 'Number':number,
                                 'WordType':wType, 'State':wState, 'Role':role, 'SDBH':elem.get('sdbh'),
                                 'StrongNumberX':elem.get('strongnumberx'), 'StrongLemma':elem.get('stronglemma'),
-                                'Stem':stem, 'Morphology':morph, 'Lemma':elem.get('lemma'), 'SenseNumber':senseNumber,
+                                'Stem':stem, 'Morphology':morph, 'Lemma':lemma, 'SenseNumber':senseNumber,
                                 'CoreDomain':elem.get('coredomain'), 'LexicalDomain':elem.get('lexdomain'), 'Frame':elem.get('frame'),
                                 'SubjRef':elem.get('subjref'), 'ParticipantRef':elem.get('participantref'), # 'ContextualDomain':elem.get('contextualdomain'),
                                 'Greek':elem.get('greek'), 'GreekStrong':elem.get('greekstrong'),
@@ -900,6 +922,7 @@ def save_shortened_morpheme_TSV_file() -> bool:
     BibleOrgSysGlobals.backupAnyExistingFile( state.morpheme_shortened_TSV_output_filepath, numBackups=5 )
 
     shortenedFieldnameList = [fieldname for fieldname in state.morpheme_output_fieldnames if fieldname not in MORPHEME_COLUMNS_TO_REMOVE_FOR_SHORTENING]
+    # FGRef	OSHBid	RowType	WordOrMorpheme	After	Compound	WordClass	PartOfSpeech	Person	Gender	Number	WordType	State	Role	StrongNumberX	StrongLemma	Stem	Morphology	Lemma	SenseNumber	SubjRef	ParticipantRef	Frame	Greek	GreekStrong	EnglishGloss	ContextualGloss	Nesting
     # print(f"({len(state.output_fieldnames)}) {state.output_fieldnames} -> ({len(shortenedFieldnames)}) {shortenedFieldnames}")
 
     # print(len(state.lowFatWordsAndMorphemes[0]), state.lowFatWordsAndMorphemes[0]);halt

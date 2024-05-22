@@ -67,10 +67,10 @@ import sys
 sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitted to PyPI
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
-LAST_MODIFIED_DATE = '2024-04-16' # by RJH
+LAST_MODIFIED_DATE = '2024-05-20' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET NT wordtable"
-PROGRAM_VERSION = '0.32'
+PROGRAM_VERSION = '0.33'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -85,6 +85,7 @@ WORD_TABLE_INPUT_FILEPATH = Path( '../intermediateTexts/modified_source_VLT_ESFM
 WORD_TABLE_OUTPUT_FILENAME = 'OET-LV_NT_word_table.tsv'
 WORD_TABLE_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_VLT_ESFM/' )
 WORD_TABLE_OUTPUT_FILEPATH = WORD_TABLE_OUTPUT_FOLDERPATH.joinpath( WORD_TABLE_OUTPUT_FILENAME )
+EXPECTED_WORD_TABLE_DATA_ROW_COUNT = 168_247
 RV_ESFM_OUTPUT_FOLDERPATH = Path( '../translatedTexts/ReadersVersion/' ) # We also copy the wordfile to this folder
 
 TAB = '\t'
@@ -173,6 +174,7 @@ def expand_table_columns() -> bool:
         assert newLine.count( '\t' ) == 11, f"{newLine.count(TAB)} {newLine=}"
         state.newTable.append( newLine )
         
+    assert len(state.newTable) == EXPECTED_WORD_TABLE_DATA_ROW_COUNT+1, f"{EXPECTED_WORD_TABLE_DATA_ROW_COUNT=} {len(state.newTable)}"
     return True
 # end of add_tags_to_NT_word_table.expand_table_columns
 
@@ -412,7 +414,8 @@ def associate_Theographic_people_places() -> bool:
         except KeyError: # versification difference ???
             logging.critical( f"Versification error: Unable to find {verseRef} in Theographic json" )
             assert columns_string.count( '\t' ) == 11, f"{columns_string.count(TAB)} {columns_string=}"
-            state.newTable.append( columns_string )
+            # print( f"{n} {columns_string=}" ); halt
+            # state.newTable.append( columns_string ) # What was I trying to do here? (These duplicate rows get appended to the end)
             lastVerseRef = verseRef
             continue
         assert not verseLinkEntry['peopleGroups'] # Why is this true??? Ah, because only has a handful of OT references!!!
@@ -506,6 +509,8 @@ def associate_Theographic_people_places() -> bool:
         lastVerseRef = verseRef
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{numAddedPeople=:,} {numAddedPeopleGroups=:,} {numAddedLocations=:,} {numAddedEvents=:,} {numAddedYears=:,} {numAddedTimelines=:,}" )
+
+    assert len(state.newTable) == EXPECTED_WORD_TABLE_DATA_ROW_COUNT+1, f"{EXPECTED_WORD_TABLE_DATA_ROW_COUNT=} {len(state.newTable)}"
     return True
 # end of add_tags_to_NT_word_table.associate_Theographic_people_places
 
@@ -845,6 +850,8 @@ def write_new_table() -> bool:
     Write the new TSV table (with an extra Tags column)
         using the data in state.newTable.
     """
+    assert len(state.newTable) == EXPECTED_WORD_TABLE_DATA_ROW_COUNT+1, f"{EXPECTED_WORD_TABLE_DATA_ROW_COUNT=} {len(state.newTable)}"
+    
     with open( WORD_TABLE_OUTPUT_FILEPATH, 'wt', encoding='utf-8' ) as new_table_output_file:
         for line in state.newTable:
             assert line.count( '\t' ) == 11, f"{line.count(TAB)} {line=}"

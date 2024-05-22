@@ -1,13 +1,14 @@
 # OET makefile
 #
-# Last updated: 2024-05-09 by RJH
+# Last updated: 2024-05-19 by RJH
 #
 
 #=== Folder and file declarations =======================
 
 # LV_HTML := $(wildcard ../derivedTexts/simpleHTML/LiteralVersion/*.html)
+derived_VREFs := ../derivedTexts/OET-RV.vref.txt ../derivedTexts/OET-LV.vref.txt
 derived_USFM := $(wildcard ../derivedTexts/cleanedUSFM/ReadersVersion/*.USFM) $(wildcard ../derivedTexts/cleanedUSFM/LiteralVersion/*.USFM)
-sideBySide_HTML := $(wildcard derivedTexts/simpleHTML/SideBySide/*.html)
+sideBySide_HTML := $(wildcard ../derivedTexts/simpleHTML/SideBySide/???.html)
 LV_OT_HTML := ../derivedTexts/simpleHTML/LiteralVersion/GEN.html ../derivedTexts/simpleHTML/LiteralVersion/MAL.html
 LV_NT_HTML := ../derivedTexts/simpleHTML/LiteralVersion/MAT.html ../derivedTexts/simpleHTML/LiteralVersion/REV.html
 RV_HTML := $(wildcard ../derivedTexts/simpleHTML/ReadersVersion/*.html)
@@ -46,14 +47,14 @@ short_OSHB_TSV := ../sourceTexts/rawOSHB/OSHB.parsedOriginal.flat.morphemes.tsv
 Python := python3.12
 SBE := ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py
 BTranslit := ../../BibleTransliterations/Python/BibleTransliterations.py
-Hebrew := ../../BibleTransliterations/sourceTables/Hebrew.tsv
-Greek := ../../BibleTransliterations/sourceTables/Greek.tsv
+HebrewTranslit := ../../BibleTransliterations/sourceTables/Hebrew.tsv
+GreekTranslit := ../../BibleTransliterations/sourceTables/Greek.tsv
 scripted_OT_updates := $(wildcard ScriptedOTUpdates/*)
 scripted_NT_updates := $(wildcard ScriptedVLTUpdates/*)
 
 #=== Top-level/Main stuff =======================
 
-ALL: BOTH $(sideBySide_HTML) $(derived_USFM)
+ALL: BOTH $(sideBySide_HTML) $(derived_USFM) $(derived_VREFs)
 BOTH: LV RV
 LV: LV_OT LV_NT
 
@@ -69,11 +70,11 @@ $(LV_OT_HTML) $(LV_NT_HTML): $(final_LV_OT_ESFM)  $(final_LV_NT_ESFM) convert_OE
 	@echo "\n\nConvert OET LV ESFM files to simple HTML…\n"
 	@$(Python) convert_OET-LV_to_simple_HTML.py
 
-# $(final_LV_OT_USFM): $(intermediate_LV_OT_USFM) $(SBE) $(scripted_OT_updates) $(BTranslit) $(Hebrew)
+# $(final_LV_OT_USFM): $(intermediate_LV_OT_USFM) $(SBE) $(scripted_OT_updates) $(BTranslit) $(HebrewTranslit)
 # 	@echo "\n\nRun ScriptedBibleEditor on OT USFM files…\n"
 # 	@$(Python) $(SBE) ScriptedOTUpdates -qe
 
-$(final_LV_OT_ESFM): $(intermediate_LV_OT_ESFM) $(SBE) $(scripted_OT_updates) $(BTranslit) $(Hebrew)
+$(final_LV_OT_ESFM): $(intermediate_LV_OT_ESFM) $(SBE) $(scripted_OT_updates) $(BTranslit) $(HebrewTranslit)
 	@echo "\n\nRun ScriptedBibleEditor on OT ESFM files…\n"
 	@$(Python) $(SBE) ScriptedOTUpdates -qe
 	#@echo "\n\nCopying OT word and morpheme tables from modified_source_glossed_OSHB_ESFM/ to auto_edited_OT_ESFM/…\n"
@@ -89,11 +90,11 @@ $(final_LV_OT_word_tables): $(expanded_OT_TSV_tables)
 	@cp ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_lemma_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_lemma_table.tsv
 	# Does SBE automatically do some of the above copying steps??? Well, it certainly wouldn't do both
 
-$(final_LV_NT_ESFM): $(intermediate_LV_NT_ESFM) $(SBE) $(scripted_NT_updates) $(BTranslit) $(Greek) $(Hebrew) $(expanded_NT_wordtable)
+$(final_LV_NT_ESFM): $(intermediate_LV_NT_ESFM) $(SBE) $(scripted_NT_updates) $(BTranslit) $(GreekTranslit) $(HebrewTranslit) $(expanded_NT_wordtable)
 	@echo "\n\nRun ScriptedBibleEditor on NT ESFM files…\n"
 	@$(Python) $(SBE) ScriptedVLTUpdates -qe
 
-$(expanded_OT_TSV_tables): $(initial_OT_TSV_tables) $(Clear_Bible_OT_lowfat_TSV) $(scripted_OT_updates) add_tags_to_OT_word_table.py
+../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv: $(initial_OT_TSV_tables) $(Clear_Bible_OT_lowfat_TSV) $(scripted_OT_updates) add_tags_to_OT_word_table.py $(BTranslit) $(HebrewTranslit)
 	@echo "\n\nAdd people/places/referent tags to OET OT word table…\n"
 	@$(Python) add_tags_to_OT_word_table.py -e
 	@echo "\n\nCopying and renaming OT morpheme and lemma tables from glossed_OSHB/ to modified_source_glossed_OSHB_ESFM/…\n"
@@ -135,7 +136,7 @@ $(intermediate_LV_NT_ESFM) $(original_NT_wordtable): $(CNTR_book_table) $(CNTR_c
 	@echo "\n\nExtract NT from TSV table to the various {BBB}_gloss.ESFM files…\n"
 	@$(Python) extract_VLT_NT_to_ESFM.py -e
 
-$(expanded_NT_wordtable): $(original_NT_wordtable) $(Clear_Bible_NT_lowfat_TSV) $(scripted_NT_updates) add_tags_to_NT_word_table.py
+$(expanded_NT_wordtable): $(original_NT_wordtable) $(Clear_Bible_NT_lowfat_TSV) $(scripted_NT_updates) add_tags_to_NT_word_table.py $(BTranslit) $(HebrewTranslit) $(GreekTranslit)
 	@echo "\n\nAdd people/places/referent tags to OET NT word table…\n"
 	@$(Python) add_tags_to_NT_word_table.py -e
 
@@ -146,7 +147,7 @@ $(final_RV_OT_word_tables): $(final_LV_OT_word_tables)
 	@cp ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_morpheme_table.tsv
 	@cp ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_lemma_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_lemma_table.tsv
 
-$(RV_HTML): $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py convert_OET-RV_to_simple_HTML.py $(expanded_NT_wordtable) $(final_RV_OT_word_tables)
+$(RV_HTML): $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py convert_OET-RV_to_simple_HTML.py $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
 	@echo "\n\nConnect OET-RV words to OET-LV word numbers…\n"
 	@$(Python) connect_OET-RV_words_via_OET-LV.py
 	@echo "\n\nConvert OET RV ESFM files to simple HTML…\n"
@@ -157,15 +158,18 @@ $(RV_HTML): $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py convert_OET
 $(sideBySide_HTML): $(LV_OT_HTML) $(LV_NT_HTML) $(RV_HTML) pack_HTML_side-by-side.py
 	@echo "\n\nPack LV and RV HTML files side-by-side…\n"
 	@$(Python) pack_HTML_side-by-side.py
-	@echo "\n\nCount our progress…\n"
-	@$(Python) count_completed_OET-RV_verses.py
 
-#=== USFM conversion =======================
+#=== Format conversions =======================
 
-$(derived_USFM): $(LV_ESFM) $(RV_ESFM) OET-LV-RV_ESFM_to_USFM.py
+$(derived_USFM): $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_ESFM_to_USFM.py
 	@echo "\n\nCreate clean USFM files…\n"
-	@$(Python) OET-LV-RV_ESFM_to_USFM.py
+	@$(Python) convert_OET-LV-RV_ESFM_to_USFM.py
 
+$(derived_VREFs): $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_USFM_to_VREF.py
+	@echo "\n\nCreate VREF.txt files from USFM…\n"
+	@$(Python) convert_OET-LV-RV_USFM_to_VREF.py
+	@echo "\n\nFinally, just count our progress…\n"
+	@$(Python) count_completed_OET-RV_verses.py
 
 #=== Clean up stuff =======================
 

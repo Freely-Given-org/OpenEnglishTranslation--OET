@@ -63,12 +63,12 @@ from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 import sys
 sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitted to PyPI
-from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
+from BibleTransliterations import load_transliteration_table, transliterate_Hebrew #, transliterate_Greek
 
-LAST_MODIFIED_DATE = '2024-04-17' # by RJH
+LAST_MODIFIED_DATE = '2024-05-19' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET OT wordtable"
-PROGRAM_VERSION = '0.11'
+PROGRAM_VERSION = '0.12'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False

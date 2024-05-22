@@ -56,7 +56,7 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2024-04-07' # by RJH
+LAST_MODIFIED_DATE = '2024-05-20' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
 PROGRAM_VERSION = '0.96'
@@ -69,6 +69,7 @@ VLT_ESFM_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_VLT_ESF
 RV_ESFM_OUTPUT_FOLDERPATH = Path( '../translatedTexts/ReadersVersion/' ) # We also copy the wordfile to this folder
 
 OUR_EXPORT_TABLE_FILENAME = 'OET-LV_NT_word_table.10columns.tsv' # We make this first 10-column version here (from the collation table)
+EXPECTED_EXPORT_WORD_TABLE_LINE_COUNT = 168_247
 
 
 state = None
@@ -265,6 +266,7 @@ def loadSourceCollationTable() -> bool:
                     collation_csv_column_max_length_counts[key] = len(value)
                 collation_csv_column_non_blank_counts[key] += 1
             collation_csv_column_counts[key][value] += 1
+    assert len(collation_csv_rows) == EXPECTED_EXPORT_WORD_TABLE_LINE_COUNT, f"{EXPECTED_EXPORT_WORD_TABLE_LINE_COUNT=} {len(collation_csv_rows)}"
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(collation_csv_rows):,} collation CSV data rows.")
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Have {len(unique_words):,} unique Greek words.")
 

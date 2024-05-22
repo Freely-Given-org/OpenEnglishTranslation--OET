@@ -52,6 +52,7 @@ from pathlib import Path
 from csv import DictReader, DictWriter
 from collections import defaultdict
 import logging
+import unicodedata
 
 if __name__ == '__main__':
     import sys
@@ -60,10 +61,10 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2024-04-28' # by RJH
+LAST_MODIFIED_DATE = '2024-05-19' # by RJH
 SHORT_PROGRAM_NAME = "apply_Clear_Macula_OT_glosses"
 PROGRAM_NAME = "Apply Macula OT glosses"
-PROGRAM_VERSION = '0.67'
+PROGRAM_VERSION = '0.68'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -159,6 +160,10 @@ def loadOurSourceTable() -> bool:
     for n, row in enumerate(dict_reader):
         if len(row) != NUM_EXPECTED_WLC_COLUMNS:
             logging.error(f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_WLC_COLUMNS}!!!")
+
+        for char in row['NoCantillations']:
+            assert 'ACCENT' not in unicodedata.name(char), f"{unicodedata.name(char)=} {row['NoCantillations']=} {row=}"
+
         state.WLC_rows.append(row)
         row_type = row['RowType']
         if row_type != 'm' and assembled_word:
@@ -227,6 +232,9 @@ def loadOurLowFatTable() -> bool:
     for n, row in enumerate(dict_reader):
         if len(row) != NUM_EXPECTED_LOWFAT_COLUMNS:
             logging.error(f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_LOWFAT_COLUMNS}!!!")
+        for char in row['Lemma']:
+            # print( f"{ord(char)=} {unicodedata.name(char)=} {char=} {unicodedata.category(char)=} {unicodedata.bidirectional(char)=} {unicodedata.combining(char)=} {unicodedata.mirrored(char)=}" )
+            assert 'ACCENT' not in unicodedata.name(char), f"{unicodedata.name(char)=} {row['FGRef']} {row['WordOrMorpheme']=} {row['Lemma']=}"
         state.lowFatRows.append(row)
         row_type = row['RowType']
         if row_type != 'm' and assembled_word:
@@ -701,7 +709,11 @@ def save_lemma_TSV_file() -> bool:
         # assert ',' not in gloss, thisRow # Check our separator's not in the data -- fails on "1,000"
         assert ';' not in gloss
         if lemma:
+            for char in lemma:
+                # print( f"{ord(char)=} {unicodedata.name(char)=} {char=} {unicodedata.category(char)=} {unicodedata.bidirectional(char)=} {unicodedata.combining(char)=} {unicodedata.mirrored(char)=}" )
+                assert 'ACCENT' not in unicodedata.name(char), f"{unicodedata.name(char)=} {fgRef} {wordOrMorpheme=} {lemma=} {gloss=}"
             if gloss:
+                # assert lemma not in state.lemma_formation_dict, f"DUPLICATE {lemma=}" # Maybe not correct: we're just collecting all possible glosses for that lemma???
                 state.lemma_formation_dict[lemma].add( gloss )
         else: # no lemma
             if fgRef.startswith( 'GEN_1:'):
@@ -716,6 +728,10 @@ def save_lemma_TSV_file() -> bool:
     new_dict = {}
     # state.lemma_index_dict = {}
     for n, hebrew_lemma in enumerate( sorted( state.lemma_formation_dict ), start=1 ):
+        for char in hebrew_lemma:
+            # print( f"{ord(char)=} {unicodedata.name(char)=} {char=} {unicodedata.category(char)=} {unicodedata.bidirectional(char)=} {unicodedata.combining(char)=} {unicodedata.mirrored(char)=}" )
+            assert 'ACCENT' not in unicodedata.name(char), f"{unicodedata.name(char)=} {hebrew_lemma=} {state.lemma_formation_dict[hebrew_lemma]=}"
+        assert hebrew_lemma not in new_dict, f"DUPLICATE {hebrew_lemma=}"
         new_dict[hebrew_lemma] = ';'.join( sorted( state.lemma_formation_dict[hebrew_lemma], key=str.casefold ) )
         # state.lemma_index_dict[hebrew_lemma] = n
     state.lemma_formation_dict = new_dict
@@ -732,6 +748,9 @@ def save_lemma_TSV_file() -> bool:
         writer = DictWriter( tsv_output_file, fieldnames=state.lemma_output_fieldnames, delimiter='\t' )
         writer.writeheader()
         for lemma,glosses in state.lemma_formation_dict.items():
+            for char in lemma:
+                # print( f"{ord(char)=} {unicodedata.name(char)=} {char=} {unicodedata.category(char)=} {unicodedata.bidirectional(char)=} {unicodedata.combining(char)=} {unicodedata.mirrored(char)=}" )
+                assert 'ACCENT' not in unicodedata.name(char), f"{unicodedata.name(char)=} {lemma=} {glosses=}"
             thisEntryDict = {}
             thisEntryDict['Lemma'] = lemma
             thisEntryDict['Glosses'] = glosses

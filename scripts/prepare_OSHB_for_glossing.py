@@ -43,6 +43,7 @@ from csv import DictReader, DictWriter
 from collections import defaultdict
 import logging
 import ast
+import unicodedata
 
 if __name__ == '__main__':
     import sys
@@ -222,14 +223,19 @@ def create_expanded_TSV_table() -> bool:
                 assert row['RowType'] == 'note'
                 assert row['Special'] in ('variant','alternative','exegesis'), f"Got {row['FGID']} note {row['Special']=}"
                 new_type = f"{row['Special']} {new_type}"
-        # if row['RowType']=='seg' or row['RowType']=='note':
-        #     print(f"{row['Ref']=} {row['RowType']=} {row['WordOrMorpheme']=}")
-        #     noCants = ''
-        # else: noCants = removeCantillationMarks(row['WordOrMorpheme'], removeMetegOrSiluq=True)
+        if row['RowType']=='seg' or row['RowType']=='note':
+            assert len(row['WordOrMorpheme'])==1 or 'KJV' in row['WordOrMorpheme'] or 'x-' in row['WordOrMorpheme'] or len(row['WordOrMorpheme']) >= 25, f"({len(row['WordOrMorpheme'])}) {row['WordOrMorpheme']}"
+            # print(f"{row['Ref']=} {row['RowType']=} {row['WordOrMorpheme']=}")
+            noCants = ''
+        else: # an actual word
+            noCants = removeCantillationMarks(row['WordOrMorpheme'], removeMetegOrSiluq=True)
+            for char in noCants:
+                # print( f"{ord(char)=} {unicodedata.name(char)=} {char=} {unicodedata.category(char)=} {unicodedata.bidirectional(char)=} {unicodedata.combining(char)=} {unicodedata.mirrored(char)=}" )
+                assert 'ACCENT' not in unicodedata.name(char), f"{unicodedata.name(char)=} {row['WordOrMorpheme']=} {noCants=}"
         newRowDict = { 'Ref': row['Ref'], 'OSHBid': row['OSHBid'], 'RowType': new_type,
                         'Strongs': row['Strongs'], 'CantillationHierarchy': row['CantillationHierarchy'], 'Morphology': new_morphology,
                         'WordOrMorpheme': row['WordOrMorpheme'],
-                        'NoCantillations': '' if row['RowType']=='seg' or row['RowType']=='note' else removeCantillationMarks(row['WordOrMorpheme'], removeMetegOrSiluq=True),
+                        'NoCantillations': noCants,
                         'GlossCapitalisation': glossCapitalisation,
                         'GlossPunctuation': '.' if new_type=='seg' and new_morphology=='x-sof-pasuq' else '',
                         'GlossOrder': str(glossOrderInt), }

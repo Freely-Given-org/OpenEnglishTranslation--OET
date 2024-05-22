@@ -63,10 +63,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2024-05-08' # by RJH
+LAST_MODIFIED_DATE = '2024-05-22' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.67'
+PROGRAM_VERSION = '0.68'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -354,6 +354,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
                 assert '“’' not in line, f"Unexpected consecutive speech marks in {rvESFMFilename} {lineNumber}: '{line}'"
                 if '’ ”' not in line and '’\\wj* ”' not in line:
                     assert ' ”' not in line, f"Unexpected space at end of speech in {rvESFMFilename} {lineNumber}: '{line}'"
+                assert '≈ ' not in line, f"Unexpected space after ≈ in {rvESFMFilename} {lineNumber}: '{line}'"
                 for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
                     assert line.count( f'\\{characterMarker} ') == line.count( f'\\{characterMarker}*'), f"{characterMarker} marker mismatch in {rvESFMFilename} {lineNumber}: '{line}'"
                 if '\\x* ' in line: # this can be ok if the xref directly follows other text
@@ -928,7 +929,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Abraham','Abraʼam'),('Abraham','Abraʼam/ʼAvərāhām'),
             ('Adam','Adam'),('Adam','Adam/ʼĀdām'),
             ('Aharon', 'ʼAharon'),
-            ('Aminadab','Aminadab'),('Amon','Aminadab/ˊAmmiynādāv'),
+            ('Aminadab','Aminadab'),('Amon','Aminadab/ˊAmmiynādāⱱ'),
             ('Amon','Amōs'),('Amon','Amōs/ʼĀmōʦ'),
             ('Aram','Aram'),('Aram','Aram/Rām'),
             ('Asa','Asaf'),('Asa','Asaf/ʼĀşāf'),
