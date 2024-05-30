@@ -43,7 +43,7 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, BOOKLIST_66
 
 
-LAST_MODIFIED_DATE = '2024-05-17' # by RJH
+LAST_MODIFIED_DATE = '2024-05-27' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_ESFM_to_USFM"
 PROGRAM_NAME = "Convert OET LV & RV ESFM files to USFM"
 PROGRAM_VERSION = '0.60'
@@ -94,11 +94,13 @@ def main():
                             .replace( '\\add +', '\\add ' )
                             .replace( '\\add -', '\\add ' )
                             .replace( '\\add =', '\\add ' )
-                            .replace( '\\add ~', '\\add ' )
+                            .replace( '\\add <', '\\add ' )
                             .replace( '\\add >', '\\add ' )
-                            .replace( '\\add ^', '\\add ' )
+                            .replace( '\\add &', '\\add ' )
                             .replace( '\\add *', '\\add ' )
                             .replace( '\\add @', '\\add ' )
+                            .replace( '\\add #', '\\add ' )
+                            .replace( '\\add ^', '\\add ' )
                             .replace( '\\add ≈', '\\add ' )
                             .replace( '\\untr ', '' ).replace( '\\untr*', '' )
                         )

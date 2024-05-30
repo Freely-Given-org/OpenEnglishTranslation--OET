@@ -59,7 +59,7 @@ from BibleOrgSys.OriginalLanguages import Hebrew
 sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew
 
-LAST_MODIFIED_DATE = '2024-05-19' # by RJH
+LAST_MODIFIED_DATE = '2024-05-27' # by RJH
 SHORT_PROGRAM_NAME = "convert_ClearMaculaOT_to_our_TSV"
 PROGRAM_NAME = "Extract and Apply Macula OT glosses"
 PROGRAM_VERSION = '0.41'
@@ -329,7 +329,7 @@ def loadLowFatXMLGlosses() -> bool:
                         for char in lemma:
                             if 'ACCENT' in unicodedata.name(char):
                                 logging.critical( f"Unexpected character in LowFat lemma '{unicodedata.name(char)}' {lemma=} {longID=}" )
-                        lemma = removeCantillationMarks( lemma )
+                        lemma = removeHebrewCantillationMarks( lemma )
                         for char in lemma:
                             assert 'ACCENT' not in unicodedata.name(char), f"{unicodedata.name(char)=} {lemma=} {longID=}"
                         transliteratedLemma = transliterate_Hebrew( lemma )
@@ -566,14 +566,14 @@ def loadLowFatXMLGlosses() -> bool:
 # # end of convert_ClearMaculaOT_to_our_TSV.loadMaculaHebrewTSVTable
 
 
-def removeCantillationMarks( text:str, removeMetegOrSiluq=False ):
+def removeHebrewCantillationMarks( text:str, removeMetegOrSiluq=False ) -> str:
     """
     Return the text with cantillation marks removed.
     """
-    #dPrint( 'Quiet', DEBUGGING_THIS_MODULE, "removeCantillationMarks( {!r}, {} )".format( text, removeMetegOrSiluq ) )
+    #dPrint( 'Quiet', DEBUGGING_THIS_MODULE, "removeHebrewCantillationMarks( {!r}, {} )".format( text, removeMetegOrSiluq ) )
     h = Hebrew.Hebrew( text )
     return h.removeCantillationMarks( removeMetegOrSiluq=removeMetegOrSiluq )
-# end of apply_Clear_Macula_OT_glosses.removeCantillationMarks
+# end of apply_Clear_Macula_OT_glosses.removeHebrewCantillationMarks
 
 
 # def TSV_add_OSHB_ids() -> bool:
@@ -607,7 +607,7 @@ def removeCantillationMarks( text:str, removeMetegOrSiluq=False ):
 #         BBB = BibleOrgSysGlobals.loadedBibleBooksCodes.getBBBFromReferenceNumber( maculaRow['xml:id'][1:3] )
 
 #         theirRef = maculaRow['ref']
-#         wordOrMorpheme = removeCantillationMarks(maculaRow['text'], removeMetegOrSiluq=True)
+#         wordOrMorpheme = removeHebrewCantillationMarks(maculaRow['text'], removeMetegOrSiluq=True)
 #         morphology = maculaRow['morph']
 #         print( f"{BBB} {theirRef=} {wordOrMorpheme=} {morphology=}" )
 
@@ -784,7 +784,7 @@ def LF_add_OSHB_ids() -> bool:
     newLowFatWordsAndMorphemes = []
     for _n,secondEntryAttempt in enumerate(state.lowFatWordsAndMorphemes):
         assert len(secondEntryAttempt) == len(state.morpheme_output_fieldnames)-1
-        ourID, wordOrMorpheme, morphology = secondEntryAttempt['FGRef'], removeCantillationMarks(secondEntryAttempt['WordOrMorpheme'], removeMetegOrSiluq=True), secondEntryAttempt['Morphology']
+        ourID, wordOrMorpheme, morphology = secondEntryAttempt['FGRef'], removeHebrewCantillationMarks(secondEntryAttempt['WordOrMorpheme'], removeMetegOrSiluq=True), secondEntryAttempt['Morphology']
         verseID, wordPart = ourID.split('w')
         if wordPart.isdigit():
             wordNumber,suffix = int( wordPart ), ''

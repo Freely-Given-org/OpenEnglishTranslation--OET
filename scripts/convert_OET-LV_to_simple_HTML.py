@@ -929,9 +929,9 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
     book_html = book_html.replace( '\\add +', '<span class="addArticle">' ) \
                 .replace( '\\add -', '<span class="unusedArticle">' ) \
                 .replace( '\\add =', '<span class="addCopula">' ) \
-                .replace( '\\add ~', '<span class="addDirectObject">' ) \
+                .replace( '\\add <', '<span class="addDirectObject">' ) \
                 .replace( '\\add >', '<span class="addExtra">' ) \
-                .replace( '\\add ^', '<span class="addOwner">' ) \
+                .replace( '\\add &', '<span class="addOwner">' ) \
                 .replace( '\\add ', '<span class="add">' ) \
                 .replace( '\\add*', '</span>' )
     # Make underlines grey with "ul" spans (except when already at end of a span)

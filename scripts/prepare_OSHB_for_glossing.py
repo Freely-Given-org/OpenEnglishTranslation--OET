@@ -53,7 +53,7 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.OriginalLanguages import Hebrew
 
 
-LAST_MODIFIED_DATE = '2024-03-26' # by RJH
+LAST_MODIFIED_DATE = '2024-05-27' # by RJH
 SHORT_PROGRAM_NAME = "Prepare_OSHB_for_glossing"
 PROGRAM_NAME = "Prepare OSHB for glossing"
 PROGRAM_VERSION = '0.50'
@@ -166,14 +166,14 @@ def loadWLCSourceTable() -> bool:
 # end of prepare_OSHB_for_glossing.loadWLCSourceTable
 
 
-def removeCantillationMarks( text:str, removeMetegOrSiluq=False ):
+def removeHebrewCantillationMarks( text:str, removeMetegOrSiluq=False ) -> str:
     """
     Return the text with cantillation marks removed.
     """
-    #dPrint( 'Quiet', DEBUGGING_THIS_MODULE, "removeCantillationMarks( {!r}, {} )".format( text, removeMetegOrSiluq ) )
+    #dPrint( 'Quiet', DEBUGGING_THIS_MODULE, "removeHebrewCantillationMarks( {!r}, {} )".format( text, removeMetegOrSiluq ) )
     h = Hebrew.Hebrew( text )
     return h.removeCantillationMarks( removeMetegOrSiluq=removeMetegOrSiluq )
-# end of prepare_OSHB_for_glossing.removeCantillationMarks
+# end of prepare_OSHB_for_glossing.removeHebrewCantillationMarks
 
 
 def create_expanded_TSV_table() -> bool:
@@ -228,7 +228,7 @@ def create_expanded_TSV_table() -> bool:
             # print(f"{row['Ref']=} {row['RowType']=} {row['WordOrMorpheme']=}")
             noCants = ''
         else: # an actual word
-            noCants = removeCantillationMarks(row['WordOrMorpheme'], removeMetegOrSiluq=True)
+            noCants = removeHebrewCantillationMarks(row['WordOrMorpheme'], removeMetegOrSiluq=True)
             for char in noCants:
                 # print( f"{ord(char)=} {unicodedata.name(char)=} {char=} {unicodedata.category(char)=} {unicodedata.bidirectional(char)=} {unicodedata.combining(char)=} {unicodedata.mirrored(char)=}" )
                 assert 'ACCENT' not in unicodedata.name(char), f"{unicodedata.name(char)=} {row['WordOrMorpheme']=} {noCants=}"

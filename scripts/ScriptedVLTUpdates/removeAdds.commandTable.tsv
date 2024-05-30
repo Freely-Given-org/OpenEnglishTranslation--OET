@@ -6,5 +6,5 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 									\add >				removeMinorPostAdd
 									\add =				removeCopulaAdd
 									\add +				removeMajorPostAdd
-									\add ~				removeDirectObjectPostAdd
+									\add &				removeDirectObjectPostAdd
 									\add*				removeClosingAdd
