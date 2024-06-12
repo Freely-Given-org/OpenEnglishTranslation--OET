@@ -16,7 +16,7 @@ RV_ESFM := $(wildcard ../translatedTexts/ReadersVersion/*.ESFM)
 # final_LV_OT_USFM := $(wildcard ../intermediateTexts/auto_edited_OT_USFM/*.usfm)
 final_LV_OT_ESFM := $(wildcard ../intermediateTexts/auto_edited_OT_ESFM/*.ESFM)
 final_LV_NT_ESFM := $(wildcard ../intermediateTexts/auto_edited_VLT_ESFM/OET-LV_???.ESFM)
-LV_ESFM := $(final_LV_NT_ESFM)
+LV_ESFM := $(final_LV_OT_ESFM) $(final_LV_NT_ESFM)
 # intermediate_LV_OT_USFM := $(wildcard ../intermediateTexts/modified_source_glossed_OSHB_USFM/*.usfm)
 intermediate_LV_OT_ESFM := $(wildcard ../intermediateTexts/modified_source_glossed_OSHB_ESFM/???_gloss.ESFM)
 intermediate_LV_NT_ESFM := $(wildcard ../intermediateTexts/modified_source_VLT_ESFM/???_gloss.ESFM)
@@ -44,7 +44,10 @@ short_OSHB_TSV := ../sourceTexts/rawOSHB/OSHB.parsedOriginal.flat.morphemes.tsv
 
 #=== Script declarations =======================
 
-Python := python3.12
+python3_12 := python3.12
+python3_13 := ~/Downloads/Python-3.13.0b2/python
+Python := $(python3_12)
+
 SBE := ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py
 BTranslit := ../../BibleTransliterations/Python/BibleTransliterations.py
 HebrewTranslit := ../../BibleTransliterations/sourceTables/Hebrew.tsv
@@ -170,6 +173,7 @@ $(derived_VREFs): $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_USFM_to_VREF.py
 	@$(Python) convert_OET-LV-RV_USFM_to_VREF.py
 	@echo "\n\nFinally, just count our progress…\n"
 	@$(Python) count_completed_OET-RV_verses.py
+	@$(Python) --version
 
 #=== Clean up stuff =======================
 

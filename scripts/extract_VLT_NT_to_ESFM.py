@@ -56,16 +56,17 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2024-05-20' # by RJH
+LAST_MODIFIED_DATE = '2024-06-10' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
-PROGRAM_VERSION = '0.96'
+PROGRAM_VERSION = '0.97'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
 
 
-VLT_ESFM_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_VLT_ESFM/' ) # We copy our {BBB}_gloss.ESFM files into this folder
+INTERMEDIATE_FOLDER = Path( '../intermediateTexts/' )
+VLT_ESFM_OUTPUT_FOLDERPATH = INTERMEDIATE_FOLDER.joinpath( 'modified_source_VLT_ESFM/' ) # We copy our {BBB}_gloss.ESFM files into this folder
 RV_ESFM_OUTPUT_FOLDERPATH = Path( '../translatedTexts/ReadersVersion/' ) # We also copy the wordfile to this folder
 
 OUR_EXPORT_TABLE_FILENAME = 'OET-LV_NT_word_table.10columns.tsv' # We make this first 10-column version here (from the collation table)
@@ -154,7 +155,8 @@ collation_csv_column_non_blank_counts = {}
 collation_csv_column_counts = defaultdict(lambda: defaultdict(int))
 collation_csv_column_headers = []
 
-NUM_EXPECTED_WORD_COLUMNS = 13 # and 22,398 rows
+# 'LexemeID,Lemma,LemmaE,Template,Classic,Medieval,Role,Morphology,Attested,Irregular,Movable,Clitic'
+NUM_EXPECTED_WORD_COLUMNS = 12 # and 22,385 rows # was 13 and 22,398 rows
 word_csv_rows = []
 word_csv_column_max_length_counts = {}
 word_csv_column_non_blank_counts = {}
@@ -178,6 +180,12 @@ def main() -> None:
     if loadBookTable() and loadSourceCollationTable() and loadSourceWordTable() and loadLemmaTable():
         # export_usfm_literal_English_gloss()
         export_esfm_literal_English_gloss()
+
+        # Delete any saved (but now obsolete) OBD Bible pickle files
+        for something in INTERMEDIATE_FOLDER.iterdir():
+            if something.name.endswith( '.OBD_Bible.pickle' ):
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Deleting obsolete OBD Bible pickle file {something.name}…" )
+                something.unlink()
 # end of extract_VLT_NT_to_ESFM.main
 
 
@@ -411,14 +419,14 @@ def export_esfm_literal_English_gloss() -> bool:
                 = int(collation_id[:2]), int(collation_id[2:5]), int(collation_id[5:8]), int(collation_id[8:])
 
             # Use the original table row to put the gloss into the literal text
-            if collation_id == '99999999999':
-                this_verse_row_list = None
+            # if collation_id == '99999999999':
+            #     this_verse_row_list = None
 
-            else:
-                assert len(verse_id) == 8 and verse_id.isdigit()
-                if verse_id != last_verse_id:
-                    this_verse_row_list = get_verse_rows(collation_csv_rows, collation_row_number)
-                    last_verse_id = verse_id
+            # else:
+            assert len(verse_id) == 8 and verse_id.isdigit()
+            if verse_id != last_verse_id:
+                this_verse_row_list = get_verse_rows(collation_csv_rows, collation_row_number)
+                last_verse_id = verse_id
 
             if book_number != last_book_number:  # we've started a new book
                 if book_number != 99:
@@ -507,7 +515,7 @@ def export_esfm_literal_English_gloss() -> bool:
                 assert 'N' not in glossCapitalisationString # already -- SR GNT doesn't currently use N -- see documentation of apply_gloss_capitalization() below
                 glossCapitalisationString = f'{glossCapitalisationString}N' # We add an extra letter
             adjusted_lemma, preformed_gloss_string = process_untranslated_words( collation_row, preformed_gloss_string )
-            medieval_lemma = '' if collation_row['LexemeID']=='99999' else find_lemma_forms(collation_row['LexemeID'], collation_row['Morphology'], collation_row['Classic'])[1]
+            medieval_lemma = '' if collation_row['LexemeID'] is None else find_lemma_forms(collation_row['LexemeID'], collation_row['Morphology'], collation_row['Classic'])[1]
             # medieval_lemma = '' if collation_row['LexemeID']=='99999' else lexeme_ID_lemma_dict[collation_row['LexemeID']]
             table_row = f"{ref}\t{collation_row['Medieval']}\t{adjusted_lemma}\t{medieval_lemma}\t{preformed_gloss_string}\t{glossCapitalisationString}\t{'' if collation_row['Probability'] is None else collation_row['Probability']}\t{collation_row['LexemeID']}\t{collation_row['Role']}\t{collation_row['Morphology']}"
             assert '"' not in table_row # Check in case we needed any escaping
@@ -601,7 +609,7 @@ def process_untranslated_words( given_collation_row, given_preformed_gloss_strin
     """
     """
     adjusted_preformed_gloss_string = given_preformed_gloss_string
-    their_lemma,medieval_lemma = ('','') if given_collation_row['LexemeID']=='99999' else find_lemma_forms( given_collation_row['LexemeID'], given_collation_row['Morphology'], given_collation_row['Classic'] )
+    their_lemma,medieval_lemma = ('','') if given_collation_row['LexemeID'] is None else find_lemma_forms( given_collation_row['LexemeID'], given_collation_row['Morphology'], given_collation_row['Classic'] )
     adjusted_lemma = adjust_lemma( their_lemma, given_collation_row['Medieval'])
     if adjusted_preformed_gloss_string=='-' or adjusted_preformed_gloss_string.startswith( '-¦' ) or adjusted_preformed_gloss_string.startswith( '¶-¦' ): # an untranslated word from the VLT
         # NOTE: All of these new gloss strings also have to be entered into cleanupVLT.commandTable.tsv

@@ -40,18 +40,19 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2024-04-16' # by RJH
+LAST_MODIFIED_DATE = '2024-06-10' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed_OSHB_OT_to_ESFM"
 PROGRAM_NAME = "Extract glossed OSHB OT ESFM files"
-PROGRAM_VERSION = '0.51'
+PROGRAM_VERSION = '0.52'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
 
 
-TSV_SOURCE_MORPHEME_TABLE_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv' )
-TSV_SOURCE_WORD_TABLE_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/all_glosses.words.tsv' )
-OT_ESFM_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_glossed_OSHB_ESFM/' )
+INTERMEDIATE_FOLDER = Path( '../intermediateTexts/' )
+TSV_SOURCE_MORPHEME_TABLE_FILEPATH = INTERMEDIATE_FOLDER.joinpath( 'glossed_OSHB/all_glosses.morphemes.tsv' )
+TSV_SOURCE_WORD_TABLE_FILEPATH = INTERMEDIATE_FOLDER.joinpath( 'glossed_OSHB/all_glosses.words.tsv' )
+OT_ESFM_OUTPUT_FOLDERPATH = INTERMEDIATE_FOLDER.joinpath( 'modified_source_glossed_OSHB_ESFM/' )
 
 TAB = '\t'
 FOOTNOTE_START = '\\f '
@@ -95,7 +96,15 @@ def main() -> None:
     if loadSourceMorphemeGlossTable():
         if loadSourceWordGlossTable():
             export_esfm_literal_English_gloss()
+
+            # Delete any saved (but now obsolete) OBD Bible pickle files
+            for something in INTERMEDIATE_FOLDER.iterdir():
+                if something.name.endswith( '.OBD_Bible.pickle' ):
+                    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Deleting obsolete OBD Bible pickle file {something.name}…" )
+                    something.unlink()
+
         else: print( f"\nFAILED to load words!\n" )
+
     else: print( f"\nFAILED to load morphemes!\n" )
 # end of extract_glossed_OSHB_OT_to_ESFM.main
 

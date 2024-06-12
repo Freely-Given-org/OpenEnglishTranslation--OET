@@ -43,10 +43,10 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, BOOKLIST_66
 
 
-LAST_MODIFIED_DATE = '2024-05-27' # by RJH
+LAST_MODIFIED_DATE = '2024-06-10' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_ESFM_to_USFM"
 PROGRAM_NAME = "Convert OET LV & RV ESFM files to USFM"
-PROGRAM_VERSION = '0.60'
+PROGRAM_VERSION = '0.61'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -89,6 +89,16 @@ def main():
                 vvESFMText = esfmFile.read() # We keep the original (for later comparison)
             adjText, wordDeleteCount = ESFMWordNumberRegex.subn( '', vvESFMText )
             esbCount = 0
+            if VV == 'LV': # only expect + > = <
+                assert '\\add ?' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ?"
+                assert '\\add -' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED -"
+                assert '\\add ≡' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ≡"
+                assert '\\add &' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED &"
+                assert '\\add *' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED *"
+                assert '\\add @' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED @"
+                assert '\\add #' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED #"
+                # assert '\\add ^' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ^" # TODO: Why???
+                assert '\\add ≈' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ≈"
             adjText = ( adjText
                             .replace( '\\add ?', '\\add ' ) # This one always comes first if there's two
                             .replace( '\\add +', '\\add ' )
@@ -96,6 +106,7 @@ def main():
                             .replace( '\\add =', '\\add ' )
                             .replace( '\\add <', '\\add ' )
                             .replace( '\\add >', '\\add ' )
+                            .replace( '\\add ≡', '\\add ' )
                             .replace( '\\add &', '\\add ' )
                             .replace( '\\add *', '\\add ' )
                             .replace( '\\add @', '\\add ' )

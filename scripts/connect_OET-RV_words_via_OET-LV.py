@@ -34,6 +34,8 @@ It does have the potential to make wrong connections that will need to be manual
     but hopefully this script is relatively conservative
         so that the number of wrong alignments is not huge.
 
+TODO: This script makes wrong cross-connections between different verses where versification issues apply
+
 CHANGELOG:
     2023-07-31 Added character marker checks for each RV line
     2023-08-29 Added nomina sacra (NS) for connected words in RV
@@ -63,7 +65,7 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2024-05-22' # by RJH
+LAST_MODIFIED_DATE = '2024-06-10' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.68'
@@ -74,8 +76,9 @@ DEBUGGING_THIS_MODULE = False
 
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module
 FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos
-OET_LV_OT_ESFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_OT_ESFM/' )
-OET_LV_NT_ESFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_VLT_ESFM/' )
+OET_LV_ESFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/' )
+OET_LV_OT_ESFM_InputFolderPath = OET_LV_ESFM_InputFolderPath.joinpath( 'auto_edited_OT_ESFM/' )
+OET_LV_NT_ESFM_InputFolderPath = OET_LV_ESFM_InputFolderPath.joinpath( 'auto_edited_VLT_ESFM/' )
 OET_RV_ESFM_FolderPath = project_folderpath.joinpath( 'translatedTexts/ReadersVersion/' )
 assert OET_LV_OT_ESFM_InputFolderPath.is_dir()
 assert OET_LV_NT_ESFM_InputFolderPath.is_dir()
@@ -280,7 +283,11 @@ def main():
     connect_OET_RV( rv, lvOT, OET_LV_OT_ESFM_InputFolderPath )
     connect_OET_RV( rv, lvNT, OET_LV_NT_ESFM_InputFolderPath )
 
-    # if forList: print( "For list:", ','.join( forList ) )
+    # Delete any saved (but now obsolete) OBD Bible pickle files
+    for something in OET_RV_ESFM_FolderPath.iterdir():
+        if something.name.endswith( '.OBD_Bible.pickle' ):
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Deleting obsolete OBD Bible pickle file {something.name}…" )
+            something.unlink()
 # end of connect_OET-RV_words_via_OET-LV.main
 
 
@@ -928,7 +935,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Abijah','Abia'),('Abijah','Abia/ʼAvīāh'),
             ('Abraham','Abraʼam'),('Abraham','Abraʼam/ʼAvərāhām'),
             ('Adam','Adam'),('Adam','Adam/ʼĀdām'),
-            ('Aharon', 'ʼAharon'),
+            ('Aharon', 'ʼAhₐron'),
             ('Aminadab','Aminadab'),('Amon','Aminadab/ˊAmmiynādāⱱ'),
             ('Amon','Amōs'),('Amon','Amōs/ʼĀmōʦ'),
             ('Aram','Aram'),('Aram','Aram/Rām'),
