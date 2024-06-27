@@ -61,10 +61,10 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2024-05-19' # by RJH
+LAST_MODIFIED_DATE = '2024-06-24' # by RJH
 SHORT_PROGRAM_NAME = "apply_Clear_Macula_OT_glosses"
 PROGRAM_NAME = "Apply Macula OT glosses"
-PROGRAM_VERSION = '0.68'
+PROGRAM_VERSION = '0.69'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -99,9 +99,9 @@ class State:
 
 
 NUM_EXPECTED_WLC_COLUMNS = 16
-WLC_tsv_column_max_length_counts = {}
-WLC_tsv_column_non_blank_counts = {}
-WLC_tsv_column_counts = defaultdict(lambda: defaultdict(int))
+# WLC_tsv_column_max_length_counts = {}
+# WLC_tsv_column_non_blank_counts = {}
+# WLC_tsv_column_counts = defaultdict(lambda: defaultdict(int))
 WLC_tsv_column_headers = []
 
 NUM_EXPECTED_LOWFAT_COLUMNS = 28
@@ -183,16 +183,16 @@ def loadOurSourceTable() -> bool:
             unique_morphemes.add(row['WordOrMorpheme'])
             assembled_word = f"{assembled_word}{row['WordOrMorpheme']}"
         else: vPrint( 'Quiet', DEBUGGING_THIS_MODULE, row_type); unexpected_row_type
-        for key, value in row.items():
-            # WLC_tsv_column_sets[key].add(value)
-            if n==0: # We do it like this (rather than using a defaultdict(int)) so that all fields are entered into the dict in the correct order
-                WLC_tsv_column_max_length_counts[key] = 0
-                WLC_tsv_column_non_blank_counts[key] = 0
-            if value:
-                if len(value) > WLC_tsv_column_max_length_counts[key]:
-                    WLC_tsv_column_max_length_counts[key] = len(value)
-                WLC_tsv_column_non_blank_counts[key] += 1
-            WLC_tsv_column_counts[key][value] += 1
+        # for key, value in row.items():
+        #     # WLC_tsv_column_sets[key].add(value)
+        #     if n==0: # We do it like this (rather than using a defaultdict(int)) so that all fields are entered into the dict in the correct order
+        #         WLC_tsv_column_max_length_counts[key] = 0
+        #         WLC_tsv_column_non_blank_counts[key] = 0
+        #     if value:
+        #         if len(value) > WLC_tsv_column_max_length_counts[key]:
+        #             WLC_tsv_column_max_length_counts[key] = len(value)
+        #         WLC_tsv_column_non_blank_counts[key] += 1
+        #     WLC_tsv_column_counts[key][value] += 1
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.WLC_rows):,} (tsv) WLC data rows.")
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Have {len(unique_words):,} unique Hebrew words.")
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Have {len(unique_morphemes):,} unique Hebrew morphemes.")
@@ -327,7 +327,17 @@ def fill_known_lowFat_English_contextual_glosses() -> bool:
     for lowFatRow in state.lowFatRows:
         if DEBUGGING_THIS_MODULE:
             print( f"{lowFatRow=}" )
-            if lowFatRow['FGRef'].startswith( 'GEN_13:11' ): missing_glosses_in_GEN_13_10
+            # if lowFatRow['FGRef'].startswith( 'GEN_13:11' ): missing_glosses_in_GEN_13_10
+
+        # Do a fix
+        if lowFatRow['WordOrMorpheme'] == 'כִּי':
+            # print( f"{lowFatRow=}" )
+            assert 'DOM' not in lowFatRow['EnglishGloss'].upper()
+            if 'DOM' in lowFatRow['ContextualGloss'].upper():
+                print( f"{lowFatRow['ContextualGloss']=}" )
+                halt # Shouldn't happen now
+                lowFatRow['ContextualGloss'] = lowFatRow['ContextualGloss'].replace( 'DOM_', '' ).replace( 'DOM', '' )
+                assert 'DOM' not in lowFatRow['ContextualGloss'].upper()
 
         if not lowFatRow['EnglishGloss'] and not lowFatRow['ContextualGloss']:
             if 'w' in lowFatRow['RowType']:

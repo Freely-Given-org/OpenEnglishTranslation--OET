@@ -26,6 +26,12 @@
 Script taking our OSHB morpheme table (TSV)
     and adding columns for glossing.
 
+Input file 'OSHB.parsedOriginal.flat.morphemes.tsv' has nine columns:
+    FGID	Ref	RowType	Special	Strongs	CantillationHierarchy	Morphology	OSHBid	WordOrMorpheme
+
+Output file 'our_WLC_glosses.morphemes.tsv' has sixteen columns:
+    Ref	OSHBid	RowType	Strongs	CantillationHierarchy	Morphology	WordOrMorpheme	NoCantillations	MorphemeGloss	ContextualMorphemeGloss	WordGloss	ContextualWordGloss	GlossCapitalisation	GlossPunctuation	GlossOrder	GlossInsert
+
 Also inserts our own glosses (Gen,Ruth,etc.) into some columns.
 
 (This is run AFTER convert_OSHB_XML_to_TSV.py
@@ -53,10 +59,10 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.OriginalLanguages import Hebrew
 
 
-LAST_MODIFIED_DATE = '2024-05-27' # by RJH
+LAST_MODIFIED_DATE = '2024-06-24' # by RJH
 SHORT_PROGRAM_NAME = "Prepare_OSHB_for_glossing"
 PROGRAM_NAME = "Prepare OSHB for glossing"
-PROGRAM_VERSION = '0.50'
+PROGRAM_VERSION = '0.51'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -97,13 +103,20 @@ def main() -> None:
     global state
     state = State()
 
-    if loadWLCSourceTable() and create_expanded_TSV_table() and prefill_known_glosses():
-        save_expanded_TSV_file()
+    if loadWLCSourceTable():
+        if create_expanded_TSV_table():
+            if prefill_known_glosses():
+                save_expanded_TSV_file()
 # end of prepare_OSHB_for_glossing.main
 
 
 def loadWLCSourceTable() -> bool:
     """
+    Load our WLC glosses from the TSV file
+        into the global WLC_tsv_column_* variables above
+        SEEMS NONE OF THOSE GET USED LATER !!!! ????
+
+    but also loads it into state.WLC_rows
     """
     global WLC_tsv_column_headers
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading WLC tsv file from {state.OSHB_TSV_input_filepath}…")
@@ -146,16 +159,16 @@ def loadWLCSourceTable() -> bool:
             unique_morphemes.add(row['WordOrMorpheme'])
             assembled_word = f"{assembled_word}{row['WordOrMorpheme']}"
         else: unexpected_row_type
-        for key, value in row.items():
-            # WLC_tsv_column_sets[key].add(value)
-            if n==0: # We do it like this (rather than using a defaultdict(int)) so that all fields are entered into the dict in the correct order
-                WLC_tsv_column_max_length_counts[key] = 0
-                WLC_tsv_column_non_blank_counts[key] = 0
-            if value:
-                if len(value) > WLC_tsv_column_max_length_counts[key]:
-                    WLC_tsv_column_max_length_counts[key] = len(value)
-                WLC_tsv_column_non_blank_counts[key] += 1
-            WLC_tsv_column_counts[key][value] += 1
+        # for key, value in row.items():
+        #     # WLC_tsv_column_sets[key].add(value)
+        #     if n==0: # We do it like this (rather than using a defaultdict(int)) so that all fields are entered into the dict in the correct order
+        #         WLC_tsv_column_max_length_counts[key] = 0
+        #         WLC_tsv_column_non_blank_counts[key] = 0
+        #     if value:
+        #         if len(value) > WLC_tsv_column_max_length_counts[key]:
+        #             WLC_tsv_column_max_length_counts[key] = len(value)
+        #         WLC_tsv_column_non_blank_counts[key] += 1
+        #     WLC_tsv_column_counts[key][value] += 1
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.WLC_rows):,} (tsv) WLC data rows.")
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Have {len(unique_words):,} unique Hebrew words.")
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Have {len(unique_morphemes):,} unique Hebrew morphemes.")
@@ -264,7 +277,7 @@ def prefill_known_glosses() -> bool:
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "\n  Prefilling TSV table with our own previously known glosses…")
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loading previously done glosses from {state.our_predone_glosses_filepath}…")
-    wordGlossDict = {}
+    ourPredoneWordGlossDict = {}
     morphemeGlossDict = defaultdict(set)
     wordsSpecificGlossesDict, refsSpecificGlossesDict = {}, {}
     with open( state.our_predone_glosses_filepath, 'rt', encoding='utf-8' ) as predone_file:
@@ -282,11 +295,11 @@ def prefill_known_glosses() -> bool:
                 # for wordBit, genericGlossBit in zip( word.split('='), genericGloss.split('=') ):
                 #     for genericGlossBitBit in genericGlossBit.split('/'):
                 #         morphemeGlossDict[wordBit].add(genericGlossBitBit)
-                assert word not in wordGlossDict
-                wordGlossDict[word] = genericGloss
+                assert word not in ourPredoneWordGlossDict
+                ourPredoneWordGlossDict[word] = genericGloss
             else:
-                assert word not in wordGlossDict
-                wordGlossDict[word] = genericGloss
+                assert word not in ourPredoneWordGlossDict
+                ourPredoneWordGlossDict[word] = genericGloss
             if thisWordSpecificGlossesDict:
                 # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{referencesList=} {wordSpecificGlossesDict=} {genericGloss=} {word=}")
                 assert len(thisWordSpecificGlossesDict) == 1 # Only one reference entry
@@ -301,7 +314,7 @@ def prefill_known_glosses() -> bool:
     # pvPrint( 'Normal', DEBUGGING_THIS_MODULE, refsSpecificGlossesDict)
     assert len(wordsSpecificGlossesDict) == len(refsSpecificGlossesDict)
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Applying {len(wordGlossDict):,} word and {len(morphemeGlossDict):,} morpheme glosses and {len(refsSpecificGlossesDict):,} specific glosses…")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Applying {len(ourPredoneWordGlossDict):,} word and {len(morphemeGlossDict):,} morpheme glosses and {len(refsSpecificGlossesDict):,} specific glosses…")
     numAppliedWordGlosses = numAppliedMorphemeGlosses = numAppliedSpecificGlosses = numManualMorphemeGlosses = 0
     combinedMorphemes = ''
     verseSegNoteCount = 0
@@ -317,7 +330,7 @@ def prefill_known_glosses() -> bool:
         wordOrMorpheme = row['NoCantillations']
         if row['RowType'] in ('w','Aw','wK','AwK'): # A is Aramaic, w is (single-morpheme) word, K is Ketiv
             try:
-                row['WordGloss'] = wordGlossDict[wordOrMorpheme]
+                row['WordGloss'] = ourPredoneWordGlossDict[wordOrMorpheme]
                 numAppliedWordGlosses += 1
             except KeyError: pass
         elif row['RowType'] in ('m','M','Am','AM','mK','MK','AmK','AMK'): # A is Aramaic, m is morpheme, M is last morpheme in word, K is Ketiv
@@ -346,7 +359,7 @@ def prefill_known_glosses() -> bool:
             if row['RowType'] in ('M','AM','MK','AMK'): # A is Aramaic, M is last morpheme in word, K is Ketiv
                 # vPrint( 'Normal', DEBUGGING_THIS_MODULE,  f" {row['Ref']} final morpheme='{wordOrMorpheme}' word='{combinedMorphemes}'" )
                 try:
-                    row['WordGloss'] = wordGlossDict[combinedMorphemes] # Contains = signs
+                    row['WordGloss'] = ourPredoneWordGlossDict[combinedMorphemes] # Contains = signs
                     numAppliedWordGlosses += 1
                 except KeyError: pass
         else:

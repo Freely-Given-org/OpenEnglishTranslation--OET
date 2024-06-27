@@ -1,8 +1,8 @@
 Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	RCase	Replace	Name	Comment
 
 # Make DOM consistent from various sources and mark as untranslatable
-									(et)			DOM	replaceEt	Replace (et) with DOM
-									(dm)			DOM	replaceDm	Replace (dm) with DOM
+#									(et)			DOM	replaceEt	Replace (et) with DOM (now fixed earlier in convert_ClearMaculaOT_to_our_TSV.py)
+#									(dm)			DOM	replaceDm	Replace (dm) with DOM (now fixed earlier in convert_ClearMaculaOT_to_our_TSV.py)
 									DOM¦			\untr DOM¦\untr*	makeDOMuntr	Mark DOM as untranslatable (into English)
 
 # Mark YHWH as divine name

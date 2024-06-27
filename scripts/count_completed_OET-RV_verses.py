@@ -56,10 +56,10 @@ from BibleOrgSys.Reference.BibleVersificationSystems import BibleVersificationSy
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2024-05-13' # by RJH
+LAST_MODIFIED_DATE = '2024-06-26' # by RJH
 SHORT_PROGRAM_NAME = "count_completed_OET-RV_verses"
 PROGRAM_NAME = "Count completed OET-RV verses"
-PROGRAM_VERSION = '0.22'
+PROGRAM_VERSION = '0.23'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -124,7 +124,7 @@ def main():
             finishedChapters += approxFinishedChapters
             if unfinishedCount:
                 vPrint( 'Info' if finishedVerseCount==0 else 'Normal', DEBUGGING_THIS_MODULE, f"  OET-RV OT {BBB} has {finishedVerseCount:,}/{totalBookVerses:,} = {finishedPercentage}% verses finished (approx. {approxFinishedChapters}/{totalBookChapters} chapters finished)." )
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"OET-RV OT has {finishedOTVerses:,}/{totalOTVerses:,} verses finished = {finishedOTVerses*100//totalOTVerses}%. (Approx {finishedOTChapters:,}/{totalOTChapters:,} = {finishedOTChapters*100//totalOTChapters}% chapters.)\n" )
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"OET-RV OT has {finishedOTVerses:,}/{totalOTVerses:,} verses finished = {finishedOTVerses*100/totalOTVerses:.1f}%. (Approx {finishedOTChapters:,}/{totalOTChapters:,} = {finishedOTChapters*100//totalOTChapters}% chapters.)\n" )
 
     # Now do NT
     for filename in glob.glob( os.path.join( OET_RV_ESFM_InputFolderPath, 'OET-RV_???.ESFM' ) ):

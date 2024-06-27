@@ -65,7 +65,7 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2024-06-10' # by RJH
+LAST_MODIFIED_DATE = '2024-06-24' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.68'
@@ -831,10 +831,13 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('because','for/because'),('Because','For/Because'),('because','For/Because'),
             ('bedding','pallet'),
             ('believers','brothers'),
+            ('body','flesh'),
+            ('box','ark'),
             ('but','But'),
             ("don't",'not'),
             ('carrying','carried'),
             ('cheerful','joy'),
+            ('chest','ark'),
             ('clothes','apparel'),
             ('confused','confounded'),
             ('countries','nation'),
@@ -883,6 +886,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('paralysed','paralytic'),
             ('path','way'),
             ('people','multitude'),
+            ('platform','lid'),
             ('poor','humble'),
             ('praised','glorifying'),
             ('preaching','proclaiming'),
@@ -892,6 +896,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('range','various'),
             ('requested','prayed'),
             ('room','place'),
+            ('sacred','holy'),
             ('scoffed','mocking'),
             ('See','Behold'),
             ('should','let'),
@@ -982,7 +987,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Maria', 'Maria'),('Maria', 'Maria/Mirəyām'),
             ('Media', 'Maʸdia'),
             ('Midian', 'Midəyān'),
-            ('Mitsrayim', 'Miʦərayim/(Egypt)'),
+            ('Mitsrayim', 'Miʦrayim/(Egypt)'),
             ('Nahshon', 'Naʼassōn'),('Nahshon', 'Naʼassōn/Naḩəshōn'),
             ('Nazareth', 'Nazaret'),
             ('Obed', 'Yōbaʸd'),('Obed', 'Yōbaʸd/Ōbaʸd/ˊŌvēd'),

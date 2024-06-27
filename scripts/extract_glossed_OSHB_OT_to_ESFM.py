@@ -40,7 +40,7 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2024-06-10' # by RJH
+LAST_MODIFIED_DATE = '2024-06-20' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed_OSHB_OT_to_ESFM"
 PROGRAM_NAME = "Extract glossed OSHB OT ESFM files"
 PROGRAM_VERSION = '0.52'
@@ -95,7 +95,7 @@ def main() -> None:
 
     if loadSourceMorphemeGlossTable():
         if loadSourceWordGlossTable():
-            export_esfm_literal_English_gloss()
+            export_literal_English_gloss_esfm()
 
             # Delete any saved (but now obsolete) OBD Bible pickle files
             for something in INTERMEDIATE_FOLDER.iterdir():
@@ -222,7 +222,7 @@ def loadSourceWordGlossTable() -> bool:
 
 
 mmmCount = wwwwCount = 0
-def export_esfm_literal_English_gloss() -> bool:
+def export_literal_English_gloss_esfm() -> bool:
     """
     Use the GlossOrder field to export the English gloss.
     """
@@ -339,6 +339,7 @@ def export_esfm_literal_English_gloss() -> bool:
         esfm_text = esfm_text.replace(',,',',').replace('..','.').replace(';;',';') \
                     .replace(',.','.').replace('.”.”','.”').replace('?”?”','?”')
         assert '  ' not in esfm_text
+        assert 'Miʦrayim/Miʦrayim' not in esfm_text
         # We leave in single quotes for now, e.g., didn't (but proper typographical characters should be used for quotes)
         # assert "'" not in esfm_text, f'''Why do we have single quote in {esfm_filepath}: {esfm_text[esfm_text.index("'")-20:esfm_text.index("'")+22]}'''
         assert '"' not in esfm_text, f'''Why do we have double quote in {esfm_filepath}: {esfm_text[esfm_text.index('"')-20:esfm_text.index('"')+22]}'''
@@ -354,7 +355,7 @@ def export_esfm_literal_English_gloss() -> bool:
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    {wwwwCount:,} word glosses unknown (wwww)" )
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    {mmmCount:,} morpheme glosses unknown (mmm)" )
     return num_exported_files > 0
-# end of extract_glossed_OSHB_OT_to_ESFM.export_esfm_literal_English_gloss
+# end of extract_glossed_OSHB_OT_to_ESFM.export_literal_English_gloss_esfm
 
 
 def get_verse_rows(given_source_rows: List[dict], row_index: int) -> List[list]:
