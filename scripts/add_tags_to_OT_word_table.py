@@ -65,10 +65,10 @@ import sys
 sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitted to PyPI
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew #, transliterate_Greek
 
-LAST_MODIFIED_DATE = '2024-05-19' # by RJH
+LAST_MODIFIED_DATE = '2024-07-02' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET OT wordtable"
-PROGRAM_VERSION = '0.12'
+PROGRAM_VERSION = '0.13'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -307,14 +307,14 @@ def apply_OT_scripted_gloss_updates() -> bool:
 
                     # Adjust and save the fields
                     if 'H' in tags:
-                        newReplaceText = transliterate_Hebrew( replaceText, searchText[0].isupper() )
+                        newReplaceText = transliterate_Hebrew( replaceText, toTitleFlag=searchText[0].isupper() )
                         if newReplaceText != replaceText:
                             # print(f" Converted Hebrew '{replaceText}' to '{newReplaceText}'")
                             replaceText = newReplaceText
-                        for char in replaceText:
-                            if 'HEBREW' in unicodedata.name(char):
-                                logging.critical(f"Have some Hebrew left-overs in '{replaceText}'")
-                                break
+                        # for char in replaceText:
+                        #     if 'HEBREW' in unicodedata.name(char):
+                        #         logging.critical(f"Have some Hebrew left-overs in '{replaceText}'")
+                        #         break
                         tags = tags.replace( 'H', '' ) # Don't need this tag any longer
                     if 'G' in tags:
                         Oh_we_need_Greek
@@ -322,10 +322,10 @@ def apply_OT_scripted_gloss_updates() -> bool:
                         if newReplaceText != replaceText:
                             # print(f" Converted Hebrew '{replaceText}' to '{newReplaceText}'")
                             replaceText = newReplaceText
-                        for char in replaceText:
-                            if 'GREEK' in unicodedata.name(char):
-                                logging.critical(f"Have some Hebrew left-overs in '{replaceText}'")
-                                break
+                        # for char in replaceText:
+                        #     if 'GREEK' in unicodedata.name(char):
+                        #         logging.critical(f"Have some Hebrew left-overs in '{replaceText}'")
+                        #         break
                         tags = tags.replace( 'G', '' ) # Don't need this tag any longer
 
                     # Our glosses have no word numbers yet, so remove those markers
