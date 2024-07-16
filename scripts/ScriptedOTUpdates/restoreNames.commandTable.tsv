@@ -2,13 +2,14 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 # Individuals
 H									Aaron			אַהֲרֹן		Acts 7:40
 H									Abaddon			אֲבַדּוֹן		Rev 9:11
-H									Abel			הֶבֶל/(Abel)		Gen 4:2
+dH									Abel			הֶבֶל/(Abel)		Gen 4:2
 H									Abiathar			בְיָתָר
 H									Abihu			אֲבִיהוּא		(12) Exo 6:23, 24:1,9, 28:1, Lev 10:1, Num 3:2,4
 H									Abijah			אֲבִיָה
 H									Abimelech			אֲבִימֶלֶךְ		Gen 20:2-4,8-10,14-15,17-18,22
 H									Abiud			אֲבִיהוּד
 H									Abraham			אַבְרָהָם
+H									Achan			עָכָן		(6) Josh 7:1,18-20,24, 22:20*
 H									Achaz			אָחָז		Matt 1:9
 H									Achim			יוֹקִים
 H									Adah			עָדָה		Gen 4:19
@@ -23,6 +24,7 @@ H									Amariah			אֲמַרְיָה		Zeph 1:1
 H									Amminadab			עַמִּינָדָב		Ruth 4:19
 wH									Amon			אָמוֹן		Zeph 1:1
 H									Amos			אָמוֹץ
+wH									Ammon			עַמּוֹן		(106) Gen 19:38, Num 21:24, Deu 2:19,37, 3:11,16, Josh 12:2, 13:10,25, ...
 H									Amram			עַמְרָם		Exo 6:18,20, Num 3:19,26:58-59, 1 Chr 6:2-3,18, 23:12-13, 24:20, Ezr 10:34*
 wH									Anah			עֲנָה		Gen 36:2.14,18,20,24-25
 H									Aram			רָם
@@ -47,9 +49,10 @@ H									Bildad			בִּלְדַּד		Job 8:1
 H									Bilhah			בִּלְהָה		Gen 29:29
 H									Boaz			בֹּעַז
 H									Buzi			בּוּזִי		Eze 1:3 father of Ezekiel
-wH									Cain			קַיִן/(Cain)		Gen 4:1-3
-H									Cainan			קֵינָן/(Cainan)
+wdH									Cain			קַיִן/(Cain)		Gen 4:1-3
+dH									Cainan			קֵינָן/(Cainan)
 wH									Canaan			כִּנַעַן		Gen, Acts 7:11
+wH									Carmi			כַּרְמִי		(8) Gen 46:9, Exo 6:14, Num 26:6, Josh 7:1,18, 1 Chr 2:7, 4:1, 5:3*
 H									Chilion			כִּלְיוֹן		Ruth 1:2
 H									Cosam			קָסַםה		?
 H									Cushi			כּוּשִׁי		Zeph 1:1
@@ -63,6 +66,7 @@ H									Dinah			דִינָה		Gen 34:1
 H									Dishon			דִּישׁוֹן		Gen 36:21,25,30 1Chr 1:38,41-42
 H									Eber			עֵבֵר
 H									Edom			אֱדוֹם		Gen 25:30, 32:3, 36:1,8-9
+H									Edrei			אֶדְרֶעִי		(8) Num 21:33, Deu 1:4, 3:1,10, Josh 12:4, 13:12,31, 19:37*
 H									Ehud			אֵהוּד		Jdg 3:15-16,20-21,23,26, 4:1, 1Chr 7:10*
 H									Eleazar			אֶלְעָזָר
 H									Eliakim			אֶלְיָקִים
@@ -77,8 +81,8 @@ H									Elimelech			אֱלִימֶלֶךְ		Ruth 1:2
 H									Eliphaz			אֱלִיפַז		Job 4:1
 H									Elmadam			אַלְמוֹדָדה		?
 H									Emmanuel			עִמָּנוּאֵל
-H									Emmor			חֲמוֹר/(Emmor)		Acts 7:16
-H									Enoch			חֲנוֹךְ/(Enoch)		Gen 4:17
+dH									Emmor			חֲמוֹר/(Emmor)		Acts 7:16
+dH									Enoch			חֲנוֹךְ/(Enoch)		Gen 4:17
 H									Enos			אֱנוֹשׁ
 H									Ephraim			אֶפְרַיִם		Gen 41:52, 46:20, 48:1
 H									Ephron			עֶפְרוֹן		the Hittite Gen 23:8,10,13-14,16-17, 25:9, 49:29-30, 50:13, Josh 15:9, 2Chr 13:19*
@@ -87,7 +91,7 @@ H									Esau			עֵשָׂו		Gen Obad 1:6, Heb 11:20
 H									Esli			אֶלְיְהוֹעֵינַיה		?
 H									Esrom			חֶצְרוֹן
 H									Esther			אֶסְתֵּר		Esther 2:7
-wH									Eve			חַוָּה/(Eve)		Gen 3:20
+wdH									Eve			חַוָּה/(Eve)		Gen 3:20
 H									Ezekiel			יְחֶזְקֵאל		Eze 1:3
 wH									Ezer			אֶצֶר		Gen 36:21,27,30, 1Chr 1:38,42
 H									Ezra			עֶזְרָא		Ezra 7:1
@@ -110,17 +114,20 @@ H									Hezekiah			חִזְקִיָּה		Mic 1:1
 H									Hezron			חֶצְרוֹן		Ruth 4:18
 H									Hezekiah			חִזְקִיָּה
 H									Hirah			חִירָה		Gen 38:1,12*
+H									Hoham			הוֹהָם		(1) Josh 10:3*
+H									Horam			הֹרָם		(1) Josh 10:33*
 H									Hosea			הוֹשֵׁעַ		Hos 1:1
 wH									Hur			חוּר		(15) Exo 17:10,12, 24:14, 31:2, 35:30, 38:22, Num 31:8, ...
 H									Husham			חוּשָׁם		Gen 36:34-35, 1Chr 1:45-6*
-H									Isaac			יִצְחָק/(Isaac)		Gen 20?
+dH									Isaac			יִצְחָק/(Isaac)		Gen 20?
 H									Isaiah			יְשַׁעְיָה
-wH									Ishmael			יִשְׁמָעֵאל/(Ishmael)		Gen 16:11,15-16, 36:3
-wH									Israel			יִשְׂרָאֵל/(Israel)		Gen 32:28
+wdH									Ishmael			יִשְׁמָעֵאל/(Ishmael)		Gen 16:11,15-16, 36:3
+wdH									Israel			יִשְׂרָאֵל/(Israel)		Gen 32:28
 H									Issachar			יִשָּׂשׂכָר		Rev 7:7
-H									Jacob			יַעֲקֹב/(Jacob)		Mal 1:2
+dH									Jabin			יָבִין/(Jabin)		(8) Josh 11:1, Jdg 4:2,7,17,23-24, Psa 83:9*
+dH									Jacob			יַעֲקֹב/(Jacob)		Mal 1:2
 H									Jannai			יָנָה?
-H									Jared			יֶרֶד/(Jared)
+dH									Jared			יֶרֶד/(Jared)
 H									Jechonias			יְכָנְיָה
 H									Jehoiachin			יוֹיָכִין		Eze 1:2
 H									Jehozadak			יְהוֹצָדָק		Hag 1:1
@@ -158,6 +165,7 @@ H									Lamech			לֶמֶךְ		Gen
 H									Leah			לֵאָה		Gen, Ruth 4:11
 wH									Levi			לֵוִיה		Gen
 wH									Lot			לוֹט		Gen, Luke 17:28
+H									Maacah			מַעֲכָה		(23) Gen 22:24, Josh 13:13, 2Sam 3:3, 10:6,8, ...
 wH									Maat			מָעַטה		?
 H									Maath			מָעַטה		?
 H									Magog			מָגוֹג
@@ -207,6 +215,7 @@ H									Noah			נֹחַ
 wH									Nun			נוּן		(30) Exo 33:11, Num 11:28, 13:8,16, 14:6,30,38, ...
 H									Obadiah			עֹבַדְיָה		Oba 1:1
 H									Obed			עוֹבֵד
+wH									Og			עוֹג		(22) Num 21:33, 32:33, Deu 1:4, 3:1,3-4,10-11,13, 4:47, ...
 H									Oholiab			אָהֱלִיאָב		(5) Exo 31:6, 35:34, 36:1-2, 38:23*
 H									Oholibamah			אָהֱלִיבָמָה		Gen 36:2,5,14,18
 H									Onan			אוֹנָן		Gen 38:4,5-9, 46:12
@@ -250,6 +259,7 @@ H									Shelah			שֵׁלָה		Gen 38:5,11,14,26
 H									Sheshbazzar			שֵׁשְׁבַּצַּר		Ezra 1:8
 H									Shiphrah			שִׁפְרָה		Exo 1:15*
 H									Shua			שׁוּעַ		Gen 38:2,12*
+H									Sihon			סִיחוֹן		(37) Num 21:21,23,26-29,34, 32:33, Deu 1:4, 2:24, ...
 H									Simeon			שִׁמְעוֹן		Gen 42:36
 H									Solomon			שְׁלמֹה		2 Sam 5:4
 H									Tamar			תָּמָר		Gen 38:6,11,13,24, Ruth 4:12
@@ -260,20 +270,24 @@ H									Uriah			איּרִיָּה		Matt 1:6
 wH									Uz			עוּץ		Gen 10:23, 22:21, 36:28  Job 1:1
 H									Uzziah			עֻזִּיָּה		Hos 1:1
 H									Uzziel			עֻזִּיאֵל		exo 6:18,22 Lev 10:4, Num 3:19,30, 4:42, 6:2,18, 7:7
+H									Zabdi			זַבְדִּי		(6) Josh 7:1,17-18, 1 Chr 8:19, 27:27, Neh 11:17*
 H									Zabulon			זְבוּלוּן
 H									Zadok			צָדוֹק
 H									Zara			זֶרַח
+H									Zedek			צֶדֶקח		(2) Josh 10:1,3*
 H									Zerah			זֶרַח		Gen 36:13,17,33, 38:30
 H									Zechariah			זְכַרְיָה
 dH									Zephaniah			צְפַנְיָה/(Zephaniah)		Zeph 1:1
 H									Zerubbabel			זְרֻבָּבֶל		Hag 1:1
 # Note: because the first letter changes for the following names, we also include the English spelling
-H									Zibeon			צִבְעוֹן/(Zibeon)		Gen 36:2,14
-H									Zillah			צִלָּה/(Zillah)		Gen 4:19
-H									Zipporah			צִפֹּרָה/(Zipporah)		(3) Exo 2:21, 4:25, 18:2*
+dH									Zibeon			צִבְעוֹן/(Zibeon)		Gen 36:2,14
+dH									Zillah			צִלָּה/(Zillah)		Gen 4:19
+dH									Zipporah			צִפֹּרָה/(Zipporah)		(3) Exo 2:21, 4:25, 18:2*
 H									Zorobabel			זְרֻבָּבֶל
 
 # Tribes/Groups
+H									Anakim			עֲנָקִי		(9) Deu 1:28, 2:10-11,21, 9:2, Josh 11:21-22, 14:12,15*
+H									Anakites			עֲנָקִי		(9) Deu 1:28, 2:10-11,21, 9:2, Josh 11:21-22, 14:12,15*
 H									Amorites			אֲמֹרִי		(87) Gen 10:16, 14:7,13, 15:16,21
 H									Canaanites			כְּנַעֲנִי		(74) Gen 10:18-19, 12:6, 13:7, 15:21
 H									Chaldeans¦			\add >ones¦\add*_from¦_כַּשְׂדִּי¦		Acts 7:2 (not sure of Greek spelling
@@ -282,57 +296,118 @@ H									Chaldeans¦			\add >ones¦\add*_from¦_כַּשְׂדִּי¦		Acts 7:
 dH									Egyptian¦			from¦_מִצְרַיִם/(Egypt)¦		Acts 7:28 (Eygpt gets added below)
 #H									Ethiopians			כּוּשִׁי		Acts 8:27
 H									Ethiopian			כּוּשִׁי		Acts 8:27
+H									Geshurites			גְּשׁוּרִי		(6) Deu 3:14, Josh 12:5, 13:2,11,13, 1Sam 27:8*
 H									Hittites			חִתִּי		Descendants of Heth (48) Gen 15:20, 23:10, 25:9
 H									Hivites			חִוִּי		(25) Gen 10:17, 34:2, 36:2, Exo 3:8,17, 13:5
 H									Israelites¦			\add >ones¦\add*_from¦_יִשְׂרָאֵל¦		Acts 2:22
 H									Jebusites			יְבוּסִי		Inhabitants of Jebus (41) Gen 10:16, 15:21, Exo 3:8, 3:17
 #H									Jerusalemites			\add >ones\add*_from_יְרוּשָׁלַם		Mrk 1:5
 H									Levite¦			from¦_tribe¦_of¦_לֵוִי¦		Luk 10:32 doesn't work well for plural yet XXXX........
+H									Maacathites			מַעֲכָתִי		(8) Deu 3:14, Josh 12:5, 13:11,13, 2Sam 23:34, ...
 H									Ninevites			\add >ones\add*_from_נִינְוֵה		Luk 11:30
 H									Ninevite¦			from¦_נִינְוֵה¦
 H									Perizzites			פְּרִזִּי		(23) Gen 13:7, 15:20, 34:30, Exo 3:8,17, 23:23
+H									Rephaim			רָפָא		(25) Gen 14:5, 15:20, Deu 2:11,20, 3:11,13, Josh 12:4, ...
 wH									Samaritan			שֹׁמְרוֹן
 H									Samaritans			שֹׁמְרוֹן
 H									Tyrians			צֹר		Acts 12:20
 
 # Places (including rivers)
-H									Araba			עֲרָבָה		(60) Num 22:1, 26:3, ..., Deu 1:1,7, ..., Josh 3:16, 4:13, ...
+wH									Beth			בֵּית		(14+?) Josh 10:10-11, ...
+
+H									Achor			עָכוֹר		(5) Josh 7:24,26, 15:7, Isa 65:10, Hos 2:15*
+H									Acshaph			אַכְשָׁף		(3) Josh 11:1, 12:20, 19:25*
+H									Adullam			עֲדֻלָּם		(8) Josh 12:15, 15:35, 1Sam 22:1, 23:13, 1Chr 11:15, 2Chr 11:7, Neh 11:30, Mic 1:15*
+wH									Ai			עַי		(39) Gen 12:8, 13:3, Josh 7:2-5, 8:1-3,9-12, ...
+H									Aijalon			אַיָּלוֹן		(10) Josh 10:12, 19:42, 21:24, Jdg 1:35, 12:12, ...
+H									Aphek			אֲפֵק		(9) Josh 12:18, 13:4, 19:30, Jdg 1:31, 1Sam 4:1, 29:1, 1Ki 20:26,30, 2Ki 13:17*
+H									arabah			עֲרָבָה		(60) Num 22:1, 26:3, ..., Deu 1:1,7, ..., Josh 3:16, 4:13, ...
+H									Arabah			עֲרָבָה		(60) Num 22:1, 26:3, ..., Deu 1:1,7, ..., Josh 3:16, 4:13, ...
+wH									Arad			עֲרָד		(5) Num 21:1, 33:40, Josh 12:14, Jdg 1:16, 1Chr 8:15*
 wH									Aram			אֲרָם		Gen, esp. Paddan Aram
+H									Arnon			אַרְנוֹן		(25) Num 21:13-14,24,26,28, 22:36, Deu 2:24, Josh 12:1, ...
+H									Aroer			עֲרוֹעֵר		(16) Num 32:34, 2:36, 3:12, 4:48, Josh 12:2, 13:9, ...
+H									Ashdod			אַשְׁדּוֹד		(17) Josh 11:22, 15:46-47, 1Sam 5:1,5-7, 6:17, ...
+H									Ashtaroth			עַשְׁתָּרוֹת		(12) deu 1:4, Josh 9:10, 12:4, 13:12,31, Jdg 2:13, ...
+H									Azekah			עֲזֵקָה		(7) Josh 10:10-11, 15:35, 1 Sam 17:1, 2Chr 11:9, ...
 H									Azotus			אַשְׁדּוֹד		Acts 8:40 Ashdod
 H									Babylon			בָּבֶלה		?
+H									barnea			בַּרְנֵעַ		(10+?) Num 32:8, 34:4, Deu 1:2,19, 2:14, 9:23, ...
+H									Barnea			בַּרְנֵעַ		(10+?) Num 32:8, 34:4, Deu 1:2,19, 2:14, 9:23, ...
+H									Bashan			בָּשָׁן		(60) Num 21:33, 32:33, Deu 1:4, 3:1,3,4,10-11,13-14, ...
+H									Beeroth			בְּאֵרוֹת		(5) Josh 9:17, 18:25, 2Sam 4:2, Ezra 2:25, Neh 7:29*
 H									Bethel			בֵּֽית-אֵ֑ל		Gen 28:19 (Maqaf changed to hyphen)
 H									Bethlehem			בֵּית-לֶחֶם		Ruth 1:1
 H									Bosor			בְּעוֹר		2 Pet 2:15
-#									Canaan			כִּנַעַן		Gen, Acts 7:11 but entered as a person above
+#									Canaan			כִּנַעַן		COMMENTED OUT Gen, Acts 7:11 but entered as a person above
+H									Carmel			כַּרְמֶל		(24) Josh 12:22, 15:55, 19:26, 1Sam 15:12, 25:2,5,5,7,40, ...
+H									Chephirah			כְּפִירָה		(4) Josh 9:17, 18:26, Ezra 2:25, Neh 7:29*
 H									Damascus			דַּמֶּשֶׂק
+H									Debir			דְּבִיר		(14) Josh 10:3,38-39, 11:21, 12:13, 13:26, 15:7,15,49, ...
+H									Dibon			דִּיבוֺן		(11) Num 21:30, 32:3,34, 33:45-46, Josh 13:9,17, Neh 11:25, ...
+wH									Dor			דּוֹר		(7) Josh 11:2, 12:23, 17:11, Jdg 1:27, 1Ki 4:11, 1Chr 7:29*
 H									Dothan			דֹּתָן		Gen 37:17, 2 Kings 6:13*
-H									Eden			עֵדֶן		Gen 2:15
+wH									Ebal			עֵיבָל		(8) Gen 36:23, Deu 11:29, 27:4,13, Josh 8:30,33, 1Chr 1:22,40*
+wH									Eden			עֵדֶן		Gen 2:15
 wH									Edom			אֱדֹם		Obad 1:1
+H									Edrai			אֶדְרֶעִי		(8) Num 21:33, Deu 1:4, 3:1,10, Josh 12:4, 13:12,31, 19:37*
+H									Eglon			עֶגְלוֹן		(13) Josh 10:3,5,23,34,36-37, 12:12, ...
 dH									Egypt			מִצְרַיִם/(Egypt)
 wH									Elim			אֵילִם		(6) Exo 15:27, 16:1, Num 33:9-10*
 wdH									Ethiopia			כּוּשׁ/(Ethiopia)		Esther 1:1
 H									Euphrates			פְרָת		(19) Gen 2:14, 15:18, Deu 1:7, 11:24, Josh 1:4, 2Sam 8:3, ...
 H									Galed			גַּלְעֵד		Gen 31:47
 H									Galilee			גָּלִיל
+wH									Gath			גַּת		(33) Josh 11:22, 1Sam 5:8, 6:17, 7:14, 17:4,23,52, ...
 H									Gaza			עַזָּה		Acts 8:26
+H									Geder			גֶּדֶר		(1) Josh 12:13*
+H									Gezer			גֶּזֶר		(15) Josh 10:33, 12:12, 16:3,10, 21:21 Jdg 1:29, ...
+H									Gibeon			גִּבְעוֹן		(37) Josh 9:3,17, 10:1-2,4-6,10,12,41, 11:19, 18:25, 21:17, ...
 H									Gilead			גִּלְעָד		Gen 31:21,23
 H									Gilgal			גִּלְגָּל		(41) Deu 11:30, Josh 4:19-20, 5:9-10, 9:6, 10:6-7,9,15,43, ...
 H									Golgotha			גֻּלְגֹּלֶת
 H									Gomorrah			עֲמֹרָה
-H									Goshen			גּשֶׁן		Gen 45:10, 46:28-29,34, 47:1,4,6,27, 50:8, Exo 8:22, 9:26, Josh 10:41, 11:16, 15:51*
+H									Goshen			גּשֶׁן		Gen 45:10, 46:28-29,34, 47:1,4,6,27, 50:8, Exo 8:22, 9:26, Josh 10:41, 11:16, 15:51*
+H									Goyim			גּוֹי		(561) (Gen 10:5, ...,) Josh 12:23, ...
+H									Halak			חָלָק		(2) Josh 11:17, 12:7*
 H									Haran			חָרָן		Acts 7:2
 H									Havilah			חֲוִילָה		Gen 2:11
+H									Hazor			חָצוֹר		(18) Josh 11:1,10-11,13, 12:19, 15:23,25, ...
+H									Hebron			חֶבְרוֹן		(71) Gen 13:18, 23:2,19, 35:27, 37:14, Exo 6:18, Num 3:19, 13:22, ...
+H									Hepher			חֵפֶר		(9) Num 26:32-33, 27:1, Josh 12:17, 17:2-3, 1Ki 4:10, 1Chr 4:6, 11:36*
+H									Hermon			חֶרְמוֹן		(13) Deu 3:8-9, 4:48, Josh 11:3,17, ...
+H									Heshbon			חֶשְׁבּוֹן		(38) Num 21:25-28,30,34, 32:3, 32:37, Deu 1:4, 2:24,26,30, ...
 H									Horeb			חֹרֵב		(17) Exo 3:1, 17:6, 33:6, Deu 1:2,6,19, 4:10,15, 5:2
+H									Hormah			חָרְמָה		(9) Num 14:45, 21:3, Deu 1:44, Josh 12:14, 15:30, 19:4, Jdg 1:17, ...
+H									Horon			חוֹרוֹן		(14) Josh 10:10-11, 16:3,5, 18:13-14, 21:22, 1Sa 13:18, ...
 wdH									India			הֹדוּ/(India)		Esther 1:1
+H									Jabbok			יַבֹּק		(7) Gen 32:22, Num 21:24, Deu 2:37, 3:16, Josh 12:2, Jdg 11:13,22*
+H									Jarmuth			יַרְמוּת		(7) Josh 10:3,5,23, 12:11, 15:35, 21:29, Neh 11:29*
+H									Jearim			יְעָרִים		(20) Josh 9:17, 15:9,60, 18:14-15,28, Jdg 18:12, ...
 H									Jericho			יְרִיחוֹ		Heb 11:30
 H									Jerusalem			יְרוּשָׁלַיִם
+H									jesimoth			היְשִׁימוֹת		(4) Num 33:49, Josh 12:3, 13:20, Eze 25:9*
+H									Jesimoth			היְשִׁימוֹת		(4) Num 33:49, Josh 12:3, 13:20, Eze 25:9*
+H									Jokneam			יָקְנְעָם		(3) Josh 12:22, 19:11, 21:34*
 H									Jordan			יַרְדֵּן
+H									Kadesh			קָדֵשׁ		(10+?) Num 32:8, 34:4, Deu 1:2,19, 2:14, 9:23, ...
+H									Kedesh			קֶדֶשׁ		(12) Josh 12:22, 15:23, 19:37, 20:7, 21:32, Jdg 4:6, ...
 H									Kedron			קִדְרוֹן		John 18:1
+H									Kinnereth			כִּנֲרוֹת		(7) Num 34:11, Deu 3:17, Josh 11:2, 12:3, 13:27, 19:35, 1Ki 15:20*
+H									Kiriath			קִרְיַת		(20+?) Josh 9:17, 15:9,60, 18:14-15,28, Jdg 18:12, ...
+H									Lachish			לָכִישׁ		(24) Josh 10:3,5,23,31-35, 12:11, 15:39, ...
 H									Lebanon			לְבָנוֹן		(71) Deu 1:7, 3:25, 11:24, Josh 1:4, 9:1, ....
+H									Libnah			לִבְנָה		(18) Num 33:20-21, Josh 10:29,31-32,39, 12:15, 15:42, ...
 H									Lydda			לֹד		Acts 9:32
+H									Madon			מָדוֹן		(2) Josh 11:1, 12:19*
+H									Makkedah			מַקֵּדָה		(9) Josh 10:10,16-17,21,28-29, 12:16, 15:41*
 H									Massah			מַסָּה		(4) Exo 17:7, Deu 6:16, 9:22, 33:8*
+H									Medeba			מֵידְבָא		(5) Num 21:30, Josh 13:9,16, 1Chr 19:7, Isa 15:2*
+H									Megiddo			מְגִדּוֹן		(12) Josh 12:21, 17:11, Jdg 1:27, 5:19, 1Ki 4:12, 9:15, ...
 H									Meribah			מְרִיבָה		(6) Exo 17:7, Num 20:13,24, 27:14, Deu 33:8, Psa 81:7*
+H									Merom			מֵרוֹם		(2) Josh 11:5,7*
 H									Migdol			מִגְדּוֹל		Exo 14:2, Num 33:7, Jer 44:1, 46:14, Eze 29:10, 30:6*
+H									Mizpah			מִּצְפָּה		(36) Gen 31:49, Josh 11:3, Jdg 10:17, 11:11,34, ...
 H									Moriah			מוֹרִיָּה		(2) land of Gen 22:2, Mt. 2Chr 3:1*
 H									Negev			נֶגֶב		Gen 12:9, 13:1,3,14, 20:1, 24:62, 28:14, Exo 26:18, ...
 wH									Nod			נוֹד		Gen 4:16
@@ -341,13 +416,18 @@ wH									Pau			פָעוּ		Gen 36:39, 1Chr 1:50*
 H									Peniel			פְּנִיאֵל		Gen 32:31
 H									Penuel			פְּנוּאֵ֑ל		Gen 32:31
 H									Persia			פָרַס		Ezra 1:1
+H									Pisgah			פִסְגָּה		(8) Num 21:20, 23:14, Deu 3:17,27, 4:49, 34:1, Josh 12:3, 13:20*
 H									Rama			רָמָה		Matt 2:18
 H									Rephidim			רְפִידִים		(5) Exo 17:1,8, 19:2, Num 33:14-15*
+H									Salecah			סַלְכָה		(4) Deu 3:10, Josh 12:5, 13:11, 1Chr 5:11, 1Chr 5:11*
 H									Salem			שָׁלֵם
 H									Samaria			שֹׁמְרוֹן		Luke 17:11
 H									Sarepta			צֱרְפַת		Luke 4:26
 H									Saron			שָׁרוֹן		Acts 9:35
+H									Sharon			שָׁרוֹן		(7) Josh 12:18, 1Chr 5:16, 27:29, Sng 2:1, Isa 33:9, 35:2, 65:10*
+H									Shebarim			שְׁבָרִים		(1) Josh 7:5*
 H									Sheol			שְׁאוֹל		Job 7:9
+H									Shimron			שִׁמְרוֹן		(5) Gen 46:13, Num 26:24, Josh 11:1, 19:15, 1Chr 7:1*
 H									Shittim			שִׁטִּים		(5) Num 25:1, Josh 2:1, 3:1,18, Micah 6:5*
 H									Shushan			שׁוּשַׁן		Neh 1:1
 H									Sidon			צִידוֹן		Acts 12:20
@@ -356,7 +436,10 @@ H									Sinai			סִינַי		Acts 7:30
 H									Sodom			סְדֹם		Gen
 H									Succoth			סֻכּֽוֹת		Gen 33:17
 wdH									Syria			אֲרָם/(Syria)
+H									Taanach			תַּעֲנָךְ		(7) Josh 12:21, 17:11, 21:25, Jdg 1:27, 5:19, 1Ki 4:12, 1Chr 7:29*
+H									Tappuah			תַּפוּחַ		(6) Josh 12:17, 15:34, 16:8, 17:8, 1Chr 2:43*
 wH									Teman			תֵּימָן		Obad 1:9 district of Edom
+H									Tirzah			תַּעֲנָךְ		(18) Num 26:33, 27:1, 36:11, Josh 12:24, 17:3, 1Ki 14:17, ...
 H									Tyre			צֹר
 H									Zarethan			צֱרְתָן		(3) Josh 3:16, 1 Kgs 4:12, 7:46*
 H									Zorah			צָרְעָה		Judges 13:2

@@ -307,7 +307,7 @@ def apply_OT_scripted_gloss_updates() -> bool:
 
                     # Adjust and save the fields
                     if 'H' in tags:
-                        newReplaceText = transliterate_Hebrew( replaceText, toTitleFlag=searchText[0].isupper() )
+                        newReplaceText = transliterate_Hebrew( replaceText, capitaliseHebrew=searchText[0].isupper() )
                         if newReplaceText != replaceText:
                             # print(f" Converted Hebrew '{replaceText}' to '{newReplaceText}'")
                             replaceText = newReplaceText

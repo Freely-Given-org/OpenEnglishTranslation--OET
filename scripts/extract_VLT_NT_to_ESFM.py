@@ -56,7 +56,7 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2024-06-10' # by RJH
+LAST_MODIFIED_DATE = '2024-07-11' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
 PROGRAM_VERSION = '0.97'
@@ -66,7 +66,7 @@ DEBUGGING_THIS_MODULE = False
 
 
 INTERMEDIATE_FOLDER = Path( '../intermediateTexts/' )
-VLT_ESFM_OUTPUT_FOLDERPATH = INTERMEDIATE_FOLDER.joinpath( 'modified_source_VLT_ESFM/' ) # We copy our {BBB}_gloss.ESFM files into this folder
+VLT_GLOSS_ESFM_OUTPUT_FOLDERPATH = INTERMEDIATE_FOLDER.joinpath( 'modified_source_VLT_ESFM/' ) # We copy our {BBB}_gloss.ESFM files into this folder
 RV_ESFM_OUTPUT_FOLDERPATH = Path( '../translatedTexts/ReadersVersion/' ) # We also copy the wordfile to this folder
 
 OUR_EXPORT_TABLE_FILENAME = 'OET-LV_NT_word_table.10columns.tsv' # We make this first 10-column version here (from the collation table)
@@ -367,10 +367,10 @@ def loadLemmaTable() -> bool:
 # end of extract_VLT_NT_to_ESFM.loadLemmaTable
 
 
-def write_esfm_book(book_number:int, book_esfm: str) -> bool:
+def write_gloss_esfm_book(book_number:int, book_esfm: str) -> bool:
     """
     """
-    usfm_filepath = VLT_ESFM_OUTPUT_FOLDERPATH.joinpath( f'{BOS_BOOK_ID_MAP[book_number]}_gloss.ESFM' )
+    usfm_filepath = VLT_GLOSS_ESFM_OUTPUT_FOLDERPATH.joinpath( f'{BOS_BOOK_ID_MAP[book_number]}_gloss.ESFM' )
     book_esfm = book_esfm.replace('¶', '¶ ') # Looks nicer maybe
     # Fix any punctuation problems
     if '..' in book_esfm:
@@ -388,7 +388,7 @@ def write_esfm_book(book_number:int, book_esfm: str) -> bool:
     with open(usfm_filepath, 'wt', encoding='utf-8') as output_file:
         output_file.write(f"{book_esfm}\n")
     return True
-# end of extract_VLT_NT_to_ESFM.write_esfm_book
+# end of extract_VLT_NT_to_ESFM.write_gloss_esfm_book
 
 
 def export_esfm_literal_English_gloss() -> bool:
@@ -406,7 +406,7 @@ def export_esfm_literal_English_gloss() -> bool:
     esfm_text = ''
     num_books_written = 0
     final_table_filename = 'OET-LV_NT_word_table.tsv' # Will be made later by add_tags_to_NT_word_table.py
-    table_filepath = VLT_ESFM_OUTPUT_FOLDERPATH.joinpath( OUR_EXPORT_TABLE_FILENAME )
+    table_filepath = VLT_GLOSS_ESFM_OUTPUT_FOLDERPATH.joinpath( OUR_EXPORT_TABLE_FILENAME )
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Exporting ESFM auxilliary word table to {table_filepath}…" )
     next_word_number = 1 # word count includes variants
     with open(table_filepath, 'wt', encoding='utf-8') as table_output_file:
@@ -433,7 +433,7 @@ def export_esfm_literal_English_gloss() -> bool:
                     assert book_number == last_book_number + 1
                 if esfm_text:  # write out the book (including the last one if final collation row 99999 exists)
                     assert '**' not in esfm_text
-                    if write_esfm_book( last_book_number, esfm_text ):
+                    if write_gloss_esfm_book( last_book_number, esfm_text ):
                         num_books_written += 1
                     esfm_text = None
                 if book_number == 99:
@@ -524,9 +524,9 @@ def export_esfm_literal_English_gloss() -> bool:
             # (That's probably the best all-round solution, as it's capable of covering the apparatus as well.)
 
     if esfm_text: # write the last book
-        if write_esfm_book( last_book_number, esfm_text ):
+        if write_gloss_esfm_book( last_book_number, esfm_text ):
             num_books_written += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {num_books_written} books to {VLT_ESFM_OUTPUT_FOLDERPATH}.")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {num_books_written} books to {VLT_GLOSS_ESFM_OUTPUT_FOLDERPATH}.")
 
     # Now done in add_tags_to_NT_word_table.py
     # # Also use the same word file for the OET-RV

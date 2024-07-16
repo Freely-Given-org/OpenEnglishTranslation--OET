@@ -996,7 +996,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Levi', 'Leui'),('Levi', 'Leui/Lēvī'),('Levi','Lēvīh'),
             ('Lydda', 'Ludda'),('Lydda', 'Ludda/Lod'),
             ('Macedonia', 'Makedonia'),
-            ('Manasseh', 'Manassaʸs'),('Manasseh', 'Manassaʸs/Mənashsheh'),
+            ('Manasseh', 'Manassaʸs'),('Manasseh', 'Manassaʸs/Mənashsheh'),('Manasseh', 'Mənashsheh'),
             ('Maria', 'Maria'),('Maria', 'Maria/Miryām'),
             ('Media', 'Maʸdia'),
             ('Midian', 'Midyān'),

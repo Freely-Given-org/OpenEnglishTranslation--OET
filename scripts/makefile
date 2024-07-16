@@ -28,7 +28,7 @@ expanded_NT_wordtable = ../intermediateTexts/modified_source_VLT_ESFM/OET-LV_NT_
 original_NT_wordtable = ../intermediateTexts/modified_source_VLT_ESFM/OET-LV_NT_word_table.10columns.tsv
 CNTR_lemma_table = ../../CNTR-GNT/derivedFormats/lemmas.alphabetical.tsv
 CNTR_book_table = ../../CNTR-GNT/sourceExports/book.csv
-CNTR_collation_table = ../../CNTR-GNT/sourceExports/collation.csv extract_VLT_NT_to_ESFM.py
+CNTR_collation_table = ../../CNTR-GNT/sourceExports/collation.csv
 WLC_OT_TSV_table := ../intermediateTexts/glossed_OSHB/our_WLC_glosses.morphemes.tsv
 Clear_Bible_OT_lowfat_TSV := ../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTrees.OT.morphemes.abbrev.tsv ../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTrees.OT.lemmas.tsv
 Clear_Bible_NT_lowfat_TSV := ../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTrees.NT.words.abbrev.tsv
@@ -135,7 +135,7 @@ $(BibleTags_TSV): $(BibleTags_OT_USFM) $(BibleTags_NT_USFM) convert_BibTags_USFM
 	@echo "\n\nConvert BibleTags USFM files to TSV…\n"
 	@$(Python) convert_BibTags_USFM_to_TSV.py
 
-$(intermediate_LV_NT_ESFM) $(original_NT_wordtable): $(CNTR_book_table) $(CNTR_collation_table) $(CNTR_lemma_table)
+$(intermediate_LV_NT_ESFM) $(original_NT_wordtable): $(CNTR_book_table) $(CNTR_collation_table) $(CNTR_lemma_table) extract_VLT_NT_to_ESFM.py
 	@echo "\n\nExtract NT from TSV table to the various {BBB}_gloss.ESFM files…\n"
 	@$(Python) extract_VLT_NT_to_ESFM.py -e
 
