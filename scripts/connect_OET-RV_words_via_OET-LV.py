@@ -65,10 +65,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2024-07-02' # by RJH
+LAST_MODIFIED_DATE = '2024-07-24' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.68'
+PROGRAM_VERSION = '0.69'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -503,7 +503,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     if not rvAdjText or not lvAdjText: return (0,0), (0,0), (0,0), (0,0)
 
     lvWords = lvAdjText.split( ' ' )
-    rvWords = rvAdjText.split( ' ' )
+    rvWords1 = rvAdjText.split( ' ' )
     # print( f"({len(rvWords)}) {rvWords=}")
     # print( f"({len(lvWords)}) {lvWords=}")
     while 'DOM' in lvWords:
@@ -520,10 +520,18 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     #             assert lvWord.count( '¦' ) == 1, f"{BBB} {c}:{v} {lvWord=}" # Check that we haven't been retagging already tagged RV words
     #     if badIx is not None: lvWords.pop( badIx )
 
-    assert rvWords
-    for rvWord in rvWords:
+    assert rvWords1
+    rvWords = []
+    for rvWord in rvWords1:
         assert rvWord, f"{BBB} {c}:{v} {rvText=} {rvAdjText=}"
         assert rvWord.count( '¦' ) <= 1, f"{BBB} {c}:{v} {rvWord=} {rvText=} {rvAdjText=}" # Check that we haven't been retagging already tagged RV words
+        rvWordBits = rvWord.split( '-' )
+        if len(rvWordBits) == 1: # No hyphen
+            rvWords.append( rvWord )
+        elif rvWordBits[1][0].isupper(): # Hyphenated and with a capital letter, e.g., Kiriat-Arba (may even have three parts)
+            for rvWordBit in rvWordBits:
+                rvWords.append( rvWordBit )
+
     numSimpleListedAdds,numSimpleListedNS = matchOurListedSimpleWords( BBB, c,v, rvWords, lvWords )
 
     # Now get the uppercase words
@@ -948,6 +956,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             # Names including places (parentheses have already been deleted from the OET-LV at this stage)
             ('Abijah','Abia'),('Abijah','Abia/ʼAvīāh'),
             ('Abraham','Abraʼam'),('Abraham','Abraʼam/ʼAvrāhām'),
+            ('Aksah', 'ʼAchsah'),
             ('Adam','Adam'),('Adam','Adam/ʼĀdām'),
             ('Aharon', 'ʼAhₐron'),
             ('Aminadab','Aminadab'),('Amon','Aminadab/ˊAmmiynādāⱱ'),
@@ -996,11 +1005,12 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Levi', 'Leui'),('Levi', 'Leui/Lēvī'),('Levi','Lēvīh'),
             ('Lydda', 'Ludda'),('Lydda', 'Ludda/Lod'),
             ('Macedonia', 'Makedonia'),
-            ('Manasseh', 'Manassaʸs'),('Manasseh', 'Manassaʸs/Mənashsheh'),('Manasseh', 'Mənashsheh'),
+            ('Manasseh', 'Manassaʸs'),('Manasseh', 'Manassaʸs/Mənashsheh'),('Menashsheh', 'Mənashsheh'),
             ('Maria', 'Maria'),('Maria', 'Maria/Miryām'),
             ('Media', 'Maʸdia'),
             ('Midian', 'Midyān'),
             ('Mitsrayim', 'Miʦrayim/(Egypt)'),
+            ('Mt', 'Mount'),
             ('Nahshon', 'Naʼassōn'),('Nahshon', 'Naʼassōn/Naḩshōn'),
             ('Nazareth', 'Nazaret'),
             ('Obed', 'Yōbaʸd'),('Obed', 'Yōbaʸd/Ōbaʸd/ˊŌvēd'),

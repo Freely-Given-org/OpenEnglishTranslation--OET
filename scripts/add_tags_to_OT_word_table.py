@@ -65,10 +65,10 @@ import sys
 sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitted to PyPI
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew #, transliterate_Greek
 
-LAST_MODIFIED_DATE = '2024-07-02' # by RJH
+LAST_MODIFIED_DATE = '2024-07-19' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET OT wordtable"
-PROGRAM_VERSION = '0.13'
+PROGRAM_VERSION = '0.14'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -949,8 +949,8 @@ def fill_extra_columns_and_remove_some() -> bool:
                 lemmaList.append( theirMaculaLemma )
                 if theirMaculaLemma:
                     try: lemmaRowList.append( state.lemmaDict[theirMaculaLemma] ) # Save the lemma row number(s)
-                    except KeyError: lemmaRowList.append( '<<<MISSING-A1>>>' )
-                else: lemmaRowList.append( '<<<MISSING-B1>>>' )
+                    except KeyError: lemmaRowList.append( '###MISSING-A1###' )
+                else: lemmaRowList.append( '###MISSING-B1###' )
                 mIx += 1
                 break # from inner dummy loop because we were successful
             elif theirMaculaColumns[0].startswith( ourColumns[0] ): # then theirs is a morpheme that's part of our word
@@ -969,8 +969,8 @@ def fill_extra_columns_and_remove_some() -> bool:
                     lemmaList.append( theirMaculaLemma )
                     if theirMaculaLemma:
                         try: lemmaRowList.append( state.lemmaDict[theirMaculaLemma] ) # Save the lemma row number(s)
-                        except KeyError: lemmaRowList.append( '<<<MISSING-A2>>>' )
-                    else: lemmaRowList.append( '<<<MISSING-B2>>>' )
+                        except KeyError: lemmaRowList.append( '###MISSING-A2###' )
+                    else: lemmaRowList.append( '###MISSING-B2###' )
                     mIx += 1
                     theirMaculaColumns = state.macula_tsv_lines[mIx] # Already in a list
                 dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Matched Morpheme {ourColumns[0]} in {theirMaculaColumns[0]} {theirMaculaColumns[1]} {ourColumns[1]} {theirMaculaColumns[2]} {ourColumns[2]} R='{theirMaculaColumns[13]}' N='{theirMaculaColumns[27]}'")
@@ -987,8 +987,8 @@ def fill_extra_columns_and_remove_some() -> bool:
                 lemmaList.append( theirMaculaLemma )
                 if theirMaculaLemma:
                     try: lemmaRowList.append( state.lemmaDict[theirMaculaLemma] ) # Save the lemma row number(s)
-                    except KeyError: lemmaRowList.append( '<<<MISSING-A3>>>' )
-                else: lemmaRowList.append( '<<<MISSING-B3>>>' )
+                    except KeyError: lemmaRowList.append( '###MISSING-A3###' )
+                else: lemmaRowList.append( '###MISSING-B3###' )
                 mIx += 1
                 break # from inner dummy loop because we were successful
             else:
