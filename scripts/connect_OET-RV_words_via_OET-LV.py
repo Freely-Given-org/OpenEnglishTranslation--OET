@@ -65,7 +65,7 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2024-07-24' # by RJH
+LAST_MODIFIED_DATE = '2024-08-08' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.69'
@@ -983,6 +983,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Gad', 'Gād'),
             ('Gaius', 'Gaios'),
             ('Galilee', 'Galilaia'),('Galilee', 'Galilaia/Gālīl'),
+            ('Gilgal', 'Gilgāl'),
             ("Herod's", 'Haʸrōdaʸs'),('Herod', 'Haʸrōdaʸs'),
             ('Hezron', 'Hesrōm'),('Hezron', 'Hesrōm/Ḩeʦrōn'),
             ('Idumea', 'Idoumaia'),
