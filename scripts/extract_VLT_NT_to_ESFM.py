@@ -56,7 +56,7 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2024-07-11' # by RJH
+LAST_MODIFIED_DATE = '2024-08-12' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
 PROGRAM_VERSION = '0.97'
@@ -356,11 +356,11 @@ def loadLemmaTable() -> bool:
         if len(row) != NUM_EXPECTED_LEMMA_COLUMNS:
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_LEMMA_COLUMNS}")
         lemma_tsv_rows.append(row)
-        
+
         ld_key = (row['LexemeID'],row['Lemma'])
         assert ld_key not in lexemeID_CNTRLemma_dict
         lexemeID_CNTRLemma_dict[ld_key] = row['Greek']
-        
+
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(lemma_tsv_rows):,} lemma TSV data rows.")
 
     return True
@@ -772,6 +772,7 @@ def preform_gloss_and_word_number(thisList:List[Dict[str,str]], given_verse_row_
     try: glossInsert = given_verse_row['GlossInsert']
     except KeyError: glossInsert = '' # it's not in Alan's tables yet
     if given_verse_row['Koine'].startswith( '=' ): # it's a nomina sacra
+        assert '\\nd' not in glossWord
         glossWord = f"\\nd {glossWord}\\nd*" # we use the USFM divine name style
     pre_punctuation, post_punctuation = separate_punctuation(glossPunctuation)
     assert '*' not in post_punctuation
