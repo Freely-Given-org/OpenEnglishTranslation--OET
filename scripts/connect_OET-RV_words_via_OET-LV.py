@@ -65,10 +65,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2024-08-08' # by RJH
+LAST_MODIFIED_DATE = '2024-08-12' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.69'
+PROGRAM_VERSION = '0.70'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -338,7 +338,8 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
                 if line.endswith(' '):
                     logging.warning( f"Unexpected space at end in {lvESFMFilename} {lineNumber}: '{line}'" )
                 for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
-                    assert line.count( f'\\{characterMarker} ') == line.count( f'\\{characterMarker}*'), f"{characterMarker} marker mismatch in {rvESFMFilename} {lineNumber}: '{line}'"
+                    assert line.count( f'\\{characterMarker} ') == line.count( f'\\{characterMarker}*'), f"{characterMarker} marker mismatch in {lvESFMFilename} {lineNumber}: '{line}'"
+                assert '\\nd \\nd ' not in line, f"Double \\nd in {lvESFMFilename} {lineNumber}: '{line}'"
                 if '\\x* ' in line: # this can be ok if the xref directly follows other text
                     logger = logging.critical if ' \\x ' in line else logging.warning
                     logger( f"Double-check space after xref in {lvESFMFilename} {lineNumber}: '{line}'" )
@@ -365,6 +366,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
                 assert '≈ ' not in line, f"Unexpected space after ≈ in {rvESFMFilename} {lineNumber}: '{line}'"
                 for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
                     assert line.count( f'\\{characterMarker} ') == line.count( f'\\{characterMarker}*'), f"{characterMarker} marker mismatch in {rvESFMFilename} {lineNumber}: '{line}'"
+                assert '\\nd \\nd ' not in line, f"Double \\nd in {rvESFMFilename} {lineNumber}: '{line}'"
                 if '\\x* ' in line: # this can be ok if the xref directly follows other text
                     logger = logging.critical if ' \\x ' in line else logging.warning
                     logger( f"Double-check space after xref in {rvESFMFilename} {lineNumber}: '{line}'" )
@@ -410,6 +412,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
             if BBB=='ACT': newESFMtext = newESFMtext.replace( ' 12Z¦', ' 120¦' ) # Avoided false alarm
             illegalWordLinkRegex2Match = illegalWordLinkRegex2.search( newESFMtext)
             assert not illegalWordLinkRegex2Match, f"illegalWordLinkRegex2 failed before saving {BBB} with '{newESFMtext[illegalWordLinkRegex2Match.start()-5:illegalWordLinkRegex2Match.end()+5]}'" # Don't want double-ups of wordlink numbers
+            assert '\\nd \\nd ' not in newESFMtext, f"doubled \\nd check failed before saving {BBB} with '{newESFMtext[newESFMtext.index('\\nd \\nd ')-5:newESFMtext.index('\\nd \\nd ')+25]}'"
             with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
                 esfmFile.write( newESFMtext )
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Did {bookSimpleListedAdds:,} simple listed adds, {bookProperNounAdds:,} proper noun adds, {bookFirstPartMatchedAdds:,} first part adds and {bookManualMatchedAdds:,} manual adds for {BBB}." )
