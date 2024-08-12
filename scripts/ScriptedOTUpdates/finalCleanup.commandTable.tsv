@@ -6,8 +6,8 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 									DOM¦			\untr DOM¦\untr*	makeDOMuntr	Mark DOM as untranslatable (into English)
 
 # Mark YHWH as divine name
-									Yahweh¦			\nd YHWH¦\nd*	makeYahweh_nd	Mark YHWH as divine name
 									YHWH¦			\nd YHWH¦\nd*	makeYHWH_nd	Mark YHWH as divine name
+									Yahweh¦			\nd YHWH¦\nd*	makeYahweh_nd	Mark YHWH as divine name
 
 # Remove inserted word indicators
 #									=			_	replaceEquals	Replace = morpheme divider with underlines
