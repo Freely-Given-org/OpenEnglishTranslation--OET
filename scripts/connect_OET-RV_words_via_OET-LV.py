@@ -65,7 +65,7 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2024-08-12' # by RJH
+LAST_MODIFIED_DATE = '2024-08-19' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.70'
@@ -1012,6 +1012,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Lydda', 'Ludda'),('Lydda', 'Ludda/Lod'),
             ('Macedonia', 'Makedonia'),
             ('Manasseh', 'Manassaʸs'),('Manasseh', 'Manassaʸs/Mənashsheh'),('Menashsheh', 'Mənashsheh'),
+            ('Manoah', 'Mānōaḩ'),
             ('Maria', 'Maria'),('Maria', 'Maria/Miryām'),
             ('Media', 'Maʸdia'),
             ('Midian', 'Midyān'),
@@ -1035,6 +1036,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Sapphira', 'Sapfeiraʸ'),
             ('Sardis', 'Sardeis'),
             ('Saul', 'Saulos'),
+            ('Shimson', 'Shimshōn'),
             ('Sidon', 'Sidōn'),('Sidon', 'Sidōn/Tsīdōn'),
             ('Silas', 'Silouanos'),
             ('Simeon', 'Shimˊōn'),
