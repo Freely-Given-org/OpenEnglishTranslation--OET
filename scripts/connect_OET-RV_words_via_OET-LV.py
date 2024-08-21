@@ -1025,7 +1025,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Manoah', 'Mānōaḩ'),('Manoah’s', 'Mānōaḩ'),
             ('Maria', 'Maria'),('Maria', 'Maria/Miryām'),
             ('Media', 'Maʸdia'),
-            ('Micah', 'Mīkāhū'),
+            ('Micah', 'Mīkāhū'),('Micah', 'Mīkāh'),
             ('Midian', 'Midyān'),
             ('Mitsrayim', 'Miʦrayim/(Egypt)'),
             ('Mt', 'Mount'),
