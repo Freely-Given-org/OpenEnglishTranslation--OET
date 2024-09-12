@@ -1,4 +1,4 @@
-\id GEN - Open English Translation—Readers’ Version (OET-RV) v0.1.03
+\id GEN - Open English Translation—Readers’ Version (OET-RV) v0.1.10
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 GEN
@@ -24,7 +24,7 @@
 \io1 The tower at Babel \ior 11:1-9\ior*
 \io1 The accounts of Shem through to Abraham \ior 11:10-32\ior*
 \io1 The Hebrew patriarchs: Abraham, Yitshak, and Yacob \ior 12:1–35:29\ior*
-\io1 The descendants of Esau \ior 36:1-43\ior*
+\io1 The descendants of Esaw (Esau) \ior 36:1-43\ior*
 \io1 Yosef and his brothers \ior 37:1–45:28\ior*
 \io1 The Hebrews in Egypt \ior 46:1–50:26\ior*
 \rem This is still a very early look into the unfinished text of the \em Open English Translation\em* of the Bible. Please double-check the text in advance before using in public.
@@ -77,7 +77,7 @@
 \s1 The garden at Eden
 \p
 \v 4 What follows tells\f + \fr 2:4 \ft This little formula is sometimes known as a ‘toledoth’ (or ‘tōlədōt’, from the Hebrew word) and seems to mark a new section, but it’s debated whether this part belongs at the bottom of the previous section, or at the top of the following section. We’re assuming the later here.\f* \add more details about\add* the history of what God did when he created the heavens and the earth:
-\p During the time when Yahweh God\f + \fr 2:4 \ft This is the first occurrence of the Hebrew letters ‘יהוה’ (YHWH) in the Bible, which we find out later (in Exodus 3, also compiled by Moses) is God’s actual name. Although the vowels which go with those four consonants have been lost over the millenia, most scholars believe ‘Yahweh’ to be the best guess that we can make. (It’s certainly NOT ‘Jehovah’, which was a historical mistake made by confusing the vowels of two different words.) Some older translations use \sc LORD\sc* which is NOT a translation of ‘יהוה’ (which means ‘I am’), but which represents confusion over the more recent Jewish (but non-Biblical) custom of not pronouncing God’s name (and which makes one wonder what’s the use of telling people your name if they’re then not allowed to use it).\f* made the earth and the heavens,
+\p During the time when Yahweh God\f + \fr 2:4 \ft This is the first occurrence of the Hebrew letters ‘יהוה’ (YHWH) in the Bible, which we find out later (in Exodus 3, also compiled by Mosheh/Moses) is God’s actual name. Although the vowels which go with those four consonants have been lost over the millenia, most scholars believe ‘Yahweh’ to be the best guess that we can make. (It’s certainly NOT ‘Jehovah’, which was a historical mistake made by confusing the vowels of two different words.) Some older translations use \sc LORD\sc* which is NOT a translation of ‘יהוה’ (which means ‘I am’), but which represents confusion over the more recent Jewish (but non-Biblical) custom of not pronouncing God’s name (and which makes one wonder what’s the use of telling people your name if they’re then not allowed to use it).\f* made the earth and the heavens,
 \v 5 there weren’t yet any bushes growing on the earth, and no plants had yet sprung up in the fields, because Yahweh God had not yet made it rain, and nor were there any people yet to till the ground.
 \v 6 However, a mist came up from the ground and watered the entire surface of the land.
 \p
@@ -123,7 +123,7 @@
 \v 4 But the serpent said to the woman, “It’s not definite that you’ll die.
 \v 5 Actually, God knows that as soon as you eat fruit from that tree, you’ll understand new things, so that you will know \add what’s\add* right and \add what’s\add* wrong just like God does.”
 \p
-\v 6 The woman saw that the tree’s \add fruit looked\add* good to eat and that the tree itself was very atractive, plus she wanted \add to eat\add* the fruit so that it would make her wise. So she picked some of the fruit and ate it and she also gave \add some of it\add* to her husband \add who was there\add* with her, and he ate it \add too\add*.
+\v 6 The woman saw that the tree’s \add fruit looked\add* good to eat and that the tree itself was very attractive, plus she wanted \add to eat\add* the fruit so that it would make her wise. So she picked some of the fruit and ate it and she also gave \add some of it\add* to her husband \add who was there\add* with her, and he ate it \add too\add*.
 \v 7 \add Immediately\add* they both had new understanding and they felt their nakedness. So they sewed \add some\add* fig leaves together and made skirts for themselves.
 \p
 \v 8 \add Late that afternoon,\add* during the cool time of the day, the man and his wife heard Yahweh God’s voice as he walked in the garden, but they hid from him behind some trees in the garden,
@@ -192,7 +192,7 @@
 \v 6 Then Yahweh said to Kayin, “Why are you so angry? And why are you frowning like that?
 \v 7 If you do what’s right, won’t you be honoured? But if you don’t do what’s right, sin is crouching in the doorway wanting to have you, but you have the control over it.”
 \p
-\v 8 \add One day,\add* Kayin spoke to his brother Abel when they were \add out\add* in the field, and then Kayin attacked him and killed him.\x + \xo 4:8: \xt Mat 23:35; Luk 11:51; 1Jn 3:12.\x*
+\v 8 \add One day,\add* Kayin spoke to his brother Abel when they were \add out\add* in the field, and then Kayin attacked him and killed him.\x + \xo 4:8: \xt Mat 23:35; Luk 11:51; 1Yhn 3:12.\x*
 \p
 \v 9 \add Later\add* Yahweh asked Kayin, “Where’s your brother Abel?”
 \p “I don’t know,” he replied, “It’s not my job to look after my brother.”
@@ -413,7 +413,7 @@
 \p
 \v 2 Yafet’s (Japheth’s) sons were Gomer, Magog, Madai, Yavan, Tubal, Meshech, and Tiras.
 \v 3 Gomer’s sons were Ashkenaz, Rifath, and Togarmah.
-\v 4 Yavan’s sons were Elishah and Tarshish, and Kittim\f + \fr 10:1 \ft These names ending with ‘im’ (the Hebrew plural) are possibly the names of the ensuing \em tribes\em* (e.g., ‘Kittites’) and not the individuals. (Similarly for v13-14.)\f* and Dodanim.
+\v 4 Yavan’s sons were Elishah and Tarshish, and Kittim\f + \fr 10:1 \ft These names ending with ‘-im’ (the Hebrew plural) are possibly the names of the ensuing \em tribes\em* (e.g., ‘Kittites’) and not the individuals. (Similarly for v13-14.)\f* and Dodanim.
 \v 5 From \add all\add* those \add descendants\add*, people spread out into areas near the coast, each group with their own language, and with \add all\add* the clans making up their nations.
 \s2 Ham’s descendants
 \p
@@ -422,7 +422,7 @@
 \v 8 Cush was \add also\add* the father of Nimrod who became a mighty \add warrior\add* on the earth.
 \v 9 Nimrod also became a terrific hunter \add noticed\add* by Yahweh, so people said, “Like Nimrod, a terrific hunter \add noticed\add* by Yahweh.”
 \v 10 His kingdom began in \add the cities of\add* Babel, Erech, Accad, and Calneh, \add all\add* in the Shinar region.
-\v 11 From that area he \add extended\add* to Asshur\f + \fr 10:11 \ft Known to us as ‘Assyria’.\f* where he built \add the cities of\add* Nineveh, Rehoboth-Ir, Calah,
+\v 11 From that area he \add extended\add* to Asshur\f + \fr 10:11 \ft Known to us as ‘Assyria’.\f* where he built \add the cities of\add* Nineveh, Rehobot-Ir, Calah,
 \v 12 and Resen, between Nineveh and the large city of Calah.
 \p
 \v 13 Mitsrayim fathered Ludim, Anamim, Lehabim, Naftuhim,
@@ -515,7 +515,7 @@
 \v 9 before continuing \add south down\add* toward the Negev \add desert\add*.
 \s1 Abram goes to Egypt
 \p
-\v 10 \add One time when\add* there was \add a drought causing\add* a severe food shortage, Abram \add and his household\add* travelled \add west\add* across to Egypt to stay there.
+\v 10 \add One time when\add* there was \add a drought causing\add* a severe food shortage, Abram \add and his household\add* travelled \add west\add* across to Egypt \add (Mitsrayim)\add*to stay there.
 \v 11 Just before they arrived in Mitsrayim, \add Abram\add* said to his wife Sarai, “Listen, you’re a very beautiful woman,
 \v 12 so when the Egyptians see you they’ll say, ‘This is his wife,’ and they’ll kill me but let you live.
 \v 13 \add Please\add* tell them that you’re my sister so they’ll treat me well because of you and let me live.”\x + \xo 12:13: \xt Gen 20:2; 26:7.\x*
@@ -713,7 +713,7 @@
 \v 10 “I’ll definitely return to you here \add in the spring next year\add*,” the visitor continued. “You see, your wife Sarah will have a son \add then\add*.”\x + \xo 18:10: \xt Rom 9:9.\x*
 \p Now Sarah was at the opening of the tent listening, but the visitor was facing the other direction.
 \v 11 Abraham and Sarah were pretty old \add at this stage\add* and Sarah had passed the age of being able to have children,
-\v 12 so\add when she’d heard that\add*, she laughed to herself and said, “Now that \add my body’s\add* worn out, will I have the pleasure \add of a child\add*? \add Even\add* my master’s \add too\add* old.”\x + \xo 18:12: \xt 1Pe 3:6.\x*
+\v 12 so \add when she’d heard that\add*, she laughed to herself and said, “Now that \add my body’s\add* worn out, will I have the pleasure \add of a child\add*? \add Even\add* my master’s \add too\add* old.”\x + \xo 18:12: \xt 1Pe 3:6.\x*
 \p
 \v 13 Then Yahweh spoke to Abraham, “Why is it that Sarah laughed, saying, ‘Will I really have a child when I am old?’
 \v 14 Is anything too hard for Yahweh? I’ll return \add here\add* to you \add next year in the spring\add* and Sarah will have a son.”\x + \xo 18:14: \xt Luk 1:37.\x*
@@ -932,7 +932,7 @@
 \s1 Sarah’s death and burial
 \p
 \v 1 Sarah went on to be 127 years old
-\v 2 when she died in \add the city of\add* Kiriath Arba (now \add called\add* Hebron) in the Canaan region. Abraham went in \add by her bed\add* to weep and mourn for her.
+\v 2 when she died in \add the city of\add* Kiriat-Arba (now \add called\add* Hebron) in the Canaan region. Abraham went in \add by her bed\add* to weep and mourn for her.
 \p
 \v 3 \add After a time,\add* Abraham got up from beside his dead \add wife\add* and he spoke to Het’s sons, \add requesting\add*,
 \v 4 “I’m a foreigner and just staying among you. Give me property for a burial place \add on your land\add* so that I can bury my dead \add wife\add*.”\x + \xo 23:4: \xt Heb 11:9,13; Acts 7:16.\x*
@@ -1158,46 +1158,46 @@
 \p
 \v 32 That \add very\add* day, Yitshak’s slaves came and \add updated\add* him about the well that they had \add just been\add* digging and told him, “We’ve found water.”
 \v 33 So \add Yitshak\add* named \add the well\add* ‘Shibah’ \add (which sounds like the Hebrew word meaning ‘promise’)\add*, so that’s why that city is named ‘Beersheba’ \add (meaning ‘well of the promise’)\add* to this day.
-\s1 Esau marries outsiders
+\s1 Esaw marries outsiders
 \p
-\v 34 When Esau was forty years old, he married \add two\add* Hittite women: Be’eri’s daughter Judith and Elon’s daughter Basemat,
+\v 34 When Esaw was forty years old, he married \add two\add* Hittite women: Be’eri’s daughter Judith and Elon’s daughter Basemat,
 \v 35 \add but\add* this brought grief to his parents Yitshak and Rebekah.
 \c 27
 \s1 Yitshak’s tricked into blessing Yacob
 \p
-\v 1 When Yitshak grew old and could no longer see, he called his older son Esau and said to him, “My son.”
-\p “\add I’m here\add*,” Esau replied.
+\v 1 When Yitshak grew old and could no longer see, he called his older son Esaw and said to him, “My son.”
+\p “\add I’m here\add*,” Esaw replied.
 \p
 \v 2 “Please listen,” Yitshak \add continued\add*, “I’m old and don’t know how long I’ve got before I die.
 \v 3 So please take your weapons—your quiver, and your bow—and go out into the field\add s\add* and hunt game for me
 \v 4 and cook me a tasty meal in the way that I love it, and bring it to me so I can eat it, so that \add I\add* can bless you before I die.”
 \p
-\v 5 \add Now\add* Rebekah had been listening while Yitshak spoke to Esau. Then Esau went \add out\add* to the field\add s\add* to hunt game and bring it back.
-\v 6 \add Meanwhile\add* Rebekah said to her son Yacob, “Listen, I heard your father speaking to your brother Esau, saying,
+\v 5 \add Now\add* Rebekah had been listening while Yitshak spoke to Esaw. Then Esaw went \add out\add* to the field\add s\add* to hunt game and bring it back.
+\v 6 \add Meanwhile\add* Rebekah said to her son Yacob, “Listen, I heard your father speaking to your brother Esaw, saying,
 \v 7 ‘Get \add some\add* game \add meat\add* for me and prepare me a tasty meal so that I can eat it, and \add then\add* I can bless you in Yahweh’s presence before I die.’
 \v 8 So now \add Yacob\add*, listen to what I tell you:
 \v 9 Go \add out\add* to the flock and get me two of the \add best\add* young goats so that I can prepare a tasty meal from them that your father loves.
 \v 10 Then you \add can\add* take it \add in\add* to your father, and \add after\add* he’s eaten it he’ll bless you before he dies.”
 \p
-\v 11 “Look,” Yacob said to his mother, “My brother Esau is \add very\add* hairy, whereas \add my skin\add* is smooth.
+\v 11 “Look,” Yacob said to his mother, “My brother Esaw is \add very\add* hairy, whereas \add my skin\add* is smooth.
 \v 12 What if my father touches me? Then he’ll think of me as a deceiver and \add he’ll\add* curse me rather than bless me.”
 \p
 \v 13 “Let your curse be on me, my son,” his mother \add replied\add*, “Just \add do\add* what I said and go get \add the young goats\add* for me.”
 \v 14 \add So\add* he went and \add slaughtered them\add* and brought \add them\add* to his mother. Then \add she\add* prepared tasty food the way his father loved \add it\add*.
-\v 15 \add She then\add* got Esau’s best clothes that were in the house and \add got\add* her younger son Yacob to put \add them\add* on,
+\v 15 \add She then\add* got Esaw’s best clothes that were in the house and \add got\add* her younger son Yacob to put \add them\add* on,
 \v 16 then she \add tied\add* the skins of the young goats \add over\add* his hands and \add around\add* the smooth part of his neck.
 \p
 \v 17 Then she \add handed\add* the tasty food and the bread to Yacob,
 \v 18 and he went \add in\add* to his \add elderly\add* father and said, “My father.”
 \p “I’m here,” \add he\add* said, “Which son are you?”
-\v 19 “I’m your oldest son Esau,” Yacob\add replied\add* to his father. “I’ve done what you told me. Please get up, \add and come and\add* sit up and eat some of my game, so that you’ll bless me.”
+\v 19 “I’m your oldest son Esaw,” Yacob\add replied\add* to his father. “I’ve done what you told me. Please get up, \add and come and\add* sit up and eat some of my game, so that you’ll bless me.”
 \v 20 “How did you find it so quickly, my son?” Yitshak \add asked\add*.
 \p “Because your God Yahweh \add helped me when I went out hunting\add*,” Yacob \add answered\add*.
 \p
-\v 21 Then Yitshak said to Yacob, “Please come close so that I can touch you, my son, and \add to be sure\add* whether you’re really my son Esau or not.”
-\v 22 So Yacob went close to his father and \add Yitshak\add* felt \add his skin\add* and said \add to himself\add*, “It’s Yacob’s voice, but \add these\add* are \add definitely\add* Esau’s hands.”
-\v 23 So he didn’t recognise \add that it was Yacob\add*, because his hands were hairy like Easu’s hands, so he was about to bless him
-\v 24 \add but asked once more,\add* “Are you really my son Esau?”
+\v 21 Then Yitshak said to Yacob, “Please come close so that I can touch you, my son, and \add to be sure\add* whether you’re really my son Esaw or not.”
+\v 22 So Yacob went close to his father and \add Yitshak\add* felt \add his skin\add* and said \add to himself\add*, “It’s Yacob’s voice, but \add these\add* are \add definitely\add* Esaw’s hands.”
+\v 23 So he didn’t recognise \add that it was Yacob\add*, because his hands were hairy like Esaw’s hands, so he was about to bless him
+\v 24 \add but asked once more,\add* “Are you really my son Esaw?”
 \p “\add Yes,\add* I am,” Yacob answered.
 \p
 \v 25 \add So Yitshak told him\add*, “Bring the food \add here\add* and I’ll eat some of my son’s game, so that my \add I can then\add* bless you.” \add So Yacob\add* took it to him and he ate, and then he brought wine to him and he drank.
@@ -1217,25 +1217,25 @@
 \q2 and may your mother’s sons bow down to you.
 \q1 \add May\add* those \add who\add* curse you be cursed,\x + \xo 27:29: \xt Gen 12:3.\x*
 \q2 and \add may\add* those \add who\add* bless you be blessed.”
-\s1 Esau begs for a secondary blessing
+\s1 Esaw begs for a secondary blessing
 \p
-\v 30 Then just as Yitshak had finished blessing Yacob, and as Yacob had only just gone out from his father’s presence, his brother Esau his brother \add returned\add* from his hunting.
+\v 30 Then just as Yitshak had finished blessing Yacob, and as Yacob had only just gone out from his father’s presence, his brother Esaw his brother \add returned\add* from his hunting.
 \v 31 Then he too prepared \add some\add* tasty food and brought it \add in\add* to his father and said, “Let my father get up and eat from the game that his son \add hunted\add* so that you can bless me.”
 \p
 \v 32 But Yitshak asked him, “Which son \add are\add* you?”
-\p “I’m your oldest son Esau.” he \add answered\add*.
+\p “I’m your oldest son Esaw.” he \add answered\add*.
 \p
 \v 33 Then Yitshak \add started to\add* trembled \add badly\add* and he said, “Then who was it that hunted game and brought it to me? I ate it all just before you came \add in\add*, and I blessed \add that man\add* and indeed, he’ll be blessed.”
 \p
-\v 34 When Esau heard \add that\add*, then he let out a very loud and exceedingly bitter wail, and \add then begged\add* his father, “Bless me too, my father.”
+\v 34 When Esaw heard \add that\add*, then he let out a very loud and exceedingly bitter wail, and \add then begged\add* his father, “Bless me too, my father.”
 \p
 \v 35 But Yitshak replied, “Your brother came \add in and deceived me\add* and he’s taken your blessing!”
 \p
-\v 36 “\add Yes,\add* his name Yacob \add (meaning ‘deceiver’) suits him exactly!\add*”\x + \xo 27:36: \xt Gen 25:29-34.\x* said Esau. “\add First\add* he took my inheritance and man, now he’s also taken my blessing!” Then he \add asked\add*, “Haven’t you \add at least\add* saved a blessing for me?”
+\v 36 “\add Yes,\add* his name Yacob \add (meaning ‘deceiver’) suits him exactly!\add*”\x + \xo 27:36: \xt Gen 25:29-34.\x* said Esaw. “\add First\add* he took my inheritance and man, now he’s also taken my blessing!” Then he \add asked\add*, “Haven’t you \add at least\add* saved a blessing for me?”
 \p
 \v 37 But Yitshak replied, “Listen, I’ve made him master over you, and I’ve given all his brothers to him as slaves. And I’ve sustained him with grain and wine. So then, what \add else\add* can I do for you, my son?”
 \p
-\v 38 “Did you \add only\add* have \em one\em* blessing that you \add could give\add*, my father? Esau \add asked\add*. “Bless me too, my father!” Then Esau sobbed loudly.\x + \xo 27:38: \xt Heb 12:17.\x*
+\v 38 “Did you \add only\add* have \em one\em* blessing that you \add could give\add*, my father? Esaw \add asked\add*. “Bless me too, my father!” Then Esaw sobbed loudly.\x + \xo 27:38: \xt Heb 12:17.\x*
 \p
 \v 39 Then his father Yitshak responded and said to him,\x + \xo 27:39-40: \xt Heb 11:20.\x*
 \q1 “Listen, you \add and your descendants\add* will live
@@ -1247,9 +1247,9 @@
 \q1 But when you become restless
 \q2 you’ll \add all\add* break away from serving them.
 \p
-\v 41 \add From that time onwards,\add* Esau hated Yacob because of the blessing that \add their\add* father had blessed him with, and Esau said \add to himself\add*, “My father’s \add funeral\add* can’t be that far away—\add after that\add* I’ll kill my brother Yacob.”
+\v 41 \add From that time onwards,\add* Esaw hated Yacob because of the blessing that \add their\add* father had blessed him with, and Esaw said \add to himself\add*, “My father’s \add funeral\add* can’t be that far away—\add after that\add* I’ll kill my brother Yacob.”
 \p
-\v 42 But Rebekah got to hear about Esau’s \add plans\add*, so she sent for her younger son Yacob and told him, “Listen, your brother Esau is \add coping with what happened by\add* planning to kill you.
+\v 42 But Rebekah got to hear about Esaw’s \add plans\add*, so she sent for her younger son Yacob and told him, “Listen, your brother Esaw is \add coping with what happened by\add* planning to kill you.
 \v 43 So my son, listen to what I’m saying: for your own sake, \add pack\add* up and flee to my brother Lavan’s place in Haran
 \v 44 and stay with him for a \add while\add* until your brother \add cools down\add*.
 \v 45 When \add he’s\add* no longer angry with you and forgets what you did to him, then I’ll send for you from there \add so you can return here\add*. I \add don’t want to\add* lose both of you on the \add same\add* day?”
@@ -1262,18 +1262,18 @@
 \v 2 \add Pack\add* up and go to Paddan Aram—to the home of your mother’s father Bethuel and get yourself a wife from there—from the daughters of your mother’s brother Lavan.
 \v 3 And may the powerful God bless you and make you fruitful and multiply you so that you become a community of peoples.
 \v 4 May he give the \add same\add* blessing of Abraham to you—to you and to your offspring with you—so that you will own the land where you’ve been staying and which God gave to Abraham.”\x + \xo 28:4: \xt Gen 17:4-8.\x*
-\v 5 Then Yitshak sent Yacob \add away\add*, and he went to Paddan Aram—to Lavan, the son of Bethuel the Aramean and the brother of Yacob and Esau’s mother Rebekah.
-\s1 Esau adds a non-Canaanite wife
+\v 5 Then Yitshak sent Yacob \add away\add*, and he went to Paddan Aram—to Lavan, the son of Bethuel the Aramean and the brother of Yacob and Esaw’s mother Rebekah.
+\s1 Esaw adds a non-Canaanite wife
 \p
-\v 6 Now Esau noticed that Yitshak had blessed Yacob and sent him to Paddan Aram to take a wife for himself from there. \add He’d also noticed\add* that when \add Yitshak\add* had blessed him, he’d instructed him not to take a wife from the Canaanite girls,
+\v 6 Now Esaw noticed that Yitshak had blessed Yacob and sent him to Paddan Aram to take a wife for himself from there. \add He’d also noticed\add* that when \add Yitshak\add* had blessed him, he’d instructed him not to take a wife from the Canaanite girls,
 \v 7 and that Yacob had listened to his parents and travelled to Paddan Aram.
-\v 8 \add As a result,\add* Esau \add realised\add* that his father wasn’t happy about the Canaanite girls
+\v 8 \add As a result,\add* Esaw \add realised\add* that his father wasn’t happy about the Canaanite girls
 \v 9 so \add he\add* went to Ishma’el and he took Mahalath as an additional wife. She was the daughter of Abraham’s son Ishmael, and was the sister of Nevayot.
 \s1 Yacob’s vision at Beyt-el
 \p
 \v 10 \add Meanwhile,\add* Yacob had left Beersheba and was enroute to Haran.
 \v 11 \add One night\add* after he’d stopped when the sun had gone down, he laid down in that place and used one of the stones there to put under his head \add for a pillow\add*.
-\v 12 \add While he was sleeping,\add* he had a dream, and wow, a stairway was set up on the earth and its top reached to the heavens, and look, God’s messengers were ascending and descending on it.\x + \xo 28:12: \xt Jn 1:51.\x*
+\v 12 \add While he was sleeping,\add* he had a dream, and wow, a stairway was set up on the earth and its top reached to the heavens, and look, God’s messengers were ascending and descending on it.\x + \xo 28:12: \xt Yhn 1:51.\x*
 \v 13 And look, Yahweh was standing above it and he said, “I am Yahweh, the God of Abraham your grandfather and the God of Yitshak. I will give the land that you are lying on to you and to your descendants\x + \xo 28:13: \xt Gen 13:14-15.\x*
 \v 14 and \add they\add* will be \add as numerous as\add* dust \add particles\add*, and you’ll \add all\add* spread out to the west and to the east and to the north and to the south. And all the families of the earth will be blessed \add through\add* you and your offspring.\x + \xo 28:14: \xt Gen 12:3; 22:18.\x*
 \v 15 \add So\add* listen, I’m with you and I’ll watch over you everywhere you go. I’ll bring you back to this land because I won’t leave you until I’ve done what I told you.”
@@ -1397,7 +1397,7 @@
 \p
 \v 34 “Ok then, let’s \add do it your way\add*.” Lavan \add agreed\add*.
 \v 35 \add But\add* that \add very\add* day, he removed the male goats that were streaked and spotted, and all the female goats that were speckled and spotted, any that had white on it, and all the dark-coloured ones among the lambs. Then he gave them to his sons \add to look after\add*,
-\v 36 and \add they took them\add* a three-day journey \add away from where\add* Yacob \add was\add*, \add so\add* Yacob was\add left just\add* tending \em the rest\em* of Lavan’s flocks.
+\v 36 and \add they took them\add* a three-day journey \add away from where\add* Yacob \add was\add*, \add so\add* Yacob was \add left just\add* tending \em the rest\em* of Lavan’s flocks.
 \p
 \v 37 Then Yacob \add got some\add* freshly cut branches of poplar and almond and plane trees, and peeled white stripes in them \add by\add* exposing the white that was inside the branches.
 \v 38 Then he put the branches that he had peeled in the water troughs where the flocks \add would see them when they\add* came to drink, and they mated when they came to drink.
@@ -1474,7 +1474,7 @@
 \v 47 Lavan gave the pile \add the Aramaic name\add* ‘Jegar Sahadutha’ \add (which means ‘pile that reminds’)\add* while Yacob gave it \add the Hebrew name\add* ‘Gale’ed’ \add (which has the same meaning)\add*.
 \p
 \v 48 Then Lavan said, “This pile is a witness \add of the agreement\add* between me and you today.” (That’s why he’d named it Galeed.)
-\v 49 It’s also \add named\add* ‘Mizpah’ \add (which means ‘watchtower’)\add*, because he said, “May Yahweh watch between me and you when we are hidden one from the other.
+\v 49 It’s also \add named\add* ‘Mitspah’ \add (which means ‘watchtower’)\add*, because he said, “May Yahweh watch between me and you when we are hidden one from the other.
 \v 50 If you \add mistreat\add* my daughters, or if you take \add other\add* wives besides my daughters, even though there’s not someone \add there to see it\add*, listen, God \add will be\add* a witness between me and you.”
 \v 51 Then Lavan said to Yacob, “Look at this pile \add of stones\add*, and look at the pillar which I set up between me and you.
 \v 52 This pile is a witness and the pillar is a witness that I won’t go past these to you, and that you won’t go past these to me to do harm.
@@ -1486,28 +1486,28 @@
 \p
 \v 1 Then Yacob \add continued on\add* his way \add with his family and flocks\add*, and \add some\add* of God’s messengers met him
 \v 2 and when he saw them, Yacob said, “This \add must be\add* God’s army camp.” So he named that place ‘Mahanaim’ \add (which means ‘two camps’)\add*.
-\s1 Yacob sends gifts ahead for Esau
+\s1 Yacob sends gifts ahead for Esaw
 \p
-\v 3 Then Yacob sent messengers ahead of him to his brother Esau in the Se’ir region in the country of Edom,
-\v 4 instructing them, “This is what you’ll say to my master, to Esau: ‘This is what your servant Yacob says, “I have been staying with \add Uncle\add* Lavan and have remained there until now.
+\v 3 Then Yacob sent messengers ahead of him to his brother Esaw in the Se’ir region in the country of Edom,
+\v 4 instructing them, “This is what you’ll say to my master, to Esaw: ‘This is what your servant Yacob says, “I have been staying with \add Uncle\add* Lavan and have remained there until now.
 \v 5 \add Now\add* I have cattle and donkeys, flocks, and male and female slaves. And I’ve sent \add these messengers\add* to speak with my master, so that I’ll find favour in your eyes.” ’ ”
 \p
-\v 6 \add In due course\add* the messengers returned to Yacob, saying, “We went to your brother Esau and \add now\add* he’s coming to meet you along with his four hundred men!”
+\v 6 \add In due course\add* the messengers returned to Yacob, saying, “We went to your brother Esaw and \add now\add* he’s coming to meet you along with his four hundred men!”
 \v 7 \add This made\add* Yacob very scared and distressed, so he divided the people who were with him and the flocks and the herds and the camels into two groups,
-\v 8 \add reasoning\add*, “If Esau comes and attacks one camp, then the camp that’s left can escape.”
+\v 8 \add reasoning\add*, “If Esaw comes and attacks one camp, then the camp that’s left can escape.”
 \p
 \v 9 Then \add he prayed\add*, “Yahweh, God of my grandfather Abraham, and God of my father Yitshak, who said to me, ‘Return to your land and to your relatives, and I will cause things to prosper with you,’
 \v 10 I’m unworthy of all the kindnesses and of all the faithfulness that you have shown \add me\add* your slave, because I crossed this Jordan \add River\add* with \add only\add* my staff, but now I’ve become two camps.
-\v 11 Please save me from my brother Esau, because I’m afraid that he’ll come and attack me and the mothers with the children.
+\v 11 Please save me from my brother Esaw, because I’m afraid that he’ll come and attack me and the mothers with the children.
 \v 12 But you said,\x + \xo 32:12: \xt Gen 22:17.\x* ‘I will surely cause things to prosper with you, and I’ll make your descendants as \add numerous as\add* the sand \add grains on the beach\add* which are too many to be counted.’ ”
 \p
-\v 13 Then he stayed there for that night and he \add selected\add* gifts for his brother Esau from what he had with him:
+\v 13 Then he stayed there for that night and he \add selected\add* gifts for his brother Esaw from what he had with him:
 \v 14 two hundred female and twenty male goats, two hundred ewes and twenty rams,
 \v 15 thirty milk camels with their young, forty cows and ten bulls, and twenty female and ten male donkeys.
 \v 16 Then he \add handed them over\add* to his slaves, each herd by itself, and he \add told them\add*, “Go ahead of me \add one by one\add*, and \add keep a\add* space between each herd.”
-\v 17 And he instructed the first one, saying, “When Esau my brother meets you and asks you, saying, ‘Who do you belong to, and where are you going? And who do those animals belong to?’
-\v 18 then you \add should answer\add*, ‘They belong to your servant Yacob. They are a gift sent to my master Esau. \add In fact, he’s coming along\add* behind us.’ ”
-\v 19 Then \add Yacob\add* also instructed the second and third slaves, as well as everyone who followed behind the herds, \add telling them\add*, “Say the same thing to Esau when you find him,
+\v 17 And he instructed the first one, saying, “When Esaw my brother meets you and asks you, saying, ‘Who do you belong to, and where are you going? And who do those animals belong to?’
+\v 18 then you \add should answer\add*, ‘They belong to your servant Yacob. They are a gift sent to my master Esaw. \add In fact, he’s coming along\add* behind us.’ ”
+\v 19 Then \add Yacob\add* also instructed the second and third slaves, as well as everyone who followed behind the herds, \add telling them\add*, “Say the same thing to Esaw when you find him,
 \v 20 and also say, ‘Look, your servant Yacob is behind us.’ ” \add Yacob was thinking\add*, “I’ll \add cheer him up\add* with the gifts that are going ahead of me, and after that, when I see \add him in person\add*, perhaps he’ll \add accept me\add*.”
 \v 21 \add So\add* the gifts went ahead of him, and he himself stayed in the camp for that night.
 \s1 Yacob gets renamed after fighting at Penu’el
@@ -1530,38 +1530,38 @@
 \v 31 And the sun rose above him as he passed through Penu’el, and he was limping because of his hip.
 \v 32 That’s why Israelis don’t eat the muscle of the tendon that is on the hip socket to this day, because \add the man\add* touched the socket of Yacob’s hip on the muscle of the tendon.
 \c 33
-\s1 Esau and Yacob meet peacefully
+\s1 Esaw and Yacob meet peacefully
 \p
-\v 1 Then Yacob \add raised his head\add* and looked \add ahead\add*, and wow, Esau was coming \add towards him\add* along with \add his\add* four hundred men. Then \add Yacob quickly\add* divided the children among Le’ah and Rahel and \add their\add* two female slaves,
+\v 1 Then Yacob \add raised his head\add* and looked \add ahead\add*, and wow, Esaw was coming \add towards him\add* along with \add his\add* four hundred men. Then \add Yacob quickly\add* divided the children among Le’ah and Rahel and \add their\add* two female slaves,
 \v 2 and he put the slave women and their children first, and then Le’ah and her children after them, and \add finally\add* Rahel and Yosef after them.
 \v 3 Then he himself went ahead of them, and he bowed to the ground seven times as he approached his brother.
-\v 4 \add But\add* Esau ran \add forward\add* to meet him and embraced him and \add threw his arms around\add* his neck and kissed him, and they \add both\add* cried \add together\add*.
-\v 5 Then \add Esau looked up\add* and saw the women and the children, and \add asked\add*, “Who are these \add others\add* with you?”
+\v 4 \add But\add* Esaw ran \add forward\add* to meet him and embraced him and \add threw his arms around\add* his neck and kissed him, and they \add both\add* cried \add together\add*.
+\v 5 Then \add Esaw looked up\add* and saw the women and the children, and \add asked\add*, “Who are these \add others\add* with you?”
 \p “The children that God has graciously given to your servant,” Yacob replied.
 \v 6 Then the \add two\add* female slaves approached with their children, and they bowed down.
 \v 7 \add Next\add* Le’ah also approached with her children, and they bowed down. Then after that, Yosef and Rahel approached, and they bowed down.
 \p
-\v 8 Then \add Esau asked\add*, “What were all these groups that I met?”
+\v 8 Then \add Esaw asked\add*, “What were all these groups that I met?”
 \p “To \add win\add* my master’s favour,” Yacob \add replied\add*.
 \p
-\v 9 “I’ve got plenty, my brother,” said Esau. “\add Keep\add* what belongs to you.”
+\v 9 “I’ve got plenty, my brother,” said Esaw. “\add Keep\add* what belongs to you.”
 \p
 \v 10 “No, please,” Yacob \add insisted\add*. “If I’ve \add won\add* your favour, then take my gifts. Because indeed, I’ve seen you face-to-face, which is like seeing God’s face, and you’ve received me \add favourably\add*.
 \v 11 Please take my \add gifts\add* that were brought to you, because God has been gracious to me and I have \add way more than I need\add*.”
-\p And he urged him, so \add Esau\add* took it
+\p And he urged him, so \add Esaw\add* took it
 \v 12 and said, “\add Ok,\add* let’s get moving and go, and I’ll go ahead of you.”
 \p
 \v 13 But \add Yacob replied\add*, “My master knows that the children are tender plus I have flocks and herds \add with young animals\add*. If they drive them \add harder today\add*, then all the flocks will die.
 \v 14 Please let my master go on before his servant, and I’ll lead them on at my gentle pace—at the pace of the livestock that are ahead of me and at the pace of the children—until I come to my master’s \add place\add* in Se’ir.”
 \p
-\v 15 “\add At least\add* let me leave some of my men with you \add all\add*,” said Esau.
+\v 15 “\add At least\add* let me leave some of my men with you \add all\add*,” said Esaw.
 \p “Why do that?” \add contradicted Yacob\add*. “May my master \add allow me to decide\add*.”
-\v 16 \add So\add* Esau \add and his men\add* started heading \add home\add* to Se’ir,
+\v 16 \add So\add* Esaw \add and his men\add* started heading \add home\add* to Se’ir,
 \v 17 \add but\add* Yacob travelled to Succot \add where he\add* built a house for himself and made shelters for his livestock. That’s why he named the place ‘Succot’ \add (which means ‘shelters’)\add*.
 \s1 Yacob begins to settle at Shekem
 \p
 \v 18 Then Yacob, having come from Paddan Aram, arrived peacefully at the city of Shekem in the Canaan region, and he camped \add outside\add* the city.
-\v 19 \add In due course,\add* he bought the portion of the field where he’d pitched his tents from the sons of Hamor, the father of Shekem, for a hundred \add pieces of silver\add*.\x + \xo 33:19: \xt Josh 24:32; Jn 4:5.\x*
+\v 19 \add In due course,\add* he bought the portion of the field where he’d pitched his tents from the sons of Hamor, the father of Shekem, for a hundred \add pieces of silver\add*.\x + \xo 33:19: \xt Josh 24:32; Yhn 4:5.\x*
 \v 20 He set up an altar there and he named it ‘El Elohe Yisra’el’ \add (which means ‘God, the God of Yisra’el’)\add*.
 \c 34
 \s1 Dinah’s rape leads to a plan
@@ -1608,7 +1608,7 @@
 \c 35
 \s1 God blesses Yacob at Beyt-el
 \p
-\v 1 Then God told Yacob, “\add Pack\add* up and \add move\add* to Beyt-el and settle there, and make an altar there to the God who appeared to you when you were fleeing from your brother Esau.”\x + \xo 35:1: \xt Gen 28:11-17.\x*
+\v 1 Then God told Yacob, “\add Pack\add* up and \add move\add* to Beyt-el and settle there, and make an altar there to the God who appeared to you when you were fleeing from your brother Esaw.”\x + \xo 35:1: \xt Gen 28:11-17.\x*
 \p
 \v 2 \add So\add* Yacob instructed his household and \add everyone\add* with him, “Remove \add any\add* foreign \add idols\add* that are among you, and purify yourselves and change your clothes.
 \v 3 Then \add we’ll leave here\add* and \add make the uphill trip\add* to Beyt-el, and I’ll make an altar there to God, who answered me \add when I was\add* distressed. He’s been with me \add wherever\add* I’ve gone.”
@@ -1616,7 +1616,7 @@
 \p
 \v 5 Then they \add started their journey but\add* and the \add people of\add* the cities around them \add were afraid of Yacob’s God\add* so they didn’t \add attack them\add*.
 \v 6 \add So\add* Yacob and everyone with him \add eventually arrived\add* at Luz in the Canaan region (which is \add now named\add* Beyt-el).
-\v 7 He built an altar there and named the place ‘El Beyt-el’ \add (which means ‘the God of Beyt-el’)\add*, because God had revealed himself to him there when he was fleeing from his brother \add Esau\add*.
+\v 7 He built an altar there and named the place ‘El Beyt-el’ \add (which means ‘the God of Beyt-el’)\add*, because God had revealed himself to him there when he was fleeing from his brother \add Esaw\add*.
 \v 8 Then Rebekah’s nurse Deborah died and was buried under the oak tree below Beyt-el \add so\add* he named \add the place\add* ‘Allon Bakut’ \add (which means ‘oak of weeping’)\add*.
 \p
 \v 9 \add Now that Yacob had left\add* Paddan Aram and \add come back to Beyt-el\add*, God appeared to him \add there\add* again and blessed him
@@ -1646,39 +1646,39 @@
 \v 26 The sons of Leah’s slave women Zilpah were Gad and Asher. Those were \add Yisra’el’s\add* sons who were \add nearly all\add* born in Paddan Aram.
 \s1 Yitshak’s death
 \p
-\v 27 Then \add Yisra’el\add* went VISIT OR LIVE? to his father Yitshak in Mamre (\add also named\add* Kiriath Arba or Hebron), where Abraham and Yitshak had \add lived for a time\add*.\x + \xo 35:27: \xt Gen 13:18.\x*
+\v 27 Then \add Yisra’el\add* went VISIT OR LIVE? to his father Yitshak in Mamre (\add also named\add* Kiriat-Arba or Hebron), where Abraham and Yitshak had \add lived for a time\add*.\x + \xo 35:27: \xt Gen 13:18.\x*
 \v 28 Yitshak lived to be 180 years old.
-\v 29 Then Yitshak, having lived a long and full life, \add breathed his last\add* and died and \add joined his ancestors\add*, and his sons Esau and \add Yisra’el\add* buried him.
+\v 29 Then Yitshak, having lived a long and full life, \add breathed his last\add* and died and \add joined his ancestors\add*, and his sons Esaw and \add Yisra’el\add* buried him.
 \c 36
-\s1 Esau’s descendants
+\s1 Esaw’s descendants
 \r (1 Chr. 1:34-37)
 \p
-\v 1 These are the descendants of Esau (who’s also known as Edom):
-\v 2 Esau had \add married two local women from the Canaan region\add*: Adah (the Hittite Elon’s daughter) and Oholibamah (Anah’s daughter and granddaughter of the Hivite Zibeon)\x + \xo 36:2: \xt Gen 26:34.\x*
+\v 1 These are the descendants of Esaw (who’s also known as Edom):
+\v 2 Esaw had \add married two local women from the Canaan region\add*: Adah (the Hittite Elon’s daughter) and Oholibamah (Anah’s daughter and granddaughter of the Hivite Zibeon)\x + \xo 36:2: \xt Gen 26:34.\x*
 \v 3 and Basemat (Ishmael’s daughter and the sister of Nevayot).\x + \xo 36:3: \xt Gen 28:9.\x*
 \p
-\v 4 Esau’s \add wife\add* Adah gave birth to Elifaz, and Basemat gave birth to Reuel.
-\v 5 Oholibamah gave birth to Jeush and Jalam and Korah. Those were Esau’s sons who were born in the Canaan region.
+\v 4 Esaw’s \add wife\add* Adah gave birth to Elifaz, and Basemat gave birth to Reuel.
+\v 5 Oholibamah gave birth to Jeush and Jalam and Korah. Those were Esaw’s sons who were born in the Canaan region.
 \p
-\v 6 Then Esau took his wives and his sons and daughters and all his household, and his livestock and all his animals and all his possessions that he had acquired in the Canaan region, and he went to a place \add far away\add* from his brother Yisra’el,
+\v 6 Then Esaw took his wives and his sons and daughters and all his household, and his livestock and all his animals and all his possessions that he had acquired in the Canaan region, and he went to a place \add far away\add* from his brother Yisra’el,
 \v 7 because they had too many possessions for them to remain together, and the land they were staying in wasn’t able to support \add both of\add* them because of \add all\add* their livestock.
-\v 8 \add So\add* Esau (\add also known\add* as Edom) settled \add his household\add* in the Se’ir hills.
+\v 8 \add So\add* Esaw (\add also known\add* as Edom) settled \add his household\add* in the Se’ir hills.
 \p
-\v 9 Now these are the \add following\add* generations of Esau, the father of the Edomites in the Se’ir hills:
-\v 10 \add Two of\add* Esau’s sons were Elifaz, who he had with his wife Adah, and Reuel, who he had with his wife Basemat.
+\v 9 Now these are the \add following\add* generations of Esaw, the father of the Edomites in the Se’ir hills:
+\v 10 \add Two of\add* Esaw’s sons were Elifaz, who he had with his wife Adah, and Reuel, who he had with his wife Basemat.
 \p
 \v 11 Elifaz’s sons were Teman, Omar, Zepho and Gatam and Kenaz.
-\v 12 Elifaz and his slave-wife Timna had \add a son they named\add* Amalek. (Elifaz’s sons \add were all\add* grandsons of Esau and his wife Adah.)
-\v 13 Reuel’s sons were Nahat, Zerah, Shammah, and Mizzah. (They were the grandsons of Esau and his wife Basemat.)
-\v 14 Esau and his wife Oholibamah had Jeush, Jalam, and Korah. (\add Oholibamah was\add* the daughter of Anah and the granddaughter of Zibeon.)
+\v 12 Elifaz and his slave-wife Timna had \add a son they named\add* Amalek. (Elifaz’s sons \add were all\add* grandsons of Esaw and his wife Adah.)
+\v 13 Reuel’s sons were Nahat, Zerah, Shammah, and Mizzah. (They were the grandsons of Esaw and his wife Basemat.)
+\v 14 Esaw and his wife Oholibamah had Jeush, Jalam, and Korah. (\add Oholibamah was\add* the daughter of Anah and the granddaughter of Zibeon.)
 \p
-\v 15 These were Esau’s sons \add who became\add* leaders: the sons of Elifaz (Esau’s eldest son) \add which were\add* Chief Teman, Chief Omar, Chief Zepho, Chief Kenaz,
-\v 16 Chief Korah, Chief Gatam, Chief Amalek. Those were the chiefs of Elifaz in the Edom region. (They were the grandsons of \add Esau and his wife\add* Adah.)
+\v 15 These were Esaw’s sons \add who became\add* leaders: the sons of Elifaz (Esaw’s eldest son) \add which were\add* Chief Teman, Chief Omar, Chief Zepho, Chief Kenaz,
+\v 16 Chief Korah, Chief Gatam, Chief Amalek. Those were the chiefs of Elifaz in the Edom region. (They were the grandsons of \add Esaw and his wife\add* Adah.)
 \p
-\v 17 These were the sons of Esau’s son Reuel: Chief Nahath, Chief Zerah, Chief Shammah, Chief Mizzah. Those were the chiefs of Reuel in the Edom region. (They were the grandsons of Esau and his wife Basemath.)
+\v 17 These were the sons of Esaw’s son Reuel: Chief Nahath, Chief Zerah, Chief Shammah, Chief Mizzah. Those were the chiefs of Reuel in the Edom region. (They were the grandsons of Esaw and his wife Basemath.)
 \p
-\v 18 These were the sons of Esau’s wife Oholibamah: Chief Jeush, Chief Jalam, Chief Korah. (They were the chiefs from Esau’s wife Oholibamah—Anah’s daughter.)
-\v 19 Those were the sons of Esau (\add also known\add* as Edom), and those were their chiefs.
+\v 18 These were the sons of Esaw’s wife Oholibamah: Chief Jeush, Chief Jalam, Chief Korah. (They were the chiefs from Esaw’s wife Oholibamah—Anah’s daughter.)
+\v 19 Those were the sons of Esaw (\add also known\add* as Edom), and those were their chiefs.
 \s1 Se’ir’s descendants
 \r (1 Chr. 1:38-42)
 \p
@@ -1706,10 +1706,10 @@
 \v 38 Then Sha’ul died, and Acbor’s son Baal-Hanan reigned in his place.
 \v 39 Then (Acbor’s son) Baal-Hanan died, and Hadar reigned in his place, and the name of his city was Pau. His wife’s name was Mehetabel (\add and she was\add* the daughter of Matred’s daughter and the granddaughter of Me-Zahab).
 \p
-\v 40 And these are the names of the chiefs of Esau, according to their clans, according to their places, by their names: Chief Timna, Chief Alvan, Chief Jetheth,
+\v 40 And these are the names of the chiefs of Esaw, according to their clans, according to their places, by their names: Chief Timna, Chief Alvan, Chief Jetheth,
 \v 41 Chief Oholibamah, Chief Elah, Chief Pinon,
 \v 42 Chief Kenaz, Chief Teman, Chief Mibzar,
-\v 43 Chief Magdiel, and Chief Iram. They were the chiefs of Edom, according to their dwellings in the land of their possession. That was \add the record about\add* Esau, the ancestor of the Edomites.
+\v 43 Chief Magdiel, and Chief Iram. They were the chiefs of Edom, according to their dwellings in the land of their possession. That was \add the record about\add* Esaw, the ancestor of the Edomites.
 \c 37
 \s1 Yosef’s dreams cause conflict
 \p
@@ -1951,7 +1951,7 @@
 \p
 \v 53 Then the seven years of plenty in Egypt came to an end
 \v 54 and the seven years of famine started, just as Yosef had said. The famine \add covered the entire wider region\add*, but \add it was different in\add* Egypt.\x + \xo 41:54: \xt Acts 7:11.\x*
-\v 55 All the land of Egypt became famished, and the people cried to \add the king\add* for food, so Far’oh said to all the Egyptians, “Go to Yosef \add and\add* do whatever he tells you.”\x + \xo 41:55: \xt Jn 2:5.\x*
+\v 55 All the land of Egypt became famished, and the people cried to \add the king\add* for food, so Far’oh said to all the Egyptians, “Go to Yosef \add and\add* do whatever he tells you.”\x + \xo 41:55: \xt Yhn 2:5.\x*
 \v 56 The famine was \add right across the country\add*, so Yosef opened all the grain stores and sold grain to the Egyptians. \add But\add* the famine in Egypt was \add really\add* severe.
 \v 57 Then \add people from much further away started\add* coming to Egypt to buy grain from Yosef, because the famine was severe in the \add entire wider region\add*.
 \c 42
@@ -1998,7 +1998,7 @@
 \v 28 “My silver’s been returned,” he told his brothers, “and it’s \add right here\add* in my sack!”
 \p
 \v 29 \add When\add* they \add got home\add* to Yacob their father in Canaan, they told him everything that had happened to them,
-\v 30 “\add This\add* man, the master of \add Eygpt\add*, spoke harshly to us and treated us as if we were spying out \add his country\add*,
+\v 30 “\add This\add* man, the master of \add Egypt\add*, spoke harshly to us and treated us as if we were spying out \add his country\add*,
 \v 31 but we told him, ‘We’re honest—we’re not spies.
 \v 32 We’re twelve brothers, the sons of our father. One is \add no longer\add* alive, and the youngest is with our father today \add back\add* in Canaan.’
 \v 33 Then \add that\add* man told us, ‘\add I’ll find out if you’re honest\add*: Leave one of your brothers with me, and take grain for your families and go.
@@ -2077,12 +2077,12 @@
 \v 14 \add When\add* Yehudah and his brothers \add got\add* to Yosef’s house, he was still there, and they fell \add to their knees and bowed\add* to the ground in front of him.
 \v 15 “What’s this that you’ve done?” Yosef \add demanded\add*. “Didn’t you know that a man like me can certainly divine \add the truth\add*?”
 \p
-\v 16 “What can we say to my master?” Yehuda \add answered\add*. “What \add words\add* could we speak? How could we \add possibly\add* justify ourselves? God has exposed the sin of your servants. \add So now\add*, we are slaves for my master—both we and the one who was found with the cup.”
+\v 16 “What can we say to my master?” Yehudah \add answered\add*. “What \add words\add* could we speak? How could we \add possibly\add* justify ourselves? God has exposed the sin of your servants. \add So now\add*, we are slaves for my master—both we and the one who was found with the cup.”
 \p
 \v 17 “Far be it from me to do that.” Yosef \add corrected them\add*. “\add Only\add* the man who had the cup will become my slave, and \add the rest of\add* you can go \add back\add* to your father in peace.”
-\s1 Yehuda pleads to Yosef
+\s1 Yehudah pleads to Yosef
 \p
-\v 18 Then Yehuda went closer to \add Yosef\add* and said \add quietly\add*, “Please, my master, please let your servant speak a word in my master’s ears, and don’t \add get angry with me\add*, since you’re \add as powerful as\add* Far’oh.
+\v 18 Then Yehudah went closer to \add Yosef\add* and said \add quietly\add*, “Please, my master, please let your servant speak a word in my master’s ears, and don’t \add get angry with me\add*, since you’re \add as powerful as\add* Far’oh.
 \v 19 My master \add previously\add* asked his servants \add if we had\add* a father or another brother?
 \v 20 And we answered to my master, ‘\add Yes,\add* we have an elderly father and \add also\add* the youngest son of his old age. But \add that son’s\add* brother is dead, so he \add alone is left of his mother’s children\add*, and his father loves him.’
 \v 21 Then you told your servants, ‘Bring \add the other son here so I can see\add* him \add myself\add*.’
@@ -2154,14 +2154,14 @@
 \p
 \v 8 These are the names of the Israel’s sons who went to Egypt, \add that is\add* Yacob and his sons: \bd Yacob\bd*’s firstborn was Reuben,
 \v 9 and \bd Reuben\bd*’s sons were Hanoch and Pallu and Hezron and Carmi.
-\v 10 \bd Simeon\bd*’s sons were Jemuel, Jamin, Ohad, Jakin, Zohar, and Shaul, the son of a Canaanite woman.
+\v 10 \bd Simeon\bd*’s sons were Yemuel, Yamin, Ohad, Yakin, Zohar, and Shaul, the son of a Canaanite woman.
 \v 11 \bd Levi\bd*’s sons were Gershon, Kohath, and Merari.
 \v 12 \bd Yehudah\bd*’s sons were Er, Onan, Shelah, Perez, and Zerah, but Er and Onan had died in Canaan. Perez’ sons were Hezron and Hamul.
-\v 13 \bd Issachar\bd*’s sons were Tola, Puvah, Job, and Shimron.
-\v 14 \bd Zebulun\bd*’s sons were Sered, Elon, and Jahleel.
+\v 13 \bd Yissashkar\bd*’s sons were Tola, Puvah, Yob, and Shimron.
+\v 14 \bd Zebulun\bd*’s sons were Sered, Elon, and Yahleel.
 \v 15 Those were \add all\add* Le’ah’s sons that she bore for Yacob in Paddan Aram, \add along with\add* his daughter Dinah. \add The total number of those descendants\add* was thirty-three.
 \p
-\v 16 \bd Gad\bd*’s sons were Ziphion,Haggi, Shuni, Ezbon, Eri, Arodi, and Areli.
+\v 16 \bd Gad\bd*’s sons were Zifion,Haggi, Shuni, Ezbon, Eri, Arodi, and Areli.
 \v 17 \bd Asher\bd*’s sons were Imnah, Ishvah, Ishvi, Beriah, and their sister Serah. And Beriah’s sons were Heber and Malkiel.
 \v 18 Those were \add all\add* Zilpah’s sons, \add the slave woman\add* that Lavan had given to his daughter Le’ah, and she gave birth to those sixteen \add descendants\add* for Yacob.
 \p
@@ -2178,7 +2178,7 @@
 \v 27 \add As well as that\add*, Yosef’s two sons were born in Egypt so that \add added up to a grand total of\add* seventy.\x + \xo 46:27: \xt Acts 7:14.\x*
 \s1 Yacob’s arrival in Egypt
 \p
-\v 28 \add As they all approached Egypt, Yacob\add* sent Yehuda ahead \add of the others\add* to find out from Yosef how to get to Goshen. \add As they all\add* arrived in the Goshen area,
+\v 28 \add As they all approached Egypt, Yacob\add* sent Yehudah ahead \add of the others\add* to find out from Yosef how to get to Goshen. \add As they all\add* arrived in the Goshen area,
 \v 29 Yosef \add hooked up\add* his chariot and went to meet his father Yisra’el \add there\add*. He \add went up to his father, and hugged him for a long time as he cried\add*.
 \v 30 “Now I can die,” Yisra’el said to Yosef, “since I’ve seen your face—\add seen\add* that you’re still alive.”
 \p
@@ -2205,7 +2205,7 @@
 \v 12 \add He also\add* provided his father and his brothers and all his father’s household with bread—each family according to the \add number of children\add*.
 \s1 Yosef’s leadership through extreme famine
 \p
-\v 13 \add Then the time came when\add* there was no bread in \add that entire part of\add* the world, because the f\add drought\add* was now extremely severe, and \add both\add* Egypt and Canaan were \add suffering with food shortages\add*.
+\v 13 \add Then the time came when\add* there was no bread in \add that entire part of\add* the world, because the \add drought\add* was now extremely severe, and \add both\add* Egypt and Canaan were \add suffering from food shortages\add*.
 \v 14 \add People all over came\add* to buy grain, and \add over time\add* Yosef had received \add in payment\add* all the silver that could be found in Egypt and Canaan, and \add he in turn\add* took it to Far’oh’s house.
 \v 15 So \add once there was no more silver left\add* in Egypt and in Canaan, all \add the Egyptians\add* demanded from Yosef, “Give us food. Why should we die \add right here in front of\add* you? \add All our money\add* is gone!”
 \p
@@ -2296,8 +2296,8 @@
 \v 5 \bd Simeon and Levi\bd* are \add alike\add*.
 \q1 Their swords are weapons of violence.
 \q1
-\v 6 Don’t let <em>my</em> thoughts enter into their discussion.
-\q1 Don’t let <em>my</em> honour join in their assembly.
+\v 6 Don’t let \em my\em* thoughts enter into their discussion.
+\q1 Don’t let \em my\em* honour join in their assembly.
 \q1 They killed a man in their anger,
 \q1 and they hamstrung an ox \add just\add* for their pleasure.
 \q1
@@ -2307,7 +2307,7 @@
 \q1 and scatter them \add across\add* Yisra’el.
 \b
 \q1
-\v 8 \bd Yehuda\bd*, you’ll be praised by your brothers.
+\v 8 \bd Yehudah\bd*, you’ll be praised by your brothers.
 \q1 You’ll be a \add powerful force\add* against your enemies.
 \q1 Your father’s sons will bow down to you.
 \q1
@@ -2335,7 +2335,7 @@
 \q1 His border will extend up to Tsidon.
 \b
 \q1
-\v 14 \bd Issachar\bd* is a strong donkey
+\v 14 \bd Yissashkar\bd* (Issachar) is a strong donkey
 \q1 lying down between the sheep pens.\f + \fr 49:14 \ft Or ‘between two saddlebags’.\f*
 \q1
 \v 15 He’ll see that his resting place is good
@@ -2417,7 +2417,7 @@
 \p
 \v 7 So Yosef went up \add to Canaan\add* to bury his father. Far’oh’s servants went with him, along with the elders from Far’oh’s household and all the elders of the land of Egypt.
 \v 8 Yosef’s own household also went, along with his brothers and his father’s household. They only left their children and their livestock behind in Goshen.
-\v 9 There were chariots as well as \add soliders\add* mounted on horses so it was a very large procession.
+\v 9 There were chariots as well as \add soldiers\add* mounted on horses so it was a very large procession.
 \p
 \v 10 After they crossed the Jordan river, they arrived at Atad’s threshing floor, and they mourned there for seven days with very loud wailing.
 \v 11 The local Canaanite people saw the mourning at Atad’s threshing floor, and they said, “This is \add very serious\add* mourning for the Egyptians.” That’s why they then named that place across the Jordan ‘Abel Mizraim’ \add (which means ‘the Egyptians mourned here’)\add*.

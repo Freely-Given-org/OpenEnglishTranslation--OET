@@ -1,4 +1,4 @@
-\id COL - Open English Translation—Readers’ Version (OET-RV) v0.1.03
+\id COL - Open English Translation—Readers’ Version (OET-RV) v0.1.05
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 COL
@@ -23,14 +23,14 @@
 \ie
 \c 1
 \p
-\v 1 \add This letter is from\add* Paul, a missionary of \nd \nd Messiah\nd* Yeshua\nd* by God’s will, and \add from\add* our brother Timothy.
+\v 1 \add This letter is from\add* Paul, a missionary of \nd Messiah Yeshua\nd* by God’s will, and \add from\add* our brother Timothy.
 \p
 \v 2 To the people \add there\add* in Colossae who’re godly and faithful brothers and sisters in Messiah.
-\p Grace and peace to you all from \nd God\nd* our father and the \nd \nd master\nd* Yeshua\nd* Messiah.
+\p Grace and peace to you all from \nd God\nd* our father and the \nd master Yeshua\nd* Messiah.
 \s1 Paul’s thanks and prayers
 \p
-\v 3 We thank \nd God\nd* the father of our \nd \nd master Yeshua\nd* Messiah\nd* as we continually pray for you all,
-\v 4 after having heard about your faith in \nd \nd Messiah\nd* Yeshua\nd* and the love that you have for all godly people
+\v 3 We thank \nd God\nd* the father of our \nd master Yeshua Messiah\nd* as we continually pray for you all,
+\v 4 after having heard about your faith in \nd Messiah Yeshua\nd* and the love that you have for all godly people
 \v 5 which arose because of your hope in a heavenly reward. You all previously heard about that in the message of the truth—the good message
 \v 6 that’s in you and that is bearing fruit in the world and growing, just like it did among all of you from the day that you heard \add it\add* and knew about the grace of \nd God\nd* in truth.
 \v 7 \x + \xo 1:7: \xt Col 4:12; Phm 23.\x*You all learnt that from Epaphras, our dearly loved fellow slave and who is our faithful servant of the \nd messiah\nd*,
@@ -83,7 +83,7 @@
 \v 12 \x + \xo 2:12: \xt Rom 6:4.\x*You all were buried with him when you were immersed \add in water\add*, and you came back to life with him when you came up \add from the water\add*, through faith in God’s working which gave him life after death.
 \v 13 \x + \xo 2:13: \xt Eph 2:1-5.\x*You all were dead in your disobedience and because your bodies were ‘uncircumcised’. Then he made us alive together with him after he forgave us for all our disobedience.
 \v 14 \x + \xo 2:14: \xt Eph 2:15.\x*He erased the writing that listed the charges against us and so it was removed—nailed to the stake.
-\v 15 He had disarmed the rulers and authorities and publicly exposed them, because he had won the victory over them on the stake.
+\v 15 He had disarmed the rulers and authorities and publicly exposed them, because he had won the victory over them \add on the stake\add*.\f + \fr 2:15 \ft The meaning of the Greek ‘ἐν αὐτῷ’ literally ‘in it/him’ isn’t clear here and leads to two common translations: a/ ‘on/in him’, or as we have chosen (interpreting the ‘it’ to be referring back to ‘σταυρῷ’ ‘execution stake’ from the previous verse), ‘on the stake’.\f*
 \p
 \v 16 \x + \xo 2:16: \xt Rom 14:1-6.\x*Don’t let anyone judge you all about what you eat or drink, or about \add observing\add* feasts or holidays or days of rest.
 \v 17 They’re just shadows of what’s coming, but the body \add causing the shadow\add* is that of the \nd messiah\nd*.
@@ -153,13 +153,13 @@
 \v 10 \x + \xo 4:10: a \xt Acts 19:29; 27:2; Phm 24; \xo b \xt Acts 12:12,25; 13:13; 15:37-39.\x*My fellow prisoner, Aristarchus, sends his greetings along with Barnabas’ cousin, Mark. You’ve already received instructions about that, so accept him if he arrives \add there\add*.
 \v 11 Yeshua who’s nicknamed Yustus also sends his greetings. These guys are from strict Jewish backgrounds, but they’re \add my\add* only fellow-workers for God’s kingdom who became an encouragement to me.
 \p
-\v 12 \x + \xo 4:12: \xt Col 1:7; Phm 23.\x*Epaphras sends his greetings. He’s \add another\add* one from your place and a slave of \nd \nd messiah\nd* Yeshua\nd* who always prays for you that you will stand mature and fully confident in all of God’s will.
+\v 12 \x + \xo 4:12: \xt Col 1:7; Phm 23.\x*Epaphras sends his greetings. He’s \add another\add* one from your place and a slave of \nd messiah Yeshua\nd* who always prays for you that you will stand mature and fully confident in all of God’s will.
 \v 13 I can assure you that he has strong concerns for you all, as well as those in Laodicea and in Hierapolis.
 \v 14 \x + \xo 4:14: a \xt 2Tim 4:11; Phm 24; \xo b \xt 2Tim 4:10; Phm 24.\x*The dear doctor Luke greets you all, as does Dermas.
 \p
 \v 15 Give my greetings to the brothers and sisters in Laodicea, and to Nympha and the assembly \add that meets\add* in her house,
 \v 16 and whenever my letter gets read to you all, make sure that it’s also read to those from the assembly in Laodicea, and that you all \add also\add* read their letter.
-\v 17 \x + \xo 4:17: \xt Phm 2.\x*Tell Archippus to make sure to fulfill the duties that the \nd master\nd* gave him to do.
+\v 17 \x + \xo 4:17: \xt Phm 2.\x*Tell Archippus to make sure to fulfil the duties that the \nd master\nd* gave him to do.
 \p
 \v 18 \sig I, Paul, am writing this \+add final\+add* greeting in my own handwriting. Remember me \+add here\+add* in chains.\sig*
 \p \sig May \+add God’s\+add* grace be with all of you.\sig*

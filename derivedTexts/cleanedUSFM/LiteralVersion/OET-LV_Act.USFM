@@ -4,7 +4,7 @@
 \rem ESFM v0.6 ACT
 \rem WORDTABLE OET-LV_NT_word_table.tsv
 \rem The VLT source table used to create this file is Copyright © 2022 by https://GreekCNTR.org
-\rem ESFM file originally created 2024-05-20 14:46 by Extract_VLT_NT_to_ESFM v0.96
+\rem ESFM file originally created 2024-09-05 17:48 by Extract_VLT_NT_to_ESFM v0.97
 \rem USFM file edited by ScriptedBibleEditor v0.31
 \h Acts
 \toc1 Acts
@@ -17,15 +17,15 @@
 \v 3 to_whom also after the \add time\add* him to_suffer he_presented himself living, with many proofs through forty days, appearing to_them, and speaking the \add things\add* concerning the kingdom of_ the _\nd god\nd*.
 \v 4 And assembling_together, he_commanded to_them: From Hierousalaʸm/(Yərūshālayim) not to_be_being_departed, but to_be_awaiting the promise of_the father, which you_all_heard from_me.
 \v 5 Because Yōannaʸs on_one_hand immersed in_water, on_the_other_hand you_all will_be_being_immersed in \add the\add*_ holy _\nd spirit\nd*, after many not these days.
-\v 6 Therefore indeed the \add ones\add* having_come_together, were_asking him saying: \nd master\nd*, if at the this time, are_you_restoring the kingdom the to_Israaʸl/(Yisərā\sup ʼēl\sup*)?
+\v 6 Therefore indeed the \add ones\add* having_come_together, were_asking him saying: \nd master\nd*, if at the this time, are_you_restoring the kingdom the to_Israaʸl/(Yisrā\sup ʼēl\sup*)?
 \v 7 And he_said to them: It_is not of_you_all to_know times or seasons, which the father set by his own authority.
-\v 8 But you_all_will_be_receiving power, having_ The holy \nd spirit\nd* _come_over on you_all, and you_all_will_be witnesses for_me, in both Hierousalaʸm, and in all the Youdaia, and Samareia/(Shomərōn), and to \add the\add*_last \add part\add* of_the earth.
+\v 8 But you_all_will_be_receiving power, having_ The holy \nd spirit\nd* _come_over on you_all, and you_all_will_be witnesses for_me, in both Hierousalaʸm, and in all the Youdaia, and Samareia/(Shomrōn), and to \add the\add*_last \add part\add* of_the earth.
 \v 9 And having_said these \add things\add*, seeing them, he_was_lifted_up and \add a\add*_cloud took_ him _up from the eyes of_them.
 \v 10 And as they_were looking_intently into the sky, him going, also see two men in white clothing, had_stood_by to_them,
 \v 11 who also said: Men, Galilaios, why you_all_have_stood looking at the sky? This the \nd Yaʸsous/(Yəhōshūˊa)\nd* which having_been_taken_up from you_all into the heaven, thus will_be_coming which manner you_all_saw him going into the heaven.
 \v 12 Then they_returned to Hierousalaʸm/(Yərūshālayim) from \add the\add*_mountain which being_called of_Olivet, which is near Hierousalaʸm, having journey of_\add a\add*_day_of_rest.
 \v 13 And when they_came_in, into the upper_room, they_went_up where they_were staying, which and/both Petros and Yōannaʸs and Yakōbos/(Yaˊₐqoⱱ) and Andreas, Filippos and Thōmas, Bartholomaios and Matthaios, Yakōbos of_Alfaios, and Simōn the Farisaios_zaʸlōtaʸs_\add group_member\add*, and Youdas/(Yəhūdāh) of_Yakōbos.
-\v 14 These all were persevering the in_prayer with_one_accord, with \add the\add*_women and Maria/(Mirəyām) the mother of_ the _\nd Yaʸsous\nd*, and the brothers of_him.
+\v 14 These all were persevering the in_prayer with_one_accord, with \add the\add*_women and Maria/(Miryām) the mother of_ the _\nd Yaʸsous\nd*, and the brothers of_him.
 \v 15 And in the these days, Petros having_stood_up in \add the\add*_midst of_the brothers said (and \add the\add*_crowd of_names with the same was about \add a\add*_hundred twenty),
 \v 16 Men, brothers, it_was_fitting the scripture to_be_fulfilled, which the the holy \nd spirit\nd* previously_said by \add the\add*_mouth of_Dawid/(Dāvid) concerning Youdas, the \add one\add* having_become guide to_the \add ones\add* having_captured \nd Yaʸsous\nd*.
 \v 17 Because he_was having_been_numbered with us, and obtained the \add an\add*_allotment of_ the this _service.
@@ -48,7 +48,7 @@
 \v 7 And they_were_amazed and they_were_marvelling saying: Behold are not, all these who \add are\add* speaking Galilaios?
 \v 8 And how are_ we _hearing each in_the own language of_us, in which we_were_born?
 \v 9 \add ones\add*_from_Parthia, and \add ones\add*_from_Maʸdia, and \add ones\add*_from_Elam, and the \add ones\add* dwelling_in the Mesopotamia, Youdaia and and/both Kappadokia, Pontos and the Asia,
-\v 10 Frugia and and/both Pamfulia, Aiguptos/(Miʦərayim), and the parts of_ the _Libuaʸ which along Kuraʸnaʸ, and the \add ones\add* Ɽōmaios visiting,
+\v 10 Frugia and and/both Pamfulia, Aiguptos/(Miʦrayim), and the parts of_ the _Libuaʸ which along Kuraʸnaʸ, and the \add ones\add* Ɽōmaios visiting,
 \v 11 both Youdaiōns and converts, \add ones\add*_from_Kraʸtaʸ and \add ones\add*_from_Arabia, we_are_hearing them speaking, the great \add things\add* of_ the _\nd god\nd* the in_our tongues.
 \v 12 And all were_marvelling and were_thoroughly_perplexed, another saying to another: What is_wanting this to_be?
 \v 13 But others mocking were_saying, that They_are having_been_filled of_sweet_wine.
@@ -60,21 +60,21 @@
 \v 19 And I_will_be_giving wonders in the sky above, and signs on the earth below, blood, and fire, and vapour of_smoke.
 \v 20 The sun will_be_being_altered into darkness and the moon into blood, before \add the\add*_ the great and glorious _day of_\add the\add*_\nd master\nd* to_come.
 \v 21 And it_will_be, everyone who wishfully may_call on_the name of_\add the\add*_\nd master\nd* will_be_being_saved.
-\v 22 Men, \add ones\add*_from_Israaʸl/(Yisərā\sup ʼēl\sup*), hear the messages these: \nd Yaʸsous/(Yəhōshūˊa)\nd* the from_Nazaret, \add a\add*_man having_been_demonstrated by the \nd god\nd* to you_all by_miracles, and wonders, and signs, which the \nd god\nd* did by him in \add the\add*_midst of_you_all, as you_all_ yourselves _have_known.
+\v 22 Men, \add ones\add*_from_Israaʸl/(Yisrā\sup ʼēl\sup*), hear the messages these: \nd Yaʸsous/(Yəhōshūˊa)\nd* the from_Nazaret, \add a\add*_man having_been_demonstrated by the \nd god\nd* to you_all by_miracles, and wonders, and signs, which the \nd god\nd* did by him in \add the\add*_midst of_you_all, as you_all_ yourselves _have_known.
 \v 23 This \add man\add* by_the, having_been_designated counsel and foreknowledge of_ the _\nd god\nd*, delivered_up by \add the\add*_hand of_\add the\add*_lawless \add ones\add*, you_all_killed having_executed_on_a_stake.
 \v 24 Whom the \nd god\nd* raised_up, having_untied/released the agonies of_the death, as_much_as was not possible him to_be_being_restrained by it.
 \v 25 For/Because Dawid/(Dāvid) is_saying to him: I_was_foreseeing the \nd master\nd* before me through all \add time\add*, because he_is on \add the\add*_right of_me, in_order_that I _may_ not _be_shaken.
 \v 26 Because_of this the heart of_me was_gladdened, and the tongue of_me exulted, and still also the flesh of_me will_be_nesting in hope, 
-\v 27 because you will_ not _be_abandoning the soul of_me into Hadaʸs, nor will_you_be_giving the devout \add one\add* of_you to_see decay.
+\v 27 because you will_ not _be_abandoning the soul of_me into Haidaʸs, nor will_you_be_giving the devout \add one\add* of_you to_see decay.
 \v 28 You_made_known to_me \add the\add*_ways of_life, you_will_be_filling me with_gladness with the presence of_you.
 \v 29 Men, brothers, it_is_permitting to_speak with confidence to you_all concerning the patriarch Dawid that he_ both _died and was_buried, and the tomb of_him is among us until the this day.
 \v 30 Therefore being \add a\add*_prophet, and having_known that - \nd god\nd* swore to_him with_\add an\add*_oath: of \add the\add*_fruit of_the loin of_him, to_sit_down on the throne of_him.
-\v 31 Having_foreseen, he_spoke concerning the resurrection of_the \nd chosen_one/messiah\nd* that neither was_abandoned into Hadaʸs, nor the flesh of_him saw decay.
+\v 31 Having_foreseen, he_spoke concerning the resurrection of_the \nd chosen_one/messiah\nd* that neither was_abandoned into Haidaʸs, nor the flesh of_him saw decay.
 \v 32 This the \nd Yaʸsous/(Yəhōshūˊa)\nd* the \nd god\nd* raised_up, of_which all we are witnesses.
 \v 33 Therefore having_been_exalted by_the right \add hand\add* of_ the _\nd god\nd*, and having_received the promise of_the the holy \nd spirit\nd*, from the father, he_poured_ this _out which you_all are_seeing and are_hearing.
 \v 34 For/Because Dawid/(Dāvid) not went_up into the heavens, but himself is_saying, \add the\add*_\nd master\nd* Said to_the \nd master\nd* of_me: Be_sitting on \add the\add*_right of_me,
 \v 35 until wishfully I_may_put the enemies of_you \add a\add*_footstool of_the feet of_you.
-\v 36 Assuredly therefore let_ All \add the\add*_house of_Israaʸl/(Yisərā\sup ʼēl\sup*) _be_knowing that the \nd god\nd* made him both \add the\add*_\nd master\nd* and \add the\add*_\nd chosen_one/messiah\nd*, this the \nd Yaʸsous\nd* whom you_all executed_on_a_stake.
+\v 36 Assuredly therefore let_ All \add the\add*_house of_Israaʸl/(Yisrā\sup ʼēl\sup*) _be_knowing that the \nd god\nd* made him both \add the\add*_\nd master\nd* and \add the\add*_\nd chosen_one/messiah\nd*, this the \nd Yaʸsous\nd* whom you_all executed_on_a_stake.
 \v 37 And having_heard, they_were_pierced to_the heart, both they_said to the Petros and the other ambassadors: What may_we_do, men, brothers?
 \v 38 And Petros is_saying to them: Repent: and let_ each of_you_all _be_immersed in the name of_\nd Yaʸsous chosen_one/messiah\nd*, because/for forgiveness of_the sins of_you_all, and you_all_will_be_receiving the gift of_the holy \nd spirit\nd*.
 \v 39 For/Because the promise is to_you_all, and to_the children of_you_all, and to_all the \add ones\add* at far, as_many_as wishfully may_call_to \add the\add*_\nd master\nd*, the \nd god\nd* of_us.
@@ -98,8 +98,8 @@
 \v 9 And all the people saw him walking and praising the \nd god\nd*.
 \v 10 And they_were_recognizing him that he was the \add one\add* sitting at the Beautiful gate of_the temple for the alms, and they_were_filled with_amazement and amazement at the \add thing\add* having_been_happened to_him.
 \v 11 And of_him taking_hold_of the Petros and the Yōannaʸs, all the people ran_together to them in the portico which being_called of_Solomōn/(Shəlmoh), greatly_amazed.
-\v 12 But the Petros having_seen \add it\add*, answered to the people: Men, \add ones\add*_from_Israaʸl/(Yisərā\sup ʼēl\sup*), why you_all_are_wondering at this, or why you_all_are_looking_intently at_us, as_though by_\add our\add*_own power or devoutness having_made him which to_be_walking?
-\v 13 The \nd god\nd* of_Abraʼam/(ʼAⱱərāhām), and the \add the\add*_\nd god\nd* of_Isaʼak/(Yiʦəḩāq), and the \add the\add*_\nd god\nd* of_Yakōb/(Yaˊₐqoⱱ), the \nd god\nd* of_the fathers of_us, glorified the servant of_him, \nd Yaʸsous/(Yəhōshūˊa)\nd*, whom you_all indeed gave_over, and disowned in \add the\add*_presence of_Pilatos, that \add one\add* having_judged to_be_sending_away \add him\add*.
+\v 12 But the Petros having_seen \add it\add*, answered to the people: Men, \add ones\add*_from_Israaʸl/(Yisrā\sup ʼēl\sup*), why you_all_are_wondering at this, or why you_all_are_looking_intently at_us, as_though by_\add our\add*_own power or devoutness having_made him which to_be_walking?
+\v 13 The \nd god\nd* of_Abraʼam/(ʼAⱱrāhām), and the \add the\add*_\nd god\nd* of_Isaʼak/(Yiʦḩāq), and the \add the\add*_\nd god\nd* of_Yakōb/(Yaˊₐqoⱱ), the \nd god\nd* of_the fathers of_us, glorified the servant of_him, \nd Yaʸsous/(Yəhōshūˊa)\nd*, whom you_all indeed gave_over, and disowned in \add the\add*_presence of_Pilatos, that \add one\add* having_judged to_be_sending_away \add him\add*.
 \v 14 But you_all disowned the holy \add one\add* and righteous \add one\add*, and you_all_requested \add a\add*_man \add a\add*_murderer to_be_granted to_you_all,
 \v 15 but you_all_killed_off the originator of_ the _life, whom the \nd god\nd* raised from \add the\add*_dead, of_which we are witnesses.
 \v 16 And the faith in_the name of_him, this \add man\add* whom you_all_are_observing and you_all_have_known, strengthened the name of_him, and the faith which \add is\add* by him, gave the complete_healing to_him this in_front_of all of_you.
@@ -111,7 +111,7 @@
 \v 22 Indeed Mōsaʸs/(Mosheh) said, that \add the\add*_\nd master\nd*, the \nd god\nd* of_us will_be_raising_up \add A\add*_prophet to_you_all like of_you_all me from the brothers, you_all_will_be_hearing from_him in all \add things\add*, as_many_as wishfully he_may_speak to you_all.
 \v 23 And it_will_be \add that\add* every soul, whoever if may_ not _hear the from_ that _prophet, will_be_being_wholly_destroyed from the people.
 \v 24 And also all the prophets from Samouaʸl/(Shəmū\sup ʼēl\sup*) and the \add ones\add* consecutively, as_many_as spoke, also proclaimed the these days.
-\v 25 You_all are the sons of_the prophets, and of_the covenant which the \nd god\nd* covenanted with the fathers of_you_all, saying to Abraʼam/(ʼAⱱərāhām): And in the seed of_you all the families of_the earth will_be_being_blessed.
+\v 25 You_all are the sons of_the prophets, and of_the covenant which the \nd god\nd* covenanted with the fathers of_you_all, saying to Abraʼam/(ʼAⱱrāhām): And in the seed of_you all the families of_the earth will_be_being_blessed.
 \v 26 the \nd god\nd* having_raised_up the servant of_him, sent_ him _out To_you_all first, blessing you_all in that to_be_turning_away each from the wickedness of_you_all.
 \c 4
 \v 1 And of_them speaking to the people, the chief_priests, and the officer of_the temple, and the Saddoukaios_\add sect\add* approached to_them,
@@ -123,7 +123,7 @@
 \v 7 And having_stood them in the midst, they_were_inquiring: In what power or in what name you_all did this?
 \v 8 Then Petros having_been_filled with_\add the\add*_ holy _\nd spirit\nd*, said to them: Rulers of_the people and elders,
 \v 9 if we today are_being_examined on \add a\add*_good_work to_\add the\add*_ sick _man, by what this \add one\add* has_been_healed,
-\v 10 it_let_be known to_all you_all and to_all the people of_Israaʸl/(Yisərā\sup ʼēl\sup*), that in the name of_\nd Yaʸsous chosen_one/messiah\nd* the from_Nazaret, whom you_all executed_on_a_stake, whom the \nd god\nd* raised from \add the\add*_dead, by this \add name\add* this \add man\add* has_stood_by before you_all healthy.
+\v 10 it_let_be known to_all you_all and to_all the people of_Israaʸl/(Yisrā\sup ʼēl\sup*), that in the name of_\nd Yaʸsous chosen_one/messiah\nd* the from_Nazaret, whom you_all executed_on_a_stake, whom the \nd god\nd* raised from \add the\add*_dead, by this \add name\add* this \add man\add* has_stood_by before you_all healthy.
 \v 11 This \add one\add* is the stone which having_been_scorned by you_all, the builders, which having_become to \add the\add*_head of_\add the\add*_corner.
 \v 12 And not_one the is not in other salvation, because/for there_is not another name under the heaven which having_been_given among people, by which it_is_fitting us to_be_saved.
 \v 13 And observing the boldness of_ the _Petros and of_Yōannaʸs, and having_grasped that they_are illiterate and ordinary men, they_were_marvelling, and they_were_recognizing them that they_were with the \nd Yaʸsous/(Yəhōshūˊa)\nd*.
@@ -140,7 +140,7 @@
 \v 24 And which having_heard, with_one_accord lifted_up \add their\add*_voice to the \nd god\nd* and said: Master, you which having_made the heaven, and the earth, and the sea, and all the \add things\add* in them,
 \v 25 the \add one\add* of_the father of_us, by \add the\add*_ holy _\nd spirit\nd* of_\add the\add*_mouth Dawid/(Dāvid) servant of_you having_said: For/Because_ why _reason \add the\add*_pagans raged, and peoples pondered vain \add things\add*?
 \v 26 Standing_before the kings of_the earth and the rulers were_gathered_together with the themselves against the \nd master\nd*, and against the \nd chosen_one/messiah\nd* of_him.
-\v 27 For/Because both Haʸrōdaʸs and Pontios Pilatos were_gathered_together in truth in the this city with \add the\add*_pagans and peoples of_Israaʸl/(Yisərā\sup ʼēl\sup*) against the holy servant of_you \nd Yaʸsous/(Yəhōshūˊa)\nd*, whom you_anointed,
+\v 27 For/Because both Haʸrōdaʸs and Pontios Pilatos were_gathered_together in truth in the this city with \add the\add*_pagans and peoples of_Israaʸl/(Yisrā\sup ʼēl\sup*) against the holy servant of_you \nd Yaʸsous/(Yəhōshūˊa)\nd*, whom you_anointed,
 \v 28 to_do as_much_as the hand of_you, and the counsel of_you predetermined to_become.
 \v 29 And the \add things\add* now, \nd master\nd*, look_upon on the threats of_them, and give to_the slaves of_you, all to_be_speaking the of_you message with boldness,
 \v 30 in that the hand to_be_stretching_out to_you for healing, and signs, and wonders, to_be_becoming through the name of_the holy servant of_you, \nd Yaʸsous\nd*.
@@ -172,7 +172,7 @@
 \v 18 and they_laid_on their hands on the ambassadors, and they_put them in public jail.
 \v 19 But \add an\add*_messenger of_\add the\add*_\nd master\nd* opened_up the doors of_the prison through, \add the\add*_night, and having_led_ them _out said,
 \v 20 Be_going, and having_been_stood, in the temple be_speaking to_the people all the messages of_ the this _life.
-\v 21 And having_heard, they_came_in by the dawn into the temple, and they_were_teaching. And having_arrived the chief_priest and the \add ones\add* with him, they_called_together the council and all the council of_the sons of_Israaʸl/(Yisərā\sup ʼēl\sup*), and they_sent_out to the prison for_them to_be_brought.
+\v 21 And having_heard, they_came_in by the dawn into the temple, and they_were_teaching. And having_arrived the chief_priest and the \add ones\add* with him, they_called_together the council and all the council of_the sons of_Israaʸl/(Yisrā\sup ʼēl\sup*), and they_sent_out to the prison for_them to_be_brought.
 \v 22 But they having_arrived attendants, not found them in the prison, and having_returned, they_reported
 \v 23 saying, that We_found the \add the\add*_prison having_been_shut with all security, and the guards having_stood before the doors, but having_opened_up, we_found no_one inside.
 \v 24 And when they_heard the these messages, both the officer of_the temple and the chief_priests were_thoroughly_perplexing concerning them, what wishfully this might_become.
@@ -182,11 +182,11 @@
 \v 28 saying, we_commanded to_you_all By_\add a\add*_charge not to_be_teaching in the this name, and see, you_all_have_filled the Hierousalaʸm/(Yərūshālayim) with_the teaching of_you_all, and you_all_are_wishing to_bring_upon on us the blood of_ the this _man.
 \v 29 But Petros and the ambassadors answering said: To_be_yielding it_is_fitting to_\nd god\nd*, rather than people.
 \v 30 The \nd god\nd* of_the fathers of_us raised \nd Yaʸsous/(Yəhōshūˊa)\nd*, whom you_all handed_over, having_hanged \add him\add* on \add a\add*_stake.
-\v 31 the \nd god\nd* exalted This \add one\add* originator and saviour, by_the right \add hand\add* of_him, which to_give repentance to_ the _Israaʸl/(Yisərā\sup ʼēl\sup*) and forgiveness of_sins.
+\v 31 the \nd god\nd* exalted This \add one\add* originator and saviour, by_the right \add hand\add* of_him, which to_give repentance to_ the _Israaʸl/(Yisrā\sup ʼēl\sup*) and forgiveness of_sins.
 \v 32 And we are witnesses of_ the these _messages, and the the holy \nd spirit\nd*, whom the \nd god\nd* gave to_the \add ones\add* yielding to_him.
 \v 33 And they having_heard were_being_cut_through, and they_were_wishing to_kill them.
-\v 34 But \add a\add*_certain Farisaios_\add party_member\add* by_\add the\add*_name Gamaliaʸl/(Gaməlī\sup ʼēl\sup*) having_risen_up in the council, \add a\add*_law_teacher honoured by_all the people, he_commanded \add them\add* to_make the men. outside \add a\add*_little \add time\add*.
-\v 35 And he_said to them: Men, \add ones\add*_from_Israaʸl/(Yisərā\sup ʼēl\sup*), be_taking_heed to_yourselves what you_all_are_going to_be_doing with the these men.
+\v 34 But \add a\add*_certain Farisaios_\add party_member\add* by_\add the\add*_name Gamaliaʸl/(Gamlī\sup ʼēl\sup*) having_risen_up in the council, \add a\add*_law_teacher honoured by_all the people, he_commanded \add them\add* to_make the men. outside \add a\add*_little \add time\add*.
+\v 35 And he_said to them: Men, \add ones\add*_from_Israaʸl/(Yisrā\sup ʼēl\sup*), be_taking_heed to_yourselves what you_all_are_going to_be_doing with the these men.
 \v 36 For/Because before these the days Theudas rose_up, saying himself to_be someone, to_whom was_joined_up of_men \add a\add*_number of_ about _four_hundred, who was_killed and all as_many_as were_being_persuaded by_him were_dispersed and became to nothing.
 \v 37 After this, Youdas/(Yəhūdāh) the Galilaios rose_up in the days of_the registration, and drew_away people after him, and_that \add one\add* perished, and all as_many_as were_being_persuaded by_him were_scattered.
 \v 38 And now I_am_saying the \add things\add* to_you_all, withdraw from the these men and allow them, because if this the counsel or this the work it_may_be from humans, will_be_being_torn_down,
@@ -212,47 +212,47 @@
 \v 15 And having_looked_intently at him, all the \add ones\add* sitting in the council saw the face of_him, as_if \add the\add*_face of_\add an\add*_messenger.
 \c 7
 \v 1 And the chief_priest said: - these \add things\add* is_having thus?
-\v 2 And he was_saying: Men, brothers and fathers, hear \add me\add*. The \nd god\nd* of_ the _glory was_seen by_ Abraʼam/(ʼAⱱərāhām) _the father of_us, him being in the Mesopotamia before or/than to_dwell in Ⱪarran/(Ḩārān),
+\v 2 And he was_saying: Men, brothers and fathers, hear \add me\add*. The \nd god\nd* of_ the _glory was_seen by_ Abraʼam/(ʼAⱱrāhām) _the father of_us, him being in the Mesopotamia before or/than to_dwell in Ⱪarran/(Ḩārān),
 \v 3 and he_said to him: Come_out from the land of_you and from the relatives of_you, and come into the land whichever I_will_be_showing wishfully to_you.
-\v 4 Then having_come_out from \add the\add*_land of_\add ones\add*_from_Ⱪaldia/(Kasəddiy), he_dwelt in Ⱪarran. And_from_there after the \add time\add* the father of_him to_die_off, he_removed him into the this land, in which you_all are_ now _dwelling.
+\v 4 Then having_come_out from \add the\add*_land of_\add ones\add*_from_Ⱪaldia/(Kasdiy), he_dwelt in Ⱪarran. And_from_there after the \add time\add* the father of_him to_die_off, he_removed him into the this land, in which you_all are_ now _dwelling.
 \v 5 And not gave to_him \add an\add*_inheritance in it, nor \add the\add*_tribunal of_\add a\add*_foot, but he_promised to_give to_him for \add a\add*_possession it, and to_the descendants of_him after him, not being to_him \add a\add*_child.
 \v 6 But the \nd god\nd* spoke thus that will_be the descendants of_him: \add a\add*_sojourner in anothers land, and they_will_be_enslaving it and they_will_be_mistreating \add it\add* four_hundred years.
 \v 7 But I the \nd god\nd* will_be_judging the nation for_whichever if they_may_serve, said: And after these \add things\add*, they_will_be_coming_out and will_be_serving unto_me in the this place.
-\v 8 And he_gave to_him \add the\add*_covenant of_circumcision, and thus he_bore the Isaʼak/(Yiʦəḩāq), and circumcised him on_the the eighth day, and Isaʼak \add bore\add* the Yakōb/(Yaˊₐqoⱱ), and Twelve the Yakōb patriarchs.
-\v 9 And the patriarchs having_been_jealous the of_Yōsaʸf/(Yōşēf), gave_back \add him\add* into Aiguptos/(Miʦərayim), but the \nd god\nd* was with him,
-\v 10 and he_rescued him out_of all the tribulations of_him, and gave to_him favour and wisdom before Faraō/(Farəˊoh), king of_Aiguptos, and he_appointed him leading \add one\add* over Aiguptos, and over all the house of_him.
+\v 8 And he_gave to_him \add the\add*_covenant of_circumcision, and thus he_bore the Isaʼak/(Yiʦḩāq), and circumcised him on_the the eighth day, and Isaʼak \add bore\add* the Yakōb/(Yaˊₐqoⱱ), and Twelve the Yakōb patriarchs.
+\v 9 And the patriarchs having_been_jealous the of_Yōsaʸf/(Yōşēf), gave_back \add him\add* into Aiguptos/(Miʦrayim), but the \nd god\nd* was with him,
+\v 10 and he_rescued him out_of all the tribulations of_him, and gave to_him favour and wisdom before Faraō/(Farˊoh), king of_Aiguptos, and he_appointed him leading \add one\add* over Aiguptos, and over all the house of_him.
 \v 11 And \add a\add*_famine came on all the Aiguptos and Ⱪanaʼan/(Kinaˊan), and great tribulation, and the fathers of_us were_ not _finding food.
 \v 12 But Yakōb having_heard, being grain in Aiguptos, sent_away the fathers of_us first.
 \v 13 And on the second \add time\add*, Yōsaʸf was_made_known by_the brothers of_him, and the descent of_Yōsaʸf it_became manifest to_ the _Faraō.
 \v 14 And Yōsaʸf having_sent_out, summoned Yakōb, the father of_him, and all the relatives, in seventy five souls.
 \v 15 And Yakōb came_down into Aiguptos, and he and the fathers of_us died,
-\v 16 and they_were_replaced to Suⱪem/(Shəkem), and they_were_put in the tomb, which Abraʼam/(ʼAⱱərāhām) purchased for_\add a\add*_value of_silver from the sons of_Emmor/(Ḩₐmōr) in Suⱪem.
+\v 16 and they_were_replaced to Suⱪem/(Shəkem), and they_were_put in the tomb, which Abraʼam/(ʼAⱱrāhām) purchased for_\add a\add*_value of_silver from the sons of_Emmor/(Ḩₐmōr) in Suⱪem.
 \v 17 But as the time of_the promise, which the \nd god\nd* promised to_ the _Abraʼam was_nearing, the people grew and was_multiplied in Aiguptos,
 \v 18 until of_which another king rose_up over Aiguptos, who had_ not _known the Yōsaʸf/(Yōşēf).
 \v 19 He, having_taken_advantage of_the race of_us, mistreated the fathers which to_be_making the babies of_them abandoned, in_order that to_ not _be_being_kept_alive.
 \v 20 In that time Mōsaʸs/(Mosheh) was_born, and he_was beautiful to_ the _\nd god\nd*, who was_brought_up three months in the house of_the father.
-\v 21 And, having_been_set_out of_him the daughter of_Faraō/(Farəˊoh) took_ him _away, and brought_ him _up for_herself for \add a\add*_son.
-\v 22 And Mōsaʸs was_instructed in in_all \add the\add*_wisdom of_\add the\add*_Aiguptos/(Miʦərayim)ians, and was powerful in \add the\add*_messages and \add the\add*_works of_him.
-\v 23 But when \add a\add*_ forty_year _time was_being_fulfilled to_him, went_up in the heart of_him to_visit the brothers of_him, the sons of_Israaʸl/(Yisərā\sup ʼēl\sup*).
-\v 24 And having_seen one being_wronged, he_retaliated and did vengeance for_the \add one\add* being_distressed, having_struck the from_Aiguptos/(Miʦərayim).
+\v 21 And, having_been_set_out of_him the daughter of_Faraō/(Farˊoh) took_ him _away, and brought_ him _up for_herself for \add a\add*_son.
+\v 22 And Mōsaʸs was_instructed in in_all \add the\add*_wisdom of_\add the\add*_Aiguptos/(Miʦrayim)ians, and was powerful in \add the\add*_messages and \add the\add*_works of_him.
+\v 23 But when \add a\add*_ forty_year _time was_being_fulfilled to_him, went_up in the heart of_him to_visit the brothers of_him, the sons of_Israaʸl/(Yisrā\sup ʼēl\sup*).
+\v 24 And having_seen one being_wronged, he_retaliated and did vengeance for_the \add one\add* being_distressed, having_struck the from_Aiguptos/(Miʦrayim).
 \v 25 And he_was_thinking the brothers to_be_understanding that the \nd god\nd* by \add the\add*_hand of_him is_giving salvation to_them, but they not understood.
 \v 26 And on_the following day, he_was_seen to_them quarrelling, and he_was_reconciling them to peace, having_said: Men, you_all_are brothers. for_ Why _reason are_you_all_injuring one_another?
 \v 27 But the \add one\add* injuring your neighbor pushed_ him _away having_said: Who appointed you ruler and judge over us?
-\v 28 You are_ not _wanting to_kill me, which manner you_killed the from_Aiguptos/(Miʦərayim) yesterday?
-\v 29 And Mōsaʸs/(Mosheh) fled at the this statement: and became \add a\add*_sojourner in \add the\add*_land of_Madiam/(Midəyān), where he_bore two sons.
+\v 28 You are_ not _wanting to_kill me, which manner you_killed the from_Aiguptos/(Miʦrayim) yesterday?
+\v 29 And Mōsaʸs/(Mosheh) fled at the this statement: and became \add a\add*_sojourner in \add the\add*_land of_Madiam/(Midyān), where he_bore two sons.
 \v 30 And forty years having_been_fulfilled: \add an\add*_messenger was_seen to_him in the wilderness of_ the _Mount Sina/(Şīnay), in \add a\add*_flame of_fire of_\add a\add*_thorn_bush.
 \v 31 And the Mōsaʸs having_seen \add it\add*, marvelled at_the vision. And him approaching to_observe \add it\add*, there_became \add the\add*_voice of_\add the\add*_\nd master\nd*:
-\v 32 I \add am\add* the \nd god\nd* of_the fathers of_you, the \nd god\nd* of_Abraʼam/(ʼAⱱərāhām), and of_Isaʼak/(Yiʦəḩāq), and of_Yakōb/(Yaˊₐqoⱱ). And Mōsaʸs having_become trembling, was_ not _daring to_observe.
+\v 32 I \add am\add* the \nd god\nd* of_the fathers of_you, the \nd god\nd* of_Abraʼam/(ʼAⱱrāhām), and of_Isaʼak/(Yiʦḩāq), and of_Yakōb/(Yaˊₐqoⱱ). And Mōsaʸs having_become trembling, was_ not _daring to_observe.
 \v 33 And the \nd master\nd* said to_him: Untie the sandal of_the feet of_you, because/for the place on which you_have_stood ground is holy.
-\v 34 Having_seen, I_saw the mistreatment of_the people of_me which in Aiguptos/(Miʦərayim), and I_heard of_the groaning of_them, and I_came_down to_rescue them, And now come, I_may_send_ you _out to Aiguptos.
+\v 34 Having_seen, I_saw the mistreatment of_the people of_me which in Aiguptos/(Miʦrayim), and I_heard of_the groaning of_them, and I_came_down to_rescue them, And now come, I_may_send_ you _out to Aiguptos.
 \v 35 This the Mōsaʸs, whom they_disowned having_said: Who you appointed ruler and judge? This \add man\add* the \nd god\nd* has_sent_out ruler and redeemer, with \add the\add*_hand of_\add the\add*_messenger which having_been_seen by_him in the thorn_bush.
 \v 36 This \add man\add* led_ them _out, having_done wonders and signs in the Aiguptos, and in \add the\add*_Red Sea, and in the wilderness, because/forty years.
-\v 37 This is the Mōsaʸs/(Mosheh) the \add man\add* having_said to_the sons of_Israaʸl/(Yisərā\sup ʼēl\sup*): - \nd god\nd* will_be_raising_up \add A\add*_prophet to_you_all, from the brothers of_you_all, like me.
+\v 37 This is the Mōsaʸs/(Mosheh) the \add man\add* having_said to_the sons of_Israaʸl/(Yisrā\sup ʼēl\sup*): - \nd god\nd* will_be_raising_up \add A\add*_prophet to_you_all, from the brothers of_you_all, like me.
 \v 38 This is the \add man\add* having_become in the assembly in the wilderness, with the messenger which speaking to_him on the Mount Sina/(Şīnay), and of_the fathers of_us, who received \add the\add*_ living _oracles to_give to_you_all, 
 \v 39 to_whom the fathers of_us willed not to_become obedient, but they_pushed_away \add him\add* and they_were_turned in the hearts of_them to Aiguptos,
-\v 40 having_said to_ the _Aʼarōn/(ʼAhₐron): Make for_us gods who will_be_going_before before_us. For/Because the this Mōsaʸs, who led_out us from \add the\add*_land of_Aiguptos/(Miʦərayim), we_have_ not _known what became to_him.
+\v 40 having_said to_ the _Aʼarōn/(ʼAhₐron): Make for_us gods who will_be_going_before before_us. For/Because the this Mōsaʸs, who led_out us from \add the\add*_land of_Aiguptos/(Miʦrayim), we_have_ not _known what became to_him.
 \v 41 And they_made_a_calf in the those days, and they_brought_up \add a\add*_sacrifice to_the idol, and they_were_being_gladdened in the works of_the hands of_them.
-\v 42 But the \nd god\nd* turned, and gave_ them _over to_be_serving unto_the army of_ the _heaven, as it_has_been_written in scroll of_the prophets: You_all_ not _offered victims and sacrifices to_me, because/forty years? in the wilderness, house of_Israaʸl/(Yisərā\sup ʼēl\sup*)?
+\v 42 But the \nd god\nd* turned, and gave_ them _over to_be_serving unto_the army of_ the _heaven, as it_has_been_written in scroll of_the prophets: You_all_ not _offered victims and sacrifices to_me, because/forty years? in the wilderness, house of_Israaʸl/(Yisrā\sup ʼēl\sup*)?
 \v 43 And you_all_took_up the tent of_ the _Moloⱪ/(Molek), and the star of_ Ɽemfan _the god of_you_all, the images which you_all_made to_be_prostrating before_them. And I_will_be_removing you_all beyond Babulōn/(Bāⱱel?).
 \v 44 The tent of_the testimony was with_the fathers of_us in the wilderness, as directed the \add one\add* speaking to_ the _Mōsaʸs/(Mosheh), to_make it according_to the pattern that he_had_seen,
 \v 45 which also the fathers of_us they_brought_in, having_inherited with \nd Yaʸsous/(Yəhōshūˊa)\nd* in the possession of_the nations, whom the \nd god\nd* drove_out from \add the\add*_face of_the fathers of_us, until the days of_Dawid/(Dāvid), 
@@ -272,7 +272,7 @@
 \v 59 And they_were_stoning the Stefanos, who_calling and saying: \nd master Yaʸsous\nd*, receive the spirit of_me.
 \v 60 And having_knelt on_his knees, he_cried_out with_\add a\add*_ loud _voice: \nd master\nd*, you_may_ not _set this the sin to_them. And having_said this, he_was_fallen_asleep.
 \c 8
-\v 1 And Saulos was consenting to_the killing of_him. And \add a\add*_ great _persecution became on that the day, against the assembly, which \add was\add* in Hierousalaʸm/(Yərūshālayim). And all were_dispersed throughout the regions of_ the _Youdaia and Samareia/(Shomərōn), except the ambassadors.
+\v 1 And Saulos was consenting to_the killing of_him. And \add a\add*_ great _persecution became on that the day, against the assembly, which \add was\add* in Hierousalaʸm/(Yərūshālayim). And all were_dispersed throughout the regions of_ the _Youdaia and Samareia/(Shomrōn), except the ambassadors.
 \v 2 And devout men buried the Stefanos, and they_made great lamentation over him.
 \v 3 But Saulos was_ravaging the assembly, by entering_in the houses, dragging both men and women, he_was_giving_over \add them\add* to prison.
 \v 4 The \add ones\add* therefore on_one_hand having_been_dispersed, passed_through good_message_preaching the message.
@@ -285,7 +285,7 @@
 \v 11 And they_were_giving_heed to_him, because_of that to_have_amazed them with_the magic for_much time.
 \v 12 But when they_believed the in_Filippos, good_message_preaching concerning the kingdom the of_\nd god\nd* and the name of_\nd Yaʸsous/(Yəhōshūˊa) chosen_one/messiah\nd*, they_were_being_immersed both men and women.
 \v 13 And the Simōn himself also believed, and having_been_immersed, was continuing the with_Filippos, observing both signs and great miracles becoming, he_was_marvelling.
-\v 14 And the ambassadors in Hierousalaʸm/(Yərūshālayim) having_heard that the Samareia/(Shomərōn) has_received the message of_ the _\nd god\nd*, they_sent_out Petros and Yōannaʸs to them,
+\v 14 And the ambassadors in Hierousalaʸm/(Yərūshālayim) having_heard that the Samareia/(Shomrōn) has_received the message of_ the _\nd god\nd*, they_sent_out Petros and Yōannaʸs to them,
 \v 15 who having_come_down, they_prayed for them, so_that they_may_receive \add the\add*_ holy _\nd spirit\nd*.
 \v 16 For/Because it_was not_yet having_fallen_on on no_one of_them, but they_were_ only _being having_been_immersed into the name of_the \nd master Yaʸsous\nd*.
 \v 17 Then they_were_laying_on their hands on them, and they_were_receiving \add the\add*_ holy _\nd spirit\nd*.
@@ -296,10 +296,10 @@
 \v 22 Therefore repent of the this evil of_you, and be_besought of_the \nd master\nd* if perhaps the intention of_the heart of_you will_be_being_forgiven to_you.
 \v 23 For/Because I_am_seeing you being in \add the\add*_gall of_bitterness and \add the\add*_bond of_unrighteousness.
 \v 24 But the Simōn answering said: You_all Be_besought for me to the \nd master\nd*, so_that nothing of_which you_all_have_spoken may_come_over on me.
-\v 25 Therefore they indeed, having_testified and having_spoken the message of_the \nd master\nd*, were_returning to Hierousalaʸm/(Yərūshālayim), and they_were_evangelizing many villages of_the Samareitaʸs/(Shomərōn).
+\v 25 Therefore they indeed, having_testified and having_spoken the message of_the \nd master\nd*, were_returning to Hierousalaʸm/(Yərūshālayim), and they_were_evangelizing many villages of_the Samareitaʸs/(Shomrōn).
 \v 26 But \add an\add*_messenger of_\add the\add*_\nd master\nd* spoke to Filippos saying: Rise_up and be_going to \add the\add*_south, to the road which coming_down from Hierousalaʸm to Gaza/(ˊAzzāh), this is \add the\add*_wilderness \add road\add*.
-\v 27 And having_risen_up, he_was_gone, and see, \add a\add*_man, \add an\add*_Aithiops/(Ⱪūshiy) eunuch, official of_Kandakaʸ queen of_\add the\add*_Aithiopss, who was over all the treasure of_her, who had_come going_to_prostrate in Hierousalaʸm,
-\v 28 and he_was returning and sitting in the chariot of_him, and was_reading the prophet Aʸsaias/(Yəshaˊə\sup yāh\sup*).
+\v 27 And having_risen_up, he_was_gone, and see, \add a\add*_man, \add an\add*_Aithiops/(Kūshiy) eunuch, official of_Kandakaʸ queen of_\add the\add*_Aithiopss, who was over all the treasure of_her, who had_come going_to_prostrate in Hierousalaʸm,
+\v 28 and he_was returning and sitting in the chariot of_him, and was_reading the prophet Aʸsaias/(Yəshaˊ\sup yāh\sup*).
 \v 29 And the \nd spirit\nd* said to_ the _Filippos: Approach and be_joined_together to_ the this _chariot.
 \v 30 And the Filippos having_run_up, heard of_him reading Aʸsaias the prophet, and said: Then surely you_are_knowing what you_are_reading?
 \v 31 And he said: For/Because how wishfully I_might_be_able if not someone will_be_guiding me? And he_appealed the to_Filippos having_gone_up to_sit_down with him.
@@ -327,7 +327,7 @@
 \v 12 and he_saw \add a\add*_man in \add a\add*_vision, by_\add the\add*_name Ananias, having_come_in and having_put_on \add his\add*_hands on_him, so_that he_may_receive_sight.
 \v 13 And Ananias answered: \nd master\nd*, I_heard from many concerning the this man, as_much_as he_did evil to_the holy \add ones\add* of_you, in Hierousalaʸm/(Yərūshālayim), 
 \v 14 and here he_is_having authority from the chief_priests, to_bind all which calling the name of_you.
-\v 15 But the \nd master\nd* said to him: Be_going, because this \add man\add* is \add a\add*_vessel of_choice to_me, which to_bear the name of_me both before the pagans also kings, and \add the\add*_sons of_Israaʸl/(Yisərā\sup ʼēl\sup*),
+\v 15 But the \nd master\nd* said to him: Be_going, because this \add man\add* is \add a\add*_vessel of_choice to_me, which to_bear the name of_me both before the pagans also kings, and \add the\add*_sons of_Israaʸl/(Yisrā\sup ʼēl\sup*),
 \v 16 for/because I will_be_showing to_him as_much_as it_is_fitting him to_suffer for/because the name of_me.
 \v 17 And Ananias went_away and came_in into the house, and having_laid_on on him his hands he_said: Saulos, brother, the \nd master\nd* has_sent_out me \nd Yaʸsous/(Yəhōshūˊa)\nd*, the \add one\add* having_been_seen by_you on the road in_which you_were_coming, so_that you_may_receive_sight and may_be_filled with_\add the\add*_ holy _\nd spirit\nd*.
 \v 18 And immediately fell_away \add something\add* of_him from the eyes like scales, and, he_received_sight, and having_risen_up he_was_immersed,
@@ -343,7 +343,7 @@
 \v 28 And he_was with them, entering_in and going_out into Hierousalaʸm, speaking_boldly in the name of_the \nd master\nd*.
 \v 29 He_was_ both _speaking and was_debating with the Hellaʸnistaʸs, but they were_attempting to_kill him.
 \v 30 But having_known \add it\add*, the brothers brought_ him _down to Kaisareia, and they_sent_ him _away to Tarsos.
-\v 31 The indeed Therefore assembly throughout all of_ the _Youdaia, and Galilaia/(Gālīl), and Samareia/(Shomərōn), was_having peace, being_built and going in_the fear of_the \nd master\nd*, and it_was_being_multiplied in_the exhortation of_the holy \nd spirit\nd*.
+\v 31 The indeed Therefore assembly throughout all of_ the _Youdaia, and Galilaia/(Gālīl), and Samareia/(Shomrōn), was_having peace, being_built and going in_the fear of_the \nd master\nd*, and it_was_being_multiplied in_the exhortation of_the holy \nd spirit\nd*.
 \v 32 And it_became Petros passing_through through all \add regions\add*, to_come_down also to the holy \add ones\add* which dwelling_in Ludda/(Lod).
 \v 33 And he_found there \add a\add*_ certain _man by_\add the\add*_name Aineas, lying_down for eight years on \add a\add*_pallet, who was having_been_paralyzed.
 \v 34 And the Petros said to_him: Aineas, \nd Yaʸsous chosen_one/messiah\nd* is_healing you, rise_up, and make_the_bed for_yourself. And immediately he_rose_up.
@@ -392,7 +392,7 @@
 \v 33 Therefore I_ immediately _sent to you, and you did well therefore. having_arrived now we all are_being_present before the \nd god\nd*, to_hear all the \add things\add* having_been_commanded to_you by the \nd master\nd*.
 \v 34 And Petros having_opened_up the mouth said: In truth I_am_grasping that the \nd god\nd* is not \add a\add*_favourer,
 \v 35 but in every nation, the \add one\add* revering him and working righteousness, is acceptable to_him.
-\v 36 The message he_sent_out to_the sons of_Israaʸl/(Yisərā\sup ʼēl\sup*), good_message_preaching peace through \nd Yaʸsous/(Yəhōshūˊa) chosen_one/messiah\nd*, this \add one\add* is \nd master\nd* of_all.
+\v 36 The message he_sent_out to_the sons of_Israaʸl/(Yisrā\sup ʼēl\sup*), good_message_preaching peace through \nd Yaʸsous/(Yəhōshūˊa) chosen_one/messiah\nd*, this \add one\add* is \nd master\nd* of_all.
 \v 37 You_all have_known the message having_become throughout all the Youdaia, having_begun from the Galilaia/(Gālīl), after the immersion that Yōannaʸs proclaimed,
 \v 38 \nd Yaʸsous\nd* which from Nazaret, how the \nd god\nd* anointed him with_\add the\add*_ holy _\nd spirit\nd* and power, who passed_through doing_good and healing all the \add ones\add* being_oppressed by the devil, because the \nd god\nd* was with him.
 \v 39 And we \add are\add* witnesses of_all \add things\add* that he_did both in the region of_the Youdaiōns and in in_Hierousalaʸm/(Yərūshālayim), whom also they_killed, having_hanged \add him\add* on \add a\add*_stake.
@@ -448,7 +448,7 @@
 \v 9 And having_come_out he_was_following, and he_had_ not _known that what becoming by the messenger is true, but he_was_supposing to_be_seeing \add a\add*_vision.
 \v 10 And having_passed_through \add the\add*_first guard and \add the\add*_second, they_came to the the iron gate, which leading into the city, which automatic was_opened_up to_them, and having_come_out they_went_ahead on_ one _street, and immediately the messenger withdrew from him.
 \v 11 And the Petros having_become to himself said: Now I_have_ truly _known that \nd master\nd* sent_away the messenger of_him, and rescued me out_of \add the\add*_hand of_Haʸrōdaʸs and all the expectation of_the people of_the Youdaiōns.
-\v 12 And having_seen, he_came to the house of_ the _Maria/(Mirəyām), the mother of_Yōannaʸs, who \add is\add* being_called Markos, where many were having_been_convened_together and praying.
+\v 12 And having_seen, he_came to the house of_ the _Maria/(Miryām), the mother of_Yōannaʸs, who \add is\add* being_called Markos, where many were having_been_convened_together and praying.
 \v 13 And of_him having_knocked the door of_the gate, \add a\add*_servant_girl by_\add the\add*_name Ɽodaʸ approached to_answer.
 \v 14 And having_recognized the voice of_ the _Petros, from the joy she_ not _opened_up the gate, but having_run_in she_reported the Petros to_have_stood before the gate.
 \v 15 And they to her said: You_are_raving_mad. But she was_insisting to_be_having thus. And they were_saying: It_is the messenger of_him.
@@ -463,7 +463,7 @@
 \v 24 But the message of_the of_\nd god\nd* was_growing and was_being_multiplied.
 \v 25 And Barnabas and Saulos/(Shāʼūl) returned to Hierousalaʸm/(Yərūshālayim), having_fulfilled the service, having_taken_along_with \add them\add* Yōannaʸs, which having_been_called Markos.
 \c 13
-\v 1 And there_were prophets and teachers in Antioⱪeia, in the assembly being: the both Barnabas, and Sumeōn/(Shiməˊōn) who being_called Niger, and Loukios the from_Kuraʸnaʸ, And Manaaʸn raised_with of_Haʸrōdaʸs of_the quarter_ruler, and Saulos.
+\v 1 And there_were prophets and teachers in Antioⱪeia, in the assembly being: the both Barnabas, and Sumeōn/(Shimˊōn) who being_called Niger, and Loukios the from_Kuraʸnaʸ, And Manaaʸn raised_with of_Haʸrōdaʸs of_the quarter_ruler, and Saulos.
 \v 2 And of_them ministering to_the \nd master\nd* and fasting, the the holy \nd spirit\nd* said: Indeed set_apart to_me the Barnabas and Saulos, because/for the work which I_have_called_ them _to.
 \v 3 Then having_fasted, and having_prayed, and having_laid_on their hands on_them, they_sent_away \add them\add*.
 \v 4 Therefore indeed They having_been_sent_out by the holy \nd spirit\nd*, came_down to Seleukeia, and from_there they_sailed_away to Kupros.
@@ -478,17 +478,17 @@
 \v 13 And the \add ones\add* around \add him\add* Paulos having_been_launched from the Pafos, came to Pergaʸ of_ the _Pamfulia. But Yōannaʸs having_went_away from them, he_returned to Hierousalaʸm/(Yərūshālayim).
 \v 14 But they, having_passed_through from the Pergaʸ, arrived to Antioⱪeia the Pisidia, and having_come into the synagogue on_the day of_the days_of_rest, they_sat_down.
 \v 15 And after the public_reading of_the law and of_the prophets, the synagogue_leaders sent_out to them saying: Men, brothers, if among you_all there_is any message of_exhortation toward the people, be_speaking \add it\add*.
-\v 16 And Paulos having_stood_up, and having_gestured with_his hand said: Men, \add ones\add*_from_Israaʸl/(Yisərā\sup ʼēl\sup*), and you_all revering the \nd god\nd*, hear \add me\add*.
-\v 17 The \nd god\nd* of_the people of_this Israaʸl/(Yisərā\sup ʼēl\sup*) chose the fathers of_us, and exalted the people in the sojourn in \add the\add*_land of_Aiguptos/(Miʦərayim), and with \add his\add*_arm high, he_led_out them out_of it,
+\v 16 And Paulos having_stood_up, and having_gestured with_his hand said: Men, \add ones\add*_from_Israaʸl/(Yisrā\sup ʼēl\sup*), and you_all revering the \nd god\nd*, hear \add me\add*.
+\v 17 The \nd god\nd* of_the people of_this Israaʸl/(Yisrā\sup ʼēl\sup*) chose the fathers of_us, and exalted the people in the sojourn in \add the\add*_land of_Aiguptos/(Miʦrayim), and with \add his\add*_arm high, he_led_out them out_of it,
 \v 18 and \add the\add*_time he_endured them in the wilderness about, because/forty_year,
 \v 19 and having_taken_down seven nations in \add the\add*_land of_Ⱪanaʼan/(Kinaˊan), he_parcelled_out the land of_them, 
 \v 20 about four_hundred years and fifty. And after these \add things\add*, he_gave \add them\add* judges until Samouaʸl/(Shəmū\sup ʼēl\sup*) \add the\add*_prophet.
-\v 21 And_from_there they_requested \add a\add*_king, and the \nd god\nd* gave to_them the Saulos/(Shāʼūl), son of_Kis/(Qīsh), \add a\add*_man of \add the\add*_tribe of_Beniamin/(Binəyāmīn), for_ forty _years.
+\v 21 And_from_there they_requested \add a\add*_king, and the \nd god\nd* gave to_them the Saulos/(Shāʼūl), son of_Kis/(Qīsh), \add a\add*_man of \add the\add*_tribe of_Beniamin/(Binyāmīn), for_ forty _years.
 \v 22 And having_removed him, he_raised the Dawid/(Dāvid) to_them for \add a\add*_king, to_whom also he_spoke having_testified: I_found Dawid the \add son\add* of_ the _Yessai/(Yishay): \add a\add*_man according_to the heart of_me, who will_be_doing all the wills of_me.
-\v 23 Of the seed of_this \add one\add* the \nd god\nd* according_to promise, brought to_ the _Israaʸl/(Yisərā\sup ʼēl\sup*) \add a\add*_saviour, \nd Yaʸsous/(Yəhōshūˊa)\nd*,
-\v 24 of_Yōannaʸs having_publicly_proclaimed before \add the\add*_face of_the entrance of_him, \add a\add*_immersion of_repentance to_all the people of_Israaʸl/(Yisərā\sup ʼēl\sup*).
+\v 23 Of the seed of_this \add one\add* the \nd god\nd* according_to promise, brought to_ the _Israaʸl/(Yisrā\sup ʼēl\sup*) \add a\add*_saviour, \nd Yaʸsous/(Yəhōshūˊa)\nd*,
+\v 24 of_Yōannaʸs having_publicly_proclaimed before \add the\add*_face of_the entrance of_him, \add a\add*_immersion of_repentance to_all the people of_Israaʸl/(Yisrā\sup ʼēl\sup*).
 \v 25 And while Yōannaʸs was_fulfilling the course, he_was_saying: What you_all_are_suspecting me to_be? I am_ not _\add he\add*, but see, he_is_coming after me, of_whom I_am not worthy to_untie the sandal of_his feet.
-\v 26 Men, brothers, sons of_\add the\add*_descent of_Abraʼam/(ʼAⱱərāhām), and you_all among you_all revering the \nd god\nd*, to_us the message of_ the this _salvation was_sent_away.
+\v 26 Men, brothers, sons of_\add the\add*_descent of_Abraʼam/(ʼAⱱrāhām), and you_all among you_all revering the \nd god\nd*, to_us the message of_ the this _salvation was_sent_away.
 \v 27 For/Because the \add ones\add* dwelling in Hierousalaʸm/(Yərūshālayim) and the rulers of_them, having_not_known this \add one\add* and the voices of_the prophets, who being_read on every day_of_rest, having_judged \add him\add* they_fulfilled \add them\add*.
 \v 28 And having_found not_one cause for_death, they_requested Pilatos him to_be_killed.
 \v 29 And when they_finished all the \add things\add* having_been_written concerning him, having_taken_down \add him\add* from the stake, they_put \add him\add* in \add a\add*_tomb.
@@ -547,7 +547,7 @@
 \c 15
 \v 1 And some having_come_down from the Youdaia, were_teaching the brothers, that If you_all _may_ not _be_circumcised to_the custom which of_Mōsaʸs/(Mosheh), you_all_are_ not _being_able to_be_saved.
 \v 2 And dissension and no little debate having_become the by_Paulos and the Barnabas with them, they_determined Paulos and Barnabas and some others from them to_be_going_up, to the ambassadors and elders in Hierousalaʸm/(Yərūshālayim) about the this question.
-\v 3 therefore indeed The having_been_sent_forward by the assembly, they_were_passing_through the both Foinikaʸ and Samareia/(Shomərōn), describing_in_detail the conversion of_the pagans, and they_were_producing great joy to_all the brothers.
+\v 3 therefore indeed The having_been_sent_forward by the assembly, they_were_passing_through the both Foinikaʸ and Samareia/(Shomrōn), describing_in_detail the conversion of_the pagans, and they_were_producing great joy to_all the brothers.
 \v 4 And having_arrived in Hierousalaʸm, they_were_accepted by the assembly, and the ambassadors, and the elders, and they_declared as_much_as the \nd god\nd* did with them.
 \v 5 But some of_the \add ones\add* of the sect of_the Farisaios_\add party\add* having_believed rose_up, saying, that It_is_fitting to_be_circumcising them, and to_be_commanding \add them\add* to_be_keeping the law of_Mōsaʸs.
 \v 6 And the ambassadors and the elders were_gathered_together, to_see about the this matter.
@@ -558,7 +558,7 @@
 \v 11 But by the grace of_the \add the\add*_\nd master Yaʸsous/(Yəhōshūˊa)\nd*, we_are_believing to_be_saved also_those in which manner.
 \v 12 And all the multitude kept_silent, and they_were_hearing from_Barnabas and Paulos, explaining as_much_as the \nd god\nd* did, signs and wonders among the pagans by them.
 \v 13 And after which them to_keep_silent, Yakōbos/(Yaˊₐqoⱱ) answered saying: Men, brothers, hear from_me.
-\v 14 Sumeōn/(Shiməˊōn) explained as first the \nd god\nd* visited, to_take out_of \add the\add*_pagans \add a\add*_people for_the name of_him.
+\v 14 Sumeōn/(Shimˊōn) explained as first the \nd god\nd* visited, to_take out_of \add the\add*_pagans \add a\add*_people for_the name of_him.
 \v 15 And with_this are_agreeing_together the messages of_the prophets as it_has_been_written,
 \v 16 After these \add things\add* I_will_be_returning and I_will_be_rebuilding_up the tent of_Dawid/(Dāvid) which having_fallen, and of_it which having_been_overturned, I_will_be_rebuilding_up and I_will_be_restoring it,
 \v 17 so_that wishfully the remnant of_the people may_seek_out the \nd master\nd*, also all the pagans, on whom has_been_called the name of_me on them, is_saying \add the\add*_\nd master\nd* doing these \add things\add*,
@@ -567,7 +567,7 @@
 \v 20 but to_write to_them which to_be_keeping_away from_the pollutions of_ the _idols, and the sexual_immorality, and the strangled \add animal\add*, and the blood.
 \v 21 For/Because Mōsaʸs/(Mosheh) from ancient generations in_every city the \add ones\add* proclaiming him, is_having being_read in the synagogues on every day_of_rest.
 \v 22 Then it_supposed to_the ambassadors and the elders with all the assembly, having_chosen men from them, to_send \add them\add* to Antioⱪeia with the Paulos and Barnabas, Youdas/(Yəhūdāh) which being_called Barsabbas and Silas, leading men among the brothers,
-\v 23 having_written by \add the\add*_hand of_them: The ambassadors and the elders, brothers, to_be_greeting to_the \add ones\add* in the Antioⱪeia, and Suria/(ʼₐrām), and Kilikia, brothers which from \add the\add*_pagans.
+\v 23 having_written by \add the\add*_hand of_them: The ambassadors and the elders, brothers, to_be_greeting to_the \add ones\add* in the Antioⱪeia, and Suria/(ʼArām), and Kilikia, brothers which from \add the\add*_pagans.
 \v 24 Since we_heard that some from us to_whom we_ not _instructed having_come_out, disturbed you_all by_ upsetting _messages the hearts of_you_all,
 \v 25 it_supposed to_us having_become with_one_accord, having_chosen men to_send to you_all, with Barnabas and Paulos the beloved of_us,
 \v 26 men having_given_over the lives of_them for the name of_the \nd master\nd* of_us, \nd Yaʸsous/(Yəhōshūˊa) chosen_one/messiah\nd*.
@@ -585,7 +585,7 @@
 \v 38 But Paulos was_considering_worthy \add it\add* the \add one\add* having_withdrawn from them from Pamfulia and not having_come_together with_them to the work, not to_be_taking_along_with \add him\add* this \add one\add*.
 \v 39 And \add a\add*_provocation became, so_as them to_be_separated from one_another, and the Barnabas having_taken the Markos, to_sail_away to Kupros.
 \v 40 But Paulos having_chosen Silas, came_out having_been_given_over to_the grace of_the \nd master\nd* by the brothers.
-\v 41 And he_was_passing_through the Suria/(ʼₐrām) and Kilikia, strengthening the assemblies.
+\v 41 And he_was_passing_through the Suria/(ʼArām) and Kilikia, strengthening the assemblies.
 \c 16
 \v 1 And he_arrived also to Derbaʸ and to Lustra. And see, \add a\add*_ certain _apprentice/follower was there by_\add the\add*_name Timotheos, \add the\add*_son of_\add a\add*_ believing _woman Youdaiōns, but \add his\add*_father \add was\add* of_\add a\add*_Hellaʸn,
 \v 2 who was_being_attested by the brothers in Lustra and Ikonion.
@@ -680,7 +680,7 @@
 \v 15 on_the_other_hand if it_is questions about \add a\add*_message, and names, and law, which \add is\add* among you_all, you_all_will_be_seeing \add to_it\add* yourselves, I am_ not _wishing to_be \add a\add*_judge of_these \add things\add*.
 \v 16 And he_drove_ them _away from the tribunal.
 \v 17 And all having_taken_hold_of Sōsthenaʸs the synagogue_leader, they_were_striking \add him\add* before the tribunal. But nothing of_these \add things\add* was_caring to_ the _Galliōn.
-\v 18 And the Paulos having_remained many days still, having_bid_goodbye to_the brothers, was_sailing_away to the Suria/(ʼₐrām), and with him Priskilla and Akulas, having_shaved his head in Kegⱪreai, because/for he_was_having \add a\add*_vow.
+\v 18 And the Paulos having_remained many days still, having_bid_goodbye to_the brothers, was_sailing_away to the Suria/(ʼArām), and with him Priskilla and Akulas, having_shaved his head in Kegⱪreai, because/for he_was_having \add a\add*_vow.
 \v 19 And they_arrived to Efesos, and_ he_left _those there, and himself having_come_in into the synagogue, he_discussed with_the Youdaiōns.
 \v 20 And them asking \add him\add* for more time to_remain, he_ not _consented,
 \v 21 but having_bid_goodbye and having_said, I_will_be_returning to you_all Again, the \nd god\nd* willing, he_was_launched from the Efesos.
@@ -735,7 +735,7 @@
 \c 20
 \v 1 And after the \add time\add* the commotion to_cease, the Paulos having_sent_for the apprentices/followers and having_greeted having_exhorted, he_came_out to_be_going to Makedonia.
 \v 2 And having_passed_through the those districts, and having_exhorted them with_ much _speech, he_came to the Hellas.
-\v 3 And having_worked three months, \add a\add*_plot by the Youdaiōns having_become to_him, going to_be_being_launched into the Suria/(ʼₐrām), he_became of_\add an\add*_opinion which to_be_returning through Makedonia.
+\v 3 And having_worked three months, \add a\add*_plot by the Youdaiōns having_become to_him, going to_be_being_launched into the Suria/(ʼArām), he_became of_\add an\add*_opinion which to_be_returning through Makedonia.
 \v 4 And Sōpatros of_Pyrrhus from_Beroia, And of_\add the\add*_\add ones\add*_from_Thessalonikaʸ Aristarⱪos and Sekoundos, and Gaios from_Derbaʸ, and Timotheos, And \add the\add*_\add ones\add*_from_Asia Tuⱪikos and Trofimos was_accompanying. with_him.
 \v 5 And these having_approached were_remaining with_us in Trōias.
 \v 6 And we sailed_away from Filippou after the days of_ the _non-fermented \add bread\add*, and until five days came to them at the Trōias, where we_stayed seven days.
@@ -774,7 +774,7 @@
 \c 21
 \v 1 And when it_became us to_be_launched, having_been_withdrawn from them, having_run_straight we_came to the Kōs, and on_the_ next _\add day\add* to the Ɽodos, and_from_there to Patara.
 \v 2 And having_found \add a\add*_ship crossing_over into Foinikaʸ, having_boarded we_were_launched.
-\v 3 And the Kupros having_appeared, and having_left it on_\add the\add*_left, we_were_sailing to Suria/(ʼₐrām) and we_came_down at Turos/(Tsor), because/for there the ship was unloading the cargo.
+\v 3 And the Kupros having_appeared, and having_left it on_\add the\add*_left, we_were_sailing to Suria/(ʼArām) and we_came_down at Turos/(Tsor), because/for there the ship was unloading the cargo.
 \v 4 And having_sought_out the apprentices/followers, we_remained_on there seven days, who were_saying by the \nd spirit\nd* to_ the _Paulos not to_be_setting_foot_in to Hierousalaʸm/(Yərūshālayim).
 \v 5 And when it_became to_us to_finish_out the days, having_come_out we_were_journeying, wives and children accompanying with us all, as_far_as outside the city, and having_knelt the knees on the shore having_prayed,
 \v 6 we_withdrew from_one_another and we_went_up into the ship, and those returned to their own \add homes\add*.
@@ -799,7 +799,7 @@
 \v 25 But concerning the pagans having_believed, we sent_out having_judged them to_be_keeping, from_the and/both idol_sacrificed \add thing\add*, and blood, and strangled \add animals\add*, and sexual_immorality.
 \v 26 Then the Paulos having_taken the men, on_the following day with them having_been_purified, was_entering into the temple, proclaiming the fulfillment of_the days of_the purification, until of_which the offering was_offered for each one of_them.
 \v 27 And when the seven days were_going, to_be_being_completed, the Youdaiōns from the Asia, having_seen him in the temple, were_confounding all the crowd, and they_laid_on their hands on him
-\v 28 crying_out: Men, \add ones\add*_from_Israaʸl/(Yisərā\sup ʼēl\sup*), be_giving_help. This is the man, who teaching all everywhere against the people, and the law, and the this place, and still also brought_in Hellaʸns into the temple, and has_defiled the this holy place.
+\v 28 crying_out: Men, \add ones\add*_from_Israaʸl/(Yisrā\sup ʼēl\sup*), be_giving_help. This is the man, who teaching all everywhere against the people, and the law, and the this place, and still also brought_in Hellaʸns into the temple, and has_defiled the this holy place.
 \v 29 For/Because they_were having_previously_seen Trofimos the from_Efesos in the city with him, whom they_were_thinking that the Paulos brought_in into the temple.
 \v 30 And the whole city was_stirred, and \add a\add*_rushing_together of_the people became, and having_taken_hold of_ the _Paulos, they_were_dragging him outside the temple, and immediately the doors were_shut.
 \v 31 and seeking to_kill_ him _off, there_went_up \add an\add*_allegation to_the commander of_the cohort, that all Hierousalaʸm/(Yərūshālayim) is_being_confounded,
@@ -809,13 +809,13 @@
 \v 35 And when he_became to the stairs, it_happened him to_be_being_borne by the soldiers, because_of the force of_the crowd.
 \v 36 For/Because the multitude of_the people was_following crying_out: Be_Taking_ him _away.
 \v 37 And going to_be_being_brought_in into the barracks, the Paulos is_saying to_the commander: - is_it_permitting to_me to_say something to you? And he was_saying: You_are_knowing In_Hellaʸn?
-\v 38 Consequently are you not the from_Aiguptos/(Miʦərayim), who before these the days, having_upset and having_led_out the four_thousand men of_the assassins into the wilderness?
+\v 38 Consequently are you not the from_Aiguptos/(Miʦrayim), who before these the days, having_upset and having_led_out the four_thousand men of_the assassins into the wilderness?
 \v 39 But the Paulos said: On_one_hand I am \add a\add*_Youdaiōns \add a\add*_man, from_Tarsos, of_ the _Kilikia, \add a\add*_citizen of_\add an\add*_ not _insignificant city. On_the_other_hand I_am_beseeching of_you, permit to_me to_speak to the people.
 \v 40 And of_ him _having_permitted, the Paulos having_stood on the stairs, gestured with_his hand to_the people, and great silence having_become, he_called_out in_his Hebraios language saying,
 \c 22
 \v 1 Men, brothers, and fathers, hear which to you_all now of_\add the\add*_defense of_me.
 \v 2 (And having_heard that he_was_calling_out to_them in_the Hebraios language, they_brought_about more quietness.) And he_is_saying:
-\v 3 I am \add a\add*_ Youdaiōns _man, having_been_born in Tarsos of_ the _Kilikia, but having_been_brought_up in the this city, before the feet of_Gamaliaʸl/(Gaməlī\sup ʼēl\sup*), having_been_instructed according_to \add the\add*_exactness of_our ancestral law, being zealous the for_\nd god\nd*, as all you_all are today,
+\v 3 I am \add a\add*_ Youdaiōns _man, having_been_born in Tarsos of_ the _Kilikia, but having_been_brought_up in the this city, before the feet of_Gamaliaʸl/(Gamlī\sup ʼēl\sup*), having_been_instructed according_to \add the\add*_exactness of_our ancestral law, being zealous the for_\nd god\nd*, as all you_all are today,
 \v 4 who I_persecuted this the way until death, binding and giving_over to prisons, both men and women,
 \v 5 as also the chief_priest is_testifying to_me and all the council_of_elders, from whom also having_received letters to the brothers, I_was_going to Damaskos/(Dammeseq), going_to_ also _bring the \add ones\add* being there, having_been_bound to Hierousalaʸm/(Yərūshālayim), in_order_that they_may_be_punished.
 \v 6 But it_became to_me journeying, and nearing to_ the _Damaskos about midday, suddenly much light from the sky to_flash_around around me.
@@ -975,7 +975,7 @@
 \v 4 And_from_there having_been_launched, we_sailed_under the Kupros, because_of that the winds to_be contrary.
 \v 5 And having_sailed_across the sea which along the Kilikia and Pamfulia, we_came_down to Mura of_ the _Lukia.
 \v 6 And_there the centurion having_found \add a\add*_ from_Alexandria _ship, sailing to the Italia, he_placed_in us into it.
-\v 7 And in many days, slow_sailing and with_difficulty, having_become along the Knidos, the wind not further_permitting us, we_sailed_under the Kraʸtaʸ along Salmōn/(Saləmōn)e.
+\v 7 And in many days, slow_sailing and with_difficulty, having_become along the Knidos, the wind not further_permitting us, we_sailed_under the Kraʸtaʸ along Salmōn/(Salmōn)e.
 \v 8 And sailing_along it with_difficulty, we_came to \add a\add*_ certain _place being_called Beautiful Harbours, to_which was near \add the\add*_city Lasaia.
 \v 9 And much time having_elapsed, and the voyage already being dangerous, because_of that even the fasting already to_have_passed_by, the Paulos was_advising \add them\add*
 \v 10 saying to_them: Men, I_am_perceiving that the voyage to_be_going going_to_be with damage and much loss, not only of_the cargo and to_the ship, but also the lives of_us.
@@ -1033,12 +1033,12 @@
 \v 17 And it_became after three days, him to_call_together the \add ones\add* being leaders of_the Youdaiōns. And them having_come_together, he_was_saying to them: Men brothers I, having_done nothing contrary to_the people or the the ancestral customs, \add a\add*_prisoner from Hierousalaʸm/(Yərūshālayim) was_given_over into the hands of_the Ɽōmaios,
 \v 18 who having_examined me, were_wishing to_send_away \add me\add*, because_of that not_one cause of_death to_be_being in me.
 \v 19 But speaking_against of_the Youdaiōns, I_was_compelled to_appeal to_Kaisar, not as having anything to_be_accusing against_the nation of_me.
-\v 20 Therefore for this the cause, I_begged you_all, to_see and to_address, because/for on_account of_the hope of_ the _Israaʸl/(Yisərā\sup ʼēl\sup*), this the chain I_am_being_encompassed \add in\add*.
+\v 20 Therefore for this the cause, I_begged you_all, to_see and to_address, because/for on_account of_the hope of_ the _Israaʸl/(Yisrā\sup ʼēl\sup*), this the chain I_am_being_encompassed \add in\add*.
 \v 21 And they said to him: We neither received letters concerning you from the Youdaia, nor having_arrived anyone of_the brothers reported or spoke anything evil concerning you.
 \v 22 But we_are_considering_worthy to_hear from you what you_are_thinking, because/for indeed concerning the this sect it_is known to_us, that it_is_being_spoken_against everywhere.
 \v 23 And having_determined \add a\add*_day for_him, more they_came to him to the lodging, to_whom he_was_explaining, testifying the kingdom of_ the _\nd god\nd*, and persuading them concerning the \nd Yaʸsous/(Yəhōshūˊa)\nd*, from both the law of_Mōsaʸs/(Mosheh), and the prophets, from in_the_morning to evening.
 \v 24 And on_one_hand the \add ones\add* were_being_persuaded by_the \add things\add* being_spoken, on_the_other_hand the \add ones\add* were_disbelieving.
-\v 25 And being discordant with one_another, they_were_sending_away, the Paulos having_spoken one \add final\add* message: that Rightly the the holy \nd spirit\nd* spoke by Aʸsaias/(Yəshaˊə\sup yāh\sup*) the prophet to the fathers of_you_all
+\v 25 And being discordant with one_another, they_were_sending_away, the Paulos having_spoken one \add final\add* message: that Rightly the the holy \nd spirit\nd* spoke by Aʸsaias/(Yəshaˊ\sup yāh\sup*) the prophet to the fathers of_you_all
 \v 26 saying: Be_gone to the this people, and say: In_hearing you_all_will_be_hearing, and by_no_means you_all_may_ not _understand, and seeing you_all_will_be_seeing, and by_no_means you_all_may_ not _perceive.
 \v 27 For/Because the heart of_ the this _people was_become_dull, and they_ hardly _heard with_their ears and they_shut the eyes of_them, lest they_may_see with_their eyes, and they_may_hear with_their ears, and they_may_understand with_their heart, and they_may_turn_back, and I_will_be_healing them.
 \v 28 Therefore it_let_be known, to_you_all that this the salvation of_ the _\nd god\nd* was_sent_out to_the pagans, and they will_be_hearing. 

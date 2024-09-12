@@ -1,948 +1,945 @@
-\id JOS - Open English Translation—Readers’ Version (OET-RV) v0.0.01
+\id JOS - Open English Translation—Readers’ Version (OET-RV) v0.1.00
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 JOS
 \rem WORDTABLE OET-LV_OT_word_table.tsv
-\h Joshua
-\toc1 Joshua
-\toc2 Joshua
-\toc3 Josh.
-\mt1 Joshua
+\h Yehoshua
+\toc1 Yehoshua
+\toc2 Yehoshua
+\toc3 Yehoshua
+\mt1 Yehoshua
 \is1 Introduction
-\ip The document Josh., story this of descendants of Israel of invasion their of Kanaan. And/Now iyan migpangulu them Josh. nakaliwan to Moses. This the me what happened of this document: the crossing their of River Jordan, the demolition of Hiriku, the gira there to Ay, the pegbaad-part of place there to each tribu of Israel, and the pegbalew-balew of agreement of God and of me his people. And/Now the very neila verse of this document iyan the, “Alam you all kuntee day if who the serving you/your(pl)… But sikeddi and the me pamilya my egpamakey mule of Master God” (24:15).
+\ip This account about Yehoshua, traditionally ‘Joshua’ in English (after ‘I’ and then ‘J’ changed over the centuries from a ‘Y’ sound), tells how the Israelis invaded Canaan and took control of the land. Yehoshua led them forward now after replacing Mosheh (Moses) when he passed away somewhere on a mountain. Some of the main events described in this document include: their crossing the Yordan river, the demolition of Yericho (traditionally ‘Jericho’), the war at Ay, the allocation of blocks of land to the various Israeli tribes and others, and the renewal of the agreement between God and his people.
+\ip The most well-known saying in this account is, “…choose for yourselves today who you will serve… But as for me and my household, we will serve Yahweh.” (24:15).
 \iot Main components of this account
-\io1 The defeat of Kanaanen \ior 1:1–12:24\ior*
-\io1 The pegbaad-part of land \ior 13:1–21:45\ior*
-\io2 a. The land there dapit of igsile of River Jordan \ior 13:1-33\ior*
-\io2 b. The land there to iglineb of River Jordan \ior 14:1–19:51\ior*
-\io2 c. The cities aputanan \ior 20:1-9\ior*
-\io2 d. The cities of me Libita \ior 21:1-45\ior*
-\io1 The returning home of descendants there to igsile, there to their place \ior 22:1-34\ior*
-\io1 The final speaking of Josh. \ior 23:1-16\ior*
-\io1 The pegbalew-balew of agreement there to Sikim \ior 24:1-33\ior*
+\io1 The defeat of the Canaanites \ior 1:1–12:24\ior*
+\io1 The division of land \ior 13:1–21:45\ior*
+\io2 a. The land east of the River Yordan \ior 13:1-33\ior*
+\io2 b. The land west of the River Yordan \ior 14:1–19:51\ior*
+\io2 c. The refuge cities \ior 20:1-9\ior*
+\io2 d. The cities for Levites \ior 21:1-45\ior*
+\io1 The returning home of some tribes back to the east of the Yordan \ior 22:1-34\ior*
+\io1 Yehoshua’s final instructions \ior 23:1-16\ior*
+\io1 The renewal of the agreement there at Shikim \ior 24:1-33\ior*
 \rem This is still a very early look into the unfinished text of the \em Open English Translation\em* of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
-\s1 The suhu of God to Josh.
+\s1 Yahweh encourages Yehoshua
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 \x + \xo 1:3-5: \xt Deu 11:24-25.\x*◙
-\v 4 ◙
-\v 5 \x + \xo 1:5: \xt Deu 31:6,8; Heb 13:5.\x*◙
-\v 6 \x + \xo 1:6: \xt Deu 31:6-7,23.\x*◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
-\s1 The commanding of Josh. of people
+\v 1 After the death of Yahweh’s servant Mosheh \add (Moses)\add*, Yahweh spoke to Mosheh’s servant Yehoshua \add (Joshua)\add* (the son of Nun), saying,
+\v 2 “Now that my servant Mosheh is dead, you and all \add these\add* people \add should pack up\add* \add and\add* cross over this \add River\add* Yordan \add to go\add* to the land that I am about to give to them—to Yisra’el’s descendants.
+\v 3 I’ll give you all every place that the \add soles\add* of your \add feet\add* tread on, just like I told Mosheh.\x + \xo 1:3-5: \xt Deu 11:24-25.\x*
+\v 4 Your \add territory will extend\add* from the wilderness \add in the south\add* to the Lebanon \add mountains in the north\add*, and from the large Euphrates River \add in the east\add*, and \add right to the Mediterranean\add* sea \add in the west\add*, including all of the Hittites’ land.
+\v 5 No man will \add be able to challenge your leadership as long as you live\add*—I’ll be with you just as I was with Mosheh—I won’t fail you or abandon you.\x + \xo 1:5: \xt Deu 31:6,8; Heb 13:5.\x*
+\v 6 Be strong and be courageous, for you yourself will \add lead\add* \add these\add* people to inherit the land that I promised their ancestors that I’d give to them.\x + \xo 1:6: \xt Deu 31:6-7,23.\x*
+\v 7 Just be strong and very courageous—making sure that you \add obey everything\add* that my servant Mosheh instructed you. Don’t turn turn away to the right or to the left from it, so that you’ll be wise in every \add situation that you end up in\add*.
+\v 8 That book of the law \add must always be on your lips\add* and you should meditate on it day and night, so that you’ll be careful to follow everything that’s written in it, because then you’ll make your ways prosperous and then you’ll be wise.
+\v 9 Didn’t I order you to be strong and courageous? Don’t tremble or be discouraged because your God Yahweh will be with you wherever you go.”
+\s1 Yehoshua instructs the people
 \p
-\v 10 ◙
-\v 11 ◙
+\v 10 Then Yehoshua instructed the leaders of the people,
+\v 11 “Go right through the camp and tell the people: Get everything ready that you’ll all need because in three days we’ll be ready to cross over this river and enter the land that your God Yahweh is about to give to you, and to take control of it.”
 \p
-\v 12 \x + \xo 1:12-15: \xt Num 32:28-32; Deu 3:18-20; Josh 22:1-6.\x*◙
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
+\v 12 To the descendants of Reuben and Gad, and to the half-tribe of Menashsheh, Yehoshua said,\x + \xo 1:12-15: \xt Num 32:28-32; Deu 3:18-20; Josh 22:1-6.\x*
+\v 13 “Remember what Yahweh’s servant Mosheh informed you: Your God Yahweh is about give this land to you and to \add enable you all to settle down\add*.
+\v 14 Your women and children and your livestock will stay \add here\add* in the land that Mosheh \add allocated\add* to you on \add this eastern\add* side of the Yordan River. But your \add soldiers\add* must dress for battle and cross over ahead of your brothers and help them
+\v 15 until Yahweh enables your brothers to \add take over the land that your God Yahweh is about to give them so they can settle like you all have\add*. Then you’ll all be able to return to this land which Yahweh’s servant Moses gave you on \add this eastern side of the Yordan and take full control of it\add*.”
 \p
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
+\v 16 “We’ll do everything you’ve told us to,” the people answered, “and we’ll go wherever you send us.
+\v 17 We’ll listen to you just like we listened to everything Mosheh said. May your God Yahweh be with you, just like he was with Mosheh.
+\v 18 We’ll put anyone to death who rebels against your words or refuses to follow your instructions. Just stay strong and courageous.”
 \c 2
-\s1 The me tahasiliban commanded going to Hiriku
+\s1 Spies sent to Yericho
 \p
-\v 1 \x + \xo 2:1: \xt Heb 11:31; Jam 2:25.\x*◙
-\v 2 ◙
-\v 3 ◙
+\v 1 Then from \add there at\add* \add Acacia Grove\add*, Yehoshua (Nun’s son) secretly sent off two spies, saying, “Go \add and learn about the land over there, especially around\add* Yericho \add City\add*.” \add So\add* they went off, and \add over there,\add* they entered the house of a woman—a prostitute named Rahab—and they lay down there.\x + \xo 2:1: \xt Heb 11:31; Jam 2:25.\x*
+\v 2 \add However, someone told\add* Yericho’s king, “Listen, some Israeli men arrived here tonight to \add check out our\add* land.”
+\v 3 So the king sent \add guards\add* to tell Rahab, “Bring out the men who \add went to your place\add* and \add stayed the night\add*, because they’ve come here to \add check out\add* our land!”
 \p
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
+\v 4 \add However, Rahab had hidden\add* the two men \add so she answered\add*, “Indeed, the men \add arrived here, but\add* I didn’t know where they were from.
+\v 5 \add But as\add* the \add city\add* gate was \add about\add* to shut \add last night\add*, the men went out. I don’t know to where \add they\add* went—if you all hurry, you might be able to \add catch\add* them.”
+\v 6 (\add But actually\add* she had taken them up onto her \add flat\add* roof and hidden them in \add bundles of flax that were drying there\add*.)
+\v 7 \add So\add* the \add guards hurried\add* out on the road to the fords on the Yordan \add River\add* and the \add city\add* gate was kept shut after \add they\add* had left.
 \p
-\v 8 ◙
-\v 9 ◙
-\v 10 \x + \xo 2:10: a \xt Exo 14:21; \xo b \xt Num 21:21-35.\x*◙
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
+\v 8 Before the Israeli men lay down \add to sleep that night\add*, \add Rahab\add* went up them on the roof
+\v 9 and told \add them\add*, “\add We\add* know that Yahweh has given this land to you all and we’re \add all terrified\add* of you. Everyone that lives here is \add trembling at the thought of your coming\add*
+\v 10 because we’ve heard that Yahweh dried up the water of the Red Sea ahead of you all when you left Egypt \add (Mitsrayim)\add*. And \add we heard\add* what you all did to two of the Amorite kings Sihon and Og over the Yordan there—how you all completely destroyed them.\x + \xo 2:10: a \xt Exo 14:21; \xo b \xt Num 21:21-35.\x*
+\v 11 \add Yes,\add* we’ve heard \add the reports\add* and \add we trembled and lost our courage to fight you all\add* because your God Yahweh, he’s God \add over\add* the heavens above and the earth below.
+\v 12 \add So\add* now, please promise me by Yahweh that because I’ve been kind to \add both of\add* you, you all will act kindly towards my father’s household. Give me \add a guarantee that you’ll do what you promise\add*
+\v 13 and spare my parents and my siblings and their families from death.”
 \p
-\v 14 ◙
+\v 14 “Our lives \add for your lives\add*,” the \add two\add* men agreed. “If you don’t tell \add anyone about our agreement\add*, then when Yahweh gives us this land, we’ll \add show\add* kindness and faithfulness to you.”
 \p
-\v 15 ◙
-\v 16 ◙
+\v 15 Then she put a rope out through the window to let them down \add to escape from the city\add*, because her house where she lived was \add actually built into\add* the side of the wall.
+\v 16 “Go to the hill country,” she told them, “\add so those searching for you won’t find\add* you, and hide \add up\add* there for three days. \add Then once\add* the searchers have returned, you’ll be able to \add safely\add* \add return to your camp\add*.”
 \p
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
+\v 17 “\add This promise that you made us make\add*,” the men told her, “\add won’t apply unless you do this\add*:
+\v 18 \add Take\add* this red cord \add and\add* when we \add invade\add* the land, tie \add it\add* in this window \add in the wall\add*. Make sure that your parents and your siblings and their households are all here in your house.
+\v 19 If any of them leaves the house, \add their life will then be in their own hands\add* and we’ll be innocent \add if they’re killed\add*. But if anyone with you in this house \add gets injured\add*, \add we’ll be responsible for that\add*.
+\v 20 \add Also,\add* if you tell anyone else about this agreement, then we’ll be \add released\add* from this promise that you made us make.”
+\v 21 “\add Sure, let it be as you say\add*,” \add Rahab\add* \add responded\add*. Then she sent them off, and after they’d gone, she tied the red cord in her window.
 \p
-\v 22 ◙
-\v 23 ◙
-\v 24 ◙
+\v 22 \add The two men\add* went up into the hills and stayed there for three days until the search party returned \add to the city\add* after searching all the roads and not finding them.
+\v 23 \add So\add* the two men went down to the river and crossed over and returned to Yehoshua (Nun’s son), and they told him everything that had happened.
+\v 24 “Yahweh has certainly given this land to us,” they told Yehoshua. “The people there won’t be able to resist us because they’re so terrified.”
 \c 3
-\s1 The crossing of descendants of Israel of Jordan
+\s1 The Israelis cross the Yordan
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
+\v 1 Early the next morning, Yehoshua \add and the people\add* got up early and set off from Acacia Grove and went as far as the Yordan \add River\add* and camped there without crossing over.
+\v 2 After three days, the leaders went throughout the camp
+\v 3 and instructed the people, “As soon as you all see the box \add containing\add* the agreement with your God Yahweh, and \add see\add* the Levitical priests carrying it, then you yourselves should move out from your places and follow after it.
+\v 4 But keep about nine hundred metres back from it. Don’t go any closer than that so that you all can see the way to go, because \add we haven’t been this way\add* before.”
 \p
-\v 5 ◙
-\v 6 ◙
+\v 5 Then Yehoshua told the people, “\add Make sure you all do the ritual washing to make yourselves pure\add*, because tomorrow Yahweh will do miracles among us.”
+\v 6 And \add he\add* told the priests, “Lift up the box with the agreement, and \add walk across here in front\add* of the people.” \add So\add* they lifted up the \add sacred\add* chest and went \add and stood in front of all\add* the people.
 \p
-\v 7 ◙
-\v 8 ◙
+\v 7 Then Yahweh told Yehoshua, “Today I’ll begin to make you powerful in the eyes of all Israel so they’ll know that I’m with you just like I was with Mosheh.
+\v 8 Tell the priests who’re carrying the \add sacred\add* chest that as soon as they come to the edge of the river, they should \add go in just a little and then stop there\add*.”
 \p
-\v 9 ◙
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
+\v 9 Then Yehoshua told the Israelis, “\add Gather around\add* here and listen to your God Yahweh’s message.”
+\v 10 \add He\add* told \add them\add*, “This is how you’ll all know that God, who can do anything, is among you. With your own eyes, you’ll all see how he’ll take away the land from the Canaanites, the Hittites, the Hivites, the Perizzites, the Girgashites, the Amorites, and the Jebusites.
+\v 11 Listen, the sacred chest containing the slabs that belongs to the master who \add owns\add* the whole world, is about to \add be taken\add* across the Yordan in front of you.
+\v 12 \add So\add* now, \add select one man from each of your twelve tribes\add*,
+\v 13 and as soon as the \add priests carrying the sacred chest go into the Yordan, as soon as their feet touch the water, the river water on the upstream side\add* will pile up in a heap.”
 \p
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
+\v 14 \add So once the people had packed up their tents ready to cross the river\add*, the priests carrying the sacred box walked ahead in front of them.
+\v 15 Then as soon as \add those priests\add* steeped into the \add edge\add* of the \add fast-flowing\add* river (because it overflowed its banks at harvest time \add in the spring\add*),
+\v 16 then the water coming from upstream \add suddenly\add* stopped flowing. The water far upstream piled up near a town called Adam (near Tsaretan), and the water that normally flowed down towards the Sea of Arabah (\add also called\add* the Dead Sea or the Salt Sea) \add stopped flowing\add*, so the people were able to cross \add what was\add* the Yordan River opposite Yericho.
+\v 17 The priests carrying the sacred chest with Yahweh’s agreement \add in it\add*, stood on firm, dry ground in \add what had been\add* the middle of the river. All the Israelis crossed over on dry ground until everyone was across.
 \c 4
-\s1 The me rock limlimuan
+\s1 The rock memorial
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
+\v 1 Once all the people had crossed over the Yordan River, Yahweh told Yehoshua,
+\v 2 “Take \add those\add* twelve men \add that the people selected from each tribe\add*,
+\v 3 and give them these instructions: Pick up twelve rocks from here in the middle of the Yordan from near where the priests are standing, and bring them over with you, and put them in the place where you all camp tonight.”
 \p
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
+\v 4 \add So\add* Yehoshua called \add over\add* the twelve men, one from each tribe,
+\v 5 and told them, “Cross \add back to where\add* your God Yahweh’s box is in the middle of the Yordan and \add each of you should pick up a rock and carry it back on your\add* shoulder—one stone each on your shoulder to match the number of tribes of Yisra’el’s sons.
+\v 6 \add Those rocks will be a monument for all the people\add*. \add In the future when your children ask what those rocks mean\add*,
+\v 7 then you’ll all be able to tell them that the water in the Yordan River was cut off ahead of the box with Yahweh’s agreement. When it crossed over into the river, the water in the river \add stopped flowing\add*, and those rocks are a memorial for the Israelis forever.
 \p
-\v 8 ◙
-\v 9 ◙
-\v 10 ◙
-\p …
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
+\v 8 \add So\add* the Israelis did just what Yehoshua had told them to do, and they picked up twelve rocks from the Yordan, just as Yahweh had instructed Yehoshua, and brought them over to where \add the people\add* were camping and placed them down there.
+\v 9 Then Yehoshua stacked up twelve other rocks in the middle of the Yordan where the feet of the priests carrying the box with the agreement had been, and they remain there until today.
+\v 10 The priests carrying the box had stood in the middle of the Yordan until everything that Yahweh had instructed Yehoshua to pass on to the people was done, just as Mosheh had \add also\add* instructed Yehoshua, and the people had rapidly crossed over.
 \p
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
+\v 11 As soon as all the people had crossed over, the priests carrying Yahweh’s box \add also\add* crossed over in front of the people.
+\v 12 The \add soldiers\add* from the tribes of Reuben, and Gad and the half-tribe of Menashsheh had \add marched\add* over ahead of the rest of the Israeli, as Mosheh had \add agreed with them\add*.
+\v 13 (\add There were\add* around forty thousand of them, armed and ready for battle, and they were heading to the plains of Yericho for the battle \add there\add*.)
+\v 14 On that day, Yahweh helped Yehoshua to look powerful in the eyes of the people, and they respected him just as they had respected Mosheh all the days of his\f + \fr 4:14 \ft The Hebrew doesn’t make it clear here whether the writer meant all of \bd Mosheh’s life\bd* or all of \bd Yehoshua’s life\bd*, so translations will vary.\f* life.
 \p
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
-\v 24 ◙
+\v 15 Then Yahweh told Yehoshua,
+\v 16 “\add Now order\add* the priests carrying the box with the agreement to come up out of \add what was\add* the Yordan \add River\add*,”
+\v 17 so Yehoshua instructed the priests to come on up from the Yordan.
+\v 18 As soon as the priests carrying the box with Yahweh’s agreement came up out of \add what had been\add* the Yordan \add River\add* and their feet stepped onto \add what had been\add* dry land, the river water returned to its place and overflowed it banks as \add it had been doing for the previous few days\add*.
+\p
+\v 19 The people had come up from the river valley \add around the end of March\add* and they camped east of Yericho at Gilgal,
+\v 20 which was where \add they\add* had set up the \add monument of\add* twelve rocks.
+\v 21 Then \add Yehoshua\add* told the Israelis, “\add In the future\add* when your descendants ask why these rocks are here,
+\v 22 tell them that this is where Israel crossed the Yordan \add River\add* on dry land.
+\v 23 Your God Yahweh dried up the river water ahead of you until you’d all crossed over, just as \add he\add* had done when he dried up the Red Sea before we crossed over.
+\v 24 Yahweh did that so that all the peoples in the world would know that he is powerful, \add and\add* so that you’ll always all respect him.
 \c 5
 \p
-\v 1 ◙
-\s1 The circumcision and the feast there to Gilgal
+\v 1 When all the Amorite kings who were on the \add west\add* side of the Yordan (towards the ocean) and all the Canaanite kings (beside the ocean) heard how Yahweh had dried up the water in the Yordan \add River\add* until \add the Israelis\add* had crossed over, they \add trembled with fear\add* and \add lost their nerve to stand against\add* Israel.
+\s1 Circumcising the males and celebrating ‘pass-over’ at Gilgal
 \p
-\v 2 ◙
-\v 3 ◙
-\v 4 \x + \xo 5:6: \xt Num 14:28-35.\x*◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
+\v 2 At that time, Yahweh told Yehoshua, “Make yourself flint knives and again circumcise the male Israelis.”
+\v 3 So Yehoshua \add had\add* flint knives made and the \add male\add* Israelis were circumcised at \add a place they named\add* ‘The hill of foreskins’.
+\v 4 (This was done because all the men who’d left Egypt and who were old enough to join the army \add had been circumcised but\add* had died in the wilderness since then,\x + \xo 5:6: \xt Num 14:28-35.\x*
+\v 5 \add and\add* because all the \add boys\add* who’d been born while they were in the wilderness after they’d left Egypt hadn’t been circumcised.
+\v 6 The Israelis have spent forty years \add moving\add* around the wilderness until the last of those men who’d left Egypt but hadn’t listened to Yahweh \add had died\add*. Yahweh had promised not to let them see the land that \add he’d\add* promised to their ancestors to give them—a land flowing with milk and honey.
+\v 7 It was the sons of those people that Yehoshua had circumcised \add this time\add* because they hadn’t been circumcised on the way.)
 \p
-\v 8 ◙
-\v 9 ◙
+\v 8 After all their males had been circumcised, they remained in that camp until they’d \add healed up\add*.
+\v 9 Then Yahweh told Yehoshua, “Today I’ve rolled away the disgrace of Egypt from you,” and that place is named Gilgal\f + \fr 5:9 \ft The name ‘Gilgal’ (‘גִּלְגָּל’, ‘circle’) sounds like ‘galal’ (‘גַּלַל’, ‘roll’).\f* until this day.
 \p
-\v 10 \x + \xo 5:10: \xt Exo 12:1-13.\x*◙
-\v 11 ◙
-\v 12 \x + \xo 5:12: \xt Exo 16:35.\x*◙
-\s1 Josh. and the person due kampilan
+\v 10 In the evening of \add the fourth day that the people had been camped\add* at Gilgal there on the plains near Yericho, they celebrated the ‘pass-over’.\x + \xo 5:10: \xt Exo 12:1-13.\x*
+\s1 Eating from the land—no more manna
 \p
-\v 13 ◙
+\v 11 The next day they ate roasted grain that \add they’d taken from that area\add*, and ate flat bread that same day.
+\v 12 The day after they’d eaten some of the produce from that area, there was no manna \add on the ground to be collected\add* and \add so\add* it stopped—instead they’d eat the produce from the Canaan region \add beginning\add* that year.\x + \xo 5:12: \xt Exo 16:35.\x*
+\s1 Yehoshua and the man with a sword
 \p
-\v 14 ◙
-\p …
+\v 13 While Yehoshua was in the Yericho \add area\add*, he looked up and saw a man in front of him. The man had drawn his sword and was holding it in his hand \add so\add* Yehoshua approached him and asked, “Are you on \em our\em* side, or with our enemies?”
 \p
-\v 15 ◙
+\v 14 “No,” the man \add answered\add*, “but I, the leader of Yahweh’s army, have come now.”
+\p Then Yehoshua fell \add to his knees\add* and bowed down with his face to the ground, and \add asked\add* him, “What’s my master going to \add command\add* to his servant?”
+\p
+\v 15 “Take off your sandals,” the commander of Yahweh’s army told \add him\add*, “because the ground that you’re standing is holy.” \add So\add* Yehoshua \add took them off\add*.
 \c 6
-\s1 The demolition of Hiriku
+\s1 Yericho’s walls collapse
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
+\v 1 \add Now\add* Yericho \add city\add* was shut-up tightly \add because of the Israelis\add*, \add so\add* no one was coming out and no one could go in.
+\v 2 Then Yahweh told Yehoshua, “Listen, I’ve given you \add victory over\add* Yericho and its king, and \add their\add* mighty army \add warriors\add*.
+\v 3 All your soldiers must go around the city once every day for six days
+\v 4 with seven priests \add blowing\add* ram’s horns going ahead of the sacred box. On the seventh day, you all must go around the city seven times while the priests are blowing the horns.
+\v 5 \add Finally,\add* with a long blast of the horn, when you all hear that then all the people must shout loudly and the wall around the city will fall down flat, and all the \add soldiers\add* should go straight in \add from where they’re standing\add*.”
 \p
-\v 6 ◙
-\v 7 ◙
+\v 6 \add So\add* Yehoshua summoned the priests and told them, “Carry the box with the agreement, and have seven priests hold up seven rams’ horns \add ahead\add* of Yahweh’s box.”
+\v 7 Then he told the people, “Go across in front and go around the city, \add with the soldiers going ahead\add* of Yahweh’s box.”
 \p
-\v 8 ◙
-\v 9 ◙
-\v 10 ◙
+\v 8 After Yehoshua had spoken to the people, the seven priests with their seven rams’ horns went across in front and blew the horns, and the box with Yahweh’s covenant was \add carried\add* along behind them.
+\v 9 The \add soldiers\add* walked ahead of the priests blowing the horns, with the rear guard walking behind the box. \add So\add* they were walking and blowing the horns,
+\v 10 and Yehoshua told the people, “Don’t shout \add or even speak or make a noise\add* until the day I tell you all to shout—then you all should shout loudly.”
 \p
-\v 11 ◙
+\v 11 \add So\add* Yahweh’s box was carried once around the city, then the people went back to the camp and stayed the night there.
 \p
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
+\v 12 Yehoshua got up early the next morning, and the priests picked up Yahweh’s box
+\v 13 and the seven priests holding the seven rams’ horns went in front of \add it\add*—blowing the horns as they kept walking. The \add soldiers\add* walking in front of them, and the rear guard walked behind Yahweh’s box \add while\add* the horns were being blown.
+\v 14 They went once around the city on that second day and then returned to their camp \add again\add*—doing that for six days.
 \p
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
+\v 15 Then on the seventh day they got up early at dawn and went around the city \add as before\add*, except this day they went around seven times.
+\v 16 \add After that seventh time around,\add* the priests blew \add a long blast\add* on the rams’ horns and Yehoshua told the people, “Shout, because Yahweh has given you all the city!
+\v 17 \add However,\add* everything in the city is sacred to Yahweh. Only the prostitute Rahab and those who’re in her house will be allowed to live, because she hid the spies that we sent in.
+\v 18 But for all of you, everything inside the city is forbidden—if any of you take anything out of the city then our camp \add would also then be marked for destruction\add* and it would cause \add a lot of\add* trouble.
+\v 19 All the silver and gold, bronze and iron is dedicated to Yahweh and must go into \add his\add* treasury.
 \p
-\v 20 \x + \xo 6:20: \xt Heb 11:30.\x*◙
-\v 21 ◙
+\v 20 \add So\add* the people shouted when that horn blew—as soon as they heard \add it\add* the people shouted loudly and the wall fell down on itself and the people went up \add and over\add* into the city from wherever they were standing and captured the city.\x + \xo 6:20: \xt Heb 11:30.\x*
+\v 21 They \add killed\add* every \add living thing\add* in the city with their \add swords\add*, including men and women, young and old, even cattle, sheep, and donkeys.
 \p
-\v 22 ◙
-\v 23 ◙
-\v 24 ◙
-\v 25 \x + \xo 6:25: \xt Heb 11:31.\x*◙
+\v 22 Then Yehoshua commanded the two men who had spied on the area, “Go to the prostitute’s house and bring the woman out of it and all who’re related to her, just as you promised her.”
+\v 23 \add So\add* the young men \add who’d gone in as\add* spies went in and brought out Rahab and her parents and all her relatives and settled them outside of the camp of the Israelis.
+\v 24 Then \add the warriors\add* set fire to the city and burnt everything that was in it. Only the silver and gold, and bronze and iron were \add first removed and\add* put into the treasury of Yahweh’s house.
+\v 25 \add But\add* Yehoshua spared the prostitute Rahab and her father’s household and her other relatives because she hid the men that Yehoshua had sent in to spy on Yericho, and she still lives in Israel to this day.\x + \xo 6:25: \xt Heb 11:31.\x*
 \p
-\v 26 \x + \xo 6:26: \xt 1Ki 16:34.\x*◙
-\q1 …
-\q2 …
-\q1 …
-\q2 …
+\v 26 At that time, Yehoshua made \add the people\add* take an oath, saying,\x + \xo 6:26: \xt 1Ki 16:34.\x*
+\q1 “May Yahweh curse anyone who rebuilds this city, Yericho.
+\q1 When that person lays its foundation, may his oldest son die.
+\q1 And when he finishes building the city wall and sets up its gates, may his youngest son die.”
 \p
-\v 27 ◙
+\v 27 \add So\add* Yahweh was with Yehoshua and \add everyone in that region had heard about him\add*.
 \c 7
-\s1 The sin of Akan
+\s1 Achan’s sin
 \p
-\v 1 ◙
+\v 1 \add However\add* the Israelis disobeyed the command about \add not taking anything\add*. Achan (son of Karmi, son of Zabdi, son of Zerah, from the tribe of Yehudah) took something that was prohibited, \add so\add* Yahweh was angry with the Israelis.
 \p
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
+\v 2 \add Meanwhile,\add* Yehoshua sent some of his men from Yericho to Ay (east of Bethel and near Beyt-Aven) and told them, “Go \add to Ay\add* and spy out the land.” \add So\add* the men went and checkout out Ay.
+\v 3 \add When\add* they returned to Yehoshua, they told him, “Don’t \add send all the warriors\add*—\add only\add* around two to three thousand men should go and attack them. Don’t \add bother everyone else\add* because \add Ay is small\add*.”
+\v 4 \add So\add* around three thousand \add warriors\add* went to \add attack Ay, but they were defeated\add* and had to flee \add back\add*.
+\v 5 The men from Ay chased them from the city gate downhill to Shevarim and fought them on the slopes. About thirty-six \add of them\add* were killed, and the \add Israelis became very afraid and lost all their courage\add*.
 \p
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
+\v 6 Yehoshua and the Israeli elders tore their clothes \add in grief\add* and fell to their knees in front of Yahweh’s box until evening, throwing dust onto their heads \add in despair\add*.
+\v 7 Then Yehoshua \add asked\add*, “Yahweh, my master, why did you bring \add these\add* people across the Yordan and then let us be defeated and killed by the Amorites? If only we’d been content and stayed on the other side of the river.
+\v 8 Please, my master, what can I say now that \add we\add* have had to flee \add in shame\add* from our enemies?
+\v 9 \add When\add* the Canaanites and the other people living in this land hear \add about this\add*, they’ll surround us and \add kill all of us\add*. Then what would you do to defend your honour?
 \p
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
+\v 10 \add But\add* Yahweh told Yehoshua, “Stand up! Why is your face \add on the ground like that\add*?
+\v 11 Israel has sinned and disobeyed my agreement\f + \fr 7:11 \ft Probably referring to the ten commands written on the stone slabs.\f* that I made with them. They’ve also taken prohibited things—stealing, deceiving, and put it with their own possessions.
+\v 12 \add That’s why\add* \add they\add* were unable to defeat their enemies—they had to flee from them because they took what was prohibited. I won’t be with you all again unless you all destroy \add what was taken\add*.
+\v 13 \add So\add* get up and tell the people, ‘Purify yourselves for tomorrow, because \add our\add* God Yahweh says that \add we took something prohibited and we won’t be able to better our enemies until it’s removed from among us\add*.
+\v 14 \add Tomorrow morning\add* you all must present yourselves by your tribes. Then the tribe that Yahweh \add singles out\add*, must present yourselves by your clans, and the clan that Yahweh \add singles out\add*, must present yourselves by household. Then the household that Yahweh \add singles out\add*, must present yourselves individually.
+\v 15 The \add man\add* who is caught will be destroyed by fire, along with everything that belongs to him, because he’s violated Yahwweh’s agreement and committed a disgraceful sin among Israel.”
 \p
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
+\v 16 \add So\add* Yehoshua got up early the next morning and \add ordered each tribe to come forward singly\add*, and the tribe of Yehudah was \add singled out\add*.
+\v 17 Then each of the clans came forward and the Zerahite clan was \add singled out\add*, and when their families came forwards, Zabdi’s household was \add singled out\add*.
+\v 18 When everyone in that \add extended family\add* came forward, Achan (son of Karmi, son of Zabdi, son of Zerah, from the tribe of Yehudah) was \add singled out\add*.
+\v 19 Then Yehoshua told Achan, “My son, now \add honour\add* Yahweh the God of Israel and give thanks to him. And tell me now what you’ve done—don’t hide it from me.”
 \p
-\v 20 ◙
-\v 21 ◙
+\v 20 “It’s true,” Achan replied, “I’ve sinned against Yahweh the God of Israel. This is what I did:
+\v 21 I saw a \add beautiful Babylonian cloak\add* and two hundred silver pieces and a tongue-shaped piece of gold (weighing six-hundred grams) \add there inside Yericho\add*. I wanted them so I took them, and they’re hidden in the ground under my tent, with the silver underneath.”
 \p
-\v 22 ◙
-\v 23 ◙
+\v 22 Yehoshua sent some messengers and they ran to the tent, and sure enough, it was all hidden there \add in the ground\add* with the silver underneath.
+\v 23 They took it out of the tent and brought it back to Yehoshua and all the people, and spread it out in front of Yahweh.
 \p
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\p …
+\v 24 Then Yehoshua took Achan and the silver, the cloak, the gold along with his children and his animals, his tent and everything he owned, and took them to the Akor Valley along with all the people,
+\v 25 and he said, “Why did you cause trouble for us? Yahweh will trouble you today.” And \add the people executed him by throwing rocks at him\add*. Then they threw rocks at them \add all\add* and burnt \add the bodies\add*
+\v 26 and piled rocks over them which are still there to this day and Yahweh’s \add anger subsided\add*. That’s why that place is called ‘Akor’ \add (i.e., ‘Trouble’)\add* Valley to this day.
 \c 8
-\s1 The defeat and the demolition of Ay
+\s1 The defeat and destruction of Ay
 \p
-\v 1 ◙
-\v 2 ◙
+\v 1 Then Yahweh told Yehoshua, “Don’t \add be afraid or discouraged\add*. Take all your warriors with you and go to Ay. Listen, I’ve given \add you victory over\add* Ay’s king and his people and his city and his land.
+\v 2 You’ll do to Ay and its king what you did to Yericho and its king,\f + \fr 8:2 \ft We’re not actually given any details about what happened to the king of Yericho.\f* except that you all can plunder its spoil and its livestock for yourselves. Ambush the city from behind.”
 \p
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
+\v 3 \add So\add* Yehoshua \add led\add* his warriors towards Ay. \add He\add* chose thirty thousand of the \add bravest and strongest warriors\add* and sent them \add ahead in the darkness\add*
+\v 4 and told them, “Listen, you all lie in ambush against the city from close behind \add it\add*, and \add make sure you all stay alert and ready\add* \add to attack\add*.
+\v 5 \add I will bring those warriors\add* who’re with me and we’ll approach the city, then when they come out to \add attack\add* us like \add last time\add*, we’ll run back away from them.
+\v 6 They’ll \add think we’re running away from them like we did before, so they’ll chase after us until we’ve drawn them away\add* from the city.
+\v 7 Then you’ll all \add move in\add* from your ambush \add position\add* and capture the city, and your God Yahweh \add will give the city to you all\add*.
+\v 8 \add After\add* you capture the city, set fire to it. Do what I’ve ordered you all \add which in turn has come from\add* Yahweh.
+\v 9 \add So\add* Yehoshua sent them to \add set up\add* the ambush between Ay and Bethel (so west of Ay). \add Meanwhile,\add* \add he\add* stayed overnight \add at the camp\add*.
 \p
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
+\v 10 Yehoshua got up early in the morning and gathered the \add warriors\add*, then he and the Israeli elders went \add in front of them\add* \add to go and attack\add* Ay.
+\v 11 \add They all\add* went close to the city and camped \add there slightly\add* to the north, with just a valley between them and Ay.
+\v 12 (He had sent around five thousand warriors to \add lie in\add* ambush between Bethel and Ay, west of the city,
+\v 13 \add so\add* the main group was to the north and the rear guard to the west.) That night Yehoshua went down into the valley.
+\v 14 When the king of Ay saw \add the Israelis\add*, he hurriedly got his men ready, and went out early to meet Israel for the better. The king and his people went to a \add prepared spot overlooking the Yordan valley, but\add* he didn’t know that \add another group lay in ambush behind the city\add*.
+\v 15 Yehoshua and the Israeli group allowed themselves to be struck by them, then they fled back towards the wilderness
+\v 16 and all the \add men\add* in the city were called out to chase them. \add So\add* they chased after Yehoshua and were drawn away from the city,
+\v 17 and there wasn’t a single man left in Ay or Bethel who didn’t \add join the chase\add*—they left the city \add wide\add* open and chased after the Israelis.
 \p
-\v 18 ◙
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
+\v 18 Then Yahweh told Yehoshua, “Hold your spear out \add pointing\add* towards Ay, because I will \add allow you to defeat it\add*.” \add So\add* Yehoshua held the spear that was in his hand out toward the city.
+\v 19 \add When the warriors in the ambush saw that, they\add* rushed out from their place and entered the city and captured it, and quickly set \add it\add* on fire.
+\v 20 \add When\add* the men from Ay turned and looked behind them, the smoke from their city was going up into the sky, \add but they had nowhere to escape to.\add* Then \add Yehoshua’s men\add* who’d been fleeing towards the wilderness turned back around towards their pursuers
+\v 21 and saw that the ambush had captured the city and the smoke was rising. \add So\add* they \add continued back towards Ay, killing their men\add*.
+\v 22 \add Meanwhile,\add* \add their warriors\add* came \add back\add* out of the city, \add so\add* the men from Ay ended up in the middle of the two groups, and \add the Israelis\add* \add fought until they’d killed them all\add*.
+\v 23 \add However\add* they captured the king of Ay alive and brought him to Yehoshua.
 \p
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
-\v 28 ◙
-\v 29 ◙
-\s1 The pegbasa of Law there to mountain of Ibal
+\v 24 Then \add after the Israelis\add* had finished killing the \add men of\add* Ay who had chased them \add towards\add* the wilderness, \add they\add* returned to Ay and \add slaughtered the people still in there\add*,
+\v 25 \add so a total of\add* twelve thousand men and women from Ay \add were killed\add* that day.
+\v 26 Yehoshua didn’t \add lower his\add* spear until everyone who lived in Ay had been completely destroyed.
+\v 27 \add The Israelis\add* only took the livestock and the goods from \add Ay\add*, just as Yahweh had instructed Yehoshua,
+\v 28 then Yehoshua burnt the city and made it a \add permanent pile of rubble where no one lives to this day\add*.
+\v 29 \add He\add* hanged the king of Ay on a tree, \add but\add* as the sun was going down, \add he\add* commanded that the corpse be brought down from the tree. They threw it into the city gateway and piled a big heap of rocks on top of it which is still there today.
+\s1 The reading of Law there at mountain of Eybal
 \p
-\v 30 \x + \xo 8:30-32: \xt Deu 27:2-8.\x*◙
-\v 31 \x + \xo 8:31: \xt Exo 20:25.\x*◙
-\v 32 ◙
-\v 33 \x + \xo 8:33-35: \xt Deu 11:29; 27:11-14.\x*◙
+\v 30 Then Yehoshua built at altar to Israel’s God, Yahweh on Mt. Eybal\x + \xo 8:30-32: \xt Deu 27:2-8.\x*
+\v 31 just like Yahweh’s servant Mosheh had instructed \add them\add*. (It was written in the scroll of the rules from Mosheh \add that it must be\add* an altar made from whole stones that \add haven’t been chiselled with\add* iron tools.) Then they offered burnt offerings to Yahweh on it, plus they sacrificed peace offerings,\x + \xo 8:31: \xt Exo 20:25.\x*
+\v 32 and \add while the Israelis watched,\add* \add Yehoshua\add* inscribed onto the stones \add there\add*,\f + \fr 8:32 \ft Probably not the altar stones since an iron tool wasn’t allowed to be used on them.\f* a copy of the rules \add passed on by\add* Mosheh.
+\v 33 Then all of Israel and their elders and officials and judges were standing \add some of each side\add* of the box containing Yahweh’s agreement, \add facing\add* the priests and the Levites who carried the box. Any resident foreigners were also there. Half of the people stood on the Mt. Gerazim side, and half on the Mt. Eybal side \add of the valley\add*, just like \add the way that\add* Yahweh’s servant Mosheh had originally commanded for blessing the people.\x + \xo 8:33-35: \xt Deu 11:29; 27:11-14.\x*
 \p
-\v 34 ◙
-\v 35 ◙
+\v 34 Then Yehoshua read all the law, \add including\add* the blessings and the curses, as per everything that’s written in the book of the law.
+\v 35 \add He\add* \add read out every single word that Mosheh had written\add*, in front of the entire assembly of Israel, including the women, children, and foreigners living among them.
 \c 9
-\s1 The betrayal of me from-Gibyun to Josh.
+\s1 The betrayal of me from-Gibyun to Yehoshua
 \p
-\v 1 ◙
-\v 2 ◙
+\v 1 \add There were several kings who ruled in regions on this west side of the Yordan—the Hittites and Amorites, the Canaanites and Perizzites, the Hivites and the Yebusites. Some were in the hill country, some in the lowlands, and some along the Mediterranean coast south of Lebanon\add*. \add When\add* \add they\add* heard about \add what had happened at Ay\add*,
+\v 2 they \add formed an alliance\add* to fight \add together\add* against Yehoshua and Israel.
 \p
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
+\v 3 \add However,\add* when \add the people who\add* live in Gibeon heard what Yehoshua had done to Yericho and Ay,
+\v 4 they \add decided to use cunning\add* \add instead\add*. They \add found old, worn-out sacks to throw over their donkeys and old, worn-out wineskins that had been torn and mended, then sent men to act as ambassadors\add*.
+\v 5 \add They found worn-out sandals that had been patched, and wore worn-out clothes.\add* All the \add food that they took for the journey was already dry and disintegrating into crumbs\add*.
+\v 6 They went to Yehoshua in the camp at Gilgal and told him, “We’ve come from a far-off land and \add want you to make a treaty with\add* us.”
 \p
-\v 7 \x + \xo 9:7: \xt Exo 23:32; 34:12; Deu 7:2.\x*◙
+\v 7 An Israeli man asked the Hivite \add (because Gilead was in the Hivite region)\add*, “Perhaps you really live near by? How could we make a treaty with you?”\x + \xo 9:7: \xt Exo 23:32; 34:12; Deu 7:2.\x*
 \p
-\v 8 ◙
-\p …
+\v 8 They \add addressed\add* Yehoshua, “We are your servants.”
+\p Yehoshua \add asked\add* them, “Who are you? And where have you come from?”
 \p
-\v 9 ◙
-\v 10 \x + \xo 9:10: \xt Num 21:21-35.\x*◙
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
+\v 9 “Your servants have come from a very distant land,” they replied, “because of the reputation of your God, Yahweh. We’ve heard the \add reports\add* about him and everything that he did in Egypt,
+\v 10 and everything that he did to the two Amorite kings on the other side of the Yordan—King Sihon of Heshbon, and King Og of the Bashan who \add lived\add* in Ashtaroth.\x + \xo 9:10: \xt Num 21:21-35.\x*
+\v 11 \add So\add* our elders and all those who live in our area instructed us, ‘Take provisions for the \add journey\add* and go to meet them, and tell them, “We are your servants. \add Now make a treaty with\add* us.” ’
+\v 12 This bread of ours was warm \add from our ovens\add* when we loaded it \add for our journey\add*, and now, look, it’s \add all\add* dry and crumbling.
+\v 13 And these wineskins were new when we filled them, and look, \add now\add* they’re \add all\add* torn. \add Same with\add* our clothes and our sandals—they’re \add all\add* worn-out from the very \add long journey\add*.”
 \p
-\v 14 ◙
-\v 15 ◙
+\v 14 The \add Israeli leaders tasted\add* some of their provisions, but they didn’t ask Yahweh \add for advice\add*.
+\v 15 \add So\add* Yehoshua \add agreed to\add* make peace with them, and they made a treaty \add not to attack their people\add*, and all the Israeli leaders promised that.
 \p
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\p …
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
+\v 16 \add However, three days after making the treaty, they discovered that those people actually lived quite close to where they were\add*.
+\v 17 Then the Israelis went on forward and they arrived at those cities on the third day—the cities of Gibeon, Kefirah, Beerot, and Kiryat-Yearim.
+\v 18 But \add they\add* didn’t \add attack those cities\add* because \add their\add* leaders had made a promise by the God of Israel, Yahweh.
+\p \add All the Israelis\add* grumbled against their leaders for making that treaty,
+\v 19 \add but\add* their leaders told \add them\add*, “We ourselves have promised them by \add our\add* God Yahweh \add so\add* now we can’t touch them.
+\v 20 We’re \add forced now to let them live, otherwise God’s anger would be against us for breaking our promise\add* to them.
+\v 21 \add So\add* we’ll let them live \add but make them our slaves\add*.” \add As a result of that,\add* \add the Gibeonites\add* became woodcutters and water-carriers for all the \add Israelis\add*.
 \p
-\v 22 ◙
-\v 23 ◙
+\v 22 Then Yehoshua summoned them and asked them, “Why did you all deceive us \add by telling us that you lived far away when really you were very close\add*?
+\v 23 \add Because of that,\add* you’re all cursed and you’ll always be our slaves—you’ll all be the woodcutters and water-carriers for the house of my God.”
 \p
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
+\v 24 “Because it was \add made very clear\add* to your servants,” they answered, “that your God Yahweh had commanded his servant Mosheh to give to you all the land and to destroy everyone who lives in the region. \add We feared for our lives when you came closer\add*, so that’s what we did.
+\v 25 \add So now we’re in your power—do to us whatever you think\add* is good and right.”
+\v 26 \add So\add* that’s what \add Yehoshua\add* did and he \add prevented the Israelis\add* from killing them.
+\v 27 \add Instead\add* \add he\add* made them \add move to where he wanted, to become\add* woodcutters and water-carriers for the people and for Yahweh’s altar until this day.
 \c 10
-\s1 The defeat of me Amurihanen
+\s1 The defeat of the Amorites
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
+\v 1 \add Once\add* King Adoni-Tsedek of Yerusalem heard that Yehoshua had captured Ay and completely destroyed it and that he’d treated the king of Ay the same as he had treated the king of Yericho, and he heard that the Gibeonites had made peace with Israel and were \add now working for\add* them,
+\v 2 \add the people of Yerusalem\add* were very afraid because Gibeon had been a powerful city, stronger than Ay, and all it’s warriors were powerful.
+\v 3 \add So\add* King Adoni-Tsedek sent to King Hoham of Hebron, King Piram of Yarmut, King Yafia of Lakish, and King Debir of Eglon, saying,
+\v 4 “Come \add here\add* and help me. We’ll attack Gibeon because they’ve made peace with Yehoshua and \add the Israelis\add*.”
+\v 5 \add So\add* those five Amorite kings (from Yerusalem, Hebron, Yarmut, Lakish, and Eglon) joined together to go to Gibeon and their \add armies\add* camped there to fight against it.
 \p
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
+\v 6 The \add leaders\add* of Gibeon \add hurriedly\add* sent to Yehoshua in the camp at Gilgal, saying, “Don’t \add abandon\add* your servants. Come quickly and help us, and save us because all the kings of the Amorites who live in the hill country have combined against us.”
+\v 7 \add So\add* Yehoshua and his warriors and prize fighters \add headed off\add* from Gilgal,
+\v 8 and Yahweh told \add him\add*, “Don’t be afraid of them, because \add you’ll have the victory over them\add*—none of them will be able to stand against you.”
 \p
-\v 9 ◙
-\v 10 ◙
-\v 11 ◙
+\v 9 Yehoshua \add and his men\add* spent the night moving in, and then \add surprised the alliance\add*,
+\v 10 and Yahweh confused them \add as the Israelis approached\add* and \add caused them\add* to be badly defeated at Gibeon. Then \add they\add* chased them on the road going to Beyt-Horon and killed them as far as Azekah and Makkedah.
+\v 11 As they fled from the Israelis on the slope down from Beyt-Horon heading towards Azekah, Yahweh hurled large hailstones down on them from the sky and they died—\add actually\add* more of them died from the hail than were killed with swords by the \add Israelis\add*.
 \p
-\v 12 ◙
-\q1 …
-\q2 …
+\v 12 Then Yehoshua spoke to Yahweh on the day that \add he gave them victory over the Amorites\add*, and \add in front of the Israelis\add* he said,
+\q1 “Sun, stay still over Gibeon,
+\q1 and moon, over the Ayyalon Valley.
 \m
-\v 13 \x + \xo 10:13: \xt 2Sam 1:18.\x*◙
-\v 14 ◙
+\v 13 Then the sun stood still and the moon stood still until the nation had avenged themselves of their enemies. (Isn’t that written about in the Jashar scroll? The sun stood still in the middle of the sky and it didn’t hurry to go around for almost a whole day.\x + \xo 10:13: \xt 2Sam 1:18.\x*
+\v 14 There had never before been a day like that, and nothing like it since then, when Yahweh listened to a man’s voice, because \add he\add* was fighting for Israel.)
 \p
-\v 15 ◙
-\s1 The capturing of five King me Amurihanen
+\v 15 Then Yehoshua and all Israel returned to their camp at Gilgal.
+\s1 Five Amorite kings defeated
 \p
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
-\p …
+\v 16 \add Meanwhile\add* those five kings had fled away and hidden at Makkedah in a cave,
+\v 17 and Yehoshua was told, “The five kings have been found hiding in the cave at Makkedah.”
+\v 18 Yehoshua said, “Roll large rocks across the mouth of the cave and assign men to guard them there,
+\v 19 but \add the rest of you,\add* don’t stay there. Chase after your enemies and attack them from behind. Don’t let them get into their cities, because your God Yahweh \add wants you all to defeat them\add*.
+\v 20 \add So\add* Yehoshua and \add the Israelis\add* finished \add most of them off\add*, although \add some did manage to escape and get back\add* into their fortified cities.
+\v 21 Then all the people returned to Yehoshua in the camp at Makkedah. \add After that,\add* no one dared to criticise the \add Israelis\add*.
 \p
-\v 22 ◙
-\v 23 ◙
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
-\s1 The invasion of Josh. of other me Amurihanen
+\v 22 Then Yehoshua said, “Open up the cave and bring those five kings to me.”
+\v 23 They did it and brought the five kings out from the cave—the kings of Yerusalem, Hebron, Yarmut, Lakish, and Eglon.
+\v 24 \add When\add* they took them to Yehoshua, he summoned \add all the warriors\add* and told the commanders, “Come over here. Put your feet on the necks of these kings.”
+\v 25 Then he told them, “Don’t be afraid and don’t be dismayed. Be strong and courageous, because this is what Yahweh will do to all your enemies—\add including the ones that you all still have\add* to fight.”
+\v 26 Then Yehoshua executed \add the five kings\add* and hanged them on five trees, \add where their bodies were left\add* until evening.
+\v 27 As the sun was going down, \add he\add* commanded that \add the bodies\add* be brought down and thrown into the cave where they had hidden, and they placed large rocks over the cave entrance \add again, which are still there\add* to this day.
+\s1 Yehoshua attacks more Amorites
 \p
-\v 28 ◙
+\v 28 Then Yehoshua captured Makkedah that \add same\add* day. \add They\add* killed \add the king and everyone else in the city\add*, leaving no survivors, and \add Yehoshua\add* did the same to the king of Makkedah as he’d done to the king of Yericho.\f + \fr 10:28 \ft We’re not actually given any details about what happened to the king of Yericho.\f*
 \p
-\v 29 ◙
-\v 30 ◙
+\v 29 Then Yehoshua and all Israel went \add southwest\add* from Makkedah to Libnah and fought against \add it\add*.
+\v 30 Yahweh also \add allowed Israel to conquer\add* it and its king, and \add Yehoshua\add* \add again\add* \add killed everyone in the city\add*, leaving no survivors, and he did the same to the king of Libnah as he’d done to the king of Yericho.
 \p
-\v 31 ◙
-\v 32 ◙
-\v 33 ◙
+\v 31 Then Yehoshua and all Israel went \add south\add* from Libnah to Lakish, \add where\add* they took a position against \add the city\add* and fought against it.
+\v 32 On the second day \add of the battle\add*, Yahweh \add helped Israel defeat Lakish\add*, and \add they\add* captured \add the city\add* and \add killed everyone in the city\add* like \add they\add* had done to Libnah.
+\v 33 King Horam of Gezer arrived to help Lakish, \add but\add* Yehoshua defeated him and his men, leaving no survivors.
 \p
-\v 34 ◙
-\v 35 ◙
+\v 34 Then Yehoshua and \add the Israelis\add* went \add west\add* from Lakish to Eglon, \add where\add* they took a position against \add the city\add* and fought against it.
+\v 35 That day \add they\add* captured \add the city\add* and \add killed everyone in the city\add* like \add they\add* had done to Lakish.
 \p
-\v 36 ◙
-\v 37 ◙
+\v 36 Then Yehoshua and \add the Israelis\add* went \add west\add* from Eglon up \add into the hills\add* to Hebron, and fought against it.
+\v 37 They captured it and killed the king and everyone in all their \add towns\add*, leaving no survivors the same as Eglon.
 \p
-\v 38 ◙
-\v 39 ◙
+\v 38 Then Yehoshua and and \add the Israelis\add* went to \add the city of\add* Debir and fought against it.
+\v 39 They captured \add the city\add* and its king and all their \add towns\add*, killing everyone and leaving no survivors. \add They\add* treated Debir and its king just like that had to Libnah and Hebron and their kings.
 \p
-\v 40 ◙
-\v 41 ◙
-\v 42 ◙
-\v 43 ◙
+\v 40 \add So\add* Yehoshua \add attacked and conquered the entire region\add*—the hill country and the Negev, the lowlands and the slopes, and all their kings. He didn’t leave any survivors \add but\add* destroyed everything living, just as Yahweh the God of Israel had commanded.
+\v 41 Yehoshua \add attacked and conquered\add* them from Kadesh-Barnea and as far as Gaza, all the land of Goshen and as far as Gibeon.
+\v 42 In one swoop, Yehoshua captured all those kings and their land, because Yahweh the God of Israel fought for Israel.
+\v 43 Then Yehoshua and \add his warriors\add* returned to their camp at Gilgal.
 \c 11
-\s1 The invasion of Josh. of King Habin
+\s1 Yehoshua defeats the northern kings
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
+\v 1 \add Now when\add* King Yabin of Hatsor heard \add about all that\add*, he sent to King Yovav of Madon and the kings of Shimron and Akshaf,
+\v 2 as well as the kings from the hill country in the north and in \add the rift valley plains\add* south of Lake Galilee, and in the lowlands and in the heights of Dor in the west,
+\v 3 and \add the kings of\add* the Canaanites both east and west, and the Amorites, Hittites, Perizzites, and the Yebusites who lived in the hill country, and to the Hivites by \add Mt.\add* Hermon in the Mitspah region.
+\v 4 \add So\add* they \add all\add* came out with their warriors—so many people that they were as many as the \add grains of\add* sand on the seashore, along with many horses and chariots.
+\v 5 All those kings gathered together at the time they’d specified and took up positions at the Merom stream to fight against Israel.
 \p
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
+\v 6 \add But\add* Yahweh told Yehoshua, “Don’t be afraid that \add they look overwhelming\add*, because tomorrow at this time, I’ll \add ensure that they’re all slain by\add* Israel. You’ll hamstring their horses and burn their chariots.”
+\v 7 Then Yehoshua and all \add his warriors\add* went to Merom and attacked them \add without warning\add*
+\v 8 and Yahweh \add enabled them to defeat them\add*.
+\v 9 Then Yehoshua did \add what Yahweh had instructed\add* him—he crippled their horses and set fire to their chariots.
 \p
-\v 10 ◙
-\v 11 ◙
+\v 10 \add After that,\add* Yehoshua returned to Hatsor \add city\add* and captured it and killed the king—in the past it had been the head of all those kingdoms.
+\v 11 They killed everything in \add the city\add*—not leaving anything that breathes—and then set fire to it.
 \p
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\s1 The pegkaangken of Josh. of all land
+\v 12 \add So\add* Yehoshua \add had\add* captured all those kings and their cities, and completely destroyed \add them and their people\add* just as Yahweh’s servant Mosheh had commanded.
+\v 13 \add However,\add* other than Hatsor, they didn’t burn any of the \add other more defensible\add* cities built \add up\add* on mounds.
+\v 14 The \add Israelis\add* took any valuables and any livestock from those cities, but they killed everyone and everything else.
+\v 15 Yehoshua did everything exactly as Yahweh had instructed his servant Mosheh (and as Mosheh had then instructed him), not \add forgetting or ignoring\add* anything.
+\s1 Yehoshua controls the entire region
 \p
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
-\v 20 \x + \xo 11:20: \xt Deu 7:16.\x*◙
+\v 16 Yehoshua conquered the whole region—the hill country and all the Negev, all of the Goshen region, the lowlands and \add the rift valley plains\add*, the hill country of Israel and its lowlands
+\v 17 from Mt. Halak downhill towards Seir, and as far as Baal-Gad in the Lebanon valley below Mt. Hermon. He attacked and captured all their kings and executed them.
+\v 18 Yehoshua had spent \add quite some time\add* battling with those kings.
+\v 19 No city made peace with \add the Israelis\add* except for the Hivites who lived in Gibeon—all the rest were taken in battle
+\v 20 because it was Yahweh who’d \add made them stubborn\add* so they’d fight against Israel and be completely destroyed without any \add mercy\add*. \add Yes,\add* they were annihilated just as Yahweh had instructed Mosheh.\x + \xo 11:20: \xt Deu 7:16.\x*
 \p
-\v 21 ◙
-\v 22 ◙
+\v 21 At that time, Yehoshua \add also\add* went and exterminated the Anakites from the hill country, from Hebron, Debir, Anab, and all the hill country of Yehudah and Israel. \add He\add* completely destroyed them from their cities.
+\v 22 No \add descendants of Anak\add* were left in the land of Israel, except that \add some\add* remained in Gaza, in Gat, and in Ashdod.
 \p
-\v 23 ◙
-\p …
+\v 23 Yehoshua captured the entire region, just as Yahweh had told Mosheh, and Yehoshua gave it as an inheritance to Israel, divided into portions according to their tribes, and then the region \add was peaceful\add*.
 \c 12
-\s1 The kings natalu of Moses
+\s1 The kings defeated by Mosheh
 \p
-\v 1 \x + \xo 12:1-5: \xt Num 21:21-35; Deu 2:26–3:11.\x*◙
-\p …
-\v 2 ◙
-\v 3 ◙
+\v 1 These are the kings in the region who the \add Israelis defeated\add* on the eastern side of the Yordan \add river\add* and took possession of their land from the Arnon riverbed \add in the south\add* to Mt. Hermon \add in the north\add*, including all of the eastern \add rift valley plains\add*:\x + \xo 12:1-5: \xt Num 21:21-35; Deu 2:26–3:11.\x*
+\v 2 King Sihon of the Amorites who lived in Heshbon and ruled \add over\add* Aroer (on the edge of the Arnon riverbed) and \add over\add* half of Gilead up to the Yabbok riverbed \add which formed\add* the border with the Ammonites,
+\v 3 as well as the \add eastern rift valley plains\add* down to Lake Galilee and to the Sea of Arabah (\add also called\add* the Dead Sea or the Salt Sea), the road to Beyt-Yeshimot and the area southward below the slopes of \add Mt.\add* Pisgah.
 \p
-\v 4 ◙
-\v 5 ◙
+\v 4 \add The Israelis also defeated\add* King Og from Bashan, \add one of the few remaining\add* Refa’ites, who lived in Ashtarot and at Edrei,
+\v 5 and ruledd over Mt. Hermon, Salekah, all of Bashan to the border of the Geshurites and Maacathites, as well as half of Gilead to the border with King Sihon from Heshbon.
 \p
-\v 6 \x + \xo 12:6: \xt Num 32:33; Deu 3:12.\x*◙
-\s1 The kings natalu of Josh.
+\v 6 Yahweh’s servant Mosheh and the \add Israelis\add* had \add defeated them\add* and Mosheh had given \add that region\add* as a possession to the \add descendants of\add* Reuben and Gad and to the half-tribe of Menashsheh.\x + \xo 12:6: \xt Num 32:33; Deu 3:12.\x*
+\s1 The kings defeated by Yehoshua
 \p
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
-\v 24 ◙
+\v 7 These are the kings in the region that Yehoshua and the \add Israelis defeated\add* on the western side of the Yordan \add river\add* from Baal-Gad in the Lebanon valley to Mt. Halak which goes up toward Seir \add (Edom)\add*. Yehoshua \add divided up\add* \add that region\add* as a possession to the \add various\add* tribes of Israel,
+\v 8 as well as the hill country, the lowlands, the \add rift valley\add*, the slopes, the wilderness and the Negev—\add the land of\add* the Hittites, Amorites, Canaanites, Perizzites, Hivites, and the Yebusites:
+\v 9 the king of Yericho, the king of Ay (near Bethel),
+\v 10 the king of Yerusalem, the king of Hebron,
+\v 11 the king of Yarmut, the king of Lakish,
+\v 12 the king of Eglon, the king of Gezer,
+\v 13 the king of Debir, the king of Geder,
+\v 14 the king of Hormah, the king of Arad,
+\v 15 the king of Libhah, the king of Adullam,
+\v 16 the king of Makkedah, the king of Bethel,
+\v 17 the king of Tappuah, the king of Hefer,
+\v 18 the king of Afek, the king of Lasharon,
+\v 19 the king of Madon, the king of Hatsor,
+\v 20 the king of Shimron Meron, the king of Akshaf,
+\v 21 the king of Taanach, the king of Megiddo,
+\v 22 the king of Kedesh, the king of Yokneam in Karmel,
+\v 23 the king of Dor of Nafoth Dor, the king of Goyim in Gilgal,
+\v 24 and the king of Tirzah—a total of thirty-one kings.
 \c 13
-\s1 The place not yet snatched
+\s1 The regions not yet captured
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 \x + \xo 13:6: \xt Num 33:54.\x*◙
-\v 7 ◙
-\s1 The pegbaad-part of place there to igsile of Jordan
+\v 1 Now the years had passed and Yehoshua had grown old, and Yahweh said to him, “You’re old \add now\add* and \add there’s still a lot of land that needs to be captured\add*.
+\v 2 This is the remaining land: all the territories of the Philistines, and all of the Geshurites,
+\v 3 from Shihor (\add east\add* of Egypt) and as far as the border of Ekron to the north (it’s considered to be Canaanite), the five rulers of the Philistines (in Gaza, Ashdod, Ashkelon, Gat, and Ekron), and the Avvites.
+\v 4 In the south: all the land of the Canaanites, and a Mearah that \add belongs to\add* the Sidonians, as far as Afek, as far as the border of the Amorites,
+\v 5 plus the land of the Gebalites, all Lebanon towards the east, from Baal-Gad below Mt. Hermon as far as Lebo-Hamath.
+\v 6 I myself will \add drive out\add* all those who live in the hill country from Lebanon as far as Misrefot-Maim, and all the Sidonians. \add Make sure that it’s given\add* to \add the Israelis\add* as an inheritance, just as I instructed you.\x + \xo 13:6: \xt Num 33:54.\x*
+\v 7 All that land should be divided up as an inheritance for the nine tribes plus \add half of \add* the half-tribe of Menashsheh.
+\s1 Division of the land east of the Yordan
 \p
-\v 8 \x + \xo 13:8: \xt Num 32:33; Deu 3:12.\x*◙
-\v 9 ◙
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
+\v 8 \add Along with the other\add* \add half of \add* the half-tribe of Menashsheh, the \add tribes of Reuben and Gad\add* had taken their inheritance on the other (eastern) side of the Yordan as \add approved\add* by Yahweh’s servant Mosheh,\x + \xo 13:8: \xt Num 32:33; Deu 3:12.\x*
+\v 9 from Aroer, which is on the edge of the Arnon riverbed, and the city that’s in the middle of the valley, and all the plateau \add near\add* Medeba, to Dibon.
+\v 10 \add Also,\add* all the cities of King Sihon of the Amorites who ruled in Heshbon, as far as the border with the Ammonites,
+\v 11 and Gilead, and the territory of the Geshurites and the Maacathites, and all Mt. Hermon, and all the Bashan as far as Salekah,
+\v 12 all the kingdom of Og in the Bashan, who reigned in Ashtaroth and in Edrei (what remained from the remnant of the Refa’ites). Mosheh \add had attacked them and captured their lands\add*.
+\v 13 \add But\add* the \add Israelis\add* didn’t \add capture the land of\add* the Geshurites or the Maacathites and \add so those peoples\add* live \add among the Israelis\add* to this day.
 \p
-\v 14 \x + \xo 13:14: \xt Deu 18:1.\x*◙
-\s1 The place part of descendants of Rubin
+\v 14 The only tribe that didn’t receive an inheritance was the tribe of Levi because the offerings given to Israel’s God Yahweh are their inheritance, just like he’d told them.\x + \xo 13:14: \xt Deu 18:1.\x*
+\s1 The area assigned to Reuben’s descendants
 \p
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
-\s1 The place part of descendants of Gad
+\v 15 This was the land that Mosheh gave to the tribe of Reuben, according to their clans:
+\v 16 The area from Aroer (on the edge of the Arnon riverbed) along to the town in the middle of the valley, \add to\add* the plateau \add near\add* Medeba,
+\v 17 Heshbon and all it’s cities on the plateau, \add including\add* Dibon, Bamot-Baal, Beyt-Baal-Meon,
+\v 18 Yahaz, Kedemot, Mefaat,
+\v 19 Kiriathaim, Sibmah, and Zeret-Shahar on the hill \add within\add* the valley.
+\v 20 \add It also includes\add* Beyt-Peor, the slopes of the Pisgah, Beyt-Yeshimot,
+\v 21 and all the cities \add on\add* the plateau, and all the kingdom of Sihon (the king of the Amorites who had reigned in Heshbon) who Mosheh had \add defeated\add*, he and the leaders of Midian: Evi and Rekem and Zur and Hur and Reba (the princes of Sihon who had lived in the land).
+\v 22 The \add Israelis\add* also killed Balaam (Beor’s son who practiced divination) \add along with others\add*.
+\v 23 The border for Rueben’s descendants was the Yordan \add River\add*. So that was the inheritance of Rueben’s descendants—all the cities and their villages allocated to their clans.
+\s1 The area assigned to Gad’s descendants
 \p
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
-\v 28 ◙
-\s1 The place part of descendants of Manasis
+\v 24 This was the land that Mosheh gave to the tribe of Gad, according to their clans:
+\v 25 It included Yazer and all the cities of Gilead and half of the land \add where the Ammonites had lived\add* as far as Aroer \add opposite\add* Rabbah,
+\v 26 then from Heshbon to Ramat-Mizpah and Betonim, and from Mahanaim to the Debir border.
+\v 27 \add Also\add* in the valley, Beyt-Haram, Beyt-Nimrah, Succot, Zafon, and the rest of the kingdom of Sihon (the king of Heshbon), with the Yordan and the border, as far as the end of Lake Galilee, eastward beyond the Yordan \add River\add*.
+\v 28 So that was the inheritance of Gad’s descendants—all the cities and their villages allocated to their clans.
+\s1 The area assigned to Menashsheh’s descendants
 \p
-\v 29 ◙
-\v 30 ◙
-\v 31 ◙
+\v 29 This was the land that Mosheh gave to half of the half-tribe of Menashsheh, according to their clans:
+\v 30 It went from Mahanaim, all the Bashan, all the kingdom of Og (the king of the Bashan), and all the towns of Yair, which are in the Bashan—sixty cities.
+\v 31 \add Also\add* half of the Gilead, plus Ashtaroth and Edrei (cities of the kingdom of Og in the Bashan). So that was for half of Machir’s sons (he was one of Menashsheh’s sons) allocated to their clans.
 \p
-\v 32 ◙
-\v 33 \x + \xo 13:33: \xt Num 18:20; Deu 18:2.\x*◙
+\v 32 This was the land that Mosheh gave as an inheritance in the plains of Moab on the eastern side of the Yordan \add River opposite\add* Yericho.
+\v 33 \add However,\add* Mosheh didn’t give any inheritance \add of land\add* to Levi’s descendants \add because\add* Israel’s God Yahweh is their inheritance just as he told them.\x + \xo 13:33: \xt Num 18:20; Deu 18:2.\x*
 \c 14
-\s1 The pegbaad-part of place there to iglineb of River Jordan
+\s1 The division of the main block west of the Yordan
 \p
-\v 1 ◙
-\v 2 \x + \xo 14:2: \xt Num 26:52-56; 34:13.\x*◙
-\v 3 \x + \xo 14:3-4: \xt Num 32:33; 34:14-15; Deu 3:12-17.\x*◙
-\v 4 ◙
-\v 5 ◙
-\s1 The place naangken of Kalib
+\v 1 These are what the \add Israelis\add* inherited in the land of Canaan, which Eleazar the priest and Yehoshua (Nun’s son) and the \add leaders\add* of the \add Israelis\add* gave them as an inheritance.
+\v 2 Their \add allocations were made by casting lots\add* for the nine and a half tribes, just as Yahweh had commanded \add through\add* Mosheh.\x + \xo 14:2: \xt Num 26:52-56; 34:13.\x*
+\v 3 (Mosheh had given the other two and a half tribes their inheritance on the other side of the river, but the Levites weren’t given land as an inheritance\x + \xo 14:3-4: \xt Num 32:33; 34:14-15; Deu 3:12-17.\x*—
+\v 4 instead of land they were given cities to live in, along with the \add surrounding\add* fields for their livestock. Yosef’s two sons Menashsheh and Efraim were considered as two tribes.)
+\v 5 The \add Israelis\add* did just as Yahweh had commanded Mosheh—they allocated blocks of the land \add as permanent possessions\add*.
+\s1 Hebron is allocated to Caleb
 \p
-\v 6 \x + \xo 14:6: \xt Num 14:30.\x*◙
-\v 7 \x + \xo 14:7: \xt Num 13:1-30.\x*◙
-\v 8 ◙
-\v 9 \x + \xo 14:9: \xt Num 14:24.\x*◙
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
+\v 6 \add Leaders from the tribe of\add* Yehudah approached Yehoshua at Gilgal and Caleb (son of Yefunneh the Kenizzite) said to him, “You yourself know what Yahweh told the man of God Mosheh at Kadesh-Barnea about me and you.\x + \xo 14:6: \xt Num 14:30.\x*
+\v 7 I was \add forty years old\add* when Yahweh’s servant Mosheh sent me from Kadesh-Barnea to spy out the land, and I brought back \add an honest report\add*.\x + \xo 14:7: \xt Num 13:1-30.\x*
+\v 8 \add The other men\add* who went made the \add people terrified\add*, \add but\add* I \add remained loyal to\add* my God Yahweh.
+\v 9 Mosheh \add promised me\add* that day, saying, ‘The land \add that you walked on\add* will certainly be for an inheritance for you and your sons \add forever\add*, because you were \add completely loyal to\add* my God Yahweh.’\x + \xo 14:9: \xt Num 14:24.\x*
+\v 10 Now, listen. Yahweh has kept me alive these forty-five years since Yahweh said that to Mosheh, \add back\add* when Israel was walking in the wilderness. \add Yes, believe it or not, I’m now eighty-five.\add*
+\v 11 I’m still as strong today as \add I was\add* on the day that Mosheh sent me. \add Just like I could fight back then, I can still fight or travel just the same\add*.
+\v 12 \add So\add* now, please give me that hill country that Yahweh \add promised\add* that day, because you yourself heard \add me say\add* that the Anakim lived there in fortified cities. \add So now,\add* perhaps Yahweh will help me to take them over just as \add he\add* said.”
 \p
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\p …
+\v 13 \add So\add* Yehoshua blessed Yefunneh’s son \add Caleb\add* and gave him Hebron as his inheritance.
+\v 14 Because of that, Hebron belongs to Caleb (Yefunneh the Kenizzite’s son) as an inheritance until this day, because he was \add completely loyal to\add* Israel’s God Yahweh.
+\v 15 (Hebron used to be called Kiriat-Arba—\add Arba\add* had been a \add brave warrior\add* among the Anakim.)
+\p Then there was a time of no more war in that region.
 \c 15
-\s1 The place naangken of descendants of Huda
+\s1 The area assigned to Yehudah’s descendants
 \p
-\v 1 ◙
-\p …
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
+\v 1 \add This was the land\add* that was assigned to Yehudah’s descendants according to their clans:
+\p It went from the Zin wilderness in the south to the border with Edom,
+\v 2 and their southern border was the south-facing bay at the end of the \add Dead Sea\add* \add (also called the Salt Sea)\add*.
+\v 3 \add From there\add* it went south of the Scorpion Pass, across to Zin, \add climbed\add* up to Kadesh-Barnea, crossed to Hezron, went to Addar, and aroud to Karka.
+\v 4 Then it crosses to Azmon and out to the Egyptian riverbed and \add finishes\add* at the \add Mediterranean\add* sea. That will be their southern border.
 \p
-\v 5 ◙
-\p …
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\p …
-\s1 Naangken of Kalib the Hibrun and Dibir
+\v 5 The eastern border was the \add Dead Sea\add* as far as the end of the Yordan.
+\p The northern border \add starts\add* at the top of the \add Dead Sea\add* where the Yordan \add river\add* enters it
+\v 6 then to Beyt-Hoglah and \add further\add* north to Beyt-Arabah to the Stone of Bohan (Reuben’s son).
+\v 7 Then the border went to Debir from the Akor Valley, and to the north, turning to the Gilgal, which is in front of the Adummim pass which is from the south of the riverbed, then the border passed over to the waters of En-Shemesh and its ends at En-Rogel.
+\v 8 \add From there\add* the border went up the valley of Ben Hinnom to the edge of the Yebusite region from the south (that is Yerusalem). Then the border went to the head of the hill opposite the Hinnom valley to the west, which is at the end of the valley of the Refa’ites to the north.
+\v 9 \add From there\add* the border turned from the head of the hill to the Neftoah spring and went out to the cities of Mt. Efron, then the border turned to Ba’alah (\add now called\add* Kiriat-Yearim).
+\v 10 Then the border went around from Ba’alah to the west to Mt. Seir, and passed over to the shoulder of Mt. Yearim from the north (\add also called\add* Kesalon), and went down to Beyt-Shemesh, and passed over to Timnah.
+\v 11 \add From there\add* the border went out to the shoulder of Ekron to the north, then turned toward Shikkeron and passed over to Mt. Baalah, and went out to Yabneel, then the border ended at the sea.
+\v 12 The western border was the \add Mediterranean\add* Sea. Those were the borders of \add the land given to\add* Yehudah’s descendants to be allocated to their clans.
+\s1 Caleb defeats Hebron and Debir
 \r (Jdg. 1:11-15)
 \p
-\v 13 \x + \xo 15:13-14: \xt Jdg 1:20.\x*◙
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
-\s1 The cities of descendants of Huda
+\v 13 Yahweh had instructed Yehoshua to give \add this\add* block of land to Caleb (Yefunneh’s son): Kiriat-Arba (\add now called\add* Hebron—Arba was Anak’s father).\x + \xo 15:13-14: \xt Jdg 1:20.\x*
+\v 14 Caleb captured \add the land\add* from Anak’s three sons—Sheshai, Ahiman, and Talmai,
+\v 15 then from there, he \add battled against\add* Debir (formerly called Kiriat-Sefer)
+\v 16 and \add he\add* said, “I’ll give my daughter Aksah to marry \add to the man who attacks\add* Kiriat-Sefer and captures it.”
+\v 17 Then Othniel (Kenaz’s son and Caleb’s brother) captured \add the city\add*, \add so\add* Caleb gave his daughter Aksah to him for a wife.
+\v 18 Then \add when she married him\add*, she \add encouraged\add* him to ask her father for a field, \add so\add* she got down off her donkey and Caleb asked, “What \add are you up to\add*?”
+\v 19 “Give me a blessing,” she answered, “because you’ve given me land in the Negev \add desert region\add*, \add so now\add* give me some springs \add as well\add* for water.” \add So\add* he gave her \add both\add* the upper and the lower springs.
+\s1 Cities captured by Yehudah’s descendants
 \p
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
-\v 28 ◙
-\v 29 ◙
-\v 30 ◙
-\v 31 ◙
-\v 32 ◙
+\v 20 This is Yehudah’s inheritance according to their clans:
+\v 21 The cities at the edge of Yehudah’s block toward the border with Edom in Negev were Kabzeel, Eder, Yagur,
+\v 22 Kinah, Dimonah, Adadah,
+\v 23 Kedesh, Hatsor, Ithnan,
+\v 24 Zif, Telem, Bealot,
+\v 25 Hatsor-Hadattah, Keriot-Hezron (\add also called\add* Hatsor),
+\v 26 Amam, Shema, Molodah,
+\v 27 Hazar-Gaddah, Heshmon, Beyt-Pelet,
+\v 28 Hazar-Shual, Beersheba, and Biziothiah,
+\v 29 Baalah, Iyim, Ezem,
+\v 30 Eltolad, Kesil, Hormah,
+\v 31 Ziklag, Madmannah, Sansannah,
+\v 32 Lebaot, Shilhim, Ain, and Rimmon—\add a total of\add* twenty-nine cities as well as their villages.
 \p
-\v 33 ◙
-\v 34 ◙
-\v 35 ◙
-\v 36 ◙
+\v 33 \add Then down\add* in the lowlands were Eshtaol, Zorah, Ashnah,
+\v 34 Zanoah, En-Gannim, Tappuah, Enam,
+\v 35 Yarmut, Adullam, Sokoh, Azekah,
+\v 36 Shaaraim, Adithaim, and Gederah (\add also called\add* Gederothaim)—\add a total of\add* fourteen cities as well as their \add surrounding\add* villages.
 \p
-\v 37 ◙
-\v 38 ◙
-\v 39 ◙
-\v 40 ◙
-\v 41 ◙
+\v 37 \add Also\add* Zenan, Hadashah, Migdal-Gad,
+\v 38 Dilean, Mizpah, Yoktheel,
+\v 39 Lachish, Bozkat, Eglon,
+\v 40 Kabbon, Lahmas, Kitlish,
+\v 41 Gederot, Beyt-Dagon, Naamah, and Makkedah—sixteen cities as well as their villages.
 \p
-\v 42 ◙
-\v 43 ◙
-\v 44 ◙
+\v 42 \add Also\add* Libnah, Ether, Ashan,
+\v 43 Yiftah, Ashnah, Nezib,
+\v 44 Keilah, Akzib, and Maresha—nine cities as well as their villages.
 \p
-\v 45 ◙
-\v 46 ◙
+\v 45 \add Also\add* Ekron with its towns and villages
+\v 46 from Ekron to the \add Mediterranean\add*—\add those near\add* Ashdod and their villages.
 \p
-\v 47 ◙
+\v 47 \add Also\add* Ashdod and its towns and its villages, Gaza and its towns and its villages, as far as the riverbed of Egypt and the \add Mediterranean\add* sea and the border.
 \p
-\v 48 ◙
-\v 49 ◙
-\v 50 ◙
-\v 51 ◙
+\v 48 \add Also\add* in the hill country: Shamir, Yattir, Socoh,
+\v 49 Dannah, Kiriat-Sannah (\add also called\add* Debir),
+\v 50 Anab, Eshtemoh, Anim,
+\v 51 Goshen, Holon, and Giloh—eleven cities as well as their villages.
 \p
-\v 52 ◙
-\v 53 ◙
-\v 54 ◙
+\v 52 \add Also\add* Arab, Dumah, Eshan,
+\v 53 Yanim, Beyt-Tappuah, Afekah,
+\v 54 Humtah, and Kiriat-Arba (\add also called\add* Hebron) and Zior—nine cities as well as their villages.
 \p
-\v 55 ◙
-\v 56 ◙
-\v 57 ◙
+\v 55 \add Also\add* Maon, Karmel, Zif, Yuttah,
+\v 56 Yezreel, Yokdeam, Zanoah,
+\v 57 Kain, Gibeah, and Timnah—ten cities as well as their villages.
 \p
-\v 58 ◙
-\v 59 ◙
+\v 58 \add Also\add* Halhul, Beyt-Zur, Gedor,
+\v 59 Maarath, Beyt-Anot, and Eltekon—six cities as well as their villages.
 \p
-\v 60 ◙
+\v 60 \add Also\add* Kiriat-Baal (\add also called\add* Kiriat-Yearim) and Rabbah—two cities as well as their villages.
 \p
-\v 61 ◙
-\v 62 ◙
+\v 61 In the wilderness, Beyt-Arabah, Middin, Secacah,
+\v 62 Nibshan, the City of Salt, and En-Gedi—six cities as well as their villages.
 \p
-\v 63 \x + \xo 15:63: \xt Jdg 1:21; 2Sam 5:6; 1Ch 11:4.\x*◙
+\v 63 \add But\add* Yehudah’s descendants weren’t able to defeat the Yebusites who lived in Yerusalem, so \add they\add* have lived among the tribe of Yehudah to this day.\x + \xo 15:63: \xt Jdg 1:21; 2Sam 5:6; 1Ch 11:4.\x*
 \c 16
-\s1 The place naangken of descendants of Joseph
+\s1 The allocation to Yosef’s descendants
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
+\v 1 The block for Yosef’s descendants\f + \fr 16:1 \ft i.e., the half-tribes of Efraim and Manashsheh.\f* went from the Yordan at Yericho (east of the \add springs\add*), through the wilderness into the hill country of Bethel.
+\v 2 It went out from Bethel to Luz then along the border with the Arkites at Atarot.
+\v 3 Then it went west to the border with the Yafletites as fare as the border with Lower Beyt-Horon and as far as Gezer, then out to the \add Mediterranean\add*.
 \p
-\v 4 ◙
-\s1 The place naangken of descendants of Ipraim
+\v 4 \add So\add* Yosef’s sons Manashsheh and Efraim received an inheritance.
+\s1 The allocation to Efraim’s descendants
 \p
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
-\v 10 \x + \xo 16:10: \xt Jdg 1:29.\x*◙
+\v 5 The allotment for Efraim’s descendants according to their clans was at Atarot-Addar in the east, going as far as Upper Beyt-Horon
+\v 6 and out to the \add Mediterranean\add*. From Mikmetat in the north, the border when eastward toward Taanat-Shiloh then further east to Yanoah.
+\v 7 From Yanoah it went to Atarot and Naarah, reached Yericho then came out at the Yordan.
+\v 8 \add The northern border went\add* from Tappuah to the Kanah riverbed and then out to the \add Mediterranean\add*. That was the inheritance of Efraim’s descendants according to their clans,
+\v 9 \add although\add* some of the cities with their villages for Efraim’s descendants were \add actually\add* inside the territory assigned to Manashsheh’s descendants.
+\v 10 \add But\add* they didn’t \add capture the land of\add* of the Canaanites who lived in Gezer, so they’ve lived within Efraim to this day and were forced to serve as labourers.\x + \xo 16:10: \xt Jdg 1:29.\x*
 \c 17
-\s1 The place naangken of katenge of descendants of Manasis
+\s1 The allocation to Manashsheh’s descendants
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 \x + \xo 17:4: \xt Num 27:1-7.\x*◙
-\v 5 ◙
-\v 6 ◙
+\v 1 The allotment for Manashsheh’s descendants (Yosef’s eldest son) \add included a special allotment for\add* (Gilead’s father) Makir—he was given Gilead and Bashan because he was a \add powerful warrior\add*.
+\v 2 The other Manashsheh clans \add that were allocated land\add* were the Abiezer, Helek, Asriel, Shekem, Hefer, and Shemida clans. (They were the sons of Yosef’s son Manashsheh \add who led their own\add* clans.)
+\v 3 \add But\add* Zelofehad (son of Hefer, son of Gilead, son of Makir, son of Manashsheh) had no sons—only daughters who were named Mahlah, Noah, Hoglah, Milkah, and Tirzah.
+\v 4 They approached the priest Eleazar and Yehoshua and the other leaders and said, “Yahweh told Mosheh to give us an inheritance along with our brothers.” \add So\add* he\f + \fr 17:4 \ft It’s not clear who this ‘he’ refers to here—some translations choose Eleazar (implied by the sentence structure) and others choose Yehoshua (implied by past allocations of land).\f* gave them an inheritance (like he’d given their uncles), as Yahweh \add had instructed them\add*.\x + \xo 17:4: \xt Num 27:1-7.\x*
+\v 5 \add So\add* ten blocks were allocated to Manashsheh \add tribe\add* as well as Gilead and Bashan which were across the Yordan
+\v 6 because Manashsheh’s daughters received inheritances along with his sons. The land of Gilead belonged to the rest of the Manashsheh’s sons.
 \p
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
-\v 10 ◙
-\v 11 ◙
-\v 12 \x + \xo 17:12-13: \xt Jdg 1:27-28.\x*◙
-\v 13 ◙
-\s1 The pegpatimul of descendants of Ipraim and of Manasis of land
+\v 7 The border for Manashsheh went from Asher to Mikmetat \add opposite\add* Shekem, then went \add south\add* towards the spring at Tappuah.
+\v 8 (The Tappuah \em land\em* was for Manashsheh, but Tappuah \add town\add* was for Efraim.)
+\v 9 Then the border went south to the Kanah riverbed—the cities there belonged to Efraim even though they were inside Manashsheh’s land—then the border stayed on the north side of the riverbed and extended to the \add Mediterranean\add*.
+\v 10 \add So\add* the south was for Efraim and the north was for Manashsheh, and the sea was the \add western\add* border, meeting Asher from the north and Yissashkar from the east.
+\v 11 Manashsheh was allocated cities inside \add both\add* Yissashkar’s and Asher’s territories: Beyt-Shan, Ibleam, Dor, Endor, Taanach, and Megiddo along with their \add surrounding towns\add*.\f + \fr 17:11 \ft We’ve ommitted the final Hebrew phrase here (the three of Nafet) since it’s unclear what it means (plus it’s not considered to be a vital point in the narrative).\f*
+\v 12 \add But\add* Manashsheh’s descendants weren’t able to take possession of those cities, \add so\add* the Canaanites continued to live in the region.\x + \xo 17:12-13: \xt Jdg 1:27-28.\x*
+\v 13 \add When the Israelis strengthened their position\add*, they were able to force those Canaanites to work for them, \add but\add* they weren’t able to \add drive them out\add*.
+\s1 Efraim and Manashsheh’s descendants are given additional land
 \p
-\v 14 ◙
+\v 14 Then the \add two\add* \add half-tribes of Efraim and Manashsheh\add* asked Yehoshua, “Why have you \add only\add* given to \add us\add* one measured allocation as an inheritance when \add we’re\add* \add very\add* numerous \add because\add* Yahweh has \add already\add* blessed \add us\add*?”
 \p
-\v 15 ◙
+\v 15 “If \add there’s so many of you\add*,” Yehoshua \add answered\add*, “and if Efraim’s hill-country is too small for you, go into the forested area of the Perizzites and the Refaites and clear some land for yourselves there.”
 \p
-\v 16 ◙
+\v 16 “The hill country \add certainly\add* isn’t big enough for \add all of\add* us,” \add they\add* responded, “plus the Canaanites living in the Yezreel valley and in Beyt-Shan and the surrounding towns have iron chariots.”
 \p
-\v 17 ◙
-\v 18 ◙
+\v 17 \add So\add* Yehoshua told the \add half-tribes of Efraim and Manashsheh\add*, “\add Yes\add*, there’s a lot of you and you’re very powerful. One land allotment \add wouldn’t be enough for you\add*
+\v 18 \add so\add* the hill country will be yours \add as well\add*. \add However\add*, it’s a forest and you’ll have to clear it to the borders. You’ll \add need to\add* drive out the Canaanites even if they are strong and with iron chariots.”
 \c 18
-\s1 The pegbaad-part of other place
+\s1 Allocations for the remaining seven tribes
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
+\v 1 Then all the Israelis assembled at Shiloh and set-up the sacred tent there. The \add battles over the land had stopped\add*
+\v 2 but seven of \add their\add* tribes hadn’t had their inheritances assigned \add yet\add*.
+\v 3 Yehoshua asked the Israelis, “\add How much longer are you all going to put off capturing\add* the land that your ancestors’ God Yahweh has given you?
+\v 4 Choose three men from each \add of those seven\add*\f + \fr 18:4 \ft Not in the Hebrew but implied by verse 5 as they go on to divide the surveyed land into seven portions.\f* tribes and I’ll send them out to \add range around\add* \add and inspect\add* the land and write \add descriptions of it in terms of potential allocations and bring it\add* to me.
+\v 5 They can divide \add that land\add* into seven parts. (Yehudah will maintain their territory in the south, and Yosef’s tribes in the north.)
+\v 6 You all should write descriptions of the seven parts and bring them here to me, and in front of our God Yahweh, I’ll throw dice for you \add to allocate them to the seven tribes\add*.
+\v 7 However, the Levites don’t receive a portion, because their inheritance is Yahweh’s priesthood. Gad and Rueben and the Manashsheh half-tribe have \add already\add* received their inheritance that Yahweh’s servant Mosheh allocated to them on the eastern side of the Yordan.
 \p
-\v 8 ◙
-\v 9 ◙
-\v 10 ◙
-\s1 The place naangken of descendants of Benyamin
+\v 8 \add So\add* the \add chosen\add* men \add got ready to leave\add* and Yehoshua instructed them, “Go and walk around that land and write \add a report\add* and \add bring it back\add* to me. Then I’ll throw dice for you all \add in front\add* of Yahweh here in Shiloh.”
+\v 9 Then the men left and \add walked through the area\add*, writing down \add their recommendations\add* for dividing the seven portions according to the cities \add in the area\add*, then they returned back to Yehoshua at the camp at Shiloh.
+\v 10 \add So\add* Yehoshua threw dice for them at Shiloh \add in front\add* of Yahweh, and \add so that land was allocated to those remaining seven tribes\add*.
+\s1 The allocation to Benyamin’s descendants
 \p
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
-\v 20 ◙
+\v 11 The tribe of Benyamin won the \add first\add* draw and the area for their clans was between the land assigned to Yehudah and that assigned to \add Efraim and Manashsheh\add*.
+\v 12 Their northern border went from the Yordan then to the northern side of Yericho and up into the hill country to the west, coming out in the wilderness at Beyt-Aven.
+\v 13 Then it went across towards Luz (\add now called\add* Bethel) to the southern edge then downhill towards Atarot-Addar beside the hill south of lower Beyt-Horon.
+\v 14 Then the western border turned from that hill and went south, coming out at Kiriat-Baal (\add also called\add* Kiriat-Yearim—a town belonging to Yehudah) thus forming the western side.
+\v 15 The southern border went west from Kiriat-Yearim to the spring at Neftoah,
+\v 16 then downhill to the Ben-Hinnon valley (in the valley of the Refaites to the north) then downhill to Hinnon valley to the edge of the Yebusites and downhill to En-Rogel.
+\v 17 Then it turned northward and went \add west\add* to En-Shemesh and across to Gelilot opposite the Adummim pass, before going downhill to to the Stone of Bohan (Reuben’s son).
+\v 18 It extended over to the northern slope of the Yordan valley and then downhill into the \add actual\add* valley.
+\v 19 \add It\add* then went \add east\add* to the northern slope of Beyt-Hoglah before coming out at the \add north end\add* of the \add Dead Sea\add* \add (also called the Salt Sea)\add* where the Yordan river flows into it. That was the southern boundary
+\v 20 and the Yordan borders it on the east. Those were the borders of Benyamin’s descendants’ inheritance according to their clans.
 \p
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
-\v 28 ◙
+\v 21 The cities allocated to Benyamin’s descendants and their clans were: Yericho, Beyt-Hoglah, Emek-Keziz,
+\v 22 Beyt-Arabah, Zemaraim, Bethel,
+\v 23 Avvim, Parah, Ofrah,
+\v 24 Kefar-Ammoni, Ofni, and Geba—a total of twelve cities as well as their \add surrounding\add* villages.
+\v 25 \add Also\add* Gibeon, Ramah, Beerot,
+\v 26 Mizpah, Kefirah, Mozah,
+\v 27 Rekem, Irpeel, Taralah,
+\v 28 Zelah, Haelef, Yebus (\add now called\add* Yerusalem), Gibeah, and Kiriat—\add a total of\add* fourteen cities as well as their \add surrounding\add* villages. Those were Benyamin’s descendants’ inheritance according to their clans.
 \c 19
-\s1 The place naangken of descendants of Simyun
+\s1 The allocation to Shim’on’s descendants
 \p
-\v 1 ◙
-\v 2 \x + \xo 19:2-8: \xt 1Ch 4:28-33.\x*◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
+\v 1 The second draw went to Shim’on’s (Simeon’s) descendants and the land for their clans was in the middle of Yehudah’s territory.
+\v 2 Shim’on’s inheritance \add included\add*: Beer-Sheba,\f + \fr 19:2 \ft TC: Ancient manuscripts differ, with some adding Sheba (possibly a mistaken reduplication) or Shema here (but that would make the total number wrong that’s given in v6).\f* Moladah,\x + \xo 19:2-8: \xt 1Ch 4:28-33.\x*
+\v 3 Hazarshual, Balah, Ezem,
+\v 4 Eltolad, Betul, Hormah,
+\v 5 Ziklag, Beyt-Markabot. Hatsarsusah,
+\v 6 Beyt-Lebaot, and Sharuhen—thirteen cities as well as their \add surrounding\add* villages.
 \p
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
-\s1 The place naangken of descendants of Sabulun
+\v 7 \add Also\add* Ain, Rimmon, Eter, and Asha—four cities as well as their \add surrounding\add* villages,
+\v 8 and all the \add further\add* villages around those cities as far as Baalat-Beer (\add also called\add* Ramah of the Negev). That was Shim’on’s descendants’ inheritance according to their clans.
+\v 9 This \add took away\add* some of Yehudah’s inheritance and gave it to Shim’ons descendants because Yehudah’s \add initial\add* area was more than \add they needed\add*.
+\s1 The allocation to Zebulun’s descendants
 \p
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\s1 The place naangken of descendants of Isakar
+\v 10 The third draw went to Zebulun’s descendants according to their clans. The \add southern\add* border for their inheritance \add started\add* at Sarid
+\v 11 and went \add west\add* to Maralah and Dabbeshet then to the riverbed facing Yokneam.
+\v 12 \add Also\add* from Sarid it went toward the east beside the border with Kislot-Tabor and then on to Daberat and then to Yafia.
+\v 13 From there it extended east to Gittah-Hefer and Ittah-Katsin and \add north\add* to Rimmon before turning to Neah.
+\v 14 Then \add it\add* passed north of Hannaton ending at Yiftah-El valley.
+\v 15 \add It included the cities of\add* Kattat, Nahalal, Shimron, Idalah, and Bethlehem—\add a total of\add* twelve cities as well as their \add surrounding\add* villages.
+\v 16 That was Zebulun’s descendants’ inheritance according to their clans, \add including\add* those cities as well as their \add surrounding\add* villages.
+\s1 The allocation to Yissashkar’s descendants
 \p
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
-\s1 The place naangken of descendants of Asir
+\v 17 The fourth draw went to Yissashkar’s descendants according to their clans.
+\v 18 \add Their land\add* \add included the cities of\add* Yezreel, Kesulot, Shunem,
+\v 19 Hafaraim, Shion, Anaharat,
+\v 20 Rabbit, Kishion, Ebets,
+\v 21 Remet, En-Gannim, En-Haddah, and Beyt-Pazzets.
+\v 22 The border \add of their allotment\add* met with Tabor, Shahazumah, and Beyt-Shemesh, coming out \add in the east\add* at the Yordan——\add a total of\add* sixteen cities as well as their \add surrounding\add* villages.
+\v 23 That was Yissashkar’s descendants’ inheritance according to their clans, \add including\add* those cities as well as their \add surrounding\add* villages.
+\s1 The allocation to Asher’s descendants
 \p
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
-\v 28 ◙
-\v 29 ◙
-\v 30 ◙
-\v 31 ◙
-\s1 The place naangken of descendants of Naptali
+\v 24 The fifth draw went to Asher’s descendants according to their clans.
+\v 25 \add Their land\add* \add included the cities of\add* Helkat, Hali, Beten, Akshaf,
+\v 26 Allammelek, Amad, and Mishal. Their \add western\add* \add border\add* started at Mount Karmel and Shihorlibnat
+\v 27 and turned back to the ast to Beyt-Dagon and the border with Zebulun and the Yiftah-El valley to the north. Then it went to Beyt-Emek and Neiel and north to Kabul,
+\v 28 Abdon, Rehob, Hammon and Kanah, as far as Greater Sidon.
+\v 29 The border then turned back to Ramah and to the fortified city of Tsor \add (commonly known as Tyre)\add* and turns \add west\add* to Hosah coming out at the \add Mediterranean\add* near Akzib.
+\v 30 \add It also included\add* Ummah, Aphek, and Rehob—\add a total of\add* twenty-two cities as well as their \add surrounding\add* villages.
+\v 31 That was Asher’s descendants’ inheritance according to their clans, \add including\add* those cities as well as their \add surrounding\add* villages.
+\s1 The allocation to Naftali’s descendants
 \p
-\v 32 ◙
-\v 33 ◙
-\v 34 ◙
-\v 35 ◙
-\v 36 ◙
-\v 37 ◙
-\v 38 ◙
-\v 39 ◙
-\s1 The place naangken of descendants of Dan
+\v 32 The sixth draw went to Naftali’s descendants according to their clans.
+\v 33 Their border started in Helef (where there was an oak tree at Zaanannim) then Adami-Nekeb and Yabneel and on to Lakkum before exiting at the Yordan.
+\v 34 Then \add it\add* turned west to Aznot-Tabor and from there to Hukkok, meeting \add the border\add* with Zebulun on the south, \add the border\add* with Asher on the west, and \add the border\add* with Yehudah on the east.
+\v 35 The fortified cities were Tsiddim, Tser, Hammat, Rakkat, Kinneret,
+\v 36 Adamah, Ramah, Hatsor,
+\v 37 Kedesh, Edrei, En-Hatsor,
+\v 38 Yiron, Migdal-El, Horem, Beyt-Anat, and Beyt-Shemesh—\add a total of\add* nineteen cities as well as their \add surrounding\add* villages.
+\v 39 That was Naftali’s descendants’ inheritance according to their clans, \add including\add* those cities as well as their \add surrounding\add* villages.
+\s1 The allocation to Dan’s descendants
 \p
-\v 40 ◙
-\v 41 ◙
-\v 42 ◙
-\v 43 ◙
-\v 44 ◙
-\v 45 ◙
-\v 46 ◙
-\v 47 \x + \xo 19:47: \xt Jdg 18:27-29.\x*◙
-\v 48 ◙
-\s1 The place naangken of Josh.
+\v 40 The \add final\add* seventh draw went to Dan’s descendants according to their clans.
+\v 41 \add Their land\add* \add included the cities of\add* Tsorah, Eshtaol, Ir-Shemesh,
+\v 42 Shaalabbin, Ayyalon, and Yitlah,
+\v 43 Elon, Timnah, Ekron,
+\v 44 Eltekeh, Gibbeton, Baalat,
+\v 45 Yehud, Bene-Berak, Gat-Rimmon,
+\v 46 Meyarkon, Rakkon, and the area opposite Yafo \add (Joppa)\add*.
+\v 47 Dan’s border went out from them.\f + \fr 19:47 \ft Translations vary widely here because we’re not sure what is meant by the literal rendering that we’ve kept here.\f* Then Dan’s descendants battled against Leshem and captured it and \add slaughtered their inhabitants\add*. \add So\add* they took it over and settled in Leshem \add but\add* they renamed it to ‘Dan’ after their ancestor.\x + \xo 19:47: \xt Jdg 18:27-29.\x*
+\v 48 That was Dan’s descendants’ inheritance according to their clans, \add including\add* those cities as well as their \add surrounding\add* villages.
+\s1 Yehoshua’s allocation
 \p
-\v 49 ◙
+\v 49 \add After the allocation of the blocks of land to the various tribes\add*, the \add Israelis\add* gave Yehoshua (Nun’s son) his \add own\add* inheritance among them.
 \p
-\v 50 ◙
+\v 50 \add Following Yahweh’s instructions to give Yehoshua whatever\add* city he asked for, he was given Timnat-Serah in the hill country of Efraim and he built \add up\add* that city and lived in it.
 \p
-\v 51 ◙
+\v 51 Those were the allotments that Eleazar the priest and Yehoshua (Nun’s son) gave to the \add leaders\add* of the Israeli tribes an their inheritances. It was done by throwing dice there in Shiloh in front of Yahweh at the opening of the sacred tent, and so the land division was completed.
 \c 20
-\s1 The cities aputanan
+\s1 The refuge cities
 \p
-\v 1 \x + \xo 20:1-9: \xt Num 35:9-34; Deu 4:41-43; 19:1-13.\x*◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
+\v 1 Then Yahweh told Yehoshua,\x + \xo 20:1-9: \xt Num 35:9-34; Deu 4:41-43; 19:1-13.\x*
+\v 2 “Tell the Israelis to select some cities that people can flee too in order to be safe, just as I instructed you through Mosheh,
+\v 3 so that if \add someone accidentally kills someone else\add*, they can escape there and be safe \add from the dead person’s family\add*.
+\v 4 When \add that person\add* flees to one of these cities, \add they must\add* stand at the city gate and tell the elders there what happened. Then they should bring \add the person\add* into the city and give \add them a place to there to live in\add*.
+\v 5 \add Now\add* if a relative of the deceased comes to avenge the death, they won’t hand over the killer because \add the death was accidental and didn’t happen because of hate or premeditation\add*.
+\v 6 \add So then that person\add* must stay in the city until they’re brought before \add the panel of judges\add*. \add If they decide that the death wasn’t deliberate,\add* the person must remain in that city until the death of the high priest, then they can \add freely\add* return to their own city and own home.”
 \p
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
+\v 7 \add So\add* \add the Israelis\add* chose Kedesh (in the Galilee region in the hill country of Naftali) and Shekem (in the hill country of Efraim) and Kiriat-Arba (\add now called\add* Hebron, in the hill country of Yehudah).
+\v 8 On the other side of the Yordan \add river\add*, they chose Betser (in the wilderness on the plateau from the tribe of Reuben), Ramot (in the Gilead from the tribe of Gad), and Golan (in the Bashan from the tribe of Manashsheh).
+\v 9 Those were the appointed cities for \add both Israelis and foreigners living amongst\add* them, so that anyone who accidentally killed someone could flee there and \add be safe from being avenged by the deceased’s relatives\add* until \add they could receive a proper trial\add*.
 \c 21
-\s1 The place naangken of descendants of Libi
+\s1 The allocation to Levi’s descendants
 \p
-\v 1 \x + \xo 21:2: \xt Num 35:1-8.\x*◙
-\v 2 ◙
-\v 3 ◙
+\v 1 Then the \add leaders\add* of the Levites went to Eleazar the priest and to Yehoshua (Nun’s son) and to the \add Israeli elders\add*\x + \xo 21:2: \xt Num 35:1-8.\x*
+\v 2 at Shiloh (in the Canaan region) and told them, “Yahweh said \add through\add* Mosheh \add that we should be given cities to live in, along with their surrounding fields\add* for our livestock.”
+\v 3 \add So the Israeli\add* \add leaders\add* gave these cities and the fields around them to the Levites for their inheritance \add as Yahweh had instructed\add*:
 \p
-\v 4 ◙
-\v 5 ◙
+\v 4 The first draw went to those of the Kohat clans \add who were\add* descendants of Aharon the priest (from the Levites). They were allocated thirteen cities in the regions occupied by Yehudah, Shim’on, and Benyamin.
+\v 5 The remaining Kohat \add clans\add* were \add allocated\add* ten cities in the regions occupied by Efraim, Dan, and the Manashsheh half-tribe.
 \p
-\v 6 ◙
+\v 6 The Gereshon \add clans\add* were \add allocated\add* thirteen cities in the regions occupied by Yissashkar, Asher, Naftali, and by the Manashsheh half-tribe in the Bashan region.
 \p
-\v 7 ◙
+\v 7 The Merari clans were \add allocated\add* twelve cities in the regions occupied by Reuben, Gad, and Zebulun.
 \p
-\v 8 ◙
+\v 8 \add So the Israeli leaders\add* gave those cities and their surrounding fields to the Levites, just as Yahweh had instructed \add through\add* Mosheh.
 \p
-\v 9 ◙
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
+\v 9 These are the names of the cities \add allocated by the Israeli leaders (from the regions occupied by\add* Yehudah and Shim’on)
+\v 10 that were given to the Levite Kohat clans since \add they were selected first in the draw\add*:
+\v 11 Kiriat-Arba and the surrounding fields (\add now called\add* Hebron—Arba was the father of Anak) in Yehudah’s hill country
+\v 12 (although the surrounding countryside and villages had already been given to Yefunneh’s son Caleb).
+\v 13 \add So\add* Hebron was given to the descendants of Aharon the priest and assigned as a refuge city (for anyone who \add accidentally\add* kills someone) along with the surrounding fields, along with Libnah,
+\v 14 Yattir, Eshtemoa,
+\v 15 Holon, Debir,
+\v 16 Ain, Yuttah, and Beyt-Shemesh, all with their surrounding fields—\add a total of\add* nine cities from within Yehudah and Shim’on’s \add territories\add*.
+\v 17 From Benyamin’s \add territories\add*, \add the Israeli leaders\add* \add assigned\add* Gibeon, Geba,
+\v 18 Anathoth, and Almon—four cities and their surrounding fields.
+\v 19 \add Thus\add* the descendants of Aharon the priests \add received\add* thirteen cities with their surrounding fields.
 \p
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
+\v 20 The \add other\add* Levite Kohat clans were allocated cities from \add within Efraim’s territory\add*:
+\v 21 Shekem (which was assigned as a refuge city for anyone who \add accidentally\add* kills someone), Gezer,
+\v 22 Kibzaim, and Beyt-Horon—four cities with their surrounding fields.
+\v 23 From Dan’s \add territory\add*, they were allocated Elteke, Gibbeton,
+\v 24 Ayyalon, and Gat-Rimmon—four cities with their surrounding fields.
+\v 25 From the Manashsheh half-tribe’s \add territory\add*, they were allocated Taanak and Gat-Rimmon—two cities with their surrounding fields.
+\v 26 \add Thus\add* the \add other\add* Levite Kohat clans \add received\add* ten cities with their surrounding fields.
 \p
-\v 27 ◙
-\v 28 ◙
-\v 29 ◙
-\v 30 ◙
-\v 31 ◙
-\v 32 ◙
-\v 33 ◙
+\v 27 The Levite Gereshon clans were allocated cities from \add within the Manashsheh half-tribe’s territory\add*: Golan in the Bashan (which was assigned as a refuge city for anyone who \add accidentally\add* kills someone) and Be’eshtarah—two cities with their surrounding fields.
+\v 28 From Yissashkar’s \add territory\add*, they were allocated Kishyon, Daberat,
+\v 29 Yarmut, and En-Gannim—four cities with their surrounding fields.
+\v 30 From Asher’s \add territory\add*, they were allocated Mishal, Abdon,
+\v 31 Helkat, and Rehob—four cities with their surrounding fields.
+\v 32 From Naftali’s \add territory\add*, they were allocated Kedesh in the Galilee (which was assigned as a refuge city for anyone who \add accidentally\add* kills someone), Hammot-Dor, and Kartan—three cities with their surrounding fields.
+\v 33 \add Thus\add* the Levite Gereshon clan \add received\add* thirteen cities with their surrounding fields.
 \p
-\v 34 ◙
-\v 35 ◙
-\v 36 ◙
-\v 37 ◙
-\v 38 ◙
-\v 39 ◙
-\v 40 ◙
+\v 34 The remaining Levite Merari clans were allocated cities from \add within Zebulun’s territory\add*: Yokneam, Kartah,
+\v 35 Dimnah, and Nahalal—four cities with their surrounding fields.
+\v 36 From Reuben’s \add territory\add*, they were allocated Bezer, Yahaz,
+\v 37 Kedemot, and Mephaat—four cities with their surrounding fields.
+\v 38 From Gad’s \add territory\add*, they were allocated Ramot in the Gilead (which was assigned as a refuge city for anyone who \add accidentally\add* kills someone), Mahanaim,
+\v 39 Heshbon, and Yazer—four cities with their surrounding fields.
+\v 40 \add Thus\add* the Levite Merari clan \add received\add* twelve cities in the draw, along with their surrounding fields.
 \p
-\v 41 ◙
-\s1 The place naangken of descendants of Israel
+\v 41 \add So\add* altogether the Levites received forty-eight cities and their surrounding fields from with the territories of the \add other tribes\add*—
+\v 42 each of those cities had fields around them \add for their livestock to graze on\add*.
+\s1 The Israelis move into the regions
 \p
-\v 42 ◙
-\v 43 ◙
-\v 44 ◙
-\v 45 ◙
+\v 43 \add Thus\add* Yahweh gave \add the Israelis\add* all the land that he’d promised their ancestors would be given and \add so the people\add* \add moved into those regions\add* and lived there.
+\v 44 Yahweh gave them \add peace\add* as he’d promised their ancestors—none of their enemies could stand against them \add because Yahweh helped them defeat any enemies\add*.
+\v 45 \add Yahweh kept every promise that he’d made to the Israelis—it all happened just like he’d said\add*.
 \c 22
-\s1 The returning home of other tribu there to igsile
+\s1 The eastern tribes return home
 \p
-\v 1 ◙
-\v 2 \x + \xo 22:2: \xt Num 32:20-32; Josh 1:12-15.\x*◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
-\s1 The altar there to near Jordan
+\v 1 Then Yehoshua \add summoned\add* the tribes of Reuben and Gad, and the Manashsheh half-tribe
+\v 2 and told them, “You yourselves have obeyed everything that Yahweh’s servant Mosheh instructed you to do. In addition, you’ve all followed everything that I told you.\x + \xo 22:2: \xt Num 32:20-32; Josh 1:12-15.\x*
+\v 3 You all have \add supported\add* your \add fellow tribes\add* all this time and fulfilled what your God Yahweh \add requested of you all\add*,
+\v 4 and now \add he\add* has enabled \add these other tribes\add* to rest \add from battle\add* just like he told them he would. \add So\add* now, you all may go back to your homes that Yahweh’s servant Mosheh gave you on the \add other\add* side of the river.
+\v 5 Only do take care to \add continue to\add* obey the instructions and the law that Yahweh’s servant Mosheh gave you: to love your God Yahweh, to \add follow him and his instructions\add*, to \add stay close to him\add*, and to serve him with all your hearts and your \add inner\add* selves.”
+\v 6 The Yehoshua blessed them and sent them on their way to return to their \add homes\add*.
+\v 7 (Mosheh had given the Bashan to the half of the Manashsheh half-tribe, and Yehoshua had given \add land\add* on the \add western\add* side of the Yordan to the other half.) \add When\add* he’d blessed them
+\v 8 he’d said, “Go back to your \add homes\add* with many riches: plenty of livestock, and with silver, gold, bronze, and iron, and with lots of clothing. Share the plunder from your enemies with \add those who remained behind\add*.”
+\v 9 So \add the warriors from the tribes of\add* Rueben, Gad, and the Manashsheh half-tribe left the \add others\add* there at Shiloh in the Canaan region, and went back to their own land in Gilead \add across the river\add* which they had taken for themselves with the agreement of Yahweh given through Mosheh.
+\s1 The altar by the Yordan
 \p
-\v 10 ◙
-\v 11 ◙
+\v 10 \add The warriors from the tribes of\add* Rueben, Gad, and the Manashsheh half-tribe arrived at the Yordan river (still on the Canaan side) and they built a very large and noticeable altar there \add before crossing over to go home\add*.
+\v 11 \add When\add* the \add other\add* \add Israelis\add* heard \add about it\add*, they said, “Look, the men \add from the tribes of\add* Rueben, Gad, and the Manashsheh half-tribe have built the altar at the \add entrance to this\add* Canaan region down at the Yordan on \add our\add* side.”
 \p
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\v 16 \x + \xo 22:16: \xt Deu 12:13-14.\x*◙
-\v 17 \x + \xo 22:17: \xt Num 25:1-9.\x*◙
-\v 18 ◙
-\v 19 ◙
-\v 20 \x + \xo 22:20: \xt Josh 7:1-26.\x*◙
+\v 12 \add Hearing that, those from the western side of the Yordan assembled at Shiloh to go to battle with the two and a half tribes on the eastern side\add*.
+\v 13 \add Meanwhile\add*, they sent the priest Finehas (Eleazar’s son) \add across\add* into the Gilead region \add to talk\add* with \add the leaders from\add* the tribes of Reuben, Gad, and the Manashsheh half-tribe.
+\v 14 \add Finehas\add* took ten leaders with him—important leaders from each of the Israeli tribes \add from the western side\add*.
+\v 15 They \add crossed over\add* to the Gilead region to talk to \add the leaders from\add* the tribes of Reuben, Gad, and the Manashsheh half-tribe. They said,
+\v 16 “Yahweh’s people are \add asking\add*, ‘What’s this unfaithfulness that you all have done unfaithfully against Israel’s God—turning away from Yahweh when you built an altar for yourselves today in rebellion against Yahweh?\x + \xo 22:16: \xt Deu 12:13-14.\x*
+\v 17 Wasn’t \add our disobedience at Peor\x + \xo 22:17: \xt Num 25:1-9.\x* bad enough for you\add*? We haven’t \add gotten over it\add* to this day. Plus there was a plague among Yahweh’s people.
+\v 18 But all of you—are you turning away from Yahweh today? If you all rebel against Yahweh today, tomorrow he’ll be furious at all of us.
+\v 19 But if it’s because you all think this land here is defiled, then cross back over to Yahweh’s own land where he lives in his sacred tent. \add Either way\add* don’t rebel against Yahweh by building \add this other\add* altar for yourselves that’s distinct from our God Yahweh’s altar.
+\v 20 Didn’t Akan act unfaithfully \add taking something that was forbidden\add*\x + \xo 22:20: \xt Josh 7:1-26.\x* and \add all of us suffered as a result of it\add*? \add It wasn’t just him alone that died because of that\add*.’ ”
 \p
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
-\v 28 ◙
-\v 29 ◙
+\v 21 \add The leaders from\add* the tribes of Reuben, Gad, and the Manashsheh half-tribe answered \add the other leaders\add*,
+\v 22 “Yahweh is the God of gods. Yahweh is the God of gods. He knows, and as for \add the Israeli people\add*, let \add them\add* know \add also\add*—if it was in rebellion or in unfaithfulness against Yahweh, don’t \add bother trying to save us today\add*.
+\v 23 If \add we’d aimed\add* to build an altar for ourselves to turn \add away\add* from following Yahweh, or if it was to offer burnt offerings or grain offerings on it, or if to make the sacrifices of peace offerings on it, Yahweh himself will \add handle it\add*.
+\v 24 \add But no, we did it because we foresaw a potential problem: what if in the future your descendants ask our descendants\add* \add over here on this side of the river\add*, ‘What \add do you lot have to do with\add* Israel’s God Yahweh?
+\v 25 \add Yahweh has given this Yordan river as a border between us, and you descendants of Reuben and Gad\add*. \add You all don’t have any part\add* in Yahweh.’ Then your descendants might make our descendants \add stop worshipping\add* Yahweh.
+\v 26 \add So we decided\add* to build the altar—not to be used for burnt offerings or for sacrifices,
+\v 27 but as a \add symbol to remind\add* our future descendants and yours that \add we all truly worship Yahweh\add* with our burnt offerings, our sacrifices, and our peace offerings, so your descendants can’t tell our future descendants that \add we have no business worshipping\add* Yahweh.
+\v 28 \add If they do say anything like that, then our descendants will be able to reply\add*, ‘See that copy of Yahweh’s altar which isn’t used for burnt offerings or sacrifices, our ancestors built that as a reminder for both you all and us.’
+\v 29 May any idea of rebelling against Yahweh stay far from us. \add Same with any idea of\add* building any altar apart from our God Yahweh’s \add genuine\add* altar for burnt offerings, or grain offerings, or other sacrifices.”
 \p
-\v 30 ◙
-\v 31 ◙
+\v 30 \add So\add* Finehas the priest and the other community and clan leaders with him, listened to what the descendants of Rueben, Gad, and Manashsheh told them, and it \add sounded sensible to them\add*,
+\v 31 \add so\add* Finehas (\add the late\add* Eleazar’s son) told \add them\add*, “Today we realise that Yahweh is among us and that you all haven’t acted unfaithfully against \add him\add*, so therefore you’ve prevented Yahweh \add from needing to punish us\add*.”
 \p
-\v 32 ◙
-\v 33 ◙
+\v 32 Then Finehas and the other leaders left Gilead and returned back \add across the Yordan\add* to the Canaan region where \add most of the Israelis resided\add*, taking back a \add good\add* report.
+\v 33 \add The people were pleased with that news\add*, and they \add thanked\add* God and stopped talking about going to war with Rueben and Gad \add across the river\add* and destroying \add them\add*.
 \p
-\v 34 ◙
+\v 34 The descendants of Rueben and Gad named the altar \add ‘Reminder’\add* because it was a reminder between them that Yahweh is God.
 \c 23
-\s1 The pegpanaha-taha of Josh.
+\s1 Yehoshua’s final speech
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
-\v 10 \x + \xo 23:10: a \xt Deu 32:30; \xo b \xt Deu 3:22.\x*◙
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
+\v 1 \add A long time passed\add* and Yahweh had given Israel \add peace without attacks\add* from their enemies all around, and Yehoshua was \add now\add* \add in his old age\add*,
+\v 2 \add so\add* he summoned all the Israeli elders and leaders, along with the judges and officials. He told them, “Now I’m in my old age,
+\v 3 \add but\add* you all have seen what Yahweh did to all those \add kingdoms\add* ahead of you, because \add he’s\add* the one who fights for you all.
+\v 4 I’ve allocated the remaining \add kingdoms\add* that you all will defeat as an inheritance for your tribes, alongside those that I conquered from the Yordan to the Mediterranean in the west
+\v 5 Your God Yahweh will push them out ahead of you all and capture their lands for you to possess, just as \add he\add* told you he would.
+\v 6 Take great care to obey and do everything that Mosheh wrote down—don’t deviate from it in any way.
+\v 7 Don’t enter those remaining \add kingdoms\add*, and don’t mention the name of their gods or make an oath using their names and don’t worship or bow down to them.
+\v 8 Instead you all should cling to your God Yahweh, just as you’ve done until now.
+\v 9 \add Yes,\add* Yahweh has driven away many great kingdoms ahead of you all, and until this day, none of them have stood against you.
+\v 10 Just one of you \add can make a thousand men flee\add*, because Yahweh is your God—he’s the one who fights for you just \add like he said he would\add*.\x + \xo 23:10: a \xt Deu 32:30; \xo b \xt Deu 3:22.\x*
+\v 11 \add Make a great effort to guard yourselves\add* that you all \add continue\add* to love your God Yahweh.
+\v 12 \add Yes,\add* if you all ever turn away \add from him\add* and instead cling to those remaining kingdoms or remaining people, and if you intermarry with them or associate with them,
+\v 13 you all will certainly \add soon\add* find out that your God Yahweh will not continue to drive out these nations \add ahead of you\add*. Then they will \add end up\add* trapping and snaring you all, and be like a whip on your sides and like thorns in your eyes, until you all perish from on this good land that Yahweh your God has given you.
 \p
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
+\v 14 Listen, today I’m about to go the way \add that everyone has to go\add* and you all know with all your heart and with all your soul that not one thing has \add failed to come true\add* from all the good things that your God Yahweh said about you. \add Everything has happened as said—down to the very last word\add*.
+\v 15 And \add just like all those good things came true\add*, so \add too\add* Yahweh will \add send all the punishments he promised you all\add* \add if you disobey him\add*, \add even if it means that\add* he destroys you all from this good land that \add he’s\add* given you.
+\v 16 If you ignore the agreement with your God Yahweh and \add disobey\add* his commands and go and serve other gods and bow down to them, then \add his\add* \add anger will flare up\add* against you all and you’ll quickly \add be wiped out\add* from the good land that he has given you.”
 \c 24
 \s1 The promise again of descendants of Israel
 \p
-\v 1 ◙
-\v 2 \x + \xo 24:2: \xt Gen 11:27.\x*◙
-\v 3 \x + \xo 24:3: a \xt Gen 12:1-9; \xo b \xt Gen 21:1-3.\x*◙
-\v 4 \x + \xo 24:4: a \xt Gen 25:24-26; \xo b \xt Gen 36:8; Deu 2:5; \xo c \xt Gen 46:1-7.\x*◙
-\v 5 \x + \xo 24:5: \xt Exo 3:1–12:42.\x*◙
-\v 6 \x + \xo 24:6-7: \xt Exo 14:1-31.\x*◙
-\v 7 ◙
+\v 1 Then Yehoshua assembled all the tribes of Israel at Shekem. He summoned their elders, leaders, judges, and officers, and they presented themselves before God,
+\v 2 and Yehoshua told all the people, “Yahweh, the God of Israel says: Your ancestors \add including\add* Terah the father of Abraham and Nahor, lived beyond the \add Euphrates\add* river from long ago, \add but\add* they \add worshipped\add* other gods.\x + \xo 24:2: \xt Gen 11:27.\x*
+\v 3 Then I took your ancestor Abraham from beyond the river and brought him \add across\add* all the land of Canaan, and I multiplied his \add descendants\add*, \add including\add* giving him Isaac.\x + \xo 24:3: a \xt Gen 12:1-9; \xo b \xt Gen 21:1-3.\x*
+\v 4 Then I gave Yacob and Esau to Isaac, and I gave Esau the hill country of Seir \add but\add* Yacob and his sons went down to Egypt.\x + \xo 24:4: a \xt Gen 25:24-26; \xo b \xt Gen 36:8; Deu 2:5; \xo c \xt Gen 46:1-7.\x*
+\v 5 I sent Mosheh and Aharon and I damaged Egypt internally, and then I brought you all out \add again\add*.\x + \xo 24:5: \xt Exo 3:1–12:42.\x*
+\v 6 I brought your ancestors out of Egypt, and you all came to the \add edge\add* of the Red Sea. \add The Egyptians\add* chased after \add them\add* with chariots and horsemen\x + \xo 24:6-7: \xt Exo 14:1-31.\x*
+\v 7 and \add the people\add* cried out to Yahweh, and he placed darkness between you and the Egyptians. \add After bringing you all through the sea,\add* he brought the sea over \add the Egyptian army and drowned them\add*. Your \add own\add* eyes saw what I did to Egypt. Then you all lived a long time in the wilderness.
 \p
-\v 8 \x + \xo 24:8: \xt Num 21:21-35.\x*◙
-\v 9 \x + \xo 24:9-10: \xt Num 22:1–24:25.\x*◙
-\v 10 ◙
-\v 11 \x + \xo 24:11: a \xt Josh 3:14-17; \xo b \xt Josh 6:1-21.\x*◙
-\v 12 \x + \xo 24:12: \xt Exo 23:28; Deu 7:20.\x*◙
-\v 13 \x + \xo 24:13: \xt Deu 6:10-11.\x*◙
+\v 8 “\add After that,\add* I brought you to the region of the Amorites who lived on the \add eastern\add* side of the Yordan, and they battled against you all, \add but I gave you victory over them\add* and I destroyed them from \add ahead of you\add* and you all took over their land.\x + \xo 24:8: \xt Num 21:21-35.\x*
+\v 9 Then (Zippor’s son) King Balak of Moab \add prepared his warriors\add* and fought against \add you all\add* and he \add summoned\add* (Beor’s son) Balaam to curse you.\x + \xo 24:9-10: \xt Num 22:1–24:25.\x*
+\v 10 \add But\add* I wasn’t willing to listen to Balaam, \add so instead,\add* he blessed you all repeatedly and I rescued you from \add King Balak\add*.
+\v 11 Then you crossed over the Yordan \add river\add* and \add arrived at\add* Yericho. The men of Yericho fought against you all, \add as did\add* the Amorites, the Perizzites, the Canaanites, the Hittites, the Girgashites, the Hivites, and the Yebusites \add but I helped you all to defeat them\add*.\x + \xo 24:11: a \xt Josh 3:14-17; \xo b \xt Josh 6:1-21.\x*
+\v 12 I sent hornets\f + \fr 24:12 \ft The Hebrew word ‘צִרְעָה’ (‘hornet’, but pluralised here in the OET-RV) may have some non-literal meaning here, e.g., ‘panic’, or it may be a general reference to any manifestation of God’s anger.\f* \add ahead of you all\add* and they drove out the two Amorite kings—it wasn’t your swords or bows that did it.\x + \xo 24:12: \xt Exo 23:28; Deu 7:20.\x*
+\v 13 \add So\add* I gave you all a land which you didn’t \add earn yourselves\add* and cities to live in that you all didn’t build yourselves. You all are \add benefitting from\add* vineyards and olive groves that you didn’t plant.”\x + \xo 24:13: \xt Deu 6:10-11.\x*
 \p
-\v 14 ◙
-\v 15 ◙
+\v 14 \add The Yehoshua continued,\add* “Now you all must \add respect\add* Yahweh and faithfully serve him with \add your complete beings\add*. And you all must remove the \add idols\add* that your ancestors served beyond the \add Euphrates\add* and in Egypt, and \add only\add* serve Yahweh.
+\v 15 But if \add you all dislike\add* serving Yahweh, then choose for yourselves today who you will serve: perhaps the gods your fathers \add once\add* served beyond the \add Euphrates\add*, or the gods of the Amorite \add people\add* in whose land you are \add now\add* living. But as for me and my household, we will serve Yahweh.”
 \p
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
+\v 16 “\add We’d never even consider\add* leaving Yahweh to serve other gods,” the people responded,
+\v 17 “because Yahweh is our God. He is the one who brought us and our ancestors out from slavery in the land of Egypt, and who did those great miracles \add right in front of\add* our eyes. Also, he looked after us \add on our entire journey\add* and among all the people groups that we passed by.
+\v 18 Yahweh drove all the peoples out \add ahead of us\add*, even the Amorites who lived in that region. \add So\add* we too we will serve Yahweh because he is our God.”
 \p
-\v 19 ◙
-\v 20 ◙
+\v 19 “You all won’t be able to serve Yahweh,” \add warned\add* Yehoshua, “because he’s a God \add who cannot mix with sin\add*. He’s a jealous God—he won’t \add forgive your rebellion and disobedience\add*.
+\v 20 If you forsake Yahweh and serve the gods of \add other nations\add*, then he’ll turn and do harm to you all and destroy you, \add even if he’s previously been\add* good to you all.”
 \p
-\v 21 ◙
-\v 22 ◙
-\p …
+\v 21 \add But\add* the people \add answered\add* Yehoshua, “No, we will worship Yahweh.”
+\v 22 Then Yehoshua \add cautioned\add* the people, “You all are witnesses against yourselves, that you yourselves have chosen to serve Yahweh.”
+\p “\add We are\add* witnesses,” they \add confirmed\add*.
 \p
-\v 23 ◙
+\v 23 “Then \add you all go right\add* now and remove the foreign gods that you already have, and turn your hearts towards Yahweh, the God of Israel,” \add said Yehoshua\add*.
 \p
-\v 24 ◙
+\v 24 “We will serve our God Yahweh, and we will listen to his voice,” the people \add replied\add*.
 \p
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
-\v 28 ◙
-\s1 The death of Josh. and of Ilyasar
+\v 25 \add So\add* Yehoshua \add made a formal agreement\add* with the people in Shekem on that day, \add establishing rules and laws\add* for them.
+\v 26 \add He\add* wrote \add them\add* in the book of God’s law. Then he took a large stone and set it up there beneath the oak tree that was \add by Yahweh’s sacred tent\add*.
+\v 27 “Look at this stone,” Yehoshua said to all the people. “It will be for a witness against us, because it has heard \add everything that Yahweh has instructed\add* us, and it will be for a witness against you all, in case you act deceptively against your God.”
+\v 28 Then Yehoshua sent \add all\add* the people off to go to their allotted regions.
+\s1 The deaths of Yehoshua and Eleazar
 \p
-\v 29 ◙
-\v 30 \x + \xo 24:30: \xt Josh 19:49-50.\x*◙
+\v 29 After all that, Nun’s son and Yahweh’s servant Yehoshua died at the age of 110.
+\v 30 They buried him in his alloted property at Timnat-Serah which is in the Efraim hill country north of Mt. Ga’ash.\x + \xo 24:30: \xt Josh 19:49-50.\x*
 \p
-\v 31 ◙
+\v 31 The \add Israelis\add* had served Yahweh all through Yehoshua’s lifetime and throughout the lifetimes of the elders who lived longer than Yehoshua and who had experienced everything that Yahweh had done for Israel.
 \p
-\v 32 \x + \xo 24:32: \xt Gen 33:19; 50:24-25; Exo 13:19; Jn 4:5; Acts 7:16.\x*◙
+\v 32 They buried Yosef’s bones (that they had carried out from Egypt) in Shekem—in the portion of the field that Yacob had bought from the sons of Hamor (Shekem’s father) for a hundred coins, and \add that land\add* became the inheritance of Yosef’s descendants.\x + \xo 24:32: \xt Gen 33:19; 50:24-25; Exo 13:19; Yhn 4:5; Acts 7:16.\x*
 \p
-\v 33 ◙
+\v 33 Aharon’s son Eleazar \add also\add* died and was buried at Gibeah—the city that belonged to his son Finehas in the Efraim hill country.

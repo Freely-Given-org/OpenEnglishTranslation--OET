@@ -1,604 +1,602 @@
-\id 1SA - Open English Translation—Readers’ Version (OET-RV) v0.0.02
+\id 1SA - Open English Translation—Readers’ Version (OET-RV) v0.0.11
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 SA1
 \rem WORDTABLE OET-LV_OT_word_table.tsv
-\h 1 Samuel
-\toc1 1 Samuel
-\toc2 1 Samuel
-\toc3 1 Sa.
-\mt1 1 Samuel
+\h 1 Shemuel
+\toc1 1 Shemuel
+\toc2 1 Shemuel
+\toc3 1 She.
+\mt1 1 Shemuel
 \is1 Introduction
-\ip Told of this document the concerning the people of nation Israel of time Samwil pad the teacher ran until nakasubal e Saul migpangulu them. And/Now Saul the first King. Told also of this document if what the reason naawaan Saul of responsibility din isip King, and impasubalan e he of God to David.
-\ip Te not yet King long ago of Israel, iyan pad in-isip of people King their the God. But mighangyu them of God egbehayan of King egpangulu them. And/Now desire of God egparuma-ruma the King and the people of commanding din and of him judging. Because the all authority of person, rich man ma and the poor, it’s necessary egpekeuyun of Law of God.
-\ip The theme of this document that pegkamatinumanen of God there egpangkus of kapanaluwan, and the pegsupak of desire of God there egpangkus of karereetan. Naay-ayaran that nalalag of God there to chapter 2:30 miggenendue, “The migtahud me, respecting my also and the miglemet me, eglemetan my also.”
+\ip Told of this document the concerning the people of nation Israel of time Shemuel pad the teacher ran until nakasubal e Sha’ul led them. And/Now Sha’ul the first King. Told also of this document if what the reason naawaan Sha’ul of responsibility din as King, and impasubalan e he of God to David.
+\ip Te not yet King long ago of Israel, is pad in-as of people King their the God. But mighangyu them of God egbehayan of King egpangulu them. And/Now desire of God egparuma-ruma the King and the people of commanding din and of him judging. Because the all authority of person, rich man ma and the poor, it’s necessary egpekeuyun of Law of God.
+\ip The theme of this document that pegkamatinumanen of God there egpangkus of kapanaluwan, and the pegsupak of desire of God there egpangkus of destruction. Naay-ayaran that nalalag of God there to chapter 2:30 miggenendue, “The migtahud me, respecting my also and the miglemet me, eglemetan my also.”
 \iot Main components of this account
-\io1 The judge of Israel Samwil \ior 1:1–7:17\ior*
-\io1 Neyimu Saul King \ior 8:1–10:27\ior*
-\io1 The first year(s) of kingdom of Saul \ior 11:1–15:35\ior*
-\io1 David and Saul \ior 16:1–30:31\ior*
-\io1 The dying of Saul and of his children males \ior 31:1-13\ior*
+\io1 The judge of Israel Shemuel \ior 1:1–7:17\ior*
+\io1 Sha’ul becomes king \ior 8:1–10:27\ior*
+\io1 The first years of Sha’ul’s reign \ior 11:1–15:35\ior*
+\io1 David and Sha’ul \ior 16:1–30:31\ior*
+\io1 The death of Sha’ul and his sons \ior 31:1-13\ior*
 \rem This is still a very early look into the unfinished text of the \em Open English Translation\em* of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
-\s1 Ilkana and the pamilya his there to Silu
+\s1 Elkanah and family at Shiloh
 \p
-\v 1 ◙
-\v 2 ◙
+\v 1 There was a man named Elkanah from Ramatayim-Zofim \add who lived\add* in the Efraimite hill country. (He was an Efraimite—the son of Yeroham, son of Elihu,\x + \xo 1:1 \xt 1 Chr. 6:27,34.\x* son of Tohu, son of Zuf.)
+\v 2 He had two wives: Hannah (who had no children) and Peninnah (who had \add several\add* children).
 \p
-\v 3 ◙
+\v 3 \add Every year\add* he would \add take his family\add* to Shiloh to \add offer sacrifices\add* to commander Yahweh. Eli was Yahweh’s priest there, and his two sons Hofni and Pinehas \add also served there\add*.
 \p
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\s1 Hana and Ili
+\v 4 on the day that Elkanah made his sacrifice, he would give portions \add of the cooked meat\add* to Peninnah and to all her sons and daughters,
+\v 5 \add but\add* he’d give a double portion to Hannah because he loved \add her\add*, \add even though\add* Yahweh had \add not enabled her to have children\add*.
+\v 6 Then her rival would provoke her and \add try to make her angry\add*, because Yahweh hadn’t \add given her children\add*.
+\v 7 And so it \add happened every year\add*. Every time they went to Yahweh’s \add tent\add*, \add Peninnah\add* ridiculed him, and \add Hannah\add* would weep and wouldn’t eat.
+\v 8 Then Elkanah would \add ask\add* her, “Hannah, why are you crying? And why aren’t you eating? And why \add are you so upset\add*? Isn’t it better \add having me\add* than \add having\add* ten sons?”
+\s1 Hannah and Eli
 \p
-\v 9 ◙
-\v 10 ◙
-\v 11 \x + \xo 1:11: \xt Num 6:5.\x*◙
+\v 9 \add One time\add* Hannah got up after eating and drinking at Shiloh. (Eli the priest was sitting on the seat near the entrance of Yahweh’s \add tent\add*.)
+\v 10 \add Hannah\add* \add was very upset\add*, and she prayed to Yahweh and wept uncontrollably.
+\v 11 Then she made a vow, saying, “Commander Yahweh, if you \add would only notice the misery\add* of your female servant and remember me. Don’t \add ignore\add* \add me\add*. \add Help\add* your female servant \add to give birth to a son\add*, then I’ll give him to \add you\add* \add for his entire\add* life, and \add he’ll never have his hair cut\add*.”\x + \xo 1:11: \xt Num 6:5.\x*
 \p
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
+\v 12 As she continued praying to Yahweh, Eli was watching her mouth.
+\v 13 \add Now\add* Hannah was \add praying from her heart\add*, and her lips were moving \add but she wasn’t speaking aloud\add*. Eli thought \add she must be\add* drunk,
+\v 14 and \add scolded\add* her, “You shouldn’t be getting drunk. Get rid of your wine.”
 \p
-\v 15 ◙
-\v 16 ◙
+\v 15 “No, my master,” Hannah replied, “I’m a woman \add who’s suffering deep down\add*. I haven’t drunk any wine or intoxicating drink, \add but rather\add* I’ve been \add sharing my inner issues\add* with Yahweh.
+\v 16 Don’t think that your female servant is \add just\add* a worthless woman, because just now I was \add praying as a result of my terrible anguish and frustration\add*.”
 \p
-\v 17 ◙
-\v 18 ◙
-\s1 The birth of Samwil and peghalad him
+\v 17 “\add Then\add* go in peace,” Eli replied. “And may Israel’s God grant your request that you \add presented to\add* him.”
 \p
-\v 19 ◙
-\v 20 ◙
+\v 18 “\add Please assume the best of\add* your female servant,” said \add Hannah\add*, then she went on her way and \add had something to eat\add*, and \add something had changed in her demeanor\add*.
+\s1 Shemu’el’s birth and dedication
 \p
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
+\v 19 They \add all\add* gut up early the \add next\add* morning and worshiped Yahweh \add again\add*, then they returned to their home at Ramah. Then Elkanah \add slept with\add* his wife Hannah, and Yahweh \add answered her prayer\add*.
+\v 20 \add Hannah\add* got pregnant, and in due course, she gave birth to a son. She named him ‘Shemu’el’ \add (meaning ‘heard by God’, usually changed to ‘Samuel’ in English)\add* because she had requested him from Yahweh.
 \p
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
-\v 28 ◙
-\p …
+\v 21 \add At the usual time,\add* Elkanah and all his household went \add to Shiloh\add* to \add offer their sacrifices and fulfill their vows\add* to Yahweh.
+\v 22 \add But\add* Hannah \add didn’t accompany them\add* because she’d told her husband, “I’ll \add come and\add* bring him when he’s weaned. Then he can be \add taken in to\add* Yahweh and \add permanently\add* remain there.”
+\v 23 “Do \add what you think’s best\add*,” her husband \add replied\add*. “Stay until you’ve weaned him. May Yahweh \add do whatever he said\add* \add to you\add*.” \add So\add* \add she\add* stayed \add behind\add* and breastfed her son until she \add eventually\add* weaned him.
+\p
+\v 24 \add The next year,\add* after she’d weaned him, she took the young boy with \add them\add*, along with three bulls, a \add sack\add* of flour, and a \add container\add* of wine. Then she brought him to Yahweh’s \add tent\add* in Shiloh,
+\v 25 and after slaughtering the bull, they took the boy in to Eli.
+\v 26 “Please, my master,” \add Hannah\add* said. “As your spirit lives, my master, I’m the woman who was standing with you here to pray to Yahweh.
+\v 27 I prayed \add that Yahweh would give me a son, and he did, and this is him\add*.
+\v 28 Also, I dedicated him to Yahweh all his life, so he’s now given to Yahweh.”
+\p Then \add they\add* worshipped Yahweh there.
 \c 2
-\s1 The praying for Hana
+\s1 Hannah’s praise
 \q1
-\v 1 \x + \xo 2:1-10: \xt Luk 1:46-55.\x*◙
-\q1 …
-\q2 …
-\q1 …
-\q2 …
+\v 1 Then Hannah prayed, saying,\x + \xo 2:1-10: \xt Luk 1:46-55.\x*
+\q1 “\add I’m so happy with\add* Yahweh.
+\q1 My strength comes from Yahweh.
+\q1 I can \add loudly refute\add* my enemies.
+\q1 Because I’m \add so pleased that you rescued me\add*.
 \b
 \q1
-\v 2 ◙
-\q2 …
-\q1 …
+\v 2 No one \add else\add* is holy like Yahweh.
+\q1 There’s certainly no one else who’s like you.
+\q1 No one else \add is like a\add* rock \add to me\add* like our God is.
 \q1
-\v 3 ◙
-\q2 …
-\q2 …
-\q1 …
-\q2 …
+\v 3 You all shouldn’t speak so proudly.
+\q1 \add Don’t\add* let arrogance come out of your mouths.
+\q1 Because Yahweh is a God of knowledge,
+\q2 and all actions are weighed by him.
 \b
 \q1
-\v 4 ◙
-\q2 …
+\v 4 Warriors have their bows shattered,
+\q1 but those who stumbled \add are given extra\add* strength.
 \q1
-\v 5 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 5 Those who had been satisfied \add now\add* hire themselves out for food,
+\q2 but the hungry people \add no longer lack\add*.
+\q1 The woman who’d been childless, gives birth to seven,
+\q2 but the woman with many sons \add is depressed\add*.
 \q1
-\v 6 ◙
-\q1 …
-\q2 …
+\v 6 Yahweh puts to death and he makes alive.
+\q1 He sends down to the grave and brings up.
 \q1
-\v 7 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 7 Yahweh makes poor and makes rich.
+\q1 He humbles, and he also honours.
 \q1
-\v 8 ◙
-\q2 …
-\q2 …
-\q1 …
-\q2 …
+\v 8 He lifts the poor up from the dust,
+\q1 and lifts up the needy from the ash heap
+\q1 so they can sit with influential \add people\add*
+\q1 and be given the seat of honour.
+\q1 The earth’s foundations belong to Yahweh—
+\q1 he was the one who placed the world on top of them.
 \q1
-\v 9 ◙
-\q2 …
-\q2 …
+\v 9 He \add watches over\add* those who’re loyal to him,
+\q1 but wicked \add people\add* will die in the darkness,
+\q2 because \add we\add* don’t succeed through our own strength.
 \q1
-\v 10 ◙
-\q1 …
-\q1 …
-\q1 …
-\q2 …
+\v 10 It’s Yahweh who shatters our enemies.
+\q1 He thunders against \add them\add* from the heavens.
+\q1 Yahweh will judge the \add entire\add* earth,
+\q1 and will give strength to the king,
+\q1 and will \add give victory\add* to his chosen one.”
 \p
-\v 11 ◙
-\s1 The bad children of Ili
+\v 11 Then Elkanah \add and his family\add* returned to \add their\add* home in Ramah, but young Shemuel \add stayed to\add* help Eli the priest serve Yahweh.
+\s1 Eli’s greedy sons
 \p
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
+\v 12 \add Now\add* Eli’s sons were \add worthless scoundrels\add* who didn’t obey Yahweh.
+\v 13 It was the custom of those priests that when anyone was offering a sacrifice and as soon as the meat was boiling, the priest’s servant would come along holding a three-pronged fork
+\v 14 and stick it into the pot or pan. The priest would then \add claim\add* whatever the fork brought up. That’s what they did to all the Israelis who came to Shiloh \add to offer sacrifices\add*.
+\v 15 Also, before the fat \add was removed to\add* burn, the priest’s servant would say to the person sacrificing, “Give some meat to the priest—he doesn’t want just boiled meat \add all the time\add*—he’ll take some raw meat \add as well\add* to roast.”
 \p
-\v 16 ◙
-\v 17 ◙
-\s1 Diye Samwil of Silu
+\v 16 But if the person tried to say, “Once the fat has all be burnt, then take whatever you want for yourself,” then he’d \add assert\add*, “No, you’d better give it \add right\add* now or I’ll take it by force.”
+\v 17 And \add so\add* the actions of those young men was very wicked in Yahweh’s mind because they \add just\add* treated sacrifices to Yahweh with contempt.
+\s1 Young Shemuel starts serving at Shiloh
 \p
-\v 18 ◙
-\v 19 ◙
-\v 20 ◙
+\v 18 \add By now\add* Shemuel was serving Yahweh, dressed in a priestly uniform made from linen.
+\v 19 \add Each year\add* his mother would make a small robe for him and bring it when she came with her husband to offer \add their sacrifices\add*.
+\v 20 Eli would bless Elkanah and his wife and say, “May Yahweh \add give more children for you through\add* this woman in place of the \add boy\add* \add dedicated\add* to Yahweh.” Then they’d return home.
 \p
-\v 21 ◙
-\s1 Ili and the his children
+\v 21 \add So\add* Yahweh visited Hannah and she went on to give brith the three \add other\add* sons and two daughters. \add Meanwhile,\add* \add young\add* Shemuel \add grew up serving\add* Yahweh.
+\s1 Eli and his children
 \p
-\v 22 ◙
-\v 23 ◙
-\v 24 ◙
-\v 25 ◙
-\p …
+\v 22 \add Now\add* Eli was very old and he had heard all about what his sons were doing to the Israeli people, and \add also\add* that they were sleeping around with the women who worked at the sacred tent entrace.
+\v 23 “Why are you \add two\add* doing all these things that I keep hearing about—these evil things \add affecting\add* all those people?” he \add asked\add* them.
+\v 24 “No, my sons. The reports that I keep hearing Yahweh’s people passing on isn’t good!
+\v 25 If someone sins against a person, then God will mediate for him, but if someone sins against Yahweh, who will \add speak up\add* for that person?” \add But\add* they wouldn’t listen to their father’s advice because Yahweh wanted to put them to death.
 \p
-\v 26 \x + \xo 2:26: \xt Luk 2:52.\x*◙
-\s1 The pegtagne concerning the pamilya of Ili
+\v 26 \add Meanwhile\add* the boy Shemuel was growing \add up\add*, and his good \add behaviour pleased\add* both Yahweh and \add the people\add*.\x + \xo 2:26: \xt Luk 2:52.\x*
+\s1 The prophecy against Eli’s family
 \p
-\v 27 ◙
-\v 28 \x + \xo 2:28: a \xt Exo 28:1-4; \xo b \xt Lev 7:35-36.\x*◙
-\v 29 ◙
+\v 27 \add One day\add* one of God’s \add prophets\add* came to Eli and told him, “This is what Yahweh says, ‘Did\add n’t\add* I clearly reveal myself to your ancestors when they were Far’oh’s \add slaves\add* in Egypt?
+\v 28 And out of all the Israeli tribes, I chose \add your ancestor\add* to be a priest to me, to go up on my altar, to burn incense, \add and\add* to \add wear the sacred apron in front of me\add*. Plus I gave your ancestors \add the rights to\add* all the burnt offerings made by the \add Israelis\add*.\x + \xo 2:28: a \xt Exo 28:1-4; \xo b \xt Lev 7:35-36.\x*
+\v 29 Why do you \add disrespect\add* sacrifices and offerings that I commanded \add the people\add* to bring to me \add at my residence\add*. And \add why do\add* you honour your sons more than me by fattening yourselves from the best of every offering of my people Israel?’
 \p
-\v 30 ◙
-\v 31 ◙
-\v 32 ◙
-\v 33 ◙
-\v 34 \x + \xo 2:34: \xt 1Sam 4:11.\x*◙
-\v 35 ◙
-\v 36 ◙
+\v 30 “Therefore, this is what Yahweh the God of Israel declares: ‘I indeed said \add your ancestors and then your descendants\add* would \add serve me forever\add*.’ But now \add I declare this\add* \add instead\add*: ‘\add This cannot continue\add* because I will honour those who honour me, but those who despise me will be \add side-lined\add*.
+\v 31 Listen, the time is coming when I’ll \add bring you and your relatives to an end—none of your men will die of old age\add*
+\v 32 and you’ll see distress in my residence. I’ll do good for \add the rest of\add* Israel, but there’ll never be another old man in your home.
+\v 33 I won’t \add finish\add* them off near my altar. Your eyes will fail and you’ll grieve \add inside\add*, but your \add adult sons\add* will die.
+\v 34 This will be the sign: it’ll \add turn out\add* that your two sons Hofni and Finehas will both die on the same day.\x + \xo 2:34: \xt 1Sam 4:11.\x*
+\v 35 Then I’ll \add select\add* another man to be a faithful priest to me—he’ll \add follow my desires and do what’s in my mind\add*. I’ll make \add him and his faithful descendants to continue and to always serve me\add*.
+\v 36 Any of your descendants who remain \add alive\add* will have to go to him to request food and money and \add beg\add* for some priestly work to earn \add something to eat\add*.’ ”
 \c 3
-\s1 The calling of God to Samwil
+\s1 Yahweh calls Shemuel
 \p
-\v 1 ◙
+\v 1 \add Meanwhile young\add* Shemuel was serving Yahweh \add under\add* Eli. In those days, Yahweh rarely \add spoke to the people or sent visions\add*.
 \p
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\p …
+\v 2 \add By that time,\add* Eli’s \add sight was very poor\add*—he could barely see. \add One night when\add* he was sleeping in his place,\f + \fr 3:2 \ft Some translations use ‘room’ here instead of ‘place’, but it could easily be that he had a small bed in a corner somewhere.\f*
+\v 3 and Shemuel was lying down in Yahweh’s tent (where the box was that contained the \add stone slabs\add*), \add but\add* God’s lamp was still burning.
+\v 4 Yahweh called out to Shemuel, and he \add called back\add*, “I’m here. \add Coming.\add*”
+\v 5 Then he ran to Eli and said, “Here I am, because you called me.”
+\p “I didn’t call,” he said. “Go back \add and\add* lie down.” \add So\add* he went \add back\add* and laid down.
 \p
-\v 6 ◙
-\p …
+\v 6 Yahweh called again, “Shemuel.”
+\p Shemuel got up and went to Eli and said, “Here I am, because you called me.”
+\p “I didn’t call, my son,” he said, “Go back \add and\add* lie down.”
 \p
-\v 7 ◙
-\v 8 ◙
-\p …
-\v 9 ◙
+\v 7 (\add At this point\add*, Shemuel didn’t \add really\add* know Yahweh, because Yahweh hadn’t revealed \add himself\add* to him before.)
+\v 8 Then Yahweh called Shemuel a third time. He got up and went to Eli and said, “Here I am, because you called me.”
+\p Then Eli realised that it was Yahweh who was calling the boy
+\v 9 and he told Shemuel, “Go \add and\add* lie down. Then if he calls to you \add again\add*, \add just answer\add*, ‘Speak, Yahweh, because your servant is listening.’ ” \add So\add* Shemuel went and laid down \add again\add* in his place.
 \p
-\v 10 ◙
-\p …
+\v 10 Then Yahweh came and \add stood nearby\add* and called \add like he’d done the other\add* times, “Shemuel, Shemuel.”
+\p “Speak,” Shemuel said, “because your servant is listening.”
 \p
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
-\s1 The pegnangen of Samwil to Ili of inlalag of God him
+\v 11 “Listen,” Yahweh told \add him\add*, “I’m about to do something in Israel that \add will make everyone’s ears tingle when they hear it\add*.
+\v 12 \add When it happens\add*, I’ll \add do everything that I’ve said about Eli and his family\add*, from the beginning to the end.
+\v 13 I’ve told him \add already\add* that I’m about to \add eternally\add* judge his \add household\add* because \add he knew about the evil that was being done\add*, because his sons were \add bringing curses on\add* themselves and he didn’t scold them.
+\v 14 That’s why I’ve promised Eli’s \add family\add* that \add their\add* disobedience can \add never\add* be forgiven by means of sacrifices or offerings.
+\s1 Shemuel tells Eli what Yahweh said
 \p
-\v 15 ◙
-\v 16 ◙
-\p …
+\v 15 Then Shemuel lay down \add again\add* until the morning when he opened the doors of Yahweh’s house \add as usual\add*, \add but\add* \add he\add* was scared to tell Eli about the vision.
+\v 16 \add But\add* Eli called \add him\add*, “Shemuel, my son.”
+\p “Here I am,” he \add answered\add*.
 \p
-\v 17 ◙
-\v 18 ◙
+\v 17 “What did he tell you?” \add Eli\add* \add asked\add*. “Don’t hide it from me. May God \add punish you severely\add* if you hide a \add single\add* word from \add everything\add* he told you.”
+\v 18 \add So\add* Shemuel told him \add everything\add* without hiding anything. Then Eli \add answered\add*, “It’s Yahweh. May he do \add whatever he thinks best\add*.”
 \p
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
+\v 19 \add As\add* Shemuel grew up, Yahweh was with him and nothing he said failed to happen,
+\v 20 \add so\add* all Israel from Dan \add in the north\add* and as far as Beersheba \add in the south\add* knew that Shemuel was a faithful prophet of Yahweh.
+\v 21 \add Over time,\add* Yahweh continued to appear in Shiloh and to reveal \add his plans through\add* Shemuel
 \c 4
 \nb
-\v 1 ◙
-\s1 The pegkaahew of Tahuanan of Kasabutan
-\p …
-\v 2 ◙
-\v 3 ◙
-\v 4 \x + \xo 4:4: \xt Exo 25:22.\x*◙
+\v 1 and Shemuel’s messages went to all Israel.
+\s1 The capture of the box with the agreement
+\p \add At that time,\add* Israel went to war against the Philistines. They camped at Eben-Ezer and the Philistines camped at Afek.
+\v 2 Then the Philistines lined up to meet Israel and the battle spread. Israel was defeated by the Philistines and they killed about 4,000 warriors in the battle line in the field.
+\v 3 \add As\add* the people\f + \fr 4:3 \ft It seems that most translations assume that this is referring to the remainder of the warriors staggering back into the camp (which is certainly a possibility), but we’ve interpreted it as the people coming together (with their elders as it says), to try to figure out why they were defeated. (Similarly for v4.)\f* came into the camp, the \add Israeli\add* elders \add asked\add* \add themselves\add*, “Why did Yahweh \add allow the Philistines to slaughter\add* us today? Let’s get the box from Shiloh that contains \add the stone slabs with\add* Yahweh’s agreement \add on them\add*. \add Once it’s amongst us\add*, \add surely\add* it’ll save us from \add defeat by\add* our enemies.”
+\v 4 \add So\add* the people sent \add men\add* to Shiloh and from there they lifted the box containing Yahweh’s agreement \add and the sacred platform\add* with the winged creatures.\f + \fr 4:4 \ft And with Commander Yahweh sitting on, above, or between them.\f* Eli’s two sons, Hofni and Finehas, were there with the box containing God’s agreement.\x + \xo 4:4: \xt Exo 25:22.\x*
 \p
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
+\v 5 \add As\add* the box with Yahweh’s agreement \add was carried\add* into the camp, all the \add Israelis\add* shouted so loud that the ground shook.
+\v 6 When the Philistines heard the \add noise\add*, they said, “What’s that loud shout in the Hebrews’ camp?” Then they realised that the box \add with Yahweh’s covenant\add* had come into their camp
+\v 7 and they were afraid saying, “A god has come into the \add Israeli\add* camp.” Then they said, “\add This means trouble\add*, because it wasn’t like this yesterday \add or the previous days\add*.
+\v 8 \add Oh dear\add*! Who will rescue us from these mighty gods? Those are the gods who struck the Egyptians with every plague in the wilderness.
+\v 9 Now we Philistines \add really need to fight with passion\add*, because if we don’t, we’ll ending up serving the Hebrews just like they’ve had to serve us. \add Now, gather your courage and fight for your lives\add*.”
 \p
-\v 10 ◙
-\v 11 ◙
-\s1 The death of Ili
+\v 10 \add So\add* the Philistines fought \add hard\add*, and Israel was \add defeated\add*. \add Many warriors fled back to their tents\add* and it was a \add terrible\add* salughter—30,000 foot soldiers from Israel were killed.
+\v 11 \add As well as that,\add* the box with God’s \add agreement\add* was taken, and Eli’s two sons Hofni and Finehas were killed.
+\s1 The death of Eli
 \p
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\p …
+\v 12 A Benyamite man ran from the battle line back to Shiloh that day. His clothes were torn and \add he was covered in dirt\add*.
+\v 13 \add When\add* he arrived \add there\add*, Eli was sitting on a roadside seat watching, because he was \add very concerned\add* about the \add sacred chest\add*. As the man entered the city with the news, all the \add people\add* started \add wailing loudly\add*.
+\v 14 \add As\add* Eli heard the wailing, he \add asked\add*, “\add What’s that big commotion\add*?” \add So\add* the man ran over to Eli to \add tell him the news\add*.
+\v 15 \add At that time\add*, Eli was ninety-eight years old, and he \add stared straight ahead\add* because he couldn’t see.
+\v 16 The man told \add him\add*, “I’m the one who’s \add just\add* come from the battle line. I \add had to\add* fled from the battle line today.”
+\p “What was the issue, my son?” \add Eli\add* \add asked\add*.
 \p
-\v 17 ◙
+\v 17 “Israel fled \add defeated\add* from the Philistines,” said the messenger. “And also, there has been a terrible slaughter of our people. \add What’s more\add*, your two sons, Hofni and Finehas, \add were killed\add*, and the \add sacred chest has been captured\add*.”
 \p
-\v 18 ◙
-\s1 The death of spouse of Pinihas
+\v 18 \add The moment\add* he mentioned the capturing of God’s box, \add Eli\add* fell backwards off the seat beside the city gate. Because he was old and \add very\add* heavy, his neck broke and he died. Eli had \add led\add* Israel for forty years.
+\s1 The death of Finehas’ widow
 \p
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
+\v 19 \add Now\add* Finehas’ wife (\add Eli’s\add* daughter-in-law) was pregnant—about to give birth—\add when\add* she heard the news about the \add sacred chest\add* being taken, and that \add both\add* her father-in-law and her husband had died. \add At that moment,\add* she knelt down and gave birth \add because the birth pains suddenly started\add*.
+\v 20 \add But she was dying\add*, and the women who stood over her said, “Don’t be afraid, because you’ve given birth to a son.” \add But\add* she didn’t answer \add or pay any attention\add*.
+\v 21 She named the boy ‘Ikabod’ \add (which means ‘no glory’)\add*, saying, “The glory has departed from Israel,” about the \add sacred chest\add* being taken, and about \add the deaths of\add* her father-in-law and her husband.
+\v 22 Then she said, “The glory has departed from Israel, because the \add sacred chest\add* has been taken.”
 \c 5
-\s1 The carrying of Tahuanan of Kasabutan there to Asdud
+\s1 The sacred chest gets carried to Ashdod
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\s1 The cities inlegparan of God
+\v 1 Now the Philistines had taken the \add sacred chest\add*, and they took it from Eben-Ezer to Ashdod
+\v 2 \add where\add* they carried \add it\add* into the temple of \add their god\add* Dagon and placed it beside \add a statue of\add* Dagon.
+\v 3 Early the next day \add when\add* the Ashdodites got up, \add to their horror\add* Dagon had fallen to the ground on its face \add in front of\add* Yahweh’s box. \add So\add* they \add stood it up\add* and returned it to its place.
+\v 4 \add But\add* then the next morning, \add more shock\add*: Dagon had fallen to the ground on its face \add in front of\add* Yahweh’s box \add but now\add* \add its\add* hands and head were cut off, \add and were lying\add* on the threshhold. Only \add its body remained intact\add*.
+\v 5 (\add Because of that\add*, until this day Dagon’s priests and everyone who enters Dagon’s temple in Ashdod won’t tread on the threshhold.)
+\s1 God punishes the Philistine cities
 \p
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\p …
-\v 9 ◙
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
+\v 6 Yahweh \add caused a lot of trouble\add* for the \add people of\add* Ashdod and he terrifed them. He \add caused\add* them and \add the people in the region\add* to \add get lumpy growths on their skin\add*.
+\v 7 \add When\add* the \add leaders\add* in Ashdod \add saw what was happening\add*, they said, “The God of Israel’s box mustn’t stay with us because \add he’s punishing\add* \add both\add* us and our god Dagon.”
+\v 8 \add So\add* they sent for all the Philistine rulers, and \add when they’d assembled\add* they \add asked\add*, “What should we do with the God of Israel’s box?”
+\p “Let the the God of Israel’s box be taken around to Gat,” they \add decided\add*. \add So\add* they moved \add it\add* \add there\add*.
+\v 9 After \add it arrived\add*, Yahweh \add started punishing Gat\add* and \add both\add* young and old men in the city started getting growths on their skin, and it caused a huge panic.
+\v 10 \add So\add* they sent God’s box to Ekron, \add but\add* as soon as \add it\add* entered \add the city\add*, the Ekronites cried out, “\add Hey!\add* They’ve brought the God of Israel’s box here to \add kill us\add* and our people.”
+\v 11 \add So\add* they sent for the Philistine rulers, and \add when they’d assembled\add* they said, “Send the God of Israel’s box away. \add Send it back\add* to its place \add so\add* it won’t \add cause us and our people to die\add*.” Because there was a \add deadly panic all over\add* the city \add as\add* \add God’s punishment there was severe\add*
+\v 12 and the men who didn’t die suffered with the growths. \add So\add* the \add people’s\add* cry went up to the heavens.
 \c 6
-\s1 The returning home of Tahuanan of Kasabutan
+\s1 Sending the chest back to Israel
 \p
-\v 1 ◙
-\v 2 ◙
+\v 1 \add So it was that\add* Yahweh’s box was \add held\add* in Philistine territory for seven months,
+\v 2 then the Philistines called \add their\add* priests and diviners and \add asked\add*, “What should we do with Yahweh’s box? \add Show us how we can get it back\add* away to its place.”
 \p
-\v 3 ◙
+\v 3 “If you’re going to send the God of Israel’s box back,” they \add responded\add*, “don’t send it \add back by itself\add*, but definitely return it to him with a guilt offering. Then you’ll all be healed, and you’ll all \add understand why you’ve been suffering\add*.”
 \p
-\v 4 ◙
-\p …
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
+\v 4 “What guilt offering should we \add send with it\add*?” they \add asked\add*.
+\p “Five gold \add replicas of the\add* tumours, and five gold mice,” they said. “That’s the number of \add our\add* rulers, because \add the same\add* plague \add affected both them and the people\add*.
+\v 5 Make replicas of the tumours and replicas of the mice that have been destroying the land, and it will honour Israel’s God. Then perhaps he will \add less his punishment that’s been\add* on you and on your gods and on your land.
+\v 6 Why \add have you all been so stubborn\add* just like the Egyptians when Pharaoh made \add them stubborn\add*? When \add Israel’s God\add* dealt severely with them, didn’t \add the Egyptians\add* send \add the Israelis\add* away and they went?
+\v 7 \add So\add* now, \add get a brand\add* new cart with two nursing cows \add which have never had a yoke on their necks\add*. Hitch the cows to the cart \add but\add* take their calves \add back to their pen\add*.
+\v 8 Then pick up Yahweh’s box and put it into the cart \add along with\add* the gold objects that you are \add sending with it\add* as a guilt offering \add put in another container beside the box\add*. \add Finally\add*, send \add the cart\add* away and \add off\add* it will go.
+\v 9 Then watch \add it\add*. If it \add heads towards\add* Beyt-Shemesh \add in Israeli territory, then it’s their god that caused this terrible calamity\add*. \add But\add* if not, then we’ll know that \add it wasn’t the Israeli god, and that\add* it \add all\add* happened to us by chance.”
 \p
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
+\v 10 \add So they followed those instructions\add*: they took two cows \add that had been feeding calves\add* and hitched them to the \add new\add* cart, but they shut their calves away in the \add stall\add*.
+\v 11 Then they put Yahweh’s box into the cart with the \add other\add* container with the gold mice and the replicas of their tumors.
+\v 12 \add Amazingly,\add* the cows went straight down the road going to Beyt-Shemesh. They \add stayed on that\add* one highway, walking and mooing, and they \add never once deviated to the left or the right\add*, and the Philistine rulers followed them as far as the border of Beyt-Shemesh.
 \p
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\s1 The me bulawan impeiling of buu
+\v 13 \add Meanwhile in\add* Beyt-Shemesh, \add the people\add* were harvesting wheat in the valley, and when they \add looked up\add* and saw the box, \add they were very happy\add*.
+\v 14 The cart came into the field of Yehoshua and \add then the cows just\add* stood there. There was a large stone there, and \add the people\add* split \add the sides of\add* the wooden cart \add into pieces to start a fire\add*, then offered the cows as a burnt sacrifice to Yahweh.
+\v 15 Then the Levites lifted down Yahweh’s box and the \add other\add* container that was with it with the gold objects in it, and they placed them on the large stone. Then the men of Beyt-Shemesh offered up \add more\add* burnt offerings and sacrificed sacrifices to Yahweh on that day.
+\v 16 The five Philistine rulers watched \add all this from a distance before\add* returning to Ekron that same day.
+\s1 The gold replicas
 \p
-\v 17 ◙
-\v 18 ◙
+\v 17 The gold \add replicas\add* of tumours that the Philistines sent back as a guilt offering to Yahweh were for \add the five cities\add*: Ashdod, Gaza, Ashkelon, Gat, and Ekron.
+\v 18 And the gold mice were from the number of all the Philistine cities \add under\add* the five rulers, including fortified cities as \add well\add* as the villages in the open country, and as far as the large stone that they sat Yahweh’s box on. (It’s \add still\add* in Yehoshua’s field in Beyt-Shemesh until this day.)
 \p
-\v 19 ◙
-\s1 The Tahuanan of Kasabutan there to Kiryat-Hiyarim
+\v 19 \add But\add* some Beyt-Shemesh men looked into Yahweh’s box, and he killed seventy\f + \fr 6:19 \ft TC: The oldest Hebrew text has 50,070 men being killed here, making it hard to imagine how that many men kept clambering over dead bodies to look into the sacred chest. (But possibly we’re not understanding the situation correctly?) We have followed later manuscripts here.\f* of them. The people mourned because Yahweh had \add caused such devastation\add* among the people.
+\s1 The sacred chest is taken to Kiryat-Yearim
 \p
-\v 20 ◙
-\v 21 ◙
+\v 20 The Beyt-Shemesh men said, “Who can stand in front of the face of Yahweh, this holy God? And \add where should we send the box to from here\add*?”
+\v 21 \add So\add* they sent messengers to those living in Kiriat-Yearim, saying, “The Philistines have returned Yahweh’s box. Come \add over here and get it\add*.”
 \c 7
 \p
-\v 1 \x + \xo 7:1: \xt 2Sam 6:2-4; 1Ch 13:5-7.\x*◙
-\s1 The commanding of Samwil of Israel
+\v 1 \add So\add* the men from Kiriat-Yearim came and lifted up Yahweh’s box and brought it into Abinadab’s house on the hill. They consecrated his son Eleazar to \add take care of\add* \add it\add*.\x + \xo 7:1: \xt 2Sam 6:2-4; 1Ch 13:5-7.\x*
+\s1 Shemuel guides Israel
 \p
-\v 2 ◙
+\v 2 The \add sacred chest ended up\add* staying in Kiriat-Yearim for twenty years \add but the Israelis longed sadly\add* for Yahweh.
 \p
-\v 3 ◙
-\v 4 ◙
+\v 3 Then Shemuel told all the \add Israelis\add*, “If you all \add really want\add* to return to Yahweh, remove the foreign gods and the Ashtorets from \add among you\add*. Then \add decide firmly to serve\add* Yahweh and \add no other\add*, then he’ll rescue you from the Philistines’ \add oppression\add*.”
+\v 4 \add So the Israelis\add* removed the Baal and Ashtoret \add idols\add*, and \add began to\add* serve Yahweh only.
 \p
-\v 5 ◙
-\v 6 ◙
+\v 5 Then Shemuel \add called\add*, “Gather all Israel to Mitspah, and I’ll pray to Yahweh for you all.”
+\v 6 \add So\add* they gathered at Mitspah, and drew water and poured it out \add in front\add* of Yahweh, and they fasted on that day and said there, “We have sinned against Yahweh.” And Shemuel \add guided\add* the \add Israelis\add* at Mitspah.
 \p
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
-\v 10 ◙
-\v 11 ◙
+\v 7 \add When\add* the Philistines heard that the \add Israelis\add* had gathered at Mitspah, the Philistine rulers \add decided to attack\add* Israel. \add When the Israelis\add* heard \add that\add*, they were afraid of the Philistines
+\v 8 and \add begged\add* Shemuel, “Don’t \add stop\add* crying out to our God Yahweh, \add so that\add* he’ll rescue us from the Philistines.”
+\v 9 \add So\add* Shemuel got a \add young\add* lamb and offered it up—a whole burnt up offering to Yahweh. And \add he\add* cried out to Yahweh for Israel, and Yahweh answered him.
+\v 10 \add While\add* Shemuel was offering up that burnt offering, the Philistines approached to battle against Israel. \add But\add* that day Yahweh \add made an intense sound like thunder\add* that confused the Philistines and \add the Israelis were able to defeat them\add*.
+\v 11 The Israeli men \add ran\add* out from Mitspah and chased the Philistines—killing them \add all the way to\add* Beyt-Kar.
 \p
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
+\v 12 Shemuel took a single rock and stood it between Mitspah and Shen. He \add named\add* it ‘Eben-Ezer’ \add (which means ‘stone of help’)\add*, saying, “Yahweh helped us \add all the way up to\add* here.”
+\v 13 \add So\add* the Philistines \add ended up being\add* subdued and didn’t invade Israel’s border again, and Yahweh \add worked\add* against the Philistines \add as long as Shemuel lived\add*.
+\v 14 The cities that the Philistines had taken from Ekron and as far as Gat were returned to Israel. And \add so\add* Israel rescued their territory from the Philistines, and there was peace between Israel and the Amorites.
 \p
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
+\v 15 \add So\add* Shemuel guided Israel \add while he lived\add*.
+\v 16 \add Every year\add* he \add did the circuit\add* around Bethel, Gilgal, and Mitspah, and he \add helped settled disputes for the people in\add* all those places,
+\v 17 \add but\add* he \add always\add* returned to Ramah because his home was there. He would \add judge disputes\add* there, and built an altar to Yahweh there.
 \c 8
-\s1 The requesting of me from-Israel of King
+\s1 The Israelis request a king
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
+\v 1 As Shemuel grew older, he appointed his \add two\add* sons as judges over Israel.
+\v 2 The \add eldest\add* was Yoel and \add his brother\add* was Abiyah. They \add were based\add* in Beersheba.
+\v 3 \add However,\add* they \add didn’t take after time, but rather chased dishonest\add* gain—accepting bribes and perverting justice.
 \p
-\v 4 ◙
-\v 5 \x + \xo 8:5: \xt Deu 17:14.\x*◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
-\s1 The warnings concerning the commanding of King
+\v 4 \add Eventually,\add* the Israeli elders met together with Shemuel at Ramah
+\v 5 and \add requested\add*, “Listen, you’re old \add now\add*, and your sons don’t \add follow your example\add*. \add So\add* appoint a king for us now to \add lead\add* us like all the other nations.”\x + \xo 8:5: \xt Deu 17:14.\x*
+\v 6 \add But\add* Shemuel \add thought that their request for a king was an evil request, so\add* \add he\add* prayed to Yahweh
+\v 7 \add who replied\add*, “Listen to \add everything that the people are saying\add*, because they’re not rejecting \em you\em*, but they’re rejecting me from reigning over them.
+\v 8 They’re doing to you just what they’ve done to me every since I \add rescued\add* them out of Egypt and right up until today: deserting me and serving other gods.
+\v 9 \add So\add* listen to \add what they’re saying\add* now, but certainly warn them about \add what kings require of their subjects\add*.”
+\s1 Advance warnings about having a king
 \p
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
+\v 10 Then Shemuel \add passed on everything that Yahweh had said\add* to the people who were requesting a king from him,
+\v 11 telling them, “\add If you all have a king reigning over you, this is what he’ll demand\add*: he will \add conscript\add* your sons and appoint them \add as his cavalry or charioteers, or they’ll run as foot-soldiers in front\add*, of his chariot.
+\v 12 \add Others he’ll appoint a commander of various units\add*. \add Some will end up ploughing his fields or harvesting his crops, or manufacturing his weapons and chariots\add*.
+\v 13 He’ll take your daughters to \add manufacture perfumes\add*, or to be cooks and bakers.
+\v 14 He’ll confiscate your \add best\add* fields and vineyards and olive orchards, and give to his servants \add to control\add*.
+\v 15 Then he’ll demand a tenth of your seeds and \add grape harvests for\add* his officials and his servants.
+\v 16 He’ll commandeer \add some of\add* your \add best\add* male and female servants and young men, and he’ll impound \add some of\add* your donkeys, then he’ll use \add them all\add* for his \add projects\add*.
+\v 17 He’ll \add expect\add* a tenth of your \add sheep and goats\add*, and you yourselves \add will end up being\add* his slaves.
+\v 18 \add When that all happens\add*, you’ll all cry out \add in front\add* of the king who you chose for yourselves, \add but\add* Yahweh won’t be answering you \add at that time\add*.”
 \p
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
+\v 19 \add However,\add* the people refused to \add consider Shemuel’s advice\add* and they \add argued\add*, “No, \add we want\add* a king over us
+\v 20 \add so\add* we’ll be like all the other nations. Our king will judge us, and will \add lead out our warriors in battle\add*.”
+\v 21 Shemuel listened to \add everything the people said, and passed it on to\add* Yahweh,
+\v 22 and Yahweh told \add him\add*, “\add Do what they’re asking and get them\add* a king.” \add So\add* Shemuel \add told the people and then sent them all back to their homes\add*.
 \c 9
-\s1 The pegpakigkita of Saul to Samwil
+\s1 Sha’ul is chosen as king
 \p
-\v 1 ◙
-\v 2 ◙
+\v 1 \add Now\add* there was a Benyamite man named Kish (son of Abiel, son of Zeror, son of Bekorath, son of Afiah, the son of a Yaminite man) \add who was strong and wealthy\add*.
+\v 2 \add Kish\add* had a son \add named\add* Sha’ul who was a handsome young man and good—\add in fact there wasn’t any Israeli man\add* better than him, \add and\add* he was \add head and shoulders taller than anyone else\add*.
 \p
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
+\v 3 \add One time,\add* the female donkeys of Sha’uls father Kish \add had gone missing\add*, and Kish \add told\add* his son, “Take one of the servants with you, and \add pack up\add* and go and find those donkeys.”
+\v 4 \add So\add* \add they\add* passed through the Efraimite hill country, then through the Shalishah \add region\add*, but they didn’t find them. Then they went through the Shaalim \add region\add*, but there was nothing, \add so\add* \add they\add* \add continued on\add* through the land of the Benyamites, but they didn’t find them.
+\v 5 \add Finally,\add* they entered the Tsuf \add area\add*, and \add eventually\add* Sha’ul said to his servant, “Come on. Let’s \add go back home in case\add* my father \add stops worrying\add* about the donkeys and \add starts\add* worrying about us.”
 \p
-\v 6 ◙
+\v 6 \add But\add* he \add replied\add*, “Listen, please. There’s an honoured man of God in this city. \add Everything he says comes true\add*. Let’s go there now. Perhaps he’ll tell us \add which way we should have gone\add*.”
 \p
-\v 7 ◙
+\v 7 “\add Ok, then.\add* We can go \add there\add*,” Sha’ul \add responded\add*, “but what \add can we give\add* the man? \add We don’t have any more food in our bags, and we never brought along a gift. What else do we have?\add*”
 \p
-\v 8 ◙
-\v 9 ◙
-\p …
+\v 8 “Look,” answered the servant, “I’ve got a \add small silver coin\add*. We can give that to the man and he’ll tell us where to go.”
+\v 9 (In Israel before then, \add when people wanted an answer from\add* God, they’d say, “Come and let us go to the ‘seer’,” because the prophet of today was called the ‘seer’ before.)
 \p
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
+\v 10 “\add Good idea\add*,” Sha’ul told his servant. “Let’s go then.” \add So\add* they went to the city there where the man of God was.
+\v 11 They were \add climbing up the rise towards\add* the city \add when\add* they \add met some\add* young women going out to draw water, and they \add asked\add* them, “Is the seer in \add town\add*?”
+\v 12 “\add Yes he is\add*,” they answered. “Hurry \add though\add*, because he’s come to the city today \add to offer\add* the sacrifice for the people at the high place.
+\v 13 You’ll find him as soon as you enter the city, before he goes up to the high place to eat. The people won’t eat until he \add gets there\add*, because he himself will bless the sacrifice. Afterwards, \add those who’ve been invited\add* will eat \add together there\add*. So go up there now \add and you’ll soon find him\add*.”
+\v 14 \add So\add* they went on up into the city, and as they were entering, wow, there was Shemuel \add coming out towards\add* them to go up to the high place.
 \p
-\v 15 ◙
-\v 16 ◙
+\v 15 \add On the previous day,\add* Yahweh \add had quietly told\add* Shemuel,
+\v 16 “About this time tomorrow, I’ll send a Benyamite man to you, and you should anoint him to be ruler over my people Israel. He will \add rescue\add* my people from the Philistines, because I’ve \add noticed\add* my people because \add I heard their cries\add*.”
 \p
-\v 17 ◙
-\v 18 ◙
+\v 17 Then Shemuel saw Sha’ul, and Yahweh told him, “Look, \add that’s\add* the man that I you \add about\add*. \add He\add* will \add help control\add* my people.”
+\v 18 \add As\add* Sha’ul approached Shemuel \add right there in the middle of the city gateway\add*, he \add asked\add*, “Please tell me, where’s the seer’s house?”
 \p
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
+\v 19 “I am the seer,” Shemuel answered, “\add Now,\add* Go up to the high place \add ahead of me\add*, and you’ll eat with me today. In the morning, I’ll tell you \add what you want to know\add*, then I’ll send you off.
+\v 20 As for your donkeys that were lost three days ago, don’t \add worry anymore about them\add* because they’ve been found. Now, all of Israel is wanting your father’s \add household\add*, and \add wanting\add* you \add in particular\add*.”
+\v 21 “\add But\add* I’m a Benyamite,” Sha’ul responded, “\add That’s\add* the smallest tribe in Israel, and my clan’s the lowliest of all the Benyamite clans. \add So\add* why \add did you talk to me like that\add*?”
 \p
-\v 22 ◙
-\v 23 ◙
-\v 24 ◙
-\p …
-\v 25 ◙
-\s1 The peg-itis of Samwil to Saul of lana
+\v 22 Then Shemuel took Sha’ul and his servant to the room \add where the meal had been prepared\add*, and he gave them a place at the head of \add table—even above the invited guests\add*. (There were about thirty men.)
+\v 23 And Shemuel told the cook, “Give the \add special\add* \add piece of meat\add* that I \add showed\add* you and said to keep aside.”
+\v 24 \add So\add* the cook lifted the \add cooked leg\add* and \add placed it in front\add* of Sha’ul. Then \add Shemuel\add* told \add Sha’ul\add*, “Look, \add this has been reserved for you\add*. Eat \add it\add*, because it’s been kept \add until\add* the appointed time \add when I could call these people togther\add*.”
+\s1 Shemuel anoints Sha’ul with oil
+\p \add So\add* Sha’ul ate with Shemuel that day,
+\v 25 and then they went \add back\add* from the high place down into the city, and \add Shemuel\add* spoke with Sha’ul on \add his house\add* roof.
 \p
-\v 26 ◙
-\v 27 ◙
+\v 26 They rose early \add the next day\add*. At dawn, Shemuel had called to Sha’ul on the roof, saying, “Get up and I will send you \add off\add*.” \add So\add* Sha’ul got up, and the two of them went outside.
+\v 27 \add When\add* they \add reached\add* the edge of the city, Shemuel said to Sha’ul, “\add Tell your servant to go on ahead\add*,” and \add so\add* he went on ahead. “But you stand \add here\add*, and I’ll \add give you the message from\add* God.”
 \c 10
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
+\v 1 Then Shemuel took a flask of oil, and poured it on \add Sha’ul’s\add* head and kissed him, and told him, “It’s Yahweh who has anointed you to be ruler over his \add chosen people\add*.
+\v 2 \add After you leave me today\add* \add and get back to\add* Benyamite territory, then you’ll \add see\add* two men near Rachel’s tomb in Tseltsah, and they’ll say to you, ‘The donkeys that you went to look for have been found. \add But\add*, wow, your father has stopped worrying about the donkeys and \add now\add* he’s worried about \em you\em* \add and trying to figure out what he should do\add*.’
+\v 3 Then further on from there, \add as you approach\add* the oak tree at Tabor, you’ll find three men going to Bethel to worship God. One will be taking three young goats, one will be carrying three rounds loaves of bread, and one will be carrying a wine in a container.
+\v 4 They’ll ask about \add how you’re doing\add* and give you two loaves of bread which you should accept.
+\v 5 After that, you’ll come to the hill of God (where there’s a camp of Philistine \add warriors\add*). \add When you enter\add* the town, you’ll meet a group of prophets descending from the \add altar area\add*,
+\v 6 and Yahweh’s spirit will rush onto you. Then you’ll \add join\add* them in prophesying, and you’ll be transformed into a different person.
+\v 7 \add When this all comes true\add*, do whatever you think is correct because God \add will be helping\add* you.
+\v 8 Then go \add ahead of me\add* to Gilgal and wait \add there\add* for seven days, until I get there and tell you what to do. I’ll join you to offer burnt offerings \add and\add* to sacrifice peace offerings.
 \p
-\v 9 ◙
-\v 10 ◙
-\v 11 ◙
-\v 12 \x + \xo 10:12: \xt 1Sam 19:23-24.\x*◙
-\v 13 ◙
+\v 9 Then as Sha’ul \add started to leave\add* Shemuel, God \add changed his thinking\add*. Then all Shemuel’s predictions came true that day,
+\v 10 \add so when\add* \add Sha’ul and his servant\add* came to the hill, a group of prophets met \add them\add* and God’s spirit rushed onto \add Sha’ul\add* and he \add joined them in\add* prophesying.
+\v 11 Then everyone who had known \add Sha’ul\add* \add previously\add* heard him prophesying with the prophets, \add they asked each other\add*, “What’s happened to Kish’s son? Is Sha’ul really a prophet \add now\add*?”
+\v 12 A man from there answered, “And who is \em their\em* father?” So after that it became a common saying, “Has Sha’ul also \add become a prophet\add*?”\x + \xo 10:12: \xt 1Sam 19:23-24.\x*
+\v 13 When he had finished prophesying, he ascended to the \add altar area\add*.
 \p
-\v 14 ◙
-\p …
+\v 14 \add Later,\add* Sha’ul’s uncle asked him and his servant, “Where did you \add two\add* \add take off to\add*?”
+\p “To look for the donkeys,” Sha’ul replied. “\add But we couldn’t find them, so\add* we went to Shemuel.”
 \p
-\v 15 ◙
+\v 15 “\add And what did he tell you?\add*” \add the\add* uncle \add asked\add*.
 \p
-\v 16 ◙
-\s1 The peg-alam to Saul isip King
+\v 16 “He \add assured\add* us that the donkeys had been found,” Sha’ul replied. \add But\add* he didn’t tell him anything that Shemuel had said \add about becoming king\add*.
+\s1 Sha’ul is selected as king
 \p
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
+\v 17 Then Shemuel summoned the people \add to come before\add* Yahweh at Mitspah,
+\v 18 and he told \add them\add*, “Yahweh, the God of Israel, says, ‘I myself brought Israel out of Egypt. I rescued you from \add Egyptian control\add*, and from all the kingdoms that oppressed you.’
+\v 19 \add But since then\add*, you all have rejected your God—the one who saves you from all your calamities and distresses. And you’ve all said to him, ‘\add We’d rather have\add* a king over us.’ \add So\add* station yourselves now \add in front\add* of Yahweh by your tribes and \add clans\add*.”
 \p
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
-\p …
+\v 20 Then Shemuel had all the Israeli tribes approach, and the tribe of Benyamin was selected.
+\v 21 Then he had all the Benyamite clans approach, and the Matri clan was selected. Then Kish’s son, Sha’ul was selected and they tried to find him, but \add they couldn’t find him anywhere\add*
+\v 22 \add so\add* they asked Yahweh again, “\add Is that man around here anywhere\add*?”
+\p “Look, he’s hiding among the supplies,” Yahweh \add replied\add*.
 \p
-\v 23 ◙
-\v 24 ◙
-\p …
+\v 23 \add So\add* they ran and got him from there, and \add when\add* he took his place among the people, he was head and shoulders taller than anyone else.
+\v 24 Then Shemuel \add announced to everyone\add*, “Can you see the one that Yahweh has chosen? Certainly there’s no one else like him among all the people.”
+\p All the people saw \add that\add* and \add responded\add*, “\add Long\add* live the king.”
 \p
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
+\v 25 Then Shemuel \add explained\add* how the kingship would work, and wrote it in a book and placed it \add in front\add* of Yahweh. Then \add he\add* sent \add everyone home\add*.
+\v 26 Shemuel also went \add home\add* to Gibeah, \add accompanied by some of\add* the powerful \add warriors\add* whose hearts God had touched.
+\v 27 \add But some worthless men asked\add*, “How can that one save us?” and they despised \add Sha’ul\add* and didn’t bring him any gifts, but he \add made no comment\add*.
 \c 11
-\s1 Natalu of Saul the descendants of Amun
+\s1 Sha’ul rescues Yabesh from the Ammonites
 \p
-\v 1 ◙
+\v 1 \add About a month later,\add*\f + \fr 11:1 \ft This appears only in a few ancient documents.\f* Nahash the Ammonite \add took his men\add* and camped \add around\add* Yabesh-Gilead, and the \add leaders\add* of Yabesh told \add him\add*, “\add Make a treaty with\add* us, and we’ll serve you.”
 \p
-\v 2 ◙
+\v 2 “\add Yes,\add* I’ll \add make an treaty with\add* you,” Nahash \add replied\add*, “by gouging out \add all of your\add* right \add eyes\add* \add in order to shame\add* all Israel.”
 \p
-\v 3 ◙
+\v 3 “\add Oh! Then\add* leave us alone for seven days,” the Yabesh elders \add responded\add*, “so that we can send messengers through all the territory of Israel. If no one \add will come to rescue\add* us, then we’ll \add surrender\add* to you.”
 \p
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\p …
-\v 8 ◙
-\v 9 ◙
-\v 10 ◙
+\v 4 \add When\add* the messengers arrived \add where Sha’ul lived\add* at Gibeah and \add passed the news onto the people\add*, \add everyone started wailing loudly\add*.
+\v 5 \add At that time\add*, Sha’ul was walking home behind the cattle and \add he\add* asked, “What’s with \add all\add* the people wailing?” Then they \add told\add* him \add what the messengers from Yabesh had said\add*.
+\v 6 God’s spirit rushed on Sha’ul as he heard the message, and \add he became very angry\add*.
+\v 7 Then he took a pair of cattle and \add chopped\add* them into pieces, and sent messengers to take them \add throughout\add* Israel and \add announce\add*, “This is what will be done to the cattle of \add anyone who doesn’t join\add* Sha’ul and Shemuel \add in battle\add*.”
+\p Then Yahweh \add caused the people to be afraid of him\add*, and they united together.
+\v 8 \add When\add* \add Sha’ul\add* assembled them at Bezek, there were three hundred thousand \add warriors\add* from Israel and thirty thousand from Yehudah,
+\v 9 and they told the \add original\add* messengers, “\add Go and\add* \add tell the leaders\add* of Yabesh-Gilead, ‘Tomorrow \add you’ll all be rescued \add by the time that\add* the sun’s at its hottest\add*.’ ”
+\v 10 \add So\add* the Yabesh \add leaders told\add* \add Nahash\add*, “\add We’ll surrender\add* to you all tomorrow, then you can do to us \add whatever seems good to you all\add*.”
 \p
-\v 11 ◙
-\s1 The peg-abey pegpanengneng King Saul
+\v 11 The next day, Sha’ul divided \add his\add* warriors into three divisions, and they \add attacked the Ammonite camp before the sun rose\add*. Then they \add slaughtered the Ammonites\add* until the hottest part of the day. \add Their\add* remaining warriors were scattered \add so completely that no two of them were able to stay\add* together.
+\s1 Sha’ul reaffirmed as king
 \p
-\v 12 ◙
+\v 12 Then the people \add asked\add* Shemuel, “Who \add were the ones saying that Sha’ul wasn’t fit to\add* reign over us? \add Bring them here\add* and we’ll \add execute\add* them.”
 \p
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
+\v 13 “\add No one’s going to be executed\add* today,” Sha’ul said, “because today Yahweh has \add rescued\add* Israel.”
+\p
+\v 14 “Come \add on then\add*,” said Shemuel. “Let’s go to Gilgal and renew the kingship there.”
+\v 15 \add So\add* all the people when to Gilgal and \add in front\add* of Yahweh they \add reaffirmed Saul as king\add*. Then they offered sacrifices \add as\add* peace offerings \add to\add* Yahweh, then Sha’ul and the people \add celebrated together\add*.
 \c 12
-\s1 The pegpanaha-taha of Samwil
+\s1 Shemuel’s farewell speech
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
+\v 1 Then Shemuel said to all Israel, “\add Listen to me now.\add* I’ve listened to your voices \add and taken notice of everything\add* that you all said to me. And I’ve \add appointed\add* a king to reign over you all.
+\v 2 \add So look now and you can see your king walking here in front of you all\add*. \add But as for me,\add* I’m old and gray, and my sons are among you all. I’ve \add served you all openly\add* from my youth right up to the present time,
+\v 3 \add and\add* here I am now. \add Now with Yahweh listening, answer this truthfully\add*: Have I \add ever\add* taken anyone’s ox or donkey? Did I cheat anyone? Have I oppressed anyone or taken a bribe \add to not see something\add*? I’ll pay back anything I owe \add anyone\add*.”
 \p
-\v 4 ◙
+\v 4 “\add No,\add* you haven’t cheated us,” they \add answered\add*. “And you haven’t oppressed us or taken \add any payments\add*.”
 \p
-\v 5 ◙
-\p …
+\v 5 “Yahweh is a \add your\add* witness,” he said. “And his anointed \add king\add* is a witness today, that you have \add never found me taking anything that wasn’t mine\add*.”
+\p “\add We witness that\add*,” \add they\add* \add agreed\add*.
 \p
-\v 6 \x + \xo 12:6: \xt Exo 6:26.\x*◙
-\v 7 ◙
-\v 8 \x + \xo 12:8: \xt Exo 2:23.\x*◙
-\v 9 \x + \xo 12:9: a \xt Jdg 4:2; \xo b \xt Jdg 13:1; \xo c \xt Jdg 3:12.\x*◙
-\v 10 \x + \xo 12:10: \xt Jdg 10:10-15.\x*◙
-\v 11 \x + \xo 12:11: a \xt Jdg 7:1; \xo b \xt Jdg 4:6; \xo c \xt Jdg 11:29; \xo d \xt 1Sam 3:20.\x*◙
-\v 12 \x + \xo 12:12: \xt 1Sam 8:19.\x*◙
+\v 6 “It was Yahweh who appointed Mosheh and Aharon,” Shemuel continued, “and who brought your ancestors out of Egypt.\x + \xo 12:6: \xt Exo 6:26.\x*
+\v 7 Now present yourselves to Yahweh as I confront you all in \add front\add* of \add him\add* \add by telling you about\add* \add his\add* righteousness that he \add displayed to\add* you all \add as well as\add* to your ancestors \add before you\add*:
+\v 8 After Yacob went to Egypt and your ancestors cried out to Yahweh, then Yahweh sent Mosheh and Aharon, and they brought your ancestors out of Egypt and settled them into this place.\x + \xo 12:8: \xt Exo 2:23.\x*
+\v 9 Then they forgot their God Yahweh, and he \add allowed them to be oppressed by\add* Sisera (the commander of the army from Hazor), and the Philistines, and the king of Moab. Then they fought against them\x + \xo 12:9: a \xt Jdg 4:2; \xo b \xt Jdg 13:1; \xo c \xt Jdg 3:12.\x*
+\v 10 and cried out to Yahweh, ‘We have sinned, because we have forsaken Yahweh and have served the Baals and the Ashtorets. \add But if\add* you rescue us now from our enemies, we will serve you.’\x + \xo 12:10: \xt Jdg 10:10-15.\x*
+\v 11 Then Yahweh sent \add Gideon\add*, Bedan, Yeftah, and Shimshon\f + \fr 12:11 \ft TC: This list of four names varies between different ancient manuscripts so you might find variation in other translations.\f* \add to\add* rescue you all from your enemies all around you, and \add so\add* you all \add have had times of\add* living securely.\x + \xo 12:11: a \xt Jdg 7:1; \xo b \xt Jdg 4:6; \xo c \xt Jdg 11:29; \xo d \xt 1Sam 3:20.\x*
+\v 12 \add But then\add* you all saw \add Ammonite\add* King Nahash coming against you, and you \add demanded that you all wanted a king to reign over you rather than having\add* your God Yahweh as your king.\x + \xo 12:12: \xt 1Sam 8:19.\x*
 \p
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
+\v 13 \add So\add* now, look, \add here’s\add* the king that you all \add chose to have\add*. \add Yes,\add*, Yahweh has given you all a king.
+\v 14 If you all \add honour\add* Yahweh and listen to his \add instructions\add* and don’t rebel against \add his commands\add*, then \add both\add* you and your king will \add indeed\add* be \add following\add* your God Yahweh.
+\v 15 \add But\add* if you all don’t listen to Yahweh, and you rebel against \add his commands\add*, then \add he\add* will \add work\add* against you all \add just like he worked against\add* your ancestors.\f + \fr 12:15 \ft TC: or (in the ancient Septuagint translation), …against you all \bd and your king\bd*.\f*
+\v 16 So now \add stay there\add* and you’ll all see the incredible sign that Yahweh is about to do \add in front of you\add*.
+\v 17 \add Now,\add* isn’t it \add the time of\add* the wheat harvest \add right now\add*? I’ll call to Yahweh, and he’ll \add send\add* \add unseasonal\add* thunder and rain, and then you’ll all see and realise that \add in Yahweh’s view, asking for a king was very evil\add*.”
 \p
-\v 18 ◙
-\v 19 ◙
+\v 18 \add So\add* Shemuel called to Yahweh and \add he\add* sent thunder and rain that day, and all the people \add became very afraid of\add* Yahweh and Shemuel
+\v 19 and \add begged\add* Shemuel, “Pray to your God Yahweh for your servants, so that we won’t die, because we’ve added \add more\add* evil onto all our \add previous\add* sins by requesting a king for ourselves.”
 \p
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
-\v 24 ◙
-\v 25 ◙
+\v 20 “Don’t be afraid,” Shemuel \add responded\add*. “You yourselves have \add indeed\add* done all this evil. However, don’t \add make it worse by\add* turning away from Yahweh, but rather, serve \add him\add* with all your \add being\add*.
+\v 21 And don’t turn away from Yahweh \add and worship\add* \add useless\add* \add idols\add* because they can’t benefit you or rescue you, because they’re empty \add of life\add*.
+\v 22 Yahweh won’t abandon his people because \add he has an excellent reputation\add* \add to uphold\add*, \add especially since he’s declared\add* you all to be his people.
+\v 23 Also, far be it from me to sin against Yahweh by not praying for you all, as well as instructing you all in the good and \add proper\add* way.
+\v 24 Just \add honour\add* Yahweh and serve him faithfully and \add sincerely\add*—\add always\add* \add remembering\add* the incredible things he’s done for you all.
+\v 25 \add But\add* if you all continue to do evil, both you and your king will get swept away.”
 \c 13
-\s1 The scolding of Samwil to Saul
+\s1 Shemuel scolds Sha’ul
 \p
-\v 1 ◙
-\v 2 ◙
+\v 1 Sha’ul was thirty\f + \fr 13:1 \ft TC: There’s some confusion around the numbers in this verse in the original manuscripts, so other translations might differ.\f* years old when he \add began to\add* reign over Israel, and \add when\add* he’d reigned for two years,
+\v 2 he chose three thousand \add Israeli\add* \add warriors\add* for himself: two thousand were \add stationed\add* with \add him\add* in Mikmas, and one thousand were with \add his son\add* Yonatan in Benyamite Gibeah. \add All the others\add*, he sent \add back to their homes\add*.
 \p
-\v 3 ◙
-\v 4 ◙
+\v 3 Then Yonatan \add attacked and defeated\add* the Philistine unit that was at Geba, and the Philistines heard \add about it\add*. \add So\add* Sha’ul \add had\add* a trumpet blown \add throughout\add* the \add country, with the message\add*, “\add Listen all you\add* Hebrews.”
+\v 4 All of Israel heard \add the news that\add* Saul had \add wiped out\add* a Philistine outpost, and \add realised that\add* Israel had become \add repulsive to\add* the Philistines. \add So\add* the people were \add summoned to join\add* Sha’ul at Gilgal.
 \p
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\p …
-\v 8 \x + \xo 13:8: \xt 1Sam 10:8.\x*◙
-\v 9 ◙
-\v 10 ◙
-\v 11 ◙
-\p …
-\v 12 ◙
+\v 5 The Philistines \add assembled themselves\add* to fight Israel \add with\add* thirty thousand chariots, six thousand mounted cavalry, and warriors \add as numerous\add* as the sand on the \add beach\add*. They went to Mikmas and camped \add there\add*, east of Beyt-Aven.
+\v 6 \add But\add* the \add Israeli warriors\add* were \add very anxious\add* because their troops were \add so outnumbered\add*, \add so\add* they hid in caves and thickets, among rocks, and in tombs and wells.
+\v 7 \add Some of them\add* crossed the Yordan \add River\add* to the Gad and Gilead regions.
+\p Sha’ul stayed at Gilgal, but the people with him were trembling.
+\v 8 He waited seven days until the time \add when Shemuel had said that he’d get there, but he didn’t appear so Sha’ul’s men began to desert him\add*.\x + \xo 13:8: \xt 1Sam 10:8.\x*
+\v 9 “Bring me the burnt offering and the peace offerings,” Sha’ul \add commanded\add*, then he offered up the burnt offering.
+\v 10 Just as he’d finished, wow, Shemuel arrived \add at last\add*, and Sha’ul went over to greet him.
+\v 11 “What have you done?” Shemuel \add asked\add*.
+\p “When I saw the people \add leaving\add* me,” Sha’ul \add replied\add* “and you, you didn’t \add get here when you said you would\add*, and the Philistines were gathering at Mikmas,
+\v 12 then I \add thought\add*, ‘The Philistines \add are about to attack us at\add* Gilgal, and I haven’t \add offered any gift to\add* Yahweh.’ So I forced myself, and offered up the burnt up offering.”
 \p
-\v 13 ◙
-\v 14 \x + \xo 13:14: \xt Acts 13:22.\x*◙
+\v 13 “\add That was stupid of you\add*,” Shemuel \add responded\add*. “You haven’t \add obeyed what your God Yahweh instructed\add*, because \add if you had,\add* then Yahweh would have established your reign over Israel \add forever\add*.
+\v 14 \add But\add* now your kingdom won’t \add survive\add*. Yahweh has found a man who’s \add loyal to him\add* and \add he’s\add* commanded \add that man\add* to lead his people, because you haven’t \add obeyed\add* him.\x + \xo 13:14: \xt Acts 13:22.\x*
 \p
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
+\v 15 Then Shemuel \add left\add* Gilgal and went to Gibeah in Benyamite \add territory\add*. \add Meanwhile,\add* Sha’ul counted up the \add warriors\add* with him—around six hundred \add of them\add*.
+\v 16 Sha’ul and his son Yonatan and the people with them, were staying in Geba, \add whereas\add* the Philistines were camped at Mikmas,
+\v 17 and they sent out three \add raiding parties\add*—one went \add north\add* to Ofrah in the Shu’al region,
+\v 18 one went \add west\add* to Beyt-Horon, and one went towards the wilderness where the border overlooks the Zeboim valley.
 \p
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
+\v 19 \add At that time,\add* \add there were no blacksmiths in\add* Israel because the Philistines \add didn’t want the Israelis to be able to make swords or spears\add*,
+\v 20 \add so\add* all \add the Israelis\add* had to go to the Philistines to get their axes and \add plough blades\add*, \add etc.\add*, sharpened.
+\v 21 (\add They were charged\add* two-thirds of a shekel for \add larger things like plough blades\add*, and one-third for picks and axes, and for straightening \add ox\add* goads.)
+\v 22 \add So\add* on the day of battle, Sha’ul and his son Yonatan \add had a sword and spear each, but none of the warriors with them had any\add*.
 \p
-\v 23 ◙
+\v 23 \add Now\add* one Philistine unit \add had been sent out to guard\add* the pass at Mikmas.
 \c 14
-\s1 The invasion of Diyunatan of me from-Pilistiya
+\s1 Yonatan’s bravery
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\p …
-\v 4 ◙
-\v 5 ◙
+\v 1 Then \add one\add* day, Sha’uls son Yonatan said to the young man who carried his equipment, “Come, and let’s cross over to the Philistine unit that’s \add over on the opposite side\add*.” \add But\add* he didn’t tell his father.
+\v 2 \add Meanwhile,\add* Sha’ul \add was still waiting\add* under the pomegranate tree in Migron on the outskirts of Geba with around six-hundred \add warriors\add*.
+\v 3 Ahiyah \add the priest\add* was also there \add wearing\add* a sacred apron. (He was son of Ahitub the brother of Ikabod, son of Finehas, son of Eli, Yahweh’s priest at Shiloh.) \add But\add* the people didn’t know that Yonatan had gone.
 \p
-\v 6 ◙
+\v 4 \add Meanwhile, for Yonatan to get to the Philistine garrison, they had to go through a narrow pass between two cliffs\add*. (The cliff on one side was named Botsets, and the other was named Senneh.
+\v 5 \add One cliff faced north toward Mikmas, and the other side faced south toward Geba\add*.)
 \p
-\v 7 ◙
+\v 6 Yonatan said to his servant carrying his equipment, “Come on. Let’s pass over to that group of these uncircumcised ones. Perhaps Yahweh will \add help\add* us, because \add it doesn’t matter to him whether he saves\add* using many \add people\add* or \add just\add* a few.”
 \p
-\v 8 ◙
-\v 9 ◙
-\v 10 ◙
+\v 7 “Do \add everything that you feel is right\add*,” \add he\add* \add responded\add*. “\add Go on ahead and be confident that I’ll be there supporting you\add*.”
 \p
-\v 11 ◙
-\v 12 ◙
-\p …
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\s1 The defeat of me from-Pilistiya
+\v 8 “\add Listen then\add*,” Yonatan said. “We’ll cross over and then reveal ourselves to them.
+\v 9 Then if they tell us, ‘\add Stay there until we get down to\add* you,’ then we’ll stay where we are and not go up to them.
+\v 10 \add But\add* if they say, ‘Come on up to us,’ then we’ll go up, because that’ll be the sign to us that Yahweh \add will help us overpower them\add*.”
 \p
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
-\s1 The neneyitabu of neimpusan e the gira
+\v 11 \add So\add* the two of them revealed themselves to the Philistine unit, and the \add soldiers\add* said, “\add Hey, look\add*. The Hebrews are coming out from the holes there where they’ve hidden themselves.”
+\v 12 Then \add some\add* of the men \add called\add* to Yonatan and his \add servant\add*, “Come on up \add here to us and we’ll teach you a thing or two\add*.”
+\p “Come on up behind me,” Yonatan told his servant, “because Yahweh \add has already declared Israel to be the victor\add*.”
+\v 13 \add So\add* Yonatan climbed up on his hands and feet, \add with his servant following\add* behind him. Then \add at the top\add*, Yonatan struck them down \add with his sword\add* while his servant \add followed behind and\add* killed them.
+\v 14 In that first offensive, Yonatan and his servant \add killed\add* about twenty men in an area of around 30m square.
+\v 15 \add At that time\add*, \add Philistines\add* in the camp \add started getting the jitters\add*, then all the people and \add even\add* raiding parties. Then the ground shook, and it \add turned into a God-given panic\add*.
+\s1 Israel defeats the Philistines
 \p
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
-\v 28 ◙
+\v 16 Sha’uls lookouts in Gibeah (in Benyamite territory) saw to their surprise that \add their opponents were starting to scatter in every direction\add*.
+\v 17 “\add Count our people and see who’s missing\add*,” Sha’ul commanded, so they \add called the roll\add* and wow, it was Yonatan and his servant who weren’t accounted for.
+\v 18 “Bring the sacred chest here,” Sha’ul told Ahiyah \add the priest\add*, because the \add Israelis had control of it again at that time\add*.
+\v 19 \add But even as\add* Sha’ul was speaking to \add him\add*, the confusion in the Philistine camp was continually increasing, and Sha’ul told him, “\add Oh,\add* \add don’t worry about it\add*.”
+\v 20 Then \add he\add* called his warriors together and they went \add forward\add* to battle. \add To their surprise\add*, the \add Philistines were fighting each other in total\add* confusion.
+\v 21 \add Now before that time,\add* some Hebrews \add had joined the Philistine camp, but now they switched alliance back to\add* Israel with Sha’ul and Yonatan.
+\v 22 \add Also,\add* there had been \add some Israeli deserters\add* who’d hidden in the Efraimite hill country heard that the Philistines were fleeing, and \add so\add* they too also \add chased and attacked\add* them.
+\v 23 \add So\add* Yahweh saved Israel that day, and the fighting went as far as Beyt-Aven.
+\s1 Yonatan eats honey
 \p
-\v 29 ◙
-\v 30 ◙
+\v 24 \add Now\add* the \add Israeli warriors\add* were \add getting exhausted\add* that day, \add but\add* Sha’ul had made the \add them\add* promise, “\add We need to avenge our\add* enemies. Anyone who eats food before the evening is cursed.”
+\v 25 \add But when they reached\add* the forest, there was honeycomb on the ground.
+\v 26 \add Although the warriors\add* entered the forest and saw the honey, none of them \add tasted any\add* because they were afraid of the curse.
+\v 27 \add But\add* Yonatan hadn’t heard his father’s oath, so he dipped his staff into the honeycomb and \add ate some honey and felt rejuvenated\add*.
+\v 28 \add However, someone noticed it and mentioned\add*, “Your father made the people promise, ‘Anyone who eats food today will be cursed.’ So the people are faint.”
 \p
-\v 31 ◙
-\v 32 ◙
-\v 33 \x + \xo 14:33: \xt Gen 9:4; Lev 7:26-27; 17:10-14; 19:26; Deu 12:16,23; 15:23.\x*◙
-\p …
-\v 34 ◙
-\v 35 ◙
+\v 29 “My father’s \add caused trouble for us\add*,” Yonatan \add responded\add*. “See \add how much better I feel now\add* because I tasted a little \add bit\add* of this honey.
+\v 30 Actually, if the troops had eaten what they’d found from the plunder of their enemies today, how much better it would have been because \add we might have had an even more decisive victory over the\add* Philistines.”
 \p
-\v 36 ◙
-\p …
-\p …
+\v 31 That day they killed Philistines from Mikmas to Ayyalon, \add but\add* the fighters were \add totally exhausted\add*.
+\v 32 \add They\add* rushed greedily at the plunder, grabbing sheep, cattle, and calves which they slaughtered \add right there\add* and ate with the blood \add still in them\add*.
+\v 33 Then King Sha’ul was told, “Look, the people are sinning against Yahweh by eating \add meat\add* with the blood \add still in it\add*.”
+\p “You’ve all acted treacherously,” he \add responded\add*, “\add Now,\add* roll a big stone \add over\add* to me.”\x + \xo 14:33: \xt Gen 9:4; Lev 7:26-27; 17:10-14; 19:26; Deu 12:16,23; 15:23.\x*
+\v 34 Then \add he\add* said, “Go out among the \add warriors\add* and tell them to bring their \add animals over here\add* to slaughter and to eat, so \add they\add* don’t sin against Yahweh by eating \add meat with\add* the blood \add still in it\add*.” So the people brought their \add animals over\add* and slaughtered them there.
+\v 35 Then Sha’ul built an altar to Yahweh—\add it was the first one he built\add*.
 \p
-\v 37 ◙
-\v 38 ◙
-\v 39 ◙
-\v 40 ◙
-\p …
+\v 36 Then Sha’ul said, “Let’s go after the Philistines tonight and plunder them until the light of morning. Let’s not leave \add any of them alive\add*.”
+\p “Do \add what you feel is right\add*,” they \add responded\add*.
+\p \add But\add* the priest said, “Let’s \add ask God here first\add*.”
 \p
-\v 41 \x + \xo 14:41: \xt Num 27:21; 1Sam 28:6.\x*◙
-\v 42 ◙
-\v 43 ◙
-\p …
+\v 37 \add So\add* Sha’ul asked God, “Should \add we\add* go after the Philistines? Will you give Israel \add victory over them\add*?” \add But\add* \add Yahweh\add* didn’t answer him that day.
+\v 38 Then Sha’ul \add commanded\add*, “All \add you leaders of the warriors. Gather\add* here \add so we can find out\add* what sin \add was committed\add* today.
+\v 39 As Yahweh who saves Israel lives, even if it’s my \add own\add* son Yonatan, \add whoever sinned today\add* will certainly die.” \add But the people didn’t volunteer\add* \add any information\add*.
+\v 40 “You all can be on one side, and my son Jonathan and I will be on \add the other\add* side,” Sha’ul said.
+\p “Do \add whatever feels right to you\add*,” the people \add replied\add*.
 \p
-\v 44 ◙
+\v 41 Then Sha’ul \add asked\add* Israel’s God Yahweh, “\add Show us the truth\add*.” And Sha’ul and Yonatan were selected—not the people.\x + \xo 14:41: \xt Num 27:21; 1Sam 28:6.\x*
+\v 42 Then Sha’ul \add asked\add* \add again\add*, “\add Choose\add* between me and my son Yonatan.” And Yonatan was selected.
+\v 43 Sha’ul \add demanded from\add* Yonatan, “Tell me what you’ve done.”
+\p “Actually,” Yonatan \add answered\add*, “I did taste some honey from the end of my staff, so take me—I’m \add ready\add* to die.”
 \p
-\v 45 ◙
+\v 44 “May God do \add to me whatever he wants\add*,” Sha’ul said. “because you will certainly die, Yonatan.”
 \p
-\v 46 ◙
-\s1 The kingdom of Saul and the pamilya his
+\v 45 \add But\add* the people \add stood up to\add* Sha’ul, “Should Yonatan die? \add Wasn’t it him who saved\add* Israel \add today\add*? \add We won’t stand for it\add*. As Yahweh lives, \add not even a hair on his head will be touched\add* because he worked with God today.” And \add so\add* the people rescued Yonatan and he \add wasn’t executed\add*.
 \p
-\v 47 ◙
-\v 48 ◙
+\v 46 Then Sha’ul \add stopped chasing\add* the Philistines \add and went home\add*, and the Philistines \add also\add* returned to their place.
+\s1 The kingdom of Sha’ul and the family his
 \p
-\v 49 ◙
-\v 50 ◙
+\v 47 \add After\add* Sha’ul had taken on the kingship of Israel, he fought against their enemies from all around: against the Moabites, the Ammonites, the Edomites, the kings of Zobah, and against the Philistines. Wherever he turned, he punished \add his enemies\add*.
+\v 48 He acted bravely and \add defeated\add* \add even\add* the Amalekites, \add always\add* rescuing Israel from those who \add came in to\add* plunder it.
+\p
+\v 49 Saul’s sons were Yonatan, Ishvi, and Malki-Shua. His oldest daughter was Merab, and the younger one was Mikal.
+\v 50 His wife’s name was Ahinoam (daughter of Ahima’ats). His army commander was Abner (son of Sha’ul’s uncle Ner).
 \v 51 ◙
 \p
 \v 52 ◙
 \c 15
-\s1 The destruction of Saul of me Amalikanen
+\s1 The destruction of Sha’ul of me Amalikanen
 \p
 \v 1 \x + \xo 15:1: \xt 1Sam 10:1.\x*◙
 \v 2 \x + \xo 15:2: \xt Exo 17:8-14; Deu 25:17-19.\x*◙
@@ -611,7 +609,7 @@
 \v 7 ◙
 \v 8 ◙
 \v 9 ◙
-\s1 The pegsamsamili of God to Saul
+\s1 The pegsamsamili of God to Sha’ul
 \p
 \v 10 ◙
 \v 11 ◙
@@ -663,7 +661,7 @@
 \v 34 ◙
 \v 35 ◙
 \c 16
-\s1 The peg-itis to David of lana isip King
+\s1 The peg-itis to David of oil as King
 \p
 \v 1 ◙
 \p
@@ -686,7 +684,7 @@
 \p …
 \v 12 ◙
 \v 13 ◙
-\s1 The peg-angey of Saul to David
+\s1 The peg-angey of Sha’ul to David
 \p
 \v 14 ◙
 \v 15 ◙
@@ -702,7 +700,7 @@
 \v 22 ◙
 \v 23 ◙
 \c 17
-\s1 The fear of me from-Israel to Gulayat
+\s1 The fear of Israelis to Gulayat
 \p
 \v 1 ◙
 \v 2 ◙
@@ -776,7 +774,7 @@
 \v 52 ◙
 \v 53 ◙
 \v 54 ◙
-\s1 The peg-question-question of Saul to David
+\s1 The questioning-question of Sha’ul to David
 \p
 \v 55 ◙
 \p …
@@ -794,7 +792,7 @@
 \v 3 ◙
 \v 4 ◙
 \v 5 ◙
-\s1 The pegkasekel of Saul to David
+\s1 The pegkasekel of Sha’ul to David
 \p
 \v 6 ◙
 \v 7 \x + \xo 18:7: \xt 1Sam 21:11; 29:5.\x*◙
@@ -835,7 +833,7 @@
 \p
 \v 30 ◙
 \c 19
-\s1 The bad plan of Saul to David
+\s1 The bad plan of Sha’ul to David
 \p
 \v 1 ◙
 \v 2 ◙
@@ -1020,7 +1018,7 @@
 \p …
 \p
 \v 13 ◙
-\s1 The chasing of Saul to David
+\s1 The chasing of Sha’ul to David
 \p
 \v 14 ◙
 \v 15 ◙
@@ -1042,7 +1040,7 @@
 \v 28 ◙
 \v 29 ◙
 \c 24
-\s1 Not/None killed of David Saul
+\s1 Not/None killed of David Sha’ul
 \p
 \v 1 ◙
 \v 2 ◙
@@ -1131,7 +1129,7 @@
 \v 43 ◙
 \v 44 \x + \xo 25:44: \xt 2Sam 3:14-16.\x*◙
 \c 26
-\s1 Not/None just again killed of David Saul
+\s1 Not/None just again killed of David Sha’ul
 \p
 \v 1 \x + \xo 26:1: \xt Psa 54 header.\x*◙
 \v 2 ◙
@@ -1189,7 +1187,7 @@
 \v 11 ◙
 \v 12 ◙
 \c 28
-\s1 The pegpakiglalag of Saul of soul of Samwil
+\s1 The speech of Sha’ul of soul of Shemuel
 \p
 \v 1 ◙
 \p
@@ -1305,7 +1303,7 @@
 \v 30 ◙
 \v 31 ◙
 \c 31
-\s1 The death of Saul and of his children
+\s1 The death of Sha’ul and of his children
 \r (1 Chr. 10:1-12)
 \p
 \v 1 ◙

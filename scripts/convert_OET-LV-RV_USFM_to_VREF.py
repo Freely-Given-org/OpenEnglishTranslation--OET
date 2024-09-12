@@ -44,10 +44,10 @@ from BibleOrgSys.Internals.InternalBibleInternals import InternalBibleEntryList
 import BibleOrgSys.Formats.USFMBible as USFMBible
 
 
-LAST_MODIFIED_DATE = '2024-05-17' # by RJH
+LAST_MODIFIED_DATE = '2024-09-11' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_USFM_to_VREF"
 PROGRAM_NAME = "Convert OET LV & RV USFM files to VREF"
-PROGRAM_VERSION = '0.01'
+PROGRAM_VERSION = '0.02'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -81,7 +81,7 @@ def main():
 
     # Now convert both USFM Bibles into VPL
     for VV in ('LV','RV'):
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nProcessing {VV}…" )
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nProcessing OET-{VV}…" )
 
         versionAbbreviation = f'OET-{VV}'
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Preloading '{versionAbbreviation}' USFM Bible…" )

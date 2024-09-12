@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2024-05-20 21:15 by extract_glossed_OSHB_OT_to_ESFM v0.51
+\rem ESFM file created 2024-09-12 14:32 by extract_glossed_OSHB_OT_to_ESFM v0.52
 \rem USFM file edited by ScriptedBibleEditor v0.31
 \h Lamentations
 \toc1 Lamentations
@@ -15,49 +15,49 @@
 \c 1
 \v 1 How it_sits alone the=city great of_people it_has_become like÷widow [one]_great\f + \fr 1:1 \ft Note: Marks a place where we agree with BHQ against BHS in reading L. \f*\f + \fr 1:1 \ft Note: Marks an anomalous form. \f*\f + \fr 1:1 \ft Note: We read punctuation in L differently from BHS. \f* in/on/at/with÷nations a_princess in/on/at/with÷provinces it_has_become that÷forced_labourer.
 \v 2 bitterly_(weep) it_weeps in/on/at/with÷night and÷tears÷her [are]_on cheeks÷her there_[is]_not to/for=her/it a_comforter from=all lovers÷her all friends÷her they_have_dealt_treacherously in/on/at/with÷her they_have_become to/for=her/it as÷enemies.
-\v 3 it_has_gone_into_exile Yəhūdāh with÷affliction and÷under÷harsh of_servitude it it_dwells in/on/at/with÷nations not it_has_found a_resting_place all pursuers÷her overtaken÷her between the÷distress.
-\v 4 the_roads of_Tsiuōn [are]_mourning for÷no [those_who]_come (of)_an_appointed_feast all gates÷her [are]_desolate priests÷her [are]_groaning young_women÷her [are]_grieved\f + \fr 1:4 \ft Note: Marks a place where we agree with BHQ against BHS in reading L. \f*\f + \fr 1:4 \ft Note: We read punctuation in L differently from BHS. \f* and=she it_is_bitter to/for=her/it.
-\v 5 they_have_become foes÷her as÷masters enemies÷her they_are_at_ease DOM Yahweh suffer÷her on the_multitude transgressions÷her children÷her they_have_gone captivity to=(the)_face_of/in_front_of/before a_foe.
-\v 6 and=he/it_went_out wwww wwww\f + \fr 1:6 \ft Variant note: מן־בת: (x-qere) 'מִ/בַּת': lemma=m/1323 morph=HR/Ncfsc id=25A74 מִ/בַּת\f* of_Tsiuōn all majesty÷her they_have_become princes÷her like÷deer [which]_not they_have_found pasture and÷fled in/on/at/with÷no strength to=(the)_face_of/in_front_of/before [one_who]_pursued.
-\v 7 it_has_remembered Yərūshālayim the_days affliction÷her and÷wandering÷her all precious_things÷her which they_were in÷days of_antiquity in/on/at/with÷fell people÷her in/on/at/with÷hand of_a_foe and÷no a_helper to/for=her/it saw÷her foes they_laughed on downfall÷her.
-\v 8 sin it_has_sinned Yərūshālayim on/upon/above/on_account_of//he/it_went_in yes/correct/thus/so as÷unclean it_has_become all honored÷her despise÷her DOM they_have_seen nakedness÷her also it it_has_groaned and÷turns backward.
-\v 9 uncleanness÷her in/on/at/with÷skirts÷her not it_remembered future÷her and÷downfall wonders there_[is]_not a_comforter to/for=her/it see Oh_Yahweh DOM affliction÷my DOM it_has_magnified_itself [the]_enemy.
-\v 10 his/its=hand he_has_spread_out [the]_foe over all precious_things÷her DOM it_saw nations [which]_they_went sanctuary÷her which you_had_commanded not they_will_come in/on/at/with÷assembly to/for=you(fs).
-\v 11 all people÷her [are]_groaning [they_are]_seeking bread they_have_given treasures÷their\f + \fr 1:11 \ft Variant note: מחמודי/הם: (x-qere) 'מַחֲמַדֵּי/הֶ֛ם': lemma=4261 n=1.0.0 morph=HNcmpc/Sp3mp id=25SaV מַחֲמַדֵּי/הֶ֛ם\f*\f + \fr 1:11 \ft Note: Yathir readings in L which we have designated as Qeres when both Dotān and BHS list a Qere. \f* in/on/at/with÷food to÷revive life see Oh_Yahweh and÷see DOM I_am worthless.
-\v 12 not to÷you_all Oh_all [you_all_who]_pass_by of_[the]_road look and÷see if there_[is] pain like÷sorrow÷my which it_has_been_done to=me which he_has_caused_grief Yahweh in/on=day of_the_burning anger÷his.
+\v 3 it_has_gone_into_exile Yəhūdāh/(Judah) with÷affliction and÷under÷harsh of_servitude it it_dwells in/on/at/with÷nations not it_has_found a_resting_place all pursuers÷her overtaken÷her between the÷distress.
+\v 4 the_roads of_Tsiyyōn/(Zion) [are]_mourning for÷no [those_who]_come (of)_an_appointed_feast all gates÷her [are]_desolate priests÷her [are]_groaning young_women÷her [are]_grieved\f + \fr 1:4 \ft Note: Marks a place where we agree with BHQ against BHS in reading L. \f*\f + \fr 1:4 \ft Note: We read punctuation in L differently from BHS. \f* and=she it_is_bitter to/for=her/it.
+\v 5 they_have_become foes÷her as÷masters enemies÷her they_are_at_ease if/because \nd YHWH\nd* suffer÷her on the_multitude transgressions÷her children÷her they_have_gone captivity to=(the)_face_of/in_front_of/before a_foe.
+\v 6 and=he/it_went_out wwww wwww\f + \fr 1:6 \ft Variant note: מן־בת: (x-qere) 'מִ/בַּת': lemma=m/1323 morph=HR/Ncfsc id=25A74 מִ/בַּת\f* of_Tsiyyōn all majesty÷her they_have_become princes÷her like÷deer [which]_not they_have_found pasture and÷fled in/on/at/with÷no strength to=(the)_face_of/in_front_of/before [one_who]_pursued.
+\v 7 it_has_remembered Yərūshālayim/(Jerusalem) the_days affliction÷her and÷wandering÷her all precious_things÷her which they_were in÷days of_antiquity in/on/at/with÷fell people÷her in/on/at/with÷hand of_a_foe and÷no a_helper to/for=her/it saw÷her foes they_laughed on downfall÷her.
+\v 8 sin it_has_sinned Yərūshālayim on/upon/above/on_account_of//he/it_went_in yes/correct/thus/so as÷unclean it_has_become all honoured÷her despise÷her if/because they_have_seen nakedness÷her also it it_has_groaned and÷turns backward.
+\v 9 uncleanness÷her in/on/at/with÷skirts÷her not it_remembered future÷her and÷downfall wonders there_[is]_not a_comforter to/for=her/it see Oh_\nd YHWH\nd* DOM affliction÷my if/because it_has_magnified_itself [the]_enemy.
+\v 10 his/its=hand he_has_spread_out [the]_foe over all precious_things÷her if/because it_saw nations [which]_they_went sanctuary÷her which you_had_commanded not they_will_come in/on/at/with÷assembly to/for=you(fs).
+\v 11 all people÷her [are]_groaning [they_are]_seeking bread they_have_given treasures÷their\f + \fr 1:11 \ft Variant note: מחמודי/הם: (x-qere) 'מַחֲמַדֵּי/הֶ֛ם': lemma=4261 n=1.0.0 morph=HNcmpc/Sp3mp id=25SaV מַחֲמַדֵּי/הֶ֛ם\f*\f + \fr 1:11 \ft Note: Yathir readings in L which we have designated as Qeres when both Dotān and BHS list a Qere. \f* in/on/at/with÷food to÷revive life see Oh_\nd YHWH\nd* and÷see if/because I_am worthless.
+\v 12 not to÷you_all Oh_all [you_all_who]_pass_by of_[the]_road look and÷see if there_[is] pain like÷sorrow÷my which it_has_been_done to=me which he_has_caused_grief \nd YHWH\nd* in/on=day of_the_burning anger÷his.
 \v 13 from÷on_high he_sent fire in/on/at/with÷bones÷my and÷made_descend÷it he_spread_out a_net for÷feet÷my turned÷me backward made÷me desolate all the=day faint.
-\v 14 it_has_been_bound_on the_yoke transgressions÷my in=his/its=hand they_are_woven_together they_have_come_up on neck÷my he_has_made_feeble strength÷my gave÷me my=master/master in/on/at/with÷hands of_[those_whom]_not I_am_able to_stand.
-\v 15 he_has_thrown_away all mighty÷my my=master/master in/on/at/with÷midst÷my he_has_proclaimed against÷me an_appointed_meeting to÷crush young_men÷my a_winepress he_has_trodden my=master/master to÷virgin of_the_daughter of_Yəhūdāh.
-\v 16 on these_[things] I [am]_weeping eyes÷my eye_of÷my [is]_going_down water DOM he_is_far from÷me a_comforter [who]_restores spirit÷my they_are children÷my desolate DOM he_has_prevailed an_enemy.
-\v 17 it_has_spread_out Tsiuōn in/on/at/with÷hands÷her there_[is]_not a_comforter to/for=her/it he_has_commanded Yahweh against÷Yaˊₐqoⱱ/(Jacob) neighbors÷his foes÷his it_has_become Yərūshālayim as÷filthy among÷them.
-\v 18 [is]_righteous he Yahweh DOM command÷his I_have_been_rebellious listen please Oh_all wwww\f + \fr 1:18 \ft Variant note: עמים: (x-qere) 'הָֽ/עַמִּ֗ים': lemma=d/5971 a n=0.1.1 morph=HTd/Ncmpa id=25qK3 הָֽ/עַמִּ֗ים\f* and÷see pain÷my young_women÷my and÷young_men÷my they_have_gone in/on/at/with÷captivity.
-\v 19 I_called to_the÷lovers÷my they deceived÷me priests÷my and÷elders÷my in/on/at/with÷city they_perished DOM they_sought food for_themselves and÷revive DOM strength÷their.
-\v 20 see Oh_Yahweh DOM distress to=me stomach÷my they_are_in_turmoil it_has_been_overturned heart÷my in/on/at/with÷within÷me DOM extremely_(be_rebellious) I_have_been_rebellious in÷street it_has_bereaved a_sword in/on/at/with÷house like_the÷death.
-\v 21 they_heard DOM_that [was]_groaning I there_[is]_not a_comforter to=me all enemies÷my they_heard trouble÷my they_rejoiced (cmp) you you_have_acted you_have_brought [the]_day [which]_you_proclaimed and÷become like÷me.
-\v 22 may_it_come all wickedness÷their to=your=face and÷deal with_them÷them just=as you_have_dealt_severely to=me on all transgressions÷my DOM [are]_many groans÷my and÷heart÷my [is]_faint.
+\v 14 it_has_been_bound_on the_yoke transgressions÷my in=his/its=hand they_are_woven_together they_have_come_up on neck÷my he_has_made_feeble strength÷my gave÷me my=master in/on/at/with÷hands of_[those_whom]_not I_am_able to_stand.
+\v 15 he_has_thrown_away all mighty÷my my=master in/on/at/with÷midst÷my he_has_proclaimed against÷me an_appointed_meeting to÷crush young_men÷my a_winepress he_has_trodden my=master to÷virgin of_the_daughter of_Yəhūdāh/(Judah).
+\v 16 on these_[things] I [am]_weeping eyes÷my eye_of÷my [is]_going_down water if/because he_is_far from÷me a_comforter [who]_restores spirit÷my they_are children÷my desolate if/because he_has_prevailed an_enemy.
+\v 17 it_has_spread_out Tsiyyōn/(Zion) in/on/at/with÷hands÷her there_[is]_not a_comforter to/for=her/it he_has_commanded \nd YHWH\nd* against÷Yaˊₐqoⱱ/(Jacob) neighbors÷his foes÷his it_has_become Yərūshālayim/(Jerusalem) as÷filthy among÷them.
+\v 18 [is]_righteous he \nd YHWH\nd* if/because command÷his I_have_been_rebellious listen please Oh_all wwww\f + \fr 1:18 \ft Variant note: עמים: (x-qere) 'הָֽ/עַמִּ֗ים': lemma=d/5971 a n=0.1.1 morph=HTd/Ncmpa id=25qK3 הָֽ/עַמִּ֗ים\f* and÷see pain÷my young_women÷my and÷young_men÷my they_have_gone in/on/at/with÷captivity.
+\v 19 I_called to_the÷lovers÷my they deceived÷me priests÷my and÷elders÷my in/on/at/with÷city they_perished if/because they_sought food for_themselves and÷revive DOM strength÷their.
+\v 20 see Oh_\nd YHWH\nd* if/because distress to=me stomach÷my they_are_in_turmoil it_has_been_overturned heart÷my in/on/at/with÷within÷me if/because extremely_(be_rebellious) I_have_been_rebellious in÷street it_has_bereaved a_sword in/on/at/with÷house like_the÷death.
+\v 21 they_heard if/because_that [was]_groaning I there_[is]_not a_comforter to=me all enemies÷my they_heard trouble÷my they_rejoiced (cmp) you you_have_acted you_have_brought [the]_day [which]_you_proclaimed and÷become like÷me.
+\v 22 may_it_come all wickedness÷their to=your=face and÷deal with_them÷them just=as you_have_dealt_severely to=me on all transgressions÷my if/because [are]_many groans÷my and÷heart÷my [is]_faint.
 \c 2
-\v 1 how he_covers_with_a_cloud in/on/at/with÷anger÷his my=master/master DOM the_daughter of_Tsiuōn he_has_thrown from÷heaven earth the_splendor of_Yisərā\sup ʼēl\sup*/(Israel) and=not he_has_remembered the_footstool feet_of÷his in/on=day anger÷his.
-\v 2 he_has_swallowed_up my=master/master wwww\f + \fr 2:2 \ft Variant note: לא: (x-qere) 'וְ/לֹ֣א': lemma=c/3808 morph=HC/Tn id=25rGa וְ/לֹ֣א\f* he_has_spared DOM all the_settlements of_Yaˊₐqoⱱ/(Jacob) he_has_torn_down in/on/at/with÷severe_anger÷his the_fortifications of_the_daughter of_Yəhūdāh he_has_made_[them]_touch to_the÷ground he_has_profaned [the]_kingdom and÷princes÷its.
-\v 3 he_has_cut_off in/on/at/with÷fierce\f + \fr 2:3 \ft Note: Marks a place where we agree with BHQ against BHS in reading L. \f*\f + \fr 2:3 \ft Note: Marks an anomalous form. \f*\f + \fr 2:3 \ft Note: We read punctuation in L differently from BHS. \f* of_anger every (the)_horn of_Yisərā\sup ʼēl\sup*/(Israel) he_has_turned_back backward right_hand÷his from=face/in_front_of [the]_enemy and÷burned in/on/at/with÷Yaˊₐqoⱱ/(Jacob) like÷fire of_flame [which]_it_has_consumed all_around.
-\v 4 he_has_bent bow÷his like÷enemy [he_has]_taken_a_stand right_hand÷his like÷foe and÷slain all [the]_desires of_eye in/on/at/with÷tent of_the_daughter of_Tsiuōn he_has_poured_out like_THE÷fire severe_anger÷his.
-\v 5 he_has_become my=master/master like÷enemy he_has_swallowed_up Yisərā\sup ʼēl\sup*/(Israel) he_has_swallowed_up all palaces÷its he_has_ruined strongholds÷its and÷multiplied in/on/at/with÷daughter of_Yəhūdāh mourning and÷lamentation.
-\v 6 and÷broken_down like_the÷garden booth÷his he_has_ruined place_of_meeting÷his he_has_caused_to_be_forgotten Yahweh in/on/at/with÷Tsiuōn appointed_feast and÷sabbath and÷despised in/on/at/with÷indignation anger÷his king and÷priest.
-\v 7 he_has_rejected my=master/master altar÷his he_has_repudiated sanctuary÷his he_has_delivered_up in/on/at/with÷hand of_an_enemy the_walls palaces÷her voice people_have_given_forth in=house_of of_Yahweh as÷day of_an_appointed_feast.
-\v 8 he_has_planned Yahweh to÷destroy the_wall of_the_daughter of_Tsiuōn he_has_stretched_out a_measuring-line not he_has_turned_back his/its=hand from÷destroying and÷caused_tolament rampart and÷wall together they_have_languished.
+\v 1 how he_covers_with_a_cloud in/on/at/with÷anger÷his my=master DOM the_daughter of_Tsiyyōn/(Zion) he_has_thrown from÷heaven earth the_splendor of_Yisrā\sup ʼēl\sup*/(Israel) and=not he_has_remembered the_footstool feet_of÷his in/on=day anger÷his.
+\v 2 he_has_swallowed_up my=master wwww\f + \fr 2:2 \ft Variant note: לא: (x-qere) 'וְ/לֹ֣א': lemma=c/3808 morph=HC/Tn id=25rGa וְ/לֹ֣א\f* he_has_spared DOM all the_settlements of_Yaˊₐqoⱱ/(Jacob) he_has_torn_down in/on/at/with÷severe_anger÷his the_fortifications of_the_daughter of_Yəhūdāh/(Judah) he_has_made_[them]_touch to_the÷ground he_has_profaned [the]_kingdom and÷princes÷its.
+\v 3 he_has_cut_off in/on/at/with÷fierce\f + \fr 2:3 \ft Note: Marks a place where we agree with BHQ against BHS in reading L. \f*\f + \fr 2:3 \ft Note: Marks an anomalous form. \f*\f + \fr 2:3 \ft Note: We read punctuation in L differently from BHS. \f* of_anger every (the)_horn of_Yisrā\sup ʼēl\sup*/(Israel) he_has_turned_back backward right_hand÷his from=face/in_front_of [the]_enemy and÷burned in/on/at/with÷Yaˊₐqoⱱ like÷fire of_flame [which]_it_has_consumed all_around.
+\v 4 he_has_bent bow÷his like÷enemy [he_has]_taken_a_stand right_hand÷his like÷foe and÷slain all [the]_desires of_eye in/on/at/with÷tent of_the_daughter of_Tsiyyōn he_has_poured_out like_THE÷fire severe_anger÷his.
+\v 5 he_has_become my=master like÷enemy he_has_swallowed_up Yisrā\sup ʼēl\sup*/(Israel) he_has_swallowed_up all palaces÷its he_has_ruined strongholds÷its and÷multiplied in/on/at/with÷daughter of_Yəhūdāh mourning and÷lamentation.
+\v 6 and÷broken_down like_the÷garden booth÷his he_has_ruined place_of_meeting÷his he_has_caused_to_be_forgotten \nd YHWH\nd* in/on/at/with÷Tsiyyōn/(Zion) appointed_feast and÷sabbath and÷despised in/on/at/with÷indignation anger÷his king and÷priest.
+\v 7 he_has_rejected my=master altar÷his he_has_repudiated sanctuary÷his he_has_delivered_up in/on/at/with÷hand of_an_enemy the_walls palaces÷her voice people_have_given_forth in=house_of of_\nd YHWH\nd* as÷day of_an_appointed_feast.
+\v 8 he_has_planned \nd YHWH\nd* to÷destroy the_wall of_the_daughter of_Tsiyyōn he_has_stretched_out a_measuring-line not he_has_turned_back his/its=hand from÷destroying and÷caused_tolament rampart and÷wall together they_have_languished.
 \v 9 they_have_sunk in/on_the=earth gates÷her he_has_destroyed and÷broken bars÷her king÷her and÷princes÷her in/on/at/with÷nations there_[is]_not instruction also prophets÷her not they_have_found a_vision from÷LORD.
-\v 10 they_sit on_the÷ground they_are_silent the_elders of_the_daughter of_Tsiuōn they_have_caused_to_rise dust on heads÷their they_have_girded_on sackcloth(s) they_have_brought_down to_the÷ground heads÷their the_virgins of_Yərūshālayim.
+\v 10 they_sit on_the÷ground they_are_silent the_elders of_the_daughter of_Tsiyyōn they_have_caused_to_rise dust on heads÷their they_have_girded_on sackcloth(s) they_have_brought_down to_the÷ground heads÷their the_virgins of_Yərūshālayim/(Jerusalem).
 \v 11 they_have_failed in/on/at/with÷weeping eyes÷my they_are_in_turmoil stomach÷my it_has_been_poured_out on_the÷ground heart÷my on the_brokenness of_the_daughter people÷my in/on/at/with÷faint child and÷infants in/on/at/with÷streets of_a_town.
 \v 12 to÷mothers÷their they_say where [are]_grain and÷wine in/on/at/with÷faint÷they like_the÷wounded in/on/at/with÷streets of_a_city in/on/at/with÷poured_out life÷their to the_bosom mothers'÷their.
-\v 13 what say_for÷you what will_I_liken to÷you the÷daughter of_Yərūshālayim what will_I_make_equal to÷you and÷comfort÷you Oh_virgin of_the_daughter of_Tsiuōn DOM [is]_great as_as_the÷sea ruin÷your who will_he_heal to/for=you(fs).
+\v 13 what say_for÷you what will_I_liken to÷you the÷daughter of_Yərūshālayim what will_I_make_equal to÷you and÷comfort÷you Oh_virgin of_the_daughter of_Tsiyyōn/(Zion) if/because [is]_great as_as_the÷sea ruin÷your who will_he_heal to/for=you(fs).
 \v 14 prophets÷your they_have_seen to/for=you(fs) worthlessness and÷worthless and=not they_have_made_known on iniquity÷your to÷restore fortunes÷your\f + \fr 2:14 \ft Variant note: שבית/ך: (x-qere) 'שְׁבוּתֵ֑/ךְ': lemma=7622 n=1 morph=HNcfsc/Sp2fs id=25g5u שְׁבוּתֵ֑/ךְ\f* and÷seen to/for=you(fs) oracles of_worthlessness and÷misleading.
 \v 15 they_have_clapped at÷you palms all [those_who]_pass_by of_[the]_road they_have_hissed and÷shake heads÷their on the_daughter of_Yərūshālayim this the=city that÷called perfect of_beauty a_joy to/from=all/each/any/every the=earth/land.
 \v 16 they_have_opened against÷you mouths÷their all enemies÷your they_have_hissed and÷gnash a_tooth they_have_said we_have_swallowed_up surely this the=day which÷waited_for÷him we_have_found we_have_seen.
-\v 17 he_has_done Yahweh what he_planned he_has_fulfilled word÷his which he_commanded from÷days of_antiquity he_has_torn_down and=not he_has_spared and÷gloat over÷you an_enemy he_has_lifted_up the_horn foes÷your.
-\v 18 it_has_cried_out heart÷their to my=master/master Oh_wall of_the_daughter of_Tsiuōn send_down like_a÷river tear[s] by_day and÷night do_not give rest to/for=you(fs) not let_it_be_still the_daughter eyes÷your.
-\v 19 arise cry_out in/on/at/with÷night\f + \fr 2:19 \ft Variant note: ב/ליל: (x-qere) 'בַ/לַּ֗יְלָה': lemma=b/3915 n=1.2.1 morph=HRd/Ncmsa id=25BYg בַ/לַּ֗יְלָה\f* at÷beginning of_[the]_night-watches pour_out like_the÷water heart÷your in_front_of the_presence my=master/master lift_up to=him/it hands÷your on the_life children÷your the÷faint in/on/at/with÷hunger in/on/at/with÷head of_all [the]_streets.
-\v 20 see Oh_Yahweh and÷consider with÷whom have_you_dealt_severely thus (if) will_they_eat women offspring÷their children of_health(s) or will_he_be_killed in/on/at/with÷sanctuary my=master/master priest and÷prophet.
+\v 17 he_has_done \nd YHWH\nd* what he_planned he_has_fulfilled word÷his which he_commanded from÷days of_antiquity he_has_torn_down and=not he_has_spared and÷gloat over÷you an_enemy he_has_lifted_up the_horn foes÷your.
+\v 18 it_has_cried_out heart÷their to my=master Oh_wall of_the_daughter of_Tsiyyōn send_down like_a÷river tear[s] by_day and÷night do_not give rest to/for=you(fs) not let_it_be_still the_daughter eyes÷your.
+\v 19 arise cry_out in/on/at/with÷night\f + \fr 2:19 \ft Variant note: ב/ליל: (x-qere) 'בַ/לַּ֗יְלָה': lemma=b/3915 n=1.2.1 morph=HRd/Ncmsa id=25BYg בַ/לַּ֗יְלָה\f* at÷beginning of_[the]_night-watches pour_out like_the÷water heart÷your in_front_of the_presence my=master lift_up to=him/it hands÷your on the_life children÷your the÷faint in/on/at/with÷hunger in/on/at/with÷head of_all [the]_streets.
+\v 20 see Oh_\nd YHWH\nd* and÷consider with÷whom have_you_dealt_severely thus (if) will_they_eat women offspring÷their children of_health(s) or will_he_be_killed in/on/at/with÷sanctuary my=master priest and÷prophet.
 \v 21 they_have_lain_down on_the÷ground streets youth and÷old young_women÷my and÷young_men÷my they_have_fallen in/on/at/with÷sword you_have_killed in/on=day anger÷your you_have_slaughtered not you_have_spared.
-\v 22 you_have_summoned as_if÷day of_an_appointed_feast terrors÷my on÷every_side and=not he_was in/on=day of_the_anger of_Yahweh an_escapee and÷survived [those]_whom I_had_given_birth and÷reared enemy÷my destroyed÷them.
+\v 22 you_have_summoned as_if÷day of_an_appointed_feast terrors÷my on÷every_side and=not he_was in/on=day of_the_anger of_\nd YHWH\nd* an_escapee and÷survived [those]_whom I_had_given_birth and÷reared enemy÷my destroyed÷them.
 \c 3
 \v 1 I the÷man [who]_he_has_seen affliction in/on/at/with÷rod severe_anger÷his.
 \v 2 DOM÷me he_has_driven and÷walk darkness and=not light.
@@ -66,7 +66,7 @@
 \v 5 He_has_built against÷me and÷besieged poison and÷hardship.
 \v 6 In/on/at/with÷darkness dwell÷me like÷dead of_antiquity.
 \v 7 he_has_walled_up around÷me and=not I_will_go_out he_has_made_heavy chains÷me.
-\v 8 Also DOM I_will_cry_out and÷cry_for_help he_has_shut_out prayer÷my.
+\v 8 Also if/because I_will_cry_out and÷cry_for_help he_has_shut_out prayer÷my.
 \v 9 He_has_walled_up ways÷my in/on/at/with÷blocks_of_stone paths÷my he_has_made_crooked.
 \v 10 [is]_a_bear [which]_lies_in_wait he to=me a_lion\f + \fr 3:10 \ft Variant note: אריה: (x-qere) 'אֲרִ֖י': lemma=738 a n=0.0 morph=HNcmsa id=25Gxe אֲרִ֖י\f* in/on/at/with÷hiding.
 \v 11 way÷my he_has_caused_to_deviate and÷tore_topieces÷me made÷me desolate.
@@ -80,25 +80,25 @@
 \v 19 remember affliction÷my and÷homelessness÷my wormwood and÷bitterness.
 \v 20 Continually_(remember) it_remembers and÷bowed_down\f + \fr 3:20 \ft Variant note: ו/תשיח: (x-qere) 'וְ/תָשׁ֥וֹחַ': lemma=c/7743 morph=HC/Vqi3fs id=253MS וְ/תָשׁ֥וֹחַ\f* within÷me soul÷my.
 \v 21 This I_bring_back to mind÷myself on/upon/above/on_account_of//he/it_went_in yes/correct/thus/so I_will_wait.
-\v 22 the_covenant_loyalti(es) of_Yahweh DOM not we_have_met_our_end DOM not they_come_to_an_end compassions÷his.
+\v 22 the_covenant_loyalti(es) of_\nd YHWH\nd* if/because not we_have_met_our_end if/because not they_come_to_an_end compassions÷his.
 \v 23 [they_are]_new in_the÷morning [is]_great faithfulness÷your.
-\v 24 Portion÷my Yahweh it_has_said soul÷my on/upon/above/on_account_of//he/it_went_in yes/correct/thus/so I_will_wait to=him/it.
-\v 25 [is]_good Yahweh to÷wait_for÷him\f + \fr 3:25 \ft Note: Marks a place where we agree with BHQ against BHS in reading L. \f*\f + \fr 3:25 \ft Note: We have abandoned or added a ketib/qere relative to BHS. In doing this we agree with L against BHS. \f* to=living_creature seeks÷him.
-\v 26 [is]_good and÷wait and÷quietly for÷salvation of_Yahweh.
+\v 24 Portion÷my \nd YHWH\nd* it_has_said soul÷my on/upon/above/on_account_of//he/it_went_in yes/correct/thus/so I_will_wait to=him/it.
+\v 25 [is]_good \nd YHWH\nd* to÷wait_for÷him\f + \fr 3:25 \ft Note: Marks a place where we agree with BHQ against BHS in reading L. \f*\f + \fr 3:25 \ft Note: We have abandoned or added a ketib/qere relative to BHS. In doing this we agree with L against BHS. \f* to=living_creature seeks÷him.
+\v 26 [is]_good and÷wait and÷quietly for÷salvation of_\nd YHWH\nd*.
 \v 27 [is]_good for_a÷man (cmp) he_will_bear a_yoke in/on/at/with÷youth÷his.
-\v 28 let_him_sit alone and÷in_silence DOM he_has_laid_[it] on/upon/above=him/it.
+\v 28 let_him_sit alone and÷in_silence if/because he_has_laid_[it] on/upon/above=him/it.
 \v 29 Let_him_put in/on/at/with÷dust mouth÷his perhaps there_[is] hope.
 \v 30 Let_him_give to÷smiter÷him a_cheek let_him_be_sated in/on/at/with÷disgrace.
-\v 31 DOM not he_will_reject to÷forever my=master/master.
-\v 32 DOM though he_has_caused_grief and÷have_compassion according_to÷abundance steadfast_love÷his\f + \fr 3:32 \ft Variant note: חסד/ו: (x-qere) 'חֲסָדָֽי/ו': lemma=2617 a n=0 morph=HNcmpc/Sp3ms id=25941 חֲסָדָֽי/ו\f*.
-\v 33 DOM not he_has_afflicted from÷heart_of÷he and÷grieve the_children of_a_man.\f + \fr 3:33 \ft Note: Marks a place where we agree with BHQ against BHS in reading L. \f*\f + \fr 3:33 \ft Note: Marks an anomalous form. \f*\f + \fr 3:33 \ft Note: We read punctuation in L differently from BHS. \f*
+\v 31 if/because not he_will_reject to÷forever my=master.
+\v 32 If/because though he_has_caused_grief and÷have_compassion according_to÷abundance steadfast_love÷his\f + \fr 3:32 \ft Variant note: חסד/ו: (x-qere) 'חֲסָדָֽי/ו': lemma=2617 a n=0 morph=HNcmpc/Sp3ms id=25941 חֲסָדָֽי/ו\f*.
+\v 33 If/because not he_has_afflicted from÷heart_of÷he and÷grieve the_children of_a_man.\f + \fr 3:33 \ft Note: Marks a place where we agree with BHQ against BHS in reading L. \f*\f + \fr 3:33 \ft Note: Marks an anomalous form. \f*\f + \fr 3:33 \ft Note: We read punctuation in L differently from BHS. \f*
 \v 34 to÷crush under feet÷his all [the]_prisoners of_[the]_land.
 \v 35 To÷deprive [the]_justice of_a_man before the_presence of_the_Most_High.
-\v 36 To÷subvert anyone in/on/at/with÷lawsuit÷his my=master/master not he_has_seen.
-\v 37 who this has_he_spoken and÷happen my=master/master not he_commanded_[it].
+\v 36 To÷subvert anyone in/on/at/with÷lawsuit÷his my=master not he_has_seen.
+\v 37 who this has_he_spoken and÷happen my=master not he_commanded_[it].
 \v 38 From÷mouth of_the_Most_High not does_it_goes_forth the÷bad and÷the÷good.
 \v 39 Why will_he_complain a_person living a_man on sins÷his\f + \fr 3:39 \ft Variant note: חטא/ו: (x-qere) 'חֲטָאָֽי/ו': lemma=2399 n=0 morph=HNcmpc/Sp3ms id=25wKF חֲטָאָֽי/ו\f*.
-\v 40 let_us_examine ways÷our and÷examine and÷return to Yahweh.
+\v 40 let_us_examine ways÷our and÷examine and÷return to \nd YHWH\nd*.
 \v 41 Let_us_lift_up hearts÷our to palms to god in/on/at/with÷heaven.
 \v 42 We we_have_transgressed and÷rebelled you not you_have_forgiven.
 \v 43 you_have_covered_yourself in/on/at/with÷anger and÷pursued÷us you_have_killed not you_have_spared.
@@ -108,26 +108,26 @@
 \v 47 Terror and÷pitfall it_has_happened to/for=us the÷devastation and÷the÷destruction.
 \v 48 Streams of_water it_goes_down eyes÷my on the_brokenness of_the_daughter people÷my.
 \v 49 eyes÷my it_has_poured_itself and=not it_will_cease with÷no stop(s).
-\v 50 Until he_will_look_down and÷sees Yahweh from÷heaven.
+\v 50 Until he_will_look_down and÷sees \nd YHWH\nd* from÷heaven.
 \v 51 Eyes÷my it_has_dealt_severely to÷soul÷my from=all the_daughters city÷my.
 \v 52 indeed_(hunt) hunt÷me like_the÷bird enemies÷my without_cause.
 \v 53 They_destroyed in/on/at/with÷pit life÷me and÷threw a_stone in/on/at/with÷me.
 \v 54 They_overflowed waters over my=head I_said I_have_been_cut_off.
-\v 55 I_called name÷your Oh_Yahweh from÷pit of_lowest_parts.
+\v 55 I_called name÷your Oh_\nd YHWH\nd* from÷pit of_lowest_parts.
 \v 56 My=sound/voice you_heard do_not hide ear÷your for÷relief÷my to÷cry_for_help÷my.
 \v 57 You_drew_near in/on=day called÷you you_said do_not fear.
-\v 58 you_have_conducted my=master/master the_cases soul's÷my you_have_redeemed life÷my.
-\v 59 You_have_seen Oh_Yahweh wrong÷me judge case÷my.
+\v 58 you_have_conducted my=master the_cases soul's÷my you_have_redeemed life÷my.
+\v 59 You_have_seen Oh_\nd YHWH\nd* wrong÷me judge case÷my.
 \v 60 You_have_seen all vengeance÷their all plots÷their to=me.
-\v 61 you_have_heard insults÷their Oh_Yahweh all plots÷their against÷me.
+\v 61 you_have_heard insults÷their Oh_\nd YHWH\nd* all plots÷their against÷me.
 \v 62 The_lips assailants÷my and÷murmurs÷their against÷me all the=day.
 \v 63 Sitting÷their and÷rise÷their look I mocking_song÷their.
-\v 64 you_will_repay to/for=them recompense Oh_Yahweh according_to÷work hands÷their.
+\v 64 you_will_repay to/for=them recompense Oh_\nd YHWH\nd* according_to÷work hands÷their.
 \v 65 You_will_give to/for=them shamelessness of_heart curse÷your to/for=them.
-\v 66 You_will_pursue_[them] in/on/at/with÷anger and÷destroy÷them from=under the_heavens of_Yahweh.
+\v 66 You_will_pursue_[them] in/on/at/with÷anger and÷destroy÷them from=under the_heavens of_\nd YHWH\nd*.
 \c 4
 \v 1 how it_is_dimmed gold it_is_changed the÷gold the÷pure they_lie_scattered stones of_holiness in/on/at/with÷head of_all [the]_streets.
-\v 2 the_children of_Tsiuōn the÷precious the÷worth_weight in/on/at/with÷fine_gold how they_are_considered as÷pots of_earthenware [the]_work of_[the]_hands of_a_potter.
+\v 2 the_children of_Tsiyyōn/(Zion) the÷precious the÷worth_weight in/on/at/with÷fine_gold how they_are_considered as÷pots of_earthenware [the]_work of_[the]_hands of_a_potter.
 \v 3 also jackals\f + \fr 4:3 \ft Variant note: תנין: (x-qere) 'תַּנִּים֙': lemma=8568 n=1.1.0 morph=HNcbpa id=255on תַּנִּים֙\f* they_draw_out a_breast they_suckle young÷their the_daughter people÷my as÷cruel wwww wwww\f + \fr 4:3 \ft Variant note: כי ענים: (x-qere) 'כַּ/יְעֵנִ֖ים': lemma=k/3283 n=0.0 morph=HRd/Ncmpa id=25Zzg כַּ/יְעֵנִ֖ים\f* in/on/at/with÷wilderness.
 \v 4 it_has_cleaved [the]_tongue of_a_sucking_child to roof_of_mouth÷its\f + \fr 4:4 \ft Note: Marks a place where we agree with BHQ against BHS in reading L. \f*\f + \fr 4:4 \ft Note: Marks an anomalous form. \f*\f + \fr 4:4 \ft Note: We read one or more vowels in L differently from BHS. \f* in/on/at/with÷thirst children they_have_asked_for bread [one_who]_breaks_[it] there_[was]_not to/for=them.
 \v 5 the=ones_eating on÷delicacies they_are_desolate in/on/at/with÷streets the÷nurtured on crimson they_have_embraced ash_heaps.
@@ -136,38 +136,38 @@
 \v 8 it_is_dark than÷soot appearance÷their not they_are_recognized in/on/at/with÷streets it_has_shriveled skin÷their on bones÷their dry it_has_become like_the÷wood.
 \v 9 good they_are [those]_slain of_a_sword than÷slain of_hunger who÷they they_flow_away pierced_through for_lack_of÷produce of_[the]_field.
 \v 10 [the]_hands of_women compassionate they_have_boiled children÷their_own they_have_been to÷food their÷their in/on/at/with÷destruction of_the_daughter people÷my.
-\v 11 he_has_completed Yahweh DOM severe_anger÷his he_has_poured_out the_burning anger÷his and÷kindled a_fire in/on/at/with÷Tsiuōn and=she/it_ate foundations÷her.
-\v 12 not they_believed [the]_kings of_[the]_earth and\f + \fr 4:12 \ft Variant note: ו/כל: (x-qere) 'כֹּ֖ל': lemma=3605 n=1.0 morph=HNcmsc id=25tkY כֹּ֖ל\f* the_inhabitants of_[the]_world DOM_that he_will_go foe and÷enemy in/on/at/with÷gates of_Yərūshālayim.
+\v 11 he_has_completed \nd YHWH\nd* DOM severe_anger÷his he_has_poured_out the_burning anger÷his and÷kindled a_fire in/on/at/with÷Tsiyyōn/(Zion) and=she/it_ate foundations÷her.
+\v 12 not they_believed [the]_kings of_[the]_earth and\f + \fr 4:12 \ft Variant note: ו/כל: (x-qere) 'כֹּ֖ל': lemma=3605 n=1.0 morph=HNcmsc id=25tkY כֹּ֖ל\f* the_inhabitants of_[the]_world if/because_that he_will_go foe and÷enemy in/on/at/with÷gates of_Yərūshālayim/(Jerusalem).
 \v 13 because_of÷sins prophets÷her the_iniquities priests÷her the÷shed in/on/at/with÷midst÷her [the]_blood of_righteous_[people].
 \v 14 they_wandered blind_[people] in/on/at/with÷streets they_were_defiled in/on/at/with÷blood in/on/at/with÷no people_were_able people_touched in/on/at/with÷garments÷their.
-\v 15 depart unclean people_called_out at÷them depart depart do_not touch DOM they_fled also they_wandered people_said in/on/at/with÷nations not they_will_increase to÷stay.
-\v 16 the_presence of_Yahweh scattered÷them not he_will_repeat to÷regard÷them [the]_face of_priests not they_lifted_up wwww\f + \fr 4:16 \ft Variant note: זקנים: (x-qere) 'וּ/זְקֵנִ֖ים': lemma=c/2205 n=0.0 morph=HC/Aampa id=25yrH וּ/זְקֵנִ֖ים\f*\f + \fr 4:16 \ft Note: Adaptations to a Qere which L and BHS, by their design, do not indicate. \f* not they_showed_favour_to.
+\v 15 depart unclean people_called_out at÷them depart depart do_not touch if/because they_fled also they_wandered people_said in/on/at/with÷nations not they_will_increase to÷stay.
+\v 16 the_presence of_\nd YHWH\nd* scattered÷them not he_will_repeat to÷regard÷them [the]_face of_priests not they_lifted_up wwww\f + \fr 4:16 \ft Variant note: זקנים: (x-qere) 'וּ/זְקֵנִ֖ים': lemma=c/2205 n=0.0 morph=HC/Aampa id=25yrH וּ/זְקֵנִ֖ים\f*\f + \fr 4:16 \ft Note: Adaptations to a Qere which L and BHS, by their design, do not indicate. \f* not they_showed_favour_to.
 \v 17 all_the_while÷we\f + \fr 4:17 \ft Variant note: עוד/ינה: (x-qere) 'עוֹדֵ֨י/נוּ֙': lemma=5750 n=1.1.0 morph=HD/Sp1cp id=25fQG עוֹדֵ֨י/נוּ֙\f* they_failed eyes÷our to help÷our futility in/on/at/with÷watching÷our we_watched to a_nation [which]_not it_will_save.
-\v 18 they_hunted steps÷our so_that_not÷walk in/on/at/with÷streets÷our it_drew_near end÷our they_were_completed days÷our DOM it_had_come end÷our.
+\v 18 they_hunted steps÷our so_that_not÷walk in/on/at/with÷streets÷our it_drew_near end÷our they_were_completed days÷our if/because it_had_come end÷our.
 \v 19 swift they_were pursuers÷our than÷eagles of_heaven on the÷mountains chased÷us in/on/at/with÷wilderness they_lay_in_wait to/for=us.
-\v 20 the_breath nostrils÷our the_[one]_anointed of_Yahweh he_was_captured in/on/at/with÷pits÷their whom we_had_said in/on/at/with÷shadow÷his we_will_live in/on/at/with÷nations.
-\v 21 exult and÷glad Oh_daughter of_ʼₑdōm [who]_dwells\f + \fr 4:21 \ft Variant note: יושבתי: (x-qere) 'יוֹשֶׁ֖בֶת': lemma=3427 n=1.0 morph=HVqrfsa id=25q3X יוֹשֶׁ֖בֶת\f* in=land of_ˊŪʦ also to÷you it_will_pass_on a_cup you_will_become_drunk and÷strip_bare.
-\v 22 it_will_finish punishment_of_iniquity÷your Oh_daughter of_Tsiuōn not he_will_increase to÷exile÷your he_will_punish iniquity÷your Oh_daughter of_ʼₑdōm he_will_make_known on sins÷your.
+\v 20 the_breath nostrils÷our the_[one]_anointed of_\nd YHWH\nd* he_was_captured in/on/at/with÷pits÷their whom we_had_said in/on/at/with÷shadow÷his we_will_live in/on/at/with÷nations.
+\v 21 exult and÷glad Oh_daughter of_ʼEdōm [who]_dwells\f + \fr 4:21 \ft Variant note: יושבתי: (x-qere) 'יוֹשֶׁ֖בֶת': lemma=3427 n=1.0 morph=HVqrfsa id=25q3X יוֹשֶׁ֖בֶת\f* in=land of_ˊŪʦ also to÷you it_will_pass_on a_cup you_will_become_drunk and÷strip_bare.
+\v 22 it_will_finish punishment_of_iniquity÷your Oh_daughter of_Tsiyyōn/(Zion) not he_will_increase to÷exile÷your he_will_punish iniquity÷your Oh_daughter of_ʼEdōm he_will_make_known on sins÷your.
 \c 5
-\v 1 remember Oh_Yahweh what has_it_happened to/for=us wwww\f + \fr 5:1 \ft Variant note: הביט: (x-qere) 'הַבִּ֖יטָ/ה': lemma=5027 n=0.0 morph=HVhv2ms/Sh id=256uw הַבִּ֖יטָ/ה\f* and÷see DOM disgrace÷our.
+\v 1 remember Oh_\nd YHWH\nd* what has_it_happened to/for=us wwww\f + \fr 5:1 \ft Variant note: הביט: (x-qere) 'הַבִּ֖יטָ/ה': lemma=5027 n=0.0 morph=HVhv2ms/Sh id=256uw הַבִּ֖יטָ/ה\f* and÷see DOM disgrace÷our.
 \v 2 Inheritance÷our it_has_been_turned_over to÷strangers houses÷our to÷foreigners.
 \v 3 fatherless_ones we_have_become wwww\f + \fr 5:3 \ft Variant note: אין: (x-qere) 'וְ/אֵ֣ין': lemma=c/369 morph=HC/Tn id=25vD2 וְ/אֵ֣ין\f* a_father mothers÷our like÷widows.
 \v 4 Water÷we in/on/at/with÷money we_have_drunk wood÷our in/on/at/with÷price they_come.
 \v 5 At necks÷our we_have_been_pursued we_have_become_weary wwww\f + \fr 5:5 \ft Variant note: לא: (x-qere) 'וְ/לֹ֥א': lemma=c/3808 morph=HC/Tn id=25HUX וְ/לֹ֥א\f* it_has_been_given_rest\f + \fr 5:5 \ft Note: Marks a place where we agree with BHQ against BHS in reading L. \f*\f + \fr 5:5 \ft Note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS. \f*\f + \fr 5:5 \ft Note: We read punctuation in L differently from BHS. \f* to/for=us.
-\v 6 Miʦərayim/(Egypt) we_have_given a_hand Assyria to÷get_enough bread.
+\v 6 Miʦrayim/(Egypt) we_have_given a_hand Assyria to÷get_enough bread.
 \v 7 fathers÷our they_sinned and÷no_more\f + \fr 5:7 \ft Variant note: אינ/ם: (x-qere) 'וְ/אֵינָ֔/ם': lemma=c/369 n=0.1 morph=HC/Tn/Sp3mp id=257ev וְ/אֵינָ֔/ם\f* wwww\f + \fr 5:7 \ft Variant note: אנחנו: (x-qere) 'וַ/אֲנַ֖חְנוּ': lemma=c/587 n=0.0 morph=HC/Pp1cp id=25DUZ וַ/אֲנַ֖חְנוּ\f* iniquities÷their we_have_carried.
 \v 8 Slaves they_have_ruled in/on/at/with÷us [one_who]_tears_away there_[is]_not from÷hand÷their.
 \v 9 In/on/at/with÷lives÷our we_bring bread÷our from=face/in_front_of the_sword the÷wilderness.
 \v 10 Skin÷our as÷oven they_have_grown_hot from=face/in_front_of [the]_burning_heat(s) of_hunger.
-\v 11 Women in/on/at/with÷Tsiuōn men_have_humiliated virgins in/on/at/with÷cities of_Yəhūdāh.
-\v 12 Princes in/on/at/with÷hands÷their they_have_been_hanged [the]_face of_elders not they_have_been_honored.
+\v 11 Women in/on/at/with÷Tsiyyōn/(Zion) men_have_humiliated virgins in/on/at/with÷cities of_Yəhūdāh/(Judah).
+\v 12 Princes in/on/at/with÷hands÷their they_have_been_hanged [the]_face of_elders not they_have_been_honoured.
 \v 13 Young_men a_mill they_have_lifted and÷boys in/on/at/with÷wood they_have_staggered.
 \v 14 Old_[men] from÷city_gate they_have_ceased young_men from÷music÷their.
 \v 15 It_has_ceased the_joy hearts÷our it_has_been_changed to÷mourning dancing÷our.
-\v 16 It_has_fallen the_crown head÷our woe please to/for=us DOM we_have_sinned.
+\v 16 It_has_fallen the_crown head÷our woe please to/for=us if/because we_have_sinned.
 \v 17 On this it_has_become faint heart÷our on these_[things] they_have_grown_dim eyes÷our.
-\v 18 On the_mountain of_Tsiuōn which÷lies_desolate foxes they_have_prowled in=him/it.
-\v 19 you Oh_Yahweh to÷forever you_will_sit throne÷your to÷generation and÷generation.
+\v 18 On the_mountain of_Tsiyyōn which÷lies_desolate foxes they_have_prowled in=him/it.
+\v 19 you Oh_\nd YHWH\nd* to÷forever you_will_sit throne÷your to÷generation and÷generation.
 \v 20 To/for=what to÷always forget÷us forsake÷us for÷entire of_days.
-\v 21 Restore÷us Oh_Yahweh to÷yourself and÷restored\f + \fr 5:21 \ft Variant note: ו/נשוב: (x-qere) 'וְֽ/נָשׁ֔וּבָה': lemma=c/7725 n=0.1 morph=HC/Vqh1cp id=25TZB וְֽ/נָשׁ֔וּבָה\f* renew days÷our as÷of_old.
-\v 22 DOM (if) utterly_(reject) you_rejected÷us you_are_angry with÷us up_to muchness.
+\v 21 Restore÷us Oh_\nd YHWH\nd* to÷yourself and÷restored\f + \fr 5:21 \ft Variant note: ו/נשוב: (x-qere) 'וְֽ/נָשׁ֔וּבָה': lemma=c/7725 n=0.1 morph=HC/Vqh1cp id=25TZB וְֽ/נָשׁ֔וּבָה\f* renew days÷our as÷of_old.
+\v 22 If/because (if) utterly_(reject) you_rejected÷us you_are_angry with÷us up_to muchness.
