@@ -65,7 +65,7 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2024-08-19' # by RJH
+LAST_MODIFIED_DATE = '2024-09-18' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.70'
@@ -914,6 +914,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('quiet','silenced'),
             ('range','various'),
             ('requested','prayed'),
+            ('responded','said'),
             ('room','place'),
             ('sacred','holy'),
             ('scoffed','mocking'),

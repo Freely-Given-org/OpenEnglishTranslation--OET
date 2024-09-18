@@ -1,26 +1,27 @@
-\id JDG - Open English Translation—Readers' Version (OET-RV) v0.1.00
+\id JDG - Open English Translation—Readers' Version (OET-RV) v0.1.02
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 JDG
 \rem WORDTABLE OET-LV_OT_word_table.tsv
-\h Heroes and Leaders
-\toc1 Various Heroes and Leaders
-\toc2 Heroes and Leaders
+\h Heroes and Guides
+\toc1 Various Heroes and Guides
+\toc2 Heroes and Guides
 \toc3 Ldrs
 \mt2 The accounts of
-\mt1 Various Heroes and Leaders
-\mt3 commonly called Judges
+\mt1 Various Heroes and Guides
+\mt3 commonly called ‘Judges’
 \is1 Introduction
-\ip This document commonly called ‘\bk Judges\bk*’, contains a collection of accounts of ‘\bk Various Heroes and Leaders\bk*’ who helped to rescue the Israeli people from their oppressors. It covers the times from their invasion of Canaan through to just before their first king. Most of these heroes or leaders were actually warriors. Shimson (commonly called ‘Samson’) is the most well-known of all of them, and his story can be read in chapters 13–16.
+\ip This document commonly called ‘\bk Judges\bk*’, contains a collection of accounts of ‘\bk Various Heroes and Guides\bk*’ who helped to rescue the Israeli people from their oppressors. It covers the times from their invasion of Canaan through to just before their first king. Most of these heroes or guides were actually warriors. Shimson (commonly called ‘Samson’) is the best-known of all of them, and his story can be read in chapters 13–16.
 \ip From this document we can learn that Israel prospered when they obeyed Yahweh's instructions, but when they disobeyed, then God allowed other peoples and nations to oppress them. However, God is always ready and prepared to save his people whenever they turn away from their disobedience and return again to obeying the instructions that he'd given them.
+\ip The previous book was named after the main character Yehoshua (Joshua) and the following books (Ruth and 1 Shemuel/Samuel) are named after their main characters, but this document with somewhere around a dozen important characters, has no single prominent character that it could be named after. Instead it's traditionally named ‘Judges’ in English because of around twenty uses of the Hebrew root ‘שָׁפַט’ (shafat) often in roots normally translated as ‘judged’. Despite that, there's not a single account in this document of these leaders judging the cases and conflicts of the common people. This dilemma offers two possible interpretations: 1/ that these leaders (often military leaders) did judge cases for the common people, but those details aren't recorded, or 2/ (which we've leaned more towards) that this Hebrew word has a wider range of meaning, and so we've leaned towards the English word ‘guided’ or ‘led’ in these contexts.
 \iot Main components of this account
 \io1 The events up until Yehoshua's death \ior 1:1–2:10\ior*
-\io1 The leaders/heroes of Israel \ior 2:11–16:31\ior*
+\io1 The various heroes/guides of Israel \ior 2:11–16:31\ior*
 \io1 Various other events \ior 17:1–21:25\ior*
 \rem This is still a very early look into the unfinished text of the \em Open English Translation\em* of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
-\s1 The capturing of Adunibisik of descendants of Huda and Simyun
+\s1 Yehudah and Simeon capture Adoni-Bezek
 \rem /s1 Completing the conquest of Canaan; Israel Fights the Remaining Canaanites; Israel's Failure to Complete the Conquest of Canaan; Judah and Simeon Conquer the Land; The Tribes of Judah and Simeon Capture Adonibezek
 \p
 \v 1 After Yehoshua's death¦111579, the Israelis¦111583 asked Yahweh, “\add ≈Which tribe should go¦111587 first¦111593 to attack the Canaanites\add*?”
@@ -118,7 +119,7 @@
 \v 22 so as to use them to test Israel \add to see\add* whether¦112685 \add @the Israelis\add* will obey my instructions like their¦112695 ancestors¦112695 did, or not.
 \v 23 \add ≈So¦112700\add* Yahweh allowed those people groups to stay on, and hence they hadn't been \add ≈handed over\add* to Yehoshua.
 \c 3
-\s1 The nasame people of Kanaan
+\s1 The remaining kingdoms in Canaan
 \rem /s1 Nations Remaining in the Land; The Nations Left in Canaan; The Nations Remaining in the Land
 \p
 \v 1 The \add following\add* are the kingdoms which¦112718 Yahweh allowed to remain so as to test the \add newer generations\add* of Israel who hadn't experienced the battles in Canaan¦112737
@@ -445,8 +446,8 @@
 \v 24 Gideon¦115649 \add also\add* sent¦115648 messengers¦115647 through Efraim's hill country¦115652 \add ≈to tell them\add*, “Go down \add to the Yordan river\add* opposite Midian¦115657 and \add ≈take control of the crossings to capture them between\add* as far as Beyt-Barah.” So¦115647 all the men of Efraim were summoned and they commandeered the Yordan \add ≈crossings\add* as far as Beyt-Barah.
 \v 25 They chased after the Midianites and captured¦115685 their two princes, Oreb and Zeeb. They killed Oreb at the rock \add now called\add* ‘Oreb's rock’, and they killed Zeeb at a winepress \add now called\add* ‘Zeeb's winepress’, and they brought¦115718 their heads¦115714 back across the Yordan¦115723 to Gideon¦115721.
 \c 8
-\s1 The defeat of me from-Midiyan
-\rem /s1 Gideon Kills Zebah and Zalmunna; Zebah and Zalmunna; Gideon's Triumph and Vengeance; The Final Defeat of the Midianites
+\s1 The final defeat of the Midianites
+\rem /s1 Gideon Kills Zebah and Zalmunna; Gideon's Triumph and Vengeance; The Final Defeat of the Midianites
 \p
 \v 1 \add But¦115725\add* then the Efraimite men \add ≈challenged\add* Gideon, “Why have you \add ≈side-tracked\add* us? Why didn't you call us when you went¦115739 to battle against the Midianites?” And they severely rebuked him.
 \p
