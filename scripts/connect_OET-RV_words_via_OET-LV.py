@@ -65,10 +65,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2024-09-18' # by RJH
+LAST_MODIFIED_DATE = '2024-09-25' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.70'
+PROGRAM_VERSION = '0.71'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -846,11 +846,13 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('bedding','pallet'),
             ('believers','brothers'),
             ('body','flesh'),
+            ('boulders','stones'),
             ('box','ark'),
             ('but','But'),
             ('But','And'),
             ("don't",'not'),
             ('carrying','carried'),
+            ('chasing','pursuing'),
             ('cheerful','joy'),
             ('chest','ark'),
             ('clothes','apparel'),
@@ -915,6 +917,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('range','various'),
             ('requested','prayed'),
             ('responded','said'),
+            ('rock','stone'),('rocks','stones'),
             ('room','place'),
             ('sacred','holy'),
             ('scoffed','mocking'),
@@ -965,6 +968,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Adam','Adam'),('Adam','Adam/ʼĀdām'),
             ('Aharon', 'ʼAhₐron'),
             ('Aksah', 'ʼAchsah'),
+            ('Amalekites', 'ˊAmālēqites'),
             ('Aminadab','Aminadab'),('Amon','Aminadab/ˊAmmiynādāⱱ'),
             ('Amon','Amōs'),('Amon','Amōs/ʼĀmōʦ'),
             ('Ammonites', 'ˊAmmōn'),
@@ -980,7 +984,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Capernaum', 'Kafarnaʼoum'),
             ('Cappadocia', 'Kappadokia'),
             ('Dan', 'Dān'),
-            ('David','Dawid'),('David','Dawid/Dāvid'),
+            ('David','Dawid'),('David','Dawid/Dāvid'),('David','Dāvid'),
             ('Delilah', 'Dilīlāh'),
             ('Demetrius', 'Daʸmaʸtrios'), ('Diotrephes', 'Diotrefaʸs'),
             ('Dorcas', 'The_Gazelle/Dorkas'),
@@ -1048,7 +1052,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Samaria', 'Samareia'),('Samaria', 'Samareia/Shomrōn'),
             ('Sapphira', 'Sapfeiraʸ'),
             ('Sardis', 'Sardeis'),
-            ('Saul', 'Saulos'),
+            ('Sha\'ul', 'Shāʼūl'), ('Saul', 'Saulos'),
             ('Shekem', 'Shəkem'),
             ('Shimshon', 'Shimshōn'),
             ('Sidon', 'Sidōn'),('Sidon', 'Sidōn/Tsīdōn'),
@@ -1065,6 +1069,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Thyatira', 'Thuateira'),
             ('Timothy', 'Timotheos'),
             ('Tola', 'Tōlāˊ'),
+            ('Tsiklag', 'Ziklag'),('Tsiklag', 'Tsiqlag/Ziklag'),
             ('Tyre', 'Turos'),('Tyre', 'Turos/Tsor'),
             ('Uzziah', 'Ozias'),('Uzziah', 'Ozias/ˊUzziyyāh'),
             ('Yacob', 'Yaˊaqov'),
@@ -1237,6 +1242,7 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
     """
     fnPrint( DEBUGGING_THIS_MODULE, f"addNumberToRVWord( {BBB} {c}:{v} '{word}' {wordNumber} )" )
     assert isinstance( wordNumber, int )
+    assert '¦' not in word
 
     NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
 

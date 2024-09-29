@@ -1,4 +1,4 @@
-\id JDG - Open English Translation—Readers' Version (OET-RV) v0.1.02
+\id JDG - Open English Translation—Readers' Version (OET-RV) v0.1.05
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 JDG
@@ -11,7 +11,7 @@
 \mt1 Various Heroes and Guides
 \mt3 commonly called ‘Judges’
 \is1 Introduction
-\ip This document commonly called ‘\bk Judges\bk*’, contains a collection of accounts of ‘\bk Various Heroes and Guides\bk*’ who helped to rescue the Israeli people from their oppressors. It covers the times from their invasion of Canaan through to just before their first king. Most of these heroes or guides were actually warriors. Shimson (commonly called ‘Samson’) is the best-known of all of them, and his story can be read in chapters 13–16.
+\ip This document commonly called ‘\bk Judges\bk*’, contains a collection of accounts of ‘\bk Various Heroes and Guides\bk*’ who helped to rescue the Israeli people from their oppressors. It covers the times from their invasion of Canaan through to just before their first king. Most of these heroes or guides were actually warriors. Shimshon (commonly called ‘Samson’) is the best-known of all of them, and his story can be read in chapters 13–16.
 \ip From this document we can learn that Israel prospered when they obeyed Yahweh's instructions, but when they disobeyed, then God allowed other peoples and nations to oppress them. However, God is always ready and prepared to save his people whenever they turn away from their disobedience and return again to obeying the instructions that he'd given them.
 \ip The previous book was named after the main character Yehoshua (Joshua) and the following books (Ruth and 1 Shemuel/Samuel) are named after their main characters, but this document with somewhere around a dozen important characters, has no single prominent character that it could be named after. Instead it's traditionally named ‘Judges’ in English because of around twenty uses of the Hebrew root ‘שָׁפַט’ (shafat) often in roots normally translated as ‘judged’. Despite that, there's not a single account in this document of these leaders judging the cases and conflicts of the common people. This dilemma offers two possible interpretations: 1/ that these leaders (often military leaders) did judge cases for the common people, but those details aren't recorded, or 2/ (which we've leaned more towards) that this Hebrew word has a wider range of meaning, and so we've leaned towards the English word ‘guided’ or ‘led’ in these contexts.
 \iot Main components of this account
@@ -86,7 +86,7 @@
 \s1 God's messenger comes to Bokim
 \rem /s1 The Angel of the Lord at Bochim; Result of disobedience; Israel's Disobedience; The Angel of the Lord at Bokim; The Lord's Messenger Comes to Bokim
 \p
-\v 1 Then Yahweh's messenger whent from Gilgal¦112266 to Bokim and told \add the Israelis\add*, “I brought¦112272 you all out of Egypt¦112274 and led you here to this land that I promised to your ancestors¦112282. I had said that I wouldn't ever break¦112286 my agreement with you all,
+\v 1 Then Yahweh's messenger went from Gilgal¦112266 to Bokim and told \add the Israelis\add*, “I brought¦112272 you all out of Egypt¦112274 and led you here to this land that I promised to your ancestors¦112282. I had said that I wouldn't ever break¦112286 my agreement with you all,
 \v 2 but that you mustn't form treaties with the peoples who lived here, rather you must tear down their¦112299 altars¦112299. But¦112291 you all haven't obeyed what I said. What have you \add gone and\add* done?\x + \xo 2:2: \xt Exo 34:12-13; Deu 7:2-5.\x*
 \v 3 \add ≈So¦112310\add* I'm telling you that I won't drive¦112314 your enemies out ahead of you, \add ≈but\add* they'll be like thorns in your sides¦112319 and you'll all end up being enslaved to their¦112320 \add ≈idols\add*.”
 \v 4 When Yahweh's messenger finished saying that, the people wept loudly,
@@ -102,7 +102,7 @@
 \rem /s1 Israel Disobeys the Lord
 \p
 \v 10 When all of that generation \add ≈had passed away\add*, the next generation didn't know Yahweh or \add even\add* know about what he'd done for \add ≈the Israelis\add*.
-\rem /s1 Israel's Unfaithfulness; Israel Stops Worshiping the Lord
+\rem /s1 Israel's Unfaithfulness; Israel Stops Worshipping the Lord
 \v 11 \add *They\add* did \add ≈things that Yahweh considered evil¦112465\add* and worshipped Baal \add idols\add*
 \v 12 and abandoned¦112473 the god of their¦112479 ancestors¦112479, Yahweh, the one who brought¦112480 them out of Egypt¦112483. \add Instead\add* they went after¦112485 other¦112488 gods—the gods of the people¦112490 around¦112492 them. They worshipped them and that made Yahweh angry.
 \v 13 They abandoned¦112502 Yahweh and \add ≈worshipped\add* the Baal and Ashtarot \add idols\add*.
@@ -140,7 +140,7 @@
 \rem /s1 Ehud; Ehud Becomes Israel's Judge
 \p
 \v 12 \add Once\add* again the Israelis¦112931 started doing¦112932 things considered evil by Yahweh, \add ≈so\add* because of that, \add *he\add* strengthened¦112936 King Eglon of Moab against Israel.
-\v 13 \add @King Eglon\add* \add ≈enlisted warriors from\add* the Ammonites¦112962 and the Amalekites, and they attacked Israel and captured \add Yericho,\add* the city¦112972 of palm trees,
+\v 13 \add @King Eglon\add* \add ≈enlisted warriors from\add* the Ammonites¦112962 and the Amalekites¦112963, and they attacked Israel and captured \add Yericho,\add* the city¦112972 of palm trees,
 \v 14 \add ≈so\add* the Israelis¦112978 served¦112975 \add *him\add* for eighteen¦112985 years.
 \p
 \v 15 \add ≈But\add* the Israelis cried¦112990 out to Yahweh, \add *he\add* \add ≈sent them\add* a \add ≈leader to rescue\add* them: the left-hander Ehud, son of Gera the Benyamite. The Israelis sent him to carry the tribute¦113020 payment to King Eglon of Moab.
@@ -270,11 +270,11 @@
 \v 14 From Efraim¦114009 their¦114010 root was with Amalek.
 \q1 After you¦114012, Benyamin, among your¦114014 people¦114014.
 \q1 From \add (Manashsheh's)\add* Makir¦114016, the commanders¦114018 came¦114017 down.
-\q1 And from Zebulun, those who march¦114020 carrying an offier's staff¦114021.
+\q1 And from Zebulun, those who march¦114020 carrying an officer's staff¦114021.
 \q1
 \v 15 My princes¦114024 in Yissashkar were with Deborah.
 \q1 And Yissashkar was also with Barak.
-\q1 He was sent¦114033 into a valeey on his heels¦114034.
+\q1 He was sent¦114033 into a valley¦114032 on his heels¦114034.
 \q1 There was intense heart¦114040 searching among the clans¦114035 of Reuben¦114036.
 \q1
 \v 16 Why did you¦114043 sit¦114043 between¦114044 the sheep¦114045 pens?
@@ -352,7 +352,7 @@
 \p
 \v 1 The Israelis¦114261 did \add ≈things that Yahweh considered evil¦114262 so\add* \add *he\add* handed them over to the Midian¦114269 for seven¦114270 years¦114271
 \v 2 and the \add ≈Midianites oppressed\add* \add *them\add* badly. \add ≈It was so bad that the Israelis¦114286\add* made dens for themselves up in the hills, in caves¦114294, and \add ≈in small, fortified settlements\add*.
-\v 3 Whenever the Israelis planted a crop, the Midianites or the Amalekites, or eastern groups would¦114304 attack \add #them\add*.
+\v 3 Whenever the Israelis planted a crop, the Midianites or the Amalekites¦114306, or eastern groups would¦114304 attack \add #them\add*.
 \v 4 They would set up their camps around them and destroy¦114315 the crops as far away as Gaza—they¦114326 left \add ≈nothing for the Israelis to eat\add*, and \add ≡no\add* \add #sheep, cattle, or donkeys¦114331\add*.
 \v 5 It was like a swarm¦114340 of locusts¦114342 when they'd \add all\add* come with their tents¦114337 and their livestock¦114335—you couldn't even count their camels¦114345! They entered the region to \add ≈totally ravage\add* it¦114350.
 \v 6 Thus Israel was \add ≈severely weakened\add* by Midian¦114356, and¦114357 the Israelis¦114360 cried¦114357 out to Yahweh.
@@ -427,7 +427,7 @@
 \v 10 \add ≈But¦115339\add* if you're afraid¦115341 to \add ≈attack\add*, take your¦115347 servant¦115347 Purah¦115346 down to \add &their\add* camp
 \v 11 and you'll hear¦115352 what they're saying, then \add ≈you'll have the courage to go¦115359 down\add* \add and attack\add* the camp.” So¦115352 \add @Gideon\add* and his servant¦115364 Purah¦115363 went \add quietly\add* down to the \add ≈unit\add* at the edge of the camp.
 \p
-\v 12 The Midianites and Amalekites and others from the east covered the valley¦115380 like a swarm of locusts¦115381. \add Even\add* their¦115383 camels¦115383 were as numerous as sand grains on the beach.
+\v 12 The Midianites and Amalekites¦115373 and others from the east covered the valley¦115380 like a swarm of locusts¦115381. \add Even\add* their¦115383 camels¦115383 were as numerous as sand grains on the beach.
 \v 13 \add ≈When\add* Gideon¦115394 \add ≈got close\add*, a man was telling his companion about his dream. “Listen,” he said, “I had a dream and wow, a round¦115406 loaf of barley¦115409 bread¦115408 was tumbling¦115410 into \add ≈our\add* camp. It came as far as the tent and struck¦115417 it so that it fell and turned¦115419 it upside down, and collapsed¦115421 \add completely\add*.”
 \p
 \v 14 “\add ≈That could only be\add* the sword¦115432 of Yoash's son Gideon¦115433 from Israel,” \add ≈the other man¦115437\add* replied. “The true God¦115440 has \add ≈caused Midian¦115444 and all of the camp to be defeated by him\add*.”
@@ -455,11 +455,11 @@
 \v 3 God¦115762 \add ≈helped you all defeat\add* Oreb and Zeeb, the princes of Midian¦115766. What did I do compared¦115777 to that?” After he said¦115782 that, they \add all\add* \add ≈calmed down again¦115781\add*.\x + \xo 8:3-5: \xt Psa 83:11.\x*
 \p
 \v 4 Then¦115786 Gideon¦115787 and his three¦115791 hundred¦115793 warriors crossed the Yordan¦115788 \add going east\add*. They were \add ≈all exhausted¦115797, but continued the pursuit¦115798\add*.
-\v 5 \add When they arrived at the town\add* of Sukkot, Gideon asked the \add ≈leaders\add*, “Please give¦115803 my men¦115801 some bread¦115807 to eat because they're exhausted¦115813, \add ≈but we're chasing\add* Zebah and Zalmunna, the Midianite kings¦115820.”
+\v 5 \add When they arrived at the town\add* of Sukkot, Gideon asked the \add ≈leaders\add*, “Please give¦115803 my men¦115801 some bread¦115807 to eat because they're exhausted¦115813, \add ≈but we're chasing¦115816\add* Zebah and Zalmunna, the Midianite kings¦115820.”
 \p
 \v 6 \add ≈However, the Sukkot officials¦115824 asked\add* \add cautiously\add*, “\add ≈Do you already have Zebah and Zalmunna in your grasp\add* that we¦115833 should give¦115833 \add ≈food\add* to \em your\em* army?”
 \p
-\v 7 “Let me assure you all,” Gideon¦115838 \add ≈responded\add*, “that when Yahweh has \add ≈helped us capture Zebah and Zalmunna\add*, I will rip off your¦115852 flesh¦115852 with the wilderness¦115856 thorns¦115855 and briers¦115859.”
+\v 7 “Let me assure you all,” Gideon¦115838 \add ≈responded¦115837\add*, “that when Yahweh has \add ≈helped us capture Zebah and Zalmunna\add*, I will rip off your¦115852 flesh¦115852 with the wilderness¦115856 thorns¦115855 and briers¦115859.”
 \p
 \v 8 From there they climbed up to Penuel, and he \add ≈asked them for food in a similar manner\add*, and the \add ≈leaders there\add* responded similarly to the \add ≈leaders\add* of Sukkot.
 \v 9 \add ≈So¦115876\add* he said¦115876 to the men¦115879 of Penuel as well, “When I return¦115882 \add ≈safely\add*, I'll tear down this tower¦115887.”
@@ -554,7 +554,7 @@
 \v 34 \add ≈So\add* Abimelek¦117032 and all the people with him \add ≈went out in the night¦117039\add* and they set up four¦117044 units in an ambush against Shekem¦117043.
 \v 35 \add In the morning,\add* Ga'al (Ebed's son) went¦117047 out and he stood at the entrance¦117053 of the city¦117055 gate. Then¦117047 Abimelek¦117057 and \add ≈his men stood up from their hiding places\add*.
 \v 36 \add ≈When\add* Ga'al saw the people, he said to Zebul, “Look, a group of people is coming¦117079 down from the tops of the hills!”
-\p “You are seeing¦117089 the shadow¦117086 of the hills as men¦117090,” Zebul \add ≈responded\add*.
+\p “You are seeing¦117089 the shadow¦117086 of the hills as men¦117090,” Zebul \add ≈responded¦117072\add*.
 \p
 \v 37 \add ≈But\add* Ga'al said again¦117094, “Look, groups of people¦117100 are coming down from beside the \add ≈top of the hill\add*, and \add ≈another group\add* is coming from the way of the ‘oak of the diviners’.”
 \p
@@ -597,14 +597,14 @@
 \s1 The making again of bad of Israelis
 \rem /s1 Oppression by the Ammonites; The Ammonites Oppress Israel; Jephthah
 \p
-\v 6 The \add ≈Israelis¦117555\add* continued to do \add ≈what Yahweh considered evil\add*: they worshiped the Ba'als, the Ashtorets, the gods of Aram, the gods of Sidon, the gods of Moab, the gods of the sons of Ammon, and the gods of the Philistines¦117586. They forsook Yahweh and didn't serve¦117560 him.
-\v 7 Yahweh \add ≈was very angry with\add* Israel, so he \add ≈allowed the Philistines¦117602 and the Ammonites¦117605 to harrass them\add*.
+\v 6 The \add ≈Israelis¦117555\add* continued to do \add ≈what Yahweh considered evil\add*: they worshipped the Ba'als, the Ashtorets, the gods of Aram, the gods of Sidon, the gods of Moab, the gods of the sons of Ammon, and the gods of the Philistines¦117586. They forsook Yahweh and didn't serve¦117560 him.
+\v 7 Yahweh \add ≈was very angry with\add* Israel, so he \add ≈allowed the Philistines¦117602 and the Ammonites¦117605 to harass them\add*.
 \v 8 They shattered and oppressed the \add ≈Israelis\add* that year¦117613, \add ≈but it went on\add* for eighteen¦117615 years for all the \add ≈Israelis\add* who were on the opposite side of the Yordan in the land of the Amorites, which¦117629 is in the Gilead¦117630.
 \v 9 Then¦117632 the \add ≈Ammonites¦117635\add* also crossed¦117632 over the Yordan¦117638 to fight¦117639 against Yehudah, against Benyamin, and against the \add ≈half-tribe\add* of Efraim¦117645.
 \p This caused incredible distress¦117646 for the \add ≈Israelis\add*
 \v 10 \add ≈so\add* \add *they\add* cried¦117650 out to Yahweh, “We have sinned¦117657 against you, because¦117659 we have forsaken¦117660 our God¦117663 and we have served¦117664 the Ba'als.”
 \p
-\v 11 “Wasn't it from the Egyptians,” Yahweh \add ≈responded\add*, “from the Amorites, from the \add ≈Ammonites¦117684\add*, from the Philistines¦117687,
+\v 11 “Wasn't it from the Egyptians,” Yahweh \add ≈responded¦117670\add*, “from the Amorites, from the \add ≈Ammonites¦117684\add*, from the Philistines¦117687,
 \v 12 the Sidonians and Amalek and Maon, when they oppressed¦117692 you that you cried¦117694 out to me, and I \add ≈rescued you all from them\add*?
 \v 13 \add ≈Yet\add* you've all abandoned me and served¦117703 other¦117705 gods¦117704. Therefore, I won't not continue to rescue you.
 \v 14 Go and cry¦117714 out to the gods that you've all chosen¦117719 for yourselves. They should¦117722 deliver¦117722 you all at the time¦117724 of your distress¦117725.”
@@ -632,12 +632,12 @@
 \p
 \v 9 “If you bring¦117949 me back to fight¦117952 against the \add ≈Ammonites¦117954\add*,” Yiftah¦117942 \add ≈asked\add* \add *them\add*, “and if Yahweh \add ≈helps me defeat them\add*, \add is it correct that\add* I'll actually become¦117960 your leader?”
 \p
-\v 10 “Yahweh will be a witness between¦117974 us,” the Gilead¦117967 elders¦117965 \add ≈responded\add*, “\add ≈that we'll most certainly do what you¦117978 just said¦117964\add*.”
+\v 10 “Yahweh will be a witness between¦117974 us,” the Gilead¦117967 elders¦117965 \add ≈responded¦117964\add*, “\add ≈that we'll most certainly do what you¦117978 just said¦117964\add*.”
 \v 11 \add ≈So¦117982\add* Yiftah went¦117982 with the Gilead¦117987 elders¦117986, and the people¦117989 set him¦117990 as commander¦117993 and leader over themselves. (Yiftah had spoken¦117994 all those words¦118000 before Yahweh at Mitspah.)
 \p
 \v 12 Then Yiftah¦118007 sent¦118006 messengers¦118008 to the \add ≈Ammonite\add* king¦118011, demanding, “What's happened with respect to me and to you, that you've come¦118022 against me to fight¦118024 over my land?”
 \p
-\v 13 The \add ≈Ammonite\add* king¦118028 \add ≈responded\add* to Yiftah's messengers¦118034, “Because \add ≈the Israelis\add* seized my land \add ≈when they¦118043 came¦118043\add* out of Egypt¦118044. It went¦118043 from the Arnon \add river\add* up to the Yabbok \add river\add*, and over to the Yordan \add river\add*. Now return \add @the land\add* peaceably¦118055.”
+\v 13 The \add ≈Ammonite\add* king¦118028 \add ≈responded¦118027\add* to Yiftah's messengers¦118034, “Because \add ≈the Israelis\add* seized my land \add ≈when they¦118043 came¦118043\add* out of Egypt¦118044. It went¦118043 from the Arnon \add river\add* up to the Yabbok \add river\add*, and over to the Yordan \add river\add*. Now return \add @the land\add* peaceably¦118055.”
 \p
 \v 14 Then¦118057 Yiftah sent¦118060 messengers¦118061 back to the \add ≈Ammonite\add* king¦118064
 \v 15 to tell him, “Yiftah¦118072 \add ≈wants you to know that\add* Israel didn't take land from Moab nor from \add ≈you Ammonites¦118085\add*.
@@ -770,14 +770,14 @@
 \q1 ≈and sweetness¦119631 came out of the strong¦119629 one.”
 \m But¦119624 three¦119636 days¦119637 later, they \add ≈still couldn't solve his\add* riddle¦119635.
 \p
-\v 15 Then¦119639 on the seventh day,\f + \fr 14:15 \ft The Greek Septuagint translation says ‘the \em fourth\em* day’, which perhaps might fit better into the narrative, but ‘seventh’ is in the Hebrew that we have and not necessariy incorrect.\f* they \add ≈pressured\add* Shimshon's¦119646 wife¦119644, “Get your husband \add ≈to tell you the answer of\add* the riddle¦119656, otherwise we'll burn¦119659 \add down\add* your father' house¦119663 and you \add as well\add*. \add ≈Did you invite¦119667 us to the party just to impoverish\add* us?”
+\v 15 Then¦119639 on the seventh day,\f + \fr 14:15 \ft The Greek Septuagint translation says ‘the \em fourth\em* day’, which perhaps might fit better into the narrative, but ‘seventh’ is in the Hebrew that we have and not necessarily incorrect.\f* they \add ≈pressured\add* Shimshon's¦119646 wife¦119644, “Get your husband \add ≈to tell you the answer of\add* the riddle¦119656, otherwise we'll burn¦119659 \add down\add* your father' house¦119663 and you \add as well\add*. \add ≈Did you invite¦119667 us to the party just to impoverish\add* us?”
 \p
 \v 16 Then¦119671 Shimshon's¦119673 wife¦119672 \add ≈put on a crying act\add* and said, “You must hate¦119678 me—you don't¦119679 love¦119680 me \add because\add* you've \add ≈created\add* a riddle \add ≈for my relatives\add*, yet you haven't \add ≈even told me the answer\add*.”
 \p “Listen,” he \add ≈replied\add*, “I haven't \add even\add* \add ≈told my own parents\add*. Should I tell you?”
 \v 17 She continued to cry beside him throughout the seven-day party, and then \add finally\add* on the seventh¦119700 day, he \add gave in and\add* told her because she kept nagging him, \add so in the end\add* she \add ≈was able to reveal the answer to her relatives\add*.
 \v 18 Then¦119721 the men¦119723 of the city¦119724 said to \add @Shimshon\add* before¦119727 the sun¦119729 went¦119728 down on the seventh¦119726 day¦119725,
 \q1 “What is sweeter¦119732 than honey¦119733?
-\q1 And what is stronger¦119735 than a lion¦119736?”
+\q1 And what's stronger¦119735 than a lion¦119736?”
 \m \add ≈So¦119721\add* he said to them,
 \q1 “If you all hadn't ploughed with my heifer¦119741,
 \q1 you wouldn't have been able to solve my riddle¦119744.”
@@ -790,24 +790,24 @@
 \v 1 Some days¦119781 later during the wheat¦119785 harvest¦119783, Shimshon¦119787 visited¦119786 his wife with a young¦119791 goat¦119791 \add as a present for the family, because\add* he said, “I'll go into the bedroom with my wife.” \add ≈But¦119780\add* her father¦119802 wouldn't allow him to go in,
 \v 2 and \add ≈pleaded\add*, “Truly, I \add ≈I thought¦119808 that you must\add* hate¦119811 her, so I gave¦119813 her to your close friend. \add ≈But¦119805 wouldn't\add* her younger¦119817 sister¦119816 be better \add anyway\add*? Please, \add ≈would you take her instead¦119824\add*.”
 \p
-\v 3 Shimshon¦119828 \add ≈responded\add*, “This time¦119830 I'm blameless concerning the Philistines¦119831 when I \add ≈cause trouble for\add* them.”
+\v 3 Shimshon¦119828 \add ≈responded¦119826\add*, “This time¦119830 I'm blameless concerning the Philistines¦119831 when I \add ≈cause trouble for\add* them.”
 \v 4 Then¦119839 \add *he\add* went¦119839 and captured three¦119842 hundred¦119844 foxes¦119845 and \add ≈tied them in pairs\add*—tail to tail. He¦119840 took¦119846 torches, and \add ≈tied\add* one torch between¦119856 \add ≈the tails¦119859 of each pair\add*.
 \v 5 He \add ≈lit\add* the torches¦119865 and let \add @the foxes\add* loose into the grain \add ≈crops\add* of the Philistines¦119868. As a result, he burnt both the standing grain \add plants\add* and also the \add harvested\add* \add #stacks\add* of sheaves, and even a vineyard¦119876 and an olive¦119877 orchard.
 \v 6 \add ≈So¦119879\add* the Philistines \add ≈asked\add*, “Who did this?”
-\p “Shimshon,” they \add ≈replied\add*, “the son-in-law of the \add ≈man from Timnah\add*, because he took \add @Shimshon's\add* wife and gave¦119893 her to his close friend.” As a result, the Philistines went¦119895 \add to Timnah\add* and they burnt \add both\add* \add @the woman\add*her and her father¦119901.
+\p “Shimshon,” they \add ≈replied\add*, “the son-in-law of the \add ≈man from Timnah\add*, because he took \add @Shimshon's\add* wife and gave¦119893 her to his close friend.” As a result, the Philistines went¦119895 \add to Timnah\add* and they burnt \add both\add* \add @the woman\add* and her father¦119901.
 \v 7 Then¦119904 Shimshon¦119906 told them, “Since you actually did that \add horrible thing\add*, I certainly \add ≈won't\add* stop until I've avenged¦119914 myself¦119914 against you all.”
 \v 8 Then¦119919 he attacked the Philistines and \add ≈crippled many of them, before going to\add* Etam's rock¦119930 where he lived in a cave.
 \s1 Shimshon defeats the Philistines
 \rem /s1 Samson Defeats the Philistines
 \p
-\v 9 \add ≈However\add*, the Philistine \add warrriors\add* went¦119934 and camped¦119936 in Yehudah, and spread out \add around the town of\add* Lehi.
+\v 9 \add ≈However\add*, the Philistine \add warriors\add* went¦119934 and camped¦119936 in Yehudah, and spread out \add around the town of\add* Lehi.
 \v 10 \add ≈But¦119941\add* the men of Yehudah¦119943 \add ≈asked\add* \add <them\add*, “Why have you all come \add ≈here to attack\add* us?”
 \p “We've come to \add ≈capture\add* Shimshon¦119951,” they \add ≈replied\add*. “To \add ≈give him some of his own back\add*.”
 \v 11 Then¦119959 three¦119960 thousand¦119961 men from Yehudah¦119963 went¦119959 down to the cleft¦119966 of Etam's rock¦119967, and told Shimshon¦119970, “Don't you realise that the Philistines¦119977 are ruling¦119975 over us? \add ≈Why are you causing more trouble for\add* us?”
 \p “Just as they've done to me,” he \add ≈replied\add*, “so I've done to them.”
 \p
 \v 12 “We've come¦119995 \add ≈here to tie you up so we can hand\add* you over to the Philistines¦119999,” they said.
-\p “\add Ok,\add*” Shimshon¦120002 \add ≈responded\add*. “\add But¦119992\add* promise me that you all won't \add ≈injure\add* me yourselves.”
+\p “\add Ok,\add*” Shimshon¦120002 \add ≈responded¦119992\add*. “\add But¦119992\add* promise me that you all won't \add ≈injure\add* me yourselves.”
 \p
 \v 13 “No, however, we'll certainly tie you up,” they \add ≈replied\add*, “and we'll hand you over to them. But¦120011 truly we won't kill you.” Then¦120011 they tied him up with two new ropes¦120028 and brought¦120030 him up from the \add #rocks\add*.
 \p
@@ -870,8 +870,8 @@
 \v 26 and \add *he\add* \add ≈asked\add* the servant¦120702 who was \add ≈guiding him\add* by the hand¦120704, “Place my hands against¦120717 the two pillars¦120711 holding up the building \add ≈so\add* I can lean on them.”
 \v 27 The building was full of the men and the women, \add ≈including\add* the Philistine leaders. On the roof there¦120723 were about¦120730 three¦120730 thousand¦120731 men and women watching¦120734 the entertainment with Shimshon¦120736.
 \p
-\v 28 Then¦120738 Shimshon¦120739 called¦120738 out to Yahweh, “My master¦120744 Yahweh, please remember¦120746 me. Strengthen me please, just this time¦120751, oh God¦120753, so that I can avenge myself by one \add last\add* act of vengence¦120755 on the Philistines¦120760 \add to make them pay for\add* my two¦120758 eyes¦120759.”
-\v 29 Then¦120762 \add *he\add* took hold of the two¦120766 center pillars¦120768 on which¦120770 the building depended, and \add ≈pressed out\add* against¦120775 them—one in his right¦120777 hand¦120777 and one in his left.
+\v 28 Then¦120738 Shimshon¦120739 called¦120738 out to Yahweh, “My master¦120744 Yahweh, please remember¦120746 me. Strengthen me please, just this time¦120751, oh God¦120753, so that I can avenge myself by one \add last\add* act of vengeance¦120755 on the Philistines¦120760 \add to make them pay for\add* my two¦120758 eyes¦120759.”
+\v 29 Then¦120762 \add *he\add* took hold of the two¦120766 centre pillars¦120768 on which¦120770 the building depended, and \add ≈pressed out\add* against¦120775 them—one in his right¦120777 hand¦120777 and one in his left.
 \v 30 Then¦120781 \add *he\add* \add ≈exclaimed\add*, “\add ≈Let me\add* die with the Philistines¦120787!” He stretched out with his strength and the building fell on \add &their\add* leaders and all of the people in it. \add ≈So¦120781\add* he killed more people at his death¦120807 than he had killed during his life.
 \p
 \v 31 Then¦120813 his brothers¦120814 and all his father's household¦120817 went¦120813 \add to Gaza\add* and carried \add @his body\add* back. They buried¦120823 him¦120824 between Zorah and Eshtaol in the burial place of his father Manoah¦120830. He had \add ≈helped\add* Israel for twenty¦120837 years.
@@ -1011,14 +1011,14 @@
 \v 12 Then the Israeli tribes sent¦122589 men¦122592 \add ≈across the Benyamite region to ask\add*, “What's this \add ≈evil thing\add* that's been done among you¦122603?
 \v 13 \add ≈So¦122605\add* now, hand over those worthless¦122612 men¦122609 from the Gibeah \add region\add* so that we can put them to death and purge¦122616 Israel of that evil¦122617.” But¦122605 the Benyamites weren't willing¦122620 to \add ≈take the advice of their¦122626 Israeli relatives\add*.
 \v 14 \add *They\add* came¦122631 out of their cities¦122637 \add and assembled\add* at Gibeah to the battle¦122640 against the \add ≈Israelis¦122644\add*.
-\v 15 The \add ≈Benyamites \add* mobilized together twenty-six thousand¦122654 men from their cities¦122651 on that day¦122649, all carrying \add #swords\add*. In addition, seven¦122662 hundred¦122663 chosen¦122665 men had been mobilized from the Gibeah \add region\add*.
+\v 15 The \add ≈Benyamites \add* mobilised together twenty-six thousand¦122654 men from their cities¦122651 on that day¦122649, all carrying \add #swords\add*. In addition, seven¦122662 hundred¦122663 chosen¦122665 men had been mobilised from the Gibeah \add region\add*.
 \v 16 Among all of those people were seven¦122671 hundred¦122672 chosen¦122674 left-handers, each of whom could sling¦122682 a stone¦122683 at a hair without missing.
 \v 17 The Israelis¦122692 (excluding Benyamites) mustered¦122693 up for themselves four¦122696 hundred¦122697 thousand¦122698 men¦122691—all \add ≈expert warriors\add* and all carrying \add #swords\add*.
 \s1 The war to punish the Benyamites
 \rem /s1 The War against the Benjaminites
 \p
 \v 18 The \add ≈Israelis¦122717\add* got ready and went¦122709 to Bethel and asked God¦122714, “Who should \add ≈lead us into\add* battle¦122723 with the \add ≈Benyamites\add*?”
-\p “It should be Yehudah \add ≈out front,\add*” Yahweh \add ≈responded\add*.
+\p “It should be Yehudah \add ≈out front,\add*” Yahweh \add ≈responded¦122715\add*.
 \p
 \v 19 \add ≈So¦122733\add* the \add ≈Israelis¦122736 set out\add* in the morning¦122737 and¦122738 made camp near Gibeah¦122741.
 \v 20 Then \add *they\add* went¦122744 out to battle against the Benyamites—setting themselves up for the battle against them at Gibeah.
@@ -1033,7 +1033,7 @@
 \v 26 Then¦122857 the \add ≈Israeli warriors\add* and all the people¦122860 went¦122857 \add ≈back\add* to Bethel. They wept, and they sat there¦122871 before Yahweh. They fasted¦122874 that day¦122875 until¦122878 the evening¦122880, then they offered burnt¦122882 offerings and peace offerings to Yahweh.
 \v 27 \add *They\add* asked Yahweh (because the box¦122893 containing the agreement with the true God¦122895 was there¦122892 in those¦122897 days¦122896
 \v 28 and Finehas (son of Aharon's son Eleazar) was serving before¦122908 it in those¦122910 days¦122909), “Should \add #we\add* continue to go to the battle¦122915 once more against the our \add ≈cousins the Benyamites\add*, or should \add #we\add* stop?”
-\p “Go \add ≈back\add* \add again\add*, because tomorrow¦122929 I'll give¦122930 \add ≈you victory over them\add*,” Yahweh \add ≈responded\add*.
+\p “Go \add ≈back\add* \add again\add*, because tomorrow¦122929 I'll give¦122930 \add ≈you victory over them\add*,” Yahweh \add ≈responded¦122925\add*.
 \p
 \v 29 \add ≈So¦122933 the Israelis\add* placed \add ≈groups of warriors in ambush¦122935\add* \add all\add* around Gibeah.
 \v 30 Then \add *they\add* \add ≈took¦122952 their positions¦122952\add* \add now\add* for the third¦122951 day¦122950 against the Benyamites in Gibeah.
