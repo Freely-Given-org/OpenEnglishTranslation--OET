@@ -1,6 +1,7 @@
 # Our OET stuff
 translatedTexts/LiteralVersion/
 derivedTexts/simpleHTML/
+*.pickle
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
