@@ -1,4 +1,4 @@
-\id 2SA - Open English Translation—Readers' Version (OET-RV) v0.0.02
+\id 2SA - Open English Translation—Readers' Version (OET-RV) v0.0.03
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 SA2
@@ -47,21 +47,20 @@
 \p “I'm a foreigner's son,” he \add ≈replied\add*, “an Amalekite.”
 \v 14 “How come you¦142012 weren't afraid¦142012 to \add ≈kill¦142015\add* Yahweh's anointed¦142018 \add king\add* \add ≈with your¦142014 own hands\add*?” David¦142009 \add ≈asked\add* him.
 \v 15 Then¦142021 David¦142022 called¦142021 to one of \add &his\add* young¦142024 men¦142024, “Come \add ≈over here\add* \add and\add* \add ≈execute\add* him.” \add ≈So\add*And he struck¦142030 him, and he died¦142031.
-\v 16 “Your blood's on your \add own\add* head,” David told \add @the Amalekite\add*, “because \add ≈you admitted in your own words\add* that you, yourself killed Yahweh's anointed \add one\add*.”
+\v 16 “Your blood's¦142036 on your \add own\add* head,” David¦142035 told \add @the Amalekite\add*, “because \add ≈you admitted in your own words\add* that you, yourself killed¦142047 Yahweh's anointed¦142050 \add one\add*.”
 \s1 David's song of mourning
 \rem /s1 David's Lament for Saul and Jonathan; David's Song for Saul and Jonathan
 \p
-\v 17 ◙
-\v 18 \x + \xo 1:18: \xt Josh 10:13.\x*◙
+\v 17 Then David¦142055 sang this funeral song for Sha'ul¦142062 and his son Yonatan
+\v 18 and said¦142068 \add that it should be\add* taught¦142069 to the \add ≈people\add* of Yehudah. \add It's called\add* ‘The bow’ and indeed, it's written¦142075 \add down\add* in the Book of Yashar:\x + \xo 1:18: \xt Josh 10:13.\x*
 \q1
-\v 19 ◙
-\q2 …
-\q1 …
+\v 19 Israel's splendour \add was\add* slain¦142086 \add ≈in the hills\add*.
+\q1 ≈How the \add ≈powerful\add* \add warriors\add* have \add ≈died\add*.
 \q1
-\v 20 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 20 Don't tell \add <them\add* in Gat.
+\q1 ≈Don't let \add <them\add* take the news to Ashkelon's streets¦142098,
+\q1 in case the Philistine \add ≈women\add* celebrate,
+\q1 and the daughters of the uncircumcised¦142109 are elated.
 \b
 \q1
 \v 21 ◙
@@ -202,7 +201,7 @@
 \v 28 ◙
 \v 29 ◙
 \v 30 ◙
-\s1 The peglebeng to Abnir
+\s1 The burial to Abnir
 \rem /s1 David Mourns Abner's Death; Abner Is Buried
 \p
 \v 31 ◙
@@ -239,7 +238,7 @@
 \v 11 ◙
 \v 12 ◙
 \c 5
-\s1 The pegkeyimu of David King of all Israilita
+\s1 The actions of David King of all Israilita
 \rem /s1 David Becomes King Over Israel; David Becomes King of All Israel; David Becomes King of Israel and Judah; David Anointed King of All Israel
 \r (1 Chr. 11:1-9; 14:1-7)
 \rem /r (1 Chronicles 11.1-9; 14.1-7)
@@ -364,7 +363,7 @@
 \v 28 ◙
 \v 29 ◙
 \c 8
-\s1 The me kapanaluwan of David
+\s1 The victories of David
 \rem /s1 David's Wars; David's Victories; David's Military Victories
 \r (1 Chr. 18:1-17)
 \rem /r (1 Chronicles 18.1-17)
@@ -456,7 +455,7 @@
 \v 18 ◙
 \v 19 ◙
 \c 11
-\s1 The peg-ahew of David of spouse of Uriyas
+\s1 The snatching of David of spouse of Uriyas
 \rem /s1 David and Bathsheba; David Commits Adultery with Bathsheba; David's crimes
 \p
 \v 1 \x + \xo 11:1: \xt 1Ch 20:1.\x*◙
@@ -540,7 +539,7 @@
 \p
 \v 24 ◙
 \v 25 ◙
-\s1 Naahew of David the Raba
+\s1 Snatched of David the Raba
 \rem /s1 The Ammonites Crushed; David Captures Rabbah
 \r (1 Chr. 20:1-3)
 \rem /r (1 Chronicles 20.1-3)
@@ -552,7 +551,7 @@
 \v 30 ◙
 \v 31 ◙
 \c 13
-\s1 The pegleheng of Amnun to Tamar
+\s1 The rape of Amnun to Tamar
 \rem /s1 Amnon and Tamar; Conflict in David's family; The Rape of Tamar
 \p
 \v 1 ◙
@@ -745,7 +744,7 @@
 \v 4 ◙
 \rem /s1 David and Shimei; Shimei Curses David
 \p …
-\s1 The pegdilus of Simii to David
+\s1 The cursing of Simii to David
 \p
 \v 5 ◙
 \v 6 ◙
@@ -777,7 +776,7 @@
 \p
 \v 23 ◙
 \c 17
-\s1 The pegsupak of Husay of advice of Ahitupil
+\s1 The arguing of Husay of advice of Ahitupil
 \rem /s1 Hushai Misleads Absalom
 \p
 \v 1 ◙
@@ -798,7 +797,7 @@
 \v 13 ◙
 \p
 \v 14 ◙
-\s1 The warning to David egpepallahuyen
+\s1 The warning to David to flee
 \rem /s1 David Is Warned and Escapes; Hushai Warns David to Escape
 \p
 \v 15 ◙
@@ -854,7 +853,7 @@
 \v 17 ◙
 \p
 \v 18 ◙
-\s1 The pegpanengneng to David of death of Absalum
+\s1 The knowing to David of death of Absalum
 \rem /s1 David Is Told of Absalom's Death; David Mourns; David Hears of Absalom's Death; David Mourns Absalom's Death
 \p
 \v 19 ◙
@@ -921,7 +920,7 @@
 \v 16 \x + \xo 19:16: \xt 2Sam 16:5-13.\x*◙
 \v 17 ◙
 \v 18 ◙
-\s1 The pegkeyid‑u of David to Simii
+\s1 The mercy of David to Simii
 \rem /s1 David's Mercy to Shimei; David Shows Kindness to Shimei
 \p …
 \v 19 ◙
@@ -931,7 +930,7 @@
 \p
 \v 22 ◙
 \v 23 ◙
-\s1 The pegkeyid‑u of David to Mipibusit
+\s1 The mercy of David to Mipibusit
 \rem /s1 David and Mephibosheth Meet; David's Kindness to Mephibosheth; David Shows Kindness to Mephibosheth
 \p
 \v 24 \x + \xo 19:24: \xt 2Sam 9:1-13; 16:1-4.\x*◙
@@ -957,7 +956,7 @@
 \p
 \v 38 ◙
 \v 39 ◙
-\s1 The pegpaapuley of people of Yehudah and of Israel
+\s1 The disagreement of people of Yehudah and of Israel
 \rem /s1 Judah and Israel Argue over the King
 \p
 \v 40 ◙
@@ -1016,7 +1015,7 @@
 \v 25 ◙
 \v 26 ◙
 \c 21
-\s1 The pegsuli of from-Gibyun of descendants of Saul
+\s1 The revenge of from-Gibyun of descendants of Saul
 \rem /s1 The Gibeonites Avenged; David Avenges the Gibeonites; Saul's Descendants Are Put to Death
 \p
 \v 1 ◙
@@ -1040,7 +1039,7 @@
 \v 12 \x + \xo 21:12: \xt 1Sam 31:8-13.\x*◙
 \v 13 ◙
 \v 14 ◙
-\s1 The pegpakiggira of Philistines to David
+\s1 The war of Philistines to David
 \rem /s1 Wars Against the Philistines; Battles against Philistine Giants; Exploits of David's Men
 \r (1 Chr. 20:4-8)
 \rem /r (1 Chronicles 20.4-8)
@@ -1057,7 +1056,7 @@
 \v 21 ◙
 \v 22 ◙
 \c 22
-\s1 The singing of David concerning the kapanaluwan
+\s1 The singing of David concerning the victory
 \rem /s1 Songs of David; David's Song of Victory; David's Song of Praise; David's Song of Thanksgiving
 \r (Psa. 18)
 \rem /r (Psalm 18)
@@ -1342,7 +1341,7 @@
 \v 39 ◙
 \p …
 \c 24
-\s1 The pegseel of David of people
+\s1 The census of David of people
 \rem /s1 David's Census of Israel and Judah; David Counts the Fighting Men; David Takes a Census; David's census
 \r (1 Chr. 21:1-27)
 \rem /r (1 Chronicles 21.1-27)
