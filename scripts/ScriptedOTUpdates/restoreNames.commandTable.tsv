@@ -42,6 +42,7 @@ H									Ahijah			אֲחִיָּה		H281 (24) 1Sam 14:3, 14:18, 1Kings 4:3, 11:
 H									Aiah			אַיָּה		Gen 36:24
 H									Amalek			עֲמָלֵק		Gen 36:12,16, Exo 17:8-16
 H									Amariah			אֲמַרְיָה		Zeph 1:1
+H									Ammiel			עַמִּיאֵל		H5988 (6) Num 13:12, 2Sam 9:4-5, 17:27, 1Chr 3:5, 26:5*
 H									Amminadab			עַמִּינָדָב		Ruth 4:19
 wH									Amon			אָמוֹן		Zeph 1:1
 H									Amos			אָמוֹץ
@@ -248,7 +249,7 @@ wH									Lot			לוֹט		Gen, Luke 17:28
 H									Maacah			מַעֲכָה		(23) Gen 22:24, Josh 13:13, 2Sam 3:3, 10:6,8, ...
 wH									Maat			מָעַטה		?
 H									Maath			מָעַטה		?
-H									Machir			מָכִיר		(22) Gen 59:23, Num 26:29, 27:1, 32:39-49, ...
+H									Machir			מָכִיר		H4353 (22) Gen 59:23, Num 26:29, 27:1, 32:39-49, ...
 H									Magog			מָגוֹג
 H									Mahlon			מַחְלוֹן		Ruth 1:2
 H									Malachi			מַלְאָכִי		Mal 1:1
@@ -270,7 +271,8 @@ wH									Melchi			מֶלֶךְ
 #H									Menna			?
 H									Mephibosheth			מֻפִיבשֶׁת		H4648 son of Yonathan (15) 2Sam 4:4, 9:6,10-13, ...
 H									Merab			מֵרָב		H4764 daughter of Saul (3) 1Sam 14:49, 18:17,19*
-H									Micah			מִיכָה		Mic 1:1
+wH									Mica			מִיכְא		H4316 (4) 2Sam 9:12, 1Chr 9:15, Neh 10:11, 11:22*
+H									Micah			מִיכָה		H4318 (33) Jdg 17:5,8-10,12, Mic 1:1, ...
 H									Micaiah			מִיכָהוּ		H4319 (2) Jdg 17:1,4*
 H									Michael			מִיכָאֵל
 H									Michal			מִיכָל		H4323 daughter of Saul (18) 1Sam 14:49, 18:20,27-28, ...
@@ -389,6 +391,7 @@ H									Uzziah			עֻזִּיָּה		Hos 1:1
 H									Uzziel			עֻזִּיאֵל		exo 6:18,22 Lev 10:4, Num 3:19,30, 4:42, 6:2,18, 7:7
 H									Zabdi			זַבְדִּי		(6) Josh 7:1,17-18, 1 Chr 8:19, 27:27, Neh 11:17*
 H									Zabulon			זְבוּלוּן
+# Note: because the first letter changes for the following names, we also include the English spelling
 dH									Zadok			צָדוֹק/(Zadok)
 dH									Zalmunna			צַלְמֻנָּע/(Zalmunna)		H6759 (12) Jdg 8:5-7,10,12,15,18,21, Psa 83:11*
 H									Zara			זֶרַח
@@ -403,7 +406,7 @@ H									Zechariah			זְכַרְיָה
 dH									Zephaniah			צְפַנְיָה/(Zephaniah)		Zeph 1:1
 dH									Zeruiah			צְרוּיָה/(Zeruiah)		H6870 (26) 1Sam 26:6, 2Sam 2:13,19, 3:39, ...
 H									Zerubbabel			זְרֻבָּבֶל		Hag 1:1
-# Note: because the first letter changes for the following names, we also include the English spelling
+dH									Ziba			צִיבָא/(Ziba)		H6717 (16) 2Sam 9:2-4,9-12, 16:1-4, ...
 dH									Zibeon			צִבְעוֹן/(Zibeon)		Gen 36:2,14
 dH									Zillah			צִלָּה/(Zillah)		Gen 4:19
 dH									Zipporah			צִפֹּרָה/(Zipporah)		(3) Exo 2:21, 4:25, 18:2*
@@ -615,7 +618,7 @@ H									Lehi			לֶחִי		H3896 (3) Jdg 15:9,14,19*
 H									Libnah			לִבְנָה		(18) Num 33:20-21, Josh 10:29,31-32,39, 12:15, 15:42, ...
 #H									Lydda			לֹד		Acts 9:32
 wH									Luz			לוּז		(8) Gen 28:19, 35:6, 48:3, 16:2, 18:13, Jdg 1:23,26*
-H									Machir			מָכִיר		(22) Gen 50:23, Num 26:29, 27:1, 32:39-40, 36:1, Deu 3:15, ...
+#H									Machir			מָכִיר		H4353 (22) Gen 50:23, Num 26:29, 27:1, 32:39-40, 36:1, Deu 3:15, ...
 H									Madon			מָדוֹן		(2) Josh 11:1, 12:19*
 H									Mahanaim			מַחֲנָיִם		H4266 (13) Gen 32:2, Josh 13:26,30, 21:38, 2Sam 2:8, ...
 H									Makkedah			מַקֵּדָה		(9) Josh 10:10,16-17,21,28-29, 12:16, 15:41*
