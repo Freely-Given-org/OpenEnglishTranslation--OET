@@ -45,8 +45,9 @@ short_OSHB_TSV := ../sourceTexts/rawOSHB/OSHB.parsedOriginal.flat.morphemes.tsv
 #=== Script declarations =======================
 
 python3_12 := python3.12
-python3_13 := ~/Downloads/Python-3.13.0b2/python
-Python := $(python3_12)
+python3_13 := python3.13
+python3_14 := ~/Downloads/Python-3.14.0a1/python
+Python := $(python3_13)
 
 SBE := ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py
 BTranslit := ../../BibleTransliterations/Python/BibleTransliterations.py
@@ -174,6 +175,18 @@ $(derived_VREFs): $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_USFM_to_VREF.py
 	@echo "\n\nFinally, just count our progress…\n"
 	@$(Python) count_completed_OET-RV_verses.py
 	@$(Python) --version
+
+
+#=== Partial stuff =======================
+
+
+check: $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
+	@echo "\n\nConnect OET-RV words to OET-LV word numbers…\n"
+	@$(Python) connect_OET-RV_words_via_OET-LV.py
+	@echo "\n\nFinally, just count our progress…\n"
+	@$(Python) count_completed_OET-RV_verses.py
+	@$(Python) --version
+
 
 #=== Clean up stuff =======================
 

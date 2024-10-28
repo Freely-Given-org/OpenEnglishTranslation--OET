@@ -65,7 +65,7 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2024-09-25' # by RJH
+LAST_MODIFIED_DATE = '2024-10-22' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.71'
@@ -965,6 +965,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Abijah','Abia'),('Abijah','Abia/ʼAvīāh'),
             ('Abimelek', 'ʼAⱱīmelek'),
             ('Abraham','Abraʼam'),('Abraham','Abraʼam/ʼAvrāhām'),
+            ('Abshalom', 'ʼAⱱīshālōm'),
             ('Adam','Adam'),('Adam','Adam/ʼĀdām'),
             ('Aharon', 'ʼAhₐron'),
             ('Aksah', 'ʼAchsah'),
@@ -1077,6 +1078,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Yericho', 'Yərīḩō'),
             ('Yeshua', 'Yaʸsous'),('Yeshua', 'Yaʸsous/Yəhōshūˊa'), ("Yeshua's", 'Yaʸsous'),("Yeshua's", 'Yaʸsous/Yəhōshūˊa'),
             ('Yito', 'Yitrō'),
+            ('Yoav', 'Yōʼāⱱ'),('Yoav', 'Yōʼāⱱ/Joab'),
             ('Yohan', 'Yōannaʸs'),
             ('Yoppa', 'Yoppaʸ'),
             ('Yordan', 'Yardēn'),('Yordan', 'Yordanaʸs'),('Yordan', 'Yordanaʸs/Yardēn'),
