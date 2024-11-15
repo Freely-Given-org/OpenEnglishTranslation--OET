@@ -45,6 +45,7 @@ CHANGELOG:
     2024-03-20 Create a word table as well as the morpheme table
     2024-03-27 Substitute KJB for KJV in 2000+ OSHB notes
     2024-04-26 Change 'you' to 'you_all' if morphology shows it's plural
+    2024-11-12 Make sure 'יָהּ' is Yah (not Yahweh)
 """
 from gettext import gettext as _
 # from typing import Dict, List, Tuple
@@ -61,16 +62,16 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2024-06-24' # by RJH
+LAST_MODIFIED_DATE = '2024-11-12' # by RJH
 SHORT_PROGRAM_NAME = "apply_Clear_Macula_OT_glosses"
 PROGRAM_NAME = "Apply Macula OT glosses"
-PROGRAM_VERSION = '0.69'
+PROGRAM_VERSION = '0.70'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
 
 
-OUR_TSV_INPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/our_WLC_glosses.morphemes.tsv' ) # In
+OUR_OWN_TSV_INPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/our_WLC_glosses.morphemes.tsv' ) # In
 LOWFAT_TSV_INPUT_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTrees.OT.morphemes.abbrev.tsv' ) # In, we use the smaller, abbreviated table
 
 OUR_MORPHEME_TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv' ) # Out
@@ -84,7 +85,7 @@ class State:
         """
         Constructor:
         """
-        self.our_TSV_input_filepath = OUR_TSV_INPUT_FILEPATH
+        self.our_own_TSV_input_filepath = OUR_OWN_TSV_INPUT_FILEPATH
         self.lowfat_TSV_input_folderpath = LOWFAT_TSV_INPUT_FILEPATH
 
         self.our_morpheme_TSV_output_filepath = OUR_MORPHEME_TSV_OUTPUT_FILEPATH
@@ -118,10 +119,10 @@ def main() -> None:
     global state
     state = State()
 
-    if loadOurSourceTable():
+    if loadOurOwnSourceTable():
         if loadOurLowFatTable():
             if fill_known_lowFat_English_contextual_glosses():
-                if do_yalls():
+                if do_yalls() and do_yahs():
                     if do_auto_reordering():
                         save_filled_morpheme_TSV_file()
                         save_lemma_TSV_file()
@@ -129,14 +130,14 @@ def main() -> None:
 # end of apply_Clear_Macula_OT_glosses.main
 
 
-def loadOurSourceTable() -> bool:
+def loadOurOwnSourceTable() -> bool:
     """
     Loads our expanded OSHB WLC table.
     """
     global WLC_tsv_column_headers
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading OSHB WLC tsv file from {state.our_TSV_input_filepath}…")
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading OSHB WLC tsv file from {state.our_own_TSV_input_filepath}…")
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_WLC_COLUMNS} columns…")
-    with open(state.our_TSV_input_filepath, 'rt', encoding='utf-8') as tsv_file:
+    with open(state.our_own_TSV_input_filepath, 'rt', encoding='utf-8') as tsv_file:
         tsv_lines = tsv_file.readlines()
 
     # Remove any BOM
@@ -200,7 +201,7 @@ def loadOurSourceTable() -> bool:
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Have {note_count:,} notes.")
 
     return True
-# end of apply_Clear_Macula_OT_glosses.loadOurSourceTable
+# end of apply_Clear_Macula_OT_glosses.loadOurOwnSourceTable
 
 
 def loadOurLowFatTable() -> bool:
@@ -506,6 +507,34 @@ def do_yalls() -> bool:
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  do_yalls() changed {num_fields_changed:,} fields in {num_rows_changed:,} table rows ({num_plurals:,} plurals and {num_duals:,} duals)." )
     return num_fields_changed > 0
 # end of apply_Clear_Macula_OT_glosses.do_yalls
+
+
+def do_yahs() -> bool:
+    """
+    Go through all our OT glosses and change 'Yahweh' to 'yah' where appropriate
+    """
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "\nFixing Hebrew 'yah's…" )
+
+    num_rows_changed = 0
+    for WLC_row_dict in state.WLC_rows:
+        if WLC_row_dict['NoCantillations'] == 'יָהּ':
+            print( f"    {WLC_row_dict['Ref']} {WLC_row_dict['RowType']} MG='{WLC_row_dict['MorphemeGloss']}' CMG='{WLC_row_dict['ContextualMorphemeGloss']}' WG='{WLC_row_dict['WordGloss']}' CWG='{WLC_row_dict['ContextualWordGloss']}'" )
+            assert WLC_row_dict['MorphemeGloss'] in ('','LORD')
+            assert not WLC_row_dict['ContextualMorphemeGloss']
+            assert WLC_row_dict['WordGloss'] in ('Yah','')
+            if WLC_row_dict['RowType'] in ('m','M'):
+                WLC_row_dict['MorphemeGloss'] = WLC_row_dict['ContextualMorphemeGloss'] = 'Yah'
+            else:
+                assert not WLC_row_dict['MorphemeGloss'] and not WLC_row_dict['ContextualMorphemeGloss']
+            WLC_row_dict['WordGloss'] = 'Yah'
+            WLC_row_dict['ContextualWordGloss'] = 'Yah' if not WLC_row_dict['ContextualWordGloss'] else WLC_row_dict['ContextualWordGloss'].replace( 'Yahweh', 'Yah' )
+            assert WLC_row_dict['ContextualWordGloss'] == 'Yah' or ('Yah' in WLC_row_dict['ContextualWordGloss'] and not 'Yahweh' in WLC_row_dict['ContextualWordGloss'])
+            print( f"              MG='{WLC_row_dict['MorphemeGloss']}' CMG='{WLC_row_dict['ContextualMorphemeGloss']}' WG='{WLC_row_dict['WordGloss']}' CWG='{WLC_row_dict['ContextualWordGloss']}'" )
+            num_rows_changed += 1
+
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  do_yahs() changed four fields in {num_rows_changed:,} table rows." )
+    return num_rows_changed > 0
+# end of apply_Clear_Macula_OT_glosses.do_yahs
 
 
 def do_auto_reordering() -> bool:

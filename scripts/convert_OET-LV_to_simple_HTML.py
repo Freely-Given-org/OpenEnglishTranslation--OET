@@ -926,8 +926,9 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
     book_html = book_html.replace( '\\nd ', '<span class="nominaSacra">' ).replace( '\\nd*', '</span>' ) \
                 .replace( '\\sup ', '<sup>' ).replace( '\\sup*', '</sup>' ) \
                 .replace( '\\untr ', '<span class="untr">' ).replace( '\\untr*', '</span>' ) # untranslated words
+    assert '\\add -' not in book_html
+    # .replace( '\\add ¿', '<span class="unusedArticle">' ) \
     book_html = book_html.replace( '\\add +', '<span class="addArticle">' ) \
-                .replace( '\\add -', '<span class="unusedArticle">' ) \
                 .replace( '\\add =', '<span class="addCopula">' ) \
                 .replace( '\\add <', '<span class="addDirectObject">' ) \
                 .replace( '\\add >', '<span class="addExtra">' ) \

@@ -89,9 +89,10 @@ def main():
                 vvESFMText = esfmFile.read() # We keep the original (for later comparison)
             adjText, wordDeleteCount = ESFMWordNumberRegex.subn( '', vvESFMText )
             esbCount = 0
+            assert '\\add ¿' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ¿"
             if VV == 'LV': # only expect + > = <
                 assert '\\add ?' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ?"
-                assert '\\add -' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED -"
+                assert '\\add -' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ¿"
                 assert '\\add ≡' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ≡"
                 assert '\\add &' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED &"
                 assert '\\add *' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED *"
@@ -102,7 +103,7 @@ def main():
             adjText = ( adjText
                             .replace( '\\add ?', '\\add ' ) # This one always comes first if there's two
                             .replace( '\\add +', '\\add ' )
-                            .replace( '\\add -', '\\add ' )
+                            .replace( '\\add ¿', '\\add ' )
                             .replace( '\\add =', '\\add ' )
                             .replace( '\\add <', '\\add ' )
                             .replace( '\\add >', '\\add ' )
@@ -116,7 +117,7 @@ def main():
                             .replace( '\\untr ', '' ).replace( '\\untr*', '' )
                         )
             if VV == 'LV': # remove LV specialised version of USFM \\add fields
-                adjText = adjText.replace( '\\add -\\add*', '' ) # Remove those added hyphens
+                adjText = adjText.replace( '\\add ¿\\add*', '' ) # Remove those added hyphens
             elif VV == 'RV':
                 adjText = ( adjText
                             .replace( "'", '’' ) # Convert apostrophes

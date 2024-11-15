@@ -65,10 +65,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2024-10-22' # by RJH
+LAST_MODIFIED_DATE = '2024-11-12' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.71'
+PROGRAM_VERSION = '0.72'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -1024,6 +1024,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Judas', 'Youdas'),
             ('Justus', 'Youstos'),
             ('Lazarus', 'Lazaros'),
+            ('Lebanon', 'Ləⱱānōn'),
             ('Levi', 'Leui'),('Levi', 'Leui/Lēvī'),('Levi','Lēvīh'),
             ('Lydda', 'Ludda'),('Lydda', 'Ludda/Lod'),
             ('Macedonia', 'Makedonia'),
@@ -1061,7 +1062,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Simeon', 'Shimˊōn'),
             ('Simon', 'Simōn'),
             ('Smyrna', 'Smurna'),
-            ('Solomon', 'Solomōn'),('Solomon', 'Solomōn/Shəlomih'),
+            ('Solomon', 'Solomōn'),('Solomon', 'Solomōn/Shəlomih'),('Solomon', 'Shəlomoh'),
             ('Tabitha', 'Tabaʸtha'),
             ('Tamar', 'Thamar'),('Tamar', 'Thamar/Tāmār'),
             ('Tarsus', 'Tarsos'),
@@ -1287,15 +1288,19 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
                         dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Adding NS on {word=} {line[match.start()-6:match.start()]=} {line[match.end():match.end()+6]=} {line=}" )
 
                 try:
-                    if line[match.end()] != '¦': # next character after word
+                    if line[match.end()] == '¦': # next character after word
+                        logging.warning( f"Tried to append second number to {BBB} {C}:{V} {marker} '{line[match.start():match.end()]}' -> '{word}¦{wordNumber}'" )
+                        # already_numbered_error
+                        return False
+                    elif line[match.end()] == "'": # next character after abbreviated word(s) like "they're"
+                        logging.critical( f"Tried to append number inside abbreviated word(s) {BBB} {C}:{V} {marker} '{line[match.start():match.end()]}' (from '{line[match.start():match.end()+5]}') -> '{word}¦{wordNumber}'" )
+                        # abbreviated_word_error
+                        return False
+                    else: # seems all ok
                         state.rvESFMLines[n] = f'''{line[:match.start()]}{ndStartMarker if addNominaSacra else ''}{word}¦{wordNumber}{ndEndMarker if addNominaSacra else ''}{line[match.end():]}'''
                         # print( f"{word=} {line=}" )
                         dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord() added ¦{wordNumber}{' and nomina sacra' if addNominaSacra else ''} to '{word}' in OET-RV {BBB} {c}:{v}" )
                         return True
-                    else:
-                        logging.warning( f"Tried to append second number to {BBB} {C}:{V} {marker} '{line[match.start():match.end()]}' -> '{word}¦{wordNumber}'" )
-                        # already_numbered
-                        return False
                 except IndexError: # if the word is at the END OF THE LINE
                     assert line.endswith( word )
                     state.rvESFMLines[n] = f'''{line[:-len(word)]}{ndStartMarker if addNominaSacra else ''}{word}¦{wordNumber}{ndEndMarker if addNominaSacra else ''}'''
