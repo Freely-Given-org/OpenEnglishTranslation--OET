@@ -1,4 +1,4 @@
-\id PSA - Open English Translation—Readers' Version (OET-RV) v0.0.05
+\id PSA - Open English Translation—Readers' Version (OET-RV) v0.0.08
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 PSA
@@ -1547,7 +1547,7 @@
 \c 30
 \s1 The praying for thanking
 \rem /s1 A Prayer of Thanksgiving; Thanksgiving for Recovery from Grave Illness
-\d A song by David for of peghalad of temple.
+\d A song by David for of dedication of temple.
 \rem /d A Psalm. A Song at the dedication of the temple. Of David.; A psalm (a song for the dedication of the temple): for David; A psalm of David, sung at the dedication of the Temple.; A psalm. A song. For the dedication of the temple. Of David.
 \q1
 \v 1 ◙
@@ -3399,7 +3399,7 @@
 \c 60
 \s1 The requesting of God
 \rem /s1 Prayer for National Victory after Defeat; A Prayer for Deliverance
-\d The song\f + \fr 60:0 \ft In Hebrew, “miktam” is perhaps the name of this class of song.\f* of David for of teaching, for the choir director. Written din this of migpakiggira he of me from-Aram-Naharaim and of me from-Aram-Suba, and of nakalibed e Huwab and nekeyimatey of 12,000 me from-Idum there to bangalug named of Asin. This is to be sung like singing of “Liryu of Pangguhuren.”
+\d The song\f + \fr 60:0 \ft In Hebrew, “miktam” is perhaps the name of this class of song.\f* of David for of teaching, for the choir director. Written din this of migpakiggira he of me from-Aram-Naharaim and of me from-Aram-Suba, and of nakalibed e Yoav and nekeyimatey of 12,000 me from-Idum there to bangalug named of Asin. This is to be sung like singing of “Liryu of Pangguhuren.”
 \rem /d For the director of music. To the tune of “The Lily of the Covenant.” A\it miktam\it* of David. For teaching. When he fought Aram Naharaim and Aram Zobah, and when Joab returned and struck down twelve thousand Edomites in the Valley of Salt.; For the choir director: A psalm of David useful for teaching, regarding the time David fought Aram-naharaim and Aram-zobah, and Joab returned and killed twelve thousand Edomites in the Valley of Salt. To be sung to the tune “Lily of the Testimony.”; To the leader: according to the Lily of the Covenant. A Miktam of David—for instruction—when he struggled with Aram-naharaim and with Aram-zobah, and when Joab on his return killed twelve thousand Edomites in the Valley of Salt.; For the leader: set to ‘The Lily of Testimony’: a miktam: for David: for instruction (when he fought against Aram-naharaim and Aram-zobah, and Joab returned and struck twelve thousand Edomites in the valley of Salt)
 \q1
 \v 1 ◙
@@ -3519,7 +3519,7 @@
 \c 63
 \s1 The peg-iman-iman of God
 \rem /s1 Comfort and Assurance in God's Presence; Longing for God
-\d A song by David of there he of wilderness there to Huda.
+\d A song by David of there he of wilderness there to Yehudah.
 \rem /d A psalm: for David (when he was in the wilderness of Judah); A psalm of David. When he was in the Desert of Judah.; A psalm of David, regarding a time when David was in the wilderness of Judah.; A Psalm of David, when he was in the Wilderness of Judah.
 \q1
 \v 1 ◙
@@ -7952,39 +7952,36 @@
 \q1 …
 \q2 …
 \c 121
-\s1 The Master God the shepherd
+\s1 Yahweh our protector
 \rem /s1 The Lord Our Protector; Assurance of God's Protection
-\d The song for of ascent there to Yerushalem.
-\rem /d A song for the ascent to Jerusalem.; A song of ascents.; A Song of Ascents.; A song of the ascents
+\d A song for climbing towards Yerushalem.
+\rem /d A song for the ascent to Jerusalem.; A song of ascents.; A Song of Ascents.; A song of the ascents.
 \q1
-\v 1 ◙
-\q2 …
+\v 1 I \add ≈look up towards\add* the hills.
+\q1 Where will my help¦266090 come¦266089 from?
 \q1
-\v 2 ◙
-\q2 …
+\v 2 My help comes from Yahweh
+\q2 who made heaven¦266096 and¦266097 earth¦266097.
 \b
 \q1
-\v 3 ◙
-\q2 …
+\v 3 May he not allow your \add #feet\add* to slip.
+\q1 May your protector \add ≈stay alert\add*.
 \b
 \q1
-\v 4 ◙
-\q1 …
-\q2 …
+\v 4 Listen, Israel's protector¦266115 doesn't doze or sleep¦266114.
 \q1
-\v 5 ◙
-\q1 …
+\v 5 Yahweh is your bodyguard.
+\q1 ≈Yahweh \add ≈is beside you to shelter you\add*.
 \q1
-\v 6 ◙
-\q2 …
+\v 6 \add Now\add* the sun¦266128 won't harm you¦266131 during the day¦266127,
+\q2 ≈or the moon¦266132 at night-time.
 \b
 \q1
-\v 7 ◙
-\q2 …
+\v 7 Yahweh will protect you¦266136 from all harm.
+\q1 ≈He will protect your¦266143 life¦266143.
 \q1
-\v 8 ◙
-\q2 …
-\q2 …
+\v 8 Yahweh will protect¦266146 your comings¦266149 and your goings¦266148
+\q2 \add both\add* now and then forever.
 \c 122
 \s1 The Yerushalem
 \rem /s1 In Praise of Jerusalem; Song of Praise and Prayer for Jerusalem
@@ -8425,17 +8422,17 @@
 \b
 \q1 …
 \c 136
-\s1 The songs of thanking
+\s1 A song of thankfulness
 \rem /s1 A Hymn of Thanksgiving; God's Work in Creation and in History
 \q1
-\v 1 \x + \xo 136:1: \xt 1Ch 16:34; 2Ch 5:13; 7:3; Ezr 3:11; Psa 100:5; 106:1; 107:1; 118:1; Jer 33:11.\x*◙
-\q2 …
+\v 1 Give thanks¦267288 to Yahweh, because he's good¦267292,\x + \xo 136:1: \xt 1Ch 16:34; 2Ch 5:13; 7:3; Ezr 3:11; Psa 100:5; 106:1; 107:1; 118:1; Jer 33:11.\x*
+\q1 because his loyal affection \add continues\add* forever¦267294.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 Give thanks¦267297 to the God¦267298 of gods,
+\q1 because his loyal affection \add continues\add* forever¦267301.
 \q1
-\v 3 ◙
-\q2 …
+\v 3 Give thanks¦267304 to the master¦267305 of masters¦267306,
+\q1 because his loyal affection \add continues\add* forever.
 \b
 \q1
 \v 4 ◙
@@ -8548,7 +8545,7 @@
 \v 9 ◙
 \q2 …
 \c 138
-\s1 The praying for thanking
+\s1 A prayer of thankfulness
 \rem /s1 A Prayer of Thanksgiving; Thanksgiving and Praise
 \d A song by David.
 \rem /d For David; A psalm of David.; Of David.
@@ -8575,21 +8572,21 @@
 \q2 …
 \b
 \q1
-\v 7 ◙
-\q2 …
-\q2 …
-\q2 …
+\v 7 Even when I'm walking \add ≈with danger all around me\add*,
+\q2 you will preserve¦267681 my life¦267681.
+\q1 You \add ≈actively oppose\add* the anger¦267683 of my enemies¦267684,
+\q2 and you save¦267688 me with your \add ≈intervention\add*.
 \q1
-\v 8 ◙
-\q2 …
-\q1 …
+\v 8 Yahweh will avenge¦267692 \add >them\add* for me.
+\q1 Your loyal affection \add continues\add* forever¦267696.
+\q1 You don't¦267699 abandon¦267701 the work \add ≈that you started\add*.
 \c 139
-\s1 The kumplitu wisdom and pegtanggu of God
+\s1 God's complete wisdom and caring
 \rem /s1 God's Complete Knowledge and Care; The Inescapable God
-\d A song by David for the choir director.
+\d One of David's songs for the choir director.
 \rem /d For the leader: for David: a psalm; For the director of music. Of David. A psalm.; To the leader. Of David. A Psalm.; For the choir director: A psalm of David.
 \q1
-\v 1 ◙
+\v 1 Yahweh, you have examined me, and¦267709 you know \add >me\add*.
 \q1
 \v 2 ◙
 \q2 …
@@ -9162,13 +9159,13 @@
 \s1 The song of praising
 \rem /s1 A Hymn of Praise; Praise for God's Goodness to Israel
 \q1
-\v 1 ◙
+\v 1 Praise Yahweh.
 \b
-\q1 …
-\q2 …
+\q1 Sing a new song to Yahweh.
+\q1 Praise him in the assembly¦269282 of the faithful¦269283 ones.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 Let Israel's \add people\add* be glad about the one who made them.
+\q1 ≈Let Tsiyyon'sacred¦147180/Zion's children¦269288 be glad about their¦269292 king¦269292.
 \q1
 \v 3 ◙
 \q2 …
@@ -9191,27 +9188,28 @@
 \b
 \q1 …
 \c 150
-\s1 Praise you/your(pl) the Master
+\s1 Praise Yahweh everyone
 \rem /s1 Praise for God's Surpassing Greatness; Praise the Lord!
 \q1
-\v 1 ◙
+\v 1 Praise Yahweh.
 \b
-\q1 …
-\q1 …
+\q1 Praise God¦269361 in his residence \add ≈of holiness\add*.
+\q1 ≈Praise him¦269363 \add ≈for his power\add* in heaven.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 Praise him for his powerful deeds.
+\q1 ≈Praise him because he's so influential.
 \b
 \q1
-\v 3 ◙
-\q2 …
+\v 3 Praise him with a trumpet blast.
+\q1 ≈Praise him with the ukelele and harp.
 \q1
-\v 4 ◙
-\q1 …
+\v 4 Praise him with tambourines¦269381 and dancing¦269382.
+\q1 ≈Praise him with stringed¦269384 instruments¦269385 and flutes.
 \q1
-\v 5 ◙
-\q2 …
-\q1
-\v 6 ◙
+\v 5 Praise him with vibrating cymbals.
+\q1 ≈Praise him with clanging cymbals.
 \b
-\q1 …
+\q1
+\v 6 Let everything that can breathe¦269396 praise Yahweh.
+\b
+\q1 Praise Yahweh.

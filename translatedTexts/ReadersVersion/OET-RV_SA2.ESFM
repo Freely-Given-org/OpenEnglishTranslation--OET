@@ -1,4 +1,4 @@
-\id 2SA - Open English Translation—Readers' Version (OET-RV) v0.0.23
+\id 2SA - Open English Translation—Readers' Version (OET-RV) v0.1.02
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 SA2
@@ -10,19 +10,19 @@
 \mt1 2 Shemuel
 \is1 Introduction
 \ip \bk Second Shemuel\bk* (commonly, but wrongly known as ‘Samuel’) is the continuation of \bk First Shemuel\bk*—the two parts together are considered a single ‘book’ in the Jewish Bible—it's only split into two because it was too long to fit on a single scroll.
-\ip This the story of David's reign: firstly he ruled of Yehudah there to south of east, (Chapter 1–4) and finally there e of entire nation, including Israel there to north of east (Chapter 5–24). Naay-ayaran of egguhud this story concerning if immenu of David of pegpakig-ehet of his enemies there to seled of nation and there to other nations so that widen the kingdom din and so that strengthen the kingdom din. Impahunsiling David one person large the faith and respecting of God, and know eg-angey of love of his people. But even pad due, fierce also he and andam doing of makaalat-halat sin so that accepted din the him himself desire and eg-im-imanen. But of impapitew e of Master God there him the sin din by means of prophet of Master God Natan, mig-inniyuhan din e the sins din and accepted/received din the sent by God punishment so that igpaneem-neem him.
-\ip The living and peace/prosperity became of David, very planted there to heart and thinking of Hebrews. Therefore of time miggingumaan of mangune-kune difficulty the nation, and of time egkeupian e again them of different King, is their desire the person child of David, if us pa, descendants of David like just indeed him.
+\ip This the story of David's reign: firstly he ruled what became known as ‘Yehudah’ (Judah) in the south east (chapters 1–4), and eventually, the entire nation, including the much larger area of Israel in the north east (Chapter 5–24). This document explains how David dealth with his enemies within the country, as well as battling with other nations in order to widen and strengthen his kingdom. David's faith and respect of God is demonstrated here, as well as his love for the people. However, despite that, he was also fierce and he was quite capable of disobeying God to get what he wanted. But God sees everything and seen his prophet Natan (Nathan) with a parable to show David his selfishness. David asked for forgiven for his sin and accepted the punishment that God gave him.
+\ip The times of peace and prosperity through the latter parts of David's rule were planted in the minds of the Hebrew people, and in the future when they faced difficulties, they would long for another king like David—a son (better ‘a descendant’) of David who would love God like him.
 \iot Main components of this account
 \io1 The kingdom of David in Yehudah \ior 1:1–4:12\ior*
 \io1 The kingdom of David over all Israel \ior 5:1–24:25\ior*
-\io2 a. The first years \ior 5:1–10:19\ior*
-\io2 b. David takes Uriya's wife \ior 11:1–12:25\ior*
+\io2 a. The early years \ior 5:1–10:19\ior*
+\io2 b. David takes Uriyyah's wife \ior 11:1–12:25\ior*
 \io2 c. The battles and the difficulties \ior 12:26–20:26\ior*
 \io2 d. The later years \ior 21:1–24:25\ior*
 \rem This is still a very early look into the unfinished text of the \em Open English Translation\em* of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
-\s1 The announcement to David died e Saul
+\s1 David learns about Sha'ul's death
 \rem /s1 David Learns of Saul's Death; David Mourns for Saul and Jonathan; David installed as king; David Hears of Saul's Death
 \p
 \v 1 \add ≈After\add* David¦141765 returned¦141766 from \add ≈slaughtering\add* the Amalekites¦141770, he stayed in Tsiklag¦141773 for two¦141775 days¦141774. (\add King\add* Sha'ul¦141764 \add ≈was dead by this time\add*.)
@@ -154,7 +154,7 @@
 \p
 \v 30 \add ≈When\add* Yoav¦142790 had assembled them all \add and counted them, only\add* Asahel and nineteen others had been killed in the battle,
 \v 31 \add ≈although\add* \add *they\add* had killed 360 of Abner's Benyamite \add ≈warriors\add*.
-\v 32 They \add ≈retrieved Asahel's body\add* and buried¦142828 it in his father's¦142830 tomb¦142829 in Bethlehem. Then¦142824 \add *they\add* walked all night¦142837 and got \add back\add* to Hebron \add ≈at first\add* light.
+\v 32 They \add ≈retrieved Asahel's body\add* and buried¦142828 it in his father's¦142830 tomb¦142829 in Beyt-Lehem. Then¦142824 \add *they\add* walked all night¦142837 and got \add back\add* to Hebron \add ≈at first\add* light.
 \c 3
 \rem /s1 Abner Defects to David
 \p
@@ -264,7 +264,7 @@
 \v 12 David¦144200 knew¦144199 that Yahweh had established¦144203 him¦144203 as king¦144205 over \add all\add* Israel and¦144209 that he¦144210 \add ≈was prospering\add* the kingdom¦144211 for the sake of his people¦144213 the Israelis.
 \p
 \v 13 \add ≈After David¦144218 moved from Hebron to\add* Yerushalem, he¦144224 \add ≈married more wives and took¦144217 more slave-wives, all of whom produced more sons¦144231 and daughters¦144232 for him\add*.
-\v 14 The names¦144235 of his sons who were born in Yerushalem were Shammua¦144239, Shobab, Natan \add (Nathan)\add*, Shelomoh \add (Solomon)\add*,
+\v 14 The names¦144235 of his sons who were born in Yerushalem were Shammua¦144239, Shobab, Natan \add (Nathan)\add*, Shelomoh \add (Solomon¦144242)\add*,
 \v 15 Ibhar, Elishua, Nefeg¦144246, Yafia,
 \v 16 Elishama, Eliada, and Elifelet.
 \s1 Defeated by David the Philistines
@@ -388,8 +388,8 @@
 \p
 \v 15 \add ≈So¦145705\add* David¦145706 \add ≈reigned¦145705\add* over all Israel and \add ≈led all his people¦145719 with\add* justice¦145715 and \add ≈integrity\add*.
 \v 16 Tseruyah's son Yoav¦145721 was the army \add ≈commander\add* and¦145728 Ahilud's son Yehoshafat was the secretary.
-\v 17 The priests¦145742 were Ahitub's son Tsadok and Abiatar's son Ahimelek, and Serayah was secretary¦145744.
-\v 18 Yehoida's son Benayah \add supervised\add* the Keretites and the Peletites \add (David's bodyguard)\add*, and David's sons¦145752 were \add his\add* \add ≈administrators\add*.
+\v 17 The priests¦145742 were Ahitub's son Tsadok and Evyatar's son Ahimelek, and Serayah was secretary¦145744.
+\v 18 Yehoyada's son Benayah \add supervised\add* the Keretites and the Peletites \add (David's bodyguard)\add*, and David's sons¦145752 were \add his\add* \add ≈administrators\add*.
 \c 9
 \s1 David assists Mefiboshet
 \rem /s1 David and Mephibosheth; David's Kindness to Mephibosheth
@@ -534,7 +534,7 @@
 \v 24 Then David¦147443 comforted¦147442 his wife Batsheva.
 \s1 The birth of Shelomoh
 \rem /s1 Solomon Is Born
-\p Then \add @David\add* went¦147449 to \add @Batsheva\add* and \add ≈slept\add* with her, and \add in due course\add* she \add ≈gave¦147453 birth¦147453\add* to a son. \add @David\add* he named him¦147462 Shelomoh, and Yahweh loved¦147462 \add @that boy\add*
+\p Then \add @David\add* went¦147449 to \add @Batsheva\add* and \add ≈slept\add* with her, and \add in due course\add* she \add ≈gave¦147453 birth¦147453\add* to a son. \add @David\add* he named him¦147462 Shelomoh \add (Solomon¦147460)\add*, and Yahweh loved¦147462 \add @that boy\add*
 \v 25 and sent¦147464 the prophet¦147467 Natan to name him Yedidyah\f + \fr 12:25 \ft That name didn't seem to stick because this is the only mention of it in the Bible.\f* \add (which means ‘loved by Yahweh’)\add* for Yahweh's sake.
 \s1 David captures Rabbah
 \rem /s1 The Ammonites Crushed; David Captures Rabbah
@@ -707,12 +707,12 @@
 \v 22 “\add Ok,\add* go \add ≈ahead then\add*,” David told Ittai. \add ≈So¦149598\add* Ittai and all his men¦149610 and \add ≈their families went with David\add*.
 \v 23 \add ≈All the people along the road cried when they saw them walking by\add*. The king¦149627 and all the others crossed the Kidron¦149630 riverbed and went up the hill toward the wilderness¦149642.
 \p
-\v 24 \add ≈What a sight!\add* Even Tsadok and all the Levites¦149650 with him were carrying¦149652 the box¦149655 with God's agreement \add in it\add*, and when they put it down \add again\add*, \add the priest\add* Abiatar caught up \add to them and waited\add* until¦149665 all the people¦149670 had finished¦149667 \add exiting\add* the city¦149674.
+\v 24 \add ≈What a sight!\add* Even Tsadok and all the Levites¦149650 with him were carrying¦149652 the box¦149655 with God's agreement \add in it\add*, and when they put it down \add again\add*, \add the priest\add* Evyatar caught up \add to them and waited\add* until¦149665 all the people¦149670 had finished¦149667 \add exiting\add* the city¦149674.
 \v 25 \add ≈But¦149676\add* the king¦149677 told Tsadok, “\add ≈Take the sacred chest¦149682 back into\add* the city¦149684. If Yahweh favours¦149688 me, then he'll \add ≈help\add* me return, and he'll \add ≈let\add* me see¦149692 it and his \add ≈place¦149696 of residence\add* \add again\add*.
 \v 26 \add ≈But¦149698\add* if \add @Yahweh\add* says that he isn't pleased with me, then he'll do to me \add ≈whatever he thinks best\add*.
-\v 27 \add ≈Aren't you a prophet\add*? Return to the city¦149722 in peace¦149723, along with your son Ahimaats and Abiatar's son Yonatan.
+\v 27 \add ≈Aren't you a prophet\add*? Return to the city¦149722 in peace¦149723, along with your son Ahimaats and Evyatar's son Yonatan.
 \v 28 Listen, I'll wait at the fords¦149737 in the wilderness¦149739 until¦149740 \add ≈I get your message¦149742\add*.”
-\v 29 \add ≈So¦149747\add* Tsadok and Abiatar \add ≈carried the sacred chest¦149752\add* back to Yerushalem, then they¦149755 remained there¦149756.
+\v 29 \add ≈So¦149747\add* Tsadok and Evyatar \add ≈carried the sacred chest¦149752\add* back to Yerushalem, then they¦149755 remained there¦149756.
 \p
 \v 30 \add ≈As\add* David¦149758 was going up the Mount of Olives, he was walking¦149769 barefoot¦149770 with his head covered. He was weeping as were the people¦149773 with him—they \add too\add* had their heads covered and were weeping.
 \v 31 David¦149784 \add ≈knew\add* that Ahitofel was among the people conspiring¦149788 with Abshalom¦149791, \add ≈so\add* \add *he\add* \add ≈prayed\add*, “Please, Yahweh, make Ahitofel \add ≈give foolish¦149794 advice\add*.”
@@ -721,8 +721,8 @@
 \v 32 \add ≈When\add* David¦149804 \add ≈reached the summit¦149808\add* (where¦149809 people \add frequently\add* worship God¦149813), Hushay (the Arkite) met him¦149815 there¦149812. He had torn his clothes and put dirt on his head.
 \v 33 David¦149827 told him, “If you \add ≈come\add* with me, you'll be a burden¦149833 to me,
 \v 34 \add ≈but\add* if you return¦149838 to the city¦149837 and tell Abshalom¦149840, ‘I'm your servant, \add ≈my\add* king¦149844. I was your father's servant \add ≈in the past, but\add* now I'll be your servant,’ then you'll \add be able to oppose\add* Ahitofel's counsel¦149856 for me.
-\v 35 The priests Tsadok and Abiatar \add ≈are already\add* there¦149861, \add ≈so tell\add* \add *them\add* \add ≈everything¦149866 you hear in the palace\add*.
-\v 36 \add Also\add* Tsadok's son Ahimaats and Abiatar's son Yonatan are there¦149880. \add ≈Tell them everything¦149891\add* you¦149895 hear¦149895, then send¦149888 \add ≈them to report it to me\add*.
+\v 35 The priests Tsadok and Evyatar \add ≈are already\add* there¦149861, \add ≈so tell\add* \add *them\add* \add ≈everything¦149866 you hear in the palace\add*.
+\v 36 \add Also\add* Tsadok's son Ahimaats and Evyatar's son Yonatan are there¦149880. \add ≈Tell them everything¦149891\add* you¦149895 hear¦149895, then send¦149888 \add ≈them to report it to me\add*.
 \p
 \v 37 \add ≈So¦149897\add* David's friend¦149899 Hushay \add ≈slipped back into\add* Yerushalem \add ≈just as\add* Abshalom¦149902 was entering the city¦149901.
 \c 16
@@ -757,7 +757,7 @@
 \rem /s1 The Advice of Hushai and Ahithophel; The Counsel of Ahithophel; Absalom in Jerusalem; Ahithophel Advises Absalom
 \p
 \v 15 \add Meanwhile,\add* Abshalom¦150219 and \add ≈all his followers\add* arrived in Yerushalem, and Ahitofel was among \add #them\add*.
-\v 16 \add ≈When\add* David’s friend¦150236 Hushay (the Arkite) came to Abshalom¦150240, he \add ≈greeted\add* \add *him\add*, “May the king live. May the king live.”
+\v 16 \add ≈When\add* David's friend¦150236 Hushay (the Arkite) came to Abshalom¦150240, he \add ≈greeted\add* \add *him\add*, “May the king live. May the king live.”
 \p
 \v 17 “Is \add ≈that how you show\add* kindness to your friend \add David\add*?” Abshalom¦150252 \add ≈responded¦150251\add*. “Why didn't you go with \add *him\add*?”
 \p
@@ -795,7 +795,7 @@
 \s1 The warning to David to flee
 \rem /s1 David Is Warned and Escapes; Hushai Warns David to Escape
 \p
-\v 15 Then Hushay told the \add two\add* priests¦150719 Tsadok and Abiatar what Ahitofel had suggested to Abshalom¦150726 and the Israeli elders¦150728 and \add ≈what he'd countered it with\add*.
+\v 15 Then Hushay told the \add two\add* priests¦150719 Tsadok and Evyatar what Ahitofel had suggested to Abshalom¦150726 and the Israeli elders¦150728 and \add ≈what he'd countered it with\add*.
 \v 16 Then¦150735 \add ≈he told them\add*, “\add ≈Get that message to\add* David¦150739 quickly¦150737. \add Tell him\add* not to \add ≈overnight\add* at the fords¦150745 in the wilderness¦150746, but to cross over otherwise he'll be killed \add ≈along with everyone¦150755 else\add* with him.”
 \p
 \v 17 \add Their sons\add* Yonatan and Ahimaats were waiting at Eyn-Rogel \add ≈where\add* a female servant¦150766 would come and \add ≈pass the message onto\add* them, because it \add ≈wouldn't be safe for them\add* to be seen¦150777 entering¦150778 the city¦150779. Then¦150759 they themselves would go¦150765 and inform King David¦150773.
@@ -904,7 +904,7 @@
 \v 9 and \add ≈over time\add*, people \add ≈all across\add* Israel began to quarrel and say, “The king rescued us from the \add ≈plans\add* of our enemies \add ≈including\add* the Philistines, but now he's \add ≈left Israel\add* and fled away from Abshalom.
 \v 10 We anointed Abshalom¦152014 to be over us, but he died in the battle. So why \add ≈aren't we doing something\add* about returning \add David as\add* king¦151999?”
 \p
-\v 11 \add ≈So\add* King David sent the \add two\add* priests Tsadok and Abiatar to the leaders of Yehudah \add ≈to ask\add*, “Why are you the last \add >group\add* to return the king to \add ≈the palace since the king has heard that the rest of Israel want it\add*?
+\v 11 \add ≈So\add* King David sent the \add two\add* priests Tsadok and Evyatar to the leaders of Yehudah \add ≈to ask\add*, “Why are you the last \add >group\add* to return the king to \add ≈the palace since the king has heard that the rest of Israel want it\add*?
 \v 12 \add Tell them,\add* ‘You're all my relatives—my own flesh and blood, \add ≈so\add* why \add would\add* you¦152052 be the last to \add ≈support me\add* \add again\add*?’ ”
 \v 13 And tell Amasa, ‘Aren't you my \add own\add* flesh¦152077 and bone? May God \add ≈make me suffer\add* if you don't become my army commander \add ≈from now on, to replace\add* Yoav.’ ”
 \v 14 \add In that way,\add* \add @David\add* \add ≈united all the people\add* of Yehudah and they \add ≈notified\add* the king, “\add We all want\add* you and all your servants to return \add here\add*.”
@@ -1006,373 +1006,381 @@
 \s1 David's officials
 \rem /s1 David's Officials; Stories of David's reign
 \p
-\v 23 \add ≈Now\add* Yoav¦153358 was over the entire¦153360 Israeli army, and Benayah (Yehoida's son) was over the \add ≈kings bodyguards\add*.
+\v 23 \add ≈Now\add* Yoav¦153358 was over the entire¦153360 Israeli army, and Benayah (Yehoyada's son) was over the \add ≈kings bodyguards\add*.
 \v 24 Adoniram\f + \fr 20:24 \ft ‘Adoram’ is a shortened form of his name.\f* was over the forced¦153379 labor, and Ahilud's son Yehoshafat was the secretary and
-\v 25 Sheva¦153386 was the scribe. Tsadok and Abiatar were the priests¦153391,
+\v 25 Sheva¦153386 was the scribe. Tsadok and Evyatar were the priests¦153391,
 \v 26 and Ira (the Yairite) was David's priest¦153397.
 \c 21
-\s1 The revenge of from-Gibyun of descendants of Saul
+\s1 The Gibeonites' claim on Sha'ul's descendants
 \rem /s1 The Gibeonites Avenged; David Avenges the Gibeonites; Saul's Descendants Are Put to Death
 \p
-\v 1 \add ≈During David's reign\add*, there was a three-year famine. David inquired from Yahweh who said, “Sha'ul \add ≈and his family have blood on their hands\add*, because he killed the Gibeonites.”
-\v 2 \x + \xo 21:2: \xt Josh 9:3-15.\x*◙
-\v 3 ◙
+\v 1 \add ≈During David's reign\add*, there was a three-year famine¦153402. David inquired from Yahweh who said¦153417, “Sha'ul¦153421 \add ≈and his family have blood¦153425 on their hands\add*, because¦153419 he killed the Gibeonites.”
+\v 2 (The Gibeonites were not \add ≈native Israelis\add*, but were a remnant¦153448 of the Amorites. The Israelis had \add ≈promised to protect them\add*, but Sha'ul¦153455 had attempted to \add ≈eliminate\add* them in his zeal for the people¦153458 of Israel and Yehudah.) \add ≈So¦153435\add* the king¦153436 summoned the Gibeonites and \add ≈asked\add* them,\x + \xo 21:2: \xt Josh 9:3-15.\x*
+\v 3 “What can I do for all of you? How can I \add ≈remedy\add* \add what was done in the past\add* so that you all would bless¦153473 Yahweh's \add ≈people\add*?”
 \p
-\v 4 ◙
-\p …
+\v 4 “\add ≈We have no claim\add* to gold¦153487 or silver¦153486 from Sha'ul¦153490 or his household¦153493,” the Gibeonites \add ≈replied\add*, “And \add ≈we don't¦153482 wish to have anyone\add* in Israel put to death.”
+\p “Then¦153479 what are you saying¦153504 that I can do for you all?” he \add ≈asked\add*.
 \p
-\v 5 ◙
-\v 6 ◙
-\p …
+\v 5 “That man¦153512 who \add ≈crushed\add* us,” they¦153508 \add ≈replied\add*, “and¦153515 who intended \add ≈that we¦153519 be annihilated from within\add* Israel's borders,
+\v 6 give us seven¦153530 \add ≈of his descendants\add* and we'll hang them before Yahweh in Gibeah \add ?≈where Yahweh's chosen¦153537 king Sha'ul¦153536 lived\add*.
+\p “\add Okay\add*, I'll give them to you,” the king \add ≈responded¦153540\add*.
 \p
-\v 7 \x + \xo 21:7: \xt 1Sam 20:15-17; 2Sam 9:1-7.\x*◙
-\v 8 \x + \xo 21:8: \xt 1Sam 18:19.\x*◙
-\v 9 ◙
+\v 7 \add ≈However\add*, the king¦153546 \add ≈spared¦153545\add* Yonatan's son (and Sha'ul's grandson) Mefiboshet because of the promises that he and Yonatan \add ≈had made to each other before\add* Yahweh.\x + \xo 21:7: \xt 1Sam 20:15-17; 2Sam 9:1-7.\x*
+\v 8 \add ≈Instead\add* \add *he\add* took two of the sons (Armoni and Mefiboshet) of Ritsfah (Ayyah's daughter \add ≈and one of Sha'ul's slave-wives\add*), as well as five sons of Sha'ul's daughter Michal, that she'd bore to Adriel (the son of Barzillai¦153604, the Meholatite).\x + \xo 21:8: \xt 1Sam 18:19.\x*
+\v 9 He \add ≈handed them over to\add* the Gibeonites, and they hung them on a hill \add ≈before\add* Yahweh, and the seven of them \add ≈died\add* together¦153617. \add ≈This happended at\add* the beginning of the barley¦153628 harvest.
 \p
-\v 10 ◙
+\v 10 Then¦153630 Ayyah's daughter¦153632 Ritsfah took sackcloth¦153637 and she spread¦153638 it on the rock \add where the corpses were\add*. She \add ≈kept the birds away during the\add* day and the animals¦153663 at night¦153665—\add ≈staying there\add* from the beginning of the harvest¦153644 until¦153645 \add ≈the beginning of the rainy season\add*.
 \p
-\v 11 ◙
-\v 12 \x + \xo 21:12: \xt 1Sam 31:8-13.\x*◙
-\v 13 ◙
-\v 14 ◙
-\s1 The war of Philistines to David
+\v 11 \add ≈David¦153668 was told\add* what Ritsfah had done,
+\v 12 and \add *he\add* went¦153680 and got the bones of Sha'ul and his son Yonatan from the \add ≈leaders\add* of Yabesh-Gilead, who had stolen¦153697 them from the square¦153699 of Beyt-Shan where¦153703 the Philistines had hung them there on the day¦153709 the Philistines had \add ≈defeated\add* Sha'ul at Gilboa¦153715.\x + \xo 21:12: \xt 1Sam 31:8-13.\x*
+\v 13 \add @David\add* took Sha'ul¦153722 and Yonatan's bones along with the bones of the \add seven\add* \add ≈men\add* who'd been hung,
+\v 14 and \add @his men\add* buried¦153734 \add *them\add* in the tomb¦153746 of Sha'ul's father¦153748 Kish in Zela (in the Benyamite region), doing everything that the king¦153754 had commanded¦153753. After that, God¦153756 \add ≈answered their prayers\add* for the \add ≈country\add*.
+\s1 Battles against Philistine giants
 \rem /s1 Wars Against the Philistines; Battles against Philistine Giants; Exploits of David's Men
 \r (1 Chr. 20:4-8)
 \p
-\v 15 ◙
-\v 16 ◙
-\v 17 \x + \xo 21:17: \xt 1Ki 11:36; Psa 132:17.\x*◙
+\v 15 The Philistines¦153767 started attacking Israel again¦153765, and David and his men went down \add towards the coast\add* and fought¦153775 \add ≈back\add*, but David \add ≈became¦153763 exhausted\add*.
+\v 16 \add The Philistines had a champion\add* named Yishbi-Benov who was a descendant¦153787 of giants¦153788. He wore new \add armour\add* and his bronze¦153794 spear¦153790 \add ≈weighed¦153789 over three¦153791 kilograms\add*. He \add ≈intended\add* to kill¦153799 David¦153802
+\v 17 \add ≈but\add* Tseruyah's son Abishai helped \add @David\add*, and he struck the Philistine¦153814 and killed¦153815 him. Then¦153804, David's men¦153818 \add ≈made a decision\add*, saying, “You won't go¦153825 out to battle¦153828 with us anymore \add ≈because we don't¦153823 want\add* Israel's lamp to be extinguished¦153830.”\x + \xo 21:17: \xt 1Ki 11:36; Psa 132:17.\x*
 \p
-\v 18 ◙
+\v 18 \add Some time\add* after¦153838 that, there \add ≈was another battle¦153844\add* with the Philistines¦153848 at Gov, and Sibbecai (the Hushathite) \add ≈killed\add* Saph who was \add ≈another descendant¦153857\add* of the giants¦153858.
 \p
-\v 19 ◙
+\v 19 Then in \add another\add* battle¦153864 with the Philistines¦153868 at Gov, Elhanan (son of Yaare-Oregim, from Beyt-Lehem) \add ≈killed¦153869\add* Goliath the Gittite¦153880 \add ≈even though\add* his spear¦153882 \add ≈handle\add* was like a weaver's¦153884 beam.
 \p
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
+\v 20 In a \add ≈different\add* battle¦153890 in Gat, there was a \add ≈fierce man¦153894\add* there with \add ≈six fingers¦153897 on each hand¦153898 and six toes on each foot¦153900\add* who was also a descendant of the giants¦153910,
+\v 21 \add ≈but when\add* he taunted¦153912 Israel, Yonatan (son of David's brother¦153922 Shimeah) \add ≈killed¦153916\add* him.
+\v 22 Those four¦153927 \add >men\add* were descendants of the giants¦153930 in Gat, \add ≈but\add* they¦153929 were \add ≈killed\add* by David¦153935 and his \add ≈men\add*.
 \c 22
-\s1 The singing of David concerning the victory
+\s1 David's song of praise
 \rem /s1 Songs of David; David's Song of Victory; David's Song of Praise; David's Song of Thanksgiving
 \r (Psa. 18)
 \p
-\v 1 ◙
+\v 1 Then after Yahweh had rescued David from Sha'ul¦153957 and all his enemies¦153955, David \add ≈sang this song\add* for Yahweh,
 \q1
-\v 2 ◙
-\q2 …
+\v 2 “Yahweh¦153960 is my rock¦153961 and my fortress¦153962
+\q1 and \add ≈the one who rescues me\add*, \add yes,\add* even me.
 \q1
-\v 3 ◙
-\q2 …
-\q2 …
-\q1 …
+\v 3 God¦153967 of my rock¦153968—I¦153969 \add ≈find safety\add* in him,
+\q1 ≈my shield¦153972 and \add ≈my powerful saviour\add*,
+\q1 my \add ≈high fort\add* and my refuge,
+\q1 ≈my saviour—you save¦153979 me from violence¦153978.
 \q1
-\v 4 ◙
-\q2 …
-\q1 …
+\v 4 I call out to Yahweh who \add deserves\add* to be praised¦153981.
+\q1 I was kept safe from my enemies¦153984.
 \b
 \q1
-\v 5 ◙
-\q1 …
+\v 5 Death \add ≈was enveloping me like a wave\add*.
+\q1 ≈Torrents of worthlessness¦153993 were overwhelming¦153994 me.
 \q1
-\v 6 ◙
-\q2 …
+\v 6 Sheol's ropes \add ≈tightened around me\add*.
+\q1 ≈Deadly traps confronted¦153999 me.
 \q1
-\v 7 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 7 In my distress¦154004 I called to Yahweh,
+\q1 ≈and to my God¦154011 I called out.
+\q1 He listened¦154013 to my voice from his temple¦154014,
+\q1 ≈and \add ≈he heard\add* my cry¦154016 for help¦154016.
 \b
 \q1
-\v 8 ◙
-\q2 …
-\q1 …
+\v 8 The earth¦154024 reeled and it shook.
+\q1 ≈The foundations¦154025 of the heavens¦154026 trembled¦154027,
+\q2 and they shook because \add ≈because he became angry\add*.
 \q1
-\v 9 ◙
-\q2 …
-\q2 …
+\v 9 Smoke went¦154034 up from his nose,
+\q1 ≈and burning coals¦154040 and fire¦154037 from his mouth¦154038.
 \q1
-\v 10 ◙
-\q1 …
+\v 10 He stretched out the heavens¦154045,
+\q1 then he came¦154046 down and \add ≈it was dark below him\add*.
 \q1
-\v 11 ◙
-\q2 …
+\v 11 He rode on a \add ≈winged creature\add*, and he flew.
+\q1 \add Yes,\add* he was seen¦154056 on the wings¦154059 of the wind¦154061.
 \q1
-\v 12 ◙
+\v 12 He placed darkness¦154064 all around¦154065 him¦154065 as a covering—
+\q1 a \add ≈collection\add* of dark clouds \add ≈holding water¦154069 in them\add*.
 \q1
-\v 13 ◙
-\q2 …
+\v 13 From the brightness¦154073 in front of him¦154074,
+\q2 coals¦154076 of fire¦154078 burned¦154075.
 \b
 \q1
-\v 14 ◙
-\q2 …
+\v 14 Yahweh thundered¦154080 from the sky.
+\q1 ≈The most high¦154085 \add >God\add* \add ≈made his voice¦154087 known\add*.
 \q1
-\v 15 ◙
-\q2 …
+\v 15 He sent out arrows¦154090, and he scattered¦154091 them.
+\q1 ≈\add ≡He sent out\add* lightning¦154092, and he confused them.
 \q1
-\v 16 ◙
-\q2 …
+\v 16 The channels¦154097 of the sea¦154098 \add ≈became visible\add*.
+\q1 ≈The foundations¦154100 of the world¦154101 were uncovered¦154099
+\q2 at Yahweh's rebuke¦154102,
+\q2 from the \add ≈blast¦154104 from his nostrils¦154106\add*.
 \q1
-\v 17 ◙
-\q2 …
+\v 17 He \add ≈reached down from above and picked me up\add*.
+\q1 ≈He \add ≈pulled me up out of the surging waters¦154112\add*.
 \q1
-\v 18 ◙
-\q2 …
+\v 18 He rescued me from my powerful enemy¦154116—
+\q2 from the people who hated¦154118 me—
+\q1 because they¦154120 were stronger¦154120 than me.
 \q1
-\v 19 ◙
-\q2 …
+\v 19 They \add ≈confronted\add* me \add ≈when I was experiencing difficulties\add*,
+\q2 but Yahweh supported¦154128 me.
 \q1
-\v 20 ◙
-\q2 …
+\v 20 He brought¦154131 me out into a wide area.
+\q1 He rescued¦154134 me because he¦154137 was pleased with me.
 \b
 \q1
-\v 21 ◙
-\q2 …
+\v 21 Yahweh has rewarded me \add ≈because of my obedience\add*.
+\q1 ≈He's repaid¦154145 me because \add ≈my hands¦154144 were clean¦154143\add*,
 \q1
-\v 22 ◙
-\q2 …
+\v 22 because I've followed Yahweh's paths,
+\q1 ≈and¦154152 I haven't acted¦154153 wickedly¦154153 \add by turning\add* away from my God¦154154.
 \q1
-\v 23 ◙
-\q2 …
+\v 23 \add ≈I'm aware of\add* all his regulations,
+\q1 ≈and¦154162 I haven't turned away from his decrees.
 \q1
-\v 24 ◙
-\q2 …
+\v 24 \add ≈I've done nothing that he can accuse me of\add*,
+\q1 ≈and¦154171 I've \add ≈stopped myself when I wanted to disobey\add*.
 \q1
-\v 25 ◙
-\q2 …
+\v 25 Yahweh¦154175 \add ≈rewarded me for my obedience\add*,
+\q1 \add ≈because he saw my innocence\add*.
 \b
 \q1
-\v 26 ◙
-\q2 …
+\v 26 With a faithful person, you show yourself faithful.
+\q1 ≈with a blameless \add ≈warrior\add*, you prove yourself blameless.
 \q1
-\v 27 ◙
-\q2 …
+\v 27 With \add someone\add* who purifies¦154194 themself, you show yourself pure,
+\q1 ^\add ≈but\add* you show yourself deceptive to a crooked \add >person\add*.
 \q1
-\v 28 ◙
-\q2 …
+\v 28 You save¦154205 afflicted¦154204 people¦154203,
+\q1 ^but \add ≈you dislike\add* the proud—you bring¦154210 \add them\add* down.
 \b
 \q1
-\v 29 ◙
-\q2 …
+\v 29 For you¦154214 are my lamp, Yahweh,
+\q1 ≈and¦154217 \add *you\add* lighten my darkness¦154219.
 \q1
-\v 30 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 30 For by you¦154222, I can charge against a troop of warriors.
+\q1 ≈With my God's \add help\add* I can leap over a \add city\add* wall.
 \b
 \q1
-\v 31 ◙
-\q1 …
-\q1 …
-\q2 …
+\v 31 God's path is perfect.
+\q1 ≈Yahweh's message¦154233 is \add ≈tried and tested\add*.
+\q1 ≥He \add ≈keeps everyone safe who requests his protection\add*.
 \q1
-\v 32 ◙
-\q2 …
+\v 32 Who could be God other than Yahweh?
+\q1 ≈And who is a rock¦154249 apart from our¦154251 God?
 \q1
-\v 33 ◙
-\q2 …
+\v 33 This God¦154253 is my strong fortress,
+\q1 and¦154256 he \add ≈keeps my pathways cleared\add*.
 \q1
-\v 34 \x + \xo 22:34: \xt Hab 3:19.\x*◙
-\q2 …
+\v 34 The one who makes my feet¦154262 \add nimble\add* like a deer,
+\q1 ≈and¦154265 places me securely¦154267 up on the heights¦154266.\x + \xo 22:34: \xt Hab 3:19.\x*
 \q1
-\v 35 ◙
-\q2 …
+\v 35 The one who trains¦154269 \add ≈me how to win in battle\add*,
+\q1 ≈and¦154272 \add strengthens\add* my arms to pull back a \add ≈powerful\add* bow.
 \b
 \q1
-\v 36 ◙
-\q2 …
+\v 36 You \add ≈saved me\add* \add from death\add* \add ≈like a\add* shield¦154281,
+\q1 and¦154283 \add ≈you helped me become well-known by\add* answering \add my prayers\add*.
 \q1
-\v 37 ◙
-\q2 …
+\v 37 You \add ≈helped me make large strides\add*,
+\q1 and¦154289 \add ≈stopped\add* my feet from slipping.
 \q1
-\v 38 ◙
-\q2 …
+\v 38 Let me chase down my enemies¦154294 and destroy¦154295 them.
+\q1 ≈Then I won't return¦154297 until¦154298 they're \add ≈all defeated\add*.
 \q1
-\v 39 ◙
-\q2 …
+\v 39 I will \add ≈attack\add* them and smash them.
+\q1 ≈They won't stand \add again\add*—they'll fall under¦154307 my feet¦154308.
 \q1
-\v 40 ◙
-\q2 …
+\v 40 You \add ≈give me extra strength¦154311\add* for the war.
+\q1 You make the people who \add ≈rebelled against\add* me \add ≈submit\add*.
 \q1
-\v 41 ◙
-\q2 …
+\v 41 \add ≈You make my enemies¦154317 flee away from me\add*.
+\q1 \add You help me\add* destroy¦154322 the people who hate me.
 \q1
-\v 42 ◙
-\q2 …
+\v 42 They look, but there's¦154325 \add ≈no one to rescue them\add*.
+\q1 \add They call out\add* to you, Yahweh, but you don't¦154330 answer¦154331 them.
 \q1
-\v 43 ◙
-\q1 …
+\v 43 I crush¦154340 them \add as finely\add* as the dust on the ground.
+\q1 ≈I trample them like the mud on the streets¦154339 and flatten them.
 \b
 \q1
-\v 44 ◙
-\q2 …
-\q1 …
+\v 44 You rescue me from the arguments of my people.
+\q1 You \add ≈help me remain\add* as the head of nations¦154348.
+\q1 People serve¦154353 me \add ≈even if I don't¦154350 even know them\add*.
 \q1
-\v 45 ◙
-\q2 …
+\v 45 Foreigners \add ≈are afraid of\add* me.
+\q1 ≈\add ≈When they hear me\add*, they obey me.
 \q1
-\v 46 ◙
-\q2 …
+\v 46 \add *They\add* lose heart,
+\q1 and¦154368 come \add out\add* of their¦154369 fortresses trembling¦154368.
 \b
 \q1
-\v 47 ◙
-\q1 …
-\q1 …
+\v 47 Yahweh is alive—may my \add secure\add* rock be blessed¦154374.
+\q1 ≈May the God¦154377 of the rock of my salvation¦154379 be praised.
 \q1
-\v 48 ◙
-\q2 …
+\v 48 He's the God¦154381 who avenges me,
+\q1 ≈and¦154385 the one who makes the people¦154386 who \add ≈rebelled against\add* me \add ≈submit\add*.
 \q1
-\v 49 ◙
-\q1 …
-\q2 …
+\v 49 He's the one who \add ≈helps me escape\add* from my enemies¦154390.
+\q1 ≈You hold me up \add away\add* from the ones who rise up against me.
+\q1 ≈You rescue¦154395 me from violent¦154394 \add >men\add*.
 \b
 \q1
-\v 50 \x + \xo 22:50: \xt Rom 15:9.\x*◙
-\q2 …
+\v 50 Therefore I praise you, Yahweh, among the nations¦154402,
+\q1 and I sing praises¦154404 \add ≈about who you are\add*.\x + \xo 22:50: \xt Rom 15:9.\x*
 \q1
-\v 51 ◙
-\q1 …
-\q2 …
+\v 51 \add The one who\add* \add ≈helps his king¦154409 to save\add* \add the people\add*,
+\q1 and the one who shows¦154410 loyalty¦154412 to the one he chose—
+\q1 to David¦154414 and to his \add ≈descendants¦154415\add* forever.”
 \c 23
-\s1 The ending speech of David
+\s1 David's ending speech
 \rem /s1 The Last Words of David; David's Last Words
 \p
-\v 1 ◙
+\v 1 These are David's final words¦154422:
+\q1 “The message from Yeshai's son David—
+\q1 ≈a message from the man¦154431 who \add ≈rose through the ranks\add*—
+\q2 who was selected by Yakob's God¦154435—
+\q1 \add singer of\add* Israel's pleasant songs¦154438.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 Yahweh's spirit¦154441 spoke¦154443 through me.
+\q1 ≈His message¦154446 \add ≈came out of my mouth\add*.
 \q1
-\v 3 ◙
-\q1 …
+\v 3 Israel's God spoke¦154455 to me.
+\q1 ≈The rock¦154456 of Israel told \add >me\add*.
+\q1 The one who rules \add ≈people with justice\add*,
+\q1 ≥rules out of his respect for God.
 \q1
-\v 4 ◙
-\q2 …
-\q2 …
+\v 4 He's like the rising sun¦154469 bringing the morning light¦154465—
+\q2 a cloudless¦154472 morning.
+\q1 Glistening after¦154474 the rain \add that grows\add* fresh¦154475 grass¦154475 from the soil.
 \b
 \q1
-\v 5 ◙
-\q1 …
-\q1 …
-\q2 …
+\v 5 My \add ≈household¦154483 is aligned\add* with God¦154486,
+\q1 because he made a perpetual¦154489 agreement with me—
+\q2 all arranged¦154492 and secured¦154494.
+\q1 He'll make my salvation¦154499 and every desire¦154502 grow. ???
 \q1
-\v 6 ◙
-\q2 …
+\v 6 But¦154508 evil¦154508 \add >people\add* are like \add #thorns\add*—
+\q2 they're all thrown away.
+\q1 because they \add ≈injure your hands\add*.
 \q2
-\v 7 ◙
-\q2 …
-\s1 The heroes of David
+\v 7 Anyone who \add wants to\add* \add ≈move\add* them
+\q2 \add ≈must use a metal tool or a wooden stick\add*.
+\q1 They they'll be \add ≈incinerated right there\add*.”
+\s1 David's top warriors
 \rem /s1 David's Famous Soldiers; David's Mighty Men; David's Mightiest Men; David's heroes
 \r (1 Chr. 11:10-41)
 \p
-\v 8 ◙
+\v 8 These are the names¦154532 of David's \add top\add* warriors:
+\p \bd Yoshev-Bashshevet\bd* the Tahkemonite¦154538 was the head of ‘The Three’. One time¦154551 he attacked and killed eight¦154548 hundred¦154549 men with his spear¦154544.
 \p
-\v 9 ◙
-\v 10 ◙
+\v 9 Next after him was \bd Eleazar\bd*, the son of Ahohi's son Dodo. \add Once he was\add* among the three¦154566 powerful warriors with David¦154571 when they taunted the Philistines¦154573 who were gathered¦154574 there¦154576 for battle¦154577. The Israeli warriors \add ≈retreated back up\add* their hill,
+\v 10 \add but\add* \add @Eleazar\add* \add ≈moved forward and attacked the Philistines¦154585 until¦154586 his arm became weak, and his hand cramped around\add* his sword. Yahweh¦154598 \add ≈achieved\add* a great¦154600 victory¦154599 that day¦154601, and the \add ≈other warriors\add* only returned¦154604 afterwards to plunder \add the dead\add*.
 \p
-\v 11 ◙
-\v 12 ◙
+\v 11 Then there was Agge's son \bd Shamma¦154612\bd*, the Hararite. The Philistines had assembled¦154617 in formation¦154619 where there happened to be a field¦154624 full of lentils¦154626. The \add ≈Israelis\add* fled from the Philistines
+\v 12 \add ≈but\add* \add @Shamma\add* remained there in the middle¦154633 of the field and killed¦154637 \add many\add* Philistines¦154640. \add ≈So¦154632 the field was saved\add*, and Yahweh \add ≈achieved\add* a great¦154644 victory¦154643.
 \p
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
+\v 13 \add Once\add* as it was approaching harvest¦154655 time, three¦154648 of ‘The Thirty’ went¦154647 to where David¦154658 \add had been staying\add* at Adullam's cave. There was a Philistine unit camped in the Refaim valley¦154666.
+\v 14 At the time, David¦154669 was in the fortress, and¦154672 there was \add another\add* Philistine unit in Beyt-Lehem.
+\v 15 David¦154679 \add ≈was thirsty\add* \add one day\add* and¦154680 \add ≈asked\add*, “Who'll \add ≈get me a drink of water¦154683\add* from the Beyt-Lehem well by the gate?”
+\v 16 \add ≈So¦154691\add* the three¦154692 powerful¦154693 warriors \add ≈broke¦154691 through\add* the Philistine camp and got water¦154698 from the Beyt-Lehem well near the gate. They carried¦154705 it back to David¦154709, but he wouldn't drink¦154712 it—pouring it out instead \add as an offering\add* to Yahweh,
+\v 17 saying, “Far be it for me, Yahweh, \add ≈to drink\add* this—the blood¦154723 of the men¦154724 who \add ≈risked\add* their¦154726 lives¦154726.” \add ≈So¦154717\add* he wasn't willing¦154728 to drink it.
+\p Those \add were some of the\add* things done by ‘The Three’ powerful¦154733 warriors.
 \rem /s1 David's Thirty Mighty Men
-\p …
 \p
-\v 18 ◙
-\v 19 ◙
+\v 18 Yoav's brother¦154737 \bd Abishai\bd* (Tseruyah's sons) was the head over ‘The Three’. \add Once\add* he was \add ≈used\add* his spear¦154751 to kill three hundred¦154755 \add >fighters\add*, \add ≈so he was more famous\add* than ‘The Three’.
+\v 19 He was more honoured¦154766 than ‘The Three’ and became their leader \add ≈even though he wasn't one of\add* ‘The Three’.
 \p
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
+\v 20 Yehoyada's son \bd Benayah\bd* from Kavtsael was a man¦154784 of military prowess with many deeds¦154790 \add to his name\add*. \add Once\add* he killed ‘The Two’ from Moab, and \add another time\add* he went¦154799 down in a pit on a snowy¦154808 day¦154807 and killed the lion¦154803 in the pit.
+\v 21 He \add also\add* killed an impressive Egyptian warrior with a spear, even though Benayah \add ≈only held\add* a staff. \add ≈First\add* he snatched¦154826 the spear from the Egyptian's hand, then he killed him with his \add own\add* spear.
+\v 22 Those \add were some of the\add* things that Benayah did. He \add ≈became famous\add* alongside ‘The Three’.
+\v 23 (He was more honoured¦154850 than ‘The Thirty’ but never entered ‘The Three’.) David¦154858 appointed him¦154857 over his bodyguard¦154861.
 \p
-\v 24 ◙
-\li1 …
-\li1 …
+\v 24 \add The following\add* were among ‘The Thirty’:
+\li1 Yoav's \add other\add* brother¦154867 Asahel,
+\li1 Dodo's son Elhanan from Beyt-Lehem,
 \li1
-\v 25 ◙
+\v 25 Shammah¦154878 and Elika the Harodites,
 \li1
-\v 26 ◙
-\li1 …
+\v 26 Helets the Paltite,
+\li1 Ikkesh's son Ira the Tekoite,
 \li1
-\v 27 ◙
-\li1 …
+\v 27 Aviezer the Anatotite,
+\li1 Mevunnai the Hushatite,
 \li1
-\v 28 ◙
-\li1 …
+\v 28 Tsalmon¦154899 the Ahohite,
+\li1 Maharai the Netofatite,
 \li1
-\v 29 ◙
-\li1 …
+\v 29 Baanah's son Helev the Netofatite,
+\li1 Rivai's son Ittai from Gibeah (in Benyamin),
 \li1
-\v 30 ◙
-\li1 …
+\v 30 Benayah the Piratonite,
+\li1 Hiddai¦154922 from the Gaash valleys,
 \li1
-\v 31 ◙
-\li1 …
+\v 31 Avi-Albon the Arbatite,
+\li1 Azmavet the Barhumite,
 \li1
-\v 32 ◙
-\li1 …
-\li1 …
+\v 32 Elyahba the Shaalvonite,
+\li1 Yashen's sons¦154937,
+\li1 Yonatan,
 \li1
-\v 33 ◙
-\li1 …
+\v 33 Shammah¦154942 the Hararite,
+\li1 Sharar's son Ahiam the Hararite,
 \li1
-\v 34 ◙
-\li1 …
+\v 34 Ahasbai's son Elifelet the Maacatite,
+\li1 Ahitofel's son Eliam the Gilonite¦154963,
 \li1
-\v 35 ◙
-\li1 …
+\v 35 Hezrai¦154966 the Carmelite,
+\li1 Paarai the Arbite,
 \li1
-\v 36 ◙
-\li1 …
+\v 36 Natan's son Yigal from Tsovah,
+\li1 Bani the Gadite,
 \li1
-\v 37 ◙
-\li1 …
+\v 37 Tselek¦154983 the Ammonite,
+\li1 Naharai the Beerotite who carried the weapons for Tseruyah's son Yoav¦154991,
 \li1
-\v 38 ◙
+\v 38 the Yitrites Ira and Garev,
 \li1
-\v 39 ◙
-\p …
+\v 39 and¦155007 Uriyyah the Hittite.
+\p \add There were\add* thirty-seven \add of them\add* \add ≈in total\add*.
 \c 24
-\s1 The census of David of people
+\s1 David takes a census
 \rem /s1 David's Census of Israel and Judah; David Counts the Fighting Men; David Takes a Census; David's census
 \r (1 Chr. 21:1-27)
 \p
-\v 1 ◙
-\v 2 ◙
+\v 1 Then Yahweh \add ≈was angry\add* against Israel again and he incited¦155016 David¦155019 \add ≈to cause problems for\add* them by saying, “Go \add and\add* \add ≈order a census of\add* Israel and Yehudah.”
+\v 2 \add ≈So¦155031\add* the king¦155032 told Yoav¦155035, the commander¦155037 of his army, who was with him \add at the time\add*, “\add ≈Travel throughout\add* all the \add regions of\add* the Israeli tribes¦155048, from Dan¦155050 \add (in the far north)\add* down to Beersheba \add (in the far south)\add*, and count the people so that I'll know the number¦155061 of \add ≈fighting men\add*.”
 \p
-\v 3 ◙
-\v 4 ◙
+\v 3 “May¦155071 your God¦155072 Yahweh¦155082 multiply the people¦155075 a hundred¦155079 times¦155080 \add over\add*,” Yoav¦155066 responded¦155065, “add may my master the king \add ≈see that happen, but\add* why would my master the king \add ≈want to do that\add*?”
+\v 4 \add ≈However,\add* the king \add ≈insisted, so even though\add* Yoav¦155099 and the army commanders \add disagreed\add*, \add ≈at the king's command\add* \add *they\add* \add ≈set off to count\add* the Israeli people¦155112.
 \p
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
+\v 5 They crossed¦155117 the Yordan \add river\add* and camped¦155121 in Aroer, south¦155123 of the city¦155124 in the middle¦155126 of the Gad¦155129 valley¦155128, then \add proceeded\add* to Yazer.
+\v 6 Then¦155134 they went¦155134 \add north\add* to Gilead¦155135 and the land of Tahtim-Hodshi, \add before\add* coming to Dan-Yaan and around¦155144 to Tsidon.
+\v 7 Then¦155149 they came¦155149 to the Tsor \add (Tyre)\add* fortress¦155151 and all the cities¦155156 of the Hivites and the Canaanites \add ≈before going\add* \add east\add* to Beersheva in the Negev \add wilderness\add* (part of Yehudah).
+\v 8 \add ≈So¦155167 they¦155171 travelled throughout the land for\add* nine¦155173 months¦155174 and twenty¦155175 days \add ≈before returning\add* to Yerushalem¦155177.
+\v 9 Then¦155179 Yoav¦155180 \add ≈reported the census results\add* to the king¦155189: 800,000 fighting swordsmen¦155199 in Israel, and 500,000 in Yehudah¦155201.
 \rem /s1 Judgment for David's Sin; Judgment on David's Sin
 \p
-\v 10 ◙
+\v 10 \add ≈However, David¦155211 had a guilty conscience\add* after¦155213 he'd had the people¦155219 counted¦155216 and he told Yahweh, “I've \add ≈disobeyed you badly, but\add* now, Yahweh, please¦155234 \add ≈take¦155232 away\add* the iniquity¦155237 of your servant¦155238 because I've been very foolish¦155240.”
 \p
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
+\v 11 \add When\add* David¦155244 got up in the morning¦155245, Yahweh \add ≈gave\add* the prophet¦155254 Gad¦155253 \add this\add* message¦155247
+\v 12 to take to David¦155263, “I, Yahweh, am \add ≈offering you three¦155267 choices\add*. \add ≈You decide which one I should carry out against\add* you.”
+\v 13 Then¦155281 Gad¦155283 \add ≈asked\add* \add *him\add*, “\add ≈Do you want\add* seven¦155294 years¦155295 of famine¦155297 in your country, or three months¦155303 of fleeing from your enemies, or three days¦155315 of plague in your country? \add ≈Consider those and let me know¦155319 which option to pass back\add* to the one who sent¦155324 me.”
 \p
-\v 14 ◙
+\v 14 David¦155329 \add ≈answered\add* Gad¦155332, “\add ≈This is very distressing¦155333\add*, \add but\add* please¦155339 \add ≈let Yahweh be the one to punish me because he's very merciful—don't¦155351 let other men be the ones\add*.”
 \p
-\v 15 ◙
-\v 16 ◙
+\v 15 \add ≈So¦155355\add* Yahweh \add ≈sent\add* a plague to Israel from the morning¦155359 and until the time \add ≈he'd decided\add*. Seventy thousand¦155374 people¦155367 died from Dan¦155368 \add in the north\add* \add ≈down\add* to Beersheba \add in the south\add*.
+\v 16 \add ≈When\add* \add Yahweh's\add* messenger stretched¦155377 out his hand to destroy Yerushalem \add with the plague\add*, Yahweh relented concerning¦155385 the disaster and told the messenger who was \add ≈destroying\add* many people¦155391, “Now lower your hand.” \add When he said that,\add* \add *his\add* messenger was near the threshing¦155401 floor¦155401 of Aravnah the Jebusite.
 \p
-\v 17 ◙
+\v 17 David¦155408 \add ≈had complained\add* to Yahweh when he saw the messenger \add ≈afflicting\add* the people, \add ≈saying\add*, “Listen, \add ≈it's me alone who\add* sinned¦155423, and I myself \add ≈who disobeyed you\add*. \add ≈But\add* these¦155426 \add innocent\add* \add ≈people\add*—what have they done? Please, \add ≈just punish only me and my relatives\add*.”
+\s2 David builds an altar
 \rem /s1 David's Altar on the Threshing Floor; David Builds an Altar
 \p
-\v 18 ◙
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
-\p …
+\v 18 Gad¦155440 came¦155438 to David¦155443 that day¦155444, and \add ≈instructed\add* him, “Go to the Yebusite Aravnah's threshing¦155452 floor¦155452 \add and\add* \add ≈build\add* an altar¦155451 to Yahweh \add there\add*.”
+\v 19 \add ≈So¦155457\add* David¦155458 went \add ≈there just as Yahweh had instructed¦155463 him through Gad's message¦155459\add*.
+\v 20 \add ≈When\add* Aravnah looked¦155466 \add ≈out\add* and saw the king and his servants¦155474 \add ≈approaching\add*, \add *he\add* went out and \add ≈fell to his knees in front of the king and bowed¦155479 his face¦155481\add* to the ground¦155482.
+\v 21 “Why would my master¦155488 the king¦155490 come¦155487 to his servant¦155493?” Aravnah asked.
+\p “\add ≈I want to buy your\add* threshing¦155500 floor¦155500 to build¦155501 an altar¦155502 for Yahweh¦155488,” David¦155495 \add ≈answered\add*. “\add ≈So¦155484\add* that the plague¦155505 \add ≈afflicting\add* the people¦155507 \add ≈can be stopped\add*.”
 \p
-\v 22 ◙
-\v 23 ◙
+\v 22 “May my master¦155516 the king¦155517 take¦155514 \add it\add*,” Aravnah responded¦155509. “\add ≈Use it in whatever way you think best\add*. See, \add you can use\add* the oxen for the burnt¦155523 offering¦155515, and the threshing¦155524 instruments and the oxen's equipment for firewood.
+\v 23 \add *I\add* give \add it all\add* to \add you\add*, the king. May your God¦155541 Yahweh accept¦155542 your \add offering\add*.”
 \p
-\v 24 ◙
-\v 25 ◙
+\v 24 “No,” the king¦155545 \add ≈answered\add*. “I'll definitely \add ≈buy\add* it from you¦155555. I couldn't \add ≈offer¦155558 something to\add* my God¦155560 Yahweh \add that cost me\add* nothing.”
+\v 25 \add ≈So¦155575\add* David¦155577 built¦155575 an altar¦155578 there¦155576 to Yahweh, and he \add ≈instructed for\add* burnt¦155581 offerings and peace offerings to \add ≈be made\add*. Then¦155575 Yahweh \add ≈accepted prayers for the country\add* and the plague¦155587 against Israel was \add ≈stopped\add*.
