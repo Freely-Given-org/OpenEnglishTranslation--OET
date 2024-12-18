@@ -65,10 +65,10 @@ import sys
 sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitted to PyPI
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew #, transliterate_Greek
 
-LAST_MODIFIED_DATE = '2024-07-19' # by RJH
+LAST_MODIFIED_DATE = '2024-12-13' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET OT wordtable"
-PROGRAM_VERSION = '0.14'
+PROGRAM_VERSION = '0.15'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -291,18 +291,34 @@ def apply_OT_scripted_gloss_updates() -> bool:
                         assert iBook in BibleOrgSysGlobals.loadedBibleBooksCodes, iBook
                     for eBook in eBooks:
                         assert eBook in BibleOrgSysGlobals.loadedBibleBooksCodes, eBook
-                    for iRef in iRefs:
-                        assert iRef.count('_')==1 and iRef.count(':')==1, iRef
+                    for iRef in iRefs.copy(): # coz we might add more to the list
+                        assert iRef.count('_')==1 and iRef.count(':') in (0,1), iRef # A chapter ref has no colon
                         iRefBits = iRef.split('_')
                         assert iRefBits[0] in BibleOrgSysGlobals.loadedBibleBooksCodes, iRef
-                        iRefC, iRefV = iRefBits[1].split(':')
-                        assert iRefC[0].isdigit() and iRefV[0].isdigit(), iRef
-                    for eRef in eRefs:
-                        assert eRef.count('_')==1 and eRef.count(':')==1, eRef
+                        try:
+                            iRefC, iRefV = iRefBits[1].split(':')
+                            assert iRefC[0].isdigit() and iRefV[0].isdigit(), iRef
+                        except ValueError: # no colon
+                            iRefC = iRefBits[1]
+                            assert iRefC.isdigit(), iRef
+                            # We don't know how many verses in this chapter, so we'll just do 150
+                            for vv in range( 1, 150+1 ):
+                                iRefs.append( f'{iRef}:{vv}' ) # Append an iref for each verse in the chapter
+                        assert int(iRefC) <= BibleOrgSysGlobals.loadedBibleBooksCodes.getMaxChapters( iRefBits[0] ), iRef
+                    for eRef in eRefs.copy(): # coz we might add more to the list
+                        assert eRef.count('_')==1 and eRef.count(':') in (0,1), eRef # A chapter ref has no colon
                         eRefBits = eRef.split('_')
                         assert eRefBits[0] in BibleOrgSysGlobals.loadedBibleBooksCodes, eRef
-                        eRefC, eRefV = eRefBits[1].split(':')
-                        assert eRefC[0].isdigit() and eRefV[0].isdigit(), eRef
+                        try:
+                            eRefC, eRefV = eRefBits[1].split(':')
+                            assert eRefC[0].isdigit() and eRefV[0].isdigit(), eRef
+                        except ValueError: # no colon
+                            eRefC = eRefBits[1]
+                            assert eRefC.isdigit(), eRef
+                            # We don't know how many verses in this chapter, so we'll just do 150
+                            for vv in range( 1, 150+1 ):
+                                eRefs.append( f'{eRef}:{vv}' ) # Append an eref for each verse in the chapter
+                        assert int(eRefC) <= BibleOrgSysGlobals.loadedBibleBooksCodes.getMaxChapters( eRefBits[0] ), eRef
                     # print( f"From '{name}' ({givenFilepath}) have {searchText=} {replaceText=} {tags=}" )
 
                     # Adjust and save the fields
@@ -373,7 +389,7 @@ def apply_OT_scripted_gloss_updates() -> bool:
                         BBB, CV = bcvwRef.split( '_' )
                         if (iBooks and BBB not in iBooks) \
                         or BBB in eBooks:
-                            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Skipping {BBB} at {bcvwRef} with {iBooks=} {eBooks=}" )
+                            vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Skipping {BBB} at {bcvwRef} with {iBooks=} {eBooks=}" )
                             continue
                         C, VW = CV.split( ':' )
                         try: V, W = VW.split( 'w' )
