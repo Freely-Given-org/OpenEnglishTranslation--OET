@@ -110,7 +110,7 @@ $(intermediate_LV_OT_ESFM): $(expanded_OT_TSV_tables) extract_glossed_OSHB_OT_to
 	@$(Python) extract_glossed_OSHB_OT_to_ESFM.py -e
 
 $(initial_OT_TSV_tables): $(WLC_OT_TSV_table) $(Clear_Bible_OT_lowfat_TSV) apply_Clear_Macula_OT_glosses.py
-	@echo "\n\nApply glosses from Macula to OT (and reorder)…\n"
+	@echo "\n\nApply glosses from Macula Hebrew to OT (and reorder)…\n"
 	@$(Python) apply_Clear_Macula_OT_glosses.py
 	# @echo "\n\nCopying and renaming OT word and morpheme tables from glossed_OSHB/ to modified_source_glossed_OSHB_ESFM/…\n"
 	# @cp ../intermediateTexts/glossed_OSHB/all_glosses.words.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv

@@ -46,6 +46,7 @@ We use this information to update our OET word-table
     that was created by extract_glossed_OSHB_OT_to_ESFM.py
 
 CHANGELOG:
+    2024-12-19 Fixed bug matching word numbers when WLC uses a Ketiv
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple, NamedTuple, Optional
@@ -55,7 +56,7 @@ import tomllib
 import logging
 import shutil
 import os
-import unicodedata
+# import unicodedata
 import re
 
 import BibleOrgSysGlobals
@@ -65,10 +66,10 @@ import sys
 sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitted to PyPI
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew #, transliterate_Greek
 
-LAST_MODIFIED_DATE = '2024-12-13' # by RJH
+LAST_MODIFIED_DATE = '2024-12-20' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET OT wordtable"
-PROGRAM_VERSION = '0.15'
+PROGRAM_VERSION = '0.18'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -137,7 +138,7 @@ def main() -> None:
         state.oldWordTable = file_data.rstrip( '\n' ).split( '\n' )
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.oldWordTable):,} old word table entries ({state.oldWordTable[0].count(TAB)+1} columns)." )
 
-    expand_table_columns() # Creates state.newWordTable from state.oldWordTable
+    expand_table_columns() # Creates state.newWordTable from state.oldWordTable by inserting and appending empty columns
 
     if not DEBUGGING_THIS_MODULE: apply_OT_scripted_gloss_updates()
 
@@ -935,29 +936,55 @@ def fill_extra_columns_and_remove_some() -> bool:
         state.lemmaDict[lemma] = str(n)
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Loaded {len(state.lemmaDict):,} lemma index entries into state.lemmaDict." )
 
-    # Fill in the role and nesting columns
-    mIx = 1 # Macula index
+    # Fill in the lemmaRowList, role, and nesting columns
+    macIndex = 1 # Macula index
     numConsecutiveMismatches = 0
-    for ix, ourLine in enumerate( state.newWordTable[1:], start=1 ):
-        lemmaList, lemmaRowList = [], []
-        for dummyRange in range( 4 ):
-            if dummyRange > 0: dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{dummyRange=}" )
-            if mIx >= len(state.macula_tsv_lines):
-                dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"RanA out of Macula lines at {ix}/{len(state.newWordTable)} {ourLine}" )
-                break # no more macula lines
-            theirMaculaColumns = state.macula_tsv_lines[mIx] # Already in a list
-            # print( f"\n{ix}: {ourLine}\n{mIx}: {theirLine}")
-            assert ourLine.count( '\t' ) == 20, f"{ourLine.count(TAB)} {ourLine=}"
-            ourColumns = ourLine.split( '\t' )
-            assert len(theirMaculaColumns) == 28, f"{len(theirMaculaColumns)} {theirMaculaColumns=}"
+    ourLastV = None
+    for ourIndex, ourLineStr in enumerate( state.newWordTable[1:], start=1 ):
+        # print( f"{ix=} {ourLineStr=}" )
+        if ourLineStr.startswith( 'KI2_4:4' ): break
 
-            if ourColumns[2] in ('seg','note','variant note','alternative note','exegesis note'):
+        assert ourLineStr.count( '\t' ) == 20, f"{ourLineStr.count(TAB)} {ourLineStr=}"
+        ourColumns = ourLineStr.split( '\t' )
+
+        if ourColumns[2] in ('seg','note','variant note','alternative note','exegesis note'):
+            numConsecutiveMismatches = 0
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Skipping our {ourRef} {ourColumns[2]}")
+            continue # because we were successful
+
+        ourRef = ourColumns[0]
+        ourBBB, ourCVW = ourRef.split( '_' )
+        ourC, ourVW = ourCVW.split( ':' )
+        ourV, ourW = ourVW.split( 'w' ) # There's always a word number because notes and segs are already handled above
+    
+        if ourV != ourLastV:
+            numKs = 0 # Reset for a new verse
+        ourLastV = ourV
+
+        if ourColumns[2] == 'K': # then we have a Ketiv, and so we have to increase our word number to match theirs (coz they miss the Qere)
+            numKs += 1
+        if numKs > 0:
+            incrementedW = str( int(ourW) + numKs )
+            ourRef = f'{ourBBB}_{ourC}:{ourV}w{incrementedW}'
+            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"KETIV ({numKs}) increased from {ourColumns[0]} to {ourRef=}" )
+
+        lemmaList, lemmaRowList = [], []
+        for dummyRange in range( 8 ): # because we sometimes have to skip over notes and segs
+            # if dummyRange > 5: halt
+            if dummyRange > 1: dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"\n\n{dummyRange=}" )
+            elif dummyRange > 0: dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{dummyRange=}" )
+            if macIndex >= len(state.macula_tsv_lines):
+                dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"RanA out of Macula lines at {ourIndex}/{len(state.newWordTable)} {ourLineStr}" )
+                break # no more macula lines
+            theirMaculaColumns = state.macula_tsv_lines[macIndex] # Already in a list
+            assert len(theirMaculaColumns) == 28, f"{len(theirMaculaColumns)} {theirMaculaColumns=}"
+            if ourLineStr.startswith( 'KI2_4:3' ):
+                print( f"\n{ourIndex=}: {ourColumns}\n{macIndex=}: {theirMaculaColumns}")
+                print( f"  {dummyRange=} {ourColumns[0]=} {ourColumns[2]=} {ourColumns[3]=} wordGloss='{ourColumns[12]}' {lemmaList=} {lemmaRowList=}" )
+
+            if theirMaculaColumns[0] == ourRef: # references match exactly, so then it's a word
                 numConsecutiveMismatches = 0
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Skipping our {ourColumns[0]} {ourColumns[2]}")
-                break # from inner dummy loop because we were successful
-            elif theirMaculaColumns[0] == ourColumns[0]: # then it's a word
-                numConsecutiveMismatches = 0
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Matched word {ourColumns[0]}=={theirMaculaColumns[0]} {theirMaculaColumns[1]} {ourColumns[1]} {theirMaculaColumns[2]} {ourColumns[2]} R='{theirMaculaColumns[13]}' N='{theirMaculaColumns[27]}'")
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Matched word {ourRef}=={theirMaculaColumns[0]} {theirMaculaColumns[1]} {ourColumns[1]} {theirMaculaColumns[2]} {ourColumns[2]} R='{theirMaculaColumns[13]}' N='{theirMaculaColumns[27]}'")
                 assert 'w' in theirMaculaColumns[2] # Might be 'Aw'
                 ourColumns[18], ourColumns[19] = theirMaculaColumns[13], theirMaculaColumns[27]
                 theirMaculaLemma = theirMaculaColumns[18]
@@ -965,16 +992,20 @@ def fill_extra_columns_and_remove_some() -> bool:
                 lemmaList.append( theirMaculaLemma )
                 if theirMaculaLemma:
                     try: lemmaRowList.append( state.lemmaDict[theirMaculaLemma] ) # Save the lemma row number(s)
-                    except KeyError: lemmaRowList.append( '###MISSING-A1###' )
-                else: lemmaRowList.append( '###MISSING-B1###' )
-                mIx += 1
+                    except KeyError:
+                        lemmaRowList.append( '###MISSING-A1###' )
+                        dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"###MISSING-A1### {ourIndex=} {macIndex=} {ourLineStr=}" )
+                else:
+                    lemmaRowList.append( '###MISSING-B1###' )
+                    dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"###MISSING-B1### {ourIndex=} {macIndex=} {ourLineStr=}" )
+                macIndex += 1
                 break # from inner dummy loop because we were successful
-            elif theirMaculaColumns[0].startswith( ourColumns[0] ): # then theirs is a morpheme that's part of our word
+            elif theirMaculaColumns[0].startswith( ourRef ): # their reference starts with our reference (coz they have a's and b's suffixes), then theirs is a morpheme that's part of our word
                 numConsecutiveMismatches = 0
                 role = nesting = ''
                 while 'm' in theirMaculaColumns[2]:
-                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Matched morpheme {ourColumns[0]} in {theirMaculaColumns[0]} {theirMaculaColumns[1]} {ourColumns[1]} {theirMaculaColumns[2]} {ourColumns[2]} R='{theirMaculaColumns[13]}' N='{theirMaculaColumns[27]}'")
-                    assert not role or theirMaculaColumns[13]==role or ourColumns[0].startswith( 'ECC_4:10' ) # TODO: dunno why ???
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Matched morpheme {ourRef} in {theirMaculaColumns[0]} {theirMaculaColumns[1]} {ourColumns[1]} {theirMaculaColumns[2]} {ourColumns[2]} R='{theirMaculaColumns[13]}' N='{theirMaculaColumns[27]}'")
+                    assert not role or theirMaculaColumns[13]==role or ourRef.startswith( 'ECC_4:10' ) # TODO: dunno why ???
                     # assert nesting is None or theirLine[27] == nesting
                     # Above failed on
                     #   morpheme GEN_1:2w1a 01LN3a  m 13,14,15 R='' N='cj2cjp'
@@ -985,10 +1016,14 @@ def fill_extra_columns_and_remove_some() -> bool:
                     lemmaList.append( theirMaculaLemma )
                     if theirMaculaLemma:
                         try: lemmaRowList.append( state.lemmaDict[theirMaculaLemma] ) # Save the lemma row number(s)
-                        except KeyError: lemmaRowList.append( '###MISSING-A2###' )
-                    else: lemmaRowList.append( '###MISSING-B2###' )
-                    mIx += 1
-                    theirMaculaColumns = state.macula_tsv_lines[mIx] # Already in a list
+                        except KeyError:
+                            lemmaRowList.append( '###MISSING-A2###' )
+                            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"###MISSING-A2### {ourIndex=} {macIndex=} {ourLineStr=}" )
+                    else:
+                        lemmaRowList.append( '###MISSING-B2###' )
+                        dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"###MISSING-B2### {ourIndex=} {macIndex=} {ourLineStr=}" )
+                    macIndex += 1
+                    theirMaculaColumns = state.macula_tsv_lines[macIndex] # Already in a list
                 dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Matched Morpheme {ourColumns[0]} in {theirMaculaColumns[0]} {theirMaculaColumns[1]} {ourColumns[1]} {theirMaculaColumns[2]} {ourColumns[2]} R='{theirMaculaColumns[13]}' N='{theirMaculaColumns[27]}'")
                 assert 'M' in theirMaculaColumns[2] # Might be 'AM'
                 if theirMaculaColumns[13] != role:
@@ -1003,14 +1038,18 @@ def fill_extra_columns_and_remove_some() -> bool:
                 lemmaList.append( theirMaculaLemma )
                 if theirMaculaLemma:
                     try: lemmaRowList.append( state.lemmaDict[theirMaculaLemma] ) # Save the lemma row number(s)
-                    except KeyError: lemmaRowList.append( '###MISSING-A3###' )
-                else: lemmaRowList.append( '###MISSING-B3###' )
-                mIx += 1
+                    except KeyError:
+                        lemmaRowList.append( '###MISSING-A3###' )
+                        dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"###MISSING-A3### {ourIndex=} {macIndex=} {ourLineStr=}" )
+                else:
+                    lemmaRowList.append( '###MISSING-B3###' )
+                    dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"###MISSING-B3### {ourIndex=} {macIndex=} {ourLineStr=}" )
+                macIndex += 1
                 break # from inner dummy loop because we were successful
             else:
                 numConsecutiveMismatches += 1
                 if numConsecutiveMismatches > 25:
-                    # logging.critical( f"Aborted around {ourColumns[0]} {theirMaculaColumns[0]}")
+                    logging.critical( f"Aborted around {ourColumns[0]} {theirMaculaColumns[0]}")
                     break # Gen 39:9 after w7 missing has about 25 rows
                 ourBBB, ourCVW = ourColumns[0].split( '_', 1 )
                 theirMaculaBBB, theirMaculaCVW = theirMaculaColumns[0].split( '_', 1 )
@@ -1038,11 +1077,11 @@ def fill_extra_columns_and_remove_some() -> bool:
                 # NOTE: Can also happen with versification issues
                 # We currently get as far as DEU_22:16
                 if less: #ourColumns[0] < theirMaculaColumns[0]: # string comparison
-                    logging.critical( f"Missing word in Macula Hebrew??? {ourC}:{ourV}w{ourW}<{theirMaculaC}:{theirMaculaV}w{theirMaculaW} {dummyRange=} {numConsecutiveMismatches=}\n We have a mismatch ({numConsecutiveMismatches}) with \n  {ix}: {ourLine}\n  {mIx}: {theirMaculaColumns}")
+                    logging.critical( f"Missing word in Macula Hebrew??? {ourC}:{ourV}w{ourW}<{theirMaculaC}:{theirMaculaV}w{theirMaculaW} {dummyRange=} {numConsecutiveMismatches=}\n We have a mismatch ({numConsecutiveMismatches}) with \n  {ourIndex}: {ourLineStr}\n  {macIndex}: {theirMaculaColumns}")
                     break # from inner dummy loop (which uses mIx but we haven't changed it)
                 elif more: # it might be the opposite
-                    logging.critical( f"Extra word in Macula Hebrew??? {ourC}:{ourV}w{ourW}>{theirMaculaC}:{theirMaculaV}w{theirMaculaW} {dummyRange=} {numConsecutiveMismatches=}\n We have a mismatch ({numConsecutiveMismatches}) with \n  {ix}: {ourLine}\n  {mIx}: {theirMaculaColumns}")
-                    mIx += 1 # Advance 'their' row
+                    logging.critical( f"Extra word in Macula Hebrew??? {ourC}:{ourV}w{ourW}>{theirMaculaC}:{theirMaculaV}w{theirMaculaW} {dummyRange=} {numConsecutiveMismatches=}\n We have a mismatch ({numConsecutiveMismatches}) with \n  {ourIndex}: {ourLineStr}\n  {macIndex}: {theirMaculaColumns}")
+                    macIndex += 1 # Advance 'their' row
                 else:
                     print( f"Neither more nor less {ourC}:{ourV}w{ourW} vs {theirMaculaC}:{theirMaculaV}w{theirMaculaW} {dummyRange=} {numConsecutiveMismatches=}" )
             lastBBB = ourBBB
@@ -1051,28 +1090,29 @@ def fill_extra_columns_and_remove_some() -> bool:
             ourColumns[4] = ','.join( lemmaRowList )
             if ourColumns[4].count(',') != ourColumns[3].count(','):
                 logging.critical( f"LemmaRowList count doesn't match MorphemeRowList count at {ourColumns[0]} {lemmaList=} {ourColumns[3]=} {ourColumns[4]=}" )
-        state.newWordTable[ix] = '\t'.join( ourColumns )
-        if mIx >= len(state.macula_tsv_lines):
-            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"RanB out of Macula lines at {ix}/{len(state.newWordTable)} {ourLine}" )
+                # halt
+        state.newWordTable[ourIndex] = '\t'.join( ourColumns )
+        if macIndex >= len(state.macula_tsv_lines):
+            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"RanB out of Macula lines at {ourIndex}/{len(state.newWordTable)} {ourLineStr}" )
             break # no more macula lines
-        if numConsecutiveMismatches > 25: # Gen 39:9 after w7 missing has about 25 rows
+        if numConsecutiveMismatches > 34: # Gen 39:9 after w7 missing has about 25 rows, 1Sam 9:1, 20:2, 24:9 has about 30 rows
             logging.critical( f"Aborted around {ourColumns[0]} {theirMaculaColumns[0]}")
-            halt
-            break # from outer loop
+            raise ValueError( f"add_tags_to_OT_word_table.fill_extra_columns_and_remove_some() aborted matching around {ourColumns[0]} {theirMaculaColumns[0]}")
+            # break # from outer loop
 
     # Remove the OSHBid and CantillationHierarchy columns
     assert 381_000 < len(state.newWordTable) < 382_000, f"{len(state.newWordTable)=}"
     state.newWordTable[0] = state.newWordTable[0].replace(f'{TAB}OSHBid{TAB}',f'{TAB}').replace(f'{TAB}CantillationHierarchy{TAB}',f'{TAB}')
-    for ix, ourLine in enumerate( state.newWordTable[1:], start=1 ):
-        assert ourLine.count( '\t' ) == 20, f"{ourLine.count(TAB)} {ourLine=}"
-        ourColumns = ourLine.split( '\t' )
+    for ourIndex, ourLineStr in enumerate( state.newWordTable[1:], start=1 ):
+        assert ourLineStr.count( '\t' ) == 20, f"{ourLineStr.count(TAB)} {ourLineStr=}"
+        ourColumns = ourLineStr.split( '\t' )
         del ourColumns[6] # CantillationHierarchy
         del ourColumns[1] # OSHBid
-        state.newWordTable[ix] = '\t'.join( ourColumns )
+        state.newWordTable[ourIndex] = '\t'.join( ourColumns )
     assert 381_000 < len(state.newWordTable) < 382_000, f"{len(state.newWordTable)=}"
 
     return True
-# end of add_tags_to_OT_word_table.write_new_table
+# end of add_tags_to_OT_word_table.fill_extra_columns_and_remove_some
 
 
 def write_new_table() -> bool:
