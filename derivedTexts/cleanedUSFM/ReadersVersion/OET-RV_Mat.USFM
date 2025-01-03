@@ -1,4 +1,4 @@
-\id MAT - Open English Translation—Readers’ Version (OET-RV) v0.2.02
+\id MAT - Open English Translation—Readers’ Version (OET-RV) v0.2.05
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 MAT
@@ -13,16 +13,16 @@
 \is2 Author
 \ip The writer of this document was Matthaios, known in English as Matthew and in Hebrew as Levi. He was one of the twelve apprentices of Yeshua, and named by Alphaeus his father. He was from Galilee but worked in Capernaum as a tax-collector before he left that to follow Yeshua. It’s possible that it was Yeshua who changed his name from Levi when he became a follower, and named him Matthew which means ‘the gift of God’ in Hebrew.
 \is2 This account
-\ip Matthew’s account starts by listing the ancestors of Yeshua, and then describes his birth, his immersion in water, and his temptation by the devil. He tells us about a lot of his preaching and teaching, and about how he healed many sick people in the Galilee region. After that, Matthew goes on to describe Yeshua’s trip to Yerusalem and what happened to him there. Then he explains what happened in Yeshua’s final week in Yerusalem, his execution on a stake, and his coming back to life.
+\ip Matthew’s account starts by listing the ancestors of Yeshua, and then describes his birth, his immersion in water, and his temptation by the devil. He tells us about a lot of his preaching and teaching, and about how he healed many sick people in the Galilee region. After that, Matthew goes on to describe Yeshua’s trip to Yerushalem and what happened to him there. Then he explains what happened in Yeshua’s final week in Yerushalem, his execution on a stake, and his coming back to life.
 \ip This document tells how Yeshua is the messiah, promised by God to save the Jews, and all non-Jews who place their trust in him. So by means of him, God fulfills his promises to his people that were listed in the Old Testament.
 \ip This good message reveals Yeshua as the great teacher to explain God’s law. Here in this document, Matthew records five lengthy teaching sessions about God’s kingdom: (1) The preaching on the hill about people’s behaviour, their responsibilities, and what they might expect to receive in God’s kingdom (chapters 5–7); (2) warning the twelve apprentices about their works (chapter 10); (3) the parables about God’s kingdom (chapter 13); (4) the teaching concerning the way to become a follower (chapter 18); and (5) the teaching concerning the end of this age and God’s kingdom which is coming. (chapters 24–25).
 \iot Main components of Matthew’s account
 \io1 The ancestors and the birth of Yeshua the messiah \ior 1:1–2:23\ior*
-\io1 The work of Yohan-the-Immerser \ior 3:1-12\ior*
+\io1 The work of Yohan-the-immerser \ior 3:1-12\ior*
 \io1 The immersion and the temptation of Yeshua \ior 3:13–4:11\ior*
 \io1 The work and teaching of Yeshua in Galilee \ior 4:12–18:35\ior*
-\io1 Yeshua’s trip from Galilee to Yerusalem \ior 19:1–20:34\ior*
-\io1 Yeshua’s final week in Yerusalem \ior 21:1–27:66\ior*
+\io1 Yeshua’s trip from Galilee to Yerushalem \ior 19:1–20:34\ior*
+\io1 Yeshua’s final week in Yerushalem \ior 21:1–27:66\ior*
 \io1 Yeshua comes back to life \ior 28:1-20\ior*
 \rem This is still a very early look into the unfinished text of the \em Open English Translation\em* of the Bible. Please double-check the text in advance before using in public.
 \ie
@@ -67,10 +67,10 @@
 \c 2
 \s1 Easterners come to worship the new king
 \p
-\v 1 After \nd Yeshua\nd* had been born in Bethlehem in the province of Yudea during the time of King Herod, watchers of signs arrived in Yerusalem from the east
+\v 1 After \nd Yeshua\nd* had been born in Bethlehem in the province of Yudea during the time of King Herod, watchers of signs arrived in Yerushalem from the east
 \v 2 and asked, “Where is the one born as king of the Jews, because we saw his star in the east and we came to worship him.”
 \p
-\v 3 Now when King Herod heard this, he was upset and all of Yerusalem as well.
+\v 3 Now when King Herod heard this, he was upset and all of Yerushalem as well.
 \v 4 He gathered together all of the chief priests and those who teach the religious law to the people and asked them where the \nd Messiah\nd* was expected to be born.
 \p
 \v 5 And they told him, “It’ll be in Bethlehem in Yudea because the prophet wrote:\x + \xo 2:5-6: \xt Mic 5:2.\x*
@@ -113,10 +113,10 @@
 \v 22 But when he heard that Archelaus was reigning over Yudea instead of his father Herod, and \add also\add* having been warning in a dream, he left \add Yudea\add* and went to the Galilee area.
 \v 23 \x + \xo 2:23: \xt Mrk 1:24; Luk 2:39; Yhn 1:45.\x*Once they got there, he settled into the town of \nd Nazareth\nd*, so that what had been spoken through the prophets would be fulfilled: “He will be called a Nazarene.”
 \c 3
-\s1 Yohan-the-Immerser’s preaching
+\s1 Yohan-the-immerser’s preaching
 \r (Mark 1:1-8; Luke 3:1-18; Yhn 1:19-28)
 \p
-\v 1 That was the time when Yohan-the-Immerser started preaching in the Yudean wilderness
+\v 1 That was the time when Yohan-the-immerser started preaching in the Yudean wilderness
 \v 2 telling everyone,\x + \xo 3:2: \xt Mat 4:17; Mrk 1:15.\x* “Turn from your sins because the kingdom of heavens is close.
 \v 3 This is the man that the prophet Isayah was talking about \add when he wrote\add*:\x + \xo 3:3: \xt Isa 40:3 (LXX).\x*
 \q1 ‘The voice of one shouting in the wilderness
@@ -124,7 +124,7 @@
 \q2 straighten his paths.’
 \p
 \v 4 \x + \xo 3:4: \xt 2Ki 1:8.\x*Yohan himself wore clothes made from \add coarse\add* camel hair with a leather belt around his waist, and his food was locusts and wild honey.
-\v 5 \add People from\add* Yerusalem and all Yudea and all of the regions surrounding the Yordan River went out \add into the wilderness\add* to \add listen to\add* Yohan
+\v 5 \add People from\add* Yerushalem and all Yudea and all of the regions surrounding the Yordan River went out \add into the wilderness\add* to \add listen to\add* Yohan
 \v 6 and many confessed their sins and asked him to immerse them in the river.
 \p
 \v 7 \x + \xo 3:7: \xt Mat 12:34; 23:33.\x*But when Yohan saw many from the party of the Pharisees and from the Sadducee sect coming for immersion, he told them, “You brood of snakes, who warned you all to flee from \add God’s\add* severe anger that’s coming?
@@ -195,7 +195,7 @@
 \p
 \v 23 \x + \xo 4:23: \xt Mat 9:35; Mrk 1:39.\x*Then \nd Yeshua\nd* went around all of Galilee, teaching in their Jewish meeting halls and proclaiming the good message about the kingdom, and healing all the diseases and sicknesses of the people
 \v 24 and the news about this went all the way up to Syria.
-\v 25 Large crowds from Galilee and Decapolis and Yerusalem, and from all of Yudea and even beyond the Yordan River, followed after Yeshua.
+\v 25 Large crowds from Galilee and Decapolis and Yerushalem, and from all of Yudea and even beyond the Yordan River, followed after Yeshua.
 \c 5
 \s1 Yeshua’s sermon on the hillside
 \r (Luke 6:20-23)
@@ -605,7 +605,7 @@
 \v 41 \wj Anyone who accepts a prophet in the name of a prophet will receive the reward of a prophet, and anyone who accepts a godly person in the name of a godly person will receive the reward of a godly person.\wj*
 \v 42 \wj Anyone who as a follower \add of me\add* gives a cup of cool water to one of these little ones to drink, I’m telling you that that person certainly won’t lose their reward.\wj*
 \c 11
-\s1 Yeshua and Yohan-the-Immerser
+\s1 Yeshua and Yohan-the-immerser
 \r (Luke 7:18-35)
 \p
 \v 1 When \nd Yeshua\nd* had finished giving those instructions to his twelve apprentices, he \add also\add* left there and went to teach and preach in the Jewish cities.
@@ -621,10 +621,10 @@
 \v 8 \wj Yes, what did you all go out to see? A man wearing fine clothes? People in palaces wear fine clothes.\wj*
 \v 9 \wj So why did you go out \add there\add*? To see a prophet? Yes, I’m telling you that \add he is a prophet\add*, and even more important than the prophets.\wj*
 \v 10 \x + \xo 11:10: \xt Mal 3:1.\x*\wj He is the one that was written about: ‘See, I’m sending out my messenger ahead of you and he’ll prepare your path before you.’\wj*
-\v 11 \wj I can assure you that no person who’s ever been born is greater than Yohan-the-Immerser. But even the least important person in the kingdom of heavens is greater than him.\wj*
-\v 12 \x + \xo 11:12-13: \xt Luk 16:16.\x*\wj From the time of Yohan-the-Immerser through to the present time, the kingdom of the heavens has been opposed, and the opposition is grabbing at it.\wj*
+\v 11 \wj I can assure you that no person who’s ever been born is greater than Yohan-the-immerser. But even the least important person in the kingdom of heavens is greater than him.\wj*
+\v 12 \x + \xo 11:12-13: \xt Luk 16:16.\x*\wj From the time of Yohan-the-immerser through to the present time, the kingdom of the heavens has been opposed, and the opposition is grabbing at it.\wj*
 \v 13 \wj All the prophets and the law prophesied before Yohan came,\wj*
-\v 14 \x + \xo 11:14: \xt Mal 4:5; Mat 17:10-13; Mrk 9:11-13.\x*\wj and now, if you’re all willing to believe it, he is Eliyah—the one who would come \add ahead\add*.\wj*
+\v 14 \x + \xo 11:14: \xt Mal 4:5; Mat 17:10-13; Mrk 9:11-13.\x*\wj and now, if you’re all willing to believe it, he is Eliyyah—the one who would come \add ahead\add*.\wj*
 \v 15 \wj Anyone who is willing, let them strive to understand this.\wj*
 \p
 \v 16 “\wj So what should I liken this generation to? It’s like young children sitting in the town centre who are calling out to others\wj*
@@ -849,11 +849,11 @@
 \p But \nd Yeshua\nd* said to them, “\wj A prophet is not dishonoured except in his own hometown and among his own household.\wj*”
 \v 58 So he didn’t do many miracles there because of their unbelief.
 \c 14
-\s1 The beheading of Yohan-the-Immerser
+\s1 The beheading of Yohan-the-immerser
 \r (Mark 6:14-29; Luke 9:7-9)
 \p
-\v 1 Around that time, \add King\add* Herod the Tetrach heard the news about \nd Yeshua\nd*
-\v 2 and he said to his slaves, “This must be Yohan-the-Immerser having come back from the dead and so that’s why he can do all these miracles!”
+\v 1 Around that time, \add King\add* Herod the Tetrarch heard the news about \nd Yeshua\nd*
+\v 2 and he said to his slaves, “This must be Yohan-the-immerser having come back from the dead and so that’s why he can do all these miracles!”
 \p
 \v 3 \x + \xo 14:3-4: \xt Luk 3:19-20.\x*Herod said this because he had previously had Yohan arrested and put in prison because of Herodias, his brother Philip’s wife.
 \v 4 Yohan had been saying that it was against God’s law for Herod to take his brother’s wife.
@@ -862,7 +862,7 @@
 \v 6 However at Herod’s birthday celebration, Herodias’ daughter had danced in the middle of them all and had pleased Herod so much
 \v 7 that he promised with an oath to give her anything that she requested.
 \p
-\v 8 The young woman was urged on by her mother to tell Herod that she wanted the head of Yohan-the-Immerser on a plate.
+\v 8 The young woman was urged on by her mother to tell Herod that she wanted the head of Yohan-the-immerser on a plate.
 \p
 \v 9 The king was upset, but because of his oaths in front of the other guests, he commanded it to be so
 \v 10 and sent \add his soldiers\add* to behead Yohan in prison.
@@ -914,7 +914,7 @@
 \s1 Obeying God versus tradition
 \r (Mark 7:1-13)
 \p
-\v 1 Then some from the Pharisees’ party and teachers of the law from Yerusalem arrived and asked \nd Yeshua\nd*,
+\v 1 Then some from the Pharisees’ party and teachers of the law from Yerushalem arrived and asked \nd Yeshua\nd*,
 \v 2 “Why do your followers break the traditions handed down by our elders? They’re not practicing the washing hands ceremony before eating.”
 \p
 \v 3 “\wj Well why also do you break God’s commandment because of your tradition?\wj*” Yeshua responded.
@@ -1011,7 +1011,7 @@
 \p
 \v 13 When \nd Yeshua\nd* arrived in the outskirts of Caesarea Philippi, he asked his apprentices, “\wj Who are people saying that humanity’s child \em is\em*?\wj*”
 \p
-\v 14 \x + \xo 16:14: \xt Mat 14:1-2; Mrk 6:14-15; Luk 9:7-8.\x*“Some say Yohan-the-Immerser \add come back to life\add*,” they answered, “but others say the \add promised prophet\add* Eliyah, and others, Jeremiah or one of the other prophets.”
+\v 14 \x + \xo 16:14: \xt Mat 14:1-2; Mrk 6:14-15; Luk 9:7-8.\x*“Some say Yohan-the-immerser \add come back to life\add*,” they answered, “but others say the \add promised prophet\add* Eliyyah, and others, Jeremiah or one of the other prophets.”
 \p
 \v 15 “\wj But you yourselves,\wj*” he asked, “\wj Who do \em you\em* say I am?\wj*”
 \p
@@ -1025,7 +1025,7 @@
 \s1 Yeshua talks about future suffering and death
 \r (Mark 8:31–9:1; Luke 9:22-27)
 \p
-\v 21 From that time onwards, \nd Yeshua\nd* began showing his apprentices that he needed to go to Yerusalem and to suffer at the hands of the elders and chief priests and teachers of the law there, before being executed and then coming back to life on the third day.
+\v 21 From that time onwards, \nd Yeshua\nd* began showing his apprentices that he needed to go to Yerushalem and to suffer at the hands of the elders and chief priests and teachers of the law there, before being executed and then coming back to life on the third day.
 \p
 \v 22 But Peter took him aside and started telling him off, saying, “Goodness gracious, \nd master\nd*, this certainly won’t happen to you.”
 \p
@@ -1042,8 +1042,8 @@
 \p
 \v 1 After six days, \nd Yeshua\nd* took Peter, and Yacob and his brother Yohan, and they went up a high hill by themselves,
 \v 2 and Yeshua was changed in front of them so that his face shone like the sun and his clothes became as white as the light.
-\v 3 Then look, Mosheh and Eliyah appeared and they could see them talking with Yeshua.
-\v 4 Then Peter spoke up and said to \nd Yeshua\nd*, “\nd Master\nd*, it’s good that we’re here. If you want, I could make three shelters here: one for you and one for Mosheh and one for Eliyah.”
+\v 3 Then look, Mosheh and Eliyyah appeared and they could see them talking with Yeshua.
+\v 4 Then Peter spoke up and said to \nd Yeshua\nd*, “\nd Master\nd*, it’s good that we’re here. If you want, I could make three shelters here: one for you and one for Mosheh and one for Eliyyah.”
 \p
 \v 5 \x + \xo 17:5: a \xt Gen 22:2; Psa 2:7; Isa 42:1; Mat 3:17; 12:18; Mrk 1:11; Luk 3:22; \xo b \xt Deu 18:15.\x*While he was still speaking, a bright cloud came over the top of them and wow, a voice came out of the cloud saying, “This is my dear son that I get great pleasure from. Just listen to him.”
 \p
@@ -1053,12 +1053,12 @@
 \p
 \v 9 As they started heading down the hill, \nd Yeshua\nd* instructed them, “\wj Don’t tell anyone what you saw until after humanity’s child comes back to life.\wj*”
 \p
-\v 10 \x + \xo 17:10: \xt Mal 4:5.\x*So his apprentices asked him, “Why do the religious teachers say that Eliyah has to come \add before the messiah\add*?”
+\v 10 \x + \xo 17:10: \xt Mal 4:5.\x*So his apprentices asked him, “Why do the religious teachers say that Eliyyah has to come \add before the messiah\add*?”
 \p
-\v 11 “\wj In a way, Eliyah is coming\wj*” he said, “\wj and he will restore everything.\wj*
-\v 12 \x + \xo 17:12: \xt Mat 11:14.\x*\wj But I’m also telling you that in another way, Eliyah already came and they didn’t recognise him, but they \add mistreated\add* him just however they wanted, and humanity’s child will suffer from their actions like that too.\wj*”
+\v 11 “\wj In a way, Eliyyah is coming\wj*” he said, “\wj and he will restore everything.\wj*
+\v 12 \x + \xo 17:12: \xt Mat 11:14.\x*\wj But I’m also telling you that in another way, Eliyyah already came and they didn’t recognise him, but they \add mistreated\add* him just however they wanted, and humanity’s child will suffer from their actions like that too.\wj*”
 \p
-\v 13 Then the apprentices realised that he was talking to them about Yohan-the-Immerser.
+\v 13 Then the apprentices realised that he was talking to them about Yohan-the-immerser.
 \s1 Yeshua drives a demon out of a boy
 \r (Mark 9:14-29; Luke 9:37-43a)
 \p
@@ -1227,8 +1227,8 @@
 \s1 Yeshua tells a third time about his death
 \r (Mark 10:32-34; Luke 18:31-34)
 \p
-\v 17 As \nd Yeshua\nd* \add started\add* on the walk to Yerusalem, he took the twelve apprentices \add aside\add* by themselves on the way, and told them,
-\v 18 “\wj Listen, we’re going to Yerusalem and humanity’s child will be handed over to the chief priests and the religious teachers, and they will condemn him to death\wj*
+\v 17 As \nd Yeshua\nd* \add started\add* on the walk to Yerushalem, he took the twelve apprentices \add aside\add* by themselves on the way, and told them,
+\v 18 “\wj Listen, we’re going to Yerushalem and humanity’s child will be handed over to the chief priests and the religious teachers, and they will condemn him to death\wj*
 \v 19 \wj and hand him over to the non-Jews to be mocked and flogged and executed on a stake, and then on the third day he will come back to life.\wj*”
 \s1 Requesting the top seats
 \r (Mark 10:35-45)
@@ -1262,16 +1262,16 @@
 \p
 \v 34 \nd Yeshua\nd* felt compassionate towards them and touched their eyes \add with his fingers\add* and then straight away they were able to see, and they followed after him.
 \c 21
-\s1 The jubilant entrance of Yeshua into Yerusalem
+\s1 The jubilant entrance of Yeshua into Yerushalem
 \r (Mark 11:1-11; Luke 19:28-40; Yhn 12:12-19)
 \p
-\v 1 When they were getting close to Yerusalem and arrived at Bethphage on the Mount of Olives, \nd Yeshua\nd* sent two of his apprentices ahead,
+\v 1 When they were getting close to Yerushalem and arrived at Bethphage on the Mount of Olives, \nd Yeshua\nd* sent two of his apprentices ahead,
 \v 2 telling them, “\wj Go ahead to the next village and in front of you you’ll see a donkey tied up and her colt near her. Untie the donkey and bring them back here to me.\wj*
 \v 3 \wj But if anyone says anything to you, just tell them that the \nd master\nd* needs them, and they’ll let you take them.\wj*”
 \p
 \v 4 “\wj All this is happening so that the message that was \add written\add* by the prophet will come to pass:\wj*
 \q1
-\v 5 \x + \xo 21:5: \xt Zech 9:9.\x*\wj ‘Tell the daughter of Zion:\wj*
+\v 5 \x + \xo 21:5: \xt Zech 9:9.\x*\wj ‘Tell the daughter of Tsiyyon/Zion:\wj*
 \q1 \wj “Look, your king is coming,\wj*
 \q1 \wj gentle and riding a donkey,\wj*
 \q1 \wj and on a colt, a donkey’s offspring.” ’\wj* ”
@@ -1281,7 +1281,7 @@
 \v 8 Then the huge crowd spread their coats on the road, while others cut branches off trees and spread them on the road.
 \v 9 \x + \xo 21:9: \xt Psa 118:25-26.\x*The crowd that walked ahead of him and the crowd that followed along behind all yelled out, “David’s descendant, honoured saviour! Blessed one who comes in the name of the \nd master\nd*! Honoured saviour in the highest!”
 \p
-\v 10 As they entered Yerusalem, everyone in the city was stunned, asking, “Who is this?”
+\v 10 As they entered Yerushalem, everyone in the city was stunned, asking, “Who is this?”
 \p
 \v 11 The crowds responded, “It’s the prophet \nd Yeshua\nd*—the prophet from \nd Nazareth\nd* in the Galilee!”
 \s1 Anger aroused in the temple
@@ -1295,7 +1295,7 @@
 \v 16 \x + \xo 21:16: \xt Psa 8:2 (LXX).\x*and \add accused\add* him, “Can’t you hear what they’re saying?”
 \p “\wj Yes, I can,\wj*” \nd Yeshua\nd* responded. “\wj Didn’t you ever read \add where it says\add* ‘You caused praises to come from the lips of infants and babies’?\wj*”
 \p
-\v 17 Then he left the temple and Yerusalem and went and stayed \add overnight\add* out at Bethany.
+\v 17 Then he left the temple and Yerushalem and went and stayed \add overnight\add* out at Bethany.
 \s1 Yeshua kills the fig tree
 \r (Mark 11:12-14,20-24)
 \p
@@ -1483,14 +1483,14 @@
 \v 34 \wj Because of that, listen, I’m \add now\add* sending out \add more\add* prophets and wise \add preachers\add* and teachers to you all. You’ll kill off some of them and have others executed on stakes. You’ll flog some of them in your meeting halls, and you’ll persecute others from city to city,\wj*
 \v 35 \x + \xo 23:35: a \xt Gen 4:8; \xo b \xt 2Ch 24:20-21.\x*\wj so that \add the judgement for\add* all the deaths of godly people around the world will fall on you all. This includes the blood of the innocent Abel all the way \add through the centuries\add* to the blood of Zechariah (son of Berekiah) who you all murdered between the temple and the altar.\wj*
 \v 36 \wj Yes, I can assure you that all these things will happen to this generation.\wj*
-\s1 Yeshua’s concern for Yerusalem
+\s1 Yeshua’s concern for Yerushalem
 \r (Luke 13:34-35)
 \p
-\v 37 “\wj Yerusalem, Yerusalem, the \add city\add* that murders the prophets and throws rocks to kill those who are sent to her. How often I wanted to gather your inhabitants like a \add mother\add* hen gathers her chicks under her wings, but you didn’t want that.\wj*
+\v 37 “\wj Yerushalem, Yerushalem, the \add city\add* that murders the prophets and throws rocks to kill those who are sent to her. How often I wanted to gather your inhabitants like a \add mother\add* hen gathers her chicks under her wings, but you didn’t want that.\wj*
 \v 38 \x + \xo 23:38: \xt Jer 22:5.\x*\wj So listen, now your \add temple\add* will be left uninhabited,\wj*
 \v 39 \x + \xo 23:39: \xt Psa 118:26.\x*\wj because I’m telling you that you certainly won’t see me again until you can say, ‘The person coming in the name of the \nd master\nd* has been blessed.’\wj* ”
 \c 24
-\s1 Yeshua fortells the destruction of the temple
+\s1 Yeshua foretells the destruction of the temple
 \r (Mark 13:1-2; Luke 21:5-6)
 \p
 \v 1 As \nd Yeshua\nd* exited the temple, he approached his followers and asked them to show him around the buildings,
@@ -1852,10 +1852,10 @@
 \v 45 Around noon, the whole country became dark for three hours
 \v 46 \x + \xo 27:46: \xt Psa 22:1.\x*and then around 3pm, \nd Yeshua\nd* shouted with a loud voice, “My God, my God, why have you abandoned me?”
 \p
-\v 47 Some of the people standing there heard him and thought that he was calling Eliyah\f + \fr 27:47 \ft The original words for ‘My God’ sound a bit similar to the word for ‘Eliyah’.\f*
+\v 47 Some of the people standing there heard him and thought that he was calling Eliyyah\f + \fr 27:47 \ft The original words for ‘My God’ sound a bit similar to the word for ‘Eliyyah’.\f*
 \v 48 \x + \xo 27:48: \xt Psa 69:21.\x*One of them ran and got a sponge and dipped it in wine vinegar, and then wrapped it around a reed and held it up to his mouth to drink from.
 \p
-\v 49 But the others were saying, “Just leave him and we’ll see whether Eliyah comes to save him.”
+\v 49 But the others were saying, “Just leave him and we’ll see whether Eliyyah comes to save him.”
 \p
 \v 50 Then \nd Yeshua\nd* made a loud cry and sent his spirit away.
 \p

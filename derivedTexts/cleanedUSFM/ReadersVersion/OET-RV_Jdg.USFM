@@ -1,26 +1,27 @@
-\id JDG - Open English Translation—Readers’ Version (OET-RV) v0.1.00
+\id JDG - Open English Translation—Readers’ Version (OET-RV) v0.1.06
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 JDG
 \rem WORDTABLE OET-LV_OT_word_table.tsv
-\h Heroes and Leaders
-\toc1 Various Heroes and Leaders
-\toc2 Heroes and Leaders
+\h Heroes and Guides
+\toc1 Various Heroes and Guides
+\toc2 Heroes and Guides
 \toc3 Ldrs
 \mt2 The accounts of
-\mt1 Various Heroes and Leaders
-\mt3 commonly called Judges
+\mt1 Various Heroes and Guides
+\mt3 commonly called ‘Judges’
 \is1 Introduction
-\ip This document commonly called ‘\bk Judges\bk*’, contains a collection of accounts of ‘\bk Various Heroes and Leaders\bk*’ who helped to rescue the Israeli people from their oppressors. It covers the times from their invasion of Canaan through to just before their first king. Most of these heroes or leaders were actually warriors. Shimson (commonly called ‘Samson’) is the most well-known of all of them, and his story can be read in chapters 13–16.
+\ip This document commonly called ‘\bk Judges\bk*’, contains a collection of accounts of ‘\bk Various Heroes and Guides\bk*’ who helped to rescue the Israeli people from their oppressors. It covers the times from their invasion of Canaan through to just before their first king. Most of these heroes or guides were actually warriors. Shimshon (commonly called ‘Samson’) is the best-known of all of them, and his story can be read in chapters 13–16.
 \ip From this document we can learn that Israel prospered when they obeyed Yahweh’s instructions, but when they disobeyed, then God allowed other peoples and nations to oppress them. However, God is always ready and prepared to save his people whenever they turn away from their disobedience and return again to obeying the instructions that he’d given them.
+\ip The previous book was named after the main character Yehoshua (Joshua) and the following books (Ruth and 1 Shemuel/Samuel) are named after their main characters, but this document with somewhere around a dozen important characters, has no single prominent character that it could be named after. Instead it’s traditionally named ‘Judges’ in English because of around twenty uses of the Hebrew root ‘שָׁפַט’ (shafat) often in roots normally translated as ‘judged’. Despite that, there’s not a single account in this document of these leaders judging the cases and conflicts of the common people. This dilemma offers two possible interpretations: 1/ that these leaders (often military leaders) did judge cases for the common people, but those details aren’t recorded, or 2/ (which we’ve leaned more towards) that this Hebrew word has a wider range of meaning, and so we’ve leaned towards the English word ‘guided’ or ‘led’ in these contexts.
 \iot Main components of this account
 \io1 The events up until Yehoshua’s death \ior 1:1–2:10\ior*
-\io1 The leaders/heroes of Israel \ior 2:11–16:31\ior*
+\io1 The various heroes/guides of Israel \ior 2:11–16:31\ior*
 \io1 Various other events \ior 17:1–21:25\ior*
 \rem This is still a very early look into the unfinished text of the \em Open English Translation\em* of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
-\s1 The capturing of Adunibisik of descendants of Huda and Simyun
+\s1 Yehudah and Simeon capture Adoni-Bezek
 \p
 \v 1 After Yehoshua’s death, the Israelis asked Yahweh, “\add Which tribe should go first to attack the Canaanites\add*?”
 \v 2 “Yehudah will go first,” Yahweh \add answered\add*. “Listen, I’ve \add already determined that they’ll conquer\add* the land.”
@@ -29,10 +30,10 @@
 \v 4 When \add they\add* attacked, Yahweh \add gave them victory over\add* the Canaanites and the Perizzites and they killed ten thousand men at Bezek.
 \v 5 They \add confronted\add* Adoni-Bezek in Bezek and fought against him (then eventually defeating the Canaanites and the Perizzites).
 \v 6 Adoni-Bezek \add tried to\add* flee but they chased him and captured him, cutting off his thumbs and big toes.
-\v 7 “Seventy kings had their thumbs and big toes chopped off,” Adoni-Bezek said, “and were gathering scraps of food beneath my table. Just as I have done, so God has repaid to me.” Then they took him to Yerusalem and he died there.
-\s1 The capture of Yerusalem and Hebron
+\v 7 “Seventy kings had their thumbs and big toes chopped off,” Adoni-Bezek said, “and were gathering scraps of food beneath my table. Just as I have done, so God has repaid to me.” Then they took him to Yerushalem and he died there.
+\s1 The capture of Yerushalem and Hebron
 \p
-\v 8 The warriors from Yehudah attacked Yerusalem and captured the city, killing the inhabitants and setting the city on fire.
+\v 8 The warriors from Yehudah attacked Yerushalem and captured the city, killing the inhabitants and setting the city on fire.
 \v 9 Then they fought against the Canaanites who lived in the hill country, in the southern \add wilderness\add*, and in the \add western\add* foothills.
 \v 10 \add They\add* also fought the Canaanites in Kiriath-Arba (now known as Hebron) and killed Sheshai, Ahiman, and Talmai.
 \s1 Otniel captures Debir
@@ -50,7 +51,7 @@
 \v 18 \add They\add* also captured Gaza, Ashkelon, and Ekron and \add all\add* their surrounding territories.
 \v 19 Yahweh helped Yehudah and \add they\add* took possession of the hill country, although they weren’t able to conquer the people living down in the plains because they had iron on their chariots.
 \v 20 They gave Hebron to Caleb just as Mosheh had directed, and he dispossessed the three sons of the Anak from there.\x + \xo 1:20: \xt Josh 15:13-14.\x*
-\v 21 \add However\add* Benyamin’s descendants didn’t drive the Yebusites living in Yerusalem out, so \add they\add* have lived among the Benyamites in Yerusalem to this day.\x + \xo 1:21: \xt Josh 15:63; 2Sam 5:6; 1Ch 11:4.\x*
+\v 21 \add However\add* Benyamin’s descendants didn’t drive the Yebusites living in Yerushalem out, so \add they\add* have lived among the Benyamites in Yerushalem to this day.\x + \xo 1:21: \xt Josh 15:63; 2Sam 5:6; 1Ch 11:4.\x*
 \s1 Efraim and Manashsheh conquer Bethel
 \p
 \v 22 Also Yosef’s descendants attacked Bethel, and Yahweh \add helped\add* them.
@@ -77,7 +78,7 @@
 \c 2
 \s1 God’s messenger comes to Bokim
 \p
-\v 1 Then Yahweh’s messenger whent from Gilgal to Bokim and told \add the Israelis\add*, “I brought you all out of Egypt and led you here to this land that I promised to your ancestors. I had said that I wouldn’t ever break my agreement with you all,
+\v 1 Then Yahweh’s messenger went from Gilgal to Bokim and told \add the Israelis\add*, “I brought you all out of Egypt and led you here to this land that I promised to your ancestors. I had said that I wouldn’t ever break my agreement with you all,
 \v 2 but that you mustn’t form treaties with the peoples who lived here, rather you must tear down their altars. But you all haven’t obeyed what I said. What have you \add gone and\add* done?\x + \xo 2:2: \xt Exo 34:12-13; Deu 7:2-5.\x*
 \v 3 \add So\add* I’m telling you that I won’t drive your enemies out ahead of you, \add but\add* they’ll be like thorns in your sides and you’ll all end up being enslaved to their \add idols\add*.”
 \v 4 When Yahweh’s messenger finished saying that, the people wept loudly,
@@ -106,7 +107,7 @@
 \v 22 so as to use them to test Israel \add to see\add* whether \add the Israelis\add* will obey my instructions like their ancestors did, or not.
 \v 23 \add So\add* Yahweh allowed those people groups to stay on, and hence they hadn’t been \add handed over\add* to Yehoshua.
 \c 3
-\s1 The nasame people of Kanaan
+\s1 The remaining kingdoms in Canaan
 \p
 \v 1 The \add following\add* are the kingdoms which Yahweh allowed to remain so as to test the \add newer generations\add* of Israel who hadn’t experienced the battles in Canaan
 \v 2 (\add if\add* only for the sake of teaching warfare to those generations who hadn’t experienced it):
@@ -251,11 +252,11 @@
 \v 14 From Efraim their root was with Amalek.
 \q1 After you, Benyamin, among your people.
 \q1 From \add (Manashsheh’s)\add* Makir, the commanders came down.
-\q1 And from Zebulun, those who march carrying an offier’s staff.
+\q1 And from Zebulun, those who march carrying an officer’s staff.
 \q1
 \v 15 My princes in Yissashkar were with Deborah.
 \q1 And Yissashkar was also with Barak.
-\q1 He was sent into a valeey on his heels.
+\q1 He was sent into a valley on his heels.
 \q1 There was intense heart searching among the clans of Reuben.
 \q1
 \v 16 Why did you sit between the sheep pens?
@@ -422,7 +423,7 @@
 \v 24 Gideon \add also\add* sent messengers through Efraim’s hill country \add to tell them\add*, “Go down \add to the Yordan river\add* opposite Midian and \add take control of the crossings to capture them between\add* as far as Beyt-Barah.” So all the men of Efraim were summoned and they commandeered the Yordan \add crossings\add* as far as Beyt-Barah.
 \v 25 They chased after the Midianites and captured their two princes, Oreb and Zeeb. They killed Oreb at the rock \add now called\add* ‘Oreb’s rock’, and they killed Zeeb at a winepress \add now called\add* ‘Zeeb’s winepress’, and they brought their heads back across the Yordan to Gideon.
 \c 8
-\s1 The defeat of me from-Midiyan
+\s1 The final defeat of the Midianites
 \p
 \v 1 \add But\add* then the Efraimite men \add challenged\add* Gideon, “Why have you \add side-tracked\add* us? Why didn’t you call us when you went to battle against the Midianites?” And they severely rebuked him.
 \p
@@ -563,8 +564,8 @@
 \v 5 Then Yair died and he was buried in Kamon.
 \s1 The making again of bad of Israelis
 \p
-\v 6 The \add Israelis\add* continued to do \add what Yahweh considered evil\add*: they worshiped the Ba’als, the Ashtorets, the gods of Aram, the gods of Sidon, the gods of Moab, the gods of the sons of Ammon, and the gods of the Philistines. They forsook Yahweh and didn’t serve him.
-\v 7 Yahweh \add was very angry with\add* Israel, so he \add allowed the Philistines and the Ammonites to harrass them\add*.
+\v 6 The \add Israelis\add* continued to do \add what Yahweh considered evil\add*: they worshipped the Ba’als, the Ashtorets, the gods of Aram, the gods of Sidon, the gods of Moab, the gods of the sons of Ammon, and the gods of the Philistines. They forsook Yahweh and didn’t serve him.
+\v 7 Yahweh \add was very angry with\add* Israel, so he \add allowed the Philistines and the Ammonites to harass them\add*.
 \v 8 They shattered and oppressed the \add Israelis\add* that year, \add but it went on\add* for eighteen years for all the \add Israelis\add* who were on the opposite side of the Yordan in the land of the Amorites, which is in the Gilead.
 \v 9 Then the \add Ammonites\add* also crossed over the Yordan to fight against Yehudah, against Benyamin, and against the \add half-tribe\add* of Efraim.
 \p This caused incredible distress for the \add Israelis\add*
@@ -727,14 +728,14 @@
 \q1 and sweetness came out of the strong one.”
 \m But three days later, they \add still couldn’t solve his\add* riddle.
 \p
-\v 15 Then on the seventh day,\f + \fr 14:15 \ft The Greek Septuagint translation says ‘the \em fourth\em* day’, which perhaps might fit better into the narrative, but ‘seventh’ is in the Hebrew that we have and not necessariy incorrect.\f* they \add pressured\add* Shimshon’s wife, “Get your husband \add to tell you the answer of\add* the riddle, otherwise we’ll burn \add down\add* your father’ house and you \add as well\add*. \add Did you invite us to the party just to impoverish\add* us?”
+\v 15 Then on the seventh day,\f + \fr 14:15 \ft The Greek Septuagint translation says ‘the \em fourth\em* day’, which perhaps might fit better into the narrative, but ‘seventh’ is in the Hebrew that we have and not necessarily incorrect.\f* they \add pressured\add* Shimshon’s wife, “Get your husband \add to tell you the answer of\add* the riddle, otherwise we’ll burn \add down\add* your father’ house and you \add as well\add*. \add Did you invite us to the party just to impoverish\add* us?”
 \p
 \v 16 Then Shimshon’s wife \add put on a crying act\add* and said, “You must hate me—you don’t love me \add because\add* you’ve \add created\add* a riddle \add for my relatives\add*, yet you haven’t \add even told me the answer\add*.”
 \p “Listen,” he \add replied\add*, “I haven’t \add even\add* \add told my own parents\add*. Should I tell you?”
 \v 17 She continued to cry beside him throughout the seven-day party, and then \add finally\add* on the seventh day, he \add gave in and\add* told her because she kept nagging him, \add so in the end\add* she \add was able to reveal the answer to her relatives\add*.
 \v 18 Then the men of the city said to \add Shimshon\add* before the sun went down on the seventh day,
 \q1 “What is sweeter than honey?
-\q1 And what is stronger than a lion?”
+\q1 And what’s stronger than a lion?”
 \m \add So\add* he said to them,
 \q1 “If you all hadn’t ploughed with my heifer,
 \q1 you wouldn’t have been able to solve my riddle.”
@@ -750,12 +751,12 @@
 \v 4 Then \add he\add* went and captured three hundred foxes and \add tied them in pairs\add*—tail to tail. He took torches, and \add tied\add* one torch between \add the tails of each pair\add*.
 \v 5 He \add lit\add* the torches and let \add the foxes\add* loose into the grain \add crops\add* of the Philistines. As a result, he burnt both the standing grain \add plants\add* and also the \add harvested\add* \add stacks\add* of sheaves, and even a vineyard and an olive orchard.
 \v 6 \add So\add* the Philistines \add asked\add*, “Who did this?”
-\p “Shimshon,” they \add replied\add*, “the son-in-law of the \add man from Timnah\add*, because he took \add Shimshon’s\add* wife and gave her to his close friend.” As a result, the Philistines went \add to Timnah\add* and they burnt \add both\add* \add the woman\add*her and her father.
+\p “Shimshon,” they \add replied\add*, “the son-in-law of the \add man from Timnah\add*, because he took \add Shimshon’s\add* wife and gave her to his close friend.” As a result, the Philistines went \add to Timnah\add* and they burnt \add both\add* \add the woman\add* and her father.
 \v 7 Then Shimshon told them, “Since you actually did that \add horrible thing\add*, I certainly \add won’t\add* stop until I’ve avenged myself against you all.”
 \v 8 Then he attacked the Philistines and \add crippled many of them, before going to\add* Etam’s rock where he lived in a cave.
 \s1 Shimshon defeats the Philistines
 \p
-\v 9 \add However\add*, the Philistine \add warrriors\add* went and camped in Yehudah, and spread out \add around the town of\add* Lehi.
+\v 9 \add However\add*, the Philistine \add warriors\add* went and camped in Yehudah, and spread out \add around the town of\add* Lehi.
 \v 10 \add But\add* the men of Yehudah \add asked\add* \add them\add*, “Why have you all come \add here to attack\add* us?”
 \p “We’ve come to \add capture\add* Shimshon,” they \add replied\add*. “To \add give him some of his own back\add*.”
 \v 11 Then three thousand men from Yehudah went down to the cleft of Etam’s rock, and told Shimshon, “Don’t you realise that the Philistines are ruling over us? \add Why are you causing more trouble for\add* us?”
@@ -822,8 +823,8 @@
 \v 26 and \add he\add* \add asked\add* the servant who was \add guiding him\add* by the hand, “Place my hands against the two pillars holding up the building \add so\add* I can lean on them.”
 \v 27 The building was full of the men and the women, \add including\add* the Philistine leaders. On the roof there were about three thousand men and women watching the entertainment with Shimshon.
 \p
-\v 28 Then Shimshon called out to Yahweh, “My master Yahweh, please remember me. Strengthen me please, just this time, oh God, so that I can avenge myself by one \add last\add* act of vengence on the Philistines \add to make them pay for\add* my two eyes.”
-\v 29 Then \add he\add* took hold of the two center pillars on which the building depended, and \add pressed out\add* against them—one in his right hand and one in his left.
+\v 28 Then Shimshon called out to Yahweh, “My master Yahweh, please remember me. Strengthen me please, just this time, oh God, so that I can avenge myself by one \add last\add* act of vengeance on the Philistines \add to make them pay for\add* my two eyes.”
+\v 29 Then \add he\add* took hold of the two centre pillars on which the building depended, and \add pressed out\add* against them—one in his right hand and one in his left.
 \v 30 Then \add he\add* \add exclaimed\add*, “\add Let me\add* die with the Philistines!” He stretched out with his strength and the building fell on \add their\add* leaders and all of the people in it. \add So\add* he killed more people at his death than he had killed during his life.
 \p
 \v 31 Then his brothers and all his father’s household went \add to Gaza\add* and carried \add his body\add* back. They buried him between Zorah and Eshtaol in the burial place of his father Manoah. He had \add helped\add* Israel for twenty years.
@@ -910,7 +911,7 @@
 \p
 \v 9 \add When\add* the man stood up to go with his slave-wife and his young man, his father-in-law said, “Listen, the day’s \add coming to an end soon\add*. Please stay the night. See, \add it’ll be getting dark soon\add*. Spend the night here and \add be happy\add*. Then make an early start tomorrow for your journey \add home\add*.”
 \p
-\v 10 \add But\add* the man from the tribe of Levi didn’t want to stay another night. He put saddles on his two donkeys, and started to go with his slave-wife and his servant toward Yebus city (now called Yerusalem).
+\v 10 \add But\add* the man from the tribe of Levi didn’t want to stay another night. He put saddles on his two donkeys, and started to go with his slave-wife and his servant toward Yebus city (now called Yerushalem).
 \p
 \v 11 They got close to Yebus and the daylight had \add mostly gone, so\add* the young man said to his master, “Come, please, we should turn aside into this city of the Jebusites so we can spend the night there.”
 \v 12 “We won’t \add go\add* into a into a city of \add foreigners\add*, his master \add replied\add*. “There’s no \add Israelis there\add*. \add Better to keep going until we\add* reach Gibeah.”
@@ -957,7 +958,7 @@
 \v 12 Then the Israeli tribes sent men \add across the Benyamite region to ask\add*, “What’s this \add evil thing\add* that’s been done among you?
 \v 13 \add So\add* now, hand over those worthless men from the Gibeah \add region\add* so that we can put them to death and purge Israel of that evil.” But the Benyamites weren’t willing to \add take the advice of their Israeli relatives\add*.
 \v 14 \add They\add* came out of their cities \add and assembled\add* at Gibeah to the battle against the \add Israelis\add*.
-\v 15 The \add Benyamites \add* mobilized together twenty-six thousand men from their cities on that day, all carrying \add swords\add*. In addition, seven hundred chosen men had been mobilized from the Gibeah \add region\add*.
+\v 15 The \add Benyamites \add* mobilised together twenty-six thousand men from their cities on that day, all carrying \add swords\add*. In addition, seven hundred chosen men had been mobilised from the Gibeah \add region\add*.
 \v 16 Among all of those people were seven hundred chosen left-handers, each of whom could sling a stone at a hair without missing.
 \v 17 The Israelis (excluding Benyamites) mustered up for themselves four hundred thousand men—all \add expert warriors\add* and all carrying \add swords\add*.
 \s1 The war to punish the Benyamites
@@ -998,7 +999,7 @@
 \v 41 Then the \add main\add* \add Israeli force\add* \add stopped retreating and\add* turned back \add to attack again\add*. The \add Benyamites\add* were horrified because \add they\add* \add now\add* saw that disaster had struck them.
 \v 42 They retreated away from the \add Israelis\add* into the wilderness, but the battle overtook \add them\add*, plus \add the Israelis\add* were coming \add back\add* out of the cities \add getting right in amongst them\add* \add to fight\add*.
 \v 43 They surrounded \add the Benyamites as they tried to flee\add*, and easily ran \add them\add* down as \add they tried to escape from the Gibeah region towards the east\add*.
-\v 44 Eighteen thousand strong \add Benyamite warriors were killed\add*.=,
+\v 44 Eighteen thousand strong \add Benyamite warriors were killed\add*,
 \v 45 and \add the rest\add* turned and fled into the wilderness towards the Rimmon rock. \add Another five thousand men were killed\add* along the trails. They chased them \add all the way\add* to Gidom, and killed \add another\add* two thousand men,
 \v 46 \add so the total number of Benyamite swordsmen who were killed came to\add* twenty-five thousand—all strong \add warriors\add*.
 \p

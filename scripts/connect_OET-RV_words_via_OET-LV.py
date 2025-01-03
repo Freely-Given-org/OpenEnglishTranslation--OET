@@ -5,7 +5,7 @@
 #
 # Script to connect OET-RV words with OET-LV words that have word numbers.
 #
-# Copyright (C) 2023-2024 Robert Hunt
+# Copyright (C) 2023-2025 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -24,7 +24,7 @@
 
 """
 Every word in the OET-LV has a word number tag suffixed to it,
-    which connects it back to / aligns it with the Greek word it is translated from.
+    which connects it back to / aligns it with the Hebrew or Greek word it is translated from.
 
 This script attempts to deduce how some of those same word are translated in the OET-RV
     and automatically connect them with the same word number tag.
@@ -50,6 +50,7 @@ CHANGELOG:
 from gettext import gettext as _
 from typing import List, Tuple, Optional
 from pathlib import Path
+from collections import defaultdict
 import logging
 import re
 
@@ -58,17 +59,19 @@ if __name__ == '__main__':
     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
-from BibleOrgSys.Bible import Bible
 from BibleOrgSys.Internals.InternalBibleInternals import getLeadingInt
-from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, BOOKLIST_66
-from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
+# from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
+import sys
+sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitted to PyPI
+from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
-LAST_MODIFIED_DATE = '2024-11-12' # by RJH
+
+LAST_MODIFIED_DATE = '2025-01-03' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.72'
+PROGRAM_VERSION = '0.73'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -83,6 +86,30 @@ OET_RV_ESFM_FolderPath = project_folderpath.joinpath( 'translatedTexts/ReadersVe
 assert OET_LV_OT_ESFM_InputFolderPath.is_dir()
 assert OET_LV_NT_ESFM_InputFolderPath.is_dir()
 assert OET_RV_ESFM_FolderPath.is_dir()
+
+OT_NameTable_Filepath = Path( 'ScriptedOTUpdates/restoreNames.commandTable.tsv' )
+NT_OT_NameTable_Filepath = Path( 'ScriptedVLTUpdates/OTNames.commandTable.tsv' )
+NT_NameTable_Filepath = Path( 'ScriptedVLTUpdates/NTNames.commandTable.tsv' )
+COMMAND_TABLE_NUM_COLUMNS = 15
+COMMAND_HEADER_LINE = 'Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	RCase	Replace	Name	Comment'
+assert ' ' not in COMMAND_HEADER_LINE
+assert COMMAND_HEADER_LINE.count( '\t' ) == COMMAND_TABLE_NUM_COLUMNS - 1
+# class EditCommand(NamedTuple):
+#     tags: str           # 0
+#     iBooks: list        # 1
+#     eBooks: list        # 2
+#     iMarkers: list      # 3
+#     eMarkers: list      # 4
+#     iRefs: list         # 5
+#     eRefs: list         # 6
+#     preText: str        # 7
+#     sCase: str          # 8
+#     searchText: str     # 9
+#     postText: str       # 10
+#     rCase: str          # 11
+#     replaceText: str    # 12
+#     name: str           # 13
+#     comment: str        # 14
 
 # EN_SPACE = ' '
 # EM_SPACE = ' '
@@ -268,21 +295,29 @@ def main():
     lvOT.loadAuxilliaryFiles = True
     lvOT.loadBooks() # So we can iterate through them all later
     lvOT.lookForAuxilliaryFilenames()
-    dPrint( 'verbose', DEBUGGING_THIS_MODULE, f"{lvOT=}")
+    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvOT=}")
 
     # Load the OET-LV NT
     lvNT = ESFMBible( OET_LV_NT_ESFM_InputFolderPath, givenAbbreviation='OET-LV' )
     lvNT.loadAuxilliaryFiles = True
     lvNT.loadBooks() # So we can iterate through them all later
     lvNT.lookForAuxilliaryFilenames()
-    dPrint( 'verbose', DEBUGGING_THIS_MODULE, f"{lvNT=}")
+    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvNT=}")
+
+    # Load the Hebrew and Greek name tables from TSV files
+    load_transliteration_table( 'Hebrew' )
+    load_transliteration_table( 'Greek' )
+    loadHebGrkNameTables()
+    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{state.nameTables=}")
 
     # Display anywhere where we still have 'for' that should perhaps be 'because'
     # show_fors( lv )
 
     # Connect linked words in the OET-LV to the OET-RV
-    connect_OET_RV( rv, lvOT, OET_LV_OT_ESFM_InputFolderPath )
-    connect_OET_RV( rv, lvNT, OET_LV_NT_ESFM_InputFolderPath )
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nProcessing connect words for OET OT…" )
+    connect_OET_RV( rv, lvOT, OET_LV_OT_ESFM_InputFolderPath ) # OT
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nProcessing connect words for OET NT…" )
+    connect_OET_RV( rv, lvNT, OET_LV_NT_ESFM_InputFolderPath ) # NT
 
     # Delete any saved (but now obsolete) OBD Bible pickle files
     for something in OET_RV_ESFM_FolderPath.iterdir():
@@ -290,6 +325,155 @@ def main():
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Deleting obsolete OBD Bible pickle file {something.name}…" )
             something.unlink()
 # end of connect_OET-RV_words_via_OET-LV.main
+
+
+NAME_ADJUSTMENT_TABLE = { # Where we change too far from the accepted KJB word
+    'Shomron':'Samaria',
+    'Yudah':'Yehuda',
+    }
+def loadHebGrkNameTables():
+    """
+    Loads three TSV files into state.nameTables
+
+    These are the ScriptedBibleEditor command files that create the Hebrew and Greek proper names for the OET-LV.
+    """
+    state.nameTables = {}
+
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading OT names from {OT_NameTable_Filepath}…" )
+    state.nameTables['OT'] = defaultdict( set )
+    with open( OT_NameTable_Filepath, 'rt', encoding='utf-8' ) as commandTableFile:
+        line_number = 0
+        for line in commandTableFile:
+            line_number += 1
+            line = line.rstrip( '\r\n' )
+            if not line or line.startswith( '#' ): continue
+            tab_count = line.count( '\t' )
+            if tab_count>9 and tab_count < (COMMAND_TABLE_NUM_COLUMNS - 1): # Some editors delete trailing columns
+                line += '\t' * (COMMAND_TABLE_NUM_COLUMNS - 1 - tab_count) # Add back the empty columns
+                tab_count = line.count( '\t' )
+            if tab_count != (COMMAND_TABLE_NUM_COLUMNS - 1):
+                logging.critical( f"Skipping line {line_number} which contains {tab_count} tabs (instead of {COMMAND_TABLE_NUM_COLUMNS - 1})" )
+            if line == COMMAND_HEADER_LINE:
+                continue # as no need to save this
+
+            # Get the fields and check some of them
+            fields = line.split( '\t' ) # 0:Tags 1:IBooks 2:EBooks 3:IMarkers 4:EMarkers 5:IRefs 6:ERefs 7:PreText 8:SCase 9:Search 10:PostText 11:RCase 12:Replace 13:Name 14:Comment
+            tags, searchText, replaceText = fields[0], fields[9], fields[12]
+            # print( f"{searchText=} {replaceText=}")
+            if 'H' in tags:
+                if searchText.startswith( 'J' ): searchText = f'Y{searchText[1:]}' # Replace first letter J with Y
+                try: searchText = NAME_ADJUSTMENT_TABLE[searchText] # Do transforms
+                except KeyError: pass # if it exists
+
+                newReplaceText = transliterate_Hebrew( replaceText, capitaliseHebrew=searchText[0].isupper() )
+                if newReplaceText != replaceText:
+                    # print(f" Converted Hebrew '{replaceText}' to '{newReplaceText}'")
+                    replaceText = newReplaceText
+                if '/' in replaceText:
+                    assert 'd' in tags, f"OT {tags=} {searchText=} {replaceText=}"
+                    replaceText = replaceText.replace( '(', '' ).replace( ')', '' ) # We don't want the brackets
+                    shortenedReplaceText = replaceText.split( '/' )[0]
+                    # assert shortenedReplaceText not in state.nameTables['OT'], f"{tags=} {searchText=} {replaceText=} {shortenedReplaceText=}"
+                    state.nameTables['OT'][shortenedReplaceText].add( searchText ) # We add an extra entry
+                    if searchText.endswith( 'iah' ): # e.g. Azariah
+                        state.nameTables['OT'][shortenedReplaceText].add( f'{searchText[:-3]}yah' ) # We add an extra entry
+                    if 'j' in searchText: # e.g., Benjamin
+                        state.nameTables['OT'][shortenedReplaceText].add( searchText.replace( 'j', 'y' ) ) # We add an extra entry
+                    if 'ph' in searchText: # e.g., Naphtali
+                        state.nameTables['OT'][shortenedReplaceText].add( searchText.replace( 'ph', 'f' ) ) # We add an extra entry
+                    if 'z' in searchText and 'ts' in replaceText: # e.g., Hatzor
+                        state.nameTables['OT'][shortenedReplaceText].add( searchText.replace( 'z', 'ts' ) ) # We add an extra entry
+                    if searchText.startswith('Z') and replaceText.startswith('Ts'): # e.g., Ziklag
+                        state.nameTables['OT'][shortenedReplaceText].add( f'Ts{searchText[1:]}' ) # We add an extra entry
+                # assert replaceText not in state.nameTables['OT'], f"{tags=} {searchText=} {replaceText=}"
+                state.nameTables['OT'][replaceText].add( searchText )
+                if searchText.endswith( 'iah' ):
+                    state.nameTables['OT'][replaceText].add( f'{searchText[:-3]}yah' ) # We add an extra entry
+                if 'j' in searchText: # e.g., Benjamin
+                    state.nameTables['OT'][replaceText].add( searchText.replace( 'j', 'y' ) ) # We add an extra entry
+                if 'ph' in searchText: # e.g., Naphtali
+                    state.nameTables['OT'][replaceText].add( searchText.replace( 'ph', 'f' ) ) # We add an extra entry
+                if 'z' in searchText and 'ts' in replaceText: # e.g., Hatzor
+                    state.nameTables['OT'][replaceText].add( searchText.replace( 'z', 'ts' ) ) # We add an extra entry
+                if searchText.startswith('Z') and replaceText.startswith('Ts'): # e.g., Ziklag
+                    state.nameTables['OT'][replaceText].add( f'Ts{searchText[1:]}' ) # We add an extra entry
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded {len(state.nameTables['OT']):,} OT names." )
+    # print( f"{state.nameTables['OT']['Mənaḩēm']=}" ); halt
+
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading NT OT names from {NT_OT_NameTable_Filepath}…" )
+    state.nameTables['NT_OT'] = defaultdict( set )
+    with open( NT_OT_NameTable_Filepath, 'rt', encoding='utf-8' ) as commandTableFile:
+        line_number = 0
+        for line in commandTableFile:
+            line_number += 1
+            line = line.rstrip( '\r\n' )
+            if not line or line.startswith( '#' ): continue
+            tab_count = line.count( '\t' )
+            if tab_count>9 and tab_count < (COMMAND_TABLE_NUM_COLUMNS - 1): # Some editors delete trailing columns
+                line += '\t' * (COMMAND_TABLE_NUM_COLUMNS - 1 - tab_count) # Add back the empty columns
+                tab_count = line.count( '\t' )
+            if tab_count != (COMMAND_TABLE_NUM_COLUMNS - 1):
+                logging.critical( f"Skipping line {line_number} which contains {tab_count} tabs (instead of {COMMAND_TABLE_NUM_COLUMNS - 1})" )
+            if line == COMMAND_HEADER_LINE:
+                continue # as no need to save this
+
+            # Get the fields and check some of them
+            fields = line.split( '\t' ) # 0:Tags 1:IBooks 2:EBooks 3:IMarkers 4:EMarkers 5:IRefs 6:ERefs 7:PreText 8:SCase 9:Search 10:PostText 11:RCase 12:Replace 13:Name 14:Comment
+            tags, searchText, replaceText = fields[0], fields[9], fields[12]
+            # print( f"{searchText=} {replaceText=}")
+            if 'HG' in tags:
+                if searchText.startswith( 'J' ): searchText = f'Y{searchText[1:]}' # Replace first letter J with Y
+                newReplaceText = transliterate_Greek( transliterate_Hebrew( replaceText, capitaliseHebrew=searchText[0].isupper() ) )
+                if newReplaceText != replaceText:
+                    # print(f" Converted Hebrew/Greek '{replaceText}' to '{newReplaceText}'")
+                    replaceText = newReplaceText
+                if '/' in replaceText:
+                    assert 'd' in tags, f"OT_NT {tags=} {searchText=} {replaceText=}"
+                    replaceText = replaceText.replace( '(', '' ).replace( ')', '' ) # We don't want the brackets
+                    shortenedReplaceText = replaceText.split( '/' )[0]
+                    # assert shortenedReplaceText not in state.nameTables['NT_OT'], f"{tags=} {searchText=} {replaceText=} {shortenedReplaceText=}"
+                    state.nameTables['NT_OT'][shortenedReplaceText].add ( searchText ) # We add an extra entry
+                # assert replaceText not in state.nameTables['NT_OT'], f"{tags=} {searchText=} {replaceText=}"
+                state.nameTables['NT_OT'][replaceText].add( searchText )
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded {len(state.nameTables['NT_OT']):,} NT OT names." )
+
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading NT names from {NT_NameTable_Filepath}…" )
+    state.nameTables['NT'] = defaultdict( set )
+    with open( NT_NameTable_Filepath, 'rt', encoding='utf-8' ) as commandTableFile:
+        line_number = 0
+        for line in commandTableFile:
+            line_number += 1
+            line = line.rstrip( '\r\n' )
+            if not line or line.startswith( '#' ): continue
+            tab_count = line.count( '\t' )
+            if tab_count>9 and tab_count < (COMMAND_TABLE_NUM_COLUMNS - 1): # Some editors delete trailing columns
+                line += '\t' * (COMMAND_TABLE_NUM_COLUMNS - 1 - tab_count) # Add back the empty columns
+                tab_count = line.count( '\t' )
+            if tab_count != (COMMAND_TABLE_NUM_COLUMNS - 1):
+                logging.critical( f"Skipping line {line_number} which contains {tab_count} tabs (instead of {COMMAND_TABLE_NUM_COLUMNS - 1})" )
+            if line == COMMAND_HEADER_LINE:
+                continue # as no need to save this
+
+            # Get the fields and check some of them
+            fields = line.split( '\t' ) # 0:Tags 1:IBooks 2:EBooks 3:IMarkers 4:EMarkers 5:IRefs 6:ERefs 7:PreText 8:SCase 9:Search 10:PostText 11:RCase 12:Replace 13:Name 14:Comment
+            tags, searchText, replaceText = fields[0], fields[9], fields[12]
+            # print( f"{searchText=} {replaceText=}")
+            if 'G' in tags:
+                if searchText.startswith( 'J' ): searchText = f'Y{searchText[1:]}' # Replace first letter J with Y
+                newReplaceText = transliterate_Greek( replaceText )
+                if newReplaceText != replaceText:
+                    # print(f" Converted Greek '{replaceText}' to '{newReplaceText}'")
+                    replaceText = newReplaceText
+                if '/' in replaceText:
+                    assert 'd' in tags, f"NT {tags=} {searchText=} {replaceText=}"
+                    replaceText = replaceText.replace( '(', '' ).replace( ')', '' ) # We don't want the brackets
+                    shortenedReplaceText = replaceText.split( '/' )[0]
+                    # assert shortenedReplaceText not in state.nameTables['NT'], f"{tags=} {searchText=} {replaceText=} {shortenedReplaceText=}"
+                    state.nameTables['NT'][shortenedReplaceText].add( searchText ) # We add an extra entry
+                # assert replaceText not in state.nameTables['NT'], f"{tags=} {searchText=} {replaceText=}"
+                state.nameTables['NT'][replaceText].add( searchText )
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded {len(state.nameTables['NT']):,} NT names." )
+# end of connect_OET-RV_words_via_OET-LV.loadHebGrkNameTables
 
 
 illegalWordLinkRegex1 = re.compile( '[0-9]¦' ) # Has digits BEFORE the broken pipe
@@ -308,7 +492,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
     totalSimpleListedAdds = totalProperNounAdds = totalFirstPartMatchedAdds = totalManualMatchedAdds = 0
     totalSimpleListedAddsNS = totalProperNounAddsNS = totalFirstPartMatchedAddsNS = totalManualMatchedAddsNS = 0 # Nomina sacra
     for BBB,lvBookObject in lv.books.items():
-        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Processing connect words for OET {BBB}…" )
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Processing connect words for OET {BBB}…" )
 
         bookSimpleListedAdds = bookProperNounAdds = bookFirstPartMatchedAdds = bookManualMatchedAdds = 0
         bookSimpleListedAddsNS = bookProperNounAddsNS = bookFirstPartMatchedAddsNS = bookManualMatchedAddsNS = 0 # Nomina sacra
@@ -385,7 +569,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
                         rvVerseEntryList, _rvCcontextList = rv.getContextVerseData( (BBB, str(c), str(v)) )
                         lvVerseEntryList, _lvCcontextList = lv.getContextVerseData( (BBB, str(c), str(v)) )
                     except KeyError:
-                        logging.critical( f"Seems we have no {BBB} {c}:{v} -- versification issue?" )
+                        logging.error( f"Seems we have no {BBB} {c}:{v} -- versification issue?" )
                         continue
                     # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"RV entries: ({len(rvVerseEntryList)}) {rvVerseEntryList}")
                     # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"LV entries: ({len(lvVerseEntryList)}) {lvVerseEntryList}")
@@ -416,9 +600,9 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
             assert doubledND not in newESFMtext, f"doubled \\nd check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(doubledND)-5:newESFMtext.index(doubledND)+25]}'"
             with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
                 esfmFile.write( newESFMtext )
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Did {bookSimpleListedAdds:,} simple listed adds, {bookProperNounAdds:,} proper noun adds, {bookFirstPartMatchedAdds:,} first part adds and {bookManualMatchedAdds:,} manual adds for {BBB}." )
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Did {bookSimpleListedAddsNS:,} simple listed NS, {bookProperNounAddsNS:,} proper noun NS, {bookFirstPartMatchedAddsNS:,} first part NS and {bookManualMatchedAddsNS:,} manual NS for {BBB}." )
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Saved OET-RV {BBB} {len(newESFMtext):,} bytes to {rvESFMFilepath}" )
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookSimpleListedAdds:,} simple listed adds, {bookProperNounAdds:,} proper noun adds, {bookFirstPartMatchedAdds:,} first part adds and {bookManualMatchedAdds:,} manual adds for {BBB}." )
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookSimpleListedAddsNS:,} simple listed NS, {bookProperNounAddsNS:,} proper noun NS, {bookFirstPartMatchedAddsNS:,} first part NS and {bookManualMatchedAddsNS:,} manual NS for {BBB}." )
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      Saved OET-RV {BBB} {len(newESFMtext):,} bytes to {rvESFMFilepath}" )
         else:
             # assert bookSimpleListedAdds == bookProperNounAdds == 0
             vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    No changes made to OET-RV {BBB}." )
@@ -491,7 +675,8 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
             #     forList.append( f"{BBB}_{c}:{v}" )
     if not rvText or not lvText: return (0,0), (0,0), (0,0), (0,0)
     rvAdjText = rvText.replace('◘','').replace('≈','').replace('…','') \
-                .replace('.','').replace(',','').replace(':','').replace(';','').replace('?','').replace('!','').replace('—',' ') \
+                .replace('.','').replace(',','').replace(':','').replace(';','').replace('?','').replace('!','') \
+                .replace('/',' ').replace('—',' ') \
                 .replace( '(', '').replace( ')', '' ) \
                 .replace( '“', '' ).replace( '”', '' ).replace( '‘', '' ).replace( '’', '') \
                 .replace('  ',' ').strip()
@@ -528,12 +713,13 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     rvWords = []
     for rvWord in rvWords1:
         assert rvWord, f"{BBB} {c}:{v} {rvText=} {rvAdjText=}"
-        assert rvWord.count( '¦' ) <= 1, f"{BBB} {c}:{v} {rvWord=} {rvText=} {rvAdjText=}" # Check that we haven't been retagging already tagged RV words
         rvWordBits = rvWord.split( '-' )
         if len(rvWordBits) == 1: # No hyphen
+            assert rvWord.count( '¦' ) <= 1, f"{BBB} {c}:{v} {rvWord=} {rvText=} {rvAdjText=}" # Check that we haven't been retagging already tagged RV words
             rvWords.append( rvWord )
         elif rvWordBits[1][0].isupper(): # Hyphenated and with a capital letter, e.g., Kiriat-Arba (may even have three parts)
             for rvWordBit in rvWordBits:
+                assert rvWordBit.count( '¦' ) <= 1, f"{BBB} {c}:{v} {rvWordBit=} {rvText=} {rvAdjText=}" # Check that we haven't been retagging already tagged RV words
                 rvWords.append( rvWordBit )
 
     numSimpleListedAdds,numSimpleListedNS = matchOurListedSimpleWords( BBB, c,v, rvWords, lvWords )
@@ -563,13 +749,17 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     #   rvUpperWords.pop(0) # Throw away the first word because it might just be capitalised for being at the beginning of the sentence.
     # print( f"({len(rvUpperWords)}) {rvUpperWords=}")
     # print( f"({len(lvUpperWords)}) {lvUpperWords=}")
-    numProperNounAdds,numProperNounNS = matchProperNouns( BBB, c,v, rvUpperWords, lvUpperWords ) if rvUpperWords and lvUpperWords else (0,0)
+    numIdenticalProperNounAdds,numIdenticalProperNounNS = matchIdenticalProperNouns( BBB, c,v, rvUpperWords, lvUpperWords ) if rvUpperWords and lvUpperWords else (0,0)
+    numAdjustedProperNounAdds,numAdjustedProperNounNS = matchAdjustedProperNouns( BBB, c,v, rvUpperWords, lvUpperWords ) if rvUpperWords and lvUpperWords else (0,0)
 
     numFirstPartMatchedWords,numFirstPartMatchedWordsNS = matchWordsFirstParts( BBB, c,v, rvWords, lvWords )
 
     numHandmatches,numHandmatchesNS = matchWordsManually( BBB, c,v, rvWords, lvWords )
 
-    return (numSimpleListedAdds,numSimpleListedNS), (numProperNounAdds,numProperNounNS), (numFirstPartMatchedWords,numFirstPartMatchedWordsNS), (numHandmatches,numHandmatchesNS)
+    return (numSimpleListedAdds,numSimpleListedNS), \
+           (numIdenticalProperNounAdds+numAdjustedProperNounAdds,numIdenticalProperNounNS+numAdjustedProperNounNS), \
+           (numFirstPartMatchedWords,numFirstPartMatchedWordsNS), \
+           (numHandmatches,numHandmatchesNS)
 # end of connect_OET-RV_words_via_OET-LV.connect_OET_RV_Verse
 
 
@@ -583,17 +773,17 @@ CNTR_PERSON_NAME_DICT = {'1':'1st', '2':'2nd', '3':'3rd', 'g':'g'}
 CNTR_CASE_NAME_DICT = {'N':'nominative', 'G':'genitive', 'D':'dative', 'A':'accusative', 'V':'vocative', 'g':'g', 'n':'n', 'a':'a', 'd':'d', 'v':'v', 'U':'U'}
 CNTR_GENDER_NAME_DICT = {'M':'masculine', 'F':'feminine', 'N':'neuter', 'm':'m', 'f':'f', 'n':'n'}
 CNTR_NUMBER_NAME_DICT = {'S':'singular', 'P':'plural', 's':'s', 'p':'p'}
-def matchProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[str], lvCapitalisedWordList:List[str] ) -> Tuple[int,int]:
+def matchIdenticalProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[str], lvCapitalisedWordList:List[str] ) -> Tuple[int,int]:
     """
     Given a list of capitalised words from OET-RV and OET-LV,
-        see if we can match any proper nouns
+        see if we can match any identical proper nouns
 
     TODO: This function can add new numbers on repeated calls,
         e.g., Acts 11:30 Barnabas and Saul are done one each call
         but could both be added at the same time?
         Jn 3:22, 4:3, 12:36,39, 21:10 Act 11:30,13:31,15:25,40,16:31,18:8
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"matchProperNouns( {BBB} {c}:{v} {rvCapitalisedWordList}, {lvCapitalisedWordList} )" )
+    fnPrint( DEBUGGING_THIS_MODULE, f"matchIdenticalProperNouns( {BBB} {c}:{v} {rvCapitalisedWordList}, {lvCapitalisedWordList} )" )
     assert rvCapitalisedWordList and lvCapitalisedWordList
 
     NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
@@ -605,13 +795,13 @@ def matchProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[str], lvC
         # print( f"{BBB} {c}:{v} {rvN} {rvCapitalisedWord=} from {rvCapitalisedWordList}")
         if '¦' in rvCapitalisedWord:
             _rvCapitalisedWord, rvWordNumber = rvCapitalisedWord.split('¦')
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchProperNouns( {BBB} {c}:{v} ) removing already tagged '{rvCapitalisedWord}' from RV list…")
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchIdenticalProperNouns( {BBB} {c}:{v} ) removing already tagged '{rvCapitalisedWord}' from RV list…")
             rvCapitalisedWordList.pop( rvN - numRemovedRV )
             numRemovedRV += 1
             numRemovedLV = 0 # Extra work because we're deleting from same list that we're iterating through (a copy of)
             for lvN,lvCapitalisedWord in enumerate( lvCapitalisedWordList[:] ):
                 if lvCapitalisedWord.endswith( f'¦{rvWordNumber}' ):
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchProperNouns( {BBB} {c}:{v} ) removing already tagged '{lvCapitalisedWord}' from LV list…")
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchIdenticalProperNouns( {BBB} {c}:{v} ) removing already tagged '{lvCapitalisedWord}' from LV list…")
                     lvCapitalisedWordList.pop( lvN - numRemovedLV )
                     numRemovedLV += 1
     if not rvCapitalisedWordList or not lvCapitalisedWordList:
@@ -624,9 +814,9 @@ def matchProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[str], lvC
         capitalisedNoun,wordNumber,wordRow = getLVWordRow( lvCapitalisedWordList[0] )
         if NT:
             wordRole = wordRow[state.wordTableHeaderList.index('Role')]
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"'{capitalisedNoun}' {wordRole}" )
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  '{capitalisedNoun}' {wordRole}" )
             if wordRole == 'N': # let's assume it's a proper noun
-                # print( f"matchProperNouns {BBB} {c}:{v} adding number to {rvCapitalisedWordList[0]}")
+                # print( f"matchIdenticalProperNouns {BBB} {c}:{v} adding number to {rvCapitalisedWordList[0]}")
                 result = addNumberToRVWord( BBB, c,v, rvCapitalisedWordList[0], wordNumber )
                 if result:
                     numAdded += 1
@@ -634,13 +824,13 @@ def matchProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[str], lvC
                         numNS += 1
         else: # OT
             glossCaps = wordRow[state.wordTableHeaderList.index('GlossCapitalisation')]
-            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"'{capitalisedNoun=}' {glossCaps=}" )
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  '{capitalisedNoun=}' {glossCaps=}" )
             if glossCaps != 'S': # start of sentence
                 result = addNumberToRVWord( BBB, c,v, rvCapitalisedWordList[0], wordNumber )
                 if result:
                     numAdded += 1
     elif len(rvCapitalisedWordList) == len(lvCapitalisedWordList):
-        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"Lists are equal size ({len(rvCapitalisedWordList)})" )
+        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchIdenticalProperNouns() lists are equal size ({len(rvCapitalisedWordList)})" )
         return numAdded,numNS
         # for capitalisedNounPair in capitalisedNounPair:
         #     assert '¦' in capitalisedNounPair, f"{capitalisedNounPair=} from {capitalisedNounPair=}"
@@ -648,13 +838,100 @@ def matchProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[str], lvC
         #     dPrint( 'Info', f"'{capitalisedNoun}' {wordRow}" )
         #     halt
     else:
-        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"Lists are different sizes {len(rvCapitalisedWordList)=} and {len(lvCapitalisedWordList)=}" )
+        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchIdenticalProperNouns() lists are different sizes {len(rvCapitalisedWordList)=} and {len(lvCapitalisedWordList)=}" )
         # for capitalisedNounPair in lvCapitalisedWordList:
         #     capitalisedNoun,wordNumber,wordRow = getLVWordRow( capitalisedNounPair )
         #     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"'{capitalisedNoun}' {wordRow}" )
         #     halt
     return numAdded,numNS
-# end of connect_OET-RV_words_via_OET-LV.matchProperNouns
+# end of connect_OET-RV_words_via_OET-LV.matchIdenticalProperNouns
+
+
+def matchAdjustedProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[str], lvCapitalisedWordList:List[str] ) -> Tuple[int,int]:
+    """
+    Given a list of capitalised words from OET-RV and OET-LV,
+        see if we can match any proper nouns using the ScriptedBibleEditor name tables
+    """
+    fnPrint( DEBUGGING_THIS_MODULE, f"matchAdjustedProperNouns( {BBB} {c}:{v} {rvCapitalisedWordList}, {lvCapitalisedWordList} )" )
+    assert rvCapitalisedWordList and lvCapitalisedWordList
+
+    NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
+
+    # But we don't want any rvWords that are already tagged
+    numAdded = numNS = 0
+    numRemovedRV = 0 # Extra work because we're deleting from same list that we're iterating through (a copy of)
+    for rvN,rvCapitalisedWord in enumerate( rvCapitalisedWordList[:] ):
+        # print( f"{BBB} {c}:{v} {rvN} {rvCapitalisedWord=} from {rvCapitalisedWordList}")
+        if '¦' in rvCapitalisedWord:
+            _rvCapitalisedWord, rvWordNumber = rvCapitalisedWord.split('¦')
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchAdjustedProperNouns( {BBB} {c}:{v} ) removing already tagged '{rvCapitalisedWord}' from RV list…")
+            rvCapitalisedWordList.pop( rvN - numRemovedRV )
+            numRemovedRV += 1
+            numRemovedLV = 0 # Extra work because we're deleting from same list that we're iterating through (a copy of)
+            for lvN,lvCapitalisedWord in enumerate( lvCapitalisedWordList[:] ):
+                if lvCapitalisedWord.endswith( f'¦{rvWordNumber}' ):
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchAdjustedProperNouns( {BBB} {c}:{v} ) removing already tagged '{lvCapitalisedWord}' from LV list…")
+                    lvCapitalisedWordList.pop( lvN - numRemovedLV )
+                    numRemovedLV += 1
+    if not rvCapitalisedWordList or not lvCapitalisedWordList:
+        return numAdded,numNS # nothing left to do here
+
+    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"\n{BBB} {c}:{v} {rvCapitalisedWordList=} {lvCapitalisedWordList=}" )
+    for lvCapitalisedWord in lvCapitalisedWordList:
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvCapitalisedWord=} from {lvCapitalisedWordList=}" )
+        assert '¦' in lvCapitalisedWord, f"{lvCapitalisedWord=} from {lvCapitalisedWordList=}"
+        capitalisedNoun,wordNumber,wordRow = getLVWordRow( lvCapitalisedWordList[0] )
+
+        for rvCapitalisedWord in rvCapitalisedWordList:
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{rvCapitalisedWord=} from {rvCapitalisedWordList=}" )
+            assert rvCapitalisedWord.replace("'",'').isalpha(), f"{rvCapitalisedWordList=}" # It might contain an apostrophe
+            if NT:
+                wordRole = wordRow[state.wordTableHeaderList.index('Role')]
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  matchAdjustedProperNouns NT '{capitalisedNoun}' {wordRole}" )
+                if wordRole == 'N': # let's assume it's a proper noun
+                    if capitalisedNoun in state.nameTables['NT']:
+                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {BBB} {c}:{v} {capitalisedNoun=} {state.nameTables['NT'][capitalisedNoun]=}")
+                        for something in state.nameTables['NT'][capitalisedNoun]:
+                            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    {capitalisedNoun=} {something=} from {state.nameTables['NT'][capitalisedNoun]=}")
+                            if something == rvCapitalisedWord:
+                                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchAdjustedProperNouns {BBB} {c}:{v} adding number to NT {rvCapitalisedWord}")
+                                result = addNumberToRVWord( BBB, c,v, rvCapitalisedWord, wordNumber )
+                                if result:
+                                    numAdded += 1
+                                if 'N' in wordRow[state.wordTableHeaderList.index('GlossCaps')]:
+                                    numNS += 1
+                                break
+                    elif capitalisedNoun in state.nameTables['NT_OT']:
+                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {BBB} {c}:{v} {capitalisedNoun=} {state.nameTables['NT_OT'][capitalisedNoun]=}")
+                        for something in state.nameTables['NT_OT'][capitalisedNoun]:
+                            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    {capitalisedNoun=} {something=} from {state.nameTables['NT_OT'][capitalisedNoun]=}")
+                            if something == rvCapitalisedWord:
+                                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchAdjustedProperNouns {BBB} {c}:{v} adding number to NT {rvCapitalisedWord}")
+                                result = addNumberToRVWord( BBB, c,v, rvCapitalisedWord, wordNumber )
+                                if result:
+                                    numAdded += 1
+                                if 'N' in wordRow[state.wordTableHeaderList.index('GlossCaps')]:
+                                    numNS += 1
+                                break
+            else: # OT
+                glossCaps = wordRow[state.wordTableHeaderList.index('GlossCapitalisation')]
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  matchAdjustedProperNouns OT '{capitalisedNoun=}' {glossCaps=}" )
+                if glossCaps != 'S': # start of sentence
+                    if capitalisedNoun in state.nameTables['OT']:
+                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {BBB} {c}:{v} {capitalisedNoun=} {state.nameTables['OT'][capitalisedNoun]=}")
+                        for something in state.nameTables['OT'][capitalisedNoun]:
+                            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    {capitalisedNoun=} {something=} from {state.nameTables['OT'][capitalisedNoun]=}")
+                            if something == rvCapitalisedWord:
+                                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchAdjustedProperNouns {BBB} {c}:{v} adding number to OT {rvCapitalisedWord}")
+                                result = addNumberToRVWord( BBB, c,v, rvCapitalisedWord, wordNumber )
+                                if result:
+                                    numAdded += 1
+                                break
+    # if BBB=='KI2' and c==15 and v==14:
+    #     print( f"{rvCapitalisedWordList=} {lvCapitalisedWordList=}" )
+    #     halt
+    return numAdded,numNS
+# end of connect_OET-RV_words_via_OET-LV.matchAdjustedProperNouns
 
 
 def matchOurListedSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:List[str] ) -> Tuple[int,int]:
@@ -804,7 +1081,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
     This list is 1 RV from 1 or many LV
     Match things like RV 'your' with LV 'of you'
     """
-    # if BBB=='JHN' and c==4 and v==6:
+    # if BBB=='KI2' and c==15 and v==28:
     #     print( f"doGroup1( {BBB} {c}:{v} {rvVerseWordList=} {lvVerseWordList=} {simpleLVWordList=} )")
     #     halt
     NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
@@ -962,131 +1239,133 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ("We've",'We'),
             ('Yahweh','master'),
             # Names including places (parentheses have already been deleted from the OET-LV at this stage)
-            ('Abijah','Abia'),('Abijah','Abia/ʼAvīāh'),
-            ('Abimelek', 'ʼAⱱīmelek'),
-            ('Abraham','Abraʼam'),('Abraham','Abraʼam/ʼAvrāhām'),
-            ('Abshalom', 'ʼAⱱīshālōm'),
-            ('Adam','Adam'),('Adam','Adam/ʼĀdām'),
-            ('Aharon', 'ʼAhₐron'),
-            ('Aksah', 'ʼAchsah'),
-            ('Amalekites', 'ˊAmālēqites'),
-            ('Aminadab','Aminadab'),('Amon','Aminadab/ˊAmmiynādāⱱ'),
-            ('Amon','Amōs'),('Amon','Amōs/ʼĀmōʦ'),
-            ('Ammonites', 'ˊAmmōn'),
-            ('Aram','Aram'),('Aram','Aram/Rām'),
-            ('Asa','Asaf'),('Asa','Asaf/ʼĀşāf'),
-            ('Babylon', 'Babulōn'),('Babylon', 'Babulōn/Bāvel'),
-            ('Bethany', 'Baʸthania'),
-            ('Bethlehem', 'Baʸthleʼem'),('Bethlehem', 'Baʸthleʼem/Bēyt-leḩem'),
-            ('Beyt', 'Bēyt'),
-            ('Boaz', 'Boʼoz'),('Boaz', 'Boʼoz/Boˊaz'),
-            ('Caesarea', 'Kaisareia'),
-            ('Canaan', 'Kinaˊan'),
-            ('Capernaum', 'Kafarnaʼoum'),
-            ('Cappadocia', 'Kappadokia'),
-            ('Dan', 'Dān'),
-            ('David','Dawid'),('David','Dawid/Dāvid'),('David','Dāvid'),
-            ('Delilah', 'Dilīlāh'),
-            ('Demetrius', 'Daʸmaʸtrios'), ('Diotrephes', 'Diotrefaʸs'),
-            ('Dorcas', 'The_Gazelle/Dorkas'),
-            ('Efraim', 'ʼEfrayim'), # Should be long a
-            ('Egypt','Aiguptos'),('Egypt','Aiguptos/Miʦrayim'),('Egypt', 'Miʦrayim/Egypt'),
-            ('Ephesus', 'Efesos'),
-            ('Esaw', 'ˊĒsāv'),
-            ('Eve','Eua'),('Eve','Eua/Ḩavvāh'),
-            ("Far'oh", 'Farˊoh'),
-            ('Gad', 'Gād'),
-            ('Gaius', 'Gaios'),
-            ('Galilee', 'Galilaia'),('Galilee', 'Galilaia/Gālīl'),
-            ('Gideon', 'Gidˊōn'),('Gideon', 'Jerub-Baˊal'),
-            ('Gilead', 'Gilˊād'),
-            ('Gileadite', 'Gilˊādite'),
-            ('Gilgal', 'Gilgāl'),
-            ('God', 'ʼElohīm'),
-            ("Herod's", 'Haʸrōdaʸs'),('Herod', 'Haʸrōdaʸs'),
-            ('Hezron', 'Hesrōm'),('Hezron', 'Hesrōm/Ḩeʦrōn'),
-            ('Idumea', 'Idoumaia'),
-            ('Immanuel', 'Emmanouaʸl'),('Immanuel', 'Emmanouaʸl/ˊImmānūʼēl'),
-            ('Isaac', 'Isaʼak'),('Isaac', 'Isaʼak/Yiʦḩāq'),
-            ('Isayah', 'Aʸsaias'),('Isayah', 'Aʸsaias/Yəshaˊyāh'),
-            ('Israel', 'Yisrāʼēl/(Israel)'),('Israel', 'Yisrāʼēl'),
-            ('Issachar', 'Yissākār'),
-            ('Iyyov', 'ʼIuōv'),
-            ('Yacob', 'Yakōbos'),('Yacob', 'Yakōbos/Yaˊₐqoⱱ'), ('Yacob', 'Yakōb'),('Yacob', 'Yakōb/Yaˊₐqoⱱ'),("Yacob's", 'Yakōb'),("Yacob's", 'Yakōb/Yaˊₐqoⱱ'),
-            ('Yehoshapat', 'Yōsafat'),('Yehoshapat', 'Yōsafat/Yəhōshāfāţ'),
-            ('Yerusalem', 'Hierousalaʸm'),('Yerusalem', 'Hierousalaʸm/Yərūshālayim'),
-            ('Yiftah', 'Yiftāḩ'),
-            ('Jesse', 'Yessai'),('Jesse', 'Yessai/Yishay'),
-            ('Jew', 'Youdaios'),
-            ('Jews', 'Youdaiōns'),
-            ('Josiah', 'Yōsias'),('Josiah', 'Yōsias/Yʼoshiyyāh'),
-            ('Judah', 'Youda'),('Judah', 'Youda/Yəhūdāh'),
-            ('Judas', 'Youdas'),
-            ('Justus', 'Youstos'),
-            ('Lazarus', 'Lazaros'),
-            ('Lebanon', 'Ləⱱānōn'),
-            ('Levi', 'Leui'),('Levi', 'Leui/Lēvī'),('Levi','Lēvīh'),
-            ('Lydda', 'Ludda'),('Lydda', 'Ludda/Lod'),
-            ('Macedonia', 'Makedonia'),
-            ('Manasseh', 'Manassaʸs'),('Manasseh', 'Manassaʸs/Mənashsheh'),('Menashsheh', 'Mənashsheh'),
-            ('Manoah', 'Mānōaḩ'),('Manoah’s', 'Mānōaḩ'),
-            ('Maria', 'Maria'),('Maria', 'Maria/Miryām'),
-            ('Media', 'Maʸdia'),
-            ('Micah', 'Mīkāhū'),('Micah', 'Mīkāh'),
-            ('Midian', 'Midyān'),
-            ('Mitsrayim', 'Miʦrayim/(Egypt)'),
+            # NOTE: No longer required because we load the TSV source tables themselves (rather than having to duplicate all this info)
+            # ('Abijah','Abia'),('Abijah','Abia/ʼAvīāh'),
+            # ('Abimelek', 'ʼAⱱīmelek'),
+            # ('Abraham','Abraʼam'),('Abraham','Abraʼam/ʼAvrāhām'),
+            # ('Abshalom', 'ʼAⱱīshālōm'),
+            # ('Adam','Adam'),('Adam','Adam/ʼĀdām'),
+            # ('Aharon', 'ʼAhₐron'),
+            # ('Aksah', 'ʼAchsah'),
+            # ('Amalekites', 'ˊAmālēqites'),
+            # ('Aminadab','Aminadab'),('Amon','Aminadab/ˊAmmiynādāⱱ'),
+            # ('Amon','Amōs'),('Amon','Amōs/ʼĀmōʦ'),
+            # ('Ammonites', 'ˊAmmōn'),
+            # ('Aram','Aram'),('Aram','Aram/Rām'),
+            # ('Asa','Asaf'),('Asa','Asaf/ʼĀşāf'),
+            # ('Babylon', 'Babulōn'),('Babylon', 'Babulōn/Bāvel'),
+            # ('Bethany', 'Baʸthania'),
+            # ('Bethlehem', 'Baʸthleʼem'),('Bethlehem', 'Baʸthleʼem/Bēyt-leḩem'),
+            # ('Beyt', 'Bēyt'),
+            # ('Boaz', 'Boʼoz'),('Boaz', 'Boʼoz/Boˊaz'),
+            # ('Caesarea', 'Kaisareia'),
+            # ('Canaan', 'Kinaˊan'),
+            # ('Capernaum', 'Kafarnaʼoum'),
+            # ('Cappadocia', 'Kappadokia'),
+            # ('Dan', 'Dān'),
+            # ('David','Dawid'),('David','Dawid/Dāvid'),('David','Dāvid'),
+            # ('Delilah', 'Dilīlāh'),
+            # ('Demetrius', 'Daʸmaʸtrios'), ('Diotrephes', 'Diotrefaʸs'),
+            # ('Dorcas', 'The_Gazelle/Dorkas'),
+            # ('Efraim', 'ʼEfrayim'), # Should be long a
+            # ('Egypt','Aiguptos'),('Egypt','Aiguptos/Miʦrayim'),('Egypt', 'Miʦrayim/Egypt'),
+            # ('Ephesus', 'Efesos'),
+            # ('Esaw', 'ˊĒsāv'),
+            # ('Eve','Eua'),('Eve','Eua/Ḩavvāh'),
+            # ("Far'oh", 'Farˊoh'),
+            # ('Gad', 'Gād'),
+            # ('Gaius', 'Gaios'),
+            # ('Galilee', 'Galilaia'),('Galilee', 'Galilaia/Gālīl'),
+            # ('Gideon', 'Gidˊōn'),('Gideon', 'Jerub-Baˊal'),
+            # ('Gilead', 'Gilˊād'),
+            # ('Gileadite', 'Gilˊādite'),
+            # ('Gilgal', 'Gilgāl'),
+            # ('God', 'ʼElohīm'),
+            # ("Herod's", 'Haʸrōdaʸs'),('Herod', 'Haʸrōdaʸs'),
+            # ('Hezron', 'Hesrōm'),('Hezron', 'Hesrōm/Ḩeʦrōn'),
+            # ('Idumea', 'Idoumaia'),
+            # ('Immanuel', 'Emmanouaʸl'),('Immanuel', 'Emmanouaʸl/ˊImmānūʼēl'),
+            # ('Isaac', 'Isaʼak'),('Isaac', 'Isaʼak/Yiʦḩāq'),
+            # ('Isayah', 'Aʸsaias'),('Isayah', 'Aʸsaias/Yəshaˊyāh'),
+            # ('Israel', 'Yisrāʼēl/Israel'),('Israel', 'Yisrāʼēl'),
+            # ('Issachar', 'Yissākār'),
+            # ('Iyyov', 'ʼIuōv'),
+            # ('Yacob', 'Yakōbos'),('Yacob', 'Yakōbos/Yaˊₐqoⱱ'), ('Yacob', 'Yakōb'),('Yacob', 'Yakōb/Yaˊₐqoⱱ'),("Yacob's", 'Yakōb'),("Yacob's", 'Yakōb/Yaˊₐqoⱱ'),
+            # ('Yarobam', 'Yārāⱱəˊām'),('Yarobam', 'Yārāⱱəˊām/Jeroboam'),
+            # ('Yehoshapat', 'Yōsafat'),('Yehoshapat', 'Yōsafat/Yəhōshāfāţ'),
+            # ('Yerusalem', 'Hierousalaʸm'),('Yerusalem', 'Hierousalaʸm/Yərūshālayim'),
+            # ('Yiftah', 'Yiftāḩ'),
+            # ('Jesse', 'Yessai'),('Jesse', 'Yessai/Yishay'),
+            # ('Jew', 'Youdaios'),
+            # ('Jews', 'Youdaiōns'),
+            # ('Josiah', 'Yōsias'),('Josiah', 'Yōsias/Yʼoshiyyāh'),
+            # ('Judah', 'Youda'),('Judah', 'Youda/Yəhūdāh'),
+            # ('Judas', 'Youdas'),
+            # ('Justus', 'Youstos'),
+            # ('Lazarus', 'Lazaros'),
+            # ('Lebanon', 'Ləⱱānōn'),
+            # ('Levi', 'Leui'),('Levi', 'Leui/Lēvī'),('Levi','Lēvīh'),
+            # ('Lydda', 'Ludda'),('Lydda', 'Ludda/Lod'),
+            # ('Macedonia', 'Makedonia'),
+            # ('Manasseh', 'Manassaʸs'),('Manasseh', 'Manassaʸs/Mənashsheh'),('Menashsheh', 'Mənashsheh'),
+            # ('Manoah', 'Mānōaḩ'),('Manoah’s', 'Mānōaḩ'),
+            # ('Maria', 'Maria'),('Maria', 'Maria/Miryām'),
+            # ('Media', 'Maʸdia'),
+            # ('Micah', 'Mīkāhū'),('Micah', 'Mīkāh'),
+            # ('Midian', 'Midyān'),
+            # ('Mitsrayim', 'Miʦrayim/Egypt'),
             ('Mt', 'Mount'),
-            ('Nahshon', 'Naʼassōn'),('Nahshon', 'Naʼassōn/Naḩshōn'),
-            ('Nazareth', 'Nazaret'),
-            ('Obed', 'Yōbaʸd'),('Obed', 'Yōbaʸd/Ōbaʸd/ˊŌvēd'),
-            ('Paul', 'Paulos'),
-            ('Perez', 'Fares'),('Perez', 'Fares/Fereʦ'),
-            ('Pharisee', 'Farisaios'),
-            ('Philadelphia', 'Filadelfeia'),
-            ('Philistines', 'Fəlishəttiy'),
-            ('Pontus', 'Pontos'),
-            ('Potifar', 'Fōţīfar'),
-            ('Reuben', 'Rəʼūⱱēn'),
-            ('Rehoboam', 'Ɽoboam'),('Rehoboam', 'Ɽoboam/Rəḩavəˊām'),
-            ('Ruth', 'Ɽouth'),('Ruth', 'Ɽouth/Rūt'),
-            ('Sadducees', 'Saddoukaios'),
-            ('Salmon', 'Salmōn'),('Salmon', 'Salmōn/Salmōn'),
-            ('Samaria', 'Samareia'),('Samaria', 'Samareia/Shomrōn'),
-            ('Sapphira', 'Sapfeiraʸ'),
-            ('Sardis', 'Sardeis'),
-            ('Sha\'ul', 'Shāʼūl'), ('Saul', 'Saulos'),
-            ('Shekem', 'Shəkem'),
-            ('Shimshon', 'Shimshōn'),
-            ('Sidon', 'Sidōn'),('Sidon', 'Sidōn/Tsīdōn'),
-            ('Silas', 'Silouanos'),
-            ('Simeon', 'Shimˊōn'),
-            ('Simon', 'Simōn'),
-            ('Smyrna', 'Smurna'),
-            ('Solomon', 'Solomōn'),('Solomon', 'Solomōn/Shəlomih'),('Solomon', 'Shəlomoh'),
-            ('Tabitha', 'Tabaʸtha'),
-            ('Tamar', 'Thamar'),('Tamar', 'Thamar/Tāmār'),
-            ('Tarsus', 'Tarsos'),
-            ('Theophilus', 'Theofilos'),
-            ('Thessalonica', 'Thessalonikaʸ'),
-            ('Thyatira', 'Thuateira'),
-            ('Timothy', 'Timotheos'),
-            ('Tola', 'Tōlāˊ'),
-            ('Tsiklag', 'Ziklag'),('Tsiklag', 'Tsiqlag/Ziklag'),
-            ('Tyre', 'Turos'),('Tyre', 'Turos/Tsor'),
-            ('Uzziah', 'Ozias'),('Uzziah', 'Ozias/ˊUzziyyāh'),
-            ('Yacob', 'Yaˊaqov'),
-            ('Yehudah', 'Yəhūdāh'),
-            ('Yericho', 'Yərīḩō'),
-            ('Yeshua', 'Yaʸsous'),('Yeshua', 'Yaʸsous/Yəhōshūˊa'), ("Yeshua's", 'Yaʸsous'),("Yeshua's", 'Yaʸsous/Yəhōshūˊa'),
-            ('Yito', 'Yitrō'),
-            ('Yoav', 'Yōʼāⱱ'),('Yoav', 'Yōʼāⱱ/Joab'),
-            ('Yohan', 'Yōannaʸs'),
-            ('Yoppa', 'Yoppaʸ'),
-            ('Yordan', 'Yardēn'),('Yordan', 'Yordanaʸs'),('Yordan', 'Yordanaʸs/Yardēn'),
-            ('Yosef', 'Yōsaʸf'),('Yosef', 'Yōsaʸf/Yōşēf'),('Yosef', 'Yōşēf'),
-            ('Yudea', 'Youdaia'),
-            ("Zebedee's", 'Zebedaios'),
-            ('Zerah', 'Zara'),('Zerah', 'Zara/Zeraḩ'),
+            # ('Nahshon', 'Naʼassōn'),('Nahshon', 'Naʼassōn/Naḩshōn'),
+            # ('Nazareth', 'Nazaret'),
+            # ('Obed', 'Yōbaʸd'),('Obed', 'Yōbaʸd/Ōbaʸd/ˊŌvēd'),
+            # ('Paul', 'Paulos'),
+            # ('Perez', 'Fares'),('Perez', 'Fares/Fereʦ'),
+            # ('Pharisee', 'Farisaios'),
+            # ('Philadelphia', 'Filadelfeia'),
+            # ('Philistines', 'Fəlishəttiy'),
+            # ('Pontus', 'Pontos'),
+            # ('Potifar', 'Fōţīfar'),
+            # ('Reuben', 'Rəʼūⱱēn'),
+            # ('Rehoboam', 'Ɽoboam'),('Rehoboam', 'Ɽoboam/Rəḩavəˊām'),
+            # ('Ruth', 'Ɽouth'),('Ruth', 'Ɽouth/Rūt'),
+            # ('Sadducees', 'Saddoukaios'),
+            # ('Salmon', 'Salmōn'),('Salmon', 'Salmōn/Salmōn'),
+            # ('Samaria', 'Samareia'),('Samaria', 'Samareia/Shomrōn'),
+            # ('Sapphira', 'Sapfeiraʸ'),
+            # ('Sardis', 'Sardeis'),
+            # ('Sha\'ul', 'Shāʼūl'), ('Saul', 'Saulos'),
+            # ('Shekem', 'Shəkem'),
+            # ('Shimshon', 'Shimshōn'),
+            # ('Sidon', 'Sidōn'),('Sidon', 'Sidōn/Tsīdōn'),
+            # ('Silas', 'Silouanos'),
+            # ('Simeon', 'Shimˊōn'),
+            # ('Simon', 'Simōn'),
+            # ('Smyrna', 'Smurna'),
+            # ('Solomon', 'Solomōn'),('Solomon', 'Solomōn/Shəlomih'),('Solomon', 'Shəlomoh'),
+            # ('Tabitha', 'Tabaʸtha'),
+            # ('Tamar', 'Thamar'),('Tamar', 'Thamar/Tāmār'),
+            # ('Tarsus', 'Tarsos'),
+            # ('Theophilus', 'Theofilos'),
+            # ('Thessalonica', 'Thessalonikaʸ'),
+            # ('Thyatira', 'Thuateira'),
+            # ('Timothy', 'Timotheos'),
+            # ('Tola', 'Tōlāˊ'),
+            # ('Tsiklag', 'Ziklag'),('Tsiklag', 'Tsiqlag/Ziklag'),
+            # ('Tyre', 'Turos'),('Tyre', 'Turos/Tsor'),
+            # ('Uzziah', 'Ozias'),('Uzziah', 'Ozias/ˊUzziyyāh'),
+            # ('Yacob', 'Yaˊaqov'),
+            # ('Yehudah', 'Yəhūdāh'),
+            # ('Yericho', 'Yərīḩō'),
+            # ('Yeshua', 'Yaʸsous'),('Yeshua', 'Yaʸsous/Yəhōshūˊa'), ("Yeshua's", 'Yaʸsous'),("Yeshua's", 'Yaʸsous/Yəhōshūˊa'),
+            # ('Yito', 'Yitrō'),
+            # ('Yoav', 'Yōʼāⱱ'),('Yoav', 'Yōʼāⱱ/Joab'),
+            # ('Yohan', 'Yōannaʸs'),
+            # ('Yoppa', 'Yoppaʸ'),
+            # ('Yordan', 'Yardēn'),('Yordan', 'Yordanaʸs'),('Yordan', 'Yordanaʸs/Yardēn'),
+            # ('Yosef', 'Yōsaʸf'),('Yosef', 'Yōsaʸf/Yōşēf'),('Yosef', 'Yōşēf'),
+            # ('Yudea', 'Youdaia'),
+            # ("Zebedee's", 'Zebedaios'),
+            # ('Zerah', 'Zara'),('Zerah', 'Zara/Zeraḩ'),
             ):
         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{rvWord=} {lvWordStr=}" )
         lvWords = lvWordStr.split( ' ' )
