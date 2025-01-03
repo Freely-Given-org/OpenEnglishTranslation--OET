@@ -329,6 +329,8 @@ def main():
 
 NAME_ADJUSTMENT_TABLE = { # Where we change too far from the accepted KJB word
     'Shomron':'Samaria',
+    'Yerusalem':'Yerushalem',
+    'Yotam':'Yotham',
     'Yudah':'Yehuda',
     }
 def loadHebGrkNameTables():
@@ -1237,7 +1239,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Master','master'),
             ('Messiah','messiah'),('messiah','messiah'),
             ("We've",'We'),
-            ('Yahweh','master'),
+            ('Yahweh','master'),('Yahweh','YHWH'),
             # Names including places (parentheses have already been deleted from the OET-LV at this stage)
             # NOTE: No longer required because we load the TSV source tables themselves (rather than having to duplicate all this info)
             # ('Abijah','Abia'),('Abijah','Abia/ʼAvīāh'),
