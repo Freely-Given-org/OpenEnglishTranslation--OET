@@ -46,6 +46,7 @@ CHANGELOG:
     2024-01-24 Check for doubled punctuation and wrong xref punctuation in OET-RV lines
     2024-01-27 Don't allow section headings to be marked with word numbers
     2024-03-25 Add OT connections
+    2025-01-04 Started loading and using SBE name tables for automatic name links (not yet fully implemented for NT)
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -68,7 +69,7 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-01-03' # by RJH
+LAST_MODIFIED_DATE = '2025-01-04' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.73'
@@ -329,8 +330,6 @@ def main():
 
 NAME_ADJUSTMENT_TABLE = { # Where we change too far from the accepted KJB word
     'Shomron':'Samaria',
-    'Yerusalem':'Yerushalem',
-    'Yotam':'Yotham',
     'Yudah':'Yehuda',
     }
 def loadHebGrkNameTables():
@@ -379,10 +378,19 @@ def loadHebGrkNameTables():
                     state.nameTables['OT'][shortenedReplaceText].add( searchText ) # We add an extra entry
                     if searchText.endswith( 'iah' ): # e.g. Azariah
                         state.nameTables['OT'][shortenedReplaceText].add( f'{searchText[:-3]}yah' ) # We add an extra entry
-                    if 'j' in searchText: # e.g., Benjamin
+                    elif searchText.endswith( 'ieh' ):
+                        state.nameTables['OT'][shortenedReplaceText].add( f'{searchText[:-3]}yeh' ) # We add an extra entry
+                    if 'j' in searchText and 'j' not in replaceText: # e.g., Benjamin
                         state.nameTables['OT'][shortenedReplaceText].add( searchText.replace( 'j', 'y' ) ) # We add an extra entry
-                    if 'ph' in searchText: # e.g., Naphtali
+                    if 'ph' in searchText and 'ph' not in replaceText: # e.g., Naphtali
                         state.nameTables['OT'][shortenedReplaceText].add( searchText.replace( 'ph', 'f' ) ) # We add an extra entry
+                    if 'sh' in replaceText and 'sh' not in searchText and 's' in searchText: # e.g., Yerushalem
+                        # assert 's' in searchText, f"{searchText=} {replaceText=}"
+                        state.nameTables['OT'][shortenedReplaceText].add( searchText.replace( 's', 'sh' ) ) # We add an extra entry
+                    if 'th' in searchText and 'th' not in replaceText: # e.g., Yotham
+                        state.nameTables['OT'][shortenedReplaceText].add( searchText.replace( 'th', 't' ) ) # We add an extra entry
+                    if 'v' in replaceText and 'v' not in searchText and 'b' in searchText: # e.g., Argob
+                        state.nameTables['OT'][shortenedReplaceText].add( searchText.replace( 'b', 'v' ) ) # We add an extra entry
                     if 'z' in searchText and 'ts' in replaceText: # e.g., Hatzor
                         state.nameTables['OT'][shortenedReplaceText].add( searchText.replace( 'z', 'ts' ) ) # We add an extra entry
                     if searchText.startswith('Z') and replaceText.startswith('Ts'): # e.g., Ziklag
@@ -391,10 +399,19 @@ def loadHebGrkNameTables():
                 state.nameTables['OT'][replaceText].add( searchText )
                 if searchText.endswith( 'iah' ):
                     state.nameTables['OT'][replaceText].add( f'{searchText[:-3]}yah' ) # We add an extra entry
+                elif searchText.endswith( 'ieh' ):
+                    state.nameTables['OT'][replaceText].add( f'{searchText[:-3]}yeh' ) # We add an extra entry
                 if 'j' in searchText: # e.g., Benjamin
                     state.nameTables['OT'][replaceText].add( searchText.replace( 'j', 'y' ) ) # We add an extra entry
                 if 'ph' in searchText: # e.g., Naphtali
                     state.nameTables['OT'][replaceText].add( searchText.replace( 'ph', 'f' ) ) # We add an extra entry
+                if 'sh' in replaceText and 'sh' not in searchText and 's' in searchText: # e.g., Yerushalem
+                    # assert 's' in searchText, f"{searchText=} {replaceText=}"
+                    state.nameTables['OT'][replaceText].add( searchText.replace( 's', 'sh' ) ) # We add an extra entry
+                if 'th' in searchText and 'th' not in replaceText: # e.g., Yotham
+                    state.nameTables['OT'][replaceText].add( searchText.replace( 'th', 't' ) ) # We add an extra entry
+                if 'v' in replaceText and 'v' not in searchText and 'b' in searchText: # e.g., Argob
+                    state.nameTables['OT'][replaceText].add( searchText.replace( 'b', 'v' ) ) # We add an extra entry
                 if 'z' in searchText and 'ts' in replaceText: # e.g., Hatzor
                     state.nameTables['OT'][replaceText].add( searchText.replace( 'z', 'ts' ) ) # We add an extra entry
                 if searchText.startswith('Z') and replaceText.startswith('Ts'): # e.g., Ziklag
@@ -697,10 +714,18 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     rvWords1 = rvAdjText.split( ' ' )
     # print( f"({len(rvWords)}) {rvWords=}")
     # print( f"({len(lvWords)}) {lvWords=}")
-    while 'DOM' in lvWords:
-        lvWords.remove( 'DOM' ) # These are capitalised, but untranslated, so remove them here
-        # print( f"({len(lvWords)}) {lvWords=}")
+
+    # Remove DOM's from word list
+    #   These are capitalised, but untranslated, so remove them here (because won't ever be in RV)
+    initialNumWords = len( lvWords )
+    for lvIndex, lvWord in enumerate( reversed( lvWords), start=1 ):
+        # print( f"  {lvIndex} {lvWord=}" )
+        if lvWord.startswith( 'DOM¦' ):
+            lvWords.pop( initialNumWords - lvIndex )
+            # print( f"    ({len(lvWords)}) {lvWords=}")
+    # print( f"({len(lvWords)}) {lvWords=}")
     assert lvWords
+
     # if 0: # Mostly works but a couple of exceptions
     #     badIx = None
     #     for ix,lvWord in enumerate( lvWords ):
@@ -728,10 +753,10 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
 
     # Now get the uppercase words
     rvUpperWords = [rvWord for rvWord in rvWords if rvWord[0].isupper()]
-    lvUpperWords = [lvWord for lvWord in lvWords if lvWord[0].isupper()]
+    lvUpperWords = [lvWord for lvWord in lvWords if (lvWord[0].isupper() or (lvWord[0] in 'ʼˊ' and lvWord[1].isupper()))]
     # print( f"'{rvText=}' '{lvText=}'" )
 
-    if lvText[0].isupper(): # Try to determine why the first word was capitalised
+    if lvUpperWords and lvText[0].isupper(): # Try to determine why the first word was capitalised
         dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{lvUpperWords=} from {lvText=}")
         firstLVUpperWord, firstLVUpperNumber = lvUpperWords[0].split( '¦' )
         rowForFirstLVUpperWord = state.wordTable[int(firstLVUpperNumber)]
@@ -882,7 +907,7 @@ def matchAdjustedProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[s
     for lvCapitalisedWord in lvCapitalisedWordList:
         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvCapitalisedWord=} from {lvCapitalisedWordList=}" )
         assert '¦' in lvCapitalisedWord, f"{lvCapitalisedWord=} from {lvCapitalisedWordList=}"
-        capitalisedNoun,wordNumber,wordRow = getLVWordRow( lvCapitalisedWordList[0] )
+        capitalisedNoun,wordNumber,wordRow = getLVWordRow( lvCapitalisedWord )
 
         for rvCapitalisedWord in rvCapitalisedWordList:
             dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{rvCapitalisedWord=} from {rvCapitalisedWordList=}" )
@@ -929,7 +954,24 @@ def matchAdjustedProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[s
                                 if result:
                                     numAdded += 1
                                 break
-    # if BBB=='KI2' and c==15 and v==14:
+                            elif f"{something}'s" == rvCapitalisedWord:
+                                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchAdjustedProperNouns {BBB} {c}:{v} adding number to possessive OT {rvCapitalisedWord}")
+                                result = addNumberToRVWord( BBB, c,v, rvCapitalisedWord, wordNumber )
+                                if result:
+                                    numAdded += 1
+                                break
+                    # elif rvCapitalisedWord.endswith( "'s" ) and capitalisedNoun[:-2] in state.nameTables['OT']:
+                    #     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {BBB} {c}:{v} {capitalisedNoun=} {state.nameTables['OT'][capitalisedNoun[:-2]]=}")
+                    #     for something in state.nameTables['OT'][capitalisedNoun[:-2]]:
+                    #         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    {capitalisedNoun=} {something=} from {state.nameTables['OT'][capitalisedNoun[:-2]]=}")
+                    #         if f"{something}'s" == rvCapitalisedWord:
+                    #             dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchAdjustedProperNouns {BBB} {c}:{v} adding number to OT {rvCapitalisedWord}")
+                    #             result = addNumberToRVWord( BBB, c,v, rvCapitalisedWord, wordNumber )
+                    #             if result:
+                    #                 numAdded += 1
+                    #             halt
+                    #             break
+    # if BBB=='KI2' and c==15 and v==25:
     #     print( f"{rvCapitalisedWordList=} {lvCapitalisedWordList=}" )
     #     halt
     return numAdded,numNS
