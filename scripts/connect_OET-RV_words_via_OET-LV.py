@@ -69,7 +69,7 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-01-04' # by RJH
+LAST_MODIFIED_DATE = '2025-01-06' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.73'
@@ -330,7 +330,7 @@ def main():
 
 NAME_ADJUSTMENT_TABLE = { # Where we change too far from the accepted KJB word
     'Shomron':'Samaria',
-    'Yudah':'Yehuda',
+    'Yudah':'Yehudah',
     }
 def loadHebGrkNameTables():
     """
@@ -364,12 +364,20 @@ def loadHebGrkNameTables():
             if 'H' in tags:
                 if searchText.startswith( 'J' ): searchText = f'Y{searchText[1:]}' # Replace first letter J with Y
                 try: searchText = NAME_ADJUSTMENT_TABLE[searchText] # Do transforms
-                except KeyError: pass # if it exists
+                except KeyError: pass
 
-                newReplaceText = transliterate_Hebrew( replaceText, capitaliseHebrew=searchText[0].isupper() )
-                if newReplaceText != replaceText:
-                    # print(f" Converted Hebrew '{replaceText}' to '{newReplaceText}'")
-                    replaceText = newReplaceText
+                # newReplaceText = transliterate_Hebrew( replaceText, capitaliseHebrew=searchText[0].isupper() )
+                # if newReplaceText != replaceText:
+                #     # print(f" Converted Hebrew '{replaceText}' to '{newReplaceText}'")
+                #     replaceText = newReplaceText
+                replaceText = ( transliterate_Hebrew( replaceText, capitaliseHebrew=searchText[0].isupper() )
+                    # We replace out the special characters (from our transliteration function)
+                    .replace( 'Ā', 'A' ).replace( 'Ē', 'E' )
+                    .replace( 'Ḩ', 'H' )
+                    .replace( 'ə', 'e' )
+                    .replace( 'ā', 'a' ).replace( 'ē', 'e' ).replace( 'ī', 'i' ).replace( 'ō', 'o' ).replace( 'ū', 'u' )
+                    .replace( 'ḩ', 'h' ).replace( 'ⱪ', 'k' ).replace( 'q', 'k' ).replace( 'ʦ', 'ts' )
+                    )
                 if '/' in replaceText:
                     assert 'd' in tags, f"OT {tags=} {searchText=} {replaceText=}"
                     replaceText = replaceText.replace( '(', '' ).replace( ')', '' ) # We don't want the brackets
@@ -754,7 +762,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     # Now get the uppercase words
     rvUpperWords = [rvWord for rvWord in rvWords if rvWord[0].isupper()]
     lvUpperWords = [lvWord for lvWord in lvWords if (lvWord[0].isupper() or (lvWord[0] in 'ʼˊ' and lvWord[1].isupper()))]
-    # print( f"'{rvText=}' '{lvText=}'" )
+    # print( f"{rvText=} {lvText=}" )
 
     if lvUpperWords and lvText[0].isupper(): # Try to determine why the first word was capitalised
         dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{lvUpperWords=} from {lvText=}")
@@ -851,7 +859,7 @@ def matchIdenticalProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[
                         numNS += 1
         else: # OT
             glossCaps = wordRow[state.wordTableHeaderList.index('GlossCapitalisation')]
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  '{capitalisedNoun=}' {glossCaps=}" )
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  {capitalisedNoun=} {glossCaps=}" )
             if glossCaps != 'S': # start of sentence
                 result = addNumberToRVWord( BBB, c,v, rvCapitalisedWordList[0], wordNumber )
                 if result:
@@ -942,7 +950,7 @@ def matchAdjustedProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[s
                                 break
             else: # OT
                 glossCaps = wordRow[state.wordTableHeaderList.index('GlossCapitalisation')]
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  matchAdjustedProperNouns OT '{capitalisedNoun=}' {glossCaps=}" )
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  matchAdjustedProperNouns OT {capitalisedNoun=} {glossCaps=}" )
                 if glossCaps != 'S': # start of sentence
                     if capitalisedNoun in state.nameTables['OT']:
                         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {BBB} {c}:{v} {capitalisedNoun=} {state.nameTables['OT'][capitalisedNoun]=}")
@@ -971,7 +979,7 @@ def matchAdjustedProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[s
                     #                 numAdded += 1
                     #             halt
                     #             break
-    # if BBB=='KI2' and c==15 and v==25:
+    # if BBB=='KI2' and c==17 and v==1:
     #     print( f"{rvCapitalisedWordList=} {lvCapitalisedWordList=}" )
     #     halt
     return numAdded,numNS
@@ -1178,7 +1186,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('chest','ark'),
             ('clothes','apparel'),
             ('confused','confounded'),
-            ('countries','nation'),
+            ('countries','nations'),('country','nation'),
             ('countryside','field'),
             ('creation','beginning'),
             ('crowd','multitude'),
@@ -1616,7 +1624,8 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
                         # already_numbered_error
                         return False
                     elif line[match.end()] == "'": # next character after abbreviated word(s) like "they're"
-                        logging.critical( f"Tried to append number inside abbreviated word(s) {BBB} {C}:{V} {marker} '{line[match.start():match.end()]}' (from '{line[match.start():match.end()+5]}') -> '{word}¦{wordNumber}'" )
+                        logger = logging.critical if DEBUGGING_THIS_MODULE else logging.error
+                        logger( f"Tried to append number inside abbreviated word(s) {BBB} {C}:{V} {marker} '{line[match.start():match.end()]}' (from '{line[match.start():match.end()+5]}') -> '{word}¦{wordNumber}'" )
                         # abbreviated_word_error
                         return False
                     else: # seems all ok

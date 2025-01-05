@@ -5,7 +5,7 @@
 #
 # Script handling add_tags_to_OT_word_table functions
 #
-# Copyright (C) 2023-2024 Robert Hunt
+# Copyright (C) 2023-2025 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -66,10 +66,10 @@ import sys
 sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitted to PyPI
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew #, transliterate_Greek
 
-LAST_MODIFIED_DATE = '2024-12-20' # by RJH
+LAST_MODIFIED_DATE = '2025-01-05' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET OT wordtable"
-PROGRAM_VERSION = '0.18'
+PROGRAM_VERSION = '0.19'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -942,7 +942,7 @@ def fill_extra_columns_and_remove_some() -> bool:
     ourLastV = None
     for ourIndex, ourLineStr in enumerate( state.newWordTable[1:], start=1 ):
         # print( f"{ix=} {ourLineStr=}" )
-        if ourLineStr.startswith( 'KI2_4:4' ): break
+        # if ourLineStr.startswith( 'KI2_4:10' ): break
 
         assert ourLineStr.count( '\t' ) == 20, f"{ourLineStr.count(TAB)} {ourLineStr=}"
         ourColumns = ourLineStr.split( '\t' )
