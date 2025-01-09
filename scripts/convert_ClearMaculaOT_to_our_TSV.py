@@ -5,7 +5,7 @@
 #
 # Script handling convert_ClearMaculaOT_to_our_TSV functions
 #
-# Copyright (C) 2022-2024 Robert Hunt
+# Copyright (C) 2022-2025 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -36,6 +36,7 @@ OSHB morphology codes can be found at https://hb.openscriptures.org/parsing/Hebr
 CHANGELOG:
     2024-04-04 Tried using macula Hebrew TSV files instead of 'low-fat' XML but it seemed to be lacking the 'role' info
     2024-04-15 Also output Hebrew lemma table
+    2025-01-07 Change literal gloss back to house from temple for 'בֵּ֖יתּל'
 """
 from gettext import gettext as _
 # from typing import Dict, List, Tuple
@@ -59,7 +60,7 @@ from BibleOrgSys.OriginalLanguages import Hebrew
 sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew
 
-LAST_MODIFIED_DATE = '2024-06-20' # by RJH
+LAST_MODIFIED_DATE = '2025-01-07' # by RJH
 SHORT_PROGRAM_NAME = "convert_ClearMaculaOT_to_our_TSV"
 PROGRAM_NAME = "Extract and Apply Macula OT glosses"
 PROGRAM_VERSION = '0.42'
@@ -312,6 +313,13 @@ def loadLowFatXMLGlosses() -> bool:
                                     .replace( '(dm)', '' if theirRef.startswith('DAN 1:8!') else 'if/because') # What is dm supposed to mean?
                                 )
                         assert '’' not in gloss, f"{theirRef=} {wordOrMorpheme=} {gloss=}"
+                        # Note: We can't handle the logic below with our tables
+                        if 'temple' in gloss:
+                            print( f"{theirRef=} {wordOrMorpheme=} {gloss=}" )
+                            if 'ה' in wordOrMorpheme and 'כ' in wordOrMorpheme and 'ל' in wordOrMorpheme:
+                                # ‘הֵיכַל’ (hēykal) is ok
+                                assert 'ב' not in wordOrMorpheme
+                            if 'ב' in wordOrMorpheme: halt
 
                     lang = elem.get('lang')
                     column_counts['lang'][lang] += 1
@@ -382,6 +390,32 @@ def loadLowFatXMLGlosses() -> bool:
                         assert '’' not in English, f"{theirRef=} {wordOrMorpheme=} {English=}"
                     else: English = '' # Instead of None
                     assert '(et)' not in English and '(dm)' not in English, f"{English=}"
+
+                    # Do some on-the-fly fixes
+                    # Note: We can't handle the logic below with our tables
+                    if gloss and 'temple' in gloss:
+                        print( f"{theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
+                        if 'ה' in wordOrMorpheme and 'כ' in wordOrMorpheme and 'ל' in wordOrMorpheme:
+                            # 'הֵיכַל' (hēykal) is ok
+                            assert 'ב' not in wordOrMorpheme
+                            assert 'ת' not in wordOrMorpheme
+                        if 'ב' in wordOrMorpheme and 'ת' in wordOrMorpheme:
+                            print( f"Changing gloss 'temple' to 'house' for {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
+                            assert 'כ' not in wordOrMorpheme
+                            assert 'ל' not in wordOrMorpheme
+                            gloss = gloss.replace( 'temple', 'house' )
+                            never_happens
+                    if English and 'temple' in English:
+                        # print( f"{theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
+                        if 'ה' in wordOrMorpheme and 'כ' in wordOrMorpheme and 'ל' in wordOrMorpheme:
+                            # ‘הֵיכַל’ (hēykal) is ok
+                            assert 'ב' not in wordOrMorpheme
+                            assert 'ת' not in wordOrMorpheme
+                        if 'ב' in wordOrMorpheme and 'ת' in wordOrMorpheme: # probably 'בֵּית'
+                            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Changing English 'temple' to 'house' for {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
+                            assert 'כ' not in wordOrMorpheme
+                            assert 'ל' not in wordOrMorpheme
+                            English = English.replace( 'temple', 'house' )
 
                     # Get all the parent elements so we can determine the nesting
                     startElement = elem
