@@ -69,7 +69,7 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-01-06' # by RJH
+LAST_MODIFIED_DATE = '2025-01-09' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.73'
@@ -329,6 +329,7 @@ def main():
 
 
 NAME_ADJUSTMENT_TABLE = { # Where we change too far from the accepted KJB word
+    'Menashsheh':'Manasseh',
     'Shomron':'Samaria',
     'Yudah':'Yehudah',
     }
@@ -370,14 +371,15 @@ def loadHebGrkNameTables():
                 # if newReplaceText != replaceText:
                 #     # print(f" Converted Hebrew '{replaceText}' to '{newReplaceText}'")
                 #     replaceText = newReplaceText
-                replaceText = ( transliterate_Hebrew( replaceText, capitaliseHebrew=searchText[0].isupper() )
-                    # We replace out the special characters (from our transliteration function)
-                    .replace( 'Ā', 'A' ).replace( 'Ē', 'E' )
-                    .replace( 'Ḩ', 'H' )
-                    .replace( 'ə', 'e' )
-                    .replace( 'ā', 'a' ).replace( 'ē', 'e' ).replace( 'ī', 'i' ).replace( 'ō', 'o' ).replace( 'ū', 'u' )
-                    .replace( 'ḩ', 'h' ).replace( 'ⱪ', 'k' ).replace( 'q', 'k' ).replace( 'ʦ', 'ts' )
-                    )
+                replaceText = transliterate_Hebrew( replaceText, capitaliseHebrew=searchText[0].isupper() )
+                    # NOTE: The below makes it WORSE
+                    # # We replace out the special characters (from our transliteration function)
+                    # .replace( 'Ā', 'A' ).replace( 'Ē', 'E' )
+                    # .replace( 'Ḩ', 'H' )
+                    # .replace( 'ₐ', 'a' ).replace( 'ə', 'e' )
+                    # .replace( 'ā', 'a' ).replace( 'ē', 'e' ).replace( 'ī', 'i' ).replace( 'ō', 'o' ).replace( 'ū', 'u' )
+                    # .replace( 'ḩ', 'h' ).replace( 'ⱪ', 'k' ).replace( 'q', 'k' ).replace( 'ʦ', 'ts' ).replace( 'ⱱ', 'v' )
+                    # )
                 if '/' in replaceText:
                     assert 'd' in tags, f"OT {tags=} {searchText=} {replaceText=}"
                     replaceText = replaceText.replace( '(', '' ).replace( ')', '' ) # We don't want the brackets
