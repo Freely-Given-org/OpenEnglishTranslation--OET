@@ -30,8 +30,8 @@ CNTR_lemma_table = ../../CNTR-GNT/derivedFormats/lemmas.alphabetical.tsv
 CNTR_book_table = ../../CNTR-GNT/sourceExports/book.csv
 CNTR_collation_table = ../../CNTR-GNT/sourceExports/collation.csv
 WLC_OT_TSV_table := ../intermediateTexts/glossed_OSHB/our_WLC_glosses.morphemes.tsv
-Clear_Bible_OT_lowfat_TSV := ../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTrees.OT.morphemes.abbrev.tsv ../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTrees.OT.lemmas.tsv
-Clear_Bible_NT_lowfat_TSV := ../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTrees.NT.words.abbrev.tsv
+Clear_Bible_OT_lowfat_TSV := ../intermediateTexts/Clear.Bible_derived_Macula_data/Clear.Bible_MaculaHebrew.OT.morphemes.abbrev.tsv ../intermediateTexts/Clear.Bible_derived_Macula_data/Clear.Bible_MaculaHebrew.OT.lemmas.tsv
+Clear_Bible_NT_lowfat_TSV := ../intermediateTexts/Clear.Bible_derived_Macula_data/Clear.Bible_MaculaGreek_LowFatTrees.NT.words.abbrev.tsv
 Clear_Bible_OT_lowfat_XML := $(wildcard ../../Forked/macula-hebrew/WLC/lowfat/*.xml)
 Clear_Bible_NT_lowfat_XML := $(wildcard ../../Forked/macula-greek/Nestle1904/lowfat/*.xml)
 WLC_XML := $(wildcard ../../Forked/OS-morphhb/wlc/*.xml)
@@ -197,7 +197,7 @@ clean_LT_OT:
 	rm ../intermediateTexts/modified_source_glossed_OSHB_USFM/*.usfm
 	rm ../intermediateTexts/modified_source_glossed_OSHB_ESFM/*.ESFM
 	rm ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv ../intermediateTexts/glossed_OSHB/lemmas.tsv
-	rm ../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTrees.OT.morphemes.abbrev.tsv
+	rm ../intermediateTexts/Clear.Bible_derived_Macula_data/Clear.Bible_MaculaHebrew.OT.morphemes.abbrev.tsv
 	rm ../intermediateTexts/glossed_OSHB/our_WLC_glosses.morphemes.tsv
 	rm ../sourceTexts/rawOSHB/OSHB.parsedOriginal.flat.morphemes.tsv
 

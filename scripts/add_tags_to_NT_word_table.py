@@ -79,7 +79,7 @@ DEBUGGING_THIS_MODULE = False
 SCRIPTED_UPDATES_TABLES_INPUT_FOLDERPATH = Path( 'ScriptedVLTUpdates/' )
 
 JSON_VERSES_DB_FILEPATH = Path( '../../Bible_speaker_identification/outsideSources/TheographicBibleData/derivedFiles/normalised_Verses.json' )
-MACULA_GREEK_TSV_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTrees.NT.words.abbrev.tsv' )
+MACULA_GREEK_TSV_FILEPATH = Path( '../intermediateTexts/Clear.Bible_derived_Macula_data/Clear.Bible_MaculaGreek_LowFatTrees.NT.words.abbrev.tsv' )
 
 WORD_TABLE_INPUT_FILEPATH = Path( '../intermediateTexts/modified_source_VLT_ESFM/OET-LV_NT_word_table.10columns.tsv' )
 WORD_TABLE_OUTPUT_FILENAME = 'OET-LV_NT_word_table.tsv'

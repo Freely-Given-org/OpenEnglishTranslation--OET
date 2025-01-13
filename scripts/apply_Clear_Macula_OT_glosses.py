@@ -5,7 +5,7 @@
 #
 # Script handling apply_Clear_Macula_OT_glosses functions
 #
-# Copyright (C) 2022-2024 Robert Hunt
+# Copyright (C) 2022-2025 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -62,7 +62,7 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2024-11-12' # by RJH
+LAST_MODIFIED_DATE = '2025-01-09' # by RJH
 SHORT_PROGRAM_NAME = "apply_Clear_Macula_OT_glosses"
 PROGRAM_NAME = "Apply Macula OT glosses"
 PROGRAM_VERSION = '0.70'
@@ -72,7 +72,7 @@ DEBUGGING_THIS_MODULE = False
 
 
 OUR_OWN_TSV_INPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/our_WLC_glosses.morphemes.tsv' ) # In
-LOWFAT_TSV_INPUT_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTrees.OT.morphemes.abbrev.tsv' ) # In, we use the smaller, abbreviated table
+OUR_MACULA_TSV_INPUT_FILEPATH = Path( '../intermediateTexts/Clear.Bible_derived_Macula_data/Clear.Bible_MaculaHebrew.OT.morphemes.abbrev.tsv' ) # In, we use the smaller, abbreviated table
 
 OUR_MORPHEME_TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv' ) # Out
 OUR_LEMMA_TSV_OUTPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/all_glosses.lemmas.tsv' ) # Out
@@ -86,7 +86,7 @@ class State:
         Constructor:
         """
         self.our_own_TSV_input_filepath = OUR_OWN_TSV_INPUT_FILEPATH
-        self.lowfat_TSV_input_folderpath = LOWFAT_TSV_INPUT_FILEPATH
+        self.lowfat_TSV_input_folderpath = OUR_MACULA_TSV_INPUT_FILEPATH
 
         self.our_morpheme_TSV_output_filepath = OUR_MORPHEME_TSV_OUTPUT_FILEPATH
         self.our_lemma_TSV_output_filepath = OUR_LEMMA_TSV_OUTPUT_FILEPATH

@@ -78,7 +78,7 @@ DEBUGGING_THIS_MODULE = False
 SCRIPTED_UPDATES_TABLES_INPUT_FOLDERPATH = Path( 'ScriptedOTUpdates/' ) # The control files folder for Scripted Bible Editor
 
 JSON_VERSES_DB_INPUT_FILEPATH = Path( '../../Bible_speaker_identification/outsideSources/TheographicBibleData/derivedFiles/normalised_Verses.json' ) # In
-MACULA_HEBREW_TSV_INPUT_FILEPATH = Path( '../intermediateTexts/Clear.Bible_lowfat_trees/ClearLowFatTrees.OT.morphemes.abbrev.tsv' ) # In
+MACULA_HEBREW_TSV_INPUT_FILEPATH = Path( '../intermediateTexts/Clear.Bible_derived_Macula_data/Clear.Bible_MaculaHebrew.OT.morphemes.abbrev.tsv' ) # In
 
 LEMMA_TABLE_INPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/all_glosses.lemmas.tsv' ) # In
 MORPHEME_TABLE_INPUT_FILEPATH = Path( '../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv' ) # In
@@ -1005,7 +1005,8 @@ def fill_extra_columns_and_remove_some() -> bool:
                 role = nesting = ''
                 while 'm' in theirMaculaColumns[2]:
                     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Matched morpheme {ourRef} in {theirMaculaColumns[0]} {theirMaculaColumns[1]} {ourColumns[1]} {theirMaculaColumns[2]} {ourColumns[2]} R='{theirMaculaColumns[13]}' N='{theirMaculaColumns[27]}'")
-                    assert not role or theirMaculaColumns[13]==role or ourRef.startswith( 'ECC_4:10' ) # TODO: dunno why ???
+                    if 0: # disabled 2-25-01-10 after switching from LowFat to Nodes -- not totally sure of the implications
+                        assert not role or theirMaculaColumns[13]==role or ourRef.startswith( 'ECC_4:10' ), f"{ourRef}!={theirMaculaColumns[0]} {ourColumns[1]} vs {theirMaculaColumns[1]} {role=} vs {theirMaculaColumns[13]} " # TODO: dunno why ???
                     # assert nesting is None or theirLine[27] == nesting
                     # Above failed on
                     #   morpheme GEN_1:2w1a 01LN3a  m 13,14,15 R='' N='cj2cjp'

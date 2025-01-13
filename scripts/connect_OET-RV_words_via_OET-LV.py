@@ -916,7 +916,7 @@ def matchAdjustedProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[s
     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"\n{BBB} {c}:{v} {rvCapitalisedWordList=} {lvCapitalisedWordList=}" )
     for lvCapitalisedWord in lvCapitalisedWordList:
         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvCapitalisedWord=} from {lvCapitalisedWordList=}" )
-        assert '¦' in lvCapitalisedWord, f"{lvCapitalisedWord=} from {lvCapitalisedWordList=}"
+        assert '¦' in lvCapitalisedWord, f"{BBB} {c}:{v} {lvCapitalisedWord=} from {lvCapitalisedWordList=}"
         capitalisedNoun,wordNumber,wordRow = getLVWordRow( lvCapitalisedWord )
 
         for rvCapitalisedWord in rvCapitalisedWordList:
