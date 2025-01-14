@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2025-01-09 12:21 by extract_glossed_OSHB_OT_to_ESFM v0.52
+\rem ESFM file created 2025-01-15 11:20 by extract_glossed_OSHB_OT_to_ESFM v0.52
 \rem USFM file edited by ScriptedBibleEditor v0.33
 \h Song of Shəlomoh
 \toc1 Song of Shəlomoh
@@ -26,7 +26,7 @@
 \v 11 Strings_of_jewels of_gold we_will_make for÷you with (the)_studs the÷silver.
 \v 12 Until that÷the÷king in/on/at/with÷couch÷his perfume÷my it_gave_forth fragrance÷its.
 \v 13 [is]_(the)_bag the÷myrrh beloved÷my to=me between breasts÷my it_lodges.
-\v 14 [is]_(the)_cluster the÷henna_blossoms beloved÷my to=me in/on/at/with÷vineyards wwww wwww.
+\v 14 [is]_(the)_cluster the÷henna_blossoms beloved÷my to=me in/on/at/with÷vineyards of En.
 \v 15 how÷you [are]_beautiful darling÷my how÷you [are]_beautiful eyes÷your [are]_doves.
 \v 16 How÷you\f + \fr 1:16 \ft Note: We read one or more accents in L differently from BHQ. \f*\f + \fr 1:16 \ft Note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS. \f* [are]_beautiful beloved÷my also pleasant also couch÷our [is]_luxuriant.
 \v 17 The_beams house÷our [are]_cedar(s) rafters÷our\f + \fr 1:17 \ft Variant note: רחיט/נו: (x-qere) 'רַהִיטֵ֖/נוּ': lemma=7351 n=0.0 morph=HNcmsc/Sp1cp id=222Kt רַהִיטֵ֖/נוּ\f* [are]_cypress(es).
@@ -106,13 +106,13 @@
 \v 9 [is]_one she dove÷my perfect÷my [is]_one_[daughter] she of÷mother÷her [is]_a_pure_[daughter] she to÷bore÷her saw÷her daughters and÷called_blessed÷her queens and÷concubines and÷praised÷her.
 \v 10 who this the÷looks_down like [the]_dawn beautiful as_the÷moon pure as_the÷sun majestic as_the÷army_with_banners.
 \v 11 to a_garden of_nut[s] I_went_down to=see in/on/at/with÷new_growth the÷valley to=see whether÷budded the÷vines had_they_bloomed the÷pomegranates.
-\v 12 Not I_knew desire÷my set÷me the_chariots mmm\f + \fr 6:12 \ft Exegesis note: WLC has this word divided as עַמִּי\f* nadib.
+\v 12 Not I_knew desire÷my set÷me the_chariots of.Ammi-÷-\f + \fr 6:12 \ft Exegesis note: WLC has this word divided as עַמִּי\f* of.Ammi-.
 \c 7
 \v 1 \f + \fr 7:1 \ft Note: KJB: Song.6.13\f* return return the÷Shulammite return return and÷look on/over=you(fs) why will_you_all_look in/on/at/with÷Shulammite as÷dance the÷armies.
 \v 2 \f + \fr 7:2 \ft Note: KJB: Song.7.1\f* how they_are_beautiful feet÷your in/on/at/with÷sandals Oh_daughter of_a_noble_[person] the_curves thighs÷your [are]_like ornaments [the]_work of_[the]_hands of_a_master-craftsman.
 \v 3 \f + \fr 7:3 \ft Note: KJB: Song.7.2\f* navel÷your [is]_(the)_bowl the÷rounded not may_it_lack the÷mixed_wine belly÷your [is]_a_heap of_wheat(s) [which_is]_fenced_around in/on/at/with÷lilies.
 \v 4 \f + \fr 7:4 \ft Note: KJB: Song.7.3\f* the_two breasts÷your like÷two fawns twins of_a_gazelle.
-\v 5 \f + \fr 7:5 \ft Note: KJB: Song.7.4\f* neck÷your like÷tower the÷ivory eyes÷your [are]_pools in/on/at/with÷Ḩeshbōn at the_gate daughter_of wwww nose÷your like÷tower the÷Ləⱱānōn [which]_watches the_face of_Dammeseq.
+\v 5 \f + \fr 7:5 \ft Note: KJB: Song.7.4\f* neck÷your like÷tower the÷ivory eyes÷your [are]_pools in/on/at/with÷Ḩeshbōn at the_gate of.Bath- Rabbim nose÷your like÷tower the÷Ləⱱānōn [which]_watches the_face of_Dammeseq.
 \v 6 \f + \fr 7:6 \ft Note: KJB: Song.7.5\f* head÷your upon÷you like_the÷Karmel/(Carmel) and÷flowing_locks head÷your like_the÷purple [the]_king [is]_bound in/on/at/with÷tresses.
 \v 7 \f + \fr 7:7 \ft Note: KJB: Song.7.6\f* how you_are_beautiful and÷how you_are_lovely Oh_love in/on/at/with÷delights.
 \v 8 \f + \fr 7:8 \ft Note: KJB: Song.7.7\f* this stature÷your it_is_like of÷palm_tree and÷breasts÷your like÷clusters.
@@ -133,7 +133,7 @@
 \v 8 a_sister to/for=us small and÷breasts there_[are]_not to/for=her/it what will_we_do for÷sister÷our in_the=day when÷spoken in/on/at/with÷she.
 \v 9 If [is]_a_wall she we_will_build on/upon=it(f) a_battlement of_silver and=if [is]_a_door she we_will_shut_up on/upon=it(f) a_board of_cedar.
 \v 10 I [was]_a_wall and÷breasts÷my like_the÷towers then I_was in/on/at/with÷eyes÷his as÷finds peace.
-\v 11 a_vineyard it_belonged to÷Shəlomoh in/on/at/with wwww he_gave DOM the÷vineyard to_the÷keepers each_one he_will_bring in/on/at/with÷fruit÷its a_thousand silver.
+\v 11 a_vineyard it_belonged to÷Shəlomoh in/on/at/with÷Baˊal- hamon he_gave DOM the÷vineyard to_the÷keepers each_one he_will_bring in/on/at/with÷fruit÷its a_thousand silver.
 \v 12 Vineyard÷my_own\f + \fr 8:12 \ft Note: Marks a place where we agree with BHQ against BHS in reading L. \f*\f + \fr 8:12 \ft Note: Marks an anomalous form. \f*\f + \fr 8:12 \ft Note: We read one or more vowels in L differently from BHS. \f* that÷have÷I at÷disposal÷myself the÷thousand to/for=yourself(m) Oh_Shəlomoh and=two_hundreds for÷tend DOM fruit÷its.
 \v 13 The÷dwell\f + \fr 8:13 \ft Note: Marks a place where we agree with BHQ against BHS in reading L. \f*\f + \fr 8:13 \ft Note: Marks an anomalous form. \f*\f + \fr 8:13 \ft Note: We read punctuation in L differently from BHS. \f* in/on/at/with÷gardens companions [are]_listening for÷voice÷your hear÷me.
 \v 14 Hasten beloved÷my and÷like to/for=yourself(m) to÷gazelle or like÷young_deer_of the÷stags on mountains of_spices.

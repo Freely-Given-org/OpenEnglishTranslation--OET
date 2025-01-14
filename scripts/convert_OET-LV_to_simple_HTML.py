@@ -5,7 +5,7 @@
 #
 # Script to take the OET-LV ESFM files and convert to HTML
 #
-# Copyright (C) 2022-2024 Robert Hunt
+# Copyright (C) 2022-2025 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -54,10 +54,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2024-03-26' # by RJH
+LAST_MODIFIED_DATE = '2025-01-15' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.79'
+PROGRAM_VERSION = '0.80'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -1166,13 +1166,13 @@ def make_NT_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_
             if morphology:
                 assert len(morphology) == 7, f"Got {wordRef} '{greekWord}' morphology ({len(morphology)}) = '{morphology}'"
                 mood,tense,voice,person,case,gender,number = morphology
-                if mood!='.': moodField = f' mood=<b>{CNTR_MOOD_NAME_DICT[mood]}</b>'
-                if tense!='.': tenseField = f' tense=<b>{CNTR_TENSE_NAME_DICT[tense]}</b>'
-                if voice!='.': voiceField = f' voice=<b>{CNTR_VOICE_NAME_DICT[voice]}</b>'
-                if person!='.': personField = f' person=<b>{CNTR_PERSON_NAME_DICT[person]}</b>'
-                if case!='.': caseField = f' case=<b>{CNTR_CASE_NAME_DICT[case]}</b>'
-                if gender!='.': genderField = f' gender=<b>{CNTR_GENDER_NAME_DICT[gender]}</b>'
-                if number!='.': numberField = f' number=<b>{CNTR_NUMBER_NAME_DICT[number]}</b>' # or № ???
+                if mood!='·': moodField = f' mood=<b>{CNTR_MOOD_NAME_DICT[mood]}</b>'
+                if tense!='·': tenseField = f' tense=<b>{CNTR_TENSE_NAME_DICT[tense]}</b>'
+                if voice!='·': voiceField = f' voice=<b>{CNTR_VOICE_NAME_DICT[voice]}</b>'
+                if person!='·': personField = f' person=<b>{CNTR_PERSON_NAME_DICT[person]}</b>'
+                if case!='·': caseField = f' case=<b>{CNTR_CASE_NAME_DICT[case]}</b>'
+                if gender!='·': genderField = f' gender=<b>{CNTR_GENDER_NAME_DICT[gender]}</b>'
+                if number!='·': numberField = f' number=<b>{CNTR_NUMBER_NAME_DICT[number]}</b>' # or № ???
             translation = '<small>(no English gloss)</small>' if OETGlossWords=='-' else f'''Typical English gloss=‘<b>{formattedGlossWords.replace('_','<span class="ul">_</span>')}</b>’'''
 
             # Add pointers to people, locations, etc.
@@ -1292,7 +1292,7 @@ def make_NT_lemma_pages( inputFolderPath:Path, outputFolderPath:Path, word_table
         nextLink = f' <b><a title="Next lemma" href="{lemmaList[ll+1]}.html">→</a></b>' if ll<len(lemmaList)-1 else ''
         html = f'''<h1 id="Top">Greek root word (lemma) ‘{lemma}’</h1>
 <p class="pNav">{prevLink}<b>{lemma}</b>{nextLink}</p>
-<p class="summary">This root form (lemma) is used in {len(lemmaFormsList):,} different forms in the NT: {', '.join([f'<a title="View Greek word form" href="../W/{getFirstWordNumber(grk,morph)}.html">{grk}</a> <small>({morph[4:] if morph.startswith("....") else morph})</small>' for grk,morph in lemmaFormsList])}.</p>
+<p class="summary">This root form (lemma) is used in {len(lemmaFormsList):,} different forms in the NT: {', '.join([f'<a title="View Greek word form" href="../W/{getFirstWordNumber(grk,morph)}.html">{grk}</a> <small>({morph[4:] if morph.startswith('····') else morph})</small>' for grk,morph in lemmaFormsList])}.</p>
 <p class="summary">It is glossed in {len(lemmaGlossesList):,}{'' if len(lemmaGlossesList)==1 else ' different'} way{'' if len(lemmaGlossesList)==1 else 's'}: ‘<b>{"</b>’, ‘<b>".join(lemmaGlossesList)}</b>’.</p>
 '''
 
@@ -1312,7 +1312,7 @@ def make_NT_lemma_pages( inputFolderPath:Path, outputFolderPath:Path, word_table
             oC, oVW = oCVW.split( ':', 1 )
             oV, oW = oVW.split( 'w', 1 )
             oTidyBBB = BibleOrgSysGlobals.loadedBibleBooksCodes.tidyBBB( oBBB )
-            oTidyMorphology = oMorphology[4:] if oMorphology.startswith('....') else oMorphology
+            oTidyMorphology = oMorphology[4:] if oMorphology.startswith('····') else oMorphology
             # if other_count == 0:
             translation = '<small>(no English gloss here)</small>' if oOETGlossWords=='-' else f'''English gloss=‘<b>{oFormattedGlossWords.replace('_','<span class="ul">_</span>')}</b>’'''
             html = f'''{html}\n<p class="lemmaLine"><a title="View OET {oTidyBBB} text" href="../OET/byC/{oBBB}_C{oC}.html#C{oC}V{oV}">OET {oTidyBBB} {oC}:{oV}</a> Greek word=<b><a title="Go to word page" href="../W/{oN}.html">{oGreek}</a></b> ({transliterate_Greek(oGreek)}) <small>Morphology={oTidyMorphology}</small> {translation} <a title="Go to Statistical Restoration Greek page" href="https://GreekCNTR.org/collation/?{CNTR_BOOK_ID_MAP[oBBB]}{oC.zfill(3)}{oV.zfill(3)}">SR GNT {oTidyBBB} {oC}:{oV} word {oW}</a></p>'''

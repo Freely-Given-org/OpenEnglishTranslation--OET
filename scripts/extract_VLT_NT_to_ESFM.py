@@ -5,7 +5,7 @@
 #
 # Script handling extract_VLT_NT_to_ESFM functions
 #
-# Copyright (C) 2022-2024 Robert Hunt
+# Copyright (C) 2022-2025 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -33,6 +33,7 @@ Puts markers around one gloss word inserted near another:
     ˱they˲_> would <_repent (after glossPre)
     /may/_=> not <=_worry (after glossHelper)
     ˱to˲ the_> first <_\\add one\\add* (before glossPost)
+Changes periods in morphology to middle dots
 
 CHANGELOG:
     2023-03-22 Added word numbers to refs in
@@ -43,6 +44,7 @@ CHANGELOG:
     2023-10-11 Fix a few more lemma transliterations (esp. concerning rough breathings)
     2023-12-14 Add in lemma table that came from CNTR and handle a few more exceptions
     2024-05-07 Make capitalization work when '-' has been changed to '¬the'
+    2025-01-15 Change periods in morphology to middle dots
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple, Optional
@@ -56,10 +58,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2024-09-05' # by RJH
+LAST_MODIFIED_DATE = '2025-01-15' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
-PROGRAM_VERSION = '0.97'
+PROGRAM_VERSION = '0.98'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -253,6 +255,7 @@ def loadSourceCollationTable() -> bool:
     assert 'GlossWord' in collation_csv_column_headers
     assert 'GlossPost' in collation_csv_column_headers
     assert 'GlossInsert' in collation_csv_column_headers
+    assert 'Morphology' in collation_csv_column_headers
 
     # Read, check the number of columns, and summarise row contents all in one go
     dict_reader = DictReader(csv_lines)
@@ -260,6 +263,7 @@ def loadSourceCollationTable() -> bool:
     for n, row in enumerate(dict_reader):
         if len(row) != NUM_EXPECTED_COLLATION_COLUMNS:
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Collation line {n} has {len(row)} columns instead of {NUM_EXPECTED_COLLATION_COLUMNS}!!!")
+        row['Morphology'] = row['Morphology'].replace( '.', '·' ) # Replace period with middle dot for our use (helps to distinguish them later)
         collation_csv_rows.append(row)
         unique_words.add(row['Medieval'])
         for key, value in row.items():
@@ -304,6 +308,7 @@ def loadSourceWordTable() -> bool:
     assert 'LexemeID' in word_csv_column_headers
     assert 'Lemma' in word_csv_column_headers
     assert 'Medieval' in word_csv_column_headers
+    assert 'Morphology' in word_csv_column_headers
 
     # Read, check the number of columns, and summarise row contents all in one go
     dict_reader = DictReader(csv_lines)
@@ -311,6 +316,7 @@ def loadSourceWordTable() -> bool:
     for n, row in enumerate(dict_reader):
         if len(row) != NUM_EXPECTED_WORD_COLUMNS:
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Word line {n} has {len(row)} columns instead of {NUM_EXPECTED_WORD_COLUMNS}!!!")
+        row['Morphology'] = row['Morphology'].replace( '.', '·' ) # Replace period with middle dot for our use (helps to distinguish them later)
         word_csv_rows.append(row)
         unique_words.add(row['Medieval'])
         for key, value in row.items():
@@ -615,8 +621,8 @@ def process_untranslated_words( given_collation_row, given_preformed_gloss_strin
         # NOTE: All of these new gloss strings also have to be entered into cleanupVLT.commandTable.tsv
         if adjusted_lemma == 'ho':
             # NOTE: Need to check for lowercase as well!
-            # if given_collation_row['Morphology'].startswith( '....G' ): given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬of_the', 1 )
-            # if given_collation_row['Morphology'].startswith( '....D' ): given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬to/from_the', 1 )
+            # if given_collation_row['Morphology'].startswith( '····G' ): given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬of_the', 1 )
+            # if given_collation_row['Morphology'].startswith( '····D' ): given_preformed_gloss_string = given_preformed_gloss_string.replace( '-', '¬to/from_the', 1 )
             if given_collation_row['Role'] == 'R':
                 adjusted_preformed_gloss_string = adjusted_preformed_gloss_string.replace( '-', '¬which', 1 )
             else:

@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2025-01-09 12:21 by extract_glossed_OSHB_OT_to_ESFM v0.52
+\rem ESFM file created 2025-01-15 11:20 by extract_glossed_OSHB_OT_to_ESFM v0.52
 \rem USFM file edited by ScriptedBibleEditor v0.33
 \h ˊEzrāʼ
 \toc1 ˊEzrāʼ
@@ -30,7 +30,7 @@
 \v 3 the_descendants of_Farˊsh two_thousand one_hundred seventy and÷two.
 \v 4 the_descendants of_Shəfaţ\sup yāh\sup* three hundred(s) seventy and÷two.
 \v 5 the_descendants of_ʼĀraḩ seven hundred(s) five and=seventy.
-\v 6 the_descendants wwww wwww of÷descendants of_Yēshūˊa Yōʼāⱱ/(Joab) two_thousand eight hundred(s) and÷two ten.
+\v 6 the_descendants of.Pahath- Mōʼāⱱ of÷descendants of_Yēshūˊa Yōʼāⱱ/(Joab) two_thousand eight hundred(s) and÷two ten.
 \v 7 the_descendants of_ˊĒylām one_thousand two_hundred fifty and÷four.
 \v 8 the_descendants of_Zattūʼ nine hundred(s) and÷forty and÷five.
 \v 9 the_descendants of_Tszakkay seven hundred(s) and=sixty.
@@ -45,14 +45,14 @@
 \v 18 the_descendants of_Yōrāh/(Jorah) one_hundred and÷two ten.
 \v 19 the_descendants of_Ḩāshum two_hundred twenty and÷three.
 \v 20 the_descendants of_Giⱱar ninety and÷five.
-\v 21 the_descendants house_of wwww one_hundred twenty and÷three.
+\v 21 the_descendants of.Bēyt- lehem one_hundred twenty and÷three.
 \v 22 the_men of_Nəţofāh fifty and÷six.
 \v 23 The_men of_ˊAntotī one_hundred twenty and÷eight.
 \v 24 the_descendants of_ˊAzmāvet forty and÷two.
-\v 25 the_descendants wwww wwww Kephirah and÷Bəʼērōt seven hundred(s) and÷twenty and÷one.
+\v 25 the_descendants of Qiryat Kephirah and÷Bəʼērōt seven hundred(s) and÷twenty and÷one.
 \v 26 the_descendants the÷Rāmāh and÷Geⱱaˊ six hundred(s) twenty and÷one.
 \v 27 the_men of_Micmash one_hundred twenty and÷two.
-\v 28 the_men house_of wwww and÷the÷ˊAy two_hundred twenty and÷three.
+\v 28 the_men of.Bēyt- el and÷the÷ˊAy two_hundred twenty and÷three.
 \v 29 the_descendants of_Nebo fifty and÷two.
 \v 30 the_descendants of_Magbiysh one_hundred fifty and÷six.
 \v 31 the_descendants of_ˊĒylām [the]_other one_thousand two_hundred fifty and÷four.
@@ -81,9 +81,9 @@
 \v 54 The_descendants of_Nəʦīaḩ the_descendants of_Ḩₐţīppāʼ.
 \v 55 The_descendants of_the_servants of_Shəlomoh the_descendants of_Şōţay the_descendants the÷Şoferet the_descendants of_Fərūdāʼ.
 \v 56 The_descendants of_Yaˊₐlāʼ/(Jaala) the_descendants of_Darqōn the_descendants of_Giddēl.
-\v 57 The_descendants of_Shəfaţ\sup yāh\sup* the_descendants of_Ḩaţţil the_descendants wwww wwww the_descendants of_ʼĀmī.
+\v 57 The_descendants of_Shəfaţ\sup yāh\sup* the_descendants of_Ḩaţţil the_descendants of.Pokereth- Hazzebaim the_descendants of_ʼĀmī.
 \v 58 All the÷temple_servants and=the_sons of_the_servants of_Shəlomoh three hundred(s) ninety and÷two.
-\v 59 and=these the÷came_up from wwww wwww wwww Kerub Addon ʼImmēr and=not they_were_able to=announce the_house fathers'÷their and÷descent÷their if from÷Yisrā\sup ʼēl\sup*/(Israel) they.
+\v 59 and=these the÷came_up from÷Tel- melah Tel Ḩarshāʼ Kerub Addon ʼImmēr and=not they_were_able to=announce the_house fathers'÷their and÷descent÷their if from÷Yisrā\sup ʼēl\sup*/(Israel) they.
 \v 60 The_descendants of_Dəlā\sup yāh\sup* the_descendants of_Ţōⱱiy\sup yāh\sup* the_descendants of_Nəqōdāʼ six hundred(s) fifty and÷two.
 \v 61 and÷of÷descendants the÷priests the_descendants of_Hobaiah the_descendants of_Hakkoz the_descendants of_Barzillay who he_had_taken from÷daughters of_Barzillay the÷Gilˊādite a_wife and÷called on their=name.
 \v 62 These they_sought entries÷their the÷genealogical_records and=not they_were_found and÷excluded_asunclean from the÷priesthood.
@@ -111,7 +111,7 @@
 \v 13 And÷not the÷people [were]_recognizing the_sound of_the_shout the÷joyful to=sound/voice of_the_weeping the÷people if/because the÷people [were]_shouting a_shout_of_joy great and÷the÷sound it_was_heard to to÷at÷afar.
 \c 4
 \v 1 and=they_heard the_foes of_Yəhūdāh/(Judah) and÷Binyāmīn if/because_that the_children the÷exile [were]_building a_temple to/for=\nd YHWH\nd* the_god of_Yisrā\sup ʼēl\sup*/(Israel).
-\v 2 And÷approached (to) Zərubāⱱel and=near/to the_heads the÷families and=they_said to/for=them let_us_build with÷you_all if/because like we_seek to÷god÷your_all's and÷to\f + \fr 4:2 \ft Variant note: ו/לא: (x-qere) 'וְ/ל֣/וֹ': lemma=c/l n=0.1.2.0 morph=HC/R/Sp3ms id=15ozy וְ/ל֣/וֹ\f* we [have_been]_sacrificing since÷days wwww wwww the_king of_ʼAshshūr the÷brought DOM÷us here.
+\v 2 And÷approached (to) Zərubāⱱel and=near/to the_heads the÷families and=they_said to/for=them let_us_build with÷you_all if/because like we_seek to÷god÷your_all's and÷to\f + \fr 4:2 \ft Variant note: ו/לא: (x-qere) 'וְ/ל֣/וֹ': lemma=c/l n=0.1.2.0 morph=HC/R/Sp3ms id=15ozy וְ/ל֣/וֹ\f* we [have_been]_sacrificing since÷days of.Esar- haddon the_king of_ʼAshshūr the÷brought DOM÷us here.
 \v 3 And=he/it_said to/for=them Zərubāⱱel and÷Yēshūˊa/(Jeshua) and÷rest of_the_heads the÷families of÷Yisrā\sup ʼēl\sup*/(Israel) not to/for=you_all and÷with÷us in÷building a_house to÷god÷our if/because we together we_will_build_[it] to/for=\nd YHWH\nd* the_god of_Yisrā\sup ʼēl\sup*/(Israel) just=as commanded÷us the=king Kōresh/(Cyrus) the_king of_Pāraş.
 \v 4 And=he/it_was the_people the=earth/land [were]_making_drop the_hands of_the_people of_Yəhūdāh and÷made_afraid\f + \fr 4:4 \ft Variant note: ו/מבלהים: (x-qere) 'וּֽ/מְבַהֲלִ֥ים': lemma=c/926 morph=HC/Vprmpa id=15Atm וּֽ/מְבַהֲלִ֥ים\f* DOM÷them to÷build.
 \v 5 And÷bribed against÷them counselors to÷frustrate plan÷their all the_days of_Kōresh the_king of_Pāraş and=unto the_reign of_Dārəyāvesh the_king of_Pāraş.
@@ -137,10 +137,10 @@
 \c 5
 \v 1 and÷prophesied Ḩaggay prophets÷the\f + \fr 5:1 \ft Variant note: נביא/ה: (x-qere) 'נְבִיָּ֗/א': lemma=5029 n=1.2.1 morph=ANcmsd/Td id=15KNH נְבִיָּ֗/א\f* and÷Zəkar\sup yāh\sup* the_son of_ˊDdō prophet÷the\f + \fr 5:1 \ft Variant note: נביאי/א: (x-qere) 'נְבִיַּיָּ֔/א': lemma=5029 n=1.2 morph=ANcmpd/Td id=15nkE נְבִיַּיָּ֔/א\f* to jews÷the who in/on/at/with÷Yəhūdāh/(Judah) and÷in/on/at/with÷Yərūshālayim in/on/at/with÷name of_the_god of_Yisrā\sup ʼēl\sup*/(Israel) over÷them.
 \v 2 in=then they_arose Zərubāⱱel the_son of_Shəʼaltiy\sup ʼēl\sup* and÷Yēshūˊa/(Jeshua) the_son of_Yōʦādāq/(Jozadak) and÷began to÷rebuild the_house the=god which in/on/at/with÷Yərūshālayim/(Jerusalem) and÷with÷them prophets÷the\f + \fr 5:2 \ft Variant note: נביאי/א: (x-qere) 'נְבִיַּיָּ֥/א': lemma=5029 morph=ANcmpd/Td id=15MWU נְבִיַּיָּ֥/א\f* (diy)_of the=god supporting to÷them.
-\v 3 in/on/at/with÷him time÷that he_came to÷them Tattenai the_governor of_the_region_beyond river÷the and wwww and÷associates÷their and=thus/so/as_follows [they_were]_saying to÷them who did_he_make to÷you_all a_decree house÷the this to÷rebuild and÷structure÷the this to÷finish.
+\v 3 in/on/at/with÷him time÷that he_came to÷them Tattenai the_governor of_the_region_beyond river÷the and÷Shethar- bozenai and÷associates÷their and=thus/so/as_follows [they_were]_saying to÷them who did_he_make to÷you_all a_decree house÷the this to÷rebuild and÷structure÷the this to÷finish.
 \v 4 then as_follows we_said to÷them what [are]_they the_names men÷the who this building÷the [are]_building.
 \v 5 And÷eye god÷their it_was on the_elders jews÷the and÷not they_made_cease them until report÷a to÷Dārəyāvesh it_will_go and÷then they_will_send_back written_reply÷a concerning this.
-\v 6 (the)_copy letter÷the which he_sent Tattenai the_governor of_the_region_beyond river÷the and wwww and÷associates÷his officials÷the who in/on/at/with÷province_beyond river÷the to Dārəyāvesh Oh/the=king.
+\v 6 (the)_copy letter÷the which he_sent Tattenai the_governor of_the_region_beyond river÷the and÷Shethar- bozenai and÷associates÷his officials÷the who in/on/at/with÷province_beyond river÷the to Dārəyāvesh Oh/the=king.
 \v 7 Report÷the they_sent to÷him and÷as÷this it_was_written in/on/at/with÷within÷him to÷Dārəyāvesh Oh/the=king peace÷the all÷the.
 \v 8 known let_it_be to=the=king (diy)_that we_went to÷Yəhūdāh/(Judah) province÷the to÷house the=god great÷the and=he [is]_being_built stone of_rolling and÷timber [is]_being_set in/on/at/with÷walls÷the and÷work÷the this diligently [is]_being_done and÷succeeding in/on/at/with÷hands÷their.
 \v 9 then we_asked to÷elders÷the these as_follows we_said to÷them\f + \fr 5:9 \ft Note: We read the punctuation in L differently from BHQ. \f*\f + \fr 5:9 \ft Note: We read punctuation in L differently from BHS. \f* who did_he_make to÷you_all a_decree house÷the this to÷rebuild and÷structure÷the this to÷finish.
@@ -158,14 +158,14 @@
 \v 3 in=year one to/for=Coresh Oh/the=king Kōresh/(Cyrus) Oh/the=king he_made a_decree the_house the=god in/on/at/with÷Yərūshālayim/(Jerusalem) house÷the let_it_be_built a_place which [they_were]_sacrificing sacrifices and÷foundations÷its [be]_retained height÷its cubits sixty width÷its cubits sixty.
 \v 4 Rows (diy)_of stone of_rolling three and÷layer (diy)_of timber new and÷cost÷the from the_house Oh/the=king let_it_be_given.
 \v 5 And÷also the_vessels of_the_house the=god (diy)_of gold÷the and÷silver÷the which Nəⱱūkadneʦʦar he_brought_out from temple÷the which in/on/at/with÷Yərūshālayim and÷brought to÷Bāⱱelh let_them_send_back and÷brought to÷temple÷the which in/on/at/with÷Yərūshālayim to÷place÷its and÷put in=house_of the=god.
-\v 6 now Oh_Tattenai the_governor of_the_region_beyond river÷the wwww wwww and÷associates÷their\f + \fr 6:6 \ft Note: We read one or more accents in L differently from BHQ. \f* envoys÷the who in/on/at/with÷province_beyond river÷the far be from there.
+\v 6 now Oh_Tattenai the_governor of_the_region_beyond river÷the Shethar- Bozenai and÷associates÷their\f + \fr 6:6 \ft Note: We read one or more accents in L differently from BHQ. \f* envoys÷the who in/on/at/with÷province_beyond river÷the far be from there.
 \v 7 Leave with÷work of_the_house the=god this the_governor jews÷the and÷to÷elders jews÷the the_house the=god this let_them_build on site÷its.
 \v 8 And÷hereby÷I it_is_made a_decree regarding÷what that you_all_will_do with the_elders jews÷the these in÷rebuilding the_house the=god this and÷from÷treasury Oh/the=king which [is]_the_tribute of_the_region_beyond river÷the diligently cost÷the let_it_be given to÷men÷the these that not to÷delay.
 \v 9 And÷whatever things_needed and=the_sons of_bulls and÷rams and÷lambs for÷burnt_offerings to=god the=heavens wheat(s) salt wine and÷oil as÷requested priests÷the who in/on/at/with÷Yərūshālayim/(Jerusalem) it_will_be given to÷them day in/on=day that not negligence.
 \v 10 That they_will_be offering soothing_offerings to=god the=heavens and÷pray for÷life Oh/the=king and÷sons÷his.
 \v 11 And÷from÷I it_is_made a_decree (diy)_that every person who he_will_violate edict÷the this let_it_be_pulled_away a_beam from house÷his and÷raised_up let_him_be_impaled on÷it and÷house÷his a_refuse-heap let_it_be_made on this.
 \v 12 And÷god÷the who he_has_caused_to_dwell his/its=name there may_he_overthrow every king and÷people who he_will_stretch_out hand÷his to÷alter to÷destroy the_house the=god this which in/on/at/with÷Yərūshālayim I Dārəyāvesh I_make a_decree diligently let_it_be_done.
-\v 13 then Tattenai the_governor of_the_region_beyond river÷the wwww wwww and÷associates÷their because_of that he_had_sent Dārəyāvesh Oh/the=king accordingly diligently they_did.
+\v 13 then Tattenai the_governor of_the_region_beyond river÷the Shethar- Bozenai and÷associates÷their because_of that he_had_sent Dārəyāvesh Oh/the=king accordingly diligently they_did.
 \v 14 And÷elders jews÷the [were]_building and÷prospered in/on/at/with÷prophesying of_Ḩaggay prophet÷the\f + \fr 6:14 \ft Variant note: נביא/ה: (x-qere) 'נְבִיָּ֔/א': lemma=5029 n=1.1 morph=ANcmpd/Td id=15xRq נְבִיָּ֔/א\f* and÷Zəkar\sup yāh\sup* the_son of_ˊDdō and÷building and÷finished according_to the_decree of_the_god of_Yisrā\sup ʼēl\sup*/(Israel) and÷by÷decree of_Kōresh/(Cyrus) and÷Dārəyāvesh and÷Artaxerxes the_king of_Pāraş.
 \v 15 And÷completed house÷the this until day three of÷month of_Adar which it [was]_year six of=(the)_reign of_Dārəyāvesh Oh/the=king.
 \v 16 and÷celebrated the_people of_Yisrā\sup ʼēl\sup*/(Israel) priests÷the and÷levites÷the and÷rest of_the_people exile÷the the_dedication of_the_house the=god this in/on/at/with÷joy.
@@ -208,7 +208,7 @@
 \v 1 and=these [are]_the_heads family÷their and÷genealogy÷those the÷went_up with÷me in/on/at/with÷reign of_Artaxerxes the=king from÷Bāⱱelh.
 \v 2 from=(the)_sons of_Fīnəḩāş Gērəshom from=(the)_sons of_Ithamar Dāniyyēʼl from=(the)_sons of_Dāvid Hattush.
 \v 3 from=(the)_sons of_Shecaniah from=(the)_sons of_Farˊsh Zəkar\sup yāh\sup* and÷with÷him a_genealogical_list of÷males one_hundred and÷fifty.
-\v 4 from=(the)_sons wwww wwww Eliehoenai the_son of_Zeraḩiah and÷with÷him [were]_two_hundred the÷males.
+\v 4 from=(the)_sons of.Pahath- Mōʼāⱱ Eliehoenai the_son of_Zeraḩiah and÷with÷him [were]_two_hundred the÷males.
 \v 5 from=(the)_sons of_Shecaniah the_son of_Yahaʦ/(Jahaz)iel and÷with÷him [were]_three hundred(s) the÷males.
 \v 6 and÷of÷descendants of_ˊĀdīn ˊEⱱed the_son of_Yōnātān/(Jonathan) and÷with÷him [were]_fifty the÷males.
 \v 7 and÷of÷descendants of_ˊĒylām Jeshaiah the_son of_ˊAtal\sup yāh\sup* and÷with÷him [were]_seventy the÷males.
@@ -216,11 +216,11 @@
 \v 9 from=(the)_sons of_Yōʼāⱱ/(Joab) ˊOⱱad\sup yāh\sup* the_son of_Jehiel and÷with÷him [were]_two_hundred and÷eight teen the÷males.
 \v 10 and÷of÷descendants of_Shelomith the_son of_Josiphiah and÷with÷him [were]_one_hundred and=sixty the÷males.
 \v 11 and÷of÷descendants of_Bēⱱay Zəkar\sup yāh\sup* the_son of_Bēⱱay and÷with÷him [were]_twenty and÷eight the÷males.
-\v 12 and÷of÷descendants of_ˊAzgād Johanan the_son the÷Haqqatan and÷with÷him [were]_one_hundred and÷ten the÷males.
+\v 12 and÷of÷descendants of_ˊAzgād Yōḩānān/(Johanan) the_son the÷Haqqatan and÷with÷him [were]_one_hundred and÷ten the÷males.
 \v 13 and÷of÷descendants of_Adonikam [the]_last_[ones] and=these names÷their ʼElīfeleţ Jeiel and÷Shəmaˊ\sup yāh\sup* and÷with÷them [were]_sixty the÷males.
 \v 14 and÷of÷descendants of_Bigvay Uthai and\f + \fr 8:14 \ft Variant note: ו/זבוד: (x-qere) 'וְ/זַכּ֑וּר': lemma=c/2139 n=1 morph=HC/Np id=15mUy וְ/זַכּ֑וּר\f* and÷with÷them [were]_seventy the÷males.
 \v 15 and÷gathered÷them to the=river the÷runs to Ahava and÷camped there days three and÷reviewed in/on/at/with÷people and÷in/on/at/with÷priests and÷of÷sons of_Lēvīh not I_found there.
-\v 16 And÷sent for÷ʼElīˊezer for÷Ariel for÷Shəmaˊ\sup yāh\sup* and÷for÷Elnathan and÷for÷Jarib and÷for÷Elnathan and÷for÷Nātān and÷for÷Zəkar\sup yāh\sup* and÷for÷Meshullam leaders and÷for÷Joiarib and÷for÷Elnathan teachers.
+\v 16 And÷sent for÷ʼElīˊezer for÷Ariel for÷Shəmaˊ\sup yāh\sup* and÷for÷ʼElnātān and÷for÷Jarib and÷for÷ʼElnātān and÷for÷Nātān and÷for÷Zəkar\sup yāh\sup* and÷for÷Məshullām leaders and÷for÷Joiarib and÷for÷ʼElnātān teachers.
 \v 17 And÷sent\f + \fr 8:17 \ft Variant note: ו/אוצא/ה: (x-qere) 'וָ/אֲצַוֶּ֤ה': lemma=c/6680 morph=HC/Vpw1cs id=15D5E וָ/אֲצַוֶּ֤ה\f* DOM÷them to ˊDdō the÷leader in/on/at/with÷Casiphia the÷place and÷placed in/on/at/with÷mouths÷them words to÷say to ˊDdō his/its=woman the÷temple_servants\f + \fr 8:17 \ft Variant note: ה/נתונים: (x-qere) 'הַ/נְּתִינִים֙': lemma=d/5411 n=0.1.0 morph=HTd/Ncmpa id=15x1h הַ/נְּתִינִים֙\f* in/on/at/with÷Casiphia the÷place to=bring to/for=us servants for÷house god÷our.
 \v 18 And÷brought to/for=us since÷hand god÷our the÷gracious on÷us a_man of_insight from=(the)_sons of_Mahli the_son of_Lēvīh the_son of_Yisrā\sup ʼēl\sup*/(Israel) and÷Sherebiah and÷sons÷his and÷brothers÷him eight- teen.
 \v 19 And=DOM Hashabiah and÷with÷him Jeshaiah from=(the)_sons of_Merari brothers÷his and÷sons÷their twenty.
@@ -272,10 +272,10 @@
 \v 12 And÷answered all the÷assembly and=they_said a_voice great so as÷said÷you\f + \fr 10:12 \ft Variant note: כ/דברי/ך: (x-qere) 'כִּ/דְבָרְ/ךָ֥': lemma=k/1697 morph=HR/Ncmsc/Sp2ms id=15Kbe כִּ/דְבָרְ/ךָ֥\f* to÷we for=doing.
 \v 13 But the÷people [is]_numerous and÷the÷season [is]_rains and÷don't ability to÷stand in/on/at/with÷open and÷the÷task not in÷day one and=not for÷two if/because we_have_increased to÷transgressed in/on/at/with÷matter the÷this.
 \v 14 Let_them_stand please leaders÷our to/from=all/each/any/every the÷assembly and=all/each/any/every [one]_who in/on/at/with÷towns÷our the÷married women foreign let_him_come at÷times appointed and÷with÷them [the]_elders of_a_city and÷town and÷judges÷her until in_order_to÷turned_away the_burning of_the_anger god÷our from=him/it until to=the_word/thing/matter the÷this.
-\v 15 only Yōnātān/(Jonathan) the_son of_ˊAsāh\sup ʼēl\sup* and÷Jahzeiah the_son of_Tikvah they_stood on this and÷Meshullam and÷Shabbethai the÷Lēviyyiy supported÷them.
+\v 15 only Yōnātān/(Jonathan) the_son of_ˊAsāh\sup ʼēl\sup* and÷Jahzeiah the_son of_Tiqvāh they_stood on this and÷Məshullām and÷Shabbethai the÷Lēviyyiy supported÷them.
 \v 16 And=they_made thus the_children the÷exile and÷selected ˊEzrāʼ the=priest/officer men the_heads the÷families according_to÷families ancestral÷their and÷all÷them in/on/at/with÷name and=they_lived in/on=day one of_the÷month the÷tenth to÷investigate the÷matter.
 \v 17 And÷finished in/on/at/with÷all [the]_men the÷married women foreign until day one of_the÷month the÷first.
-\v 18 and÷found from=(the)_sons the÷priests who they_had_married women foreign from=(the)_sons\f + \fr 10:18 \ft Note: We read one or more accents in L differently from BHQ. \f*\f + \fr 10:18 \ft Note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS. \f* of_Yēshūˊa/(Jeshua) the_son of_Yōʦādāq/(Jozadak) and÷brothers÷his Maaseiah and÷ʼElīˊezer and÷Jarib and÷Gəddal\sup yāh\sup*.
+\v 18 and÷found from=(the)_sons the÷priests who they_had_married women foreign from=(the)_sons\f + \fr 10:18 \ft Note: We read one or more accents in L differently from BHQ. \f*\f + \fr 10:18 \ft Note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS. \f* of_Yēshūˊa/(Jeshua) the_son of_Yōʦādāq/(Jozadak) and÷brothers÷his Maaseiah and÷ʼElīˊezer and÷Jarib and÷Gədal\sup yāh\sup*.
 \v 19 And÷gave hands÷themselves to÷put_away wives÷their and÷guilt_offering a_ram of_[the]_flock on guilt÷their.
 \v 20 and÷from÷descendants of_ʼImmēr Ḩānāni and÷Zebadiah.
 \v 21 and÷from÷descendants of_Ḩārim Maaseiah and÷ʼĒliy\sup yāh\sup* and÷Shəmaˊ\sup yāh\sup* and÷Jehiel and÷ˊUzziy\sup yāh\sup*.
@@ -283,18 +283,18 @@
 \v 23 and=from the÷Lēviyyiy Jozabad and÷Shimˊī and÷Kelaiah it [is]_Kelita Pethahiah Yəhūdāh/(Judah) and÷ʼElīˊezer.
 \v 24 and=from the÷singers Eliashib and=from the÷gatekeepers Shallūm and÷Telem and÷ʼŪrī.
 \v 25 and÷of÷Yisrā\sup ʼēl\sup*/(Israel) from=(the)_sons of_Farˊsh Ramiah and÷Izziah and÷Malchijah and÷Mijamin and÷ʼElˊāzār and÷Malkijah and÷Bənā\sup yāh\sup*.
-\v 26 and÷of÷descendants of_ˊĒylām Mattāniah Zəkar\sup yāh\sup* and÷Jehiel and÷Abdi and÷Jeremoth and÷ʼĒliy\sup yāh\sup*.
-\v 27 and÷of÷descendants of_Zattūʼ Elioenai Eliashib Mattāniah and÷Jeremoth and÷Zabad and÷Aziza.
+\v 26 and÷of÷descendants of_ˊĒylām Mattan\sup yāh\sup* Zəkar\sup yāh\sup* and÷Jehiel and÷Abdi and÷Jeremoth and÷ʼĒliy\sup yāh\sup*.
+\v 27 and÷of÷descendants of_Zattūʼ Elioenai Eliashib Mattan\sup yāh\sup* and÷Jeremoth and÷Zabad and÷Aziza.
 \v 28 and÷of÷descendants of_Bēⱱay Jehohanan Ḩānāniah Zabbai Athlai.
-\v 29 and÷of÷descendants of_Bānī Meshullam Malluch and÷ˊAdā\sup yāh\sup* Jashub and÷Sheal wwww\f + \fr 10:29 \ft Variant note: ירמות: (x-qere) 'וְ/רָמֽוֹת': lemma=c/3406 n=0 morph=HC/Np id=15SCH וְ/רָמֽוֹת\f*.
-\v 30 and÷of÷descendants wwww wwww Adna and÷Chelal Bənā\sup yāh\sup* Maaseiah Mattāniah Bəʦal\sup ʼēl\sup* and÷Binnui and÷Mənashsheh.
+\v 29 and÷of÷descendants of_Bānī Məshullām Malluch and÷ˊAdā\sup yāh\sup* Jashub and÷Sheal wwww\f + \fr 10:29 \ft Variant note: ירמות: (x-qere) 'וְ/רָמֽוֹת': lemma=c/3406 n=0 morph=HC/Np id=15SCH וְ/רָמֽוֹת\f*.
+\v 30 and÷of÷descendants of.Pahath- Mōʼāⱱ Adna and÷Chelal Bənā\sup yāh\sup* Maaseiah Mattan\sup yāh\sup* Bəʦal\sup ʼēl\sup* and÷Binnui and÷Mənashsheh.
 \v 31 and=the_sons of_Ḩārim ʼElīˊezer Isshiah Malkijah Shəmaˊ\sup yāh\sup* Shimˊōn.
 \v 32 Binyāmīn\f + \fr 10:32 \ft Note: We agree with both BHS 1997 and BHQ on an unexpected reading. \f* Malluch Shemariah.
 \v 33 from=(the)_sons of_Ḩāshum Mattenai Mattattah Zabad ʼElīfeleţ Jeremai Mənashsheh Shimˊī.
 \v 34 from=(the)_sons of_Bānī Maadai ˊAmrām and÷Uel.
 \v 35 Bənā\sup yāh\sup* Bedeiah Keluhi\f + \fr 10:35 \ft Variant note: כלהי: (x-qere) 'כְּלֽוּהוּ': lemma=3622 n=0 morph=HNp id=15wi3 כְּלֽוּהוּ\f*.
 \v 36 Vaniah Meremoth Eliashib.
-\v 37 Mattāniah Mattenai and÷Jaasu\f + \fr 10:37 \ft Variant note: ו/יעשו: (x-qere) 'וְ/יַעֲשָֽׂי': lemma=c/3299 n=0 morph=HC/Np id=15ikF וְ/יַעֲשָֽׂי\f*.
+\v 37 Mattan\sup yāh\sup* Mattenai and÷Jaasu\f + \fr 10:37 \ft Variant note: ו/יעשו: (x-qere) 'וְ/יַעֲשָֽׂי': lemma=c/3299 n=0 morph=HC/Np id=15ikF וְ/יַעֲשָֽׂי\f*.
 \v 38 And÷Bānī and÷Binnui Shimˊī.
 \v 39 And÷Shelemiah and÷Nātān and÷ˊAdā\sup yāh\sup*.
 \v 40 Machnadebai Shashai Sharai.
