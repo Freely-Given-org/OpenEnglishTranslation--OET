@@ -30,7 +30,7 @@ CNTR_lemma_table = ../../CNTR-GNT/derivedFormats/lemmas.alphabetical.tsv
 CNTR_book_table = ../../CNTR-GNT/sourceExports/book.csv
 CNTR_collation_table = ../../CNTR-GNT/sourceExports/collation.csv
 WLC_OT_TSV_table := ../intermediateTexts/glossed_OSHB/our_WLC_glosses.morphemes.tsv
-Clear_Bible_OT_lowfat_TSV := ../intermediateTexts/Clear.Bible_derived_Macula_data/Clear.Bible_MaculaHebrew.OT.morphemes.abbrev.tsv ../intermediateTexts/Clear.Bible_derived_Macula_data/Clear.Bible_MaculaHebrew.OT.lemmas.tsv
+Clear_Bible_MaculaHebrew_OT_TSV := ../intermediateTexts/Clear.Bible_derived_Macula_data/Clear.Bible_MaculaHebrew.OT.morphemes.abbrev.tsv ../intermediateTexts/Clear.Bible_derived_Macula_data/Clear.Bible_MaculaHebrew.OT.lemmas.tsv
 Clear_Bible_NT_lowfat_TSV := ../intermediateTexts/Clear.Bible_derived_Macula_data/Clear.Bible_MaculaGreek_LowFatTrees.NT.words.abbrev.tsv
 Clear_Bible_OT_lowfat_XML := $(wildcard ../../Forked/macula-hebrew/WLC/lowfat/*.xml)
 Clear_Bible_NT_lowfat_XML := $(wildcard ../../Forked/macula-greek/Nestle1904/lowfat/*.xml)
@@ -98,7 +98,7 @@ $(final_LV_NT_ESFM): $(intermediate_LV_NT_ESFM) $(SBE) $(scripted_NT_updates) $(
 	@echo "\n\nRun ScriptedBibleEditor on NT ESFM files…\n"
 	@$(Python) $(SBE) ScriptedVLTUpdates -qe
 
-../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv: $(initial_OT_TSV_tables) $(Clear_Bible_OT_lowfat_TSV) $(scripted_OT_updates) add_tags_to_OT_word_table.py $(BTranslit) $(HebrewTranslit)
+../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv: $(initial_OT_TSV_tables) $(Clear_Bible_MaculaHebrew_OT_TSV) $(scripted_OT_updates) add_tags_to_OT_word_table.py $(BTranslit) $(HebrewTranslit)
 	@echo "\n\nAdd people/places/referent tags to OET OT word table…\n"
 	@$(Python) add_tags_to_OT_word_table.py -e
 	@echo "\n\nCopying and renaming OT morpheme and lemma tables from glossed_OSHB/ to modified_source_glossed_OSHB_ESFM/…\n"
@@ -109,7 +109,7 @@ $(intermediate_LV_OT_ESFM): $(expanded_OT_TSV_tables) extract_glossed_OSHB_OT_to
 	@echo "\n\nExtract OT from TSV table to ESFM files…\n"
 	@$(Python) extract_glossed_OSHB_OT_to_ESFM.py -e
 
-$(initial_OT_TSV_tables): $(WLC_OT_TSV_table) $(Clear_Bible_OT_lowfat_TSV) apply_Clear_Macula_OT_glosses.py
+$(initial_OT_TSV_tables): $(WLC_OT_TSV_table) $(Clear_Bible_MaculaHebrew_OT_TSV) apply_Clear_Macula_OT_glosses.py
 	@echo "\n\nApply glosses from Macula Hebrew to OT (and reorder)…\n"
 	@$(Python) apply_Clear_Macula_OT_glosses.py
 	# @echo "\n\nCopying and renaming OT word and morpheme tables from glossed_OSHB/ to modified_source_glossed_OSHB_ESFM/…\n"
@@ -120,7 +120,7 @@ $(WLC_OT_TSV_table): $(short_OSHB_TSV) prepare_OSHB_for_glossing.py ourWLCHebrew
 	@echo "\n\nExpand columns in OT TSV and add our custom glosses…\n"
 	@$(Python) prepare_OSHB_for_glossing.py
 
-$(Clear_Bible_OT_lowfat_TSV): $(Clear_Bible_OT_lowfat_XML) $(WLC_OT_TSV_table) convert_ClearMaculaOT_to_our_TSV.py
+$(Clear_Bible_MaculaHebrew_OT_TSV): $(Clear_Bible_OT_lowfat_XML) $(WLC_OT_TSV_table) convert_ClearMaculaOT_to_our_TSV.py
 	@echo "\n\nConvert Macula Hebrew from XML files to TSV…\n"
 	@$(Python) convert_ClearMaculaOT_to_our_TSV.py
 

@@ -5,7 +5,7 @@
 #
 # Script handling convert_OSHB_XML_to_TSV function
 #
-# Copyright (C) 2022-2024 Robert Hunt
+# Copyright (C) 2022-2025 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -29,6 +29,9 @@ Script extracting the data out of the OSHB XML files
 (This is run BEFORE prepare_OSHB_for_glossing.py.)
 
 OSHB morphology codes can be found at https://hb.openscriptures.org/parsing/HebrewMorphologyCodes.html.
+
+CHANGELOG:
+    2025-01-15 Fix the single note that contains an exclamation mark ('KJV:1Kgs.22.43!b')
 """
 from gettext import gettext as _
 # from typing import Dict, List, Tuple
@@ -42,10 +45,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2024-04-04' # by RJH
+LAST_MODIFIED_DATE = '2025-01-15' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OSHB_XML_to_TSV"
 PROGRAM_NAME = "Convert OSHB WLC OT XML into TSV/JSON files"
-PROGRAM_VERSION = '0.58'
+PROGRAM_VERSION = '0.59'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -269,6 +272,8 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
                             assert attrib in ('n',), f"Unhandled {attrib}='{value}'"
 
                     assert 'None' not in noteText, f"BAD note: {readable_ref} {n=} {noteType=} {noteText=}"
+                    if readable_ref == 'KI1_22:44': noteText = noteText.replace( '!', '' ) # 'KJV:1Kgs.22.43!b'
+                    assert '!' not in noteText, f"BAD note: {readable_ref} {n=} {noteType=} {noteText=}"
                     verse_element_array.append([readable_ref, 'note', n, noteType, noteText])
                     entry = (numeric_ref, readable_ref, 'note', noteType,'', n, '','', noteText)
                     assert len(entry) == OUTPUT_FIELDNAMES_COUNT, f"Entry should have {OUTPUT_FIELDNAMES_COUNT} fields, not {len(entry)}: {entry}"

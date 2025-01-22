@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2025-01-15 11:20 by extract_glossed_OSHB_OT_to_ESFM v0.52
+\rem ESFM file created 2025-01-22 11:41 by extract_glossed_OSHB_OT_to_ESFM v0.53
 \rem USFM file edited by ScriptedBibleEditor v0.33
 \h Malʼākī
 \toc1 Malʼākī
@@ -13,60 +13,60 @@
 \toc3 Mal
 \mt1 Malʼākī
 \c 1
-\v 1 The_oracle of_the_word of_\nd YHWH\nd* to Yisrā\sup ʼēl\sup*/(Israel) in/on/at/with÷hand_of of_Malʼākī.
-\v 2 I_have_loved DOM÷you_all he_says \nd YHWH\nd* and÷say in/on/at/with÷how loved÷us am=not [did]_a_brother ˊĒsāv to÷Yaˊₐqoⱱ/(Jacob) the_utterance of_\nd YHWH\nd* and÷loved DOM Yaˊₐqoⱱ.
-\v 3 And=DOM ˊĒsāv I_hated and÷turned DOM mountains÷his a_waste and=DOM inheritance÷his to÷jackals of_[the]_wilderness.
-\v 4 If/because it_will_say ʼEdōm we_have_been_shattered and÷return and÷rebuild [the]_ruins thus he_says \nd YHWH\nd* of_hosts they they_will_build and÷I I_will_tear_down and÷called to/for=them a_territory of_wickedness and÷the÷people which he_was_indignant \nd YHWH\nd* until perpetuity.
-\v 5 And÷eyes÷your_all's_own they_will_see and÷you_all you_all_will_say he_is_great \nd YHWH\nd* from=under to÷borders of_Yisrā\sup ʼēl\sup*/(Israel).
-\v 6 A_son he_honours a_father and÷servant master÷his and=if [am]_a_father I where honour÷my and=if [am]_a_master(s) I where respect÷me he_says \nd YHWH\nd* of_hosts to/for=you_all the÷priests [who]_despise name÷my and÷say in/on/at/with÷how have_we_despised DOM name÷your.
-\v 7 [you_all_are]_bringing_near on altar÷my food defiled and÷ask in/on/at/with÷how defiled÷you in/on/at/with÷saying÷you_all the_table of_\nd YHWH\nd* [is]_despicable it.
-\v 8 And=because/when offer a_blind_[animal] for÷sacrifice [is_it]_not evil and=because/when you_all_bring_near a_lame_[animal] and÷sick [is_it]_not evil present÷it please to÷governor÷your pleased_with÷you\f + \fr 1:8 \ft Note: Marks a place where we agree with BHQ against BHS in reading L. \f*\f + \fr 1:8 \ft Note: Marks an anomalous form. \f*\f + \fr 1:8 \ft Note: We read punctuation in L differently from BHS. \f* or would_he_accept faces_of÷you he_says \nd YHWH\nd* of_hosts.
-\v 9 And=now entreat please the_face of_god and÷gracious÷us\f + \fr 1:9 \ft Note: We agree with both BHS 1997 and BHQ on an unexpected reading. \f* from÷hands÷your_all's it_was this will_he_accept any_of÷you_all face he_says \nd YHWH\nd* of_hosts.
-\v 10 Who also in/on/at/with÷you_all and÷shut [the]_doors and=not you_all_will_set_light_to altar÷my in_vain there_[is]_not to=me pleasure in/on/at/with÷you_all he_says \nd YHWH\nd* of_hosts and÷offering not I_will_accept from÷hands÷your_all's.
-\v 11 If/because from÷rising of_[the]_sun and=unto setting÷its [is]_great name÷my in/on/at/with÷nations and=on/over=all place incense [is_being]_brought_near to÷name÷my and÷offering a_pure if/because [is]_great name÷my in/on/at/with÷nations he_says \nd YHWH\nd* of_hosts.
-\v 12 And÷you_all [are]_profaning DOM÷it in/on/at/with÷say÷you_all the_table my=master [is]_defiled it and÷fruit÷its [is]_despicable food÷its.
-\v 13 And÷say there what÷weariness and÷sniff_at DOM÷it he_says \nd YHWH\nd* of_hosts and÷bring a_stolen_[animal] and=DOM the÷lame and=DOM the÷sick and÷bring DOM the÷offering accept DOM÷that from÷hand÷your_all's he_says \nd YHWH\nd*.
-\v 14 and÷cursed [one_who]_deals_deceptively and÷has in/on/at/with÷flock÷his a_male and÷vows and÷sacrifices a_blemished_[animal] to÷master if/because [am]_a_king great I he_says \nd YHWH\nd* of_hosts and÷name÷my [is]_to_be_feared in/on/at/with÷nations.
+\v 1 The_oracle of_the_word_of of_\nd YHWH\nd* to Yisrā\sup ʼēl\sup*/(Israel) in/on/at/with÷hand_of Malʼākī.
+\v 2 I_have_loved DOM÷you_all \nd YHWH\nd* he_says and÷say in/on/at/with÷how loved÷us am=not [did]_a_brother ˊĒsāv to÷Yaˊₐqoⱱ/(Jacob) the_utterance_of \nd YHWH\nd* and÷loved DOM Yaˊₐqoⱱ.
+\v 3 And=DOM ˊĒsāv I_hated and÷turned DOM mountains_of÷his a_waste and=DOM inheritance_of÷his to÷jackals_of [the]_wilderness.
+\v 4 If/because ʼEdōm it_will_say we_have_been_shattered and÷return and÷rebuild [the]_ruins thus \nd YHWH\nd* he_says hosts they they_will_build and÷I I_will_tear_down and÷called to/for=them a_territory_of wickedness and÷the÷people which he_was_indignant \nd YHWH\nd* until perpetuity.
+\v 5 And÷eyes_of÷your_all's_own they_will_see and÷you_all you_all_will_say \nd YHWH\nd* he_is_great from=under to÷borders_of Yisrā\sup ʼēl\sup*/(Israel).
+\v 6 A_son he_honours a_father and÷servant master_of÷his and=if [am]_a_father I where honour_of÷my and=if [am]_a_master(s) I where respect_of÷me he_says \nd YHWH\nd* hosts to/for=you_all the÷priests name_of÷my [who]_despise_of and÷say in/on/at/with÷how have_we_despised DOM name_of÷your.
+\v 7 [you_all_are]_bringing_near on altar_of÷my food defiled and÷ask in/on/at/with÷how defiled÷you in/on/at/with÷saying÷you_all the_table_of \nd YHWH\nd* [is]_despicable it.
+\v 8 And=because/when offer a_blind_[animal] for÷sacrifice [is_it]_not evil and=because/when you_all_bring_near a_lame_[animal] and÷sick [is_it]_not evil present÷it please to÷governor_of÷your pleased_with÷you\f + \fr 1:8 \ft Note: Marks a place where we agree with BHQ against BHS in reading L. \f*\f + \fr 1:8 \ft Note: Marks an anomalous form. \f*\f + \fr 1:8 \ft Note: We read punctuation in L differently from BHS. \f* or would_he_accept faces_of÷you \nd YHWH\nd* he_says hosts.
+\v 9 And=now entreat please the_face_of god and÷gracious÷us\f + \fr 1:9 \ft Note: We agree with both BHS 1997 and BHQ on an unexpected reading. \f* from÷hands_of÷your_all's it_was this will_he_accept any_of÷you_all face \nd YHWH\nd* he_says hosts.
+\v 10 Who also in/on/at/with÷you_all and÷shut [the]_doors and=not you_all_will_set_light_to altar_of÷my in_vain there_[is]_not to=me pleasure in/on/at/with÷you_all \nd YHWH\nd* he_says hosts and÷offering not I_will_accept from÷hands_of÷your_all's.
+\v 11 If/because from÷rising_of [the]_sun and=unto setting_of÷its [is]_great name_of÷my in/on/at/with÷nations and=on/over=all place incense [is_being]_brought_near to÷name_of÷my and÷offering a_pure if/because [is]_great name_of÷my in/on/at/with÷nations \nd YHWH\nd* he_says hosts.
+\v 12 And÷you_all [are]_profaning DOM÷it in/on/at/with÷say÷you_all the_table_of my=master [is]_defiled it and÷fruit_of÷its [is]_despicable food_of÷its.
+\v 13 And÷say there what÷weariness and÷sniff_at DOM÷it \nd YHWH\nd* he_says hosts and÷bring a_stolen_[animal] and=DOM the÷lame and=DOM the÷sick and÷bring DOM the÷offering accept DOM÷that from÷hand_of÷your_all's \nd YHWH\nd* he_says.
+\v 14 and÷cursed [one_who]_deals_deceptively and÷has in/on/at/with÷flock_of÷his a_male and÷vows and÷sacrifices a_blemished_[animal] to÷master_of if/because [am]_a_king great I \nd YHWH\nd* he_says hosts and÷name_of÷my [is]_to_be_feared in/on/at/with÷nations.
 \c 2
 \v 1 And=now for÷you_all the÷command the÷this the÷priests.
-\v 2 If not you_all_will_listen and=if not you_all_will_set on heart to÷give honour to÷name÷my he_says \nd YHWH\nd* of_hosts and÷send in/on/at/with÷you_all DOM the÷curse and÷curse DOM blessings÷your_all's and=also cursed÷them if/because not÷you_all [are]_setting on heart.
-\v 3 Look÷I [am]_about_to_rebuke to/for=you_all DOM the÷offspring and÷spread dung on your_all's=faces the_dung festival_sacrifices÷your_all's and÷taken_away DOM÷you_all to=him/it.
-\v 4 And÷know if/because_that I_have_sent to÷you_all DOM the÷command the÷this to=be covenant÷my with Lēvīh he_says \nd YHWH\nd* of_hosts.
-\v 5 Covenant÷my it_was with=him/it the=life and÷the÷peace and÷gave÷them to=him/it fear and÷revered÷me and÷of÷presences_of name÷my he_was_in_awe he.
-\v 6 Instruction of_truth it_was in/on/at/with÷mouth÷his and÷wrong not it_was_found in/on/at/with÷lips÷his in/on/at/with÷peace and÷in/on/at/with÷uprightness he_walked with÷me and÷many he_turned_away from÷iniquity.
-\v 7 If/because [the]_lips of_a_priest they_will_preserve knowledge and÷instruction people_will_seek from÷mouth÷his if/because [is]_the_messenger of_\nd YHWH\nd* of_hosts he.
-\v 8 And÷you_all you_all_have_turned_aside from the÷way you_all_have_caused_to_stumble many_[people] in/on/at/with÷instruction you_all_have_corrupted the_covenant the÷Lēvīh he_says \nd YHWH\nd* of_hosts.
-\v 9 And=also I I_have_made DOM÷you_all despised and÷abased to/from=all/each/any/every the÷people because÷of_matter_of of_that not÷you_all [are]_keeping DOM ways÷my and÷ones_showing_partiality faces in/on/at/with÷instruction.
-\v 10 am=not [does]_a_father one have÷all÷we am=not god one created÷us why do_we_deal_treacherously each in/on/at/with÷another÷his so_as_to÷profaning the_covenant fathers÷our.
-\v 11 It_has_acted_treacherously Yəhūdāh/(Judah) and÷abomination it_has_been_done in/on/at/with÷Yisrā\sup ʼēl\sup*/(Israel) and÷in/on/at/with÷Yərūshālayim/(Jerusalem) if/because it_has_profaned Yəhūdāh the_sanctuary of_\nd YHWH\nd* which he_loves and÷married a_daughter of_a_god of_foreignness.
-\v 12 May_he_cut_off \nd YHWH\nd* as_for_the÷man who does÷this a_protector and÷answers from÷tents of_Yaˊₐqoⱱ/(Jacob) and÷brings an_offering to/for=\nd YHWH\nd* of_hosts.
-\v 13 and÷this second_[thing] you_all_do to_cover tear[s] DOM the_altar of_\nd YHWH\nd* weeping and÷groaning because÷no still turning to the÷offering and÷to÷accepts pleasure from÷hand÷your_all's.
-\v 14 And÷ask concerning what on if/because \nd YHWH\nd* he_has_testified between=you(ms) and=between the_wife youth÷your whom you you_have_dealt_treacherously in/on/at/with÷her and=she companion÷your and÷wife covenant÷your.
-\v 15 And=not one he_made and÷remnant of_spirit to=him/it and÷what the=one seeking offspring of_god and÷guard in/on/at/with÷spirit÷your_all's and÷in/on/at/with÷wife youth÷your not let_anyone_deal_treacherously.
-\v 16 If/because he_hates sending_away he_says \nd YHWH\nd* the_god of_Yisrā\sup ʼēl\sup*/(Israel) and÷covers violence over garment÷his he_says \nd YHWH\nd* of_hosts and÷take_heed in/on/at/with÷spirit÷your_all's and=not you_all_must_act_treacherously.
-\v 17 you_all_have_wearied \nd YHWH\nd* in/on/at/with÷words÷your_all's and÷ask in/on/at/with÷what did_we_weary_[him] in/on/at/with÷say÷you_all every [one_who]_does (of)_evil [is]_good in/on=both_eyes_of of_\nd YHWH\nd* and÷in/on/at/with÷them he he_delights or where [is]_the_god the÷justice.
+\v 2 If not you_all_will_listen and=if not you_all_will_set on heart to÷give honour to÷name_of÷my \nd YHWH\nd* he_says hosts and÷send in/on/at/with÷you_all DOM the÷curse and÷curse DOM blessings_of÷your_all's and=also cursed÷them if/because not÷you_all [are]_setting on heart.
+\v 3 Look÷I [am]_about_to_rebuke to/for=you_all DOM the÷offspring and÷spread dung on your_all's=faces the_dung_of festival_sacrifices_of÷your_all's and÷taken_away DOM÷you_all to=him/it.
+\v 4 And÷know if/because_that I_have_sent to÷you_all DOM the÷command the÷this to=be covenant_of÷my with Lēvīh \nd YHWH\nd* he_says hosts.
+\v 5 Covenant_of÷my it_was with=him/it the=life and÷the÷peace and÷gave÷them to=him/it fear and÷revered÷me and÷of÷presences_of name_of÷my he_was_in_awe he.
+\v 6 Instruction_of truth it_was in/on/at/with÷mouth_of÷his and÷wrong not it_was_found in/on/at/with÷lips_of÷his in/on/at/with÷peace and÷in/on/at/with÷uprightness he_walked with÷me and÷many he_turned_away from÷iniquity.
+\v 7 If/because [the]_lips_of a_priest they_will_preserve knowledge and÷instruction people_will_seek from÷mouth_of÷his if/because [is]_the_messenger_of \nd YHWH\nd* hosts he.
+\v 8 And÷you_all you_all_have_turned_aside from the÷way you_all_have_caused_to_stumble many_[people] in/on/at/with÷instruction you_all_have_corrupted the_covenant_of the÷Lēvīh \nd YHWH\nd* he_says hosts.
+\v 9 And=also I I_have_made DOM÷you_all despised and÷abased to/from=all/each/any/every the÷people because÷of_matter_of that not÷you_all [are]_keeping DOM ways_of÷my and÷ones_showing_partiality faces in/on/at/with÷instruction.
+\v 10 am=not [does]_a_father one have÷all_of÷we am=not god one created÷us why do_we_deal_treacherously each in/on/at/with÷another_of÷his so_as_to÷profaning the_covenant_of fathers_of÷our.
+\v 11 Yəhūdāh/(Judah) It_has_acted_treacherously and÷abomination it_has_been_done in/on/at/with÷Yisrā\sup ʼēl\sup*/(Israel) and÷in/on/at/with÷Yərūshālayim/(Jerusalem) if/because Yəhūdāh it_has_profaned the_sanctuary_of \nd YHWH\nd* which he_loves and÷married a_daughter_of a_god_of foreignness.
+\v 12 \nd YHWH\nd* May_he_cut_off as_for_the÷man who does÷this a_protector and÷answers from÷tents_of Yaˊₐqoⱱ/(Jacob) and= an_offering =brings to/for=\nd YHWH\nd* hosts.
+\v 13 and÷this second_[thing] you_all_do to_cover tear[s] DOM the_altar_of \nd YHWH\nd* weeping and÷groaning because÷no still turning to the÷offering and÷to÷accepts pleasure from÷hand_of÷your_all's.
+\v 14 And÷ask concerning what on if/because \nd YHWH\nd* he_has_testified between=you(ms) and=between the_wife_of youth_of÷your whom you you_have_dealt_treacherously in/on/at/with÷her and=she companion_of÷your and÷wife_of covenant_of÷your.
+\v 15 And=not one he_made and÷remnant_of spirit to=him/it and÷what the=one seeking offspring_of god and÷guard in/on/at/with÷spirit_of÷your_all's and÷in/on/at/with÷wife_of youth_of÷your not let_anyone_deal_treacherously.
+\v 16 If/because he_hates sending_away \nd YHWH\nd* he_says the_god_of Yisrā\sup ʼēl\sup*/(Israel) and÷covers violence over garment_of÷his \nd YHWH\nd* he_says hosts and÷take_heed in/on/at/with÷spirit_of÷your_all's and=not you_all_must_act_treacherously.
+\v 17 you_all_have_wearied \nd YHWH\nd* in/on/at/with÷words_of÷your_all's and÷ask in/on/at/with÷what did_we_weary_[him] in/on/at/with÷say÷you_all every_of [one_who]_does_of (of)_evil [is]_good in/on=both_eyes_of \nd YHWH\nd* and÷in/on/at/with÷them he he_delights or where [is]_the_god_of the÷justice.
 \c 3
-\v 1 See÷I [am]_about_to_send messenger÷my and÷prepare a_way before÷face/front÷me and÷suddenly he_will_come to temple÷his the÷master whom you_all [are]_seeking and÷messenger the÷covenant whom you_all [are]_delighting there [he_is]_about_to_come he_says \nd YHWH\nd* of_hosts.
-\v 2 And÷who [will]_endure DOM the_day coming÷his and÷who the÷stand in/on/at/with÷appears÷he if/because he like÷fire of_a_refiner and÷like÷soap of_washers.
-\v 3 And÷sit [one_who]_refines and÷purifier silver and÷purify DOM the_descendants of_Lēvīh and÷refine DOM=them like_the÷gold and÷like_the÷silver and=they_will_be to/for=\nd YHWH\nd* bringing_near (of)_an_offering in/on/at/with÷righteousness.
-\v 4 And÷pleasing to/for=\nd YHWH\nd* the_offering of_Yəhūdāh/(Judah) and÷Yərūshālayim/(Jerusalem) as÷days of_antiquity and÷as÷years former.
-\v 5 And÷draw_near to÷you_all for_the÷judgement and=I_will_be a_witness [who]_hastens in/on/at/with÷sorcerers and÷in/on/at/with÷adulterers and÷in/on/at/with÷swear by_the÷falsehood and÷in/on/at/with÷oppress (of)_[the]_hire of_a_hired_labourer a_widow and÷orphan and÷thrust_aside (of)_a_sojourner and=not fear÷me he_says \nd YHWH\nd* of_hosts.
-\v 6 If/because I \nd YHWH\nd* not I_change and÷you_all the_descendants of_Yaˊₐqoⱱ/(Jacob) not you_all_have_come_to_an_end.
-\v 7 At÷since÷days fathers÷your_all's you_all_have_turned_aside from÷statutes÷my and=not you_all_have_kept_[them] return to=me and÷return to÷you_all he_says \nd YHWH\nd* of_hosts and÷say in/on/at/with÷how will_we_return.
+\v 1 See÷I [am]_about_to_send messenger_of÷my and÷prepare a_way before÷face/front÷me and÷suddenly he_will_come to temple_of÷his the÷master whom you_all [are]_seeking and÷messenger_of the÷covenant whom you_all [are]_delighting there [he_is]_about_to_come \nd YHWH\nd* he_says hosts.
+\v 2 And÷who [will]_endure DOM the_day_of coming÷his and÷who the÷stand in/on/at/with÷appears÷he if/because he like÷fire a_refiner and÷like÷soap washers.
+\v 3 And÷sit [one_who]_refines and÷purifier silver and÷purify DOM the_descendants_of Lēvīh and÷refine DOM=them like_the÷gold and÷like_the÷silver and=they_will_be to/for=\nd YHWH\nd* bringing_near_of (of)_an_offering in/on/at/with÷righteousness.
+\v 4 And÷pleasing to/for=\nd YHWH\nd* the_offering_of Yəhūdāh/(Judah) and÷Yərūshālayim/(Jerusalem) as÷days_of antiquity and÷as÷years former.
+\v 5 And÷draw_near to÷you_all for_the÷judgement and=I_will_be a_witness [who]_hastens in/on/at/with÷sorcerers and÷in/on/at/with÷adulterers and÷in/on/at/with÷swear by_the÷falsehood and÷in/on/at/with÷oppress_of (of)_[the]_hire_of a_hired_labourer a_widow and÷orphan and÷thrust_aside_of (of)_a_sojourner and=not fear÷me \nd YHWH\nd* he_says hosts.
+\v 6 If/because I \nd YHWH\nd* not I_change and÷you_all the_descendants_of Yaˊₐqoⱱ/(Jacob) not you_all_have_come_to_an_end.
+\v 7 At÷since÷days_of fathers_of÷your_all's you_all_have_turned_aside from÷statutes_of÷my and=not you_all_have_kept_[them] return to=me and÷return to÷you_all \nd YHWH\nd* he_says hosts and÷say in/on/at/with÷how will_we_return.
 \v 8 Rob someone god if/because you_all [are]_robbing DOM=me and÷say in/on/at/with÷how robbed÷you the÷tithes and÷the÷offerings.
-\v 9 In/on/at/with÷curse you_all [are]_cursed and÷DOM÷me you_all [are]_robbing the÷nation whole÷him.
-\v 10 Bring DOM all the÷tithe into the_house the÷storage and=let_it_be food in/on/at/with÷house÷my and÷test÷me please in/on/at/with÷this he_says \nd YHWH\nd* of_hosts if not I_will_open to/for=you_all DOM the_windows the=heavens and÷pour_out to/for=you_all blessing until not sufficiency.
-\v 11 And÷rebuke to/for=you_all in/on/at/with÷devourer and=not it_will_destroy to/for=you_all DOM the_fruit the=soil and=not it_will_prove_barren to/for=you_all the÷vine in_the=field he_says \nd YHWH\nd* of_hosts.
-\v 12 And÷call_blessed DOM÷you_all all the=nations if/because you_all_will_be you_all a_land of_delight he_says \nd YHWH\nd* of_hosts.
-\v 13 they_have_been_strong against÷me words÷your_all's he_says \nd YHWH\nd* and÷say what have_we_spoken_together against÷you.
-\v 14 You_all_have_said [is]_futility to_serve god and÷what [is_the]_profit (cmp) we_have_kept requirements÷his and=because/when we_have_walked mournfully from=face/in_front_of \nd YHWH\nd* of_hosts.
-\v 15 And=now we [are]_calling_blessed arrogant_[people] both they_have_been_built_up [those_who]_do (of)_wickedness as_well_as they_have_tested god and÷escape.
-\v 16 Then they_spoke_together [those]_fearing (of)_\nd YHWH\nd* each with his/its=neighbour and÷took_note \nd YHWH\nd* and÷heard and÷written a_document of_remembrance in÷presence÷him of÷feared (of)_\nd YHWH\nd* and÷concerning÷thought his/its=name.
-\v 17 And=they_will_be to=me he_says \nd YHWH\nd* of_hosts on_the÷day when I [will_be]_making a_possession and÷spare on÷them just_as he_has_compassion everyone on his/its=son the÷serves DOM=him/it.
-\v 18 And÷again and÷see between a_righteous_[person] from÷wicked between [one_who]_serves (of)_god from÷who not serve÷him.
-\v 19 \f + \fr 3:19 \ft Note: KJB: Mal.4.1\f* if/because here the=day [is]_coming [it_is]_burning like_a÷furnace and=they_will_be all arrogant_[people] and=all [one_who]_does (of)_wickedness stubble and÷consume DOM=them the=day the÷coming he_says \nd YHWH\nd* of_hosts that not it_will_leave to/for=them root and÷branch.
-\v 20 \f + \fr 3:20 \ft Note: KJB: Mal.4.2\f* and÷rise to/for=you_all [those]_fearing name÷my a_sun of_righteousness and÷healing in/on/at/with÷wings÷its and÷go_out and÷leap like÷calves of_[the]_stall.
-\v 21 \f + \fr 3:21 \ft Note: KJB: Mal.4.3\f* and÷tread_down wicked_[people] if/because they_will_be ash[es] under the_soles feet÷your_all's in_the=day when I [will_be]_acting he_says \nd YHWH\nd* of_hosts.
-\v 22 \f + \fr 3:22 \ft Note: KJB: Mal.4.4\f* remember the_instruction of_Mosheh servant÷my which I_commanded DOM÷him in/on/at/with÷Ḩorēⱱ on all Yisrā\sup ʼēl\sup*/(Israel) statutes and÷ordinances.
-\v 23 \f + \fr 3:23 \ft Note: KJB: Mal.4.5\f* here I [am]_about_to_send to/for=you_all DOM ʼĒliy\sup yāh\sup* the÷prophet to=(the)_face_of/in_front_of/before comes the_day of_\nd YHWH\nd* the÷great and÷the÷terrible.
-\v 24 \f + \fr 3:24 \ft Note: KJB: Mal.4.6\f* and÷turn [the]_heart of_fathers to sons and÷hearts of_sons to fathers÷their lest I_should_come and÷strike DOM the=earth/land total_destruction.
+\v 9 In/on/at/with÷curse you_all [are]_cursed and÷DOM÷me you_all [are]_robbing the÷nation whole_of÷him.
+\v 10 Bring DOM all_of the÷tithe into the_house_of the÷storage and= food =let_it_be in/on/at/with÷house_of÷my and÷test÷me please in/on/at/with÷this \nd YHWH\nd* he_says hosts if not I_will_open to/for=you_all DOM the_windows_of the=heavens and÷pour_out to/for=you_all blessing until not sufficiency.
+\v 11 And÷rebuke to/for=you_all in/on/at/with÷devourer and=not it_will_destroy to/for=you_all DOM the_fruit_of the=soil and=not it_will_prove_barren to/for=you_all the÷vine in_the=field \nd YHWH\nd* he_says hosts.
+\v 12 And÷call_blessed all_of DOM÷you_all the=nations if/because you_all_will_be you_all a_land_of delight \nd YHWH\nd* he_says hosts.
+\v 13 they_have_been_strong against÷me words_of÷your_all's \nd YHWH\nd* he_says and÷say what have_we_spoken_together against÷you.
+\v 14 You_all_have_said [is]_futility to_serve god and÷what [is_the]_profit (cmp) we_have_kept requirements_of÷his and=because/when we_have_walked mournfully from=face/in_front_of \nd YHWH\nd* hosts.
+\v 15 And=now we [are]_calling_blessed arrogant_[people] both they_have_been_built_up [those_who]_do_of (of)_wickedness as_well_as they_have_tested god and÷escape.
+\v 16 Then they_spoke_together [those]_fearing_of (of)_\nd YHWH\nd* each with his/its=neighbour and= \nd YHWH\nd* =took_note and÷heard and= a_document_of =written remembrance in÷presence_of÷him of÷feared_of (of)_\nd YHWH\nd* his/its=name and÷concerning÷thought_of.
+\v 17 And=they_will_be to=me \nd YHWH\nd* he_says hosts on_the÷day when I [will_be]_making a_possession and÷spare on÷them just_as he_has_compassion everyone on his/its=son the÷serves DOM=him/it.
+\v 18 And÷again and÷see between a_righteous_[person] from÷wicked between [one_who]_serves_of (of)_god from÷who not serve÷him.
+\v 19 \f + \fr 3:19 \ft Note: KJB: Mal.4.1\f* if/because here the=day [is]_coming [it_is]_burning like_a÷furnace and=they_will_be all_of arrogant_[people] and=all (of)_wickedness [one_who]_does_of stubble and÷consume DOM=them the=day the÷coming \nd YHWH\nd* he_says hosts that not it_will_leave to/for=them root and÷branch.
+\v 20 \f + \fr 3:20 \ft Note: KJB: Mal.4.2\f* and÷rise to/for=you_all [those]_fearing_of name_of÷my a_sun_of righteousness and÷healing in/on/at/with÷wings_of÷its and÷go_out and÷leap like÷calves_of [the]_stall.
+\v 21 \f + \fr 3:21 \ft Note: KJB: Mal.4.3\f* and÷tread_down wicked_[people] if/because they_will_be ash[es] under the_soles_of feet_of÷your_all's in_the=day when I [will_be]_acting \nd YHWH\nd* he_says hosts.
+\v 22 \f + \fr 3:22 \ft Note: KJB: Mal.4.4\f* remember the_instruction_of Mosheh servant_of÷my which I_commanded DOM÷him in/on/at/with÷Ḩorēⱱ on all_of Yisrā\sup ʼēl\sup*/(Israel) statutes and÷ordinances.
+\v 23 \f + \fr 3:23 \ft Note: KJB: Mal.4.5\f* here I [am]_about_to_send to/for=you_all DOM ʼĒliy\sup yāh\sup* the÷prophet to=(the)_face_of/in_front_of/before comes the_day_of \nd YHWH\nd* the÷great and÷the÷terrible.
+\v 24 \f + \fr 3:24 \ft Note: KJB: Mal.4.6\f* and÷turn [the]_heart_of fathers to sons and÷hearts_of sons to fathers_of÷their lest I_should_come and÷strike DOM the=earth/land total_destruction.

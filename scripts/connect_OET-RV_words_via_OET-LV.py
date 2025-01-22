@@ -47,6 +47,7 @@ CHANGELOG:
     2024-01-27 Don't allow section headings to be marked with word numbers
     2024-03-25 Add OT connections
     2025-01-04 Started loading and using SBE name tables for automatic name links (not yet fully implemented for NT)
+    2025-01-17 Check for bad copy/paste which might include word numbers from a different verse
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -69,10 +70,10 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-01-09' # by RJH
+LAST_MODIFIED_DATE = '2025-01-17' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.73'
+PROGRAM_VERSION = '0.74'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -513,6 +514,8 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
     Firstly, load the OET-LV wordtable.
         Loads into state.wordTableHeaderList and state.wordTable.
 
+    Check that any existing word numbers are in the correct verse.
+
     Then connect linked words in the OET-LV to the OET-RV.
     """
     fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {rv}, {lv} )" )
@@ -602,6 +605,9 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
                         continue
                     # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"RV entries: ({len(rvVerseEntryList)}) {rvVerseEntryList}")
                     # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"LV entries: ({len(lvVerseEntryList)}) {lvVerseEntryList}")
+
+                    check_OET_RV_Verse( BBB, c, v, rvVerseEntryList, lvVerseEntryList ) # Check that any existing word numbers are in the expected range
+
                     (numSimpleListedAdds,numSimpleListedAddsNS), (numProperNounAdds,numProperNounAddsNS), (numFirstPartMatchedAdds,numFirstPartMatchedAddsNS), (numManualMatchedAdds,numManualMatchedAddsNS) \
                                 = connect_OET_RV_Verse( BBB, c, v, rvVerseEntryList, lvVerseEntryList ) # updates state.rvESFMLines
                     bookSimpleListedAdds += numSimpleListedAdds
@@ -626,7 +632,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
             if BBB=='ACT': newESFMtext = newESFMtext.replace( ' 12Z¦', ' 120¦' ) # Avoided false alarm
             illegalWordLinkRegex2Match = illegalWordLinkRegex2.search( newESFMtext)
             assert not illegalWordLinkRegex2Match, f"illegalWordLinkRegex2 failed before saving {BBB} with '{newESFMtext[illegalWordLinkRegex2Match.start()-5:illegalWordLinkRegex2Match.end()+5]}'" # Don't want double-ups of wordlink numbers
-            assert doubledND not in newESFMtext, f"doubled \\nd check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(doubledND)-5:newESFMtext.index(doubledND)+25]}'"
+            assert doubledND not in newESFMtext, f"doubled \\nd check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(doubledND)-10:newESFMtext.index(doubledND)+35]}'"
             with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
                 esfmFile.write( newESFMtext )
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookSimpleListedAdds:,} simple listed adds, {bookProperNounAdds:,} proper noun adds, {bookFirstPartMatchedAdds:,} first part adds and {bookManualMatchedAdds:,} manual adds for {BBB}." )
@@ -651,6 +657,60 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Did total of {totalSimpleListedAddsNS:,} simple listed nomina sacra (NS), {totalProperNounAddsNS:,} proper noun NS, {totalFirstPartMatchedAddsNS:,} first part NS and {totalManualMatchedAddsNS:,} manual NS." )
     else: vPrint( 'Info', DEBUGGING_THIS_MODULE, "  No new nomina sacra connections made." )
 # end of connect_OET-RV_words_via_OET-LV.connect_OET_RV
+
+
+wordLinkRegex = re.compile( '¦[1-9][0-9]{0,5}' )
+def check_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> None:
+    """
+    If the OET-RV verse has any existing word numbers,
+        check against the OET-LV verse to ensure that they're in the correct range.
+
+    This check is specifically to catch copy and paste errors where a word number accidentally gets wrongly copied into a different verse.
+    """
+    # fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {BBB} {c}:{v} {len(rvEntryList)}, {len(lvEntryList)} )" )
+    NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
+    if NT:
+        assert state.wordTableHeaderList.index('VLTGlossWords')+1 == GLOSS_COLUMN__NUMBER, f"{state.wordTableHeaderList.index('VLTGlossWords')+1=} {GLOSS_COLUMN__NUMBER=} {state.wordTableHeaderList=}" # Check we have the correct column below
+
+    discovered_OET_RV_word_numbers = []
+    haveVerseRange = False
+    for rvEntry in rvEntryList:
+        rvMarker, rvRest = rvEntry.getMarker(), rvEntry.getCleanText()
+        if rvMarker == 'v' and '-' in rvRest: haveVerseRange = True
+        # print( f"Check OET-RV {BBB} {c}:{v} {rvMarker}='{rvRest}'")
+        startIndex = 0
+        while True:
+            wordLinkRegexMatch = wordLinkRegex.search( rvRest, startIndex )
+            if not wordLinkRegexMatch: break
+            # print( f"Check OET-RV {BBB} {c}:{v} {rvMarker}='{rvRest}' {wordLinkRegexMatch.group()=}" )
+            discovered_OET_RV_word_numbers.append( int( wordLinkRegexMatch.group()[1:]) )
+            startIndex = wordLinkRegexMatch.end() + 1
+    if not discovered_OET_RV_word_numbers:
+        return # nothing to see here
+    # print( f"Check OET-RV {BBB} {c}:{v} {discovered_OET_RV_word_numbers=}" )
+
+    minLVWordNumber, maxLVWordNumber = 999_9999, 0
+    for lvEntry in lvEntryList:
+        lvMarker,lvRest = lvEntry.getMarker(), lvEntry.getCleanText()
+        # print( f"Check OET-LV {BBB} {c}:{v} {lvMarker}='{lvRest}'")
+        startIndex = 0
+        while True:
+            wordLinkRegexMatch = wordLinkRegex.search( lvRest, startIndex )
+            if not wordLinkRegexMatch: break
+            # print( f"Check OET-LV {BBB} {c}:{v} {lvMarker}='{lvRest}' {wordLinkRegexMatch.group()=}" )
+            wordNumber = int( wordLinkRegexMatch.group()[1:])
+            if wordNumber < minLVWordNumber: minLVWordNumber = wordNumber
+            if wordNumber > maxLVWordNumber: maxLVWordNumber = wordNumber
+            startIndex = wordLinkRegexMatch.end() + 1
+    # print( f"Check OET-RV {BBB} {c}:{v} {minLVWordNumber=} {maxLVWordNumber=}" )
+
+    for discovered_RV_word_number in discovered_OET_RV_word_numbers:
+        if discovered_RV_word_number < minLVWordNumber or discovered_RV_word_number > maxLVWordNumber:
+            if haveVerseRange:
+                logging.warning( f"OET-RV {BBB} {c}:{v} {discovered_OET_RV_word_numbers=} HAS VERSE RANGE {minLVWordNumber=} {maxLVWordNumber=}" )
+            else:
+                raise ValueError( f"OET-RV {BBB} {c}:{v} {discovered_RV_word_number=} OUT OF RANGE {minLVWordNumber=} {maxLVWordNumber=} from {discovered_OET_RV_word_numbers=}" )
+# end of connect_OET-RV_words_via_OET-LV.check_OET_RV_Verse
 
 
 GLOSS_COLUMN__NUMBER = 5
@@ -1588,7 +1648,7 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
         try: marker, rest = line.split( ' ', 1 )
         except ValueError: marker, rest = line, '' # Only a marker
         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"addNumberToRVWord A searching {BBB} {C}:{V} {marker}='{rest}'" )
-        if marker in ('\\s1','\\r','\\rem') or not rest:
+        if marker in ('\\s1','\\s2','\\s3','\\r','\\rem') or not rest:
             continue # Skip these fields (so we don't add word numbers to headings, etc.)
         if marker == '\\c':
             C = int(rest)

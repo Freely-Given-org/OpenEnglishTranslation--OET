@@ -38,6 +38,7 @@ CHANGELOG:
     2024-04-15 Also output Hebrew lemma table
     2025-01-07 Change literal gloss back to house from temple for 'בֵּ֖יתּל'
     2025-01-09 Switch from 'low-fat' XML with data missing for compound words, to Macula Hebrew 'nodes' XML
+    2025-01-20 Remove 'of' from start of glosses which aren't 'construct'
 """
 from gettext import gettext as _
 # from typing import Dict, List, Tuple
@@ -61,10 +62,10 @@ from BibleOrgSys.OriginalLanguages import Hebrew
 sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew
 
-LAST_MODIFIED_DATE = '2025-01-10' # by RJH
+LAST_MODIFIED_DATE = '2025-01-20' # by RJH
 SHORT_PROGRAM_NAME = "convert_ClearMaculaOT_to_our_TSV"
 PROGRAM_NAME = "Extract and Apply Macula OT glosses"
-PROGRAM_VERSION = '0.51'
+PROGRAM_VERSION = '0.53'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -330,13 +331,15 @@ def loadMaculaHebrewLowFatXMLGlosses() -> bool:
                     lang = elem.get('lang')
                     column_counts['lang'][lang] += 1
                     assert lang in 'HA'
-                    wType = elem.get('type')
-                    column_counts['type'][wType] += 1
-                    wState = elem.get('state')
-                    column_counts['state'][wState] += 1
-                    if wState:
+                    wordType = elem.get('type')
+                    column_counts['type'][wordType] += 1
+                    print( f"{theirRef=} {wordOrMorpheme=} {gloss=} {lang=} {wordType=}" )
+                    assert wordType in ('common','definite article','direct object marker','qatal'), f"{theirRef=} {wordOrMorpheme=} {gloss=} {lang=} {wordType=}"
+                    wordState = elem.get('state')
+                    column_counts['state'][wordState] += 1
+                    if wordState:
                         # What is 'determined' in Ezra 4:8!5, etc.
-                        assert wState in ('absolute','construct','determined'), f"Found unexpected {wState=}"
+                        assert wordState in ('absolute','construct','determined'), f"Found unexpected {wordState=}"
                     # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    {ref} {longID} {lang} '{wordOrMorpheme}' {English=} {gloss=}")
 
                     compound = elem.get('compound')
@@ -465,7 +468,7 @@ def loadMaculaHebrewLowFatXMLGlosses() -> bool:
                     entry = {'LFRef':theirRef, 'LFNumRef':longID, 'Language':lang, 'WordOrMorpheme':wordOrMorpheme,
                                 'Unicode':elem.get('unicode'), 'Transliteration':elem.get('transliteration'), 'After':after,
                                 'WordClass':wClass, 'Compound':compound, 'PartOfSpeech':PoS, 'Person':person, 'Gender':gender, 'Number':number,
-                                'WordType':wType, 'State':wState, 'Role':role, 'SDBH':elem.get('sdbh'),
+                                'WordType':wordType, 'State':wordState, 'Role':role, 'SDBH':elem.get('sdbh'),
                                 'StrongNumberX':elem.get('strongnumberx'), 'StrongLemma':elem.get('stronglemma'),
                                 'Stem':stem, 'Morphology':morph, 'Lemma':lemma, 'SenseNumber':senseNumber,
                                 'CoreDomain':elem.get('coredomain'), 'LexicalDomain':elem.get('lexdomain'), 'Frame':elem.get('frame'),
@@ -498,8 +501,8 @@ def loadMaculaHebrewLowFatXMLGlosses() -> bool:
                     assert firstEntryAttempt['WordOrMorpheme'] is None # No wordOrMorpheme
                     assert firstEntryAttempt['ContextualGloss'] is None # No gloss
                     english = firstEntryAttempt['EnglishGloss']
-                    wType = firstEntryAttempt['WordType']
-                    assert wType == 'definite article'
+                    wordType = firstEntryAttempt['WordType']
+                    assert wordType == 'definite article'
                     # print(f"Got article {longID=} with '{english}' {wType=}")
                     # Add the article gloss to the previous entry
                     lastExpandedEntry = state.maculaHebrewWordsAndMorphemes[-1] # We'll edit the last dict entry in place
@@ -654,13 +657,17 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                     lang = elem.get('lang')
                     column_counts['lang'][lang] += 1
                     assert lang in 'HA'
-                    wType = elem.get('type')
-                    column_counts['type'][wType] += 1
-                    wState = elem.get('state')
-                    column_counts['state'][wState] += 1
-                    if wState:
+                    wordType = elem.get('type')
+                    column_counts['type'][wordType] += 1
+                    # if wordType:
+                    #     print( f"{theirRef=} {wordOrMorpheme=} {gloss=} {lang=} {wordType=}" )
+                    #     assert wordType in ('adjective','cardinal number','common','definite article','direct object marker','jussive','ordinal number','participle active','pronominal','qatal','relative','wayyiqtol','yiqtol'), \
+                    #                         f"{theirRef=} {wordOrMorpheme=} {gloss=} {lang=} {wordType=}"
+                    wordState = elem.get('state')
+                    column_counts['state'][wordState] += 1
+                    if wordState:
                         # What is 'determined' in Ezra 4:8!5, etc.
-                        assert wState in ('absolute','construct','determined'), f"Found unexpected {wState=}"
+                        assert wordState in ('absolute','construct','determined'), f"Found unexpected {wordState=}"
                     # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    {ref} {longID} {lang} '{wordOrMorpheme}' {English=} {gloss=}")
 
                     compound = elem.get('compound')
@@ -673,7 +680,7 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                     # column_counts['morph'][morph] += 1 # There's over 700 different variations
                     lemma = elem.get('lemma')
                     if lemma:
-                        # I think this is a Clear.Bible error
+                        # I think this is a Clear.Bible systematic error
                         # AssertionError: unicodedata.name(char)='HEBREW ACCENT OLE' lemma='אֶ֫רֶץ' longID='010010010072'
                         for char in lemma:
                             if 'ACCENT' in unicodedata.name(char):
@@ -728,29 +735,53 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
 
                     # Do some on-the-fly fixes
                     # Note: We can't handle the logic below with our SBE tables
-                    if gloss and 'temple' in gloss:
-                        # print( f"{theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
-                        if 'ה' in wordOrMorpheme and 'כ' in wordOrMorpheme and 'ל' in wordOrMorpheme:
-                            # 'הֵיכַל' (hēykal) is ok
-                            assert 'ב' not in wordOrMorpheme
-                            assert 'ת' not in wordOrMorpheme
-                        if 'ב' in wordOrMorpheme and 'ת' in wordOrMorpheme:
-                            print( f"Changing gloss 'temple' to 'house' for {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
-                            assert 'כ' not in wordOrMorpheme
-                            assert 'ל' not in wordOrMorpheme
-                            gloss = gloss.replace( 'temple', 'house' )
-                            never_happens
-                    if English and 'temple' in English:
-                        # print( f"{theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
-                        if 'ה' in wordOrMorpheme and 'כ' in wordOrMorpheme and 'ל' in wordOrMorpheme:
-                            # ‘הֵיכַל’ (hēykal) is ok
-                            assert 'ב' not in wordOrMorpheme
-                            assert 'ת' not in wordOrMorpheme
-                        if 'ב' in wordOrMorpheme and 'ת' in wordOrMorpheme: # probably 'בֵּית'
-                            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Changing English 'temple' to 'house' for {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
-                            assert 'כ' not in wordOrMorpheme
-                            assert 'ל' not in wordOrMorpheme
-                            English = English.replace( 'temple', 'house' )
+                    if gloss:
+                        if 'temple' in gloss:
+                            # print( f"{theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
+                            if 'ה' in wordOrMorpheme and 'כ' in wordOrMorpheme and 'ל' in wordOrMorpheme:
+                                # 'הֵיכַל' (hēykal) is ok
+                                assert 'ב' not in wordOrMorpheme
+                                assert 'ת' not in wordOrMorpheme
+                            if 'ב' in wordOrMorpheme and 'ת' in wordOrMorpheme:
+                                print( f"Changing gloss 'temple' to 'house' for {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
+                                assert 'כ' not in wordOrMorpheme
+                                assert 'ל' not in wordOrMorpheme
+                                gloss = gloss.replace( 'temple', 'house' )
+                                never_happens
+                        # Place genitive 'of' at the end of the construct form, not at the beginning of the absolute form
+                        # NOTE: THIS ISN'T NECESSARILY CORRECT if the (following) absolute word is a possessive pronoun, e.g., house_of their
+                        #           but we can fix it again later when we do reordering
+                        if wordState == 'construct' and not gloss.endswith( 'of' ):
+                            # print( f"{theirRef=} {wordOrMorpheme=} {wordType=} {wordState=} {gloss=} {English=}")
+                            gloss = f'{gloss}_of'
+                        elif wordState == 'absolute' and gloss.startswith ( 'of_' ):
+                            # print( f"{theirRef=} {wordOrMorpheme=} {wordType=} {wordState=} {gloss=} {English=}")
+                            # assert gloss.startswith( 'off' ) or gloss.startswith( 'of_' )
+                            # if gloss.startswith( 'of_' ):
+                            gloss = gloss[3:]
+                    if English:
+                        if 'temple' in English:
+                            # print( f"{theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
+                            if 'ה' in wordOrMorpheme and 'כ' in wordOrMorpheme and 'ל' in wordOrMorpheme:
+                                # ‘הֵיכַל’ (hēykal) is ok
+                                assert 'ב' not in wordOrMorpheme
+                                assert 'ת' not in wordOrMorpheme
+                            if 'ב' in wordOrMorpheme and 'ת' in wordOrMorpheme: # probably 'בֵּית'
+                                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Changing English 'temple' to 'house' for {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
+                                assert 'כ' not in wordOrMorpheme
+                                assert 'ל' not in wordOrMorpheme
+                                English = English.replace( 'temple', 'house' )
+                        # Place genitive 'of' at the end of the construct form, not at the beginning of the absolute form
+                        # NOTE: THIS ISN'T NECESSARILY CORRECT if the (following) absolute word is a possessive pronoun, e.g., house_of their
+                        #           but we can fix it again later when we do reordering
+                        if wordState == 'construct' and not English.endswith( 'of' ):
+                            # print( f"{theirRef=} {wordOrMorpheme=} {wordType=} {wordState=} {gloss=} {English=}")
+                            English = f'{English}_of'
+                        elif wordState == 'absolute' and English.startswith ( 'of_' ):
+                            # print( f"{theirRef=} {wordOrMorpheme=} {wordType=} {wordState=} {gloss=} {English=}")
+                            # assert English.startswith( 'off' ) or English.startswith( 'of_' )
+                            # if English.startswith( 'of_' ):
+                            English = English[3:]
 
                     # Get all the parent elements so we can determine the nesting
                     startElement = elem
@@ -783,20 +814,22 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                             for compoundWord,compoundReplacement in (
                                             ('toanger', 'to_anger'), # Seems to be a systematic error in the Macula Hebrew data
 
-                                            ('Abednego', 'Abed-nego'),
+                                            ('Abednego', 'Abed-nego'), ('Abiezrite', 'Abi-ezrite'), ('Asahel', 'Asah-el'),
                                             ('Bathsheba', 'Bath-sheba'), ('Beersheba', 'Beer-sheba'), ('Bethel', 'Beth-el'), ('Bethlehem', 'Beth-lehem'),
                                             ('Dizahab', 'Di-zahab'),
                                             ('Ebenezer', 'Eben-ezer'), ('Esarhaddon', 'Esar-haddon'),
-                                            ('Hephzibah', 'Hephzi-bah'),
-                                            ('Ichabod', 'I-chabod'),
-                                            ('Malchishua', 'Malchi-shua'), ('Melchizedek', 'Melchi-zedek'), ('Mephibosheth', 'Mephi-bosheth'), ('Mezahab', 'Me-zahab'),
-                                            ('Potiphera', 'Poti-phera'),
-                                            ('Sarsechim', 'Sar-sechim'),('Sarsekim', 'Sar-sekim'),
+                                            ('Heliopolis', 'Beth-Shemesh'), ('Hephzibah', 'Hephzi-bah'),
+                                            ('Ichabod', 'I-chabod'), ('Immanuel', 'Immanu-el'),
+                                            ('Malchishua', 'Malchi-shua'), ('Melchizedek', 'Melchi-zedek'), ('Mephibosheth', 'Mephi-bosheth'), ('Mesopotamia', 'Aram-Naharyim'), ('Mezahab', 'Me-zahab'),
+                                            ('Nebuzaradan', 'Nebuzar-adan'),
+                                            ('Pedahzur', 'Pedah-zur'), ('Potiphera', 'Poti-phera'),
+                                            ('Sarsechim', 'Sar-sechim'), ('Sarsekim', 'Sar-sekim'),
+                                            ('Zurishaddai', 'Zuri-shaddai'),
                                             
-                                            ('Abel of Beth-maacah', 'Abel.of.Beth.maacah'), # not ideal
                                             ('Aram of ', 'Aram_of.'),('Arameans of ', 'Arameans_of.'),
                                             ('house of ', 'house_of.'),
                                             ('the Rock of ', 'the_Rock_of.'),
+                                            ('the son of ', 'the_son_of.'),('the.son.of', 'the_son_of'),('son of ', 'son_of.'),('son.of', 'son_of'),
                                             ('spring of ', 'spring_of.'),
                                             ('stone of ', 'stone_of.'),('the.stone.of.', 'the_stone_of.'),
                                             ('the.threshing.floor.of', 'the_threshing_floor_of'),('threshing floor of ', 'threshing_floor_of.'),
@@ -812,6 +845,9 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                                             ('Ramah of the Negeb', 'Ramah_of.the_Negeb'),('Ramoth of the Negev', 'Ramoth_of.the_Negev'),
                                             ('.[Ben].Hinnom', '_[Ben].Hinnom'),('.Ben.Hinnom', '_Ben.Hinnom'),
                                                 ('in.[the].Valley.of.Salt', 'in_[the]_Valley_of.Salt'),
+                                            ('of Beth', 'of_Beth'),('of.Beth', 'of_Beth'),('of-Beth', 'of_Beth'),
+                                            ('of.Col-', 'of_Col-'),
+                                            ('Abel of_Beth-maacah', 'Abel.of.Beth.maacah'), # SA2_20:15 not ideal
                                             ('of.the.tower.of.Shechem', 'of_the_tower_of.Shechem'),
                                             ('Zela ~ Haeleph', 'Zela.Haeleph'),
                                             ):
@@ -821,6 +857,9 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                             # print( f"  SPLITB {theirRef} {gloss=} {English=}")
                             if gloss:
                                 if '-' in gloss:
+                                    # gloss = gloss.replace( 'of.', 'of_' ) # This seems to be a common one
+                                    gloss = gloss.replace( '.', '_' ) # but also '[is].Beth-
+                                    # assert '.' not in gloss, f"COMPOUND WILL LOSE GLOSS DOT in {ourRef=} {theirRef=} {gloss=} {English=}"
                                     glossParts = gloss.split( '-' )
                                     if len(glossParts) == 2:
                                         if lastGloss == f'{glossParts[0]}-': # Assume this is now the second part
@@ -866,11 +905,14 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                                 else: print( f"    NO DIVIDERS in {ourRef} compound {gloss=}" )
                             if English:
                                 if '-' in English:
+                                    English = English.replace( '.', '_' ) # e.g., valley_of.Iphtah-
+                                    # assert '.' not in English, f"COMPOUND WILL LOSE ENGLISH DOT in {ourRef=} {theirRef=} {gloss=} {English=}"
                                     englishParts = English.split( '-' )
                                     if len(englishParts) == 2:
                                         if lastEnglish == f'{englishParts[0]}-': # Assume this is now the second part
                                             English = f'-{englishParts[1]}'
                                             # print( f"    Changed-B to {English=}" )
+                                            if gloss == 'Beth': print( f"Deleting BETH {ourRef=} {theirRef=} {glossParts=} {englishParts=} {lastGloss=} {lastEnglish=}" )
                                         else: # Assume that this is the first part
                                             English = f'{englishParts[0]}-'
                                             # print( f"    Changed-A to {English=}" )
@@ -904,29 +946,41 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                                         if lastEnglish == englishParts[0]: # Assume this is now the second part
                                             English = englishParts[1]
                                             # print( f"    Changed.B to {English=}" )
+                                            if gloss == 'Beth': print( f"Deleting BETH {ourRef=} {theirRef=} {glossParts=} {englishParts=} {lastGloss=} {lastEnglish=}" ); halt
                                         else: # Assume that this is the first part
                                             English = englishParts[0]
                                             # print( f"    Changed.A to {English=}" )
-                                    elif len(englishParts) == 4:
+                                    elif len(englishParts) == 3:
                                         if lastEnglish == englishParts[0]: # Assume this is now the second part
                                             English = englishParts[1]
                                             # print( f"    Changed.B to {English=}" )
                                         elif lastEnglish == englishParts[1]: # Assume this is now the third part
                                             English = englishParts[2]
-                                            # print( f"    Changed.B to {English=}" )
-                                        elif lastEnglish == englishParts[2]: # Assume this is now the fourth part
-                                            English = englishParts[3]
-                                            # print( f"    Changed.B to {English=}" )
+                                            # print( f"    Changed.C to {English=}" )
                                         else: # Assume that this is the first part
                                             English = englishParts[0]
                                             # print( f"    Changed.A to {English=}" )
-                                    else: halt
+                                    elif len(englishParts) == 4: # Abel of Beth Maacah
+                                        if lastEnglish == englishParts[0]: # Assume this is now the second part
+                                            English = englishParts[1]
+                                            # print( f"    Changed.B to {English=}" )
+                                        elif lastEnglish == englishParts[1]: # Assume this is now the third part
+                                            English = englishParts[2]
+                                            # print( f"    Changed.C to {English=}" )
+                                        elif lastEnglish == englishParts[2]: # Assume this is now the fourth part
+                                            English = englishParts[3]
+                                            # print( f"    Changed.D to {English=}" )
+                                        else: # Assume that this is the first part
+                                            English = englishParts[0]
+                                            # print( f"    Changed.A to {English=}" )
+                                    else: print( f"{ourRef=} {theirRef=} {glossParts=} {englishParts=} {lastGloss=} {lastEnglish=}" ); halt
                                 elif ' ' in English:
                                     englishParts = English.split( ' ' )
                                     if len(englishParts) == 2:
                                         if lastEnglish == englishParts[0]: # Assume this is now the second part
                                             English = englishParts[1]
                                             # print( f"    Changed B to {English=}" )
+                                            if gloss == 'Beth': print( f"Deleting BETH {ourRef=} {theirRef=} {glossParts=} {englishParts=} {lastGloss=} {lastEnglish=}" ); halt
                                         else: # Assume that this is the first part
                                             English = englishParts[0]
                                             # print( f"    Changed A to {English=}" )
@@ -975,6 +1029,11 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                     if len(nestingBits) >= max_nesting_level:
                         max_nesting_level = len(nestingBits) + 1
 
+                    if gloss: assert '.' not in gloss, print( f"Warning: REMAINING DOT IN GLOSS {ourRef=} {theirRef=} {gloss=} {English=}" )
+                    # if gloss and '.' in gloss: print( f"Warning: REMAINING DOT IN GLOSS {ourRef=} {theirRef=} {gloss=} {English=}" )
+                    if English: assert '.' not in English, print( f"Warning: REMAINING DOT IN ENGLISH {ourRef=} {theirRef=} {gloss=} {English=}" )
+                    # if English and '.' in English: print( f"Warning: REMAINING DOT IN ENGLISH {ourRef=} {theirRef=} {gloss=} {English=}" )
+
                     # Names have to match state.output_fieldnames:
                     # ['FGRef','OSHBid','RowType','LFRef','LFNumRef',
                     # 'Language','WordOrMorpheme','Unicode','Transliteration','After',
@@ -988,7 +1047,7 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                     entry = {'LFRef':theirRef, 'LFNumRef':longID, 'Language':lang, 'WordOrMorpheme':wordOrMorpheme,
                                 'Unicode':unicodeField, 'Transliteration':elem.get('transliteration'), 'After':after,
                                 'WordClass':wClass, 'Compound':compound, 'PartOfSpeech':PoS, 'Person':person, 'Gender':gender, 'Number':number,
-                                'WordType':wType, 'State':wState, 'Role':role, 'SDBH':elem.get('SDBH'),
+                                'WordType':wordType, 'State':wordState, 'Role':role, 'SDBH':elem.get('SDBH'),
                                 'StrongNumberX':strongNumberX,
                                 'StrongLemma':lemma, # Where do these come from -- are they duplicates in the lowfat??? elem.get('stronglemma'),
                                 'Stem':stem, 'Morphology':morph, 'Lemma':lemma, 'SenseNumber':senseNumber,
@@ -1023,8 +1082,8 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                     assert firstEntryAttempt['WordOrMorpheme'] is None # No wordOrMorpheme
                     assert firstEntryAttempt['ContextualGloss'] is None # No gloss
                     english = firstEntryAttempt['EnglishGloss']
-                    wType = firstEntryAttempt['WordType']
-                    assert wType == 'definite article'
+                    wordType = firstEntryAttempt['WordType']
+                    assert wordType == 'definite article'
                     # print(f"Got article {longID=} with '{english}' {wType=}")
                     # Add the article gloss to the previous entry
                     lastExpandedEntry = state.maculaHebrewWordsAndMorphemes[-1] # We'll edit the last dict entry in place

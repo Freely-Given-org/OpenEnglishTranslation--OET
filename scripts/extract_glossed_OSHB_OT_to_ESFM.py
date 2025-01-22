@@ -5,7 +5,7 @@
 #
 # Script handling extract_glossed_OSHB_OT_to_ESFM functions
 #
-# Copyright (C) 2022-2024 Robert Hunt
+# Copyright (C) 2022-2025 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -24,9 +24,37 @@
 
 """
 Script extracting the OSHB USFM files
-    directly out of the TSV table and with our modifications.
+    directly out of the TSV table and with our modifications
+    in order to produce the OET-LV OT ESFM files.
 
 Favors the literal glosses over the contextual ones.
+
+
+main() -> None
+loadSourceWordGlossTable() -> bool
+    Load the AllGlosses word TSV file using DictReader.
+export_literal_English_gloss_esfm() -> bool
+    Use the GlossOrder field to export the English gloss.
+get_verse_rows(given_source_rows: List[dict], row_index: int) -> List[list]
+    row_index should be the index of the first row for the particular verse
+    Returns a list of rows for the verse
+check_verse_rows(given_verse_row_list: List[dict], stop_on_error:bool=False) -> None
+    Given a set of verse rows, check that all GlossOrder fields are unique if they exist
+get_gloss_word_index_list(given_verse_row_list: List[dict]) -> List[int]
+    Goes through the verse rows in gloss word order and produces a list of row indexes.
+preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: #, last_given_verse_row: Dict[str,str]=None, last_glossWord:str=None) -> str
+    Returns the gloss to display for this word row (may be nothing if we have a current GlossInsert)
+        or the left-over preformatted GlossWord (if any)
+    The calling function has to decide what to do with it.
+    Note: because words and morphemes can be reordered,
+            we might now have a word between two morphemes
+            or two morphemes between another two morphemes.
+
+
+CHANGELOG:
+    2025-01-19 Check the glosses a bit more (especially having no superfluous periods which cause a line break in the OET-LV)
+                    plus remove double 'of', e.g., house_of of_Dan -> house_of Dan
+    2025-01-21 Start to handle GlossInsert fields
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple
@@ -40,17 +68,17 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2024-06-20' # by RJH
+LAST_MODIFIED_DATE = '2025-01-22' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed_OSHB_OT_to_ESFM"
 PROGRAM_NAME = "Extract glossed OSHB OT ESFM files"
-PROGRAM_VERSION = '0.52'
+PROGRAM_VERSION = '0.53'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
 
 
 INTERMEDIATE_FOLDER = Path( '../intermediateTexts/' )
-TSV_SOURCE_MORPHEME_TABLE_FILEPATH = INTERMEDIATE_FOLDER.joinpath( 'glossed_OSHB/all_glosses.morphemes.tsv' )
+# TSV_SOURCE_MORPHEME_TABLE_FILEPATH = INTERMEDIATE_FOLDER.joinpath( 'glossed_OSHB/all_glosses.morphemes.tsv' )
 TSV_SOURCE_WORD_TABLE_FILEPATH = INTERMEDIATE_FOLDER.joinpath( 'glossed_OSHB/all_glosses.words.tsv' )
 OT_ESFM_OUTPUT_FOLDERPATH = INTERMEDIATE_FOLDER.joinpath( 'modified_source_glossed_OSHB_ESFM/' )
 
@@ -65,17 +93,17 @@ class State:
         """
         Constructor:
         """
-        self.sourceMorphemeTableFilepath = TSV_SOURCE_MORPHEME_TABLE_FILEPATH
+        # self.sourceMorphemeTableFilepath = TSV_SOURCE_MORPHEME_TABLE_FILEPATH
         self.sourceWordTableFilepath = TSV_SOURCE_WORD_TABLE_FILEPATH
     # end of extract_glossed_OSHB_OT_to_ESFM.__init__
 
 
-NUM_EXPECTED_OSHB_MORPHEME_COLUMNS = 16
-source_morpheme_tsv_rows = []
-source_morpheme_tsv_column_max_length_counts = {}
-source_morpheme_tsv_column_non_blank_counts = {}
-source_morpheme_tsv_column_counts = defaultdict(lambda: defaultdict(int))
-source_morpheme_tsv_column_headers = []
+# NUM_EXPECTED_OSHB_MORPHEME_COLUMNS = 16
+# source_morpheme_tsv_rows = []
+# source_morpheme_tsv_column_max_length_counts = {}
+# source_morpheme_tsv_column_non_blank_counts = {}
+# source_morpheme_tsv_column_counts = defaultdict(lambda: defaultdict(int))
+# source_morpheme_tsv_column_headers = []
 
 NUM_EXPECTED_OSHB_WORD_COLUMNS = 17
 source_word_tsv_rows = []
@@ -93,90 +121,92 @@ def main() -> None:
     global state
     state = State()
 
-    if loadSourceMorphemeGlossTable():
-        if loadSourceWordGlossTable():
-            export_literal_English_gloss_esfm()
+    # if loadSourceMorphemeGlossTable():
+    if loadSourceWordGlossTable():
+        export_literal_English_gloss_esfm()
 
-            # Delete any saved (but now obsolete) OBD Bible pickle files
-            for something in INTERMEDIATE_FOLDER.iterdir():
-                if something.name.endswith( '.OBD_Bible.pickle' ):
-                    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Deleting obsolete OBD Bible pickle file {something.name}…" )
-                    something.unlink()
+        # Delete any saved (but now obsolete) OBD Bible pickle files
+        for something in INTERMEDIATE_FOLDER.iterdir():
+            if something.name.endswith( '.OBD_Bible.pickle' ):
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Deleting obsolete OBD Bible pickle file {something.name}…" )
+                something.unlink()
 
-        else: print( f"\nFAILED to load words!\n" )
+    else: print( f"\nFAILED to load words!\n" )
 
-    else: print( f"\nFAILED to load morphemes!\n" )
+    # else: print( f"\nFAILED to load morphemes!\n" )
 # end of extract_glossed_OSHB_OT_to_ESFM.main
 
 
-def loadSourceMorphemeGlossTable() -> bool:
-    """
-    """
-    global source_morpheme_tsv_column_headers
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading {'UPDATED ' if 'updated' in str(state.sourceMorphemeTableFilepath) else ''}source tsv file from {state.sourceMorphemeTableFilepath}…")
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_OSHB_MORPHEME_COLUMNS} columns…")
-    with open(state.sourceMorphemeTableFilepath, 'rt', encoding='utf-8') as tsv_file:
-        tsv_lines = tsv_file.readlines()
+# def loadSourceMorphemeGlossTable() -> bool:
+#     """
+#     Load the AllGlosses morpheme TSV file using DictReader.
+#     """
+#     global source_morpheme_tsv_column_headers
+#     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading {'UPDATED ' if 'updated' in str(state.sourceMorphemeTableFilepath) else ''}source tsv file from {state.sourceMorphemeTableFilepath}…")
+#     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_OSHB_MORPHEME_COLUMNS} columns…")
+#     with open(state.sourceMorphemeTableFilepath, 'rt', encoding='utf-8') as tsv_file:
+#         tsv_lines = tsv_file.readlines()
 
-    # Remove any BOM
-    if tsv_lines[0].startswith("\ufeff"):
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of source morpheme tsv file…")
-        tsv_lines[0] = tsv_lines[0][1:]
+#     # Remove any BOM
+#     if tsv_lines[0].startswith("\ufeff"):
+#         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of source morpheme tsv file…")
+#         tsv_lines[0] = tsv_lines[0][1:]
 
-    # Get the headers before we start
-    source_morpheme_tsv_column_header_line = tsv_lines[0].strip()
-    assert source_morpheme_tsv_column_header_line == 'Ref\tOSHBid\tRowType\tStrongs\tCantillationHierarchy\tMorphology\tWordOrMorpheme\tNoCantillations\tMorphemeGloss\tContextualMorphemeGloss\tWordGloss\tContextualWordGloss\tGlossCapitalisation\tGlossPunctuation\tGlossOrder\tGlossInsert', f"{source_morpheme_tsv_column_header_line=}"
-    source_morpheme_tsv_column_headers = [header for header in source_morpheme_tsv_column_header_line.split('\t')]
-    # print(f"Column headers: ({len(source_morpheme_tsv_column_headers)}): {source_morpheme_tsv_column_headers}")
-    assert len(source_morpheme_tsv_column_headers) == NUM_EXPECTED_OSHB_MORPHEME_COLUMNS, f"Found {len(source_morpheme_tsv_column_headers)} columns! (Expecting {NUM_EXPECTED_OSHB_MORPHEME_COLUMNS})"
+#     # Get the headers before we start
+#     source_morpheme_tsv_column_header_line = tsv_lines[0].strip()
+#     assert source_morpheme_tsv_column_header_line == 'Ref\tOSHBid\tRowType\tStrongs\tCantillationHierarchy\tMorphology\tWordOrMorpheme\tNoCantillations\tMorphemeGloss\tContextualMorphemeGloss\tWordGloss\tContextualWordGloss\tGlossCapitalisation\tGlossPunctuation\tGlossOrder\tGlossInsert', f"{source_morpheme_tsv_column_header_line=}"
+#     source_morpheme_tsv_column_headers = [header for header in source_morpheme_tsv_column_header_line.split('\t')]
+#     # print(f"Column headers: ({len(source_morpheme_tsv_column_headers)}): {source_morpheme_tsv_column_headers}")
+#     assert len(source_morpheme_tsv_column_headers) == NUM_EXPECTED_OSHB_MORPHEME_COLUMNS, f"Found {len(source_morpheme_tsv_column_headers)} columns! (Expecting {NUM_EXPECTED_OSHB_MORPHEME_COLUMNS})"
 
-    # Read, check the number of columns, and summarise row contents all in one go
-    dict_reader = DictReader(tsv_lines, delimiter='\t')
-    unique_words = set()
-    num_morphemes, max_morphemes, morpheme_refs_list = 0, 0, []
-    for n, row in enumerate(dict_reader):
-        if len(row) != NUM_EXPECTED_OSHB_MORPHEME_COLUMNS:
-            logging.crtical(f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_OSHB_MORPHEME_COLUMNS}!!!")
-        source_morpheme_tsv_rows.append(row)
-        unique_words.add(row['NoCantillations'])
-        for key, value in row.items():
-            # source_morpheme_tsv_column_sets[key].add(value)
-            if n==0: # We do it like this (rather than using a defaultdict(int)) so that all fields are entered into the dict in the correct order
-                source_morpheme_tsv_column_max_length_counts[key] = 0
-                source_morpheme_tsv_column_non_blank_counts[key] = 0
-            if value:
-                if len(value) > source_morpheme_tsv_column_max_length_counts[key]:
-                    source_morpheme_tsv_column_max_length_counts[key] = len(value)
-                source_morpheme_tsv_column_non_blank_counts[key] += 1
-            source_morpheme_tsv_column_counts[key][value] += 1
-            if key == 'RowType':
-                if value in ('seg','note','variant note','alternative note','exegesis note'):
-                    continue # not of interest here
-                assert value in ('m','M','mK','Am','AmK','MK','AM','AMK', 'w','wK','Aw','AwK')
-                if 'm' in value:
-                    if num_morphemes == 0:
-                        saved_morpheme_n = n + 1 # because of header line
-                    num_morphemes += 1
-                elif 'M' in value:
-                    assert num_morphemes > 0
-                    num_morphemes += 1
-                    if num_morphemes > max_morphemes:
-                        max_morphemes = num_morphemes
-                    if num_morphemes > 4: # Seems to be only one with five morphemes and 738 with four
-                        morpheme_refs_list.append( f'''{num_morphemes}@{saved_morpheme_n}@{tsv_lines[saved_morpheme_n].split(TAB)[0][:-1]}''' ) # Get ref without morpheme letter suffix
-                    num_morphemes = 0
-                elif 'w' in value:
-                    assert num_morphemes == 0
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loaded {len(source_morpheme_tsv_rows):,} source morpheme tsv data rows.")
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Have {len(unique_words):,} unique Hebrew words (without cantillation marks).")
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"      Max morphemes in one word = {max_morphemes} ({len(morpheme_refs_list)}) {morpheme_refs_list}")
+#     # Read, check the number of columns, and summarise row contents all in one go
+#     dict_reader = DictReader(tsv_lines, delimiter='\t')
+#     unique_words = set()
+#     num_morphemes, max_morphemes, morpheme_refs_list = 0, 0, []
+#     for n, row in enumerate(dict_reader):
+#         if len(row) != NUM_EXPECTED_OSHB_MORPHEME_COLUMNS:
+#             logging.crtical(f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_OSHB_MORPHEME_COLUMNS}!!!")
+#         source_morpheme_tsv_rows.append(row)
+#         unique_words.add(row['NoCantillations'])
+#         for key, value in row.items():
+#             # source_morpheme_tsv_column_sets[key].add(value)
+#             if n==0: # We do it like this (rather than using a defaultdict(int)) so that all fields are entered into the dict in the correct order
+#                 source_morpheme_tsv_column_max_length_counts[key] = 0
+#                 source_morpheme_tsv_column_non_blank_counts[key] = 0
+#             if value:
+#                 if len(value) > source_morpheme_tsv_column_max_length_counts[key]:
+#                     source_morpheme_tsv_column_max_length_counts[key] = len(value)
+#                 source_morpheme_tsv_column_non_blank_counts[key] += 1
+#             source_morpheme_tsv_column_counts[key][value] += 1
+#             if key == 'RowType':
+#                 if value in ('seg','note','variant note','alternative note','exegesis note'):
+#                     continue # not of interest here
+#                 assert value in ('m','M','mK','Am','AmK','MK','AM','AMK', 'w','wK','Aw','AwK')
+#                 if 'm' in value:
+#                     if num_morphemes == 0:
+#                         saved_morpheme_n = n + 1 # because of header line
+#                     num_morphemes += 1
+#                 elif 'M' in value:
+#                     assert num_morphemes > 0
+#                     num_morphemes += 1
+#                     if num_morphemes > max_morphemes:
+#                         max_morphemes = num_morphemes
+#                     if num_morphemes > 4: # Seems to be only one with five morphemes and 738 with four
+#                         morpheme_refs_list.append( f'''{num_morphemes}@{saved_morpheme_n}@{tsv_lines[saved_morpheme_n].split(TAB)[0][:-1]}''' ) # Get ref without morpheme letter suffix
+#                     num_morphemes = 0
+#                 elif 'w' in value:
+#                     assert num_morphemes == 0
+#     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loaded {len(source_morpheme_tsv_rows):,} source morpheme tsv data rows.")
+#     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Have {len(unique_words):,} unique Hebrew words (without cantillation marks).")
+#     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"      Max morphemes in one word = {max_morphemes} ({len(morpheme_refs_list)}) {morpheme_refs_list}")
 
-    return len(source_morpheme_tsv_rows) > 0
-# end of extract_glossed_OSHB_OT_to_ESFM.loadSourceMorphemeGlossTable
+#     return len(source_morpheme_tsv_rows) > 0
+# # end of extract_glossed_OSHB_OT_to_ESFM.loadSourceMorphemeGlossTable
 
 
 def loadSourceWordGlossTable() -> bool:
     """
+    Load the AllGlosses word TSV file using DictReader.
     """
     global source_morpheme_tsv_column_headers
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading {'UPDATED ' if 'updated' in str(state.sourceWordTableFilepath) else ''}source tsv file from {state.sourceWordTableFilepath}…")
@@ -291,17 +321,34 @@ def export_literal_English_gloss_esfm() -> bool:
             # print(f"{chapter_number}:{last_verse_number} {verse_word_dict}")
             # Create the USFM verse text
             verse_text = ''
+            last_row_gloss = ''
             last_gloss_index = -1
             for gloss_index in get_gloss_word_index_list(this_verse_row_list): # Gets the words in GlossOrder
                 this_verse_row = this_verse_row_list[gloss_index]
                 # HebrewWord = this_verse_row['Word']
+                # NOTE: All glosses here include the word number after the word/morphemes, e.g., 'In¦1=beginning¦1'
                 this_row_gloss = preform_row_gloss(gloss_index==(last_gloss_index+1), this_verse_row)
                 dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  preform_row_gloss() returned '{this_row_gloss}'" )
+                if this_row_gloss.startswith( 'of¦' ) and 'of¦' in last_row_gloss and not last_row_gloss.startswith( 'of¦' ):
+                    adj_last_row_gloss = last_row_gloss
+                    while adj_last_row_gloss[-1] in '¦1234567890':
+                        adj_last_row_gloss = adj_last_row_gloss[:-1] # Drop off last char
+                    if adj_last_row_gloss.endswith( '_of' ):
+                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  preform_row_gloss() {BBB} {chapter_number}:{verse_number} with {this_verse_row=}")
+                        adj_row_gloss = this_row_gloss[4:]
+                        while adj_row_gloss and adj_row_gloss[0] in '1234567890': adj_row_gloss = adj_row_gloss[1:]
+                        if adj_row_gloss:
+                            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  preform_row_gloss() {BBB} {chapter_number}:{verse_number} returned {adj_row_gloss=} from {this_row_gloss=} with {adj_last_row_gloss=} from {last_row_gloss=} with {verse_text=}" )
+                            assert adj_row_gloss[0] ==  '_' or adj_row_gloss[0] ==  '÷', f"{adj_row_gloss=}"
+                            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  preform_row_gloss() {BBB} {chapter_number}:{verse_number} after {last_row_gloss=} adjusting '{this_row_gloss}' to '{adj_row_gloss[1:]}'" )
+                            this_row_gloss = adj_row_gloss[1:]
+                        else: this_row_gloss = '' # We must have deleted the sole 'of' word
                 if this_row_gloss:
                     verse_text = f"{verse_text}{'' if not verse_text or this_row_gloss[0] in '.,' or this_row_gloss.startswith(FOOTNOTE_START) or this_row_gloss.startswith(XREF_START) else ' '}{this_row_gloss}"
                 assert '  ' not in verse_text, f"ERROR1: Have double spaces (marked ‼‼) in {verse_id} verse text: '{verse_text.replace('  ','‼‼')}'"
                 last_gloss_index = gloss_index
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"\n{verse_id} '{verse_text}'")
+                if this_row_gloss: last_row_gloss = this_row_gloss # so we skip over empty glosses (like segs like maqaf)
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{verse_id} '{verse_text}'\n" )
             assert not verse_text.startswith(' '), f"{verse_id} '{verse_text}'"
             esfm_text = f"{esfm_text}\n\\v {verse_number} {verse_text}"
             assert '  ' not in esfm_text, f"ERROR1: Have double spaces in esfm text: '{esfm_text[:200]} … {esfm_text[-200:]}'"
@@ -386,11 +433,14 @@ def check_verse_rows(given_verse_row_list: List[dict], stop_on_error:bool=False)
     """
     Given a set of verse rows, check that all GlossOrder fields are unique if they exist
     """
+    gloss_order_list = []
     gloss_order_set = set()
     for row in given_verse_row_list:
-        if not row['GlossOrder']: # We don't have values yet
-            return
+        # if not row['GlossOrder']: # We don't have values yet
+        #     return
         gloss_order_set.add(row['GlossOrder'])
+        assert row['GlossOrder'] not in gloss_order_list, f"{row['GlossOrder']} duplicated with {gloss_order_list=} in {given_verse_row_list=}"
+        gloss_order_list.append(row['GlossOrder'])
     if len(gloss_order_set) < len(given_verse_row_list):
         logging.critical(f"ERROR: Verse rows for {given_verse_row_list[0]['VerseID']} have duplicate GlossOrder fields!")
         for some_row in given_verse_row_list:
@@ -442,11 +492,11 @@ def get_gloss_word_index_list(given_verse_row_list: List[dict]) -> List[int]:
 # end of extract_glossed_OSHB_OT_to_ESFM.get_gloss_word_index_list
 
 
-saved_gloss = saved_capitalisation = ''
+saved_gloss = saved_capitalisation = saved_punctuation = ''
 just_had_insert = False
 def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: #, last_given_verse_row: Dict[str,str]=None, last_glossWord:str=None) -> str:
     """
-    Returns the gloss to display for this row (may be nothing if we have a current GlossInsert)
+    Returns the gloss to display for this word row (may be nothing if we have a current GlossInsert)
         or the left-over preformatted GlossWord (if any)
     The calling function has to decide what to do with it.
 
@@ -455,17 +505,16 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
             or two morphemes between another two morphemes.
     """
     # DEBUGGING_THIS_MODULE = 99
-    global saved_gloss, saved_capitalisation, just_had_insert, mmmCount, wwwwCount
+    global saved_gloss, saved_capitalisation, saved_punctuation, just_had_insert, mmmCount, wwwwCount
     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"preform_row_gloss({given_verse_row['Ref']}.{given_verse_row['MorphemeRowList']},"
             f" mg='{given_verse_row['MorphemeGlosses']}' cmg='{given_verse_row['ContextualMorphemeGlosses']}'"
             f" wg='{given_verse_row['WordGloss']}' cwg='{given_verse_row['ContextualWordGloss']}'"
-            f" {consecutive=} {saved_gloss=} {saved_capitalisation=} {just_had_insert=})…") # {last_glossWord=} 
-    assert given_verse_row['GlossInsert'] == '' # None yet
+            f" {consecutive=} {saved_gloss=} {saved_capitalisation=} {saved_punctuation=} {just_had_insert=})…") # {last_glossWord=} 
     # if given_verse_row['Ref'].startswith('GEN_3:14'): halt
     
-    gloss = ''
+    gloss = gloss_punctuation = ''
     if given_verse_row['RowType'] in ('seg','note','variant note','alternative note','exegesis note'):
-        if given_verse_row['RowType'] == 'seg':
+        if given_verse_row['RowType'] == 'seg': # We will ignore all of these
             # if given_verse_row['Morphology'] == 'x-sof-pasuq':
             #     gloss = f'{gloss}.'
             # else:
@@ -488,7 +537,11 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
                     else given_verse_row['ContextualMorphemeGlosses'] if given_verse_row['ContextualMorphemeGlosses'] \
                     else given_verse_row['MorphemeGlosses']
         if gloss:
+            # Try to check and clean up the gloss a bit
+            assert '.' not in gloss,  f"{given_verse_row}"
+            # assert '_~_' not in gloss,  f"{given_verse_row}" # {'Ref': 'GEN_6:19w10', 'OSHBid': '01cUx', 'RowType': '', 'MorphemeRowList': '3667,3668', 'Strongs': 'l,2421', 'CantillationHierarchy': '', 'Morphology': 'R,Vhc', 'Word': 'לְ,הַחֲיֹ֣ת', 'NoCantillations': 'לְ,הַחֲיֹת', 'MorphemeGlosses': 'to,keep_~_alive', 'ContextualMorphemeGlosses': '', 'WordGloss': '', 'ContextualWordGloss': '', 'GlossCapitalisation': '', 'GlossPunctuation': '', 'GlossOrder': '190', 'GlossInsert': '', 'n': 2585}
             gloss = gloss.replace( '_~_', '_' ) # TODO: What did these mean? Place to insert direct object, e.g, make_~_great,him ???
+            # assert '==' not in gloss,  f"{given_verse_row}" # {'Ref': 'GEN_4:6w8', 'OSHBid': '012B3', 'RowType': '', 'MorphemeRowList': '2149,2150,2151', 'Strongs': 'c,l,4100', 'CantillationHierarchy': '0.0', 'Morphology': 'C,R,Ti', 'Word': 'וְ,לָ֖,מָּה', 'NoCantillations': 'וְ,לָ,מָּה', 'MorphemeGlosses': 'and,to/for,why', 'ContextualMorphemeGlosses': '', 'WordGloss': 'and=for=what?', 'ContextualWordGloss': 'and==why?', 'GlossCapitalisation': '', 'GlossPunctuation': '', 'GlossOrder': '120', 'GlossInsert': '', 'n': 1465}
             gloss = gloss.replace( '==', '=' ).replace( ',?,', ',' ).replace( ',,', ',' ) # TODO: How/Why do we have these?
             gloss = gloss.replace( '!', '' ).replace( '=?', '' ).replace( '?', '' ) # e.g., on gloss for 'behold!', 'what?', 'will_you(fs)_be_drunk=?'
             # assert '.' not in gloss and '!' not in gloss, f"{given_verse_row}"
@@ -507,13 +560,35 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
             vPrint( 'Info', DEBUGGING_THIS_MODULE, f"{given_verse_row['Ref']}.{given_verse_row['MorphemeRowList']},"
                                         f" needs a word gloss for '{given_verse_row['Word']}'"
                                         f" (from '{given_verse_row['NoCantillations']}')" )
-        if 'S' in given_verse_row['GlossCapitalisation']: # Start of Sentence
+    
+        if 'S' in given_verse_row['GlossCapitalisation'] \
+        or (just_had_insert and 'S' in saved_capitalisation): # Start of Sentence
             gloss = f'{gloss[0].upper()}{gloss[1:]}'
+
         wn = f"¦{given_verse_row['n']}"
+
         gloss = f"{gloss.replace('=',f'{wn}=').replace(',',f'{wn}÷').replace('_',f'{wn}_')}{wn}" # Append the word (row) number(s) and replace comma morpheme separator
+        if just_had_insert:
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"Have insert with {gloss=}" )
+            assert not saved_capitalisation
+            # Not totally sure what all the different divider chars mean (but we'll change many of them to = as we go)
+            if gloss.count('=') == 1:
+                gloss = gloss.replace( '=', f'= {saved_gloss}{saved_punctuation} =')
+            elif gloss.count(',') == 1:
+                gloss = gloss.replace( ',', f'= {saved_gloss}{saved_punctuation} =')
+            elif gloss.count('÷') == 1:
+                gloss = gloss.replace( '÷', f'= {saved_gloss}{saved_punctuation} =')
+            elif gloss.count('_') == 1:
+                gloss = gloss.replace( '_', f'_ {saved_gloss}{saved_punctuation} _')
+            elif gloss.count('÷') == 2: # CH2_12:7
+                # Insert at the FINAL of the two commas
+                gloss = f'= {saved_gloss}{saved_punctuation} ='.join( gloss.rsplit( '÷', 1 ) ) # From https://stackoverflow.com/questions/2556108/rreplace-how-to-replace-the-last-occurrence-of-an-expression-in-a-string
+            else: halt
+            saved_gloss = saved_capitalisation = saved_punctuation = ''
+            just_had_insert = False
 
     else: # it's only a single morpheme word
-        # assert not saved_gloss # NO LONGER TRUE
+        assert not just_had_insert
         wordGloss = given_verse_row['ContextualWordGloss'] if given_verse_row['ContextualWordGloss'] \
                     else given_verse_row['WordGloss']
         wordGloss = wordGloss.replace( '!', '' ).replace( '?', '' ) # e.g., on gloss for 'behold!', 'what?'
@@ -550,9 +625,17 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
             gloss = f'{gloss[0].upper()}{gloss[1:]}'
             # print( f"  Now '{gloss}'")
             saved_capitalisation = ''
+    gloss_punctuation = given_verse_row['GlossPunctuation']
+
+    gloss_insert = given_verse_row['GlossInsert']
+    if gloss_insert: # we want to save this word
+        assert gloss_insert == '_' # for now, ignore what it is
+        saved_gloss, saved_capitalisation, saved_punctuation = gloss, given_verse_row['GlossCapitalisation'], gloss_punctuation
+        gloss = gloss_punctuation = '' # We won't return anything yet
+        just_had_insert = gloss_insert
 
     # if given_verse_row['Ref'].startswith('GEN_1:4'): halt
-    result = f"{gloss}{given_verse_row['GlossPunctuation']}"
+    result = f"{gloss}{gloss_punctuation}"
     assert '!¦' not in result, f"{given_verse_row}"
     return result
 # end of extract_glossed_OSHB_OT_to_ESFM.preform_row_gloss

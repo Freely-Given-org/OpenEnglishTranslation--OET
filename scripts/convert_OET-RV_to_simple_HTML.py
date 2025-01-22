@@ -5,7 +5,7 @@
 #
 # Script to take the OET-RV NT USFM files and convert to HTML
 #
-# Copyright (C) 2022-2024 Robert Hunt
+# Copyright (C) 2022-2025 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -31,6 +31,8 @@ CHANGELOG:
     2023-08-29 Added style for nomina sacra
     2023-09-05 Allow for /sig style
     2024-01-27 Check for unexpected USFM character formatting in /rem lines
+    2025-01-19 Handle /mt3
+    2025-01-21 Better handle OT ESFM word-table
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -52,10 +54,10 @@ from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, 
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 
 
-LAST_MODIFIED_DATE = '2024-06-03' # by RJH
+LAST_MODIFIED_DATE = '2025-01-21' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
-PROGRAM_VERSION = '0.77'
+PROGRAM_VERSION = '0.78'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -122,7 +124,8 @@ p.id + p.rem, p.rem + p.rem { margin-top:-1.1em; }
 p.shortPrayer { text-align:center; }
 p.mt1 { font-size:1.8em; }
 p.mt2 { font-size:1.3em; }
-p.mt1 + p.mt2, p.mt2 + p.mt1 { margin-top:-0.5em; }
+p.mt3 { font-size:1.1em; }
+p.mt1+p.mt2, p.mt2+p.mt1, p.mt1+p.mt3, p.mt2+p.mt3 { margin-top:-0.5em; }
 div.rightBox { float:right;
         width:-moz-fit-content; width:fit-content;
         border:3px solid #73AD21; padding:0.2em; }
@@ -782,7 +785,7 @@ def produce_HTML_files() -> None:
             if BBB=='ACT': esfm_text = esfm_text.replace( ' 12Z¦', ' 120¦' ) # Avoided false alarm
             assert not illegalWordLinkRegex2.search( esfm_text), f"illegalWordLinkRegex2 failed when loading {BBB}" # Don't want double-ups of wordlink numbers
             if source_filename.endswith( '.ESFM' ):
-                word_table_filename = 'OET-LV_NT_word_table.tsv'
+                word_table_filename = f'OET-LV_{bookType}_word_table.tsv'
                 word_table_filenames.add( word_table_filename )
                 if f'\\rem WORDTABLE {word_table_filename}\n' in esfm_text:
                     if word_table is None:
@@ -933,7 +936,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
             rest = rest.replace('\\em ','<em>').replace('\\em*','</em>').replace('\\it ','<i>').replace('\\it*','</i>')
             assert '\\' not in rest, f"{BBB} {C}:{V} {inRightDiv=} {inParagraph=} {inTable} {marker}={rest}"
             book_html = f'{book_html}<p class="{marker}">{rest}</p>\n'
-        elif marker in ('mt1','mt2'):
+        elif marker in ('mt1','mt2','mt3'):
             if not done_disclaimer: # Add an extra explanatory paragraph at the top
                 book_html = f'{book_html}{DISCLAIMER_HTML}{RV_BOOK_INTRO_HTML1}'
                 done_disclaimer = True
