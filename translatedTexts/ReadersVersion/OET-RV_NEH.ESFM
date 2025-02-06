@@ -1,23 +1,24 @@
-\id NEH - Open English Translation—Readers' Version (OET-RV) v0.0.10
+\id NEH - Open English Translation—Readers' Version (OET-RV) v0.1.00
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 NEH
 \rem WORDTABLE OET-LV_OT_word_table.tsv
-\h Nehemiah
-\toc1 Nehemiah
-\toc2 Nehemiah
+\h Nehemyah
+\toc1 Nehemyah
+\toc2 Nehemyah
 \toc3 Neh.
 \mt1 Nehemyah
 \mt2 (Nehemiah)
+\mt3 rebuilds Yerushalem's walls
 \is1 Introduction
-\ip \bk Nehemyah\bk* (Nehemiah) was a servant of Persian King Artahshashta (Artaxerxes) in the city of Susa. While he was there, he heard an account from the Israelis first went home bad the living. The temple had been rebuilt, but not yet naay-ayari the tall and wall of city, sikan naa the not/none egpakaatang of enemies of Israelis surrounding them.
-\ip Because of that, Nehemyah requested permission from the king to go to Yerushalem to rebuild the city walls.
-\ip In this document we read how God helped to Nehemyah of replacement pegsasindeg of tall and wall of city middle of opposition of enemies their surrounding them.
+\ip \bk Nehemyah\bk* (Nehemiah) was a servant of Persian King Artahshashta (Artaxerxes) in the city of Susa. While he was there, he heard an account from some Israelis who'd been allowed to return back to Yerushalem (Jerusalem) about how hard it was to live there. Yahweh's temple had been rebuilt, the the city wall hadn't been fixed yet, so their enemies who surrounded them were easily able to ambush and attack them.
+\ip Because of that, Nehemyah requested permission from the king to go personally to Yerushalem to supervise the rebuilding of the city walls.
+\ip In this document we read how God helped Nehemyah of organise the rebuild of the city wall in the middle of the opposition from their enemies around them.
 \iot Main components of this account
-\io1 Nehemyah's returning home to Yerushalem \ior 1:1–2:20\ior*
+\io1 Nehemyah's returning back to Yerushalem \ior 1:1–2:20\ior*
 \io1 The rebuilding of Yerushalem's city wall \ior 3:1–7:73\ior*
-\io1 The reading of law and the replacement of agreement \ior 8:1–10:39\ior*
-\io1 The other works of Nehemyah \ior 11:1–13:31\ior*
+\io1 The reading of the law and the renewel of their agreement \ior 8:1–10:39\ior*
+\io1 Nehemyah's other achievements \ior 11:1–13:31\ior*
 \rem This is still a very early look into the unfinished text of the \em Open English Translation\em* of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
@@ -684,7 +685,7 @@
 \li1 Filtai for Moadyah's¦227475,
 \li1
 \v 18 Shammua¦227479 for Bilgah's¦227478 \add family\add*,
-\li1 Yonatan for Shemayah's¦227480,
+\li1 Yonatan¦227481 for Shemayah's¦227480,
 \li1
 \v 19 Mattenai¦227484 for Yoyariv's \add family\add*,
 \li1 Uzzi¦227486 for Yedayah's¦227485,
@@ -703,88 +704,90 @@
 \p
 \v 24 The Levites' leaders were Hashavyah, Shereveyah, and Kadmiel's¦227540 son Yeshua¦227537 with their¦227541 brothers¦227541 serving opposite¦227542 them \add ≈in each service\add* to praise¦227543 and give¦227544 thanks¦227544 as had been commanded by David¦227546, the man¦227547 of God.
 \p
-\v 25 Mattanyah, Bakbukyah, Ovadyah, Meshullam, Talmon, and Akkuv were gatekeepers who \add stood\add* guard at the storerooms near the \add temple\add* gates.
+\v 25 Mattanyah¦227554, Bakbukyah¦227555, Ovadyah, Meshullam¦227557, Talmon¦227558, and¦227555 Akkuv were gatekeepers¦227561 who \add stood\add* guard¦227562 at the storerooms¦227563 near the \add temple\add* gates¦227564.
 \p
-\v 26 That was at the \add ≈time\add* of Yoyakim (son of Yeshua, son of Yotsadak), and at the \add ≈time\add* of Nehemyah the governor and Ezra the priest and scribe.
+\v 26 That was at the \add ≈time\add* of Yoyakim (son of Yeshua¦227571, son of Yotsadak), and at the \add ≈time\add* of Nehemyah¦227576 the governor¦227577 and Ezra¦227578 the priest¦227579 and scribe¦227580.
 \s1 The dedication of Yerushalem's wall
 \rem /s1 Dedication of the City Wall; Nehemiah Dedicates the City Wall; Dedication of Jerusalem's Wall; Dedication of the Wall of Jerusalem
 \p
-\v 27 ◙
-\v 28 ◙
-\v 29 ◙
-\v 30 ◙
+\v 27 At the dedication of the wall \add ≈around\add* Yerushalem, they \add ≈summoned\add* Levites¦227589 from all \add ≈over the region\add* to come to Yerushalem to perform the dedication with rejoicing and thanksgiving¦227598, and with \add ≈musical instruments and singing¦227599\add*,
+\v 28 \add ≈plus the next generation\add* of singers¦227606 came both from Yerushalem¦227611 and its surrounds, and from the Netofati¦227615 villages¦227614.
+\v 29 \add They also\add* \add ≡came\add* from Beyt-Gilgal, and from the fields¦227619 of Geva and Azmavet¦227621, because the singers¦227626 had built¦227624 villages¦227623 near Yerushalem¦227628 to live in.
+\v 30 The priests¦227631 and Levites¦227632 \add ≈held a purification ceremony for\add* themselves, then they purified the people¦227636 and the gates¦227639 and the wall.
 \p
-\v 31 ◙
-\p …
-\v 32 ◙
-\v 33 ◙
-\v 34 ◙
-\v 35 ◙
-\v 36 ◙
-\v 37 ◙
+\v 31 Then¦227644 I \add ≈assembled\add* Yehudah's¦227648 leaders¦227647 together up on top of the wall, and I \add ≈assigned\add* them into two¦227652 large¦227654 groups \add ≈who would give thanks¦227653\add* \add as they walked around it\add*.
+\p \add ≈The first group\add* headed towards the Dung Gate on the right¦227656.
+\v 32 Hoshayah¦227664 and¦227665 half of Yehudah's¦227667 officials \add ≈were in that group\add*
+\v 33 \add ≈along with\add* Azaryah, Ezra¦227670, and¦227671 Meshullam¦227671,
+\v 34 Yehudah, Benyamin¦227674, Shemayah¦227675, and Yirmeyah,
+\v 35 plus some of the \add ≈next generation\add* of priests¦227680 with trumpets¦227681: Zekaryah (son of Yonatan, son of Shemayah¦227688, son of Mattanyah¦227691, son of Mikayah, son of Zakkur, son of Asaf¦227700)
+\v 36 and his brothers Shemayah¦227703, Azar'el, Milalai¦227705, Gilalai¦227706, Ma'ai, Nethan'el, Yehudah, \add and\add* Hanani¦227710. \add They used\add* the instruments \add ≈as per the instructions\add* of \add the late King\add* David¦227714, the man¦227715 of God. Ezra¦227717 the scribe¦227718 \add ≈went in front¦227719 of them\add*.
+\v 37 When they got to the Fountain Gate, they went¦227725 up the stairs at the City of David, \add ≈and along the higher portion of the wall by David's¦227730 palace\add* as far as the Water Gate (\add ≈on the east\add* \add side of the city¦227729\add*).
 \p
-\v 38 ◙
-\v 39 ◙
-\v 40 ◙
-\v 41 ◙
-\v 42 ◙
+\v 38 The \add ≈other group giving thanks\add* with the other half of the people¦227748 went¦227743 in the opposite direction \add around the top of the wall\add*—going past the Tower of the Ovens to the \add ≈wider part\add* of the wall.
+\v 39 \add We passed\add* Efraim¦227761 Gate, the Old Gate, Fish Gate, and Hananel¦227771 Tower, the Tower of the Hundred¦227773, \add ≈and all the way to\add* the Sheep Gate, and we \add ≈stopped¦227779 at\add* the Guard Gate.
 \p
-\v 43 ◙
-\s1 The preparation of needs of temple
+\v 40 Then¦227783 \add ≈both\add* groups \add ≈ended up at the temple\add* and stood¦227783 there. I was there with the half of the city officials¦227790 who'd \add accompanied\add* me,
+\v 41 \add ≈as well as\add* the priests¦227793 with their trumpets¦227801: Elyakim, Ma'aseyah, Minyamin, Mikayah, Elyeoenai, Zekaryah, Hanayah,
+\v 42 \add another\add* Ma'aseyah, Shemayah¦227804, El'azar, Uzzi¦227806, Yehohanan¦227807, Malkiyyah, Eylam, and Ezer¦227810. The singers¦227812 sang loudly with their leader¦227814 Yizrahyah¦227813.
+\p
+\v 43 Then¦227816 that \add same\add* day¦227817 they offered¦227816 many sacrifices¦227820, and they \add ≈celebrated\add* because God had made them very pleased. The women¦227829 and children also celebrated, \add in fact\add* the sound of the celebrations in Yerushalem¦227834 was so loud that it can be heard¦227832 far away.
+\s1 Supporting the temple operation
 \rem /s1 Provisions for Temple Worship; Temple Responsibilities; Providing for Worship in the Temple
 \p
-\v 44 ◙
-\v 45 \x + \xo 12:45: a \xt 1Ch 25:1-8; \xo b \xt 1Ch 26:12.\x*◙
-\v 46 ◙
-\v 47 ◙
+\v 44 Then¦227837 \add still on\add* that \add same\add* day¦227838, men¦227840 were appointed¦227837 \add ≈to be in charge of the storerooms¦227844\add* for the tithes¦227847 and offerings. The \add ≈percentages\add* for the priests and the Levites were gathered¦227848 from the fields¦227850 around the cities as per the \add written\add* law, because \add the people of\add* Yehudah¦227858 \add ≈were happy to have\add* the priests and the Levites \add ≈serving\add*.
+\v 45 They \add ≈served God¦227869 with their¦227869 daily duties and the purification¦227871 ceremonies\add*, as well as \add the duties of\add* the singers¦227874 and gatekeepers¦227875—\add ≈all done according¦227876 to the instructions\add* \add left by King\add* David¦227877 and his son Shelomoh,\x + \xo 12:45: a \xt 1Ch 25:1-8; \xo b \xt 1Ch 26:12.\x*
+\v 46 because it was \add handed down\add* from the original singers¦227889 who sang songs¦227890 of praise¦227892 and thanksgiving¦227893 to God¦227894 in the time of David¦227884 and Asaf¦227885.
+\v 47 In Zerubavel and Nehemyah's¦227902 times, all Israel¦227898 \add ≈contributed the daily food allowance\add* for the singers¦227905 and gatekeepers¦227906. They \add ≈also gave a percentage\add* to the Levites¦227912 \add ≈who then gave a percentage of that\add* to \add the priests\add* (Aharon's descendants¦227915).
 \c 13
-\s1 The separation of Israelis from foreigners
+\s1 Separating out the foreigners
 \rem /s1 Nehemiah's religious reforms; Nehemiah's Final Reforms; Separation from Foreigners; Foreigners Separated from Israel; Nehemiah's Various Reforms
 \p
-\v 1 \x + \xo 13:1-2: \xt Deu 23:3-5.\x*◙
-\v 2 \x + \xo 13:2: \xt Num 22:1-6.\x*◙
-\v 3 ◙
+\v 1 That day¦227919, the \add ≈Mosheh¦227923 scroll was read out aloud¦227921 to\add* the people¦227925, and it was \add ≈discovered that it had been written¦227927 that no Ammonite¦227933 or Moabite is ever allowed to join the congregation\add*\x + \xo 13:1-2: \xt Deu 23:3-5.\x*
+\v 2 because \add ≈instead of helping the travelling Israelis¦227946 with food\add* and water¦227949, they¦227943 had hired¦227950 Bil'am¦227947 \add (Balaam¦227954)\add* to curse them (even though God¦227957 had turned¦227956 that curse into blessing¦227959).\x + \xo 13:2: \xt Num 22:1-6.\x*
+\v 3 \add ≈After¦227970\add* hearing \add *that\add*, they¦227962 separated¦227966 out all of \add ≈the foreigners\add*.
 \s1 Nehemyah's reforms
 \rem /s1 Nehemiah's Reforms; The Reforms of Nehemiah
 \p
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
+\v 4 \add ≈Prior to that time,\add* the high priest¦227975 Elyashiv (closely related to Toviyyah) had been in charge of the \add ≈temple storerooms\add*
+\v 5 and he'd \add ≈allowed\add* \add ?@Toviyyah\add* to have a large¦227987 room that had previously been used to store offerings: the frankincense¦227995, the utensils, and \add ≈donated\add* grain, wine, and oil, (the percentage commanded¦228001 \add to be given to\add* the Levites¦228002, the singers¦228003, and the gatekeepers¦228004), and the offerings for the priests¦228006.
+\v 6 \add ≈During all that period,\add* I hadn't been in Yerushalem¦228013 because I'd returned to the Babylonian king in the 32nd year of Artahshashta's reign \add (Artaxerxes¦228018)\add*. \add ≈However, after a while\add* I requested¦228028 leave¦228028 \add again\add* from the king
+\v 7 and¦228035 I came¦228033 \add back\add* to Yerushalem¦228034. \add It was then that\add* \add ≈I discovered¦228035 how\add* evil¦228036 Elyashiv had been by making a storeroom for Toviyyah in the courts¦228044 of God's residence.
+\v 8 \add ≈It made me very upset\add* and¦228051 I threw¦228051 everything of Toviyyah's out of the room.
+\v 9 Then¦228065 I \add ≈ordered¦228065 the storerooms to be purified\add* \add by the priests\add* \add ≈before\add* I returned¦228068 the \add ≈temple utensils¦228070\add* to the room, along with the grain¦228075 offerings¦228075 and the incense.
 \p
-\v 10 \x + \xo 13:10: \xt Deu 12:19.\x*◙
-\v 11 ◙
-\v 12 \x + \xo 13:12: \xt Mal 3:10.\x*◙
-\v 13 ◙
-\v 14 ◙
-\s1 The day of Resting
+\v 10 I¦228090 \add ≈found¦228079 out\add* that the Levites¦228083 and the singers¦228091 weren't being given¦228085 their percentage, \add so they'd left their duties and\add* returned to \add cultivate\add* their own fields¦228089.\x + \xo 13:10: \xt Deu 12:19.\x*
+\v 11 I \add ≈made a complaint to\add* the officials¦228098 asking why the \add ≈operation of the temple had been neglected¦228101\add*, and then I \add ≈rounded up\add* \add @the Levites and the singers\add* and \add ≈sent them back to their¦228110 duties\add*.
+\v 12 \add ≈After that,\add* \add the people of\add* Yehudah¦228114 \add ≈started bringing\add* a tenth of \add &their\add* grain¦228117 and wine and oil to the storerooms¦228120.\x + \xo 13:12: \xt Mal 3:10.\x*
+\v 13 I appointed¦228122 \add ≈book-keepers\add* over the storerooms¦228125: the priest¦228127 Shelemyah¦228126, the scribe¦228129 Tsadok¦228128, and the Levite¦228133 Pedayah¦228130 with Hanan¦228137 (the son of Zakkur, the son of Mattanyah¦228143) \add ≈helping\add*. They were \add all\add* considered trustworthy, and \add ≈their job included distributing¦228148 the produce among their colleagues\add*.
+\mi
+\v 14 My God¦228155, remember¦228152 me \add ≈handling all these issues\add* and don't¦228159 wipe out my loyal kindness for \add ≈your temple and its¦228167 operation\add* \add that I've shown\add*.
+\s1 The rest day
 \rem /s1 Sabbath Reforms Begun
 \p
-\v 15 \x + \xo 13:15: \xt Exo 20:8-10; Deu 5:12-14; Jer 17:21-22.\x*◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
+\v 15 In those¦228170 days¦228169 I saw \add people\add* in Yehudah¦228172 \add working\add* on the rest day—treading wine, bringing in grain¦228181, and loading¦228182 donkeys¦228185, yes, even bringing wine, grapes¦228189, figs, and all kinds of loads into Yerushalem¦228195 on the rest day. I \add ≈complained to them when they were selling¦228200 the goods\add*.\x + \xo 13:15: \xt Exo 20:8-10; Deu 5:12-14; Jer 17:21-22.\x*
+\v 16 \add ≈Also, people¦228213 from Tsor\add* \add (Tyre)\add* were bringing¦228206 in fish¦228207 and all kinds of merchandise¦228210 and were selling it on the rest day to the \add ≈Israelis\add*, even in Yerushalem¦228215.
+\v 17 I¦228220 rebuked¦228217 the Yehudah \add ≈business leaders\add*, asking them, “What's this evil thing¦228225 that you're all doing¦228230—profaning¦228231 the rest day \add by treating it like a regular day\add*?
+\v 18 \add ≈Wasn't that what your¦228240 ancestors¦228240 did—the very reason\add* our God brought¦228241 all this evil on us and on this city¦228250? \add ≈Now\add* you're all \add ≈making God angry with\add* Israel¦228257 \add again\add* by profaning¦228258 the rest day.”
 \p
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
-\rem /s1 Mixed Marriages Condemned
-\p …
+\v 19 \add ≈So after that, when it started to get dark on Friday evenings, I ordered¦228274 that the city gates be closed, and not to be opened¦228277 until¦228278 after the rest day\add*. I \add ≈also stationed¦228282 some of my young men to stand at the gates to ensure that no load could enter on the rest day\add*.
+\v 20 \add ≈Some¦228300 traders and merchants¦228294 selling various goods camped outside¦228299 the city walls once or twice¦228302\add*,
+\v 21 \add ≈but I warned¦228304\add* them, “Why are you \add ≈camping there outside\add* the wall? If you \add ≈do it again¦228315, I'll have you all removed\add*.” \add ≈After that\add*, they \add ≈no longer came¦228325 on the rest days\add*.
+\v 22 Then I told the Levites¦228330 that they¦228332 should purify¦228333 themselves¦228333 and then come¦228334 to the gates¦228336 to \add ≈monitor them on the rest day¦228340\add*.
+\mi My God¦228348, remember¦228345 me \add ≈having to deal with this, and show your¦228352 amazing loyal faithfulness towards me\add*.
 \s1 The scolding of marriage of foreigner
+\rem /s1 Mixed Marriages Condemned
 \p
-\v 23 ◙
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
+\v 23 \add ≈During that time\add*, I also saw¦228359 Jews who'd \add ≈married¦228363\add* women¦228364 \add ≈from Ashdod, Ammon, and Moav\add*,
+\v 24 and half of their¦228373 children¦228373 spoke \add ≈a foreign language¦228381 from those other people groups\add* and \add ≈couldn't speak¦228375 Hebrew\add*.
+\v 25 \add ≈So¦228385\add* I scolded \add @those men\add* and cursed¦228387 them and hit \add some of\add* them and pulled¦228391 out their hair. Then¦228385 I \add ≈forced them to promise in front on God¦228393 that they wouldn't allow their daughters to marry foreign men, or their sons to take foreign wives\add*.
+\v 26 \add I explained,\add* “Didn't Israel's¦228414 \add own\add* King Shelomoh sin concerning that same matter? Among \add ≈all the countries¦228415\add* \add in the world\add*, there wasn't any other king like, and he was loved¦228422 by his God¦228423 who'd placed him \add there\add* as king over all Israel. \add But even then,\add* the foreign¦228438 women¦228437 caused¦228436 him to sin.
+\v 27 \add ≈So¦228440 do we need to\add* hear¦228441 about all of you¦228440 doing this terrible evil¦228446 of being unfaithful¦228449 to God¦228450 by marrying¦228451 foreign¦228453 wives¦228452?”
 \p
-\v 28 \x + \xo 13:28: \xt Neh 4:1.\x*◙
+\v 28 \add ≈Also\add* one of Yoyada's sons¦228455 (grandson of the high¦228461 priest¦228460 Elyashiv) was a son-in-law of Sanvallat the Horonite, \add ≈so I banished him¦228465 from my sight\add*.\x + \xo 13:28: \xt Neh 4:1.\x*
+\mi
+\v 29 My God¦228470, remember them for \add ≈bringing shame to\add* the priesthood and \add ≈dishonouring the vows made by\add* the \add ≈priests\add* and the Levites¦228476.
 \p
-\v 29 ◙
-\p
-\v 30 ◙
-\v 31 ◙
-\p …
+\v 30 Then¦228478 I purified¦228478 them from everything foreign¦228481, \add ≈established¦228482 regulations for each part of the work done by\add* the priests¦228484 and the Levites¦228485,
+\v 31 and¦228493 \add ≈organised the firewood supply at certain\add* times¦228491, \add ≈including\add* for the first-fruits \add celebrations\add*.
+\mi My God¦228498, remember¦228495 me for good¦228499.
