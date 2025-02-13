@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2025-01-22 11:41 by extract_glossed_OSHB_OT_to_ESFM v0.53
+\rem ESFM file created 2025-02-10 15:21 by extract_glossed_OSHB_OT_to_ESFM v0.53
 \rem USFM file edited by ScriptedBibleEditor v0.33
 \h Numbers
 \toc1 Numbers
@@ -20,7 +20,7 @@
 \v 5 And=these [are]_the_names_of the÷men who they_will_stand with÷you_all from÷Rəʼūⱱēn Elizur the_son_of Shedeur.
 \v 6 From÷Shimˊōn Shelumiel the_son_of Zurishaddai.
 \v 7 From÷Yəhūdāh/(Judah) Naḩshōn the_son_of ˊAmminādāⱱ.
-\v 8 From÷Yissāskār/(Issachar) Nethanel the_son_of Zuar.
+\v 8 From÷Yissāskār/(Issachar) Nətan\sup ʼēl\sup* the_son_of Zuar.
 \v 9 From÷Zəⱱulun ʼElīʼāⱱ the_son_of Helon.
 \v 10 From÷sons_of Yōşēf/(Joseph) from÷ʼEfrayim ʼElīshāˊma the_son_of Ammihud from÷Mənashsheh Gamlī\sup ʼēl\sup* the_son_of Pedahzur.
 \v 11 From÷Binyāmīn Abidan the_son_of Gidˊōni.
@@ -72,7 +72,7 @@
 \v 2 Everyone at standard_of÷their in/on/at/with÷banners of÷houses_of ancestral_of÷their the_people_of they_will_encamp of_Yisrā\sup ʼēl\sup*/(Israel) at÷distance around to÷tent_of meeting they_will_encamp.
 \v 3 And÷the÷camp east_side÷on sunrise÷toward [will_be]_the_standard_of the_camp_of Yəhūdāh/(Judah) by÷divisions_of÷their and÷leader of÷people_of of_Yəhūdāh [was]_Naḩshōn the_son_of ˊAmminādāⱱ.
 \v 4 And÷division_of÷his and÷numbers_of÷their [were]_four and=seventy thousand and÷six hundred(s).
-\v 5 And÷the÷camp on/upon/above=him/it [will_be]_the_tribe_of Yissāskār/(Issachar) and÷leader of÷people_of of_Yissāskār [was]_Nethanel the_son_of Zuar.
+\v 5 And÷the÷camp on/upon/above=him/it [will_be]_the_tribe_of Yissāskār/(Issachar) and÷leader of÷people_of of_Yissāskār [was]_Nətan\sup ʼēl\sup* the_son_of Zuar.
 \v 6 And÷division_of÷his and÷numbers_of÷their [were]_four and÷fifty thousand and=four hundred(s).
 \v 7 the_tribe_of Zəⱱulun and÷leader of÷people_of of_Zəⱱulun [was]_ʼElīʼāⱱ the_son_of Helon.
 \v 8 And÷division_of÷his and÷numbers_of÷his [were]_seven and÷fifty thousand and=four hundred(s).
@@ -282,12 +282,12 @@
 \v 15 A_young_bull one a_young_one_of [the]_herd a_ram one a_lamb one the_son_of year_of÷its for÷burnt_offering.
 \v 16 A_male_goat_of goats one for÷sin_offering.
 \v 17 And÷for÷sacrifice_of the÷peace_offerings ox[en] two rams five goats five lambs sons_of a_year five this [was]_the_offering_of Naḩshōn the_son_of ˊAmminādāⱱ.
-\v 18 in_the=day the=second Nethanel he_brought_near the_son_of Zuar the_leader_of Yissāskār/(Issachar).
+\v 18 in_the=day the=second Nətan\sup ʼēl\sup* he_brought_near the_son_of Zuar the_leader_of Yissāskār/(Issachar).
 \v 19 He_brought_near DOM offering_of÷his a_dish_of silver one [was]_thirty and÷one_hundred weighing_of÷its a_bowl one silver seventy shekel[s] in/on/at/with÷shekel_of the÷sanctuary both_of=them [were]_full fine_flour mixed in/on/at/with÷oil for÷grain_offering.
 \v 20 A_pan_of one ten gold full incense.
 \v 21 A_young_bull one a_young_one_of [the]_herd a_ram one a_lamb one the_son_of year_of÷its for÷burnt_offering.
 \v 22 A_male_goat_of goats one for÷sin_offering.
-\v 23 And÷for÷sacrifice_of the÷peace_offerings ox[en] two rams five goats five lambs sons_of a_year five this [was]_the_offering_of Nethanel the_son_of Zuar.
+\v 23 And÷for÷sacrifice_of the÷peace_offerings ox[en] two rams five goats five lambs sons_of a_year five this [was]_the_offering_of Nətan\sup ʼēl\sup* the_son_of Zuar.
 \v 24 in_the=day the=third [the]_leader of÷people_of of_Zəⱱulun ʼElīʼāⱱ the_son_of Helon.
 \v 25 Offering_of÷his [was]_a_dish_of silver one [was]_thirty and÷one_hundred weighing_of÷its a_bowl one silver seventy shekel[s] in/on/at/with÷shekel_of the÷sanctuary both_of=them [were]_full fine_flour mixed in/on/at/with÷oil for÷grain_offering.
 \v 26 A_pan_of one ten gold full incense.
@@ -420,7 +420,7 @@
 \v 12 And= the_people_of =set_out of_Yisrā\sup ʼēl\sup*/(Israel) by÷stages_of÷their from÷wilderness_of Şīnay and÷settled_down the÷cloud in/on/at/with÷wilderness_of Pāʼrān.
 \v 13 And÷set_out in/on/at/with÷first on the_mouth_of \nd YHWH\nd* in/on/at/with÷hand_of Mosheh.
 \v 14 And= the_standard_of =set_out of_the_camp_of of_the_descendants_of of_Yəhūdāh/(Judah) in/on/at/with÷first according_to÷divisions_of÷their and÷over company_of÷its Naḩshōn the_son_of ˊAmminādāⱱ.
-\v 15 And÷over the_military_group_of the_tribe_of the_descendants_of Yissāskār/(Issachar) Nethanel the_son_of Zuar.
+\v 15 And÷over the_military_group_of the_tribe_of the_descendants_of Yissāskār/(Issachar) Nətan\sup ʼēl\sup* the_son_of Zuar.
 \v 16 And÷over the_military_group_of the_tribe_of the_descendants_of Zəⱱulun ʼElīʼāⱱ the_son_of Helon.
 \v 17 And÷taken_down the÷tabernacle and= the_descendants_of =set_out of_Gershon and=the_sons of_Merari [who]_carried_of the÷tabernacle.
 \v 18 and= the_standard_of =set_out of_the_camp_of of_Rəʼūⱱēn according_to÷divisions_of÷their and÷over company_of÷their Elizur the_son_of Shedeur.
@@ -572,7 +572,7 @@
 \v 40 And÷rose_early in/on/at/with÷morning and÷went_up to the_top_of the÷hill_country to=say here÷we and÷go_up to the÷place which he_said \nd YHWH\nd* if/because we_have_sinned.
 \v 41 And= Mosheh =he/it_said to/for=what this [are]_you_all transgressing DOM the_mouth_of \nd YHWH\nd* and÷it not it_will_succeed.
 \v 42 Do_not go_up if/because not \nd YHWH\nd* in/on/at/with÷midst_of÷you_all and=not you_all_will_be_defeated to=(the)_face_of/in_front_of/before enemies_of÷your_all's.
-\v 43 If/because the÷ˊAmālēqites and=the=Kenaanite [are]_there in÷front_of÷you_all and÷fall in/on/at/with÷sword if/because on/upon/above/on_account_of//he/it_went_in yes/correct/thus/so you_all_have_turned_back from÷following \nd YHWH\nd* and=not he_will_be \nd YHWH\nd* with÷you_all.
+\v 43 If/because the÷ˊAmālēqites and=the=Kənaˊₐnīte [are]_there in÷front_of÷you_all and÷fall in/on/at/with÷sword if/because on/upon/above/on_account_of//he/it_went_in yes/correct/thus/so you_all_have_turned_back from÷following \nd YHWH\nd* and=not he_will_be \nd YHWH\nd* with÷you_all.
 \v 44 And÷dared to÷go_up to the_top_of the÷hill_country and÷ark_of the_covenant_of \nd YHWH\nd* and÷Mosheh not they_departed from÷midst_of the÷camp.
 \v 45 And=he/it_descended the÷ˊAmālēqites and÷the÷Kənaˊₐnī the÷lived in/on/at/with÷hill_country (the)=that and÷attacked÷them and÷beat_down÷them to the÷Ḩārəmāh.
 \c 15
@@ -769,7 +769,7 @@
 \v 28 And= Mosheh =stripped DOM ʼAhₐron DOM garments_of÷his and÷put_on DOM=them DOM ʼElˊāzār his/its=son and= ʼAhₐron =he/it_died there in/on/at/with÷top_of the÷mountain and= Mosheh =he/it_descended and÷ʼElˊāzār from the÷mountain.
 \v 29 And= all_of =they_saw the÷community if/because_that ʼAhₐron he_had_died and÷mourned DOM ʼAhₐron thirty day[s] all_of the_house_of Yisrā\sup ʼēl\sup*/(Israel).
 \c 21
-\v 1 and=he/it_listened the=Kenaani the_king_of ˊArād [who]_dwelt_of the÷Negeⱱ if/because_that Yisrā\sup ʼēl\sup*/(Israel) it_had_come the_way_of the÷Atharim and÷fought in/on/at/with÷Yisrā\sup ʼēl\sup*/(Israel) and÷captured from=him/it captive[s].
+\v 1 and=he/it_listened the=Kənaˊₐnī the_king_of ˊArād [who]_dwelt_of the÷Negeⱱ if/because_that Yisrā\sup ʼēl\sup*/(Israel) it_had_come the_way_of the÷Atharim and÷fought in/on/at/with÷Yisrā\sup ʼēl\sup*/(Israel) and÷captured from=him/it captive[s].
 \v 2 And= Yisrā\sup ʼēl\sup*/(Israel) =made a_vow to/for=\nd YHWH\nd* and÷said if really_(give) you_will_give DOM the÷people the=this in/on/at/with÷hand_of÷our and÷utterly_destroy DOM cities_of÷their.
 \v 3 And= \nd YHWH\nd* =he/it_listened in/on/at/with÷voice_of Yisrā\sup ʼēl\sup*/(Israel) and=he/it_gave DOM the÷Kənaˊₐnī and÷completely_destroyed DOM÷them and=DOM cities_of÷their and=he/it_called the_name_of the÷place Ḩārəmāh.
 \v 4 and÷set_out from÷Hor the÷mount [the]_direction_of [the]_sea_of reed[s] to÷go_around DOM the_land_of ʼEdōm and= the_self_of =became_impatient the÷people in/on/at/with÷way.
@@ -781,7 +781,7 @@
 \v 10 And= the_people_of =set_out of_Yisrā\sup ʼēl\sup*/(Israel) and÷camped in/on/at/with÷Oboth.
 \v 11 And÷set_out from÷Oboth and÷camped in/on/at/with÷Iye- abarim in/on/at/with÷wilderness which [is]_on the_face_of Mōʼāⱱ toward÷rise_of the÷sun.
 \v 12 From=there they_set_out and÷camped in/on/at/with÷valley_of Zered.
-\v 13 From=there they_set_out and÷camped on÷other_side_of ʼArnōn which in/on/at/with÷wilderness the÷extends from÷border_of\f + \fr 21:13 \ft Note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f* the=Emori if/because ʼArnōn [is]_the_border_of Mōʼāⱱ between Mōʼāⱱ and=between the=Emori.
+\v 13 From=there they_set_out and÷camped on÷other_side_of ʼArnōn which in/on/at/with÷wilderness the÷extends from÷border_of\f + \fr 21:13 \ft Note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f* the=ʼAmorī if/because ʼArnōn [is]_the_border_of Mōʼāⱱ between Mōʼāⱱ and=between the=ʼAmorī.
 \v 14 On/upon/above/on_account_of//he/it_went_in yes/correct/thus/so it_is_said in/on/at/with÷book_of the_wars_of \nd YHWH\nd* DOM Waheb in/on/at/with÷Suphah and=DOM the÷wadis ʼArnōn.
 \v 15 And÷slopes_of the÷wadis which it_extends to÷site of_Ar and÷lie along÷border_of Mōʼāⱱ.
 \v 16 And=from=there Bəʼēr÷to that the÷well which he_said \nd YHWH\nd* to÷Mosheh gather DOM the÷people and÷give to/for=them water.
@@ -789,20 +789,20 @@
 \v 18 A_well dug÷that [the]_leaders dug÷that the_noble_[people]_of the÷people in/on/at/with÷scepter in/on/at/with÷staffs_of÷their and÷from÷wilderness Mattanah.
 \v 19 And÷from÷Mattanah Nahaliel and÷from÷Nahaliel Bamoth.
 \v 20 And÷from÷Bamoth the÷valley which in/on/at/with÷territory_of Mōʼāⱱ the_top_of the÷Fişgāh and÷overlooks over the_face_of the÷wasteland.
-\v 21 and= Yisrā\sup ʼēl\sup*/(Israel) =sent messengers to Şīḩōn the_king_of the=Emori to=say.
+\v 21 and= Yisrā\sup ʼēl\sup*/(Israel) =sent messengers to Şīḩōn the_king_of the=ʼAmorī to=say.
 \v 22 Let_me_pass in/on/at/with÷land_of÷your not we_will_turn_aside in/on/at/with÷field and÷in/on/at/with÷vineyard not we_will_drink water_of a_well in/on/at/with÷highway_of the=king we_will_go until that we_will_pass_through territory_of÷your.
 \v 23 And=not Şīḩōn he_permitted DOM Yisrā\sup ʼēl\sup*/(Israel) to_pass in/on/at/with÷territory_of÷his and= Şīḩōn =gathered DOM all_of people_of÷his and=he/it_went_out to÷against Yisrā\sup ʼēl\sup*/(Israel) the÷wilderness÷in and÷came Yahaʦ/(Jahaz)÷to and÷fought in/on/at/with÷Yisrā\sup ʼēl\sup*/(Israel).
 \v 24 And÷struck÷him Yisrā\sup ʼēl\sup*/(Israel) with÷edge_of [the]_sword and÷took_possession_of DOM land_of÷his from÷ʼArnōn to Yaboq/(Jabbok) to the_descendants_of ˊAmmōn if/because [was]_strong the_border_of the_descendants_of ˊAmmōn.
-\v 25 And= Yisrā\sup ʼēl\sup*/(Israel) =he/it_took DOM all_of the÷cities the=these and= Yisrā\sup ʼēl\sup*/(Israel) =he/it_sat_down//remained//lived in=all the_cities_of the=Emori in/on/at/with÷Ḩeshbōn and=on/over=all villages_of÷its.
-\v 26 If/because Ḩeshbōn [was]_the_city_of Şīḩōn the_king_of the=Emori it and=he he_had_waged_war in/on/at/with÷king_of Mōʼāⱱ the÷former and=he/it_took DOM all_of land_of÷his from÷hand_of÷his to ʼArnōn.
+\v 25 And= Yisrā\sup ʼēl\sup*/(Israel) =he/it_took DOM all_of the÷cities the=these and= Yisrā\sup ʼēl\sup*/(Israel) =he/it_sat_down//remained//lived in=all the_cities_of the=ʼAmorī in/on/at/with÷Ḩeshbōn and=on/over=all villages_of÷its.
+\v 26 If/because Ḩeshbōn [was]_the_city_of Şīḩōn the_king_of the=ʼAmorī it and=he he_had_waged_war in/on/at/with÷king_of Mōʼāⱱ the÷former and=he/it_took DOM all_of land_of÷his from÷hand_of÷his to ʼArnōn.
 \v 27 On/upon/above/on_account_of//he/it_went_in yes/correct/thus/so they_say the÷poets come Ḩeshbōn let_it_be_rebuilt and÷established the_city_of Şīḩōn.
 \v 28 If/because fire it_went_out from÷Ḩeshbōn flame from÷city_of Şīḩōn it_consumed Ar of_Mōʼāⱱ the_citizens_of the_high_places_of ʼArnōn.
-\v 29 Woe to/for=yourself(m) Oh_Mōʼāⱱ you_have_perished Oh_people_of Kəmōsh/(Chemosh) he_has_made sons_of÷his fugitives and÷daughters_of÷his in/on/at/with÷captivity to÷king_of [the]_Amorite[s] Şīḩōn.
+\v 29 Woe to/for=yourself(m) Oh_Mōʼāⱱ you_have_perished Oh_people_of Kəmōsh/(Chemosh) he_has_made sons_of÷his fugitives and÷daughters_of÷his in/on/at/with÷captivity to÷king_of [the]_ʼAmorī[s] Şīḩōn.
 \v 30 And÷threw_down÷them Ḩeshbōn it_has_perished to Diyⱱōn and÷laid_waste to Nophah which\f + \fr 21:30 \ft Note: Puncta extraordinaria a ◌ׄ is used to mark such marks in the text when they are above the line and a ◌ׅ when they are below the line. \f* [is]_to Mēydəⱱāʼ.
-\v 31 And= Yisrā\sup ʼēl\sup*/(Israel) =he/it_sat_down//remained//lived in=land the=Emori.
-\v 32 And= Mosheh =sent to÷spy_out DOM Yaˊzēr/(Jazer) and÷captured villages_of÷its and÷dispossessed\f + \fr 21:32 \ft Variant note: ו/יירש: (x-qere) 'וַ/יּ֖וֹרֶשׁ': lemma=c/3423 n=0.0 morph=HC/Vhw3ms id=044RU וַ/יּ֖וֹרֶשׁ\f* DOM the=Emori who [was]_there.
+\v 31 And= Yisrā\sup ʼēl\sup*/(Israel) =he/it_sat_down//remained//lived in=land the=ʼAmorī.
+\v 32 And= Mosheh =sent to÷spy_out DOM Yaˊzēr/(Jazer) and÷captured villages_of÷its and÷dispossessed\f + \fr 21:32 \ft Variant note: ו/יירש: (x-qere) 'וַ/יּ֖וֹרֶשׁ': lemma=c/3423 n=0.0 morph=HC/Vhw3ms id=044RU וַ/יּ֖וֹרֶשׁ\f* DOM the=ʼAmorī who [was]_there.
 \v 33 And÷turned and÷went_up the_way_of the÷Bāshān and= ˊŌg =he/it_went_out the_king_of the÷Bāshān to÷meet÷them he and=all people_of÷his to_the÷battle ʼEdreˊī.
-\v 34 And= \nd YHWH\nd* =he/it_said to Mosheh do_not fear DOM=him/it if/because in/on/at/with÷hand_of÷your I_have_given DOM=him/it and=DOM all_of people_of÷his and=DOM land_of÷his and÷do for=him/it just=as you_did to÷Şīḩōn the_king_of the=Emori who [was]_dwelling in/on/at/with÷Ḩeshbōn.
+\v 34 And= \nd YHWH\nd* =he/it_said to Mosheh do_not fear DOM=him/it if/because in/on/at/with÷hand_of÷your I_have_given DOM=him/it and=DOM all_of people_of÷his and=DOM land_of÷his and÷do for=him/it just=as you_did to÷Şīḩōn the_king_of the=ʼAmorī who [was]_dwelling in/on/at/with÷Ḩeshbōn.
 \v 35 And÷killed DOM=him/it and=DOM sons_of÷his and=DOM all_of people_of÷his until not left to=him/it a_survivor and÷took_possession_of DOM land_of÷his.
 \c 22
 \v 1 And= the_people_of =set_out of_Yisrā\sup ʼēl\sup*/(Israel) and÷camped in/on/at/with÷plains_of Mōʼāⱱ along÷side near÷Yardēn/(Jordan) of_Yərīḩō/(Jericho).
@@ -910,14 +910,14 @@
 \v 4 And= \nd YHWH\nd* =he/it_said to Mosheh take DOM all_of the_chiefs_of the÷people and÷execute DOM÷them to/for=\nd YHWH\nd* before the÷sun and= the_burning_of =turn_away of_the_anger of_\nd YHWH\nd* from÷Yisrā\sup ʼēl\sup*/(Israel).
 \v 5 And= Mosheh =he/it_said to of_Yisrā\sup ʼēl\sup*/(Israel) the_judges_of kill everyone men_of÷his the÷joined to÷Baˊal_of Fəˊōr.
 \v 6 And=see/lo/see a_man from=(the)_sons of_Yisrā\sup ʼēl\sup*/(Israel) [was]_coming and÷brought to family_of÷his DOM the÷Midyānite in÷sight_of Mosheh and÷in÷sight_of all_of the_congregation_of the_people_of Yisrā\sup ʼēl\sup*/(Israel) and÷they [were]_weeping the_entrance_of the_tent_of meeting.
-\v 7 And= Fīnəḩāş =he/it_saw the_son_of ʼElˊāzār the_son_of ʼAhₐron the=priest/officer and=he/it_rose_up from÷midst_of the÷congregation and=he/it_took a_spear in=his/its=hand.
+\v 7 And= Pinḩāş =he/it_saw the_son_of ʼElˊāzār the_son_of ʼAhₐron the=priest/officer and=he/it_rose_up from÷midst_of the÷congregation and=he/it_took a_spear in=his/its=hand.
 \v 8 And÷went after the_man_of Yisrā\sup ʼēl\sup*/(Israel) into the÷tent and÷drove_through DOM both_of=them DOM the_man_of Yisrā\sup ʼēl\sup*/(Israel) and=DOM the=woman into belly_of÷her and÷stopped the÷plague from=under the_people_of Yisrā\sup ʼēl\sup*/(Israel).
 \v 9 And=they_were the÷died in/on/at/with÷plague four and=twenty thousand.
 \v 10 and= \nd YHWH\nd* =he/it_spoke to Mosheh to÷saying.
-\v 11 Fīnəḩāş the_son_of ʼElˊāzār the_son_of ʼAhₐron the=priest/officer he_has_turned_back DOM severe_anger_of÷my from=under the_people_of Yisrā\sup ʼēl\sup*/(Israel) in/on/at/with÷jealous÷he DOM jealousy_of÷my in/on/at/with÷midst_of÷them and=not I_made_an_end_of DOM the_people_of Yisrā\sup ʼēl\sup*/(Israel) in/on/at/with÷jealousy_of÷my.
+\v 11 Pinḩāş the_son_of ʼElˊāzār the_son_of ʼAhₐron the=priest/officer he_has_turned_back DOM severe_anger_of÷my from=under the_people_of Yisrā\sup ʼēl\sup*/(Israel) in/on/at/with÷jealous÷he DOM jealousy_of÷my in/on/at/with÷midst_of÷them and=not I_made_an_end_of DOM the_people_of Yisrā\sup ʼēl\sup*/(Israel) in/on/at/with÷jealousy_of÷my.
 \v 12 For=so/thus/hence say see÷I [am]_about_to_give to=him/it DOM covenant_of÷my peace.
 \v 13 And÷be for=him/it and÷for÷descendants_of÷his after÷him a_covenant_of priesthood_of perpetuity because that he_was_zealous for÷god_of÷his and÷made_atonement on the_people_of Yisrā\sup ʼēl\sup*/(Israel).
-\v 14 And=name_of the_man_of Yisrā\sup ʼēl\sup*/(Israel) the÷slain who he_was_struck_down with the÷Midyānite [was]_Zimrī the_son_of Salu a_leader_of a_house_of a_father belonging_to_the÷Shimˊōnites.
+\v 14 And=name_of the_man_of Yisrā\sup ʼēl\sup*/(Israel) the÷slain who he_was_struck_down with the÷Midyānite [was]_Zimrī the_son_of Şallū a_leader_of a_house_of a_father belonging_to_the÷Shimˊōnites.
 \v 15 And=name_of the=woman the÷slain the÷Midyānite [was]_Cozbi the_daughter_of Tsūr/(Zur) [was]_a_chief_of tribes of_a_house_of a_father in/on/at/with÷Midyān he.
 \v 16 and= \nd YHWH\nd* =he/it_spoke to Mosheh to÷saying.
 \v 17 Treat_as_foes DOM the÷Midyānites and÷strike DOM÷them.
@@ -935,8 +935,8 @@
 \v 9 And=the_sons of_ʼElīʼāⱱ [were]_Nemuel and÷Dathan and÷ʼAⱱīrām that [was_the]_Dathan and÷ʼAⱱīrām the_[people]_called_of\f + \fr 26:9 \ft Variant note: קרואי: (x-qere) 'קְרִיאֵ֣י': lemma=7148 morph=HAampc id=04aXz קְרִיאֵ֣י\f* the÷community who they_struggled on Mosheh and÷against ʼAhₐron in/on/at/with÷company_of Qoraḩ in/on/at/with÷rebelled÷they on \nd YHWH\nd*.
 \v 10 And÷opened the=earth/land DOM her/its=mouth and÷swallowed DOM=them and=DOM Qoraḩ in/on/at/with÷died_of the÷company in/on/at/with÷devoured the÷fire DOM fifty and=two_hundreds man and=they_were as÷warning.
 \v 11 And=the_sons of_Qoraḩ not they_died.
-\v 12 the_descendants_of Shimˊōn to=their=clans of÷Nemuel the_clan_of the÷Nemuelites of÷Jamin the_clan_of the÷Yəmīnī/(Jamite)s of÷Yākīn/(Jachin) the_clan_of the÷Yākīnites.
-\v 13 Of÷Zeraḩ the_clan_of the÷Zeraḩites of÷Shaul the_clan_of the÷Shaulites.
+\v 12 the_descendants_of Shimˊōn to=their=clans of÷Nemuel the_clan_of the÷Nemuelites of÷Yāmīn/(Jamin) the_clan_of the÷Yāmīnites of÷Yākīn/(Jachin) the_clan_of the÷Yākīnites.
+\v 13 Of÷Zeraḩ the_clan_of the÷Zeraḩites of÷Shāʼūl the_clan_of the÷Shāʼūlites.
 \v 14 These [were]_the_clans_of the÷Shimˊōnites two and=twenty thousand and÷hundred.
 \v 15 the_descendants_of Gād to=their=clans of÷Zephon the_clan_of the÷Zephonites of÷Haggi the_clan_of the÷Haggites of÷Shuni the_clan_of the÷Shunites.
 \v 16 Of÷Ozni the_clan_of the÷Oznites of÷Eri the_clan_of the÷Erites.
@@ -1109,7 +1109,7 @@
 \v 3 And= Mosheh =he/it_spoke to the÷people to=say be_equipped from÷among÷your_all's men for_the÷war and÷go on Midyān to÷execute the_vengeance_of \nd YHWH\nd* in/on/at/with÷Midyān.
 \v 4 one_thousand from_the÷tribe one_thousand from_the÷tribe to=all/each/any/every the_tribes_of Yisrā\sup ʼēl\sup*/(Israel) you_all_will_send_out to_the÷war.
 \v 5 And÷conscripted from÷thousands_of Yisrā\sup ʼēl\sup*/(Israel) one_thousand from_the÷tribe two_plus ten thousand [men]_equipped_of war.
-\v 6 And÷sent DOM=them Mosheh one_thousand from_the÷tribe to_the÷war DOM=them and=DOM Fīnəḩāş the_son_of ʼElˊāzār the=priest/officer to_the÷battle and÷vessels_of the÷sanctuary and÷trumpets_of the÷alarm in=his/its=hand.
+\v 6 And÷sent DOM=them Mosheh one_thousand from_the÷tribe to_the÷war DOM=them and=DOM Pinḩāş the_son_of ʼElˊāzār the=priest/officer to_the÷battle and÷vessels_of the÷sanctuary and÷trumpets_of the÷alarm in=his/its=hand.
 \v 7 And÷fought on Midyān just=as he_had_commanded \nd YHWH\nd* DOM Mosheh and÷killed every_of male.
 \v 8 And=DOM the_kings_of Midyān they_killed with slain_of÷their DOM Evi and=DOM Rekem and=DOM Tsūr/(Zur) and=DOM Ḩūr and=DOM Reba the_five_of the_kings_of Midyān and=DOM Bilˊām the_son_of Bəˊōr they_killed in/on/at/with÷sword.
 \v 9 And= the_people_of =took_captive of_Yisrā\sup ʼēl\sup*/(Israel) DOM the_women_of Midyān and=DOM little_ones_of÷their and=DOM all_of cattle_of÷their and=DOM all_of flocks_of÷their and=DOM all_of goods_of÷their they_plundered.
@@ -1161,7 +1161,7 @@
 \c 32
 \v 1 and÷livestock much it_belonged to÷descendants_of Rəʼūⱱēn and÷to÷descendants_of Gād numerous very and=they_saw DOM the_land_of Yaˊzēr/(Jazer) and=DOM the_land_of Gilˊād and=see/lo/see the÷place [was]_a_place_of livestock.
 \v 2 And= the_descendants_of =they_came of_Gād and=the_sons of_Rəʼūⱱēn and=they_said to Mosheh and=near/to ʼElˊāzār the=priest/officer and=near/to the_leaders_of the÷community to=say.
-\v 3 ˊAţārōt and÷Diyⱱōn and÷Yaˊzēr and÷Nimrah and÷Ḩeshbōn and÷Elealeh and÷Sebam and÷Nebo and÷Beon.
+\v 3 ˊAţārōt and÷Diyⱱōn and÷Yaˊzēr and÷Nimrah and÷Ḩeshbōn and÷Elealeh and÷Sebam and÷Nəⱱō and÷Beon.
 \v 4 The=earth/land which he_defeated \nd YHWH\nd* to=(the)_face_of/in_front_of/before the_congregation_of Yisrā\sup ʼēl\sup*/(Israel) [is]_a_land_of livestock it and÷have÷servants_of÷your livestock.
 \v 5 and=they_said if we_have_found favour in/on/at/with÷sight_of÷your let_it_be_given DOM the=earth/land the÷this to÷servants_of÷your as÷possession do_not cross÷us DOM the÷Yardēn/(Jordan).
 \v 6 And= Mosheh =he/it_said to÷descendants_of Gād and÷to÷descendants_of Rəʼūⱱēn brothers_of÷your_all's will_they_go to_the÷war and÷you_all will_you_all_remain here.
@@ -1191,13 +1191,13 @@
 \v 30 And=if not they_will_pass_over equipped with÷you_all and÷have_possessions in/on/at/with÷midst_of÷you_all\f + \fr 32:30 \ft Note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f* in=land of_Kinaˊan/(Canaan).
 \v 31 And= the_descendants_of =answered of_Gād and=the_sons of_Rəʼūⱱēn to=say DOM [that]_which he_has_spoken \nd YHWH\nd* to your=servants thus we_will_do.
 \v 32 We we_will_pass_over equipped to=(the)_face_of/in_front_of/before \nd YHWH\nd* the_land_of Kinaˊan/(Canaan) and÷with÷us the_possession_of inheritance_of÷our on÷this_side of_the÷Yardēn.
-\v 33 And=he/it_gave to/for=them Mosheh to÷descendants_of Gād and÷to÷descendants_of Rəʼūⱱēn and÷to÷half_of the_tribe_of Mənashsheh the_son_of Yōşēf/(Joseph) DOM the_kingdom_of Şīḩōn the_king_of the=Emori and=DOM the_kingdom_of ˊŌg the_king_of the÷Bāshān the=earth/land with÷cities_of÷its in/on/at/with÷territories_of the_cities_of the=earth/land all_around.
+\v 33 And=he/it_gave to/for=them Mosheh to÷descendants_of Gād and÷to÷descendants_of Rəʼūⱱēn and÷to÷half_of the_tribe_of Mənashsheh the_son_of Yōşēf/(Joseph) DOM the_kingdom_of Şīḩōn the_king_of the=ʼAmorī and=DOM the_kingdom_of ˊŌg the_king_of the÷Bāshān the=earth/land with÷cities_of÷its in/on/at/with÷territories_of the_cities_of the=earth/land all_around.
 \v 34 And= the_descendants_of =rebuilt of_Gād DOM Diyⱱōn and=DOM ˊAţārōt and=DOM ˊArōˊēr.
 \v 35 And=DOM Atroth Shophan and=DOM Yaˊzēr/(Jazer) and÷Yāgəbəhāh/(Jogbehah).
 \v 36 And=DOM Bēyt Nimrah and=DOM Bēyt Ḩārān cities_of fortification and÷pens_of sheep.
 \v 37 And=the_sons of_Rəʼūⱱēn they_built DOM Ḩeshbōn and=DOM Elealeh and=DOM Qiryataim.
-\v 38 And=DOM Nebo and=DOM Baˊal Meon changed_of name and=DOM Sibmah and÷gave in/on/at/with÷names DOM the_names_of the÷cities which they_had_built.
-\v 39 And= the_descendants_of =went of_Makir the_son_of Mənashsheh Gilˊād÷to and÷captured÷it and÷drove_out DOM the=Emori who in/on/at/with÷it.
+\v 38 And=DOM Nəⱱō and=DOM Baˊal Meon changed_of name and=DOM Sibmah and÷gave in/on/at/with÷names DOM the_names_of the÷cities which they_had_built.
+\v 39 And= the_descendants_of =went of_Makir the_son_of Mənashsheh Gilˊād÷to and÷captured÷it and÷drove_out DOM the=ʼAmorī who in/on/at/with÷it.
 \v 40 And= Mosheh =he/it_gave DOM the÷Gilˊād to÷Mākīr the_son_of Mənashsheh and=he/it_sat_down//remained//lived in/on/at/with÷it.
 \v 41 And÷Yāʼīr/(Jair) the_son_of Mənashsheh he_went and÷captured DOM villages_of÷their and=he/it_called DOM÷them the_villages_of Yāʼīr.
 \v 42 And÷Noⱱaḩ he_went and÷captured DOM Kenath and=DOM villages_of÷its and=he/it_called to÷it Noⱱaḩ in/on/at/with÷name_of÷his_own.
@@ -1241,14 +1241,14 @@
 \v 37 And÷set_out from÷Qādēsh and÷camped in/on/at/with÷Hor the÷mount in/on/at/with÷edge_of the_land_of ʼEdōm.
 \v 38 And= ʼAhₐron =he/it_ascended the=priest/officer to Hor the÷mount on the_mouth_of \nd YHWH\nd* and=he/it_died there in=year the÷fortieth after÷come_out of_the_people_of of_Yisrā\sup ʼēl\sup*/(Israel) of÷land_of of_Miʦrayim/(Egypt) in/on/at/with÷month the÷fifth in/on/at/with÷first of_the÷month.
 \v 39 And÷ʼAhₐron [was]_a_son_of three and=twenty and=one_hundred year[s] in/on/at/with÷died_of÷he in/on/at/with÷Hor the÷mount.
-\v 40 and=he/it_listened the÷Canaanite the_king_of ˊArād and=he [was]_dwelling in/on/at/with÷Negeⱱ in=land of_Kinaˊan/(Canaan) in/on/at/with÷coming the_people_of Yisrā\sup ʼēl\sup*/(Israel).
+\v 40 and=he/it_listened the÷Kənaˊₐnī the_king_of ˊArād and=he [was]_dwelling in/on/at/with÷Negeⱱ in=land of_Kinaˊan/(Canaan) in/on/at/with÷coming the_people_of Yisrā\sup ʼēl\sup*/(Israel).
 \v 41 And÷set_out from÷Hor the÷mount and÷camped in/on/at/with÷Tsalmōn/(Zalmon)ah.
 \v 42 And÷set_out from÷Tsalmōnah and÷camped in/on/at/with÷Punon.
 \v 43 And÷set_out from÷Punon and÷camped in/on/at/with÷Oboth.
 \v 44 And÷set_out from÷Oboth and÷camped in/on/at/with÷Iye- abarim in/on/at/with÷border_of Mōʼāⱱ.
 \v 45 And÷set_out from÷Iyim and÷camped in/on/at/with÷Diyⱱōn gad.
 \v 46 And÷set_out from÷Diyⱱōn gad and÷camped in/on/at/with÷ˊAlmōn- diblathaim.
-\v 47 And÷set_out from÷ˊAlmōn- diblathaim and÷camped in/on/at/with÷mountains_of the÷Abarim to=(the)_face_of/in_front_of/before Nebo.
+\v 47 And÷set_out from÷ˊAlmōn- diblathaim and÷camped in/on/at/with÷mountains_of the÷Abarim to=(the)_face_of/in_front_of/before Nəⱱō.
 \v 48 And÷set_out from÷mountains_of the÷Abarim and÷camped in/on/at/with÷plains_of Mōʼāⱱ at the_Yardēn/(Jordan) of_Yərīḩō/(Jericho).
 \v 49 And÷camped at the÷Yardēn from÷Bēyt- jeshimoth to Abel- shittim in/on/at/with÷plains_of Mōʼāⱱ.
 \v 50 and= \nd YHWH\nd* =he/it_spoke to Mosheh in/on/at/with÷plains_of Mōʼāⱱ at the_Yardēn of_Yərīḩō to=say.
@@ -1262,13 +1262,13 @@
 \v 1 and= \nd YHWH\nd* =he/it_spoke to Mosheh to÷saying.
 \v 2 Command DOM the_people_of Yisrā\sup ʼēl\sup*/(Israel) and÷say to÷them if/because you_all [are]_about_to_go into the=earth/land Kinaˊan/(Canaan) this the=earth/land which it_will_fall to/for=you_all in/on/at/with÷inheritance the_land_of Kinaˊan/(Canaan) by÷boundaries_of÷its.
 \v 3 And=it_was to/for=you_all [the]_side_of [the]_south from÷wilderness_of Tsiyyōn/(Zin) on the_hands_of ʼEdōm and=it_was to/for=you_all border_of [the]_southward from÷end_of the_Sea_of the÷salt east÷on.
-\v 4 And÷turn to/for=you_all the÷border from÷south of÷ascent_of of_scorpions and÷cross Tsiyyōn/(Zin)÷to and÷be\f + \fr 34:4 \ft Variant note: ו/היה: (x-qere) 'וְ/הָיוּ֙': lemma=c/1961 n=1.1.0 morph=HC/Vqq3cp id=04t1e וְ/הָיוּ֙\f* outer_limit_of÷its from÷south of÷Qādēsh- barnēˊa and÷go Hazar Addar and÷cross Azmon÷to.
+\v 4 And÷turn to/for=you_all the÷border from÷south of÷ascent_of of_scorpions and÷cross Tsiyyōn/(Zin)÷to and÷be\f + \fr 34:4 \ft Variant note: ו/היה: (x-qere) 'וְ/הָיוּ֙': lemma=c/1961 n=1.1.0 morph=HC/Vqq3cp id=04t1e וְ/הָיוּ֙\f* outer_limit_of÷its from÷south of÷Qādēsh- barnēˊa and÷go Ḩₐʦar Addar and÷cross Azmon÷to.
 \v 5 And÷turn the÷border from÷Azmon brook_of÷to of_Miʦrayim/(Egypt) and=they_will_be termination_of÷its the÷sea÷at.
 \v 6 And÷boundary_of [the]_west and=it_was to/for=you_all the=sea the÷great and÷coast this it_will_be to/for=you_all border_of [the]_west.
 \v 7 And÷this it_will_be to/for=you_all border_of [the]_north from the=sea the=big/great(sg) you_all_will_mark_out to/for=you_all Hor the÷mount.
 \v 8 From÷Hor the÷mount you_all_will_mark_out Lebo Ḩₐmāt and=they_will_be the_extremities_of the÷border Zedad÷at.
-\v 9 And÷extend the÷border Ziphron÷to and=they_will_be end_of÷its Hazar Enan this it_will_be to/for=you_all border_of [the]_north.
-\v 10 And÷draw_a_line to/for=you_all for÷boundary east÷on from÷Hazar- enan Shepham÷to.
+\v 9 And÷extend the÷border Ziphron÷to and=they_will_be end_of÷its Ḩₐʦar Enan this it_will_be to/for=you_all border_of [the]_north.
+\v 10 And÷draw_a_line to/for=you_all for÷boundary east÷on from÷ Ḩₐʦar- enan Shepham÷to.
 \v 11 And÷go_down the÷boundary from÷Shepham the÷Riⱱlāh from=east of÷ˊAyin and÷go_down the÷boundary and÷reach to the_slope_of the_sea_of Kinₐrōt east÷on.
 \v 12 And÷go_down the÷boundary the÷Yardēn/(Jordan)÷to and=they_will_be end_of÷its the_Sea_of the÷salt this it_will_be to/for=you_all the=earth/land with÷boundaries_of÷its all_around.
 \v 13 And= Mosheh =he/it_commanded DOM the_people_of Yisrā\sup ʼēl\sup*/(Israel) to=say this the=earth/land which you_all_will_inherit DOM=her/it in/on/at/with÷lot which he_has_commanded \nd YHWH\nd* to÷give to÷nine_of the÷tribes and÷half_of the÷tribes.

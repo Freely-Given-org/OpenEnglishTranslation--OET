@@ -1,4 +1,4 @@
-\id DAN - Open English Translation—Readers’ Version (OET-RV) v0.0.02
+\id DAN - Open English Translation—Readers’ Version (OET-RV) v0.0.05
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 DAN
@@ -8,13 +8,15 @@
 \toc2 Daniel
 \toc3 Dan.
 \mt1 Daniel
+\mt3 (or Daniyyel)
 \is1 Introduction
-\ip Daniel the writer of this document. One he from-Yehudah captured going to Babylon of male-male pad he. Written din this at time of suffered very the Jews of paying-bayad and pegdeeg-deeg of King worshipped of false gods. Written here the concerning the actions of Daniel greatest of officials there to Babylon and the pegkamatinumanen din of serving God at time of commanding of King Nibukadnisar, Bilsasar, Daryu, and Sirus. And/Now it’s written also here the concerning the three friends his ensi Sadrak, Misak, and Abidnigu.
-\ip Written also here the immakita of God to Daniel migtagne concerning the pegkamaresen and demolition of other nations bunsud of Babylon. Prophesied also here if what the happening of later times.
-\ip Written pad again of this document is egbuut the God of all happening here of ampew of land. Sikandin the doing of nations and he just also the egdereet here. Sikandin also the egtanggu of his people and egpamatarengen din the world of later times.
+\ip This document is about \bk Daniel\bk* (also spelt later as ‘Daniyyel’). He was captured as a young man in Yehudah (Judah) and taken to serve in Babylon. He wrote this at a time when the Jewish people were suffering a lot XXX of paying-bayad and pegdeeg-deeg of King worshipped of false gods. Written here the concerning the actions of Daniel greatest of officials there to Babylon and the pegkamatinumanen din of serving God at time of commanding of King Nevukadnetstsar, Belshatstsar, Daryu, and Sirus. It’s also written here about his three friends XXXX (Shadrak, Meyshak, and Avednego).
+\ip Written also here the revelation of God to Daniel prophesied concerning the pegkamaresen and demolition of other nations starting with Babylon. It’s also prophesied here about what would happen in the ‘end-times’.
+\ip Written pad again of this document is egbuut the God of all happening here of ampew of land. Sikandin the doing of nations and he just also the egdereet here. Sikandin also the look after his people and egpamatarengen din the world of later times.
+\ip This document about Daniel was written in both Hebrew (1:1–2:3; 7:1–12:13) and Aramaic (2:4–7:28). (Modern Syria is in the Aram region. Aramaic is most closely related to Hebrew, Syriac, and Phoenician, and was written in a script derived from the Phoenician alphabet.)
 \iot Main components of this account
-\io1 The helping of God to Daniel and of friends his \ior 1:1–6:28\ior*
-\io1 The immakita of God to Daniel like of dream \ior 7:1–12:13\ior*
+\io1 God’s help for Daniel and his friend \ior 1:1–6:28\ior*
+\io1 The revelation of God to Daniel like of dream \ior 7:1–12:13\ior*
 \io2 a. The four creatures \ior 7:1-28\ior*
 \io2 b. The ram and the goat \ior 8:1–9:27\ior*
 \io2 c. The teacher from sky/heaven \ior 10:1–11:45\ior*
@@ -22,283 +24,265 @@
 \rem This is still a very early look into the unfinished text of the \em Open English Translation\em* of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
-\ms1 KA GUHUREN NI DANYIL and his friends (1:1–6:28)
+\ms1 The account about Daniel and his friends (1:1–6:28)
 \s1 Daniel and the friends his there to Babylon
 \p
-\v 1 \x + \xo 1:1: \xt 2Ki 24:1; 2Ch 36:5-7.\x*◙
-\v 2 \x + \xo 1:2-4: \xt 2Ki 20:17-18; 24:10-16; 2Ch 36:10; Isa 39:7-8.\x*◙
+\v 1 In the third year of Yehudah’s King Yehoyakim’s reign, Babylon’s King Nevukadnetstsar \add (Nebuchadnezzar)\add* came to Yerushalem \add (Jerusalem)\add* and besieged \add the city\add*.\x + \xo 1:1: \xt 2Ki 24:1; 2Ch 36:5-7.\x*
+\v 2 \add After two years,\add* the master \add allowed King Yehoyakim to be defeated by\add* Nevukadnetstsar who then took some of the items out of the temple and took them to Shinar \add (Babylonia)\add* where he placed them in his god’s temple storerooms.\x + \xo 1:2-4: \xt 2Ki 20:17-18; 24:10-16; 2Ch 36:10; Isa 39:7-8.\x*
 \p
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
+\v 3 \add Some time later,\add* King \add Nevukadnetstsar\add* commanded his chief official Ashpenaz to bring him some of the young Israeli men, from both their royal family and from \add some of the prominent families\add*.
+\v 4 \add They had to be\add* good-looking young men without obvious defects, wise and well-educated, who would be competent for \add future\add* \add work\add* in the palace. They would be taught the language and literature of the Chaldeans,
+\v 5 and king assigned a daily portion of food and wine for them \add from his own table\add*. They would be trained for three years \add before\add* \add entering the king’s service\add*.
+\v 6 Among the \add young men\add* from Yehudah \add who were chosen\add* were Daniel, Hananyah, Misha’el, and Azaryah,
+\v 7 \add but\add* \add Ashpenaz\add* \add named\add* them Belteshatstsar, Shadrak, Meyshak, and Avednego \add respectively\add*.
 \p
-\v 8 ◙
-\v 9 ◙
-\v 10 ◙
+\v 8 \add However\add* Daniel \add decided\add* that he wouldn’t eat the king’s fancy food or drink his wine \add because it wasn’t all ‘kosher’\add*, so he requested permission from \add Ashpenaz\add* to \add eat an alternative diet\add*.
+\v 9 \add Now\add* God \add had caused\add* the chief official to \add like and respect\add* Daniel,
+\v 10 \add but\add* he \add queried\add*, “I’m afraid of my master the king, who’s assigned your food and drink—\add if he saw you guys\add* looking worse than the \add others of\add* your own age then \add I’d risk losing my head if the king got angry\add*.”
 \p
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
+\v 11 \add So\add* Daniel asked the steward that \add Ashpenaz\add* had assigned over \add the four of them\add*,
+\v 12 “Please test your servants for ten days: let us be given some vegetables to eat and water to drink,
+\v 13 then \add after that\add*, \add see how we look compared to the other young men\add* who eat the king’s choice food. Then \add you can make the best decision from the evidence\add*.”
 \p
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
+\v 14 \add So\add* the steward \add agreed to that\add* and \add started\add* \add the ten-day trial\add*.
+\v 15 At the end of the ten days, they looked better and healthier than all the young men who’d been eating the king’s fancy food,
+\v 16 \add so\add* \add after that,\add* the steward \add just\add* gave them vegetables to eat instead of the choice food and wine.
 \p
-\v 17 ◙
+\v 17 \add So\add* God gave those four young men knowledge and insight into all literature, and wisdom, and Daniel \add was able to interpret\add* any dreams and visions.
 \p
-\v 18 ◙
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
+\v 18 At the end of \add the three years\add*\x + \xo 1:18 \xt 1:5\x* when the king ordered them to be brought in, the chief official \add Ashpenaz\add* brought them in to King Nevukadnetstsar.
+\v 19 The king talked with \add each of\add* them and \add realised that\add* \add none of the others were as capable as\add* Daniel, Hananyah, Misha’el, and Azaryah, \add so they ended up in the king’s service\add*—
+\v 20 in every matter of wisdom and understanding which the king asked them about, he found them ten times better than all the magicians and astrologers \add from throughout\add* his entire kingdom.
+\v 21 Daniel continued \add serving\add* there through to the first year of the reign of King Koresh \add (Cyrus)\add*.
 \c 2
-\s1 The dream of Nibukadnisar
+\s1 Nevukadnetstsar’s dream
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
+\v 1 \add Back in\add* the second year of King Nevukadnetstsar’s reign, \add the king\add* had had some dreams that troubled him—leaving him unable to sleep.
+\v 2 \add He\add* summoned the magicians, fortune-tellers, sorcerers, and \add astrologers\add* to \add explain\add* the dreams to \add him\add*, so they came in and stood in front of the king.
+\v 3 “I’ve had a dream,” the king told them, “and my spirit is \add anxious to understand\add* \add it\add*.”
+\v 4 The \add astrologers\add* spoke to the king in Aramaic, “Long live King Nevukadnetstsar. Tell us what you dreamt, and then we’ll give you the interpretation.”
 \p
-\v 5 ◙
-\v 6 ◙
+\v 5 “\add I’ve already made my decision\add*,” the king replied. “If you all can’t tell me the dream and \add then give\add* its interpretation, you’ll all be torn limb from limb and your houses made into a rubbish heap.
+\v 6 But if you all explain the dream and its interpretation, you’ll receive gifts from me, and a reward and great honour. So tell me the dream and its interpretation.”
 \p
-\v 7 ◙
+\v 7 “Let the king tell his servants the dream,” they \add insisted\add*, “and we’ll give the interpretation.”
 \p
-\v 8 ◙
-\v 9 ◙
+\v 8 “I know for certain that you’re all trying to gain time,” the king answered. “\add However, I’ve made up my mind\add*
+\v 9 that if you all don’t \add tell me what my dream was\add*, \add then your fate is already clear\add* because you’ve \add obviously\add* agreed together to \add keep feeding me with lies and made-up stories until I give in\add*. So then, tell me what \add my\add* dream was, and then I’ll \add be confident\add* that you can give me its interpretation.”
 \p
-\v 10 ◙
-\v 11 ◙
+\v 10 “There’s no one \add in the whole world who could tell\add* the king that,” the \add astrologers\add* answered the king. “No great and powerful king has asked any magician or enchanter or \add astrologer\add* to do that \add before\add*!
+\v 11 What you’re requesting, \add your majesty\add*, is difficult, and \add no human can tell you\add* \add what you dreamt\add*—only the gods.”
+\v 12 \add That angered the king, and he got so furious that he ordered for all the Babylonian wise men to be executed\add*.
 \p
-\v 12 ◙
-\v 13 ◙
+\v 13 \add When\add* the decree went out that \add all\add* the wise men were to \add be rounded up to\add* be executed, Daniel and his friends \add were included\add*.
+\v 14 Aryok was the captain of the king’s guards who’d been sent to execute the Babylonian wise men, \add but\add* Daniel spoke to him with \add wise and prudent\add* \add caution\add*.
 \p
-\v 14 ◙
+\v 15 He asked the king’s commander Aryok, “Why \add did the king come to that sudden decision\add*?” Aryok \add explained what had happened\add*,
+\v 16 \add so\add* Daniel went to the king and requested some time so he would be able to give the interpretation to \add him\add*.
 \p
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
-\v 20 ◙
-\q1 …
-\q1
-\v 21 ◙
-\q2 …
-\q1 …
-\q2 …
-\q1
-\v 22 ◙
-\q1 …
-\q2 …
-\q1
-\v 23 ◙
-\q2 …
-\q1 …
-\q1 …
-\q2 …
-\s1 The saving/explaining of Daniel of dream of King
+\v 17 Then Daniel went \add back\add* to his house and told his companions Hananyah, Misha’el, and Azaryah
+\v 18 \add so\add* they \add might beg\add* for mercy from the God of the heavens concerning the mystery \add of the dream\add*, so that \add all of them\add* might not be executed along with the rest of the Babylonian wise men.
+\v 19 Then the mystery was revealed to Daniel in a vision during the night. Aftewrwards, Daniel blessed the God of the heavens
+\v 20 saying, “Let God’s name be blessed forever and ever, because \add all\add* wisdom and power belong to him.
+\v 21 He moves the times and seasons forwards. He removes \add some\add* kings and \add gives power to others\add*. It’s him who gives wisdom to the wise and and knowledge to those who have understanding.
+\v 22 He reveals the deep and hidden things—he knows what is in the darkness, and the light lives with him.
+\v 23 Oh God of my ancestors, I thank you and praise you for the wisdom and power you have given to me. Now you’ve revealed to me what we asked you about because you’ve told us what the king is wanting to know.”
+\s1 Daniel explains the king’s dream
 \p
-\v 24 ◙
+\v 24 So Daniel went to Aryok, the man that the king had appointed to execute Babylon’s wise men, and told him, “Don’t hurt the wise men in Babylon. Take me in to the king and I’ll tell \add him\add* the \add dream and its\add* interpretation.”
 \p
-\v 25 ◙
+\v 25 Aryok quickly took Daniel in to the king and told him, “I’ve found a man among the exiles from Yehudah who will reveal the interpretation \add of your dream\add*.”
 \p
-\v 26 ◙
+\v 26 “Are you able to tell me the dream that I saw, and its interpretation?” the king \add asked\add* Daniel (also called Belteshatstsar).
 \p
-\v 27 ◙
-\v 28 ◙
-\v 29 ◙
-\v 30 ◙
+\v 27 “No wise men, enchanters, magicians, or astrologers are able to do what the king has demanded,” replied Daniel.
+\v 28 “However, there is a God in the heavens who reveals mysteries, and he’s the one who’s shown you, King Nevukadnetstsar, what will happen in the days \add to come\add*. This was your dream and the visions in your mind while you were in your bed:
+\v 29 Oh king, \add as you lay there\add* your thoughts turned to what would happen \add in the future\add*, and the one who reveals mysteries showed you what is going to happen.
+\v 30 As for me, this mystery was revealed to me, not because I’m wiser than \add anyone else\add*, but so that the interpretation could be revealed to the king, and so that you can \add understand what you saw in\add* your mind.
 \p
-\v 31 ◙
-\v 32 ◙
-\v 33 ◙
-\v 34 ◙
-\v 35 ◙
+\v 31 “What you were looking at, \add your majesty\add*, was an incredible, huge statue. It was heavy and \add shone brightly\add* as it stood \add there\add* \add in front of\add* you—a terrifying sight.
+\v 32 The statue’s head was made of pure gold, its chest and arms were silver, its belly and thighs were bronze,
+\v 33 its legs were made of iron, and its feet were \add a combination\add* of iron and clay.
+\v 34 You continued looking until a stone was \add supernaturally\add* cut out \add from a mountain\add*, and it \add tumbled down and\add* struck the statue on its feet of iron and clay, and it smashed them to pieces.
+\v 35 Then the iron, the clay, the bronze, the silver, and the gold were crushed all at the same time and became like the \add small pieces of dry straw at harvest time in\add* the summer. Then the wind carried them away so that no trace of them could be found, \add but\add* the stone that struck the statue became a huge mountain that then filled the whole world.
 \p
-\v 36 ◙
-\v 37 ◙
-\v 38 ◙
-\v 39 ◙
-\v 40 ◙
-\v 41 ◙
-\v 42 ◙
-\v 43 ◙
-\v 44 ◙
-\v 45 ◙
-\s1 The gifting to Daniel of King
+\v 36 “That was the dream, and \add now\add* we’ll tell the king its meaning:
+\v 37 You, \add your majesty\add*, are the king of kings who has been given the kingdom, the power, the strength, and the splendour by the God of the heavens.
+\v 38 Wherever people live, he’s \add placed you in charge of\add* them, \add and\add* he’s \add even\add* put you over the animals in the countryside and the birds in the skies, \add so\add* you’re the \add statue’s\add* gold head.
+\v 39 \add But another less prominent kingdom will follow yours\add*, then another kingdom of bronze to rule over all the earth \add after that\add*.
+\v 40 Then there’ll be a fourth kingdom that’s strong as iron—because iron crushes and shatters all things. Like an iron \add sledge-hammer\add* that smashes things into pieces, it will smash all those others into \add broken\add* pieces.
+\v 41 And as you saw the feet and toes, \add a mixture of iron and potter’s clay\add*, it will be a divided kingdom—some of the iron’s strength will be in it, just as you saw iron mixed with the soft clay.
+\v 42 As the feet were partly iron and partly clay, so that kingdom will be partly strong and partly \add weak\add*.
+\v 43 As you saw the iron mixed with soft clay, so \add various peoples will make alliances with each other\add*, but they won’t \add stick together\add* just as iron doesn’t \add integrate\add* with clay.
+\v 44 In the days of those kings, the God of the heavens will establish a kingdom that will never be destroyed or \add taken over by others\add*. It will crush all those kingdoms and put an end to them, \add but\add* it will stand forever.
+\v 45 Just as you saw that a stone was \add supernaturally\add* cut out of the mountain, and that it crushed the iron, the bronze, the clay, the silver, and the gold, the \add powerful\add* God has revealed to the king what will happen \add in the future\add*. The dream is true, and its interpretation is trustworthy.”
+\s1 Daniel is rewarded by the king
 \p
-\v 46 ◙
-\v 47 ◙
-\v 48 ◙
-\v 49 ◙
+\v 46 Then King Nevukadnetstsar fell \add to his knees with his face to the ground to worship\add* Daniel, and he commanded that a \add burnt\add* offering and incense be offered up to him.
+\v 47 The king said to Daniel, “It’s true that your God is the god of gods and the master of masters, and the one who reveals mysteries, because you’ve been able to reveal this mystery.”
+\v 48 Then the king gave Daniel high honours and gave him many great gifts, and he made him ruler over the whole province of Babylon and chief supervisor over all of Babylon’s wise men.
+\v 49 Daniel \add asked the king to appoint\add* Shadrak \add (Hananyah)\add*, Meyshak \add (Misha’el)\add*, and Avednego \add (Azaryah)\add* over the administration of the Babylonian province, \add but\add* Daniel remained at the king’s court.
 \c 3
-\s1 The command igpasimba the idol
+\s1 The command to worship the statue
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\s1 The arguing of Sadrak, Misak, and Abidnigu
+\v 1 King Nevukadnetstsar \add (Nebuchadnezzar)\add* had a gold statue made that stood nearly thirty metres high and was almost three metres wide, and it was erected on the Dura plain in the Babylonian province.
+\v 2 Then King Nevukadnetstsar sent for the \add various levels of\add* governors, the counsellors, the treasurers, the judges, the magistrates, and all the provincial officials, to all come to the dedication of the statue that \add he’d\add* erected.
+\v 3 \add So all those officials assembled in front of the statue that the king had set up, ready\add* for the dedication.
+\v 4 Then the herald loudly proclaimed, “You peoples, nations, and languages are commanded
+\v 5 that any time you hear the sound of the horn, flute, lyre, harps, pipes, and \add other instruments\add*, you all must bow down and worship the gold statue that King Nevukadnetstsar has erected.
+\v 6 \add Anyone who refuses\add* to bow down and worship \add it\add* at that time, will be thrown into a blazing furnace.”
+\v 7 \add So when all those people who had gathered heard the sounds made by the musical instruments\add*, they all bowed down to worship the gold statue.
+\s1 Daniel’s three friends get tattled on
 \p
-\v 8 ◙
-\v 9 ◙
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
+\v 8 \add But\add* some Chaldean \add astrologers\add* \add went to the king to make trouble for\add* the Jews.
+\v 9 They reported to King Nevukadnetstsar, “Long live the king.
+\v 10 Oh king, you’ve made a decree that every man who hears the sound of the \add musical instruments\add*, must bow down and worship the gold statue,
+\v 11 \add but\add* anyone who doesn’t bow and worship will be thrown into a fiery furnace.
+\v 12 \add Now,\add* there are certain Jews who you’ve appointed over the administration of the province of Babylon: Shadrak, Meyshak, and Avednego. These men, \add your majesty\add*, \add don’t take any notice of\add* you: they don’t serve your gods, or worship the gold statue that you’ve set up.”
 \p
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
+\v 13 Then Nevukadnetstsar in a furious rage commanded that Shadrak \add (Hananyah)\add*, Meyshak \add (Misha’el)\add*, and Avednego \add (Azaryah)\add* be \add arrested\add*. Then \add they\add* were brought to the king
+\v 14 \add who questioned\add* them, “Shadrak, Meyshak, and Avednego, is it true that you won’t serve my gods or worship the gold statue that I set up?
+\v 15 Now if you’re ready, as soon as you hear the \add musical intruments\add* of music, if you all bow down and worship the statue I \add erected\add*, \add everything will be okay\add*. But if you don’t, you’ll immediately be thrown into a blazing hot furnace. \add Then what god could rescue you from my punishment\add*?”
 \p
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\s1 The pegdegpak of Sadrak, Misak, and Abidnigu there to fire
+\v 16 “Oh Nevukadnetstsar,” \add the three of them\add* answered the king, “we don’t need to answer \add that last question\add*.
+\v 17 \add If that’s what happens to us\add*, the God that we serve is able to rescue us from the blazing fire \add and from your punishment. He will save us,\add* \add your majesty\add*.
+\v 18 \add But just so it’s clear\add* \add your majesty\add*, even if he doesn’t, we won’t serve your gods or worship that gold statue.”
+\s1 Shadrak, Meyshak, and Avednego thrown into the fire
 \p
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
+\v 19 \add That made Nevukadnetstsar absolutely furious and it could be seen in his face\add*. He ordered that the furnace be made seven times hotter \add than usual\add*
+\v 20 and commanded \add some of his top warriors\add* to tie up Shadrak, Meyshak, and Avednego and then to throw them into the blazing furnace.
+\v 21 \add So while still fully dressed even with their turbans still on,\add* they were tied up and thrown into the middle of the furnace where the fire was blazing.
+\v 22 \add Unfortunately\add*, because of the king’s insistent command, the furnace was extremely hot and the flames killed the men who \add threw them in\add*,
+\v 23 \add but\add* Shadrak, Meyshak, and Avednego fell into the \add roaring flames while still securely tied up\add*.
 \p
-\v 24 ◙
-\p …
+\v 24 Then King Nevukadnetstsar was startled and jumped up and asked his counsellors, “Wasn’t it three \add who were tied up\add* that were thrown \add there\add* into the middle of the fire?
+\p “Certainly, \add your majesty\add*,” they replied.
 \p
-\v 25 ◙
+\v 25 “Look \add there, then\add*!” he responded. “I can see \em four\em* men walking in the middle of the fire, and they’re not tied up and they’re not hurt, and the fourth one looks like a \add young god\add*.”
 \p
-\v 26 ◙
-\v 27 ◙
+\v 26 Then Nevukadnetstsar went over by the furnace door and \add called out\add*, “Shadrak, Meyshak, and Avednego, servants of the Most High God, come out, and come over here!” Then \add the three men\add* walked out from the middle of the fire.
+\v 27 \add All the king’s officials\add* gathered \add around them\add* and saw that the fire \add hadn’t harmed them\add*—their hair wasn’t even singed, their cloaks weren’t damaged, and \add they didn’t even smell like smoke\add*.
 \p
-\v 28 ◙
+\v 28 Nevukadnetstsar \add spoke\add*, “\add Praise\add* the God of Shadrak, Meyshak, and Avednego. He sent his angel and rescued his servants who \add had put their trust\add* in him. They \add took objection to\add* the king’s command \add at the cost of their own lives\add*, rather than serve or worship any god except their God.
+\v 29 I \add hereby\add* make a decree that any people, nation, or language that speaks anything offensive against the God of Shadrak, Meyshak, and Avednego will have their houses made into \add rubbish heaps\add* and they’ll \add be torn limb from limb\add*, because there’s no other god who’s able to save \add people\add* like that.”
 \p
-\v 29 ◙
-\p
-\v 30 ◙
+\v 30 Then the king \add gave Shadrak \add (Hananyah)\add*, Meyshak \add (Misha’el)\add*, and Avednego \add (Azaryah)\add* more important positions in Babylon province than they had before\add*.
 \c 4
-\s1 The second dream of King Nibukadnisar
+\s1 The second dream of King Nevukadnetstsar
 \p
-\v 1 ◙
-\p …
-\v 2 ◙
+\v 1 King Nevukadnetstsar \add (Nebuchadnezzar)\add* \add sent this message\add* to all people groups, nations, and languages that live all over the world:
+\p May you \add have peace and prosperity\add*.
+\v 2 It seemed good to me to \add let you all know about\add* the \add amazing miracles\add* that the \add supreme\add* God has done for me.
 \q1
-\v 3 ◙
-\q2 …
-\q1 …
+\v 3 The miracles he does are incredible,
+\q1 and his acts of creation are powerful.
+\q1 His kingdom will last forever,
+\q1 and his authority goes from one generation to another.
 \p
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
+\v 4 I, Nevukadnetstsar, was \add doing well at home\add*, and prospering \add at my work\add* in my palace,
+\v 5 \add but\add* \add one night\add* as I lay in bed, I had a dream that scared me—the images and visions in my head terrified me.
+\v 6 \add So I summoned\add* all of Babylon’s wise men to come and tell me the interpretation of the dream.
+\v 7 \add When\add* those magicians, fortune-tellers, sorcerers and astrologers arrived, I told them the dream, but they didn’t know the interpretation.
 \p
-\v 8 ◙
-\v 9 ◙
+\v 8 Finally, Daniel came in—he’d been named Belteshatstsar \add (Belteshazzar)\add* after my god’s name. The spirit of the holy gods is in him, and I told him the dream:
+\v 9 “Oh Belteshatstsar, chief of the magicians, since I know that the spirit of the holy gods is in you and that no mystery is too difficult for you, \add go through\add* the visions of my dream and tell me their interpretation.
 \p
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
+\v 10 This is the vision that was in my mind as a lay in bed: I was looking and was surprised to see \add a very tall\add* tree growing in the middle of \add a field\add*.
+\v 11 The tree kept growing taller and stronger \add until\add* its top reached the sky and it \add could be seen from all over the world\add*.
+\v 12 It had beautiful leaves were beautiful and lots of fruit on it. It \add provided\add* food for everything, the animals in the countryside found shade under it, and the birds of the sky lived in its branches. \add Every living thing benefitted\add* from it.
 \p
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
+\v 13 I was looking at the visions in my mind as I lay in bed, and then, wow, a holy sentinel came down from the heavens.
+\v 14 He shouted loudly, ‘Chop that tree down and cut its branches off, strip off its leaves, and scatter its fruit. Let the animals \add run away\add* from under it and the birds from its branches.
+\v 15 But leave the stump with its roots in the ground, and bind it with a band of iron and bronze. Let it become wet with the dew in the tender grass of the field, \add accompanied only by those animals that live\add* in the grass.
+\v 16 Let his mind\f + \fr 4:16 \ft It seems now that the tree represented a man.\f* be changed from a man to an animal as seven periods pass over him.
+\v 17 \add That\add* sentence is by the decree of the sentinels, and the decision is a command of the holy ones, so that the living may know that the highest one is ruler over human \add kingdoms\add* and gives \add them\add* to whoever he wants—even to those \add who seem unimportant\add*.’
 \p
-\v 18 ◙
+\v 18 I, King Nevukadnetstsar, had this dream. Now you, O Belteshatstsar, tell me the interpretation, because none of the wise men in my kingdom can tell me the interpretation. But you can, because the spirit of the holy gods is in you.”
 \s1 The saving/explaining of Daniel of dream of King
 \p
-\v 19 ◙
-\p …
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
+\v 19 Daniel (also known as Belteshatstsar) was appalled for a while \add at the meaning of the dream\add*, and \add worried how to present it\add*. The king \add saw this\add* and said, Belteshatstsar, don’t \add hold back on being honest about\add* the dream its interpretation.”
+\p “My master,” \add he\add* answered, “\add If only\add* the dream was for those who hate you, and its interpretation was for your enemies.
+\v 20 You saw that tree that grew and became strong, and whose top reached the sky and was visible all \add over the world\add*,
+\v 21 with its beautiful leaves and plentiful fruit. \add It provided\add* food for everyone, and the animals from the countryside lived under it, and the birds lived in its branches.
+\v 22 That was you, \add your majesty\add*. You’ve grown and become strong—your greatness has grown and reaches to heaven, and your dominion to the ends of the earth.
+\v 23 \add Then\add* the king saw a holy sentinel coming down from heaven and saying, ‘Chop down the tree and destroy it, but leave the stump and the roots in the ground, bound with a band of iron and bronze, in the tender grass of the countryside, and let him be wet with the dew, and let \add him live\add* with the animals of the fields until seven periods of time pass over him.’
 \p
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
+\v 24 “\add Your majesty\add*, this is the interpretation: It’s \add actually\add* the decree of what the supreme God has declared will happen to \add you\add*, my master the king.
+\v 25 You will be driven \add away from society\add* and you’ll live with the animals in the countryside. You’ll be forced to eat grass like a bull, and you’ll \add sleep on the ground and\add* be wet with dew \add in the morning\add* for seven \add years\add* until you acknowledge that the highest one is ruler over \add humankind\add* and \add learn that\add* he gives kingdoms to whoever he wants.
+\v 26 \add But\add* \add just\add* as it was commanded to leave the stump of the tree with its roots, \add so too\add* your kingdom will be restored to you from the time you recognize that heaven rules \add over earth\add*.
+\v 27 Therefore, \add your majesty\add*, \add please consider\add* my advice: \add stop sinning and do what is right\add*, and \add stop\add* \add disobeying God by by starting to\add* show mercy to the oppressed, so that perhaps your prosperity \add might be prolonged\add*.”
 \p
-\v 28 ◙
-\v 29 ◙
-\v 30 ◙
+\v 28 \add But\add* all of that did happen to King Nevukadnetstsar.
+\v 29 Twelve months \add later,\add* he was walking on \add the upper terrace of\add* the royal palace in Babylon
+\v 30 \add when\add* \add he\add* \add looked across\add* and said, “Isn’t that the great Babylon, which I’ve built as a royal residence by the strength of my power and for the glory of my majesty?”
 \p
-\v 31 ◙
-\v 32 ◙
+\v 31 \add He’d only just finished saying that when he heard a voice in\add* the sky, “It’s \add now\add* decreed to you, King Nebuchadnezzar: you’ve just lost your kingdom.
+\v 32 You’ll be driven away from \add other\add* people, and \add you’ll live\add* will be with the animals \add out\add* in the countryside \add where\add* you’ll \add have to\add* eat grass like a cow. Seven \add years will pass before\add* you acknowledge that the highest one is ruler over mankind and he gives \add kingdoms\add* to whoever he wants.”
 \p
-\v 33 ◙
-\s1 The praising of Nibukadnisar of God
+\v 33 Immediately \add what had been said in advance happened to\add* Nebuchadnezzar. He was driven away from \add society\add*. He ate grass like a cow, and his body was wet with dew \add each morning after sleeping on the ground\add*. \add Eventually\add* his hair had grown long like eagles’ feathers, and his nails \add were long\add* like birds’ claws.
+\s1 Nevukadnetstsar praises God
 \p
-\v 34 ◙
-\q1 …
-\q2 …
-\q1
-\v 35 ◙
-\q2 …
-\q2 …
-\q2 …
-\q1 …
-\q2 …
+\v 34 “After \add the seven years\add*, I, Nevukadnetstsar \add looked up toward\add* heaven and my reason returned to me. Then I praised and honoured the highest one who lives forever, because his authority is everlasting and his kingdom endures \add through the generations\add*.
+\v 35 \add Compared to him,\add* all the inhabitants of the earth are \add insignificant like ants\add*—he \add issues his commands\add* to the heavenly army and to earth’s inhabitants. No one can hold back his hand or \add has any right to ask\add* him, ‘What have you done?’ ”
 \p
-\v 36 ◙
-\v 37 ◙
+\v 36 “At that time my sanity returned to me, and I was reestablished in my kingdom. My majesty and my splendor was restored to me \add as I became again the respected leader\add* of my kingdom. My counsellors and my nobles \add wanted to be in my company\add*, and \add I became even more powerful than I was before\add*.
+\v 37 Now I, Nevukadnetstsar, praise, extol, and honour the king of the heavens, because \add everything he does is\add*, and his \add methods\add* are just, and he’s able to humble those who \add become proud\add*.
 \c 5
-\s1 The celebration of Bilsasar
+\s1 The writing on the wall
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
+\v 1 \add Several years later when\add* Belshatstsar \add was\add* king, he put on a feast for a thousand of his nobles, and he was drinking wine with them \add all\add*.
+\v 2 \add As Belshatstsar was drinking\add* the wine, he \add remembered\add* the gold and silver cups that his father Nevukadnetstsar had taken from the temple in Yerushalem, \add and\add* ordered that they be brought in so that the king and his nobles, and his wives and his concubines, could drink from them.
+\v 3 \add So\add* they brought in the gold cups that had been taken out of God’s residence in Yerushalem, then the king and his nobles, his wives and his concubines, drank from them.
+\v 4 They drank the wine and praised the gods of gold and silver, bronze, iron, wood, and stone.
 \p
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
+\v 5 Suddenly, the fingers of a human hand appeared and started writing on the plaster on the king’s palace wall, opposite the lampstand. \add When\add* the king saw the back of the hand that was writing,
+\v 6 he \add was very frightened and the colour drained from his face\add*. His \add legs felt weak\add* and his knees started knocking \add together\add*,
+\v 7 \add and\add* \add he\add* called out for the enchanters, the Chaldeans, and the astrologers to be brought in. The king told those Babylonian wise men, “Anyone who can read this writing and tell me its intepretation will be \add dressed in royal robes\add* and will have a chain of gold \add placed\add* around his neck, and he’ll become the third ruler in the kingdom.”
+\v 8 \add When\add* all the king’s wise men of the king \add got there\add*, \add none of them\add* could read the writing or \add tell the king what it meant\add*.
+\v 9 Then King Belshatstsar became more afraid, his face \add went whiter still\add*, and his nobles \add also\add* \add had no idea what to do\add*.
 \p
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
+\v 10 \add My now\add* the queen\f + \fr 5:10 \ft Possibly ‘the previous queen’, i.e., the queen mother (as the next verse displays her knowledge of past events).\f* had heard about what the king and his noblemen had been saying, so she came into the banquet house and said, “Long live the king. Don’t let \add this get under your skin\add*. Don’t let \add it drain you\add*.
+\v 11 There’s a man in your kingdom who has the spirit of the holy gods in him. In the days of your father, this man has illumination and insight and wisdom like the wisdom of the gods. Your father King Nevukadnetstsar appointed him chief of the magicians, sorcerers, Chaldeans, and astrologers,
+\v 12 because this Daniel had an excellent spirit, knowledge, and insight for interpreting dreams, explaining riddles, and solving problems. \add So summon\add* Daniel who the king named Belteshatstsar and he’ll tell \add you\add* the interpretation.”
 \p
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
+\v 13 \add So\add* Daniel was brought in to the king \add who\add* said to \add him\add*, “\add So,\add* you’re that Daniel—one of the exiles that my father the king brought from Yehudah.
+\v 14 I’ve heard about you—\add heard\add* that the spirit of the gods is in you, and that \add you have\add* illumination and insight and excellent wisdom.
+\v 15 Now the wise men and enchanters were brought in \add here\add* to read this writing \add on the wall\add* and \add tell\add* me its interpretation, but they couldn’t \add interpret it\add*.
+\v 16 But I’ve heard about you—that you’re able to give interpretations and solve problems. Now, if you’re able to read \add that\add* writing and \add tell me what it means\add*, you’ll be clothed with \add kingly robes\add* and have a chain of gold \add placed\add* around your neck, and you’ll be \add made\add* the third\add -highest\add* ruler in the kingdom.”
 \p
-\v 17 ◙
+\v 17 “\add I’m not after\add* your gifts, and your rewards \add can be given to someone else,\add*” Daniel \add responded\add*. “But, I’ll read the writing to the king and \add I’ll\add* \add tell you\add* the interpretation.
 \p
-\v 18 ◙
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
+\v 18 “As for you, \add your majesty\add*, the highest God gave the kingship, power, honour, and majesty, to your father Nevukadnetstsar.
+\v 19 Because of \add that\add* power, all peoples, nations, and ethnic \add groups\add* trembled and \add were afraid when his army approached\add*. He killed whoever he wanted, and he kept alive those he wanted. He \add promoted\add* whoever he wanted, and he humiliated \add others when he wanted to\add*.
+\v 20 But when \add he became proud and stubborn\add* and started acting presumptuously, he was \add disqualified\add* from the throne, and his \add splendid reputation was deflated\add*.
+\v 21 He was driven \add right out of the community\add*, and \add he started behaving like\add* an animal—he \add ended up\add* living with wild donkeys and eating grass like a cow. \add He slept on the ground, and in the morning\add* his body was wet with dew, until he \add finally\add* recognized that the highest God is ruler over \add all\add* mankind and that he \add appoints whoever he wants as leaders over the kingdoms\add*.
 \p
-\v 22 ◙
-\v 23 ◙
+\v 22 “Yet you, Belshatstsar, his son, haven’t humbled \add yourself despite already knowing all that\add*.
+\v 23 \add On the contrary\add*, you’ve \add proudly promoted\add* yourself \add as being greater than\add* the master of the heavens. \add You brought the temple cups in here\add* and you and your nobles, your wives and your concubines, have drunk wine from them. You praised the gods \add made from\add* silver and gold, bronze, iron, wood, and stone, which can’t see, or hear, or know \add anything\add*, yet you haven’t honored the God \add who decides your future and every breath that you take\add*.
 \p
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
-\v 28 ◙
+\v 24 “\add So\add* then \add its\add* from his presence \add that\add* the palm of a hand was sent, and this \add message was written\add*.
+\v 25 This \add is how it reads\add*, ‘Numbered, numbered, weighed, and divided,’
+\v 26 \add and\add* this is what it means:
+\li1 \bd Numbered\bd*: God has numbered \add your days of leadership\add* and brought \add them\add* to an end,
+\li1
+\v 27 \bd Weighed\bd*: You’ve been weighed on the scales and found deficient, \add and\add*
+\li1
+\v 28 \bd Divided\bd*: Your kingdom has been divided and given to \add the\add* Medes and \add the\add* Persians.”
 \p
-\v 29 ◙
+\v 29 Then Belshatstsar \add gave an order\add*, and they \add placed a purple robe over Daniel’s shoulders\add* and a gold chain was \add placed\add* around his neck, and a proclamation was made that he would \add now\add* be the third\add -highest\add* ruler in the kingdom.
 \p
-\v 30 ◙
-\v 31 ◙
+\v 30 \add However,\add* the Chaldean King Belshatstsar was killed that \add very\add* night,
+\v 31 and Darius the Mede \add became the new ruler at an age of\add* around sixty-two.
 \c 6
-\s1 The peg-ulug to Daniel there to me liyun
+\s1 Daniel gets fed to the lions
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
+\v 1 \add The new King\add* Darius \add decided to divide the kingdom into 120 provinces with a governor over each one\add*.
+\v 2 Over them were three higher officials (Daniel was one of them) that those governors were accountable to so that the king \add wouldn’t be ripped off\add*,
+\v 3 \add but\add* because Daniel was exceptionally talented, he became noticed above the \add other\add* high officials and governors, and the king \add decided\add* to appoint him over the whole kingdom.
+\v 4 \add That led\add* the high officials and the governors to try to find \add some fault with\add* Daniel with regard to \add his adminstrative duties\add*. However, they weren’t able to find any \add misdemeanours or corruption that he could be accused of\add* because he was \add honest, reliable, and diligent\add*.
+\v 5 Then these men \add concluded\add*, “We won’t find any grounds for \add making an\add* accusation against this Daniel unless we find something against him to do with the \add laws\add* of his god.”
 \p
-\v 6 ◙
+\v 6 \add So\add* those high officials and governors \add made a plan and\add* went as a group to the king and \add made this suggestion\add*, “\add Long live your majesty\add*, King Darius.
 \v 7 ◙
 \v 8 ◙
 \v 9 ◙
@@ -353,7 +337,7 @@
 \v 7 \x + \xo 7:7: \xt Rev 12:3; 13:1; 17:3.\x*◙
 \p
 \v 8 \x + \xo 7:8,11: \xt Rev 13:5.\x*◙
-\s1 The revelation of God concerning the one not egpatey
+\s1 The revelation of God concerning the one not die
 \q1
 \v 9 \x + \xo 7:9: a \xt Rev 20:4; \xo b \xt Rev 1:14.\x*◙
 \q2 …

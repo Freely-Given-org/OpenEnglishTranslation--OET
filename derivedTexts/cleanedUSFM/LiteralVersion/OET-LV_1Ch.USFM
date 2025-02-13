@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2025-01-22 11:41 by extract_glossed_OSHB_OT_to_ESFM v0.53
+\rem ESFM file created 2025-02-10 15:21 by extract_glossed_OSHB_OT_to_ESFM v0.53
 \rem USFM file edited by ScriptedBibleEditor v0.33
 \h 1 Chronicles
 \toc1 1 Chronicles
@@ -14,9 +14,9 @@
 \mt1 1 Chronicles
 \c 1
 \v 1 ʼĀdām Shēt ʼEnōsh.
-\v 2 Qēynān/(Kenan) Mahalalel Yered/(Jared).
+\v 2 Qēynān/(Kenan) Mahₐlal\sup ʼēl\sup* Yered/(Jared).
 \v 3 Ḩₐnōk/(Enoch) Mətūshelaḩ Lemek.
-\v 4 Noaḩ Shem Ham and=Yafet.
+\v 4 Noaḩ Shēm Ham and=Yafet.
 \v 5 the_sons_of Japheth [were]_Gomer and=Māgōg and=Maday and=Yavan and=Tubal and=Meshek and=Tiras.
 \v 6 and=the_sons of_Gomer [were]_Ashkenaz and÷Diphath and÷Togarmah.
 \v 7 And=the_sons of_Javan [were]_ʼElīshāˊh and÷Tarshiysh Kittim and÷Rodanim.
@@ -26,24 +26,24 @@
 \v 11 and=Miʦrayim he_fathered DOM [the]_Ludites\f + \fr 1:11 \ft Variant note: לודיים: (x-qere) 'לוּדִ֧ים': lemma=3866 morph=HNp id=13bmv לוּדִ֧ים\f* and=DOM [the]_Anamites and=DOM [the]_Lehabites and=DOM [the]_Naphtuhites.
 \v 12 And=DOM [the]_Pathrusites and=DOM [the]_Casluhites where they_came_forth from=there [the]_Fəlishtiy and=DOM [the]_Caphtorites.
 \v 13 and=Kenaan he_fathered DOM Tsīdōn/(Sidon) his/its=firstborn and=DOM Heth.
-\v 14 And=DOM the=Yebusi and=DOM the=Emori and=DOM the=Girgashi.
+\v 14 And=DOM the=Yebusi and=DOM the=ʼAmorī and=DOM the=Girgashi.
 \v 15 And=DOM the=Hivvi and=DOM the=Arqi and=DOM the=Sini.
 \v 16 And=DOM the=Arvadi and=DOM the=Tsemari and=DOM the=Hamati.
-\v 17 the_sons_of Shem [were]_ˊĒylām and÷ʼAshshūr and=Arpakshad and÷Lud and÷ʼArām and÷ˊŪʦ and÷Hul and÷Gether and÷Meshech.
+\v 17 the_sons_of Shēm [were]_ˊĒylām and÷ʼAshshūr and=Arpakshad and÷Lud and÷ʼArām and÷ˊŪʦ and÷Hul and÷Gether and÷Meshech.
 \v 18 and=Arpakshad he_fathered DOM Shelaḩ and=Shelaḩ he_fathered DOM ˊĒⱱēr.
-\v 19 And÷to÷ˊĒⱱēr it_was_born two_of sons the_name_of the=one [was]_Feleg if/because in/on/at/with÷days_of÷his it_was_divided the=earth/land and=name_of his/its=woman [was]_Joktan.
-\v 20 And÷Joktan he_fathered DOM Almodad and=DOM Sheleph and=DOM Hazarmaveth and=DOM Jerah.
+\v 19 And÷to÷ˊĒⱱēr it_was_born two_of sons the_name_of the=one [was]_Peleg if/because in/on/at/with÷days_of÷his it_was_divided the=earth/land and=name_of his/its=woman [was]_Joktan.
+\v 20 And÷Joktan he_fathered DOM Almodad and=DOM Sheleph and=DOM Ḩₐʦarmaveth and=DOM Jerah.
 \v 21 And=DOM Hadoram and=DOM ʼŪzāl and=DOM Diklah.
 \v 22 And=DOM ˊĒyⱱāl and=DOM Abimael and=DOM Sheⱱaˊ.
 \v 23 And=DOM ʼŌfīr and=DOM Ḩₐvīlāh and=DOM Yōⱱāⱱ/(Jobab) all_of these [were]_the_sons_of Joktan.
-\v 24 Shem ʼArpaksad Shelaḩ.
-\v 25 ˊĒⱱēr Feleg Reu.
-\v 26 Sərūg Nahor Terah.
+\v 24 Shēm ʼArpaksad Shelaḩ.
+\v 25 ˊĒⱱēr Peleg Reu.
+\v 26 Sərūg Nāḩōr Terah.
 \v 27 Abram he [is]_ʼAⱱrāhām.
-\v 28 the_sons_of ʼAⱱrāhām [were]_Yiʦḩāq/(Isaac) and÷Yishmāˊēʼl/(Ishmael).
-\v 29 these genealogies_of÷their the_firstborn_of Yishmāˊēʼl/(Ishmael) [was]_Nəⱱāyōt and÷Kedar and÷Adbeel and÷Mibsam.
+\v 28 the_sons_of ʼAⱱrāhām [were]_Yiʦḩāq/(Isaac) and÷Yishmāˊ\sup ʼēl\sup*/(Ishmael).
+\v 29 these genealogies_of÷their the_firstborn_of Yishmāˊ\sup ʼēl\sup*/(Ishmael) [was]_Nəⱱāyōt and÷Kedar and÷Adbeel and÷Mibsam.
 \v 30 Mishma and÷Dumah Massa Hₐdad and÷Tema.
-\v 31 Jetur Naphish and÷Kedemah these they [were]_the_sons_of Yishmāˊēʼl/(Ishmael).
+\v 31 Jetur Naphish and÷Kedemah these they [were]_the_sons_of Yishmāˊ\sup ʼēl\sup*/(Ishmael).
 \v 32 and=the_sons of_Keturah the_concubine_of ʼAⱱrāhām she_bore DOM Zimran and÷Jokshan and÷Medan and÷Midyān and÷Ishbak and÷Shūˊah and=the_sons of_Jokshan [were]_Sheⱱaˊ and=Dedan.
 \v 33 and=the_sons of_Midyān [were]_Ephah and÷Epher and÷Hanoch and÷Abida and÷Eldaah all_of these [were]_the_sons_of Keturah.
 \v 34 and= ʼAⱱrāhām =he/it_fathered DOM Yiʦḩāq the_sons_of Yiʦḩāq [were]_ˊĒsāv and÷Yisrā\sup ʼēl\sup*/(Israel).
@@ -60,17 +60,17 @@
 \v 45 And= Yōⱱāⱱ =he/it_died and÷reigned in_place÷his Ḩūshām from÷land_of the÷Temanites.
 \v 46 And= Ḩūshām =he/it_died and÷reigned in_place÷his Hₐdad the_son_of Bedad the÷defeated DOM Midyān in/on/at/with÷country_of Mōʼāⱱ and=name_of city_of÷his [was]_Avith\f + \fr 1:46 \ft Variant note: עיות: (x-qere) 'עֲוִֽית': lemma=5762 n=0 morph=HNp id=13V8b עֲוִֽית\f*.
 \v 47 And= Hₐdad =he/it_died and÷reigned in_place÷his Samlah from÷Masrekah.
-\v 48 And= Samlah =he/it_died and÷reigned in_place÷his Shaul from÷Rəḩoⱱoth the=river.
-\v 49 And= Shaul =he/it_died and÷reigned in_place÷his Baˊal- Ḩānān the_son_of ˊAkbōr.
+\v 48 And= Samlah =he/it_died and÷reigned in_place÷his Shāʼūl from÷Rəḩoⱱoth the=river.
+\v 49 And= Shāʼūl =he/it_died and÷reigned in_place÷his Baˊal- Ḩānān the_son_of ˊAkbōr.
 \v 50 And= Baˊal- =he/it_died Ḩānān and÷reigned in_place÷his Hₐdad and=name_of city_of÷his [was]_Pai and=name_of his/its=wife/woman [was]_Məhēyţaⱱ\sup ʼēl\sup* the_daughter_of Matred the_daughter_of Me- Zahab.
 \v 51 And= Hₐdad =he/it_died and= the_chiefs_of =they_were of_ʼEdōm chief Timnāˊ chief Alvah\f + \fr 1:51 \ft Variant note: עליה: (x-qere) 'עַֽלְוָ֖ה': lemma=5933 n=0.0 morph=HNp id=13mGU עַֽלְוָ֖ה\f* chief Jetheth.
 \v 52 Chief ʼĀhₑlīⱱāmāh chief ʼĒlāh chief Pinon.
 \v 53 Chief Qənaz chief Tēymān chief Mibzar.
 \v 54 Chief Magdiel chief Iram these [were]_the_chiefs_of ʼEdōm.
 \c 2
-\v 1 these [were]_the_sons_of Yisrā\sup ʼēl\sup*/(Israel) Rəʼūⱱēn Shimˊōn Lēvīh and=Yihudah Yissāskār/(Issachar) and÷Zəⱱulun.
+\v 1 these [were]_the_sons_of Yisrā\sup ʼēl\sup*/(Israel) Rəʼūⱱēn Shimˊōn Lēvīh and=Yəhūdāh/(Yihudah) Yissāskār/(Issachar) and÷Zəⱱulun.
 \v 2 Dān Yōşēf/(Joseph) and÷Binyāmīn Naftālī Gād and=ʼĀshēr.
-\v 3 the_sons_of Yəhūdāh/(Judah) [were]_ˊĒr and÷ʼŌnān and÷Shēlāh three_[sons] it_was_born to=him/it by÷Bath- shua the÷Canaanite and=he/it_was ˊĒr the_firstborn_of Yəhūdāh evil in/on=both_eyes_of \nd YHWH\nd* and÷put_todeath÷him.
+\v 3 the_sons_of Yəhūdāh/(Judah) [were]_ˊĒr and÷ʼŌnān and÷Shēlāh three_[sons] it_was_born to=him/it by÷Bath- shua the÷Kənaˊₐnī and=he/it_was ˊĒr the_firstborn_of Yəhūdāh evil in/on=both_eyes_of \nd YHWH\nd* and÷put_todeath÷him.
 \v 4 and÷Tāmār his/its=daughter-in-law she_bore for=him/it DOM Fereʦ and=DOM Zeraḩ all_of the_sons_of Yəhūdāh [were]_five.
 \v 5 the_sons_of Fereʦ [were]_Ḩeʦrōn and÷Hamul.
 \v 6 and=the_sons of_Zeraḩ [were]_Zimrī and÷ʼĒytān and÷Hēymān and÷Kalkol/(Calcol) and÷Dara in_all_of÷them [were]_five.
@@ -81,7 +81,7 @@
 \v 11 And÷Naḩshōn he_fathered DOM Salma and÷Salma he_fathered DOM Boˊaz.
 \v 12 And÷Boˊaz he_fathered DOM ˊŌⱱēd and÷ˊŌⱱēd he_fathered DOM Yishay/(Jesse).
 \v 13 And÷Yishay he_fathered DOM his/its=firstborn DOM ʼElīʼāⱱ and÷Abinadab the=second and÷Shimea the=third.
-\v 14 Nethanel the=fourth Raddai the÷fifth.
+\v 14 Nətan\sup ʼēl\sup* the=fourth Raddai the÷fifth.
 \v 15 Ozem the=sixth Dāvid the÷seventh.
 \v 16 And÷sisters_of÷their\f + \fr 2:16 \ft Variant note: ו/אחיתי/הם: (x-qere) 'וְ/אַחְיוֹתֵי/הֶ֖ם': lemma=c/269 n=1.0 morph=HC/Ncfpc/Sp3mp id=13yP1 וְ/אַחְיוֹתֵי/הֶ֖ם\f* [were]_Tsərū\sup yāh\sup*/(Zeruiah) and÷ʼAⱱīgayil and=the_sons of_Tsərū\sup yāh\sup* [were]_Abshai and÷Yōʼāⱱ/(Joab) and÷Asah- el three.
 \v 17 And÷ʼAⱱīgayil she_bore DOM ˊAmāsāʼ and=father_of ˊAmāsāʼ [was]_Yeter/(Jether) the÷Ishmaelite.
@@ -91,10 +91,10 @@
 \v 21 and=after Ḩeʦrōn he_went into the_daughter_of Makir the_father_of Gilˊād and=he married÷her and=he [was]_a_son_of sixty year[s] and=she/it_gave_birth to=him/it DOM Səgūⱱ.
 \v 22 And÷Səgūⱱ he_fathered DOM Yāʼīr/(Jair) and=he/it_was to=him/it twenty and÷three cities in=land the÷Gilˊād.
 \v 23 And= Gəshūr =he/it_took and÷ʼArām DOM the_villages_of Yāʼīr from÷among÷them DOM Kenath and=DOM villages_of÷its sixty citi[es] all_of these [were]_the_sons_of Makir the_father_of Gilˊād.
-\v 24 And=after the_death_of Ḩeʦrōn in/on/at/with÷Kālēⱱ- ephrathah and÷wife_of Ḩeʦrōn [was]_ʼAⱱīāh and=she/it_gave_birth to=him/it DOM Ashhur the_father_of Təqōˊī.
+\v 24 And=after the_death_of Ḩeʦrōn in/on/at/with÷Kālēⱱ- ephrathah and÷wife_of Ḩeʦrōn [was]_ʼAⱱiy\sup yāh\sup* and=she/it_gave_birth to=him/it DOM Ashhur the_father_of Təqōˊī.
 \v 25 And= the_sons_of =they_were of_Jerahmeel the_firstborn_of Ḩeʦrōn the÷firstborn Rām and÷Bunah and÷Oren and÷Ozem ʼAḩiy\sup yāh\sup*.
 \v 26 And= a_wife =it_became another to÷Jerahmeel and÷name_of÷whose [was]_Atarah she [was]_the_mother_of Onam.
-\v 27 and= the_sons_of =they_were of_Rām the_firstborn_of Jerahmeel Maaz and÷Jamin and÷Eker.
+\v 27 and= the_sons_of =they_were of_Rām the_firstborn_of Jerahmeel Maaz and÷Yāmīn/(Jamin) and÷Eker.
 \v 28 And= the_sons_of =they_were of_Onam Shammai and÷Jada and=the_sons of_Shammai [were]_Nādāⱱ and÷Abishur.
 \v 29 And=name_of the_wife_of Abishur [was]_Abihail and=she/it_gave_birth to=him/it DOM Ahban and=DOM Molid.
 \v 30 And=the_sons of_Nādāⱱ [were]_Seled and÷Appaim and= Seled =he/it_died not sons.
@@ -106,12 +106,12 @@
 \v 36 And÷Attai he_fathered DOM Nātān and÷Nātān he_fathered DOM Zabad.
 \v 37 And÷Zabad he_fathered DOM Ephlal and÷Ephlal he_fathered DOM ˊŌⱱēd.
 \v 38 And÷ˊŌⱱēd he_fathered DOM Yēhūʼ/(Jehu) and÷Yēhūʼ he_fathered DOM ˊAzar\sup yāh\sup*.
-\v 39 And=Azaryah he_fathered DOM Ḩeleʦ and÷Ḩeleʦ he_fathered DOM Eleasah.
+\v 39 And=ˊAzar\sup yāh\sup* he_fathered DOM Ḩeleʦ and÷Ḩeleʦ he_fathered DOM Eleasah.
 \v 40 And÷Eleasah he_fathered DOM Sismai and÷Sismai he_fathered DOM Shallūm.
 \v 41 And÷Shallūm he_fathered DOM Jekamiah and÷Jekamiah he_fathered DOM ʼElīshāˊma.
 \v 42 And=the_sons of_Kālēⱱ/(Caleb) the_brother_of Jerahmeel [were]_Mēyshaˊ his/its=firstborn he [was]_the_father_of Zīf and=the_sons of_Mareshah [were]_the_father_of Ḩeⱱrōn.
-\v 43 And=the_sons of_Ḩeⱱrōn [were]_Qoraḩ and÷Tafūaḩ and÷Rekem and÷Shema.
-\v 44 And÷Shema he_fathered DOM Raham the_father_of Jorkeam and÷Rekem he_fathered DOM Shammai.
+\v 43 And=the_sons of_Ḩeⱱrōn [were]_Qoraḩ and÷Tafūaḩ and÷Rekem and÷Shemaˊ.
+\v 44 And÷Shemaˊ he_fathered DOM Raham the_father_of Jorkeam and÷Rekem he_fathered DOM Shammai.
 \v 45 And÷son_of Shammai [was]_Māˊōn and÷Māˊōn [was]_the_father_of Bēyt Tsūr/(Zur).
 \v 46 And÷Ephah the_concubine_of Kālēⱱ she_bore DOM Ḩārān and=DOM Moza and=DOM Gazez and÷Ḩārān he_fathered DOM Gazez.
 \v 47 and=the_sons of_Jahdai [were]_Regem and÷Yōtām/(Jotham) and÷Geshan and÷Pelet and÷Ephah and÷Shaaph.
@@ -124,17 +124,17 @@
 \v 54 the_sons_of Salma [were]_Bēyt- lehem and÷Nəţofātī Atroth_Bēyt- Yōʼāⱱ/(Joab) Atroth_Bēyt- and÷half_of the÷Manahathites the÷Zorites.
 \v 55 And÷families_of [the]_Sophrites [who_were]_dwelling_of\f + \fr 2:55 \ft Variant note: ישבו: (x-qere) 'יֹשְׁבֵ֣י': lemma=3427 morph=HVqrmpc id=13xKf יֹשְׁבֵ֣י\f* of_Jabez [were_the]_Tirathites [the]_Shimeathites [the]_Sucathites they the÷Qēynīs the=(ones_who)_went from÷Hammath the_father_of Bēyt_of Rēkāⱱ.
 \c 3
-\v 1 and=these they_were the_sons_of Dāvid\f + \fr 3:1 \ft Note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f* whom it_was_born to=him/it in/on/at/with÷Ḩeⱱrōn the÷firstborn [was]_ʼAmnōn by÷ʼAḩīnoˊam the÷Yizrəˊēʼlī/(Jezreelite) second [was]_Dāniyyēʼl by÷ʼAⱱīgayil the÷Karməlī.
+\v 1 and=these they_were the_sons_of Dāvid\f + \fr 3:1 \ft Note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f* whom it_was_born to=him/it in/on/at/with÷Ḩeⱱrōn the÷firstborn [was]_ʼAmnōn by÷ʼAḩīnoˊam the÷Yizrəˊ\sup ʼēl\sup*ī/(Jezreelite) second [was]_Dāniyy\sup ʼēl\sup* by÷ʼAⱱīgayil the÷Karməlī.
 \v 2 The÷third of÷ʼAⱱīshālōm the_son_of Maˊₐkāh the_daughter_of Talimay the_king_of Gəshūr the=fourth [was]_ʼAdoniy\sup yāh\sup* the_son_of Ḩaggit.
 \v 3 The÷fifth [was]_Shəfaţ\sup yāh\sup* by÷ʼAⱱīţal the=sixth [was]_Yitrəˊām/(Ithream) by÷ˊEglāh his/its=wife/woman.
-\v 4 Six_[sons] it_was_born to=him/it in/on/at/with÷Ḩeⱱrōn and÷reigned there seven years and÷six months and=thirty and÷three year[s] he_reigned in/on/at/with÷Yərūshālayim/(Jerusalem).
-\v 5 and=these they_were_born to=him/it in/on/at/with÷Yərūshālayim Shimea and÷Shōⱱāⱱ and÷Nātān and÷Shəlomoh four by÷Bath- shua the_daughter_of ˊAmmiy\sup ʼēl\sup*.
+\v 4 Six_[sons] it_was_born to=him/it in/on/at/with÷Ḩeⱱrōn and÷reigned there seven years and÷six months and=thirty and÷three year[s] he_reigned in/on/at/with÷Yərūshālam/(Jerusalem).
+\v 5 and=these they_were_born to=him/it in/on/at/with÷Yərūshālam Shimea and÷Shōⱱāⱱ and÷Nātān and÷Shəlomoh four by÷Bath- shua the_daughter_of ˊAmmiy\sup ʼēl\sup*.
 \v 6 And÷Yāⱱəḩar/(Ibhar) and÷ʼElīshāˊma and÷ʼElīfeleţ.
 \v 7 And÷Nogah and÷Nefeg and÷Yāfīˊa/(Japhia).
 \v 8 And÷ʼElīshāˊma and÷ʼElyādāˊ and÷ʼElīfeleţ nine.
 \v 9 All_of the_sons_of Dāvid from÷to/for÷besides_of sons_of concubines and÷Tāmār sister_of÷their.
-\v 10 and÷son_of Shəlomoh [was]_Rəḩaⱱˊām [was]_ʼAⱱīāh son_of÷his [was]_ʼĀşāʼ son_of÷his [was]_Yəhōshāfāţ/(Jehoshaphat) his/its=son.
-\v 11 [was]_Yōrām/(Joram) his/its=son [was]_ʼAḩaz\sup yāh\sup* son_of÷his [was]_Yōʼāsh/(Joash) his/its=son.
+\v 10 and÷son_of Shəlomoh [was]_Rəḩaⱱˊām [was]_ʼAⱱiy\sup yāh\sup* son_of÷his [was]_ʼĀşāʼ son_of÷his [was]_Yəhōshāfāţ/(Jehoshaphat) his/its=son.
+\v 11 [was]_Yəhōrām/(Joram) his/its=son [was]_ʼAḩaz\sup yāh\sup* son_of÷his [was]_Yōʼāsh/(Joash) his/its=son.
 \v 12 [was]_ʼAmaʦ\sup yāh\sup* son_of÷his [was]_ˊAzar\sup yāh\sup* son_of÷his [was]_Yōtām/(Jotham) his/its=son.
 \v 13 [was]_ʼĀḩāz his/its=son [was]_Ḩizqiy\sup yāh\sup* son_of÷his [was]_Mənashsheh son_of÷his.
 \v 14 [was]_ʼĀmōn his/its=son [was]_Yʼoshiy\sup yāh\sup*/(Josiah) son_of÷his.
@@ -144,15 +144,15 @@
 \v 18 And÷Malchiram and÷Pədā\sup yāh\sup* and÷Shenazzar Jekamiah Hoshama and÷Nedabiah.
 \v 19 And=the_sons of_Pədā\sup yāh\sup* [were]_Zərubāⱱel and÷Shimˊī and÷sons_of Zərubāⱱel [was]_Məshullām and÷Ḩₐnan\sup yāh\sup* and÷Shelomith sister_of÷their.
 \v 20 And÷Hashubah and÷Ohel and÷Berek\sup yāh\sup* and÷Hasadiah Jushab- Hesed five.
-\v 21 And÷sons_of Ḩₐnan\sup yāh\sup* [was]_Pelatiah and÷Jeshaiah the_sons_of Rəfā\sup yāh\sup* the_sons_of Arnan the_sons_of ˊOⱱad\sup yāh\sup* the_sons_of Shəkan\sup yāh\sup*.
+\v 21 And÷sons_of Ḩₐnan\sup yāh\sup* [was]_Fəlaţ\sup yāh\sup* and÷Yəshaˊ\sup yāh\sup*/(Jeshaiah) the_sons_of Rəfā\sup yāh\sup* the_sons_of Arnan the_sons_of ˊOⱱad\sup yāh\sup* the_sons_of Shəkan\sup yāh\sup*.
 \v 22 and=the_sons of_Shəkan\sup yāh\sup* [were]_Shəmaˊ\sup yāh\sup* and=the_sons of_Shəmaˊ\sup yāh\sup* [were]_Ḩaţţūsh and÷Yigʼāl/(Igal) and÷Bariah and÷Neariah and÷Shāfāţ six.
-\v 23 And÷sons_of Neariah [was]_Elioenai and÷Hizkiah and÷Azrikam three.
-\v 24 And=the_sons of_Elioenai [were]_Hōdav\sup yāh\sup*\f + \fr 3:24 \ft Variant note: הדיוהו: (x-qere) 'הוֹדַוְיָ֡הוּ': lemma=1938 n=0.0.0.3 morph=HNp id=13Gjw הוֹדַוְיָ֡הוּ\f* and÷ʼElyāshiyⱱ and÷Pelaiah and÷ˊAqqūⱱ and÷Yōḩānān and÷Dəlā\sup yāh\sup* and÷Anani seven.
+\v 23 And÷sons_of Neariah [was]_ʼElyəhōˊēynay and÷Hizkiah and÷ˊAzrīqām three.
+\v 24 And=the_sons of_ʼElyəhōˊēynay [were]_Hōdav\sup yāh\sup*\f + \fr 3:24 \ft Variant note: הדיוהו: (x-qere) 'הוֹדַוְיָ֡הוּ': lemma=1938 n=0.0.0.3 morph=HNp id=13Gjw הוֹדַוְיָ֡הוּ\f* and÷ʼElyāshiyⱱ and÷Pəlā\sup yāh\sup* and÷ˊAqqūⱱ and÷Yōḩānān and÷Dəlā\sup yāh\sup* and÷Anani seven.
 \c 4
 \v 1 the_sons_of Yəhūdāh/(Judah) [were]_Fereʦ Ḩeʦrōn and÷Karmī/(Carmi) and÷Ḩūr and÷Shobal.
-\v 2 And÷Reaiah the_son_of Shobal he_fathered DOM Jahath and÷Jahath he_fathered DOM Ahumai and=DOM Lahad these [were]_the_clans_of the÷Zorathites.
-\v 3 and=these [were]_the_father_of ˊĒyţām Yizrəˊēʼl/(Jezreel) and÷Ishma and÷Idbash and=name_of sister_of÷their [was]_Hazelelponi.
-\v 4 And÷Pənū\sup ʼēl\sup* [was]_the_father_of Gedor and÷ʼEʦer [was]_the_father_of Hushah these [were]_the_descendants_of Ḩūr the_firstborn_of Ephrath the_father_of Bēyt- lehem.
+\v 2 And÷Rəʼā\sup yāh\sup* the_son_of Shobal he_fathered DOM Jahath and÷Jahath he_fathered DOM Ahumai and=DOM Lahad these [were]_the_clans_of the÷Zorathites.
+\v 3 and=these [were]_the_father_of ˊĒyţām Yizrəˊ\sup ʼēl\sup*/(Jezreel) and÷Ishma and÷Idbash and=name_of sister_of÷their [was]_Hazelelponi.
+\v 4 And÷Pənū\sup ʼēl\sup* [was]_the_father_of Gedor and÷ˊĒzer [was]_the_father_of Hushah these [were]_the_descendants_of Ḩūr the_firstborn_of Ephrath the_father_of Bēyt- lehem.
 \v 5 And÷to÷Ashhur the_father_of Təqōˊī they_belonged two_of wives Helah and÷Naarah.
 \v 6 And=she/it_gave_birth to=him/it Naarah DOM Ahuzzam and=DOM Ḩēfer and=DOM Temeni and=DOM the÷Haahashtari these [were]_the_sons_of Naarah.
 \v 7 And=the_sons of_Helah [were]_Zereth wwww\f + \fr 4:7 \ft Variant note: יצחר: (x-qere) 'וְ/צֹ֖חַר': lemma=c/6714 n=0.0 morph=HC/Np id=13aWe וְ/צֹ֖חַר\f* and÷Ethnan.
@@ -166,41 +166,41 @@
 \v 15 and=the_sons of_Kālēⱱ/(Caleb) the_son_of Yəfunneh/(Jephunneh) [was]_Iru ʼĒlāh and÷Naam and=the_sons of_ʼĒlāh and÷Qənaz.
 \v 16 And=the_sons of_Jehallelel [were]_Zīf and÷Ziphah Tiria and÷Asarel.
 \v 17 And÷sons_of ˊEzrāʼh [was]_Yeter/(Jether) and÷Mered and÷Epher and÷Jalon and=she/it_conceived/became_pregnant DOM Miryām and=DOM Shammai and=DOM Ishbah the_father_of ʼEshtəmoˊa.
-\v 18 And=his/its=woman/wife the÷Yəhūdī/(Judean) she_bore DOM Yered/(Jared) the_father_of Gedor and=DOM Ḩeⱱer the_father_of Sōkoh and=DOM Jekuthiel the_father_of Zānōaḩ and=these [were]_the_sons_of Bithiah the_daughter_of Farˊoh whom he_had_taken Mered.
-\v 19 and=the_sons of_the_wife_of of_Hodiah the_sister_of Naham [were]_the_father_of Qəˊīlāh the÷Garmite and÷ʼEshtəmoˊa the÷Maˊₐkāhite.
+\v 18 And=his/its=woman/wife the÷Yəhūdī/(Judean) she_bore DOM Yered/(Jared) the_father_of Gedor and=DOM Ḩeⱱer the_father_of Sōkoh and=DOM Jekuthiel the_father_of Zānōaḩ and=these [were]_the_sons_of Bithiah the_daughter_of Parˊoh whom he_had_taken Mered.
+\v 19 and=the_sons of_the_wife_of of_Hōdiy\sup yāh\sup* the_sister_of Naham [were]_the_father_of Qəˊīlāh the÷Garmite and÷ʼEshtəmoˊa the÷Maˊₐkāhite.
 \v 20 And=the_sons of_Shimon [were]_ʼAmnōn and÷Rinnah Ben- Ḩānān and÷Tilon\f + \fr 4:20 \ft Variant note: ו/תולון: (x-qere) 'וְ/תִיל֑וֹן': lemma=c/8436 n=1 morph=HC/Np id=134i9 וְ/תִיל֑וֹן\f* and=the_sons of_Ishi [were]_Zoheth and÷Ben- zoheth.
 \v 21 The_sons_of Shēlāh the_son_of Yəhūdāh/(Judah) [were]_ˊĒr the_father_of Lecah and÷Laadah the_father_of Mareshah and÷families_of the_house_of the_work_of the÷linen at÷Bēyt_of Ashbea.
 \v 22 And÷Jokim and÷men_of Kozeba and÷Yōʼāsh/(Joash) and÷Saraph who they_ruled in÷Mōʼāⱱ and÷returned to Lehem returned to Lehem and÷the÷records [are]_ancient.
 \v 23 They the÷potters and÷inhabitants_of Netaim and÷Gederah with the=king in/on/at/with÷service_of÷his they_dwelt there.
-\v 24 the_descendants_of Shimˊōn [were]_Nemuel and÷Jamin Jarib Zeraḩ Shaul.
+\v 24 the_descendants_of Shimˊōn [were]_Nemuel and÷Yāmīn/(Jamin) Jarib Zeraḩ Shāʼūl.
 \v 25 Shallūm his/its=son Mibsam his/its=son Mishma his/its=son.
 \v 26 And=the_sons of_Mishma [were]_Hammuel his/its=son Zakkūr his/its=son Shimˊī son_of÷his.
 \v 27 And÷had÷Shimˊī sons six- teen and=daughters six and÷have÷brothers_of÷his there_[belonged]_not sons many and=all/each/any/every family_of÷their not they_increased up_to the_descendants_of Yəhūdāh.
-\v 28 and=they_lived in/on/at/with÷Bəʼēr- seven and÷Moladah and÷Hazar- shual.
+\v 28 and=they_lived in/on/at/with÷Bəʼēr- seven and÷Mōlādāh and÷ Ḩₐʦar- shūˊāl.
 \v 29 And÷in/on/at/with÷Bilhāh and÷in/on/at/with÷ˊEʦem and÷in/on/at/with÷Tōlāˊd.
 \v 30 And÷in/on/at/with÷Bethuel and÷in/on/at/with÷Ḩārəmāh and÷in/on/at/with÷Tsiqlag/(Ziklag).
-\v 31 And÷in/on/at/with÷Bēyt- marcaboth and÷in/on/at/with÷Hazar- susim and÷in/on/at/with÷Bēyt- biri and÷in/on/at/with÷Shaaraim these cities_of÷their until reigned Dāvid.
+\v 31 And÷in/on/at/with÷Bēyt- marcaboth and÷in/on/at/with÷ Ḩₐʦar- susim and÷in/on/at/with÷Bēyt- biri and÷in/on/at/with÷Shaaraim these cities_of÷their until reigned Dāvid.
 \v 32 And÷villages_of÷their [were]_ˊĒyţām and÷ˊAyin Rimmōn and÷Tochen and÷ˊĀshān cities five.
 \v 33 And=all villages_of÷their which [were]_around_of the÷cities the=these to Baˊal this settlements_of÷their and÷kept_a_genealogical_record÷they to/for=them.
 \v 34 And÷Meshobab and÷Jamlech and÷Joshah the_son_of ʼAmaʦ\sup yāh\sup*.
 \v 35 And÷Yō\sup ʼēl\sup*/(Joel) and÷Yēhūʼ/(Jehu) the_son_of Joshibiah the_son_of Sərā\sup yāh\sup* the_son_of Asiel.
-\v 36 And÷Elioenai and÷Jaakobah and÷Jeshohaiah and÷ˊAsā\sup yāh\sup* and÷Adiel and÷Jesimiel and÷Bənā\sup yāh\sup*.
+\v 36 And÷ʼElyəhōˊēynay and÷Jaakobah and÷Jeshohaiah and÷ˊAsā\sup yāh\sup* and÷Adiel and÷Jesimiel and÷Bənā\sup yāh\sup*.
 \v 37 And÷Ziza the_son_of Shipi the_son_of Allon the_son_of Yədaˊ\sup yāh\sup*/(Jedaiah) the_son_of Shimri the_son_of Shəmaˊ\sup yāh\sup*.
 \v 38 These the=(ones_who)_went in/on/at/with÷name [were]_leaders in/on/at/with÷families_of÷their and÷houses_of fathers'_of÷their they_spread_out to÷greatness.
 \v 39 And÷went to÷entrance_of Gedor to to÷east_side_of the÷valley to÷seek pasture for÷flocks_of÷their.
 \v 40 And÷found pasture fertile and÷good and=the=earth [was]_broad_of both_sides and÷quiet and÷peaceful if/because [were]_from Ham the÷lived there to/for÷formerly.
 \v 41 And=they_came these the÷recorded in/on/at/with÷name in/on/at/with÷days_of Ḩizqiy\sup yāh\sup* the_king_of Yəhūdāh/(Judah) and÷attacked DOM tents_of÷their and=DOM the÷Məˊūnāy\f + \fr 4:41 \ft Variant note: ה/מעינים: (x-qere) 'הַ/מְּעוּנִ֨ים': lemma=d/4586 morph=HTd/Ngmpa id=13ojQ הַ/מְּעוּנִ֨ים\f* who they_were_found there÷at and÷exterminated÷them until the=day the=this and=they_lived in_place÷their if/because pasture for÷flocks_of÷their [was]_there.
-\v 42 And÷some_of÷them of the_descendants_of Shimˊōn they_went to÷mount_of Sēˊīr men five hundred(s) and÷Pelatiah and÷Neariah and÷Rəfā\sup yāh\sup* and÷ˊUzziy\sup ʼēl\sup* the_sons_of Ishi in/on/at/with÷leaders_of÷their.
+\v 42 And÷some_of÷them of the_descendants_of Shimˊōn they_went to÷mount_of Sēˊīr men five hundred(s) and÷Fəlaţ\sup yāh\sup* and÷Neariah and÷Rəfā\sup yāh\sup* and÷ˊUzziy\sup ʼēl\sup* the_sons_of Ishi in/on/at/with÷leaders_of÷their.
 \v 43 And÷destroyed DOM the_remnant_of the÷escaped of÷ˊAmālēqites and=they_lived there until the=day the÷this.
 \c 5
 \v 1 And=the_sons of_Rəʼūⱱēn the_firstborn_of Yisrā\sup ʼēl\sup*/(Israel) if/because he the÷firstborn and÷in/on/at/with÷defiled÷he the_beds_of his/its=father birthright_of÷his it_was_given to÷sons_of Yōşēf/(Joseph) the_son_of Yisrā\sup ʼēl\sup*/(Israel) and=not in÷enrolled_in_the_genealogy according_to_the÷birthright.
 \v 2 If/because Yəhūdāh he_was_strong in/on/at/with÷brothers_of÷his and÷though÷ruler from=him/it and÷the÷birthright belonged_to÷Yōşēf.
 \v 3 the_sons_of Rəʼūⱱēn the_firstborn_of Yisrā\sup ʼēl\sup*/(Israel) [were]_Hanoch and÷Pallu Ḩeʦrōn and÷Karmī/(Carmi).
 \v 4 The_descendants_of Yō\sup ʼēl\sup*/(Joel) [was]_Shəmaˊ\sup yāh\sup* son_of÷his [was]_Gōg his/its=son [was]_Shimˊī son_of÷his.
-\v 5 [was]_Mīkāh son_of÷his [was]_Reaiah son_of÷his [was]_Baˊal his/its=son.
+\v 5 [was]_Mīkāh son_of÷his [was]_Rəʼā\sup yāh\sup* son_of÷his [was]_Baˊal his/its=son.
 \v 6 [was]_Beerah son_of÷his whom he_took_into_exile Tiglath- pileser the_king_of ʼAshshūr he [was]_a_leader of_the÷Rəʼūⱱēnites.
 \v 7 And÷kinsmen_of÷his by÷families_of÷their in/on/at/with÷genealogy of÷generations_of÷their the÷chief Jeiel and÷Zəkar\sup yāh\sup*.
-\v 8 And÷Belaˊ the_son_of Azaz the_son_of Shema the_son_of Yō\sup ʼēl\sup* he [was]_dwelling in/on/at/with÷ˊArōˊēr and=unto Nebo and÷Baˊal- meon.
+\v 8 And÷Belaˊ the_son_of Azaz the_son_of Shemaˊ the_son_of Yō\sup ʼēl\sup* he [was]_dwelling in/on/at/with÷ˊArōˊēr and=unto Nəⱱō and÷Baˊal- meon.
 \v 9 And÷to_the÷east he_dwelt to mmm\f + \fr 5:9 \ft Exegesis note: WLC has this word divided as לְב֣וֹא\f* wilderness÷into to÷of the=river Fərāt if/because livestock_of÷their they_had_increased in=land of_Gilˊād.
 \v 10 And÷in/on/at/with÷days_of Shāʼūl they_made war with the÷Hagrites and=they_fell in/on/at/with÷hand_of÷their and=they_lived in/on/at/with÷tents_of÷their on all_of [the]_face_of [the]_east of_the÷Gilˊād.
 \v 11 and=the_sons of_Gād to÷near÷them they_dwelt in=land the÷Bāshān to Şalkāh.
@@ -222,36 +222,36 @@
 \v 27 \f + \fr 5:27 \ft Note: KJB: 1Chr.6.1\f* the_sons_of Lēvīh [were]_Gershon Kohath and÷Merari.
 \v 28 \f + \fr 5:28 \ft Note: KJB: 1Chr.6.2\f* and=the_sons of_Kohath [were]_ˊAmrām Izhar and÷Ḩeⱱrōn and÷ˊUzziy\sup ʼēl\sup*.
 \v 29 \f + \fr 5:29 \ft Note: KJB: 1Chr.6.3\f* and=the_sons of_ˊAmrām [were]_ʼAhₐron and÷Mosheh and÷Miryām and=the_sons of_ʼAhₐron [were]_Nādāⱱ and÷ʼAⱱīhūʼ ʼElˊāzār and÷Ithamar.
-\v 30 \f + \fr 5:30 \ft Note: KJB: 1Chr.6.4\f* ʼElˊāzār he_fathered DOM Fīnəḩāş Fīnəḩāş he_fathered DOM Abishua.
-\v 31 \f + \fr 5:31 \ft Note: KJB: 1Chr.6.5\f* and÷Abishua he_fathered DOM Bukki and÷Bukki he_fathered DOM Uzzi.
-\v 32 \f + \fr 5:32 \ft Note: KJB: 1Chr.6.6\f* and÷Uzzi he_fathered DOM Zeraḩiah and÷Zeraḩiah he_fathered DOM Meraioth.
-\v 33 \f + \fr 5:33 \ft Note: KJB: 1Chr.6.7\f* Meraioth he_fathered DOM ʼAmar\sup yāh\sup* and÷ʼAmar\sup yāh\sup* he_fathered DOM ʼAḩīţūⱱ.
+\v 30 \f + \fr 5:30 \ft Note: KJB: 1Chr.6.4\f* ʼElˊāzār he_fathered DOM Pinḩāş Pinḩāş he_fathered DOM Abishua.
+\v 31 \f + \fr 5:31 \ft Note: KJB: 1Chr.6.5\f* and÷Abishua he_fathered DOM Bukki and÷Bukki he_fathered DOM ˊUzziy.
+\v 32 \f + \fr 5:32 \ft Note: KJB: 1Chr.6.6\f* and÷ˊUzziy he_fathered DOM Zeraḩiah and÷Zeraḩiah he_fathered DOM Mərāyōt.
+\v 33 \f + \fr 5:33 \ft Note: KJB: 1Chr.6.7\f* Mərāyōt he_fathered DOM ʼAmar\sup yāh\sup* and÷ʼAmar\sup yāh\sup* he_fathered DOM ʼAḩīţūⱱ.
 \v 34 \f + \fr 5:34 \ft Note: KJB: 1Chr.6.8\f* and÷ʼAḩīţūⱱ he_fathered DOM Tsādōq/(Zadok) and÷Tsādōq he_fathered DOM ʼAḩīmaˊaʦ.
-\v 35 \f + \fr 5:35 \ft Note: KJB: 1Chr.6.9\f* and÷ʼAḩīmaˊaʦ he_fathered DOM ˊAzar\sup yāh\sup* and=Azaryah he_fathered DOM Yōḩānān/(Johanan).
-\v 36 \f + \fr 5:36 \ft Note: KJB: 1Chr.6.10\f* and÷Yōḩānān he_fathered DOM ˊAzar\sup yāh\sup* he [was_the_one]_who he_served_as_a_priest in/on/at/with÷house which he_had_built Shəlomoh in/on/at/with÷Yərūshālayim/(Jerusalem).
+\v 35 \f + \fr 5:35 \ft Note: KJB: 1Chr.6.9\f* and÷ʼAḩīmaˊaʦ he_fathered DOM ˊAzar\sup yāh\sup* and=ˊAzar\sup yāh\sup* he_fathered DOM Yōḩānān/(Johanan).
+\v 36 \f + \fr 5:36 \ft Note: KJB: 1Chr.6.10\f* and÷Yōḩānān he_fathered DOM ˊAzar\sup yāh\sup* he [was_the_one]_who he_served_as_a_priest in/on/at/with÷house which he_had_built Shəlomoh in/on/at/with÷Yərūshālam/(Jerusalem).
 \v 37 \f + \fr 5:37 \ft Note: KJB: 1Chr.6.11\f* and= ˊAzar\sup yāh\sup* =he/it_fathered DOM ʼAmar\sup yāh\sup* and÷ʼAmar\sup yāh\sup* he_fathered DOM ʼAḩīţūⱱ.
 \v 38 \f + \fr 5:38 \ft Note: KJB: 1Chr.6.12\f* and÷ʼAḩīţūⱱ he_fathered DOM Tsādōq and÷Tsādōq he_fathered DOM Shallūm.
 \v 39 \f + \fr 5:39 \ft Note: KJB: 1Chr.6.13\f* and÷Shallūm he_fathered DOM Ḩilqiy\sup yāh\sup* and÷Ḩilqiy\sup yāh\sup* he_fathered DOM ˊAzar\sup yāh\sup*.
-\v 40 \f + \fr 5:40 \ft Note: KJB: 1Chr.6.14\f* and=Azaryah he_fathered DOM Sərā\sup yāh\sup* and÷Sərā\sup yāh\sup* he_fathered DOM Yəhōʦādāq/(Jehozadak).
-\v 41 \f + \fr 5:41 \ft Note: KJB: 1Chr.6.15\f* and÷Yəhōʦādāq he_went in/on/at/with÷sent_intoexile \nd YHWH\nd* DOM Yəhūdāh/(Judah) and÷Yərūshālayim in/on/at/with÷hand_of Nəⱱūkadneʦʦar.
+\v 40 \f + \fr 5:40 \ft Note: KJB: 1Chr.6.14\f* and=ˊAzar\sup yāh\sup* he_fathered DOM Sərā\sup yāh\sup* and÷Sərā\sup yāh\sup* he_fathered DOM Yəhōʦādāq/(Jehozadak).
+\v 41 \f + \fr 5:41 \ft Note: KJB: 1Chr.6.15\f* and÷Yəhōʦādāq he_went in/on/at/with÷sent_intoexile \nd YHWH\nd* DOM Yəhūdāh/(Judah) and÷Yərūshālam in/on/at/with÷hand_of Nəⱱūkadneʦʦar.
 \c 6
 \v 1 \f + \fr 6:1 \ft Note: KJB: 1Chr.6.16\f* the_sons_of Lēvīh [were]_Gērəshom Kohath and÷Merari.
 \v 2 \f + \fr 6:2 \ft Note: KJB: 1Chr.6.17\f* and=these [are]_the_names_of the_sons_of Gērəshom Libni and÷Shimˊī.
 \v 3 \f + \fr 6:3 \ft Note: KJB: 1Chr.6.18\f* and=the_sons of_Kohath [were]_ˊAmrām and÷Izhar and÷Ḩeⱱrōn and÷ˊUzziy\sup ʼēl\sup*.
 \v 4 \f + \fr 6:4 \ft Note: KJB: 1Chr.6.19\f* the_sons_of Merari [were]_Mahli and÷Mushi and=these [are]_the_clans_of the÷Lēviyyiy according_to÷fathers_of÷their.
 \v 5 \f + \fr 6:5 \ft Note: KJB: 1Chr.6.20\f* of÷Gērəshom Libni son_of÷his Jahath his/its=son Zimmah son_of÷his.
-\v 6 \f + \fr 6:6 \ft Note: KJB: 1Chr.6.21\f* Yōʼāḩ/(Joah) his/its=son ˊDdō son_of÷his Zeraḩ his/its=son Jeatherai his/its=son.
+\v 6 \f + \fr 6:6 \ft Note: KJB: 1Chr.6.21\f* Yōʼāḩ/(Joah) his/its=son ˊIddō son_of÷his Zeraḩ his/its=son Jeatherai his/its=son.
 \v 7 \f + \fr 6:7 \ft Note: KJB: 1Chr.6.22\f* the_sons_of Kohath [were]_ˊAmminādāⱱ his/its=son Qoraḩ his/its=son Assir his/its=son.
 \v 8 \f + \fr 6:8 \ft Note: KJB: 1Chr.6.23\f* ʼElqānāh son_of÷his and÷Ebiasaph his/its=son and÷Assir his/its=son.
-\v 9 \f + \fr 6:9 \ft Note: KJB: 1Chr.6.24\f* Tahath his/its=son Uriel his/its=son ˊUzziy\sup yāh\sup* son_of÷his and÷Shaul his/its=son.
+\v 9 \f + \fr 6:9 \ft Note: KJB: 1Chr.6.24\f* Tahath his/its=son Uriel his/its=son ˊUzziy\sup yāh\sup* son_of÷his and÷Shāʼūl his/its=son.
 \v 10 \f + \fr 6:10 \ft Note: KJB: 1Chr.6.25\f* and=the_sons of_ʼElqānāh [were]_ˊAmāsāʼi and÷Ahimoth.
 \v 11 \f + \fr 6:11 \ft Note: KJB: 1Chr.6.26\f* ʼElqānāh mmm\f + \fr 6:11 \ft Variant note: בנ/ו: (x-qere) 'בְּנֵי֙': lemma=1121 a n=0.1.0 morph=HNcmpc id=13cnB בְּנֵי֙\f* ʼElqānāh Zophai his/its=son and÷Nahath his/its=son.
 \v 12 \f + \fr 6:12 \ft Note: KJB: 1Chr.6.27\f* ʼElīʼāⱱ his/its=son Yəroḩām/(Jeroham) his/its=son ʼElqānāh son_of÷his.
-\v 13 \f + \fr 6:13 \ft Note: KJB: 1Chr.6.28\f* and=the_sons of_Shəmū\sup ʼēl\sup* the÷firstborn Vashni and÷ʼAⱱīāh.
+\v 13 \f + \fr 6:13 \ft Note: KJB: 1Chr.6.28\f* and=the_sons of_Shəmū\sup ʼēl\sup* the÷firstborn Vashni and÷ʼAⱱiy\sup yāh\sup*.
 \v 14 \f + \fr 6:14 \ft Note: KJB: 1Chr.6.29\f* the_sons_of Merari [were]_Mahli Libni son_of÷his Shimˊī son_of÷his ˊUzzāʼ son_of÷his.
 \v 15 \f + \fr 6:15 \ft Note: KJB: 1Chr.6.30\f* Shimea son_of÷his Haggiah son_of÷his ˊAsā\sup yāh\sup* son_of÷his.
 \v 16 \f + \fr 6:16 \ft Note: KJB: 1Chr.6.31\f* and=these [are_those]_whom he_appointed Dāvid over [the]_hands_of song the_house_of \nd YHWH\nd* after÷rest_of the÷ark.
-\v 17 \f + \fr 6:17 \ft Note: KJB: 1Chr.6.32\f* and=they_were serving to=(the)_face_of/in_front_of/before the_tabernacle_of the_tent_of meeting in/on/at/with÷song until built Shəlomoh DOM the_house_of \nd YHWH\nd* in/on/at/with÷Yərūshālayim/(Jerusalem) and÷performed according_to÷order_of÷their on service_of÷their.
+\v 17 \f + \fr 6:17 \ft Note: KJB: 1Chr.6.32\f* and=they_were serving to=(the)_face_of/in_front_of/before the_tabernacle_of the_tent_of meeting in/on/at/with÷song until built Shəlomoh DOM the_house_of \nd YHWH\nd* in/on/at/with÷Yərūshālam/(Jerusalem) and÷performed according_to÷order_of÷their on service_of÷their.
 \v 18 \f + \fr 6:18 \ft Note: KJB: 1Chr.6.33\f* and=these the÷served and÷sons_of÷their from=(the)_sons the÷Qₑhātī Hēymān the÷singer the_son_of Yō\sup ʼēl\sup*/(Joel) the_son_of Shəmū\sup ʼēl\sup*.
 \v 19 \f + \fr 6:19 \ft Note: KJB: 1Chr.6.34\f* the_son_of ʼElqānāh the_son_of Yəroḩām the_son_of Eliel the_son_of Toah.
 \v 20 \f + \fr 6:20 \ft Note: KJB: 1Chr.6.35\f* the_son_of Tsūf/(Zuph)\f + \fr 6:20 \ft Variant note: ציף: (x-qere) 'צוּף֙': lemma=6689 n=0.1.0 morph=HNp id=13896 צוּף֙\f* the_son_of ʼElqānāh the_son_of Mahath the_son_of ˊAmāsāʼi.
@@ -263,15 +263,15 @@
 \v 26 \f + \fr 6:26 \ft Note: KJB: 1Chr.6.41\f* the_son_of Ethni the_son_of Zeraḩ the_son_of ˊAdā\sup yāh\sup*.
 \v 27 \f + \fr 6:27 \ft Note: KJB: 1Chr.6.42\f* the_son_of ʼĒytān the_son_of Zimmah the_son_of Shimˊī.
 \v 28 \f + \fr 6:28 \ft Note: KJB: 1Chr.6.43\f* the_son_of Jahath the_son_of Gērəshom the_son_of Lēvīh.
-\v 29 \f + \fr 6:29 \ft Note: KJB: 1Chr.6.44\f* and=the_sons of_Merari brothers_of÷their [were]_at the÷left ʼĒytān the_son_of Kishi the_son_of Abdi the_son_of Malluch.
+\v 29 \f + \fr 6:29 \ft Note: KJB: 1Chr.6.44\f* and=the_sons of_Merari brothers_of÷their [were]_at the÷left ʼĒytān the_son_of Kishi the_son_of Abdi the_son_of Mallūk.
 \v 30 \f + \fr 6:30 \ft Note: KJB: 1Chr.6.45\f* the_son_of Ḩₐshaⱱ\sup yāh\sup* the_son_of ʼAmaʦ\sup yāh\sup* the_son_of Ḩilqiy\sup yāh\sup*.
-\v 31 \f + \fr 6:31 \ft Note: KJB: 1Chr.6.46\f* the_son_of Amzi the_son_of Bānī the_son_of Shemer.
+\v 31 \f + \fr 6:31 \ft Note: KJB: 1Chr.6.46\f* the_son_of ʼAmʦī the_son_of Bānī the_son_of Shemer.
 \v 32 \f + \fr 6:32 \ft Note: KJB: 1Chr.6.47\f* the_son_of Mahli the_son_of Mushi the_son_of Merari the_son_of Lēvīh.
 \v 33 \f + \fr 6:33 \ft Note: KJB: 1Chr.6.48\f* and÷brothers_of÷their the÷Lēviyyiy [were]_assigned to/from=all/each/any/every the_service_of the_tabernacle_of the_house_of the=ʼElohīm.
 \v 34 \f + \fr 6:34 \ft Note: KJB: 1Chr.6.49\f* and÷ʼAhₐron and÷sons_of÷his [were]_making_smoke on the_altar_of the÷burnt_offering and÷on the_altar_of the÷incense to=all/each/any/every the_work_of the_holy_place_of the÷holy_places and÷to÷make_atonement on Yisrā\sup ʼēl\sup*/(Israel) according_to÷all that he_had_commanded Mosheh the_servant_of the=ʼElohīm.
-\v 35 \f + \fr 6:35 \ft Note: KJB: 1Chr.6.50\f* and=these [are]_the_descendants_of ʼAhₐron ʼElˊāzār his/its=son Fīnəḩāş his/its=son Abishua his/its=son.
-\v 36 \f + \fr 6:36 \ft Note: KJB: 1Chr.6.51\f* Bukki son_of÷his Uzzi son_of÷his Zeraḩiah son_of÷his.
-\v 37 \f + \fr 6:37 \ft Note: KJB: 1Chr.6.52\f* Meraioth his/its=son ʼAmar\sup yāh\sup* son_of÷his ʼAḩīţūⱱ his/its=son.
+\v 35 \f + \fr 6:35 \ft Note: KJB: 1Chr.6.50\f* and=these [are]_the_descendants_of ʼAhₐron ʼElˊāzār his/its=son Pinḩāş his/its=son Abishua his/its=son.
+\v 36 \f + \fr 6:36 \ft Note: KJB: 1Chr.6.51\f* Bukki son_of÷his ˊUzziy son_of÷his Zeraḩiah son_of÷his.
+\v 37 \f + \fr 6:37 \ft Note: KJB: 1Chr.6.52\f* Mərāyōt his/its=son ʼAmar\sup yāh\sup* son_of÷his ʼAḩīţūⱱ his/its=son.
 \v 38 \f + \fr 6:38 \ft Note: KJB: 1Chr.6.53\f* Tsādōq/(Zadok) his/its=son ʼAḩīmaˊaʦ his/its=son.
 \v 39 \f + \fr 6:39 \ft Note: KJB: 1Chr.6.54\f* and=these settlements_of÷their according_to÷settlements_of÷their in/on/at/with÷borders_of÷their to÷sons_of ʼAhₐron of÷families_of the÷Qₑhātī if/because to/for=them it_belonged the÷lot.
 \v 40 \f + \fr 6:40 \ft Note: KJB: 1Chr.6.55\f* and÷gave to/for=them DOM Ḩeⱱrōn in=land of_Yəhūdāh/(Judah) and=DOM pasturelands_of÷its surrounding_of÷its.
@@ -303,13 +303,13 @@
 \v 66 \f + \fr 6:66 \ft Note: KJB: 1Chr.6.81\f* and=DOM Ḩeshbōn and=DOM pasturelands_of÷its and=DOM Yaˊzēr/(Jazer) and=DOM pasturelands_of÷its.
 \c 7
 \v 1 and÷to÷sons_of Yissāskār/(Issachar) Tōlāˊ and÷Pūˊāh Jashub\f + \fr 7:1 \ft Variant note: ישיב: (x-qere) 'יָשׁ֥וּב': lemma=3437 morph=HNp id=13D5E יָשׁ֥וּב\f* and÷Shimrōn four.
-\v 2 and=the_sons of_Tōlāˊ [were]_Uzzi and÷Rəfā\sup yāh\sup* and÷Jeriel and÷Jahmai and÷Ibsam and÷Shemuel heads of÷houses_of fathers'_of÷their of÷Tōlāˊ mighty_[men]_of strength in÷generations_of÷their number_of÷their in/on/at/with÷days_of Dāvid [was]_twenty and÷two thousand and÷six hundred(s).
-\v 3 and=the_sons of_Uzzi [were]_Izrahiah and=the_sons [were]_Izrahiah Mīkā\sup ʼēl\sup* and÷ˊOⱱad\sup yāh\sup* and÷Yō\sup ʼēl\sup*/(Joel) Isshiah five [were]_chiefs all_of÷them.
+\v 2 and=the_sons of_Tōlāˊ [were]_ˊUzziy and÷Rəfā\sup yāh\sup* and÷Jeriel and÷Jahmai and÷Ibsam and÷Shemuel heads of÷houses_of fathers'_of÷their of÷Tōlāˊ mighty_[men]_of strength in÷generations_of÷their number_of÷their in/on/at/with÷days_of Dāvid [was]_twenty and÷two thousand and÷six hundred(s).
+\v 3 and=the_sons of_ˊUzziy [were]_Yizraḩ\sup yāh\sup*/(Izrahiah) and=the_sons [were]_Yizraḩ\sup yāh\sup*/(Izrahiah) Mīkā\sup ʼēl\sup* and÷ˊOⱱad\sup yāh\sup* and÷Yō\sup ʼēl\sup*/(Joel) Isshiah five [were]_chiefs all_of÷them.
 \v 4 And÷along_with÷them according_to÷generations_of÷their according_to÷houses_of ancestral_of÷their troops_of war_of warfare thirty and÷six thousand if/because they_had_many wives and÷sons.
 \v 5 And÷relatives_of÷their to=all/each/any/every the_clans_of Yissāskār [were]_mighty_[men]_of strength(s) eighty and=seven thousand enrolled_by_genealogy÷their in_the÷all.
 \v 6 Binyāmīn [were]_Belaˊ and÷Becher and÷Jediael three.
-\v 7 And=the_sons of_Belaˊ [were]_Ezbon and÷Uzzi and÷ˊUzziy\sup ʼēl\sup* and÷Jerimoth and÷Iri five heads_of a_house_of fathers mighty_[men]_of strength(s) and÷enrollment_by_genealogies÷their [was]_twenty and÷two thousand and=thirty and÷four.
-\v 8 and=the_sons of_Beker [were]_Zemirah and÷Yōʼāsh/(Joash) and÷ʼElīˊezer and÷Elioenai and÷ˊĀmərī and÷Jeremoth and÷ʼAⱱīāh and÷ˊAntotī and÷Alemeth all_of these [were]_the_sons_of Beker.
+\v 7 And=the_sons of_Belaˊ [were]_Ezbon and÷ˊUzziy and÷ˊUzziy\sup ʼēl\sup* and÷Jerimoth and÷Iri five heads_of a_house_of fathers mighty_[men]_of strength(s) and÷enrollment_by_genealogies÷their [was]_twenty and÷two thousand and=thirty and÷four.
+\v 8 and=the_sons of_Beker [were]_Zemirah and÷Yōʼāsh/(Joash) and÷ʼElīˊezer and÷ʼElyəhōˊēynay and÷ˊĀmərī and÷Jeremoth and÷ʼAⱱiy\sup yāh\sup* and÷ˊAntotī and÷Alemeth all_of these [were]_the_sons_of Beker.
 \v 9 And÷enrollment_by_genealogies÷their according_to÷generations_of÷their the_heads_of the_house_of ancestral_of÷their mighty_[men]_of strength [was]_twenty thousand and÷hundred.
 \v 10 and=the_sons of_Jediael [were]_Bilhan and=the_sons of_Bilhan Jeush\f + \fr 7:10 \ft Variant note: יעיש: (x-qere) 'יְע֡וּשׁ': lemma=3266 n=0.1.0.1 morph=HNp id=13tTX יְע֡וּשׁ\f* and÷Binyāmīn and÷ʼĒhūd and÷Kənaˊₐnāh/(Chenaanah) and÷Zethan and=Tarshiysh and÷Ahishahar.
 \v 11 All_of these [were]_the_sons_of Jediael according_to÷heads_of the÷families mighty_[men]_of strength(s) seven- teen thousand and=two_hundreds [were]_going_forth_of war to_the÷war.
@@ -322,7 +322,7 @@
 \v 18 And÷sister_of÷his the÷Hammolecheth she_bore DOM Ishhod and=DOM ʼAⱱīˊezr and=DOM Mahlah.
 \v 19 And= the_sons_of =they_were of_Shemida Ahian and÷Shəkem and÷Likhi and÷Aniam.
 \v 20 and=the_sons of_ʼEfrayim [were]_Shuthelah and÷Bered his/its=son and÷Tahath his/its=son and÷Eleadah son_of÷his and÷Tahath his/its=son.
-\v 21 And÷Zabad his/its=son and÷Shuthelah his/its=son and÷ʼEʦer and÷Elead and÷killed÷them the_men_of Gat the÷born on_the=earth if/because they_went_down to=take/accept/receive DOM livestock_of÷their.
+\v 21 And÷Zabad his/its=son and÷Shuthelah his/its=son and÷ˊEzer and÷Elead and÷killed÷them the_men_of Gat the÷born on_the=earth if/because they_went_down to=take/accept/receive DOM livestock_of÷their.
 \v 22 And= ʼEfrayim =mourned father_of÷their days many relatives_of÷his and=they_came to÷comfort÷him.
 \v 23 And÷went_in into his/its=wife/woman and=she/it_conceived/became_pregnant and=she/it_gave_birth a_son and=he/it_called DOM his/its=name Beriah if/because in/on/at/with÷misfortune it_was in/on/at/with÷house_of÷his.
 \v 24 And÷daughter_of÷his [was]_Sheerah and÷built DOM Bēyt Ḩōrōn the÷lower and=DOM the÷upper and=DOM Uzzen Sheerah.
@@ -355,55 +355,55 @@
 \v 10 And=DOM Jeuz and=DOM Sakia and=DOM Mirmah these sons_of÷his [the]_heads_of fathers.
 \v 11 And÷by÷Hushim he_fathered DOM Abitub and=DOM Elpaal.
 \v 12 And=the_sons of_Elpaal [were]_ˊĒⱱēr and÷Misham and÷Shemed he he_built DOM ʼŌnō and=DOM Lod and÷towns_of÷its.
-\v 13 And÷Beriah and÷Shema they [were]_the_heads_of the÷families of÷inhabitants_of of_ʼAyyālōn they they_put_to_flight DOM the_inhabitants_of Gat.
+\v 13 And÷Beriah and÷Shemaˊ they [were]_the_heads_of the÷families of÷inhabitants_of of_ʼAyyālōn they they_put_to_flight DOM the_inhabitants_of Gat.
 \v 14 And÷ʼAḩyō Shashak and÷Jeremoth.
 \v 15 And÷Zebadiah and÷ˊArād and÷Eder.
 \v 16 And÷Mīkā\sup ʼēl\sup* and÷Ishpah and÷Joha [were]_the_sons_of Beriah.
 \v 17 And÷Zebadiah and÷Məshullām and÷Hizki and÷Ḩeⱱer.
 \v 18 And÷Yishməray/(Ishmerai) and÷Izliah and÷Yōⱱāⱱ [were]_the_sons_of Elpaal.
-\v 19 And÷Jakim and÷Zichri and÷Zaⱱdiy.
+\v 19 And÷Jakim and÷Zikrī and÷Zaⱱdiy.
 \v 20 And÷Elienai and÷Zillethai and÷Eliel.
 \v 21 And÷ˊAdā\sup yāh\sup* and÷Beraiah and÷Shimrath [were]_the_sons_of Shimˊī.
 \v 22 And÷Ishpan and÷ˊĒⱱēr and÷Eliel.
-\v 23 And÷ˊAⱱdōn and÷Zichri and÷Ḩānān.
+\v 23 And÷ˊAⱱdōn and÷Zikrī and÷Ḩānān.
 \v 24 And÷Ḩₐnan\sup yāh\sup* and÷ˊĒylām and÷Anthothijah.
 \v 25 And÷Iphdeiah and÷Pənū\sup ʼēl\sup*\f + \fr 8:25 \ft Variant note: ו/פניאל: (x-qere) 'וּ/פְנוּאֵ֖ל': lemma=c/6439 n=0.0 morph=HC/Np id=13KVb וּ/פְנוּאֵ֖ל\f* [were]_the_sons_of Shashak.
 \v 26 And÷Shamsherai and÷Shehariah and÷ˊAtal\sup yāh\sup*.
-\v 27 And÷Jaareshiah and÷ʼĒliy\sup yāh\sup* and÷Zichri [were]_the_sons_of Yəroḩām/(Jeroham).
-\v 28 These [were_the]_heads_of fathers according_to÷generations_of÷their chiefs these they_dwelt in/on/at/with÷Yərūshālayim/(Jerusalem).
+\v 27 And÷Jaareshiah and÷ʼĒliy\sup yāh\sup* and÷Zikrī [were]_the_sons_of Yəroḩām/(Jeroham).
+\v 28 These [were_the]_heads_of fathers according_to÷generations_of÷their chiefs these they_dwelt in/on/at/with÷Yərūshālam/(Jerusalem).
 \v 29 and÷in/on/at/with÷Giⱱˊōn the_father_of they_dwelt of_Giⱱˊōn and=name_of his/its=wife/woman [was]_Maˊₐkāh.
 \v 30 And÷son_of÷his the÷firstborn [was]_ˊAⱱdōn and÷Tsūr/(Zur) and÷Qīsh and÷Baˊal and÷Nādāⱱ.
 \v 31 And÷Gedor and÷ʼAḩyō and÷Zecher.
-\v 32 And÷Mikloth he_fathered DOM Shimˊāh and÷also they before relatives_of÷their they_dwelt in/on/at/with÷Yərūshālayim with kinsmen_of÷their.
+\v 32 And÷Mikloth he_fathered DOM Shimˊāh and÷also they before relatives_of÷their they_dwelt in/on/at/with÷Yərūshālam with kinsmen_of÷their.
 \v 33 and÷Nēr he_fathered DOM Qīsh and÷Qīsh he_fathered DOM Shāʼūl and÷Shāʼūl he_fathered DOM Yōnātān/(Jonathan) and=DOM Malki- Shūˊa and=DOM Abinadab and=DOM Eshbaal.
 \v 34 And÷son_of Yōnātān [was] Meribbaal and÷Merib- baal he_fathered DOM Mīkāh.
 \v 35 and=the_sons of_Mīkāh [were]_Pithon and÷Melek and÷Tarea and÷ʼĀḩāz.
 \v 36 And÷ʼĀḩāz he_fathered DOM Jehoaddah and÷Jehoaddah he_fathered DOM Alemeth and=DOM ˊAzmāvet and=DOM Zimrī and÷Zimrī he_fathered DOM Moza.
 \v 37 And÷Moza he_fathered DOM Binea Raphah son_of÷his Eleasah son_of÷his Azel his/its=son.
-\v 38 And÷had÷Azel six sons and=these names_of÷their Azrikam Bocheru and÷Yishmāˊēʼl/(Ishmael) and÷Sheariah and÷ˊOⱱad\sup yāh\sup* and÷Ḩānān all_of these [were]_the_sons_of Azel.
+\v 38 And÷had÷Azel six sons and=these names_of÷their ˊAzrīqām Bocheru and÷Yishmāˊ\sup ʼēl\sup*/(Ishmael) and÷Sheariah and÷ˊOⱱad\sup yāh\sup* and÷Ḩānān all_of these [were]_the_sons_of Azel.
 \v 39 And=the_sons of_Eshek his/its=woman [was]_Ulam his/its=firstborn [was]_Jeush the=second and÷ʼElīfeleţ the÷third.
 \v 40 And= the_sons_of =were of_Ulam men mighty_of strength (of)_a_bow [who]_bent_of and÷had_many children and=the_sons children one_hundred and÷fifty all_of these from=(the)_sons of_Binyāmīn.
 \c 9
-\v 1 and=all Yisrā\sup ʼēl\sup*/(Israel) they_had_themselves_enrolled and÷see÷they [are]_written on the_scroll_of the_kings_of Yisrā\sup ʼēl\sup*/(Israel) and=Yihudah they_were_taken_into_exile to÷Bāⱱel in/on/at/with÷unfaithfulness_of÷their.
+\v 1 and=all Yisrā\sup ʼēl\sup*/(Israel) they_had_themselves_enrolled and÷see÷they [are]_written on the_scroll_of the_kings_of Yisrā\sup ʼēl\sup*/(Israel) and=Yəhūdāh/(Yihudah) they_were_taken_into_exile to÷Bāⱱel in/on/at/with÷unfaithfulness_of÷their.
 \v 2 and÷the÷live the÷first who in/on/at/with÷property_of÷their in/on/at/with÷towns_of÷their [were]_Yisrā\sup ʼēl\sup*/(Israel) the÷priests the÷Lēviyyiy and÷the÷temple_servants.
-\v 3 And÷in/on/at/with÷Yərūshālayim/(Jerusalem) they_dwelt some_of the_descendants_of Yəhūdāh/(Judah) and=from the_descendants_of Binyāmīn and=from the_descendants_of ʼEfrayim and÷Mənashsheh.
+\v 3 And÷in/on/at/with÷Yərūshālam/(Jerusalem) they_dwelt some_of the_descendants_of Yəhūdāh/(Judah) and=from the_descendants_of Binyāmīn and=from the_descendants_of ʼEfrayim and÷Mənashsheh.
 \v 4 Uthai the_son_of Ammihud the_son_of ˊĀmərī the_son_of ʼImrī the_son_of mmm\f + \fr 9:4 \ft Variant note: בני/מן: (x-qere) 'בָּנִ֔י': lemma=1137 n=0.1 morph=HNp id=132VQ בָּנִ֔י 'מִן': lemma=4480 a morph=HR id=13gJa מִן\f* the_descendants_of Fereʦ the_son_of Yəhūdāh.
 \v 5 And=from the÷Shilōnīs ˊAsā\sup yāh\sup* the÷firstborn and÷sons_of÷his.
 \v 6 And=from the_descendants_of Zeraḩ Jeuel and÷relatives_of÷their six hundred(s) and=ninety.
-\v 7 And=from the_descendants_of Binyāmīn Sallu the_son_of Məshullām the_son_of Hōdav\sup yāh\sup* the_son_of the÷Hassenuah.
-\v 8 And÷Ibneiah the_son_of Yəroḩām/(Jeroham) and÷ʼĒlāh the_son_of Uzzi the_son_of Mikri and÷Məshullām the_son_of Shəfaţ\sup yāh\sup* the_son_of Rəˊū\sup ʼēl\sup* the_son_of Ibnijah.
+\v 7 And=from the_descendants_of Binyāmīn Şallū the_son_of Məshullām the_son_of Hōdav\sup yāh\sup* the_son_of the÷Şənūʼāh.
+\v 8 And÷Ibneiah the_son_of Yəroḩām/(Jeroham) and÷ʼĒlāh the_son_of ˊUzziy the_son_of Mikri and÷Məshullām the_son_of Shəfaţ\sup yāh\sup* the_son_of Rəˊū\sup ʼēl\sup* the_son_of Ibnijah.
 \v 9 And÷relatives_of÷their according_to÷generations_of÷their nine hundred(s) and÷fifty and÷six all_of these men [were]_heads_of fathers according_to÷houses_of fathers'_of÷their.
 \v 10 and=from the÷priests Yədaˊ\sup yāh\sup*/(Jedaiah) and÷Jehoiarib and÷Yākīn/(Jachin).
-\v 11 And=Azaryah the_son_of Ḩilqiy\sup yāh\sup* the_son_of Məshullām the_son_of Tsādōq/(Zadok) the_son_of Meraioth the_son_of ʼAḩīţūⱱ the_leader_of the_house_of the=ʼElohīm.
+\v 11 And=ˊAzar\sup yāh\sup* the_son_of Ḩilqiy\sup yāh\sup* the_son_of Məshullām the_son_of Tsādōq/(Zadok) the_son_of Mərāyōt the_son_of ʼAḩīţūⱱ the_leader_of the_house_of the=ʼElohīm.
 \v 12 and÷ˊAdā\sup yāh\sup* the_son_of Yəroḩām the_son_of Fashḩūr the_son_of Malkīy\sup yāh\sup* and÷Maasai the_son_of Adiel the_son_of Jahzerah the_son_of Məshullām the_son_of Meshillemith the_son_of ʼImmēr.
 \v 13 And÷kinsmen_of÷their heads of÷houses_of ancestral_of÷their one_thousand and=seven hundred(s) and=sixty (the)_mighty_[men]_of (the)_ability_of the_work_of the_service_of the_house_of the=ʼElohīm.
-\v 14 And=from the÷Lēviyyiy Shəmaˊ\sup yāh\sup* the_son_of Ḩashshəūⱱ the_son_of Azrikam the_son_of Ḩₐshaⱱ\sup yāh\sup* of the_descendants_of Merari.
-\v 15 And÷Bakbakkar Ḩereşh and÷Galal and÷Mattan\sup yāh\sup* the_son_of Mīkəʼ the_son_of Zikri the_son_of ʼĀşāf.
-\v 16 And÷ˊOⱱad\sup yāh\sup* the_son_of Shəmaˊ\sup yāh\sup* the_son_of Galal the_son_of Jeduthun and÷Berek\sup yāh\sup* the_son_of ʼĀşāʼ the_son_of ʼElqānāh the÷lived in/on/at/with÷villages_of [the]_Nəţofātī[s].
+\v 14 And=from the÷Lēviyyiy Shəmaˊ\sup yāh\sup* the_son_of Ḩashshəūⱱ the_son_of ˊAzrīqām the_son_of Ḩₐshaⱱ\sup yāh\sup* of the_descendants_of Merari.
+\v 15 And÷Bakbakkar Ḩereşh and÷Gālāl and÷Mattan\sup yāh\sup* the_son_of Mīkəʼ the_son_of Zikrī the_son_of ʼĀşāf.
+\v 16 And÷ˊOⱱad\sup yāh\sup* the_son_of Shəmaˊ\sup yāh\sup* the_son_of Gālāl the_son_of Yədūtūn/(Jeduthun) and÷Berek\sup yāh\sup* the_son_of ʼĀşāʼ the_son_of ʼElqānāh the÷lived in/on/at/with÷villages_of [the]_Nəţofātī[s].
 \v 17 And÷the÷gatekeepers [were]_Shallūm and÷ˊAqqūⱱ and÷Ţalmōn and÷ʼAḩīman and÷relatives_of÷their Shallūm the÷chief.
 \v 18 And=unto now in/on/at/with÷gate_of the=king east÷on they the÷gatekeepers of÷camp_of of_the_descendants_of of_Lēvīh.
 \v 19 And÷Shallūm the_son_of Kore the_son_of Ebiasaph the_son_of Qoraḩ and÷relatives_of÷his of÷house_of his/its=father the÷Qoraḩites [were]_over the_work_of the÷service the_keepers_of the÷thresholds of_the÷tent and÷fathers_of÷their [had_been]_over the_camp_of \nd YHWH\nd* the_keepers_of the÷entrance.
-\v 20 And÷Fīnəḩāş the_son_of ʼElˊāzār a_leader he_had_been over÷them in÷former \nd YHWH\nd* with=him/it.
+\v 20 And÷Pinḩāş the_son_of ʼElˊāzār a_leader he_had_been over÷them in÷former \nd YHWH\nd* with=him/it.
 \v 21 Zəkar\sup yāh\sup* the_son_of Meshelemiah [was]_a_gatekeeper the_entrance to÷tent_of meeting.
 \v 22 All_of÷these the÷chosen as÷gatekeepers in/on/at/with÷thresholds [were]_two_hundred and÷two ten they in/on/at/with÷villages_of÷their enrolled_by_genealogies them Dāvid he_had_appointed and÷Shəmū\sup ʼēl\sup* the÷seer in/on/at/with÷trust_of÷their.
 \v 23 And÷they and÷sons_of÷their [were]_over the÷gates of÷house_of of_\nd YHWH\nd* at÷house_of the÷tent as÷guards.
@@ -414,20 +414,20 @@
 \v 28 And÷some_of÷them [were]_over the_articles_of the÷service if/because in/on/at/with÷count brought_in÷them and÷in/on/at/with÷count taken_out÷them.
 \v 29 And÷some_of÷them [were]_appointed over the=vessels and÷over all_of the_articles_of the÷sanctuary and÷over the÷fine_flour and÷the÷wine and÷the÷oil and÷the÷incense and÷the÷spices.
 \v 30 And=from the_sons_of the÷priests [were_those_who]_mixed_of the÷mixing of_the÷spices.
-\v 31 And÷Mattithiah one_of the÷Lēviyyiy he the÷firstborn of÷Shallūm the÷Qoraḩite in/on/at/with÷entrusted [was]_over the_work_of the÷flat_cakes.
+\v 31 And÷Mattit\sup yāh\sup* one_of the÷Lēviyyiy he the÷firstborn of÷Shallūm the÷Qoraḩite in/on/at/with÷entrusted [was]_over the_work_of the÷flat_cakes.
 \v 32 And=from the_sons_of the÷Qₑhātī some_of relatives_of÷their [were]_over the_bread_of the÷rows to÷prepare sabbath_of sabbath.
 \v 33 and=these the÷singers [the]_heads_of fathers of_the÷Lēviyyiy in/on/at/with÷chambers let_go_off_duty\f + \fr 9:33 \ft Variant note: פטירים: (x-qere) 'פְּטוּרִ֑ים': lemma=6362 n=1 morph=HVqsmpa id=13oGq פְּטוּרִ֑ים\f* if/because by_day and÷night over÷they in/on/at/with÷duty.
-\v 34 These [were]_the_heads_of the÷families of_the÷Lēviyyiy according_to÷generations_of÷their chiefs these they_dwelt in/on/at/with÷Yərūshālayim/(Jerusalem).
+\v 34 These [were]_the_heads_of the÷families of_the÷Lēviyyiy according_to÷generations_of÷their chiefs these they_dwelt in/on/at/with÷Yərūshālam/(Jerusalem).
 \v 35 and÷in/on/at/with÷Giⱱˊōn the_father_of they_dwelt of_Giⱱˊōn Jeiel\f + \fr 9:35 \ft Variant note: יעואל: (x-qere) 'יְעִיאֵ֑ל': lemma=3273 n=1 morph=HNp id=13CrC יְעִיאֵ֑ל\f* and=name_of his/its=wife/woman [was]_Maˊₐkāh.
 \v 36 And÷son_of÷his the÷firstborn [was]_ˊAⱱdōn and÷Tsūr/(Zur) and÷Qīsh and÷Baˊal and÷Nēr and÷Nādāⱱ.
 \v 37 And÷Gedor and÷ʼAḩyō and÷Zəkar\sup yāh\sup* and÷Mikloth.
-\v 38 And÷Mikloth he_fathered DOM Shimeam and÷also they before relatives_of÷their they_dwelt in/on/at/with÷Yərūshālayim with relatives_of÷their.
+\v 38 And÷Mikloth he_fathered DOM Shimeam and÷also they before relatives_of÷their they_dwelt in/on/at/with÷Yərūshālam with relatives_of÷their.
 \v 39 and÷Nēr he_fathered DOM Qīsh and÷Qīsh he_fathered DOM Shāʼūl and÷Shāʼūl he_fathered DOM Yōnātān/(Jonathan) and=DOM Malki- Shūˊa and=DOM Abinadab and=DOM Eshbaal.
 \v 40 And÷son_of Yōnātān [was] Meribbaal and÷Merib- baal he_fathered DOM Mīkāh.
 \v 41 And=the_sons of_Mīkāh [were]_Pithon and÷Melek and÷Tahrea.
 \v 42 And÷ʼĀḩāz he_fathered DOM Jarah and÷Jarah he_fathered DOM Alemeth and=DOM ˊAzmāvet and=DOM Zimrī and÷Zimrī he_fathered DOM Moza.
 \v 43 And÷Moza he_fathered DOM Binea and÷Rəfā\sup yāh\sup* son_of÷his Eleasah son_of÷his Azel his/its=son.
-\v 44 And÷had÷Azel six sons and=these names_of÷their Azrikam Bocheru and÷Yishmāˊēʼl/(Ishmael) and÷Sheariah and÷ˊOⱱad\sup yāh\sup* and÷Ḩānān these [were]_the_sons_of Azel.
+\v 44 And÷had÷Azel six sons and=these names_of÷their ˊAzrīqām Bocheru and÷Yishmāˊ\sup ʼēl\sup*/(Ishmael) and÷Sheariah and÷ˊOⱱad\sup yāh\sup* and÷Ḩānān these [were]_the_sons_of Azel.
 \c 10
 \v 1 and÷Fəlishtiy they_fought in/on/at/with÷Yisrā\sup ʼēl\sup*/(Israel) and= the_man_of =fled of_Yisrā\sup ʼēl\sup*/(Israel) from=face/in_front_of [the]_Fəlishtiy and÷fell slain in/on/at/with÷mount_of Gilboˊa.
 \v 2 And= [the]_Fəlishtiy =pursued after Shāʼūl and=after sons_of÷his and= [the]_Fəlishtiy =killed DOM Yōnātān and=DOM Abinadab and=DOM Malki- Shūˊa the_sons_of Shāʼūl.
@@ -447,7 +447,7 @@
 \v 1 and= all_of =came_together Yisrā\sup ʼēl\sup*/(Israel) to Dāvid Ḩeⱱrōn÷at to=say here bone_of÷your and÷flesh_of÷your_own we.
 \v 2 Both yesterday as_well_as three_days_ago also in/on/at/with÷was Shāʼūl king you the÷led_out and÷the÷brought_in DOM Yisrā\sup ʼēl\sup*/(Israel) and= \nd YHWH\nd* =he/it_said god_of÷your to/for=yourself(m) you you_will_shepherd DOM people_of÷my DOM Yisrā\sup ʼēl\sup*/(Israel) and=you(ms) you_will_be ruler over people_of÷my Yisrā\sup ʼēl\sup*/(Israel).
 \v 3 And= all_of =they_came the_elders_of Yisrā\sup ʼēl\sup*/(Israel) to the=king Ḩeⱱrōn÷at and÷made to/for=them Dāvid a_covenant in/on/at/with÷Ḩeⱱrōn to=(the)_face_of/in_front_of/before \nd YHWH\nd* and÷anointed DOM Dāvid as÷king over Yisrā\sup ʼēl\sup*/(Israel) according_to÷word_of \nd YHWH\nd* in/on/at/with÷hand_of Shəmū\sup ʼēl\sup*.
-\v 4 and= Dāvid =he/it_went and=all Yisrā\sup ʼēl\sup*/(Israel) Yərūshālayim/(Jerusalem) that [was]_Yəⱱūş/(Jebus) and=there the=Yebusi the_inhabitants_of the=earth/land.
+\v 4 and= Dāvid =he/it_went and=all Yisrā\sup ʼēl\sup*/(Israel) Yərūshālam/(Jerusalem) that [was]_Yəⱱūş/(Jebus) and=there the=Yebusi the_inhabitants_of the=earth/land.
 \v 5 And=they_said of_Yəⱱūş/(Jebus) the_inhabitants_of to÷Dāvid not you_will_come here and= Dāvid =captured DOM the_stronghold_of Tsiyyōn/(Zion) that [is]_the_city_of Dāvid.
 \v 6 And= Dāvid =he/it_said any_of [one_who]_attacks_of (of)_a_Yəⱱūşī/(Jebusite) in/on/at/with÷first he_will_become as÷commander and÷as÷chief and=he/it_ascended in/on/at/with÷first Yōʼāⱱ/(Joab) the_son_of Tsərū\sup yāh\sup*/(Zeruiah) and=he/it_was as÷chief.
 \v 7 And= Dāvid =he/it_sat_down//remained//lived in/on/at/with÷stronghold on/upon/above/on_account_of//he/it_went_in yes/correct/thus/so people_called to=him/it the_city_of Dāvid.
@@ -496,23 +496,23 @@
 \v 2 [they_were]_equipped_of bow using_right_hand and÷left in/on/at/with÷stones and÷in/on/at/with÷arrows in/on/at/with÷bow from÷kinsmen_of Shāʼūl from÷Binyāmīn.
 \v 3 The÷chief Ahiezer and÷Yōʼāsh/(Joash) the_sons_of the÷Shemaah the÷Gibeathite and÷Jeziel\f + \fr 12:3 \ft Variant note: ו/יזואל: (x-qere) 'וִ/יזִיאֵ֥ל': lemma=c/3149 morph=HC/Np id=13cLd וִ/יזִיאֵ֥ל\f* and÷Pelet the_sons_of ˊAzmāvet and÷Beracah and÷Yēhūʼ/(Jehu) the÷ˊAntotī.
 \v 4 And÷Ishmaiah the÷Giⱱˊōnite a_mighty_[man] in/on/at/with÷thirty and÷over the÷thirty.
-\v 5 \f + \fr 12:5 \ft Note: KJB: 1Chr.12.4\f* and÷Yirmə\sup yāh\sup*/(Jeremiah) and÷Yahaʦ/(Jahaz)iel and÷Yōḩānān/(Johanan) and÷Jozabad the÷Gederathite.
+\v 5 \f + \fr 12:5 \ft Note: KJB: 1Chr.12.4\f* and÷Yirmə\sup yāh\sup*/(Jeremiah) and÷Yahaʦ/(Jahaz)iel and÷Yōḩānān/(Johanan) and÷Yōzāⱱād/(Jozabad) the÷Gederathite.
 \v 6 \f + \fr 12:6 \ft Note: KJB: 1Chr.12.5\f* Eluzai and÷Jerimoth and÷Bealiah and÷Shemariah and÷Shəfaţ\sup yāh\sup* the÷Haruphite\f + \fr 12:6 \ft Variant note: ה/חריפי: (x-qere) 'הַ/חֲרוּפִֽי': lemma=d/2741 n=0 morph=HTd/Ngmsa id=13FpW הַ/חֲרוּפִֽי\f*.
-\v 7 \f + \fr 12:7 \ft Note: KJB: 1Chr.12.6\f* ʼElqānāh and÷Isshiah and÷Azarel and÷Joezer and÷Jashobeam the÷Qoraḩites.
+\v 7 \f + \fr 12:7 \ft Note: KJB: 1Chr.12.6\f* ʼElqānāh and÷Isshiah and÷ˊAzar\sup ʼēl\sup* and÷Joezer and÷Jashobeam the÷Qoraḩites.
 \v 8 \f + \fr 12:8 \ft Note: KJB: 1Chr.12.7\f* and÷Yō\sup ʼēl\sup*/(Joel)ah and÷Zebadiah the_sons_of Yəroḩām/(Jeroham) from the÷Gedor.
 \v 9 \f + \fr 12:9 \ft Note: KJB: 1Chr.12.8\f* and=from the÷Gādītes they_separated_themselves to Dāvid at_the÷stronghold wilderness÷in the_mighty_[men]_of the÷valiant men_of war for_the÷battle [who]_deployed_of (of)_shield and÷spear and÷faces_of a_lion faces_of÷whose and÷as_as÷gazelles on the÷mountains to÷swift.
-\v 10 \f + \fr 12:10 \ft Note: KJB: 1Chr.12.9\f* ʼEʦer the÷chief ˊOⱱad\sup yāh\sup* the=second ʼElīʼāⱱ the÷third.
+\v 10 \f + \fr 12:10 \ft Note: KJB: 1Chr.12.9\f* ˊĒzer the÷chief ˊOⱱad\sup yāh\sup* the=second ʼElīʼāⱱ the÷third.
 \v 11 \f + \fr 12:11 \ft Note: KJB: 1Chr.12.10\f* Mishmannah the=fourth Yirmə\sup yāh\sup* the÷fifth.
 \v 12 \f + \fr 12:12 \ft Note: KJB: 1Chr.12.11\f* Attai the=sixth Eliel the÷seventh.
 \v 13 \f + \fr 12:13 \ft Note: KJB: 1Chr.12.12\f* Yōḩānān the÷eighth Elzabad the÷ninth.
 \v 14 \f + \fr 12:14 \ft Note: KJB: 1Chr.12.13\f* Yirmə\sup yāh\sup* the÷tenth Machbannai [was_the]_one_plus_of ten.
 \v 15 \f + \fr 12:15 \ft Note: KJB: 1Chr.12.14\f* these from=(the)_sons of_Gād [were]_the_chiefs_of the÷army [was]_one for÷a_hundred the÷least and÷the÷greatest for÷a_thousand.
 \v 16 \f + \fr 12:16 \ft Note: KJB: 1Chr.12.15\f* these [were]_they who they_passed_over DOM the÷Yardēn/(Jordan) in/on/at/with÷month the÷first and=he [was]_overflowing over all_of banks_of÷its\f + \fr 12:16 \ft Variant note: גדיתי/ו: (x-qere) 'גְּדוֹתָ֑י/ו': lemma=1415 n=1 morph=HNcfpc/Sp3ms id=13hNu גְּדוֹתָ֑י/ו\f* and÷put_to_flight DOM all_of the÷valleys to_the÷east and÷to_the÷west.
-\v 17 \f + \fr 12:17 \ft Note: KJB: 1Chr.12.16\f* and=they_came some_of the_descendants_of Binyāmīn and=Yihudah to to_the÷stronghold to÷Dāvid.
+\v 17 \f + \fr 12:17 \ft Note: KJB: 1Chr.12.16\f* and=they_came some_of the_descendants_of Binyāmīn and=Yəhūdāh/(Yihudah) to to_the÷stronghold to÷Dāvid.
 \v 18 \f + \fr 12:18 \ft Note: KJB: 1Chr.12.17\f* and= Dāvid =he/it_went_out to÷meet_of÷them and÷answered and=he/it_said to/for=them if in÷peace you_all_have_come to=me to÷help÷me it_will_belong to/for=me with÷you_all a_heart as÷one and=if to÷betray÷me to÷adversaries_of÷my in/on/at/with÷no violence in/on/at/with÷hands_of÷my may_he_see the_god_of fathers_of÷our and÷judge.
 \v 19 \f + \fr 12:19 \ft Note: KJB: 1Chr.12.18\f* and=spirit it_clothed DOM ˊAmāsāʼi the_chief_of the÷thirty\f + \fr 12:19 \ft Variant note: ה/שלושים: (x-qere) 'הַ/שָּׁלִישִׁים֒': lemma=d/7970 n=1.3 morph=HTd/Acbpa id=13icS הַ/שָּׁלִישִׁים֒\f* to/for=yourself(m) Oh_Dāvid and÷with÷you Oh_son_of Yishay/(Jesse) peace peace to/for=yourself(m) and÷peace to÷helps_of÷you if/because helps÷you god_of÷your and÷received÷them Dāvid and÷made÷them in/on/at/with÷leaders_of the÷troops.
 \v 20 \f + \fr 12:20 \ft Note: KJB: 1Chr.12.19\f* and÷some_of÷Manassites they_fell on Dāvid in/on/at/with÷came÷he with [the]_Fəlishtiy on Shāʼūl to_the÷battle and=not help÷them if/because in/on/at/with÷counsel sent_away÷him the_rulers_of [the]_Fəlishtiy to=say in/on/at/with÷heads_of÷our he_will_fall to master_of÷his Shāʼūl.
-\v 21 \f + \fr 12:21 \ft Note: KJB: 1Chr.12.20\f* in/on/at/with÷went÷he to Tsiqlag/(Ziklag) they_fell on/upon/above=him/it from÷Mənashsheh Adnach and÷Jozabad and÷Jediael and÷Mīkā\sup ʼēl\sup* and÷Jozabad and÷ʼElīhū and÷Zillethai the_chiefs_of the÷thousands who in÷Mənashsheh.
+\v 21 \f + \fr 12:21 \ft Note: KJB: 1Chr.12.20\f* in/on/at/with÷went÷he to Tsiqlag/(Ziklag) they_fell on/upon/above=him/it from÷Mənashsheh ˊAdnāʼch and÷Yōzāⱱād/(Jozabad) and÷Jediael and÷Mīkā\sup ʼēl\sup* and÷Yōzāⱱād and÷ʼElīhū and÷Zillethai the_chiefs_of the÷thousands who in÷Mənashsheh.
 \v 22 \f + \fr 12:22 \ft Note: KJB: 1Chr.12.21\f* and÷they they_helped with Dāvid on the÷band_of_raiders if/because [were]_mighty_[men]_of strength all_of÷they and=they_were commanders in/on/at/with÷army.
 \v 23 \f + \fr 12:23 \ft Note: KJB: 1Chr.12.22\f* if/because from÷time_of a_day in/on=day they_came to Dāvid to÷help÷him until to÷army great like÷army_of god.
 \v 24 \f + \fr 12:24 \ft Note: KJB: 1Chr.12.23\f* and=these [are]_the_numbers_of the_chiefs_of the÷armed for_the÷troops [who]_they_came to Dāvid Ḩeⱱrōn÷at to÷turn_over the_kingdom_of Shāʼūl to=him/it according_to÷word_of \nd YHWH\nd*.
@@ -551,8 +551,8 @@
 \c 14
 \v 1 and÷sent Huram\f + \fr 14:1 \ft Variant note: חירם: (x-qere) 'חוּרָ֨ם': lemma=2438 morph=HNp id=13WLs חוּרָ֨ם\f* the_king_of Tsor/(Tyre) messengers to Dāvid and÷logs_of cedars and÷stonemasons_of a_wall and÷craftsmen_of wood(s) to÷build to=him/it a_house.
 \v 2 And= Dāvid =he/it_knew if/because_that established÷him \nd YHWH\nd* as÷king over Yisrā\sup ʼēl\sup*/(Israel) if/because_that [was]_exalted to÷above his/its=kingdom in=account_of people_of÷his Yisrā\sup ʼēl\sup*/(Israel).
-\v 3 and= Dāvid =he/it_took again wives in/on/at/with÷Yərūshālayim/(Jerusalem) and= Dāvid =he/it_fathered again sons and=daughters.
-\v 4 And=these [are]_the_names_of the÷born who they_belonged to=him/it in/on/at/with÷Yərūshālayim Shammūˊa and÷Shōⱱāⱱ Nātān and÷Shəlomoh.
+\v 3 and= Dāvid =he/it_took again wives in/on/at/with÷Yərūshālam/(Jerusalem) and= Dāvid =he/it_fathered again sons and=daughters.
+\v 4 And=these [are]_the_names_of the÷born who they_belonged to=him/it in/on/at/with÷Yərūshālam Shammūˊa and÷Shōⱱāⱱ Nātān and÷Shəlomoh.
 \v 5 And÷Yāⱱəḩar/(Ibhar) and÷ʼElīshūˊa and÷Elpelet.
 \v 6 And÷Nogah and÷Nefeg and÷Yāfīˊa/(Japhia).
 \v 7 And÷ʼElīshāˊma and÷Beeliada and÷ʼElīfeleţ.
@@ -569,7 +569,7 @@
 \c 15
 \v 1 And÷built to=him/it houses in/on/at/with÷city_of Dāvid and÷prepared a_place for÷ark_of the=ʼElohīm and÷pitched to=him/it a_tent.
 \v 2 Then Dāvid he_said not to÷carry DOM the_ark_of the=ʼElohīm if/because (if) the÷Lēviyyiy if/because in/on/at/with÷them \nd YHWH\nd* he_had_chosen to÷carry DOM the_ark_of \nd YHWH\nd* and÷to÷minister÷him until perpetuity.
-\v 3 and= Dāvid =assembled DOM all_of Yisrā\sup ʼēl\sup*/(Israel) to Yərūshālayim/(Jerusalem) to÷bring_up DOM the_ark_of \nd YHWH\nd* to place_of÷its which he_had_prepared to=him/it.
+\v 3 and= Dāvid =assembled DOM all_of Yisrā\sup ʼēl\sup*/(Israel) to Yərūshālam/(Jerusalem) to÷bring_up DOM the_ark_of \nd YHWH\nd* to place_of÷its which he_had_prepared to=him/it.
 \v 4 And= Dāvid =gathered_together DOM the_descendants_of ʼAhₐron and=DOM the÷Lēviyyiy.
 \v 5 Of÷sons_of Kohath Uriel the÷chief and÷relatives_of÷his one_hundred and=twenty.
 \v 6 of÷sons_of of_Merari ˊAsā\sup yāh\sup* the÷chief and÷relatives_of÷his two_hundred and=twenty.
@@ -584,16 +584,16 @@
 \v 15 And= the_descendants_of =carried the÷Lēviyyiy DOM the_ark_of the=ʼElohīm just=as Mosheh he_had_commanded according_to÷word_of \nd YHWH\nd* in/on/at/with÷shoulders_of÷their in/on/at/with÷poles upon÷them.
 \v 16 and= Dāvid =he/it_said to÷chiefs_of the÷Lēviyyiy to÷appoint DOM brothers_of÷their the÷singers in/on/at/with÷instruments_of song lyres and÷lyres and÷cymbals sounding_aloud to÷raise in/on/at/with÷sounds of÷joy.
 \v 17 and÷appointed the÷Lēviyyiy DOM Hēymān the_son_of Yō\sup ʼēl\sup*/(Joel) and=from brothers_of÷his ʼĀşāf the_son_of Berek\sup yāh\sup* and=from the_descendants_of Merari brothers_of÷their ʼĒytān the_son_of Kushaiah.
-\v 18 And÷with÷them brothers_of÷their the÷second Zəkar\sup yāh\sup* Ben and÷Jaaziel and÷Shemiramoth and÷Jehiel and÷Unni ʼElīʼāⱱ and÷Bənā\sup yāh\sup* and÷Maˊₐsē\sup yāh\sup* and÷Mattithiah and÷Eliphelehu and÷Mikneiah and÷ˊŌⱱēd- edom and÷Jeiel the÷gatekeepers.
+\v 18 And÷with÷them brothers_of÷their the÷second Zəkar\sup yāh\sup* Ben and÷Jaaziel and÷Shemiramoth and÷Jehiel and÷ˊUnniy ʼElīʼāⱱ and÷Bənā\sup yāh\sup* and÷Maˊₐsē\sup yāh\sup* and÷Mattit\sup yāh\sup* and÷Eliphelehu and÷Mikneiah and÷ˊŌⱱēd- edom and÷Jeiel the÷gatekeepers.
 \v 19 And÷the÷singers Hēymān ʼĀşāf and÷ʼĒytān in/on/at/with÷cymbals bronze to÷sound.
-\v 20 And÷Zəkar\sup yāh\sup* and÷Aziel and÷Shemiramoth and÷Jehiel and÷Unni and÷ʼElīʼāⱱ and÷Maˊₐsē\sup yāh\sup* and÷Bənā\sup yāh\sup* in/on/at/with÷harps on alamoth.
-\v 21 And÷Mattithiah and÷Eliphelehu and÷Mikneiah and÷ˊŌⱱēd- edom and÷Jeiel and÷Azaziah in/on/at/with÷lyres on the÷sheminith to÷lead.
-\v 22 And÷Chenaniah the_leader_of the÷Lēviyyiy in/on/at/with÷singing an_instructor in/on/at/with÷singing if/because [was]_understanding he.
+\v 20 And÷Zəkar\sup yāh\sup* and÷Aziel and÷Shemiramoth and÷Jehiel and÷ˊUnniy and÷ʼElīʼāⱱ and÷Maˊₐsē\sup yāh\sup* and÷Bənā\sup yāh\sup* in/on/at/with÷harps on alamoth.
+\v 21 And÷Mattit\sup yāh\sup* and÷Eliphelehu and÷Mikneiah and÷ˊŌⱱēd- edom and÷Jeiel and÷Azaziah in/on/at/with÷lyres on the÷sheminith to÷lead.
+\v 22 And÷Kənānī/(Chenani)ah the_leader_of the÷Lēviyyiy in/on/at/with÷singing an_instructor in/on/at/with÷singing if/because [was]_understanding he.
 \v 23 And÷Berek\sup yāh\sup* and÷ʼElqānāh gatekeepers for_the÷ark.
-\v 24 And÷Sheⱱaˊniah and÷Joshaphat and÷Nethanel and÷ˊAmāsāʼi and÷Zəkar\sup yāh\sup* and÷Bənā\sup yāh\sup* and÷ʼElīˊezer the÷priests [who]_blew_a_trumpet\f + \fr 15:24 \ft Variant note: מחצצרים: (x-qere) 'מַחְצְרִים֙': lemma=2690 n=1.1.0 morph=HVhrmpa id=13r8i מַחְצְרִים֙\f* in/on/at/with÷trumpets to=(the)_face_of/in_front_of/before the_ark_of the=ʼElohīm and÷ˊŌⱱēd- edom and÷Jehiah gatekeepers for_the÷ark.
+\v 24 And÷Shəⱱan\sup yāh\sup* and÷Joshaphat and÷Nətan\sup ʼēl\sup* and÷ˊAmāsāʼi and÷Zəkar\sup yāh\sup* and÷Bənā\sup yāh\sup* and÷ʼElīˊezer the÷priests [who]_blew_a_trumpet\f + \fr 15:24 \ft Variant note: מחצצרים: (x-qere) 'מַחְצְרִים֙': lemma=2690 n=1.1.0 morph=HVhrmpa id=13r8i מַחְצְרִים֙\f* in/on/at/with÷trumpets to=(the)_face_of/in_front_of/before the_ark_of the=ʼElohīm and÷ˊŌⱱēd- edom and÷Jehiah gatekeepers for_the÷ark.
 \v 25 And= Dāvid =he/it_was and÷elders_of Yisrā\sup ʼēl\sup*/(Israel) and÷commanders_of the÷thousands the÷went to÷bring_up DOM the_ark_of the_covenant_of \nd YHWH\nd* from the_house_of ˊŌⱱēd- ʼEdōm in/on/at/with÷rejoicing.
 \v 26 and=he/it_was in/on/at/with÷helped the=ʼElohīm DOM the÷Lēviyyiy [who_were]_carrying_of (of)_the_ark_of the_covenant_of \nd YHWH\nd* and÷sacrificed seven young_bulls and=seven rams.
-\v 27 And÷Dāvid [was]_wrapped in/on/at/with÷robe_of fine_linen and=all the÷Lēviyyiy the÷carrying DOM the÷ark and÷the÷singers and÷Chenaniah the÷leader the÷singing the÷singers and÷on Dāvid an_ephod_of linen.
+\v 27 And÷Dāvid [was]_wrapped in/on/at/with÷robe_of fine_linen and=all the÷Lēviyyiy the÷carrying DOM the÷ark and÷the÷singers and÷Kənānīah the÷leader the÷singing the÷singers and÷on Dāvid an_ephod_of linen.
 \v 28 And=all Yisrā\sup ʼēl\sup*/(Israel) [were]_bringing_up DOM the_ark_of the_covenant_of \nd YHWH\nd* in/on/at/with÷shouting and÷in/on/at/with÷sound_of a_ram's_horn and÷in/on/at/with÷trumpets and÷in/on/at/with÷cymbals sounding_aloud in/on/at/with÷harps and÷lyres.
 \v 29 And=he/it_was the_ark_of the_covenant_of \nd YHWH\nd* [was]_coming to the_city_of Dāvid and÷Mīkāl the_daughter_of Shāʼūl she_looked_down through the÷window and=she/it_saw DOM the=king Dāvid leaping_about and÷dancing and÷despised to=him/it in/on/at/with÷heart_of÷her.
 \c 16
@@ -601,7 +601,7 @@
 \v 2 And= Dāvid =they_were_ended/finished from÷offering the÷burnt_offerings and÷the÷fellowship_offerings and=he/it_blessed DOM the÷people in/on=name_of \nd YHWH\nd*.
 \v 3 And÷distributed to/from=all/each/any/every (the)_person_of Yisrā\sup ʼēl\sup*/(Israel) from=man and=unto woman to÷each a_round_loaf_of bread and÷portion_of_meat and÷cake_of_raisins.
 \v 4 And=he/it_gave to=(the)_face_of/in_front_of/before the_ark_of \nd YHWH\nd* some_of the÷Lēviyyiy servants and÷to÷invoke and÷to÷thank and÷to÷praise to/for=\nd YHWH\nd* the_god_of Yisrā\sup ʼēl\sup*/(Israel).
-\v 5 ʼĀşāf the÷chief and÷second_of÷him Zəkar\sup yāh\sup* Jeiel and÷Shemiramoth and÷Jehiel and÷Mattithiah and÷ʼElīʼāⱱ and÷Bənā\sup yāh\sup* and÷ˊŌⱱēd- edom and÷Jeiel in/on/at/with÷musical_instruments_of lyres and÷in/on/at/with÷lyres and÷ʼĀşāf in/on/at/with÷cymbals [was]_sounding_aloud.
+\v 5 ʼĀşāf the÷chief and÷second_of÷him Zəkar\sup yāh\sup* Jeiel and÷Shemiramoth and÷Jehiel and÷Mattit\sup yāh\sup* and÷ʼElīʼāⱱ and÷Bənā\sup yāh\sup* and÷ˊŌⱱēd- edom and÷Jeiel in/on/at/with÷musical_instruments_of lyres and÷in/on/at/with÷lyres and÷ʼĀşāf in/on/at/with÷cymbals [was]_sounding_aloud.
 \v 6 And÷Bənā\sup yāh\sup* and÷Yahaʦ/(Jahaz)iel the÷priests in/on/at/with÷trumpets continually to=(the)_face_of/in_front_of/before the_ark_of the_covenant_of the=ʼElohīm.
 \v 7 In_the=day (the)=that then Dāvid he_appointed in/on/at/with÷first to÷give_thanks to/for=\nd YHWH\nd* in/on/at/with÷hand_of ʼĀşāf and÷relatives_of÷his.
 \v 8 give_thanks to/for=\nd YHWH\nd* call in/on/at/with÷name_of÷his make_known in/on/at/with÷peoples deeds_of÷his.
@@ -637,8 +637,8 @@
 \v 38 And÷ˊŌⱱēd- edom and÷relatives_of÷his sixty and÷eight and÷ˊŌⱱēd- edom the_son_of Jedithun and÷Hosah to÷gatekeepers.
 \v 39 And=DOM Tsādōq/(Zadok) the=priest/officer and÷fellow_of÷his the÷priests to=(the)_face_of/in_front_of/before the_tabernacle_of \nd YHWH\nd* in/on/at/with÷high_place which in/on/at/with÷Giⱱˊōn.
 \v 40 To÷offer burnt_offerings to/for=\nd YHWH\nd* on the_altar_of the÷burnt_offering continually in_the÷morning and÷in_the÷evening and=to/for=all the÷written in/on/at/with÷law_of \nd YHWH\nd* which he_commanded to Yisrā\sup ʼēl\sup*/(Israel).
-\v 41 And÷with÷them Hēymān and÷Jeduthun and÷rest_of the÷chosen who they_had_been_designated in/on/at/with÷name to÷give_thanks to/for=\nd YHWH\nd* if/because to÷forever steadfast_love_of÷his.
-\v 42 And÷with÷them Hēymān and÷Jeduthun trumpets and÷cymbals for÷music and÷instruments_of (the)_song_of the=ʼElohīm and=the_sons of_Jeduthun at_the÷gate.
+\v 41 And÷with÷them Hēymān and÷Yədūtūn/(Jeduthun) and÷rest_of the÷chosen who they_had_been_designated in/on/at/with÷name to÷give_thanks to/for=\nd YHWH\nd* if/because to÷forever steadfast_love_of÷his.
+\v 42 And÷with÷them Hēymān and÷Yədūtūn trumpets and÷cymbals for÷music and÷instruments_of (the)_song_of the=ʼElohīm and=the_sons of_Yədūtūn at_the÷gate.
 \v 43 And= all_of =departed the÷people everyone to÷house_of÷his and= Dāvid =returned to÷bless DOM household_of÷his.
 \c 17
 \v 1 and=he/it_was just=as he_dwelt Dāvid in/on/at/with÷house_of÷his and= Dāvid =he/it_said to Nātān the÷prophet here I [am]_dwelling in=house_of the÷cedar and÷ark_of the_covenant_of \nd YHWH\nd* [is]_under tent_curtains.
@@ -675,7 +675,7 @@
 \v 4 And= Dāvid =captured from=him/it one_thousand chariot[s] and÷seven_of thousand(s) horsemen and=twenty thousand man on_foot and= Dāvid =hamstrung DOM all_of the÷chariot_horses and÷left from=him/it one_hundred chariot[s].
 \v 5 And= ʼArām =came Dammeseq to÷help to÷Hₐdadˊezer the_king_of Tsōⱱāʼ and= Dāvid =struck_down in/on/at/with÷ʼArām twenty and÷two thousand man.
 \v 6 And= Dāvid =he/it_assigned in/on/at/with÷ʼArām_of Dammeseq and= ʼArām =he/it_was to÷Dāvid subjects (of)_tribute [who]_brought_of and= \nd YHWH\nd* =gave_victory to÷Dāvid in/on/at/with÷all where he_went.
-\v 7 And= Dāvid =he/it_took DOM the_shields_of the=gold which they_were on the_servants_of Hₐdadˊezer and=he/it_brought=them Yərūshālayim/(Jerusalem).
+\v 7 And= Dāvid =he/it_took DOM the_shields_of the=gold which they_were on the_servants_of Hₐdadˊezer and=he/it_brought=them Yərūshālam/(Jerusalem).
 \v 8 And÷from÷Tibhath and÷from÷Cun the_cities_of Hₐdadˊezer Dāvid he_took bronze much very in/on/at/with÷it Shəlomoh he_made DOM the_sea_of the÷bronze and=DOM the÷pillars and=DOM the_articles_of the÷bronze.
 \v 9 and= Tou =he/it_listened the_king_of Ḩₐmāt if/because_that Dāvid he_had_defeated DOM all_of the_army_of Hₐdadˊezer the_king_of Tsōⱱāʼ.
 \v 10 And÷sent DOM Hadoram his/its=son to the÷king Dāvid to÷ask\f + \fr 18:10 \ft Variant note: ל/שאול: (x-qere) 'לִ/שְׁאָל': lemma=l/7592 morph=HR/Vqc id=13Qnx לִ/שְׁאָל\f* to=him/it for÷peace and÷to÷congratulate÷him on that he_had_fought in/on/at/with÷Hₐdadˊezer and÷defeated÷him if/because (the)_man_of (the)_wars_of Tou Hₐdadˊezer he_was and=all/each/any/every articles_of gold and÷silver and÷bronze.
@@ -701,15 +701,15 @@
 \v 12 And=he/it_said if it_will_be_[too]_strong too_for÷me ʼArām and÷be to/for=me for÷help and=if the_people_of ˊAmmōn they_will_be_[too]_strong too_for÷you and÷help÷you.
 \v 13 Be_strong and÷courageous for people_of÷our and÷for the_cities_of god_of÷our and=\nd YHWH\nd* the÷good in/on/at/with÷sight_of÷his he_will_do.
 \v 14 And= Yōʼāⱱ =drew_near and÷the÷people which with=him/it to=(the)_face_of/in_front_of/before ʼArām for_the÷battle and÷fled from÷before_of÷him.
-\v 15 And=the_sons of_ˊAmmōn they_saw if/because_that it_had_fled ʼArām and÷fled also they from=face/in_front_of ʼAⱱīshay his/its=woman and=they_came the÷city÷to and= Yōʼāⱱ/(Joab) =came Yərūshālayim/(Jerusalem).
+\v 15 And=the_sons of_ˊAmmōn they_saw if/because_that it_had_fled ʼArām and÷fled also they from=face/in_front_of ʼAⱱīshay his/its=woman and=they_came the÷city÷to and= Yōʼāⱱ/(Joab) =came Yərūshālam/(Jerusalem).
 \v 16 and= ʼArām =he/it_saw if/because_that they_had_been_defeated to=(the)_face_of/in_front_of/before Yisrā\sup ʼēl\sup*/(Israel) and÷sent messengers and÷brought_out DOM ʼArām which from÷beyond_of the=river and÷Shophach the_commander_of the_army_of Hₐdadˊezer at÷head_of÷them.
 \v 17 And÷told to÷Dāvid and÷gathered DOM all_of Yisrā\sup ʼēl\sup*/(Israel) and=he/it_passed_through the÷Yardēn/(Jordan) and÷came to÷them and÷drew_up_forces against÷them and= Dāvid =set_inarray to= ʼArām =against battle and÷fought with=him/it.
 \v 18 And= ʼArām =fled from=to/for=face/front/presence Yisrā\sup ʼēl\sup*/(Israel) and= Dāvid =killed of÷Aramean seven_of thousand(s) charioteer[s] and÷forty thousand man on_foot and=DOM Shophach the_commander_of the÷army he_killed.
 \v 19 And= the_servants_of =they_saw of_Hₐdadˊezer if/because_that they_had_been_defeated to=(the)_face_of/in_front_of/before Yisrā\sup ʼēl\sup*/(Israel) and÷made_peace with Dāvid and÷became_subject_to÷him and=not ʼArām it_was_willing to÷help DOM the_people_of ˊAmmōn again.
 \c 20
-\v 1 and=he/it_was in÷time_of the_return_of the÷year at÷time_of go_out the÷kings and= Yōʼāⱱ =led_out DOM the_army_of the÷army and÷ravaged DOM the_land_of the_people_of ˊAmmōn and÷came and=he/it_laid_siege DOM Rabāh and÷Dāvid [was]_remaining in/on/at/with÷Yərūshālayim/(Jerusalem) and= Yōʼāⱱ/(Joab) =attacked DOM Rabāh and÷overthrew÷it.
+\v 1 and=he/it_was in÷time_of the_return_of the÷year at÷time_of go_out the÷kings and= Yōʼāⱱ =led_out DOM the_army_of the÷army and÷ravaged DOM the_land_of the_people_of ˊAmmōn and÷came and=he/it_laid_siege DOM Rabāh and÷Dāvid [was]_remaining in/on/at/with÷Yərūshālam/(Jerusalem) and= Yōʼāⱱ/(Joab) =attacked DOM Rabāh and÷overthrew÷it.
 \v 2 And= Dāvid =he/it_took DOM the_crown_of king_of÷their from=under his/its=head and÷found÷it weight_of a_talent_of gold and÷in/on/at/with÷it a_stone precious and=it_became on the_head_of Dāvid and÷booty_of the=city he_brought_out much very.
-\v 3 And=DOM the÷people which in/on/at/with÷it he_brought_out and÷set in/on/at/with÷saws and÷in/on/at/with÷picks_of the÷iron and÷in/on/at/with÷axes and=thus/so/as_follows Dāvid he_did to=all/each/any/every the_cities_of the_people_of ˊAmmōn and= Dāvid =returned and=all the÷people Yərūshālayim.
+\v 3 And=DOM the÷people which in/on/at/with÷it he_brought_out and÷set in/on/at/with÷saws and÷in/on/at/with÷picks_of the÷iron and÷in/on/at/with÷axes and=thus/so/as_follows Dāvid he_did to=all/each/any/every the_cities_of the_people_of ˊAmmōn and= Dāvid =returned and=all the÷people Yərūshālam.
 \v 4 and=he/it_was after so\f + \fr 20:4 \ft Exegesis note: A single word in the text has been divided for exegesis.\f* and= a_battle =broke_out in/on/at/with÷Gezer with [the]_Fəlishtiy then Şiⱱkay he_struck_down the÷Ḩushātī DOM Sippai one_of÷descendants_of the÷giants and÷subdued.
 \v 5 And=it_became again a_battle with [the]_Fəlishtiy and= ʼElḩānān =killed the_son_of Yāʼīr/(Jair)\f + \fr 20:5 \ft Variant note: יעור: (x-qere) 'יָעִ֗יר': lemma=3265 n=0.2.2 morph=HNp id=13oQN יָעִ֗יר\f* DOM Lahmi the_brother_of Gāləyat the÷Gittiy and=tree spear_of÷whose like÷beam_of weavers.
 \v 6 And=it_became again a_battle in/on/at/with÷Gat and=he/it_was a_man_of stature and÷fingers_of÷he [were]_six and÷six twenty and=four and=also he he_was_born from÷the÷giants.
@@ -719,8 +719,8 @@
 \v 1 and= an_adversary =rose_up on Yisrā\sup ʼēl\sup*/(Israel) and÷incited DOM Dāvid to÷count DOM Yisrā\sup ʼēl\sup*/(Israel).
 \v 2 And= Dāvid =he/it_said to Yōʼāⱱ/(Joab) and=near/to the_leaders_of the÷troops go count DOM Yisrā\sup ʼēl\sup*/(Israel) from÷Bəʼēr- seven and=unto Dān and÷bring to=me and÷know DOM number_of÷their.
 \v 3 And= Yōʼāⱱ =he/it_said \nd YHWH\nd* may_he_add to people_of÷his as_as÷they a_hundred times not my=master the=king all_of÷they to÷master_of÷my as÷servants to/for=what does_he_seek this my=master to/for=what will_it_become for÷guilt on÷Yisrā\sup ʼēl\sup*/(Israel).
-\v 4 And÷word_of the=king it_prevailed over Yōʼāⱱ and= Yōʼāⱱ =he/it_went_out and=he/it_walked/wandered in=all Yisrā\sup ʼēl\sup*/(Israel) and÷came_back Yərūshālayim/(Jerusalem).
-\v 5 And= Yōʼāⱱ =he/it_gave DOM the_number_of the_muster_of the÷people to Dāvid and=he/it_was all_of Yisrā\sup ʼēl\sup*/(Israel) one_thousand thousands and÷one_hundred thousand man [who]_drew a_sword and=Yihudah four hundred(s) and=seventy thousand man [who]_drew a_sword.
+\v 4 And÷word_of the=king it_prevailed over Yōʼāⱱ and= Yōʼāⱱ =he/it_went_out and=he/it_walked/wandered in=all Yisrā\sup ʼēl\sup*/(Israel) and÷came_back Yərūshālam/(Jerusalem).
+\v 5 And= Yōʼāⱱ =he/it_gave DOM the_number_of the_muster_of the÷people to Dāvid and=he/it_was all_of Yisrā\sup ʼēl\sup*/(Israel) one_thousand thousands and÷one_hundred thousand man [who]_drew a_sword and=Yəhūdāh/(Yihudah) four hundred(s) and=seventy thousand man [who]_drew a_sword.
 \v 6 And÷Lēvīh and÷Binyāmīn not he_enrolled in/on/at/with÷among_of÷them if/because the_word_of it_was_abhorred the=king with Yōʼāⱱ.
 \v 7 And÷displeased in/on=both_eyes_of the=ʼElohīm on the÷thing the=this and÷struck DOM Yisrā\sup ʼēl\sup*/(Israel).
 \v 8 and= Dāvid =he/it_said to the=ʼElohīm I_have_sinned exceedingly that I_have_done DOM the÷thing the=this and=now take_away please DOM the_iniquity_of servant_of÷your if/because I_have_acted_foolishly exceedingly.
@@ -730,8 +730,8 @@
 \v 12 Whether three years famine and=if three months being_swept_away from=face/in_front_of foes_of÷your and÷sword_of enemies_of÷your as÷overtakes and=if three_of days the_sword_of \nd YHWH\nd* and÷pestilence on_the=earth and÷messenger_of \nd YHWH\nd* destroying in=all the_territory_of Yisrā\sup ʼēl\sup*/(Israel) and=now consider what will_I_bring_back DOM sent_of÷me word.
 \v 13 and= Dāvid =he/it_said to Gād it_is_distress to=me exceedingly let_me_fall please in/on/at/with÷hand_of \nd YHWH\nd* if/because [are]_great mercy_of÷his exceedingly and÷in/on/at/with÷hands_of a_human not let_me_fall.
 \v 14 And= \nd YHWH\nd* =he/it_gave a_pestilence in/on/at/with÷Yisrā\sup ʼēl\sup*/(Israel) and÷fell of÷Yisrā\sup ʼēl\sup*/(Israel) seventy thousand person[s].
-\v 15 And÷sent the=ʼElohīm an_messenger to÷Yərūshālayim/(Jerusalem) to÷destroy÷it and÷as÷destroy \nd YHWH\nd* he_saw and=he/it_sighed/regretted on the÷calamity and=he/it_said to_the÷messenger the÷destroying enough now let_drop hand_of÷your and÷messenger_of \nd YHWH\nd* [was]_standing near the_threshing_floor_of Ornan the=Yebusi.
-\v 16 and= Dāvid =lifted DOM eyes_of÷his and=he/it_saw DOM the_messenger_of \nd YHWH\nd* standing between the=earth/land and=between the=heavens and÷sword_of÷his [was]_drawn in=his/its=hand [it_was]_stretched_out over Yərūshālayim and= Dāvid =fell and÷the÷elders covered in/on/at/with÷sackcloth on faces_of÷their.
+\v 15 And÷sent the=ʼElohīm an_messenger to÷Yərūshālam/(Jerusalem) to÷destroy÷it and÷as÷destroy \nd YHWH\nd* he_saw and=he/it_sighed/regretted on the÷calamity and=he/it_said to_the÷messenger the÷destroying enough now let_drop hand_of÷your and÷messenger_of \nd YHWH\nd* [was]_standing near the_threshing_floor_of Ornan the=Yebusi.
+\v 16 and= Dāvid =lifted DOM eyes_of÷his and=he/it_saw DOM the_messenger_of \nd YHWH\nd* standing between the=earth/land and=between the=heavens and÷sword_of÷his [was]_drawn in=his/its=hand [it_was]_stretched_out over Yərūshālam and= Dāvid =fell and÷the÷elders covered in/on/at/with÷sackcloth on faces_of÷their.
 \v 17 And= Dāvid =he/it_said to the=ʼElohīm not I did_I_say to÷count in/on/at/with÷people and÷I [am]_he who I_have_sinned and÷to_do_wrong I_have_done_evil and=these the÷sheep what have_they_done Oh_\nd YHWH\nd* god_of÷my let_it_be please hand_of÷your in/on/at/with÷me and÷in/on/at/with÷house_of father's_of÷my and÷in/on/at/with÷people_of÷your not with÷plague.
 \v 18 and÷messenger_of \nd YHWH\nd* he_said to Gād to=say to÷Dāvid if/because_that he_will_go_up Dāvid to÷erect an_altar to/for=\nd YHWH\nd* in/on/at/with÷threshing_floor_of Ornan the÷Yəⱱūşī/(Jebusite).
 \v 19 And= Dāvid =he/it_ascended in/on/at/with÷word_of Gād which he_had_spoken in/on=name_of \nd YHWH\nd*.
@@ -791,7 +791,7 @@
 \v 22 And= ʼElˊāzār =he/it_died and=not they_belonged to=him/it sons if/because (if) daughters and÷married÷them the_sons_of Qīsh cousins_of÷their.
 \v 23 The_sons_of Mushi [were]_Mahli and÷Eder and÷Jeremoth three.
 \v 24 These [were]_the_descendants_of Lēvīh by÷houses_of ancestral_of÷their the_heads_of the÷families as÷enrolled_of÷they in/on/at/with÷number_of names of÷individuals_of÷their the_doer[s]_of the÷work for÷service_of the_house_of \nd YHWH\nd* from÷son_of twenty year[s] and÷upward.
-\v 25 If/because Dāvid he_had_said \nd YHWH\nd* he_has_given_rest the_god_of Yisrā\sup ʼēl\sup*/(Israel) to÷people_of÷his and÷dwells in/on/at/with÷Yərūshālayim/(Jerusalem) until to÷forever.
+\v 25 If/because Dāvid he_had_said \nd YHWH\nd* he_has_given_rest the_god_of Yisrā\sup ʼēl\sup*/(Israel) to÷people_of÷his and÷dwells in/on/at/with÷Yərūshālam/(Jerusalem) until to÷forever.
 \v 26 And=also to_the÷Lēviyyiy there_[is]_not to÷carry DOM the÷tabernacle and=DOM all_of things_of÷its for÷service_of÷its.
 \v 27 If/because in/on/at/with÷words_of Dāvid the÷last they [were]_the_number_of the_descendants_of Lēvīh from÷son_of twenty year[s] and÷to÷more.
 \v 28 If/because duty_of÷their to÷assist_of the_descendants_of ʼAhₐron with÷service_of the_house_of \nd YHWH\nd* over the÷courts and÷over the÷chambers and÷over [the]_purification_of to/from=all/each/any/every holy_thing and÷work_of the_service_of the_house_of the=ʼElohīm.
@@ -805,19 +805,19 @@
 \v 3 And÷divided÷them Dāvid and÷Tsādōq/(Zadok) one_of the_descendants_of ʼElˊāzār and÷ʼAḩīmelek one_of the_descendants_of Ithamar according_to÷appointed_duties_of÷their in/on/at/with÷service_of÷their.
 \v 4 And= the_descendants_of =found of_ʼElˊāzār many as÷chief_of the÷men more_than the_descendants_of Ithamar and÷divided÷them of÷descendants_of of_ʼElˊāzār heads of÷houses_of fathers six- teen and÷of÷sons_of Ithamar of÷families_of ancestral_of÷their eight.
 \v 5 And÷divided÷them in/on/at/with÷lot these with these if/because officials_of they_were holiness and÷officers_of the=ʼElohīm from=(the)_sons of_ʼElˊāzār and÷in/on/at/with÷sons_of Ithamar.
-\v 6 and÷recorded÷them Shəmaˊ\sup yāh\sup* the_son_of Nethanel the÷scribe one_of the÷Lēviyyiy to=(the)_face_of/in_front_of/before the=king and÷the÷princes and÷Tsādōq the=priest/officer and÷ʼAḩīmelek the_son_of ʼEⱱyātār and÷heads_of the÷families of_the÷priests and÷of_the÷Lēviyyiy a_house_of a_father one [was]_drawn for÷ʼElˊāzār and÷chosen drawn for÷Ithamar.
+\v 6 and÷recorded÷them Shəmaˊ\sup yāh\sup* the_son_of Nətan\sup ʼēl\sup* the÷scribe one_of the÷Lēviyyiy to=(the)_face_of/in_front_of/before the=king and÷the÷princes and÷Tsādōq the=priest/officer and÷ʼAḩīmelek the_son_of ʼEⱱyātār and÷heads_of the÷families of_the÷priests and÷of_the÷Lēviyyiy a_house_of a_father one [was]_drawn for÷ʼElˊāzār and÷chosen drawn for÷Ithamar.
 \v 7 and=he/it_went_out the÷lot the÷first to÷Jehoiarib to÷Yədaˊ\sup yāh\sup*/(Jedaiah) the=second.
 \v 8 To÷Ḩārim the=third to÷Seorim the÷fourth.
-\v 9 To÷Malkīy\sup yāh\sup* the÷fifth to÷Mijamin the=sixth.
-\v 10 To÷Haqōʦ the÷seventh to÷ʼAⱱīāh the÷eighth.
+\v 9 To÷Malkīy\sup yāh\sup* the÷fifth to÷Miyyāmin the=sixth.
+\v 10 To÷Haqōʦ the÷seventh to÷ʼAⱱiy\sup yāh\sup* the÷eighth.
 \v 11 To÷Yēshūˊa/(Jeshua) the÷ninth to÷Shəkan\sup yāh\sup* the÷tenth.
 \v 12 To÷ʼElyāshiyⱱ one_plus_of ten to÷Jakim two_plus ten.
 \v 13 To÷Huppah thir- teen to÷Jeshebeab four- teen.
 \v 14 To÷Bilgah fif- teen to÷ʼImmēr six- teen.
-\v 15 To÷Hezir seven- teen to÷the÷Ha-Pizzez eight- teen.
-\v 16 To÷Pethahiah nine- teen to÷Jehezkel the÷twentieth.
+\v 15 To÷Ḩēzīr seven- teen to÷the÷Ha-Pizzez eight- teen.
+\v 16 To÷Pətaḩ\sup yāh\sup* nine- teen to÷Jehezkel the÷twentieth.
 \v 17 To÷Yākīn/(Jachin) one and=twenty to÷Gamul two and=twenty.
-\v 18 To÷Dəlā\sup yāh\sup* three and=twenty to÷Maaziah four and=twenty.
+\v 18 To÷Dəlā\sup yāh\sup* three and=twenty to÷Maˊaz\sup yāh\sup* four and=twenty.
 \v 19 these appointed_duty_of÷their for÷service_of÷their to÷come into÷house_of \nd YHWH\nd* according_to÷regulations_of÷them in/on/at/with÷hand_of ʼAhₐron father_of÷their just=as commanded÷him \nd YHWH\nd* the_god_of Yisrā\sup ʼēl\sup*/(Israel).
 \v 20 and÷of÷sons_of Lēvīh the÷rest of÷sons_of of_ˊAmrām Shubael of÷sons_of of_Shubael Jehdeiah.
 \v 21 Of÷Rehabiah of÷sons_of of_Rehabiah the÷first [was]_Isshiah.
@@ -832,12 +832,12 @@
 \v 30 And=the_sons of_Mushi [were]_Mahli and÷Eder and÷Jerimoth these [were]_the_sons_of the÷Lēviyyiy according_to÷houses_of ancestral_of÷their.
 \v 31 And÷throw also they lots to/for÷just_as_of brothers_of÷their the_descendants_of ʼAhₐron to=(the)_face_of/in_front_of/before Dāvid the=king and÷Tsādōq/(Zadok) and÷ʼAḩīmelek and÷heads_of the÷families of_the÷priests and÷of_the÷Lēviyyiy fathers the÷chief same_as his/its=woman the÷younger.
 \c 25
-\v 1 and= Dāvid =he/it_separated and÷commanders_of the÷army for÷service of÷sons_of of_ʼĀşāf and÷Hēymān and÷Jeduthun the÷prophesy\f + \fr 25:1 \ft Variant note: ה/נביאים: (x-qere) 'הַֽ/נִּבְּאִ֛ים': lemma=d/5012 n=1.0.0 morph=HTd/VNsmpa id=13veq הַֽ/נִּבְּאִ֛ים\f*\f + \fr 25:1 \ft Note: Yathir readings in L which we have designated as Qeres when both Dotān and BHS list a Qere. \f* in/on/at/with÷lyres in/on/at/with÷harps and÷in/on/at/with÷cymbals and=he/it_was list_of÷those men_of work of÷service_of÷their.
+\v 1 and= Dāvid =he/it_separated and÷commanders_of the÷army for÷service of÷sons_of of_ʼĀşāf and÷Hēymān and÷Yədūtūn/(Jeduthun) the÷prophesy\f + \fr 25:1 \ft Variant note: ה/נביאים: (x-qere) 'הַֽ/נִּבְּאִ֛ים': lemma=d/5012 n=1.0.0 morph=HTd/VNsmpa id=13veq הַֽ/נִּבְּאִ֛ים\f*\f + \fr 25:1 \ft Note: Yathir readings in L which we have designated as Qeres when both Dotān and BHS list a Qere. \f* in/on/at/with÷lyres in/on/at/with÷harps and÷in/on/at/with÷cymbals and=he/it_was list_of÷those men_of work of÷service_of÷their.
 \v 2 Of÷sons_of ʼĀşāf Zakkūr and÷Yōşēf/(Joseph) and÷Nətan\sup yāh\sup* and÷Asarelah the_sons_of ʼĀşāf [were]_on the_hand_of ʼĀşāf the÷prophesied on the_hands_of the÷king.
-\v 3 Of÷Jeduthun the_sons_of Jeduthun [were]_Gədal\sup yāh\sup* and÷Zeri and÷Jeshaiah Ḩₐshaⱱ\sup yāh\sup* and÷Mattithiah six on the_hands_of father_of÷their Jeduthun in/on/at/with÷harp the÷prophesied on to_give_thanks and÷praise to/for=\nd YHWH\nd*.
+\v 3 Of÷Yədūtūn the_sons_of Yədūtūn [were]_Gədal\sup yāh\sup* and÷Zeri and÷Yəshaˊ\sup yāh\sup*/(Jeshaiah) Ḩₐshaⱱ\sup yāh\sup* and÷Mattit\sup yāh\sup* six on the_hands_of father_of÷their Yədūtūn in/on/at/with÷harp the÷prophesied on to_give_thanks and÷praise to/for=\nd YHWH\nd*.
 \v 4 of÷Hēymān the_sons_of Hēymān [were]_Bukkiah Mattan\sup yāh\sup* ˊUzziy\sup ʼēl\sup* Shebuel and÷Jerimoth Ḩₐnan\sup yāh\sup* Ḩₐnānī Eliathah Giddalti and÷Romamti- ezer Joshbekashah Mallothi Hothir Mahazioth.
 \v 5 All_of these [were]_sons of÷Hēymān the_seer_of the=king in/on/at/with÷promises_of the=ʼElohīm to÷exalt a_horn and=he/it_gave the=ʼElohīm to÷Hēymān sons four- teen and=daughters three.
-\v 6 All_of these [were]_on the_hands_of father_of÷their in/on/at/with÷music the_house_of \nd YHWH\nd* in/on/at/with÷cymbals lyres and÷lyres for÷service_of the_house_of the=ʼElohīm on the_hands_of the=king ʼĀşāf and÷Jeduthun and÷Hēymān.
+\v 6 All_of these [were]_on the_hands_of father_of÷their in/on/at/with÷music the_house_of \nd YHWH\nd* in/on/at/with÷cymbals lyres and÷lyres for÷service_of the_house_of the=ʼElohīm on the_hands_of the=king ʼĀşāf and÷Yədūtūn/(Jeduthun) and÷Hēymān.
 \v 7 number_of÷they And=he/it_was with relatives_of÷their [who_were]_trained_of song to/for=\nd YHWH\nd* every_of the÷skillful two_hundred eighty and÷eight.
 \v 8 And÷throw lots duty to/for÷just_as_of on_the_principle_of_the÷small so_the÷great teacher with pupil.
 \v 9 and=he/it_went_out the÷lot the÷first for÷ʼĀşāf to÷Yōşēf/(Joseph) Gədal\sup yāh\sup* the=second he and÷relatives_of÷his and÷sons_of÷his two_plus ten.
@@ -846,13 +846,13 @@
 \v 12 The÷fifth Nətan\sup yāh\sup* sons_of÷his and÷relatives_of÷his two_plus ten.
 \v 13 The=sixth Bukkiah sons_of÷his and÷relatives_of÷his two_plus ten.
 \v 14 The÷seventh Jesharelah sons_of÷his and÷relatives_of÷his two_plus ten.
-\v 15 The÷eighth Jeshaiah sons_of÷his and÷relatives_of÷his two_plus ten.
+\v 15 The÷eighth Yəshaˊ\sup yāh\sup*/(Jeshaiah) sons_of÷his and÷relatives_of÷his two_plus ten.
 \v 16 The÷ninth Mattan\sup yāh\sup* sons_of÷his and÷relatives_of÷his two_plus ten.
 \v 17 The÷tenth Shimˊī sons_of÷his and÷relatives_of÷his two_plus ten.
-\v 18 one_plus_of ten Azarel sons_of÷his and÷relatives_of÷his two_plus ten.
+\v 18 one_plus_of ten ˊAzar\sup ʼēl\sup* sons_of÷his and÷relatives_of÷his two_plus ten.
 \v 19 The÷two ten to÷Ḩₐshaⱱ\sup yāh\sup* sons_of÷his and÷relatives_of÷his two_plus ten.
 \v 20 To÷three teen Shubael sons_of÷his and÷relatives_of÷his two_plus ten.
-\v 21 To=four teen Mattithiah sons_of÷his and÷relatives_of÷his two_plus ten.
+\v 21 To=four teen Mattit\sup yāh\sup* sons_of÷his and÷relatives_of÷his two_plus ten.
 \v 22 To÷five teen to÷Jeremoth sons_of÷his and÷relatives_of÷his two_plus teen.
 \v 23 To÷six teen to÷Ḩₐnan\sup yāh\sup* sons_of÷his and÷relatives_of÷his two_plus ten.
 \v 24 To÷seven teen to÷Joshbekashah sons_of÷his and÷relatives_of÷his two_plus ten.
@@ -867,7 +867,7 @@
 \v 1 as_for÷divisions of÷gatekeepers of_the÷Qoraḩites Meshelemiah the_son_of Kore one_of the_sons_of ʼĀşāf.
 \v 2 And÷had÷Meshelemiah sons [was]_Zəkar\sup yāh\sup* the÷firstborn [was]_Jediael the=second [was]_Zebadiah the=third [was]_Jathniel the=fourth.
 \v 3 [was]_ˊĒylām the÷fifth [was]_Yəhōḩānān/(Jehohanan) the=sixth [was]_Eliehoenai the=seventh.
-\v 4 And÷had÷ˊŌⱱēd- edom sons [was]_Shəmaˊ\sup yāh\sup* the÷firstborn [was]_Jehozabad the=second [was]_Yōʼāḩ/(Joah) the÷third and÷Sachar the=fourth and÷Nethanel the÷fifth.
+\v 4 And÷had÷ˊŌⱱēd- edom sons [was]_Shəmaˊ\sup yāh\sup* the÷firstborn [was]_Jehozabad the=second [was]_Yōʼāḩ/(Joah) the÷third and÷Sachar the=fourth and÷Nətan\sup ʼēl\sup* the÷fifth.
 \v 5 [was]_ˊAmmiy\sup ʼēl\sup* the=sixth [was]_Yissāskār/(Issachar) the=seventh [was]_Peullethai the÷eighth if/because blessed÷him god.
 \v 6 and÷to÷Shəmaˊ\sup yāh\sup* son_of÷his sons it_was_born the÷rulers in÷house_of ancestral_of÷their if/because [were]_mighty_[men]_of ability they.
 \v 7 The_sons_of Shəmaˊ\sup yāh\sup* [were]_Othni and÷Rephael and÷ˊŌⱱēd Elzabad brothers_of÷whose [were]_sons_of ability ʼElīhū and÷Semachiah.
@@ -888,17 +888,17 @@
 \v 22 The_sons_of Jehieli Zetham and÷Yō\sup ʼēl\sup*/(Joel) his/its=woman [were]_over the_storehouses_of the_house_of \nd YHWH\nd*.
 \v 23 Of_the÷ˊAmrāmites from_the÷Izharites from_the÷Ḩeⱱrōnites from_the÷ˊUzziy\sup ʼēl\sup*ites.
 \v 24 And÷Shebuel the_son_of Gērəshom the_son_of Mosheh [was_the]_chief over the÷treasuries.
-\v 25 And÷relatives_of÷his from÷ʼElīˊezer Rehabiah son_of÷his and÷Jeshaiah son_of÷his and÷Yōrām/(Joram) his/its=son and÷Zichri son_of÷his and÷Shelomoth\f + \fr 26:25 \ft Variant note: ו/שלמות: (x-qere) 'וּ/שְׁלֹמִ֥ית': lemma=c/8013 morph=HC/Np id=13F7i וּ/שְׁלֹמִ֥ית\f* his/its=son.
+\v 25 And÷relatives_of÷his from÷ʼElīˊezer Rehabiah son_of÷his and÷Yəshaˊ\sup yāh\sup*/(Jeshaiah) son_of÷his and÷Yəhōrām/(Joram) his/its=son and÷Zikrī son_of÷his and÷Shelomoth\f + \fr 26:25 \ft Variant note: ו/שלמות: (x-qere) 'וּ/שְׁלֹמִ֥ית': lemma=c/8013 morph=HC/Np id=13F7i וּ/שְׁלֹמִ֥ית\f* his/its=son.
 \v 26 That Shelomoth and÷relatives_of÷his [were]_over all_of the_storehouses_of the÷dedicated_gifts which he_had_consecrated Dāvid the=king and÷heads_of the÷families to÷commanders_of the÷thousands and÷the÷hundreds and÷commanders_of the÷army.
 \v 27 Some_of the÷battles and=from the÷spoil they_consecrated for÷repair of÷house_of of_\nd YHWH\nd*.
 \v 28 And=all/each/any/every the÷dedicated Shəmū\sup ʼēl\sup* the÷seer and÷Shāʼūl the_son_of Qīsh and÷ʼAⱱnēr the_son_of Nēr and÷Yōʼāⱱ/(Joab) the_son_of Tsərū\sup yāh\sup*/(Zeruiah) every_of the÷dedicated [was]_on the_hand_of Shelomith and÷relatives_of÷his.
-\v 29 from_the÷Izharites Qēynān/(Kenan)iah and÷sons_of÷his to_the÷duties the÷outside over Yisrā\sup ʼēl\sup*/(Israel) as÷officers and÷as÷judges.
+\v 29 from_the÷Izharites Kənānī/(Chenani)ah and÷sons_of÷his to_the÷duties the÷outside over Yisrā\sup ʼēl\sup*/(Israel) as÷officers and÷as÷judges.
 \v 30 From_the÷Ḩeⱱrōnites Ḩₐshaⱱ\sup yāh\sup* and÷relatives_of÷his sons_of ability one_thousand and=seven hundred(s) [were]_over the_oversight_of Yisrā\sup ʼēl\sup*/(Israel) at÷near of_the÷Yardēn/(Jordan) west÷at to=all/each/any/every the_work_of \nd YHWH\nd* and÷for÷service_of the÷king.
 \v 31 For_the÷Ḩeⱱrōnites Jeriah the÷chief of_the÷Ḩeⱱrōnites according_to÷genealogy_of÷their of÷families in=year the÷fortieth of=(the)_reign of_Dāvid they_were_investigated and÷found in/among=them mighty_[men]_of ability in/on/at/with÷Yaˊzēr/(Jazer) of_Gilˊād.
 \v 32 And÷relatives_of÷his [were]_sons_of ability two_thousand and=seven hundred(s) the_heads_of the÷families and÷appointed÷them Dāvid the=king over the÷Rəʼūⱱēnites and÷the÷Gādītes and÷half_of the_tribe_of the÷Mənashsheh to/from=all/each/any/every (the)_matter_of the=ʼElohīm and÷affairs_of the÷king.
 \c 27
 \v 1 and=the_sons of_Yisrā\sup ʼēl\sup*/(Israel) as_for÷list_of÷them the_heads_of the÷families and÷commanders_of the÷thousands and÷the÷hundreds and÷officers_of÷their the÷served DOM the=king to=all/each/any/every (the)_matter_of the÷divisions the÷came and÷the÷went month in/on/at/with÷month to=all/each/any/every the_months_of the÷year the÷division the=one(f) [was]_twenty and÷four thousand.
-\v 2 [was]_over the÷division the÷first for_the÷month the÷first Jashobeam the_son_of Zaⱱdiyel and÷in division_of÷his twenty and÷four thousand.
+\v 2 [was]_over the÷division the÷first for_the÷month the÷first Jashobeam the_son_of Zaⱱdiy\sup ʼēl\sup* and÷in division_of÷his twenty and÷four thousand.
 \v 3 one_of the_descendants_of Fereʦ the÷chief to/from=all/each/any/every the_commanders_of the÷army for_the÷month the÷first.
 \v 4 And÷in_charge_of the_division_of the÷month the=second Dodai the÷ʼAḩōḩī and÷division_of÷his and÷Mikloth the÷chief_officer and÷in division_of÷his twenty and÷four thousand.
 \v 5 [was]_the_commander_of the÷army the=third for_the÷month the=third Bənā\sup yāh\sup* the_son_of Yəhōyādāˊ/(Jehoiada) the=priest/officer chief and÷in division_of÷his twenty and÷four thousand.
@@ -912,13 +912,13 @@
 \v 13 the÷tenth for_the÷month the÷tenth Mahₐray the÷Nəţofātī of_the÷Zeraḩites and÷in division_of÷his twenty and÷four thousand.
 \v 14 [was]_one_plus_of ten for÷one_of ten the÷month Bənā\sup yāh\sup* the÷Firˊātōnī one_of the_descendants_of ʼEfrayim and÷in division_of÷his twenty and÷four thousand.
 \v 15 the÷two ten for÷two ten the÷month Heldai the÷Nəţofātī of÷ˊĀtənī\sup ʼēl\sup* and÷in division_of÷his twenty and÷four thousand.
-\v 16 and÷over the_tribes_of Yisrā\sup ʼēl\sup*/(Israel) for_the÷Rəʼūⱱēnites [was]_chief ʼElīˊezer the_son_of Zikri for_the÷Shimˊōnites Shəfaţ\sup yāh\sup* the_son_of Maˊₐkāh.
+\v 16 and÷over the_tribes_of Yisrā\sup ʼēl\sup*/(Israel) for_the÷Rəʼūⱱēnites [was]_chief ʼElīˊezer the_son_of Zikrī for_the÷Shimˊōnites Shəfaţ\sup yāh\sup* the_son_of Maˊₐkāh.
 \v 17 for÷Lēvīh Ḩₐshaⱱ\sup yāh\sup* the_son_of Kemuel for÷ʼAhₐron Tsādōq/(Zadok).
 \v 18 for÷Yəhūdāh/(Judah) ʼElīhū of÷brothers_of of_Dāvid for÷Yissāskār/(Issachar) ˊĀmərī the_son_of Mīkā\sup ʼēl\sup*.
 \v 19 for÷Zəⱱulun Ishmaiah the_son_of ˊOⱱad\sup yāh\sup* for÷Naftālī Jerimoth the_son_of Azriel.
 \v 20 for÷sons_of ʼEfrayim Hōshēˊa the_son_of Azaziah for÷half_of the_tribe_of Mənashsheh Yō\sup ʼēl\sup*/(Joel) the_son_of Pədā\sup yāh\sup*.
-\v 21 for÷half-tribe_of the÷Mənashsheh Gilˊād÷in ˊDdō the_son_of Zəkar\sup yāh\sup* for÷Binyāmīn Jaasiel the_son_of ʼAⱱnēr.
-\v 22 for÷Dān Azarel the_son_of Yəroḩām/(Jeroham) these [were]_the_commanders_of the_tribes_of Yisrā\sup ʼēl\sup*/(Israel).
+\v 21 for÷half-tribe_of the÷Mənashsheh Gilˊād÷in ˊIddō the_son_of Zəkar\sup yāh\sup* for÷Binyāmīn Jaasiel the_son_of ʼAⱱnēr.
+\v 22 for÷Dān ˊAzar\sup ʼēl\sup* the_son_of Yəroḩām/(Jeroham) these [were]_the_commanders_of the_tribes_of Yisrā\sup ʼēl\sup*/(Israel).
 \v 23 And=not Dāvid he_took census_of÷those of÷from÷men_of twenty year[s] and÷of÷under if/because \nd YHWH\nd* he_had_said to÷make_numerous DOM Yisrā\sup ʼēl\sup*/(Israel) as_as÷stars_of the=heavens.
 \v 24 Yōʼāⱱ/(Joab) the_son_of Tsərū\sup yāh\sup*/(Zeruiah) he_began to÷count and=not he_finished and=he/it_was in/on/at/with÷this severe_anger [was]_towards Yisrā\sup ʼēl\sup*/(Israel) and=not it_went_up the÷number in/on/at/with÷account_of the_words_of the=days to/for=the_king Dāvid.
 \v 25 and÷over the_storehouses_of the=king ˊAzmāvet the_son_of Adiel and÷over the÷storehouses in_the=field in/on/at/with÷cities and÷in/on/at/with÷villages and÷in/on/at/with÷towers Yōnātān/(Jonathan) the_son_of ˊUzziy\sup yāh\sup*.
@@ -932,7 +932,7 @@
 \v 33 And÷ʼAḩītofel [was]_a_counselor to/for=the_king and÷Ḩūshay the÷ʼArkī [was]_the_friend_of the÷king's.
 \v 34 And=after ʼAḩītofel Yəhōyādāˊ/(Jehoiada) the_son_of Bənā\sup yāh\sup* and÷ʼEⱱyātār and÷commander_of [the]_army to/for=the_king Yōʼāⱱ/(Joab).
 \c 28
-\v 1 and= Dāvid =assembled DOM all_of the_officials_of Yisrā\sup ʼēl\sup*/(Israel) the_leaders_of the÷tribes and÷commanders_of the÷divisions the÷served DOM the=king and÷commanders_of the÷thousands and÷commanders_of the÷hundreds and÷officials_of all_of [the]_property and÷livestock to/for=the_king and÷of÷sons_of÷his with the=officials and÷the÷mighty and=to/for=all mighty_[man]_of strength to Yərūshālayim/(Jerusalem).
+\v 1 and= Dāvid =assembled DOM all_of the_officials_of Yisrā\sup ʼēl\sup*/(Israel) the_leaders_of the÷tribes and÷commanders_of the÷divisions the÷served DOM the=king and÷commanders_of the÷thousands and÷commanders_of the÷hundreds and÷officials_of all_of [the]_property and÷livestock to/for=the_king and÷of÷sons_of÷his with the=officials and÷the÷mighty and=to/for=all mighty_[man]_of strength to Yərūshālam/(Jerusalem).
 \v 2 And= Dāvid =he/it_rose_up the=king on feet_of÷his and=he/it_said listen_to÷me brothers_of÷my and÷people_of÷my I [was]_with heart_of÷my to÷build a_house_of rest for÷ark_of the_covenant_of \nd YHWH\nd* and÷for÷footstool_of the_feet_of god_of÷our and÷made_preparations to÷build.
 \v 3 And÷the÷god he_said to=me not you_will_build a_house for÷name_of÷my if/because [are]_a_man_of wars you and÷blood you_have_shed.
 \v 4 And= \nd YHWH\nd* =chose the_god_of Yisrā\sup ʼēl\sup*/(Israel) in/on/at/with÷me from=all the_house_of father's_of÷my to=be as÷king over Yisrā\sup ʼēl\sup*/(Israel) to÷forever if/because in/on/at/with÷Yəhūdāh/(Judah) he_chose as÷leader and÷in/on/at/with÷house_of Yəhūdāh the_house_of father's_of÷my and÷in/on/at/with÷sons_of father's_of÷my in/on/at/with÷me he_took_pleasure to÷make_king over all_of Yisrā\sup ʼēl\sup*/(Israel).
@@ -940,7 +940,7 @@
 \v 6 And=he/it_said to=me Shəlomoh son_of÷your he he_will_build house_of÷my and÷courts_of÷my if/because I_have_chosen in=him/it to=me as÷son and÷I I_will_become for=him/it as÷father.
 \v 7 And÷establish DOM his/its=kingdom until to÷forever if he_will_be_strong for=doing commandments_of÷my and÷ordinances_of÷my as_the÷day the÷this.
 \v 8 And=now in÷sight_of all_of Yisrā\sup ʼēl\sup*/(Israel) the_assembly_of \nd YHWH\nd* and÷in/on/at/with÷hearing_of god_of÷our observe and÷follow all_of the_commandments_of \nd YHWH\nd* god_of÷your_all's so_that you_all_may_possess DOM the=earth/land the÷good and÷leave_foran_inheritance to÷children_of÷your_all's after÷you_all until perpetuity.
-\v 9 and=you(ms) Oh_Shəlomoh son_of÷my know DOM the_god_of I_will_show=you(ms) and÷serve÷him in/on/at/with÷heart complete and÷in/on/at/with÷mind willing if/because all_of hearts [is]_searching \nd YHWH\nd* and=all inclination_of thoughts [he_is]_understanding if seek÷him he_will_let_himself_be_found to/for=you(fs) and=if forsake÷him reject÷you for÷ever.
+\v 9 and=you(ms) Oh_Shəlomoh son_of÷my know DOM the_god_of I_will_show=you(ms) and÷serve÷him in/on/at/with÷heart complete and÷in/on/at/with÷mind willing if/because all_of hearts [is]_searching \nd YHWH\nd* and=all inclination_of thoughts [he_is]_understanding if seek÷him he_will_let_himself_be_found to/for=you(fs) and=if abandon÷him reject÷you for÷ever.
 \v 10 See now if/because \nd YHWH\nd* he_has_chosen in/on/at/with÷you to÷build a_house for_the÷sanctuary be_strong and÷do.
 \v 11 and= Dāvid =he/it_gave to÷Shəlomoh son_of÷his DOM the_pattern_of the÷vestibule and=DOM buildings_of÷its and÷treasuries_of÷its and÷upper_rooms_of÷its and÷rooms_of÷its the÷inner and÷room_of the÷mercy_seat.
 \v 12 And÷plan_of all that it_was in/on/at/with÷mind with=him/it for÷courts_of the_house_of \nd YHWH\nd* and=to/for=all the÷chambers all_around for÷treasuries_of the_house_of the=ʼElohīm and÷for÷treasuries_of the÷dedicated_gifts.
@@ -951,7 +951,7 @@
 \v 17 And÷the÷forks and÷the÷basins and÷the÷pitchers gold pure and÷for÷bowls_of the=gold in/on/at/with÷weight for÷dish and÷dish and÷for÷bowls_of the÷silver in/on/at/with÷weight for÷dish and÷dish.
 \v 18 And÷for÷altar_of the÷incense gold refined in/on/at/with÷weight and÷for÷plan_of the÷chariot the=cherubims gold with÷spread and÷covered over the_ark_of the_covenant_of \nd YHWH\nd*.
 \v 19 The÷all in/on/at/with÷writing from÷hand_of \nd YHWH\nd* to÷me he_made_clear all_of the_works_of the÷plan.
-\v 20 and= Dāvid =he/it_said to÷Shəlomoh son_of÷his be_strong and÷courageous and÷do_work do_not be_afraid and÷not be_dismayed if/because \nd YHWH\nd* god god_of÷my with÷you not fail÷you and=not forsake÷you until to÷finished all_of the_work_of the_service_of the_house_of \nd YHWH\nd*.
+\v 20 and= Dāvid =he/it_said to÷Shəlomoh son_of÷his be_strong and÷courageous and÷do_work do_not be_afraid and÷not be_dismayed if/because \nd YHWH\nd* god god_of÷my with÷you not fail÷you and=not abandon÷you until to÷finished all_of the_work_of the_service_of the_house_of \nd YHWH\nd*.
 \v 21 And=see/lo/see the_divisions_of the÷priests and÷the÷Lēviyyiy to/from=all/each/any/every the_service_of the_house_of the=ʼElohīm and÷with÷you in/on/at/with÷all_of [the]_work to/from=all/each/any/every willing_[person] in/on/at/with÷skill to/from=all/each/any/every service and÷the÷officials and=all the÷people to/from=all/each/any/every command_of÷your.
 \c 29
 \v 1 and= Dāvid =he/it_said the=king to/from=all/each/any/every the÷assembly Shəlomoh son_of÷my [whom]_one he_has_chosen in/on/over=him/it god [is]_a_youth and÷inexperienced and÷the÷work [is]_great if/because not to/for=ʼĀdām/humankind the÷temple if/because to/for=\nd YHWH\nd* god.
@@ -980,7 +980,7 @@
 \v 24 And=all the÷leaders and÷the÷mighty and=also all_of the_sons_of the=king Dāvid they_gave a_hand under Shəlomoh the÷king.
 \v 25 And= \nd YHWH\nd* =exalted DOM Shəlomoh to÷upward in÷sight_of all_of Yisrā\sup ʼēl\sup*/(Israel) and=he/it_gave on/upon/above=him/it majesty_of royalty which not it_had_been on any_of king before÷face/front÷him over Yisrā\sup ʼēl\sup*/(Israel).
 \v 26 and÷Dāvid the_son_of Yishay/(Jesse) he_reigned over all_of Yisrā\sup ʼēl\sup*/(Israel).
-\v 27 And÷the÷period which he_reigned over Yisrā\sup ʼēl\sup*/(Israel) [were]_forty year[s] in/on/at/with÷Ḩeⱱrōn he_reigned seven years and÷in/on/at/with÷Yərūshālayim/(Jerusalem) he_reigned thirty and÷three.
+\v 27 And÷the÷period which he_reigned over Yisrā\sup ʼēl\sup*/(Israel) [were]_forty year[s] in/on/at/with÷Ḩeⱱrōn he_reigned seven years and÷in/on/at/with÷Yərūshālam/(Jerusalem) he_reigned thirty and÷three.
 \v 28 And=he/it_died in/on/at/with÷old_age good satisfied_of days wealth and÷honour and= Shəlomoh =reigned son_of÷his in_place÷his.
 \v 29 And÷acts_of Dāvid the=king the÷first and÷the÷last note÷they [are]_written on the_words_of Shəmū\sup ʼēl\sup* the÷seer and÷in the_words_of Nātān the÷prophet and÷in the_words_of Gād the÷seer.
 \v 30 With all_of his/its=kingdom and÷power_of÷his and÷the÷circumstances which they_passed on/upon/above=him/it and÷upon Yisrā\sup ʼēl\sup*/(Israel) and÷upon all_of the_kingdoms_of the÷lands.
