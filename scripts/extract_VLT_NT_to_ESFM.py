@@ -27,11 +27,11 @@ Script extracting the initial VLT ESFM files
     directly out of the collation table and with our modifications.
 Note that we don't use USFM add markers but rather the following:
     ˱I˲ for glossPre
-    /may/ for glossHelper, and
+    ˓may˒ for glossHelper, and
     \\add one\\add* for glossPost.
 Puts markers around one gloss word inserted near another:
     ˱they˲_> would <_repent (after glossPre)
-    /may/_=> not <=_worry (after glossHelper)
+    ˓may˒_=> not <=_worry (after glossHelper)
     ˱to˲ the_> first <_\\add one\\add* (before glossPost)
 Changes periods in morphology to middle dots
 
@@ -45,6 +45,7 @@ CHANGELOG:
     2023-12-14 Add in lemma table that came from CNTR and handle a few more exceptions
     2024-05-07 Make capitalization work when '-' has been changed to '¬the'
     2025-01-15 Change periods in morphology to middle dots
+    2025-02-16 Change gloss helper to use ˓˒ instead of // around gloss helper (since / also used for alternative glosses)
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple, Optional
@@ -58,10 +59,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2025-01-15' # by RJH
+LAST_MODIFIED_DATE = '2025-02-16' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
-PROGRAM_VERSION = '0.98'
+PROGRAM_VERSION = '0.99'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -514,7 +515,7 @@ def export_esfm_literal_English_gloss() -> bool:
                         logging.critical( f"{collation_row_number} Unexpected space in {gloss_part_name} '{collation_row[gloss_part_name]}' from {collation_row}" )
             # gloss_list = [collation_row[gloss_part_name] for gloss_part_name in ('GlossPre', 'GlossHelper', 'GlossWord', 'GlossPost') if collation_row[gloss_part_name]]
             # word_list_string = ' '.join(gloss_list) # Space-separated list of English gloss words for that Greek word
-            preformed_gloss_string = f"{'˱'+collation_row['GlossPre']+'˲ ' if collation_row['GlossPre'] else ''}{'/'+collation_row['GlossHelper']+'/ ' if collation_row['GlossHelper'] else ''}" \
+            preformed_gloss_string = f"{'˱'+collation_row['GlossPre']+'˲ ' if collation_row['GlossPre'] else ''}{'˓'+collation_row['GlossHelper']+'˒ ' if collation_row['GlossHelper'] else ''}" \
                             f"{collation_row['GlossWord']}{' ‹'+collation_row['GlossPost']+'›' if collation_row['GlossPost'] else ''}"
             glossCapitalisationString = '' if collation_row['GlossCapitalization'] is None else collation_row['GlossCapitalization']
             if collation_row['Koine'].startswith( '=' ): # it's a nomina sacra
@@ -791,7 +792,7 @@ def preform_gloss_and_word_number(thisList:List[Dict[str,str]], given_verse_row_
         glossHelper, glossPre, glossWord = apply_gloss_capitalization(glossHelper, glossPre, glossWord, glossCapitalization)
         glossHelper_bits = glossHelper.split('_', 1)
         preformed_word_string = f"{last_glossWord+' ' if last_glossWord else ''}" \
-                            f"{pre_punctuation}/{glossHelper_bits[0]}_˱{glossPre}˲_/{glossHelper_bits[1]}_" \
+                            f"{pre_punctuation}˓{glossHelper_bits[0]}˒_˱{glossPre}˲_˓{glossHelper_bits[1]}˒_" \
                             f"{glossWord}{' '+BACKSLASH+'add '+glossPost+BACKSLASH+'add*' if glossPost else ''}{post_punctuation}"
     elif glossInsert == '@' and not last_glossInsert:
         # Put GlossPre inside GlossWord
@@ -800,7 +801,7 @@ def preform_gloss_and_word_number(thisList:List[Dict[str,str]], given_verse_row_
         _, _, glossWord = apply_gloss_capitalization('', '', glossWord, glossCapitalization)
         glossWord_bits = glossWord.split('_', 1)
         preformed_word_string = f"{last_glossWord+' ' if last_glossWord else ''}" \
-                                f"{pre_punctuation}{'/'+glossHelper+'/ ' if glossHelper else ''}" \
+                                f"{pre_punctuation}{'˓'+glossHelper+'˒ ' if glossHelper else ''}" \
                                 f"{glossWord_bits[0]}_ ˱{glossPre}˲ _{glossWord_bits[1]}" \
                                 f"{' '+BACKSLASH+'add '+glossPost+BACKSLASH+'add*' if glossPost else ''}{post_punctuation}"
     elif glossInsert == '?' and not last_glossInsert:
@@ -810,14 +811,14 @@ def preform_gloss_and_word_number(thisList:List[Dict[str,str]], given_verse_row_
         # assert ' ' not in glossHelper
         glossHelper, glossPre, glossWord = apply_gloss_capitalization(glossHelper, glossPre, glossWord, glossCapitalization)
         preformed_word_string = f"{last_glossWord+' ' if last_glossWord else ''}" \
-                                f"{pre_punctuation}/{glossHelper}/_˱{glossPre}˲_" \
+                                f"{pre_punctuation}˓{glossHelper}˒_˱{glossPre}˲_" \
                                 f"{glossWord}{' '+BACKSLASH+'add '+glossPost+BACKSLASH+'add*' if glossPost else ''}{post_punctuation}"
     elif glossInsert == '&' and not last_glossInsert:
         # Swap GlossWord and GlossPost
         assert glossPost
         glossPre, glossHelper, glossWord = apply_gloss_capitalization(glossPre, glossHelper, glossWord, glossCapitalization)
         preformed_word_string = f"{last_glossWord+' ' if last_glossWord else ''}" \
-                                f"{pre_punctuation}{'˱'+glossPre+'˲_' if glossPre else ''}{'/'+glossHelper+'/_' if glossHelper else ''}" \
+                                f"{pre_punctuation}{'˱'+glossPre+'˲_' if glossPre else ''}{'˓'+glossHelper+'˒_' if glossHelper else ''}" \
                                 f"\\add {glossPost}\\add* {glossWord}{post_punctuation}"
     elif glossInsert == '!' and not last_glossInsert:
         # Insert GlossPost into GlossWord
@@ -826,7 +827,7 @@ def preform_gloss_and_word_number(thisList:List[Dict[str,str]], given_verse_row_
         glossPre, glossHelper, glossWord = apply_gloss_capitalization(glossPre, glossHelper, glossWord, glossCapitalization)
         glossWord_bits = glossWord.split('_', 1)
         preformed_word_string = f"{last_glossWord+' ' if last_glossWord else ''}" \
-                                f"{pre_punctuation}{'˱'+glossPre+'˲_' if glossPre else ''}{'/'+glossHelper+'/_' if glossHelper else ''}" \
+                                f"{pre_punctuation}{'˱'+glossPre+'˲_' if glossPre else ''}{'˓'+glossHelper+'˒_' if glossHelper else ''}" \
                                 f"{glossWord_bits[0]}_ \\add {glossPost}\\add* _{glossWord_bits[1]}{post_punctuation}"
     elif glossInsert == '%' and not last_glossInsert: # Swap two gloss fields
         if glossPre and not glossHelper and not glossPost:
@@ -838,7 +839,7 @@ def preform_gloss_and_word_number(thisList:List[Dict[str,str]], given_verse_row_
             # Swap GlossHelper and GlossWord
             glossPre, _dummyHelper, glossWord = apply_gloss_capitalization(glossPre, '', glossWord, glossCapitalization)
             preformed_word_string = f"{last_glossWord+' ' if last_glossWord else ''}" \
-                                f"{pre_punctuation}{glossWord}_/{glossHelper}/{post_punctuation}"
+                                f"{pre_punctuation}{glossWord}_˓{glossHelper}˒{post_punctuation}"
         elif not glossPre and not glossHelper and glossPost:
             # Swap GlossWord and GlossPost
             glossPost, glossHelper, glossWord = apply_gloss_capitalization(glossPost, glossHelper, glossWord, glossCapitalization)
@@ -857,7 +858,7 @@ def preform_gloss_and_word_number(thisList:List[Dict[str,str]], given_verse_row_
             assert glossPre, f"Expected glossPre after '<' at {given_verse_row_index} with {given_verse_row}"
             glossPre, _dummyHelper, last_glossWord = apply_gloss_capitalization(glossPre, '', last_glossWord, last_glossCapitalization)
             _dummyPre, glossHelper, glossWord = apply_gloss_capitalization('', glossHelper, glossWord, glossCapitalization)
-            preformed_word_string = f"{pre_punctuation}˱{glossPre}˲_> {last_glossWord} <_{'/'+glossHelper+'/_' if glossHelper else ''}" \
+            preformed_word_string = f"{pre_punctuation}˱{glossPre}˲_> {last_glossWord} <_{'˓'+glossHelper+'˒_' if glossHelper else ''}" \
                                     f"{glossWord}{' '+BACKSLASH+'add '+glossPost+BACKSLASH+'add*' if glossPost else ''}{post_punctuation}"
             last_glossWord = ''
         elif last_glossInsert == '=': # insert after helper and before word
@@ -866,7 +867,7 @@ def preform_gloss_and_word_number(thisList:List[Dict[str,str]], given_verse_row_
             # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Here with {last_glossCapitalization=} {last_glossWord=} {glossCapitalization=} {glossPre=} {glossHelper=} {glossWord=}")
             glossPre, glossHelper, last_glossWord = apply_gloss_capitalization(glossPre, glossHelper, last_glossWord, last_glossCapitalization)
             _dummyPre, _dummyHelper, glossWord = apply_gloss_capitalization('', '', glossWord, glossCapitalization)
-            preformed_word_string = f"{pre_punctuation}{'˱'+glossPre+'˲_' if glossPre else ''}/{glossHelper}/_=> " \
+            preformed_word_string = f"{pre_punctuation}{'˱'+glossPre+'˲_' if glossPre else ''}˓{glossHelper}˒_=> " \
                                     f"{last_glossWord} <=_{glossWord}{' '+BACKSLASH+'add '+glossPost+BACKSLASH+'add*' if glossPost else ''}{post_punctuation}"
             last_glossWord = ''
         elif last_glossInsert == '-': # insert inside helper parts
@@ -878,7 +879,7 @@ def preform_gloss_and_word_number(thisList:List[Dict[str,str]], given_verse_row_
             else:
                 vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Warning: Can't insert '{last_glossWord}' at underline in '{glossHelper}' at {given_verse_row['CollationID']}")
                 glossHelper_bits = glossHelper, ''
-            preformed_word_string = f"{pre_punctuation}{'˱'+glossPre+'˲_' if glossPre else ''}/{glossHelper_bits[0]}_ {last_glossWord} _{glossHelper_bits[1]}/_" \
+            preformed_word_string = f"{pre_punctuation}{'˱'+glossPre+'˲_' if glossPre else ''}˓{glossHelper_bits[0]}˒_ {last_glossWord} _˓{glossHelper_bits[1]}˒_" \
                                     f"{glossWord}{' '+BACKSLASH+'add '+glossPost+BACKSLASH+'add*' if glossPost else ''}{post_punctuation}"
             last_glossWord = ''
         elif last_glossInsert == '_': # insert inside word parts
@@ -888,7 +889,7 @@ def preform_gloss_and_word_number(thisList:List[Dict[str,str]], given_verse_row_
             glossPre, glossHelper, last_glossWord = apply_gloss_capitalization(glossPre, glossHelper, last_glossWord, last_glossCapitalization)
             _dummyPre, _dummyHelper, glossWord = apply_gloss_capitalization('', '', glossWord, glossCapitalization)
             glossWord_bits = glossWord.split('_', 1)
-            preformed_word_string = f"{pre_punctuation}{'˱'+glossPre+'˲_' if glossPre else ''}{'/'+glossHelper+'/_' if glossHelper else ''}" \
+            preformed_word_string = f"{pre_punctuation}{'˱'+glossPre+'˲_' if glossPre else ''}{'˓'+glossHelper+'˒_' if glossHelper else ''}" \
                                     f"{glossWord_bits[0]}_ {last_glossWord} _{glossWord_bits[1]}{' '+BACKSLASH+'add '+glossPost+BACKSLASH+'add*' if glossPost else ''}{post_punctuation}"
             last_glossWord = ''
         elif last_glossInsert == '>': # insert after word and before post
@@ -896,7 +897,7 @@ def preform_gloss_and_word_number(thisList:List[Dict[str,str]], given_verse_row_
             assert glossPost
             glossPre, glossHelper, last_glossWord = apply_gloss_capitalization(glossPre, glossHelper, last_glossWord, last_glossCapitalization)
             _dummyPre, _dummyHelper, glossWord = apply_gloss_capitalization('', '', glossWord, glossCapitalization)
-            preformed_word_string = f"{pre_punctuation}{'˱'+glossPre+'˲_' if glossPre else ''}{'/'+glossHelper+'/_' if glossHelper else ''}" \
+            preformed_word_string = f"{pre_punctuation}{'˱'+glossPre+'˲_' if glossPre else ''}{'˓'+glossHelper+'˒_' if glossHelper else ''}" \
                                     f"{glossWord}_> {last_glossWord} <_\\add {glossPost}\\add*{post_punctuation}"
             last_glossWord = ''
         else:
@@ -908,7 +909,7 @@ def preform_gloss_and_word_number(thisList:List[Dict[str,str]], given_verse_row_
             last_glossWord = f'{msg} {last_glossWord}' # Also insert the error into the returned text so it gets noticed
         if not glossInsert: # (If we do have glossInsert, leave the capitalization for the next round)
             glossPre, glossHelper, glossWord = apply_gloss_capitalization(glossPre, glossHelper, glossWord, glossCapitalization)
-        preformed_word_string = f"{pre_punctuation}{last_glossWord+' ' if last_glossWord else ''}{'˱'+glossPre+'˲_' if glossPre else ''}{'/'+glossHelper+'/_' if glossHelper else ''}" \
+        preformed_word_string = f"{pre_punctuation}{last_glossWord+' ' if last_glossWord else ''}{'˱'+glossPre+'˲_' if glossPre else ''}{'˓'+glossHelper+'˒_' if glossHelper else ''}" \
                             f"{glossWord}{' '+BACKSLASH+'add '+glossPost+BACKSLASH+'add*' if glossPost else ''}{post_punctuation}"
     preformed_result_string = preformed_word_string # f"{preformed_word_string}"
     assert not preformed_result_string.startswith(' '), preformed_result_string

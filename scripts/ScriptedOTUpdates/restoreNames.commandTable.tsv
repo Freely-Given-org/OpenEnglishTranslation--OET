@@ -48,7 +48,7 @@ H									Adna			עַדְנָא		H5733 (2) Ezr 10:30, Neh 12:15*
 H					SA2_23:11				Agee			אָגֵא		H89 (1) 2Sam 23:11*
 H									Ahab			אַחְאָב		H256 (93) 1Ki 16:28-30,33, 17:1, 18:1-3,5-6, ...
 H					SA2_23:34				Ahasbai			אֲחַסְבַּי		H308 (1) 2Sam 23:34*
-H									Ahasuerus			אֲחַשְׁוֵרוֹשׁז		H325 () Ezr 4:6, Est 1:1-2,9-10,15-17,19, ...
+H									Ahasuerus			אֲחַשְׁוֵרוֹשׁ		H325 () Ezr 4:6, Est 1:1-2,9-10,15-17,19, ...
 wH									Ahaz			אָחָז		H271 (41) 2Ki 15:38, 16:1-2,5,7-8,10-11,15-17, ...
 H									Ahaziah			אֲחַזְיָה		H274 (37) 1Ki 22:40, 22:49,51, 2Ki 1:2,18, 8:24-26, ...
 H									Ahiam			אֲחִיאָם		H279 (2) 2Sam 23:33, 1Chr 11:35*
@@ -178,6 +178,7 @@ H									Bilgai			בִּלְגַּי		H1084 (1) Neh 10:8*
 H									Bilhah			בִּלְהָה		H1090 concubine of Jacob (11) Gen 29:29, 30:3-5,7, 35:22,25, 37:2, 46:25, 1Chr 4:29, 7:13*
 H	EZR,NEH								Bilshan			בִּלְשָׁן		H1114 (2) Ezr 2:2, Neh 7:7*
 H									Binnui			בִּנּוּי		H1131 (7) Ezr 8:33, 10:30,38, Neh 3:24, 7:15, 10:9, 12:8*
+H									Bishlam			בִּשְׁלָם		H1312 (1) Ezr 4:7*
 H									Boaz			בֹּעַז		H1162 (24) Ruth 2:1,3-5,8,11,14-15, ..., 2Chr 3:17
 H									Bohan			בֹּהן		H932 Reuben's son or descendant (2) Josh 15:6, 18:17*
 H									Ishbosheth			אִישׁ-בּשֶׁת		{ H378 Sha'ul's son (11) 2Sam 2:8,10, ...
@@ -772,6 +773,7 @@ H									Sheshbazzar			שֵׁשְׁבַּצַּר		H8339 (2) Ezra 1:8,11*
 H									Shilhi			שִׁלְחִי		H7977 (2) 1Ki 22:42, 2Chr 20:31*
 H									Shimeah			שִׁמְעָה		H8093 David's brother (2) 2Sam 13:3, 32*
 H									Shimei			שִׁמְעִי		H8096 (44) Exo 6:17, Num 3:18, 2Sam 16:5,7,13, 19:16, ...
+H									Shimshai			שִׁמְשַׁי		H8124 (4) Ezr 4:8-9,17,23*
 H									Shiphrah			שִׁפְרָה		H8236 (1) Exo 1:15*
 H					KI1_4:3				Shisha			שִׁישָׁא		H7894 (1) 1Ki 4:3*
 H									Shobab			שׁוֹבָב		H7727 (4) 2Sam 5:14, 1Chr 2:18, 3:5, 14:4*
@@ -792,6 +794,7 @@ H	EZR,NEH								Sophereth			סֹפֶרֶת		{ H5618 (1) Ezr 2:55, Neh 7:57*
 H					EZR_2:55				Hassophereth			סֹפֶרֶת		{ H5618 (1) Ezr 2:55*
 H									Sotai			סוֹטַי		H5479 (2) Ezr 2:55, Neh 7:57*
 H									Tabbaoth			טַבָּעוֹת		H2884 (2) Ezr 2:43, Neh 7:46*
+H									Tabeel			טֱבְאֵל		H2870 (2) Ezr 4:7, Isa 7:6*
 H					KI1_15:18				Tabrimmon			טַבְרִמּוֹן		H2886 (1) 1Ki 15:18*
 H									Tahpenes			תַּחְפְּנֵיס		H8472 Egyptian woman (3) 1Ki 11:19-20*
 H									Talmai			תַּלִמַי		H8526 (6) Num 13:22, Josh 15:14, Jdg 1:10, 2 Sam 3:3, 13:37, 1Chr 3:2*
@@ -1352,10 +1355,11 @@ H									Ethanim			אֵתָנִים		H388 7th month Sep-Oct (1) 1Ki 8:2*
 wH									Ziv			זִו		H2099 2nd month Apr-May (2) 1Ki 6:1,37*
 
 # Measures
-wH									omer			עֹמֶר		(14) Exo 16:16,19,22,32-33,36, Lev 23:10
-wH									efah			אֵיפָה		(40) Exo 16:36, Lev 5:11, 6:20, 19:36, Num 5:15
+wH									omer			עֹמֶר		H6016 (14) Exo 16:16,19,22,32-33,36, Lev 23:10
+wH									ephah			אֵיפָה		H374 (40) Exo 16:36, Lev 5:11, 6:20, 19:36, Num 5:15
 
 # Other
+H									Aramaic			אֲרָמִית		H762 (5) 2Ki 18:26, Ezr 4:7, Isa 36:11, Dan 2:4*
 dH									Ecclesiastes			קֹהֶלֶת/(orator)
 H									Elohim			אֱלֹהִים		H430 Usually translated as ‘God’ (2598) Gen 1:1, ...
 H									Ephphatha			פְתַח
