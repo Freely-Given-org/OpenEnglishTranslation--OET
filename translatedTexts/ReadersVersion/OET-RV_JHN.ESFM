@@ -1,4 +1,4 @@
-\id JHN - Open English Translation—Readers' Version (OET-RV) V0.1.19
+\id JHN - Open English Translation—Readers' Version (OET-RV) V0.2.00
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 JHN
@@ -25,7 +25,7 @@
 \io1 Yeshua's final week in and around Yerushalem \ior 13:1–19:42\ior*
 \io1 Yeshua comes back to life and meets people again \ior 20:1-31\ior*
 \io1 Yeshua reveals himself to his followers in Galilee \ior 21:1-25\ior*
-\rem This is still a very early look into the unfinished text of the \em Open English Translation\em* of the Bible. Please double-check the text in advance before using in public.
+\rem This is still a very early look into the unfinished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
 \s1 The arrival of the true light
@@ -103,7 +103,7 @@
 \p
 \v 40 Andrew¦63643, the brother¦63645 of Simon¦63646 Peter¦63647 was one of those two¦63652 who heard¦63654 Yohan¦63656 and¦63657 then followed¦63658 Yeshua.
 \v 41 As soon as he found his brother¦63666, he said to Simon¦63669, “We have found the messiah¦63675—God's chosen one,”
-\v 42 and led him to Yeshua. When Yeshua saw him, he said¦63694, “\wj Ah, you are Simon¦63698, Yohan's son, but from now on you'll be called¦63704 Peter which¦63706 means \it stone\it*.\wj*”
+\v 42 and led him to Yeshua. When Yeshua saw him, he said¦63694, “\wj Ah, you are Simon¦63698, Yohan's son, but from now on you'll be called¦63704 Peter which¦63706 means \+it stone\+it*.\wj*”
 \s1 Philip and Nathanael join the group
 \rem /s1 Jesus Calls Philip and Nathanael
 \p
@@ -158,7 +158,7 @@
 \p
 \v 18 Then the Jewish leaders responded¦64284, “Do a miracle to show that you have the authority to do these¦64292 things.”
 \p
-\v 19 \x + \xo 2:19: \xt Mat 26:61; 27:40; Mrk 14:58; 15:29.\x*But \nd Yeshua¦64296\nd* answered¦64294, “\wj Well, destroy this temple¦64302 and I'll raise\f + \fr 2:19 \ft We couldn't easily use \em rebuild\em* here because there's a play on words—see verse 21.\f* it¦64309 again in three¦64306 days¦64307.\wj*”
+\v 19 \x + \xo 2:19: \xt Mat 26:61; 27:40; Mrk 14:58; 15:29.\x*But \nd Yeshua¦64296\nd* answered¦64294, “\wj Well, destroy this temple¦64302 and I'll raise\f + \fr 2:19 \ft We couldn't easily use \+em rebuild\+em* here because there's a play on words—see verse 21.\f* it¦64309 again in three¦64306 days¦64307.\wj*”
 \p
 \v 20 The leaders smirked, “This temple¦64322 took forty-six¦64315 years¦64318 to build, and you reckon that you can raise it¦64332 again in three¦64329 days¦64330?”
 \p
@@ -181,8 +181,8 @@
 \p
 \v 4 Nicodemus questioned, “How can an adult be reborn? A person¦64514 can't just return to their mother's¦64527 womb and¦64531 then get born a second¦64529 time!”
 \p
-\v 5 But \nd Yeshua¦64536\nd* continued, “\wj Honestly, I'm telling¦64539 you¦64540: unless a person is born from both water¦64547 \em and¦64548\em* the \nd spirit¦64549\nd*, they can't enter God's kingdom¦64557.\wj*
-\v 6 \wj Someone that's born from a body¦64568 is flesh \add and bone\add*, but someone that's born from God's spirit is spiritual.\wj*
+\v 5 But \nd Yeshua¦64536\nd* continued, “\wj Honestly, I'm telling¦64539 you¦64540: unless a person is born from both water¦64547 \+em and¦64548\+em* the \+nd spirit¦64549\+nd*, they can't enter God's kingdom¦64557.\wj*
+\v 6 \wj Someone that's born from a body¦64568 is flesh \+add and bone\+add*, but someone that's born from God's spirit is spiritual.\wj*
 \v 7 \wj So you shouldn't be surprised that I told you that everyone needs to be reborn.\wj*
 \v 8 \wj The wind blows wherever it wants, and you can hear¦64599 its¦64598 sound¦64597 but you can't actually see where it's coming¦64604 from and where it's going¦64608 to. So too with everyone¦64611 who's born from God's spirit.\wj*”
 \p
@@ -190,15 +190,15 @@
 \p
 \v 10 “\wj You're a Jewish teacher¦64638,\wj*” \nd Yeshua¦64631\nd* answered¦64629, “\wj and yet you¦64644 don't¦64643 know all this?\wj*
 \v 11 \wj It's true that we just teach what we know, and explain what we've seen¦64656 ourselves, but you people aren't accepting our¦64661 testimony¦64660.\wj*
-\v 12 \wj If I tell all of you earthly¦64667 things and you don't¦64672 believe them, how will you ever believe if I explain \em heavenly¦64680\em* things?\wj*
+\v 12 \wj If I tell all of you earthly¦64667 things and you don't¦64672 believe them, how will you ever believe if I explain \+em heavenly¦64680\+em* things?\wj*
 \v 13 \wj None of you have gone up into heaven, but I, humanity's child, have come down from heaven.\wj*
 \p
-\v 14 \x + \xo 3:14: \xt Num 21:9.\x*“\wj Just like Mosheh lifted up that \add bronze\add* snake \add on a pole\add* in the wilderness¦64717, it's \add also\add* necessary¦64722 for humanity's child to be lifted up,\wj*\f + \fr 3:14 \ft lifted up / exalted: See https://bibleDifferences.net/2019/04/25/156-exulted\f*
+\v 14 \x + \xo 3:14: \xt Num 21:9.\x*“\wj Just like Mosheh lifted up that \+add bronze\+add* snake \+add on a pole\+add* in the wilderness¦64717, it's \+add also\+add* necessary¦64722 for humanity's child to be lifted up,\wj*\f + \fr 3:14 \ft lifted up / exalted: See https://bibleDifferences.net/2019/04/25/156-exulted\f*
 \v 15 \wj so that everyone¦64729 who believes¦64731 in him¦64735 won't die, but will live forever.\wj*\f + \fr 3:15 \ft See http://bibleandtech.blogspot.com/2021/03/john-314-21-translation-and-commentary.html\f*
-\v 16 \wj Because¦64745 in that same way, \nd God¦64748\nd* loves \add the people of\add* the world enough to cause \add &his\add* only son to be born and to give him¦64765 to the world, so that everyone¦64760 who believes¦64762 this will not die, but¦64769 will \add go on to\add* live forever.\wj*
+\v 16 \wj Because¦64745 in that same way, \+nd God¦64748\+nd* loves \+add the people of\+add* the world enough to cause \+add &his\+add* only son to be born and to give him¦64765 to the world, so that everyone¦64760 who believes¦64762 this will not die, but¦64769 will \+add go on to\+add* live forever.\wj*
 \p
-\v 17 “\wj \nd God¦64777\nd* didn't send his son here to condemn people, but¦64789 rather to save them.\wj*
-\v 18 \wj Anyone who trusts in me will not be condemned. However, anyone who doesn't believe¦64810 this has already¦64806 been condemned because¦64808 he rejected the authority of the only son that \nd God¦64818\nd* fathered.\wj*
+\v 17 “\wj \+nd God¦64777\+nd* didn't send his son here to condemn people, but¦64789 rather to save them.\wj*
+\v 18 \wj Anyone who trusts in me will not be condemned. However, anyone who doesn't believe¦64810 this has already¦64806 been condemned because¦64808 he rejected the authority of the only son that \+nd God¦64818\+nd* fathered.\wj*
 \v 19 \wj And this is the verdict: that light has come into the world¦64830, but some people¦64835 love the darkness¦64839 more than the light because¦64845 they do evil things,\wj*
 \v 20 \wj because¦64852 everyone¦64851 who does evil things hates the light and doesn't come to the light so that their actions won't be exposed.\wj*
 \v 21 \wj But anyone who does what is right, comes toward the light¦64883 so that their actions can be revealed¦64885 as being done with God's help.\wj*”
@@ -240,7 +240,7 @@
 \p
 \v 9 \x + \xo 4:9: \xt Est 4:1-5; Neh 4:1-2.\x*The woman said to him, “You're a Jew¦65331. How come you're asking me for a drink¦65337 when I'm from Samaria?” (Jews¦65349 don't¦65346 normally associate¦65348 with anyone from Samaria.)
 \p
-\v 10 \nd Yeshua¦65354\nd* answered¦65352, “\wj If you had recognised God's gift¦65361 and who it is who's asking you for a drink, you would have asked me and I would have given you \em living¦65383\em* water¦65382 \add to drink\add*.\wj*”
+\v 10 \nd Yeshua¦65354\nd* answered¦65352, “\wj If you had recognised God's gift¦65361 and who it is who's asking you for a drink, you would have asked me and I would have given you \+em living¦65383\+em* water¦65382 \+add to drink\+add*.\wj*”
 \p
 \v 11 But the woman¦65389 countered, “Mister¦65390, you don't even have \add rope and\add* a bucket¦65393 to reach the water in the deep well. How then could you get ‘living¦65413 water’?
 \v 12 I doubt that you're greater¦65416 than our¦65421 ancestor Yacob¦65422 who made this well for us and drank¦65437 this water along with his children and his animals.”
@@ -262,11 +262,11 @@
 \v 21 Then \nd Yeshua¦65613\nd* told her, “\wj You need to believe¦65615 that I was sent from God, woman¦65618, because¦65619 a day is coming¦65620 when everyone will be worshipping¦65635 him neither¦65624 on this mountain¦65628, nor in Yerushalem¦65634.\wj*
 \v 22 \wj You people in Samaria don't¦65641 even know who you¦65642 worship, but we do, because¦65647 people will be saved by means of us Jews¦65652.\wj*
 \v 23 \wj But a time is coming¦65655, starting even now, when the true worshippers will be worshipping the father in spirit¦65668 and truth¦65670, because¦65672 those are the ones that he is wanting to worship him.\wj*
-\v 24 \wj \nd God¦65686\nd* is spirit, and the ones worshipping him must worship in spirit and total honesty.\wj*”
+\v 24 \wj \+nd God¦65686\+nd* is spirit, and the ones worshipping him must worship in spirit and total honesty.\wj*”
 \p
 \v 25 The woman¦65703 said, “I'm aware that the messiah¦65707 is coming¦65708—the chosen one of God. Whenever he appears, he'll teach us everything.”
 \p
-\v 26 “\wj \em I am\em* the messiah,\wj*” \nd Yeshua¦65723\nd* responded. “\wj Yes, he's speaking¦65727 to you¦65728!\wj*”
+\v 26 “\wj \+em I am\+em* the messiah,\wj*” \nd Yeshua¦65723\nd* responded. “\wj Yes, he's speaking¦65727 to you¦65728!\wj*”
 \rem /s1 The Disciples Rejoin Jesus
 \p
 \v 27 After this, his¦65738 followers arrived back, and they were astounded that he was speaking with a woman¦65744. However no one dared ask her, “What are you after¦65730?” Or to ask him, “Why are you talking¦65745 with her?”
@@ -371,7 +371,7 @@
 \s1 The unbelief of the religious leaders
 \rem /s1 Witnesses to Jesus
 \p
-\v 30 Yeshua continued explaining to the religious leaders, “\wj I don't¦67032 do anything in isolation. Whenever I hear¦67045 from him, only then do I judge and my judgement is correct and impartial because¦67054 I'm not imposing \em my\em* desires, but the desire of the one who sent¦67066 me.\wj*
+\v 30 Yeshua continued explaining to the religious leaders, “\wj I don't¦67032 do anything in isolation. Whenever I hear¦67045 from him, only then do I judge and my judgement is correct and impartial because¦67054 I'm not imposing \+em my\+em* desires, but the desire of the one who sent¦67066 me.\wj*
 \rem /s1 Testimonies About Jesus
 \rem /s1 Witnesses to Jesus
 \p
@@ -387,9 +387,9 @@
 \v 40 \wj yet you refuse to come¦67249 to me in order¦67252 to receive life¦67253.\wj*
 \p
 \v 41 “\wj I'm not getting any praise from people\wj*
-\v 42 \wj but I do know that you people don't¦67272 actually love¦67269 \nd God¦67271\nd* in your hearts.\wj*
+\v 42 \wj but I do know that you people don't¦67272 actually love¦67269 \+nd God¦67271\+nd* in your hearts.\wj*
 \v 43 \wj I have come with my¦67285 father's¦67284 authority and you don't¦67287 accept me, but if someone came claiming their own authority, you'd happily accept them.\wj*
-\v 44 \wj How \em could\em* you possibly believe¦67303 when you just accept acclamations from each other, but don't¦67317 even seek praise from the only \add \nd God¦67316\nd*\add*.\wj*
+\v 44 \wj How \+em could\+em* you possibly believe¦67303 when you just accept acclamations from each other, but don't¦67317 even seek praise from the only \+add God\+add*.\wj*
 \v 45 \wj But don't be assuming that I'll be accusing you all in front of the father¦67330. No, the one who'll accuse you is Mosheh because he's the one that you're hoping to please.\wj*
 \v 46 \wj The trouble is that if you actually believed what Mosheh wrote¦67355, you would believe me, because¦67351 Mosheh was writing about me.\wj*
 \v 47 \wj But since you don't¦67362 really believe his writings¦67361, you're not at all likely to believe me.\wj*”
@@ -445,8 +445,8 @@
 \p
 \v 25 When they found¦67927 him there across¦67929 the lake¦67931, they queried, “Teacher, how did you get here?”
 \p
-\v 26 “\wj Honestly, I know that you're not looking¦67951 for¦67951 me because you saw¦67955 \add God working\add* miracles,\wj*” \nd Yeshua¦67944\nd* answered¦67941, “\wj but because you all had plenty of food to fill you up.\wj*
-\v 27 \wj Don't \add just\add* work for the food which goes off, but¦67975 for the food which lasts forever—the food which humanity's child will give to you¦67989 because¦67992 \nd God¦67997\nd* the father¦67994 has put his mark of approval on him.\wj*”
+\v 26 “\wj Honestly, I know that you're not looking¦67951 for¦67951 me because you saw¦67955 \+add God working\+add* miracles,\wj*” \nd Yeshua¦67944\nd* answered¦67941, “\wj but because you all had plenty of food to fill you up.\wj*
+\v 27 \wj Don't \+add just\+add* work for the food which goes off, but¦67975 for the food which lasts forever—the food which humanity's child will give to you¦67989 because¦67992 \+nd God¦67997\+nd* the father¦67994 has put his mark of approval on him.\wj*”
 \p
 \v 28 Puzzled, they asked him¦68001, “What should we be doing if we want to work for \nd God¦68014\nd*?”
 \p
@@ -460,7 +460,7 @@
 \p
 \v 34 So¦68130 they¦68129 requested, “Mister¦68133, keep giving us that bread¦68139.”
 \p
-\v 35 “\wj \em I am\em* the bread¦68150 that gives life¦68152,\wj*” \nd Yeshua¦68146\nd* answered, “\wj anyone who comes to me will never hunger¦68160, and¦68163 the one believing¦68165 in me, will never be thirsty¦68170 again.\wj*
+\v 35 “\wj \+em I am\+em* the bread¦68150 that gives life¦68152,\wj*” \nd Yeshua¦68146\nd* answered, “\wj anyone who comes to me will never hunger¦68160, and¦68163 the one believing¦68165 in me, will never be thirsty¦68170 again.\wj*
 \v 36 \wj But as I said¦68175 already, although you have seen¦68179 me you refuse to believe¦68184 me.\wj*
 \v 37 \wj Everyone¦68186 that the father¦68191 gives to me will come to me, and¦68195 I certainly won't turn away anyone who comes to me,\wj*
 \v 38 \wj because I came¦68207 down from heaven¦68211, not to do what I want, but¦68220 to do what the one who sent¦68224 me wants.\wj*
@@ -472,13 +472,13 @@
 \p
 \v 43 \nd Yeshua¦68352\nd* scolded them, “\wj Don't be grumbling¦68358 to each other.\wj*
 \v 44 \wj No one can join me unless the father¦68370 who sent¦68373 me attracts them, and¦68379 then I'll be bringing them back to life on that final day¦68387.\wj*
-\v 45 \x + \xo 6:45: \xt Isa 54:13.\x*\wj The prophets¦68392 wrote¦68389 that the people will be taught¦68396 by \nd God¦68398\nd*. And everyone who's heard¦68403 and¦68407 learned¦68408 from the father¦68406 comes to me.\wj*
-\v 46 \wj Not that any person has seen the father—only the one who came from \nd God¦68429\nd* has seen him.\wj*
-\v 47 \wj I tell you¦68439 sincerely: anyone who believes¦68442 \add in me\add* will live forever.\wj*
-\v 48 \wj \em I am\em* the bread¦68451 that gives true life¦68453.\wj*
+\v 45 \x + \xo 6:45: \xt Isa 54:13.\x*\wj The prophets¦68392 wrote¦68389 that the people will be taught¦68396 by \+nd God¦68398\+nd*. And everyone who's heard¦68403 and¦68407 learned¦68408 from the father¦68406 comes to me.\wj*
+\v 46 \wj Not that any person has seen the father—only the one who came from \+nd God¦68429\+nd* has seen him.\wj*
+\v 47 \wj I tell you¦68439 sincerely: anyone who believes¦68442 \+add in me\+add* will live forever.\wj*
+\v 48 \wj \+em I am\+em* the bread¦68451 that gives true life¦68453.\wj*
 \v 49 \wj Your¦68456 ancestors¦68455 ate¦68457 manna¦68466 in the wilderness¦68464, but they¦68468 all went on to die.\wj*
-\v 50 \wj But \em I am\em* the bread¦68472 that came down from heaven¦68476 and¦68486 anyone¦68481 who eats this will not die¦68489.\wj*
-\v 51 \wj \em I am\em* the living bread that came down from heaven¦68500 and if anyone¦68504 eats this bread, he will live through to the next age.\wj*”
+\v 50 \wj But \+em I am\+em* the bread¦68472 that came down from heaven¦68476 and¦68486 anyone¦68481 who eats this will not die¦68489.\wj*
+\v 51 \wj \+em I am\+em* the living bread that came down from heaven¦68500 and if anyone¦68504 eats this bread, he will live through to the next age.\wj*”
 \p
 \v 52 At this point, the religious leaders began to argue with each other, “How could this man give¦68555 us his¦68561 flesh¦68558 to eat¦68562?”
 \p
@@ -487,7 +487,7 @@
 \v 55 \wj For my flesh¦68628 is the true food, and¦68634 my blood¦68636 is the true drink¦68641.\wj*
 \v 56 \wj Anyone who eats my flesh¦68680 and drinks¦68682 my blood¦68686 lives in me, and I will live in him¦68692.\wj*
 \v 57 \wj The father is alive and sent me here, and I am alive because of Him, so also the person who eats me will be alive because of me.\wj*
-\v 58 \wj Unlike your ancestors¦68763 who ate that bread \add from the sky\add* and then died, anyone who eats this bread that came down from heaven¦68756 will live through to the next age.\wj*”
+\v 58 \wj Unlike your ancestors¦68763 who ate that bread \+add from the sky\+add* and then died, anyone who eats this bread that came down from heaven¦68756 will live through to the next age.\wj*”
 \s1 Many people find the teaching too difficult
 \p
 \v 59 Yeshua taught¦68788 all of this in the meeting¦68786 hall¦68786 there in Capernaum¦68790.
@@ -546,7 +546,7 @@
 \p
 \v 21 \nd Yeshua¦69439\nd* responded¦69441, “\wj I did one miracle and you¦69449 were all amazed¦69449.\wj*
 \v 22 \x + \xo 7:22: a \xt Lev 12:3; \xo b \xt Gen 17:10.\x*\wj Mosheh gave¦69454 you the commandment about circumcision (even though it actually came from before his time), but to obey this, you'll even circumcise a baby boy on the Rest Day.\wj*
-\v 23 \x + \xo 7:23: \xt Yhn 5:9.\x*\wj So if a \add baby\add* boy can be circumcised¦69478 on the Rest Day so that Mosheh's commandments aren't broken¦69486, they why did you get angry¦69493 with me because¦69494 I made a man healthy¦69498 on the Rest Day?\wj*
+\v 23 \x + \xo 7:23: \xt Yhn 5:9.\x*\wj So if a \+add baby\+add* boy can be circumcised¦69478 on the Rest Day so that Mosheh's commandments aren't broken¦69486, they why did you get angry¦69493 with me because¦69494 I made a man healthy¦69498 on the Rest Day?\wj*
 \v 24 \wj Don't just ‘judge’ things so that you yourselves look good, but¦69507 judge impartially, seeking the best for others.\wj*”
 \s1 Could Yeshua be the messiah?
 \rem /s1 Is Jesus the Christ?
@@ -634,7 +634,7 @@
 \rem /s1 Jesus, the Light of the World
 \rem /s1 The Validity of Jesus' Testimony
 \p
-\v 12 \x + \xo 8:12: \xt Mat 5:14; Yhn 9:5.\x*Because of this, \nd Yeshua¦70391\nd* told them, “\wj \em I am\em* the light for the world¦70403—whoever follows¦70405 me won't walk in the darkness¦70414 but will have the light \add that gives\add* life¦70421.\wj*”
+\v 12 \x + \xo 8:12: \xt Mat 5:14; Yhn 9:5.\x*Because of this, \nd Yeshua¦70391\nd* told them, “\wj \+em I am\+em* the light for the world¦70403—whoever follows¦70405 me won't walk in the darkness¦70414 but will have the light \+add that gives\+add* life¦70421.\wj*”
 \p
 \v 13 \x + \xo 8:13: \xt Yhn 5:31.\x*Some from the Pharisee¦70426 party¦70426 argued, “You are testifying¦70430 about¦70428 yourself¦70429, so that testimony¦70432 is invalid.”
 \p
@@ -658,14 +658,14 @@
 \v 22 This puzzled the Jewish teachers, “Surely¦70634 he's not going to commit suicide! What else could he mean about ‘you can't go where I'm going to be going’?”
 \p
 \v 23 Yeshua explained, “\wj All of you¦70664 are from the world below¦70656, but I'm from the world above¦70662. You all are part of this world, but I'm not part of it.\wj*
-\v 24 \wj That's why I said that you'll be dying in your sins, because¦70689 if you refuse to believe¦70691 that I am \add God\add*, you will indeed all be dying in your sins.\wj*”
+\v 24 \wj That's why I said that you'll be dying in your sins, because¦70689 if you refuse to believe¦70691 that I am \+add God\+add*, you will indeed all be dying in your sins.\wj*”
 \p
 \v 25 “So¦70705 who are you?” they asked.
 \p And he answered, “\wj Still just the same as I've been telling you from the beginning¦70719.\wj*
 \v 26 \wj I have a lot that I need to tell you¦70730 all and to judge many of your actions, because the one who sent¦70737 me is true, and it's what I hear from him¦70747 that I speak to all people.\wj*”
 \p
 \v 27 (They didn't realise that he was talking¦70762 to them about¦70758 the father¦70759 \add in heaven\add*.)
-\v 28 So¦70767 \nd Yeshua¦70771\nd* told them, “\wj When you all lift up\f + \fr 8:28 \ft lifted up / exalted: There's a play on words here. See https://bibleDifferences.net/2019/04/25/156-exulted (dead link???)\f* humanity's child \add on a pole\add*, then you will know that I am \add God\add*, and that I don't do anything by myself¦70788, but I say all this just as the father¦70800 told me to.\wj*
+\v 28 So¦70767 \nd Yeshua¦70771\nd* told them, “\wj When you all lift up\f + \fr 8:28 \ft lifted up / exalted: There's a play on words here. See https://bibleDifferences.net/2019/04/25/156-exulted (dead link???)\f* humanity's child \+add on a pole\+add*, then you will know that I am \+add God\+add*, and that I don't do anything by myself¦70788, but I say all this just as the father¦70800 told me to.\wj*
 \v 29 \wj And the one who sent¦70807 me is with me—he didn't just leave me alone¦70815—because¦70821 I am continually doing¦70826 what pleases¦70824 him.\wj*”
 \p
 \v 30 After he'd said all this, many people believed¦70832 in him.
@@ -681,7 +681,7 @@
 \v 33 \x + \xo 8:33: \xt Mat 3:9; Luk 3:8.\x*But some queried, “We are Abraham's descendants and¦70876 we've never been slaves to anyone¦70878, so how can you¦70884 say that we'll be set free?”
 \p
 \v 34 “\wj I can assure you all that anyone who sins is a slave¦70905 to sin,\wj*” \nd Yeshua¦70894\nd* answered¦70890.
-\v 35 “\wj And the slaves¦70911 don't¦70912 necessarily remain in the \add family\add* home forever—only the children have that right.\wj*
+\v 35 “\wj And the slaves¦70911 don't¦70912 necessarily remain in the \+add family\+add* home forever—only the children have that right.\wj*
 \v 36 \wj So¦70931 if the son sets you free, then you'll be truly free.\wj*
 \s1 Yeshua spars with the Jewish religious leaders
 \p
@@ -691,14 +691,14 @@
 \p
 \v 39 But they retorted, “Abraham is our¦70999 father.”\f + \fr 8:39 \ft father meaning ancestor. (Abraham lived some 2,000 years before the time of these events.)\f*
 \p And \nd Yeshua¦71008\nd* responded¦70994, “\wj Well, if you really were descendants of Abraham¦71000, you'd behave more like him¦70996.\wj*
-\v 40 \wj But instead you're trying to find a way to have me killed—to kill the man¦71027 who has spoken¦71032 the truth to you—truth that I heard¦71036 from \nd God¦71040\nd*. Abraham¦71042 never did that.\wj*
-\v 41 \wj You're doing¦71047 what \em your¦71052\em* father wants you all do to.\wj*”
+\v 40 \wj But instead you're trying to find a way to have me killed—to kill the man¦71027 who has spoken¦71032 the truth to you—truth that I heard¦71036 from \+nd God¦71040\+nd*. Abraham¦71042 never did that.\wj*
+\v 41 \wj You're doing¦71047 what \+em your¦71052\+em* father wants you all do to.\wj*”
 \rem /s1 The Children of the Devil
 \p But they shot back, “It's not us who was conceived by a couple that weren't even married! Anyway, we only have one father and that's \nd God¦71069\nd*.”
 \p
 \v 42 “\wj If God was your¦71082 father¦71080 you all would¦71085 be loving¦71084 me,\wj*” \nd Yeshua¦71074\nd* responded¦71070, “\wj because I came¦71093 from God and for God. I didn't just come¦71103 by myself¦71101, but God sent¦71108 me here.\wj*
 \v 43 \wj Why can't you comprehend what I'm saying? The reason¦71110 that you can't stand listening to my message¦71124\wj*
-\v 44 \wj is because you come from your father, the devil¦71132, and you want to do what \em your\em* father wants. But he was a murderer¦71143 from the beginning¦71146, and doesn't stick to the truth because there's no truth in him. Whenever¦71161 he tells lies, he's speaking from his own nature, because he's a liar and the source of lying.\wj*
+\v 44 \wj is because you come from your father, the devil¦71132, and you want to do what \+em your\+em* father wants. But he was a murderer¦71143 from the beginning¦71146, and doesn't stick to the truth because there's no truth in him. Whenever¦71161 he tells lies, he's speaking from his own nature, because he's a liar and the source of lying.\wj*
 \v 45 \wj But because¦71178 I'm speaking¦71181 the truth¦71180, you¦71185 don't¦71184 believe¦71185 in me.\wj*
 \v 46 \wj Which¦71188 of you can scold me for my sins? If I am speaking¦71199 the truth¦71198, why don't¦71203 you believe¦71204 I'm from God?\wj*
 \v 47 \wj Anyone who belongs to God, listens to what God says. But you all can't even hear¦71215 the message¦71212, because you don't¦71219 belong to God.\wj*”
@@ -710,18 +710,18 @@
 \p
 \v 49 “\wj No, I don't¦71255 have a demon¦71254,\wj*” \nd Yeshua¦71250\nd* answered¦71248, “\wj but¦71257 I honour¦71258 my¦71262 father¦71261 and¦71263 you're dishonouring¦71265 me.\wj*
 \v 50 \wj But I'm not searching greatness for myself—my¦71273 father is the one searching and¦71277 the one judging¦71278.\wj*
-\v 51 \wj I can assure you¦71282, that anyone¦71286 who puts my teaching into practice can be certain to avoid death¦71294 in \add this\add* age.\wj*”
+\v 51 \wj I can assure you¦71282, that anyone¦71286 who puts my teaching into practice can be certain to avoid death¦71294 in \+add this\+add* age.\wj*”
 \p
 \v 52 “Now we \em know\em* that you have a demon¦71312!” the Jews¦71308 said¦71303. “Abraham¦71314 and the prophets¦71318 all died¦71315, but you're¦71313 saying¦71321 that those who follow your teaching can be certain to avoid death¦71338 in \add this\add* age.
 \v 53 How could you be greater¦71344 than our¦71348 ancestor Abraham¦71349 who died? Even the prophets¦71355 died. Who do you think you are?”
 \p
-\v 54 Again \nd Yeshua¦71364\nd* answered¦71362, “\wj If I praise myself¦71368, my praise is worthless, but it's my father¦71376 who praises me—the one who you¦71382 say is your \nd God¦71386\nd*\wj*
+\v 54 Again \nd Yeshua¦71364\nd* answered¦71362, “\wj If I praise myself¦71368, my praise is worthless, but it's my father¦71376 who praises me—the one who you¦71382 say is your \+nd God¦71386\+nd*\wj*
 \v 55 \wj although in fact you don't¦71391 even know him. But I have known him, and so I can't say that I haven't known him or I'd be a liar like all of you. But I have known him and I am putting his¦71420 desires into practice.\wj*
 \v 56 \wj Your¦71425 ancestor Abraham¦71422 would have been excited to see me here—in fact he did see ahead and was very happy about it.\wj*”
 \p
 \v 57 Because of that, the Jewish leaders asked, “You aren't even fifty¦71445 years old yet. How could you have seen¦71452 Abraham?”\f + \fr 8:57 \ft Abraham lived some 2,000 years before Yeshua.\f*
 \p
-\v 58 \nd Yeshua¦71460\nd* answered, “\wj I can assure you¦71464 that \em I am\em*\f + \fr 8:58 \ft This awkward English is necessary to catch the play on words, because ‘I am’ is the meaning of \em Yahweh\em*, the name of God.\f* before¦71465 Abraham¦71466 ever existed.\wj*”
+\v 58 \nd Yeshua¦71460\nd* answered, “\wj I can assure you¦71464 that \+em I am\+em*\f + \fr 8:58 \ft This awkward English is necessary to catch the play on words, because ‘I am’ is the meaning of \+em Yahweh\+em*, the name of God.\f* before¦71465 Abraham¦71466 ever existed.\wj*”
 \p
 \v 59 When they heard that, they picked up rocks¦71473 to throw¦71475 at Yeshua \add to kill him¦71477\add*. But Yeshua became hidden¦71480 from their sight, and went¦71482 on out of the temple¦71485.
 \c 9
@@ -733,7 +733,7 @@
 \v 1 As Yeshua was walking along, he¦71497 saw¦71497 a man¦71498 who had been blind¦71499 from birth¦71501
 \v 2 and his followers asked¦71504 him, “Honoured teacher, why was this man¦71513 born blind¦71520? Was it because he himself sinned¦71512, or his parents¦71517?”
 \p
-\v 3 \nd Yeshua¦71525\nd* answered¦71523, “\wj It wasn't either this man¦71527 or his¦71532 parents¦71531 that sinned¦71528.\f + \fr 9:3 \ft We just want to alert our readers here that we have divided the Greek sentences here in a way that's different from the long-standing tradition. (The Greek originals have no punctuation, so either way is valid.)\f* But so that \nd God¦71539\nd* can work in him for others to see,\wj*
+\v 3 \nd Yeshua¦71525\nd* answered¦71523, “\wj It wasn't either this man¦71527 or his¦71532 parents¦71531 that sinned¦71528.\f + \fr 9:3 \ft We just want to alert our readers here that we have divided the Greek sentences here in a way that's different from the long-standing tradition. (The Greek originals have no punctuation, so either way is valid.)\f* But so that \+nd God¦71539\+nd* can work in him for others to see,\wj*
 \v 4 \wj as long as it's daytime, we need to do what the one who sent¦71551 us wants, but when nighttime¦71559 comes, no one will be able to work.\wj*
 \v 5 \x + \xo 9:5: \xt Mat 5:14; Yhn 8:12.\x*\wj As long as I'm here in this world, I am the light¦71571 of the world.\wj*”
 \p
@@ -792,7 +792,7 @@
 \s1 Spiritual blindness and hypocrisy
 \rem /s1 Spiritual Blindness
 \p
-\v 35 \nd Yeshua¦72249\nd* heard¦72246 that they had thrown¦72251 out the man who could now see, and when he found¦72256 him, he said¦72260, “\wj Do you believe¦72263 that humanity's child \add came from God\add*?\wj*”
+\v 35 \nd Yeshua¦72249\nd* heard¦72246 that they had thrown¦72251 out the man who could now see, and when he found¦72256 him, he said¦72260, “\wj Do you believe¦72263 that humanity's child \+add came from God\+add*?\wj*”
 \p
 \v 36 And the man answered¦72270, “Mister, who is he so that I can believe¦72281 in him?”
 \p
@@ -823,15 +823,15 @@
 \s1 Yeshua is the good shepherd
 \rem /s1 Jesus the Good Shepherd
 \p
-\v 7 So¦72517 \nd Yeshua¦72522\nd* continued, “\wj Honestly I will tell you¦72526 that \em I am\em* the entrance for the sheep¦72536.\wj*
+\v 7 So¦72517 \nd Yeshua¦72522\nd* continued, “\wj Honestly I will tell you¦72526 that \+em I am\+em* the entrance for the sheep¦72536.\wj*
 \v 8 \wj The ones who came¦72539 before¦72540 me are thieves¦72543 and¦72545 robbers¦72546, but¦72547 the sheep¦72554 didn't listen to them.\wj*
-\v 9 \wj \em I am\em* the entrance. Anyone who comes in via me will be saved¦72566, and will be able to go in and out and find pasture¦72572.\wj*
+\v 9 \wj \+em I am\+em* the entrance. Anyone who comes in via me will be saved¦72566, and will be able to go in and out and find pasture¦72572.\wj*
 \v 10 \wj The thief¦72576 only comes to steal¦72584 and kill¦72588 and destroy¦72588, but I came¦72591 so that they could live, and live a full life¦72593.\wj*
 \p
-\v 11 “\wj \em I am\em* the good shepherd—the good shepherd gives his¦72613 own life¦72612 for the sheep¦72618.\wj*\f + \fr 10:11 \ft See http://bibleandtech.blogspot.com/2021/04/john-1011-18-translations-and-notes-rcl.html\f*
+\v 11 “\wj \+em I am\+em* the good shepherd—the good shepherd gives his¦72613 own life¦72612 for the sheep¦72618.\wj*\f + \fr 10:11 \ft See http://bibleandtech.blogspot.com/2021/04/john-1011-18-translations-and-notes-rcl.html\f*
 \v 12 \wj The paid worker is not even the shepherd¦72626, because the sheep aren't his own and if he sees a wolf coming¦72640 he just abandons the sheep and takes off and the wolf scatters¦72653 the sheep and snatches¦72650 some—\wj*
 \v 13 \wj that's because¦72660 he's just a worker and doesn't really care about¦72669 the sheep¦72671.\wj*
-\v 14 \wj \em I am\em* the good¦72677 shepherd¦72675 and I know my \add sheep\add* and they know me,\wj*
+\v 14 \wj \+em I am\+em* the good¦72677 shepherd¦72675 and I know my \+add sheep\+add* and they know me,\wj*
 \v 15 \x + \xo 10:15: \xt Mat 11:27; Luk 10:22.\x*\wj just like the father knows me and I know the father—in fact I will give my¦72708 life for the sheep¦72714.\wj*
 \v 16 \wj I also have other sheep which¦72720 are not in this field¦72726 and it's appropriate¦72730 for me to bring¦72733 those¦72728 other sheep also, then they'll be hearing¦72738 my¦72737 voice¦72736 because there'll be just one flock¦72744 with one shepherd¦72746.\wj*
 \p
@@ -865,7 +865,7 @@
 \v 33 \x + \xo 10:33: \xt Lev 24:16.\x*They answered¦73063, “It's not for any \em good¦73070\em* deed that we think you deserve to die, but because¦73079 you, a human¦73081, dishonour \nd God¦73086\nd* by claiming to be him¦73065.”
 \p
 \v 34 \x + \xo 10:34: \xt Psa 82:6.\x*\nd Yeshua¦73090\nd* answered¦73087, “\wj Isn't it¦73095 written¦73096 in your¦73104 scriptures that God said¦73107, ‘You all are gods¦73109’?\wj*
-\v 35 \wj Now the scriptures¦73128 can't be wrong, and¦73123 if the ones who heard teaching from \nd God¦73121\nd* were called¦73113 gods¦73114,\wj*
+\v 35 \wj Now the scriptures¦73128 can't be wrong, and¦73123 if the ones who heard teaching from \+nd God¦73121\+nd* were called¦73113 gods¦73114,\wj*
 \v 36 \wj why are you¦73138 telling the one that the father¦73131 blessed and¦73133 sent¦73134 out into the world¦73137 that I am insulting¦73141 God because¦73142 I said¦73143 that I'm God's son?\wj*
 \v 37 \wj If I'm not doing¦73152 my¦73157 father's¦73156 work, then you don't¦73151 need to believe¦73159 that he sent me,\wj*
 \v 38 \wj but if I am doing¦73163 his work, even if you don't¦73166 believe that he sent me, at least believe in what I do so that you all can know that the father is in me and I'm in the father.\wj*”
@@ -883,7 +883,7 @@
 \v 2 \x + \xo 11:2: \xt Yhn 12:3.\x*(Maria¦73292 was the one who \jmp later|link-href="#C12V3"\jmp* poured fragrant oil over Yeshua¦73311 and¦73298 wiped¦73299 his¦73302 feet¦73301 with her¦73305 hair¦73304.) But¦73288 now their brother¦73309 was seriously ill
 \v 3 and so the two sisters¦73321 sent¦73315 a message to Yeshua saying¦73328, “\nd Master¦73330\nd*, this man that you¦73333 love is seriously ill.”
 \p
-\v 4 However, when \nd Yeshua¦73338\nd* got the message he said¦73339 \add to those around him\add*, “\wj This sickness¦73342 won't end in death¦73347 but¦73336 in honour for \nd God¦73353\nd*, so that his son will also be honoured because of it.\wj*”
+\v 4 However, when \nd Yeshua¦73338\nd* got the message he said¦73339 \add to those around him\add*, “\wj This sickness¦73342 won't end in death¦73347 but¦73336 in honour for \+nd God¦73353\+nd*, so that his son will also be honoured because of it.\wj*”
 \p
 \v 5 Now it was true that \nd Yeshua¦73368\nd* loved the three of them.
 \v 6 Yet when he heard¦73384 that Lazarus was sick, he stayed in the place¦73397 where he was for two¦73398 more days¦73399
@@ -891,7 +891,7 @@
 \p
 \v 8 But they double-checked, “Honoured teacher, the Yudeans wanted to execute you, so do you really want to go back there¦73430 again¦73428?”
 \p
-\v 9 And \nd Yeshua¦73433\nd* answered¦73431, “\wj There are twelve hours¦73437 of light in the day. Anyone who walks during the daytime doesn't stumble¦73453 because¦73454 he is seeing¦73461 the light \add that shines in\add* this world¦73458.\wj*
+\v 9 And \nd Yeshua¦73433\nd* answered¦73431, “\wj There are twelve hours¦73437 of light in the day. Anyone who walks during the daytime doesn't stumble¦73453 because¦73454 he is seeing¦73461 the light \+add that shines in\+add* this world¦73458.\wj*
 \v 10 \wj But anyone¦73464 who walks at night¦73468 will stumble¦73469, because¦73470 the light¦73472 is not in them.\wj*”
 \v 11 And he continued, “\wj Our¦73489 friend¦73488 Lazarus¦73485 has fallen¦73490 asleep¦73490, but I'm going¦73493 so that I can wake him up.\wj*”
 \p
@@ -918,8 +918,8 @@
 \p
 \v 24 “Yes, I know that he'll come back to life at the resurrection¦73712 on the last day¦73716,” said Martha¦73705.
 \p
-\v 25 But \nd Yeshua¦73722\nd* continued, “\wj \em I am\em* the resurrection¦73726 and¦73727 the life¦73729. Anyone who believes¦73731 that I'm from God, even if they die¦73735 they'll still be living¦73736,\wj*
-\v 26 \wj and everyone¦73739 who's alive and believes that I was sent from God, will not die¦73748 in the \add next\add* age.\wj*”
+\v 25 But \nd Yeshua¦73722\nd* continued, “\wj \+em I am\+em* the resurrection¦73726 and¦73727 the life¦73729. Anyone who believes¦73731 that I'm from God, even if they die¦73735 they'll still be living¦73736,\wj*
+\v 26 \wj and everyone¦73739 who's alive and believes that I was sent from God, will not die¦73748 in the \+add next\+add* age.\wj*”
 \p
 \v 27 Martha replied, “Yes, \nd master¦73759\nd*, I do believe¦73762 that you're¦73765 the \nd messiah¦73768\nd*, God's son, the one sent into this world¦73776.”
 \s1 Yeshua weeps with his close friends
@@ -1075,13 +1075,13 @@
 \rem /s1 Judgment by Jesus' Words
 \rem /s1 Summary of Jesus' Teaching
 \p
-\v 44 Then \nd Yeshua¦75394\nd* called out, “\wj Anyone who believes that I came from God is not \add just\add* believing in me, but \add also\add* believing in the one who sent me,\wj*
-\v 45 \wj and¦75418 anyone who watches me \add working\add*, is watching the one who sent¦75425 me.\wj*
+\v 44 Then \nd Yeshua¦75394\nd* called out, “\wj Anyone who believes that I came from God is not \+add just\+add* believing in me, but \+add also\+add* believing in the one who sent me,\wj*
+\v 45 \wj and¦75418 anyone who watches me \+add working\+add*, is watching the one who sent¦75425 me.\wj*
 \v 46 \wj I came into this world¦75431 as light¦75428 so that anyone who believes¦75436 in me won't have darkness¦75441 residing in them.\wj*
 \v 47 \wj I won't be judging¦75461 anyone¦75447 who hears my¦75448 teaching and¦75453 doesn't obey it, because¦75464 I didn't come to judge¦75467 the world but¦75470 rather to save¦75472 it.\wj*
 \v 48 \wj Anyone who rejects¦75476 me and¦75478 doesn't accept my¦75483 teaching does have a judge though—it's the message¦75489 that I spoke¦75491 that will judge them at the end of time\wj*
 \v 49 \wj because I wasn't speaking¦75522 from my own thoughts, but it was the father¦75511 himself¦75512 who sent¦75509 me that told me what to say¦75519 and what to teach.\wj*
-\v 50 \wj And I'm fully aware that \add obeying\add* his¦75528 commands¦75527 leads to living forever. Therefore¦75535 whenever I speak, I just say whatever the father¦75543 said¦75540 to me.\wj*”
+\v 50 \wj And I'm fully aware that \+add obeying\+add* his¦75528 commands¦75527 leads to living forever. Therefore¦75535 whenever I speak, I just say whatever the father¦75543 said¦75540 to me.\wj*”
 \c 13
 \s1 Yeshua washes the feet of his apprentices
 \rem /s1 Jesus Washes the Disciples' Feet
@@ -1099,25 +1099,25 @@
 \v 7 “\wj What I'm doing¦75705 now,\wj*” \nd Yeshua¦75698\nd* answered¦75697, “\wj you won't really understand, but in the future you will.\wj*”
 \p
 \v 8 Peter responded, “Well I'm never ever going to let you wash \em my\em* feet¦75730!”
-\p “\wj If I don't¦75724 wash them,\wj*” \nd Yeshua¦75738\nd* answered¦75735, “\wj then you won't be included in my \add group\add*.\wj*”
+\p “\wj If I don't¦75724 wash them,\wj*” \nd Yeshua¦75738\nd* answered¦75735, “\wj then you won't be included in my \+add group\+add*.\wj*”
 \p
 \v 9 “Well, if that's so,” Peter¦75752 said, “don't¦75755 just wash my feet¦75758 but¦75761 my hands¦75764 and¦75765 my head as well.”
 \p
-\v 10 \nd Yeshua¦75771\nd* responded, “\wj Any person who's already washed¦75773 \add themselves\add* only needs to wash their feet¦75785 now to be clean. And so you're clean, but not every one of you.\wj*”
+\v 10 \nd Yeshua¦75771\nd* responded, “\wj Any person who's already washed¦75773 \+add themselves\+add* only needs to wash their feet¦75785 now to be clean. And so you're clean, but not every one of you.\wj*”
 \v 11 He said¦75809 this last bit because¦75807 he already knew who was going to hand him over.
 \p
 \v 12 \x + \xo 13:12-15: \xt Luk 22:27.\x*So¦75816 when he'd finished washing their¦75820 feet¦75819, he got dressed again¦75831 and sat¦75830 down and asked, “\wj Do you know what I just did to you all?\wj*
-\v 13 \wj You call me teacher and \nd master¦75845\nd*, and so you¦75848 should, because¦75851 I am.\wj*
-\v 14 \wj So¦75853 if the \nd master¦75861\nd* and teacher of you all washed¦75855 your¦75856 feet, then you also ought¦75870 to wash each other's feet.\wj*
+\v 13 \wj You call me teacher and \+nd master¦75845\+nd*, and so you¦75848 should, because¦75851 I am.\wj*
+\v 14 \wj So¦75853 if the \+nd master¦75861\+nd* and teacher of you all washed¦75855 your¦75856 feet, then you also ought¦75870 to wash each other's feet.\wj*
 \v 15 \wj I have given this to you all as an example¦75876 that you can also do to others.\wj*
-\v 16 \x + \xo 13:16: \xt Mat 10:24; Luk 6:40; Yhn 15:20.\x*\wj I can assure you that a slave¦75895 isn't greater than his¦75899 master¦75898, and an missionary isn't greater than the \add king\add* who sends him.\wj*
-\v 17 \wj If you can figure all this out and then do it, you will be blessed¦75911 \add by God\add*.\wj*
+\v 16 \x + \xo 13:16: \xt Mat 10:24; Luk 6:40; Yhn 15:20.\x*\wj I can assure you that a slave¦75895 isn't greater than his¦75899 master¦75898, and an missionary isn't greater than the \+add king\+add* who sends him.\wj*
+\v 17 \wj If you can figure all this out and then do it, you will be blessed¦75911 \+add by God\+add*.\wj*
 \rem /s1 Jesus Predicts His Betrayal
 \p
-\v 18 \x + \xo 13:18: \xt Psa 41:9.\x*“\wj But I'm not talking¦75920 about¦75917 all of you¦75919. I know each one that I chose¦75926, but¦75927 this that was \add written\add* in the scriptures¦75931 must be fulfilled¦75932,\wj*
+\v 18 \x + \xo 13:18: \xt Psa 41:9.\x*“\wj But I'm not talking¦75920 about¦75917 all of you¦75919. I know each one that I chose¦75926, but¦75927 this that was \+add written\+add* in the scriptures¦75931 must be fulfilled¦75932,\wj*
 \q1 \wj ‘The one sharing food with me, lifted¦75940 up his¦75946 boot against¦75942 me.’\wj*
 \m
-\v 19 \wj So I'm telling¦75949 you now before¦75951 it happens so that when it does happen, then you'll all believe¦75955 that I am \add the messiah\add*.\wj*
+\v 19 \wj So I'm telling¦75949 you now before¦75951 it happens so that when it does happen, then you'll all believe¦75955 that I am \+add the messiah\+add*.\wj*
 \v 20 \x + \xo 13:20: \xt Mat 10:40; Mrk 9:37; Luk 9:48; 10:16.\x*\wj I can assure you¦75967 all that anyone who accepts any person that I might send¦75974, they're accepting me, and¦75979 anyone who accepts me, is accepting the one who sent¦75986 me.\wj*”
 \s1 Yeshua indicates who will hand him over
 \rem /s1 Jesus Foretells His Betrayal
@@ -1132,7 +1132,7 @@
 \v 24 So¦76046 Simon¦76048 Peter¦76049 nodded to him to find out who Yeshua had been talking¦76067 about¦76065,
 \v 25 and he leaned¦76070 back on \nd Yeshua¦76079\nd* and asked \add quietly\add*, “\nd Master¦76082\nd*, who is it?”
 \p
-\v 26 “\wj It's the one I hand this piece of bread to after I've dipped it \add in the sauce\add*,\wj*” \nd Yeshua¦76089\nd* answered¦76085. Then¦76104 after dipping his piece of bread in, he gave it to Yudas¦76115 Iscariot¦76119.
+\v 26 “\wj It's the one I hand this piece of bread to after I've dipped it \+add in the sauce\+add*,\wj*” \nd Yeshua¦76089\nd* answered¦76085. Then¦76104 after dipping his piece of bread in, he gave it to Yudas¦76115 Iscariot¦76119.
 \v 27 After accepting the piece¦76124 of bread¦76124, Satan¦76130 entered into Yudas, and then \nd Yeshua¦76136\nd* told him¦76134, “What you're¦76138 about to do, do it soon.”
 \v 28 But¦76143 none of the others sitting¦76148 around the table knew¦76145 what Yeshua meant.
 \v 29 Some of them thought that since Yudas¦76165 held their purse, perhaps \nd Yeshua¦76170\nd* was getting him¦76168 to buy something they needed for the feast¦76179 or to give¦76185 something to the poor.
@@ -1142,8 +1142,8 @@
 \rem /s1 The New Commandment
 \rem /s1 Jesus Predicts Peter's Denial
 \p
-\v 31 After Yudas had gone, \nd Yeshua¦76203\nd* told the others, “\wj Now humanity's child will be honoured and¦76210 \nd God¦76212\nd* will be honoured through him¦76215.\wj*
-\v 32 \wj Also \nd God¦76225\nd* himself¦76229 will be honouring him and will do that immediately¦76232.\wj*
+\v 31 After Yudas had gone, \nd Yeshua¦76203\nd* told the others, “\wj Now humanity's child will be honoured and¦76210 \+nd God¦76212\+nd* will be honoured through him¦76215.\wj*
+\v 32 \wj Also \+nd God¦76225\+nd* himself¦76229 will be honouring him and will do that immediately¦76232.\wj*
 \v 33 \wj My friends, I'll only be with you a little¦76239 bit longer. Then you'll all look for me and as I told\x + \xo 13:33: \xt Yhn 7:34.\x* the religious leaders, you won't be able to go where I'm going¦76255. So now I've also told all of you.\wj*
 \v 34 \x + \xo 13:34: \xt Yhn 15:12,17; 1Yhn 3:23; 2Yhn 5.\x*\wj I'm giving¦76268 you a new commandment¦76266—you need to love each other. The way that I loved¦76276 all of you is how you should love each other.\wj*
 \v 35 \wj This is actually how you'll know if you are my followers: if you are loving each other.\wj*”
@@ -1165,7 +1165,7 @@
 \rem /s1 Jesus the Way to the Father
 \rem /s1 Jesus Comforts His Disciples
 \p
-\v 1 \add Yeshua continued telling them,\add* “\wj Don't be living in fear. You believe that \nd God¦76404\nd* is real, and you also believe that I was sent by him.\wj*
+\v 1 \add Yeshua continued telling them,\add* “\wj Don't be living in fear. You believe that \+nd God¦76404\+nd* is real, and you also believe that I was sent by him.\wj*
 \v 2 \wj There are many places to live in my¦76414 father's¦76413 residence—I would¦76423 have told you if there wasn't because¦76425 I'm going¦76426 there to prepare¦76427 a place¦76428 for all of you.\wj*
 \v 3 \wj And after I've gone to prepare¦76436 that place¦76439, then I'll be coming¦76442 back again¦76441 and will bring you to myself¦76448, so that where¦76450 I am, you can all be there also.\wj*
 \v 4 \wj You know how to get where¦76459 I'm going¦76461.\wj*”
@@ -1173,15 +1173,15 @@
 \p
 \v 5 “\nd Master¦76473\nd*,” Thomas asked, “we don't¦76474 \add even\add* know \em where¦76476\em* you're¦76477 going¦76477, let alone how to get there.”
 \p
-\v 6 And \nd Yeshua¦76490\nd* answered, “\wj \em I am\em* the path¦76494 and the truth¦76497 and the life¦76500. No one can get to the father¦76505 except¦76506 via me.\wj*
+\v 6 And \nd Yeshua¦76490\nd* answered, “\wj \+em I am\+em* the path¦76494 and the truth¦76497 and the life¦76500. No one can get to the father¦76505 except¦76506 via me.\wj*
 \v 7 \wj If you had all known me, you would also have known my¦76518 father¦76517, and from now on you do know him and have seen him.\wj*”
 \p
 \v 8 So Philip said, “\nd Master¦76537\nd*, show us the father¦76541 and¦76542 that'll be enough for us.”
 \p
-\v 9 “\wj I've been with you all for quite some time¦76551,\wj*” \nd Yeshua¦76548\nd* replied, “\wj and yet you still don't¦76557 \add even\add* know me, Philip¦76560.\wj*
-\v 10 \wj You don't believe¦76578 that I am in the father and the father is in me. These things that I've been telling you all, I don't \add just\add* make them up myself¦76600, but the father who lives in me is doing¦76611 what he wants.\wj*
+\v 9 “\wj I've been with you all for quite some time¦76551,\wj*” \nd Yeshua¦76548\nd* replied, “\wj and yet you still don't¦76557 \+add even\+add* know me, Philip¦76560.\wj*
+\v 10 \wj You don't believe¦76578 that I am in the father and the father is in me. These things that I've been telling you all, I don't \+add just\+add* make them up myself¦76600, but the father who lives in me is doing¦76611 what he wants.\wj*
 \v 11 \wj You all need to believe that I am in the father and the father is in me. If that's hard, at least believe it because¦76636 of what he's doing.\wj*
-\v 12 \wj I can assure you¦76647 all that anyone who believes¦76649 \add that God sent\add* me and is the source of the miracles that I do, that person will be able to do the same and even greater¦76661 miracles because¦76664 I am going¦76670 to the father¦76668.\wj*
+\v 12 \wj I can assure you¦76647 all that anyone who believes¦76649 \+add that God sent\+add* me and is the source of the miracles that I do, that person will be able to do the same and even greater¦76661 miracles because¦76664 I am going¦76670 to the father¦76668.\wj*
 \v 13 \wj Whatever you¦76677 request¦76677 from me with my¦76684 name¦76683 and authority, I will do it so that the father¦76690 might be honoured because of the son.\wj*
 \v 14 \wj Anything that you¦76697 all request¦76697 using my¦76702 name¦76701 and authority will be done.\wj*
 \s1 The father will be sending a different advocate
@@ -1190,13 +1190,13 @@
 \p
 \v 15 “\wj If you all love me, you will obey my commands¦76711.\wj*
 \v 16 \wj And I will ask the father¦76723 and he will give you another¦76726 assistant to be with you all for this age—\wj*
-\v 17 \wj the \nd spirit¦76744\nd* of truth¦76746. The world¦76749 cannot accept him, because it doesn't see or know him.\wj*
+\v 17 \wj the \+nd spirit¦76744\+nd* of truth¦76746. The world¦76749 cannot accept him, because it doesn't see or know him.\wj*
 \p
 \v 18 “\wj And I won't leave you all here as orphans¦76780, but I will come back to you.\wj*
 \v 19 \wj It won't be long now and the world¦76788 won't see me any more, but you will see me because¦76796 I'll be alive and you all will be alive also.\wj*
 \v 20 \wj At that time you will know that I am in my¦76816 father¦76815, and you all are in me, and I am in you all.\wj*
 \p
-\v 21 “\wj Anyone who takes my commands¦76829 and obeys them, that's the person who loves me, and anyone who loves me will be loved¦76843 by my father¦76847, and I \add too\add* will be loving them and will be revealing myself¦76858 to them.\wj*”
+\v 21 “\wj Anyone who takes my commands¦76829 and obeys them, that's the person who loves me, and anyone who loves me will be loved¦76843 by my father¦76847, and I \+add too\+add* will be loving them and will be revealing myself¦76858 to them.\wj*”
 \p
 \v 22 Yudas (not Yudas Iscariot¦76868) asked, “\nd Master¦76870\nd*, what's going¦76877 on? Why would you¦76877 reveal yourself¦76882 to us and¦76883 not to the \add whole\add* world¦76886?”
 \p
@@ -1204,12 +1204,12 @@
 \v 24 \wj But anyone who doesn't love me, won't obey my teaching. The words that you¦76942 hear¦76942 from me are not my own, but¦76946 come from the father¦76950 who sent¦76948 me.\wj*
 \p
 \v 25 “\wj I told you all this while I have been here with you all.\wj*
-\v 26 \wj But the holy \nd spirit¦76962\nd*, the assistant who the father¦76969 will be sending¦76966 with my¦76974 authority, he will be teaching¦76977 you everything, and will be reminding¦76980 you of everything that I told you all.\wj*
+\v 26 \wj But the holy \+nd spirit¦76962\+nd*, the assistant who the father¦76969 will be sending¦76966 with my¦76974 authority, he will be teaching¦76977 you everything, and will be reminding¦76980 you of everything that I told you all.\wj*
 \p
 \v 27 \wj I will leave peace with you all. I'm giving my peace to you all, but what I'm giving isn't like what the world¦77000 gives. Don't be upset or afraid.\wj*
 \v 28 \wj You all heard¦77013 me say that I'm going away and then will be coming¦77020 back. If you really loved me, you'd be very happy that I'm going to the father, because¦77036 the father is greater¦77040 than me.\wj*
 \p
-\v 29 \wj But¦77043 I've told you now before¦77047 it happens, so that when it does come to pass, you'll be able to believe¦77052 \add that it was preplanned\add*.\wj*
+\v 29 \wj But¦77043 I've told you now before¦77047 it happens, so that when it does come to pass, you'll be able to believe¦77052 \+add that it was preplanned\+add*.\wj*
 \v 30 \wj I won't have much more time to talk to you, because¦77060 the ruler¦77065 of the world¦77063 is coming¦77059 and he has nothing¦77071 in common with me,\wj*
 \v 31 \wj but he's coming so that the world¦77077 can know that I love the father and whatever the father told me to do, I'm doing¦77091 it.\wj*
 \p “\wj Come on, stand up. We need to be leaving this place.\wj*”
@@ -1220,12 +1220,12 @@
 \rem /s1 The Vine and the Branches
 \rem /s1 Jesus the True Vine
 \p
-\v 1 “\wj \em I am\em* the true vine¦77098 and¦77101 my¦77104 father¦77103 is the farmer¦77106.\wj*
+\v 1 “\wj \+em I am\+em* the true vine¦77098 and¦77101 my¦77104 father¦77103 is the farmer¦77106.\wj*
 \v 2 \wj He removes every¦77119 one of my branches that doesn't bear fruit, but those that do bear fruit, he prunes them so they'll produce even more.\wj*
 \v 3 \wj You are all clean¦77137 already¦77135 because¦77139 of the teaching that I've given you¦77145.\wj*
 \v 4 \wj Stay in me, and I will stay in you all, because just as a branch¦77154 can't bear fruit¦77157 in isolation when it's not connected to the vine¦77167, neither¦77169 can you if you don't¦77155 stay in me.\wj*
 \p
-\v 5 “\wj \em I am\em* the vine¦77184 and you all are the branches¦77187. Anyone who stays in me will produce a lot of fruit¦77197—apart¦77200 from me you can't do anything.\wj*
+\v 5 “\wj \+em I am\+em* the vine¦77184 and you all are the branches¦77187. Anyone who stays in me will produce a lot of fruit¦77197—apart¦77200 from me you can't do anything.\wj*
 \v 6 \wj Anyone who doesn't stay in me will be thrown away like a branch¦77221, and will wither¦77223 and be gathered¦77225 together¦77225 with others, and thrown into the fire¦77231 to be burnt.\wj*
 \v 7 \wj If you stay in me and my¦77245 teaching stays in you, then you can request¦77255 whatever¦77249 you all want and it¦77258 will be done for you.\wj*
 \v 8 \wj My¦77265 father¦77264 will be honoured and praised when you produce a lot of fruit¦77267, and you all become¦77273 my¦77265 followers.\wj*
@@ -1252,12 +1252,12 @@
 \v 24 \wj If I hadn't done miracles among¦77612 them of the sort that no one else has done, they wouldn't be considered to be sinners, but now they've observed me and hated¦77630 both me and my¦77637 father¦77636.\wj*
 \v 25 \x + \xo 15:25: \xt Psa 35:19; 69:4.\x*\wj The writings of the prophets will certainly come to pass, that ‘they hated¦77652 me undeservedly¦77654’.\wj*
 \p
-\v 26 “\wj When the assistant arrives that I will send to you all from the father, the \nd spirit¦77671\nd* of truth coming from the father, he will tell the truth about me.\wj*
+\v 26 “\wj When the assistant arrives that I will send to you all from the father, the \+nd spirit¦77671\+nd* of truth coming from the father, he will tell the truth about me.\wj*
 \v 27 \wj You also will be able to tell the truth about me because¦77688 you all were with me from the beginning¦77690.\wj*
 \c 16
 \p
 \v 1 “\wj I've told you this so that you won't stumble¦77699.\wj*
-\v 2 \wj First they will ban you all from their religious services, then there's a time coming¦77706 when people will kill you thinking they're actually doing a sacred¦77714 service¦77714 to \nd God¦77718\nd*,\wj*
+\v 2 \wj First they will ban you all from their religious services, then there's a time coming¦77706 when people will kill you thinking they're actually doing a sacred¦77714 service¦77714 to \+nd God¦77718\+nd*,\wj*
 \v 3 \wj but they'll be doing¦77721 these¦77720 things because¦77724 they don't¦77725 know either the father¦77728 or me.\wj*
 \v 4 \wj I've told you these things so that when they happen in the future, you'll remember¦77742 that I've already told you about¦77744 them.\wj*
 \s1 The work of God's spirit
@@ -1273,7 +1273,7 @@
 \v 11 \wj and about judgement because¦77861 the ruler¦77863 of this world¦77865 has been judged¦77867.\wj*
 \p
 \v 12 “\wj I still¦77868 have a lot to tell you all, but you're not able to handle it all right now.\wj*
-\v 13 \wj But when the assistant comes, the \nd spirit¦77885\nd* of truth, he will guide you in all truth because¦77902 he won't be speaking from his own thoughts, but¦77881 will tell you what he's been told, and he will explain to you what's still going to happen.\wj*
+\v 13 \wj But when the assistant comes, the \+nd spirit¦77885\+nd* of truth, he will guide you in all truth because¦77902 he won't be speaking from his own thoughts, but¦77881 will tell you what he's been told, and he will explain to you what's still going to happen.\wj*
 \v 14 \wj He'll be honouring me because¦77924 he'll take what is mine and¦77929 will explain it to you¦77932 all.\wj*
 \v 15 \wj Everything that the father¦77937 has is mine, that's why I said¦77942 he will take what is mine and explain it to you.\wj*
 \s1 A brief upset coming followed by happiness
@@ -1293,21 +1293,21 @@
 \v 22 \wj So¦78119 too with all of you: you'll be upset for a while but then I'll be with you again¦78128 and you'll be so happy and no one will be able to take that happiness away from you.\wj*
 \p
 \v 23 “\wj When that happens, you won't be asking¦78155 me for anything¦78166. I can assure you that whatever you request¦78167 from the father¦78169 in my name¦78174 and my authority will be given to you.\wj*
-\v 24 \wj Up until now you haven't asked \add him\add* for anything using my¦78187 authority, but after that time, you'll be able to make requests¦78181 and they'll be answered so that your¦78196 happiness will be complete.\wj*
+\v 24 \wj Up until now you haven't asked \+add him\+add* for anything using my¦78187 authority, but after that time, you'll be able to make requests¦78181 and they'll be answered so that your¦78196 happiness will be complete.\wj*
 \s1 A new era is coming very soon
 \rem /s1 Victory over the World
 \rem /s1 Peace for the Disciples
 \p
 \v 25 “\wj So far I've told you these things in parables, however a time is coming¦78206 when I'll no longer¦78210 be speaking¦78213 in parables but will tell you things about the father¦78220 quite plainly¦78217.\wj*
 \v 26 \wj At that time you'll have my¦78235 authority to request¦78236 from the father¦78245. I'm not saying¦78239 that I'll be asking¦78243 him on your behalf,\wj*
-\v 27 \wj no, because he himself¦78249 loves you all because you have loved¦78259 me and have believed¦78261 that I was sent by \nd God¦78267\nd*.\wj*
+\v 27 \wj no, because he himself¦78249 loves you all because you have loved¦78259 me and have believed¦78261 that I was sent by \+nd God¦78267\+nd*.\wj*
 \v 28 \wj I was sent out by the father and I have come into the world, but I'll be leaving¦78281 the world again¦78280 and returning to the father.\wj*”
 \p
 \v 29 Yeshua's followers responded, “Ah, now you're¦78300 speaking plainly¦78299 and not using parables.
 \v 30 Finally we realise that you know everything already and don't¦78311 need to ask anyone¦78315 else, and so we now believe¦78320 that you came¦78325 from \nd God¦78324\nd*.”
 \p
 \v 31 “\wj So now you¦78331 all believe¦78331?\wj*” \nd Yeshua¦78329\nd* answered¦78326.
-\v 32 “\wj The time is coming¦78335 and is here already when you will all be scattered¦78343 in various directions and will leave¦78353 me by myself, but I won't be alone¦78357 because¦78358 the father¦78360 is \add always\add* with me.\wj*
+\v 32 “\wj The time is coming¦78335 and is here already when you will all be scattered¦78343 in various directions and will leave¦78353 me by myself, but I won't be alone¦78357 because¦78358 the father¦78360 is \+add always\+add* with me.\wj*
 \v 33 \wj I've told you these¦78364 things so that you can all have peace¦78371 in me. You will have troubles in this world, but be courageous¦78380 because I have overcome¦78382 the world.\wj*”
 \c 17
 \s1 Yeshua prays for his current and future followers
@@ -1317,7 +1317,7 @@
 \p
 \v 1 After \nd Yeshua¦78389\nd* had finished speaking, he looked up to the sky¦78398 and said¦78400, “\wj Father, it's now the time for you to honour your¦78406 son so that the son can honour you.\wj*
 \v 2 \wj You already gave¦78417 me authority¦78419 over all people so that I could grant eternal¦78435 life¦78434 to everyone¦78423 that you've given¦78425 me.\wj*
-\v 3 \wj And eternal¦78440 life¦78441 means knowing you, the only true \nd God¦78449\nd*, and knowing me—\nd Yeshua¦78455\nd* the \nd messiah¦78456\nd* that you sent.\wj*
+\v 3 \wj And eternal¦78440 life¦78441 means knowing you, the only true \+nd God¦78449\+nd*, and knowing me—\+nd Yeshua¦78455\+nd* the \+nd messiah¦78456\+nd* that you sent.\wj*
 \v 4 \wj I honoured you here on the earth¦78466 by completing¦78471 everything that you gave¦78474 me to do.\wj*
 \v 5 \wj So¦78480 father¦78485, now you yourself¦78488 can honour¦78482 me with the greatness that I had when I was together with you before¦78496 the creation of the world¦78500.\wj*
 \rem /s1 Jesus Prays for His Disciples
@@ -1326,7 +1326,7 @@
 \v 7 \wj Now they understand that everything that you gave¦78543 to me came from you,\wj*
 \v 8 \wj because¦78551 I passed on to them the messages¦78553 that you gave¦78557 to me, and they accepted them. Now they believe¦78575 that I came¦78573 from you and that it was you who sent¦78580 me here.\wj*
 \p
-\v 9 “\wj I'm asking about \em them\em*. It's not the people of this world¦78588 that I'm asking about, but about the ones that you gave¦78593 me because¦78596 they belong to you.\wj*
+\v 9 “\wj I'm asking about \+em them\+em*. It's not the people of this world¦78588 that I'm asking about, but about the ones that you gave¦78593 me because¦78596 they belong to you.\wj*
 \v 10 \wj Everything that's mine is yours, and everything that's your is mine, and I've been honoured by their actions.\wj*
 \v 11 \wj I'm about to leave this world and come to you, but they will stay here in it. Holy father¦78652, use your¦78660 power to keep¦78655 protect the ones that you gave¦78677 me, so that they might be united just like you and I are one.\wj*
 \v 12 \x + \xo 17:12: \xt Psa 41:9; Yhn 13:18.\x*\wj When I was with them, I protected them with the authority that you gave¦78705, and I guarded¦78709 them so that not one of them perished¦78715, except¦78716 the one who chose destruction¦78721 so that it will indeed happen as the scriptures¦78724 foretold.\wj*
@@ -1342,7 +1342,7 @@
 \v 20 “\wj But it's not just on behalf of the ones right here that I'm asking¦78860, but¦78862 also for all the others who will believe¦78867 that I came from you when they hear the message¦78871 of these¦78857 ones,\wj*
 \v 21 \wj so that they will all become united, just as you, father¦78881, are in me and I am in you. I ask that they will also be in us so that the world¦78897 will be able to believe¦78898 that it was you who sent¦78903 me here.\wj*
 \v 22 \wj And the honour that you've given me, I've passed on to them so that they¦78918 can be united just as we¦78922 are one—\wj*
-\v 23 \wj me in them and you in me so that they can be perfected¦78937 as one. Then the world¦78945 will know that you sent¦78949 me here and that you love them \add just\add* like you love me.\wj*
+\v 23 \wj me in them and you in me so that they can be perfected¦78937 as one. Then the world¦78945 will know that you sent¦78949 me here and that you love them \+add just\+add* like you love me.\wj*
 \p
 \v 24 \wj Father, I want those that you've given¦78964 me to be with me wherever¦78969 I am so that they'll be able to see my greatness—the greatness that you gave¦78988 me because¦78990 you loved¦78991 me even before¦78993 the creation of the world¦78995.\wj*
 \v 25 \wj Righteous father¦78996, this world¦79001 didn't know you, but I know you and these¦79013 ones know that you sent¦79018 me here.\wj*
@@ -1363,13 +1363,13 @@
 \v 4 \nd Yeshua¦79118\nd* who already knew what was going to happen to him¦79127, came forward and asked them, “\wj Who are you¦79135 all looking¦79135 for¦79135?\wj*”
 \p
 \v 5 And they answered¦79136, “Yeshua—the one from \nd Nazareth¦79141\nd*.”
-\p Yeshua responded, “\wj \em I am\em* the one.\wj*”
+\p Yeshua responded, “\wj \+em I am\+em* the one.\wj*”
 \p Yudas¦79152, the one handing him over, was standing there among them.
 \v 6 But when Yeshua had said¦79160 that he is the one, they backed away and fell to the ground¦79173.\f + \fr 18:6 \ft TD: It's not clear from the original if they fell over backwards, or if they stepped back and then fell forward (either voluntarily or involuntarily) onto their knees.\f*
 \v 7 So¦79175 he asked¦79177 them again¦79174, “\wj Who are you all looking¦79181 for¦79181?\wj*”
 \p And they answered, “\nd Yeshua¦79187\nd*—the one from \nd Nazareth¦79189\nd*.”
 \p
-\v 8 \nd Yeshua¦79193\nd* responded, “\wj I already told you all that \em I am\em* the one. So¦79200 if it's me that you're looking¦79202 for¦79202, let these¦79204 others leave.\wj*”
+\v 8 \nd Yeshua¦79193\nd* responded, “\wj I already told you all that \+em I am\+em* the one. So¦79200 if it's me that you're looking¦79202 for¦79202, let these¦79204 others leave.\wj*”
 \v 9 (In this way, the statement was fulfilled¦79207 that Yeshua had said¦79211 previously: ‘I didn't lose any of the ones that you¦79214 gave¦79214 me.’)\f + \fr 18:9 \ft TD: It's not certain from the original whether v9 was part of Mark's commentary on the events or part of Yeshua's response to the arresting party.\f*
 \p
 \v 10 Then¦79249 Simon¦79225 Peter¦79227 drew the sword¦79229 that he was carrying and swiped at the servant of the high priest¦79237, cutting off his¦79241 right¦79247 ear¦79243. The servant's name¦79251 was Malchus¦79257.
@@ -1591,7 +1591,7 @@
 \v 19 On Sunday evening¦81347 \nd Yeshua's¦81372\nd* trainees had met together and had the doors¦81358 locked because¦81365 they were afraid of the Jewish leaders, but Yeshua arrived and stood¦81374 in the middle of the room and said, “Peace¦81381 to you¦81382 all.”
 \v 20 Then¦81383 he showed¦81387 them his hands¦81391 and his side and they were so happy now that they had seen¦81402 the \nd master¦81404\nd*.
 \v 21 \nd Yeshua¦81409\nd* continued, “\wj Peace¦81412 to you all. Now I am sending¦81420 you all out just like the father¦81418 sent¦81415 me out.\wj*”
-\v 22 Then¦81424 he breathed¦81427 on them and said¦81426, “\wj Receive¦81432 the holy \nd spirit¦81433\nd*.\wj*
+\v 22 Then¦81424 he breathed¦81427 on them and said¦81426, “\wj Receive¦81432 the holy \+nd spirit¦81433\+nd*.\wj*
 \v 23 \x + \xo 20:23: \xt Mat 16:19; 18:18.\x*\wj If you forgive¦81439 anyone's sins¦81441, then they'll be forgiven¦81442 but if you withhold forgiveness, then it will be withheld.\wj*”
 \s1 Thomas sees the evidence for himself
 \rem /s1 Jesus and Thomas
@@ -1606,7 +1606,7 @@
 \p
 \v 28 Thomas spoke up, “My¦81618 \nd master¦81617\nd* and my¦81618 \nd god¦81621\nd*!”
 \p
-\v 29 “\wj So you believe now because you've seen me,\wj*” said \nd Yeshua¦81628\nd*. “\wj The ones who haven't seen me, but who believe anyway, will \add certainly\add* be rewarded.\wj*”
+\v 29 “\wj So you believe now because you've seen me,\wj*” said \nd Yeshua¦81628\nd*. “\wj The ones who haven't seen me, but who believe anyway, will \+add certainly\+add* be rewarded.\wj*”
 \s1 Why this document was written
 \rem /s1 The Purpose of This Book
 \rem /s1 Purpose of the Book

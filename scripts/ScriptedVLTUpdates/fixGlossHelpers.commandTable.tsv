@@ -1,96 +1,96 @@
 Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	RCase	Replace	Name	Comment
-									/a¦/			\add +a¦\add*
-									/A¦/			\add +A¦\add*
-									/an¦/			\add +an¦\add*
-									/An¦/			\add +An¦\add*
-									/any¦/			\add +any¦\add*		Luke 20:21
-									/its¦/			\add +its¦\add*		Acts 11:5
-									/the¦/			\add +the¦\add*
-									/The¦/			\add +The¦\add*
+									˓a¦˒			\add +a¦\add*
+									˓A¦˒			\add +A¦\add*
+									˓an¦˒			\add +an¦\add*
+									˓An¦˒			\add +An¦\add*
+									˓any¦˒			\add +any¦\add*		Luke 20:21
+									˓its¦˒			\add +its¦\add*		Acts 11:5
+									˓the¦˒			\add +the¦\add*
+									˓The¦˒			\add +The¦\add*
 
-									/am¦/			am¦
-									/am¦_being¦/			am¦_being¦
-									/are¦/			are¦
-									/Are¦/			Are¦
-									/are¦_being¦/			are¦_being¦
-									/be¦/			be¦
-									/Be¦/			Be¦
-									/be¦_being¦/			be¦_being¦
-									/Be¦_being¦/			Be¦_being¦
-									/being¦/			being¦
-									/Being¦/			Being¦
-									/going¦_to¦/			going¦_to¦
-									/going¦_to¦_be¦/			going¦_to¦_be¦
-									/had¦/			had¦
-									/had¦_been¦/			had¦_been¦
-									/has¦/			has¦
-									/has¦_been¦/			has¦_been¦
-									/have¦/			have¦
-									/have¦_been¦/			have¦_been¦
-									/having¦/			having¦
-									/Having¦/			Having¦
-									/having¦_been¦/			having¦_been¦
-									/Having¦_been¦/			Having¦_been¦
-									/is¦/			is¦
-									/Is¦/			Is¦
-									/is¦_being¦/			is¦_being¦
-									/let¦/			let¦
-									/may¦/			may¦
-									/May¦/			May¦
-									/may¦_be¦/			may¦_be¦
-									/may¦_have¦/			may¦_have¦
-									/might¦/			might¦
-									/Might¦/			Might¦
-									/might¦_be¦/			might¦_be¦
-									/might¦_have¦/			might¦_have¦
-									/was¦/			was¦
-									/was¦_being¦/			was¦_being¦
-									/were¦/			were¦
-									/were¦_being¦/			were¦_being¦
-									/will¦_be¦/			will¦_be¦
-									/will¦_be¦_being¦/			will¦_be¦_being¦
+									˓am¦˒			am¦
+									˓am¦_being¦˒			am¦_being¦
+									˓are¦˒			are¦
+									˓Are¦˒			Are¦
+									˓are¦_being¦˒			are¦_being¦
+									˓be¦˒			be¦
+									˓Be¦˒			Be¦
+									˓be¦_being¦˒			be¦_being¦
+									˓Be¦_being¦˒			Be¦_being¦
+									˓being¦˒			being¦
+									˓Being¦˒			Being¦
+									˓going¦_to¦˒			going¦_to¦
+									˓going¦_to¦_be¦˒			going¦_to¦_be¦
+									˓had¦˒			had¦
+									˓had¦_been¦˒			had¦_been¦
+									˓has¦˒			has¦
+									˓has¦_been¦˒			has¦_been¦
+									˓have¦˒			have¦
+									˓have¦_been¦˒			have¦_been¦
+									˓having¦˒			having¦
+									˓Having¦˒			Having¦
+									˓having¦_been¦˒			having¦_been¦
+									˓Having¦_been¦˒			Having¦_been¦
+									˓is¦˒			is¦
+									˓Is¦˒			Is¦
+									˓is¦_being¦˒			is¦_being¦
+									˓let¦˒			let¦
+									˓may¦˒			may¦
+									˓May¦˒			May¦
+									˓may¦_be¦˒			may¦_be¦
+									˓may¦_have¦˒			may¦_have¦
+									˓might¦˒			might¦
+									˓Might¦˒			Might¦
+									˓might¦_be¦˒			might¦_be¦
+									˓might¦_have¦˒			might¦_have¦
+									˓was¦˒			was¦
+									˓was¦_being¦˒			was¦_being¦
+									˓were¦˒			were¦
+									˓were¦_being¦˒			were¦_being¦
+									˓will¦_be¦˒			will¦_be¦
+									˓will¦_be¦_being¦˒			will¦_be¦_being¦
 
-									/to¦/			to¦
-									/To¦/			To¦
-									/to¦_be¦/			to¦_be¦
-									/to¦_be¦_being¦/			to¦_be¦_being¦
-									/to¦_have¦/			to¦_have¦
+									˓to¦˒			to¦
+									˓To¦˒			To¦
+									˓to¦_be¦˒			to¦_be¦
+									˓to¦_be¦_being¦˒			to¦_be¦_being¦
+									˓to¦_have¦˒			to¦_have¦
 
 # Split (after an insert)
-									 /are¦_			 are¦_
-									 /be¦_			 be¦_
-									 /Be¦_			 Be¦_
-									 /has¦_			 has¦_
-									_/has¦_			_has¦_
-									 /have¦_			 have¦_
-									 /having¦_			 having¦_
-									 /is¦_			 is¦_
-									 /let¦_			 let¦_
-									_/let¦_			 _let¦_
-									 /Let¦_			 Let¦_
-									 /may¦_			 may¦_
-									 /May¦_			 May¦_
-									_/may¦_			 _may¦_
-									 /might¦_			 might¦_
-									 /to¦_			 to¦_
-									 /To¦_			 To¦_
-									 /were¦_			 were¦_
-									 /will¦_			 will¦_
-									 /Will¦_			 Will¦_
-									_/will¦_			 will¦_
+									 ˓are¦_			 are¦_
+									 ˓be¦_			 be¦_
+									 ˓Be¦_			 Be¦_
+									 ˓has¦_			 has¦_
+									_˓has¦_			_has¦_
+									 ˓have¦_			 have¦_
+									 ˓having¦_			 having¦_
+									 ˓is¦_			 is¦_
+									 ˓let¦_			 let¦_
+									_˓let¦_			 _let¦_
+									 ˓Let¦_			 Let¦_
+									 ˓may¦_			 may¦_
+									 ˓May¦_			 May¦_
+									_˓may¦_			 _may¦_
+									 ˓might¦_			 might¦_
+									 ˓to¦_			 to¦_
+									 ˓To¦_			 To¦_
+									 ˓were¦_			 were¦_
+									 ˓will¦_			 will¦_
+									 ˓Will¦_			 Will¦_
+									_˓will¦_			 will¦_
 
-									_/been¦_			_been¦_
-									_been¦/_			_been¦_
-									_/being¦_			_being¦_
-									_being¦/_			_being¦_
-									_/be¦_			_be¦_
-									_be¦/_			_be¦_
+									_˓been¦_			_been¦_
+									_been¦˒_			_been¦_
+									_˓being¦_			_being¦_
+									_being¦˒_			_being¦_
+									_˓be¦_			_be¦_
+									_be¦˒_			_be¦_
 
 # Fix unusual ones
-									/his¦/			\add ^his¦\add*		Matt 12:41 his son
-									/my¦/			\add ^my¦\add*		Titus 1:4 my_genuine child
-									/one¦/			\add ^one¦\add*		Matt 12:41 one greater
-									/our¦/			\add ^our¦\add*		Titus 1:4 our common faith
-									/their¦/			\add ^their¦\add*		Matt 4:6 their hands
-									/they¦/			\add ^they¦\add*		Matt 21:27 they said
-									/your¦/			\add ^your¦\add*		Col 3:23 with your_heart, Jam 4:8
+									˓his¦˒			\add ^his¦\add*		Matt 12:41 his son
+									˓my¦˒			\add ^my¦\add*		Titus 1:4 my_genuine child
+									˓one¦˒			\add ^one¦\add*		Matt 12:41 one greater
+									˓our¦˒			\add ^our¦\add*		Titus 1:4 our common faith
+									˓their¦˒			\add ^their¦\add*		Matt 4:6 their hands
+									˓they¦˒			\add ^they¦\add*		Matt 21:27 they said
+									˓your¦˒			\add ^your¦\add*		Col 3:23 with your_heart, Jam 4:8

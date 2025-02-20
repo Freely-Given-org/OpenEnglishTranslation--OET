@@ -29,6 +29,7 @@ CHANGELOG:
     2023-08-21 Add lemma pages
     2023-08-30 Add nomina sacra to word pages
     2024-03-21 Handle OT word table as well
+    2025-02-16 Change gloss helper to use ˓˒ instead of // around gloss helper (since / also used for alternative glosses)
 """
 from gettext import gettext as _
 from typing import List, Tuple, Set, Optional
@@ -54,10 +55,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-01-15' # by RJH
+LAST_MODIFIED_DATE = '2025-02-16' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.80'
+PROGRAM_VERSION = '0.81'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -1082,7 +1083,7 @@ def make_NT_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_
                 assert columns_string.count( '\t' ) == 11, f"{n} ({columns_string.count(TAB)}) '{columns_string}'" # Be wary of editors that truncate trailing whitespace / tabs
                 wordRef, greekWord, SRLemma, _GrkLemma, _VLTGlossWords, OETGlossWords, glossCaps, probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
                 formattedGlossWords = OETGlossWords \
-                                        .replace( '/', '<span class="glossHelper">', 1 ).replace( '/', '</span>', 1 ) \
+                                        .replace( '˓', '<span class="glossHelper">', 1 ).replace( '˒', '</span>', 1 ) \
                                         .replace( '˱', '<span class="glossPre">', 1 ).replace( '˲', '</span>', 1 ) \
                                         .replace( '‹', '<span class="glossPost">', 1 ).replace( '›', '</span>', 1 )
                 if probability:
@@ -1099,7 +1100,7 @@ def make_NT_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_
                 assert columns_string.count( '\t' ) == 11, f"{n} ({columns_string.count(TAB)}) '{columns_string}'" # Be wary of editors that truncate trailing whitespace / tabs
                 wordRef, greekWord, SRLemma, _GrkLemma, _VLTGlossWords, OETGlossWords, glossCaps, probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
                 formattedGlossWords = OETGlossWords \
-                                        .replace( '/', '<span class="glossHelper">', 1 ).replace( '/', '</span>', 1 ) \
+                                        .replace( '˓', '<span class="glossHelper">', 1 ).replace( '˒', '</span>', 1 ) \
                                         .replace( '˱', '<span class="glossPre">', 1 ).replace( '˲', '</span>', 1 ) \
                                         .replace( '‹', '<span class="glossPost">', 1 ).replace( '›', '</span>', 1 )
                 if probability:
@@ -1116,7 +1117,7 @@ def make_NT_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_
                 assert columns_string.count( '\t' ) == 11, f"{n} ({columns_string.count(TAB)}) '{columns_string}'" # Be wary of editors that truncate trailing whitespace / tabs
                 wordRef, greekWord, SRLemma, _GrkLemma, _VLTGlossWords, OETGlossWords, glossCaps, probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
                 formattedGlossWords = OETGlossWords \
-                                        .replace( '/', '<span class="glossHelper">', 1 ).replace( '/', '</span>', 1 ) \
+                                        .replace( '˓', '<span class="glossHelper">', 1 ).replace( '˒', '</span>', 1 ) \
                                         .replace( '˱', '<span class="glossPre">', 1 ).replace( '˲', '</span>', 1 ) \
                                         .replace( '‹', '<span class="glossPost">', 1 ).replace( '›', '</span>', 1 )
                 if probability:
@@ -1136,7 +1137,7 @@ def make_NT_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_
             # dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Got '{columns_string}' for '{output_filename}'" )
             wordRef, greekWord, SRLemma, _GrkLemma, _VLTGlossWords, OETGlossWords, glossCaps, probability, extendedStrongs, roleLetter, morphology, tagsStr = columns_string.split( '\t' )
             formattedGlossWords = OETGlossWords \
-                                    .replace( '/', '<span class="glossHelper">', 1 ).replace( '/', '</span>', 1 ) \
+                                    .replace( '˓', '<span class="glossHelper">', 1 ).replace( '˒', '</span>', 1 ) \
                                     .replace( '˱', '<span class="glossPre">', 1 ).replace( '˲', '</span>', 1 ) \
                                     .replace( '‹', '<span class="glossPost">', 1 ).replace( '›', '</span>', 1 )
             # if probability: assert probability.isdigit(), f"{wordRef} {probability=}" # Fails on negative numbers, e.g., -43
@@ -1222,7 +1223,7 @@ def make_NT_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_
                     if oN==n: continue # don't duplicate the word we're making the page for
                     oWordRef, _oGreekWord, _oSRLemma, _oGrkLemma, _oVLTGlossWords, oOETGlossWords, oGlossCaps,oProbability, oExtendedStrongs, oRoleLetter, oMorphology, oTagsStr = word_table[oN].split( '\t' )
                     oFormattedGlossWords = oOETGlossWords \
-                                            .replace( '/', '<span class="glossHelper">', 1 ).replace( '/', '</span>', 1 ) \
+                                            .replace( '˓', '<span class="glossHelper">', 1 ).replace( '˒', '</span>', 1 ) \
                                             .replace( '˱', '<span class="glossPre">', 1 ).replace( '˲', '</span>', 1 ) \
                                             .replace( '‹', '<span class="glossPost">', 1 ).replace( '›', '</span>', 1 )
                     oBBB, oCVW = oWordRef.split( '_', 1 )
@@ -1305,7 +1306,7 @@ def make_NT_lemma_pages( inputFolderPath:Path, outputFolderPath:Path, word_table
         for displayCounter,oN in enumerate( lemmaRowsList, start=1 ):
             oWordRef, oGreek, _oSRLemma, _oGrkLemma, _oVLTGlossWords, oOETGlossWords, _oGlossCaps, _oProbability, _oExtendedStrongs, _oRoleLetter, oMorphology, _oTagsStr = word_table[oN].split( '\t' )
             oFormattedGlossWords = oOETGlossWords \
-                                    .replace( '/', '<span class="glossHelper">', 1 ).replace( '/', '</span>', 1 ) \
+                                    .replace( '˓', '<span class="glossHelper">', 1 ).replace( '˒', '</span>', 1 ) \
                                     .replace( '˱', '<span class="glossPre">', 1 ).replace( '˲', '</span>', 1 ) \
                                     .replace( '‹', '<span class="glossPost">', 1 ).replace( '›', '</span>', 1 )
             oBBB, oCVW = oWordRef.split( '_', 1 )
