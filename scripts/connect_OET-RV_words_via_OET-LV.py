@@ -525,7 +525,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
     totalSimpleListedAdds = totalProperNounAdds = totalFirstPartMatchedAdds = totalManualMatchedAdds = 0
     totalSimpleListedAddsNS = totalProperNounAddsNS = totalFirstPartMatchedAddsNS = totalManualMatchedAddsNS = 0 # Nomina sacra
     for BBB,lvBookObject in lv.books.items():
-        if BBB != 'ZEP': continue
+        if BBB != 'EZR': continue
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Processing connect words for OET {BBB}…" )
 
         bookSimpleListedAdds = bookProperNounAdds = bookFirstPartMatchedAdds = bookManualMatchedAdds = 0
