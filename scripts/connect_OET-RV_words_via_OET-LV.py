@@ -48,7 +48,8 @@ CHANGELOG:
     2024-03-25 Add OT connections
     2025-01-04 Started loading and using SBE name tables for automatic name links (not yet fully implemented for NT)
     2025-01-17 Check for bad copy/paste which might include word numbers from a different verse
-    2025-02-20 Add check for /nd inside /add fields (which should never happen)
+    2025-02-20 Added check for /nd inside /add fields (which should never happen)
+    2025-02-21 Added check for wrongly ordered combos, e.g., \\add #? instead of \\add ?#
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -71,10 +72,10 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-02-20' # by RJH
+LAST_MODIFIED_DATE = '2025-02-21' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.75'
+PROGRAM_VERSION = '0.76'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -525,7 +526,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
     totalSimpleListedAdds = totalProperNounAdds = totalFirstPartMatchedAdds = totalManualMatchedAdds = 0
     totalSimpleListedAddsNS = totalProperNounAddsNS = totalFirstPartMatchedAddsNS = totalManualMatchedAddsNS = 0 # Nomina sacra
     for BBB,lvBookObject in lv.books.items():
-        if BBB != 'EZR': continue
+        if BBB not in ('EZR','PSA'): continue
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Processing connect words for OET {BBB}…" )
 
         bookSimpleListedAdds = bookProperNounAdds = bookFirstPartMatchedAdds = bookManualMatchedAdds = 0
@@ -641,6 +642,9 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
             assert doubledND not in newESFMtext, f"doubled \\nd check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(doubledND)-10:newESFMtext.index(doubledND)+35]}'"
             assert badAddND not in newESFMtext, f"\\nd in \\add start check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(badAddND)-10:newESFMtext.index(badAddND)+35]}'"
             assert badNDAdd not in newESFMtext, f"\\nd in \\add end check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(badNDAdd)-10:newESFMtext.index(badNDAdd)+35]}'"
+            # NOTE: '*?' has to have a space before it, because \\add*? might occur at the end of a question
+            for wronglyOrderedCombo in ('+?','=?','<?','>?','≡?','&?','@?',' *?','#?','^?','≈?'):
+                assert wronglyOrderedCombo not in newESFMtext, f"Wrongly ordered combo check failed with '{wronglyOrderedCombo}' before saving {BBB} with '{newESFMtext[newESFMtext.index(wronglyOrderedCombo)-10:newESFMtext.index(wronglyOrderedCombo)+35]}'"
             with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
                 esfmFile.write( newESFMtext )
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookSimpleListedAdds:,} simple listed adds, {bookProperNounAdds:,} proper noun adds, {bookFirstPartMatchedAdds:,} first part adds and {bookManualMatchedAdds:,} manual adds for {BBB}." )
