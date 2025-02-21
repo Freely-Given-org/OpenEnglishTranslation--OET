@@ -48,6 +48,7 @@ CHANGELOG:
     2024-03-25 Add OT connections
     2025-01-04 Started loading and using SBE name tables for automatic name links (not yet fully implemented for NT)
     2025-01-17 Check for bad copy/paste which might include word numbers from a different verse
+    2025-02-20 Add check for /nd inside /add fields (which should never happen)
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -70,10 +71,10 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-01-17' # by RJH
+LAST_MODIFIED_DATE = '2025-02-20' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.74'
+PROGRAM_VERSION = '0.75'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -508,7 +509,7 @@ def loadHebGrkNameTables():
 
 illegalWordLinkRegex1 = re.compile( '[0-9]¦' ) # Has digits BEFORE the broken pipe
 illegalWordLinkRegex2 = re.compile( '¦[1-9][0-9]{0,5}[a-z]' ) # Has letters immediately AFTER the wordlink number
-doubledND = '\\nd \\nd '
+doubledND, badAddND, badNDAdd = '\\nd \\nd ', '\\add \\nd ', '\\nd*\\add*'
 def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
     """
     Firstly, load the OET-LV wordtable.
@@ -524,6 +525,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
     totalSimpleListedAdds = totalProperNounAdds = totalFirstPartMatchedAdds = totalManualMatchedAdds = 0
     totalSimpleListedAddsNS = totalProperNounAddsNS = totalFirstPartMatchedAddsNS = totalManualMatchedAddsNS = 0 # Nomina sacra
     for BBB,lvBookObject in lv.books.items():
+        if BBB != 'EZR': continue
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Processing connect words for OET {BBB}…" )
 
         bookSimpleListedAdds = bookProperNounAdds = bookFirstPartMatchedAdds = bookManualMatchedAdds = 0
@@ -557,6 +559,8 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
                 for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
                     assert line.count( f'\\{characterMarker} ') == line.count( f'\\{characterMarker}*'), f"{characterMarker} marker mismatch in {lvESFMFilename} {lineNumber}: '{line}'"
                 assert doubledND not in line, f"Double \\nd in {lvESFMFilename} {lineNumber}: '{line}'"
+                assert  badAddND not in line, f"\\nd inside \\add start {lvESFMFilename} {lineNumber}: '{line}'"
+                assert  badNDAdd not in line, f"\\nd inside \\add end {lvESFMFilename} {lineNumber}: '{line}'"
                 if '\\x* ' in line: # this can be ok if the xref directly follows other text
                     logger = logging.critical if ' \\x ' in line else logging.warning
                     logger( f"Double-check space after xref in {lvESFMFilename} {lineNumber}: '{line}'" )
@@ -584,6 +588,8 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
                 for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
                     assert line.count( f'\\{characterMarker} ') == line.count( f'\\{characterMarker}*'), f"{characterMarker} marker mismatch in {rvESFMFilename} {lineNumber}: '{line}'"
                 assert doubledND not in line, f"Double \\nd in {rvESFMFilename} {lineNumber}: '{line}'"
+                assert  badAddND not in line, f"\\nd inside \\add start {rvESFMFilename} {lineNumber}: '{line}'"
+                assert  badNDAdd not in line, f"\\nd inside \\add end {rvESFMFilename} {lineNumber}: '{line}'"
                 if '\\x* ' in line: # this can be ok if the xref directly follows other text
                     logger = logging.critical if ' \\x ' in line else logging.warning
                     logger( f"Double-check space after xref in {rvESFMFilename} {lineNumber}: '{line}'" )
@@ -633,6 +639,8 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
             illegalWordLinkRegex2Match = illegalWordLinkRegex2.search( newESFMtext)
             assert not illegalWordLinkRegex2Match, f"illegalWordLinkRegex2 failed before saving {BBB} with '{newESFMtext[illegalWordLinkRegex2Match.start()-5:illegalWordLinkRegex2Match.end()+5]}'" # Don't want double-ups of wordlink numbers
             assert doubledND not in newESFMtext, f"doubled \\nd check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(doubledND)-10:newESFMtext.index(doubledND)+35]}'"
+            assert badAddND not in newESFMtext, f"\\nd in \\add start check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(badAddND)-10:newESFMtext.index(badAddND)+35]}'"
+            assert badNDAdd not in newESFMtext, f"\\nd in \\add end check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(badNDAdd)-10:newESFMtext.index(badNDAdd)+35]}'"
             with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
                 esfmFile.write( newESFMtext )
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookSimpleListedAdds:,} simple listed adds, {bookProperNounAdds:,} proper noun adds, {bookFirstPartMatchedAdds:,} first part adds and {bookManualMatchedAdds:,} manual adds for {BBB}." )
@@ -1639,6 +1647,7 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
     fnPrint( DEBUGGING_THIS_MODULE, f"addNumberToRVWord( {BBB} {c}:{v} '{word}' {wordNumber} )" )
     assert isinstance( wordNumber, int )
     assert '¦' not in word
+    if BBB=='MAT' and v==1: print( word )
 
     NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
 
@@ -1690,6 +1699,11 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
                         logger( f"Tried to append number inside abbreviated word(s) {BBB} {C}:{V} {marker} '{line[match.start():match.end()]}' (from '{line[match.start():match.end()+5]}') -> '{word}¦{wordNumber}'" )
                         # abbreviated_word_error
                         return False
+                    elif addNominaSacra and line[match.end():].startswith( ' \\add*'): # we're inside a \\add field
+                        logger = logging.critical if DEBUGGING_THIS_MODULE else logging.error
+                        logger( f"Tried to append nomina sacra inside added word(s) {BBB} {C}:{V} {marker} '{line[match.start():match.end()]}' (from '{line[match.start():match.end()+5]}') -> '{word}¦{wordNumber}'" )
+                        # nd_inside_add_error
+                        return False
                     else: # seems all ok
                         state.rvESFMLines[n] = f'''{line[:match.start()]}{ndStartMarker if addNominaSacra else ''}{word}¦{wordNumber}{ndEndMarker if addNominaSacra else ''}{line[match.end():]}'''
                         # print( f"{word=} {line=}" )
@@ -1702,30 +1716,6 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
                     return True
             else:
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord {BBB} {c}:{v} '{word}' found {len(allWordMatches)=}" )
-
-            # for _safetyCount in range( 4 ):
-            #     match = re.search( wholeWordRegexStr, rest )
-            #     if not match: break
-            #     print( match )
-            #     assert match.group(0) == word
-            #     if rest[match.end()] != '': # next character after word
-            #         rest = f'{rest[:match.start()]}{word}¦{wordNumber}{rest[:match.end():]}'
-            #         print( f"{word=} {rest=}" ); halt
-            # else: not_enough_loops
-
-            # if f' {word} ' in rest: # that's quite a restrictive match
-            #     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"addNumberToRVWord() found {BBB} {C}:{V} {marker}" )
-            #     # assert word in rest, f"No {word=} in {rest=}"
-            #     if rest.count( word ) > 1:
-            #         return False
-            #     assert rest.count( word ) == 1, f"'{word}' {rest.count(word)} '{rest}'"
-            #     if f' {word}¦' not in rest: # already
-            #         state.rvESFMLines[n] = line.replace( word, f'{word}¦{wordNumber}' )
-            #         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord() added ¦{wordNumber} to '{word}' in OET-RV {BBB} {c}:{v}" )
-            #         return True
-            #     else:
-            #         logging.critical( f"addNumberToRVWord() found {BBB} {C}:{V} {marker} found ' {word}¦' already in {rest=}")
-            #         oops
 # end of connect_OET-RV_words_via_OET-LV.addNumberToRVWord
 
 
