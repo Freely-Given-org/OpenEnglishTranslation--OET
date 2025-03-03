@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2025-02-27 17:53 by extract_glossed_OSHB_OT_to_ESFM v0.53
+\rem ESFM file created 2025-03-03 16:43 by extract_glossed_OSHB_OT_to_ESFM v0.54
 \rem USFM file edited by ScriptedBibleEditor v0.33
 \h Dāniyy\sup ʼēl\sup*
 \toc1 Dāniyy\sup ʼēl\sup*
@@ -13,6 +13,7 @@
 \toc3 Dān
 \mt1 Dāniyy\sup ʼēl\sup*
 \c 1
+\nb
 \v 1 In=year three of=(the)_reign of_Yəhōyāqīm/(Jehoiakim) the_king_of Yəhūdāh/(Judah) Nəⱱūkadneʦʦar he_came the_king_of Bāⱱel Yərūshelēm/(Jerusalem) and=he/it_laid_siege to÷it.
 \v 2 my=master And=he/it_gave in=his/its=hand DOM Yəhōyāqīm the_king_of Yəhūdāh and=from=(the)_sum of_the_vessels_of of_the_house_of the=ʼElohīm and=he/it_brought=them the_land_of Shinˊār the_house_of his/its=god and=DOM the=vessels he_brought the_house_of the_treasury_of his/its=god.
 \v 3 And=he/it_said the=king to=ʼAshpənaz the_chief_of his/its=officials to=bring from=(the)_sons of_Yisrā\sup ʼēl\sup*/(Israel) and=from=(the)_seed the=royalty and=from the=nobles.
@@ -35,6 +36,7 @@
 \v 20 And=all/each/any/every matter_of wisdom_of understanding which he_sought from=them the=king and=he/it_found=them ten hands above all_of the=magicians/soothsayers the÷enchanters who in=all his/its=kingdom.
 \v 21 And= Dāniyy\sup ʼēl\sup* =he/it_was until year_of one to/for=Coresh the÷king.
 \c 2
+\nb
 \v 1 and=in=year_of two of=(the)_reign of_Nəⱱūkadneʦʦar Nəⱱūkadneʦʦar he_dreamed dreams his/its=breath/wind/spirit and=it_was_disturbed and=his/its=sleep it_happened on/upon/above=him/it.
 \v 2 And=he/it_said the=king to=call to/for_the=magicians/soothsayers and÷to_the÷enchanters and=to_the=sorcerers and=to_the=\add ones\add*_from_Kasdiy to=announce to/for=the_king his/its=dreams and=they_came and=they_stood to=(the)_face_of/in_front_of/before the÷king.
 \v 3 And=he/it_said to/for=them the=king a_dream I_have_dreamed my=breath/wind/spirit and=it_was_disturbed to=know DOM the=dream.
@@ -85,6 +87,7 @@
 \v 48 Then Oh/the=king to/for=Dāniyy\sup ʼēl\sup* he_made_great and÷gifts great many he_gave to=him/it and÷made_ruler÷him over all_of the_province_of Bāⱱel and÷chief_of prefects over all_of the_wise_men_of Bāⱱel.
 \v 49 And=Dāniyy\sup ʼēl\sup* he_asked from Oh/the=king and÷appointed over affairs÷the (diy)_of the_province_of Bāⱱel to÷Shadrak Mēyshak and÷ˊAⱱēd- Nəgō and=Dāniyy\sup ʼēl\sup* in/on/at/with÷court_of Oh/the=king.
 \c 3
+\nb
 \v 1 Nəⱱūkadneʦʦar Oh/the=king he_made an_image (diy)_of gold height_of÷whose [was]_cubits sixty width_of÷its [was]_cubits six set_up÷it in/on/at/with÷plain_of Dura in/on/at/with÷province_of Bāⱱel.
 \v 2 And÷Nəⱱūkadneʦʦar Oh/the=king he_sent to÷assemble for÷satraps÷the prefects÷the and÷governors÷the counselors÷the treasurers÷the judges÷the magistrates÷the and=all/each/any/every the_authorities_of provinces÷the to÷come to÷dedication_of statue÷the which he_had_set_up Nəⱱūkadneʦʦar Oh/the=king.
 \v 3 In=then satraps÷the [were]_gathered prefects÷the and÷governors÷the counselors÷the treasurers÷the judges÷the magistrates÷the and=all/each/any/every the_authorities_of provinces÷the for÷dedication_of statue÷the which Nəⱱūkadneʦʦar he_had_set_up Oh/the=king and÷stood\f + \fr 3:3 \ft Variant note: ו/קאמין: (x-qere) 'וְ/קָֽיְמִין֙': lemma=c/6966 n=0.1.0 morph=AC/Vqrmpa id=27j2a וְ/קָֽיְמִין֙\f* at÷before statue÷the which he_had_set_up Nəⱱūkadneʦʦar.
@@ -119,6 +122,7 @@
 \v 32 \f + \fr 3:32 \ft Note: KJB: Dān.4.2\f* signs÷the and÷wonders÷the which he_has_done for÷me the=god most_high÷the\f + \fr 3:32 \ft Variant note: עלי/א: (x-qere) 'עִלָּאָ֑/ה': lemma=5943 n=1 morph=AAamsd/Td id=27D85 עִלָּאָ֑/ה\f* it_seemed_good to÷me to=reply.
 \v 33 \f + \fr 3:33 \ft Note: KJB: Dān.4.3\f* signs_of÷his as÷how great and÷wonders_of÷his as÷how strong kingdom_of÷his [is]_a_kingdom_of perpetuity and÷dominion_of÷his [is]_with generation and÷generation.
 \c 4
+\nb
 \v 1 \f + \fr 4:1 \ft Note: KJB: Dān.4.4\f* I Nəⱱūkadneʦʦar at_ease I_was in/on/at/with÷house_of÷my and÷prospering in/on/at/with÷palace_of÷my.
 \v 2 \f + \fr 4:2 \ft Note: KJB: Dān.4.5\f* a_dream I_saw and÷frightened÷me and÷images on bed_of÷my and=visions_of mind_of÷my terrified÷me.
 \v 3 \f + \fr 4:3 \ft Note: KJB: Dān.4.6\f* and÷from÷I it_was_made a_decree to÷brought before÷me to=all/each/any/every the_wise_men_of Bāⱱel that the_interpretation_of the=dream make_known÷me.
@@ -154,6 +158,7 @@
 \v 33 \f + \fr 4:33 \ft Note: KJB: Dān.4.36\f* in/on/at/with÷him time÷that reason_of÷my it_returned to÷me and÷for÷glory_of kingdom_of÷my majesty_of÷my and÷splendor_of÷me it_returned to÷me and÷to÷me advisers_of÷my and÷nobles_of÷my they_sought and÷over kingdom_of÷my it_was_established and=increase/multiply surpassing it_was_added to=me.
 \v 34 \f + \fr 4:34 \ft Note: KJB: Dān.4.37\f* now I Nəⱱūkadneʦʦar [am]_praising and÷exalt and÷honour to÷king_of the=heavens that all_of works_of÷his [are]_truth and÷ways_of÷his [are]_justice and÷he [are]_walking in/on/at/with÷pride [he_is]_able to÷humble.
 \c 5
+\nb
 \v 1 Bēləshaʼʦʦr Oh/the=king he_made a_feast great for÷nobles_of÷his a_thousand and÷in÷presence thousand÷the wine÷the [he_was]_drinking.
 \v 2 Bēləshaʼʦʦr he_said in/on/at/with÷tasted_of wine÷the to÷bring in÷vessels_of gold÷the and÷silver÷the which he_had_brought_out Nəⱱūkadneʦʦar father_of÷his from temple÷the which in/on/at/with÷Yərūshelēm/(Jerusalem) and÷drink in/on/at/with÷them Oh/the=king and÷nobles_of÷his wives_of÷his and÷concubines_of÷his.
 \v 3 In=then they_brought the_vessels_of gold÷the which they_had_brought_out from temple÷the which [was]_the_house_of the=god which in/on/at/with÷Yərūshelēm and÷drank in/on/at/with÷them Oh/the=king and÷nobles_of÷his wives_of÷his and÷concubines_of÷his.
@@ -185,6 +190,7 @@
 \v 29 In=then Bēləshaʼʦʦr he_said and÷clothed to/for=Dāniyy\sup ʼēl\sup* purple÷the and÷chain÷a\f + \fr 5:29 \ft Variant note: ו/המונכ/א: (x-qere) 'וְ/הַֽמְנִיכָ֥/א': lemma=c/2002 morph=AC/Ncmsd/Td id=27cjX וְ/הַֽמְנִיכָ֥/א\f* (diy)_of gold÷the [was]_on neck_of÷his and÷issued_a_proclamation concerning÷him (diy)_that he_will_be a_ruler third in/on/at/with÷kingdom÷the.
 \v 30 In/on/at/with÷him in/on/at/with÷night÷that Bēləshaʼʦʦr he_was_killed Oh/the=king the=Kasdaye\f + \fr 5:30 \ft Variant note: כשדי/א: (x-qere) 'כַשְׂדָּאָֽ/ה': lemma=3779 n=0 morph=ANgmsd/Td id=27Ade כַשְׂדָּאָֽ/ה\f*.
 \c 6
+\nb
 \v 1 \f + \fr 6:1 \ft Note: KJB: Dān.5.31\f* and÷Dārəyāvesh mede÷the\f + \fr 6:1 \ft Note: Marks an anomalous form. \f*\f + \fr 6:1 \ft Note: We have abandoned or added a ketib/qere relative to BHS. In doing this we agree with L against BHS. \f* he_received kingdom÷the at÷son_of years sixty and÷two.
 \v 2 \f + \fr 6:2 \ft Note: KJB: Dān.6.1\f* it_seemed_good before Dārəyāvesh and÷appoint over kingdom÷the to÷satraps÷the one_hundred and÷twenty who they_will_be in=all kingdom÷the.
 \v 3 \f + \fr 6:3 \ft Note: KJB: Dān.6.2\f* and÷over from÷them overseers three whom Dāniyy\sup ʼēl\sup* [was]_one of÷them whom they_will_be satraps÷the these giving to÷them account÷the and÷king÷the not he_will_be suffering_injury.
@@ -215,6 +221,7 @@
 \v 28 \f + \fr 6:28 \ft Note: KJB: Dān.6.27\f* [he_is]_delivering and÷rescues and÷performs signs and÷wonders in=the=heavens and÷in/on/at/with÷earth÷the [one]_who he_has_delivered to/for=Dāniyy\sup ʼēl\sup* from the_hand_of lions÷the.
 \v 29 \f + \fr 6:29 \ft Note: KJB: Dān.6.28\f* and=Dāniyy\sup ʼēl\sup* this he_prospered in/on/at/with÷reign_of Dārəyāvesh and÷in/on/at/with÷reign_of Kōresh/(Cyrus) persian÷the\f + \fr 6:29 \ft Variant note: פרסי/א: (x-qere) 'פָּרְסָאָֽ/ה': lemma=6543 n=0 morph=ANgmsd/Td id=27xdk פָּרְסָאָֽ/ה\f*.
 \c 7
+\nb
 \v 1 in=year one of÷Bēləshaʼʦʦr the_king_of Bāⱱel Dāniyy\sup ʼēl\sup* a_dream he_saw and=visions_of mind_of÷his on bed_of÷his in=then the=dream he_wrote [the]_head_of matters he_said.
 \v 2 Dāniyy\sup ʼēl\sup* [was]_replying and=saying(ms) seeing I_was in/on/at/with÷vision_of÷my with the=night and÷see the_four the_winds_of the=heavens [were]_stirring_up to÷sea÷the great÷the.
 \v 3 And=four beasts great [were]_coming_up from sea÷the [they_were]_different this_[one] from this_[one].
@@ -244,6 +251,7 @@
 \v 27 And÷kingdom÷the and÷dominion÷the and÷greatness÷the (diy)_of kingdoms_of under all_of the=heavens it_was_given to÷people_of the_holy_[ones]_of the_Most_High kingdom_of÷his [will_be]_a_kingdom_of perpetuity and=all/each/any/every dominions÷the to=him/it they_will_pay_reverence and÷obey.
 \v 28 [is]_to here end÷the (diy)_of the=matter I Dāniyy\sup ʼēl\sup* exceedingly thoughts_of÷my terrified÷me and÷face_of÷my they_were_changed over÷me and=the=matter in/on/at/with÷heart_of÷my I_have_kept.
 \c 8
+\nb
 \v 1 in=year three of=(the)_reign of_Bēləshaʼʦʦr the=king a_vision it_appeared to=me I Dāniyy\sup ʼēl\sup* after the÷appeared to=me in/on/at/with÷first.
 \v 2 And÷saw in/on/at/with÷vision and=he/it_was in/on/at/with÷saw÷I and÷I in/on/at/with÷Shūshan the÷citadel which in/on/at/with÷ˊĒylām the÷province and÷saw in/on/at/with÷vision and÷I I_was at the_canal_of ʼŪlay.
 \v 3 And÷lifted_up eyes_of÷my and÷saw and=see/lo/see a_ram one [was]_standing to=(the)_face_of/in_front_of/before the÷canal and=to/for=him/it two_horns and÷the÷horns [were]_high and÷the÷one [was]_high more_than the=second(fs) and÷the÷longer [was]_growing_up in/on/at/with÷last.
@@ -272,6 +280,7 @@
 \v 26 And=appearance the÷evenings and÷the÷mornings which it_has_been_told [is]_truth it and=you(ms) keep_secret the÷vision if/because refers_to÷days many.
 \v 27 And÷I Dāniyy\sup ʼēl\sup* I_was_exhausted and÷lay_sick days and÷got_up and÷went_about DOM the_work_of the=king and÷dismayed on the÷vision and÷not [I_was]_understanding.
 \c 9
+\nb
 \v 1 in=year one of÷Dārəyāvesh the_son_of ʼAḩashvērōsh by÷descent_of Māday who he_had_been_made_king over the_kingdom_of [the]_\add ones\add*_from_Kasdiy.
 \v 2 In=year one of÷reign÷his I Dāniyy\sup ʼēl\sup* I_observed in/on/at/with÷books the_number_of the÷years which it_came the_word_of \nd YHWH\nd* to Yirmə\sup yāh\sup*/(Jeremiah) the÷prophet to÷fulfilled for÷devastation_of Yərūshelēm/(Jerusalem) seventy year[s].
 \v 3 And÷turned DOM face_of÷my to my=master the=ʼElohīm to÷seek prayer and÷pleas_for_mercy in/on/at/with÷fasting and÷sackcloth and÷ashes.
@@ -300,6 +309,7 @@
 \v 26 And=after the÷weeks sixty and÷two he_will_be_cut_off an_anointed_[one] and÷nothing to=him/it and÷the÷city and÷the÷sanctuary [the]_people_of it_will_destroy a_prince the÷come and÷end_of÷its in/on/at/with÷flood and=unto [the]_end war [are]_determined desolate_[things].
 \v 27 And÷strong a_covenant with_the÷many seven one and÷middle_of the÷week he_will_cause_to_cease sacrifice and÷offering and÷on a_wing_of abomination(s) [that_which]_desolates and=unto complete_destruction and÷decreed it_will_be_poured_forth on [one_who_is]_desolate.
 \c 10
+\nb
 \v 1 in=year three to/for=Coresh the_king_of Pāraş a_word it_was_revealed to/for=Dāniyy\sup ʼēl\sup* whom it_had_been_called his/its=name Bēləţəshaʼʦʦar and÷true the÷message and÷conflict great and÷understood DOM the÷message and÷understanding to=him/it in/on/at/with÷vision.
 \v 2 In_the=days the=those I Dāniyy\sup ʼēl\sup* I_was mourning three sevens days.
 \v 3 Food_of desirableness(es) not I_ate and=flesh/body and÷wine not it_came into mouth_of÷my and÷to_use_lotion not I_anointed_myself until were_completed three_of sevens days.
@@ -322,6 +332,7 @@
 \v 20 And=he/it_said know to/for=what have_I_come to÷you and=now I_will_return to÷fight with the_prince_of Pāraş and÷I [am]_about_to_go_forth and=see/lo/see the_prince_of Yāvān/(Greece) he_will_come.
 \v 21 But I_will_tell to/for=yourself(m) DOM the÷inscribed in/on/at/with÷book_of truth and÷no one [who]_shows_himself_strong with÷me on these if/because (if) Mīkā\sup ʼēl\sup* prince_of÷your_all's.
 \c 11
+\nb
 \v 1 and÷I in=year one of÷Dārəyāvesh the÷Mede stood_up_of÷I to÷support and÷to/for÷protect to=him/it.
 \v 2 And=now truth I_will_tell to/for=you(fs) there yet three kings [will]_arise in÷Pāraş and÷the÷fourth he_will_gain_wealth wealth great from=all and÷when÷strong_of÷he in/on/at/with÷riches_of÷his he_will_stir_up the÷everyone with the_kingdom_of Yāvān.
 \v 3 And= a_king_of =arise mighty and÷rule dominion great and÷do as÷pleases_of÷he.
@@ -368,6 +379,7 @@
 \v 44 And÷reports alarm÷him from÷east and÷from÷north and÷go_out in/on/at/with÷fury great to÷destroy and÷to÷annihilate many_[people].
 \v 45 And÷pitch the_tents_of royal_of÷his between [the]_seas at÷mountain_of [the]_beauty_of holiness and÷come to end_of÷his and÷no a_helper to=him/it.
 \c 12
+\nb
 \v 1 And÷in/on/at/with÷time the÷that Mīkā\sup ʼēl\sup* he_will_arise the÷prince the÷great the÷protector over the_sons_of people_of÷your and÷be a_time_of distress which not it_has_happened since÷was a_nation until the÷time the÷that and÷in/on/at/with÷time the÷that people_of÷your it_will_escape every_of the÷found written in/on/at/with÷book.
 \v 2 And÷many of÷sleep_of of_[the]_ground_of dust they_will_awake these to÷life_of perpetuity and=these to÷disgrace to÷contempt_of perpetuity.
 \v 3 and÷the÷wise they_will_shine like÷brightness_of the=firmament and÷lead_torighteousness_of the÷many like_the÷stars to÷forever and÷ever.

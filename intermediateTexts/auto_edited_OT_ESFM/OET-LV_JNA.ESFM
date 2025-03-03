@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2025-02-27 17:53 by extract_glossed_OSHB_OT_to_ESFM v0.53
+\rem ESFM file created 2025-03-03 16:43 by extract_glossed_OSHB_OT_to_ESFM v0.54
 \rem USFM file edited by ScriptedBibleEditor v0.33
 \h Yōnāh/(Jonah)
 \toc1 Yōnāh
@@ -13,6 +13,7 @@
 \toc3 Jon
 \mt1 Yōnāh
 \c 1
+\nb
 \v 1 And¦370571= the¦370572_word¦370572_of¦370572 =he/it¦370571_was¦370571 of¦370574_\nd YHWH¦370574\nd* to¦370575 Yōnāh¦370577 the¦370578_son¦370578_of¦370578 ʼAmittay¦370580 to¦370581=say¦370581.
 \v 2 Arise¦370583 go¦370584 to¦370585 Nīnəvēh¦370587 the¦370588=city¦370588 the¦370589÷great¦370589 and¦370590÷cry¦370590_out¦370590 on/upon¦370591=it(f)¦370591 if/because¦370592 wickedness¦370595_of¦370595÷their¦370595 it¦370594_has¦370594_come¦370594_up¦370594 before¦370596÷face/front¦370596÷me¦370596.
 \v 3 And¦370598= Yōnāh¦370599 =he/it¦370598_rose¦370598_up¦370598 to¦370600÷flee¦370600 Tarshiysh¦370601÷to¦370601 from¦370602=to/for¦370602=face/front/presence¦370602 \nd YHWH¦370603\nd* and¦370604=he/it¦370604_descended¦370604 Yāfō/(Joppa)¦370605 and¦370606÷found¦370606 a¦370607_ship¦370607\f + \fr 1:3 \ft Note: We agree with both BHS 1997 and BHQ on an unexpected reading. \f* [which¦370610_was]¦370610_about¦370610_to¦370610_go¦370610 Tarshiysh¦370611 and¦370612=he/it¦370612_gave¦370612 fare¦370613_of¦370613÷his¦370613 and¦370614=he/it¦370614_descended¦370614 in/on/at/with¦370615÷it¦370615 to¦370616÷go¦370616 with¦370617÷them¦370617 Tarshiysh¦370618÷to¦370618 from¦370619=to/for¦370619=face/front/presence¦370619 \nd YHWH¦370620\nd*.
@@ -30,6 +31,7 @@
 \v 15 And¦370855÷picked¦370855_up¦370855 \untr DOM¦370856\untr* Yōnāh/(Jonah)¦370858 and¦370859÷threw¦370859÷him¦370859 into¦370860 the¦370862=sea¦370862 and¦370863÷ceased¦370863 the¦370864=sea¦370864 from¦370865÷raging¦370865÷its¦370865.
 \v 16 And¦370867÷they¦370867_feared¦370867 the¦370868÷men¦370868 a¦370869_fear¦370869 great¦370870 \untr DOM¦370871\untr* \nd YHWH¦370873\nd* and¦370874÷offered¦370874 a¦370876_sacrifice¦370876 to/for¦370877=\nd YHWH¦370877\nd* and¦370878÷made¦370878 vows¦370879.
 \c 2
+\nb
 \v 1 \f + \fr 2:1 \ft Note: KJB: Yōnāh.1.17\f* and¦370882= \nd YHWH¦370883\nd* =he/it¦370882_assigned¦370882 a¦370884_fish¦370884 great¦370885 to¦370886÷swallow¦370886 \untr DOM¦370887\untr* Yōnāh¦370889 and¦370890=he/it¦370890_was¦370890 Yōnāh¦370891 in/on/at/with¦370892÷belly¦370892_of¦370892 the¦370893÷fish¦370893 three¦370894 days¦370895 and¦370896÷three¦370896 nights¦370897.
 \v 2 \f + \fr 2:2 \ft Note: KJB: Yōnāh.2.1\f* and¦370900= Yōnāh¦370901 =prayed¦370900 to¦370902 \nd YHWH¦370904\nd* his/its¦370905=god¦370905 from¦370906÷belly¦370906_of¦370906 the¦370907÷fish¦370907.
 \v 3 \f + \fr 2:3 \ft Note: KJB: Yōnāh.2.2\f* and¦370910=he/it¦370910_said¦370910 I¦370911_called¦370911 in¦370912÷distress¦370912 to¦370913=me¦370913 to¦370914 \nd YHWH¦370916\nd* and¦370917÷answered¦370917÷me¦370917 from¦370918÷belly¦370918_of¦370918 Shəʼōl¦370919 I¦370920_cried¦370920_for¦370920_help¦370920 you¦370921_heard¦370921 my¦370922=sound/voice¦370922.
@@ -42,6 +44,7 @@
 \v 10 \f + \fr 2:10 \ft Note: KJB: Yōnāh.2.9\f* and¦371003÷I¦371003 in/on/at/with¦371004÷voice¦371004_of¦371004 thanksgiving¦371005 I¦371006_will¦371006_sacrifice¦371006 to¦371008÷you¦371008 [that]¦371009_which¦371009 I¦371010_have¦371010_vowed¦371010 I¦371011_will¦371011_fulfill¦371011 salvation¦371012 to/for¦371013=\nd YHWH¦371013\nd*.
 \v 11 \f + \fr 2:11 \ft Note: KJB: Yōnāh.2.10\f* and¦371017= \nd YHWH¦371018\nd* =he/it¦371017_said¦371017 to¦371019_the¦371019÷fish¦371019 and¦371020÷vomited¦371020 \untr DOM¦371021\untr* Yōnāh¦371023 to¦371024 the¦371026=dry¦371026_ground¦371026.
 \c 3
+\nb
 \v 1 and¦371029= the¦371030_word¦371030_of¦371030 =he/it¦371029_was¦371029 of¦371032_\nd YHWH¦371032\nd* to¦371033 Yōnāh¦371035 a¦371036_second¦371036_[time]¦371036 to¦371037=say¦371037.
 \v 2 Arise¦371039 go¦371040 to¦371041 Nīnəvēh¦371043 the¦371044=city¦371044 the¦371045÷great¦371045 and¦371046÷proclaim¦371046\f + \fr 3:2 \ft Note: We agree with both BHS 1997 and BHQ on an unexpected reading. \f* to¦371048=her/it¦371048 \untr DOM¦371049\untr* the¦371051÷message¦371051 which¦371052 I¦371053 [am]¦371054_speaking¦371054 to¦371055÷you¦371055.
 \v 3 And¦371057= Yōnāh¦371058 =he/it¦371057_rose¦371057_up¦371057 and¦371059=he/it¦371059_went¦371059 to¦371060 Nīnəvēh¦371062\f + \fr 3:3 \ft Note: We agree with both BHS 1997 and BHQ on an unexpected reading. \f* according¦371064_to¦371064÷word¦371064_of¦371064 \nd YHWH¦371065\nd* and¦371066÷Nīnəvēh¦371066 it¦371067_was¦371067 a¦371068_city¦371068 great¦371070 to¦371071÷god¦371071 a¦371072_journey¦371072_of¦371072 three¦371073_of¦371073 days¦371074.
@@ -53,6 +56,7 @@
 \v 9 Who¦371166 [is]¦371168_knowing¦371168 he¦371169_will¦371169_turn¦371169 and¦371170÷relent¦371170 the¦371171=ʼElohīm¦371171 and¦371172÷turn¦371172 from¦371173÷fierce¦371173_of¦371173 anger¦371174_of¦371174÷his¦371174 and¦371175=not¦371175 we¦371176_will¦371176_perish¦371176.
 \v 10 And¦371178=he/it¦371178_saw¦371178 the¦371179=ʼElohīm¦371179 \untr DOM¦371180\untr* deeds¦371182_of¦371182÷their¦371182 if/because¦371183_that¦371183 they¦371185_turned¦371185_back¦371185 from¦371186÷ways¦371186_of¦371186÷their¦371186 the¦371187÷evil¦371187 and¦371188=he/it¦371188_sighed/regretted¦371188 the¦371189=ʼElohīm¦371189 on¦371190 the¦371192÷calamity¦371192 which¦371193 he¦371195_had¦371195_said¦371195 for¦371196=doing¦371196 to/for¦371198=them¦371198 and¦371199=not¦371199 he¦371200_did¦371200_[it]¦371200.
 \c 4
+\nb
 \v 1 And¦371202÷he¦371202_was¦371202_displeasing¦371202 to¦371203 Yōnāh/(Jonah)¦371205 displeasure¦371206 great¦371207 and¦371208=it¦371208_glowed/burned¦371208 to¦371209=him/it¦371209.
 \v 2 And¦371211÷prayed¦371211 to¦371212 \nd YHWH¦371214\nd* and¦371215÷said¦371215 please¦371216 Oh¦371217_\nd YHWH¦371217\nd* am¦371218=not¦371218 [was]¦371220_this¦371220 what¦371221_said¦371221_of¦371221÷I¦371221 until¦371222 was¦371224÷I¦371224 on¦371225 country¦371227_of¦371227÷my¦371227_own¦371227 on/upon/above/on¦371228_account¦371228_of//he/it¦371228_went¦371228_in¦371228 yes/correct/thus/so¦371230 I¦371231_did¦371231_the¦371231_first¦371231_time¦371231 to¦371232÷fled¦371232 Tarshiysh¦371233÷to¦371233 if/because¦371234 I¦371235_knew¦371235 if/because¦371236_that¦371236 you¦371237 [are]¦371238_a¦371238_god¦371238 gracious¦371240 and¦371241÷compassionate¦371241 long¦371242_of¦371242 anger(s)¦371243 and¦371244÷abounding¦371244_of¦371244 covenant¦371246_loyalty¦371246 and¦371247÷relents¦371247 on¦371248 the¦371250÷calamity¦371250.
 \v 3 And¦371252=now¦371252 Oh¦371253_\nd YHWH¦371253\nd* take¦371254 please¦371256 \untr DOM¦371257\untr* life¦371259_of¦371259÷my¦371259 from¦371260÷me¦371260 if/because¦371261 [is]¦371262_good¦371262 die¦371263_of¦371263÷me¦371263 than¦371264÷live¦371264_of¦371264÷me¦371264.

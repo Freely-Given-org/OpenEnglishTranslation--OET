@@ -5,13 +5,14 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2025-02-27 17:53 by extract_glossed_OSHB_OT_to_ESFM v0.53
+\rem ESFM file created 2025-03-03 16:43 by extract_glossed_OSHB_OT_to_ESFM v0.54
 \h Song of Solomon
 \toc1 Song of Solomon
 \toc2 Song of Solomon
 \toc3 Sng
 \mt1 Song of Solomon
 \c 1
+\nb
 \v 1 The¦282084_song¦282084_of¦282084 the¦282085÷songs¦282085 which¦282086 for¦282087÷Solomon's¦282087.
 \v 2 Kiss¦282089÷me¦282089 with¦282090÷kisses¦282090_of¦282090 mouth¦282091_of¦282091÷his¦282091 if/because¦282092 [are]¦282094_good¦282094 love¦282095_of¦282095÷your¦282095 than¦282096÷wine¦282096.
 \v 3 As¦282098÷fragrance¦282098 perfumes¦282099_of¦282099÷your¦282099 [are]¦282100_good¦282100 [is]¦282101_oil¦282101 [which]¦282102_it¦282102_is¦282102_poured¦282102_out¦282102 your(ms)¦282103=name¦282103 on/upon/above/on¦282104_account¦282104_of//he|it¦282104_went¦282104_in¦282104 yes/correct/thus/so¦282106 young¦282107_women¦282107 love¦282108÷you¦282108.
@@ -30,6 +31,7 @@
 \v 16 How¦282251÷you¦282251\f + \fr 1:16 \ft Note: We read one or more accents in L differently from BHQ. \f*\f + \fr 1:16 \ft Note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS. \f* [are]¦282254_beautiful¦282254 beloved¦282255_of¦282255÷my¦282255 also¦282256 pleasant¦282257 also¦282258 couch¦282260_of¦282260÷our¦282260 [is]¦282261_luxuriant¦282261.
 \v 17 The¦282263_beams¦282263_of¦282263 house¦282264_of¦282264÷our¦282264 [are]¦282265_cedar(s)¦282265 rafters¦282266_of¦282266÷our¦282266\f + \fr 1:17 \ft Variant note: רחיט/נו: (x-qere) 'רַהִיטֵ֖/נוּ': lemma=7351 n=0.0 morph=HNcmsc/Sp1cp id=222Kt רַהִיטֵ֖/נוּ\f* [are]¦282268_cypress(es)¦282268.
 \c 2
+\nb
 \v 1 I¦282270 [am]¦282271_the¦282271_crocus¦282271_of¦282271 the¦282272÷Sharon¦282272 (the)¦282273_lily¦282273_of¦282273 the¦282274÷valleys¦282274.
 \v 2 Like¦282276÷lily¦282276 between¦282277 the¦282278÷thorns¦282278 [is]¦282279_so¦282279 darling¦282280_of¦282280÷my¦282280 between¦282281 the¦282282÷maidens¦282282.
 \v 3 Like¦282284÷apple¦282284_tree¦282284 in/on/at/with¦282285÷trees¦282285_of¦282285 the¦282286÷forest¦282286 [is]¦282287_so¦282287 beloved¦282288_of¦282288÷my¦282288 between¦282289 the¦282290÷young¦282290_men¦282290 in/on/at/with¦282291÷shade¦282291_of¦282291÷his¦282291 I¦282292_desired¦282292 and¦282293÷sat¦282293 and¦282294÷fruit¦282294_of¦282294÷his¦282294 [was]¦282295_sweet¦282295 to¦282296÷taste¦282296_of¦282296÷my¦282296.
@@ -48,6 +50,7 @@
 \v 16 Beloved¦282468_of¦282468÷my¦282468 to¦282469=me¦282469 and¦282470÷I¦282470 to¦282471=him|it¦282471 the¦282472÷pastures¦282472 in/on/at/with¦282473÷lilies¦282473.
 \v 17 Until¦282475 when¦282476÷breathes¦282476 the¦282477=day¦282477 and¦282478÷flee¦282478 the¦282479÷shadows¦282479 turn¦282480 be¦282481_like¦282481 to/for¦282483=yourself(m)¦282483\f + \fr 2:17 \ft Note: We read one or more accents in L differently from BHQ. \f*\f + \fr 2:17 \ft Note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS. \f* beloved¦282486_of¦282486÷my¦282486 to¦282487÷gazelle¦282487 or¦282488 like¦282489÷young¦282489_deer¦282489_of¦282489 the¦282490÷stags¦282490 on¦282491 the¦282493_mountains¦282493_of¦282493 ravine[s]¦282494.
 \c 3
+\nb
 \v 1 on¦282497 bed¦282499_of¦282499÷my¦282499 in/on/at/with¦282500÷night¦282500 I¦282501_sought¦282501 DOM¦282502 whom¦282503÷loves¦282503 soul¦282504_of¦282504÷my¦282504 sought¦282505÷him¦282505 and¦282506=not¦282506 find¦282507÷him¦282507.
 \v 2 I¦282509_will¦282509_arise¦282509 please¦282510 and¦282511÷go¦282511_about¦282511 in/on/at/with¦282512÷city¦282512 in/on/at/with¦282513÷streets¦282513 and¦282514÷in/on/at/with¦282514÷squares¦282514 I¦282515_will¦282515_seek¦282515 DOM¦282516 whom¦282517÷loves¦282517 soul¦282518_of¦282518÷my¦282518 sought¦282519÷him¦282519 and¦282520=not¦282520 find¦282521÷him¦282521.
 \v 3 Found¦282523÷me¦282523 the¦282524÷watchmen¦282524 the¦282525÷go¦282525_about¦282525 in/on/at/with¦282526÷city¦282526 DOM¦282527 whom¦282528÷loves¦282528 soul¦282529_of¦282529÷my¦282529 have¦282530_you¦282530_all¦282530_seen¦282530.
@@ -60,6 +63,7 @@
 \v 10 Posts¦282628_of¦282628÷its¦282628 he¦282629_made¦282629 silver¦282630 back¦282631_of¦282631÷its¦282631 gold¦282632 seat¦282633_of¦282633÷its¦282633 purple¦282634_wool¦282634 interior¦282635_of¦282635÷its¦282635 [was]¦282636_fitted¦282636_out¦282636 leather¦282637 by¦282638÷daughters¦282638_of¦282638 Jerusalem¦282639.
 \v 11 Come¦282641_out¦282641 and¦282643÷look¦282643 O¦282644_daughters¦282644_of¦282644 Zion¦282645 in/on/at/with¦282646÷king¦282646 Solomon¦282647 in/on/at/with¦282648÷crown¦282648 which¦282649÷crowned¦282649 for¦282651=him|it¦282651 his|its¦282652=mother¦282652 in/on¦282653=day¦282653 wedding¦282654_of¦282654÷his¦282654 and¦282655÷in/on/at/with¦282655÷day¦282655_of¦282655 the¦282656_rejoicing¦282656_of¦282656 his|its¦282657=heart¦282657.
 \c 4
+\nb
 \v 1 how¦282660÷you¦282660 [are]¦282661_beautiful¦282661 darling¦282662_of¦282662÷my¦282662 how¦282663÷you¦282663 [are]¦282664_beautiful¦282664 eyes¦282665_of¦282665÷your¦282665 [are]¦282666_doves¦282666 from¦282667÷behind¦282667 to¦282668÷veil¦282668_of¦282668÷your¦282668 hair¦282669_of¦282669÷your¦282669 like¦282670÷flock¦282670_of¦282670 the¦282671÷goats¦282671 that¦282672÷moving¦282672_down¦282672 from¦282673=hill¦282673 of¦282674_Gilead¦282674.
 \v 2 Teeth¦282676_of¦282676÷your¦282676 like¦282677÷flock¦282677_of¦282677 the¦282678÷shorn¦282678 that¦282679÷come¦282679_up¦282679 from¦282680 the¦282682÷washing¦282682 which¦282683÷all¦282683_of¦282683÷which¦282683 [are]¦282684_bearing¦282684_twins¦282684 and¦282685÷bereaved¦282685 there¦282686_[is]¦282686_not¦282686 in/on/at/with¦282687÷them¦282687.
 \v 3 Like¦282689÷thread¦282689_of¦282689 the¦282690÷scarlet¦282690 lips¦282691_of¦282691÷your¦282691 and¦282692÷mouth¦282692_of¦282692÷your¦282692 [is]¦282693_lovely¦282693 like¦282694÷halves¦282694_of¦282694 the¦282695÷pomegranate¦282695 cheeks¦282696_of¦282696÷your¦282696 from¦282697÷behind¦282697 to¦282698÷veil¦282698_of¦282698÷your¦282698.
@@ -77,6 +81,7 @@
 \v 15 A¦282845_spring¦282845_of¦282845 gardens¦282846 a¦282847_well¦282847_of¦282847 water¦282848 living¦282849 and¦282850÷flowing¦282850_streams¦282850 from¦282851 Lebanon¦282853.
 \v 16 Awake¦282855 O¦282856_north¦282856_wind¦282856 and¦282857÷come¦282857 O¦282858_south¦282858_wind¦282858 make¦282859_breathe¦282859 garden¦282860_of¦282860÷my¦282860 fragrance¦282862_of¦282862÷its¦282862 let¦282861_them¦282861_flow¦282861 beloved¦282864_of¦282864÷my¦282864 let¦282863_him¦282863_come¦282863 to¦282865÷garden¦282865_of¦282865÷his¦282865 and¦282866÷eat¦282866 the¦282867_fruit¦282867_of¦282867 choice¦282868_of¦282868÷its¦282868.
 \c 5
+\nb
 \v 1 I¦282870_have¦282870_come¦282870 to¦282871÷garden¦282871_of¦282871÷my¦282871 sister¦282872_of¦282872÷my¦282872 bride¦282873 I¦282874_have¦282874_gathered¦282874 myrrh¦282875_of¦282875÷my¦282875 with¦282876 spice¦282878_of¦282878÷my¦282878 I¦282879_have¦282879_eaten¦282879 honeycomb¦282880_of¦282880÷my¦282880 with¦282881 honey¦282883_of¦282883÷my¦282883 I¦282884_have¦282884_drunk¦282884 wine¦282885_of¦282885÷my¦282885 with¦282886 milk¦282888_of¦282888÷my¦282888 eat¦282889 O¦282890_friends¦282890 drink¦282891 and¦282892÷drunk¦282892 O¦282893_lovers¦282893.
 \v 2 I¦282896 [was]¦282897_sleeping¦282897 and¦282898÷heart¦282898_of¦282898÷my¦282898 [was]¦282899_awake¦282899 the¦282900_sound¦282900_of¦282900 beloved¦282902_of¦282902÷my¦282902 [is]¦282903_knocking¦282903 open¦282904 to¦282906=me¦282906 sister¦282907_of¦282907÷my¦282907 darling¦282908_of¦282908÷my¦282908 dove¦282909_of¦282909÷my¦282909 perfect¦282910_of¦282910÷my¦282910 for¦282911÷head¦282911_of¦282911÷my¦282911 [is]¦282912_filled¦282912 dew¦282914 hair¦282915_of¦282915÷my¦282915\f + \fr 5:2 \ft Note: We agree with both BHS 1997 and BHQ on an unexpected reading. \f* dewdrops¦282917_of¦282917 night¦282918.
 \v 3 I¦282920_have¦282920_stripped¦282920_off¦282920 DOM¦282921 garment¦282923_of¦282923÷my¦282923 how¦282924 put¦282925_on¦282925÷it¦282925 I¦282926_have¦282926_washed¦282926 DOM¦282927 feet¦282929_of¦282929÷my¦282929 how¦282930 soil¦282931÷them¦282931.
@@ -94,6 +99,7 @@
 \v 15 Legs¦283069_of¦283069÷his¦283069 [are]¦283070_pillars¦283070_of¦283070 marble¦283071 founded¦283072 on¦283073 bases¦283075_of¦283075 pure¦283077_gold¦283077 appearance¦283078_of¦283078÷his¦283078 like¦283079_the¦283079÷Lebanon¦283079 [it¦283080_is]¦283080_chosen¦283080 as¦283081_the¦283081÷cedars¦283081.
 \v 16 Mouth¦283083_of¦283083÷his¦283083 [is]¦283084_sweetness(es)¦283084 and¦283085÷altogether¦283085_of¦283085÷he¦283085 [is]¦283086_desirableness(es)¦283086\f + \fr 5:16 \ft Note: Marks a place where we agree with BHQ against BHS in reading L. \f*\f + \fr 5:16 \ft Note: Marks an anomalous form. \f*\f + \fr 5:16 \ft Note: We read punctuation in L differently from BHS. \f* this¦283090 beloved¦283091_of¦283091÷my¦283091 and¦283092=this¦283092 friend¦283093_of¦283093÷my¦283093 O¦283094_daughters¦283094_of¦283094 Jerusalem¦283095.
 \c 6
+\nb
 \v 1 Where¦283097 has¦283098_he¦283098_gone¦283098 beloved¦283099_of¦283099÷your¦283099 the¦283100÷most¦283100_beautiful¦283100 in/on/at/with¦283101÷women¦283101 where¦283102 beloved¦283104_of¦283104÷your¦283104 has¦283103_he¦283103_turned¦283103 and¦283105÷seek¦283105÷him¦283105 with¦283106÷you¦283106.
 \v 2 Beloved¦283108_of¦283108÷my¦283108 he¦283109_has¦283109_gone¦283109_down¦283109 to¦283110÷garden¦283110_of¦283110÷his¦283110 to¦283111÷beds¦283111_of¦283111 the¦283112÷spices¦283112 to¦283113÷pasture¦283113 in/on/at/with¦283114÷gardens¦283114 and¦283115÷to¦283115÷gather¦283115 lilies¦283116.
 \v 3 I¦283118 belong¦283119_to¦283119÷beloved¦283119_of¦283119÷my¦283119 and¦283120÷beloved¦283120_of¦283120÷my¦283120 to¦283121=me¦283121 the¦283122÷pastures¦283122 in/on/at/with¦283123÷lilies¦283123.\f + \fr 6:3 \ft Note: Marks a place where we agree with BHQ against BHS in reading L. \f*\f + \fr 6:3 \ft Note: Marks an anomalous form. \f*\f + \fr 6:3 \ft Note: We read punctuation in L differently from BHS. \f*
@@ -107,6 +113,7 @@
 \v 11 to¦283213 a¦283215_garden¦283215_of¦283215 nut[s]¦283216 I¦283217_went¦283217_down¦283217 to¦283218=see¦283218 in/on/at/with¦283219÷new¦283219_growth¦283219_of¦283219 the¦283220÷valley¦283220 to¦283221=see¦283221 whether¦283222÷budded¦283222 the¦283223÷vines¦283223 had¦283224_they¦283224_bloomed¦283224 the¦283225÷pomegranates¦283225.
 \v 12 Not¦283227 I¦283228_knew¦283228 desire¦283229_of¦283229÷my¦283229 set¦283230÷me¦283230 the¦283231_chariots¦283231_of¦283231 Ammi-¦283232÷-¦283232\f + \fr 6:12 \ft Exegesis note: WLC has this word divided as עַמִּי\f* of¦283235_Ammi-¦283235.
 \c 7
+\nb
 \v 1 \f + \fr 7:1 \ft Note: KJB: Song.6.13\f* return¦283238 return¦283239 the¦283240÷Shulammite¦283240 return¦283241 return¦283242 and¦283243÷look¦283243 on/over¦283245=you(fs)¦283245 why¦283246 will¦283248_you¦283248_all¦283248_look¦283248 in/on/at/with¦283249÷Shulammite¦283249 as¦283250÷dance¦283250_of¦283250 the¦283251÷armies¦283251.
 \v 2 \f + \fr 7:2 \ft Note: KJB: Song.7.1\f* how¦283254 they¦283256_are¦283256_beautiful¦283256 feet¦283257_of¦283257÷your¦283257 in/on/at/with¦283258÷sandals¦283258 O¦283259_daughter¦283259_of¦283259 a¦283261_noble¦283261_[person]¦283261 the¦283262_curves¦283262_of¦283262 thighs¦283263_of¦283263÷your¦283263 [are]¦283264_like¦283264 ornaments¦283265 [the]¦283266_work¦283266_of¦283266 [the]¦283267_hands¦283267_of¦283267 a¦283268_master-craftsman¦283268.
 \v 3 \f + \fr 7:3 \ft Note: KJB: Song.7.2\f* navel¦283271_of¦283271÷your¦283271 [is]¦283272_(the)¦283272_bowl¦283272_of¦283272 the¦283273÷rounded¦283273 not¦283274 may¦283276_it¦283276_lack¦283276 the¦283277÷mixed¦283277_wine¦283277 belly¦283278_of¦283278÷your¦283278 [is]¦283279_a¦283279_heap¦283279_of¦283279 wheat(s)¦283280 [which¦283281_is]¦283281_fenced¦283281_around¦283281 in/on/at/with¦283282÷lilies¦283282.
@@ -122,6 +129,7 @@
 \v 13 \f + \fr 7:13 \ft Note: KJB: Song.7.12\f* let¦283384_us¦283384_rise¦283384_early¦283384 to¦283385_the¦283385÷vineyards¦283385 let¦283386_us¦283386_see¦283386 if¦283387 it¦283388_has¦283388_budded¦283388 the¦283389÷vine¦283389 it¦283390_has¦283390_opened¦283390 the¦283391÷blossoms¦283391 they¦283392_have¦283392_bloomed¦283392 the¦283393÷pomegranates¦283393 there¦283394 I¦283395_will¦283395_give¦283395 DOM¦283396 love¦283398_of¦283398÷my¦283398 to/for¦283399=you(fs)¦283399.
 \v 14 \f + \fr 7:14 \ft Note: KJB: Song.7.13\f* the¦283402÷mandrakes¦283402 they¦283403_have¦283403_given¦283403_forth¦283403 an¦283405_odor¦283405 and¦283406÷over¦283406 doors¦283408_of¦283408÷our¦283408 all¦283409_of¦283409 excellent¦283411_things¦283411 new¦283412 also¦283413 old¦283415 beloved¦283416_of¦283416÷my¦283416 I¦283417_have¦283417_stored¦283417_up¦283417 to/for¦283418=you(fs)¦283418.
 \c 8
+\nb
 \v 1 Who¦283420 wish¦283421÷you¦283421 like¦283422÷brother¦283422 to¦283423=me¦283423 the¦283424_sucking¦283424_child¦283424 of¦283425_the¦283425_breasts¦283425_of¦283425 mother's¦283426_of¦283426÷my¦283426 found¦283427÷you¦283427 in/on/at/with¦283428÷public¦283428 kiss¦283429÷you¦283429\f + \fr 8:1 \ft Note: Marks a place where we agree with BHQ against BHS in reading L. \f*\f + \fr 8:1 \ft Note: Marks an anomalous form. \f*\f + \fr 8:1 \ft Note: We read punctuation in L differently from BHS. \f* also¦283433 not¦283434 people¦283436_will¦283436_despise¦283436 to¦283437=me¦283437.
 \v 2 Lead¦283439÷you¦283439 bring¦283440÷you¦283440 to¦283441 the¦283443_house¦283443_of¦283443 mother¦283444_of¦283444÷my¦283444 taught¦283445÷me¦283445 give¦283446_todrink¦283446÷you¦283446 from¦283447÷wine¦283447 the¦283448÷spiced¦283448 from¦283449÷juice¦283449_of¦283449 pomegranates¦283450_of¦283450÷my¦283450.
 \v 3 Left¦283452_hand¦283452_of¦283452÷his¦283452 [is]¦283453_under¦283453 my¦283454=head¦283454 and¦283455÷right¦283455_hand¦283455_of¦283455÷his¦283455 embraces¦283456÷me¦283456.

@@ -5,7 +5,7 @@
 #
 # Script to delete word numbers and additional formatting out of the OET-RV and OET-LV.
 #
-# Copyright (C) 2023-2024 Robert Hunt
+# Copyright (C) 2023-2025 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -31,6 +31,7 @@ TODO: Doesn't delete the \rem ESFM headers yet
 CHANGELOG:
     2024-05-15 Added OT conversion and removed \\untr sets
     2024-05-17 Removed more OET-RV additions
+    2025-03-03 Add /nb after OET-LV chapter numbers
 """
 from pathlib import Path
 import re
@@ -43,10 +44,10 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, BOOKLIST_66
 
 
-LAST_MODIFIED_DATE = '2024-06-10' # by RJH
+LAST_MODIFIED_DATE = '2025-03-03' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_ESFM_to_USFM"
 PROGRAM_NAME = "Convert OET LV & RV ESFM files to USFM"
-PROGRAM_VERSION = '0.61'
+PROGRAM_VERSION = '0.62'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -65,6 +66,7 @@ assert cleaned_USFM_FolderPath.is_dir() and OET_LV_USFM_OutputFolderPath.is_dir(
 
 
 ESFMWordNumberRegex = re.compile( '¦[1-9][0-9]{0,5}' ) # 1..6 digits
+ESFMNakedChapterRegex = re.compile( '\\\\c ([1-9][0-9]{0,2})\n\\\\v ', re.MULTILINE)
 def main():
     """
     Main program to handle command line parameters and then run what they want.
@@ -89,6 +91,12 @@ def main():
                 vvESFMText = esfmFile.read() # We keep the original (for later comparison)
             adjText, wordDeleteCount = ESFMWordNumberRegex.subn( '', vvESFMText )
             esbCount = 0
+            if VV == 'LV': # our ESFM has no /p or anything after /c lines
+                def cReplace( matchObj ):
+                    return f'\\c {matchObj.group(1)}\n\\nb\n\\v '
+                adjText, cCount = ESFMNakedChapterRegex.subn( cReplace, adjText )
+                # print( f"After {cCount} replacements to {BBB}, now have {adjText=}"); halt
+                print( f"  Added {cCount} \\nb to {BBB} chapters")
             assert '\\add ¿' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ¿"
             if VV == 'LV': # only expect + > = <
                 assert '\\add ?' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ?"

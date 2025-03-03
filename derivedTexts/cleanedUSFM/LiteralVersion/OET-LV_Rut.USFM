@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2025-02-27 17:53 by extract_glossed_OSHB_OT_to_ESFM v0.53
+\rem ESFM file created 2025-03-03 16:43 by extract_glossed_OSHB_OT_to_ESFM v0.54
 \rem USFM file edited by ScriptedBibleEditor v0.33
 \h Rūt
 \toc1 Rūt
@@ -13,6 +13,7 @@
 \toc3 Rut
 \mt1 Rūt
 \c 1
+\nb
 \v 1 And=he/it_was in/on/at/with÷days_of the_judging the÷judges and=he/it_was a_famine on_the=earth and=he/it_went a_man of÷Bēyt- food/grain/bread Yəhūdāh/(Judah) to÷sojourn in/on/at/with÷country_of Mōʼāⱱ he and=his/its=woman/wife and÷two_of sons_of÷his.
 \v 2 And=name_of the=man [was]_ʼElīmelek and=name_of his/its=wife/woman [was]_Nāˊₒmī and=name_of the_two_of sons_of÷his [was]_Maḩlōn and÷Kilyōn/(Chilion) ʼEfrātī from÷Bēyt- food/grain/bread Yəhūdāh and=they_came the_region(s)_of Mōʼāⱱ and=they_were there.
 \v 3 And= ʼElīmelek =he/it_died the_husband_of Nāˊₒmī and÷left she and÷two_of sons_of÷her.
@@ -36,6 +37,7 @@
 \v 21 I full I_went and÷empty brought_back÷me \nd YHWH\nd* to/for=what do_you_all_call to=me Nāˊₒmī and=\nd YHWH\nd* he_has_testified in/on/at/with÷me and÷almighty he_has_done_harm\f + \fr 1:21 \ft Note: We read one or more accents in L differently from BHQ. \f*\f + \fr 1:21 \ft Note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS. \f* to=me.
 \v 22 And= Nāˊₒmī =returned and÷Rūt the÷Mōʼāⱱitess daughter-in-law_of÷her with=her/it the÷came_back from÷country_of Mōʼāⱱ and÷they they_came Bēyt- lehem in/on/at/with÷beginning_of [the]_harvest_of barley(s).
 \c 2
+\nb
 \v 1 And÷had÷Nāˊₒmī a_relative\f + \fr 2:1 \ft Variant note: מידע: (x-qere) 'מוֹדַ֣ע': lemma=4129 morph=HNcmsa id=08swV מוֹדַ֣ע\f* to/for=her/its=man/husband a_man mighty_of wealth from÷family_of ʼElīmelek and=his/its=name [was]_Boˊaz.
 \v 2 And= Rūt =she/it_said the÷Mōʼāⱱitess to Nāˊₒmī let_me_go please the=field and÷glean\f + \fr 2:2 \ft Note: Marks a place where we agree with BHQ against BHS in reading L. \f*\f + \fr 2:2 \ft Note: Marks an anomalous form. \f*\f + \fr 2:2 \ft Note: We read punctuation in L differently from BHS. \f* in/on/at/with÷ears_of_grain\f + \fr 2:2 \ft Note: Marks a place where we agree with BHQ against BHS in reading L. \f*\f + \fr 2:2 \ft Note: Marks an anomalous form. \f*\f + \fr 2:2 \ft Note: We read punctuation in L differently from BHS. \f* behind [the_one]_whom I_will_find favour in/on/at/with÷sight_of÷whose and=she/it_said to/for=her/it go daughter_of÷my.
 \v 3 And÷went and÷went and÷gleaned in_the=field behind the÷reapers chance_of÷she and÷happened the_portion_of the=field belonging_to÷Boˊaz who from÷family_of ʼElīmelek.
@@ -60,6 +62,7 @@
 \v 22 And= Nāˊₒmī =she/it_said to Rūt daughter-in-law_of÷her [is]_good daughter_of÷my (cmp) you_will_go_out with young_women_of÷his and=not people_will_molest in/on/at/with÷you in/on/at/with÷field another.
 \v 23 And÷stayed_close in/on/at/with÷young_women_of Boˊaz to÷glean until was_complete the_harvest_of the÷barley and÷harvests_of the÷wheat and÷lived with mother-in-law_of÷her.
 \c 3
+\nb
 \v 1 And=she/it_said to/for=her/it Nāˊₒmī mother-in-law_of÷her daughter_of÷my not will_I_seek to/for=you(fs) a_resting_place that it_will_go_well to/for=you(fs).
 \v 2 And=now not [is]_Boˊaz kinsman_of÷our whom you_were with young_women_of÷whose there he [will_be]_winnowing DOM the_threshing_floor_of the÷barley the=night.
 \v 3 And÷wash and÷anoint and÷put_on clothes_of÷your\f + \fr 3:3 \ft Variant note: שמלת/ך: (x-qere) 'שִׂמְלֹתַ֛יִ/ךְ': lemma=8071 n=1.0.0 morph=HNcfpc/Sp2fs id=08i9m שִׂמְלֹתַ֛יִ/ךְ\f* on÷you and÷go_down\f + \fr 3:3 \ft Variant note: ו/ירדתי: (x-qere) 'וְ/יָרַ֣דְתְּ': lemma=c/3381 morph=HC/Vqq2fs id=08XPV וְ/יָרַ֣דְתְּ\f* the÷threshing_floor do_not make_yourself_known to_the÷man until finished÷he to÷eating and÷to÷drinking.
@@ -79,6 +82,7 @@
 \v 17 And=she/it_said the_six the÷barley the=these he_gave to=me if/because he_said\f + \fr 3:17 \ft Variant note: (x-qere) 'אֵלַ֔/י': lemma=413 n=0.1 morph=HR/Sp1cs id=086C3 אֵלַ֔/י\f* do_not go empty to mother-in-law_of÷your.
 \v 18 And=she/it_said sit_down daughter_of÷my until that find_out how will_it_fall_out a_matter if/because not he_will_be_at_peace the=man if/because (if) he_has_finished the÷matter the=day.
 \c 4
+\nb
 \v 1 And÷Boˊaz he_went_up the÷gate and=he/it_sat_down//remained//lived there and=see/lo/see the÷redeemer [was]_passing_by whom he_had_spoken Boˊaz and=he/it_said come_over sit_down here a_certain_one a_certain_one and÷went_over and÷sat_down.
 \v 2 And=he/it_took ten men of÷elders_of the=city and=he/it_said sit here and÷sat_down.
 \v 3 And=he/it_said to_the÷redeemer the_portion_of the=field which belonged_to÷brother_of÷our belonged_to÷ʼElīmelek Nāˊₒmī she_has_sold the÷come_back from÷country_of Mōʼāⱱ.

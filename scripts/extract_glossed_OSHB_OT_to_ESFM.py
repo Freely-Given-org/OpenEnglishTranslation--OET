@@ -55,6 +55,7 @@ CHANGELOG:
     2025-01-19 Check the glosses a bit more (especially having no superfluous periods which cause a line break in the OET-LV)
                     plus remove double 'of', e.g., house_of of_Dan -> house_of Dan
     2025-01-21 Start to handle GlossInsert fields
+    2025-03-03 Added /nb line after chapter numbers
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple
@@ -68,10 +69,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2025-01-22' # by RJH
+LAST_MODIFIED_DATE = '2025-03-03' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed_OSHB_OT_to_ESFM"
 PROGRAM_NAME = "Extract glossed OSHB OT ESFM files"
-PROGRAM_VERSION = '0.53'
+PROGRAM_VERSION = '0.54'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -313,7 +314,7 @@ def export_literal_English_gloss_esfm() -> bool:
             last_chapter_number = last_verse_number = last_word_number = 0
         if chapter_number != last_chapter_number:  # we've started a new chapter
             assert chapter_number == last_chapter_number + 1
-            esfm_text = f"{esfm_text}\n\\c {chapter_number}"
+            esfm_text = f"{esfm_text}\n\\c {chapter_number}\n\\nb"
             last_chapter_number = chapter_number
             last_verse_number = last_word_number = 0
         if verse_number != last_verse_number:  # we've started a new verse

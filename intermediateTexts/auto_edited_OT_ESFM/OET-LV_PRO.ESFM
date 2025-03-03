@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2025-02-27 17:53 by extract_glossed_OSHB_OT_to_ESFM v0.53
+\rem ESFM file created 2025-03-03 16:43 by extract_glossed_OSHB_OT_to_ESFM v0.54
 \rem USFM file edited by ScriptedBibleEditor v0.33
 \h Proverbs
 \toc1 Proverbs
@@ -13,6 +13,7 @@
 \toc3 Pro
 \mt1 Proverbs
 \c 1
+\nb
 \v 1 The¦269403_proverbs¦269403_of¦269403 Shəlomoh¦269404 the¦269405_son¦269405_of¦269405 Dāvid¦269407 the¦269408_king¦269408_of¦269408 Yisrā\sup ʼēl\sup*/(Israel)¦269409.
 \v 2 To¦269411=know¦269411 wisdom¦269412 and¦269413÷instruction¦269413 for¦269414÷understanding¦269414 words¦269415_of¦269415 understanding¦269416.
 \v 3 To¦269418=take/accept/receive¦269418 correction¦269419_of¦269419 insight¦269420 righteousness¦269421 and¦269422÷justice¦269422 and¦269423÷equity¦269423.
@@ -47,6 +48,7 @@
 \v 32 If/because¦269683 [the]¦269684_turning¦269684_away¦269684_of¦269684 naive¦269685_people¦269685 kill¦269686÷them¦269686 and¦269687÷complacency¦269687_of¦269687 fools¦269688 destroy¦269689÷them¦269689.
 \v 33 And¦269691÷listens¦269691 to¦269692=me¦269692 he¦269693_will¦269693_dwell¦269693 security¦269695 and¦269696÷be¦269696_at¦269696_ease¦269696 without¦269697÷dread¦269697_of¦269697 trouble¦269698.
 \c 2
+\nb
 \v 1 son¦269701_of¦269701÷my¦269701 if¦269702 you¦269704_will¦269704_receive¦269704 words¦269705_of¦269705÷my¦269705 and¦269706÷commands¦269706_of¦269706÷my¦269706 you¦269707_will¦269707_treasure¦269707 within¦269708÷you¦269708.
 \v 2 To¦269710÷making¦269710_attentive¦269710 to¦269711_the¦269711÷wisdom¦269711 ear¦269712_of¦269712÷your¦269712 you¦269713_will¦269713_incline¦269713 heart¦269714_of¦269714÷your¦269714 to¦269715_the¦269715÷understanding¦269715.
 \v 3 If/because¦269717 if¦269718 for¦269719_the¦269719÷insight¦269719 you¦269720_will¦269720_call¦269720 for¦269721_the¦269721÷understanding¦269721 you¦269722_will¦269722_give¦269722_forth¦269722 voice¦269723_of¦269723÷your¦269723.
@@ -70,6 +72,7 @@
 \v 21 If/because¦269865 upright¦269867_[people]¦269867 they¦269868_will¦269868_dwell¦269868\f + \fr 2:21 \ft Note: Marks a place where we agree with BHQ against BHS in reading L. \f*\f + \fr 2:21 \ft Note: Marks an anomalous form. \f*\f + \fr 2:21 \ft Note: We read punctuation in L differently from BHS. \f* [the]¦269872_land¦269872 and¦269873÷blameless¦269873 they¦269874_will¦269874_remain¦269874 in/on/at/with¦269875÷it¦269875.
 \v 22 And¦269877÷wicked¦269877 from¦269878÷land¦269878 they¦269879_will¦269879_be¦269879_cut¦269879_off¦269879 and¦269880÷treacherous¦269880 people¦269881_will¦269881_tear¦269881_away¦269881 from¦269882÷it¦269882.
 \c 3
+\nb
 \v 1 son¦269885_of¦269885÷my¦269885 teaching¦269886_of¦269886÷my¦269886 do¦269887_not¦269887 forget¦269889 and¦269890÷commands¦269890_of¦269890÷my¦269890 heart¦269892_of¦269892÷your¦269892 let¦269891_it¦269891_keep¦269891.
 \v 2 If/because¦269894 length¦269895_of¦269895 days¦269896 and¦269897÷years¦269897_of¦269897 life¦269898 and¦269899÷peace¦269899 they¦269900_will¦269900_add¦269900 to/for¦269901=you(fs)¦269901.
 \v 3 Loyalty¦269903 and¦269904÷faithfulness¦269904 not¦269905 leave¦269907÷you¦269907 bind¦269908÷them¦269908 on¦269909 neck¦269911_of¦269911÷your¦269911 write¦269912÷them¦269912 on¦269913 the¦269915_tablet¦269915_of¦269915 heart¦269916_of¦269916÷your¦269916.
@@ -106,6 +109,7 @@
 \v 34 Though¦270215 toward¦270217_the¦270217÷scorners¦270217 he¦270218 he¦270220_mocks¦270220 and¦270221÷to¦270221÷humble¦270221\f + \fr 3:34 \ft Variant note: ו/ל/עניים: (x-qere) 'וְ֝/לַ/עֲנָוִ֗ים': lemma=c/l/6035 n=0.0 morph=HC/R/Aampa id=20j8W וְ֝/לַ/עֲנָוִ֗ים\f* he¦270223_gives¦270223 favour¦270225.
 \v 35 Honor¦270227 wise¦270228_[people]¦270228 they¦270229_will¦270229_inherit¦270229 and¦270230÷fools¦270230 [is]¦270231_lifting¦270231_up¦270231 shame¦270232.
 \c 4
+\nb
 \v 1 listen¦270235_to¦270235 Oh¦270236_children¦270236 [the]¦270237_correction¦270237_of¦270237 a¦270238_father¦270238 and¦270239÷attentive¦270239 to¦270240=know¦270240 understanding¦270241.
 \v 2 If/because¦270243 teaching¦270244 good¦270245 I¦270246_give¦270246 to/for¦270247=you¦270247_all¦270247 teaching¦270248_of¦270248÷my¦270248 do¦270249_not¦270249 neglect¦270251.
 \v 3 If/because¦270253 a¦270255_son¦270255 I¦270256_was¦270256 with¦270257÷father¦270257_of¦270257÷my¦270257 a¦270258_tender¦270258 and¦270259÷favourite¦270259 to¦270260=(the)¦270260_face¦270260_of/in¦270260_front¦270260_of/before¦270260 mother¦270261_of¦270261÷my¦270261.
@@ -134,6 +138,7 @@
 \v 26 Make¦270476_level¦270476 the¦270477_track¦270477_of¦270477 feet¦270478_of¦270478÷your¦270478 and¦270479=all¦270479 ways¦270481_of¦270481÷your¦270481 let¦270482_them¦270482_be¦270482_steadfast¦270482.
 \v 27 Do¦270484_not¦270484 turn¦270486_aside¦270486 right¦270488 and¦270489÷left¦270489 turn¦270490_aside¦270490 foot¦270491_of¦270491÷your¦270491 from¦270492÷evil¦270492.
 \c 5
+\nb
 \v 1 son¦270494_of¦270494÷my¦270494 to¦270495÷wisdom¦270495_of¦270495÷my¦270495 attentive¦270496 to¦270497÷understanding¦270497_of¦270497÷my¦270497 incline¦270498 ear¦270500_of¦270500÷your¦270500.
 \v 2 To¦270502=guard/protect¦270502 discretion¦270503 and¦270504÷knowledge¦270504 lips¦270505_of¦270505÷your¦270505 they¦270506_will¦270506_observe¦270506.
 \v 3 If/because¦270508 honey¦270509 [the]¦270511_lips¦270511_of¦270511 they¦270510_drip¦270510 a¦270512_strange¦270512_[woman]¦270512 and¦270513÷smoother¦270513 than¦270514÷oil¦270514 speech¦270515_of¦270515÷her¦270515.
@@ -158,6 +163,7 @@
 \v 22 Iniquities¦270683_of¦270683÷him¦270683\f + \fr 5:22 \ft Note: We agree with both BHS 1997 and BHQ on an unexpected reading. \f* ensnare¦270685÷him¦270685 \untr DOM¦270686\untr* the¦270688÷wicked¦270688 and¦270689÷in/on/at/with¦270689÷cords¦270689_of¦270689 sin¦270690_of¦270690÷his¦270690 he¦270691_will¦270691_be¦270691_held¦270691.
 \v 23 He¦270693 he¦270694_will¦270694_die¦270694 in/on/at/with¦270695÷lack¦270695_of¦270695 discipline¦270696 and¦270697÷in/on/at/with¦270697÷great¦270697_of¦270697 folly¦270698_of¦270698÷his¦270698 he¦270699_will¦270699_go¦270699_astray¦270699.
 \c 6
+\nb
 \v 1 son¦270702_of¦270702÷my¦270702 if¦270703 you¦270705_have¦270705_stood¦270705_surety¦270705 for¦270706÷neighbor¦270706_of¦270706÷your¦270706 you¦270707_have¦270707_struck¦270707 for¦270708_the¦270708÷stranger¦270708 hands¦270709_of¦270709÷yourself¦270709.
 \v 2 You¦270711_have¦270711_been¦270711_ensnared¦270711 in/on/at/with¦270712÷words¦270712_of¦270712 mouth¦270714_of¦270714÷your¦270714 you¦270715_have¦270715_been¦270715_caught¦270715 in/on/at/with¦270716÷words¦270716_of¦270716 mouth¦270718_of¦270718÷your¦270718.
 \v 3 Do¦270720 this¦270721 then¦270722 son¦270724_of¦270724÷my¦270724 and¦270725÷save¦270725 if/because¦270726 you¦270727_have¦270727_come¦270727 in/on/at/with¦270728÷hand¦270728_of¦270728 neighbor's¦270730_of¦270730÷your¦270730 go¦270731 humble¦270732_yourself¦270732 and¦270733÷plead¦270733_with¦270733 neighbor¦270734_of¦270734÷your¦270734.
@@ -194,6 +200,7 @@
 \v 34 If/because¦271036 jealousy¦271038 [is¦271039_the]¦271039_rage¦271039_of¦271039 a¦271041_man¦271041 and¦271042=not¦271042 he¦271044_will¦271044_have¦271044_compassion¦271044 in/on¦271045=day¦271045 vengeance¦271046.
 \v 35 Not¦271048 he¦271050_will¦271050_lift¦271050_up¦271050 [the]¦271051_face¦271051_of¦271051 any¦271052_of¦271052 ransom¦271054 and¦271055=not¦271055 he¦271057_will¦271057_be¦271057_willing¦271057 if/because¦271058 you¦271059_will¦271059_make¦271059_great¦271059 a¦271061_bribe¦271061.
 \c 7
+\nb
 \v 1 son¦271064_of¦271064÷my¦271064 keep¦271065 words¦271066_of¦271066÷my¦271066 and¦271067÷commandments¦271067_of¦271067÷my¦271067 you¦271068_will¦271068_treasure¦271068 with¦271069÷you¦271069.
 \v 2 Keep¦271071 commands¦271072_of¦271072÷my¦271072 and¦271073÷live¦271073 and¦271074÷teaching¦271074_of¦271074÷my¦271074 as¦271075÷apple¦271075_of¦271075 eye¦271076_of¦271076÷your¦271076.
 \v 3 Bind¦271078÷them¦271078 on¦271079 fingers¦271081_of¦271081÷your¦271081 write¦271082÷them¦271082 on¦271083 the¦271085_tablet¦271085_of¦271085 heart¦271086_of¦271086÷your¦271086.
@@ -222,6 +229,7 @@
 \v 26 If/because¦271294 many¦271296 slain¦271297_[ones]¦271297 she¦271298_has¦271298_made¦271298_fall¦271298 and¦271299÷countless¦271299 all¦271300_of¦271300 slain¦271302_of¦271302÷her¦271302.
 \v 27 [is]¦271304_the¦271304_ways¦271304_of¦271304 Shəʼōl¦271305 house¦271306_of¦271306÷her¦271306 [they¦271307_are]¦271307_going¦271307_down¦271307 to¦271308 [the]¦271310_chambers¦271310_of¦271310 death¦271312.
 \c 8
+\nb
 \v 1 not¦271315 wisdom¦271317 does¦271318_she¦271318_call¦271318_out¦271318 and¦271319÷understanding¦271319 does¦271320_she¦271320_give¦271320_forth¦271320 voice¦271321_of¦271321÷her¦271321.
 \v 2 In/on/at/with¦271323÷atop¦271323_of¦271323 [the]¦271325_heights¦271325 on¦271326 [the]¦271328_way¦271328 between¦271329_of¦271329 [the]¦271330_pathways¦271330 she¦271331_stations¦271331_herself¦271331.
 \v 3 At¦271333÷side¦271333_of¦271333 [the]¦271335_gates¦271335 in¦271336÷front¦271336_of¦271336 [the]¦271338_town¦271338 [the]¦271339_entrance¦271339_of¦271339 [the]¦271340_doorways¦271340 she¦271341_cries¦271341_aloud¦271341.
@@ -259,6 +267,7 @@
 \v 35 If/because¦271635 finding¦271636=me¦271636 he¦271637_finds¦271637\f + \fr 8:35 \ft Variant note: מצאי: (x-qere) 'מָצָ֣א': lemma=4672 morph=HVqp3ms id=204Th מָצָ֣א\f*\f + \fr 8:35 \ft Note: Yathir readings in L which we have designated as Qeres when both Dotān and BHS list a Qere. \f* life¦271640 and¦271641÷obtains¦271641 favour¦271642 from¦271643÷LORD¦271643.
 \v 36 And¦271645÷misses¦271645_of¦271645÷me¦271645 [is]¦271646_treating¦271646_violently¦271646 self¦271647_of¦271647÷him¦271647 all¦271648_of¦271648 hate¦271650_of¦271650÷me¦271650 they¦271651_love¦271651 death¦271652.
 \c 9
+\nb
 \v 1 wisdom(s)¦271655 she¦271656_has¦271656_built¦271656 house¦271657_of¦271657÷her¦271657 she¦271658_has¦271658_hewn¦271658 pillars¦271659_of¦271659÷her¦271659 seven¦271660.
 \v 2 She¦271662_has¦271662_slaughtered¦271662 meat¦271663_of¦271663÷her¦271663 she¦271664_has¦271664_mixed¦271664 wine¦271665_of¦271665÷her¦271665 also¦271666 she¦271667_has¦271667_arranged¦271667 table¦271668_of¦271668÷her¦271668.
 \v 3 She¦271670_has¦271670_sent¦271670_out¦271670 servant-girls¦271671_of¦271671÷her¦271671 she¦271672_calls¦271672_out¦271672 on¦271673 [the]¦271675_elevations¦271675_of¦271675 [the]¦271676_heights¦271676_of¦271676 [the]¦271677_town¦271677.
@@ -278,6 +287,7 @@
 \v 17 Waters¦271799 stolen¦271801 they¦271802_are¦271802_sweet¦271802 and¦271803÷bread¦271803_of¦271803 secret¦271804_places¦271804 it¦271805_is¦271805_pleasant¦271805.
 \v 18 And¦271807=not¦271807 he¦271809_knows¦271809 if/because¦271810_that¦271810 [the]¦271812_shades¦271812 [are]¦271813_there¦271813 in/on/at/with¦271814÷depths¦271814_of¦271814 Shəʼōl¦271815 guests¦271816_of¦271816÷her¦271816.
 \c 10
+\nb
 \v 1 the¦271819_proverbs¦271819_of¦271819 Shəlomoh¦271820 a¦271822_son¦271822 wise¦271823 he¦271824_makes¦271824_glad¦271824 a¦271826_father¦271826 and¦271827÷son¦271827 a¦271828_fool¦271828 [is]¦271829_the¦271829_grief¦271829_of¦271829 his/its¦271830=mother¦271830.
 \v 2 Not¦271832 treasures¦271835_of¦271835 they¦271834_profit¦271834 wickedness¦271836 and¦271837÷righteousness¦271837 it¦271838_delivers¦271838 from¦271839÷death¦271839.
 \v 3 Not¦271841 \nd YHWH¦271844\nd* he¦271843_allows¦271843_to¦271843_hunger¦271843 [the]¦271845_appetite¦271845_of¦271845 [the]¦271846_righteous¦271846 and¦271847÷craving¦271847_of¦271847 wicked¦271848_[people]¦271848 he¦271849_rejects¦271849.
@@ -311,6 +321,7 @@
 \v 31 The¦272088_mouth¦272088_of¦272088 a¦272090_righteous¦272090_[person]¦272090 it¦272091_will¦272091_bear¦272091_fruit¦272091 wisdom¦272092 and¦272093=(the)¦272093_tongue¦272093 perversiti(es)¦272094 it¦272095_will¦272095_be¦272095_cut¦272095_off¦272095.
 \v 32 [the]¦272097_lips¦272097_of¦272097 [the]¦272098_righteous¦272098 know¦272099 pleasure¦272100 and¦272101÷mouth¦272101_of¦272101 wicked¦272102_[people]¦272102 perverse¦272103_things¦272103.
 \c 11
+\nb
 \v 1 Balances¦272105_of¦272105 deceit¦272106 [are]¦272107_(the)¦272107_abomination¦272107_of¦272107 \nd YHWH¦272108\nd* and¦272109=stone¦272109_of¦272109 perfect¦272110 delight¦272111_of¦272111÷his¦272111.
 \v 2 It¦272113_comes¦272113 presumption¦272115 and¦272116= shame¦272117 =comes¦272116 and¦272118=\untr DOM¦272118\untr* modest¦272120_[people]¦272120 wisdom¦272121.
 \v 3 [the]¦272123_integrity¦272123_of¦272123 upright¦272124_[people]¦272124 guides¦272125÷them¦272125 and¦272126÷crookedness¦272126_of¦272126 [those¦272127_who]¦272127_act¦272127_treacherously¦272127 and¦272128÷them¦272128\f + \fr 11:3 \ft Variant note: ו/שד/ם: (x-qere) 'יְשָׁדֵּֽ/ם': lemma=7703 n=0 morph=HVqi3ms/Sp3mp id=20DUx יְשָׁדֵּֽ/ם\f*.
@@ -343,6 +354,7 @@
 \v 30 [the]¦272365_fruit¦272365_of¦272365 [the]¦272367_righteous¦272367 [is]¦272368_a¦272368_tree¦272368_of¦272368 life¦272369 and¦272370÷wins¦272370 people¦272371\f + \fr 11:30 \ft Note: We agree with both BHS 1997 and BHQ on an unexpected reading. \f* [is]¦272373_wise¦272373.
 \v 31 There¦272375 a¦272376_righteous¦272376_[person]¦272376 on¦272377_the¦272377=earth¦272377 he¦272378_is¦272378_rewarded¦272378 indeed¦272379 if/because¦272380 a¦272382_wicked¦272382_[person]¦272382 and¦272383÷sinner¦272383.
 \c 12
+\nb
 \v 1 [one¦272385_who]¦272385_loves¦272385 discipline¦272386\f + \fr 12:1 \ft Note: Marks a place where we agree with BHQ against BHS in reading L. \f*\f + \fr 12:1 \ft Note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS. \f* [is]¦272389_loving¦272389 knowledge¦272390 and¦272391÷hates¦272391 rebuke¦272392 [is]¦272393_stupid¦272393.
 \v 2 A¦272395_good¦272395_[person]¦272395 he¦272396_obtains¦272396 favour¦272397 from¦272398÷LORD¦272398 and¦272399÷man¦272399_of¦272399 evil¦272400_devices¦272400 he¦272401_condemns¦272401_as¦272401_guilty¦272401.
 \v 3 Not¦272403 anyone¦272406 he¦272405_is¦272405_established¦272405 in/on/at/with¦272407÷wickedness¦272407 and¦272408÷root¦272408_of¦272408 righteous¦272409_[people]¦272409 not¦272410 it¦272412_is¦272412_moved¦272412.
@@ -372,6 +384,7 @@
 \v 27 Not¦272627 slackness¦272630 he¦272629_roasts¦272629 game¦272631_of¦272631÷his¦272631 and¦272632÷wealth¦272632 a¦272634_person¦272634 precious¦272635 a¦272636_diligent¦272636_[person]¦272636.
 \v 28 In/on/at/with¦272638÷path¦272638_of¦272638 righteousness¦272640 life¦272641 and¦272642÷way¦272642_of¦272642 a¦272643_pathway¦272643 not¦272644 death¦272646.
 \c 13
+\nb
 \v 1 A¦272648_son¦272648 wise¦272649 [the]¦272650_discipline¦272650_of¦272650 a¦272651_father¦272651 and¦272652÷scoffer¦272652 not¦272653 he¦272655_listens¦272655_to¦272655 a¦272656_rebuke¦272656.
 \v 2 From¦272658_the¦272658=fruit¦272658 of¦272659_[the]¦272659_mouth¦272659_of¦272659 a¦272661_person¦272661 he¦272662_eats¦272662 good¦272663_thing[s]¦272663 and¦272664÷desire¦272664_of¦272664 [those¦272665_who]¦272665_act¦272665_treacherously¦272665 [is]¦272666_violence¦272666.
 \v 3 [one¦272668_who]¦272668_guards¦272668 mouth¦272669_of¦272669÷his¦272669 [is]¦272670_protecting¦272670 life¦272671_of¦272671÷his¦272671 [one¦272672_who]¦272672_opens¦272672 lips¦272673_of¦272673÷his¦272673 ruin¦272674 to¦272676=him/it¦272676.
@@ -398,6 +411,7 @@
 \v 24 [one¦272864_who]¦272864_restrains¦272864 rod¦272865_of¦272865÷his¦272865 [is]¦272866_hating¦272866 son¦272867_of¦272867÷his¦272867 and¦272868÷loves¦272868_of¦272868÷him¦272868 diligent¦272869÷him¦272869 discipline¦272870.
 \v 25 A¦272872_righteous¦272872_[person]¦272872 [is]¦272873_eating¦272873 to¦272874÷satisfy¦272874_of¦272874 appetite¦272875_of¦272875÷his¦272875 and¦272876÷stomach¦272876_of¦272876 wicked¦272877_[people]¦272877 it¦272878_is¦272878_lacking¦272878.
 \c 14
+\nb
 \v 1 wise¦272881_[women]¦272881_of¦272881 women¦272882 she¦272883_builds¦272883 house¦272884_of¦272884÷her¦272884 and¦272885÷foolish¦272885 in/on/at/with¦272886÷hands¦272886_of¦272886÷her¦272886_own¦272886 tears¦272887_down¦272887÷it¦272887.
 \v 2 [one¦272889_who]¦272889_walks¦272889 in/on/at/with¦272890÷uprightness¦272890_of¦272890÷those¦272890 [is]¦272891_fearing¦272891_of¦272891 (of)¦272892_\nd YHWH¦272892\nd* and¦272893÷devious¦272893_of¦272893 ways¦272894_of¦272894÷his¦272894 despises¦272895_of¦272895÷him¦272895.
 \v 3 In/on/at/with¦272897÷mouth¦272897_of¦272897 a¦272899_fool¦272899 a¦272900_rod¦272900_of¦272900 pride¦272901 and¦272902÷lips¦272902_of¦272902 wise¦272903_[people]¦272903 protect¦272904÷them¦272904.
@@ -434,6 +448,7 @@
 \v 34 righteousness¦273178 it¦273179_exalts¦273179 a¦273181_nation¦273181 and¦273182÷disgrace¦273182_of¦273182 to¦273183_a¦273183_people¦273183 sin¦273184.
 \v 35 [the]¦273186_favour¦273186_of¦273186 a¦273188_king¦273188 has¦273189÷servant¦273189 [who]¦273190_acts¦273190_prudently¦273190 and¦273191÷severe¦273191_anger¦273191_of¦273191÷his¦273191 it¦273192_belongs¦273192 [one¦273193_who]¦273193_acts¦273193_shamefully¦273193.
 \c 15
+\nb
 \v 1 An¦273195_answer¦273195 soft¦273197 it¦273198_turns¦273198_away¦273198 rage¦273199 and¦273200÷word¦273200_of¦273200 hurt¦273202 it¦273203_raises¦273203 anger¦273205.
 \v 2 [the]¦273207_tongue¦273207_of¦273207 wise¦273208_[people]¦273208 it¦273209_makes¦273209_good¦273209 knowledge¦273210 and¦273211÷mouth¦273211_of¦273211 fools¦273212 it¦273213_pours¦273213_forth¦273213 foolishness¦273214.
 \v 3 In¦273216=all¦273216 place¦273218 the¦273219_eyes¦273219_of¦273219 \nd YHWH¦273220\nd* [they¦273221_are]¦273221_watching¦273221 evil¦273222_[people]¦273222 and¦273223÷good¦273223.\f + \fr 15:3 \ft Note: We agree with both BHS 1997 and BHQ on an unexpected reading. \f*
@@ -468,6 +483,7 @@
 \v 32 [one¦273494_who]¦273494_ignores¦273494 discipline¦273495\f + \fr 15:32 \ft Note: Marks a place where we agree with BHQ against BHS in reading L. \f*\f + \fr 15:32 \ft Note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS. \f* [is]¦273498_rejecting¦273498 self¦273499_of¦273499÷him¦273499 and¦273500÷listens¦273500 correction¦273501 [is]¦273502_acquiring¦273502 heart¦273503.
 \v 33 The¦273505_fear¦273505_of¦273505 \nd YHWH¦273506\nd* [is¦273507_the]¦273507_correction¦273507_of¦273507 wisdom¦273508 and¦273509÷to/for¦273509 honour¦273510 humility¦273511.
 \c 16
+\nb
 \v 1 To/for¦273513=ʼĀdām/humankind¦273513 [the]¦273514_plans¦273514_of¦273514 [the]¦273516_heart¦273516 and¦273517÷from¦273517÷LORD¦273517 [the]¦273518_answer¦273518_of¦273518 [the]¦273519_tongue¦273519.
 \v 2 All¦273521_of¦273521 [the]¦273523_ways¦273523_of¦273523 a¦273525_person¦273525 [are]¦273526_pure¦273526 in/on/at/with¦273527÷eyes¦273527_of¦273527÷him¦273527 and¦273528÷weighs¦273528 spirits¦273529 \nd YHWH¦273530\nd*.
 \v 3 Roll¦273532 to¦273533 \nd YHWH¦273535\nd* work¦273536_of¦273536÷your¦273536 plans¦273538_of¦273538÷your¦273538 and¦273537÷established¦273537.
@@ -502,6 +518,7 @@
 \v 32 [is]¦273824_good¦273824 a¦273825_[person]¦273825_long¦273825_of¦273825 anger(s)¦273826 than¦273827÷mighty¦273827 and¦273828÷controls¦273828 in/on/at/with¦273829÷spirit¦273829_of¦273829÷his¦273829 than¦273830÷captures¦273830_of¦273830 a¦273831_city¦273831.
 \v 33 In/on/at/with¦273833÷lap¦273833 it¦273834_is¦273834_hurled¦273834_down¦273834 \untr DOM¦273835\untr* the¦273837÷lot¦273837 and¦273838÷from¦273838÷LORD¦273838 every¦273839_of¦273839 decision¦273841_of¦273841÷its¦273841.
 \c 17
+\nb
 \v 1 [is]¦273843_good¦273843 a¦273844_piece¦273844_[of¦273844_bread]¦273844 dry¦273845 and¦273846÷quiet¦273846 in/on/at/with¦273848÷it¦273848 than¦273849÷house¦273849 full¦273850 sacrifices¦273851_of¦273851 strife¦273853.
 \v 2 A¦273855_servant¦273855 [who]¦273857_acts¦273857_prudently¦273857 he¦273858_will¦273858_rule¦273858 in/on/at/with¦273859÷son¦273859 [who]¦273860_acts¦273860_shamefully¦273860 and¦273861÷in/on/at/with¦273861÷midst¦273861_of¦273861 brothers¦273862 he¦273863_will¦273863_share¦273863 [the]¦273864_inheritance¦273864.
 \v 3 A¦273866_crucible¦273866 for¦273867_the¦273867÷silver¦273867 and¦273868÷furnace¦273868 for¦273869_the¦273869÷gold¦273869 and¦273870÷tests¦273870 hearts¦273871 \nd YHWH¦273872\nd*.
@@ -531,6 +548,7 @@
 \v 27 [one¦274115_who]¦274115_restrains¦274115 words¦274116_of¦274116÷his¦274116 [is]¦274117_knowing¦274117 knowledge¦274118 and¦274119\f + \fr 17:27 \ft Variant note: ו/קר: (x-qere) 'יְקַר': lemma=3368 morph=HAamsc id=206Fc יְקַר\f* spirit¦274122 [is]¦274123_a¦274123_person¦274123_of¦274123 understanding¦274124.
 \v 28 Also¦274126 a¦274127_fool¦274127 [who]¦274128_keeps¦274128_silent¦274128 a¦274129_wise¦274129_[person]¦274129 he¦274130_is¦274130_considered¦274130 [one¦274131_who]¦274131_shuts¦274131 lips¦274132_of¦274132÷his¦274132 [one¦274133_who]¦274133_has¦274133_understanding¦274133.
 \c 18
+\nb
 \v 1 To¦274135÷desire¦274135 he¦274136_seeks¦274136 [one¦274137_who]¦274137_separates¦274137_himself¦274137 in¦274138=all¦274138 sound¦274140_wisdom¦274140 he¦274141_breaks¦274141_out¦274141.
 \v 2 Not¦274143 he¦274145_delights¦274145 a¦274146_fool¦274146 in/on/at/with¦274147÷understanding¦274147 if/because¦274148 (if)¦274149 in/on/at/with¦274151÷expressing¦274151 his/its¦274152=heart¦274152.
 \v 3 In/on/at/with¦274154÷comes¦274154 a¦274156_wicked¦274156_[person]¦274156 it¦274157_comes¦274157 also¦274158 contempt¦274160 and¦274161÷with¦274161 shame¦274163 reproach¦274164.
@@ -556,6 +574,7 @@
 \v 23 Supplications¦274345 he¦274346_speaks¦274346 [one¦274348_who¦274348_is]¦274348_poor¦274348 and¦274349÷rich¦274349 he¦274350_answers¦274350 strong¦274351_[words]¦274351.
 \v 24 A¦274353_person¦274353_of¦274353 companions¦274354 to¦274355÷ruin¦274355 and¦274356÷there¦274356_is¦274356 [one¦274357_who]¦274357_loves¦274357 clinging¦274358 than¦274359÷brother¦274359.
 \c 19
+\nb
 \v 1 [is]¦274361_good¦274361 [one¦274363_who¦274363_is]¦274363_poor¦274363 [who]¦274364_walks¦274364 in/on/at/with¦274365÷integrity¦274365_of¦274365÷his¦274365 than¦274366÷perverse¦274366_of¦274366 speech¦274367_of¦274367÷his¦274367 and¦274368=he¦274368 [is]¦274369_a¦274369_fool¦274369.
 \v 2 Also¦274371 in/on/at/with¦274372÷no¦274372 knowledge¦274374 a¦274375_person¦274375 not¦274376 [is]¦274378_good¦274378 and¦274379÷moves¦274379_quickly¦274379 in/on/at/with¦274380÷feet¦274380 [is]¦274381_missing¦274381.
 \v 3 [the]¦274383_folly¦274383_of¦274383 a¦274384_person¦274384 it¦274385_subverts¦274385 its¦274386=road/course¦274386 and¦274387÷against¦274387 \nd YHWH¦274389\nd* his/its¦274391=heart¦274391 it¦274390_rages¦274390.
@@ -586,6 +605,7 @@
 \v 28 A¦274641_witness¦274641_of¦274641 worthlessness¦274642 he¦274643_mocks¦274643 justice¦274644 and¦274645÷mouth¦274645_of¦274645 wicked¦274646_[people]¦274646 it¦274647_swallows¦274647_up¦274647 wickedness¦274649.
 \v 29 They¦274651_are¦274651_prepared¦274651 for¦274652_the¦274652÷scoffers¦274652 judgements¦274653 and¦274654÷flogging¦274654 for¦274655÷backs¦274655_of¦274655 fools¦274656.
 \c 20
+\nb
 \v 1 [is]¦274658_a¦274658_mocker¦274658 the¦274659÷wine¦274659\f + \fr 20:1 \ft Note: We agree with both BHS 1997 and BHQ on an unexpected reading. \f* [is]¦274661_noisy¦274661 strong¦274662_drink¦274662 and¦274663=all¦274663 [one¦274665_who]¦274665_staggers¦274665 in/on/over¦274666=him/it¦274666 not¦274667 he¦274668_is¦274668_wise¦274668.
 \v 2 [is]¦274670_a¦274670_roaring¦274670 like¦274671_the¦274671÷lion¦274671 [the]¦274672_terror¦274672_of¦274672 a¦274673_king¦274673 provokes¦274674_toanger¦274674_of¦274674÷him¦274674 [is]¦274675_missing¦274675 life¦274676_of¦274676÷his¦274676.
 \v 3 [is]¦274678_honour¦274678 for¦274679_the¦274679÷man¦274679 cessation¦274680 from¦274681÷strife¦274681 and¦274682=all¦274682 fool¦274684 he¦274685_breaks¦274685_out¦274685.
@@ -617,6 +637,7 @@
 \v 29 [the]¦274938_glory¦274938_of¦274938 young¦274939_men¦274939 strength¦274940_of¦274940÷their¦274940 and¦274941÷beauty¦274941_of¦274941 old¦274942_[people]¦274942 [is]¦274943_gray¦274943_hair¦274943.
 \v 30 Wounds¦274945_of¦274945 bruise[s]¦274946 [are]¦274947_a¦274947_cleansing¦274947\f + \fr 20:30 \ft Variant note: תמריק: (x-qere) 'תַּמְר֣וּק': lemma=8562 morph=HNcmsa id=20fDj תַּמְר֣וּק\f* in/on/at/with¦274949÷evil¦274949 and¦274950÷beatings¦274950_of¦274950 [the]¦274951_chambers¦274951_of¦274951 [the]¦274953_belly¦274953.
 \c 21
+\nb
 \v 1 [is]¦274955_streams¦274955_of¦274955 water¦274957 [the]¦274958_heart¦274958_of¦274958 a¦274960_king¦274960 in/on/at/with¦274961÷hand¦274961_of¦274961 \nd YHWH¦274963\nd* to¦274964 all¦274966_of¦274966 that¦274968 he¦274969_desires¦274969 turns¦274970÷it¦274970.
 \v 2 Every¦274972_of¦274972 way¦274974_of¦274974 a¦274976_person¦274976 [is]¦274977_upright¦274977 in/on/at/with¦274978÷eyes¦274978_of¦274978÷his¦274978_own¦274978 and¦274979÷weighs¦274979 hearts¦274980 \nd YHWH¦274981\nd*.
 \v 3 To¦274983_do¦274983 righteousness¦274984 and¦274985÷justice¦274985 [is]¦274986_chosen¦274986 to/for¦274987=\nd YHWH¦274987\nd* more¦274988_than¦274988÷sacrifice¦274988.
@@ -649,6 +670,7 @@
 \v 30 There¦275239_[is]¦275239_not¦275239 wisdom¦275240 and¦275241÷no¦275241 understanding¦275242 and¦275243÷no¦275243 counsel¦275244 to¦275245÷oppose¦275245 \nd YHWH¦275246\nd*.
 \v 31 a¦275249_horse¦275249 [is]¦275250_prepared¦275250 for¦275251÷day¦275251_of¦275251 battle¦275252 and¦275253÷belongs¦275253_to¦275253÷LORD¦275253 the¦275254÷victory¦275254.
 \c 22
+\nb
 \v 1 [is]¦275256_to¦275256_be¦275256_chosen¦275256 a¦275257_name¦275257 rather¦275258_than¦275258÷riches¦275258 great¦275259 than¦275260÷silver¦275260 and¦275261÷than¦275261÷gold¦275261 favour¦275262 good¦275263.
 \v 2 [the]¦275265_rich¦275265 and¦275266÷poor¦275266 they¦275267_meet¦275267_one¦275267_another¦275267 [is¦275268_the]¦275268_maker¦275268_of¦275268 all¦275269_of¦275269÷them¦275269 \nd YHWH¦275270\nd*.
 \v 3 A¦275272_sensible¦275272_[person]¦275272 he¦275274_sees¦275274 trouble¦275275 and¦275276÷hides¦275276\f + \fr 22:3 \ft Variant note: ו/יסתר: (x-qere) 'וְ/נִסְתָּ֑ר': lemma=c/5641 n=1 morph=HC/VNp3ms id=20wq8 וְ/נִסְתָּ֑ר\f* and¦275278÷simple¦275278 they¦275279_pass¦275279_on¦275279 and¦275280÷suffer¦275280.
@@ -679,6 +701,7 @@
 \v 28 Do¦275527_not¦275527 displace¦275529 a¦275530_boundary¦275530_of¦275530 antiquity¦275531 which¦275532 they¦275533_made¦275533 fathers¦275534_of¦275534÷your¦275534.
 \v 29 You¦275536_see¦275536 a¦275537_person¦275537 skilled¦275539 in/on/at/with¦275540÷work¦275540_of¦275540÷his¦275540 to¦275541=(the)¦275541_face¦275541_of/in¦275541_front¦275541_of/before¦275541 kings¦275543 he¦275544_will¦275544_take¦275544_his¦275544_stand¦275544 not¦275545 he¦275547_will¦275547_take¦275547_his¦275547_stand¦275547 to¦275548=(the)¦275548_face¦275548_of/in¦275548_front¦275548_of/before¦275548 insignificant¦275549_[people]¦275549.
 \c 23
+\nb
 \v 1 if/because¦275552 you¦275554_will¦275554_sit¦275554_down¦275554 to¦275555÷dine¦275555 with¦275556 a¦275558_ruler¦275558 carefully¦275559_(consider)¦275559 you¦275560_will¦275560_consider¦275560 \untr DOM¦275561\untr* [that]¦275563_which¦275563 before¦275564÷face/front¦275564÷you¦275564.
 \v 2 And¦275566÷put¦275566 a¦275567_knife¦275567 in/on/at/with¦275568÷throat¦275568_of¦275568÷your¦275568 if¦275569 [are]¦275571_a¦275571_master¦275571_of¦275571 appetite¦275572 you¦275573.
 \v 3 Do¦275575_not¦275575 crave¦275577\f + \fr 23:3 \ft Note: Marks a place where we agree with BHQ against BHS in reading L. \f*\f + \fr 23:3 \ft Note: We have abandoned or added a ketib/qere relative to BHS. In doing this we agree with L against BHS. \f* to¦275580÷delicacies¦275580_of¦275580÷his¦275580 and¦275581=he¦275581 [is]¦275582_food¦275582_of¦275582 lies¦275583.
@@ -715,6 +738,7 @@
 \v 34 And¦275903÷be¦275903 like¦275904÷lies¦275904_down¦275904 in/on/at/with¦275905÷midst¦275905_of¦275905 [the]¦275907_sea¦275907 and¦275908÷like¦275908÷lies¦275908_down¦275908 in/on/at/with¦275909÷top¦275909_of¦275909 a¦275910_mast¦275910.
 \v 35 Struck¦275912÷me¦275912 not¦275913 I¦275915_am¦275915_sick¦275915 beat¦275916÷me¦275916 not¦275917 I¦275919_know¦275919 when¦275920 will¦275921_I¦275921_awake¦275921 I¦275922_will¦275922_repeat¦275922 seek¦275923÷it¦275923 again¦275924.
 \c 24
+\nb
 \v 1 Do¦275926_not¦275926 be¦275928_jealous¦275928 in/on/at/with¦275929÷men¦275929_of¦275929 evil¦275930 and¦275931÷not¦275931 desire¦275933\f + \fr 24:1 \ft Variant note: תתאו: (x-qere) 'תִּ֝תְאָ֗יו': lemma=183 n=0.0 morph=HVtj2ms id=206mr תִּ֝תְאָ֗יו\f* to¦275935=be¦275935 with¦275936=them¦275936.
 \v 2 If/because¦275938 violence¦275940\f + \fr 24:2 \ft Note: We read one or more accents in L differently from BHQ. \f*\f + \fr 24:2 \ft Note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS. \f* minds¦275944_of¦275944÷their¦275944 it¦275943_plots¦275943 and¦275945÷trouble¦275945 lips¦275946_of¦275946÷their¦275946 they¦275947_speak¦275947.
 \v 3 In/on/at/with¦275949÷wisdom¦275949 a¦275951_house¦275951 it¦275950_is¦275950_built¦275950 and¦275952÷in/on/at/with¦275952÷understanding¦275952 it¦275953_is¦275953_established¦275953.
@@ -750,6 +774,7 @@
 \v 33 A¦276276_little¦276276_of¦276276 sleep(s)¦276277 a¦276278_little¦276278_of¦276278 slumber(s)¦276279 a¦276280_little¦276280_of¦276280 folding¦276282_of¦276282 hands¦276283 to¦276284÷rest¦276284.
 \v 34 And¦276286÷come¦276286 going¦276288_about¦276288 poverty¦276289_of¦276289÷your¦276289 and¦276290÷want¦276290_of¦276290÷your¦276290 like¦276291÷man¦276291 shield¦276292.
 \c 25
+\nb
 \v 1 also¦276295 these¦276297 [are]¦276298_the¦276298_proverbs¦276298_of¦276298 Shəlomoh¦276299 which¦276300 they¦276301_copied¦276301 the¦276302_men¦276302_of¦276302 Ḩizqiy\sup yāh\sup*¦276304 the¦276305_king¦276305_of¦276305 Yəhūdāh/(Judah)¦276307.
 \v 2 [is]¦276309_the¦276309_glory¦276309_of¦276309 god¦276310 to¦276311_conceal¦276311 a¦276312_matter¦276312 and¦276313÷glory¦276313_of¦276313 kings¦276314 to¦276315_search¦276315_out¦276315 a¦276316_matter¦276316.
 \v 3 heaven¦276318 for¦276319_THE¦276319÷height¦276319 and¦276320÷earth¦276320 for¦276321_the¦276321÷depth¦276321 and¦276322÷heart¦276322_of¦276322 kings¦276323 there¦276324_[is]¦276324_not¦276324 searching¦276325.
@@ -779,6 +804,7 @@
 \v 27 To¦276579_eat¦276579 honey¦276580_of¦276580 much¦276581 not¦276582 [is]¦276584_good¦276584 and¦276585÷seek¦276585_of¦276585 glory¦276586_of¦276586÷one's¦276586_own¦276586 [is]¦276587_an¦276587_honour¦276587.
 \v 28 A¦276589_city¦276589_of¦276589 broken¦276590_into¦276590 there¦276591_[is]¦276591_not¦276591 a¦276592_wall¦276592 a¦276593_person¦276593 whom¦276594 there¦276595_[is]¦276595_not¦276595 control¦276596 for¦276597÷spirit¦276597_of¦276597÷his¦276597.
 \c 26
+\nb
 \v 1 Like¦276599_the¦276599÷snow¦276599 in/on/at/with¦276601÷summer¦276601 and¦276602÷like¦276602_the¦276602÷rain¦276602 in/on/at/with¦276603÷harvest¦276603 so¦276604 not¦276605 [is]¦276607_suitable¦276607 for¦276608÷fool¦276608 honour¦276609.
 \v 2 Like¦276611_the¦276611÷sparrow¦276611 in¦276612÷flitting¦276612 like¦276613_the¦276613÷swallow¦276613 in¦276614÷flying¦276614 so¦276615 a¦276616_curse¦276616_of¦276616 without¦276617_cause¦276617 wwww¦276618\f + \fr 26:2 \ft Variant note: לא: (x-qere) 'ל֣/וֹ': lemma=l morph=HR/Sp3ms id=209wB ל֣/וֹ\f* it¦276620_will¦276620_come¦276620.
 \v 3 A¦276622_whip¦276622 for¦276623_the¦276623÷horse¦276623 a¦276624_bridle¦276624 for¦276625_THE¦276625÷donkey¦276625 and¦276626÷rod¦276626 for¦276627÷back¦276627_of¦276627 fools¦276628.
@@ -808,6 +834,7 @@
 \v 27 [one¦276853_who]¦276853_digs¦276853 a¦276855_pit¦276855 in/on/at/with¦276856÷it¦276856 he¦276857_will¦276857_fall¦276857 and¦276858÷rolls¦276858 a¦276859_stone¦276859 to¦276860=him/it¦276860 it¦276861_will¦276861_return¦276861.
 \v 28 A¦276863_tongue¦276863_of¦276863 falsehood¦276865 it¦276866_hates¦276866 crushes¦276867_of¦276867÷it¦276867 and¦276868÷mouth¦276868 smooth¦276869 it¦276870_makes¦276870 calamity¦276871.
 \c 27
+\nb
 \v 1 Do¦276873_not¦276873 boast¦276875 in/on¦276876=day¦276876 tomorrow¦276877 if/because¦276878 not¦276879 you¦276881_know¦276881 what¦276882 will¦276884_it¦276884_bring¦276884_forth¦276884 a¦276885_day¦276885.
 \v 2 Praise¦276887÷you¦276887 a¦276888_stranger¦276888 and¦276889=not¦276889 mouth¦276891_of¦276891÷your¦276891_own¦276891 a¦276892_foreigner¦276892 and¦276893÷not¦276893 lips¦276895_of¦276895÷your¦276895_own¦276895.
 \v 3 [the]¦276897_weight¦276897_of¦276897 a¦276899_stone¦276899 and¦276900÷weighty¦276900_of¦276900 the¦276901÷sand¦276901 and¦276902÷provocation¦276902_of¦276902 a¦276903_fool¦276903 [is]¦276904_heavy¦276904 than¦276905÷both¦276905_of¦276905÷them¦276905.
@@ -836,6 +863,7 @@
 \v 26 lambs¦277131 with¦277132÷clothing¦277132_of¦277132÷your¦277132 and¦277133÷price¦277133_of¦277133 a¦277134_field¦277134 goats¦277135.
 \v 27 And¦277137÷enough¦277137_of¦277137 [the]¦277139_milk¦277139_of¦277139 goats¦277140 for¦277141÷food¦277141_of¦277141÷your¦277141 for¦277142÷food¦277142_of¦277142 household¦277143_of¦277143÷your¦277143 and¦277144÷nourishment¦277144 for¦277145÷servant-girls¦277145_of¦277145÷your¦277145.
 \c 28
+\nb
 \v 1 They¦277147_flee¦277147 and¦277148÷no¦277148 [one¦277150_who]¦277150_pursues¦277150 [the]¦277151_wicked¦277151 and¦277152÷righteous¦277152 as¦277153_as¦277153÷lion¦277153 he¦277154_is¦277154_confident¦277154.
 \v 2 In/on/at/with¦277156÷rebellion¦277156_of¦277156 a¦277157_land¦277157 [are]¦277158_many¦277158 rulers¦277159_of¦277159÷it¦277159 and¦277160÷in/on/at/with¦277160÷man¦277160 [who]¦277161_has¦277161_understanding¦277161 [who]¦277162_knows¦277162 [the]¦277163_right¦277163 it¦277164_will¦277164_last¦277164_long¦277164.
 \v 3 A¦277166_man¦277166 poor¦277167 and¦277168÷oppresses¦277168 poor¦277169_[people]¦277169 rain¦277170 [which]¦277171_prostrates¦277171 and¦277172÷no¦277172 food¦277173.
@@ -865,6 +893,7 @@
 \v 27 [one¦277422_who]¦277422_gives¦277422 to¦277423_the¦277423÷poor¦277423 there¦277424_[is]¦277424_not¦277424 lack¦277425 and¦277426÷turns¦277426_a¦277426_blind¦277426 eyes¦277427_of¦277427÷his¦277427 [is]¦277428_great¦277428_of¦277428 curses¦277430.
 \v 28 In/on/at/with¦277432÷rise¦277432 wicked¦277433_[people]¦277433 everyone¦277435 he¦277434_hides¦277434_himself¦277434 and¦277436÷in/on/at/with¦277436÷perish¦277436÷they¦277436 they¦277437_increase¦277437 righteous¦277438_[people]¦277438.
 \c 29
+\nb
 \v 1 A¦277440_person¦277440_of¦277440 rebukes¦277441 [who]¦277442_stiffens¦277442 a¦277444_neck¦277444 suddenness¦277445 he¦277446_will¦277446_be¦277446_broken¦277446 and¦277447÷beyond¦277447 healing¦277448.
 \v 2 In/on/at/with¦277450÷increase¦277450 righteous¦277451_[people]¦277451 it¦277452_rejoices¦277452 the¦277453÷people¦277453 and¦277454÷in/on/at/with¦277454÷rule¦277454 a¦277455_wicked¦277455_[person]¦277455 a¦277457_people¦277457 it¦277456_groans¦277456.
 \v 3 A¦277459_person¦277459 [who]¦277461_loves¦277461 wisdom¦277462 he¦277463_makes¦277463_glad¦277463 his/its¦277464=father¦277464 and¦277465÷companion¦277465 prostitutes¦277466 he¦277467_destroys¦277467 wealth¦277469.
@@ -893,6 +922,7 @@
 \v 26 Many¦277676_[people]¦277676 [are]¦277677_seeking¦277677 [the]¦277678_face¦277678_of¦277678 a¦277680_ruler¦277680 and¦277681÷from¦277681÷LORD¦277681 justice¦277682_of¦277682 a¦277684_person¦277684.
 \v 27 [is]¦277686_an¦277686_abomination¦277686_of¦277686 righteous¦277687_[people]¦277687 a¦277688_person¦277688_of¦277688 injustice¦277689 and¦277690÷abomination¦277690_of¦277690 [the]¦277691_wicked¦277691 a¦277692_[person]¦277692_upright¦277692_of¦277692 way¦277694.
 \c 30
+\nb
 \v 1 the¦277697_words¦277697_of¦277697 Agur¦277699 the¦277700_son¦277700_of¦277700 Jakeh¦277702 the¦277703÷oracle¦277703 the¦277704_utterance¦277704_of¦277704 the¦277705÷man¦277705 to¦277706÷ʼĪtī\sup ʼēl\sup*¦277706 to¦277707÷ʼĪtī\sup ʼēl\sup*¦277707 and¦277708÷Ucal¦277708.
 \v 2 If/because¦277710 [am]¦277711_stupid¦277711 I¦277712 from¦277713=man¦277713 and¦277714=not¦277714 [the]¦277716_understanding¦277716_of¦277716 a¦277717_person¦277717 to¦277718=me¦277718.
 \v 3 And¦277720=not¦277720 I¦277722_have¦277722_learned¦277722 wisdom¦277723 and¦277724÷knowledge¦277724_of¦277724 [the]¦277725_holy¦277725_[one(s)]¦277725 I¦277726_know¦277726.
@@ -927,6 +957,7 @@
 \v 32 If¦278075 you¦278077_have¦278077_been¦278077_foolish¦278077 in/on/at/with¦278078÷exalting¦278078 and¦278079=if¦278079 you¦278081_have¦278081_planned¦278081 hand¦278082 on¦278083÷mouth¦278083.
 \v 33 If/because¦278085 squeezing¦278086_of¦278086 milk¦278087 it¦278088_brings¦278088_forth¦278088 curd[s]¦278089 and¦278090÷pressing¦278090_of¦278090 a¦278092_nose¦278092 it¦278093_brings¦278093_forth¦278093 blood¦278094 and¦278095÷pressing¦278095 anger(s)¦278096 it¦278097_brings¦278097_forth¦278097 strife¦278098.
 \c 31
+\nb
 \v 1 the¦278101_words¦278101_of¦278101 Lemuel¦278102 [the]¦278103_king¦278103 an¦278104_oracle¦278104 which¦278105 taught¦278107÷him¦278107 his/its¦278108=mother¦278108.
 \v 2 What¦278110 son¦278112_of¦278112÷my¦278112 and¦278113÷what¦278113 Oh¦278115_son¦278115_of¦278115 womb¦278117_of¦278117÷my¦278117 and¦278118÷what¦278118 Oh¦278119_son¦278119_of¦278119 vows¦278121_of¦278121÷my¦278121.
 \v 3 Do¦278123_not¦278123 give¦278125 to¦278126_the¦278126÷women¦278126 strength¦278127_of¦278127÷your¦278127 and¦278128÷ways¦278128_of¦278128÷your¦278128 to¦278129÷destroy¦278129 kings¦278130.

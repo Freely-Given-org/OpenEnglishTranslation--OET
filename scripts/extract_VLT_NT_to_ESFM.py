@@ -46,6 +46,7 @@ CHANGELOG:
     2024-05-07 Make capitalization work when '-' has been changed to '¬the'
     2025-01-15 Change periods in morphology to middle dots
     2025-02-16 Change gloss helper to use ˓˒ instead of // around gloss helper (since / also used for alternative glosses)
+    2025-03-03 Added /nb line after chapter numbers
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple, Optional
@@ -59,7 +60,7 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2025-02-16' # by RJH
+LAST_MODIFIED_DATE = '2025-03-03' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
 PROGRAM_VERSION = '0.99'
@@ -462,7 +463,7 @@ def export_esfm_literal_English_gloss() -> bool:
                 last_chapter_number = last_verse_number = last_word_number = 0
             if chapter_number != last_chapter_number:  # we've started a new chapter
                 assert chapter_number == last_chapter_number + 1
-                esfm_text = f"{esfm_text}\n\\c {chapter_number}"
+                esfm_text = f"{esfm_text}\n\\c {chapter_number}\n\\nb"
                 last_chapter_number = chapter_number
                 last_verse_number = last_word_number = 0
             if verse_number != last_verse_number:  # we've started a new verse

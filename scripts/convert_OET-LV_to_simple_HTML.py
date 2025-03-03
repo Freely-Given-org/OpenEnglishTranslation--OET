@@ -30,6 +30,7 @@ CHANGELOG:
     2023-08-30 Add nomina sacra to word pages
     2024-03-21 Handle OT word table as well
     2025-02-16 Change gloss helper to use ˓˒ instead of // around gloss helper (since / also used for alternative glosses)
+    2025-03-03 Handle added /nb fields (after chapter numbers)
 """
 from gettext import gettext as _
 from typing import List, Tuple, Set, Optional
@@ -55,10 +56,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-02-16' # by RJH
+LAST_MODIFIED_DATE = '2025-03-03' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.81'
+PROGRAM_VERSION = '0.82'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -914,6 +915,8 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                         .replace( 'COMBO', '?)' )
             # We don't display the verse number for verse 1 (after chapter number)
             book_html = f'{book_html}{"" if book_html.endswith(">") or book_html.endswith("—") else " "}{"" if V=="1" else f"""<span class="v" id="C{C}V{V}">{V}{NARROW_NON_BREAK_SPACE}</span>"""}{rest}'
+        elif marker == 'nb': # after chapter numbers
+            continue # We don't need to do anything here
         else:
             logging.critical( f"{BBB} {C}:{V} LV has unexpected USFM marker: \\{marker}='{rest}'" )
             book_html = f'{book_html}<p>GOT UNEXPECTED{marker}={rest}</p>'
