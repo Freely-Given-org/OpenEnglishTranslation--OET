@@ -1,4 +1,4 @@
-\id EZR - Open English Translation—Readers’ Version (OET-RV) v0.0.11
+\id EZR - Open English Translation—Readers’ Version (OET-RV) v0.1.01
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 EZR
@@ -9,11 +9,12 @@
 \toc3 Ezra
 \mt1 Ezra
 \is1 Introduction
-\ip \bk The account of Ezra\bk*, is like a continuation of \bk The Chronicles\bk*. It’s told here about the returning home of other Jews who had been taken to Babylon as captives, and the returning of living and worshipping in Yerushalem (Jerusalem). It’s divided into three main sections: 1.) The declaration of King Koresh (Cyrus) of Persia (Heb. Paras) to allow a group of exiled Jews to return to Yerushalem from Babylon. 2.) The rebuilding of the temple and its dedication, and the return to worshipping Yahweh there in Yerushalem. 3.) XXX The returning home there to Yerushalem of that different e again group of Jews impanguluwan of Ezra, the one knowledgable of Law of God. He assisted the Israelis to return to their beliefs and customs, so that their worshipping of the true God wouldn’t be forgotten.
+\ip \bk The account of Ezra\bk*, is like a continuation of \bk The Chronicles\bk*—it tells us about the returning home of other Jews who had been taken to Babylon as captives, and the restoration of daily life in Yerushalem (Jerusalem) and of worshipping at the temple. 
+\ip It’s divided into three main sections: 1.) The declaration of King Koresh (Cyrus) of Persia (Heb. Paras) to allow a group of exiled Jews to return to Yerushalem from Babylon. 2.) The rebuilding of the temple and its dedication, and the return to worshipping Yahweh there in Yerushalem. 3.) The return of a different group of Jewish descendants to Yerushalem under the leadership of Ezra—the one knowledgable about God’s instructions. He assisted the Israelis to return to their beliefs and customs, so that their worshipping of the true God wouldn’t be forgotten.
 \iot Main components of this account
 \io1 The first group of exiled Jews return home \ior 1:1–2:70\ior*
 \io1 The rebuilding of the temple and its dedication \ior 3:1–6:22\ior*
-\io1 The returning home of Ezra and other exiles \ior 7:1–10:44\ior*
+\io1 Ezra leads other exiles to return to Yehudah (Judah) \ior 7:1–10:44\ior*
 \rem This is still a very early look into the unfinished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
@@ -37,7 +38,7 @@
 \r (Neh. 7:4-73)
 \p
 \v 1 Out of the captives that Babylonian King Nevukadnetstsar \add (Nebuchadnezzar)\add* had brought \add as slaves\add* to Babylon, these are \add their descendants\add* who returned to Yerushalem in Yehudah—\add each person returning to their own ancestral town\add*.
-\v 2 The ones who went with Zerubbabel were: Yeshua, Nehemyah, Serayah, Re’elayah, Mordecai, Bilshan, Mispar, Bigvai, Rehum, and Ba’anah.
+\v 2 The ones who went with Zerubabel were: Yeshua, Nehemyah, Serayah, Re’elayah, Mordecai, Bilshan, Mispar, Bigvai, Rehum, and Ba’anah.
 \p Their numbers were:
 \li1
 \v 3 2,172 descendants of Farosh,
@@ -74,7 +75,7 @@
 \li1
 \v 19 223 descendants of Hashum,
 \li1
-\v 20 95 descendants of Gibbar.
+\v 20 95 descendants of Gibar.
 \p
 \v 21 \add And from these towns:\add*
 \li1 123 from Bethlehem,
@@ -124,7 +125,7 @@
 \v 42 139 gatekeepers who were descendants of the gatekeepers Shallum, Ater, Talmon, Akkub, Hatita, and Shobai,
 \p
 \v 43 The temple servants \add who returned\add*:
-\li1 The descendants of Ziha, Hasufa, and Tabbaot,
+\li1 The descendants of Ziha, Hasufa, and Tabaot,
 \li1
 \v 44 the descendants of Keros, Siaha, and Fadon,
 \li1
@@ -240,7 +241,7 @@
 \s1 The temple rebuilding continues
 \p
 \v 1 Then the prophet Haggai and Iddo’s son Zecharyah prophesied to the Jews in Yerushalem and \add across\add* Yehudah in the name of Israel’s God \add who they served\add*.\x + \xo 5:1: \xt Hag 1:1; Zech 1:1.\x*
-\v 2 Then Shealtiel’s son Zerubbabel and Yotsadak’s son Yeshua \add took action\add* and began to \add rebuild\add* God’s \add temple\add* in Yerushalem, and the prophets \add who served\add* God were \add there\add* with them, supporting them.\x + \xo 5:2: \xt Hag 1:12; Zech 4:6-9.\x*
+\v 2 Then Shealtiel’s son Zerubabel and Yotsadak’s son Yeshua \add took action\add* and began to \add rebuild\add* God’s \add temple\add* in Yerushalem, and the prophets \add who served\add* God were \add there\add* with them, supporting them.\x + \xo 5:2: \xt Hag 1:12; Zech 4:6-9.\x*
 \p
 \v 3 At that time, Tattenai, the governor of \add the province west of the Euphrates\add*, and Shetar-Bozenai, and their companions came to them and \add demanded\add*, “Who \add gave you all permission to rebuild this temple\add*?”
 \v 4 \add They also asked the Jews to tell them the names of the men who were working\add* on the building.
@@ -382,7 +383,7 @@
 \v 23 \add So\add* we fasted and sought \add wisdom\add* from our God concerning this, and he \add listened to our requests\add*.
 \s1 The gift and donations for the temple
 \p
-\v 24 Then I chose twelve of the leaders of the priests along with with Sherevyah and Hashavyah and ten of the other Levites,
+\v 24 Then I chose twelve of the leaders of the priests along with Sherevyah and Hashavyah and ten of the other Levites,
 \v 25 and \add as they watched,\add* I weighed out the gold and silver, and the \add valuable\add* utensils—the offering for the house of our God that the king, and his counsellors and officials, and all the \add exiled Israelis who could be contacted\add*, had offered.
 \v 26 \add It came to\add* three tonnes of gold, twenty-one tonnes of silver, and another three tonnes of silver containers,
 \v 27 as well as twenty gold bowls that weighed another eight kilograms, and two polished bronze containers that were as valuable as gold.
@@ -400,97 +401,97 @@
 \v 35 The \add descendants of the former captives who had returned from\add* exile offered burnt offerings to Israel’s God: twelve bulls for all Israel, 96 rams, 77 lambs, then twelve male goats for a sin offering. The whole was \add presented as\add* a burnt offering to Yahweh.
 \v 36 They \add relayed\add* the king’s orders to the governors and officials of \add the province\add* beyond the river, and so they honoured the people and God’s house.
 \c 9
-\s1 The mourning of Ezra of pegkamasinupaken of Israelis
+\s1 Ezra’s reaction against mixed marriages
 \p
-\v 1 Now as soon as those things were finished, the leaders came to me, saying, “The people of Israel, and the priests and Levites have not separated themselves from the peoples of the lands according to their abominations, of the Canaanite, the Hittite, the Perizzite, the Jebusite, the Ammonite, the Moabite, the Egyptian, and the Amorite.
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\s1 The praying for Ezra
+\v 1 Now as soon as those things were finished, the leaders came to me, saying, “The people of Israel, and the priests and Levites haven’t kept themselves separate from \add the idolatery of\add* the peoples of the lands: the \add Canaanites, Hittites, Perizzites, the Yebusites, Ammonites, Moabites, Egyptians, and the Amorites\add*.
+\v 2 \add Instead\add*, they’ve \add taken women from those peoples as wives\add* for themselves and their sons, so they’ve \add diluted their sacred heritage with the anti-God customs of those peoples\add*. \add But the worst is that\add* it’s \add our\add* leaders and officials that have been at the forefront in this unfaithfulness.”
+\v 3 As soon as I heard that, I tore my \add clothes\add* and pulled some of the hair out of my head and beard, and I sat down appalled.
+\v 4 \add Any others who respectfully followed Israel’s God’s instructions\add* \add and who were concerned\add* \add about the unfaithfulness of the exiles, joined with me\add* and I sat there appalled until \add the time of\add* the evening sacrifice.
+\s1 Ezra’s prayer
 \p
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
+\v 5 \add So\add* I got up from my \add position of\add* humilation with my torn \add clothes\add* \add during\add* the evening sacrifice, then I \add went\add* down on my knees and spread out my palms to my God Yahweh
+\v 6 and \add prayed\add*, “My God, I’m ashamed and humiliated to raise my face to you, my God, because our sins have multiplied \add and risen\add* above \add our heads\add*, and our guilt has \add mounted\add* up as \add high as the sky\add*.
+\v 7 From \add back in\add* the time of our ancestors until today, \add we’ve been very guilty\add*, and in our \add disobedience\add*, we ourselves, \add including\add* our kings and our priests, have been \add killed by the kings of the surrounding countries, or taken captive, or been plundered, or simply put to shame, which is the case right now\add*.
+\v 8 \add But\add* now for a brief moment, favour has come from our God Yahweh \add and given\add* us remaining survivors a stake in his holy place—\add yes,\add* our God \add has cheered us up and given us a little relief from\add* our slavery.
+\v 9 Because we are slaves, yet our God hasn’t abandoned us in our slavery, but he’s \add used his loyal commitment\add* \add to us\add* \add to influence\add* the Persian king to give to us \add breathing space\add* to \add rebuild\add* the house of our God \add from\add* its ruins, and to give to us a ‘wall \add of protection\add*’ in Yerushalem and \add across\add* Yehudah.
 \p
-\v 10 ◙
-\v 11 ◙
-\v 12 \x + \xo 9:12: \xt Exo 34:11-16; Deu 7:1-5.\x*◙
+\v 10 “\add So\add* now, our God, what can we say after that? We’ve abandoned your instructions
+\v 11 which you \add gave us via\add* your servants, the prophets, saying, ‘The land that you’re all entering to occupy is a land of impurity, due to the impurity of the \add current inhabitants with\add* their \add evil practices\add* that have filled it from \add one end to the other\add* with their \add filth\add*.
+\v 12 \add So\add* now, don’t give your daughters to their sons \add to marry\add*, or \add vice versa\add*. And don’t \add try to make long-term peace treaties or contracts with them\add*. \add Then\add* you all will \add stay in power\add*, and eat the good things of the land, and \add be able to pass it on to your children for all their future generations\add*.’\x + \xo 9:12: \xt Exo 34:11-16; Deu 7:1-5.\x*
 \p
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
+\v 13 “Yet after everything that’s \add happened to us as a result\add* our evil actions and our great guilt (even though you, our God, \add didn’t punish us as harshly as you could have\add*, and you’ve \add allowed us to survive as we’re here now\add*),
+\v 14 should we return to \add disobeying your instructions\add* and to intermarrying with those people groups \add with their evil practices\add*? You’d \add rightfully\add* be angry \add enough\add* with us as \add to wipe us out completely without leaving any\add* remnant or survivors?
+\v 15 Yahweh, the God of Israel, you \add always do what is right\add*, because \add here\add* we are as survivors even to this day. \add So, yes, here we are standing in front of you\add* in our guilt, because none \add of us are innocent enough to stand in front of you because of what we’ve done\add*.”
 \c 10
-\s1 The acceptance of people of their sin
+\s1 The people’s acceptance of their sin
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
+\v 1 When Ezra prayed and confessed \add like that\add*, weeping and \add bowing down low in front\add* of the \add temple\add*, an extremely \add large number of Israeli\add* men and women and children gathered around him \add to join in and weep aloud\add*.
+\v 2 Then Yehiel’s son Shekanyah (from the sons of Eylam) answered and \add admitted\add* to Ezra, “We ourselves have behaved unfaithfully towards our God and have married foreign women from the \add other\add* people groups in \add this region\add*. \add But\add* there’s still hope for Israel concerning this.
+\v 3 \add So\add* now, let’s \add make an agreement\add* with our God to \add send all those women back, along with their children\add*, \add following the advice\add* of my master and the ones who \add strive to obey God’s instructions\add*, and as per the law.
+\v 4 \add So take action because this is now in your hands, but\add* we’re with you. \add Lead strongly and make a clear decision\add*.”
 \p
-\v 5 ◙
-\v 6 ◙
+\v 5 \add So\add* Ezra \add took action\add* and made the leaders of the priests and Levites, and all Israel, to \add promise to implement this decision, and they did so\add*.
+\v 6 Then Ezra \add left that place there in front of the temple\add*, and he went to Yehohanan’s room (Elyashiv’s son) and went in. He didn’t eat or drink, but \add continued\add* mourning because of the unfaithfulness of the exiles.
 \p
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
+\v 7 Then \add the leaders\add* \add sent a proclamation\add* throughout Yerushalem and all Yehudah to \add all those Jews who’d returned from captivity\add*, that \add their men\add* should assemble in Yerushalem.
+\v 8 \add They were told that\add* it was the decision of the leaders and elders that anyone who didn’t arrive within three days would then forfeit all their property and would \add no longer be considered as an Israeli\add*.
+\v 9 So on the third day (in mid-December), all the men of Yehudah and Benyamin gathered in Yerushalem, and all the people sat in the \add courtyard in front of the temple\add*. They were shivering because of the rain, and \add because of\add* \add the seriousness\add* of the matter.
 \p
-\v 10 ◙
-\v 11 ◙
+\v 10 Then the priest Ezra stood up and \add announced\add*, “You yourselves have acted unfaithfully and have married foreign women, thus adding to Israel’s guilt \add in God’s eyes\add*.
+\v 11 Now \add however\add*, praise Yahweh, the God of your ancestors, and do \add what he’s commanded us\add* and separate yourselves from \add the other religions of\add* the peoples in this \add region\add*, including \add not marrying their\add* women.”
 \p
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
+\v 12 Then all the \add gathered Israelis\add* answered, “\add Yes, we do need to do what you’ve said\add*.
+\v 13 However, \add it’s the rainy season now, and there’s so many people who can’t stand outside for several days while we try to work all this out, because we’ve done so much wrong\add*.
+\v 14 \add So let’s delegate our leaders to make the decisions for all of us. Then we can arrange to meet together by city with our elders and judges to apply the decisions about our foreign wives, until God’s anger towards us about these matters cools down\add*.
+\v 15 The only ones who were against this \add plan\add* were Asahel’s on Yonatan and Tikvah’s son Yahzeyah, with the support of Meshullam and the Levite Shabetai.
 \p
-\v 16 ◙
-\v 17 ◙
-\s1 The males married to foreigners
+\v 16 So the \add exiled Israelis agreed to follow that plan\add*, and the names \add of the men were written down by each clan leader who then stayed behind with\add* the priest Ezra, and \add a few days later,\add* they sat down to \add start working through the lists\add*.
+\v 17 \add Some two months later,\add* they had finished \add considering all the men who had married foreign women\add*.
+\s1 The men married to foreigners
 \p
-\v 18 ◙
+\v 18 Some of the priests’ descendants had married foreign women, i.e., the descendants of Yotsadak’s son Yeshua and his brothers, Maaseyah, Eliezer, Yarib, and Gedalyah,
+\v 19 and they \add promised to expell\add* their wives, and \add because of their guilt, each of them sacrificed\add* a ram from their flock.
+\v 20 Then, \add also\add*:
+\li1 From Immer’s descendants: Hanani and Zevadyah,
+\li1
+\v 21 From Harim’s descendants: Maaseyah, Eliyyah, Shemayah, Yehiel, and Uzziyyah,
+\li1
+\v 22 From Pashhur’s descendants: Elyoeynai, Maaseyah, Yishmael, Netan’el, Yozavad, and Elasah,
+\li1
+\v 23 Among the \add other\add* Levites: Yozabad, and Shimei, and Kelayah (that is, Kelita), Petahyah, Yehudah, and Eliezer.
+\li1
+\v 24 Among the singers: Elyashiv.
+\li1 Among the temple guards: Shallum, Telem, and Uri.
 \p
-\v 19 ◙
-\v 20 ◙
+\v 25 From the other Israelis:
+\li1 From Far’osh’s descendants: Ramyah, Yizziyyah, Malkiyyah, Miyyamin, Eleazar, Malkiyyah, and Benayah.
+\li1
+\v 26 From Helam’s descendants: Mattanyah, Zekaryah, Yehiel, Avdi, Yeremot, and Eliyyah.
+\li1
+\v 27 From Zattu’s descendants: Elyoeynai, Elyashiv, Mattanyah, Yeremot, Zavad, and Aziza.
+\li1
+\v 28 From Bevai’s descendants: Yehohanan, Hananyah, Zabai, and Atlai.
+\li1
+\v 29 From Bani’s descendants: Meshullam, Malluk, Adayah, Yashuv, and Sheal-Yeremot.
+\li1
+\v 30 From Pahat-Moav’s descendants: Adna, Kelal, Benayah, Maaseyah, Mattanyah, Betsalel, Binnui, and Menashsheh.
+\li1
+\v 31 From Harim’s descendants: Eliezer, Yishshiyyah, Malkiyyah, Shemayah, Shim’on,
+\v 32 Benyamin, Malluk, and Shemaryah.
+\li1
+\v 33 From Hashum’s descendants: Mattenai, Mattattah, Zavad, Elifelet, Yeremai, Menashsheh, and Shim’i.
+\li1
+\v 34 From Bani’s descendants: Maadai, Amram, Uel,
+\v 35 Benayah, Bedeyah, Keluhi,
+\v 36 Vanyah, Meremot, Elyashiv,
+\v 37 Mattanyah, Mattenai, and Yaasu.
+\li1
+\v 38 From Binnui’s descendants: Shim’i,
+\v 39 Shelemyah, Natan, Adayah,
+\v 40 Maknadbai, Shashai, Sharai,
+\v 41 Azarel, Shelemyah, Shemaryah,
+\v 42 Shallum, Amaryah, and Yosef.
+\li1
+\v 43 From Nevo’s descendants: Yeiel, Mattityah, Zavad, Zevina, Yaddai, Yoel, and Benayah.
 \p
-\v 21 ◙
-\p
-\v 22 ◙
-\p
-\v 23 ◙
-\p
-\v 24 ◙
-\p …
-\p
-\v 25 ◙
-\p …
-\p
-\v 26 ◙
-\p
-\v 27 ◙
-\p
-\v 28 ◙
-\p
-\v 29 ◙
-\p
-\v 30 ◙
-\p
-\v 31 ◙
-\p
-\v 32 ◙
-\v 33 ◙
-\p
-\v 34 ◙
-\p
-\v 35 ◙
-\v 36 ◙
-\v 37 ◙
-\v 38 ◙
-\p
-\v 39 ◙
-\v 40 ◙
-\v 41 ◙
-\v 42 ◙
-\v 43 ◙
-\p
-\v 44 ◙
+\v 44 All of those had married foreign women and had children \add from them\add*.

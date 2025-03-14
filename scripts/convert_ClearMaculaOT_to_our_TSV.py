@@ -39,6 +39,7 @@ CHANGELOG:
     2025-01-07 Change literal gloss back to house from temple for 'בֵּ֖יתּל'
     2025-01-09 Switch from 'low-fat' XML with data missing for compound words, to Macula Hebrew 'nodes' XML
     2025-01-20 Remove 'of' from start of glosses which aren't 'construct'
+    2025-03-14 Fix bug where '[is]' and '[was]' could wrongly end up as separate glosses
 """
 from gettext import gettext as _
 # from typing import Dict, List, Tuple
@@ -62,10 +63,10 @@ from BibleOrgSys.OriginalLanguages import Hebrew
 sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew
 
-LAST_MODIFIED_DATE = '2025-01-20' # by RJH
+LAST_MODIFIED_DATE = '2025-03-14' # by RJH
 SHORT_PROGRAM_NAME = "convert_ClearMaculaOT_to_our_TSV"
 PROGRAM_NAME = "Extract and Apply Macula OT glosses"
-PROGRAM_VERSION = '0.53'
+PROGRAM_VERSION = '0.54'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -252,328 +253,335 @@ def loadOurSourceTable() -> bool:
 
 
 wordnumber_regex = re.compile( '[0-9]{12}' )
-def loadMaculaHebrewLowFatXMLGlosses() -> bool:
-    """
-    Reads in the Clear.Bible 'low-fat' XML chapter files
-        and then finds all <w> and <wg> entries (keeping track of their parents, e.g., other <wg>s or <sentence>)
+# def loadMaculaHebrewLowFatXMLGlosses() -> bool:
+#     """
+#     Reads in the Clear.Bible 'low-fat' XML chapter files
+#         and then finds all <w> and <wg> entries (keeping track of their parents, e.g., other <wg>s or <sentence>)
     
-    Loads all the <w> entries for the chapter into a temporary list
-        and sorts them by their numerical id, e.g., <w xml:id="o010030040011" = obbcccvvvwwws
-            but note: it can be <w xml:id="o010030060101ה" for definite article after preposition
+#     Loads all the <w> entries for the chapter into a temporary list
+#         and sorts them by their numerical id, e.g., <w xml:id="o010030040011" = obbcccvvvwwws
+#             but note: it can be <w xml:id="o010030060101ה" for definite article after preposition
 
-    Extract glosses out of fields 
-    Reorganise columns and add our extra columns
-    """
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading Clear.Bible OT 'low fat' glosses from {state.macula_Hebrew_Lowfat_XML_input_folderpath}/…" )
+#     Extract glosses out of fields 
+#     Reorganise columns and add our extra columns
+#     """
+#     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading Clear.Bible OT 'low fat' glosses from {state.macula_Hebrew_Lowfat_XML_input_folderpath}/…" )
     
-    max_nesting_level = 0
-    column_counts = defaultdict(lambda: defaultdict(int))
-    # non_blank_counts = defaultdict(int)
-    refDict = {}
-    for referenceNumber in range(1, 39+1):
-        BBB = BibleOrgSysGlobals.loadedBibleBooksCodes.getBBBFromReferenceNumber( referenceNumber )
-        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading Macula Hebrew LowFat {BBB} XML files…")
-        Uuu = BibleOrgSysGlobals.loadedBibleBooksCodes.getUSFMAbbreviation( BBB )
-        if Uuu=='Hos': Uuu = 'HOS' # Fix inconsistency in naming patterns
-        filenameTemplate = MACULA_HEBREW_LOWFAT_XML_INPUT_FILENAME_TEMPLATE.replace( 'NN', str(referenceNumber).zfill(2) ).replace( 'Uuu', Uuu )
+#     max_nesting_level = 0
+#     column_counts = defaultdict(lambda: defaultdict(int))
+#     # non_blank_counts = defaultdict(int)
+#     refDict = {}
+#     for referenceNumber in range(1, 39+1):
+#         BBB = BibleOrgSysGlobals.loadedBibleBooksCodes.getBBBFromReferenceNumber( referenceNumber )
+#         vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading Macula Hebrew LowFat {BBB} XML files…")
+#         Uuu = BibleOrgSysGlobals.loadedBibleBooksCodes.getUSFMAbbreviation( BBB )
+#         if Uuu=='Hos': Uuu = 'HOS' # Fix inconsistency in naming patterns
+#         filenameTemplate = MACULA_HEBREW_LOWFAT_XML_INPUT_FILENAME_TEMPLATE.replace( 'NN', str(referenceNumber).zfill(2) ).replace( 'Uuu', Uuu )
 
-        for chapterNumber in range(1, 150+1):
-            filename = filenameTemplate.replace( 'CCC', str(chapterNumber).zfill(3) )
-            try:
-                chapterTree = ElementTree.parse( state.macula_Hebrew_Lowfat_XML_input_folderpath.joinpath( filename ) )
-            except FileNotFoundError:
-                break # gone beyond the number of chapters
+#         for chapterNumber in range(1, 150+1):
+#             filename = filenameTemplate.replace( 'CCC', str(chapterNumber).zfill(3) )
+#             try:
+#                 chapterTree = ElementTree.parse( state.macula_Hebrew_Lowfat_XML_input_folderpath.joinpath( filename ) )
+#             except FileNotFoundError:
+#                 break # gone beyond the number of chapters
 
-            # First make a table of parents so we can find them later
-            parentMap = {child:parent for parent in chapterTree.iter() for child in parent if child.tag in ('w','wg','c')}
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Loaded {len(parentMap):,} parent entries." )
+#             # First make a table of parents so we can find them later
+#             parentMap = {child:parent for parent in chapterTree.iter() for child in parent if child.tag in ('w','wg','c')}
+#             dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Loaded {len(parentMap):,} parent entries." )
 
-            # Now load all the word (w) fields for the chapter into a temporary list
-            tempWordsAndMorphemes = []
-            longIDs = []
-            transliteratedLemmas = {}
-            for elem in chapterTree.getroot().iter():
-                if elem.tag == 'w': # ignore all the others -- there's enough info in here
-                    for attribName in elem.attrib:
-                        assert attribName in EXPECTED_MACULA_HEBREW_LOWFAT_WORD_ATTRIBUTES, f"loadMaculaHebrewLowFatXMLGlosses(): unexpected {attribName=}"
+#             # Now load all the word (w) fields for the chapter into a temporary list
+#             tempWordsAndMorphemes = []
+#             longIDs = []
+#             transliteratedLemmas = {}
+#             for elem in chapterTree.getroot().iter():
+#                 if elem.tag == 'w': # ignore all the others -- there's enough info in here
+#                     for attribName in elem.attrib:
+#                         assert attribName in EXPECTED_MACULA_HEBREW_LOWFAT_WORD_ATTRIBUTES, f"loadMaculaHebrewLowFatXMLGlosses(): unexpected {attribName=}"
 
-                    wordOrMorpheme = elem.text
-                    theirRef = elem.get('ref') # e.g., "GEN 1:1!1"
-                    # print( f"{theirRef=} {wordOrMorpheme=}" )
+#                     wordOrMorpheme = elem.text
+#                     theirRef = elem.get('ref') # e.g., "GEN 1:1!1"
+#                     # print( f"{theirRef=} {wordOrMorpheme=}" )
 
-                    longID = elem.get('{http://www.w3.org/XML/1998/namespace}id') # e.g., o010010050031 = obbcccvvvwwws
-                    longIDs.append( longID )
-                    assert longID.startswith( 'o' ) # Stands for OldTestament
-                    longID = longID[1:] # remove 'o' prefix
-                    if len(longID) > 12: # it's an article (vowel after preposition)
-                        assert len(longID) == 13
-                        assert longID.endswith( 'ה' )
-                        assert longID[:-1].isdigit()
-                    else:
-                        assert len(longID) == 12
-                        assert longID[:].isdigit()
+#                     longID = elem.get('{http://www.w3.org/XML/1998/namespace}id') # e.g., o010010050031 = obbcccvvvwwws
+#                     longIDs.append( longID )
+#                     assert longID.startswith( 'o' ) # Stands for OldTestament
+#                     longID = longID[1:] # remove 'o' prefix
+#                     if len(longID) > 12: # it's an article (vowel after preposition)
+#                         assert len(longID) == 13
+#                         assert longID.endswith( 'ה' )
+#                         assert longID[:-1].isdigit()
+#                     else:
+#                         assert len(longID) == 12
+#                         assert longID[:].isdigit()
 
-                    gloss = elem.get('gloss')
-                    if gloss:
-                        if '(et)' in gloss or '(dm)' in gloss:
-                            print( f"(et) or (dm) {theirRef=} {wordOrMorpheme=} {gloss=}" )
-                            if '(et)' in gloss and wordOrMorpheme not in ('אֵ֥ת','אֶת','אֶֽת','אֵ֚ת','אֵ֖ת','אֵ֛ת','אֵ֣ת','אֶׄתׄ','אֵת֩','אֵ֤ת','אֶ֨ת','אֵ֡ת','אֵ֧ת','אֵ֠ת','אֵ֗ת','אֵת','אֵֽת','אֶ֥ת','אֵ֝֗ת','אֵ֝ת','אֵת֮','אֶתּ'):
-                                halt
-                            if '(dm)' in gloss and wordOrMorpheme not in ('כִּי','כִּ֣י','כִּי֩','כִּ֗י','כִּ֥י','כִּֽי','כִּ֚י','כִּ֛י','כִּ֤י','כִּ֠י','כִּ֧י','כִֽי','כִּ֡י','כִּ֖י','כִּ֞י','כִ֤י','כִ֥י','כִּ֨י','כִי','כִ֗י','כִ֔י','כִּ֭י','כִּ֘י','כִּ֝֗י','כִּ֬י','כִּ֪י','כִ֛י','כִּ֩י'):
-                                if theirRef not in ('DAN 1:8!5','DAN 1:8!15') or wordOrMorpheme not in ('אֲשֶׁ֧ר','אֲשֶׁ֖ר'):
-                                    halt
-                        gloss = ( gloss.replace( '.', '_' ) # Change to our system
-                                    .replace( '(et)', 'DOM' ) # Change to our 'DOM' = DirectObjectMarker
-                                    .replace( '(dm)', '' if theirRef.startswith('DAN 1:8!') else 'if/because') # What is dm supposed to mean?
-                                )
-                        assert '’' not in gloss, f"{theirRef=} {wordOrMorpheme=} {gloss=}"
+#                     gloss = elem.get('gloss')
+#                     if gloss:
+#                         if '(et)' in gloss or '(dm)' in gloss:
+#                             print( f"(et) or (dm) {theirRef=} {wordOrMorpheme=} {gloss=}" )
+#                             if '(et)' in gloss and wordOrMorpheme not in ('אֵ֥ת','אֶת','אֶֽת','אֵ֚ת','אֵ֖ת','אֵ֛ת','אֵ֣ת','אֶׄתׄ','אֵת֩','אֵ֤ת','אֶ֨ת','אֵ֡ת','אֵ֧ת','אֵ֠ת','אֵ֗ת','אֵת','אֵֽת','אֶ֥ת','אֵ֝֗ת','אֵ֝ת','אֵת֮','אֶתּ'):
+#                                 halt
+#                             if '(dm)' in gloss and wordOrMorpheme not in ('כִּי','כִּ֣י','כִּי֩','כִּ֗י','כִּ֥י','כִּֽי','כִּ֚י','כִּ֛י','כִּ֤י','כִּ֠י','כִּ֧י','כִֽי','כִּ֡י','כִּ֖י','כִּ֞י','כִ֤י','כִ֥י','כִּ֨י','כִי','כִ֗י','כִ֔י','כִּ֭י','כִּ֘י','כִּ֝֗י','כִּ֬י','כִּ֪י','כִ֛י','כִּ֩י'):
+#                                 if theirRef not in ('DAN 1:8!5','DAN 1:8!15') or wordOrMorpheme not in ('אֲשֶׁ֧ר','אֲשֶׁ֖ר'):
+#                                     halt
+#                         gloss = ( gloss.replace( '.', '_' ) # Change to our system
+#                                     .replace( '(et)', 'DOM' ) # Change to our 'DOM' = DirectObjectMarker
+#                                     .replace( '(dm)', '' if theirRef.startswith('DAN 1:8!') else 'if/because') # What is dm supposed to mean?
+#                                 )
+#                         assert '’' not in gloss, f"{theirRef=} {wordOrMorpheme=} {gloss=}"
 
-                    lang = elem.get('lang')
-                    column_counts['lang'][lang] += 1
-                    assert lang in 'HA'
-                    wordType = elem.get('type')
-                    column_counts['type'][wordType] += 1
-                    print( f"{theirRef=} {wordOrMorpheme=} {gloss=} {lang=} {wordType=}" )
-                    assert wordType in ('common','definite article','direct object marker','qatal'), f"{theirRef=} {wordOrMorpheme=} {gloss=} {lang=} {wordType=}"
-                    wordState = elem.get('state')
-                    column_counts['state'][wordState] += 1
-                    if wordState:
-                        # What is 'determined' in Ezra 4:8!5, etc.
-                        assert wordState in ('absolute','construct','determined'), f"Found unexpected {wordState=}"
-                    # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    {ref} {longID} {lang} '{wordOrMorpheme}' {English=} {gloss=}")
+#                     lang = elem.get('lang')
+#                     column_counts['lang'][lang] += 1
+#                     assert lang in 'HA'
+#                     wordType = elem.get('type')
+#                     column_counts['type'][wordType] += 1
+#                     print( f"{theirRef=} {wordOrMorpheme=} {gloss=} {lang=} {wordType=}" )
+#                     assert wordType in ('common','definite article','direct object marker','qatal'), f"{theirRef=} {wordOrMorpheme=} {gloss=} {lang=} {wordType=}"
+#                     wordState = elem.get('state')
+#                     column_counts['state'][wordState] += 1
+#                     if wordState:
+#                         # What is 'determined' in Ezra 4:8!5, etc.
+#                         assert wordState in ('absolute','construct','determined'), f"Found unexpected {wordState=}"
+#                     # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    {ref} {longID} {lang} '{wordOrMorpheme}' {English=} {gloss=}")
 
-                    compound = elem.get('compound')
-                    assert not compound # it seems to have gone
-                    column_counts['compound'][compound] += 1
+#                     compound = elem.get('compound')
+#                     assert not compound # it seems to have gone
+#                     column_counts['compound'][compound] += 1
 
-                    stem = elem.get('stem')
-                    column_counts['stem'][stem] += 1
-                    morph = elem.get('morph')
-                    # column_counts['morph'][morph] += 1 # There's over 700 different variations
-                    lemma = elem.get('lemma')
-                    if lemma:
-                        # I think this is a Clear.Bible error
-                        # AssertionError: unicodedata.name(char)='HEBREW ACCENT OLE' lemma='אֶ֫רֶץ' longID='010010010072'
-                        for char in lemma:
-                            if 'ACCENT' in unicodedata.name(char):
-                                logger = logging.critical if DEBUGGING_THIS_MODULE else logging.error
-                                logger( f"Unexpected character in LowFat lemma '{unicodedata.name(char)}' {lemma=} {longID=}" )
-                        lemma = removeHebrewCantillationMarks( lemma )
-                        for char in lemma:
-                            assert 'ACCENT' not in unicodedata.name(char), f"{unicodedata.name(char)=} {lemma=} {longID=}"
-                        transliteratedLemma = transliterate_Hebrew( lemma )
-                        # If the following fails, our lemmas aren't unique
-                        if transliteratedLemma in transliteratedLemmas:
-                            assert transliteratedLemmas[transliteratedLemma] == lemma, f"Multiple transcriptions of lemma {longID} {lemma=} {transliteratedLemma=} {transliteratedLemmas[transliteratedLemma]=}"
-                        else: transliteratedLemmas[transliteratedLemma] = lemma
-                    senseNumber = elem.get('sensenumber')
-                    column_counts['sensenumber'][senseNumber] += 1
+#                     stem = elem.get('stem')
+#                     column_counts['stem'][stem] += 1
+#                     morph = elem.get('morph')
+#                     # column_counts['morph'][morph] += 1 # There's over 700 different variations
+#                     lemma = elem.get('lemma')
+#                     if lemma:
+#                         # I think this is a Clear.Bible error
+#                         # AssertionError: unicodedata.name(char)='HEBREW ACCENT OLE' lemma='אֶ֫רֶץ' longID='010010010072'
+#                         for char in lemma:
+#                             if 'ACCENT' in unicodedata.name(char):
+#                                 logger = logging.critical if DEBUGGING_THIS_MODULE else logging.error
+#                                 logger( f"Unexpected character in LowFat lemma '{unicodedata.name(char)}' {lemma=} {longID=}" )
+#                         lemma = removeHebrewCantillationMarks( lemma )
+#                         for char in lemma:
+#                             assert 'ACCENT' not in unicodedata.name(char), f"{unicodedata.name(char)=} {lemma=} {longID=}"
+#                         transliteratedLemma = transliterate_Hebrew( lemma )
+#                         # If the following fails, our lemmas aren't unique
+#                         if transliteratedLemma in transliteratedLemmas:
+#                             assert transliteratedLemmas[transliteratedLemma] == lemma, f"Multiple transcriptions of lemma {longID} {lemma=} {transliteratedLemma=} {transliteratedLemmas[transliteratedLemma]=}"
+#                         else: transliteratedLemmas[transliteratedLemma] = lemma
+#                     senseNumber = elem.get('sensenumber')
+#                     column_counts['sensenumber'][senseNumber] += 1
 
-                    after = elem.get('after')
-                    column_counts['after'][after] += 1
-                    if after: assert len(after) <= 2, f"{len(after)} {after=}"
+#                     after = elem.get('after')
+#                     column_counts['after'][after] += 1
+#                     if after: assert len(after) <= 2, f"{len(after)} {after=}"
 
-                    wClass = elem.get('class')
-                    column_counts['class'][wClass] += 1
-                    PoS = elem.get('pos')
-                    column_counts['pos'][PoS] += 1
-                    person = elem.get('person')
-                    column_counts['person'][person] += 1
-                    gender = elem.get('gender')
-                    column_counts['gender'][gender] += 1
-                    number = elem.get('number')
-                    column_counts['number'][number] += 1
-                    role = elem.get('role')
-                    column_counts['role'][role] += 1
+#                     wClass = elem.get('class')
+#                     column_counts['class'][wClass] += 1
+#                     PoS = elem.get('pos')
+#                     column_counts['pos'][PoS] += 1
+#                     person = elem.get('person')
+#                     column_counts['person'][person] += 1
+#                     gender = elem.get('gender')
+#                     column_counts['gender'][gender] += 1
+#                     number = elem.get('number')
+#                     column_counts['number'][number] += 1
+#                     role = elem.get('role')
+#                     column_counts['role'][role] += 1
 
-                    # Cross-checking
-                    # TODO: Could do much more of this
-                    if PoS=='noun': assert morph.startswith('N')
-                    if morph.startswith('N'): assert PoS=='noun'
+#                     # Cross-checking
+#                     # TODO: Could do much more of this
+#                     if PoS=='noun': assert morph.startswith('N')
+#                     if morph.startswith('N'): assert PoS=='noun'
 
-                    English = elem.get('english')
-                    if English == '.and': English = 'and' # at ISA 65:9!9
-                    if English:
-                        assert '.' not in English
-                        assert English.strip() == English # No leading or trailing spaces
-                        English = English.replace( ' ', '_' ).replace('’s',"'s").replace('s’',"s'").replace('’t',"'t").replace('’S',"'S") # brother's sons' don't LORD'S
-                        assert '’' not in English, f"{theirRef=} {wordOrMorpheme=} {English=}"
-                    else: English = '' # Instead of None
-                    assert '(et)' not in English and '(dm)' not in English, f"{English=}"
+#                     English = elem.get('english')
+#                     if English == '.and': English = 'and' # at ISA 65:9!9
+#                     if English:
+#                         assert '.' not in English
+#                         assert English.strip() == English # No leading or trailing spaces
+#                         English = English.replace( ' ', '_' ).replace('’s',"'s").replace('s’',"s'").replace('’t',"'t").replace('’S',"'S") # brother's sons' don't LORD'S
+#                         assert '’' not in English, f"{theirRef=} {wordOrMorpheme=} {English=}"
+#                     else: English = '' # Instead of None
+#                     assert '(et)' not in English and '(dm)' not in English, f"{English=}"
 
-                    # Do some on-the-fly fixes
-                    # Note: We can't handle the logic below with our SBE tables
-                    if gloss and 'temple' in gloss:
-                        # print( f"TEMPLE gloss {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
-                        if 'ה' in wordOrMorpheme and 'כ' in wordOrMorpheme and 'ל' in wordOrMorpheme:
-                            # 'הֵיכַל' (hēykal) is ok
-                            assert 'ב' not in wordOrMorpheme
-                            assert 'ת' not in wordOrMorpheme
-                        if 'ב' in wordOrMorpheme and 'ת' in wordOrMorpheme:
-                            print( f"Changing gloss 'temple' to 'house' for {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
-                            assert 'כ' not in wordOrMorpheme
-                            assert 'ל' not in wordOrMorpheme
-                            gloss = gloss.replace( 'temple', 'house' )
-                            never_happens
-                    if English and 'temple' in English:
-                        # print( f"TEMPLE English {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
-                        if 'ה' in wordOrMorpheme and 'כ' in wordOrMorpheme and 'ל' in wordOrMorpheme:
-                            # ‘הֵיכַל’ (hēykal) is ok
-                            assert 'ב' not in wordOrMorpheme
-                            assert 'ת' not in wordOrMorpheme
-                        if 'ב' in wordOrMorpheme and 'ת' in wordOrMorpheme: # probably 'בֵּית'
-                            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Changing English 'temple' to 'house' for {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
-                            assert 'כ' not in wordOrMorpheme
-                            assert 'ל' not in wordOrMorpheme
-                            English = English.replace( 'temple', 'house' )
+#                     # Do some on-the-fly fixes
+#                     # Note: We can't handle the logic below with our SBE tables
+#                     if gloss and 'temple' in gloss:
+#                         # print( f"TEMPLE gloss {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
+#                         if 'ה' in wordOrMorpheme and 'כ' in wordOrMorpheme and 'ל' in wordOrMorpheme:
+#                             # 'הֵיכַל' (hēykal) is ok
+#                             assert 'ב' not in wordOrMorpheme
+#                             assert 'ת' not in wordOrMorpheme
+#                         if 'ב' in wordOrMorpheme and 'ת' in wordOrMorpheme:
+#                             print( f"Changing gloss 'temple' to 'house' for {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
+#                             assert 'כ' not in wordOrMorpheme
+#                             assert 'ל' not in wordOrMorpheme
+#                             gloss = gloss.replace( 'temple', 'house' )
+#                             never_happens
+#                     if English and 'temple' in English:
+#                         # print( f"TEMPLE English {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
+#                         if 'ה' in wordOrMorpheme and 'כ' in wordOrMorpheme and 'ל' in wordOrMorpheme:
+#                             # ‘הֵיכַל’ (hēykal) is ok
+#                             assert 'ב' not in wordOrMorpheme
+#                             assert 'ת' not in wordOrMorpheme
+#                         if 'ב' in wordOrMorpheme and 'ת' in wordOrMorpheme: # probably 'בֵּית'
+#                             vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Changing English 'temple' to 'house' for {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
+#                             assert 'כ' not in wordOrMorpheme
+#                             assert 'ל' not in wordOrMorpheme
+#                             English = English.replace( 'temple', 'house' )
+#                     # if (gloss and '[is]' in gloss) or (English and '[is]' in English):
+#                     #     print( f"Have '[is]' in {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
+#                     #     halt
+#                     # if gloss=='[is]' or English=='[is]' \
+#                     # or (gloss and gloss[0]=='[' and gloss[-1]==']' and '_' not in gloss) \
+#                     # or (English and English[0]=='[' and English[-1]==']' and '_' not in English):
+#                     #     halt
 
-                    # Get all the parent elements so we can determine the nesting
-                    startElement = elem
-                    nestingBits = []
-                    for _safetyCheck in range( 22 ): # This is the max number of expected nesting levels -- unexpectedly high
-                        parentElem = parentMap[startElement]
-                        if parentElem.tag == 'sentence': break
-                        assert parentElem.tag in ('wg','c'), f"{elem.tag=} {theirRef=} {wordOrMorpheme=} {gloss=} {English=} {parentElem.tag=}"
-                        pClass, pRole, pRule = parentElem.get('class'), parentElem.get('role'), parentElem.get('rule')
-                        if parentElem.tag == 'c':
-                            # assert not pClass and not pRole and not pRule, f"{pClass=} {pRole=} {pRule=}" # Had pRole='o' somewhere
-                            compound = True
-                        else:
-                            assert parentElem.tag == 'wg'
-                        if pRole:
-                            if pRule: # have both
-                                nestingBits.append( f'{pRole}={pRule}' )
-                            else: # only have role
-                                nestingBits.append( pRole )
-                        elif pRule: # have no role
-                            nestingBits.append( pRule )
-                        # else: # no role or rule attributes on parent <wg>
-                        #     # assert pClass=='compound', f"{theirRef} has no role/rule {pClass=} {nestingBits}"
-                        #     print( f"{theirRef} has no role/rule {pClass=} {nestingBits}" ) # We now have empty wg's around the words for the entire sentence (but not including the <p> with <milestone>)
-                        startElement = parentElem
-                    else: we_ran_out_of_loops
-                    if len(nestingBits) >= max_nesting_level:
-                        max_nesting_level = len(nestingBits) + 1
+#                     # Get all the parent elements so we can determine the nesting
+#                     startElement = elem
+#                     nestingBits = []
+#                     for _safetyCheck in range( 22 ): # This is the max number of expected nesting levels -- unexpectedly high
+#                         parentElem = parentMap[startElement]
+#                         if parentElem.tag == 'sentence': break
+#                         assert parentElem.tag in ('wg','c'), f"{elem.tag=} {theirRef=} {wordOrMorpheme=} {gloss=} {English=} {parentElem.tag=}"
+#                         pClass, pRole, pRule = parentElem.get('class'), parentElem.get('role'), parentElem.get('rule')
+#                         if parentElem.tag == 'c':
+#                             # assert not pClass and not pRole and not pRule, f"{pClass=} {pRole=} {pRule=}" # Had pRole='o' somewhere
+#                             compound = True
+#                         else:
+#                             assert parentElem.tag == 'wg'
+#                         if pRole:
+#                             if pRule: # have both
+#                                 nestingBits.append( f'{pRole}={pRule}' )
+#                             else: # only have role
+#                                 nestingBits.append( pRole )
+#                         elif pRule: # have no role
+#                             nestingBits.append( pRule )
+#                         # else: # no role or rule attributes on parent <wg>
+#                         #     # assert pClass=='compound', f"{theirRef} has no role/rule {pClass=} {nestingBits}"
+#                         #     print( f"{theirRef} has no role/rule {pClass=} {nestingBits}" ) # We now have empty wg's around the words for the entire sentence (but not including the <p> with <milestone>)
+#                         startElement = parentElem
+#                     else: we_ran_out_of_loops
+#                     if len(nestingBits) >= max_nesting_level:
+#                         max_nesting_level = len(nestingBits) + 1
 
-                    # Names have to match state.output_fieldnames:
-                    # ['FGRef','OSHBid','RowType','LFRef','LFNumRef',
-                    # 'Language','WordOrMorpheme','Unicode','Transliteration','After',
-                    # 'WordClass','PartOfSpeech','Person','Gender','Number','WordType','State','SDBH',
-                    # 'StrongNumberX','StrongLemma','Stem','Morphology','Lemma','SenseNumber',
-                    # 'CoreDomain','LexicalDomain', # 'ContextualDomain',
-                    # 'SubjRef','ParticipantRef','Frame',
-                    # 'Greek','GreekStrong',
-                    # 'EnglishGloss','MandarinGloss','ContextualGloss',
-                    # 'Nesting']
-                    entry = {'LFRef':theirRef, 'LFNumRef':longID, 'Language':lang, 'WordOrMorpheme':wordOrMorpheme,
-                                'Unicode':elem.get('unicode'), 'Transliteration':elem.get('transliteration'), 'After':after,
-                                'WordClass':wClass, 'Compound':compound, 'PartOfSpeech':PoS, 'Person':person, 'Gender':gender, 'Number':number,
-                                'WordType':wordType, 'State':wordState, 'Role':role, 'SDBH':elem.get('sdbh'),
-                                'StrongNumberX':elem.get('strongnumberx'), 'StrongLemma':elem.get('stronglemma'),
-                                'Stem':stem, 'Morphology':morph, 'Lemma':lemma, 'SenseNumber':senseNumber,
-                                'CoreDomain':elem.get('coredomain'), 'LexicalDomain':elem.get('lexdomain'), 'Frame':elem.get('frame'),
-                                'SubjRef':elem.get('subjref'), 'ParticipantRef':elem.get('participantref'), # 'ContextualDomain':elem.get('contextualdomain'),
-                                'Greek':elem.get('greek'), 'GreekStrong':elem.get('greekstrong'),
-                                'EnglishGloss':English, 'MandarinGloss':elem.get('mandarin'), 'ContextualGloss':gloss,
-                                'Nesting':'/'.join(reversed(nestingBits)) }
-                    assert len(entry) == len(state.morpheme_output_fieldnames)-3, f"{len(entry)=} vs {len(state.morpheme_output_fieldnames)=}" # Three more fields to be added below
-                    # for k,v in entry.items():
-                    #     if v: non_blank_counts[k] += 1
-                    tempWordsAndMorphemes.append( entry )
-                    # dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\n  ({len(entry)}) {entry}" ) # 28
-                    # if len(tempWordsAndMorphemes) > 5: halt
+#                     # Names have to match state.output_fieldnames:
+#                     # ['FGRef','OSHBid','RowType','LFRef','LFNumRef',
+#                     # 'Language','WordOrMorpheme','Unicode','Transliteration','After',
+#                     # 'WordClass','PartOfSpeech','Person','Gender','Number','WordType','State','SDBH',
+#                     # 'StrongNumberX','StrongLemma','Stem','Morphology','Lemma','SenseNumber',
+#                     # 'CoreDomain','LexicalDomain', # 'ContextualDomain',
+#                     # 'SubjRef','ParticipantRef','Frame',
+#                     # 'Greek','GreekStrong',
+#                     # 'EnglishGloss','MandarinGloss','ContextualGloss',
+#                     # 'Nesting']
+#                     entry = {'LFRef':theirRef, 'LFNumRef':longID, 'Language':lang, 'WordOrMorpheme':wordOrMorpheme,
+#                                 'Unicode':elem.get('unicode'), 'Transliteration':elem.get('transliteration'), 'After':after,
+#                                 'WordClass':wClass, 'Compound':compound, 'PartOfSpeech':PoS, 'Person':person, 'Gender':gender, 'Number':number,
+#                                 'WordType':wordType, 'State':wordState, 'Role':role, 'SDBH':elem.get('sdbh'),
+#                                 'StrongNumberX':elem.get('strongnumberx'), 'StrongLemma':elem.get('stronglemma'),
+#                                 'Stem':stem, 'Morphology':morph, 'Lemma':lemma, 'SenseNumber':senseNumber,
+#                                 'CoreDomain':elem.get('coredomain'), 'LexicalDomain':elem.get('lexdomain'), 'Frame':elem.get('frame'),
+#                                 'SubjRef':elem.get('subjref'), 'ParticipantRef':elem.get('participantref'), # 'ContextualDomain':elem.get('contextualdomain'),
+#                                 'Greek':elem.get('greek'), 'GreekStrong':elem.get('greekstrong'),
+#                                 'EnglishGloss':English, 'MandarinGloss':elem.get('mandarin'), 'ContextualGloss':gloss,
+#                                 'Nesting':'/'.join(reversed(nestingBits)) }
+#                     assert len(entry) == len(state.morpheme_output_fieldnames)-3, f"{len(entry)=} vs {len(state.morpheme_output_fieldnames)=}" # Three more fields to be added below
+#                     # for k,v in entry.items():
+#                     #     if v: non_blank_counts[k] += 1
+#                     tempWordsAndMorphemes.append( entry )
+#                     # dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\n  ({len(entry)}) {entry}" ) # 28
+#                     # if len(tempWordsAndMorphemes) > 5: halt
 
-            vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Got {len(tempWordsAndMorphemes):,} words/morphemes in {BBB} {chapterNumber}")
-            assert len(set(longIDs)) == len(longIDs), f"Should be no duplicates in {longIDs=}"
+#             vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Got {len(tempWordsAndMorphemes):,} words/morphemes in {BBB} {chapterNumber}")
+#             assert len(set(longIDs)) == len(longIDs), f"Should be no duplicates in {longIDs=}"
 
-            # Note that because of the phrase/clause nesting, we can get the word fields in the wrong order
-            #   so we sort them, before adjusting the formatting to what we're after
-            # We sort by the Clear.Bible longID (2nd item in tuple, which already has the leading 'o' removed)
-            sortedTempWordsAndMorphemes = sorted( tempWordsAndMorphemes, key=lambda t: t['LFNumRef'] )
+#             # Note that because of the phrase/clause nesting, we can get the word fields in the wrong order
+#             #   so we sort them, before adjusting the formatting to what we're after
+#             # We sort by the Clear.Bible longID (2nd item in tuple, which already has the leading 'o' removed)
+#             sortedTempWordsAndMorphemes = sorted( tempWordsAndMorphemes, key=lambda t: t['LFNumRef'] )
 
-            # Adjust to our references and with just the data that we need to retain
-            # Build a ref/id dictionary as we go
-            for j,firstEntryAttempt in enumerate( sortedTempWordsAndMorphemes ):
-                longID = firstEntryAttempt['LFNumRef']
+#             # Adjust to our references and with just the data that we need to retain
+#             # Build a ref/id dictionary as we go
+#             for j,firstEntryAttempt in enumerate( sortedTempWordsAndMorphemes ):
+#                 longID = firstEntryAttempt['LFNumRef']
                 
-                if longID.endswith( 'ה' ):  # it's an article (vowel after preposition)
-                    # print(f"Got article {longID=}")
-                    assert firstEntryAttempt['WordOrMorpheme'] is None # No wordOrMorpheme
-                    assert firstEntryAttempt['ContextualGloss'] is None # No gloss
-                    english = firstEntryAttempt['EnglishGloss']
-                    wordType = firstEntryAttempt['WordType']
-                    assert wordType == 'definite article'
-                    # print(f"Got article {longID=} with '{english}' {wType=}")
-                    # Add the article gloss to the previous entry
-                    lastExpandedEntry = state.maculaHebrewWordsAndMorphemes[-1] # We'll edit the last dict entry in place
-                    lastExpandedEntry['EnglishGloss'] = f"{lastExpandedEntry['EnglishGloss']}_{english if english else 'THE'}" # Why wasn't the gloss there?
-                    # else: print(f"{longID} There wasn't an English gloss!!!"); halt
-                else: # a normal word or morpheme entry
-                    try: nextLongID = sortedTempWordsAndMorphemes[j+1]['LFNumRef']
-                    except IndexError: nextLongID = '1'
-                    if nextLongID.endswith('ה'): # we have to skip this one
-                        try: nextLongID = sortedTempWordsAndMorphemes[j+1+1]['LFNumRef']
-                        except IndexError: nextLongID = '1'
-                    assert nextLongID != longID, f"Should be no duplicate IDs: {j=} {longID=} {nextLongID=} {firstEntryAttempt}"
-                    if nextLongID.endswith( '1' ): # current entry is end of a word
-                        mwType = 'w' if longID.endswith( '1' ) else 'M'
-                    else: # the above works but fails when the first morpheme of a word is (wrongly) missing
-                        # print(f"{longID=} going to {nextLongID=} ")
-                        assert len(nextLongID) == len(longID) == 12 # leading 'o' has already been removed
-                        nextLongIDWordBit = nextLongID[:-1]
-                        longIDWordBit = longID[:-1]
-                        if nextLongIDWordBit == longIDWordBit: # we're still in the same word
-                            mwType = 'm' # There's a following part of this word
-                        else: # we going on to a new word, but the first part is missing
-                            mwType = 'w' if longID.endswith( '1' ) else 'M'
-                    suffix = '' if mwType=='w' else SUFFIX_DICT[longID[-1]]
-                    if firstEntryAttempt['Language'] == 'A': mwType = f'A{mwType}' # Assume Hebrew; mark Aramaic
-                    ourRef = f"{BBB}_{firstEntryAttempt['LFRef'][4:].replace( '!', 'w')}{suffix}"
-                    assert longID not in refDict
-                    refDict[longID] = ourRef # Create dict for next loop
-                    # print(f"{longID=} {nextLongID=} {mwType=} {ourRef=}")
-                    newExpandedDictEntry = {'FGRef':ourRef, 'RowType':mwType, **firstEntryAttempt}
-                    assert len(newExpandedDictEntry) == len(state.morpheme_output_fieldnames)-1, f"{len(newExpandedDictEntry)=} vs {len(state.morpheme_output_fieldnames)=}" # OSHBid field to be added below
-                    state.maculaHebrewWordsAndMorphemes.append( newExpandedDictEntry )
-    # if 1:
-    #     for n,currentEntry in enumerate(state.maculaHebrewWordsAndMorphemes):
-    #         print(f"{n} ({len(currentEntry)}) {currentEntry}")
-    #         if n > 10: break
-    #     halt
+#                 if longID.endswith( 'ה' ):  # it's an article (vowel after preposition)
+#                     # print(f"Got article {longID=}")
+#                     assert firstEntryAttempt['WordOrMorpheme'] is None # No wordOrMorpheme
+#                     assert firstEntryAttempt['ContextualGloss'] is None # No gloss
+#                     english = firstEntryAttempt['EnglishGloss']
+#                     wordType = firstEntryAttempt['WordType']
+#                     assert wordType == 'definite article'
+#                     # print(f"Got article {longID=} with '{english}' {wType=}")
+#                     # Add the article gloss to the previous entry
+#                     lastExpandedEntry = state.maculaHebrewWordsAndMorphemes[-1] # We'll edit the last dict entry in place
+#                     lastExpandedEntry['EnglishGloss'] = f"{lastExpandedEntry['EnglishGloss']}_{english if english else 'THE'}" # Why wasn't the gloss there?
+#                     # else: print(f"{longID} There wasn't an English gloss!!!"); halt
+#                 else: # a normal word or morpheme entry
+#                     try: nextLongID = sortedTempWordsAndMorphemes[j+1]['LFNumRef']
+#                     except IndexError: nextLongID = '1'
+#                     if nextLongID.endswith('ה'): # we have to skip this one
+#                         try: nextLongID = sortedTempWordsAndMorphemes[j+1+1]['LFNumRef']
+#                         except IndexError: nextLongID = '1'
+#                     assert nextLongID != longID, f"Should be no duplicate IDs: {j=} {longID=} {nextLongID=} {firstEntryAttempt}"
+#                     if nextLongID.endswith( '1' ): # current entry is end of a word
+#                         mwType = 'w' if longID.endswith( '1' ) else 'M'
+#                     else: # the above works but fails when the first morpheme of a word is (wrongly) missing
+#                         # print(f"{longID=} going to {nextLongID=} ")
+#                         assert len(nextLongID) == len(longID) == 12 # leading 'o' has already been removed
+#                         nextLongIDWordBit = nextLongID[:-1]
+#                         longIDWordBit = longID[:-1]
+#                         if nextLongIDWordBit == longIDWordBit: # we're still in the same word
+#                             mwType = 'm' # There's a following part of this word
+#                         else: # we going on to a new word, but the first part is missing
+#                             mwType = 'w' if longID.endswith( '1' ) else 'M'
+#                     suffix = '' if mwType=='w' else SUFFIX_DICT[longID[-1]]
+#                     if firstEntryAttempt['Language'] == 'A': mwType = f'A{mwType}' # Assume Hebrew; mark Aramaic
+#                     ourRef = f"{BBB}_{firstEntryAttempt['LFRef'][4:].replace( '!', 'w')}{suffix}"
+#                     assert longID not in refDict
+#                     refDict[longID] = ourRef # Create dict for next loop
+#                     # print(f"{longID=} {nextLongID=} {mwType=} {ourRef=}")
+#                     newExpandedDictEntry = {'FGRef':ourRef, 'RowType':mwType, **firstEntryAttempt}
+#                     assert len(newExpandedDictEntry) == len(state.morpheme_output_fieldnames)-1, f"{len(newExpandedDictEntry)=} vs {len(state.morpheme_output_fieldnames)=}" # OSHBid field to be added below
+#                     state.maculaHebrewWordsAndMorphemes.append( newExpandedDictEntry )
+#     # if 1:
+#     #     for n,currentEntry in enumerate(state.maculaHebrewWordsAndMorphemes):
+#     #         print(f"{n} ({len(currentEntry)}) {currentEntry}")
+#     #         if n > 10: break
+#     #     halt
 
-    # Adjust frames to our references
-    for lfRow in state.maculaHebrewWordsAndMorphemes:
-        ourRef = lfRow['FGRef']
-        frame = lfRow['Frame'] # e.g., 'A0:010010010031; A1:010010010052;010010010072;' but we want to convert it to our word numbers
-        if frame:
-            # print( f"{ourRef} {frame=}" )
-            startIndex = 0
-            while ( match := wordnumber_regex.search(frame, startIndex) ):
-                try: frame = f'{frame[:match.start()]}{refDict[match.group(0)]}{frame[match.end():]}'
-                except KeyError: # Seems to be no match for the ref in the frame??? Probably because it's a pointer to a word group or something???
-                    logging.critical( f"Unable to match {ourRef} frame part: {match.group(0)}" )
-                startIndex = match.start() + 5
-            # print( f"  {frame=}" )
-            lfRow['Frame'] = frame
+#     # Adjust frames to our references
+#     for lfRow in state.maculaHebrewWordsAndMorphemes:
+#         ourRef = lfRow['FGRef']
+#         frame = lfRow['Frame'] # e.g., 'A0:010010010031; A1:010010010052;010010010072;' but we want to convert it to our word numbers
+#         if frame:
+#             # print( f"{ourRef} {frame=}" )
+#             startIndex = 0
+#             while ( match := wordnumber_regex.search(frame, startIndex) ):
+#                 try: frame = f'{frame[:match.start()]}{refDict[match.group(0)]}{frame[match.end():]}'
+#                 except KeyError: # Seems to be no match for the ref in the frame??? Probably because it's a pointer to a word group or something???
+#                     logging.critical( f"Unable to match {ourRef} frame part: {match.group(0)}" )
+#                 startIndex = match.start() + 5
+#             # print( f"  {frame=}" )
+#             lfRow['Frame'] = frame
 
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Got total of {len(state.maculaHebrewWordsAndMorphemes):,} words/morphemes")
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      Max nesting level = {max_nesting_level}" )
-    if 1:  # Just so we can turn it off and on easily
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nDetailed counts for {len(column_counts):,} fields:")
-        for field_name in column_counts:
-            this_set = column_counts[field_name]
-            this_set_length = len(this_set)
-            if this_set_length < 55:
-                vPrint( 'Normal', DEBUGGING_THIS_MODULE, # Sort them with most frequent first
-                    f"\n{field_name}: ({this_set_length}) {dict(sorted(this_set.items(), key=lambda x:x[1], reverse=True))}" )
-            else: vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\n{field_name} has {this_set_length:,} unique options -- display suppressed." )
-    # if 1:
-    #     for n,currentEntry in enumerate(state.maculaHebrewWordsAndMorphemes):
-    #         assert len(currentEntry) == len(state.output_fieldnames)-1
-    #         if n < 5 or 'THE' in currentEntry['EnglishGloss']: print(f"{n} ({len(currentEntry)}) {currentEntry}")
-    #     halt
-    return True
-# end of convert_ClearMaculaOT_to_our_TSV.loadMaculaHebrewLowFatXMLGlosses
+#     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Got total of {len(state.maculaHebrewWordsAndMorphemes):,} words/morphemes")
+#     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      Max nesting level = {max_nesting_level}" )
+#     if 1:  # Just so we can turn it off and on easily
+#         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nDetailed counts for {len(column_counts):,} fields:")
+#         for field_name in column_counts:
+#             this_set = column_counts[field_name]
+#             this_set_length = len(this_set)
+#             if this_set_length < 55:
+#                 vPrint( 'Normal', DEBUGGING_THIS_MODULE, # Sort them with most frequent first
+#                     f"\n{field_name}: ({this_set_length}) {dict(sorted(this_set.items(), key=lambda x:x[1], reverse=True))}" )
+#             else: vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\n{field_name} has {this_set_length:,} unique options -- display suppressed." )
+#     # if 1:
+#     #     for n,currentEntry in enumerate(state.maculaHebrewWordsAndMorphemes):
+#     #         assert len(currentEntry) == len(state.output_fieldnames)-1
+#     #         if n < 5 or 'THE' in currentEntry['EnglishGloss']: print(f"{n} ({len(currentEntry)}) {currentEntry}")
+#     #     halt
+#     return True
+# # end of convert_ClearMaculaOT_to_our_TSV.loadMaculaHebrewLowFatXMLGlosses
 
 
 def loadMaculaHebrewNodesXMLGlosses() -> bool:
@@ -839,6 +847,7 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
 
                                             ('and.Kephar.(the).Ammonah', 'and_Kephar.(the)_Ammonah'),
                                             ('Baal of Peor', 'Baal_of.Peor'),
+                                            ('[is].', '[is]_'),('[was].', '[was]_'),
                                             ('[was.at].Beth.Eked.of.the.Shepherds', '[was_at]_Beth.Eked_of.the_Shepherds'),
                                             ('Hamath the great', 'Hamath.the_great'),
                                             ('Kir of Moab', 'Kir_of.Moab'),
@@ -1033,6 +1042,14 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                     # if gloss and '.' in gloss: print( f"Warning: REMAINING DOT IN GLOSS {ourRef=} {theirRef=} {gloss=} {English=}" )
                     if English: assert '.' not in English, print( f"Warning: REMAINING DOT IN ENGLISH {ourRef=} {theirRef=} {gloss=} {English=}" )
                     # if English and '.' in English: print( f"Warning: REMAINING DOT IN ENGLISH {ourRef=} {theirRef=} {gloss=} {English=}" )
+
+                    # if (gloss and '[is]' in gloss) or (English and '[is]' in English):
+                    #     print( f"   Have '[is]' in {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
+                    if gloss in ('[is]','[was]') or English in ('[is]','[was]') \
+                    or (gloss and gloss[0]=='[' and gloss[-1]==']' and '_' not in gloss) \
+                    or (English and English[0]=='[' and English[-1]==']' and '_' not in English):
+                        print( f"   Have potential problem in {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
+                        halt
 
                     # Names have to match state.output_fieldnames:
                     # ['FGRef','OSHBid','RowType','LFRef','LFNumRef',
@@ -1414,7 +1431,7 @@ def MacHeb_add_OSHB_ids() -> bool:
 
     our_WLC_dict = {row['Ref']:(row['RowType'].endswith('K'),row['NoCantillations'],row['Morphology'],row['OSHBid']) for row in state.our_WLC_rows} # We include the morphology for extra checking
     if DEBUGGING_THIS_MODULE:
-        testVerseRef = 'GEN_3:5'
+        testVerseRef = 'GEN_26:33'
         print( "\nOur WLC rows:" )
         print( " Ref\t\tOSHBid\tRowType\tWrd/Mrph\tMorph\tMorphemeGloss\tContextualMG\tWordGloss\tContextualWG" )
         for row in state.our_WLC_rows:

@@ -56,6 +56,11 @@ CHANGELOG:
                     plus remove double 'of', e.g., house_of of_Dan -> house_of Dan
     2025-01-21 Start to handle GlossInsert fields
     2025-03-03 Added /nb line after chapter numbers
+    2025-03-08 Added 'OSHB' prefix to most notes
+    2025-03-09 Changed to give WordGloss priority (for single morpheme words) rather than ContextualWordGloss (which is more interpreted)
+    2025-03-10 Don't allow _~_ (allows word insert) to have a word number attached to it
+    2025-03-11 Changed back to contextual word glosses because the word glosses were too long and wordy, e.g., 'on/upon/above/on_account_of'
+    2025-03-14 Properly handle added words like '[the]' and '[is]' (coming from Macula Hebrew glosses, etc.)
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple
@@ -69,10 +74,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2025-03-03' # by RJH
+LAST_MODIFIED_DATE = '2025-03-14' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed_OSHB_OT_to_ESFM"
 PROGRAM_NAME = "Extract glossed OSHB OT ESFM files"
-PROGRAM_VERSION = '0.54'
+PROGRAM_VERSION = '0.59'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -291,6 +296,7 @@ def export_literal_English_gloss_esfm() -> bool:
                 assert '"' not in esfm_text, f'''Why do we have double quote in {esfm_filepath}: {esfm_text[esfm_text.index('"')-20:esfm_text.index('"')+22]}'''
                 # assert esfm_text.count('‘') == esfm_text.count('’'), f"{esfm_text.count('‘')} != {esfm_text.count('’')}"
                 assert esfm_text.count('“') == esfm_text.count('”'), f"{esfm_text.count('“')} != {esfm_text.count('”')}"
+                assert '~¦' not in esfm_text, f"Can't have ~¦ in {esfm_filepath}: {esfm_text[esfm_text.index('~¦')-20:esfm_text.index('~¦')+22]}"
                 with open(esfm_filepath, 'wt', encoding='utf-8') as output_file:
                     output_file.write(f"{esfm_text}\n")
                 vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {len(esfm_text)+1:,} bytes to {last_BBB}_gloss.ESFM" )
@@ -526,13 +532,16 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
             _BBB, CV = given_verse_row['Ref'].split( '_', 1 )
             assert 'w' not in CV
             C, V = CV.split( ':', 1 )
-            gloss = f"\\f + \\fr {C}:{V} \\ft {given_verse_row['RowType'][0].upper()}{given_verse_row['RowType'][1:]}: {given_verse_row['Word']}\\f*"
+            note_text = given_verse_row['Word']
+            note_is_versification_adjustment = note_text.startswith('KJB:')
+            gloss = f"\\f + \\fr {C}:{V} \\ft {'' if note_is_versification_adjustment else 'OSHB '}{given_verse_row['RowType'][0].upper() if note_is_versification_adjustment else given_verse_row['RowType'][0]}{given_verse_row['RowType'][1:]}: {note_text}\\f*"
         # if saved_gloss:
         #     halt
         #     assert not gloss # otherwise we'd be losing it
         #     gloss = saved_gloss
 
     elif ',' in given_verse_row['MorphemeRowList']: # then the word consists of two or more morphemes
+        # We give priority to the contextual word gloss (as the word gloss can be overwhelming with so many options e.g., 'on/upon/above/on_account_of')
         gloss = given_verse_row['ContextualWordGloss'] if given_verse_row['ContextualWordGloss'] \
                     else given_verse_row['WordGloss'] if given_verse_row['WordGloss'] \
                     else given_verse_row['ContextualMorphemeGlosses'] if given_verse_row['ContextualMorphemeGlosses'] \
@@ -568,7 +577,7 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
 
         wn = f"¦{given_verse_row['n']}"
 
-        gloss = f"{gloss.replace('=',f'{wn}=').replace(',',f'{wn}÷').replace('_',f'{wn}_')}{wn}" # Append the word (row) number(s) and replace comma morpheme separator
+        gloss = make_gloss_adjustments_and_append_word_number( gloss, wn )
         if just_had_insert:
             dPrint( 'Info', DEBUGGING_THIS_MODULE, f"Have insert with {gloss=}" )
             assert not saved_capitalisation
@@ -590,10 +599,22 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
 
     else: # it's only a single morpheme word
         assert not just_had_insert
-        wordGloss = given_verse_row['ContextualWordGloss'] if given_verse_row['ContextualWordGloss'] \
-                    else given_verse_row['WordGloss']
-        wordGloss = wordGloss.replace( '!', '' ).replace( '?', '' ) # e.g., on gloss for 'behold!', 'what?'
-        wordGloss = wordGloss.replace( '==', '=' ).replace( ',,', ',' ) # TODO: How/Why do we have these?
+        # We tried giving priority to the word glosses but they're far too wordy, e.g., 'on/upon/above/on_account_of'
+        # wordGloss = ( given_verse_row['WordGloss']
+        #                 if given_verse_row['WordGloss'] and not given_verse_row['WordGloss'][-1].isdigit() # Try to avoid fields like '1,000'
+        #             else given_verse_row['ContextualWordGloss'] if given_verse_row['ContextualWordGloss'] # Give priority to word gloss for OET-LV as it's less interpreted
+        #             else given_verse_row['WordGloss'] )
+        # We give priority to the contextual word gloss (as the word gloss can be overwhelming with so many options e.g., 'on/upon/above/on_account_of')
+        #   but we'll add that extra info to our word pages
+        wordGloss = ( given_verse_row['ContextualWordGloss']
+                        if given_verse_row['ContextualWordGloss'] and not given_verse_row['ContextualWordGloss'][-1].isdigit() # Try to avoid fields like '1,000'
+                    else given_verse_row['WordGloss'] if given_verse_row['WordGloss']
+                    else given_verse_row['ContextualWordGloss'] )
+        wordGloss = ( wordGloss
+                        .replace( '!', '' ).replace( '?', '' ) # e.g., on gloss for 'behold!', 'what?'
+                        .replace( '==', '=' ).replace( ',,', ',' ) # TODO: How/Why do we have these?
+                        .replace( '_~_', '_' ) # We don't seem to have a need for these place-holders (but we went back from word glosses to contextual glosses)
+                    )
         while wordGloss.startswith( '_' ): wordGloss = wordGloss[1:] # Remove any leading underline separators
         if not wordGloss:
             wordGloss = 'wwww' # Sequence doesn't occur in any English words so easy to find
@@ -604,7 +625,8 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
         if 'S' in given_verse_row['GlossCapitalisation']:
             wordGloss = f'{wordGloss[0].upper()}{wordGloss[1:]}'
         wn = f"¦{given_verse_row['n']}"
-        wordGloss = f"{wordGloss.replace('=',f'{wn}=').replace(',',f'{wn}÷').replace('_',f'{wn}_')}{wn}" # Append the word (row) number(s) and replace comma morpheme separator
+
+        wordGloss = make_gloss_adjustments_and_append_word_number( wordGloss, wn )
 
         if saved_gloss: # we must have reordered glosses with a word now between morphemes
             halt
@@ -641,6 +663,76 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
     return result
 # end of extract_glossed_OSHB_OT_to_ESFM.preform_row_gloss
 
+
+def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
+    """
+    Makes adjustments to gloss 'words' (i.e., glosses of Hebrew words)
+        and adds the word number(s)
+
+    gloss can include things like 'he_created', 'the=earth/land', 'And=the=earth', '[was]_over', and '[is]'
+
+    Returns fields like: 'he¦2_created¦2', 'the¦7=earth/land¦7', 'And¦9=the¦9=earth¦9', and XXX
+    """
+    # print( f"make_gloss_adjustments_and_append_word_number( {gloss=}, {wn=} )")
+    assert wn[0] == '¦' and wn[1:].isdigit()
+
+    originalGloss = gloss
+
+    # Do some early changes/fixes
+    gloss = ( gloss
+                .replace( '_[masc]', '(m)' ).replace( '_[fem]', '(f)' )
+             )
+
+    if '[' in gloss:
+        # print( f"Have square brackets in {gloss=}, {wn=} )")
+        assert gloss.count('[') == gloss.count(']')
+        assert '_' in gloss or gloss.endswith('[s]') or gloss.endswith('[es]') or gloss.endswith('[en]') or gloss.endswith('[ren]')  or gloss.endswith('[question]'), \
+                        f"Unusual gloss with square brackets {gloss=}, {wn=}" # e.g., 'plant[s]', 'citi[es]', 'ox[en]', 'child[ren]', 'are=you(ms)=[question]'
+        for compound,newCompoundList in ( ('the_one',('the','one')),
+                                         ('is_it',('is','it')), ('is_the',('is','the')),
+                                            ('is_one_who',('is','one_who')),('one_who_is',('one_who','is')),
+                                            ('was_the',('was','the')), ('are_the',('are','the')),
+                                         ('I_am',('I','am')),('I_was',('I','was')),
+                                            ('he_is',('he','is')),('he_was',('he','was')),
+                                            ('it_is',('it','is')),('it_was',('it','was')),
+                                            ('they_are',('they','are')),('they_were',('they','were')),('they_will_be',('they','will_be')),
+                                            ('you_are_too',('you','are','too')),('you_all_are',('you_all','are')),
+                                            ('who_is',('who','is')), ('which_is',('which','is')),
+                                         ('are_things',('are','things')), ('are_those',('are','those')),
+                                         ('which_is',('which','is')),
+                                         ):
+            assert len(newCompoundList) <= compound.count( '_' ) + 1
+            gloss = gloss.replace( f'[{compound}]', f'[{']_['.join(newCompoundList)}]' )
+        for article in ('the','a','those'):
+            gloss = gloss.replace( f'[{article}]', f'\\add +{article}\\add*' )
+        for copula in ('is','was','am','are','does','will','will_be','did','were','has_been','be'):
+            gloss = gloss.replace( f'[{copula}]', f'\\add +{copula}\\add*' )
+        for implied in ('one','ones','thing','things','person','people',
+                        'animal','woman','men','measures','city','portion','cubits','wings','part','stone','time','craftsmen','nations'):
+            gloss = gloss.replace( f'[{implied}]', f'\\add >{implied}\\add*' )
+        gloss = gloss.replace( '_[it]', '_\\add >it\\add*' ) # Can also occur at beginning of word, but don't want that one
+        if '[' in gloss.replace('[s]','').replace('[es]','').replace('[en]','').replace('[ren]','').replace('[question]',''): # still
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Still have square brackets in {gloss=}, {wn=} )")
+            gloss = gloss.replace( '[', '\\add ' ).replace( ']', '\\add*' )
+
+    # Append the word (row) number(s) and replace comma morpheme separator
+    gloss = f"{gloss.replace('=',f'{wn}=')
+                    .replace(',',f'{wn}÷')
+                    .replace('\\add*',f'{wn}\\add*')
+                    .replace('\\add*_','PROTECTADD')
+                    .replace('~_','PROTECTED')
+                    .replace('_',f'{wn}_')
+                    .replace('PROTECTED','~_')
+                    .replace('PROTECTADD','\\add*_')}"
+    if not gloss.endswith( '*' ): gloss = f'{gloss}{wn}'
+
+    # if '\\add' in gloss:
+    #     print( f"    Returning {gloss=} from ( {originalGloss=}, {wn=} )")
+    assert f'*{wn}' not in gloss, f"Wrongly placed {gloss=} from {originalGloss=}"
+    assert f'{wn}{wn}' not in gloss, f"Bad {gloss=} from {originalGloss=}"
+    assert f'{wn[1:]}¦' not in gloss, f"Messed up {gloss=} from {originalGloss=}"
+    return gloss
+# end of extract_glossed_OSHB_OT_to_ESFM.make_gloss_adjustments_and_append_word_number
 
 
 if __name__ == '__main__':

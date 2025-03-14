@@ -1,6 +1,6 @@
 # OET makefile
 #
-# Last updated: 2025-01-13 by RJH
+# Last updated: 2025-03-08 by RJH
 #
 
 #=== Folder and file declarations =======================
@@ -46,7 +46,7 @@ short_OSHB_TSV := ../sourceTexts/rawOSHB/OSHB.parsedOriginal.flat.morphemes.tsv
 
 python3_12 := python3.12
 python3_13 := python3.13
-python3_14 := ~/Downloads/Python-3.14.0a1/python
+# python3_14 := ~/Downloads/Python-3.14.0a1/python
 Python := $(python3_13)
 
 SBE := ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py
@@ -78,7 +78,8 @@ $(LV_OT_HTML) $(LV_NT_HTML): $(final_LV_OT_ESFM)  $(final_LV_NT_ESFM) convert_OE
 # 	@echo "\n\nRun ScriptedBibleEditor on OT USFM files…\n"
 # 	@$(Python) $(SBE) ScriptedOTUpdates -qe
 
-$(final_LV_OT_ESFM): $(intermediate_LV_OT_ESFM) $(SBE) $(scripted_OT_updates) $(BTranslit) $(HebrewTranslit)
+# Had $(final_LV_OT_ESFM) here before
+../intermediateTexts/auto_edited_OT_ESFM/OET-LV_MAL.ESFM: $(intermediate_LV_OT_ESFM) $(SBE) $(scripted_OT_updates) $(BTranslit) $(HebrewTranslit)
 	@echo "\n\nRun ScriptedBibleEditor on OT ESFM files…\n"
 	@$(Python) $(SBE) ScriptedOTUpdates -qe
 	#@echo "\n\nCopying OT word and morpheme tables from modified_source_glossed_OSHB_ESFM/ to auto_edited_OT_ESFM/…\n"
@@ -180,6 +181,7 @@ $(derived_VREFs): $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_USFM_to_VREF.py
 #=== Partial stuff =======================
 
 
+.PHONY: check
 check: $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
 	@echo "\n\nConnect OET-RV words to OET-LV word numbers…\n"
 	@$(Python) connect_OET-RV_words_via_OET-LV.py
@@ -190,9 +192,12 @@ check: $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py $(expanded_NT_wo
 
 #=== Clean up stuff =======================
 
+.PHONY: clean
 clean: clean_LT clean_RT
+.PHONY: clean_LT
 clean_LT: clean_LT_OT cleanLT_NT
 
+.PHONY: clean_LT_OT
 clean_LT_OT:
 	rm ../intermediateTexts/modified_source_glossed_OSHB_USFM/*.usfm
 	rm ../intermediateTexts/modified_source_glossed_OSHB_ESFM/*.ESFM
@@ -201,9 +206,11 @@ clean_LT_OT:
 	rm ../intermediateTexts/glossed_OSHB/our_WLC_glosses.morphemes.tsv
 	rm ../sourceTexts/rawOSHB/OSHB.parsedOriginal.flat.morphemes.tsv
 
+.PHONY: clean_LT_NT
 clean_LT_NT:
 	rm ../intermediateTexts/auto_edited_VLT_ESFM/*.ESFM
 	rm ../intermediateTexts/modified_source_VLT_ESFM/*.ESFM
 
+.PHONY: clean_RT
 clean_RT:
 	@echo "Nothing to clean for RT yet"

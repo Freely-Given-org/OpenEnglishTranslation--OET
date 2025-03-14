@@ -34,6 +34,7 @@ CHANGELOG:
     2025-01-19 Handle /mt3
     2025-01-21 Better handling OT ESFM word-table
     2025-02-24 Better handling of nested USFM character markers
+    2025-03-08 Ignore rem being inside table in Ezr 10:24, plus handle /qs (Selah)
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -55,7 +56,7 @@ from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, 
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 
 
-LAST_MODIFIED_DATE = '2025-02-24' # by RJH
+LAST_MODIFIED_DATE = '2025-03-08' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
 PROGRAM_VERSION = '0.79'
@@ -919,7 +920,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
         if marker == 'rem':
             # print( f"{BBB} {C}:{V} {inRightDiv=} {inParagraph=} {inTable} {marker}={rest}" )
             # assert not inRightDiv, f"{BBB} {C}:{V} {inRightDiv=} {inParagraph=} {inTable} {marker}={rest}"
-            assert not inTable, f"{BBB} {C}:{V} rem inside table"
+            # assert not inTable, f"{BBB} {C}:{V} rem inside table" # but we ignore it!!!
             if inRightDiv:
                 assert rest.startswith('/'), f"{BBB} {C}:{V} {inRightDiv=} {inParagraph=} {inTable} {marker}={rest}"
                 given_marker = rest[1:].split( ' ', 1 )[0]
@@ -1156,12 +1157,10 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                          .replace( '\\wj*', '</span>' ).replace( '\\+wj*', '</span>' )
                          .replace( '\\sc ', '<span class="sc">' ).replace( '\\sc ', '<span class="sc">' ) # Not actually required in OET-RV AFAWK
                          .replace( '\\sc*', '</span>' ).replace( '\\sc*', '</span>' )
-                         .replace( '\\sig ', '<span class="sig">' )
-                         .replace( '\\sig*', '</span>' )
-                         .replace( '\\tl ', '<span class="tl">' )
-                         .replace( '\\tl*', '</span>' ) \
-                         .replace( '\\no ', '<span class="no">' )
-                         .replace( '\\no*', '</span>' )
+                         .replace( '\\qs ', '<span class="qs">' ).replace( '\\qs*', '</span>' )
+                         .replace( '\\sig ', '<span class="sig">' ).replace( '\\sig*', '</span>' )
+                         .replace( '\\tl ', '<span class="tl">' ).replace( '\\tl*', '</span>' ) \
+                         .replace( '\\no ', '<span class="no">' ).replace( '\\no*', '</span>' )
                     )
     book_html = livenJMPs( BBB, book_html )
     book_html = livenIORs( BBB, book_html )

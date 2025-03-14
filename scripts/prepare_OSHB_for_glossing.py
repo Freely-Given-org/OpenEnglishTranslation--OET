@@ -5,7 +5,7 @@
 #
 # Script handling prepare_OSHB_for_glossing functions
 #
-# Copyright (C) 2022-2024 Robert Hunt
+# Copyright (C) 2022-2025 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -40,7 +40,7 @@ Also inserts our own glosses (Gen,Ruth,etc.) into some columns.
 OSHB morphology codes can be found at https://hb.openscriptures.org/parsing/HebrewMorphologyCodes.html.
 
 CHANGELOG:
-    2024-03-21 Replace some \\u05c4 and \\u05c5 characters in some notes
+    2024-03-21 Replace some \\u05c4 (Hebrew upper dot) and \\u05c5 (Hebrew lower dot) characters in some notes
 """
 from gettext import gettext as _
 # from typing import Dict, List, Tuple
@@ -59,7 +59,7 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.OriginalLanguages import Hebrew
 
 
-LAST_MODIFIED_DATE = '2024-06-24' # by RJH
+LAST_MODIFIED_DATE = '2025-03-09' # by RJH
 SHORT_PROGRAM_NAME = "Prepare_OSHB_for_glossing"
 PROGRAM_NAME = "Prepare OSHB for glossing"
 PROGRAM_VERSION = '0.51'
@@ -276,44 +276,46 @@ def prefill_known_glosses() -> bool:
     """
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "\n  Prefilling TSV table with our own previously known glosses…")
 
+    # Firstly, load all of our own predone WLC glosses into dicts
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loading previously done glosses from {state.our_predone_glosses_filepath}…")
     ourPredoneWordGlossDict = {}
     morphemeGlossDict = defaultdict(set)
     wordsSpecificGlossesDict, refsSpecificGlossesDict = {}, {}
-    with open( state.our_predone_glosses_filepath, 'rt', encoding='utf-8' ) as predone_file:
-        for line in predone_file:
+    with open( state.our_predone_glosses_filepath, 'rt', encoding='utf-8' ) as predone_glosses_file:
+        for line in predone_glosses_file:
             bits = line.rstrip('\n').split('\t') if '\t' in line else line.rstrip('\n').split('  ')
             assert len(bits) == 4
             _referencesList = ast.literal_eval( bits[0] )
             thisWordSpecificGlossesDict = ast.literal_eval( bits[1] )
-            genericGloss, word = bits[2], bits[3]
+            genericGloss, hebrewWord = bits[2], bits[3]
             # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{referencesList=} {wordSpecificGlossesDict=} {genericGloss=} {word=}")
-            assert word.count('=') == genericGloss.count('=')
-            if '=' in word:
+            assert hebrewWord.count('=') == genericGloss.count('=')
+            if '=' in hebrewWord:
                 # TODO: Fix this coz it's wrong -- the gloss is often in a different order, e.g., 'גְּחֹנְ=ךָ' is glossed 'your(ms)=belly/abdomen'
                 #                                   or 'לַ=אֲמָתְ=ךָ' glossed 'to/for=your(ms)=female_slave'
                 # for wordBit, genericGlossBit in zip( word.split('='), genericGloss.split('=') ):
                 #     for genericGlossBitBit in genericGlossBit.split('/'):
                 #         morphemeGlossDict[wordBit].add(genericGlossBitBit)
-                assert word not in ourPredoneWordGlossDict
-                ourPredoneWordGlossDict[word] = genericGloss
+                assert hebrewWord not in ourPredoneWordGlossDict
+                ourPredoneWordGlossDict[hebrewWord] = genericGloss
             else:
-                assert word not in ourPredoneWordGlossDict
-                ourPredoneWordGlossDict[word] = genericGloss
+                assert hebrewWord not in ourPredoneWordGlossDict
+                ourPredoneWordGlossDict[hebrewWord] = genericGloss
             if thisWordSpecificGlossesDict:
                 # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{referencesList=} {wordSpecificGlossesDict=} {genericGloss=} {word=}")
                 assert len(thisWordSpecificGlossesDict) == 1 # Only one reference entry
                 for ref_4tuple,specificGloss in thisWordSpecificGlossesDict.items(): # only loops once so we use final values
                     assert len(ref_4tuple) == 4
                     ourRef = f'{ref_4tuple[0]}_{ref_4tuple[1]}:{ref_4tuple[2]}w{ref_4tuple[3]}'
-                assert word not in wordsSpecificGlossesDict
-                wordsSpecificGlossesDict[word] = (ourRef, specificGloss)
+                assert hebrewWord not in wordsSpecificGlossesDict
+                wordsSpecificGlossesDict[hebrewWord] = (ourRef, specificGloss)
                 assert ourRef not in refsSpecificGlossesDict
-                refsSpecificGlossesDict[ourRef] = (word, specificGloss)
+                refsSpecificGlossesDict[ourRef] = (hebrewWord, specificGloss)
     # pvPrint( 'Normal', DEBUGGING_THIS_MODULE, wordsSpecificGlossesDict)
     # pvPrint( 'Normal', DEBUGGING_THIS_MODULE, refsSpecificGlossesDict)
     assert len(wordsSpecificGlossesDict) == len(refsSpecificGlossesDict)
 
+    # Now apply those predone glosses to the WLC rows
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Applying {len(ourPredoneWordGlossDict):,} word and {len(morphemeGlossDict):,} morpheme glosses and {len(refsSpecificGlossesDict):,} specific glosses…")
     numAppliedWordGlosses = numAppliedMorphemeGlosses = numAppliedSpecificGlosses = numManualMorphemeGlosses = 0
     combinedMorphemes = ''
@@ -395,7 +397,7 @@ def prefill_known_glosses() -> bool:
 
 def save_expanded_TSV_file() -> bool:
     """
-    Reorganise columns and add our extra columns
+    Write the expanded and pre-filled WLC rows to a file.
     """
     vPrint( 'Normal', DEBUGGING_THIS_MODULE,  f"\nExporting adjusted WLC table as a single flat TSV file to {state.TSV_output_filepath}…" )
     with open( state.TSV_output_filepath, 'wt', encoding='utf-8' ) as tsv_output_file:

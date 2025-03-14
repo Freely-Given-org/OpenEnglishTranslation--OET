@@ -28,10 +28,12 @@ Script taking our expanded OSHB morpheme table (TSV)
 Then we use some of the flattened tree information
     to automatically reorder gloss words.
 
-(We tried using the MaculaHebrew TSV tables first,
+(We previously tried using the MaculaHebrew TSV tables,
     but discovered that the XML trees have the same information
     that's in the MaculaHebrew glosses TSV table
-    plus a contextual gloss, so we no longer use their TSV.)
+    plus a contextual gloss, so we no longer use their TSV.
+Then we had to switch from their "low-fat" XML to their "nodes" XML
+    because the former has information missing for compound words.)
 
 This is run AFTER convert_OSHB_XML_to_TSV.py
                 and prepare_OSHB_for_glossing.py
@@ -94,7 +96,7 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2025-01-21' # by RJH
+LAST_MODIFIED_DATE = '2025-03-14' # by RJH
 SHORT_PROGRAM_NAME = "apply_Clear_Macula_OT_glosses"
 PROGRAM_NAME = "Apply Macula OT glosses"
 PROGRAM_VERSION = '0.70'
@@ -444,6 +446,12 @@ def fill_known_MaculaHebrew_English_contextual_glosses() -> bool:
                     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    Setting {WLC_morpheme_row['Ref']} '{WLC_morpheme_row['WordOrMorpheme']}' contextual morpheme gloss to '{MaculaHebrewRow['ContextualGloss']}'" )
                     WLC_morpheme_row['ContextualMorphemeGloss'] = MaculaHebrewRow['ContextualGloss']
                     num_contextual_morpheme_glosses_added += 1
+        if (WLC_morpheme_row['WordGloss'] and '[is]' in WLC_morpheme_row['WordGloss']) or (WLC_morpheme_row['ContextualWordGloss'] and '[is]' in WLC_morpheme_row['ContextualWordGloss']):
+            print( f"Have '[is]' in {WLC_morpheme_row['Ref']=} {WLC_morpheme_row['WordOrMorpheme']=} {WLC_morpheme_row['WordGloss']=} {WLC_morpheme_row['ContextualWordGloss']=}" )
+        if WLC_morpheme_row['WordGloss']=='[is]' or WLC_morpheme_row['ContextualWordGloss']=='[is]' \
+        or (WLC_morpheme_row['WordGloss'] and WLC_morpheme_row['WordGloss'][0]=='[' and WLC_morpheme_row['WordGloss'][-1]==']' and '_' not in WLC_morpheme_row['WordGloss']) \
+        or (WLC_morpheme_row['ContextualWordGloss'] and WLC_morpheme_row['ContextualWordGloss'][0]=='[' and WLC_morpheme_row['ContextualWordGloss'][-1]==']' and '_' not in WLC_morpheme_row['ContextualWordGloss']):
+            halt
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Added {num_word_glosses_added:,} MaculaHebrew English word glosses." )
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Added {num_morpheme_glosses_added:,} MaculaHebrew English morpheme glosses." )

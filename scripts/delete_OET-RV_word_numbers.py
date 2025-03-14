@@ -3,9 +3,9 @@
 #
 # delete_OET-RV_word_numbers.py
 #
-# Script to delete word numbers out of the OET-RV NT.
+# Script to delete word numbers out of the OET-RV .
 #
-# Copyright (C) 2023 Robert Hunt
+# Copyright (C) 2023-2025 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -32,11 +32,14 @@ Of course, it will lose any word numbers that have been manually added
 
 TODO: A better alternative might be one that can add an offset to any word number
         that's above a certain word number.
+
+        
+CHANGELOG:
+    2025-03-07 Added OT processing
 """
-from gettext import gettext as _
+# from gettext import gettext as _
 from typing import List, Tuple, Optional
 from pathlib import Path
-# import logging
 import re
 
 if __name__ == '__main__':
@@ -51,10 +54,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2023-05-09' # by RJH
+LAST_MODIFIED_DATE = '2025-03-07' # by RJH
 SHORT_PROGRAM_NAME = "delete_OET-RV_word_numbers"
 PROGRAM_NAME = "Delete word numbers from OET-RV NT"
-PROGRAM_VERSION = '0.02'
+PROGRAM_VERSION = '0.03'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -73,24 +76,42 @@ def main():
     """
     BibleOrgSysGlobals.introduceProgram( __name__, PROGRAM_NAME_VERSION, LAST_MODIFIED_DATE )
 
-    response = input( "Are you sure you want to delete word numbers from the OET-RV NT? ").upper()
-    if not response in ( 'Y', 'YES' ): return
+    # response = input( "Are you sure you want to delete word numbers from the OET-RV OT? ").upper()
+    if 1 or response in ( 'Y', 'YES' ):
+        totalDeletes = numChangedFiles = 0
+        for BBB in BOOKLIST_OT39:
+            if BBB != 'PSA': continue
+            rvESFMFilename = f'OET-RV_{BBB}.ESFM'
+            rvESFMFilepath = OET_RV_ESFM_FolderPath.joinpath( rvESFMFilename )
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading {rvESFMFilepath}…" )
+            with open( rvESFMFilepath, 'rt', encoding='UTF-8' ) as esfmFile:
+                rvESFMText = esfmFile.read() # We keep the original (for later comparison)
+            adjText, count = ESFMWordNumberRegex.subn( '', rvESFMText )
+            if count:
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"   Deleted {count:,} word numbers from {BBB}." )
+                with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
+                    esfmFile.write( adjText ) # We keep the original (for later comparison)
+                totalDeletes += count
+                numChangedFiles += 1
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"   Deleted {totalDeletes:,} word numbers from {numChangedFiles:,} OET-RV OT files." )
 
-    totalDeletes = numChangedFiles = 0
-    for BBB in BOOKLIST_NT27:
-        rvESFMFilename = f'OET-RV_{BBB}.ESFM'
-        rvESFMFilepath = OET_RV_ESFM_FolderPath.joinpath( rvESFMFilename )
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading {rvESFMFilepath}…" )
-        with open( rvESFMFilepath, 'rt', encoding='UTF-8' ) as esfmFile:
-            rvESFMText = esfmFile.read() # We keep the original (for later comparison)
-        adjText, count = ESFMWordNumberRegex.subn( '', rvESFMText )
-        if count:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"   Deleted {count:,} word numbers from {BBB}." )
-            with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
-                esfmFile.write( adjText ) # We keep the original (for later comparison)
-            totalDeletes += count
-            numChangedFiles += 1
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"   Deleted {totalDeletes:,} word numbers from {numChangedFiles:,} OET-RV NT files." )
+    # response = input( "Are you sure you want to delete word numbers from the OET-RV NT? ").upper()
+    if 0 and response in ( 'Y', 'YES' ):
+        totalDeletes = numChangedFiles = 0
+        for BBB in BOOKLIST_NT27:
+            rvESFMFilename = f'OET-RV_{BBB}.ESFM'
+            rvESFMFilepath = OET_RV_ESFM_FolderPath.joinpath( rvESFMFilename )
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading {rvESFMFilepath}…" )
+            with open( rvESFMFilepath, 'rt', encoding='UTF-8' ) as esfmFile:
+                rvESFMText = esfmFile.read() # We keep the original (for later comparison)
+            adjText, count = ESFMWordNumberRegex.subn( '', rvESFMText )
+            if count:
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"   Deleted {count:,} word numbers from {BBB}." )
+                with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
+                    esfmFile.write( adjText ) # We keep the original (for later comparison)
+                totalDeletes += count
+                numChangedFiles += 1
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"   Deleted {totalDeletes:,} word numbers from {numChangedFiles:,} OET-RV NT files." )
 # end of delete_OET-RV_word_numbers.main
 
 

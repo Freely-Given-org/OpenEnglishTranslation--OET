@@ -36,6 +36,7 @@ It does have the potential to make wrong connections that will need to be manual
 
 TODO: This script makes wrong cross-connections between different verses where versification issues apply
 
+
 CHANGELOG:
     2023-07-31 Added character marker checks for each RV line
     2023-08-29 Added nomina sacra (NS) for connected words in RV
@@ -50,6 +51,7 @@ CHANGELOG:
     2025-01-17 Check for bad copy/paste which might include word numbers from a different verse
     2025-02-20 Added check for /nd inside /add fields (which should never happen)
     2025-02-21 Added check for wrongly ordered combos, e.g., \\add #? instead of \\add ?#
+    2025-03-07 Align OET-RV /d fields (in Psalms)
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -63,7 +65,7 @@ if __name__ == '__main__':
     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
-from BibleOrgSys.Internals.InternalBibleInternals import getLeadingInt
+from BibleOrgSys.Internals.InternalBibleInternals import getLeadingInt, InternalBibleEntryList
 # from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
@@ -72,10 +74,10 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-02-21' # by RJH
+LAST_MODIFIED_DATE = '2025-03-14' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.76'
+PROGRAM_VERSION = '0.78'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -119,6 +121,10 @@ assert COMMAND_HEADER_LINE.count( '\t' ) == COMMAND_TABLE_NUM_COLUMNS - 1
 # EM_SPACE = ' '
 # NARROW_NON_BREAK_SPACE = ' '
 # BACKSLASH = '\\'
+
+
+class WordNumberError(ValueError):
+    pass
 
 
 class State:
@@ -526,7 +532,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
     totalSimpleListedAdds = totalProperNounAdds = totalFirstPartMatchedAdds = totalManualMatchedAdds = 0
     totalSimpleListedAddsNS = totalProperNounAddsNS = totalFirstPartMatchedAddsNS = totalManualMatchedAddsNS = 0 # Nomina sacra
     for BBB,lvBookObject in lv.books.items():
-        if BBB not in ('EZR','PSA'): continue
+        if BBB not in ('PSA','ZEC',): continue
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Processing connect words for OET {BBB}…" )
 
         bookSimpleListedAdds = bookProperNounAdds = bookFirstPartMatchedAdds = bookManualMatchedAdds = 0
@@ -598,20 +604,38 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
         numChapters = lv.getNumChapters( BBB )
         if numChapters >= 1:
             for c in range( 1, numChapters+1 ):
-                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Connecting words for {BBB} {c}…" )
+                C = str(c)
+                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Connecting words for {BBB} {C}…" )
                 numVerses = lv.getNumVerses( BBB, c )
                 if numVerses is None: # something unusual
-                    logging.critical( f"connect_OET_RV: no verses found for OET-LV {BBB} {c}" )
+                    logging.critical( f"connect_OET_RV: no verses found for OET-LV {BBB} {C}" )
                     continue
-                for v in range( 1, numVerses+1 ):
+                havePsalmTitles = BibleOrgSysGlobals.loadedBibleBooksCodes.hasPsalmTitle( BBB, C )
+                for v in range( 1, numVerses+1 ): # Note: some Psalms have an extra verse in OET-LV (because /d is v1)
+                    V = str(v)
                     try:
-                        rvVerseEntryList, _rvCcontextList = rv.getContextVerseData( (BBB, str(c), str(v)) )
-                        lvVerseEntryList, _lvCcontextList = lv.getContextVerseData( (BBB, str(c), str(v)) )
+                        rvVerseEntryList, _rvCcontextList = rv.getContextVerseData( (BBB, C, str(v-1) if havePsalmTitles and v>1 else V) )
                     except KeyError:
-                        logging.error( f"Seems we have no {BBB} {c}:{v} -- versification issue?" )
+                        logging.critical( f"Seems we have no OET-RV {BBB} {c}:{v} -- versification issue?" )
                         continue
-                    # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"RV entries: ({len(rvVerseEntryList)}) {rvVerseEntryList}")
-                    # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"LV entries: ({len(lvVerseEntryList)}) {lvVerseEntryList}")
+                    # OET-RV has /d and v1 all inside v1, but we need to separate them out to match OET-LV correctly
+                    if havePsalmTitles and v in (1,2):
+                        adjustedRvVerseEntryList = InternalBibleEntryList()
+                        for rvEntry in rvVerseEntryList:
+                            rvMarker = rvEntry.getMarker()
+                            if v==1 and rvMarker in ('v~','p~'): continue # don't want these
+                            if v==2 and rvMarker == 'd': continue # don't want this
+                            adjustedRvVerseEntryList.append( rvEntry )
+                        rvVerseEntryList = adjustedRvVerseEntryList
+                    try:
+                        lvVerseEntryList, _lvCcontextList = lv.getContextVerseData( (BBB, C, V) )
+                    except KeyError:
+                        logging.critical( f"Seems we have no OET-LV {BBB} {c}:{v} -- versification issue?" )
+                        halt
+                        continue
+                    # if BBB=='PSA' and v<3: # and c in (3,23,29) 
+                    #     dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nRV entries for {BBB} {C}:{V}: ({len(rvVerseEntryList)}) {rvVerseEntryList}")
+                    #     dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"LV entries for {BBB} {C}:{V}: ({len(lvVerseEntryList)}) {lvVerseEntryList}")
 
                     check_OET_RV_Verse( BBB, c, v, rvVerseEntryList, lvVerseEntryList ) # Check that any existing word numbers are in the expected range
 
@@ -758,7 +782,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     for rvEntry in rvEntryList:
         rvMarker, rvRest = rvEntry.getMarker(), rvEntry.getCleanText()
         # print( f"OET-RV {BBB} {c}:{v} {rvMarker}='{rvRest}'")
-        if rvMarker in ('v~','p~'):
+        if rvMarker in ('v~','p~','d'):
             rvText = f"{rvText}{' ' if rvText else ''}{rvRest}"
     lvText = ''
     for lvEntry in lvEntryList:
@@ -775,6 +799,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
             #     print( f"FOR: {BBB}_{c}:{v}, '{lvTextSimplified.replace('for','FOR').replace('For','FOR')}'" )
             #     forList.append( f"{BBB}_{c}:{v}" )
     if not rvText or not lvText: return (0,0), (0,0), (0,0), (0,0)
+
     rvAdjText = rvText.replace('◘','').replace('≈','').replace('…','') \
                 .replace('.','').replace(',','').replace(':','').replace(';','').replace('?','').replace('!','') \
                 .replace('/',' ').replace('—',' ') \
@@ -796,6 +821,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     rvWords1 = rvAdjText.split( ' ' )
     # print( f"({len(rvWords)}) {rvWords=}")
     # print( f"({len(lvWords)}) {lvWords=}")
+    # if BBB=='PSA' and c in (3,23,29) and v<3: print( f"{BBB} {c}:{v} {lvWords=} {rvWords1=}" )
 
     # Remove DOM's from word list
     #   These are capitalised, but untranslated, so remove them here (because won't ever be in RV)
@@ -1131,7 +1157,7 @@ def matchWordsFirstParts( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList
     for lvWordStr in lvWordList:
         try: lvWord, lvNumber = lvWordStr.split( '¦' )
         except ValueError:
-            logging.critical( f"matchWordsFirstParts failed on {lvWordStr=}" )
+            logging.critical( f"matchWordsFirstParts failed on {lvWordStr=} from {BBB} {c}:{v} {lvWordList=}" )
             lvWord = lvWordStr # One or two little mess-ups
         simpleLVWordList.append( lvWord )
 
@@ -1180,7 +1206,7 @@ def matchWordsManually( BBB:str, c:int,v:int, rvVerseWordList:List[str], lvVerse
     for lvWordStr in lvVerseWordList:
         try: lvWord, lvNumber = lvWordStr.split( '¦' )
         except ValueError:
-            logging.critical( f"matchWordsManually failed on {lvWordStr=}" )
+            logging.critical( f"matchWordsManually failed on {lvWordStr=} from {BBB} {c}:{v} {lvVerseWordList=}" )
             lvWord = lvWordStr # One or two little mess-ups
         simpleLVWordList.append( lvWord )
     simpleRVWordList = []
@@ -1550,6 +1576,7 @@ def doGroup2( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Brothers', 'Brothers and sisters'), ('Brothers', 'Fellow believers'),
             ('Brothers', 'brothers and sisters'), ('Brothers', 'fellow believers'),
 
+            ('Selah', 'Instrumental break'),
             ('Truly', 'May it be so'),
 
             ('members', 'body parts'),
@@ -1623,8 +1650,9 @@ def getLVWordRow( wordWithNumber:str ) -> Tuple[str,int,List[str]]:
     fnPrint( DEBUGGING_THIS_MODULE, f"getLVWordRow( {wordWithNumber} )" )
     assert '¦' in wordWithNumber
 
-    # print( f"{wordWithNumber=}" )
-    word,wordNumber = wordWithNumber.split( '¦' ) # Gives a ValueError if the wordNumber separator character is missing
+    try: word,wordNumber = wordWithNumber.split( '¦' ) # Gives a ValueError if the wordNumber separator character is missing
+    except ValueError:
+        raise WordNumberError( f"Failed to split-off word number from {wordWithNumber=}" )
     # assert word.isalpha(), f"Non-alpha '{word}'" # not true, e.g., from 'Yaʸsous/(Yəhōshūˊa)¦21754'
     try: wordNumber = int( wordNumber )
     except ValueError:
@@ -1640,7 +1668,7 @@ def getLVWordRow( wordWithNumber:str ) -> Tuple[str,int,List[str]]:
 ndStartMarker, ndEndMarker = '\\nd ', '\\nd*'
 def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
     """
-    Go through the RV USFM for BBBB and find the lines for c:v
+    Go through the RV USFM for BBBB and find the lines for c:v (which comes from Original/OET-LV verse numbering)
 
     Then try to find the word in the line.
 
@@ -1654,9 +1682,11 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
     if BBB=='MAT' and v==1: print( word )
 
     NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
+    havePsalmTitles = BibleOrgSysGlobals.loadedBibleBooksCodes.hasPsalmTitle( BBB, str(c) )
+    desiredV = (v-1) if havePsalmTitles and v>1 else v
 
     C = V = None
-    found = False
+    foundChapter = foundVerse = False
     for n,line in enumerate( state.rvESFMLines[:] ): # iterate through a copy
         try: marker, rest = line.split( ' ', 1 )
         except ValueError: marker, rest = line, '' # Only a marker
@@ -1666,14 +1696,19 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
         if marker == '\\c':
             C = int(rest)
             if C > c: return False # Gone too far
-        elif marker == '\\v':
+            if C == c: foundChapter = True
+        elif foundChapter and marker == '\\v':
             dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"addNumberToRVWord B searching {BBB} {C}:{V} {marker}='{rest}'")
             Vstr, rest = rest.split( ' ', 1 )
             try: V = int(Vstr)
             except ValueError: # might be a range like 21-22
                 V = int(Vstr.split('-',1)[0])
-            found = C==c and V==v
-        if found:
+            foundVerse = C==c and V==desiredV
+        elif foundChapter and marker == '\\d':
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"addNumberToRVWord D searching {BBB} {C}:{V} {marker}='{rest}'")
+            assert havePsalmTitles or BBB=='HAB', f"addNumberToRVWord( {BBB} {c}:{v} {word=} {havePsalmTitles=} {marker=} {rest=}"
+            foundVerse = C==c and desiredV==1
+        if foundVerse:
             wholeWordRegexStr = f'\\b{word}\\b'
             allWordMatches = [match for match in re.finditer( wholeWordRegexStr, line )]
             if len(allWordMatches) == 1:
