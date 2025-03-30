@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+# -\*- coding: utf-8 -\*-
+# SPDX-License-Identifier: GPL-3.0-or-later
 #
 # extract_glossed_OSHB_OT_to_ESFM.py
 #
@@ -696,16 +697,18 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
                                             ('he_is',('he','is')),('he_was',('he','was')),
                                             ('it_is',('it','is')),('it_was',('it','was')),
                                             ('they_are',('they','are')),('they_were',('they','were')),('they_will_be',('they','will_be')),
-                                            ('you_are_too',('you','are','too')),('you_all_are',('you_all','are')),
-                                            ('who_is',('who','is')), ('which_is',('which','is')),
+                                            ('you_are_too',('you','are','too')),('you_all_are',('you_all','are')),('you_were',('you','were')),
                                          ('are_things',('are','things')), ('are_those',('are','those')),
-                                         ('which_is',('which','is')),
+                                         ('who_will',('who','will')),('who_is',('who','is')),('who_are',('who','are')),
+                                            ('which_is',('which','is')),
+                                        ('someone_will_be',('someone','will_be')),('someone_has_been',('someone','has_been')),
+                                        ('will_be_the',('will_be','the')),
                                          ):
             assert len(newCompoundList) <= compound.count( '_' ) + 1
             gloss = gloss.replace( f'[{compound}]', f'[{']_['.join(newCompoundList)}]' )
         for article in ('the','a','those'):
             gloss = gloss.replace( f'[{article}]', f'\\add +{article}\\add*' )
-        for copula in ('is','was','am','are','does','will','will_be','did','were','has_been','be'):
+        for copula in ('is','was','am','are','does','will','will_be','did','were','has_been','have_been','be','are_being'):
             gloss = gloss.replace( f'[{copula}]', f'\\add +{copula}\\add*' )
         for implied in ('one','ones','thing','things','person','people',
                         'animal','woman','men','measures','city','portion','cubits','wings','part','stone','time','craftsmen','nations'):

@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2025-03-14 14:51 by extract_glossed_OSHB_OT_to_ESFM v0.59
+\rem ESFM file created 2025-03-27 20:28 by extract_glossed_OSHB_OT_to_ESFM v0.59
 \h Exodus
 \toc1 Exodus
 \toc2 Exodus
@@ -136,7 +136,7 @@
 \v 13 And¦27360÷the¦27360÷taskmasters¦27360 \add +were¦27361\add*_urging¦27361_\add them¦27361\add* to¦27362=say¦27362 complete¦27363 work¦27364_of¦27364÷your¦27364_all's¦27364 a¦27365_matter¦27365_of¦27365 a¦27367_day¦27367 in¦27368=its¦27368=day¦27368 just¦27369=as¦27369 in/on/at/with¦27370÷had¦27370 the¦27371÷straw¦27371.
 \v 14 And¦27373÷beaten¦27373 the¦27374_foremen¦27374_of¦27374 the¦27375_people¦27375_of¦27375 Israel¦27376 whom¦27377 they¦27379_had¦27379_appointed¦27379 over¦27380÷them¦27380 of¦27382_Pharaoh¦27382 the¦27381_taskmasters¦27381_of¦27381 to¦27383=say¦27383 why¦27384 not¦27385 have¦27386_you¦27386_all¦27386_completed¦27386 required¦27387_of¦27387÷your¦27387_all's¦27387 of¦27388÷bricks¦27388 as¦27389÷yesterday¦27389 three¦27390_days¦27390_ago¦27390 neither¦27391 yesterday¦27393 nor¦27394 the¦27396=day¦27396.
 \v 15 And¦27398=they¦27398_came¦27398 the¦27399_foremen¦27399_of¦27399 the¦27400_people¦27400_of¦27400 Israel¦27401 and¦27402÷cried¦27402_out¦27402 to¦27403 Pharaoh¦27405 to¦27406=say¦27406 to/for¦27407=what¦27407 are¦27408_you¦27408_doing¦27408 thus¦27409 with¦27410÷servants¦27410_of¦27410÷your¦27410.
-\v 16 Straw¦27412 not¦27413 \add is¦27414_being¦27414\add*_given¦27414 to¦27415÷servants¦27415_of¦27415÷your¦27415 and¦27416÷bricks¦27416 \add people¦27417_are¦27417\add*_saying¦27417 to/for¦27418=us¦27418 make¦27419 and¦27420=behold/lo/see¦27420 your¦27421=servants¦27421 \add are¦27422_being¦27422\add*_struck¦27422 people¦27424_of¦27424÷your¦27424_own¦27424 and¦27423÷fault¦27423.
+\v 16 Straw¦27412 not¦27413 \add is¦27414_being¦27414\add*_given¦27414 to¦27415÷servants¦27415_of¦27415÷your¦27415 and¦27416÷bricks¦27416 \add people¦27417_are¦27417\add*_saying¦27417 to/for¦27418=us¦27418 make¦27419 and¦27420=behold/lo/see¦27420 your¦27421=servants¦27421 \add +are¦27422_being¦27422\add*_struck¦27422 people¦27424_of¦27424÷your¦27424_own¦27424 and¦27423÷fault¦27423.
 \v 17 And¦27426=he|it¦27426_said¦27426 \add +are¦27427\add*_idle¦27427 you¦27428_all¦27428 \add +are¦27429\add*_idle¦27429 on/upon/above/on¦27430_account¦27430_of//he|it¦27430_went¦27430_in¦27430 yes/correct/thus/so¦27432 you¦27433_all¦27433 \add +are¦27434\add*_saying¦27434 let¦27435_us¦27435_go¦27435 let¦27436_us¦27436_sacrifice¦27436 to/for¦27437=YHWH¦27437.
 \v 18 And¦27439=now¦27439 go¦27440 work¦27441 and¦27442÷straw¦27442 not¦27443 it¦27445_will¦27445_be¦27445_given¦27445 to/for¦27446=you¦27446_all¦27446 and¦27447÷quota¦27447_of¦27447 bricks¦27448 you¦27449_all¦27449_will¦27449_give¦27449.
 \v 19 And¦27451=they¦27451_saw¦27451 the¦27452_foremen¦27452_of¦27452 the¦27453_people¦27453_of¦27453 Israel¦27455 DOM¦27456=them¦27456 in/on/at/with¦27457÷trouble¦27457 to¦27458=say¦27458 not¦27459 you¦27461_all¦27461_will¦27461_diminish¦27461 of¦27462÷bricks¦27462_of¦27462÷your¦27462_all's¦27462 a¦27463_matter¦27463_of¦27463 a¦27465_day¦27465 in¦27466=its¦27466=day¦27466.
@@ -320,7 +320,7 @@
 \c 12
 \nb
 \v 1 and¦30586= Yahweh¦30587 =he|it¦30586_said¦30586 to¦30588 Moses¦30590 and¦30591÷to¦30591 Aaron¦30593 in¦30594=land¦30594 of¦30595_Egypt¦30595 to¦30596=say¦30596.
-\v 2 The¦30598÷month¦30598 the¦30599=this¦30599 to/for¦30600=you¦30600_all¦30600 \add will¦30601_be¦30601_the¦30601\add*_beginning¦30601_of¦30601 months¦30602 \add +will¦30603_be¦30603\add*_first¦30603 it¦30604 to/for¦30605=you¦30605_all¦30605 of¦30606÷month¦30606_of¦30606 the¦30607÷year¦30607.
+\v 2 The¦30598÷month¦30598 the¦30599=this¦30599 to/for¦30600=you¦30600_all¦30600 \add +will¦30601_be¦30601\add*_\add +the¦30601\add*_beginning¦30601_of¦30601 months¦30602 \add +will¦30603_be¦30603\add*_first¦30603 it¦30604 to/for¦30605=you¦30605_all¦30605 of¦30606÷month¦30606_of¦30606 the¦30607÷year¦30607.
 \v 3 Speak¦30609 to¦30610 all¦30612_of¦30612 the¦30614_congregation¦30614_of¦30614 Israel¦30615 to¦30616=say¦30616 in/on/at/with¦30617 of¦30618_the¦30618 the¦30619=this¦30619 and¦30620 to/for¦30621=them¦30621 (a)¦30622_man¦30622 wwww¦30623 for¦30624÷families¦30624_of¦30624 wwww¦30626 wwww¦30627 to/for¦30628.
 \v 4 And¦30630=if¦30630 it¦30632_will¦30632_be¦30632_\add too¦30632\add*_small¦30632 the¦30633÷household¦30633 too¦30634_for¦30634÷is¦30634 for¦30635÷lamb¦30635 and¦30636=he|it¦30636_will¦30636_take¦30636 he¦30637 and¦30638÷neighbor¦30638_of¦30638÷his¦30638 the¦30639÷nearest¦30639 to¦30640 house¦30642_of¦30642÷his¦30642 in/on/at/with¦30643÷number¦30643_of¦30643 people¦30644 each¦30645_one¦30645 according¦30646_to¦30646÷amount¦30646_of¦30646 eat¦30647_of¦30647÷it¦30647 you¦30648_all¦30648_will¦30648_estimate¦30648 on¦30649 the¦30651÷lamb¦30651.
 \v 5 A¦30653_lamb¦30653 unblemished¦30654 male¦30655 a¦30656_son¦30656_of¦30656 a¦30658_year¦30658 it¦30659_will¦30659_be¦30659 to/for¦30660=you¦30660_all¦30660 one¦30661_of¦30661 the¦30663÷sheep¦30663 and¦30664=from¦30664 the¦30666÷goats¦30666 you¦30667_all¦30667_will¦30667_take¦30667.

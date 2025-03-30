@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+# -\*- coding: utf-8 -\*-
+# SPDX-License-Identifier: GPL-3.0-or-later
 #
 # connect_OET-RV_words_via_OET-LV.py
 #
 # Script to connect OET-RV words with OET-LV words that have word numbers.
 #
 # Copyright (C) 2023-2025 Robert Hunt
-# Author: Robert Hunt <Freely.Given.org@gmail.com>
+# Author: Robert Hunt <Freely.Given.org+OET@gmail.com>
 # License: See gpl-3.0.txt
 #
 #   This program is free software: you can redistribute it and/or modify
@@ -74,7 +75,7 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-03-14' # by RJH
+LAST_MODIFIED_DATE = '2025-03-25' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.78'
@@ -532,7 +533,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
     totalSimpleListedAdds = totalProperNounAdds = totalFirstPartMatchedAdds = totalManualMatchedAdds = 0
     totalSimpleListedAddsNS = totalProperNounAddsNS = totalFirstPartMatchedAddsNS = totalManualMatchedAddsNS = 0 # Nomina sacra
     for BBB,lvBookObject in lv.books.items():
-        if BBB not in ('PSA','ZEC',): continue
+        if BBB not in ('PSA','MIC',): continue
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Processing connect words for OET {BBB}…" )
 
         bookSimpleListedAdds = bookProperNounAdds = bookFirstPartMatchedAdds = bookManualMatchedAdds = 0
@@ -1279,7 +1280,6 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('box','ark'),
             ('but','But'),
             ('But','And'),
-            ("don't",'not'),
             ('carrying','carried'),
             ('chasing','pursuing'),
             ('cheerful','joy'),
@@ -1304,6 +1304,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('forgive','forgiving'),
             ('fulfilled','accomplished'),
             ('godly','devout'),
+            ('grapevine','vine'),
             ('honour','glorify'),
             ('instructed','commanded'),
             ('insulting','slandering'),
@@ -1518,6 +1519,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             # ('Yudea', 'Youdaia'),
             # ("Zebedee's", 'Zebedaios'),
             # ('Zerah', 'Zara'),('Zerah', 'Zara/Zeraḩ'),
+            ("aren't",'not'),("can't",'not'),("didn't",'not'),("don't",'not'),("isn't",'not'),("shouldn't",'not'),("won't",'not'),
             ):
         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{rvWord=} {lvWordStr=}" )
         lvWords = lvWordStr.split( ' ' )
@@ -1576,6 +1578,7 @@ def doGroup2( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Brothers', 'Brothers and sisters'), ('Brothers', 'Fellow believers'),
             ('Brothers', 'brothers and sisters'), ('Brothers', 'fellow believers'),
 
+            ('Higgaion', 'Meditation break'),
             ('Selah', 'Instrumental break'),
             ('Truly', 'May it be so'),
 
