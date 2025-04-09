@@ -44,7 +44,6 @@ short_OSHB_TSV := ../sourceTexts/rawOSHB/OSHB.parsedOriginal.flat.morphemes.tsv
 
 #=== Script declarations =======================
 
-python3_12 := python3.12
 python3_13 := python3.13
 # python3_14 := ~/Downloads/Python-3.14.0a1/python
 Python := $(python3_13)

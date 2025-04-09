@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 # -\*- coding: utf-8 -\*-
+# SPDX-FileCopyrightText: © 2024 Robert Hunt <Freely.Given.org+OET@gmail.com>
 # SPDX-License-Identifier: GPL-3.0-or-later
 #
 # convert_OET-LV-RV_USFM_to_VREF.py
 #
 # Script to convert cleaned OET USFM files to VPL vref.txt files
 #
-# Copyright (C) 2024 Robert Hunt
+# Copyright (C) 2024-2025 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+OET@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -31,7 +32,7 @@ TODO: Doesn't delete the \rem ESFM headers yet
 
 
 CHANGELOG:
-    2024-05-xx Nothing
+    2025-03-31 Adjust input folder
 """
 from pathlib import Path
 import logging
@@ -45,16 +46,16 @@ from BibleOrgSys.Internals.InternalBibleInternals import InternalBibleEntryList
 import BibleOrgSys.Formats.USFMBible as USFMBible
 
 
-LAST_MODIFIED_DATE = '2024-09-11' # by RJH
+LAST_MODIFIED_DATE = '2025-03-31' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_USFM_to_VREF"
 PROGRAM_NAME = "Convert OET LV & RV USFM files to VREF"
-PROGRAM_VERSION = '0.02'
+PROGRAM_VERSION = '0.03'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
 
 
-VREF_STANDARD_InputFilePath = Path( '/mnt/SSDs/Bibles/DataSets/Reference systems/AQuA.vref.txt' )
+VREF_STANDARD_InputFilePath = Path( '../../../Bibles/DataSets/Reference systems/AQuA.vref.txt' )
 assert VREF_STANDARD_InputFilePath.is_file()
 
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module

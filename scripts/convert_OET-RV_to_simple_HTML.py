@@ -57,10 +57,10 @@ from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, 
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 
 
-LAST_MODIFIED_DATE = '2025-03-08' # by RJH
+LAST_MODIFIED_DATE = '2025-04-07' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
-PROGRAM_VERSION = '0.79'
+PROGRAM_VERSION = '0.80'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -993,9 +993,12 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
             elif inTable:
                 book_html = f'{book_html}</table>\n'
                 inTable = False
-            assert not inRightDiv
-            book_html = f'{book_html}<div class="rightBox"><p class="{marker}"><span class="cv">{C}:{int(V)+1}</span> {rest}</p>\n'
-            inRightDiv = True
+            if marker == 's1':
+                assert not inRightDiv
+                book_html = f'{book_html}<div class="rightBox"><p class="{marker}"><span class="cv">{C}:{int(V)+1}</span> {rest}</p>\n'
+                inRightDiv = True
+            else:
+                book_html = f'{book_html}<p class="{marker}"><span class="cv">{C}:{int(V)+1}</span> {rest}</p>\n'
         elif marker == 'r':
             if inParagraph:
                 book_html = f'{book_html}</{inParagraph}>\n'
