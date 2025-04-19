@@ -1,4 +1,4 @@
-\id PSA - Open English Translation—Readers' Version (OET-RV) v0.0.38
+\id PSA - Open English Translation—Readers' Version (OET-RV) v0.0.43
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 PSA
@@ -778,7 +778,7 @@
 \q1 ≈and blazing fire¦245440 came out of his mouth¦245442.
 \q1 Coals were ignited by it.
 \q1
-\v 9 He opened the skies and came¦245451 down,
+\v 9 He opened the skies¦245450 and came¦245451 down,
 \q1 and \add ≈heavy\add* darkness¦245452 was under¦245453 his feet¦245454.
 \q1
 \v 10 He rode on a winged creature and flew.
@@ -916,7 +916,7 @@
 \d For the musical director¦245892: a song by David¦245894.
 \rem /d To the leader. A Psalm of David.; For the leader: a psalm: for David; For the choir director: A psalm of David.; For the director of music. A psalm of David.
 \q1
-\v 1 The skies declare God's \add ≈talent and splendour\add*,
+\v 1 The skies¦245897 declare God's \add ≈talent and splendour\add*,
 \q1 ≈and \add ≈outer space\add* shows off his handiwork.
 \q1
 \v 2 Speech pours¦245910 out day after day.
@@ -1220,7 +1220,7 @@
 \c 25
 \s1 The praying so that get to teach
 \rem /s1 A Prayer for Guidance and Protection; Prayer for Guidance and for Deliverance
-\d A song by David.
+\d \add A song\add* by David.
 \rem /d For David; A psalm of David.; Of David.
 \q1
 \v 1 I \add ≈offer\add* my life to you¦246862, Yahweh.
@@ -1292,7 +1292,7 @@
 \c 26
 \s1 A prayer of a godly person
 \rem /s1 Plea for Justice and Declaration of Righteousness; The Prayer of a Good Person
-\d A song by David¦247066.
+\d \add A song\add* by David¦247066.
 \rem /d For David; A psalm of David.; Of David.
 \q1
 \v 1 \add ≈Declare me innocent\add*, Yahweh, because I have walked with integrity.
@@ -1376,7 +1376,7 @@
 \q1 because of my enemies.
 \q1
 \v 12 Don't \add ≈let my enemies do what they want to me\add*,
-\q1 because \add ≈fraudlent cases have been brought\add* against me,
+\q1 because \add ≈fraudulent cases have been brought\add* against me,
 \q1 and \add @those people\add* \add ≈thrive on\add* violence.
 \q1
 \v 13 \add ?What would've happened to me\add*
@@ -1584,7 +1584,7 @@
 \v 21 \add ≈Praise\add* Yahweh¦247998, because he¦248000 showed me his incredible loyal commitment
 \q1 when I was \add trapped\add* in a besieged city¦248003.
 \q1
-\v 22 In my alarm¦248010 I \add ≈thought\add*, \q1 “\add ≈I've gone out of\add* your sight¦248013,”
+\v 22 In my alarm¦248010 I \add ≈thought\add*, “\add ≈I've gone out of\add* your sight¦248013,”
 \q1 yet you did hear my plea for help when I called out to you.
 \q1
 \v 23 Love Yahweh, all you \add ≈godly people\add*.
@@ -1742,7 +1742,7 @@
 \q1 I'll teach¦248521 you¦248521 \add ≈how to honour\add* Yahweh¦248520.
 \q1
 \v 12 \add ≈Anyone\add* who desires¦248527 life and \add ≈wants a long life\add*
-q1 \add in order\add* \add ≈to experience\add* good \add >things\add*
+\q1 \add in order\add* \add ≈to experience\add* good \add >things\add*
 \q1
 \v 13 \add then\add* \add ≈don't let evil¦248537 words come out of your mouth\add*,
 \q1 ≈and keep¦248535 your lips¦248538 from speaking¦248539 lies.
@@ -1776,7 +1776,7 @@ q1 \add in order\add* \add ≈to experience\add* good \add >things\add*
 \v 22 Yahweh¦248622 rescues the lives of his servants¦248624.
 \q1 ≈None of those who \add ≈go to him for safety\add* will be condemned.
 \c 35
-\s1 The requesting help of God
+\s1 Requesting Yahweh's help
 \rem /s1 Prayer for Deliverance from Enemies; A Prayer for Help
 \d \add A song\add* by David.
 \rem /d For David; A psalm of David.; Of David.
@@ -1790,7 +1790,7 @@ q1 \add in order\add* \add ≈to experience\add* good \add >things\add*
 \v 3 Use your spear and battle ax against those who chase me.
 \q1 Tell my¦248669 soul, “I'm \add ≈here to save you\add*.”
 \q1
-\v 4 May those who seek my life be shamed and dishonored.
+\v 4 May those who seek my life be shamed and dishonoured.
 \q1 ≈Cause those who plan to harm me to be turned back and confused.
 \q1
 \v 5 May they become like chaff \add ≈blown around by\add* the wind,
@@ -1848,228 +1848,214 @@ q1 \add in order\add* \add ≈to experience\add* good \add >things\add*
 \v 21 They open their mouths wide against me,
 \q1 having said, “Aha, Aha, our \add own\add* eyes have seen¦248849 it.”
 \q1
-\v 22 ◙
-\q1 …
+\v 22 You've seen it, Yahweh¦248864, don't be silent.
+\q1 ≈My master¦248864, don't be distant from me.
 \q1
-\v 23 ◙
-\q1 …
+\v 23 Arouse yourself and awake to my defence.
+\q1 ≈My God¦248870 and my master, \add ≡defend\add* my cause.
 \q1
-\v 24 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 24 Yahweh, my God, vindicate me because \add ≈you always do what is right\add*.
+\q1 Don't let \add @my enemies\add* \add ≈celebrate\add* over my \add defeat\add*.
 \q1
-\v 25 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 25 Don't let them say \add ≈to themselves\add*, “Aha, we got what we wanted.”
+\q1 ≈Don't let them say, “We've \add ≈obliterated\add* him.”
 \q1
-\v 26 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 26 Let anyone who's happy at my distress be put to shame and become confused.
+\q1 ≈Let those who \add ≈think they're better than\add* me be clothed with shame and dishonour.
 \q1
-\v 27 ◙
-\q2 …
-\q2 …
-\q2 …
+\v 27 Let those who desire my vindication shout happily and be glad.
+\q1 May they continually say, “Yahweh be praised¦248919—
+\q1 he who \add ≈gladly ensues\add* the welfare of his servant.”
 \q1
-\v 28 ◙
-\q2 …
+\v 28 Then I'll tell \add >others\add* about your justice
+\q1 and praise you all day long.
 \c 36
-\s1 The evil of person and love of God
+\s1 Wicked people and Yahweh's goodness
 \rem /s1 Human Wickedness and Divine Goodness; Human Wickedness
-\d For the musical director¦248921: a song by David¦248926 servant¦248923 of Master.
+\d For the musical director¦248921: \add a song\add* by Yahweh's servant¦248923 David¦248926.
 \rem /d For the director of music. Of David the servant of the Lord.; To the leader. Of David, the servant of the Lord.; For the choir director: A psalm of David, the servant of the Lord.; For the leader: for the Lord's servant: for David
 \q1
-\v 1 ◙
-\q1 …
-\q2
-\v 2 ◙
-\q2 …
-\q2 …
+\v 1 My heart¦248934 \add ≈struggles with the disobedience of\add* evil \add >people\add*.
+\q1 \add ≈They see no need to worry about God¦248938\add*
 \q1
-\v 3 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 2 because \add #they comfort themselves\add*
+\q1 thinking that \add #their\add* sin won't be discovered and be hated.
 \q1
-\v 4 ◙
-\q2 …
+\v 3 \add #Their\add* words¦248953 are sinful and deceitful¦248957.
+\q1 \add #They\add* don't want to be wise and do good¦248960.
 \q1
+\v 4 \add #They\add* plot wicked¦248963 things \add even\add* when \add #they're\add* lying in bed.
+\q1 ≈\add #They\add* \add ≈decide\add* on a path¦248972 that's no good¦248975—not rejecting¦248978 evil¦248976.
 \rem /s1 The Goodness of God
-\v 5 ◙
-\q2 …
 \q1
-\v 6 ◙
-\q2 …
-\q1 …
+\v 5 Your loyal commitment, Yahweh¦248981, reaches to the heavens¦248982.
+\q1 ≈Your faithfulness¦248984 reaches to the clouds¦248987.
 \q1
-\v 7 ◙
-\q1 …
-\q2 …
+\v 6 Your righteousness¦248990 is like \add ≈the highest\add*\f + \fr 36:6 \ft Literally ‘God's’.\f* mountains¦248992.
+\q1 ≈Your judgments are like the \add ≈deepest ocean\add*.
+\q1 Yahweh¦249002, you¦249001 preserve both \add ≈people\add* and¦249000 animals.
 \q1
-\v 8 ◙
-\q2 …
-\q2 …
+\v 7 God¦249009, your loyal commitment is so valuable.
+\q1 \add ≈You protect us like birds protect their babies under their\add* wings¦249013.
 \q1
-\v 9 ◙
-\q2 …
+\v 8 They feast¦249017 from the plentiful \add provisions\add* in your \add ≈creation\add*.
+\q1 You let them drink¦249022 \add ≈the sweet water\add* from your river¦249020.
+\b
 \q1
-\v 10 ◙
-\q2 …
+\v 9 We see light in your light
+\q1 because you are the fountain¦249028 of life¦249029.
 \q1
-\v 11 ◙
-\q2 …
+\v 10 Fully show your loyal commitment to those who know¦249038 you¦249038.
+\q1 ≈\add ≡Extend\add* your defence to \add ≈those who're godly\add*.
 \q1
-\v 12 ◙
-\q2 …
+\v 11 Don't let arrogant \add #people\add* approach me.
+\q1 Don't let the \add ≈action\add* of wicked¦249052 \add >people\add* drive¦249055 me away.
+\q1
+\v 12 The wicked¦249061 \add >people\add* have fallen¦249059 \add down over\add* there¦249058.
+\q1 They've been knocked down and¦249063 aren't¦249063 able to get up.
 \c 37
-\s1 The egtamanan of righteous/honest/sensible and of bad the deeds
+\s1 The endings of godly and wicked people
 \rem /s1 The Destiny of the Wicked and of the Good; Exhortation to Patience and Trust
-\d A song by David.
+\d \add A song\add* by David.
 \rem /d For David; A psalm of David.; Of David.
 \q1
-\v 1 ◙
-\q2 …
+\v 1 Don't be irritated by \add ≈those who do evil\add*.
+\q1 ≈Don't be envious of those who do \add ≈what is wrong\add*,
 \q1
-\v 2 ◙
-\q2 …
+\v 2 because they'll soon dry up like the grass
+\q1 ≈and wither as the green plants.
 \q1
-\v 3 ◙
-\q1 …
+\v 3 Trust in Yahweh¦249103 and do what is good.
+\q1 \add ≈Settle\add* in the land and \add ≈appreciate\add* faithfulness.
 \q1
-\v 4 ◙
-\q2 …
+\v 4 Then delight yourself in Yahweh¦249113,
+\q1 and he'll give you \add ≈what you really desire\add*.
 \q1
-\v 5 ◙
-\q2 …
+\v 5 \add ≈Give\add* your path to Yahweh.
+\q1 Trust in him, and he'll act \add on your behalf\add*.
 \q1
-\v 6 ◙
-\q2 …
+\v 6 He'll¦249128 display your justice like the daylight
+\q1 ≈and¦249129 your \add ≈innocence\add* like the day at noon.
 \q1
-\v 7 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 7 Be still \add ≈in front of\add* Yahweh and¦249142 wait patiently for him.
+\q1 Don't be angry if others succeed in what \add #they do\add*,
+\q1 or when \add #they make\add* \add evil¦249149\add* plots.
 \q1
-\v 8 ◙
-\q1 …
+\v 8 \add ≈Don't be angry and frustrated\add*.
+\q1 Don't \add ≈be a worrier—that only makes trouble\add*.
 \q1
-\v 9 ◙
-\q2 …
-\q2 …
+\v 9 \add ≈Those who do evil will be eliminated\add*,
+\q1 \add ≈but\add* those who \add ≈strive to obey\add* for Yahweh will \add ≈end up owning\add* the land.
 \q1
-\v 10 ◙
-\q2 …
-\q2 …
+\v 10 In a little while the evil \add >people\add* will disappear.
+\q1 You'll look at \add ≈the place where they were\add*, but \add #they'll\add* be gone.
 \q1
-\v 11 ◙
-\q2 …
+\v 11 \add ≈But\add* the meek will \add ≈inherit\add* the land
+\q1 and¦249185 will delight in great prosperity.
 \q1
-\v 12 ◙
-\q2 …
+\v 12 The wicked \add >people\add* plot against the righteous
+\q1 ≈and grind \add #their\add* teeth \add in rage\add* against \add #them\add*.
 \q1
-\v 13 ◙
-\q2 …
+\v 13 My master laughs at \add #them\add*,
+\q1 because \add he knows that\add* \add their¦249206\add* day is coming.
 \q1
-\v 14 ◙
-\q2 …
+\v 14 The wicked have drawn out their \add #swords\add* and have bent their \add #bows\add*
+\q1 to birng the oppressed and needy down—
+\q1 \add yes,\add* to kill those who are \add ≈godly\add*.
 \q1
-\v 15 ◙
-\q2 …
+\v 15 Their \add #swords\add* will \add ≈pierce\add* their own \add #hearts\add*,
+\q1 and their bows will be broken.
 \q1
-\v 16 ◙
-\q2 …
+\v 16 It's¦249235 better to do right¦249234 and \add only\add* have a little,
+\q1 than to be wicked¦249231 and rich,
 \q1
-\v 17 ◙
-\q2 …
+\v 17 because the arms of the wicked \add >people\add* will be broken,
+\q1 but Yahweh¦249238 \add ≈supports\add* \add >people\add* \add who're\add* righteous.
 \q1
-\v 18 ◙
-\q2 …
+\v 18 Yahweh \add ≈keeps an eye on those who're blameless\add*,
+\q1 and¦249250 \add ^they won't lose\add* their inheritance.
 \q1
-\v 19 ◙
-\q2 …
+\v 19 They won't be shamed when times \add ≈are bad\add*.
+\q1 When famine comes, they'll have enough to eat,
 \q1
-\v 20 ◙
-\q1 …
-\q2 …
+\v 20 because evil \add >people\add* will \add ≈die\add*.
+\q1 Yahweh's enemies will be like the \add fleeting\add* \add ≈beauty\add* of the fields—
+\q1 they'll be consumed and \add ≈disappear\add* in the smoke.
 \q1
-\v 21 ◙
-\q2 …
+\v 21 Wicked \add >people\add* borrow \add ≈but never\add* repay,
+\q1 \add ≈but\add* the \add ≈godly\add* \add >person\add* \add ≈is generous\add* and gives.
 \q1
-\v 22 ◙
-\q2 …
+\v 22 Those who are blessed by \add @God\add* will \add ≈own\add* the land,
+\q1 \add ≈but\add* those who are cursed by him will be \add ≈wiped out\add*.
 \q1
-\v 23 ◙
-\q2 …
+\v 23 It is by Yahweh¦249297 that a person's steps are established,
+\q1 and he \add ≈takes pleasure\add* in \add observing\add* their path.
 \q1
-\v 24 ◙
-\q2 …
+\v 24 \add Even\add* if \add #they\add* stumble, \add #they\add* won't¦249307 fall \add ≈on their face\add*,
+\q1 because Yahweh is \add ≈right¦249310 there helping\add* \add #them\add*.
+\b
 \q1
-\v 25 ◙
-\q2 …
-\q2 …
+\v 25 I was young and now I'm old
+\q1 and I've never seen the righteous \add >person\add* abandoned
+\q1 \add ≈or\add* their children¦249322 \add ≈out begging for food\add*.
 \q1
-\v 26 ◙
-\q2 …
+\v 26 All day long, \add ≈they're\add* \add ≈gracious\add* and lend \add to those more needy\add*,
+\q1 and \add #their\add* children become a blessing \add to others\add*.
 \q1
-\v 27 ◙
-\q2 …
+\v 27 Turn¦249334 away from evil and do what is right,
+\q1 then you will \add ≈go on living\add*
 \q1
-\v 28 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 28 because Yahweh loves justice and doesn't abandon \add ≈those who're faithful to him\add*.
+\q1 They're preserved forever¦249355, but the descendants of wicked \add >people\add* will be \add ≈eliminated\add*.
 \q1
-\v 29 ◙
-\q2 …
+\v 29 The \add ≈godly\add* \add >people\add* will inherit the land
+\q1 ≈and¦249363 always live there.
 \q1
-\v 30 ◙
-\q2 …
+\v 30 \add ≈Godly\add* \add >people\add* \add ≈expound\add* wisdom
+\q1 ≈and \add ≈promote\add* justice.
 \q1
-\v 31 ◙
-\q2 …
+\v 31 God's law is \add always\add* \add ≈on their minds\add*.
+\q1 \add #Their\add* feet won't slip.
 \q1
-\v 32 ◙
-\q2 …
+\v 32 The¦249381 wicked person watches the righteous
+\q1 and¦249386 seeks to kill \add #them\add*.
 \q1
-\v 33 ◙
-\q2 …
+\v 33 Yahweh¦249393 won't abandon \add #them\add* into the evil person's hand
+\q1 or condemn \add #them\add* when \add they're\add* judged.
 \q1
-\v 34 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 34 Wait for Yahweh and¦249407 \add ≈stay on the path he showed you\add*,
+\q1 then he'll \add ≈assist you\add* to possess the land \add he promised\add*.
+\q1 You'll see those who're wicked¦249405 \add ≈get eliminated\add*.
 \q1
-\v 35 ◙
-\q2 …
+\v 35 I've seen a wicked and terrifying person
+\q1 spreading out like a luxuriant tree in its native soil.
 \q1
-\v 36 ◙
-\q1 …
+\v 36 However, when I passed by again, \add #they\add* weren't there.
+\q1 ≈I looked for \add #them\add*, but \add #they\add* couldn't be found.
 \q1
-\v 37 ◙
-\q2 …
+\v 37 Observe the person of integrity, and notice \add ≈those who're godly\add*.
+\q1 There's a good future¦249432 for a peaceful person.
 \q1
-\v 38 ◙
-\q2 …
+\v 38 Sinners will be totally destroyed;
+\q1 ≈The future will be cut off for wicked \add ≈people\add*.
 \q1
-\v 39 ◙
-\q1 …
+\v 39 Yahweh¦249444 \add ≈is the one who saves¦249448 godly people\add*.
+\q1 ≈He protects them in the times of trouble.
 \q1
-\v 40 ◙
-\q1 …
+\v 40 Yahweh helps them and rescues them.
+\q1 He rescues them from evil people and saves them
+\q1 because they've \add ≈gone to him as a place of safety\add*.
 \c 38
 \s1 The requesting of person suffering
 \rem /s1 The Prayer of a Sufferer; A Penitent Sufferer's Plea for Healing
-\d A song by David¦249455 so that thinking he of God.
+\d A song by David¦249455 for the memorial¦249456 offering¦249456.
 \rem /d A psalm of David, to bring us to the Lord's remembrance.; A psalm: for David: for commemoration; A Psalm of David, for the memorial offering.; A psalm of David. A petition.
 \q1
-\v 1 ◙
-\q2 …
+\v 1 Yahweh¦249459, don't¦249460 rebuke¦249463 me in your anger.
+\q1 ≈Don't punish me in your rage,
 \q1
-\v 2 ◙
-\q2 …
+\v 2 because your arrows¦249470 pierce me,
+\q1 ≈and your hand¦249475 presses¦249473 me down.
 \q1
 \v 3 ◙
 \q2 …
@@ -3658,7 +3644,7 @@ q1 \add in order\add* \add ≈to experience\add* good \add >things\add*
 \v 7 God¦254571, when you went¦254572 out \add ≈ahead of\add* your people¦254574,
 \q1 you marched¦254575 through the wilderness¦254576. \qs (Instrumental¦254577 break¦254577.)\qs*
 \q1
-\v 8 The earth¦254580 trembled \add and\add* the skies also dropped¦254586 rain in God's presence—
+\v 8 The earth¦254580 trembled \add and\add* the skies¦254585 also dropped¦254586 rain in God's presence—
 \q1 in the presence of God at Sinai¦254590,
 \q1 in the presence of Israel's¦254594 God.
 \q1
@@ -5679,7 +5665,7 @@ q1 \add in order\add* \add ≈to experience\add* good \add >things\add*
 \q1 He \add ≈put the planet in its place and nothing will shake¦260584 it\add*.
 \q1 He will judge¦260585 each people¦260586 group with fairness.
 \q1
-\v 11 Let the skies be glad and let the land be happy.
+\v 11 Let the skies¦260590 be glad and let the land be happy.
 \q1 ≈Let the \add #oceans\add* and everything in \add #them\add* roar.
 \q1
 \v 12 Let the countryside¦260598 and¦260599 everything in it \add ≈celebrate\add*.
@@ -5934,7 +5920,7 @@ q1 \add in order\add* \add ≈to experience\add* good \add >things\add*
 \q1 You \add ≈live through\add* generation after generation.
 \q1
 \v 25 You founded¦261384 \add ≈this planet\add* \add right\add* at the beginning¦261382.\x + \xo 102:25-27: \xt Heb 1:10-12.\x*
-\q1 You \add ≈made\add* the skies with your¦261386 \add own\add* hands¦261386.
+\q1 You \add ≈made\add* the skies¦261387 with your¦261386 \add own\add* hands¦261386.
 \q1
 \v 26 You'll remain even when they perish¦261392.
 \q1 They'll wear out like \add an old\add* \add ≈shirt\add*—
@@ -5948,7 +5934,7 @@ q1 \add in order\add* \add ≈to experience\add* good \add >things\add*
 \c 103
 \s1 Yahweh's goodness
 \rem /s1 Thanksgiving for God's Goodness; The Love of God
-\d A song by David.
+\d \add A song\add* by David.
 \rem /d For David; A psalm of David.; Of David.
 \q1
 \v 1 Bless¦261435 Yahweh¦261439 \add ≈with my entire¦261443 self\add*,
@@ -8360,7 +8346,7 @@ q1 \add in order\add* \add ≈to experience\add* good \add >things\add*
 \c 138
 \s1 A prayer of thankfulness
 \rem /s1 A Prayer of Thanksgiving; Thanksgiving and Praise
-\d A song by David.
+\d \add A song\add* by David.
 \rem /d For David; A psalm of David.; Of David.
 \q1
 \v 1 I will thank¦267617 you, \add Yahweh\add*, with my whole \add ≈being\add*.
@@ -8661,7 +8647,7 @@ q1 \add in order\add* \add ≈to experience\add* good \add >things\add*
 \c 144
 \s1 The thanking due to victory
 \rem /s1 A King Thanks God for Victory; Prayer for National Deliverance and Security
-\d A song by David.
+\d \add A song\add* by David.
 \rem /d For David; A psalm of David.; Of David.
 \q1
 \v 1 ◙
@@ -8722,252 +8708,243 @@ q1 \add in order\add* \add ≈to experience\add* good \add >things\add*
 \c 145
 \s1 A praise song
 \rem /s1 A Hymn of Praise; The Greatness and the Goodness of God
-\d A¦268632 song by David¦268627.
+\d A¦268632 ppraise \add song\add* by David¦268627.
 \rem /d Praise. Of David.; A psalm of praise. Of David.; A psalm of praise of David.; A psalm of praise: for David
 \q1
-\v 1 ◙
-\q1 …
+\v 1 I will \add ≈highly commend\add* you¦268640, my God, the King.
+\q1 I will praise¦268641 your¦268642 name¦268642 \add ^without ending\add*.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 Every day I'll \add make sure to\add* bless you.
+\q1 I will praise¦268648 your name forever and ever.
 \q1
-\v 3 ◙
-\q2 …
-\q2 …
+\v 3 Yahweh is great and¦268658 \add ≈deserving of a lot of praise\add*—
+\q1 \add ≈We can't fully comprehend\add* his greatness.
 \q1
-\v 4 ◙
-\q2 …
+\v 4 Generation¦268666 to generation will celebrate because of \add ≈what you've done\add*
+\q1 and they'll \add ≈tell others about your powerful\add* actions.
 \q1
-\v 5 ◙
-\q2 …
+\v 5 I'll meditate on \add ≈your incredible splendour and honour\add*
+\q1 ≈as well as \add all\add* \add ≈the marvellous things that you've done\add*.
 \q1
-\v 6 ◙
-\q2 …
+\v 6 They'll tell \add ≈about how your awesome actions show your power\add*,
+\q1 and I'll speak about your greatness¦268676.
 \q1
-\v 7 ◙
-\q2 …
+\v 7 They'll¦268685 remember the fame of your extravagant goodness,
+\q1 and they'll happily sing about your righteousness.
 \q1
-\v 8 ◙
-\q1 …
+\v 8 Yahweh¦268694 is gracious and merciful,
+\q1 slow to anger and \add ≈frequently displaying his\add* loyal commitment.
 \q1
-\v 9 ◙
-\q1 …
+\v 9 Yahweh¦268704 is good to everyone,
+\q1 and¦268708 \add ≈desires the best\add* for everything he made.
 \b
 \q1
-\v 10 ◙
-\q2 …
-\q2 …
+\v 10 Everyone you've made will give thanks to you, Yahweh.
+\q1 Your faithful \add supporters\add* will bless you.
 \q1
-\v 11 ◙
-\q2 …
-\q2
-\v 12 ◙
-\q2 …
+\v 11 They'll tell about the splendour of your kingdom¦268724,
+\q1 and¦268722 they'll speak about of your power,
 \q1
-\v 13 ◙
-\q2 …
-\b
-\q1 …
-\q2 …
+\v 12 making his powerful actions known to humanity's children,
+\q1 along with the incredible splendour of his kingdom.
 \q1
-\v 14 ◙
-\q2 …
+\v 13 Your¦268738 kingdom \add ≈will continue forever\add*,
+\q1 and¦268742 \add ≈you'll rule generation after generation\add*.
 \q1
-\v 15 ◙
-\q2 …
+\v 14 Yahweh supports all those who're falling
+\q1 and¦268752 raises up all those who're bent over \add ?under heavy loads\add*.
 \q1
-\v 16 ◙
-\q2 …
+\v 15 \add ≈Everyone and everything's\add* eyes are watching out for you¦268761.
+\q1 You give them their food at the proper time.
 \q1
-\v 17 ◙
-\q2 …
+\v 16 You¦268772 open your hand
+\q1 and¦268776 satisfy the desire of every living \add >thing\add*.
 \q1
-\v 18 ◙
-\q2 …
+\v 17 Yahweh¦268782 is righteous in all his¦268785 ways
+\q1 and shows kindness in everything he does.
 \q1
-\v 19 ◙
-\q2 …
+\v 18 Yahweh is near to all who call to him¦268793—
+\q1 to all who \add ≈sincerity request his¦268793 help\add*.
 \q1
-\v 20 ◙
-\q2 …
+\v 19 For¦268802 those who \add ≈strive to obey\add* him, he does \add ≈what they desire\add*,
+\q1 and he hears their \add ≈call for help\add* and saves them.
+\q1
+\v 20 Yahweh¦268815 protects all those who love him,
+\q1 \add ≈but\add* he'll destroy all the wicked.
 \b
 \q1
-\v 21 ◙
-\q2 …
+\v 21 My mouth speaks the praise of Yahweh.
+\q1 Let \add ≈everybody\add* bless his holy name forever and ever.
 \c 146
-\s1 Praise the God saviour
+\s1 Praise Yahweh the liberator
 \rem /s1 Praise for God's Help; In Praise of God the Savior
 \q1
-\v 1 ◙
-\q1 …
+\v 1 Praise¦268828 Yah.
+\q1 ≈I'll praise¦268831 Yahweh¦268835 \add ≈with my whole being\add*.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 I'll praise¦268837 Yahweh¦268838 with my life.
+\q1 ≈I'll sing praises¦268840 to my God¦268841 as long¦268842 as I live¦268839.
 \b
 \q1
-\v 3 ◙
-\q2 …
+\v 3 Don't trust¦268846 in \add ≈polititians\add*
+\q1 ≈or in people—\add ≈none of them can save you\add*.
 \q1
-\v 4 ◙
-\q2 …
+\v 4 When \add #their\add* breath¦268857 ceases, \add #they\add* return¦268858 to the ground—
+\q1 \add all\add* \add #their\add* plans¦268863 \add ≈come to an end at that time\add*.
 \b
 \q1
-\v 5 ◙
-\q2 …
+\v 5 Blessed are the \add #people\add* who have Yacob's¦268867 God \add ≈to help¦268868\add* \add #them\add*—
+\q1 whose hope is in \add #their\add* God Yahweh¦268872:
 \q1
-\v 6 \x + \xo 146:6: \xt Acts 4:24; 14:15.\x*◙
-\q2 …
-\q1 …
-\q2
-\v 7 ◙
-\q2 …
-\b
-\q1 …
-\q2
-\v 8 ◙
-\q1 …
-\q2 …
+\v 6 He's the one who made the heavens¦268877 and earth¦268878, the sea¦268881, and all that is in them.
+\q1 He's the one \add ≈remains faithful¦268890\add* forever¦268891.\x + \xo 146:6: \xt Acts 4:24; 14:15.\x*
 \q1
-\v 9 ◙
-\q2 …
-\q2 …
+\v 7 He's the one who \add ≈executes\add* justice¦268894 for the oppressed¦268896.
+\q1 He's the one who gives¦268897 \add ≈food\add* to the hungry¦268899.
 \b
+\q1 Yahweh¦268900 liberates the prisoners¦268902.
 \q1
-\v 10 ◙
-\q1 …
+\v 8 Yahweh opens the eyes of the blind¦268907.
+\q1 Yahweh \add ≈straightens up\add* those who're bowed¦268910 down \add under heavy loads\add*.
+\q1 Yahweh loves those who \add ≈do what is right¦268913\add*.
+\q1
+\v 9 Yahweh¦268915 guards the refugees.
+\q1 He sustains \add #orphans and widows¦268922\add*,
+\q1 \add ≈but\add* he subverts the \add ≈plans\add* of the wicked¦268925.
+\q1
+\v 10 Yahweh reigns forever¦268931.
+\q1 Tsiyyon¦268933 \add (Zion¦268933)\add*, your¦268932 God¦268932 reigns \add ≈throughout the generations\add*.
 \b
-\q1 …
+\q1 Praise Yahweh.
 \c 147
-\s1 Praise the Master God
+\s1 Praise Yahweh who's in control
 \rem /s1 Praise for God's Care for Jerusalem; In Praise of God the Almighty
 \q1
-\v 1 ◙
+\v 1 Praise¦268940 Yahweh.
 \b
-\q1 …
-\q2 …
+\q1 How good¦268945 it is to sing praises¦268946 to our¦268947 God¦268947,
+\q1 ≈How pleasant¦268950 and suitable¦268951 is a praise¦268952 song.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 Yahweh¦268956 builds¦268954 up Yerushalem¦268955 \add (Jerusalem)\add*,
+\q1 He gathers¦268959 the Israelis¦268957 \add ≈who were taken to other countries\add*.
 \q1
-\v 3 ◙
-\q2 …
-\b
-\q1
-\v 4 ◙
-\q2 …
-\q1
-\v 5 ◙
-\q2 …
-\q1
-\v 6 ◙
-\q2 …
+\v 3 He heals¦268961 those who're broken-hearted
+\q1 and¦268964 \add ≈bandages\add* their¦268965 wounds¦268965.
 \b
 \q1
-\v 7 ◙
-\q2 …
+\v 4 He counts¦268967 the stars¦268969—
+\q1 he calls¦268972 all of them \add ≈by name\add*.
 \q1
-\v 8 ◙
-\q2 …
-\q2 …
+\v 5 Our master¦268975 is \add ≈wonderful\add* and¦268976 \add ≈very powerful¦268978\add*.
+\q1 His understanding¦268979 is \add ≈unlimited\add*.
 \q1
-\v 9 ◙
-\q2 …
+\v 6 Yahweh¦268985 \add ≈helps\add* the oppressed up.
+\q1 He brings¦268986 down the wicked¦268987 to the ground¦268990.
 \b
 \q1
-\v 10 ◙
-\q2 …
+\v 7 Sing to Yahweh¦268993 with thanksgiving¦268994.
+\q1 ≈Make music¦268995 for our¦268996 God¦268996 with a harp.
 \q1
-\v 11 ◙
-\q2 …
+\v 8 He's the one who covers¦268999 the skies¦269000 with clouds¦269002.
+\q1 ≈He's the one who prepares¦269003 rain for the earth¦269004.
+\q1 He's the one who makes the mountains¦269007 sprout with grass¦269008.
+\q1
+\v 9 He gives food to the animals¦269011
+\q1 ≈and to the ravens' \add ≈chicks\add* when they¦269016 \add ≈squawk\add*.
 \b
 \q1
-\v 12 ◙
-\q2 …
+\v 10 He doesn't delight¦269021 in the strength¦269019 of a horse¦269020,
+\q1 ≈He doesn't enjoy a man's legs.
 \q1
-\v 13 ◙
-\q2 …
-\q1
-\v 14 ◙
-\q2 …
+\v 11 Yahweh¦269029 enjoys those who fear¦269032 him¦269032—
+\q1 those who \add ≈know to expect\add* his¦269032 loyal commitment.
 \b
 \q1
-\v 15 ◙
-\q2 …
+\v 12 \add ≈Tell about Yahweh's greatness\add*, Yerushalem¦269039.
+\q1 ≈Praise your¦269044 God¦269044, Tsiyyon¦269045,
 \q1
-\v 16 ◙
-\q2 …
+\v 13 because he strengthens¦269049 the \add locking\add* bars on your gates¦269051.
+\q1 He blesses¦269052 your children¦269053 there \add ≈in the city\add*.
 \q1
-\v 17 ◙
-\q2 …
+\v 14 He give peace¦269059 on your¦269058 borders¦269058.
+\q1 He satisfies¦269062 you¦269062 with \add ≈excellent grain\add*.
 \q1
-\v 18 ◙
-\q2 …
+\v 15 He sends¦269064 out his command¦269065 to the soil,
+\q1 ≈His message¦269071 \add ≈travels\add* quickly¦269069.
+\q1
+\v 16 He makes the snow \add coat the ground\add* like wool \add on a sheep\add*.
+\q1 ≈He scatters the frost \add across the countryside\add* like \add people scatter\add* ashes¦269077.
+\q1
+\v 17 He sends out his hail like crumbs¦269082 \add brushed off a table\add*.
+\q1 Who can stand¦269086 before his cold¦269084?
+\q1
+\v 18 He sends¦269088 out his command and melts¦269090 them.
+\q1 ≈He makes¦269091 his wind blow, and the waters¦269095 flow.
 \b
 \q1
-\v 19 ◙
-\q2 …
+\v 19 He declared¦269097 his message¦269098 to Yakob \add (Jacob)\add*—
+\q1 ≈his instructions and¦269102 his regulations for Yisrael.
 \q1
-\v 20 ◙
-\q2 …
+\v 20 He hasn't done that for any other country¦269111,
+\q1 ≈and¦269112 as for his instructions, they don't¦269113 know¦269115 them.
 \b
-\q1 …
+\q1 Praise Yahweh.
 \c 148
-\s1 Knowing of world of praising of God
+\s1 Praise Yahweh everyone
 \rem /s1 A Call for the Universe to Praise God; Praise for God's Universal Glory
 \q1
-\v 1 ◙
+\v 1 Praise Yahweh.
 \b
-\q1 …
-\q2 …
+\q1 Praise Yahweh from the skies¦269129.
+\q1 ≈Praise him¦269130 in the heights¦269131.
 \q1
-\v 2 ◙
-\q2 …
-\b
-\q1
-\v 3 ◙
-\q2 …
-\q1
-\v 4 ◙
-\q2 …
+\v 2 Praise him, all his messengers¦269136.
+\q1 ≈Praise him, all his armies.
 \b
 \q1
-\v 5 ◙
-\q2 …
+\v 3 Praise him, sun¦269144 and moon¦269145.
+\q1 ≈Praise him, all you shining stars¦269149.
 \q1
-\v 6 ◙
-\q2 …
+\v 4 Praise¦269153 him, highest heavens
+\q1 ≈and the waters¦269155 that are above the heavens.\x + \xo 148:4 \xt Gen 1:7.\x*
 \b
 \q1
-\v 7 ◙
-\q2 …
+\v 5 Let them praise¦269161 Yahweh's name¦269164,
+\q1 because he \add ≈gave the command¦269168\add* and then they were created¦269169.\x + \xo 148:5 \xt Gen 1:1-2.\x*
 \q1
-\v 8 ◙
-\q2 …
+\v 6 He has established¦269171 them forever and ever.
+\q1 He made a decree¦269174 and it¦269178 won't¦269177 \add ever\add* \add ≈become invalid\add*.
 \b
 \q1
-\v 9 ◙
-\q2 …
+\v 7 Praise¦269180 Yahweh¦269183 from the earth¦269186,
+\q1 \add ≈you\add* sea¦269187 monsters¦269187 and all ocean depths,
 \q1
-\v 10 ◙
-\q2 …
+\v 8 fire¦269192 and hail, snow and clouds¦269195,
+\q1 stormy¦269197 winds doing \add ≈what he commanded¦269199\add*.
 \b
 \q1
-\v 11 ◙
-\q2 …
+\v 9 The mountains¦269201 and all the hills¦269204,
+\q1 the fruit¦269206 trees and all the cedars¦269209,
 \q1
-\v 12 ◙
-\q2 …
+\v 10 \add both\add* wild and all the domestic animals¦269211,
+\q1 reptiles and winged birds¦269216.
 \b
 \q1
-\v 13 ◙
-\q2 …
-\q1 …
+\v 11 Kings¦269225 \add ≈across the world\add* and all the peoples¦269224,
+\q1 princes and all judges \add ≈across the world\add*,
 \q1
-\v 14 ◙
-\q2 …
-\q2 …
+\v 12 young men and also young women¦269234,
+\q1 the elderly along with the children,
+\q1
+\v 13 let them all praise¦269240 Yahweh's name,
+\q1 because his name alone¦269250 is \add ≈famous\add*.
+\q1 His \add ≈splendour¦269251\add* extends over the earth¦269254 and \add in\add* the heavens¦269255.
+\q1
+\v 14 He has \add ≈increased his people's military strength\add*.
+\q1 Praise from all his faithful¦269264 ones—
+\q1 from the children of Israel¦269266—the people near to him.
 \b
-\q1 …
+\q1 Praise Yahweh.
 \c 149
 \s1 A song of praise
 \rem /s1 A Hymn of Praise; Praise for God's Goodness to Israel
