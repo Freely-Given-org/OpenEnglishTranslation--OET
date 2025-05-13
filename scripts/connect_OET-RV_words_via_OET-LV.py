@@ -75,7 +75,7 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-04-30' # by RJH
+LAST_MODIFIED_DATE = '2025-05-14' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.78'
@@ -773,8 +773,10 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
         ●    e – emphasized words (scare quotes)
     The lowercase letters mark other significant places where the words are not normally capitalized.
     """
-    # global forList
+    connectRef = f'{BBB}_{c}:{v}'
     # fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {BBB} {c}:{v} {len(rvEntryList)}, {len(lvEntryList)} )" )
+    # if connectRef == 'PSA_54:1':
+    #     print( f"\nconnect_OET_RV( {connectRef} {len(rvEntryList)} {rvEntryList=}, {len(lvEntryList)} {lvEntryList=} )" )
     NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
     if NT:
         assert state.wordTableHeaderList.index('VLTGlossWords')+1 == GLOSS_COLUMN__NUMBER, f"{state.wordTableHeaderList.index('VLTGlossWords')+1=} {GLOSS_COLUMN__NUMBER=} {state.wordTableHeaderList=}" # Check we have the correct column below
@@ -782,7 +784,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     rvText = ''
     for rvEntry in rvEntryList:
         rvMarker, rvRest = rvEntry.getMarker(), rvEntry.getCleanText()
-        # print( f"OET-RV {BBB} {c}:{v} {rvMarker}='{rvRest}'")
+        # print( f"OET-RV {connectRef} {rvMarker}='{rvRest}'")
         if rvMarker in ('v~','p~','d'):
             rvText = f"{rvText}{' ' if rvText else ''}{rvRest}"
     lvText = ''
@@ -822,7 +824,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     rvWords1 = rvAdjText.split( ' ' )
     # print( f"({len(rvWords)}) {rvWords=}")
     # print( f"({len(lvWords)}) {lvWords=}")
-    # if BBB=='PSA' and c in (3,23,29) and v<3: print( f"{BBB} {c}:{v} {lvWords=} {rvWords1=}" )
+    # if BBB=='PSA' and c in (3,23,29) and v<3: print( f"{connectRef} {lvWords=} {rvWords1=}" )
 
     # Remove DOM's from word list
     #   These are capitalised, but untranslated, so remove them here (because won't ever be in RV)
@@ -842,20 +844,20 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     #         if lvWord == 'NOT': badIx = ix
     #         else:
     #             assert lvWord, f"{lvText=} {lvAdjText=}"
-    #             assert lvWord.count( '¦' ) == 1, f"{BBB} {c}:{v} {lvWord=}" # Check that we haven't been retagging already tagged RV words
+    #             assert lvWord.count( '¦' ) == 1, f"{connectRef} {lvWord=}" # Check that we haven't been retagging already tagged RV words
     #     if badIx is not None: lvWords.pop( badIx )
 
     assert rvWords1
     rvWords = []
     for rvWord in rvWords1:
-        assert rvWord, f"{BBB} {c}:{v} {rvText=} {rvAdjText=}"
+        assert rvWord, f"{connectRef} {rvText=} {rvAdjText=}"
         rvWordBits = rvWord.split( '-' )
         if len(rvWordBits) == 1: # No hyphen
-            assert rvWord.count( '¦' ) <= 1, f"{BBB} {c}:{v} {rvWord=} {rvText=} {rvAdjText=}" # Check that we haven't been retagging already tagged RV words
+            assert rvWord.count( '¦' ) <= 1, f"{connectRef} {rvWord=} {rvText=} {rvAdjText=}" # Check that we haven't been retagging already tagged RV words
             rvWords.append( rvWord )
         elif rvWordBits[1][0].isupper(): # Hyphenated and with a capital letter, e.g., Kiriat-Arba (may even have three parts)
             for rvWordBit in rvWordBits:
-                assert rvWordBit.count( '¦' ) <= 1, f"{BBB} {c}:{v} {rvWordBit=} {rvText=} {rvAdjText=}" # Check that we haven't been retagging already tagged RV words
+                assert rvWordBit.count( '¦' ) <= 1, f"{connectRef} {rvWordBit=} {rvText=} {rvAdjText=}" # Check that we haven't been retagging already tagged RV words
                 rvWords.append( rvWordBit )
 
     numSimpleListedAdds,numSimpleListedNS = matchOurListedSimpleWords( BBB, c,v, rvWords, lvWords )
@@ -1268,6 +1270,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('ancestors','fathers'),
             ('announced','proclaiming'), ('announcing','proclaiming'),
             ('Anyone','one'),('anyone','one'),
+            ('appeared','seen'),
             ('appropriate','fitting'),
             ('army-commander','hosts'),
             ('arrested','captured'),('arrested','laid'),
@@ -1295,6 +1298,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             # ('demon','unclean'),('demons','spirits'),
             ('demon-possessed','unclean'),
             ('deserted','desolate'),
+            ('dinosaur','dragon'), # Rev 12:3
             ('driving','throwing'),
             ('entire','all'),
             ('everyone','people'), ('Everyone','one'),('everyone','one'),
@@ -1306,6 +1310,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('godly','devout'),
             ('grapevine','vine'),
             ('honour','glorify'),
+            ('huge','great'),
             ('instructed','commanded'),
             ('insulting','slandering'),
             ('kill','destroy'),
@@ -1381,6 +1386,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('went','came'),
             ("What's",'What'),
             ('work','service'),
+            ('wow','see'),
             ('wrote','written'),
             ('yelled','cried'),
             ('yourselves','hearts'),
@@ -1670,7 +1676,7 @@ def getLVWordRow( wordWithNumber:str ) -> Tuple[str,int,List[str]]:
 
 
 ndStartMarker, ndEndMarker = '\\nd ', '\\nd*'
-def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
+def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool | None:
     """
     Go through the RV USFM for BBBB and find the lines for c:v (which comes from Original/OET-LV verse numbering)
 
@@ -1688,6 +1694,11 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
     NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
     havePsalmTitles = BibleOrgSysGlobals.loadedBibleBooksCodes.hasPsalmTitle( BBB, str(c) )
     desiredV = (v-1) if havePsalmTitles and v>1 else v
+
+    if NT:
+        if wordNumber in (143_176,143_692,149_461,150_257): return None # Temp HEB 1:6, 1 Pet (nd gets put inside add field).................................................................................
+    else:
+        if wordNumber in (252_390,): return None # Temp PSA 54:1 (v1 gets put into d field).................................................................................
 
     C = V = None
     foundChapter = foundVerse = False
