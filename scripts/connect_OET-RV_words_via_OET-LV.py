@@ -1586,7 +1586,7 @@ def doGroup2( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Brothers', 'brothers and sisters'), ('Brothers', 'fellow believers'),
 
             ('Higgaion', 'Meditation break'),
-            ('Selah', 'Instrumental break'),
+            ('Şelāh', 'Instrumental break'),
             ('Truly', 'May it be so'),
 
             ('members', 'body parts'),

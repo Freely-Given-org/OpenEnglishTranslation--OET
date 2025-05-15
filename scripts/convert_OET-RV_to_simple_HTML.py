@@ -57,10 +57,10 @@ from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, 
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 
 
-LAST_MODIFIED_DATE = '2025-04-07' # by RJH
+LAST_MODIFIED_DATE = '2025-05-14' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
-PROGRAM_VERSION = '0.80'
+PROGRAM_VERSION = '0.81'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -1011,28 +1011,32 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
             lastBBB = None
             for restBit in rest[1:-1].split( '; '):
                 dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{BBB} {C}:{V} r='{rest}' {restBit=}")
-                try:
-                    bkCode, linkCV = restBit.rsplit(' ', 1)
-                    bkCode = bkCode.rstrip('.').replace( 'Yhn', 'Jn' ).replace( 'Yud', 'Jud' )
-                    linkBBB = BibleOrgSysGlobals.loadedBibleBooksCodes.getBBBFromText( bkCode )
-                    if not linkBBB:
-                        assert bkCode[0].isdigit(), f"{BBB} {C}:{V}: {restBit=} {bkCode=} {linkCV=} {linkBBB=} {lastBBB=}"
-                        linkBBB = lastBBB
-                    assert linkBBB, f"{BBB} {C}:{V}: {restBit=} {bkCode=} {linkCV=} {linkBBB=} {lastBBB=}"
-                except ValueError: linkCV = restBit # and use the last book code
-                dPrint( 'Never', DEBUGGING_THIS_MODULE, f"  {bkCode=} {linkBBB=} {linkCV=}" )
-                firstCVRef = linkCV.replace('–','-').split('-')[0]
-                dPrint( 'Never', DEBUGGING_THIS_MODULE, f"  {firstCVRef=}")
-                try: linkC, linkV = firstCVRef.split(':', 1)
-                except ValueError:
-                    if linkBBB == 'PSA': # Often a reference to an entire Psalm
-                        linkC, linkV = firstCVRef, '1'
-                    elif linkBBB in ('JDE',): # single-chapter books
-                        linkC, linkV = '1', firstCVRef
-                    else: # might just be a single verse
-                        linkV = firstCVRef
-                dPrint( 'Never', DEBUGGING_THIS_MODULE, f"  {firstCVRef=} {linkC=}:{linkV=}")
-                link = f'<a href="{linkBBB}.html#C{linkC}V{linkV}">{restBit}</a>'
+                if BBB=='PSA' and restBit == 'Continuation of Song 42':
+                    linkBBB = 'PSA'
+                    link = f'<a href="{linkBBB}.html#C42V11">{restBit}</a>' # Link to last verse of Psa 42
+                else:
+                    try:
+                        bkCode, linkCV = restBit.rsplit(' ', 1)
+                        bkCode = bkCode.rstrip('.').replace( 'Yhn', 'Jn' ).replace( 'Yud', 'Jud' )
+                        linkBBB = BibleOrgSysGlobals.loadedBibleBooksCodes.getBBBFromText( bkCode )
+                        if not linkBBB:
+                            assert bkCode[0].isdigit(), f"{BBB} {C}:{V}: {restBit=} {bkCode=} {linkCV=} {linkBBB=} {lastBBB=}"
+                            linkBBB = lastBBB
+                        assert linkBBB, f"{BBB} {C}:{V}: {restBit=} {bkCode=} {linkCV=} {linkBBB=} {lastBBB=}"
+                    except ValueError: linkCV = restBit # and use the last book code
+                    dPrint( 'Never', DEBUGGING_THIS_MODULE, f"  {bkCode=} {linkBBB=} {linkCV=}" )
+                    firstCVRef = linkCV.replace('–','-').split('-')[0]
+                    dPrint( 'Never', DEBUGGING_THIS_MODULE, f"  {firstCVRef=}")
+                    try: linkC, linkV = firstCVRef.split(':', 1)
+                    except ValueError:
+                        if linkBBB == 'PSA': # Often a reference to an entire Psalm
+                            linkC, linkV = firstCVRef, '1'
+                        elif linkBBB in ('JDE',): # single-chapter books
+                            linkC, linkV = '1', firstCVRef
+                        else: # might just be a single verse
+                            linkV = firstCVRef
+                    dPrint( 'Never', DEBUGGING_THIS_MODULE, f"  {firstCVRef=} {linkC=}:{linkV=}")
+                    link = f'<a href="{linkBBB}.html#C{linkC}V{linkV}">{restBit}</a>'
                 linkedBits.append(link)
                 lastBBB = linkBBB
             book_html = f'{book_html}<p class="{marker}">({"; ".join( linkedBits )})</p></div><!--rightBox-->\n'
