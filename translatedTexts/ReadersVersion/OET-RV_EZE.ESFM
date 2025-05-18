@@ -1,4 +1,4 @@
-\id EZK - Open English Translation—Readers' Version (OET-RV) v0.0.05
+\id EZK - Open English Translation—Readers' Version (OET-RV) v0.0.06
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 EZE
@@ -15,19 +15,19 @@
 \iot Main components of this document
 \io1 The calling to Yehezkel as prophet \ior 1:1–3:27\ior*
 \io1 The speeches concerning the demolition of Yerushalem \ior 4:1–24:27\ior*
-\io1 The judging of God of nations \ior 25:1–32:32\ior*
-\io1 The promise of God of his people \ior 33:1–37:27\ior*
+\io1 God's judgement of nations \ior 25:1–32:32\ior*
+\io1 God's promise to his people \ior 33:1–37:27\ior*
 \io1 The bad prophecies concerning Gog \ior 38:1–39:29\ior*
 \io1 The revelation concerning the coming temple and nation \ior 40:1–48:35\ior*
 \rem This is still a very early look into the unfinished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
-\ms1 The calling to Yehezkel as prophet
+\ms1 Yehezkel's calling to be a prophet
 \mr (1:1–3:27)
 \s1 The showing of God
 \rem /s1 The Living Creatures and the Glory of the Lord; The calling of Ezekiel; A Vision of Living Beings; The Vision of the Chariot; God's Throne
 \p
-\v 1 \x + \xo 1:1: \xt Rev 19:11.\x*◙
+\v 1 verseOne\x + \xo 1:1: \xt Rev 19:11.\x*
 \p
 \v 2 \x + \xo 1:2: \xt 2Ki 24:10-16; 2Ch 36:9-10.\x*◙
 \v 3 ◙
@@ -928,7 +928,7 @@
 \v 30 ◙
 \v 31 ◙
 \c 23
-\s1 The parable of woman sisters
+\s1 The parable about woman sisters
 \rem /s1 Oholah and Oholibah; The Sinful Sisters; The Adultery of Two Sisters; Two Adulterous Sisters
 \p
 \v 1 ◙
