@@ -57,10 +57,10 @@ from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, 
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 
 
-LAST_MODIFIED_DATE = '2025-05-14' # by RJH
+LAST_MODIFIED_DATE = '2025-05-20' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
-PROGRAM_VERSION = '0.81'
+PROGRAM_VERSION = '0.82'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -1108,7 +1108,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
     while True:
         fIx = book_html.find( '\\f ', searchStartIx )
         if fIx == -1: break # all done
-        assert book_html[fIx:].startswith( '\\f + \\fr ' )
+        assert book_html[fIx:].startswith( '\\f + \\fr ' ), f"Bad RV footnote in {BBB} around '{book_html[fIx:fIx+30]}'"
         ftIx = book_html.find( '\\ft ', searchStartIx+3 )
         assert ftIx != -1, f"Footnote without ft at {book_html[fIx:fIx+30]}…"
         fEndIx = book_html.find( '\\f*', ftIx+3 )
