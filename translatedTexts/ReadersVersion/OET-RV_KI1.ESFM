@@ -1,4 +1,4 @@
-\id 1KI - Open English Translation—Readers' Version (OET-RV) v0.1.13
+\id 1KI - Open English Translation—Readers' Version (OET-RV) v0.1.50
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 KI1
@@ -31,6 +31,7 @@
 \c 1
 \s1 David in his old age
 \rem /s1 King David in His Old Age; Solomon succeeds David; The Struggle for the Succession; David in His Old Age; Adonijah Sets Himself Up as King
+\s4 Full kingdom
 \p
 \v 1 \add ≈Now\add* King David¦155592 had become very old, and \add ≈he couldn't keep warm even when covered¦155596 with blankets\add*,
 \v 2 \add ≈so\add* his servants¦155604 \add ≈suggested\add*, “\add ≈Allow us search for a young¦155608 woman¦155608 who can wait on you and take care of your needs¦155605. She can sleep beside you and keep our\add* master, the king, warm.”
@@ -48,6 +49,7 @@
 \v 10 \add ≈However\add*, he didn't¦155762 invite¦155763 the prophet¦155753 Natan¦155752, Benayah¦155754, the \add ≈top warriors\add*, or his brother Shelomoh.
 \s1 Shelomoh is made king
 \rem /s1 Solomon Is Made King
+\s4 Full kingdom
 \p
 \v 11 Then¦155765 Natan¦155766 \add ≈asked\add* Shelomoh's mother¦155772 Batsheva, “Haven't you¦155777 heard¦155777 that Haggit's¦155783 son Adoniyyah \add ≈has made himself king¦155779\add*, and¦155784 our¦155784 master¦155784 David¦155785 doesn't \add even\add* \add ≈realise\add*?\x + \xo 1:11: \xt 2Sam 12:24.\x*
 \v 12 \add ≈So¦155789\add* please¦155792 let me advise you now \add ≈so that you can save your own life and that of your son Shelomoh\add* \add (Solomon¦155802)\add*.
@@ -108,6 +110,7 @@
 \c 2
 \s1 David's final words to Shelomoh
 \rem /s1 David's Charge to Solomon; David's Instruction to Solomon; David's Last Instructions to Solomon; David's Final Instructions to Solomon
+\s4 Full kingdom
 \p
 \v 1 \add ≈When David¦156585 knew that his death was close, he instructed¦156587\add* his son Shelomoh,
 \v 2 “I'll soon be \add ≈coming to my end, but\add* \add you must be\add* strong¦156600 and \add ≈sensible\add*.
@@ -123,12 +126,14 @@
 \v 9 \add ≈so\add* don't¦156775 leave him unpunished¦156777 now. You're a wise man¦156779 and you'll know¦156782 \add ≈how to handle\add* him. \add ≈Although he's old, make sure he has a bloody¦156792 death\add*.
 \s1 David's death
 \rem /s1 The Death of David; Death of David
+\s4 Full kingdom
 \p
 \v 10 Then¦156795 David \add ≈breathed his last\add* and¦156800 was buried¦156800 in the City of David.
 \v 11 \add *He\add* had reigned over Israel¦156811 for forty¦156812 years—seven¦156816 years from Hebron¦156814 and thirty-three years from Yerushalem¦156818.\x + \xo 2:11: \xt 2Sam 5:4-5; 1Ch 3:4.\x*
 \v 12 Shelomoh \add ≈replaced\add* his father¦156830 David¦156829 on the throne¦156828, and¦156831 his \add ≈authority\add* was established¦156831 \add ≈with firmness\add*.\x + \xo 2:12: \xt 1Ch 29:23.\x*
 \s1 Adoniyyah's provocation and death
 \rem /s1 The Death of Adonijah; Solomon Consolidates His Reign; Solomon Establishes His Rule; Solomon's Throne Established
+\s4 Full kingdom
 \p
 \v 13 Then¦156835 Haggit's¦156839 son Adoniyyah came¦156835 to Shelomoh's mother¦156846 Batsheva and she \add ≈asked\add* \add >him\add*, “Is your coming peaceful¦156850?”
 \p “\add ≈It is\add*,” he \add ≈replied\add*.
@@ -156,6 +161,7 @@
 \v 25 \add ≈So¦157082\add* King Shelomoh \add ≈instructed\add* Yehoyada's son Benayah¦157086 and he \add went and\add* struck¦157090 \add @Adoniyyah\add* down and he died¦157093.
 \s1 Evyatar's banishment and Yoav's death
 \rem /s1 Abiathar's Banishment and Joab's Death
+\s4 Full kingdom
 \p
 \v 26 Then concerning Evyatar the priest¦157097, the king told \add >him\add*, “Go to your fields¦157104 at Anatot¦157100 because you're \add ≈marked for\add* death¦157107, but I won't¦157111 \add ≈do it today\add* because you carried¦157115 my master¦157119 Yahweh's \add sacred\add* box¦157118 \add ≈ahead of\add* my father David¦157122, and because you \add ≈suffered through\add* all that my father \add ≈suffered\add*.”\x + \xo 2:26: a \xt 2Sam 15:24; \xo b \xt 1Sam 22:20-23.\x*
 \v 27 \add That was how\add* Shelomoh \add banished\add* Evyatar from being¦157137 a priest¦157138 to Yahweh. \add It was done\add* to fulfill¦157140 what Yahweh had said at Shiloh¦157151 said about \add removing\add* \add ≈Eli's¦157150 descendants\add*.\x + \xo 2:27: \xt 1Sam 2:27-36.\x*
@@ -171,8 +177,9 @@
 \p
 \v 34 \add ≈So¦157322\add* Yehoyada's¦157326 son Benayah¦157323 went and \add ≈struck¦157327\add* \add @Yoav\add* \add at the altar\add* and \add ≈killed¦157330\add* him¦157330. Then¦157322 he was buried¦157331 on his \add property\add* in the wilderness¦157333.
 \v 35 The king \add ≈appointed\add* Benayah¦157339 \add ≈as army commander to replace\add* \add @Yoav\add*, and \add ≈appointed\add* Tsadok¦157349 as priest¦157350 in place of Evyatar.
-\s1 The killing to Shimei
+\s1 Shimei's execution
 \rem /s1 The Death of Shimei
+\s4 Full kingdom
 \p
 \v 36 Then¦157356 the king¦157357 \add ≈summoned\add* Shimei¦157359 and told him, “Build yourself¦157364 a house¦157365 \add here\add* in Yerushalem¦157366 and live¦157367 there. \add ≈But¦157356\add* don't¦157369 go¦157371 \add ≈anywhere else\add*
 \v 37 \add ≈because\add* the day¦157378 that you \add ≈leave and cross¦157380\add* the Kidron¦157384 valley, you can be certain that you'll die. Your¦157381 blood¦157390 will be on your \add own\add* head.”
@@ -192,6 +199,7 @@
 \c 3
 \s1 Shelomoh requests wisdom
 \rem /s1 Solomon's Prayer for Wisdom; Solomon Asks for Wisdom; Solomon Prays for Wisdom
+\s4 Full kingdom
 \rem /r (2 Chronicles 1.3-12)
 \p
 \v 1 Shelomoh made himself the son-in-law of Egypt's¦157575 king¦157574 Far-oh \add ≈by taking Far-oh's daughter¦157579 as a wife\add* and bringing her¦157582 into the city¦157585 of David¦157586 (\add where she stayed\add* until¦157587 \add ≈the completion of the construction of his palace and of Yahweh's temple\add*, and the wall around¦157601 Yerushalem¦157600).
@@ -215,6 +223,7 @@
 \v 15 Then Shelomoh \add ≈woke up\add*, and wow, it had been a dream¦157872, and he went¦157873 \add into\add* Yerushalem¦157874 and stood¦157875 \add ≈in front¦157877 of the sacred chest¦157879\add*. Then he offered up burnt¦157884 offerings and made peace¦157886 offerings, and he \add ≈held\add* a feast¦157888 for all his servants¦157891.
 \s1 Shelomoh judges a difficult case
 \rem /s1 Solomon Judges a Difficult Case; Solomon's Wisdom in Judgment; Solomon Judges Wisely; A Wise Ruling
+\s4 Full kingdom
 \p
 \v 16 \add ≈One day\add* two¦157896 prostitutes¦157898 came¦157895 to the king¦157901 and¦157902 stood¦157902 \add ≈in front of\add* him¦157903,
 \v 17 and one of them said, “Please, my master¦157909, \add ≈us two women live in the same\add* house, and \add ≈while she was there\add* in the house, I gave birth¦157916 \add to a baby\add*.
@@ -240,6 +249,7 @@
 \c 4
 \s1 Shelomoh's officials
 \rem /s1 Solomon's Officials; Solomon's Officials and Governors; Solomon's Administrative Officers
+\s4 Full kingdom
 \p
 \v 1 \add ≈So\add* Shelomoh was king over all Israel¦158152,
 \v 2 and¦158155 these¦158155 were his officials¦158156:
@@ -285,6 +295,7 @@
 \p \add ≈There was also one district governor¦158401 over Yehudah\add*.
 \s1 Shelomoh's prosperity
 \rem /s1 Magnificence of Solomon's Rule; Solomon's Daily Provisions; Solomon's Prosperity and Wisdom; Solomon's Prosperous Reign
+\s4 Full kingdom
 \p
 \v 20 \add Now\add* Yehudah and Israel¦158407 had become as numerous¦158408 as the sand on the seashore. They \add had plenty\add* to eat and drink¦158417 and they¦158416 were contented.
 \v 21 Shelomoh \add ≈controlled\add* all the kingdoms from the \add Euphrates\add* River to the land of the Philistines and as far as the Egyptian border, \add so they\add* brought tribute to \add *him\add* and \add ≈followed his orders\add* \add ≈during his lifetime\add*.\x + \xo 4:21: \xt Gen 15:18; 2Ch 9:26.\x*
@@ -300,6 +311,7 @@
 \v 28 They also provided the barley and straw for the \add ≈chariot horses and the other horses\add*, \add ≈delivered to the designated locations\add*.
 \s1 Shelomoh's wisdom
 \rem /s1 Solomon's Wisdom; Fame of Solomon's Wisdom
+\s4 Full kingdom
 \p
 \v 29 God gave Shelomoh wisdom and incredible understanding, and the breadth \add ≈of his interests seemed without limit\add*.
 \v 30 \add *He\add* \add ≈was wiser than anyone in the countries east of Israel or in\add* Egypt.
@@ -310,6 +322,7 @@
 \c 5
 \s1 The preparation of Shelomoh of making the temple
 \rem /s1 Solomon Prepares to Build the Temple; Preparations for Building the Temple; Building of the temple; Preparations and Materials for the Temple
+\s4 Full kingdom
 \r (2 Chr. 2:1-18)
 \p
 \v 1 Then King Hiram of Tsor \add (Tyre)\add* sent his servants to Shelomoh when he heard that he'd been anointed as king to replace his father, because Hiram \add ≈had always been a friend of\add* David.
@@ -336,6 +349,7 @@
 \c 6
 \s1 Shelomoh begins temple construction
 \rem /s1 Solomon Builds the Temple
+\s4 Full kingdom
 \p
 \v 1 \add So it was that\add* four hundred¦159066 and eighty¦159063 years after¦159068 the Israelis¦159071 left¦159068 Egypt¦159074, in the second¦159081 month of the fourth¦159076 year of Shelomoh's reign¦159082 over Israel¦159071, he began the construction of Yahweh's residence.
 \v 2 \add ≈It would be\add* twenty-seven metres long¦159100, nine metres wide¦159102, and fourteen metres high¦159105.\f + \fr 6:2 \ft About the height of a modern five-storey building (and the same height as Noah's barge).\f*
@@ -355,6 +369,7 @@
 \v 13 I will live among \add you\add* Israelis¦159299 and I'll never abandon¦159301 my people Israel¦159299.”
 \s1 The temple furnishings
 \rem /s1 The Temple's Interior; The Interior Furnishings of the Temple
+\s4 Full kingdom
 \r (2 Chr. 3:8-14)
 \p
 \v 14 \add ≈So\add* Shelomoh finished¦159313 the construction of the temple¦159312,
@@ -392,6 +407,7 @@
 \c 7
 \s1 Shelomoh's palace
 \rem /s1 Solomon's Palace; Solomon's Palace and Other Buildings; Solomon Builds His Palace
+\s4 Full kingdom
 \p
 \v 1 Shelomoh¦159694 \add also\add* spent thirteen years getting his own palace finished.
 \v 2 He built¦159705 the ‘Lebanon¦159711 Forest Hall’ that was forty-six metres long¦159714, twenty-three metres wide¦159717, and fourteen metres high¦159720, with four¦159722 rows of cedar pillars and cedar beams¦159726 sitting across the pillars.
@@ -411,11 +427,13 @@
 \v 12 The¦159883 largest courtyard had three¦159874 rows of dressed stones and one row of cedar¦159879 beams¦159878, as did the inner¦159884 temple courtyard and the \add ≈palace hall\add*.
 \s1 Huram comes to work
 \rem /s1 Products of Hiram the Bronzeworker; Furnishings for the Temple; Huram's Task; The Temple's Furnishings
+\s4 Full kingdom
 \p
 \v 13 King Shelomoh sent¦159889 for \add a craftsman \add* in Tsor \add (Tyre) called\add* Huram.\f + \fr 7:13 \ft Sometimes (including this passage) his named is spelt ‘Hiram’, but we've opted to consistently name him ‘Huram’ (as per 2 Chr. 4:11) to conveniently avoid confusion with King Hiram (also from Tsor/Tyre).\f*
 \v 14 His mother was a widow¦159901 with Naftali¦159904 ancestry, and his father¦159905 had been a bronze engraver in Tsor. He was \add ≈very knowledgeable¦159920 and skilled in everything to do\add* with bronze, and \add so\add* he came¦159926 to work for King Shelomoh.
 \s1 The two bronze pillars
 \rem /s1 The Two Bronze Columns
+\s4 Full kingdom
 \r (2 Chr. 3:15-17)
 \p
 \v 15 He cast two \add hollow\add* bronze¦159943 pillars¦159942—each being just over eight¦159944 metres tall and measuring over five metres around.
@@ -429,6 +447,7 @@
 \v 22 The two bronze caps shaped like lilies \add were placed on\add* top of the pillars and¦160092 so the pillar construction was completed.
 \s1 The bronze water tank
 \rem /s1 The Bronze Tank
+\s4 Full kingdom
 \r (2 Chr. 4:2-5)
 \p
 \v 23 \add @Huram\add* also cast a very large round basin \add nicknamed\add* ‘The sea¦160099’ that was five¦160110 metres across (so a circumference of fourteen metres) and over two metres high¦160112.
@@ -437,6 +456,7 @@
 \v 26 \add ≈The basin was about 8cm thick¦160170 and it¦160181 had a lip¦160174 around the outside like a lily blossom¦160177. It could contain¦160181 around forty-four thousand¦160179 litres\add* \add of water\add*.
 \s1 The bronze basin holders
 \rem /s1 The Bronze Carts
+\s4 Full kingdom
 \p
 \v 27 Then¦160185 \add @Huram\add* cast ten¦160188 bronze¦160189 carts \add for individual water basins\add*. Each one was nearly two metres long and two metres wide¦160197 and just over a metre tall,
 \v 28 and¦160207 they had frames on the sides with panels between¦160208 them.
@@ -455,7 +475,8 @@
 \rem /s1 Summary List of Temple Furnishings
 \rem /r (2 Chronicles 4.11—5.1)
 \v 40 Huram \add also\add* made the basins and the \add ash\add* shovels¦160419 and the bowls.
-\s1 The list of things/objects there to temple
+\s1 The list of temple objects
+\s4 Full kingdom
 \r (2 Chr. 4:11–5:1)
 \p \add ≈So\add* Huram finished everything that King Shelomoh had requested him to make for Yahweh's residence:
 \v 41 two \add massive\add* pillars with \add large\add* decorated caps and then networks of chain over the caps,
@@ -475,6 +496,7 @@
 \c 8
 \s1 The sacred box is taken to the temple
 \rem /s1 Temple worship; Dedication of the Temple; The Covenant Box Is Brought to the Temple; The Ark Brought to the Temple
+\s4 Full kingdom
 \r (2 Chr. 5:2–6:2)
 \p
 \v 1 \add ≈So\add* Shelomoh assembled¦160655 the Israeli leaders¦160667, and the tribal and \add ≈clan\add* heads, in Yerushalem¦160675 \add to celebrate\add* the arrival of the box¦160679 containing Yahweh's agreement coming from David's¦160684 city¦160683, i.e., Tsiyyon¦160686/Zion¦160686.\x + \xo 8:1: \xt 2Sam 6:12-16; 1Ch 15:25-29.\x*
@@ -495,6 +517,7 @@
 \v 13 Actually, I've built¦160886 a raised house¦160887 for you—where you can live forever¦160892.”
 \s1 Shelomoh's address to the people
 \rem /s1 Solomon's Address to the People; Solomon's Speech
+\s4 Full kingdom
 \r (2 Chr. 6:3-11)
 \p
 \v 14 Then¦160894 while all the people stood there, the king¦160895 turned¦160894 around¦160894 and \add ≈pronounced a blessing¦160899\add* on all Israel¦160904,
@@ -509,6 +532,7 @@
 \v 21 I've¦161051 included a place¦161038 for the box¦161039 containing \add the two stone tablets with\add* the agreement that Yahweh¦161044 made with our ancestors¦161049 when he brought¦161050 them out of Egypt¦161053.”
 \s1 Shelomoh's prayer of dedication
 \rem /s1 Solomon's Prayer; Solomon's Prayer of Dedication
+\s4 Full kingdom
 \r (2 Chr. 6:12-42)
 \p
 \v 22 Then Shelomoh stood¦161056 \add ≈between\add* Yahweh's altar¦161059 and all the \add ≈gathered Israelis¦161065\add*, and \add ≈held his arms up towards the sky\add*
@@ -554,6 +578,7 @@
 \v 53 For¦161763 you yourself separated¦161745 them for yourself as a \add ≈special possession\add* out of all the people¦161749 groups in the world, just as you said through your servant¦161756 Mosheh¦161755 when you brought¦161757 our ancestors¦161760 out from Egypt¦161761, my master¦161762 Yahweh¦161762.”
 \s1 Shelomoh blesses the people
 \rem /s1 The Final Prayer; Solomon Blesses the Assembly; The Dedication of the Temple
+\s4 Full kingdom
 \p
 \v 54 Once Shelomoh was finished¦161768 praying this prayer¦161777 and request for favour to Yahweh, he stood¦161780 up from bowing on his knees¦161787 with his palms spread¦161789 out toward the heavens¦161790 in front of Yahweh's altar¦161782,
 \v 55 then stood¦161792 \add there\add* and¦161793 blessed¦161793 all the Israeli¦161798 \add ≈people\add*, saying,
@@ -565,6 +590,7 @@
 \v 61 And \add you people\add*, may your¦161900 \add ≈purpose be to completely¦161901 follow\add* our God¦161904 Yahweh¦161903, by \add ≈obeying\add* his statutes¦161906, and by keeping¦161907 his commands¦161908 \add ≈like you're doing today\add*.”
 \s1 The temple dedication
 \rem /s1 Solomon Offers Sacrifices; The Dedication of the Temple
+\s4 Full kingdom
 \r (2 Chr. 7:4-10)
 \p
 \v 62 Then¦161912 the king¦161912 and¦161913 all the \add ≈Israelis¦161915 offered\add* sacrifices¦161917 to Yahweh¦161920,
@@ -576,6 +602,7 @@
 \c 9
 \s1 Yahweh speaks to Shelomoh again
 \rem /s1 God Appears Again to Solomon; The Lord's Response to Solomon; The reign of Solomon; God Appears to Solomon Again; The Lord Appears to Solomon
+\s4 Full kingdom
 \r (2 Chr. 7:11-22)
 \p
 \v 1 \add ≈Once\add* Shelomoh had finished¦162055 the construction of the \add ≈temple and his palace, and various other projects of his\add*,
@@ -589,6 +616,7 @@
 \v 9 Then¦162239 they'll \add ≈answer\add*, ‘\add It's\add* because they abandoned¦162242 their God¦162246 Yahweh who brought their ancestors¦162251 out of Egypt¦162253, \add ≈but\add* they held on to other¦162256 gods¦162255 and bowed down to them and served¦162261 them. Therefore Yahweh brought all this \add ≈calamity\add* onto them.’ ”
 \s1 King Hiram gains some poor cities
 \rem /s1 Solomon's Agreement with Hiram; Solomon's Other Activities
+\s4 Full kingdom
 \r (2 Chr. 8:1-2)
 \p
 \v 10 \add ≈It took\add* twenty¦162277 years for Shelomoh to construct \add ≈the temple for Yahweh¦162290 and the palace for himself\add*.
@@ -598,6 +626,7 @@
 \v 14 Hiram¦162357 \add had\add* sent¦162356 four tonnes of gold¦162362 to Shelomoh.
 \s1 Shelomoh's other achievements
 \rem /s1 Further Achievements of Solomon; Other Acts of Solomon; Solomon's Many Achievements
+\s4 Full kingdom
 \r (2 Chr. 8:3-18)
 \p
 \v 15 Now this is the matter of the forced¦162367 labour¦162367 that King Shelomoh brought up to build¦162374 Yahweh's residence and his \add ≈palace\add*, the \add ≈raised¦162370 terraces\add* and the Yerushalem¦162387 \add city\add* wall, and \add the cities of\add* Hatsor, Megiddo¦162393 and Gezer¦162396.
@@ -621,6 +650,7 @@
 \c 10
 \s1 The queen from Sheva visits Shelomoh
 \rem /s1 The Queen of Sheba Visits Solomon; The Queen of Sheba's Visit; The Visit of the Queen of Sheba; Visit of the Queen of Sheba
+\s4 Full kingdom
 \r (2 Chr. 9:1-12)
 \p
 \v 1 Now the queen¦162640 from Sheva had heard a report¦162646 \add ≈about how Yahweh¦162649 had blessed\add* Shelomoh, and she came¦162650 to test him¦162651 with difficult questions¦162652.\x + \xo 10:1-10: \xt Mat 12:42; Luk 11:31.\x*
@@ -642,6 +672,7 @@
 \v 13 Then King Solomon¦162892 gave¦162893 the queen¦162894 from Sheva \add ≈everything she wanted\add*—whatever she requested \add ≈on top of\add* what he \add ≈had already given¦162906\add* to her. Then she departed with her servants¦162916 and returned to her country.
 \s1 Shelomoh's wealth
 \rem /s1 Solomon's Wealth and Splendour; King Solomon's Wealth; Solomon's Splendour
+\s4 Full kingdom
 \r (2 Chr. 9:13-29)
 \p
 \v 14 The \add ≈amount\add* of gold that came to Shelomoh in one year was \add around\add* twenty-two tonnes,
@@ -668,6 +699,7 @@
 \c 11
 \s1 Shelomoh turns from God
 \rem /s1 Solomon's Many Wives; Solomon's Errors; Solomon Turns Away from God; Solomon's Wives
+\s4 Full kingdom
 \p
 \v 1 Now King Shelomoh loved¦163201 many foreign¦163203 women—besides Far-oh's daughter¦163207 \add there were\add* Moabite women, Ammonite¦163211 women, Edomite women, Sidonian¦163213 women, and Hittite¦163214 women.\x + \xo 11:1: \xt Neh 13:26; Deu 17:17.\x*
 \v 2 \add They were\add* from the nations that Yahweh¦163222 had told Israel¦163226 about, “You must not \add ≈mix with people¦163225 from\add* \add @those nations\add*, and they must not \add ≈join together with\add* you. They will \add ≈certainly entice you to worship \add* their¦163242 gods¦163242.” \add However,\add* Shelomoh clung to them for love.\x + \xo 11:2: \xt Exo 34:16; Deu 7:3-4.\x*
@@ -685,6 +717,7 @@
 \v 13 \add ≈What's more,\add* I won't¦163420 tear the whole kingdom¦163419 away—I'll leave one tribe¦163422 for your¦163425 son \add to rule\add* for my servant¦163428 David's¦163427 sake, and¦163429 for the sake of my chosen¦163432 city Yerushalem¦163430.”
 \s1 Shelomoh's enemies
 \rem /s1 Solomon's Enemies; Adversaries of Solomon; Solomon's Adversaries
+\s4 Full kingdom
 \p
 \v 14 Then¦163434 Yahweh¦163435 \add ≈caused\add* Hadad¦163439 the Edomite (and a descendant of the Edomite king¦163442) \add ≈to stand\add* against¦163437 Shelomoh.
 \v 15 \add In the past\add* \add ≈when\add* David¦163448 had been in Edom with \add &his\add* army commander¦163454 Yoav¦163453 to bury¦163456 their dead¦163459, they had killed every¦163461 male¦163463 in Edom.
@@ -704,6 +737,7 @@
 \v 25 Then¦163649 during all of Shelomoh's reign, he'd been \add ≈outspoken\add* against Israel—\add encouraged by\add* the evil that Hadad¦163660 did. He reigned over \add Syria¦163666\add* (Aram¦163666) and he \add ≈loathed¦163661\add* Israel.
 \s1 God's promise to Yarave'am/Jeroboam
 \rem /s1 Jeroboam's Rebellion; God's Promise to Jeroboam; Jeroboam Rebels against Solomon; Jeroboam Rebels Against Solomon
+\s4 Full kingdom
 \p
 \v 26 Nebat's¦163672 son Yarave'am¦163669 \add (Jeroboam)\add*, an Efratite from Tseredah¦163676 \add also\add* \add ≈rebelled against the king¦163686\add*. (His widowed¦163681 mother¦163678 Tseruah¦163679 was one of Shelomoh's servants¦163682.)
 \v 27 \add ≈This is the background about how it started\add*: Shelomoh had built¦163696 the raised¦163692 terrace and had \add ≈repaired a gap in the wall\add* of the city¦163704 of David¦163705 his father¦163706.
@@ -723,6 +757,7 @@
 \v 40 Shelomoh \add ≈tried to kill¦163966\add* Yarave'am¦163971, \add ≈but\add* \add *he\add* \add ≈left the area\add* and fled to Egypt. \add ≈He remained in Egypt under the protection\add* of King Shishak¦163976 until¦163982 Shelomoh's death¦163984.
 \s1 Shelomoh's death
 \rem /s1 The Death of Solomon; Solomon's Death
+\s4 Full kingdom
 \r (2 Chr. 9:29-31)
 \p
 \v 41 A record of all the other things that Shelomoh did, and all the wise things that he said, was written¦163998 in the ‘Record of Shelomoh's Achievements’.
@@ -731,6 +766,7 @@
 \c 12
 \s1 The north rejects Rehavam (Rehoboam)
 \rem /s1 The kingdom divided; Israel Rebels Against Rehoboam; The Northern Tribes Revolt; The Northern Tribes Secede
+\s4 Both kingdoms
 \r (2 Chr. 10:1-19)
 \p
 \v 1 \add Shelomoh's son\add* Rehavam went¦164033 to Shekem¦164035, because all Israel¦164041 had \add ≈assembled there to make him king¦164042\add*.
@@ -770,6 +806,7 @@
 \v 20 \add ≈So\add* as soon as all Israel heard¦164435 that Yarave'am¦164442 had returned¦164441 \add from Egypt\add*, they \add ≈summoned him to their assembly¦164448 and appointed him as king¦164449\add* over all \add northern\add* Israel. Only \add ≈the Yehudah¦164465 region was left under the rule of David's¦164461 grandson\add* \add Rehavam\add*.
 \s1 Shemayah's prophecy
 \rem /s1 Shemaiah's Prophecy
+\s4 Southern kingdom
 \r (2 Chr. 11:1-4)
 \p
 \v 21 \add ≈So¦164468 when\add* Shelomoh's son Rehavam \add (Rehoboam¦164470)\add* \add ≈returned to\add* Yerushalem¦164471, he assembled¦164472 all the \add ≈tribes\add* of Yehudah¦164478 and Benyamin¦164482, and 180,000 \add warriors\add* were chosen¦164486 to fight¦164489 against the \add ≈northern tribes\add* to return the kingship to \add *him\add*.
@@ -778,6 +815,7 @@
 \v 24 ‘Yahweh says this: Don't go and fight¦164544 against¦164564 your \add ≈Israeli relatives\add*. \add ≈Everyone should just return¦164551 home because everything that happened there was initiated\add* by me.’ ” \add ≈When\add* they heard Yahweh's message¦164562, \add ≈they took note of it and everyone¦164548 went back home\add*.
 \s1 Yarave'am (Jeroboam) makes gold calves
 \rem /s1 Jeroboam Turns Away from God; Golden Calves at Beyt-El and Dan; Jeroboam's Golden Calves; Jeroboam Makes Gold Calves
+\s4 Northern kingdom
 \p
 \v 25 Then Yarave'am¦164571 built Shekem¦164574 in the hill country¦164575 of Efraim¦164576 and he lived \add ≈there\add* \add for a while\add*. Then he \add ≈left\add* there and built Penuel¦164584.
 \v 26 \add ≈After¦164587 that,\add* \add *he\add* \add ≈worried that the entire country might want to go back under David's¦164593 dynasty\add*.
@@ -789,6 +827,7 @@
 \v 31 He¦164675 built \add ≈temples on hills\add* and¦164679 appointed priests¦164680 from \add ≈various tribes\add*—not just from the \add ≈tribe\add* of Levi¦164688.
 \s1 The warning of worshipping there at Beyt-El
 \rem /s1 Worship at Bethel Is Condemned
+\s4 Northern kingdom
 \p
 \v 32 In the eighth¦164695 month on the 15th, Yarave'am¦164691 \add ≈put on a celebration\add* like the one in Yehudah¦164705. \add He'd made\add* an altar at Beyt-El and he got the priests¦164725 from the \add ≈hill temples\add* he'd made to come and stand there, then he offered a sacrifice¦164715 on that altar to the calves¦164716 that he'd made.\x + \xo 12:32-33: \xt Lev 23:33-34.\x*
 \v 33 \add ≈That date of\add* the 15th day¦164743 of the eighth¦164745 month \add ≈was one that he'd just decided for himself\add*, and he \add ≈instituted\add* a \add new\add* \add ≈celebration\add* for the \add ≈Israelis¦164755\add* and he \add ≈burnt incense¦164760\add* on the altar \add as a sacrifice\add*.
@@ -810,6 +849,7 @@
 \v 10 Then¦164993 he \add left for home\add* \add ≈taking a different route from the one he'd used\add* to come¦165001 to Beyt-El¦165005.
 \s1 The old prophet from Beyt-El
 \rem /s1 The Old Prophet of Bethel
+\s4 Both kingdoms
 \p
 \v 11 Now \add at that time there was\add* an old prophet¦165010 who lived in Beyt-El, and his sons\f + \fr 13:11 \ft This is singular in the Hebrew, but the rest of this segment suggests multiple sons.\f* had been and told him all the news about what that man¦165030 of God¦165032 had done that day¦165034 in Beyt-El and they told him the message that \add ≈had been passed on\add* to the king¦165045.
 \v 12 “\add Oh,\add* \add ≈what road did he take when he left\add*?” their¦165051 father¦165051 \add ≈asked\add*, and \add indeed\add* his sons¦165058 had \add ≈noticed which¦165062 road the man¦165064 of God¦165065 from Yehudah¦165069 had taken\add*.
@@ -842,12 +882,14 @@
 \v 32 The message¦165445 from Yahweh¦165449 that he shouted out against the altar¦165452 in Beyt-El will certainly¦165443 happen, and against all the \add ≈hilltop worship\add* places¦165461 in Shomron¦165464 \add (Samaria)\add*.
 \s1 Yarave'am's fatal sin
 \rem /s1 Jeroboam's Fatal Sin
+\s4 Northern kingdom
 \p
 \v 33 \add ≈Despite\add* \add @the man of God's warning\add*, \add King\add* Yarave'am¦165473 didn't¦165470 \add ≈stop his evil ways\add*—\add in fact\add* he \add ≈chose more people¦165479 from across the country to become\add* priests. \add ≈Anyone who wanted¦165482 to be a priest would be appointed\add* and he would become one of the priests of the \add ≈hilltop worship\add* places.
 \v 34 \add ≈Those were the sins of Yarave'am¦165496 that would eventually lead to the rejection and destruction¦165498 of his entire family\add*.
 \c 14
 \s1 The death of Yarave'am's son
 \rem /s1 Judgment on the House of Jeroboam; The Death of Jeroboam's Son; Ahijah's Prophecy Against Jeroboam; Ahijah's Prophecy against Jeroboam
+\s4 Northern kingdom
 \p
 \v 1 At that time¦165504, \add one of\add* Yarave'am's sons, Aviyyah, became¦165506 very sick¦165506
 \v 2 and Yarave'am¦165513 told his wife, “\add ≈Go and get changed so that no one will recognise you as\add* \add *my\add* wife. Then¦165512 go to Shiloh¦165527 where the prophet Ahiyyah is—he's \add ≈the one who prophesied that I'd become¦165537 king¦165537\add*.
@@ -873,11 +915,13 @@
 \v 18 \add ≈Just¦165866 as Yahweh¦165874 had told them\add*, all Israel¦165872 mourned¦165867 for the boy and he was buried¦165865.
 \s1 Yarave'am's death
 \rem /s1 Death of Jeroboam; The Death of Jeroboam
+\s4 Northern kingdom
 \p
 \v 19 \add ≈Everything else that Yarave'am¦165885 did, including the record of wars that his army fought and how he ruled, is written¦165891 in the book of the events\add* of the kings¦165897 of Israel¦165898.
 \v 20 Yarave'am¦165903 reigned¦165902 for twenty-two years, then he \add ≈died and was buried with his ancestors¦165910\add*, and his son Nadav¦165912 \add ≈replaced him as king¦165911\add*.
 \s1 Rehavam (Rehoboam) rules in Yehudah
 \rem /s1 Rehoboam Rules in Judah; Rehoboam King of Judah; Rehoboam Reigns over Judah; King Rehoboam of Judah
+\s4 Southern kingdom
 \r (2 Chr. 11:5–12:15)
 \p
 \v 21 \add ≈Meanwhile,\add* Shelomoh's son Rehavam reigned in Yehudah¦165922. He was forty-one when he \add started\add* reigning, and he reigned for seventeen¦165930 years from Yerushalem¦165935—the city¦165936 that Yahweh¦165940 had chosen¦165939 \add ≈to associate his name with\add* out of all the tribes¦165947 of Israel¦165948. \add @Rehavam's\add* mother¦165950 was Naamah¦165951 the Ammonite¦165952.
@@ -897,6 +941,7 @@
 \c 15
 \s1 Abiyyam rules over Yehudah
 \rem /s1 Abijam Reigns over Judah: Idolatry and War; King Abijah of Judah; Abijam Rules in Judah; Abijah King of Judah
+\s4 Southern kingdom
 \r (2 Chr. 13:1–14:1)
 \p
 \v 1 In the eighteenth¦166131 year of (Nabat's son) King Yarave'am's \add reign over Israel\add*, Abiyyam \add ≈became¦166138 king of Yehudah¦166142\add*.
@@ -910,6 +955,7 @@
 \v 8 Then¦166256 Abiyyam \add ≈died\add* and was buried¦166261 with his ancestors¦166260 in the City of David¦166264, and his son Asa¦166266 \add ≈replaced him as king¦166265\add*.
 \s1 Asa's reign over Yehudah
 \rem /s1 Asa Reigns over Judah; Asa King of Judah; King Asa of Judah; Asa Rules in Judah
+\s4 Southern kingdom
 \r (2 Chr. 14:1-5; 15:16–16:6, 11-14)
 \p
 \v 9 In the twentieth¦166272 year of King Yarave'am's \add reign over\add* Israel¦166275, Asa¦166277 \add ≈became¦166276 king of Yehudah¦166279\add*
@@ -934,6 +980,7 @@
 \v 24 Then¦166593 he \add ≈died\add* and was buried¦166598 with his ancestors¦166601 in the City¦166594 of David¦166603 (also his ancestor) and his son Yehoshafat¦166606 \add ≈replaced him as king¦166605\add*.
 \s1 Nadav's reign over Israel
 \rem /s1 Nadab King of Israel; King Nadab of Israel; Nadab Rules in Israel; Nadab Reigns over Israel
+\s4 Northern kingdom
 \p
 \v 25 In the second year of Asa's¦166621 \add ≈reign over Yehudah¦166623\add*, Yarave'am's son Nadav became¦166615 king of Israel¦166618 where he reigned for two years¦166628.
 \v 26 He¦166640 did \add ≈what Yahweh¦166633 had said was\add* evil, \add ≈following his father's¦166636 behaviour\add* and his sin that \add in turn\add*, caused¦166639 Israel¦166642 to sin.
@@ -948,6 +995,7 @@
 \v 32 \add King\add* Asa¦166747 and¦166748 King Baasha¦166749 of Israel¦166752 \add ≈were in a continual state of war during their¦166755 reigns\add*.
 \s1 Baasha's reign over Israel
 \rem /s1 Second Dynasty: Baasha Reigns over Israel; King Baasha of Israel; Baasha King of Israel
+\s4 Northern kingdom
 \p
 \v 33 Ahiyyah's son Baasha¦166764 \add began\add* to reign over Israel¦166772 in the third year¦166758 of King Asa's¦166760 \add reign\add* over Yehudah¦166762, and he ruled from Tirtsah for twenty-four years.
 \v 34 He did \add ≈what Yahweh¦166781 had said was\add* evil, \add ≈similar to Nabat's son Yarave'am's behaviour\add* and his sin that \add in turn\add*, caused¦166787 Israel¦166790 to sin.
@@ -964,6 +1012,7 @@
 \v 7 Yahweh \add ≈sent that message¦166897 via Hanani¦166895 the prophet's¦166896 son Yehu¦166892. It was for Baasha and his family—speaking against¦166901 the evil¦166910 that they'd done that had provoked¦166918 Yahweh to get angry with their behaviour which¦166912 was as bad as Yarave'am's family had been. Yahweh was also angry with Baasha because he had killed all of Yarave'am's family\add*.
 \s1 Elah's reign over Israel
 \rem /s1 Elah Rules in Israel; Elah King of Israel; Elah Reigns over Israel; King Elah of Israel
+\s4 Northern kingdom
 \p
 \v 8 Baasha's¦166942 son Elah¦166939 \add began\add* to reign in the twenty-sixth year of King Asa's¦166935 \add reign\add* over Yehudah¦166937, and he ruled from Tirtsah for two years¦166947.
 \v 9 \add ≈However,\add* his servant¦166951 Zimri¦166952 who was the commander¦166953 of half of the chariots¦166955 conspired¦166949 against him. \add ≈Once when\add* \add @Elah\add* was in Tirtsah \add ≈getting\add* himself drunk¦166959 at the house¦166960 of Arza¦166961 (who was \add ≈in charge of the palace¦166965\add*),
@@ -975,6 +1024,7 @@
 \v 14 \add ≈Everything else that Elah¦167046 did is written¦167054 in the book of the events\add* of the kings¦167060 of Israel¦167061.
 \s1 Zimri's reign over Israel
 \rem /s1 King Zimri of Israel; Zimri King of Israel; Third Dynasty: Zimri Reigns over Israel; Zimri Rules in Israel
+\s4 Northern kingdom
 \p
 \v 15 Zimri¦167072 reigned from Tirtsah for seven days¦167074 in the twenty-seventh year of King Asa's¦167068 \add reign\add* over Yehudah¦167070. \add At the time,\add* \add ≈the Israeli army were besieging the Philistine city of\add* Gibbeton¦167080,
 \v 16 and \add ≈when the army\add* camped \add around the city\add* heard \add ≈that Zimri¦167089 had rebelled and assassinated\add* the king, that day¦167108 all the people in the camp \add ≈installed\add* the army commander¦167102 Omri¦167107 \add as king\add* to reign over Israel¦167098.
@@ -984,6 +1034,7 @@
 \v 20 \add ≈Everything else that Zimri¦167171 did, including his rebellion, is written¦167178 in the book of the events\add* of the kings¦167184 of Israel¦167185.
 \s1 Omri's reign over Israel
 \rem /s1 Fourth Dynasty: Omri Reigns over Israel; Omri King of Israel; Omri Rules in Israel; King Omri of Israel
+\s4 Northern kingdom
 \p
 \v 21 \add ≈At that time,\add* the people of Israel¦167191 were divided¦167189 \add ≈concerning their leadership\add*—half of \add *them\add* \add ≈supported\add* Ginnat's¦167200 son Tivni \add ≈as king¦167201\add*, and the other half \add ≈supported\add* Omri¦167204,
 \v 22 \add ≈but\add* those \add ≈supporting Omri prevailed, so Tivni was executed\add* and Omri \add remained\add* \add ≈in power\add*.
@@ -997,6 +1048,7 @@
 \v 28 Then¦167329 Omri¦167330 \add ≈died\add* and was buried¦167334 in Shomron¦167335, and his son Ahav \add (Ahab¦167337)\add* \add ≈replaced him as king¦167336\add*.
 \s1 Ahav's reign over Israel
 \rem /s1 Ahab Becomes King of Israel; Ahab and Elijah; Ahab Rules in Israel; King Ahab of Israel; Ahab Reigns over Israel
+\s4 Northern kingdom
 \p
 \v 29 Omri's¦167345 son Ahav \add ≈became¦167346 king of Israel\add* in the thirty-eighth year of King Ahab's¦167342 \add reign\add* over Yehudah¦167356, and he reigned Israel from Shomron¦167365 for twenty-two years.
 \v 30 Ahav did \add ≈what Yahweh¦167377 had said was\add* evil—\add in fact\add* he did more evil things than all those¦167379 \add kings\add* who \add ≈preceded\add* him.
@@ -1008,6 +1060,7 @@
 \c 17
 \s1 Eliyyah prophesies about a coming drought
 \rem /s1 Elijah Fed by Ravens; Elijah and the Drought; Elijah Predicts a Drought
+\s4 Northern kingdom
 \p
 \v 1 \add One day the prophet\add* Eliyyah \add (Elijah¦167466)\add* from the Tishbites¦167467 in the Gilead¦167469 region said¦167465 to Ahav, “As Israel's¦167477 God¦167476 Yahweh¦167475 \add ≈lives, the one who I serve\add*, there won't be any rain or \add even\add* dew these¦167485 \add next\add* years¦167484 unless \add ≈I give the command\add*.”\x + \xo 17:1: \xt Jam 5:17.\x*
 \v 2 Then Yahweh¦167498 \add ≈told\add* \add @Eliyyah\add*,
@@ -1049,6 +1102,7 @@
 \c 18
 \s1 Eliyyah versus Baal's prophets
 \rem /s1 Elijah and the Prophets of Baal; Elijah and Obadiah; Elijah's Message to Ahab; The Contest on Mount Carmel
+\s4 Northern kingdom
 \p
 \v 1 \add ≈In the third¦167919 year¦167918 of drought, Yahweh¦167913 told Eliyyah to go¦167921 and show himself to King Ahav and tell him that it would soon\add* rain,
 \v 2 \add ≈so he went¦167933 to present¦167935 himself\add* to Ahav.
@@ -1110,6 +1164,7 @@
 \v 40 Then¦168682 Eliyyah \add ≈ordered\add* them, “Grab hold of Baal's¦168690 prophets¦168689. Don't let \add ≈any of them\add* sneak away.” \add ≈So¦168682\add* they seized¦168685 them, and Eliyyah brought¦168697 them down to the Kishon¦168702 valley and he slaughtered¦168703 them there¦168704.
 \s1 The drought ends
 \rem /s1 The End of the Drought; Elijah Prays for Rain; The Drought Ends
+\s4 Northern kingdom
 \p
 \v 41 Then¦168706 Eliyyah told \add King\add* Ahav, “Get \add ≈ready and have something to\add* eat¦168710 and drink¦168711, because \add ≈I can hear the noise¦168715 of heavy\add* rain \add coming\add*.”
 \v 42 \add ≈So¦168718 Ahav got ready and had something\add* to eat¦168720 and drink¦168721, \add ≈but\add* Eliyyah went \add ≈further up\add* Mt. Karmel¦168727 and \add squatted\add* with his face down between¦168732 his knees¦168733\x + \xo 18:42-45: \xt Jam 5:18.\x*
@@ -1152,6 +1207,7 @@
 \v 17 \add ≈In¦169169 the future\add*, \add ≈anyone who escapes from being killed\add* by Hazael's¦169164 \add army\add* will be \add ≈killed\add* by Yehu's¦169166 \add army\add* will \add ≈be killed\add* by Elisha¦169171.
 \v 18 \add ≈But¦169173\add* I've \add still\add* got seven¦169175 thousand¦169176 people in Israel¦169174 \add ≈who've never bowed¦169183 to Baal¦169184 or kissed¦169191 his image\add*.”\x + \xo 19:18: \xt Rom 11:4.\x*
 \s1 Eliyyah inspires Elisha
+\s4 Northern kingdom
 \rem /s1 The Call of Elisha; Elisha Becomes Elijah's Disciple
 \p
 \v 19 \add ≈So¦169194\add* \add @Eliyyah\add* left that place and went¦169194 and found¦169196 Shafat's¦169202 son Elisha¦169199. \add ≈There were twelve teams ploughing a field and he was with the back pair\add* \add of cattle\add*. Eliyyah \add walked\add* past him and threw¦169216 his¦169209 cloak over him.
@@ -1162,6 +1218,7 @@
 \c 20
 \s1 Ben-Hadad attacks Shomron
 \rem /s1 War with Syria; Ahab's Wars with the Arameans; Ben-Hadad Attacks Samaria
+\s4 Northern kingdom
 \p
 \v 1 \add At that time,\add* King Ben-Hadam of Aram¦169272 \add (Syria¦169272)\add* \add ≈joined with thirty-two smaller kingdoms and they brought their combined armies and horses¦169283 and chariots¦169284\add* and besieged Israel's capital Shomron¦169289 \add (Samaria) ready\add* to attack it.
 \v 2 He sent¦169293 messengers¦169294 to Israel's¦169300 King Ahav \add who was inside\add* the city¦169301
@@ -1205,6 +1262,7 @@
 \v 22 \add ≈Afterwards\add* \add that same\add* prophet¦169683 went¦169682 \add back\add* to King Ahav and told him, “Go \add back and\add* \add ≈fortify your defenses and plan your strategy\add*, because Aram's¦169702 king \add ≈will attack you again¦169704 at the same time next\add* year.”
 \s1 Ben-Hadad's second attack
 \rem /s1 Ben-Hadad's Second Attack; The Arameans Are Defeated; The Second Syrian Attack
+\s4 Northern kingdom
 \p
 \v 23 \add ≈Meanwhile\add* the servants¦169707 of Aram's¦169710 king told him, “Their gods are the gods of the hills, so that's why they were stronger than us. \add ≈But\add* let's fight them on the plain¦169724 instead¦169721 \add ≈then we'll be sure to defeat\add* them.
 \v 24 \add ≈So¦169731 this is what you should\add* do: relieve those kings¦169737 of \add ≈their¦169742 command and¦169740 replace them with military commanders\add*.
@@ -1229,6 +1287,7 @@
 \p “\add ≈Okay, I'll accept that agreement and release\add* you,” \add Ahav said,\add* and \add ≈after formalising the agreement\add*, he sent him away.
 \s1 A prophet condemns Ahab
 \rem /s1 A Prophet Condemns Ahab
+\s4 Northern kingdom
 \p
 \v 35 \add One day,\add* a prophet¦170018 \add ≈in training with a group\add* told his companion, “By Yahweh's command, please¦170026 wound me.” \add ≈But\add* the man refused¦170027 to \add ≈slash\add* him,
 \v 36 \add ≈so\add* the \add first\add* prophet told him, “Because you didn't¦170035 \add ≈obey Yahweh's command\add*, listen¦170037, \add ≈as soon as you leave here you'll be attacked by a\add* lion.” Then¦170031 after he \add ≈left\add*, a lion found¦170047 him and \add ≈killed¦170049\add* him.\x + \xo 20:36: \xt 1Ki 13:24.\x*
@@ -1246,6 +1305,7 @@
 \c 21
 \s1 Navot's vineyard
 \rem /s1 Naboth's Vineyard
+\s4 Northern kingdom
 \p
 \v 1 \add ≈Sometime after¦170185 that\add*, King Ahav from Shomron¦170198 \add was in his\add* palace¦170195 in Yizreel city, and¦170184 \add ≈his neighbour was\add* the Yezreelite¦170191 Navot \add (Naboth¦170190)\add* \add ≈with his\add* vineyard¦170188.
 \v 2 Ahav \add ≈pressured\add* Navot, “Give me your¦170233 vineyard \add ≈so I can make it into my vegetable¦170219 garden¦170217\add* because it's right beside¦170223 my house¦170224. \add ≈I can replace it with\add* a better vineyard, \add ≈or if you prefer, I can pay you in silver for\add* this one.”
@@ -1293,6 +1353,7 @@
 \c 22
 \s1 prophet Mikayehu and King Ahav
 \rem /s1 Joint Campaign with Judah against Aram; Jehoshaphat and Ahab; Micaiah Prophesies Against Ahab; The Prophet Micaiah Warns Ahab
+\s4 Both kingdoms
 \r (2 Chr. 18:2-27)
 \p
 \v 1 Then¦170774 \add almost\add* three¦170775 years¦170776 went by without war between Aram¦170780 \add (Syria¦170780)\add* and¦170781 Israel¦170782,
@@ -1348,6 +1409,7 @@
 \v 28 “If you do return safely,” Mikayehu \add ≈remarked\add*, “then Yahweh¦171328 hasn't spoken¦171327 through me.” And he¦171327 \add ≈added\add*, “\add ≈Take note all you people¦171332\add*.”
 \s1 Ahav's death
 \rem /s1 Ahab Killed at Ramoth Gilead; The Death of Ahab; Defeat and Death of Ahab
+\s4 Northern kingdom
 \r (2 Chr. 18:28-34)
 \p
 \v 29 \add ≈So¦171335\add* so Israel's¦171338 King \add Ahav\add* and Yehudah's¦171343 King Yehoshafat¦171339 \add ≈left to go and attack\add* Ramot¦171344-Gilead¦171345,
@@ -1368,6 +1430,7 @@
 \v 40 \add ≈Now that Ahav was dead, his son Ahazyah¦171553 replaced him as king¦171552\add*.
 \s1 Yehoshafat's reign over Yehudah
 \rem /s1 Jehoshaphat Rules in Judah; Jehoshaphat King of Judah; Jehoshaphat Reigns over Judah; King Jehoshaphat of Judah
+\s4 Southern kingdom
 \r (2 Chr. 20:31–21:1)
 \p
 \v 41 Asa's¦171561 son Yehoshafat¦171558 \add started\add* \add ≈his reign\add* over Yehudah¦171565 when King Ahav \add had ruled\add* Israel¦171570 for four¦171567 years.
@@ -1386,6 +1449,7 @@
 \v 50 Then Yehoshafat¦171696 \add ≈died\add* and was buried with his ancestors in the City of his ancestor David, and his son Yehoram \add ≈replaced him as king\add*.
 \s1 Ahazyah's reign over Israel
 \rem /s1 Ahaziah Reigns over Israel; Ahaziah King of Israel; Ahaziah Rules in Israel; King Ahaziah of Israel
+\s4 Northern kingdom
 \p
 \v 51 Ahav's son Ahazyah \add began to\add* reign over Israel from Samaria in the seventeenth year of King Yehoshafat's \add reign over\add* Yehudah, and he reigned over Israel for two years.
 \v 52 He followed the \add ≈behaviour\add* of his father and mother and Nebat's son Yarave'am, and did \add ≈what Yahweh had said was\add* evil—causing Israel¦171734 to sin \add ≈like they had\add*.
