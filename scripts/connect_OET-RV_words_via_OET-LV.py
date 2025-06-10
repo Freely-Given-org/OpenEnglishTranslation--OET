@@ -75,7 +75,7 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-05-14' # by RJH
+LAST_MODIFIED_DATE = '2025-06-10' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.78'
@@ -1589,6 +1589,7 @@ def doGroup2( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('Şelāh', 'Instrumental break'),
             ('Truly', 'May it be so'),
 
+            ('ascent','walking uphill'),
             ('members', 'body parts'),
             ('risen', 'got up'),
             ('sanctuary', 'sacred tent'),

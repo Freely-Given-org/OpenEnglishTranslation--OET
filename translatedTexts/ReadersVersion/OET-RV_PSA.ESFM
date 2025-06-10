@@ -1,4 +1,4 @@
-\id PSA - Open English Translation—Readers' Version (OET-RV) v0.0.75
+\id PSA - Open English Translation—Readers' Version (OET-RV) v0.0.79
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 PSA
@@ -11,6 +11,7 @@
 \is1 Introduction
 \ip This collection of \bk Songs\bk* includes songs, poems, chants, and prayers that the Hebrews used in their meditation and worship, and then those eventually got added to this collection. We have chosen not to use the name ‘Psalms’ which comes from the Greek word ‘ψαλμός’ which means ‘a song sung to the harp’, because most English readers don't even know that meaning. The title ‘Songs’ isn't perhaps ideal, but does at least suggest that they were sung, read, or chanted with music.
 \ip There are many classes of the songs for believers in God: there are songs of praising and worshipping God, there are prayers for requesting help, and of meaning/salvation, requesting of forgiveness, song of thanking of blessing of God, and requests curse their enemies. These prayers all for of each person and for of entire place; the other, migpakita of peg-ealig of person, the other, explained of me it's necessary and loving of all people of God.
+\ip Seven of these songs/poems are acrostic poems, i.e., the first verse starts with the first Hebrew letter (alef) and the second with the second Hebrew letter (beyt), etc. We have chosen to display those Hebrew letters to help the English reader understand that there is that acrostic background to the poem. The seven songs are Song 25, Song 34, Song 37, Song 111, Song 112, the longest Song 119, and Song 145.
 \ip Yeshua (Jesus) and other contributors to \bk The Messianic Update\bk* (The New Testament) used these songs, and intumpisan e this collection of worshipping of church of believers from the beginning.
 \ip The one hundred and fifty songs are divided into five sub-collections.
 \iot Main components of this collection
@@ -103,7 +104,7 @@
 \q1 ≈Many \add people\add* are rising¦243404 up against¦243405 me.
 \q1
 \v 2 Many \add people\add* are talking¦243409 about me,
-\q1 \add ≡saying that\add* God¦243414 won't¦243411 help¦243412 me. \qs (Instrumental¦243415 break¦243415.)\qs*\f + \fr 3:2 \ft Many older translations place the word ‘Selah’ (the transliteration of the Hebrew word ‘סֶֽלָה’ which we're not completely sure of the meaning of) here, but that's meaningless to most modern-English readers so the \+em OET\+em* makes an informed attempt at a translation—see https://en.wikipedia.org/wiki/Selah.\f*
+\q1 \add ≡saying that\add* God¦243414 won't¦243411 help¦243412 me. \qs (Instrumental¦243415 break¦243415.)\qs*\f + \fr 3:2 \ft Many older translations place the word ‘Selah’ (the transliteration of the Hebrew word ‘סֶֽלָה’ which we're not completely sure of the meaning of) here, but that's meaningless to most modern-English readers so the \+em OET\+em* makes an informed attempt at a translation. ‘Pause and reflect’ would also have been a likely meaning. For more information, see https://en.wikipedia.org/wiki/Selah.\f*
 \b
 \q1
 \v 3 \add ≈But\add* you, Yahweh¦243419, \add ≈protect me like a shield¦243420\add*.
@@ -1222,70 +1223,92 @@
 \rem /s1 A Prayer for Guidance and Protection; Prayer for Guidance and for Deliverance
 \d \add A song\add* by David.
 \rem /d For David; A psalm of David.; Of David.
+\qa \bd א\bd* (Alef)
 \q1
 \v 1 I \add ≈offer\add* my life to you¦246862, Yahweh.
+\qa \bd ב\bd* (Beyt)
 \q1
 \v 2 My God, I trust in you¦246876.
 \q1 Don't let me be humiliated.
 \q1 ≈Don't let my enemies \add ≈defeat me and then celebrate\add*.
+\qa \bd ג\bd* (Gimel)
 \q1
 \v 3 \add ≈Don't let anyone be disgraced because they'd put their trust in\add* you.
 \q1 \add On the other hand,\add* may those who act treacherously without cause be ashamed.
+\qa \bd ד\bd* (Dalet)
 \q1
 \v 4 Make your ways known to me, Yahweh.
 \q1 ≈Teach me your paths.
+\qa \bd ה\bd* (He)
 \q1
 \v 5 Guide me into your truth and teach me,
 \q1 because you're the God \add ≈who saves me\add*.
 \q1 I wait all day long¦246911 \add ≈to experience your presence\add*.
+\qa \bd ו\bd* (Vav)
 \q1
 \v 6 \add ≈Call\add* your acts of compassion and loyal commitment \add ≈to mind\add*, Yahweh¦246929,
 \q1 because they've always existed.
+\qa \bd ז\bd* (Zayin)
 \q1
 \v 7 Don't \add ≈think about my youthful disobedience\add* or my rebelliousness.
 \q1 \add ≈Call me to mind\add* with loyal commitment because of your goodness, Yahweh¦246934.
+\qa \bd ח\bd* (Het)
 \q1
 \v 8 Yahweh is \add both\add* honest and¦246945 good,
 \q1 therefore he teaches¦246945 sinners the way.
+\qa \bd ט\bd* (Tet)
 \q1
 \v 9 He¦246952 guides the humble in what is right
 \q1 ≈and he teaches \add *them\add* his way.
+\qa \bd י\bd* (Yod)
 \q1
 \v 10 All Yahweh's ways are loyal commitment and faithfulness
 \q1 to those who keep his agreement and his solemn commands.
+\qa \bd כ\bd* (Kaf)
 \q1
 \v 11 For the sake of your \add ≈reputation\add*, Yahweh¦246975,
 \q1 forgive my disobedience because it's \add ≈pretty bad\add*.
+\qa \bd ל\bd* (Lamed)
 \q1
 \v 12 Who are \add #those\add* who respect Yahweh?
 \q1 The master will instruct \add #them\add* in the path that \add #they\add* should choose.
+\qa \bd מ\bd* (Mem)
 \q1
 \v 13 \add #They'll\add* \add ≈enjoy a life of goodness\add*,
 \q1 ≈and¦246990 \add #their\add* descendants will \add ≈live peacefully in\add* the land.
+\qa \bd נ\bd* (Nun)
 \q1
 \v 14 Yahweh's¦246997 friendship is for those who respect him,
 \q1 and he makes his \add ≈promises\add* known to them.
+\qa \bd ס\bd* (Samek)
 \q1
 \v 15 My eyes are always on Yahweh,
 \q1 because he'll untangle my feet from the net.
+\qa \bd ע\bd* (Ayin)
 \q1
 \v 16 Turn towards me and have mercy on me,
 \q1 because I'm alone and suffering.
+\qa \bd פ\bd* (Pe)
 \q1
 \v 17 \add ≈My worries keep increasing\add*—
 \q1 rescue me from my distress.
+\qa \bd צ\bd* (Tsade)
 \q1
 \v 18 \add ≈Take note of\add* my suffering and¦247035 troubles.
 \q1 Forgive all my sins.
+\qa \bd ק\bd* (Qof)
 \q1
 \v 19 \add ≈Look at\add* my enemies because \add ≈there's so many of them\add*.
 \q1 They hate me with cruel hatred.
+\qa \bd ר\bd* (Resh)
 \q1
 \v 20 Protect my life and¦247052 rescue me.
 \q1 Don't let me be humiliated, because I \add always\add* take refuge in you¦247055.
+\qa \bd ש\bd* (Sin/Shin)
 \q1
 \v 21 May integrity and \add ≈godliness\add* preserve me,
 \q1 because I wait for you \add to help me\add*.
+\qa \bd ת\bd* (Tav)
 \q1
 \v 22 Rescue Yisrael, God,
 \q1 from all its troubles.
@@ -1707,71 +1730,93 @@
 \rem /s1 In Praise of God's Goodness; Praise for Deliverance from Trouble
 \d \add A song\add* by David who pretended¦248397 to be insane¦248400 in front¦248401 of \add King\add* Avimelek, \add ≈causing the king to send him¦248403 away\add*.
 \rem /d Of David, when he feigned madness before Abimelech, so that he drove him out, and he went away.; A psalm of David, regarding the time he pretended to be insane in front of Abimelech, who sent him away.; For David (when he feigned madness in Abimelech's presence—Abimelech then drove him away, and he departed); Of David. When he pretended to be insane before Abimelech, who drove him away, and he left.
+\qa \bd א\bd* (Alef)
 \q1
 \v 1 I will praise¦248415 Yahweh¦248410 at all times.
 \q1 \add ≈I'll always be praising him out loud\add*.
+\qa \bd ב\bd* (Beyt)
 \q1
 \v 2 I will praise Yahweh!
 \q1 Let \add those who're\add* oppressed hear¦248422 and¦248424 \add ≈celebrate\add*.
+\qa \bd ג\bd* (Gimel)
 \q1
 \v 3 Praise Yahweh¦248428 with me.
 \q1 Let's \add ≈compliment him\add* together¦248432.
+\qa \bd ד\bd* (Dalet)
 \q1
 \v 4 I¦248435 searched for Yahweh¦248438 and he answered¦248439 me,
 \q1 and he \add ≈helped me overcome\add* all my fears¦248442.
+\qa \bd ה\bd* (He)
 \q1
 \v 5 Those who \add ≈put their¦248449 trust in\add* him are radiant¦248448,
 \q1 and \add ≈have no need to feel\add* ashamed.
+\qa \bd ו\bd* (Vav)
 \q1
 \v 6 This oppressed man called¦248457 out \add for help\add*
 \q1 and Yahweh heard¦248459 him and saved¦248463 him from all his troubles¦248462.
+\qa \bd ז\bd* (Zayin)
 \q1
 \v 7 Yahweh's¦248469 messenger¦248467 \add ≈stands guard\add* around¦248470 those who fear¦248471 \add @Yahweh\add*
 \q1 and¦248472 rescues¦248472 them.
+\qa \bd ח\bd* (Het)
 \q1
 \v 8 Taste and¦248476 see¦248476 that Yahweh¦248480 is good¦248479.
 \q1 \add ≈Anyone who looks to him for their safety will prosper\add*.
+\qa \bd ט\bd* (Tet)
 \q1
 \v 9 Fear Yahweh¦248491, you \add ≈who belong to him\add*.
 \q1 There's no lack for those who \add ≈honour\add* him.
+\qa \bd י\bd* (Yod)
 \q1
 \v 10 Young lions¦248500 sometimes lack food and \add ≈go hungry\add*,
 \q1 but those who \add ≈put their trust in\add* Yahweh¦248504 won't¦248505 lack anything good¦248510.
+\qa \bd כ\bd* (Kaf)
 \q1
 \v 11 Come \add and\add* listen¦248516 to me, \add &my\add* children¦248515.
 \q1 I'll teach¦248521 you¦248521 \add ≈how to honour\add* Yahweh¦248520.
+\qa \bd ל\bd* (Lamed)
 \q1
 \v 12 \add ≈Anyone\add* who desires¦248527 life and \add ≈wants a long life\add*
 \q1 \add in order\add* \add ≈to experience\add* good \add >things\add*
+\qa \bd מ\bd* (Mem)
 \q1
 \v 13 \add then\add* \add ≈don't let evil¦248537 words come out of your mouth\add*,
 \q1 ≈and keep¦248535 your lips¦248538 from speaking¦248539 lies.
+\qa \bd נ\bd* (Nun)
 \q1
 \v 14 Turn away from evil¦248544
 \q1 ≈and do good¦248547.
 \q1 Seek peace¦248549
 \q1 ≈and go after it¦248550.
+\qa \bd ס\bd* (Samek)
 \q1
 \v 15 Yahweh's¦248554 eyes¦248553 are on \add ≈those who try to obey him\add*
 \q1 ≈and¦248558 his ears¦248558 are directed toward their¦248561 calls \add for help\add*.
+\qa \bd ע\bd* (Ayin)
 \q1
 \v 16 Yahweh¦248565 \add ≈works against\add* those who do evil¦248567—
 \q1 to cut off the memory¦248570 of them from the earth¦248569.
+\qa \bd פ\bd* (Pe)
 \q1
 \v 17 The \add ≈godly\add* \add >people\add* cry¦248573 out and Yahweh hears¦248575
 \q1 and he¦248575 rescues them from all their¦248578 troubles¦248578.
+\qa \bd צ\bd* (Tsade)
 \q1
 \v 18 Yahweh¦248583 is close to the brokenhearted¦248584,
 \q1 ≈and¦248587 he¦248592 saves whose spirits¦248591 \add ≈feel\add* crushed¦248589.
+\qa \bd ק\bd* (Qof)
 \q1
 \v 19 \add ≈Godly people have many troubles¦248596\add*,
 \q1 but Yahweh¦248600 rescues them from them all.
+\qa \bd ר\bd* (Resh)
 \q1
 \v 20 He keeps all his bones¦248606—
 \q1 ≈not one of them will be broken¦248610.
+\qa \bd ש\bd* (Sin/Shin)
 \q1
 \v 21 Evil will \add bounce back and\add* kill¦248613 the wicked¦248614.
 \q1 ≈and those who hate¦248616 \add ≈godly\add* \add >people\add* will be condemned.
+\qa \bd ת\bd* (Tav)
 \q1
 \v 22 Yahweh¦248622 rescues the lives of his servants¦248624.
 \q1 ≈None of those who \add ≈go to him for safety\add* will be condemned.
@@ -1918,46 +1963,54 @@
 \rem /s1 The Destiny of the Wicked and of the Good; Exhortation to Patience and Trust
 \d \add A song\add* by David.
 \rem /d For David; A psalm of David.; Of David.
+\qa \bd א\bd* (Alef)
 \q1
 \v 1 Don't be irritated by \add ≈those who do evil\add*.
 \q1 ≈Don't be envious of those who do \add ≈what is wrong\add*,
 \q1
 \v 2 because they'll soon dry up like the grass
 \q1 ≈and wither as the green plants.
+\qa \bd ב\bd* (Beyt)
 \q1
 \v 3 Trust in Yahweh¦249103 and do what is good.
 \q1 \add ≈Settle\add* in the land and \add ≈appreciate\add* faithfulness.
 \q1
 \v 4 Then delight yourself in Yahweh¦249113,
 \q1 and he'll give you \add ≈what you really desire\add*.
+\qa \bd ג\bd* (Gimel)
 \q1
 \v 5 \add ≈Give\add* your path to Yahweh.
 \q1 Trust in him, and he'll act \add on your behalf\add*.
 \q1
 \v 6 He'll¦249128 display your justice like the daylight
 \q1 ≈and¦249129 your \add ≈innocence\add* like the day at noon.
+\qa \bd ד\bd* (Dalet)
 \q1
 \v 7 Be still \add ≈in front of\add* Yahweh and¦249142 wait patiently for him.
 \q1 Don't be angry if others succeed in what \add #they do\add*,
 \q1 or when \add #they make\add* \add evil¦249149\add* plots.
+\qa \bd ה\bd* (He)
 \q1
 \v 8 \add ≈Don't be angry and frustrated\add*.
 \q1 Don't \add ≈be a worrier—that only makes trouble\add*.
 \q1
 \v 9 \add ≈Those who do evil will be eliminated\add*,
 \q1 \add ≈but\add* those who \add ≈strive to obey\add* for Yahweh will \add ≈end up owning\add* the land.
+\qa \bd ו\bd* (Vav)
 \q1
 \v 10 In a little while the evil \add >people\add* will disappear.
 \q1 You'll look at \add ≈the place where they were\add*, but \add #they'll\add* be gone.
 \q1
 \v 11 \add ≈But\add* the meek will \add ≈inherit\add* the land
 \q1 and¦249185 will delight in great prosperity.
+\qa \bd ז\bd* (Zayin)
 \q1
 \v 12 The wicked \add >people\add* plot against the righteous
 \q1 ≈and grind \add #their\add* teeth \add in rage\add* against \add #them\add*.
 \q1
 \v 13 My master laughs at \add #them\add*,
 \q1 because \add he knows that\add* \add their¦249206\add* day is coming.
+\qa \bd ח\bd* (Het)
 \q1
 \v 14 The wicked have drawn out their \add #swords\add* and have bent their \add #bows\add*
 \q1 to birng the oppressed and needy down—
@@ -1965,28 +2018,33 @@
 \q1
 \v 15 Their \add #swords\add* will \add ≈pierce\add* their own \add #hearts\add*,
 \q1 and their bows will be broken.
+\qa \bd ט\bd* (Tet)
 \q1
 \v 16 It's¦249235 better to do right¦249234 and \add only\add* have a little,
 \q1 than to be wicked¦249231 and rich,
 \q1
 \v 17 because the arms of the wicked \add >people\add* will be broken,
 \q1 but Yahweh¦249238 \add ≈supports\add* \add >people\add* \add who're\add* righteous.
+\qa \bd י\bd* (Yod)
 \q1
 \v 18 Yahweh \add ≈keeps an eye on those who're blameless\add*,
 \q1 and¦249250 \add ^they won't lose\add* their inheritance.
 \q1
 \v 19 They won't be shamed when times \add ≈are bad\add*.
 \q1 When famine comes, they'll have enough to eat,
+\qa \bd כ\bd* (Kaf)
 \q1
 \v 20 because evil \add >people\add* will \add ≈die\add*.
 \q1 Yahweh's enemies will be like the \add fleeting\add* \add ≈beauty\add* of the fields—
 \q1 they'll be consumed and \add ≈disappear\add* in the smoke.
+\qa \bd ל\bd* (Lamed)
 \q1
 \v 21 Wicked \add >people\add* borrow \add ≈but never\add* repay,
 \q1 \add ≈but\add* the \add ≈godly\add* \add >person\add* \add ≈is generous\add* and gives.
 \q1
 \v 22 Those who are blessed by \add @God\add* will \add ≈own\add* the land,
 \q1 \add ≈but\add* those who are cursed by him will be \add ≈wiped out\add*.
+\qa \bd מ\bd* (Mem)
 \q1
 \v 23 It is by Yahweh¦249297 that a person's steps are established,
 \q1 and he \add ≈takes pleasure\add* in \add observing\add* their path.
@@ -1994,6 +2052,7 @@
 \v 24 \add Even\add* if \add #they\add* stumble, \add #they\add* won't¦249307 fall \add ≈on their face\add*,
 \q1 because Yahweh is \add ≈right¦249310 there helping\add* \add #them\add*.
 \b
+\qa \bd נ\bd* (Nun)
 \q1
 \v 25 I was young and now I'm old
 \q1 and I've never seen the righteous \add >person\add* abandoned
@@ -2001,43 +2060,51 @@
 \q1
 \v 26 All day long, \add ≈they're\add* \add ≈gracious\add* and lend \add to those more needy\add*,
 \q1 and \add #their\add* children become a blessing \add to others\add*.
+\qa \bd ס\bd* (Samek)
 \q1
 \v 27 Turn¦249334 away from evil and do what is right,
 \q1 then you will \add ≈go on living\add*
 \q1
 \v 28 because Yahweh loves justice and doesn't abandon \add ≈those who're faithful to him\add*.
 \q1 They're preserved forever¦249355, but the descendants of wicked \add >people\add* will be \add ≈eliminated\add*.
+\qa \bd ע\bd* (Ayin)
 \q1
 \v 29 The \add ≈godly\add* \add >people\add* will inherit the land
 \q1 ≈and¦249363 always live there.
+\qa \bd פ\bd* (Pe)
 \q1
 \v 30 \add ≈Godly\add* \add >people\add* \add ≈expound\add* wisdom
 \q1 ≈and \add ≈promote\add* justice.
 \q1
 \v 31 God's law is \add always\add* \add ≈on their minds\add*.
 \q1 \add #Their\add* feet won't slip.
+\qa \bd צ\bd* (Tsade)
 \q1
 \v 32 The¦249381 wicked person watches the righteous
 \q1 and¦249386 seeks to kill \add #them\add*.
 \q1
 \v 33 Yahweh¦249393 won't abandon \add #them\add* into the evil person's hand
 \q1 or condemn \add #them\add* when \add they're\add* judged.
+\qa \bd ק\bd* (Qof)
 \q1
 \v 34 Wait for Yahweh and¦249407 \add ≈stay on the path he showed you\add*,
 \q1 then he'll \add ≈assist you\add* to possess the land \add he promised\add*.
 \q1 You'll see those who're wicked¦249405 \add ≈get eliminated\add*.
+\qa \bd ר\bd* (Resh)
 \q1
 \v 35 I've seen a wicked and terrifying person
 \q1 spreading out like a luxuriant tree in its native soil.
 \q1
 \v 36 However, when I passed by again, \add #they\add* weren't there.
 \q1 ≈I looked for \add #them\add*, but \add #they\add* couldn't be found.
+\qa \bd ש\bd* (Sin/Shin)
 \q1
 \v 37 Observe the person of integrity, and notice \add ≈those who're godly\add*.
 \q1 There's a good future¦249432 for a peaceful person.
 \q1
 \v 38 Sinners will be totally destroyed;
 \q1 ≈The future will be cut off for wicked \add ≈people\add*.
+\qa \bd ת\bd* (Tav)
 \q1
 \v 39 Yahweh¦249444 \add ≈is the one who saves¦249448 godly people\add*.
 \q1 ≈He protects them in the times of trouble.
@@ -5046,190 +5113,182 @@
 \v 15 The people¦259234 who know¦259235 the happy shout¦259236 \add ≈are fortunate\add*.
 \q1 Yahweh¦259237, they \add ≈live knowing that you are always watching over them\add*.
 \q1
-\v 16 ◙
-\q2 …
+\v 16 They \add ≈celebrate your reputation\add* all day¦259248 long,
+\q1 ≈and they¦259250 \add ≈praise you for always doing what is right¦259249\add*.
 \q1
-\v 17 ◙
-\q2 …
+\v 17 You are their¦259256 majestic strength,
+\q1 ≈and by your¦259258 favour¦259258 our \add ≈strength turns into victory\add*.
 \q1
-\v 18 ◙
-\q2 …
+\v 18 because our shield¦259266 belongs to Yahweh¦259265—
+\q1 ≈our king¦259269 belongs to Israel's¦259268 holy \add >one\add*.
 \q1
 \rem /s1 God's Promise to David
-\v 19 ◙
-\q2 …
-\q2 …
+\v 19 Long ago you¦259273 spoke¦259273 in a vision¦259275 to your¦259276 faithful¦259276 \add >ones\add*.
+\q1 You said¦259277, “I've \add ≈helped\add* a warrior¦259282.”
+\q1 ≈I've raised¦259283 up one chosen¦259284 from among the people¦259285.
 \q1
-\v 20 ◙
-\q2 …
+\v 20 I have chosen David¦259289 my servant¦259290—
+\q1 ≈I've anointed¦259293 him¦259293 with my sacred¦259292 oil.
 \q1
-\v 21 ◙
-\q2 …
+\v 21 My hand¦259297 will support him.
+\q1 ≈My arm will also be with him to strengthen¦259303 him.
 \q1
-\v 22 ◙
-\q2 …
+\v 22 No enemy¦259309 will deceive¦259308 him.
+\q1 ≈No \add ≈wicked man¦259311\add* will oppress him.
 \q1
-\v 23 ◙
-\q2 …
+\v 23 I will crush¦259318 his¦259319 enemies \add ≈in front of\add* him.
+\q1 ≈I will kill those who hate¦259321 him.
 \q1
-\v 24 ◙
-\q2 …
+\v 24 My truth and my loyal commitment will be with him.
+\q1 He will win victories \add ≈with my help\add*.
 \q1
-\v 25 ◙
-\q2 …
+\v 25 I will place his hand over the sea
+\q1 and his right¦259337 hand over the rivers¦259336.
 \q1
-\v 26 ◙
-\q1 …
-\q2 …
+\v 26 He will call out to me, ‘You are my father¦259342,
+\q1 my God¦259344, and¦259345 the \add ≈reliable one who rescues me\add*.’
 \q1
-\v 27 ◙
-\q2 …
+\v 27 I¦259351 also will place him¦259353 as my firstborn¦259352 son,
+\q1 the highest king on the earth¦259357.
 \q1
-\v 28 ◙
-\q2 …
+\v 28 I¦259361 will extend my loyal commitment to him forever¦259360,
+\q1 and¦259366 my agreement with him will be secure.
 \q1
-\v 29 ◙
-\q2 …
+\v 29 I will make his descendants endure forever¦259372
+\q1 and his throne¦259374 \add as enduring\add* as the skies¦259376 above.
 \q1
-\v 30 ◙
-\q2 …
+\v 30 If his children forsake my law
+\q1 and¦259384 don't¦259385 \add ≈follow\add* my regulations,
 \q2
-\v 31 ◙
-\q2 …
+\v 31 if they break my rules
+\q1 and don't¦259394 keep¦259395 my commands¦259393,
 \q2
-\v 32 ◙
-\q2 …
+\v 32 then will I punish¦259398 their rebellion with a rod
+\q1 and their \add ≈disobedience\add* with stripes¦259401 \add from a whip\add*.
 \q1
-\v 33 ◙
-\q2 …
+\v 33 But I won't¦259406 break¦259408 off my loyal commitment to him¦259409
+\q1 or be unfaithful to my promise.
 \q1
-\v 34 ◙
-\q2 …
+\v 34 I won't¦259416 break my agreement
+\q1 or change¦259423 the words of my lips¦259421.
 \q1
-\v 35 ◙
-\q2 …
-\q1 …
+\v 35 Once and for all I have \add ≈made an oath\add* by my holiness¦259428—
+\q1I won't lie to David¦259431:
 \q1
-\v 36 ◙
-\q2 …
+\v 36 his descendants will continue forever¦259436
+\q1 and¦259438 his throne¦259438 as long as the sun¦259439 before¦259440 me.
 \q1
-\v 37 ◙
-\q2 …
-\q2 …
+\v 37 It will be established¦259444 forever¦259445 like the moon¦259443,
+\q1 the faithful witness¦259446 in the sky¦259447.” \qs (Instrumental¦259449 break¦259449.)\qs*
 \q1
 \rem /s1 Lament over the Defeat of the King
-\v 38 ◙
-\q2 …
+\v 38 But you have refused and rejected¦259454—
+\q1 you've been angry with your anointed¦259458 king.
 \q1
-\v 39 ◙
-\q2 …
+\v 39 You have renounced the agreement with your¦259463 servant¦259463.
+\q1 You have desecrated his crown¦259466 in the dust.
 \q1
-\v 40 ◙
-\q2 …
+\v 40 You have broken¦259469 down all his walls¦259472.
+\q1 ≈You have ruined his fortresses.
 \q1
-\v 41 ◙
-\q2 …
+\v 41 Everyone who goes past on the road¦259483 rob him¦259479.
+\q1 He's become¦259484 an object of disgust to his neighbours¦259486.
 \q1
-\v 42 ◙
-\q2 …
+\v 42 You have \add ≈given strength to\add* his enemies;
+\q1 ≈You've made all his enemies \add ≈celebrate\add*.
 \q1
-\v 43 ◙
-\q2 …
+\v 43 You turn¦259500 back the edge of his sword¦259502
+\q1 ≈and¦259503 haven't supported¦259504 him¦259504 in the battle¦259505.
 \q1
-\v 44 ◙
-\q2 …
+\v 44 You have brought his splendour¦259509 to an end.
+\q1 ≈You've thrown¦259512 his throne¦259510 down to the ground¦259511.
 \q1
-\v 45 ◙
-\q2 …
+\v 45 You have shortened¦259515 the days¦259516 of his youth¦259517.
+\q1 You have covered him with shame¦259520. \qs (Instrumental¦259521 break¦259521.)\qs*
 \q1
 \rem /s1 A Prayer for Deliverance
-\v 46 ◙
-\q1 …
+\v 46 How long, Yahweh¦259527? Will you¦259528 hide yourself¦259528 forever¦259529?
+\q1 ≈How long will your¦259534 anger¦259534 burn¦259530 like fire¦259533?
 \q1
-\v 47 ◙
-\q1 …
-\q2 …
+\v 47 Oh¦259539, think about how short my time is,
+\q1 ≈and for what emptiness¦259547 you've created¦259548 all of humanity's¦259553 children¦259551.
 \q1
-\v 48 ◙
-\q1 …
+\v 48 Who¦259567 can live¦259558 and¦259559 not see¦259560 death¦259562,
+\q1 ≈or rescue his own life from the \add ≈clutch of the grave\add*? \qs (Instrumental¦259568 break¦259568.)\qs*
 \q1
-\v 49 ◙
-\q1 …
+\v 49 Lord, where¦259571 are your former¦259574 acts of loyal commitment
+\q1 that you¦259577 \add ≈sincerely promised\add* to David¦259578?
 \q1
-\v 50 ◙
-\q2 …
+\v 50 My master¦259583, call to mind the mocking directed against your¦259585 servants¦259585
+\q1 ≈and how I bear so many insults from the nations in my heart.
 \q1
-\v 51 ◙
-\q2 …
+\v 51 Your enemies¦259596 hurl insults, Yahweh¦259598.
+\q1 They mock the footsteps of your anointed¦259602 \add >one\add*.
 \q1
-\v 52 ◙
+\v 52 Blessed be Yahweh¦259606 forever¦259607. \add ≈Yes, indeed, let it be so.\add*
 \c 90
 \ms1 Fourth collection
 \mr (Songs 90–106)
 \s1 The people and the God
 \rem /s1 Of God and Human Beings; God's Eternity and Human Frailty
-\d The praying for Moses¦259613 servant of God.
+\d A prayer¦259612 by God's man¦259614 Mosheh¦259613 \add (Moses)\add*.
 \rem /d A Prayer of Moses, the man of God.; A prayer of Moses, the man of God.; A prayer of Moses the man of God.; A prayer: ascribed to Moses, the man of God
 \q1
-\v 1 ◙
-\q2 …
+\v 1 My master, you've been our \add ≈protection\add*
+\q1 throughout all generations.
 \q1
-\v 2 ◙
-\q2 …
-\q2 …
+\v 2 Before the mountains were formed or you formed the earth and¦259645 the world,
+\q1 from \add ≈the entire past through to all the future\add*, you are God.
 \q1
-\v 3 ◙
-\q2 …
-\q2 …
+\v 3 You return man to dust,
+\q1 and you say, “Return, you descendants of humanity,”
 \q1
-\v 4 ◙
-\q2 …
+\v 4 because a thousand years in your sight
+\q1 are \add just\add* like yesterday when it's over,
+\q1 ≈and like a watch \add of several hours\add* in the night.
 \q1
-\v 5 ◙
-\q2 …
-\q2 …
+\v 5 You sweep them away as with a flood and they sleep.
+\q1 In the morning¦259669 they are like the grass that sprouts up:
 \q1
-\v 6 ◙
-\q2 …
+\v 6 In the morning it blooms and grows up,
+\q1 \add but\add* by the evening, it has withered and dried up.
 \q1
-\v 7 ◙
-\q2 …
+\v 7 Certainly we're consumed in your anger,
+\q1 ≈and in your rage we're terrified.
 \q1
-\v 8 ◙
-\q2 …
+\v 8 You've placed our \add ≈disobedience in front of\add* you—
+\q1 ≈our hidden sins in the light of your¦259696 presence,
 \q1
-\v 9 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 9 because our life¦259705 passes¦259719 away under your rage—
+\q1 our years pass quickly¦259720 like a sigh \add does\add*.
 \q1
-\v 10 ◙
-\q2 …
-\q1 …
-\q1 …
+\v 10 \add ≈We might reach the age of\add* seventy,
+\q1 or even eighty if we're healthy,
+\q1 but even our best years are marked by trouble and sorrow.
+\q1 Yes, they pass quickly, then we ‘fly away’.
 \q1
-\v 11 ◙
-\q1 …
+\v 11 Who knows the intensity of your anger,
+\q1 and¦259735 your rage that's equal to the \add ≈respect that we should have had for\add* you?
 \q1
-\v 12 ◙
-\q2 …
+\v 12 So teach us to consider \add the fragility of\add* our \add #lives\add*
+\q1 so that we might live wisely.
 \q1
-\v 13 ◙
-\q1 …
-\q1 …
+\v 13 Turn back, Yahweh.
+\q1 How long will \add ≈this last\add*?
+\q1 Have pity on your¦259751 servants.
 \q1
-\v 14 ◙
-\q2 …
+\v 14 Satisfy us in the morning with your loyal commitment
+\q1 so that we¦259762 can celebrate and be glad for the rest of our lives.
 \q1
-\v 15 ◙
-\q2 …
+\v 15 Make us glad in proportion to the days you \add ≈made us suffer\add*,
+\q1 and¦259770 to the years we have experienced trouble.
 \q1
-\v 16 ◙
-\q2 …
+\v 16 Let your servants see your \add ≈actions\add*,
+\q1 and let our children \add ≡see\add* your splendour.
 \q1
-\v 17 ◙
-\q2 …
-\q2 …
+\v 17 May the favour of my master God be ours.
+\q1 Prosper the work of our hands.
+\q1 \add ≈Yes\add*, prosper the work \add ≈that we do\add*.
 \c 91
 \s1 God our protector
 \rem /s1 God Our Protector; Assurance of God's Protection
@@ -6614,72 +6673,116 @@
 \rem /s1 Praise for God's Wonderful Works; In Praise of the Lord
 \q1
 \v 1 ◙
+\qa \bd א\bd* (Alef)
 \q1 …
+\qa \bd ב\bd* (Beyt)
 \q2 …
+\qa \bd ג\bd* (Gimel)
 \q1
 \v 2 ◙
+\qa \bd ד\bd* (Dalet)
 \q2 …
+\qa \bd ה\bd* (He)
 \q1
 \v 3 ◙
+\qa \bd ו\bd* (Vav)
 \q2 …
+\qa \bd ז\bd* (Zayin)
 \q1
 \v 4 ◙
+\qa \bd ח\bd* (Het)
 \q2 …
+\qa \bd ט\bd* (Tet)
 \q1
 \v 5 ◙
+\qa \bd י\bd* (Yod)
 \q2 …
+\qa \bd כ\bd* (Kaf)
 \q1
 \v 6 ◙
+\qa \bd ל\bd* (Lamed)
 \q2 …
+\qa \bd מ\bd* (Mem)
 \q1
 \v 7 ◙
+\qa \bd נ\bd* (Nun)
 \q2 …
+\qa \bd ס\bd* (Samek)
 \q1
 \v 8 ◙
+\qa \bd ע\bd* (Ayin)
 \q2 …
+\qa \bd פ\bd* (Pe)
 \q1
 \v 9 ◙
+\qa \bd צ\bd* (Tsade)
 \q2 …
+\qa \bd ק\bd* (Qof)
 \q1 …
+\qa \bd ר\bd* (Resh)
 \q1
 \v 10 ◙
+\qa \bd ש\bd* (Sin/Shin)
 \q2 …
+\qa \bd ת\bd* (Tav)
 \q1 …
 \c 112
 \s1 The happiness of good person
 \rem /s1 The Happiness of a Good Person; Blessings of the Righteous
 \q1
 \v 1 ◙
+\qa \bd א\bd* (Alef)
 \q1 …
+\qa \bd ב\bd* (Beyt)
 \q2 …
+\qa \bd ג\bd* (Gimel)
 \q1
 \v 2 ◙
+\qa \bd ד\bd* (Dalet)
 \q2 …
+\qa \bd ה\bd* (He)
 \q1
 \v 3 ◙
+\qa \bd ו\bd* (Vav)
 \q2 …
+\qa \bd ז\bd* (Zayin)
 \q1
 \v 4 ◙
+\qa \bd ח\bd* (Het)
 \q2 …
+\qa \bd ט\bd* (Tet)
 \q1
 \v 5 ◙
+\qa \bd י\bd* (Yod)
 \q2 …
+\qa \bd כ\bd* (Kaf)
 \q1
 \v 6 ◙
+\qa \bd ל\bd* (Lamed)
 \q2 …
+\qa \bd מ\bd* (Mem)
 \q1
 \v 7 ◙
+\qa \bd נ\bd* (Nun)
 \q2 …
+\qa \bd ס\bd* (Samek)
 \q1
 \v 8 ◙
+\qa \bd ע\bd* (Ayin)
 \q2 …
+\qa \bd פ\bd* (Pe)
 \q1
 \v 9 ◙
+\qa \bd צ\bd* (Tsade)
 \q2 …
+\qa \bd ק\bd* (Qof)
 \q1 …
+\qa \bd ר\bd* (Resh)
 \q1
 \v 10 ◙
+\qa \bd ש\bd* (Sin/Shin)
 \q2 …
+\qa \bd ת\bd* (Tav)
 \q1 …
 \c 113
 \s1 Not/None like of Master God we/our
@@ -6978,8 +7081,8 @@
 \c 119
 \s1 The Law of God
 \rem /s1 The Glories of God's Law; The Law of the Lord
+\qa \bd א\bd* (Alef)
 \q1
-\qa Alef
 \v 1 ◙
 \q2 …
 \q1
@@ -7005,8 +7108,8 @@
 \q2 …
 \s1 The obedience of law of God
 \rem /s1 Obedience to the Law of the Lord
+\qa \bd ב\bd* (Beyt)
 \q1
-\qa Bet
 \v 9 ◙
 \q1 …
 \q1
@@ -7032,8 +7135,8 @@
 \q2 …
 \s1 The happiness of obedience of Law of God
 \rem /s1 Happiness in the Law of the Lord
+\qa \bd ג\bd* (Gimel)
 \q1
-\qa Gimel
 \v 17 ◙
 \q2 …
 \q1
@@ -7059,8 +7162,8 @@
 \q2 …
 \s1 The pegpakannekal of obedience of law of God
 \rem /s1 Determination to Obey the Law of the Lord
+\qa \bd ד\bd* (Dalet)
 \q1
-\qa Daleth
 \v 25 ◙
 \q1 …
 \q1
@@ -7086,8 +7189,8 @@
 \q2 …
 \s1 The praying for of wisdom
 \rem /s1 A Prayer for Understanding
+\qa \bd ה\bd* (He)
 \q1
-\qa He
 \v 33 ◙
 \q2 …
 \q1
@@ -7113,8 +7216,8 @@
 \q2 …
 \s1 The trusting of Law of God
 \rem /s1 Trusting the Law of the Lord
+\qa \bd ו\bd* (Vav)
 \q1
-\qa Waw
 \v 41 ◙
 \q2 …
 \q1
@@ -7139,8 +7242,8 @@
 \q2 …
 \s1 trusted the Law of God
 \rem /s1 Confidence in the Law of the Lord
+\qa \bd ז\bd* (Zayin)
 \q1
-\qa Zayin
 \v 49 ◙
 \q2 …
 \q1
@@ -7165,8 +7268,8 @@
 \v 56 ◙
 \s1 The loving of Law of God
 \rem /s1 Devotion to the Law of the Lord
+\qa \bd ח\bd* (Het)
 \q1
-\qa Heth
 \v 57 ◙
 \q2 …
 \q1
@@ -7193,8 +7296,8 @@
 \q2 …
 \s1 The purpose of Law of God
 \rem /s1 The Value of the Law of the Lord
+\qa \bd ט\bd* (Tet)
 \q1
-\qa Teth
 \v 65 ◙
 \q2 …
 \q1
@@ -7220,8 +7323,8 @@
 \q2 …
 \s1 The katareng of Law of God
 \rem /s1 The Justice of the Law of the Lord
+\qa \bd י\bd* (Yod)
 \q1
-\qa Yodh
 \v 73 ◙
 \q2 …
 \q1
@@ -7248,8 +7351,8 @@
 \q2 …
 \s1 The praying so that be saved
 \rem /s1 A Prayer for Deliverance
+\qa \bd כ\bd* (Kaf)
 \q1
-\qa Kaph
 \v 81 ◙
 \q2 …
 \q1
@@ -7276,8 +7379,8 @@
 \q2 …
 \s1 The trusting of law of God
 \rem /s1 Faith in the Law of the Lord
+\qa \bd ל\bd* (Lamed)
 \q1
-\qa Lamedh
 \v 89 ◙
 \q2 …
 \q1
@@ -7303,8 +7406,8 @@
 \q2 …
 \s1 The loving of law of God
 \rem /s1 Love for the Law of the Lord
+\qa \bd מ\bd* (Mem)
 \q1
-\qa Mem
 \v 97 ◙
 \q2 …
 \q1
@@ -7330,8 +7433,8 @@
 \q2 …
 \s1 The peace/prosperity from law of God
 \rem /s1 Light from the Law of the Lord
+\qa \bd נ\bd* (Nun)
 \q1
-\qa Nun
 \v 105 ◙
 \q2 …
 \q1
@@ -7357,8 +7460,8 @@
 \q2 …
 \s1 The peace/prosperity of obedience of Law of God
 \rem /s1 Safety in the Law of the Lord
+\qa \bd ס\bd* (Samek)
 \q1
-\qa Samekh
 \v 113 ◙
 \q2 …
 \q1
@@ -7384,8 +7487,8 @@
 \q2 …
 \s1 The obedience of Law of God
 \rem /s1 Obedience to the Law of the Lord
+\qa \bd ע\bd* (Ayin)
 \q1
-\qa Ayin
 \v 121 ◙
 \q2 …
 \q1
@@ -7412,8 +7515,8 @@
 \q2 …
 \s1 The eyam of obedience of Law of God
 \rem /s1 Desire to Obey the Law of the Lord
+\qa \bd פ\bd* (Pe)
 \q1
-\qa Pe
 \v 129 ◙
 \q2 …
 \q1
@@ -7438,8 +7541,8 @@
 \q2 …
 \s1 Not/None eglapihan of Law of God
 \rem /s1 The Justice of the Law of the Lord
+\qa \bd צ\bd* (Tsade)
 \q1
-\qa Tsadhe
 \v 137 ◙
 \q2 …
 \q1
@@ -7465,8 +7568,8 @@
 \q2 …
 \s1 The praying so that be saved
 \rem /s1 A Prayer for Deliverance
+\qa \bd ק\bd* (Qof)
 \q1
-\qa Qoph
 \v 145 ◙
 \q2 …
 \q1
@@ -7492,8 +7595,8 @@
 \q2 …
 \s1 The praying so that be saved
 \rem /s1 A Plea for Help
+\qa \bd ר\bd* (Resh)
 \q1
-\qa Resh
 \v 153 ◙
 \q2 …
 \q1
@@ -7519,8 +7622,8 @@
 \q2 …
 \s1 The obedience of law of God
 \rem /s1 Dedication to the Law of the Lord
+\qa \bd ש\bd* (Sin/Shin)
 \q1
-\qa Sin and Shin
 \v 161 ◙
 \q2 …
 \q1
@@ -7546,8 +7649,8 @@
 \q2 …
 \s1 The praying so that helping
 \rem /s1 A Prayer for Help
+\qa \bd ת\bd* (Tav)
 \q1
-\qa Taw
 \v 169 ◙
 \q1 …
 \q1
@@ -7575,7 +7678,7 @@
 \c 120
 \s1 The praying so that requesting from God
 \rem /s1 Prayer for Deliverance from Slanderers; A Prayer for Help
-\d A song of ascent¦266013 there to Yerushalem.
+\d A song for walking uphill to Yerushalem.
 \rem /d A song for the ascent to Jerusalem.; A song of ascents.; A Song of Ascents.; A song of the ascents
 \q1
 \v 1 ◙
@@ -7603,7 +7706,7 @@
 \c 121
 \s1 Yahweh our protector
 \rem /s1 The Lord Our Protector; Assurance of God's Protection
-\d A song for climbing towards Yerushalem.
+\d A song for walking uphill to Yerushalem.
 \rem /d A song for the ascent to Jerusalem.; A song of ascents.; A Song of Ascents.; A song of the ascents.
 \q1
 \v 1 I \add ≈look up towards\add* the hills.
@@ -7634,7 +7737,7 @@
 \c 122
 \s1 The Yerushalem
 \rem /s1 In Praise of Jerusalem; Song of Praise and Prayer for Jerusalem
-\d A song by David¦266157 of ascent¦266156 there to Yerushalem.
+\d A song by David¦266157 while walking uphill to Yerushalem.
 \rem /d A song of ascents. Of David.; A Song of Ascents. Of David.; A song of the ascents: for David; A song for the ascent to Jerusalem. A psalm of David.
 \q1
 \v 1 ◙
@@ -7670,7 +7773,7 @@
 \c 123
 \s1 The praying for mercy
 \rem /s1 A Prayer for Mercy; Supplication for Mercy
-\d A song for of ascent¦266234 there to Yerushalem.
+\d A song for walking uphill to Yerushalem.
 \rem /d A song for the ascent to Jerusalem.; A song of ascents.; A Song of Ascents.; A song of the ascents
 \q1
 \v 1 ◙
@@ -7690,7 +7793,7 @@
 \c 124
 \s1 The God the saviour of his people
 \rem /s1 God the Protector of His People; Thanksgiving for Israel's Deliverance
-\d A song by David¦266288 for of ascent¦266287 there to Yerushalem.
+\d A song by David¦266288 while walking uphill to Yerushalem.
 \rem /d A song of ascents. Of David.; A Song of Ascents. Of David.; A song of the ascents: for David; A song for the ascent to Jerusalem. A psalm of David.
 \q1
 \v 1 ◙
@@ -7721,7 +7824,7 @@
 \c 125
 \s1 The peace/prosperity of people of God
 \rem /s1 The Security of God's People
-\d A song of ascent¦266357 there to Yerushalem.
+\d A song for walking uphill to Yerushalem.
 \rem /d A song for the ascent to Jerusalem.; A song of ascents.; A Song of Ascents.; A song of the ascents
 \q1
 \v 1 ◙
@@ -7744,7 +7847,7 @@
 \c 126
 \s1 The praying for of peace/prosperity of Israel
 \rem /s1 A Harvest of Joy; A Prayer for Deliverance
-\d A song for of ascent¦266418 there to Yerushalem.
+\d A song for walking uphill to Yerushalem.
 \rem /d A song for the ascent to Jerusalem.; A song of ascents.; A Song of Ascents.; A song of the ascents
 \q1
 \v 1 ◙
@@ -7769,7 +7872,7 @@
 \c 127
 \s1 The thanking of goodness of God
 \rem /s1 In Praise of God's Goodness; God's Blessings in the Home
-\d A song by Solomon¦266484 for of ascent¦266483 there to Yerushalem.
+\d A song by Solomon¦266484 while walking uphill to Yerushalem.
 \rem /d A song of the ascents: for Solomon; A Song of Ascents. Of Solomon.; A song for the ascent to Jerusalem. A psalm of Solomon.; A song of ascents. Of Solomon.
 \q1
 \v 1 ◙
@@ -7792,7 +7895,7 @@
 \c 128
 \s1 The gift of me obedient of Master
 \rem /s1 The Reward of Obedience to the Lord; The Happy Home of the Faithful
-\d A song for of ascent¦266564 there to Yerushalem.
+\d A song for walking uphill to Yerushalem.
 \rem /d A song for the ascent to Jerusalem.; A song of ascents.; A Song of Ascents.; A song of the ascents
 \q1
 \v 1 ◙
@@ -7817,7 +7920,7 @@
 \c 129
 \s1 The praying distance of enemy
 \rem /s1 A Prayer against Israel's Enemies; Prayer for the Downfall of Israel's Enemies
-\d A song for of ascent¦266623 there to Yerushalem.
+\d A song for walking uphill to Yerushalem.
 \rem /d A song for the ascent to Jerusalem.; A song of ascents.; A Song of Ascents.; A song of the ascents
 \q1
 \v 1 ◙
@@ -7850,7 +7953,7 @@
 \c 130
 \s1 The praying for requesting
 \rem /s1 A Prayer for Help; Waiting for Divine Redemption
-\d A song for of ascent¦266692 there to Yerushalem.
+\d A song for walking uphill to Yerushalem.
 \rem /d A song for the ascent to Jerusalem.; A song of ascents.; A Song of Ascents.; A song of the ascents
 \q1
 \v 1 ◙
@@ -7882,7 +7985,7 @@
 \c 131
 \s1 The mapahetpet praying
 \rem /s1 Song of Quiet Trust; A Prayer of Humble Trust
-\d A song by David¦266763 of ascent¦266762 there Yerushalem.
+\d A song by David¦266763 while walking uphill to Yerushalem.
 \rem /d A song of ascents. Of David.; A Song of Ascents. Of David.; A song of the ascents: for David; A song for the ascent to Jerusalem. A psalm of David.
 \q1
 \v 1 ◙
@@ -7899,7 +8002,7 @@
 \c 132
 \s1 Praised the temple of God
 \rem /s1 In Praise of the Temple; The Eternal Dwelling of God in Zion
-\d A song by David¦266813 for of ascent¦266808 there to Yerushalem.
+\d A song by David¦266813 while walking uphill to Yerushalem.
 \rem /d A song for the ascent to Jerusalem.; A song of ascents.; A Song of Ascents.; A song of the ascents
 \q1
 \v 1 ◙
@@ -7960,27 +8063,25 @@
 \v 18 ◙
 \q2 …
 \c 133
-\s1 The living there is/are unity
+\s1 Living peacefully together
 \rem /s1 The Blessedness of Unity; In Praise of Living in Peace
-\d A song by David¦266983 for of ascent¦266982 there¦266985 to Yerushalem.
+\d A song by David¦266983 while walking uphill to Yerushalem.
 \rem /d A song of ascents. Of David.; A Song of Ascents.; A song of the ascents: for David; A song for the ascent to Jerusalem. A psalm of David.
 \q1
-\v 1 ◙
-\q2 …
+\v 1 \add ≈Listen¦267010\add*, it's \add really\add* good and pleasant
+\q1 when \add the nation's\add* \add ≈people get on well\add* together.
 \q1
-\v 2 ◙
-\q2 …
-\q2 …
-\q2 …
+\v 2 It's like having \add ≈expensive\add* oil on the head,
+\q1 running down the beard—Aaron’s beard,
+\q1 \add and\add* which \add then\add* runs down onto the collar of his robes.
 \q1
-\v 3 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 3 It's like the dew on \add Mt.\add* Hermon
+\q1 which falls on the mountains of Tsiyyon \add (Zion)\add*,
+\q1 because Yahweh commanded the blessing there—eternal life.
 \c 134
 \s1 The calling of praising of God
 \rem /s1 A Call to Praise God; Praise in the Night
-\d A song for of ascent¦267039 there to Yerushalem.
+\d A song for walking uphill to Yerushalem.
 \rem /d A song for the ascent to Jerusalem.; A song of ascents.; A Song of Ascents.; A song of the ascents
 \q1
 \v 1 ◙
@@ -8558,70 +8659,92 @@
 \c 145
 \s1 A praise song
 \rem /s1 A Hymn of Praise; The Greatness and the Goodness of God
-\d A¦268632 ppraise \add song\add* by David¦268627.
+\d A¦268632 praise \add song\add* by David¦268627.
 \rem /d Praise. Of David.; A psalm of praise. Of David.; A psalm of praise of David.; A psalm of praise: for David
+\qa \bd א\bd* (Alef)
 \q1
 \v 1 I will \add ≈highly commend\add* you¦268640, my God, the King.
 \q1 I will praise¦268641 your¦268642 name¦268642 \add ^without ending\add*.
+\qa \bd ב\bd* (Beyt)
 \q1
 \v 2 Every day I'll \add make sure to\add* bless you.
 \q1 I will praise¦268648 your name forever and ever.
+\qa \bd ג\bd* (Gimel)
 \q1
 \v 3 Yahweh is great and¦268658 \add ≈deserving of a lot of praise\add*—
 \q1 \add ≈We can't fully comprehend\add* his greatness.
+\qa \bd ד\bd* (Dalet)
 \q1
 \v 4 Generation¦268666 to generation will celebrate because of \add ≈what you've done\add*
 \q1 and they'll \add ≈tell others about your powerful\add* actions.
+\qa \bd ה\bd* (He)
 \q1
 \v 5 I'll meditate on \add ≈your incredible splendour and honour\add*
 \q1 ≈as well as \add all\add* \add ≈the marvellous things that you've done\add*.
+\qa \bd ו\bd* (Vav)
 \q1
 \v 6 They'll tell \add ≈about how your awesome actions show your power\add*,
 \q1 and I'll speak about your greatness¦268676.
+\qa \bd ז\bd* (Zayin)
 \q1
 \v 7 They'll¦268685 remember the fame of your extravagant goodness,
 \q1 and they'll happily sing about your righteousness.
+\qa \bd ח\bd* (Het)
 \q1
 \v 8 Yahweh¦268694 is gracious and merciful,
 \q1 slow to anger and \add ≈frequently displaying his\add* loyal commitment.
+\qa \bd ט\bd* (Tet)
 \q1
 \v 9 Yahweh¦268704 is good to everyone,
 \q1 and¦268708 \add ≈desires the best\add* for everything he made.
 \b
+\qa \bd י\bd* (Yod)
 \q1
 \v 10 Everyone you've made will give thanks to you, Yahweh.
 \q1 Your faithful \add supporters\add* will bless you.
+\qa \bd כ\bd* (Kaf)
 \q1
 \v 11 They'll tell about the splendour of your kingdom¦268724,
 \q1 and¦268722 they'll speak about of your power,
+\qa \bd ל\bd* (Lamed)
 \q1
 \v 12 making his powerful actions known to humanity's children,
 \q1 along with the incredible splendour of his kingdom.
+\qa \bd מ\bd* (Mem)
+\qa \bd נ\bd* (Nun)
 \q1
 \v 13 Your¦268738 kingdom \add ≈will continue forever\add*,
 \q1 and¦268742 \add ≈you'll rule generation after generation\add*.
+\qa \bd ס\bd* (Samek)
 \q1
 \v 14 Yahweh supports all those who're falling
 \q1 and¦268752 raises up all those who're bent over \add ?under heavy loads\add*.
+\qa \bd ע\bd* (Ayin)
 \q1
 \v 15 \add ≈Everyone and everything's\add* eyes are watching out for you¦268761.
 \q1 You give them their food at the proper time.
+\qa \bd פ\bd* (Pe)
 \q1
 \v 16 You¦268772 open your hand
 \q1 and¦268776 satisfy the desire of every living \add >thing\add*.
+\qa \bd צ\bd* (Tsade)
 \q1
 \v 17 Yahweh¦268782 is righteous in all his¦268785 ways
 \q1 and shows kindness in everything he does.
+\qa \bd ק\bd* (Qof)
 \q1
 \v 18 Yahweh is near to all who call to him¦268793—
 \q1 to all who \add ≈sincerity request his¦268793 help\add*.
+\qa \bd ר\bd* (Resh)
 \q1
 \v 19 For¦268802 those who \add ≈strive to obey\add* him, he does \add ≈what they desire\add*,
 \q1 and he hears their \add ≈call for help\add* and saves them.
+\qa \bd ש\bd* (Sin/Shin)
 \q1
 \v 20 Yahweh¦268815 protects all those who love him,
 \q1 \add ≈but\add* he'll destroy all the wicked.
 \b
+\qa \bd ת\bd* (Tav)
 \q1
 \v 21 My mouth speaks the praise of Yahweh.
 \q1 Let \add ≈everybody\add* bless his holy name forever and ever.
