@@ -36,6 +36,7 @@ CHANGELOG:
     2025-01-21 Better handling OT ESFM word-table
     2025-02-24 Better handling of nested USFM character markers
     2025-03-08 Ignore rem being inside table in Ezr 10:24, plus handle /qs (Selah)
+    2025-06-10 Allow /s4 (which we use for kingdoms)
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -57,10 +58,10 @@ from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, 
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 
 
-LAST_MODIFIED_DATE = '2025-05-20' # by RJH
+LAST_MODIFIED_DATE = '2025-06-10' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
-PROGRAM_VERSION = '0.82'
+PROGRAM_VERSION = '0.83'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -985,7 +986,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                 book_html = f'{book_html}{"" if book_html.endswith(">") or book_html.endswith("—") else " "}' \
                         + f'''{f"""<span id="C{C}"></span><span class="{'cPsa' if BBB=='PSA' else 'c'}" id="C{C}V1">{C}{NARROW_NON_BREAK_SPACE}</span>""" if V=="1" else f"""<span class="v" id="C{C}V{V}">{V}{NARROW_NON_BREAK_SPACE}</span>"""}''' \
                         + (rest if rest else '◘')
-        elif marker in ('s1','s2','s3'):
+        elif marker in ('s1','s2','s3','s4'):
             if inParagraph:
                 assert not inTable
                 book_html = f'{book_html}</{inParagraph}>\n'
