@@ -1,4 +1,4 @@
-\id PSA - Open English Translation—Readers’ Version (OET-RV) v0.0.44
+\id PSA - Open English Translation—Readers’ Version (OET-RV) v0.0.81
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 PSA
@@ -9,9 +9,10 @@
 \toc3 Songs
 \mt1 Songs
 \is1 Introduction
-\ip This collection of \bk Songs\bk* includes songs, chants, and prayers that the Hebrews used in their meditation and worship, and then those eventually got added to this collection.
-\ip There are many classes of the songs for believers in God: there are songs of praising and worshipping of God, there are prayers for requesting help, and of meaning/salvation, requesting of forgiveness, song of thanking of blessing of God, and requests curse their enemies. These prayers all for of each person and for of entire place; the other, migpakita of peg-ealig of person, the other, explained of me it’s necessary and loving of all people of God.
-\ip Yeshua (Jesus) used these songs, included written of writers of The Messianic Update (The New Testament), and intumpisan e this collection of worshipping of church of believers from the beginning.
+\ip This collection of \bk Songs\bk* includes songs, poems, chants, and prayers that the Hebrews used in their meditation and worship, and then those eventually got added to this collection. We have chosen not to use the name ‘Psalms’ which comes from the Greek word ‘ψαλμός’ which means ‘a song sung to the harp’, because most English readers don’t even know that meaning. The title ‘Songs’ isn’t perhaps ideal, but does at least suggest that they were sung, read, or chanted with music.
+\ip There are many classes of the songs for believers in God: there are songs of praising and worshipping God, there are prayers for requesting help, and of meaning/salvation, requesting of forgiveness, song of thanking of blessing of God, and requests curse their enemies. These prayers all for of each person and for of entire place; the other, migpakita of peg-ealig of person, the other, explained of me it’s necessary and loving of all people of God.
+\ip Seven of these songs/poems are acrostic poems, i.e., the first verse starts with the first Hebrew letter (alef) and the second with the second Hebrew letter (beyt), etc. We have chosen to display those Hebrew letters to help the English reader understand that there is that acrostic background to the poem. The seven songs are Song 25, Song 34, Song 37, Song 111, Song 112, the longest Song 119, and Song 145.
+\ip Yeshua (Jesus) and other contributors to \bk The Messianic Update\bk* (The New Testament) used these songs, and intumpisan e this collection of worshipping of church of believers from the beginning.
 \ip The one hundred and fifty songs are divided into five sub-collections.
 \iot Main components of this collection
 \io1 Songs 1–41
@@ -99,7 +100,7 @@
 \q1 Many \add people\add* are rising up against me.
 \q1
 \v 2 Many \add people\add* are talking about me,
-\q1 \add saying that\add* God won’t help me. \qs (Instrumental break.)\qs*\f + \fr 3:2 \ft Many older translations place the word ‘Selah’ (the transliteration of the Hebrew word ‘סֶֽלָה’ which we’re not completely sure of the meaning of) here, but that’s meaningless to most modern-English readers so the \+em OET\+em* makes an informed attempt at a translation—see https://en.wikipedia.org/wiki/Selah.\f*
+\q1 \add saying that\add* God won’t help me. \qs (Instrumental break.)\qs*\f + \fr 3:2 \ft Many older translations place the word ‘Selah’ (the transliteration of the Hebrew word ‘סֶֽלָה’ which we’re not completely sure of the meaning of) here, but that’s meaningless to most modern-English readers so the \+em OET\+em* makes an informed attempt at a translation. ‘Pause and reflect’ would also have been a likely meaning. For more information, see https://en.wikipedia.org/wiki/Selah.\f*
 \b
 \q1
 \v 3 \add But\add* you, Yahweh, \add protect me like a shield\add*.
@@ -128,7 +129,7 @@
 \d For the musical director: a song by David \add to be accompanied by\add* stringed instruments.
 \q1
 \v 1 God of my righteousness, answer me when I call \add out\add*.
-\q1 \add Show me how to escape from\add* distress.
+\q1 \add You who granted me relief from\add* distress.
 \q1 Be gracious to me and \add listen\add* to my prayer.
 \b
 \q1
@@ -1044,7 +1045,7 @@
 \q1 There’s no one \add else who can\add* help.
 \q1
 \v 12 Many \add enemies\add* surround me \add like angry\add* bulls.
-\q1 Strong bulls of Bashan have surrounded me.
+\q1 Strong bulls from Bashan have surrounded me.
 \q1
 \v 13 They open their mouths wide against me
 \q1 like a roaring lion tearing its victim apart.
@@ -1123,12 +1124,12 @@
 \v 3 He refreshes my inner being.
 \q1 He guides me along paths of obedience so that he’ll be honoured.
 \q1
-\v 4 Even when I walk through a valley of darkest shadow,
+\v 4 Even when I walk through a valley in deep darkness,
 \q2 I won’t be afraid of being harmed.
 \q1 Your rod and staff will \add protect and\add* comfort me.
 \q1
 \v 5 You prepare a meal for me while my enemies \add watch\add*.
-\q1 You give me olive oil to sooth my head.
+\q1 You give me olive oil to soothe my head.
 \q1 \add I have so many blessings\add*.
 \q1
 \v 6 I’m certain that your goodness and your mercy will surround me for my whole life,
@@ -1174,70 +1175,92 @@
 \c 25
 \s1 The praying so that get to teach
 \d \add A song\add* by David.
+\qa \bd א\bd* (Alef)
 \q1
 \v 1 I \add offer\add* my life to you, Yahweh.
+\qa \bd ב\bd* (Beyt)
 \q1
 \v 2 My God, I trust in you.
 \q1 Don’t let me be humiliated.
 \q1 Don’t let my enemies \add defeat me and then celebrate\add*.
+\qa \bd ג\bd* (Gimel)
 \q1
 \v 3 \add Don’t let anyone be disgraced because they’d put their trust in\add* you.
 \q1 \add On the other hand,\add* may those who act treacherously without cause be ashamed.
+\qa \bd ד\bd* (Dalet)
 \q1
 \v 4 Make your ways known to me, Yahweh.
 \q1 Teach me your paths.
+\qa \bd ה\bd* (He)
 \q1
 \v 5 Guide me into your truth and teach me,
 \q1 because you’re the God \add who saves me\add*.
 \q1 I wait all day long \add to experience your presence\add*.
+\qa \bd ו\bd* (Vav)
 \q1
 \v 6 \add Call\add* your acts of compassion and loyal commitment \add to mind\add*, Yahweh,
 \q1 because they’ve always existed.
+\qa \bd ז\bd* (Zayin)
 \q1
 \v 7 Don’t \add think about my youthful disobedience\add* or my rebelliousness.
 \q1 \add Call me to mind\add* with loyal commitment because of your goodness, Yahweh.
+\qa \bd ח\bd* (Het)
 \q1
 \v 8 Yahweh is \add both\add* honest and good,
 \q1 therefore he teaches sinners the way.
+\qa \bd ט\bd* (Tet)
 \q1
 \v 9 He guides the humble in what is right
 \q1 and he teaches \add them\add* his way.
+\qa \bd י\bd* (Yod)
 \q1
 \v 10 All Yahweh’s ways are loyal commitment and faithfulness
 \q1 to those who keep his agreement and his solemn commands.
+\qa \bd כ\bd* (Kaf)
 \q1
 \v 11 For the sake of your \add reputation\add*, Yahweh,
 \q1 forgive my disobedience because it’s \add pretty bad\add*.
+\qa \bd ל\bd* (Lamed)
 \q1
 \v 12 Who are \add those\add* who respect Yahweh?
 \q1 The master will instruct \add them\add* in the path that \add they\add* should choose.
+\qa \bd מ\bd* (Mem)
 \q1
 \v 13 \add They’ll\add* \add enjoy a life of goodness\add*,
 \q1 and \add their\add* descendants will \add live peacefully in\add* the land.
+\qa \bd נ\bd* (Nun)
 \q1
 \v 14 Yahweh’s friendship is for those who respect him,
 \q1 and he makes his \add promises\add* known to them.
+\qa \bd ס\bd* (Samek)
 \q1
 \v 15 My eyes are always on Yahweh,
 \q1 because he’ll untangle my feet from the net.
+\qa \bd ע\bd* (Ayin)
 \q1
 \v 16 Turn towards me and have mercy on me,
 \q1 because I’m alone and suffering.
+\qa \bd פ\bd* (Pe)
 \q1
 \v 17 \add My worries keep increasing\add*—
 \q1 rescue me from my distress.
+\qa \bd צ\bd* (Tsade)
 \q1
 \v 18 \add Take note of\add* my suffering and troubles.
 \q1 Forgive all my sins.
+\qa \bd ק\bd* (Qof)
 \q1
 \v 19 \add Look at\add* my enemies because \add there’s so many of them\add*.
 \q1 They hate me with cruel hatred.
+\qa \bd ר\bd* (Resh)
 \q1
 \v 20 Protect my life and rescue me.
 \q1 Don’t let me be humiliated, because I \add always\add* take refuge in you.
+\qa \bd ש\bd* (Sin/Shin)
 \q1
 \v 21 May integrity and \add godliness\add* preserve me,
 \q1 because I wait for you \add to help me\add*.
+\qa \bd ת\bd* (Tav)
 \q1
 \v 22 Rescue Yisrael, God,
 \q1 from all its troubles.
@@ -1641,71 +1664,93 @@
 \c 34
 \s1 Praising Yahweh’s goodness together
 \d \add A song\add* by David who pretended to be insane in front of \add King\add* Avimelek, \add causing the king to send him away\add*.
+\qa \bd א\bd* (Alef)
 \q1
 \v 1 I will praise Yahweh at all times.
 \q1 \add I’ll always be praising him out loud\add*.
+\qa \bd ב\bd* (Beyt)
 \q1
 \v 2 I will praise Yahweh!
 \q1 Let \add those who’re\add* oppressed hear and \add celebrate\add*.
+\qa \bd ג\bd* (Gimel)
 \q1
 \v 3 Praise Yahweh with me.
 \q1 Let’s \add compliment him\add* together.
+\qa \bd ד\bd* (Dalet)
 \q1
 \v 4 I searched for Yahweh and he answered me,
 \q1 and he \add helped me overcome\add* all my fears.
+\qa \bd ה\bd* (He)
 \q1
 \v 5 Those who \add put their trust in\add* him are radiant,
 \q1 and \add have no need to feel\add* ashamed.
+\qa \bd ו\bd* (Vav)
 \q1
 \v 6 This oppressed man called out \add for help\add*
 \q1 and Yahweh heard him and saved him from all his troubles.
+\qa \bd ז\bd* (Zayin)
 \q1
 \v 7 Yahweh’s messenger \add stands guard\add* around those who fear \add Yahweh\add*
 \q1 and rescues them.
+\qa \bd ח\bd* (Het)
 \q1
 \v 8 Taste and see that Yahweh is good.
 \q1 \add Anyone who looks to him for their safety will prosper\add*.
+\qa \bd ט\bd* (Tet)
 \q1
 \v 9 Fear Yahweh, you \add who belong to him\add*.
 \q1 There’s no lack for those who \add honour\add* him.
+\qa \bd י\bd* (Yod)
 \q1
 \v 10 Young lions sometimes lack food and \add go hungry\add*,
 \q1 but those who \add put their trust in\add* Yahweh won’t lack anything good.
+\qa \bd כ\bd* (Kaf)
 \q1
 \v 11 Come \add and\add* listen to me, \add my\add* children.
 \q1 I’ll teach you \add how to honour\add* Yahweh.
+\qa \bd ל\bd* (Lamed)
 \q1
 \v 12 \add Anyone\add* who desires life and \add wants a long life\add*
 \q1 \add in order\add* \add to experience\add* good \add things\add*
+\qa \bd מ\bd* (Mem)
 \q1
 \v 13 \add then\add* \add don’t let evil words come out of your mouth\add*,
 \q1 and keep your lips from speaking lies.
+\qa \bd נ\bd* (Nun)
 \q1
 \v 14 Turn away from evil
 \q1 and do good.
 \q1 Seek peace
 \q1 and go after it.
+\qa \bd ס\bd* (Samek)
 \q1
 \v 15 Yahweh’s eyes are on \add those who try to obey him\add*
 \q1 and his ears are directed toward their calls \add for help\add*.
+\qa \bd ע\bd* (Ayin)
 \q1
 \v 16 Yahweh \add works against\add* those who do evil—
 \q1 to cut off the memory of them from the earth.
+\qa \bd פ\bd* (Pe)
 \q1
 \v 17 The \add godly\add* \add people\add* cry out and Yahweh hears
 \q1 and he rescues them from all their troubles.
+\qa \bd צ\bd* (Tsade)
 \q1
 \v 18 Yahweh is close to the brokenhearted,
 \q1 and he saves whose spirits \add feel\add* crushed.
+\qa \bd ק\bd* (Qof)
 \q1
 \v 19 \add Godly people have many troubles\add*,
 \q1 but Yahweh rescues them from them all.
+\qa \bd ר\bd* (Resh)
 \q1
 \v 20 He keeps all his bones—
 \q1 not one of them will be broken.
+\qa \bd ש\bd* (Sin/Shin)
 \q1
 \v 21 Evil will \add bounce back and\add* kill the wicked.
 \q1 and those who hate \add godly\add* \add people\add* will be condemned.
+\qa \bd ת\bd* (Tav)
 \q1
 \v 22 Yahweh rescues the lives of his servants.
 \q1 None of those who \add go to him for safety\add* will be condemned.
@@ -1821,7 +1866,7 @@
 \q1 Your faithfulness reaches to the clouds.
 \q1
 \v 6 Your righteousness is like \add the highest\add*\f + \fr 36:6 \ft Literally ‘God’s’.\f* mountains.
-\q1 Your judgments are like the \add deepest ocean\add*.
+\q1 Your judgements are like the \add deepest ocean\add*.
 \q1 Yahweh, you preserve both \add people\add* and animals.
 \q1
 \v 7 God, your loyal commitment is so valuable.
@@ -1845,46 +1890,54 @@
 \c 37
 \s1 The endings of godly and wicked people
 \d \add A song\add* by David.
+\qa \bd א\bd* (Alef)
 \q1
 \v 1 Don’t be irritated by \add those who do evil\add*.
 \q1 Don’t be envious of those who do \add what is wrong\add*,
 \q1
 \v 2 because they’ll soon dry up like the grass
 \q1 and wither as the green plants.
+\qa \bd ב\bd* (Beyt)
 \q1
 \v 3 Trust in Yahweh and do what is good.
 \q1 \add Settle\add* in the land and \add appreciate\add* faithfulness.
 \q1
 \v 4 Then delight yourself in Yahweh,
 \q1 and he’ll give you \add what you really desire\add*.
+\qa \bd ג\bd* (Gimel)
 \q1
 \v 5 \add Give\add* your path to Yahweh.
 \q1 Trust in him, and he’ll act \add on your behalf\add*.
 \q1
 \v 6 He’ll display your justice like the daylight
 \q1 and your \add innocence\add* like the day at noon.
+\qa \bd ד\bd* (Dalet)
 \q1
 \v 7 Be still \add in front of\add* Yahweh and wait patiently for him.
 \q1 Don’t be angry if others succeed in what \add they do\add*,
 \q1 or when \add they make\add* \add evil\add* plots.
+\qa \bd ה\bd* (He)
 \q1
 \v 8 \add Don’t be angry and frustrated\add*.
 \q1 Don’t \add be a worrier—that only makes trouble\add*.
 \q1
 \v 9 \add Those who do evil will be eliminated\add*,
 \q1 \add but\add* those who \add strive to obey\add* for Yahweh will \add end up owning\add* the land.
+\qa \bd ו\bd* (Vav)
 \q1
 \v 10 In a little while the evil \add people\add* will disappear.
 \q1 You’ll look at \add the place where they were\add*, but \add they’ll\add* be gone.
 \q1
 \v 11 \add But\add* the meek will \add inherit\add* the land
 \q1 and will delight in great prosperity.
+\qa \bd ז\bd* (Zayin)
 \q1
 \v 12 The wicked \add people\add* plot against the righteous
 \q1 and grind \add their\add* teeth \add in rage\add* against \add them\add*.
 \q1
 \v 13 My master laughs at \add them\add*,
 \q1 because \add he knows that\add* \add their\add* day is coming.
+\qa \bd ח\bd* (Het)
 \q1
 \v 14 The wicked have drawn out their \add swords\add* and have bent their \add bows\add*
 \q1 to birng the oppressed and needy down—
@@ -1892,28 +1945,33 @@
 \q1
 \v 15 Their \add swords\add* will \add pierce\add* their own \add hearts\add*,
 \q1 and their bows will be broken.
+\qa \bd ט\bd* (Tet)
 \q1
 \v 16 It’s better to do right and \add only\add* have a little,
 \q1 than to be wicked and rich,
 \q1
 \v 17 because the arms of the wicked \add people\add* will be broken,
 \q1 but Yahweh \add supports\add* \add people\add* \add who’re\add* righteous.
+\qa \bd י\bd* (Yod)
 \q1
 \v 18 Yahweh \add keeps an eye on those who’re blameless\add*,
 \q1 and \add they won’t lose\add* their inheritance.
 \q1
 \v 19 They won’t be shamed when times \add are bad\add*.
 \q1 When famine comes, they’ll have enough to eat,
+\qa \bd כ\bd* (Kaf)
 \q1
 \v 20 because evil \add people\add* will \add die\add*.
 \q1 Yahweh’s enemies will be like the \add fleeting\add* \add beauty\add* of the fields—
 \q1 they’ll be consumed and \add disappear\add* in the smoke.
+\qa \bd ל\bd* (Lamed)
 \q1
 \v 21 Wicked \add people\add* borrow \add but never\add* repay,
 \q1 \add but\add* the \add godly\add* \add person\add* \add is generous\add* and gives.
 \q1
 \v 22 Those who are blessed by \add God\add* will \add own\add* the land,
 \q1 \add but\add* those who are cursed by him will be \add wiped out\add*.
+\qa \bd מ\bd* (Mem)
 \q1
 \v 23 It is by Yahweh that a person’s steps are established,
 \q1 and he \add takes pleasure\add* in \add observing\add* their path.
@@ -1921,6 +1979,7 @@
 \v 24 \add Even\add* if \add they\add* stumble, \add they\add* won’t fall \add on their face\add*,
 \q1 because Yahweh is \add right there helping\add* \add them\add*.
 \b
+\qa \bd נ\bd* (Nun)
 \q1
 \v 25 I was young and now I’m old
 \q1 and I’ve never seen the righteous \add person\add* abandoned
@@ -1928,43 +1987,51 @@
 \q1
 \v 26 All day long, \add they’re\add* \add gracious\add* and lend \add to those more needy\add*,
 \q1 and \add their\add* children become a blessing \add to others\add*.
+\qa \bd ס\bd* (Samek)
 \q1
 \v 27 Turn away from evil and do what is right,
 \q1 then you will \add go on living\add*
 \q1
 \v 28 because Yahweh loves justice and doesn’t abandon \add those who’re faithful to him\add*.
 \q1 They’re preserved forever, but the descendants of wicked \add people\add* will be \add eliminated\add*.
+\qa \bd ע\bd* (Ayin)
 \q1
 \v 29 The \add godly\add* \add people\add* will inherit the land
 \q1 and always live there.
+\qa \bd פ\bd* (Pe)
 \q1
 \v 30 \add Godly\add* \add people\add* \add expound\add* wisdom
 \q1 and \add promote\add* justice.
 \q1
 \v 31 God’s law is \add always\add* \add on their minds\add*.
 \q1 \add Their\add* feet won’t slip.
+\qa \bd צ\bd* (Tsade)
 \q1
 \v 32 The wicked person watches the righteous
 \q1 and seeks to kill \add them\add*.
 \q1
 \v 33 Yahweh won’t abandon \add them\add* into the evil person’s hand
 \q1 or condemn \add them\add* when \add they’re\add* judged.
+\qa \bd ק\bd* (Qof)
 \q1
 \v 34 Wait for Yahweh and \add stay on the path he showed you\add*,
 \q1 then he’ll \add assist you\add* to possess the land \add he promised\add*.
 \q1 You’ll see those who’re wicked \add get eliminated\add*.
+\qa \bd ר\bd* (Resh)
 \q1
 \v 35 I’ve seen a wicked and terrifying person
 \q1 spreading out like a luxuriant tree in its native soil.
 \q1
 \v 36 However, when I passed by again, \add they\add* weren’t there.
 \q1 I looked for \add them\add*, but \add they\add* couldn’t be found.
+\qa \bd ש\bd* (Sin/Shin)
 \q1
 \v 37 Observe the person of integrity, and notice \add those who’re godly\add*.
 \q1 There’s a good future for a peaceful person.
 \q1
 \v 38 Sinners will be totally destroyed;
 \q1 The future will be cut off for wicked \add people\add*.
+\qa \bd ת\bd* (Tav)
 \q1
 \v 39 Yahweh \add is the one who saves godly people\add*.
 \q1 He protects them in the times of trouble.
@@ -1982,1282 +2049,1212 @@
 \v 2 because your arrows pierce me,
 \q1 and your hand presses me down.
 \q1
-\v 3 ◙
-\q2 …
+\v 3 \add My whole body is weak because of your anger\add*.
+\q1 There’s no health in my bones because of my \add disobedience\add*,
 \q1
-\v 4 ◙
-\q2 …
+\v 4 because my sins overwhelm me.
+\q1 They’re a burden that’s too heavy for me.
 \q1
-\v 5 ◙
-\q2 …
+\v 5 My festering wounds \add smell bad\add*
+\q1 because of my foolish \add behaviour\add*.
 \q1
-\v 6 ◙
-\q2 …
+\v 6 I’m stooped over and humiliated every day.
+\q1 I go about mourning all day long,
 \q1
-\v 7 ◙
-\q2 …
+\v 7 because I have burning pain in my \add bowels\add*.
+\q1 \add My body just isn’t healthy\add*.
 \q1
-\v 8 ◙
-\q1 …
+\v 8 I’m numb and completely crushed.
+\q1 I groan because of the anguish in my heart.
 \q1
-\v 9 ◙
-\q1 …
+\v 9 My master, you understand my heart’s deepest longings,
+\q1 and my groanings aren’t hidden from you.
 \q1
-\v 10 ◙
-\q1 …
+\v 10 My heart pounds,
+\q1 my strength fades,
+\q1 and my eyesight dims.
 \q1
-\v 11 ◙
-\q2 …
+\v 11 My friends and companions shun me because of my condition.
+\q1 My relatives \add keep their distance\add*.
 \q1
-\v 12 ◙
-\q2 …
-\q2 …
+\v 12 Those who \add want me dead\add* lay snares for me.
+\q1 They who \add desire harm for me\add* speak destructive \add words\add*
+\q1 and say \add sprout treachery\add* all day long.
 \q1
-\v 13 ◙
-\q2 …
+\v 13 But as for me, I’m like a deaf man who can’t hear.
+\q1 I’m like a mute man who says nothing.
 \q1
-\v 14 ◙
-\q2 …
+\v 14 I’m like a man who can’t hear
+\q1 and \add so\add* \add can’t so anything in my defence\add*
 \q1
-\v 15 ◙
-\q1 …
+\v 15 \add but instead\add* I wait for you, Yahweh.
+\q1 →My master God, you’ll answer me
 \q1
-\v 16 ◙
-\q2 …
+\v 16 because I \add prayed\add*, "Hear me, so that they won’t gloat over me.
+\q1 If my foot slips, they’ll do terrible things to me,
 \q1
-\v 17 ◙
-\q2 …
+\v 17 because I’m about to stumble,
+\q1 and \add I’m in constant pain\add*.
 \q1
-\v 18 ◙
-\q1 …
+\v 18 I confess my guilt.
+\q1 I’m anxious because of my sin.
 \q1
-\v 19 ◙
-\q1 …
+\v 19 My enemies are numerous.
+\q1 Those who hate me wrongfully are many.
 \q1
-\v 20 ◙
-\q2 …
+\v 20 They repay me with evil for good.
+\q1 They hurl accusations at me although I \add try to do what’s\add* good.
 \q1
-\v 21 ◙
-\q2 …
+\v 21 Don’t abandon me, Yahweh.
+\q1 My God, don’t be distant from me.
 \q1
-\v 22 ◙
+\v 22 Come quickly to help me,
+\q1 my master \add who saves me\add*.
 \c 39
 \s1 The telling of sin of person suffering
-\d A song by David for to Hidutun, the musical director.
+\d For the musical director: A song by David for Yedutun.
 \q1
-\v 1 ◙
-\q2 …
-\q2 …
-\q1 …
-\q2 …
+\v 1 I \add decided\add* that I’ll watch what I say
+\q1 so that I won’t sin with my \add lips\add*.
+\q1 I’ll muzzle my mouth while in the presence of evil \add people\add*.
 \q1
-\v 2 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 2 I \add kept silent\add*.
+\q1 I \add refrained\add* \add even\add* from \add saying anything\add* good, and my pain \add grew worse\add*.
 \q1
-\v 3 ◙
-\q1 …
-\q2 …
+\v 3 My heart became hot when I thought about these things.
+\q1 It burnt like a fire, then finally I spoke.
 \q1
-\v 4 ◙
-\q2 …
-\q1 …
+\v 4 “Yahweh, make me know when the end of my \add life\add* will be
+\q1 and the extent of my days.
+\q1 Let me see how transient I am.
 \q1
-\v 5 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 5 See, you’ve made my days \add only\add* \add the width of my hand\add*,
+\q1 and my lifetime is like nothing in your sight.
+\q1 Surely all of humanity is \add just\add* a single breath. \qs (Instrumental break.)\qs*
 \q1
-\v 6 ◙
-\q1 …
-\q1 …
-\q2 …
+\v 6 Surely every person walks around like a shadow.
+\q1 Surely everyone hurries about to accumulate \add riches\add* \add although\add* \add they\add* don’t know who’ll \add inherit\add* them.
 \q1
-\v 7 ◙
-\q1 …
+\v 7 Now, my master, what am I waiting for?
+\q1 →My hope is in you.
 \q1
-\v 8 ◙
-\q2 …
+\v 8 Rescue me from my disobedience.
+\q1 Don’t \add allow fools to be able to mock me\add*.
 \q1
-\v 9 ◙
-\q2 …
+\v 9 I \add can’t speak\add* and can’t \add even\add* open my mouth,
+\q1 because it’s you who has done it.
 \q1
-\v 10 ◙
-\q2 …
+\v 10 \add Stop wounding me\add*.
+\q1 I’m \add overwhelmed by the blow\add* of your hand.
 \q1
-\v 11 ◙
-\q2 …
-\q1 …
+\v 11 When you discipline people for disobedience,
+\q1 like a moth, you consume the things they value.
+\q1 Surely all people are nothing but vapour. \qs (Instrumental break.)\qs*
 \b
 \q1
-\v 12 ◙
-\q2 …
-\q1 …
-\q1 …
+\v 12 Hear my prayer, Yahweh, and my call for help.
+\q1 Listen to my \add weeping\add*.
+\q1 Don’t be deaf to me,
+\q1 because I’m like a foreigner with you—a refugee like all my ancestors were.
 \q1
-\v 13 ◙
-\q2 …
+\v 13 \add Stop staring at\add* me so that I can smile again
+\q1 before I \add die\add*.
 \c 40
-\s1 A praise song of God
+\s1 A song praising Yahweh
 \d For the musical director: a song by David.
 \q1
-\v 1 ◙
-\q2 …
+\v 1 I waited patiently for Yahweh \add to help me\add*.
+\q1 He listened to me and heard my cry.
 \q1
-\v 2 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 2 He brought me up out of a horrible pit in the sticky clay,
+\q1 →and he set my feet on a rock and made my steps secure.
 \q1
-\v 3 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 3 He’s \add given me a new song to sing\add*, praise to our God.
+\q1 Many will see it and honour him
+\q1 and will trust in Yahweh.
 \q1
-\v 4 ◙
-\q2 …
+\v 4 \add The person who trusts Yahweh will prosper\add*
+\q1 and doesn’t honour proud \add people\add*
+\q1 or those who go astray and follow lies.
 \q1
-\v 5 ◙
-\q1 …
-\q2 …
-\q1 …
-\q2 …
+\v 5 Yahweh my God, you’ve done many wonderful things,
+\q1 and your thoughts about us can’t be numbered.
+\q1 If I declared and spoke about them,
+\q1 they would be too many to count.
 \q1
-\v 6 ◙
-\q1 …
-\q1 …
+\v 6 \add Sacrifices and offerings don’t give you pleasure\add*,
+\q1 but you’ve opened my \add mind\add*.
+\q1 You didn’t \add actually\add* want burnt-offerings or sin-offerings.
 \q1
-\v 7 ◙
-\q2 …
+\v 7 Then said I, “See, I’ve come.
+\q1 I’m written about in the scroll of the document.
 \q1
-\v 8 ◙
-\q1 …
+\v 8 I enjoy doing what you want, my God.
+\q1 Your instructions are \add on my mind\add*.”
 \q1
-\v 9 ◙
-\q1 …
+\v 9 I have \add told everyone\add* in the \add national\add* assembly \add about how you always do what is right\add*.
+\q1 Yahweh, you know that \add I haven’t shied back\add* from doing that.
 \q1
-\v 10 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 10 I haven’t hidden your righteousness away in my heart—
+\q1 I’ve declared your faithfulness and \add how you saved me\add*.
+\q1 I haven’t concealed your loyal commitment or your trustworthiness from the \add national\add* assembly.
 \q1
-\v 11 ◙
-\q2 …
+\v 11 Don’t \add stop being merciful towards\add* me, Yahweh.
+\q1 Let your loyal commitment and your trustworthiness always preserve me.
 \q1
-\v 12 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 12 More troubles surround me than I can even count.
+\q1 My disobedience has caught up with me so that I’m no longer able to see \add anything else\add*.
+\q1 They’re more than the hairs on my head, and my heart fails me.
 \q1
-\v 13 ◙
-\q1 …
+\v 13 Be pleased, Yahweh, to rescue me.
+\q1 Hurry to help me, Yahweh.
 \q1
-\v 14 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 14 Let \add those who chase me to take\add* my life be ashamed and completely disappointed.
+\q1 Let those who delight in hurting me be turned back and brought to dishonour.
 \q1
-\v 15 ◙
-\q2 …
+\v 15 Let those who \add cheer because of my fate\add* be shocked because of their shame.
 \q1
-\v 16 ◙
-\q1 …
-\q2 …
+\v 16 But may all those who seek you celebrate and be glad \add because\add* of you.
+\q1 Let everyone who \add appreciates how you rescued them\add*, say continually, “May Yahweh be praised.”
 \q1
-\v 17 ◙
-\q2 …
-\q1 …
-\q1 …
+\v 17 I’m poor and needy, yet my master thinks about me.
+\q1 You’re my help and you come to my rescue.
+\q1 Don’t delay, my God.
 \c 41
-\s1 The requesting of sick person
+\s1 A prayer for healing
 \d For the musical director: a song by David.
 \q1
-\v 1 ◙
-\q1 …
+\v 1 \add People\add* who’re concerned for the weak will be blessed—
+\q1 →in the day of trouble, Yahweh will rescue \add them\add*.
 \q1
-\v 2 ◙
-\q1 …
-\q2 …
+\v 2 Yahweh will protect \add them\add* and keep \add them\add* alive,
+\q1 and \add they\add* will be blessed on the earth.
+\q1 Yahweh will not hand \add them\add* over to \add their\add* enemies.
 \q1
-\v 3 ◙
-\q2 …
+\v 3 Yahweh will support \add them\add* on the bed of suffering.
+\q1 You’ll make \add their\add* bed of sickness into a bed of healing.
+\b
 \q1
-\v 4 ◙
-\q2 …
-\q1 …
+\v 4 I said, “Yahweh, have mercy on me.
+\q1 Heal my soul, because I’ve sinned against you.”
 \q1
-\v 5 ◙
-\q1 …
+\v 5 My enemies speak evil against me, saying,
+\q1 ‘When will he die and \add be forgotten\add*?’
 \q1
-\v 6 ◙
-\q2 …
-\q2 …
+\v 6 If \add my enemy\add* comes to see me, he speaks \add hollow words\add*.
+\q1 \add He plots in his mind how to destroy me\add*.
+\q1 When he leaves me, he tells \add others about it\add*.
 \q1
-\v 7 ◙
-\q2 …
+\v 7 All who hate me, whisper together against me.
+\q1 They plot \add how to make\add* trouble for me.
 \q1
-\v 8 ◙
-\q2 …
+\v 8 They say, “An evil disease \add has badly affected\add* him.
+\q1 Now that he’s \add down flat\add*, he’ll \add never get up again\add*.”
 \q1
-\v 9 ◙
-\q2 …
+\v 9 Indeed, even my own close friend who I trusted,
+\q1 who \add had meals at my place\add*,
+\q1 has \add betrayed me\add*.
 \q1
-\v 10 ◙
-\q2 …
+\v 10 But Yahweh, you have mercy on me and \add help\add* me up
+\q1 so that I can pay them back.
 \q1
-\v 11 ◙
-\q2 …
+\v 11 Because my enemy doesn’t defeat me,
+\q1 that’s how I know that you’re pleased with me.
 \q1
-\v 12 ◙
-\q2 …
+\v 12 As for me, you support me in my integrity
+\q1 and will keep me \add in your mind\add* forever.
 \q1
-\v 13 ◙
-\q2 …
-\q1 …
+\v 13 May Israel’s God Yahweh be praised from everlasting to everlasting.
+\q1 \add Let it be so, yes, let it be\add*.
 \c 42
 \ms1 Second collection
 \mr (Songs 42–72)
-\s1 The hope to approach of God
-\d For the musical director: the song\f + \fr 42:0 \ft In Hebrew, ‘maskil’ is perhaps the name of this class of song.\f* of Kura’s descendants.
+\s1 Hope when depressed
+\d For the musical director: a song\f + \fr 42:0 \ft In Hebrew, ‘maskil’ is perhaps the name of this class of song.\f* by Korah’s descendants.
 \q1
-\v 1 ◙
-\q2 …
+\v 1 As a deer thirsts for streams of water,
+\q1 so \add too\add* my soul longs for you, God.
 \q1
-\v 2 ◙
-\q1 …
+\v 2 My soul thirsts for God—for the living God.
+\q1 When will I go and appear before God?
 \q1
-\v 3 ◙
-\q2 …
-\q2 …
+\v 3 My tears are my food day and night,
+\q1 as people are \add asking\add* me every day, “Where’s your God?”
 \q1
-\v 4 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 4 These things I remember, and I pour out my soul within myself.
+\q1 I travelled with the crowd and accompanied them to God’s residence
+\q1 with shouts of joy and praise—a multitude celebrating a festival.
 \q1
-\v 5 ◙
-\q1 …
-\q2 …
+\v 5 Why are you bowed down, my soul,
+\q1 and upset within me?
+\q1 Put your hope in God, because I’ll praise him again—
+\q1 \add praise him for\add* \add how my God’s presence leads to my being saved\add*.
 \q1
-\v 6 ◙
-\q2 …
+\v 6 My soul is bowed down within me,
+\q1 therefore I remember you from the land of the Yordan \add river\add*
+\q1 and \add Mt.\add* Hermon’s \add heights\add* and from Mt. Mizar.
 \q1
-\v 7 ◙
-\q2 …
+\v 7 Deep is calling to deep with the \add roar\add* of your waterfalls;
+\q1 All your waves and gusts flow over me.
 \q1
-\v 8 ◙
-\q2 …
+\v 8 During the day, Yahweh \add exercises\add* his loyal commitment,
+\q1 and in the night, his song is with me—
+\q1 a prayer to the God \add who gave me\add* life.
 \q1
-\v 9 ◙
-\q2 …
-\q1 …
+\v 9 I’ll \add ask\add* God, my \add place of safety\add*, “Why have you forgotten me?
+\q1 Why do I walk around mourning because of an enemy’s oppression?”
 \q1
-\v 10 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 10 When those who’re hostile to me rebuke me, \add asking\add* me all day long, “Where’s your God?”
+\q1 \add it feels like my bones are crushed\add*.
 \q1
-\v 11 ◙
-\q1 …
-\q2 …
+\v 11 My soul, why are you bowed down?
+\q1 And why are you upset within me?
+\q1 \add Put your\add* hope in God, because I’ll thank him again—
+\q1 \add my God’s presence leads to my being saved\add*.
 \c 43
 \s1 The requesting at time of conflict
+\r (Continuation of Song 42)
 \q1
-\v 1 ◙
-\q2 …
-\q1 …
+\v 1 God, declare me \add to be innocent\add*,
+\q1 and defend my case against an unfaithful nation.
+\q1 Deliver me from deceitful and evil \add people\add*.
 \q1
-\v 2 ◙
-\q1 …
-\q1 …
+\v 2 For you are the God \add who’s my place of safety\add*.
+\q1 Why have you rejected me?
+\q1 Why do I walk around mourning because of an enemy’s oppression?
 \q1
-\v 3 ◙
-\q1 …
+\v 3 Send out your light and your truth—let them lead me.
+\q1 Let them bring me to your sacred mountain
+\q1 and to your \add residence\add*.
 \q1
-\v 4 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 4 I will go to God’s altar—
+\q1 to the God \add who gives me great fulfillment\add*.
+\q1 I will praise you with the harp, oh God, my God.
 \q1
-\v 5 ◙
-\q1 …
-\q2 …
+\v 5 My soul, why are you bowed down?
+\q1 And why are you upset within me?
+\q1 \add Put your\add* hope in God, because I’ll thank him again—
+\q1 \add my God’s presence leads to my being saved\add*.
 \c 44
-\s1 The praying so that egpangabangan
-\d For the musical director: the song\f + \fr 44:0 \ft In Hebrew, ‘maskil’ is perhaps the name of this class of song.\f* of Kura’s descendants.
+\s1 A prayer for help
+\d For the musical director: a song\f + \fr 44:0 \ft In Hebrew, ‘maskil’ is perhaps the name of this class of song.\f* by Korah’s descendants.
 \q1
-\v 1 ◙
-\q2 …
+\v 1 God, we have listened with our ears.
+\q1 Our ancestors have told us about \add the miracles\add* you did in their \add time\add*—in the old days.
 \q1
-\v 2 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 2 You drove out the \add other\add* nations \add with your power\add*, but you planted \add our ancestors\add*.
+\q1 You \add caused suffering for other people groups\add*afflicted the peoples, but you sent \add our ancestors\add*.
 \q1
-\v 3 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 3 \add Yes,\add* they didn’t take over the land with their \add swords\add*, and their \add power\add* didn’t save them,
+\q1 ^but \add it was your power and your direction\add*, because you were pleased with them.
 \q1
-\v 4 ◙
-\q2 …
+\v 4 God, you are my king \add who\add* \add plans victories\add* for Yakob’s \add descendants\add*.
 \q1
-\v 5 ◙
-\q2 …
+\v 5 Through you we will \add destroy\add* our adversaries.
+\q1 In your name we will trample those who \add come\add* against us,
 \q1
-\v 6 ◙
-\q2 …
+\v 6 because I won’t trust in my bow,
+\q1 and my sword won’t save me.
 \q1
-\v 7 ◙
-\q2 …
+\v 7 \add Yes,\add* you have saved us from our enemies,
+\q1 and have \add humiliated\add* those who hate us.
 \q1
-\v 8 ◙
-\q2 …
+\v 8 We’ve boasted in God every day,
+\q1 and we will praise your name forever. \qs (Instrumental break.)\qs*
 \q1
-\v 9 ◙
-\q1 …
+\v 9 Yet you’ve rejected and humiliated us,
+\q1 and you don’t go out with our armies.
 \q1
-\v 10 ◙
-\q2 …
+\v 10 You made us turn back from the enemy,
+\q1 and those who hate us take plunder for themselves.
 \q1
-\v 11 ◙
-\q2 …
+\v 11 You’ve made us like sheep \add to be eaten\add*,
+\q1 and you scattered us among the nations.
 \q1
-\v 12 ◙
-\q2 …
+\v 12 You’ve sold your people for \add virtually nothing\add*—
+\q1 You haven’t profitted from their sale.
 \q1
-\v 13 ◙
-\q2 …
+\v 13 You’ve made us a reproach to our neighbours—
+\q1 a contempt and a scorn to those around us.
 \q1
-\v 14 ◙
-\q2 …
+\v 14 You made us an insult among the \add other\add* nations—
+\q1 a shaking of the head among the peoples.
 \q1
-\v 15 ◙
-\q2 …
+\v 15 My dishonour is \add on my mind\add* all day,
+\q1 and my shame has overwhelmed me
 \q1
-\v 16 ◙
-\q2 …
+\v 16 because of \add hearing those who\add* taunt and insult me—
+\q1 facing those vengeful enemies.
 \q1
-\v 17 ◙
-\q2 …
+\v 17 All of this has come against us,
+\q1 \add although\add* we haven’t forgotten you and we haven’t violated your agreement.
 \q1
-\v 18 ◙
-\q2 …
+\v 18 Our heart hasn’t turned back.
+\q1 Our steps \add haven’t\add* strayed from your way.
 \q1
-\v 19 ◙
-\q2 …
+\v 19 \add But\add* you’ve crushed us \add out\add* \add where the jackals live\add*,
+\q1 and you’ve covered over us with dark blackness.
 \q1
-\v 20 ◙
-\q2 …
+\v 20 If we’d forgotten the name of our God
+\q1 and spread out our hands towards a foreign god,
 \q2
-\v 21 ◙
-\q1 …
+\v 21 wouldn’t God have discovered that
+\q1 because he \add even\add* knows our hearts’ secrets?
 \q1
-\v 22 ◙
-\q2 …
-\q1 …
+\v 22 Indeed, because of you we’re killed all day \add long\add*—
+\q1 we’re considered to be like sheep to be slaughtered.
 \q1
-\v 23 ◙
-\q1 …
+\v 23 My master, wake up. Why are you sleeping?
+\q1 \add Do something\add*—don’t reject us forever.
 \q1
-\v 24 ◙
-\q1 …
+\v 24 Why do you hide \add away\add*
+\q1 and forget our oppression and suffering?
 \q1
-\v 25 ◙
-\q2 …
+\v 25 \add Yes,\add* our life has sunk down into the dust—
+\q1 \add it just as if\add* \add we’re lying face down\add* on the ground.
 \q1
-\v 26 ◙
-\q1 …
+\v 26 \add Take action\add* as our helper
+\q1 and \add buy our freedom for\add* us because of your loyal commitment.
 \c 45
-\s1 The song for of wedding of King
-\d For the musical director: the song\f + \fr 45:0 \ft In Hebrew, ‘maskil’ is perhaps the name of this class of song.\f* of Kura’s descendants. A song of loving \add to be sung like singing of\add* ‘Lilies’.
+\s1 A royal wedding song
+\d For the musical director: a song\f + \fr 45:0 \ft In Hebrew, ‘maskil’ is perhaps the name of this class of song.\f* by Korah’s descendants. A love song \add to be sung to the tune of\add* ‘Lilies’.
 \q1
-\v 1 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 1 My heart \add is stirred with an excellent message\add*.
+\q1 I’ll read aloud the words I’ve composed about the king.
+\q1 My tongue is \add like\add* the pen of a skilled secretary.
 \q1
-\v 2 ◙
-\q2 …
-\q2 …
+\v 2 You are \add more perfect\add* \add to look at\add* than the children of humanity.
+\q1 Your lips \add move with\add* grace,
+\q1 so we know that God has blessed you forever.
 \q1
-\v 3 ◙
-\q1 …
+\v 3 \add Strap\add* your sword to your side, mighty \add warrior\add*,
+\q1 in your splendour and majesty.
 \q1
-\v 4 ◙
-\q2 …
-\q1 …
+\v 4 Ride on triumphantly in your majesty because of trustworthiness, humility, and innocence.
+\q1 Your \add powerful actions display\add* your awesome abilities.
 \q1
-\v 5 ◙
-\q2 …
-\q1 …
+\v 5 Your arrows are sharp—the peoples fall under you.
+\q1 Your arrows \add pierce\add* the hearts of the king’s enemies.
 \q1
-\v 6 ◙
-\q1 …
+\v 6 Your \add reign\add*, God, \add will continue\add* forever.
+\q1 Your kingdom \add is renowned for its true\add* justice.
 \q1
-\v 7 ◙
-\q1 …
-\q2 …
+\v 7 You have loved righteousness and hated wickedness,
+\q1 therefore God, your God, has anointed you with the oil of gladness more than your companions.
 \q1
-\v 8 ◙
-\q1 …
+\v 8 All your clothes smell of myrrh, aloes, and cassia.
+\q1 Stringed instruments \add playing from\add* of ivory palaces have made you glad.
 \q1
-\v 9 ◙
-\q2 …
+\v 9 Kings’ daughters are among your honourable women.
+\q1 The queen stands on your right, clothed in gold from Ofir.
 \q1
-\v 10 ◙
-\q1 …
-\q2
-\v 11 ◙
-\q1 …
+\v 10 Listen, daughter, \add turn this way and take notice\add*.
+\q1 Forget your own people and your father’s house.
 \q1
-\v 12 ◙
-\q2 …
-\q2 …
+\v 11 \add Just like that\add*, the king will desire your beauty.
+\q1 →He’s your master—\add submit to\add* him.
 \q1
-\v 13 ◙
-\q2 …
+\v 12 The \add princess from\add* Tsor \add (Tyre)\add* will be there with a gift.
+\q1 The rich people will beg for your favour.
 \q1
-\v 14 ◙
-\q1 …
+\v 13 The \add princess\add* in the palace is \add just splendid\add*—
+\q1 her clothing is embroidered with gold \add thread\add*.
 \q1
-\v 15 ◙
-\q2 …
+\v 14 She will be led to the king in an embroidered dress.
+\q1 The virgins, her companions who’ll follow her, will be brought to \add him\add*.
 \q1
-\v 16 ◙
-\q2 …
-\q1 …
+\v 15 They’ll be led by gladness and celebration.
+\q1 They’ll enter the king’s palace.
 \q1
-\v 17 ◙
-\q2 …
+\v 16 Your children will be in the \add positions that your ancestors used to hold\add*—
+\q1 you’ll make them princes \add across the whole country\add*.
+\q1
+\v 17 I’ll ensure that your name will be remembered by all generations,
+\q1 therefore the peoples will give you thanks forever.
 \c 46
-\s1 Duma we/our the God
-\d For the musical director: the song of Kura’s descendants. This is to be sung of soprano\f + \fr 46:0 \ft In Hebrew, like alamut.\f* me voice.
+\s1 God’s right here
+\d For the musical director: a song by Korah’s descendants. To be sung by soprano\f + \fr 46:0 \ft In Hebrew, like ‘alamot’.\f* voices.
 \q1
-\v 1 ◙
-\q1 …
+\v 1 God is our \add protection\add* and our strength,
+\q1 \add always ready to help when troubles come\add*.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 That’s why we won’t \add be afraid\add*, even if the earth were to change—
+\q1 even if the mountains were shaken into the ocean \add depths\add*,
 \q2
-\v 3 ◙
-\q2 …
+\v 3 \add making\add* its waters roar and rage,
+\q1 as the mountains shake against the surging \add waters\add*. \qs (Instrumental break.)\qs*
 \q1
-\v 4 ◙
-\q2 …
+\v 4 There’s a river whose streams make God’s city happy—
+\q1 the sacred place where the highest \add one\add* lives.
 \q1
-\v 5 ◙
-\q2 …
-\q1 …
+\v 5 God is in the middle of \add that city\add*—she won’t be \add affected\add*.
+\q1 God will help her, and he will do so at dawn.
 \q1
-\v 6 ◙
-\q1 …
+\v 6 The nations raged and the kingdoms were shaken.
+\q1 He \add spoke out\add* and the earth melted.
 \q1
-\v 7 ◙
-\q1 …
+\v 7 Army commander Yahweh is with us.
+\q1 Yakov’s God is our protection. \qs (Instrumental break.)\qs*
 \q1
-\v 8 ◙
-\q2 …
+\v 8 Come \add and\add* see \add what Yahweh has done\add*—
+\q1 the destruction he’s caused on earth.
 \q1
-\v 9 ◙
-\q2 …
-\q2 …
+\v 9 He \add stops wars all over the world\add*.
+\q1 He breaks \add bows\add* and cuts \add spears\add* into pieces.
+\q1 He incinerates the shields.
 \q1
-\v 10 ◙
-\q1 …
-\q2 …
+\v 10 Stay quiet and \add be aware\add* that I am God.
+\q1 I will be honoured among the nations.
+\q1 I will be honoured \add throughout the world\add*.
 \q1
-\v 11 ◙
-\q1 …
+\v 11 Army commander Yahweh is with us.
+\q1 Yakov’s God is our protection. \qs (Instrumental break.)\qs*
 \c 47
-\s1 The God the King of entire world
-\d For the musical director: the song\f + \fr 47:0 \ft In Hebrew, ‘maskil’ is perhaps the name of this class of song.\f* of Kura’s descendants.
+\s1 God the king of entire world
+\d For the musical director: a song\f + \fr 47:0 \ft In Hebrew, ‘maskil’ is perhaps the name of this class of song.\f* by Korah’s descendants.
 \q1
-\v 1 ◙
-\q1 …
+\v 1 Clap your hands, all you peoples.
+\q1 Shout to God with a cheerful voice.
 \q1
-\v 2 ◙
-\q1 …
+\v 2 For Yahweh the highest \add one\add* can be terrifying.
+\q1 He is a great king over the \add whole world\add*.
 \q1
-\v 3 ◙
-\q2 …
+\v 3 He subdues peoples under us
+\q1 and \add puts\add* nations under our \add control\add*.
 \q1
-\v 4 ◙
-\q2 …
+\v 4 He chooses our inheritance for us—
+\q1 →the \add land which \add* Yakov (who he loved) was proud of. \qs (Instrumental break.)\qs*
 \q1
-\v 5 ◙
-\q1 …
+\v 5 God has gone up with a shout,
+\q1 Yahweh \add ascended\add* with a trumpet blast.
 \q1
-\v 6 ◙
-\q1 …
-\q1 …
-\q1 …
+\v 6 Sing praises to God, sing praises.
+\q1 Sing praises to our king, sing praises,
 \q1
-\v 7 ◙
-\q1 …
+\v 7 because God is the king over the \add whole world\add*.
+\q1 Sing praises with understanding.
 \q1
-\v 8 ◙
-\q1 …
+\v 8 God reigns over the nations.
+\q1 God sits on his sacred throne.
 \q1
-\v 9 ◙
-\q1 …
-\q1 …
+\v 9 The nations’ leaders have gathered together to the people of Abraham’s God,
+\q1 because \add God controls the nations’ defences\add*.
+\q1 He is greatly \add honoured\add*.
 \c 48
-\s1 Yerushalem, the city of God
-\d The song of Kura’s descendants.
+\s1 Yerushalem, God’s city
+\d A song by Korah’s descendants.
 \q1
-\v 1 ◙
-\q2 …
+\v 1 Yahweh is \add incredible\add* and \add deserves\add* to be praised \add a lot\add*,
+\q1 in our God’s city on his sacred hill.
 \q1
-\v 2 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 2 Beautiful \add on the high hills\add*,
+\q1 \add making the whole world happy\add*,
+\q1 is Mt Tsiyyon, on the northern sides—
+\q1 the great king’s city.
 \q1
-\v 3 ◙
-\q2 …
+\v 3 God has made himself known in her towers as \add protector\add*,
 \q1
-\v 4 ◙
-\q2 …
+\v 4 because, look, the kings assembled themselves.
+\q1 They passed by together.
 \q1
-\v 5 ◙
-\q1 …
+\v 5 They saw it, then they were astounded.
+\q1 They were dismayed, and they hurried away.
 \q1
-\v 6 ◙
-\q2 …
+\v 6 Trembling took hold of them there—
+\q1 pain like woman who’s in labour.
 \q1
-\v 7 ◙
-\q2 …
+\v 7 You smash the ships from Tarshish
+\q1 with the east wind.
 \q1
-\v 8 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 8 We’ve now seen what we’d heard about in army commander Yahweh’s city—
+\q1 in the city of our God.
+\q1 God will establish it forever. \qs (Instrumental break.)\qs*
 \q1
-\v 9 ◙
-\q2 …
+\v 9 We thought about your loyal commitment, God,
+\q1 when we were in the middle of your temple.
 \q1
-\v 10 ◙
-\q2 …
+\v 10 Your praise \add reaches\add* the ends of the earth
+\q1 as does your \add reputation\add*, God.
+\q1 →\add You rule with power and with justice\add*.
 \q1
-\v 11 ◙
-\q2 …
-\q2 …
+\v 11 Let Mt. Tsiyyon \add (Zion)\add* be glad.
+\q1 Let Yehudah’s daughters celebrate
+\q1 →because of your righteous decrees.
 \q1
-\v 12 ◙
+\v 12 Walk around Mt. Tsiyyon.
+\q1 Go round about her.
+\q1 →Count her towers,
 \q1
-\v 13 ◙
-\q2 …
-\q2 …
-\q2
-\v 14 ◙
-\q1 …
-\q2 …
+\v 13 \add Take good notice of\add* her walls,
+\q1 and look at her palaces
+\q1 →so that you can tell it to the next generation,
+\q1
+\v 14 because this God is our God forever and ever.
+\q1 He will be our guide \add all the way through\add* to death.
 \c 49
-\s1 Not/None purpose of trusting of wealth
-\d For the musical director: the song of Kura’s descendants.
+\s1 Trusting in wealth is foolishness
+\d For the musical director: a song by Korah’s descendants.
 \q1
-\v 1 ◙
-\q1 …
+\v 1 Hear this, all you peoples.
+\q1 \add Listen to this\add*, all you inhabitants of the world,
+\q1
+\v 2 ≈both low and high—
+\q1 rich and poor together.
+\q1
+\v 3 \add I’ll talk about\add* wisdom
+\q1 and \add my inner thoughts\add* will be about understanding.
+\q1
+\v 4 I’ll \add listen\add* to a proverb.
+\q1 I’ll \add introduce\add* my riddle with a harp \add piece\add*.
+\q1
+\v 5 Why should I fear in evil \add times\add*?
+\q1 \add Why should I be afraid\add* when \add I’m surrounded by wickedness\add*?
 \q2
-\v 2 ◙
-\q2 …
+\v 6 Why should I fear those who trust in their riches
+\q1 and boast about their extensive wealth?
 \q1
-\v 3 ◙
-\q2 …
+\v 7 It is certain that no one can redeem his brother
+\q1 or \add pay\add* God a ransom for him,
 \q1
-\v 4 ◙
-\q2 …
-\q1
-\v 5 ◙
-\q2 …
+\v 8 because \add it’s very expensive to buy back someone’s\add* life,
+\q1 and no one can pay what we owe.
 \q2
-\v 6 ◙
-\q2 …
+\v 9 No one can live forever
+\q1 so that they wouldn’t \add experience the grave\add*,
 \q1
-\v 7 ◙
-\q1 …
+\v 10 because he will see decay—\add even\add* wise \add people\add* die.
+\q1 The fool and the brute alike \add come to an end\add*
+\q1 →and leave their wealth to others.
 \q1
-\v 8 ◙
-\q2 …
+\v 11 Their inner thought is that their families will continue forever,
+\q1 and the places where they live, \add for all future\add* generations.
+\q1 They \add name\add* their lands after \add themselves\add*,
+\q1
+\v 12 yet people don’t remain alive despite their wealth.
+\q1 \add People\add* die just like the animals.
+\q1
+\v 13 That’s that way of foolish people,
+\q1 yet after \add they’re gone\add*, \add people\add* approve of their sayings. \qs (Instrumental break.)\qs*
+\q1
+\v 14 Like sheep, they’re \add destined for slaughter\add*,
+\q1 and death will be their shepherd.
+\q1 The upright will rule over them in the morning,
+\q1 and their \add bodies\add* will \add rot in the grave\add*,
+\q1 far from their fancy homes.
+\q1
+\v 15 But God will \add buy back\add* my life from the power of \add the grave\add*,
+\q1 because he’ll receive me. \qs (Instrumental break.)\qs*
+\q1
+\v 16 Don’t be afraid when someone gets rich,
+\q1 \add and\add* if \add their family becomes very prominent\add*,
+\q1
+\v 17 →because when they die, they’ll take nothing with them.
+\q1 \add Their splendour can’t follow them down\add*.
+\q1
+\v 18 They \add looked after themselves well\add* while they lived
+\q1 (and people do praise you when you live for yourself),
 \q2
-\v 9 ◙
-\q2 …
+\v 19 \add but\add* they’ll go to \add join their ancestors\add*
+\q1 and won’t ever see the light again.
 \q1
-\v 10 ◙
-\q2 …
-\q1 …
-\q2 …
-\q1
-\v 11 ◙
-\q2 …
-\q1 …
-\q1
-\v 12 ◙
-\q1 …
-\q1
-\v 13 ◙
-\q2 …
-\q1
-\v 14 ◙
-\q2 …
-\q1 …
-\q1 …
-\q2 …
-\q2 …
-\q1
-\v 15 ◙
-\q2 …
-\q1
-\v 16 ◙
-\q2 …
-\q1
-\v 17 ◙
-\q2 …
-\q1
-\v 18 ◙
-\q2 …
-\q2
-\v 19 ◙
-\q2 …
-\q1
-\v 20 ◙
-\q2 …
+\v 20 Anyone who has prestige but no understanding
+\q1 is like the \add wild animals that will die\add*.
 \c 50
 \s1 The true/correct worshipping
-\d A song by Asap.
+\d A song by Asaf.
 \q1
-\v 1 ◙
-\q2 …
-\q2 …
+\v 1 Yahweh, God, has spoken
+\q1 and summoned the world from the sun’s rising to its setting.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 God has shone out of Tsiyyon \add (Zion)\add*—
+\q1 the perfection of beauty.
 \q1
-\v 3 ◙
-\q1 …
-\q2 …
+\v 3 Our God comes and doesn’t stay silent.
+\q1 A fire devours ahead of him,
+\q1 and it’s very stormy around him.
 \q1
-\v 4 ◙
-\q2 …
+\v 4 He calls to the heavens above and to the earth
+\q1 →so that he can judge his people.
 \q1
-\v 5 ◙
-\q2 …
-\q2 …
+\v 5 “\add Bring\add* my faithful ones together to me—
+\q1 those who’ve made an agreement with me by sacrificing.”
 \q1
-\v 6 ◙
-\q2 …
+\v 6 The heavens will declare his righteousness,
+\q1 because God himself is judge. \qs (Instrumental break.)\qs*
 \q1
-\v 7 ◙
-\q2 …
-\q1 …
-\q1 …
+\v 7 “My people, listen and I’ll speak.
+\q1 I’ll \add bring accusations\add* against you, Yisrael.
+\q1 I’m God, your God.
 \q1
-\v 8 ◙
-\q2 …
+\v 8 I won’t scold you for your sacrifices.
+\q1 You’re \add continually sacrificing burnt-offerings to\add* me.
 \q1
-\v 9 ◙
-\q2 …
+\v 9 I won’t accept any bull \add off your property\add*,
+\q1 or any billy goats out of your pens,
 \q1
-\v 10 ◙
-\q2 …
+\v 10 because every animal in the forest is mine,
+\q1 and the cattle on a thousand hills.
 \q1
-\v 11 ◙
-\q2 …
+\v 11 I know all the birds in the hills,
+\q1 and the wild animals in the countryside are mine.
 \q1
-\v 12 ◙
-\q2 …
+\v 12 I \add wouldn’t bother telling you\add* if I was hungry
+\q1 because the world is mine \add including\add* everything in it.
 \q1
-\v 13 ◙
-\q2 …
+\v 13 Do I eat the meat from bulls \add that have been sacrificed\add*,
+\q1 or drink the blood from the goats?
 \q1
-\v 14 ◙
-\q2 …
+\v 14 Present a thank-offering to God
+\q1 and honour your promises to the highest \add one\add*.
 \q1
-\v 15 ◙
-\q2 …
+\v 15 Call out to me \add whenever you get into trouble\add*.
+\q1 I’ll rescue you, and you’ll honour me.”
 \q1
-\v 16 ◙
-\q2 …
-\q2 …
+\v 16 But God tells the wicked \add people\add*,
+\q1 “What do you have to do with reciting my instructions,
+\q1 that you’ve taken \add telling others about my agreement\add*,
 \q1
-\v 17 ◙
-\q2 …
+\v 17 since you hate correction
+\q1 and \add just\add* toss my \add warnings back over your shoulders\add*?
 \q1
-\v 18 ◙
-\q2 …
+\v 18 When you see a thief, you \add think it’s fine\add*,
+\q1 and you participate with those who commit adultery.
 \q1
-\v 19 ◙
-\q2 …
+\v 19 You \add allow evil to come out of\add* your mouth,
+\q1 and \add you use your words to deceive\add* \add others\add*.
 \q1
-\v 20 ◙
-\q2 …
+\v 20 You sit and speak against your brother.
+\q1 You slander your own mother’s son.
 \q1
-\v 21 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 21 You’ve done these things, but I’ve stayed silent,
+\q1 so you thought that I was someone just like yourself.
+\q1 \add However,\add* I’ll scold you
+\q1 and bring up all the things you have done, right in front of your eyes.
 \q1
-\v 22 ◙
-\q2 …
-\q2 …
+\v 22 Give this \add careful\add* consideration, you all who forget God,
+\q1 otherwise I will tear you to pieces,
+\q1 and there’ll be no one to rescue you.
 \q1
-\v 23 ◙
-\q2 …
+\v 23 Anyone who offers a sacrifice of thanksgiving honours me,
+\q1 and anyone who \add decides to follow God will experience his salvation\add*.”
 \c 51
-\s1 The praying for requesting of forgiveness
-\d For the musical director: a song by David. Written he/his this of went to he of Natan prophet of nalibuhan he/his e Batsiba.
+\s1 A prayer for forgiveness
+\d For the musical director: a song by David from when the prophet Natan had gone to him after David had committed adultery with Bat-Sheva.
 \q1
-\v 1 ◙
-\q1 …
+\v 1 Have mercy on me, God, because of your loyal commitment.
+\q1 Blot out my disobedience, \add because you’re so merciful\add*.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 Wash me thoroughly from my iniquity
+\q1 and make me clean from my sin
 \q1
-\v 3 ◙
-\q2 …
+\v 3 because I’m \add aware of\add* my transgressions,
+\q1 and my sin is always \add on my mind\add*.
 \q1
-\v 4 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 4 It’s you and only you that I’ve sinned against,
+\q1 and done what’s evil in your sight.
+\q1 You are right when you speak.
+\q1 You are correct when you judge.
 \q1
-\v 5 ◙
-\q2 …
+\v 5 \add Yes\add*, I was born in iniquity.
+\q1 As soon as my mother conceived me, I was in sin.
 \q1
-\v 6 ◙
-\q2 …
+\v 6 You desire \add integrity\add* in my inner self,
+\q1 and you teach me wisdom in the secret place within.
 \q1
-\v 7 ◙
-\q2 …
+\v 7 Purify me with \add blood (applied to the doorway with a sprig of\add* hyssop), and I’ll be clean.
+\q1 Wash me, and I will be whiter than snow.
 \q1
-\v 8 ◙
-\q2 …
+\v 8 Let me hear joy and gladness
+\q1 →so that the bones that you’ve broken can be happy \add again\add*.
 \q1
-\v 9 ◙
-\q2 …
+\v 9 \add Look away\add* from my sins
+\q1 and blot out all my iniquities.
 \q1
-\v 10 ◙
-\q2 …
+\v 10 Create a clean heart in me, God,
+\q1 and renew an unwwavering spirit within me.
 \q1
-\v 11 ◙
-\q2 …
+\v 11 Don’t drive me away from your presence,
+\q1 and don’t take your holy spirit away from me.
 \q1
-\v 12 ◙
-\q2 …
+\v 12 Restore to me the joy of your salvation,
+\q1 and sustain me with a willing spirit.
 \q1
-\v 13 ◙
-\q2 …
+\v 13 Then I’ll teach \add other\add* transgressors your ways,
+\q1 and sinners will be converted to you.
 \q1
-\v 14 ◙
-\q1 …
-\q1 …
-\q2 …
+\v 14 God of my salvation, forgive me for shedding blood,
+\q1 →and I’ll \add happily shout about how good and righteous you are\add*.
 \q1
-\v 15 ◙
-\q2 …
+\v 15 Open my lips, my master,
+\q1 and my mouth will express praise to you
 \q1
-\v 16 ◙
-\q2 …
-\q2 …
+\v 16 because \add a sacrifice wouldn’t make you happy\add* or I would give it.
+\q1 You get no pleasure from burnt offerings.
 \q1
-\v 17 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 17 The sacrifices \add that God wants\add* are a broken spirit—
+\q1 a humbled and repentant heart won’t be despised by you, God.
 \q1
-\v 18 ◙
-\q1 …
+\v 18 Express your pleasure at Tsiyyon \add (Zion)\add* by doing good \add to us\add*.
+\q1 \add Re\add*build Yerushalem’s walls.
 \q1
-\v 19 ◙
-\q1 …
+\v 19 Then you’ll delight in the sacrifices of righteousness,
+\q1 in burnt offerings and completely burnt offerings.
+\q1 Then \add our people\add* will offer bulls on your altar.
 \c 52
-\s1 The mercy and judging of God
-\d For the musical director: the song\f + \fr 52:0 \ft In Hebrew, ‘maskil’ is perhaps the name of this class of song.\f* of David. Written he/his this of told by Deig Edomite Saul, “went there David to Ahimilik.”
+\s1 God’s judgement and mercy
+\d For the musical director: a song\f + \fr 52:0 \ft In Hebrew, ‘maskil’ is perhaps the name of this class of song.\f* by David written when Doeg the Edomite reported to \add King\add* Shaul that, “David went there to Ahimilik.”
 \q1
-\v 1 ◙
-\q1 …
+\v 1 Why are you proud of making trouble, \add you\add* powerful \add man\add*?
+\q1 God’s loyal commitment comes every day.
 \q1
-\v 2 ◙
-\q1 …
-\q2 …
+\v 2 Your tongue plans destruction—
+\q1 working deceitfully like a sharp razor.
 \q1
-\v 3 ◙
-\q2 …
+\v 3 You love evil more than good
+\q1 and lying rather than speaking \add the truth\add*. \qs (Instrumental break.)\qs*
 \q1
-\v 4 ◙
-\q2 …
+\v 4 You love \add saying anything that destroys other people\add*, \add you\add* deceitful tongue,
 \q1
-\v 5 ◙
-\q1 …
-\q1 …
+\v 5 ≈\add so\add* God will also destroy you forever.
+\q1 He’ll snatch you up and pluck you out of your tent
+\q1 and root you out of the land of the living. \qs (Instrumental break.)\qs*
 \q1
-\v 6 ◙
-\q1 …
+\v 6 \add Godly\add* \add people\add* will also see it and fear.
+\q1 They’ll laugh at him \add and say\add*,
 \q2
-\v 7 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 7 “Look, that’s a man who didn’t \add rely on God for his protection\add*,
+\q1 \add but\add* \add instead\add* trusted in the abundance of his wealth,
+\q1 \add and\add* he was strong when he destroyed \add others\add*.”
 \q1
-\v 8 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 8 But as for me, I’m like a flourishing olive tree in God’s house.
+\q1 I’ll trust in God’s loyal commitment forever.
 \q1
-\v 9 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 9 I’ll continually thank you for what you’ve done.
+\q1 I’ll \add rely on your reputation\add*, because it’s good,
+\q1 in the presence of your faithful \add followers\add*.
 \c 53
-\s1 The bad deeds of people
-\d For the musical director: the song\f + \fr 53:0 \ft In Hebrew, ‘maskil’ is perhaps the name of this class of song.\f* of David to be sung like singing of “Mahalat.”\f + \fr 53:0 \ft The Mahalat one instrument and if voice possibly.\f*
+\s1 Fools and human wickedness
+\d For the musical director: a song\f + \fr 53:0 \ft In Hebrew, ‘maskil’ is perhaps the name of this class of song.\f* by David to be sung to the tune of ‘Mahalat’.\f + \fr 53:0 \ft The ‘Mahalat’ could be a tune or an instrument or a voice style.\f*
 \q1
-\v 1 \x + \xo 53:1-3: \xt Rom 3:10-12.\x*◙
-\q2 …
-\q1 …
-\q2 …
+\v 1 Fools tell themselves that there is no God.
+\q1 They are corrupt and have done disgusting acts of evil.
+\q1 There’s no one who does good.\x + \xo 53:1-3: \xt Rom 3:10-12.\x*
 \q1
-\v 2 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 2 God looks down from heaven on the children of humanity
+\q1 to see if there are any with insight—
+\q1 who \add strive to obey\add* him.
 \q1
-\v 3 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 3 They’ve all turned away.
+\q1 Together they have become corrupt.
+\q1 There’s not one who does good, not even one.
 \q1
-\v 4 ◙
-\q1 …
-\q2 …
+\v 4 Do those who \add do evil\add* have no understanding—
+\q1 those who devour my people as if they were eating bread,
+\q1 and \add it’s not God that they trust in to help them\add*?
 \q1
-\v 5 ◙
-\q1 …
-\q2 …
-\q1 …
+\v 5 They were \add very worried even though it was quite irrational\add*
+\q1 because God will scatter the bones of \add any army that comes to attack\add* you.
+\q1 \add Those people\add* will be put to shame because God has rejected them.
 \q1
-\v 6 ◙
-\q1 …
-\q2 …
-\q2 …
+\v 6 If only Yisrael’s rescue would come from Tsiyyon.
+\q1 When God brings his people back from the captivity,
+\q1 then Yakov will celebrate
+\q1 and Yisrael will be glad.
 \c 54
-\s1 The God the helper
-\d For the musical director: the song\f + \fr 54:0 \ft In Hebrew, ‘maskil’ is perhaps the name of this class of song.\f* of David. Written he/his this of went the ones from-Sip to Saul and said, “Know we if where hid David.” This song, \add to be accompanied by\add* stringed instruments.
+\s1 God is my helper
+\d For the musical director: a song\f + \fr 54:0 \ft In Hebrew, ‘maskil’ is perhaps the name of this class of song.\f* by David written when some people from Zif went to \add King\add* Shaul and told him that David was hiding in their area.\x + \xo 54:0 \xt 1Sa 23:19-20.\x* \add To be accompanied by\add* stringed instruments.
 \q1
-\v 1 ◙
-\q2 …
+\v 1 \add Use the strength that’s part of your reputation to rescue\add* me, God,
+\q1 and \add use your power to declare me innocent\add*.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 Hear my prayer, God.
+\q1 \add Listen to what I’m saying\add*
 \q1
-\v 3 ◙
-\q2 …
-\q1 …
+\v 3 because strangers have \add acted\add* against me,
+\q1 and pitiless men have \add tried to eliminate me\add*.
+\q1 They \add don’t have any respect for\add* God. \qs (Instrumental break.)\qs*
 \q1
-\v 4 ◙
-\q2 …
+\v 4 \add But yes\add*, God is my helper.
+\q1 My master is the one who supports me.
 \q1
-\v 5 ◙
-\q1 …
+\v 5 He will repay my enemies with evil.
+\q1 In your faithfulness, destroy them.
 \q1
-\v 6 ◙
-\q2 …
-\q2 …
+\v 6 I’ll sacrifice a freewill offering to you.
+\q1 I’ll give thanks \add for your reputation\add*, Yahweh, because it’s good,
 \q1
-\v 7 ◙
-\q2 …
+\v 7 because he’s rescued me from every trouble.
+\q1 \add I’ve seen my enemies being defeated\add*.
 \c 55
-\s1 The praying for person betrayed by friend
-\d For the musical director: the song\f + \fr 55:0 \ft In Hebrew, ‘maskil’ is perhaps the name of this class of song.\f* of David \add to be accompanied by\add* stringed of instruments.
+\s1 A prayer for a person betrayed by a friend
+\d For the musical director: a song\f + \fr 55:0 \ft In Hebrew, ‘maskil’ is perhaps the name of this class of song.\f* by David \add to be accompanied by\add* stringed instruments.
 \q1
-\v 1 ◙
-\q2 …
+\v 1 \add Listen\add* to my prayer, God,
+\q1 and don’t \add ignore\add* my request.
 \q1
-\v 2 ◙
-\q1 …
-\q2 …
+\v 2 Pay attention to me and answer me.
+\q1 I’m restless and overwhelmed by my problems
 \q1
-\v 3 ◙
-\q2 …
-\q1 …
+\v 3 because of \add what my enemy is saying\add*.
+\q1 \add Yes,\add* because of the oppression by wicked \add people\add*—
+\q1 because they bring trouble on me and angrily persecute me.
 \q1
-\v 4 ◙
-\q2 …
+\v 4 My \add stomach has gone into a knot\add*,
+\q1 and \add thoughts of\add* death \add terrify\add* me.
 \q1
-\v 5 ◙
-\q2 …
+\v 5 Fearfulness and trembling have \add hit\add* me,
+\q1 and horror has overwhelmed me.
 \q1
-\v 6 ◙
-\q2 …
+\v 6 I said, “Oh, if only I had wings like a dove
+\q1 →then I’d fly away and \add find a peaceful place\add*.
 \q1
-\v 7 ◙
-\q2 …
+\v 7 See, then I would wander far away.
+\q1 I would stay in the wilderness. \qs (Instrumental break.)\qs*
 \q1
-\v 8 ◙
-\q2 …
+\v 8 I would hurry to a safe spot,
+\q1 \add away\add* from the stormy wind and tempest.”
 \q1
-\v 9 ◙
-\q2 …
+\v 9 Confuse them, my master, \add so their words don’t make sense\add*,
+\q1 because I’ve seen violence and strife in the city.
 \q1
-\v 10 ◙
-\q2 …
+\v 10 Day and night they \add wander around\add* \add the city\add* walls.
+\q1 Wickedness and trouble are in the middle of it.
 \q1
-\v 11 ◙
-\q2 …
+\v 11 Destruction is \add right there among\add* it,
+\q1 and oppression and deceit never leave its marketplace,
 \q1
-\v 12 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 12 because it wasn’t an enemy who taunted me. (Then I could have borne it.)
+\q1 It wasn’t my opponent who set himself up against me. (Then I would have hidden myself from him.)
 \q1
-\v 13 ◙
-\q2 …
+\v 13 But it was you—a man \add of similar status\add* to myself.
+\q1 My companion and close friend.
 \q1
-\v 14 ◙
-\q2 …
+\v 14 We’d had \add good times\add* together.
+\q1 We’d walked among the crowd in God’s residence.
 \q1
-\v 15 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 15 Let death \add hit\add* them suddenly.
+\q1 Let them go down alive to Sheol,
+\q1 because wickedness is where they live, right among them.
 \q1
-\v 16 ◙
-\q2 …
+\v 16 As for me, I’ll \add trust God to help me\add*,
+\q1 and Yahweh will save me.
 \q1
-\v 17 ◙
-\q2 …
+\v 17 I complain and moan morning, noon, and evening.
+\q1 →He will hear my voice.
 \q1
-\v 18 ◙
-\q2 …
+\v 18 He’ll peacefully \add rescue\add* my life from \add those who\add* approach me,
+\q1 because there’s many \add who fight\add* \add against\add* me.
 \q1
-\v 19 ◙
-\q2 …
-\q2 …
+\v 19 God, the one who’s \add ruled\add* from eternity, will hear them and answer them \add with what they deserve\add*. \qs (Instrumental break.)\qs*
+\q1 They never change, and they don’t \add respect\add* God.
 \q1
-\v 20 ◙
-\q2 …
+\v 20 \add My friend\add* \add took action\add* against those who were at peace with him.
+\q1 He hasn’t respected the agreement that \add we\add* had.
 \q1
-\v 21 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 21 His mouth was as smooth as butter, \add but\add* his heart was hostile.
+\q1 His words were softer than oil, \add but\add* they were actually drawn swords.
 \q1
-\v 22 ◙
-\q1 …
-\q1 …
+\v 22 \add Give your problems to\add* Yahweh, and he’ll sustain you.
+\q1 He’ll never allow a righteous person to \add be toppled\add*.
 \q1
-\v 23 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 23 \add But\add* you, God, will send the wicked down into the pit of destruction.
+\q1 Bloodthirsty and deceitful people won’t live even half as long as others,
+\q1 \add but\add* I will trust in you.
 \c 56
 \s1 The praying due trusting of God
-\d For the musical director: the song\f + \fr 56:0 \ft In Hebrew, ‘miktam’ is perhaps the name of this class of song.\f* of David. Written he/his this when captured he of those from-Philistia there to Gat. This is to be sung like singing of “Dove there to distant trees UK.”
+\d For the musical director: a song\f + \fr 56:0 \ft In Hebrew, ‘miktam’ is perhaps the name of this class of song.\f* by David, written when the Philistines captured him at Gat.\x + \xo 56:0 \xt 1Sam 21:11-15.\x* To be sung to the tune of “A dove on distant oak trees”.
 \q1
-\v 1 ◙
-\q1 …
+\v 1 Be merciful to me, God, because men are attacking me.
+\q1 Those who fight me press their assault all day \add long\add*.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 My enemies trample me all day long,
+\q1 because there are many who proudly fight against me.
 \q1
-\v 3 ◙
-\q2 …
+\v 3 \add Any time\add* I’m afraid, I’ll put my trust in you—
+\v 4 in God, whose message I praise.
+\q1 I’ve put my trust in God—I won’t be afraid of what \add people\add* can do to me?
 \q1
-\v 4 ◙
-\q1 …
-\q1 …
+\v 5 All day \add long\add* they twist my words.
+\q1 \add They’re always thinking about how to harm me\add*.
 \q1
-\v 5 ◙
-\q1 …
+\v 6 They conspire then lie hidden—watching my steps
+\q1 as they just wait \add for the opportunity to take\add* my life.
 \q1
-\v 6 ◙
-\q2 …
+\v 7 Don’t let them escape \add when they’ve done evil things\add*.
+\q1 In your anger, God, bring down those people groups.
 \q1
-\v 7 ◙
-\q1 …
+\v 8 You \add keep track of\add* my wanderings
+\q1 and put my tears into your bottle.
+\q1 Aren’t they \add recorded\add* in your book?
 \q1
-\v 8 ◙
-\q2 …
-\q1 …
+\v 9 Then my enemies will \add pull back when call out\add* \add to you for help\add*.
+\q1 I know that because God is for me.
 \q1
-\v 9 ◙
-\q1 …
+\v 10 In God—whose message I praise,
+\q1 in Yahweh—whose message I praise,
 \q1
-\v 10 ◙
-\q2 …
+\v 11 in God I trust.
+\q1 I’m not scared—what can anyone do to me?
 \q1
-\v 11 ◙
-\q1 …
+\v 12 The \add duty to fulfill\add* my promises to you is on me, God.
+\q1 I’ll give thank-offerings to you
 \q1
-\v 12 ◙
-\q1 …
-\q1
-\v 13 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 13 because you’ve rescued my life from death.
+\q1 You’ve kept \add me from falling\add* \add into danger\add*,
+\q1 so that I can walk in front of God in the light of the living.
 \c 57
-\s1 The requesting of God
-\d For the musical director: the song\f + \fr 57:0 \ft In Hebrew, ‘miktam’ is perhaps the name of this class of song.\f* of David. Written he/his this of there he of cave the ran to Saul. This is to be sung like singing of ‘Not you dereeti!’
+\s1 A prayer for protection from predators
+\d For the musical director: a song\f + \fr 57:0 \ft In Hebrew, ‘miktam’ is perhaps the name of this class of song.\f* by David \add written\add* when he was fleeing from Shaul and hid in a cave. To be sung to the tune of ‘Don’t destroy’.
 \q1
-\v 1 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 1 Be merciful to me, God, be merciful to me,
+\q1 because I \add come to you to be safe\add* until these troubles are over.
+\q1 I stay under your wings for protection until this destruction is over.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 I will cry to the highest God—
+\q1 to God, who \add ensures that I get justice\add*.
 \q1
-\v 3 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 3 He will send help from heaven and rescue me,
+\q1 He’s angry with those who crush me. \qs (Instrumental break.)\qs*
+\q1 God will \add let me experience\add* his loyal commitment and his faithfulness.
 \q1
-\v 4 ◙
-\q1 …
-\q2 …
+\v 4 My life is among lions.
+\q1 I’m \add among\add* those who are ready to devour me.
+\q1 I’m among people whose teeth are spears and arrows,
+\q1 and whose tongues are sharp swords.
 \q1
-\v 5 ◙
-\q2 …
+\v 5 May you be lifted up, God, above the skies.
+\q1 May your \add splendour be seen by the whole world\add*.
 \q1
-\v 6 ◙
-\q2 …
-\q2 …
+\v 6 They spread out a net \add to catch\add* my feet—I was distressed.
+\q1 They dug a pit in front of me. They themselves have fallen into it. \qs (Instrumental break.)\qs*
 \q1
-\v 7 ◙
-\q1 …
+\v 7 My heart is fixed, God, \add I’ve made my decision\add*.
+\q1 I will sing, yes, I’ll sing praises.
 \q1
-\v 8 ◙
-\q1 …
+\v 8 Wake up, my honoured heart. Wake up, harp and other stringed instrument.
+\q1 I’ll wake up the dawn.
 \q1
-\v 9 ◙
-\q2 …
+\v 9 My master, I’ll give thanks to you among the peoples.
+\q1 I’ll sing praises to you among the nations.
 \q1
-\v 10 ◙
-\q2 …
+\v 10 because your loyal commitment is great—reaching to the heavens,
+\q1 and your faithfulness to the clouds.
 \q1
-\v 11 ◙
-\q2 …
+\v 11 May you be lifted up, God, above the skies.
+\q1 May your \add splendour be seen by the whole world\add*.
 \c 58
-\s1 Egkahule the bad people
-\d For the musical director: the song\f + \fr 58:0 \ft In Hebrew, ‘miktam’ is perhaps the name of this class of song.\f* of David. This is to be sung like singing of ‘Not you dereeti!’
+\s1 Punishment for the wicked
+\d For the musical director: a song\f + \fr 58:0 \ft In Hebrew, ‘miktam’ is perhaps the name of this class of song.\f* by David. To be sung to the tune of ‘Don’t destroy’.
 \q1
-\v 1 ◙
-\q1 …
+\v 1 \add When you rulers speak, do you actually say what is right\add*?
+\q1 Do you \add give justice, you people\add*?
 \q1
-\v 2 ◙
-\q1 …
+\v 2 \add No,\add* you plan \add wicked schemes in your mind\add*.
+\q1 You use your hands to distribute violence throughout the land.
 \q1
-\v 3 ◙
-\q2 …
+\v 3 From the womb, the wicked turn from \add what’s right\add*.
+\q1 They go astray from birth, speaking lies.
 \q1
-\v 4 ◙
-\q2 …
+\v 4 Their poison is like snake venom.
+\q1 They’re like a deaf cobra that blocks its \add own\add* ears
 \q1
-\v 5 ◙
-\q2 …
+\v 5 then pays no attention to the snake-charmer’s voice
+\q1 no matter how skillful they are.
 \q1
-\v 6 ◙
-\q1 …
+\v 6 Break their teeth in their mouths, God.
+\q1 Yahweh, break off the fangs of the young lions.
 \q1
-\v 7 ◙
-\q1 …
+\v 7 Let them \add melt\add* away like water.
+\q1 When \add they\add* shoot their arrows, let them be as though they \add were cut in half\add*.
 \q1
-\v 8 ◙
-\q2 …
+\v 8 Let them be like a snail that \add quietly disappears\add*.
+\q1 Like a woman’s still-born child that never sees the sunlight.
 \q1
-\v 9 ◙
-\q2 …
+\v 9 Before your pots can feel the heat of the burning thorn \add twigs\add*,
+\q1 he’ll sweep \add the branches\add* away.
 \q1
-\v 10 ◙
-\q1 …
+\v 10 The \add godly people\add* will celebrate when \add they\add* see God’s vengeance.
+\q1 \add They’ll\add* wash \add their\add* feet in the blood of the wicked
 \q1
-\v 11 ◙
-\q2 …
+\v 11 so that people will say, “There’s definitely a reward for the righteous \add person\add*.
+\q1 Truly there is a God who judges the \add world\add*.”
 \c 59
-\s1 The praying so that egpangabangan of oppose him
-\d For the musical director: the song\f + \fr 59:0 \ft In Hebrew, ‘miktam’ is perhaps the name of this class of song.\f* of David. Written this of David of time impatamengan of Saul of soldiers the house his so that egkeyimatayan he of Saul. This is to be sung like singing of “Not you dereeti!”
+\s1 A prayer for safety
+\d For the musical director: a song\f + \fr 59:0 \ft In Hebrew, ‘miktam’ is perhaps the name of this class of song.\f* by David \add written\add* when \add King\add* Shaul \add (Saul)\add* had sent men to watch David’s house in order to kill him. To be sung to the tune of ‘Don’t destroy’.
 \q1
-\v 1 ◙
-\q1 …
+\v 1 Rescue me from my enemies, my God.
+\q1 Protect me from those who \add want to attack\add* me.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 Keep me safe from \add those who do evil\add*,
+\q1 and save me from the bloodthirsty men.
 \q1
-\v 3 ◙
-\q1 …
-\q2 …
+\v 3 For, see, they wait in ambush to take my life.
+\q1 Fierce men gather themselves together against me,
+\q1 but not because of my \add disobedience\add* or my sin, Yahweh.
 \q1
-\v 4 ◙
-\q2 …
-\q1 …
+\v 4 They prepare to rush me even though I’ve \add done nothing wrong\add*.
+\q1 Wake up and look, and help me.
 \q1
-\v 5 ◙
-\q1 …
-\q2 …
+\v 5 You, army commander Yahweh, the God of Israel,
+\q1 \add Take action\add* and punish all the nations.
+\q1 Don’t be merciful to any \add wicked people who’ve been treacherous\add*. \qs (Instrumental break.)\qs*
 \q1
-\v 6 ◙
-\q2 …
+\v 6 They return in the evening, growling like dogs
+\q1 and prowl around the city.
 \q1
-\v 7 ◙
-\q2 …
-\q1 …
+\v 7 Wow, they belch out with their mouths.
+\q1 \add They use their lips like daggers\add*
+\q1 because they say, “Who can hear us?”
 \q1
-\v 8 ◙
-\q1 …
+\v 8 But Yahweh, you laugh at them—
+\q1 you mock all the \add pagan\add* nations.
 \q1
-\v 9 ◙
-\q2 …
+\v 9 God, my strength, I’ll pay attention to you.
+\q1 You are my high fortress.
 \q1
-\v 10 ◙
-\q2 …
+\v 10 My God will meet me with his loyal commitment.
+\q1 God will allow me to see my enemies \add defeated\add*.
 \q1
-\v 11 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 11 Don’t \add just\add* kill them, or my people will forget.
+\q1 \add Use\add* your power to scatter them and make them fall, my master, our shield.
 \q1
-\v 12 ◙
-\q1 …
-\q1 …
+\v 12 \add Despite\add* their pride, let them be caught
+\q1 for the sins of their mouths and the words of their lips,
+\q1 and for the curses and lies that they express.
 \q2
-\v 13 ◙
-\q1 …
-\q2 …
-\q1 …
-\q2 …
+\v 13 Eliminate them in \add your\add* anger
+\q1 Consume them so that they’ll no longer exist.
+\q1 Let them know that God rules in Yakov \add (Jacob)\add*,
+\q1 →and to the ends of the earth. \qs (Instrumental break.)\qs*
 \q1
-\v 14 ◙
-\q2 …
+\v 14 At evening they return,
+\q1 howling like dogs prowling around the city.
 \q1
-\v 15 ◙
-\q2 …
+\v 15 They wander around \add looking\add* for food
+\q1 and they growl if they’re not satisfied.
 \q1
-\v 16 ◙
-\q1 …
-\q2 …
-\q1 …
-\q2 …
+\v 16 \add But\add* I’ll sing about your strength,
+\q1 and in the morning I’ll sing about your loyal commitment.
+\q1 because you’ve been my high fortress
+\q1 and a \add place of safety at the time\add* of my distress.
 \q1
-\v 17 ◙
-\q1 …
-\q2 …
+\v 17 To you, my strength, I’ll sing praises
+\q1 because God is my high fortress—the God \add who demonstrates\add* loyal commitment.
 \c 60
-\s1 The requesting of God
-\d For the musical director: the song\f + \fr 60:0 \ft In Hebrew, ‘miktam’ is perhaps the name of this class of song.\f* of David for of teaching. Written he/his this of battled each other he of those from-Aram-Naharaim and of those from-Aram-Suba, and of returned e Yoav and kill 12,000 those from-Edom there to bangalug named of Asin. This is to be sung like singing of “Lily of Pangguhuren.”
+\s1 A prayer for military help
+\d For the musical director: a song\f + \fr 60:0 \ft In Hebrew, ‘miktam’ is perhaps the name of this class of song.\f* by David for teaching \add written\add* when he fought with Aram-Naharayim and with Aram-Tsovah, and Yoav returned and killed twelve thousand Edomites in the Salt Valley. To be sung to the tune of ‘The Lily of Testimony’.
 \q1
-\v 1 ◙
-\q1 …
+\v 1 God, you’ve cast us off—you’ve broken through our defenses.
+\q1 You’ve been angry—restore us again.
 \q1
-\v 2 ◙
-\q1 …
+\v 2 You’ve made the land tremble—you’ve torn it apart.
+\q1 →Heal its fissures, because it’s shaking.
 \q1
-\v 3 ◙
-\q1 …
+\v 3 You’ve made your people see difficult things.
+\q1 You’ve given us wine to drink \add that makes us stagger\add*.
 \q1
-\v 4 ◙
-\q2 …
+\v 4 You’ve set up a banner for those who honour you,
+\q1 \add to be displayed against\add* those who flee from the \add battle\add*. \qs (Instrumental break.)\qs*
 \q1
-\v 5 ◙
-\q2 …
+\v 5 \add Use your strength to\add* rescue those you love
+\q1 and answer us
 \q1
-\v 6 ◙
-\q2 …
+\v 6 God has spoken from his sacred \add place\add*, “I’ll celebrate.
+\q1 I’ll divide Shekem
+\q1 and apportion out the Sukkot Valley.
 \q1
-\v 7 ◙
-\q1 …
-\q2 …
+\v 7 Gilead is mine,
+\q1 and Menashsheh \add (Manasseh)\add* is mine.
+\q1 Efraim\add /Yisrael\add* also is my helmet.
+\q1 Yehudah \add (Judah)\add* is my scepter.
 \q1
-\v 8 ◙
-\q2 …
-\q1 …
+\v 8 Moab is my wash-basin.
+\q1 I’ll toss my shoe on Edom \add to indicate my ownership of it\add*.
+\q1 I’ll shout triumphantly because of Philistia.”
 \q1
-\v 9 ◙
-\q1 …
+\v 9 Who will bring me into the fortified city?
+\q1 Who will lead me to Edom?
 \q1
-\v 10 ◙
-\q1 …
+\v 10 But \add it seems that\add* you’ve rejected us, God?
+\q1 You don’t \add join\add* our army \add when they\add* go into battle.
 \q1
-\v 11 ◙
-\q2 …
+\v 11 Give us help against \add our\add* enemy,
+\q1 because human help is worthless.
 \q1
-\v 12 ◙
-\q2 …
+\v 12 We’ll win with God’s help.
+\q1 He’ll trample our enemies down.
 \c 61
-\s1 Requesting helping of God
+\s1 A prayer for protection
 \d For the musical director: a song by David \add to be accompanied by\add* stringed instruments.
 \q1
-\v 1 ◙
-\q2 …
+\v 1 Hear my call \add for help\add*, God.
+\q1 Answer my prayer.
 \q1
-\v 2 ◙
-\q1 …
+\v 2 I call to you from the ends of the earth when \add I feel\add* faint.
+\q1 →Lead me to the rock \add of stability\add* that’s high \add above me\add*
 \q1
-\v 3 ◙
-\q2 …
+\v 3 because you’ve been a \add place of protection\add* for me—
+\q1 a tower that’s fortified from the enemy.
 \q1
-\v 4 ◙
-\q2 …
+\v 4 Let me live in your tent forever.
+\q1 Let me \add find protection\add* under the shelter of your wings. \qs (Instrumental break.)\qs*
 \q1
-\v 5 ◙
-\q2 …
+\v 5 because you, God, have heard my promises.
+\q1 You’ve given me the inheritance \add that’s given to\add* those who honour you.
 \q1
-\v 6 ◙
-\q2 …
-\q2 …
+\v 6 You’ll \add prolong\add* the king’s life—
+\q1 his years will be like generation upon generation.
 \q1
-\v 7 ◙
-\q1 …
+\v 7 May he sit \add enthroned\add* \add in God’s presence\add* forever.
+\q1 May loyal commitment and faithfulness preserve him.
 \q1
-\v 8 ◙
-\q2 …
+\v 8 I’ll sing praise to you forever
+\q1 so that I can fulfil my promises \add every\add* day.
 \c 62
-\s1 Egsalig of assisting of God
+\s1 Trusting in God
 \d For the musical director: a song by David Hidutun.
 \q1
-\v 1 ◙
-\q1 …
+\v 1 I wait in silence for God alone.
+\q1 \add He’s the only one who can rescue me\add*.
 \q1
-\v 2 ◙
-\q1 …
+\v 2 He alone is my rock and \add the one who rescues me\add*.
+\q1 He’s my fortified tower—\add no enemy will get me out of there\add*.
 \q1
-\v 3 ◙
-\q2 …
-\q1 …
+\v 3 How long, all of you, will you attack a man?
+\q1 All of you will be murdered INVESTIGATE
+\q1 like a leaning wall or a wobbling fence.
 \q1
-\v 4 ◙
-\q1 …
-\q1 …
+\v 4 They plan to bring him down from his high position.
+\q1 They love to tell lies—
+\q1 they bless him with their mouths, but in their \add minds\add* they curse him. \qs (Instrumental break.)\qs*
 \q1
-\v 5 ◙
-\q2 …
+\v 5 I wait in silence for God alone
+\q1 because \add I’ve placed my hope in\add* him.
 \q1
-\v 6 ◙
-\q1 …
+\v 6 He alone is my rock and \add the one who rescues me\add*.
+\q1 He’s my fortified tower—\add no enemy will get me out of there\add*.
 \q1
-\v 7 ◙
-\q1 …
+\v 7 \add It’s God who saves and honours me\add*.
+\q1 \add I find my safe place in God and he’s the source of\add* my strength.
 \q1
-\v 8 ◙
-\q1 …
-\q1 …
+\v 8 Trust him at all times, you people.
+\q1 \add Tell him all your troubles\add*.
+\q1 God is a \add place where we can be protected\add*. \qs (Instrumental break.)\qs*
 \q1
-\v 9 ◙
-\q1 …
-\q1 …
-\q2 …
+\v 9 Humans are nothing but a puff \add of wind\add*.
+\q1 They don’t weigh much on the scales.
+\q1 →Even when weighed together, they’re lighter than air.
 \q1
-\v 10 ◙
-\q1 …
-\q1 …
+\v 10 Don’t rely on extortion or robbery.
+\q1 Don’t hope uselessly in \add your\add* wealth,
+\q1 →because it’ll bear no fruit—don’t fix your heart on them.
 \q1
-\v 11 ◙
-\q2 …
+\v 11 God has spoken once.
+\q1 Twice I’ve heard this:
+\q1 →\add all power comes from\add* God.
 \q1
-\v 12 ◙
-\q1 …
+\v 12 Also, loyal commitment \add comes from\add* you, my master,
+\q1 because you pay back every person for what they’ve done.
 \c 63
 \s1 Staying close to God
 \d A song by David when he was in the Yehudah wilderness.
@@ -3601,7 +3598,7 @@
 \q1 \add Praise\add* God.
 \c 69
 \s1 A request for help
-\d For the musical director: \add a song\add* by David \add to be sung like singing of\add* ‘Lilies’.
+\d For the musical director: \add a song\add* by David \add to be sung to the tune of\add* ‘Lilies’.
 \q1
 \v 1 Save me, God, because the waters have reached my neck.
 \q1
@@ -3723,1479 +3720,1392 @@
 \v 1 Save me, God.
 \q1 Yahweh, hurry \add here\add* to help me.
 \q1
-\v 2 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 2 Let those who try to take my life be ashamed and humiliated.
+\q1 Let those who take pleasure in my pain be turned back and brought to dishonour.
 \q1
-\v 3 ◙
-\q2 …
+\v 3 Let those who say, “Aha, aha,” be turned back because of their shame.
 \q1
-\v 4 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 4 Let all those who \add strive to follow\add* you, celebrate and be glad about you.
+\q1 Let those who \add rely on you to rescue them\add* always say, “May God be praised.”
 \q1
-\v 5 ◙
-\q1 …
-\q1 …
-\q1 …
+\v 5 \add But\add* I’m poor and needy. Hurry to me, God.
+\q1 You’re my help and you rescue me. Yahweh, don’t delay.
 \c 71
-\s1 I won’t leave if no more my strength
+\s1 Prayer for long-term protection
 \q1
-\v 1 ◙
-\q1 …
+\v 1 I \add find my safety\add* in you, Yahweh.
+\q1 Let me never be put to shame.
 \q1
-\v 2 ◙
-\q1 …
+\v 2 Rescue me and make me safe in your righteousness.
+\q1 Turn your ear to me and save me.
 \q1
-\v 3 ◙
-\q2 …
-\q1 …
+\v 3 Be a rock \add of safety\add* for me, where I can always go.
+\q1 You’ve given the command to save me because you’re my rock and my fortress.
 \q1
-\v 4 ◙
-\q2 …
+\v 4 Rescue me, my God, out of the \add control\add* of wicked \add people\add*—
+\q1 out of the grasp of the unrighteous and cruel
 \q1
-\v 5 ◙
-\q2 …
+\v 5 because you’re my hope, Yahweh my master.
+\q1 I’ve trusted in you ever since I was a child.
 \q1
-\v 6 ◙
-\q1 …
-\q1 …
+\v 6 I’ve been supported by you from the womb.
+\q1 It was you who took me out of my mother’s belly.
+\q1 →My praise will be always about you.
 \q1
-\v 7 ◙
-\q2 …
+\v 7 I’m a marvel to many people.
+\q1 You’re my \add secure shelter\add*.
 \q1
-\v 8 ◙
-\q2 …
+\v 8 My mouth will be filled with praise for you,
+\q1 \add filled\add* all day with your honour.
 \q1
-\v 9 ◙
-\q2 …
+\v 9 Don’t throw me away in my time of old age.
+\q1 Don’t abandon me when my strength fails,
 \q1
-\v 10 ◙
-\q2 …
+\v 10 because my enemies are talking about me.
+\q1 Those who watch for my life are plotting together.
 \q1
-\v 11 ◙
-\q1 …
-\q2 …
+\v 11 They say, “God’s abandoned him \add now\add*.
+\q1 Pursue him and capture him, because there’s no one to rescue him.”
 \q1
-\v 12 ◙
-\q1 …
+\v 12 Don’t \add stay\add* far \add away\add* from me, God.
+\q1 My God, hurry to help me.
 \q1
-\v 13 ◙
-\q1 …
+\v 13 Let those who’re hostile to my life be put to shame and destroyed.
+\q1 Let those who seek my hurt be covered with rebuke and dishonour.
 \q1
-\v 14 ◙
-\q1 …
+\v 14 \add Meanwhile,\add* I’ll always \add be expecting you to help me\add*
+\q1 and will praise you more and more.
 \q1
-\v 15 ◙
-\q1 …
-\q2 …
+\v 15 \add I’ll\add* tell about your righteousness and your salvation all day,
+\q1 although I \add can’t count\add* \add your goodness\add*.
 \q1
-\v 16 ◙
-\q1 …
+\v 16 I will \add talk about\add* the powerful actions by Yahweh my master.
+\q1 I’ll \add make mention\add* of your righteousness, yours alone.
 \q1
-\v 17 ◙
-\q2 …
+\v 17 God, you have taught me from my youth.
+\q1 Even now \add I’m excited to tell about the wonderful things you’ve done\add*.
 \q1
-\v 18 ◙
-\q2 …
-\q2 …
-\q2 …
+\v 18 Indeed, even when I’m old and gray, God, don’t abandon me,
+\q1 as I’ve been declaring your strength to the next generation—
+\q1 your power to everyone who is to come.
 \q1
-\v 19 ◙
-\q1 …
+\v 19 \add Your justice and fairness is unable to be challenged\add*.
+\q1 You who’ve done great things, God, who \add else\add* is like you?
 \q1
-\v 20 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 20 You who made me see many troubles, will revive us again,
+\q1 and will bring us back up from the depths of the earth.
 \q1
-\v 21 ◙
-\q2 …
+\v 21 May you increase my honour.
+\q1 \add Turn\add* again \add and\add* comfort me.
 \q1
-\v 22 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 22 I’ll also praise you for your trustworthiness with the harp, my God.
+\q1 I’ll make music for you with the harp, holy one of Israel.
 \q1
-\v 23 ◙
-\q2 …
-\q2 …
+\v 23 When I sing praise to you, my lips will shout for joy,
+\q1 along with my soul which you have \add paid to have released\add*.
 \q1
-\v 24 ◙
-\q2 …
+\v 24 ≈My tongue will also talk about your righteousness all day long,
+\q1 →because those who sought to hurt me have been put to shame and are confused.
 \c 72
-\s1 The praying for of King
-\d A song by Solomon.
+\s1 A prayer to bless the king
+\d A song by Shelomoh \add (Solomon)\add*.
 \q1
-\v 1 ◙
-\q2 …
+\v 1 Give the king your righteous decrees, God,
+\q1 your righteousness to the king’s son.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 May he judge your people \add fairly\add*
+\q1 and your poor with justice.
 \q1
-\v 3 ◙
-\q2 …
+\v 3 May the mountains \add produce\add* peace for the people.
+\q1 May the hills \add produce\add* \add godliness\add*.
 \q1
-\v 4 ◙
-\q2 …
-\q2 …
+\v 4 May he \add vindicate\add* the poor among the people.
+\q1 May he save the children of the needy
+\q1 and crush the \add oppressors\add*.
 \q1
-\v 5 ◙
-\q2 …
+\v 5 May they \add honour\add* you while the sun endures,
+\q1 and as long as the moon lasts throughout all the generations.
 \q1
-\v 6 ◙
-\q2 …
+\v 6 May he come down like rain on the mown grass,
+\q1 like showers that water the earth.
 \q1
-\v 7 ◙
-\q2 …
+\v 7 May \add godly\add* \add people\add* flourish throughout his days \add as king\add*,
+\q1 and may there be an abundance of peace till the moon is no more.
 \q1
-\v 8 ◙
-\q2 …
+\v 8 May he have dominion from sea to sea,
+\q1 and from the \add Euphrates\add* to the ends of the earth.
 \q1
-\v 9 ◙
-\q1 …
+\v 9 May those who live in the wilderness bow down before him.
+\q1 May his enemies lick the dust.
 \q1
-\v 10 ◙
-\q2 …
-\q1 …
+\v 10 May the kings of Tarshish and of the islands \add be forced to pay\add* tribute.
+\q1 May the kings of Sheba and Seba offer gifts.
 \q1
-\v 11 ◙
-\q2 …
+\v 11 Indeed, may all kings \add bow down to\add* him.
+\q1 May all nations serve him
 \q1
-\v 12 ◙
-\q2 …
+\v 12 because he helps \add any\add* needy person who cries out
+\q1 and the poor person who has no other helper.
 \q1
-\v 13 ◙
-\q2 …
+\v 13 He has pity on the poor and needy,
+\q1 and he saves the lives of needy people.
 \q1
-\v 14 ◙
-\q2 …
+\v 14 He redeems their lives from oppression and violence.
+\q1 Their \add life\add* is precious \add to him\add*.
 \q1
-\v 15 ◙
-\q1 …
-\q1 …
-\q2 …
+\v 15 May he live—may Sheba’s gold be given to him.
+\q1 May people always pray for him.
+\q1 May God bless him all day \add long\add*.
 \q1
-\v 16 ◙
-\q2 …
-\q1 …
-\q1 …
-\q2 …
+\v 16 May there be abundance of grain in the land—on the mountaintops may their crops wave.
+\q1 May the fruit of it be like Lebanon.
+\q1 May the people flourish in the cities like the grass across the land.
 \q1
-\v 17 ◙
-\q2 …
-\q1 …
-\q2 …
-\q2 …
+\v 17 May his \add good reputation\add* endure forever.
+\q1 May his \add fame\add* continue as long as the sun.
+\q1 May people be blessed in him.
+\q1 May all nations call him blessed.
 \q1
-\v 18 ◙
-\q1 …
+\v 18 May Yisrael’s God, Yahweh, be blessed.
+\q1 He alone does wonderful things.
 \q1
-\v 19 ◙
-\q1 …
-\q1 …
+\v 19 May his \add wonderful\add* name be blessed forever,
+\q1 and may the whole earth be filled with his \add splendour\add*. May it be so.
 \q1
-\v 20 ◙
+\v 20 This ends the prayers of Yesse’s son, David.
 \c 73
 \ms1 Third collection
 \mr (Songs 73–89)
-\s1 The righteous/honest/sensible judging of God
-\d A song by Asap.
+\s1 The need for justice
+\d A song by Asaf.
 \q1
-\v 1 ◙
-\q2 …
+\v 1 Surely God is good to Yisrael—
+\q1 to those with pure \add motives\add*
 \q1
-\v 2 ◙
-\q2 …
-\v 3 ◙
-\q2 …
+\v 2 but as for me, my feet almost slipped.
+\q1 My steps were caused to nearly \add slide out from under me\add*
 \q1
-\v 4 ◙
-\q2 …
+\v 3 because I was envious of arrogant \add people\add*
+\q1 when I saw \add how wicked people prosper\add*,
 \q1
-\v 5 ◙
-\q2 …
+\v 4 because they \add live without pains\add*
+\q1 and their \add bodies are strong and healthy\add*.
 \q1
-\v 6 ◙
-\q2 …
+\v 5 They are free from \add normal human struggles\add*,
+\q1 and they \add don’t suffer along with everyone else\add*.
 \q1
-\v 7 ◙
-\q2 …
+\v 6 Therefore pride is a necklace for them—
+\q1 violence covers them \add like a coat\add*.
 \q1
-\v 8 ◙
-\q2 …
+\v 7 Their eyes bulge out from their fatness.
+\q1 \add Their heads are full of imaginative\add* \add schemes\add*.
 \q1
-\v 9 ◙
-\q2 …
+\v 8 They mock and speak with oppressive evil.
+\q1 They speak from an elevated place.\f + \fr 73:8 \ft It’s not clear from the Hebrew, if this refers to somewhere physical, or to an attitude like ‘arrogance’.\f*
 \q1
-\v 10 ◙
-\q2 …
+\v 9 They set their mouth in the heavens,
+\q1 and their tongue goes through the earth.\f + \fr 73:9 \ft Left literal because meaning/application is unclear.\f*
 \q1
-\v 11 ◙
-\q1 …
+\v 10 Therefore his people turn here,
+\q1 and full waters are drained in/by them.\f + \fr 73:10 \ft Left literal because meaning/application is unclear.\f*
 \q1
-\v 12 ◙
-\q2 …
+\v 11 Then they say, “How does God know?
+\q1 \add Does the highest one notice what’s going on\add*?”
 \q1
-\v 13 ◙
-\q2 …
+\v 12 Look at these wicked \add people\add*.
+\q1 They’re always at ease—increasing in wealth.
 \q1
-\v 14 ◙
-\q2 …
+\v 13 Surely \add I wasted my time keeping my mind pure\add*
+\q1 and washing my hands in innocence,
+\q1
+\v 14 because I’ve been stricken throughout the day,
+\q1 and punished every morning.
 \b
 \q1
-\v 15 ◙
-\q2 …
+\v 15 If I’d said that I’d speak like that,
+\q1 wow, I would have betrayed your children’s generation.
 \q1
-\v 16 ◙
-\q2 …
+\v 16 And when I thought about how to understand this,
+\q1 \add it was very difficult for me to figure it out\add*
 \q1
-\v 17 ◙
-\q1 …
+\v 17 until I went into God’s sanctuaries,
+\q1 then I discerned their end.
 \b
 \q1
-\v 18 ◙
-\q2 …
+\v 18 Surely you put them onto slippery places.
+\q1 You make them fall to destruction.
 \q1
-\v 19 ◙
-\q2 …
+\v 19 How they are \add brought down\add* to \add nothing\add* as in a moment.
+\q1 They’re finished—they come to a terrifying end
 \q1
-\v 20 ◙
-\q2 …
+\v 20 My master, when you rouse yourself, you’ll despise their image,
+\q1 like a dream after \add the person wakes up\add*.
 \b
 \q1
-\v 21 ◙
-\q2 …
+\v 21 When my heart was embittered,
+\q1 and \add my organs felt like they had a knife in them\add*,
 \q1
-\v 22 ◙
-\q2 …
+\v 22 I was stupid and \add ignorant\add*.
+\q1 I \add acted\add* toward you \add like\add* an animal.
 \q1
-\v 23 ◙
-\q2 …
+\v 23 Yet I’m with you continuously—
+\q1 you take hold of my right hand.
 \q2
-\v 24 ◙
-\q2 …
+\v 24 You guide me with your counsel,
+\q1 and afterward you’ll receive me with honour.
 \q1
-\v 25 ◙
-\q1 …
+\v 25 Who \add else\add* do I have I in heaven \add to help me\add* other than you?
+\q1 And there’s nothing on the earth that I desire \add more than\add* you.
 \q1
-\v 26 ◙
-\q2 …
-\q2 …
+\v 26 My \add muscles\add* and my heart fail,
+\q1 but God is the \add strength\add* of my heart and my \add fulfilment\add* forever.
 \q1
-\v 27 ◙
-\q2 …
+\v 27 \add Yes, listen\add*, those who’re far from you \add must\add* die.
+\q1 You destroy every one who’s unfaithful to you.
 \q1
-\v 28 ◙
-\q1 …
-\q2 …
+\v 28 As for me, approaching God is good for me.
+\q1 I have made my master Yahweh my \add safe place\add*
+\q1 so that I can tell \add everyone\add* \add about what you’ve done\add*.
 \c 74
-\s1 The requesting so that helping of God
-\d The song\f + \fr 74:0 \ft In Hebrew, ‘maskil’, what if different maybe class of song.\f* of Asap.
+\s1 Requesting God’s help
+\d A song\f + \fr 74:0 \ft In Hebrew, ‘maskil’, is perhaps the name of this class of song.\f* by Asaf.
 \q1
-\v 1 ◙
-\q1 …
+\v 1 Why God, have you rejected \add us\add* forever?
+\q1 Why \add are you so angry at\add* the sheep in your pasture?
 \q1
-\v 2 ◙
-\q2 …
-\q1 …
+\v 2 Remember your congregation that you aquired in times \add past\add*,
+\q1 which you have redeemed to be the tribe of your inheritance.
+\q1 This Mt. Tsiyyon \add (Zion)\add*, where you’ve lived.
 \q1
-\v 3 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 3 \add Take\add* your feet \add to see\add* the perpetual ruins.
+\q1 All the \add damage\add* that the enemy has done to the sanctuary.
 \q1
-\v 4 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 4 Your adversaries have roared in the middle of your meeting place.
+\q1 They’ve set up their banners as signs.
 \q1
-\v 5 ◙
-\q2 …
+\v 5 \add They acted like men chopping down a forest with\add* axes.
 \q1
-\v 6 ◙
-\q2 …
+\v 6 And now, with axe and hammers,
+\q1 they \add smash up\add* all its \add carved\add* \add panels\add*.
 \q1
-\v 7 ◙
-\q2 …
+\v 7 They have \add burnt\add* your sanctuary to the ground.
+\q1 They have profaned the place \add where your name is attached\add*.
 \q1
-\v 8 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 8 They said in their hearts, “We’ll \add totally crush\add* them.”
+\q1 They’ve burnt all of the meeting places of God in the \add country\add*.
 \q1
-\v 9 ◙
-\q2 …
-\q2 …
+\v 9 \add There aren’t any signs for us to watch\add*.
+\q1 There’s no longer any prophet,
+\q1 and there’s no one among us who knows how long this will last.
 \q1
-\v 10 ◙
-\q1 …
+\v 10 \add How much longer\add*, God, will the enemy \add be able to mock for\add*?
+\q1 Will the enemy \add be able to\add* treat your name with contempt forever?
 \q1
-\v 11 ◙
-\q1 …
+\v 11 Why do you withdraw your hand \add of power\add*?
+\q1 Take it \add out of your pocket\add* and destroy them.
 \q1
-\v 12 ◙
-\q2 …
+\v 12 Yet God is my king from times \add past\add*,
+\q1 \add rescuing us in a range of locations\add*.
 \q1
-\v 13 ◙
-\q2 …
+\v 13 You divided the sea by your strength.
+\q1 You smashed the heads of the sea monsters in the waters.
 \q1
-\v 14 ◙
-\q2 …
+\v 14 You crushed the sea dragon’s heads.\x + \xo 74:14 \xt Job 41:1-34.\x*
+\q1 You fed him to those living in the wilderness.
 \q1
-\v 15 ◙
-\q1 …
+\v 15 You broke open springs and streams.
+\q1 You dried up flowing rivers.
 \q1
-\v 16 ◙
-\q1 …
+\v 16 The day is yours, and the night is also yours.
+\q1 You set the sun and \add moon\add* in place.
 \q1
-\v 17 ◙
-\q2 …
+\v 17 You have set all the borders of the earth.
+\q1 You have made summer and winter.
 \q1
-\v 18 ◙
-\q2 …
+\v 18 Call to mind how the enemy hurled insults at you, Yahweh,
+\q1 and that a foolish nation has \add belittled\add* your name.
 \q1
-\v 19 ◙
-\q2 …
+\v 19 Don’t \add just allow a wild animal to take your dove’s life\add*.
+\q1 Don’t forget the life of your oppressed people forever.
 \q1
-\v 20 ◙
-\q1 …
+\v 20 Remember your \add promises as part of our\add* agreement,
+\q1 because the dark regions of the \add country\add* are full of places of violence.
 \q1
-\v 21 ◙
-\q1 …
+\v 21 Don’t let the oppressed be turned back in shame.
+\q1 Let the poor and oppressed \add have good reason to\add* praise \add you\add*.
 \q1
-\v 22 ◙
-\q1 …
+\v 22 \add Take action\add*, God; defend your own honour.
+\q1 \add Take notice of\add* how fools insult you all day \add long\add*.
 \q1
-\v 23 ◙
-\q2 …
+\v 23 Don’t forget the voice of your enemies
+\q1 or the uproar of those who continually defy you.
 \c 75
-\s1 The God the judge
-\d For the musical director: a song by Asap to be sung like singing of “Not you dereeti.”
+\s1 God the judge
+\d For the musical director: a song by Asaf to be sung to the tune of ‘Don’t destroy’.
 \q1
-\v 1 ◙
-\q1 …
-\q1 …
+\v 1 We give thanks to you, God.
+\q1 We thank \add you\add* \add because you reveal your presence\add*.
+\q1 People \add talk about the amazing things you’ve done\add*.
 \q1
-\v 2 ◙
-\q1 …
-\q2 …
+\v 2 At the appointed time I will judge fairly.
 \q1
-\v 3 ◙
-\q2 …
+\v 3 Although the earth and all \add its\add* inhabitants shake in fear,
+\q1 I’ll steady the earth’s \add foundations\add*. \qs (Instrumental break.)\qs*
 \q1
-\v 4 ◙
-\q2 …
+\v 4 I told the arrogant, “Stop bragging,”
+\q1 and the wicked, “Don’t \add blow your own trumpet\add*.
 \q1
-\v 5 ◙
-\q2 …
+\v 5 Don’t \add raise your head\add* \add ready to charge\add*.
+\q1 Don’t speak with \add your nose in the air\add*.”
 \q1
-\v 6 ◙
-\q1 …
+\v 6 It’s not from the east or from the west,
+\q1 and it is not from the wilderness that lifting up comes
 \q2
-\v 7 ◙
-\q1 …
-\q2 …
+\v 7 because God is the judge.
+\q1 He brings one down one and lifts up another
 \q1
-\v 8 ◙
-\q2 …
-\q1 …
-\q2 …
-\q2 …
+\v 8 because Yahweh has a full cup of foaming wine mixed with spices
+\q1 that he holds in his hand and pours it out.
+\q1 Surely all the wicked \add people\add* across the earth will drink it to the last drop.
 \q1
-\v 9 ◙
-\q1 …
+\v 9 \add But\add* I will continually talk about what you’ve done;
+\q1 I’ll sing praises to Yakov’s God.
 \q1
-\v 10 ◙
-\q2 …
+\v 10 He says, “I’ll \add destroy the power\add* of the wicked,
+\q1 but will \add increase the strength\add* of the righteous.”
 \c 76
-\s1 God victorious the his enemies
-\d For the musical director: a song by Asap \add to be accompanied by\add* stringed instruments.
+\s1 God is victorious
+\d For the musical director: a song by Asaf \add to be accompanied by\add* stringed instruments.
 \q1
-\v 1 ◙
-\q2 …
+\v 1 God has made himself known in Yehudah \add (Judah)\add*.
+\q1 His \add reputation\add* is great in Yisrael \add (Israel)\add*.
 \q1
-\v 2 ◙
+\v 2 His tent is in Salem.
+\q1 His residence is in Tsiyyon \add (Zion)\add*.
 \q1
-\v 3 ◙
-\q1 …
-\q1 …
-\q2 …
+\v 3 There he broke the arrows that were for the bow,
+\q1 the shield, the sword, and the other weapons of war. \qs (Instrumental break.)\qs*
 \q1
-\v 4 ◙
-\q2 …
+\v 4 You shine brightly and reveal your \add splendour\add*,
+\q1 above the hills \add where you killed your victims\add*.
 \q1
-\v 5 ◙
-\q1 …
+\v 5 The brave \add warriors\add* were plundered.
+\q1 They slept their \add last\add* sleep.
+\q1 All the \add warriors\add* were \add helpless\add*.
 \q1
-\v 6 ◙
-\q1 …
+\v 6 At your rebuke, God of Yakov,
+\q1 both rider and horse fell asleep.
 \q1
-\v 7 ◙
-\q1 …
-\q2 …
+\v 7 You, yes you, are to be feared.
+\q1 Who can stand in your sight when you are angry?
 \q1
-\v 8 ◙
-\q1 …
+\v 8 You made your judgement heard from heaven.
+\q1 The earth was afraid and silent
 \q2
-\v 9 ◙
-\q2 …
+\v 9 when you, God, \add took action\add* to execute judgment
+\q1 and to save all oppressed \add people\add* \add across the world\add*. \qs (Instrumental break.)\qs*
 \q1
-\v 10 ◙
-\q2 …
-\q1 …
+\v 10 Surely your angry judgment against humanity will bring you praise.
+\q1 You \add cloak\add* yourself with what’s left of your anger.
 \q1
-\v 11 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 11 Make promises to your God Yahweh, then keep them.
+\q1 May all who surround him bring gifts to him who \add expects to be obeyed\add*.
 \q1
-\v 12 ◙
-\q2 …
+\v 12 He humbles the spirit of the princes.
+\q1 He’s feared by the kings \add across the world\add*.
 \c 77
-\s1 The happiness even in difficulty
-\d For the musical director: a song by Asap Hidutun.
+\s1 God’s leadership
+\d For the musical director: a song for Yedutun by Asaf.
 \q1
-\v 1 ◙
-\q2 …
+\v 1 I will call out to God with my voice.
+\q1 I’ll call with my voice to God, and my God will hear me.
 \q1
-\v 2 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 2 \add When I had troubles\add*, I \add asked my master for help\add*.
+\q1 At night I stretched my hands out, and they didn’t get tired.
+\q1 \add The knot in my stomach wouldn’t go away\add*.
 \q1
-\v 3 ◙
-\q1 …
+\v 3 I thought of God as I groaned.
+\q1 I thought about him as I grew faint. \qs (Instrumental break.)\qs*
 \q1
-\v 4 ◙
-\q1 …
+\v 4 You held my eyes open.
+\q1 I was too troubled to speak.
 \q1
-\v 5 ◙
-\q2 …
+\v 5 I thought about the days of old,
+\q1 about times long past.
 \q1
-\v 6 ◙
-\q1 …
+\v 6 I call my song to remembrance in the night.
+\q1 I meditate within my heart,
+\q1 and my spirit makes searches around diligently.
 \q1
-\v 7 ◙
-\q1 …
+\v 7 Will my master reject me forever?
+\q1 Will he never again show me favour?
 \q1
-\v 8 ◙
-\q1 …
+\v 8 Was his loyal commitment gone forever?
+\q1 Had his promise failed forever?
 \q1
-\v 9 ◙
-\q1 …
+\v 9 Had God forgotten to be gracious?
+\q1 Had his anger \add masked\add* his compassion? \qs (Instrumental break.)\qs*
 \q1
-\v 10 ◙
+\v 10 I said, “This is \add what saddens me\add*:
+\q1 →the highest \add one\add* \add no longer using his power\add* \add to help\add* us.”
 \q1
-\v 11 ◙
-\q1 …
+\v 11 \add But\add* I will call to mind \add what you’ve done previously\add*, Yahweh.
+\q1 I will think about \add the wonderful things that you did in the past\add*.
 \q1
-\v 12 ◙
-\q2 …
+\v 12 I will ponder all your activities
+\q1 and will reflect on them.
 \q1
-\v 13 ◙
-\q1 …
+\v 13 Your way, God, is \add without imperfection\add*.
+\q1 What god compares to our \add terrrific\add* God?
 \q1
-\v 14 ◙
-\q1 …
+\v 14 You are the God who does miracles.
+\q1 You’ve revealed your strength among the peoples.
 \q1
-\v 15 ◙
-\q1 …
+\v 15 You gave your people victory by \add use of\add* your great power—
+\q1 the descendants of Yakov and Yosef. \qs (Instrumental break.)\qs*
 \q1
-\v 16 ◙
-\q2 …
+\v 16 The waters saw you, God.
+\q1 The waters saw you, and they were afraid.
+\q1 The \add ocean\add* depths trembled.
 \q1
-\v 17 ◙
-\q2 …
-\q1 …
+\v 17 The clouds poured down water.
+\q1 The cloudy skies also emitted \add a thunderous\add* sound.
+\q1 Your arrows \add of lightning\add* flew about.
 \q1
-\v 18 ◙
-\q2 …
-\q2 …
+\v 18 Your thunderous voice was heard in the wind.
+\q1 The lightning lit up the world.
+\q1 The earth trembled and shook.
 \q1
-\v 19 ◙
-\q2 …
+\v 19 Your path went through the sea
+\q1 and your trail through the surging waters,
+\q1 but your footprints couldn’t be seen.
 \q1
-\v 20 ◙
-\q1 …
+\v 20 You led your people like a flock
+\q1 \add under the supervision\add* of Mosheh and Aharon \add (Moses and Aaron)\add*.
 \c 78
-\s1 The teaching of God of his people
-\d The song\f + \fr 78:0 \ft In Hebrew, ‘maskil’ is perhaps the name of this class of song.\f* of Asap.
+\s1 God’s past goodness
+\d A song\f + \fr 78:0 \ft In Hebrew, ‘maskil’ is perhaps the name of this class of song.\f* by Asaf.
 \q1
-\v 1 ◙
-\q1 …
+\v 1 Hear my teaching, my people.
+\q1 Listen to \add what I’m saying\add*.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 I will \add speak out\add* in parables;
+\q1 I will sing about hidden things about the past.
 \q2
-\v 3 ◙
-\q2 …
+\v 3 These are things that we have heard and learnt—
+\q1 things that our ancestors have told us.
 \q1
-\v 4 ◙
-\q2 …
-\q2 …
-\q2 …
+\v 4 We won’t keep them from their descendants.
+\q1 We’ll tell the next generation about Yahweh’s praiseworthy actions,
+\q1 his strength, and the \add miracles\add* that he has done.
 \q1
-\v 5 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 5 \add Also\add* he established a rule in Yakov
+\q1 and appointed a law in Yisrael.
+\q1 He commanded our ancestors
+\q1 →that they were to teach them to their children.
+\q1
+\v 6 He commanded this so that the generation to come might know his decrees—
+\q1 the children not yet born who should tell them in turn to their own children.
+\q1
+\v 7 Then they would place their hope in God
+\q1 and not forget \add what he’s done\add*
+\q1 but \add obey\add* his commands.
+\q1
+\v 8 Then they would not be like their ancestors,
+\q1 \add who were\add* a stubborn and rebellious generation—
+\q1 a generation who \add didn’t control their\add* hearts,
+\q1 and whose spirits were not committed and faithful to God.
+\q1
+\v 9 The Efraimites had \add many\add* archers,
+\q1 but they turned back on the day of battle.
+\q1
+\v 10 They didn’t keep \add their\add* agreement with God,
+\q1 and they refused to \add obey\add* his law.
+\q1
+\v 11 They forgot \add about what he’d done\add*—
+\q1 the wonderful things that he had shown them.
+\q1
+\v 12 They forgot the marvellous things that he’d done
+\q1 in the sight of their ancestors in Egypt \add (Heb. Mitsrayim)\add* in the Tsoan region.
+\q1
+\v 13 He divided the sea and led them across it.
+\q1 He made the \add water on each side\add* stand up like walls.
+\q1
+\v 14 In the daytime he led them with a cloud,
+\q1 ^and \add throughout\add* the night with the light from fire.
+\q1
+\v 15 He split the rocks in the wilderness,
+\q1 and he gave them \add plenty of\add* water—\add enough to fill the ocean\add*.
+\q1
+\v 16 He made streams flow out of the rock
+\q1 and made the water flow like rivers.
+\q1
+\v 17 \add Yet\add* they continued to sin against him,
+\q1 rebelling against the highest \add one\add* in the wilderness.
+\q1
+\v 18 They challenged God in their hearts
+\q1 by asking for food to satisfy their appetites.
+\q1
+\v 19 They spoke against God, saying,
+\q1 “Can God really lay out \add food on\add* a table for us in the wilderness?
+\q1
+\v 20 See, when he struck the rock, \add water\add* gushed out
+\q1 and streams overflowed.
+\q1 But can he give food also?
+\q1 Will he provide meat for his people?”
+\q1
+\v 21 When Yahweh heard that, he was angry
+\q1 and his fire burned against Yakov.
+\q1 His anger attacked Yisrael,
+\q1
+\v 22 because they didn’t believe in God
+\q1 and didn’t trust \add that he would save them\add*.
+\q1
+\v 23 Yet he commanded the skies above
+\q1 and opened the doors in the sky.
 \q2
-\v 6 ◙
-\q2 …
+\v 24 He rained down manna for them to eat.
+\q1 He gave them the grain from heaven.
 \q1
-\v 7 ◙
-\q2 …
-\q2 …
+\v 25 People ate angels’ bread.
+\q1 He sent them plenty of food.
 \q1
-\v 8 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 26 He caused the east wind to blow in the sky,
+\q1 and by his power he guided the south wind.
 \q1
-\v 9 ◙
-\q2 …
+\v 27 He rained meat down on them like dust—
+\q1 →birds as numerous as the sand \add on the seashore\add*.
 \q1
-\v 10 ◙
-\q1 …
+\v 28 They fell in the middle of their camp—
+\q1 all around their tents.
 \q1
-\v 11 ◙
-\q1 …
+\v 29 So they ate and were full.
+\q1 He gave them what they craved.
 \q1
-\v 12 ◙
-\q2 …
-\q1
-\v 13 ◙
-\q1 …
-\q1
-\v 14 ◙
-\q2 …
-\q1
-\v 15 ◙
-\q2 …
-\q2 …
-\q1
-\v 16 ◙
-\q2 …
-\q1
-\v 17 ◙
-\q2 …
-\q1
-\v 18 ◙
-\q2 …
-\q1
-\v 19 ◙
-\q2 …
-\q1
-\v 20 ◙
-\q2 …
-\q1 …
-\q1 …
-\q1
-\v 21 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 30 \add But\add* they hadn’t filled \add their stomachs\add* yet—
+\q1 their food was still in their mouths
 \q2
-\v 22 ◙
-\q2 …
+\v 31 and then God’s anger attacked them
+\q1 and killed the strongest of them.
+\q1 He brought down Yisrael’s young men.
 \q1
-\v 23 ◙
-\q2 …
-\q2
-\v 24 ◙
-\q2 …
+\v 32 Despite that, they continued to sin
+\q1 and \add wouldn’t trust in the wonderful things he would do\add*.
 \q1
-\v 25 ◙
-\q1 …
+\v 33 \add So\add* their days were ended uselessly.
+\q1 Their years were filled with terror.
 \q1
-\v 26 ◙
-\q2 …
+\v 34 Whenever God afflicted them, they would start to search for him,
+\q1 and they would return and earnestly look for him.
 \q1
-\v 27 ◙
-\q2 …
+\v 35 They would call to mind that God was their \add security\add*
+\q1 and that the highest God was their rescuer.
 \q1
-\v 28 ◙
-\q2 …
+\v 36 But they’d flatter him with their mouth,
+\q1 and lie to him with their words.
 \q1
-\v 29 ◙
-\q2 …
+\v 37 Their hearts weren’t firmly fixed on him,
+\q1 and they weren’t faithful to his agreement.
 \q1
-\v 30 ◙
-\q2 …
-\q2
-\v 31 ◙
-\q1 …
-\q2 …
+\v 38 Yet he, being merciful, forgave their \add disobedience\add* and didn’t destroy them.
+\q1 \add Yes,\add* many times he held back his anger
+\q1 and didn’t stir up all his rage.
 \q1
-\v 32 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 39 He called to mind that they were \add only\add* made of flesh—
+\q1 a \add breath of\add* wind that passes away and doesn’t return.
 \q1
-\v 33 ◙
-\q2 …
+\v 40 How often they rebelled against him in the wilderness,
+\q1 and grieved him in \add those\add* barren regions.
 \q1
-\v 34 ◙
-\q1 …
-\q1 …
+\v 41 Again and again they \add challenged\add* God
+\q1 and offended the holy \add one\add* of Israel.
 \q1
-\v 35 ◙
-\q2 …
+\v 42 They didn’t think about his power,
+\q1 \add or\add* \add about\add* how he’d rescued them from \add their\add* enemy,
 \q1
-\v 36 ◙
-\q2 …
+\v 43 when he performed his miracles in Egypt
+\q1 and his wonders in the Tsoan region.
 \q1
-\v 37 ◙
-\q2 …
+\v 44 He turned the Egyptians’ rivers into blood
+\q1 so that they couldn’t drink from their streams.
 \q1
-\v 38 ◙
-\q2 …
-\q2 …
-\q1 …
-\q2 …
+\v 45 He sent swarms of flies that \add bit\add* them
+\q1 and frogs that overran their land.
 \q1
-\v 39 ◙
-\q2 …
+\v 46 He gave their crops to the \add grasshoppers\add*
+\q1 and \add the results of\add* their labour to the \add locusts\add*.
 \q1
-\v 40 ◙
-\q2 …
+\v 47 He destroyed their grapevines with hail
+\q1 and their sycamore fig trees with frost.
 \q1
-\v 41 ◙
-\q2 …
+\v 48 He rained hail on their cattle
+\q1 and hurled lightning bolts at their livestock.
 \q1
-\v 42 ◙
-\q2 …
+\v 49 The fierceness of his anger lashed out against them.
+\q1 He sent rage, fury, and trouble
+\q1 like agents to bring disaster.
 \q1
-\v 43 ◙
-\q2 …
+\v 50 He leveled a path for his anger.
+\q1 He didn’t spare them from death
+\q1 but gave them over to the plague.
 \q1
-\v 44 ◙
-\q2 …
+\v 51 He killed all the firstborn in Egypt—
+\q1 the firstborn of their \add reproductive\add* strength in Ham’s tents.
 \q1
-\v 45 ◙
-\q2 …
+\v 52 He led his own people out like sheep
+\q1 and guided them through the wilderness like a flock.
 \q1
-\v 46 ◙
-\q2 …
+\v 53 He led them secure and unafraid,
+\q1 \add but\add* the sea overwhelmed their enemies.
 \q1
-\v 47 ◙
-\q2 …
+\v 54 Then he brought them to the border of his holy land—
+\q1 to this mountain that he acquired \add with his power\add*.
 \q1
-\v 48 ◙
-\q2 …
+\v 55 He drove out the nations ahead of them
+\q1 and assigned them their inheritance.
+\q1 He settled the Israeli tribes in their tents.\x + \xo 78:55: \xt Josh 11:16-23.\x*
 \q1
-\v 49 ◙
-\q2 …
-\q1 …
+\v 56 \add Yet\add* they challenged and defied the highest God
+\q1 and didn’t \add obey\add* his solemn commands.
 \q1
-\v 50 ◙
-\q2 …
-\q2 …
-\q2 …
+\v 57 They were unfaithful and acted treacherously like their ancestors.
+\q1 They were as unreliable as a faulty bow.
 \q1
-\v 51 ◙
-\q2 …
+\v 58 They made him angry with their \add hilltop shrines\add*
+\q1 and provoked him to jealous anger with their idols.
 \q1
-\v 52 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 59 When God heard this, he was angry
+\q1 and completely rejected Israel.
 \q1
-\v 53 ◙
-\q1 …
+\v 60 He abandoned the sanctuary at Shiloh—
+\q1 the tent where he had lived among people.\x + \xo 78:60: \xt Josh 18:1; Jer 7:12-14; 26:6.\x*
 \q1
-\v 54 ◙
-\q2 …
+\v 61 He allowed his strength\f + \fr 78:61 \ft Probably referring to the sacred chest containing the tablets with the Sinai agreement written on them. But there’s also connotations of Shimshon’s/Samson’s capture in this line.\f* to be captured
+\q1 and gave \add control of his splendour to the enemy\add*.
 \q1
-\v 55 \x + \xo 78:55: \xt Josh 11:16-23.\x*◙
-\q2 …
-\q2 …
+\v 62 He handed his people over to the sword,
+\q1 and he was angry with his heritage.
 \q1
-\v 56 ◙
-\q2 …
+\v 63 Fire devoured their young men,
+\q1 and their young women had no wedding songs.
 \q1
-\v 57 ◙
-\q2 …
-\q1 …
+\v 64 Their priests fell by the sword,
+\q1 and their widows \add had no opportunity to\add* weep.
 \q1
-\v 58 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 65 Then my master awakened like someone who’d been asleep—
+\q1 like a warrior who shouts because \add he’s been drinking\add*.
 \q1
-\v 59 ◙
-\q1 …
+\v 66 He drove his opponents back.
+\q1 He put them to perpetual shame.
 \q1
-\v 60 \x + \xo 78:60: \xt Josh 18:1; Jer 7:12-14; 26:6.\x*◙
-\q2 …
+\v 67 He rejected Yosef’s tent,
+\q1 and he didn’t chose the tribe of Efraim.
 \q1
-\v 61 ◙
-\q2 …
+\v 68 He chose the tribe of Yehudah
+\q1 and Mt. Tsiyyon \add (Zion)\add* that he loved.
 \q1
-\v 62 ◙
-\q2 …
+\v 69 He built his sanctuary like the heavens—
+\q1 like the earth that he has established forever.
 \q1
-\v 63 ◙
-\q2 …
+\v 70 He chose his servant David,
+\q1 and took him from the sheep pens.
 \q1
-\v 64 ◙
-\q2 …
+\v 71 He took him from following the ewes with their young,
+\q1 and he brought him to shepherd Yakov, his people,
+\q2 and Yisrael, his heritage.
 \q1
-\v 65 ◙
-\q2 …
-\q1
-\v 66 ◙
-\q2 …
-\q1
-\v 67 ◙
-\q2 …
-\q1
-\v 68 ◙
-\q2 …
-\q1
-\v 69 ◙
-\q2 …
-\q1
-\v 70 ◙
-\q2 …
-\q1
-\v 71 ◙
-\q2 …
-\q2 …
-\q1
-\v 72 ◙
-\q2 …
+\v 72 David shepherded them with \add sincere\add* integrity,
+\q1 and he guided them with his \add skillful\add* hands.
 \c 79
-\s1 The praying for restoration of nation
-\d A song by Asap.
+\s1 A prayer for national restoration
+\d A song by Asaf.
 \q1
-\v 1 ◙
-\q1 …
-\q2 …
+\v 1 God, foreign nations have come into \add the land you gave as an\add* inheritance.
+\q1 They have defiled your holy temple.
+\q1 They have turned Yerushalem \add (Jerusalem)\add* into a heap of ruins.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 They have given the dead bodies of your servants as food to the birds in the skies—
+\q1 the bodies of your faithful ones to the animals on the ground.
 \q1
-\v 3 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 3 They’ve shed their blood around Yerushalem like water,
+\q1 and there wasn’t anyone to bury them.
 \q1
-\v 4 ◙
-\q2 …
+\v 4 We have become a reproach for our neighbours—
+\q1 mocked and scorned by those around us.
 \q1
-\v 5 ◙
-\q1 …
-\q1 …
+\v 5 How long, Yahweh? Will you stay angry forever?
+\q1 For how long will your jealous anger burn like fire?
 \q1
-\v 6 ◙
-\q2 …
+\v 6 Pour out your rage on the nations that don’t know you
+\q1 and on the kingdoms that don’t \add pray to you\add*,
 \q1
-\v 7 ◙
-\q2 …
+\v 7 because they’ve devoured Yakov \add (Jacob/Israel)\add*
+\q1 and destroyed his villages.
 \q1
-\v 8 ◙
-\q1 …
-\q2 …
+\v 8 Don’t hold the sins of our ancestors against us.
+\q1 May \add we experience your acts of mercy\add*, because we’re very \add discouraged\add*.
 \q1
-\v 9 ◙
-\q1 …
-\q1 …
+\v 9 Help us, God of our salvation, for the sake of the glory of your name.
+\q1 Save us and forgive our sins for the sake of your \add reputation\add*.
 \q1
-\v 10 ◙
-\q2 …
-\q1 …
+\v 10 Why should the nations say, “Where is their God?”
+\q1 Let your servants’ blood that was shed
+\q1 be avenged on the nations before our eyes.
 \q1
-\v 11 ◙
-\q1 …
-\q2 …
+\v 11 May the groans of the prisoners come before you.
+\q1 Keep \add those condemned to\add* death alive with the greatness of your power.
 \q1
-\v 12 ◙
-\q2 …
+\v 12 Pay back seven times as much into the laps of our neighbouring countries
+\q1 as \add repayment for\add* the insults with which they have insulted you, Lord.
 \q1
-\v 13 ◙
-\q2 …
-\q1 …
+\v 13 So we your people, and sheep of your pasture,
+\q1 will give you thanks forever.
+\q1 We will tell your praises to all generations.
 \c 80
-\s1 The praying for of restoration of nation
-\d For the musical director: a song by Asap to be sung like singing of ‘Lilies of Agreement.’
+\s1 A prayer for national restoration
+\d For the musical director: a song by Asaf to be sung to the tune of ‘Lilies of Agreement.’
 \q1
-\v 1 ◙
-\q1 …
-\q1 …
-\q2 …
+\v 1 Pay attention, Yisrael’s shepherd.
+\q1 You who lead Yosef \add (Joseph/Israel)\add* like a flock;
+\q1 You who sit above the winged creatures \add on the sacred chest\add*, shine on us!
 \q1
-\v 2 ◙
-\q1 …
+\v 2 In the sight of Efraim and Benyamin and Menashsheh, stir up your power.
+\q1 Come and save us.
 \q1
-\v 3 ◙
-\q1 …
-\q2 …
+\v 3 God, restore us;
+\q1 \add Show us your favour\add* and then we’ll be saved.
 \q1
-\v 4 ◙
-\q1 …
+\v 4 Army commander Yahweh,
+\q1 how long will you be angry at your people when they pray?
 \q1
-\v 5 ◙
-\q2 …
+\v 5 You have fed them with bread \add made from\add* tears
+\q1 and given them tears to drink in great quantities.
 \q1
-\v 6 ◙
-\q2 …
+\v 6 You make us something for our neighbours to argue over,
+\q1 and our enemies \add laugh about\add* us among themselves.
 \q1
-\v 7 ◙
-\q1 …
-\q2 …
+\v 7 Army commander God, restore us.
+\q1 \add Show us your favour\add* and then we’ll be saved.
 \q1
-\v 8 ◙
-\q2 …
+\v 8 You brought a grapevine out of Egypt.
+\q1 You drove out nations then transplanted it.
 \q1
-\v 9 ◙
-\q2 …
+\v 9 You cleared the land for it,
+\q1 →and \add the grapevine\add* took root and filled the land.
 \q1
-\v 10 ◙
-\q2 …
+\v 10 The mountains were covered with its shade.
+\q1 God’s cedars \add were covered\add* by its branches.
 \q1
-\v 11 ◙
-\q2 …
+\v 11 It sent out its branches as far as the sea
+\q1 and its shoots to the \add Euphrates\add* River.
 \q1
-\v 12 ◙
-\q1 …
+\v 12 Why have you broken down \add the walls around it\add*
+\q1 →so that all who pass by along the road pick its fruit?
 \q1
-\v 13 ◙
-\q2 …
+\v 13 The boars out of the forest ruin it,
+\q1 and the animals in the countryside feed on it.
 \q1
-\v 14 ◙
-\q1 …
+\v 14 Turn back, army commander God.
+\q1 Look down from heaven and take notice and take care of this grapevine.
 \q1
-\v 15 ◙
-\q2 …
+\v 15 This is the root that you planted \add by your power\add*—
+\q1 the shoot that you made grow.
 \q1
-\v 16 ◙
-\q1 …
+\v 16 It has been cut down and burnt.
+\q1 They perish at your rebuke.
 \q1
-\v 17 ◙
-\q2 …
+\v 17 May your hand be on the man \add you’ve given your power to\add*—
+\q1 on the son of humanity who you made strong for yourself.
 \q1
-\v 18 ◙
-\q1 …
+\v 18 Then we won’t turn away from you.
+\q1 Revive us, and we’ll \add always\add* \add pray to you\add*.
 \q1
-\v 19 ◙
-\q1 …
-\q2 …
+\v 19 Army command Yahweh God, restore us.
+\q1 \add Show us your favour\add* and then we’ll be saved.
 \c 81
-\s1 A praise song of God
-\d For the musical director: a song by Asap \add to be accompanied by\add* stringed instrument.\f + \fr 81:0 \ft In Hebrew, “Gitit” instrument and if voice possibly.\f*
+\s1 Thanking God for relief
+\d For the musical director: a song by Asaf \add to be accompanied by\add* stringed instrument.\f + \fr 81:0 \ft In Hebrew, ‘Gitit’ could be an instrument or type of voice.\f*
 \q1
-\v 1 ◙
-\q1 …
+\v 1 Sing aloud to God our strength.
+\q1 Shout out to Yacob’s God with happiness.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 Sing a song and play the tambourine—
+\q1 the pleasant lyre with the harp.
 \q1
-\v 3 ◙
-\q2 …
+\v 3 Blow the trumpet on the day of the new moon,
+\q1 on the day of the full moon, when our celebration begins,
 \q1
-\v 4 ◙
-\q2 …
+\v 4 because it’s a statute for Israel—
+\q1 a decree given by Yakov’s God.
 \q1
-\v 5 ◙
-\q2 …
-\q2 …
+\v 5 He issued it as a regulation in Yosef \add (Joseph, but referring to Yisrael)\add*
+\q1 when he went against Egypt,
+\q1 where I heard a voice that I didn’t recognize:
 \q1
-\v 6 ◙
-\q2 …
+\v 6 “I removed the burden from his shoulder.
+\q1 His hands were freed from \add having to hold\add* the basket.
 \q1
-\v 7 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 7 In your distress you called out, and I helped you.
+\q1 I answered you from a dark thundercloud.
+\q1 I tested you at the waters of Meribah. \qs (Instrumental break.)\qs*
 \q1
-\v 8 ◙
-\q2 …
+\v 8 Listen, my people, \add yes,\add* I’ll warn you, Israel.
+\q1 If you would only listen to me.
 \q1
-\v 9 ◙
-\q2 …
+\v 9 There mustn’t be any foreign god among you.
+\q1 You mustn’t worship any foreign god.
 \q1
-\v 10 ◙
-\q2 …
-\q1 …
+\v 10 I’m your God Yahweh who brought you out of Egypt.
+\q1 Open your mouth wide, and I’ll fill it.
 \q1
-\v 11 ◙
-\q1 …
+\v 11 \add But\add* my people didn’t listen to my words.
+\q1 Yisrael didn’t obey me.
 \q1
-\v 12 ◙
-\q2 …
+\v 12 So I \add let them go\add* their own stubborn way
+\q1 so that they could do whatever seemed okay to them.
 \q1
-\v 13 ◙
-\q2 …
+\v 13 If only my people would listen to me.
+\q1 If only my people would \add follow\add* my ways.
 \q1
-\v 14 ◙
-\q2 …
+\v 14 \add If they did,\add* I’d quickly subdue their enemies
+\q1 and \add use my strength\add* against \add those who oppress them\add*.
 \q1
-\v 15 ◙
-\q2 …
-\q1 …
+\v 15 May those who hate Yahweh cringe in fear before him.
+\q1 May they be humiliated forever.
 \q1
-\v 16 ◙
-\q1 …
+\v 16 I would feed Yisrael with the finest \add bread\add*.
+\q1 I would satisfy you with honey out of the rock.”
 \c 82
-\s1 The God the greatest of kings
-\d A song by Asap.
+\s1 God the defender
+\d A song by Asaf.
 \q1
-\v 1 ◙
-\q1 …
+\v 1 God stands in the divine assembly.
+\q1 He renders judgment among the gods.
 \q1
-\v 2 ◙
-\q1 …
+\v 2 For how long will you judge unjustly
+\q1 and show favouritism to the wicked? \qs (Instrumental break.)\qs*
 \q1
-\v 3 ◙
-\q1 …
+\v 3 Defend the poor and the fatherless.
+\q1 Maintain the rights of those who’re afflicted and destitute.
 \q1
-\v 4 ◙
-\q1 …
+\v 4 Rescue the poor and needy—
+\q1 \add help them escape from the control of the wicked\add* \add people\add*.
 \q1
-\v 5 ◙
-\q2 …
-\q1 …
+\v 5 They neither know nor understand.
+\q1 They wander around in the darkness.
+\q1 All the earth’s foundations crumble.
 \q1
-\v 6 ◙
-\q1 …
+\v 6 I said, “You are ‘gods’,
+\q1 and all of you are sons of the highest \add one\add*.
 \q1
-\v 7 ◙
-\q1 …
+\v 7 Nevertheless you will die like men
+\q1 and fall like one of the \add leaders\add*.”
 \q1
-\v 8 ◙
-\q2 …
+\v 8 \add Take action\add*, God, judge the earth,
+\q1 because you have an inheritance in all the nations.
 \c 83
-\s1 The praying so that victory the enemies of Israel
-\d A song by Asap.
+\s1 Praying for victory over enemies
+\d A song by Asaf.
 \q1
-\v 1 ◙
-\q1 …
+\v 1 God, don’t be silent.
+\q1 Don’t ignore us and remain unmoved, God.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 Look, your enemies are making a commotion,
+\q1 and those who hate you \add starting to cause trouble\add*.
 \q1
-\v 3 ◙
-\q2 …
-\q1 …
+\v 3 They conspire against your people,
+\q1 and plan together against your protected ones.
 \q1
-\v 4 ◙
-\q2 …
+\v 4 They’ve said, “Come, and let’s destroy them as a nation,
+\q1 →then the name of Yisrael will \add soon be forgotten\add*.”
 \q1
-\v 5 ◙
-\q2 …
+\v 5 They schemed together with \add a unified\add* strategy.
+\q1 they made an alliance against you—
 \q1
-\v 6 ◙
-\q1 …
+\v 6 the tents of Edom and the Ishmaelites,
+\q1 of Moab and the Hagrites,
 \q2
-\v 7 ◙
-\q2 …
+\v 7 Gebal, Ammon, Amalek,
+\q1 and also Philistia and the inhabitants of Tsor.
 \q2
-\v 8 ◙
-\q1 …
+\v 8 Assyria also has joined with them.
+\q1 They have become an arm for the descendants of Lot. \qs (Instrumental break.)\qs*
 \q1
-\v 9 ◙
-\q2 …
+\v 9 Do to them as you did to Midyan,\x + \xo 83:9 \xt Jdg 7–8.\x*
+\q1 as you did to Sisera and to Yabin at the Kishon River.\x + \xo 83:9 \xt Jdg 4–5.\x*
 \q2
-\v 10 ◙
+\v 10 They perished at Eyndor
+\q1 →and became like dung on the ground.
 \q1
-\v 11 ◙
-\q2 …
+\v 11 Make their nobles like Orev and Zeev,
+\q1 and all their princes like Zevah and Tsalmunna.
 \q1
-\v 12 ◙
-\q2 …
+\v 12 They said, “Let’s take God’s pastures for ourselves.”
 \q1
-\v 13 ◙
-\q2 …
+\v 13 My God, make them like the whirling dust.
+\q1 \add Make them\add* like chaff \add blown around by\add* the wind,
 \q1
-\v 14 ◙
-\q2 …
+\v 14 like the fire that burns a forest,
+\q1 \add or\add* like a flame that sets mountains on fire.
 \q1
-\v 15 ◙
-\q2 …
+\v 15 Chase them with your strong wind,
+\q1 and terrify them with your windstorm.
 \q1
-\v 16 ◙
-\q2 …
+\v 16 \add Cause them to be very ashamed\add*
+\q1 so that they might \add want to find out more about you\add*, Yahweh.
 \q1
-\v 17 ◙
-\q1 …
+\v 17 May they be put to shame and be terrified forever.
+\q1 May they perish in disgrace.
 \q1
-\v 18 ◙
-\q2 …
-\q1 …
+\v 18 Then they will know that you alone, Yahweh,
+\q1 are to be honoured as the highest \add one\add* over all the earth.
 \c 84
-\s1 Eg-iman-iman a of house of God
-\d For the musical director: the song of Kura’s descendants \add to be accompanied by\add* stringed instrument.\f + \fr 84:0 \ft In Hebrew, “Gitit” instrument and if voice possibly.\f*
+\s1 Longing to be in Yahweh’s courtyards
+\d For the musical director: a song by Korah’s descendants \add to be accompanied by\add* stringed instrument.\f + \fr 84:0 \ft In Hebrew, ‘Gitit’ could be an instrument or type of voice.\f*
 \q1
-\v 1 ◙
-\q2 …
+\v 1 How lovely is the place where you live,
+\q1 army commander Yahweh.
 \q1
-\v 2 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 2 I long \add to be in\add* Yahweh’s \add temple\add* courtyards—my desire for them has made me exhausted.
+\q1 My heart and all of my being call out to the living God.
 \q1
-\v 3 ◙
-\q1 …
+\v 3 Even the sparrow has found herself a house
+\q1 and the swallow a nest for herself where she may lay her young
+\q1 near your altars, army commander Yahweh, my King, and my God.
 \q1
-\v 4 ◙
-\q2 …
+\v 4 Blessed are they who live in your house;
+\q1 They praise you continually. \qs (Instrumental break.)\qs*
 \q1
-\v 5 ◙
-\q2 …
+\v 5 Blessed is the person who \add trusts you for their strength\add*—
+\q1 who \add thinks about how to travel\add* to \add Mt.\add* Tsiyyon \add (Zion)\add*.
 \q1
-\v 6 ◙
-\q2 …
-\q1 …
+\v 6 Passing through the Valley of Tears, they find springs of water to drink.
+\q1 The early rains cover it with blessings
 \q1
-\v 7 ◙
-\q2 …
+\v 7 They go from strength to strength.
+\q1 Every one of them appears before God in Tsiyyon.
 \q1
-\v 8 ◙
-\q2 …
-\q1 …
+\v 8 Army commander God Yahweh, hear my prayer.
+\q1 God of Yakov, listen to what I’m saying. \qs (Instrumental break.)\qs*
 \q1
-\v 9 ◙
-\q2 …
+\v 9 God, watch over our \add defender\add*.
+\q1 Show concern for your anointed \add one\add*.
 \q1
-\v 10 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 10 \add Yes,\add* one day in your courtyards is better than a thousand elsewhere.
+\q1 I would rather be a doorkeeper in my God’s house,
+\q1 than to live in the tents of the wicked,
 \q1
-\v 11 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 11 because Yahweh God is our sun and shield.
+\q1 Yahweh will give grace and glory.
+\q1 He doesn’t withhold any good thing from those who walk in integrity.
 \q1
-\v 12 ◙
-\q2 …
+\v 12 Army commander Yahweh,
+\q1 blessed is the person who trusts in you.
 \c 85
-\s1 The praying for of peace/prosperity of nation
-\d For the musical director: the song of Kura’s descendants.
+\s1 Prayer for national peace
+\d For the musical director: a song by Korah’s descendants.
 \q1
-\v 1 ◙
-\q2 …
+\v 1 Yahweh, you’ve showed favour to your \add country\add*.
+\q1 You have restored Yakov’s well-being.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 You have forgiven your people’s \add disobedience\add*.
+\q1 You’ve covered over all their sin. \qs (Instrumental break.)\qs*
 \q1
-\v 3 ◙
-\q2 …
+\v 3 You have withdrawn all your rage.
+\q1 You’ve turned back from your hot anger.
 \q1
-\v 4 ◙
-\q1 …
+\v 4 Restore us, God \add who saves us\add*,
+\q1 and \add don’t stay upset\add* with us.
 \q1
-\v 5 ◙
-\q1 …
+\v 5 Will you be angry with us forever?
+\q1 Will you remain angry throughout future generations?
 \q1
-\v 6 ◙
-\q1 …
+\v 6 Won’t you revive us again,
+\q1 then your people could be happy about you.
 \q1
-\v 7 ◙
-\q2 …
+\v 7 Show us your loyal commitment, Yahweh.
+\q1 Grant us your salvation.
 \q1
-\v 8 ◙
-\q2 …
-\q1 …
+\v 8 I will listen to what Yahweh God says,
+\q1 because he will make peace with his people—his faithful ones,
+\q1 yet they mustn’t turn \add back\add* again to \add doing foolish things\add*.
 \q1
-\v 9 ◙
-\q2 …
+\v 9 \add Certainly he must be close to rescuing those who strive to obey\add* him,
+\q1 then glory\f + \fr 85:9 \ft Many translations add ‘his’ to explain that it’s God’s glory, but we’ve left it ambiguous because it could also refer to the people’s glory/honour.\f* will remain in our land.
 \q1
-\v 10 ◙
-\q1 …
+\v 10 Loyal commitment and trustworthiness have met together.
+\q1 Righteousness and peace have kissed each other.
 \q1
-\v 11 ◙
-\q2 …
+\v 11 Trustworthiness springs up from the ground,
+\q1 and righteousness looks down from the sky.
 \q1
-\v 12 ◙
-\q2 …
+\v 12 Yes, Yahweh will give his good blessings,
+\q1 →and then our land will yield its crops.
 \q1
-\v 13 ◙
-\q2 …
+\v 13 Righteousness will go before \add Yahweh\add*,
+\q1 →and make a way for his footsteps.
 \c 86
-\s1 The large very love of God
-\d The praying for David.
+\s1 God’s great love
+\d A prayer of David’s.
 \q1
-\v 1 ◙
-\q2 …
+\v 1 \add Turn this way\add* and listen, Yahweh,
+\q1 and answer me because I’m weak and needy.
 \q1
-\v 2 ◙
-\q1 …
-\q1 …
+\v 2 Protect me, because I’m faithful.
+\q1 My God, save your servant who trusts in you.
 \q1
-\v 3 ◙
-\q2 …
+\v 3 Be merciful to me, my master,
+\q1 because I call out to you \add for help\add* all day long.
 \q1
-\v 4 ◙
-\q2 …
+\v 4 Make your servant glad,
+\q1 because I \add sincerely offer myself\add* to you, my master.
 \q1
-\v 5 ◙
-\q2 …
+\v 5 You, my master, are good, and ready to forgive,
+\q1 and you show loyal commitment to \add everyone who calls\add* out to you \add for help\add*.
 \q1
-\v 6 ◙
-\q2 …
+\v 6 Yahweh, listen to my prayer.
+\q1 Hear the sound of my pleas.
 \q1
-\v 7 ◙
-\q2 …
+\v 7 In my \add times\add* of trouble, I call to you \add for help\add*,
+\q1 because you’ll answer me.
 \q1
-\v 8 ◙
-\q2 …
+\v 8 There isn’t \add any other god who’s comparable with you\add*, my master.
+\q1 \add No one else does the things that you do\add*.
 \q1
-\v 9 ◙
-\q2 …
-\q1 …
+\v 9 All the nations that you’ve made will come and bow before you, my master.
+\q1 They will honour your name
 \q1
-\v 10 ◙
-\q1 …
+\v 10 because you are powerful and do wonderful things.
+\q1 You alone are God.
 \q1
-\v 11 ◙
-\q2 …
-\q1 …
+\v 11 Teach me your ways, Yahweh, then I’ll walk in your truth.
+\q1 \add Give me an undivided\add* heart to revere \add you\add*.
 \q1
-\v 12 ◙
-\q1 …
+\v 12 My master God, I’ll praise you with my \add entire being\add*.
+\q1 I’ll \add praise you\add* forever
 \q1
-\v 13 ◙
-\q1 …
+\v 13 because your loyal commitment to me is \add so\add* great.
+\q1 You have rescued my life from the depths of the grave.
 \q1
-\v 14 ◙
-\q2 …
-\q1 …
+\v 14 God, the arrogant have risen up against me.
+\q1 A gang of violent men seek my life—
+\q1 they \add don’t care what you might do to them\add*.
 \q1
-\v 15 ◙
-\q2 …
-\q2 …
+\v 15 But you, my master, are a merciful and gracious God,
+\q1 slow to \add get angry\add*, and \add generous with\add* loyal commitment and trustworthiness.
 \q1
-\v 16 ◙
-\q1 …
-\q2 …
+\v 16 Turn toward me and have mercy on me.
+\q1 Give your strength to your servant.
+\q1 Save the son of your servant woman.
 \q1
-\v 17 ◙
-\q2 …
-\q2 …
+\v 17 Show me a sign of your favour,
+\q1 then those who hate me will see it and be put to shame
+\q1 because you, Yahweh, have helped me and comforted me.
 \c 87
-\s1 The miracles done by God
-\d The song of Kura’s descendants.
+\s1 Praising Tsiyyon (Zion)
+\d A song by Korah’s descendants.
 \q1
-\v 1 ◙
-\q2
-\v 2 ◙
-\q2 …
+\v 1 On the sacred hill stands the city he founded.
 \q1
-\v 3 ◙
+\v 2 Yahweh loves Tsiyyon’s \add (Zion’s)\add* gates
+\q1 more than all of Yakov’s tents.
 \q1
-\v 4 ◙
-\q2 …
-\q1 …
-\q1 …
+\v 3 Wonderful things are said about you, city of God. \qs (Instrumental break.)\qs*
 \q1
-\v 5 ◙
-\q2 …
+\v 4 “I mention Rahab and Babylon to my followers.
+\q1 See, there are Philistia, and Tsor \add (Tyre)\add*, along with Kush—
+\q1 and will say, ‘This one was born there.’ ”
 \q1
-\v 6 ◙
-\q2 …
+\v 5 It will be said about Tsiyyon, “Each of those was born in her,
+\q1 and the highest \add one\add* himself will establish her.”
 \q1
-\v 7 ◙
-\q2 …
+\v 6 Yahweh writes in the census book of the nations,
+\q1 “That one was born there.” \qs (Instrumental break.)\qs*
+\q1
+\v 7 So also the singers and the dancers say together,
+\q1 “All my fountains are in you.”
 \c 88
-\s1 Always requesting from God
-\d For the musical director: the song of Kura’s descendants. This is to be sung like singing of “Mahalat Linut,” the song\f + \fr 88:0 \ft In Hebrew, ‘maskil’ is perhaps the name of this class of song.\f* of Hirman descendants of Ezra.
+\s1 A depressed cry for help
+\d For the musical director: a song by Korah’s descendants. To be sung to the tune of ‘Mahalat leannot’ a song\f + \fr 88:0 \ft In Hebrew, ‘maskil’ is perhaps the name of this class of song.\f* by Heyman, \add one of Ezra’s descendants\add*.
 \q1
-\v 1 ◙
-\q2 …
+\v 1 Yahweh God \add who rescues me\add*,
+\q1 I call out day and night to you \add for help\add*.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 Let my prayer \add be noticed by\add* you.
+\q1 Pay attention to my cry
 \q1
-\v 3 ◙
-\q2 …
+\v 3 because I’m filled with troubles,
+\q1 and my life is approaching the grave.
 \q1
-\v 4 ◙
-\q2 …
+\v 4 People treat me like those who’re going down into the pit.
+\q1 I’m a man with no strength \add left\add*.
 \q1
-\v 5 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 5 I’m abandoned among the dead.
+\q1 I’m like the dead who lie in the grave,
+\q1 about whom you \add don’t care any more\add*
+\q1 because they’re cut off from your power.
 \q1
-\v 6 ◙
-\q1 …
+\v 6 You place me in the lowest part of the pit—
+\q1 in the dark and deep places.
 \q1
-\v 7 ◙
-\q2 …
+\v 7 Your rage lies heavy on me,
+\q1 and all your waves crash over me. \qs (Instrumental break.)\qs*
 \q1
-\v 8 ◙
-\q2 …
-\q1 …
+\v 8 Because of you, my acquaintances avoid me.
+\q1 You have made me a shocking sight to them.
+\q1 I am hemmed in and I cannot escape.
 \q1
-\v 9 ◙
-\q1 …
-\q1 …
+\v 9 My eyes grow weary from trouble.
+\q1 All day long I call out to you \add for help\add*, Yahweh—
+\q1 I spread out my hands to you.
 \q1
-\v 10 ◙
-\q1 …
+\v 10 Will you do wonders for the dead?
+\q1 Will those who’ve died rise and praise you? \qs (Instrumental break.)\qs*
 \q1
-\v 11 ◙
-\q1 …
+\v 11 Will your loyal commitment be proclaimed in the grave—
+\q1 your loyalty in the place of the dead?
 \q1
-\v 12 ◙
-\q1 …
+\v 12 Will your wonderful activities be known in the darkness,
+\q1 or your righteousness in the place of forgetfulness?
 \q1
-\v 13 ◙
-\q2 …
+\v 13 But I cry to you \add for help\add*, Yahweh—
+\q1 in the morning my prayer goes before you.
 \q1
-\v 14 ◙
-\q1 …
+\v 14 Yahweh, why do you reject me?
+\q1 Why do you hide \add yourself\add* from me?
 \q1
-\v 15 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 15 Since my youth, I’ve always been afflicted and close to death.
+\q1 I have suffered from your terrors—I’m in despair.
 \q1
-\v 16 ◙
-\q2 …
+\v 16 Your severe anger has \add swept\add* over me,
+\q1 and your terrifying deeds have annihilated me.
 \q1
-\v 17 ◙
-\q1 …
+\v 17 They surround me like water all the day long.
+\q1 They’ve all encircled me.
 \q1
-\v 18 ◙
-\q1 …
+\v 18 You’ve taken all my friends and acquaintances away from me.
+\q1 \add Now\add* my only acquaintance is the darkness.
 \c 89
 \s1 To be sung my the goodness of God
-\d The song\f + \fr 89:0 \ft In Hebrew, ‘maskil’ is perhaps the name of this class of song.\f* of Itan descendants of Ezra.
+\d A song\f + \fr 89:0 \ft In Hebrew, ‘maskil’ is perhaps the name of this class of song.\f* of Eytan, \add one of Ezra’s descendants\add*.
 \q1
-\v 1 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 1 I will sing of Yahweh’s acts of loyal commitment forever.
+\q1 I will proclaim your truthfulness to future generations.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 because I’ve said, “Loyal commitment has been established forever.
+\q1 You have established your truthfulness in the heavens.”
 \q1
-\v 3 ◙
-\q2 …
+\v 3 “I have made an agreement with my chosen one,
+\q1 I’ve made a promise to my servant David.
 \q1
-\v 4 \x + \xo 89:4: \xt 2Sam 7:12-16; 1Ch 17:11-14; Psa 132:11; Acts 2:30.\x*◙
-\q2 …
+\v 4 I will establish your descendants forever,
+\q1 and I will establish your throne through all generations.”\x + \xo 89:4: \xt 2Sam 7:12-16; 1Ch 17:11-14; Psa 132:11; Acts 2:30.\x* \qs (Instrumental break.)\qs*
 \q1
-\v 5 ◙
-\q2 …
-\q1 …
+\v 5 ≈The heavens praise your wonders, Yahweh.
+\q1 Your truthfulness is praised in the assembly of the holy ones
 \q1
-\v 6 ◙
-\q1 …
+\v 6 because who in the heavens can be compared to Yahweh?
+\q1 Who among the sons of the gods is like Yahweh?
 \q1
-\v 7 ◙
-\q2 …
+\v 7 He’s a God who is greatly honoured in the council of the holy ones
+\q1 and is awesome among all who are around him.
 \q1
-\v 8 ◙
-\q1 …
+\v 8 Army commander Yahweh, God,
+\q1 who is strong like you, Yahweh?
+\q1 Your truthfulness surrounds you.
 \q1
-\v 9 ◙
-\q2 …
+\v 9 You rule the raging sea—
+\q1 when the waves surge, you calm them.
 \q1
-\v 10 ◙
-\q2 …
+\v 10 You crushed the proud one,\f + \fr 89:10 \ft Heb. ‘Rahav’. The second part of this line implies that it’s not referring to a person here, but probably ‘Egypt’ (or possibly even ‘the huge sea monster’).\f* like someone that’s killed.
+\q1 You scattered your enemies with your strong arm.
 \q1
-\v 11 ◙
-\q1 …
+\v 11 The heavens belong to you, and the earth as well.
+\q1 You made the world and all it contains.
 \q1
-\v 12 ◙
-\q1 …
+\v 12 You created the north and the south.
+\q1 \add Mt.\add* Tabor and \add Mt.\add* Hermon happily shout your name.
 \q1
-\v 13 ◙
-\q2 …
-\q2 …
+\v 13 You have a powerful \add fighting\add* arm
+\q1 and a strong hand, and your \add sword\add* hand is held high.
 \q1
-\v 14 ◙
-\q2 …
+\v 14 Righteousness and justice are the foundation of your throne.
+\q1 Loyal commitment and trustworthiness come before you.
 \q1
-\v 15 ◙
-\q2 …
+\v 15 The people who know the happy shout \add are fortunate\add*.
+\q1 Yahweh, they \add live knowing that you are always watching over them\add*.
 \q1
-\v 16 ◙
-\q2 …
+\v 16 They \add celebrate your reputation\add* all day long,
+\q1 and they \add praise you for always doing what is right\add*.
 \q1
-\v 17 ◙
-\q2 …
+\v 17 You are their majestic strength,
+\q1 and by your favour our \add strength turns into victory\add*.
 \q1
-\v 18 ◙
-\q2 …
+\v 18 because our shield belongs to Yahweh—
+\q1 our king belongs to Israel’s holy \add one\add*.
 \q1
-\v 19 ◙
-\q2 …
-\q2 …
+\v 19 Long ago you spoke in a vision to your faithful \add ones\add*.
+\q1 You said, “I’ve \add helped\add* a warrior.”
+\q1 I’ve raised up one chosen from among the people.
 \q1
-\v 20 ◙
-\q2 …
+\v 20 I have chosen David my servant—
+\q1 I’ve anointed him with my sacred oil.
 \q1
-\v 21 ◙
-\q2 …
+\v 21 My hand will support him.
+\q1 My arm will also be with him to strengthen him.
 \q1
-\v 22 ◙
-\q2 …
+\v 22 No enemy will deceive him.
+\q1 No \add wicked man\add* will oppress him.
 \q1
-\v 23 ◙
-\q2 …
+\v 23 I will crush his enemies \add in front of\add* him.
+\q1 I will kill those who hate him.
 \q1
-\v 24 ◙
-\q2 …
+\v 24 My truth and my loyal commitment will be with him.
+\q1 He will win victories \add with my help\add*.
 \q1
-\v 25 ◙
-\q2 …
+\v 25 I will place his hand over the sea
+\q1 and his right hand over the rivers.
 \q1
-\v 26 ◙
-\q1 …
-\q2 …
+\v 26 He will call out to me, ‘You are my father,
+\q1 my God, and the \add reliable one who rescues me\add*.’
 \q1
-\v 27 ◙
-\q2 …
+\v 27 I also will place him as my firstborn son,
+\q1 the highest king on the earth.
 \q1
-\v 28 ◙
-\q2 …
+\v 28 I will extend my loyal commitment to him forever,
+\q1 and my agreement with him will be secure.
 \q1
-\v 29 ◙
-\q2 …
+\v 29 I will make his descendants endure forever
+\q1 and his throne \add as enduring\add* as the skies above.
 \q1
-\v 30 ◙
-\q2 …
+\v 30 If his children forsake my law
+\q1 and don’t \add follow\add* my regulations,
 \q2
-\v 31 ◙
-\q2 …
+\v 31 if they break my rules
+\q1 and don’t keep my commands,
 \q2
-\v 32 ◙
-\q2 …
+\v 32 then will I punish their rebellion with a rod
+\q1 and their \add disobedience\add* with stripes \add from a whip\add*.
 \q1
-\v 33 ◙
-\q2 …
+\v 33 But I won’t break off my loyal commitment to him
+\q1 or be unfaithful to my promise.
 \q1
-\v 34 ◙
-\q2 …
+\v 34 I won’t break my agreement
+\q1 or change the words of my lips.
 \q1
-\v 35 ◙
-\q2 …
-\q1 …
+\v 35 Once and for all I have \add made an oath\add* by my holiness—
+\q1 I won’t lie to David:
 \q1
-\v 36 ◙
-\q2 …
+\v 36 his descendants will continue forever
+\q1 and his throne as long as the sun before me.
 \q1
-\v 37 ◙
-\q2 …
-\q2 …
+\v 37 It will be established forever like the moon,
+\q1 the faithful witness in the sky.” \qs (Instrumental break.)\qs*
 \q1
-\v 38 ◙
-\q2 …
+\v 38 But you have refused and rejected—
+\q1 you’ve been angry with your anointed king.
 \q1
-\v 39 ◙
-\q2 …
+\v 39 You have renounced the agreement with your servant.
+\q1 You have desecrated his crown in the dust.
 \q1
-\v 40 ◙
-\q2 …
+\v 40 You have broken down all his walls.
+\q1 You have ruined his fortresses.
 \q1
-\v 41 ◙
-\q2 …
+\v 41 Everyone who goes past on the road rob him.
+\q1 He’s become an object of disgust to his neighbours.
 \q1
-\v 42 ◙
-\q2 …
+\v 42 You have \add given strength to\add* his enemies;
+\q1 You’ve made all his enemies \add celebrate\add*.
 \q1
-\v 43 ◙
-\q2 …
+\v 43 You turn back the edge of his sword
+\q1 and haven’t supported him in the battle.
 \q1
-\v 44 ◙
-\q2 …
+\v 44 You have brought his splendour to an end.
+\q1 You’ve thrown his throne down to the ground.
 \q1
-\v 45 ◙
-\q2 …
+\v 45 You have shortened the days of his youth.
+\q1 You have covered him with shame. \qs (Instrumental break.)\qs*
 \q1
-\v 46 ◙
-\q1 …
+\v 46 How long, Yahweh? Will you hide yourself forever?
+\q1 How long will your anger burn like fire?
 \q1
-\v 47 ◙
-\q1 …
-\q2 …
+\v 47 Oh, think about how short my time is,
+\q1 and for what emptiness you’ve created all of humanity’s children.
 \q1
-\v 48 ◙
-\q1 …
+\v 48 Who can live and not see death,
+\q1 or rescue his own life from the \add clutch of the grave\add*? \qs (Instrumental break.)\qs*
 \q1
-\v 49 ◙
-\q1 …
+\v 49 Lord, where are your former acts of loyal commitment
+\q1 that you \add sincerely promised\add* to David?
 \q1
-\v 50 ◙
-\q2 …
+\v 50 My master, call to mind the mocking directed against your servants
+\q1 and how I bear so many insults from the nations in my heart.
 \q1
-\v 51 ◙
-\q2 …
+\v 51 Your enemies hurl insults, Yahweh.
+\q1 They mock the footsteps of your anointed \add one\add*.
 \q1
-\v 52 ◙
+\v 52 Blessed be Yahweh forever. \add Yes, indeed, let it be so.\add*
 \c 90
 \ms1 Fourth collection
 \mr (Songs 90–106)
 \s1 The people and the God
-\d The praying for Moses servant of God.
+\d A prayer by God’s man Mosheh \add (Moses)\add*.
 \q1
-\v 1 ◙
-\q2 …
+\v 1 My master, you’ve been our \add protection\add*
+\q1 throughout all generations.
 \q1
-\v 2 ◙
-\q2 …
-\q2 …
+\v 2 Before the mountains were formed or you formed the earth and the world,
+\q1 from \add the entire past through to all the future\add*, you are God.
 \q1
-\v 3 ◙
-\q2 …
-\q2 …
+\v 3 You return man to dust,
+\q1 and you say, “Return, you descendants of humanity,”
 \q1
-\v 4 ◙
-\q2 …
+\v 4 because a thousand years in your sight
+\q1 are \add just\add* like yesterday when it’s over,
+\q1 and like a watch \add of several hours\add* in the night.
 \q1
-\v 5 ◙
-\q2 …
-\q2 …
+\v 5 You sweep them away as with a flood and they sleep.
+\q1 In the morning they are like the grass that sprouts up:
 \q1
-\v 6 ◙
-\q2 …
+\v 6 In the morning it blooms and grows up,
+\q1 \add but\add* by the evening, it has withered and dried up.
 \q1
-\v 7 ◙
-\q2 …
+\v 7 Certainly we’re consumed in your anger,
+\q1 and in your rage we’re terrified.
 \q1
-\v 8 ◙
-\q2 …
+\v 8 You’ve placed our \add disobedience in front of\add* you—
+\q1 our hidden sins in the light of your presence,
 \q1
-\v 9 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 9 because our life passes away under your rage—
+\q1 our years pass quickly like a sigh \add does\add*.
 \q1
-\v 10 ◙
-\q2 …
-\q1 …
-\q1 …
+\v 10 \add We might reach the age of\add* seventy,
+\q1 or even eighty if we’re healthy,
+\q1 but even our best years are marked by trouble and sorrow.
+\q1 Yes, they pass quickly, then we ‘fly away’.
 \q1
-\v 11 ◙
-\q1 …
+\v 11 Who knows the intensity of your anger,
+\q1 and your rage that’s equal to the \add respect that we should have had for\add* you?
 \q1
-\v 12 ◙
-\q2 …
+\v 12 So teach us to consider \add the fragility of\add* our \add lives\add*
+\q1 so that we might live wisely.
 \q1
-\v 13 ◙
-\q1 …
-\q1 …
+\v 13 Turn back, Yahweh.
+\q1 How long will \add this last\add*?
+\q1 Have pity on your servants.
 \q1
-\v 14 ◙
-\q2 …
+\v 14 Satisfy us in the morning with your loyal commitment
+\q1 so that we can celebrate and be glad for the rest of our lives.
 \q1
-\v 15 ◙
-\q2 …
+\v 15 Make us glad in proportion to the days you \add made us suffer\add*,
+\q1 and to the years we have experienced trouble.
 \q1
-\v 16 ◙
-\q2 …
+\v 16 Let your servants see your \add actions\add*,
+\q1 and let our children \add see\add* your splendour.
 \q1
-\v 17 ◙
-\q2 …
-\q2 …
+\v 17 May the favour of my master God be ours.
+\q1 Prosper the work of our hands.
+\q1 \add Yes\add*, prosper the work \add that we do\add*.
 \c 91
 \s1 God our protector
 \q1
@@ -5352,7 +5262,7 @@
 \q1 You fools, when will you \add ever learn\add*?
 \q1
 \v 9 Can’t the one who made ears, hear?
-\q1 Why can’t the one formed the eye, see?
+\q1 Why can’t the one who formed the eye, see?
 \q1
 \v 10 Can’t the one who disciplines the nations, correct them?
 \q1 He’s the one who gives knowledge to humankind.
@@ -5488,7 +5398,7 @@
 \q1
 \v 1 Yahweh reigns.
 \q1 Let the earth be glad.
-\q1 Let the many island be happy.
+\q1 Let the many islands be happy.
 \q1
 \v 2 Clouds and thick darkness surround him.
 \q1 \add Doing what’s right and being fair\add* are the foundation of his throne.
@@ -5506,7 +5416,7 @@
 \q1 and all the nations can see his \add splendour\add*.
 \q1
 \v 7 All those who worship carved figures will be shamed—
-\q1 those who boast about worthless idols
+\q1 those who boast about worthless idols.
 \q1 Bow down to him, all you ‘gods’.
 \q1
 \v 8 Tsiyyon \add (Zion)\add* heard and was glad,
@@ -5862,7 +5772,7 @@
 \q1 \add Their\add* crevices are a safe place for the rock badgers.
 \q1
 \v 19 He made the moon \add to mark\add* the \add months\add*.
-\q1 The suns knows \add when it’s time to go down\add*.
+\q1 The sun knows \add when it’s time to go down\add*.
 \q1
 \v 20 You make the darkness at night,
 \q1 when all the animals in the forest move around.
@@ -6220,148 +6130,138 @@
 \c 107
 \ms1 Fifth collection
 \mr (Songs 107–150)
-\s1 The thanking due to goodness of God
+\s1 Thanking for God’s goodness
 \q1
-\v 1 ◙
-\q2 …
-\q2 …
+\v 1 Give thanks to Yahweh, because he’s good,
+\q1 and his loyal commitment endures forever.
 \q1
-\v 2 ◙
-\q1 …
+\v 2 Let \add the people who’ve been redeemed by\add* Yahweh speak out—
+\q1 those he’s rescued from the enemy’s \add control\add*.
 \q1
-\v 3 ◙
-\q1 …
-\q2 …
+\v 3 He has gathered them \add back from\add* foreign lands,
+\q1 from the east and from the west,
+\q1 from the north and from the south.
 \q1
-\v 4 ◙
-\q1 …
+\v 4 They wandered through the wilderness on a desert road
+\q1 and found no city \add that they could settle in\add*.
 \q1
-\v 5 ◙
-\q2 …
+\v 5 They were hungry and thirsty—
+\q1 \add fading away\add* \add from exhaustion\add*.
 \q1
-\v 6 ◙
-\q2 …
-\q1 …
+\v 6 Then they called out to Yahweh in their \add time of\add* trouble,
+\q1 →and he rescued them out of their distress.
 \q1
-\v 7 ◙
-\q2 …
+\v 7 He led them by a direct path
+\q1 so that they could go to a city to live in.
 \q1
-\v 8 ◙
-\q2 …
-\q2 …
+\v 8 Oh that people would praise Yahweh for his loyal commitment
+\q1 and for the amazing things he’s done for humanity,
 \q1
-\v 9 ◙
-\q2 …
+\v 9 because he satisfies \add the longings of those who thirst\add*,
+\q1 and the desires of those who hunger, he fills up with good things.
 \q1
-\v 10 ◙
-\q2 …
+\v 10 Some sat in darkness and in gloom—
+\q1 prisoners chained up and experiencing suffering.
 \q1
-\v 11 ◙
-\q2 …
+\v 11 This was because they had rebelled against God’s messages
+\q1 and rejected the highest \add one’s\add* instructions.
 \q1
-\v 12 ◙
-\q1 …
+\v 12 He \add used hardships to humble them\add*.
+\q1 They stumbled and there wasn’t anyone to help them up.
 \q1
-\v 13 ◙
-\q2 …
-\q1 …
+\v 13 Then they called out to Yahweh in their \add time of\add* trouble,
+\q1 and he rescued them out of their distress.
 \q1
-\v 14 ◙
-\q2 …
+\v 14 He broke off their chains
+\q1 and brought them out of darkness and gloom.
 \q1
-\v 15 ◙
-\q2 …
-\q2 …
+\v 15 Oh that people would praise Yahweh for his loyal commitment
+\q1 and for the amazing things he’s done for humanity,
 \q1
-\v 16 ◙
-\q2 …
+\v 16 because he’s broken the bronze gates
+\q1 and cut through the iron bars.
 \q1
-\v 17 ◙
-\q2 …
+\v 17 They were foolish in their rebellious ways
+\q1 and \add made to suffer\add* because of their sins.
 \q1
-\v 18 ◙
-\q2 …
+\v 18 They lost their desire to eat any food,
+\q1 and they came close to death’s gates.
 \q1
-\v 19 ◙
-\q2 …
-\q1 …
+\v 19 Then they called out to Yahweh in their \add time of\add* trouble,
+\q1 and he rescued them out of their distress.
 \q1
-\v 20 ◙
-\q1 …
+\v 20 He sent his message and healed them,
+\q1 and he rescued them from their destruction.
 \q2
-\v 21 ◙
-\q2 …
-\q2 …
+\v 21 Oh that people would praise Yahweh for his loyal commitment
+\q1 and for the amazing things he’s done for humanity.
 \q1
-\v 22 ◙
-\q2 …
+\v 22 Let them offer thanksgiving sacrifices
+\q1 and \add write songs about what he’s done\add*.
 \q1
-\v 23 ◙
-\q2 …
+\v 23 Some travel across the ocean in ships
+\q1 and do business overseas.
 \q1
-\v 24 ◙
-\q2 …
+\v 24 Those \add people\add* saw Yahweh’s activities
+\q1 and his miracles on the oceans,
 \q1
-\v 25 ◙
-\q2 …
+\v 25 because he \add spoke\add* \add out his command\add*
+\q1 and aroused the windstorm that stirred up the waves.
 \q1
-\v 26 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 26 \add Their ships\add* \add reached\add* up to the sky,
+\q1 \add then\add* they \add sunk\add* down \add into the troughs\add*.
+\q1 Their \add courage\add* melted away in anguish.
 \q1
-\v 27 ◙
-\q2 …
+\v 27 They swayed and staggered like drunkards
+\q1 and \add had run out of sensible ideas\add*.
 \q1
-\v 28 ◙
-\q2 …
-\q1 …
+\v 28 Then they called out to Yahweh in their \add time of\add* trouble,
+\q1 and he rescued them out of their distress.
 \q1
-\v 29 ◙
-\q2 …
+\v 29 He calmed the storm,
+\q1 and the waves were stilled.
 \q1
-\v 30 ◙
-\q2 …
+\v 30 Then they celebrated because \add it had quietened down\add*,
+\q1 so he brought them to their desired harbour.
 \q1
-\v 31 ◙
-\q2 …
-\q2 …
+\v 31 Oh that people would praise Yahweh for his loyal commitment
+\q1 and for the amazing things that he’s done for humanity.
 \q1
-\v 32 ◙
-\q2 …
+\v 32 Let them \add speak about his goodness to\add* the people’s assembly
+\q1 and praise him at the council of the elders.
 \q1
-\v 33 ◙
-\q2 …
+\v 33 He turns rivers into wilderness,
+\q1 and springs of water into dry land,
 \q1
-\v 34 ◙
-\q2 …
+\v 34 and a prosperous land into a barren place
+\q1 because of the wickedness of those who live there.
 \q1
-\v 35 ◙
-\q2 …
+\v 35 He turns the wilderness into a pool
+\q1 and dry land into springs of water.
 \q1
-\v 36 ◙
-\q2 …
+\v 36 He settles the hungry there,
+\q1 and they build a city to live in.
 \q1
-\v 37 ◙
-\q2 …
+\v 37 They sow fields and plant vineyards,
+\q1 so that they can bring in a \add profitable\add* harvest.
 \q1
-\v 38 ◙
-\q2 …
+\v 38 He blesses them so they are very numerous.
+\q1 He doesn’t let their cattle decrease in number.
 \q1
-\v 39 ◙
-\q2 …
+\v 39 They \add became less in number and status\add*
+\q1 \add through\add* painful distress and suffering.
 \q2
-\v 40 ◙
-\q2 …
+\v 40 He pours contempt on the leaders
+\q1 and makes them wander in the wilderness where there’s no roads,
 \q1
-\v 41 ◙
-\q2 …
+\v 41 but he protects the needy from affliction
+\q1 and cares for his families like a \add shepherd with his\add* flock.
 \q1
-\v 42 ◙
-\q2 …
+\v 42 The godly \add people\add* will see that and celebrate,
+\q1 and all wicked \add people\add* \add will be shamed into silence\add*.
 \q1
-\v 43 ◙
-\q1 …
+\v 43 Whoever is wise should take note of those things
+\q1 and meditate about Yahweh’s acts of loyal commitment.
 \c 108
 \s1 Large the to become we/our if there is/are the God
 \r (Psa. 57:7-11; 60:5-12)
@@ -6548,71 +6448,115 @@
 \s1 Praise the God
 \q1
 \v 1 ◙
+\qa \bd א\bd* (Alef)
 \q1 …
+\qa \bd ב\bd* (Beyt)
 \q2 …
+\qa \bd ג\bd* (Gimel)
 \q1
 \v 2 ◙
+\qa \bd ד\bd* (Dalet)
 \q2 …
+\qa \bd ה\bd* (He)
 \q1
 \v 3 ◙
+\qa \bd ו\bd* (Vav)
 \q2 …
+\qa \bd ז\bd* (Zayin)
 \q1
 \v 4 ◙
+\qa \bd ח\bd* (Het)
 \q2 …
+\qa \bd ט\bd* (Tet)
 \q1
 \v 5 ◙
+\qa \bd י\bd* (Yod)
 \q2 …
+\qa \bd כ\bd* (Kaf)
 \q1
 \v 6 ◙
+\qa \bd ל\bd* (Lamed)
 \q2 …
+\qa \bd מ\bd* (Mem)
 \q1
 \v 7 ◙
+\qa \bd נ\bd* (Nun)
 \q2 …
+\qa \bd ס\bd* (Samek)
 \q1
 \v 8 ◙
+\qa \bd ע\bd* (Ayin)
 \q2 …
+\qa \bd פ\bd* (Pe)
 \q1
 \v 9 ◙
+\qa \bd צ\bd* (Tsade)
 \q2 …
+\qa \bd ק\bd* (Qof)
 \q1 …
+\qa \bd ר\bd* (Resh)
 \q1
 \v 10 ◙
+\qa \bd ש\bd* (Sin/Shin)
 \q2 …
+\qa \bd ת\bd* (Tav)
 \q1 …
 \c 112
 \s1 The happiness of good person
 \q1
 \v 1 ◙
+\qa \bd א\bd* (Alef)
 \q1 …
+\qa \bd ב\bd* (Beyt)
 \q2 …
+\qa \bd ג\bd* (Gimel)
 \q1
 \v 2 ◙
+\qa \bd ד\bd* (Dalet)
 \q2 …
+\qa \bd ה\bd* (He)
 \q1
 \v 3 ◙
+\qa \bd ו\bd* (Vav)
 \q2 …
+\qa \bd ז\bd* (Zayin)
 \q1
 \v 4 ◙
+\qa \bd ח\bd* (Het)
 \q2 …
+\qa \bd ט\bd* (Tet)
 \q1
 \v 5 ◙
+\qa \bd י\bd* (Yod)
 \q2 …
+\qa \bd כ\bd* (Kaf)
 \q1
 \v 6 ◙
+\qa \bd ל\bd* (Lamed)
 \q2 …
+\qa \bd מ\bd* (Mem)
 \q1
 \v 7 ◙
+\qa \bd נ\bd* (Nun)
 \q2 …
+\qa \bd ס\bd* (Samek)
 \q1
 \v 8 ◙
+\qa \bd ע\bd* (Ayin)
 \q2 …
+\qa \bd פ\bd* (Pe)
 \q1
 \v 9 ◙
+\qa \bd צ\bd* (Tsade)
 \q2 …
+\qa \bd ק\bd* (Qof)
 \q1 …
+\qa \bd ר\bd* (Resh)
 \q1
 \v 10 ◙
+\qa \bd ש\bd* (Sin/Shin)
 \q2 …
+\qa \bd ת\bd* (Tav)
 \q1 …
 \c 113
 \s1 Not/None like of Master God we/our
@@ -6904,8 +6848,8 @@
 \q2 …
 \c 119
 \s1 The Law of God
+\qa \bd א\bd* (Alef)
 \q1
-\qa Aleph
 \v 1 ◙
 \q2 …
 \q1
@@ -6930,8 +6874,8 @@
 \v 8 ◙
 \q2 …
 \s1 The obedience of law of God
+\qa \bd ב\bd* (Beyt)
 \q1
-\qa Beth
 \v 9 ◙
 \q1 …
 \q1
@@ -6956,8 +6900,8 @@
 \v 16 ◙
 \q2 …
 \s1 The happiness of obedience of Law of God
+\qa \bd ג\bd* (Gimel)
 \q1
-\qa Gimel
 \v 17 ◙
 \q2 …
 \q1
@@ -6981,9 +6925,9 @@
 \q1
 \v 24 ◙
 \q2 …
-\s1 The pegpakannekal of obedience of law of God
+\s1 The strengthening of obedience of law of God
+\qa \bd ד\bd* (Dalet)
 \q1
-\qa Daleth
 \v 25 ◙
 \q1 …
 \q1
@@ -7008,8 +6952,8 @@
 \v 32 ◙
 \q2 …
 \s1 The praying for of wisdom
+\qa \bd ה\bd* (He)
 \q1
-\qa He
 \v 33 ◙
 \q2 …
 \q1
@@ -7034,8 +6978,8 @@
 \v 40 ◙
 \q2 …
 \s1 The trusting of Law of God
+\qa \bd ו\bd* (Vav)
 \q1
-\qa Waw
 \v 41 ◙
 \q2 …
 \q1
@@ -7059,8 +7003,8 @@
 \v 48 ◙
 \q2 …
 \s1 trusted the Law of God
+\qa \bd ז\bd* (Zayin)
 \q1
-\qa Zayin
 \v 49 ◙
 \q2 …
 \q1
@@ -7084,8 +7028,8 @@
 \q1
 \v 56 ◙
 \s1 The loving of Law of God
+\qa \bd ח\bd* (Het)
 \q1
-\qa Heth
 \v 57 ◙
 \q2 …
 \q1
@@ -7111,8 +7055,8 @@
 \v 64 ◙
 \q2 …
 \s1 The purpose of Law of God
+\qa \bd ט\bd* (Tet)
 \q1
-\qa Teth
 \v 65 ◙
 \q2 …
 \q1
@@ -7137,8 +7081,8 @@
 \v 72 ◙
 \q2 …
 \s1 The katareng of Law of God
+\qa \bd י\bd* (Yod)
 \q1
-\qa Yodh
 \v 73 ◙
 \q2 …
 \q1
@@ -7164,8 +7108,8 @@
 \v 80 ◙
 \q2 …
 \s1 The praying so that be saved
+\qa \bd כ\bd* (Kaf)
 \q1
-\qa Kaph
 \v 81 ◙
 \q2 …
 \q1
@@ -7191,8 +7135,8 @@
 \v 88 ◙
 \q2 …
 \s1 The trusting of law of God
+\qa \bd ל\bd* (Lamed)
 \q1
-\qa Lamedh
 \v 89 ◙
 \q2 …
 \q1
@@ -7217,8 +7161,8 @@
 \v 96 ◙
 \q2 …
 \s1 The loving of law of God
+\qa \bd מ\bd* (Mem)
 \q1
-\qa Mem
 \v 97 ◙
 \q2 …
 \q1
@@ -7243,8 +7187,8 @@
 \v 104 ◙
 \q2 …
 \s1 The peace/prosperity from law of God
+\qa \bd נ\bd* (Nun)
 \q1
-\qa Nun
 \v 105 ◙
 \q2 …
 \q1
@@ -7269,8 +7213,8 @@
 \v 112 ◙
 \q2 …
 \s1 The peace/prosperity of obedience of Law of God
+\qa \bd ס\bd* (Samek)
 \q1
-\qa Samekh
 \v 113 ◙
 \q2 …
 \q1
@@ -7295,8 +7239,8 @@
 \v 120 ◙
 \q2 …
 \s1 The obedience of Law of God
+\qa \bd ע\bd* (Ayin)
 \q1
-\qa Ayin
 \v 121 ◙
 \q2 …
 \q1
@@ -7322,8 +7266,8 @@
 \v 128 ◙
 \q2 …
 \s1 The eyam of obedience of Law of God
+\qa \bd פ\bd* (Pe)
 \q1
-\qa Pe
 \v 129 ◙
 \q2 …
 \q1
@@ -7347,8 +7291,8 @@
 \v 136 ◙
 \q2 …
 \s1 Not/None eglapihan of Law of God
+\qa \bd צ\bd* (Tsade)
 \q1
-\qa Tsadhe
 \v 137 ◙
 \q2 …
 \q1
@@ -7373,8 +7317,8 @@
 \v 144 ◙
 \q2 …
 \s1 The praying so that be saved
+\qa \bd ק\bd* (Qof)
 \q1
-\qa Qoph
 \v 145 ◙
 \q2 …
 \q1
@@ -7399,8 +7343,8 @@
 \v 152 ◙
 \q2 …
 \s1 The praying so that be saved
+\qa \bd ר\bd* (Resh)
 \q1
-\qa Resh
 \v 153 ◙
 \q2 …
 \q1
@@ -7425,8 +7369,8 @@
 \v 160 ◙
 \q2 …
 \s1 The obedience of law of God
+\qa \bd ש\bd* (Sin/Shin)
 \q1
-\qa Sin and Shin
 \v 161 ◙
 \q2 …
 \q1
@@ -7451,8 +7395,8 @@
 \v 168 ◙
 \q2 …
 \s1 The praying so that helping
+\qa \bd ת\bd* (Tav)
 \q1
-\qa Taw
 \v 169 ◙
 \q1 …
 \q1
@@ -7479,7 +7423,7 @@
 \q2 …
 \c 120
 \s1 The praying so that requesting from God
-\d The song of ascent there to Yerushalem.
+\d A song for walking uphill to Yerushalem.
 \q1
 \v 1 ◙
 \q2 …
@@ -7505,7 +7449,7 @@
 \q2 …
 \c 121
 \s1 Yahweh our protector
-\d A song for climbing towards Yerushalem.
+\d A song for walking uphill to Yerushalem.
 \q1
 \v 1 I \add look up towards\add* the hills.
 \q1 Where will my help come from?
@@ -7534,7 +7478,7 @@
 \q2 \add both\add* now and then forever.
 \c 122
 \s1 The Yerushalem
-\d A song by David of ascent there to Yerushalem.
+\d A song by David while walking uphill to Yerushalem.
 \q1
 \v 1 ◙
 \q2 …
@@ -7567,8 +7511,8 @@
 \v 9 ◙
 \q2 …
 \c 123
-\s1 The praying for egpeyid‑u-mercy
-\d The song for of ascent there to Yerushalem.
+\s1 The praying for mercy
+\d A song for walking uphill to Yerushalem.
 \q1
 \v 1 ◙
 \q2 …
@@ -7586,7 +7530,7 @@
 \q2 …
 \c 124
 \s1 The God the saviour of his people
-\d A song by David for of ascent there to Yerushalem.
+\d A song by David while walking uphill to Yerushalem.
 \q1
 \v 1 ◙
 \q2 …
@@ -7615,7 +7559,7 @@
 \q2 …
 \c 125
 \s1 The peace/prosperity of people of God
-\d The song of ascent there to Yerushalem.
+\d A song for walking uphill to Yerushalem.
 \q1
 \v 1 ◙
 \q2 …
@@ -7636,7 +7580,7 @@
 \q1 …
 \c 126
 \s1 The praying for of peace/prosperity of Israel
-\d The song for of ascent there to Yerushalem.
+\d A song for walking uphill to Yerushalem.
 \q1
 \v 1 ◙
 \q2 …
@@ -7659,7 +7603,7 @@
 \q2 …
 \c 127
 \s1 The thanking of goodness of God
-\d A song by Solomon for of ascent there to Yerushalem.
+\d A song by Solomon while walking uphill to Yerushalem.
 \q1
 \v 1 ◙
 \q2 …
@@ -7680,7 +7624,7 @@
 \q1 …
 \c 128
 \s1 The gift of me obedient of Master
-\d The song for of ascent there to Yerushalem.
+\d A song for walking uphill to Yerushalem.
 \q1
 \v 1 ◙
 \q2 …
@@ -7703,7 +7647,7 @@
 \q1 …
 \c 129
 \s1 The praying distance of enemy
-\d The song for of ascent there to Yerushalem.
+\d A song for walking uphill to Yerushalem.
 \q1
 \v 1 ◙
 \q2 …
@@ -7734,7 +7678,7 @@
 \q1 …
 \c 130
 \s1 The praying for requesting
-\d The song for of ascent there to Yerushalem.
+\d A song for walking uphill to Yerushalem.
 \q1
 \v 1 ◙
 \q2 …
@@ -7764,7 +7708,7 @@
 \q2 …
 \c 131
 \s1 The mapahetpet praying
-\d A song by David of ascent there Yerushalem.
+\d A song by David while walking uphill to Yerushalem.
 \q1
 \v 1 ◙
 \q2 …
@@ -7779,7 +7723,7 @@
 \q2 …
 \c 132
 \s1 Praised the temple of God
-\d A song by David for of ascent there to Yerushalem.
+\d A song by David while walking uphill to Yerushalem.
 \q1
 \v 1 ◙
 \q2 …
@@ -7839,24 +7783,22 @@
 \v 18 ◙
 \q2 …
 \c 133
-\s1 The living there is/are unity
-\d A song by David for of ascent there to Yerushalem.
+\s1 Living peacefully together
+\d A song by David while walking uphill to Yerushalem.
 \q1
-\v 1 ◙
-\q2 …
+\v 1 \add Listen\add*, it’s \add really\add* good and pleasant
+\q1 when \add the nation’s\add* \add people get on well\add* together.
 \q1
-\v 2 ◙
-\q2 …
-\q2 …
-\q2 …
+\v 2 It’s like having \add expensive\add* oil on the head,
+\q1 running down the beard—Aaron’s beard,
+\q1 \add and\add* which \add then\add* runs down onto the collar of his robes.
 \q1
-\v 3 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 3 It’s like the dew on \add Mt.\add* Hermon
+\q1 which falls on the mountains of Tsiyyon \add (Zion)\add*,
+\q1 because Yahweh commanded the blessing there—eternal life.
 \c 134
 \s1 The calling of praising of God
-\d The song for of ascent there to Yerushalem.
+\d A song for walking uphill to Yerushalem.
 \q1
 \v 1 ◙
 \q2 …
@@ -8273,7 +8215,7 @@
 \q2 …
 \c 142
 \s1 The praying for requesting
-\d The song\f + \fr 142:0 \ft In Hebrew, ‘maskil’ is perhaps the name of this class of song.\f* and praying for David of there he of cave.
+\d A song\f + \fr 142:0 \ft In Hebrew, ‘maskil’ is perhaps the name of this class of song.\f* and praying for David of there he of cave.
 \q1
 \v 1 ◙
 \q2 …
@@ -8415,69 +8357,91 @@
 \q1 …
 \c 145
 \s1 A praise song
-\d A ppraise \add song\add* by David.
+\d A praise \add song\add* by David.
+\qa \bd א\bd* (Alef)
 \q1
 \v 1 I will \add highly commend\add* you, my God, the King.
 \q1 I will praise your name \add without ending\add*.
+\qa \bd ב\bd* (Beyt)
 \q1
 \v 2 Every day I’ll \add make sure to\add* bless you.
 \q1 I will praise your name forever and ever.
+\qa \bd ג\bd* (Gimel)
 \q1
 \v 3 Yahweh is great and \add deserving of a lot of praise\add*—
 \q1 \add We can’t fully comprehend\add* his greatness.
+\qa \bd ד\bd* (Dalet)
 \q1
 \v 4 Generation to generation will celebrate because of \add what you’ve done\add*
 \q1 and they’ll \add tell others about your powerful\add* actions.
+\qa \bd ה\bd* (He)
 \q1
 \v 5 I’ll meditate on \add your incredible splendour and honour\add*
 \q1 as well as \add all\add* \add the marvellous things that you’ve done\add*.
+\qa \bd ו\bd* (Vav)
 \q1
 \v 6 They’ll tell \add about how your awesome actions show your power\add*,
 \q1 and I’ll speak about your greatness.
+\qa \bd ז\bd* (Zayin)
 \q1
 \v 7 They’ll remember the fame of your extravagant goodness,
 \q1 and they’ll happily sing about your righteousness.
+\qa \bd ח\bd* (Het)
 \q1
 \v 8 Yahweh is gracious and merciful,
 \q1 slow to anger and \add frequently displaying his\add* loyal commitment.
+\qa \bd ט\bd* (Tet)
 \q1
 \v 9 Yahweh is good to everyone,
 \q1 and \add desires the best\add* for everything he made.
 \b
+\qa \bd י\bd* (Yod)
 \q1
 \v 10 Everyone you’ve made will give thanks to you, Yahweh.
 \q1 Your faithful \add supporters\add* will bless you.
+\qa \bd כ\bd* (Kaf)
 \q1
 \v 11 They’ll tell about the splendour of your kingdom,
 \q1 and they’ll speak about of your power,
+\qa \bd ל\bd* (Lamed)
 \q1
 \v 12 making his powerful actions known to humanity’s children,
 \q1 along with the incredible splendour of his kingdom.
+\qa \bd מ\bd* (Mem)
+\qa \bd נ\bd* (Nun)
 \q1
 \v 13 Your kingdom \add will continue forever\add*,
 \q1 and \add you’ll rule generation after generation\add*.
+\qa \bd ס\bd* (Samek)
 \q1
 \v 14 Yahweh supports all those who’re falling
 \q1 and raises up all those who’re bent over \add under heavy loads\add*.
+\qa \bd ע\bd* (Ayin)
 \q1
 \v 15 \add Everyone and everything’s\add* eyes are watching out for you.
 \q1 You give them their food at the proper time.
+\qa \bd פ\bd* (Pe)
 \q1
 \v 16 You open your hand
 \q1 and satisfy the desire of every living \add thing\add*.
+\qa \bd צ\bd* (Tsade)
 \q1
 \v 17 Yahweh is righteous in all his ways
 \q1 and shows kindness in everything he does.
+\qa \bd ק\bd* (Qof)
 \q1
 \v 18 Yahweh is near to all who call to him—
 \q1 to all who \add sincerity request his help\add*.
+\qa \bd ר\bd* (Resh)
 \q1
 \v 19 For those who \add strive to obey\add* him, he does \add what they desire\add*,
 \q1 and he hears their \add call for help\add* and saves them.
+\qa \bd ש\bd* (Sin/Shin)
 \q1
 \v 20 Yahweh protects all those who love him,
 \q1 \add but\add* he’ll destroy all the wicked.
 \b
+\qa \bd ת\bd* (Tav)
 \q1
 \v 21 My mouth speaks the praise of Yahweh.
 \q1 Let \add everybody\add* bless his holy name forever and ever.

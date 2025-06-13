@@ -1,4 +1,4 @@
-\id AMO - Open English Translation—Readers’ Version (OET-RV) v0.1.00
+\id AMO - Open English Translation—Readers’ Version (OET-RV) v0.1.50
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 AMO
@@ -10,7 +10,7 @@
 \mt1 Amos
 \mt2 (Heb. Amots)
 \is1 Introduction
-\ip Amos (Heb. Amots) was a shepherd before he became a prophet. There grew up in Tekoa in the province of Yehudah (Judah), but Yahweh commanded him to go to Beyt-El (Bethel) in Yisra’el (Israel) in order to preach there. (Yisra’el is north of Yehudah.) These events happened around 800 B.C. He proclaimed God’s curses on Syria, Philistia, Pinisia, Edom, Amon, Moab, and even Yehudah. At that time, the people were prospering and there was no famine like in some other nations, and Israel had widened their border. But Amos saw how the rich people prospered because they took advantage of the poor and even abused them through the courts. They had stopped obeying Yahweh’ instructions and commands, so Amos didn’t hesitate to tell them how Yahweh would punish them and their country. He encouraged them to maintain true justice in their courts, because what if God might just be gracious towards the people remaining in their country (5:15).
+\ip Amos (Heb. Amots) was a shepherd before he became a prophet. There grew up in Tekoa in the province of Yehudah (Judah), but Yahweh commanded him to go to Beyt-El (Bethel) in Yisra’el (Israel) in order to preach there. (Yisra’el is north of Yehudah.) These events happened around 800 before Yeshua/Jesus (B.C.) He proclaimed God’s curses on Syria, Philistia, Pinisia, Edom, Amon, Moab, and even Yehudah. At that time, the people were prospering and there was no famine like in some other nations, and Israel had widened their border. But Amos saw how the rich people prospered because they took advantage of the poor and even abused them through the courts. They had stopped obeying Yahweh’ instructions and commands, so Amos didn’t hesitate to tell them how Yahweh would punish them and their country. He encouraged them to maintain true justice in their courts, because what if God might just be gracious towards the people remaining in their country (5:15).
 \iot Main components of this document
 \io1 The punishment of nations near Israel \ior 1:1–2:5\ior*
 \io1 The punishment of Israel \ior 2:6–6:14\ior*
@@ -19,14 +19,14 @@
 \ie
 \c 1
 \p
-\v 1 \add This is\add* the message that Amos (who was among the shepherds in Tekoa) he saw concerning Yisra’el \add (Israel)\add* in the days of King Uzziyyah of Yehudah \add (Judah)\add*, and also in the days of Yoash’s son King Yaraveam \add (Jeroboam)\add* of Yisrael, two years before the earthquake.\x + \xo 1:1: a \xt 2Ki 15:1-7; 2Ch 26:1-23; \xo b \xt 2Ki 14:23-29.\x*
+\v 1 \add This is\add* the message that Amos (who was among the shepherds in Tekoa) he saw concerning Yisra’el \add (Israel)\add* in the days of King Uzziyah of Yehudah \add (Judah)\add*, and also in the days of Yoash’s son King Yaraveam \add (Jeroboam)\add* of Yisrael, two years before the earthquake.\x + \xo 1:1: a \xt 2Ki 15:1-7; 2Ch 26:1-23; \xo b \xt 2Ki 14:23-29.\x*
 \q1
 \v 2 \add Amos\add* said,
 \q1 “Yahweh will \add shout loudly\add* from Tsiyyon \add (Zion)\add*.
 \q1 He will raise his voice from Yerushalem \add (Jerusalem)\add*.
 \q1 The shepherds’ pastures will \add brown off\add*.
 \q1 The top of \add Mt.\add* Carmel will dry up.”\x + \xo 1:2: \xt Yoel 3:16.\x*
-\s1 Judgment of Yisrael’s neighbours
+\s1 Judgement of Yisrael’s neighbours
 \s2 Syria
 \p
 \v 3 This is what Yahweh says:
@@ -108,6 +108,7 @@
 \q1 and I’ll kill all the \add leaders\add* along with him,”
 \mi says Yahweh.
 \s1 Yehudah’s punishment
+\s4 Southern kingdom
 \p
 \v 4 This is what Yahweh says:
 \q1 “\add Even if Yehudah was three or four sins below the threshold\add*,
@@ -119,6 +120,7 @@
 \v 5 I’ll send fire on Yehudah,
 \q1 and it’ll devour Yerushalem’s fortresses.”
 \s1 Yisrael’s punishment
+\s4 Northern kingdom
 \p
 \v 6 This is what Yahweh says:
 \q1 “\add Even if Yehudah was three or four sins below the threshold\add*,
@@ -167,6 +169,7 @@
 \v 1 Hear this message that Yahweh has spoken against you, people of Israel, against \add Yakob’s descendants\add* that I brought out of Egypt saying:
 \v 2 “I have chosen only you from all the families of the earth, therefore I’ll punish you all for all your sins.”
 \s1 Cause and effect
+\s4 Northern kingdom
 \q1
 \v 3 Do two \add people\add* walk together, \add without first agreeing to meet\add*.
 \q1
@@ -184,6 +187,7 @@
 \v 8 The lion has roared—who won’t be afraid?
 \q1 The master Yahweh has spoken—who won’t prophesy?
 \s1 The punishment of Shomron (Samaria)
+\s4 Northern kingdom
 \q1
 \v 9 Proclaim this in the fortresses at Ashdod,
 \q1 and in the strongholds in Egypt,
@@ -225,6 +229,7 @@
 \q1 and you’ll be thrown out toward Harmon.
 \mi That is Yahweh’s declaration.”
 \s1 The arguing of Israelis
+\s4 Northern kingdom
 \q1
 \v 4 “Go to \add the worship centre at\add* Beyt-El and sin,
 \q1 to \add the one at\add* Gilgal and multiply sin.
@@ -283,6 +288,7 @@
 \q1 Army commander God, Yahweh, is his name.”
 \c 5
 \s1 Encouraging repentance from sin
+\s4 Northern kingdom
 \p
 \v 1 Hear this message \add of mourning\add* over you that I take up, \add people\add* of Israel:
 \q1
@@ -349,7 +355,8 @@
 \q1 and the mourners to wail.
 \v 17 There’ll be wailing in all the vineyards because I’ll pass through among you,”
 \mi Yahweh says.
-\s1 The pegpatuman of correct judging
+\s1 Warning about coming judgement
+\s4 Northern kingdom
 \p
 \v 18 You who desire the day of Yahweh \add won’t end well\add*.
 \q1 Why do you long for the day of Yahweh?
@@ -382,6 +389,7 @@
 \mi says Yahweh, whose name is the God \add with armies\add*.
 \c 6
 \s1 Exile for the complacent
+\s4 Northern kingdom
 \q1
 \v 1 Those who’re at ease in Tsiyyon \add (Zion)\add* \add won’t end well\add*,
 \q1 nor will those who feel secure in the hill country of Shomron \add (Samaria)\add*—
@@ -439,6 +447,7 @@
 \q1 from Lebo-Hamat to the brook in the Arabah.”
 \c 7
 \s1 The locusts vision
+\s4 Northern kingdom
 \p
 \v 1 This is what my master Yahweh showed me:
 \m Listen, he formed a locust swarm when the spring crop began to come up, and oh no, it was the late crop after the king’s \add initial\add* harvest.
@@ -446,6 +455,7 @@
 \p
 \v 3 \add So\add* Yahweh \add backed off\add* from that and said that \add he\add* wouldn’t do it.
 \s1 The wildfire vision
+\s4 Northern kingdom
 \p
 \v 4 This is what my master Yahweh showed me:
 \m Listen, my master Yahweh called on fire to judge \add the country\add*. It \add dried up\add* the vast, deep water under the earth and \add also would have\add* devoured the land
@@ -453,6 +463,7 @@
 \p
 \v 6 \add So\add* Yahweh also \add backed off\add* from that and said that \add he\add* wouldn’t do it.
 \s1 The plumb-line vision
+\s4 Northern kingdom
 \p
 \v 7 This is what he showed me:
 \m Listen, my master stood on a wall holding a plumb-line
@@ -463,6 +474,7 @@
 \q1 Yisrael’s sanctuaries will be ruined,
 \q1 and I’ll \add take action\add* against the house of Yaraveam \add (Jeroboam)\add* with the sword.”
 \s1 Amos and Amasiyas
+\s4 Both kingdoms
 \p
 \v 10 Then Amatsyah, the priest at Beyt-El \add (Bethel)\add*, sent a message to Yisrael’s King Yaraveam, saying: “Amos has conspired against you \add right among the Israeli people\add*. The \add country can’t handle\add* all his messages.
 \v 11 Amos is saying that \add you,\add* Yaraveam will die by the sword and and that Israel will definitely \add get taken\add* into exile away from this land.”
@@ -481,6 +493,7 @@
 \q1 and Israel will certainly \add be taken\add* into exile from its land.”
 \c 8
 \s1 The basket-of-fruit vision
+\s4 Northern kingdom
 \p
 \v 1 This is what my master Yahweh showed me: See this basketful of summer fruit.
 \v 2 Then he \add asked\add*, “What do you see, Amos?”
@@ -491,6 +504,7 @@
 \q1 Many dead bodies—they’re thrown everywhere.
 \q1 \add Then\add* silence.”
 \s1 Israel’s punishment
+\s4 Northern kingdom
 \p
 \v 4 Listen to this, you who trample the needy
 \q1 and take the poor off the land.
@@ -541,6 +555,7 @@
 \q1 they will \add die\add* and never \add live\add* again.”
 \c 9
 \s1 Yahweh’s judgement on Israel
+\s4 Northern kingdom
 \p
 \v 1 I saw my master standing beside the altar, and he said,
 \q1 “Strike the tops of the pillars so that the foundations will shake.
@@ -587,11 +602,12 @@
 \v 10 All my people who’re sinners will die by the sword,
 \q1 \add including\add* those who said, ‘\add We’re totally immune from any\add* disaster.’
 \s1 Yisrael’s future restoration
+\s4 Full kingdom
 \q1
 \v 11 \add At that time\add*, I’ll raise up David’s shelter that collapsed, and \add repair where it’s split\add*.
 \q1 I’ll raise up its ruins, and rebuild it as in the days of old,\x + \xo 9:11-12: \xt Acts 15:16-18.\x*
 \q1
-\v 12 T\add Consequently\add* they may \add take over what’s left\add* of Edom
+\v 12 \add Consequently\add* they may \add take over what’s left\add* of Edom
 \q1 and all the nations that \add have decided to follow me\add*.
 \mi That is Yahweh’s declaration—he’ll do it.
 \p
