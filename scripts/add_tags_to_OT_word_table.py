@@ -48,6 +48,8 @@ We use this information to update our OET word-table
 
 CHANGELOG:
     2024-12-19 Fixed bug matching word numbers when WLC uses a Ketiv
+    2025-06-19 Connect Yahweh to God person and improve people connections (using altGloss and better handling fields like 'of_Moses')
+    2025-06-19 Changed to connect timeline, etc., to EVERY word in the verse (not just the FIRST word)
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple, NamedTuple, Optional
@@ -67,10 +69,10 @@ import sys
 sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitted to PyPI
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew #, transliterate_Greek
 
-LAST_MODIFIED_DATE = '2025-01-05' # by RJH
+LAST_MODIFIED_DATE = '2025-06-19' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET OT wordtable"
-PROGRAM_VERSION = '0.19'
+PROGRAM_VERSION = '0.22'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -460,11 +462,11 @@ def associate_Theographic_people_places() -> bool:
     Using the Theographic Bible Data, tag Hebrew word lines in our table
         with keys for people, places, etc.
     """
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nAssociating Hebrew words with json keys…" )
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nAssociating Hebrew words with Theographic json keys…" )
     assert 381_000 < len(state.newWordTable) < 382_000, f"{len(state.newWordTable)=}"
 
     numAddedPeople = numAddedPeopleGroups = numAddedLocations = numAddedEvents = numAddedYears = numAddedTimelines = 0
-    lastVerseRef = None
+    # lastVerseRef = None
     for n, columns_string in enumerate( state.newWordTable[1:], start=1 ):
         wordRef, _OSHBid, rowType, _morphemeRowList, _lemmaRowList, _strongs, _cantillationHierarchy, _morphology, _word, noCantillations, morphemeGlosses, contextualMorphemeGlosses, wordGloss, contextualWordGloss, glossCaps, _glossPunctuation, _glossOrder, _glossInsert, _role, _nesting, _tags = columns_string.split( '\t' )
         if rowType in ('seg','note','variant note','alternative note','exegesis note'):
@@ -474,47 +476,53 @@ def associate_Theographic_people_places() -> bool:
             continue
         tags:List[str] = []
         verseRef = wordRef.split('w')[0]
-        newVerse = verseRef != lastVerseRef
-        # print( f"{wordRef=} {verseRef} {lastVerseRef=} {newVerse=}" )
+        # newVerse = verseRef != lastVerseRef
         try: verseLinkEntry = state.verseIndex[verseRef]
         except KeyError: # versification difference ???
             logging.critical( f"Versification error: Unable to find {verseRef} in Theographic json" )
             assert columns_string.count( '\t' ) == 20, f"{columns_string.count(TAB)} {columns_string=}"
             # state.newWordTable.append( columns_string )
-            lastVerseRef = verseRef
+            # lastVerseRef = verseRef
             continue
 
         gloss = contextualWordGloss if contextualWordGloss \
                 else wordGloss if wordGloss \
                 else contextualMorphemeGlosses if contextualMorphemeGlosses \
                 else morphemeGlosses
+        # Also use an alternative gloss (which then gives us a second chance below to match the normal English names)
+        altGloss = wordGloss if wordGloss and gloss!=wordGloss \
+                else contextualMorphemeGlosses if contextualMorphemeGlosses and gloss!=contextualMorphemeGlosses \
+                else morphemeGlosses if gloss!=morphemeGlosses \
+                else ''
 
-        if gloss and gloss[0].isupper():
+        if gloss: # and gloss[0].isupper(): # That rules out glosses like 'of_Moses'
         # if 'U' in glossCaps: # or 'G' in glossCaps: ???
             dPrint( 'Never', DEBUGGING_THIS_MODULE, f"{wordRef} {verseLinkEntry=}" )
             if verseLinkEntry['people']:
                 dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Need to add people: {n} {wordRef} '{noCantillations}' {glossCaps} '{gloss}' {verseLinkEntry['people']}")
                 assert isinstance( verseLinkEntry['people'], list )
                 for personID in verseLinkEntry['people']:
-                    assert personID[0] == 'P' and ' ' not in personID and ';' not in personID
+                    assert personID[0]=='P' and ' ' not in personID and ';' not in personID
                     personName = personID[1:] # First prefix letter is P for person
                     while personName[-1].isdigit(): # it has a suffix
                         personName = personName[:-1] # Drop the final digit
-                    if personName in gloss:
+                    # dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Looking for theographic '{personName}' at {wordRef} for {gloss=} {altGloss=}")
+                    if personName in gloss or personName in altGloss:
                         tags.append( personID )
-                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{personID}' to {wordRef} for '{gloss}'")
+                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added AAA '{personID}' to {wordRef} for {gloss=} {altGloss=}")
                         numAddedPeople += 1
                     else:
-                        for thgName,oetName in (('Israel','Jacob'),('Pharez','Perez'),('Zerah','Zara'),('Tamar','Thamar'),('Hezron','Esrom'),('Ram','Aram'),('Amminadab','Aminadab'),('Nahshon','Naasson'),
+                        for thgName,oetName in (('God','Yahweh'),('Israel','Jacob'),
+                                            ('Pharez','Perez'),('Zerah','Zara'),('Tamar','Thamar'),('Hezron','Esrom'),('Ram','Aram'),('Amminadab','Aminadab'),('Nahshon','Naasson'),
                                             ('Jehoshaphat','Josaphat'),('Jehoram','Joram'),('Uzziah','Ozias'),('Jotham','Joatham'),('Ahaz','Achaz'),
                                             ('Jehoiachin','Jechonias'),('Shealtiel','Salathiel'),('Zerubbabel','Zorobabel'),('Sadoc','Zadok')):
-                            if personName==thgName and oetName in gloss:
+                            if personName==thgName and (oetName in gloss or oetName in altGloss):
                                 tags.append( personID )
-                                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{personID}' to {wordRef} for '{gloss}'")
+                                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added BBB '{personID}' to {wordRef} for {gloss=} {altGloss=}")
                                 numAddedPeople += 1
-                                break
+                                break # from inner loop
             if verseLinkEntry['places']:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Need to add places: {n} {wordRef} '{noCantillations}' {glossCaps} '{gloss}' {verseLinkEntry['places']}")
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Need to add places: {n} {wordRef} '{noCantillations}' {glossCaps} {gloss=} {altGloss=} {verseLinkEntry['places']}")
                 assert isinstance( verseLinkEntry['places'], list )
                 for placeID in verseLinkEntry['places']:
                     assert placeID[0] == 'L'
@@ -524,51 +532,52 @@ def associate_Theographic_people_places() -> bool:
                     if placeName in gloss:
                         assert ' ' not in placeID and ';' not in placeID
                         tags.append( placeID )
-                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{placeID}' to {wordRef} for '{gloss}'")
+                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{placeID}' to {wordRef} for {gloss=} {altGloss=}")
                         numAddedLocations += 1
-        if newVerse:
-            newVerse = False
-            # These ones we can link to the first (included) word in the verse
-            if verseLinkEntry['peopleGroups']:
-                dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Could add people groups: {n} {wordRef} '{noCantillations}' {glossCaps} '{gloss}' {verseLinkEntry['peopleGroups']}")
-                assert isinstance( verseLinkEntry['peopleGroups'], list )
-                for pgID in verseLinkEntry['peopleGroups']:
-                    # personName = pgID[1:] # First prefix letter is P for person
-                    # while personName[-1].isdigit(): # it has a suffix
-                    #     personName = personName[:-1] # Drop the final digit
-                    assert ' ' not in pgID and ';' not in pgID
-                    tag = f"G{pgID.replace(' ','_')}"
-                    tags.append( tag )
-                    dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
-                    numAddedPeopleGroups += 1
-            if verseLinkEntry['yearNum']:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add year number: {n} {wordRef} '{noCantillations}' {glossCaps} '{gloss}' {verseLinkEntry['yearNum']}")
-                assert isinstance( verseLinkEntry['yearNum'], str )
-                tag = f"Y{verseLinkEntry['yearNum']}"
+
+        # if newVerse: # These ones we can link to the first (included) word in the verse
+        #     newVerse = False
+        # Changed to link to EVERY word in the verse
+        if verseLinkEntry['peopleGroups']:
+            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Could add people groups: {n} {wordRef} '{noCantillations}' {glossCaps} {gloss=} {altGloss=} {verseLinkEntry['peopleGroups']}")
+            assert isinstance( verseLinkEntry['peopleGroups'], list )
+            for pgID in verseLinkEntry['peopleGroups']:
+                # personName = pgID[1:] # First prefix letter is P for person
+                # while personName[-1].isdigit(): # it has a suffix
+                #     personName = personName[:-1] # Drop the final digit
+                assert ' ' not in pgID and ';' not in pgID
+                tag = f"G{pgID.replace(' ','_')}"
+                tags.append( tag )
+                dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
+                numAddedPeopleGroups += 1
+        if verseLinkEntry['yearNum']:
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add year number: {n} {wordRef} '{noCantillations}' {glossCaps} {gloss=} {altGloss=} {verseLinkEntry['yearNum']}")
+            assert isinstance( verseLinkEntry['yearNum'], str )
+            tag = f"Y{verseLinkEntry['yearNum']}"
+            assert ' ' not in tag and ';' not in tag
+            tags.append( tag )
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
+            numAddedYears += 1
+        if verseLinkEntry['eventsDescribed']:
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add events: {n} {wordRef} '{noCantillations}' {glossCaps} {gloss=} {altGloss=} {verseLinkEntry['eventsDescribed']}")
+            assert isinstance( verseLinkEntry['eventsDescribed'], list )
+            for eventID in verseLinkEntry['eventsDescribed']:
+                # personName = personID[1:] # First prefix letter is P for person
+                # while personName[-1].isdigit(): # it has a suffix
+                #     personName = personName[:-1] # Drop the final digit
+                tag = f"E{eventID.replace(' ','_')}"
                 assert ' ' not in tag and ';' not in tag
                 tags.append( tag )
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
-                numAddedYears += 1
-            if verseLinkEntry['eventsDescribed']:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add events: {n} {wordRef} '{noCantillations}' {glossCaps} '{gloss}' {verseLinkEntry['eventsDescribed']}")
-                assert isinstance( verseLinkEntry['eventsDescribed'], list )
-                for eventID in verseLinkEntry['eventsDescribed']:
-                    # personName = personID[1:] # First prefix letter is P for person
-                    # while personName[-1].isdigit(): # it has a suffix
-                    #     personName = personName[:-1] # Drop the final digit
-                    tag = f"E{eventID.replace(' ','_')}"
-                    assert ' ' not in tag and ';' not in tag
-                    tags.append( tag )
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
-                    numAddedEvents += 1
-            if verseLinkEntry['timeline']:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add timeline: {n} {wordRef} '{noCantillations}' {glossCaps} '{gloss}' {verseLinkEntry['timeline']}")
-                assert isinstance( verseLinkEntry['timeline'], str )
-                tag = f"T{verseLinkEntry['timeline'].replace(' ','_')}"
-                assert ' ' not in tag and ';' not in tag
-                tags.append( tag )
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
-                numAddedTimelines += 1
+                numAddedEvents += 1
+        if verseLinkEntry['timeline']:
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add timeline: {n} {wordRef} '{noCantillations}' {glossCaps} {gloss=} {altGloss=} {verseLinkEntry['timeline']}")
+            assert isinstance( verseLinkEntry['timeline'], str )
+            tag = f"T{verseLinkEntry['timeline'].replace(' ','_')}"
+            assert ' ' not in tag and ';' not in tag
+            tags.append( tag )
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
+            numAddedTimelines += 1
 
         # Put the new column in the table
         # print( f"{n=} {columns_string=} {tags=}" )
@@ -576,8 +585,7 @@ def associate_Theographic_people_places() -> bool:
         newLine = f"{columns_string}{';'.join(tags)}"
         assert newLine.count( '\t' ) == 20, f"{newLine.count(TAB)} {newLine=}"
         state.newWordTable[n] = newLine
-        # print( f"  {state.newWordTable[n]=}")
-        lastVerseRef = verseRef
+        # lastVerseRef = verseRef
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{numAddedPeople=:,} {numAddedPeopleGroups=:,} {numAddedLocations=:,} {numAddedEvents=:,} {numAddedYears=:,} {numAddedTimelines=:,}" )
     assert 381_000 < len(state.newWordTable) < 382_000, f"{len(state.newWordTable)=}"
@@ -606,6 +614,11 @@ def tag_trinity_persons() -> bool:
                 else wordGloss if wordGloss \
                 else contextualMorphemeGlosses if contextualMorphemeGlosses \
                 else morphemeGlosses
+        # Also use an alternative gloss (which then gives us a second chance below to match the normal English names)
+        altGloss = wordGloss if wordGloss and gloss!=wordGloss \
+                else contextualMorphemeGlosses if contextualMorphemeGlosses and gloss!=contextualMorphemeGlosses \
+                else morphemeGlosses if gloss!=morphemeGlosses \
+                else ''
         
         tagList = tags.split( ';' ) if tags else []
 
@@ -614,11 +627,14 @@ def tag_trinity_persons() -> bool:
         # We rely on the SR capitalisation for these matches, e.g., difference between father/Father, son/Son, holy/Holy, spirit/Spirit
         # Any of these have the potential for a false tag, e.g., if Father or Holy was capitalised at the start of a sentence in the SR
         #   If it's a problem, we have the Caps column that we could also look at
-        if ('God' in gloss or 'Father' in gloss) and 'PGod' not in tagList:
+        if 'PGod' not in tagList \
+        and ('God' in gloss or 'ʼElohīm' in gloss or 'Yahweh' in gloss or 'YHWH' in gloss \
+            or 'God' in altGloss or 'ʼElohīm' in altGloss or 'Yahweh' in altGloss or 'YHWH' in altGloss):
             tagList.append( 'PGod' )
             numAddedGod += 1
             madeChanges = True
-        if 'Spirit' in gloss and 'PHoly_Spirit' not in tagList:
+        if 'PHoly_Spirit' not in tagList \
+        and ('Spirit' in gloss or 'Spirit' in altGloss):
             tagList.append( 'PHoly_Spirit' )
             numAddedHolySpirit += 1
             madeChanges = True
@@ -634,268 +650,268 @@ def tag_trinity_persons() -> bool:
 # end of add_tags_to_OT_word_table.tag_trinity_persons
 
 
-def tag_referents_from_macula_data() -> bool:
-    """
-    Using the Referent field from the Clear.Bible Macula Hebrew data
-        (already loaded from a TSV file preprocessed by our convert_ClearMaculaOT_to_our_TSV.py)
-        add referent tags to our existing table.
+# def tag_referents_from_macula_data() -> bool:
+#     """
+#     Using the Referent field from the Clear.Bible Macula Hebrew data
+#         (already loaded from a TSV file preprocessed by our convert_ClearMaculaOT_to_our_TSV.py)
+#         add referent tags to our existing table.
 
-    Note that we are using the UHB
-        and Clear used the OSHB,
-        so some matches won't fit.
-    """
-    # global DEBUGGING_THIS_MODULE
-    # DEBUGGING_THIS_MODULE = 99
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nAssociating Macula referents with our table entries…" )
-    assert 381_000 < len(state.newWordTable) < 382_000, f"{len(state.newWordTable)=}"
+#     Note that we are using the UHB
+#         and Clear used the OSHB,
+#         so some matches won't fit.
+#     """
+#     # global DEBUGGING_THIS_MODULE
+#     # DEBUGGING_THIS_MODULE = 99
+#     vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nAssociating Macula referents with our table entries…" )
+#     assert 381_000 < len(state.newWordTable) < 382_000, f"{len(state.newWordTable)=}"
 
-    # First make a book index into our table (for greater search efficiency down below)
-    lastBBB = None
-    ourBBBIndex = {}
-    for p,ourRowStr in enumerate( state.newWordTable[1:], start=1 ):
-        BBB = ourRowStr[:3]
-        if BBB != lastBBB:
-            if lastBBB is not None:
-                ourBBBIndex[lastBBB] = (startIndex,p)
-            startIndex = p
-            lastBBB = BBB
-    ourBBBIndex[BBB] = (startIndex,p)
+#     # First make a book index into our table (for greater search efficiency down below)
+#     lastBBB = None
+#     ourBBBIndex = {}
+#     for p,ourRowStr in enumerate( state.newWordTable[1:], start=1 ):
+#         BBB = ourRowStr[:3]
+#         if BBB != lastBBB:
+#             if lastBBB is not None:
+#                 ourBBBIndex[lastBBB] = (startIndex,p)
+#             startIndex = p
+#             lastBBB = BBB
+#     ourBBBIndex[BBB] = (startIndex,p)
 
-    # 0      1       2        3               4       5        6          7             8       9       10      11        12     13    14             15           16    17          18     19           20       21              22     23     24           25            26               27
-    # FGRef\tOSHBid\tRowType\tWordOrMorpheme\tAfter\tCompound\tWordClass\tPartOfSpeech\tPerson\tGender\tNumber\tWordType\tState\tRole\tStrongNumberX\tStrongLemma\tStem\tMorphology\tLemma\tSenseNumber\tSubjRef\tParticipantRef\tFrame\tGreek\tGreekStrong\tEnglishGloss\tContextualGloss\tNesting
-    assert state.macula_tsv_lines[0][0] == 'FGRef' # Check our index value of 0
-    assert state.macula_tsv_lines[0][3] == 'WordOrMorpheme' # Check our index value of 3
-    assert state.macula_tsv_lines[0][6] == 'WordClass' # Check our index value of 6
-    assert state.macula_tsv_lines[0][16] == 'Referents' # Check our index value of 16
+#     # 0      1       2        3               4       5        6          7             8       9       10      11        12     13    14             15           16    17          18     19           20       21              22     23     24           25            26               27
+#     # FGRef\tOSHBid\tRowType\tWordOrMorpheme\tAfter\tCompound\tWordClass\tPartOfSpeech\tPerson\tGender\tNumber\tWordType\tState\tRole\tStrongNumberX\tStrongLemma\tStem\tMorphology\tLemma\tSenseNumber\tSubjRef\tParticipantRef\tFrame\tGreek\tGreekStrong\tEnglishGloss\tContextualGloss\tNesting
+#     assert state.macula_tsv_lines[0][0] == 'FGRef' # Check our index value of 0
+#     assert state.macula_tsv_lines[0][3] == 'WordOrMorpheme' # Check our index value of 3
+#     assert state.macula_tsv_lines[0][6] == 'WordClass' # Check our index value of 6
+#     assert state.macula_tsv_lines[0][16] == 'Referents' # Check our index value of 16
 
-    totalAdds = totalReferencePairAdds = totalPersonAdds = totalLocationAdds = numUnmatched = 0
-    lastBBB = None
-    for n,maculaRowList in enumerate( state.macula_tsv_lines[1:], start=1 ):
-        BBB = maculaRowList[0][:3]
-        if BBB != lastBBB:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Processing {BBB}…")
-            bookStartIndex,bookEndIndex = ourBBBIndex[BBB]
-            lastBBB = BBB
-        # if n > 110: break
-        # if totalAdds > 5: break
+#     totalAdds = totalReferencePairAdds = totalPersonAdds = totalLocationAdds = numUnmatched = 0
+#     lastBBB = None
+#     for n,maculaRowList in enumerate( state.macula_tsv_lines[1:], start=1 ):
+#         BBB = maculaRowList[0][:3]
+#         if BBB != lastBBB:
+#             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Processing {BBB}…")
+#             bookStartIndex,bookEndIndex = ourBBBIndex[BBB]
+#             lastBBB = BBB
+#         # if n > 110: break
+#         # if totalAdds > 5: break
 
-        if maculaRowList[16]:
-            # dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{n} ({type(maculaRowList)}) {maculaRowList}" )
-            referentIDs = maculaRowList[16].split( ';' )
-            referentWordID, referentGreek = maculaRowList[0], maculaRowList[3]
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {referentWordID} ({maculaRowList[6]}) '{referentGreek}' ({len(referentIDs)}) {referentIDs}")
-            for referentID in referentIDs:
-                fullReferentID = f'{maculaRowList[0][:4]}{referentID}' # Add the bookcode in
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Need to find {fullReferentID}")
+#         if maculaRowList[16]:
+#             # dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{n} ({type(maculaRowList)}) {maculaRowList}" )
+#             referentIDs = maculaRowList[16].split( ';' )
+#             referentWordID, referentGreek = maculaRowList[0], maculaRowList[3]
+#             dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {referentWordID} ({maculaRowList[6]}) '{referentGreek}' ({len(referentIDs)}) {referentIDs}")
+#             for referentID in referentIDs:
+#                 fullReferentID = f'{maculaRowList[0][:4]}{referentID}' # Add the bookcode in
+#                 dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Need to find {fullReferentID}")
 
-                # So do we need to search backwards or forwards?
-                referentC, referentV, referentW = int(referentWordID[4:].split(':')[0]), int(referentWordID[4:].split(':')[-1].split('w')[0]), int(referentWordID[4:].split('w')[-1])
-                referredC, referredV, referredW = int(referentID.split(':')[0]), int(referentID.split(':')[-1].split('w')[0]), int(referentID.split('w')[-1])
-                searchAmount = '-C' if referredC<referentC else '+C' if referredC>referentC else None
-                if searchAmount is None: searchAmount = '-V' if referredV<referentV else '+V' if referredV>referentV else None
-                if searchAmount is None: searchAmount = '-W' if referredW<referentW else '+W' if referredW>referentW else None
-                if searchAmount is None:
-                    logging.critical( f"Are we linking to ourselves??? Failed going from {referentWordID} ({referentC},{referentV},{referentW}) to {referentID} ({referredC},{referredV},{referredW})" )
-                    continue
-                assert searchAmount is not None, f"Failed going from {referentWordID} ({referentC},{referentV},{referentW}) to {referentID} ({referredC},{referredV},{referredW})"
-                offsetAmount = (abs(referentC-referredC)+1)*50*40 if searchAmount[1]=='C' else (abs(referentV-referredV)+1)*40 if searchAmount[1]=='V' else 30
-                if searchAmount[0]=='-': offsetAmount = -offsetAmount; step = -1
-                else: step = 1
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    Got {searchAmount=} going from {referentWordID} ({referentC},{referentV},{referentW}) to {referentID} ({referredC},{referredV},{referredW}) so {offsetAmount=} and {step=}")
-                # Firstly we also have to find the referred word in the macula table
-                # Usually it's before the referent, but can be after, e.g., "and you, Bethlehem"
-                for m in range( n, n+offsetAmount, step ):
-                    # print( f"      {m} {state.macula_tsv_lines[m]}")
-                    if state.macula_tsv_lines[m][0] == fullReferentID:
-                        # print( f"      Found {m} {state.macula_tsv_lines[m]}")
-                        break
-                else:
-                    dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Got {searchAmount=} going from {referentWordID} ({referentC},{referentV},{referentW}) to {referentID} ({referredC},{referredV},{referredW}) so {offsetAmount=} and {step=}")
-                    logging.critical( f"<<<< @{referentWordID} can't find {fullReferentID} '{referentGreek}' >>>>" )
-                referredWordID, referrednoCantillations = state.macula_tsv_lines[m][0], state.macula_tsv_lines[m][3]
-                # We expect that the referredWordID is BEFORE the referentWordID
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    {referentWordID=} {referentGreek=} {referredWordID=} {referrednoCantillations=}")
+#                 # So do we need to search backwards or forwards?
+#                 referentC, referentV, referentW = int(referentWordID[4:].split(':')[0]), int(referentWordID[4:].split(':')[-1].split('w')[0]), int(referentWordID[4:].split('w')[-1])
+#                 referredC, referredV, referredW = int(referentID.split(':')[0]), int(referentID.split(':')[-1].split('w')[0]), int(referentID.split('w')[-1])
+#                 searchAmount = '-C' if referredC<referentC else '+C' if referredC>referentC else None
+#                 if searchAmount is None: searchAmount = '-V' if referredV<referentV else '+V' if referredV>referentV else None
+#                 if searchAmount is None: searchAmount = '-W' if referredW<referentW else '+W' if referredW>referentW else None
+#                 if searchAmount is None:
+#                     logging.critical( f"Are we linking to ourselves??? Failed going from {referentWordID} ({referentC},{referentV},{referentW}) to {referentID} ({referredC},{referredV},{referredW})" )
+#                     continue
+#                 assert searchAmount is not None, f"Failed going from {referentWordID} ({referentC},{referentV},{referentW}) to {referentID} ({referredC},{referredV},{referredW})"
+#                 offsetAmount = (abs(referentC-referredC)+1)*50*40 if searchAmount[1]=='C' else (abs(referentV-referredV)+1)*40 if searchAmount[1]=='V' else 30
+#                 if searchAmount[0]=='-': offsetAmount = -offsetAmount; step = -1
+#                 else: step = 1
+#                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    Got {searchAmount=} going from {referentWordID} ({referentC},{referentV},{referentW}) to {referentID} ({referredC},{referredV},{referredW}) so {offsetAmount=} and {step=}")
+#                 # Firstly we also have to find the referred word in the macula table
+#                 # Usually it's before the referent, but can be after, e.g., "and you, Bethlehem"
+#                 for m in range( n, n+offsetAmount, step ):
+#                     # print( f"      {m} {state.macula_tsv_lines[m]}")
+#                     if state.macula_tsv_lines[m][0] == fullReferentID:
+#                         # print( f"      Found {m} {state.macula_tsv_lines[m]}")
+#                         break
+#                 else:
+#                     dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Got {searchAmount=} going from {referentWordID} ({referentC},{referentV},{referentW}) to {referentID} ({referredC},{referredV},{referredW}) so {offsetAmount=} and {step=}")
+#                     logging.critical( f"<<<< @{referentWordID} can't find {fullReferentID} '{referentGreek}' >>>>" )
+#                 referredWordID, referrednoCantillations = state.macula_tsv_lines[m][0], state.macula_tsv_lines[m][3]
+#                 # We expect that the referredWordID is BEFORE the referentWordID
+#                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    {referentWordID=} {referentGreek=} {referredWordID=} {referrednoCantillations=}")
 
-                # Find the parts of our table for this verse / verses
-                referentVerseID, referredVerseID = referentWordID.split('w')[0], referredWordID.split('w')[0]
-                ourReferentVerseRowIndices, ourReferredVerseRowIndices = [], []
-                for p,ourRowStr in enumerate( state.newWordTable[bookStartIndex:bookEndIndex], start=bookStartIndex ):
-                    if ourRowStr.startswith( f'{referredVerseID}w' ):
-                        # print( f"  to REFERRED {p} {ourRowStr}" )
-                        ourReferredVerseRowIndices.append( p )
-                    if ourRowStr.startswith( f'{referentVerseID}w' ):
-                        # print( f"  fr REFERENT {p} {ourRowStr}" )
-                        ourReferentVerseRowIndices.append( p )
+#                 # Find the parts of our table for this verse / verses
+#                 referentVerseID, referredVerseID = referentWordID.split('w')[0], referredWordID.split('w')[0]
+#                 ourReferentVerseRowIndices, ourReferredVerseRowIndices = [], []
+#                 for p,ourRowStr in enumerate( state.newWordTable[bookStartIndex:bookEndIndex], start=bookStartIndex ):
+#                     if ourRowStr.startswith( f'{referredVerseID}w' ):
+#                         # print( f"  to REFERRED {p} {ourRowStr}" )
+#                         ourReferredVerseRowIndices.append( p )
+#                     if ourRowStr.startswith( f'{referentVerseID}w' ):
+#                         # print( f"  fr REFERENT {p} {ourRowStr}" )
+#                         ourReferentVerseRowIndices.append( p )
 
-                # First try to find our referent Hebrew word
-                possibleReferentRowIndices = []
-                for p in ourReferentVerseRowIndices:
-                    rowItems = state.newWordTable[p].split( '\t' )
-                    if rowItems[1] == referentGreek:
-                        # print( f"  REFERENT {p} {rowItems}" )
-                        possibleReferentRowIndices.append( p )
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Found {len(possibleReferentRowIndices)}/{len(ourReferentVerseRowIndices)} referent verse row(s) that might match {referentWordID} '{referentGreek}'")
+#                 # First try to find our referent Hebrew word
+#                 possibleReferentRowIndices = []
+#                 for p in ourReferentVerseRowIndices:
+#                     rowItems = state.newWordTable[p].split( '\t' )
+#                     if rowItems[1] == referentGreek:
+#                         # print( f"  REFERENT {p} {rowItems}" )
+#                         possibleReferentRowIndices.append( p )
+#                 dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Found {len(possibleReferentRowIndices)}/{len(ourReferentVerseRowIndices)} referent verse row(s) that might match {referentWordID} '{referentGreek}'")
 
-                # Now try to find the referred Hebrew word
-                possibleReferredRowIndices = []
-                for p in ourReferredVerseRowIndices:
-                    rowItems = state.newWordTable[p].split( '\t' )
-                    if rowItems[1] == referrednoCantillations:
-                        # print( f"  REFERRED {p} {rowItems}" )
-                        possibleReferredRowIndices.append( p )
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Found {len(possibleReferredRowIndices)}/{len(ourReferredVerseRowIndices)} referred verse row(s) that might match {referentWordID} '{referrednoCantillations}'")
+#                 # Now try to find the referred Hebrew word
+#                 possibleReferredRowIndices = []
+#                 for p in ourReferredVerseRowIndices:
+#                     rowItems = state.newWordTable[p].split( '\t' )
+#                     if rowItems[1] == referrednoCantillations:
+#                         # print( f"  REFERRED {p} {rowItems}" )
+#                         possibleReferredRowIndices.append( p )
+#                 dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Found {len(possibleReferredRowIndices)}/{len(ourReferredVerseRowIndices)} referred verse row(s) that might match {referentWordID} '{referrednoCantillations}'")
                 
-                if not possibleReferredRowIndices: # have a second attempt
-                    for p in ourReferredVerseRowIndices:
-                        rowItems = state.newWordTable[p].split( '\t' )
-                        if rowItems[1][:3] == referrednoCantillations[:3]: # Last letters might be different?
-                            # print( f"  REFERRED {p} {rowItems}" )
-                            possibleReferredRowIndices.append( p )
-                        # else: print( f"{rowItems[1][:4]} != {referrednoCantillations[:4]}")
-                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Loosely found {len(possibleReferredRowIndices)} referred verse row(s) that might match {referentWordID} '{referrednoCantillations}'")
+#                 if not possibleReferredRowIndices: # have a second attempt
+#                     for p in ourReferredVerseRowIndices:
+#                         rowItems = state.newWordTable[p].split( '\t' )
+#                         if rowItems[1][:3] == referrednoCantillations[:3]: # Last letters might be different?
+#                             # print( f"  REFERRED {p} {rowItems}" )
+#                             possibleReferredRowIndices.append( p )
+#                         # else: print( f"{rowItems[1][:4]} != {referrednoCantillations[:4]}")
+#                     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Loosely found {len(possibleReferredRowIndices)} referred verse row(s) that might match {referentWordID} '{referrednoCantillations}'")
 
-                def appendNewTags( ixReferent:int, ixReferred:int ):
-                    """
-                    We establish a referred (R) and from (F) link for referents marked in Macula
+#                 def appendNewTags( ixReferent:int, ixReferred:int ):
+#                     """
+#                     We establish a referred (R) and from (F) link for referents marked in Macula
 
-                    Also, if there's a person or location link in the referred word, we copy that back to the referent word.
+#                     Also, if there's a person or location link in the referred word, we copy that back to the referent word.
 
-                    However, our word numbers vary (because our GNT is different, plus we include unused/variant words in our word count)
-                        so we have to fix up the word number as well.
-                        UPDATED: We now put the row number instead
+#                     However, our word numbers vary (because our GNT is different, plus we include unused/variant words in our word count)
+#                         so we have to fix up the word number as well.
+#                         UPDATED: We now put the row number instead
 
-                    Uses many global variables as well as a declared nonlocal ones.
-                    """
-                    nonlocal totalReferencePairAdds, totalPersonAdds, totalLocationAdds, totalAdds
-                    fnPrint( DEBUGGING_THIS_MODULE, f"appendNewTags( {ixReferent=}, {ixReferred=} )" )
+#                     Uses many global variables as well as the declared nonlocal ones.
+#                     """
+#                     nonlocal totalReferencePairAdds, totalPersonAdds, totalLocationAdds, totalAdds
+#                     fnPrint( DEBUGGING_THIS_MODULE, f"appendNewTags( {ixReferent=}, {ixReferred=} )" )
 
-                    referrentRowIndex = possibleReferentRowIndices[ixReferent]
-                    referredRowIndex = possibleReferredRowIndices[ixReferred]
-                    existingReferentRowStr = state.newWordTable[referrentRowIndex]
-                    existingReferredRowStr = state.newWordTable[referredRowIndex]
+#                     referrentRowIndex = possibleReferentRowIndices[ixReferent]
+#                     referredRowIndex = possibleReferredRowIndices[ixReferred]
+#                     existingReferentRowStr = state.newWordTable[referrentRowIndex]
+#                     existingReferredRowStr = state.newWordTable[referredRowIndex]
 
-                    existingReferentRowFields = existingReferentRowStr.split( '\t' )
-                    existingReferredRowFields = existingReferredRowStr.split( '\t' )
+#                     existingReferentRowFields = existingReferentRowStr.split( '\t' )
+#                     existingReferredRowFields = existingReferredRowStr.split( '\t' )
 
-                    existingReferentRowTags = existingReferentRowFields[TAG_COLUMN_NUMBER].split( ';' ) if existingReferentRowFields[TAG_COLUMN_NUMBER] else []
-                    existingReferredRowTags = existingReferredRowFields[TAG_COLUMN_NUMBER].split( ';' ) if existingReferredRowFields[TAG_COLUMN_NUMBER] else []
+#                     existingReferentRowTags = existingReferentRowFields[TAG_COLUMN_NUMBER].split( ';' ) if existingReferentRowFields[TAG_COLUMN_NUMBER] else []
+#                     existingReferredRowTags = existingReferredRowFields[TAG_COLUMN_NUMBER].split( ';' ) if existingReferredRowFields[TAG_COLUMN_NUMBER] else []
 
-                    # We decided that the row number is a better link
-                    # elReferentWordID = existingReferentRowFields[0][4:] # } We drop the BBB_ because referent/referred pairs
-                    # elReferredWordID = existingReferredRowFields[0][4:] # }   only occur within the same book
-                    # existingReferentRowTags.append( f'R{elReferredWordID}' )
-                    # existingReferredRowTags.append( f'F{elReferentWordID}' )
+#                     # We decided that the row number is a better link
+#                     # elReferentWordID = existingReferentRowFields[0][4:] # } We drop the BBB_ because referent/referred pairs
+#                     # elReferredWordID = existingReferredRowFields[0][4:] # }   only occur within the same book
+#                     # existingReferentRowTags.append( f'R{elReferredWordID}' )
+#                     # existingReferredRowTags.append( f'F{elReferentWordID}' )
 
-                    existingReferentRowTags.append( f'R{referredRowIndex}' )
-                    existingReferredRowTags.append( f'F{referrentRowIndex}' )
+#                     existingReferentRowTags.append( f'R{referredRowIndex}' )
+#                     existingReferredRowTags.append( f'F{referrentRowIndex}' )
 
-                    totalReferencePairAdds += 1
+#                     totalReferencePairAdds += 1
 
-                    for referredTag in existingReferredRowTags:
-                        if referredTag.startswith( 'P' ): # Found a person tag
-                            # Add the person tag to our referent line
-                            existingReferentRowTags.append( referredTag )
-                            totalPersonAdds += 1
-                            totalAdds += 1
-                        elif referredTag.startswith( 'L' ): # Found a location tag
-                            # Add the person tag to our referent line
-                            existingReferentRowTags.append( referredTag )
-                            totalLocationAdds += 1
-                            totalAdds += 1
-                    # dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Added {numAdded} tag(s) so now {existingReferentRowTags}" )
-                    existingReferentRowFields[TAG_COLUMN_NUMBER] = ';'.join( existingReferentRowTags )
-                    newLine = '\t'.join( existingReferentRowFields )
-                    assert newLine.count( '\t' ) == 11, f"{newLine.count(TAB)} {newLine=}"
-                    state.newWordTable[possibleReferentRowIndices[ixReferent]] = newLine
-                    existingReferredRowFields[TAG_COLUMN_NUMBER] = ';'.join( existingReferredRowTags )
-                    newLine = '\t'.join( existingReferredRowFields )
-                    assert newLine.count( '\t' ) == 11, f"{newLine.count(TAB)} {newLine=}"
-                    state.newWordTable[possibleReferredRowIndices[ixReferred]] = newLine
-                # end of appendNewTags function
+#                     for referredTag in existingReferredRowTags:
+#                         if referredTag.startswith( 'P' ): # Found a person tag
+#                             # Add the person tag to our referent line
+#                             existingReferentRowTags.append( referredTag )
+#                             totalPersonAdds += 1
+#                             totalAdds += 1
+#                         elif referredTag.startswith( 'L' ): # Found a location tag
+#                             # Add the person tag to our referent line
+#                             existingReferentRowTags.append( referredTag )
+#                             totalLocationAdds += 1
+#                             totalAdds += 1
+#                     # dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Added {numAdded} tag(s) so now {existingReferentRowTags}" )
+#                     existingReferentRowFields[TAG_COLUMN_NUMBER] = ';'.join( existingReferentRowTags )
+#                     newLine = '\t'.join( existingReferentRowFields )
+#                     assert newLine.count( '\t' ) == 11, f"{newLine.count(TAB)} {newLine=}"
+#                     state.newWordTable[possibleReferentRowIndices[ixReferent]] = newLine
+#                     existingReferredRowFields[TAG_COLUMN_NUMBER] = ';'.join( existingReferredRowTags )
+#                     newLine = '\t'.join( existingReferredRowFields )
+#                     assert newLine.count( '\t' ) == 11, f"{newLine.count(TAB)} {newLine=}"
+#                     state.newWordTable[possibleReferredRowIndices[ixReferred]] = newLine
+#                 # end of appendNewTags function
 
-                if not possibleReferentRowIndices:
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    <<< Unable to find referent {referentVerseID} '{referentGreek}' in {len(possibleReferentRowIndices)} rows >>>")
-                    for p in ourReferentVerseRowIndices:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newWordTable[p].split( TAB )}" )
-                elif not possibleReferredRowIndices:
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    <<< Unable to find referred {referredVerseID} '{referrednoCantillations}' in {len(possibleReferredRowIndices)} rows >>>")
-                    for p in ourReferredVerseRowIndices:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newWordTable[p].split( TAB )}" )
+#                 if not possibleReferentRowIndices:
+#                     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    <<< Unable to find referent {referentVerseID} '{referentGreek}' in {len(possibleReferentRowIndices)} rows >>>")
+#                     for p in ourReferentVerseRowIndices:
+#                         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newWordTable[p].split( TAB )}" )
+#                 elif not possibleReferredRowIndices:
+#                     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    <<< Unable to find referred {referredVerseID} '{referrednoCantillations}' in {len(possibleReferredRowIndices)} rows >>>")
+#                     for p in ourReferredVerseRowIndices:
+#                         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newWordTable[p].split( TAB )}" )
 
-                elif len(possibleReferentRowIndices)==1 and len(possibleReferredRowIndices)==1: # This is the easiest case
-                    appendNewTags( ixReferent=0, ixReferred=0 )
-                elif len(possibleReferredRowIndices) == 1: # we know where we're going
-                    assert len(possibleReferentRowIndices) > 1 # but don't know where we're coming from (yet)
-                    referentWordNumber = int( referentWordID.split('w')[-1] )
-                    possibleWordNumbers = []
-                    for p in possibleReferentRowIndices:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newWordTable[p].split( TAB )}" )
-                        possibleWordNumbers.append( int( state.newWordTable[p].split(TAB)[0].split('w')[-1] ) )
-                    wordNumberDistances = [abs(referentWordNumber-possibleWordNumber) for possibleWordNumber in possibleWordNumbers]
-                    minWordNumberDistance = min( wordNumberDistances )
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Have {referentWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
-                    if wordNumberDistances.count( minWordNumberDistance ) == 1: # only one has this minimum distance
-                        appendNewTags( ixReferent=wordNumberDistances.index( minWordNumberDistance ), ixReferred=0 )
-                elif len(possibleReferentRowIndices) == 1: # we know where we're coming from
-                    assert len(possibleReferredRowIndices) > 1 # but don't know where we're going to (yet)
-                    referredWordNumber = int( referredWordID.split('w')[-1] )
-                    possibleWordNumbers = []
-                    for p in possibleReferredRowIndices:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newWordTable[p].split( TAB )}" )
-                        possibleWordNumbers.append( int( state.newWordTable[p].split(TAB)[0].split('w')[-1] ) )
-                    wordNumberDistances = [abs(referredWordNumber-possibleWordNumber) for possibleWordNumber in possibleWordNumbers]
-                    minWordNumberDistance = min( wordNumberDistances )
-                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"      Have {referredWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
-                    if wordNumberDistances.count( minWordNumberDistance ) == 1: # only one has this minimum distance
-                        appendNewTags( ixReferent=0, ixReferred=wordNumberDistances.index( minWordNumberDistance ) )
-                else:
-                    assert len(possibleReferentRowIndices)>1 and len(possibleReferredRowIndices)>1 # both!
-                    # if len(possibleReferentRowIndices) != 1:
-                    #     for p in possibleReferentRowIndices:
-                    #         print( f"       {state.newWordTable[p].split( TAB )}" )
-                    # if len(possibleReferredRowIndices) != 1:
-                    #     for p in possibleReferredRowIndices:
-                    #         print( f"       {state.newWordTable[p].split( TAB )}" )
-                    referentWordNumber = int( referentWordID.split('w')[-1] )
-                    possibleWordNumbers = []
-                    for p in possibleReferentRowIndices:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newWordTable[p].split( TAB )}" )
-                        possibleWordNumbers.append( int( state.newWordTable[p].split(TAB)[0].split('w')[-1] ) )
-                    wordNumberDistances = [abs(referentWordNumber-possibleWordNumber) for possibleWordNumber in possibleWordNumbers]
-                    minWordNumberDistance = min( wordNumberDistances )
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Have {referentWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
-                    if wordNumberDistances.count( minWordNumberDistance ) == 1: # only one has this minimum distance
-                        ixReferent = wordNumberDistances.index( minWordNumberDistance )
+#                 elif len(possibleReferentRowIndices)==1 and len(possibleReferredRowIndices)==1: # This is the easiest case
+#                     appendNewTags( ixReferent=0, ixReferred=0 )
+#                 elif len(possibleReferredRowIndices) == 1: # we know where we're going
+#                     assert len(possibleReferentRowIndices) > 1 # but don't know where we're coming from (yet)
+#                     referentWordNumber = int( referentWordID.split('w')[-1] )
+#                     possibleWordNumbers = []
+#                     for p in possibleReferentRowIndices:
+#                         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newWordTable[p].split( TAB )}" )
+#                         possibleWordNumbers.append( int( state.newWordTable[p].split(TAB)[0].split('w')[-1] ) )
+#                     wordNumberDistances = [abs(referentWordNumber-possibleWordNumber) for possibleWordNumber in possibleWordNumbers]
+#                     minWordNumberDistance = min( wordNumberDistances )
+#                     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Have {referentWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
+#                     if wordNumberDistances.count( minWordNumberDistance ) == 1: # only one has this minimum distance
+#                         appendNewTags( ixReferent=wordNumberDistances.index( minWordNumberDistance ), ixReferred=0 )
+#                 elif len(possibleReferentRowIndices) == 1: # we know where we're coming from
+#                     assert len(possibleReferredRowIndices) > 1 # but don't know where we're going to (yet)
+#                     referredWordNumber = int( referredWordID.split('w')[-1] )
+#                     possibleWordNumbers = []
+#                     for p in possibleReferredRowIndices:
+#                         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newWordTable[p].split( TAB )}" )
+#                         possibleWordNumbers.append( int( state.newWordTable[p].split(TAB)[0].split('w')[-1] ) )
+#                     wordNumberDistances = [abs(referredWordNumber-possibleWordNumber) for possibleWordNumber in possibleWordNumbers]
+#                     minWordNumberDistance = min( wordNumberDistances )
+#                     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"      Have {referredWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
+#                     if wordNumberDistances.count( minWordNumberDistance ) == 1: # only one has this minimum distance
+#                         appendNewTags( ixReferent=0, ixReferred=wordNumberDistances.index( minWordNumberDistance ) )
+#                 else:
+#                     assert len(possibleReferentRowIndices)>1 and len(possibleReferredRowIndices)>1 # both!
+#                     # if len(possibleReferentRowIndices) != 1:
+#                     #     for p in possibleReferentRowIndices:
+#                     #         print( f"       {state.newWordTable[p].split( TAB )}" )
+#                     # if len(possibleReferredRowIndices) != 1:
+#                     #     for p in possibleReferredRowIndices:
+#                     #         print( f"       {state.newWordTable[p].split( TAB )}" )
+#                     referentWordNumber = int( referentWordID.split('w')[-1] )
+#                     possibleWordNumbers = []
+#                     for p in possibleReferentRowIndices:
+#                         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newWordTable[p].split( TAB )}" )
+#                         possibleWordNumbers.append( int( state.newWordTable[p].split(TAB)[0].split('w')[-1] ) )
+#                     wordNumberDistances = [abs(referentWordNumber-possibleWordNumber) for possibleWordNumber in possibleWordNumbers]
+#                     minWordNumberDistance = min( wordNumberDistances )
+#                     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Have {referentWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
+#                     if wordNumberDistances.count( minWordNumberDistance ) == 1: # only one has this minimum distance
+#                         ixReferent = wordNumberDistances.index( minWordNumberDistance )
 
-                    referredWordNumber = int( referredWordID.split('w')[-1] )
-                    possibleWordNumbers = []
-                    for p in possibleReferredRowIndices:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newWordTable[p].split( TAB )}" )
-                        possibleWordNumbers.append( int( state.newWordTable[p].split(TAB)[0].split('w')[-1] ) )
-                    wordNumberDistances = [abs(referredWordNumber-possibleWordNumber) for possibleWordNumber in possibleWordNumbers]
-                    minWordNumberDistance = min( wordNumberDistances )
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Have {referredWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
-                    if wordNumberDistances.count( minWordNumberDistance ) == 1: # only one has this minimum distance
-                        ixReferred = wordNumberDistances.index( minWordNumberDistance )
+#                     referredWordNumber = int( referredWordID.split('w')[-1] )
+#                     possibleWordNumbers = []
+#                     for p in possibleReferredRowIndices:
+#                         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newWordTable[p].split( TAB )}" )
+#                         possibleWordNumbers.append( int( state.newWordTable[p].split(TAB)[0].split('w')[-1] ) )
+#                     wordNumberDistances = [abs(referredWordNumber-possibleWordNumber) for possibleWordNumber in possibleWordNumbers]
+#                     minWordNumberDistance = min( wordNumberDistances )
+#                     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Have {referredWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
+#                     if wordNumberDistances.count( minWordNumberDistance ) == 1: # only one has this minimum distance
+#                         ixReferred = wordNumberDistances.index( minWordNumberDistance )
 
-                    try: # will fail if both ixReferent and ixReferred are not declared
-                        appendNewTags( ixReferent, ixReferred )
-                    except UnboundLocalError:
-                        logging.critical( f"Unable to find a referent and a referrer row for {referentWordID=} {referentGreek=} {referredWordID=} {referrednoCantillations=}" )
-                        numUnmatched += 1
-                    # Make them both undefined again
-                    try: del ixReferent
-                    except UnboundLocalError: pass
-                    try: del ixReferred 
-                    except UnboundLocalError: pass
+#                     try: # will fail if both ixReferent and ixReferred are not declared
+#                         appendNewTags( ixReferent, ixReferred )
+#                     except UnboundLocalError:
+#                         logging.critical( f"Unable to find a referent and a referrer row for {referentWordID=} {referentGreek=} {referredWordID=} {referrednoCantillations=}" )
+#                         numUnmatched += 1
+#                     # Make them both undefined again
+#                     try: del ixReferent
+#                     except UnboundLocalError: pass
+#                     try: del ixReferred 
+#                     except UnboundLocalError: pass
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Added {totalPersonAdds:,} referred person tags")
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Added {totalLocationAdds:,} referred location tags")
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Added {totalAdds:,} total referred person/location tags")
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Added {totalReferencePairAdds:,} total back/forth referrent tag pairs")
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Skipped {numUnmatched:,} referrent tag pairs (probably GNT differences)")
-    return True
-# end of add_tags_to_OT_word_table.tag_referents_from_macula_data
+#     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Added {totalPersonAdds:,} referred person tags")
+#     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Added {totalLocationAdds:,} referred location tags")
+#     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Added {totalAdds:,} total referred person/location tags")
+#     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Added {totalReferencePairAdds:,} total back/forth referrent tag pairs")
+#     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Skipped {numUnmatched:,} referrent tag pairs (probably GNT differences)")
+#     return True
+# # end of add_tags_to_OT_word_table.tag_referents_from_macula_data
 
 
 def fill_extra_columns_and_remove_some() -> bool:
