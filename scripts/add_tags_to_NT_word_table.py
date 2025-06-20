@@ -6,7 +6,7 @@
 #
 # Script handling add_tags_to_NT_word_table functions
 #
-# Copyright (C) 2023-2024 Robert Hunt
+# Copyright (C) 2023-2025 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -49,6 +49,7 @@ We use this information to update our OET word-table
 CHANGELOG:
     2023-04-27 Clear table now has combined subject referents into Referents column (so now, one less column but more information)
     2024-03-08 Add OETGlossWords column and apply .tsv transforms similar to how Scripted Bible Editor does
+    2025-06-19 Changed to connect timeline, etc., to EVERY word in the verse (not just the FIRST word)
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple, NamedTuple, Optional
@@ -68,10 +69,10 @@ import sys
 sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitted to PyPI
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
-LAST_MODIFIED_DATE = '2024-07-02' # by RJH
+LAST_MODIFIED_DATE = '2025-06-19' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET NT wordtable"
-PROGRAM_VERSION = '0.34'
+PROGRAM_VERSION = '0.35'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -409,15 +410,14 @@ def associate_Theographic_people_places() -> bool:
         wordRef, greekWord, _srLemma, _greekLemma, VLTglossWords, OETGlossWords, glossCaps,probability, _extendedStrongs, _roleLetter, _morphology, _tags = columns_string.split( '\t' )
         tags:List[str] = []
         verseRef = wordRef.split('w')[0]
-        newVerse = verseRef != lastVerseRef
-        # print( f"{wordRef=} {verseRef} {lastVerseRef=} {newVerse=}" )
+        # newVerse = verseRef != lastVerseRef
         try: verseLinkEntry = state.verseIndex[verseRef]
         except KeyError: # versification difference ???
             logging.critical( f"Versification error: Unable to find {verseRef} in Theographic json" )
             assert columns_string.count( '\t' ) == 11, f"{columns_string.count(TAB)} {columns_string=}"
             # print( f"{n} {columns_string=}" ); halt
             # state.newTable.append( columns_string ) # What was I trying to do here? (These duplicate rows get appended to the end)
-            lastVerseRef = verseRef
+            # lastVerseRef = verseRef
             continue
         assert not verseLinkEntry['peopleGroups'] # Why is this true??? Ah, because only has a handful of OT references!!!
 
@@ -457,9 +457,9 @@ def associate_Theographic_people_places() -> bool:
                         tags.append( placeID )
                         dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{placeID}' to {wordRef} for '{VLTglossWords}'")
                         numAddedLocations += 1
-        if probability and newVerse:
-            newVerse = False
-            # These ones we can link to the first (included) word in the verse
+        if probability: # and newVerse: # These ones we can link to the first (included) word in the verse
+            # newVerse = False
+            # Changed to link to EVERY word in the verse
             if verseLinkEntry['peopleGroups']:
                 halt
                 # dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Could add people groups: {n} {ref} ({probability}) '{greek}' {glossCaps} '{glossWords}' {verseLinkEntry['peopleGroups']}")
@@ -506,8 +506,7 @@ def associate_Theographic_people_places() -> bool:
         newLine = f"{columns_string}{';'.join(tags)}"
         assert newLine.count( '\t' ) == 11, f"{newLine.count(TAB)} {newLine=}"
         state.newTable[n] = newLine
-        # print( f"  {state.newTable[n]=}")
-        lastVerseRef = verseRef
+        # lastVerseRef = verseRef
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{numAddedPeople=:,} {numAddedPeopleGroups=:,} {numAddedLocations=:,} {numAddedEvents=:,} {numAddedYears=:,} {numAddedTimelines=:,}" )
 
@@ -712,7 +711,7 @@ def tag_referents_from_macula_data() -> bool:
                         so we have to fix up the word number as well.
                         UPDATED: We now put the row number instead
 
-                    Uses many global variables as well as a declared nonlocal ones.
+                    Uses many global variables as well as the declared nonlocal ones.
                     """
                     nonlocal totalReferencePairAdds, totalPersonAdds, totalLocationAdds, totalAdds
                     fnPrint( DEBUGGING_THIS_MODULE, f"appendNewTags( {ixReferent=}, {ixReferred=} )" )
