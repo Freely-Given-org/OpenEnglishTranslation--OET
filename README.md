@@ -6,11 +6,11 @@ The new website is at https://OpenEnglishTranslation.Bible. (The previous one wa
 
 ## Background
 
-The _Open English Translation_ project has been planned for almost fifteen years (a draft of Jonah was done in 2010), although circumstances only allowed for full-time development to begin in mid-2022.
+The _Open English Translation_ project has been planned for almost fifteen years (a draft of Jonah was done in 2010), although circumstances only allowed for full-time development to begin in mid-2022 after a 12+ year wait.
 
 ## Introduction
 
-Perhaps one of the main differences from existing English translations that should be mentioned here is this: All translations must choose to place themselves somewhere on the line that moves from being very literal (some people might perhaps naively think this is being accurate to the original), to being more helpful to the reader by being more free/dynamic (in making a translation that fills in some of the implied information that might have been obvious to the original readers). The _Open English Translation_ handles this by choosing **two points on the literal⇔dynamic line instead of just one**! The two versions (one _very_ literal and one quite dynamic) are intended to be used together (and never alone).
+Perhaps one of the main differences from existing English translations that should be mentioned here is this: All translations must choose to place themselves somewhere on the line that moves from being very literal (some people might perhaps naively think this is being accurate to the original), to being more helpful to the reader by being more free/dynamic (in making a translation that fills in some of the implied information that might have been obvious to the original readers). The _Open English Translation_ handles this by choosing **two points on the literal⇔dynamic line instead of just one**! The two versions (one _very_ literal and one more dynamic) are intended to be used together (and never alone).
 
 Another major difference, is that the _Open English Translation_ **is freely available** for others to use and publish in Bible studies and similar materials (including research theses), to print, to display on any device, and even to change/customise (with only small limitations) to meet other specific needs.
 
@@ -33,9 +33,13 @@ If you’re a professional Bible translator or consultant or notes-writer, or if
 
 ## Schedule
 
-As of January 2023, the following books have been drafted (but still expecting to undergo much checking and revision): John (15,635--879--21), Mark (11,304--678--16), Ephesians (2,422--155--6), Titus (659--46--3), 3 John (219--15--1), and Jude (461--25--1). These represent 30,700/138,020 Greek words (22%), 1,798/7956 NT verses (23%), or 48/260 NT chapters (18%).
+As of June 2025, about 2/3 of the Bible has been drafted. ([This page](https://OpenEnglishTranslation.Bible) is updated a few times per month with the progress.) Our goal is to complete the first draft and first check of the _OET_ by mid-2026.
 
-Our goal is to complete the first draft and first check of the _OET_ New Testament by the end of 2023.
+## Licences
+
+Our _OET_ Bible text is licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en) (Creative Commons Attribution-ShareAlike 4.0 International).
+
+Any included scripts are licensed [GPL 3.0](https://www.GNU.org/licenses/gpl-3.0.en.html) or later.
 
 ## The inevitable event
 
