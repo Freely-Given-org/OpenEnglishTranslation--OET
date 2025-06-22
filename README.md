@@ -2,7 +2,7 @@
 
 The **_Open English Translation_ of the Bible (OET)** -- a unique, exciting, completely free and open-licensed, new modern-English Bible translation
 
-The new website is at https://OpenEnglishTranslation.Bible. (The previous one was at https://Freely-Given.org/BibleTranslations/English/OET/.) The Bible text is also available at the _Open Bible Data_ website at https://Freely-Given.org/OBD/.
+The new website is at https://OpenEnglishTranslation.Bible. (The previous one was at https://Freely-Given.org/BibleTranslations/English/OET/.) The Bible text is also available at the [_Open Bible Data_](https://github.com/Freely-Given-org/OpenBibleData) website at https://Freely-Given.org/OBD/.
 
 ## Background
 
