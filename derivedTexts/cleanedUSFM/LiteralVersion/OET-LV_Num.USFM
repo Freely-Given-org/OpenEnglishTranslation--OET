@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2025-06-19 11:24 by extract_glossed_OSHB_OT_to_ESFM v0.59
+\rem ESFM file created 2025-06-26 15:00 by extract_glossed_OSHB_OT_to_ESFM v0.61
 \rem USFM file edited by ScriptedBibleEditor v0.33
 \h Numbers
 \toc1 Numbers
@@ -135,7 +135,7 @@
 \v 27 And÷to÷Kohath the_clan_of the÷ˊAmrāmites and÷clan_of the÷Izharites and÷clan_of the÷Ḩeⱱrōnites and÷clan_of the÷ˊUzziy\sup ʼēl\sup*ites these they \add were\add*_the_clans_of the÷Qₑhātī.
 \v 28 In/on/at/with÷number_of every_of male from÷son_of a_month and÷more \add were\add*_eight_of thousand(s) and÷six hundred(s) the_keepers_of the_duty_of the÷sanctuary.
 \v 29 The_clans_of the_descendants_of Kohath they_will_encamp at the_side_of the÷tabernacle south÷to.
-\v 30 And÷leader_of \add the\add*_house_of a_father of÷clans_of the÷Kohathite \add was\add*_Elizaphan\f + \fr 3:30 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f* the_son_of ˊUzziy\sup ʼēl\sup*.
+\v 30 And÷leader_of \add the\add*_house_of a_father of÷clans_of the÷Kohathite \add was\add*_Elizaphan\f + \fr 3:30 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* the_son_of ˊUzziy\sup ʼēl\sup*.
 \v 31 And÷responsibility_of÷their the÷ark and÷the÷table and÷the÷lampstand and÷the÷altars and÷vessels_of the÷sanctuary which they_will_serve (is)_in=them and÷the÷screen and=all/each/any/every service_of÷them.
 \v 32 And÷chief_of the_leaders_of the÷Lēviyyiy \add was\add*_ʼElˊāzār the_son_of ʼAhₐron the=priest/officer the_oversight_of the_keepers_of the_duty_of the÷sanctuary.
 \v 33 To÷Mərārī the_clan_of the÷Maḩlītes and÷clan_of the÷Mushites these they \add were\add*_the_clans_of \add the\add*_Mərārīte[s].
@@ -144,7 +144,7 @@
 \v 36 And÷appointed_of the_duty_of the_descendants_of Mərārī \add was\add*_the_frames_of the÷tabernacle and÷bars_of÷its and÷pillars_of÷its and÷bases_of÷its and=all equipment_of÷its and=all/each/any/every service_of÷these.
 \v 37 And÷pillars_of the÷courtyard all_around and÷bases_of÷their and÷pegs_of÷their and÷cords_of÷their.
 \v 38 And÷the÷camp to=(the)_face_of/in_front_of/before the÷tabernacle east÷on to=(the)_face_of/in_front_of/before the_tent_of meeting sunrise÷toward \add were\add*_Mosheh and÷ʼAhₐron and÷sons_of÷his \add who_were\add*_keeping the_duty_of the÷sanctuary for÷service_of the_people_of Yisrā\sup ʼēl\sup*/(Israel) and÷the÷outsider the÷near he_will_be_put_to_death.
-\v 39 All_of the_enrolled_\add men\add*_of the÷Lēviyyiy whom he_enrolled Mosheh and÷ʼAhₐron\f + \fr 3:39 \ft OSHB note: Puncta extraordinaria a ◌ׄ is used to mark such marks in the text when they are above the line and a ◌ׅ when they are below the line. \f* on the_mouth_of \nd YHWH\nd* to=their=clans every_of male from÷son_of a_month and÷more \add were\add*_two and=twenty thousand.
+\v 39 All_of the_enrolled_\add men\add*_of the÷Lēviyyiy whom he_enrolled Mosheh and÷ʼAhₐron\f + \fr 3:39 \ft OSHB note: Puncta extraordinaria a ◌ׄ is used to mark such marks in the text when they are above the line and a ◌ׅ when they are below the line.\f* on the_mouth_of \nd YHWH\nd* to=their=clans every_of male from÷son_of a_month and÷more \add were\add*_two and=twenty thousand.
 \v 40 and= \nd YHWH\nd* =he/it_said to Mosheh enroll every_of firstborn male of÷sons_of of_Yisrā\sup ʼēl\sup*/(Israel) from÷son_of a_month and÷more and÷make DOM the_number_of names_of÷their.
 \v 41 And÷take DOM the÷Lēviyyiy to=me I \add am\add*_\nd YHWH\nd* in_place_of every_of firstborn in/on/at/with÷sons_of Yisrā\sup ʼēl\sup*/(Israel) and=DOM the_livestock_of the÷Lēviyyiy in_place_of every_of firstborn in/on/at/with÷cattle_of the_people_of Yisrā\sup ʼēl\sup*/(Israel).
 \v 42 And= Mosheh =enrolled just=as \nd YHWH\nd* he_had_commanded DOM=him/it DOM every_of firstborn in/on/at/with÷sons_of Yisrā\sup ʼēl\sup*/(Israel).
@@ -275,7 +275,7 @@
 \v 1 and=he/it_was in/on=day finished Mosheh to÷setting_up DOM the÷tabernacle and÷anointed DOM=him/it and=he/it_consecrated DOM=him/it and=DOM all_of furnishings_of÷its and=DOM the÷altar and=DOM all_of utensils_of÷its and÷anointed÷them and=he/it_consecrated DOM=them.
 \v 2 And= the_leaders_of =made_offerings of_Yisrā\sup ʼēl\sup*/(Israel) the_heads_of the_house_of ancestral_of÷their they \add were\add*_the_leaders_of the÷tribes they the÷supervised over the÷enrolled.
 \v 3 And÷brought DOM offering_of÷their to=(the)_face_of/in_front_of/before \nd YHWH\nd* six carts_of litter and÷two_of ten ox[en] a_cart on two_of the÷leaders and÷ox for÷each and÷presented DOM÷them to=(the)_face_of/in_front_of/before the÷tabernacle.
-\v 4 And=he/it_said\f + \fr 7:4 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS. \f* \nd YHWH\nd* to Mosheh to÷saying.
+\v 4 And=he/it_said\f + \fr 7:4 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* \nd YHWH\nd* to Mosheh to÷saying.
 \v 5 Take_\add them\add* from÷them and=they_will_be to÷used DOM the_service_of the_tent_of meeting and=you(ms)_will_give DOM÷them to the÷Lēviyyiy each_one as÷requires_of service_of÷his.
 \v 6 And= Mosheh =he/it_took DOM the÷carts and=DOM the÷oxen and=he/it_gave DOM÷them to the÷Lēviyyiy.
 \v 7 DOM two_of the÷carts and=DOM four_of the÷oxen he_gave to÷sons_of Gershon as÷required_of service_of÷their.
@@ -303,7 +303,7 @@
 \v 29 And÷for÷sacrifice_of the÷peace_offerings ox[en] two rams five goats five lambs sons_of a_year five this \add was\add*_the_offering_of ʼElīʼāⱱ the_son_of Helon.
 \v 30 in_the=day the=fourth \add the\add*_leader of÷people_of of_Rəʼūⱱēn Elizur the_son_of Shedeur.
 \v 31 Offering_of÷his \add was\add*_a_dish_of silver one \add was\add*_thirty and÷one_hundred weighing_of÷its a_bowl one silver seventy shekel[s] in/on/at/with÷shekel_of the÷sanctuary both_of=them \add were\add*_full fine_flour mixed in/on/at/with÷oil for÷grain_offering.
-\v 32 A_pan_of one ten gold full incense\f + \fr 7:32 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f*
+\v 32 A_pan_of one ten gold full incense\f + \fr 7:32 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f*
 \v 33 a_young_bull one a_young_one_of \add the\add*_herd a_ram one a_lamb one the_son_of year_of÷its for÷burnt_offering.
 \v 34 A_male_goat_of goats one for÷sin_offering.
 \v 35 And÷for÷sacrifice_of the÷peace_offerings ox[en] two rams five goats five lambs sons_of a_year five this \add was\add*_the_offering_of Elizur the_son_of Shedeur.
@@ -311,7 +311,7 @@
 \v 37 Offering_of÷his \add was\add*_a_dish_of silver one \add was\add*_thirty and÷one_hundred weighing_of÷its a_bowl one silver seventy shekel[s] in/on/at/with÷shekel_of the÷sanctuary both_of=them \add were\add*_full fine_flour mixed in/on/at/with÷oil for÷grain_offering.
 \v 38 A_pan_of one ten gold full incense.
 \v 39 A_young_bull one a_young_one_of \add the\add*_herd a_ram one a_lamb one the_son_of year_of÷its for÷burnt_offering.
-\v 40 A_male_goat_of goats one for÷sin_offering\f + \fr 7:40 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f*
+\v 40 A_male_goat_of goats one for÷sin_offering\f + \fr 7:40 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f*
 \v 41 and÷for÷sacrifice_of the÷peace_offerings ox[en] two rams five goats five lambs sons_of a_year five this \add was\add*_the_offering_of Shelumiel the_son_of Zurishaddai.
 \v 42 in_the=day the=sixth \add the\add*_leader of÷people_of of_Gād Eliasaph the_son_of Deuel.
 \v 43 Offering_of÷his \add was\add*_a_dish_of silver one \add was\add*_thirty and÷one_hundred weighing_of÷its a_bowl one silver seventy shekel[s] in/on/at/with÷shekel_of the÷sanctuary both_of=them \add were\add*_full fine_flour mixed in/on/at/with÷oil for÷grain_offering.
@@ -326,11 +326,11 @@
 \v 52 A_male_goat_of goats one for÷sin_offering.
 \v 53 And÷for÷sacrifice_of the÷peace_offerings ox[en] two rams five goats five lambs sons_of a_year five this \add was\add*_the_offering_of ʼElīshāˊma the_son_of Ammihud.
 \v 54 in_the=day the÷eighth \add the\add*_leader of÷people_of of_Mənashsheh Gamlī\sup ʼēl\sup* the_son_of Pedah- zur.
-\v 55 Offering_of÷his \add was\add*_a_dish_of silver one \add was\add*_thirty and÷one_hundred weighing_of÷its a_bowl one silver seventy shekel[s] in/on/at/with÷shekel_of the÷sanctuary both_of=them \add were\add*_full fine_flour mixed in/on/at/with÷oil for÷grain_offering\f + \fr 7:55 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f*
+\v 55 Offering_of÷his \add was\add*_a_dish_of silver one \add was\add*_thirty and÷one_hundred weighing_of÷its a_bowl one silver seventy shekel[s] in/on/at/with÷shekel_of the÷sanctuary both_of=them \add were\add*_full fine_flour mixed in/on/at/with÷oil for÷grain_offering\f + \fr 7:55 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f*
 \v 56 a_pan_of one ten gold full incense.
 \v 57 A_young_bull one a_young_one_of \add the\add*_herd a_ram one a_lamb one the_son_of year_of÷its for÷burnt_offering.
 \v 58 A_male_goat_of goats one for÷sin_offering.
-\v 59 And÷for÷sacrifice_of the÷peace_offerings ox[en] two rams five goats five lambs sons_of a_year five this \add was\add*_the_offering_of Gamlī\sup ʼēl\sup* the_son_of Pedah-\f + \fr 7:59 \ft OSHB note: We read punctuation in L differently from BHS. \f* zur.
+\v 59 And÷for÷sacrifice_of the÷peace_offerings ox[en] two rams five goats five lambs sons_of a_year five this \add was\add*_the_offering_of Gamlī\sup ʼēl\sup* the_son_of Pedah-\f + \fr 7:59 \ft OSHB note: We read punctuation in L differently from BHS.\f* zur.
 \v 60 in_the=day the÷ninth \add the\add*_leader of÷people_of of_Binyāmīn Abidan the_son_of Gidˊōni.
 \v 61 Offering_of÷his \add was\add*_a_dish_of silver one \add was\add*_thirty and÷one_hundred weighing_of÷its a_bowl one silver seventy shekel[s] in/on/at/with÷shekel_of the÷sanctuary both_of=them \add were\add*_full fine_flour mixed in/on/at/with÷oil for÷grain_offering.
 \v 62 A_pan_of one ten gold full incense.
@@ -339,7 +339,7 @@
 \v 65 And÷for÷sacrifice_of the÷peace_offerings ox[en] two rams five goats five lambs sons_of a_year five this \add was\add*_the_offering_of Abidan the_son_of Gidˊōni.
 \v 66 in_the=day the÷tenth \add the\add*_leader of÷people_of of_Dān Ahiezer the_son_of Ammishaddai.
 \v 67 Offering_of÷his \add was\add*_a_dish_of silver one \add was\add*_thirty and÷one_hundred weighing_of÷its a_bowl one silver seventy shekel[s] in/on/at/with÷shekel_of the÷sanctuary both_of=them \add were\add*_full fine_flour mixed in/on/at/with÷oil for÷grain_offering.
-\v 68 A_pan_of one ten gold full incense\f + \fr 7:68 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f*
+\v 68 A_pan_of one ten gold full incense\f + \fr 7:68 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f*
 \v 69 a_young_bull one a_young_one_of \add the\add*_herd a_ram one a_lamb one the_son_of year_of÷its for÷burnt_offering.
 \v 70 A_male_goat_of goats one for÷sin_offering.
 \v 71 And÷for÷sacrifice_of the÷peace_offerings ox[en] two rams five goats five lambs sons_of a_year five this \add was\add*_the_offering_of Ahiezer the_son_of Ammishaddai.
@@ -393,14 +393,14 @@
 \nb
 \v 1 and= \nd YHWH\nd* =he/it_spoke to Mosheh in/on/at/with÷wilderness_of Şīnay in/on/at/with÷year the=second(fs) after÷come_out÷they of÷land_of of_Miʦrayim/(Egypt) in/on/at/with÷month the÷first to=say.
 \v 2 And= the_people_of =observe of_Yisrā\sup ʼēl\sup*/(Israel) DOM the÷passover in/on/at/with÷appointed_time_of÷its.
-\v 3 In/on/at/with÷four teen day in/on/at/with÷month the=this between the÷twilight\f + \fr 9:3 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f* you_all_will_observe DOM=him/it in/on/at/with÷appointed_time_of÷its according_to÷all_of statutes_of÷its and÷according_to÷all_of regulations_of÷its you_all_will_observe DOM=him/it.
+\v 3 In/on/at/with÷four teen day in/on/at/with÷month the=this between the÷twilight\f + \fr 9:3 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* you_all_will_observe DOM=him/it in/on/at/with÷appointed_time_of÷its according_to÷all_of statutes_of÷its and÷according_to÷all_of regulations_of÷its you_all_will_observe DOM=him/it.
 \v 4 And= Mosheh =he/it_spoke to the_people_of Yisrā\sup ʼēl\sup*/(Israel) to÷observe the÷passover.
 \v 5 And=they_made DOM the÷passover in/on/at/with÷first in/on/at/with÷four teen day of_the÷month between the÷twilight in/on/at/with÷wilderness_of Şīnay according_to÷all that \nd YHWH\nd* he_had_commanded DOM Mosheh so the_people_of they_did of_Yisrā\sup ʼēl\sup*/(Israel).
 \v 6 And= people =he/it_was who they_were unclean to=living_creature a_person and=not they_were_able to÷observe the÷passover in_the=day (the)=that and÷came to=(the)_face_of/in_front_of/before Mosheh and÷before ʼAhₐron in_the=day (the)=that.
 \v 7 And=they_said the÷men the÷those to=him/it we \add are\add*_unclean to=living_creature a_person to/for=what are_we_restrained to=not to_bring_near DOM the_offering_of \nd YHWH\nd* in/on/at/with÷appointed_time_of÷its in_the=middle the_people_of Yisrā\sup ʼēl\sup*/(Israel).
 \v 8 And=he/it_said to÷them Mosheh stand and÷hear what will_he_command \nd YHWH\nd* concerning÷you_all.
 \v 9 and= \nd YHWH\nd* =he/it_spoke to Mosheh to÷saying.
-\v 10 Speak to the_people_of Yisrā\sup ʼēl\sup*/(Israel) to=say a_person a_person if/because he_will_be unclean because_of÷corpse or in/on/at/with÷journey distant\f + \fr 9:10 \ft OSHB note: Puncta extraordinaria a ◌ׄ is used to mark such marks in the text when they are above the line and a ◌ׅ when they are below the line. \f* to/for=you_all or of÷descendants_of÷your_all's and÷observe a_passover to/for=\nd YHWH\nd*.
+\v 10 Speak to the_people_of Yisrā\sup ʼēl\sup*/(Israel) to=say a_person a_person if/because he_will_be unclean because_of÷corpse or in/on/at/with÷journey distant\f + \fr 9:10 \ft OSHB note: Puncta extraordinaria a ◌ׄ is used to mark such marks in the text when they are above the line and a ◌ׅ when they are below the line.\f* to/for=you_all or of÷descendants_of÷your_all's and÷observe a_passover to/for=\nd YHWH\nd*.
 \v 11 In/on/at/with÷month the=second in/on/at/with÷four teen day between the÷twilight they_will_observe DOM=him/it with unleavened_bread(s) and÷bitter_herbs eat÷it.
 \v 12 Not they_will_leave_over from=him/it until morning and÷bone not they_will_break in=him/it according_to÷all_of (the)_statute_of the÷passover they_will_observe DOM=him/it.
 \v 13 And÷the÷man who he \add was\add*_pure and÷in/on/at/with÷journey not he_was and÷fails for=doing the÷passover and÷cut_off the=living_creatures the=that from÷people_of÷his if/because the_offering_of \nd YHWH\nd* not he_brought_near in/on/at/with÷appointed_time_of÷its sin_of÷his he_will_bear the=man (the)=that.
@@ -411,7 +411,7 @@
 \v 18 On the_mouth_of \nd YHWH\nd* the_people_of they_set_out of_Yisrā\sup ʼēl\sup*/(Israel) and÷at the_mouth_of \nd YHWH\nd* they_encamped all_of \add the\add*_days_of (of)_which it_settled_down the÷cloud over the÷tabernacle they_encamped.
 \v 19 And÷in/on/at/with÷continued the÷cloud over the÷tabernacle days many and÷keep the_people_of Yisrā\sup ʼēl\sup*/(Israel) DOM the_duty_of \nd YHWH\nd* and=not they_set_out.
 \v 20 And÷he_was \add times\add*_when it_was the÷cloud days number over the÷tabernacle on the_mouth_of \nd YHWH\nd* they_encamped and÷according_to the_mouth_of \nd YHWH\nd* they_set_out.
-\v 21 And÷he_was \add times\add*_when it_was\f + \fr 9:21 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS. \f*\f + \fr 9:21 \ft OSHB note: We read punctuation in L differently from BHS. \f* the÷cloud from÷evening until morning and÷lifted the÷cloud in/on/at/with÷morning and÷set_out or by_day and÷night and÷lifted the÷cloud and÷set_out.
+\v 21 And÷he_was \add times\add*_when it_was\f + \fr 9:21 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f*\f + \fr 9:21 \ft OSHB note: We read punctuation in L differently from BHS.\f* the÷cloud from÷evening until morning and÷lifted the÷cloud in/on/at/with÷morning and÷set_out or by_day and÷night and÷lifted the÷cloud and÷set_out.
 \v 22 Or two_days or a_month or days in/on/at/with÷continued the÷cloud over the÷tabernacle to÷stayed on/upon/above=him/it the_people_of they_encamped of_Yisrā\sup ʼēl\sup*/(Israel) and=not they_set_out and÷in/on/at/with÷lifted÷it they_set_out.
 \v 23 On the_mouth_of \nd YHWH\nd* they_encamped and÷at the_mouth_of \nd YHWH\nd* they_set_out DOM the_duty_of \nd YHWH\nd* they_kept on the_mouth_of \nd YHWH\nd* in/on/at/with÷hand_of Mosheh.
 \c 10
@@ -424,7 +424,7 @@
 \v 6 And÷blow an_alarm second and÷set_out the÷camps the÷pitched south÷on an_alarm they_will_give_a_blast for÷set_out_of÷they.
 \v 7 And÷in/on/at/with÷gathered DOM the÷assembly you_all_will_give_a_blast and=not you_all_will_give_an_alarm.
 \v 8 And=the_sons of_ʼAhₐron the÷priests they_will_give_a_blast in/on/at/with÷trumpets and=they_will_be to/for=you_all for÷statute_of perpetuity throughout÷generations_of÷your_all's.
-\v 9 And=because/when you_all_will_go war in/on/at/with÷land_of÷your_all's on the÷adversary the÷attacks DOM÷you_all and÷sound_an_alarm in/on/at/with÷trumpets and÷remembered\f + \fr 10:9 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f* to=(the)_face_of/in_front_of/before \nd YHWH\nd* god_of÷your_all's and÷saved from÷enemies_of÷your_all's.
+\v 9 And=because/when you_all_will_go war in/on/at/with÷land_of÷your_all's on the÷adversary the÷attacks DOM÷you_all and÷sound_an_alarm in/on/at/with÷trumpets and÷remembered\f + \fr 10:9 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* to=(the)_face_of/in_front_of/before \nd YHWH\nd* god_of÷your_all's and÷saved from÷enemies_of÷your_all's.
 \v 10 And÷in/on/at/with÷day_of rejoicing_of÷your_all's and÷in/on/at/with÷appointed_feasts_of÷your_all's and÷in/on/at/with÷beginning_of months_of÷your_all's and÷blow in/on/at/with÷trumpets over burnt_offerings_of÷your_all's and÷over the_sacrifices_of peace_offerings_of÷your_all's and=they_will_be to/for=you_all as÷reminder to=(the)_face_of/in_front_of/before god_of÷your_all's I \add am\add*_\nd YHWH\nd* god_of÷your_all's.
 \v 11 and=he/it_was in/on/at/with÷year the=second(fs) in/on/at/with÷month the=second in/on/at/with÷twentieth in/on/at/with÷month it_was_taken_up the÷cloud from=under the_tabernacle_of the÷transcript.
 \v 12 And= the_people_of =set_out of_Yisrā\sup ʼēl\sup*/(Israel) by÷stages_of÷their from÷wilderness_of Şīnay and÷settled_down the÷cloud in/on/at/with÷wilderness_of Pāʼrān.
@@ -440,7 +440,7 @@
 \v 22 and= the_standard_of =set_out of_the_camp_of of_the_descendants_of of_ʼEfrayim according_to÷divisions_of÷their and÷over company_of÷its ʼElīshāˊma the_son_of Ammihud.
 \v 23 And÷over the_military_group_of the_tribe_of the_descendants_of Mənashsheh Gamlī\sup ʼēl\sup* the_son_of Pedah- zur.
 \v 24 And÷over the_military_group_of the_tribe_of the_descendants_of Binyāmīn Abidan the_son_of Gidˊōni.
-\v 25 and= the_standard_of =set_out of_the_camp_of of_the_descendants_of of_Dān a_rearguard to/from=all/each/any/every the÷camps according_to÷divisions_of÷their and÷over company_of÷its Ahiezer the_son_of Ammishaddai.\f + \fr 10:25 \ft OSHB note: We read punctuation in L differently from BHS. \f*
+\v 25 and= the_standard_of =set_out of_the_camp_of of_the_descendants_of of_Dān a_rearguard to/from=all/each/any/every the÷camps according_to÷divisions_of÷their and÷over company_of÷its Ahiezer the_son_of Ammishaddai.\f + \fr 10:25 \ft OSHB note: We read punctuation in L differently from BHS.\f*
 \v 26 and÷over the_military_group_of the_tribe_of the_descendants_of ʼĀshēr Pagiel the_son_of Ocran.
 \v 27 And÷over the_military_group_of the_tribe_of the_descendants_of Naftālī Ahira the_son_of Enan.
 \v 28 These \add are\add*_the_settings_out_of the_people_of Yisrā\sup ʼēl\sup*/(Israel) by÷divisions_of÷their and÷set_out.
@@ -449,9 +449,9 @@
 \v 31 And=he/it_said do_not please leave DOM÷us if/because on/upon/above/on_account_of//he/it_went_in yes/correct/thus/so you_know camp÷we in/on/at/with÷wilderness and÷be to/for=ourselves as÷eyes.
 \v 32 And=it_was if/because you_will_go with÷us and=it_was the÷good (the)=that which \nd YHWH\nd* he_will_do_good for÷us and÷do to/for=you(fs).
 \v 33 And÷set_out from=hill of_\nd YHWH\nd* a_journey_of three_of days and÷ark_of the_covenant_of \nd YHWH\nd* \add was\add*_setting_out in÷front_of÷them a_journey_of three_of days to÷seek_out to/for=them a_resting_place.
-\v 34 And÷cloud_of \nd YHWH\nd* over÷them by_day on=their=pulling_out from the÷camp.\f + \fr 10:34 \ft OSHB note: Inverted nun in the text. \f*
+\v 34 And÷cloud_of \nd YHWH\nd* over÷them by_day on=their=pulling_out from the÷camp.\f + \fr 10:34 \ft OSHB note: Inverted nun in the text.\f*
 \v 35 and=he/it_was in/on/at/with÷set_out the÷ark and= Mosheh =he/it_said rise_up Oh_\nd YHWH\nd* and÷scattered enemies_of÷your and÷flee hate_of÷you from÷presence_of÷you.
-\v 36 And÷in/on/at/with÷rest÷it he_said return Oh_\nd YHWH\nd* the_ten_thousands_of the_families_of Yisrā\sup ʼēl\sup*/(Israel).\f + \fr 10:36 \ft OSHB note: Inverted nun in the text. \f*
+\v 36 And÷in/on/at/with÷rest÷it he_said return Oh_\nd YHWH\nd* the_ten_thousands_of the_families_of Yisrā\sup ʼēl\sup*/(Israel).\f + \fr 10:36 \ft OSHB note: Inverted nun in the text.\f*
 \c 11
 \nb
 \v 1 and=he/it_was the÷people when÷complained trouble in/on/at/with÷hearing_of \nd YHWH\nd* and= \nd YHWH\nd* =he/it_listened anger_of÷his and=it_glowed/burned and÷burned in/on/at/with÷them the_fire_of \nd YHWH\nd* and=she/it_ate in/on/at/with÷outskirts_of the÷camp.
@@ -499,7 +499,7 @@
 \v 6 And=he/it_said hear please words_of÷my if he_is prophet_of÷you_all \nd YHWH\nd* in/on/at/with÷vision to=him/it I_make_myself_known in/on/at/with÷dream I_speak in/on/over=him/it.
 \v 7 Not thus servant_of÷my Mosheh in=all house_of÷my \add is\add*_faithful he.
 \v 8 Mouth to mouth I_speak in/on/over=him/it and÷clearly and=not in/on/at/with÷riddles and÷form_of \nd YHWH\nd* he_sees and÷why not were_you_all_afraid to÷speak in/on/at/with÷servant_of÷my in/on/at/with÷Mosheh.
-\v 9 And=it_glowed/burned\f + \fr 12:9 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f* the_anger of_\nd YHWH\nd* in/on/at/with÷them and÷departed.
+\v 9 And=it_glowed/burned\f + \fr 12:9 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* the_anger of_\nd YHWH\nd* in/on/at/with÷them and÷departed.
 \v 10 And÷the÷cloud it_departed from=under the÷tent and=see/lo/see Miryām \add was\add*_leprous like_the÷snow and= ʼAhₐron =turned to Miryām and=see/lo/see leprous.
 \v 11 And= ʼAhₐron =he/it_said to Mosheh pardon_me my=master do_not please put against÷us \add the\add*_sin which we_have_acted_foolishly and=which we_have_sinned.
 \v 12 Not please let_her_be like_the÷dead whom in=his/its=coming_out from÷womb_of his/its=mother and÷eaten_away (the)_half_of flesh_of÷whose.
@@ -654,13 +654,13 @@
 \v 18 And=they_took each_one censer_of÷his and÷put in÷it fire and÷laid on÷them incense and÷stood the_entrance_of the_tent_of meeting and÷Mosheh and÷ʼAhₐron.
 \v 19 And÷assembled against÷them Qoraḩ DOM all_of the÷congregation to the_entrance_of the_tent_of meeting and= the_glory_of =appeared of_\nd YHWH\nd* to all_of the÷congregation.
 \v 20 and= \nd YHWH\nd* =he/it_spoke to Mosheh and÷to ʼAhₐron to=say.
-\v 21 Separate_yourselves from÷among_of the÷congregation the÷this and÷consume\f + \fr 16:21 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f* DOM=them in÷moment.
+\v 21 Separate_yourselves from÷among_of the÷congregation the÷this and÷consume\f + \fr 16:21 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* DOM=them in÷moment.
 \v 22 And÷fell on faces_of÷their and=they_said Oh_god the_god_of the÷spirits to/from=all/each/any/every flesh the=man one will_he_sin and÷with all_of the÷congregation will_you_be_angry.
 \v 23 and= \nd YHWH\nd* =he/it_spoke to Mosheh to÷saying.
 \v 24 Speak to the÷congregation to=say take_yourselves_up from÷around to÷dwellings_of Qoraḩ Dātān and÷ʼAⱱīrām.
 \v 25 And= Mosheh =he/it_rose_up and=he/it_went to Dātān and÷ʼAⱱīrām and÷followed after÷him the_elders_of Yisrā\sup ʼēl\sup*/(Israel).
 \v 26 And=he/it_spoke to the÷congregation to=say turn_away please from=under the_tents_of the÷men the÷wicked the=these and÷not touch in=all that to/for=them lest you_all_should_be_swept_away in=all sins_of÷their.
-\v 27 And÷got_away from=under the_dwelling_place_of Qoraḩ\f + \fr 16:27 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f* Dātān and÷ʼAⱱīrām from÷around and÷Dātān and÷ʼAⱱīrām they_came_out standing the_entrance_of tents_of÷their and÷wives_of÷their and÷children_of÷their and÷little_ones_of÷their.
+\v 27 And÷got_away from=under the_dwelling_place_of Qoraḩ\f + \fr 16:27 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* Dātān and÷ʼAⱱīrām from÷around and÷Dātān and÷ʼAⱱīrām they_came_out standing the_entrance_of tents_of÷their and÷wives_of÷their and÷children_of÷their and÷little_ones_of÷their.
 \v 28 And= Mosheh =he/it_said in/on/at/with÷this know if/because_that \nd YHWH\nd* sent÷me for=doing DOM all_of the÷works the=these if/because_that not of÷will_of÷my.
 \v 29 If as÷death_of every_of the=humankind die these_\add men\add* and÷fate_of every_of the=humankind it_will_be_visited on÷them not \nd YHWH\nd* sent÷me.
 \v 30 And=if a_creation he_will_create \nd YHWH\nd* and÷opens the=soil DOM her/its=mouth and÷swallows_up DOM=them and=DOM all_of that to/for=them and÷go_down alive shəʼōl÷into and÷know if/because_that they_have_spurned the÷men the=these DOM \nd YHWH\nd*.
@@ -682,7 +682,7 @@
 \v 9 \f + \fr 17:9 \ft Note: KJB: Num.16.44\f* and= \nd YHWH\nd* =he/it_spoke to Mosheh to÷saying.
 \v 10 \f + \fr 17:10 \ft Note: KJB: Num.16.45\f* get_away from÷midst_of the÷congregation the÷this and÷consume DOM=them in÷moment and=they_fell on faces_of÷their.
 \v 11 \f + \fr 17:11 \ft Note: KJB: Num.16.46\f* and= Mosheh =he/it_said to ʼAhₐron take DOM the÷censer and÷put on/upon=it(f) fire from=under the÷altar and÷lay incense and÷carry quickly to the÷congregation and÷make_atonement for÷them if/because it_has_gone_forth the÷severe_anger from=to/for=face/front/presence \nd YHWH\nd* it_has_begun the÷plague.
-\v 12 \f + \fr 17:12 \ft Note: KJB: Num.16.47\f* and= ʼAhₐron =he/it_took just=as Mosheh he_had_said and÷ran into the_middle_of\f + \fr 17:12 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f* the÷assembly and=see/lo/see it_had_begun the÷plague in/on/at/with÷people and=he/it_gave DOM the÷incense and÷made_atonement on the÷people.
+\v 12 \f + \fr 17:12 \ft Note: KJB: Num.16.47\f* and= ʼAhₐron =he/it_took just=as Mosheh he_had_said and÷ran into the_middle_of\f + \fr 17:12 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* the÷assembly and=see/lo/see it_had_begun the÷plague in/on/at/with÷people and=he/it_gave DOM the÷incense and÷made_atonement on the÷people.
 \v 13 \f + \fr 17:13 \ft Note: KJB: Num.16.48\f* and÷stood between the÷dead and=between the÷living and÷stopped the÷plague.
 \v 14 \f + \fr 17:14 \ft Note: KJB: Num.16.49\f* and=they_were the÷died in/on/at/with÷plague four- teen thousand and=seven hundred(s) in÷to/for÷addition_to_of the÷died on the_matter_of Qoraḩ.
 \v 15 \f + \fr 17:15 \ft Note: KJB: Num.16.50\f* and= ʼAhₐron =returned to Mosheh to the_entrance_of the_tent_of meeting and÷the÷plague it_had_been_restrained.
@@ -708,7 +708,7 @@
 \v 5 And÷keep DOM the_service_of the÷sanctuary and=DOM the_service_of the÷altar and=not it_will_be again severe_anger towards the_people_of Yisrā\sup ʼēl\sup*/(Israel).
 \v 6 And÷I here I_have_taken DOM fellow_of÷your_all's the÷Lēviyyiy from÷among_of the_people_of Yisrā\sup ʼēl\sup*/(Israel) to/for=you_all a_gift \add they\add*_\add are\add*_assigned to/for=\nd YHWH\nd* to÷perform DOM the_service_of the_tent_of meeting.
 \v 7 And=you(ms) and÷sons_of÷your with÷you you_all_will_keep DOM priesthood_of÷your_all's to/from=all/each/any/every (the)_matter_of the÷altar and÷for÷and_from÷inside_of the÷curtain and÷perform a_service_of a_gift I_give DOM priesthood_of÷you_all and÷the÷outsider the÷near he_will_be_put_to_death.
-\v 8 and= \nd YHWH\nd* =he/it_spoke to ʼAhₐron and÷I here I_give to/for=yourself(m) DOM the_charge_of offerings_of÷me to/from=all/each/any/every the_holy_gifts_of the_people_of Yisrā\sup ʼēl\sup*/(Israel) to/for=yourself(m)\f + \fr 18:8 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS. \f* given÷them as÷portion and÷to÷sons_of÷your as÷priestly_portion_of perpetuity.
+\v 8 and= \nd YHWH\nd* =he/it_spoke to ʼAhₐron and÷I here I_give to/for=yourself(m) DOM the_charge_of offerings_of÷me to/from=all/each/any/every the_holy_gifts_of the_people_of Yisrā\sup ʼēl\sup*/(Israel) to/for=yourself(m)\f + \fr 18:8 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* given÷them as÷portion and÷to÷sons_of÷your as÷priestly_portion_of perpetuity.
 \v 9 This it_will_belong to/for=yourself(m) from÷sanctuary_of the÷holy_things from the÷fire every_of offering_of÷theirs to/from=all/each/any/every grain_offering_of÷theirs and=to/for=all sin_offering_of÷theirs and=to/for=all guilt_offering_of÷theirs which they_will_bring_back to=me \add will_be\add*_a_holy_thing_of holy_things to/for=yourself(m) it and÷for÷sons_of÷your.
 \v 10 In/on/at/with÷most_holy_of the÷holy_things eat÷it every_of male he_will_eat DOM=him/it a_holy_thing it_will_be to÷you.
 \v 11 And=this to÷you the_contribution_of gifts_of÷their to/from=all/each/any/every the_wave-offerings_of the_people_of Yisrā\sup ʼēl\sup*/(Israel) to/for=yourself(m) given÷them and÷to÷sons_of÷your and÷to÷daughters_of÷your with÷you as÷due_of perpetuity every_of clean_\add person\add* in/on/at/with÷house_of÷your he_will_eat DOM=him/it.
@@ -755,7 +755,7 @@
 \v 18 And=he/it_will_take hyssop and÷dip in/on/at/with÷water a_person clean and÷sprinkle on the÷tent and÷on all_of the=vessels and÷on the÷persons who they_were there and÷on the÷touched in/on/at/with÷bone or in/on/at/with÷slain or in/on/at/with÷corpse or in/on/at/with÷grave.
 \v 19 And÷sprinkle the÷clean on the÷unclean in_the=day the=third and÷in/on/at/with÷day the=seventh and÷purify÷him in_the=day the=seventh and÷wash clothes_of÷his and÷bathe in/on/at/with÷water and÷clean in/on/at/with÷evening.
 \v 20 And÷man who he_will_be_unclean and=not he_will_purify_himself and÷cut_off the=living_creatures the=that from÷midst_of the÷assembly if/because DOM the_sanctuary_of \nd YHWH\nd* he_has_made_unclean water_of impurity not it_has_been_sprinkled on/upon/above=him/it \add is\add*_unclean he.
-\v 21 And÷be for÷them\f + \fr 19:21 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f* as÷statute_of perpetuity and÷sprinkles_of (of)_the_water_of the÷impurity he_will_wash clothes_of÷his and÷the÷touches in/on/at/with÷water_of the÷impurity he_will_be_unclean until the÷evening.
+\v 21 And÷be for÷them\f + \fr 19:21 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* as÷statute_of perpetuity and÷sprinkles_of (of)_the_water_of the÷impurity he_will_wash clothes_of÷his and÷the÷touches in/on/at/with÷water_of the÷impurity he_will_be_unclean until the÷evening.
 \v 22 And=all/each/any/every that he_will_touch in/on/over=him/it the÷unclean it_will_be_unclean and÷the÷anyone the÷touches it_will_be_unclean until the÷evening.
 \c 20
 \nb
@@ -766,7 +766,7 @@
 \v 5 And÷to/for÷why come_up÷us from=Miʦrayim/(Egypt) to=bring DOM÷us to the÷place the÷wretched the=this not a_place_of seed and÷figs and÷vines and÷pomegranates and=water there_\add is\add*_not to÷drink.
 \v 6 And= Mosheh =went and÷ʼAhₐron from=face/in_front_of the÷assembly to the_entrance_of the_tent meeting and=they_fell on faces_of÷their and= the_glory_of =appeared of_\nd YHWH\nd* to÷them.
 \v 7 and= \nd YHWH\nd* =he/it_spoke to Mosheh to÷saying.
-\v 8 Take DOM the÷staff and÷assemble DOM the÷congregation you and÷ʼAhₐron your(ms)=brother/kindred and÷speak to the÷rock before÷eyes_of÷their and=he/it_gave water_of÷its and÷bring_out\f + \fr 20:8 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS. \f* to/for=them water from the÷rock and÷drink DOM the÷community and=DOM livestock_of÷their.
+\v 8 Take DOM the÷staff and÷assemble DOM the÷congregation you and÷ʼAhₐron your(ms)=brother/kindred and÷speak to the÷rock before÷eyes_of÷their and=he/it_gave water_of÷its and÷bring_out\f + \fr 20:8 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* to/for=them water from the÷rock and÷drink DOM the÷community and=DOM livestock_of÷their.
 \v 9 And= Mosheh =he/it_took DOM the÷staff from=to/for=face/front/presence \nd YHWH\nd* just=as commanded÷him.
 \v 10 And= Mosheh =gathered_together and÷ʼAhₐron DOM the÷assembly to the_face_of the÷rock and=he/it_said to/for=them listen please the÷rebels the_(one)=from the÷rock the=this will_we_bring_out to/for=you_all water.
 \v 11 And= Mosheh =lifted_up DOM his/its=hand and÷struck DOM the÷rock in/on/at/with÷staff_of÷his two_times and= waters =they_went_out many and÷drank the÷community and÷livestock_of÷their.
@@ -777,7 +777,7 @@
 \v 16 And÷cried_out to \nd YHWH\nd* and=he/it_listened voice_of÷our and÷sent an_messenger and÷brought_out÷us of÷Miʦrayim and=see/lo/see we in/on/at/with÷Qādēsh (the)_city_of the_outskirt[s]_of territory_of÷your.
 \v 17 Let_us_pass please in/on/at/with÷land_of÷your not we_will_pass in/on/at/with÷field and÷in/on/at/with÷vineyard and=not we_will_drink water_of a_well the_way_of the=king we_will_go not we_will_turn_aside right_hand and÷left until that we_will_pass_through territory_of÷your.
 \v 18 And=he/it_said to=him/it ʼEdōm not you_will_pass in/on/at/with÷us lest in/on/at/with÷sword I_should_come_out to÷against÷you.
-\v 19 And=they_said to=him/it the_people_of Yisrā\sup ʼēl\sup*/(Israel)\f + \fr 20:19 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f* in/on/at/with÷main_road we_will_go_up and=if water_of÷your we_will_drink I and÷livestock_of÷our and÷pay price_of÷it only there_\add is\add*_not a_thing in/on/at/with÷foot_of÷us let_me_pass_through.
+\v 19 And=they_said to=him/it the_people_of Yisrā\sup ʼēl\sup*/(Israel)\f + \fr 20:19 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* in/on/at/with÷main_road we_will_go_up and=if water_of÷your we_will_drink I and÷livestock_of÷our and÷pay price_of÷it only there_\add is\add*_not a_thing in/on/at/with÷foot_of÷us let_me_pass_through.
 \v 20 And=he/it_said not you_will_pass_through and= ʼEdōm =he/it_went_out to÷against÷them in/on/at/with÷army massive and÷in/on/at/with÷hand strong.
 \v 21 And÷refused ʼEdōm to_permit DOM Yisrā\sup ʼēl\sup*/(Israel) to_pass in/on/at/with÷territory_of÷their and= Yisrā\sup ʼēl\sup*/(Israel) =turned_away from÷near÷them.
 \v 22 and÷set_out from÷Qādēsh and= the_people_of =they_came of_Yisrā\sup ʼēl\sup*/(Israel) all_of the÷community Hor the÷mount.
@@ -802,7 +802,7 @@
 \v 10 And= the_people_of =set_out of_Yisrā\sup ʼēl\sup*/(Israel) and÷camped in/on/at/with÷Oboth.
 \v 11 And÷set_out from÷Oboth and÷camped in/on/at/with÷Iye- abarim in/on/at/with÷wilderness which \add is\add*_on the_face_of Mōʼāⱱ toward÷rise_of the÷sun.
 \v 12 From=there they_set_out and÷camped in/on/at/with÷valley_of Zered.
-\v 13 From=there they_set_out and÷camped on÷other_side_of ʼArnōn which in/on/at/with÷wilderness the÷extends from÷border_of\f + \fr 21:13 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f* the=ʼAmorī if/because ʼArnōn \add is\add*_the_border_of Mōʼāⱱ between Mōʼāⱱ and=between the=ʼAmorī.
+\v 13 From=there they_set_out and÷camped on÷other_side_of ʼArnōn which in/on/at/with÷wilderness the÷extends from÷border_of\f + \fr 21:13 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* the=ʼAmorī if/because ʼArnōn \add is\add*_the_border_of Mōʼāⱱ between Mōʼāⱱ and=between the=ʼAmorī.
 \v 14 On/upon/above/on_account_of//he/it_went_in yes/correct/thus/so it_is_said in/on/at/with÷book_of the_wars_of \nd YHWH\nd* DOM Waheb in/on/at/with÷Suphah and=DOM the÷wadis ʼArnōn.
 \v 15 And÷slopes_of the÷wadis which it_extends to÷site of_Ar and÷lie along÷border_of Mōʼāⱱ.
 \v 16 And=from=there Bəʼēr÷to that the÷well which he_said \nd YHWH\nd* to÷Mosheh gather DOM the÷people and÷give to/for=them water.
@@ -819,7 +819,7 @@
 \v 27 On/upon/above/on_account_of//he/it_went_in yes/correct/thus/so they_say the÷poets come Ḩeshbōn let_it_be_rebuilt and÷established the_city_of Şīḩōn.
 \v 28 If/because fire it_went_out from÷Ḩeshbōn flame from÷city_of Şīḩōn it_consumed Ar of_Mōʼāⱱ the_citizens_of the_high_places_of ʼArnōn.
 \v 29 Woe to/for=yourself(m) Oh_Mōʼāⱱ you_have_perished Oh_people_of Kəmōsh/(Chemosh) he_has_made sons_of÷his fugitives and÷daughters_of÷his in/on/at/with÷captivity to÷king_of \add the\add*_ʼAmorī[s] Şīḩōn.
-\v 30 And÷threw_down÷them Ḩeshbōn it_has_perished to Diyⱱōn and÷laid_waste to Nophah which\f + \fr 21:30 \ft OSHB note: Puncta extraordinaria a ◌ׄ is used to mark such marks in the text when they are above the line and a ◌ׅ when they are below the line. \f* \add is\add*_to Mēydəⱱāʼ.
+\v 30 And÷threw_down÷them Ḩeshbōn it_has_perished to Diyⱱōn and÷laid_waste to Nophah which\f + \fr 21:30 \ft OSHB note: Puncta extraordinaria a ◌ׄ is used to mark such marks in the text when they are above the line and a ◌ׅ when they are below the line.\f* \add is\add*_to Mēydəⱱāʼ.
 \v 31 And= Yisrā\sup ʼēl\sup*/(Israel) =he/it_sat_down//remained//lived in=land the=ʼAmorī.
 \v 32 And= Mosheh =sent to÷spy_out DOM Yaˊzēr/(Jazer) and÷captured villages_of÷its and÷dispossessed\f + \fr 21:32 \ft OSHB variant note: ו/יירש: (x-qere) 'וַ/יּ֖וֹרֶשׁ': lemma=c/3423 n=0.0 morph=HC/Vhw3ms id=044RU וַ/יּ֖וֹרֶשׁ\f* DOM the=ʼAmorī who \add was\add*_there.
 \v 33 And÷turned and÷went_up the_way_of the÷Bāshān and= ˊŌg =he/it_went_out the_king_of the÷Bāshān to÷meet÷them he and=all people_of÷his to_the÷battle ʼEdreˊī.
@@ -930,7 +930,7 @@
 \c 25
 \nb
 \v 1 and= Yisrā\sup ʼēl\sup*/(Israel) =he/it_sat_down//remained//lived in/on/at/with÷Shiţţīm and÷began the÷people to÷prostitute into the_daughters_of Mōʼāⱱ.
-\v 2 And÷invited to_the÷people to÷sacrifices_of gods_of÷their and÷ate the÷people and÷bowed_down\f + \fr 25:2 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f* to÷gods_of÷their.
+\v 2 And÷invited to_the÷people to÷sacrifices_of gods_of÷their and÷ate the÷people and÷bowed_down\f + \fr 25:2 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* to÷gods_of÷their.
 \v 3 And= Yisrā\sup ʼēl\sup*/(Israel) =joined to÷Baˊal_of Pəˊōr and=it_glowed/burned the_anger of_\nd YHWH\nd* in/on/at/with÷Yisrā\sup ʼēl\sup*/(Israel).
 \v 4 And= \nd YHWH\nd* =he/it_said to Mosheh take DOM all_of the_chiefs_of the÷people and÷execute DOM÷them to/for=\nd YHWH\nd* before the÷sun and= the_burning_of =turn_away of_the_anger of_\nd YHWH\nd* from÷Yisrā\sup ʼēl\sup*/(Israel).
 \v 5 And= Mosheh =he/it_said to of_Yisrā\sup ʼēl\sup*/(Israel) the_judges_of kill everyone men_of÷his the÷joined to÷Baˊal_of Pəˊōr.
@@ -947,7 +947,7 @@
 \v 16 and= \nd YHWH\nd* =he/it_spoke to Mosheh to÷saying.
 \v 17 Treat_as_foes DOM the÷Midyānites and÷strike DOM÷them.
 \v 18 If/because \add are\add*_treating_as_foes they to/for=you_all in/on/at/with÷trickery_of÷their which they_have_dealt_deceptively to/for=you_all on the_matter_of Pəˊōr and÷in the_matter_of Cozbi the_daughter_of the_leader_of Midyān sister_of÷their the÷killed in/on/at/with÷day_of the÷plague on the_matter_of Pəˊōr.
-\v 19 \f + \fr 25:19 \ft Note: KJB: Num.26.1\f* and=he/it_was after the÷plague\f + \fr 25:19 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f*
+\v 19 \f + \fr 25:19 \ft Note: KJB: Num.26.1\f* and=he/it_was after the÷plague\f + \fr 25:19 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f*
 \c 26
 \nb
 \v 1 and= \nd YHWH\nd* =he/it_said to Mosheh and=near/to ʼElˊāzār the_son_of ʼAhₐron the=priest/officer to=say.
@@ -956,7 +956,7 @@
 \v 4 From÷son_of twenty year[s] and÷more just=as he_commanded \nd YHWH\nd* DOM Mosheh and=the_sons of_Yisrā\sup ʼēl\sup*/(Israel) the÷came_out of÷land_of of_Miʦrayim/(Egypt).
 \v 5 Rəʼūⱱēn the_firstborn_of Yisrā\sup ʼēl\sup*/(Israel) the_descendants_of Rəʼūⱱēn Hanoch the_clan_of the÷Hanochites of÷Pallu the_clan_of the÷Palluites.
 \v 6 Of÷Ḩeʦrōn the_clan_of the÷Ḩeʦrōnites of÷Karmī/(Carmi) the_clan_of the÷Carmites.
-\v 7 These \add were\add*_the_clans_of the÷Rəʼūⱱēnites\f + \fr 26:7 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f* and=they_were numbered_of÷them three and÷forty thousand and=seven hundred(s) and=thirty.
+\v 7 These \add were\add*_the_clans_of the÷Rəʼūⱱēnites\f + \fr 26:7 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* and=they_were numbered_of÷them three and÷forty thousand and=seven hundred(s) and=thirty.
 \v 8 And=the_sons of_Pallu \add were\add*_ʼElīʼāⱱ.
 \v 9 And=the_sons of_ʼElīʼāⱱ \add were\add*_Nemuel and÷Dātān and÷ʼAⱱīrām that \add was\add*_\add the\add*_Dātān and÷ʼAⱱīrām the_\add people\add*_called_of\f + \fr 26:9 \ft OSHB variant note: קרואי: (x-qere) 'קְרִיאֵ֣י': lemma=7148 morph=HAampc id=04aXz קְרִיאֵ֣י\f* the÷community who they_struggled on Mosheh and÷against ʼAhₐron in/on/at/with÷company_of Qoraḩ in/on/at/with÷rebelled÷they on \nd YHWH\nd*.
 \v 10 And÷opened the=earth/land DOM her/its=mouth and÷swallowed DOM=them and=DOM Qoraḩ in/on/at/with÷died_of the÷company in/on/at/with÷devoured the÷fire DOM fifty and=two_hundreds man and=they_were as÷warning.
@@ -1021,11 +1021,11 @@
 \v 2 And÷stood to=(the)_face_of/in_front_of/before Mosheh and÷before ʼElˊāzār the=priest/officer and÷before the÷leaders and=all the÷congregation the_entrance_of the_tent_of meeting to=say.
 \v 3 father_of÷our he_died in/on/at/with÷wilderness and=he not he_was in_the=middle the÷company the÷gathered_together on \nd YHWH\nd* in/on/at/with÷company_of Qoraḩ if/because in/on/at/with÷sin_of÷his_own he_died and÷sons not they_belonged to=him/it.
 \v 4 To/for=what the_name_of will_it_be_withdrawn father_of÷our from÷midst_of clan_of÷his if/because there_\add belonged\add*_not to=him/it a_son give to/for=ourselves a_possession in_the=middle the_brothers_of father's_of÷our.
-\v 5 And= Mosheh =brought DOM case_of\f + \fr 27:5 \ft OSHB note: Large letter(s). Shown as large letters without a superscript note number. \f* to=(the)_face_of/in_front_of/before \nd YHWH\nd*.
+\v 5 And= Mosheh =brought DOM case_of\f + \fr 27:5 \ft OSHB note: Large letter(s). Shown as large letters without a superscript note number.\f* to=(the)_face_of/in_front_of/before \nd YHWH\nd*.
 \v 6 and= \nd YHWH\nd* =he/it_said to Mosheh to÷saying.
 \v 7 Right the_daughters_of Zelophehad \add are\add*_speaking indeed_(give) you_will_give to/for=them possession_of an_inheritance in_the=middle the_brothers_of father's_of÷their and÷transfer DOM the_inheritance_of father_of÷their to÷them.
 \v 8 And=near/to the_people_of Yisrā\sup ʼēl\sup*/(Israel) you_will_speak to=say a_man if/because he_will_die and÷son there_\add will_belong\add*_not to=him/it and÷transfer DOM inheritance_of÷his to÷daughter_of÷his.
-\v 9 And=if there_\add will_belong\add*_not to=him/it a_daughter and÷give DOM inheritance_of÷his to÷brothers_of÷his.\f + \fr 27:9 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f*
+\v 9 And=if there_\add will_belong\add*_not to=him/it a_daughter and÷give DOM inheritance_of÷his to÷brothers_of÷his.\f + \fr 27:9 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f*
 \v 10 and=if there_\add will_belong\add*_not to=him/it brothers and÷give DOM inheritance_of÷his to÷brothers_of his/its=father.
 \v 11 And=if there_\add will_belong\add*_not brothers has÷father_of÷his and÷give DOM inheritance_of÷his to÷relative_of÷his the÷nearest to=him/it of÷clan_of÷his and÷possess DOM=her/it and÷be for÷sons_of Yisrā\sup ʼēl\sup*/(Israel) as÷ordinance_of judgement just=as he_has_commanded \nd YHWH\nd* DOM Mosheh.
 \v 12 and= \nd YHWH\nd* =he/it_said to Mosheh go_up to the_mountain_of the÷Abarim the=this and÷see DOM the=earth/land which I_have_given to÷sons_of Yisrā\sup ʼēl\sup*/(Israel).
@@ -1089,7 +1089,7 @@
 \v 12 and÷in/on/at/with÷five teen day of_the÷month the=seventh a_convocation_of holiness it_will_be to/for=you_all any_of work_of servitude not you_all_will_do and÷celebrate a_festival to/for=\nd YHWH\nd* seven_of days.
 \v 13 And÷present a_burnt_offering a_fire_offering_of an_odor_of soothing to/for=\nd YHWH\nd* young_bulls young_ones_of \add the\add*_herd thir- teen rams two lambs sons_of a_year four- teen unblemished they_will_be.
 \v 14 And÷grain_offering_of÷their fine_flour mixed in/on/at/with÷oil three tenths_\add of_an_ʼēyfāh\add* for_the÷bull the=one of÷three teen young_bulls two_of tenths_\add of_an_ʼēyfāh\add* for_the÷ram the=one of÷two_of the÷rams.
-\v 15 And÷tenth\f + \fr 29:15 \ft OSHB note: Puncta extraordinaria a ◌ׄ is used to mark such marks in the text when they are above the line and a ◌ׅ when they are below the line. \f* a_tenth for_the÷lamb the=one to=four teen lambs.
+\v 15 And÷tenth\f + \fr 29:15 \ft OSHB note: Puncta extraordinaria a ◌ׄ is used to mark such marks in the text when they are above the line and a ◌ׅ when they are below the line.\f* a_tenth for_the÷lamb the=one to=four teen lambs.
 \v 16 And goats one a_sin_offering in÷to/for÷addition_to_of the_burnt_offering_of the÷regular grain_offering_of÷its and÷drink_offering_of÷its.
 \v 17 and÷in/on/at/with÷day the=second young_bulls young_ones_of \add the\add*_herd two_plus ten rams two lambs sons_of a_year four- teen unblemished.
 \v 18 And÷grain_offering_of÷their and÷drink_offerings_of÷their for_the÷bulls for_the÷rams and÷for_the÷lambs in/on/at/with÷number_of÷their according_to_the÷prescribed.
@@ -1220,7 +1220,7 @@
 \v 27 And÷servants_of÷your they_will_pass_over every_of \add man\add*_equipped_of war to=(the)_face_of/in_front_of/before \nd YHWH\nd* to_the÷battle just=as my=master \add is\add*_saying.
 \v 28 And=he/it_commanded to/for=them Mosheh DOM ʼElˊāzār the=priest/officer and=DOM Yəhōshūˊa/(Joshua) the_son_of Nūn and=DOM the_heads_of the_fathers_of the÷tribes of÷sons_of of_Yisrā\sup ʼēl\sup*/(Israel).
 \v 29 And= Mosheh =he/it_said to÷them if they_will_pass_over the_descendants_of Gād and=the_sons of_Rəʼūⱱēn with÷you_all DOM the÷Yardēn/(Jordan) every_of \add man\add*_equipped for_the÷battle to=(the)_face_of/in_front_of/before \nd YHWH\nd* and÷subdued the=earth/land before÷face/front÷you_all and÷give to/for=them DOM the_land_of the÷Gilˊād as÷possession.
-\v 30 And=if not they_will_pass_over equipped with÷you_all and÷have_possessions in/on/at/with÷midst_of÷you_all\f + \fr 32:30 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS. \f* in=land of_Kinaˊan/(Canaan).
+\v 30 And=if not they_will_pass_over equipped with÷you_all and÷have_possessions in/on/at/with÷midst_of÷you_all\f + \fr 32:30 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* in=land of_Kinaˊan/(Canaan).
 \v 31 And= the_descendants_of =answered of_Gād and=the_sons of_Rəʼūⱱēn to=say DOM \add that\add*_which he_has_spoken \nd YHWH\nd* to your=servants thus we_will_do.
 \v 32 We we_will_pass_over equipped to=(the)_face_of/in_front_of/before \nd YHWH\nd* the_land_of Kinaˊan/(Canaan) and÷with÷us the_possession_of inheritance_of÷our on÷this_side of_the÷Yardēn.
 \v 33 And=he/it_gave to/for=them Mosheh to÷descendants_of Gād and÷to÷descendants_of Rəʼūⱱēn and÷to÷half_of the_tribe_of Mənashsheh the_son_of Yōşēf/(Joseph) DOM the_kingdom_of Şīḩōn the_king_of the=ʼAmorī and=DOM the_kingdom_of ˊŌg the_king_of the÷Bāshān the=earth/land with÷cities_of÷its in/on/at/with÷territories_of the_cities_of the=earth/land all_around.

@@ -62,6 +62,7 @@ CHANGELOG:
     2025-03-10 Don't allow _~_ (allows word insert) to have a word number attached to it
     2025-03-11 Changed back to contextual word glosses because the word glosses were too long and wordy, e.g., 'on/upon/above/on_account_of'
     2025-03-14 Properly handle added words like '[the]' and '[is]' (coming from Macula Hebrew glosses, etc.)
+    #2025-06-24 Remove superfluous final spaces from OSHB footnotes (why were they there???) Fixed upstream
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple
@@ -75,10 +76,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2025-03-14' # by RJH
+LAST_MODIFIED_DATE = '2025-06-26' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed_OSHB_OT_to_ESFM"
 PROGRAM_NAME = "Extract glossed OSHB OT ESFM files"
-PROGRAM_VERSION = '0.59'
+PROGRAM_VERSION = '0.61'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -533,7 +534,8 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
             _BBB, CV = given_verse_row['Ref'].split( '_', 1 )
             assert 'w' not in CV
             C, V = CV.split( ':', 1 )
-            note_text = given_verse_row['Word']
+            note_text = given_verse_row['Word'] #.strip() # Fixed upstream
+            assert note_text.strip() == note_text
             note_is_versification_adjustment = note_text.startswith('KJB:')
             gloss = f"\\f + \\fr {C}:{V} \\ft {'' if note_is_versification_adjustment else 'OSHB '}{given_verse_row['RowType'][0].upper() if note_is_versification_adjustment else given_verse_row['RowType'][0]}{given_verse_row['RowType'][1:]}: {note_text}\\f*"
         # if saved_gloss:

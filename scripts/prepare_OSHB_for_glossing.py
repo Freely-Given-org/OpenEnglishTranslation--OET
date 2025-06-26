@@ -42,6 +42,7 @@ OSHB morphology codes can be found at https://hb.openscriptures.org/parsing/Hebr
 
 CHANGELOG:
     2024-03-21 Replace some \\u05c4 (Hebrew upper dot) and \\u05c5 (Hebrew lower dot) characters in some notes
+    2025-06-26 Allow for shorter notes now that any superfluous trailing space has been removed
 """
 from gettext import gettext as _
 # from typing import Dict, List, Tuple
@@ -60,10 +61,10 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.OriginalLanguages import Hebrew
 
 
-LAST_MODIFIED_DATE = '2025-03-09' # by RJH
+LAST_MODIFIED_DATE = '2025-06-26' # by RJH
 SHORT_PROGRAM_NAME = "Prepare_OSHB_for_glossing"
 PROGRAM_NAME = "Prepare OSHB for glossing"
-PROGRAM_VERSION = '0.51'
+PROGRAM_VERSION = '0.52'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -238,7 +239,7 @@ def create_expanded_TSV_table() -> bool:
                 assert row['Special'] in ('variant','alternative','exegesis'), f"Got {row['FGID']} note {row['Special']=}"
                 new_type = f"{row['Special']} {new_type}"
         if row['RowType']=='seg' or row['RowType']=='note':
-            assert len(row['WordOrMorpheme'])==1 or 'KJV' in row['WordOrMorpheme'] or 'x-' in row['WordOrMorpheme'] or len(row['WordOrMorpheme']) >= 25, f"({len(row['WordOrMorpheme'])}) {row['WordOrMorpheme']}"
+            assert len(row['WordOrMorpheme'])==1 or 'KJV' in row['WordOrMorpheme'] or 'x-' in row['WordOrMorpheme'] or len(row['WordOrMorpheme']) >= 24, f"({len(row['WordOrMorpheme'])}) {row['WordOrMorpheme']}"
             # print(f"{row['Ref']=} {row['RowType']=} {row['WordOrMorpheme']=}")
             noCants = ''
         else: # an actual word

@@ -37,6 +37,7 @@ CHANGELOG:
     2025-02-24 Better handling of nested USFM character markers
     2025-03-08 Ignore rem being inside table in Ezr 10:24, plus handle /qs (Selah)
     2025-06-10 Allow /s4 (which we use for kingdoms)
+    2025-06-24 Check for footnotes and xrefs ending in space
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -58,10 +59,10 @@ from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, 
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 
 
-LAST_MODIFIED_DATE = '2025-06-10' # by RJH
+LAST_MODIFIED_DATE = '2025-06-24' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
-PROGRAM_VERSION = '0.83'
+PROGRAM_VERSION = '0.84'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -811,6 +812,8 @@ def produce_HTML_files() -> None:
             assert '‘ ' not in esfm_text, f"""Why do we have space after single opening quote in {source_filename}: {esfm_text[esfm_text.index('‘ ')-20:esfm_text.index('‘ ')+22]}"""
             assert ' ’' not in esfm_text.replace('” ’','”’').replace('\\add ’','’'), f"""Why do we have space before single closing quote in {source_filename}: {esfm_text[esfm_text.index(' ’')-20:esfm_text.index(' ’')+22]}"""
             assert '  ' not in esfm_text, f"""Why do we have doubled spaces in {source_filename}: {esfm_text[esfm_text.index('  ')-20:esfm_text.index('  ')+22]}"""
+            assert ' \\f*' not in esfm_text, f"""Why do we have footnote ending with space in {source_filename}: {esfm_text[esfm_text.index(' \\f*')-20:esfm_text.index(' \\f*')+22]}"""
+            assert ' \\x*' not in esfm_text, f"""Why do we have xref ending with space in {source_filename}: {esfm_text[esfm_text.index(' \\x*')-20:esfm_text.index(' \\x*')+22]}"""
             invalid_text = '\\p\n\\s'
             assert invalid_text not in esfm_text, f"""Why do we have a useless paragraph in {source_filename}: {esfm_text[esfm_text.index(invalid_text)-20:esfm_text.index(invalid_text)+22]}"""
             for lineNumber,line in enumerate( esfm_text.split( '\n' ), start=1 ):

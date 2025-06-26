@@ -32,6 +32,7 @@ CHANGELOG:
     2024-03-21 Handle OT word table as well
     2025-02-16 Change gloss helper to use ˓˒ instead of // around gloss helper (since / also used for alternative glosses)
     2025-03-03 Handle added /nb fields (after chapter numbers)
+    2025-06-24 Check for footnotes and xrefs ending in space
 """
 from gettext import gettext as _
 from typing import List, Tuple, Set, Optional
@@ -57,10 +58,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-03-03' # by RJH
+LAST_MODIFIED_DATE = '2025-06-24' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.82'
+PROGRAM_VERSION = '0.83'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -773,6 +774,8 @@ def produce_HTML_files() -> None:
             assert "'" not in esfm_text, f"""Why do we have single quote in {source_filename}: {esfm_text[esfm_text.index("'")-20:esfm_text.index("'")+22]}"""
             assert '"' not in esfm_text, f"""Why do we have double quote in {source_filename}: {esfm_text[esfm_text.index('"')-20:esfm_text.index('"')+22]}"""
             assert '  ' not in esfm_text, f"""Why do we have doubled spaces in {source_filename}: {esfm_text[esfm_text.index('  ')-20:esfm_text.index('  ')+22]}"""
+            assert ' \\f*' not in esfm_text, f"""Why do we have footnote ending with space in {source_filename}: {esfm_text[esfm_text.index(' \\f*')-20:esfm_text.index(' \\f*')+22]}"""
+            assert ' \\x*' not in esfm_text, f"""Why do we have xref ending with space in {source_filename}: {esfm_text[esfm_text.index(' \\x*')-20:esfm_text.index(' \\x*')+22]}"""
 
             book_start_html, book_html, book_end_html = convert_ESFM_to_simple_HTML( BBB, esfm_text, word_table )
 
