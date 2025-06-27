@@ -33,6 +33,7 @@ OSHB morphology codes can be found at https://hb.openscriptures.org/parsing/Hebr
 
 CHANGELOG:
     2025-01-15 Fix the single note that contains an exclamation mark ('KJV:1Kgs.22.43!b')
+    2025-06-26 Fix the notes that contain a superfluous trailing space.
 """
 from gettext import gettext as _
 # from typing import Dict, List, Tuple
@@ -46,10 +47,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2025-01-15' # by RJH
+LAST_MODIFIED_DATE = '2025-06-26' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OSHB_XML_to_TSV"
 PROGRAM_NAME = "Convert OSHB WLC OT XML into TSV/JSON files"
-PROGRAM_VERSION = '0.59'
+PROGRAM_VERSION = '0.60'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -190,7 +191,7 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
                                 adj_readable_ref = f'{readable_ref}{letter}'
                                 adj_id = f'{OS_id}{letter}'
                                 verse_element_array.append([adj_readable_ref, 'm', ketiv, lemma_bit, n, morph_bit, adj_id, word_bit])
-                                entry = (adj_numeric_ref, adj_readable_ref, 'm', ketiv, lemma_bit, n, morph_bit, adj_id, word_bit)
+                                entry = [adj_numeric_ref, adj_readable_ref, 'm', ketiv, lemma_bit, n, morph_bit, adj_id, word_bit]
                                 assert len(entry) == OUTPUT_FIELDNAMES_COUNT, f"Entry should have {OUTPUT_FIELDNAMES_COUNT} fields, not {len(entry)}: {entry}"
                                 state.flat_array.append( entry )
                     else: # it's simple
@@ -207,7 +208,7 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
 
                     seg_type = verse_element.attrib.get('type')
                     verse_element_array.append([readable_ref, 'seg', seg_type, verse_element.text])
-                    entry = (numeric_ref, readable_ref, 'seg', '','','', seg_type, '', verse_element.text)
+                    entry = [numeric_ref, readable_ref, 'seg', '','','', seg_type, '', verse_element.text]
                     assert len(entry) == OUTPUT_FIELDNAMES_COUNT, f"Entry should have {OUTPUT_FIELDNAMES_COUNT} fields, not {len(entry)}: {entry}"
                     state.flat_array.append( entry )
 
@@ -276,7 +277,7 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
                     if readable_ref == 'KI1_22:44': noteText = noteText.replace( '!', '' ) # 'KJV:1Kgs.22.43!b'
                     assert '!' not in noteText, f"BAD note: {readable_ref} {n=} {noteType=} {noteText=}"
                     verse_element_array.append([readable_ref, 'note', n, noteType, noteText])
-                    entry = (numeric_ref, readable_ref, 'note', noteType,'', n, '','', noteText)
+                    entry = [numeric_ref, readable_ref, 'note', noteType,'', n, '','', noteText.rstrip()] # TODO: Why is there a trailing space???
                     assert len(entry) == OUTPUT_FIELDNAMES_COUNT, f"Entry should have {OUTPUT_FIELDNAMES_COUNT} fields, not {len(entry)}: {entry}"
                     state.flat_array.append( entry )
 
@@ -296,6 +297,17 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
 def adjust_data_table() -> bool:
     """
     """
+    # Check all fields for superfluous leading/trailing spaces
+    for row in state.flat_array:
+        # print( f"  {row=}")
+        assert isinstance( row, list )
+        for columnNumber,field in enumerate( row ):
+            if field: assert field.strip() == field, f"{columnNumber=} {field=} from {row=}"
+            if field and field.strip() != field:
+                row[columnNumber] = field.strip()
+        # print( f"  {row=}")
+        # if 'Often this notation indicates a typographical error in BHS' in str(row): halt # Gen 1:12
+
     return True
 # end of convert_OSHB_XML_to_TSV.adjust_data_table
 
