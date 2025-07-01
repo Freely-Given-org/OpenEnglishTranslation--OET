@@ -1,4 +1,4 @@
-\id PSA - Open English Translation—Readers' Version (OET-RV) v0.0.93
+\id PSA - Open English Translation—Readers' Version (OET-RV) v0.0.95
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 PSA
@@ -41,7 +41,7 @@
 \v 3 Those people are like trees that are planted¦243212 by a stream¦243215\x + \xo 1:3: \xt Jer 17:8.\x*
 \q2 and which¦243217 produce fruit¦243218 in season¦243221.
 \q1 Their leaves don't¦243223 wither¦243225,
-\q2 and they prosper¦243230 in everything they do.
+\q2 and they prosper¦243230 in everything they do.\x + \xo 1:3 \xt Gen 29:2-3.\x*
 \b
 \q1
 \v 4 \add But\add* wicked¦243235 \add people\add* won't \add prosper\add*—
@@ -1413,7 +1413,7 @@
 \d \add A song\add* by David.
 \rem /d For David; A psalm of David.; Of David.
 \q1
-\v 1 Yahweh, I call out to you¦247399 \add for help\add*, my rock \add of safety\add*.
+\v 1 Yahweh, I call out to you¦247399 \add for help¦247398\add*, my rock \add of safety\add*.
 \q1 Don't \add ≈refuse to hear me\add*
 \q1 because if you're silent, I'll \add soon\add* be with those who're heading down \add ≈to their graves\add*.
 \q1
@@ -1608,7 +1608,7 @@
 \q1 when I was \add trapped\add* in a besieged city¦248003.
 \q1
 \v 22 In my alarm¦248010 I \add ≈thought\add*, “\add ≈I've gone out of\add* your sight¦248013,”
-\q1 yet you did hear my plea for help when I called out to you.
+\q1 yet you did hear my plea for help¦248018 when I called out to you.
 \q1
 \v 23 Love Yahweh, all you \add ≈godly people\add*.
 \q1 Yahweh protects faithful¦248029 \add >people\add*,
@@ -3804,7 +3804,7 @@
 \q1 ≈I looked for \add ≈someone to encourage me\add*, but I didn't¦255151 find anyone.
 \q1
 \v 21 They gave me poison¦255157 \add ≈to eat\add*.
-\q1 ≈\add ≈When I was thirsty¦255158\add*, they gave me vinegar¦255160 to drink.
+\q1 ≈\add ≈When I was thirsty¦255158\add*, they gave me vinegar¦255160 to drink¦255159.
 \q1
 \v 22 Let their table¦255165 become a snare¦255167 \add ≈to catch them in their own schemes\add*.
 \q1 ≈When they think they're safe, let it become a trap.
@@ -4639,7 +4639,7 @@
 \q1 how long will you¦257716 be angry at your¦257718 people¦257718 when they pray?
 \q1
 \v 5 You have fed them with bread¦257722 \add ≈made from\add* tears
-\q1 and¦257724 given¦257724 them tears to drink in great quantities.
+\q1 and¦257724 given¦257724 them tears to drink¦257724 in great quantities.
 \q1
 \v 6 You make us something for our neighbours¦257731 to argue over,
 \q1 and our enemies¦257732 \add ≈laugh about\add* us among¦257735 themselves¦257735.
@@ -7036,214 +7036,216 @@
 \v 28 You're my God, and I'll give¦264632 thanks¦264632 to you.
 \q1 ≈You're my God—I will \add ≈praise\add* you.
 \q1
-\v 29 Oh, give thanks¦264636 to Yahweh¦264637 because he's good¦264640,
+\v 29 \add ≈Yes\add*, give thanks¦264636 to Yahweh¦264637 because he's good¦264640,
 \q1 because his loyal commitment endures forever¦264642.
 \c 119
-\s1 The Law of God
+\s1 Obeying Yahweh's instructions
 \rem /s1 The Glories of God's Law; The Law of the Lord
 \qa \bd א\bd* (Alef)
 \q1
-\v 1 ◙
-\q2 …
+\v 1 Blessed are those whose \add ≈behaviour is\add* blameless¦264646—
+\q1 who \add ≈follow Yahweh's instructions\add*.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 Blessed are they who keep \add ≈the rules that he revealed\add*—
+\q1 who \add ≈strive to sincerely obey him¦264659\add*.
 \q1
-\v 3 ◙
-\q2 …
+\v 3 Surely they \add ≈wouldn't promote\add* injustice¦264665.
+\q1 They \add ≈do what he shows them\add*.
 \q1
-\v 4 ◙
-\q2 …
+\v 4 You've \add ≈shown your principles through\add* your instructions
+\q1 so that we should carefully \add ≈follow\add* them.
 \q1
-\v 5 ◙
-\q2 …
+\v 5 If only I could be consistent
+\q1 in keeping your¦264679 rules,
 \q1
-\v 6 ◙
-\q2 …
+\v 6 then I wouldn't be ashamed¦264684
+\q1 when I consider all your¦264690 commands¦264690.
 \q1
-\v 7 ◙
-\q2 …
+\v 7 I'll give thanks to you \add ≈because I want to do what's right¦264697\add*
+\q1 when I learn¦264695 \add ≈about how you always judge¦264696 fairly\add*.
 \q1
-\v 8 ◙
-\q2 …
-\s1 The obedience of law of God
+\v 8 I'll¦264702 keep¦264702 your¦264701 regulations¦264701.
+\q1 Don't totally desert me.
+\s1 Internalising Yahweh's principles
 \rem /s1 Obedience to the Law of the Lord
 \qa \bd ב\bd* (Beyt)
 \q1
-\v 9 ◙
-\q1 …
+\v 9 How can a young man keep¦264711 his \add ≈motives\add* pure?
+\q1 By obeying your¦264718 message¦264718.
 \q1
-\v 10 ◙
-\q1 …
+\v 10 With my whole heart¦264722 I search for you with \add ≈all my being\add*.
+\q1 Don't let me stray¦264726 from \add ≈what you commanded¦264727\add*.
 \q1
-\v 11 ◙
-\q2 …
+\v 11 I've \add ≈stored your¦264731 message¦264731 away in my memory\add*
+\q1 so that I'll \add ≈be less likely to\add* sin¦264734 against you.
 \q1
-\v 12 ◙
-\q2 …
+\v 12 You \add ≈deserve praise\add*, Yahweh¦264740.
+\q1 Teach me your¦264742 regulations¦264742.
 \q1
-\v 13 ◙
-\q2 …
+\v 13 With my lips¦264744 I've proclaimed
+\q1 all the judgements¦264747 \add ≈that you've pronounced\add*.
 \q1
-\v 14 ◙
-\q2 …
+\v 14 I¦264753 \add ≈get happier about everything you've revealed\add*
+\q1 rather than \add ≈any kind of\add* riches.
 \q1
-\v 15 ◙
-\q2 …
+\v 15 I¦264760 will meditate¦264760 about your principles
+\q1 and keep my eyes on your paths.
 \q1
-\v 16 ◙
-\q2 …
-\s1 The happiness of obedience of Law of God
+\v 16 I take delight¦264765 in your regulations¦264764—
+\q1 I won't¦264766 forget¦264767 \add ≈what you've said\add*.
+\s1 Pleased to obey Yahweh's instructions
 \rem /s1 Happiness in the Law of the Lord
 \qa \bd ג\bd* (Gimel)
 \q1
-\v 17 ◙
-\q2 …
+\v 17 Deal kindly with your servant¦264773
+\q1 so that I \add ≈can continue to\add* live¦264774 and \add ≈obey what you've told us\add*.
 \q1
-\v 18 ◙
-\q2 …
+\v 18 Uncover¦264778 my eyes¦264780 so I can gaze
+\q1 on the marvellous \add results\add* from your¦264783 instructions.
 \q1
-\v 19 ◙
-\q2 …
+\v 19 I'm¦264786 a foreigner in the land—
+\q1 don't¦264788 \add ≈prevent me from hearing\add* your¦264792 commands¦264792.
 \q1
-\v 20 ◙
-\q2 …
+\v 20 My inner being is continually crushed¦264794
+\q1 with longing¦264796 for your¦264799 regulations.
 \q1
-\v 21 ◙
-\q2 …
+\v 21 You rebuke¦264804 the proud, who're cursed¦264806—
+\q1 who stray from your¦264808 commands¦264808.
 \q1
-\v 22 ◙
-\q2 …
+\v 22 Spare me from disgrace and¦264813 humiliation
+\q1 because I've kept \add ≈the requirements that you've revealed\add*.
 \q1
-\v 23 ◙
-\q2 …
+\v 23 Even though rulers \add ≈gather together¦264822\add* against me and slander \add >me\add*,
+\q1 your servant¦264823 meditates¦264824 about your regulations¦264825.
 \q1
-\v 24 ◙
-\q2 …
-\s1 The strengthening of obedience of law of God
+\v 24 Also, your¦264829 \add ≈revealed messages\add* are my pleasure.
+\q1 They are my counsellors¦264832.
+\s1 Choosing Yahweh's way
 \rem /s1 Determination to Obey the Law of the Lord
 \qa \bd ד\bd* (Dalet)
 \q1
-\v 25 ◙
-\q1 …
+\v 25 My \add ≈inner being\add* clings¦264834 to the dust.
+\q1 \add ≈Speak out and\add* give me life.
 \q1
-\v 26 ◙
-\q2 …
+\v 26 I \add ≈talked about my behaviour\add*, and¦264842 you answered¦264842 me.
+\q1 Teach me your¦264844 regulations¦264844.
 \q1
-\v 27 ◙
-\q2 …
+\v 27 \add ≈Grant me insight into\add* your principles,
+\q1 so I can meditate¦264850 about your wonderful¦264851 actions.
 \q1
-\v 28 ◙
-\q2 …
+\v 28 My \add ≈inner being\add* melts away from grief¦264855.
+\q1 \add ≈Speak out and\add* strengthen¦264856 me.
 \q1
-\v 29 ◙
-\q2 …
+\v 29 Keep me off the path¦264859 of deceit.
+\q1 Graciously give me your¦264864 instructions.
 \q1
-\v 30 ◙
-\q2 …
+\v 30 I've chosen¦264870 the way¦264867 of faithfulness¦264869.
+\q1 ≈I have desired your¦264871 regulations.
 \q1
-\v 31 ◙
-\q2 …
+\v 31 I cling to \add ≈what you've revealed\add*—
+\q1 Yahweh¦264876, don't¦264877 let me be shamed¦264879.
 \q1
-\v 32 ◙
-\q2 …
-\s1 The praying for of wisdom
+\v 32 I¦264884 run¦264884 along the path¦264881 of your¦264883 commands¦264883,
+\q1 because you¦264886 \add ?≈have expanded my mind¦264887\add*.
+\s1 Prayer for guidance
 \rem /s1 A Prayer for Understanding
 \qa \bd ה\bd* (He)
 \q1
-\v 33 ◙
-\q2 …
+\v 33 Teach¦264889 me, Yahweh¦264890, the way¦264891 of your¦264892 regulations¦264892,
+\q1 and¦264893 I'll keep¦264893 them to the end¦264894.
 \q1
-\v 34 ◙
-\q2 …
+\v 34 Give me understanding¦264896, and I'll keep¦264897 your¦264898 teaching.
+\q1 I'll observe¦264899 it¦264899 with all my heart¦264902.
 \q1
-\v 35 ◙
-\q2 …
+\v 35 Guide me in the way of your¦264906 commands¦264906,
+\q1 because I delight¦264910 in \add @your way\add*.
 \q1
-\v 36 ◙
-\q2 …
+\v 36 \add ≈Help me to want to obey what you've revealed\add*
+\q1 and¦264918 not \add ≈just wanting unscrupulous\add* gain.
 \q1
-\v 37 ◙
-\q2 …
+\v 37 \add ≈Help me not to waste time\add* looking¦264925 at worthless¦264926 things.
+\q1 \add ≈Encourage me to follow\add* your¦264927 ways¦264927.
 \q1
-\v 38 ◙
-\q2 …
+\v 38 Fulfill¦264930 your promises¦264932 to your servant¦264931
+\q1 so that he will \add ≈respect and obey\add* you¦264934.
 \q1
-\v 39 ◙
-\q2 …
+\v 39 \add ≈Help me to be able to avoid\add* the disgrace¦264937 that I dread,
+\q1 because your¦264941 judgements are good¦264942.
 \q1
-\v 40 ◙
-\q2 …
-\s1 The trusting of Law of God
+\v 40 \add ≈Listen\add*, I long¦264945 for your principles.
+\q1 \add ≈Encourage me to follow\add* your \add ≈ways that are right¦264947\add*.
+\s1 Trusting Yahweh's instructions
 \rem /s1 Trusting the Law of the Lord
 \qa \bd ו\bd* (Vav)
 \q1
-\v 41 ◙
-\q2 …
+\v 41 May \add ≈I experience\add* your loyal commitment, Yahweh¦264952—
+\q1 your salvation¦264953, according¦264954 to your promise¦264954,
 \q1
-\v 42 ◙
-\q2 …
+\v 42 then I'll answer¦264956 the one who mocks me with \add #their words\add*,
+\q1 because I trust¦264961 in \add ≈what you've told us\add*.
 \q1
-\v 43 ◙
-\q2 …
+\v 43 Don't¦264976 totally \add ≈prevent me from talking about your\add* message¦264968 of truth,
+\q1 because \add ≈my hope is based on\add* your judgements.
 \q1
-\v 44 ◙
+\v 44 I'll always \add ≈obey what you taught\add*,
+\q1 forever and¦264982 ever.
 \q1
-\v 45 ◙
-\q2 …
+\v 45 I'll walk¦264984 \add ?≈freely\add*,
+\q1 because I \add ≈strive to know\add* your¦264987 principles.
 \q1
-\v 46 ◙
-\q2 …
+\v 46 I will \add ≈tell kings¦264993 what you've revealed\add*,
+\q1 and¦264994 I won't¦264994 be ashamed¦264995.
 \q1
-\v 47 ◙
-\q2 …
+\v 47 I \add ≈take pleasure\add* in \add obeying\add* your¦264998 commands¦264998,
+\q1 which¦264999 I love¦265000.
 \q1
-\v 48 ◙
-\q2 …
-\s1 trusted the Law of God
+\v 48 I will \add ?≈respect\add* your commands¦265007, which¦265008 I love¦265009.
+\q1 I will meditate¦265010 on your regulations¦265011.
+\s1 Comforted by Yahweh's principles
 \rem /s1 Confidence in the Law of the Lord
 \qa \bd ז\bd* (Zayin)
 \q1
-\v 49 ◙
-\q2 …
+\v 49 Remember¦265013 your \add ≈promise\add* to your servant¦265016
+\q1 because you have given me hope.
 \q1
-\v 50 ◙
-\q2 …
+\v 50 That's my comfort¦265022 in my suffering.
+\q1 \add Yes,\add* your¦265025 promise¦265025 \add ≈keeps me alive\add*.
 \q1
-\v 51 ◙
-\q2 …
+\v 51 Arrogant¦265028 \add >people\add* mock me terribly,
+\q1 \add but\add* I¦265035 haven't turned¦265035 away from your¦265033 instructions.
 \q1
-\v 52 ◙
-\q2 …
+\v 52 I remember¦265037 your¦265038 judgements from ancient times, Yahweh¦265041,
+\q1 and¦265042 I take¦265042 comfort¦265042 \add in that\add*.
 \q1
-\v 53 ◙
-\q2 …
+\v 53 I'm seized¦265045 by a hot anger
+\q1 because¦265046 of the wicked¦265046 who reject your¦265048 teaching.
 \q1
-\v 54 ◙
-\q2 …
+\v 54 Your regulations¦265054 are songs for me
+\q1 in the house¦265055 where I'm staying.
 \q1
-\v 55 ◙
-\q2 …
+\v 55 I remember¦265058 your name¦265060 during the night¦265059, Yahweh¦265061,
+\q1 and I follow your instruction.
 \q1
-\v 56 ◙
+\v 56 This is for me
+\q1 because I accept your¦265070 principles.
 \s1 The loving of Law of God
 \rem /s1 Devotion to the Law of the Lord
 \qa \bd ח\bd* (Het)
 \q1
-\v 57 ◙
-\q2 …
+\v 57 Yahweh¦265074 is \add ≈who I've chosen\add*.
+\q1 I promise to obey \add ≈what you've said¦265075\add*.
 \q1
-\v 58 ◙
-\q2 …
+\v 58 With my whole being, I ask for your favour.
+\q1 Be merciful to me \add ≈like you've promised you would be\add*.
 \q1
-\v 59 ◙
-\q2 …
+\v 59 I \add ≈carefully evaluate which paths I'll follow\add*
+\q1 and \add ≈keep myself following what you've revealed\add*.
 \q1
-\v 60 ◙
-\q2 …
+\v 60 I hurry and don't \add ≈put off\add*
+\q1 obeying your commands.
 \q1
-\v 61 ◙
-\q2 …
+\v 61 The ropes of the wicked \add >people\add* entangle me.
+\q1 I don't forget your instructions.
 \q1
 \v 62 ◙
 \q2 …
@@ -8816,7 +8818,7 @@
 \b
 \q1
 \v 19 He declared¦269097 his message¦269098 to Yakob \add (Jacob)\add*—
-\q1 ≈his instructions and¦269102 his regulations for Yisrael.
+\q1 ≈his instructions and¦269102 his regulations¦269101 for Yisrael.
 \q1
 \v 20 He hasn't done that for any other country¦269111,
 \q1 ≈and¦269112 as for his instructions, they don't¦269113 know¦269115 them.
