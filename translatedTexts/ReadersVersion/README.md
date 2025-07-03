@@ -15,7 +15,7 @@ where the grammar and expressions of the translation are much more like Hebrew o
 For instance in modern English, it's far more natural for any non-churched person to say
 ‘God's kingdom’ than ‘kingdom of God’.
 
-Currently (mid-2025), over 66% of the 66 books have been rough-drafted.
+Currently (mid-2025), over 67% of the 66 books have been rough-drafted.
 
 ## TODO list
 
@@ -43,14 +43,22 @@ See our [formats page](https://OpenEnglishTranslation.Bible/Resources/Formats) f
 
 ## Schedule
 
-As of June 2025, about 2/3 of the Bible has been drafted. ([This page](https://OpenEnglishTranslation.Bible) is updated a few times per month with the progress.) Our goal is to complete the first draft and first check of the _OET_ by mid-2026.
+As of July 2025, about 2/3 of the Bible has been drafted. ([This page](https://OpenEnglishTranslation.Bible) is updated a few times per month with the progress.) Our goal is to complete the first draft and first check of the _OET_ by mid-2026.
+
+## Disclaimer
+
+Note: This content is created by hand without any so-called ‘AI’ help.
 
 ## Licences
+
+Copyright (c) 2010-2025 Robert Hunt
 
 Our _OET_ Bible text is licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en) (Creative Commons Attribution-ShareAlike 4.0 International).
 
 ## The inevitable event
 
-It is my request to my family and executors of my will to place all of this work into the public domain, finished or unfinished, on the event of my death. It has always been my desire that the _Open English Translation_ be a gift to the world, including the _Literal Version_, the _Readers’ Version_, and any other versions made under my control or under the auspices of Freely-Given.org.
+It is my request to my family and executors of my will to place all of this work into the public domain, finished or unfinished, on the event of my death.
+It has always been my desire that the _Open English Translation_ be a gift to the world, including the _Literal Version_, the _Readers’ Version_,
+and any other versions made under my control or under the auspices of [Freely-Given.org](https://Freely-Given.org).
 
 Please note that any contributions by others to this project will only be accepted on these same grounds.
