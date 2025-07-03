@@ -62,7 +62,8 @@ CHANGELOG:
     2025-03-10 Don't allow _~_ (allows word insert) to have a word number attached to it
     2025-03-11 Changed back to contextual word glosses because the word glosses were too long and wordy, e.g., 'on/upon/above/on_account_of'
     2025-03-14 Properly handle added words like '[the]' and '[is]' (coming from Macula Hebrew glosses, etc.)
-    #2025-06-24 Remove superfluous final spaces from OSHB footnotes (why were they there???) Fixed upstream
+    ####2025-06-24 Remove superfluous final spaces from OSHB footnotes (why were they there???) Fixed upstream
+    2025-06-29 Fixed a couple of systematic glossing errors ('todrink' and 'forhelp')
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple
@@ -76,10 +77,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2025-06-26' # by RJH
+LAST_MODIFIED_DATE = '2025-06-29' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed_OSHB_OT_to_ESFM"
 PROGRAM_NAME = "Extract glossed OSHB OT ESFM files"
-PROGRAM_VERSION = '0.61'
+PROGRAM_VERSION = '0.62'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -684,6 +685,8 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
     # Do some early changes/fixes
     gloss = ( gloss
                 .replace( '_[masc]', '(m)' ).replace( '_[fem]', '(f)' )
+                .replace( 'todrink', 'to_drink') # Not sure why this systematic error is in there ???
+                .replace( 'forhelp', 'for_help') # Not sure why this systematic error is in there ???
              )
 
     if '[' in gloss:
