@@ -65,3 +65,4 @@ and any other versions made under my control or under the auspices of [Freely-Gi
 
 Please note that any contributions by others to this project will only be accepted if they're donated to Robert Hunt @ [Freely-Given.org](https://Freely-Given.org) on these same grounds.
 (We don’t want future complications from having multiple ‘owners’ trying to exert control over this project—you can always fork and rename it if you want to make your own changes.)
+Of course, we're very happy to list contributors if you desire that. (Not everyone does.)
