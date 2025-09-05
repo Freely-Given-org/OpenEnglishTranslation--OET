@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2025-06-29 21:49 by extract_glossed_OSHB_OT_to_ESFM v0.62
+\rem ESFM file created 2025-09-05 18:50 by extract_glossed_OSHB_OT_to_ESFM v0.62
 \rem USFM file edited by ScriptedBibleEditor v0.33
 \h ˊEzrāʼ
 \toc1 ˊEzrāʼ
@@ -47,14 +47,14 @@
 \v 18 the_descendants_of Yōrāh/(Jorah) one_hundred and÷two ten.
 \v 19 the_descendants_of Ḩāshum two_hundred twenty and÷three.
 \v 20 the_descendants_of Giⱱar ninety and÷five.
-\v 21 the_descendants_of Bēyt- lehem one_hundred twenty and÷three.
+\v 21 the_descendants_of Bēyt- leḩem one_hundred twenty and÷three.
 \v 22 the_men_of Nəţofāh fifty and÷six.
 \v 23 The_men_of ˊAntotī one_hundred twenty and÷eight.
 \v 24 the_descendants_of ˊAzmāvet forty and÷two.
 \v 25 the_descendants_of Qiryat Kəfīrāh and÷Bəʼērōt seven hundred(s) and÷twenty and÷one.
 \v 26 the_descendants_of the÷Rāmāh and÷Geⱱaˊ six hundred(s) twenty and÷one.
 \v 27 the_men_of Mikmāş one_hundred twenty and÷two.
-\v 28 the_men_of Bēyt- el and÷the÷ˊAy two_hundred twenty and÷three.
+\v 28 the_men_of Bēyt- \sup ʼēl\sup* and÷the÷ˊAy two_hundred twenty and÷three.
 \v 29 the_descendants_of Nəⱱō fifty and÷two.
 \v 30 the_descendants_of Magbiysh one_hundred fifty and÷six.
 \v 31 the_descendants_of ˊĒylām \add the\add*_other one_thousand two_hundred fifty and÷four.
@@ -75,14 +75,14 @@
 \v 46 The_descendants_of Ḩāgāⱱ the_descendants_of Salmay\f + \fr 2:46 \ft OSHB variant note: שמלי: (x-qere) 'שַׁלְמַ֖י': lemma=8014 n=0.0 morph=HNp id=15Sjh שַׁלְמַ֖י\f* the_descendants_of Ḩānān.
 \v 47 The_descendants_of Giddēl the_descendants_of Gaḩar the_descendants_of Rəʼā\sup yāh\sup*.
 \v 48 The_descendants_of Rəʦīn the_descendants_of Nəqōdāʼ the_descendants_of Gazzām.
-\v 49 The_descendants_of ˊUzzāʼ the_descendants_of Fāşēaḩ the_descendants_of Bēşay.
+\v 49 The_descendants_of ˊUzzāʼ the_descendants_of Pāşēaḩ the_descendants_of Bēşay.
 \v 50 The_descendants_of ʼAşnāhh the_descendants_of Məˊūnāy\f + \fr 2:50 \ft OSHB variant note: מעינים: (x-qere) 'מְעוּנִ֖ים': lemma=4586 n=0.0 morph=HNgmpa id=15Abd מְעוּנִ֖ים\f* the_descendants_of Nephussim\f + \fr 2:50 \ft OSHB variant note: נפיסים: (x-qere) 'נְפוּסִֽים': lemma=5304 n=0 morph=HNgmpa id=15gMU נְפוּסִֽים\f*.
 \v 51 The_descendants_of Baqbūq the_descendants_of Ḩₐqūfāʼ the_descendants_of Ḩarḩūr.
 \v 52 The_descendants_of Baʦlūt the_descendants_of Məḩīdāʼ the_descendants_of Ḩarshāʼ.
 \v 53 The_descendants_of Barqōş the_descendants_of Şīşərāʼ the_descendants_of Temaḩ.
 \v 54 The_descendants_of Nəʦīaḩ the_descendants_of Ḩₐţīfāʼ.
-\v 55 The_descendants_of the_servants_of Shəlomoh the_descendants_of Şōţay the_descendants_of the÷Şoferet the_descendants_of Fərūdāʼ.
-\v 56 The_descendants_of Yaˊₐlāʼ/(Jaala) the_descendants_of Darqōn the_descendants_of Giddēl.
+\v 55 The_descendants_of the_servants_of Shəlomoh/(Solomon) the_descendants_of Şōţay the_descendants_of the÷Şoferet the_descendants_of Fərūdāʼ.
+\v 56 The_descendants_of Jaala the_descendants_of Darqōn the_descendants_of Giddēl.
 \v 57 The_descendants_of Shəfaţ\sup yāh\sup* the_descendants_of Ḩaţţil the_descendants_of Fokeret- Tsəⱱāyīm the_descendants_of ʼĀmī.
 \v 58 All_of the÷temple_servants and=the_sons of_the_servants_of of_Shəlomoh three hundred(s) ninety and÷two.
 \v 59 and=these the÷came_up from÷Tēl- melaḩ Tēl Ḩarshāʼ Kərūⱱ Addon ʼImmēr and=not they_were_able to=announce the_house_of fathers'_of÷their and÷descent_of÷their if from÷Yisrā\sup ʼēl\sup*/(Israel) they.
@@ -222,15 +222,15 @@
 \v 7 and÷of÷descendants_of ˊĒylām Yəshaˊ\sup yāh\sup*/(Jeshaiah) the_son_of ˊAtal\sup yāh\sup* and÷with÷him \add were\add*_seventy the÷males.
 \v 8 and÷of÷descendants_of Shəfaţ\sup yāh\sup* Zəⱱad\sup yāh\sup* the_son_of Mīkā\sup ʼēl\sup* and÷with÷him \add were\add*_eighty the÷males.
 \v 9 from=(the)_sons of_Yōʼāⱱ/(Joab) ˊOⱱad\sup yāh\sup* the_son_of Yəḩī\sup ʼēl\sup*/(Yəˊī\sup ʼēl\sup*/(Jehiel)) and÷with÷him \add were\add*_two_hundred and÷eight teen the÷males.
-\v 10 and÷of÷descendants_of Shəlmīt the_son_of Yōşif\sup yāh\sup*/(Josiphiah) and÷with÷him \add were\add*_one_hundred and=sixty the÷males.
+\v 10 and÷of÷descendants_of Shəlomīt the_son_of Yōşif\sup yāh\sup*/(Josiphiah) and÷with÷him \add were\add*_one_hundred and=sixty the÷males.
 \v 11 and÷of÷descendants_of Bēⱱay Zəkar\sup yāh\sup* the_son_of Bēⱱay and÷with÷him \add were\add*_twenty and÷eight the÷males.
 \v 12 and÷of÷descendants_of ˊAzgād Yōḩānān/(Johanan) the_son_of the÷Haqqatan and÷with÷him \add were\add*_one_hundred and÷ten the÷males.
 \v 13 and÷of÷descendants_of ʼAdonīqām \add the\add*_last_\add ones\add* and=these names_of÷their ʼElīfeleţ Yəˊī\sup ʼēl\sup*/(Jeiel) and÷Shəmaˊ\sup yāh\sup* and÷with÷them \add were\add*_sixty the÷males.
 \v 14 and÷of÷descendants_of Bigvay ˊŪtay and\f + \fr 8:14 \ft OSHB variant note: ו/זבוד: (x-qere) 'וְ/זַכּ֑וּר': lemma=c/2139 n=1 morph=HC/Np id=15mUy וְ/זַכּ֑וּר\f* and÷with÷them \add were\add*_seventy the÷males.
-\v 15 and÷gathered÷them to the=river the÷runs to ʼAhₐvāʼ and÷camped there days three and÷reviewed in/on/at/with÷people and÷in/on/at/with÷priests and÷of÷sons_of Lēvīh not I_found there.
+\v 15 and÷gathered÷them to the=river the÷runs to ʼAhₐvāʼ and÷camped there days three and÷reviewed in/on/at/with÷people and÷in/on/at/with÷priests and÷of÷sons_of Lēvī not I_found there.
 \v 16 And÷sent for÷ʼElīˊezer for÷ʼArī\sup ʼēl\sup* for÷Shəmaˊ\sup yāh\sup* and÷for÷ʼElnātān and÷for÷Yārīⱱ/(Jarib) and÷for÷ʼElnātān and÷for÷Nātān and÷for÷Zəkar\sup yāh\sup* and÷for÷Məshullām leaders and÷for÷Yōyārīⱱ/(Joiarib) and÷for÷ʼElnātān teachers.
 \v 17 And÷sent\f + \fr 8:17 \ft OSHB variant note: ו/אוצא/ה: (x-qere) 'וָ/אֲצַוֶּ֤ה': lemma=c/6680 morph=HC/Vpw1cs id=15D5E וָ/אֲצַוֶּ֤ה\f* DOM÷them to ˊIddō the÷leader in/on/at/with÷Kāşifyāʼ/(Casiphia) the÷place and÷placed in/on/at/with÷mouths_of÷them words to÷say to ˊIddō his/its=woman the÷temple_servants\f + \fr 8:17 \ft OSHB variant note: ה/נתונים: (x-qere) 'הַ/נְּתִינִים֙': lemma=d/5411 n=0.1.0 morph=HTd/Ncmpa id=15x1h הַ/נְּתִינִים֙\f* in/on/at/with÷Kāşifyāʼ the÷place to=bring to/for=us servants for÷house_of god_of÷our.
-\v 18 And÷brought to/for=us since÷hand_of god_of÷our the÷gracious on÷us a_man_of insight from=(the)_sons of_Maḩlī the_son_of Lēvīh the_son_of Yisrā\sup ʼēl\sup*/(Israel) and÷Shērēⱱə\sup yāh\sup* and÷sons_of÷his and÷brothers_of÷him eight- teen.
+\v 18 And÷brought to/for=us since÷hand_of god_of÷our the÷gracious on÷us a_man_of insight from=(the)_sons of_Maḩlī the_son_of Lēvī the_son_of Yisrā\sup ʼēl\sup*/(Israel) and÷Shērēⱱə\sup yāh\sup* and÷sons_of÷his and÷brothers_of÷him eight- teen.
 \v 19 And=DOM Ḩₐshaⱱ\sup yāh\sup* and÷with÷him Yəshaˊ\sup yāh\sup*/(Jeshaiah) from=(the)_sons of_Mərārī brothers_of÷his and÷sons_of÷their twenty.
 \v 20 and=from the÷temple_servants whom÷set_apart Dāvid and÷the÷officials to÷attend_of the÷Lēviyyiy temple_servants two_hundred and=twenty all_of÷them they_had_been_designated in/on/at/with÷name.
 \v 21 And÷proclaimed there a_fast at the=river ʼAhₐvāʼ that÷humble to=(the)_face_of/in_front_of/before god_of÷our to÷seek from=him/it a_journey straight to/for=us and÷for÷children_of÷our and=to/for=all possessions_of÷our.
@@ -251,7 +251,7 @@
 \v 36 and÷delivered DOM the_decrees_of the=king to÷satraps_of the=king and÷governors of_the_other_side_of the=river and÷supported DOM the÷people and=DOM the_house_of the=ʼElohīm.
 \c 9
 \nb
-\v 1 and÷after÷done these_\add things\add* they_drew_near to=me the÷officials to=say not they_have_separated_themselves the÷people Yisrā\sup ʼēl\sup*/(Israel) and÷the÷priests and÷the÷Lēviyyiy from÷peoples_of the÷lands with÷abominations_of÷their from_the÷Kənaˊₐnī the÷Ḩittiy the÷Pərizzī the=Yebusi the÷ˊAmmōnī the÷Mōʼāⱱites the÷Miʦrayim/(Egypt)ians and÷the÷ʼAmorī.
+\v 1 and÷after÷done these_\add things\add* they_drew_near to=me the÷officials to=say not they_have_separated_themselves the÷people Yisrā\sup ʼēl\sup*/(Israel) and÷the÷priests and÷the÷Lēviyyiy from÷peoples_of the÷lands with÷abominations_of÷their from_the÷Kənaˊₐnī the÷Ḩittiy the÷Pərizzī the=Yəⱱūşī the÷ˊAmmōnī the÷Mōʼāⱱites the÷Miʦrayim/(Egypt)ians and÷the÷ʼAmorī.
 \v 2 If/because they_have_taken some_of÷daughters_of÷their to/for=them and÷for÷sons_of÷their and= the_offspring_of =mixed the÷holy in/on/at/with÷peoples_of the÷lands and÷hand_of the÷leaders and÷the÷officials it_has_been in/on/at/with÷unfaithfulness the=this first.
 \v 3 and÷when÷heard÷I DOM the÷report the=this I_tore DOM garment_of÷my and÷robe_of÷my and÷pulled some_of÷hair_of my=head and÷beard_of÷my and÷sat_down appalled.
 \v 4 And÷around÷me every they_gathered \add person\add*_trembling in/on/at/with÷words_of the_god_of Yisrā\sup ʼēl\sup*/(Israel) on the_unfaithfulness_of the÷exiles and÷I \add was\add*_sitting appalled until at÷offering_of the÷evening.
@@ -282,7 +282,7 @@
 \v 12 And= all_of =answered the÷assembly and=they_said a_voice great so as÷said_of÷you\f + \fr 10:12 \ft OSHB variant note: כ/דברי/ך: (x-qere) 'כִּ/דְבָרְ/ךָ֥': lemma=k/1697 morph=HR/Ncmsc/Sp2ms id=15Kbe כִּ/דְבָרְ/ךָ֥\f* to÷we for=doing.
 \v 13 But the÷people \add is\add*_numerous and÷the÷season \add is\add*_rains and÷don't ability to÷stand in/on/at/with÷open and÷the÷task not in÷day one and=not for÷two if/because we_have_increased to÷transgressed in/on/at/with÷matter the÷this.
 \v 14 Let_them_stand please leaders_of÷our to/from=all/each/any/every the÷assembly and=all/each/any/every \add one\add*_who in/on/at/with÷towns_of÷our the÷married women foreign let_him_come at÷times appointed and÷with÷them \add the\add*_elders_of a_city and÷town and÷judges_of÷her until in_order_to÷turned_away the_burning_of the_anger god_of÷our from=him/it until to=the_word/thing/matter the÷this.
-\v 15 only Yōnātān/(Jonathan) the_son_of ˊAsāh\sup ʼēl\sup* and÷Yaḩzə\sup yāh\sup*/(Jahzeiah) the_son_of Tiqvāh they_stood on this and÷Məshullām and÷Shabtay the÷Lēviyyiy supported÷them.
+\v 15 only Yōnātān/(Jonathan) the_son_of ˊAsāh\sup ʼēl\sup* and÷Yaḩzə\sup yāh\sup*/(Jahzeiah) the_son_of Tikvah they_stood on this and÷Məshullām and÷Shabtay the÷Lēviyyiy supported÷them.
 \v 16 And=they_made thus the_children_of the÷exile and= ˊEzrāʼ =selected the=priest/officer men the_heads_of the÷families according_to÷families_of ancestral_of÷their and÷all_of÷them in/on/at/with÷name and=they_lived in/on=day one of_the÷month the÷tenth to÷investigate the÷matter.
 \v 17 And÷finished in/on/at/with÷all \add the\add*_men the÷married women foreign until day one of_the÷month the÷first.
 \v 18 and÷found from=(the)_sons the÷priests who they_had_married women foreign from=(the)_sons\f + \fr 10:18 \ft OSHB note: We read one or more accents in L differently from BHQ.\f*\f + \fr 10:18 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* of_Yēshūˊa/(Jeshua) the_son_of Yōʦādāq/(Jozadak) and÷brothers_of÷his Maˊₐsē\sup yāh\sup* and÷ʼElīˊezer and÷Yārīⱱ/(Jarib) and÷Gədal\sup yāh\sup*.

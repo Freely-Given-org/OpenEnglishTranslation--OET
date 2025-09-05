@@ -1,4 +1,4 @@
-\id PRO - Open English Translation—Readers’ Version (OET-RV) v0.0.02
+\id PRO - Open English Translation—Readers’ Version (OET-RV) v0.0.08
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 PRO
@@ -19,88 +19,159 @@
 \rem This is still a very early look into the unfinished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
-\s1 The purpose of sayings
+\s1 The purpose of proverbs
 \p
 \v 1 \add These are\add* the proverbs \add collected\add* by King Solomon of Israel (\add King\add* David’s son):
 \q1
 \v 2 \add These will help you\add* to know wisdom and instruction,
-\q1 \add and\add* to comprehend sayings of understanding.
+\q1 \add and\add* to comprehend sayings \add that give\add* understanding.
 \q1
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\s1 The warning of young men and me maiden
+\v 3 \add Also\add* to learn insight
+\q1 \add and to understand\add* \add what’s right\add* and \add leads to\add* justice and integrity.
+\q1
+\v 4 \add They\add* give good advice to those who are naive—
+\q1 \add teaching\add* knowledge and discretion to young people.
+\q1
+\v 5 Let wise \add people\add* \add also\add* listen \add to these sayings\add* to keep learning more,
+\q1 and discerning \add people\add* can acquire guidance—
+\q1
+\v 6 understanding proverbs and parables—
+\q1 the words of wise \add people\add* plus their challenges.
+\s1 The warning to young people
 \p
-\v 7 \x + \xo 1:7: \xt Yob 28:28; Psa 111:10; Prv 9:10.\x*◙
+\v 7 \add Deciding to obey\add* Yahweh is the beginning of knowledge.
+\q1 Fools despise wisdom and \add being told what they should do\add*.\x + \xo 1:7: \xt Yob 28:28; Psa 111:10; Prv 9:10.\x*
+\q1
+\v 8 My child, listen to your father’s instructions.
+\q1 Don’t reject what your mother has told you to do,
+\q1
+\v 9 because \add their teaching\add* is like a graceful garland to wear on your head,
+\q1 or like \add beautiful\add* necklaces to wear around your neck.
 \p
-\v 8 ◙
-\v 9 ◙
-\p
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
-\p
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
-\s1 The calling of wisdom
-\p
-\v 20 \x + \xo 1:20-21: \xt Prv 8:1-3.\x*◙
-\v 21 ◙
+\v 10 My child, if evil people tempt you \add to join them\add*, don’t agree to it.
+\v 11 If they say,
+\q1 “Come with us. We’ll \add find someone to kill\add*—
+\q1 we’ll hide and ambush an innocent person \add just for fun\add*.
 \q1
-\v 22 ◙
-\q2 …
-\q1 …
+\v 12 Let’s swallow innocent people just like the grave does,
+\q1 and healthy people just like those going down to the pit.
 \q1
-\v 23 ◙
-\q1 …
-\q2 …
+\v 13 We’ll find lots of valuable loot.
+\q1 We’ll fill our houses with what we take.
 \q1
-\v 24 ◙
+\v 14 You need to come and join us—
+\q1 \add we share everything equally\add*.”
 \q1
-\v 25 ◙
+\v 15 My child, don’t \add follow their ways\add*.
+\q1 Keep your foot away from their path
 \q1
-\v 26 ◙
-\q2
-\v 27 ◙
+\v 16 because their feet run towards evil,
+\q1 and they rush to pour out blood.
 \q1
-\v 28 ◙
+\v 17 Surely it would be \add a waste of time\add*
+\q1 to spread out a net \add while the bird is watching\add*,
 \q1
-\v 29 ◙
+\v 18 \add but\add* they lie in wait for their own blood—
+\q1 they ambush their own lives.
 \q1
-\v 30 ◙
+\v 19 \add That’s what happens to anyone who gains wealth illegally\add*—
+\q1 it takes that person’s life.
+\s1 Accepting or rejecting wisdom
 \q1
-\v 31 ◙
+\v 20 Wisdom calls out loudly on the street—
+\q1 she \add makes her voice known\add* in the plazas.\x + \xo 1:20-21: \xt Prv 8:1-3.\x*
 \q1
-\v 32 ◙
+\v 21 She calls out from above the \add busy streets\add*.
+\q1 She tells her sayings at the \add meeting place\add* at the city gates.
 \q1
-\v 33 ◙
+\v 22 How much longer will naive people love \add their\add* naivety,
+\q1 and mockers enjoy their mockery,
+\q1 and stupid people despise knowledge?
+\q1
+\v 23 \add Change your ways when I correct you\add*.
+\q1 Listen, I’ll pour my spirit out on you all.
+\q1 Let me declare my messages to you all
+\q1
+\v 24 because I’ve called and you’ve all refused \add to listen\add*.
+\q1 I held out my hand \add but\add* no one paid \add any\add* attention
+\q1
+\v 25 and you all ignored all my advice
+\q1 and \add took no notice when I corrected you\add*.
+\q1
+\v 26 \add So\add* I’ll laugh when \add calamity hits you all\add*
+\q1 and I’ll ridicule you when you’re all \add terrified\add*
+\q1
+\v 27 when panic strikes you all like a storm
+\q1 and calamity comes like a whirlwind
+\q1 and when trouble and anguish reach you all.
+\q1
+\v 28 Then they’ll call out to me \add for help\add* \add but\add* I won’t answer.
+\q1 They’ll search for me \add but\add* won’t be able to find me
+\q1
+\v 29 because they hated wisdom
+\q1 and didn’t choose to \add respect and obey\add* Yahweh.
+\q1
+\v 30 They didn’t \add listen\add* to my advice.
+\q1 They \add didn’t want to hear whenever I corrected them\add*,
+\q1
+\v 31 \add so\add* they’ll eat the fruit of their own chosen path
+\q1 and they’ll be filled with their own schemes.
+\q1
+\v 32 Naive people will get killed \add as a result of their own\add* turning away,
+\q1 and the fools’ \add own\add* complacency will destroy them.
+\q1
+\v 33 \add However,\add* those who listen to me will \add have secure lives\add*
+\q1 and be able to relax without worrying about troubles \add coming\add*.
 \c 2
-\s1 The me peace/prosperity from wisdom
+\s1 The peace/prosperity from wisdom
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
+\v 1 My child, if you accept my sayings
+\q1 and \add internalise\add* my commands,
+\q1
+\v 2 \add so\add* you’ll be attentive to wisdom
+\q1 \add and\add* your \add mind will look for\add* understanding,
+\q1
+\v 3 if you’ll call out for insight,
+\q1 raising your voice \add to ask\add* for understanding,
+\q1
+\v 4 if you go after it as if it’s silver
+\q1 and search for it as if it was hidden treasure,
+\q1
+\v 5 then you’ll understand \add how to\add* \add respect and obey\add* Yahweh
+\q1 and you’ll \add learn more\add* about God.
+\q1
+\v 6 \add That’s\add* because Yahweh gives wisdom—
+\q1 knowledge and understanding come from his mouth
+\q1
+\v 7 and he gives true wisdom to godly \add people\add*—
+\q1 a \add protective\add* shield for those walking with integrity.
+\q1
+\v 8 to guard the paths of justice,
+\q1 and he will preserve the way of \add those who are faithful to him\add*.
+\q1
+\v 9 Then you’ll understand righteousness and justice and integrity—every good path \add to walk\add*,
+\q1
+\v 10 because wisdom will enter into your \add mind\add*
+\q1 and knowledge will \add give you pleasure\add*.
+\q1
+\v 11 Discretion will watch over you.
+\q1 Understanding will guard you
+\q1
+\v 12 to rescue you off the path of wicked people—
+\q1 from \add people\add* who speak perversely—
+\q1
+\v 13 the ones who abandon the paths of \add godliness\add*
+\q1 to walk in the ways of darkness,
+\q1
+\v 14 the ones who are glad to do evil.
+\q1 They rejoice in perverse things of evil,
+\q1
+\v 15 whose paths are crooked
+\q1 and going astray in their tracks.
 \p
-\v 9 ◙
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\p
-\v 16 ◙
+\v 16 \add Being discreet and insightful\add* will rescue you from a strange woman—
+\q1 from a foreign woman who makes her sayings smooth,
+\q1
 \v 17 ◙
 \v 18 ◙
 \v 19 ◙

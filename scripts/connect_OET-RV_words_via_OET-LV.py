@@ -75,7 +75,7 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-07-25' # by RJH
+LAST_MODIFIED_DATE = '2025-08-24' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.78'
@@ -85,7 +85,7 @@ DEBUGGING_THIS_MODULE = False
 
 
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module
-FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos
+# FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos
 OET_LV_ESFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/' )
 OET_LV_OT_ESFM_InputFolderPath = OET_LV_ESFM_InputFolderPath.joinpath( 'auto_edited_OT_ESFM/' )
 OET_LV_NT_ESFM_InputFolderPath = OET_LV_ESFM_InputFolderPath.joinpath( 'auto_edited_VLT_ESFM/' )
@@ -117,11 +117,6 @@ assert COMMAND_HEADER_LINE.count( '\t' ) == COMMAND_TABLE_NUM_COLUMNS - 1
 #     replaceText: str    # 12
 #     name: str           # 13
 #     comment: str        # 14
-
-# EN_SPACE = ' '
-# EM_SPACE = ' '
-# NARROW_NON_BREAK_SPACE = ' '
-# BACKSLASH = '\\'
 
 
 class WordNumberError(ValueError):
@@ -533,7 +528,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
     totalSimpleListedAdds = totalProperNounAdds = totalFirstPartMatchedAdds = totalManualMatchedAdds = 0
     totalSimpleListedAddsNS = totalProperNounAddsNS = totalFirstPartMatchedAddsNS = totalManualMatchedAddsNS = 0 # Nomina sacra
     for BBB,lvBookObject in lv.books.items():
-        if BBB not in ('PRO','EZE',): continue
+        if BBB not in ('CH1','PRO','EZE',): continue
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Processing connect words for OET {BBB}…" )
 
         bookSimpleListedAdds = bookProperNounAdds = bookFirstPartMatchedAdds = bookManualMatchedAdds = 0

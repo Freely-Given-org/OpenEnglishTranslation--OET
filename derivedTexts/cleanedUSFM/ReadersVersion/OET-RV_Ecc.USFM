@@ -1,4 +1,4 @@
-\id ECC - Open English Translation—Readers’ Version (OET-RV) v0.0.16
+\id ECC - Open English Translation—Readers’ Version (OET-RV) v0.1.03
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 ECC
@@ -12,12 +12,12 @@
 \mt2 Ecclesiastes
 \mt3 (meaning ‘The group leader’)
 \is1 Introduction
-\ip This document of \bk Ecclesiastes\bk*, was written by a wise teacher. Some of the proverbs here were written by King Shelomoh (Solomon), but there’s also proverbs from other writers. The writer here, carefully thought if what the meaning of life. Saw/Found his the all what happened here of above of land not/none purpose and if malised possibly egsabuten and eglihad just the life here of above of land. Migtambag he it’s necessary respecting we/our the Master, follow we/our and eggale-gale to of all indasag he/his our each day. (The meaning of Iklisyastis is the “teacher.” The title commonly used in English is a Latin transliteration of the Greek translation of the Hebrew word קֹהֶלֶת.) In Hebrew texts, this document is grouped in with ‘The Writings (Ketuvim)’.
+\ip This collection of \bk Reflections\bk* (commonly called \bk Ecclesiastes\bk*), was written by a wise leader. Some of the proverbs here were written by King Shelomoh (Solomon), but there’s also proverbs from other writers. The authors of these thought carefully about the meaning of life. They looked at everything that happens here in the world (‘under the sun’) to discover its purpose and to try to understand the meaning of life. They advise that it’s necessary to respect and obey Yahweh, to strive to find happiness in our daily lives. (The meaning of Ecclesiastes is ‘The group leader’. The title commonly used in English is a Latin transliteration of the Greek translation of the Hebrew word קֹהֶלֶת.) In Hebrew texts, this document is grouped in with ‘The Writings (Ketuvim)’.
 \iot Main components of this document
-\io1 The question about the life \ior 1:1–2:26\ior*
-\io1 The truth concerning life \ior 3:1–11:8\ior*
+\io1 Questions about life \ior 1:1–2:26\ior*
+\io1 Truths about life \ior 3:1–11:8\ior*
 \io1 The final advice \ior 11:9–12:8\ior*
-\io1 Ending \ior 12:9-14\ior*
+\io1 Conclusion \ior 12:9-14\ior*
 \rem This is still a very early look into the unfinished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
@@ -49,7 +49,7 @@
 \q1
 \v 9 Whatever that was \add in the past\add*, it will be \add in the future\add*,
 \q1 and \add everything that’s happened before, will happen\add* \add again\add*.
-\q1 There’s nothing new \add in this world\add*.
+\q1 There’s nothing new \add in this world\add*.\f + \fr 1:9 \ft ‘Under the sun’ isn’t a natural English idiom\f*.
 \q1
 \v 10 If someone says, “Look at this—it’s new,”
 \q1 \add well\add*, it was already done \add long ago before we even got here\add*.
@@ -144,7 +144,7 @@
 \q1
 \v 16 because \add neither the wise person nor the fool will be remembered forever\add*,
 \q1 \add as they’ll both be forgotten in the days to come\add*—
-\q1 and how \add strange it is\add* that the wise die \add just like\add* the fool?
+\q1 and how \add strange it is\add* that the wise die \add just like\add* the fool!
 \q1
 \v 17 Then I hated life because of the misfortune around me—
 \q1 the work that was done \add in this world\add*,
@@ -254,14 +254,14 @@
 \q1 \add Yes,\add* who can \add see what will happen to them after they die\add*?
 \c 4
 \p
-\v 1 Then I turned and I saw all the oppression \add around world\add*,
+\v 1 Then I turned and I saw all the oppression \add around the world\add*,
 \q1 and, look, see the tears of the oppressed
 \q1 \add but\add* there was \add no one to comfort\add* them.
 \q1 \add The oppressors exerted their power against them\add*,
 \q1 \add but there was no one to comfort the oppressed\add*.
 \q1
 \v 2 So I praised those who were dead—who’ve already died,
-\q1 more than the living—those who’re still alive.
+\q1 more than the living—those who are still alive.
 \q1
 \v 3 \add But\add* better than both of them, is the one who hasn’t yet lived—
 \q1 who hasn’t seen the evil things that are being done \add in this world\add*.
@@ -280,7 +280,7 @@
 \v 7 Then I turned and I saw a pointless thing \add in this world\add*:
 \q1
 \v 8 \add Sometimes there’s a person living alone without a child or a relative, who works hard without stopping\add*.
-\q1 \add However, wealth doesn’t satisfy them because they wonder why they’re working so hard and not sitting down to enjoy their good things\add*?
+\q1 \add However, wealth doesn’t satisfy them because they wonder why they’re working so hard and not sitting down to enjoy their good things\add*.
 \q1 That also is pointless, and it’s an unpleasant business.
 \q1
 \v 9 Two \add people\add* are better than one.
@@ -365,560 +365,474 @@
 \v 15 \add He was naked when he was born and he’ll be naked when he goes again\add*,
 \q1 and \add despite all his hard work\add*, he won’t \add be able to\add* take any \add money with him\add*.\x + \xo 5:15: \xt Yob 1:21; Psa 49:17; 1Tim 6:7.\x*
 \q1
-\v 16 ◙
+\v 16 This is also a sickening misfortune:
+\q1 He will leave \add this world\add* just like he entered \add it\add*,
+\q1 and what profit belongs to him who will work hard for the wind?
 \q1
-\v 17 ◙
-\q2 …
+\v 17 What’s more, all his \add life\add* he’ll eat in darkness,
+\q1 and in a lot of distress, as well as sickness and anger.
 \q1
-\v 18 ◙
-\q2 …
-\q2 …
-\q2 …
-\q2 …
+\v 18 Listen, this is what I myself have discovered to be good:
+\q1 It’s good \add for a person\add* to eat and drink
+\q1 and to see benefit in all the hard work that they’ll do \add in this world\add*
+\q1 during the number of the days of their life that God has given \add that person\add*,
+\q1 because that’s their allocation \add in life\add*.
 \q1
-\v 19 ◙
-\q2 …
-\q2 …
-\q2 …
+\v 19 Also, each person who’s been given wealth and possessions by God and has been empowered
+\q1 to eat from it
+\q1 and to accept their allocation \add in life\add*
+\q1 and to enjoy their hard work:
+\q1 that’s a gift from God.
 \q1
-\v 20 ◙
-\q2 …
+\v 20 Those people don’t retain a memory of each day \add that passed\add*
+\q1 because God keeps them full of internal happiness.
 \c 6
 \p
-\v 1 ◙
-\q2 …
+\v 1 There’s a problem \add in this world\add*
+\q1 and it \add troubles people\add*:
 \q2
-\v 2 ◙
-\q2 …
-\q1 …
-\q2 …
-\q1 …
+\v 2 God gives wealth and possessions and prestige to someone,
+\q1 and \add that person\add* \add has access to everything they want\add*,
+\q1 but God doesn’t \add allow them to enjoy\add* it—
+\q1 instead a foreigner will \add get to enjoy\add* it.
+\q1 That’s \add totally\add* pointless, and it’s \add senseless and unfair\add*.
 \q1
-\v 3 ◙
-\q2 …
-\q1 …
-\q2 …
-\q2 …
-\q2 …
-\q2 …
+\v 3 If a man should father a hundred children
+\q1 and live many years however \add long his life might be\add*,
+\q1 but \add he’s not satisfied in himself\add* by his prosperity
+\q1 and \add he doesn’t have anywhere to be buried\add*,
+\q1 \add then I’d say that a stillborn child would have been better off than him\add*,
 \q1
-\v 4 ◙
-\q2 …
-\q2 …
+\v 4 because \add that child\add* came for no reason
+\q1 and it went in darkness, and its name will be covered in darkness.
 \q1
-\v 5 ◙
-\q2 …
-\q2 …
-\q2 …
+\v 5 It didn’t even see the sun or know about it.
+\q1 It’ll rest easier than that man will.
 \q1
-\v 6 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 6 Even if \add that man\add* lived a thousand years twice over,
+\q1 but \add never saw good in anything\add*,
+\q1 aren’t they both going to \add the same\add* place?
 \b
 \q1
-\v 7 ◙
-\q2 …
+\v 7 All of humanity’s work is for their mouth,
+\q1 \add but the inner cravings are never fulfilled\add*.
 \q1
-\v 8 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 8 \add So\add* what advantage does a wise \add person\add* have over a fool?
+\q1 \add What advantage\add* does a poor \add person’s\add* \add knowledge\add* give them over others?
 \q1
-\v 9 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 9 \add It’s better to enjoy what’s right there than to feed the imagination\add*.
+\q1 That’s also pointless and chasing after the wind.
 \q1
-\v 10 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 10 Everything that existed has already been named.
+\q1 It’s known what humankind is
+\q1 and that \add humans\add* can’t dispute with the \add one\add* who’s stronger than them.
 \q1
-\v 11 ◙
-\q2 …
-\q1 …
+\v 11 \add Yes,\add* many words \add just\add* become more pointless.
+\q1 What advantage is that to anyone?
 \q1
-\v 12 ◙
-\q2 …
-\q1 …
-\q1 …
-\q2 …
+\v 12 Who knows what’s good for a person
+\q1 for those pointless days that he/she lives?
+\q1 The days pass by like a shadow
+\q1 \add but\add* who can tell anyone what will happen to them next \add in this world\add*?
 \c 7
 \s1 The life
 \p
-\v 1 \x + \xo 7:1: \xt Prv 22:1.\x*◙
-\q2 …
-\q1 …
-\q2 …
+\v 1 A \add good\add* reputation is better than expensive perfume,\x + \xo 7:1: \xt Prv 22:1.\x*
+\q1 and the day you die \add is more important\add* than the day of your birth.
 \q1
-\v 2 It’s better to go to a house where there’s mourning than to a house where there’s a party, because \add death\add* is the end of each person, and those still alive should consider this in their hearts.
-\q2 …
-\q2 …
-\q1 …
+\v 2 It’s better to go to a house where there’s mourning than to a house where there’s a party,
+\q1 because \add death\add* is the end of each person,
+\q1 and those still alive should consider this in their hearts.
 \q1
-\v 3 ◙
-\q2 …
+\v 3 Laughter is better than grief
+\q1 because a \add serious face means that the mind is working\add*.
 \q1
-\v 4 ◙
-\q2 …
+\v 4 Wise people \add do their thinking at a funeral\add*,
+\q1 \add whereas foolish people prefer to spend time at a party\add*.
 \q1
-\v 5 ◙
-\q2 …
+\v 5 It’s better to accept a rebuke from a wise person
+\q1 than to listen to the songs from foolish people,
 \q1
-\v 6 ◙
-\q2 …
-\q2 …
+\v 6 because the laughter of a fool
+\q1 is like the crackling of \add burning\add* thorn \add twigs\add* under a cooking pot—
+\q1 that’s also pointless.
 \q1
-\v 7 ◙
-\q1 …
-\q2 …
+\v 7 Oppression drives a wise person insane,
+\q1 and a bribe destroys a \add person’s morals\add*.
 \q1
-\v 8 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 8 \add Finishing something is better than starting it\add*,
+\q1 \add and\add* \add being patient is better than being proud\add*.
 \q1
-\v 9 \x + \xo 7:9: \xt Jam 1:19.\x*◙
-\q2 …
+\v 9 Don’t be quick to get angry,\x + \xo 7:9: \xt Jam 1:19.\x*
+\q1 because anger \add belongs in a fool’s toolbox\add*.
 \q1
-\v 10 ◙
-\q2 …
+\v 10 Don’t \add ask\add*, “What was it about the old days that were better than these?”
+\q1 because \add that question doesn’t display\add* wisdom.
 \q1
-\v 11 ◙
-\q2 …
+\v 11 Wisdom is good \add when you get\add* an inheritance,
+\q1 and it’s an advantage to \add those doing well\add*.
 \q1
-\v 12 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 12 Wisdom can protect us just like \add money\add* can,
+\q1 \add but\add* the advantage of knowledge is that wisdom preserves \add the life of\add* its owner.
 \q1
-\v 13 ◙
-\q2 …
+\v 13 Look at God’s work:
+\q1 who can straighten what he’s made crooked?
 \q1
-\v 14 ◙
-\q2 …
-\q1 …
-\q2 …
-\q1 …
-\q2 …
+\v 14 Be happy on a good day,
+\q1 \add but\add* on a day of problems, consider this:
+\q1 God \add caused one, as well as the other\add*—
+\q1 humanity can’t discover \add what’s going to come next\add*.
 \p
-\v 15 ◙
-\q2 …
-\q2 …
+\v 15 I’ve seen everything in my days of pointlessness:
+\q1 There’s \add godly\add* people \add dying despite doing everything right\add*,
+\q1 and there are wicked people \add living long lives doing\add* evil.
 \q1
-\v 16 ◙
-\q2 …
+\v 16 Don’t be highly righteous or overly wise—
+\q1 Why \add go to the trouble of\add* destroying yourself?
 \q1
-\v 17 ◙
-\q2 …
-\q1 …
+\v 17 Don’t be very wicked and don’t be a fool—
+\q1 why should you die when it’s not your time?
 \q1
-\v 18 ◙
-\q1 …
-\q2 …
+\v 18 It’s good to take hold of \add wisdom\add* and don’t rest from \add doing what is right\add*,
+\q1 because the godly person should continue with both of them.
 \q1
-\v 19 ◙
-\q2 …
+\v 19 Wisdom gives strength to the wise—
+\q1 more than the ten most powerful men in the city.
 \q1
-\v 20 ◙
-\q2 …
+\v 20 \add But yes,\add* there’s no person on the earth who’s \add truly good\add*,
+\q1 \add only\add* doing what is right and never disobeying.
 \q1
-\v 21 ◙
-\q2 …
+\v 21 Don’t give your attention to everything that people say,
+\q1 \add otherwise\add* you might hear your servant \add speaking against\add* you,
 \q1
-\v 22 ◙
-\q2 …
+\v 22 because you know how often you’ve belittled others \add yourself\add*.
 \b
 \q1
-\v 23 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 23 I tested all of that with wisdom.
+\q1 I said, “Let me be wise,” but it \add eluded\add* me.
 \q1
-\v 24 ◙
-\q2 …
-\q1 …
+\v 24 \add It seemed\add* far away
+\q1 and deeper down than anyone can find.
 \q1
-\v 25 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 25 I \add changed my mind’s direction\add* to \add try to\add* learn and explore—
+\q1 to search for wisdom and \add to understand how things work\add*,
+\q1 and to \add understand the foolishness of wickedness and how that leads to\add* madness.
 \b
 \q1
-\v 26 ◙
-\q2 …
-\q1 …
-\q2 …
-\q1 …
-\q2 …
+\v 26 I \add learnt that\add* a woman who \add takes advantage\add* of you \add leads to more bitterness than death would be\add*—
+\q1 her heart is like a net and her hands become chains.
+\q1 Any person that’s good in God’s \add eyes\add* would escape from her,
+\q1 \add but an ungodly person\add* would \add end up\add* captured by her.
 \q1
-\v 27 ◙
+\v 27 The leader has discovered that—
+\q1 \add adding\add* one thing to another to \add try to\add* find \add an explanation for everything\add*.
 \q1
-\v 28 ◙
-\q1 …
-\q2 …
+\v 28 I continually \add tried to learn more\add*, but I didn’t find it.
+\q1 I found one \add special\add* man out of a thousand
+\q1 but I couldn’t find one \add such\add* woman out of all of them.
 \q1
-\v 29 ◙
-\q2 …
+\v 29 This is the only \add conclusion\add* I came to:
+\q1 God made humankind to \add do good, but\add* \add instead\add* they’ve come up with many \add other kinds of\add* schemes.
 \c 8
 \p
-\v 1 ◙
-\q1 …
-\q2 …
-\q1 …
-\q2 …
+\v 1 Who’s like the wise person and \add understands what’s going on\add*?
+\q1 A person’s wisdom \add makes their face lighten up\add*
+\q1 and \add gives their face a certain firmness\add*.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 Follow the king’s orders
+\q1 because of your promise to God.
 \q1
-\v 3 ◙
-\q2 …
-\q2 …
+\v 3 Don’t rush away from \add the king’s\add* presence
+\q1 \add or\add* take a stand on an evil matter
+\q1 because whatever he wants to do, he’ll do.
 \q1
-\v 4 ◙
-\q2 …
+\v 4 A king’s word is authoritative—
+\q1 who’ll ask him \add what he thinks\add* he’s doing?
 \q1
-\v 5 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 5 Those who follow commands will \add stay out of trouble\add*,
+\q1 and a wise person will know \add the right time and place\add* for something
 \q1
-\v 6 ◙
-\q2 …
+\v 6 because there’s a time and a \add right way to do everything\add*,
+\q1 \add otherwise\add* humanity’s misery will be severe.
 \q1
-\v 7 ◙
-\q2 …
-\q2 …
+\v 7 No one knows \add what the future will bring\add*
+\q1 \add so\add* no one can tell you \add what will happen\add* \add next\add*.
 \q1
-\v 8 ◙
-\q2 …
-\q1 …
-\q1 …
+\v 8 \add Just as\add* no person has control over the wind to be able to restrain it,
+\q1 nor does anyone have authority over the day of \add their\add* death.
+\q1 \add Just as\add* no one can be discharged in \add the middle of a\add* war,
+\q1 nor can being wicked rescue you \add from your situation\add*.
 \p
-\v 9 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 9 I saw all that and applied my mind to \add everything that happens in this world\add*.
+\q1 \add I saw\add* that sometimes a person can dominate \add someone else to that person’s detriment\add*.
 \q1
-\v 10 ◙
-\q1 …
-\q1 …
-\q2 …
-\q1 …
+\v 10 I’ve seen wicked \add people\add* being buried—
+\q1 being \add carried\add* out from a sacred place,
+\q1 and \add what they’d done\add* there in the city was \add just\add* forgotten.
+\q1 That’s also pointless.
 \q1
-\v 11 ◙
-\q2 …
+\v 11 When an evil activity isn’t quickly condemned,
+\q1 then humanity will become totally determined to do evil.
 \q1
-\v 12 ◙
-\q2 …
-\q2 …
-\q2 …
+\v 12 \add Even if\add* \add an ungodly person\add* does some evil thing a hundred times \add over\add* and \add goes on to\add* live a long time,
+\q1 I know that things will go better \add for those who respect and obey\add* God.
 \q1
-\v 13 ◙
-\q2 …
-\q2 …
+\v 13 It won’t go well for the wicked and \add what they do\add* \add won’t help them live longer\add*
+\q1 because they’ve shown no respect for God’s presence.
 \q1
-\v 14 ◙
-\q2 …
-\q2 …
-\q1 …
+\v 14 There’s something else strange that happens in this world:
+\q1 when bad things happen to godly people
+\q1 and when good things happen to evil people.
+\q1 That’s also hard to understand.
 \q1
-\v 15 ◙
-\q2 …
-\q2 …
-\q2 …
-\q1 …
-\q2 …
-\q2 …
+\v 15 Then I recommended enjoyment
+\q1 because there’s nothing better for a person \add in this world\add* than to eat and drink and be cheery,
+\q1 then \add that attitude\add* will be with them as they work
+\q1 during the days of their life that God gives them \add in this world\add*.
 \p
-\v 16 ◙
-\q2 …
-\q2 …
+\v 16 So when I \add set my mind\add* on gaining wisdom
+\q1 and observing all the business done on this earth,
+\q1 because day and night there’s someone not sleeping,
 \q1
-\v 17 ◙
-\q2 …
-\q1 …
-\q2 …
-\q1 …
-\q2 …
+\v 17 and I saw everything that God does—
+\q1 realising that humanity can’t discover everything that’s done \add in this world\add*—
+\q1 they’ll try to discover it but fail.
+\q1 Even if a wise person claimed to know,
+\q1 they wouldn’t be able to discover it.
 \c 9
 \p
-\v 1 ◙
-\q2 …
-\q2 …
-\q1 …
-\q2 …
+\v 1 \add Indeed I set my mind\add* to examine all this
+\q1 and concluded that godly and wise people and their work is in God’s hands.
+\q1 Being loved or being hated, humankind doesn’t know what’s ahead of them.
 \q1
-\v 2 ◙
-\q2 …
-\q2 …
-\q2 …
-\q2 …
-\q1 …
-\q2 …
+\v 2 We all have the same fate whether godly or wicked,
+\q1 or good or pure or impure,
+\q1 whether you sacrifice or not,
+\q1 or you’re good or disobedient,
+\q1 or you make a promise or you’re \add the subject of\add* a promise.
 \q1
-\v 3 ◙
-\q1 …
-\q2 …
+\v 3 There’s evil in everything that’s done \add in this world\add*:
+\q1 that same \add final event\add* for everyone.
+\q1 Yes, humankind’s minds are full of evil and madness during their lifetimes,
+\q1 and after that \add they join\add* the dead.
 \q1
-\v 4 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 4 \add Anyone\add* who’s joined to the living has hope,
+\q1 because a dog that’s alive is better than a lion that’s dead,
 \q1
-\v 5 ◙
-\q1 …
-\q2 …
+\v 5 because the living know that we’ll die
+\q1 \add but\add* the dead don’t know anything
+\q1 and have no further reward because their memory is forgotten.
 \q1
-\v 6 ◙
-\q2 …
-\q2 …
-\q2 …
+\v 6 Their love and hatred and their envy will have already perished,
+\q1 and they no longer have a part in everything that’s done \add in this world\add*.
 \q1
-\v 7 ◙
-\q2 …
+\v 7 \add So\add* go and enjoy eating your food and drinking your wine
+\q1 because God has already approved \add what you’ve been doing\add*.
 \q1
-\v 8 ◙
-\q2 …
+\v 8 Always let your clothes be \add clean and\add* white,
+\q1 and don’t \add spare the use of lotion\add* on your head.
 \q1
-\v 9 ◙
-\q2 …
-\q2 …
-\q1 …
+\v 9 Live together with the wife that you love
+\q1 for all the length of your pointless life that you’re given \add in this world\add*,
+\q1 because that’s your allocation in your life
+\q1 and in the work that you’re doing \add in this world\add*.
 \q1
-\v 10 ◙
-\q2 …
-\q2 …
-\q2 …
+\v 10 Everything that you find to do, do it \add well\add*,
+\q1 because in \add the grave\add* where you’ll be going,
+\q1 there’s no work or planning or knowledge or wisdom.
 \b
 \q1
-\v 11 ◙
-\q2 …
-\q2 …
-\q1 …
-\q2 …
-\q1 …
+\v 11 I again saw \add in this world\add*
+\q1 that the fastest \add ones\add* don’t \add always\add* win the race,
+\q1 the most powerful \add side\add* doesn’t \add always\add* win the war,
+\q1 wise \add people\add* don’t \add always\add* have enough to eat,
+\q1 intelligent \add people\add* don’t \add always\add* get wealthy,
+\q1 and people with understanding don’t \add always\add* win favour,
+\q1 because chance and timing affects them all.
 \q1
-\v 12 ◙
-\q2 …
-\q1 …
-\q2 …
-\s1 Meupiya the wisdom du of stupidity
+\v 12 \add You see,\add* humanity doesn’t know \add when their time is about to be up\add*:
+\q1 \add just\add* like a fish getting caught in a deadly net,
+\q1 or birds that get caught in a trap,
+\q1 \add so too\add* people can get caught out when trouble suddenly hits them.
+\s1 Wisdom is better than stupidity
+\p
+\v 13 I also saw this \add about\add* wisdom \add in this world\add*
+\q1 and found it powerful:
+\v 14 There was a small \add walled\add* city with \add not so many inhabitants\add* and a powerful king \add decided to\add* attack it \add so he\add* surrounded it and built large siege ramps against \add the walls\add*.
+\v 15 There was a poor man in \add the city\add* who was wise and used his wisdom to save it \add from that king\add*, \add but the people soon forgot about\add* that poor man.
+\v 16 \add So I concluded\add* that wisdom is better than strength and yet the poor person’s wisdom \add wasn’t appreciated and his words were soon forgotten\add*.
 \q1
-\v 13 ◙
-\q2 …
-\q2 …
+\v 17 The words of wise people are quietly heeded—
+\q1 more than those of a ruler shouting at a \add bunch of\add* fools.
 \q1
-\v 14 ◙
-\q2 …
-\q2 …
-\q1
-\v 15 ◙
-\q2 …
-\q1 …
-\q2 …
-\q1
-\v 16 ◙
-\q2 …
-\q2 …
-\q1
-\v 17 ◙
-\q2 …
-\q1
-\v 18 ◙
-\q2 …
-\q2 …
+\v 18 It’s better to be wise than to have many weapons,
+\q1 \add but\add* one disobedient person will destroy a lot of good.
 \c 10
 \p
-\v 1 ◙
-\q2 …
+\v 1 Dead flies make a perfumer’s \add product\add* stink.
+\q1 \add Similarly\add*, a little foolishness can ruin \add all your\add* wisdom or honour.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 A wise person’s \add thoughts\add* lead to \add protection\add*,
+\q1 ^\add but\add* a fool’s \add thoughts\add* lead to \add vulnerability\add*
 \q1
-\v 3 ◙
-\q2 …
-\q2 …
+\v 3 and while they’re walking along the road,
+\q1 \add the fool\add* lacks \add common\add* sense
+\q1 and everyone \add is aware of what a fool they are\add*.
 \q1
-\v 4 ◙
-\q2 …
-\q2 …
-\q2 …
+\v 4 If a ruler \add gets upset with\add* you, don’t quit your position,
+\q1 because calmness will \add smooth over large offenses\add*.
 \q1
-\v 5 ◙
-\q2 …
+\v 5 I saw \add another\add* \add misfortune in this world\add*:
+\q1 where an error happened in front of a ruler.
 \q1
-\v 6 ◙
-\q2 …
+\v 6 Foolishness can happen even in high positions,
+\q1 ^and wealthy people can be in low positions.
 \q1
-\v 7 ◙
-\q2 …
+\v 7 I’ve seen slaves riding horses
+\q1 ^and princes walking on the ground like slaves.
 \q1
-\v 8 \x + \xo 10:8: \xt Psa 7:15; Prv 26:27.\x*◙
-\q2 …
-\q1 …
-\q2 …
+\v 8 A person who digs a pit can fall into it,\x + \xo 10:8: \xt Psa 7:15; Prv 26:27.\x*
+\q1 and \add an attacker who\add* breaks through a wall gets bitten by a snake.
 \q1
-\v 9 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 9 A person who pulls out rocks might be hurt by them.
+\q1 Someone who splits wood might get injured by it.
 \q1
-\v 10 ◙
-\q2 …
-\q1 …
-\q1 …
+\v 10 If your iron axehead gets blunt and \add the owner\add* doesn’t sharpen it,
+\q1 then he has to use lots of strength,
+\q1 \add so use wisdom if you want to succeed\add*.
 \q1
-\v 11 ◙
-\q2 …
+\v 11 If a snake bites before it’s charmed,
+\q1 the snake charmer \add won’t be able to charge\add* \add for the show\add*.
 \q1
-\v 12 ◙
-\q2 …
+\v 12 A wise person’s words earn them favour,
+\q1 but a fool’s lips destroy him—
 \q1
-\v 13 ◙
-\q1 …
+\v 13 \add as soon as he opens his mouth, foolishness comes out\add*,
+\q1 and the end of his chatter is wicked madness.
 \q1
-\v 14 ◙
+\v 14 Then the fool \add continues again with more nonsense\add*.
 \b
-\q1 …
-\q2 …
+\q1 No one knows what will happen \add next\add*.
+\q1 Who can tell \add you\add* what \add will happen in the future\add*?
 \q1
-\v 15 ◙
-\q2 …
+\v 15 A foolish person’s work wears him out,
+\q1 because he doesn’t know how to get to a city.
 \q1
-\v 16 ◙
-\q2 …
+\v 16 \add A country won’t end well\add*
+\q1 if its king is young and its princes feast in the morning.
 \q1
-\v 17 ◙
-\q2 …
-\q2 …
+\v 17 \add A country is blessed if its king comes from a noble family\add*
+\q1 and its princes eat \add and drink\add* for strength and not for drunkenness.
 \q1
-\v 18 ◙
-\q2 …
+\v 18 With \add a lazy owner\add*, the roof beams will sag.
+\q1 Idle hands \add will result in a leaky house\add*.
 \q1
-\v 19 ◙
-\q2 …
+\v 19 \add There’s laughter around the meal table\add*,
+\q1 wine makes people glad,
+\q1 and money is the answer to everything.
 \q1
-\v 20 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 20 Don’t curse the king even in your mind,
+\q1 and don’t curse the rich even in your bedroom,
+\q1 because a \add little birdie\add* will carry \add your words\add*
+\q1 and some \add feathered critter\add* will pass on \add what you said\add*.
 \c 11
 \s1 The to do of wise
 \p
-\v 1 ◙
-\q2 …
-\q2 …
+\v 1 Throw your bread \add out\add* onto the waters
+\q1 because you’ll find it \add again\add* in several days.
 \q1
-\v 2 ◙
-\q2 …
+\v 2 \add Share it around\add* seven or eight \add others\add*
+\q1 because you don’t know when a calamity will hit \add your area\add*.
 \q1
-\v 3 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 3 If the clouds are filled with rain, they’ll pour it out,
+\q1 and if a tree falls to the north or the south,
+\q1 wherever it falls, that’s where it’ll be.
 \q1
-\v 4 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 4 A person who \add worries about\add* the wind,
+\q2 won’t sow \add any seed\add*,
+\q1 and someone who \add keeps\add* looking at the clouds,
+\q2 will never harvest \add their crop\add*.
 \q1
-\v 5 ◙
-\q2 …
-\q2 …
-\q2 …
+\v 5 Just as you don’t know \add how the winds work\add*,
+\q1 \add or how\add* the bones get into a pregnant woman’s womb,
+\q1 nor do you know how God does everything that he does.
 \q1
-\v 6 ◙
-\q2 …
-\q2 …
-\q2 …
-\q2 …
+\v 6 Sow your seed in the morning
+\q2 and don’t stop planting until the evening,
+\q1 because you don’t know which \add areas\add* will grow well,
+\q1 or whether it will all \add succeed\add* equally.
 \b
 \q1
-\v 7 ◙
-\q2 …
+\v 7 Light is sweet
+\q2 and it’s good for \add your\add* eyes to see the sun.
 \q1
-\v 8 ◙
-\q2 …
-\q1 …
-\q2 …
-\q1 …
-\s1 The advice of young man
+\v 8 Even if a person lives for many years,
+\q1 they should take pleasure in all of them,
+\q1 \add but\add* remember the dark days
+\q1 because everything that happens is pointless.
+\s1 Advice to young people
 \p
-\v 9 ◙
-\q2 …
-\q1 …
-\q2 …
-\q2 …
+\v 9 Young people, enjoy \add being young and strong\add*
+\q1 and stay cheerful during \add that youthful stage\add*.
+\q1 Follow your \add ambitions\add* and your \add desires\add*
+\q1 \add but\add* be aware that God will judge you concerning all those things.
 \b
 \q1
-\v 10 ◙
-\q2 …
+\v 10 \add Don’t allow yourself to be controlled by\add* anger
+\q1 and keep your body away from evil,
+\q1 because youth and \add good looks\add* are a vapour \add that passes\add*.
 \c 12
 \p
-\v 1 ◙
-\q2 …
-\q2 …
-\q2 …
-\q1 …
+\v 1 \add Think about\add* your creator \add while you’re still young\add*,
+\q1 before \add troubling times\add* come
+\q1 and the years arrive when you’ll say that you no longer \add find\add* pleasure in them.
 \q1
-\v 2 ◙
-\q2 …
-\q2 …
-\q2 …
+\v 2 \add Yes,\add* before the sun and the light, and the moon and the stars \add seem\add* darker,
+\q1 and the clouds return after the rain.
 \q1
-\v 3 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 3 That day when the guards of the house will get the trembles
+\q1 and the strong men will be bent over,
+\q1 and the \add women\add* grinding \add grain\add* will stop because there’s only a few of them \add left\add*,
+\q1 and the \add women\add* looking out the windows will no longer see clearly.\f + \fr 12:3 \ft This may also be referring to the failing body, e.g., the guards being the arms, the stooping being the legs, the grinders being few would refer to the teeth, and the windows might refer to the eyes.\f*
 \q1
-\v 4 ◙
-\q2 …
-\q2 …
+\v 4 Then the doors in the street will be shut
+\q1 so that the grinding that \add gets louder\add* with the first birdsong will be \add barely heard\add*
+\q1 and all the girls singing will be \add quietened\add*.
 \q1
-\v 5 ◙
-\q2 …
-\q1 …
-\q2 …
-\q2 …
-\q1 …
-\q2 …
+\v 5 The people will also become afraid of heights
+\q1 and the road will have its terrors.
+\q1 The almond trees will blossom
+\q1 and the locusts will drag themselves along.
+\q1 Normal desires will be lost
+\q1 because you’ll be heading for your eternal home
+\q1 and the mourners will be in the streets.
 \q1
-\v 6 ◙
-\q2 …
-\q2 …
-\q1 …
-\q2 …
+\v 6 \add Think about God\add* before the silver cord gets broken
+\q1 and the golden bowl breaks,
+\q1 the pitcher shatters at the well
+\q1 and the wheel is crushed at the cistern,
 \q1
-\v 7 ◙
-\q2 …
+\v 7 the dust returns to the earth as it was
+\q1 and the spirit returns to God who gave it.
 \q1
-\v 8 ◙
-\q1 …
-\s1 Katammanan
+\v 8 “\add Nothing but a puff of air\add*,” says the leader. “Everything is pointless.”
+\s1 Conclusion
+\p
+\v 9 Besides the fact that the leader was wise, he still taught the people knowledge, and he searched and evaluated. He \add arranged and edited\add* many proverbs.
+\v 10 The leader searched for pleasing words, and wrote down many truthful words \add that would lead to\add* godliness.
 \q1
-\v 9 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 11 The words of wise people \add can prod\add* \add others along\add*,
+\q1 and they’re like nails holding things firm.
+\q1 They’re \add all\add* given by one shepherd.
 \q1
-\v 10 ◙
-\q2 …
+\v 12 My son, be careful of anything in addition to these,
+\q1 because there’s no end to producing books
+\q1 and \add too much study wears you out\add*.
 \q1
-\v 11 ◙
-\q2 …
-\q2 …
+\v 13 \add So after listening to everything, here’s the final conclusion\add*:
+\q1 \add Respect God and strive to follow him\add* and obey his commands,
+\q1 because that’s humanity’s whole \add duty\add*.
 \q1
-\v 12 ◙
-\q2 …
-\q2 …
-\q1
-\v 13 ◙
-\q1 …
-\q2 …
-\q2 …
-\q1
-\v 14 ◙
-\q2 …
-\q2 …
+\v 14 \add Yes,\add* God will \add judge everything we do\add*
+\q1 \add including everything that’s been\add* hidden
+\q1 whether good or bad.
