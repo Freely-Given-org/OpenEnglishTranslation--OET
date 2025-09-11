@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2025-09-05 18:50 by extract_glossed_OSHB_OT_to_ESFM v0.62
+\rem ESFM file created 2025-09-11 20:27 by extract_glossed_OSHB_OT_to_ESFM v0.62
 \rem USFM file edited by ScriptedBibleEditor v0.33
 \h Numbers
 \toc1 Numbers
@@ -22,8 +22,8 @@
 \v 6 From÷Shimˊōn Shelumiel the_son_of Zurishaddai.
 \v 7 From÷Yəhūdāh/(Judah) Naḩshōn the_son_of ˊAmminādāⱱ.
 \v 8 From÷Yissāskār/(Issachar) Nətan\sup ʼēl\sup* the_son_of Zuar.
-\v 9 From÷Zəⱱulun ʼElīʼāⱱ the_son_of Helon.
-\v 10 From÷sons_of Yōşēf/(Joseph) from÷ʼEfrayim ʼElīshāˊma the_son_of Ammihud from÷Mənashsheh Gamlī\sup ʼēl\sup* the_son_of Pedahzur.
+\v 9 From÷Zəⱱūlūn ʼElīʼāⱱ the_son_of Helon.
+\v 10 From÷sons_of Yōşēf/(Joseph) from÷ʼEfrayim ʼElīshāˊma the_son_of ˊAmmihūd from÷Mənashsheh Gamlī\sup ʼēl\sup* the_son_of Pedahzur.
 \v 11 From÷Binyāmīn ʼAⱱīdāˊn the_son_of Gidˊōni.
 \v 12 From÷Dān Ahiezer the_son_of Ammishaddai.
 \v 13 From÷ʼĀshēr Pagiel the_son_of Ocran.
@@ -43,8 +43,8 @@
 \v 27 Enrolled_of÷those of÷tribe_of of_Yəhūdāh \add were\add*_four and=seventy thousand and÷six hundred(s).
 \v 28 from÷descendants_of Yissāskār/(Issachar) lineage_of÷their to=their=clans by÷houses_of ancestral_of÷their in/on/at/with÷number_of names from÷son_of twenty year[s] and÷more every_of \add one_who\add*_goes_forth_of warfare.
 \v 29 Enrolled_of÷those of÷tribe_of of_Yissāskār \add were\add*_four and÷fifty thousand and=four hundred(s).
-\v 30 from÷descendants_of Zəⱱulun lineage_of÷their to=their=clans by÷houses_of ancestral_of÷their in/on/at/with÷number_of names from÷son_of twenty year[s] and÷more every_of \add one_who\add*_goes_forth_of warfare.
-\v 31 Enrolled_of÷those of÷tribe_of of_Zəⱱulun \add were\add*_seven and÷fifty thousand and=four hundred(s).
+\v 30 from÷descendants_of Zəⱱūlūn lineage_of÷their to=their=clans by÷houses_of ancestral_of÷their in/on/at/with÷number_of names from÷son_of twenty year[s] and÷more every_of \add one_who\add*_goes_forth_of warfare.
+\v 31 Enrolled_of÷those of÷tribe_of of_Zəⱱūlūn \add were\add*_seven and÷fifty thousand and=four hundred(s).
 \v 32 from÷descendants_of Yōşēf/(Joseph) from÷descendants_of ʼEfrayim lineage_of÷their to=their=clans by÷houses_of ancestral_of÷their in/on/at/with÷number_of names from÷son_of twenty year[s] and÷more every_of \add one_who\add*_goes_forth_of warfare.
 \v 33 Enrolled_of÷those of÷tribe_of of_ʼEfrayim \add were\add*_forty thousand and=five hundred(s).
 \v 34 from÷descendants_of Mənashsheh lineage_of÷their to=their=clans by÷houses_of ancestral_of÷their in/on/at/with÷number_of names from÷son_of twenty year[s] and÷more every_of \add one_who\add*_goes_forth_of warfare.
@@ -76,7 +76,7 @@
 \v 4 And÷division_of÷his and÷numbers_of÷their \add were\add*_four and=seventy thousand and÷six hundred(s).
 \v 5 And÷the÷camp on/upon/above=him/it \add will_be\add*_the_tribe_of Yissāskār/(Issachar) and÷leader of÷people_of of_Yissāskār \add was\add*_Nətan\sup ʼēl\sup* the_son_of Zuar.
 \v 6 And÷division_of÷his and÷numbers_of÷their \add were\add*_four and÷fifty thousand and=four hundred(s).
-\v 7 the_tribe_of Zəⱱulun and÷leader of÷people_of of_Zəⱱulun \add was\add*_ʼElīʼāⱱ the_son_of Helon.
+\v 7 the_tribe_of Zəⱱūlūn and÷leader of÷people_of of_Zəⱱūlūn \add was\add*_ʼElīʼāⱱ the_son_of Helon.
 \v 8 And÷division_of÷his and÷numbers_of÷his \add were\add*_seven and÷fifty thousand and=four hundred(s).
 \v 9 All_of the÷enrollment of÷camp_of of_Yəhūdāh \add were\add*_one_hundred_of thousand and=eighty thousand and÷six_of thousand(s) and=four hundred(s) by÷divisions_of÷their first they_will_set_out.
 \v 10 the_standard_of the_camp_of Rəʼūⱱēn south_side÷on by÷divisions_of÷their and÷leader of÷people_of of_Rəʼūⱱēn \add was\add*_Elizur the_son_of Shedeur.
@@ -87,7 +87,7 @@
 \v 15 And÷division_of÷his and÷numbers_of÷their \add were\add*_five and÷forty thousand and÷six hundred(s) and÷fifty.
 \v 16 All_of the÷enrollment of÷camp_of of_Rəʼūⱱēn \add were\add*_one_hundred_of thousand and÷one and÷fifty thousand and=four hundred(s) and÷fifty by÷divisions_of÷their and÷second they_will_set_out.
 \v 17 and÷set_out the_tent_of meeting the_camp_of the÷Lēviyyiy in_the=middle the÷camps just=as they_will_encamp so they_will_set_out each on his/its=hand by÷standards_of÷their.
-\v 18 the_standard_of the_camp_of ʼEfrayim by÷divisions_of÷their west÷on and÷leader of÷people_of of_ʼEfrayim \add was\add*_ʼElīshāˊma the_son_of Ammihud.
+\v 18 the_standard_of the_camp_of ʼEfrayim by÷divisions_of÷their west÷on and÷leader of÷people_of of_ʼEfrayim \add was\add*_ʼElīshāˊma the_son_of ˊAmmihūd.
 \v 19 And÷division_of÷his and÷numbers_of÷their \add were\add*_forty thousand and=five hundred(s).
 \v 20 And÷next_to÷him the_tribe_of Mənashsheh and÷leader of÷people_of of_Mənashsheh \add was\add*_Gamlī\sup ʼēl\sup* the_son_of Pedahzur.
 \v 21 And÷division_of÷his and÷numbers_of÷their \add were\add*_two and=thirty thousand and÷hundred.
@@ -295,7 +295,7 @@
 \v 21 A_young_bull one a_young_one_of \add the\add*_herd a_ram one a_lamb one the_son_of year_of÷its for÷burnt_offering.
 \v 22 A_male_goat_of goats one for÷sin_offering.
 \v 23 And÷for÷sacrifice_of the÷peace_offerings ox[en] two rams five goats five lambs sons_of a_year five this \add was\add*_the_offering_of Nətan\sup ʼēl\sup* the_son_of Zuar.
-\v 24 in_the=day the=third \add the\add*_leader of÷people_of of_Zəⱱulun ʼElīʼāⱱ the_son_of Helon.
+\v 24 in_the=day the=third \add the\add*_leader of÷people_of of_Zəⱱūlūn ʼElīʼāⱱ the_son_of Helon.
 \v 25 Offering_of÷his \add was\add*_a_dish_of silver one \add was\add*_thirty and÷one_hundred weighing_of÷its a_bowl one silver seventy shekel[s] in/on/at/with÷shekel_of the÷sanctuary both_of=them \add were\add*_full fine_flour mixed in/on/at/with÷oil for÷grain_offering.
 \v 26 A_pan_of one ten gold full incense.
 \v 27 A_young_bull one a_young_one_of \add the\add*_herd a_ram one a_lamb one the_son_of year_of÷its for÷burnt_offering.
@@ -319,12 +319,12 @@
 \v 45 A_young_bull one a_young_one_of \add the\add*_herd a_ram one a_lamb one the_son_of year_of÷its for÷burnt_offering.
 \v 46 A_male_goat_of goats one for÷sin_offering.
 \v 47 And÷for÷sacrifice_of the÷peace_offerings ox[en] two rams five goats five lambs sons_of a_year five this \add was\add*_the_offering_of Eliasaph the_son_of Deuel.
-\v 48 in_the=day the=seventh \add the\add*_leader of÷people_of of_ʼEfrayim ʼElīshāˊma the_son_of Ammihud.
+\v 48 in_the=day the=seventh \add the\add*_leader of÷people_of of_ʼEfrayim ʼElīshāˊma the_son_of ˊAmmihūd.
 \v 49 Offering_of÷his \add was\add*_a_dish_of silver one \add was\add*_thirty and÷one_hundred weighing_of÷its a_bowl one silver seventy shekel[s] in/on/at/with÷shekel_of the÷sanctuary both_of=them \add were\add*_full fine_flour mixed in/on/at/with÷oil for÷grain_offering.
 \v 50 A_pan_of one ten gold full incense.
 \v 51 A_young_bull one a_young_one_of \add the\add*_herd a_ram one a_lamb one the_son_of year_of÷its for÷burnt_offering.
 \v 52 A_male_goat_of goats one for÷sin_offering.
-\v 53 And÷for÷sacrifice_of the÷peace_offerings ox[en] two rams five goats five lambs sons_of a_year five this \add was\add*_the_offering_of ʼElīshāˊma the_son_of Ammihud.
+\v 53 And÷for÷sacrifice_of the÷peace_offerings ox[en] two rams five goats five lambs sons_of a_year five this \add was\add*_the_offering_of ʼElīshāˊma the_son_of ˊAmmihūd.
 \v 54 in_the=day the÷eighth \add the\add*_leader of÷people_of of_Mənashsheh Gamlī\sup ʼēl\sup* the_son_of Pedah- zur.
 \v 55 Offering_of÷his \add was\add*_a_dish_of silver one \add was\add*_thirty and÷one_hundred weighing_of÷its a_bowl one silver seventy shekel[s] in/on/at/with÷shekel_of the÷sanctuary both_of=them \add were\add*_full fine_flour mixed in/on/at/with÷oil for÷grain_offering\f + \fr 7:55 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f*
 \v 56 a_pan_of one ten gold full incense.
@@ -431,13 +431,13 @@
 \v 13 And÷set_out in/on/at/with÷first on the_mouth_of \nd YHWH\nd* in/on/at/with÷hand_of Mosheh.
 \v 14 And= the_standard_of =set_out of_the_camp_of of_the_descendants_of of_Yəhūdāh/(Judah) in/on/at/with÷first according_to÷divisions_of÷their and÷over company_of÷its Naḩshōn the_son_of ˊAmminādāⱱ.
 \v 15 And÷over the_military_group_of the_tribe_of the_descendants_of Yissāskār/(Issachar) Nətan\sup ʼēl\sup* the_son_of Zuar.
-\v 16 And÷over the_military_group_of the_tribe_of the_descendants_of Zəⱱulun ʼElīʼāⱱ the_son_of Helon.
+\v 16 And÷over the_military_group_of the_tribe_of the_descendants_of Zəⱱūlūn ʼElīʼāⱱ the_son_of Helon.
 \v 17 And÷taken_down the÷tabernacle and= the_descendants_of =set_out of_Gērəshōn and=the_sons of_Mərārī \add who\add*_carried_of the÷tabernacle.
 \v 18 and= the_standard_of =set_out of_the_camp_of of_Rəʼūⱱēn according_to÷divisions_of÷their and÷over company_of÷their Elizur the_son_of Shedeur.
 \v 19 And÷over the_military_group_of the_tribe_of the_descendants_of Shimˊōn Shelumiel the_son_of Zuri- shaddai.
 \v 20 And÷over the_military_group_of the_tribe_of the_descendants_of Gād Eliasaph the_son_of Deuel.
 \v 21 And÷set_out the÷Qəhātites \add who\add*_carried_of the÷holy_things and÷set_up DOM the÷tabernacle until arrival÷their.
-\v 22 and= the_standard_of =set_out of_the_camp_of of_the_descendants_of of_ʼEfrayim according_to÷divisions_of÷their and÷over company_of÷its ʼElīshāˊma the_son_of Ammihud.
+\v 22 and= the_standard_of =set_out of_the_camp_of of_the_descendants_of of_ʼEfrayim according_to÷divisions_of÷their and÷over company_of÷its ʼElīshāˊma the_son_of ˊAmmihūd.
 \v 23 And÷over the_military_group_of the_tribe_of the_descendants_of Mənashsheh Gamlī\sup ʼēl\sup* the_son_of Pedah- zur.
 \v 24 And÷over the_military_group_of the_tribe_of the_descendants_of Binyāmīn ʼAⱱīdāˊn the_son_of Gidˊōni.
 \v 25 and= the_standard_of =set_out of_the_camp_of of_the_descendants_of of_Dān a_rearguard to/from=all/each/any/every the÷camps according_to÷divisions_of÷their and÷over company_of÷its Ahiezer the_son_of Ammishaddai.\f + \fr 10:25 \ft OSHB note: We read punctuation in L differently from BHS.\f*
@@ -518,7 +518,7 @@
 \v 7 From÷tribe_of Yissāskār/(Issachar) Yigʼāl/(Igal) the_son_of Yōşēf/(Joseph).
 \v 8 From÷tribe_of ʼEfrayim Hōshēˊa the_son_of Nūn.
 \v 9 From÷tribe_of Binyāmīn Falţī/(Palti) the_son_of Raphu.
-\v 10 From÷tribe_of Zəⱱulun Gaddiel the_son_of Sodi.
+\v 10 From÷tribe_of Zəⱱūlūn Gaddiel the_son_of Sodi.
 \v 11 From÷tribe_of Yōşēf from÷tribe_of Mənashsheh Gaddi the_son_of Susi.
 \v 12 From÷tribe_of Dān ˊAmmiy\sup ʼēl\sup* the_son_of Gemalli.
 \v 13 From÷tribe_of ʼĀshēr Shētur the_son_of Mīkā\sup ʼēl\sup*.
@@ -812,7 +812,7 @@
 \v 20 And÷from÷Bamoth the÷valley which in/on/at/with÷territory_of Mōʼāⱱ the_top_of the÷Fişgāh and÷overlooks over the_face_of the÷wasteland.
 \v 21 and= Yisrā\sup ʼēl\sup*/(Israel) =sent messengers to Şīḩōn the_king_of the=ʼAmorī to=say.
 \v 22 Let_me_pass in/on/at/with÷land_of÷your not we_will_turn_aside in/on/at/with÷field and÷in/on/at/with÷vineyard not we_will_drink water_of a_well in/on/at/with÷highway_of the=king we_will_go until that we_will_pass_through territory_of÷your.
-\v 23 And=not Şīḩōn he_permitted DOM Yisrā\sup ʼēl\sup*/(Israel) to_pass in/on/at/with÷territory_of÷his and= Şīḩōn =gathered DOM all_of people_of÷his and=he/it_went_out to÷against Yisrā\sup ʼēl\sup*/(Israel) the÷wilderness÷in and÷came Yahaʦ/(Jahaz)÷to and÷fought in/on/at/with÷Yisrā\sup ʼēl\sup*/(Israel).
+\v 23 And=not Şīḩōn he_permitted DOM Yisrā\sup ʼēl\sup*/(Israel) to_pass in/on/at/with÷territory_of÷his and= Şīḩōn =gathered DOM all_of people_of÷his and=he/it_went_out to÷against Yisrā\sup ʼēl\sup*/(Israel) the÷wilderness÷in and÷came Yahaʦ/(Yahaʦ/(Jahaz))÷to and÷fought in/on/at/with÷Yisrā\sup ʼēl\sup*/(Israel).
 \v 24 And÷struck÷him Yisrā\sup ʼēl\sup*/(Israel) with÷edge_of \add the\add*_sword and÷took_possession_of DOM land_of÷his from÷ʼArnōn to Yaboq/(Jabbok) to the_descendants_of ˊAmmōn if/because \add was\add*_strong the_border_of the_descendants_of ˊAmmōn.
 \v 25 And= Yisrā\sup ʼēl\sup*/(Israel) =he/it_took DOM all_of the÷cities the=these and= Yisrā\sup ʼēl\sup*/(Israel) =he/it_sat_down//remained//lived in=all the_cities_of the=ʼAmorī in/on/at/with÷Ḩeshbōn and=on/over=all villages_of÷its.
 \v 26 If/because Ḩeshbōn \add was\add*_the_city_of Şīḩōn the_king_of the=ʼAmorī it and=he he_had_waged_war in/on/at/with÷king_of Mōʼāⱱ the÷former and=he/it_took DOM all_of land_of÷his from÷hand_of÷his to ʼArnōn.
@@ -975,30 +975,30 @@
 \v 23 the_descendants_of Yissāskār/(Issachar) to=their=clans Tōlāˊ the_clan_of the÷Tōlāˊites of÷Puvah the_clan_of the÷Punites.
 \v 24 Of÷Yāshūⱱ/(Jashub) the_clan_of the÷Jashubites of÷Shimrōn the_clan_of the÷Shimrōnites.
 \v 25 These \add were\add*_the_clans_of Yissāskār according_to÷numbered_of÷them four and=sixty thousand and=three hundred(s).
-\v 26 the_descendants_of Zəⱱulun to=their=clans of÷Sered the_clan_of the÷Seredites of÷ʼĒylōn the_clan_of the÷ʼĒylōnites of÷Jahleel the_clan_of the÷Jahleelites.
-\v 27 These \add were\add*_the_clans_of the÷Zəⱱulunites according_to÷numbered_of÷those sixty thousand and=five hundred(s).
+\v 26 the_descendants_of Zəⱱūlūn to=their=clans of÷Sered the_clan_of the÷Seredites of÷ʼĒylōn the_clan_of the÷ʼĒylōnites of÷Jahleel the_clan_of the÷Jahleelites.
+\v 27 These \add were\add*_the_clans_of the÷Zəⱱūlūnites according_to÷numbered_of÷those sixty thousand and=five hundred(s).
 \v 28 the_sons_of Yōşēf/(Joseph) to=their=clans Mənashsheh and÷ʼEfrayim.
 \v 29 The_descendants_of Mənashsheh of÷Mākīr the_clan_of the÷Mākīrites and÷Mākīr he_fathered DOM Gilˊād of÷Gilˊād the_clan_of the÷Gilˊādites.
 \v 30 These \add were\add*_the_descendants_of Gilˊād Iezer the_clan_of the÷Iezerites of÷Helek the_clan_of the÷Helekites.
-\v 31 And÷Asriel the_clan_of the÷Asrielites and÷Shəkem the_clan_of the÷Shəkemites.
-\v 32 And÷Shemida the_clan_of the÷Shemidaites and÷Ḩēfer the_clan_of the÷Ḩēferites.
-\v 33 And÷Zelophehad the_son_of Ḩēfer not they_belonged to=him/it sons if/because (if) daughters and=name_of the_daughters_of Zelophehad \add was\add*_Mahlah and÷Noˊāh Hoglah Milcah and÷Tirʦāh.
+\v 31 And÷ʼAsrī\sup ʼēl\sup* the_clan_of the÷ʼAsrī\sup ʼēl\sup*ites and÷Shəkem the_clan_of the÷Shəkemites.
+\v 32 And÷Shəmīdāˊ the_clan_of the÷Shəmīdāˊites and÷Ḩēfer the_clan_of the÷Ḩēferites.
+\v 33 And÷Tsəlāfəḩād/(Zelophehad) the_son_of Ḩēfer not they_belonged to=him/it sons if/because (if) daughters and=name_of the_daughters_of Tsəlāfəḩād \add was\add*_Maḩlāh and÷Noˊāh Hoglah Milcah and÷Tirʦāh.
 \v 34 These \add were\add*_the_clans_of Mənashsheh and÷numbered_of÷those \add were\add*_two and÷fifty thousand and=seven hundred(s).
-\v 35 these \add were\add*_the_descendants_of ʼEfrayim to=their=clans of÷Shuthelah the_clan_of the÷Shuthelahites of÷Becher the_clan_of the÷Becherites of÷Tahan the_clan_of the÷Tahanites.
-\v 36 And=these \add were\add*_the_descendants_of Shuthelah of÷Eran the_clan_of the÷Eranites.
+\v 35 these \add were\add*_the_descendants_of ʼEfrayim to=their=clans of÷Shūtelaḩ the_clan_of the÷Shūtelaḩites of÷Beker the_clan_of the÷Bekerites of÷Taḩan the_clan_of the÷Taḩanites.
+\v 36 And=these \add were\add*_the_descendants_of Shūtelaḩ of÷Eran the_clan_of the÷Eranites.
 \v 37 These \add were\add*_the_clans_of the_descendants_of ʼEfrayim according_to÷numbered_of÷those two and=thirty thousand and=five hundred(s) these \add were\add*_the_descendants_of Yōşēf to=their=clans.
-\v 38 the_descendants_of Binyāmīn to=their=clans of÷Belaˊ the_clan_of the÷Belaites of÷Ashbel the_clan_of the÷Ashbelites of÷Ahiram the_clan_of the÷Ahiramites.
-\v 39 Of÷Shephupham the_clan_of the÷Shuphamites of÷Hupham the_clan_of the÷Huphamites.
+\v 38 the_descendants_of Binyāmīn to=their=clans of÷Belaˊ the_clan_of the÷Belaites of÷ʼAshbēl the_clan_of the÷ʼAshbēlites of÷Ahiram the_clan_of the÷Ahiramites.
+\v 39 Of÷Shəfūfām the_clan_of the÷Shuphamites of÷Hupham the_clan_of the÷Huphamites.
 \v 40 And= the_descendants_of =they_were of_Belaˊ Ard and÷Naˊₐmān the_clan_of the÷Ardites of÷Naˊₐmān the_clan_of the÷Naamites.
 \v 41 These \add were\add*_the_descendants_of Binyāmīn to=their=clans and÷numbered_of÷those \add were\add*_five and÷forty thousand and÷six hundred(s).
 \v 42 these \add were\add*_the_descendants_of Dān to=their=clans of÷Shuham the_clan_of the÷Shuhamites these \add were\add*_the_clans_of Dān to=their=clans.
 \v 43 All_of the_clans_of the÷Shuhamites according_to÷numbered_of÷them \add were\add*_four and=sixty thousand and=four hundred(s).
-\v 44 the_descendants_of ʼĀshēr to=their=clans of÷Imnah the_clan_of the÷Imnites of÷Yishvī/(Ishvi) the_clan_of the÷Yishvītes of÷Beriah the_clan_of the÷Beriites.
-\v 45 Of÷descendants_of Beriah of÷Ḩeⱱer the_clan_of the÷Ḩeⱱerites of÷Malchiel the_clan_of the÷Malchielites.
-\v 46 And=name_of the_daughter_of ʼĀshēr \add was\add*_Serah.
+\v 44 the_descendants_of ʼĀshēr to=their=clans of÷Yimnāh/(Imnah) the_clan_of the÷Yimnāh/(Imnites) of÷Yishvī/(Ishvi) the_clan_of the÷Yishvītes of÷Bərīˊāha the_clan_of the÷Beriites.
+\v 45 Of÷descendants_of Bərīˊāha of÷Ḩeⱱer the_clan_of the÷Ḩeⱱerites of÷Malkī\sup ʼēl\sup* the_clan_of the÷Malkī\sup ʼēl\sup*ites.
+\v 46 And=name_of the_daughter_of ʼĀshēr \add was\add*_Seraḩ.
 \v 47 These \add were\add*_the_clans_of the_descendants_of ʼĀshēr according_to÷numbered_of÷those three and÷fifty thousand and=four hundred(s).
 \v 48 the_descendants_of Naftālī to=their=clans of÷Jahzeel the_clan_of the÷Jahzeelites of÷Gūnī the_clan_of the÷Gūnītes.
-\v 49 Of÷Jezer the_clan_of the÷Jezerites of÷Shillem the_clan_of the÷Shillemites.
+\v 49 Of÷Yēʦer/(Jezer) the_clan_of the÷Yēʦerites of÷Shillem the_clan_of the÷Shillemites.
 \v 50 These \add were\add*_the_clans_of Naftālī to=their=clans and÷numbered_of÷those \add were\add*_five and÷forty thousand and=four hundred(s).
 \v 51 These \add were\add*_the_enrolled_\add men\add*_of the_people_of Yisrā\sup ʼēl\sup*/(Israel) six hundred(s) thousand and÷one_thousand seven hundred(s) and=thirty.
 \v 52 and= \nd YHWH\nd* =he/it_spoke to Mosheh to÷saying.
@@ -1017,13 +1017,13 @@
 \v 65 If/because \nd YHWH\nd* he_had_said to/for=them surely_(die) they_will_die in/on/at/with÷wilderness and=not he_was_left from=them anyone if/because (if) Kālēⱱ/(Caleb) the_son_of Yəfunneh/(Jephunneh) and÷Yəhōshūˊa/(Joshua) the_son_of Nūn.
 \c 27
 \nb
-\v 1 and= the_daughters_of =approached of_Zelophehad the_son_of Ḩēfer the_son_of Gilˊād the_son_of Mākīr the_son_of Mənashsheh of÷clans_of of_Mənashsheh the_son_of Yōşēf/(Joseph) and=these \add were\add*_the_names_of daughters_of÷his Mahlah Noˊāh and÷Hoglah and÷Milcah and÷Tirʦāh.
+\v 1 and= the_daughters_of =approached of_Tsəlāfəḩād/(Zelophehad) the_son_of Ḩēfer the_son_of Gilˊād the_son_of Mākīr the_son_of Mənashsheh of÷clans_of of_Mənashsheh the_son_of Yōşēf/(Joseph) and=these \add were\add*_the_names_of daughters_of÷his Maḩlāh Noˊāh and÷Hoglah and÷Milcah and÷Tirʦāh.
 \v 2 And÷stood to=(the)_face_of/in_front_of/before Mosheh and÷before ʼElˊāzār the=priest/officer and÷before the÷leaders and=all the÷congregation the_entrance_of the_tent_of meeting to=say.
 \v 3 father_of÷our he_died in/on/at/with÷wilderness and=he not he_was in_the=middle the÷company the÷gathered_together on \nd YHWH\nd* in/on/at/with÷company_of Qoraḩ if/because in/on/at/with÷sin_of÷his_own he_died and÷sons not they_belonged to=him/it.
 \v 4 To/for=what the_name_of will_it_be_withdrawn father_of÷our from÷midst_of clan_of÷his if/because there_\add belonged\add*_not to=him/it a_son give to/for=ourselves a_possession in_the=middle the_brothers_of father's_of÷our.
 \v 5 And= Mosheh =brought DOM case_of\f + \fr 27:5 \ft OSHB note: Large letter(s). Shown as large letters without a superscript note number.\f* to=(the)_face_of/in_front_of/before \nd YHWH\nd*.
 \v 6 and= \nd YHWH\nd* =he/it_said to Mosheh to÷saying.
-\v 7 Right the_daughters_of Zelophehad \add are\add*_speaking indeed_(give) you_will_give to/for=them possession_of an_inheritance in_the=middle the_brothers_of father's_of÷their and÷transfer DOM the_inheritance_of father_of÷their to÷them.
+\v 7 Right the_daughters_of Tsəlāfəḩād \add are\add*_speaking indeed_(give) you_will_give to/for=them possession_of an_inheritance in_the=middle the_brothers_of father's_of÷their and÷transfer DOM the_inheritance_of father_of÷their to÷them.
 \v 8 And=near/to the_people_of Yisrā\sup ʼēl\sup*/(Israel) you_will_speak to=say a_man if/because he_will_die and÷son there_\add will_belong\add*_not to=him/it and÷transfer DOM inheritance_of÷his to÷daughter_of÷his.
 \v 9 And=if there_\add will_belong\add*_not to=him/it a_daughter and÷give DOM inheritance_of÷his to÷brothers_of÷his.\f + \fr 27:9 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f*
 \v 10 and=if there_\add will_belong\add*_not to=him/it brothers and÷give DOM inheritance_of÷his to÷brothers_of his/its=father.
@@ -1253,8 +1253,8 @@
 \v 16 And÷set_out from÷wilderness_of Şīnay and÷camped in/on/at/with÷Kibroth- hattaavah.
 \v 17 And÷set_out from÷Kibroth- hattaavah and÷camped in/on/at/with÷Hazeroth.
 \v 18 And÷set_out from÷Hazeroth and÷camped in/on/at/with÷Rithmah.
-\v 19 And÷set_out from÷Rithmah and÷camped in/on/at/with÷Rimmōn- perez.
-\v 20 And÷set_out from÷Rimmōn- perez and÷camped in/on/at/with÷Liⱱnāh.
+\v 19 And÷set_out from÷Rithmah and÷camped in/on/at/with÷ Rimmōn- perez.
+\v 20 And÷set_out from÷ Rimmōn- perez and÷camped in/on/at/with÷Liⱱnāh.
 \v 21 And÷set_out from÷Liⱱnāh and÷camped in/on/at/with÷Rissah.
 \v 22 And÷set_out from÷Rissah and÷camped in/on/at/with÷Kehelathah.
 \v 23 And÷set_out from÷Kehelathah and÷camped in/on/at/with÷mount_of Shapher.
@@ -1280,8 +1280,8 @@
 \v 43 And÷set_out from÷Punon and÷camped in/on/at/with÷Oboth.
 \v 44 And÷set_out from÷Oboth and÷camped in/on/at/with÷Iye- abarim in/on/at/with÷border_of Mōʼāⱱ.
 \v 45 And÷set_out from÷Iyim and÷camped in/on/at/with÷Diyⱱōn gad.
-\v 46 And÷set_out from÷Diyⱱōn gad and÷camped in/on/at/with÷ˊAlmōn- diblathaim.
-\v 47 And÷set_out from÷ˊAlmōn- diblathaim and÷camped in/on/at/with÷mountains_of the÷Abarim to=(the)_face_of/in_front_of/before Nəⱱō.
+\v 46 And÷set_out from÷Diyⱱōn gad and÷camped in/on/at/with÷Almon- diblathaim.
+\v 47 And÷set_out from÷Almon- diblathaim and÷camped in/on/at/with÷mountains_of the÷Abarim to=(the)_face_of/in_front_of/before Nəⱱō.
 \v 48 And÷set_out from÷mountains_of the÷Abarim and÷camped in/on/at/with÷plains_of Mōʼāⱱ at the_Yardēn/(Jordan) of_Yərīḩō/(Jericho).
 \v 49 And÷camped at the÷Yardēn from÷Bēyt- hyəshimōt/(jeshimoth) to Abel- shittim in/on/at/with÷plains_of Mōʼāⱱ.
 \v 50 and= \nd YHWH\nd* =he/it_spoke to Mosheh in/on/at/with÷plains_of Mōʼāⱱ at the_Yardēn of_Yərīḩō to=say.
@@ -1312,15 +1312,15 @@
 \v 17 These \add are\add*_the_names_of the÷men who they_will_give_as_inheritance to/for=you_all DOM the=earth/land ʼElˊāzār the=priest/officer and÷Yəhōshūˊa/(Joshua) the_son_of Nūn.
 \v 18 And÷leader one a_leader one from÷tribe you_all_will_take to÷apportion_forinheritance DOM the=earth/land.
 \v 19 And=these \add are\add*_the_names_of the÷men of÷tribe_of of_Yəhūdāh/(Judah) Kālēⱱ/(Caleb) the_son_of Yəfunneh/(Jephunneh).
-\v 20 And÷of÷tribe_of the_descendants_of Shimˊōn Shemuel the_son_of Ammihud.
+\v 20 And÷of÷tribe_of the_descendants_of Shimˊōn Shəmū\sup ʼēl\sup* the_son_of ˊAmmihūd.
 \v 21 Of÷tribe_of Binyāmīn Elidad the_son_of Chislon.
 \v 22 And÷of÷tribe_of the_descendants_of Dān a_leader Buqqiy the_son_of Jogli.
-\v 23 Of÷sons_of Yōşēf/(Joseph) of÷tribe_of of_the_descendants_of of_Mənashsheh a_leader Hanniel the_son_of Ephod.
+\v 23 Of÷sons_of Yōşēf/(Joseph) of÷tribe_of of_the_descendants_of of_Mənashsheh a_leader Ḩanniy\sup ʼēl\sup* the_son_of Ephod.
 \v 24 And÷of÷tribe_of the_descendants_of ʼEfrayim a_leader Kemuel the_son_of Shiphtan.
-\v 25 And÷of÷tribe_of the_descendants_of Zəⱱulun a_leader Elizaphan the_son_of Parnach.
+\v 25 And÷of÷tribe_of the_descendants_of Zəⱱūlūn a_leader Elizaphan the_son_of Parnach.
 \v 26 And÷of÷tribe_of the_descendants_of Yissāskār/(Issachar) a_leader Falţī\sup ʼēl\sup*/(Paltiel) the_son_of Azzan.
 \v 27 And÷of÷tribe_of the_descendants_of ʼĀshēr a_leader Ahihud the_son_of Shelomi.
-\v 28 And÷of÷tribe_of the_descendants_of Naftālī a_leader Pedahel the_son_of Ammihud.
+\v 28 And÷of÷tribe_of the_descendants_of Naftālī a_leader Pedahel the_son_of ˊAmmihūd.
 \v 29 These \add are\add*_\add those\add*_whom he_commanded \nd YHWH\nd* to÷apportion_the_inheritance DOM the_people_of Yisrā\sup ʼēl\sup*/(Israel) in=land of_Kinaˊan/(Canaan).
 \c 35
 \nb
@@ -1361,15 +1361,15 @@
 \c 36
 \nb
 \v 1 and= the_heads_of =came_near the÷family of÷clan_of of_the_descendants_of of_Gilˊād the_son_of Mākīr the_son_of Mənashsheh of÷clans_of of_the_descendants_of of_Yōşēf/(Joseph) and=they_spoke to=(the)_face_of/in_front_of/before Mosheh and÷before the÷leaders heads_of fathers of÷sons_of of_Yisrā\sup ʼēl\sup*/(Israel).
-\v 2 And=they_said DOM my=master \nd YHWH\nd* he_commanded to÷give DOM the=earth/land in/on/at/with÷inheritance in/on/at/with÷lot to÷sons_of Yisrā\sup ʼēl\sup*/(Israel) and÷master_of÷my he_was_commanded in/on/at/with÷master to÷give DOM the_inheritance_of Zelophehad brother_of÷our to÷daughters_of÷his.
+\v 2 And=they_said DOM my=master \nd YHWH\nd* he_commanded to÷give DOM the=earth/land in/on/at/with÷inheritance in/on/at/with÷lot to÷sons_of Yisrā\sup ʼēl\sup*/(Israel) and÷master_of÷my he_was_commanded in/on/at/with÷master to÷give DOM the_inheritance_of Tsəlāfəḩād/(Zelophehad) brother_of÷our to÷daughters_of÷his.
 \v 3 And=they_will_be to÷one from=(the)_sons of_the_tribes_of of_the_people_of of_Yisrā\sup ʼēl\sup*/(Israel) as÷wives inheritance_of÷their and÷taken from÷inheritance_of ancestors_of÷our and÷added to the_inheritance_of the÷tribe which they_will_belong to/for=them and÷from÷allotted_of inheritance_of÷our it_will_be_withdrawn.
 \v 4 And=if it_will_come the÷jubilee of÷sons_of of_Yisrā\sup ʼēl\sup*/(Israel) and÷added inheritance_of÷their to the_inheritance_of the÷tribe which they_will_belong to/for=them and÷from÷inheritance_of the_tribe_of ancestral_of÷our it_will_be_withdrawn inheritance_of÷their.
 \v 5 And= Mosheh =he/it_commanded DOM the_people_of Yisrā\sup ʼēl\sup*/(Israel) on the_mouth_of \nd YHWH\nd* to=say right the_tribe_of the_descendants_of Yōşēf \add is\add*_speaking.
-\v 6 This the÷word which he_has_commanded \nd YHWH\nd* concerning÷daughters_of Zelophehad to=say to_the÷one_pleasant in/on/at/with÷eyes_of÷they they_will_belong as÷wives only within÷clan_of the_tribe_of father_of÷their they_will_belong as÷wives.
+\v 6 This the÷word which he_has_commanded \nd YHWH\nd* concerning÷daughters_of Tsəlāfəḩād to=say to_the÷one_pleasant in/on/at/with÷eyes_of÷they they_will_belong as÷wives only within÷clan_of the_tribe_of father_of÷their they_will_belong as÷wives.
 \v 7 And=not an_inheritance it_will_go_about of÷sons_of of_Yisrā\sup ʼēl\sup*/(Israel) from÷tribe to tribe if/because everyone in/on/at/with÷inheritance_of the_tribe_of ancestral_of÷his the_people_of they_will_hold of_Yisrā\sup ʼēl\sup*/(Israel).
 \v 8 And=all daughter \add who\add*_possesses an_inheritance in÷tribe_of the_people_of Yisrā\sup ʼēl\sup*/(Israel) to÷one of÷clan_of of_the_tribe_of father_of÷her she_will_belong to/for=(a)_woman so_that they_may_possess the_people_of Yisrā\sup ʼēl\sup*/(Israel) everyone the_inheritance_of fathers_of÷his.
 \v 9 And=not an_inheritance it_will_go_about from÷tribe to÷tribe another if/because everyone in/on/at/with÷inheritance_of÷its_own the_tribes_of they_will_hold of_the_people_of of_Yisrā\sup ʼēl\sup*/(Israel).
-\v 10 Just=as \nd YHWH\nd* he_had_commanded DOM Mosheh so the_daughters_of they_did of_Zelophehad.
-\v 11 And= Mahlah =they_became Tirʦāh and÷Hoglah and÷Milcah and÷Noˊāh the_daughters_of Zelophehad to÷sons_of father's_brothers_of÷their as÷wives.
+\v 10 Just=as \nd YHWH\nd* he_had_commanded DOM Mosheh so the_daughters_of they_did of_Tsəlāfəḩād/(Zelophehad).
+\v 11 And= Maḩlāh =they_became Tirʦāh and÷Hoglah and÷Milcah and÷Noˊāh the_daughters_of Tsəlāfəḩād to÷sons_of father's_brothers_of÷their as÷wives.
 \v 12 From÷clans_of the_descendants_of Mənashsheh the_son_of Yōşēf/(Joseph) they_became as÷wives inheritance_of÷their and=it_became with the_tribe_of the_clan_of father's_of÷their.
 \v 13 These the÷commands and÷the÷ordinances which he_commanded \nd YHWH\nd* in/on/at/with÷hand_of Mosheh to the_people_of Yisrā\sup ʼēl\sup*/(Israel) in/on/at/with÷plains_of Mōʼāⱱ at the_Yardēn/(Jordan) of_Yərīḩō/(Jericho).

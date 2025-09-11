@@ -1,4 +1,4 @@
-\id 1CH - Open English Translation—Readers' Version (OET-RV) v0.0.11
+\id 1CH - Open English Translation—Readers' Version (OET-RV) v0.0.15
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 CH1
@@ -16,7 +16,7 @@
 \io1 The elders and the lists \ior 1:1–9:44\ior*
 \io1 The dying of Saul \ior 10:1-14\ior*
 \io1 The kingdom of David \ior 11:1–29:30\ior*
-\io2 a. The me gubut and the victories \ior 11:1–22:1\ior*
+\io2 a. Wars and victories \ior 11:1–22:1\ior*
 \io2 b. The preparation in order to standing up of temple \ior 22:2–29:30\ior*
 \rem This is still a very early look into the unfinished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
@@ -122,7 +122,7 @@
 \s1 Yakob's descendants
 \rem /s1 The Descendants of Judah; Descendants of Israel; The Sons of Israel and the Descendants of Judah; Israel's Sons
 \p
-\v 1 These were Yisrael's sons¦187603: Reuben¦187605, Shimeon \add (Simeon¦187606)\add*, Levi¦187607, and Yehudah \add (Judah)\add*, Yissaskar \add (Issachar¦187609)\add*, and Zebulun,
+\v 1 These were Yisrael's sons¦187603: Reuben¦187605, Shimeon \add (Simeon¦187606)\add*, Levi¦187607, and Yehudah \add (Judah)\add*, Yissaskar \add (Issachar¦187609)\add*, and Zebulun¦187610,
 \v 2 Dan, Yosef¦187613 \add (Joseph)\add*, Benyamin¦187614, Naftali¦187615, Gad¦187616, and Asher¦187617.
 \s1 Yehudah's descendants
 \rem /s1 Judah; Descendants of Judah
@@ -406,6 +406,7 @@
 \s1 The temple musicians
 \rem /s1 The Temple Musicians; Musicians Appointed by David
 \rem /s2 The Temple Musicians
+\s4 Full kingdom
 \p
 \v 31 These \add are the men that\add* David put in charge of music in Yahweh's residence, after the \add sacred\add* chest was placed there.
 \v 32 They were the ones who had ministered in the sacred tent (\add also called\add* ‘the meeting tent’) with music until Shelomoh \add (Solomon)\add* built the temple in Yerushalem. They performed their duties according to their instructions.
@@ -440,165 +441,163 @@
 \li1 Kohat was Levi's son.
 \li1 Levi was the son of \add Yakov (or Jacob, who was later named\add* Yisrael/\add Israel)\add*.
 \p
-\v 39 Heman's \add ≈second-in-command\add* was his brother Asaf. Asaf was Berekyah's son. Berekyah was Shimea's son.
+\v 39 Heman's brother Asaf's \add group\add* stood to the right. Asaf was Berekyah's son. Berekyah was Shimea's son.
 \v 40 Shimea was Mikael's son. Michael was Baaseyah's son. Baaseyah was Malkiyah's son.
 \v 41 Malkiyah was Etni's son. Etni was Zerah's son. Zerah was Adayah's son.
 \v 42 Adayah was Etan's son. Etan was Zimmah's son. Zimmah was Shimei's son.
 \v 43 Shimei was Yahat's son. Yahat was Gershon's son. Gershon was Levi's son.
 \p
-\v 44 ◙
-\v 45 ◙
-\v 46 ◙
-\v 47 ◙
+\v 44 Heman's brother Merari's \add group\add* stood to the left. Eytan was Kishi's son. Kishi was Abdi's son. Abdi was Malluk's son.
+\v 45 Malluk was Hashavyah's son. Hashavyah was Uzziah's son. Uzziah was Hilkiyah's son.
+\v 46 Hilkiyah was Amtsi's son. Amtsi was Bani's son. Bani was Shemer's son.
+\v 47 Shemer was Mahli's son. Mahli was Mushi's son. Mushi was Merari's son. Merari was Levi's son.
 \p
-\v 48 ◙
+\v 48 Their other Levite cousins were assigned to various ministries serving in God's residence in the sacred tent.
 \rem /s1 The Descendants of Aaron; Aaron's Descendants
-\v 49 ◙
-\v 50 ◙
-\v 51 ◙
-\v 52 ◙
-\v 53 ◙
-\s1 The places lived in by Levites
+\v 49 \add ≈It was\add* Aharon \add (Aaron)\add* and his sons who \add ≈offered\add* the sacrifices on the altar for burnt offerings and on the altar for incense, for all the work of the holiest place and to make atonement for Yisrael, according to everything that God's servant Mosheh \add (Moses)\add* had instructed.
+\v 50 These were Aharon's descendants: Aharon's son was Eleazar. Eleazar's son was Pinehas. Pinehas's son was Avishua.
+\v 51 Avishua's son was Bukki. Bukki's son was Uzzi. Uzzi's son was Zerahyah.
+\v 52 Zerahyah's son was Merayot. Merayot's son was Amaryah. Amaryah's son was Ahituv.
+\v 53 Ahituv's son was Tsadok, and Tsadok's son was Ahimaats.
+\s1 The Levites' settlements
 \rem /s1 Territory for the Levites; Where the Levites Lived; Settlements of the Levites
 \p
-\v 54 ◙
-\v 55 ◙
-\v 56 ◙
-\v 57 ◙
-\v 58 ◙
-\v 59 ◙
-\v 60 ◙
-\v 61 ◙
+\v 54 \add ≈Here is a list of places where Aharon's descendants lived. Kohat's descendants were the first to be allotted property\add*.
+\v 55 They were given \add the city of\add* Hevron in Yehudah \add (Judah)\add* and the surrounding pastureland,
+\v 56 \add ≈except that\add* Kalev \add (Caleb)\add* received the fields \add farther from\add* the city and the villages \add around\add* the city. (Kalev was Yefunneh's son.)
+\v 57 Those descendants of Aharon were given the refuge cities: Hevron, as well as the towns and pastureland \add around\add* Libnah, Yattir, Eshtemoa,
+\v 58 Hilez, Devir,
+\v 59 Ashan, and Beyt-Shemesh.
+\v 60 From the tribe of Benyamin, they received the cities of Geba, Alemet, and Anatot and their pasturelands. Altogether \add those Kohatite\add* clans received thirteen cities,
+\v 61 and the remaining Kohatite clans received ten cities from the clans of the tribe¦190537 of Manashsheh.
 \p
-\v 62 ◙
-\v 63 ◙
-\v 64 ◙
-\v 65 ◙
-\v 66 ◙
-\v 67 ◙
-\v 68 ◙
-\v 69 ◙
-\v 70 ◙
+\v 62 The clans of Gershon's descendants received thirteen cities from the tribes of Yissaskar \add (Issachar)\add*, Asher, Naftali, and the part of the tribe of Manashsheh that lived in the Bashan region \add across the Yordan River\add*.
+\v 63 The clans of Merari's descendants \add ≈received\add* twelve cities from the tribes¦190585 of Reuven, Gad, and Zevulun.
+\v 64 \add ≈The Israeli leaders allotted those\add* towns and the nearby pasturelands to the Levites.
+\v 65 They also allotted them the cities from the tribes¦190616 of Yehudah, Shimeon, and Benyamin that were listed above.
+\v 66 Some of Kohat's descendants received cities from the tribe of Efraim.
+\v 67 They \add also\add* gave them these refuge cities with the surrounding pasturelands: Shekem, Gezer,
+\v 68 Yokmeam, Beyt-Horon,
+\v 69 Ayyalon, and Gat-Rimmon.
+\v 70 Kohats other descendants received the cities of Aner and Bileam and the nearby pastureland from the half-tribe of Manashsheh \add (that lives west of the Yordan River)\add*.
 \p
-\v 71 ◙
+\v 71 Gershom's descendants (part of the tribe of Manasseh \add that lived across the Yordan River\add*) received two cities and pastureland near them: Golan in the Bashan region, and Ashtarot.
 \p
-\v 72 ◙
-\v 73 ◙
-\v 74 ◙
-\v 75 ◙
+\v 72 From the tribe of Yissaskar \add (Issachar) they received cities and\add* pastureland near Kedesh, Daverat,
+\v 73 Ramot, and Anem.
+\v 74 From the tribe of Asher \add they received cities and\add* pastureland near Mashal, Abdon,
+\v 75 Hukok, and Rehob.
 \p
-\v 76 ◙
+\v 76 From the tribe of Naftali \add they received cities and\add* pastureland near Kedesh (in the Galilee region), Hammon, and Kiryatayim.
 \p
-\v 77 ◙
+\v 77 Merari's descendants \add received cities and\add* pasturelands from the tribe of Zevulun near Rimmono and Tabor.
 \p
-\v 78 ◙
-\v 79 ◙
+\v 78 From the tribe of Reuven across the Yordan River (opposite Yereho \add (Jericho)\add*), \add they were allotted cities and towns and\add* pastureland near Betser in the wilderness, Yahtsah,
+\v 79 Kedemot, and Mefaat.
 \p
-\v 80 ◙
-\v 81 ◙
+\v 80 From the tribe of Gad, \add they received cities and\add* pastureland near Ramot in the Gilead region, Mahanayim,
+\v 81 Heshbon, and Yazer.
 \c 7
-\s1 The descendants of Isakar
+\s1 The descendants of Yissaskar (Issachar)
 \rem /s1 The Descendants of Issachar; Issachar; Descendants of Issachar
 \p
-\v 1 ◙
-\v 2 ◙
+\v 1 Yissaskar's¦190649 four¦190655 sons¦190648 were Tola¦190650, Puah¦190651, Yashub¦190652, and Shimron¦190654.
+\v 2 Tola's sons¦190658 were Uzzi¦190660, Refayah, Yeriel¦190662, Yahmai¦190663, Ibsam¦190664, and Shemuel¦190665 \add who all became\add* leaders of their clans. \add ≈There were strong warriors in the record of Tola's descendants in each generation¦190673\add*. (During the time that David¦190676 was Yisrael's king, there were 22,600 such men.)
 \p
-\v 3 ◙
-\v 4 ◙
-\p
-\v 5 ◙
+\v 3 Uzzi's¦190686 son was Yizrahyah. Yizrahyah's five sons were Mikael, Ovadyah, Yoel¦190692, and Yishiyah. They were all \add ≈leaders of their¦190696 clans\add*.
+\v 4 Along with them according to their \add ≈family records\add*, were 36,000 troops¦190702 in the army, because they¦190710 \add ≈had numerous\add* wives¦190711 and sons¦190712.
+\v 5 Altogether, Yissaskar's clans¦190716 had 87,000 strong warriors listed in their genealogy¦190723.
 \s1 The descendants of Benyamin
 \rem /s1 Descendants of Benjamin; Benjamin; The Descendants of Benjamin and Dan
 \p
-\v 6 ◙
-\v 7 ◙
+\v 6 Benyamin's¦190727 three¦190731 \add sons\add* were Bela¦190728, Beker¦190729, and Yediael¦190730.
+\v 7 Bela's¦190734 five¦190740 sons¦190733 were Etsbon, Uzzi¦190736, Uzziel¦190737, Yerimot, and Iri¦190739 who were leaders of their clans. According to their family records, they had 22,034 strong warriors.
 \p
-\v 8 ◙
-\v 9 ◙
+\v 8 Beker's sons were Zemirah¦190756, Yoash¦190757, Eliezer¦190758, Elyehoenai, Omri¦190760, Yeremot, Aviyah, Anatot¦190763, and Alemet¦190764.
+\v 9 Altogether, their clans had 20,200 strong warriors listed in their genealogy¦190772.
 \p
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\s1 The descendants of Naftali
+\v 10 Yediael's¦190785 son was Bilhan. Bilhan's¦190786 sons were Yeush¦190789, Benyamin¦190791, Ehud¦190792, Kenaanah¦190793, Zetan¦190794, Tarshish¦190795, and Ahishahar¦190796.
+\v 11 All those descendants of Yediael¦190802 were \add ≈clan leaders\add* and strong warriors, having 17,200 men ready to go to war.
+\p
+\v 12 The Shuppites and Huppites were descendants of Ir, \add and\add* the Hushites were descendants of Aher¦190822.
+\s1 The descendants of Naftali (Naphtali)
 \rem /s1 Descendants of Naphtali; The Descendants of Naphtali; Naphtali
 \p
-\v 13 ◙
+\v 13 Naftali's¦190825 sons were Yahtsiel, Guni¦190827, Yetser, and Shallum¦190829. (\add They were\add* descendants of \add Yakov's slave wife\add* Bilhah¦190831.)
 \s1 The descendants of Manashsheh
 \rem /s1 The Descendants of Manasseh; Manasseh; Descendants of Manasseh
 \p
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
+\v 14 Manashsheh¦190835 had sons¦190834 by his \add ≈Syrian¦190840\add* (Heb. Aramean¦190840) slave wife. She gave birth to Asriel¦190836, and Makir¦190844 (\add who became\add* the father¦190845 of Gilead¦190846).
+\v 15 Makir \add ≈married\add* a wife from the Huppites and Shuppites. (His sister's¦190854 name was Maakah.) \add ≈Another\add* descendant was Tselofehad and he had daughters¦190861.
+\v 16 Makir's¦190867 wife¦190865 (\add also called¦190869\add* Maakah) bore a son and named him Peresh¦190871 (and named his brother Sheresh¦190874) and his sons¦190875 were Ulam¦190876 and Rakem.
+\v 17 Ulam's¦190880 son was Bedan¦190881. Those were the descendants¦190883 of Gilead¦190884 (Makir's¦190887 son and Manashsheh's¦190890 grandson).
 \p
-\v 18 ◙
+\v 18 \add @Gilead's\add* sister¦190892 was Hammoleket¦190893. She was the mother of Ishhod¦190897, Aviezer, and Mahlah¦190903.
 \p
-\v 19 ◙
+\v 19 \add Another son of Gilead was\add* Shemida¦190907, whose sons¦190906 were Ahyan, Shekem, Likhi¦190910, and Aniam¦190911.
 \s1 The descendants of Efraim
 \rem /s1 Descendants of Ephraim; The Descendants of Ephraim; Ephraim
 \p
-\v 20 ◙
-\p …
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
+\v 20 These are Efraim's¦190915 descendants:
+\p One son of Efraim was Shutelah. Shutelah's¦190916 son was Bered. Bered's¦190917 son was Tahat. Tahat's¦190919 son was Eleadah. Eleadah's¦190921 son \add was also named\add* Tahat.
+\v 21 \add @Tahat's\add* son was Zavad. Zavad's son was Shutelah¦190928. Efraim's other sons, Ezer¦190930 and Elead¦190931, went¦190939 to Gat¦190935 city to steal some cattle but were killed¦190932 by \add ≈some of the natives of that area\add*.
+\v 22 Their father¦190947 Efraim¦190946 mourned¦190945 for \add ≈quite some time\add*, and¦190950 his relatives¦190951 came¦190950 to comfort¦190952 him¦190952.
+\v 23 Then¦190954 he \add ≈slept with\add* his wife and she \add ≈got pregnant¦190958\add* and \add ≈gave¦190959 birth¦190959 to\add* a son. \add @Efraim\add* \add ≈named him\add* Beriah¦190965 \add (which sounds like the Hebrew word for ‘trouble’)\add*, because \add ≈of the recent tragedy in their family\add*.
 \p
-\v 24 ◙
+\v 24 Efraim's daughter¦190971 was Sheerah and she founded three towns: Lower Beyt-Horon, Upper Beyt-Horon, and Uzzen¦190984-Sheerah.
 \p
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
+\v 25 \add Another son of Efraim\add* was Refah. Refah's son was Reshef. Reshef's¦190989 son was Telah. Telah's¦190990 son was Tahan¦190992.
+\v 26 \add Tahan's\add* son was Ladan. Ladan's son was Ammihud. Ammihud's¦190997 son was Elishama.
+\v 27 \add Elishama's\add* son was Nun. Nun's son was Yehoshua \add (or Joshua, who led the Israelites after Mosheh)\add*.
 \p
-\v 28 ◙
+\v 28 \add This is a list of\add* \add ≈the cities and areas where Efraim's descendants lived\add*: Beyt-El and the nearby villages, Naaran¦191014 to the east, Gezer¦191016 to the west and the nearby villages, and Shekem and the nearby villages extending \add north\add* as far as Ayyah¦191022 and its villages.
 \p
-\v 29 ◙
-\rem /s1 Asher; The Descendants of Asher; Descendants of Asher
-\p …
-\s1 The descendants of Asir
+\v 29 Along the border of the area where the descendants of Manashsheh¦191030 lived were these¦191041 towns: Beyt-Shan, Taanak, Megiddo¦191037, Dor¦191039, and all the nearby villages. The people who lived in all those places were descendants of Yakov's son Yosef¦191044 \add (Joseph)\add*.
+\s1 Asher's descendants
+\rem /s1 Asher; The Descendants of Asher
 \p
-\v 30 ◙
+\v 30 Asher's¦191051 sons¦191050 were Yimnah, Yishvah, Yishvi, and Beriah¦191055. Their sister¦191057 was Serah¦191056.
 \p
-\v 31 ◙
+\v 31 Beriah's¦191060 sons¦191059 were Hever and¦191062 Malkiel. Malkiel was the father¦191064 of Birzayit.
 \p
-\v 32 ◙
-\v 33 ◙
+\v 32 Heber was the father¦191069 of Yaflet¦191072, Shomer¦191075, Hotam¦191078, and their¦191081 sister¦191081 Shua¦191080.
+\v 33 Yaflet's¦191084 sons were Pasak, Bimhal¦191086, and Ashvat¦191087.
 \p
-\v 34 ◙
+\v 34 Shomer's sons¦191092 were Ahi¦191094, Rohgah¦191095, Hubbah, and Aram¦191099.
 \p
-\v 35 ◙
+\v 35 \add Shomer's younger\add* brother was Helem. Helem's¦191103 sons¦191101 were Tsofah, Yimna, Shelesh¦191107, and Amal¦191108.
 \p
-\v 36 ◙
-\v 37 ◙
+\v 36 Zofah's¦191111 sons¦191110 were Suah¦191112, Harnefer¦191113, Shual¦191114, Beri¦191115, Yimrah¦191116,
+\v 37 Betser, Hod¦191119, Shamma¦191120, Shilshah¦191121, Yitran (whose other name was Yeter), and Beera¦191123.
 \p
-\v 38 ◙
-\v 39 ◙
+\v 38 Yeter's¦191126 sons¦191125 were Yefunneh¦191127, Pispah, and Ara¦191129.
+\v 39 \add Another descendant of Asher was\add* Ulla¦191132, whose sons¦191131 were Arah¦191133, Hanniel¦191134, and Ritsia.
 \p
-\v 40 ◙
+\v 40 All those were Asher's¦191142 descendants¦191140, \add ≈clan leaders\add*, chosen¦191147, very strong, \add ≈leaders of leaders\add*. And listed in their genealogy¦191152 in the army for war, their number¦191155, 26,000 men.
 \c 8
-\s1 The other still descendants of Benyamin
+\s1 Benyamin's descendants
 \rem /s1 Descendants of Benjamin; The Genealogy of Saul the Benjamite; The Descendants of Benjamin
 \p
-\v 1 ◙
-\v 2 ◙
+\v 1 Benyamin¦191162 had sons: Bela¦191166, Ashbel¦191168, Aharah¦191170,
+\v 2 Nohah, and¦191175 the fifth¦191176, Rafa¦191175.
 \p
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
+\v 3 Bela's¦191181 sons¦191180 were Addar¦191182, Gera¦191183, Abihud,
+\v 4 Avishua, Naaman¦191187, Ahoah¦191188,
+\v 5 Gera, Shefufan, and Huram¦191192.
 \p
-\v 6 ◙
-\v 7 ◙
+\v 6 \add One of Gera's sons¦191195 was\add* Ehud¦191196. \add ≈His descendants were leaders of their clans who lived\add* in Geba¦191202 \add city\add*, but were taken into exile to Manahat¦191206.
+\v 7 Ehud's sons were Naaman, Ahijah¦191209, and Gera. Gera \add ≈was the one who led them\add* \add when they moved to Manahat\add*. He \add ≈was the father¦191213 of\add* Uzza and Ahihud¦191219.
 \p
-\v 8 ◙
-\v 9 ◙
-\v 10 ◙
+\v 8 \add Another descendant of Benyamin was\add* Shaharayim¦191221 \add ≈who lived\add* in the Moab¦191224 countryside¦191223. He \add ≈divorced\add* his wives¦191233 Hushim¦191229 and¦191230 Baara¦191232
+\v 9 and fathered¦191235 \add sons\add* with his wife Hodesh¦191238: Yobab¦191242, Tsivya, Mesha¦191248, Malkam¦191251,
+\v 10 Yeuts, Sakeya, and Mirmah¦191261. They all became leaders of their clans.
+\v 11 (He had fathered¦191268 Avituv and¦191272 Elpaal¦191274 by Hushim.)
 \p
-\v 11 ◙
-\p
-\v 12 ◙
-\s1 The descendants of Benyamin there to Gat and Ayalun
+\v 12 Elpaal's¦191277 sons¦191276 were Eber¦191278, Misham¦191279, Shemed¦191280 (who built¦191282 Ono¦191285 \add city\add*, plus Lod¦191288 and its¦191289 towns¦191289),
+\s1 Benyamin's descendants in Gat and Ayyalon
 \rem /s1 The Benjaminites in Gath and Aijalon
 \p
-\v 13 ◙
+\v 13 Beriah and Shema. XXXThey, heads of the fathers to those living in Aijalon; they caused those living in Gath to flee.
 \v 14 ◙
 \v 15 ◙
 \v 16 ◙
@@ -720,6 +719,7 @@
 \c 10
 \s1 The death of King Saul and of his children
 \rem /s1 David succeeds Saul; Saul Takes His Life; Death of Saul and His Sons; The Death of King Saul
+\s4 Full kingdom
 \r (1 Sam. 31:1-13)
 \p
 \v 1 ◙
@@ -740,6 +740,7 @@
 \c 11
 \s1 The actions of David King
 \rem /s1 David Becomes King Over Israel; David Becomes King of All Israel; David Becomes King of Israel and Judah; David Anointed King of All Israel
+\s4 Full kingdom
 \r (2 Sam. 5:1-10)
 \p
 \v 1 ◙
@@ -755,6 +756,7 @@
 \v 9 ◙
 \s1 The heroes of David
 \rem /s1 David's Famous Soldiers; David's Mighty Men; David's Mighty Men and Their Exploits; David's Mightiest Men
+\s4 Full kingdom
 \rem /r (2 Samuel 23.8-39)
 \p
 \v 10 ◙
@@ -846,6 +848,7 @@
 \c 12
 \s1 The heroes accompanied to David
 \rem /s1 David's Followers in the Wilderness; Warriors Join David's Army; David's Early Followers from the Tribe of Benjamin; Warriors Join David
+\s4 Full kingdom
 \p
 \v 1 ◙
 \v 2 ◙
@@ -931,6 +934,7 @@
 \c 13
 \s1 The carrying of Box of Agreement
 \rem /s1 David Attempts to Move the Ark; The Ark Brought from Kiriath-jearim; The Covenant Box Is Moved from Kiriath Jearim; Bringing Back the Ark
+\s4 Full kingdom
 \r (2 Sam. 6:1-11)
 \p
 \v 1 ◙
@@ -953,6 +957,7 @@
 \c 14
 \s1 The works of David there to Yerushalem
 \rem /s1 David's Palace and Family; David Established at Jerusalem; David's House and Family; David's Activities in Jerusalem
+\s4 Full kingdom
 \r (2 Sam. 2:11-16)
 \p
 \v 1 ◙
@@ -965,6 +970,7 @@
 \v 7 ◙
 \s1 The defeat of Philistines
 \rem /s1 David Defeats the Philistines; Victory over the Philistines; David Conquers the Philistines; Defeat of the Philistines
+\s4 Full kingdom
 \r (2 Sam. 5:17-25)
 \p
 \v 8 ◙
@@ -983,6 +989,7 @@
 \c 15
 \s1 The carrying of Box of Agreement
 \rem /s1 Preparing to Move the Ark; Getting Ready to Move the Covenant Box; The Ark Brought to Jerusalem
+\s4 Full kingdom
 \p
 \v 1 ◙
 \v 2 \x + \xo 15:2: \xt Deu 10:8.\x*◙
@@ -1024,6 +1031,7 @@
 \c 16
 \s1 Intahu the Box of Agreement
 \rem /s1 The Ark Placed in the Tent
+\s4 Full kingdom
 \p
 \v 1 ◙
 \v 2 ◙
@@ -1034,6 +1042,7 @@
 \v 6 ◙
 \s1 The praising song
 \rem /s1 David's Song of Praise; David's Psalm of Thanksgiving; David's Psalm of Thanks; A song of thanksgiving
+\s4 Full kingdom
 \r (Psa. 105:1-15; 96:1-3; 106:1,47-48)
 \p
 \v 7 ◙
@@ -1157,6 +1166,7 @@
 \q1 …
 \s1 The worshipping there to Yerushalem
 \rem /s1 Worship at Jerusalem and Gibeon; Regular Worship Maintained
+\s4 Full kingdom
 \p
 \v 37 ◙
 \v 38 ◙
@@ -1170,6 +1180,7 @@
 \c 17
 \s1 The speaking of Natan to David
 \rem /s1 Nathan's Message to David; The Lord's Covenant Promise to David; David's plan to build a temple; God's Promise to David; God's Covenant with David
+\s4 Full kingdom
 \r (2 Sam. 7:1-17)
 \p
 \v 1 ◙
@@ -1192,6 +1203,7 @@
 \v 15 ◙
 \s1 The praying for David of thanking
 \rem /s1 David's Prayer of Thanksgiving; David's Prayer of Thanks; David's Prayer
+\s4 Full kingdom
 \r (2 Sam. 7:18-29)
 \p
 \v 16 ◙
@@ -1210,6 +1222,7 @@
 \c 18
 \s1 The victories of David
 \rem /s1 David's Victories; David's Military Victories; David's campaigns; David's Kingdom Established and Extended
+\s4 Full kingdom
 \r (2 Sam. 8:1-18)
 \p
 \v 1 ◙
@@ -1238,6 +1251,7 @@
 \c 19
 \s1 The defeat of those from-Amun and those from-Syria
 \rem /s1 The Battle Against the Ammonites; David Defeats the Ammonites and the Syrians; David Defeats the Ammonites; Defeat of the Ammonites and Arameans
+\s4 Full kingdom
 \r (2 Sam. 10:1-19)
 \p
 \v 1 ◙
@@ -1267,6 +1281,7 @@
 \c 20
 \s1 Snatched of David the Raba
 \rem /s1 Siege and Capture of Rabbah; David Captures Rabbah; The Capture of Rabbah
+\s4 Full kingdom
 \r (2 Sam. 12:26-31)
 \p
 \v 1 \x + \xo 20:1: \xt 2Sam 11:1.\x*◙
@@ -1285,6 +1300,7 @@
 \c 21
 \s1 The nakahule of people
 \rem /s1 David Numbers the Fighting Men; The Census and Plague; David Takes a Census; David's census
+\s4 Full kingdom
 \r (2 Sam. 24:1-25)
 \p
 \v 1 ◙
@@ -1336,6 +1352,7 @@
 \v 1 ◙
 \s1 The preparation of standing up of temple
 \rem /s1 Preparations for the Temple; Preparation for the temple; Preparations for Building the Temple; David Prepares to Build the Temple
+\s4 Full kingdom
 \p
 \v 2 ◙
 \v 3 ◙
@@ -1364,8 +1381,9 @@
 \rem /s1 Families of the Levites and Their Functions; Duties of the Levites; The Levites
 \p
 \v 1 \x + \xo 23:1: \xt 1Ki 1:1-40.\x*◙
-\s1 The families of Levites and the works ran
+\s1 The families of Levites and their works
 \rem /s1 The Work of the Levites
+\s4 Full kingdom
 \p
 \v 2 ◙
 \v 3 ◙
@@ -1410,6 +1428,7 @@
 \c 24
 \s1 The division of Levites
 \rem /s1 The Work Assigned to the Priests; Duties of the Priests; Divisions of the Priests; The Divisions of Priests
+\s4 Full kingdom
 \p
 \v 1 ◙
 \v 2 \x + \xo 24:2: \xt Lev 10:1-2.\x*◙
@@ -1459,6 +1478,7 @@
 \c 25
 \s1 The singers there to temple
 \rem /s1 The Temple Musicians; Duties of the Musicians; The Singers
+\s4 Full kingdom
 \p
 \v 1 ◙
 \p
@@ -1520,6 +1540,7 @@
 \c 26
 \s1 The guards of doorway of temple
 \rem /s1 The Gatekeepers; Duties of the Gatekeepers; The Temple Guards
+\s4 Full kingdom
 \p
 \v 1 ◙
 \v 2 ◙
@@ -1548,6 +1569,7 @@
 \v 19 ◙
 \s1 The guards of things/objects
 \rem /s1 Other Temple Duties; The Treasurers and Other Officials; Treasurers and Other Officials; The Treasurers, Officers, and Judges
+\s4 Full kingdom
 \p
 \v 20 ◙
 \v 21 ◙
@@ -1562,6 +1584,7 @@
 \v 28 ◙
 \s1 The work of other Levites
 \rem /s1 Duties of Other Levites
+\s4 Full kingdom
 \p
 \v 29 ◙
 \p
@@ -1571,6 +1594,7 @@
 \c 27
 \s1 The officials of King David
 \rem /s1 The Military Divisions; Army Divisions; Military and Civil Organization; Military Commanders and Divisions
+\s4 Full kingdom
 \p
 \v 1 ◙
 \p
@@ -1602,6 +1626,7 @@
 \v 15 ◙
 \s1 The teachers of descendants of Israel
 \rem /s1 Officers of the Tribes; Leaders of the Tribes; Leaders of Tribes
+\s4 Full kingdom
 \p
 \v 16 ◙
 \p …
@@ -1629,6 +1654,7 @@
 \v 24 \x + \xo 27:24: \xt 2Sam 24:15; 1Ch 21:1-14.\x*◙
 \s1 The impamiyalan of King David
 \rem /s1 Administrators of the Royal Property; Officials of David's Kingdom; Other Civic Officials; The King's Overseers
+\s4 Full kingdom
 \p
 \v 25 ◙
 \rem /s1 David's Personal Advisers
@@ -1638,14 +1664,16 @@
 \v 29 ◙
 \v 30 ◙
 \v 31 ◙
-\s1 The advisers of King David
+\s1 King David's advisers
+\s4 Full kingdom
 \p
 \v 32 ◙
 \v 33 ◙
 \v 34 ◙
 \c 28
-\s1 The me plan of David of temple
+\s1 David's plans for the temple
 \rem /s1 Solomon Instructed to Build the Temple; David's Instructions for the Temple; David's Plans for the Temple; David's Instructions to Solomon
+\s4 Full kingdom
 \p
 \v 1 ◙
 \p
@@ -1675,48 +1703,52 @@
 \v 20 ◙
 \v 21 ◙
 \c 29
-\s1 The gifts for of temple
+\s1 Donations for the temple
 \rem /s1 Gifts for Building the Temple; Solomon succeeds David as king; Offerings for Building the Temple
+\s4 Full kingdom
 \p
-\v 1 \x + \xo 29:1-2: \xt 1Ch 22:5.\x*◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
+\v 1 And King David¦200139 said¦200138 to all the assembly¦200143, “My son Shelomoh \add (Solomon¦200144)\add* \add ≈has been chosen¦200147 by God himself\add*. He's young and tender, and \add ≈it's a huge¦200154 job\add* because the temple¦200158 isn't¦200156 being built for people, but for Yahweh¦200160 God.\x + \xo 29:1-2: \xt 1Ch 22:5.\x*
+\v 2 \add ≈I've used all my resources to provide a plentiful supply of materials\add* for my God's residence: the gold for the gold things, and the silver for the silver things, the bronze for the bronze things, the iron for the iron things, the wood for the wooden parts, onyx stones for inlays, antimony¦200187 stones and colorful things, and all the rare stones and alabaster¦200194 stones.
+\v 3 What's more, because I'm excited to have my God's residence \add built\add*, I've donated my own personal gold¦200205 and¦200206 silver¦200206 on top of everything else that I've prepared¦200214 for the sacred¦200216 temple:
+\v 4 100 tonnes of gold and 2,500 tonnes of refined¦200229 silver¦200228 for overlaying¦200230 the buildings' walls¦200231,
+\v 5 \add as well as\add* gold for the gold things, silver for the silver things, and for everything \add ≈to be made\add* by the craftsmen¦200242. \add ≈So\add* who is willing today, \add ≈to commit themselves\add* to making¦200244 a contribution¦200244 towards Yahweh's work?
 \p
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
+\v 6 Then¦200256 the famliy leaders and the leaders of the \add ≈tribes¦200255\add*, and the \add ≈various levels of military\add* commanders¦200257, and the king's¦200262 \add ≈construction overseers\add*, \add all\add* contributed willingly¦200250.
+\v 7 They¦200268 donated \add a total of\add* 170 tonnes of gold and 100kg of gold coins, 350 tonnes of silver¦200276, 600 tonnes of bronze¦200280, and 3,400 tonnes of iron for the \add ≈temple\add* construction,
+\v 8 plus anyone who had precious stones¦200293 donated them to the treasury¦200295 for the \add ≈temple\add*. Yehiel (a Gershonite) \add ≈was in charge of those\add*.
+\v 9 The people¦200306 were \add ≈excited\add*, because¦200307 they'd¦200313 \add all\add* given¦200309 willingly¦200309 to Yahweh¦200314, and¦200315 King David¦200316 was also very pleased.
 \s1 The praying for David
 \rem /s1 David's Prayer of Praise; David's Praise to God; David Praises God; David's Prayer
+\s4 Full kingdom
 \p
-\v 10 ◙
-\v 11 \x + \xo 29:11: \xt Mat 6:13.\x*◙
-\v 12 ◙
-\v 13 ◙
+\v 10 Then \add King\add* David¦200324 blessed Yahweh in \add ≈front of\add* the entire¦200329 assembly¦200331, saying, “Blessed are you¦200335, Yahweh, God¦200337 of Yisrael, our¦200339 father¦200339, from the ages past and until the ages to come.
+\v 11 Greatness and the power¦200348, beauty and splendour and majesty¦200351 \add all belong\add* to you, Yahweh, as indeed does everything¦200354 in the heavens¦200355 and on the earth¦200356. The kingdom¦200359 and \add ≈supreme leadership\add* \add all belongs\add* to you, Yahweh.\x + \xo 29:11: \xt Mat 6:13.\x*
+\v 12 Wealth and \add prestige comes from you\add*, and you rule over everything. \add ≈You have the power¦200372 and strength and control\add* to make \add people\add* great¦200375 and to strengthen everyone,
+\v 13 \add ≈so\add* now, our God¦200380, we're thanking¦200381 you and praising¦200384 your¦200386 beautiful name¦200385.
 \p
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
+\v 14 But¦200388 who am I, and who are my people¦200392, that we should \add ≈be in a position to be able\add* to donate freely like this? \add ≈Yes,\add* everything¦200402 comes from you, and \add ≈we've simply given¦200404 back from what you gave¦200404 to us\add*,
+\v 15 because we're \add just\add* strangers on the earth \add ≈in your¦200411 eyes\add*, and foreign guests like all our ancestors¦200415. Our time on the earth is like a shadow¦200416 \add ≈without any permanence\add*.
+\v 16 Yahweh¦200425 our God¦200426, all this abundance¦200428 that we have \add ≈collected\add* in order to build¦200432 a house¦200435 for you, for your holy name¦200436, \add ≈originally it came from you and it all belongs to you\add* \add anyway\add*.
+\v 17 \add ≈Yes\add* I know¦200444, my God¦200445, that you examine our hearts and you're¦200447 pleased¦200451 \add ≈when we do what is right\add*. I have freely offered all these¦200458 \add gifts\add* \add ≈as I strive to do what is right\add*, and now \add ≈I'm also happy to\add* see your people¦200460 to freely offer \add gifts\add* to you.
+\v 18 Yahweh¦200470, the God¦200471 of our ancestors¦200475 Abraham¦200472, Yitshak \add (Isaac¦200473)\add*, and Yisrael \add (Israel¦200474)\add*, \add help your¦200483 people¦200483 continue to desire to do things like this forever¦200479, and help them remain loyal to you¦200486\add*.
+\v 19 \add ≈Also,\add* give¦200490 my son Shelomoh \add (Solomon)\add* a \add ≈sincere desire\add* to follow your instructions, your testimonies, and your regulations¦200496, and to do \add ≈everything needed\add* to build¦200499 the temple¦200500 \add ≈following all my preparation¦200503 work\add*.”
 \p
-\v 20 ◙
+\v 20 Then David¦200507 told all the assembled \add people\add*, “Bless your¦200517 God Yahweh.” and the entireassembly blessed¦200511 Yahweh, the God of their¦200524 ancestors¦200524. Then they bowed¦200525 down to \add ≈honour\add* \add both\add* Yahweh and the king¦200528.
 \rem /s1 Solomon Named as King; Solomon Acknowledged as King
 \p
-\v 21 ◙
-\v 22 ◙
+\v 21 Then¦200530 they offered sacrifices to Yahweh, and sacrificed burnt¦200535 offerings to Yahweh on the following day: 1,000 bulls¦200540, 1,000 rams, 1,000 lambs¦200544, plus their¦200546 drink¦200546 offerings and sacrifices for all Yisrael in abundance.
+\v 22 They ate¦200553 and drank¦200554 \add ≈in Yahweh's honour\add* that day¦200557 with great¦200560 celebration.
 \rem /s1 Solomon Anointed King
-\v 23 \x + \xo 29:23: \xt 1Ki 2:12.\x*◙
-\v 24 ◙
-\v 25 ◙
-\s1 The story of kingdom of David
+\p Then¦200553 they rededicated David's¦200566 son Shelomoh \add (Solomon¦200563)\add* as king¦200561, and anointed¦200567 him as leader \add ≈on Yahweh's behalf\add* and Tsadok¦200570 as priest¦200571.
+\v 23 Shelomoh sat¦200573 on Yahweh's throne¦200577 as king¦200580 \add ≈replacing\add* his father¦200584 David¦200583, and he prospered¦200585 and all Yisrael listened to him.\x + \xo 29:23: \xt 1Ki 2:12.\x*
+\v 24 All the leaders¦200594 and the mighty¦200595 warriors, as well as all the sons¦200599 of King David¦200601, \add ≈pledged allegiance to\add* King Shelomoh.
+\v 25 Yahweh¦200609 made Shelomoh exceedingly great in the eyes of all Yisrael, and¦200618 bestowed a kingdom on him¦200631, the majesty¦200620 of which¦200622 hadn't previously been on any king¦200630 over Yisrael.
+\s1 The story of David's kingdom
 \rem /s1 The Death of David; Summary of David's Reign
+\s4 Full kingdom
 \p
-\v 26 ◙
-\v 27 \x + \xo 29:27: \xt 2Sam 5:4-5; 1Ch 3:4.\x*◙
-\v 28 ◙
-\v 29 ◙
-\v 30 ◙
+\v 26 Yesse's \add (Jesse's)\add* son David¦200637 was the king who ruled all Israel¦200646
+\v 27 and he ruled for forty¦200654 years: from Hevron city for seven¦200658 years, and then thirty-three years from Yerushalem¦200660.\x + \xo 29:27: \xt 2Sam 5:4-5; 1Ch 3:4.\x*
+\v 28 He \add ≈lived a long life with\add* riches and splendour, and died¦200665 at a good¦200667 old age. Then¦200665 his son Shelomoh \add (Solomon¦200673)\add* \add ≈replaced him as king\add*.
+\v 29 \add The records\add* of \add ≈everything done by\add* King David¦200678, \add ≈from the beginning to his end\add*, were written¦200683 by the prophets¦200693 Shemuel \add (Samuel¦200687)\add*, Natan¦200692 \add (Nathan¦200692)\add*, and Gad¦200697.
+\v 30 They \add ≈wrote\add* about his powerful¦200704 rule, and all the things that happened to him and to the Israeli people, and in the kingdoms¦200715 of \add ≈other countries while he was ruling Israel¦200711\add*.

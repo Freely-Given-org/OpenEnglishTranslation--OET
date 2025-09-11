@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2025-09-05 18:50 by extract_glossed_OSHB_OT_to_ESFM v0.62
+\rem ESFM file created 2025-09-11 20:27 by extract_glossed_OSHB_OT_to_ESFM v0.62
 \rem USFM file edited by ScriptedBibleEditor v0.33
 \h 1 Shəmū\sup ʼēl\sup*/(Samuel)
 \toc1 1 Shəmū\sup ʼēl\sup*
@@ -209,10 +209,10 @@
 \v 22 and= \nd YHWH\nd* =he/it_said to Shəmū\sup ʼēl\sup* listen in/on/at/with÷voice_of÷their and÷appoint to/for=them a_king and= Shəmū\sup ʼēl\sup* =he/it_said to the_people_of Yisrā\sup ʼēl\sup*/(Israel) go each_man to÷city_of÷his.
 \c 9
 \nb
-\v 1 and=he/it_was a_man mmm wwww\f + \fr 9:1 \ft OSHB variant note: מ/בן־ימין: (x-qere) 'מִ/בִּנְיָמִ֗ין': lemma=m/1144 n=1.0.1 morph=HR/Np id=09EC9 מִ/בִּנְיָמִ֗ין\f*\f + \fr 9:1 \ft OSHB note: Adaptations to a Qere which L and BHS, by their design, do not indicate.\f* and=his/its=name \add was\add*_Qīsh the_son_of ʼAⱱī\sup ʼēl\sup* the_son_of Tsərōr/(Zeror) the_son_of Bəkōrat the_son_of ʼAfīaḩ a_son_of a_man a_Yāmīn/(Jamin)ite a_mighty_\add man\add*_of wealth.
+\v 1 and=he/it_was a_man mmm wwww\f + \fr 9:1 \ft OSHB variant note: מ/בן־ימין: (x-qere) 'מִ/בִּנְיָמִ֗ין': lemma=m/1144 n=1.0.1 morph=HR/Np id=09EC9 מִ/בִּנְיָמִ֗ין\f*\f + \fr 9:1 \ft OSHB note: Adaptations to a Qere which L and BHS, by their design, do not indicate.\f* and=his/its=name \add was\add*_Qīsh the_son_of ʼAⱱī\sup ʼēl\sup* the_son_of Tsərōr/(Zeror) the_son_of Bəkōrat the_son_of ʼAfīaḩ a_son_of a_man a_Yəmīnī/(Jamite) a_mighty_\add man\add*_of wealth.
 \v 2 And=to/for=him/it a_son he_belonged and=his/its=name \add was\add*_Shāʼūl/(Saul) a_young_man and÷handsome and÷there_was_not a_man from=(the)_sons of_Yisrā\sup ʼēl\sup*/(Israel) good from=him/it from÷shoulders_of÷his and÷above \add he\add*_\add was\add*_tall from=all the÷people.
 \v 3 And÷lost the÷donkeys of÷Qīsh the_father_of Shāʼūl and= Qīsh =he/it_said to Shāʼūl his/its=son take please with÷you DOM one of÷the÷servants and÷arise go seek DOM the÷donkeys.
-\v 4 And=he/it_passed_through in/on/at/with÷hill_country_of ʼEfrayim and=he/it_passed_through in=land_of Shalisha and=not they_found_\add them\add* and÷passed in/on/at/with÷land_of Shaˊₐlīm and÷not and=he/it_passed_through in=land_of \add the\add*_Yāmīnite[s] and=not they_found_\add them\add*.
+\v 4 And=he/it_passed_through in/on/at/with÷hill_country_of ʼEfrayim and=he/it_passed_through in=land_of Shalisha and=not they_found_\add them\add* and÷passed in/on/at/with÷land_of Shaˊₐlīm and÷not and=he/it_passed_through in=land_of \add the\add*_Yəmīnī[s] and=not they_found_\add them\add*.
 \v 5 They they_came in=land of_Tsūf/(Zuph) and÷Shāʼūl he_said to÷servant_of÷his who with=him/it come and÷go_back lest father_of÷my he_should_cease from the÷donkeys and÷worrying to/for=us.
 \v 6 And=he/it_said to=him/it here please a_man_of god in/on/at/with÷town the÷this and÷the÷man \add is\add*_honoured all that he_speaks actually_(come) it_comes now let_us_go there perhaps he_will_tell to/for=us DOM journey_of÷our which we_have_walked on÷her.
 \v 7 And= Shāʼūl =he/it_said to÷servant_of÷his and=see/lo/see we_will_go and÷what will_we_bring to_the÷man if/because the÷bread it_has_been_used_up from÷sacks_of÷our and÷present there_\add is\add*_not to=bring to÷man_of the=ʼElohīm what have÷we.
@@ -294,7 +294,7 @@
 \v 8 After÷when he_went Yaˊₐqoⱱ/(Jacob) Miʦrayim ancestors_of÷your_all's and÷cried_out to \nd YHWH\nd* and= \nd YHWH\nd* =sent DOM Mosheh and ʼAhₐron and÷brought_out DOM ancestors_of÷your_all's from=Miʦrayim and÷settled÷them in/on/at/with÷place the÷this.
 \v 9 And÷forgot DOM \nd YHWH\nd* god_of÷their and÷sold DOM=them in/on/at/with÷hand_of Şīşərāʼ the_commander_of the_army_of Ḩāʦōr and÷in/on/at/with÷hand_of \add the\add*_Fəlishtiy and÷in/on/at/with÷hand_of the_king_of Mōʼāⱱ and÷fought in/on/at/with÷them.
 \v 10 And÷cried_out to \nd YHWH\nd* and÷said\f + \fr 12:10 \ft OSHB variant note: ו/יאמר: (x-qere) 'וַ/יֹּאמְר֣וּ': lemma=c/559 morph=HC/Vqw3mp id=09Es6 וַ/יֹּאמְר֣וּ\f*\f + \fr 12:10 \ft OSHB note: Adaptations to a Qere which L and BHS, by their design, do not indicate.\f* we_have_sinned if/because we_have_abandoned DOM \nd YHWH\nd* and÷served DOM the÷Baals and=DOM the÷Ashtoreths and=now deliver÷us from÷hand_of enemies_of÷our and÷serve÷you.
-\v 11 And= \nd YHWH\nd* =sent DOM Jerub-Baˊal and=DOM Bedan and=DOM Yiftāḩ/(Jephthah) and=DOM Shəmū\sup ʼēl\sup*/(Samuel) and÷delivered DOM÷you_all from÷hand_of enemies_of÷your_all's on÷every_side and÷lived security.
+\v 11 And= \nd YHWH\nd* =sent DOM Jerub-Baˊal and=DOM Bədān and=DOM Yiftāḩ/(Jephthah) and=DOM Shəmū\sup ʼēl\sup*/(Samuel) and÷delivered DOM÷you_all from÷hand_of enemies_of÷your_all's on÷every_side and÷lived security.
 \v 12 And÷saw if/because_that Nāḩāsh the_king_of the_people_of ˊAmmōn \add was\add*_coming against÷you_all and÷said to=me no if/because a_king he_will_reign over÷us and÷LORD god_of÷your_all's king_of÷your_all's.
 \v 13 And=now here the=king whom you_all_have_chosen whom you_all_asked_for and=see/lo/see he_has_set \nd YHWH\nd* over÷you_all a_king.
 \v 14 If you_all_will_fear DOM \nd YHWH\nd* and÷serve DOM=him/it and÷obey in/on/at/with÷voice_of÷his and=not you_all_will_rebel_against DOM the_mouth_of \nd YHWH\nd* and÷you_all_are both you_all and=also the=king who he_has_become_king over÷you_all after \nd YHWH\nd* god_of÷your_all's.
@@ -327,7 +327,7 @@
 \v 14 And=now kingdom_of÷your not it_will_endure \nd YHWH\nd* he_has_sought to=him/it a_man after÷heart_of÷his_own and÷appointed÷him \nd YHWH\nd* as÷ruler over people_of÷his if/because not you_have_kept DOM \add that\add*_which commanded÷you \nd YHWH\nd*.
 \v 15 and= Shəmū\sup ʼēl\sup*/(Samuel) =he/it_rose_up and=he/it_ascended from the÷Gilgāl Giⱱˊāh of_Binyāmīn and= Shāʼūl/(Saul) =counted DOM the÷people the÷present with=him/it about÷six hundred(s) man.
 \v 16 And÷Shāʼūl and÷Yōnātān/(Jonathan) his/its=son and÷the÷people the÷present with÷them \add were\add*_remaining in/on/at/with÷Geⱱaˊ of_Binyāmīn and÷Fəlishtiy they_encamped in/on/at/with÷Mikmāş.
-\v 17 And=he/it_went_out the÷raiders from÷camp_of \add the\add*_Fəlishtiy three companies the÷company one it_turned to the_direction_of ˊĀfərāh to the_land_of Shual.
+\v 17 And=he/it_went_out the÷raiders from÷camp_of \add the\add*_Fəlishtiy three companies the÷company one it_turned to the_direction_of ˊĀfərāh to the_land_of Shūˊāl.
 \v 18 And÷the÷company one it_turned the_direction_of Bēyt Ḩōrōn and÷the÷company one it_turned the_direction_of the÷border the÷overlooking over the_valley_of Tsəⱱoˊīm/(Zeboim) the÷wilderness÷toward.
 \v 19 and÷blacksmith not he_was_found in/on/at/with÷all_of the_land_of Yisrā\sup ʼēl\sup*/(Israel) if/because they_said\f + \fr 13:19 \ft OSHB variant note: אמר: (x-qere) 'אָמְר֣וּ': lemma=559 morph=HVqp3cp id=09Y4x אָמְר֣וּ\f*\f + \fr 13:19 \ft OSHB note: Adaptations to a Qere which L and BHS, by their design, do not indicate.\f* \add the\add*_Fəlishtiy lest they_should_make the÷ˊIⱱrī/(Hebrews) a_sword or a_spear.
 \v 20 And= all_of =went_down Yisrā\sup ʼēl\sup*/(Israel) the÷Fəlishtiy to= each_man =sharpen DOM plowshare_of÷their and=DOM mattocks_of÷his and=DOM axes_of÷his and=DOM sickles_of÷his.
@@ -684,7 +684,7 @@
 \v 25 And= Shāʼūl =he/it_went and÷men_of÷his to÷seek and÷told to÷Dāvid and=he/it_descended the÷rock and=he/it_sat_down//remained//lived in/on/at/with÷wilderness_of Māˊōn and= Shāʼūl/(Saul) =he/it_listened and÷pursued after Dāvid the_wilderness_of Māˊōn.
 \v 26 And= Shāʼūl =he/it_went on÷side_of the÷mountain on÷one and÷Dāvid and÷men_of÷his on÷side_of the÷mountain on÷the_other and=he/it_was Dāvid hurrying_away to=go from=face/in_front_of Shāʼūl and÷Shāʼūl and÷men_of÷his \add were\add*_surrounding (to) Dāvid and=near/to men_of÷his to÷capture÷them.
 \v 27 And÷messenger he_came to Shāʼūl to=say hurry and÷come if/because \add the\add*_Fəlishtiy they_have_made_a_raid on the=earth/land.
-\v 28 And= Shāʼūl =returned from÷pursuing after Dāvid and=he/it_went to÷meet \add the\add*_Fəlishtiy on/upon/above/on_account_of//he/it_went_in yes/correct/thus/so people_called to_the÷place (the)=that Şelaˊ Hammahlekoth.
+\v 28 And= Shāʼūl =returned from÷pursuing after Dāvid and=he/it_went to÷meet \add the\add*_Fəlishtiy on/upon/above/on_account_of//he/it_went_in yes/correct/thus/so people_called to_the÷place (the)=that Sela Hammahlekoth.
 \c 24
 \nb
 \v 1 \f + \fr 24:1 \ft Note: KJB: 1Sam.23.29\f* and= Dāvid =he/it_ascended from=there and=he/it_sat_down//remained//lived in/on/at/with÷strongholds_of ˊĒyn.
@@ -806,7 +806,7 @@
 \v 5 And= Shāʼūl =he/it_saw DOM the_camp_of \add the\add*_Fəlishtiy and÷afraid his/its=heart and÷trembled exceedingly.
 \v 6 And= Shāʼūl =inquired in/on/at/with÷LORD and=not answer÷him \nd YHWH\nd* neither in/on/at/with÷dreams nor in/on/at/with÷urim nor in/on/at/with÷prophets.
 \v 7 And= Shāʼūl =he/it_said to÷servants_of÷his seek to=me a_woman_of (of)_a_mistress_of necromancy and÷go to=her/it and÷inquire in/on/at/with÷her servants_of÷his and=they_said to=him/it there a_woman_of (of)_a_mistress_of necromancy in/on/at/with÷Endor Endor.
-\v 8 And= Shāʼūl =disguised and÷putting_on garments other and=he/it_went he and÷two_of men with=him/it and=they_came to the=woman night and=he/it_said divine\f + \fr 28:8 \ft OSHB variant note: קסומי: (x-qere) 'קָֽסֳמִי': lemma=7080 morph=HVqv2fs id=09wCL קָֽסֳמִי\f* please\f + \fr 28:8 \ft OSHB note: Yathir readings in L which we have designated as Qeres when both Dotān and BHS list a Qere.\f* to=me in/on/at/with÷spirit and÷bring_up to=me DOM \add the\add*_\add one\add*_whom I_will_say to÷you.
+\v 8 And= Shāʼūl =disguised and÷putting_on garments other and=he/it_went he and÷two_of men with=him/it and=they_came to the=woman night and=he/it_said divine\f + \fr 28:8 \ft OSHB variant note: קסומי: (x-qere) 'קָֽסֳמִי': lemma=7080 morph=HVqv2fs id=09wCL קָֽסֳמִי\f* please\f + \fr 28:8 \ft OSHB note: Yathir readings in L which we have designated as Qeres when both Dothan and BHS list a Qere.\f* to=me in/on/at/with÷spirit and÷bring_up to=me DOM \add the\add*_\add one\add*_whom I_will_say to÷you.
 \v 9 And=she/it_said the=woman to=him/it here you you_know DOM \add that\add*_which he_has_done Shāʼūl/(Saul) (cmp) he_has_cut_off DOM the÷mediums and=DOM the÷spiritists from the=earth/land and÷to/for÷why \add are\add*_you setting_traps in/on/at/with÷life_of÷my to÷bring_death÷my.
 \v 10 And÷swore to/for=her/it Shāʼūl in/on/at/with÷LORD to=say \add by\add*_the_life of_\nd YHWH\nd* if come_upon÷you punishment in/on/at/with÷thing the÷this.
 \v 11 And=she/it_said the=woman DOM whom will_I_bring_up for÷you and=he/it_said DOM Shəmū\sup ʼēl\sup*/(Samuel) bring_up to=me.
@@ -865,7 +865,7 @@
 \v 24 And÷who will_he_listen to/for=you_all to=the_word/thing/matter the=this if/because as÷share the÷goes_down in/on/at/with÷battle and÷as÷share_of the÷stays with the=vessels alike they_will_share.
 \v 25 and=he/it_was from÷the÷day (the)=that and÷onward and÷made÷it as÷regulation and÷as÷ordinance for÷Yisrā\sup ʼēl\sup*/(Israel) until the=day the÷this.
 \v 26 and= Dāvid =came to Tsiqlag/(Ziklag) and÷sent some_of÷the÷plunder to÷elders_of Yəhūdāh/(Judah) to÷friends_of÷his to=say here to/for=you_all a_blessing from÷plunder_of the_enemies_of \nd YHWH\nd*.
-\v 27 To÷those in=house_of \sup ʼēl\sup* and÷for÷those in/on/at/with÷Rāʼmōt_of the_Negeⱱ and÷for÷those in/on/at/with÷Yattir/(Jattir).
+\v 27 To÷those in=house_of \sup ʼēl\sup* and÷for÷those in/on/at/with÷Ramoth_of the_Negeⱱ and÷for÷those in/on/at/with÷Yattir/(Jattir).
 \v 28 And÷to÷those in/on/at/with÷ˊArōˊēr and÷for÷those in/on/at/with÷Sifmōt and÷for÷those in/on/at/with÷ʼEshtəmoˊa.
 \v 29 and÷to÷those in/on/at/with÷Rākāl and÷to÷those in/on/at/with÷towns_of the÷Yəraḩmə\sup ʼēl\sup*/(Jerahmeel)ites and÷for÷those in/on/at/with÷towns_of the÷Qēynīs.
 \v 30 And÷to÷those in/on/at/with÷Ḩārəmāh and÷for÷those in/on/at/with÷Bor- ashan and÷for÷those in/on/at/with÷ˊAtāk.
