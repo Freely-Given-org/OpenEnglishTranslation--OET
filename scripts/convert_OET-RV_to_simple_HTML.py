@@ -38,6 +38,7 @@ CHANGELOG:
     2025-03-08 Ignore rem being inside table in Ezr 10:24, plus handle /qs (Selah)
     2025-06-10 Allow /s4 (which we use for kingdoms)
     2025-06-24 Check for footnotes and xrefs ending in space
+    2025-09-12 Handle bridged verses
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -54,15 +55,15 @@ if __name__ == '__main__':
     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
-from BibleOrgSys.Bible import Bible
-from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, BOOKLIST_66
+from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
+from BibleOrgSys.Internals.InternalBibleInternals import getLeadingInt
 
 
-LAST_MODIFIED_DATE = '2025-06-24' # by RJH
+LAST_MODIFIED_DATE = '2025-09-12' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
-PROGRAM_VERSION = '0.84'
+PROGRAM_VERSION = '0.85'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -979,7 +980,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                         + f'<span class="v" id="C{C}V{V2}">{V2}{NARROW_NON_BREAK_SPACE}</span>' \
                         + (rest if rest else '◘')
                 else:
-                    assert int(V2)==int(V1)+2 # We don't handle four verse reordering yet
+                    #assert int(V2)==int(V1)+2, f"{BBB} {C}:{V} {V1=} {V2=}" # We don't fully handle four verse reordering yet
                     book_html = f'{book_html}{"" if book_html.endswith(">") else " "}' \
                         + f'''{f"""<span id="C{C}"></span><span class="{'cPsa' if BBB=='PSA' else 'c'}" id="C{C}V1">{C}</span>""" if V1=="1" else f"""<span class="v" id="C{C}V{V1}">{V1}-</span>"""}''' \
                         + f'<span class="v" id="C{C}V{int(V1)+1}"><span class="v" id="C{C}V{V2}">{V2}{NARROW_NON_BREAK_SPACE}</span></span>' \
@@ -1002,7 +1003,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                 book_html = f'{book_html}<div class="rightBox"><p class="{marker}"><span class="cv">{C}:{int(V)+1}</span> {rest}</p>\n'
                 inRightDiv = True
             else:
-                book_html = f'{book_html}<p class="{marker}"><span class="cv">{C}:{int(V)+1}</span> {rest}</p>\n'
+                book_html = f'{book_html}<p class="{marker}"><span class="cv">{C}:{getLeadingInt(V)+1}</span> {rest}</p>\n'
         elif marker == 'r':
             if inParagraph:
                 book_html = f'{book_html}</{inParagraph}>\n'
