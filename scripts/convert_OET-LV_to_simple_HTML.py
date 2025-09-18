@@ -33,6 +33,7 @@ CHANGELOG:
     2025-02-16 Change gloss helper to use ˓˒ instead of // around gloss helper (since / also used for alternative glosses)
     2025-03-03 Handle added /nb fields (after chapter numbers)
     2025-06-24 Check for footnotes and xrefs ending in space
+    2025-09-18 Check equal numbers of open and close parentheses
 """
 from gettext import gettext as _
 from typing import List, Tuple, Set, Optional
@@ -58,10 +59,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-06-24' # by RJH
+LAST_MODIFIED_DATE = '2025-09-19' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.83'
+PROGRAM_VERSION = '0.84'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -768,6 +769,7 @@ def produce_HTML_files() -> None:
                             word_table = word_table_input_file.read().rstrip( '\n' ).split( '\n' ) # Remove any blank line at the end then split
                         vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Read {len(word_table):,} lines from word table at {word_table_filepath}." )
                 else: logging.critical( f"Expected {BBB} word-table '{word_table_filename}' {esfm_text[:500]}" ); halt
+            assert esfm_text.count('(') == esfm_text.count(')'), f"Why do we have OET-LV_{BBB}.usfm {esfm_text.count('(')=} and {esfm_text.count(')')=}"
             assert esfm_text.count('‘') == esfm_text.count('’'), f"Why do we have OET-LV_{BBB}.usfm {esfm_text.count('‘')=} and {esfm_text.count('’')=}"
             assert esfm_text.count('“') >= esfm_text.count('”'), f"Why do we have OET-LV_{BBB}.usfm {esfm_text.count('“')=} and {esfm_text.count('”')=}"
             esfm_text = esfm_text.replace( "'", "’" ) # Replace apostrophes

@@ -78,7 +78,7 @@ $(LV_OT_HTML) $(LV_NT_HTML): $(final_LV_OT_ESFM)  $(final_LV_NT_ESFM) convert_OE
 # 	@$(Python) $(SBE) ScriptedOTUpdates -qe
 
 # Had $(final_LV_OT_ESFM) here before
-../intermediateTexts/auto_edited_OT_ESFM/OET-LV_MAL.ESFM: $(intermediate_LV_OT_ESFM) $(SBE) $(scripted_OT_updates) $(BTranslit) $(HebrewTranslit)
+../intermediateTexts/auto_edited_OT_ESFM/OET-LV_GEN.ESFM ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_MAL.ESFM: $(intermediate_LV_OT_ESFM) $(SBE) $(scripted_OT_updates) $(BTranslit) $(HebrewTranslit)
 	@echo "\n\nRun ScriptedBibleEditor on OT ESFM files…\n"
 	@$(Python) $(SBE) ScriptedOTUpdates -qe
 	#@echo "\n\nCopying OT word and morpheme tables from modified_source_glossed_OSHB_ESFM/ to auto_edited_OT_ESFM/…\n"

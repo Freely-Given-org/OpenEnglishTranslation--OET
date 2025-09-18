@@ -41,6 +41,7 @@ CHANGELOG:
     2025-01-09 Switch from 'low-fat' XML with data missing for compound words, to Macula Hebrew 'nodes' XML
     2025-01-20 Remove 'of' from start of glosses which aren't 'construct'
     2025-03-14 Fix bug where '[is]' and '[was]' could wrongly end up as separate glosses
+    2025-09-19 Fix '(plunder' gloss
 """
 from gettext import gettext as _
 # from typing import Dict, List, Tuple
@@ -64,10 +65,10 @@ from BibleOrgSys.OriginalLanguages import Hebrew
 sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew
 
-LAST_MODIFIED_DATE = '2025-03-14' # by RJH
+LAST_MODIFIED_DATE = '2025-09-18' # by RJH
 SHORT_PROGRAM_NAME = "convert_ClearMaculaOT_to_our_TSV"
 PROGRAM_NAME = "Extract and Apply Macula OT glosses"
-PROGRAM_VERSION = '0.54'
+PROGRAM_VERSION = '0.55'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -745,7 +746,10 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                     # Do some on-the-fly fixes
                     # Note: We can't handle the logic below with our SBE tables
                     if gloss:
-                        if 'temple' in gloss:
+                        if gloss == '(plunder':
+                            print( f"Changing gloss '(plunder' to 'plunder' for {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
+                            gloss = 'plunder'
+                        elif 'temple' in gloss:
                             # print( f"{theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
                             if 'ה' in wordOrMorpheme and 'כ' in wordOrMorpheme and 'ל' in wordOrMorpheme:
                                 # 'הֵיכַל' (hēykal) is ok
@@ -1048,6 +1052,7 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                     #     print( f"   Have '[is]' in {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
                     if gloss in ('[is]','[was]') or English in ('[is]','[was]') \
                     or (gloss and gloss[0]=='[' and gloss[-1]==']' and '_' not in gloss) \
+                    or gloss=='(plunder' or English=='(plunder' \
                     or (English and English[0]=='[' and English[-1]==']' and '_' not in English):
                         print( f"   Have potential problem in {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
                         halt
