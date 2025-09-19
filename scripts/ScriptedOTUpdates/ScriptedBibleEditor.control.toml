@@ -9,7 +9,7 @@
 #   tableName = "filepath"
 #
 
-title = "ScriptedBibleEditor OET-LV-OT Sample Control File"
+title = "ScriptedBibleEditor OET-LV-OT Control File"
 description = "To convert USFM files to create the draft OET-LV-OT"
 
 inputFolder = "../../intermediateTexts/modified_source_glossed_OSHB_ESFM/"

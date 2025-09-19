@@ -1,4 +1,4 @@
-\id 1CH - Open English Translation—Readers’ Version (OET-RV) v0.0.17
+\id 1CH - Open English Translation—Readers’ Version (OET-RV) v0.0.20
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 CH1
@@ -10,8 +10,8 @@
 \mt1 1 Chronicles
 \is1 Introduction
 \ip The \bk First\bk* and the \bk Second Account of Krunikas\bk* migguhud just also of \bk Account of Shemuel\bk* and of \bk Account of kings\bk* but told of different means. There is just two important very purpose if why of it’s written the persecution of Israelis and the commanding of kings:
-\ip 1.) Eyew egkanengnengan of reader even still of destruction nabayaan of Yehudah and of Yisrael (Israel), intuman just of God his promise and the implanu his there to people. Impamalehetan this of writer by means of telling he/his of neneyimu of David, of Solomon, of Hihusapat, of Isikiyas, of Husiyas, and there to people obedient of God.
-\ip 2.) Eyew of pegpahunsiling there to people if how of worshipping the God there to temple his there to Yerushalem greatest of all there to priests and Levites is doing of worshipping. And/Now reveal again this David the true/correct pabeginning of temple even if Solomon e the nakapasasindeg here.
+\ip 1. Eyew egkanengnengan of reader even still of destruction nabayaan of Yehudah and of Yisrael (Israel), intuman just of God his promise and the implanu his there to people. Impamalehetan this of writer by means of telling he/his of neneyimu of David, of Solomon, of Hihusapat, of Isikiyas, of Husiyas, and there to people obedient of God.
+\ip 2. Eyew of pegpahunsiling there to people if how of worshipping the God there to temple his there to Yerushalem greatest of all there to priests and Levites is doing of worshipping. And/Now reveal again this David the true/correct pabeginning of temple even if Shelomoh (Solomon) e the nakapasasindeg here.
 \iot Main components of this document
 \io1 The elders and the lists \ior 1:1–9:44\ior*
 \io1 The dying of Saul \ior 10:1-14\ior*
@@ -169,7 +169,7 @@
 \v 49 She also gave birth to Shaaph (the father of Madmannah), Sheva (father of Makbenah and Gibea), and Kalev’s daughter Aksah.
 \p
 \v 50 These people were \add also\add* descendants of Kalev: \add His other wife\add* Efratah had a son Hur. Hur’s sons were Shobal (\add founder\add* of Kiriat-Yearim \add city\add*),
-\v 51 Salma (\add founder\add* of Beyt-Lehem \add (Bethlehem)\add*), \add and\add* Haref (\add founder\add* of Beyt-Gader).
+\v 51 Salma (\add founder\add* of Beyt-Lehem), \add and\add* Haref (\add founder\add* of Beyt-Gader).
 \v 52 The descendants of Shobal (\add founder\add* of Kiriat-Yearim) were Haroeh, half of the Manahatites,
 \v 53 and the clans from Kiriat-Yearim: the Yitrites, the Putites, the Shumatites, and the Mishraites. From those came the Zoratites and Eshtaolites.
 \v 54 Salma’s descendants were \add the people of\add* Beyt-Lehem, the Netofatites, the clan of Atrot-Beyt-Yoav, half of the Manahatites, \add who were also\add* Zorites.
@@ -281,7 +281,7 @@
 \v 7 His brothers by their clans, \add as listed in their genealogical records\add*: Yeiel the leader, Zekaryah,
 \v 8 Bela son of Azaz, son of Shema, son of Yoel. Reuben’s clan lived near the city of Aroer \add as far north as the cities of\add* Nevo and Baal-Meon.
 \v 9 \add Some of them lived further\add* east, as far as the edge of the desert that extends to the Euphrates River, because their livestock had multiplied \add back\add* in the Gilead region.
-\v 10 (In the days of \add King\add* Shaul \add (Saul)\add*, they’d battled with the Hagrites and \add defeated them, so then\add* they’d lived in their tents over all \add eastern\add* Gilead.)
+\v 10 (In the days of \add King\add* Shaul, they’d battled with the Hagrites and \add defeated them, so then\add* they’d lived in their tents over all \add eastern\add* Gilead.)
 \s1 Gad’s descendants
 \p
 \v 11 Gad’s descendants lived opposite them in the Bashan region as far as Salkah:
@@ -311,7 +311,7 @@
 \p
 \v 1 Levi’s sons were Gershon, Kohat, and Merari.
 \p
-\v 2 Kohath’s sons were Amram, Yitshar, Hevron, and Uzziel.
+\v 2 Kohat’s sons were Amram, Yitshar, Hevron, and Uzziel.
 \p
 \v 3 Amram’s children were Miryam \add (Miriam)\add*, Aharon \add (Aaron)\add*, and Mosheh \add (Moses)\add*.
 \p Aharon’s sons were Nadav, Avihu, Eleazar, and Ithamar.
@@ -437,7 +437,7 @@
 \p
 \v 77 Merari’s descendants \add received cities and\add* pasturelands from the tribe of Zevulun near Rimmono and Tabor.
 \p
-\v 78 From the tribe of Reuven across the Yordan River (opposite Yereho \add (Jericho)\add*), \add they were allotted cities and towns and\add* pastureland near Betser in the wilderness, Yahtsah,
+\v 78 From the tribe of Reuven across the Yordan River (opposite Yereho), \add they were allotted cities and towns and\add* pastureland near Betser in the wilderness, Yahtsah,
 \v 79 Kedemot, and Mefaat.
 \p
 \v 80 From the tribe of Gad, \add they received cities and\add* pastureland near Ramot in the Gilead region, Mahanayim,
@@ -605,157 +605,114 @@
 \v 22 \add Altogether, there were 212 men chosen to guard the gates\add*. \add The records of the clans in their villages listed their names\add*. \add King\add* David and \add the prophet\add* Shemuel \add (Samuel)\add* \add appointed them because they were dependable\add*.
 \v 23 They and their sons \add watched\add* over the gates of Yahweh’s house, i.e., the \add sacred\add* tent, as guards.
 \v 24 There were gatekeepers on each of the \add temple’s\add* four sides: east, west, north, and south.
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
+\v 25 Their relatives in their villages would come in from time to time \add to relieve them\add* for seven days
+\v 26 because the four leaders of the gatekeepers were Levites, and they were \add also\add* \add trusted to supervise\add* the chambers and the treasuries in God’s residence.
+\v 27 They would \add spend the night\add* around the \add temple\add* while they were in charge, and \add would open it with the key each\add* morning.
 \p
-\v 28 ◙
-\v 29 ◙
-\v 30 ◙
+\v 28 Some of them \add monitored the utensils used in the activities\add*—counting them as they brought them out and \add when they put them away\add* \add again\add*.
+\v 29 \add Others\add* took care of the containers and utensils used in the santuary, along with the fine flour, the wine and oil, and the frankincense and spices.
+\v 30 Some of the priests mixed \add the fragrances and\add* spices.
 \p
-\v 31 ◙
-\v 32 ◙
+\v 31 There was a Levite \add named\add* Mattithiah (the oldest son of Shallum, who was a descendant of Korah) whose official duty \add was supervising the baking of the flat breads\add*.
+\v 32 Some of Kohat’s descendants prepared the rows of bread to \add laid out on the sacred table\add* every rest day.
 \p
-\v 33 ◙
-\v 34 ◙
-\s1 The ancestor(s) and descendants of King Saul
+\v 33 Some of Levi’s descendants were \add temple musicians and\add* singers. The leaders of those families stayed in the temple accommodations. They \add didn’t have other duties\add* because they they \add were expected to\add* serve day and night.
+\v 34 Those were the heads of the Levite \add families\add* according to their generations \add and\add* they lived in Yerushalem.
+\s1 King Shaul’s ancestors and descendants
 \r (1 Chr. 8:29-38)
 \p
-\v 35 ◙
-\v 36 ◙
-\v 37 ◙
-\v 38 ◙
+\v 35 \add Another descendant of Benyamin was\add* Yeiel. He was \add a founder\add* of Gibeon \add city\add* and lived there. His wife was Maakah.
+\v 36 His oldest son was Avdon, and his other sons were Tsur, Kish, Baal, Ner, Nadav,
+\v 37 Gedor, Ahyo, Zekaryah, and Miklot.
+\v 38 Miklot was the father of Shimeam. They also lived \add near\add* their relatives in Yerushalem.
 \p
-\v 39 ◙
-\v 40 ◙
-\v 41 ◙
-\v 42 ◙
-\v 43 ◙
+\v 39 Ner was the father of Kish. Kish was the father of \add King\add* Shaul \add (Saul)\add*. Shaul was the father of Yonatan \add (Jonathan)\add*, Malki-Shua, Avinadav, and Esh-Baal.
+\v 40 Yonatan’s son was Meriv-Baal. Meriv-Baal was the father of Mikah.
+\v 41 Mikah’s sons were Piton, Melek, and Tahrea.
+\v 42 Ahaz was the father of Yarah. Yarah was the father of Alemet, Azmavet, and Zimri. Zimri was the father of Motsa.
+\v 43 Moza was the father of Binea. Refayah was Binea’s son. Eleasah was Refayah’s son. Atsel was Eleasah’s son.
 \p
-\v 44 ◙
+\v 44 Atsel had six sons named Azrikam, Bokeru, Yishmael, Shearyah, Ovadyah, and Hanan.
 \c 10
-\s1 The death of King Saul and of his children
+\s1 The death of King Shaul and his sons
 \s4 Full kingdom
 \r (1 Sam. 31:1-13)
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
+\v 1 \add Now\add* the Philistines fought against Yisrael and the Israeli men fled \add away\add* from the Philistines, and \add many were killed\add* on Mt. Gilboa.
+\v 2 Then the Philistines pursued after Shaul and after his sons, and \add they\add* \add killed\add* \add his\add* sons Yonatan, Avinadav, and Malki-Shua.
+\v 3 The battle against Shaul was very fierce, \add but then\add* the archers spotted him and wounded him.
+\v 4 Then Shaul said to his equipment carrier, “Draw your sword and pierce me with it, so those uncircumcised \add Philistines\add* \add can’t come here\add* and torture me.” But his equipment carrier was very scared and wasn’t willing to do it, so Shaul took \add his\add* sword and fell onto it.
+\v 5 Then his equipment carrier, seeing that \add King\add* Shaul had died, he himself fell on \add his\add* sword and died.
+\v 6 \add So\add* Shaul and his three sons died, \add thus ending his family’s rule\add*.
+\v 7 \add When all the Israelis living\add* in the valley saw that \add the army\add* had fled, and that Shaul and his sons were dead, they abandoned their cities and fled. Then the Philistines came, and they lived in them \add instead\add*.
 \p
-\v 8 ◙
-\v 9 ◙
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\v 13 \x + \xo 10:13: a \xt 1Sam 13:8-14; 15:1-24; \xo b \xt Lev 19:31; 20:6; 1Sam 28:7-8.\x*◙
-\v 14 ◙
+\v 8 The next day \add when\add* the Philistines came to strip the dead, they found \add the bodies of\add* Shaul and his sons on Mt. Gilboa.
+\v 9 They stripped him and carried away his head and his armour. Then they sent \add messengers\add* all around the Philistine \add regions\add* to take the news to their idols and the people.
+\v 10 They put his armour in the \add temple\add* of their gods, and they hung his head in \add their god\add* Dagon’s \add temple\add*.
+\v 11 \add When\add* everyone who lived \add back\add* in Yavesh in the Gilead region heard about everything that the Philistines had done to Shaul,
+\v 12 all the strong men \add took action\add* and \add retrieved\add* the corpses of Shaul and his sons, and brought them \add back\add* to Yavesh. Then they buried \add them\add* under the large tree in Yavesh, and they fasted seven days.
+\v 13 \add So\add* Shaul died because of his \add disobedience\add*—when he was unfaithful to Yahweh \add by not following Yahweh’s instructions\add*, and also \add because he consulted medium\add* \add for guidance\add*\x + \xo 10:13: a \xt 1Sam 13:8-14; 15:1-24; \xo b \xt Lev 19:31; 20:6; 1Sam 28:7-8.\x*
+\v 14 \add instead of requesting Yahweh’s advice\add*. \add So\add* \add Yahweh\add* killed him and handed the kingdom over to Yishay’s son David.
 \c 11
-\s1 The actions of David King
+\s1 David becomes king
 \s4 Full kingdom
 \r (2 Sam. 5:1-10)
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
+\v 1 Then all Yisrael assembled around David at Hevron, saying, “Look, we’re your flesh and bone \add relatives\add*.
+\v 2 \add In the recent past\add*, even when Shaul was king, \em you\em* were the one who took Yisrael out and the one who brought us back in. Plus your God Yahweh told you, ‘You yourself will shepherd my people, Yisrael, and you yourself will become leader of my Israeli people.’ ”
+\v 3 \add So\add* all the Israeli elders went to the king at Hevron, and David made a solemn agreement with them at Hevron \add in front\add* of Yahweh. Then they anointed David as king over Yisrael according to Yahweh’s message \add that was given through\add* \add the prophet\add* Shemuel \add (Samuel)\add*.
 \p
-\v 4 \x + \xo 11:4: \xt Josh 15:63; Jdg 1:21.\x*◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
-\s1 The heroes of David
+\v 4 Then David and all Israel went to Yerushalem (\add Jerusalem, which was also known as\add* Yevus \add because the Yevusites were living there\add*).\x + \xo 11:4: \xt Josh 15:63; Jdg 1:21.\x*
+\v 5 The inhabitants \add inside\add* Yevus said to David, “You won’t \add be entering this place\add*.” But David captured \add what became known as\add* the Zion stronghold, that is, the city of David.
+\v 6 \add He\add* had said, “Whoever strikes down the Yevusites first will become \add my army commander\add*.” Tseruyah’s son Yoav went up \add over the wall\add* first, and he became head \add of the army\add*.
+\v 7 David \add started\add* living in that stronghold, so then they called it the city of David.
+\v 8 He built the city up all around, from the terrace \add to the surrounding walls\add*, and Yoav restored the rest of the city.
+\v 9 \add So\add* David \add became more powerful because\add* army commander Yahweh \add helped\add* him.
+\s1 David’s powerful warriors
 \s4 Full kingdom
 \p
-\v 10 ◙
+\v 10 The following were the leaders of David’s powerful warriors who together with all Yisrael, strengthened his kingdom and established him as king, \add just as\add* Yahweh had said.
+\v 11 \add So\add* these are David’s powerful warriors: Yashaveam (a Hakmonite \add and\add* the leader of the thirty) once \add used\add* his spear against three hundred men in a single battle and killed them all.
+\v 12 Next was Eleazar (an Ahohite, son of Dodo) who was one of the \add top\add* three powerful warriors.
+\v 13 He was with David at Pas-Dammim \add when\add* the Philistines had assembled there for battle \add near\add* a part of the countryside \add where barley was growing\add*. \add At first, the Israelis\add* fled from the Philistines,
+\v 14 \add but then\add* they took their stand in the middle of the \add barley\add* and \add proceeded to defeat\add* the Philistines \add as\add* Yahweh saved them through a stunning victory.
 \p
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
+\v 15 Then three of that top thirty went down to David, near the rock at Adullam’s cave. \add Meanwhile,\add* Philistines had encamped in the Refaim Valley.
+\v 16 David was in that stronghold then, and the Philistine garrison was in Beyt-Lehem
+\v 17 and David \add was thirsty and asked\add*, “Who’ll get me water to drink from the well by the Beyt-Lehem gate?”
+\v 18 \add So those\add* three broke through the Philistine camp, and they drew water from the well at the Beyt-Lehem gate, and they brought it back to David. \add But\add* David wasn’t willing to drink it, and he poured it out \add on the ground as an offering\add* to Yahweh.
+\v 19 “Far be it from me before my God \add to drink this water\add*,” he said. “Could I drink the blood of these men \add who risked\add* their lives to bring it?” \add So\add* he wasn’t \add prepared\add* to drink it. Those were \add some of the things\add* that those three powerful warriors did.
 \p
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
+\v 20 Yoav’s brother Abshai, was the head of a group of three. He had killed three hundred with is spear and had a reputation among the three.\f + \fr 11:20 \ft This seems unexpectedly similar to verse 11 and might possibly indicate some confusion in the early records.\f*
+\v 21 He was honoured more than the other two and became the leader of that \add second\add* group of three, \add but\add* didn’t enter the \add first\add* Three.
 \p
-\v 20 ◙
-\v 21 ◙
+\v 22 Yehoyada’s son Benayah from Kavtse’el was a powerful warrior who did amazing things. He struck down Ariel’s two \add sons\add* from Moab. \add Another time,\add* he climbed down into a pit on a snowy day and killed the lion \add that was trapped\add* in the pit.
+\v 23 He \add also\add* \add killed\add* a \add huge\add* Egyptian man—well over 2m tall. The Egyptian \add was carrying\add* a spear like a weaver’s beam, but \add Benayah\add* went down to \add take him on\add* with a staff. He forced the spear from the Egyptian’s \add grasp\add*, and then killed him with \add it\add*.
+\v 24 \add So\add* that was what Benayah (Yehoyada’s son) did \add that gave him a reputation\add* among the three powerful warriors.
+\v 25 \add Actually,\add* he was honoured more than the Thirty, \add yet\add* he didn’t \add make it to\add* the \add first\add* Three, \add but\add* David \add appointed\add* him over his bodyguards.
 \p
-\v 22 ◙
-\v 23 ◙
-\v 24 ◙
-\v 25 ◙
-\p
-\v 26 ◙
-\li1 …
-\li1 …
-\li1
-\v 27 ◙
-\li1 …
-\li1
-\v 28 ◙
-\li1 …
-\li1
-\v 29 ◙
-\li1 …
-\li1
-\v 30 ◙
-\li1 …
-\li1
-\v 31 ◙
-\li1 …
-\li1
-\v 32 ◙
-\li1 …
-\li1
-\v 33 ◙
-\li1 …
-\li1
-\v 34 ◙
-\li1 …
-\li1
-\v 35 ◙
-\li1 …
-\li1
-\v 36 ◙
-\li1 …
-\li1
-\v 37 ◙
-\li1 …
-\li1
-\v 38 ◙
-\li1 …
-\li1
-\v 39 ◙
-\li1 …
-\li1
-\v 40 ◙
-\li1
-\v 41 ◙
-\li1 …
-\li1
-\v 42 ◙
-\li1
-\v 43 ◙
-\li1 …
-\li1
-\v 44 ◙
-\li1 …
-\li1
-\v 45 ◙
-\li1
-\v 46 ◙
-\li1 …
-\li1 …
-\li1
-\v 47 ◙
-\li1 …
+\v 26 These are the names of the powerful warriors: Asahel (Yoav’s brother), Elhanan (Dodo’s son from Beyt-Lehem),
+\v 27 Shammot (from Haror), Helets (from Pelon),
+\v 28 Ira (Ikkesh’s son from Tekoa), Aviezer (from Anatot),
+\v 29 Sibbekai (from Hushah), Ilai (from Ahoh),
+\v 30 Maharai (from Netofah), Heled (Baanah’s son from Netofah),
+\v 31 Itai (Rivai’s son from Giveah which belonged to Benyamin’s descendants), Benayah (from Piraton),
+\v 32 Hurai (from the valleys near Mt. Gaash), Aviel (from Aravah),
+\v 33 Azmavet (from Baharum), Elyahba (from Shaalvon),
+\v 34 Hashem’s sons (from Gizon), Yonatan (Shagee’s son from Harar),
+\v 35 Ahiam (Sakar’s son from Harar), Elifal (Ur’s son),
+\v 36 Hefer (from Mekerat), Ahiyyah (from Pelon),
+\v 37 Hezro (from Karmel), Naarai (Ezbai’s son),
+\v 38 Yoel (Natan’s brother), Mivhar (Hagri’s son),
+\v 39 Tselek (the Ammonite), Naharai (from Beerot, armour bearer for Tseruyah’s son Yoav),
+\v 40 Ira (the Yitrite), Garev (the Yitrite),
+\v 41 Uryyah (Bat-Sheba’s husband the Hittite), Zavad (Ahlai’s son),
+\v 42 Adina (Shiza’s son from the tribe of Reuven, a leader from that tribe who had thirty soldiers with him),
+\v 43 Hanan (Maakah’s son), Yoshafat (from Mithna),
+\v 44 Uzziyya (from Ashterat), Shama and Yeiel (Hotam’s sons from Aroer),
+\v 45 Yediael (Shimri’s son) and his brother Yoha (from Tiz),
+\v 46 Eliel (from Mahavah), Yerivai and Yoshaviah (Elnaam’s sons), Yitmah (from Moav),
+\v 47 Eliel and Obed, and Yaasiel (from Zobah).
 \c 12
 \s1 The heroes accompanied to David
 \s4 Full kingdom

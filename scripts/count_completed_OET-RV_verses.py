@@ -40,6 +40,7 @@ from typing import List, Tuple, Optional
 from pathlib import Path
 import glob
 import os.path
+from datetime import date, timedelta
 
 if __name__ == '__main__':
     import sys
@@ -54,10 +55,10 @@ from BibleOrgSys.Reference.BibleVersificationSystems import BibleVersificationSy
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2025-08-09' # by RJH
+LAST_MODIFIED_DATE = '2025-09-18' # by RJH
 SHORT_PROGRAM_NAME = "count_completed_OET-RV_verses"
 PROGRAM_NAME = "Count completed OET-RV verses"
-PROGRAM_VERSION = '0.25'
+PROGRAM_VERSION = '0.30'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -149,7 +150,19 @@ def main():
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"OET-RV NT has {finishedNTVerses:,}/{totalNTVerses:,} verses finished = {finishedNTVerses*100//totalNTVerses}%. (Approx {finishedNTChapters:,}/{totalNTChapters:,} = {finishedNTChapters*100//totalNTChapters}% chapters.)\n" )
 
     # Now do whole Bible
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"OET-RV has {finishedVerses:,}/{totalVerses:,} verses finished = {finishedVerses*100/totalVerses:.1f}%. (Approx {finishedChapters:,}/{totalChapters:,} = {finishedChapters*100//totalChapters}% chapters.)\n            {totalVerses-finishedVerses:,} verses still to be drafted.\n" )
+    totalUnfinishedCount = totalVerses - finishedVerses
+    weeklyRatePercentage = 0.55 # i.e., average of 0.1% (31 verses) per day for 5.5 days per week
+    weeklyRateString = f'{weeklyRatePercentage}% per week'
+    weeklyVerseRate = totalVerses * weeklyRatePercentage / 100.0
+    dailyVerseRate = weeklyVerseRate / 7
+    # print( f"{weeklyRatePercentage=} {weeklyVerseRate=} {dailyVerseRate=}" )
+    numRemainingWeeks = int( totalUnfinishedCount / weeklyVerseRate + 0.5 )
+    numRemainingDays = int( totalUnfinishedCount / dailyVerseRate + 0.5 )
+    draftingFinishDateString = f'{date.today() + timedelta(days=numRemainingDays)} next year'
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"OET-RV has {finishedVerses:,}/{totalVerses:,} verses finished = {finishedVerses*100/totalVerses:.1f}%. (Approx {finishedChapters:,}/{totalChapters:,} = {finishedChapters*100//totalChapters}% chapters.)" )
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"            {totalUnfinishedCount:,} verses still to be drafted" )
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"              at the rate of {weeklyRateString} expected to take {numRemainingDays:,} days ({numRemainingWeeks:,} weeks)" )
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"              so expecting drafting to be finished {draftingFinishDateString}.\n" )
 # end of count_completed_OET-RV_verses.main
 
 

@@ -75,7 +75,7 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-08-24' # by RJH
+LAST_MODIFIED_DATE = '2025-09-16' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.78'
@@ -1259,6 +1259,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('pleasing', 'acceptable'),
             ('requested', 'requesting'),
             # Vocab differences / synonyms
+            ('afraid','feared'),
             ('agreeing','confirming'),
             ('amazed','astonished'),
             ('amazed','marvelling'),
@@ -1350,6 +1351,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
             ('rock','stone'),('rocks','stones'),
             ('room','place'),
             ('sacred','holy'),
+            ('scared','feared'),
             ('scoffed','mocking'),
             ('See','Behold'),
             ('should','let'),

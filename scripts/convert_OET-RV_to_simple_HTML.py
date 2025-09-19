@@ -39,6 +39,7 @@ CHANGELOG:
     2025-06-10 Allow /s4 (which we use for kingdoms)
     2025-06-24 Check for footnotes and xrefs ending in space
     2025-09-12 Handle bridged verses
+    2025-09-18 Check equal numbers of open and close parentheses
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -60,10 +61,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Internals.InternalBibleInternals import getLeadingInt
 
 
-LAST_MODIFIED_DATE = '2025-09-12' # by RJH
+LAST_MODIFIED_DATE = '2025-09-19' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
-PROGRAM_VERSION = '0.85'
+PROGRAM_VERSION = '0.86'
 PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
 
 DEBUGGING_THIS_MODULE = False
@@ -801,6 +802,7 @@ def produce_HTML_files() -> None:
                         vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Read {len(word_table):,} lines from word table at {word_table_filepath}." )
                 else:
                     logging.critical( f"No ESFM word-table defined in {BBB} book from {source_filename}" )
+            assert esfm_text.count('(') == esfm_text.count(')'), f"Why do we have OET-RV_{BBB}.usfm {esfm_text.count('(')=} and {esfm_text.count(')')=}"
             assert esfm_text.count('‘') >= esfm_text.count('’'), f"Why do we have OET-RV_{BBB}.ESFM {esfm_text.count('‘')=} and {esfm_text.count('’')=}"
             assert esfm_text.count('“') >= esfm_text.count('”'), f"Why do we have OET-RV_{BBB}.ESFM {esfm_text.count('“')=} and {esfm_text.count('”')=}"
             esfm_text = esfm_text.replace( "'", "’" ) # Replace apostrophes
