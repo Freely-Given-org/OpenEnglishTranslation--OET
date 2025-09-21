@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2025-09-18 22:16 by extract_glossed_OSHB_OT_to_ESFM v0.62
+\rem ESFM file created 2025-09-21 20:43 by extract_glossed_OSHB_OT_to_ESFM v0.62
 \rem USFM file edited by ScriptedBibleEditor v0.34
 \h Nəḩem\sup yāh\sup*
 \toc1 Nəḩem\sup yāh\sup*
@@ -14,14 +14,14 @@
 \mt1 Nəḩem\sup yāh\sup*
 \c 1
 \nb
-\v 1 the_words_of Nəḩem\sup yāh\sup* the_son_of Ḩₐkal\sup yāh\sup* and=he/it_was in/on/at/with÷month_of Kişlēv\f + \fr 1:1 \ft OSHB variant note: כסלו: (x-qere) 'כִּסְלֵיו֙': lemma=3691 n=0.1.0 morph=HNp id=16LN3 כִּסְלֵיו֙\f* year_of twenty and÷I I_was in/on/at/with÷Shūshan the÷citadel.
+\v 1 the_messages_of Nəḩem\sup yāh\sup* the_son_of Ḩₐkal\sup yāh\sup* and=he/it_was in/on/at/with÷month_of Kişlēv\f + \fr 1:1 \ft OSHB variant note: כסלו: (x-qere) 'כִּסְלֵיו֙': lemma=3691 n=0.1.0 morph=HNp id=16LN3 כִּסְלֵיו֙\f* year_of twenty and÷I I_was in/on/at/with÷Shūshan the÷citadel.
 \v 2 And= Ḩₐnānī =came one of÷brothers_of÷my he and÷men from÷Yəhūdāh/(Judah) and÷asked÷them on the÷Yəhūdī/(Jews) the÷escaped who they_remained from the÷captivity and÷about Yərūshālam/(Jerusalem).
 \v 3 And=they_said to=me the÷remnant who they_have_remained from the÷captivity there in/on/at/with÷province in/on/at/with÷trouble great and÷in/on/at/with÷disgrace and÷wall_of Yərūshālam/(Jerusalem) \add is\add*_broken_down and÷gates_of÷its they_have_been_burned in/on/at/with÷fire.
-\v 4 And=he/it_was when÷heard÷I DOM the÷words the=these I_sat_down and÷wept and÷mourned days and÷was fasting and÷praying to=(the)_face_of/in_front_of/before the_god_of the=heavens.
+\v 4 And=he/it_was when÷heard÷I DOM the÷messages the=these I_sat_down and÷wept and÷mourned days and÷was fasting and÷praying to=(the)_face_of/in_front_of/before the_god_of the=heavens.
 \v 5 And÷said please Oh_\nd YHWH\nd* the_god_of the=heavens the÷god the÷great and÷the÷awesome \add who\add*_keeps the÷covenant and÷steadfast_love with÷love_of÷him and÷for÷keep_of commands_of÷his.
 \v 6 Let_it_be please ear_of÷your attentive and÷eyes_of÷your open\f + \fr 1:6 \ft OSHB note: We agree with both BHS 1997 and BHQ on an unexpected reading.\f* to÷hear to the_prayer_of servant_of÷your which I \add am\add*_praying to=your=face the=day by_day and÷night on the_people_of Yisrā\sup ʼēl\sup*/(Israel) your=servants and÷confessing on the_sins_of the_people_of Yisrā\sup ʼēl\sup*/(Israel) which we_have_sinned to/for=you(fs) and÷I and÷house_of father's_of÷my we_have_sinned.
 \v 7 Exceedingly_(corruptly) we_have_acted_corruptly to/for=you(fs) and=not we_have_kept DOM the÷commands and=DOM the÷regulations and=DOM the÷ordinances which you_commanded DOM Mosheh servant_of÷your.
-\v 8 Remember please DOM the÷word which you_commanded DOM Mosheh servant_of÷your to=say you_all you_all_will_act_unfaithfully I I_will_scatter DOM÷you_all in/on/at/with÷peoples.
+\v 8 Remember please DOM the÷message which you_commanded DOM Mosheh servant_of÷your to=say you_all you_all_will_act_unfaithfully I I_will_scatter DOM÷you_all in/on/at/with÷peoples.
 \v 9 And÷return to=me and÷keep commands_of÷my and÷do DOM=them if it_will_be outthrows_of÷your_all's in/on/at/with÷farthest_of the=heavens from=there gather÷them and÷bring÷them\f + \fr 1:9 \ft OSHB variant note: ו/הבואתי/ם: (x-qere) 'וַ/הֲבִֽיאוֹתִי/ם֙': lemma=c/935 n=0.2.0 morph=HC/Vhq1cs/Sp3mp id=16sKn וַ/הֲבִֽיאוֹתִי/ם֙\f* to the÷place where I_have_chosen to÷dwell DOM name_of÷my there.
 \v 10 And÷they your=servants and÷people_of÷your whom you_redeemed in/on/at/with÷power_of÷your the÷great and÷in/on/at/with÷hand_of÷your the÷strong.
 \v 11 Please my=master let_it_be please ear_of÷your attentive to the_prayer_of servant_of÷your and=near/to the_prayer_of your=servants the÷delight to÷revere DOM your(ms)=name and÷give_success please to÷servant_of÷your the=day and÷grant÷him with÷compassion to=(the)_face_of/in_front_of/before the=man the=this and÷I I_was cup_bearer to_the÷king.
@@ -44,9 +44,9 @@
 \v 15 And÷I_was going_up in/on/at/with÷valley night and÷was examining in/on/at/with÷wall and÷turned_back and÷entered in/on/at/with÷gate_of the÷valley and÷returned.
 \v 16 And÷the÷officials not they_knew where had_I_gone and÷what \add was\add*_I doing and÷to_the÷Yəhūdī/(Jews) and÷to_the÷priests and÷to_the÷nobles and÷to_the÷officials and÷to÷rest_of the_doer[s]_of the÷work until thus not I_had_told.
 \v 17 And÷said to÷them you_all \add are\add*_seeing the÷trouble which we in/on/at/with÷her (cmp) Yərūshālam/(Jerusalem) \add is\add*_desolate and÷gates_of÷its they_have_been_burned in/on/at/with÷fire come and÷rebuild DOM the_wall_of Yərūshālam/(Jerusalem) and=not we_will_be again a_reproach.
-\v 18 And÷told to/for=them DOM the_hand_of god_of÷my (cmp) it \add had_been\add*_good upon÷me and÷also the_words_of the=king which he_had_spoken to=me and=they_said let_us_arise and÷build and÷strengthened hands_of÷their to_the÷good.
+\v 18 And÷told to/for=them DOM the_hand_of god_of÷my (cmp) it \add had_been\add*_good upon÷me and÷also the_messages_of the=king which he_had_spoken to=me and=they_said let_us_arise and÷build and÷strengthened hands_of÷their to_the÷good.
 \v 19 and= Şanⱱallaţ =he/it_listened the÷Ḩōrōnite and÷Ţōⱱiy\sup yāh\sup* the÷official the÷ˊAmmōnī and÷Geshem the÷ˊArāⱱī and÷mocked to/for=us and÷despised at÷us and=they_said what the÷thing the=this which you_all \add are\add*_doing against the=king \add are\add*_you_all rebelling.
-\v 20 And÷gave DOM÷them word and÷said to/for=them the_god_of the=heavens he he_will_grant_success to/for=us and÷we servants_of÷his we_will_arise and÷build and÷have÷you_all there_\add is\add*_not a_share and÷right and÷memorial in/on/at/with÷Yərūshālam/(Jerusalem).
+\v 20 And÷gave DOM÷them message and÷said to/for=them the_god_of the=heavens he he_will_grant_success to/for=us and÷we servants_of÷his we_will_arise and÷build and÷have÷you_all there_\add is\add*_not a_share and÷right and÷memorial in/on/at/with÷Yərūshālam/(Jerusalem).
 \c 3
 \nb
 \v 1 And= ʼElyāshiyⱱ =he/it_rose_up the=priest/officer the÷high and÷fellow_of÷his the÷priests and÷rebuilt DOM the_gate_of the÷sheep they consecrated÷it and÷set_up doors_of÷its and=unto the_tower_of the÷Hundred consecrated÷it to the_tower_of Ḩₐnan\sup ʼēl\sup*.
@@ -113,9 +113,9 @@
 \v 3 And÷there_were \add those\add*_who \add were\add*_saying fields_of÷our and÷vineyards_of÷our and÷houses_of÷our we \add are\add*_mortgaging and÷get grain in/on/at/with÷famine.
 \v 4 And÷there_were \add those\add*_who \add were\add*_saying we_have_borrowed money for÷tax_of the=king fields_of÷our and÷vineyards_of÷our.
 \v 5 And=now like÷flesh_of brothers_of÷our flesh_of÷our as÷children_of÷their children_of÷our and=see/lo/see we \add are\add*_forcing_into_slavery DOM sons_of÷our and=DOM daughters_of÷our to÷slaves and÷there_are some_of÷daughters_of÷our \add are_being\add*_forced_into_slavery and÷not in÷power_of help_of÷we and÷fields_of÷our and÷vineyards_of÷our belong_to÷others.
-\v 6 And=it_glowed/burned to=me exceedingly just=as I_heard DOM outcry_of÷their and=DOM the÷words the=these.
+\v 6 And=it_glowed/burned to=me exceedingly just=as I_heard DOM outcry_of÷their and=DOM the÷messages the=these.
 \v 7 heart_of÷my And÷pondered with÷myself and÷accused with the÷nobles and=DOM the÷officials and÷said to/for=them usury\f + \fr 5:7 \ft OSHB note: We read one or more accents in L differently from BHQ.\f* each in/on/at/with÷brother_of÷his you_all \add are\add*_lending\f + \fr 5:7 \ft OSHB variant note: נשאים: (x-qere) 'נֹשִׁ֑ים': lemma=5383 n=1 morph=HVqrmpa id=16kWB נֹשִׁ֑ים\f*\f + \fr 5:7 \ft OSHB note: Marks a place where we agree with BHQ against BHS in reading L.\f*\f + \fr 5:7 \ft OSHB note: We have abandoned or added a ketib/qere relative to BHS. In doing this we agree with L against BHS.\f* and÷called against÷them an_assembly great.
-\v 8 And÷said to/for=them we we_have_bought DOM brothers_of÷our the÷Yəhūdī/(Jewish) the÷sold to_the÷nations as_far_as÷able_of in/on/at/with÷we and=also you_all you_all_sold DOM brothers_of÷your_all's and÷sold to/for=us and÷silent and=not they_found a_word.
+\v 8 And÷said to/for=them we we_have_bought DOM brothers_of÷our the÷Yəhūdī/(Jewish) the÷sold to_the÷nations as_far_as÷able_of in/on/at/with÷we and=also you_all you_all_sold DOM brothers_of÷your_all's and÷sold to/for=us and÷silent and=not they_found a_message.
 \v 9 and÷said\f + \fr 5:9 \ft OSHB variant note: ו/יאמר: (x-qere) 'וָ/אוֹמַ֕ר': lemma=c/559 n=1.1 morph=HC/Vqw1cs id=16TmV וָ/אוֹמַ֕ר\f*\f + \fr 5:9 \ft OSHB note: Marks a place where we agree with BHQ against BHS in reading L.\f*\f + \fr 5:9 \ft OSHB note: We read one or more consonants in L differently from BHS.\f* not \add is\add*_good the÷thing which you_all \add are\add*_doing am=not in/on/at/with÷fear_of god_of÷our are_you_all_walking prevent÷reproach_of the=nations enemies_of÷our.
 \v 10 And=also I brothers_of÷my and÷servants_of÷my \add are\add*_lending (is)_in=them money and÷grain let_us_abandon please DOM the÷interest the÷this.
 \v 11 Return please to/for=them as÷the÷day fields_of÷their vineyards_of÷their olive_groves_of÷their and÷houses_of÷their and=one_hundred the÷money and÷the÷grain the÷new_wine and÷the÷oil which you_all \add are\add*_lending in/on/at/with÷them.
@@ -135,7 +135,7 @@
 \v 4 And÷sent to=me in_the÷message the=this four times and÷answered DOM÷them in_the÷manner the÷same.
 \v 5 and÷sent to=me Şanⱱallaţ in_the÷way the=this a_time fifth DOM servant_of÷his and÷letter_of open in=his/its=hand.
 \v 6 \add was\add*_written in/on/at/with÷it in/on/at/with÷nations \add is\add*_heard and÷Geshem \add is\add*_saying you and÷the÷Yəhūdī/(Jews) \add are\add*_planning to÷rebel on/upon/above/on_account_of//he/it_went_in yes/correct/thus/so you \add are\add*_rebuilding the÷wall and=you(ms) \add are\add*_about_to_become to/for=them as÷king according_to_the÷reports the=these.
-\v 7 And=also prophets you_have_appointed to=call concerning÷you in/on/at/with÷Yərūshālam/(Jerusalem) to=say a_king in/on/at/with÷Yəhūdāh/(Judah) and=now it_will_be_heard to/for=the_king according_to_the÷words the=these and=now come and÷confer together.
+\v 7 And=also prophets you_have_appointed to=call concerning÷you in/on/at/with÷Yərūshālam/(Jerusalem) to=say a_king in/on/at/with÷Yəhūdāh/(Judah) and=now it_will_be_heard to/for=the_king according_to_the÷messages the=these and=now come and÷confer together.
 \v 8 and÷sent to=him/it to=say not it_has_occurred such_the÷things the=these which you \add are\add*_saying if/because in÷mind_of÷your_own you inventing_of÷them.\f + \fr 6:8 \ft OSHB note: We agree with both BHS 1997 and BHQ on an unexpected reading.\f*
 \v 9 if/because all_of÷they \add were\add*_making_afraid DOM÷us to=say hands_of÷their they_will_drop from the÷work and=not it_will_be_done and=now strengthen DOM hands_of÷my.
 \v 10 And÷I I_went the_house_of Shəmaˊ\sup yāh\sup* the_son_of Dəlā\sup yāh\sup* the_son_of Məhēyţaⱱ\sup ʼēl\sup* and=he \add was\add*_shut_up and=he/it_said let_us_meet to the_house_of the=ʼElohīm to the_middle_of the÷temple and÷close the_doors_of the÷temple if/because \add people_are\add*_coming to÷kill÷you and÷night \add people_are\add*_coming to÷kill÷you.
@@ -147,7 +147,7 @@
 \v 16 and=he/it_was just=as they_heard all_of enemies_of÷our and=they_saw all_of the=nations which surrounding_of÷us and÷fell exceedingly in/on/at/with÷eyes_of÷their and=they_knew if/because_that from÷with god_of÷our it_had_been_done the÷work the÷this.
 \v 17 Also in_the=days the=those the_nobles_of \add were\add*_multiplying of_Yəhūdāh/(Judah) letters_of÷their \add which_were\add*_going to Ţōⱱiy\sup yāh\sup* and=which from÷Ţōⱱiy\sup yāh\sup* \add were\add*_coming to÷them.
 \v 18 If/because many_\add people\add* in/on/at/with÷Yəhūdāh \add were\add*_masters_of oath to=him/it if/because \add was\add*_a_son-in-law he of÷Shəkan\sup yāh\sup* the_son_of ʼĀraḩ and÷Yəhōḩānān/(Jehohanan) his/its=son he_had_taken DOM the_daughter_of Məshullām the_son_of Berek\sup yāh\sup*.
-\v 19 Also good_deeds_of÷his they_were telling to/for=my=face/front and÷words_of÷my they_were sending_out to=him/it letters Ţōⱱiy\sup yāh\sup* he_sent to÷intimidate÷me.
+\v 19 Also good_deeds_of÷his they_were telling to/for=my=face/front and÷messages_of÷my they_were sending_out to=him/it letters Ţōⱱiy\sup yāh\sup* he_sent to÷intimidate÷me.
 \c 7
 \nb
 \v 1 And=he/it_was just=as it_had_been_rebuilt the÷wall and÷set_up the÷doors and÷appointed the÷gatekeepers and÷the÷singers and÷the÷Lēviyyiy.
@@ -227,16 +227,16 @@
 \v 1 And= all_of =gathered the÷people as÷man one to the÷square which to=(the)_face_of/in_front_of/before the_gate_of the=waters and=they_said to÷ˊEzrāʼ the÷scribe to=bring DOM the_scroll_of the_law_of Mosheh which he_had_commanded \nd YHWH\nd* DOM Yisrā\sup ʼēl\sup*/(Israel).
 \v 2 And= ˊEzrāʼ =brought the=priest/officer DOM the÷law to=(the)_face_of/in_front_of/before the÷assembly from=man and=unto woman and=all/each/any/every \add one_who\add*_understood to÷hear in/on=day one of_the÷month the=seventh.
 \v 3 And=he/it_called in=him/it to=(the)_face_of/in_front_of/before the÷square which to=(the)_face_of/in_front_of/before the_gate_of the=waters from the=light until the_middle_of the=day before the÷men and÷the÷women and÷the÷understand and÷ears_of all_of the÷people \add were\add*_to the_scroll_of the÷law.
-\v 4 And= ˊEzrāʼ =stood the÷scribe on a_high_platform_of wood which people_had_made to=the_word/thing/matter and÷stood beside÷him Mattit\sup yāh\sup* and÷Shemaˊ and÷ˊAnā\sup yāh\sup* and÷ʼŪriy\sup yāh\sup* and÷Ḩilqiy\sup yāh\sup* and÷Maˊₐsē\sup yāh\sup* on right_of÷his and÷on÷left_of÷his Pədā\sup yāh\sup* and÷Mīshā\sup ʼēl\sup* and÷Malkīy\sup yāh\sup* and÷Ḩāshum and÷Ḩashbaddānāh Zəkar\sup yāh\sup* Məshullām.
+\v 4 And= ˊEzrāʼ =stood the÷scribe on a_high_platform_of wood which people_had_made to=the_message/thing/matter and÷stood beside÷him Mattit\sup yāh\sup* and÷Shemaˊ and÷ˊAnā\sup yāh\sup* and÷ʼŪriy\sup yāh\sup* and÷Ḩilqiy\sup yāh\sup* and÷Maˊₐsē\sup yāh\sup* on right_of÷his and÷on÷left_of÷his Pədā\sup yāh\sup* and÷Mīshā\sup ʼēl\sup* and÷Malkīy\sup yāh\sup* and÷Ḩāshum and÷Ḩashbaddānāh Zəkar\sup yāh\sup* Məshullām.
 \v 5 and= ˊEzrāʼ =opened the÷book in÷sight_of all_of the÷people if/because from=under all_of the÷people he_was and÷when÷opened÷he all_of they_stood_up the÷people.
 \v 6 And= ˊEzrāʼ =he/it_blessed DOM \nd YHWH\nd* the=ʼElohīm the÷great and= all_of =answered the÷people amen amen in/on/at/with÷lifting_up_of hands_of÷their and÷bowed_down and÷worshiped to/for=\nd YHWH\nd* face ground÷to.
 \v 7 And÷Yēshūˊa/(Jeshua) and÷Bānī and÷Shērēⱱə\sup yāh\sup*\f + \fr 8:7 \ft OSHB note: We read one or more accents in L differently from BHQ.\f*\f + \fr 8:7 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* Yāmīn/(Jamin) ˊAqqūⱱ Shabtay Hōdiy\sup yāh\sup* Maˊₐsē\sup yāh\sup* Qəlīţāʼ ˊAzar\sup yāh\sup* Yōzāⱱād/(Jozabad) Ḩānān Pəlā\sup yāh\sup* and÷the÷Lēviyyiy \add were\add*_causing_to_understand DOM the÷people from_the÷law and÷the÷people \add were\add*_at places_of÷their.
 \v 8 And÷read in/on/at/with÷book in/on/at/with÷law_of the=ʼElohīm making_clear and÷giving \add the\add*_sense and÷understand in/on/at/with÷reading.
-\v 9 and= Nəḩem\sup yāh\sup* =he/it_said he the÷governor and÷ˊEzrāʼ the=priest/officer the÷scribe and÷the÷Lēviyyiy the÷taught DOM the÷people to/from=all/each/any/every the÷people the=day \add is\add*_holy it to/for=\nd YHWH\nd* god_of÷your_all's do_not mourn and÷not weep if/because all_of \add were\add*_weeping the÷people when÷heard÷they DOM the_words_of the÷law.
+\v 9 and= Nəḩem\sup yāh\sup* =he/it_said he the÷governor and÷ˊEzrāʼ the=priest/officer the÷scribe and÷the÷Lēviyyiy the÷taught DOM the÷people to/from=all/each/any/every the÷people the=day \add is\add*_holy it to/for=\nd YHWH\nd* god_of÷your_all's do_not mourn and÷not weep if/because all_of \add were\add*_weeping the÷people when÷heard÷they DOM the_messages_of the÷law.
 \v 10 And=he/it_said to/for=them go eat fat_foods and÷drink sweet_things and÷send portions to÷nothing a_\add thing\add*_prepared to=him/it if/because \add is\add*_holy the=day to÷master_of÷our and÷not be_grieved if/because the_joy_of \nd YHWH\nd* it strength_of÷your_all's.
 \v 11 And÷the÷Lēviyyiy \add were\add*_making_quiet to/from=all/each/any/every the÷people to=say hush if/because the=day \add is\add*_holy and÷not be_grieved.
-\v 12 And= all_of =went the÷people to÷eat and÷to÷drink and÷to= portions =send and÷to= joy =make great if/because they_had_understood in/on/at/with÷words which they_had_made_known to/for=them.
-\v 13 and÷in/on/at/with÷day the=second the_heads_of they_gathered the÷families to/from=all/each/any/every the÷people the÷priests and÷the÷Lēviyyiy to ˊEzrāʼ the÷scribe and÷to÷study into the_words_of the÷law.
+\v 12 And= all_of =went the÷people to÷eat and÷to÷drink and÷to= portions =send and÷to= joy =make great if/because they_had_understood in/on/at/with÷messages which they_had_made_known to/for=them.
+\v 13 and÷in/on/at/with÷day the=second the_heads_of they_gathered the÷families to/from=all/each/any/every the÷people the÷priests and÷the÷Lēviyyiy to ˊEzrāʼ the÷scribe and÷to÷study into the_messages_of the÷law.
 \v 14 And÷found written in/on/at/with÷law which he_had_commanded \nd YHWH\nd* in/on/at/with÷hand_of Mosheh (cmp) they_will_dwell the_people_of Yisrā\sup ʼēl\sup*/(Israel) in/on/at/with÷booths in/on/at/with÷festival in/on/at/with÷month the=seventh.
 \v 15 And=which they_will_make_proclamation and÷spread a_proclamation in=all towns_of÷their and÷in/on/at/with÷Yərūshālam/(Jerusalem) to=say go_out the÷hills and÷bring leaves_of olive and÷branches_of tree[s]_of oil and÷branches_of myrtle_tree[s] and÷branches_of palm_trees and÷branches_of tree[s]_of leafy to÷make booths as_the÷written.
 \v 16 and=they_went_out the÷people and÷brought and=they_made to/for=them booths each on roof÷his and÷in/on/at/with÷courtyards_of÷their and÷in/on/at/with÷courts_of the_house_of the=ʼElohīm and÷in/on/at/with÷square_of the_gate_of the=waters and÷in/on/at/with÷square_of the_gate_of ʼEfrayim.
@@ -351,10 +351,10 @@
 \v 24 And÷Pətaḩ\sup yāh\sup* the_son_of Məshēyzaⱱ\sup ʼēl\sup* from=(the)_sons of_Zeraḩ the_son_of Yəhūdāh at÷hand_of the=king to/from=all/each/any/every matter concerning_the÷people.
 \v 25 And=near/to the÷villages in/on/at/with÷fields_of÷their from=(the)_sons of_Yəhūdāh they_dwelt in/on/at/with÷Qiryat- ʼarbaˊ and÷villages_of÷its and÷in/on/at/with÷Diyⱱōn and÷villages_of÷its and÷in/on/at/with÷Yəqaⱱʦə\sup ʼēl\sup*/(Jekabzeel) and÷villages_of÷its.
 \v 26 And÷in/on/at/with÷Yēshūˊa/(Jeshua) and÷in/on/at/with÷Mōlādāh and÷in/on/at/with÷Bēyt- pelet.
-\v 27 And÷in/on/at/with÷ Ḩₐʦar- shūˊāl and÷in/on/at/with÷Bəʼēr- seven and÷villages_of÷its.
+\v 27 And÷in/on/at/with÷ Ḩₐʦar- shūˊāl and÷in/on/at/with÷Beer- seven and÷villages_of÷its.
 \v 28 And÷in/on/at/with÷Tsiqlag/(Ziklag) and÷in/on/at/with÷Məkonāh and÷in/on/at/with÷villages_of÷its.
 \v 29 And÷in/on/at/with÷ ˊĒyn- rimmōn and÷in/on/at/with÷Tsārəˊāh/(Zorah) and÷in/on/at/with÷Yarmūt/(Jarmuth).
-\v 30 Zānōaḩ ˊAdullām and÷villages_of÷their Lākīsh and÷fields_of÷its ˊAzēqāh and÷villages_of÷its and÷camped from÷Bəʼēr- seven to the_valley_of_\add Ben\add* Hinnom.
+\v 30 Zānōaḩ ˊAdullām and÷villages_of÷their Lākīsh and÷fields_of÷its ˊAzēqāh and÷villages_of÷its and÷camped from÷Beer- seven to the_valley_of_\add Ben\add* Hinnom.
 \v 31 And=the_sons of_Binyāmīn from÷Geⱱaˊ Mikmāş and÷Aija and÷Bēyt- \sup ʼēl\sup* and÷villages_of÷its.
 \v 32 ˊAntotī Nōd ˊAnan\sup yāh\sup*.
 \v 33 Ḩāʦōr Rāmāh Gittayim.
