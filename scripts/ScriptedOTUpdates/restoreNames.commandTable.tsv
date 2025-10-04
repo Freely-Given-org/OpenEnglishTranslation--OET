@@ -1713,7 +1713,8 @@ dH	CH1								Zorites			צָרְעִי/(Zorites)		{{ H6882 (3) 1Chr 2:53-54, 4:2
 # Places/Locations (including rivers and mountains)
 wH									Beth			בֵּית		construct H1007-1053 (14+?) Josh 10:10-11, ...
 wH									Havvoth			חַוֺּת		construct 'the villages'
-wH									Hazar			 חֲצַר		construct) H2702-H2705 Josh 15:28, 19:3, 1Chr 4:28, Neh 11:27, etc., etc.
+wH									Hazar			 חֲצַר		construct H2702-H2705 village of (see H2691) Josh 15:28, 19:3, 1Chr 4:28, Neh 11:27, etc., etc.
+wH									Hazer			 חֲצֵר		construct H2694 village of (see H2691) Eze 47:16
 wH									Kiriath			קִרְיַת		construct (20+?) Gen 23:2, 35:27, Josh 9:17, 14:15, 15:9,13,54,60, 18:14-15,28, 20:7, 21:11, Jdg 1:10, 18:12, Neh 11:25*
 
 H									Abaddon			אֲבַדּוֹן		H11 (5) Job 26:6, 28:22, 31:12, Psa 88:11, Pro 15:11, Rev 9:11*
@@ -1789,7 +1790,8 @@ H					JOS_15:24,KI1_4:16				Bealoth			בְּעָלוֹת		H1175 (2) Josh 15:24, 
 wH					NUM_21:6,JDG_9:21				Beer			בְּאֵר		H876 (2) Num 21:16, Jdg 9:21*
 H									Beeroth			בְּאֵרוֹת		H881 (5) Josh 9:17, 18:25, 2Sam 4:2, Ezra 2:25, Neh 7:29*
 H					CH1_12:3,CH2_20:26				Beracah			בְּרָכָה		H1294 (3) 1Chr 12:3, 2Chr 20:26*
-H					SA2_8:8,EZE_47:16				Berothai			בֵּרוֹתָה		H1268 (2) 2Sam 8:8, Eze 47:16*
+H					SA2_8:8,EZE_47:16				Berothah			בֵּרוֹתָה		{ H1268 (2) 2Sam 8:8, Eze 47:16*
+H					SA2_8:8,EZE_47:16				Berothai			בֵּרוֹתָה		{ H1268 (2) 2Sam 8:8, Eze 47:16*
 H	SA1								Besor			בְּשׂוֹר		H1308 stream (3) 1Sam 30:9-10,21*
 H					SA2_8:8				Betah			בֶּטח		H984 (1) 2Sam 8:8*
 H									Beth-aven			בֵּית-אָוֶן		H1007 (space changed to hyphen) (7) Josh 7:2, 18:12, 1Sam 13:5, 14:23, Hos 4:15, 5:8, 10:5*
@@ -1850,39 +1852,44 @@ H									Debir			דְּבִיר		H1688 (14) Josh 10:3,38-39, 11:21, 12:13, 13:2
 H					EZE_6:14				Diblah			דְּבְלָה		H1689 (1) Eze 6:14*
 H									Dibon			דִּיבוֺן		H1769 (11) Num 21:30, 32:3,34, 33:45-46, Josh 13:9,17, Neh 11:25, ...
 H					GEN_36:32,CH1_1:43				Dinhabah			דִּנְהָבָה		H1838 (2) Gen 36:32, 1Chr 1:43*
-wH									Dor			דּוֹר		H1756 (7) Josh 11:2, 12:23, 17:11, Jdg 1:27, 1Ki 4:11, 1Chr 7:29*
+wH	JOS,JDG,KI1,CH1								Dor			דּוֹר		H1756 (7) Josh 11:2, 12:23, 17:11, Jdg 1:27, 1Ki 4:11, 1Chr 7:29*
 H					GEN_37:17,KI2_6:13				Dothan			דֹּתָן		H1886 (3) Gen 37:17, 2 Kings 6:13*
-wH									Ebal			עֵיבָל		H5858 (8) Gen 36:23, Deu 11:29, 27:4,13, Josh 8:30,33, 1Chr 1:22,40*
+wH	GEN,DEU,JOS,CH1								Ebal			עֵיבָל		H5858 (8) Gen 36:23, Deu 11:29, 27:4,13, Josh 8:30,33, 1Chr 1:22,40*
 H	SA1								Ebenezer			אֶבֶן-הָעֵזֶר		H72 (space changed to hyphen) (3) 1 Sam 4:1, 5:1, 7:12*
 H					EZR_6:2				Ecbatana			אַחְמְתָא		{ H307 (1) Ezr 6:2*
 H					EZR_6:2				Achmetha			אַחְמְתָא		{ H307 (1) Ezr 6:2*
 wH									Eden			עֵדֶן		H5731 (16) Gen 2:8,10,15 3:23-24, Gen 4:16, 2Chr 29:12, 31:15, ...
 wH									Edom			אֱדֹם		H123 (100) Gen 25:30, 32:3, ..., Obad 1:1
-H									Edrai			אֶדְרֶעִי		{ H154 (8) Num 21:33, Deu 1:4, 3:1,10, Josh 12:4, 13:12,31, 19:37*
-H									Edrei			אֶדְרֶעִי		{ H154 (8) Num 21:33, Deu 1:4, 3:1,10, Josh 12:4, 13:12,31, 19:37*
+H	NUM,DEU,JOS								Edrai			אֶדְרֶעִי		{ H154 (8) Num 21:33, Deu 1:4, 3:1,10, Josh 12:4, 13:12,31, 19:37*
+H	NUM,DEU,JOS								Edrei			אֶדְרֶעִי		{ H154 (8) Num 21:33, Deu 1:4, 3:1,10, Josh 12:4, 13:12,31, 19:37*
 H									Eglon			עֶגְלוֹן		H5700 (13) Josh 10:3,5,23,34,36-37, 12:12, ...
 dH									Egypt			מִצְרַיִם/(Egypt)		H4714 (614) Gen 10:6,13, 12:10-11, ...
 H									Ekron			עֶקְרוֹן		H6138 (22) Josh 13:3, 15:11,45-46, 19:43, Jdg 1:18, ...
 H									Elam			עֵילָם		H5867 (28) Gen 10:22, 14:1,9, 1Chr 1:17, 8:24, 26:3, ...
-H									Elath			אֵילוֹת		{ H359 (8) Deu 2:8, 1Ki 9:26, 2Ki 14:22, 16:6, 2Chr 8:17, 26:2*
-H									Eloth			אֵילוֹת		{ H359 (8) Deu 2:8, 1Ki 9:26, 2Ki 14:22, 16:6, 2Chr 8:17, 26:2*
-wH									Elim			אֵילִם		H362 (6) Exo 15:27, 16:1, Num 33:9-10*
+H	DEU,KI1,KI2,CH2								Elath			אֵילוֹת		{ H359 (8) Deu 2:8, 1Ki 9:26, 2Ki 14:22, 16:6, 2Chr 8:17, 26:2*
+H	DEU,KI1,KI2,CH2								Eloth			אֵילוֹת		{ H359 (8) Deu 2:8, 1Ki 9:26, 2Ki 14:22, 16:6, 2Chr 8:17, 26:2*
+wH	EXO,NUM								Elim			אֵילִם		H362 (6) Exo 15:27, 16:1, Num 33:9-10*
 H					JOS_15:59				Eltekon			אֶלְתְּקוֹן		H515 (1) Josh 15:59*
 H					JOS_15:30,JOS_19:4				Eltolad			אֶלְתּוֹלַד		H513 (2) Josh 15:30, 19:4*
-H									Engedi			 עֵין-גֶּדִי		{{ H5872 (space changed to hyphen) (6) Josh 15:62, 1Sam 23:29, 24:1, 2Chr 20:2, Sng 1:14, Eze 47:10*
-wH									En			 עֵין		{{ H5872 (space changed to hyphen) (6) Josh 15:62, 1Sam 23:29, 24:1, 2Chr 20:2, Sng 1:14, Eze 47:10*
-wH									Gedi			 גֶּדִי		{{ H5872 (space changed to hyphen) (6) Josh 15:62, 1Sam 23:29, 24:1, 2Chr 20:2, Sng 1:14, Eze 47:10*
-wH									gedi			 גֶּדִי		{{ H5872 (space changed to hyphen) (6) Josh 15:62, 1Sam 23:29, 24:1, 2Chr 20:2, Sng 1:14, Eze 47:10*
-H									Enrimmon			 עֵין-רִמּוֹן		{ H5884 (space changed to hyphen) (1) Neh 11:29*
-H									En-rimmon			 עֵין-רִמּוֹן		{ H5884 (space changed to hyphen) (1) Neh 11:29*
-H									rimmon			 רִמּוֹן		{ H5884 (space changed to hyphen) (1) Neh 11:29*
-H									Rimmon			 רִמּוֹן		{ H5884 (space changed to hyphen) (1) Neh 11:29*
-H									Eshtaol			אֶשְׁתָּאֹל		H847 (7) Josh 15:33, 19:41, Jdg 13:25, 16:31, 18:2,8,11*
-wH									Ether			עֵתֶר		H6281 (2) Josh 15:42, 19:7*
+wH	JOS,SA1,CH2,NEH,SNG,EZE								En			 עֵין		{{ H5872,5882,5884 (space changed to hyphen) spring/fountain
+H					EZE_47:10				Eneglaim			 עֵין-עֶגְלַיִם		{{ H5882 (space changed to hyphen) (1) Eze 47:10*
+H					EZE_47:10				En-eglaim			 עֵין-עֶגְלַיִם		{{ H5882 (space changed to hyphen) (1) Eze 47:10*
+H					EZE_47:10				eglaim			 עֶגְלַיִם		{{ H5882 (space changed to hyphen) (1) Eze 47:10*
+H					EZE_47:10				Eglaim			 עֶגְלַיִם		{{ H5882 (space changed to hyphen) (1) Eze 47:10*
+H	JOS,SA1,CH2,SNG,EZE								Engedi			 עֵין-גֶּדִי		{{ H5872 (space changed to hyphen) (6) Josh 15:62, 1Sam 23:29, 24:1, 2Chr 20:2, Sng 1:14, Eze 47:10*
+H	JOS,SA1,CH2,SNG,EZE								En-gedi			 עֵין-גֶּדִי		{{ H5872 (space changed to hyphen) (6) Josh 15:62, 1Sam 23:29, 24:1, 2Chr 20:2, Sng 1:14, Eze 47:10*
+wH	JOS,SA1,CH2,SNG,EZE								Gedi			 גֶּדִי		{{ H5872 (space changed to hyphen) (6) Josh 15:62, 1Sam 23:29, 24:1, 2Chr 20:2, Sng 1:14, Eze 47:10*
+wH	JOS,SA1,CH2,SNG,EZE								gedi			 גֶּדִי		{{ H5872 (space changed to hyphen) (6) Josh 15:62, 1Sam 23:29, 24:1, 2Chr 20:2, Sng 1:14, Eze 47:10*
+H					NEH_11:29				Enrimmon			 עֵין-רִמּוֹן		{ H5884 (space changed to hyphen) (1) Neh 11:29*
+H					NEH_11:29				En-rimmon			 עֵין-רִמּוֹן		{ H5884 (space changed to hyphen) (1) Neh 11:29*
+H					NEH_11:29				rimmon			 רִמּוֹן		{ H5884 (space changed to hyphen) (1) Neh 11:29*
+H					NEH_11:29				Rimmon			 רִמּוֹן		{ H5884 (space changed to hyphen) (1) Neh 11:29*
+H	JOS,JDG								Eshtaol			אֶשְׁתָּאֹל		H847 (7) Josh 15:33, 19:41, Jdg 13:25, 16:31, 18:2,8,11*
+wH					JOS_15:42,JOS_19:7				Ether			עֵתֶר		H6281 (2) Josh 15:42, 19:7*
 wdH									Ethiopia			כּוּשׁ/(Ethiopia)		H3568 (30) Gen 2:13, 10:6-8. 2Ki 19:8, 1Chr 1:8-10, Est 1:1, ...
 H									Euphrates			פְּרָת		H6578 (19) Gen 2:14, 15:18, Deu 1:7, 11:24, Josh 1:4, 2Sam 8:3, ...
-H									Ezem			עֶצֶם		H6107 (3) Josh 15:29, 19:3, 1Chr 4:29*
-H									Gaash			גַּעַשׁ		H1608 Mt. (4) Josh 24:30, Jdg 2:9, 2Sam 23:30, 1Chr 11:32*
+H	JOS,CH1								Ezem			עֶצֶם		H6107 (3) Josh 15:29, 19:3, 1Chr 4:29*
+H	JOS,JDG,SA2,CH1								Gaash			גַּעַשׁ		H1608 Mt. (4) Josh 24:30, Jdg 2:9, 2Sam 23:30, 1Chr 11:32*
 H					CH1_2:51				Gader			גָּדֵר		{ H1013 Beth-Gader (1) 1Chr 2:51*
 H					CH1_2:51				gader			גָּדֵר		{ H1013 Beth-Gader (1) 1Chr 2:51*
 H					GEN_31:47,GEN_31:48				Galed			גַּלְעֵד		H1567 (2) Gen 31:47-48*
@@ -1931,21 +1938,34 @@ wH					EZE_39:11,EZE_39:15				gog			גּוֹג		{H1996 (2) Eze 39:11,15*
 wH					CH1_5:26				Hara			הָרָא		H5196 (1) 1Chr 5:26*
 H									Haran			חָרָן		H2771 (12) Gen 11:31-32, 12:4-5, Gen 27:43, 28:10, 29:4, 2Ki 19:12, 1Chr 2:46, Isa 37:12, Eze 27:23*, Acts 7:2
 H					CH1_11:27				Harorite			הֲרוֹרִי		H2033 (1) 1Chr 11:27*
-H									Havilah			חֲוִילָה		H2341 (7) Gen 2:11, 10:7,29, 25:18, 1Sam 15:7, 1Chr 1:9,23*
-H									Hazarshual			 חֲצַר-שׁוּעָל		{ H2705 space changed to hyphen (4) Josh 15:28, 19:3, 1Chr 4:28, Neh 11:27*
-H									Hazar-shual			 חֲצַר-שׁוּעָל		{ H2705 space changed to hyphen (4) Josh 15:28, 19:3, 1Chr 4:28, Neh 11:27*
-#NOW ABOVE									Hazar			 חֲצַר		{ H2705 space changed to hyphen (4) Josh 15:28, 19:3, 1Chr 4:28, Neh 11:27*
-H									shual			 שׁוּעָל		{ H2705 (4) Josh 15:28, 19:3, 1Chr 4:28, Neh 11:27*
+H					EZE_47:16,EZE_47:18				Hauran			חַוְרָן		H2362 (2) Eze 47:16,18*
+H	GEN,SA1,CH1								Havilah			חֲוִילָה		H2341 (7) Gen 2:11, 10:7,29, 25:18, 1Sam 15:7, 1Chr 1:9,23*
+#NOW ABOVE									Hazar			 חֲצַר		H2702 etc. (village of)
+H					EZE_47:17				Hazarenan			 חֲצַר-עֵינוֹן		{{ H2703 space changed to hyphen (1) Eze 47:17*
+H					EZE_47:17				Hazar-enan			 חֲצַר-עֵינוֹן		{{ H2703 space changed to hyphen (1) Eze 47:17*
+H					EZE_47:17				enan			 עֵינוֹן		{{ H2703 space changed to hyphen (1) Eze 47:17*
+H					EZE_47:17				Enan			 עֵינוֹן		{{ H2703 space changed to hyphen (1) Eze 47:17*
+H					NUM_34:9,NUM_34:10,EZE_48:1				Hazarenan			 חֲצַר-עֵינָן		{{ H2704 space changed to hyphen (3) Num 34:9-10, Eze 48:1*
+H					NUM_34:9,NUM_34:10,EZE_48:1				Hazar-enan			 חֲצַר-עֵינָן		{{ H2704 space changed to hyphen (3) Num 34:9-10, Eze 48:1*
+H					NUM_34:9,NUM_34:10,EZE_48:1				enan			 עֵינָן		{{ H2704 space changed to hyphen (3) Num 34:9-10, Eze 48:1*
+H					NUM_34:9,NUM_34:10,EZE_48:1				Enan			 עֵינָן		{{ H2704 space changed to hyphen (3) Num 34:9-10, Eze 48:1*
+H	JOS,CH1,NEH								Hazarshual			 חֲצַר-שׁוּעָל		{ H2705 space changed to hyphen (4) Josh 15:28, 19:3, 1Chr 4:28, Neh 11:27*
+H	JOS,CH1,NEH								Hazar-shual			 חֲצַר-שׁוּעָל		{ H2705 space changed to hyphen (4) Josh 15:28, 19:3, 1Chr 4:28, Neh 11:27*
+H	JOS,CH1,NEH								shual			 שׁוּעָל		{ H2705 (4) Josh 15:28, 19:3, 1Chr 4:28, Neh 11:27*
+H					EZE_47:16				Hazarhatticon			חֲצַר-הַתִּיכוֹן		{{{ H2694 space changed to hyphen (1) Eze 47:16*
+H					EZE_47:16				Hazar-hatticon			חֲצַר-הַתִּיכוֹן		{{{ H2694 space changed to hyphen (1) Eze 47:16*
+H					EZE_47:16				hatticon			הַתִּיכוֹן		{{{ H2694 space changed to hyphen (1) Eze 47:16*
+H					EZE_47:16				hattikon			הַתִּיכוֹן		{{{ H2694 space changed to hyphen (1) Eze 47:16*
 H					CH1_4:31				Hazarsusim			 חֲצַר-סוּסִים		{{ H2702 space changed to hyphen (1) 1Chr 4:31*
 H					CH1_4:31				Hazar-susim			 חֲצַר-סוּסִים		{{ H2702 space changed to hyphen (1) 1Chr 4:31*
 H					CH1_4:31				susim			 סוּסִים		{{ H2702 (1) 1Chr 4:31*
 H									Hazor			חָצוֹר		H2674 (18) Josh 11:1,10-11,13, 12:19, 15:23,25, ...
 H									Hebron			חֶבְרוֹן		H2275 (71) Gen 13:18, 23:2,19, 35:27, 37:14, Exo 6:18, Num 3:19, 13:22, ...
-H									Helam			חֵילָם		H2431 (2) 2Sam 10:16-17*
+H					SA2_10:16,SA2_10:17				Helam			חֵילָם		H2431 (2) 2Sam 10:16-17*
 H					JDG_1:31				Helbah			חֶלְבָּה		H2462 (1) Jdg 1:31*
 H					EZE_27:18				Helbon			חֶלְבּוֹן		H2463 (1) Eze 27:18*
-H									Hena			הֵנַע		H2012 (3) 2Ki 18:34, 19:13, Isa 37:13*
-H									Hepher			חֵפֶר		H2660 (9) Num 26:32-33, 27:1, Josh 12:17, 17:2-3, 1Ki 4:10, 1Chr 4:6, 11:36*
+H	KI2,ISA								Hena			הֵנַע		H2012 (3) 2Ki 18:34, 19:13, Isa 37:13*
+H	NUM,JOS,KI1,CH1								Hepher			חֵפֶר		H2660 (9) Num 26:32-33, 27:1, Josh 12:17, 17:2-3, 1Ki 4:10, 1Chr 4:6, 11:36*
 wH					JDG_1:35				Heres			חֶרֶס		H2776 (1) Jdg 1:35*
 H					CH1_9:15				Heresh			חֶרֶשׁ		H2792 (1) 1Chr 9:15*
 H					SA1_22:5				Hereth			חֶרֶת		H2802 (1) 1Sam 22:5*
@@ -2065,6 +2085,7 @@ wH	NUM,CH1,EZE								Meon			מְעוֹן		{ H1186 (3) Num 32:38, 1Chr 5:8, Eze 
 wH	NUM,CH1,EZE								meon			מְעוֹן		{ H1186 (3) Num 32:38, 1Chr 5:8, Eze 25:9*
 H	JOS,CH1,JER								Mephaath			מוֹפַעַת		H4158 (4) Josh 13:18, 21:37, 1 Chr 6:79, Jer 48:21*
 H	EXO,NUM,DEU,PSA								Meribah			מְרִיבָה		H4809 (6) Exo 17:7, Num 20:13,24, 27:14, Deu 33:8, Psa 81:7*
+H									Meribath			מְרִיבָה		H4808 quarelling/strife Eze 47:19 at least
 H					JOS_11:5,JOS_11:7				Merom			מֵרוֹם		H4792 (2) Josh 11:5,7*
 H					JDG_5:23				Meroz			מֵרוֹז		H4789 (1) Jdg 5:23*
 H					CH1_11:47				Mezobaite			מְצֹבָיָה		H4677 (1) 1Chr 11:47*
@@ -2168,6 +2189,7 @@ H	JOS,SA1,KI2								Shunem			שׁוּנֵם		H7766 (3) Josh 19:18, 1Sam 28:4, 2
 H	GEN,EXO,SA1								Shur			שׁוּר		H7793 (6) Gen 16:7, 20:1, 25:18, Exo 15:22, 1Sam 15:7, 27:8*
 H									Shushan			שׁוּשַׁן		{ H7800 (21) Neh 1:1, Est 1:2,5, 2:3, ...
 wH									Susa			שׁוּשַׁן		{ H7800 (21) Neh 1:1, Est 1:2,5, 2:3, ...
+H					EZE_47:16				Sibraim			סִבְרַיִם		H5453 (1) Eze 47:16*
 wdH									Sidon			צִידוֹן/(Sidon)		H6721 (22) Gen 10:15,19, 49:13, Josh 11:8, 19:28, ..., Acts 12:20
 H					KI2_12:20				Silla			סִלָּא		H5538 (1) 2Ki 12:20*
 wH	EXO,NUM,EZE								Sin			סִין		H5512 (6) Exo 16:1, 17:1, Num 33:11-12, Eze 30:15-16*
@@ -2222,6 +2244,7 @@ dH									Zarephath			צֱרְפַת/(Zarephath)		H6886 (3) 1 Ki 17:9-10, Oba 1
 dH									Zarethan			צֱרְתָן/(Zarethan)		H6891 (3) Josh 3:16, 1 Kgs 4:12, 7:46*
 dH									Zeboiim			צְבֹאִים/(Zeboiim)		H6636 (5) Gen 10:19, 14:2,8, Deu 29:23, Hos 11:8*
 dH					SA1_13:18,NEH_11:34				Zeboim			צְבֹעִים/(Zeboim)		H6650 (2) 1Sam 13:18, Neh 11:34*
+dH					NUM_34:8,EZE_47:15				Zedad			צְדָד/(Zedad)		H6657 (2) Num 34:8, Eze 47:15*
 dH					SA1_10:2				Zelzah			צֶלְצַח/(Zelzah)		H6766 (1) 1Sam 10:2*
 dH					JDG_1:17				Zephath			צְפַת/(Zephath)		H6857 (1) Jdg 1:17*
 dH					KI1_11:26,CH2_4:17				Zeredah			צְרֵדָה/(Zeredah)		H6868 (2) 1Ki 11:26, 2Chr 4:17*

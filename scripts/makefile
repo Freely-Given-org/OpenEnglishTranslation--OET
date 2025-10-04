@@ -172,8 +172,8 @@ $(derived_USFM): $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_ESFM_to_USFM.py
 $(derived_VREFs): $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_USFM_to_VREF.py
 	@echo "\n\nCreate VREF.txt files from USFM…\n"
 	@$(Python) convert_OET-LV-RV_USFM_to_VREF.py
-	@echo "\n\nFinally, just count our progress…\n"
-	@$(Python) count_completed_OET-RV_verses.py
+	#@echo "\n\nFinally, just count our progress…\n"
+	#@$(Python) count_completed_OET-RV_verses.py
 	@$(Python) --version
 
 
@@ -184,8 +184,8 @@ $(derived_VREFs): $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_USFM_to_VREF.py
 check: $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
 	@echo "\n\nConnect OET-RV words to OET-LV word numbers…\n"
 	@$(Python) connect_OET-RV_words_via_OET-LV.py
-	@echo "\n\nFinally, just count our progress…\n"
-	@$(Python) count_completed_OET-RV_verses.py
+	#@echo "\n\nFinally, just count our progress…\n"
+	#@$(Python) count_completed_OET-RV_verses.py
 	@$(Python) --version
 
 
