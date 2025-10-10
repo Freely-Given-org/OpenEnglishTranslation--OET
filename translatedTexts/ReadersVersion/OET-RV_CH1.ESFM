@@ -1,4 +1,4 @@
-\id 1CH - Open English Translation—Readers' Version (OET-RV) v0.0.27
+\id 1CH - Open English Translation—Readers' Version (OET-RV) v0.0.31
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 CH1
@@ -240,7 +240,7 @@
 \p
 \v 17 Yekaneyah \add was captured and taken to Babylon\add*. His sons¦188448 were Shealtiel¦188451,
 \v 18 Malkiram, Pedayah¦188455, Shenatstsar, Yekamyah¦188457, Hoshama¦188458, and Nedavyah.
-\v 19 Pedayah's¦188462 sons were Zerubbavel and Shimei¦188464. \add Two of\add* Zerubbavel's sons were Meshullam¦188468 and Hananyah¦188469, and their¦188471 sister¦188471 was Shelomit¦188470.
+\v 19 Pedayah's¦188462 sons were Zerubbavel and Shimei¦188464. \add Two of\add* Zerubbavel's sons were Meshullam¦188468 and Hananyah¦188469, and their¦188471 sister¦188471 was Shelomot¦188470.
 \v 20 Zerubbavel's five¦188479 \add other\add* sons were Hashubah, Ohel¦188474, Berekyah¦188475, Hasadyah¦188476, and Yushab-Hesed¦188478.
 \v 21 Hananyah's¦188483 descendants were Pelatyah¦188484, Yeshayah¦188485, \add and\add* the sons of Refayah, of Arnan¦188489, of Ovadyah, and of Shekanyah.
 \v 22 Shekanyah's six descendants were Shemayah, and Shemayah's¦188498 sons Hattush¦188501, Yigal, Bariyah, Nearyah¦188504, and Shafat¦188505.
@@ -274,14 +274,14 @@
 \p
 \v 16 The sons¦188743 of Yehallelel¦188744 were Zif¦188745, Zifah¦188746, Tiriya, and Asarel¦188748.
 \p
-\v 17 The sons¦188750 of Ezrah were Yeter¦188753, Mered, Efer¦188755, and Yalon¦188756. And \add ?@Mered's wife Bityah\add* conceived¦188757 Miryam, and Shammai¦188763, and Ishbah¦188766, the father¦188767 of Eshtemoa¦188768.
+\v 17 The sons¦188750 of Ezrah¦188752 were Yeter¦188753, Mered, Efer¦188755, and Yalon¦188756. And \add ?@Mered's wife Bityah\add* conceived¦188757 Miryam, and Shammai¦188763, and Ishbah¦188766, the father¦188767 of Eshtemoa¦188768.
 \v 18 \add *She\add* was one of Far-oh's \add (Pharaoh's¦188793)\add* daughters¦188791. Mered's¦188796 wife who was a descendant of Yehudah \add (Judah)\add* gave birth to Yered¦188775 the father of Gedor¦188777, Hever the father of SoKo, and Yekutiel the father of Zanoah¦188787.
 \v 19 The sons of the Hodiyyah's wife (sister¦188802 of Naham¦188803) were the father of Keilah¦188805 the Garmite¦188806, and \add ≡the father of\add* Eshtemoa¦188807 the Maakatite.
 \p
 \v 20 Shimon's¦188811 sons were Amnon¦188812, Rinnah¦188813, Ben-Hanan¦188816, and Tilon¦188817.
 \rem /s1 The Descendants of Shelah; Descendants of Judah's Son Shelah
 \p Ishi's¦188820 sons were Zohet and Ben-Zohet.
-\s1 The descendants of Shelah
+\s1 Shelah's descendants
 \p
 \v 21 The sons of Shelah¦188827 (one of Yehudah's¦188830 sons) were Er¦188831 (father of Lekah), Laadah¦188834 (father of Mareshah¦188836 and the clans \add ≈who worked with\add* linen¦188841 at Beyt-Ashbea¦188843),
 \v 22 Yokim, and the men¦188846 of Kozeba¦188847, and Yoash¦188848 and Saraf¦188849, who ruled¦188852 in Moav and Yashubi-Lehem¦188854. (\add ≈All this from ancient¦188857 records¦188856\add*.)
@@ -294,7 +294,7 @@
 \v 26 The \add following were\add* Mishma's descendants: Mishma's son was Hammuel. Hammuel's¦188889 son was Zakkur. Zakkur's son was Shimei¦188893.
 \v 27 Shimei had sixteen sons and six daughters¦188900, but none of his brothers¦188902 had many children, so Shimeon's \add ≈descendants¦188912 never were as many as those\add* of \add his younger brother\add* Yehudah¦188913 \add (Judah)\add*.
 \p
-\v 28 \add @Shimeon's descendants\add* lived¦188916 in \add these cities and towns\add*: Beer-Sheva \add (Beersheba)\add*, Moladah¦188920, Hatsar-Shual,\x + \xo 4:28-33: \xt Josh 19:2-8.\x*
+\v 28 \add @Shimeon's descendants\add* lived¦188916 in \add these cities and towns\add*: Be'er-Sheva \add (Beersheba)\add*, Moladah¦188920, Hatsar-Shual,\x + \xo 4:28-33: \xt Josh 19:2-8.\x*
 \v 29 Bilhah, Etsem, Tolad,
 \v 30 Betuel, Hormah¦188929, Tsiklag¦188930,
 \v 31 Beyt-Markaboth, Hatsar-Susim, Beyt-Biri, and Shaaraim¦188938. \add ≈They lived in those places until¦188941 David¦188944 became king\add*.
@@ -313,7 +313,7 @@
 \v 42 Then¦189086 five¦189096 hundred¦189097 of their¦189104 men¦189095 who were descendants¦189090 of Shimeon went¦189092 to Mt. Seir¦189094, \add ≈led\add* by Yishi's sons¦189102 Pelatyah¦189098, Nearyah¦189099, Refayah, and Uzziel¦189101.
 \v 43 They \add also\add* struck down the rest of the Amalekites who escaped¦189110, and¦189112 they've lived¦189112 there¦189113 to this day¦189115.
 \c 5
-\s1 The descendants of Reuben
+\s1 Reuven's descendants
 \rem /s1 Reuben; Descendants of Reuben; The Descendants of Reuben
 \p
 \v 1 Reuben was the firstborn of Yisrael \add (or Israel¦189122, also known as Yakov/Jacob)\add*, but when he \add ≈had sex with one of his father's¦189128 slave wives\add*, his birthright was given¦189129 to the sons of Yosef¦189132 \add (Joseph)\add*, \add ≈another one of Yisrael's sons\add*. \add ≈So¦189118 Reuben wasn't recorded as inheriting\add* the birthright,\x + \xo 5:1: \xt Gen 35:22; 49:3-4; Gen 49:8-10.\x*
@@ -507,7 +507,7 @@
 \v 3 Uzzi's¦190686 son was Yizrahyah. Yizrahyah's five sons were Mikael, Ovadyah, Yoel¦190692, and Yishiyah. They were all \add ≈leaders of their¦190696 clans\add*.
 \v 4 Along with them according to their \add ≈family records\add*, were 36,000 troops¦190702 in the army, because they¦190710 \add ≈had numerous\add* wives¦190711 and sons¦190712.
 \v 5 Altogether, Yissaskar's clans¦190716 had 87,000 strong warriors listed in their genealogy¦190723.
-\s1 The descendants of Benyamin
+\s1 Benyamin's descendants
 \rem /s1 Descendants of Benjamin; Benjamin; The Descendants of Benjamin and Dan
 \p
 \v 6 Benyamin's¦190727 three¦190731 \add sons\add* were Bela¦190728, Beker¦190729, and Yediael¦190730.
@@ -519,23 +519,23 @@
 \v 10 Yediael's¦190785 son was Bilhan. Bilhan's¦190786 sons were Yeush¦190789, Benyamin¦190791, Ehud¦190792, Kenaanah¦190793, Zetan¦190794, Tarshish¦190795, and Ahishahar¦190796.
 \v 11 All those descendants of Yediael¦190802 were \add ≈clan leaders\add* and strong warriors, having 17,200 men ready to go to war.
 \p
-\v 12 The Shuppites and Huppites were descendants of Ir, \add and\add* the Hushites were descendants of Aher¦190822.
+\v 12 The Shuppites¦190816 and Huppites were descendants of Ir, \add and\add* the Hushites were descendants of Aher¦190822.
 \s1 The descendants of Naftali (Naphtali)
 \rem /s1 Descendants of Naphtali; The Descendants of Naphtali; Naphtali
 \p
 \v 13 Naftali's¦190825 sons were Yahtsiel, Guni¦190827, Yetser, and Shallum¦190829. (\add They were\add* descendants of \add Yakov's slave wife\add* Bilhah¦190831.)
-\s1 The descendants of Manashsheh
+\s1 Manashsheh's descendants
 \rem /s1 The Descendants of Manasseh; Manasseh; Descendants of Manasseh
 \p
 \v 14 Manashsheh¦190835 had sons¦190834 by his \add ≈Syrian¦190840\add* (Heb. Aramean¦190840) slave wife. She gave birth to Asriel¦190836, and Makir¦190844 (\add who became\add* the father¦190845 of Gilead¦190846).
-\v 15 Makir \add ≈married\add* a wife from the Huppites and Shuppites. (His sister's¦190854 name was Maakah.) \add ≈Another\add* descendant was Tselofehad and he had daughters¦190861.
+\v 15 Makir \add ≈married\add* a wife from the Huppites and Shuppites¦190852. (His sister's¦190854 name was Maakah.) \add ≈Another\add* descendant was Tselofehad and he had daughters¦190861.
 \v 16 Makir's¦190867 wife¦190865 (\add also called¦190869\add* Maakah) bore a son and named him Peresh¦190871 (and named his brother Sheresh¦190874) and his sons¦190875 were Ulam¦190876 and Rakem.
 \v 17 Ulam's¦190880 son was Bedan¦190881. Those were the descendants¦190883 of Gilead¦190884 (Makir's¦190887 son and Manashsheh's¦190890 grandson).
 \p
 \v 18 \add @Gilead's\add* sister¦190892 was Hammoleket¦190893. She was the mother of Ishhod¦190897, Aviezer, and Mahlah¦190903.
 \p
 \v 19 \add Another son of Gilead was\add* Shemida¦190907, whose sons¦190906 were Ahyan, Shekem, Likhi¦190910, and Aniam¦190911.
-\s1 The descendants of Efrayim
+\s1 Efrayim's descendants
 \rem /s1 Descendants of Ephraim; The Descendants of Ephraim; Ephraim
 \p
 \v 20 These are Efrayim's¦190915 descendants:
@@ -784,7 +784,7 @@
 \v 36 Hefer¦193043 (from Mekerat), Ahiyyah (from Pelon),
 \v 37 Hezro¦193049 (from Karmel¦193050), Naarai¦193051 (Ezbai's¦193054 son),
 \v 38 Yoel¦193057 (Natan's¦193059 brother¦193058), Mivhar¦193060 (Hagri's¦193063 son),
-\v 39 Tselek¦193066 (the Ammonite¦193067), Naharai¦193068 (from Beerot, armour¦193071 bearer¦193070 for Tseruyah's son Yoav),
+\v 39 Tselek¦193066 (the Ammonite¦193067), Naharai¦193068 (from Beerot¦193069, armour¦193071 bearer¦193070 for Tseruyah's son Yoav),
 \v 40 Ira¦193078 (the Yitrite), Garev (the Yitrite),
 \v 41 Uryyah (Bat-Sheba's husband the Hittite¦193085), Zavad (Ahlai's¦193089 son),
 \v 42 Adina¦193092 (Shiza's¦193095 son from the tribe of Reuven, a leader from that tribe who had thirty¦193100 soldiers with him¦193099),
@@ -804,7 +804,7 @@
 \rem /s1 David's Followers from the Tribe of Gad
 \v 4 Yishmayah¦193190 (from Gibeon \add city\add*, who was the leader of the thirty greatest warriors), Yeremyah, Yahaziel, Yohanan, Yozabad (from Gederah \add city\add*),
 \v 5 Eluzai, Yerimot, Bealyah, Shemaryah, Shefatyah (from Haruf \add city\add*),
-\v 6 Elkanah, Yishshiyyah, Azarel, Yoezer, and Yashoveam (all Korah's descendants),
+\v 6 Elkanah, Yishshiyah, Azarel, Yoezer, and Yashoveam (all Korah's descendants),
 \v 7 and Yoelah and Zevadyah (Yeroham's sons, from Gedor \add city\add*).
 \p
 \v 8 \add ≈Some\add* Gadites \add ≈joined\add* David at the wilderness stronghold. \add They were\add* very strong army warriors, ready for battle with shields and spears. \add ≈Their faces were fierce like lions, but they could run across the hills like\add* gazelles.
@@ -963,7 +963,7 @@
 \p
 \v 25 \add ≈So¦194666\add* David¦194667, and the Israeli elders¦194668, and the \add ≈top army commanders¦194670\add* were going to \add get\add* the box \add containing\add* Yahweh's agreement from the house¦194682 of Obed Edom¦194685 with \add much\add* \add ≈celebration\add*.
 \v 26 \add ≈Indeed,\add* God helped¦194690 the Levites¦194694 carrying¦194695 the box \add containing\add* Yahweh's agreement, and they slaughtered seven bulls¦194703 and seven rams.
-\v 27 David was clothed in a fine-linen robe¦194710, \add ≈as well as\add* all the Levites¦194714 carrying¦194715 the box, and the singers, and \add ≈the choir director\add* Kenanyah. \add ≈In addition,\add* David, \add wore\add* a linen chestpiece.
+\v 27 David was clothed in a fine-linen robe¦194710, \add ≈as well as\add* all the Levites¦194714 carrying¦194715 the box, and the singers, and \add ≈the choir director\add* Kenanyah¦194720. \add ≈In addition,\add* David, \add wore\add* a linen chestpiece.
 \v 28 \add ≈So¦194730\add* all Yisrael¦194732 was bringing¦194733 the box \add containing\add* Yahweh's¦194739 agreement up \add the hill\add* with happy shouting¦194740, and with a sound¦194741 of a \add ram's¦194742\add* horn and with trumpets¦194743 and cymbals¦194744, \add along with\add* harps¦194746 and lyres¦194747 playing.
 \p
 \v 29 \add ≈As\add* the box \add containing\add* Yahweh's agreement was being brought inside the city¦194756 of David, Mikal (Shaul's¦194761 daughter¦194759) looked¦194762 out the window¦194765 and saw¦194766 \add her¦194775 husband,\add* King David dancing¦194772 and celebrating, and she¦194762 \add ≈secretly\add* despised¦194773 him.
@@ -1047,7 +1047,7 @@
 \v 26 All those gods¦195052 of the \add other\add* people¦195053 groups are worthless¦195054,
 \q1 ^\add ≈but it was Yahweh who created\add* the heavens¦195056.
 \q1
-\v 27 \add ≈His presence emanates splendor and grandeur\add*,
+\v 27 \add ≈His presence emanates splendour and grandeur\add*,
 \q1 ≈\add and\add* strength¦195062 and happiness \add radiate\add* from his place¦195064.
 \b
 \q1
@@ -1147,7 +1147,7 @@
 \v 2 Then¦195808 he \add ≈attacked and defeated¦195808\add* Moav, and the Moabites became servants to David¦195815—\add ≈taking him\add* \add regular\add* tribute¦195817.
 \p
 \v 3 Next David¦195820 \add ≈attacked and defeated¦195819\add* King Hadadezer¦195823 of Tsovah-Hamat¦195827, when \add ≈that king¦195824 had tried enforce his control\add* at the Euphrates¦195833 \add River\add*.
-\v 4 David captured¦195835 1,000 chariots, 7,000 horsemen, and 20,000 foot-soliders from him. And David hamstrung¦195847 all but one hundred¦195856 of the chariot¦195853 \add horses¦195853\add*.
+\v 4 David captured¦195835 1,000 chariots, 7,000 horsemen, and 20,000 foot-soldiers from him. And David hamstrung¦195847 all but one hundred¦195856 of the chariot¦195853 \add horses¦195853\add*.
 \p
 \v 5 When the Arameans \add (or, Syrians¦195860)\add* came¦195859 from Damascus¦195861 to help¦195862 King Hadadezer¦195863, David¦195867 struck¦195866 killed 22,000 of the Arameans.
 \v 6 Then¦195875 David \add ≈established forces\add* in the Aramean \add town\add* of Damascus¦195878, and the Arameans¦195877 became servants to David, \add ≈taking him\add* \add regular\add* tribute¦195884. \add ≈So¦195875\add* Yahweh¦195886 \add ≈helped\add* David \add ≈wherever¦195889\add* he¦195890 went¦195890.
@@ -1156,440 +1156,480 @@
 \p
 \v 9 When King To'u from Hamat¦195933 heard that David¦195936 \add ≈defeated¦195935 the entire¦195939\add* the army of King Hadadezer¦195942 from Tsovah,
 \v 10 he sent¦195947 his son Hadoram¦195950 to King David carrying various items of gold¦195978, silver¦195979, and bronze¦195980. \add Hadorom went\add* to ask¦195958 \add @David\add* for peace¦195962 and to bless him because he'd fought¦195966 against Hadadezer and struck him down, because To'u had \add also\add* \add ≈been at war\add* with Hadadezer.
-\v 11 King David¦195987 consecrated¦195985 that to Yahweh¦195988, along with the gold¦195992 and silver¦195991 that he'd carried¦195994 away from \add ≈other\add* nations¦195997: from Edom¦195998, from Moav, from the \add ≈Ammonites\add*, from the Philistines¦196002, and from \add ≈the Amalekites\add*.
+\v 11 King David¦195987 consecrated¦195985 that to Yahweh¦195988, along with the gold¦195992 and silver¦195991 that he'd brought¦195994 back from \add ≈other\add* nations¦195997: from Edom¦195998, from Moav, from the \add ≈Ammonites\add*, from the Philistines¦196002, and from \add ≈the Amalekites\add*.
 \p
-\v 12 \x + \xo 18:12: \xt Psa 60 header.\x*◙
-\v 13 ◙
+\v 12 Avshai (whose \add mother\add* was Tseruyah) defeated Edom¦196012 in the Salt Valley¦196013, \add killing\add* eighteen¦196015 thousand¦196017 \add of them\add*.\x + \xo 18:12: \xt Psa 60 header.\x*
+\v 13 Then¦196019 \add @David\add* stationed garrisons¦196021 in Edom, and all Edom became his servants. And Yahweh¦196029 saved David in all where¦196034 he¦196035 went¦196035.
 \rem /s1 David's Officials; David's Administration
 \p
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
+\v 14 \add ≈So¦196037\add* David¦196038 ruled over all Yisrael¦196043 and administered justice¦196046 and \add ≈did what was right¦196047\add* for all his people¦196050.
+\v 15 Tseruyah's son Yoav led the army, and¦196059 Ahilud's¦196062 son Yehoshafat¦196059 was the record¦196063 keeper.
+\v 16 Ahituv's¦196068 son Tsadok and Avyatar's¦196072 son Ahimelek were priests¦196073, and Shavsha¦196074 was the secretary¦196075.
+\v 17 Yehoyada's son Benayah \add ≈supervised\add* the Keretites and Feletites \add who were David's bodyguards\add*, and David's sons¦196085 \add ≈were his leading officials¦196088\add*.
 \c 19
-\s1 The defeat of those from-Amun and those from-Syria
+\s1 The defeat of the Ammonites and Arameans
 \rem /s1 The Battle Against the Ammonites; David Defeats the Ammonites and the Syrians; David Defeats the Ammonites; Defeat of the Ammonites and Arameans
 \s4 Full kingdom
 \r (2 Sam. 10:1-19)
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
+\v 1 \add ≈Some time later\add*, the Ammonite King Nahash¦196098 died and his son \add Hanun\add* \add ≈became¦196103 their king\add*
+\v 2 and David said, “I'll show loyal commitment to Nahash's¦196118 son Hanun, because his father \add ≈was good to me\add*.” \add ≈So¦196107\add* David sent messengers¦196127 to comfort him concerning his father's \add death\add*. \add ≈However,\add* when David's¦196108 servants¦196133 \add ≈entered Ammonite territory\add* to comfort Hanun,
+\v 3 the Ammonite leaders¦196147 \add ≈asked their new king\add*, “\add ≈Do you think that\add* David's¦196153 \add really\add* sending comforters¦196162 to honour¦196152 your¦196157 father? \add ≈Wouldn't it be more likely that he sent¦196160 his servants¦196170 to explore and spy out the land in order to overthrow¦196166 you\add*?”
+\v 4 \add ≈So\add* \add King\add* Hanun¦196175 took¦196174 David's¦196179 servants¦196178, and \add had their beards\add* shaved¦196180 off, plus he cut \add ≈off the bottom half of their robes to expose their\add* buttocks, and then he sent¦196189 them \add ≈home\add*.
+\v 5 \add ≈Some people quickly informed David¦196193 what had happened\add*, so he sent \add messengers\add* to meet the men (because they were very much humiliated¦196203) and to tell them, “Stay \add there\add* in Yeriho \add (Jericho)\add* until¦196209 your beards¦196213 grow \add out\add*, then return¦196214 \add here\add*.”
 \p
-\v 6 ◙
-\v 7 ◙
+\v 6 \add ≈By then\add*, the Ammonites \add ≈realised that they had greatly insulted\add* \add King\add* David¦196223, \add ≈so\add* \add King\add* Hanun¦196225 and the Ammonites sent¦196224 thirty tonnes of silver¦196231 to hire chariots¦196243 and horsemen¦196244 from Aram-Naharayim, Aram-Maakah, and Tsovah.
+\v 7 They hired¦196246 32,000 chariots¦196251, \add ≈as well as\add* the king¦196254 of Maakah and his army. They \add all\add* came and \add ≈set up their camps near\add* Meydeva, \add ≈plus they were joined by\add* the Ammonites \add themselves\add* coming out of their cities¦196266 ready for battle¦196268.
 \p
-\v 8 ◙
-\v 9 ◙
+\v 8 \add ≈When\add* David¦196272 heard \add about that\add*, he sent¦196273 Yoav \add ≈with the entire¦196278\add* army.
+\v 9 Then¦196283 the Ammonites¦196285 marched out and deployed ready for battle¦196287 at the entrance¦196288 to their city¦196289, while kings¦196290 who had come¦196293 were over in the countryside¦196295 \add with their men\add*.
 \p
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
+\v 10 Yoav \add quickly\add* realised that \add ≈he'd have to fight on two fronts, so\add* he chose¦196308 Yisrael's best warriors and set them out to face¦196302 the Arameans¦196315 \add (Syrians¦196315)\add*,
+\v 11 while he placed the remaining men (under the control of his \add older brother\add* Avshai) out against¦196325 the Ammonites.
+\v 12 Yoav told them, “If the Arameans¦196334 are too strong for me, then you \add ≈can come to rescue me\add*. \add ≈But¦196329\add* if the Ammonites \add ≈start to gain on you\add*, then I'll \add come to\add* rescue you.
+\v 13 We must be strong¦196347 and fight hard to defend our people¦196351 and our cities¦196353 \add ≈that belong to\add* our God¦196354. Yahweh¦196355 will do \add ≈what he considers to be\add* good¦196356.”
 \p
-\v 14 ◙
-\v 15 ◙
+\v 14 \add ≈So¦196360\add* Yoav \add ≈advanced his¦196370 troops to attack the Arameans, but the Arameans fled away from them\add*.
+\v 15 \add ≈When\add* the Ammonites saw¦196374 that the Arameans¦196378 had fled, \add ≈they also fled from Avshai and withdrew into\add* the city¦196387, \add ≈so\add* Yoav went¦196386 back to Yerushalem¦196390.
 \p
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
+\v 16 \add ≈When the Arameans\add* saw¦196393 that they were defeated¦196396 \add ≈by\add* Yisrael, they sent¦196399 messengers¦196400 to bring \add ≈more Arameans from across the Euphrates river¦196407, led by\add* Shofak, the commander¦196409 of Hadadezer's¦196412 army.
+\v 17 \add ≈When\add* that was reported to David¦196416, he gathered¦196417 all Yisrael and crossed the Yordan¦196424. They positioned themselves against the Arameans¦196432 who then fought¦196434 against them.
+\v 18 \add ≈But¦196437 the Arameans¦196438 fled away from the Israelis\add*, and David¦196442 killed seven¦196444 thousand chariot¦196446 \add drivers\add* and forty¦196447 thousand men on foot¦196450, as well as killing Shofak their army commander¦196453.
+\v 19 When Hadadezer's¦196460 servants¦196459 saw¦196458 that \add ≈Yisrael had defeated¦196462 them\add*, they made peace¦196465 with David¦196468 and \add ≈became¦196469 his subjects¦196469, so\add* Aram¦196473 \add (Syria¦196473)\add* wasn't willing¦196472 to help¦196474 the Ammonites \add militarily\add* any more.
 \c 20
-\s1 Snatched of David the Raba
+\s1 David captures Rabbah
 \rem /s1 Siege and Capture of Rabbah; David Captures Rabbah; The Capture of Rabbah
 \s4 Full kingdom
 \r (2 Sam. 12:26-31)
 \p
-\v 1 \x + \xo 20:1: \xt 2Sam 11:1.\x*◙
-\v 2 ◙
-\v 3 ◙
+\v 1 \add ≈Then in the spring when kings¦196490 often march out to war\add*, Yoav led the army out for war and he devastated the land of the Ammonites. Then he reached \add the capital,\add* Rabbah, and he besieged it while David¦196510 stayed in Yerushalem¦196512. Yoav \add ≈defeated\add* Rabbah and \add ≈demolished the city\add*.\x + \xo 20:1: \xt 2Sam 11:1.\x*
+\v 2 Then¦196520 David¦196521 took their¦196526 king's crown off his head—it was gold¦196534 with a valuable gemstone set in out, and \add ≈weighed¦196531 thirty kilograms\add*. He¦196542 put \add @the crown\add* on his own head, plus he took a very large amount of plunder out of the city¦196544.
+\v 3 Then¦196549 they took all the people out of the city and \add ≈forced them to work\add* with saws and iron picks¦196558, and axes¦196560. David¦196563 did that for the people of all the Ammonite cities¦196565, then he returned¦196569 to Yerushalem¦196574 with his army.
+\s1 Battles against Gittites
 \rem /s1 Battles against the Philistines; Battles against Philistine Giants; War With the Philistines; Exploits against the Philistines
-\rem /r (2 Samuel 21.15-22)
+\s4 Full kingdom
+\r (2 Sam. 21:15-22)
 \p
-\v 4 ◙
+\v 4 \add ≈Some time later,\add* war broke¦196581 out with the Philistines¦196586 at Gezer¦196583, then Sibbekai the Hushatite¦196590 struck¦196588 down Sippai¦196593, from the descendants¦196594 of the Refaim, and they were subdued¦196596.
 \p
-\v 5 \x + \xo 20:5: \xt 1Sam 17:4-7.\x*◙
-\v 6 ◙
-\v 7 ◙
+\v 5 Then¦196598 there was another battle¦196601 with the Philistines¦196604, and Yair's¦196609 son Elhanan¦196606 \add ≈killed¦196605\add* Lahmi¦196613 the brother¦196614 of Goliyat \add (Goliath¦196615)\add*\x + \xo 20:5: \xt 1Sam 17:4-7.\x* the Gittite¦196616 \add (i.e., from Gat)\add*, even though his spear¦196618 shaft was \add as thick\add* as the beam of a weaver's¦196620 \add loom\add*.
+\v 6 There was also war at Gat¦196626 where there was a \add ≈very tall man¦196629 with six fingers¦196631 on each hand and six toes on each foot who was also a descendant\add* of Rafa.
+\v 7 \add ≈When\add* he insulted Yisrael, Shimea's¦196651 son Yonatan killed¦196647 him. (Shimea was one of David's¦196653 \add older\add* brothers¦196652.)
 \p
-\v 8 ◙
+\v 8 Those were the descendants of Rafa from Gat¦196658 who were killed by David¦196662 and he men.
 \c 21
-\s1 The nakahule of people
+\s1 David orders a census
 \rem /s1 David Numbers the Fighting Men; The Census and Plague; David Takes a Census; David's census
 \s4 Full kingdom
 \r (2 Sam. 24:1-25)
+\s2 Yoav doesn't want to do the census
 \p
-\v 1 ◙
-\v 2 ◙
+\v 1 Then a trouble-maker went against Yisrael \add ≈by\add* encouraging David¦196676 \add ≈to take a census of\add* Yisrael,
+\v 2 \add ≈So¦196682\add* David¦196683 \add ≈ordered\add* Yoav and \add ≈the other officials\add*, “Go \add and\add* count¦196692 Yisrael from Be'er-Sheva \add in the south\add* and as far \add north\add* as Dan¦196700, \add ≈then come and tell me so that I'll know¦196703 how many warriors I have\add*.”
 \p
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
+\v 3 “My master, the king¦196721, may Yahweh¦196720 \add ≈multiply his people¦196714 one hundred¦196717 times¦196718 over\add*. Aren't they all \add *your\add* servants¦196724?” Yoav \add diplomaticaly\add* \add ≈queried\add*, “\add So¦196708\add* why does my master \add ≈want to do\add* this? Why should \add ≈he bring judgement on\add* Yisrael?”
+\v 4 \add ≈But¦196734 the king¦196736 insisted, so Yoav was forced to go and survey the entire¦196744 country\add*. Then¦196734 he returned to Yerushalem¦196748
+\v 5 and \add ≈reported the numbers¦196754\add* to David¦196760. Yisrael had 1.1 million sword-wielding men, and Yehudah had 470 thousand¦196766.
+\v 6 \add ≈However,\add* \add @Yoav\add* had \add intentionally\add* not counted \add the tribes of\add* Levi and¦196782 Benyamin¦196782, because \add *he\add* was horrified by the king's command.
+\s2 Punishment for the census
 \rem /s1 Judgment for David's Sin
 \p
-\v 7 ◙
-\v 8 ◙
+\v 7 God \add ≈was displeased¦196796 by what David had ordered, and he punished\add* Yisrael,
+\v 8 and David¦196810 said¦196809 to God, “I've \add ≈disobeyed you badly by doing that\add*. Please \add ≈forgive your¦196829 servant¦196829 for his disobedience\add*, because I've \add ≈been very stupid\add*.”
 \p
-\v 9 ◙
-\v 10 ◙
+\v 9 Then Yahweh¦196836 told David's¦196841 prophet Gad¦196839,
+\v 10 “Go and tell David¦196848 that Yahweh¦196852 says¦196851 this: \add ≈I'll give you three¦196853 options—choose¦196857 one of them and that's what I'll\add* do to you.”
 \p
-\v 11 ◙
-\v 12 ◙
+\v 11 \add ≈So¦196866\add* Gad¦196867 went¦196866 to David¦196870 and¦196871 told his, “Yahweh¦196876 says¦196875 that you must choose \add one of these punishments\add*:
+\v 12 either three years¦196884 of famine¦196885, or three months¦196889 of being¦196890 overcome by your enemies' \add ≈armies\add*, or three days¦196901 of Yahweh's ‘sword’ of pestilence¦196904 in the land and the Yahweh's messenger¦196906 \add ≈bringing¦196917 destruction¦196908\add* across all of Yisrael's territory¦196911. \add ≈So now, tell me what answer I should take\add* back to the one who sent me?”
 \p
-\v 13 ◙
+\v 13 “\add Oh,\add* that's very distressing¦196929,” David¦196925 \add ≈replied\add* to Gad¦196928, “but please don't¦196947 let me fall into the hands¦196944 of \add ≈my enemies\add*. Yahweh¦196938 \add ≈is very merciful, so please let him be the one to punish me directly\add*.”
 \p
-\v 14 ◙
-\v 15 ◙
+\v 14 \add ≈So¦196951\add* Yahweh¦196952 \add ≈sent a disease\add* throughout Yisrael and seventy¦196957 thousand¦196958 Israeli men \add ≈died\add*.
+\v 15 Then¦196961 God sent¦196961 a messenger to destroy Yerushalem¦196966, and \add ≈while the disease was still spreading\add* Yahweh \add ≈looked down\add* and relented about the tragedy, and he told to the destroying messenger, “Enough! Now release your hand¦196981.” Now Yahweh's messenger \add happened to be\add* standing¦196984 at the threshing¦196987 floor¦196987 of Ornan¦196988 the Yevusite.
 \p
-\v 16 ◙
-\v 17 ◙
+\v 16 \add As\add* David \add ≈looked up\add*, he saw¦196997 Yahweh's messenger¦197000 standing¦197002 between the earth¦197004 and the heavens¦197006, holding his sword¦197007 stretched¦197010 out over Yerushalem¦197013. Then David and the elders¦197016 who were \add all\add* dressed in sackcloth¦197018, fell \add ≈to their knees and bowed their faces¦197021 to the ground\add*.
+\v 17 Then¦197023 David¦197024 \add ≈asked\add* God, “Wasn't it me myself who said to count¦197031 the people? It's me who \add ≈disobeyed and clearly did what was wrong¦197039\add*, but these¦197041 sheep¦197042, what have they done? Yahweh¦197045 my God, please¦197048 \add ≈direct your punishment\add* against me and \add ≈my extended family\add*, but \add ≈don't¦197028 continue this\add* plague¦197055 on your people.”
 \rem /s1 David's Altar and Sacrifice; David Builds an Altar
 \p
-\v 18 ◙
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
+\v 18 Then Yahweh's messenger¦197058 told Gad¦197063 to tell David¦197065 that \add *he\add* should \add ≈build\add* an altar¦197071 to Yahweh at the threshing¦197073 floor¦197073 of Ornan¦197074 the Yevusite.
+\v 19 \add ≈So¦197077\add* David¦197078 went up \add to that place when he¦197083 heard\add* \add ≈Gad's¦197081 message¦197079 that was delivered\add* in Yahweh's¦197085 name¦197084.
+\v 20 \add ≈Meanwhile,\add* Ornan¦197088 was threshing¦197098 wheat¦197099, and he turned¦197087 and saw¦197089 \add Yahweh's\add* messenger¦197092 and he and his four¦197093 sons¦197094 who were with him \add quickly\add* hid \add ≈behind something\add*.
+\v 21 \add ≈When David arrived there,\add* Ornan¦197105 saw¦197108 him and left the threshing¦197115 floor¦197115 and \add ≈knelt\add* in front of David and bowed¦197116 his face¦197118 to the ground¦197119.
+\v 22 Then¦197121 David¦197122 \add ≈asked\add* Ornan¦197125, “Give me this place¦197129 with its threshing¦197130 floor¦197130, and I'll build¦197131 an altar¦197134 to Yahweh¦197135 on it. \add ≈Sell it to me\add* at the full price¦197136, so the plague¦197141 against the people¦197143 will be stopped¦197140.”
 \p
-\v 23 ◙
+\v 23 “My master¦197154 the king¦197155, take¦197150 \add ≈anything that you want\add*,” Ornan¦197146 \add ≈replied\add*. “Listen, I'll donate the cattle for the burnt¦197161 offerings and the threshing¦197162 sledges¦197162 for firewood, and the wheat¦197164 for the offering—all \add ≈at no charge\add*.”
 \p
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
+\v 24 “No, I'll most definitely pay the full price¦197178,” King David¦197171 \add ≈responded¦197169\add*. “I couldn't offer a burnt¦197189 offering to Yahweh¦197187 \add ≈if it hadn't cost me anything\add*.”
+\v 25 \add ≈So¦197192\add* David¦197193 paid Ornan¦197194 six¦197199 hundred¦197200 gold¦197197 pieces for \add &his\add* place,
+\v 26 and he built¦197202 an altar to Yahweh there¦197203 and offered burnt offerings and peace¦197209 offerings on it. He called¦197210 to Yahweh, and \add @Yahweh\add* answered¦197214 him with fire¦197215 from the heavens¦197218 on that altar of the burnt offering.
 \p
-\v 27 ◙
+\v 27 Then Yahweh¦197225 spoke to \add &his\add* messenger¦197226 who then returned his sword¦197228 to his sheath¦197231.
+\s1 The location for the future temple
 \rem /s1 The Place Chosen for the Temple
-\v 28 ◙
-\v 29 ◙
-\v 30 ◙
+\s4 Full kingdom
+\v 28 When David¦197236 saw¦197235 that Yahweh¦197240 had answered¦197239 him at (the Yevusite) Ornan's¦197242 threshing¦197241 floor¦197241, then he sacrificed¦197244 there¦197245.
+\v 29 \add ≈At that time¦197256\add*, Yahweh's \add sacred¦197247\add* tent¦197247 that Mosheh¦197252 \add (Moses¦197252)\add* had made in the wilderness¦197253, and¦197254 the altar¦197254 for burnt¦197255 sacrifices, were \add ≈on a hill used for worship near\add* Gibeon¦197259 \add city\add*.
+\v 30 David¦197264 wasn't able to go¦197265 there to \add ≈ask God's direction\add* because he was terrified¦197270 of Yahweh's messenger's¦197273 sword¦197272.
 \c 22
 \p
-\v 1 ◙
+\v 1 Then David¦197278 said¦197277, “This is \add now\add* the residence of Yahweh¦197282 God, and this is the altar¦197286 for Yisrael's burnt¦197287 \add #offering\add*.”
 \s1 The preparation of standing up of temple
 \rem /s1 Preparations for the Temple; Preparation for the temple; Preparations for Building the Temple; David Prepares to Build the Temple
 \s4 Full kingdom
 \p
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
+\v 2 Then David¦197292 said¦197291 to gather the foreigners who \add ≈lived\add* in Israel¦197299, and he assigned \add ≈them the job of\add* hewing out cut stones¦197303 to build¦197305 the residence¦197296 for God.
+\v 3 He¦197317 prepared¦197316 a large quantity of iron for the door \add ≈hinges and fittings\add*, so much brass that it couldn't be weighed¦197321,
+\v 4 and innumerable cedar logs that the Tsidonians and the Tsorians \add (Sidonians¦197329 and Tyrians¦197330)\add* brought¦197328 in for David¦197334.
+\v 5 David said¦197337, “My son Shelomoh \add (Solomon¦197339)\add* is young and tender, and the house¦197343 to be built¦197344 for Yahweh¦197345 must be \add ≈impressive for the sake of his reputation\add* and for beauty in all the lands¦197353 \add so\add* I'll prepare for it now.” \add ≈So\add* David prepared a large amount before \add ≈he died\add*.
 \rem /s1 David's Charge to Solomon and the Leaders
 \p
-\v 6 ◙
-\v 7 \x + \xo 22:7-10: \xt 2Sam 7:1-16; 1Ch 17:1-14.\x*◙
-\v 8 ◙
-\v 9 ◙
-\v 10 ◙
+\v 6 Then¦197363 David called¦197363 for his son Shelomoh \add (Solomon¦197364)\add*, and¦197366 ordered him¦197366 to build¦197367 a residence for Yisrael's God¦197370 Yahweh¦197369.
+\v 7 David¦197375 told \add *him\add*, “My son, I wanted to build¦197384 a temple to honour my God¦197388 Yahweh¦197387,\x + \xo 22:7-10: \xt 2Sam 7:1-16; 1Ch 17:1-14.\x*
+\v 8 \add ≈but\add* Yahweh¦197394 \add ≈gave me this message¦197392\add*, ‘You've fought a lot of battles and shed a large amount of blood, \add so\add* you won't¦197402 be the one who'll build¦197404 a residence \add ≈to honour me\add*—you've shed too much blood on the ground \add ≈in my¦197412 sight¦197412\add*.’
+\v 9 \add He told me,\add* ‘Listen, you'll have a son who'll be a man¦197421 of peace. I'll give him relief from all his enemies¦197427 from the surrounding regions. That's why he'll be called ‘Shelomoh’ \add (which sounds like ‘Shalom’—the Hebrew word for peace)\add*, and I'll give peace and quietness¦197434 to Yisrael during his lifetime.
+\v 10 He'll be the one to build¦197443 a residence for me, and he himself will become my son, and I'll become his father¦197454, and I'll establish¦197455 the throne¦197456 of his kingdom¦197457 over Yisrael forever.’
 \p
-\v 11 ◙
-\v 12 ◙
-\v 13 \x + \xo 22:13: \xt Josh 1:6-9.\x*◙
+\v 11 “Now, my son, may Yahweh be with you, and may you be successful¦197470 and build¦197471 a residence for Yahweh your God¦197474, just as he said you would.
+\v 12 \add ≈I also ask\add* Yahweh to give you insight¦197484 and understanding¦197485, and give you charge¦197486 over Yisrael so that you can keep your God¦197495 Yahweh's regulations.
+\v 13 Then you'll succeed¦197498, if you are careful to follow the instructions and the directions that Yahweh¦197511 commanded¦197510 Mosheh¦197514 \add (Moses¦197514)\add* concerning Yisrael. Be strong¦197518 and courageous¦197519. Don't be afraid¦197522 or discouraged.\x + \xo 22:13: \xt Josh 1:6-9.\x*
 \p
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
+\v 14 Now, see, \add ?≈despite many battles\add*, I've prepared the following for Yahweh's residence: three thousand tonnes of gold¦197533 and thirty thousand tonnes of silver¦197538, along with too much bronze¦197542 and iron to weigh¦197545, and timber¦197549 and \add cut\add* stones¦197550. Plus you'll be able to add more.
+\v 15 \add ≈You'll have plenty of skilled¦197565 workers including those who work with stone¦197561 and those who work with wood\add*.
+\v 16 \add ≈Then there's¦197574 so many skilled with gold¦197570 and silver¦197571, and bronze¦197572 and iron. So get organised and get started\add*, and may Yahweh¦197579 be with you¦197580.
 \p
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
+\v 17 Then¦197582 David¦197583 ordered all the Israeli officials¦197586 to assist his son Shelomoh, \add saying\add*,
+\v 18 “Isn't Yahweh your God¦197594 with you all, and hasn't he given peace to you all from all around, because he's \add ≈allowed me to take control of this region, and this area has been subdued¦197606 with the help\add* of Yahweh and his people¦197611.
+\v 19 Now, \add ≈dedicate your mind¦197615 and strength to request advice from your God Yahweh, then get organised and build¦197621 the sanctuary¦197624 of Yahweh God so you can bring the box containing Yahweh's agreement to the residence to be built¦197638 to honour Yahweh's name¦197639, and bring God's sacred items\add*.”
 \c 23
 \rem /s1 Families of the Levites and Their Functions; Duties of the Levites; The Levites
 \p
-\v 1 \x + \xo 23:1: \xt 1Ki 1:1-40.\x*◙
-\s1 The families of Levites and their works
+\v 1 \add ≈By then David¦197644 was old and coming to the end of his life\add*, and he¦197645 made his son Shelomoh \add (Solomon¦197651)\add* king¦197648 over Yisrael.\x + \xo 23:1: \xt 1Ki 1:1-40.\x*
+\s1 The Levite families and their assignments
 \rem /s1 The Work of the Levites
 \s4 Full kingdom
 \p
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
+\v 2 Then¦197657 \add @David\add* gathered all the Israeli¦197663 officials and the priests¦197664 and Levites¦197665.
+\v 3 Counting the Levite¦197668 males that were thirty years old and older, they found there were thirty-eight thousand¦197679 men¦197676.
+\v 4 \add David assigned\add* twenty-four thousand of them to supervise the work at Yahweh's temple, six¦197694 thousand to be officials¦197692 and judges¦197693,
+\v 5 four thousand to be gatekeepers¦197699, and four thousand to praise¦197707 Yahweh¦197703 using the musical instruments¦197704 that he'd provided.
 \p
-\v 6 ◙
+\v 6 \add ≈So¦197709\add* David¦197710 divided¦197709 \add @the Levites\add* into divisions¦197711 according¦197713 to \add their ancestry through\add* Levi's¦197714 sons¦197713 Gershon¦197715, Kohat¦197716, and¦197717 Merari¦197717.
+\s1 The Gershonites
 \rem /s1 The Gershonites; Gershonites
 \p
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
-\v 10 ◙
-\v 11 ◙
+\v 7 The Gershonites \add included\add* Ladan¦197721 and¦197722 Shimei¦197722.
+\v 8 Ladan's¦197726 three¦197731 sons¦197725 were: Yehiel¦197728 (the oldest), Zetam¦197729, and Yoel¦197730.
+\v 9 Shimei's¦197735\f + \fr 23:9 \ft Possibly the wrong name got into the Hebrew here, because it disagrees with v10.\f* three¦197740 sons¦197734 were: Shelomot, Haziel¦197738, and Haran¦197739. (They were leaders of Ladan's¦197744 clans.)
+\v 10 Shimei's¦197748 four sons were: Yahat, Zina¦197750,\f + \fr 23:10 \ft Some ancient translations have Zizah here, which would seem to fit better with v11.\f* Yeush¦197751, and Beriah¦197752.
+\v 11 (Yahat¦197761 was the head, and Zizah¦197763 was second¦197764. Yeush¦197765 amd Beriah¦197766 were \add ≈grouped together as one family unit as they only had few descendants\add*.)
+\s2 The Kohatites
 \rem /s1 Kohathites; The Kohathites
 \p
-\v 12 ◙
-\v 13 \x + \xo 23:13: \xt Exo 28:1.\x*◙
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
+\v 12 Kohat's¦197779 four¦197784 sons¦197778 were: Amram¦197780, Yitshar, Hevron, and¦197783 Uzziel¦197783.
+\v 13 Amram's¦197788 sons were Aharon and Mosheh¦197790 \add (Aaron¦197789 and Moses¦197790)\add*. Aharon \add ≈and his future male descendants were permanently appointed\add* to consecrate¦197793 the most sacred¦197794 things, to burn incense¦197802, to minister¦197805 to Yahweh¦197804, and to bless¦197806 his name¦197807.\x + \xo 23:13: \xt Exo 28:1.\x*
+\v 14 Mosheh¦197812 \add was known as\add* \add ≈a man¦197813 who served\add* God, and his descendants were included with the \add other\add* Levites.
+\v 15 Mosheh's¦197823 sons¦197822 were Gershom¦197824 and¦197825 Eliezer¦197825.
+\v 16 Gershom's¦197828 eldest son was Shevuel¦197829.
+\v 17 Eliezer's¦197835 only son was Rehavyah, but Rehavyah \add went on to\add* have many sons.
 \p
-\v 18 ◙
-\v 19 ◙
-\v 20 ◙
+\v 18 Yitshar's¦197850 eldest son was Shelomot¦197851.
+\v 19 Hevron's sons¦197855 \add ≈from oldest to youngest\add* were: Yeriyyah, Amaryah¦197859, Yahaziel¦197861, and¦197863 Yekamean.
+\v 20 Uzziel's¦197867 sons¦197866 were Mikah¦197868 and¦197870 Yishshiyah¦197870.
+\s2 The Merarites
 \rem /s1 The Merarites; Merarites
 \p
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
+\v 21 Merari's¦197875 sibs were Mahli and Mushi¦197877, \add and\add* Mahli sons were Eleazar¦197880 and Kish¦197881.
+\v 22 Eleazar¦197884 died without having any sons, \add so\add* his brother Kish's¦197897 sons married¦197894 his daughters¦197893 \add (to continue the family name)\add*.
+\v 23 Mushi¦197901 had three¦197905 sons¦197900: Mahli¦197902, Eder¦197903, and Yerimot¦197904.
 \p
-\v 24 ◙
-\v 25 ◙
-\v 26 \x + \xo 23:26: \xt Deu 10:8.\x*◙
-\v 27 ◙
-\v 28 \x + \xo 23:28-32: \xt Num 3:5-9.\x*◙
-\v 29 ◙
-\v 30 ◙
-\v 31 ◙
-\v 32 ◙
+\v 24 Those were Levi's¦197910 descendants¦197908 \add ≈by their clans and their appointments, who did the work¦197921 of serving¦197921 in Yahweh's temple once they¦197915 reached twenty¦197925 years old\add*,
+\v 25 because David¦197931 had said¦197930, “Yisrael's¦197936 God¦197934 Yahweh¦197933 has given¦197932 peace to his people¦197937, and¦197938 he'll \add now\add* live forever¦197942 in Yerushalem¦197939,
+\v 26 so the Levites¦197945 won't¦197946 need to carry¦197948 the \add sacred¦197951\add* tent¦197951 anymore, along with all its equipment.”\x + \xo 23:26: \xt Deu 10:8.\x*
+\v 27 \add ≈So one of David's¦197961 final instructions had been to count the Levite men who were twenty¦197969 years old and¦197971 over\add*,
+\v 28 because their work was to \add ≈assist¦197975\add* Aharon's descendants¦197977 in their work in Yahweh's temple. They \add ≈were in charge\add* of the temple courtyards¦197984 and siderooms, \add ≈in charge of the purification¦197990 ceremonies\add*, and did other work at the temple.\x + \xo 23:28-32: \xt Num 3:5-9.\x*
+\v 29 \add ≡They were also in charge of\add* the sacred bread, as well as the fine flour¦198001 for the offering, the wafers¦198003 of bread without rising agent, the baking pans, and \add ≈all the measuring¦198009 and mixing of ingredients\add*.
+\p
+\v 30 Every morning and every evening¦198019 \add @the Levites\add* stood and praised¦198016 Yahweh¦198017.
+\v 31 They would also do that on the rest days, and at the new moon celebrations and during the other religious festivals¦198027. \add ≈There were regulations about how many of them must always be on duty serving\add* Yahweh¦198024.
+\v 32 They were \add also\add* in charge of the sacred¦198044 tent and the holy place¦198044 and assisting \add the priests\add* (their relatives, Aharon's descendants¦198046) in their service¦198049 at Yahweh's temple.
 \c 24
-\s1 The division of Levites
+\s1 The Levites' duties
 \rem /s1 The Work Assigned to the Priests; Duties of the Priests; Divisions of the Priests; The Divisions of Priests
 \s4 Full kingdom
 \p
-\v 1 ◙
-\v 2 \x + \xo 24:2: \xt Lev 10:1-2.\x*◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
+\v 1 Aharon's sons were: Nadav, Avihu, Eleazar¦198061, and Itamar¦198062,
+\v 2 \add ≈but\add* Nadav and Avihu died¦198064 \add ≈before their¦198068 father¦198068\add* and \add ≈without having any children, so\add* \add only\add* Eleazar¦198075 and Itamar¦198076 became priests¦198074.\x + \xo 24:2: \xt Lev 10:1-2.\x*
+\v 3 David¦198079 \add ≈gave Eleazar's¦198084 descendant Tsadok¦198080, and Itamar's¦198089 descendant Ahimelek¦198085 two different sets of duties¦198090 to perform\add*.
+\v 4 \add ≈There were more leaders among Eleazar's descendants than there were among Itamar's descendants, so they appointed sixteen leaders from Eleazar's descendants and eight¦198117 from Itamar's descendants\add*.
+\v 5 They divided¦198119 up \add ≈the duties by lots so some of the leaders from each of the two groups served the facility and others served God directly\add*. DOUBLE-CHECK, along with v3.
+\v 6 Netanel's¦198143 son Shemayah¦198140 was the Levite¦198147 scribe¦198144 who recorded¦198139 all this in front¦198148 of the king¦198149 and the leaders, Tsadok¦198151 the priest and Abiatar's¦198156 son Ahimelek, and the clan leaders of the priests¦198159 and the Levites¦198147. (One family¦198158 was drawn by lot from Eleazar's¦198166 group, and then the next from Itamar's¦198170, etc.)
 \p
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
+\v 7 The first¦198175 two \add ≈allocations of duties\add* went¦198173 to Yehoyariv and¦198173 then Yedayah¦198177.
+\v 8 Next were Harim and Seorim¦198182,
+\v 9 Malkiyyah and Miyyamin,
+\v 10 Hakkots and Aviyyah,
+\v 11 Yeshua and Shekanyah,
+\v 12 Elyashiv and Yakim¦198203,
+\v 13 Huppah and Yesheveav,
+\v 14 Bilgah¦198214 and Immer¦198217,
+\v 15 Hezer and Ha-Pitstsets,
+\v 16 Patahyah and Yehezkel,
+\v 17 Yakin and Gamul¦198237,
+\v 18 Delayah and lastly, Maazyah¦198244.
 \p
-\v 19 ◙
+\v 19 Those \add were the priests\add* selected to \add be leaders of the groups\add* that would serve in Yahweh's temple, following the instructions that Yisrael's God¦198263 Yahweh had given their¦198256 ancestor Aharon.
+\s2 Other Levites
 \rem /s1 The List of the Levites; Other Levites; Family Leaders among the Levites; The Rest of the Levites
 \p
-\v 20 ◙
-\p …
-\p
-\v 21 ◙
-\p
-\v 22 ◙
-\p
-\v 23 ◙
-\p
-\v 24 ◙
-\p
-\v 25 ◙
-\p
-\v 26 ◙
-\p
-\v 27 ◙
-\v 28 ◙
-\v 29 ◙
-\v 30 ◙
-\p …
-\p
-\v 31 ◙
+\v 20 This is a list of some of Levi's¦198268 other descendants:
+\li1 From Amram's¦198271 sons: Shuvael.
+\li1 From Shuvael's sons: Yehdeyah¦198275.
+\li1
+\v 21 From Rehavyah's sons¦198278: Yishshiyah¦198281, the leader.
+\li1
+\v 22 From the Yitsharites: Shelomot¦198284.
+\li1 From Shelomot's¦198284 sons¦198285: Yahat.
+\li1
+\v 23 \add Hevron's\add*\f + \fr 24:33 \ft Missing here in the Hebrew, but see \xt 1 Chr. 23:19.\f* sons¦198289 \add ≈(in order)\add*: Yeriyyah, Amaryah¦198291, Yahaziel¦198293, Yekamean
+\li1
+\v 24 From Uzziel's¦198299 sons: Mikah.
+\li1 From Mikah's sons: Shamir¦198303.
+\li1
+\v 25 Mkah's younger brother¦198306: Yishshiyah.
+\li1 From Yishiyah's sons¦198309: Zekaryah.
+\li1
+\v 26 Merari's¦198314 sons: Mahli¦198315 and Mushi¦198316.
+\li1 Yaaziyah's son: Beno.
+\li1
+\v 27 Merari's¦198322 descendants through Yaaziyah: Beno, Shoham¦198325, Zakkur, and Ivri.
+\li1
+\v 28 From Mahli: Eleazar¦198330 who had no sons¦198335.
+\li1
+\v 29 Kish's¦198340 son: Yerahme'el.
+\li1
+\v 30 Mushi's¦198344 sons: Mahli¦198345, Eder¦198346, and Yerimot.
+\p Those were the Levites¦198350 listed by their¦198352 ancestors' families.
+\v 31 They too, used lots just like Aharon's descendants¦198362 (their relatives) \add to determine their specific duties\add* irrespective of where they¦198357 came in their families¦198371. This was done in front¦198365 of King David¦198366, Tsadok¦198368 and Ahimelek, the clan leaders, and the \add other\add* priests¦198372 and Levites¦198373.
 \c 25
-\s1 The singers there to temple
+\s1 The temple singers
 \rem /s1 The Temple Musicians; Duties of the Musicians; The Singers
 \s4 Full kingdom
 \p
-\v 1 ◙
+\v 1 Then David¦198382 and the army chiefs allocated the \add musical\add* service to the sons of Asaf¦198387, Heyman, and Yedutun—the ones prophesying¦198390 with harps¦198394, with lyres¦198393, and with cymbals¦198395. \add ≈This is a list of the men¦198398 whom they chose for that work¦198385\add*:
+\li1
+\v 2 From Asaf's¦198403 sons: Zakkur, Yosef¦198405, Netanyah, and Asarelah¦198407. They were supervised by Asaf, who prophesied¦198414 \add ≈under the king's direction\add*.
+\li1
+\v 3 Six from Yedutun's family: Gedalyah¦198423, Tseri¦198424, Yeshayah¦198425, Hashavyah, and Mattityah¦198427. They were supervised by Yedutun, who prophesied¦198434 with a harp, and thanked¦198437 and praised¦198438 Yahweh¦198439.
+\li1
+\v 4 From Heman's¦198442 sons¦198443: Bukkiyah, Mattanyah¦198446, Uzziel¦198447, Shuvael, Yerimot, Hananyah¦198450, Hanani¦198451, Eliatah¦198452, Giddalti¦198453, Romamti-Ezer, Yoshbekashah¦198456, Malloti¦198457, Hotir¦198458, and Mahaziot¦198459.
+\v 5 They were all sons of King David's prophet Heman¦198465 \add ≈who'd been promised¦198468 by God that he'd strengthen him\add*, and God gave him fourteen sons and three¦198479 daughters¦198478.
 \p
-\v 2 ◙
+\v 6 All of those served as musicians¦198488 in Yahweh's temple under their¦198487 fathers' supervision—they played cymbals¦198491, harps, and lyres. \add ≈Their fathers were supervised by\add* the king¦198499.
+\v 7 There were 288 of those men and¦198519 their¦198509 musical relatives¦198509 who played to Yahweh¦198513.
+\v 8 They used lots to determine their duties, whether young or old, and \add ≈irrespective of their musical abilities\add*.
 \p
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\p
-\v 7 ◙
-\v 8 ◙
-\p
-\v 9 ◙
-\p
-\v 10 ◙
-\p
-\v 11 ◙
-\p
-\v 12 ◙
-\p
-\v 13 ◙
-\p
-\v 14 ◙
-\p
-\v 15 ◙
-\p
-\v 16 ◙
-\p
-\v 17 ◙
-\p
-\v 18 ◙
-\p
-\v 19 ◙
-\p
-\v 20 ◙
-\p
-\v 21 ◙
-\p
-\v 22 ◙
-\p
-\v 23 ◙
-\p
-\v 24 ◙
-\p
-\v 25 ◙
-\p
-\v 26 ◙
-\p
-\v 27 ◙
-\p
-\v 28 ◙
-\p
-\v 29 ◙
-\p
-\v 30 ◙
-\p
-\v 31 ◙
+\v 9 The first¦198535 allocation went¦198533 (in order) to:
+\li1 Asaf¦198536 and his son Yosef¦198537,
+\li1 Gedalyah¦198538 and his relatives¦198542 and sons¦198543 (a total of twelve),
+\li1
+\v 10 Zakkur¦198548 and his sons¦198549 and relatives¦198550 (another twelve),
+\li1
+\v 11 Yitsri¦198555 and his sons¦198556 and relatives¦198557 (twelve),
+\li1
+\v 12 Netanyah¦198562 and his sons¦198563 and relatives¦198564 (twelve),
+\li1
+\v 13 Bukkiyah¦198569 and his sons¦198570 and relatives¦198571 (twelve),
+\li1
+\v 14 Yesarelah¦198576 and his sons¦198577 and relatives¦198578 (twelve),
+\li1
+\v 15 Yeshayah¦198583 and his sons¦198584 and relatives¦198585 (twelve),
+\li1
+\v 16 Mattanyah¦198590 and his sons¦198591 and relatives¦198592 (twelve),
+\li1
+\v 17 Shimei¦198597 and his sons¦198598 and relatives¦198599 (twelve),
+\li1
+\v 18 Azarel¦198606 and his sons¦198607 and relatives¦198608 (twelve),
+\li1
+\v 19 Hashavyah¦198614 and his sons¦198615 and relatives¦198616 (twelve),
+\li1
+\v 20 Shuvael¦198622 and his sons¦198623 and relatives¦198624 (twelve),
+\li1
+\v 21 Mattityah¦198630 and his sons¦198631 and relatives¦198632 (twelve),
+\li1
+\v 22 Yerimot¦198638 and his sons¦198639 and relatives¦198640 (twelve),
+\li1
+\v 23 Hanayah¦198646 and his sons¦198647 and relatives¦198648 (twelve),
+\li1
+\v 24 Yoshbekashah¦198654 and his sons¦198655 and relatives¦198656 (twelve),
+\li1
+\v 25 Hanani¦198662 and his sons¦198663 and relatives¦198664 (twelve),
+\li1
+\v 26 Malloti¦198670 and his sons¦198671 and relatives¦198672 (twelve),
+\li1
+\v 27 Eliatah¦198677 and his sons¦198678 and relatives¦198679 (twelve),
+\li1
+\v 28 Hotir¦198685 and his sons¦198686 and relatives¦198687 (twelve),
+\li1
+\v 29 Giddalti¦198693 and his sons¦198694 and relatives¦198695 (twelve),
+\li1
+\v 30 Mahaziot¦198701 and his sons¦198702 and relatives¦198703 (twelve),
+\li1
+\v 31 Romamti-Ezer and his sons¦198711 and relatives¦198712 (twelve).
 \c 26
 \s1 The guards of doorway of temple
 \rem /s1 The Gatekeepers; Duties of the Gatekeepers; The Temple Guards
 \s4 Full kingdom
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
+\v 1 These were the division¦198717 of the gatekeepers¦198718:
+\li1 From the Korahites: Kore's¦198723 son Meshelemyah¦198720 (Kore was one of Asaf's¦198727 sons¦198726),
+\li1
+\v 2 Meshelemyah's \add seven\add* sons¦198730 (in order): Zekaryah, Yediael¦198733, Zebadyah¦198735, Yatniel,
+\v 3 Eylam, Yehohanan¦198742, and Elyehoenai.
+\li1
+\v 4 Oved-Edom's \add eight\add* sons¦198749 (in order): Shemayah¦198750, Yehozavad, Yoah¦198754, Sakar¦198756, Netanel¦198758,\x + \xo 26:4-5: \xt 2Sam 6:11; 1Ch 13:14.\x*
+\v 5 Ammiel, Yissaskar, and Peulletai¦198765. (God¦198769 had blessed¦198768 him¦198768.)
+\li1
+\v 6 Oved-Edom's son Shemayah¦198772 also had sons¦198775. (They were leaders in their¦198778 father's family because they¦198783 were capable warriors.)
+\v 7 Shemayah's¦198786 sons were: Otni¦198787, Refael¦198788, Oved, and Elzavad. His relatives Elihu¦198795 and Semakyah were also capable men.
 \p
-\v 4 \x + \xo 26:4-5: \xt 2Sam 6:11; 1Ch 13:14.\x*◙
-\v 5 ◙
+\v 8 All those descendants of Oved-Edom¦198804 and their sons and relatives¦198807 were capable people and strong workers. Altogether there were 62 of them.
+\li1
+\v 9 Meshelemyah had sons and relatives¦198820 who were respected (eighteen¦198824 in total).
+\li1
+\v 10 Merari's¦198833 descendant¦198831 Hosah's¦198828 sons¦198834: Shimri¦198835 (not actually the firstborn, but his father¦198843 appointed him¦198842 as the first),
+\v 11 Hilkiyah, Tavalyah, and Zekaryah. (Thirteen total sons¦198854 and relatives¦198855.)
 \p
-\v 6 ◙
-\v 7 ◙
-\p
-\v 8 ◙
-\p
-\v 9 ◙
-\p
-\v 10 ◙
-\v 11 ◙
-\p
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
+\v 12 Those men were leaders of the groups of men who guarded the gates of the temple. They worked in Yahweh's temple like their¦198867 relatives¦198867 did.
+\v 13 \add ≈They used lots to assign each family to a particular gate, irrespective of the family reputation\add*.
+\v 14 Shelemyah's¦198885 group was allocated to the eastern gate, and his son Zekaryah¦198886 (a wise adviser) was allocated to the northern¦198895 gate.
+\v 15 Oved-Edom's group was allocated to the southern¦198900 gate, plus his sons¦198901 \add were to guard\add* the storehouses¦198903.
+\v 16 Shuppim's¦198905 and Hosah's¦198906 groups were allocated the western gate, along with the Shalleket¦198910 gate on the uphill road with \add ≈side-by-side guards\add*.
+\v 17 Every day there were six Levites¦198918 on duty in the east, four in the north¦198920, four in the south¦198923, and two at the storehouses¦198926.
+\v 18 There were four¦198932 on the road¦198933 by the western courtyard, and two¦198934 in the courtyard.
+\v 19 Those were the groups of men who were Korah's and¦198942 Merari's¦198943 descendants¦198940 who guarded the temple gates.
 \s1 The guards of things/objects
 \rem /s1 Other Temple Duties; The Treasurers and Other Officials; Treasurers and Other Officials; The Treasurers, Officers, and Judges
 \s4 Full kingdom
 \p
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
+\v 20 The Levite, Ahiyyah was \add ≈in charge of\add* the temple treasuries¦198952, as well as the storehouses¦198949 for dedicated¦198953 gifts¦198953.
+\v 21 Ladam's descendants (\add also\add* descendants of Gershon) \add ≈were leaders among their family¦198961 groups. Yehiel was a descendant of this Ladan¦198956\add*.
+\v 22 Yehiel's sons¦198966 were Zetam¦198968 and Yoel¦198969, \add and they\add* \add ≈were in charge of\add* the storehouses¦198973 in Yahweh's temple.
 \p
-\v 23 ◙
+\v 23 \add Others who did that work\add* \add ≈were descendants of Amram, Yitshar, Hevron and Uzziel\add*.
 \p
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
-\v 28 ◙
-\s1 The work of other Levites
+\v 24 Shuvael, a descendant of Mosheh's¦198988 son Gershom¦198985, was \add another\add* leader in charge of the treasuries¦198992,
+\v 25 along with his relatives¦198994: Eliezer's¦198995 son Rehavyah, Rehavyah's son Yeshayah, Yeshayah's¦198998 son Yoram, Yoram's¦199000 son Zikri, and Zikri's¦199002 son Shelomot¦199004.
+\v 26 Shelomot¦199009 and his relatives¦199010 \add ≈supervised\add* all the storehouses¦199014 for the sacred things that were consecrated¦199017 by King David¦199018, the \add ≈clan leaders\add*, and the army division leaders and other commanders
+\v 27 who had dedicated some of the plunder \add ≈from their battles¦199031\add* to the repair¦199036 of Yahweh's¦199038 residence.
+\v 28 Shelomot and his relatives¦199062 were also in charge of everything¦199056 that the prophet Shemuel, \add King\add* Shaul¦199044 (Kish's¦199047 son), and David's two army commanders Abner¦199048 (Ner's¦199051 son) and Yoav (Tseruyah's son) had dedicated \add to Yahweh\add*.
+\s1 Other Levites' duties
 \rem /s1 Duties of Other Levites
 \s4 Full kingdom
 \p
-\v 29 ◙
+\v 29 From Yitshar's descendants, Kenanyah¦199066 and his sons¦199067 worked outside¦199069 \add the temple area\add* as officials¦199073 and judges¦199074 over Yisrael.
 \p
-\v 30 ◙
-\v 31 ◙
-\v 32 ◙
+\v 30 From Hevron's descendants, Hashavyah and his relatives¦199078 were responsible for all the work done for Yahweh¦199094 and for the king¦199096 in the area west of the Yordan¦199090 river. There were 1,700 of them \add ≈who were able to do their work well\add*.
+\v 31 According to the records of Hevron's descendants, Yeriyyah was their¦199102 leader. (In the fortieth¦199105 year¦199104 of David's¦199107 reign¦199106, they¦199108 had searched \add ?in those records\add* and¦199109 discovered that there were powerful men in Yazer¦199113 in Gilead¦199114.)
+\v 32 \add @Yeriyyah\add* had 2,700 relatives¦199116 who were strong \add workers\add* and \add ≈leaders of their families¦199124\add*. King David¦199126 \add ≈put them in charge of governing\add* the tribes of Reuven, Gad, and the eastern half of the tribe of Menashsheh, \add ≈to ensure that all the people did what God commanded and what the king told them to do\add*.
 \c 27
-\s1 The officials of King David
+\s1 King David's officials
 \rem /s1 The Military Divisions; Army Divisions; Military and Civil Organization; Military Commanders and Divisions
 \s4 Full kingdom
 \p
-\v 1 ◙
-\p
-\v 2 ◙
+\v 1 This is a list of the Israeli men who served the king¦199157 \add in the army\add*. Some were leaders of families¦199148, some were commanders of divisions of one thousand, some were commanders of division of one hundred¦199152, and some were other officers¦199153. There were twenty-four thousand men in each group, and each group served one month¦199167 each year¦199168.
+\li1
+\v 2 Zavdiel's son Yashoveam, was in charge of the group that served during the first month¦199179 each year.
 \rem /s1 Administration of the Tribes of Israel
-\v 3 ◙
-\p
-\v 4 ◙
-\p
-\v 5 ◙
-\v 6 ◙
-\p
-\v 7 ◙
-\p
-\v 8 ◙
-\p
-\v 9 ◙
-\p
-\v 10 ◙
-\p
-\v 11 ◙
-\p
-\v 12 ◙
-\p
-\v 13 ◙
-\p
-\v 14 ◙
-\p
-\v 15 ◙
+\v 3 \add He\add* was a descendant¦199193 of Perets and was the commander¦199199 of all the \add ≈army officers\add* during the first¦199202 month¦199201 \add each year\add*.
+\li1
+\v 4 Dodai¦199209 (the Ahohites¦199210) was the commander of the group that served during the second¦199208 month¦199207 each year. Miklot¦199212 was \add also\add* a leader in that group.
+\li1
+\v 5 Benayah¦199226, son of Yehoyada¦199229 the high priest¦199230, was the commander¦199221 of the group that served during the third month¦199224 each year.
+\v 6 \add *He\add* was the strongest of ‘the thirty’ and was their leader. His son was Ammizavad.
+\li1
+\v 7 The fourth \add leader\add* for the fourth month¦199251 was Yoav's brother¦199256 Asahel, and then his son Zevadyah succeeded him¦199260. His division¦199262 was twenty-four thousand¦199265 \add men\add*.
+\li1
+\v 8 The fifth \add leader\add* for the fifth month¦199269 was the commander¦199271 Shamhut¦199272 the Yizrahite. His division¦199275 was twenty-four thousand¦199278 \add men\add*.
+\li1
+\v 9 The sixth \add leader\add* for the sixth month¦199282 was Ikkesh's¦199287 son Ira¦199284 the Tekoite¦199288. His division¦199290 was twenty-four thousand¦199293 \add men\add*.
+\li1
+\v 10 The seventh \add leader\add* for the seventh month¦199297 was Helets the Peloite (an Eframite). His division¦199306 was twenty-four thousand¦199309 \add men\add*.
+\li1
+\v 11 The eighth \add leader\add* for the eighth month¦199313 was Sivkay the Hushatite¦199316 (a Zerahite). His division¦199319 was twenty-four thousand¦199322 \add men\add*.
+\li1
+\v 12 The ninth \add leader\add* for the ninth month¦199326 was Aviezer the Anatotite¦199329 (a Benyamite). His division¦199333 was twenty-four thousand¦199336 \add men\add*.
+\li1
+\v 13 The tenth \add leader\add* for the tenth month¦199340 was Maharai¦199342 the Netofatite (a Zerahite). His division¦199346 was twenty-four thousand¦199349 \add men\add*.
+\li1
+\v 14 The eleventh \add leader\add* for the eleventh month¦199358 was Benayah¦199359 the Piratonite¦199360 (a Eframite). His division¦199366 was twenty-four thousand¦199369 \add men\add*.
+\li1
+\v 15 The twelfth \add leader\add* for the twelfth month¦199376 was Heldai¦199377 the Otniel¦199379 (a Netofatite). His division¦199381 was twenty-four thousand¦199384 \add men\add*.
 \s1 The teachers of Yisrael's descendants
 \rem /s1 Officers of the Tribes; Leaders of the Tribes; Leaders of Tribes
 \s4 Full kingdom
 \p
-\v 16 ◙
-\p …
-\p …
+\v 16 There were certain tribal leaders over each of Yisrael's tribes:
+\li1 Zikri's¦199395 son Eliezer¦199392 was \add the leader of the tribe of\add* Revben.
+\li1 Maakah's son Shefatyah was \add the leader of the tribe of\add* Shimeon.
+\li1
+\v 17 Kemuel's¦199408 son Hashavyah was the leader of the Levites.
+\li1 Tsadok¦199410 was the leader of Aharon's descendants.
+\li1
+\v 18 David's¦199416 \add older\add* brother¦199415 Elihu¦199414 was \add the leader of the tribe of\add* Yehudah¦199413.
+\li1 Mikael's son Omri¦199418 was \add the leader of the tribe of\add* Yissaskar.
+\li1
+\v 19 Ovadyah's son Yishmayah¦199425 was \add the leader of the tribe of\add* Zevulun.
+\li1 Azriel's¦199433 son Yerimot was \add the leader of the tribe of\add* Naftali¦199429.
+\li1
+\v 20 Azazyah's¦199441 son Hoshea¦199438 was \add the leader of the tribe¦199443 of\add* Efraim¦199437.
+\li1 Pedayah's¦199448 son Yoel¦199445 was \add the leader of\add* the half-tribe of Menashsheh¦199444.
+\li1
+\v 21 Zekaryah's son Yiddo was \add the leader of\add* the half-tribe of Menashsheh in Gilead¦199453.
+\li1 Avner's son Yaasiel¦199460 was \add the leader of the tribe of\add* Benyamin¦199459.
+\li1
+\v 22 Yeroham's¦199470 son Azarel¦199467 was \add the leader of the tribe of\add* Dan¦199466.
+\m Those were the commanders¦199472 of Yisrael's tribes.
 \p
-\v 17 ◙
-\p …
-\p
-\v 18 ◙
-\p …
-\p
-\v 19 ◙
-\p …
-\p
-\v 20 ◙
-\p …
-\p
-\v 21 ◙
-\p …
-\p
-\v 22 ◙
-\p …
-\p
-\v 23 \x + \xo 27:23: \xt Gen 15:5; 22:17; 26:4.\x*◙
-\v 24 \x + \xo 27:24: \xt 2Sam 24:15; 1Ch 21:1-14.\x*◙
-\s1 The impamiyalan of King David
+\v 23 David¦199479 didn't¦199476 include men¦199481 who were less than twenty¦199482 years old when he had ordered a census¦199480, because Yahweh¦199487 had promised that he would multiply the Israelis¦199491 like stars¦199492 in the sky.\x + \xo 27:23: \xt Gen 15:5; 22:17; 26:4.\x*
+\v 24 Yoav (Tseruyah's son) began¦199499 the count¦199500 but never finished¦199502 it because \add Yahweh's\add* anger¦199505 had struck Yisrael, so the census result wasn't recorded in the record of King David's¦199517 reign.\x + \xo 27:24: \xt 2Sam 24:15; 1Ch 21:1-14.\x*
+\s1 King David's administrators
 \rem /s1 Administrators of the Royal Property; Officials of David's Kingdom; Other Civic Officials; The King's Overseers
 \s4 Full kingdom
-\p
-\v 25 ◙
+\li1
+\v 25 Adiel's¦199526 son Azmavet¦199523 supervised the king's treasuries.
+\li1 Uzziyah's son Yonatan was in charge of the storehouses in the countryside¦199530 and in the cities¦199531 and villages¦199532, and in the watchtowers.
 \rem /s1 David's Personal Advisers
-\v 26 ◙
-\v 27 ◙
-\v 28 ◙
-\v 29 ◙
-\v 30 ◙
-\v 31 ◙
+\li1
+\v 26 Keluv's¦199549 son Ezri¦199546 supervised the farm workers.
+\li1
+\v 27 Shimei¦199554 the Ramatite¦199555 supervised the \add king's\add* vineyards.
+\li1 Zavdi¦199560 the Shifmite¦199561 supervised the wine \add ≈vats\add*.
+\li1
+\v 28 Baal¦199570-Hanan¦199571 the Gederite¦199572 was over the olive groves and the sycamore¦199567 trees¦199567 in the lowlands.
+\li1 Yoash¦199578 supervised the \add olive\add* oil \add ≈storage\add*.
+\li1
+\v 29 Shitrai¦199586 from the Plain¦199588 of Sharon¦199585 was in charge of the herds \add of cattle\add* that grazed there.
+\li1 Adlai's¦199596 son Shafat¦199593 was in charge of the \add ≈cattle\add* in the valleys¦199592.
+\li1
+\v 30 Ovil the Yishmaelite¦199603 was in charge of the camels¦199601.
+\li1 Yehdiyah the Meronotite¦199608 was in charge of the donkeys¦199606.
+\li1
+\v 31 Yaziz¦199614 the Hagrite¦199615 was in charge of the flocks¦199613 \add of sheep and¦199611 goats\add*.
+\m All of those officials¦199619 supervised King David's¦199623 property¦199620.
 \s1 King David's advisers
 \s4 Full kingdom
-\p
-\v 32 ◙
-\v 33 ◙
-\v 34 ◙
+\li1
+\v 32 David's¦199628 uncle¦199626 Yonatan was a \add ≈wise adviser\add* and a copyist.
+\li1 Hakmoni's son Yehiel attended to the king's¦199642 sons¦199641.
+\li1
+\v 33 Ahitofel was the king's adviser.
+\li1 Hushai¦199648 the Arkite was the king's friend¦199650.
+\li1
+\v 34 Ahitofel was succeeded by Benayah's¦199658 son Yehoyada, then by Avyatar.
+\li Yoav \add (Joab)\add* was the commander¦199660 of the king's army.
 \c 28
-\s1 David's plans for the temple
+\s1 David's temple plans
 \rem /s1 Solomon Instructed to Build the Temple; David's Instructions for the Temple; David's Plans for the Temple; David's Instructions to Solomon
 \s4 Full kingdom
 \p
@@ -1631,7 +1671,7 @@
 \v 4 100 tonnes of gold and 2,500 tonnes of refined¦200229 silver¦200228 for overlaying¦200230 the buildings' walls¦200231,
 \v 5 \add as well as\add* gold for the gold things, silver for the silver things, and for everything \add ≈to be made\add* by the craftsmen¦200242. \add ≈So\add* who is willing today, \add ≈to commit themselves\add* to making¦200244 a contribution¦200244 towards Yahweh's work?
 \p
-\v 6 Then¦200256 the famliy leaders and the leaders of the \add ≈tribes¦200255\add*, and the \add ≈various levels of military\add* commanders¦200257, and the king's¦200262 \add ≈construction overseers\add*, \add all\add* contributed willingly¦200250.
+\v 6 Then¦200256 the family¦200252 leaders and the leaders of the \add ≈tribes¦200255\add*, and the \add ≈various levels of military\add* commanders¦200257, and the king's¦200262 \add ≈construction overseers\add*, \add all\add* contributed willingly¦200250.
 \v 7 They¦200268 donated \add a total of\add* 170 tonnes of gold and 100kg of gold coins, 350 tonnes of silver¦200276, 600 tonnes of bronze¦200280, and 3,400 tonnes of iron for the \add ≈temple\add* construction,
 \v 8 plus anyone who had precious stones¦200293 donated them to the treasury¦200295 for the \add ≈temple\add*. Yehiel (a Gershonite) \add ≈was in charge of those\add*.
 \v 9 The people¦200306 were \add ≈excited\add*, because¦200307 they'd¦200313 \add all\add* given¦200309 willingly¦200309 to Yahweh¦200314, and¦200315 King David¦200316 was also very pleased.
@@ -1651,7 +1691,7 @@
 \v 18 Yahweh¦200470, the God¦200471 of our ancestors¦200475 Abraham¦200472, Yitshak \add (Isaac¦200473)\add*, and Yisrael \add (Israel¦200474)\add*, \add help your¦200483 people¦200483 continue to desire to do things like this forever¦200479, and help them remain loyal to you¦200486\add*.
 \v 19 \add ≈Also,\add* give¦200490 my son Shelomoh \add (Solomon)\add* a \add ≈sincere desire\add* to follow your instructions, your testimonies, and your regulations¦200496, and to do \add ≈everything needed\add* to build¦200499 the temple¦200500 \add ≈following all my preparation¦200503 work\add*.”
 \p
-\v 20 Then David¦200507 told all the assembled \add people\add*, “Bless your¦200517 God Yahweh.” and the entireassembly blessed¦200511 Yahweh, the God of their¦200524 ancestors¦200524. Then they bowed¦200525 down to \add ≈honour\add* \add both\add* Yahweh and the king¦200528.
+\v 20 Then David¦200507 told all the assembled \add people\add*, “Bless your¦200517 God Yahweh.” and the entire¦200519 assembly blessed¦200511 Yahweh, the God of their¦200524 ancestors¦200524. Then they bowed¦200525 down to \add ≈honour\add* \add both\add* Yahweh and the king¦200528.
 \rem /s1 Solomon Named as King; Solomon Acknowledged as King
 \p
 \v 21 Then¦200530 they offered sacrifices to Yahweh, and sacrificed burnt¦200535 offerings to Yahweh on the following day: 1,000 bulls¦200540, 1,000 rams, 1,000 lambs¦200544, plus their¦200546 drink¦200546 offerings and sacrifices for all Yisrael in abundance.
