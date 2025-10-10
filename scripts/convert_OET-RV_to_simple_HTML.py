@@ -61,11 +61,11 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Internals.InternalBibleInternals import getLeadingInt
 
 
-LAST_MODIFIED_DATE = '2025-09-19' # by RJH
+LAST_MODIFIED_DATE = '2025-10-09' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
-PROGRAM_VERSION = '0.86'
-PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
+PROGRAM_VERSION = '0.88'
+PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
 
@@ -1081,7 +1081,11 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
             assert rest
             book_html = f'{book_html}<p class="{marker}">{rest}</p>\n'
         elif marker in ('li1','li2'): # Needs more work here.....................................
-            assert not inRightDiv
+            if inRightDiv:
+                assert not inParagraph
+                assert not inTable
+                book_html = f'{book_html}</div><!--rightBox-->\n'
+                inRightDiv = False
             if inParagraph:
                 book_html = f'{book_html}</{inParagraph}>\n'
                 inParagraph = None
@@ -1120,7 +1124,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
         assert ftIx != -1, f"Footnote without ft at {book_html[fIx:fIx+30]}…"
         fEndIx = book_html.find( '\\f*', ftIx+3 )
         assert fEndIx != -1, f"Bad RV footnote in {BBB} around '{book_html[fIx:fIx+30]}'"
-        fnoteMiddle = book_html[ftIx+4:fEndIx]
+        fnoteMiddle = book_html[ftIx+4:fEndIx].replace( '\\xt ', '' ) # No special handling here yet
         fnote = f'<span class="fn" title="Note: {fnoteMiddle}">[fn]</span>'
         # print( f"{BBB} {fnote}" )
         book_html = f'{book_html[:fIx]}{fnote}{book_html[fEndIx+3:]}'
@@ -1135,16 +1139,16 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
     while True:
         xIx = book_html.find( '\\x ', searchStartIx )
         if xIx == -1: break # all done
-        ftIx = book_html.find( '\\xt ', searchStartIx+3 )
+        ftIx = book_html.find( '\\xt ', xIx+3 )
         assert ftIx != -1
         fEndIx = book_html.find( '\\x*', ftIx+3 )
         assert fEndIx != -1
-        fnoteMiddle = book_html[ftIx+4:fEndIx].replace('\\xo ','').replace('\\xt ','') # Fix things like "Gen 25:9-10; \xo b \xt Gen 35:29."
-        fnote = f'<span class="xref" title="See also {fnoteMiddle}">[ref]</span>' # was †
+        xrefMiddle = book_html[ftIx+4:fEndIx].replace('\\xo ','').replace('\\xt ','') # Fix things like "Gen 25:9-10; \xo b \xt Gen 35:29."
+        xrefSpan = f'<span class="xref" title="See also {xrefMiddle}">[ref]</span>' # was †
         # print( f"{BBB} {xref}" )
-        book_html = f'{book_html[:xIx]}{fnote}{book_html[fEndIx+3:]}'
+        book_html = f'{book_html[:xIx]}{xrefSpan}{book_html[fEndIx+3:]}'
         searchStartIx = fEndIx + 3
-    assert '\\x' not in book_html, f"{BBB} {book_html[book_html.index(f'{BACKSLASH}x')-10:book_html.index(f'{BACKSLASH}x')+12]}"
+    assert '\\x ' not in book_html and '\\x*' not in book_html, f"{BBB} {book_html[book_html.index(f'{BACKSLASH}x')-10:book_html.index(f'{BACKSLASH}x')+12]}"
 
     chapter_links = [f'<a title="Go to chapter" href="#C{chapter_num}">C{chapter_num}</a>' for chapter_num in range( 1, int(C)+1 )]
     chapter_html = f'<p class="chapterLinks">{EM_SPACE.join(chapter_links)}</p><!--chapterLinks-->'

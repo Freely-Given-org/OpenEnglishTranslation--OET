@@ -14,7 +14,7 @@ LAST_MODIFIED_DATE = '2022-09-01' # by RJH
 SHORT_PROGRAM_NAME = "retrieveTranslationSourceTexts"
 PROGRAM_NAME = "Retrieve Translation Source Texts"
 PROGRAM_VERSION = '0.02'
-PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
+PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 programNameVersionDate = '{} {} {}'.format( PROGRAM_NAME_VERSION, _("last modified"), LAST_MODIFIED_DATE )
 
 

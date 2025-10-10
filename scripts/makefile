@@ -16,6 +16,7 @@ RV_ESFM := $(wildcard ../translatedTexts/ReadersVersion/*.ESFM)
 # final_LV_OT_USFM := $(wildcard ../intermediateTexts/auto_edited_OT_USFM/*.usfm)
 final_LV_OT_ESFM := $(wildcard ../intermediateTexts/auto_edited_OT_ESFM/*.ESFM)
 final_LV_NT_ESFM := $(wildcard ../intermediateTexts/auto_edited_VLT_ESFM/OET-LV_???.ESFM)
+LV_names_TSV_table := ../intermediateTexts/OET-LV_names_table.tsv
 LV_ESFM := $(final_LV_OT_ESFM) $(final_LV_NT_ESFM)
 # intermediate_LV_OT_USFM := $(wildcard ../intermediateTexts/modified_source_glossed_OSHB_USFM/*.usfm)
 intermediate_LV_OT_ESFM := $(wildcard ../intermediateTexts/modified_source_glossed_OSHB_ESFM/???_gloss.ESFM)
@@ -59,7 +60,7 @@ scripted_NT_updates := $(wildcard ScriptedVLTUpdates/*)
 
 ALL: BOTH $(sideBySide_HTML) $(derived_USFM) $(derived_VREFs)
 BOTH: LV RV
-LV: LV_OT LV_NT
+LV: LV_OT LV_NT $(LV_names_TSV_table)
 
 LV_OT: $(LV_OT_HTML)
 LV_NT: $(LV_NT_HTML) $(Clear_Bible_NT_lowfat_TSV)
@@ -67,6 +68,9 @@ RV: $(RV_HTML)
 
 #=== LV stuff =======================
 
+$(LV_names_TSV_table): ScriptedOTUpdates/restoreNames.commandTable.tsv ScriptedVLTUpdates/OTNames.commandTable.tsv ScriptedVLTUpdates/NTNames.commandTable.tsv create_OET-LV_TSV_name_table.py
+	@echo "\n\nCreate OET-LV TSV names table from command tables…\n"
+	@$(Python) create_OET-LV_TSV_name_table.py
 
 # $(LV_HTML): $(LV_OT_HTML) $(LV_NT_HTML)
 $(LV_OT_HTML) $(LV_NT_HTML): $(final_LV_OT_ESFM)  $(final_LV_NT_ESFM) convert_OET-LV_to_simple_HTML.py $(expanded_NT_wordtable)
@@ -172,8 +176,8 @@ $(derived_USFM): $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_ESFM_to_USFM.py
 $(derived_VREFs): $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_USFM_to_VREF.py
 	@echo "\n\nCreate VREF.txt files from USFM…\n"
 	@$(Python) convert_OET-LV-RV_USFM_to_VREF.py
-	#@echo "\n\nFinally, just count our progress…\n"
-	#@$(Python) count_completed_OET-RV_verses.py
+	@echo "\n\nFinally, just count our progress…\n"
+	@$(Python) count_completed_OET-RV_verses.py
 	@$(Python) --version
 
 
@@ -184,8 +188,8 @@ $(derived_VREFs): $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_USFM_to_VREF.py
 check: $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
 	@echo "\n\nConnect OET-RV words to OET-LV word numbers…\n"
 	@$(Python) connect_OET-RV_words_via_OET-LV.py
-	#@echo "\n\nFinally, just count our progress…\n"
-	#@$(Python) count_completed_OET-RV_verses.py
+	@echo "\n\nFinally, just count our progress…\n"
+	@$(Python) count_completed_OET-RV_verses.py
 	@$(Python) --version
 
 

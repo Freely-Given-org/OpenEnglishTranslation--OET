@@ -55,11 +55,11 @@ from BibleOrgSys.Reference.BibleVersificationSystems import BibleVersificationSy
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 
-LAST_MODIFIED_DATE = '2025-09-18' # by RJH
+LAST_MODIFIED_DATE = '2025-10-08' # by RJH
 SHORT_PROGRAM_NAME = "count_completed_OET-RV_verses"
 PROGRAM_NAME = "Count completed OET-RV verses"
-PROGRAM_VERSION = '0.30'
-PROGRAM_NAME_VERSION = '{} v{}'.format( SHORT_PROGRAM_NAME, PROGRAM_VERSION )
+PROGRAM_VERSION = '0.31'
+PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
 
@@ -158,7 +158,7 @@ def main():
     # print( f"{weeklyRatePercentage=} {weeklyVerseRate=} {dailyVerseRate=}" )
     numRemainingWeeks = int( totalUnfinishedCount / weeklyVerseRate + 0.5 )
     numRemainingDays = int( totalUnfinishedCount / dailyVerseRate + 0.5 )
-    draftingFinishDateString = f'{date.today() + timedelta(days=numRemainingDays)} next year'
+    draftingFinishDateString = f'{date.today() + timedelta(days=numRemainingDays)}'
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"OET-RV has {finishedVerses:,}/{totalVerses:,} verses finished = {finishedVerses*100/totalVerses:.1f}%. (Approx {finishedChapters:,}/{totalChapters:,} = {finishedChapters*100//totalChapters}% chapters.)" )
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"            {totalUnfinishedCount:,} verses still to be drafted" )
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"              at the rate of {weeklyRateString} expected to take {numRemainingDays:,} days ({numRemainingWeeks:,} weeks)" )

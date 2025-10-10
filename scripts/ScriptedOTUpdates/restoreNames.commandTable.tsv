@@ -44,11 +44,11 @@ H									Abram			אַבְרָם		H87 (175) Gen 11:26-27,29,31, 12:1,4-7,9-10,14
 H									Absalom			אֲבִישָׁלוֹם		H53 David's son (111) 2Sam 3:3, 13:1,4, ....
 H	JOS								Achan			עָכָן		H5912 (6) Josh 7:1,18-20,24, 22:20*
 H					CH1_2:7				Achar			עָכָר		H5917 (1) 1Chr 2:7*
-H									Achbor			עַכְבּוֹר		H5907 (7) Gen 36:38-39, 2Ki 22:12,14, 1Chr 1:49, Jer 26:22, 36:12*
-H									Achish			אֲכִישׁ		H397 (21) 1Sam 21:11-13,15, 27:2-3,5-6,9-10,12, ...
-H									Achsah			עַכְסָה		H5915 woman (5) Josh 15:16-17, Jdg 1:12-13, 1Chr 2:49*
-H									Adah			עָדָה		H5711 woman (8) Gen 4:19-20,23, 36:2,4,10,12,16*
-H									Adaiah			עֲדָיָה		H5718 (9) 2Ki 22:1, 1Chr 6:41, 8:21, 9:12, 2Chr 23:1, Ezr 10:39, Neh 11:5,12*
+H	GEN,KI2,CH1,JER								Achbor			עַכְבּוֹר		H5907 (7) Gen 36:38-39, 2Ki 22:12,14, 1Chr 1:49, Jer 26:22, 36:12*
+H	SA1,KI1								Achish			אֲכִישׁ		H397 (21) 1Sam 21:11-13,15, 27:2-3,5-6,9-10,12, ...
+H	JOS,JDG,CH1								Achsah			עַכְסָה		H5915 woman (5) Josh 15:16-17, Jdg 1:12-13, 1Chr 2:49*
+H	GEN								Adah			עָדָה		H5711 woman (8) Gen 4:19-20,23, 36:2,4,10,12,16*
+H	KI2,CH1,CH2,EZR,NEH								Adaiah			עֲדָיָה		H5718 (9) 2Ki 22:1, 1Chr 6:41, 8:21, 9:12, 2Chr 23:1, Ezr 10:39, Neh 11:5,12*
 H									Adam			אָדָם		H120 (552) Gen 1:26-27, 2:5,7-8,15-16,18-23,25, ...
 H					GEN_25:13,CH1_1:29				Adbeel			אַדְבְּאֵל		H110 (2) Gen 25:13, 1Chr 1:29*
 H					EZR_2:59				Addan			אַדָּן		H135 (1) Ezr 2:59*
@@ -57,13 +57,14 @@ H					JOS_15:3,CH1_8:3				Adar			אַדָּר		{ H146 (2) Josh 15:3, 1Chr 8:3*
 H	CH1								Adiel			עֲדִיאֵל		H5717 (3) 1Chr 4:36, 9:12, 27:25*
 wH	EZR,NEH								Adin			עָדִין		H5720 (4) Ezr 2:15, 8:6, Neh 7:20, 10:16*
 H					CH1_11:42				Adina			עֲדִינָא		H5721 (1) 1Chr 11:42*
-H									Adonijah			אֲדֹנִיָּה		H138 (26) 2Sam 3:4, 1Ki 1:15, ...
+H					CH1_27:29				Adlai			עַדְלַי		H5724 (1) 1Chr 27:29*
+H	SA2,KI1,CH1,CH2								Adonijah			אֲדֹנִיָּה		H138 (26) 2Sam 3:4, 1Ki 1:15, ...
 H	EZR,NEH								Adonikam			אֲדֹנִיקָם		H140 (3) Ezr 2:13, 8:13, Neh 7:18*
 H					KI1_4:6,KI1_5:14				Adoniram			אֲדֹנִירָם		{ H141 (2) 1Ki 4:6, 5:14*
-H									Adoram			אֲדֹרָם		{ shortened form H151 (2) 2Sam 20:24, 1Ki 12:18*
-H									Adrammelech			אַדְרַמֶּלֶךְ		H152 (3) 2Ki 17:31, 19:37, Isa 37:38*
+H					SA2_20:24,KI1_12:18				Adoram			אֲדֹרָם		{ shortened form H151 (2) 2Sam 20:24, 1Ki 12:18*
+H	KI2,ISA								Adrammelech			אַדְרַמֶּלֶךְ		H152 (3) 2Ki 17:31, 19:37, Isa 37:38*
 H					SA1_18:19,SA2_21:8				Adriel			עַדְרִיאֵל		H5741 (2) 1Sam 18:19, 2Sam 21:8*
-H									Adna			עַדְנָא		H5733 (2) Ezr 10:30, Neh 12:15*
+H					EZR_10:30,NEH_12:15				Adna			עַדְנָא		H5733 (2) Ezr 10:30, Neh 12:15*
 H					SA2_23:11				Agee			אָגֵא		H89 (1) 2Sam 23:11*
 H									Ahab			אַחְאָב		H256 (93) 1Ki 16:28-30,33, 17:1, 18:1-3,5-6, ...
 H					CH1_8:1				Aharah			אַחְרַח		H315 (1) 1Chr 8:1*
@@ -122,19 +123,20 @@ wH					EZR_2:57				Ami			אָמִי		H532 (1) Ezr 2:57*
 H					KI2_14:25,JNA_1:1				Amittai			אֲמִתַּי		H573 (2) 2Ki 14:25, Jna 1:1*
 H									Ammiel			עַמִּיאֵל		H5988 (6) Num 13:12, 2Sam 9:4-5, 17:27, 1Chr 3:5, 26:5*
 H	NUM,CH1								Ammihud			עַמִּיהוּד		H5989 (9) Num 1:10, 2:18, 7:48,53, 10:22, 34:20,28, 1Chr 7:26, 9:4*
-H									Amminadab			עַמִּינָדָב		H5992 (13) Exo 6:23, Num 1:7, 2:3, ..., Ruth 4:19-20, 1chr 2:10, ...
-wH									Amok			עָמוֹק		H5987 (2) Neh 12:7,20*
-wH									Amon			אָמוֹן		H526 (17) 1Ki 22:26, 2Ki 21:18-19, ..., Zeph 1:1
-H									Amos			אָמוֹץ		H5986 (7) Amo 1:1, 7:8,10-12,14, 8:2*
+H									Amminadab			עַמִּינָדָב		H5992 (13) Exo 6:23, Num 1:7, 2:3, ..., Ruth 4:19-20, 1Chr 2:10, ...
+H					CH1_27:6				Ammizabad			עַמִּיזָבָד		H5990 (1) 1Chr 27:6*
+wH					NEH_12:7,NEH_12:20				Amok			עָמוֹק		H5987 (2) Neh 12:7,20*
+wH	KI1,KI2,CH1,CH2,NEH,JER,ZEP								Amon			אָמוֹן		H526 (17) 1Ki 22:26, 2Ki 21:18-19, ..., Zeph 1:1
+H	AMO								Amos			אָמוֹץ		H5986 (7) Amo 1:1, 7:8,10-12,14, 8:2*
 H					SA2_13:37				Ammihud			עַמִּיחוּר		H5991 (1) 2Sam 13:37*
 wH									Ammon			עַמּוֹן		H5983 (106) Gen 19:38, Num 21:24, Deu 2:19,37, 3:11,16, Josh 12:2, 13:10,25, ...
 H									Amnon			אַמְנוֹן		H550 son of David (28) 2Sam 3:2, 13:1, ...
-H									Amoz			אָמוֹץ		H531 (13) 2Ki 19:2,20, 20:1, 2Chr 26:22, 32:20,32, Isa 1:1, 2:1, ...
-H									Amram			עַמְרָם		H6019 (14) Exo 6:18,20, Num 3:19,26:58-59, 1 Chr 6:2-3,18, 23:12-13, 24:20, Ezr 10:34*
+H	KI2,CH2,ISA								Amoz			אָמוֹץ		H531 (13) 2Ki 19:2,20, 20:1, 2Chr 26:22, 32:20,32, Isa 1:1, 2:1, ...
+H	EXO,NUM,CH1,EZR								Amram			עַמְרָם		H6019 (14) Exo 6:18,20, Num 3:19,26:58-59, 1 Chr 6:2-3,18, 23:12-13, 24:20, Ezr 10:34*
 H					CH1_6:46,NEH_11:12				Amzi			אַמְצִי		H557 (2) 1Chr 6:46, Neh 11:12*
-wH									Anah			עֲנָה		H6034 (12) Gen 36:2.14,18,20,24-25,29, 1Chr 1:38,40-41*
+wH	GEN,CH1								Anah			עֲנָה		H6034 (12) Gen 36:2.14,18,20,24-25,29, 1Chr 1:38,40-41*
 H					NEH_8:4,NEH_10:22				Anaiah			עֲנָיָה		H6043 (2) Neh 8:4, 10:22*
-wH									Anak			עָנָק		H6061 (9) Num 13:22,28,33, Deu 9:2, Josh 15:13-14, ...
+wH	NUM,DEU,JOS,JDG								Anak			עָנָק		H6061 (9) Num 13:22,28,33, Deu 9:2, Josh 15:13-14, ...
 H					KI2_17:31				Anammelech			עֲנַמֶּלֶךְ		H6048 (1) 2Ki 17:31*
 wH					NEH_10:26				Anan			עָנָן		H6052 (1) Neh 10:26*
 wH					CH1_3:24				Anani			עֲנָנִי		H6054 (1) 1Chr 3:24*
@@ -171,7 +173,9 @@ H									Asahel			עֲשָׂהאֵל		{ H6214 (18) 2Sam 2:18-23,30, ...
 H									Asah			עֲשָׂה		{ H6214 (18) 2Sam 2:18-23,30, ...
 H									Asaiah			עֲשָׂיָה		H6222 (8) 2Ki 22:12,14, 1Chr 4:36, 6:30, 9:5, 15:6,11, 2Chr 34:20*
 H									Asaph			אָסָף		H623 (46) 2Ki 18:18,37, 1Chr 6:39, 9:15, ...
-H					CH1_4:16				Asarel			אֲשַׂרְאֵל		H840 (1) 1Chr 4:16*
+wH					CH1_4:16				Asarel			אֲשַׂרְאֵל		H840 (1) 1Chr 4:16*
+H					CH1_25:2				Asarelah			אֲשַׂרְאֵלָה		{ H841 (1) 1Chr 25:2*
+H					CH1_25:2				Asharelah			אֲשַׂרְאֵלָה		{ H841 (1) 1Chr 25:2*
 H									Asenath			אֱסְנַת		H621 (3) Gen 41:45,50, 46:20*
 H					CH1_4:35				Asiel			עֲשִׂיאֵל		H6221 (1) 1Chr 4:35*
 H					EZR_2:50				Asna			אַסְנָה		H619 (1) Ezr 2:50*
@@ -253,6 +257,8 @@ wH					CH1_15:18				Ben			בֵּן		H1122 (1) 1Chr 15:18*
 H									Benaiah			בְּנָיָה		H1141 (42) 2Sam 8:18, 20:23, 23:20,22, ...
 H					NEH_10:13				Beninu			בְּנִינוּ		H1148 (1) Neh 10:13*
 H									Benjamin			בִּנְיָמִין		H1144 (167) Gen 35:18,24, ..., Exo 1:3, Num 1:11, ..., Ezra 1:5, Acts 13:21
+H					CH1_24:26				Beno			בְּנוֹ		H1121 (lit 'son of' -- probably a copying error) (1) 1Chr 24:26*
+H					CH1_24:26				beno			בְּנוֹ		H1121 (lit 'son of' -- probably a copying error) (1) 1Chr 24:26* Why's the OET-LV gloss not capitalised???
 H	GEN,NUM,DEU,JOS,CH1,MIC								Beor			בְּעוֹר		H1160 (10) Gen 36:32, Num 22:5, 24:3,15, 31:8, Deu 23:4, Josh 13:22, 24:9, 1Chr 1:43, Mic 6:5*
 H					CH1_8:21				Beraiah			בְּרָאיָה		H1256 (1) 1Chr 8:21*
 H	CH1,CH2,NEH,ZEC								Berechiah			בֶּרֶכְיָה		{ H1296 (11) 1Chr 3:20, 6:39, 9:16, 15:17,23, 2Chr 28:12, Neh 3:4,30, 6:18, Zech 1:1,7*
@@ -283,13 +289,14 @@ H					CH1_7:31				Birzavith			בִּרְזוֹת		{ H1269 woman (1) Chr 7:31*
 H					CH1_7:31				Birzaith			בִּרְזוֹת		{ H1269 woman (1) Chr 7:31*
 H					EZR_4:7				Bishlam			בִּשְׁלָם		H1312 (1) Ezr 4:7*
 H					CH1_4:18				Bithiah			בִּתְיָה		H1332 (1) 1Chr 4:18*
-H									Boaz			בֹּעַז		H1162 (24) Ruth 2:1,3-5,8,11,14-15, ..., 2Chr 3:17
+H	RUT,KI1,CH1,CH2								Boaz			בֹּעַז		H1162 (24) Ruth 2:1,3-5,8,11,14-15, ..., 2Chr 3:17
 H					CH1_8:38,CH1_9:44				Bocheru			בֹּכְרוּ		H1074 (2) 1Chr 8:38, 9:44*
 H					JOS_15:6,JOS_18:17				Bohan			בֹּהן		H932 Reuben's son or descendant (2) Josh 15:6, 18:17*
 H									Ishbosheth			אִישׁ-בּשֶׁת		{ H378 Sha'ul's son (11) 2Sam 2:8,10, ...
 H									Ish-bosheth			אִישׁ-בּשֶׁת		{ H378 Sha'ul's son (11) 2Sam 2:8,10, ...
 H									bosheth			בּשֶׁת		{ H378 Sha'ul's son (11) 2Sam 2:8,10, ...
-H	NUM,CH1,EZR								Bukki			בֻּקִּי		H1231 (5) Num 34:22, 1Chr 6:5,51, Ezr 7:4*
+wH	NUM,CH1,EZR								Bukki			בֻּקִּי		H1231 (5) Num 34:22, 1Chr 6:5,51, Ezr 7:4*
+H					CH1_25:4,CH1_25:13				Bukkiah			בֻּקִּיָּה		H1232 (2) 1Chr 25:4,13*
 H					CH1_2:25				Bunah			בּוּנָה		H946 (1) 1Chr 2:25*
 H	NEH								Bunni			בֻּנִּי		H1138 (3) Neh 9:4, 10:15, 11:15*
 wH	GEN,CH1,JER								Buz			בּוּז		H938 (1) Gen 22:21, 1Chr 5:14, Jer 25:23*
@@ -308,7 +315,8 @@ wdH									Carmi			כַּרְמִי/(Carmi)		H3756 (8) Gen 46:9, Exo 6:14, Num 
 dH					CH1_4:14,ISA_3:3				Charashim			חֲרָשִׁים/(Charashim)		H2798 (2) 1Chr 4:14, Isa 3:3*
 dH					CH1_2:9				Chelubai			כְּלוּבַי/(Chelubai)		{{ H3621 (1) 1Chr 2:9*
 dH					CH1_2:9				Celubai			כְּלוּבַי/(Chelubai)		{{ H3621 (1) 1Chr 2:9*
-dH					CH1_4:11,CH1_27:26				Chelub			כְּלוּב/(Chelub)		H3620 (2) 1Chr 4:11, 27:26*
+dH					CH1_4:11,CH1_27:26				Chelub			כְּלוּב/(Chelub)		{{{ H3620 (2) 1Chr 4:11, 27:26*
+H					CH1_4:11,CH1_27:26				Kelub			כְּלוּב		{{{ H3620 (2) 1Chr 4:11, 27:26*
 dH					EZR_10:35				Cheluhi			כְּלוּהַיֹ/(Cheluhi)		{ H3622 (1) Ezr 10:35*
 H					EZR_10:35				Keluhi			כְּלוּהַיֹ		{ H3622 (1) Ezr 10:35*
 dH									Chemosh			כְּמוֹשׁ/(Chemosh)		H3645 (8) Num 21:29, Jdg 11:24, 1Ki 11:7, ...
@@ -318,7 +326,8 @@ dH	EZR,NEH								Cherub			כְּרוּב/(Cherub)		{{ H3743 (2) Ezr 2:59, Neh 7
 dH	EZR,NEH								Kerub			כְּרוּב		{{ H3743 (2) Ezr 2:59, Neh 7:61*
 wdH					NEH_9:4				Chenani			כְּנָנִי/(Chenani)		{ H3662 (1) Neh 9:4*
 wdH					NEH_9:4				Kenani			כְּנָנִי/(Chenani)		{ H3662 (1) Neh 9:4*
-dH	CH1								Chenaniah			כְּנַנְיָה/(Chenaniah)		H3663 (3) 1Chr 15:22,27, 26:29*
+dH	CH1								Chenaniah			כְּנַנְיָה/(Chenaniah)		{{{ H3663 (3) 1Chr 15:22,27, 26:29*
+H	CH1								Kenaniah			כְּנַנְיָה		{{{ H3663 (3) 1Chr 15:22,27, 26:29*
 dH					GEN_36:26,CH1_1:41				Cheran			כְּרָן/(Cheran)		{{ H3763 (2) Gen 36:26, 1Chr 1:41*
 dH					GEN_36:26,CH1_1:41				Keran			כְּרָן/(Cheran)		{{ H3763 (2) Gen 36:26, 1Chr 1:41*
 dH	RUT								Chilion			כִּלְיוֹן/(Chilion)		H3630 (3) Ruth 1:2,5, 4:9*
@@ -349,6 +358,7 @@ H					GEN_10:27,CH1_1:21				Diklah			דִּקְלָה		H1853 (2) Gen 10:27, 1Chr
 H	GEN								Dinah			דִינָה		H1783 (8) Gen 30:21, 34:13,5,13,25-26, 46:15*
 H	GEN,CH1								Dishan			דִּישָׁן		H1789 (5) Gen 36:21,26,28,30, 1Chr 1:38*
 H	GEN,CH1								Dishon			דִּישׁוֹן		H1787 (7) Gen 36:21,25,30 1Chr 1:38,41-42*
+H					CH1_27:4				Dodai			דּוֹדַי		H1737 (1) 1Chr 27:4*
 H					GEN_10:4,CH1_1:7				Dodanim			דֹּדָנִים		H1721 (2) Gen 10:4, 1Chr 1:7*
 dH					GEN_10:4,CH1_1:7				Rodanim			דֹּדָנִים/(Rodanim)		H1721 (2) Gen 10:4, 1Chr 1:7*
 H	JDG,SA2,CH1								Dodo			דּוֹדוֹ		H1734 (5) Jdg 10:1, 2Sam 23:9,24, 1Chr 11:12,26*
@@ -357,7 +367,8 @@ H	GEN,JOS,CH1,ISA								Dumah			דּוּמָה		H1746 (4) Gen 25:14, Josh 15:52
 H	JDG,EZR								Ebed			עֶבֶד		H5651 (6) Jdg 9:26,28,30-31,35, Ezra 8:6*
 H									Eber			עֵבֵר		H5677 (15) Gen 10:21,24-25, 11:14-17, Num 24:24, 1Chr 1:18-19,25, ...
 H	CH1								Ebiasaph			אֶבְיָסָף		H43 (3) 1Chr 6:23,37, 9:19*
-H					CH1_8:15				Eder			עֶדֶר		H5738 (1) 1Chr 8:15
+H					CH1_8:15				Eder			עֶדֶר		H5738 (1) 1Chr 8:15*
+H					JOS_15:21,CH1_23:23,CH1_24:30				Eder			עֵדֶר		H5740 (3) Josh 15:21, 1Chr 23:23, 24:30*
 H									Edom			אֱדוֹם		H123 (100) Gen 25:30, 32:3, 36:1,8-9, ...
 H	NUM,DEU,JOS								Edrei			אֶדְרֶעִי		H154 (8) Num 21:33, Deu 1:4, 3:1,10, Josh 12:4, 13:12,31, 19:37*
 wH									el			אֵל		{{ Used as a component in many names and sometimes written separately
@@ -377,14 +388,15 @@ H					GEN_25:4,CH1_1:33				Eldaah			אֶלְדָּעָה		H420 (2) Gen 25:4, 1Ch
 wH					CH1_7:21				Elead			אֶלְעָד		H496 (1) 1Chr 7:21*
 H					CH1_7:20				Eleadah			אֶלְעָדָה		H497 (1) 1Chr 7:20*
 H									Eleazar			אֶלְעָזָר		H499 (72) Exo 6:23,25, 28:1, Lev 10:6,12,16, Num 3:2,4,32, ...
-H									Elhanan			אֶלְחָנָן		H445 (4) 2Sam 21:19, 23:24, 1Chr 11:26, 20:5*
+H	SA2,CH1								Elhanan			אֶלְחָנָן		H445 (4) 2Sam 21:19, 23:24, 1Chr 11:26, 20:5*
 wH									Eli			עֵלִי		H5941 (33) 1Sam 1:3,9,12-14,17,25, ...
 H									Eliab			אֱלִיאָב		H446 (21) Num 1:9, 2:7, 7:24,29, 10:16, 16:1,12, ...
-H									Eliada			אֶלְיָדָע		H450 (4) 2Sam 5:16, 1Ki 11:23, 1Chr 3:8, 17:17*
+H	SA2,KI1,CH1								Eliada			אֶלְיָדָע		H450 (4) 2Sam 5:16, 1Ki 11:23, 1Chr 3:8, 17:17*
 H					SA2_23:32,CH1_11:33				Eliahba			אֶלְיַחְבָּא		H455 (2) 2Sam 23:32, 1Chr 11:33*
-H									Eliakim			אֶלְיָקִים		H471 (12) 2Ki 18:18,26,37, 19:2, 23:34, 2Chr 36:4, Neh 12:41, Isa 36:3, ...
+H	KI2,CH2,NEH,ISA								Eliakim			אֶלְיָקִים		H471 (12) 2Ki 18:18,26,37, 19:2, 23:34, 2Chr 36:4, Neh 12:41, Isa 36:3, ...
 H					SA2_11:3,SA2_23:34				Eliam			אֱלִיעָם		H463 (2) 2Sam 11:3, 23:34*
-H									Eliashib			אֶלְיָשִׁיב		H475 (17) 1Chr 3:24, 24:12, Ezr 10:6,24,27,36 Neh 3:1, ...
+H	CH1,EZR,NEH								Eliashib			אֶלְיָשִׁיב		H475 (17) 1Chr 3:24, 24:12, Ezr 10:6,24,27,36 Neh 3:1, ...
+H					CH1_25:4,CH1_25:27				Eliathah			אֱלִיאָתָה		H448 (2) 1Chr 25:4,27*
 H	CH1,CH2								Eliel			אֱלִיאֵל		H447 (10) 1Chr 5:24, 6:34, 8:20,22, 11:46-47, 12:12, 15:9,11, 2Chr 31:13*
 H					CH1_8:20				Elienai			אֱלִיעֵינַי		H462 (1) 1Chr 8:20*
 H									Eliezer			אֶלִיעֶזֶר		H461 (14, at least eight different people) Gen 15:2, Exo 18:4, 1Chr 7:8, 15:24, ...
@@ -436,7 +448,7 @@ H	JOS,SA1,CH1								Eshtemoh			אֶשְׁתְּמֹעַ		{ H851 (6) Josh 15:50,
 H					CH1_4:11,CH1_4:12				Eshton			אֶשְׁתּוֹן		H850 (2) 1Chr 4:11-12*
 H									Esther			אֶסְתֵּר		H635 (55) Esther 2:7-8,10-11,15-18,20, ...
 H	JDG,CH1,CH2								Etam			עֵיטָם		H5862 (5) Jdg 15:8,11, 1Chr 4:3,32, 2Chr 11:6*
-H									Ethan			אֵיתָן		H387 (8) 1Ki 4:31, 1Chr 2:6,8, 6:42,44, ...
+H	KI1,CH1,PSA								Ethan			אֵיתָן		H387 (8) 1Ki 4:31, 1Chr 2:6,8, 6:42,44, ...
 H					KI1_16:31				Ethbaal			אֶתְבַּעַל		H856 (1) 1Ki 16:31*
 H					CH1_4:7				Ethnan			אֶתְנַן		H869 (1) 1Chr 4:7*
 wdH					GEN_3:20,GEN_4:1				Eve			חַוָּה/(Eve)		H2332 (2) Gen 3:20, 4:1*
@@ -447,19 +459,21 @@ H					CH1_24:16				Jehezkel			יְחֶזְקֵאל		{ H3168 (3) 1Chr 24:16*
 wH					GEN_36:21,GEN_36:27,GEN_36:30,CH1_1:38,CH1_1:42				Ezer			אֶצֶר		H687 (5) Gen 36:21,27,30, 1Chr 1:38,42*
 wH					CH1_7:21				Ezer			עֶזֶר		H5827 (1) 1Chr 7:21*
 wH					CH1_4:4,CH1_12:10,NEH_3:19,NEH_12:42				Ezer			עֵזֶר		H5829 (4) 1Chr 4:4, 12:10, Neh 3:19, 12:42*
-H									Ezra			עֶזְרָא		H5830 (22) Ezra 7:1,6,10-11, 10:1-2,5-6,10,16, Neh 8:1, ...
-H									Gabbai			גַּבַּי		H1373 (1) Neh 11:8*
-H									Gabriel			גַּבְרִיאֵל		H1403 angel (2) Dan 8:16, 9:21*, Luke 1:19
-H									Gaal			גַּעַל		H1603 (9) Jdg 9:26,28,30-31,35-37,39,41*
+H	EZR,NEH								Ezra			עֶזְרָא		H5830 (22) Ezra 7:1,6,10-11, 10:1-2,5-6,10,16, Neh 8:1, ...
+H					CH1_27:26				Ezri			עֶזְרִי		H5836 (1) 1Chr 27:26*
+H					NEH_11:8				Gabbai			גַּבַּי		H1373 (1) Neh 11:8*
+H					DAN_8:16,DAN_9:21				Gabriel			גַּבְרִיאֵל		H1403 angel (2) Dan 8:16, 9:21*, Luke 1:19
+H	JDG								Gaal			גַּעַל		H1603 (9) Jdg 9:26,28,30-31,35-37,39,41*
 wH									Gad			גָּד		H1410 (73) Gen 30:11, 35:26, ... Rev 7:5
-H	KI2								Gadi			גָּדִי		H1424 (2) 2Ki 15:14,17*
-H									Gahar			גַּחַר		H1515 (2) Ezr 2:47, Neh 7:49*
+H					KI2_15:14,KI2_15:17				Gadi			גָּדִי		H1424 (2) 2Ki 15:14,17*
+H					EZR_2:47,NEH_7:49				Gahar			גַּחַר		H1515 (2) Ezr 2:47, Neh 7:49*
 H									Galal			גָּלָל		H1559 (3) 1Chr 9:15-16, Neh 11:17*
 H									Gamaliel			גַּמְלִיאֵל		H1583 (5) Num 1:10, 2:20, 7:54,59, 10:23*, Acts 5:34
-H									Gareb			גָּרֵב		H1619 Ithrite (3) 2Sam 23:38, 1Chr 11:40, Jer 31:39*
-H									Gatam			גַּעְתָּם		H1609 (3) Gen 36:11,16, 1Chr 1:36*
+H					CH1_24:17				Gamul			גְּמוּל		H1577 (1) 1Chr 24:17*
+H	SA2,CH1,JER								Gareb			גָּרֵב		H1619 Ithrite (3) 2Sam 23:38, 1Chr 11:40, Jer 31:39*
+H	GEN,CH1								Gatam			גַּעְתָּם		H1609 (3) Gen 36:11,16, 1Chr 1:36*
 H					CH1_2:46				Gazez			גָּזֵז		H1495 (2) 1Chr 2:46*
-H									Gazzam			גַּזָּם		H1502 (2) Ezr 2:48, Neh 7:51*
+H					EZR_2:48,NEH_7:51				Gazzam			גַּזָּם		H1502 (2) Ezr 2:48, Neh 7:51*
 H					KI1_4:19				Geber			גֶּבֶר		H1389 (1) 1Ki 4:19*
 H									Gedaliah			גְּדַלְיָה		H1436 (32) 2Ki 25:22-25, 1Chr 25:3,9, Ezr 10:18, Jer 38:1, ..., Zeph 1:1, ...
 H					JOS_15:36,CH1_4:23				Gederah			גְּדֵרָה		H1449 woman (2) Josh 15:36, 1Chr 4:23*
@@ -474,10 +488,11 @@ H									Geshem			גֶּשֶׁם		H1654 the Arab (4) Neh 2:19, 6:1-2,6*
 H									Gether			גֶּתֶר		H1666 (2) Gen 10:23, 1Chr 1:17*
 H					EZR_2:20				Gibbar			גִּבַר		H1402 (1) Ezr 2:20*
 H					CH1_2:49				Gibea			גִּבְעָא		H1388 (1) 1Chr 2:49*
-H									Giddel			גִּדֵּל		H1435 (4) Ezr 2:47,56, Neh 7:49,58*
+H					CH1_25:4,CH1_25:29				Giddalti			גִּדַּלְתִּי		H1437 (2) 1Chr 25:4,29*
+H	EZR,NEH								Giddel			גִּדֵּל		H1435 (4) Ezr 2:47,56, Neh 7:49,58*
 H									Gideon			גִּדְעוֹן		H1439 (39) Jdg 6:11,13,19,22,24,27,29,34, ..., Heb 11:32
-H									Gilalai			גִּלֲלַי		H1562 (1) Neh 12:36*
-H									Ginath			גִּנַּת		H1527 (2) 1Ki 16:21-22*
+H					NEH_12:36				Gilalai			גִּלֲלַי		H1562 (1) Neh 12:36*
+H					KI1_16:21,KI1_16:22				Ginath			גִּנַּת		H1527 (2) 1Ki 16:21-22*
 wH	NEH								Ginnetho			גִּנְּתוֹן		{ H1599 (3) Neh 10:6, 12:4,16*
 H	NEH								Ginnethoi			גִּנְּתוֹן		{ H1599 (3) Neh 10:6, 12:4,16*
 H	NEH								Ginnethon			גִּנְּתוֹן		{ H1599 (3) Neh 10:6, 12:4,16*
@@ -494,6 +509,7 @@ H					NEH_1:1,NEH_10:1				Hacaliah			חֲכַלְיָה		H2446 (2) Neh 1:1, 10:1
 H	SA1								Hachilah			חֲכִילָה		H2444 (3) 1Sam 23:19, 26:1,3*
 wH					CH1_11:11,CH1_27:32				Hachmoni			חַכְמוֹנִי		{ H2453 (2) 1Chr 11:11, 27:32*
 H					CH1_11:11,CH1_27:32				Hachmonite			חַכְמוֹנִי		{ H2453 (2) 1Chr 11:11, 27:32*
+wH					CH1_11:11,CH1_27:32				Hacmoni			חַכְמוֹנִי		{ H2453 (2) 1Chr 11:11, 27:32*
 H					CH1_11:11,CH1_27:32				Hacmonite			חַכְמוֹנִי		{ H2453 (2) 1Chr 11:11, 27:32*
 wH	GEN,KI1,CH1								Hadad			הֲדַד		H1908 (13) Gen 36:35-36, 1Ki 11:14,17,19,21,25, 1Chr 1:46-47,50-51*
 H									Hadadezer			הֲדַדְעֶזֶר		H1909 king (21) 2Sam 8:3,5,7-10,12, ...
@@ -505,27 +521,30 @@ H					EZR_2:45,NEH_7:48				Hagabah			חֲגָבָא		H2286 (2) Ezr 2:45, Neh 7:4
 H									Hagar			הָגָר		H1904 (12) Gen 16:1,3-4,8,15-16, ..., Gal 4:24
 H									Haggai			חַגַּי		H2292 (11) Ezr 5:1, 6:14, Hag 1:1,3,12-13, ...
 H					CH1_6:30				Haggiah			חַגִּיָּה		H2293 (1) 1Chr 6:30*
-H									Haggith			חַגִּית		H2294 wife of David (5) 2Sam 3:4, 1Ki 1:5,11, ...
+H	SA2,KI1,CH1								Haggith			חַגִּית		H2294 wife of David (5) 2Sam 3:4, 1Ki 1:5,11, ...
 H					EZR_2:51,NEH_7:53				Hakupha			חֲקוּפָא		H2709 (2) Ezr 2:51, Neh 7:53*
 H					NEH_3:12,NEH_10:24				Hallohesh			הַלּוֹחֵשׁ		H3873 (2) Neh 3:12, 10:24*
-wH									Ham			חָם		H2526 (16) Gen 5:32, 6:10, 7:13, 9:18,22, 10:1,6,20, 1Chr 1:4,8, 4:40, Psa 78:51, 105:23, 106:22*
-H									Hamor			חֲמוֹר		H2544 (13) Gen 33:19, 34:2,4,6,8,13,18,20, ...
+wH	GEN,CH1,PSA								Ham			חָם		H2526 (16) Gen 5:32, 6:10, 7:13, 9:18,22, 10:1,6,20, 1Chr 1:4,8, 4:40, Psa 78:51, 105:23, 106:22*
+H	GEN,JOS,JDG								Hamor			חֲמוֹר		H2544 (13) Gen 33:19, 34:2,4,6,8,13,18,20, ...
 H					CH1_7:18				Hammolecheth			הַמֹּלֶכֶת		{ H4447 woman (1) 1Chr 7:18*
 H					CH1_7:18				Hammoleketh			הַמֹּלֶכֶת		{ H4447 woman (1) 1Chr 7:18*
 H					CH1_4:26				Hammuel			חַמּוּאֵל		{{ H2536 (1) 1Chr 4:26*
 H					CH1_4:26				Hamuel			חַמּוּאֵל		{{ H2536 (1) 1Chr 4:26*
 H					CH1_1:41				Hamran			חַמְרָן		{ H2566 (1) 1Chr 1:41*
 H					CH1_1:41				Amran			חַמְרָן		{ H2566 (1) 1Chr 1:41*
-H									Hamul			חָמוּל		H2538 (3) Gen 46:12, Num 26:21, 1Chr 2:5*
+H	GEN,NUM,CH1								Hamul			חָמוּל		H2538 (3) Gen 46:12, Num 26:21, 1Chr 2:5*
 H	KI2,JER								Hamutal			חֲמוּטַל		H2537 woman (3) 2Ki 23:31, 24:18, Jer 52:1*
-wH									Hanan			חָנָן		H2605 (12) 1Chr 8:23,38, 9:44, 11:43, Ezr 2:46, Neh 7:49, ...
-H									Hananel			חֲנַנְאֵל		H2606 (4) Neh 3:1, 12:39, Jer 31:38, zec 14:10
-wH									Hanani			חֲנָנִי		H2607 (11) 1Ki 16:1,7, 1Chr 25:4,25, 2Chr 16:7, ...
-H									Hananiah			חֲנַנְיָה		H2608 (29) 1Chr 3:19,21, 8:24, 25:4, ...
-H									Hannah			חַנָּה		H2584 (13) 1Sam 1:2,5,8-9, ...
+wH	CH1,EZR,NEH,JER								Hanan			חָנָן		H2605 (12) 1Chr 8:23,38, 9:44, 11:43, Ezr 2:46, Neh 7:49, ...
+H	NEH,JER,ZEC								Hananel			חֲנַנְאֵל		H2606 (4) Neh 3:1, 12:39, Jer 31:38, Zec 14:10*
+wH	KI1,CH1,CH2,EZR,NEH								Hanani			חֲנָנִי		H2607 (11) 1Ki 16:1,7, 1Chr 25:4,25, 2Chr 16:7, ...
+H	CH1,CH2,EZR,NEH,JER,DAN								Hananiah			חֲנַנְיָה		H2608 (29) 1Chr 3:19,21, 8:24, 25:4, ...
+H	SA1								Hannah			חַנָּה		H2584 (13) 1Sam 1:2,5,8-9, ...
 H					NUM_34:23,CH1_7:39				Hanniel			חַנִּיאֵל		{ H2592 (2) Num 34:23, 1Chr 7:39*
 H					NUM_34:23,CH1_7:39				Haniel			חַנִּיאֵל		{ H2592 (2) Num 34:23, 1Chr 7:39*
-H									Hanun			חָנוּן		H2586 (11) 2Sam 10:1-4, 1Chr 19:2-4,6, Neh 3:13,30*
+H	SA2,CH1,NEH								Hanun			חָנוּן		H2586 (11) 2Sam 10:1-4, 1Chr 19:2-4,6, Neh 3:13,30*
+H					CH1_24:15				Happizzez			הַפִּצֵּץ		{ H6483 (1) 1Chr 24:15*
+wH					CH1_24:15				Ha			הַ		{ H6483 (1) 1Chr 24:15*
+H					CH1_24:15				Pizzez			פִּצֵּץ		{ H6483 (1) 1Chr 24:15*
 H					CH1_2:51				Hareph			חָרֵף		H2780 (1) 1Chr 2:51*
 H	CH1,EZR,NEH								Harim			חָרִם		H2766 (11) 1Chr 24:8, Ezr 2:32,39 10:21,31, Neh 3:11, 7:35,42, 10:5,27, 12:15*
 H					NEH_3:8				Harhaiah			חַרְהֲיָה		H2736 (1) Neh 3:8*
@@ -555,6 +574,7 @@ H					EZR_2:57,NEH_7:59				Hattil			חַטִּיל		H2411 (2) Ezr 2:57, Neh 7:59
 H	CH1,EZR,NEH								Hattush			חַטּוּשׁ		H2407 (5) 1Chr 3:22, Ezr 8:2, Neh 3:10, 10:4, 12:2*
 H	KI1,KI2,CH2,AMO								Hazael			חֲזָאֵל		H2371 (23) 1Ki 19:15,17, 2Ki 8:8-9,12-13,15,28-29, ...
 H					NEH_11:5				Hazaiah			חֲזָיָה		H2382 (1) Neh 11:5*
+H					CH1_23:9				Haziel			חֲזִיאֵל		H2381 (1) 1Chr 23:9*
 H					CH1_4:3				Hazzelelponi			הַצְלֶלְפּֽוֹנִי		H6753 woman (1) 1Chr 4:3*
 H	GEN,NUM,JDG,CH1								Heber			חֶבֶר		H2268 (11) Gen 46:17, Num 26:45, Jdg 4:11,17,21, ...
 H					CH1_4:5,CH1_4:7				Helah			חֶלְאָה		H2458 woman (2) 1Chr 4:5,7*
@@ -599,20 +619,23 @@ H									Hoshea			הוֹשֵׁעַ		{ H1954 (13) Num 13:8,16, Deu 32:44, 2Ki 15
 H	NEH,JER								Hoshaiah			הוֹשִׁעִיה		H1955 (3) Neh 12:32, Jer 42:1, 43:2*
 H					CH1_3:18				Hoshama			הוֹשָׁמָע		H1953 (1) 1Chr 3:18*
 H					CH1_7:32,CH1_11:44				Hotham			חוֹתָם		H2369 (2) 1Chr 7:32, 11:44*
+H					CH1_25:4,CH1_25:28				Hothir			הוֹתִיר		H1956 (2) 1Chr 25:4,28*
 wH					GEN_10:23,CH1_1:17				Hul			חוּל		H2343 (2) Gen 10:23, 1Chr 1:17*
-H									Huldah			חֻלְדָּה		H2468 woman (2) 2Ki 22:14, 2Chr 34:22*
+H					KI2_22:14,CH2_34:22				Huldah			חֻלְדָּה		H2468 woman (2) 2Ki 22:14, 2Chr 34:22*
+H					CH1_24:13				Huppah			חֻפָּה		H2647 (1) 1Chr 24:13*
 H	GEN,CH1								Huppim			חֻפִּים		H2650 (3) Gen 46:21, 1Chr 7:12,15*
-wH									Hur			חוּר		H2354 (15) Exo 17:10,12, 24:14, 31:2, 35:30, 38:22, Num 31:8, ...
+wH	EXO,NUM,JOS,CH1,CH2,NEH								Hur			חוּר		H2354 (15) Exo 17:10,12, 24:14, 31:2, 35:30, 38:22, Num 31:8, ...
 H					CH1_11:32				Hurai			חוּרַי		H2360 (1) 1Chr 11:32*
 wH	CH1,CH2								Huram			חוּרָם		H2361 (10) 1Chr 8:5, 2Chr 2:3,11-13, 4:11,16, 8:2,18, 9:21*
 wH					CH1_5:14				Huri			חוּרִי		H2359 (1) 1Chr 5:14*
 H					CH1_4:4				Hushah			חוּשָׁה		H2364 (1) 1Chr 4:4*
-H									Hushai			חוּשַׁי		H2365 (14) 2Sam 15:32,37, 16:16-18, 17:5-8, ...
+H	SA2,KI1,CH1								Hushai			חוּשַׁי		H2365 (14) 2Sam 15:32,37, 16:16-18, 17:5-8, ...
 H	GEN,CH1								Husham			חוּשָׁם		H2367 (4) Gen 36:34-35, 1Chr 1:45-46*
 H	GEN,CH1								Hushim			חֻשִׁים		H2366 man and woman (4) Gen 46:23, 1Chr 7:12, 8:8,11*
 dH	SA2,CH1								Ibhar			יָבְחַר/(Ibhar)		H2984 (3) 2Sam 5:15, 1Chr 3:6, 14:5*
 dH					CH1_9:8				Ibneiah			יִבְנְיָה/(Ibneiah)		H2997 (1) 1Chr 9:8*
 dH					CH1_9:8				Ibnijah			יִבְנִיָּה/(Ibnijah)		H2998 (1) 1Chr 9:8*
+H					CH1_24:27				Ibri			עִבְרִי		H5681 (1) 1Chr 24:27*
 H					JDG_12:8,JDG_12:10				Ibzan			אִבְצָן		H78 (2) Jdg 12:8,10*
 H					SA1_4:21,SA1_14:3				Ichabod			אִי־כָבוֹד		H350 (2) 1Sam 4:21, 14:3*
 dH					CH1_4:3				Idbash			יִדְבָּשׂ/(Idbash)		H3031 (1) 1Chr 4:3*
@@ -661,9 +684,11 @@ dH	GEN,CH1								Ithran			יִתְרָן/(Ithran)		H3506 (3) Gen 36:26, 1Chr 1:
 dH					SA2_3:5,CH1_3:3				Ithream			יִתְרְעָם/(Ithream)		H3507 son of David (2) 2Sam 3:5, 1Chr 3:3*
 H	SA2,CH1								Ittai			אִתַּי		H863 (9) { 2Sam 15:19,21-22, 18:2,5,12, 23:29, 1Chr 11:31*
 H	SA2,CH1								Ithai			אִתַּי		H863 (9) { 2Sam 15:19,21-22, 18:2,5,12, 23:29, 1Chr 11:31*
-dH	EXO,NUM,CH1								Izhar			יִצְהָר/(Izhar)		H3324 (9) Exo 6:18,21, Num 3:19, 16:1, 1Chr 6:2,18,38, 23:12,18*
+wdH	EXO,NUM,CH1								Izhar			יִצְהָר/(Izhar)		H3324 (9) Exo 6:18,21, Num 3:19, 16:1, 1Chr 6:2,18,38, 23:12,18*
 dH					CH1_8:18				Izliah			יִזְלִיאָה/(Izliah)		{ H3152 (1) 1Chr 8:18*
 dH					CH1_8:18				Jezliah			יִזְלִיאָה/(Jezliah)		{ H3152 (1) 1Chr 8:18*
+dH					NUM_26:49,CH1_25:11				Izri			יִצְרִי/(Izri)		{{{ H3339 (2) Num 26:49, 1Chr 25:11*
+dH					NUM_26:49,CH1_25:11				Jitsri			יִצְרִי/(Jitsri)		{{{ H3339 (2) Num 26:49, 1Chr 25:11*
 dH					EZR_10:25				Izziah			יִזִּיָּה/(Izziah)		{{ H3150 (1) Ezr 10:25*
 dH					EZR_10:25				Jeziah			יִזִּיָּה/(Jeziah)		{{ H3150 (1) Ezr 10:25*
 dH					CH1_1:42				Jaakan			יַעֲקָן/(Jaakan)		{{{ H3292 (1) 1Chr 1:42*
@@ -677,6 +702,7 @@ wdH					CH1_8:27				Jaresiah			יַעֲרֶשְׁיָה/(Jaresiah)		{ H3298 (1) 
 dH					CH1_11:47,CH1_27:21				Jaasiel			יַעֲשִׂיאֵל/(Jaasiel)		H3300 (2) 1Chr 11:47, 27:21*
 dH					EZR_10:37				Jaasu			יַעֲשׂוּ/(Jaasu)		H3299 (1) Ezr 10:37*
 dH	KI2,JER,EZR								Jaazaniah			יַאֲזַנְיָה/(Jaazaniah)		H2970 (4) 2Ki 25:23, Jer 35:3, Eze 8:11, 11:1*
+dH					CH1_24:26,CH1_24:27				Jaaziah			יַעֲזִיָּהוּ/(Jaaziah)		H3269 (2) 1Chr 24:26-27*
 dH					CH1_15:18				Jaaziel			יַעֲזִיאֵל/(Jaaziel)		H3268 (1) 1Chr 15:18*
 dH	CH1								Jabez			יַעְבֵּץ/(Jabez)		H3258 (4) 1Chr 2:55, 4:9-10*
 dH	JOS,JDG,PSA								Jabin			יָבִין/(Jabin)		H2985 (8) Josh 11:1, Jdg 4:2,7,17,23-24, Psa 83:9*
@@ -726,9 +752,11 @@ dH					CH1_4:22				Jashubilehem			יָשֻׁבִי-לֶחֶם/(Jashubilehem)		{{
 dH					CH1_4:22				Jashubi-lehem			יָשֻׁבִי-לֶחֶם/(Jashubilehem)		{{ H3433 (1) 1Chr 4:22*
 H					CH1_4:22				Lehem			לֶחֶם		{{ H3433 (1) 1Chr 4:22*
 H					CH1_4:22				lehem			לֶחֶם		{{ H3433 (1) 1Chr 4:22*
+dH					CH1_26:2				Jathniel			יַתְנִיאֵל/(Jathniel)		H3496 (1) 1Chr 26:2*
 dH	GEN,CH1,ISA,EZE								Javan			יָוָן/(Javan)		{ H3120 (11) Gen 10:2,4, 1Chr 1:5,7, Isa 66:19, Eze 27:13,19*
 dH	GEN,CH1,ISA,EZE								Yavan			יָוָן/(Javan)		{ H3120 (11) Gen 10:2,4, 1Chr 1:5,7, Isa 66:19, Eze 27:13,19*
 dH	DAN,ZEC								Greece			יָוָן/(Greece)		{ H3120 (11) Dan 8:21, 10:20, 11:2, Zec 9:13*
+dH					CH1_27:31				Jaziz			יָזִיז/(Jaziz)		H3151 (1) 1Chr 27:31*
 dH					CH1_6:21				Jeatherai			יְאֱתְרַי/(Jeatherai)		H2979 (1) 1Chr 6:21*
 dH	CH1,EST,JER								Jechoniah			יְכָנְיָה/(Jechoniah)		{{ H3204 (7) 1Chr 3:16-17, Est 2:6, Jer 24:1, 27:20, 28:4, 29:2*
 dH	CH1,EST,JER								Jeconiah			יְכָנְיָה/(Jeconiah)		{{ H3204 (7) 1Chr 3:16-17, Est 2:6, Jer 24:1, 27:20, 28:4, 29:2*
@@ -743,6 +771,7 @@ dH	CH1,CH2,NEH,PSA								Jeduthun			יְדוּתוּן/(Jeduthun)		{{ H3038 (17
 dH	CH1,CH2,NEH,PSA								Jedithun			יְדוּתוּן/(Jedithun)		{{ H3038 (17) 1Chr 9:16, 16:38,41-42, 25:1,3,6, 2Chr 5:12, 29:14, 35:15, Neh 11:17, Psa 62:1, 77:1*
 dH					CH1_4:16,CH2_29:12				Jehallelel			יְהַלֶּלְאֵל/(Jehallelel)		{ H3094 (2) 1Chr 4:16, 2Chr 29:12*
 dH					CH1_4:16,CH2_29:12				Jehalelel			יְהַלֶּלְאֵל/(Jehalelel)		{ H3094 (2) 1Chr 4:16, 2Chr 29:12*
+dH					CH1_24:20,CH1_27:30				Jehdeiah			יֶחְדִּיָּהוּ/(Jehdeiah)		H3165 (2) 1Chr 24:20, 27:30*
 dH					CH1_15:24				Jehiah			יְחִיָּה/(Jehiah)		H3174 (1) 1Chr 15:24*
 dH	CH1,CH2,EZR								Jehiel			יְחִיאֵל/(Jehiel)		H3171 (14) 1Chr 15:18,20, 16:5, 23:8, 27:32, 29:8, 2Chr 21:2, 29:14, 31:13, ...
 dH					CH1_8:36				Jehoaddah			יְהוֹעַדָּה/(Jehoaddah)		{{ H3085 (1) 1Chr 8:36*
@@ -762,24 +791,27 @@ dH					CH1_9:10,CH1_24:7				Jehoiarib			יְהוֹיָרִיב/(Jehoiarib)		H308
 dH									Jehoram			יְהוֹרָם/(Jehoram)		{{ H3088 (29) 1Ki 22:50, 2Ki 1:17, 3:1,6, 8:16,25,29, ...
 dH									Joram			יְהוֹרָם/(Joram)		{{ H3088 (29) 1Ki 22:50, 2Ki 1:17, 3:1,6, 8:16,25,29, ...
 dH									Jehoshaphat			יְהוֹשָׁפָט/(Jehoshaphat)		H3092 (84) 2Sam 8:16, 20:24, 1Ki 4:3,17 ...
-dH									Jehosheba			יְהוֹשֶׁבַע/(Jehosheba)		H3089 princess (1) 2Ki 11:2*
+dH					KI2_11:2				Jehosheba			יְהוֹשֶׁבַע/(Jehosheba)		H3089 princess (1) 2Ki 11:2*
+dH	KI2,CH1,CH2								Jehozabad			יְהוֹזָבָד/(Jehozabad)		H3075 (4) 2Ki 12:21, 1Chr 26:4, 2Chr 17:18. 24:26*
 dH									Jehozadak			יְהוֹצָדָק/(Jehozadak)		H3087 (8) 1Chr 6:14-15, Hag 1:1,12,14, 2:2,4, Zec 6:11*
 dH									Jehu			יֵהוּא/(Jehu)		H3058 (58) 1Ki 16:1,7,12, 19:16-17, 2Ki 9:2,5,11,13-14, ...
-dH									Jeiel			יְעִיאֵל/(Jeiel)		{ H3273 (13) 1Chr 5:7, 9:35, 11:44, 15:18,21, 16:5, 2Chr 20:14, 26:11, 29:13, 35:9, Ezr 8:13, 10:43*
-dH									Jehiel			יְעִיאֵל/(Jehiel)		{ H3273 (13) 1Chr 5:7, 9:35, 11:44, 15:18,21, 16:5, 2Chr 20:14, 26:11, 29:13, 35:9, Ezr 8:13, 10:43*
+dH	CH1,CH2,EZR								Jeiel			יְעִיאֵל/(Jeiel)		{ H3273 (13) 1Chr 5:7, 9:35, 11:44, 15:18,21, 16:5, 2Chr 20:14, 26:11, 29:13, 35:9, Ezr 8:13, 10:43*
+dH	CH1,CH2,EZR								Jehiel			יְעִיאֵל/(Jehiel)		{ H3273 (13) 1Chr 5:7, 9:35, 11:44, 15:18,21, 16:5, 2Chr 20:14, 26:11, 29:13, 35:9, Ezr 8:13, 10:43*
 dH					CH1_2:41,CH1_3:18				Jekamiah			יְקַמְיָה/(Jekamiah)		{ H3359 (3) 1Chr 2:41, 3:18*
 dH					CH1_2:41,CH1_3:18				Jecamiah			יְקַמְיָה/(Jekamiah)		{ H3359 (3) 1Chr 2:41, 3:18*
+dH					CH1_23:19,CH1_24:23				Jekameam			יְקַמְעָם/(Jekameam)		H3360 (2) 1Chr 23:19, 24:23*
 dH					CH1_4:18				Jekuthiel			יְקוּתִיאֵל/(Jekuthiel)		H3354 (1) 1Chr 4:18*
 dH					JOB_42:14				Jemimah			יְמִימָה/(Jemimah)		H3224 Job's daughter (1) Job 42:14*
 dH									Jephthah			יִפְתָּח/(Jephthah)		H3316 (30) Josh 15:43, Jdg 11:1-3, ..., Heb 11:32
-dH									Jephunneh			יְפֻנֶּה/(Jephunneh)		H3312 (16) Num 13:6, 14:6,30,38, 26:65, 32:12, 34:19, ...
+dH	NUM,DEU,JOS,CH1								Jephunneh			יְפֻנֶּה/(Jephunneh)		H3312 (16) Num 13:6, 14:6,30,38, 26:65, 32:12, 34:19, ...
 wdH					GEN_10:26,CH1_1:20				Jerah			יֶרַח/(Jerah)		H3392 (2) Gen 10:26, 1Chr 1:20*
-dH									Jerahmeel			יְרַחְמְאֵל/(Jerahmeel)		H3396 (8) 1Chr 2:9,25-27,33,42, 24:29, Jer 36:26*
+dH	CH1,JER								Jerahmeel			יְרַחְמְאֵל/(Jerahmeel)		H3396 (8) 1Chr 2:9,25-27,33,42, 24:29, Jer 36:26*
 dH					EZR_10:33				Jeremai			יְרֵמַי/(Jeremai)		H3413 (1) Ezr 10:33*
 dH									Jeremiah			יִרְמְיָה/(Jeremiah)		H3414 (147) 2Ki 23:31, 24:18, 1Chr 5:24, ..., Ezra 1:1, ..., Matt 27:9
 dH	CH1,CH2,EZR								Jeremoth			יְרִימוֹת/(Jeremoth)		{H3406 (13) 1Chr 7:7-8, 1Chr 8:14, 12:6, 23:23, 24:30, 25:4,22, ...
 dH	CH1,CH2,EZR								Jerimoth			יְרִימוֹת/(Jerimoth)		{H3406 (13) 1Chr 7:7-8, 1Chr 8:14, 12:6, 23:23, 24:30, 25:4,22, ...
 dH	CH1,CH2,EZR								Jermoth			יְרִימוֹת/(Jermoth)		{H3406 (13) 1Chr 7:7-8, 1Chr 8:14, 12:6, 23:23, 24:30, 25:4,22, ...
+dH	CH1								Jeriah			יְרִיָּה/(Jeriah)		H3404 (3) 1Chr 23:19, 24:23, 26:31*
 dH					CH1_11:46				Jeribai			יְרִיבַי/(Jeribai)		H3403 (1) 1Chr 11:46*
 dH					CH1_7:2				Jeriel			יְרִיאֵל/(Jeriel)		H3400 (1) 1Chr 7:2*
 dH					CH1_2:18				Jerioth			יְרִיעוֹת/(Jerioth)		H3408 woman (1) 1Chr 2:18*
@@ -791,10 +823,11 @@ dH					CH2_27:1				Jerushah			יְרוּשָׁאה/(Jerushah)		H3388 woman (1) 2
 dH					KI2_15:33				Jerusha			יְרוּשָׁא/(Jerusha)		H3388 woman (1) 2Ki 15:33*
 dH					CH2_13:19,NEH_12:39				Jeshanah			יְשָׁנָה/(Jeshanah)		H3466 (2) 2Chr 13:19, Neh 12:39*
 dH					CH1_2:18				Jesher			יֵשֶׁר/(Jesher)		H3475 (1) 1Chr 2:18*
-dH									Jeshimon			יְשִׁימוֹן/(Jeshimon)		H3452 (13) Num 21:20, 23:@8, Deu 32:10, 1Sam 23:19,24, ...
+dH					CH1_25:14				Jesharelah			יְשַׂרְאֵלָה/(Jesharelah)		H3480 (1) 1Chr 25:14*
+dH	NUM,DEU,SA1,PSA,ISA								Jeshimon			יְשִׁימוֹן/(Jeshimon)		H3452 (13) Num 21:20, 23:@8, Deu 32:10, 1Sam 23:19,24, ...
 dH					CH1_5:14				Jeshishai			יְשִׁישָׁי/(Jeshishai)		H3454 (1) 1Chr 5:14*
 dH					CH1_4:36				Jeshohaiah			יְשׁוֹחָיָה/(Jeshohaiah)		H3439 (1) 1Chr 4:36*
-dH									Jeshua			יֵשׁוּעַ/(Jeshua)		H3442 (29) 1Chr 24:11, 2Chr 31:15, Ezra 2:2,6,36,40, ...
+dH	CH1,CH2,EZR,NEH								Jeshua			יֵשׁוּעַ/(Jeshua)		H3442 (29) 1Chr 24:11, 2Chr 31:15, Ezra 2:2,6,36,40, ...
 dH					CH1_4:36				Jesimiel			יְשִׁימָאֵל/(Jesimiel)		H3450 (1) 1Chr 4:36*
 dH									Jesse			יִשַׁי/(Jesse)		{ H3448 (42) Ruth 4:17,22, 1Sam 16:1,3,5,8-11, ...
 #dH									Yishay			יִשַׁי/(Yishay)		{ H3448 RECURSIVE ??? (42) Ruth 4:17,22, 1Sam 16:1,3,5,8-11, ...
@@ -804,7 +837,7 @@ dH	GEN,CH1								Jetur			יְטוּר/(Jetur)		H3195 (3) Gen 25:15, 1Chr 1:31, 
 dH					CH1_9:6				Jeuel			יְעוּאֵל/(Jeuel)		H3262 (1) 1Chr 9:6*
 dH	GEN,CH1,CH2								Jeush			יְעוּשׁ/(Jeush)		H3266 (9) Gen 36:5,14,18, 1Chr 1:35, 7:10, 8:39, 23:10-11, 2Chr11:19*
 dH					CH1_8:10				Jeuz			יְעוּץ/(Jeuz)		H3263 (1) 1Chr 8:10*
-dH									Jezebel			אִיזֶבֶל/(Jezebel)		H348 (22) 1Ki 16:31, 18:4,13,19, 19:1-2, 21:5, ...
+dH	KI1,KI2								Jezebel			אִיזֶבֶל/(Jezebel)		H348 (22) 1Ki 16:31, 18:4,13,19, 19:1-2, 21:5, ...
 dH	GEN,NUM,CH1								Jezer			יֵצֶר/(Jezer)		H3337 (3) Gen 46:24, Num 26:49, 1Chr 7:13*
 wdH					CH1_12:3				Jeziel			יְזַוְאֵל/(Jeziel)		H3149 (1) 1Chr 12:3*
 wdH					NEH_12:42				Jezrahiah			יִזְרַחְיָה/(Jezrahiah)		{ H3156 (3) Neh 12:42*
@@ -813,7 +846,7 @@ wdH									Jezreel			יִזְרְעֵאל/(Jezreel)		H3157 man and city (36) Jo
 dH					CH1_7:2				Jibsam			יִבְשָׂם/(Jibsam)		{{ H3005 (1) 1Chr 7:2*
 dH					CH1_7:2				Ibsam			יִבְשָׂם/(Ibsam)		{{ H3005 (1) 1Chr 7:2*
 dH					CH1_4:7				Jitschar			יִצְחַר/(Jitschar)		{ H3328 variant (1) 1Chr 4:7*
-dH					CH1_4:7				Izhar			יִצְחַר/(Izhar)		{ H3328 variant (1) 1Chr 4:7*
+wdH					CH1_4:7				Izhar			יִצְחַר/(Izhar)		{ H3328 variant (1) 1Chr 4:7*
 dH									Joab			יוֹאָב/(Joab)		H3097 (145) 1Sam 26:6, 2Sam 2:13-14,19,22,24,26-28, ...
 dH	KI2,CH1,CH2,ISA								Joah			יוֹאָח/(Joah)		H3098 (11) 2Ki 18:18,26,37, 1Chr 6:21, 26:4, ...
 dH									Joash			יוֹאָשׁ/(Joash)		H3101 (47) Jdg 6:11,29-31, 7:14, 8:13,29,32, 1Ki 22:26, 2Ki 11:2, ..., Hos 1:1, ...
@@ -843,6 +876,7 @@ dH					CH1_4:34				Joshah			יוֹשָׁה/(Joshah)		H3144 (1) 1Chr 4:34*
 dH					CH1_11:43,CH1_15:24				Joshaphat			יוֹשָׁפָט/(Joshaphat)		{{ H3146 (2) 1Chr 11:43, 15:24*
 dH					CH1_11:43,CH1_15:24				Jehoshaphat			יוֹשָׁפָט/(Jehoshaphat)		{{ H3146 (2) 1Chr 11:43, 15:24*
 dH					CH1_11:46				Joshaviah			יוֹשַׁוְיָה/(Joshaviah)		H3145 (1) 1Chr 11:46*
+dH					CH1_25:4,CH1_25:24				Joshbekashah			יָשְׁבְּקָשָׁה/(Joshbekashah)		H3436 (2) 1Chr 25:4,24*
 dH					CH1_4:35				Joshibiah			יוֹשִׁבְיָה/(Joshibiah)		{ H3144 (1) 1Chr 4:35*
 dH					CH1_4:35				Josibiah			יוֹשִׁבְיָה/(Josibiah)		{ H3144 (1) 1Chr 4:35*
 dH									Joshua			יְהוֹשׁוּעַ/(Joshua)		H309 (218) Exo 17:9-10,13-14, ..., Num 11:28, ..., Deu 1:38, ...
@@ -860,35 +894,37 @@ dH					CH1_3:20				Jushab			יוּשַׁב/(Jushab)		{{ H3142 (1) 1Chr 3:20*
 H					CH1_3:20				Hesed			חֶסֶד		{{ H3142 (1) 1Chr 3:20*
 H									Kadmiel			קַדְמִיאֵל		H6934 (8) Ezr 2:40, 3:9, Neh 7:43, 9:4-5, 10:9, 12:8,24*
 H					NEH_12:20				Kallai			קַלַּי		H7040 (1) Neh 12:20*
-H									Kareah			קָרֵחַ		H7143 (14) 2Ki 25:23, Jer 40:8,13,15-16, ...
-H									Kedar			קֵדָר		H6938 (12) Gen 25:13, 1Chr 1:29, Psa 120:5, Songs 1:5, Isa 21:16-17, 42:11, 60:7, ...
-H									Kedemah			קְדְמָה		H6929 (2) Gen 25:15, 1Chr 1:31*
+H	KI2,JER								Kareah			קָרֵחַ		H7143 (14) 2Ki 25:23, Jer 40:8,13,15-16, ...
+H	GEN,CH1,PSA,SNG,ISA,JER,EZE								Kedar			קֵדָר		H6938 (12) Gen 25:13, 1Chr 1:29, Psa 120:5, Songs 1:5, Isa 21:16-17, 42:11, 60:7, ...
+H					GEN_25:15,CH1_1:31				Kedemah			קְדְמָה		H6929 (2) Gen 25:15, 1Chr 1:31*
 H					EZR_10:23				Kelaiah			קֵלָיָה		H7041 (1) Ezr 10:23*
 H	EZR,NEH								Kelita			קְלִיטָא		H7042 (3) Ezr 10:23, Neh 8:7, 10:10*
+H					GEN_22:21,NUM_34:24,CH1_27:17				Kemuel			קְמוּאֵל		H7055 (3) Gen 22:21, Num 34:24, 1Chr 27:17*
 H					NUM_32:42,CH1_2:23				Kenath			קְנָת		H7079 (2) Num 32:42, 1Chr 2:23*
 H									Kenaz			קְנַז		H7073 (11) Gen 36:11,15,42, Josh 15:17, Jdg 1:13, ...
 H					JOB_42:14				Keren-Happuk			קֶרֶן-הַפוּךְ		{ H7163 (Job's daughter) (1) Job 42:14*
 H					JOB_42:14				Keren			קֶרֶן		{ H7163 (Job's daughter) (1) Job 42:14*
 H									Keturah			קְטוּרָה		H6989 Abraham's last wife (4) Gen 25:1,4, 1Chr 1:32-33*
 H					AMO_5:26				Kiyyun			כִּיּוּן		H3594 (1) Amos 5:26*
-H									Happuk			הַפוּךְ		{ H7163 (Job's daughter) (1) Job 42:14*
-H									Keros			קֵירֹס		H7026 (2) Era 2:44, Neh 7:47*
+H					JOB_42:14				Happuk			הַפוּךְ		H7163 (Job's daughter) (1) Job 42:14*
+H					EZR_2:44,NEH_7:47				Keros			קֵירֹס		H7026 (2) Era 2:44, Neh 7:47*
 H									Keziah			קְצִיעָה		H7103 (Job's daughter) (1) Job 42:14*
 H					SA2_3:3				Chileab			כִּלְאָב		H3609 David's son (1) 2Sam 3:3*
 wH									Kish			קִישׁ		H7027 (21) 1Sam 9:1,3, 10:11,21, ..., Acts 13:21
-H									Kittim			כִּתִּים		{ H3794 (8) Gen 10:4, Num 24:24, 1Chr 1:7, Isa 23:1,12, Jer 2:10, Eze 27:6*
-dH									Chittim			כִּתִּים/(Chittim)		{ H3794 (8) Gen 10:4, Num 24:24, 1Chr 1:7, Isa 23:1,12, Jer 2:10, Eze 27:6*
+H	GEN,NUM,CH1,ISA,JER,EZE								Kittim			כִּתִּים		{ H3794 (8) Gen 10:4, Num 24:24, 1Chr 1:7, Isa 23:1,12, Jer 2:10, Eze 27:6*
+dH	GEN,NUM,CH1,ISA,JER,EZE								Chittim			כִּתִּים/(Chittim)		{ H3794 (8) Gen 10:4, Num 24:24, 1Chr 1:7, Isa 23:1,12, Jer 2:10, Eze 27:6*
 H									Kohath			קְהָת		H6955 (32) Gen 46:11, Exo 6:16,18, Num 3:17,19,27,29, ...
-H									Kolaiah			קוֹלָיָה		H6964 (2) Neh 11:7, Jer 29:21*
+H					NEH_11:7,JER_29:21				Kolaiah			קוֹלָיָה		H6964 (2) Neh 11:7, Jer 29:21*
 H									Korah			קֹרַח		H7141 (37) Gen 36:5,14,16,18, Exo 6:21,24, ..., Jude 11
 H	CH1,CH2								Kore			קוֹרֵא		H6981 (3) 1Chr 9:19, 26:1, 2Chr 31:14*
 H					CH1_4:8				Kos			קוֹץ		{ H6976 (1) 1Chr 4:8*
-H	CH1,EZR,NEH								Hakkoz			הַקוֹץ		{ H6976 (5) 1Chr 24:10, Ezr 2:61, Neh 3:4,21, 7:63*
+H	CH1,EZR,NEH								Hakkoz			הַקּוֹץ		{ H6976 (5) 1Chr 24:10, Ezr 2:61, Neh 3:4,21, 7:63*
 H					CH1_15:17				Kushaiah			קוּשָׁיָהוּ		H6984 (1) 1Chr 15:17*
 H					CH1_4:21				Laadah			לַעְדָּה		H3935 (1) 1Chr 4:21*
 H									Laban			לָבָן		H3837 (55) Gen 24:29,50, 25:20, 27:43, 28:2,5, 29:5,10,13-16, ...
 H	CH1								Ladan			לַעְדָּן		H3936 (7) 1Chr 7:26, 23:7-9, 26:21
 H					CH1_4:2				Lahad			לַהַד		H3855 (1) 1Chr 4:2*
+H					CH1_20:5				Lahmi			לַחְמִי		H3902 (1) 1Chr 20:5*
 H									Laish			לַיִשׁ		H3919 (7) Jdg 18:7,14,27,29, 1Sam 25:44, 2Sam 3:15, Isa 10:30*
 H									Lamech			לֶמֶךְ		{ H3929 (11) Gen 4:18-19, 23-24, 5:25-26,28,30-31, 1Chr 1:3*
 H									Lamek			לֶמֶךְ		{ H3929 (11) Gen 4:18-19, 23-24, 5:25-26,28,30-31, 1Chr 1:3*
@@ -928,6 +964,7 @@ H					NEH_10:20				Magpiash			מַגְפִּיעָשׁ		H4047 (1) Neh 10:20*
 H									Mahalalel			מַהֲלַלְאֵל		H4111 (7) Gen 5:12-13,15-17, 1Chr 1:2, Neh 11:4*
 H	SA2,CH1								Maharai			מַהֲרַי		H4121 (3) 2Sam 23:28, 1Chr 11:30, 27:13*
 H	CH1,CH2								Mahath			מַחַת		H4287 (3) 1Chr 6:35, 2Chr 29:12, 31:13*
+H					CH1_25:4,CH1_25:30				Mahazioth			מַחֲזִיאוֹת		H4238 (2) 1Chr 25:4,30*
 H	NUM,JOS,CH1								Mahlah			מַחְלָה		H4244 woman (5) Num 26:33, 27:1, 36:11, Jos 17:3, 1Chr 7:18*
 H									Mahli			מַחְלִי		H4249 (12) Exo 6:19, Num 3:20, 1Chr 6:19,29,47, 23:21,23, 24:26,28,30, Ezr 8:18*
 H									Mahlon			מַחְלוֹן		H4248 (4) Ruth 1:2,5, 4:9-10*
@@ -947,16 +984,17 @@ wH	SA1,CH1								Malchi			מַלְכִּי		{ H4444 (5) 1Sam 14:49, 31:2, 1Chr 
 wH	SA1,CH1								Malki			מַלְכִּי		{ H4444 (5) 1Sam 14:49, 31:2, 1Chr 8:33, 9:39, 10:2*
 wH	SA1,CH1								shua			שׁוּעַ		{ H4444 (5) 1Sam 14:49, 31:2, 1Chr 8:33, 9:39, 10:2*
 wH	SA1,CH1								Shua			שׁוּעַ		{ H4444 (5) 1Sam 14:49, 31:2, 1Chr 8:33, 9:39, 10:2*
+H					CH1_25:4,CH1_25:26				Mallothi			מַלּוֹתִי		H4413 (2) 1Chr 25:4,26*
 H	CH1,EZR,NEH								Malluch			מַלּוּךְ		H4409 (7) 1Chr 6:44, Ezr 10:29,32, Neh 10:4,27, 12:2,14*
 H	GEN,CH1								Manahath			מָנַחַת		H4506 (3) Gen 36:23, 1Chr 1:40, 8:6*
 H									Manasseh			מְנַשֶּׁה		H4519 (146) Gen 41:51, 46:20, 48:1,5,13-14, ..., Rev 7:6
-H									Manoah			מָנוֹחַ		H4495 father of Samson (18) Judges 13:2,8-9,11013,15-17, ...
+H	JDG								Manoah			מָנוֹחַ		H4495 father of Samson (18) Judges 13:2,8-9,11013,15-17, ...
 H					SA1_27:2				Maoch			מָעוֹךְ		H4582 (1) 1Sam 27:2*
-H									Maon			מָעוֹן		H4584 (8) Josh 15:55, Jdg 10:12, 1Sam 23:24-25, ...
+H	JOS,JDG,SA1,CH1								Maon			מָעוֹן		H4584 (8) Josh 15:55, Jdg 10:12, 1Sam 23:24-25, ...
 H					GEN_25:14,CH1_1:30				Massa			מַשָּׂא		H4854 (2) Gen 25:14, 1Chr 1:30*
 H					GEN_36:39,CH1_1:50				Matred			מַטְרֵד		H4308 woman (2) Gen 36:39, 1Chr 1:50*
 wH	KI2,CH2,JER								Mattan			מַתָּן		H4977 priest (3) 2Ki 11:18, 2Chr 23:17, Jer 38:1*
-H									Mattaniah			מַתַּנְיָה		H4983 (16) 2Ki 24:17, 1Chr 9:15, 25:4,16, 2Chr 20:14, 29:13, Ezr 10:26-27, ...
+H	KI2,CH1,CH2,EZR,NEH								Mattaniah			מַתַּנְיָה		H4983 (16) 2Ki 24:17, 1Chr 9:15, 25:4,16, 2Chr 20:14, 29:13, Ezr 10:26-27, ...
 H					EZR_10:33				Mattatah			מַתַּתָּה		{ H4992 (1) Ezr 10:33*
 H					EZR_10:33				Mattathah			מַתַּתָּה		{ H4992 (1) Ezr 10:33*
 H	EZR,NEH								Mattenai			מַתְּנַי		H4982 (3) Ezr 10:33,37, Neh 12:19*
@@ -1044,7 +1082,7 @@ H					CH1_2:29				Molid			מוֹלִיד		H4140 (1) 1Chr 2:29*
 H									Mordecai			מָרְדְּכַי		H4782 (60) Ezr 2:2, Neh 7:7, Est 2:5,7,10-11,15,19-22, ...
 H									Moses			מֹשֶׁה		H4872 (766) Exo 2:10-11,14-15,17,21, 3:1,3-4, ...
 H	CH1								Moza			מוֹצָא		H4162 (5) 1Chr 2:46, 8:36-37, 9:42-43*
-H									Mushi			מוּשִׁר		H4187 (8) Exo 6:19, Num 3:20, 1Chr 6:19,47, 23:21,23
+H									Mushi			מוּשִׁי		H4187 (8) Exo 6:19, Num 3:20, 1Chr 6:19,47, 23:21,23
 wH					CH1_4:15				Naam			נַעַם		H5277 (1) 1Chr 4"15*
 H	GEN,JOS,KI1,CH2								Naamah			נַעֲמָה		H5279 (5) Gen 4:22, Josh 15:41, 1Ki 14:21,31, 2Chr 12:13*
 H									Naaman			נַעֲמָן		H5283 (16) Gen 46:21, Num 26:40, 2Ki 5:1-2,6,9,11, ..., Luke 4:27
@@ -1102,28 +1140,31 @@ wH		GEN							Noah			נֹעָה		H5270 Woman (4) Num 26:33, 27:1, 36:11, Josh 17
 H					CH1_5:19				Nodab			נוֹדָב		H5114 (1) 1Chr 5:19*
 H					CH1_3:7,CH1_14:6				Nogah			נֹגַהּ		H5052 (2) 1Chr 3:7, 14:6*
 H					CH1_8:2				Nohah			נוֹחָה		H5119 (1) 1Chr 8:2*
-wH									Nun			נוּן		H5126 (30) Exo 33:11, Num 11:28, 13:8,16, 14:6,30,38, ...
-H									Obadiah			עֹבַדְיָה		H5662 (20) 1Ki 18:3-7,16, 1Chr 3:21, ..., Oba 1:1
+wH	EXO,NUM,DEU,JOS								Nun			נוּן		H5126 (30) Exo 33:11, Num 11:28, 13:8,16, 14:6,30,38, ...
+H	KI1,CH1,CH2,EZR,NEH,OBA								Obadiah			עֹבַדְיָה		H5662 (20) 1Ki 18:3-7,16, 1Chr 3:21, ..., Oba 1:1
 wH	RUT,CH1,CH2								Obed			עוֹבֵד		H5744 (10) Rut 4:17,21-22, 1Chr 2:12,37-38, 11:47, 26:7, 2Chr 23:1*
 H	SA2,CH1,CH2								Obededom			עֹבֵד-אֱדוֹם		{ H5744 (20) 2Sam 6:10-12, 1Chr 13:13-14, 15:18,21,24-25, 16:5,38, 26:4,8,15, 2Chr 25:24*
 H	SA2,CH1,CH2								Obed-edom			עֹבֵד-אֱדוֹם		{ H5744 (20) 2Sam 6:10-12, 1Chr 13:13-14, 15:18,21,24-25, 16:5,38, 26:4,8,15, 2Chr 25:24*
 wH	SA2,CH1,CH2								edom			אֱדוֹם		{ H5744 (20) 2Sam 6:10-12, 1Chr 13:13-14, 15:18,21,24-25, 16:5,38, 26:4,8,15, 2Chr 25:24*
-wH									Og			עוֹג		H5747 (22) Num 21:33, 32:33, Deu 1:4, 3:1,3-4,10-11,13, 4:47, ...
+H					CH1_27:30				Obil			אוֹבִיל		H179 (1) 1Chr 27:30*
+wH	NUM,DEU,JOS,KI1,NEH,PSA								Og			עוֹג		H5747 (22) Num 21:33, 32:33, Deu 1:4, 3:1,3-4,10-11,13, 4:47, ...
 H					CH1_3:20				Ohel			אֹהֶל		H169 (1) 1Chr 3:20*
-H									Oholah			אָהֱלָה		H170 (5) Eze 23:4,5,36,44*
-H									Oholiab			אָהֱלִיאָב		H171 (5) Exo 31:6, 35:34, 36:1-2, 38:23*
-H									Oholibah			אָהֱלִיבָה		H172 (6) Eze 23:4,11,22,36,44*
-H									Oholibamah			אָהֱלִיבָמָה		H173 (8) Gen 36:2,5,14,18,25,41, 1Chr 1:52*
-H									Omar			אוֹמָר		H201 (3) Gen 36:11,15, 1Chr 1:36*
-H									Omri			עָמְרִי		H6018 (18) 1Ki 16:16-17,21-23,25,27-30, ...
-H									Onam			אוֹנָם		H208 (4) Gen 36:23, 1Chr 1:40, 2:26,28*
-H									Onan			אוֹנָן		H209 (8) Gen 38:4,5-9, 46:12, Num 26:19, 1Chr 2:3*
-H									Ophir			אוֹפִיר		H211 (13) Gen 10:29, 1 Ki 9:28, 10:11, 22:48, 1Chr 1:23, 29:4, 2Chr 8:18, ...
-H									Ophrah			עָפְרָה		H6084 man (8) Josh 18:23, Jdg 6:11,24, 8:27,32, 9:5, 1Sam 13:17, 1Chr 4:14*
+H	EZE								Oholah			אָהֱלָה		H170 (5) Eze 23:4,5,36,44*
+H	EXO								Oholiab			אָהֱלִיאָב		H171 (5) Exo 31:6, 35:34, 36:1-2, 38:23*
+H	EZE								Oholibah			אָהֱלִיבָה		H172 (6) Eze 23:4,11,22,36,44*
+H	GEN,CH1								Oholibamah			אָהֱלִיבָמָה		H173 (8) Gen 36:2,5,14,18,25,41, 1Chr 1:52*
+H	GEN,CH1								Omar			אוֹמָר		H201 (3) Gen 36:11,15, 1Chr 1:36*
+H	KI1,KI2,CH1,CH2,MIC								Omri			עָמְרִי		H6018 (18) 1Ki 16:16-17,21-23,25,27-30, ...
+H	GEN,CH1								Onam			אוֹנָם		H208 (4) Gen 36:23, 1Chr 1:40, 2:26,28*
+H	GEN,NUM,CH1								Onan			אוֹנָן		H209 (8) Gen 38:4,5-9, 46:12, Num 26:19, 1Chr 2:3*
+H	GEN,KI1,CH1,CH2,JOB,PSA,ISA								Ophir			אוֹפִיר		H211 (13) Gen 10:29, 1 Ki 9:28, 10:11, 22:48, 1Chr 1:23, 29:4, 2Chr 8:18, ...
+H	JOS,JDG,SA1,CH1								Ophrah			עָפְרָה		H6084 man (8) Josh 18:23, Jdg 6:11,24, 8:27,32, 9:5, 1Sam 13:17, 1Chr 4:14*
 H	JDG,PSA,ISA								Oreb			עֹרֵב		H6159 (7) Jdg 7:25, 8:3, Psa 83:11, Isa 10:26*
 H					CH1_2:25				Oren			אֹרֶן		H767 (1) 1Chr 2:25*
+H	CH1,CH2								Ornan			אָרְנָן		H7771 (12) 1Chr 21:15,18,20-25,28, 2Chr 3:1*
 H					EZR_4:10				Osnappar			אָסְנַפַּר		{ H6620 (1) Ezr 4:10*
 H					EZR_4:10				Asnappar			אָסְנַפַּר		{ H6620 (1) Ezr 4:10*
+wH					CH1_26:7				Othni			עָתְנִי		H6273 (1) 1Chr 26:7*
 H	JOS,JDG,CH1								Othniel			עָתְנִיאֵל		H6274 (7) Josh 15:17, Jdg 1:13, 3:9,11, 1Chr 4:13, 27:15*
 H					CH1_2:15,CH1_2:25				Ozem			אֹצֶם		H684 (2) 1Chr 2:15,25*
 H					SA2_23:35				Paarai			פַּעֲרַי		H6474 (1) 2Sam 23:35*
@@ -1153,11 +1194,13 @@ wH					CH1_2:47,CH1_12:3				Pelet			פֶּלֶט		H6404 (2) 1Chr 2:47, 12:3*
 H					NUM_16:1,CH1_2:33				Peleth			פֶּלֶת		H6431 (2) Num 16:1, 1Chr 2:33*
 H					SA1_1:2,SA1_1:4				Peninnah			פְנִנָּה		H6444 (3) 1 Sam 1:2,4*
 H					CH1_7:16				Peresh			פֶּרֶשׁ		H6570 (1) 1Chr 7:16
-H									Perez			פֶּרֶץ		H6557 (15) Gen 38:29, 46:12, Num 26:20-21, Ruth 4:12,18, ...
+H	GEN,NUM,RUT,CH1,NEH								Perez			פֶּרֶץ		H6557 (15) Gen 38:29, 46:12, Num 26:20-21, Ruth 4:12,18, ...
 H					NEH_7:57				Perida			פְרוּדָא		{ H6514 (2) Neh 7:57*
 H					EZR_2:55				Peruda			פְרוּדָא		{ H6514 (2) Ezr 2:55*
-H									Pethahiah			פְּתַחְיָה		H6611 (4) 1Chr 24:16, Ezr 10:23, Neh 9:5, 11:24*
+H	CH1,EZR,NEH								Pethahiah			פְּתַחְיָה		H6611 (4) 1Chr 24:16, Ezr 10:23, Neh 9:5, 11:24*
 H					JOL_1:1				Pethuel			פְּתוּאֵל		H6602 (1) Joel 1:1*
+H					CH1_26:5				Peulthai			פְּעֻלְּתַי		{ H6469 (1) 1Chr 26:5*
+H					CH1_26:5				Peullethai			פְּעֻלְּתַי		{ H6469 (1) 1Chr 26:5*
 H									Pharaoh			פַּרְעֹה		H6547 P and F but P seems more common (268) Gen 12:15,17,18,20, 37:36, 39:1, ..., Acts 7:13
 H									Phinehas			פִּינְחָס		H6372 (25) Exo 6:25, Num 25:7,11, 31:6 Jos 22:13,30-32, ...
 H					NEH_10:24				Pilha			פִּלְחָא		H6401 (1) Neh 10:24*
@@ -1190,22 +1233,24 @@ H									Rebekah			רִבְקָה		H7259 (30) Gen 22:23, 24:15,29-30,45,51,53,5
 H									Rechab			רֵכָב		H7394 (13) 2Sam 4:2,5-6,9, ...
 H					EZR_2:2				Reelaiah			רְעֵלָיָה		H7480 (1) Ezr 2:2*
 wH	NUM,JOS,JDG,SA2,CH1,NEH								Rehob			רְחֹב		H7340 (10) Num 13:21, Josh 19:28,30, 21:31, Jdg 1:31, ...
-H									Rehoboam			רְחַבְעָם		H7346 (50) 1Ki 11:43, 12:1,3,6,12,17-18,21,23, ...
-H									Rehum			רְחוּם		H7348 (8) Ezr 2:2, 4:8-9,17,23, Neh 3:17, 10:25, 12:3*
 H									Reaiah			רְאָיָה		H7211 (4) 1Chr 4:2, 5:5, Ezr 2:47, Neh 7:50*
 H					CH1_2:47				Regem			רֶגֶם		H7276 (1) 1Chr 2:47*
-H									Regemmelech			רֶגֶם-מֶלֶךְ		{ H7278 (space changed to hyphen) (1) Zech 7:2*
-wH									Regem-			רֶגֶם		{ H7278 (space changed to hyphen) (1) Zech 7:2*
+H					ZEC_7:2				Regemmelech			רֶגֶם-מֶלֶךְ		{ H7278 (space changed to hyphen) (1) Zech 7:2*
+wH					ZEC_7:2				Regem-			רֶגֶם		{ H7278 (space changed to hyphen) (1) Zech 7:2*
+H	CH1								Rehabiah			רְחַבְיָה		H7345 (5) 1Chr 23:17, 24:21, 26:25*
+H									Rehoboam			רְחַבְעָם		H7346 (50) 1Ki 11:43, 12:1,3,6,12,17-18,21,23, ...
+H	EZR,NEH								Rehum			רְחוּם		H7348 (8) Ezr 2:2, 4:8-9,17,23, Neh 3:17, 10:25, 12:3*
 wH					KI1_1:8				Rei			רֵעִי		H7472 (1) 1Ki 1:8*
 H	NUM,JOS,CH1								Rekem			רֶקֶם		H7552 (6) Num 31:8, Josh 13:21, 18:27, 1Chr 2:43-44, 7:16*
-wH									Reu			רְעוּ		H7466 (5) Gen 11:18-21, 1Chr 1:25*
-H									Remaliah			רְמַלְיָהוּ		H7425 (13) 2Ki 15:25,27,30,32,37, 16:1,5, 2Ch 28:6, ...
+wH	GEN,CH1								Reu			רְעוּ		H7466 (5) Gen 11:18-21, 1Chr 1:25*
+H	KI2,CH2,ISA								Remaliah			רְמַלְיָהוּ		H7425 (13) 2Ki 15:25,27,30,32,37, 16:1,5, 2Ch 28:6, ...
 H					CH1_7:25				Rephah			רֶפַח		H7506 (1) 1Chr 7:25*
 H	CH1,NEH								Rephaiah			רְפָיָה		H7509 (5) 1Chr 3:21, 4:42, 7:2, 9:43, Neh 3:9*
+H					CH1_26:7				Rephael			רְפָאֵל		H7501 (1) 1Chr 26:7*
 H					CH1_7:25				Resheph			רֶשֶׁף		H7566 (1) 1Chr 7:25*
 H									Reuben			רְאוּבֵן		H7205 (72) Gen 29:32, 30:14, 35:22, ..., Rev 7:5
-H									Reuel			רְעוּאֵל		H7467 (11) Gen 36:4,10,13,17, Exo 2:18, Num 2:14, 10:29, 1Chr 1:35,37, 9:8*
-H									Rezin			רְצִין		H7526 (11) 2Ki 15:37, 16:5-6,9, Ezr 2:48, Neh 7:50, Isa 7:1,4,8, 8:6, 9:11*
+H	GEN,EXO,NUM,CH1								Reuel			רְעוּאֵל		H7467 (11) Gen 36:4,10,13,17, Exo 2:18, Num 2:14, 10:29, 1Chr 1:35,37, 9:8*
+H	KI2,EZR,NEH,ISA								Rezin			רְצִין		H7526 (11) 2Ki 15:37, 16:5-6,9, Ezr 2:48, Neh 7:50, Isa 7:1,4,8, 8:6, 9:11*
 H					KI1_11:23				Rezon			רְזוֹן		H7331 (1) 1Ki 11:23*
 H					SA2_23:29,CH1_11:31				Ribai			רִיבַי		H7380 (2) 2Sam 23:29, 1Chr 11:31*
 H	JOS,JDG,SA2,KI2,CH1,ZEC								Rimmon			רִמּוֹן		H7417 (17) Josh 15:32, 19:7,13, Jdg 20:45,47, 21:13, 2Sam 4:2,5,9, ...
@@ -1216,11 +1261,18 @@ wH					CH1_7:39				Rizia			רִצְיָא		{{ H7525 (1) 1Chr 7:39*
 wH					CH1_7:39				Rezia			רִצְיָא		{{ H7525 (1) 1Chr 7:39*
 H	SA2								Rizpah			רִצְפָה		H7532 concubine of Sha'ul (4) 2Sam 3:7, 21:8,10-11*
 H					CH1_7:34				Rohgah			רוֹהֲגָה		H7303 (1) 1Chr 7:34*
+H					CH1_25:4,CH1_25:31				Romamtiezer			רוֹמַמְתִּי-עֶזֶר		{ H7320 (space changed to hyphen) (2) 1Chr 25:4,31*
+H					CH1_25:4,CH1_25:31				Romamti-ezer			רוֹמַמְתִּי-עֶזֶר		{ H7320 (space changed to hyphen) (2) 1Chr 25:4,31*
+H					CH1_25:4,CH1_25:31				Romamti			רוֹמַמְתִּי		{ H7320 (2) 1Chr 25:4,31*
+wH					CH1_25:4,CH1_25:31				-ezer			עֶזֶר		{ H7320 (2) 1Chr 25:4,31*
+wH					CH1_25:4,CH1_25:31				ezer			עֶזֶר		{ H7320 (2) 1Chr 25:4,31*
+wH					CH1_25:4,CH1_25:31				Ezer			עֶזֶר		{ H7320 (2) 1Chr 25:4,31*
 H	RUT								Ruth			רוּת		H7327 woman (12) Rut 1:4,14,16,22, 2:2,8,21-22, 3:9, 4:5,10,13*
 H					GEN_10:7,CH1_1:9				Sabta			סַבְתָּא		H5454 (2) Gen 10:7, 1Chr 1:9*
 H					GEN_10:7,CH1_1:9				Sabteka			סַבְתְּכָא		H5455 (2) Gen 10:7, 1Chr 1:9*
 H					CH1_11:35,CH1_26:4				Sacar			שָׂכָר		{{ H7940 (2) 1Chr 11:35, 26:4*
 H					CH1_11:35,CH1_26:4				Sakar			שָׂכָר		{{ H7940 (2) 1Chr 11:35, 26:4*
+H					CH1_11:35,CH1_26:4				Sachar			שָׂכָר		{{ H7940 (2) 1Chr 11:35, 26:4*
 H	CH1,NEH								Sallu			סַלּוּ		{ H5543 (6) 1Chr 9:7, Neh 11:7, 12:7*
 H					NEH_11:8,NEH_12:20				Sallai			סַלּוּ		{ H5543 (6) Neh 11:8, 12:20*
 H					NUM_25:14				Salu			סַלּוּ		{ H5543 (6) Num 25:14*
@@ -1230,7 +1282,7 @@ H	GEN,CH1								Samlah			שַׂמְלָה		H8072 (4) Gen 36:36-37, 1Chr 1:47-48
 dH									Samson			שִׁמְשׁוֺן/(Samson)		H8123 (38) Judges 13:24, 14:1,3, ..., Heb 11:32
 dH									Samuel			שְׁמוּאֵל/(Samuel)		{ H8050 (140) Num 34:20, 1Sam 1:20, 2:18,21,26, ..., Acts 3:24
 H									Shemuel			שְׁמוּאֵל		{ H8050 (140) Num 34:20, 1Sam 1:20, 2:18,21,26, ..., Acts 3:24
-H									Sanballat			סַנְבַלַּט		H5571 (10) Neh 2:10,19, 4:1,7, 6:1-2,5,12,14, 13:28*
+H	NEH								Sanballat			סַנְבַלַּט		H5571 (10) Neh 2:10,19, 4:1,7, 6:1-2,5,12,14, 13:28*
 wH					SA2_21:18				Saph			סַף		H5593 Philistine (1) 2Sam 21:18*
 H									Sarah			שָׂרָה		H8283 (38) Gen 17:15,17,19,21, 18:6,9-15, ..., Heb 11:11
 H					CH1_4:22				Saraph			שָׂרָף		H8315 (1) 1Chr 4:22*
@@ -1241,19 +1293,23 @@ H									Seba			סְבָא		H5434 (4) Gen 10:7, 1Chr 1:9, Psa 72:10, Isa 43:3*
 H	KI1,CH1								Segub			שְׂגוּב		H7687 (3) 1Ki 16:34, 1Chr 2:21-22*
 H									Seir			שֵׂעִיר		H8165 (39) Gen 14:6, 32:3, 33:14-16, ...
 H					CH1_2:30				Seled			סֶלֶד		H5540 (2) 1Chr 2:30*
+H					CH1_26:7				Semachiah			סְמַכְיָהוּ		H5565 (1) 1Chr 26:7*
 H					EZR_2:35,NEH_7:38				Senaah			סְנָאָה		{ H5570 (2) Ezr 2:35, Neh 7:38*
 H					NEH_3:3				Hassenaah			הַסְּנָאָה		{ H5570 (1) Neh 3:3*
-H									Sennacherib			סַנְחֵרִיב		H5576 (13) 2Ki 18:13, 19:16,20,36, 2Chr 32:1-2,9-10, ...
+H	KI2,CH2,ISA								Sennacherib			סַנְחֵרִיב		H5576 (13) 2Ki 18:13, 19:16,20,36, 2Chr 32:1-2,9-10, ...
 H					CH1_9:7,NEH_11:9				Senuah			סְנוּאָה		{ H5574 (2) 1Chr 9:7, Neh 11:9*
 H					CH1_9:7,NEH_11:9				Hassenuah			סְנוּאָה		{ H5574 (2) 1Chr 9:7, Neh 11:9*
-H									Seraiah			שְׂרָיָה		H8304 (20) 2Sam 8:17, 2Ki 25:18,23, 1Chr 4:13-14,35, ...
+H					CH1_24:8				Seorim			שְׂעֹרִים		H8188 (1) 1Chr 24:8*
+H	SA2,KI2,CH1,EZR,NEH,JER								Seraiah			שְׂרָיָה		H8304 (20) 2Sam 8:17, 2Ki 25:18,23, 1Chr 4:13-14,35, ...
 H	GEN,CH1								Serug			שְׂרוּג		H8286 (5) Gen 11:20-23, 1Chr 1:26*
-H									Seth			שֵׁת		H8352 (8) Gen 4:25-26, 5:3-4,6-8, 1Chr 1:1*
+H	GEN,CH1								Seth			שֵׁת		H8352 (8) Gen 4:25-26, 5:3-4,6-8, 1Chr 1:1*
 H					CH1_2:47,CH1_2:49				Shaaph			שַׁעַף		H8174 (2) 1Chr 2:47,49*
 H	EZR,NEH								Shabbethai			שַׁבְּתַי		H7678 (3) Ezr 10:15, Neh 8:7, 11:16*
 H					CH1_8:10				Shachia			שָׁבְיָה		H7634 (1) 1Chr 8:10*
 H					DAN_1:7				Shadrach			שַׁדְרַךְ		H7714 Hananiah (1) Dan 1:7*
 H					CH1_11:34				Shagee			שָׁגֵה		H7681 (1) 1Chr 11:34*
+H					CH1_26:16				Shallecheth			שַׁלֶּכֶת		{ H7996 (1) 1Chr 26:16*
+H					CH1_26:16				Shalleketh			שַׁלֶּכֶת		{ H7996 (1) 1Chr 26:16*
 H	KI2,CH1,CH2,EZR,NEH,JER								Shallum			שַׁלּוּם		H7967 (27) 2Ki 15:10,13-15, 22:14, 1Chr 2:40, 3:15, ...
 H					NEH_3:15				Shallun			שַׁלּוּן		H7968 (1) Neh 3:15*
 H					EZR_2:46,NEH_7:48				Shalmai			שַׂלְמַי		{ H8014 (2) Ezr 2:46, Neh 7:48*
@@ -1261,6 +1317,8 @@ H					EZR_2:46,NEH_7:48				Shalmai			שַׂלְמַי		{ H8014 (2) Ezr 2:46, Neh
 H	KI2								Shalmaneser			שַׁלְמַנְאֶסֶר		H8022 Assyrian king (2) 2Ki 17:3, 18:9*
 wH					CH1_11:44				Shama			שָׁמָע		H8091 (1) 1Chr 11:44*
 H					JDG_3:31,JDG_5:6				Shamgar			שַׁמְגַּר		H8044 (2) Jdg 3:31, 5:6*
+H					CH1_27:8				Shamhuth			שַׁמְהוּת		H8049 (1) 1Chr 27:8*
+H					CH1_24:24				Shamir			שָׁמוּר		H8053 (1) 1Chr 24:24*
 wH					SA2_23:11,CH1_7:37				Shamma			שַׁמָּא		H8037 (2) 2Sam 23:11. 1Chr 7:37*
 H	GEN,SA1,SA2,CH1								Shammah			שַׁמָּה		H8048 (7) Gen 36:13,17, 1Sam 16:9, 17:13, 2Sam 23:25,33, 1Chr 1:37*
 H	CH1								Shammai			שַׁמַּי		{ H8060 (6) 1Chr 2:28,32,44-45, 4:17*
@@ -1276,6 +1334,7 @@ H					SA2_23:33,JER_15:11				Sharar			שָׁרַר		H8325 (2) 2Sam 23:33, Jer 15
 H	KI2,ISA,JER								Sharezer			שַׁרְאֶצֶר		H8272 Assyrian (3) 2Ki 19:37, Isa 37:38, Zec 7:2*
 H					EZR_10:40				Shashai			שָׁשַׁי		H8343 (1) Ezr 10:40*
 H					CH1_8:14,CH1_8:25				Shashak			שָׁשַּׁק		H8349 (2) 1Chr 8:14,25*
+H					CH1_18:16				Shavsha			שַׁוְשָׁא		H7798 (1) 1Chr 18:16*
 wH					EZR_10:29				Sheal			שְׁאָל		H7594 (1) Ezr 10:29*
 H	CH1,EZR,NEH,HAG								Shealtiel			שְׁאַלְתִּיאֵל		H7597 (9) 1Chr 3:17, Ezr 3:2,8, Neh 12:1, Hag 1:1,12,14, 2:2,23*
 wH					CH1_8:38,CH1_9:44				Sheariah			שְׁעַרְיָה		H8187 (2) 1Chr 8:38, 9:44*
@@ -1285,6 +1344,8 @@ H	CH1,NEH								Shebaniah			שְׁבַנְיָה		H7645 (7) 1Chr 15:24, Neh 9:4
 H					CH1_2:48				Sheber			שֶׁבֶר		H7669 (1) 1Chr 2:48*
 H	KI2,ISA								Shebnah			שֶׁבְנָא		{ H7644 (9) 2Ki 18:18,26,37, 19:2, Isa 22:15, 36:3,11,22, 37:2*
 wH	KI2,ISA								Shebna			שֶׁבְנָא		{ H7644 (9) 2Ki 18:18,26,37, 19:2, Isa 22:15, 36:3,11,22, 37:2*
+H	CH1								Shebuel			שְׁבוּאֵל		{{ H7619 (6) 1Chr 23:16, 24:20, 25:4, 25:20, 26:24*
+H	CH1								Shubael			שְׁוּבאֵל		{{ H7619 (6) 1Chr 23:16, 24:20, 25:4, 25:20, 26:24*
 H	CH1,EZR,NEH								Shecaniah			שְׁכַנְיָה		H7935 (10) 1Chr 3:21-22, 24:11, 31:15, Ezr 8:3,5, 10:2, Neh 3:29, 6:18, 12:3*
 H									Shechem			שְׁכֶם		H7927 (63) Gen 12:6, 33:18, ..., Acts 7:16
 H					CH1_8:26				Shehariah			שְׁחַרְיָה		H7841 (1) 1Chr 8:26*
@@ -1295,6 +1356,7 @@ H	CH1,EZR,NEH,JER								Shelemiah			שֶׁלֶמְיָה		H8018 (10) 1Chr 26:14
 H					GEN_10:26,CH1_1:20				Sheleph			שֶׁלֶף		H8026 (2) Gen 10:26, 1Chr 1:20*
 H					CH1_7:35				Shelesh			שֶׁלֶשׁ		H8028 (1) 1Chr 7:35*
 H	LEV,CH1,CH2,EZR								Shelomith			שְׁלֹמִית		H8019 (6) Lev 24:11, 1Chr 3:19, 23:18, 26:28, 2Chr 11:20, Ezr 8:10*
+H	CH1								Shelomoth			שְׁלֹמוֹת		H8013 (5) 1Chr 23:9, 24:22, 26:25-26*
 wH	GEN,CH1								Shem			שֵׁם		H8035 (17) Gen 5:32, 6:10, 7:13, 9:18,23,26-27, ...
 wH	CH1,NEH								Shema			שֶׁמַע		H8087 (5) 1Chr 2:43-44, 5:8, 8:13, Neh 8:4*
 H					CH1_12:3				Shemaah			שְׁמָעָה		H8094 (1) 1Chr 12:3*
@@ -1332,21 +1394,25 @@ H	CH1,CH2								Shimri			שִׁמְרִי		H8113 (4) 1Chr 4:37, 11:45, 26:10, 2
 H	EZR								Shimshai			שִׁמְשַׁי		H8124 (4) Ezr 4:8-9,17,23*
 H					EXO_1:15				Shiphrah			שִׁפְרָה		H8236 (1) Exo 1:15*
 H					KI1_4:3				Shisha			שִׁישָׁא		H7894 (1) 1Ki 4:3*
+H					CH1_27:29				Shitrai			שִׁטְרַי		{ H7861 (1) 1Chr 27:29*
+H					CH1_27:29				Shirtai			שִׁטְרַי		{ H7861 (1) 1Chr 27:29* # Is this a MISPELLING in the Clear.Bible glosses ???
 H					CH1_11:42				Shiza			שִׁיזָא		H7877 (1) 1Chr 11:42*
 H	SA2,CH1								Shobab			שׁוֹבָב		H7727 (4) 2Sam 5:14, 1Chr 2:18, 3:5, 14:4*
 H					SA2_10:16,SA2_10:18				Shobach			שׁוֹבָךְ		H7731 (2) 2Sam 10:16,18*
 H					EZR_2:42,NEH_7:45				Shobai			שׁבַי		H7630 (2) Ezr 2:42, Neh 7:45*
-H									Shobal			שׁוֹבָל		H7732 (9) Gen 36:20,23,29, 1Chr 1:38,40, 2:50,52, 4:1-2*
+H	GEN,CH1								Shobal			שׁוֹבָל		H7732 (9) Gen 36:20,23,29, 1Chr 1:38,40, 2:50,52, 4:1-2*
 H					NEH_10:24				Shobek			שׁוֹבֵק		H7733 (1) Neh 10:24*
 H					SA2_17:27				Shobi			שׁבִי		H7629 (1) 2Sam 17:27*
+H					CH1_24:27				Shoham			שֹׁהַם		H7719 (1) 1Chr 24:27*
 H					KI2_12:21,CH1_7:32				Shomer			שׁוֹמֵר		H7763 (2) 2Ki 12:21, 1Chr 7:32*
+H					CH1_19:16,CH1_19:18				Shophach			שׁוֹפָךְ		H7780 (2) 1Chr 19:16,18*
 wH					CH1_2:3,CH1_7:32				Shua			שׁוּעָא		H7774 Yehudah's wife (2) 1Chr 2:3, 7:32*
 H					GEN_38:2,GEN_38:12				Shuah			שׁוּעַ		{ H7770 (2) Gen 38:2,12*
 wH					GEN_38:2,GEN_38:12				Shua			שׁוּעַ		{ H7770 (2) Gen 38:2,12*
 H					CH1_4:11				Shuhah			שׁוּחָה		{{ H7746 (1) 1Chr 4:11
 H					CH1_4:11				Shuah			שׁוּחָה		{{ H7746 (1) 1Chr 4:11
 H					SA1_13:17,CH1_7:36				Shual			שׁוּעָל		H7777 (2) 1Sam 13:17, 1Chr 7:36*
-H	CH1								Shuppim			שֻׁפִים		H8206 (3) 1Chr 7:12,15, 26:16*
+H	CH1								Shuppim			שֻׁפִּים		H8206 (3) 1Chr 7:12,15, 26:16*
 H	NUM,CH1								Shuthelah			שׁוּתֶלַח		H7803 (4) Num 26:35-36, 1Chr 7:20-21*
 H	SA2,CH1								Sibbecai			סִבְכַי		H5444 (4) 2Sam 21:18, 1Chr 11:29, 20:4, 27:11*
 H					EZR_2:44,NEH_7:47				Siaha			סִיעָא		{ H5517 (2) Ezr 2:44, Neh 7:47*
@@ -1354,7 +1420,8 @@ wH					EZR_2:44,NEH_7:47				Sia			סִיעָא		{ H5517 (2) Ezr 2:44, Neh 7:47*
 H									Sihon			סִיחוֹן		H5511 (37) Num 21:21,23,26-29,34, 32:33, Deu 1:4, 2:24, ...
 H					AMO_5:26				Sikkuth			סִכּוּת		H5522 feminine (1) Amos 5:26*
 H									Simeon			שִׁמְעוֹן		H8095 (44) Gen 29:33, 34:25,30, 35:23, 42:24,36, ...
-H									Sisera			סִיסְרָא		H5516 (21) Jdg 4:2,7,9,12-18,22, 5:20,26, ...
+H					CH1_20:4				Sippai			סִפַי		H5598 (1) 1Chr 20:4*
+H	JDG,SA1,EZR,NEH,PSA								Sisera			סִיסְרָא		H5516 (21) Jdg 4:2,7,9,12-18,22, 5:20,26, ...
 H					CH1_2:40				Sismay			סִסְמַי		H5581 (2) 1Chr 2:40*
 wH					KI2_17:4				So			סוֹא		H5471 (1) 2Ki 17:4*
 dH									Solomon			שְׁלֹמֹה/(Solomon)		H8010 (293) 2Sam 5:14, 12:24, 1Ki 1:10-13,17, ...
@@ -1381,6 +1448,7 @@ H					CH1_8:35				Tarea			תַּאֲרֵעַ		H8390 (1) 1Chr 8:35*
 H					KI2_17:31				Tartak			תַּרְתָּק		H8662 (1) 2Ki 17:31*
 H	EZR								Tattenai			תַּתְּנַי		{ H8674 (4) Ezr 5:3,6, 6:6,13*
 H	EZR								Tatnai			תַּתְּנַי		{ H8674 (4) Ezr 5:3,6, 6:6,13*
+H					CH1_26:11				Tebaliah			טְבַלְיָהוּ		H2882 (1) 1Chr 26:11*
 H					CH1_4:12				Tehinnah			תְּחִנָּה		H8468 (1) 1Chr 4:12*
 H					CH1_7:25				Telah			תֶּלַח		H8520 (1) 1Chr 7:25*
 H					JOS_15:24,EZR_10:24				Telem			טֶלֶם		H2928 (2) Josh 15:24, Ezr 10:24*
@@ -1466,39 +1534,43 @@ dH					SA1_9:1				Zeror			צְרוֹר/(Zeror)		H6872 (1) 1Sam 9:1*
 H									Zechariah			זְכַרְיָה		H2148 (43) 2Ki 14:29, 15:8,11, 18:2, 1Chr 5:7, 9:21, ...
 dH	NUM,JOS,CH1								Zelophehad			צְלָפְחָד/(Zelophehad)		H6765 (11) Num 26:33, 27:1,7, 36:2,6,10-11, Josh 17:3, ...
 H					CH1_7:8				Zemirah			זְמִירָה		H2160 (1) 1Chr 7:8*
-dH									Zephaniah			צְפַנְיָה/(Zephaniah)		H6846 (10) 2Ki 25:18, 1Chr 6:36, Jer 21:1, ..., Zeph 1:1, 6:10,14
-dH									Zephi			צְפוֹ/(Zephi)		{ H6825 (3) Gen 36:11,15, 1Chr 1:36*
-dH									Zepho			צְפוֹ/(Zepho)		{ H6825 (3) Gen 36:11,15, 1Chr 1:36*
+dH	KI2,CH1,JER,ZEP,ZEC								Zephaniah			צְפַנְיָה/(Zephaniah)		H6846 (10) 2Ki 25:18, 1Chr 6:36, Jer 21:1, ..., Zeph 1:1, 6:10,14
+dH	GEN,CH1								Zephi			צְפוֹ/(Zephi)		{ H6825 (3) Gen 36:11,15, 1Chr 1:36*
+dH	GEN,CH1								Zepho			צְפוֹ/(Zepho)		{ H6825 (3) Gen 36:11,15, 1Chr 1:36*
 dH					CH1_4:7				Zereth			צֶרֶת/(Zereth)		H6889 (1) 1Chr 4:7*
+dH					CH1_25:3				Zeri			צְרִי/(Zeri)		H6874 (1) 1Chr 25:3*
 dH					KI1_11:26				Zeruah			צְרוּעָה/(Zeruah)		H6871 (1) 1Ki 11:26*
-dH									Zeruiah			צְרוּיָה/(Zeruiah)		H6870 (26) 1Sam 26:6, 2Sam 2:13,19, 3:39, ...
-H									Zerubbabel			זְרֻבָּבֶל		H2216 (21) 1Chr 3:19, Ezr 2:2, 3:2,8, 4:2-3, Neh 7:7, ..., Hag 1:1, ...
+dH	SA1,SA2,KI1,CH1								Zeruiah			צְרוּיָה/(Zeruiah)		H6870 (26) 1Sam 26:6, 2Sam 2:13,19, 3:39, ...
+H	CH1,EZR,NEH,HAG,ZEC								Zerubbabel			זְרֻבָּבֶל		H2216 (21) 1Chr 3:19, Ezr 2:2, 3:2,8, 4:2-3, Neh 7:7, ..., Hag 1:1, ...
+H					CH1_23:8,CH1_26:22				Zetham			זֵתָם		H2241 (2) 1Chr 23:8, 26:22*
 H					CH1_7:10				Zethan			זֵיתָן		H2133 (1) 1Chr 7:10*
 wH					CH1_5:13				Zia			זִיעַ		H2127 (1) 1Chr 5:13*
-dH									Ziba			צִיבָא/(Ziba)		H6717 (16) 2Sam 9:2-4,9-12, 16:1-4, ...
-dH									Zibeon			צִבְעוֹן/(Zibeon)		H6649 (8) Gen 36:2,14,20,24,29, 1Chr 1:38,40*
+dH	SA2								Ziba			צִיבָא/(Ziba)		H6717 (16) 2Sam 9:2-4,9-12, 16:1-4, ...
+dH	GEN,CH1								Zibeon			צִבְעוֹן/(Zibeon)		H6649 (8) Gen 36:2,14,20,24,29, 1Chr 1:38,40*
 wdH					CH1_8:9				Zibia			צִבְיָא/(Zibia)		H6644 (1) 1Chr 8:9*
-dH									Zibiah			צִבְיָּה/(Zibiah)		H6645 woman (2) 2Ki 12:1, 2Chr 24:1*
-H									Zichri			זִכְרִי		{ H2147 (12) Exo 6:21, 1Chr 8:19,23,27, 9:15, 26:25, 27:16, 2Chr 17:16, ...
-H									Zikri			זִכְרִי		{ H2147 (12) Exo 6:21, 1Chr 8:19,23,27, 9:15, 26:25, 27:16, 2Chr 17:16, ...
+dH					KI2_12:1,CH2_24:1				Zibiah			צִבְיָּה/(Zibiah)		H6645 woman (2) 2Ki 12:1, 2Chr 24:1*
+H	EXO,CH1,CH2,NEH								Zichri			זִכְרִי		{ H2147 (12) Exo 6:21, 1Chr 8:19,23,27, 9:15, 26:25, 27:16, 2Chr 17:16, ...
+H	EXO,CH1,CH2,NEH								Zikri			זִכְרִי		{ H2147 (12) Exo 6:21, 1Chr 8:19,23,27, 9:15, 26:25, 27:16, 2Chr 17:16, ...
 dH	EZR,NEH								Ziha			צִיחָא/(Ziha)		H6727 (3) Ezr 2:43, Neh 7:46, 11:21*
 dH	GEN								Zillah			צִלָּה/(Zillah)		H6741 (3) Gen 4:19,22-23*
 dH					CH1_8:20,CH1_12:21				Zilthai			צִלְּתַי/(Zilthai)		{ H6769 (2) 1Chr 8:20, 12:21*
 dH					CH1_8:20,CH1_12:21				Zillethai			צִלְּתַי/(Zillethai)		{ H6769 (2) 1Chr 8:20, 12:21*
 H	CH1,CH2								Zimmah			זִמָּה		H2155 (3) 1Chr 6:20,42, 2Chr 29:12*
 H					GEN_25:2,CH1_1:32				Zimran			זִמְרָן		H2175 (2) Gen 25:2, 1Chr 1:32*
-H									Zimri			זִמְרִי		H2174 (15) Num 25:14, 1Ki 16:9-10,12,15-16,18,20, ...
-wdH									Zippor			צִפּוֹר/(Zippor)		H6834 (7) Num 22:2,4,10,16, 23:18, Josh 24:9, Jdg 11:25*
+H	NUM,KI1,KI2,CH1,JER								Zimri			זִמְרִי		H2174 (15) Num 25:14, 1Ki 16:9-10,12,15-16,18,20, ...
+H					CH1_23:10				Zina			זִינָא		H2126 (1) 1Chr 23:10*
+wdH	NUM,JOS,JDG								Zippor			צִפּוֹר/(Zippor)		H6834 (7) Num 22:2,4,10,16, 23:18, Josh 24:9, Jdg 11:25*
 H					CH1_4:16				Ziphah			זִיפָה		H2129 (1) 1Chr 4:16*
 dH	EXO								Zipporah			צִפֹּרָה/(Zipporah)		H6855 (3) Exo 2:21, 4:25, 18:2*
-H					CH1_4:37,CH2_11:20				Ziza			זִיזָא		H2124 (2) 1Chr 4:37, 2Chr 11:20*
+wH					CH1_4:37,CH2_11:20				Ziza			זִיזָא		H2124 (2) 1Chr 4:37, 2Chr 11:20*
+H					CH1_23:11				Zizah			זִיזָה		H2125 (1) 1Chr 23:11*
 dH					CH1_4:8				Zobebah			צֹבֵבָה/(Zobebah)		H6637 (1) 1Chr 4:8*
 H					CH1_4:20				Zoheth			זוֹחֵת		H2105 (1) 1Chr 4:20*
 H					CH1_4:20				zoheth			זוֹחֵת		H1132 Ben-zoheth (1) 1Chr 4:20*
 dH					CH1_7:35,CH1_7:36				Zophah			צוֹפַח/(Zophah)		H6690 (2) 1Chr 7:35-36*
 dH					CH1_6:26				Zophai			צוּף/(Zophai/Zuph)		{ H6689 (4) 1Chr 6:26*
-dH									Zuph			צוּף/(Zuph)		{ H6689 (4) 1 Sam 1:1, 9:5, 1Chr 6:26,35*
-wdH									Zur			צוּר/(Zur)		H6698 (5) Num 25:15, Num 31:8, Josh 13:21, 1Chr 8:30, 8:36*
+dH	SA1,CH1								Zuph			צוּף/(Zuph)		{ H6689 (4) 1 Sam 1:1, 9:5, 1Chr 6:26,35*
+wdH	NUM,JOS,CH1								Zur			צוּר/(Zur)		H6698 (5) Num 25:15, Num 31:8, Josh 13:21, 1Chr 8:30, 8:36*
 # end of people
 
 
@@ -1574,6 +1646,7 @@ H					CH1_4:19				Garmite			גַּרְמִי		H1636 (1) 1Chr 4:19*
 wH					JOS_13:5,KI1_5:18				Gebalite			גִּבְלִי		{{ H1382 (2) Josh 13:5, 1Ki 5:18*
 H					JOS_13:5,KI1_5:18				Gebalites			גִּבְלִי		{{ H1382 (2) Josh 13:5, 1Ki 5:18*
 H					CH1_12:5				Gederathite			גְּדֵרָתִי		H1452 (1) 1Chr 12:5*
+H					CH1_27:28				Gederite			גְּדֵרי		H1451 (1) 1Chr 27:28*
 wH	DEU,JOS,SA1								Geshuri			גְּשׁוּרִי		{ H1651 (6) Deu 3:14, Josh 12:5, 13:2,11,13, 1Sam 27:8*
 H	DEU,JOS,SA1								Geshurites			גְּשׁוּרִי		{ H1651 (6) Deu 3:14, Josh 12:5, 13:2,11,13, 1Sam 27:8*
 H					CH1_12:3				Gibeathite			גִּבְעָתִי		H1395 from Gibeah (1) 1Chr 12:3*
@@ -1608,18 +1681,21 @@ H	GEN,JDG,CH1,PSA								Ishmeelites			יִשְׁמָעֵאלִי		{ H3459 (8) G
 H	GEN,JDG,CH1,PSA								Ishmaelite			יִשְׁמָעֵאלִי		{ H3459 (8) Gen 37:25,27-28, 39:1, Jdg 8:24, 1Chr 2:17, 27:30, Psa 83:6*
 H									Israelites¦			\add >ones¦\add*_from¦_יִשְׂרָאֵל¦		Acts 2:22
 dH									Ithrite			יִתְרִי/(Ithrite)		H3505 (5) 2Sam 23:38, 1Chr 2:53, 11:40*
+dH	NUM,CH1								Izharites			יִצְהָרִי/(Izharites)		{ H3325 (4) Num 3:27, 1Chr 24:22, 26:23,29*
+dH	NUM,CH1								Izeharites			יִצְהָרִי/(Izeharites)		{ H3325 (4) Num 3:27, 1Chr 24:22, 26:23,29*
+dH					CH1_27:8				Izrahite			יִזְרָח/(Izrahite)		H3155 (1) 1Chr 27:8*
 dH									Jaminite			יְמִינִי/(Jamite)		H3227 (?) 1 Sam 9:1
 dH									Jebusites			יְבוּסִי/(Jebusites)		{ H2983 Inhabitants of Jebus (41) Gen 10:16, 15:21, Exo 3:8, 3:17
 dH									Jebusite			יְבוּסִי/(Jebusite)		{ H2983 Inhabitants of Jebus (41) Gen 10:16, 15:21, Exo 3:8, 3:17
 H									Yebusi			יְבוּסִי		{ H2983 Inhabitants of Jebus (41) Gen 10:16, 15:21, Exo 3:8, 3:17
-dH									Jerahmeelites			יְרַחְמְאֵלִי/(Jerahmeelites)		H3397 (2) 1Sam 27:10, 30:29*
-dH									Jezreelite			יִזְרְעֵאלִי/(Jezreelite)		H3158 (8) 1Ki 21:1,4,6-7,15-16, 2Ki 9:21,25*
+dH					SA1_27:10,SA1_30:29				Jerahmeelites			יְרַחְמְאֵלִי/(Jerahmeelites)		H3397 (2) 1Sam 27:10, 30:29*
+dH	KI1,KI2								Jezreelite			יִזְרְעֵאלִי/(Jezreelite)		H3158 (8) 1Ki 21:1,4,6-7,15-16, 2Ki 9:21,25*
 wdH									Judean			יְהוּדִי/(Judean)		{ H3064 (76) ...
 dH									Judeans			יְהוּדִי/(Judeans)		{ H3064 (76) 2Ki 16:1, ...
 dH									Jewish			יְהוּדִי/(Jewish)		{ H3064 (76) Neh 5:1, ...
 dH									Jews			יְהוּדִי/(Jews)		{ H3064 (76) 2Ki 25:25, Neh 1:2, ...
-H									Kenite			קֵינִי		H7017 (13) Gen 15:19, Num 24:21, Jdg 1:16, 4:11,17, ...
-H									Kenites			קֵינִי		H7017 (13) Gen 15:19, Num 24:21, Jdg 1:16, 4:11,17, ...
+H	GEN,NUM,JDG,SA1,CH1								Kenite			קֵינִי		{{{ H7017 (13) Gen 15:19, Num 24:21, Jdg 1:16, 4:11,17, ...
+H	GEN,NUM,JDG,SA1,CH1								Kenites			קֵינִי		{{{ H7017 (13) Gen 15:19, Num 24:21, Jdg 1:16, 4:11,17, ...
 H	NUM,JOS,CH1,CH2								Kohathites			קֱהָתִי		{{ H6956 (15) Num 3:27,30, 4:18,34,37, 10:21, 26:57, ...
 wH	NUM,JOS,CH1,CH2								Kohathite			קֱהָתִי		{{ H6956 (15) Num 3:27,30, 4:18,34,37, 10:21, 26:57, ...
 wH	EXO,NUM,CH1,CH2								Korahite			קָרְחִי		{ H7145 (8) Exo 6:24, Num 26:58, ...
@@ -1669,6 +1745,7 @@ wH									Perizzite			פְּרִזִּי		{ H6522 (23) Gen 13:7, 15:20, 34:30, 
 H									Philistines			פְלִשְׁתִּי		(288) Gen 10:14, 21:32,34, 26:1,8,14-15,18, Exo 13:17, ...
 H	JDG,SA2,CH1								Pirathonite			פִּרְעָתוֹנִי		H6553 (5) Jdg 12:13,15, 2Sam 23:30, 1Chr 11:31, 27:14*
 H					CH1_2:53				Puthites			פּוּתִי		H6336 (1) 1Chr 2:53*
+H					CH1_27:27				Ramathite			רָמָתִי		H7435 (1) 1Chr 27:27*
 H	JER								Rechabites			רֵכָבִים		H7397b (4) Jer 35:2-3,5,18*
 H									Rephaim			רְפָאִים		H7497 (25) Gen 14:5, 15:20, Deu 2:11,20, 3:11,13, Josh 12:4, ...
 H	PRO,ISA,EZE,NAH								Sabeans			סָבָא		H5433 heavy-drinker (5) Pro 23:20-21, Isa 56:12, Eze 23:42, Nah 1:10*
@@ -1681,6 +1758,7 @@ H	KI1,CH1,CH2								Shilonite			שִׁילוֹנִי		H7888 (6) 1Ki 11:29, 12:1
 H					CH1_2:55				Shimeathites			שִׁמְעָתִי		H8101 (1) 1Chr 2:55*
 H					CH1_4:37				Shiphi			שִׁפְעִי		{{ H8230 (1) 1Chr 4:37*
 H					CH1_4:37				Shipi			שִׁפְעִי		{{ H8230 (1) 1Chr 4:37*
+H					CH1_27:27				Shiphmite			שִׁפְמִי		H8225 (1) 1Chr 27:27*
 H					SNG_6:13				Shulammite			שׁוּלַמִּית		{ H7759 (2) Sng 6:13*
 H					SNG_6:13				Shulamite			שׁוּלַמִּית		{ H7759 (2) Sng 6:13*
 H					CH1_2:53				Shumathites			שֻׁמָתִי		H8126 (1) 1Chr 2:53*
@@ -1699,10 +1777,12 @@ H	GEN,CH1,JOB								Temanite			תֵּימָנִי		{{ H8489 (8) Gen 36:34, 1Chr
 H					CH1_2:55				Tirathites			תִּרְעָתִי		H8654 (1) 1Chr 2:55*
 H	KI1,KI2								Tishbite			תִּשְׁבִּי		H8664 (6) 1Ki 17:1, 21:17,28, 2Ki 1:3,8, 9:36*
 H					CH1_11:45				Tizite			תִּיצִי		H8491 (1) 1Chr 11:45*
-#H									Tyrians			צֹר		Acts 12:20
+dH	KI1,CH1,CH2,EZR,NEH								Tyrians			צֹרִי/(Tyrians)		H6876 (5) 1Ki 7:14, 1Chr 22:4, 2Chr 2:14, Ezra 3:7, Neh 13:16,* ... Acts 12:20
 dH					GEN_10:18,CH1_1:16				Zemarites			צְמָרִי/(Zemarites)		{{ H6786 (2) Gen 10:18, 1Chr 1:16*
 wdH					GEN_10:18,CH1_1:16				Zemarite			צְמָרִי/(Zemarite)		{{ H6786 (2) Gen 10:18, 1Chr 1:16*
 H					GEN_10:18,CH1_1:16				Tsemari			צְמָרִי		{{ H6786 (2) Gen 10:18, 1Chr 1:16*
+H	NUM,JOS,CH1								Zerahites			זַרְחִי		{{{ H2227 (6) Num 26:13,20, Josh 7:17, 1Chr 27:11,13*
+H	NUM,JOS,CH1								Zarhites			זַרְחִי		{{{ H2227 (6) Num 26:13,20, Josh 7:17, 1Chr 27:11,13*
 H					PSA_54:1				Ziphims			זִיפִי		{ H2130 (3) Psa 54:1*
 H					SA1_23:19,SA1_26:1				Ziphites			זִיפִי		{ H2130 (3) 1Sam 23:19, 26:1*
 dH	CH1								Zorathites			צָרְעִי/(Zorathites)		{{ H6882 (3) 1Chr 2:53-54, 4:2*
@@ -1787,14 +1867,19 @@ H					SNG_7:4				Bath-rabbim			בַּת-רַבִּים		{ H1337 (space changed t
 wH					SNG_7:4				Bath			בַּת		{ H1337 (space changed to hyphen) (1) Sng 7:4*
 wH					SNG_7:4				rabbim			רַבִּים		{ H1337 (space changed to hyphen) (1) Sng 7:4*
 H					JOS_15:24,KI1_4:16				Bealoth			בְּעָלוֹת		H1175 (2) Josh 15:24, 1Ki 4:16*
-wH					NUM_21:6,JDG_9:21				Beer			בְּאֵר		H876 (2) Num 21:16, Jdg 9:21*
-H									Beeroth			בְּאֵרוֹת		H881 (5) Josh 9:17, 18:25, 2Sam 4:2, Ezra 2:25, Neh 7:29*
+wH					NUM_21:6,JDG_9:21				Beer			בְּאֵר		H876 well (2) Num 21:16, Jdg 9:21*
+H	JOS,SA2,EZE,NEH								Beeroth			בְּאֵרוֹת		H881 (5) Josh 9:17, 18:25, 2Sam 4:2, Ezra 2:25, Neh 7:29*
+H	GEN,JOS,JDG,SA1,SA2,KI1,KI2								Beersheba			בְּאֵר-שֶׁבַע		{ H884 (space changed to hyphen) (34) Gen 21:14,31-33, ...
+wH	GEN,JOS,JDG,SA1,SA2,KI1,KI2								Beer-			בְּאֵר		{ H884 well (34) Gen 21:14,31-33, ...
+wH	GEN,JOS,JDG,SA1,SA2,KI1,KI2								Beer			בְּאֵר		{ H884 well (34) Gen 21:14,31-33, ...
+wH	GEN,JOS,JDG,SA1,SA2,KI1,KI2								Sheba			שֶׁבַע		{ H884 (34) Gen 21:14,31-33, ...
+wH	GEN,JOS,JDG,SA1,SA2,KI1,KI2								sheba			שֶׁבַע		{ H884 (34) Gen 21:14,31-33, ...
 H					CH1_12:3,CH2_20:26				Beracah			בְּרָכָה		H1294 (3) 1Chr 12:3, 2Chr 20:26*
 H					SA2_8:8,EZE_47:16				Berothah			בֵּרוֹתָה		{ H1268 (2) 2Sam 8:8, Eze 47:16*
 H					SA2_8:8,EZE_47:16				Berothai			בֵּרוֹתָה		{ H1268 (2) 2Sam 8:8, Eze 47:16*
 H	SA1								Besor			בְּשׂוֹר		H1308 stream (3) 1Sam 30:9-10,21*
 H					SA2_8:8				Betah			בֶּטח		H984 (1) 2Sam 8:8*
-H									Beth-aven			בֵּית-אָוֶן		H1007 (space changed to hyphen) (7) Josh 7:2, 18:12, 1Sam 13:5, 14:23, Hos 4:15, 5:8, 10:5*
+H	JOS,SA1,HOS								Beth-aven			בֵּית-אָוֶן		H1007 (space changed to hyphen) (7) Josh 7:2, 18:12, 1Sam 13:5, 14:23, Hos 4:15, 5:8, 10:5*
 H					CH1_4:31				Bethbirei			בֵּית-בִּרְאִי		H1011 (space changed to hyphen) (1) 1Chr 4:31*
 H					CH1_4:31				Beth-biri			בֵּית-בִּרְאִי		H1011 (space changed to hyphen) (1) 1Chr 4:31*
 wH					CH1_4:31				biri			בִּרְאִי		H1011 (1) 1Chr 4:31*
@@ -2257,7 +2342,7 @@ dH									Zion			צִיּוֹן/(Zion)		H6726 (152) 2Sam 5:7, 1Ki 8:1, 2Ki 19:2
 wdH									Zin			צִיּוֹן/(Zin)		H6790 (10) Num 13:21, Num 20:1, 27:14, 33:36, 34:3-4, Deu 32:51, Josh 15:1,3*
 wdH									Ziph			זִיף		H2128 (10) Josh 15:24,55, 1Sam 23:14-16,24, ...
 dH									Zoan			צֹעַן/(Zoan)		H6814 (7) Num 13:22, Psa 78:12,43, Isa 19:11,13, 30:4, Eze 30:14*
-dH	SA1,SA2,KI1,CH1								Zobah			צוֹבָא/(Zobah)		H6678 (12) 1Sam 14:47, 2Sam 8:3,5,12, 10:6,8, 23:36, 1Ki 11:23, 1Chr 18:3,5,9, 19:6*
+dH	SA1,SA2,KI1,CH1								Zobah			צוֹבָה/(Zobah)		H6678 (12) 1Sam 14:47, 2Sam 8:3,5,12, 10:6,8, 23:36, 1Ki 11:23, 1Chr 18:3,5,9, 19:6*
 dH	PSA								Zobah			צוֹבָה/(Zobah)		H760 Aram Zobah (1) Psa 60:0*
 # end of places
 
