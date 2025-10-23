@@ -61,7 +61,7 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Internals.InternalBibleInternals import getLeadingInt
 
 
-LAST_MODIFIED_DATE = '2025-10-09' # by RJH
+LAST_MODIFIED_DATE = '2025-10-16' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
 PROGRAM_VERSION = '0.88'
@@ -1025,7 +1025,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                     try:
                         bkCode, linkCV = restBit.rsplit(' ', 1)
                         bkCode = bkCode.rstrip('.').replace( 'Yhn', 'Jn' ).replace( 'Yud', 'Jud' )
-                        linkBBB = BibleOrgSysGlobals.loadedBibleBooksCodes.getBBBFromText( bkCode )
+                        linkBBB = BibleOrgSysGlobals.loadedBibleBooksCodes.getBBBFromEnglishText( bkCode )
                         if not linkBBB:
                             assert bkCode[0].isdigit(), f"{BBB} {C}:{V}: {restBit=} {bkCode=} {linkCV=} {linkBBB=} {lastBBB=}"
                             linkBBB = lastBBB
