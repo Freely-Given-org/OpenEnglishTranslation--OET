@@ -1,5 +1,7 @@
 TraditionalName	LVName
 -ezer	ˊezer
+-gaber	geⱱer
+-geber	geⱱer
 -nego	nəgō
 Aaron	Aʼarōn
 Aaron	ʼAhₐron
@@ -14,7 +16,10 @@ Abed-nego	ˊAⱱēd-nəgō
 Abednego	ˊAⱱēd-nəgō
 Abel	Abel
 Abel	Heⱱel
+Abel	ʼAⱱēl
 Abel	ʼĀⱱēl
+Abel-maim	ʼAⱱēl-mayim
+Abelmaim	ʼAⱱēl-mayim
 Abi	ʼAⱱī
 Abiathar	Abiathar
 Abiathar	ʼEⱱyātār
@@ -84,10 +89,12 @@ Admah	ʼAdāmāh
 Admin	Admin
 Admin	Rām
 Adna	ˊAdnāʼ
+Adnah	ˊAdnāh
 Adon	ʼAddōn
 Adonijah	ʼAdoniyyāh
 Adonikam	ʼAdonīqām
 Adoniram	ʼAdonīrām
+Adoraim	ʼAdōrayim
 Adoram	ʼAdorām
 Adrammelech	ʼAdrammelek
 Adramyttium	Adramuttaʸnos
@@ -383,7 +390,9 @@ Baal	Baˊal
 Baal-perazim	Baˊal-pərāʦīm
 Baalah	Baˊₐlāh
 Baalat	Baˊₐlāt
+Baalim	Baˊal
 Baalperazim	Baˊal-pərāʦīm
+Baals	Baˊal
 Baana	Baˊₐnāʼ
 Baanah	Baˊₐnāh
 Baasha	Baˊshāʼ
@@ -449,8 +458,11 @@ Bela	Belaˊ
 Beliar	Beliar
 Belshazzar	Bēləshaʼʦʦr
 Belteshazzar	Bēləţəshaʼʦʦar
+Ben	Ben
 Ben	Bēn
+Ben-hadad	Ben-hₐdad
 Benaiah	Bənāyāh
+Benhadad	Ben-hₐdad
 Beninu	Bənīnū
 Benjamin	Beniamin
 Benjamin	Binyāmīn
@@ -481,6 +493,7 @@ Beth-marcaboth	Bēyt-hmmrəkkāⱱōt
 Beth-rapha	Bēyt-rāfāʼ
 Beth-shean	Bēyt-shəʼān
 Beth-shemesh	Bēyt-shemesh
+Beth-zur	Bēyt-ʦūr
 Bethany	Baʸthania
 Bethbirei	Bēyt-birʼī
 Bethel	Bēyt-ʼēl
@@ -496,6 +509,7 @@ Bethshean	Bēyt-shəʼān
 Bethshemesh	Bēyt-shemesh
 Bethuel	Bətūʼēl
 Bethul	Bətūl
+Bethzur	Bēyt-ʦūr
 Betonim	Vbəţonīm
 Bezai	Bēʦay
 Bezalel	Bəʦalʼēl
@@ -823,10 +837,12 @@ Ephphatha	Effatha
 Ephphatha	Fətaḩ
 Ephraim	ʼEfrayim
 Ephraimite	ʼEfrātī
+Ephrain	ˊEfrōn
 Ephrath	ʼEfrāt
 Ephrathah	ʼEfrātāh
 Ephrathite	ʼEfrātī
 Ephrathites	ʼEfrātī
+Ephrayin	ˊEfrōn
 Ephron	ˊEfrōn
 Epicureans	Epikoureios
 Er	Aʸr
@@ -876,6 +892,11 @@ Ezem	ˊEʦem
 Ezer	ʼEʦer
 Ezer	ˊEzer
 Ezer	ˊĒzer
+Ezion	ˊEʦyon
+Ezion-	ˊEʦyon
+Ezion-gaber	ˊEʦyon-geⱱer
+Eziongaber	ˊEʦyon-geⱱer
+Eziongeber	ˊEʦyon-geⱱer
 Ezra	ˊEzrāʼ
 Ezrahite	ʼEzrāḩī
 Ezri	ˊEzrī
@@ -939,6 +960,7 @@ Geliloth	Gəlīlōt
 Gennesaret	Gennaʸsaret
 Genubath	Gənūⱱat
 Gera	Gērāʼ
+Gerar	Gərār
 Gerasenes	Gerasaʸnōn
 Gerizim	Gərizīm
 Gershom	Gērəshom
@@ -1557,6 +1579,7 @@ Jonah	Yōnas
 Jonah	Yōnāh
 Jonam	Yōnan
 Jonathan	Yōnātān
+Jonathan	Yəhōnātān
 Joppa	Yoppaʸ
 Joppa	Yāfō
 Jorah	Yōrāh
@@ -1793,6 +1816,7 @@ Magog	Magōg
 Magog	Māgōg
 Magpiash	Magpiyˊāsh
 Mahalalel	Mahₐlalʼēl
+Mahalath	Maḩₐlat
 Mahanaim	Maḩₐnāyim
 Maharai	Mahₐray
 Mahath	Maḩat
@@ -1801,6 +1825,7 @@ Mahazioth	Maḩₐzīʼōt
 Mahlah	Maḩlāh
 Mahli	Maḩlī
 Mahlon	Maḩlōn
+Maim	Mayim
 Makaz	Māqaʦ
 Makir	Mākīr
 Makkedah	Maqqēdāh
@@ -2120,6 +2145,7 @@ Obed	Ὠβήδ
 Obed-edom	ˊOⱱēd-ʼₑdōm
 Obededom	ˊOⱱēd-ʼₑdōm
 Obil	ʼŌⱱīl
+Oded	ˊŌdēd
 Og	ˊŌg
 Ohel	ʼOhel
 Oholah	ʼĀhₑlāh
@@ -2166,6 +2192,7 @@ Parmenas	Parmenas
 Parosh	Farˊosh
 Parthians	Parthia
 Paruah	Pārūaḩ
+Parvaim	Farvayim
 Pas-	Faş-
 Pasach	Pāşak
 Pasdammim	Faş-dammim
@@ -2567,6 +2594,7 @@ Shiphrah	Shifrāh
 Shipi	Shifˊī
 Shirtai	Shiţray
 Shisha	Shiyshāʼ
+Shishak	Shiyshaq
 Shitrai	Shiţray
 Shittim	Shiţţīm
 Shiza	Shizāʼ
@@ -2645,6 +2673,8 @@ Stoic	Stōikos
 Suah	Şūaḩ
 Sucathites	Sūkātī
 Succoth	Şukkōt
+Sukkiim	Şukkī
+Sukkiims	Şukkī
 Susa	Shūshan
 Sychar	Suⱪar
 Syene	Şəvēnēh
@@ -2726,6 +2756,7 @@ Thyatira	Thuateira
 Tiberias	Tiberios
 Tibhath	Ţⱱəḩat
 Tibni	Tiⱱnī
+Tidal	Tidˊāl
 Tiglath	Tiglat
 Tiglath-pileser	Tiglat-pilʼeşer
 Tiglathpileser	Tiglat-pilʼeşer
@@ -2752,6 +2783,7 @@ Tizite	Tiyʦī
 Toah	Tōaḩ
 Tob	Ţōⱱ
 Tobiah	Ţōⱱiyyāh
+Tobijah	Ţōⱱiyyāh
 Tochen	Token
 Togarmah	Tōgarmāh
 Tohu	Toḩū
@@ -2829,6 +2861,7 @@ Zacher	Zeker
 Zadok	Sadōk
 Zadok	Tsādōq
 Zahab	Zāhāⱱ
+Zaham	Zāham
 Zahar	Tsaḩar
 Zalaph	Tsālāf
 Zalmon	Tsalmōn
@@ -2864,12 +2897,14 @@ Zeeb	Zəʼēⱱ
 Zelek	Tseleq
 Zelophehad	Tsəlāfəḩād
 Zelzah	Tselʦaḩ
+Zemaraim	Tsəmārayim
 Zemarite	Tsəmārī
 Zemarites	Tsəmārī
 Zemirah	Zəmīrāh
 Zenas	Zaʸnas
 Zephaniah	Tsəfanyāh
 Zephath	Tsəfat
+Zephathah	Tsəfātāh
 Zephi	Tsəfō
 Zepho	Tsəfō
 Zerah	Zeraḩ
@@ -2948,10 +2983,13 @@ enan	 ˊēynōn
 ephah	ʼēyfāh
 ephrathah	ʼefrātāh
 ezer	ˊezer
+gaber	geⱱer
 gader	gādēr
+geber	geⱱer
 gedi	 gedī
 gittith	gittit
 gog	gōg
+hadad	hₐdad
 haddon	ḩaddōn
 hatticon	hattikōn
 hattikon	hattikōn
