@@ -17,20 +17,7 @@ For instance in modern English, it's far more natural for any non-churched perso
 
 You can read more about the design of the _OET-RV_ [here](https://OpenEnglishTranslation.Bible/Design/ReadersVersion).
 
-Currently (mid-2025), over 67% of the 66 books have been rough-drafted.
-
-## TODO list
-
-- Replace "whoever" with anyone
-- Manually mark nomina sacra in OET-RV???
-- Consider replacing J with Y, e.g., Jacob -> Yacob, John -> Yohan
-- Consider changing names still quite recognisable with only one letter difference, e.g., Lazarus -> Lazaros
-- Finish changing 'followers' to ‘apprentices’ where appropriate
-- Check consistency of keyterms, e.g., how is ‘son of God’, ‘holy spirit’, ‘kingdom of the heavens’ translated everywhere?
-- Compare parallel passages and choose the best renderings
-- Define and check style of s1 section headings, i.e., tense, perfects, etc.
-- Define and implement footnote classes
-- Add word numbers for all remaining OET-RV words
+Currently (late-2025), over 78% of the 66 books have been rough-drafted.
 
 ### ‘Add’ classes
 
@@ -66,3 +53,30 @@ and any other versions made under my control or under the auspices of [Freely-Gi
 Please note that any contributions by others to this project will only be accepted if they're donated to Robert Hunt @ [Freely-Given.org](https://Freely-Given.org) on these same grounds.
 (We don’t want future complications from having multiple ‘owners’ trying to exert control over this project—you can always fork and rename it if you want to make your own changes.)
 Of course, we're very happy to list contributors if you desire that. (Not everyone does.)
+
+## TODO list
+
+- Go thru NT and GEN to insert \add fields
+- Replace "whoever" with anyone
+- Manually mark nomina sacra in OET-RV???
+- Consider replacing J with Y, e.g., Jacob -> Yacob, John -> Yohan
+- Consider changing names still quite recognisable with only one letter difference, e.g., Lazarus -> Lazaros
+- Finish changing 'followers' to ‘apprentices’ where appropriate
+- Check consistency of keyterms, e.g., how is ‘son of God’, ‘holy spirit’, ‘kingdom of the heavens’ translated everywhere?
+- Compare parallel passages and choose the best renderings
+- Define and check style of s1 section headings, i.e., tense, perfects, etc.
+- Work on consistent two levels of major and minorsection headings (s1 and s2)
+- Define and implement footnote classes
+- Add word numbers for all remaining OET-RV words
+
+## Terms to make consistent
+
+- 'c/k' names like 'Yacob'
+- 'b/v' names like 'Yakov'
+- 'ai/ay' names like 'Yeshai'
+- Philistines vs Filistines
+- remove "years old" if it's not essential
+- capitalisation of city or river after name, e.g., Ashdod City, Jordan river, Corner Gate
+- "His mother's name was..." for new kings in 2 Chron
+- a record of everthing done ... was written in the scroll/book of ... after the death of a king
+- "what was right in Yahweh's eyes" "what was right in the eyes of Yahweh"

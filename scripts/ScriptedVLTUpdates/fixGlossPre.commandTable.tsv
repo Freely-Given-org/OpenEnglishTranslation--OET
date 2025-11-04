@@ -45,12 +45,12 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 #									˱we¦˲_>			we¦
 									˱we¦˲			we¦
 									˱We¦˲			We¦
-#									˱you_all¦˲_> not			you_all_have_ not		Why is this failing ?????
-#									˱you_all¦˲_>			you_all¦
-									˱you_all¦˲			you_all¦
-#									˱You_all¦˲_> not			You_all_have_ not¦
-									˱You_all¦˲			You_all¦
-									˱You_All¦˲			You_all¦
+#									˱you_all¦˲_> not			you(pl)_have_ not		Why is this failing ?????
+#									˱you_all¦˲_>			you(pl)¦
+									˱you_all¦˲			you(pl)¦
+#									˱You_all¦˲_> not			You(pl)_have_ not¦
+									˱You_all¦˲			You(pl)¦
+									˱You_All¦˲			You(pl)¦
 #									˱they¦˲_>			they¦
 									˱they¦˲			they¦
 									˱They¦˲			They¦

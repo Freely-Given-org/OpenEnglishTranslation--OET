@@ -55,7 +55,7 @@ fill_known_MaculaHebrew_English_contextual_glosses() -> bool
     Because the Hebrew accents differ from our OSHB WLC text
         vs. the Clear.Bible text, we remove accents as necessary before comparing.
 do_yalls() -> bool
-    Go through all our OT glosses and change 'you' to 'you_all' if the morphology is plural
+    Go through all our OT glosses and change 'you' to 'you(pl)' if the morphology is plural
 do_yahs() -> bool
     Go through all our OT glosses and change 'Yahweh' to 'yah' where appropriate
 do_auto_reordering() -> bool
@@ -78,7 +78,7 @@ save_filled_word_TSV_file() -> bool
 CHANGELOG:
     2024-03-20 Create a word table as well as the morpheme table
     2024-03-27 Substitute KJB for KJV in 2000+ OSHB notes
-    2024-04-26 Change 'you' to 'you_all' if morphology shows it's plural
+    2024-04-26 Change 'you' to 'you(pl)' if morphology shows it's plural
     2024-11-12 Make sure 'יָהּ' is Yah (not Yahweh)
     2025-01-20 Fix reordering to handle Macula Hebrew new slightly different 'nodes' data (rather than the previous 'lowfat')
 """
@@ -97,10 +97,10 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2025-03-14' # by RJH
+LAST_MODIFIED_DATE = '2025-11-03' # by RJH
 SHORT_PROGRAM_NAME = "apply_Clear_Macula_OT_glosses"
 PROGRAM_NAME = "Apply Macula OT glosses"
-PROGRAM_VERSION = '0.70'
+PROGRAM_VERSION = '0.71'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -472,9 +472,9 @@ def fill_known_MaculaHebrew_English_contextual_glosses() -> bool:
 
 def do_yalls() -> bool:
     """
-    Go through all our OT glosses and change 'you' to 'you_all' if the morphology is plural
+    Go through all our OT glosses and change 'you' to 'you(pl)' if the morphology is plural
     """
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "\nConverting to 'you_all' for plural and dual 2nd person pronouns plus marking plural/dual verbs…" )
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "\nConverting to 'you(pl)' for plural and dual 2nd person pronouns plus marking plural/dual verbs…" )
 
     num_rows_changed = num_fields_changed = 0
     num_plurals = num_duals = 0
@@ -517,14 +517,16 @@ def do_yalls() -> bool:
             newField = originalField = WLC_row_dict[fieldname]
 
             if numberIndicator == 'p': # plural
-                if 'you' not in originalField or 'you_all' in originalField or 'yourselves' in originalField: continue
+                if 'you' not in originalField or 'you(pl)' in originalField or 'yourselves' in originalField: continue
                 if 'yourself' in newField:
                     newField = newField.replace( 'yourself', 'yourselves' )
-                elif 'your' in newField:
-                    newField = newField.replace( 'your(pl)', "your_all's" ) if 'your(pl)' in newField else newField.replace( 'your', "your_all's" )
-                else:
-                    newField = newField.replace( 'you(pl)', 'you_all' ) if 'you(pl)' in newField else newField.replace( 'you', 'you_all' )
-                if morphology[0]=='V' and 'you_all' not in newField and '(pl)' not in newField:
+                elif 'your' in newField and 'your(pl)' not in newField:
+                    # newField = newField.replace( 'your(pl)', "your_all's" ) if 'your(pl)' in newField else newField.replace( 'your', "your_all's" )
+                    newField = newField.replace( 'your', "your(pl)" )
+                elif 'your(pl)' not in newField:
+                    # newField = newField.replace( 'you(pl)', 'you(pl)' ) if 'you(pl)' in newField else newField.replace( 'you', 'you(pl)' )
+                    newField = newField.replace( 'you', 'you(pl)' )
+                if morphology[0]=='V' and 'you(pl)' not in newField and '(pl)' not in newField:
                     newField = f'{newField}(pl)' # append a plural indicator
                 num_plurals += 1
 
@@ -542,17 +544,21 @@ def do_yalls() -> bool:
                     newField = f'{newField}(2)' # append a dual indicator
                 num_duals += 1
 
-            assert newField != originalField
-            WLC_row_dict[fieldname] = newField
-            num_fields_changed += 1
-            row_changed = True
+            # assert newField != originalField, f"{originalField=}" # Not true when we use 'you(pl)'
+            if newField != originalField:
+                WLC_row_dict[fieldname] = newField
+                num_fields_changed += 1
+                row_changed = True
         # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{changed} {WLC_row_dict=}")
         if row_changed: num_rows_changed += 1
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  do_yalls() changed {num_fields_changed:,} fields in {num_rows_changed:,} table rows ({num_plurals:,} plurals and {num_duals:,} duals)." )
-    assert num_fields_changed > 4_700 # otherwise something stopped working
-    assert num_rows_changed > 4_100 # otherwise something stopped working
-    assert num_plurals > 4_700 # otherwise something stopped working
+    # assert num_fields_changed > 4_700 # otherwise something stopped working (for 'you_all')
+    assert num_fields_changed > 4_200 # otherwise something stopped working (for 'you(pl)')
+    # assert num_rows_changed > 4_100 # otherwise something stopped working (for 'you_all')
+    assert num_rows_changed > 4_000 # otherwise something stopped working (for 'you(pl)')
+    # assert num_plurals > 4_700 # otherwise something stopped working (for 'you_all')
+    assert num_plurals > 4_200 # otherwise something stopped working (for 'you(pl)')
     # assert num_duals > 0 # otherwise something stopped working -- TODO: maybe there aren't any???
     return num_fields_changed > 0
 # end of apply_Clear_Macula_OT_glosses.do_yalls

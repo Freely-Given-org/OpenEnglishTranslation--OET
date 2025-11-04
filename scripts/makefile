@@ -1,6 +1,6 @@
 # OET makefile
 #
-# Last updated: 2025-03-08 by RJH
+# Last updated: 2025-10-27 by RJH
 #
 
 #=== Folder and file declarations =======================
@@ -46,8 +46,9 @@ short_OSHB_TSV := ../sourceTexts/rawOSHB/OSHB.parsedOriginal.flat.morphemes.tsv
 #=== Script declarations =======================
 
 python3_13 := python3.13
-# python3_14 := ~/Downloads/Python-3.14.0a1/python
-Python := $(python3_13)
+python3_14 := python3.14
+# python3_15 := ~/Downloads/Python-3.15.0a1/python
+Python := $(python3_14)
 
 SBE := ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py
 BTranslit := ../../BibleTransliterations/Python/BibleTransliterations.py

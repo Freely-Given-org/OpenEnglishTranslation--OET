@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2025-10-24 16:02 by extract_glossed_OSHB_OT_to_ESFM v0.62
+\rem ESFM file created 2025-11-05 12:10 by extract_glossed_OSHB_OT_to_ESFM v0.62
 \rem USFM file edited by ScriptedBibleEditor v0.34
 \h Zəkar\sup yāh\sup*
 \toc1 Zəkar\sup yāh\sup*
@@ -15,11 +15,11 @@
 \c 1
 \nb
 \v 1 In/on/at/with÷month the÷eighth in=year two of÷Dārəyāvesh the_message_of it_came of_\nd YHWH\nd* to Zəkar\sup yāh\sup* the_son_of Berek\sup yāh\sup* the_son_of ˊIddō the÷prophet to=say.
-\v 2 \nd YHWH\nd* He_was_angry towards ancestors_of÷your_all's anger.
-\v 3 And÷say to÷them thus \nd YHWH\nd* he_says hosts return to=me the_utterance_of \nd YHWH\nd* hosts and÷return to÷you_all \nd YHWH\nd* he_says hosts.
-\v 4 Do_not be like÷ancestors_of÷your_all's whom they_proclaimed to÷them the÷prophets the÷former to=say thus he_says \nd YHWH\nd* hosts turn_back please from÷ways_of÷your_all's the÷evil and÷deeds_of÷your_all's\f + \fr 1:4 \ft OSHB variant note: ו/מעלילי/כם: (x-qere) 'וּ/מַֽעֲלְלֵי/כֶ֖ם': lemma=c/4611 n=1.0 morph=HC/Ncmpc/Sp2mp id=38fsu וּ/מַֽעֲלְלֵי/כֶ֖ם\f*\f + \fr 1:4 \ft OSHB note: We agree with both BHS 1997 and BHQ on an unexpected reading.\f* the÷evil and=not they_listened and=not they_paid_attention to=me the_utterance_of \nd YHWH\nd*.
-\v 5 Ancestors_of÷your_all's where \add are\add*_they and÷the÷prophets the÷to÷forever do_they_live.
-\v 6 Nevertheless messages_of÷my and÷regulations_of÷my which I_commanded DOM servants_of÷my the÷prophets am=not did_they_overtake ancestors_of÷your_all's and÷repented and=they_said just=as he_planned \nd YHWH\nd* hosts for=doing to/for=us according_to÷ways_of÷our and÷according_to÷deeds_of÷our so he_has_done with÷us.
+\v 2 \nd YHWH\nd* He_was_angry towards ancestors_of÷your(pl) anger.
+\v 3 And÷say to÷them thus \nd YHWH\nd* he_says hosts return to=me the_utterance_of \nd YHWH\nd* hosts and÷return to÷you(pl) \nd YHWH\nd* he_says hosts.
+\v 4 Do_not be like÷ancestors_of÷your(pl) whom they_proclaimed to÷them the÷prophets the÷former to=say thus he_says \nd YHWH\nd* hosts turn_back please from÷ways_of÷your(pl) the÷evil and÷deeds_of÷your(pl)\f + \fr 1:4 \ft OSHB variant note: ו/מעלילי/כם: (x-qere) 'וּ/מַֽעֲלְלֵי/כֶ֖ם': lemma=c/4611 n=1.0 morph=HC/Ncmpc/Sp2mp id=38fsu וּ/מַֽעֲלְלֵי/כֶ֖ם\f*\f + \fr 1:4 \ft OSHB note: We agree with both BHS 1997 and BHQ on an unexpected reading.\f* the÷evil and=not they_listened and=not they_paid_attention to=me the_utterance_of \nd YHWH\nd*.
+\v 5 Ancestors_of÷your(pl) where \add are\add*_they and÷the÷prophets the÷to÷forever do_they_live.
+\v 6 Nevertheless messages_of÷my and÷regulations_of÷my which I_commanded DOM servants_of÷my the÷prophets am=not did_they_overtake ancestors_of÷your(pl) and÷repented and=they_said just=as he_planned \nd YHWH\nd* hosts for=doing to/for=us according_to÷ways_of÷our and÷according_to÷deeds_of÷our so he_has_done with÷us.
 \v 7 in/on=day twenty and÷four of÷one_of ten month it \add was\add*_the_month_of Shebat in=year two of÷Dārəyāvesh the_message_of it_came of_\nd YHWH\nd* to Zəkar\sup yāh\sup* the_son_of Berek\sup yāh\sup* the_son_of ˊIddō the÷prophet to=say.
 \v 8 I_saw the=night and=see/lo/see a_man \add was\add*_riding on a_horse red and=he \add was\add*_standing between the÷myrtle_trees which in/on/at/with÷ravine and÷behind÷him horses red sorrel and÷white.
 \v 9 And÷asked what \add are\add*_these my=master and=he/it_said to=me the÷messenger the÷talking in/on/at/with÷me I show÷you what they \add are\add*_these.
@@ -42,9 +42,9 @@
 \v 7 \f + \fr 2:7 \ft Note: KJB: Zech.2.3\f* and=see/lo/see the÷messenger the÷speaking in/on/at/with÷me \add was\add*_going_out and÷messenger another \add was\add*_going_out to÷meet÷him.
 \v 8 \f + \fr 2:8 \ft Note: KJB: Zech.2.4\f* and=he/it_said to÷him\f + \fr 2:8 \ft OSHB note: Marks a place where we agree with BHQ against BHS in reading L.\f*\f + \fr 2:8 \ft OSHB note: We have abandoned or added a ketib/qere relative to BHS. In doing this we agree with L against BHS.\f* run speak to the÷young_man this to=say unwalled_villages Yərūshālam/(Jerusalem) it_will_remain because_of÷multitude_of person[s] and÷livestock in/on/at/with÷midst_of÷it.
 \v 9 \f + \fr 2:9 \ft Note: KJB: Zech.2.5\f* and÷I I_will_be for÷it the_utterance_of \nd YHWH\nd* a_wall_of fire all_around and÷for÷glory I_will_become in/on/at/with÷midst_of÷it.
-\v 10 \f + \fr 2:10 \ft Note: KJB: Zech.2.6\f* alas alas and÷flee from÷land_of \add the\add*_north the_utterance_of \nd YHWH\nd* if/because like÷four the_winds_of the=heavens I_have_scattered DOM÷you_all the_utterance_of \nd YHWH\nd*.
+\v 10 \f + \fr 2:10 \ft Note: KJB: Zech.2.6\f* alas alas and÷flee from÷land_of \add the\add*_north the_utterance_of \nd YHWH\nd* if/because like÷four the_winds_of the=heavens I_have_scattered DOM÷you(pl) the_utterance_of \nd YHWH\nd*.
 \v 11 \f + \fr 2:11 \ft Note: KJB: Zech.2.7\f* alas Oh_Tsiyyōn/(Zion) escape Oh_inhabitant[s] of_the_daughter_of of_Bāⱱel.
-\v 12 \f + \fr 2:12 \ft Note: KJB: Zech.2.8\f* if/because thus he_says \nd YHWH\nd* hosts after honour sent÷me to the=nations the÷plundered DOM÷you_all if/because_that the÷touches in/on/at/with÷you_all \add is\add*_touching in/on/at/with÷apple_of eye_of÷his.
+\v 12 \f + \fr 2:12 \ft Note: KJB: Zech.2.8\f* if/because thus he_says \nd YHWH\nd* hosts after honour sent÷me to the=nations the÷plundered DOM÷you(pl) if/because_that the÷touches in/on/at/with÷you(pl) \add is\add*_touching in/on/at/with÷apple_of eye_of÷his.
 \v 13 \f + \fr 2:13 \ft Note: KJB: Zech.2.9\f* if/because see÷I \add am\add*_about_to_brandish DOM hand_of÷my against÷them\f + \fr 2:13 \ft OSHB exegesis note: WLC has this word divided as עֲלֵ/יהֶ֔ם\f* and=they_will_be plunder for÷slaves_of÷their and÷know if/because_that \nd YHWH\nd* hosts sent÷me.
 \v 14 \f + \fr 2:14 \ft Note: KJB: Zech.2.10\f* shout_for_joy and÷rejoice Oh_daughter_of Tsiyyōn if/because see÷I \add am\add*_about_to_come and÷dwell in/on/at/with÷midst_of÷your the_utterance_of \nd YHWH\nd*.
 \v 15 \f + \fr 2:15 \ft Note: KJB: Zech.2.11\f* and= nations =join many to \nd YHWH\nd* in_the=day (the)=that and=they_will_be to=me as÷people and÷dwell in/on/at/with÷midst_of÷your and÷know if/because_that \nd YHWH\nd* hosts sent÷me to÷you.
@@ -61,7 +61,7 @@
 \v 7 Thus \nd YHWH\nd* he_says hosts if in/on/at/with÷ways_of÷my you_will_walk and=if DOM requirements_of÷my you_will_keep and=also you you_will_govern DOM house_of÷my and=also you_will_guard DOM courts_of÷my and÷give to/for=yourself(m) goings between the÷standing the=these.
 \v 8 Hear please Oh_Yəhōshūˊa/(Joshua) the=priest/officer the÷high you and÷colleagues_of÷your the÷sitting to=your=face if/because \add are\add*_men_of sign they if/because see÷I \add am\add*_about_to_bring DOM servant_of÷my branch.
 \v 9 If/because there the÷stone which I_have_set to=(the)_face_of/in_front_of/before Yəhōshūˊa \add are\add*_on a_stone one seven eyes look÷I \add am\add*_about_to_engrave inscription_of÷it the_utterance_of \nd YHWH\nd* hosts and÷remove DOM the_iniquity_of the=earth/land the÷this in/on=day one.
-\v 10 In_the=day (the)=that the_utterance_of \nd YHWH\nd* hosts you_all_will_invite each to÷neighbour_of÷his to under a_vine and=near/to under a_fig_tree.
+\v 10 In_the=day (the)=that the_utterance_of \nd YHWH\nd* hosts you(pl)_will_invite each to÷neighbour_of÷his to under a_vine and=near/to under a_fig_tree.
 \c 4
 \nb
 \v 1 And÷returned the÷messenger the÷talked in/on/at/with÷me and÷wakened÷me as÷one who he_is_roused from÷sleep_of÷his.
@@ -72,7 +72,7 @@
 \v 6 And÷answered and=he/it_said to=me to=say this \add is\add*_the_message_of \nd YHWH\nd* to Zərubāⱱel to=say not in/on/at/with÷might and=not in/on/at/with÷power if/because (if) in/on/at/with÷spirit_of÷my \nd YHWH\nd* he_says hosts.
 \v 7 Who \add are\add*_you Oh_mountain_of the÷great to=(the)_face_of/in_front_of/before Zərubāⱱel to÷plain and÷bring_out DOM the÷stone the÷top shouting(s) grace grace to/for=her/it.
 \v 8 and= the_message_of =he/it_was of_\nd YHWH\nd* to=me to=say.
-\v 9 The_hands_of Zərubāⱱel they_have_founded the÷house the=this and÷hands_of÷his they_will_finish_\add it\add* and÷know if/because_that \nd YHWH\nd* hosts sent÷me to÷you_all.
+\v 9 The_hands_of Zərubāⱱel they_have_founded the÷house the=this and÷hands_of÷his they_will_finish_\add it\add* and÷know if/because_that \nd YHWH\nd* hosts sent÷me to÷you(pl).
 \v 10 If/because who has_he_despised to÷day_of small_\add things\add* and÷rejoice and÷see DOM the÷plumb_line the÷ceremonial in/on/at/with÷hand_of Zərubāⱱel seven these \add are\add*_the_eyes_of \nd YHWH\nd* they \add are\add*_roving_about in=all the=earth/land.
 \v 11 And÷answered and÷said to=him/it what \add are\add*_the_two_of the÷olive_trees the÷these at the_right_side_of the÷lampstand and÷on left_of÷its.
 \v 12 And÷answered a_second_\add time\add* and÷said to=him/it what \add are\add*_the_two_of the_clusters_of the÷olive_trees which in/on/at/with÷beside_of the_two_of the_pipes_of the=gold the÷pour_out from÷upon÷its the=gold.
@@ -107,19 +107,19 @@
 \v 12 And÷say to=him/it to=say thus \nd YHWH\nd* he_says hosts to=say there a_man \add is\add*_Branch his/its=name and÷from÷place÷his he_will_sprout and÷build DOM the_temple_of \nd YHWH\nd*.\f + \fr 6:12 \ft OSHB note: Marks a place where we agree with BHQ against BHS in reading L.\f*\f + \fr 6:12 \ft OSHB note: Marks an anomalous form.\f*\f + \fr 6:12 \ft OSHB note: We read punctuation in L differently from BHS.\f*
 \v 13 and=he he_will_build DOM the_temple_of \nd YHWH\nd* and=he he_will_bear majesty and÷sit and÷rule on throne_of÷his and=it_was a_priest on throne_of÷his and÷counsel_of peace it_will_be between two_of÷them.
 \v 14 And÷the÷crown it_will_be to÷Heldai and÷for÷Ţōⱱiy\sup yāh\sup* and÷for÷Yədaˊ\sup yāh\sup* and÷for÷Ḩēn the_son_of Tsəfan\sup yāh\sup* as÷memorial in=(the)_palace of_\nd YHWH\nd*.
-\v 15 And÷far_off they_will_come and÷build in=(the)_palace of_\nd YHWH\nd* and÷know if/because_that \nd YHWH\nd* hosts sent÷me to÷you_all and=it_was if carefully_(listen) you_all_obey in/on/at/with÷voice_of \nd YHWH\nd* god_of÷your_all's.
+\v 15 And÷far_off they_will_come and÷build in=(the)_palace of_\nd YHWH\nd* and÷know if/because_that \nd YHWH\nd* hosts sent÷me to÷you(pl) and=it_was if carefully_(listen) you(pl)_obey in/on/at/with÷voice_of \nd YHWH\nd* god_of÷your(pl).
 \c 7
 \nb
 \v 1 and=he/it_was in=year four of÷Dārəyāvesh the=king the_message_of it_came of_\nd YHWH\nd* to Zəkar\sup yāh\sup* in/on/at/with÷fourth of_the÷month the÷ninth in/on/at/with÷Kişlēv/(Chislev).
 \v 2 And= Bēyt- =sent \sup ʼēl\sup* Sharezer Sharezer and÷Regem- king and÷men_of÷their to÷entreat DOM the_face_of \nd YHWH\nd*.
 \v 3 To=say to the÷priests who of÷house_of of_\nd YHWH\nd* hosts and=near/to the÷prophets to=say mourn in/on/at/with÷month the÷fifth will_I_separate_myself just=as I_have_done this so÷many years.
 \v 4 and= the_message_of =he/it_was of_\nd YHWH\nd* hosts to=me to=say.
-\v 5 Say to all_of the_people_of the=earth/land and=near/to the÷priests to=say if/because you_all_fasted and÷lamented in/on/at/with and÷in/on/at/with and=this seventy year mmm mmm wwww.
-\v 6 And=because/when you_all_eat and=because/when you_all_drink am=not \add are\add*_you_all the=ones_eating and÷yourselves the÷drink.
+\v 5 Say to all_of the_people_of the=earth/land and=near/to the÷priests to=say if/because you(pl)_fasted and÷lamented in/on/at/with and÷in/on/at/with and=this seventy year mmm mmm wwww.
+\v 6 And=because/when you(pl)_eat and=because/when you(pl)_drink am=not \add are\add*_you(pl) the=ones_eating and÷yourselves the÷drink.
 \v 7 Am=not \add are\add*_DOM the÷messages which he_proclaimed \nd YHWH\nd* in/on/at/with÷hand_of the÷prophets the÷former in/on/at/with÷was Yərūshālam/(Jerusalem) dwelling and÷prosperous and÷towns_of÷its surrounding_of÷it and÷the÷Negeⱱ and÷the÷shəfēlāh \add was\add*_inhabited.
 \v 8 and= the_message_of =he/it_was of_\nd YHWH\nd* to Zəkar\sup yāh\sup* to=say.
 \v 9 Thus \nd YHWH\nd* he_says hosts to= justice_of =say faithfulness judge and÷kindness and÷compassion do each with his/its=woman.
-\v 10 And÷widow and÷orphan \add the\add*_sojourner and÷poor do_not oppress and÷evil_of each his/its=woman do_not plan in/on/at/with÷hearts_of÷your_all's.
+\v 10 And÷widow and÷orphan \add the\add*_sojourner and÷poor do_not oppress and÷evil_of each his/its=woman do_not plan in/on/at/with÷hearts_of÷your(pl).
 \v 11 And÷refused to÷pay_attention and÷turned a_shoulder stubborn and÷ears_of÷their they_made_heavy from÷hear.
 \v 12 And÷hearts_of÷their they_made diamond not÷hear DOM the÷law and=DOM the÷messages which he_had_sent \nd YHWH\nd* hosts in/on/at/with÷spirit_of÷his in/on/at/with÷hand_of the÷prophets the÷former and= severe_anger =he/it_was great from÷with \nd YHWH\nd* hosts.
 \v 13 And=he/it_was as÷when he_called and=not they_listened so they_called and=not I_listened \nd YHWH\nd* he_says hosts.
@@ -134,21 +134,21 @@
 \v 6 thus \nd YHWH\nd* he_says hosts if/because it_will_be_difficult in/on=both_eyes_of the_remnant_of the÷people the=this in_the=days the=those also in/on/at/with÷sight_of÷me will_it_be_difficult the_utterance_of \nd YHWH\nd* hosts.
 \v 7 thus \nd YHWH\nd* he_says hosts see÷I \add am\add*_about_to_save DOM people_of÷my from÷land_of \add the\add*_east and÷from÷land_of the_setting_of the÷sun.
 \v 8 And÷bring DOM=them and÷live in_the=middle of_Yərūshālam/(Jerusalem) and=they_will_be to=me as÷people and÷I I_will_become to/for=them as÷god in/on/at/with÷faithfulness and÷in/on/at/with÷righteousness.
-\v 9 thus \nd YHWH\nd* he_says hosts let_them_be_strong hands_of÷your_all's the÷hearing in_the=days the=these DOM the÷messages the=these from÷mouth_of the÷prophets who in/on=day \add when\add*_it_was_founded the_house_of \nd YHWH\nd* hosts the÷temple for÷rebuilding.
+\v 9 thus \nd YHWH\nd* he_says hosts let_them_be_strong hands_of÷your(pl) the÷hearing in_the=days the=these DOM the÷messages the=these from÷mouth_of the÷prophets who in/on=day \add when\add*_it_was_founded the_house_of \nd YHWH\nd* hosts the÷temple for÷rebuilding.
 \v 10 If/because to=(the)_face_of/in_front_of/before the=days the=those the_wage[s]_of the=humankind not it_happened and÷wage_of the=cattle/livestock nor÷her and÷for_those÷went_out and÷to_those÷came_in there_\add was\add*_not peace from the÷enemy and÷set DOM every_of the=humankind each in/on/at/with÷neighbour_of÷his.
 \v 11 And=now not as_the÷days the÷former I with÷remnant_of the÷people the=this the_utterance_of \nd YHWH\nd* hosts.
 \v 12 If/because the_seed_of the÷peace the÷vine it_will_give fruit_of÷its and=the=earth it_will_give DOM produce_of÷its and÷the÷heavens they_will_give dew_of÷their and÷give_asan_inheritance DOM the_remnant_of the÷people the=this DOM all_of these_\add things\add*.
-\v 13 And=it_was just=as you_all_were a_curse in/on/at/with÷nations Oh_house_of Yəhūdāh/(Judah) and÷house_of Yisrā\sup ʼēl\sup*/(Israel) so I_will_save DOM÷you_all and=you_all_will_be a_blessing do_not be_afraid hands_of÷your_all's let_them_be_strong.
-\v 14 if/because thus \nd YHWH\nd* he_says hosts just=as I_planned\f + \fr 8:14 \ft OSHB note: We agree with both BHS 1997 and BHQ on an unexpected reading.\f* to÷bring_disaster to/for=you_all in/on/at/with÷provoked_tosevere_anger fathers_of÷your_all's DOM=me he_says \nd YHWH\nd* hosts and=not I_relented.
+\v 13 And=it_was just=as you(pl)_were a_curse in/on/at/with÷nations Oh_house_of Yəhūdāh/(Judah) and÷house_of Yisrā\sup ʼēl\sup*/(Israel) so I_will_save DOM÷you(pl) and=you(pl)_will_be a_blessing do_not be_afraid hands_of÷your(pl) let_them_be_strong.
+\v 14 if/because thus \nd YHWH\nd* he_says hosts just=as I_planned\f + \fr 8:14 \ft OSHB note: We agree with both BHS 1997 and BHQ on an unexpected reading.\f* to÷bring_disaster to/for=you(pl) in/on/at/with÷provoked_tosevere_anger fathers_of÷your(pl) DOM=me he_says \nd YHWH\nd* hosts and=not I_relented.
 \v 15 So I_have_returned I_have_planned in_the=days the=these to÷do_good DOM Yərūshālam/(Jerusalem) and=DOM the_house_of Yəhūdāh do_not be_afraid.
-\v 16 These the÷things which you_all_will_do speak truth each with his/its=neighbour faithfulness and÷judgement_of peace judge in/on/at/with÷gates_of÷your_all's.
-\v 17 And÷one DOM the_harm_of his/its=neighbour do_not plan in/on/at/with÷hearts_of÷your_all's and÷oath_of falsehood do_not love if/because DOM all_of these \add are\add*_\add things\add*_which I_hate the_utterance_of \nd YHWH\nd*.
+\v 16 These the÷things which you(pl)_will_do speak truth each with his/its=neighbour faithfulness and÷judgement_of peace judge in/on/at/with÷gates_of÷your(pl).
+\v 17 And÷one DOM the_harm_of his/its=neighbour do_not plan in/on/at/with÷hearts_of÷your(pl) and÷oath_of falsehood do_not love if/because DOM all_of these \add are\add*_\add things\add*_which I_hate the_utterance_of \nd YHWH\nd*.
 \v 18 and= the_message_of =he/it_was of_\nd YHWH\nd* hosts to=me to=say.
 \v 19 Thus \nd YHWH\nd* he_says hosts the_fast_of the=fourth and÷fast_of the÷fifth and÷fast_of the=seventh and÷fast_of the÷tenth it_will_become for÷house_of Yəhūdāh/(Judah) of÷joy and÷for÷gladness and÷for÷festivals good and÷the÷truth and÷the÷peace love.
 \v 20 thus \nd YHWH\nd* he_says hosts yet (cmp) they_will_come peoples and÷inhabitants_of cities many.
 \v 21 And÷go \add the\add*_inhabitants_of one_\add city\add* to one_\add city\add* to=say let_us_go indeed_(go) to÷entreat DOM the_face_of \nd YHWH\nd* and÷to÷seek DOM \nd YHWH\nd* hosts I_will_go also I.
 \v 22 And= peoples =come many and÷nations mighty to÷seek DOM \nd YHWH\nd* hosts in/on/at/with÷Yərūshālam/(Jerusalem) and÷to÷entreat DOM the_face_of \nd YHWH\nd*.
-\v 23 thus\f + \fr 8:23 \ft OSHB note: We read one or more accents in L differently from BHQ.\f* \nd YHWH\nd* he_says hosts in_the=days the÷those (cmp) they_will_take_hold ten people from=all the_languages_of the=nations and÷take_hold in/on/at/with÷garment_of a_person a_Jew to=say we_want_to_go with÷you_all if/because we_have_heard god with÷you_all.
+\v 23 thus\f + \fr 8:23 \ft OSHB note: We read one or more accents in L differently from BHQ.\f* \nd YHWH\nd* he_says hosts in_the=days the÷those (cmp) they_will_take_hold ten people from=all the_languages_of the=nations and÷take_hold in/on/at/with÷garment_of a_person a_Jew to=say we_want_to_go with÷you(pl) if/because we_have_heard god with÷you(pl).
 \c 9
 \nb
 \v 1 the_oracle_of the_message_of \nd YHWH\nd* in=land of_Ḩadrāk and÷Dammeseq resting_place_of÷its if/because to/for=\nd YHWH\nd* \add the\add*_eye_of humankind and=all/each/any/every the_tribes_of Yisrā\sup ʼēl\sup*/(Israel).
@@ -192,10 +192,10 @@
 \v 6 If/because not I_will_have_compassion again on the_inhabitants_of the=earth/land the_utterance_of \nd YHWH\nd* and=see/lo/see I \add am\add*_about_to_deliver DOM the=humankind each in/on/at/with÷hand_of his/its=neighbour and÷in/on/at/with÷hand_of king_of÷his and÷devastate DOM the=earth/land and=not I_will_deliver_\add it\add* from÷hand_of÷their.
 \v 7 And÷shepherded DOM the_flock_of the÷slaughter for=so/thus/hence the_afflicted_\add ones\add*_of the÷flock and÷took to=me two_of staffs to÷one I_called Favor and÷to÷other I_called Union and÷shepherded DOM the÷flock.
 \v 8 And÷got_rid_of DOM the_three_of the÷shepherds in/on/at/with÷month one soul_of÷my and÷impatient (is)_in=them and=also soul_of÷their it_loathed in/on/at/with÷me.
-\v 9 And÷said not I_will_shepherd DOM÷you_all the÷dying let_it(f)_die and÷the÷destroyed let_it(f)_be_destroyed and÷the÷left let_them(f)_devour each(f) DOM the_flesh_of another's_of÷her.
+\v 9 And÷said not I_will_shepherd DOM÷you(pl) the÷dying let_it(f)_die and÷the÷destroyed let_it(f)_be_destroyed and÷the÷left let_them(f)_devour each(f) DOM the_flesh_of another's_of÷her.
 \v 10 And÷took DOM staff_of÷my DOM Favor and÷broke DOM=him/it to÷annulling DOM covenant_of÷my which I_had_made with all_of the÷peoples.
 \v 11 And÷annulled in_the=day (the)=that and=they_knew thus the_afflicted_\add ones\add*_of the÷flock the÷watching DOM=me if/because_that \add was\add*_the_message_of \nd YHWH\nd* it.
-\v 12 And÷said to÷them if \add it\add*_\add is\add*_good in/on/at/with÷sight_of÷you_all give wages_of÷my and=if not refrain and÷weighed_out DOM wages_of÷my thirty silver.
+\v 12 And÷said to÷them if \add it\add*_\add is\add*_good in/on/at/with÷sight_of÷you(pl) give wages_of÷my and=if not refrain and÷weighed_out DOM wages_of÷my thirty silver.
 \v 13 And= \nd YHWH\nd* =he/it_said to=me throw÷it to the÷potter the_magnificence_of the÷price which I_was_valued from÷with÷them and÷took thirty the÷silver and÷threw DOM=him/it the_house_of \nd YHWH\nd* to the÷potter.
 \v 14 And÷broke DOM staff_of÷my the=second DOM the÷union to÷annulling DOM the÷brotherhood between Yəhūdāh/(Judah) and=between Yisrā\sup ʼēl\sup*/(Israel).
 \v 15 and= \nd YHWH\nd* =he/it_said to÷me again take to/for=yourself(m) \add the\add*_equipment_of a_shepherd foolish.
@@ -234,7 +234,7 @@
 \v 2 And÷gather DOM all_of the=nations to Yərūshālam/(Jerusalem) to_the÷battle and÷captured the=city and÷looted the÷houses and÷the÷women they_will_be_lain_with\f + \fr 14:2 \ft OSHB variant note: תשגלנה: (x-qere) 'תִּשָּׁכַ֑בְנָה': lemma=7901 n=1 morph=HVNi3fp id=38Uz3 תִּשָּׁכַ֑בְנָה\f* and= (the)_half_of =go the=city in/on/at/with÷exile and÷rest_of the÷people not it_will_be_cut_off from the=city.
 \v 3 And= \nd YHWH\nd* =go_forth and÷fight in/on/at/with÷nations the=those as÷when_of fights÷he\f + \fr 14:3 \ft OSHB note: Marks a place where we agree with BHQ against BHS in reading L.\f*\f + \fr 14:3 \ft OSHB note: Marks an anomalous form.\f*\f + \fr 14:3 \ft OSHB note: We read one or more vowels in L differently from BHS.\f* in/on=day battle.
 \v 4 feet_of÷his And÷stand in_the=day (the)=that on the_mountain_of the÷olives\f + \fr 14:4 \ft OSHB note: We agree with both BHS 1997 and BHQ on an unexpected reading.\f* which \add is\add*_on the_face_of Yərūshālam/(Jerusalem) from=east and= the_mountain_of =split the÷olives in÷two_of÷its east÷from and÷west÷to a_valley_of great very and÷move (the)_half_of the÷mountain north÷toward and÷half_of÷him south÷toward.
-\v 5 And÷flee the_valley_of mountain_of÷my if/because \add the\add*_valley_of it_will_reach mountains to ʼĀʦal and÷flee just=as you_all_fled from=face/in_front_of the÷earthquake in/on/at/with÷days_of Uzziah the_king_of Yəhūdāh/(Judah) and÷come \nd YHWH\nd* god_of÷my all_of holy_\add ones\add* with÷you.
+\v 5 And÷flee the_valley_of mountain_of÷my if/because \add the\add*_valley_of it_will_reach mountains to ʼĀʦal and÷flee just=as you(pl)_fled from=face/in_front_of the÷earthquake in/on/at/with÷days_of Uzziah the_king_of Yəhūdāh/(Judah) and÷come \nd YHWH\nd* god_of÷my all_of holy_\add ones\add* with÷you.
 \v 6 And=it_was in_the=day (the)=that not it_will_be light splendid_\add ones\add* frost\f + \fr 14:6 \ft OSHB variant note: יקפאו/ן: (x-qere) 'וְ/קִפָּאֽוֹן': lemma=c/7087 b n=0 morph=HC/Ncmsa id=38eb2 וְ/קִפָּאֽוֹן\f*.
 \v 7 And=it_was a_day one it it_will_be_known to/for=\nd YHWH\nd* not day and=not night and=it_was at÷time_of evening it_will_be light.
 \v 8 And=it_was in_the=day (the)=that they_will_go_out waters living from÷Yərūshālam/(Jerusalem) half_of÷them to the=sea the÷eastern and÷half_of÷them to the=sea the÷western in/on/at/with÷summer and÷in/on/at/with÷winter it_will_be.
