@@ -46,7 +46,7 @@ from BibleOrgSys.Internals.InternalBibleInternals import InternalBibleEntryList
 import BibleOrgSys.Formats.USFMBible as USFMBible
 
 
-LAST_MODIFIED_DATE = '2025-03-31' # by RJH
+LAST_MODIFIED_DATE = '2025-11-04' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_USFM_to_VREF"
 PROGRAM_NAME = "Convert OET LV & RV USFM files to VREF"
 PROGRAM_VERSION = '0.03'
@@ -162,6 +162,10 @@ def main():
 
 
 if __name__ == '__main__':
+    from multiprocessing import set_start_method, freeze_support
+    set_start_method('fork') # The default was changed on POSIX systems from 'fork' to 'forkserver' in Python3.14
+    freeze_support() # Multiprocessing support for frozen Windows executables
+
     # Configure basic Bible Organisational System (BOS) set-up
     parser = BibleOrgSysGlobals.setup( PROGRAM_NAME, PROGRAM_VERSION )
     BibleOrgSysGlobals.addStandardOptionsAndProcess( parser, exportAvailable=False )

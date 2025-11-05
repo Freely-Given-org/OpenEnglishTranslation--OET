@@ -75,7 +75,7 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-10-10' # by RJH
+LAST_MODIFIED_DATE = '2025-11-04' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.79'
@@ -1780,6 +1780,10 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
 
 
 if __name__ == '__main__':
+    from multiprocessing import set_start_method, freeze_support
+    set_start_method('fork') # The default was changed on POSIX systems from 'fork' to 'forkserver' in Python3.14
+    freeze_support() # Multiprocessing support for frozen Windows executables
+
     # Configure basic Bible Organisational System (BOS) set-up
     parser = BibleOrgSysGlobals.setup( PROGRAM_NAME, PROGRAM_VERSION )
     BibleOrgSysGlobals.addStandardOptionsAndProcess( parser, exportAvailable=False )
