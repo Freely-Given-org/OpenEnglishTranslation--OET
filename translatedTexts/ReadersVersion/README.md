@@ -80,3 +80,5 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - "His mother's name was..." for new kings in 2 Chron
 - a record of everthing done ... was written in the scroll/book of ... after the death of a king
 - "what was right in Yahweh's eyes" "what was right in the eyes of Yahweh"
+- all our months, e.g., March, April, ... should have \add ≈ around them
+- passover/Passover, ....
