@@ -82,3 +82,4 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - "what was right in Yahweh's eyes" "what was right in the eyes of Yahweh"
 - all our months, e.g., March, April, ... should have \add ≈ around them
 - passover/Passover, ....
+- 'house of Yahweh' vs 'Yahweh's temple' vs just 'temple'
