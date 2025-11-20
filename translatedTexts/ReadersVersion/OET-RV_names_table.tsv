@@ -76,7 +76,7 @@ Admah	Adamah
 Admin	Admin
 Adna	Adna
 Adon	Addon
-Adonijah	Adoniyyah
+Adonijah	Adoniyah
 Adonikam	Adonikam
 Adoniram	Adoniram
 Adoram	Adoram
@@ -106,7 +106,7 @@ Ahiam	Ahiam
 Ahian	Ahyan
 Ahiezer	Ahieezer
 Ahihud	Ahihud
-Ahijah	Ahiyyah
+Ahijah	Ahiyah
 Ahikam	Ahikam
 Ahilud	Ahilud
 Ahimaaz	Ahimaats
@@ -205,11 +205,11 @@ Aner	Aner
 Aniam	Anieam
 Anna	Hanna
 Annas	Annas
-Anthothijah	Antotiyyah
+Anthothijah	Antotiyah
 Antioch	Antiokeia
 Antiochene	Antiokeia
 Antipatris	Antipatris
-Antothijah	Antotiyyah
+Antothijah	Antotiyah
 Anub	Anuv
 Apelles	Apellais
 Aphek	Afek
@@ -419,6 +419,7 @@ Bedan	Bedan
 Bedeiah	Bedeyah
 Beeliada	Beeelyada
 Beelzeboul	Beelzeboul
+Beer	Be’er
 Beer	Beer
 Beer-	Beer
 Beera	Beera
@@ -434,6 +435,8 @@ Ben	Ben
 Benaiah	Benayah
 Beninu	Beninu
 Benjamin	Benyamin
+Benjamite	Benyamite
+Benjamites	Benyamites
 Beno	Beno
 Beor	Beeor
 Beracah	Berakah
@@ -512,7 +515,7 @@ Bozez	Botsets
 Bozkath	Batsekat
 Bozrah	Batserah
 Bukki	Bukkiy
-Bukkiah	Bukkiyyah
+Bukkiah	Bukkiyah
 Bul	Bul
 Bunah	Bunah
 Bunni	Bunniy
@@ -679,8 +682,6 @@ Ecbatana	Ahmeta
 Ecclesiastes	Kohelet
 Eden	Eden
 Eder	Eder
-Eder	Eder
-Edom	Edom
 Edom	Edom
 Edrai	Edreei
 Edrei	Edreei
@@ -969,7 +970,7 @@ Guni	Guni
 Gur	Gur
 Ha	Ha
 Haahashtari	Haahashtari
-Habaiah	Havayyah
+Habaiah	Havayah
 Habakkuk	Havakkuk
 Habor	Havor
 Hacaliah	Hakalyah
@@ -994,7 +995,7 @@ Hagerite	Hagri
 Hagerites	Hagri
 Haggai	Haggay
 Haggeri	Hagri
-Haggiah	Haggiyyah
+Haggiah	Haggiyah
 Haggith	Haggit
 Hagri	Hagri
 Hagrite	Hagri
@@ -1142,7 +1143,7 @@ Hiddai	Hidday
 Hiel	Hiel
 Hierapolis	Hierapolis
 Higgaion	Higgayon
-Hilkiah	Hilkiyyah
+Hilkiah	Hilkiyah
 Hillel	Hillel
 Hinnom	Hinnom
 Hirah	Hirah
@@ -1153,14 +1154,14 @@ Hivite	Hiui
 Hivites	Hiui
 Hivvi	Hiui
 Hizki	Hizki
-Hizkiah	Hizkiyyah
+Hizkiah	Hizkiyah
 Hobab	Hovav
-Hobaiah	Havayyah
+Hobaiah	Havayah
 Hod	Hod
 Hodaviah	Hodavyah
 Hodesh	Hodesh
 Hodevah	Hodevah
-Hodiah	Hodiyyah
+Hodiah	Hodiyah
 Hoham	Hoham
 Holon	Holon
 Homam	Homam
@@ -1198,7 +1199,7 @@ Hymeneus	Humenaios
 Ibhar	Yavehar
 Ibleam	Yivleam
 Ibneiah	Yivneyah
-Ibnijah	Yivniyyah
+Ibnijah	Yivniyah
 Ibri	Ivri
 Ibsam	Yivsam
 Ibzan	Ivtsan
@@ -1257,11 +1258,12 @@ Ishvah	Yishvah
 Ishvi	Yishvi
 Israel	Israail
 Israel	Yisrael	Y
-Israelites	Israail
-Israelites	Yisrael
+Israel	Yisra’el	Y
+Israelite	Israeli
+Israelites	Israelis
 Issachar	Isakar
 Issachar	Yissaskar
-Isshiah	Yishshiyyah
+Isshiah	Yishshiyah
 Italian	Italia
 Italy	Italia
 Ithai	Ittay
@@ -1282,7 +1284,7 @@ Izliah	Yizliah
 Izrahiah	Yizrahyah
 Izrahite	Yizrah
 Izri	Yitsri
-Izziah	Yizziyyah
+Izziah	Yizziyah
 Jaakan	Yaakan
 Jaakobah	Yaakovah
 Jaala	Yaala
@@ -1293,7 +1295,7 @@ Jaareshiah	Yaareshyah
 Jaasiel	Yaasiyel
 Jaasu	Yaasu
 Jaazaniah	Yaazanyah
-Jaaziah	Yaaziyyahu
+Jaaziah	Yaaziyahu
 Jaaziel	Yaaziel
 Jabbok	Yabok
 Jabesh	Yavesh
@@ -1381,10 +1383,9 @@ Jedithun	Yedutun
 Jeduthun	Yedutun
 Jehalelel	Yehallelel
 Jehallelel	Yehallelel
-Jehdeiah	Yehdiyyahu
+Jehdeiah	Yehdiyahu
 Jehezkel	Yehezkel
-Jehiah	Yehiyyah
-Jehiel	Yeeiel
+Jehiah	Yehiyah
 Jehiel	Yehiel
 Jehoadah	Yehoeaddah
 Jehoaddah	Yehoeaddah
@@ -1406,7 +1407,7 @@ Jehosheba	Yehosheva
 Jehozabad	Yehozavad
 Jehozadak	Yehotsadak
 Jehu	Yehu
-Jeiel	Yeeiel
+Jeiel	Yeiel
 Jekabzeel	Yekavtseel
 Jekameam	Yekameam
 Jekamiah	Yekamyah
@@ -1422,7 +1423,7 @@ Jeremai	Yeremay
 Jeremiah	Yeremias
 Jeremiah	Yirmeyah
 Jeremoth	Yerimot
-Jeriah	Yeriyyah
+Jeriah	Yeriyah
 Jeribai	Yerivay
 Jericho	Yeriko
 Jericho	Yeriho
@@ -1468,7 +1469,7 @@ Jews	Youdaions
 Jews	Yehudi
 Jezebel	Īzevel
 Jezer	Yetser
-Jeziah	Yizziyyah
+Jeziah	Yizziyah
 Jeziel	Yezavel
 Jezliah	Yizliah
 Jezrahiah	Yizrahyah
@@ -1537,7 +1538,7 @@ Joshaviah	Yoshavyah
 Joshbekashah	Yashebekashah
 Joshibiah	Yoshivyah
 Joshua	Yaisous
-Joshua	Yehoshuea
+Joshua	Yehoshua
 Josiah	Yosias
 Josiah	Yoshiyah
 Josibiah	Yoshivyah
@@ -1754,16 +1755,16 @@ Malachi	Malaki
 Malcam	Malkam
 Malchi	Malki
 Malchi-shua	Malkishuea
-Malchiah	Malkiyyah
+Malchiah	Malkiyah
 Malchiel	Malkiel
-Malchijah	Malkiyyah
+Malchijah	Malkiyah
 Malchiram	Malkiram
 Malchishua	Malkishuea
 Malchus	Malkos
 Maleleel	Maleleail
 Malki	Malki
-Malkiah	Malkiyyah
-Malkijah	Malkiyyah
+Malkiah	Malkiyah
+Malkijah	Malkiyah
 Mallothi	Malloti
 Malluch	Malluk
 Manaen	Manaain
@@ -1818,14 +1819,14 @@ Meholathite	Meholati
 Mekonah	Mekonah
 Melatiah	Melatyah
 Melchi	Melki
-Melchiah	Malkiyyah
+Melchiah	Malkiyah
 Melchisedek	Melkisedek
 Melchishua	Malkishuea
 Melchizedek	Malki-Tsedek
 Melea	Meleas
 Melech	Melek
 Melita	Melitai
-Melkiah	Malkiyyah
+Melkiah	Malkiyah
 Memphis	Mof
 Memphis	Nof
 Menahem	Menahem
@@ -1924,7 +1925,7 @@ Morasthite	Morashtiy
 Mordecai	Mareddekay
 Moreh	Moreh
 Moresheth	Morashtiy
-Moriah	Moriyyah
+Moriah	Moriyah
 Moses	Mosheh	Y
 Moses	Mosais	Y
 Moza	Motsa
@@ -2003,7 +2004,7 @@ Ner	Ner
 Nereus	Naireus
 Nergal	Nereggal
 Neri	Nairi
-Neriah	Neriyyah
+Neriah	Neriyah
 Netaim	Netaeim
 Nethanel	Netanel
 Nethaniah	Netanyah
@@ -2142,6 +2143,7 @@ Phallu	Pallu
 Phanuel	Fanouail
 Pharisee	Farisaios
 Pharisees	Farisaios
+Pharaoh	Far’oh
 Pharaoh	Farao
 Pharaoh	Pareoh
 Pharpar	Farfar
@@ -2655,7 +2657,7 @@ Titus	Titos
 Tizite	Tiytsi
 Toah	Toah
 Tob	Ţov
-Tobiah	Ţoviyyah
+Tobiah	Ţoviyah
 Tochen	Token
 Togarmah	Togarmah
 Tohu	Tohu
@@ -2687,7 +2689,7 @@ Ur	Ur
 Urbanus	Ourbanos
 Uri	Uri
 Uriah	Ourias
-Uriah	Uriyyah
+Uriah	Uriyah
 Uriel	Uriel
 Uthai	Utay
 Uz	Uts
@@ -2759,7 +2761,7 @@ Zechariah	Zekaryah
 Zecher	Zeker
 Zedad	Tsedad
 Zedek	Tsedekh
-Zedekiah	Tsidkiyyah
+Zedekiah	Tsidkiyah
 Zeeb	Zeev
 Zelek	Tselek
 Zelophehad	Tselafehad

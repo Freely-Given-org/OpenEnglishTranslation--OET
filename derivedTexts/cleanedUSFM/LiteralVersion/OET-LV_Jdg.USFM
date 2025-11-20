@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2025-11-05 12:10 by extract_glossed_OSHB_OT_to_ESFM v0.62
+\rem ESFM file created 2025-11-20 11:29 by extract_glossed_OSHB_OT_to_ESFM v0.62
 \rem USFM file edited by ScriptedBibleEditor v0.34
 \h Judges
 \toc1 Judges
@@ -63,7 +63,7 @@
 \v 9 And÷buried DOM÷him in/on/at/with÷territory_of inheritance_of÷his in/on/at/with÷Timnath- heres in/on/at/with÷hill_country_of ʼEfrayim to÷north_of mount_of Gaˊash.
 \v 10 And=also all_of the÷generation (the)=that they_were_gathered to ancestors_of÷their and= a_generation =he/it_rose_up another after÷them which not they_knew DOM \nd YHWH\nd* and=also DOM the÷work which he_had_done for÷Yisrā\sup ʼēl\sup*/(Israel).
 \v 11 and= the_people_of =they_made of_Yisrā\sup ʼēl\sup*/(Israel) DOM the÷evil in/on=both_eyes_of \nd YHWH\nd* and÷served DOM the÷Baˊal.
-\v 12 And÷abandoned DOM \nd YHWH\nd* the_god_of fathers_of÷their the÷brought_out DOM÷them of÷land_of of_Miʦrayim/(Egypt) and÷went after gods other from÷gods_of the÷peoples which around_of÷them and÷bowed_down to/for=them and÷provoked_toanger DOM \nd YHWH\nd*.\f + \fr 2:12 \ft OSHB note: We read one or more accents in L differently from BHQ.\f*\f + \fr 2:12 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f*
+\v 12 And÷abandoned DOM \nd YHWH\nd* the_god_of fathers_of÷their the÷brought_out DOM÷them of÷land_of of_Miʦrayim/(Egypt) and÷went after gods other from÷gods_of the÷peoples which around_of÷them and÷bowed_down to/for=them and÷provoked_to_anger DOM \nd YHWH\nd*.\f + \fr 2:12 \ft OSHB note: We read one or more accents in L differently from BHQ.\f*\f + \fr 2:12 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f*
 \v 13 and÷abandoned DOM \nd YHWH\nd* and÷served to_the÷Baˊal and÷to_the÷ˊAshtārōt.
 \v 14 And=it_glowed/burned the_anger of_\nd YHWH\nd* in/on/at/with÷Yisrā\sup ʼēl\sup*/(Israel) and÷gave÷them in/on/at/with÷hand_of plunderers and÷plundered DOM÷them and÷sold÷them in/on/at/with÷hand_of enemies_of÷their from÷all_sides and=not they_were_able still to=stand to=(the)_face_of/in_front_of/before enemies_of÷their.
 \v 15 In/on/at/with÷every where they_went_out the_hand_of \nd YHWH\nd* it_was in/on/at/with÷them to÷harm as/like÷just_as he_had_spoken \nd YHWH\nd* and=as=which he_had_sworn \nd YHWH\nd* to/for=them and÷distressed to/for=them exceedingly.
@@ -150,7 +150,7 @@
 \v 12 Awake awake Oh_Dəbōrāh awake awake speak a_song arise Oh_Bārāq and÷take_captive captives_of÷your Oh_son_of ʼAⱱīnnoˊam.
 \v 13 Then \add the\add*_survivor[s] he_went_down to÷nobles \add the\add*_people \nd YHWH\nd* he_went_down to=me in/on/at/with÷mighty.
 \v 14 From ʼEfrayim root_of÷their in/on/at/with÷ˊAmālēq following÷you Binyāmīn in/on/at/with÷people_of÷your from Mākīr they_came_down commanders and÷from÷Zəⱱulun \add those_who\add*_march in/on/at/with÷staff_of a_muster-officer.
-\v 15 And÷princes_of÷me in/on/at/with÷Yissāskār/(Issachar) \add were\add*_with Dəbōrāh and÷Yissāskār so Bārāq in/on/at/with÷valley he_was_sent in/on/at/with÷heels_of÷his in/on/at/with÷clans_of Rəʼūⱱēn \add were\add*_great resolves_of heart.
+\v 15 And÷princes_of÷me in/on/at/with÷Issachar \add were\add*_with Dəbōrāh and÷Issachar so Bārāq in/on/at/with÷valley he_was_sent in/on/at/with÷heels_of÷his in/on/at/with÷clans_of Rəʼūⱱēn \add were\add*_great resolves_of heart.
 \v 16 To/for=what did_you_sit between the÷sheepfolds to÷hear \add the\add*_whistling_of \add the\add*_flocks among÷clans_of Rəʼūⱱēn \add were\add*_great searchings_of heart.
 \v 17 Gilˊād in/on/at/with÷beyond_of the÷Yardēn/(Jordan) he_dwelt and÷Dān to/for=what did_he_sojourn ships ʼĀshēr he_remained at÷coast_of \add the\add*_seas and÷by landings_of÷his he_dwelt.
 \v 18 Zəⱱulun \add was\add*_a_people \add which\add*_it_despised lives_of÷their to÷death and=Naftali \add was\add*_on \add the\add*_heights_of \add the\add*_field.
@@ -334,7 +334,7 @@
 \v 57 And=DOM all_of the_evil_of the_men_of Shəkem god he_repaid in/on/at/with÷heads_of÷their and÷came on÷them the_curse_of Yōtām/(Jotham) the_son_of Jerub-Baˊal.
 \c 10
 \nb
-\v 1 and=he/it_rose_up after ʼAⱱīmelek to÷deliver DOM Yisrā\sup ʼēl\sup*/(Israel) Tōlāˊ the_son_of Puah the_son_of Dōdō (the)_man_of Yissāskār/(Issachar) and=he \add was\add*_dwelling in/on/at/with÷Shāmīr in/on/at/with÷hill_country_of ʼEfrayim.
+\v 1 and=he/it_rose_up after ʼAⱱīmelek to÷deliver DOM Yisrā\sup ʼēl\sup*/(Israel) Tōlāˊ the_son_of Puah the_son_of Dōdō (the)_man_of Issachar and=he \add was\add*_dwelling in/on/at/with÷Shāmīr in/on/at/with÷hill_country_of ʼEfrayim.
 \v 2 And÷judged DOM Yisrā\sup ʼēl\sup*/(Israel) twenty and÷three year[s] and=he/it_died and÷buried in/on/at/with÷Shāmīr.
 \v 3 and=he/it_rose_up after÷him Yāʼīr/(Jair) the÷Gilˊādite and÷judged DOM Yisrā\sup ʼēl\sup*/(Israel) twenty and÷two year[s].
 \v 4 And=he/it_was to=him/it thirty sons \add who\add*_rode on thirty male_donkeys and=thirty cities to/for=them to/for=them people_call the_villages_of Yāʼīr until the=day the=this which in=land the÷Gilˊād.
@@ -609,7 +609,7 @@
 \v 10 And÷take ten men of_the÷hundred to=all/each/any/every the_tribes_of Yisrā\sup ʼēl\sup*/(Israel) and÷a_hundred of_the÷a_thousand and÷a_thousand of_the÷ten_thousand to=take/accept/receive provision[s] for_the÷troops for=doing when÷come÷they to÷Giⱱˊāh of_Binyāmīn for÷all_of the÷outrage which it_did in/on/at/with÷Yisrā\sup ʼēl\sup*/(Israel).
 \v 11 And÷gathered every_of (the)_man_of Yisrā\sup ʼēl\sup*/(Israel) to the=city as÷man one united.
 \v 12 and= the_tribes_of =sent of_Yisrā\sup ʼēl\sup*/(Israel) men in=all the_tribes_of Binyāmīn to=say what the÷wickedness the÷this which it_has_happened in/on/at/with÷you(pl).
-\v 13 And=now give_up DOM the÷men sons_of worthlessness who in/on/at/with÷Giⱱˊāh and÷put_todeath÷them and÷purge evil from÷Yisrā\sup ʼēl\sup*/(Israel) and=not they_were_willing\f + \fr 20:13 \ft OSHB variant note: (x-qere) 'בְּנֵ֣י': lemma=1121 a morph=HNcmpc id=07Kvd בְּנֵ֣י\f*\f + \fr 20:13 \ft OSHB note: Adaptations to a Qere which L and BHS, by their design, do not indicate.\f* of_Binyāmīn to÷listen in/on/at/with÷voice_of fellow_of÷their the_people_of Yisrā\sup ʼēl\sup*/(Israel).
+\v 13 And=now give_up DOM the÷men sons_of worthlessness who in/on/at/with÷Giⱱˊāh and÷put_to_death÷them and÷purge evil from÷Yisrā\sup ʼēl\sup*/(Israel) and=not they_were_willing\f + \fr 20:13 \ft OSHB variant note: (x-qere) 'בְּנֵ֣י': lemma=1121 a morph=HNcmpc id=07Kvd בְּנֵ֣י\f*\f + \fr 20:13 \ft OSHB note: Adaptations to a Qere which L and BHS, by their design, do not indicate.\f* of_Binyāmīn to÷listen in/on/at/with÷voice_of fellow_of÷their the_people_of Yisrā\sup ʼēl\sup*/(Israel).
 \v 14 And= the_descendants_of =came_together of_Binyāmīn from the÷cities the÷Giⱱˊāh÷to to÷go_out to_the÷battle with the_people_of Yisrā\sup ʼēl\sup*/(Israel).
 \v 15 And÷mustered the_descendants_of Binyāmīn in_the=day (the)=that from÷the÷cities twenty and÷six thousand man \add who\add*_drew a_sword to/for÷aside from÷inhabitants_of the÷Giⱱˊāh \add who\add*_they_were_mustered seven hundred(s) man chosen.
 \v 16 From=all the÷troops the=this seven hundred(s) man chosen impeded_of the_hand_of right_of÷him all_of this \add was\add*_slinging in/on/at/with÷stone to the÷hair and=not he_missed.

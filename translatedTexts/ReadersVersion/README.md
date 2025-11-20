@@ -68,6 +68,7 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - Work on consistent two levels of major and minorsection headings (s1 and s2)
 - Define and implement footnote classes
 - Add word numbers for all remaining OET-RV words
+- make sure we haven't used 'tithe'
 
 ## Terms to make consistent
 
@@ -80,6 +81,9 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - "His mother's name was..." for new kings in 2 Chron
 - a record of everthing done ... was written in the scroll/book of ... after the death of a king
 - "what was right in Yahweh's eyes" "what was right in the eyes of Yahweh"
+- all our measurements, e.g., ten kilograms, ... should have \add ≈ around them
 - all our months, e.g., March, April, ... should have \add ≈ around them
 - passover/Passover, ....
 - 'house of Yahweh' vs 'Yahweh's temple' vs just 'temple'
+- treasuries vs storerooms and storehouses
+- gatekeepers -> 'the men guarding the gates'

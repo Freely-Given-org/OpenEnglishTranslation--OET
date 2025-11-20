@@ -69,7 +69,7 @@ import sys
 sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitted to PyPI
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
-LAST_MODIFIED_DATE = '2025-06-19' # by RJH
+LAST_MODIFIED_DATE = '2025-11-12' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET NT wordtable"
 PROGRAM_VERSION = '0.35'
@@ -83,10 +83,10 @@ SCRIPTED_UPDATES_TABLES_INPUT_FOLDERPATH = Path( 'ScriptedVLTUpdates/' )
 JSON_VERSES_DB_FILEPATH = Path( '../../Bible_speaker_identification/outsideSources/TheographicBibleData/derivedFiles/normalised_Verses.json' )
 MACULA_GREEK_TSV_FILEPATH = Path( '../intermediateTexts/Clear.Bible_derived_Macula_data/Clear.Bible_MaculaGreek_LowFatTrees.NT.words.abbrev.tsv' )
 
-WORD_TABLE_INPUT_FILEPATH = Path( '../intermediateTexts/modified_source_VLT_ESFM/OET-LV_NT_word_table.10columns.tsv' )
-WORD_TABLE_OUTPUT_FILENAME = 'OET-LV_NT_word_table.tsv'
-WORD_TABLE_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_VLT_ESFM/' )
-WORD_TABLE_OUTPUT_FILEPATH = WORD_TABLE_OUTPUT_FOLDERPATH.joinpath( WORD_TABLE_OUTPUT_FILENAME )
+NT_WORD_TABLE_INPUT_FILEPATH = Path( '../intermediateTexts/modified_source_VLT_ESFM/OET-LV_NT_word_table.10columns.tsv' )
+NT_WORD_TABLE_OUTPUT_FILENAME = 'OET-LV_NT_word_table.tsv'
+NT_WORD_TABLE_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_VLT_ESFM/' )
+NT_WORD_TABLE_OUTPUT_FILEPATH = NT_WORD_TABLE_OUTPUT_FOLDERPATH.joinpath( NT_WORD_TABLE_OUTPUT_FILENAME )
 EXPECTED_WORD_TABLE_DATA_ROW_COUNT = 168_247
 RV_ESFM_OUTPUT_FOLDERPATH = Path( '../translatedTexts/ReadersVersion/' ) # We also copy the wordfile to this folder
 
@@ -110,8 +110,8 @@ def main() -> None:
     global state
     state = State()
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Reading existing table entries from {WORD_TABLE_INPUT_FILEPATH}…" )
-    with open( WORD_TABLE_INPUT_FILEPATH, 'rt', encoding='utf-8' ) as old_table_file:
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Reading existing table entries from {NT_WORD_TABLE_INPUT_FILEPATH}…" )
+    with open( NT_WORD_TABLE_INPUT_FILEPATH, 'rt', encoding='utf-8' ) as old_table_file:
         state.oldTable = old_table_file.read().rstrip( '\n' ).split( '\n' )
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.oldTable):,} old table entries ({state.oldTable[0].count(TAB)+1} columns)." )
 
@@ -852,15 +852,15 @@ def write_new_table() -> bool:
     """
     assert len(state.newTable) == EXPECTED_WORD_TABLE_DATA_ROW_COUNT+1, f"{EXPECTED_WORD_TABLE_DATA_ROW_COUNT=} {len(state.newTable)}"
     
-    with open( WORD_TABLE_OUTPUT_FILEPATH, 'wt', encoding='utf-8' ) as new_table_output_file:
+    with open( NT_WORD_TABLE_OUTPUT_FILEPATH, 'wt', encoding='utf-8' ) as new_table_output_file:
         for line in state.newTable:
             assert line.count( '\t' ) == 11, f"{line.count(TAB)} {line=}"
             new_table_output_file.write( f'{line}\n' )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Wrote {len(state.newTable):,} lines to {WORD_TABLE_OUTPUT_FILEPATH} ({state.newTable[0].count(TAB)+1} columns).")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Wrote {len(state.newTable):,} lines to {NT_WORD_TABLE_OUTPUT_FILEPATH} ({state.newTable[0].count(TAB)+1} columns).")
 
-    # Also use the same word file for the OET-RV
-    shutil.copy2( WORD_TABLE_OUTPUT_FILEPATH, RV_ESFM_OUTPUT_FOLDERPATH.joinpath( WORD_TABLE_OUTPUT_FILENAME ) )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Also copied {WORD_TABLE_OUTPUT_FILENAME} to {RV_ESFM_OUTPUT_FOLDERPATH}.")
+    # Also use the same word file for the OET-RV -- now done in the makefile
+    # shutil.copy2( NT_WORD_TABLE_OUTPUT_FILEPATH, RV_ESFM_OUTPUT_FOLDERPATH.joinpath( NT_WORD_TABLE_OUTPUT_FILENAME ) )
+    # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Also copied {NT_WORD_TABLE_OUTPUT_FILENAME} to {RV_ESFM_OUTPUT_FOLDERPATH}.")
 
     return True
 # end of add_tags_to_NT_word_table.write_new_table

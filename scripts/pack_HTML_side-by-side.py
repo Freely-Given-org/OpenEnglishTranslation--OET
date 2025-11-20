@@ -114,7 +114,8 @@ button#marksButton { float:right; }
 
 div.container { display:grid; column-gap:0.6em; grid-template-columns:0.85fr 1.15fr; }
 div.BibleText { }
-div.rightBox { float:right; width:35%; border:3px solid #73AD21; padding:0.2em; }
+div.rightS1Box { float:right; width:35%; border:3px solid #73AD21; padding:0.2em; }
+div.rightS2Box { float:right; width:35%; border:3px dashed blue; padding:0.2em; }
 div.unusedOLWord { color:darkGrey; } /* For the word files */
 
 span.upLink { font-size:1.5em; font-weight:bold; }
@@ -1767,7 +1768,7 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
 
     # Now break the RV up by section
     rvHTMLExpandedSections = []
-    for n, rvSectionHTML in enumerate( rvMidHHTML.split( '<div class="rightBox">' ) ):
+    for n, rvSectionHTML in enumerate( rvMidHHTML.split( '<div class="rightS1Box">' ) ):
         try:
             CclassIndex1 = rvSectionHTML.index( 'id="C' )
             CclassIndex2 = rvSectionHTML.index( '"', CclassIndex1+4 )
@@ -1783,8 +1784,8 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
             rvSectionHTML = rvSectionHTML.replace( '<div class="BibleText">', '' )
         # else: # actually only for the last one
         rvSectionHTML = rvSectionHTML.replace( '</div><!--BibleText-->', '' )
-        if '</div><!--rightBox-->' in rvSectionHTML:
-            rvSectionHTML = f'<div class="rightBox">{rvSectionHTML}'
+        if '</div><!--rightS1Box-->' in rvSectionHTML:
+            rvSectionHTML = f'<div class="rightS1Box">{rvSectionHTML}'
         assert rvSectionHTML.count('<div ')+rvSectionHTML.count('<div>') == rvSectionHTML.count('</div'), f"{BBB} {n} RV {rvStartCV} {rvEndCV} {rvSectionHTML.count('<div ')}+{rvSectionHTML.count('<div>')}={rvSectionHTML.count('<div ')+rvSectionHTML.count('<div>')} != {rvSectionHTML.count('</div')} '{rvSectionHTML}'"
         assert rvSectionHTML.count('<p ')+rvSectionHTML.count('<p>') == rvSectionHTML.count('</p'), f"{BBB} {n} RV {rvStartCV} {rvEndCV} {rvSectionHTML.count('<p ')}+{rvSectionHTML.count('<p>')}={rvSectionHTML.count('<p ')+rvSectionHTML.count('<p>')} != {rvSectionHTML.count('</p')} '{rvSectionHTML}'"
         rvHTMLExpandedSections.append( (rvStartCV, rvEndCV, rvSectionHTML) )

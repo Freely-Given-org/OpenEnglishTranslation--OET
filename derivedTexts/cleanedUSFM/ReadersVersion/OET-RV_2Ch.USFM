@@ -1,4 +1,4 @@
-\id 2CH - Open English Translation—Readers’ Version (OET-RV) v0.0.22
+\id 2CH - Open English Translation—Readers’ Version (OET-RV) v0.1.00
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 CH2
@@ -11,7 +11,7 @@
 \mt1 Sequential Account
 \mt2 (2 Chronicles)
 \is1 Introduction
-\ip The \bk Second Chronicles\bk* is the continuation of \bk First Chronicles\bk*. Written here the commanding of King Shelomoh (Solomon), the rebellion of tribes there to north to Rehoboam child of King Shelomoh (Solomon). The that rebellion impanguluwan of Yeroboam (Jeroboam). Written again here the concerning the kingdom of Yehudah (Judah) and the defeat of people of Yerushalem (Jerusalem) in 586 B.C.
+\ip The \bk Second Chronicles\bk* account is the continuation of \bk First Chronicles\bk* account (and they’re considered as just one account in the book form of the Hebrew Scripturesthe TaNaK). This document includes the account of Shelomoh (Solomon) becoming king, then the rebellion of the northen tribes against his son Rehoboam becoming king. That rebellion was led by Yeroboam (Jeroboam) and resulted in the split between the northern kingdom (called ‘Yisrael/Israel’ or sometimes ‘Efrayim/Ephraim’) and the southern king (called ‘Yehudah/Judah’ and consisting mostly of the tribes of Yehudah and Benyamin). This document then ends with the accounts of the kingdom of Yehudah (Judah) and the defeat of Yerushalem (Jerusalem) in 586 B.C.
 \iot Main components of this account
 \io1 Shelomoh’s reign \ior 1:1–9:31\ior*
 \io2 a. The first years \ior 1:1-17\ior*
@@ -60,7 +60,7 @@
 \v 1 Then Shelomoh \add decided to build a temple to honour\add* Yahweh, as well as a \add palace for himself\add*,
 \v 2 \add so he conscripted\add* seventy thousand men as porters, eighty thousand as stone-cutters in the hillside quarries, and 3,600 supervisors.
 \p
-\v 3 Shelomoh \add ontacted\add* King Hiram in Tsor \add (Tyre)\add*, “\add In the time of\add* my father David, you sent cedar \add timber\add* to him so he could build himself a palace to live in.
+\v 3 Shelomoh \add contacted\add* King Hiram in Tsor \add (Tyre)\add*, “\add In the time of\add* my father David, you sent cedar \add timber\add* to him so he could build himself a palace to live in.
 \v 4 Listen, I am building a \add temple to honour\add* my god Yahweh, to consecrate to him. There we’ll sacrifice spiced incense to him, plus the regular \add bread\add* display, and burnt offerings in the morning and in the evening, on rest days and on the new moons, and \add other\add* appointed times of Yahweh our god. \add Yisrael is required to do\add* this forever.
 \v 5 \add We want to build an impressive building, because our god is more powerful\add* than all \add the other\add* gods.
 \v 6 \add But\add* who could \add stay strong enough\add* to build a house for him, since the \add sky\add* and the heavens of the heavens can’t contain him? And who am I that I could build for him a house for him—\add maybe I’m good enough to burn incense to him\add*?\x + \xo 2:6: \xt 1Ki 8:27; 2Ch 6:18.\x*
@@ -92,7 +92,7 @@
 \v 6 The gold \add they use\add* came from Parvaim.\f + \fr 3:6 \ft Probably somewhere south of Yisrael in the Arabian peninsula, but possibly to the east.\f* \add The main building\add* was \add also\add* overlaid with valuable gemstones.
 \v 7 He overlaid the temple beams, thresholds, walls, and doors with gold, and he engraved winged creatures on the walls.
 \p
-\v 8 Then he made the\add most sacred room\add* \add inside\add* the temple. It was nine metres long \add (the full width of the temple)\add* and the same width. He overlaid it with thirty kilograms pure gold \add (beaten into thin sheets)\add*.\x + \xo 3:8: \xt Exo 26:33-34.\x*
+\v 8 Then he made the \add most sacred room\add* \add inside\add* the temple. It was nine metres long \add (the full width of the temple)\add* and the same width. He overlaid it with thirty kilograms pure gold \add (beaten into thin sheets)\add*.\x + \xo 3:8: \xt Exo 26:33-34.\x*
 \v 9 Each gold nail weighed half a kilogram, and he also overlaid the upper rooms with gold.
 \p
 \v 10 He cast \add molten metal\add* into two winged creatures in the \add most sacred room\add* and overlaid them with gold.\x + \xo 3:10-13: \xt Exo 25:18-20.\x*
@@ -263,7 +263,7 @@
 \v 19 \add However,\add* if you all turn away, and abandon my rules and instructions that I gave you all, and \add decide to\add* serve other gods and worship them,
 \v 20 then I’ll remove \add these people\add* from my land that I gave them. \add Also this temple\add* that I consecrated for \add myself\add*, I’ll \add throw it away where I can’t see it\add*, and I’ll make it \add an object of scorn and ridicule\add* among all the \add other\add* nations.
 \p
-\v 21 Then this \add temple which everyone admires\add* as they pass by, will be devasted and \add people\add* will \add ask\add*, ‘Why did Yahweh do \add such terrible things\add* to that \add temple\add* and to that land?’
+\v 21 Then this \add temple which everyone admires\add* as they pass by, will be devastated and \add people\add* will \add ask\add*, ‘Why did Yahweh do \add such terrible things\add* to that \add temple\add* and to that land?’
 \p
 \v 22 ‘It happened because they abandoned Yahweh, the god of their ancestors,’ others will reply. ‘He brought them out from \add slavery in\add* Egypt, \add but then\add* they obtained other gods and worshipped them and served them—that’s why he sent them all this misery.’ ”
 \c 8
@@ -308,7 +308,7 @@
 \v 7 Your men are blessed, and \add even\add* your servants are blessed to be able to continually stand in front of you and listen to your wisdom.
 \v 8 Let your god Yahweh be blessed—the one who delighted in you to place you on his throne as \add his\add* king. Your god loved Yisrael \add and wanted\add* to establish them forever, \add so\add* he’s placed you over them as king—to give justice and \add do what is right\add*.”
 \p
-\v 9 Then she gave the king four tonnes of gold, a very large quantity of spices, and valuable gemstones. \add Nobody before had ever seen\add* such a large amount of spicies as what the queen from Sheva gave to King Shelomoh.
+\v 9 Then she gave the king four tonnes of gold, a very large quantity of spices, and valuable gemstones. \add Nobody before had ever seen\add* such a large amount of spices as what the queen from Sheva gave to King Shelomoh.
 \p
 \v 10 (\add Also\add*, \add King\add* Huram’s servants \add working together with\add* Shelomoh’s servants brought gold from Ofir, as well as algum wood and valuable gemstones.
 \v 11 The king made the algum wood into staircases for Yahweh’s \add temple\add* and for the king’s \add palace\add*, and into lyres and harps for the singers. Nothing like that had been seen before in Yehudah.)
@@ -332,7 +332,7 @@
 \v 22 \add so\add* King Shelomoh \add became\add* greater than all the other kings in the world, \add both\add* in wealth and in wisdom.
 \p
 \v 23 \add Kings from all over the world wanted to come and listen\add* to the wisdom that God had \add given\add* Shelomoh.
-\v 24 Each of them would bring gifts: gold and silver items, clothes, myrrh and spieces, horses and mules. (\add This continued\add* \add year after year\add*.)
+\v 24 Each of them would bring gifts: gold and silver items, clothes, myrrh and spices, horses and mules. (\add This continued\add* \add year after year\add*.)
 \p
 \v 25 Solomon had four thousand stalls for horses and chariots, and twelve thousand horsemen, and he kept \add some\add* in the chariot cities and \add some\add* \add close by\add* in Yerushalem.\x + \xo 9:25: \xt 1Ki 4:26.\x*
 \v 26 He \add ended up\add* ruling over all the kings \add in the region\add* from the \add Euphrates\add* River \add in the northeast\add*, \add west\add* to the area of the Philistines, and \add south down\add* to the Egyptian border.\x + \xo 9:26: \xt Gen 15:18; 1Ki 4:21.\x*
@@ -523,7 +523,7 @@
 \v 14 They \add loudly promised\add* that together to Yahweh, then shouted and blew trumpets and horns,
 \v 15 and all Yehudah \add celebrated that promise because they were totally sincere and committed. They asked Yahweh to give them guidance which he did, and he enabled them to have peace throughout their country\add*.
 \p
-\v 16 King Asa also removed his mother Maakah from \add her position as\add* queen because she made a disguisting Asherah \add pole\add*. Asa cut down \add the pole\add* and crushed it, and burnt it at the Kidron brook,
+\v 16 King Asa also removed his mother Maakah from \add her position as\add* queen because she made a disgusting Asherah \add pole\add*. Asa cut down \add the pole\add* and crushed it, and burnt it at the Kidron brook,
 \v 17 \add although\add* they didn’t remove the hilltop shrines from Yisrael. \add Nevertheless,\add* Asa \add maintained his singular devotion\add* \add to Yahweh\add* \add all his lifetime\add*,
 \v 18 and he brought his father’s sacred things, and his own, into God’s \add temple\add* house of God—gold and silver items.
 \v 19 There was no more war \add in Yehudah\add* until the thirty-fifth year of Asa’s reign.
@@ -610,7 +610,7 @@
 \v 8 \add So\add* Yisrael’s king \add ordered\add* an official, “\add Get\add* Yimlah’s son, Mikayah \add here\add* \add as quick as possible\add*.”
 \p
 \v 9 \add Now\add* the kings of Yisrael and Yehudah were \add both\add* clothed in their \add royal\add* robes and sitting there on their thrones near Shomron’s \add (Samaria’s)\add* entrance gate. They were \add up\add* on a threshing floor, and all the prophets were prophesying \add in front of\add* them.
-\v 10 Kenaanah’s son Tsedkiyah made himself some iron horns and said, “Yahweh says that you’ll gore Aram with these until they’re destroyed.”
+\v 10 Kenaanah’s son Tsidkiyah made himself some iron horns and said, “Yahweh says that you’ll gore Aram with these until they’re destroyed.”
 \v 11 All the rest of Ahav’s prophets agreed, saying, “\add Yes,\add* go and attack Ramot-Gilead and you’ll succeed—Yahweh will give the king \add victory\add*.”
 \p
 \v 12 The messenger who went to fetch Mikayah \add warned\add* him, “Listen, the king \add is pleased with what the other prophets agreed on. Just say the same as them and give a favourable message\add*.”
@@ -632,7 +632,7 @@
 \p
 \v 22 “\add So\add* now, listen. Yahweh placed a deceiving spirit in the mouth of those prophets of yorus, and Yahweh \add has decreed that you’ll face\add* disaster.”
 \p
-\v 23 Then Kenaanah’s son Tsedkiyah \add went up to\add* Mikayah \add and slapped him hard\add* on the cheek, saying, “\add Yeah!\add* \add Since when did Yahweh’s spirit leave me and start speaking to\add* you?”
+\v 23 Then Kenaanah’s son Tsidkiyah \add went up to\add* Mikayah \add and slapped him hard\add* on the cheek, saying, “\add Yeah!\add* \add Since when did Yahweh’s spirit leave me and start speaking to\add* you?”
 \p
 \v 24 “Well, you’ll find out \add soon\add*,” answered Mikayah, “on the day when you go room by room \add in some house\add* to \add try to hide\add*.”
 \p
@@ -898,7 +898,7 @@
 \v 20 \add But\add* \add King\add* Amatsyah \add took no notice\add*, because God \add was planning for him to be defeated for worshipping\add* Edom’s gods.
 \v 21 \add So\add* Yisrael’s King Yoash \add advanced\add*, and \add the two armies faced each other\add* at Beyt-Shemesh in Yehudah,
 \v 22 and Yehudah was \add badly defeated\add* by Yisrael, and \add all their warriors fled back home\add*.
-\v 23 Yisrael’s King Yoash captured King Amatsyah (son of Yoash, son of Yehoahaz) at Beyt-Shemesh and took him to Yerushalem. Then he tore down Yerushalem’s wall from the Efraim Gate to the Corner Gate—a section about 180m long.
+\v 23 Yisrael’s King Yoash captured King Amatsyah (son of Yoash, son of Yehoahaz) at Beyt-Shemesh and took him to Yerushalem. Then he tore down Yerushalem’s wall from the Efrayim Gate to the Corner Gate—a section about 180m long.
 \v 24 He took all the gold and silver and \add other valuable items that Oved-Edom had been guarding in the temple\add* back to Shomron \add (Samaria)\add*, along with any valuables from the \add palace\add* and some hostages.
 \p
 \v 25 After the death of Yisrael’s King Yoash (son of Yehoahaz), Yehudah’s King Amatsyah lived for a further fifteen years.
@@ -965,7 +965,7 @@
 \v 2 \add Instead,\add* he followed the ways fo Yisrael’s kings, \add including\add* casting metal idols for the Baal.
 \v 3 He offered incense in the Ben-Hinnom valley and he burnt his children with fire\f + \fr 28:3 \ft Probably, but not definitely, referring to the practice of child sacrifice.\f* like the detestable customs of the nations that Yahweh had driven away \add as the Israelis had entered the region\add*,
 \v 4 plus he \add offered\add* sacrifices and burnt incense at the hilltop shrines, and on the hills, and under every large, green tree.
-\s1 The pegpabunuey of Syria and Yisrael
+\s1 War between Syria and Yisrael
 \s4 Both kingdoms
 \r (2 Kgs 16:5)
 \p
@@ -991,6 +991,7 @@
 \v 20 \add So\add* the Assyrian King Tiglat-Pileser came, \add except\add* he \add ended up\add* \add adding to his troubles rather than helping\add*.
 \v 21 Ahaz gave the Assyrian king \add valuables from the temple and the palace and from other leaders\add*, \add but that didn’t\add* help.
 \s1 Ahaz’s disobedience
+\s4 Southern kingdom
 \p
 \v 22 \add While King Ahaz was experiencing those troubles, he disobeyed Yahweh even more\add*
 \v 23 and sacrificed to the gods of Damascus (\add because Aram had defeated him\add*). He \add reasoned\add*, “Since the gods of the Aramean kings helped them, I’ll sacrifice to them, and then they’ll help me.” \add However,\add* that led to Ahaz’s fall, and \add to the fall of\add* all Yehudah.\f + \fr 28:23 \ft Sometimes in 2 Chronicles, Yehudah is referred to as Yisrael, but as that can be confusing for readers, we’ve made adjustments.\f*
@@ -1001,336 +1002,355 @@
 \v 27 Then Ahaz died and was buried in ‘The City of David’, but not in the tombs of the \add other\add* kings of Yisrael. Then his son Hizkiyah \add replaced him as king\add*.\x + \xo 28:27: \xt Isa 14:28.\x*
 \c 29
 \s1 Purifying the temple
+\s4 Southern kingdom
 \r (2 Kgs 18:1-3)
 \p
 \v 1 Hizkiyah was twenty-five when he became king, and he reigned from Yerushalem for twenty-nine years. His mother was Zekaryah’s daughter Aviyah.
 \v 2 He did what \add pleased\add* Yahweh, like his ancestor \add King\add* David had done.
 \p
 \v 3 In the \add very\add* first month of his reign, he \add unlocked\add* the \add temple\add* doors and repaired them.
-\v 4 Then he \add summoned\add*
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
+\v 4 Then he \add summoned\add* the priests and the Levites, and assembled them in \add the eastern temple courtyard\add*
+\v 5 and told them, “\add Now you\add* Levites, listen to me. \add You need to\add* consecrate yourselves now, and consecrate the residence of Yahweh, the god of your ancestors, and remove \add any\add* defilement from the sacred place,
+\v 6 because our fathers were unfaithful and \add disobeyed\add* our god Yahweh. Then they abandoned him and \add had no more interest in this temple\add* and turned \add their back\add* \add on it all\add*.
+\v 7 They had extinguished the lamps and \add locked the temple up\add*. \add After that\add*, they didn’t burn any incense or offer any burnt sacrifices in the sacred place of Yisrael’s god.
+\v 8 \add That’s why\add* Yahweh \add was angry at\add* Yerushalem and \add all\add* Yehudah, and \add allowed us to become a place of terror and horror and scorn\add* as you’ve all seen with your \add own\add* eyes.
+\v 9 \add As a result,\add* our fathers fell \add in battle\add*, and our wives and \add children\add* have been \add captured and taken to other countries\add*.
 \p
-\v 10 ◙
-\v 11 ◙
+\v 10 Now \add I sincerely want to make an agreement\add* with Yisrael’s god Yahweh, \add so that his fierce anger\add* will turn away from us.
+\v 11 \add So lads,\add* don’t \add mess around\add* because Yahweh has chosen you all to stand in his presence to serve him, and to be ministering and burning incense.
 \p
-\v 12 ◙
-\q1 …
-\q1 …
-\q1 …
-\q1 …
-\q1 …
-\q1 …
-\q1 …
+\v 12 Then \add these\add* Levites \add took action\add*:
+\li1 from the Kohatites: Mahat (Amasai’s son) and Yoel (Azaryah’s son),
+\li1 from the descendants of Merari: Kish (Avdi’s son) and Azaryah (Yehallelel’s son),
+\li1 from the Gereshonites: Yoah (Zimmah’s son) and Eden (Yoah’s son),
+\li1
+\v 13 from Elitsafan’s descendants: Shimri and Yeiel,
+\li1 from Asaf’s descendants: Zekaryah and Mattanyah,
+\li1
+\v 14 from Heyman’s descendants: Yehiel and Shimei, and
+\li1 from Yedutun’s descendants: Shemayah and Uzziel.
 \p
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
+\v 15 They assembled their relatives and consecrated themselves, then they entered the \add temple\add* to purify it as the king had ordered as a result of Yahweh’s message.
+\v 16 The priests entered the inner part of the \add temple\add* to purify it, and they brought out everything they found \add that shouldn’t be\add* in \add there\add* to the \add temple\add* courtyard, and then the Levites took it \add all\add* out \add to be burnt down in\add* the Kidron \add valley\add*.
 \p
-\v 17 ◙
+\v 17 They began \add the purification\add* at the beginning of March and \add worked outwards to the porch by\add* the eighth, and then eight more days \add for the courtyard\add*, \add so\add* they finished on the sixteenth.
 \p
-\v 18 ◙
-\v 19 ◙
+\v 18 Then they \add reported\add* to King Hizkiyah, “We’ve purified all of Yahweh’s \add temple\add*, \add including\add* the altar for burnt offerings and all its utensils, and the \add bread display\add* table and all its utensils.
+\v 19 We’ve prepared and consecrated all the \add items\add* which King Ahaz had rejected in his reign of unfaithfulness, and they’re \add back\add* in front of Yahweh’s altar.”
+\s2 Temple sacrifices restored
 \p
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
-\v 24 ◙
+\v 20 \add Early the next\add* morning, King Hizkiyah assembled the city officials, and went to Yahweh’s \add residence\add*,
+\v 21 \add taking\add* seven bulls, seven rams, seven male lambs, and seven male goats to be a sin offering for the kingdom, and for the sanctuary, and for Yehudah. He \add instructed\add* the priests (Aharon’s descendants) to \add sacrifice the animals to Yahweh on\add* the altar.
+\v 22 So they slaughtered the bulls and took the blood and sprinkled it on the altar. Then they \add did the same for the rams, and then\add* the lambs.
+\v 23 \add Finally,\add* they brought the goats for the sin offering \add to the front\add*, and the king and the people placed their hands on them
+\v 24 \add before\add* the priests slaughtered them and splashed their blood on the altar \add so Yahweh would forgive the disobedience\add* of all Yisrael. (The king had ordered the burnt offerings and the sin offering be for all Yisrael.)
 \p
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
-\v 28 ◙
-\v 29 ◙
-\v 30 ◙
+\v 25 Then he \add told\add* the Levites \add to stand\add* in the \add temple\add* with cymbals, harps, and lyres—\add obeying what David and his prophets Gad and Natan had commanded\add*. (Yahweh had \add actually\add* \add given those orders through\add* his prophets.)
+\v 26 The Levites stood with David’s instruments, and the priests with their trumpets,
+\v 27 then Hizkiyah said to offer the burnt offering on the altar. \add When they started to slaughter the animals,\add* \add the people\add* \add sang and praised Yahweh as the trumpets were blown and the other instruments played\add*.
+\v 28 The entire assembly were bowing down \add and worshipping\add* as the singers sang and the trumpeters \add played\add*, until the burnt offering was completed,
+\v 29 then the king and everyone with him bowed down and worshipped.
+\v 30 Then King Hizkiyah and his officials \add ordered\add* the Levites to sing praises to Yahweh \add using compositions\add* of David and the prophet Asaf, \add so\add* they cheerfully sang praises and bowed down and worshipped.
 \p
-\v 31 ◙
+\v 31 Then Hizkiyah \add responded\add*, “You’ve all \add consecrated yourselves\add* to Yahweh, \add so\add* come near and bring \add your\add* sacrifices and thanksgivings in to the house of Yahweh.” \add So\add* the assembly brought in \add their\add* sacrifices and thanksgiving \add gifts\add*, \add plus those who wanted to\add*, \add brought\add* \add their sacrifices to be burnt\add*.
 \p
-\v 32 ◙
-\v 33 ◙
-\v 34 ◙
-\v 35 ◙
-\p …
-\v 36 ◙
+\v 32 \add Altogether\add* \add they\add* brought seventy bulls, one hundred rams, and two hundred lambs \add to be completed burnt on the altar\add*,
+\v 33 as well as six hundred bulls and three thousand sheep \add as dedicated offerings\add*.
+\v 34 \add There weren’t enough priests\add* to skin all the burnt offerings, so their relatives the Levites \add helped them\add* until the work was finished and \add until\add* all the priests had consecrated themselves, because the Levites \add hard worked quicker\add* to consecrate themselves than the priests had.
+\v 35 \add In addition to the\add* burnt offernings, there was the fat from the peace offerings, and there were drink offerings.
+\p \add So\add* the service of Yahweh’s \add temple was reinstituted\add*
+\v 36 and Hizkiyah and all the people celebrated about what God had prepared for the people, because it had all happened fairly quickly.
 \c 30
-\s1 The preparation of celebration
+\s1 Hizkiyah orders a passover celebration
+\s4 Both kingdoms
 \p
-\v 1 ◙
-\v 2 \x + \xo 30:2-3: \xt Num 9:9-11.\x*◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
+\v 1 Then \add King\add* Hizkiyah sent \add invitations\add* to all Yisrael and Yehudah (including Efrayim and Menashsheh) to come to Yahweh’s \add temple\add*
+\v 2 \add because\add* the king had consulted with his officials and all the assembly in Yerushalem \add and decided\add* to \add have a late\add* celebration of the Passover in \add April\add*.\x + \xo 30:2-3: \xt Num 9:9-11.\x*
+\v 3 (They couldn’t have done it at the \add proper\add* time because the priests hadn’t consecrated themselves sufficiently then, and so the people hadn’t gathered in Yerushalem.)
+\v 4 The plan \add pleased\add* the king and all the people,
+\v 5 so they \add sent messages across\add* all Yisrael \add and Yehudah\add* from Beer-Sheva \add in the south\add* to Dan \add in the far north\add* for \add the people\add* to come to Yerushalem to \add celebrate\add* the Passover \add to honour\add* Yisrael’s god Yahweh. (They hadn’t previously been observing the written instructions.)
+\v 6 Runners took the letters from the king and his officials, \add going\add* to all Yisrael and Yehudah with the king’s command: “Descendants of Yisrael, return to Yahweh, the god of Avraham, Yitshak, and Yisrael, and he will return to you all—the \add group that\add* escaped from the \add control\add* of the Assyrian kings.
+\v 7 Don’t be like your fathers and brothers who weren’t faithful to Yahweh, the god of their ancestors, \add provoking him\add* \add to leave them decimated as you can see\add*.
+\v 8 \add So don’t be stubborn\add* like your ancestors were. \add Obey\add* Yahweh and come to the sanctuary that he’s consecrated forever, and serve your god Yahweh \add so he will\add* turn his anger away from you.
+\v 9 If you all return to Yahweh, your brothers and sons \add will be shown mercy\add* by their captors and \add be able to\add* return to this land, because your god Yahweh is gracious and compassionate, and he won’t \add ignore\add* you if you all will turn back to him.
 \p
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\s1 The celebration
+\v 10 The messengers went from city to city in the Efrayim and Menashsheh \add regions\add*, as far \add north\add* as Zevulun, \add but\add* \add many people there\add* laughed at them and mocked them.
+\v 11 \add However, some of the people\add* from Asher, Menashsheh, and Zevulun humbled themselves and went to Yerushalem.
+\v 12 Also in Yehudah, God moved the people to want to obey the king and his officials \add and Yahweh’s instructions\add*.
+\s1 The passover celebration
+\s4 Both kingdoms
 \p
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
-\s1 the celebration extended
-\p
-\v 23 ◙
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
-\c 31
-\s1 The works of Isikiyas
+\v 13 \add The next\add* month, a huge crowd gathered in Yerushalem to celebrate the Festival of Flat Bread.
+\v 14 They \add took action\add* and removed the altars \add to Baal\add* in Yerushalem, and all the incense altars, and threw them down into the Kidron valley \add to be burnt there\add*.
+\v 15 \add In the middle of the month,\add* they slaughtered the Passover lambs. The priests and Levites had been ashamed, so they’d consecrated themselves, them they brought the burnt offerings into the \add temple\add*.
+\v 16 They they stood at their stations \add as per the instructions written by\add* Mosheh \add (Moses)\add*, then the Levites handed the \add bowls of\add* blood to the priests to sprinkle \add on the altar\add*.
+\v 17 Because many \add people\add* in the assembly hadn’t consecrated themselves, the Levites \add assisted them\add* by slaughtering the lambs and consecrating them to Yahweh.
+\v 18 \add Although most\add* of the people \add who’d travelled down\add* from Efrayim, Menashsheh, Yissaskar, and Zevulun hadn’t purified themselves, they ate the Passover \add food\add* anyway \add despite the written\add* \add instructions\add*, because Hizkiyah had prayed to Yahweh for them, “May Yahweh who is good, \add declare as innocent\add*
+\v 19 everyone who \add sincerely wants to honour and obey\add* Yahweh, the god of their ancestors, \add even if they haven’t completed the formal purification ceremonies for the temple\add*.”
+\v 20 Yahweh \add took notice\add* of Hizkiyah’s \add request\add*, and \add forgave\add* the people,
+\v 21 \add so\add* the \add Israelis who’d come\add* to Yerushalem celebrated the Feast of Flat Bred for seven days with great \add excitement\add*. The Levites and priests praised \add enthusiastically\add* praised Yahweh every day using \add their\add* musical instruments.
+\v 22 Hizkiyah \add sincerely thanked\add* all the Levites who \add were very insightful about worshipping\add* Yahweh. Then \add everyone\add* ate for the prescribed seven days—sacrificing peace offerings and confessing to Yahweh, the god of their ancestors.
+\s1 The passover celebration gets extended
 \s4 Southern kingdom
 \p
-\v 1 ◙
+\v 23 Then the \add whole group decided to celebrate\add* for seven \add more\add* days, \add so\add* they \add enthusiastically\add* celebrated for \add another whole week\add*
+\v 24 because Yehudah’s King Hizkiyah had provided a thousand bulls and seven thousand sheep for the people, and the officials had also contributed another thousand bulls and ten thousand sheep. Many \add more\add* priests \add also\add* consecrated themselves.
+\v 25 All the people from Yehudah celebrated, including the priests and Levites, and all those people who’d come \add down\add* from Yisrael to stay in Yehudah (whether just for the occasion, or to live permanently), plus \add others\add* living in Yehudah.
+\v 26 Everyone in Yerushalem was very happy, because nothing like that had happened in Yerushalem since the time when David’s son Shelomoh \add (Solomon)\add* was king.
+\v 27 \add Finally,\add*, the priests and Levites stood up and \add prayed a blessing on\add* the people, and their voice was heard because their prayer reached \add God’s\add* holy residence in the heavens.
+\c 31
+\s1 Hizkiyah’s religious reforms
+\s4 Southern kingdom
 \p
-\v 2 ◙
-\v 3 \x + \xo 31:3: \xt Num 28:1–29:39.\x*◙
+\v 1 When that was all over, all \add those\add* Israelis went out to Yehudah’s cities and shattered the pillars and cut down the Asherah poles, and they tore down the hilltop shrines and altars from the entire Yehudah-Benyamin \add region\add* and also up in the Efrayim-Menashsheh \add region\add*. Once they’d finished that, they all returned to their own land and cities.
 \p
-\v 4 \x + \xo 31:4-5: \xt Num 18:12-13,21.\x*◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
-\v 10 ◙
+\v 2 \add King\add* Hizkiyah allocated the priests and Levites \add into\add* divisions for the various different types of duties: for doing burnt offerings and peace offerings, for other services, and for thanksgiving and praise at the \add temple\add* gates.
+\v 3 The king \add contributed some of his own funds\add* for burnt offerings \add to be sacrificed\add* each morning and evening, as well as for the Rest Days and the New Moon celebrations, and on the other special days as per the written instructions \add that had come from\add* Yahweh.\x + \xo 31:3: \xt Num 28:1–29:39.\x*
 \p
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
+\v 4 He told that people \add living in\add* Yerushalem to give the \add prescribed\add* \add portions\add* to the priests and Levites, so that they could \add focus on serving\add* Yahweh,\x + \xo 31:4-5: \xt Num 18:12-13,21.\x*
+\v 5 and sd soon as the message reached them, the Israelis \add started\add* giving the first portions of \add their harvests of\add* grain and new wine, oil and honey, and all the produce from the countryside, so they brought a tenth of \add the harvests of\add* all their crops.
+\v 6 The men of Yisrael and Yehudah \add who were living in\add* Yehudah’s cities also \add brought a tenth\add* of their cattle and sheep, as well as a tenth of sacred things consecrated to their god Yahweh, and it was all placed into large piles.
+\v 7 That all began in \add May\add* and was finished by \add September\add*,
+\v 8 and \add when King\add* Hizkiyah and \add his\add* officials came and saw the piles, they \add praised\add* Yahweh and his \add Israeli\add* people.
+\v 9 \add When\add* Hizkiyah asked the priests and Levites about the piles,
+\v 10 and Azaryah the chief priest (a descendant of Tsadok) told him, “\add Since the people started brining their contributions\add* to the \add temple\add*, we’ve been eating well and even had left-overs because Yahweh has blessed his people, and \add all this is the remainder\add*.”
 \p
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
+\v 11 \add So then\add* Hizkiyah \add ordered\add* \add them\add* to prepare the \add temple\add* storerooms, which they did,
+\v 12 and they brought in the contributions and the tenths \add that had been given\add* and the \add things faithfully dedicated\add* \add to Yahweh\add*. The Levite, Konanyah \add was appointed as supervisor\add* with his brother Shimei \add as deputy\add*.
+\v 13 \add Those two supervised\add* Yehiel, Azazyah, Nahat, Asahel, Yerimot, Yozavad, Eliel, Ismakyah, Mahat, and Benayah, by the arrangement of King Hizkiyah and Azaryah the \add temple supervisor\add*.
 \p
-\v 20 ◙
-\v 21 ◙
+\v 14 The Levite Imnah’s son, Kore \add who guarded the temple’s\add* eastern gate was \add put in charge\add* of the free-will offering to God—to \add distribute those offerings\add* to Yahweh, as well as any consecrated items.
+\v 15 Eden, Minyamin, Yeshua, Shemayah, Amaryah, and Shekanyah \add faithfully assisted\add* him in the priests’ cities to \add distribute those things\add* to the \add different\add* divisions of priests, \add regardless of their status or size\add*.
+\v 16 Every male who was at least three years old \add who was listed in the geneaological records, received a portion\add* for their service in the \add temple as each division performed their assigned duties\add*.
+\v 17 \add Each priestly clan kept genealogical records\add* \add and received a portion\add*, plus the Levites \add who were at least twenty years old\add* and according to their divisions,
+\v 18 as well as their wives and young children, and sons and daughters whose names were on the genealogies, because they had also faithfully consecrated themselves for the \add sacred work\add*.
+\v 19 Also, Aharon’s descendants the priests who had pasture land around their cities and who were named, were given a portion for each male, as well as each Levite included on the genealogical records.
+\p
+\v 20 So \add King\add* Hizkiyah did that throughout Yehudah, and he continued to faithfully \add follow the instructions\add* of his god Yahweh.
+\v 21 \add Whatever he did\add* for the \add temple operation\add* as he followed God’s rules and commands, he \add tried hard to be diligent and sincere\add*, and he prospered.
 \c 32
-\s1 The invasion of from-Asirya of Yehudah
+\s1 The Assyrians threaten Yerushalem
+\s4 Southern kingdom
 \r (2 Kgs 18:13-37; 19:14-19,35-37; Isa 36:1-22; 37:8-38)
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
+\v 1 After all \add those acts of faithfulness\add*, the Assyrian King Sennacherib \add (Heb. Sanheriv)\add* \add invaded\add* Yehudah. He \add besieged\add* the fortified cities and prepared to capture them for himself.
+\v 2 \add When\add* \add King\add* Hizkiyah saw the Sennacherib had \add entered\add* \add the country\add* and \add clearly\add* \add intended to attack\add* Yerushalem,
+\v 3 he consulted with his officials and \add army leaders\add* about blocking up the springs outside the city, and they helped him.
+\v 4 Many people gathered and blocked the springs from feeding the stream that flowed through the area, saying, “Why should the Assyrian kings come and find \add plenty of water\add*?”
+\v 5 Then he strengthened \add his fortifications\add*, repairing broken \add sections of the\add* wall, and built towers and an outer wall. He strengthened the \add supporting wall\add* \add on the east side of\add* ‘The City of David’. He \add also\add* manufactured many weapons and shields,
+\v 6 and he \add appointed army commanders\add* and assembled them at the plaza by the city gate, and \add encouraged them with these words\add*,
+\v 7 “Be strong and be courageous. Don’t be scared or discouraged because of the Assyrian king, or by his massive army, because we have someone on our side who’s \add more powerful\add* than him.
+\v 8 \add They can only rely on human strength, but we have\add* our god Yahweh to help us and fight our battles \add for us\add*.” \add So\add* the people \add took strength\add* from King Hizkiyah’s \add encouragement\add*.
 \p
-\v 9 ◙
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
+\v 9 \add Later, when\add* Assyrian King Sennacherib with his army was \add surrounding\add* Lakish city, he sent some servants to Yerushalem to Yehudah’s King Hizkiyah and \add all the residents\add*, saying,
+\v 10 “\add I \add* Sennacherib, the king of Assyria \add am asking\add* what you’re all trusting in as you’re remaining there in Yerushalem while it’s besieged?
+\v 11 Hizkiyah tells you, ‘Our god Yahweh will rescue us from the Assyrian king,’ but he’s misleading you and you’ll all die of hunger and thirst!
+\v 12 Wasn’t it Hizkiyah who removed his hilltop shrines and his altars, and told \add the people of\add* Yerushalem and \add all\add* Yehudah, telling you all to only bow down at one altar and offer sacrifices on it.
+\v 13 Don’t you people know what my ancestors and I have done to the peoples from other countries? Were any of their gods able to save them from me?
+\v 14 Which one out of the gods of those nations which my ancestors destroyed shows a precedent that your god can rescue anyone from me?
+\v 15 \add So\add* don’t let Hizkiyah deceive you or mislead you like this. Don’t believe him because no god of any nation or kingdom has been able to save his people from my ancestors or from me. \add So your god certainly won’t be able to protect you from my army\add*.
 \p
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
+\v 16 Then Sennacherib’s servants said \add even\add* more against the god Yahweh, and against his servant Hizkiyah,
+\v 17 plus he wrote letters \add insulting\add* Yisrael’s god Yahweh and speaking against him, writing, “Just like the gods of the \add other\add* nations couldn’t save their people from me, so too Hizkiyah’s god won’t be able to \add protect\add* his people from my \add strength\add*.”
+\v 18 Then \add the Assyrians\add* \add shouted loud\add* \add threats\add* \add in Hebrew\add* to the people of Yerushalem who were on the wall to \add try to\add* frighten and terrify them so they could capture the city—
+\v 19 \add telling them Yerushalem’s god was just another god made by people and just as useless as the gods of other countries\add*.
 \p
-\v 20 ◙
-\v 21 ◙
+\v 20 Then King Hizkiyah and Yeshayah (son of the prophet Amots) called out to the heavens \add requesting God’s help\add*,
+\v 21 and Yahweh sent a messenger who destroyed the powerful warriors, and the leaders and chiefs in the Assyrian \add army\add*, and then their king had to \add return home in\add* shame. When he went into the temple of his god, some of \add his sons ran him through with a\add* sword.
 \p
-\v 22 ◙
-\v 23 ◙
-\s1 The sickness of Isikiyas
+\v 22 \add So that’s how\add* Yahweh saved Hizkiyah and Yerushalem’s inhabitants from the Assyrian King Sennacherib, and from \add the power of other nations\add*, and he gave them peace on all sides.
+\v 23 Many \add people\add* came to Yerushalem to bring offerings for Yahweh and valuable gifts for Yehudah’s King Hizkiyah, and after all that, he \add was highly respected\add* by the other nations.
+\s1 Hizkiyah’s illness
+\s4 Southern kingdom
 \r (2 Kgs 20:1-3,12-19; Isa. 38:1-3; 39:1-8)
 \p
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\s1 The me wealth of Isikiyas
+\v 24 \add Some time afterwards,\add* \add King\add* Hizkiyah became very sick \add and was expected to die, but\add* he prayed to Yahweh and \add Yahweh\add* \add answered him with a miracle\add*.
+\v 25 \add However,\add* Hizkiyah was \add very proud\add* and didn’t \add thank\add* \add Yahweh\add*, \add so his anger fell on\add* Yerushalem and Yehudah.
+\v 26 Then Hezekiah and Yerushalem’s inhabitants humbled themselves, and so Yahweh’s anger didn’t \add affect them during Hizkiyah’s lifetime\add*.
+\s1 Hizkiyah’s wealth
+\s4 Southern kingdom
 \p
-\v 27 ◙
-\v 28 ◙
-\v 29 ◙
+\v 27 \add King\add* Hizkiyah \add had become vert wealthy, and he was highly respected\add*. \add He established\add* treasuries for gold and silver, for gemstones and spices, and for shields and other valuable things,
+\v 28 as well as storehouses for grain, wine, and \add olive\add* oil, and stalls for \add all kinds of livestock\add* and \add his\add* flocks.
+\v 29 He built cities for himself, and acquired large numbers of \add sheep and goats, and also cattle\add*, because God had \add made him very prosperous\add*.
 \p
-\v 30 ◙
-\v 31 ◙
-\s1 The final of kingdom of Isikiyas
+\v 30 Hizkiyah \add blocked off\add* the upper outlet at the Gihon spring and directed \add the water\add* down the western side of ‘The City of David’. All his projects were successful,
+\v 31 and so when the Babylonian leaders sent messengers to \add ask about the miracle that had been done in the country\add*, God left him \add alone\add* to test him and \add see what he really believed\add*.
+\s1 Hizkiyah’s reign ends
+\s4 Southern kingdom
 \r (2 Kgs 20:20-21)
 \p
-\v 32 ◙
-\v 33 ◙
+\v 32 The record of all the other things done by Hizkiyah \add while he was king\add*, including his loyal commitment, was written on the scroll ‘The kings of Yehudah and Yisrael’.
+\v 33 Then Hizkiyah died and was buried in the \add upper tombs\add* with David’s other descendants, and everyone in Yerushalem and across Yehudah honoured him. Then his son Menashsheh replaced him as king.
 \c 33
-\s1 The kingdom of Menashsheh of Yehudah
+\s1 Yehudah’s king Menashsheh
+\s4 Southern kingdom
 \r (2 Kgs 21:1-9)
 \p
-\v 1 ◙
-\v 2 \x + \xo 33:2: \xt Jer 15:4.\x*◙
-\v 3 ◙
-\v 4 \x + \xo 33:4: \xt 2Ch 6:6.\x*◙
-\v 5 ◙
-\v 6 ◙
+\v 1 Menashsheh \add (Manasseh)\add* was twelve when he became king, and he reigned from Yerushalem for fify-five years.
+\v 2 He did was what Yahweh \add had said was\add* evil, like the disgusting things of the \add people groups\add* that Yahweh had driven out \add ahead of the Israelis\add*.\x + \xo 33:2: \xt Jer 15:4.\x*
+\v 3 The hilltop shrines that his father Hizkiyah had torn down, he turned around and rebuilt them and erected altars to the Baals, and he made Asherot \add poles\add*, and he bowed down to all the stars in the sky and served them.
+\v 4 He built altars in Yahweh’s \add temple\add* in Yerushalem that Yahweh had previously said that his name would \add always be associated with\add*.\x + \xo 33:4: \xt 2Ch 6:6.\x*
+\v 5 He built altars for all the stars in the sky in both of the temple courtyards,
+\v 6 and he made his sons pass through the fire in the Ben-Hinnom valley, and he practiced fortune-telling and sorcery and magic, and \add connected\add* with mediums and spirits. He did so much evil in Yahweh’s eyes that it provoked him into getting angry.
 \p
-\v 7 \x + \xo 33:7-8: \xt 1Ki 9:3-5; 2Ch 7:12-18.\x*◙
-\v 8 ◙
-\v 9 ◙
+\v 7 He made an idolatrous image and put it in the \add temple\add*, \add yes,\add* where God had told David and his son Shelomoh, “My name \add will be associated\add* with that building forever, there in Yerushalem which was chosen from all the tribes of Yisrael.\x + \xo 33:7-8: \xt 1Ki 9:3-5; 2Ch 7:12-18.\x*
+\v 8 If Yisrael will be careful to do everything that I’ve instructed them and follow all the regulations and statutes that were given to them through Mosheh, then I won’t force them to leave the land again that I gave to their ancestors.”
+\v 9 \add So\add* Menashsheh led Yehudah’s inhabitants astray, and \add all\add* Yehudah—doing more evil than the nations that Yahweh had destroyed ahead of the \add Israelis\add*.
 \p
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
+\v 10 Then Yahweh spoke to \add King\add* Menashsheh and his people, \add but\add* they paid no attention,
+\v 11 \add so\add* Yahweh brought in the army leaders from the Assyrian king and they captured Menashsheh. They put a hook \add in his nose\add* and put bronze chains around his feet, and took him away to Babylon.
+\v 12 When he was there suffering, he humbled himself in the presence of his ancestors’ god Yahweh, and pleaded with him \add for help\add*.
+\v 13 \add When\add* he prayed, \add Yahweh\add* listened to him and answered his request and brought him back to Yerushalem to his kingdom, then Menashsheh \add realised\add* that Yahweh is \add really\add* God.
 \p
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
+\v 14 After that, he rebuilt the outer wall for ‘The City of David’ on the west of Gihon to the Fish Gate and around the hill—also making it higher. Then he stationed army commanders in all of Yehudah’s fortified cities.
+\v 15 He removed the foreign gods and idols from the \add temple\add*, as well as all the altars that he’d built on the \add temple mount\add* and throughout Yerushalem, and he \add dumped\add* them \add all\add* outside the city.
+\v 16 Then he rebuilt Yahweh’s altar and sacrificed peace offering and thank offerings on it, and he told Yehudah to serve Yisrael’s god Yahweh.
+\v 17 However, the people continued to offer sacrifices at the hilltop shrines, but \add now\add* only to their god Yahweh.
 \p
-\v 18 ◙
-\v 19 ◙
-\v 20 ◙
-\s1 The kingdom of Amun of Yehudah
+\v 18 The record of all the other things done by Menashsheh \add while he was king\add*, including his prayer to his God and the messages spoken to him by the prophets, was written on the scroll ‘The kings of Yisrael’.
+\v 19 It’s written in ‘The Words of Hozay’ about his disobedience and unfaithful activities, and how he’d built the hilltop shrines and Asherah \add poles\add* and idols before he’d humbled himself, as well as \add the response to his pleading in his prayer\add*.
+\v 20 Then Menashsheh \add died\add* and was buried at his \add palace\add*, and his son Amon \add replaced him as king\add*.
+\s1 Yehudah’s King Amon
+\s4 Southern kingdom
 \r (2 Kgs 21:19-26)
 \p
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
+\v 21 Amon was twenty-two when he became king, and he ruled from Yerushalem for two years.
+\v 22 He did what Yahweh \add had said was\add* evil, just like his father Menashsheh had done, and \add he\add* sacrificed to all the idols that his father had made, and served them.
+\v 23 He didn’t humble himself \add and turn to Yahweh like his father had\add*, \add so Amon’s guilt was even worse\add*.
 \p
-\v 24 ◙
-\v 25 ◙
+\v 24 Then \add Amon’s\add* servants conspired against him, and assassinated him in his \add palace\add*,
+\v 25 \add but the local\add* people executed all those who’d conspired against King Amon, and made his son Yoshiyah king in his place.
 \c 34
-\s1 The kingdom of Husiyas of Yehudah
+\s1 Yehudah’s King Yoshiyah
+\s4 Southern kingdom
 \r (2 Kgs 22:1-2)
 \p
-\v 1 \x + \xo 34:1: \xt Jer 3:6.\x*◙
-\v 2 ◙
+\v 1 Yoshiyah was eight when he became king, and he reigned from Yerushalem for thirty-one years.\x + \xo 34:1: \xt Jer 3:6.\x*
+\v 2 He did what Yahweh \add had said was\add* right, and \add made similar decisions to his ancestor David\add*—not deviating to the right or the left.
 \p
-\v 3 ◙
-\v 4 \x + \xo 34:4: \xt 2Ki 21:3; 2Ch 33:3.\x*◙
-\v 5 \x + \xo 34:5: \xt 1Ki 13:2.\x*◙
-\v 6 ◙
-\v 7 ◙
+\v 3 In the eighth year of his reign while he was still a \add teenager\add*, he began to \add learn more\add* about the god of his ancestor David, and in the twelfth year, he began to remove the hilltop shrines from Yerushalem and \add across\add* Yehudah, as well as the Asherah poles, and the idols and metal images.
+\v 4 \add He watched while\add* they tore down the altars for the Baals and cut down the incense altars that were above them. He shattered the Asherah poles and the idols and metal images, then crushed them \add to powder\add* which he scattered over the graves of those who’d sacrificed to them.\x + \xo 34:4: \xt 2Ki 21:3; 2Ch 33:3.\x*
+\v 5 He burnt the bones of \add those\add* priests on their altars, and \add so\add* he purified Yerushalem and \add all\add* Yehudah,\x + \xo 34:5: \xt 1Ki 13:2.\x*
+\v 6 as well as in the cities in \add the tribes of\add* Menashsheh, Efrayim, Shimeon, and \add as far north as\add* Naftali, including in the ruins around them.
+\v 7 He tore down the altars and the Asherah poles, ground the idols into pieces, and cut down the incense altars in all Yisrael \add before returning\add* to Yerushalem.
 \p
-\v 8 ◙
-\v 9 ◙
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
+\v 8 In his eighteenth year \add as king\add*, in order to purify the land and the \add temple\add*, he sent Atsalyah’s son Shafan, Maaseyah the city official, and Yoahaz’s son Yoah the secretary, to repair the residence of his god Yahweh.
+\v 9 They went to Hilkiyah the high priest and \add handed over the funds that had been donated\add* for God’s house, which had been collected by the Levites as doorkeepers—\add the money\add* was from \add the tribes of\add* Menashsheh, Efrayim, and other places in \add the northern kingdom of\add* Yisrael, as well as from Yerushalem’s inhabitants and \add across\add* all of Yehudah and Benyamin.
+\v 10 \add The priests\add* then \add paid the workers\add* who’d been assigned to \add work in\add* Yahweh’s \add temple\add* to repair and strengthen it.
+\v 11 They also \add paid the carpenters\add* and builders to buy cut stone and timber for the beams and braces which Yehudah’s kings \add had allowed to deteriorate\add*,
+\v 12 and the \add workers\add* did their work faithfully. \add Their supervisors\add* were Yahat and Ovadyah (Levites descended from Merari), as well as Zekaryah and Meshullam (descendants of \add Levi’s son\add* Kohat), and all the Levites who \add were good on their\add* musical instruments.
+\v 13 They \add also\add* supervised the porters and those working on various \add other\add* tasks. Some of the Levites were secretaries, officials, and guards.
 \p
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
+\v 14 When they were bringing the money out of the \add temple\add*, Hilkiyah the \add high\add* priest found a scroll containing Yahweh’s instructions that had \add been given via\add* Mosheh \add (Moses)\add*.
+\v 15 Hilkiyah \add informed\add* the scribe Shafan that he had found a Torah scroll in the \add temple\add*, and \add he\add* gave \add him\add* the scroll.
+\v 16 Shafan took the scroll \add with him\add* to the king and \add reported\add* to him, “Your servants are doing everything they were assigned to do.
+\v 17 They’ve taken the cash that was in Yahweh’s residence, and \add passed it on\add* to the supervisors \add of the workers\add*.”
+\v 18 Then Shafan told the king, “\add I’ve brought\add* a scroll that the priest Hilkiyah gave me,” and then \add he\add* started reading it out to the king.
 \p
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
+\v 19 \add When\add* the king heard the words \add with God’s instructions\add*, he tore his clothes \add in grief\add*.
+\v 20 Then \add he\add* commanded Hilkiyah, Shafan’s son Ahikam, Mikah’s son Avdon, Shafan \add himself\add*, and the king’s special advisor Asayah,
+\v 21 “Go \add and\add* \add ask\add* Yahweh on my behalf and on behalf of those in Yisrael and Yehudah, \add what he wants us to do\add* with respect to the instructions on the scroll that has \add just\add* been found, because \add it seems that\add* Yahweh \add will be very angry at us\add* because our ancestors haven’t \add followed all of Yahweh’s instructions as they’re\add* written on that scroll.”
 \p
-\v 22 ◙
-\v 23 ◙
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
-\v 28 ◙
+\v 22 \add So\add* Hilkiyah and \add the others\add* went to Yerushalem’s Second District to the prophetess Huldah (wife of Shallum, son of Tokahat, son of Hasrah who \add took care of the temple robes\add*). They \add passed on the king’s question\add*
+\v 23 and she \add replied\add*, “Yisrael’s god Yahweh says to tell \add the king\add*:
+\v 24 Yahweh says, ‘Listen, I’m going to bring disaster on this place and its inhabitants as per all the curses written on that scroll that was read to Yehudah’s king
+\v 25 because they’ve abandoned me and offered incense to other gods. \add That’s\add* made me angry and \add so\add* my rage will be poured out on this place, and it \add can’t be prevented\add*.’
+\v 26 \add However,\add* Yehudah’s king sent you all to \add ask for Yahweh’s direction\add*, so tell him, ‘Yisrael’s god Yahweh says that \add after\add* \add hearing the words\add* \add of the scroll\add*,
+\v 27 because \add you were sincere\add* and you humbled yourself before God when you heard his words about this place and its inhabitants. \add Yes,\add* Yahweh declares that you’ve humbled yourself before me and torn your clothes, and wept \add in front of\add* me, and I’ve \add personally\add* heard you.
+\v 28 \add So listen,\add* I will \add allow you to die and be buried in peace\add* and \add so\add* your eyes won’t see the disaster that I’ll \add send\add* to this place and its inhabitants.’ ”
+\m \add So\add* they \add took that response\add* back to the king.
 \p
-\v 29 ◙
-\v 30 ◙
-\v 31 ◙
-\v 32 ◙
-\v 33 ◙
+\v 29 Then the king summoned all the elders from Yerushalem and \add from across\add* Yehudah
+\v 30 and they all \add walked\add* up to the \add temple\add* with the inhabitants of Yerushalem and \add all\add* Yehudah, and the priests and the Levites, and all the people \add irrespective of their standing in the community\add*. Then \add the king\add* read everything out to them that was on the Torah scroll that had been found in the \add temple\add*.
+\v 31 Then the king stood at his \add normal\add* place and \add made an agreement\add* with Yahweh: to obey Yahweh and follow his instructions and his regulations and statutes, \add sincerely and with all his energy\add*—doing what was in the \add joint understanding\add* that had been written on the scroll.
+\v 32 Then he had everyone from Yerushalem and Benyamin take a stand \add in agreement to it\add*, and \add so\add* Yerushalem’s inhabitants \add renewed\add* their agreement with the god of their ancestors.
+\v 33 \add So\add* \add King\add* Yoshiyah removed all the disgusting \add idols\add* from \add all the Yisraeli regions\add*, and he \add made\add* everyone in Yisrael serve their god Yahweh—\add during his lifetime\add* they never turned away from Yahweh, the god of their ancestors.
 \c 35
-\s1 The celebration of ‘pass-over’ of Messenger
+\s1 Celebrating the messenger’s ‘passing-over’
+\s4 Southern kingdom
 \r (2 Kgs 23:21-23)
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 \x + \xo 35:4: \xt 2Ch 8:14.\x*◙
-\v 5 ◙
-\v 6 ◙
+\v 1 Then \add King\add* Yoshiyah \add prepared\add* a ‘pass-over’ celebration in Yerushalem, and they slaughtered the \add lambs at the end of March\add* .
+\v 2 \add He\add* assigned the priests to \add the various tasks that needed to be done\add*, and \add encouraged them to do their work well\add*.
+\v 3 He told the Levites (they had been \add separated\add* \add from the other tribes\add* in order to serve Yahweh) who were teaching all Yisrael, “Place the sacred box in the house that David’s son, Yisrael’s King Shelomoh \add (Solomon)\add* had built—it won’t be a burden any more for your shoulders. Now serve your god Yahweh and his \add Israeli\add* people
+\v 4 and prepare yourselves in your clan divisions as per the instructions written by Yisrael’s King David and his son Shelomoh.\x + \xo 35:4: \xt 2Ch 8:14.\x*
+\v 5 Then stand in the \add temple area\add*, \add grouped by your clans\add* \add and ready to help the other tribes\add*.
+\v 6 Consecrate yourselves and slaughter the ‘pass-over’ \add lambs\add* for \add the people\add* \add as per the instructions\add* \add given\add* through Mosheh \add (Moses)\add* by Yahweh.
 \p
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
+\v 7 \add King\add* Yoshiyah \add provided\add* thirty thousand lambs and young goats for the ‘pass-over’ \add sacrifices\add* from his own flocks and three thousand bulls \add from his own herds\add*.
+\v 8 His officials \add also\add* contributed to the people, priests and Levites. The chief temple officials Hilkiyah, Zekaryah, and Yehiel donated 2,600 lambs and three hundred cattle to the priests.
+\v 9 The Levite leaders Konanyah and his younger brothers Shemayah, Netanel, along with Hashavyah, Yeiel, and Yozavad \add together\add* contributed five thousand lambs and three hundred bulls.
 \p
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\v 13 \x + \xo 35:13: \xt Exo 12:8-9.\x*◙
-\v 14 ◙
-\v 15 \x + \xo 35:15: \xt 1Ch 25:1.\x*◙
+\v 10 \add So everything\add* was prepared as the king had commanded, and the priests stood at their places, and the Levites were there in their \add various\add* divisions
+\v 11 and they slaughtered the ‘pass-over’ \add lambs\add*, then the priests sprinkled the blood while the Levites skinned \add the animals\add*.
+\v 12 They set aside \add the animals\add* to be burnt \add on the altar\add*, \add in order to give them to the various family groups to offer\add* to Yahweh, following the instructions Mosheh had written down. They did the same thing with the cattle.
+\v 13 They roasted the ‘pass-over’ \add meal\add* over the fire as per the instructions, and they boiled the meat of the sacred offerings in pots and kettles and pans, and \add served the meat immediately to all the people who were there\add*.\x + \xo 35:13: \xt Exo 12:8-9.\x*
+\v 14 Afterwards, \add the Levites\add* prepared the meal for themselves and for the priests (Aharon’s descendants), because tge priests had been busy sacrificing the burnt offerings and the fat portions right through to the evening.
+\v 15 The singers (Asaf’s descendants) were at their posts as had been commanded by \add King\add* David, Asaf, Heyman, and the king’s prophet Yedutun. The \add men guarding the gates didn’t have to leave their posts\add* because their fellow Levites prepared \add food\add* for them.\x + \xo 35:15: \xt 1Ch 25:1.\x*
 \p
-\v 16 ◙
-\v 17 \x + \xo 35:17: \xt Exo 12:1-20.\x*◙
-\v 18 ◙
-\v 19 ◙
-\s1 The final kingdom of Husiyas
+\v 16 \add So on that day, everything that needed to done for worshipping Yahweh was done\add*. They celebrated the ‘pass-over’ festival, and they sacrificed burnt offerings as King Yoshiyah had commanded.
+\v 17 The \add Israelis who were there celebrated\add* the ‘pass-over’ that \add day\add*, then they celebrated the ‘Festival of Flat Bread’ for seven days.\x + \xo 35:17: \xt Exo 12:1-20.\x*
+\v 18 There hadn’t been a ‘pass-over’ celebration done like that is Yisrael since the \add time\add* of the prophet Shemuel \add (Samuel)\add*, and all of Yisrael’s kings had never done it like Yoshiyah did, along with the priests and Levites and the inhabitants of Yerushalem and \add across\add* all Yehudah and Yisrael.
+\v 19 They celebrated that \add festival\add* in the eighteenth year of Yoshiyah’s reign.
+\s1 The death of Yehudah’s King Yoshiyah
+\s4 Southern kingdom
 \r (2 Kgs 23:28-30)
 \p
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
+\v 20 After all of Yoshiyah’s \add work on temple restoration\add*, Egypt’s King Neko went to attack Karkemish \add city\add* on the Euphrates river, and Yoshiyah went out to \add confront\add* him.
+\v 21 \add Neko\add* sent messengers to tell \add Yoshiyah\add*, “What’s \add this got to do with\add* you, King of Judah? \add We’re not attacking you at present\add*, \add because we’re in a different fight\add*, and God told me to hurry. \add Don’t oppose\add* God who’s with me, and don’t \add make\add* him destroy you.”
+\v 22 \add However,\add* Yoshiyah \add wouldn’t listen\add*, but disguised himself \add before going into battle\add*. He didn’t listen to Neko \add even though he was speaking for\add* God, so he went to fight on the Megiddon plain.
 \p
-\v 23 ◙
-\v 24 ◙
+\v 23 King Yoshiyah was hit by the archers, and he told his servants, “\add Get me away from here\add* because I’m badly wounded.”
+\v 24 \add So\add* his servants \add lifted him off his\add* chariot, and took him \add on his reserve\add* chariot back to Yerushalem \add where he died\add*. He was buried in his ancestors’ tombs, and all Yerushalem and Yehudah mourned over \add him\add*.
 \p
-\v 25 ◙
+\v 25 \add The prophet\add* Yermeyah \add (Jeremiah)\add* wrote a \add funeral song\add* for him, which the male and female singers still use \add at funerals\add* to this day. \add That became a custom in Yisrael—the words of that song are written in a scroll of funeral songs\add*.
 \p
-\v 26 ◙
-\v 27 ◙
+\v 26 The record of all the other things done by Yoshiyah \add while he was king\add* and his loyal commitment \add to following Yahweh’s instructions\add*,
+\v 27 including his actions from the beginning to the end \add of his reign\add*, was written on the scroll ‘The kings of Yisrael and Yehudah’.
 \c 36
-\s1 The kingdom of Huwakas of Yehudah
+\s1 Yehudah’s King Yehoahaz
+\s4 Southern kingdom
 \r (2 Kgs 23:30-35)
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 \x + \xo 36:4: \xt Jer 22:11-12.\x*◙
-\s1 The kingdom of Huwakim of Yehudah
+\v 1 Then the people of \add Yehudah\add* took Yoshiyah’s son Yehoahaz and made him king in Yerushalem to replace his father.
+\v 2 Yehoahaz was twenty-three when he became king, and he reigned from Yerushalem for \add only\add* three months
+\v 3 \add before\add* Egypt’s king deposed him and \add forced the country to pay\add* an \add annual\add* tribute of \add thirty kilograms\add* of gold, and \add three tonnes\add* of silver.
+\v 4 Egypt’s King Neko took Yehoahaz to Egypt, and then the king made his \add younger\add* brother Elyakim king over Yehudah and Yerushalem, \add although\add* he changed Elyakim’s name to Yehoyakim.\x + \xo 36:4: \xt Jer 22:11-12.\x*
+\s1 Yehudah’s King Yehoyakim
+\s4 Southern kingdom
 \r (2 Kgs 23:36–24:7)
 \p
-\v 5 \x + \xo 36:5: \xt Jer 22:18-19; 26:1-6; 35:1-19.\x*◙
-\v 6 \x + \xo 36:6: \xt Jer 25:1-38; 36:1-32; 45:1-5; Dan 1:1-2.\x*◙
-\v 7 ◙
+\v 5 Yehoyakim was twenty-five when he became king and he reigned from Yerushalem for eleven years. \add He did many things that Yahweh had said were evil\add*.\x + \xo 36:5: \xt Jer 22:18-19; 26:1-6; 35:1-19.\x*
+\v 6 Babylonia’s King Nebuchadnezzar \add (Heb. Nevukadnetstsar)\add* attacked \add and captured Yehoyakim\add* and took him to Babylon in bronze chains,\x + \xo 36:6: \xt Jer 25:1-38; 36:1-32; 45:1-5; Dan 1:1-2.\x*
+\v 7 along with some items from Yahweh’s \add temple\add* that were taken to Babylon and placed in \add the king’s\add* temple \add there\add*.
 \p
-\v 8 ◙
-\s1 The kingdom of Huwakin of Yehudah
+\v 8 The record of all the other things done by Yehoyakim \add while he was king\add* and the disgusting activities he did was written on the scroll ‘The kings of Yisrael and Yehudah’, and his son Yehoyakin \add replaced him as king\add*.
+\s1 Yehudah’s King Yehoyakin
+\s4 Southern kingdom
 \r (2 Kgs 24:8-17)
 \p
-\v 9 ◙
-\v 10 \x + \xo 36:10: a \xt Jer 22:24-30; 24:1-10; 29:1-2; Eze 17:12; \xo b \xt Jer 37:1; Eze 17:13.\x*◙
-\s1 The kingdom of Sidikiyas of Yehudah
+\v 9 Yehoyakin was eighteen\f + \fr 36:9 \ft Using 2 Kings 24:8 to (hopefully) correct the Hebrew here which has ‘eight’.\f* when he became king, and he reigned from Yerushalem for \add just\add* ten days. \add He did many things that Yahweh had said were evil\add*.
+\v 10 \add At the beginning of the next year\add*, King Nebuchadnezzar sent \add soldiers\add* to bring him to Babylon, bringing valuable items from the \add temple\add*, and he made his \add younger\add* brother Tsidkiyah king over Yehudah and Yerushalem.\x + \xo 36:10: a \xt Jer 22:24-30; 24:1-10; 29:1-2; Eze 17:12; \xo b \xt Jer 37:1; Eze 17:13.\x*
+\s1 Yehudah’s king Tsidkiyah
+\s4 Southern kingdom
 \r (2 Kgs 24:18-20; Jer. 52:1-3a)
 \p
-\v 11 \x + \xo 36:11: \xt Jer 27:1-22; 28:1-17.\x*◙
-\v 12 ◙
-\v 13 \x + \xo 36:13: \xt Eze 17:15.\x*◙
-\v 14 ◙
+\v 11 Tsidkiyah was twenty-one when he became king, and he reigned from Yerushalem for eleven years.\x + \xo 36:11: \xt Jer 27:1-22; 28:1-17.\x*
+\v 12 \add He did many things that Yahweh had said were evil,\add* \add in fact,\add* he didn’t \add even\add* humble himself when the prophet Yermeyah \add (Jeremiah)\add* \add brought him a message\add* from Yahweh.
+\v 13 He \add had become very stubborn and wouldn’t\add* return to Yisrael’s god Yahweh, and he \add also\add* rebelled against King Nebuchadnezzar who’d made him \add promise in front of God\add* \add to be loyal\add*.\x + \xo 36:13: \xt Eze 17:15.\x*
+\v 14 \add In addition\add*, all the leaders of the priests and the people \add of Yehudah\add* \add became more and more unfaithful and doing disgusting things often done in other\add* nations, then they defiled Yahweh’s residence which he had consecrated in Yerushalem.
 \p
-\v 15 ◙
-\v 16 ◙
-\v 17 \x + \xo 36:17: \xt Jer 21:1-10; 34:1-5.\x*◙
-\v 18 ◙
-\v 19 \x + \xo 36:19: \xt 1Ki 9:8.\x*◙
-\v 20 ◙
-\v 21 \x + \xo 36:21: \xt Jer 25:11; 29:10.\x*◙
-\s1 The sending home by Sirus of those from-Yehudah
+\v 15 \add So\add* Yahweh, the god of their ancestors, \add sent many messages via his prophets\add* because he felt compassion on his people, and on his residence,
+\v 16 \add but\add* they mocked God’s messengers and \add rejected\add* the messages—ridiculing his prophets until Yahweh \add became so angry that he couldn’t be stopped\add*.
+\v 17 \add So\add* \add Yahweh\add* \add sent\add* the Chaldean king against them, and \add they\add* \add ran their young men through\add* with the sword, even in the temple\add*, and \add they\add* didn’t spare any of the young men or women, or \add even\add* those who were older or elderly—\add God\add* allowed \add Nebuchadnezzar to \add thoroughly\add* \add defeat them\add*.\x + \xo 36:17: \xt Jer 21:1-10; 34:1-5.\x*
+\v 18 Then he took \add everything valuable\add*, big or small, from God’s temple as well as from the king and his officials.
+\v 19 They \add set God’s temple on fire\add*, and tore down \add some of\add* the wall \add surrounding\add* Yerushalem, burnt all its palaces, and destroyed everything valuable.\x + \xo 36:19: \xt 1Ki 9:8.\x*
+\v 20 \add Anyone else who was still alive\add* was taken to Babylon where they became servants to \add the king\add* and his children, until \add the time when\add* the Persians \add came to power\add*.
+\v 21 \add That\add* fulfilled God’s message that Yirmeyah had \add previously proclaimed\add*, that the land would become desolate \add to make up for\add* the Rest Days \add that had been ignored\add*—that took seventy years. \x + \xo 36:21: \xt Jer 25:11; 29:10.\x*
+\s1 Cyrus sends the exiles back to Yehudah
+\s4 Southern kingdom
 \r (Ezra 1:1-4)
 \p
-\v 22 ◙
-\p
-\v 23 \x + \xo 36:23: \xt Isa 44:28.\x*◙
+\v 22 During the first year that King Cyrus \add (Heb. Koresh)\add* reigned over Persia, in order to \add further\add* fulfil what Yahweh had said via \add the prophet\add* Yirmeyah, Yahweh \add worked on\add* the spirit of King Cyrus who then wrote this ruling \add and sent messengers\add* to announce it throughout his kingdom:
+\v 23 “I, Persia’s King Cyrus, declare that Yahweh, the god of the heavens, has given me all these earthly kingdoms, and he’s given me the job of building a house for him in Yerushalem which is in Yehudah. \add To help with that,\add* \add anyone who’s from there is allowed to return, and may their god Yahweh be with them and help them\add*.\x + \xo 36:23: \xt Isa 44:28.\x*

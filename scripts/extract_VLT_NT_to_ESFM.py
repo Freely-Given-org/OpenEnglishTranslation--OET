@@ -61,7 +61,7 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2025-03-03' # by RJH
+LAST_MODIFIED_DATE = '2025-11-12' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
 PROGRAM_VERSION = '0.99'
@@ -414,7 +414,7 @@ def export_esfm_literal_English_gloss() -> bool:
     last_verse_id = None
     esfm_text = ''
     num_books_written = 0
-    final_table_filename = 'OET-LV_NT_word_table.tsv' # Will be made later by add_tags_to_NT_word_table.py
+    final_NT_word_table_filename = 'OET-LV_NT_word_table.tsv' # Will be made later by add_tags_to_NT_word_table.py
     table_filepath = VLT_GLOSS_ESFM_OUTPUT_FOLDERPATH.joinpath( OUR_EXPORT_TABLE_FILENAME )
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Exporting ESFM auxilliary word table to {table_filepath}…" )
     next_word_number = 1 # word count includes variants
@@ -452,7 +452,7 @@ def export_esfm_literal_English_gloss() -> bool:
 \\usfm 3.0
 \\ide UTF-8
 \\rem ESFM v0.6 {BOS_BOOK_ID_MAP[book_number]}
-\\rem WORDTABLE {final_table_filename}
+\\rem WORDTABLE {final_NT_word_table_filename}
 \\rem The VLT source table used to create this file is Copyright © 2022 by https://GreekCNTR.org
 \\rem ESFM file created {datetime.now().strftime('%Y-%m-%d %H:%M')} by {PROGRAM_NAME_VERSION}
 \\h {BOOK_NAME_MAP[book_number]}

@@ -87,16 +87,16 @@ $(LV_OT_HTML) $(LV_NT_HTML): $(final_LV_OT_ESFM)  $(final_LV_NT_ESFM) convert_OE
 	@echo "\n\nRun ScriptedBibleEditor on OT ESFM files…\n"
 	@$(Python) $(SBE) ScriptedOTUpdates -qe
 	#@echo "\n\nCopying OT word and morpheme tables from modified_source_glossed_OSHB_ESFM/ to auto_edited_OT_ESFM/…\n"
-	#@cp ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_word_table.tsv
-	#@cp ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv
-	#@cp ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_lemma_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_lemma_table.tsv
+	#@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_word_table.tsv
+	#@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv
+	#@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_lemma_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_lemma_table.tsv
 	# Does SBE automatically do some of the above copying steps??? Well, it certainly wouldn't do both
 
 $(final_LV_OT_word_tables): $(expanded_OT_TSV_tables)
 	@echo "\n\nCopying OT word and morpheme tables from modified_source_glossed_OSHB_ESFM/ to auto_edited_OT_ESFM/…\n"
-	@cp ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_word_table.tsv
-	@cp ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv
-	@cp ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_lemma_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_lemma_table.tsv
+	@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_word_table.tsv
+	@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv
+	@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_lemma_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_lemma_table.tsv
 	# Does SBE automatically do some of the above copying steps??? Well, it certainly wouldn't do both
 
 $(final_LV_NT_ESFM): $(intermediate_LV_NT_ESFM) $(SBE) $(scripted_NT_updates) $(BTranslit) $(GreekTranslit) $(HebrewTranslit) $(expanded_NT_wordtable)
@@ -107,8 +107,8 @@ $(final_LV_NT_ESFM): $(intermediate_LV_NT_ESFM) $(SBE) $(scripted_NT_updates) $(
 	@echo "\n\nAdd people/places/referent tags to OET OT word table…\n"
 	@$(Python) add_tags_to_OT_word_table.py -e
 	@echo "\n\nCopying and renaming OT morpheme and lemma tables from glossed_OSHB/ to modified_source_glossed_OSHB_ESFM/…\n"
-	@cp ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv
-	@cp ../intermediateTexts/glossed_OSHB/all_glosses.lemmas.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_lemma_table.tsv
+	@cp -a ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv
+	@cp -a ../intermediateTexts/glossed_OSHB/all_glosses.lemmas.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_lemma_table.tsv
 
 $(intermediate_LV_OT_ESFM): $(expanded_OT_TSV_tables) extract_glossed_OSHB_OT_to_ESFM.py
 	@echo "\n\nExtract OT from TSV table to ESFM files…\n"
@@ -118,8 +118,8 @@ $(initial_OT_TSV_tables): $(WLC_OT_TSV_table) $(Clear_Bible_MaculaHebrew_OT_TSV)
 	@echo "\n\nApply glosses from Macula Hebrew to OT (and reorder)…\n"
 	@$(Python) apply_Clear_Macula_OT_glosses.py
 	# @echo "\n\nCopying and renaming OT word and morpheme tables from glossed_OSHB/ to modified_source_glossed_OSHB_ESFM/…\n"
-	# @cp ../intermediateTexts/glossed_OSHB/all_glosses.words.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv
-	# @cp ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv
+	# @cp -a ../intermediateTexts/glossed_OSHB/all_glosses.words.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv
+	# @cp -a ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv
 
 $(WLC_OT_TSV_table): $(short_OSHB_TSV) prepare_OSHB_for_glossing.py ourWLCHebrewGlosses.txt
 	@echo "\n\nExpand columns in OT TSV and add our custom glosses…\n"
@@ -148,13 +148,18 @@ $(intermediate_LV_NT_ESFM) $(original_NT_wordtable): $(CNTR_book_table) $(CNTR_c
 $(expanded_NT_wordtable): $(original_NT_wordtable) $(Clear_Bible_NT_lowfat_TSV) $(scripted_NT_updates) add_tags_to_NT_word_table.py $(BTranslit) $(HebrewTranslit) $(GreekTranslit)
 	@echo "\n\nAdd people/places/referent tags to OET NT word table…\n"
 	@$(Python) add_tags_to_NT_word_table.py -e
+	@echo "\n\nCopying final OET NT word table to OET-RV and BSB folders…\n"
+	@cp -a $(expanded_NT_wordtable) ../translatedTexts/ReadersVersion/
+	@cp -a $(expanded_NT_wordtable) /srv/FreelyGiven/OpenBibleData/copiedBibles/English/Berean.Bible/BSB/
 
 #=== RV stuff =======================
 
 $(final_RV_OT_word_tables): $(final_LV_OT_word_tables)
 	@echo "\n\nCopying OT morpheme and lemma tables from auto_edited_OT_ESFM/ to ReadersVersion/…\n"
-	@cp ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_morpheme_table.tsv
-	@cp ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_lemma_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_lemma_table.tsv
+	@cp -a ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_morpheme_table.tsv
+	@cp -a ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_lemma_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_lemma_table.tsv
+	@echo "\n\nCopying final OET OT word table to BSB folder…\n"
+	@cp -a ../translatedTexts/ReadersVersion/OET-LV_OT_word_table.tsv /srv/FreelyGiven/OpenBibleData/copiedBibles/English/Berean.Bible/BSB/
 
 $(RV_HTML): $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py convert_OET-RV_to_simple_HTML.py $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
 	@echo "\n\nConnect OET-RV words to OET-LV word numbers…\n"

@@ -1,4 +1,10 @@
 Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	RCase	Replace	Name	Comment
+# Fix joined words -- not sure why these are necessary (is it from Clear.Bible glosses???)
+									toanger			to_anger
+									todeath			to_death
+									intounfaithfulness			into_unfaithfulness
+
+# Our word substitutions
 									Anointed|Christ			Christ		Matt 1:16 -- gets replaced again below
 									Messiah			Christ		Matt 1:17 -- gets replaced again below
 

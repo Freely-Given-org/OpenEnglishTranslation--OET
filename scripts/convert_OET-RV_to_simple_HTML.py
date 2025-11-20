@@ -40,6 +40,7 @@ CHANGELOG:
     2025-06-24 Check for footnotes and xrefs ending in space
     2025-09-12 Handle bridged verses
     2025-09-18 Check equal numbers of open and close parentheses
+    2025-11-17 Handle s2 boxes allowing /r fields
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -61,10 +62,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Internals.InternalBibleInternals import getLeadingInt
 
 
-LAST_MODIFIED_DATE = '2025-10-16' # by RJH
+LAST_MODIFIED_DATE = '2025-11-17' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
-PROGRAM_VERSION = '0.88'
+PROGRAM_VERSION = '0.89'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -133,9 +134,12 @@ p.mt1 { font-size:1.8em; }
 p.mt2 { font-size:1.3em; }
 p.mt3 { font-size:1.1em; }
 p.mt1+p.mt2, p.mt2+p.mt1, p.mt1+p.mt3, p.mt2+p.mt3 { margin-top:-0.5em; }
-div.rightBox { float:right;
+div.rightS1Box { float:right;
         width:-moz-fit-content; width:fit-content;
         border:3px solid #73AD21; padding:0.2em; }
+div.rightS2Box { float:right;
+        width:-moz-fit-content; width:fit-content;
+        border:3px dashed blue; padding:0.2em; }
 p.s1 { margin-top:0.1em; margin-bottom:0.1em; font-weight:bold; }
 p.added_s1 { margin-top:0.1em; margin-bottom:0.1em; text-align:right; font-size:0.7em; color:grey; font-weight:bold; }
 p.r { margin-top:0; margin-bottom:0.1em; font-size:0.8em; }
@@ -968,7 +972,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
             try: V, rest = rest.split( ' ', 1 )
             except ValueError: V, rest = rest, ''
             if inRightDiv:
-                book_html = f'{book_html}</div><!--rightBox-->\n'
+                book_html = f'{book_html}</div><!--{inRightDiv}-->\n'
                 inRightDiv = False
             # We don't display the verse number for verse 1 (after chapter number)
             if '-' in V: # it's a verse range
@@ -1002,8 +1006,16 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                 inTable = False
             if marker == 's1':
                 assert not inRightDiv
-                book_html = f'{book_html}<div class="rightBox"><p class="{marker}"><span class="cv">{C}:{int(V)+1}</span> {rest}</p>\n'
-                inRightDiv = True
+                book_html = f'{book_html}<div class="rightS1Box"><p class="{marker}"><span class="cv">{C}:{int(V)+1}</span> {rest}</p>\n'
+                inRightDiv = 'rightS1Box'
+            elif marker == 's2':
+                # assert not inRightDiv, f"{BBB} {C}:{V} {marker=} {rest=} but {inRightDiv=}"
+                if inRightDiv: # when s2 immediately follows s1, or r after s1
+                    assert not inTable
+                    book_html = f'{book_html}</div><!--{inRightDiv}-->\n'
+                    inRightDiv = False
+                book_html = f'{book_html}<div class="rightS2Box"><p class="{marker}"><span class="cv">{C}:{getLeadingInt(V)+1}</span> {rest}</p>\n'
+                inRightDiv = 'rightS2Box'
             else:
                 book_html = f'{book_html}<p class="{marker}"><span class="cv">{C}:{getLeadingInt(V)+1}</span> {rest}</p>\n'
         elif marker == 'r':
@@ -1046,7 +1058,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                     link = f'<a href="{linkBBB}.html#C{linkC}V{linkV}">{restBit}</a>'
                 linkedBits.append(link)
                 lastBBB = linkBBB
-            book_html = f'{book_html}<p class="{marker}">({"; ".join( linkedBits )})</p></div><!--rightBox-->\n'
+            book_html = f'{book_html}<p class="{marker}">({"; ".join( linkedBits )})</p></div><!--{inRightDiv}-->\n'
             inRightDiv = False
         elif marker in ('p','q1','q2','m','mi','nb','pi1'):
             if inParagraph:
@@ -1055,7 +1067,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                 book_html = f'{book_html}</{inParagraph}>\n'
             elif inRightDiv:
                 assert not inTable
-                book_html = f'{book_html}</div><!--rightBox-->\n'
+                book_html = f'{book_html}</div><!--{inRightDiv}-->\n'
                 inRightDiv = False
             elif inTable:
                 book_html = f'{book_html}</table>\n'
@@ -1073,7 +1085,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
             assert not inTable
             if inRightDiv:
                 assert not inParagraph
-                book_html = f'{book_html}</div><!--rightBox-->\n'
+                book_html = f'{book_html}</div><!--{inRightDiv}-->\n'
                 inRightDiv = False
             elif inParagraph:
                 book_html = f'{book_html}</{inParagraph}>\n'
@@ -1084,7 +1096,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
             if inRightDiv:
                 assert not inParagraph
                 assert not inTable
-                book_html = f'{book_html}</div><!--rightBox-->\n'
+                book_html = f'{book_html}</div><!--{inRightDiv}-->\n'
                 inRightDiv = False
             if inParagraph:
                 book_html = f'{book_html}</{inParagraph}>\n'

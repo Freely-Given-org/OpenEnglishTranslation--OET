@@ -69,10 +69,10 @@ import sys
 sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitted to PyPI
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew #, transliterate_Greek
 
-LAST_MODIFIED_DATE = '2025-06-19' # by RJH
+LAST_MODIFIED_DATE = '2025-11-10' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET OT wordtable"
-PROGRAM_VERSION = '0.22'
+PROGRAM_VERSION = '0.23'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -292,37 +292,37 @@ def apply_OT_scripted_gloss_updates() -> bool:
                     iMarkers, eMarkers = fields[3].split(',') if fields[3] else [], fields[4].split(',') if fields[4] else []
                     iRefs, eRefs = fields[5].split(',') if fields[5] else [], fields[6].split(',') if fields[6] else []
                     for iBook in iBooks:
-                        assert iBook in BibleOrgSysGlobals.loadedBibleBooksCodes, iBook
+                        assert iBook in BibleOrgSysGlobals.loadedBibleBooksCodes, f"{iBook=}"
                     for eBook in eBooks:
-                        assert eBook in BibleOrgSysGlobals.loadedBibleBooksCodes, eBook
+                        assert eBook in BibleOrgSysGlobals.loadedBibleBooksCodes, f"{eBook=}"
                     for iRef in iRefs.copy(): # coz we might add more to the list
                         assert iRef.count('_')==1 and iRef.count(':') in (0,1), iRef # A chapter ref has no colon
                         iRefBits = iRef.split('_')
-                        assert iRefBits[0] in BibleOrgSysGlobals.loadedBibleBooksCodes, iRef
+                        assert iRefBits[0] in BibleOrgSysGlobals.loadedBibleBooksCodes, f"{iRef=}"
                         try:
                             iRefC, iRefV = iRefBits[1].split(':')
-                            assert iRefC[0].isdigit() and iRefV[0].isdigit(), iRef
+                            assert iRefC[0].isdigit() and iRefV[0].isdigit(), f"{iRef=}"
                         except ValueError: # no colon
                             iRefC = iRefBits[1]
-                            assert iRefC.isdigit(), iRef
+                            assert iRefC.isdigit(), f"{iRef=}"
                             # We don't know how many verses in this chapter, so we'll just do 150
                             for vv in range( 1, 150+1 ):
                                 iRefs.append( f'{iRef}:{vv}' ) # Append an iref for each verse in the chapter
-                        assert int(iRefC) <= BibleOrgSysGlobals.loadedBibleBooksCodes.getMaxChapters( iRefBits[0] ), iRef
+                        assert int(iRefC) <= BibleOrgSysGlobals.loadedBibleBooksCodes.getMaxChapters( iRefBits[0] ), f"{iRef=}"
                     for eRef in eRefs.copy(): # coz we might add more to the list
                         assert eRef.count('_')==1 and eRef.count(':') in (0,1), eRef # A chapter ref has no colon
                         eRefBits = eRef.split('_')
-                        assert eRefBits[0] in BibleOrgSysGlobals.loadedBibleBooksCodes, eRef
+                        assert eRefBits[0] in BibleOrgSysGlobals.loadedBibleBooksCodes, f"{eRef=}"
                         try:
                             eRefC, eRefV = eRefBits[1].split(':')
-                            assert eRefC[0].isdigit() and eRefV[0].isdigit(), eRef
+                            assert eRefC[0].isdigit() and eRefV[0].isdigit(), f"{eRef=}"
                         except ValueError: # no colon
                             eRefC = eRefBits[1]
-                            assert eRefC.isdigit(), eRef
+                            assert eRefC.isdigit(), f"{eRef=}"
                             # We don't know how many verses in this chapter, so we'll just do 150
                             for vv in range( 1, 150+1 ):
                                 eRefs.append( f'{eRef}:{vv}' ) # Append an eref for each verse in the chapter
-                        assert int(eRefC) <= BibleOrgSysGlobals.loadedBibleBooksCodes.getMaxChapters( eRefBits[0] ), eRef
+                        assert int(eRefC) <= BibleOrgSysGlobals.loadedBibleBooksCodes.getMaxChapters( eRefBits[0] ), f"{eRef=}"
                     # print( f"From '{name}' ({givenFilepath}) have {searchText=} {replaceText=} {tags=}" )
 
                     # Adjust and save the fields

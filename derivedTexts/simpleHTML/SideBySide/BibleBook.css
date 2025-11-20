@@ -4,7 +4,8 @@ button#marksButton { float:right; }
 
 div.container { display:grid; column-gap:0.6em; grid-template-columns:0.85fr 1.15fr; }
 div.BibleText { }
-div.rightBox { float:right; width:35%; border:3px solid #73AD21; padding:0.2em; }
+div.rightS1Box { float:right; width:35%; border:3px solid #73AD21; padding:0.2em; }
+div.rightS2Box { float:right; width:35%; border:3px dashed blue; padding:0.2em; }
 div.unusedOLWord { color:darkGrey; } /* For the word files */
 
 span.upLink { font-size:1.5em; font-weight:bold; }

@@ -23,9 +23,12 @@ p.mt1 { font-size:1.8em; }
 p.mt2 { font-size:1.3em; }
 p.mt3 { font-size:1.1em; }
 p.mt1+p.mt2, p.mt2+p.mt1, p.mt1+p.mt3, p.mt2+p.mt3 { margin-top:-0.5em; }
-div.rightBox { float:right;
+div.rightS1Box { float:right;
         width:-moz-fit-content; width:fit-content;
         border:3px solid #73AD21; padding:0.2em; }
+div.rightS2Box { float:right;
+        width:-moz-fit-content; width:fit-content;
+        border:3px dashed blue; padding:0.2em; }
 p.s1 { margin-top:0.1em; margin-bottom:0.1em; font-weight:bold; }
 p.added_s1 { margin-top:0.1em; margin-bottom:0.1em; text-align:right; font-size:0.7em; color:grey; font-weight:bold; }
 p.r { margin-top:0; margin-bottom:0.1em; font-size:0.8em; }

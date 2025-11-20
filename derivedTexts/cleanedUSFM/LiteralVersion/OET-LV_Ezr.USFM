@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2025-11-05 12:10 by extract_glossed_OSHB_OT_to_ESFM v0.62
+\rem ESFM file created 2025-11-20 11:29 by extract_glossed_OSHB_OT_to_ESFM v0.62
 \rem USFM file edited by ScriptedBibleEditor v0.34
 \h ˊEzrāʼ
 \toc1 ˊEzrāʼ
@@ -14,13 +14,13 @@
 \mt1 ˊEzrāʼ
 \c 1
 \nb
-\v 1 And=in=year_of one to/for=Coresh the_king_of Pāraş in_order_to= the_message_of =fulfill of_\nd YHWH\nd* by÷mouth_of Yirmə\sup yāh\sup*/(Jeremiah) \nd YHWH\nd* he_stirred_up DOM the_spirit_of Kōresh/(Cyrus) the_king_of Pāraş and÷sent a_proclamation in=all his/its=kingdom and=also in/on/at/with÷writing to=say.
+\v 1 And=in=year_of one to/for=Kōresh/(Coresh/Cyrus) the_king_of Pāraş in_order_to= the_message_of =fulfill of_\nd YHWH\nd* by÷mouth_of Yirmə\sup yāh\sup*/(Jeremiah) \nd YHWH\nd* he_stirred_up DOM the_spirit_of Kōresh/(Cyrus/Kōresh) the_king_of Pāraş and÷sent a_proclamation in=all his/its=kingdom and=also in/on/at/with÷writing to=say.
 \v 2 Thus Kōresh he_says the_king_of Pāraş all_of the_kingdoms_of the=earth/land he_has_given to=me \nd YHWH\nd* the_god_of the=heavens and=he he_has_appointed to÷me to÷build to=him/it a_house in/on/at/with÷Yərūshālam/(Jerusalem) which in/on/at/with÷Yəhūdāh/(Judah).
 \v 3 Who in/on/at/with÷you(pl) from=all people_of÷his may_he_be his/its=god with=him/it and÷go_up to÷Yərūshālam/(Jerusalem) which in/on/at/with÷Yəhūdāh and÷build DOM the_house_of \nd YHWH\nd* the_god_of Yisrā\sup ʼēl\sup*/(Israel) he the=ʼElohīm who in/on/at/with÷Yərūshālam/(Jerusalem).
 \v 4 And=all the÷survivor from=all the÷place where he \add is\add*_sojourning there assisted÷him the_people_of place_of÷that in/on/at/with÷silver and÷in/on/at/with÷gold and÷in/on/at/with÷goods and÷in/on/at/with÷livestock with the÷freewill_offering for÷house_of the=ʼElohīm which in/on/at/with÷Yərūshālam/(Jerusalem).
 \v 5 And= the_heads_of =prepared the÷families of÷Yəhūdāh and÷Binyāmīn and÷the÷priests and÷the÷Lēviyyiy to=all/each/any/every \add one_whom\add*_he_had_stirred_up the=ʼElohīm DOM his/its=breath/wind/spirit to÷go_up to÷rebuild DOM the_house_of \nd YHWH\nd* which in/on/at/with÷Yərūshālam/(Jerusalem).
 \v 6 And=all neighbours_of÷their they_strengthened in/on/at/with÷hands_of÷them in/on/at/with÷articles_of silver in/on/at/with÷gold in/on/at/with÷goods and=on/over=cattle/livestock and÷in/on/at/with÷valuable_gifts in÷addition_to (on) all_of offering_of_freewill_offerings.
-\v 7 and÷the÷king Kōresh/(Cyrus) he_brought_out DOM the_vessels_of the_house_of \nd YHWH\nd* which he_had_brought_out Nəⱱūkadneʦʦar from÷Yərūshālam/(Jerusalem) and÷placed÷them in=house_of his/its=god.
+\v 7 and÷the÷king Kōresh/(Cyrus/Kōresh/(Coresh/Cyrus)) he_brought_out DOM the_vessels_of the_house_of \nd YHWH\nd* which he_had_brought_out Nəⱱūkadneʦʦar from÷Yərūshālam/(Jerusalem) and÷placed÷them in=house_of his/its=god.
 \v 8 And÷brought_out÷them\f + \fr 1:8 \ft OSHB note: We read one or more accents in L differently from BHQ.\f*\f + \fr 1:8 \ft OSHB note: We read one or more vowels in L differently from BHS.\f* Kōresh the_king_of Pāraş on the_hand_of Mitrədāt the÷treasurer and÷counted_out÷them to÷Shēshəbaʦʦar the÷prince of÷Yəhūdāh/(Judah).
 \v 9 And=these inventory_of÷their basins_of gold thirty basins_of silver one_thousand knives nine and=twenty.
 \v 10 bowls_of gold thirty bowls_of silver second_order four hundred(s) and÷ten vessels other one_thousand.
@@ -51,7 +51,7 @@
 \v 22 the_men_of Nəţofāh fifty and÷six.
 \v 23 The_men_of ˊAntotī one_hundred twenty and÷eight.
 \v 24 the_descendants_of ˊAzmāvet forty and÷two.
-\v 25 the_descendants_of Qiryat Kəfīrāh and÷Beeroth seven hundred(s) and÷twenty and÷one.
+\v 25 the_descendants_of Qiryat Kephirah and÷Beeroth seven hundred(s) and÷twenty and÷one.
 \v 26 the_descendants_of the÷Rāmāh and÷Geⱱaˊ six hundred(s) twenty and÷one.
 \v 27 the_men_of Mikmāş one_hundred twenty and÷two.
 \v 28 the_men_of Bēyt- \sup ʼēl\sup* and÷the÷ˊAy two_hundred twenty and÷three.
@@ -105,7 +105,7 @@
 \v 4 And=they_made DOM the_festival_of the÷booths as_the÷written and÷burnt_offerings_of a_day in/on=day in/on/at/with÷number according_to÷ordinance_of \add the\add*_matter_of a_day in=its=day.
 \v 5 And=after so\f + \fr 3:5 \ft OSHB exegesis note: A single word in the text has been divided for exegesis.\f* a_burnt_offering_of continuity and÷for_the÷new_moon and=to/for=all the_appointed_times_of \nd YHWH\nd* the÷offerings and=to/for=all \add one_who\add*_offered a_freewill_offering to/for=\nd YHWH\nd*.
 \v 6 From÷day one of_the÷month the=seventh they_began to÷offer burnt_offerings to/for=\nd YHWH\nd* and÷temple_of \nd YHWH\nd* not it_was_founded.
-\v 7 And÷gave money to_the÷masons and÷to_the÷carpenters and÷food and÷drink and÷oil to_the÷Tsīdonī/(Sidonians) and÷to_the÷Tsorī/(Tyrians) to=bring wood(s)_of cedar(s) from the÷Ləⱱānōn to the_sea_of Yāfō/(Joppa) according_to÷authorization_of Kōresh/(Cyrus) the_king_of Pāraş had÷they.
+\v 7 And÷gave money to_the÷masons and÷to_the÷carpenters and÷food and÷drink and÷oil to_the÷Tsīdonī/(Sidonians) and÷to_the÷Tsorī/(Tyrians) to=bring wood(s)_of cedar(s) from the÷Ləⱱānōn to the_sea_of Yāfō/(Joppa) according_to÷authorization_of Kōresh/(Cyrus/Kōresh/(Coresh/Cyrus)) the_king_of Pāraş had÷they.
 \v 8 and÷in/on/at/with÷year the=second(fs) after÷coming÷their to the_house_of the=ʼElohīm at÷Yərūshālam/(Jerusalem) in/on/at/with÷month the=second Zərubāⱱel they_began the_son_of Shəʼaltiy\sup ʼēl\sup* and÷Yēshūˊa/(Jeshua) the_son_of Yōʦādāq/(Jozadak) and÷rest_of brothers_of÷their the÷priests and÷the÷Lēviyyiy and=all the=(ones_who)_went from÷the÷captivity Yərūshālam/(Jerusalem) and÷appointed DOM the÷Lēviyyiy from÷son_of twenty year[s] and÷upward to÷supervise over the_work_of the_house_of \nd YHWH\nd*.
 \v 9 and= Yēshūˊa =joined sons_of÷his and÷brothers_of÷his Qadmī\sup ʼēl\sup* and÷sons_of÷his the_sons_of Yəhūdāh/(Judah) as÷one to÷took_charge over the_doer[s]_of the÷workers in=house_of the=ʼElohīm the_sons_of Ḩēnādād sons_of÷their and÷brothers_of÷them the÷Lēviyyiy.
 \v 10 And÷laid_the_foundation the÷builders DOM the_temple_of \nd YHWH\nd* and÷stationed the÷priests fully_clothed in/on/at/with÷trumpets and÷the÷Lēviyyiy the_sons_of ʼĀşāf in/on/at/with÷cymbals to÷praise DOM \nd YHWH\nd* on the_hands_of Dāvid the_king_of Yisrā\sup ʼēl\sup*/(Israel).
@@ -116,7 +116,7 @@
 \nb
 \v 1 and= the_foes_of =they_heard of_Yəhūdāh/(Judah) and÷Binyāmīn if/because_that the_children_of the÷exile a_temple \add were\add*_building to/for=\nd YHWH\nd* the_god_of Yisrā\sup ʼēl\sup*/(Israel).
 \v 2 And÷approached (to) Zərubāⱱel and=near/to the_heads_of the÷families and=they_said to/for=them let_us_build with÷you(pl) if/because like we_seek to÷god_of÷your(pl) and÷to\f + \fr 4:2 \ft OSHB variant note: ו/לא: (x-qere) 'וְ/ל֣/וֹ': lemma=c/l n=0.1.2.0 morph=HC/R/Sp3ms id=15ozy וְ/ל֣/וֹ\f* we \add have_been\add*_sacrificing since÷days_of ʼĒşar- ḩaddōn the_king_of ʼAshshūr the÷brought DOM÷us here.
-\v 3 And=he/it_said to/for=them Zərubāⱱel and÷Yēshūˊa/(Jeshua) and÷rest_of the_heads_of the÷families of÷Yisrā\sup ʼēl\sup*/(Israel) not to/for=you(pl) and÷with÷us in÷building a_house to÷god_of÷our if/because we together we_will_build_\add it\add* to/for=\nd YHWH\nd* the_god_of Yisrā\sup ʼēl\sup*/(Israel) just=as commanded÷us the=king Kōresh/(Cyrus) the_king_of Pāraş.
+\v 3 And=he/it_said to/for=them Zərubāⱱel and÷Yēshūˊa/(Jeshua) and÷rest_of the_heads_of the÷families of÷Yisrā\sup ʼēl\sup*/(Israel) not to/for=you(pl) and÷with÷us in÷building a_house to÷god_of÷our if/because we together we_will_build_\add it\add* to/for=\nd YHWH\nd* the_god_of Yisrā\sup ʼēl\sup*/(Israel) just=as commanded÷us the=king Kōresh/(Cyrus/Kōresh/(Coresh/Cyrus)) the_king_of Pāraş.
 \v 4 And=he/it_was the_people_of the=earth/land \add were\add*_making_drop the_hands_of the_people_of Yəhūdāh and÷made_afraid\f + \fr 4:4 \ft OSHB variant note: ו/מבלהים: (x-qere) 'וּֽ/מְבַהֲלִ֥ים': lemma=c/926 morph=HC/Vprmpa id=15Atm וּֽ/מְבַהֲלִ֥ים\f* DOM÷them to÷build.
 \v 5 And÷bribed against÷them counsellors to÷frustrate plan_of÷their all_of the_days_of Kōresh the_king_of Pāraş and=unto the_reign_of Dārəyāvesh the_king_of Pāraş.
 \v 6 And÷in/on/at/with÷reign_of ʼAḩashvērōsh in/on/at/with÷beginning_of his/its=kingdom they_wrote an_accusation on the_inhabitants_of Yəhūdāh/(Judah) and÷Yərūshelēm/(Jerusalem).
@@ -152,7 +152,7 @@
 \v 10 And÷also names_of÷their we_asked of÷them\f + \fr 5:10 \ft OSHB note: We read the punctuation in L differently from BHQ.\f*\f + \fr 5:10 \ft OSHB note: We read punctuation in L differently from BHS.\f* for÷information÷your (diy)_that we_will_write the_name_of men÷the who in/on/at/with÷head_of÷their.
 \v 11 and÷this reply÷the gave÷us to÷saying we they servants_of÷him (diy)_of the_god_of the=heavens and÷earth÷the and÷rebuilding house÷the which it_was built from÷before_of this years many and÷king of÷Yisrā\sup ʼēl\sup*/(Israel) great built÷which and÷finished÷him.
 \v 12 But from that they_enraged fathers_of÷our to=god the=heavens he_gave them in/on/at/with÷hand_of Nəⱱūkadneʦʦar the_king_of Bāⱱel chaldean÷the\f + \fr 5:12 \ft OSHB variant note: כסדי/א: (x-qere) 'כַּסְדָּאָ֑/ה': lemma=3679 n=1 morph=ANgmsd/Td id=15mxT כַּסְדָּאָ֑/ה\f* and÷house÷the this destroyed÷him and÷people÷the he_took_into_exile to÷Bāⱱel.
-\v 13 nevertheless in=year one to/for=Coresh Oh/the=king (diy)_of Bāⱱel Kōresh/(Cyrus) Oh/the=king he_made a_decree the_house_of the=god this to÷rebuild.
+\v 13 nevertheless in=year one to/for=Kōresh/(Coresh/Cyrus) Oh/the=king (diy)_of Bāⱱel Kōresh/(Cyrus/Kōresh) Oh/the=king he_made a_decree the_house_of the=god this to÷rebuild.
 \v 14 And÷also vessels÷the (diy)_of the_house_of the=god (diy)_of gold÷the and÷silver÷the which Nəⱱūkadneʦʦar he_had_brought_out from temple÷the which in/on/at/with÷Yərūshelēm/(Jerusalem) and÷brought them to÷temple÷the (diy)_of Bāⱱel he_brought_out them Kōresh Oh/the=king from temple÷the (diy)_of Bāⱱel and÷delivered to÷Sheshbazzar his/its=name whom governor appointed÷him.
 \v 15 And=he/it_said to=him/it these\f + \fr 5:15 \ft OSHB variant note: אלה: (x-qere) 'אֵ֚ל': lemma=412 n=1.2.0 morph=ANcmsa id=15vkL אֵ֚ל\f* vessels÷the take go deposit them in/on/at/with÷temple÷the which in/on/at/with÷Yərūshelēm/(Jerusalem) and÷house_of the=god let_it_be_built on site_of÷its.
 \v 16 then Sheshbazzar this he_came he_laid foundations÷the (diy)_of the_house_of the=god which in/on/at/with÷Yərūshelēm/(Jerusalem) and=from then and=unto now \add it\add*_\add is\add*_being_built and÷not \add it\add*_\add is\add*_finished.
@@ -161,7 +161,7 @@
 \nb
 \v 1 in=then Dārəyāvesh Oh/the=king he_made a_decree and÷searched in=house_of archives÷the where treasury÷the \add were\add*_deposited there in/on/at/with÷Bāⱱel.
 \v 2 And÷found in/on/at/with÷ʼAḩmətāʼ in/on/at/with÷citadel÷the which in/on/at/with÷Māday province÷the a_scroll one and=thus/so/as_follows it_was_written in/on/at/with÷within_of÷it record÷this.
-\v 3 in=year one to/for=Coresh Oh/the=king Kōresh/(Cyrus) Oh/the=king he_made a_decree the_house_of the=god in/on/at/with÷Yərūshelēm/(Jerusalem) house÷the let_it_be_built a_place which \add they\add*_\add were\add*_sacrificing sacrifices and÷foundations_of÷its \add be\add*_retained height_of÷its cubits sixty width_of÷its cubits sixty.
+\v 3 in=year one to/for=Kōresh/(Coresh/Cyrus) Oh/the=king Kōresh/(Cyrus/Kōresh) Oh/the=king he_made a_decree the_house_of the=god in/on/at/with÷Yərūshelēm/(Jerusalem) house÷the let_it_be_built a_place which \add they\add*_\add were\add*_sacrificing sacrifices and÷foundations_of÷its \add be\add*_retained height_of÷its cubits sixty width_of÷its cubits sixty.
 \v 4 Rows (diy)_of stone_of rolling three and÷layer (diy)_of timber new and÷cost÷the from the_house_of Oh/the=king let_it_be_given.
 \v 5 And÷also the_vessels_of the_house_of the=god (diy)_of gold÷the and÷silver÷the which Nəⱱūkadneʦʦar he_brought_out from temple÷the which in/on/at/with÷Yərūshelēm/(Jerusalem) and÷brought to÷Bāⱱel let_them_send_back and÷brought to÷temple÷the which in/on/at/with÷Yərūshelēm/(Jerusalem) to÷place_of÷its and÷put in=house_of the=god.
 \v 6 now Oh_Tattənay the_governor_of the_region_beyond river÷the Shətar- Bozenai and÷associates_of÷their\f + \fr 6:6 \ft OSHB note: We read one or more accents in L differently from BHQ.\f* envoys÷the who in/on/at/with÷province_beyond river÷the far be from there.
@@ -172,7 +172,7 @@
 \v 11 And÷from_of÷I a_decree it_is_made (diy)_that every_of person who edict÷the he_will_violate this a_beam let_it_be_pulled_away from house_of÷his and÷raised_up let_him_be_impaled on÷it and÷house_of÷his a_refuse-heap let_it_be_made on this.
 \v 12 And÷god÷the who he_has_caused_to_dwell his/its=name there may_he_overthrow every_of king and÷people who he_will_stretch_out hand_of÷his to÷alter to÷destroy the_house_of the=god this which in/on/at/with÷Yərūshelēm/(Jerusalem) I Dārəyāvesh I_make a_decree diligently let_it_be_done.
 \v 13 then Tattənay the_governor_of the_region_beyond river÷the Shətar- Bozenai and÷associates_of÷their because_of that he_had_sent Dārəyāvesh Oh/the=king accordingly diligently they_did.
-\v 14 And÷elders_of jews÷the \add were\add*_building and÷prospered in/on/at/with÷prophesying_of Ḩaggay prophet÷the\f + \fr 6:14 \ft OSHB variant note: נביא/ה: (x-qere) 'נְבִיָּ֔/א': lemma=5029 n=1.1 morph=ANcmpd/Td id=15xRq נְבִיָּ֔/א\f* and÷Zəkar\sup yāh\sup* the_son_of ˊIddō and÷building and÷finished according_to the_decree_of the_god_of Yisrā\sup ʼēl\sup*/(Israel) and÷by÷decree_of Kōresh/(Cyrus) and÷Dārəyāvesh and÷ʼArtaḩshashtāʼ the_king_of Pāraş.
+\v 14 And÷elders_of jews÷the \add were\add*_building and÷prospered in/on/at/with÷prophesying_of Ḩaggay prophet÷the\f + \fr 6:14 \ft OSHB variant note: נביא/ה: (x-qere) 'נְבִיָּ֔/א': lemma=5029 n=1.1 morph=ANcmpd/Td id=15xRq נְבִיָּ֔/א\f* and÷Zəkar\sup yāh\sup* the_son_of ˊIddō and÷building and÷finished according_to the_decree_of the_god_of Yisrā\sup ʼēl\sup*/(Israel) and÷by÷decree_of Kōresh/(Cyrus/Kōresh/(Coresh/Cyrus)) and÷Dārəyāvesh and÷ʼArtaḩshashtāʼ the_king_of Pāraş.
 \v 15 house÷the And÷completed this until day three of÷month_of of_Adar which it \add was\add*_year_of six of=(the)_reign of_Dārəyāvesh Oh/the=king.
 \v 16 and= the_people_of =celebrated of_Yisrā\sup ʼēl\sup*/(Israel) priests÷the and÷levites÷the and÷rest_of the_people_of exile÷the the_dedication_of the_house_of the=god this in/on/at/with÷joy.
 \v 17 And÷offered for÷dedication_of the_house_of the=god this bulls one_hundred rams two_hundred lambs four hundred and÷male_goats_of goats as÷sin_offering\f + \fr 6:17 \ft OSHB variant note: ל/חטיא: (x-qere) 'לְ/חַטָּאָ֤ה': lemma=l/2402 morph=AR/Vpc id=15Upn לְ/חַטָּאָ֤ה\f* on all_of Yisrā\sup ʼēl\sup*/(Israel) two_plus_of ten according_to÷number_of the_tribes_of Yisrā\sup ʼēl\sup*/(Israel).
@@ -289,7 +289,7 @@
 \v 19 And÷gave hands_of÷themselves to÷put_away wives_of÷their and÷guilt_offering a_ram_of \add the\add*_flock on guilt_of÷their.
 \v 20 and÷from÷descendants_of ʼImmēr Ḩₐnānī and÷Zəⱱad\sup yāh\sup*.
 \v 21 and÷from÷descendants_of Ḩārim Maˊₐsē\sup yāh\sup* and÷ʼĒliy\sup yāh\sup* and÷Shəmaˊ\sup yāh\sup* and÷Yəḩī\sup ʼēl\sup*/(Yəˊī\sup ʼēl\sup*/(Jehiel)) and÷ˊUzziy\sup yāh\sup*.
-\v 22 And÷from÷descendants_of Fashḩūr ʼElyəhōˊēynay Maˊₐsē\sup yāh\sup* Yishmāˊ\sup ʼēl\sup*/(Ishmael) Nətan\sup ʼēl\sup* Yōzāⱱād/(Jozabad) and÷ʼElˊāsāh.
+\v 22 And÷from÷descendants_of Fashḩūr ʼElyəhōˊēynay Maˊₐsē\sup yāh\sup* Ishmael Nətan\sup ʼēl\sup* Yōzāⱱād/(Jozabad) and÷ʼElˊāsāh.
 \v 23 and=from the÷Lēviyyiy Yōzāⱱād and÷Shimˊī and÷Qēlā\sup yāh\sup* it \add is\add*_Qəlīţāʼ Pətaḩ\sup yāh\sup* Yəhūdāh/(Judah) and÷ʼElīˊezer.
 \v 24 and=from the÷singers ʼElyāshiyⱱ and=from the÷gatekeepers Shallūm and÷Ţelem and÷ʼŪrī.
 \v 25 and÷of÷Yisrā\sup ʼēl\sup*/(Israel) from=(the)_sons of_Farˊosh/(Parosh) Rmə\sup yāh\sup* and÷Yizziy\sup yāh\sup*/(Izziah) and÷Malkīy\sup yāh\sup* and÷Miyyāmin and÷ʼElˊāzār and÷Malkīy\sup yāh\sup* and÷Bənā\sup yāh\sup*.
