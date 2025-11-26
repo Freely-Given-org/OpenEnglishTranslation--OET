@@ -1,4 +1,4 @@
-\id NUM - Open English Translation—Readers' Version (OET-RV) v0.0.03
+\id NUM - Open English Translation—Readers' Version (OET-RV) v0.0.04
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 NUM
@@ -553,7 +553,7 @@
 \v 22 ◙
 \v 23 ◙
 \c 10
-\s1 The trumpets pelata
+\s1 The silver trumpets
 \rem /s1 The Silver Trumpets
 \p
 \v 1 ◙
@@ -691,7 +691,6 @@
 \s1 The spies
 \rem /s1 Exploring Canaan; Spies Sent into Canaan; Twelve Scouts Explore Canaan; The Spies
 \r (Deu. 1:19-33)
-\rem /r (Deuteronomy 1.19-33)
 \p
 \v 1 ◙
 \v 2 ◙
@@ -790,7 +789,6 @@
 \s1 The invasion of Yisrael's descendants defeated them
 \rem /s1 The First Attempt to Invade the Land
 \r (Deu. 1:41-46)
-\rem /r (Deuteronomy 1.41-46)
 \p
 \v 39 ◙
 \v 40 ◙
@@ -1032,7 +1030,6 @@
 \s1 The happenings there to Kadis
 \rem /s1 The Waters of Meribah; Events at Kadesh; Moses Strikes the Rock; Water From the Rock
 \r (Exo. 17:1-7)
-\rem /r (Exodus 17.1-7)
 \p
 \v 1 ◙
 \p
@@ -1115,10 +1112,9 @@
 \p …
 \v 19 ◙
 \v 20 ◙
-\s1 The defeat of Sihun and of Ug
+\s1 The defeat of Sihon and of Og
 \rem /s1 Victory over King Sihon and King Og; King Sihon Defeated; Defeat of Sihon and Og; Victory over Sihon and Og
 \r (Deu. 2:26–3:11)
-\rem /r (Deuteronomy 2.26—3.11)
 \p
 \v 21 ◙
 \v 22 ◙
@@ -1548,7 +1544,6 @@
 \s1 The selection of Joshua as replacement for Moses
 \rem /s1 Joshua to Succeed Moses; Joshua Chosen to Lead Israel; Joshua Is Chosen as Successor to Moses; Joshua Appointed Moses' Successor
 \r (Deu. 31:1-8)
-\rem /r (Deuteronomy 31.1-8)
 \p
 \v 12 \x + \xo 27:12-14: \xt Deu 3:23-27; 32:48-52.\x*◙
 \v 13 ◙
@@ -1566,10 +1561,9 @@
 \v 22 ◙
 \v 23 ◙
 \c 28
-\s1 The inaldew-day sacrificing
+\s1 The daily sacrificing
 \rem /s1 The Regular Offerings; The Daily Offerings; Daily Offerings
 \r (Exo. 29:38-46)
-\rem /r (Exodus 29.38-46)
 \p
 \v 1 ◙
 \v 2 ◙
@@ -1596,7 +1590,6 @@
 \s1 The offerings of Feast of Bread Not/None Leaven
 \rem /s1 The Passover; Offerings for the Passover; The Offerings at the Festival of Unleavened Bread; Offerings at Passover
 \r (Lev. 23:5-14)
-\rem /r (Leviticus 23.5-14)
 \p
 \v 16 \x + \xo 28:16: \xt Exo 12:1-13; Deu 16:1-2.\x*◙
 \v 17 \x + \xo 28:17-25: \xt Exo 12:14-20; 23:15; 34:18; Deu 16:3-8.\x*◙
@@ -1608,10 +1601,9 @@
 \v 23 ◙
 \v 24 ◙
 \v 25 ◙
-\s1 The sacrificing of Feast of Pegsawit
+\s1 The sacrificing of Feast of Harvest
 \rem /s1 The Offerings at the Harvest Festival; Offerings for the Festival of Harvest; Feast of Weeks; Offerings at the Festival of Weeks
 \r (Lev. 23:15-22)
-\rem /r (Leviticus 23.15-22)
 \p
 \v 26 \x + \xo 28:26-31: \xt Exo 23:16; 34:22; Deu 16:9-12.\x*◙
 \v 27 ◙
@@ -1623,7 +1615,6 @@
 \s1 The sacrificing of Feast of Pegparahing of Trumpets
 \rem /s1 Offerings at the Festival of Trumpets; The Offerings at the New Year Festival; Feast of Trumpets; Offerings for the Festival of Trumpets
 \r (Lev. 23:23-25)
-\rem /r (Leviticus 23.23-25)
 \p
 \v 1 ◙
 \v 2 ◙
@@ -1782,7 +1773,6 @@
 \s1 The tribes there to opposite bank of Jordan
 \rem /s1 The Tribes East of the Jordan; Conquest and Division of Transjordan; The Transjordan Tribes
 \r (Deu. 3:12-22)
-\rem /r (Deuteronomy 3.12-22)
 \p
 \v 1 ◙
 \v 2 ◙
@@ -1983,7 +1973,6 @@
 \s1 The cities refuge
 \rem /s1 Cities of Refuge; The Cities of Refuge
 \r (Deu. 19:1-13; Josh. 20:1-9)
-\rem /r (Deuteronomy 19.1-13; Joshua 20.1-9)
 \p
 \v 9 \x + \xo 35:9-28: \xt Deu 19:2-4; Josh 20:1-9.\x*◙
 \v 10 ◙
