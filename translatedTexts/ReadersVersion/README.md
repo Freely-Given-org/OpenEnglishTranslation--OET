@@ -57,7 +57,8 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 ## TODO list
 
 - Go thru NT and GEN to insert \add fields
-- Replace "whoever" with anyone
+- Replace 'whoever' with 'anyone'
+- Replace 'may' with 'can'
 - Manually mark nomina sacra in OET-RV???
 - Consider replacing J with Y, e.g., Jacob -> Yacob, John -> Yohan
 - Consider changing names still quite recognisable with only one letter difference, e.g., Lazarus -> Lazaros
