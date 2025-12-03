@@ -88,3 +88,4 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - 'house of Yahweh' vs 'Yahweh's temple' vs just 'temple'
 - treasuries vs storerooms and storehouses
 - gatekeepers -> 'the men guarding the gates'
+- all the feast/celebration names, e.g., ‘Festival of Shelters’
