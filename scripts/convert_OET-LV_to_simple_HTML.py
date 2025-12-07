@@ -34,6 +34,7 @@ CHANGELOG:
     2025-03-03 Handle added /nb fields (after chapter numbers)
     2025-06-24 Check for footnotes and xrefs ending in space
     2025-09-18 Check equal numbers of open and close parentheses
+    2025-12-08 Add character marker checks incl. nesting order
 """
 from gettext import gettext as _
 from typing import List, Tuple, Set, Optional
@@ -59,10 +60,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-09-19' # by RJH
+LAST_MODIFIED_DATE = '2025-12-08' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.84'
+PROGRAM_VERSION = '0.85'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -778,6 +779,30 @@ def produce_HTML_files() -> None:
             assert '  ' not in esfm_text, f"""Why do we have doubled spaces in {source_filename}: {esfm_text[esfm_text.index('  ')-20:esfm_text.index('  ')+22]}"""
             assert ' \\f*' not in esfm_text, f"""Why do we have footnote ending with space in {source_filename}: {esfm_text[esfm_text.index(' \\f*')-20:esfm_text.index(' \\f*')+22]}"""
             assert ' \\x*' not in esfm_text, f"""Why do we have xref ending with space in {source_filename}: {esfm_text[esfm_text.index(' \\x*')-20:esfm_text.index(' \\x*')+22]}"""
+            for lineNumber,line in enumerate( esfm_text.split( '\n' ), start=1 ):
+                for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
+                    # First check the overall count
+                    assert line.count( f'\\{characterMarker} ' ) == line.count( f'\\{characterMarker}*' ), f"{characterMarker} marker mismatch in {source_filename} {lineNumber}: '{line}'"
+                    # Now check the nesting of each character marker
+                    startIx = inCount = 0
+                    while True:
+                        openIx = line.find( f'\\{characterMarker} ', startIx )
+                        if openIx == -1: openIx = 999_999_999
+                        closeIx = line.find( f'\\{characterMarker}*', startIx )
+                        if closeIx == -1: closeIx = 999_999_999
+                        if openIx == closeIx:
+                            assert openIx == 999_999_999
+                            assert inCount == 0
+                            break
+                        if openIx < closeIx:
+                            inCount += 1
+                            assert inCount == 1, f"{characterMarker} marker bad nesting in {source_filename} {lineNumber}: '{line}'"
+                            startIx = openIx + 3
+                        else:
+                            assert closeIx < openIx
+                            inCount -= 1
+                            assert inCount == 0
+                            startIx = closeIx + 3
 
             book_start_html, book_html, book_end_html = convert_ESFM_to_simple_HTML( BBB, esfm_text, word_table )
 

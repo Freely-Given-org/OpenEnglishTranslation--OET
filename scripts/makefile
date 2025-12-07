@@ -1,6 +1,9 @@
 # OET makefile
 #
-# Last updated: 2025-10-27 by RJH
+# Last updated: 2025-12-06 by RJH
+#
+# CHANGELOG:
+#	2025-12-08 Copy OET LV OT & NT word tables into BSB and MSB folders
 #
 
 #=== Folder and file declarations =======================
@@ -148,9 +151,10 @@ $(intermediate_LV_NT_ESFM) $(original_NT_wordtable): $(CNTR_book_table) $(CNTR_c
 $(expanded_NT_wordtable): $(original_NT_wordtable) $(Clear_Bible_NT_lowfat_TSV) $(scripted_NT_updates) add_tags_to_NT_word_table.py $(BTranslit) $(HebrewTranslit) $(GreekTranslit)
 	@echo "\n\nAdd people/places/referent tags to OET NT word table…\n"
 	@$(Python) add_tags_to_NT_word_table.py -e
-	@echo "\n\nCopying final OET NT word table to OET-RV and BSB folders…\n"
+	@echo "\n\nCopying final OET NT word table to OET-RV and BSB/MSB folders…\n"
 	@cp -a $(expanded_NT_wordtable) ../translatedTexts/ReadersVersion/
 	@cp -a $(expanded_NT_wordtable) /srv/FreelyGiven/OpenBibleData/copiedBibles/English/Berean.Bible/BSB/
+	@cp -a $(expanded_NT_wordtable) /srv/FreelyGiven/OpenBibleData/copiedBibles/English/Berean.Bible/MSB/
 
 #=== RV stuff =======================
 
@@ -158,8 +162,9 @@ $(final_RV_OT_word_tables): $(final_LV_OT_word_tables)
 	@echo "\n\nCopying OT morpheme and lemma tables from auto_edited_OT_ESFM/ to ReadersVersion/…\n"
 	@cp -a ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_morpheme_table.tsv
 	@cp -a ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_lemma_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_lemma_table.tsv
-	@echo "\n\nCopying final OET OT word table to BSB folder…\n"
+	@echo "\n\nCopying final OET OT word table to BSB & MSB folders…\n"
 	@cp -a ../translatedTexts/ReadersVersion/OET-LV_OT_word_table.tsv /srv/FreelyGiven/OpenBibleData/copiedBibles/English/Berean.Bible/BSB/
+	@cp -a ../translatedTexts/ReadersVersion/OET-LV_OT_word_table.tsv /srv/FreelyGiven/OpenBibleData/copiedBibles/English/Berean.Bible/MSB/
 
 $(RV_HTML): $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py convert_OET-RV_to_simple_HTML.py $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
 	@echo "\n\nConnect OET-RV words to OET-LV word numbers…\n"

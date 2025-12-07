@@ -63,7 +63,6 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - Consider replacing J with Y, e.g., Jacob -> Yacob, John -> Yohan
 - Consider changing names still quite recognisable with only one letter difference, e.g., Lazarus -> Lazaros
 - Finish changing 'followers' to ‘apprentices’ where appropriate
-- Check consistency of keyterms, e.g., how is ‘son of God’, ‘holy spirit’, ‘kingdom of the heavens’ translated everywhere?
 - Compare parallel passages and choose the best renderings
 - Define and check style of s1 section headings, i.e., tense, perfects, etc.
 - Work on consistent two levels of major and minorsection headings (s1 and s2)
@@ -73,6 +72,8 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 
 ## Terms to make consistent
 
+- Check consistency of keyterms, e.g., how is ‘son of God’, ‘holy spirit’, ‘kingdom of the heavens’ translated everywhere?
+- David's town / city of David
 - 'c/k' names like 'Yacob'
 - 'b/v' names like 'Yakov'
 - 'ai/ay' names like 'Yeshai'
