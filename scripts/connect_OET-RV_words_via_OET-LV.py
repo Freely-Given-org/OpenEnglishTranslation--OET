@@ -307,6 +307,7 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     ('body','flesh'),
     ('boulders','stones'),
     ('box','ark'),
+    ('bull','ox'),('bulls','oxen'),
     ('but','But'),
     ('But','And'),
     ('carrying','carried'),
@@ -318,6 +319,7 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     ('countries','nations'),('country','nation'),
     ('countryside','field'),
     ('courtyard','court'),
+    ('cow','ox'),('cows','oxen'),
     ('creation','beginning'),
     ('crowd','multitude'),
     ('decide','purposed'),
@@ -824,6 +826,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
     totalSimpleListedAddsNS = totalProperNounAddsNS = totalFirstPartMatchedAddsNS = totalManualMatchedAddsNS = 0 # Nomina sacra
     for BBB,lvBookObject in lv.books.items():
         if BBB not in ('DEU','PRO',): continue
+        if BBB in ('CO1',): continue # CO1_14:33 gives an issue
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Processing connect words for OET {BBB}…" )
 
         bookSimpleListedAdds = bookProperNounAdds = bookFirstPartMatchedAdds = bookManualMatchedAdds = 0
