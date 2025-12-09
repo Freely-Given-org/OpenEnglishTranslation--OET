@@ -1,4 +1,4 @@
-\id 2PE - Open English Translation—Readers' Version (OET-RV) v0.1.51
+\id 2PE - Open English Translation—Readers' Version (OET-RV) v0.1.52
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 PE2
@@ -16,7 +16,7 @@
 \io1 Introduction \ior 1:1-2\ior*
 \io1 The calling of Christians \ior 1:3-21\ior*
 \io1 False teachers \ior 2:1-22\ior*
-\io1 The return of Yeshua the messiah \ior 3:1-18\ior*
+\io1 The messiah Yeshua's return \ior 3:1-18\ior*
 \rem This is still a very early look into the unfinished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
@@ -24,7 +24,7 @@
 \p
 \v 1 This \add letter is from\add* Simon¦151463 Peter (Grk: Simeon Petros¦151465), a slave¦151466 and messenger of Yeshua the \nd messiah¦151470\nd* (Grk: Yesou Christos), writing to those who have faith in the sinlessness of our \nd God¦151482\nd* and saviour¦151485 Yeshua \nd Messiah¦151470\nd* that's just as precious as our faith.
 \p
-\v 2 May you¦151490 experience much grace¦151489 and peace¦151492 through your knowledge¦151495 of \nd God¦151497\nd* and \nd Yeshua¦151499\nd* our¦151503 master.
+\v 2 May you¦151490 experience much grace¦151489 and peace¦151492 through your knowledge¦151495 of \nd God¦151497\nd* and \nd Yeshua¦151499\nd* our¦151503 \nd master¦151502\nd*.
 \s1 God's calling
 \rem /s1 Growing in the Knowledge of God; The Christian's Call and Election; Making One's Calling and Election Sure; God's Call and Choice; Living in the last days
 \p
@@ -33,20 +33,20 @@
 \v 5 For this same¦151571 reason, work hard to apply your¦151584 faith¦151583 adding moral excellence, and to that excellence add knowledge¦151592;
 \v 6 to that knowledge¦151596 add self-control; to that self-control add endurance; to that endurance add godliness;
 \v 7 to that godliness add brotherly concern; and to the brotherly concern add selfless love.
-\v 8 Because¦151625 if these¦151624 things are part of you¦151626 and¦151629 continually increasing, your knowledge¦151644 of our¦151641 master \nd Yeshua¦151642 Messiah¦151643\nd* won't become useless or unproductive.
+\v 8 Because¦151625 if these¦151624 things are part of you¦151626 and¦151629 continually increasing, your knowledge¦151644 of our¦151641 \nd master¦151640 Yeshua¦151642 Messiah¦151643\nd* won't become useless or unproductive.
 \v 9 But if these¦151649 things aren't¦151647 part of someone, that person is shortsighted as if they've forgotten that prior cleansing of their sins¦151661.
 \p
 \v 10 So¦151662 then fellow Christians, work hard to make your¦151673 calling¦151676 and election certain—that way you will never fall away—
-\v 11 and so you¦151692 will be richly¦151690 provided entry into the eternal¦151698 kingdom¦151700 of our¦151703 master and saviour¦151705 \nd Yeshua¦151707 Messiah¦151708\nd*.
+\v 11 and so you¦151692 will be richly¦151690 provided entry into the eternal¦151698 kingdom¦151700 of our¦151703 \nd master¦151702\nd* and saviour¦151705 \nd Yeshua¦151707 Messiah¦151708\nd*.
 \rem /s1 Paying Attention to Scripture; Prophecy of Scripture
 \p
 \v 12 Therefore¦151709 I intend to always¦151715 remind¦151717 you about these¦151719 things, even though you know them and are already established in the truth¦151730 that you know.
 \v 13 But¦151732 I consider¦151733 it¦151733 right¦151731, as long¦151735 as I live in this tent, to get you¦151742 stirred up with a reminder,
-\v 14 since I know that this tent of mine will soon be left behind as our¦151760 master \nd Yeshua¦151761 Messiah¦151762\nd* himself told me.
+\v 14 since I know that this tent of mine will soon be left behind as our¦151760 \nd master¦151759 Yeshua¦151761 Messiah¦151762\nd* himself told me.
 \v 15 And I will also make every effort to make sure that you¦151770 will always remember¦151777 these¦151776 things after¦151771 my departure¦151774.
 \rem /s1 Eyewitnesses of Christ's Glory
 \p
-\v 16 We didn't¦151779 follow¦151783 cleverly¦151781 crafted fables, but¦151795 rather having been eyewitnesses¦151796 of the majesty of our¦151789 master \nd Yeshua¦151790 Messiah¦151791\nd*, we¦151784 made his power¦151792 and¦151793 forthcoming return known¦151784 to you¦151785.
+\v 16 We didn't¦151779 follow¦151783 cleverly¦151781 crafted fables, but¦151795 rather having been eyewitnesses¦151796 of the majesty of our¦151789 \nd master¦151788 Yeshua¦151790 Messiah¦151791\nd*, we¦151784 made his power¦151792 and¦151793 forthcoming return known¦151784 to you¦151785.
 \v 17 \x + \xo 1:17-18: \xt Mat 17:1-5; Mrk 9:2-7; Luk 9:28-35.\x*Because¦151803 he received¦151802 the honour¦151808 and glory from \nd God¦151806\nd* the Father when a voice¦151811 spoke to him with magnificent glory saying, “This is my¦151824 son that I dearly love and who has pleased¦151833 me greatly.”
 \v 18 Indeed we heard¦151840 this voice¦151838 from heaven¦151843 ourselves as we had been taken with him¦151847 to the holy mountain¦151854.
 \p
@@ -66,47 +66,47 @@
 \v 6 \x + \xo 2:6: \xt Gen 19:24.\x*and if he reduced¦152028 the cities¦152023 of Sodom¦152024 and Gomorrah¦152026 to ashes¦152028 by a catastrophe which condemned¦152030 them to being an example¦152031 of what the ungodly¦152036 will become,
 \v 7 \x + \xo 2:7: \xt Gen 19:1-16.\x*and if he saved the righteous¦152040 man Lot¦152041 who was distressed¦152042 by the gross immorality of the lawless¦152047 people
 \v 8 and whose righteous soul was tormented¦152069 by seeing¦152053 and hearing¦152056 their lawlessness¦152067 day after day,
-\v 9 then the master knows how to rescue¦152076 godly¦152072 people from their trials, and knows how to keep the unrighteous¦152078 people to be punished¦152085 at the day¦152083 of judgement¦152084,
-\v 10 especially those who follow their fleshly¦152091 lusts¦152093 that defile¦152096 themselves and despise¦152100 his \add ≈being master over us\add*.
-\p Those bold, self-willed¦152103 people don't¦152106 worry about insulting¦152108 the glorious¦152104 ones,
-\v 11 whereas¦152109 even messengers¦152110 who are greater¦152115 in both strength¦152111 and¦152112 power¦152113 don't¦152117 slander¦152124 or pass the master's judgement¦152125 on those glorious ones.
+\v 9 then the \nd master¦152071\nd* knows how to rescue¦152076 godly¦152072 people from their trials, and knows how to keep the unrighteous¦152078 people to be punished¦152085 at the day¦152083 of judgement¦152084,
+\v 10 especially those who follow their fleshly¦152091 lusts¦152093 that defile¦152096 themselves and despise¦152100 his \add ≈being master¦152099 over us\add*.
+\p Those¦152102 bold, self-willed¦152103 people don't¦152106 worry about insulting¦152108 the glorious¦152104 ones,
+\v 11 whereas¦152109 even messengers¦152110 who are greater¦152115 in both strength¦152111 and¦152112 power¦152113 don't¦152117 slander¦152124 or pass the \nd master's¦152122\nd* judgement¦152125 on those glorious ones.
 \v 12 But these¦152126 men act like unthinking animals¦152131 that are born to be captured¦152137 and destroyed when they slander¦152144 concerning things they know nothing about, and they will bring about their¦152149 own destruction.
 \v 13 The harm they did will lead to their own harm as payment as their indulgence in broad daylight. They've become spots and¦152168 blemishes¦152169 as they feast¦152177 together with you¦152178 yet take joy in their deception.
 \v 14 Their eyes¦152179 are full of lust for adultery¦152182 and never cease to sin¦152186, and having trained¦152192 their hearts¦152191 in greed¦152193 they entice¦152188 unstable¦152190 people to become their cursed¦152196 offspring.
-\v 15 \x + \xo 2:15-16: \xt Num 22:4-35.\x*They have left the right path and gone astray, following¦152203 the path of Balaam¦152207 the son of Bosor¦152209 who loved¦152214 the wages of unrighteousness¦152213,
-\v 16 but he was scolded for his sin when a normally dumb donkey¦152221 spoke¦152227 to him with a man's voice¦152226 to stop his madness.
+\v 15 \x + \xo 2:15-16: \xt Num 22:4-35.\x*They have left the right path and gone astray, following¦152203 the path of Bosor's¦152209 son Balaam¦152207 who loved¦152214 the wages of unrighteousness¦152213,
+\v 16 but he was scolded for his sin when a \add normally\add* dumb donkey¦152221 spoke¦152227 to him with a man's voice¦152226 to stop his madness.
 \p
 \v 17 These¦152233 men are like waterless¦152236 fountains and like mists¦152238 driven¦152242 by storms¦152241, and the gloomy darkness is reserved for them
 \v 18 because¦152252 they¦152256 speak¦152255 vane and inflated words to entice¦152256 people to fleshly¦152259 lusts¦152258. Those who have just escaped¦152265 from the errors of their living
 \v 19 are promised¦152275 freedom¦152273, but they themselves have become slaves¦152277 to corruption¦152281, because¦152283 whatever a person has been defeated by is what they become a slave to.
-\v 20 Because¦152290 if they have escaped¦152291 the defilements¦152293 of the world¦152295 by their knowledge¦152297 of our master and saviour¦152302 \nd Yeshua¦152303 Messiah¦152304\nd* and yet get entangled¦152308 again¦152307, they are defeated and have ended up worse¦152315 off than at the beginning.
+\v 20 Because¦152290 if they have escaped¦152291 the defilements¦152293 of the world¦152295 by their knowledge¦152297 of our \nd master¦152299\nd* and saviour¦152302 \nd Yeshua¦152303 Messiah¦152304\nd* and yet get entangled¦152308 again¦152307, they are defeated and have ended up worse¦152315 off than at the beginning.
 \v 21 It would have been better¦152318 not to have known the way of righteousness¦152330, than having known it and to turn back from the holy instruction that was passed on to them.
 \v 22 \x + \xo 2:22: \xt Prv 26:11.\x*The proverb¦152353 is correct in what it says and has happened¦152346 to them: “A dog returns¦152355 to its¦152357 own vomit¦152359,” and “A sow that's been washed¦152362 wallows¦152364 in the mud again.”
 \c 3
-\s1 The return of Yeshua the messiah
+\s1 The messiah Yeshua's return
 \rem /s1 The Day of the Lord; The coming end; The Day of the Lord Is Coming; The Promise of the Lord's Coming
 \p
 \v 1 This is now my second¦152370 letter¦152373 to you my friends—both of which¦152375 were sent as reminders to stir up your¦152377 minds to sincerely¦152382
-\v 2 remember the messages¦152387 spoken¦152386 in the past by the holy prophets¦152391 as well as the instruction of the master and saviour¦152402 that came via your¦152396 apostles.
+\v 2 remember the messages¦152387 spoken¦152386 in the past by the holy prophets¦152391 as well as the instruction of the \nd master¦152400\nd* and saviour¦152402 that came via your¦152396 apostles.
 \v 3 \x + \xo 3:3: \xt Jude 18.\x*Firstly you should know that mockers¦152418 will come during the last days¦152415, scoffing, following their¦152420 own lusts¦152423
 \v 4 and¦152426 saying¦152427, “What about his¦152434 promised¦152431 return? Everything has just continued¦152443 as usual from the beginning¦152445 of creation¦152446 right past the time¦152436 when the ancestors¦152439 died.
 \v 5 \x + \xo 3:5: \xt Gen 1:6-9.\x*But because¦152448 of their desires, the truth is hidden from them that the universe came into being long ago by God's spoken command and the earth¦152458 was formed out of water and through¦152462 water
 \v 6 \x + \xo 3:6: \xt Gen 7:11.\x*and these same waters¦152477 deluged the ancient world¦152476 which¦152472 then perished¦152479.
 \v 7 But the present universe and the earth¦152486 have been preserved by that same¦152489 command, to be kept¦152495 for fire¦152494 in the day¦152497 of judgement¦152498 and destruction¦152501 of those who are ungodly¦152503.
 \p
-\v 8 \x + \xo 3:8: \xt Psa 90:4.\x*But don't¦152508 let this one thing escape¦152509 your attention my dear friends, that one day for us is like a thousand years with the master, and a thousand years is like one day.
-\v 9 The master isn't¦152528 slow in fulfilling his promise¦152533 as some consider¦152537 slowness¦152536, but is patient¦152539 toward¦152541 you¦152542—not wanting anyone to perish¦152548 but rather wanting everyone to come to repentance¦152553.
+\v 8 \x + \xo 3:8: \xt Psa 90:4.\x*But don't¦152508 let this one thing escape¦152509 your attention my dear friends, that one day for us is like a thousand years with the \nd master¦152517\nd*, and a thousand years is like one day.
+\v 9 The \nd master¦152531\nd* isn't¦152528 slow in fulfilling his promise¦152533 as some consider¦152537 slowness¦152536, but is patient¦152539 toward¦152541 you¦152542—not wanting anyone to perish¦152548 but rather wanting everyone to come to repentance¦152553.
 \p
-\v 10 \x + \xo 3:10: \xt Mat 24:43; Luk 12:39; 1Th 5:2; Rev 16:15.\x*But the day¦152558 of the master will come like a thief¦152561, when the universe will suddenly pass away, its components will burn up and be destroyed¦152574, and the earth¦152578 and what happened on it¦152582 will be examined.
+\v 10 \x + \xo 3:10: \xt Mat 24:43; Luk 12:39; 1Th 5:2; Rev 16:15.\x*But the day¦152558 of the \nd master¦152559\nd* will come like a thief¦152561, when the universe will suddenly pass away, its components will burn up and be destroyed¦152574, and the earth¦152578 and what happened on it¦152582 will be examined.
 \v 11 Since all these¦152589 things will be destroyed¦152595, what kind of people¦152596 should you¦152599 be? Holy and¦152605 godly in conduct¦152604,
 \v 12 waiting for and hastening the coming¦152611 of the day¦152616 of \nd God¦152614\nd* when the universe will be set alight and destroyed¦152621 and its components will melt as they burn up.
 \v 13 \x + \xo 3:13: \xt Isa 65:17; 66:22; Rev 21:1.\x*But we¦152643 await a new universe and¦152631 a new earth¦152633 filled with righteousness¦152646 according¦152637 to his¦152642 promise¦152640.
 \rem /s1 Final Exhortation and Doxology
 \p
 \v 14 And so dear friends, while you await these¦152651 events be eager and found¦152660 to be at peace¦152662 with him¦152659—spotless¦152655 and blameless¦152658.
-\v 15 And consider¦152670 the patience¦152668 of our master as leading to salvation¦152669 as our dear brother¦152677 Paul¦152678 wrote¦152685 to you¦152686 using the wisdom¦152684 that has been given¦152682 to him¦152683.
+\v 15 And consider¦152670 the patience¦152668 of our \nd master¦152666\nd* as leading to salvation¦152669 as our dear brother¦152677 Paul¦152678 wrote¦152685 to you¦152686 using the wisdom¦152684 that has been given¦152682 to him¦152683.
 \v 16 He speaks¦152693 in all his letters¦152692 concerning¦152697 these¦152698 things, some of which are hard to understand¦152704 and which ignorant¦152708 and unstable¦152710 people twist just like they twist the other¦152716 scriptures¦152717 to their¦152719 own destruction¦152723.
 \rem /s1 Peter's Final Words
 \p
 \v 17 So¦152725 knowing¦152727 this in advance dear friends, guard¦152730 yourselves in case you fall from your own stable position with the same errors as the lawless¦152735 ones.
-\v 18 Rather grow in the grace¦152747 and knowledge¦152749 of our¦152752 master and saviour¦152754 \nd Yeshua¦152755 Messiah¦152756\nd*. May the glory¦152759 be his, both now and through the days of eternity¦152765. May it¦152766 be so¦152766.
+\v 18 Rather grow in the grace¦152747 and knowledge¦152749 of our¦152752 \nd master¦152751\nd* and saviour¦152754 \nd Yeshua¦152755 Messiah¦152756\nd*. May the glory¦152759 be his, both now and through the days of eternity¦152765. May it¦152766 be so¦152766.

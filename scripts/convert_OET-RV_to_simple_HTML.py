@@ -41,6 +41,7 @@ CHANGELOG:
     2025-09-12 Handle bridged verses
     2025-09-18 Check equal numbers of open and close parentheses
     2025-11-17 Handle s2 boxes allowing /r fields
+    2025-12-08 Add nesting order check for USFM character markers
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -62,10 +63,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Internals.InternalBibleInternals import getLeadingInt
 
 
-LAST_MODIFIED_DATE = '2025-11-17' # by RJH
+LAST_MODIFIED_DATE = '2025-12-08' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
-PROGRAM_VERSION = '0.89'
+PROGRAM_VERSION = '0.90'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -825,7 +826,28 @@ def produce_HTML_files() -> None:
             assert invalid_text not in esfm_text, f"""Why do we have a useless paragraph in {source_filename}: {esfm_text[esfm_text.index(invalid_text)-20:esfm_text.index(invalid_text)+22]}"""
             for lineNumber,line in enumerate( esfm_text.split( '\n' ), start=1 ):
                 for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
-                    assert line.count( f'\\{characterMarker} ') == line.count( f'\\{characterMarker}*'), f"{characterMarker} marker mismatch in {source_filename} {lineNumber}: '{line}'"
+                    # First check the overall count
+                    assert line.count( f'\\{characterMarker} ' ) == line.count( f'\\{characterMarker}*' ), f"{characterMarker} marker mismatch in {source_filename} {lineNumber}: '{line}'"
+                    # Now check the nesting of each character marker
+                    startIx = inCount = 0
+                    while True:
+                        openIx = line.find( f'\\{characterMarker} ', startIx )
+                        if openIx == -1: openIx = 999_999_999
+                        closeIx = line.find( f'\\{characterMarker}*', startIx )
+                        if closeIx == -1: closeIx = 999_999_999
+                        if openIx == closeIx:
+                            assert openIx == 999_999_999
+                            assert inCount == 0
+                            break
+                        if openIx < closeIx:
+                            inCount += 1
+                            assert inCount == 1, f"{characterMarker} marker bad nesting in {source_filename} {lineNumber}: '{line}'"
+                            startIx = openIx + 3
+                        else:
+                            assert closeIx < openIx
+                            inCount -= 1
+                            assert inCount == 0
+                            startIx = closeIx + 3
                 if '\\x* ' in line: # this can be ok if the xref directly follows other text
                     logger = logging.critical if ' \\x ' in line else logging.warning
                     logger( f"Double-check space after xref in {source_filename} {lineNumber}: '{line}'" )

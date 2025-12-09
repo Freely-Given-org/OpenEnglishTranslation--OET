@@ -1,4 +1,4 @@
-\id AMO - Open English Translation—Readers' Version (OET-RV) v0.1.55
+\id AMO - Open English Translation—Readers' Version (OET-RV) v0.1.56
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 AMO
@@ -19,7 +19,7 @@
 \ie
 \c 1
 \p
-\v 1 \add This is\add* the message that Amos¦367692 (who was among the shepherds¦367696 in Tekoa¦367697) saw concerning Yisra'el \add (Israel¦367702)\add* in the days of King Uzziyah of Yehudah¦367711 \add (Judah)\add*, and also in the days of Yoash's¦367716 son King Yaraveam \add (Jeroboam)\add* of Yisrael, two years¦367719 before the earthquake¦367721.\x + \xo 1:1: a \xt 2Ki 15:1-7; 2Ch 26:1-23; \xo b \xt 2Ki 14:23-29.\x*
+\v 1 \add This is\add* the message¦367691 that Amos¦367692 (who was among the shepherds¦367696 in Tekoa¦367697) saw concerning Yisra'el \add (Israel¦367702)\add* in the days of King Uzziyah of Yehudah¦367711 \add (Judah)\add*, and also in the days of Yoash's¦367716 son King Yaraveam \add (Jeroboam)\add* of Yisrael, two years¦367719 before the earthquake¦367721.\x + \xo 1:1: a \xt 2Ki 15:1-7; 2Ch 26:1-23; \xo b \xt 2Ki 14:23-29.\x*
 \q1
 \rem /s1 Judgment on Israel's Neighbours
 \v 2 \add @Amos\add* said¦367723,
@@ -37,7 +37,7 @@
 \q1 for \add ≈the cruel things they¦367757 did to the people of\add* Gilead¦367762.\x + \xo 1:3-5: \xt Isa 17:1-3; Jer 49:23-27; Zech 9:1.\x*
 \q1
 \v 4 I'll send¦367764 a fire¦367765 into \add King\add* Hazael's¦367767 house¦367766,
-\q1 ≈and¦367768 it will devour King Ben-Hadad's fortresses¦367769.
+\q1 ≈and¦367768 it will devour King Ben¦367772-Hadad's fortresses¦367769.
 \q1
 \v 5 I'll smash the gate bars of Damascus¦367776
 \q1 and \add ≈eliminate the ruler\add* of the Aven Valley¦367779,
@@ -47,7 +47,7 @@
 \s2 Philistia
 \p
 \v 6 This is what Yahweh¦367797 says¦367796:
-\q1 “\add ≈Even if Azzah \add (Gaza¦367802)\add* was three¦367800 or four¦367805 sins below the threshold\add*,
+\q1 “\add ≈Even if\add* Azzah \add (Gaza¦367802)\add* was \add ≈three¦367800 or four¦367805 sins below the threshold\add*,
 \q1 I wouldn't turn away \add their\add* punishment,
 \q1 because¦367808 they¦367810 \add ≈carried a whole people group away as captives\add*,
 \q1 to hand them over to Edom¦367814.\x + \xo 1:6-8: \xt Isa 14:29-31; Jer 47:1-7; Eze 25:15-17; Yoel 3:4-8; Zeph 2:4-7; Zech 9:5-7.\x*
@@ -61,7 +61,7 @@
 \s2 Tsor
 \p
 \v 9 This is what Yahweh¦367844 says¦367843:
-\q1 “\add ≈Even if Tsor \add (Tyre¦367850)\add* was three¦367847 or four¦367853 sins below the threshold\add*,
+\q1 “\add ≈Even if\add* Tsor \add (Tyre¦367850)\add* was \add ≈three¦367847 or four¦367853 sins below the threshold\add*,
 \q1 I wouldn't turn away \add their\add* punishment,
 \q1 because¦367856 they \add ≈handed a whole people group over\add* to Edom¦367861,
 \q1 and they didn't¦367854 \add ≈take any notice of\add* their brotherhood¦367865 agreement.\x + \xo 1:9-10: \xt Isa 23:1-18; Eze 26:1–28:19; Yoel 3:4-8; Zech 9:1-4; Mat 11:21-22; Luk 10:13-14.\x*
@@ -71,7 +71,7 @@
 \s2 Edom
 \p
 \v 11 This is what Yahweh¦367877 says¦367876,
-\q1 “\add ≈Even if Edom¦367882 was three¦367880 or four¦367885 sins below the threshold\add*,
+\q1 “\add ≈Even if\add* Edom¦367882 was \add ≈three¦367880 or four¦367885 sins below the threshold\add*,
 \q1 I wouldn't turn away \add their\add* punishment,
 \q1 because¦367888 he pursued¦367890 his brother with the sword¦367891 and cast off all pity.
 \q1 His anger¦367897 raged continually¦367896,
@@ -82,7 +82,7 @@
 \s2 Ammon
 \p
 \v 13 This is what Yahweh¦367912 says¦367911,
-\q1 “\add ≈Even if the Ammonites were three¦367915 or four¦367922 sins below the threshold\add*,
+\q1 “\add ≈Even if\add* the Ammonites were \add ≈three¦367915 or four¦367922 sins below the threshold\add*,
 \q1 I wouldn't turn away \add their¦367934\add* punishment,
 \q1 because¦367925 they¦367927 ripped¦367927 open the pregnant¦367928 women¦367928 of Gilead¦367929,
 \q1 \add ≈in order to grab territory¦367934\add*.\x + \xo 1:13-15: \xt Jer 49:1-6; Eze 21:28-32; 25:1-7; Zeph 2:8-11.\x*
@@ -98,7 +98,7 @@
 \s2 Moab
 \p
 \v 1 This is what Yahweh¦367963 says¦367962:
-\q1 “\add ≈Even if Moab¦367968 was three¦367966 or four¦367971 sins below the threshold\add*,
+\q1 “\add ≈Even if\add* Moab¦367968 was \add ≈three¦367966 or four¦367971 sins below the threshold\add*,
 \q1 I wouldn't turn away its punishment,
 \q1 because¦367974 he \add ≈completely burnt up\add* the bones¦367977 of Edom's¦367980 king¦367978.\x + \xo 2:1-3: \xt Isa 15:1–16:14; 25:10-12; Jer 48:1-47; Eze 25:8-11; Zeph 2:8-11.\x*
 \q1
@@ -115,7 +115,7 @@
 \s4 Southern kingdom
 \p
 \v 4 This is what Yahweh¦368011 says¦368010:
-\q1 “\add ≈Even if Yehudah¦368016 was three¦368014 or four¦368019 sins below the threshold\add*,
+\q1 “\add ≈Even if\add* Yehudah¦368016 was \add ≈three¦368014 or four¦368019 sins below the threshold\add*,
 \q1 I wouldn't turn away its punishment,
 \q1 because¦368022 they rejected¦368024 Yahweh's instructions
 \q1 ≈and didn't¦368020 keep his regulations¦368029.
@@ -128,7 +128,7 @@
 \s4 Northern kingdom
 \p
 \v 6 This is what Yahweh¦368050 says¦368049:
-\q1 “\add ≈Even if Yisrael was three¦368053 or four¦368058 sins below the threshold\add*,
+\q1 “\add ≈Even if\add* Yisrael was \add ≈three¦368053 or four¦368058 sins below the threshold\add*,
 \q1 I wouldn't turn away its punishment,
 \q1 because¦368061 they¦368063 sold the innocent for silver¦368064
 \q1 ≈and the needy¦368066 for a pair of sandals¦368068.
@@ -149,12 +149,12 @@
 \q1 \add ≈so you all could\add* possess¦368138 the land of the Amorites¦368142.
 \q1
 \v 11 I raised¦368144 prophets¦368146 up from among your sons¦368145
-\q1 ≈and \add devoted\add* Nazirites from your young¦368147 men¦368147.
+\q1 ≈and¦368147 \add devoted\add* Nazirites from your young¦368147 men¦368147.
 \q1 Isn't \add ≈that right\add*, \add ≈you Israelis¦368153\add*?
 \mi This is Yahweh's declaration.\x + \xo 2:11: \xt Num 6:1-8.\x*
 \p
 \v 12 But¦368159 you all \add ≈persuaded\add* the Nazirites to drink¦368159 wine\x + \xo 2:12: \xt Num 6:2-3.\x*
-\q1 and ordered the prophets not to prophesy.
+\q1 and¦368164 ordered the prophets not to prophesy.
 \q1
 \v 13 Listen, I'm going to make you \add ≈lose your¦368175 stability\add*
 \q1 just like a cart wobbles when it's carrying a \add heavy\add* load of grain¦368181.
@@ -397,7 +397,7 @@
 \q1 did you¦369102 bring¦369102 me sacrifices¦369100 and¦369101 offerings¦369101 in the wilderness¦369105 for forty¦369106 years?\x + \xo 5:25-27: \xt Acts 7:42-43.\x*
 \q1
 \v 26 You've all lifted up the images¦369117 of Sikkut¦369113, your king¦369114,
-\q1 and Kiyyun¦369116, your star¦369118 god¦369119 that you¦369121 made for yourselves¦369122.
+\q1 and¦369115 Kiyyun¦369116, your star¦369118 god¦369119 that you¦369121 made for yourselves¦369122.
 \v 27 Therefore I will exile you¦369125 \add far\add* beyond¦369126 Damascus¦369127,”
 \mi says¦369128 Yahweh¦369129, whose name¦369133 is the god¦369130 \add ≈with armies\add*.
 \c 6
@@ -411,7 +411,7 @@
 \q1 the ones who \add ≈Israel's¦369148 descendants\add* come to for help!
 \q1
 \v 2 “Go to Kalneh and look.
-\q1 From there¦369154 go to Hamat-Rabah.
+\q1 From there¦369154 go to Hamat¦369155-Rabah.
 \q1 Then go down to the Philistine \add city of\add* Gat¦369158.
 \q1 Are they better¦369162 than your two kingdoms¦369165?
 \q1 Is their¦369170 \add ≈territory\add* larger than yours?”
@@ -495,7 +495,7 @@
 \rem /s1 Amos and Amaziah; Amaziah Complains to the King
 \s4 Both kingdoms
 \p
-\v 10 Then Amatsyah, the priest¦369499 at Beyt-El \add (Bethel)\add*, sent¦369497 a message to Yisrael's King Yaraveam, saying: “Amos¦369512 has conspired¦369510 against¦369511 you¦369511 \add ≈right among the Israeli people\add*. The \add ≈country can't¦369516 handle\add* all his messages.
+\v 10 Then Amatsyah, the priest¦369499 at Beyt-El \add (Bethel)\add*, sent¦369497 a message to Yisrael's King Yaraveam, saying: “Amos¦369512 has conspired¦369510 against¦369511 you¦369511 \add ≈right among the Israeli people\add*. The \add ≈country can't¦369516 handle\add* all his messages¦369525.
 \v 11 Amos¦369531 is saying that \add you,\add* Yaraveam¦369534, will die¦369533 by the sword¦369532 and that Yisrael¦369535 will definitely \add ≈get taken\add* into exile away from this land.”
 \p
 \v 12 Amatsyah \add ≈ordered\add* Amos¦369546, “Hey prophet! Go \add and\add* run yourself¦369551 back to the Yehudah¦369555 \add ≈region\add*, and \add ≈earn your living\add* and prophesy there.
@@ -561,7 +561,7 @@
 \v 11 This is the declaration of my master¦369833 Yahweh¦369833:
 \q1 Listen, the days¦369830 are coming¦369831 when I'll send¦369835 a famine to \add &this\add* country.
 \q1 Not a famine for bread¦369841 or a thirst¦369844 for water¦369845,
-\q1 but for hearing¦369849 Yahweh's messages.
+\q1 but for hearing¦369849 Yahweh's messages¦369851.
 \q1
 \v 12 They'll stagger¦369854 from sea to sea.
 \q1 They'll rove around from the north¦369859 to the east to seek Yahweh's message¦369867,

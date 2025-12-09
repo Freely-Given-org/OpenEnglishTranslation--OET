@@ -75,10 +75,10 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-11-19' # by RJH
+LAST_MODIFIED_DATE = '2025-12-03' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.79'
+PROGRAM_VERSION = '0.80'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -307,6 +307,7 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     ('body','flesh'),
     ('boulders','stones'),
     ('box','ark'),
+    ('bull','ox'),('bulls','oxen'),
     ('but','But'),
     ('But','And'),
     ('carrying','carried'),
@@ -318,6 +319,7 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     ('countries','nations'),('country','nation'),
     ('countryside','field'),
     ('courtyard','court'),
+    ('cow','ox'),('cows','oxen'),
     ('creation','beginning'),
     ('crowd','multitude'),
     ('decide','purposed'),
@@ -824,6 +826,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
     totalSimpleListedAddsNS = totalProperNounAddsNS = totalFirstPartMatchedAddsNS = totalManualMatchedAddsNS = 0 # Nomina sacra
     for BBB,lvBookObject in lv.books.items():
         if BBB not in ('DEU','PRO',): continue
+        if BBB in ('CO1',): continue # CO1_14:33 gives an issue
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Processing connect words for OET {BBB}…" )
 
         bookSimpleListedAdds = bookProperNounAdds = bookFirstPartMatchedAdds = bookManualMatchedAdds = 0
@@ -1307,6 +1310,10 @@ def matchAdjustedProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[s
     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"\n{BBB} {c}:{v} {rvCapitalisedWordList=} {lvCapitalisedWordList=}" )
     for lvCapitalisedWord in lvCapitalisedWordList:
         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvCapitalisedWord=} from {lvCapitalisedWordList=}" )
+        if '¦' not in lvCapitalisedWord:
+            # TODO: Determine how/why this happened in DEU Beeroth
+            logging.critical( f"Why didn't this word get a word number? {lvCapitalisedWord=} from {BBB} {c}:{v} {lvCapitalisedWordList=}" )
+            continue
         assert '¦' in lvCapitalisedWord, f"{BBB} {c}:{v} {lvCapitalisedWord=} from {lvCapitalisedWordList=}"
         capitalisedNoun,wordNumber,wordRow = getLVWordRow( lvCapitalisedWord )
 
