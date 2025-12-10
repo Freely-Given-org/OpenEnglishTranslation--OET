@@ -1,4 +1,4 @@
-\id DEU - Open English Translation—Readers' Version (OET-RV) v0.0.20
+\id DEU - Open English Translation—Readers' Version (OET-RV) v0.0.23
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 DEU
@@ -21,8 +21,8 @@
 \io2 b. Laws, beliefs, and warnings \ior 11:1–26:19\ior*
 \io1 The warnings of entering there to Kanaan \ior 27:1–28:68\ior*
 \io1 The replacement of agreement \ior 29:1–30:20\ior*
-\io1 The final speech of Mosheh \ior 31:1–33:29\ior*
-\io1 The death of Mosheh \ior 34:1-12\ior*
+\io1 Mosheh's final speech \ior 31:1–33:29\ior*
+\io1 Mosheh's death \ior 34:1-12\ior*
 \rem This is still a very early look into the unfinished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
@@ -47,7 +47,7 @@
 \v 10 \add because\add* your god¦81543 Yahweh¦81542 has multiplied you, and¦81546 wow¦81546, \add ≈now\add* you're as numerous as the stars¦81548 in the sky.
 \v 11 May your ancestors' god¦81553 Yahweh¦81552 increase you all a thousand¦81558 times¦81559 \add more\add* and bless¦81560 you all as he's promised
 \v 12 \add but\add* how could I¦81567 \add possibly\add* bear all your loads and burdens¦81570 and disputes¦81571 by myself¦81568?
-\v 13 \add So\add* nominate some men from your tribes¦81579 who I can appoint¦81580 as your leaders¦81581—\add ≡men\add* who're sensible and wise, and respected¦81578 \add >by the people\add*,
+\v 13 \add So\add* nominate some men from your tribes¦81579 who I can appoint¦81580 as your leaders¦81581—\add ≡men\add* who are sensible and wise, and respected¦81578 \add >by the people\add*,
 \v 14 and¦81585 \add @your parents\add* \add ≈agreed with that suggestion\add*.
 \v 15 \add ≈So¦81594\add* I took those wise, respected¦81601 men and appointed them to be your leaders—leaders of thousands¦81607, of hundreds¦81609, of fifties¦81611, and of tens. \add ≡I also appointed some\add* as your tribal officials¦81614.
 \v 16 Then¦81617 I instructed your \add new\add* leaders telling them to \add ≈listen¦81624 carefully\add* to \add both sides of\add* \add ≈disputes\add* and \add ≈make fair and honest judgements¦81620\add* \add in conflicts involving\add* \add ≈either Israelis or\add* foreigners.
@@ -904,7 +904,6 @@
 \v 22 If someone has committed a \add ≈crime\add* worthy of death, and \add @that peron\add* is executed and you hang their body on a tree,
 \v 23 then the corpse¦92252 mustn't remain¦92251 overnight¦92251 on the tree—it must be buried that same day¦92260, because anyone¦92266 who's hanged¦92266 is cursed¦92264 by God¦92265 and you mustn't defile your country that your god Yahweh¦92273 is about¦92275 to give you as an inheritance¦92277. \x + \xo 21:23: \xt Gal 3:13.\x*
 \c 22
-\rem /s1 The other still law
 \p
 \v 1 If you see \add ≈someone else's\add* cow¦92285 or sheep¦92290 that \add ≈has strayed away\add*, don't¦92280 \add ≈act as though you didn't¦92280 see it\add*. Take it back to \add ≈its owner\add*.\x + \xo 22:1-4: \xt Exo 23:4-5.\x*
 \v 2 \add ≈However,\add* if the owner doesn't \add live\add* near you, or if you don't¦92300 know¦92305 who it is, then take the animal to your house¦92310. It can stay with you until¦92313 the owner comes looking for it, then you must give it to them.
@@ -912,135 +911,135 @@
 \p
 \v 4 If you see \add ≈someone else's\add* donkey¦92347 or cow¦92350 that's fallen beside the road¦92352, don't¦92342 \add ≈act as though you didn't¦92342 see it\add*. You must try to help \add @the owner\add* to get the animal up.
 \p
-\v 5 ◙
+\v 5 Women mustn't \add ≈wear\add* men's clothes, and¦92369 men mustn't \add ≈wear\add* women's clothes. Your god¦92378 Yahweh¦92377 \add ≈hates\add* \add ≈people who do things like\add* that.
 \p
-\v 6 ◙
-\v 7 ◙
+\v 6 If \add ≈you happen to find\add* a bird's nest in a tree or on the ground, and the mother bird is sitting in the nest on its¦92387 eggs or with the baby birds, don't¦92413 take \add ≈both the mother bird and the babies\add*.
+\v 7 You may take the \add ≈eggs or the baby birds\add*, but you must \add ≈allow the mother¦92425 bird to fly away\add*. Do that so that things will go well for you and so that you'll live \add in the land\add* for a long time.
 \p
-\v 8 ◙
+\v 8 When you build¦92440 a new house, be sure to include a railing around your \add flat\add* roof, so you won't¦92446 \add ≈be guilty of having caused someone's death\add* if a person falls off it \add and dies\add*.
 \p
-\v 9 \x + \xo 22:9-11: \xt Lev 19:19.\x*◙
+\v 9 Don't \add ≈plant a crop\add* in your¦92461 vineyard, because then the harvest¦92466 of the crop and¦92470 the fruit from the vineyard will \add both\add* \add ?≈be defiled\add*.\f + \fr 22:9 \ft Or possibly, become sacred.\f*\x + \xo 22:9-11: \xt Lev 19:19.\x*
 \p
-\v 10 ◙
+\v 10 Don't plough with a cow¦92477 and¦92479 a donkey¦92479 \add harnessed\add* together¦92480.
 \p
-\v 11 ◙
+\v 11 Don't wear \add clothes\add* with a mix of wool and¦92487 linen¦92487.
 \p
-\v 12 \x + \xo 22:12: \xt Num 15:37-41.\x*◙
-\s1 The laws concerning the dignity
+\v 12 \add Twist threads together to\add* make tassels¦92491 and \add sew them\add* onto the four¦92497 corners¦92498 of your¦92499 cloak¦92499.\x + \xo 22:12: \xt Num 15:37-41.\x*
+\s1 Rules about marriage and rape
 \rem /s1 Laws concerning Sexual Relations; Marriage Violations; Regulations for Sexual Purity; Laws concerning Sexual Purity
 \p
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
+\v 13 If a man¦92509 takes a wife¦92510 and \add ≈sleeps with\add* her, then hates her
+\v 14 and accuses her of shameful things, \add ≈destroying her reputation\add* and \add ≈claiming that she hadn't been\add* a virgin¦92535,
+\v 15 then the young woman's¦92539 parents must show the evidence of her¦92541 virginity¦92545\f + \fr 22:15 \ft Presumably, the blood-stained sheet.\f* to the elders¦92550 at the city¦92551 gate¦92552.
+\v 16 The¦92567 young¦92556 woman's father¦92555 must tell the elders¦92563 how he gave his daughter¦92566 to the man as a wife, but now he's rejected her
+\v 17 and made shameful accusations about her not being a virgin. Then¦92582 the parents must spread¦92588 out that cloth¦92589 and show it to the city¦92592 elders¦92591.
+\v 18 Then¦92594 the city¦92596 elders¦92595 must punish¦92602 that man¦92601
+\v 19 and fine him a hundred¦92607 silver¦92608 \add coins\add* to be paid to the young¦92611 woman's¦92611 father¦92610 for defaming an Israeli¦92618 virgin¦92617. Then¦92605 she'll remain as his wife and he'll be prohibited from \add ever\add* \add ≈divorcing¦92626\add* her.
 \p
-\v 20 ◙
-\v 21 ◙
+\v 20 \add ≈However,\add* if \add @the accusation\add* was true and¦92635 the young¦92645 woman¦92645 \add ≈hadn't been a virgin¦92644\add*,
+\v 21 then they must take \add *her\add* to the doorway of her father's house. Then¦92648 the men from that city¦92661 must \add ≈execute her by throwing rocks¦92662 at her\add*, because she's done a disgraceful¦92667 thing in Yisrael—committing fornication \add ≈while she still lived in\add* her father's house. That's how you'll remove evil from \add ≈your¦92674 country\add*.
 \p
-\v 22 ◙
+\v 22 If a man is discovered sleeping with another man's wife, then both of them must \add ≈be executed\add*. That's how you'll remove evil from Yisrael.
 \p
-\v 23 ◙
-\v 24 ◙
+\v 23 If a young¦92706 woman¦92706 is engaged to a man, and \add another\add* man sleeps with her,
+\v 24 then you must execute both of them at the city¦92725 gate¦92723 by throwing rocks¦92729 at them—the young¦92733 woman¦92733 because she didn't¦92739 scream, and the man for defiling another man's \add ≈fiancée\add*.
 \p
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
+\v 25 If the man found the young woman¦92768 \add out\add* in the countryside¦92763 and \add ≈overpowers\add* her and \add ≈rapes\add* her, then the man \add ≈must be executed\add*
+\v 26 but don't¦92789 do anything¦92792 to that woman because she's not worthy of death¦92797. (This is similar to the case of a man murdering¦92805 another man \add out in the countryside\add*.)
+\v 27 When that man found¦92813 her \add out\add* in the countryside¦92812, then she¦92814 would have cried¦92814 out \add for help¦92814\add*, but no \add ≈one was there¦92818 to save\add* her.
 \p
-\v 28 \x + \xo 22:28-29: \xt Exo 22:16-17.\x*◙
-\v 29 ◙
+\v 28 If a man \add ≈overpowers\add* a young¦92827 woman¦92827 who's not engaged, and \add ≈rapes\add* her, and it's discovered¦92837,\x + \xo 22:28-29: \xt Exo 22:16-17.\x*
+\v 29 that man must pay her father¦92843 fifty¦92846 silver¦92847 coins, and she'll become his wife because¦92852 he's violated¦92854 her. He'll then be prohibited from \add ever\add* \add ≈divorcing¦92858\add* her.
 \p
-\v 30 \x + \xo 22:30: \xt Lev 18:8; 20:11; Deu 27:20.\x*◙
+\v 30 A man must never \add ≈sleep with\add* any of his father's wives \add ?≈because that would expose his father's nakedness\add*.\x + \xo 22:30: \xt Lev 18:8; 20:11; Deu 27:20.\x*
 \c 23
-\s1 The people igpasuwey
+\s1 Excluded people
 \rem /s1 Exclusion From the Assembly; Regulations concerning Worship; Those Excluded from the Assembly; Exclusion from the Lord's People
 \p
-\v 1 ◙
+\v 1 \add ≈No man¦92871 with crushed testicles\add* or \add ≈a severed penis\add* is allowed to enter into Yahweh's assembly.
 \p
-\v 2 ◙
+\v 2 No \add ?≈illegitimate child\add*\f + \fr 23:2 \ft Or possibly, child from mixed parentage.\f* is allowed to enter into Yahweh's assembly¦92891, even down to the tenth generation.
 \p
-\v 3 \x + \xo 23:3-5: \xt Neh 13:1-2.\x*◙
-\v 4 ◙
-\v 5 \x + \xo 23:5: \xt Num 23:7–24:9.\x*◙
-\v 6 ◙
+\v 3 No Ammonite or Moabite is allowed to enter into Yahweh's assembly, even down past the tenth¦92904 generation¦92903\x + \xo 23:3-5: \xt Neh 13:1-2.\x*
+\v 4 since they wouldn't \add even sell\add* you bread and¦92918 water when the people were travelling from Egypt \add to Canaan\add*. \add ≈What's more,\add* they hired Beor's son Bil'am \add (Balaam)\add* (from Petor in Aram-Naharayim) to curse you
+\v 5 \add ≈However,\add* your god Yahweh \add ≈took no notice of\add* Bil'am and turned the curse¦92960 into a blessing because \add *he\add* loves you,\x + \xo 23:5: \xt Num 23:7–24:9.\x*
+\v 6 \add ≈so\add* you must \add ≈never\add* strive for peace or prosperity for \add @the Ammonites or the Moabites\add*.
 \p
-\v 7 ◙
-\v 8 ◙
-\s1 The cleaning always of camp
+\v 7 \add In contrast,\add* don't despise the Edomites because they're your \add ≈cousins\add* \add (descendants of your ancestor Yitshak)\add*. And don't despise the Egyptians, because you \add ≈lived there\add* as foreigners.
+\v 8 The third generation \add (grandchildren)\add* of any of \add @Edomites or Egyptians\add* that live among you, may enter Yahweh's assembly.
+\s1 Purity when at war
 \rem /s1 Miscellaneous Regulations; Keeping the Military Camp Clean; Uncleanness in the Camp; Sanitary, Ritual, and Humanitarian Precepts
 \p
-\v 9 ◙
-\v 10 ◙
-\v 11 ◙
+\v 9 When¦93027 \add @your warriors\add* are out besieging your enemies, they¦93020 you must avoid \add ≈ceremonial impurity\add*.
+\v 10 If something happens at night to make a man ‘unclean’, then he must stay outside the camp \add the next day\add* \add ≈and¦93038 not join the others\add*.
+\v 11 That evening, he must wash himself in water, then once the sun has set, he may reenter the camp.
 \p
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
-\s1 The pegsagman of slave run
+\v 12 You must have a place outside your camp where you can go to \add relieve yourself\add*.
+\v 13 You must have a spade among your equipment so that when you go¦93091 to relieve yourself¦93088, you can dig a hole and then cover it¦93087 up afterwards,
+\v 14 because your god Yahweh walks in your camp to give you victory \add ≈to defeat\add* your enemies, so your camp must be sacred so he won't see anything ‘unclean’ and turn¦93107 away from you.
+\s1 Various regulations
 \rem /s1 Miscellaneous Laws; Various Laws
 \p
-\v 15 ◙
-\v 16 ◙
+\v 15 You¦93115 mustn't \add ≈return\add* any slaves to their master if they escaped and got to you.
+\v 16 \add ≈Allow them to stay\add* \add ≈in your town\add* and don't¦93139 \add ≈mistreat\add* them.
 \p
-\v 17 \x + \xo 23:17: \xt Lev 19:29.\x*◙
-\v 18 ◙
+\v 17 \add ≈Don't allow any Israeli man or woman to become a religious\add*\f + \fr 23:17 \ft Or, cultic.\f* prostitute.\x + \xo 23:17: \xt Lev 19:29.\x*
+\v 18 \add ≈Don't allow anyone woman¦93174 or man to bring any part of their wages\add* as a \add secular\add* prostitute into your god Yahweh's temple, because both \add @female and male prostitution\add* is abhorrent to \add *him\add*.
 \p
-\v 19 \x + \xo 23:19-20: \xt Exo 22:25; Lev 25:36-37; Deu 15:7-11.\x*◙
-\v 20 ◙
-\s1 The me panaad there to God
+\v 19 You mustn't charge interest to your fellow Israeli, whether it's money or food or anything else \add ≈that's borrowed\add*.\x + \xo 23:19-20: \xt Exo 22:25; Lev 25:36-37; Deu 15:7-11.\x*
+\v 20 You can charge¦93209 foreigners interest, but not \add fellow\add* Israelis so that your god Yahweh will bless \add @your society\add* in everything you do in the land that you're about to occupy.
+\s1 Making promises to God
 \p
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
+\v 21 When you make a vow to your god¦93231 Yahweh¦93230, don't¦93226 put off fulfilling it, because \add *he\add* will \add ≈hold you accountable\add* and \add not doing it\add* would \add count as\add* \add ≈disobeying him\add*.
+\v 22 However \add of course\add*, \add ≈if you don't¦93254 make any vows, then you won't¦93254 be guilty\add*,
+\v 23 \add ≈but\add* if \add ≈you've spoken your promise out loud\add* to your god Yahweh, then you're \add ≈obligated to keep it¦93274\add*.
 \p
-\v 24 ◙
-\v 25 ◙
+\v 24 If¦93285 you're walking through \add ≈someone else's\add* vineyard, you can eat as many grapes as \add ≈you like\add*, but you mustn't pick any to \add take¦93281 away\add* in a container.
+\v 25 \add ≈Similarly,\add* if you're going through \add ≈someone else's\add* field of grain, you can \add crunch\add* \add ≈a few kernels, but\add* you mustn't \add ≈cut off any of the stalks\add*.
 \c 24
-\s1 The laws concerning the pegpeengkerey of spouse
+\s1 Divorce and remarriage
 \rem /s1 Divorce and Remarriage; Laws concerning Marriage and Divorce
 \p
-\v 1 \x + \xo 24:1: \xt Mat 5:31; 19:7; Mrk 10:4.\x*◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
+\v 1 When a man marries¦93330 a woman¦93329, then \add ≈further on he decides he doesn't want her because of something he found¦93341 out about\add* her, then he must write¦93345 a divorce¦93348 notice and give it to her, and send her out of his¦93338 house¦93352.\x + \xo 24:1: \xt Mat 5:31; 19:7; Mrk 10:4.\x*
+\v 2 \add ≈After she leaves¦93354 that marriage\add*, \add ≈another¦93360 man¦93358 is allowed to marry her\add*.
+\v 3 If that \add ≈second\add* husband \add also\add* \add ≈decides to divorce her by sending her away with a divorce notice\add*, or if he were to die¦93375,
+\v 4 then the first¦93388 husband¦93387 isn't¦93406 allow to take¦93393 her¦93387 back as his wife. \add That's\add* because she's been defiled and it would be abhorrent to Yahweh, and you mustn't defile the land that your god¦93413 Yahweh is giving you.
 \rem /s1 Miscellaneous Laws; Various Laws
 \p
-\v 5 ◙
+\v 5 When a man \add ≈is newly married\add*, he mustn't \add ≈be called for\add* the army \add ≈or be given any other responsibilities\add*. He mustb be free for one year \add ≈to establish his house\add* and \add ≈to satisfy his new\add* wife.
 \p
-\v 6 ◙
-\s1 The law concerning the egtangag of other
+\v 6 \add If someone borrows money,\add* \add @the lender\add* mustn't take¦93451 their millstone \add for grinding¦93453 grain\add* as a pledge, because \add ≈they need it¦93457 to stay alive\add*.
+\s1 Abduction
 \p
-\v 7 \x + \xo 24:7: \xt Exo 21:16.\x*◙
-\s1 The laws concerning the ibung
+\v 7 If someone is found¦93463 to have abducted a fellow Israeli to make them into a slave¦93470 or to sell them, then that abductor must \add ≈be executed\add* in order to purge¦93477 such evils from \add ≈your¦93479 country¦93467\add*.\x + \xo 24:7: \xt Exo 21:16.\x*
+\s1 Skin diseases
 \p
-\v 8 \x + \xo 24:8: \xt Lev 13:1–14:54.\x*◙
-\v 9 \x + \xo 24:9: \xt Num 12:9-10.\x*◙
+\v 8 Stay on guard¦93485 against a plague of skin disease¦93484. Always follow what the priests¦93493 and¦93487 Levites¦93494 tell you all to do, as I've instructed¦93491 them.\x + \xo 24:8: \xt Lev 13:1–14:54.\x*
+\v 9 Remember what your¦93507 god¦93507 Yahweh¦93506 did to Miryam on the way out of Egypt¦93511 \add (Heb. Mitsrayim)\add*.\x + \xo 24:9: \xt Num 12:9-10.\x*
 \p
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
+\v 10 If you've lent anything¦93520 to a neighbour¦93517, don't¦93521 go¦93523 into their house¦93526 to collect¦93527 their pledge.
+\v 11 \add Just\add* \add ≈wait\add* outside¦93530, then the \add ≈person\add* you've lent something to will bring¦93537 the \add ≈item\add* out to you.
+\v 12 \add ≈However,\add* if \add ≈that person¦93546\add* is poor \add and gives clothing or a blanket as security\add*, don't¦93549 \add ≈keep it overnight\add*.
+\v 13 Take it back to them when the sun¦93560 goes down so they'll \add be warm\add* when they sleep¦93561. Then they'll bless¦93563 you and your god¦93569 Yahweh¦93568 \add ≈will be pleased with\add* you.
 \p
-\v 14 \x + \xo 24:14-15: \xt Lev 19:13.\x*◙
-\v 15 ◙
+\v 14 Don't oppress¦93574 any poor or needy¦93577 hired¦93575 workers, whether they're fellow Israelis or foreigners who live in your towns¦93583.\x + \xo 24:14-15: \xt Lev 19:13.\x*
+\v 15 At the end of each day¦93585, pay them before sunset, because they need it to live on. Then they won't¦93588 cry out to Yahweh¦93608 against¦93605 you and have him \add ≈hold you accountable\add*.
 \p
-\v 16 \x + \xo 24:16: \xt 2Ki 14:6; 2Ch 25:4; Eze 18:20.\x*◙
+\v 16 Parents mustn't be executed for what their children have done, and children mustn't be executed for what their parents have done. Any person must only be executed for what they themselves have done.\x + \xo 24:16: \xt 2Ki 14:6; 2Ch 25:4; Eze 18:20.\x*
 \p
-\v 17 \x + \xo 24:17-18: \xt Exo 23:9; Lev 19:33-34; Deu 27:19.\x*◙
-\v 18 ◙
+\v 17 Don't pervert justice¦93638 if it involves foreigners or orphans, and¦93641 don't¦93636 take¦93642 a widow's¦93644 cloak as security \add for a loan\add*.\x + \xo 24:17-18: \xt Exo 23:9; Lev 19:33-34; Deu 27:19.\x*
+\v 18 Remember that you were a slave¦93648 in Egypt¦93650 and your¦93659 god¦93653 Yahweh¦93652 \add ≈rescued\add* you from there¦93654. \add ≈That's why\add* I'm commanding¦93659 you to do those things—\add ≈to be considerate about helping other people who are in need\add*.
 \p
-\v 19 \x + \xo 24:19-21: \xt Lev 19:9-10; 23:22.\x*◙
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
+\v 19 When you \add ≈harvest your crops\add*, if you forget¦93671 a tied bundle in your field, don't¦93674 go back to get it—it'll be for a \add resident\add* foreigner or an orphan¦93678 or widow¦93679 \add to pick up\add*, so that your god Yahweh¦93683 can bless¦93682 everything \add ≈that you do\add*.\x + \xo 24:19-21: \xt Lev 19:9-10; 23:22.\x*
+\v 20 When you beat your olive¦93691 tree \add to make the fruit fall\add*, don't¦93692 go¦93693 back over it¦93698 to pick the ones still on the tree. Those will be for the foreigner, or the orphan¦93696 or widow¦93697.
+\v 21 \add Similarly,\add* when you \add ≈pick your grapes¦93702\add* in the vineyard¦93703, don't¦93704 \add ≈go back over the vines a second time\add*. Those will be for the foreigner, or the orphan¦93708 or widow¦93709.
+\v 22 \add ^Don't forget\add* that you were a slave¦93715 in Egypt¦93718—that's why I'm¦93722 instructing you to do those things¦93727.
 \c 25
 \s1 The parusa of sinned by means of lampes
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
+\v 1 If \add ≈two parties have a dispute¦93734, they can request a judgement and the judges will decide¦93741 who's right and wrong\add*.
+\v 2 If \add ≈the guilty¦93756 person is deserving of punishment\add*, the judge will order him to lie on the ground \add ≈where he'll be whipped in front of the judge as the crime deserves\add*.
+\v 3 He may not \add ≈receive more than forty lashes¦93766\add* because that would be \add ≈too degrading¦93778\add*.
 \p
 \v 4 \x + \xo 25:4: \xt 1Cor 9:9; 1Tim 5:18.\x*◙
 \s1 The authority of suled of died
