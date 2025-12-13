@@ -167,7 +167,7 @@ $(final_RV_OT_word_tables): $(final_LV_OT_word_tables)
 	@cp -a ../translatedTexts/ReadersVersion/OET-LV_OT_word_table.tsv /srv/FreelyGiven/OpenBibleData/copiedBibles/English/Berean.Bible/MSB/
 
 $(RV_HTML): $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py convert_OET-RV_to_simple_HTML.py $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
-	@echo "\n\nConnect OET-RV words to OET-LV word numbers…\n"
+	@echo "\n\nConnect OET-RV words to OET-LV word numbers (in full mode)…\n"
 	@$(Python) connect_OET-RV_words_via_OET-LV.py
 	@echo "\n\nConvert OET RV ESFM files to simple HTML…\n"
 	@$(Python) convert_OET-RV_to_simple_HTML.py
@@ -197,8 +197,8 @@ $(derived_VREFs): $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_USFM_to_VREF.py
 
 .PHONY: check
 check: $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
-	@echo "\n\nConnect OET-RV words to OET-LV word numbers…\n"
-	@$(Python) connect_OET-RV_words_via_OET-LV.py
+	@echo "\n\nConnect OET-RV words to OET-LV word numbers (in fast mode)…\n"
+	@$(Python) connect_OET-RV_words_via_OET-LV.py --fast
 	@echo "\n\nFinally, just count our progress…\n"
 	@$(Python) count_completed_OET-RV_verses.py
 	@$(Python) --version
