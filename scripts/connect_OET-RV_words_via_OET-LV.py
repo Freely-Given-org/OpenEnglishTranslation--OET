@@ -53,6 +53,8 @@ CHANGELOG:
     2025-02-20 Added check for /nd inside /add fields (which should never happen)
     2025-02-21 Added check for wrongly ordered combos, e.g., \\add #? instead of \\add ?#
     2025-03-07 Align OET-RV /d fields (in Psalms)
+    2025-12-12 Remove "failed on" warnings for common word 'to'
+    2025-12-13 Add 'fast' flag, added 'heavenly'
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -75,10 +77,10 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-12-03' # by RJH
+LAST_MODIFIED_DATE = '2025-12-13' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.80'
+PROGRAM_VERSION = '0.81'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -338,6 +340,7 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     ('fulfilled','accomplished'),
     ('godly','devout'),
     ('grapevine','vine'),
+    ('heavenly','heavens'),('heavenly','heaven'),
     ('honour','glorify'),
     ('huge','great'),
     ('instructed','commanded'),
@@ -825,8 +828,9 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
     totalSimpleListedAdds = totalProperNounAdds = totalFirstPartMatchedAdds = totalManualMatchedAdds = 0
     totalSimpleListedAddsNS = totalProperNounAddsNS = totalFirstPartMatchedAddsNS = totalManualMatchedAddsNS = 0 # Nomina sacra
     for BBB,lvBookObject in lv.books.items():
-        if BBB not in ('DEU','PRO',): continue
-        if BBB in ('CO1',): continue # CO1_14:33 gives an issue
+        if BibleOrgSysGlobals.commandLineArguments.fastMode and BBB not in ('DEU','PRO',):
+            continue
+        if BBB in ('CO1',): continue # TODO: CO1_14:33 gives an issue
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Processing connect words for OET {BBB}…" )
 
         bookSimpleListedAdds = bookProperNounAdds = bookFirstPartMatchedAdds = bookManualMatchedAdds = 0
@@ -1457,7 +1461,8 @@ def matchWordsFirstParts( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList
     for lvWordStr in lvWordList:
         try: lvWord, lvNumber = lvWordStr.split( '¦' )
         except ValueError:
-            logging.critical( f"matchWordsFirstParts failed on {lvWordStr=} from {BBB} {c}:{v} {lvWordList=}" )
+            if lvWordStr != 'to':
+                logging.critical( f"matchWordsFirstParts failed on {lvWordStr=} from {BBB} {c}:{v} {lvWordList=}" )
             lvWord = lvWordStr # One or two little mess-ups
         simpleLVWordList.append( lvWord )
 
@@ -1506,7 +1511,8 @@ def matchWordsManually( BBB:str, c:int,v:int, rvVerseWordList:List[str], lvVerse
     for lvWordStr in lvVerseWordList:
         try: lvWord, lvNumber = lvWordStr.split( '¦' )
         except ValueError:
-            logging.critical( f"matchWordsManually failed on {lvWordStr=} from {BBB} {c}:{v} {lvVerseWordList=}" )
+            if lvWordStr != 'to':
+                logging.critical( f"matchWordsManually failed on {lvWordStr=} from {BBB} {c}:{v} {lvVerseWordList=}" )
             lvWord = lvWordStr # One or two little mess-ups
         simpleLVWordList.append( lvWord )
     simpleRVWordList = []
@@ -1793,6 +1799,7 @@ if __name__ == '__main__':
 
     # Configure basic Bible Organisational System (BOS) set-up
     parser = BibleOrgSysGlobals.setup( PROGRAM_NAME, PROGRAM_VERSION )
+    parser.add_argument("-f", "--fast", action="store_true", dest="fastMode", default=False, help="only work on unfinished books")
     BibleOrgSysGlobals.addStandardOptionsAndProcess( parser, exportAvailable=False )
 
     main()
