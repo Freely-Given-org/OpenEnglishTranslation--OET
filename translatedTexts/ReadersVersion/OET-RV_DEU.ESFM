@@ -1,4 +1,4 @@
-\id DEU - Open English Translation—Readers' Version (OET-RV) v0.0.25
+\id DEU - Open English Translation—Readers' Version (OET-RV) v0.0.27
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 DEU
@@ -29,11 +29,11 @@
 \s1 Mosheh's first set of instructions
 \rem /s1 The Command to Leave Horeb; Moses' first discourse; Introduction; Events at Horeb Recalled; The Command to Leave Sinai
 \p
-\v 1 These¦81372 are the messages¦81373 that Mosheh¦81376 \add (Moses¦81376)\add* spoke¦81375 to Yisrael \add (Israel¦81381)\add* \add back when they were\add* in the wilderness¦81384 \add on the eastern side\add* of the Yarden \add (Jordan) river\add*, in the desert plain opposite¦81386 Suf¦81387 between Paran¦81390 and Tofel¦81393, Lavan, Hatserot, and Di-Zahav.
+\v 1 These¦81372 are the messages¦81373 that¦81374 Mosheh¦81376 \add (Moses¦81376)\add* spoke¦81375 to Yisrael \add (Israel¦81381)\add* \add back when they were\add* in the wilderness¦81384 \add on the eastern¦81382 side\add* of the Yarden \add (Jordan) river\add*, in the desert plain opposite¦81386 Suf¦81387 between Paran¦81390 and Tofel¦81393, Lavan, Hatserot, and Di-Zahav.
 \v 2 (It takes eleven days \add to walk\add* from Horev \add (Mt. Sinai)\add* to Kadesh¦81408-Barnea¦81409 via Mt. Seir¦81406.)
 \v 3 Forty years \add after the Israelis¦81424 had left Egypt\add* Mosheh¦81421 \add ≈passed on\add* to \add *them\add* everything that Yahweh¦81429 had instructed¦81428 him
 \v 4 after he'd defeated¦81434 the Amorite¦81438 King Sihon¦81436 who lived at Heshbon¦81441, and¦81442 Bashan¦81445 King Og¦81443 who lived at Ashtarot¦81449 in Edrei¦81450.\x + \xo 1:4: \xt Num 21:21-35.\x*
-\v 5 On the eastern side of the Yarden \add river\add* in the Moav \add (Moab¦81455)\add* region, Mosheh¦81457 \add began\add* explaining those instructions, saying,
+\v 5 On the eastern¦81452 side of the Yarden \add river\add* in the Moav \add (Moab¦81455)\add* region, Mosheh¦81457 \add began\add* explaining those instructions, saying,
 \s2 The removal of Yisrael's descendants from Sinai
 \p
 \v 6 “Our God¦81466 Yahweh¦81465 spoke¦81467 to us at Horev, saying: You've \add ≈camped\add* here \add ≈long enough¦81471\add* at this mountain¦81475.
@@ -48,11 +48,11 @@
 \v 11 May your ancestors' god¦81553 Yahweh¦81552 increase you all a thousand¦81558 times¦81559 \add more\add* and bless¦81560 you all as he's promised
 \v 12 \add but\add* how could I¦81567 \add possibly\add* bear all your loads and burdens¦81570 and disputes¦81571 by myself¦81568?
 \v 13 \add So\add* nominate some men from your tribes¦81579 who I can appoint¦81580 as your leaders¦81581—\add ≡men\add* who are sensible and wise, and respected¦81578 \add >by the people\add*,
-\v 14 and¦81585 \add @your parents\add* \add ≈agreed with that suggestion\add*.
+\v 14 and¦81585 \add @your parents\add* \add ≈agreed with that¦81589 suggestion\add*.
 \v 15 \add ≈So¦81594\add* I took those wise, respected¦81601 men and appointed them to be your leaders—leaders of thousands¦81607, of hundreds¦81609, of fifties¦81611, and of tens. \add ≡I also appointed some\add* as your tribal officials¦81614.
 \v 16 Then¦81617 I instructed your \add new\add* leaders telling them to \add ≈listen¦81624 carefully\add* to \add both sides of\add* \add ≈disputes\add* and \add ≈make fair and honest judgements¦81620\add* \add in conflicts involving\add* \add ≈either Israelis or\add* foreigners.
 \v 17 \add ≈Don't show partiality when you're making a judgement—treat important people just the same as the others\add*. \add ≈Don't worry about what people will think because fair judgement is a godly activity\add*. And if any matter is too difficult, bring¦81660 it to me \add ≈for a decision\add*.
-\v 18 I also gave you all other instructions at that time¦81666.
+\v 18 I also gave you all other instructions at that¦81672 time¦81666.
 \s2 The spies
 \rem /s1 Scouts Explore the Land; Spies Sent Out; Israel's Refusal to Enter the Land; The Spies Are Sent Out from Kadesh Barnea
 \r (Num. 13:1-33)
@@ -72,7 +72,7 @@
 \p
 \v 29 “Then¦81858 I told \add ≈your parents\add*, ‘Don't be terrified¦81862 or afraid of them.
 \v 30 Your god¦81869 Yahweh¦81868 \add ≈who goes¦81870 ahead of you\add*, he'll fight¦81873 for you just like everything \add ≈you saw\add* him do in Egypt¦81879
-\v 31 and in the wilderness¦81882, where¦81883 you saw¦81884 how your god¦81888 Yahweh¦81887 carried you like a \add ≈father\add* carries his son—getting you through \add that difficult region\add* until¦81902 you all \add eventually\add* arrived here.’\x + \xo 1:31: \xt Acts 13:18.\x*
+\v 31 and in the wilderness¦81882, where¦81883 you saw¦81884 how your god¦81888 Yahweh¦81887 carried you like a \add ≈father\add* carries his son—getting you through \add that¦81900 difficult region\add* until¦81902 you all \add eventually\add* arrived here.’\x + \xo 1:31: \xt Acts 13:18.\x*
 \v 32 \add ≈However,\add* you all didn't¦81912 believe your god¦81915 Yahweh\x + \xo 1:32: \xt Heb 3:19.\x*
 \v 33 \add ≈who had gone ahead¦81918\add* of you to find a \add good\add* place¦81922 for you all to make your camp—using fire¦81924 at night¦81926 to show you all the way, and cloud¦81933 in the daytime.
 \s2 Yisrael's punishment
@@ -80,8 +80,8 @@
 \r (Num. 14:20-45)
 \p
 \v 34 “Yahweh¦81937 heard \add ≈those complaints\add* and got angry¦81942 and made this promise,\x + \xo 1:34-35: \xt Heb 3:18.\x*
-\v 35 ‘None of the men¦81950 of this evil¦81953 generation¦81952 will \add ≈get to enter\add* the good¦81957 land that I promised to give¦81960 to your ancestors¦81961
-\v 36 apart from Yefunneh's¦81967 son Kalev \add (Caleb¦81964)\add*—he \add ≈can enter\add* it and I'll give¦81972 him and his sons the land \add ≈that he scouted out\add* because¦81981 he \add ≈followed Yahweh¦81985 whole-heartedly\add*.’
+\v 35 ‘None of the men¦81950 of this evil¦81953 generation¦81952 will \add ≈get to enter\add* the good¦81957 land that¦81958 I promised to give¦81960 to your ancestors¦81961
+\v 36 apart from Yefunneh's¦81967 son Kalev \add (Caleb¦81964)\add*—he \add ≈can enter\add* it and I'll give¦81972 him and his sons the land \add ≈that¦81976 he scouted out\add* because¦81981 he \add ≈followed Yahweh¦81985 whole-heartedly\add*.’
 \v 37 Yahweh¦81991 was \add also\add* angry¦81990 at me because¦81992 of you all, \add and\add* told me that I also wouldn't \add ≈be able to enter\add*,
 \v 38 but that Nun's¦82007 son Yehoshua who was standing there¦82012 in front of me, \add ≈would be the one to lead\add* Yisrael to possess the land.
 \p
@@ -115,10 +115,10 @@
 \p
 \v 10 (The Emites had lived their previously—there were many of them, and they¦82326 were tall and strong like the Anakites¦82332.
 \v 11 \add ≈People also call both\add* the Emites and¦82340 the Anakites¦82339, Refa'ites but the people of Moav call them Emites.
-\v 12 The Horites¦82347 had previously lived¦82354 in Seir, \add ≈but\add* Esau's¦82350 descendants \add ≈had killed them and taken over\add* their land, just like the Israelis did \add later\add* in the land that Yahweh¦82364 had given them to possess¦82360.)
+\v 12 The Horites¦82347 had previously lived¦82354 in Seir, \add ≈but\add* Esau's¦82350 descendants \add ≈had killed them and taken over\add* their land, just like the Israelis did \add later\add* in the land that¦82361 Yahweh¦82364 had given them to possess¦82360.)
 \p
 \v 13 “\add ≈Then we crossed¦82369 the Zered¦82374 brook as Yahweh had told us to do\add*.
-\v 14 \add ≈It had been\add* thirty-eight years since we first left Kadesh-Barnea until we cross the Zered¦82395 brook, \add ≈once\add* that generation¦82404 of \add ≈warriors\add* had \add ≈died off\add*, just as Yahweh¦82411 had \add ≈told\add* them.\x + \xo 2:14: \xt Num 14:28-35.\x*
+\v 14 \add ≈It had been\add* thirty-eight years since we first left Kadesh-Barnea until we cross the Zered¦82395 brook, \add ≈once\add* that¦82382 generation¦82404 of \add ≈warriors\add* had \add ≈died off\add*, just as Yahweh¦82411 had \add ≈told\add* them.\x + \xo 2:14: \xt Num 14:28-35.\x*
 \v 15 \add ≈What's more, Yahweh¦82417 had opposed them, so he'd caused them to die\add*.
 \p
 \v 16 “\add ≈After\add* all the \add ≈enlistment-aged\add* men¦82432 had died¦82434,
@@ -141,7 +141,7 @@
 \v 26 “Then¦82591 from the Kedemot¦82594 wilderness¦82593, I sent¦82591 messengers¦82592 to King Sihon¦82597 at Heshbon¦82599 with \add ≈an offer\add* of peace¦82601,
 \v 27 ‘\add ≈Please let us travel through your country. We'll stay on the road\add*
 \v 28 \add ≈if you'd be able to just sell us some\add* food and water¦82618, then we could just walk right through¦82625
-\v 29 until¦82639 we cross the Yarden river into the land that our¦82652 god¦82652 Yahweh¦82651 is giving us. Easu's descendants¦82632 at Seir¦82635 \add allowed us through\add*, as did the Moabites at Ar¦82638.’
+\v 29 until¦82639 we cross the Yarden river into the land that¦82649 our¦82652 god¦82652 Yahweh¦82651 is giving us. Easu's descendants¦82632 at Seir¦82635 \add allowed us through\add*, as did the Moabites at Ar¦82638.’
 \p
 \v 30 “\add ≈However,\add* Heshbon's¦82660 King Sihon¦82658 wouldn't let us go through \add his country\add* because your god¦82667 Yahweh¦82666 had hardened his spirit and \add ≈made him¦82676 stubborn¦82665\add* so that you \add ≈could take his land\add*, \add which we still have\add* to this day¦82678.
 \p
@@ -166,7 +166,7 @@
 \v 6 We completely¦82922 destroyed them like we'd done to Heshbon's¦82928 King Sihon¦82926—men, women¦82934, and children¦82935,
 \v 7 but we¦82942 plundered¦82942 all the cattle¦82939 and¦82940 the spoil¦82940 from the cities¦82941 for ourselves.
 \p
-\v 8 \add ≈So¦82945\add* at that time¦82946, we took¦82945 the land from two¦82952 of the Amorite¦82954 kings¦82953 \add across on the eastern side\add* of the Yarden, from the Arnon¦82959 River \add in the south, up\add* to Mt. Hermon¦82963 \add in the north\add*
+\v 8 \add ≈So¦82945\add* at that time¦82946, we took¦82945 the land from two¦82952 of the Amorite¦82954 kings¦82953 \add across on the eastern¦82956 side\add* of the Yarden, from the Arnon¦82959 River \add in the south, up\add* to Mt. Hermon¦82963 \add in the north\add*
 \v 9 (called Mt. Shiryon¦82968 by the Sidonians, and¦82969 Mt. Senir¦82973 by the Amorites¦82969).
 \v 10 \add ≡We captured\add* all the cities on the plain and all of the Gilead¦82981 region, as well as Bashan¦82984 as far \add east as\add* Salekah and Edrei¦82988 cities, which also belonged to Og's¦82991 kingdom¦82990.”
 \v 11 (Bashan's¦82999 King Og¦82997 \add ≈was the last king¦82998 who was a descendant\add* of the Refaites¦83002. His bed (in Rabbah¦83009 in the Ammonite region) was made out of iron and was \add ≈four¦83015 metres\add* long and \add ≈two metres\add* wide¦83017.)
@@ -184,7 +184,7 @@
 \v 17 The border¦83127 extends from the plain along \add the east side of\add* the Yarden valley, from \add Lake\add* Kinneret \add in the north\add* to the Arabah lake¦83130 (the Salt Sea \add or Dead Sea\add*) \add in the south\add* and to the slopes¦83135 of Mt. Pisgah¦83136 on the east.
 \p
 \v 18 “Then¦83139 at that time¦83141, I commanded¦83139 you saying, ‘Your god¦83145 Yahweh¦83144 has given¦83146 this land to you to possess¦83152 it¦83152, \add however\add* \add ≈your brave warriors\add* must cross over \add ≈with the other Israeli tribes\add* \add to help them conquer the western lands\add*.\x + \xo 3:18-20: \xt Josh 1:12-15.\x*
-\v 19 \add ≈Leave\add* your wives¦83167 and children¦83168 and cattle (yes, I know¦83170 you have many cattle) \add back here\add* in the cities that I've given¦83179 you
+\v 19 \add ≈Leave\add* your wives¦83167 and children¦83168 and cattle (yes, I know¦83170 you have many cattle) \add back here\add* in the cities that¦83178 I've given¦83179 you
 \v 20 until Yahweh gives \add ≈peace\add* to your brother¦83188 tribes like you have \add here\add*. \add ≈Once\add* they've taken possession¦83206 of the land that your god¦83199 Yahweh is given¦83208 them across¦83202 the river, then you'll all be able to return¦83204 her to your own inheritance that I've \add ≈allocated\add* to you.’
 \rem /s1 Moses Forbidden to Cross the Jordan; Moses Forbidden to Enter the Land
 \p
@@ -199,20 +199,20 @@
 \p
 \v 26 “\add ≈But¦83306\add* Yahweh was angry¦83306 at me because¦83309 of \add ≈what your parents had done\add*, and he wouldn't listen¦83311 to me. \add ≈Instead,\add* Yahweh told me, ‘Enough from you—don't¦83310 talk to me about that again¦83324!
 \v 27 Go up to the top of Mt. Pisgah¦83331 and \add ≈look out\add* towards the west and the north¦83335 and the south¦83336 and the east. \add ≈Yes,\add* look with your¦83333 eyes, because you won't¦83342 be crossing this river.
-\v 28 Instruct Yehoshua and encourage¦83353 him and strengthen¦83354 him, because \add ≈he's the one who'll lead the\add* people¦83360 across, and he'll \add ≈lead\add* them to inherit¦83363 the land that you'll see¦83369.’
+\v 28 Instruct Yehoshua and encourage¦83353 him and strengthen¦83354 him, because \add ≈he's the one who'll lead the\add* people¦83360 across, and he'll \add ≈lead\add* them to inherit¦83363 the land that¦83368 you'll see¦83369.’
 \v 29 \add ≈So¦83371\add* we remained¦83371 in the \add Yarden river\add* valley¦83372 opposite¦83373 Beyt-Peor¦83375.
 \c 4
 \s1 Mosheh encourages Yisrael to obey
 \rem /s1 Moses Urges Israel to Obey; Moses Commands Obedience; Obedience Commanded; Moses Urges Israel to Be Obedient
 \p
 \v 1 “Now Yisrael, listen¦83380 to the instructions and regulations¦83383 that I'll teach¦83389 you so that you'll all go¦83394 and possess¦83395 the land that Yahweh¦83400, the god¦83401 of your ancestors¦83402, is giving you, and live¦83393 there.
-\v 2 Don't add \add ≈or subtract from what I tell\add* you, \add because you all need to follow\add* the instructions from your god¦83423 Yahweh¦83422 that I'm telling you.\x + \xo 4:2: \xt Rev 22:18-19.\x*
+\v 2 Don't add \add ≈or subtract from what I tell\add* you, \add because you all need to follow\add* the instructions from your god¦83423 Yahweh¦83422 that¦83411 I'm telling you.\x + \xo 4:2: \xt Rev 22:18-19.\x*
 \v 3 You've all seen¦83430 \add ≈for yourselves\add* what your¦83451 god¦83450 Yahweh¦83435 did at Beyt-Peor¦83447, when he destroyed¦83448 all the men who \add ≈worshipped\add* \add Baal¦83445\add* there.\x + \xo 4:3: \xt Num 25:1-9.\x*
 \v 4 \add ≈However,\add* all of you who \add ≈faithfully continued to follow\add* your god¦83456 Yahweh are alive¦83457 \add here\add* today.
 \p
 \v 5 “\add ≈Listen\add*, I've taught¦83463 you all the instructions and regulations¦83465 that my god¦83470 Yahweh¦83469 commanded¦83468 me to, for you all to \add ≈follow\add* in the land that you're about¦83477 to \add ≈enter and occupy\add*.
 \v 6 \add ≈Follow them faithfully\add* because \add ≈that will lead to\add* wisdom \add ≈such that people¦83498 in other countries will notice that\add* this great¦83503 nation¦83502 has wisdom and understanding.
-\v 7 What \add other\add* great¦83510 nation¦83509 is there that has a god near to it like our god Yahweh is whenever we call \add ≈out to him\add* \add for help\add*?
+\v 7 What \add other\add* great¦83510 nation¦83509 is there that¦83511 has a god near to it like our god Yahweh is whenever we call \add ≈out to him\add* \add for help\add*?
 \v 8 \add ≈Also,\add* what other nation¦83528 has rules and regulations¦83533 that are as \add ≈sensible and fair\add* as these instructions that I'm giving to you all today?
 \p
 \v 9 “\add ≈But\add* \add each of you must\add* take care to guard yourself¦83547 and your \add ≈values\add* in case you forget¦83553 that you've seen and \add those past miracles\add* \add ≈slip from your minds over the years to come\add*. \add Yes,\add* \add ≈make sure that you teach them to your children and your grand-children\add*,
@@ -228,7 +228,7 @@
 \v 15 \add ≈Now remembering that\add* you didn't¦83681 see any form at \add Mt. Sinai\add* (Horev) when Yahweh¦83688 spoke¦83687 to you all from the middle of the fire¦83692,
 \v 16 \add ≈so don't corrupt¦83696 yourselves\add* by making an idol¦83699 \add to be your god\add*—don't make anything in the likeness¦83704 of a man or a woman,\x + \xo 4:16: \xt Exo 20:4; Lev 26:1; Deu 5:8; 27:15.\x*
 \v 17 or of any animal¦83712 that's on the earth¦83714 or bird that flies¦83721 in the sky,\x + \xo 4:17-18a: \xt Rom 1:23.\x*
-\v 18 or any \add ≈reptile\add* that creeps¦83727 along the ground¦83728 or any fish¦83732 from the deep \add ≈oceans\add*.
+\v 18 or any \add ≈reptile\add* that¦83733 creeps¦83727 along the ground¦83728 or any fish¦83732 from the deep \add ≈oceans\add*.
 \v 19 Don't look up to the sky and be \add ≈tempted\add* to bow down to the sun¦83747 or the moon¦83750 or the stars¦83753 and serve them—your god¦83764 Yahweh¦83763 made them \add to serve\add* every people¦83767 group \add ≈in the world\add*.
 \v 20 Yahweh¦83775 has brought¦83776 you all out of the iron-smelting furnace¦83778 of Egypt¦83780 to be a people¦83783 that would belong to him (as you are today),\x + \xo 4:20: \xt Exo 19:5; Deu 7:6; 14:2; 26:18; Tit 2:14; 1Pe 2:9.\x*
 \v 21 \add but\add* then Yahweh¦83788 got angry¦83789 at me because of \add ≈your¦83811 parents\add* and determined that I would never enter the land that he's giving to all of you.\x + \xo 4:21: \xt Num 20:12.\x*
@@ -239,7 +239,7 @@
 \v 25 \add Even\add* after you've had children and \add ≈grandchildren\add* and then grown old in the land, don't make an idol in the form of anything¦83880, and don't be corrupt¦83876 or do evil \add things\add* that your god Yahweh¦83884 \add ≈dislikes and so which will make him\add* angry.
 \v 26 \add If you do\add*, I call the heavens¦83894 and the earth as witnesses¦83889 against you all today, that you'd die \add over there\add* in the land that you're crossing the river to possess¦83912. You wouldn't live¦83915 there very long¦83915, but \add instead would end up\add* getting destroyed.
 \v 27 Then¦83922 Yahweh¦83923 would scatter¦83922 \add ≈the remainder\add* among the nations¦83929 where¦83930 \add ?≈you'd remain as a small minority\add*.\x + \xo 4:27-28: \xt Deu 28:36.\x*
-\v 28 There you would \add ?be forced to\add* worship gods¦83939 that humans¦83942 have made out of wood or stone¦83944 and which¦83945 can't¦83946 see¦83948, hear¦83950, smell¦83954, or eat¦83952.
+\v 28 There you would \add ?be forced to\add* worship gods¦83939 that¦83945 humans¦83942 have made out of wood or stone¦83944 and which¦83945 can't¦83946 see¦83948, hear¦83950, smell¦83954, or eat¦83952.
 \v 29 From there¦83957 you'll search for your god¦83961 Yahweh¦83960, and you'll find him when you search for him with \add ≈determination and total sincerity\add*.\x + \xo 4:29: \xt Jer 29:13.\x*
 \v 30 \add ≈It's in the future when you end up in distress¦83972\add* \add there\add* that you'll return¦83980 to your god¦83984 Yahweh¦83983 and listen to \add ≈what he tells\add* \add you\add*,
 \v 31 because your god Yahweh¦83991 is a merciful god. He won't abandon¦83994 you or destroy¦83996 you, and he won't forget¦83998 what he promised to your ancestors¦84002.
@@ -257,14 +257,14 @@
 \s1 The refuge cities
 \rem /s1 Eastern Cities of Refuge; The Cities of Refuge East of the Jordan; Cities of Refuge; Cities of Refuge East of the Jordan
 \p
-\v 41 Then Mosheh¦84207 \add (Moses¦84207)\add* selected three¦84208 cities¦84209 on \add ≈that eastern\add* side of the Yarden\x + \xo 4:41-43: \xt Josh 20:8-9.\x*
+\v 41 Then Mosheh¦84207 \add (Moses¦84207)\add* selected three¦84208 cities¦84209 on \add ≈that eastern¦84210\add* side of the Yarden\x + \xo 4:41-43: \xt Josh 20:8-9.\x*
 \v 42 \add ≈so that anyone¦84236 who accidentally killed¦84217 another person\add* could flee to one of those cities¦84239 and \add ≈be safe\add*:
 \v 43 Bezer¦84245 in the wilderness¦84246 for the \add ≈tribe of Reuben\add*, Ramot¦84253 in Gilead¦84254 for the \add ≈tribe of Gad\add*, and Golan¦84258 in the Bashan¦84259 region for the \add ≈tribe of Manasseh¦84260\add*.
 \s1 Giving the instructions
 \rem /s1 Introduction to the Giving of God's Law; Introduction to the Law; Transition to the Second Address
 \p
-\v 44 These¦84270 are the instructions that Mosheh¦84267 \add (Moses¦84267)\add* gave to the \add ≈Israelis¦84269\add*,
-\v 45 \add ≈including\add* all the instructions, rules, and regulations¦84274 that Mosheh¦84278 had told them when they¦84283 left¦84283 Egypt¦84284,
+\v 44 These¦84270 are the instructions that¦84264 Mosheh¦84267 \add (Moses¦84267)\add* gave to the \add ≈Israelis¦84269\add*,
+\v 45 \add ≈including\add* all the instructions, rules, and regulations¦84274 that¦84276 Mosheh¦84278 had told them when they¦84283 left¦84283 Egypt¦84284,
 \v 46 when they were in the valley¦84288 \add east\add* of the Yarden \add River\add*. They were across from the town of Beyt-Peor¦84291, in the land that the Amorite¦84295 King Sihon¦84293 (who lived in Heshbon¦84298 \add city\add*) had ruled. (Mosheh¦84301 and the \add other\add* \add ≈Israelis¦84303\add* had defeated¦84300 them when they came¦84304 out of Egypt¦84305.)
 \v 47 They had taken possession¦84307 of his land, as well as the land of Bashan's¦84318 King Og¦84315—the two¦84319 Amorite¦84321 kings¦84320 from the \add ≈eastern side\add* of the Yarden—
 \v 48 from Aroer \add city in the south\add* along the edge of the Arnon¦84335 valley, and¦84336 as far north as Mt. Sion¦84339 (\add normally\add* called Mt. Hermon¦84341)
@@ -274,7 +274,7 @@
 \rem /s1 The Ten Commandments; Moses' second discourse
 \r (Exo. 20:1-17)
 \p
-\v 1 Then Mosheh¦84358 \add (Moses¦84358)\add* \add ≈summoned\add* all Yisrael and told them, “Yisrael, listen¦84366 to the instructions and the regulations¦84370 that I will speak¦84376 in your ears today, and then you must learn¦84379 them and be careful¦84381 to follow¦84382 them.
+\v 1 Then Mosheh¦84358 \add (Moses¦84358)\add* \add ≈summoned\add* all Yisrael and told them, “Yisrael, listen¦84366 to the instructions and the regulations¦84370 that¦84374 I will speak¦84376 in your ears today, and then you must learn¦84379 them and be careful¦84381 to follow¦84382 them.
 \v 2 Our god¦84385 Yahweh¦84384 made an agreement with us at Horev \add (Mt. Sinai)\add*.
 \v 3 \add *He\add* didn't make that agreement with our¦84394 ancestors¦84394, but with us \add ourselves\add*—those of us here today, \add i.e., with\add* \em living\em* people.
 \v 4 Yahweh¦84414 spoke¦84413 to you from the middle of the fire—face to face with you all on that mountain¦84416.
@@ -284,7 +284,7 @@
 \li1
 \v 7 \add ≈Don't have any other god, other than me.\add*
 \li1
-\v 8 Don't \add ≈carve\add* any figure for yourself¦84474 \add ≈that looks like\add* anything in the sky or on the ground, or in the water¦84495 below the ground.\x + \xo 5:8-9: \xt Lev 26:1; Deu 4:15-18; 27:15.\x*
+\v 8 Don't \add ≈carve\add* any figure for yourself¦84474 \add ≈that¦84482 looks like\add* anything in the sky or on the ground, or in the water¦84495 below the ground.\x + \xo 5:8-9: \xt Lev 26:1; Deu 4:15-18; 27:15.\x*
 \v 9 Don't bow down to them or \add ≈serve¦84509\add* them, because I, your god Yahweh¦84513, am a jealous¦84516 god. I'll \add ≈punish the descendants\add* of those who hate me, even for three or four generations,\x + \xo 5:9-10: \xt Exo 34:6-7; Num 14:18; Deu 7:9-10.\x*
 \v 10 \add ≈but\add* showing¦84532 loyal¦84534 commitment to thousands¦84536 \add ≡of generations\add* of those who love¦84538 me and¦84539 obey my¦84538 instructions.
 \li1
@@ -319,13 +319,13 @@
 \v 26 because \add ≈when has anybody else ever heard¦84859 the voice¦84860 of the living¦84862 god¦84861 speak¦84863 to them from the middle of a blazing fire¦84866 and¦84868 they\add* \add still\add* lived¦84868?
 \v 27 You \add Mosheh (Moses),\add* \add ≈go\add* and listen to everything that our god Yahweh¦84878 says, and tell us everything that he tells you, and we'll listen \add to that\add* and obey it.”
 \p
-\v 28 Yahweh¦84896 heard \add ≈you all say that\add* to me, and told me, ‘I've heard what they said to you and it's a good idea.
+\v 28 Yahweh¦84896 heard \add ≈you all say that¦84913\add* to me, and told me, ‘I've heard what they said to you and it's a good idea.
 \v 29 \add ≈If only they were sincere in saying that they'd honour me and always follow all my instructions so that everything would go¦84941 well for them and their descendants forever\add*.
 \v 30 Go and tell them to return¦84949 to their tents¦84951,
-\v 31 \add ≈but\add* then come \add ≈back up\add* here and I'll \add ≈give¦84971\add* you all the instructions and rules and regulations¦84963 for you to teach¦84966 them, \add ≈so they can follow them\add* in the land that I'm giving them to take possession¦84973 of.’
+\v 31 \add ≈but\add* then come \add ≈back up\add* here and I'll \add ≈give¦84971\add* you all the instructions and rules and regulations¦84963 for you to teach¦84966 them, \add ≈so they can follow them\add* in the land that¦84965 I'm giving them to take possession¦84973 of.’
 \p
 \v 32 Make sure that you do everything that your god¦84980 Yahweh¦84979 has commanded¦84978—don't¦84982 \add ≈deviate from any of them\add*.
-\v 33 \add ≈Follow all the instructions from\add* your god¦84993 Yahweh¦84992, and then you'll all live¦84997 and \add ≈things will go well\add* and you'll all \add ≈be able to occupy that land for a long time\add*.
+\v 33 \add ≈Follow all the instructions from\add* your god¦84993 Yahweh¦84992, and then you'll all live¦84997 and \add ≈things will go well\add* and you'll all \add ≈be able to occupy that¦84990 land for a long time\add*.
 \c 6
 \s1 Always honour Yahweh
 \rem /s1 A Call for Wholehearted Commitment; Love the Lord Your god; The Great Commandment
@@ -336,7 +336,7 @@
 \p
 \v 4 Listen¦85079 Yisrael¦85076: Yahweh¦85077 \add ≈alone\add* is our god\x + \xo 6:4: \xt Mrk 12:29.\x*
 \v 5 and you should love¦85084 your god¦85087 Yahweh¦85086 with \add ≈your whole mind¦85090, your entire¦85088 being\add*, and all your strength.\x + \xo 6:5: \xt Mat 22:37; Mrk 12:30; Luk 10:27.\x*
-\v 6 \add ≈Always be considering\add* these¦85100 instructions that I'm \add ≈giving\add* you¦85103 today,\x + \xo 6:6-9: \xt Deu 11:18-20.\x*
+\v 6 \add ≈Always be considering\add* these¦85100 instructions that¦85101 I'm \add ≈giving\add* you¦85103 today,\x + \xo 6:6-9: \xt Deu 11:18-20.\x*
 \v 7 and diligently¦85109 teach¦85109 them to your children¦85110, and talk¦85111 about them when you're sitting at home and when you're \add ≈out walking\add*, when you lie down and when you get up.
 \v 8 Your \add ≈hands should always be applying them\add* and your \add ≈minds should always be evaluating them\add*.
 \v 9 \add ≈Carve\add* them onto your doorposts¦85133 at home, and on your \add city\add* gates¦85135.
@@ -351,14 +351,14 @@
 \v 15 because your¦85227 god Yahweh¦85225 who lives among you is a jealous¦85224 god. You¦85233 wouldn't want \add *him\add* to get angry with you and \add ≈totally\add* destroy¦85236 you.
 \p
 \v 16 Don't test \add the patience of\add* your god¦85247 Yahweh¦85246 \add again\add* like you all did \add over water\add* at Massah¦85250.\x + \xo 6:16: a \xt Mat 4:7; Luk 4:12; \xo b \xt Exo 17:1-7.\x*
-\v 17 Be¦85257 sure to follow all \add *his\add* instructions and rules and regulations¦85260 that he's \add ≈given\add* you¦85262.
+\v 17 Be¦85257 sure to follow all \add *his\add* instructions and rules and regulations¦85260 that¦85261 he's \add ≈given\add* you¦85262.
 \v 18 Do¦85281 what Yahweh¦85268 says is right¦85265 and good so that things will go well for you and you'll be able to enter the good land that \add *he\add* promised to your ancestors¦85282 and take possession¦85273 of it—
 \v 19 driving¦85284 out all your¦85289 enemies¦85289 from \add ≈that land\add* just as Yahweh¦85293 has said.
 \p
 \v 20 \add ≈In the future\add* when your¦85299 children ask you¦85298, ‘Why did our god¦85309 Yahweh¦85308 our god¦85309 command¦85307 us to obey all these rules and decrees¦85303?’
 \v 21 then you can tell them, ‘We were Far-oh's slaves¦85314 in Egypt¦85317, \add ≈but\add* Yahweh¦85319 \add ≈used his incredible power to get us out of there\add*.
 \v 22 \add *He\add* \add ≈did many kinds of miracles that devastated that Egyptian king and his whole household¦85335\add*,
-\v 23 then he took us out of there¦85340, so he could bring¦85342 us here to give¦85344 us the land that he'd promised to our ancestors¦85351.
+\v 23 then he took us out of there¦85340, so he could bring¦85342 us here to give¦85344 us the land that¦85349 he'd promised to our ancestors¦85351.
 \v 24 Yahweh¦85354 ordered us to \add ≈follow\add* all these¦85361 instructions to \add demonstrate\add* that we honour him so that things will go well for us and \add ≈he'll protect our¦85366 nation as he's doing¦85355 now\add*.
 \v 25 Our god¦85392 Yahweh¦85391 \add ≈will declare us to be innocent of wrong\add* if we¦85382 obey everything that he's instructed¦85394 us.’
 \c 7
@@ -372,21 +372,21 @@
 \rem /r (Deuteronomy 7.12-24; 28.1-14)
 \v 4 because they'd turn¦85462 your sons¦85465 away from me, and they'd \add end up\add* serving other¦85469 gods¦85468. Then Yahweh¦85473 \add ≈would become very angry\add* with you all and would quickly¦85476 destroy¦85475 you.
 \v 5 \add ≈What you all should do\add* to \add @those people\add* is to break¦85488 down their altars¦85485 and smash their \add stone\add* pillars¦85487, cut their Asherah poles¦85489 to pieces, and burn¦85492 up their idols¦85491.\x + \xo 7:5: \xt Deu 12:3.\x*
-\v 6 \add You¦85504 must do that\add* because you're a group of people who \add ≈belong only to\add* your god Yahweh¦85499. \add *He's\add* chosen¦85502 you \add ≈from all the people groups in the world to be his own special people\add*.\x + \xo 7:6: \xt Exo 19:5; Deu 4:20; 14:2; 26:18; Tit 2:14; 1Pe 2:9.\x*
+\v 6 \add You¦85504 must do that¦85512\add* because you're a group of people who \add ≈belong only to\add* your god Yahweh¦85499. \add *He's\add* chosen¦85502 you \add ≈from all the people groups in the world to be his own special people\add*.\x + \xo 7:6: \xt Exo 19:5; Deu 4:20; 14:2; 26:18; Tit 2:14; 1Pe 2:9.\x*
 \p
 \v 7 Yahweh¦85525 loved¦85524 you and¦85527 chose¦85527 you all, not because¦85520 you were the \add ≈most populous\add* nation (in fact, you were the smallest of all the nations),
-\v 8 but because Yahweh loves you all and because he kept¦85541 the promise that he'd made to your ancestors¦85550. Yahweh \add ≈used his power to rescue\add* you all from the slavery¦85558 \add imposed by\add* Egypt's¦85563 King Far-oh.
+\v 8 but because Yahweh loves you all and because he kept¦85541 the promise that¦85548 he'd made to your ancestors¦85550. Yahweh \add ≈used his power to rescue\add* you all from the slavery¦85558 \add imposed by\add* Egypt's¦85563 King Far-oh.
 \v 9 \add ≈So¦85565 remember\add* that your god Yahweh¦85568 is God¦85569—the faithful¦85573 god who keeps¦85574 agreements and \add displays\add* loyal¦85576 commitment toward a thousand¦85581 generations¦85582 of those who love him and \add ≈obey what he's commanded¦85579\add*.\x + \xo 7:9-10: \xt Exo 20:5-6; 34:6-7; Num 14:18; Deu 5:9-10.\x*
 \v 10 \add ≈However,\add* to those who hate¦85585 him, he won't¦85590 hesitate to pay them back with punishment and destruction¦85589.
-\v 11 \add ≈So¦85600\add* be sure to obey all the instructions, rules, and regulations¦85606 that I'm¦85611 giving you¦85612 today.
+\v 11 \add ≈So¦85600\add* be sure to obey all the instructions, rules, and regulations¦85606 that¦85610 I'm¦85611 giving you¦85612 today.
 \s1 Blessings for obedience
 \rem /s1 The Blessings of Obedience; Blessings for Obedience
 \r (Deu. 28:1-14)
 \p
-\v 12 \add ≈If you pay attention to these¦85623 instructions and always obey them\add*, then your god¦85629 Yahweh¦85628 will keep the agreement that he promised to your ancestors¦85639 and \add continue to display his\add* loyal¦85636 commitment to you,\x + \xo 7:12-16: \xt Deu 11:13-17.\x*
+\v 12 \add ≈If you pay attention to these¦85623 instructions and always obey them\add*, then your god¦85629 Yahweh¦85628 will keep the agreement that¦85637 he promised to your ancestors¦85639 and \add continue to display his\add* loyal¦85636 commitment to you,\x + \xo 7:12-16: \xt Deu 11:13-17.\x*
 \v 13 and he will love¦85641 you and bless you. \add ≈He'll grant you many children and make your farming productive\add*, \add producing\add* grain¦85651 and \add ≈grapes for\add* wine, and \add olive\add* oil. Your cattle and sheep and goats will multiply¦85643 on the land that he promised your ancestors¦85664 that he'd give¦85665 you.
 \v 14 You'll be blessed \add ≈more than any other people¦85672 group\add*. \add ≈All of you¦85669 will be able to have children, and all of your¦85679 livestock¦85679 will produce offspring\add*.
-\v 15 Yahweh¦85682 will keep sickness¦85686 away from you. All those horrible diseases¦85689 that \add @your ancestors\add* saw in Egypt¦85690 won't¦85694 affect you, but \add instead\add* he'll give them to those who hate¦85700 you.
+\v 15 Yahweh¦85682 will keep sickness¦85686 away from you. All those horrible diseases¦85689 that¦85692 \add @your ancestors\add* saw in Egypt¦85690 won't¦85694 affect you, but \add instead\add* he'll give them to those who hate¦85700 you.
 \v 16 You must destroy all the peoples¦85707 that your god¦85710 Yahweh¦85709 \add ≈gives you victory over\add*—\add ≈don't allow yourselves\add* to pity them, and don't serve¦85719 their¦85722 gods¦85722 because \add ≈that would end up trapping you\add*.
 \p
 \v 17 Don't \add ≈tell yourselves that because those groups have many more people than you, that you won't be able to drive them out\add*.
@@ -404,7 +404,7 @@
 \rem /s1 A Warning Not to Forget God in Prosperity; A Good Land to Be Possessed; A Call to Remember and Obey; Do Not Forget the Lord
 \p
 \v 1 You must consistently follow the instructions that I'm giving¦85911 you today, so that you all can enter and occupy the land that Yahweh¦85926 promised to your¦85911 ancestors¦85927, and live¦85916 \add there\add* and multiply.
-\v 2 Remember the way¦85934 that your god¦85938 Yahweh¦85937 led you these forty¦85940 years in the wilderness¦85942 in order to humble¦85944 you—to test you to know¦85946 whether¦85951 or not \add ≈you were sincere about obeying his instructions\add*.
+\v 2 Remember the way¦85934 that¦85935 your god¦85938 Yahweh¦85937 led you these forty¦85940 years in the wilderness¦85942 in order to humble¦85944 you—to test you to know¦85946 whether¦85951 or not \add ≈you were sincere about obeying his instructions\add*.
 \v 3 He humbled¦85958 you \add ≈by\add* making you hungry¦85959 and feeding¦85960 you \add some\add* stuff that neither you nor your ancestors¦85972 had heard of, in order to teach you that people don't¦85967 just need food, but can only \add properly\add* live \add ≈by following what Yahweh¦85991 says\add*.\x + \xo 8:3: \xt Mat 4:4; Luk 4:4.\x*
 \v 4 For the \add entire\add* forty¦86003 years, your clothes didn't wear out and your feet¦85999 didn't swell¦86001 up \add from walking in the desert\add*.
 \v 5 \add ≈Don't forget\add* that your¦86019 god¦86018 Yahweh¦86017 disciplines you¦86019, just like a \add ≈human father\add* disciplines his children.
@@ -412,11 +412,11 @@
 \v 7 because \add *he's\add* bringing¦86035 you¦86035 into a good¦86039 land—a land with streams and fountains, and springs \add both\add* in the valleys¦86046 and in the hills¦86047.
 \v 8 \add It's\add* a land with wheat¦86050 and barley¦86051, grapevines and fig¦86053 trees, pomegranates¦86054 and olive¦86057 trees¦86053, and honey¦86059—
 \v 9 a land with \add ≈plenty of food where\add* you won't¦86063 lack anything¦86072. \add ≈There's iron in the rocks¦86076, and copper¦86080 in the hills¦86078\add*.
-\v 10 You'll eat¦86082 and be full, and you'll \add ≈thank\add* your¦86088 god¦86088 Yahweh¦86087 for the good¦86092 land that he's given¦86094 you.
+\v 10 You'll eat¦86082 and be full, and you'll \add ≈thank\add* your¦86088 god¦86088 Yahweh¦86087 for the good¦86092 land that¦86093 he's given¦86094 you.
 \s1 Warnings against forgetting Yahweh
 \rem /s1 Warnings against Forgetting the Lord
 \p
-\v 11 \add ≈Be careful not\add* to forget¦86102 your¦86114 god¦86106 Yahweh¦86105 by failing to follow his instructions and rules and regulations¦86111 that I'm telling you today.\x + \xo 8:11-16: \xt Josh 13:5-6.\x*
+\v 11 \add ≈Be careful not\add* to forget¦86102 your¦86114 god¦86106 Yahweh¦86105 by failing to follow his instructions and rules and regulations¦86111 that¦86112 I'm telling you today.\x + \xo 8:11-16: \xt Josh 13:5-6.\x*
 \v 12 \add Watch out when\add* you eat¦86119 and \add ≈feel\add* satisfied¦86120, and you've built good¦86122 houses¦86121 and are living in them,
 \v 13 and your herds¦86126 and flocks¦86127 have increased, and you've accumulated gold¦86130 and silver¦86129, and everything you have has multiplied¦86128.
 \v 14 \add That's when it would be easy to\add* \add ≈become¦86140 proud¦86140\add* and forget¦86142 your¦86147 god¦86146 Yahweh¦86145 who brought¦86147 you¦86147 \add ≈out of slavery¦86151 in\add* Egypt¦86149.
@@ -425,7 +425,7 @@
 \v 17 without thinking to yourselves that your wealth¦86197 came from your own strength and \add ≈ability\add*.
 \v 18 Remember that it's your god¦86204 Yahweh¦86203 who gives¦86207 you the strength¦86209 to prosper, so that he can \add ≈fulfill\add* his agreement that he promised to your ancestors¦86220, as \add he has\add* \add ≈until now\add*.
 \v 19 \add ≈However,\add* if you \add ≈end up\add* forgetting about your god¦86233 Yahweh¦86232 and \add ≈start following\add* other¦86237 gods¦86236 and serving them and bowing down to them, I \add ≈can assure\add* you that you'll \add ≈most definitely be destroyed\add*.
-\v 20 If¦86259 you don't¦86256 listen to \add ≈what your god¦86260 Yahweh¦86250 says\add*, then you'll be destroyed just like the other people groups that he's destroyed ahead of you all.
+\v 20 If¦86259 you don't¦86256 listen to \add ≈what your god¦86260 Yahweh¦86250 says\add*, then you'll be destroyed just like the other people groups that¦86249 he's destroyed ahead of you all.
 \c 9
 \s1 The reason for destruction of the land's inhabitants
 \rem /s1 The Consequences of Rebelling against God; Victory by God's Grace; Not Because of Israel's Righteousness; The People's Disobedience
@@ -452,15 +452,15 @@
 \v 14 \add ≈Move away\add* and I'll destroy¦86560 them \add ≈so they'll never be remembered again\add*, and I'll make \add ≈your descendants\add* into a more powerful and more prestigious nation¦86569 than they ever were.’
 \p
 \v 15 \add ≈So¦86575\add* I turned¦86575 and headed back down the mountain that was still burning¦86581 with fire¦86582, carrying the two tablets¦86584 with the agreement \add written on them\add*.
-\v 16 Then¦86590 I looked, and¦86591 wow, you \add certainly\add* had disobeyed your god¦86594 Yahweh. You'd cast a metal¦86598 calf. You'd turned¦86599 so quickly¦86600 from the instructions that Yahweh had given you.
+\v 16 Then¦86590 I looked, and¦86591 wow, you \add certainly\add* had disobeyed your god¦86594 Yahweh. You'd cast a metal¦86598 calf. You'd turned¦86599 so quickly¦86600 from the instructions that¦86604 Yahweh had given you.
 \v 17 I grabbed those two \add stone\add* tablets¦86612 and threw¦86613 them to the ground—shattering them right in front of your eyes¦86618.
-\v 18 Then¦86620 I lay on the ground in front¦86621 of Yahweh for forty days and nights¦86627 without eating or drinking because of how you'd disobeyed Yahweh—doing¦86640 evil¦86641 things that provoked¦86644 him into being angry.
+\v 18 Then¦86620 I lay on the ground in front¦86621 of Yahweh for forty days and nights¦86627 without eating or drinking because of how you'd disobeyed Yahweh—doing¦86640 evil¦86641 things that¦86638 provoked¦86644 him into being angry.
 \v 19 \add ≈Yes,\add* I was afraid¦86647 that \add ≈in his terrible anger, Yahweh¦86653 might destroy¦86655 you, but\add* \add *he\add* listened¦86657 to me at that time.\x + \xo 9:19: \xt Heb 12:21.\x*
 \v 20 Yahweh¦86666 was angry¦86665 enough \add to want\add* to destroy¦86668 Aharon, \add ≈but\add* I also interceded for him¦86668 at that time¦86674.
 \v 21 I took¦86688 \add that symbol of\add* your \add ≈disobedience\add*—that calf \add idol\add* that you all had made—and \add ≈threw it into\add* the fire¦86692, then I crushed¦86693 it and ground¦86695 it into dust, and threw the dust into the mountain¦86712 stream¦86708.
 \p
 \v 22 You all also provoked¦86718 Yahweh¦86722 to get angry at Taberah,\x + \xo 9:22: \xt Num 11:3.\x* at Massah¦86715,\x + \xo 9:22: \xt Exo 17:7.\x* and at Kivrot-Hattaavah.\x + \xo 9:22: \xt Num 11:34.\x*
-\v 23 \add ≈Also\add* when Yahweh sent¦86724 you all from Kadesh-Barnea, saying, ‘Go in and take¦86731 possession¦86731 of the land that I've given¦86736 to you,’ \add ≈but\add* you rebelled¦86738 against¦86738 your god¦86743 Yahweh's words, and you didn't believe¦86745 him and didn't \add ≈do what he said\add*.\x + \xo 9:23: a \xt Num 13:17; \xo b \xt Deu 1:21; \xo c \xt Num 13:31; Deu 1:26; Heb 3:16.\x*
+\v 23 \add ≈Also\add* when Yahweh sent¦86724 you all from Kadesh-Barnea, saying, ‘Go in and take¦86731 possession¦86731 of the land that¦86735 I've given¦86736 to you,’ \add ≈but\add* you rebelled¦86738 against¦86738 your god¦86743 Yahweh's words, and you didn't believe¦86745 him and didn't \add ≈do what he said\add*.\x + \xo 9:23: a \xt Num 13:17; \xo b \xt Deu 1:21; \xo c \xt Num 13:31; Deu 1:26; Heb 3:16.\x*
 \v 24 You've all been rebellious against Yahweh¦86755 since the day¦86756 I knew you \add back in Egypt\add*.
 \p
 \v 25 \add ≈So¦86760\add* I \add ≈lay on the ground in Yahweh's presence\add* for forty days and nights¦86769, because \add *he\add* said¦86774 he'd destroy¦86776 you all,
@@ -477,8 +477,8 @@
 \v 2 I'll write¦86881 the words onto the tablets that were on the first tablets that you broke¦86895, then you can put them into the box.”
 \p
 \v 3 \add ≈So¦86899\add* I made a box from acacia¦86902 wood, and I carved out two stone¦86907 tablets like the first ones, and I went¦86909 up the mountain¦86910 \add ≈carrying\add* the two tablets
-\v 4 and he wrote¦86915 the ten¦86922 instructions on the tablets like the first \add ≈time\add*—the same words that Yahweh¦86926 had spoken¦86925 to you from the fire¦86930 on the mountain¦86928 on the day¦86931 of the assembly¦86932. Then¦86915 \add *he\add* gave¦86933 me the tablets
-\v 5 and I turned¦86937 and went¦86938 down the mountain¦86941. I put the tablets¦86945 into the box that I'd made, just like Yahweh¦86953 had told me to.
+\v 4 and he wrote¦86915 the ten¦86922 instructions on the tablets like the first \add ≈time\add*—the same words that¦86924 Yahweh¦86926 had spoken¦86925 to you from the fire¦86930 on the mountain¦86928 on the day¦86931 of the assembly¦86932. Then¦86915 \add *he\add* gave¦86933 me the tablets
+\v 5 and I turned¦86937 and went¦86938 down the mountain¦86941. I put the tablets¦86945 into the box that¦86947 I'd made, just like Yahweh¦86953 had told me to.
 \p
 \v 6 Then¦86955 the \add ≈Israelis¦86956\add* travelled from Beerot-Bene-Yaakan\f + \fr 10:6 \ft Rather than just transliterating this name as we've done, it would also be possible to translate it as ‘the wells of the sons of Yaakan’.\f* to Moserah\f + \fr 10:6 \ft The document known as ‘Numbers’ tells us that Aharon died on Mt. Hor, so presumably Moserah is in that same region.\f* where Aharon died. He was buried¦86966 \add there\add*, and his son Eleazar¦86969 replaced him¦86971 as \add chief\add* priest.\x + \xo 10:6: \xt Num 20:28; 33:38.\x*
 \v 7 From there they¦86974 moved on to Gudgodah¦86975, then from \add *there\add* onto Yotbatah—an area with many streams.
@@ -490,7 +490,7 @@
 \rem /s1 Fear the Lord; A Call to Love and Obedience; The Essence of the Law; What God Demands
 \p
 \v 12 Now Yisrael, your god Yahweh¦87078 expects you \add ≈honour\add* \add *him\add* and to \add ≈follow his instructions\add* and to love him, and to serve¦87096 \add *him\add* with \add ≈sincerity and with energy\add*—
-\v 13 \add ≈obeying\add* \add *his\add* rules and¦87113 regulations¦87115 that I'm giving you¦87118 today for the benefit of \add @the country\add*.
+\v 13 \add ≈obeying\add* \add *his\add* rules and¦87113 regulations¦87115 that¦87116 I'm giving you¦87118 today for the benefit of \add @the country\add*.
 \v 14 Listen, the highest heavens¦87127 belong to your¦87125 god¦87125 Yahweh¦87124, as well as the earth¦87129 and everything on it¦87134,
 \v 15 \add ≈yet\add* \add *he\add* \add ≈decided to show love¦87140\add* to your ancestors¦87137, and as their¦87143 \add ≈descendants¦87143\add*, he chose¦87142 you all out from all the peoples¦87148 as \add you know\add* to this day¦87149.
 \v 16 You all must \add ≈eradicate your rebelliousness\add* and \add ≈stop being stubborn\add*,
@@ -505,12 +505,12 @@
 \rem /s1 Rewards for Obedience; Love and Obey the Lord; The Lord's Greatness
 \p
 \v 1 You must love¦87252 your¦87255 god¦87255 Yahweh¦87254 and follow his instructions, rules, regulations¦87258, and commands¦87260 \add ≈from now on\add*.
-\v 2 \add Of course that was you all and your parents\add* who \add ≈experienced\add* your god¦87285 Yahweh's discipline and who saw his power and strength and \add ≈the amazing miracles done on your behalf\add*—not your children¦87272.
+\v 2 \add Of course that¦87277 was you all and your parents\add* who \add ≈experienced\add* your god¦87285 Yahweh's discipline and who saw his power and strength and \add ≈the amazing miracles done on your behalf\add*—not your children¦87272.
 \v 3 \add ≡They didn't see\add* his actions and the miracles done to King Far-oh and all his people right there in Egypt¦87305,\x + \xo 11:3: \xt Exo 7:8–12:13.\x*
 \v 4 or what he did to the Egyptian army with its horses¦87318 and chariots¦87319 when he caused¦87321 the Red Sea to flow over \add ≈the top of them\add* as they chased you, and how Yahweh¦87334 destroyed¦87333 them and \add ^they've never recovered\add* to this day¦87336,\x + \xo 11:4: \xt Exo 14:28.\x*
 \v 5 or \add ≈how he helped\add* you all in the wilderness¦87342 until¦87343 you reached this place¦87348.
 \v 6 \add ≡Your children didn't see\add* what \add @Yahweh\add* did to Eliav's sons¦87355 Datan¦87353 and Aviram (from the tribe of Rueven) when the ground opened¦87361 \add ≈up\add* and swallowed¦87366 them, along¦87378 with their houses¦87369 and tents¦87372 and \add ≈all their families and animals\add* \add ≈right in the middle of the encampment\add*\x + \xo 11:6: \xt Num 16:31-32.\x*
-\v 7 because you all are the ones who \add actually\add* saw the amazing miracles that Yahweh¦87392 did.
+\v 7 because you all are the ones who \add actually\add* saw the amazing miracles that¦87394 Yahweh¦87392 did.
 \s1 The promises and warnings
 \rem /s1 The Blessings of Obedience; The Blessings of the Promised Land
 \p
@@ -518,9 +518,9 @@
 \v 9 and so that you all might live \add ≈for a long time\add* in that land which¦87426 Yahweh¦87428 promised to give¦87430 them and their¦87432 descendants¦87432—a land flowing¦87434 with milk and honey¦87436
 \v 10 because \add *it's\add* not like Egypt¦87449 where \add @your ancestors\add* came¦87452 out from, where you planted seed and had to water \add the fields\add* \add ≈by hand\add*.
 \v 11 \add ≈But¦87464\add* the land that you're all about¦87467 to enter over \add the river\add* has a terrain of hills and valleys¦87472, \add i.e.,\add* it drinks¦87475 in the rain water¦87477.
-\v 12 It's¦87488 a land that your god Yahweh¦87482 \add ≈cares about\add*—\add ≈watching over\add* it from the beginning¦87491 of each year to the end.
+\v 12 It's¦87488 a land that¦87480 your god Yahweh¦87482 \add ≈cares about\add*—\add ≈watching over\add* it from the beginning¦87491 of each year to the end.
 \p
-\v 13 If you all listen to the instructions that I'm \add ≈giving\add* you today, loving your god¦87515 Yahweh¦87514 and serving him¦87516 with \add ≈sincerity and with energy\add*,\x + \xo 11:13-17: \xt Lev 26:3-5; Deu 7:12-16; 28:1-14.\x*
+\v 13 If you all listen to the instructions that¦87506 I'm \add ≈giving\add* you today, loving your god¦87515 Yahweh¦87514 and serving him¦87516 with \add ≈sincerity and with energy\add*,\x + \xo 11:13-17: \xt Lev 26:3-5; Deu 7:12-16; 28:1-14.\x*
 \v 14 then \add he says that he'll\add* give¦87524 the land \add ≈the seasonal¦87528 early and late rains\add* \add ≈so that you'll be able to produce\add* grain¦87532, and new wine, and \add olive\add* oil.
 \v 15 \add ≈He'll\add* provide grass¦87537 in the countryside for your livestock¦87539, and you'll eat¦87540 and be satisfied.
 \v 16 Guard yourselves to make sure that you're not deceived¦87546 and \add end up\add* turning around to serve¦87549 other¦87551 ‘gods¦87550’ and bow down to them,
@@ -531,17 +531,17 @@
 \v 20 \add ≈Carve\add* them on the doorposts¦87623 of your homes and on your \add city\add* gates¦87625,
 \v 21 so that your own lifetimes, and the lifetimes of your children¦87631 will be extended in the land that Yahweh¦87636 promised to give¦87638 to your ancestors¦87637 \add to have\add* as \add ≈long as the sky remains\add* over the earth¦87644.
 \p
-\v 22 If you all follow these instructions that I'm telling you to do, to love¦87663 your god¦87667 Yahweh¦87666 and \add ≈live how he wants you to, and stay faithful\add* to him,
+\v 22 If you all follow these instructions that¦87658 I'm telling you to do, to love¦87663 your god¦87667 Yahweh¦87666 and \add ≈live how he wants you to, and stay faithful\add* to him,
 \v 23 then \add *he'll\add* drive¦87676 all those peoples out \add ≈ahead of\add* you all, and you'll dispossess¦87685 groups that are larger and more powerful than yourselves.
-\v 24 Every¦87691 place¦87693 that your feet step on will become yours: from the \add southern\add* desert to Lebanon¦87705 \add in the north\add*, and from the Euphrates¦87711 \add in the east\add* to the Mediterranean Sea \add in the west\add*.\x + \xo 11:24-25: \xt Josh 1:3-5.\x*
-\v 25 No one \add ≈will be able to resist\add* you all. Your god¦87728 Yahweh¦87727 \add ≈will make those peoples in that land terrified\add* of you, just as he promised he would.
+\v 24 Every¦87691 place¦87693 that¦87694 your feet step on will become yours: from the \add southern\add* desert to Lebanon¦87705 \add in the north\add*, and from the Euphrates¦87711 \add in the east\add* to the Mediterranean Sea \add in the west\add*.\x + \xo 11:24-25: \xt Josh 1:3-5.\x*
+\v 25 No one \add ≈will be able to resist\add* you all. Your god¦87728 Yahweh¦87727 \add ≈will make those peoples in that¦87735 land terrified\add* of you, just as he promised he would.
 \p
 \v 26 \add ≈Now listen,\add* today I'm \add ≈giving you all the option\add* of a blessing¦87749 or a curse¦87750:
-\v 27 the blessing¦87754 is if you all \add decide to\add* obey¦87756 your god¦87761 Yahweh's instructions that I'm giving you today,
-\v 28 \add ≈but\add* the curse¦87768 is if you all don't¦87771 \add ≈take any notice\add* of \add *his\add* instructions, or if you turn¦87778 away from what I'm commanding¦87775 you all today to go¦87787 after¦87788 other¦87790 gods¦87789 that you \add ≈previously had nothing to do with\add*.
+\v 27 the blessing¦87754 is if you all \add decide to\add* obey¦87756 your god¦87761 Yahweh's instructions that¦87762 I'm giving you today,
+\v 28 \add ≈but\add* the curse¦87768 is if you all don't¦87771 \add ≈take any notice\add* of \add *his\add* instructions, or if you turn¦87778 away from what I'm commanding¦87775 you all today to go¦87787 after¦87788 other¦87790 gods¦87789 that¦87782 you \add ≈previously had nothing to do with\add*.
 \v 29 Whenever your god¦87801 Yahweh¦87800 brings you into the land that you're¦87807 entering to take possession¦87811 of, you must \add ≈pronounce\add* the blessing¦87815 from Mt. Gerizim¦87819, and the curse¦87822 from Mt. Eyval.\x + \xo 11:29: \xt Deu 27:11-14; Josh 8:33-35.\x*
 \v 30 (Those two mountains are across¦87831 the Yarden \add river\add*, west of the river plain where the Canaanites¦87838 live¦87839, near the Oak of Moreh¦87845 opposite¦87841 Gilgal¦87842.)
-\v 31 You'll all \add soon\add* be crossing the Yarden to go¦87853 in and occupy the land that your god¦87861 Yahweh¦87860 is giving you. \add ≈As\add* you all \add ≈take¦87854 it over\add* and \add start to\add* live¦87866 there,
+\v 31 You'll all \add soon\add* be crossing the Yarden to go¦87853 in and occupy the land that¦87858 your god¦87861 Yahweh¦87860 is giving you. \add ≈As\add* you all \add ≈take¦87854 it over\add* and \add start to\add* live¦87866 there,
 \v 32 \add ≈make sure that\add* you follow all the instructions and¦87876 rules that I'm¦87880 giving to you all today.
 \c 12
 \s1 One place for future worship
@@ -557,7 +557,7 @@
 \v 7 You'll¦88027 all be able to take your families there¦88015 in front¦88016 of your god Yahweh¦88017 to cheerfully eat \add ≈what you've produced as a result of his blessing¦88026\add*.
 \p
 \v 8 We won't be able to continue like we¦88034 are at present, with each person \add ≈worshipping however they feel is right¦88041\add*
-\v 9 because until¦88048 now, you haven't reached the inheritance¦88056 and¦88054 the \add ≈peaceful life\add* that your¦88060 god¦88060 Yahweh¦88059 is giving to you.
+\v 9 because until¦88048 now, you haven't reached the inheritance¦88056 and¦88054 the \add ≈peaceful life\add* that¦88057 your¦88060 god¦88060 Yahweh¦88059 is giving to you.
 \v 10 \add ≈After\add* you all cross¦88064 the Yarden and live in the land that your god¦88073 Yahweh¦88072 is giving¦88074 you as an inheritance¦88074, it's then that he'll give you \add ≈peace\add* from all your surrounding enemies¦88080, and \add so\add* you'll all live safely.
 \v 11 Then¦88086 your god¦88092 Yahweh will choose¦88090 one place¦88087 to \add ≈attach his name¦88095 to\add*, and that's where you'll all bring¦88098 everything that I tell you to: your animal sacrifices and offerings¦88106, as well as the tenth of your \add ≈produce and animals\add*, \add ≈special contributions¦88109\add*, and sacrifices for promises made to Yahweh.
 \v 12 You'll all celebrate there¦88131 in front¦88119 of Yahweh¦88120: you and your children and your servants, along with any Levites¦88127 \add ≈who live in your towns¦88129\add* (because they don't¦88131 \add ≈personally inherit¦88134 any land of their own\add*).
@@ -565,19 +565,19 @@
 \v 13 \add ≈Make sure\add* that you don't offer¦88141 burnt¦88142 sacrifices at any place¦88145 that you \add ≈just decide is good\add*—
 \v 14 only at the place¦88152 that Yahweh¦88156 will choose¦88155 from one of your tribes¦88158. That's where you'll offer¦88160 your sacrifices, and do everything else that I tell you.
 \p
-\v 15 However, you may kill and eat your animals \add ≈wherever you live as much as you want\add*. Those animals are blessings¦88178 from your god¦88180 Yahweh¦88179. You can eat that meat \add ≈whether or not you're ceremonially ‘clean¦88189’\add*, just like you'd eat a \add wild\add* gazelle¦88191 or deer.
+\v 15 However, you may kill and eat your animals \add ≈wherever you live as much as you want\add*. Those animals are blessings¦88178 from your god¦88180 Yahweh¦88179. You can eat that¦88181 meat \add ≈whether or not you're ceremonially ‘clean¦88189’\add*, just like you'd eat a \add wild\add* gazelle¦88191 or deer.
 \v 16 \add ≈However,\add* don't¦88196 eat¦88197 the blood¦88195—it¦88201 must be poured out on the ground like water¦88202.\x + \xo 12:16: \xt Gen 9:4; Lev 7:26-27; 17:10-14; 19:6; Deu 15:23.\x*
-\v 17 In your towns¦88208, don't eat¦88207 the tenth of your \add ≈produce\add* or the first-borns from your herd or flock¦88215, or at the celebration of a vow, or any free-will offering¦88221 or contribution¦88222 \add ≈that you've made\add*.
-\v 18 You can only eat those in Yahweh's presence in the place¦88232 that \add *he'll\add* choose¦88234. \add ≈The same applies to\add* your children, your servants, and any Levites¦88243 who live \add ≈in your towns¦88245\add*. \add ≈The celebration for what you've produced must be done in front of\add* your god Yahweh.
+\v 17 In your towns¦88208, don't eat¦88207 the tenth of your \add ≈produce\add* or the first-borns from your herd or flock¦88215, or at the celebration of a vow, or any free-will offering¦88221 or contribution¦88222 \add ≈that¦88219 you've made\add*.
+\v 18 You can only eat those in Yahweh's presence in the place¦88232 that¦88233 \add *he'll\add* choose¦88234. \add ≈The same applies to\add* your children, your servants, and any Levites¦88243 who live \add ≈in your towns¦88245\add*. \add ≈The celebration for what you've produced must be done in front of\add* your god Yahweh.
 \v 19 \add ≈Make sure\add* that you don't neglect¦88258 the Levites¦88261 as long as you live in your¦88264 land.
 \p
 \v 20 \add ≈In¦88283 the future, when\add* your god¦88274 Yahweh¦88273 widens your territory¦88277 like he's said he would, if you want to eat meat there, then \add ≈go ahead and do it\add*.
-\v 21 If the place¦88302 that \add *he\add* chooses¦88304 \add ≈to attach his name¦88308 to\add* is too far away, then \add ≈it's permissible\add* to sacrifice like I've instructed¦88318 you from your¦88323 herd or flock¦88312, and you can eat¦88319 it \add ≈where¦88303 you live whenever you want\add*.
+\v 21 If the place¦88302 that¦88313 \add *he\add* chooses¦88304 \add ≈to attach his name¦88308 to\add* is too far away, then \add ≈it's permissible\add* to sacrifice like I've instructed¦88318 you from your¦88323 herd or flock¦88312, and you can eat¦88319 it \add ≈where¦88303 you live whenever you want\add*.
 \v 22 You can eat it \add ≈whether or not you're ceremonially ‘clean¦88337’\add*, just like you'd eat a \add wild\add* gazelle¦88330 or deer.
 \v 23 \add ≈However,\add* don't¦88343 eat the blood of any animal, because the blood is the life and you mustn't eat the life with the meat.\x + \xo 12:23-24: \xt Lev 17:10-14.\x*
 \v 24 Don't eat¦88359 \add @the blood\add*—it must be poured out on the ground like water¦88364.
 \v 25 Don't eat¦88367 it so that things will go¦88369 well for you and your children¦88371 after¦88372 you, when you do what Yahweh¦88378 \add ≈says is right¦88376\add*.
-\v 26 \add ≈However, you¦88387 still must take¦88387\add* your sacred¦88381 things¦88381 and offerings for vows to the place¦88391 that Yahweh¦88395 will choose¦88394.
+\v 26 \add ≈However, you¦88387 still must take¦88387\add* your sacred¦88381 things¦88381 and offerings for vows to the place¦88391 that¦88382 Yahweh¦88395 will choose¦88394.
 \v 27 The meat and blood from burnt¦88398 offerings¦88398 must only be placed on your god Yahweh's \add future\add* altar, and the blood of your \add other\add* sacrifices¦88408 must be poured¦88409 on the altar, \add ≈but\add* you can eat the meat.
 \v 28 \add ≈Make sure to follow\add* all these¦88424 instructions that I'm giving you so that everything will go¦88429 well for you and for your descendants into the future, when you do what your god¦88442 Yahweh¦88441 has said is good¦88438 and right¦88439.
 \s1 Warnings about false gods
@@ -585,7 +585,7 @@
 \p
 \v 29 When you enter the land that you will occupy, your¦88460 god¦88449 Yahweh¦88448 \add ≈will destroy the people groups that live¦88463 there as you advance\add*.
 \v 30 Watch¦88492 out after¦88472 they've been destroyed¦88473, that you don't¦88475 get trapped \add ≈by curiosity about¦88478 how they served¦88481 their gods, and then you end up doing the same\add*.
-\v 31 Don't¦88504 do that to your god Yahweh¦88498, because \add *he\add* hates¦88506 the disgusting things they've done for their gods—even burning their own sons and daughters¦88516 \add on altars\add* for their gods.
+\v 31 Don't¦88504 do that¦88505 to your god Yahweh¦88498, because \add *he\add* hates¦88506 the disgusting things they've done for their gods—even burning their own sons and daughters¦88516 \add on altars\add* for their gods.
 \p
 \v 32 \add ≈Make sure that\add* you obey all those instructions—don't add anything to them, or remove anything from them.\x + \xo 12:32: \xt Deu 4:2; Rev 22:18-19.\x*
 \c 13
@@ -594,11 +594,11 @@
 \p
 \v 1 If¦88527 someone among you \add claims\add* to be a prophet or interpreter of dreams, or \add ≈able to do miracles\add*,
 \v 2 \add ≈and it seems true, but they use those things to convince you to go after other ‘new’\add* gods and worship them,
-\v 3 then don't¦88571 listen to that person, because your god Yahweh is testing you to know whether you love \add *him\add* with \add ≈sincerity and with your energy\add*.
+\v 3 then don't¦88571 listen to that¦88561 person, because your god Yahweh is testing you to know whether you love \add *him\add* with \add ≈sincerity and with your energy\add*.
 \v 4 You must \add ≈conduct your lives as your god Yahweh¦88592 wants you to\add*. Honour him, and listen¦88578 to his voice and follow his instructions, and serve him and \add ≈remain loyal\add* to him.
 \v 5 \add ≈But\add* that prophet or interpreter of dreams must be executed because they've incited rebellion against your god¦88612 Yahweh who brought you all out from slavery in Egypt. Those \add kinds of\add* people want to drive you away from @Yahweh's instructions, hence why you must remove that evil from among you.
 \p
-\v 6 Your¦88648 brother, son, daughter, \add ≈beloved\add* wife, or \add ≈some close\add* friend might privately urge you to worship other gods that you and your¦88648 ancestors hadn't heard about before.
+\v 6 Your¦88648 brother, son, daughter, \add ≈beloved\add* wife, or \add ≈some close\add* friend might privately urge you to worship other gods that¦88655 you and your¦88648 ancestors hadn't heard about before.
 \v 7 \add ≈That might be\add* the gods¦88690 of the surrounding peoples, either nearby or \add ≈right across the world\add*.
 \v 8 Don't give in to them, or take notice of them. Don't even \add ≈feel sympathy for them or cover up for them\add*,
 \v 9 because \add ≈you'll definitely need to execute them\add*. \add ≈You yourself must be the first to take action, followed by the rest of the community\add*.
@@ -623,7 +623,7 @@
 \r (Lev. 11:1-47)
 \p
 \v 3 Don't eat¦88979 anything \add ≈that Yahweh detests\add*.
-\v 4 These are the animals¦88989 that you all can eat¦88987: cattle¦88985, sheep, goats¦88992,
+\v 4 These are the animals¦88989 that¦88986 you all can eat¦88987: cattle¦88985, sheep, goats¦88992,
 \v 5 \add ≈all kinds of\add* deer, gazelles¦88995, wild goats, and mountain¦89000 sheep¦89000,
 \v 6 \add i.e.,\add* you can eat¦89015 any of the animals¦89004 that have split hooves¦89010 and¦89007 that also chew the cud.
 \v 7 But there are other animals that chew the cud that you mustn't eat: camels¦89030, \add ≈rabbits and hares\add*, and rock badgers. They chew the cud, but don't¦89021 have split¦89025 hooves so they are \add ≈unacceptable\add* for you to eat.
@@ -650,7 +650,7 @@
 \v 22 \add ≈Make sure\add* you set aside a tenth of all the \add ≈crops that you harvest from your fields¦89215\add*.\x + \xo 14:22-29: \xt Lev 27:30-33; Num 18:21.\x*
 \v 23 You must eat it \add ≈in the presence of\add* your god Yahweh, in the place¦89224 that he'll choose¦89227 and \add ≈attach his name to\add*. That's where¦89225 you must eat the tenth of your grain¦89232, wine, \add olive\add* oil, and the firstborn¦89235 \add male animals\add* from your herd and your flock¦89237, so that you'll learn¦89239 to always honour your god Yahweh.
 \v 24 When \add *he\add* blesses¦89272 you \add with produce\add*, if the place¦89263 he chooses¦89265 to attach his name¦89269 to is too far for you to be able to carry¦89258 it to,
-\v 25 then you can \add ≈give¦89276 the equivalent in cash\add*, and \add ≈carefully take¦89278 the cash with you all the way\add* to the place¦89284 that \add *he\add* chooses¦89286.
+\v 25 then you can \add ≈give¦89276 the equivalent in cash\add*, and \add ≈carefully take¦89278 the cash with you all the way\add* to the place¦89284 that¦89285 \add *he\add* chooses¦89286.
 \v 26 \add When you get there\add*, \add ≈use the money¦89292 to purchase any kinds of meat or drink¦89301 that you want\add*, and consume it¦89296 there \add ≈in front¦89308 of\add* your god¦89310 Yahweh¦89309, and celebrate along with your household¦89313.
 \p
 \v 27 \add Be sure\add* not to neglect¦89320 any Levites that live in your¦89318 town, because \add ≈they weren't given ancestral land for agriculture like you¦89326 were\add*.
@@ -665,8 +665,8 @@
 \v 2 \add ≈Handle it like\add* this: Everyone who's loaned money to their \add ≈Israeli\add* neighbour \add ≈must cancel that debt, i.e.,\add* they must not insist that it's paid back, because Yahweh¦89405 has announced a cancellation.
 \v 3 You can pressure¦89410 a foreigner¦89409 to repay, but you must cancel any debt from a fellow Israeli.
 \p
-\v 4 However¦89434, there shouldn't¦89422 be any poor among you, because your god¦89435 Yahweh¦89431 will bless you in the land that \add *he's\add* giving you to own as an inheritance¦89439,
-\v 5 as long as you listen to \add ≈what he says\add* and keep following these¦89457 instructions that I'm telling you today.
+\v 4 However¦89434, there shouldn't¦89422 be any poor among you, because your god¦89435 Yahweh¦89431 will bless you in the land that¦89433 \add *he's\add* giving you to own as an inheritance¦89439,
+\v 5 as long as you listen to \add ≈what he says\add* and keep following these¦89457 instructions that¦89458 I'm telling you today.
 \v 6 Because your god¦89466 Yahweh¦89465 will bless¦89467 you (like he promised he would), you'll lend to many nations rather than borrowing¦89477 from them, and you'll rule over many nations rather than them ruling you.
 \p
 \v 7 \add ≈In the towns¦89494\add* that your god¦89499 Yahweh¦89498 is giving you, if it so happens that any of your fellow Israelis are poor, then don't¦89502 \add ≈just ignore them and refuse to help them,\add*\x + \xo 15:7-8: \xt Lev 25:35.\x*
@@ -690,7 +690,7 @@
 \rem /s1 The First-Born Cattle and Sheep; The Firstborn Animals; Sacrificing Firstborn Male Animals; The Firstborn of Livestock
 \p
 \v 19 You must set apart for your god¦89741 Yahweh¦89740, all the firstborn male¦89738 animals from your herds and your flocks. You mustn't use the cattle for working, and mustn't shear¦89747 the sheep or goats.\x + \xo 15:19: \xt Exo 13:12.\x*
-\v 20 Each¦89761 year, you and your household¦89763 must \add take them\add* to the place¦89757 that Yahweh¦89752 will choose¦89760, and eat them there in front¦89751 of \add *him\add*.
+\v 20 Each¦89761 year, you and your household¦89763 must \add take them\add* to the place¦89757 that¦89758 Yahweh¦89752 will choose¦89760, and eat them there in front¦89751 of \add *him\add*.
 \v 21 \add ≈However,\add* any animals that have defects (e.g., lame or blind¦89772, or with a severe blemish) mustn't be sacrificed¦89777 to your¦89779 god¦89779 Yahweh¦89778.
 \v 22 \add Instead,\add* you can eat those \add ≈at home\add* \add ≈whether or not you're ceremonially ‘clean¦89784’\add*, just like you'd eat a \add wild\add* gazelle¦89786 or deer.
 \v 23 \add ≈However,\add* don't¦89793 eat¦89794 the blood¦89792—it¦89798 must be poured out on the ground like water¦89799.\x + \xo 15:23: \xt Gen 9:4; Lev 7:26-27; 17:10-14; 19:26; Deu 12:16-23.\x*
@@ -702,11 +702,11 @@
 \v 1 \add Each year, honour\add* your god Yahweh¦89809 \add ≈in the early spring\add* by celebrating¦89807 the ‘pass-over’, because it was one night¦89818 \add ≈in the early spring\add* that \add *he\add* brought¦89814 you out of Egpyt \add (Heb. Mitsrayim)\add*.\x + \xo 16:1-8: \xt Exo 12:1-20; Lev 23:5-8; Num 28:16-25.\x*
 \v 2 \add ≈In¦89830 order to celebrate, go to\add* the place¦89826 that your god¦89823 Yahweh¦89822 will choose¦89829 \add ≈to attach his name¦89832 to\add*, and there¦89833 sacrifice¦89820 to \add *him\add* one \add young\add* animal from your flock¦89824 or herd.
 \v 3 Don't eat any leavened¦89839 bread with it. For seven¦89840 days, you must eat flat bread (the bread of suffering) because you came out of Egypt in a rush. That's how you should remember¦89854 the day of your exit from Egypt for the rest of your life.
-\v 4 \add In fact,\add* for seven¦89876 days¦89877 you¦89885 shouldn't¦89868 even have any rising agent within your¦89875 borders, and¦89878 none of the meat from the sacrifice¦89885 on that first¦89888 evening¦89886 is allowed to be left until¦89889 the morning¦89889.
+\v 4 \add In fact,\add* for seven¦89876 days¦89877 you¦89885 shouldn't¦89868 even have any rising agent within your¦89875 borders, and¦89878 none of the meat from the sacrifice¦89885 on that¦89884 first¦89888 evening¦89886 is allowed to be left until¦89889 the morning¦89889.
 \p
-\v 5 You mustn't sacrifice¦89893 the ‘pass-over’ \add animal\add* within any of your towns¦89898 that your god¦89902 Yahweh¦89901 is giving to you¦89892—
-\v 6 only at the place¦89911 that your god¦89916 Yahweh¦89915 will choose¦89914 to \add ≈attach his name¦89918 to\add*. That's where you must sacrifice¦89920 the ‘pass-over’ \add animal\add* at sunset, which¦89912 was the time¦89927 when \add ≈your ancestors\add* started leaving Egypt¦89929.
-\v 7 You must cook the meat and eat¦89932 it at the place¦89933 that Yahweh¦89936 will choose¦89935, then in the morning¦89940 you can \add start\add* returning¦89941 to your \add ≈homes\add*.
+\v 5 You mustn't sacrifice¦89893 the ‘pass-over’ \add animal\add* within any of your towns¦89898 that¦89899 your god¦89902 Yahweh¦89901 is giving to you¦89892—
+\v 6 only at the place¦89911 that¦89912 your god¦89916 Yahweh¦89915 will choose¦89914 to \add ≈attach his name¦89918 to\add*. That's where you must sacrifice¦89920 the ‘pass-over’ \add animal\add* at sunset, which¦89912 was the time¦89927 when \add ≈your ancestors\add* started leaving Egypt¦89929.
+\v 7 You must cook the meat and eat¦89932 it at the place¦89933 that¦89934 Yahweh¦89936 will choose¦89935, then in the morning¦89940 you can \add start\add* returning¦89941 to your \add ≈homes\add*.
 \v 8 Then for six days¦89945 you must only eat flat bread¦89947, and the seventh¦89949 day is a special celebration for your god Yahweh¦89951—don't¦89953 do any work on that day.
 \s1 The harvest celebration
 \rem /s1 The Festival of Weeks Reviewed; Feast of Weeks; The Festival of Harvest; The Harvest Festival
@@ -724,19 +724,19 @@
 \v 14 You should celebrate along with your children and your servants, as well as any Levites¦90044 and foreigners and orphans and widows¦90047 who live in your town.
 \v 15 \add Honour\add* your god Yahweh¦90054 at the place¦90056 \add *he'll\add* choose¦90059, by celebrating¦90053 for seven days¦90052 because \add *he's\add* blessed¦90062 your harvest and \add ≈all your other work\add*.
 \p
-\v 16 \add In summary,\add* all your men must travel three times¦90075 each year¦90077 to the place¦90088 that your god¦90087 Yahweh¦90086 will choose¦90090: at the Flat Bread Celebration, at the Festival of Weeks, and at the Festival of Shelters. \add ≈No man should come empty-handed\add*,
+\v 16 \add In summary,\add* all your men must travel three times¦90075 each year¦90077 to the place¦90088 that¦90089 your god¦90087 Yahweh¦90086 will choose¦90090: at the Flat Bread Celebration, at the Festival of Weeks, and at the Festival of Shelters. \add ≈No man should come empty-handed\add*,
 \v 17 \add but rather,\add* each man \add ≈must give in proportion\add* to the blessings¦90108 that your¦90110 god¦90110 Yahweh¦90109 has given¦90112 you \add during that year\add*.
 \s1 Strive for justice
 \rem /s1 Municipal Judges and Officers; Justice for the People; Judges; The Administration of Justice
 \p
-\v 18 You must appoint¦90119 judges¦90117 and other officials¦90118 throughout your tribes¦90130, in all the towns¦90124 that your god¦90127 Yahweh¦90126 is giving to you¦90119. They must judge¦90131 the people¦90134 \add ≈fairly and correctly\add*.
+\v 18 You must appoint¦90119 judges¦90117 and other officials¦90118 throughout your tribes¦90130, in all the towns¦90124 that¦90125 your god¦90127 Yahweh¦90126 is giving to you¦90119. They must judge¦90131 the people¦90134 \add ≈fairly and correctly\add*.
 \v 19 You mustn't \add ≈pervert justice¦90142 or give favours\add*. Don't accept bribes because a bribe causes \add an otherwise\add* wise person to \add ≈ignore evil\add* and \add ≈misrepresents what innocent people say\add*.\x + \xo 16:19: \xt Exo 23:6-8; Lev 19:15.\x*
 \v 20 \add ≈True justice is what you should aim for\add*, so that you'll occupy and live¦90163 in the land that your god¦90171 Yahweh¦90170 is giving you.
 \s1 Prohibitions in worship and justice
 \rem /s1 Forbidden Forms of Worship; Worshipping Other Gods
 \p
-\v 21 Never put an Asherah¦90180 pole near the altar¦90185 to your¦90187 god¦90187 Yahweh¦90186 that you'll build for yourself¦90179,\x + \xo 16:21: \xt Exo 34:13.\x*
-\v 22 and¦90194 don't¦90194 erect any stone pillars¦90198 that your¦90202 god¦90202 Yahweh¦90201 hates¦90200.\x + \xo 16:22: \xt Lev 26:1.\x*
+\v 21 Never put an Asherah¦90180 pole near the altar¦90185 to your¦90187 god¦90187 Yahweh¦90186 that¦90188 you'll build for yourself¦90179,\x + \xo 16:21: \xt Exo 34:13.\x*
+\v 22 and¦90194 don't¦90194 erect any stone pillars¦90198 that¦90199 your¦90202 god¦90202 Yahweh¦90201 hates¦90200.\x + \xo 16:22: \xt Lev 26:1.\x*
 \c 17
 \p
 \v 1 Don't¦90221 sacrifice¦90207 any \add ≈animal\add* to your god Yahweh¦90208 that has any blemish¦90215 or defect, because \add *he\add* detests that.
@@ -749,7 +749,7 @@
 \v 7 \add ≈The witnesses¦90340 must be the ones to throw the first¦90344 rocks\add* then all the other people¦90349 after that, and that's how you'll remove evil¦90352 \add ≈from your¦90353 society\add*.\x + \xo 17:7: \xt 1Cor 5:13.\x*
 \rem /s1 Law Courts; Legal Decisions by Priests and Judges
 \p
-\v 8 If a case is too difficult¦90357 for you yourselves to judge \add ≈(e.g., two parties claiming¦90371 bloodshed, or lawsuits, or assaults¦90374, or other disputes¦90370 within your towns¦90377)\add*, you must leave town and go¦90379 to the place¦90382 that your god¦90386 Yahweh¦90385 is going to choose¦90384.
+\v 8 If a case is too difficult¦90357 for you yourselves to judge \add ≈(e.g., two parties claiming¦90371 bloodshed, or lawsuits, or assaults¦90374, or other disputes¦90370 within your towns¦90377)\add*, you must leave town and go¦90379 to the place¦90382 that¦90383 your god¦90386 Yahweh¦90385 is going to choose¦90384.
 \v 9 You should go¦90389 to the \add ≈Levitical¦90393 priests¦90392\add* and to the judge¦90396 \add ≈on duty there\add* and they will \add ≈produce\add* a judgement.
 \v 10 Whatever the decision¦90412 is that's made at the place¦90418 Yahweh¦90422 will choose¦90421, \add ≈that's the verdict that must be applied to the case\add*—
 \v 11 accept their judgement and do what they say¦90440 without making any adjustments to their decision¦90437.
@@ -777,13 +777,13 @@
 \v 4 Also you¦90722 must give¦90722 \add @the Levites\add* the firstfruits of your grain¦90716, your grape juice, your \add olive\add* oil, and the wool shorn from your sheep¦90721,
 \v 5 because your god¦90730 Yahweh¦90729 chose¦90728 them out of all your tribes¦90733 for them and their descendants permanently to serve \add *him\add*.
 \p
-\v 6 If a Levite¦90749 chooses to move \add his family\add* from their town in any part of Yisrael and sincerely wants to go to the place¦90767 that Yahweh¦90771 will choose¦90770,
+\v 6 If a Levite¦90749 chooses to move \add his family\add* from their town in any part of Yisrael and sincerely wants to go to the place¦90767 that¦90768 Yahweh¦90771 will choose¦90770,
 \v 7 then he can join the other Levites¦90780 there¦90782 to serve his god¦90776 Yahweh¦90775
 \v 8 \add ≈and must be given a portion¦90786 like all the others\add*. (\add ≈He can keep anything he got from the sale of their family¦90793 home\add*.)
 \s1 Warnings against divination and magic
 \rem /s1 Detestable Practices; A Call to Holy Living; Child-Sacrifice, Divination, and Magic Prohibited; Warning against Pagan Practices
 \p
-\v 9 When you enter the land that your god¦90805 Yahweh¦90804 is about¦90806 to give¦90806 you, don't¦90808 \add ≈imitate the disgusting habits\add* of those¦90814 peoples.
+\v 9 When you enter the land that¦90802 your god¦90805 Yahweh¦90804 is about¦90806 to give¦90806 you, don't¦90808 \add ≈imitate the disgusting habits\add* of those¦90814 peoples.
 \v 10 There mustn't be anyone¦90820 among you who passes their son or daughter¦90823 through fire¦90824, or who uses divination¦90825 or omens¦90828 \add to try to tell the future\add*, or who practices sorcery¦90829,\x + \xo 18:10: a \xt Lev 19:26; \xo b \xt Exo 22:18.\x*
 \v 11 \add ≈or who puts spells¦90832 on people, or who tries to talk to spirits¦90835 of deceased people\add*,
 \v 12 because anyone¦90847 who does those things is abhorrent to Yahweh. It's because of those kinds of things that your¦90856 god¦90853 Yahweh will drive \add @those other peoples\add* \add ≈away ahead of you\add*.
@@ -796,10 +796,10 @@
 \v 16 since you \add ≈begged\add* your god Yahweh from \add the bottom of Mt.\add* Horev when you said, “\add ≈We can't¦90913 handle directly hearing\add* the voice¦90918 of our god Yahweh and \add ≈looking at this terrible\add* fire¦90923. \add Let us go home\add* so we won't¦90913 die \add here\add*.”
 \v 17 Then¦90933 Yahweh¦90934 told me, “\add ≈They're right in what they're saying\add*.
 \v 18 I'll \add ≈choose a prophet¦90940 from among¦90943 them and see him\add*. I'll \add ≈tell him what to say, and he can pass it on\add* to them,
-\v 19 and if anyone doesn't listen¦90962 to what he says \add ≈with my authority\add*, I'll \add ≈punish that person\add* \add as if they ignored me\add*.\x + \xo 18:19: \xt Acts 3:23.\x*
+\v 19 and if anyone doesn't listen¦90962 to what he says \add ≈with my authority\add*, I'll \add ≈punish that¦90966 person\add* \add as if they ignored me\add*.\x + \xo 18:19: \xt Acts 3:23.\x*
 \v 20 However, if the prophet \add ≈says things that I didn't¦90982 tell him to say but claims they came from me\add*, or if he speaks in the name of other¦90990 gods¦90989, then that prophet must die.”
 \p
-\v 21 Now if you¦90996 ask yourselves, “How can we¦90999 \add ≈recognise a message¦91002 that didn't¦91004 come from\add* Yahweh¦91007?”
+\v 21 Now if you¦90996 ask yourselves, “How can we¦90999 \add ≈recognise a message¦91002 that¦91003 didn't¦91004 come from\add* Yahweh¦91007?”
 \v 22 then when the prophet speaks¦91010 in Yahweh's name¦91012 but that thing¦91017 doesn't happen¦91016, then you'll know that it didn't¦91014 come¦91019 from Yahweh. The prophet spoke it \add ≈assuming that I'd want that\add*, but you don't¦91014 need to be afraid¦91031 of him.
 \c 19
 \s1 The refuge cities
@@ -807,15 +807,15 @@
 \r (Num. 35:9-28; Josh. 20:1-9)
 \p
 \v 1 When¦91044 your god Yahweh¦91038 destroys those peoples where \add *he's\add* giving you the land, and you occupy the land and live in their cities and houses¦91054,
-\v 2 you must select three cities¦91057\x + \xo 19:1-13: \xt Josh 20:1-9.\x* \add ≈spread across\add* the land that Yahweh¦91063 is giving you.
-\v 3 You must \add ≈define\add* three¦91072 borders and \add ≈build roads¦91071\add* in the land that your god¦91080 Yahweh¦91079 is giving you¦91078 to inherit. \add ≈Anyone who kills another person\add* can then flee to \add @one of those cities\add*.
+\v 2 you must select three cities¦91057\x + \xo 19:1-13: \xt Josh 20:1-9.\x* \add ≈spread across\add* the land that¦91062 Yahweh¦91063 is giving you.
+\v 3 You must \add ≈define\add* three¦91072 borders and \add ≈build roads¦91071\add* in the land that¦91077 your god¦91080 Yahweh¦91079 is giving you¦91078 to inherit. \add ≈Anyone who kills another person\add* can then flee to \add @one of those cities\add*.
 \v 4 This is the rule for someone who's killed another person and flees to live¦91095 there¦91094: if \add ≈they've accidentally killed another person\add* and \add ≈had no hate for that person from past events\add*,
 \v 5 (for example, if two men went into the forest¦91117 to chop wood and an axehead flew off its handle and killed the other man) then \add @that accidental killer\add* can flee to one of those cities¦91140 and live¦91143 there.
 \v 6 \add ≈Otherwise a friend or relative of the dead person might chase the killer in a sudden rage\add* and overtake¦91156 and kill \add @the accidental killer\add* if \add ≈the city was too far away\add*. \add ≈However, the killer doesn't deserve death¦91167\add* if they hadn't hated that person \add ≈from past events\add*—
 \v 7 that's why I'm¦91179 ordering you to select three¦91182 cities¦91183 \add ≈for this\add*.
 \p
 \v 8 \add Then in the future,\add* if your god¦91192 Yahweh¦91191 extends your \add ≈territory¦91195\add* as he promised your ancestors¦91209 that he would do, and gives you all the land that he told \add *them\add* about,
-\v 9 and if you're \add still\add* following¦91220 all these¦91244 instructions that I'm¦91222 giving you today (loving¦91225 your god¦91229 Yahweh¦91228 and \add always\add* \add ≈obeying what he's said\add*), then you'll \add need to\add* add three more \add refuge\add* cities¦91241 for your \add ≈country\add*.
+\v 9 and if you're \add still\add* following¦91220 all these¦91244 instructions that¦91221 I'm¦91222 giving you today (loving¦91225 your god¦91229 Yahweh¦91228 and \add always\add* \add ≈obeying what he's said\add*), then you'll \add need to\add* add three more \add refuge\add* cities¦91241 for your \add ≈country\add*.
 \v 10 \add ≈That's so\add* innocent¦91249 \add ≈people won't be killed\add* in the land that your god¦91254 Yahweh¦91253 is giving you, and \add ≡so that\add* you \add ≈won't be found guilty of the murder of that accidental killer\add*.
 \p
 \v 11 \add ≈However, if someone hates another person and then ambushes them and kills them\add*, and then flees¦91276 to one of those cities¦91280,
@@ -824,7 +824,7 @@
 \s1 Respecting boundaries
 \rem /s1 Property Boundaries; Ancient Property Lines; Concern for Justice
 \p
-\v 14 \add Once you're\add* in the land that your god¦91323 Yahweh¦91322 is giving you to occupy, you mustn't move the boundary¦91312 markers which were set \add ≈between you and your neighbour¦91313\add*.\x + \xo 19:14: \xt Deu 27:17.\x*
+\v 14 \add Once you're\add* in the land that¦91314 your god¦91323 Yahweh¦91322 is giving you to occupy, you mustn't move the boundary¦91312 markers which were set \add ≈between you and your neighbour¦91313\add*.\x + \xo 19:14: \xt Deu 27:17.\x*
 \s1 Concerning witnesses in court
 \rem /s1 Witnesses; Law concerning Witnesses; Concerning Witnesses
 \p
@@ -855,10 +855,10 @@
 \v 11 and if they \add ≈agree to surrender\add* and open the city gates, then they'll all be forced¦91650 to work for you¦91651.
 \v 12 \add ≈But¦91653\add* if they \add ≈refuse your terms\add* and decide to fight against¦91659 you, then you should besiege that city.
 \v 13 Then when your god¦91669 Yahweh¦91668 \add ≈helps you to capture it¦91667\add*, you must \add ≈kill\add* every¦91674 male in that city.
-\v 14 \add ≈However,\add* you can take the women¦91682 and children¦91683 and cattle and everything \add else\add* in the city¦91688 as plunder¦91692 for yourself. You can enjoy your enemies' possessions that Yahweh¦91701 has given¦91700 to you.
+\v 14 \add ≈However,\add* you can take the women¦91682 and children¦91683 and cattle and everything \add else\add* in the city¦91688 as plunder¦91692 for yourself. You can enjoy your enemies' possessions that¦91699 Yahweh¦91701 has given¦91700 to you.
 \v 15 That's \add ≈how you should treat\add* the cities located far from you—it doesn't apply to the cities of nearby peoples.
 \p
-\v 16 \add ≈In contrast,\add* the cities¦91723 of those peoples¦91724 that your god¦91728 Yahweh¦91727 is giving you as an inheritance¦91731, \add ≈you musn't leave a single living thing¦91736 alive\add*
+\v 16 \add ≈In contrast,\add* the cities¦91723 of those peoples¦91724 that¦91726 your god¦91728 Yahweh¦91727 is giving you as an inheritance¦91731, \add ≈you musn't leave a single living thing¦91736 alive\add*
 \v 17 because you must complete eliminate the Hittes, the Amorites¦91743, the Canaanites¦91744, the Perizzites¦91745, the Hivites¦91746, and the Yevusites. Do that just as your god¦91751 Yahweh¦91750 commanded¦91749 you
 \v 18 so that they don't¦91755 teach¦91757 you to sin¦91765 against Yahweh¦91766 by doing¦91759 any of their abhorrent activities that they do for their gods¦91764.
 \p
@@ -869,9 +869,9 @@
 \rem /s1 Law concerning Murder by Persons Unknown; Atonement for an Unsolved Murder; Concerning Unsolved Murders; Cleansing for Unsolved Murder
 \p
 \v 1 If a \add ≈dead body\add* is found¦91836 in the land that your god¦91841 Yahweh¦91840 is about¦91842 to give¦91842 you, and \add it appears that\add* \add @that person\add* had been killed¦91850 out in the countryside¦91846 \add ≈by some unknown person\add*,
-\v 2 then your elders¦91853 and your judges¦91854 must go¦91852 out and \add ≈work out the distance to each of the towns close to that victim\add*.
+\v 2 then your elders¦91853 and your judges¦91854 must go¦91852 out and \add ≈work out the distance to each of the towns close to that¦91859 victim\add*.
 \v 3 Then¦91863 the elders¦91870 from that closest town must select a heifer¦91873 from their herd that's \add ≈never been yoked or had to pull anything\add*,
-\v 4 and take it down into a valley¦91910 that has a stream \add but the ground\add* has never been ploughed or planted. They must break¦91904 its neck there¦91906
+\v 4 and take it down into a valley¦91910 that¦91897 has a stream \add but the ground\add* has never been ploughed or planted. They must break¦91904 its neck there¦91906
 \v 5 and the Levitical priests¦91913 must approach it¦91928 because your¦91920 god¦91920 Yahweh has chosen¦91918 them to serve him¦91921 and \add ≈pronounce¦91922 blessings¦91922 on Yahweh's behalf\add*, and to \add ≈give rulings\add* on disputes¦91931 and assaults.
 \v 6 Then¦91936 all the elders¦91937 from that closest town must wash their¦91947 hands¦91947 over the heifer¦91950 whose neck was broken¦91951 in the valley¦91952,
 \v 7 and say¦91955, “We didn't¦91957 murder this person, nor did we see who did it.
@@ -889,7 +889,7 @@
 \rem /s1 The Right of the Firstborn; Rights of the Firstborn; Concerning the First Son's Inheritance
 \p
 \v 15 If a man¦92093 has two¦92094 wives¦92095 \add ≈and loves one more than the other¦92098\add*, \add ≈but\add* they've both given birth¦92100 to sons¦92103 for him \add ≈but the oldest son is from the wife he dislikes\add*,
-\v 16 then \add ≈when he assigns his inheritance to his sons¦92116, he mustn't favour the son of the favourite wife over that eldest son\add*.
+\v 16 then \add ≈when he assigns his inheritance to his sons¦92116, he mustn't favour the son of the favourite wife over that¦92118 eldest son\add*.
 \v 17 \add ≈Instead,\add* he must acknowledge¦92145 the son of the wife he dislikes, and given him double of everything, because \add @that son\add* is the beginning¦92158 of his strength¦92159, and the largest share belongs to him.
 \s1 The rebellious child
 \rem /s1 A Rebellious Son; Concerning a Disobedient Son; Rebellious Children; Dealing with a Rebellious Son
@@ -1003,7 +1003,7 @@
 \v 1 When a man marries¦93330 a woman¦93329, then \add ≈further on he decides he doesn't want her because of something he found¦93341 out about\add* her, then he must write¦93345 a divorce¦93348 notice and give it to her, and send her out of his¦93338 house¦93352.\x + \xo 24:1: \xt Mat 5:31; 19:7; Mrk 10:4.\x*
 \v 2 \add ≈After she leaves¦93354 that marriage\add*, \add ≈another¦93360 man¦93358 is allowed to marry her\add*.
 \v 3 If that \add ≈second\add* husband \add also\add* \add ≈decides to divorce her by sending her away with a divorce notice\add*, or if he were to die¦93375,
-\v 4 then the first¦93388 husband¦93387 isn't¦93406 allow to take¦93393 her¦93387 back as his wife. \add That's\add* because she's been defiled and it would be abhorrent to Yahweh, and you mustn't defile the land that your god¦93413 Yahweh is giving you.
+\v 4 then the first¦93388 husband¦93387 isn't¦93406 allow to take¦93393 her¦93387 back as his wife. \add That's\add* because she's been defiled and it would be abhorrent to Yahweh, and you mustn't defile the land that¦93411 your god¦93413 Yahweh is giving you.
 \rem /s1 Miscellaneous Laws; Various Laws
 \p
 \v 5 When a man \add ≈is newly married\add*, he mustn't \add ≈be called for\add* the army \add ≈or be given any other responsibilities\add*. He must be free for one year \add ≈to establish his house\add* and \add ≈to satisfy his new\add* wife.
@@ -1067,12 +1067,12 @@
 \p
 \v 17 \add ^Don't forget\add* what \add ≈the Amalekites¦94004\add* did to you \add people\add* when you came¦94006 out of Egypt¦94007.\x + \xo 25:17-19: \xt Exo 17:8-14; 1Sam 15:2-9.\x*
 \v 18 They met you on the road, then attacked¦94012 you from behind¦94017—\add getting\add* the stragglers who were weak and exhausted¦94020. They had no fear of God¦94024.
-\v 19 \add ≈At some point in the future when\add* your god Yahweh¦94028 has given¦94027 you the land to occupy as an inheritance¦94043, and \add ≈you're no longer being attacked by your\add* enemies¦94034, you must \add ≈eliminate the Amalekites so they won't¦94052 be remembered¦94048 anymore\add*. Don't forget¦94053 \add to do that\add*.
+\v 19 \add ≈At some point in the future when\add* your god Yahweh¦94028 has given¦94027 you the land to occupy as an inheritance¦94043, and \add ≈you're no longer being attacked by your\add* enemies¦94034, you must \add ≈eliminate the Amalekites so they won't¦94052 be remembered¦94048 anymore\add*. Don't forget¦94053 \add to do that¦94037\add*.
 \c 26
 \s1 Offerings for the beginning of the harvest
 \rem /s1 Firstfruits and Tithes; Harvest Offerings and Tithes; Harvest Offerings; First Fruits and Tithes
 \p
-\v 1 \add ≈After\add* you've entered the land that your god¦94065 Yahweh¦94064 is giving you as an inheritance¦94068, and you occupy it and live¦94070 there,
+\v 1 \add ≈After\add* you've entered the land that¦94063 your god¦94065 Yahweh¦94064 is giving you as an inheritance¦94068, and you occupy it and live¦94070 there,
 \v 2 \add each of\add* you should take the first¦94074 part of your harvest in that place and put it in a basket¦94089. Then¦94073 take it to the place that your god Yahweh¦94084 is going to choose¦94095 to attach his name to.\x + \xo 26:2: \xt Exo 23:19.\x*
 \v 3 Go to the \add high\add* priest¦94105 \add ≈in office\add* at that time, and tell him, “I declare¦94112 today to your¦94115 god¦94115 Yahweh¦94114 that I've entered the land that \add *he\add* promised to our ancestors¦94125 to give¦94126 us.”
 \p
@@ -1084,7 +1084,7 @@
 \v 9 and brought¦94205 us to this \add ≈very fertile\add* land
 \v 10 \add ≈So¦94222 now\add*, Yahweh, I've brought¦94224 the first¦94227 part of the harvest from that land that you've given¦94232 me.”
 \p Then¦94222 \add ≈as\add* the basket is placed¦94235 in front of Yahweh, you must bow down in front of \add *him\add*.
-\v 11 Then¦94244 you can celebrate \add by eating\add* all the good¦94247 things that your god¦94253 Yahweh¦94252 has given¦94249 to you and your household¦94254, and it's \add also\add* for the Levites¦94256 and the foreigners who live among you.
+\v 11 Then¦94244 you can celebrate \add by eating\add* all the good¦94247 things that¦94248 your god¦94253 Yahweh¦94252 has given¦94249 to you and your household¦94254, and it's \add also\add* for the Levites¦94256 and the foreigners who live among you.
 \p
 \v 12 \add ≈Every third¦94272 year,\add* take a tenth of your harvest to the Levites¦94276, the foreigners, and the orphans¦94278 and widows¦94279 \add ≈in your town\add* for them to eat and be content.\x + \xo 26:12: \xt Deu 14:28-29.\x*
 \v 13 Then¦94284 you must explain in front¦94285 of your god¦94287 Yahweh¦94286, “I've taken the sacred¦94289 \add tenth\add* from my house¦94292 and given¦94294 it¦94294 to the Levites¦94295, the foreigners, the orphans¦94297 and widows¦94298, \add ≈thus following all of your instructions\add*. I've not disobeyed or forgotten¦94309 your regulations.
@@ -1095,13 +1095,13 @@
 \v 16 Today your¦94366 god¦94365 Yahweh¦94364 is commanding¦94366 you¦94366 to follow all these¦94371 instructions and regulations¦94370, so follow them \add ≈sincerely and enthusiastically\add*.
 \v 17 You have declared¦94388 today that Yahweh¦94387 is your god¦94392, and that you'll follow all his instructions and keep¦94395 his regulations¦94396 and commands¦94397 and rules, and listen to his voice¦94400.
 \v 18 \add ≈Also\add* today, Yahweh¦94402 has declared¦94403 that you are his people¦94407, like a \add prized\add* possession¦94408, like he told you that you would be. You must follow all his instructions\x + \xo 26:18: \xt Exo 19:5; Deu 4:20; 7:6; 14:2; Tit 2:14; 1Pe 2:9.\x*
-\v 19 and then he'll make \add ≈your country\add* greater than all the others that he's \add ≈established\add*. You'll be praised¦94426 for your reputation and beauty, and you'll be different from the others—being a sacred¦94432 people¦94430 for your god¦94434 Yahweh¦94433, just like he's said.
+\v 19 and then he'll make \add ≈your country\add* greater than all the others that¦94424 he's \add ≈established\add*. You'll be praised¦94426 for your reputation and beauty, and you'll be different from the others—being a sacred¦94432 people¦94430 for your god¦94434 Yahweh¦94433, just like he's said.
 \c 27
 \s1 The warnings of not still entering of Kanaan
 \rem /s1 Moses' closing discourse; God's Laws Written on Stones; The Altar on Mount Ebal; The Inscribed Stones and Altar on Mount Ebal
 \p
-\v 1 Then Mosheh¦94440 \add (Moses)\add* and the Israeli elders¦94441 commanded¦94439 the people¦94445, “Follow all the \add ≈instructions\add* that I'm \add ≈giving\add* you today.
-\v 2 When you cross the Yarden \add river\add* to enter the land that your¦94472 god¦94472 Yahweh¦94471 is giving you, then you must \add ≈stand up some tall pieces of rock\add* and cover¦94479 them with plaster¦94481.\x + \xo 27:2-8: \xt Josh 8:30-32.\x*
+\v 1 Then Mosheh¦94440 \add (Moses)\add* and the Israeli elders¦94441 commanded¦94439 the people¦94445, “Follow all the \add ≈instructions\add* that¦94453 I'm \add ≈giving\add* you today.
+\v 2 When you cross the Yarden \add river\add* to enter the land that¦94469 your¦94472 god¦94472 Yahweh¦94471 is giving you, then you must \add ≈stand up some tall pieces of rock\add* and cover¦94479 them with plaster¦94481.\x + \xo 27:2-8: \xt Josh 8:30-32.\x*
 \v 3 Then¦94483 write¦94483 all these instructions onto them as soon as you've crossed¦94492 the river, so that you can enter the \add ≈very fertile\add* land that your god Yahweh¦94501 is giving you, as he had \add ≈promised\add* your ancestors¦94515.
 \v 4 Then¦94518 after you've \add ≈gone further in\add*, \add ≈stand some tall pieces of rock up on end\add* on Mt. Ebal¦94534 like I've told you, and¦94535 cover¦94535 them with plaster¦94537,
 \v 5 and build¦94539 a stone altar there¦94540 \add to offer sacrifices\add* to your¦94543 god¦94543 Yahweh¦94542. Don't use any iron tools \add ≈to shape\add* the stones¦94545.\x + \xo 27:5-6: \xt Exo 20:25.\x*
@@ -1111,8 +1111,8 @@
 \rem /s1 Curses From Mount Ebal
 \p
 \v 9 Then Mosheh \add (Mosheh)\add* along with the priests¦94592 and the Levites¦94593, spoke¦94590 to all Yisrael, “Be silent¦94599 and listen¦94601, Yisrael. Today you¦94605 have become¦94605 the people¦94606 of your¦94608 god¦94608 Yahweh¦94607.
-\v 10 \add ≈So¦94610\add* \add from now on\add*, you must \add ≈listen to what he says\add* and follow¦94614 all the instructions and rules that I'm giving you today.”
-\s1 The curse for disobedience
+\v 10 \add ≈So¦94610\add* \add from now on\add*, you must \add ≈listen to what he says\add* and follow¦94614 all the instructions and rules that¦94623 I'm giving you today.”
+\s1 Curses for disobedience
 \rem /s1 The Curses on Disobedience; Curses from Mount Ebal; Twelve Curses
 \p
 \v 11 That \add same\add* day¦94634, Mosheh¦94630 told the people¦94633,
@@ -1136,157 +1136,157 @@
 \v 19 ‘\add ≈Anyone¦94741\add* who perverts justice¦94742 for a foreigner or orphan or widow¦94746 will be cursed¦94740.’\x + \xo 27:19: \xt Exo 22:21; 23:9; Lev 19:33-34; Deu 24:17-18.\x*
 \p Then the people¦94750 must reply, ‘Let it be so.’
 \p
-\v 20 ‘\add ≈Any man\add* who sleeps with a wife of his father will be cursed because \add ≈he's exposed his father's nakedness.’
+\v 20 ‘\add ≈Any man\add* who sleeps with a wife of his father will be cursed¦94754 because \add ≈he's exposed his father's nakedness\add*.’
 \p Then the people¦94767 must reply, ‘Let it be so.’
 \p
-\v 21 ‘\add ≈Anyone¦94772\add* who has sex with an animal will be cursed.’
+\v 21 ‘\add ≈Anyone¦94772\add* who has sex with an animal¦94777 will be cursed¦94771.’
 \p Then the people¦94781 must reply, ‘Let it be so.’
 \p
-\v 22 ‘\add ≈Any male¦94786\add* who sleeps with his sister \add ≈or his half sister\add* will be cursed.’
+\v 22 ‘\add ≈Any male¦94786\add* who sleeps with his sister \add ≈or his half sister\add* will be cursed¦94785.’
 \p Then the people¦94800 must reply, ‘Let it be so.’
 \p
-\v 23 ‘\add ≈Anyone¦94805\add* who will be cursed.’
+\v 23 ‘\add ≈Anyone¦94805\add* who sleeps with his mother-in-law will be cursed¦94804.’
 \p Then the people¦94812 must reply, ‘Let it be so.’
 \p
-\v 24 ‘\add ≈Anyone¦94817\add* who will be cursed.’
+\v 24 ‘\add ≈Anyone¦94817\add* who secretly¦94819 \add ≈murders\add* his neighbour¦94818 will be cursed¦94816.’
 \p Then the people¦94823 must reply, ‘Let it be so.’
 \p
-\v 25 ‘\add ≈Anyone¦94828\add* who will be cursed.’
+\v 25 ‘\add ≈Anyone¦94828\add* who \add ≈takes¦94828 payment to murder\add* an innocent¦94833 person¦94831 will be cursed¦94827.’
 \p Then the people¦94837 must reply, ‘Let it be so.’
 \p
-\v 26 ‘\add ≈Anyone\add* who will be cursed.’\x + \xo 27:26: \xt Gal 3:10.\x*
+\v 26 ‘\add ≈Anyone\add* who doesn't \add ≈follow all these instructions\add* will be cursed¦94841.’\x + \xo 27:26: \xt Gal 3:10.\x*
 \p Then the people¦94857 must reply, ‘Let it be so.’
 \c 28
-\s1 The me blessing of pegkamatinumanen
+\s1 Blessings for obedience
 \rem /s1 The Blessings of Obedience; Blessings for Obedience
 \r (Lev. 26:3-13; Deu. 7:12-24)
 \p
-\v 1 \x + \xo 28:1-14: \xt Deu 11:13-17.\x*◙
-\v 2 ◙
+\v 1 If you, \add Yisrael,\add* listen to \add ≈what god Yahweh¦94867 says\add* and follow all his instructions that¦94876 I'm giving you today, then \add *he\add* will make you the greatest of all the nations¦94887 \add ≈in the world\add*,\x + \xo 28:1-14: \xt Deu 11:13-17.\x*
+\v 2 and all these¦94895 blessings¦94894 will come¦94890 to you if you listen¦94898 to \add his\add* voice¦94899:
 \p
-\v 3 ◙
+\v 3 You'll be blessed in the city¦94905, and¦94906 blessed in the countryside¦94908.
 \p
-\v 4 ◙
+\v 4 Your \add ≈children\add*, your \add ≈harvests\add*, and your \add ≈calves, and lambs and kids\add* will \add all\add* be blessed¦94910.
 \p
-\v 5 ◙
+\v 5 Your basket¦94924 and your kneading¦94925 bowl will be blessed¦94923.
 \p
-\v 6 ◙
+\v 6 You'll be blessed when you're coming in and¦94930 when you're going out.
 \p
-\v 7 ◙
+\v 7 Yahweh¦94935 \add ≈will enable you to defeat¦94941\add* your enemies¦94938 who come¦94945 to attack you—they'll \add ≈march in all orderly, but\add* will flee from you in \add ≈all\add* directions¦94948.
 \p
-\v 8 ◙
+\v 8 Yahweh¦94953 will decree a blessing on your barns¦94958 and on all \add ≈the work you do\add*, and he'll bless you in the land that¦94964 \add *he's\add* giving to you.
 \p
-\v 9 ◙
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
-\s1 The curses of disobeying
+\v 9 If you follow your God¦94988 Yahweh's instructions and \add ≈do what he wants\add*, \add *he¦94974\add* will establish you as his sacred¦94977 people¦94976 just like he promised.
+\v 10 Then¦94992 all the peoples¦94995 \add ≈around the world\add* will realise that Yahweh's¦94999 name¦94998 is \add ≈attached to\add* you, and they'll be afraid¦95002 of you.
+\v 11 Yahweh¦95006 will help you to really prosper¦95007 through your children, your animals, and your harvests in the land that \add *he\add* promised to your ancestors¦95019 that he'd give¦95020 to you.
+\v 12 Yahweh¦95024 will open his treasure \add house\add* in the sky and send good¦95030 rain \add ≈when it's needed\add* and bless¦95039 \add ≈everything you do\add*, \add ≈so that\add* you'll lend \add money\add* to many nations¦95046 instead of needing to borrow¦95050 it.
+\v 13 Yahweh will make you the head, not the tail. You'll be above, not beneath, if you listen¦95065 to your¦95074 god¦95071 Yahweh's instructions that¦95072 I'm giving you today, and \add ≈follow¦95077 them\add*
+\v 14 \add Make¦95085 sure you¦95080\add* don't¦95079 turn¦95080 away from those instructions, and never \add ≈worship\add* other¦95094 gods¦95093.
+\s1 Curses for disobedience
 \rem /s1 Warnings against Disobedience; Curses for Disobedience; The Consequences of Disobedience
 \r (Lev. 26:14-46)
 \p
-\v 15 ◙
+\v 15 \add ≈On the other hand,\add* if you don't¦95101 listen¦95102 to your¦95116 god¦95105 Yahweh's voice¦95103 and keep following his instructions and obeying his rules that¦95114 I'm giving you today, then all these¦95123 curses¦95122 will \add ≈catch up to you and hit\add* you:
 \p
-\v 16 ◙
+\v 16 You'll be cursed in the city¦95128 and¦95129 cursed in the countryside¦95131.
 \p
-\v 17 ◙
+\v 17 Your basket¦95134 and your kneading¦95135 bowl will be cursed¦95133.
 \p
-\v 18 ◙
+\v 18 Your \add ≈children\add*, your \add ≈harvests\add*, and your \add ≈calves, and lambs and kids\add* will \add all\add* be cursed¦95137.
 \p
-\v 19 ◙
+\v 19 You'll be cursed when you're coming in and¦95151 when you're going out.
 \s1 The curses of repentance from God
 \p
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
-\v 24 ◙
+\v 20 Yahweh¦95156 will send¦95155 curses¦95161 against you, and confusion¦95164 and opposition in \add ≈everything your country does\add* until¦95174 you're destroyed¦95175 and quickly¦95179 \add ≈eliminated\add* because of your evil activities that \add demonstrate that\add* you've abandoned¦95184 me.
+\v 21 Yahweh¦95187 will make the plague cling¦95186 to you until¦95192 he's finished you from off the land that you're¦95199 about¦95200 to enter and \add ≈take ownership of\add*.
+\v 22 Yahweh¦95206 will send \add ≈cancer\add* and fever¦95208 and inflammation¦95209. There'll be fiery¦95210 heat and drought¦95211, and blight¦95212 and mildew¦95213, and will chase you until¦95215 you \add ≈die\add*.
+\v 23 The overhead sky¦95219 \add will be locked up\add* like bronze¦95224, and¦95225 \add the dryness will make\add* the land like iron.
+\v 24 \add ≈Instead of\add* rain on your land, Yahweh¦95232 will send powdered dust that will cover you until¦95244 \add @your country\add* is destroyed¦95245.
 \p
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
-\v 28 ◙
-\v 29 ◙
+\v 25 Yahweh¦95249 \add ≈will allow your enemies¦95253 to destroy you\add*—your army will \add ≈march in all orderly, but\add* will flee from you in \add ≈all\add* directions¦95259, and all \add ≈the other countries in the world will be horrified at what happens to\add* you.
+\v 26 Your corpses¦95269 will become food for birds and wild animals, and there'll be no one \add left\add* to \add ≈scare them away\add*.
+\v 27 Yahweh¦95281 will afflict you with boils¦95282 \add ≈like he sent to the Egyptian¦95283 people\add*, along with ulcers, rashes, and itching which¦95288 \add ≈there's no cure for\add*.
+\v 28 Yahweh¦95295 will strike you¦95294 with madness¦95296 and blindness¦95297, and with \add ≈confused¦95298 minds\add*.
+\v 29 \add ≈Even in the middle of the day,\add* you'll be groping¦95302 around like blind¦95306 people, and your¦95312 projects won't¦95308 be successful¦95309. You'll be oppressed¦95315 and robbed¦95316 continually, and there'll be no one to rescue you.
 \p
-\v 30 ◙
-\v 31 ◙
-\v 32 ◙
-\v 33 ◙
-\v 34 ◙
-\v 35 ◙
+\v 30 \add ≈A man\add* will be engaged to a young woman¦95323, but someone else will rape her. You'll build¦95330 a house¦95329, but never get to live in it, and you'll plant¦95336 a vineyard¦95335, \add ≈but not get to produce any wine\add*.
+\v 31 Your cow¦95343 will be slaughtered¦95344 right in front of your eyes¦95345, but you won't¦95346 get to eat¦95347 any of it. You donkey¦95349 will be stolen \add ≈right in front of you\add*, but will \add never\add* be returned¦95353. Your sheep¦95355 will be given¦95356 to your enemies¦95357, but no one will help you rescue them.
+\v 32 Your¦95376 sons and daughters¦95363 will be handed over to another¦95366 country, and you'll strain¦95369 your¦95376 eyes¦95367 all day¦95373 looking¦95368 for them, but you won't be able to do anything about it.
+\v 33 People from a country you've never heard of will harvest your crops and \add ≈enjoy the results of\add* your work, but you'll just be oppressed¦95391 and crushed¦95392.
+\v 34 \add ≈All the things you witness will drive¦95398 you to insanity\add*.
+\v 35 Yahweh¦95405 will strike your \add people\add* with bad¦95407 boils¦95406 on your knees¦95410 and legs that¦95414 will never heal up—fron the bottom of your soles right up to the tops of your heads.
 \p
-\v 36 ◙
-\v 37 ◙
+\v 36 Yahweh¦95425 will lead you and the king¦95429 that you'll place over you, to a country¦95435 that you and your ancestors¦95441 have never been to, and you'll \add end up\add* serving other¦95445 gods¦95444 there¦95443 made of wood or stone¦95447.
+\v 37 Those people¦95454 in the countries that Yahweh¦95458 will push you into will be horrified about you, and create sayings and jokes about you.
 \p
-\v 38 ◙
-\v 39 ◙
-\v 40 ◙
-\v 41 ◙
-\v 42 ◙
+\v 38 You'll \add ≈plant a lot of seed in your fields¦95464, but\add* only gather¦95466 a small¦95465 \add harvest\add* because locusts¦95469 will eat the crops.
+\v 39 You'll plant¦95472 vineyards and cultivate¦95473 them, but you won't¦95475 harvest the grapes or drink¦95477 the wine, because worms will eat¦95481 them.
+\v 40 You'll have olive trees across your territory¦95489, but you won't¦95491 have any oil to \add ≈rub on your skin\add*, because the \add unripe\add* olives will drop off \add the trees\add*.
+\v 41 You'll have sons and daughters¦95498, \add ≈but you¦95499 won't¦95500 be able to keep them\add* because they'll be \add ≈taken away as captives¦95506\add*.
+\v 42 \add Swarms of\add* crickets¦95514 will take¦95513 over your trees¦95510 and \add ≈plants\add*.
 \p
-\v 43 ◙
-\v 44 ◙
+\v 43 The foreigners who live among you will become \add ≈more and more powerful\add* and you'll become \add ≈less and less powerful\add*.
+\v 44 They'll lend to you, not you lending to them. The foreigner will be the head and you'll be the tail.
 \p
-\v 45 ◙
-\v 46 ◙
-\v 47 ◙
-\v 48 ◙
-\v 49 ◙
-\v 50 ◙
-\v 51 ◙
-\v 52 ◙
+\v 45 All those curses¦95544 will come¦95540 on you and chase and overtake¦95547 you until¦95548 you're destroyed¦95549 because \add @your country\add* didn't¦95552 listen¦95553 to the voice¦95554 of your god¦95556 Yahweh¦95555, or follow his instructions, or obey the rules that¦95560 he \add ≈gave\add* you.
+\v 46 \add @Those curses\add* will afflict you and your¦95567 descendants¦95567 forever as signs
+\v 47 because you didn't¦95574 serve¦95576 your god¦95580 Yahweh¦95579 with cheerfulness \add resulting\add* from the abundance¦95584 \add that you took for granted\add*.
+\v 48 \add ≈So¦95587 then,\add* Yahweh will send¦95592 enemies¦95590 against you and you'll serve¦95587 them in hunger¦95595 and thirst¦95596, and in nakedness¦95597 and lacking everything¦95599. \add @Yahweh\add* will put an iron yoke on your neck \add used for pulling heavy loads with,\add* until¦95606 he¦95607 destroys¦95607 you.
+\v 49 Yahweh¦95611 will send a very distant nation against¦95612 you. They'll \add swoop¦95618 in\add* like an eagle¦95619—speaking a language¦95625 that¦95621 you won't¦95622 understand¦95624.
+\v 50 They'll be fierce¦95628 \add ≈looking\add* and¦95636 with \add ≈no mercy\add* for either the elderly or the young¦95636.
+\v 51 They'll eat¦95640 \add the meat of\add* your animals and the harvests from your crops until you're destroyed¦95647. They won't¦95649 leave¦95651 any grain¦95653 or new wine, or calves, lambs, or kids—you'll all \add ≈die\add* \add of hunger\add*.
+\v 52 They'll surround all your cities until¦95669 your high¦95672, fortified¦95673 walls¦95671 that¦95674 you trusted¦95676 in come¦95670 down all over your country. \add Yes,\add* you'll be \add contained\add* inside your cities throughout the land the your god¦95692 Yahweh¦95691 has given¦95690 you.
 \p
-\v 53 ◙
-\v 54 ◙
-\v 55 ◙
-\v 56 \x + \xo 28:57: \xt 2Ki 6:28-29; Lam 4:10.\x*◙
+\v 53 Due to that siege¦95708 and the distress that you experience from the oppression of your enemies, you'll \add end up\add* eating the flesh¦95699 of the sons¦95700 and daughters¦95701 that your god¦95707 Yahweh¦95706 has given¦95703 you.
+\v 54 Even the most sensitive¦95719, kind-hearted man¦95716 among you will \add ≈be selfish\add* towards his brother¦95723, towards the wife¦95724 \add ≈that¦95728 he loves\add*, and towards his own remaining¦95729 children¦95727—
+\v 55 withholding from them, the flesh¦95735 of his children¦95736 that he'll eat¦95738, in his distress as he has nothing else left due to that siege¦95744 and the oppression from your enemies that have surrounded your cities.
+\v 56 Even the most delicate¦95768, tender woman among you \add ≈who never once stepped outside the house in her bare feet\add*, will \add ≈be selfish\add* towards the husband¦95772 \add ≈that she loves\add* and to her own son and her own daughter¦95775—\x + \xo 28:57: \xt 2Ki 6:28-29; Lam 4:10.\x*
+\v 57 eating \add both\add* her new baby and the placenta, in her distress as she¦95784 has nothing else left due to that siege¦95792 and the oppression from your enemies that have surrounded your cities.
 \p
-\v 57 ◙
-\v 58 ◙
-\v 59 ◙
-\v 60 ◙
-\v 61 ◙
-\v 62 ◙
-\v 63 ◙
+\v 58 If you¦95803 don't¦95802 keep following all the instructions that are written¦95812 in this book, i.e., not \add ≈honouring and¦95820 showing respect\add* to your¦95824 incredible god¦95824 Yahweh¦95823,
+\v 59 then \add *he'll\add* punish you by sending terrible plagues to you and your¦95830 descendants¦95833, along with long-lasting illnesses.
+\v 60 All the plagues that¦95848 he sent onto the Egyptians and which¦95848 terrified you, he'll send them onto you \add now\add* and they'll cling¦95851 to you.
+\v 61 Every kind of sickness¦95857 and disease that¦95861 isn't¦95862 \add even\add* written¦95863 in this book, Yahweh¦95868 will send them \add all\add* onto you until¦95870 you're destroyed¦95871.
+\v 62 Even though you all had been as numerous as the stars¦95879 in the sky, \add @your country\add* will be left underpopulated because you didn't¦95884 listen¦95885 to your god¦95888 Yahweh's voice¦95886.
+\v 63 Just¦95902 as Yahweh¦95894 was happy to do good things for you and multiply¦95898 you all, he would then be happy to to bring¦95904 you all to ruin and destruction¦95906. Then¦95890 you'll be torn away from the land that you're¦95913 going in to \add ≈take ownership of\add*.
 \p
-\v 64 ◙
-\v 65 ◙
-\v 66 ◙
-\v 67 ◙
-\v 68 ◙
+\v 64 Yahweh¦95920 will scatter¦95919 you among all the peoples¦95923 \add ≈right around the world\add* where you'll serve¦95930 gods¦95932 made out of wood or stone¦95941 that¦95934 neither you nor your ancestors¦95939 \add ≈had heard of\add*.
+\v 65 You won't¦95945 have any peace among those¦95944 nations¦95943, and \add ≈you'll never be able to relax\add*, but rather Yahweh¦95955 will give you trembling¦95959 hearts¦95958, sore eyes¦95961, and \add ≈minds full of despair\add*.
+\v 66 \add ≈Time will go very slowly for you\add*, and you'll be scared both night¦95971 and day¦95972, \add ≈without any certainty in your life\add*.
+\v 67 In the morning you'll say, ‘If only it was evening,’ and in the evening you'll say, ‘If only it was morning,’ because of the continual tightness in your stomach and because of the sights¦95993 \add ≈you'll have to witness\add*.
+\v 68 Yahweh¦96000 will send \add some of\add* you back to Egypt¦96002 by ship, even though I'd¦96006 told you that you'll never see that country again¦96011. Then¦95998 you'll be offered¦96013 there for sale as slaves, but no one will \add want to\add* buy you.
 \c 29
-\s1 The different e again agreement
 \rem /s1 The Lord's Covenant with Israel in the Land of Moab; Renewal of the Covenant
 \p
-\v 1 ◙
+\v 1 Those are the words of the agreement that Yahweh¦96066 commanded Mosheh¦96051 to \add ≈make\add* with the \add ≈Israelis¦96054\add* there in Moav, on top of the agreement that he'd \add ≈made\add* with them at Horeb \add (Mt. Sinai)\add*.
+\s1 heading
 \rem /s1 Moses Reviews the Covenant; The Covenant Renewed in Moab
 \p
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 \x + \xo 29:7: a \xt Num 21:21-30; \xo b \xt Num 21:31-35.\x*◙
-\v 8 \x + \xo 29:8: \xt Num 32:33.\x*◙
-\v 9 ◙
+\v 2 Then Mosheh \add (Moses)\add* called all Yisrael together and told them, “You've all seen everything that¦96081 Yahweh did to Far-oh and all his servants in Egypt and \add ≡what he did\add* to all his country \add ≈right in front of\add* your eyes¦96083—
+\v 3 the sufferings \add of the people there\add* that you saw for yourselves, along with the incredible miracles,
+\v 4 \add ≈yet up until now\add*, Yahweh hasn't enabled you all to understand¦96121 the meaning of everything that you saw and heard.
+\v 5 For¦96135 forty years, \add ≈Yahweh¦96136\add* led you all in the wilderness, \add but\add* your clothes didn't¦96126 wear through, and the sandals on your feet never wore out.
+\v 6 You all \add survived without\add* bread to eat or any wine or alchohol to drink so that you'd realise that I am your god Yahweh.
+\v 7 Then when we arrived here, King Sihon from Heshbon and King Og from Bashan came out \add ≈to battle\add* against us, \add ≈but we defeated them\add*.\x + \xo 29:7: a \xt Num 21:21-30; \xo b \xt Num 21:31-35.\x*
+\v 8 We took their land and gave it to the tribes of Rueven and Gad, and the half-tribe of Menashsheh to become their inheritance.\x + \xo 29:8: \xt Num 32:33.\x*
+\v 9 \add ≈So\add* follow all the instructions in this agreement and¦96200 obey the rules so that you'll all prosper in everything¦96201 you do.
 \p
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
+\v 10 All of you stand \add here\add* today \add ≈in front\add* of your god Yahweh: your chiefs, your tribes, your elders, and your officers, all the Israeli men
+\v 11 along with your wives and children, and the foreigners \add ≈living\add* among you (who cut wood and fetch water for you),
+\v 12 to enter into an agreement with your god¦96244 Yahweh, and to \add accept\add* the promise that¦96249 \add ≈he's made to\add* you today.
+\v 13 That will establish \add @your country\add* as his people, and he will be your god as he told you he would, having promised \add >it\add* to your ancestors Abraham, Yitshak, and Yakov.
+\v 14 This¦96282 agreement isn't¦96286 just with all of you here today,
+\v 15 the ones standing here, \add ≈but also\add* with those who aren't here with you today.
 \p
-\v 16 ◙
-\v 17 ◙
-\v 18 \x + \xo 29:18: \xt Heb 12:15.\x*◙
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
+\v 16 You all know how we lived in Egypt, and then travelled through other \add ≈kingdoms\add* on our way \add here\add*,
+\v 17 and you've all seen their disgusting practices and the idols that they had, made of wood and stone, gold and silver.
+\v 18 If there happens to be a man or woman, or clan or tribe, whose \add ≈loyalty\add* is turning away today from your god Yahweh and to go and serve those gods in those other nations, i.e., if there's a \add ≈bitter or poisonous root\add* among you all,\x + \xo 29:18: \xt Heb 12:15.\x*
+\v 19 and if they hear the words of this curse¦96408, then they'll think to themselves, ‘We'll have peace, even though \add ≈our minds are fixed on where we're going\add*,’ so that the \add ?≈good and the bad are carried along together\add*,
+\v 20 Yahweh won't be willing to forgive them. \add No,\add* his jealousy and anger will rage against them, and all the curses written¦96430 in this book will land on them, and Yahweh will wipe out their name \add ≈never to be remembered again\add*.
+\v 21 Then Yahweh will single out that person \add or group\add* from all of Yisrael's tribe, to be marked out for disaster as per all the curses that are written in this book of instructions.
 \p
-\v 22 ◙
-\v 23 \x + \xo 29:23: \xt Gen 19:24-25.\x*◙
+\v 22 Then a future generation (your descendants who'll be born in the future, plus the foreigner who comes from a distant land), when they see the plagues \add that hit\add* that land and the diseases that Yahweh \add sent to\add* make it sick, will say,
+\v 23 ‘All that land is sulfur and burning salt. No one plants anything and nothing sprouts, and not even grass grows in it, like the overthrow of Sodom and Amorah \add (Gomorrah)\add*, Admah and Tsevoim, which Yahweh destroyed in his rage and anger,’\x + \xo 29:23: \xt Gen 19:24-25.\x*
 \v 24 ◙
 \v 25 ◙
 \v 26 ◙
@@ -1336,7 +1336,7 @@
 \p
 \v 7 ◙
 \v 8 \x + \xo 31:8: \xt Josh 1:5; Heb 13:5.\x*◙
-\s1 The reading of Law each seven year(s)
+\s1 The reading of Law each seven years
 \rem /s1 Public Reading of the Law; The Reading of the Law; The Law to Be Read Every Seventh Year; The Law Is to Be Read Every Seven Years
 \p
 \v 9 ◙
@@ -1372,7 +1372,7 @@
 \p
 \v 30 ◙
 \c 32
-\s1 The song of Mosheh
+\s1 Mosheh's song
 \p
 \v 1 ◙
 \q2 …
