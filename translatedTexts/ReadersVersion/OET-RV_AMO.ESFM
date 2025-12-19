@@ -1,4 +1,4 @@
-\id AMO - Open English Translation—Readers' Version (OET-RV) v0.1.56
+\id AMO - Open English Translation—Readers' Version (OET-RV) v0.1.57
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 AMO
@@ -19,7 +19,7 @@
 \ie
 \c 1
 \p
-\v 1 \add This is\add* the message¦367691 that¦367698 Amos¦367692 (who was among the shepherds¦367696 in Tekoa¦367697) saw concerning Yisra'el \add (Israel¦367702)\add* in the days of King Uzziyah of Yehudah¦367711 \add (Judah)\add*, and also in the days of Yoash's¦367716 son King Yaraveam \add (Jeroboam)\add* of Yisrael, two years¦367719 before the earthquake¦367721.\x + \xo 1:1: a \xt 2Ki 15:1-7; 2Ch 26:1-23; \xo b \xt 2Ki 14:23-29.\x*
+\v 1 \add This is\add* the message¦367691 that¦367698 Amos¦367692 (who was among the shepherds¦367696 in Tekoa¦367697) saw concerning Yisra'el \add (Israel¦367702)\add* in the days of King Uzziyah of Yehudah¦367711 \add (Judah)\add*, and also in the days of Yoash's¦367716 son King Yaraveam \add (Jeroboam)\add* of Yisrael¦367702, two years¦367719 before the earthquake¦367721.\x + \xo 1:1: a \xt 2Ki 15:1-7; 2Ch 26:1-23; \xo b \xt 2Ki 14:23-29.\x*
 \q1
 \rem /s1 Judgment on Israel's Neighbours
 \v 2 \add @Amos\add* said¦367723,
@@ -73,7 +73,7 @@
 \v 11 This is what Yahweh¦367877 says¦367876,
 \q1 “\add ≈Even if\add* Edom¦367882 was \add ≈three¦367880 or four¦367885 sins below the threshold\add*,
 \q1 I wouldn't turn away \add their\add* punishment,
-\q1 because¦367888 he pursued¦367890 his brother with the sword¦367891 and cast off all pity.
+\q1 because¦367888 he pursued¦367890 his brother with the sword¦367891 and abandoned all pity.
 \q1 His anger¦367897 raged continually¦367896,
 \q1 ≈and his rage¦367898 lasted forever.\x + \xo 1:11-12: \xt Isa 34:5-17; 63:1-6; Jer 49:7-22; Eze 25:12-14; 35:1-15; Oba 1-14; Mal 1:2-5.\x*
 \q1
@@ -128,7 +128,7 @@
 \s4 Northern kingdom
 \p
 \v 6 This is what Yahweh¦368050 says¦368049:
-\q1 “\add ≈Even if\add* Yisrael was \add ≈three¦368053 or four¦368058 sins below the threshold\add*,
+\q1 “\add ≈Even if\add* Yisrael¦368055 was \add ≈three¦368053 or four¦368058 sins below the threshold\add*,
 \q1 I wouldn't turn away its punishment,
 \q1 because¦368061 they¦368063 sold the innocent for silver¦368064
 \q1 ≈and the needy¦368066 for a pair of sandals¦368068.
@@ -345,7 +345,7 @@
 \q1 although you have built¦368894 houses¦368892 \add ≈from nice stone blocks\add*, you won't \add get to\add* live in them.
 \q1 ≈You have delightful vineyards¦368899, but you won't drink¦368904 their wine.
 \q1
-\v 12 For I know¦368910 how many your offenses are
+\v 12 I know¦368910 how many your offenses are
 \q1 and how great¦368913 your sins¦368914 are—
 \q1 you¦368917 who \add ≈make honest people suffer\add*, take¦368917 bribes,
 \q1 and turn¦368921 aside¦368921 the needy \add ≈at the community centre\add*.
@@ -495,7 +495,7 @@
 \rem /s1 Amos and Amaziah; Amaziah Complains to the King
 \s4 Both kingdoms
 \p
-\v 10 Then Amatsyah, the priest¦369499 at Beyt-El \add (Bethel)\add*, sent¦369497 a message to Yisrael's King Yaraveam, saying: “Amos¦369512 has conspired¦369510 against¦369511 you¦369511 \add ≈right among the Israeli people\add*. The \add ≈country can't¦369516 handle\add* all his messages¦369525.
+\v 10 Then Amatsyah, the priest¦369499 at Beyt-El \add (Bethel)\add*, sent¦369497 a message to Yisrael's King Yaraveam, saying: “Amos¦369512 has conspired¦369510 against¦369511 you¦369511 \add ≈right among the Israeli¦369506 people\add*. The \add ≈country can't¦369516 handle\add* all his messages¦369525.
 \v 11 Amos¦369531 is saying that \add you,\add* Yaraveam¦369534, will die¦369533 by the sword¦369532 and that Yisrael¦369535 will definitely \add ≈get taken\add* into exile away from this land.”
 \p
 \v 12 Amatsyah \add ≈ordered\add* Amos¦369546, “Hey prophet! Go \add and\add* run yourself¦369551 back to the Yehudah¦369555 \add ≈region\add*, and \add ≈earn your living\add* and prophesy there.

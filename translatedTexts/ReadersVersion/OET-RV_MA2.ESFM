@@ -1,4 +1,4 @@
-\id 2MA - Open English Translation—Readers' Version (OET-RV) v0.0.02
+\id 2MA - Open English Translation—Readers' Version (OET-RV) v0.0.03
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 MA2
@@ -12,6 +12,7 @@
 \mt1 the Maccabees
 \is1 Introduction
 \ip \bk The Second Document about the Maccabees\bk* is recognised as Deuterocanonical Scripture by the Roman Catholic, Greek Orthodox, and Russian Orthodox Churches.
+\ip Makabi (from which the term Maccabee is derived) is an acronym formed from the first letters of Exodus 15:11: “Mi kamokha ba’elim YHWH” — “Who is like you among the gods, Yahweh?”
 \rem This is still a very early look into the unfinished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
@@ -31,16 +32,16 @@
 \v 10 The people of Jerusalem and those who are in Judea, with the senate and Judas, to Aristobulus, King Ptolemy's teacher, who is also of the stock of the anointed priests, and to the Jews who are in Egypt, we send greetings and health.
 \p
 \v 11 Having been saved by God out of great perils, as men arrayed against a king, we thank him greatly.
-\v 12 For he threw out into Persia those who fought against us in the holy city.
-\v 13 For when the prince had come there, with an army that seemed irresistible, they were cut to pieces in the temple of Nanaea by the treachery of Nanaea's priests.
-\v 14 For Antiochus, on the pretence that he would marry her, came into the place, he and his friends who were with him, that they might take a large part of the treasures as a dowry.
+\v 12 Because he threw out into Persia those who fought against us in the holy city.
+\v 13 Because when the prince had come there, with an army that seemed irresistible, they were cut to pieces in the temple of Nanaea by the treachery of Nanaea's priests.
+\v 14 Because Antiochus, on the pretence that he would marry her, came into the place, he and his friends who were with him, that they might take a large part of the treasures as a dowry.
 \v 15 And when the priests of Nanaea's temple had set the treasures out, and he had come there with a small company within the wall of the sacred precinct, they locked the temple when Antiochus had come in.
 \v 16 Opening the secret door of the panelled ceiling, they threw stones and struck down the prince. They cut him and his company in pieces, and cut off their heads, and threw them to the people who were outside.
 \v 17 Blessed be our god in all things, who handed over those who had committed impiety.
 \p
 \v 18 Since we are now about to celebrate the purification of the temple in the month Chislev, on the twenty-fifth day, we thought it necessary to notify you, so that you may also keep a feast of tabernacles, and remember the fire which was given when Nehemiah offered sacrifices, after he had built both the temple and the altar.
 \p
-\v 19 For indeed when our fathers were about to be led into the land of Persia, the godly priests of that time took some of the fire of the altar, and hid it secretly in the hollow of a well that was without water, where they made sure that the place was unknown to anyone.
+\v 19 Because indeed when our fathers were about to be led into the land of Persia, the godly priests of that time took some of the fire of the altar, and hid it secretly in the hollow of a well that was without water, where they made sure that the place was unknown to anyone.
 \v 20 Now after many years, when it pleased God, Nehemiah, having received a charge from the king of Persia, sent in quest of the fire the descendants of the priests who hid it. When they declared to us that they had found no fire, but thick liquid,
 \v 21 he commanded them to draw some of it out and bring it to him. When the sacrifices had been offered, Nehemiah commanded the priests to sprinkle with that liquid both the wood and the things laid on it.
 \v 22 When that was done and some time had passed, and the sun shone out, which before was hidden with clouds, a great blaze was kindled, so that all men marvelled.
@@ -92,12 +93,12 @@
 \v 21 and the manifestations that came from heaven to those who fought with one another in brave deeds for the religion of the Jews; so that, being but a few, they seized the whole country, chased the barbarous multitudes,
 \v 22 recovered again the temple renowned all the world over, freed the city, and restored the laws which were about to be overthrown, seeing the master became gracious to them with all kindness.
 \v 23 These things which have been declared by Jason of Cyrene in five books, we will attempt to abridge in one book.
-\v 24 For having in view the confused mass of the numbers, and the\f + \fr 2:24 \ft Or, weariness\f* difficulty which awaits those who would enter into the narratives of the history, by reason of the abundance of the matter,
+\v 24 Because having in view the confused mass of the numbers, and the\f + \fr 2:24 \ft Or, weariness\f* difficulty which awaits those who would enter into the narratives of the history, by reason of the abundance of the matter,
 \v 25 we were careful that those who choose to read may be attracted, and that those who wish us well may find it easy to recall, and that all readers may benefit.
 \v 26 Although to us, who have taken upon ourselves the painful labour of the abridgement, the task is not easy, but a matter of sweat and sleeplessness,
 \v 27 even as it is no light thing to him who prepares a banquet, and seeks the benefit of others. Nevertheless, for the sake of the gratitude of the many we will gladly endure the painful labour,
 \v 28 leaving to the historian the exact handling of every particular, and again having no strength to fill in the outlines of our abridgement.
-\v 29 For as the masterbuilder of a new house must care for the whole structure, and again he who undertakes to decorate and paint it must seek out the things fit for its adorning; even so I think it is also with us.
+\v 29 Because as the masterbuilder of a new house must care for the whole structure, and again he who undertakes to decorate and paint it must seek out the things fit for its adorning; even so I think it is also with us.
 \v 30 To occupy the ground, and to indulge in long discussions, and to be curious in particulars, is fitting for the first author of the history;
 \v 31 but to strive after brevity of expression, and to avoid a laboured fullness in the treatment, is to be granted to him who would bring a writing into a new form.
 \v 32 Here then let's begin the narration, only adding this much to that which has already been said; for it is a foolish thing to make a long prologue to the history, and to abridge the history itself.
@@ -122,7 +123,7 @@
 \v 14 So having appointed a day, he entered in to direct the enquiry concerning these matters; and there was no small distress throughout the whole city.
 \v 15 The priests, prostrating themselves before the altar in their priestly garments, and called towards heaven upon him who gave the law concerning deposits, that he should preserve these treasures safe for those who had deposited them.
 \v 16 Whoever saw the appearance of the high priest was wounded in mind; for his countenance and the change of his colour betrayed the distress of his soul.
-\v 17 For a terror and a shuddering of the body had come over the man, by which the pain that was in his heart was plainly shown to those who looked at him.
+\v 17 Because a terror and a shuddering of the body had come over the man, by which the pain that was in his heart was plainly shown to those who looked at him.
 \v 18 Those who were in the houses rushed out in crowds to make a universal supplication, because the place was about to come into dishonour.
 \v 19 The women, girded with sackcloth under their breasts, thronged the streets. The virgins who were kept indoors ran together, some to the gates, others to the walls, and some looked out through the windows.
 \v 20 All, stretching out their hands towards heaven, made their solemn supplication.
@@ -131,7 +132,7 @@
 \v 22 While therefore they called upon the Almighty master to keep the things entrusted to them \f + \fr 3:22 \ft Gr. \fqa safe with all security.\f* safe and secure for those who had entrusted them,
 \v 23 Heliodorus went on to execute that which had been decreed.
 \v 24 But when he was already present there with his guards near the treasury, the Sovereign of spirits and of all authority caused a great manifestation, so that all who had presumed to come with him, stricken with dismay at the power of God, fainted in terror.
-\v 25 For they saw a horse with a frightening rider, adorned with beautiful trappings, and he rushed fiercely and struck at Heliodorus with his forefeet. It seemed like he who sat on the horse had complete armour of gold.
+\v 25 Because they saw a horse with a frightening rider, adorned with beautiful trappings, and he rushed fiercely and struck at Heliodorus with his forefeet. It seemed like he who sat on the horse had complete armour of gold.
 \v 26 Two others also appeared to him, young men notable in their strength, and beautiful in their glory, and splendid in their apparel, who stood by him on either side, and scourged him unceasingly, inflicting on him many sore stripes.
 \v 27 When he had fallen suddenly to the ground, and great darkness had come over him, his guards picked him up and put him on a stretcher,
 \v 28 and carried him—this man who had just now entered with a great retinue and all his guard into the aforesaid treasury, himself now brought to utter helplessness, manifestly made to recognise the sovereignty of God.
@@ -147,7 +148,7 @@
 \p
 \v 37 When the king asked Heliodorus what sort of man was fit to be sent yet once again to Jerusalem, he said,
 \v 38 “If you have any enemy or conspirator against the state, send him there, and you will receive him back well scourged, if he even escapes with his life; because truly there is some power of God in that place.
-\v 39 For he who has his dwelling in heaven himself has his eyes on that place and helps it. Those who come to hurt it, he strikes and destroys.”
+\v 39 Because he who has his dwelling in heaven himself has his eyes on that place and helps it. Those who come to hurt it, he strikes and destroys.”
 \p
 \v 40 This was the history of Heliodorus and the keeping of the treasury.
 \c 4
@@ -164,12 +165,12 @@
 \v 9 In addition to this, he undertook to assign one hundred and fifty more, if it might be allowed him \f + \fr 4:9 \ft Gr. \fqa through his.\f*through the king's authority to set him up a gymnasium and a body of youths to be trained in it, and to register the inhabitants of Jerusalem as citizens of Antioch.
 \v 10 When the king had assented, and Jason had taken possession of the office, he immediately shifted those of his own race to the Greek way of life.
 \v 11 Setting aside the royal ordinances of special favour to the Jews, granted by the means of John the father of Eupolemus, who went on the mission to the Romans to establish friendship and alliance, and seeking to overthrow the lawful ways of living, he brought in new customs forbidden by the law.
-\v 12 For he eagerly established a gymnasium under the citadel itself, and caused the noblest of the young men to wear the Greek hat.
+\v 12 Because he eagerly established a gymnasium under the citadel itself, and caused the noblest of the young men to wear the Greek hat.
 \v 13 Thus there was an extreme of hellenization, and an advance of a foreign religion, by reason of the exceeding profaneness of Jason, who was an ungodly man and not a high priest;
 \v 14 so that the priests had no more any zeal for the services of the altar; but despising the sanctuary and neglecting the sacrifices, they hastened to enjoy that which was unlawfully provided in the wrestling arena, after the summons to the discus-throwing.
 \v 15 They despised the honours of their fathers, and valued the prestige of the Greeks best of all.
-\v 16 For this reason, severe calamity overtook them. The men whose ways of living they earnestly followed, and to whom they desired to be made like in all things, these became their enemies and punished them.
-\v 17 For it is not a light thing to show irreverence to God's laws, but later events will make this clear.
+\v 16 Because this reason, severe calamity overtook them. The men whose ways of living they earnestly followed, and to whom they desired to be made like in all things, these became their enemies and punished them.
+\v 17 Because it is not a light thing to show irreverence to God's laws, but later events will make this clear.
 \p
 \v 18 Now when certain games that came every fifth year were kept at Tyre, and the king was present,
 \v 19 the vile Jason sent sacred envoys,\f + \fr 4:19 \ft See ver. 9.\f* as being Antiochians of Jerusalem, bearing three hundred drachmas of silver to the sacrifice of Hercules, which even the bearers thereof thought not right to use for any sacrifice, because it was not fit, but to spend it for another purpose.
@@ -191,7 +192,7 @@
 \v 32 Then Menelaus, supposing that he had gotten a favourable opportunity, presented to Andronicus certain vessels of gold belonging to the temple, which he had stolen. He had already sold others into Tyre and the neighbouring cities.
 \v 33 When Onias had sure knowledge of this, he sharply reproved him, having withdrawn himself into a sanctuary at Daphne, that lies by Antioch.
 \v 34 Therefore Menelaus, taking Andronicus aside, asked him to kill Onias. Coming to Onias, and being persuaded to use treachery, and being received as a friend, Andronicus gave him his right hand with oaths and, though he was suspicious, persuaded him to come out of the sanctuary. Then, with no regard for justice, he immediately put him to death.
-\v 35 For this reason not only Jews, but many also of the other nations, had indignation and displeasure at the unjust murder of the man.
+\v 35 Because this reason not only Jews, but many also of the other nations, had indignation and displeasure at the unjust murder of the man.
 \v 36 And when the king had come back from the places in Cilicia, the Jews who were in the city appealed to him against Andronicus (the Greeks also joining with them in hatred of the wickedness), urging that Onias had been wrongfully slain.
 \v 37 Antiochus therefore was heartily sorry, and was moved to pity, and wept, because of the sober and well ordered life of him who was dead.
 \v 38 Being inflamed with anger, he immediately stripped off Andronicus's purple robe, and tore off his under garments, and when he had led him round through the whole city to that very place where he had committed the outrage against Onias, there he put the murderer out of the way, the master rendering to him the punishment he had deserved.
@@ -219,7 +220,7 @@
 \v 5 When a false rumour had arisen that Antiochus was dead, Jason took not less than a thousand men, and suddenly made an assault upon the city. When those who were on the wall were being routed, and the city was at length nearly taken, Menelaus took refuge in the citadel.
 \v 6 But Jason slaughtered his own citizens without mercy, not considering that good success against kinsmen is the greatest misfortune, but supposing himself to be setting up trophies over enemies, and not over fellow-countrymen.
 \v 7 He didn't win control of the government, but receiving shame as the result of his conspiracy, he fled again as a fugitive into the country of the Ammonites.
-\v 8 At last therefore he met with a miserable end. Having been imprisoned at the court of Aretas the prince of the Arabians, fleeing from city to city, pursued by all men, hated as an rebel against the laws, and abhorred as the executioner of his country and his fellow citizens, he was cast ashore in Egypt.
+\v 8 At last therefore he met with a miserable end. Having been imprisoned at the court of Aretas the prince of the Arabians, fleeing from city to city, pursued by all men, hated as an rebel against the laws, and abhorred as the executioner of his country and his fellow citizens, he was thrown ashore in Egypt.
 \v 9 He who had driven many from their own country into exile perished in exile, having crossed the sea to the Lacedaemonians, hoping to find shelter there because they were\f + \fr 5:9 \ft See 1 Maccabees 12:7.\f* near of kin.
 \v 10 He who had thrown out a multitude unburied had none to mourn for him. He didn't have any funeral at all and no place in the tomb of his ancestors.
 \p
@@ -248,19 +249,19 @@
 \v 2 and also to pollute the sanctuary in Jerusalem and to call it by the name of Olympian Zeus, and to call the sanctuary in Gerizim by the name of Zeus the Protector of foreigners, even as the people who lived in that place did.
 \p
 \v 3 The visitation of this evil was harsh and utterly grievous.
-\v 4 For the temple was filled with debauchery and revelling by the heathen, who \f + \fr 6:4 \ft Or, \fqa idled with their fellows\f* dallied with prostitutes, and had intercourse with women within the sacred precincts, and moreover brought inside things that were not appropriate.
+\v 4 Because the temple was filled with debauchery and revelling by the heathen, who \f + \fr 6:4 \ft Or, \fqa idled with their fellows\f* dallied with prostitutes, and had intercourse with women within the sacred precincts, and moreover brought inside things that were not appropriate.
 \v 5 The altar was filled with those abominable things which had been prohibited by the laws.
 \v 6 A man could neither keep the Sabbath, nor observe the feasts of their ancestors, nor so much as confess himself to be a Jew.
 \p
 \v 7 On the day of the king's birth every month, they were led along with bitter constraint to eat of the sacrifices. When the feast of Dionysia came, they were compelled to go in procession in honour of Dionysus, wearing wreaths of ivy.
 \v 8 A decree went out to the neighbouring Greek cities, by the suggestion of Ptolemy, that they should observe the same conduct against the Jews, and should make them eat of the sacrifices,
 \v 9 and that they should kill those who didn't choose to go over to the Greek rites. So the present misery was for all to see.
-\v 10 For example, two women were brought in for having circumcised their children. These, when they had led them publicly around the city with the babes hung from their breasts, they threw down headlong from the wall.
+\v 10 Because example, two women were brought in for having circumcised their children. These, when they had led them publicly around the city with the babes hung from their breasts, they threw down headlong from the wall.
 \v 11 Others who had run together into the caves nearby to keep the seventh day secretly, were betrayed to Philip and were all burnt together, because their piety kept them from defending themselves, in view of the honour of that most solemn day.
 \p
 \v 12 I urge those who read this book to not be discouraged because of the calamities, but recognise that these punishments were not for the destruction, but for the chastening of our race.
-\v 13 For indeed it is a sign of great kindness that those who act impiously are not let alone for a long time, but immediately meet with retribution.
-\v 14 For in the case of the other nations, the Sovereign master waits patiently to punish them until they have attained to the full measure of their sins; but not with us,
+\v 13 Because indeed it is a sign of great kindness that those who act impiously are not let alone for a long time, but immediately meet with retribution.
+\v 14 Because in the case of the other nations, the Sovereign master waits patiently to punish them until they have attained to the full measure of their sins; but not with us,
 \v 15 that he may not take vengeance on us afterward,\f + \fr 6:15 \ft Or, \fqa when our sins have come to their height\f* when we have come to the\f + \fr 6:15 \ft Gr. \fqa end.\f* height of our sins.
 \v 16 Therefore he never withdraws his mercy from us; but though he chastens with calamity, he doesn't forsake his own people.
 \v 17 However let this that we have spoken suffice to remind you; but after a few words, we must come to the narrative.
@@ -273,9 +274,9 @@
 \v 22 that by so doing he might be delivered from death, and so his ancient friendship with them might be treated kindly.
 \v 23 But he, having formed a high resolve, and one that became his years, the dignity of old age, and the grey hairs\f + \fr 6:23 \ft The Greek text appears to be corrupt.\f* which he had reached with honour, and his excellent\f + \fr 6:23 \ft Some authorities read \fqa manner of life.\f* education from a child, or rather the holy laws\f + \fr 6:23 \ft Gr. \fqa legislation.\f* of God's ordaining, declared his mind accordingly, bidding them to quickly send him to Hades.
 \p
-\v 24 “For it doesn't become our years to dissemble,” he said, “that many of the young should suppose that Eleazar, the man of ninety years, had gone over to an alien religion;
+\v 24 “Because it doesn't become our years to dissemble,” he said, “that many of the young should suppose that Eleazar, the man of ninety years, had gone over to an alien religion;
 \v 25 and so they, by reason of my deception, and for the sake of this brief and momentary life, would be led astray because of me, and I defile and disgrace myself in my old age.
-\v 26 For even if for the present time I would remove from me the punishment of men, yet whether I live or die, I wouldn't escape the hands of the Almighty.
+\v 26 Because even if for the present time I would remove from me the punishment of men, yet whether I live or die, I wouldn't escape the hands of the Almighty.
 \v 27 Therefore, by bravely parting with my life now, I will show myself worthy of my old age,
 \v 28 and \f + \fr 6:28 \ft Gr. \fqa one that has left behind.\f*leave behind a noble example to the young to die willingly and nobly a glorious death for the revered and holy laws.”
 \p When he had said these words, he went immediately to the instrument of torture.
@@ -286,7 +287,7 @@
 \c 7
 \p
 \v 1 It came to pass that seven brothers and their mother were at the king's command taken and shamefully handled with scourges and cords, to compel them to taste of the abominable swine's flesh.
-\v 2 One of them made himself the spokesman and said, “What would you ask and learn from us? For we are ready to die rather than transgress the laws of our ancestors.”
+\v 2 One of them made himself the spokesman and said, “What would you ask and learn from us? Because we are ready to die rather than transgress the laws of our ancestors.”
 \p
 \v 3 The king fell into a rage, and commanded that pans and cauldrons be heated.
 \v 4 When these were immediately heated, he gave orders to cut out the tongue of him who had been their spokesman, and to scalp him, and to cut off his extremities, with the rest of his brothers and his mother looking on.
@@ -299,11 +300,11 @@
 \v 9 When he was at the last gasp, he said, “You, miscreant, release us out of this present life, but the King of the world will raise us who have died for his laws up to an everlasting renewal of life.”
 \p
 \v 10 After him, the third was made a victim of their mocking. When he was required, he quickly put out his tongue, and stretched out his hands courageously,
-\v 11 and nobly said, “I got these from heaven. For his laws’ sake I treat these with contempt. From him, I hope to receive these back again.”
+\v 11 and nobly said, “I got these from heaven. Because his laws’ sake I treat these with contempt. From him, I hope to receive these back again.”
 \v 12 As a result, the king himself and those who were with him were astonished at the young man's soul, for he regarded the pains as nothing.
 \p
 \v 13 When he too was dead, they shamefully handled and tortured the fourth in the same way.
-\v 14 Being near to death he said this: “It is good to die at the hands of men and look for the hope which is given by God, that we will be raised up again by him. For as for you, you will have no resurrection to life.”
+\v 14 Being near to death he said this: “It is good to die at the hands of men and look for the hope which is given by God, that we will be raised up again by him. Because as for you, you will have no resurrection to life.”
 \p
 \v 15 Next after him, they brought the fifth and shamefully handled him.
 \v 16 But he looked towards \f + \fr 7:16 \ft Gr. \fqa him.\f*the king and said, “Because you have authority amongst men, though you are corruptible, you do what you please. But don't think that our race has been forsaken by God.
@@ -326,11 +327,11 @@
 \p
 \v 30 But before she had finished speaking, the young man said, “What are you all waiting for? I don't obey the commandment of the king, but I listen to the commandment of the law that was given to our fathers through Moses.
 \v 31 But you, who have devised all kinds of evil against the Hebrews, will in no way escape God's hands.
-\v 32 For we are suffering because of our own sins.
+\v 32 Because we are suffering because of our own sins.
 \v 33 If for rebuke and chastening, our living master has been angered a little while, yet he will again be reconciled with his own servants.
 \v 34 But you, O unholy man and of all most vile, don't be vainly lifted up in your wild pride with uncertain hopes, raising your hand against the heavenly children.
-\v 35 For you have not yet escaped the judgement of the Almighty God who sees all things.
-\v 36 For these our brothers, having endured a \f + \fr 7:36 \ft Gr. \fqa short pain of ever-flowing life.\f* short pain that brings everlasting life, have now \f + \fr 7:36 \ft Gr. \fqa fallen. \ft By the omission of one Greek letter the words would signify \fqa having endured a short pain, have now drunk of ever-flowing life under God's covenant.\f* died under God's covenant. But you, through God's judgement, will receive in just measure the penalties of your arrogance.
+\v 35 Because you have not yet escaped the judgement of the Almighty God who sees all things.
+\v 36 Because these our brothers, having endured a \f + \fr 7:36 \ft Gr. \fqa short pain of ever-flowing life.\f* short pain that brings everlasting life, have now \f + \fr 7:36 \ft Gr. \fqa fallen. \ft By the omission of one Greek letter the words would signify \fqa having endured a short pain, have now drunk of ever-flowing life under God's covenant.\f* died under God's covenant. But you, through God's judgement, will receive in just measure the penalties of your arrogance.
 \v 37 But I, as my brothers, give up both body and soul for the laws of our fathers, calling upon God that he may speedily become \f + \fr 7:37 \ft Gr. \fqa propitious.\f*gracious to the nation, and that you, amidst trials and plagues, may confess that he alone is God,
 \v 38 and that in me and my brothers \f + \fr 7:38 \ft Some authorities read \fqa may be stayed.\f* you may bring to an end the wrath of the Almighty which has been justly brought upon our whole race.”
 \p
@@ -362,7 +363,7 @@
 \v 15 if not for their own sakes, then for the covenants made with their ancestors, and because he had called them by his holy and glorious name.
 \v 16 So Maccabaeus gathered his men together, six thousand in number, and exhorted them not to be frightened by the enemy, nor to fear the great multitude of the heathen who came wrongfully against them, but to fight nobly,
 \v 17 setting before their eyes the outrage that had been lawlessly perpetrated upon the holy place, and the torture of the city that had been turned to mockery, and further the overthrow of the way of life received from their ancestors.
-\v 18 “For they,” he said, “trust their weapons and daring deeds, but we trust in the almighty God, since he is able at a nod to cast down those who are coming against us, and even the whole world.”
+\v 18 “Because they,” he said, “trust their weapons and daring deeds, but we trust in the almighty God, since he is able at a nod to throw down those who are coming against us, and even the whole world.”
 \v 19 Moreover, he recounted to them the help given from time to time in the days of their ancestors, both in the days of Sennacherib, when one hundred and eighty-five thousand perished,
 \v 20 and in the land of Babylon, in the battle that was fought against the\f + \fr 8:20 \ft Gr. \fqa Galatians.\f* Gauls, how they came to the battle with eight thousand in all, with four thousand Macedonians, and how, the Macedonians being hard pressed, the \f + \fr 8:20 \ft Some authorities read \fqa eight.\f*six thousand destroyed the hundred and twenty thousand because of the help which they had from heaven, and took a great deal of plunder.
 \p
@@ -388,7 +389,7 @@
 \c 9
 \p
 \v 1 Now about that time, Antiochus retreated \f + \fr 9:1 \ft Or, \fqa with dishonour\f*in disorder from the region of Persia.
-\v 2 For he had entered into the city called Persepolis, and he attempted to rob \f + \fr 9:2 \ft Or, \fqa temples\f*a temple and to control the city. Therefore the multitudes rushed in and the people of the country turned to defend themselves with weapons; and it came to pass that Antiochus was put to flight by the people of the country and broke his camp with disgrace.
+\v 2 Because he had entered into the city called Persepolis, and he attempted to rob \f + \fr 9:2 \ft Or, \fqa temples\f*a temple and to control the city. Therefore the multitudes rushed in and the people of the country turned to defend themselves with weapons; and it came to pass that Antiochus was put to flight by the people of the country and broke his camp with disgrace.
 \v 3 While he was at Ecbatana, news was brought to him about what had happened to Nicanor and the forces of Timotheus.
 \v 4 Being overcome by his anger, he planned to make the Jews suffer for the evil deeds of those who had put him to flight. Therefore, with judgement from heaven even now accompanying him, he ordered his charioteer to drive without ceasing until he completed the journey; for he arrogantly said this: “I will make Jerusalem a common graveyard of Jews when I come there.”
 \p
@@ -403,7 +404,7 @@
 \p
 \v 13 The vile man vowed to the sovereign master, who now no more would have pity upon him, saying
 \v 14 that the holy city, to which he was going in haste to lay it even with the ground and to \f + \fr 9:14 \ft Gr. \fqa build.\f*make it a common graveyard, he would declare free.
-\v 15 Concerning the Jews, whom he had decided not even to count worthy of burial, but to cast them out to the animals with their infants for the birds to devour, he would make them all equal to citizens of Athens.
+\v 15 Concerning the Jews, whom he had decided not even to count worthy of burial, but to throw them out to the animals with their infants for the birds to devour, he would make them all equal to citizens of Athens.
 \v 16 The holy sanctuary, which before he had plundered, he would adorn with best offerings, and would restore all the sacred vessels many times multiplied, and out of his own revenues would defray the charges that were required for the sacrifices.
 \v 17 Beside all this, he said that he would become a Jew and would visit every inhabited place, proclaiming the power of God.
 \v 18 But when his sufferings did in no way cease, for the judgement of God had come upon him in righteousness, having given up all hope for himself, he wrote to the Jews the letter written below, having the nature of a supplication, to this effect:
@@ -416,7 +417,7 @@
 \v 24 to the end that, if anything fell out contrary to expectation, or if any unwelcome tidings were brought, the people in the country, knowing to whom the state had been left, might not be troubled,
 \v 25 and, moreover, observing how the princes who are along the borders and neighbours to my kingdom watch for opportunities and look for the future event, I have appointed my son Antiochus to be king, whom I often entrusted and commended to most of you when I was hurrying to the upper provinces. I have written to him what is written below.
 \v 26 I therefore urge you and beg you, having in your remembrance the benefits done to you in common and severally, to preserve your present good will, each of you, towards me and my son.
-\v 27 For I am persuaded that he in gentleness and kindness will follow my purpose and treat you with moderation and kindness.
+\v 27 Because I am persuaded that he in gentleness and kindness will follow my purpose and treat you with moderation and kindness.
 \p
 \v 28 So the murderer and blasphemer, having endured the most intense sufferings, even as he had dealt with other men, ended his life amongst the mountains by a most piteous fate in a strange land.
 \v 29 Philip his foster brother took the body home and then, fearing the son of Antiochus, he withdrew himself to Ptolemy Philometor in Egypt.
@@ -434,8 +435,8 @@
 \v 9 Such were the events of the end of Antiochus, who was called Epiphanes.
 \p
 \v 10 Now we will declare what came to pass under Antiochus \f + \fr 10:10 \ft That is, \fqa son of a good father.\f*Eupator, who proved himself a son of that ungodly man, and will summarise the main evils of the wars.
-\v 11 For this man, when he succeeded to the kingdom, appointed one Lysias to be chancellor and supreme governor of Coelesyria and Phoenicia.
-\v 12 For Ptolemy who was called Macron, setting an example of observing justice towards the Jews because of the wrong that had been done to them, endeavoured to deal with them on peaceful terms.
+\v 11 Because this man, when he succeeded to the kingdom, appointed one Lysias to be chancellor and supreme governor of Coelesyria and Phoenicia.
+\v 12 Because Ptolemy who was called Macron, setting an example of observing justice towards the Jews because of the wrong that had been done to them, endeavoured to deal with them on peaceful terms.
 \v 13 Whereupon being accused by the king's \f + \fr 10:13 \ft See 2 Maccabees 8:9\f*friends before Eupator, and hearing himself called traitor at every turn because he had abandoned Cyprus which Philometor had entrusted to him, and had withdrawn himself to Antiochus Epiphanes, and \f + \fr 10:13 \ft The Greek text here is corrupt.\f* failing to uphold the honour of his office, he took poison and did away with himself.
 \p
 \v 14 But when Gorgias was made governor of the district, he maintained a force of mercenaries, and at every turn kept up war with the Jews.
@@ -457,7 +458,7 @@
 \v 28 When the dawn was now breaking, the two armies joined in battle, the one part having this, beside virtue, for a pledge of success and victory, that they had fled to the master for refuge, the others making their passion their leader in the fight.
 \p
 \v 29 When the battle became strong, there appeared out of heaven to their adversaries five splendid men on horses with bridles of gold, \f + \fr 10:29 \ft Some authorities read \fqa and leading on the Jews; who also, taking.\f*and two of them, leading on the Jews,
-\v 30 and taking Maccabaeus in the midst of them, and covering him with their own armour, guarded him from wounds, while they shot arrows and thunderbolts at the enemies. For this reason, they were blinded and thrown into confusion, and were cut to pieces, filled with bewilderment.
+\v 30 and taking Maccabaeus in the midst of them, and covering him with their own armour, guarded him from wounds, while they shot arrows and thunderbolts at the enemies. Because this reason, they were blinded and thrown into confusion, and were cut to pieces, filled with bewilderment.
 \v 31 Twenty thousand and five hundred were slain, beside six hundred cavalry.
 \p
 \v 32 Timotheus himself fled into a stronghold called Gazara, a fortress of great strength, \f + \fr 10:32 \ft See ver. 37.\f*where Chaereas was in command.
@@ -542,7 +543,7 @@
 \v 18 They didn't find Timotheus in that district, for he had by then departed from the district without accomplishing anything, but had left behind a very strong garrison in one place.
 \v 19 But Dositheus and Sosipater, who were captains under Maccabaeus, went out and destroyed those who had been left by Timotheus in the stronghold, more than ten thousand men.
 \v 20 Maccabaeus, arranging his own army in divisions, set \f + \fr 12:20 \ft Gr. \fqa them.\f*these two over the bands, and marched in haste against Timotheus, who had with him one hundred and twenty thousand infantry and two thousand and five hundred cavalry.
-\v 21 When Timotheus heard of the approach of Judas, he at once sent away the women and the children with the baggage into the fortress called \f + \fr 12:21 \ft Compare \fqa Carnain,\ft 1 Maccabees 5:26, 43, 44.\f*Carnion; for the place was hard to besiege and difficult of access by reason of the narrowness of the approaches on all sides.
+\v 21 When Timotheus heard of the approach of Judas, he at once sent away the women and the children with the baggage into the fortress called \f + \fr 12:21 \ft Compare \fqa Carnain, \ft 1 Maccabees 5:26, 43, 44.\f*Carnion; for the place was hard to besiege and difficult of access by reason of the narrowness of the approaches on all sides.
 \v 22 When the band of Judas, who led the first division, appeared in sight, and when terror and fear came upon the enemy, because the manifestation of him who sees all things came upon them, they fled in every direction, carried this way and that, so that they were often injured by their own men, and pierced with the points of their own swords.
 \v 23 Judas continued the pursuit more vigorously, putting the wicked wretches to the sword, and he destroyed as many as thirty thousand men.
 \p
@@ -572,7 +573,7 @@
 \v 41 All therefore, blessing the ways of the master, the righteous Judge, who makes manifest the things that are hidden,
 \v 42 turned themselves to supplication, praying that the sin committed might be wholly blotted out. The noble Judas exhorted the multitude to keep themselves from sin, for they had seen with their own eyes what happened because of the sin of those who had fallen.
 \v 43 When he had made a collection man by man to the sum of two thousand drachmas of silver, he sent to Jerusalem to offer a sacrifice for sin, doing very well and honourably in this, in that he took thought for the resurrection.
-\v 44 For if he wasn't expecting that those who had fallen would rise again, it would be superfluous and idle to pray for the dead.
+\v 44 Because if he wasn't expecting that those who had fallen would rise again, it would be superfluous and idle to pray for the dead.
 \v 45 But if he was looking forward to an honourable memorial of gratitude laid up for those who \f + \fr 12:45 \ft Gr. \fqa fall asleep.\f*die \f + \fr 12:45 \ft Or, \fqa on the side of godliness\f*in godliness, then the thought was holy and godly. Therefore he made the atoning sacrifice for those who had died, that they might be released from their sin.
 \c 13
 \p
@@ -612,14 +613,14 @@
 \v 2 had taken possession of the country, having made away with Antiochus and his guardian Lysias.
 \p
 \v 3 But one Alcimus, who had formerly been high priest, and had wilfully polluted himself in the times when there was no mingling with the Gentiles, considering that there was no deliverance for him in any way, nor any more access to the holy altar,
-\v 4 came to King Demetrius in about the one hundred and fifty-first year, presenting to him a crown of gold and a palm, and beside these some of the festal olive boughs of the temple. For that day, he held his peace;
+\v 4 came to King Demetrius in about the one hundred and fifty-first year, presenting to him a crown of gold and a palm, and beside these some of the festal olive boughs of the temple. Because that day, he held his peace;
 \v 5 but having gotten opportunity to further his own madness, being called by Demetrius into a meeting of his council, and asked how the Jews stood affected and what they intended, he answered:
 \p
 \v 6 “Those of the Jews called \f + \fr 14:6 \ft That is, \fqa Chasidim.\f*Hasidaeans, whose leader is Judas Maccabaeus, keep up war and are seditious, not allowing the kingdom to find tranquillity.
 \v 7 Therefore, having laid aside my ancestral glory—I mean the high priesthood—I have now come \f + \fr 14:7 \ft Some authorities read \fqa a second time.\f*here,
-\v 8 first for the genuine care I have for the things that concern the king, and secondly because I have regard also to my own fellow citizens. For through the unadvised dealing of those of whom I spoke before, our whole race is in no small misfortune.
+\v 8 first for the genuine care I have for the things that concern the king, and secondly because I have regard also to my own fellow citizens. Because through the unadvised dealing of those of whom I spoke before, our whole race is in no small misfortune.
 \v 9 O king, having informed yourself of these things, take thought both for our country and for our race, which is surrounded by enemies, according to the gracious kindness with which you receive all.
-\v 10 For as long as Judas remains alive, it is impossible for the government to find peace.
+\v 10 Because as long as Judas remains alive, it is impossible for the government to find peace.
 \v 11 When he had spoken such words as these, at once \f + \fr 14:11 \ft Or, \fqa the \ft king's \fqa friends likewise\f*the rest of the king's \f + \fr 14:11 \ft See 2 Maccabees 8:9.\f*friends, having ill will against Judas, inflamed Demetrius yet more.
 \v 12 He immediately appointed Nicanor, who had been master of the elephants, and made him governor of Judea. He sent him out,
 \v 13 giving him written instructions to kill Judas himself and to scatter those who were with him, and to set up Alcimus as high priest of the \f + \fr 14:13 \ft Gr. \fqa greatest.\f*great temple.
@@ -653,12 +654,12 @@
 \v 36 So now, O holy master of all holiness, keep undefiled forever this house that has been recently cleansed.”
 \p
 \v 37 Now information was given to Nicanor against one Razis, an elder of Jerusalem, who was a lover of his countrymen and a man of very good report, and one called Father of the Jews for his good will.
-\v 38 For in the former times when there was no mingling with the Gentiles, he had been accused of following the Jews’ religion, and had risked body and life with all earnestness for the religion of the Jews.
+\v 38 Because in the former times when there was no mingling with the Gentiles, he had been accused of following the Jews’ religion, and had risked body and life with all earnestness for the religion of the Jews.
 \v 39 Nicanor, wishing to make evident the ill will that he bore against the Jews, sent above five hundred soldiers to seize him;
 \v 40 for he thought by seizing him to inflict an injury on them.
 \v 41 But when the \f + \fr 14:41 \ft Or, \fqa people \ft Gr. \fqa multitudes.\f*troops were at the point of taking the tower, and were forcing the door of the court, and asked for fire to burn the doors, he, being surrounded on every side, fell upon his sword,
 \v 42 choosing rather to die nobly than to fall into the hands of the wicked wretches, and suffer outrage unworthy of his own nobleness.
-\v 43 But since he missed his stroke through the excitement of the struggle, and the crowds were now rushing within the door, he ran bravely up to the wall and cast himself down bravely amongst the crowds.
+\v 43 But since he missed his stroke through the excitement of the struggle, and the crowds were now rushing within the door, he ran bravely up to the wall and threw himself down bravely amongst the crowds.
 \v 44 But as they quickly gave back, a space was made, and he fell on the middle of \f + \fr 14:44 \ft Or, \fqa the void place\f*his side.
 \v 45 Still having breath within him, and being inflamed with anger, he rose up, and though his blood gushed out in streams and his wounds were grievous, he ran through the crowds, and standing upon a steep rock,
 \v 46 when as his blood was now well near spent, he drew forth his bowels through the wound, and taking them in both his hands he shook them at the crowds. Calling upon him who is master of life and spirit to restore him \f + \fr 14:46 \ft Some authorities read \fqa the same.\f*these again, he died like this.
@@ -687,7 +688,7 @@
 \v 16 “Take this holy sword, a gift from God, with which you shall strike down the adversaries.”
 \p
 \v 17 Being encouraged by the words of Judas, which were noble and effective, and able to incite to virtue and to stir the souls of the young to manly courage, they determined not to carry on a campaign, but nobly to bear down upon the enemy, and fighting hand to hand with all courage bring the matter to a conclusion, because the city, the sanctuary, and the temple were in danger.
-\v 18 For their fear for wives and children, and furthermore for family and relatives, was less important to them; but greatest and first was their fear for the consecrated sanctuary.
+\v 18 Because their fear for wives and children, and furthermore for family and relatives, was less important to them; but greatest and first was their fear for the consecrated sanctuary.
 \v 19 Also those who were shut up in the city were in no light distress, being troubled because of the encounter in the open country.
 \p
 \v 20 When all were now waiting for the decision of the issue, and the enemy had already joined battle, and the army had been set in array, and the elephants\f + \fr 15:20 \ft Gr. \fqa animals.\f* brought back to a convenient post,\f + \fr 15:20 \ft Or, \fqa stationed for convenient action\f* and the cavalry deployed on the flanks,
@@ -712,5 +713,5 @@
 \p
 \v 37 This then having been the account of the attempt of Nicanor, and the city having from those times been held by the Hebrews, I also will here make an end of my book.
 \v 38 If I have written well and to the point in my story, this is what I myself desired; but if its poorly done and mediocre, this is the best I could do.
-\v 39 For as it is \f + \fr 15:39 \ft Or, \fqa hurtful\f*distasteful to drink wine alone and likewise to drink water alone, \f + \fr 15:39 \ft Gr. \fqa but even as.\f*while the mingling of wine with water at once gives full pleasantness to the flavour; so also the fashioning of the language delights the ears of those who read the story.
+\v 39 Because as it is \f + \fr 15:39 \ft Or, \fqa hurtful\f*distasteful to drink wine alone and likewise to drink water alone, \f + \fr 15:39 \ft Gr. \fqa but even as.\f*while the mingling of wine with water at once gives full pleasantness to the flavour; so also the fashioning of the language delights the ears of those who read the story.
 \p Here is the end.
