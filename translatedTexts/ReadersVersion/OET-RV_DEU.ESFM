@@ -1,4 +1,4 @@
-\id DEU - Open English Translation—Readers' Version (OET-RV) v0.0.29
+\id DEU - Open English Translation—Readers' Version (OET-RV) v0.1.00
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 DEU
@@ -9,18 +9,18 @@
 \toc3 Deu.
 \mt1 Deuteronomy
 \is1 Introduction
-\ip The Greek word ‘Deuteronomy’ means ‘Second law’, because some aspects of God's instructions in the previous accounts are repeated again in this one, noticeably the Ten Commandments. Hebrew readers call this document ‘Devārim’ which is the second word in the Hebrew and means ‘Words’ or ‘Things’. Some European and other translations call it ‘The fifth book of Mosheh/Moses’.
-\ip impaay-ayaran megsinsinundula stories of Mosheh there to descendants of Israel, there to place of Moab, the place insanggelan their from long time travelling ran there to wilderness, and of time soon them entering and living there to Kanaan.
-\ip And/Now this the other important told of this document: 1. Told here the thinking of Mosheh of descendants of Israel concerning the happenings of past forty years, and the requesting he/his of descendants of Israel of remembering if immenu them of eg-inahak of Master there to wilderness. And/Now told again here the requesting of Mosheh them following and egmatinumanen of God. 2. Told again here the telling of Mosheh of Ten Commands and the explaining he/his of First Commands, and the knowing he/his of descendants of Israel it's necessary is their just indeed serving the Master God. Included told here the various law egpeikulan of descendants of Israel there to Kanaan. 3. Told again here the thinking of Mosheh of descendants of Israel of meaning of agreement of God there to them, and the encouraging he/his them of obedience of that agreement. 4. Told again here the selection to Joshua as replacement for teacher of people of God and the singing of Mosheh of peggale-gale of pegkamatinumanen of God of me his promise, and the blessing of descendants of Israel. Told again here the death of Mosheh there to Moab, opposite bank of Jordan direction of east.
-\ip The best known theme of this document is the Yahweh's blessing and cursing of his chosen people depending on the path that they decide to take. Therefore correct indeed thinking of descendants of Israel loving and respecting the god so that egpakaangken them of life, and not egkaawaan of blessing.
+\ip The Greek word ‘Deuteronomy’ means ‘Second law’, because some aspects of God's instructions in the previous accounts are repeated again in this one, noticeably the Ten Commandments. Hebrew readers call this document ‘Devārim’ which is the second word in the Hebrew text and means ‘Words’ or ‘Things’. Some European and other translations call it ‘The fifth book of Mosheh/Moses’.
+\ip This document contains a series of addresses that Mosheh (commonly known in English as Moses) made to the descendants of Yisrael/Israel while they were in the Moav region on the eastern side of the Yarden/Jordan river. They had stopped there for quite a long time after their travelling through the wilderness, and it would soon be time for them to cross the river and enter the ‘promised land’ of Kanaan/Canaan.
+\ip Some of the more important points made in this document include: 1. Mosheh's summary of the history of the Israelis over the previous forty year, and how he requested them to remain loya and obedient to Yahweh. 2. Mosheh's retelling of the ‘Ten commands’ and his explanation of the first commands, ensuring that Yisrael's descendants knew that it was vital to continue serving Yahweh. This also includes the various rules to be obey in Kanaan. 3. Mosheh's interpretation of the peoples agreement with Yahweh is retold here, and his encouragement to the people to continue to obey that agreement. 4. The selection of Yehoshua/Joshua as the new leader for God's chosen people group, Mosheh's song about the joy of serving Yahweh and the blessings for those who obey. Mosheh's death in Moav is also retold here.
+\ip The best known segment of this document is Yahweh's blessing and cursing of his chosen people depending on the path that they decide to take. If the Israelis would chose to follow Yahweh's instructions, there was a large blessing to be receive, but equally a terrifying curse should they fail to acknowledge what God had done for them.
 \ip The most important verses here are 6:4-6, quoted by Yeshua as being the greatest of all commands: You should love your god Yahweh with your whole mind, your entire being, and all your strength.
 \iot Main components of this account
-\io1 Mosheh's first speech \ior 1:1–4:49\ior*
-\io1 Mosheh's second speech \ior 5:1–26:19\ior*
+\io1 Mosheh's first address \ior 1:1–4:49\ior*
+\io1 Mosheh's second address \ior 5:1–26:19\ior*
 \io2 a. The ten commands \ior 5:1–10:22\ior*
-\io2 b. Instructions, beliefs, and warnings \ior 11:1–26:19\ior*
-\io1 The warnings of entering there to Kanaan \ior 27:1–28:68\ior*
-\io1 The replacement of agreement \ior 29:1–30:20\ior*
+\io2 b. Instructions, rules, and warnings \ior 11:1–26:19\ior*
+\io1 Instructions before entering Kanaan/Canaan \ior 27:1–28:68\ior*
+\io1 The renewal of the agreement \ior 29:1–30:20\ior*
 \io1 Mosheh's final speech \ior 31:1–33:29\ior*
 \io1 Mosheh's death \ior 34:1-12\ior*
 \rem This is still a very early look into the unfinished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
@@ -480,7 +480,7 @@
 \v 4 and he wrote¦86915 the ten¦86922 instructions on the tablets like the first \add ≈time\add*—the same words that¦86924 Yahweh¦86926 had spoken¦86925 to you from the fire¦86930 on the mountain¦86928 on the day¦86931 of the assembly¦86932. Then¦86915 \add *he\add* gave¦86933 me the tablets
 \v 5 and I turned¦86937 and went¦86938 down the mountain¦86941. I put the tablets¦86945 into the box that¦86947 I'd made, just like Yahweh¦86953 had told me to.
 \p
-\v 6 Then¦86955 the \add ≈Israelis¦86956\add* travelled from Beerot-Bene-Yaakan\f + \fr 10:6 \ft Rather than just transliterating this name as we've done, it would also be possible to translate it as ‘the wells of the sons of Yaakan’.\f* to Moserah\f + \fr 10:6 \ft The document known as ‘Numbers’ tells us that Aharon died on Mt. Hor, so presumably Moserah is in that same region.\f* where Aharon died. He was buried¦86966 \add there\add*, and his son Eleazar¦86969 replaced him¦86971 as \add chief\add* priest.\x + \xo 10:6: \xt Num 20:28; 33:38.\x*
+\v 6 Then¦86955 the \add ≈Israelis¦86956\add* travelled from Beerot-Bene-Yaakan\f + \fr 10:6 \ft Rather than just transliterating this name as we've done, it would also be possible to translate it as ‘the wells of the sons of Yaakan’.\f* to Moserah\f + \fr 10:6 \ft The document known as ‘Numbers’ tells us that Aharon died on Mt. Hor, so presumably Moserah is in that same region.\f* where Aharon died. He was buried¦86966 \add there\add*, and his son Eleazar¦86969 replaced him¦86971 as \add chief\add* priest¦86968.\x + \xo 10:6: \xt Num 20:28; 33:38.\x*
 \v 7 From there they¦86974 moved on to Gudgodah¦86975, then from \add *there\add* onto Yotbatah—an area with many streams.
 \v 8 At that time¦86987, Yahweh \add ≈chose\add* the tribe¦86993 of Levi¦86994 to carry¦86995 the box \add ≈containing\add* Yahweh's agreement, and to stand¦87002 \add ≈in Yahweh's presence\add* to serve¦87005 and \add ≈worship\add* him¦87005, until¦87008 this day¦87009.\x + \xo 10:8: \xt Num 3:5-8.\x*
 \v 9 That's why \add ≈the Levites didn't¦87015 receive land in the same way as the other tribes\add* \add as\add* Yahweh¦87024 told them that \add *he\add* is their inheritance.
@@ -1357,375 +1357,387 @@
 \v 18 \add Yes,\add* I'll definitely \add ≈stay away\add* on that day¦97396 because of all the evil¦97401 that they will have done when they turned¦97405 to other¦97409 gods¦97408.
 \v 19 \add ≈So¦97411\add* now, write¦97412 down this song and teach¦97418 it to the Israelis¦97421. \add ≈Make them memorise it\add* so that it can become¦97427 a witness¦97432 for me against \add *them\add*.
 \v 20 When I bring¦97438 them to the land that¦97443 I promised to their¦97446 ancestors¦97446, flowing¦97447 with milk and honey¦97449, and they eat¦97450 \add well\add* and become satisfied and fat, then they'll turn¦97453 to other¦97457 gods¦97456 and they'll serve¦97458 them, and they'll despise¦97459 me and break¦97460 \add #our\add* agreement.
-\v 21 ◙
+\v 21 \add ≈Then¦97465 in the future\add* when many evils and troubles¦97472 \add ≈hit\add* \add @the country\add*, this song will testify to it as a witness¦97477 (because it won't¦97479 be forgotten¦97480 by their descendants). Because I know¦97484 their intent today, \add even\add* before¦97492 I've taken them into the land that¦97488 I promised.”
 \p
-\v 22 ◙
+\v 22 \add ≈So¦97500\add* Mosheh¦97501 wrote¦97500 down the song that day¦97506 and¦97508 taught¦97508 it¦97508 to the \add ≈Israelis¦97511\add*.
 \p
-\v 23 \x + \xo 31:23: \xt Num 27:23; Jam 1:6.\x*◙
+\v 23 Then¦97514 he instructed¦97514 Nun's¦97520 son Yehoshua \add (Joshua)\add*, “Be strong¦97522 and courageous¦97523; because you'll be the one to take the \add ≈Israelis¦97529\add* into the land that¦97534 I promised them, and I'll be with you.”\x + \xo 31:23: \xt Num 27:23; Jam 1:6.\x*
 \p
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
-\v 28 ◙
-\v 29 ◙
+\v 24 \add ≈After\add* Mosheh¦97545 had finished¦97544 writing¦97546 all these instructions \add from beginning\add* to end¦97557 onto a scroll,
+\v 25 he told the Levites¦97563 who carry¦97564 the box containing Yahweh's agreement,
+\v 26 “Take this scroll with these instructions \add on it\add* and place¦97578 it beside the box containing your god¦97585 Yahweh's agreement, and then it'll be there¦97588 as a witness¦97590 against \add @your nation\add*
+\v 27 because I know¦97594 your¦97597 rebellion and \add ≈stubbornness\add*. Listen while I'm still¦97603 alive¦97604 with you today: you've all been rebellious against Yahweh¦97611, and it'll surely \add ≈be worse\add* after¦97615 my death¦97616.
+\v 28 Bring all the elders¦97624 and officials¦97626 of your tribes¦97625 here to me, so that I can speak¦97627 these¦97631 words in their¦97628 ears and call the heavens¦97636 and the earth¦97639 to witness¦97632 against them,
+\v 29 because I know¦97642 that after¦97643 my death¦97644, you'll certainly¦97647 corrupt yourselves and turn¦97649 away from the ways that I have instructed¦97654 you, and disaster¦97658 will come to you in the future, because you'll all do evil¦97666 in Yahweh's eyes¦97667, provoking¦97669 him¦97669 to anger¦97669 \add ≈by what you all do\add*.”
+\s1 Mosheh's song
 \rem /s1 The Song of Moses
 \p
-\v 30 ◙
+\v 30 Then¦97673 Moses¦97674 \add ≈recited this entire¦97676 song aloud to all the gathered Israelis¦97678\add*:
 \c 32
-\s1 Mosheh's song
 \p
-\v 1 ◙
-\q2 …
-\q2 …
+\v 1 “\add ≈Listen you\add* heavens¦97690, and let me speak¦97691,
+\q1 ≈and let the earth¦97693 listen¦97689 to \add ≈what I have to say\add*.
 \q1
-\v 2 ◙
-\q2 …
-\q2 …
+\v 2 Let my teaching¦97700 drop like rain,
+\q1 ≈my speech¦97703 drip like dew,
+\q1 like sprinkling on the grass¦97707,
+\q1 ≈and¦97708 like showers¦97708 on the plants,
 \q1
-\v 3 ◙
-\q2 …
+\v 3 because I declare Yahweh's name¦97714.
+\q1 ≈\add ≈Tell God¦97719 how great¦97718 he is\add*.
 \q1
-\v 4 ◙
-\q2 …
-\q2 …
-\q2 …
+\v 4 The Rock, his work is perfect¦97722,
+\q1 ≈because all his ways¦97727 are \add ≈fair and honest\add*—
+\q1 a faithful¦97730 God¦97729 \add ≈who never does wrong\add*.
+\q1 ≈He's \add ≈always honest and always correct\add*.
 \q1
-\v 5 ◙
-\q2 …
-\q1 …
+\v 5 \add @Yisrael\add* acted¦97737 corruptly¦97737 towards him—
+\q1 they're not his children¦97740, that's their¦97741 flaw.
+\q1 ≈They're a perverse¦97743 and¦97744 crooked¦97744 generation¦97742.
 \q1
-\v 6 ◙
-\q1 …
-\q1 …
-\q2 …
-\q1 …
+\v 6 Is that how you reward Yahweh,
+\q1 you foolish¦97753 people¦97752 and without wisdom?
+\q1 Isn't he your father, your creator¦97760?
+\q1 ≈He made you and established¦97763 you.
 \q1
-\v 7 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 7 Remember¦97765 the days¦97766 of old.
+\q1 ≈Consider generation after generation over the years¦97769.
+\q1 Ask your father and he'll inform¦97775 you.
+\q1 ≈\add ≡Question\add* your elders¦97776 and they'll tell you.
 \q1
-\v 8 \x + \xo 32:8: \xt Acts 17:26.\x*◙
-\q2 …
-\q2 …
+\v 8 When the highest one gave¦97780 the nations¦97782 an inheritance¦97780,
+\q1 when he \add ≈spread all humans¦97785 out\add*,
+\q1 he defined the boundaries for the peoples¦97788,
+\q1 according¦97789 to the number¦97789 of \add ≈Israelis¦97790\add*,\x + \xo 32:8: \xt Acts 17:26.\x*
 \q1
-\v 9 ◙
-\q2 …
+\v 9 because Yahweh's allocation is his people¦97796.
+\q1 ≈Yakov \add (Jacob)\add* is the portion of his inheritance¦97799.
 \q1
-\v 10 ◙
-\q2 …
-\q2 …
+\v 10 He found him in a land that was just wilderness¦97803,
+\q1 ≈and in the barren, howling¦97805 desert.
+\q1 He surrounded him and looked after him—
+\q1 watched over him \add ≈like a precious possession\add*.
 \q1
-\v 11 ◙
-\q2 …
-\q1 …
+\v 11 Like an eagle¦97813 stirs¦97814 up its nest,
+\q1 hovering¦97819 over its young¦97818.
+\q1 He spread¦97820 his wings¦97821, then took him—
+\q1 \add ≈sitting him on top of his feathers\add*.
 \q1
-\v 12 ◙
-\q2 …
+\v 12 Yahweh¦97828 alone¦97829 led \add @Yisrael\add*,
+\q1 ^and there wasn't any foreign¦97834 god¦97833 helping them.
 \q1
-\v 13 ◙
-\q2 …
-\q2 …
-\q1 …
+\v 13 He \add ≈helped Yisrael reach the hilltops\add*,
+\q1 and fed them the fruits¦97844 of the countryside¦97845.
+\q1 He nourished them with honey¦97847 from the cliffs,
+\q1 ≈oil from the \add ≈hardest rocks\add*,
 \q1
-\v 14 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 14 yogurt from the cattle and milk from the flocks¦97856,
+\q1 with fat of lambs¦97860, and rams from Bashan¦97864, and goats¦97865,
+\q1 with plump wheat¦97870 kernels,
+\q1 and the juice of grapes¦97873 that you¦97874 drank¦97874 as wine.
 \q1
-\v 15 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 15 \add ≈So¦97878 the good fellow\add* got fat and kicked¦97880—
+\q1 ≈you were fat, getting bloated¦97882, you gorged¦97883.
+\q1 Then¦97878 he abandoned¦97884 the God¦97885 who created him,
+\q1 ≈and he rejected the rock¦97888 \add ≈that had saved him\add*.
 \q1
-\v 16 ◙
-\q2 …
-\q2 …
+\v 16 \add @Yisrael\add* provoked¦97894 him with strange¦97892 \add gods\add*.
+\q1 ≈They anger him with their abominations¦97893.
 \q1
-\v 17 \x + \xo 32:17: \xt 1Cor 10:20.\x*◙
-\q2 …
-\q2 …
+\v 17 They sacrificed¦97896 to demons¦97897, not God¦97899—
+\q1 gods they hadn't known¦97902.
+\q1 New ones that had come recently¦97904,
+\q1 ≈that your ancestor had never \add ≈served\add*.
 \q1
-\v 18 ◙
-\q2 …
+\v 18 You neglected the rock¦97910 \add ≈who carried you\add*,
+\q1 ≈and you forgot God¦97914 who gave¦97915 birth¦97915 to you.
 \q1
-\v 19 ◙
-\q2 …
+\v 19 Yahweh¦97918 noticed that and he rejected \add >you\add*,
+\q1 due to that provocation¦97920 by his sons¦97921 and daughters¦97922.
 \q1
-\v 20 ◙
-\q2 …
-\q2 …
-\q1 …
-\q2 …
+\v 20 He said¦97924, ‘Let me hide myself from them,
+\q1 I'll \add ≈just watch how they¦97934 end¦97930 up\add*
+\q1 because they're a perverse¦97933 generation¦97932—
+\q1 ≈children¦97935 \add ≈who totally lack faithfulness¦97938\add*.
 \q1
-\v 21 \x + \xo 32:21: a \xt 1Cor 10:22; \xo b \xt Rom 10:19.\x*◙
-\q1 …
-\q1 …
-\q2 …
+\v 21 They provoked me with a non-god—
+\q1 angered me by their¦97947 worthless idols¦97947,
+\q1 so I'll provoke them with a ‘non-people’.
+\q1 I'll anger them by means of a foolish¦97954 nation¦97953,\x + \xo 32:21: a \xt 1Cor 10:22; \xo b \xt Rom 10:19.\x*
 \q1
-\v 22 ◙
-\q2 …
-\q2 …
-\q2 …
+\v 22 because \add ≈my anger¦97961 flames like\add* a fire.
+\q1 It¦97965 burns¦97962 \add down\add* to the lowest¦97966 grave,
+\q1 and devours the land and its harvests,
+\q1 and scorches the foundations¦97971 of the mountains¦97972.
 \q1
-\v 23 ◙
-\q2 …
+\v 23 I'll send them even more disasters.
+\q1 I'll use my arrows¦97977 up on them.
 \q1
-\v 24 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 24 They'll be wasted by hunger
+\q1 ≈and weakened¦97982 by plague¦97985 and terrible contagious diseases.
+\q1 I'll send¦97991 \add @those diseases\add* on the teeth¦97988 of wild animals¦97990,
+\q1 along with the poison from \add various\add* creatures that¦97997 crawl¦97997 in the dust.
 \q1
-\v 25 ◙
-\q1 …
-\q2 …
+\v 25 Outside the sword¦98003 will leave people dead,
+\q1 ≈and inside¦98004, in the bedrooms, there'll be terror¦98005,
+\q1 \add whether it's for\add* a young man or young woman¦98011,
+\q1 ≈or the baby or the gray-haired man.
 \q1
-\v 26 ◙
-\q2 …
+\v 26 I said¦98018 I'd wipe them out—
+\q1 ≈I would remove their¦98022 memory¦98022 from humankind
 \q1
-\v 27 ◙
-\q2 …
-\q1 …
+\v 27 if \add ≈it¦98036 wasn't for the fact that I expect that their enemies would boast\add*.
+\q1 \add ≈I don't¦98024 want\add* their adversaries¦98031 to misjudge,
+\q1 saying, “\add ≈It's us who's powerful\add*,
+\q1 and Yahweh¦98038 didn't¦98024 carry all this out.” ’
 \q1
-\v 28 ◙
-\q2 …
+\v 28 because they're a nation¦98046 \add ≈short of good advice\add*,
+\q1 ≈and¦98050 \add ≈lacking in\add* understanding¦98052.
 \q1
-\v 29 ◙
-\q2 …
+\v 29 If they were wise, they'd comprehend¦98056 this.
+\q1 They'd understand¦98058 \add ≈what was ahead of them\add*.
 \q1
-\v 30 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 30 How could one \add warrior\add* chase a thousand \add Israelis\add*,
+\q1 ≈or two¦98065 put ten¦98067 thousands to flight¦98066,
+\q1 unless their¦98073 ‘rock¦98073’ sold them,
+\q1 ≈and Yahweh¦98075 gave¦98076 them up?
 \q1
-\v 31 ◙
-\q2 …
-\q2 …
+\v 31 Even our enemies¦98082 know
+\q1 that their¦98081 \add protector/\add*‘rock’ is not like ours,
 \q1
-\v 32 ◙
-\q2 …
+\v 32 because their vine \add ≈has its roots in\add* Sodom¦98088,
+\q1 ≈and \add comes\add* from the vineyards of Gomorrah¦98091.
+\q1 Their grapes are \add ≈full\add* of poison¦98095—
+\q1 ≈their clusters¦98096 \add ≈of grapes taste bitter¦98097\add*.
 \q1
-\v 33 ◙
+\v 33 Their wine is snake venom¦98100,
+\q1 ≈and¦98103 the deadly poison¦98103 of vipers.
 \q1
-\v 34 ◙
-\q2 …
+\v 34 ‘Aren't these \add future events\add* \add ≈my secret\add*—
+\q1 ≈sealed¦98112 up in my treasure-houses?
 \q1
-\v 35 \x + \xo 32:35: \xt Rom 12:19; Heb 10:30.\x*◙
-\q2 …
-\q2 …
+\v 35 Vengeance and recompense¦98117 belong to me
+\q1 at the time¦98118 when their foot¦98120 slips,
+\q1 because the day¦98123 of their disaster¦98124 is close,
+\q1 and the things prepared for them hurry along.’\x + \xo 32:35: \xt Rom 12:19; Heb 10:30.\x*
 \q1
-\v 36 \x + \xo 32:36a: \xt Psa 135:14.\x*◙
-\q2 …
-\q2 …
-\q2 …
+\v 36 \add ≈Yes,\add* Yahweh¦98132 vindicates his people¦98133,
+\q1 ≈and has compassion¦98137 on his servants¦98136,
+\q1 because he'll see¦98139 that their \add ≈power\add* is gone,
+\q1 and no one \add remains\add*, either free or \add ≈enslaved\add*.\x + \xo 32:36a: \xt Psa 135:14.\x*
 \q1
-\v 37 ◙
-\q2 …
-\q2 …
+\v 37 Then¦98148 he'll \add ≈ask\add*, ‘Where are their¦98150 gods¦98150—
+\q1 the rock¦98151 who they¦98152 \add ≈went to to be safe\add*,
+\q1
+\v 38 who ate¦98158 the fat of their sacrifices¦98157,
+\q1 ≈\add and\add* drank¦98159 the wine \add ≈that they'd offered\add*?
+\q1 Let \add @those gods\add* \add ≈take action\add* and help¦98163 you.
+\q1 ≈Let them be a shelter¦98166 over you.
+\q1
+\v 39 Now \add ≈you'll realise that I'm God¦98176\add*,
+\q1 and that there's¦98175 no god¦98176 other than me.
+\q1 I put to death¦98179 and give¦98180 life¦98180.
+\q1 I wound¦98181, and I heal¦98183,
+\q1 and no one \add ≈can challenge my power\add*,
+\q1
+\v 40 because I lift my¦98197 hand¦98194 up to heaven¦98193
+\q1 and \add ≈promise\add*, “As I live forever,
 \q2
-\v 38 ◙
-\q2 …
-\q1 …
+\v 41 when I sharpen¦98202 my glittering sword¦98204,
+\q1 ≈and \add ≈prepare to apply\add* justice,
+\q1 I will return¦98208 vengeance¦98209 on my enemies,
+\q1 ≈and I'll pay back those who hate¦98211 me.
 \q1
-\v 39 ◙
-\q2 …
-\q1 …
-\q2 …
-\q1 …
+\v 42 I'll make my arrows¦98215 drunk¦98214 with blood,
+\q1 ≈and my sword¦98217 will devour¦98218 flesh¦98219,
+\q1 with the blood of those slaughtered and the captives¦98222—
+\q1 from the heads of the enemy's¦98225 leaders¦98224.” ’
 \q1
-\v 40 ◙
-\q2 …
-\q2 …
-\q2
-\v 41 ◙
-\q2 …
-\q2 …
-\q1
-\v 42 ◙
-\q2 …
-\q1 …
-\q2 …
-\q1
-\v 43 ◙
-\q2 …
-\q2 …
-\q2 …
+\v 43 \add You¦98228\add* nations¦98228, \add ≈need to appreciate\add* his people,
+\q1 because he'll avenge¦98234 the blood¦98231 of his servants¦98233,
+\q1 and he'll return¦98236 vengeance¦98235 onto his enemies,
+\q1 and then he'll \add ≈forgive\add* his country—his people.”
 \p
-\v 44 ◙
-\s1 The final tahataha of Mosheh
+\v 44 Then Mosheh¦98244, accompanied by Nun's¦98260 son Yehoshua, went¦98243 and \add ≈recited\add* all the words of that song \add ≈for the people¦98255 to hear¦98254\add*.
+\s1 Mosheh's final instructions
 \rem /s1 Moses' Final Instructions
 \p
-\v 45 ◙
-\v 46 ◙
-\v 47 ◙
+\v 45 \add ≈When\add* Mosheh¦98263 had finished telling all that to all Yisrael¦98275,
+\v 46 he told them, “\add ≈Never forget\add* all those instructions that I've been giving you today. \add ≈Teach them\add* to your children¦98293 so that they'll be able to keep following them,
+\v 47 because it's no \add ≈light matter\add* for you all. \add ≈Yes,\add* it's your lives, and¦98315 \add ≈by doing that\add* you can prolong¦98317 your \add ≈time\add* in the land which you are crossing over the Yarden \add river\add* to \add ≈take possession¦98329 of\add*.”
 \rem /s1 Moses to Die on Mount Nebo; Moses' Death Foretold
 \p
-\v 48 \x + \xo 32:48-52: \xt Num 27:12-14; Deu 3:23-27.\x*◙
-\v 49 ◙
-\v 50 ◙
-\v 51 ◙
-\v 52 ◙
+\v 48 That same¦98337 day¦98338, Yahweh¦98333 told Mosheh¦98336,\x + \xo 32:48-52: \xt Num 27:12-14; Deu 3:23-27.\x*
+\v 49 “Go to Mt¦98345. Nebo¦98350 (a mountain in the Abarim¦98346 \add range\add* in Moav, \add ≈across from\add* Yeriho). Climb up and you will see the land of Canaan¦98363, which I'm giving to the \add ≈Israelis¦98367\add* \add ≈to take possession¦98369 of\add*.
+\v 50 Then¦98371 you'll die¦98371 on that mountain¦98372 that you are going up on, and you'll \add ≈join your ancestors\add* (just like your brother¦98385 Aharon died¦98383 on Mt¦98372. Hor and \add ≈joined his ancestors\add*).
+\v 51 \add That's\add* because you were unfaithful¦98395 to me among the \add ≈Israelis\add* at the Meribah¦98402 springs in Kadesh¦98403, in the wilderness¦98404 of Tsin¦98406, because you didn't¦98409 regard me as holy \add ≈in front of\add* the \add ≈Israelis\add*.
+\v 52 \add ≈So\add* you'll see¦98419 the land \add ≈in front of\add* you, but you won't¦98424 enter that land that I'm giving to the \add ≈Israelis¦98433\add*.
 \c 33
-\s1 The tubtubaren of Mosheh for Yisrael's descendants
+\s1 Mosheh's final blessing for Yisrael
 \rem /s1 Moses' Final Blessing on Israel; Moses Blesses the Tribes of Israel; Moses' final words and death; Moses Blesses the Tribes; Moses Blesses the People
 \p
-\v 1 ◙
-\v 2 ◙
-\q1 …
-\q2 …
-\q2 …
-\q2 …
-\q2 …
+\v 1 This is the blessing with which¦98439 the man¦98442 of God, Mosheh¦98441 \add (Moses¦98441)\add*, blessed \add ≈Israelis¦98446\add* \add just\add* \add ≈before\add* his death¦98449:
 \q1
-\v 3 ◙
-\q2 …
-\q1 …
+\v 2 “Yahweh¦98452 came from \add Mt.\add* Sinai¦98453 came
+\q1 ≈and appeared to them from \add Mt.\add* Seir¦98456—
+\q1 shining out from Mt. Paran¦98460.
+\q1 He came with ten thousands of holy ones,
+\q1 \add holding\add* lightning¦98465 for them in his right¦98464 hand¦98464.
 \q1
-\v 4 ◙
-\q2 …
+\v 3 Yes, he loves the peoples¦98471.
+\q1 All his holy ones are in your hand¦98475.
+\q1 They sat down at your feet¦98478.
+\q1 They \add ≈listen to\add* your instructions:
 \q1
-\v 5 ◙
-\q2 …
-\q2 …
+\v 4 Mosheh¦98486 \add ≈gave\add* us those instructions
+\q1 \add that would become\add* a \add valuable\add* possession¦98487 for Yakov's¦98489 \add ≈descendants\add*.
+\q1
+\v 5 \add @Yahweh\add* became king¦98493 over Yeshurun,\f + \fr 33:5 \ft Yeshurun means ‘the upright one’, a term of endearment for Yisrael, also in verse 26.\f*
+\q1 when the leaders of the people¦98496 had gathered¦98494—
+\q1 Yisrael's trible all together¦98497.
 \b
 \p
-\v 6 ◙
-\q2 …
-\q2 …
+\v 6 Let Reuven live¦98501 and not die¦98505,
+\q1 \add ?≈but\add* let his men¦98507 be few.”
 \b
 \p
-\v 7 ◙
-\q1 …
-\q2 …
-\q1 …
-\q2 …
+\v 7 Then he said¦98513 this is for Yehudah¦98512 \add (Judah)\add*,
+\q1 “Yahweh¦98515, listen¦98514 to Yehudah's¦98512 voice¦98516,
+\q1 and take him to his people¦98520.
+\q1 \add ≈He defended\add* himself,
+\q1 plus you help¦98525 him against¦98526 his enemies.”
 \b
 \p
-\v 8 \x + \xo 33:8: a \xt Exo 28:30; \xo b \xt Exo 17:7; \xo c \xt Exo 17:7; Num 20:13.\x*◙
-\q1 …
-\q2 …
-\q2 …
-\q2 …
+\v 8 Then for Levi¦98530, he said¦98531,
+\q1 “Your Thummim and your Urim
+\q1 \add ≈belong to\add* your godly man,
+\q1 who you tested¦98537 at Massah¦98538.
+\q1 ≈You strove against him at the Merivah \add ≈springs\add*.\x + \xo 33:8: a \xt Exo 28:30; \xo b \xt Exo 17:7; \xo c \xt Exo 17:7; Num 20:13.\x*
 \q1
-\v 9 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 9 He said¦98545 that he hadn't seen his father¦98546 and his mother¦98547,
+\q1 ≈and he didn't¦98548 acknowledge¦98560 his brothers¦98552 or \add ≈spend time with\add* his sons.
+\q1 because he guarded your message¦98563
+\q1 ≈and kept¦98562 your agreement.
 \q1
-\v 10 ◙
-\q2 …
-\q2 …
-\q2 …
+\v 10 He teaches¦98567 your rules to Yakov,
+\q1 ≈and your instructions to Yisrael¦98571.
+\q1 He'll \add ≈burn fragrant incense¦98573 for you¦98574\add*,
+\q1 ≈and whole¦98575 burnt¦98575 offerings¦98575 on your altar¦98578.
 \q1
-\v 11 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 11 Yahweh¦98581, bless \add @Yisrael's\add* \add ≈possessions\add*,
+\q1 and accept the work \add ≈that he does\add*.
+\q1 \add ≈Crush\add* those who \add ≈take action\add* up against him,
+\q1 and \add ≈those who hate¦98589\add*, in case they \add ≈attack\add*.”
 \b
 \p
-\v 12 ◙
-\q1 …
-\q2 …
-\q2 …
+\v 12 To Benyamin¦98595, he said¦98596,
+\q1 “Yahweh's \add ≈special one\add* lives in security beside him.
+\q1 He \add ≈protects\add* him all day¦98606 \add ≈long\add*,
+\q1 ≈and Yahweh \add ?≈places him on his chest\add*.”
 \b
 \p
-\v 13 ◙
-\q1 …
-\q2 …
-\q2 …
+\v 13 To Yosef¦98612 \add (Joseph)\add*, he¦98613 said¦98613,
+\q1 “Yahweh¦98615 \add ≈will bless¦98614\add* his land,
+\q1 with the \add ≈rain from the sky\add*,
+\q1 ≈from the dew and from the \add ≈springs\add* lying beneath¦98622,
+\q1
+\v 14 \add ≈with a plentiful harvest from the good sunshine\add*,
+\q1 ≈and¦98627 from the bounty of the produce¦98625 of the \add ≈seasons\add*,
+\q1
+\v 15 and \add water\add* from the tops of ancient¦98634 mountains¦98632,
+\q1 and from the bounty of age-old hills¦98636,
 \q2
-\v 14 ◙
+\v 16 and from the bounty of the soil and from its¦98641 fullness¦98641,
+\q1 and the favour¦98642 of the bush-dweller.
+\q1 Let them come¦98645 on Yosef's head,
+\q1 and on the top of the head of the leader of his brothers¦98650.
 \q1
-\v 15 ◙
-\q2 …
-\q2
-\v 16 ◙
-\q1 …
-\q2 …
-\q1 …
-\q2 …
-\q1
-\v 17 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 17 His majesty is \add like\add* his firstborn¦98652 bull,
+\q1 ≈and his horns are \add like\add* the horns of a wild bull.
+\q1 He'll ram the peoples¦98660 with them,
+\q1 together¦98662 to the ends of the earth¦98665.
+\q1 And they are the ten thousands of Efraim¦98668,
+\q1 ≈and they are the thousands of Menashsheh.”
 \b
 \p
-\v 18 ◙
-\q1 …
-\q2 …
+\v 18 To Zevulun, he¦98675 said¦98675,
+\q1 “Zevulun, be happy when you go out,
+\q1 and Yissaskar \add too\add*, in your tents¦98680.
 \q1
-\v 19 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 19 They will call peoples to the mountain¦98683.
+\q1 There they will offer sacrifices¦98687 of righteousness¦98690.
+\q1 because they feed on the abundance¦98692 of the oceans,
+\q1 and on treasures hidden in the sand.”
 \b
 \p
-\v 20 ◙
-\q1 …
-\q2 …
+\v 20 To Gad¦98700, he said¦98701,
+\q1 “Blessed be the one who enlarges¦98703 Gad.
+\q1 He'll live like a lioness,
+\q1 and tear off an arm, \add perhaps\add* also a head.
 \q1
-\v 21 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 21 He \add ≈picked out the best\add* for himself,
+\q1 because there¦98718 the decreed portion¦98719 is reserved¦98721.
+\q1 He came¦98722 with the people's¦98724 leaders.
+\q1 He \add ≈adminstered\add* Yahweh's justice,
+\q1 and his judgments for Yisrael¦98731.”
 \b
 \p
-\v 22 ◙
-\q1 …
-\q2 …
+\v 22 To Dan¦98734, he said¦98735,
+\q1 “Dan is a lion¦98738 cub
+\q1 leaping out from Bashan¦98742.”
 \b
 \p
-\v 23 ◙
-\q1 …
-\q2 …
+\v 23 To Naftali¦98746, he said¦98745,
+\q1 “Naftali, overflowing with favour¦98748,
+\q1 ≈and full of Yahweh's blessings¦98750,
+\q1 you'll possess¦98754 the west and the south¦98753.”
 \b
 \p
-\v 24 ◙
-\q1 …
-\q2 …
-\q2 …
-\q2 …
+\v 24 To Asher¦98757, he said¦98758,
+\q1 “Asher is blessed¦98759 among the sons¦98760.
+\q1 ≈Let him be favored among his brothers¦98764,
+\q1 and \add ≈enjoy having\add* \add lots of olive\add* oil.
 \q1
-\v 25 ◙
-\q2 …
+\v 25 Your gates will have iron and bronze¦98770 bars,
+\q1 ≈and you'll be strong all your life.
 \q1
-\v 26 ◙
-\q2 …
+\v 26 There's¦98775 no one \add else\add* like Yeshurun's¦98777 God¦98776,
+\q1 riding the heavens¦98779 to your¦98780 help¦98780,
+\q1 ≈and¦98781 in his majesty¦98781 on the clouds¦98782.
 \q1
-\v 27 ◙
-\q2 …
-\q2 …
-\q2 …
+\v 27 The \add ≈everlasting God¦98785 is a place¦98784 of safety\add*,
+\q1 and it's \add &his\add* eternal arms that are underneath¦98787 \add you\add*.
+\q1 He \add ≈drove¦98790 the enemy¦98792 away from in front of you\add*,
+\q1 and he said¦98793, ‘Destroy \add >them\add*.’
 \q1
-\v 28 ◙
-\q2 …
-\q2 …
+\v 28 Israel¦98797 will live in safety—
+\q1 secure¦98798 as Yakov's¦98801 fountain,
+\q1 in a land of grain¦98805 and new wine
+\q1 where \add ≈the skies¦98809 above them\add* drop dew.
 \q1
-\v 29 ◙
-\q2 …
-\q1 …
-\q2 …
-\q1 …
-\q2 …
+\v 29 Your happiness, Yisrael¦98816.
+\q1 Who \add else\add* is like you—a people¦98819 saved¦98820 by Yahweh,
+\q1 the shield¦98822 \add ≈that protects you\add*,
+\q1 and who is the sword¦98826 \add ≈that makes you powerful\add*?
+\q1 Your enemies¦98829 will cringe¦98828 back from you,
+\q1 and you'll trample \add ≈all over their¦98834 hills\add*.”
 \c 34
-\s1 The showing of God to Mosheh of land
+\s1 Yahweh shows the land to Mosheh
 \rem /s1 The Death of Moses; Moses Dies and Is Buried in the Land of Moab
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 \x + \xo 34:4: a \xt Gen 12:7; \xo b \xt Gen 26:3; \xo c \xt Gen 28:13.\x*◙
-\s1 The death of Mosheh
+\v 1 Then Moses¦98839 went from the plains¦98840 of Moab¦98841 up to Mt¦98844. Nebo¦98845, to the top of Pisgah¦98847, which¦98848 is \add ≈opposite\add* Yeriho \add (Jericho)\add*, and Yahweh¦98854 showed¦98853 him¦98853 all the Gilead¦98862 \add ≈region\add* as far as Dan¦98865,
+\v 2 all Naftali¦98870, the land of Efraim¦98874 and Menashsheh, all the land of Yehudah¦98880 \add (Judah)\add*, to the \add ≈Mediterranean\add* sea¦98882,
+\v 3 the Negev¦98887, and¦98888 the plain¦98890 of the Valley of Yeriho (the City of Palms) as far as Tsoar¦98897.
+\v 4 Then¦98899 Yahweh¦98900 told him, “That's the land that¦98904 I promised to Abraham¦98906, to Yitshak \add (Isaac¦98907)\add*, and to Yakov \add (Jacob)\add*, saying, ‘I'll give¦98911 it to your descendants¦98910.’ I've showed it to you \add ≈for you to look at\add*, but you won't¦98915 go over there¦98914 \add into it\add*.”\x + \xo 34:4: a \xt Gen 12:7; \xo b \xt Gen 26:3; \xo c \xt Gen 28:13.\x*
+\s1 Mosheh's death
 \p
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
+\v 5 \add ≈So¦98918\add* Yahweh's servant¦98921 Mosheh¦98920 \add (Moses¦98920)\add* died¦98918 \add there¦98919\add* in Moav \add ≈just as Yahweh had said would happen\add*
+\v 6 and he buried¦98931 him there in the vallue opposite¦98936 Beyt-Peor¦98938, \add ≈but\add* to this day¦98947, no one knows¦98941 where his grave¦98945 is.
+\v 7 Mosheh¦98950 was one hundred¦98953 and twenty¦98954 when he died¦98956, \add but\add* he still \add ≈had excellent eyesight and strength in his body\add*.
+\v 8 The \add ≈Israelis¦98968\add* mourned¦98979 thirty¦98974 days¦98977 for him \add there\add* in the Moav plain¦98972.
 \p
-\v 9 ◙
+\v 9 \add ≈Meanwhile\add*, Nun's¦98985 son Yehoshua \add (Joshua)\add* was full of the spirit¦98987 of wisdom¦98988, because Mosheh had placed his hands¦98995 on him \add and prayed over him\add*, \add ≈so the Israelis¦98999\add* listened¦98997 to him and did what Yahweh¦99005 had commanded¦99004 Mosheh.
 \p
-\v 10 \x + \xo 34:10: \xt Exo 33:11.\x*◙
-\v 11 ◙
-\v 12 ◙
+\v 10 No prophet¦99013 like Mosheh¦99016 who Yahweh¦99019 knew face to face, has ever emerged in Yisrael¦99015 since then,\x + \xo 34:10: \xt Exo 33:11.\x*
+\v 11 \add or performed\add* all the miracles and amazing things that¦99029 Yahweh¦99031 sent¦99030 him¦99030 to do in Egypt¦99034, to Far-oh \add (Pharaoh¦99035)\add*, and to all his servants¦99038, and to all his land.
+\v 12 \add ≡No other prophet\add* \add ≈has been able to do all the incredible but terrifying¦99047 things\add* that¦99049 Mosheh¦99051 did \add ≈while all Yisrael¦99055 watched\add*.
