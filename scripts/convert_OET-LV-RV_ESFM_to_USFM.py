@@ -33,19 +33,21 @@ CHANGELOG:
     2024-05-15 Added OT conversion and removed \\untr sets
     2024-05-17 Removed more OET-RV additions
     2025-03-03 Add /nb after OET-LV chapter numbers
+    2025-12-14 Add DC books
 """
 from pathlib import Path
 import re
+import logging
 
 if __name__ == '__main__':
     import sys
     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
-from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, BOOKLIST_66
+from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, BOOKLIST_66, BOOKLIST_88
 
 
-LAST_MODIFIED_DATE = '2025-03-03' # by RJH
+LAST_MODIFIED_DATE = '2025-12-14' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_ESFM_to_USFM"
 PROGRAM_NAME = "Convert OET LV & RV ESFM files to USFM"
 PROGRAM_VERSION = '0.62'
@@ -78,18 +80,27 @@ def main():
     for VV in ('LV','RV'):
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Processing {VV} files…" )
         totalWordDeletes = totalESBs = numChangedFiles = 0
-        for BBB in BOOKLIST_66:
+        for BBB in BOOKLIST_66 if VV=='LV' else BOOKLIST_88:
             vvInputFolderpath = OET_RV_ESFM_FolderPath if VV=='RV' \
                     else OET_LV_OT_ESFM_FolderPath if BBB in BOOKLIST_OT39 else OET_LV_NT_ESFM_FolderPath
             vvESFMFilename = f'OET-{VV}_{BBB}.ESFM'
             vvESFMFilepath = vvInputFolderpath.joinpath( vvESFMFilename )
+            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading {vvESFMFilepath}…" )
+            try:
+                with open( vvESFMFilepath, 'rt', encoding='UTF-8' ) as esfmFile:
+                    vvESFMText = esfmFile.read() # We keep the original (for later comparison)
+            except FileNotFoundError:
+                logging.critical( f"Unable to find {VV} {BBB} book ({vvESFMFilename})" )
+                continue
+
             vvOutputFolderpath = OET_RV_USFM_OutputFolderPath if VV=='RV' else OET_LV_USFM_OutputFolderPath
-            Uuu = BibleOrgSysGlobals.loadedBibleBooksCodes.getUSFMAbbreviation( BBB )
+            try: Uuu = BibleOrgSysGlobals.loadedBibleBooksCodes.getUSFMAbbreviation( BBB )
+            except KeyError:
+                logging.critical( f"Unable to convert {BBB=} to USFM abbreviation" )
+                continue
             vvUSFMFilename = f'OET-{VV}_{Uuu}.USFM'
             vvUSFMFilepath = vvOutputFolderpath.joinpath( vvUSFMFilename )
-            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading {vvESFMFilepath}…" )
-            with open( vvESFMFilepath, 'rt', encoding='UTF-8' ) as esfmFile:
-                vvESFMText = esfmFile.read() # We keep the original (for later comparison)
+
             adjText, wordDeleteCount = ESFMWordNumberRegex.subn( '', vvESFMText )
             esbCount = 0
             if VV == 'LV': # our ESFM has no /p or anything after /c lines

@@ -241,7 +241,7 @@ def loadOurOwnSourceTable() -> bool:
 
 def loadOurMaculaHebrewTable() -> bool:
     """
-    Load the abbreviated "MaculaHebrew" TSV table into state.MaculaHebrewRows.
+    Load our abbreviated "MaculaHebrew" TSV table into state.MaculaHebrewRows.
     """
     global MaculaHebrew_tsv_column_headers
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading our MaculaHebrew tsv file from {state.MacularHebrew_TSV_input_folderpath}…")

@@ -79,6 +79,7 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - 'ai/ay' names like 'Yeshai'
 - Philistines vs Filistines
 - remove "years old" if it's not essential
+- make numbers consistent like '120' vs 'one hundred and twenty'
 - capitalisation of city or river after name, e.g., Ashdod City, Jordan river, Corner Gate
 - "His mother's name was..." for new kings in 2 Chron
 - a record of everthing done ... was written in the scroll/book of ... after the death of a king
@@ -90,3 +91,5 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - treasuries vs storerooms and storehouses
 - gatekeepers -> 'the men guarding the gates'
 - all the feast/celebration names, e.g., ‘Festival of Shelters’
+- 'flowing with milk and honey' vs 'very fertile'
+- last/latter days 

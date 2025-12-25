@@ -55,6 +55,7 @@ CHANGELOG:
     2025-03-07 Align OET-RV /d fields (in Psalms)
     2025-12-12 Remove "failed on" warnings for common word 'to'
     2025-12-13 Add 'fast' flag, added 'heavenly'
+    2025-12-17 Add multiprocessing for converting each book (although seems no real time advantange)
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -62,6 +63,7 @@ from pathlib import Path
 from collections import defaultdict
 import logging
 import re
+import multiprocessing
 
 if __name__ == '__main__':
     import sys
@@ -77,10 +79,10 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-12-13' # by RJH
+LAST_MODIFIED_DATE = '2025-12-23' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.81'
+PROGRAM_VERSION = '0.82'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -271,7 +273,8 @@ SIMPLE_WORDS = SIMPLE_NOUNS + verbalNouns + simpleVerbs + simpleAdverbs+ simpleA
 
 RV_WORDS_FROM_LV_WORD_STRINGS = (
     ('120', 'a hundred twenty'),
-    ('Israelis', 'of Yisrāʼēl/Israel'),
+    ('Israelis', 'of Yisrāʼēl/Israel'),('Israeli', 'of Yisrāʼēl/Israel'),
+    ('Yisrael','Yisrāʼēl/Israel'),
     ('wants', 'having an ear'),('understand', 'having an ear'),
     # Greek possessive pronouns usually appear after the head noun
     ('my', 'of me'), ('your', 'of you'), ('his', 'of him'), ('her', 'of her'), ('its', 'of it'), ('our', 'of us'), ('their', 'of them'),
@@ -318,6 +321,7 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     ('chest','ark'),
     ('clothes','apparel'),
     ('confused','confounded'),
+    ('continued','said'),
     ('countries','nations'),('country','nation'),
     ('countryside','field'),
     ('courtyard','court'),
@@ -328,9 +332,11 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     ('deformed','withered'),
     # ('demon','unclean'),('demons','spirits'),
     ('demon-possessed','unclean'),
+    ('desert','ˊₐrāⱱāh'),('plain','ˊₐrāⱱāh'),
     ('deserted','desolate'),
     ('dinosaur','dragon'), # Rev 12:3
     ('driving','throwing'),
+    ('eastern','east'),
     ('entire','all'),
     ('everyone','people'), ('Everyone','one'),('everyone','one'),
     ('execution','stake'),
@@ -346,6 +352,7 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     ('instructed','commanded'),
     ('insulting','slandering'),
     ('kill','destroy'),
+    ('kingdoms','nations'),
     ('know','knowledge'),
     ('knowing','known'),
     ('lake','sea'),
@@ -365,7 +372,7 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     ('metres','cubits'),
     ('mind','heart'),
     ('money','reward'),
-    ('Mount','mountain'),
+    ('Mt','mountain'),
     ('necessary','fitting'),
     ('needs','let'),
     ('news','report'),
@@ -390,6 +397,8 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     ('scared','feared'),
     ('scoffed','mocking'),
     ('See','Behold'),
+    ('She\'s','She'),
+    ('should','let'),
     ('should','let'),
     ('sick','sickly'),
     ('Similarly','Likewise'),
@@ -405,6 +414,7 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     ('tarpaulin','cover'),
     ('taught','teaching'),
     ('teachers','scribes'),
+    ('that','which'),
     ('themselves','hearts'),
     ('Then','And'),
     ('thinking','reasoning'),
@@ -429,8 +439,8 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     ('Four','four'),
     ('God','god'),
     ('Master','master'),
-    ('Messiah','messiah'),('messiah','messiah'),
-    ("We've",'We'),
+    ('Messiah','messiah'),
+    ('We\'ll','We'),('We\'ve','We'),
     ('Yahweh','master'),('Yahweh','YHWH'),
     # Names including places (parentheses have already been deleted from the OET-LV at this stage)
     # NOTE: No longer required because we load the TSV source tables themselves (rather than having to duplicate all this info)
@@ -562,7 +572,8 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     # ('Zerah', 'Zara'),('Zerah', 'Zara/Zeraḩ'),
     ("aren't",'not'),("can't",'not'),("didn't",'not'),("don't",'not'),("isn't",'not'),("shouldn't",'not'),("won't",'not'),
     )
-
+for RVWord,LVWord in RV_WORDS_FROM_LV_WORD_STRINGS:
+    assert RVWord != LVWord, f"{RVWord=}"
 
 
 class WordNumberError(ValueError):
@@ -609,6 +620,29 @@ def main():
     lvNT.loadBooks() # So we can iterate through them all later
     lvNT.lookForAuxilliaryFilenames()
     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvNT=}")
+
+    # Load the OT and NT word files
+    state.wordTable, state.wordTableHeaderList = {}, {}
+    for testament in ('OT','NT'):
+        lv = lvOT if testament=='OT' else lvNT
+        BBB = 'GEN' if testament=='OT' else 'MAT'
+        input_folder_path = OET_LV_OT_ESFM_InputFolderPath if testament=='OT' else OET_LV_NT_ESFM_InputFolderPath
+        lvBookObject = lv[BBB]
+        wordFileName = lvBookObject.ESFMWordTableFilename
+        if wordFileName:
+            assert wordFileName.endswith( '.tsv' )
+            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found ESFMBible filename '{wordFileName}' for {lv.abbreviation} {BBB}" )
+            if lv.ESFMWordTables[wordFileName]:
+                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found ESFMBible loaded '{wordFileName}' word link lines: {len(lv.ESFMWordTables[wordFileName]):,}" )
+            else:
+                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  No word links loaded yet for '{wordFileName}'" )
+            if lv.ESFMWordTables[wordFileName] is None:
+                with open( input_folder_path.joinpath(wordFileName), 'rt', encoding='UTF-8' ) as wordFile:
+                    lv.ESFMWordTables[wordFileName] = wordFile.read().split( '\n' )
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  connect_OET_RV loaded {len(lv.ESFMWordTables[wordFileName]):,} total rows from {wordFileName}" )
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  connect_OET_RV loaded column names were: ({len(lv.ESFMWordTables[wordFileName][0])}) {lv.ESFMWordTables[wordFileName][0]}" )
+        state.wordTable[testament] = [row.split('\t') for row in lv.ESFMWordTables[wordFileName]]
+        state.wordTableHeaderList[testament] = state.wordTable[testament][0]
 
     # Load the Hebrew and Greek name tables from TSV files
     load_transliteration_table( 'Hebrew' )
@@ -824,165 +858,55 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
     """
     fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {rv}, {lv} )" )
 
+    # Make a list of the books that we're going to process
+    booklist_to_process = []
+    for BBB in lv.books:
+        if BibleOrgSysGlobals.commandLineArguments.fastMode and BBB not in ('PRO','ISA',):
+            continue
+        if BBB in ('CO1',): continue # TODO: CO1_14:33 gives an issue
+        booklist_to_process.append( BBB )
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Created a list of {len(booklist_to_process)} OET books to process." )
+
     # Go through books chapters and verses
     totalSimpleListedAdds = totalProperNounAdds = totalFirstPartMatchedAdds = totalManualMatchedAdds = 0
     totalSimpleListedAddsNS = totalProperNounAddsNS = totalFirstPartMatchedAddsNS = totalManualMatchedAddsNS = 0 # Nomina sacra
-    for BBB,lvBookObject in lv.books.items():
-        if BibleOrgSysGlobals.commandLineArguments.fastMode and BBB not in ('DEU','PRO',):
-            continue
-        if BBB in ('CO1',): continue # TODO: CO1_14:33 gives an issue
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Processing connect words for OET {BBB}…" )
 
-        bookSimpleListedAdds = bookProperNounAdds = bookFirstPartMatchedAdds = bookManualMatchedAdds = 0
-        bookSimpleListedAddsNS = bookProperNounAddsNS = bookFirstPartMatchedAddsNS = bookManualMatchedAddsNS = 0 # Nomina sacra
-        wordFileName = lvBookObject.ESFMWordTableFilename
-        if wordFileName:
-            assert wordFileName.endswith( '.tsv' )
-            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found ESFMBible filename '{wordFileName}' for {lv.abbreviation} {BBB}" )
-            if lv.ESFMWordTables[wordFileName]:
-                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found ESFMBible loaded '{wordFileName}' word link lines: {len(lv.ESFMWordTables[wordFileName]):,}" )
-            else:
-                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  No word links loaded yet for '{wordFileName}'" )
-            if lv.ESFMWordTables[wordFileName] is None:
-                with open( OET_LV_ESFM_InputFolderPath.joinpath(wordFileName), 'rt', encoding='UTF-8' ) as wordFile:
-                    lv.ESFMWordTables[wordFileName] = wordFile.read().split( '\n' )
-                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  connect_OET_RV loaded {len(lv.ESFMWordTables[wordFileName]):,} total rows from {wordFileName}" )
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  connect_OET_RV loaded column names were: ({len(lv.ESFMWordTables[wordFileName][0])}) {lv.ESFMWordTables[wordFileName][0]}" )
-        state.wordTable = [row.split('\t') for row in lv.ESFMWordTables[wordFileName]]
-        state.wordTableHeaderList = state.wordTable[0]
-
-        lvESFMFilename = f'OET-LV_{BBB}.ESFM'
-        lvESFMFilepath = OET_LV_ESFM_InputFolderPath.joinpath( lvESFMFilename )
-        with open( lvESFMFilepath, 'rt', encoding='UTF-8' ) as esfmFile:
-            state.lvESFMText = esfmFile.read() # We keep the original (for later comparison)
-            state.lvESFMLines = state.lvESFMText.split( '\n' )
-            # Do some basic checking (better to find common editing errors sooner rather than later)
-            for lineNumber,line in enumerate( state.lvESFMLines, start=1 ):
-                # assert not line.endswith(' '), f"Unexpected space at end in {lvESFMFilename} {lineNumber}: '{line}'"
-                if line.endswith(' '):
-                    logging.warning( f"Unexpected space at end in {lvESFMFilename} {lineNumber}: '{line}'" )
-                for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
-                    assert line.count( f'\\{characterMarker} ') == line.count( f'\\{characterMarker}*'), f"{characterMarker} marker mismatch in {lvESFMFilename} {lineNumber}: '{line}'"
-                assert doubledND not in line, f"Double \\nd in {lvESFMFilename} {lineNumber}: '{line}'"
-                assert  badAddND not in line, f"\\nd inside \\add start {lvESFMFilename} {lineNumber}: '{line}'"
-                assert  badNDAdd not in line, f"\\nd inside \\add end {lvESFMFilename} {lineNumber}: '{line}'"
-                if '\\x* ' in line: # this can be ok if the xref directly follows other text
-                    logger = logging.critical if ' \\x ' in line else logging.warning
-                    logger( f"Double-check space after xref in {lvESFMFilename} {lineNumber}: '{line}'" )
-
-        rvESFMFilename = f'OET-RV_{BBB}.ESFM'
-        rvESFMFilepath = OET_RV_ESFM_FolderPath.joinpath( rvESFMFilename )
-        with open( rvESFMFilepath, 'rt', encoding='UTF-8' ) as esfmFile:
-            state.rvESFMText = esfmFile.read() # We keep the original (for later comparison)
-            state.rvESFMLines = state.rvESFMText.split( '\n' )
-            # Do some basic checking (better to find common editing errors sooner rather than later)
-            for lineNumber,line in enumerate( state.rvESFMLines, start=1 ):
-                assert not line.startswith(' '), f"Unexpected space at start in {rvESFMFilename} {lineNumber}: '{line}'"
-                assert not line.endswith(' '), f"Unexpected space at end in {rvESFMFilename} {lineNumber}: '{line}'"
-                assert '  ' not in line, f"Unexpected doubled spaces in {rvESFMFilename} {lineNumber}: '{line}'"
-                assert ',,' not in line and '..' not in line, f"Unexpected doubled punctuation in {rvESFMFilename} {lineNumber}: '{line}'"
-                assert '\\x*,' not in line and '\\x*.' not in line, f"Bad xref formatting in {rvESFMFilename} {lineNumber}: '{line}'"
-                if line.count(' \\x ') < line.count('\\x '):
-                    assert '\\x* ' in line or line.endswith('\\x*') or '\\x*—' in line, f"Missing xref space in {rvESFMFilename} {lineNumber}: '{line}'"
-                assert '“ ' not in line, f"Unexpected space at beginning of speech in {rvESFMFilename} {lineNumber}: '{line}'"
-                assert '’“' not in line, f"Unexpected consecutive speech marks in {rvESFMFilename} {lineNumber}: '{line}'"
-                assert '“’' not in line, f"Unexpected consecutive speech marks in {rvESFMFilename} {lineNumber}: '{line}'"
-                if '’ ”' not in line and '’\\wj* ”' not in line:
-                    assert ' ”' not in line, f"Unexpected space at end of speech in {rvESFMFilename} {lineNumber}: '{line}'"
-                assert '≈ ' not in line, f"Unexpected space after ≈ in {rvESFMFilename} {lineNumber}: '{line}'"
-                for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
-                    assert line.count( f'\\{characterMarker} ') == line.count( f'\\{characterMarker}*'), f"{characterMarker} marker mismatch in {rvESFMFilename} {lineNumber}: '{line}'"
-                assert doubledND not in line, f"Double \\nd in {rvESFMFilename} {lineNumber}: '{line}'"
-                assert  badAddND not in line, f"\\nd inside \\add start {rvESFMFilename} {lineNumber}: '{line}'"
-                assert  badNDAdd not in line, f"\\nd inside \\add end {rvESFMFilename} {lineNumber}: '{line}'"
-                if '\\x* ' in line: # this can be ok if the xref directly follows other text
-                    logger = logging.critical if ' \\x ' in line else logging.warning
-                    logger( f"Double-check space after xref in {rvESFMFilename} {lineNumber}: '{line}'" )
-
-        numChapters = lv.getNumChapters( BBB )
-        if numChapters >= 1:
-            for c in range( 1, numChapters+1 ):
-                C = str(c)
-                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Connecting words for {BBB} {C}…" )
-                numVerses = lv.getNumVerses( BBB, c )
-                if numVerses is None: # something unusual
-                    logging.critical( f"connect_OET_RV: no verses found for OET-LV {BBB} {C}" )
-                    continue
-                havePsalmTitles = BibleOrgSysGlobals.loadedBibleBooksCodes.hasPsalmTitle( BBB, C )
-                for v in range( 1, numVerses+1 ): # Note: some Psalms have an extra verse in OET-LV (because /d is v1)
-                    V = str(v)
-                    try:
-                        rvVerseEntryList, _rvCcontextList = rv.getContextVerseData( (BBB, C, str(v-1) if havePsalmTitles and v>1 else V) )
-                    except KeyError:
-                        logging.critical( f"Seems we have no OET-RV {BBB} {c}:{v} -- versification issue?" )
-                        continue
-                    # OET-RV has /d and v1 all inside v1, but we need to separate them out to match OET-LV correctly
-                    if havePsalmTitles and v in (1,2):
-                        adjustedRvVerseEntryList = InternalBibleEntryList()
-                        for rvEntry in rvVerseEntryList:
-                            rvMarker = rvEntry.getMarker()
-                            if v==1 and rvMarker in ('v~','p~'): continue # don't want these
-                            if v==2 and rvMarker == 'd': continue # don't want this
-                            adjustedRvVerseEntryList.append( rvEntry )
-                        rvVerseEntryList = adjustedRvVerseEntryList
-                    try:
-                        lvVerseEntryList, _lvCcontextList = lv.getContextVerseData( (BBB, C, V) )
-                    except KeyError:
-                        logging.critical( f"Seems we have no OET-LV {BBB} {c}:{v} -- versification issue?" )
-                        halt
-                        continue
-                    # if BBB=='PSA' and v<3: # and c in (3,23,29)
-                    #     dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nRV entries for {BBB} {C}:{V}: ({len(rvVerseEntryList)}) {rvVerseEntryList}")
-                    #     dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"LV entries for {BBB} {C}:{V}: ({len(lvVerseEntryList)}) {lvVerseEntryList}")
-
-                    check_OET_RV_Verse( BBB, c, v, rvVerseEntryList, lvVerseEntryList ) # Check that any existing word numbers are in the expected range
-
-                    (numSimpleListedAdds,numSimpleListedAddsNS), (numProperNounAdds,numProperNounAddsNS), (numFirstPartMatchedAdds,numFirstPartMatchedAddsNS), (numManualMatchedAdds,numManualMatchedAddsNS) \
-                                = connect_OET_RV_Verse( BBB, c, v, rvVerseEntryList, lvVerseEntryList ) # updates state.rvESFMLines
-                    bookSimpleListedAdds += numSimpleListedAdds
-                    bookSimpleListedAddsNS += numSimpleListedAddsNS
-                    bookProperNounAdds += numProperNounAdds
-                    bookProperNounAddsNS += numProperNounAddsNS
-                    bookFirstPartMatchedAdds += numFirstPartMatchedAdds
-                    bookFirstPartMatchedAddsNS += numFirstPartMatchedAddsNS
-                    bookManualMatchedAdds += numManualMatchedAdds
-                    bookManualMatchedAddsNS += numManualMatchedAddsNS
-        else:
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"connect_OET_RV {BBB} has {numChapters} chapters!!!" )
-            assert BBB in ('INT','FRT',)
-
-        newESFMtext = '\n'.join( state.rvESFMLines ) \
-                          .replace( '\\nd* \\nd ', ' ' ) # Concatenate consecutive nd fields
-        if newESFMtext != state.rvESFMText:
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{BBB} ESFM text has changed {len(state.rvESFMText):,} chars -> {len(newESFMtext):,} chars" )
-            if BBB=='ACT': newESFMtext = newESFMtext.replace( ' 120¦', ' 12Z¦' ) # Avoid false alarm
-            illegalWordLinkRegex1Match = illegalWordLinkRegex1.search( newESFMtext)
-            assert not illegalWordLinkRegex1Match, f"illegalWordLinkRegex1 failed before saving {BBB} with '{newESFMtext[illegalWordLinkRegex1Match.start()-5:illegalWordLinkRegex1Match.end()+5]}'" # Don't want double-ups of wordlink numbers
-            if BBB=='ACT': newESFMtext = newESFMtext.replace( ' 12Z¦', ' 120¦' ) # Avoided false alarm
-            illegalWordLinkRegex2Match = illegalWordLinkRegex2.search( newESFMtext)
-            assert not illegalWordLinkRegex2Match, f"illegalWordLinkRegex2 failed before saving {BBB} with '{newESFMtext[illegalWordLinkRegex2Match.start()-5:illegalWordLinkRegex2Match.end()+5]}'" # Don't want double-ups of wordlink numbers
-            assert doubledND not in newESFMtext, f"doubled \\nd check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(doubledND)-10:newESFMtext.index(doubledND)+35]}'"
-            assert badAddND not in newESFMtext, f"\\nd in \\add start check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(badAddND)-10:newESFMtext.index(badAddND)+35]}'"
-            assert badNDAdd not in newESFMtext, f"\\nd in \\add end check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(badNDAdd)-10:newESFMtext.index(badNDAdd)+35]}'"
-            # NOTE: '*?' has to have a space before it, because \\add*? might occur at the end of a question
-            for wronglyOrderedCombo in ('+?','=?','<?','>?','≡?','&?','@?',' *?','#?','^?','≈?'):
-                assert wronglyOrderedCombo not in newESFMtext, f"Wrongly ordered combo check failed with '{wronglyOrderedCombo}' before saving {BBB} with '{newESFMtext[newESFMtext.index(wronglyOrderedCombo)-10:newESFMtext.index(wronglyOrderedCombo)+35]}'"
-            with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
-                esfmFile.write( newESFMtext )
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookSimpleListedAdds:,} simple listed adds, {bookProperNounAdds:,} proper noun adds, {bookFirstPartMatchedAdds:,} first part adds and {bookManualMatchedAdds:,} manual adds for {BBB}." )
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookSimpleListedAddsNS:,} simple listed NS, {bookProperNounAddsNS:,} proper noun NS, {bookFirstPartMatchedAddsNS:,} first part NS and {bookManualMatchedAddsNS:,} manual NS for {BBB}." )
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      Saved OET-RV {BBB} {len(newESFMtext):,} bytes to {rvESFMFilepath}" )
-        else:
-            # assert bookSimpleListedAdds == bookProperNounAdds == 0
-            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    No changes made to OET-RV {BBB}." )
-        totalSimpleListedAdds += bookSimpleListedAdds
-        totalSimpleListedAddsNS += bookSimpleListedAddsNS
-        totalProperNounAdds += bookProperNounAdds
-        totalProperNounAddsNS += bookProperNounAddsNS
-        totalFirstPartMatchedAdds += bookFirstPartMatchedAdds
-        totalFirstPartMatchedAddsNS += bookFirstPartMatchedAddsNS
-        totalManualMatchedAdds += bookManualMatchedAdds
-        totalManualMatchedAddsNS += bookManualMatchedAddsNS
+    if BibleOrgSysGlobals.maxProcesses > 1 \
+    and not BibleOrgSysGlobals.alreadyMultiprocessing \
+    and len(booklist_to_process) > 3: # Get our subprocesses ready and waiting for work
+        # Process all the books as quickly as possible
+        parameters = [(BBB,lv,rv,OET_LV_ESFM_InputFolderPath) for BBB in booklist_to_process] # Can only pass a single parameter to map
+        if BibleOrgSysGlobals.verbosityLevel > 1:
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"connect_OET_RV: Processing {len(booklist_to_process)} ESFM books using {min(BibleOrgSysGlobals.maxProcesses,len(booklist_to_process))} processes…" )
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  NOTE: Outputs (including error and warning messages) from loading various books may be interspersed." )
+        BibleOrgSysGlobals.alreadyMultiprocessing = True
+        with multiprocessing.Pool( processes=BibleOrgSysGlobals.maxProcesses ) as pool: # start worker processes
+            results = pool.map( _connect_OET_RV_book_MP, parameters ) # have the pool do our loads
+            assert len(results) == len(booklist_to_process)
+            for bookSimpleListedAdds, bookSimpleListedAddsNS, bookProperNounAdds, bookProperNounAddsNS, bookFirstPartMatchedAdds, \
+                        bookFirstPartMatchedAddsNS, bookManualMatchedAdds, bookManualMatchedAddsNS in results:
+                totalSimpleListedAdds += bookSimpleListedAdds
+                totalSimpleListedAddsNS += bookSimpleListedAddsNS
+                totalProperNounAdds += bookProperNounAdds
+                totalProperNounAddsNS += bookProperNounAddsNS
+                totalFirstPartMatchedAdds += bookFirstPartMatchedAdds
+                totalFirstPartMatchedAddsNS += bookFirstPartMatchedAddsNS
+                totalManualMatchedAdds += bookManualMatchedAdds
+                totalManualMatchedAddsNS += bookManualMatchedAddsNS
+        BibleOrgSysGlobals.alreadyMultiprocessing = False
+    else: # Just single threaded
+        # Process the books one by one
+        for BBB in booklist_to_process:
+            bookSimpleListedAdds, bookSimpleListedAddsNS, bookProperNounAdds, bookProperNounAddsNS, bookFirstPartMatchedAdds, \
+                bookFirstPartMatchedAddsNS, bookManualMatchedAdds, bookManualMatchedAddsNS = connect_OET_RV_book( BBB, lv, rv, OET_LV_ESFM_InputFolderPath )
+            totalSimpleListedAdds += bookSimpleListedAdds
+            totalSimpleListedAddsNS += bookSimpleListedAddsNS
+            totalProperNounAdds += bookProperNounAdds
+            totalProperNounAddsNS += bookProperNounAddsNS
+            totalFirstPartMatchedAdds += bookFirstPartMatchedAdds
+            totalFirstPartMatchedAddsNS += bookFirstPartMatchedAddsNS
+            totalManualMatchedAdds += bookManualMatchedAdds
+            totalManualMatchedAddsNS += bookManualMatchedAddsNS
 
     if totalSimpleListedAdds or totalProperNounAdds or totalFirstPartMatchedAdds or totalManualMatchedAdds:
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Did total of {totalSimpleListedAdds:,} simple listed adds, {totalProperNounAdds:,} proper noun adds, {totalFirstPartMatchedAdds:,} first part adds and {totalManualMatchedAdds:,} manual adds." )
@@ -991,6 +915,164 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Did total of {totalSimpleListedAddsNS:,} simple listed nomina sacra (NS), {totalProperNounAddsNS:,} proper noun NS, {totalFirstPartMatchedAddsNS:,} first part NS and {totalManualMatchedAddsNS:,} manual NS." )
     else: vPrint( 'Info', DEBUGGING_THIS_MODULE, "  No new nomina sacra connections made." )
 # end of connect_OET-RV_words_via_OET-LV.connect_OET_RV
+
+
+def _connect_OET_RV_book_MP( givenParameters ):
+    """
+    Multiprocessing version!
+    Load the requested book if it's not already loaded (but doesn't save it as that is not safe for multiprocessing)
+
+    Parameter is a 4-tuple containing the parameters.
+    """
+    fnPrint( DEBUGGING_THIS_MODULE, f"_connect_OET_RV_book_MP( {givenParameters} )" )
+    return connect_OET_RV_book( *givenParameters )
+# end of connect_OET-RV_words_via_OET-LV._connect_OET_RV_book_MP
+
+def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
+    """
+    Firstly, load the OET-LV wordtable.
+        Loads into state.wordTableHeaderList and state.wordTable.
+
+    Check that any existing word numbers are in the correct verse.
+
+    Then connect linked words in the OET-LV to the OET-RV.
+    """
+    fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV_book( {BBB} )" )
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Processing connect words for OET {BBB}…" )
+
+    # wordFileName = lv[BBB].ESFMWordTableFilename
+
+    bookSimpleListedAdds = bookProperNounAdds = bookFirstPartMatchedAdds = bookManualMatchedAdds = 0
+    bookSimpleListedAddsNS = bookProperNounAddsNS = bookFirstPartMatchedAddsNS = bookManualMatchedAddsNS = 0 # Nomina sacra
+
+    lvESFMFilename = f'OET-LV_{BBB}.ESFM'
+    lvESFMFilepath = OET_LV_ESFM_InputFolderPath.joinpath( lvESFMFilename )
+    with open( lvESFMFilepath, 'rt', encoding='UTF-8' ) as esfmFile:
+        state.lvESFMText = esfmFile.read() # We keep the original (for later comparison)
+        state.lvESFMLines = state.lvESFMText.split( '\n' )
+        # Do some basic checking (better to find common editing errors sooner rather than later)
+        for lineNumber,line in enumerate( state.lvESFMLines, start=1 ):
+            # assert not line.endswith(' '), f"Unexpected space at end in {lvESFMFilename} {lineNumber}: '{line}'"
+            if line.endswith(' '):
+                logging.warning( f"Unexpected space at end in {lvESFMFilename} {lineNumber}: '{line}'" )
+            for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
+                assert line.count( f'\\{characterMarker} ') == line.count( f'\\{characterMarker}*'), f"{characterMarker} marker mismatch in {lvESFMFilename} {lineNumber}: '{line}'"
+            assert doubledND not in line, f"Double \\nd in {lvESFMFilename} {lineNumber}: '{line}'"
+            assert  badAddND not in line, f"\\nd inside \\add start {lvESFMFilename} {lineNumber}: '{line}'"
+            assert  badNDAdd not in line, f"\\nd inside \\add end {lvESFMFilename} {lineNumber}: '{line}'"
+            if '\\x* ' in line: # this can be ok if the xref directly follows other text
+                logger = logging.critical if ' \\x ' in line else logging.warning
+                logger( f"Double-check space after xref in {lvESFMFilename} {lineNumber}: '{line}'" )
+
+    rvESFMFilename = f'OET-RV_{BBB}.ESFM'
+    rvESFMFilepath = OET_RV_ESFM_FolderPath.joinpath( rvESFMFilename )
+    with open( rvESFMFilepath, 'rt', encoding='UTF-8' ) as esfmFile:
+        state.rvESFMText = esfmFile.read() # We keep the original (for later comparison)
+        state.rvESFMLines = state.rvESFMText.split( '\n' )
+        # Do some basic checking (better to find common editing errors sooner rather than later)
+        for lineNumber,line in enumerate( state.rvESFMLines, start=1 ):
+            assert not line.startswith(' '), f"Unexpected space at start in {rvESFMFilename} {lineNumber}: '{line}'"
+            assert not line.endswith(' '), f"Unexpected space at end in {rvESFMFilename} {lineNumber}: '{line}'"
+            assert '  ' not in line, f"Unexpected doubled spaces in {rvESFMFilename} {lineNumber}: '{line}'"
+            assert ',,' not in line and '..' not in line, f"Unexpected doubled punctuation in {rvESFMFilename} {lineNumber}: '{line}'"
+            assert '\\x*,' not in line and '\\x*.' not in line, f"Bad xref formatting in {rvESFMFilename} {lineNumber}: '{line}'"
+            if line.count(' \\x ') < line.count('\\x '):
+                assert '\\x* ' in line or line.endswith('\\x*') or '\\x*—' in line, f"Missing xref space in {rvESFMFilename} {lineNumber}: '{line}'"
+            assert '“ ' not in line, f"Unexpected space at beginning of speech in {rvESFMFilename} {lineNumber}: '{line}'"
+            assert '’“' not in line, f"Unexpected consecutive speech marks in {rvESFMFilename} {lineNumber}: '{line}'"
+            assert '“’' not in line, f"Unexpected consecutive speech marks in {rvESFMFilename} {lineNumber}: '{line}'"
+            if '’ ”' not in line and '’\\wj* ”' not in line:
+                assert ' ”' not in line, f"Unexpected space at end of speech in {rvESFMFilename} {lineNumber}: '{line}'"
+            assert '≈ ' not in line, f"Unexpected space after ≈ in {rvESFMFilename} {lineNumber}: '{line}'"
+            for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
+                assert line.count( f'\\{characterMarker} ') == line.count( f'\\{characterMarker}*'), f"{characterMarker} marker mismatch in {rvESFMFilename} {lineNumber}: '{line}'"
+            assert doubledND not in line, f"Double \\nd in {rvESFMFilename} {lineNumber}: '{line}'"
+            assert  badAddND not in line, f"\\nd inside \\add start {rvESFMFilename} {lineNumber}: '{line}'"
+            assert  badNDAdd not in line, f"\\nd inside \\add end {rvESFMFilename} {lineNumber}: '{line}'"
+            if '\\x* ' in line: # this can be ok if the xref directly follows other text
+                logger = logging.critical if ' \\x ' in line else logging.warning
+                logger( f"Double-check space after xref in {rvESFMFilename} {lineNumber}: '{line}'" )
+
+    numChapters = lv.getNumChapters( BBB )
+    if numChapters >= 1:
+        for c in range( 1, numChapters+1 ):
+            C = str(c)
+            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Connecting words for {BBB} {C}…" )
+            numVerses = lv.getNumVerses( BBB, c )
+            if numVerses is None: # something unusual
+                logging.critical( f"connect_OET_RV: no verses found for OET-LV {BBB} {C}" )
+                continue
+            havePsalmTitles = BibleOrgSysGlobals.loadedBibleBooksCodes.hasPsalmTitle( BBB, C )
+            for v in range( 1, numVerses+1 ): # Note: some Psalms have an extra verse in OET-LV (because /d is v1)
+                V = str(v)
+                try:
+                    rvVerseEntryList, _rvCcontextList = rv.getContextVerseData( (BBB, C, str(v-1) if havePsalmTitles and v>1 else V) )
+                except KeyError:
+                    logging.critical( f"Seems we have no OET-RV {BBB} {c}:{v} -- versification issue?" )
+                    continue
+                # OET-RV has /d and v1 all inside v1, but we need to separate them out to match OET-LV correctly
+                if havePsalmTitles and v in (1,2):
+                    adjustedRvVerseEntryList = InternalBibleEntryList()
+                    for rvEntry in rvVerseEntryList:
+                        rvMarker = rvEntry.getMarker()
+                        if v==1 and rvMarker in ('v~','p~'): continue # don't want these
+                        if v==2 and rvMarker == 'd': continue # don't want this
+                        adjustedRvVerseEntryList.append( rvEntry )
+                    rvVerseEntryList = adjustedRvVerseEntryList
+                try:
+                    lvVerseEntryList, _lvCcontextList = lv.getContextVerseData( (BBB, C, V) )
+                except KeyError:
+                    logging.critical( f"Seems we have no OET-LV {BBB} {c}:{v} -- versification issue?" )
+                    halt
+                    continue
+                # if BBB=='PSA' and v<3: # and c in (3,23,29)
+                #     dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nRV entries for {BBB} {C}:{V}: ({len(rvVerseEntryList)}) {rvVerseEntryList}")
+                #     dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"LV entries for {BBB} {C}:{V}: ({len(lvVerseEntryList)}) {lvVerseEntryList}")
+
+                check_OET_RV_Verse( BBB, c, v, rvVerseEntryList, lvVerseEntryList ) # Check that any existing word numbers are in the expected range
+
+                (numSimpleListedAdds,numSimpleListedAddsNS), (numProperNounAdds,numProperNounAddsNS), (numFirstPartMatchedAdds,numFirstPartMatchedAddsNS), (numManualMatchedAdds,numManualMatchedAddsNS) \
+                            = connect_OET_RV_Verse( BBB, c, v, rvVerseEntryList, lvVerseEntryList ) # updates state.rvESFMLines
+                bookSimpleListedAdds += numSimpleListedAdds
+                bookSimpleListedAddsNS += numSimpleListedAddsNS
+                bookProperNounAdds += numProperNounAdds
+                bookProperNounAddsNS += numProperNounAddsNS
+                bookFirstPartMatchedAdds += numFirstPartMatchedAdds
+                bookFirstPartMatchedAddsNS += numFirstPartMatchedAddsNS
+                bookManualMatchedAdds += numManualMatchedAdds
+                bookManualMatchedAddsNS += numManualMatchedAddsNS
+    else:
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"connect_OET_RV {BBB} has {numChapters} chapters!!!" )
+        assert BBB in ('INT','FRT',)
+
+    newESFMtext = '\n'.join( state.rvESFMLines ) \
+                        .replace( '\\nd* \\nd ', ' ' ) # Concatenate consecutive nd fields
+    if newESFMtext != state.rvESFMText:
+        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{BBB} ESFM text has changed {len(state.rvESFMText):,} chars -> {len(newESFMtext):,} chars" )
+        if BBB=='ACT': newESFMtext = newESFMtext.replace( ' 120¦', ' 12Z¦' ) # Avoid false alarm
+        illegalWordLinkRegex1Match = illegalWordLinkRegex1.search( newESFMtext)
+        assert not illegalWordLinkRegex1Match, f"illegalWordLinkRegex1 failed before saving {BBB} with '{newESFMtext[illegalWordLinkRegex1Match.start()-5:illegalWordLinkRegex1Match.end()+5]}'" # Don't want double-ups of wordlink numbers
+        if BBB=='ACT': newESFMtext = newESFMtext.replace( ' 12Z¦', ' 120¦' ) # Avoided false alarm
+        illegalWordLinkRegex2Match = illegalWordLinkRegex2.search( newESFMtext)
+        assert not illegalWordLinkRegex2Match, f"illegalWordLinkRegex2 failed before saving {BBB} with '{newESFMtext[illegalWordLinkRegex2Match.start()-5:illegalWordLinkRegex2Match.end()+5]}'" # Don't want double-ups of wordlink numbers
+        assert doubledND not in newESFMtext, f"doubled \\nd check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(doubledND)-10:newESFMtext.index(doubledND)+35]}'"
+        assert badAddND not in newESFMtext, f"\\nd in \\add start check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(badAddND)-10:newESFMtext.index(badAddND)+35]}'"
+        assert badNDAdd not in newESFMtext, f"\\nd in \\add end check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(badNDAdd)-10:newESFMtext.index(badNDAdd)+35]}'"
+        # NOTE: '*?' has to have a space before it, because \\add*? might occur at the end of a question
+        for wronglyOrderedCombo in ('+?','=?','<?','>?','≡?','&?','@?',' *?','#?','^?','≈?'):
+            assert wronglyOrderedCombo not in newESFMtext, f"Wrongly ordered combo check failed with '{wronglyOrderedCombo}' before saving {BBB} with '{newESFMtext[newESFMtext.index(wronglyOrderedCombo)-10:newESFMtext.index(wronglyOrderedCombo)+35]}'"
+        with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
+            esfmFile.write( newESFMtext )
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookSimpleListedAdds:,} simple listed adds, {bookProperNounAdds:,} proper noun adds, {bookFirstPartMatchedAdds:,} first part adds and {bookManualMatchedAdds:,} manual adds for {BBB}." )
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookSimpleListedAddsNS:,} simple listed NS, {bookProperNounAddsNS:,} proper noun NS, {bookFirstPartMatchedAddsNS:,} first part NS and {bookManualMatchedAddsNS:,} manual NS for {BBB}." )
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      Saved OET-RV {BBB} {len(newESFMtext):,} bytes to {rvESFMFilepath}" )
+    else:
+        # assert bookSimpleListedAdds == bookProperNounAdds == 0
+        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    No changes made to OET-RV {BBB}." )
+
+    return bookSimpleListedAdds, bookSimpleListedAddsNS, bookProperNounAdds, bookProperNounAddsNS, bookFirstPartMatchedAdds, \
+            bookFirstPartMatchedAddsNS, bookManualMatchedAdds, bookManualMatchedAddsNS
+# end of connect_OET-RV_words_via_OET-LV.connect_OET_RV_book
 
 
 wordLinkRegex = re.compile( '¦[1-9][0-9]{0,5}' )
@@ -1004,7 +1086,7 @@ def check_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> None
     # fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {BBB} {c}:{v} {len(rvEntryList)}, {len(lvEntryList)} )" )
     NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
     if NT:
-        assert state.wordTableHeaderList.index('VLTGlossWords')+1 == GLOSS_COLUMN__NUMBER, f"{state.wordTableHeaderList.index('VLTGlossWords')+1=} {GLOSS_COLUMN__NUMBER=} {state.wordTableHeaderList=}" # Check we have the correct column below
+        assert state.wordTableHeaderList['NT'].index('VLTGlossWords')+1 == GLOSS_COLUMN__NUMBER, f"{state.wordTableHeaderList['NT'].index('VLTGlossWords')+1=} {GLOSS_COLUMN__NUMBER=} {state.wordTableHeaderList=}" # Check we have the correct column below
 
     discovered_OET_RV_word_numbers = []
     haveVerseRange = False
@@ -1076,7 +1158,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     #     print( f"\nconnect_OET_RV( {connectRef} {len(rvEntryList)} {rvEntryList=}, {len(lvEntryList)} {lvEntryList=} )" )
     NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
     if NT:
-        assert state.wordTableHeaderList.index('VLTGlossWords')+1 == GLOSS_COLUMN__NUMBER, f"{state.wordTableHeaderList.index('VLTGlossWords')+1=} {GLOSS_COLUMN__NUMBER=} {state.wordTableHeaderList=}" # Check we have the correct column below
+        assert state.wordTableHeaderList['NT'].index('VLTGlossWords')+1 == GLOSS_COLUMN__NUMBER, f"{state.wordTableHeaderList['NT'].index('VLTGlossWords')+1=} {GLOSS_COLUMN__NUMBER=} {state.wordTableHeaderList=}" # Check we have the correct column below
 
     rvText = ''
     for rvEntry in rvEntryList:
@@ -1167,15 +1249,15 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     if lvUpperWords and lvText[0].isupper(): # Try to determine why the first word was capitalised
         dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{lvUpperWords=} from {lvText=}")
         firstLVUpperWord, firstLVUpperNumber = lvUpperWords[0].split( '¦' )
-        rowForFirstLVUpperWord = state.wordTable[int(firstLVUpperNumber)]
+        rowForFirstLVUpperWord = state.wordTable['NT' if NT else 'OT'][int(firstLVUpperNumber)]
         if NT:
-            firstLVUpperWordCapsFlags = rowForFirstLVUpperWord[state.wordTableHeaderList.index('GlossCaps')]
+            firstLVUpperWordCapsFlags = rowForFirstLVUpperWord[state.wordTableHeaderList['NT'].index('GlossCaps')]
             # print( f"{firstLVUpperWordCapsFlags=} from {rowForFirstLVUpperWord=}" )
             if 'G' not in firstLVUpperWordCapsFlags and 'W' not in firstLVUpperWordCapsFlags and firstLVUpperWord!='I':
                 # print( f"Removing first LV Uppercase word: '{lvUpperWords[0]}' with '{firstLVUpperWordCapsFlags}'")
                 lvUpperWords.pop(0) # Throw away the first word because it might just be capitalised for being at the beginning of the sentence.
         else: # OT
-            firstLVUpperWordCapsFlags = rowForFirstLVUpperWord[state.wordTableHeaderList.index('GlossCapitalisation')]
+            firstLVUpperWordCapsFlags = rowForFirstLVUpperWord[state.wordTableHeaderList['OT'].index('GlossCapitalisation')]
             # print( f"{firstLVUpperWordCapsFlags=} from {rowForFirstLVUpperWord=}" )
             if 'S' in firstLVUpperWordCapsFlags and firstLVUpperWord!='I':
                 # print( f"Removing first LV Uppercase word: '{lvUpperWords[0]}' with '{firstLVUpperWordCapsFlags}'")
@@ -1246,19 +1328,19 @@ def matchIdenticalProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[
         assert rvCapitalisedWordList[0].replace("'",'').isalpha(), f"{rvCapitalisedWordList=}" # It might contain an apostrophe
         # print( f"{rvCapitalisedWordList=} {lvCapitalisedWordList=}" )
         assert '¦' in lvCapitalisedWordList[0], f"{lvCapitalisedWordList[0]=} from {lvCapitalisedWordList=}"
-        capitalisedNoun,wordNumber,wordRow = getLVWordRow( lvCapitalisedWordList[0] )
+        capitalisedNoun,wordNumber,wordRow = getLVWordRow( lvCapitalisedWordList[0], 'NT' if NT else 'OT' )
         if NT:
-            wordRole = wordRow[state.wordTableHeaderList.index('Role')]
+            wordRole = wordRow[state.wordTableHeaderList['NT'].index('Role')]
             dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  '{capitalisedNoun}' {wordRole}" )
             if wordRole == 'N': # let's assume it's a proper noun
                 # print( f"matchIdenticalProperNouns {BBB} {c}:{v} adding number to {rvCapitalisedWordList[0]}")
                 result = addNumberToRVWord( BBB, c,v, rvCapitalisedWordList[0], wordNumber )
                 if result:
                     numAdded += 1
-                    if 'N' in wordRow[state.wordTableHeaderList.index('GlossCaps')]:
+                    if 'N' in wordRow[state.wordTableHeaderList['NT'].index('GlossCaps')]:
                         numNS += 1
         else: # OT
-            glossCaps = wordRow[state.wordTableHeaderList.index('GlossCapitalisation')]
+            glossCaps = wordRow[state.wordTableHeaderList['OT'].index('GlossCapitalisation')]
             dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  {capitalisedNoun=} {glossCaps=}" )
             if glossCaps != 'S': # start of sentence
                 result = addNumberToRVWord( BBB, c,v, rvCapitalisedWordList[0], wordNumber )
@@ -1319,13 +1401,13 @@ def matchAdjustedProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[s
             logging.critical( f"Why didn't this word get a word number? {lvCapitalisedWord=} from {BBB} {c}:{v} {lvCapitalisedWordList=}" )
             continue
         assert '¦' in lvCapitalisedWord, f"{BBB} {c}:{v} {lvCapitalisedWord=} from {lvCapitalisedWordList=}"
-        capitalisedNoun,wordNumber,wordRow = getLVWordRow( lvCapitalisedWord )
+        capitalisedNoun,wordNumber,wordRow = getLVWordRow( lvCapitalisedWord, 'NT' if NT else 'OT' )
 
         for rvCapitalisedWord in rvCapitalisedWordList:
             dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{rvCapitalisedWord=} from {rvCapitalisedWordList=}" )
             assert rvCapitalisedWord.replace("'",'').isalpha(), f"{rvCapitalisedWordList=}" # It might contain an apostrophe
             if NT:
-                wordRole = wordRow[state.wordTableHeaderList.index('Role')]
+                wordRole = wordRow[state.wordTableHeaderList['NT'].index('Role')]
                 dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  matchAdjustedProperNouns NT '{capitalisedNoun}' {wordRole}" )
                 if wordRole == 'N': # let's assume it's a proper noun
                     if capitalisedNoun in state.nameTables['NT']:
@@ -1337,7 +1419,7 @@ def matchAdjustedProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[s
                                 result = addNumberToRVWord( BBB, c,v, rvCapitalisedWord, wordNumber )
                                 if result:
                                     numAdded += 1
-                                if 'N' in wordRow[state.wordTableHeaderList.index('GlossCaps')]:
+                                if 'N' in wordRow[state.wordTableHeaderList['NT'].index('GlossCaps')]:
                                     numNS += 1
                                 break
                     elif capitalisedNoun in state.nameTables['NT_OT']:
@@ -1349,11 +1431,11 @@ def matchAdjustedProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[s
                                 result = addNumberToRVWord( BBB, c,v, rvCapitalisedWord, wordNumber )
                                 if result:
                                     numAdded += 1
-                                if 'N' in wordRow[state.wordTableHeaderList.index('GlossCaps')]:
+                                if 'N' in wordRow[state.wordTableHeaderList['NT'].index('GlossCaps')]:
                                     numNS += 1
                                 break
             else: # OT
-                glossCaps = wordRow[state.wordTableHeaderList.index('GlossCapitalisation')]
+                glossCaps = wordRow[state.wordTableHeaderList['OT'].index('GlossCapitalisation')]
                 dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  matchAdjustedProperNouns OT {capitalisedNoun=} {glossCaps=}" )
                 if glossCaps != 'S': # start of sentence
                     if capitalisedNoun in state.nameTables['OT']:
@@ -1424,7 +1506,7 @@ def matchOurListedSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWor
         lvNumbers = []
         for lvN in lvIndexList:
             assert '¦' in lvWordList[lvN], f"{lvN=} {lvWordList[lvN]=} from {lvWordList=}"
-            lvNoun,lvWordNumber,lvWordRow = getLVWordRow( lvWordList[lvN] )
+            lvNoun,lvWordNumber,lvWordRow = getLVWordRow( lvWordList[lvN], 'NT' if NT else 'OT' )
             lvNumbers.append( lvWordNumber )
         assert len(lvNumbers) == 1 # NOT TRUE: If there's two 'camels' in the verse, we expect both to have the same word number
         for rvN in rvIndexList:
@@ -1484,12 +1566,12 @@ def matchWordsFirstParts( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList
             rvWord = rvWordList[rvIndexes[0]]
             if '¦' not in rvWord:
                 assert '¦' in lvWordList[lvIx], f"{lvIx=} {lvWordList[lvIx]=} from {lvWordList=}"
-                lvWord,lvWordNumber,lvWordRow = getLVWordRow( lvWordList[lvIx] )
+                lvWord,lvWordNumber,lvWordRow = getLVWordRow( lvWordList[lvIx], 'NT' if NT else 'OT' )
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsFirstParts() is adding a number to RV '{rvWord}' from '{lvWord}' at {BBB} {c}:{v} {rvIx=}")
                 result = addNumberToRVWord( BBB, c,v, rvWord, lvWordNumber )
                 if result:
                     numAdded += 1
-                    if NT and 'N' in lvWordRow[state.wordTableHeaderList.index('GlossCaps')]:
+                    if NT and 'N' in lvWordRow[state.wordTableHeaderList['NT' if NT else 'OT'].index('GlossCaps')]:
                         numNS += 1
                 else:
                     logging.warning( f"Got addNumberToRVWord( {BBB} {c}:{v} '{rvWord}' {lvWordNumber} ) result = {result}" )
@@ -1579,12 +1661,12 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
                 assert matchedLvWordCount == len(lvWords)
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManually group1 {BBB} {c}:{v} matched {rvWord=} {lvWords=}" )
                 assert '¦' in lvVerseWordList[lvIx], f"{lvIx=} {lvVerseWordList[lvIx]=} from {lvVerseWordList=}"
-                lvWord,lvWordNumber,lvWordRow = getLVWordRow( lvVerseWordList[lvIx] )
+                lvWord,lvWordNumber,lvWordRow = getLVWordRow( lvVerseWordList[lvIx], 'NT' if NT else 'OT' )
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManually group1 is adding a number to RV '{rvWord}' from '{lvWord}' at {BBB} {c}:{v} {lvIx=}")
                 result = addNumberToRVWord( BBB, c,v, rvWord, lvWordNumber )
                 if result:
                     numAdded += 1
-                    if NT and 'N' in lvWordRow[state.wordTableHeaderList.index('GlossCaps')]:
+                    if NT and 'N' in lvWordRow[state.wordTableHeaderList['NT' if NT else 'OT'].index('GlossCaps')]:
                         numNS += 1
                 else:
                     logging.warning( f"Got addNumberToRVWord( {BBB} {c}:{v} '{rvWord}' {lvWordNumber} ) result = {result}" )
@@ -1673,11 +1755,12 @@ def doGroup2( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
 # end of connect_OET-RV_words_via_OET-LV.doGroup1
 
 
-def getLVWordRow( wordWithNumber:str ) -> Tuple[str,int,List[str]]:
+def getLVWordRow( wordWithNumber:str, testament:str ) -> Tuple[str,int,List[str]]:
     """
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"getLVWordRow( {wordWithNumber} )" )
+    fnPrint( DEBUGGING_THIS_MODULE, f"getLVWordRow( {wordWithNumber}, {testament} )" )
     assert '¦' in wordWithNumber
+    assert testament in ('OT','NT')
 
     try: word,wordNumber = wordWithNumber.split( '¦' ) # Gives a ValueError if the wordNumber separator character is missing
     except ValueError:
@@ -1687,8 +1770,8 @@ def getLVWordRow( wordWithNumber:str ) -> Tuple[str,int,List[str]]:
     except ValueError:
         logging.critical( f"getLVWordRow() got non-number '{wordNumber}' from '{wordWithNumber}'" )
         wordNumber = getLeadingInt( wordNumber )
-    assert wordNumber < len( state.wordTable )
-    wordRow = state.wordTable[wordNumber]
+    assert wordNumber < len( state.wordTable[testament] )
+    wordRow = state.wordTable[testament][wordNumber]
     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"'{word}' {wordRow}" )
     return word,wordNumber,wordRow
 # end of connect_OET-RV_words_via_OET-LV.getLVWordRow
@@ -1750,10 +1833,10 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, type(allWordMatches), type(match), match )
                 assert match.group(0) == word
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found {word=} {line=}" )
-                wordRow = state.wordTable[wordNumber]
+                wordRow = state.wordTable['NT' if NT else 'OT'][wordNumber]
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found {word=} {line=} {wordRow=}" )
                 addNominaSacra = False
-                if NT and 'N' in wordRow[state.wordTableHeaderList.index('GlossCaps')]: # Check that the RV doesn't already have it marked (with /nd)
+                if NT and 'N' in wordRow[state.wordTableHeaderList['NT'].index('GlossCaps')]: # Check that the RV doesn't already have it marked (with /nd)
                                       #   (This can happen after word numbers are deleted.)
                     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Have NS on {word=} {line[match.start()-6:match.start()]=} {line[match.end():match.end()+6]=} {line=}" )
                     if (match.end()==len(line) or not line[match.end()]=='¦') \
@@ -1793,9 +1876,8 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
 
 
 if __name__ == '__main__':
-    from multiprocessing import set_start_method, freeze_support
-    set_start_method('fork') # The default was changed on POSIX systems from 'fork' to 'forkserver' in Python3.14
-    freeze_support() # Multiprocessing support for frozen Windows executables
+    multiprocessing.set_start_method('fork') # The default was changed on POSIX systems from 'fork' to 'forkserver' in Python3.14
+    multiprocessing.freeze_support() # Multiprocessing support for frozen Windows executables
 
     # Configure basic Bible Organisational System (BOS) set-up
     parser = BibleOrgSysGlobals.setup( PROGRAM_NAME, PROGRAM_VERSION )

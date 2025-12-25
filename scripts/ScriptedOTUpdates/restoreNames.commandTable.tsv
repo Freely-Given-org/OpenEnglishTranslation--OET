@@ -858,9 +858,10 @@ dH	NUM,DEU,SA1,PSA,ISA								Jeshimon			יְשִׁימוֹן/(Jeshimon)		H3452 
 dH					CH1_5:14				Jeshishai			יְשִׁישָׁי/(Jeshishai)		H3454 (1) 1Chr 5:14*
 dH					CH1_4:36				Jeshohaiah			יְשׁוֹחָיָה/(Jeshohaiah)		H3439 (1) 1Chr 4:36*
 dH	CH1,CH2,EZR,NEH								Jeshua			יֵשׁוּעַ/(Jeshua)		H3442 (29) 1Chr 24:11, 2Chr 31:15, Ezra 2:2,6,36,40, ...
+dH	DEU,ISA								Jeshurun			יְשֻׁרוּן/(Jeshurun)		H3484 (4) Deu 32:15. 33:5,26, Isa 44:2*
 dH					CH1_4:36				Jesimiel			יְשִׁימָאֵל/(Jesimiel)		H3450 (1) 1Chr 4:36*
-dH									Jesse			יִשַׁי/(Jesse)		{ H3448 (42) Ruth 4:17,22, 1Sam 16:1,3,5,8-11, ...
-#dH									Yishay			יִשַׁי/(Yishay)		{ H3448 RECURSIVE ??? (42) Ruth 4:17,22, 1Sam 16:1,3,5,8-11, ...
+dH	RUT,SA1,SA2,KI1,CH1,PSA,ISA								Jesse			יִשַׁי/(Jesse)		{ H3448 (42) Ruth 4:17,22, 1Sam 16:1,3,5,8-11, ...
+#dH	RUT,SA1,SA2,KI1,CH1,PSA,ISA								Yishay			יִשַׁי/(Yishay)		{ H3448 RECURSIVE ??? (42) Ruth 4:17,22, 1Sam 16:1,3,5,8-11, ...
 dH					GEN_36:40,CH1_1:51				Jetheth			יְתֵת/(Jetheth)		H3509 (2) Gen 36:40, 1Chr 1:51*
 dH	EXO								Jethro			יִתְרוֹ/(Jethro)		H3503 (10) Exo 3:1, 4:18, 18:1-2,5-6,9-10,12*
 dH	GEN,CH1								Jetur			יְטוּר/(Jetur)		H3195 (3) Gen 25:15, 1Chr 1:31, 5:19*
@@ -872,7 +873,7 @@ dH	GEN,NUM,CH1								Jezer			יֵצֶר/(Jezer)		H3337 (3) Gen 46:24, Num 26:49
 wdH					CH1_12:3				Jeziel			יְזַוְאֵל/(Jeziel)		H3149 (1) 1Chr 12:3*
 wdH					NEH_12:42				Jezrahiah			יִזְרַחְיָה/(Jezrahiah)		{ H3156 (3) Neh 12:42*
 wdH					CH1_7:3				Izrahiah			יִזְרַחְיָה/(Izrahiah)		{ H3156 (3) 1Chr 7:3*
-wdH									Jezreel			יִזְרְעֵאל/(Jezreel)		H3157 man and city (36) Josh 15:56, 17:16, 19:18, Jdg 6:33, ...
+wdH	JOS,JDG,SA1,SA2,KI1,KI2,CH1,CH2,HOS								Jezreel			יִזְרְעֵאל/(Jezreel)		H3157 man and city (36) Josh 15:56, 17:16, 19:18, Jdg 6:33, ...
 dH					CH1_7:2				Jibsam			יִבְשָׂם/(Jibsam)		{{ H3005 (1) 1Chr 7:2*
 dH					CH1_7:2				Ibsam			יִבְשָׂם/(Ibsam)		{{ H3005 (1) 1Chr 7:2*
 dH					CH1_4:7				Jitschar			יִצְחַר/(Jitschar)		{ H3328 variant (1) 1Chr 4:7*
@@ -2467,10 +2468,11 @@ H					NUM_21:12,DEU_2:13,DEU_2:14				Zered			זֶרֶד		H2218 (4) Num 21:12, De
 dH					JDG_7:22				Zererah			צְרֵרָה/(Zererah)		H6888 (1) Jdg 7:22*
 dH	JOS,SA1,SA2,CH1,NEH								Ziklag			צִקְלַג/(Ziklag)		H6860 (15) Josh 15:31, 19:5, 1Sam 27:6, 30:1,14,26, 2Sam 1:1, ...
 dH									Zion			צִיּוֹן/(Zion)		H6726 (152) 2Sam 5:7, 1Ki 8:1, 2Ki 19:21,31, 1Chr 11:5, 2Chr 5:2, Psa 2:6, 9:11,14, ...
-wdH	NUM,DEU,JOS								Zin			צִיּוֹן/(Zin)		H6790 (10) Num 13:21, 20:1, 27:14, 33:36, 34:3-4, Deu 32:51, Josh 15:1,3*
+wdH	NUM,DEU,JOS								Zin			צִן/(Zin)		H6790 (10) Num 13:21, 20:1, 27:14, 33:36, 34:3-4, Deu 32:51, Josh 15:1,3*
 wdH	JOS,SA1,CH1,CH2								Ziph			זִיף		H2128 (10) Josh 15:24,55, 1Sam 23:14-16,24, ...
 wdH					CH2_20:16				Ziz			צִיץ/(Ziz)		H732 (1) 2Chr 20:16*
 dH	NUM,PSA,ISA,EZE								Zoan			צֹעַן/(Zoan)		H6814 (7) Num 13:22, Psa 78:12,43, Isa 19:11,13, 30:4, Eze 30:14*
+dH	GEN,DEU,ISA,JER								Zoar			צֹעַר/(Zoar)		H6820 (10) Gen 3:10, 14:2,8, 19:22-23,30, Deu 34:3, Isa 15:5, Jer 48:34*
 dH	SA1,SA2,KI1,CH1								Zobah			צוֹבָה/(Zobah)		H6678 (12) 1Sam 14:47, 2Sam 8:3,5,12, 10:6,8, 23:36, 1Ki 11:23, 1Chr 18:3,5,9, 19:6*
 dH	PSA								Zobah			צוֹבָה/(Zobah)		H760 Aram Zobah (1) Psa 60:0*
 dH					SA1_1:1				zophim			צוֹפִים/(zophim)		{ H7436 (1) 1Sam 1:1*
