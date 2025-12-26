@@ -42,6 +42,8 @@ CHANGELOG:
     2025-01-20 Remove 'of' from start of glosses which aren't 'construct'
     2025-03-14 Fix bug where '[is]' and '[was]' could wrongly end up as separate glosses
     2025-09-19 Fix '(plunder' gloss
+    2025-12-18 Fix joined English words 'towitness' 'topass', etc. in 'English' field
+    2025-12-24 Fix Hebrew singular pronouns glosses as plurals in 'English' field
 """
 from gettext import gettext as _
 # from typing import Dict, List, Tuple
@@ -65,10 +67,10 @@ from BibleOrgSys.OriginalLanguages import Hebrew
 sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew
 
-LAST_MODIFIED_DATE = '2025-09-18' # by RJH
+LAST_MODIFIED_DATE = '2025-12-23' # by RJH
 SHORT_PROGRAM_NAME = "convert_ClearMaculaOT_to_our_TSV"
 PROGRAM_NAME = "Extract and Apply Macula OT glosses"
-PROGRAM_VERSION = '0.55'
+PROGRAM_VERSION = '0.57'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -678,7 +680,7 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                     if wordState:
                         # What is 'determined' in Ezra 4:8!5, etc.
                         assert wordState in ('absolute','construct','determined'), f"Found unexpected {wordState=}"
-                    # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    {ref} {longID} {lang} '{wordOrMorpheme}' {English=} {gloss=}")
+                    # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    {theirRef} {longID} {lang} '{wordOrMorpheme}' {English=} {gloss=}" )
 
                     compound = elem.get('compound')
                     assert not compound # it seems to have gone
@@ -743,6 +745,17 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                     greekWord, greekStrong = elem.get('Greek'), elem.get('GreekStrong')
                     frame, subjRef, participantRef = elem.get('Frame'), elem.get('SubjRef'), elem.get('Ref')
 
+                    if morph.endswith('Sp3ms'): # Fix a number of Clear.Bible MAcula glosses which are glossed with a plural pronoun where the Hebrew is singular
+                        assert not gloss or not gloss.endswith( 'their' ), f"{theirRef} {lang} '{wordOrMorpheme}' {English=} {gloss=} {morph=}"
+                        if English.endswith( 'of_their' ):
+                            print( f"    {theirRef} {lang} '{wordOrMorpheme}' {English=} {gloss=} {morph=}" )
+                            English = English.replace( 'their', 'his/it' )
+                            print( f"          Changed English to {English=}" )
+                        elif English.endswith( 'their' ):
+                            print( f"    {theirRef} {lang} '{wordOrMorpheme}' {English=} {gloss=} {morph=}" )
+                            English = English.replace( 'their', 'his/its' )
+                            print( f"          Changed English to {English=}" )
+
                     # Do some on-the-fly fixes
                     # Note: We can't handle the logic below with our SBE tables
                     if gloss:
@@ -772,6 +785,9 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                             # assert gloss.startswith( 'off' ) or gloss.startswith( 'of_' )
                             # if gloss.startswith( 'of_' ):
                             gloss = gloss[3:]
+                        if 'towitness' in gloss or 'topass' in gloss or 'toaccount' in gloss or 'topieces' in gloss or 'tofall' in gloss or 'todrink' in gloss \
+                        or 'inpledge' in gloss or 'onfire' in gloss or 'havedone' in gloss or 'ofstones' in gloss or 'letuntie' in gloss  or 'isdue' in gloss:
+                            print( f"Bad gloss: {gloss=} {English=}" ); halt
                     if English:
                         if 'temple' in English:
                             # print( f"{theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
@@ -795,6 +811,31 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                             # assert English.startswith( 'off' ) or English.startswith( 'of_' )
                             # if English.startswith( 'of_' ):
                             English = English[3:]
+
+                        English = English.replace( 'aspriest','as_priest' ).replace( 'greatheight','great_height' ).replace( 'havedone','have_done' ) \
+                                        .replace( 'inpledge','in_pledge' ).replace( 'isdue','is_due' ) \
+                                        .replace( 'ofstones','of_stones' ).replace( 'onfire','on_fire' )
+                        for toJoinedWord in ('a_','account','an_','anger','be_','blaspheme','blow','boil','drink','death','dwell','eat','enter',
+                                           'fail','fall','flight','happen','health','inherit','jealousy','know','lament','life',
+                                           'meet','no_','nothing','pass','perish','pieces','remembrance','return','ruin',
+                                           'shame','shun','silence','sin','stumble','swerve','the_','walk','witness','wrath'):
+                            if f'to{toJoinedWord}' in English:
+                                print( f"        Fixing {theirRef=} {gloss=} {English=}" )
+                                English = English.replace( f'to{toJoinedWord}', f'to_{toJoinedWord}' )
+                        if (English.startswith('to') or '_to' in English) \
+                        and len(English)>4 and not English.startswith('to_') and not English.endswith('_to') and not English.endswith('_of') and not English.endswith('_together') \
+                        and '_toil' not in English and 'told' not in English and 'torn' not in English and 'took' not in English and 'tool' not in English and 'toward' not in English and 'torch' not in English and 'torment' not in English and 'tower' not in English \
+                        and not English.startswith('took') and not English.startswith('tore_') and not English.startswith('torrent') and not English.startswith('toss') and not English.startswith('touch') and not English.startswith('too_') \
+                        and English not in ('today','together','toil','toiled','toiling','toils','tolerate','tolerated','tomb','tombs','tomorrow','tongs','tongue','tongues',
+                                            'tooth','topaz','topple','torch','torches','torment','tormented','torrent','torrent-bed','tossing',
+                                            'totally','totter','tottering','totters','toward','towards','tower','towered','towers','town','towns',
+                                            'together_with',):
+                            if 'to_' not in English and 'too_' not in English:
+                                print( f"Got {gloss=} {English=}" ); halt
+                        # if English.startswith( 'call_'): print( f"{gloss=} {English=}" )
+                        if 'towitness' in English or 'topass' in English or 'toaccount' in English \
+                        or 'letuntie' in English or 'isdue' in English or 'aspriest' in English:
+                            print( f"Bad English: {gloss=} {English=}" ); halt
 
                     # Get all the parent elements so we can determine the nesting
                     startElement = elem
