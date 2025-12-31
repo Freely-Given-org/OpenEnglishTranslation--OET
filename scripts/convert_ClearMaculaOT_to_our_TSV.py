@@ -67,7 +67,7 @@ from BibleOrgSys.OriginalLanguages import Hebrew
 sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew
 
-LAST_MODIFIED_DATE = '2025-12-23' # by RJH
+LAST_MODIFIED_DATE = '2025-12-30' # by RJH
 SHORT_PROGRAM_NAME = "convert_ClearMaculaOT_to_our_TSV"
 PROGRAM_NAME = "Extract and Apply Macula OT glosses"
 PROGRAM_VERSION = '0.57'
@@ -786,7 +786,9 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                             # if gloss.startswith( 'of_' ):
                             gloss = gloss[3:]
                         if 'towitness' in gloss or 'topass' in gloss or 'toaccount' in gloss or 'topieces' in gloss or 'tofall' in gloss or 'todrink' in gloss \
-                        or 'inpledge' in gloss or 'onfire' in gloss or 'havedone' in gloss or 'ofstones' in gloss or 'letuntie' in gloss  or 'isdue' in gloss:
+                        or 'havedone' in gloss or 'inpledge' in gloss or 'isdue' in gloss \
+                        or 'letloose' in gloss \
+                        or 'ofstones' in gloss or 'onfire' in gloss:
                             print( f"Bad gloss: {gloss=} {English=}" ); halt
                     if English:
                         if 'temple' in English:
@@ -814,6 +816,7 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
 
                         English = English.replace( 'aspriest','as_priest' ).replace( 'greatheight','great_height' ).replace( 'havedone','have_done' ) \
                                         .replace( 'inpledge','in_pledge' ).replace( 'isdue','is_due' ) \
+                                        .replace( 'letloose','let_loose' ) \
                                         .replace( 'ofstones','of_stones' ).replace( 'onfire','on_fire' )
                         for toJoinedWord in ('a_','account','an_','anger','be_','blaspheme','blow','boil','drink','death','dwell','eat','enter',
                                            'fail','fall','flight','happen','health','inherit','jealousy','know','lament','life',
@@ -834,7 +837,7 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                                 print( f"Got {gloss=} {English=}" ); halt
                         # if English.startswith( 'call_'): print( f"{gloss=} {English=}" )
                         if 'towitness' in English or 'topass' in English or 'toaccount' in English \
-                        or 'letuntie' in English or 'isdue' in English or 'aspriest' in English:
+                        or 'letloose' in English or 'isdue' in English or 'aspriest' in English:
                             print( f"Bad English: {gloss=} {English=}" ); halt
 
                     # Get all the parent elements so we can determine the nesting

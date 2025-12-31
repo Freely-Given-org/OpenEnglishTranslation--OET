@@ -79,7 +79,7 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-12-23' # by RJH
+LAST_MODIFIED_DATE = '2025-12-30' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.82'
@@ -334,6 +334,7 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     ('demon-possessed','unclean'),
     ('desert','ˊₐrāⱱāh'),('plain','ˊₐrāⱱāh'),
     ('deserted','desolate'),
+    ('destroyed','consumed'),('destroyed','devoured'),
     ('dinosaur','dragon'), # Rev 12:3
     ('driving','throwing'),
     ('eastern','east'),
@@ -346,6 +347,7 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     ('fulfilled','accomplished'),
     ('godly','devout'),
     ('grapevine','vine'),
+    ('harvests','fruit'),
     ('heavenly','heavens'),('heavenly','heaven'),
     ('honour','glorify'),
     ('huge','great'),
@@ -385,6 +387,7 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     ('poor','humble'),
     ('praised','glorifying'),
     ('preaching','proclaiming'),
+    ('produce','fruit'),
     ('pure','holy'), ('purity','holiness'),
     ('quiet','desolate'),
     ('quiet','silenced'),
@@ -861,7 +864,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
     # Make a list of the books that we're going to process
     booklist_to_process = []
     for BBB in lv.books:
-        if BibleOrgSysGlobals.commandLineArguments.fastMode and BBB not in ('PRO','ISA',):
+        if BibleOrgSysGlobals.commandLineArguments.fastMode and BBB not in ('NUM','PRO','ISA',):
             continue
         if BBB in ('CO1',): continue # TODO: CO1_14:33 gives an issue
         booklist_to_process.append( BBB )
