@@ -1,4 +1,4 @@
-\id 1CH - Open English Translation—Readers’ Version (OET-RV) v0.1.02
+\id 1CH - Open English Translation—Readers’ Version (OET-RV) v0.1.04
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 CH1
@@ -47,7 +47,7 @@
 \p
 \v 17 Shem’s sons were Elam, Ashur, Arpakshad, Lud, and Aram. \add Aram’s sons were\add*: Uts, Hul, Geter, and Meshek.
 \v 18 Arpakshad was the father of Shelah, and Shelah was the father of Eber.
-\v 19 Eber had two sons: Peleg (\add which sounds like the Hebrew word for ‘divided’\add* because in his lifetime, the earth was divided)\x + \xo 1:19 \xt Gen 11:1-9.\x* and Yoktan.
+\v 19 Eber had two sons: Peleg (\add which sounds like the Hebrew word for ‘divided’\add*, because in his lifetime, the earth was divided)\x + \xo 1:19 \xt Gen 11:1-9.\x* and Yoktan.
 \v 20 Yoktan was the ancestor of: Almodad, Shelef, Hatsarmavet, Yerah,
 \v 21 Hadoram, Uzal, Diklah,
 \v 22 Eybal, Abimael, Sheva,
@@ -57,17 +57,17 @@
 \v 25 Eber, Peleg, Reu,
 \v 26 Serug, Nahor, Terah,
 \v 27 and Abram (\add whose name God later changed to\add* Abraham).
-\s1 Ismail’s descendants
+\s1 Yishmael’s descendants
 \r (Gen. 25:12-16)
 \p
-\v 28 Abraham’s sons were Yitshak \add (Isaac)\add* and Yishma’el \add (Ishmael)\add*.
+\v 28 Abraham’s sons were Yitshak \add (Isaac)\add* and Yishmael \add (Ishmael)\add*.
 \v 29 These were their family lines: The firstborn son of Yishmael \add (the son of Abraham’s slave-wife Hagar)\add* was Nevayot, then his other sons Kedar, Adbeel, Mibsam,
 \v 30 Mishma, Dumah, Massa, Hadad, Tema,
 \v 31 Yetur, Nafish, and Kedemah. Those were Yishmael’s \add twelve\add* sons.
 \v 32 The sons of Abraham’s slave-wife Keturah were Zimran, Yokshan, Medan, Midyan, Yishbak, and Shuah. Yokshan’s sons were Sheva and Dedan.
 \v 33 Midyan’s sons were Efah, Efer, Hanok, Abida, and Eldaah. All those were Keturah’s descendants.
 \p
-\v 34 Abraham had his son Yitshak \add by his wife Sarah\add*, and Yitshak’s sons: were Esau and \add Yakov, whose name God later changed to\add* Yisrael \add (Israel)\add*.
+\v 34 Abraham had his son Yitshak \add by his wife Sarah\add*, and Yitshak’s sons were Esau and \add Yakov, whose name God later changed to\add* Yisrael \add (Israel)\add*.
 \s1 Esau’s descendants
 \r (Gen. 36:1-19)
 \p
@@ -77,7 +77,7 @@
 \s1 Seir’s descendants
 \r (Gen. 36:20-30)
 \p
-\v 38 Seir \add was another descendant of Esau and his\add* sons were Lotan, Shoval, Tsiveon, Anah, Dishon, Etser, and Dishan.
+\v 38 Seir \add was another descendant of Esau, and his\add* sons were Lotan, Shoval, Tsiveon, Anah, Dishon, Etser, and Dishan.
 \v 39 Lotan’s sons were Hori and Homam, and Lotan’s sister was Timna.
 \v 40 Shoval’s sons were Alyan, Manahat, Eyval, Shefo, and Onam. Tsiveon’s sons were Ayyah and Anah.
 \v 41 Anah’s son was Dishon. Dishon’s sons were Hamran, Eshban, Ithran, and Keran.
@@ -133,8 +133,8 @@
 \p
 \v 21 Later, when Hetsron was sixty years old, he \add had sexual intercourse\add* with a daughter of Makir from the region of Gilead and married her. \add Hetsron’s new wife\add* gave birth to \add their son\add* Seguv.
 \v 22 Seguv was the father of Yair, and Yair controlled twenty-three cities in the Gilead region.
-\v 23 \add But\add* Geshur and Aram captured Havvot-Yair and Kenat from them, plus \add their surrounding towns\add*—sixty towns \add in all\add* \add populated by\add* descendants of Makir (the father of Gilead).
-\v 24 After Hetsron’s death in Kalev-Efratah, then his wife Aviyyah bore to him Ashhur, the father of Tekoa.
+\v 23 \add But\add* Geshur and Aram captured Havvot-Yair and Kenat from them, plus \add their surrounding towns\add*—sixty towns \add in all,\add* \add populated by\add* descendants of Makir (the father of Gilead).
+\v 24 After Hetsron’s death in Kalev-Efratah, his wife Aviyyah gave birth to his son Ashhur, the father of Tekoa.
 \s1 Yerahme’el’s descendants
 \p
 \v 25 Hetsron’s oldest son was Yerahme’el \add and\add* his sons were Ram (the oldest), Bunah, Oren, Otsem, and Ahiyyah.
@@ -142,7 +142,7 @@
 \v 27 The sons of Yerahme’el’s oldest son, Ram, were Maats, Yamin, and Eker.
 \v 28 Onam’s sons were Shammai and Yada, and Shammai’s sons were Nadav and Avishur.
 \p
-\v 29 Abishur’s wife was Avihayil, and \add their sons were\add* Ahban and Molid.
+\v 29 Avishur’s wife was Avihayil, and \add their sons were\add* Ahban and Molid.
 \v 30 Nadav’s sons were Seled and Appayim. (Seled died childless.)
 \v 31 Appayim’s son was Yishi, Yishi’s son was Sheshan, and Sheshan’s son was Ahlai.
 \p
@@ -150,10 +150,10 @@
 \v 33 Yonatan’s sons were Pelet and Zaza.
 \m Those were the descendants of Yerahme’el.
 \p
-\v 34 Sheshan had no sons, only daughters. He had a \add male\add* servant from Egypt whose name was Yarha
-\v 35 and Sheshan gave his daughter to \add him\add* for a wife and \add they had a son\add* Attai.
+\v 34 Sheshan had no sons, only daughters. He had a \add male\add* servant from Egypt whose name was Yarha,
+\v 35 and Sheshan gave his daughter to \add him\add* for a wife, and \add they had a son\add* Attai.
 \v 36 Attai was the father of Natan, and Natan was the father of Zavad.
-\v 37 Zabad was the father of Eflal, and Eflal was the father of Oved.
+\v 37 Zavad was the father of Eflal, and Eflal was the father of Oved.
 \v 38 Oved was the father of Yehu, and Yehu was the father of Azaryah.
 \v 39 Azaryah was the father of Helets, and Helets was the father of Eleasah.
 \v 40 Eleasah was the father of Sismai, and Sismai was the father of Shallum.
@@ -174,8 +174,8 @@
 \v 51 Salma (\add founder\add* of Beyt-Lehem), \add and\add* Haref (\add founder\add* of Beyt-Gader).
 \v 52 The descendants of Shobal (\add founder\add* of Kiriat-Yearim) were Haroeh, half of the Manahatites,
 \v 53 and the clans from Kiriat-Yearim: the Yitrites, the Putites, the Shumatites, and the Mishraites. From those came the Zoratites and Eshtaolites.
-\v 54 Salma’s descendants were \add the people of\add* Beyt-Lehem, the Netofatites, the clan of Atrot-Beyt-Yoav, half of the Manahatites, \add who were also\add* Zorites.
-\v 55 The clans of the scribes lived at Yabez: the Tiratites, the Shimeatites, and the Sucatites. These, the Kenites who came from Hammat, the ancestor of Rekav’s family.
+\v 54 Salma’s descendants were \add the people of\add* Beyt-Lehem, the Netofatites, the clan of Atrot-Beyt-Yoav, and half of the Manahatites, \add who were also\add* Zorites.
+\v 55 The clans of the scribes lived at Yabez: the Tiratites, the Shimeatites, and the Sucatites. These are the Kenites who descended from Hammat, the ancestor of Rekav’s family.
 \c 3
 \s1 King David’s children
 \p
@@ -195,7 +195,7 @@
 \v 10 Shelomoh had a son Rehovoam, he had a son Aviyyah, he had a son Asa, he had a son Yehoshafat,
 \v 11 he had a son Yehoram, he had a son Ahazyah, he had a son Yoash,
 \v 12 he had a son Amatsyah, he had a son Azaryah, he had a son Yotham,
-\v 13 he had a son Ahaz, he had a son Hezekiyyah, he had a son Menashsheh,
+\v 13 he had a son Ahaz, he had a son Hizkiyah, he had a son Menashsheh,
 \v 14 he had a son Amon, \add and\add* he had a son Yosiyyah.
 \v 15 Yosiyyah had four sons: The oldest was Yohanan, second was Yehoyakim, third was Tsedekiyyah, \add and\add* the fourth was Shallum.
 \v 16 Yehoyakim had a son Yekaneyah, \add and\add* he had a son Tsedekiyyah.
@@ -206,8 +206,8 @@
 \v 19 Pedayah’s sons were Zerubbavel and Shimei. \add Two of\add* Zerubbavel’s sons were Meshullam and Hananyah, and their sister was Shelomot.
 \v 20 Zerubbavel’s five \add other\add* sons were Hashubah, Ohel, Berekyah, Hasadyah, and Yushab-Hesed.
 \v 21 Hananyah’s descendants were Pelatyah, Yeshayah, \add and\add* the sons of Refayah, of Arnan, of Ovadyah, and of Shekanyah.
-\v 22 Shekanyah’s six descendants were Shemayah, and Shemayah’s sons Hattush, Yigal, Bariyah, Nearyah, and Shafat.
-\v 23 Nearyah’s three sons were Elyoenai, Hizkiyyah, and Azrikam.
+\v 22 Shekanyah’s six descendants were Shemayah and Shemayah’s sons Hattush, Yigal, Bariyah, Nearyah, and Shafat.
+\v 23 Nearyah’s three sons were Elyoenai, Hizkiyah, and Azrikam.
 \v 24 Elyoenai’s seven sons were Hodavyah, Eliashiv, Pelayah, Akkuv, Yohanan, Delayah, and Anani.
 \c 4
 \s1 The other descendants of Yehudah (Judah)
@@ -665,7 +665,7 @@
 \v 3 \add So\add* all the Israeli elders went to the king at Hevron, and David made a solemn agreement with them at Hevron \add in front\add* of Yahweh. Then they anointed David as king over Yisrael according to Yahweh’s message \add that was given through\add* \add the prophet\add* Shemuel \add (Samuel)\add*.
 \p
 \v 4 Then David and all Yisrael went to Yerushalem (\add Jerusalem, which was also known as\add* Yevus \add because the Yevusites were living there\add*).\x + \xo 11:4: \xt Josh 15:63; Jdg 1:21.\x*
-\v 5 The inhabitants \add inside\add* Yevus said to David, “You won’t \add be entering this place\add*.” But David captured \add what became known as\add* the Zion stronghold, that is, the city of David.
+\v 5 The inhabitants \add inside\add* Yevus said to David, “You won’t \add be entering this place\add*.” But David captured \add what became known as\add* the Tsiyyon \add (Zion)\add* stronghold, that is, the city of David.
 \v 6 \add He\add* had said, “Whoever strikes down the Yevusites first will become \add my army commander\add*.” Tseruyah’s son Yoav went up \add over the wall\add* first, and he became head \add of the army\add*.
 \v 7 David \add started\add* living in that stronghold, so then they called it the city of David.
 \v 8 He built the city up all around, from the terrace \add to the surrounding walls\add*, and Yoav restored the rest of the city.
@@ -787,7 +787,7 @@
 \p
 \v 1 \add One day\add* David consulted with all his leaders—the commanders of thousands and of hundreds.
 \v 2 David said to all the assembly of Yisrael, “If it \add sounds\add* good to you all, and to our god Yahweh, let’s spread out to \add all our different regions to recruit\add* our relatives, along with the priests and the Levites in the cities of their pasturelands, \add so they can join\add* us.
-\v 3 And let’s return our God’s box \add back here\add*, because we didn’t \add use it to ask God for guidance in Shaul’s time\add*.”
+\v 3 And let’s return our god’s box \add back here\add*, because we didn’t \add use it to ask God for guidance in Shaul’s time\add*.”
 \v 4 All the assembled people agreed because everyone \add could see that it was the right thing to do\add*.
 \p
 \v 5 \add So\add* David assembled all Yisrael from Shihor \add river down\add* in Egypt and as far \add north\add* as Lebo-Hamat, to bring in God’s chest from Kiriat-Yearim.\x + \xo 13:5: \xt 1Sam 7:1-2.\x*
@@ -854,10 +854,10 @@
 \v 10 From Uzziyel’s descendants: Amminadav the leader and 112 of his relatives.
 \p
 \v 11 David summoned the priests Tsadok and Abiatar and these Levites: Uriel, Asayah, Yoel, Shemayah, Eliel, and Amminadav.
-\v 12 He told them, “You are the heads of the Levite clans. Consecrate yourselves, you and your relatives, and bring the box of Yisrael’s God Yahweh up to where I’ve prepared \add a place\add* for it.
-\v 13 The first \add time we tried,\add* it wasn’t you \add Levites, so\add* our God Yahweh burst out against us because we \add hadn’t requested his instruction\add*.”
+\v 12 He told them, “You are the heads of the Levite clans. Consecrate yourselves, you and your relatives, and bring the box of Yisrael’s god Yahweh up to where I’ve prepared \add a place\add* for it.
+\v 13 The first \add time we tried,\add* it wasn’t you \add Levites, so\add* our god Yahweh burst out against us because we \add hadn’t requested his instruction\add*.”
 \p
-\v 14 \add So\add* the priests and the Levites consecrated themselves to bring up the \add sacred\add* box of Yisrael’s God, Yahweh.
+\v 14 \add So\add* the priests and the Levites consecrated themselves to bring up the \add sacred\add* box of Yisrael’s god, Yahweh.
 \v 15 Then, \add following Yahweh’s instructed as given to Mosheh\add* \add (Moses)\add*, Levi’s descendants carried God’s \add sacred\add* chest with it’s poles on their shoulders.\x + \xo 15:15: \xt Exo 25:14.\x*
 \p
 \v 16 \add Meanwhile,\add* David instructed the Levite leaders to assign their brothers as the singers with instruments of song, harps, lyres, and cymbals—playing to raise a sound of \add celebration\add*.
@@ -912,7 +912,7 @@
 \v 13 You descendants of his servant Yisrael,
 \q1 you descendants of Yakov, the one who he chose.
 \q1
-\v 14 He is our God, Yahweh.
+\v 14 He is our god, Yahweh.
 \q1 \add He judges the entire world\add*.
 \q1
 \v 15 Remember his agreement forever—
@@ -1031,7 +1031,7 @@
 \v 17 This was such a small thing in your eyes, God, and you’ve spoken about \add the future of your servant’s family\add*, and you’ve \add blessed me more than I deserve\add*, Yahweh God.
 \v 18 What more can I, David say to you \add about how\add* you’ve honoured your servant, because you \add certainly know me well\add*.
 \v 19 Yahweh, you’ve done all these great \add things\add* for the sake of your servant, and \add done just what you wanted in order to reveal your greatness\add*.
-\v 20 Yahweh, there’s no one else like you, and no God except you, \add as we’ve all heard for ourselves\add*.
+\v 20 Yahweh, there’s no one else like you, and no god except you, \add as we’ve all heard for ourselves\add*.
 \v 21 \add There’s no other country\add* like your people Yisrael—the only nation in the world where \add you\add* God, rescued the people in order to make them your own. That made you famous and also feared, as you drove the people groups out ahead of your people who you ransomed out of Egypt.
 \v 22 You took your people Yisrael to be your people forever, and you, Yahweh, became our god.
 \p
@@ -1124,7 +1124,7 @@
 \v 1 Then a trouble-maker went against Yisrael \add by\add* encouraging David \add to take a census of\add* Yisrael,
 \v 2 \add So\add* David \add ordered\add* Yoav and \add the other officials\add*, “Go \add and\add* count Yisrael from Be’er-Sheva \add in the south\add* and as far \add north\add* as Dan, \add then come and tell me so that I’ll know how many warriors I have\add*.”
 \p
-\v 3 “My master, the king, may Yahweh \add multiply his people one hundred times over\add*. Aren’t they all \add your\add* servants?” Yoav \add diplomaticaly\add* \add queried\add*, “\add So\add* why does my master \add want to do\add* this? Why should \add he bring judgement on\add* Yisrael?”
+\v 3 “My master, the king, may Yahweh \add multiply his people one hundred times over\add*. Aren’t they all \add your\add* servants?” Yoav \add diplomatically\add* \add queried\add*, “\add So\add* why does my master \add want to do\add* this? Why should \add he bring judgement on\add* Yisrael?”
 \v 4 \add But the king insisted, so Yoav was forced to go and survey the entire country\add*. Then he returned to Yerushalem
 \v 5 and \add reported the numbers\add* to David. Yisrael had 1.1 million sword-wielding men, and Yehudah had 470 thousand.
 \v 6 \add However,\add* \add Yoav\add* had \add intentionally\add* not counted \add the tribes of\add* Levi and Benyamin, because \add he\add* was horrified by the king’s command.
@@ -1211,7 +1211,7 @@
 \v 8 Ladan’s three sons were: Yehiel (the oldest), Zetam, and Yoel.
 \v 9 Shimei’s\f + \fr 23:9 \ft Possibly the wrong name got into the Hebrew here, because it disagrees with v10.\f* three sons were: Shelomot, Haziel, and Haran. (They were leaders of Ladan’s clans.)
 \v 10 Shimei’s four sons were: Yahat, Zina,\f + \fr 23:10 \ft Some ancient translations have Zizah here, which would seem to fit better with v11.\f* Yeush, and Beriah.
-\v 11 (Yahat was the head, and Zizah was second. Yeush amd Beriah were \add grouped together as one family unit as they only had few descendants\add*.)
+\v 11 (Yahat was the head, and Zizah was second. Yeush and Beriah were \add grouped together as one family unit as they only had few descendants\add*.)
 \s2 The Kohatites
 \p
 \v 12 Kohat’s four sons were: Amram, Yitshar, Hevron, and Uzziel.
@@ -1231,7 +1231,7 @@
 \v 23 Mushi had three sons: Mahli, Eder, and Yerimot.
 \p
 \v 24 Those were Levi’s descendants \add by their clans and their appointments, who did the work of serving in Yahweh’s temple once they reached twenty years old\add*,
-\v 25 because David had said, “Yisrael’s God Yahweh has given peace to his people, and he’ll \add now\add* live forever in Yerushalem,
+\v 25 because David had said, “Yisrael’s god Yahweh has given peace to his people, and he’ll \add now\add* live forever in Yerushalem,
 \v 26 so the Levites won’t need to carry the \add sacred\add* tent anymore, along with all its equipment.”\x + \xo 23:26: \xt Deu 10:8.\x*
 \v 27 \add So one of David’s final instructions had been to count the Levite men who were twenty years old and over\add*,
 \v 28 because their work was to \add assist\add* Aharon’s descendants in their work in Yahweh’s temple. They \add were in charge\add* of the temple courtyards and siderooms, \add in charge of the purification ceremonies\add*, and did other work at the temple.\x + \xo 23:28-32: \xt Num 3:5-9.\x*
@@ -1460,7 +1460,7 @@
 \v 19 Ovadyah’s son Yishmayah was \add the leader of the tribe of\add* Zevulun.
 \li1 Azriel’s son Yerimot was \add the leader of the tribe of\add* Naftali.
 \li1
-\v 20 Azazyah’s son Hoshea was \add the leader of the tribe of\add* Efraim.
+\v 20 Azazyah’s son Hoshea was \add the leader of the tribe of\add* Efrayim.
 \li1 Pedayah’s son Yoel was \add the leader of\add* the half-tribe of Menashsheh.
 \li1
 \v 21 Zekaryah’s son Yiddo was \add the leader of\add* the half-tribe of Menashsheh in Gilead.
@@ -1517,7 +1517,7 @@
 \v 5 Then out of the many sons that he’s given me, he chose my son Shelomoh \add (Solomon)\add* to \add be the next king to rule his kingdom of\add* Yisrael.
 \p
 \v 6 “Then he told me, ‘Your son Shelomoh is the one who will build my temple and the courtyards \add around it\add*, because I’ve chosen him to be like my son and I’ll be like a father to him.
-\v 7 I’ll establish his kingdom forever, if he’s diligent at following my instructions and \add obeying\add* my judgments, like he is at present.’
+\v 7 I’ll establish his kingdom forever, if he’s diligent at following my instructions and \add obeying\add* my judgements, like he is at present.’
 \p
 \v 8 “\add So\add* now, in \add front\add* of all Yisrael, Yahweh’s assembly, and in the ears of our god, \add I challenge you all to discover and obey\add* all the commands of your god Yahweh so that you’ll all possess the good land and you’ll all leave your sons after you to inherit it forever.
 \p
@@ -1534,7 +1534,7 @@
 \v 18 Then the weight of refined gold for the incense altar, and for making the winged creatures that spread out across the top of the box \add containing\add* Yahweh’s agreement,
 \v 19 \add saying\add*, “I’ve written down all those plans \add with Yahweh’s direction as he gave me instructions for what has to be done\add*.”
 \v 20 Then David told his son Shelomoh, “Be strong and courageous, and \add get going\add*. Don’t be afraid or discouraged because Yahweh God, my god, is with you. He won’t leave you and he won’t abandon you until all the work of \add constructing\add* Yahweh’s residence \add and the necessary equipment\add* is finished.
-\v 21 Listen, the divisions of the priests and the Levites for all the service of the god’s house and all the \add skilled workmen will be backing you in all the work\add*. The officals and all the people are \add ready to follow your instructions\add*.”
+\v 21 Listen, the divisions of the priests and the Levites for all the service of the god’s house and all the \add skilled workmen will be backing you in all the work\add*. The officials and all the people are \add ready to follow your instructions\add*.”
 \c 29
 \s1 Donations for the temple
 \s4 Full kingdom
@@ -1564,7 +1564,7 @@
 \v 18 Yahweh, the god of our ancestors Abraham, Yitshak \add (Isaac)\add*, and Yisrael \add (Israel)\add*, \add help your people continue to desire to do things like this forever, and help them remain loyal to you\add*.
 \v 19 \add Also,\add* give my son Shelomoh \add (Solomon)\add* a \add sincere desire\add* to follow your instructions, your testimonies, and your regulations, and to do \add everything needed\add* to build the temple \add following all my preparation work\add*.”
 \p
-\v 20 Then David told all the assembled \add people\add*, “Bless your God Yahweh.” and the entire assembly blessed Yahweh, the god of their ancestors. Then they bowed down to \add honour\add* \add both\add* Yahweh and the king.
+\v 20 Then David told all the assembled \add people\add*, “Bless your god Yahweh.” and the entire assembly blessed Yahweh, the god of their ancestors. Then they bowed down to \add honour\add* \add both\add* Yahweh and the king.
 \p
 \v 21 Then they offered sacrifices to Yahweh, and sacrificed burnt offerings to Yahweh on the following day: 1,000 bulls, 1,000 rams, 1,000 lambs, plus their drink offerings and sacrifices for all Yisrael in abundance.
 \v 22 They ate and drank \add in Yahweh’s honour\add* that day with great celebration.

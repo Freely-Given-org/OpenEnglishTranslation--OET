@@ -61,8 +61,8 @@
 אֱלִישָׁפָט	Elishaphat
 אֱלִישׁוּעַ	Elishua
 אֱלָהּ	god;god_of;gods;gods_of
-אֱלֹהִים	Elohe_of;God;god;God's;God_of;god_of;goddess_of;Godly;gods;gods_of;great;judges;mighty;spirit
-אֱלֹהַּ	God;god;God's;God_of;god_of
+אֱלֹהִים	Elohe_of;God;god;God's;god_of;God_of;goddess_of;Godly;gods;gods_of;great;judges;mighty;spirit
+אֱלֹהַּ	God;god;God's;god_of;God_of
 אֱלוּל	Elul
 אֱמֶת	fairness;faith;faithful;faithfully;faithfulness;faithfulness_of;good_faith;lasting;purest;reliable;right;security;sure;sure_of;true;truly;trustworthy;truth;truth_of;truthful
 אֱמֹרִי	Amorite;Amorites
@@ -222,7 +222,7 @@
 אֲרְיוֹךְ	Arioch
 אֲרִאֵיל	altar_hearth;hearth
 אֲרִי	lion;lion's;lions;lions'
-אֲרִיאֵל	Ariel;ariel
+אֲרִיאֵל	ariel;Ariel
 אֲרִידַי	Aridai
 אֲרִידָתָא	Aridatha
 אֲרִיךְ	fitting
@@ -339,7 +339,7 @@
 אֵיפֹה	what_kind;where
 אֵיתָן	constant;enduring;Ethan;ever-flowing;hard;mighty;normal_depth_of;perennial;running;steady
 אֵיתָנִים	ethanim
-אֵל	-el;divine;El;El-;El_of;God;god;God's;God_of;god_of;gods;great_of;leaders_of;mighty;Mighty_One;Mighty_One_of;oaks;power_of;these;those
+אֵל	-el;divine;El;El-;El_of;god;God;God's;God_of;god_of;gods;great_of;leaders_of;mighty;Mighty_One;Mighty_One_of;oaks;power_of;these;those
 אֵל בְּרִית	-berith
 אֵלִיָּה	Elijah
 אֵלֶם	gods;silent
@@ -635,9 +635,9 @@
 אָבֵל כְּרָמִים	-keramim;Abel-
 אָבֵל מְחוֹלָה	-meholah;Abel-
 אָבֵל מִצְרַיִם	-mizraim;Abel-
-אָבַד	annihilate;annihilated;banish;blot_out;bringing_~_toruin;broken;caused_~_toperish;comes_to_nothing;corrupts;destroy;destroyed;destroying;destroys;destruction;fail;gone;lose;loses;lost;perish;perished;perishes;perishing;ruined;silence;squander;there_is_no;to_be_destroyed;to_destroy;to_perish;void_of;wandering;wiped_out;wretched;you_destroy;you_will_be_destroyed;you_will_perish
+אָבַד	annihilate;annihilated;banish;blot_out;bringing_~_to_ruin;broken;caused_~_to_perish;comes_to_nothing;corrupts;destroy;destroyed;destroying;destroys;destruction;fail;gone;lose;loses;lost;perish;perished;perishes;perishing;ruined;silence;squander;there_is_no;to_be_destroyed;to_destroy;to_perish;void_of;wandering;wiped_out;wretched;you_destroy;you_will_be_destroyed;you_will_perish
 אָבַךְ	swirled_upward
-אָבַל	caused_grieving;caused_~_tolament;dries_up;lament;mourn;mourned;mourning;mourns;pretend_to_be_a_mourner
+אָבַל	caused_grieving;caused_~_to_lament;dries_up;lament;mourn;mourned;mourning;mourns;pretend_to_be_a_mourner
 אָבַס	fattened
 אָבַק	wrestled
 אָבַר	soars
@@ -652,7 +652,7 @@
 אָדַשׁ	go_on
 אָדָם	Adam;adam;another;any;anyone;common_sort;human;human_being;human_beings;human_life;humanity;humankind;humans;man;man's;mankind;men;men's;mortal;mortals;one;others;people;person;person's;person_of;persons;population;someone
 אָדֹם	dyed_red;red;ruddy
-אָדוֹן	husbands_of;Lord;lord;lord's_of;lord_of;Lord_of;lords;lords_of;master;master's_of;master_of;masters_of;owner_of;supervisors_of
+אָדוֹן	husbands_of;lord;Lord;lord's_of;Lord_of;lord_of;lords;lords_of;master;master's_of;master_of;masters_of;owner_of;supervisors_of
 אָהֵב	beloved;companions_of;fell_in_love;fell_in_love_with;friend;friend_of;friends_of;like;likes;love;love_!;love_of;loved;loved_of;lover_of;lovers_of;loves;loves_of;loving
 אָהַל	bright;moved_~_tent;pitch_~_tent
 אָהָל	aloes
@@ -679,7 +679,7 @@
 אָיֹם	awesome;dreaded
 אָכִישׁ	Achish
 אָכֵן	but;for;however;in_fact;nevertheless;surely;truly
-אָכַל	ate;ate_of;ate_up;claimed;consume;consume_of;consumed;consumes;consuming;destroyed;devour;devour_of;devoured;devourer;devouring;devours;earn;eat;eat_of;eat_up;eat_up_of;eat_~_up;eaten;eaten_away;eater;eating;eating_of;eats;eats_of;enjoy;enjoys;feast;fed;fed_of;feed;feed_of;feeding;food;gave_~_toeat;give_~_toeat;he_ate;lived_on;prey;tasted;to_be_eaten;to_eat;to_use;took_~_away;using_up;we_ate;will_eat;you_may_eat
+אָכַל	ate;ate_of;ate_up;claimed;consume;consume_of;consumed;consumes;consuming;destroyed;devour;devour_of;devoured;devourer;devouring;devours;earn;eat;eat_of;eat_up;eat_up_of;eat_~_up;eaten;eaten_away;eater;eating;eating_of;eats;eats_of;enjoy;enjoys;feast;fed;fed_of;feed;feed_of;feeding;food;gave_~_to_eat;give_~_to_eat;he_ate;lived_on;prey;tasted;to_be_eaten;to_eat;to_use;took_~_away;using_up;we_ate;will_eat;you_may_eat
 אָכַף	urges_~_on
 אָלַח	corrupt
 אָלַם	binding;mute;silent;speechless;unable_to_speak
@@ -842,7 +842,7 @@
 בֶלַע	devour;what_~_hasswallowed_of
 בַאֲשֶׁר	account_of_that;that;what;where;wherever;which
 בַחוּן	siege_towers_of
-בְּ	about;about_the;accompanied_by;according_to;according_to_the;after;after_the;against;against_that;against_the;against_THE;against_this;against_those;along;along_the;along_with;also_the;although;amid;among;among_the;among_THE;among_those;and;any_of;around;as;as_long_as;as_the;as_THE;as_~_as;at;at_a;at_that;at_the;at_THE;at_the_cost_of;at_the_risk_of;at_the_time;based_on;because;because_of;because_of_the;before;before_the;behind;between;both_the;but;by;by_a;by_THE;by_the;by_those;concerning;concerning_their;despite;during;during_the;even;for;for_a;for_the;for_the_sake_of;for_their;from;from_the;from_the_time;has;have;him;how;if;in;in_a;in_accord_with;in_addition_to;in_connection_with;in_exchange_for;in_exchange_for_the;in_his;in_regard_to;in_regard_to_the;in_spite_of;in_spite_of_the;in_that;in_THE;in_the;in_their;in_this;in_those;inside;inside_the;into;into_a;into_his;into_the;inward;just;like;like_the;near;of;of_a;of_the;off;on;on_a;on_account_of;on_his;on_that;on_THE;on_the;on_these;on_this;on_your;on_~_account;onto;onto_the;out_THE;over;over_the;regarding;since;so;so_that;some_of;that;the;though;though_the;through;through_the;through_THE;throughout;throughout_the;to;to_a;to_the;toward;toward_the;towards;under;under_the;up_the;up_to_the;upon;upon_the;when;whenever;whether;whether_an;whether_the;while;while_the;will;with;with_a;with_an;with_rod;with_the;with_THE;with_these;with_this;within;within_the
+בְּ	about;about_the;accompanied_by;according_to;according_to_the;after;after_the;against;against_that;against_THE;against_the;against_this;against_those;along;along_the;along_with;also_the;although;amid;among;among_THE;among_the;among_those;and;any_of;around;as;as_long_as;as_the;as_THE;as_~_as;at;at_a;at_that;at_THE;at_the;at_the_cost_of;at_the_risk_of;at_the_time;based_on;because;because_of;because_of_the;before;before_the;behind;between;both_the;but;by;by_a;by_THE;by_the;by_those;concerning;concerning_their;despite;during;during_the;even;for;for_a;for_the;for_the_sake_of;for_their;from;from_the;from_the_time;has;have;him;how;if;in;in_a;in_accord_with;in_addition_to;in_connection_with;in_exchange_for;in_exchange_for_the;in_his;in_regard_to;in_regard_to_the;in_spite_of;in_spite_of_the;in_that;in_the;in_THE;in_their;in_this;in_those;inside;inside_the;into;into_a;into_his;into_the;inward;just;like;like_the;near;of;of_a;of_the;off;on;on_a;on_account_of;on_his;on_that;on_the;on_THE;on_these;on_this;on_your;on_~_account;onto;onto_the;out_THE;over;over_the;regarding;since;so;so_that;some_of;that;the;though;though_the;through;through_THE;through_the;throughout;throughout_the;to;to_a;to_the;toward;toward_the;towards;under;under_the;up_the;up_to_the;upon;upon_the;when;whenever;whether;whether_an;whether_the;while;while_the;will;with;with_a;with_an;with_rod;with_the;with_THE;with_these;with_this;within;within_the
 בְּאֵר	Beer;pit;pit_of;pits_of;well;well_of;wells;wells_of
 בְּאֵר אֵלִים	-elim;Beer-
 בְּאֵר לַחַי רֹאִי	-lahai-;-roi;Beer-
@@ -970,7 +970,7 @@
 בִּצָּה	marsh;swamps_of
 בִּצָּרוֹן	stronghold
 בִּקְעָא	plain_of
-בִּקְעָה	plain;plain_of;valley;valley_of;Valley_of;valleys
+בִּקְעָה	plain;plain_of;valley;Valley_of;valley_of;valleys
 בִּקֹּרֶת	punishment
 בִּרְיָה	food
 בִּרְשַׁע	Birsha
@@ -1098,7 +1098,7 @@
 בַּעֲרָא	Baara
 בַּעֲשֵׂיָה	Baaseiah
 בַּעַד	after;around;behind;by;completely;fee;for;for_sake_of;for_the_sake_of;from;in_the_time_of;now;on_behalf_of;on_~_behalf;out_of;over;through;up;upon
-בַּעַל	Baal;Baal's;Baals;bird_of;bound_of;captain_of;charmer_of;citizens_of;creditor;filled_of;has_of;husband_of;husbands_of;leaders_of;lords_of;man's;man_of;master's_of;master_of;masters_of;men_of;one_of;owner_of;owners_of;possessor_of;possessors_of;practice_of;related_~_bymarriage;rulers_of;sayings_of;to_whom_~_isdue_of;were_of;who_has_of;with_of
+בַּעַל	Baal;Baal's;Baals;bird_of;bound_of;captain_of;charmer_of;citizens_of;creditor;filled_of;has_of;husband_of;husbands_of;leaders_of;lords_of;man's;man_of;master's_of;master_of;masters_of;men_of;one_of;owner_of;owners_of;possessor_of;possessors_of;practice_of;related_~_bymarriage;rulers_of;sayings_of;to_whom_~_is_due_of;were_of;who_has_of;with_of
 בַּעַל בְּרִית	-berith;Baal-
 בַּעַל גָּד	-gad;Baal-
 בַּעַל הָמוֹן	-hamon;Baal-
@@ -1190,7 +1190,7 @@
 בָּעַל	be_~_husband;being_married_of;gets_a_husband;husband_of;is_a_~_wife_of;married;marries;marry;master;ruled;ruled_over;was_~_husband
 בָּעַר	become_stupid;blazed;blazes;blazing;brutal;burn;burn_up;burned;burned_up;burning;burns;caught;consume;consumed;destroy;destroyed;devoured;exterminated;fire;flamed_forth;fuel;graze;grazes;he_lit;heated;kindle;kindled;kindles;light;light_a_fire;make_fires;purge;removed;senseless;started;stupid
 בָּעַת	afraid;frighten;frightened;overwhelmed;terrified;terrifies;terrify;tormented;tormenting_of
-בָּעָה	bulging_out;causes_~_toboil;inquire;searched_out
+בָּעָה	bulging_out;causes_~_to_boil;inquire;searched_out
 בָּעוּ	prayer;prayers_of
 בָּצִיר	grape_harvest;grape_harvest_of;vintage;vintage_of
 בָּצֵק	dough;dough_of;swell
@@ -1200,7 +1200,7 @@
 בָּקַע	a_breach_~_made;breached;break_forth;break_into;break_out;break_through;breaks_up;broke;broke_open;broken_into;burst;burst_forth;burst_open;chopped_up;conquer;cut;cuts_out;dashed_to_pieces;divide;divided;hatch;hatched;invaded;mauled;opened_up;rip_open;rip_~_open;ripped_open;shook;split;split_open;splits;tore;torn
 בָּקַק	devastate;emptied_out;lay_waste;luxuriant;make_void;ravaged;ravagers;she_will_be_laid_waste;to_be_laid_waste
 בָּקַר	inquire;inspect;look_after;reflect;seek;seek_~_out
-בָּקַשׁ	a_search_~_made;asked;asked_for;asking;beg;begging;call_~_toaccount;conspired;demand;devised;find;inquired;investigated;invites;look_for;looked_for;looking_for;petitioned;plead;pleaded;pursuit_of;request;require;required;search;search_for;searched;searched_for;searching_for;seek;seek_of;seek_out;seeking;seeks;seeks_out;sought;sought_of;sought_out;take_vengeance;tried;trying;trying_to_take;want;wanted
+בָּקַשׁ	a_search_~_made;asked;asked_for;asking;beg;begging;call_~_to_account;conspired;demand;devised;find;inquired;investigated;invites;look_for;looked_for;looking_for;petitioned;plead;pleaded;pursuit_of;request;require;required;search;search_for;searched;searched_for;searching_for;seek;seek_of;seek_out;seeking;seeks;seeks_out;sought;sought_of;sought_out;take_vengeance;tried;trying;trying_to_take;want;wanted
 בָּקָר	bull;bulls;cattle;cow's;herd;herd_of;herds;herds_of;livestock;livestock_of;ox;oxen;oxen_of
 בָּר	open
 בָּרִיא	fat;fat_of;fatter_of;healthy;ones_fat_of;plump;rich
@@ -1214,7 +1214,7 @@
 בָּרַר	choice;chosen;cleanse;polished;pure;purge;purified;purify;sharpen;show_~_pure;sincerely;testing
 בָּרָא	brings_about;clear;create;created;created_of;creates;creating;creation;creator;creator_of;cut_~_down;done;make;making_~_fat
 בָּרָד	hail;hailstones
-בָּרָה	choose;eat;food;give_~_toeat;persuade_~_toeat
+בָּרָה	choose;eat;food;give_~_to_eat;persuade_~_to_eat
 בָּרָק	Barak;Barak's;flash_like_lightning;flashing_of;glittering_of;glittering_point;lightning;lightnings;lightnings_of
 בָּרֹד	dappled;mottled
 בָּרוּךְ	Baruch
@@ -1225,7 +1225,7 @@
 בָּשָׁן	Bashan
 בָּשַׂר	bore_the_tidings;bring_good_news;bring_~_news;bringing_good_news;brings_good_news;brings_~_news;brought_the_news;carry_news;carry_the_good_news;carry_tidings;carry_~_news;good_tidings;herald_of_good_news_of;messenger;proclaim
 בָּשָׂר	bodies_of;body;body_of;creature;flesh;flesh_of;genitalia_of;kin_of;lust;mankind;meat;meat_of;members_of;people;skin_of
-בָּתַק	cut_~_topieces
+בָּתַק	cut_~_to_pieces
 בָּתַר	cut
 בָּתָה	wasteland
 בֹּֽכְרוּ	Bocheru
@@ -1252,12 +1252,12 @@
 בׇּצְקַת	Bozkath
 בׇּצְרָה	Bozrah;fold
 בׇּשְׁנָה	shame
-בּוֹא	adding;advance;advanced;advanced_in_years;apply;arrival;arrive;arrived;arrives;associate;attain;attendants_of;been;befalls;being;breaks_in;bring;bring_about;bring_in;bring_into;bring_~_back;bring_~_in;bring_~_into;bring_~_topass;bringing;bringing_in;bringing_of;brings;brought;brought_back;brought_in;brought_into;brought_~_about;brought_~_back;brought_~_in;brought_~_into;brought_~_topass;came;came_back;came_in;came_into;came_to_pass;carried;carry;carry_~_off;cause_~_toenter;close;come;come_back;come_in;come_into;come_of;come_on;come_on_duty_of;come_to_pass;come_true;come_up;come_upon;comes;comes_in;comes_of;comes_true;coming;coming_in;coming_of;consort;delivered;direction;done;encroach;enter;enter_in;entered;entering;enters;entrance;extended;extending;fall;fulfill;fulfilled;gain;gave;get;get_in;get_into;give;go;go_back;go_down;go_in;go_into;go_off_duty_of;go_on_back;go_to_of;goes;goes_down;goes_in;goes_into;going;going_down;going_in;gone;gone_in;granted;had;happened;harvest;harvested;have;have_~_serve;he_comes;he_comes_true;he_may_go;he_will_come;he_will_sweep_on;heard;in_days_to_come;in_the_direction_of;inserted;intermarry;invade;invaded;invades;lebo;lebo-hamath;lebo_of;led;ledges;marching_through;mentioned;occupy;passage;penetrate;pierce;placing;presented;put;put_in;putting;reached;resound;return;returned;run_down;runs;send;set;set_out;sets;share;shedding;shot;strikes;take;take_place;to_advance;to_come;to_come_true;to_go;to_return;to_set;to_sweep_on;took;touched;touching;well_advanced;went;went_back;went_down;went_in;went_in_of;went_into;went_up;wielding;will_we_come;withstand
+בּוֹא	adding;advance;advanced;advanced_in_years;apply;arrival;arrive;arrived;arrives;associate;attain;attendants_of;been;befalls;being;breaks_in;bring;bring_about;bring_in;bring_into;bring_~_back;bring_~_in;bring_~_into;bring_~_to_pass;bringing;bringing_in;bringing_of;brings;brought;brought_back;brought_in;brought_into;brought_~_about;brought_~_back;brought_~_in;brought_~_into;brought_~_to_pass;came;came_back;came_in;came_into;came_to_pass;carried;carry;carry_~_off;cause_~_to_enter;close;come;come_back;come_in;come_into;come_of;come_on;come_on_duty_of;come_to_pass;come_true;come_up;come_upon;comes;comes_in;comes_of;comes_true;coming;coming_in;coming_of;consort;delivered;direction;done;encroach;enter;enter_in;entered;entering;enters;entrance;extended;extending;fall;fulfill;fulfilled;gain;gave;get;get_in;get_into;give;go;go_back;go_down;go_in;go_into;go_off_duty_of;go_on_back;go_to_of;goes;goes_down;goes_in;goes_into;going;going_down;going_in;gone;gone_in;granted;had;happened;harvest;harvested;have;have_~_serve;he_comes;he_comes_true;he_may_go;he_will_come;he_will_sweep_on;heard;in_days_to_come;in_the_direction_of;inserted;intermarry;invade;invaded;invades;lebo;lebo-hamath;lebo_of;led;ledges;marching_through;mentioned;occupy;passage;penetrate;pierce;placing;presented;put;put_in;putting;reached;resound;return;returned;run_down;runs;send;set;set_out;sets;share;shedding;shot;strikes;take;take_place;to_advance;to_come;to_come_true;to_go;to_return;to_set;to_sweep_on;took;touched;touching;well_advanced;went;went_back;went_down;went_in;went_in_of;went_into;went_up;wielding;will_we_come;withstand
 בּוֹצֵץ	Bozez
 בּוֹקֵר	herdsman
 בּוֹר	cistern;cistern_of;cisterns;death;dungeon;pit;pit_of;pits;prison;well;well_of
 בּוֹר עָשָׁן	-ashan;Bor-
-בּוֹשׁ	acts_shamefully;ashamed;became_embarrassed;brings_shame;comes_to_shame;confounded;delayed;disappointed;disgraced;dismayed;dry_up;frustrate;in_despair;in_shame;long;put_to_shame;put_~_toshame;shame;shamed;they_will_be_ashamed;worse
+בּוֹשׁ	acts_shamefully;ashamed;became_embarrassed;brings_shame;comes_to_shame;confounded;delayed;disappointed;disgraced;dismayed;dry_up;frustrate;in_despair;in_shame;long;put_to_shame;put_~_to_shame;shame;shamed;they_will_be_ashamed;worse
 בּוּז	belittles;Buz;contempt;contempt_of;despise;despised;despises;laughingstock;scorns;they_would_scorn;to_scorn
 בּוּזִי	Buzi;Buzite
 בּוּזָה	despised
@@ -1313,7 +1313,7 @@
 גְּמַלִּי	Gemalli
 גְּמַר	peace
 גְּמַרְיָהוּ	Gemariah
-גְּמוּל	benefit;benefits_of;deeds_of;deserved_of;recompense;recompense_of;requital;retribution_of;what_is_deserved;what_~_deserve;what_~_deserve_of;what_~_deserves;what_~_havedone_of;work_of
+גְּמוּל	benefit;benefits_of;deeds_of;deserved_of;recompense;recompense_of;requital;retribution_of;what_is_deserved;what_~_deserve;what_~_deserve_of;what_~_deserves;what_~_have_done_of;work_of
 גְּמוּלָה	deeds;recompense;reward
 גְּנֵבָה	stolen;theft_of
 גְּנַז	treasury;treasury_of
@@ -1329,7 +1329,7 @@
 גִּבְלִי	Gebalites
 גִּבְעַת	Gibeah
 גִּבְעָא	Gibea
-גִּבְעָה	Geba;Gibeah;gibeah;gibeah_of;hill;hill_of;hills;hills_of
+גִּבְעָה	Geba;gibeah;Gibeah;gibeah_of;hill;hill_of;hills;hills_of
 גִּבְעָתִי	Gibeathite
 גִּבְעֹל	bud
 גִּבְעֹנִי	Gibeonite;Gibeonites
@@ -1428,7 +1428,7 @@
 גַּחֶלֶת	burning_coals;burning_coals_of;coal;coals;coals_of;ember_of;hot_coals;hot_embers
 גַּחַם	Gaham
 גַּחַר	Gahar
-גַּיְא	Ge-;valley;Valley;valley_of;Valley_of;valley_of_Ben-;Valley_of_Hamon-;valley_of_Iphtah-;valleys;valleys_of
+גַּיְא	Ge-;valley;Valley;Valley_of;valley_of;valley_of_Ben-;Valley_of_Hamon-;valley_of_Iphtah-;valleys;valleys_of
 גַּל	billows_of;heap;heap_of;heap_of_ruins;heaps;pile_of;pile_of_rocks;rubble;spring;stone_heaps;waves;waves_of
 גַּלְגַּל	tumbleweed;wagons;wheel;wheels_of;wheelwork;whirling_dust;whirlwind
 גַּלְמוּד	barren;hard
@@ -1458,7 +1458,7 @@
 גָּאוֹן	arrogance;majestic_of;majesty;majesty_of;pomp_of;pride;pride_of;proud_of;thickets_of
 גָּבִיעַ	cup;cup_of;cups;cups_of;pitchers
 גָּבִישׁ	crystal
-גָּבַהּ	become_proud;builds_~_high;courageous;exalt;exalted;grew_proud;haughty;high;higher;lofty;make_~_high;mounts_up;on_high_of;proud;raised_~_toa_~_greatheight;soar;taller;towered;upward
+גָּבַהּ	become_proud;builds_~_high;courageous;exalt;exalted;grew_proud;haughty;high;higher;lofty;make_~_high;mounts_up;on_high_of;proud;raised_~_to_a_~_great_height;soar;taller;towered;upward
 גָּבַל	borders;forms_~_boundary;set_limits;set_limits_around;set_up
 גָּבַר	behaving_arrogantly;bid_defiance;exert_more;gained_an_advantage;great;grow_mighty;prevail;prevailed;prevails;strengthen;strong;stronger;swelled
 גָּבֹהַּ	great_of;haughty;haughty_of;height_of;heights;high;higher;higher_officials;lofty;long;longer;official;proud_of;proudly;taller
@@ -1703,7 +1703,7 @@
 דָּלַח	trouble
 דָּלַל	brought_low;brought_~_low;dwindle;fade;hang_limp;suspended;weary_with_looking
 דָּלַף	leaks;pours_out_tears;weeps
-דָּלַק	chased;fervent;fiery;hotly_pursue;hotly_pursued;inflamed;kindle;pursuing;set_~_onfire
+דָּלַק	chased;fervent;fiery;hotly_pursue;hotly_pursued;inflamed;kindle;pursuing;set_~_on_fire
 דָּלָה	doors_of;draw_water;drawn_~_up;draws_~_out;drew_water;to_draw
 דָּם	blood;blood_of;blood_shed_of;bloodguilt;bloodguilt_of;bloodshed;bloodshed_of;bloodstains_of;bloodthirsty;bloody;death;death_of;guilt_of_bloodshed;guilt_of_~_blood;guilt_of_~_blood_of;guilty_of_blood;guilty_of_bloodshed;homicide;life_of;shed_blood;vineyard_of
 דָּמַם	ceasing;devastated;doomed;go_dumbfounded;in_silence;keep_silent;kept_silent;perish;quieted;quietly;rest;silenced;silent;stand_still;still;stood_still;wait;wait_in_silence
@@ -1720,7 +1720,7 @@
 דָּר	generation
 דָּרַךְ	aim;aims;archer;bend;bend_of;bent;bent_~_bow;come_out;drew_of;guide;handle_of;lead;leads;leads_of;led;march_on;marches;set_foot;step;trampled;tread;treader;treader_of;treading;treads;treads_out;trod;trod_~_down;trodden;walk;walk_through;walks
 דָּרַע	Dara
-דָּרַשׁ	a_search_~_made;avenge;avenges;call_~_toaccount;care_~_for;cares;cares_for;comes_a_reckoning_for;consult;consulted;demand;enquire;follow;he_will_demand;hold_accountable;inquire;inquire_about;inquire_of;inquired;inquired_of;inquirer;inquires;investigate;let_~_ask;looking_for;make_a_~_inquiry;questioned;require;required;search;search_for;searched;searches;searches_for;searching;seek;seek_after;seek_of;seek_out;seeking;seeks;sought;sought_out;sought_~_out;studied;study;to_be_unquired;to_demand;to_inquire
+דָּרַשׁ	a_search_~_made;avenge;avenges;call_~_to_account;care_~_for;cares;cares_for;comes_a_reckoning_for;consult;consulted;demand;enquire;follow;he_will_demand;hold_accountable;inquire;inquire_about;inquire_of;inquired;inquired_of;inquirer;inquires;investigate;let_~_ask;looking_for;make_a_~_inquiry;questioned;require;required;search;search_for;searched;searches;searches_for;searching;seek;seek_after;seek_of;seek_out;seeking;seeks;sought;sought_out;sought_~_out;studied;study;to_be_unquired;to_demand;to_inquire
 דָּרוֹם	south;south_wind
 דָּשֵׁן	accept;anoint;covered;enriched;full_of_sap;grown_fat;prosper;prosperous_of;receive_~_ashes;refreshes;rich;richly_supplied;take_away_the_ashes
 דָּשָׁא	green;produce
@@ -1874,7 +1874,7 @@
 הָכַר	wrong
 הָלִיךְ	steps_of
 הָלַךְ	act;am_about_to;blows;came;come;comes_of;coming;conduct;continually;continue;continued;departed;disappears;fade_away;flashed_back_and_forth;flee;flow;flowed;flowing;flows;flying;follow;followed;follows;glancing;go;go_about;go_forward;go_throughout;go_~_way;goes;goes_about;goes_about_of;goes_after;goes_around;goes_away;goes_down;goes_on;going;going_about_of;gone;gone_away;grew;grew_more_and_more;grow;growing;journeying;kept;leading;leave;lived;march;move_about;moved;moved_about;moves;moves_along;moving;moving_about;moving_to_and_fro;occupy;on_~_way;ones_attending;ones_following;ones_travelling_of;pass_away;passed_on;passes;patrol;patrolled;prowl;prowled;pursue;ran_down;range;return;rides;roamed;robber;runs_off;sent;set_out;sets_out;spread;stalks;steadily;they_followed;they_went_out;to_come;to_continue;to_go;to_go_out;to_grow;to_increase;to_leave;to_walk;traveled;vanished;walk;walk_about;walk_around;walk_of;walked;walked_around;walking;walking_about;walking_around;walks;walks_around;walks_of;wandered;wandering;went;went_about;went_away;went_forward;went_up;you_went
-הָלַל	arrogant;boast;boastful;boasts;deride_of;drive_madly;flash_forth;give;give_praise;glory;go_mad;had_~_marriagesong;madness;makes_fools_of;offered_praise;praise;praised;praises;praising;pretended_to_be_mad;race_madly;renowned;sang_praises;shone;sing_praises;turns_~_intoa_fool;went_mad;worthy_to_be_praised
+הָלַל	arrogant;boast;boastful;boasts;deride_of;drive_madly;flash_forth;give;give_praise;glory;go_mad;had_~_marriagesong;madness;makes_fools_of;offered_praise;praise;praised;praises;praising;pretended_to_be_mad;race_madly;renowned;sang_praises;shone;sing_praises;turns_~_into_a_fool;went_mad;worthy_to_be_praised
 הָלַם	beat;here_and_there;overcome_of;smashed;strike;strikes_of;struck;trampled_down
 הָלָא	cast_off
 הָם	Ham
@@ -2042,7 +2042,7 @@
 זָחַח	come_loose
 זָחַל	crawling_of;things_crawling_of;timid
 זָכַךְ	cleanse;pure;purer
-זָכַר	acknowledge;boast;bring_~_toremembrance;brings_~_toremembrance;calls;cause_~_tobe_remembered;come_to_remembrance;consider;draw_attention;extol;invoke;keep_~_inremembrance;known;made_~_tobe_remembered;make_mention;male;memorial_offering;mention;mentioned;mindful;offers;proclaim;put_~_inremembrance;recall;recorder;recount;remember;remember_of;remembered;remembering;remembers;remind;she_remembers;think;to_remember;warn
+זָכַר	acknowledge;boast;bring_~_to_remembrance;brings_~_to_remembrance;calls;cause_~_to_be_remembered;come_to_remembrance;consider;draw_attention;extol;invoke;keep_~_inremembrance;known;made_~_to_be_remembered;make_mention;male;memorial_offering;mention;mentioned;mindful;offers;proclaim;put_~_inremembrance;recall;recorder;recount;remember;remember_of;remembered;remembering;remembers;remind;she_remembers;think;to_remember;warn
 זָכָה	acquit;blameless;keep_~_pure;kept_~_pure;make_~_clean;pure
 זָכָר	male;male_child;males;man;son
 זָכוּ	innocent
@@ -2432,7 +2432,7 @@
 חָבֵר	associated_of;companion;companion_of;companions;companions_of;partner;united
 חָבַב	loves
 חָבַט	beat;beat_out;beaten_out;thresh;threshing
-חָבַל	acted_corruptly;bring_destruction;broken;conceived;destroy;destroys;exacted_pledges;hold;hold_~_inpledge;in_labor;offend;ruin;take_a_pledge;take_~_apledge;take_~_inpledge;taken_in_pledge;taking_~_inpledge;to_act_wickedly;to_take_pledge;travails;you_take_pledge
+חָבַל	acted_corruptly;bring_destruction;broken;conceived;destroy;destroys;exacted_pledges;hold;hold_~_in_pledge;in_labor;offend;ruin;take_a_pledge;take_~_apledge;take_~_in_pledge;taken_in_pledge;taking_~_in_pledge;to_act_wickedly;to_take_pledge;travails;you_take_pledge
 חָבַק	cling;embrace;embraced;embraces;embracing;folds
 חָבַר	allied_with;an_alliance_~_made;attached;attaching;bound_firmly;casts;join;join_~_together;joined;joined_forces;joined_of;joined_together;make_an_alliance;one_enchanting_of;touched;touching
 חָבַשׁ	bandaged;bind;bind_up;bind_~_up;binds_up;bound;bound_up;dams_up;govern;healer;saddle;saddled;wrapped
@@ -2467,10 +2467,10 @@
 חָטַב	carved;cut;cut_down;cut_of;fell_of;hewers_of;woodcutters
 חָטַם	restrain
 חָטַף	seize;seizes
-חָטָא	bear_the_blame;bore_the_loss;bring_sin;commit;committed;done_wrong;fails_to_reach;fault;forfeits;lead_~_intosin;lose_of;made_a_sin_offering;made_~_tosin;make_~_sin;miss;misses;misses_of;missing;offended;offers;presented_~_asa_sin_offering;purified;purify;purifying;retreat;she_sinned;sin;sinful;sinned;sinner;sinner's;sinning;sins
+חָטָא	bear_the_blame;bore_the_loss;bring_sin;commit;committed;done_wrong;fails_to_reach;fault;forfeits;lead_~_into_sin;lose_of;made_a_sin_offering;made_~_to_sin;make_~_sin;miss;misses;misses_of;missing;offended;offers;presented_~_asa_sin_offering;purified;purify;purifying;retreat;she_sinned;sin;sinful;sinned;sinner;sinner's;sinning;sins
 חָיֶה	vigorous
 חָיַי	live;lived;lives;save_~_life
-חָיָה	came_to_life;flourish;give_life;give_~_life;given_~_life;gives_~_life;he_will_live;healed;keep_alive;keep_~_alive;keeping_alive;keeps_~_alive;kept_alive;kept_~_alive;leave_alive;leave_~_alive;let_~_live;live;live_again;live_on;lived;lives;long_live;make_alive;makes_alive;preserve;preserve_~_life;preserves_the_life;preserves_~_life;raised;recover;recovered;remained_alive;restored;restored_to_life;restored_~_tolife;revive;revived;save;save_~_life;saved;saved_~_lives;saving;spare;spared;to_live;to_recover;you_will_recover
+חָיָה	came_to_life;flourish;give_life;give_~_life;given_~_life;gives_~_life;he_will_live;healed;keep_alive;keep_~_alive;keeping_alive;keeps_~_alive;kept_alive;kept_~_alive;leave_alive;leave_~_alive;let_~_live;live;live_again;live_on;lived;lives;long_live;make_alive;makes_alive;preserve;preserve_~_life;preserves_the_life;preserves_~_life;raised;recover;recovered;remained_alive;restored;restored_to_life;restored_~_to_life;revive;revived;save;save_~_life;saved;saved_~_lives;saving;spare;spared;to_live;to_recover;you_will_recover
 חָכַם	become_wiser;deal_shrewdly;gain_wisdom;make_~_wiser;makes_~_wiser;making_wise_of;ones_being_made_wise;skillful;teach_~_wisdom;used_~_wisdom;wise;wiser
 חָכָה	linger;long;wait;wait_of;waited;waits;waits_for;waits_of
 חָכָם	advisers_of;artisans;artisans_of;has_wisdom;shrewd;skilled;skilled_of;skillful;skillful_of;wise;wise_of;wise_ones;wiser;wisest_of
@@ -2478,7 +2478,7 @@
 חָלִילָה	`;far_be_it;far_be_it!;forbid;never!;no!
 חָלַט	took_~_up
 חָלַל	began;begin;beginning;begun;break;cast_~_asa_profane_thing;dancers;defile;defiled;desecrate;dishonor;enjoy;enjoyed;first;killed_of;pierced;pierced_of;playing;polluted;profane;profaned;profanes;profanes_of;profaning;the_first_time;violate;violated;wound_of;wounded
-חָלַם	become_strong;dream;dreamed;dreamer_of;dreams;had_a_dream;I_dreamed;restore_~_tohealth
+חָלַם	become_strong;dream;dreamed;dreamer_of;dreams;had_a_dream;I_dreamed;restore_~_to_health
 חָלַף	change;changed;glided;go_by;go_on;moves_on;new;over;pass_away;passes_through;pierce;pierced;renew;renewed;replace;sprout;sprouts_anew;sweep;sweep_on;violated
 חָלַץ	arm;armed;armed_of;army;deliver;delivered;delivers;offer;plundered;pull_~_off;pulled_off_of;rescue;rescued;rescues;soldiers;strengthen;take_off;taken_out;torn_out;withdrawn
 חָלַק	allot_~_aportion;allotted;apportion;apportioned;apportions;distribute;distributed;divide;divide_up;divided;divided_up;divides;dividing;false;flatter;flatters;give_~_ashare;organized;partner;portioned_~_out;receive_~_shareof_property;scattered;share;smooth;smooths_of;took_a_portion
@@ -2559,10 +2559,10 @@
 חָרֵד	anxious;tremble;trembled;trembles;trembling
 חָרֵף	Hareph
 חָרֵר	parched_places
-חָרֵשׁ	cease;deaf;have_silence;hold_~_peace;in_silence;keep_quiet;keep_silence;keep_silent;keep_still;keeps_silent;kept_quiet;kept_silent;kept_still;listen_~_insilence;put_~_tosilence;quiet;remain_silent;said_nothing;say_nothing;says_nothing;shut_up;silent;stopped_questioning;to_be_silent;to_remain_silent;to_say_nothing
+חָרֵשׁ	cease;deaf;have_silence;hold_~_peace;in_silence;keep_quiet;keep_silence;keep_silent;keep_still;keeps_silent;kept_quiet;kept_silent;kept_still;listen_~_insilence;put_~_to_silence;quiet;remain_silent;said_nothing;say_nothing;says_nothing;shut_up;silent;stopped_questioning;to_be_silent;to_remain_silent;to_say_nothing
 חָרַב	crossed_swords;kill;to_fight
 חָרַג	trembling
-חָרַד	afraid;came_trembling;come_trembling;disturb;frighten;frighten_~_away;make_~_afraid;routed;startled;terrify;throw_~_intoa_panic;took_~_trouble;tremble;trembled;trembles;trembling;turned_trembling
+חָרַד	afraid;came_trembling;come_trembling;disturb;frighten;frighten_~_away;make_~_afraid;routed;startled;terrify;throw_~_into_a_panic;took_~_trouble;tremble;trembled;trembles;trembling;turned_trembling
 חָרַךְ	roast
 חָרַם	annihilate;completely_destroy;completely_destroyed;covet;destroy;destroy_completely;destroyed;destroying;destroying_~_completely;devote;devote_to_destruction;devoted;disfigured;doomed;exterminated;forfeited;to_destroy;utterly_destroy;utterly_destroyed;utterly_destroying;you_must_destroy
 חָרַף	defied;defy;designated;insult_of;insults;mock;mocked;put_to_shame;reproach;reproaches_of;revile;reviled;risked;taunt;taunted;taunter;taunts;taunts_of;throw_contempt;winter
@@ -2582,7 +2582,7 @@
 חָשַׁךְ	black;blacker;brings_darkness;dark;darken;darkened;darkens;darkness;grow_dim;made_~_dark;see_dimly
 חָשַׁל	lagging
 חָשַׁק	banded;desire;desired;held_back;longs;loves;made_bands;set_~_heart;set_~_love;wanted
-חָשָׁה	calmed;do_nothing;doing_nothing;held_~_tono_avail;hushed;keep_silent;kept_silent;silent
+חָשָׁה	calmed;do_nothing;doing_nothing;held_~_to_no_avail;hushed;keep_silent;kept_silent;silent
 חָשֹׁךְ	obscure
 חָשֻׁם	Hashum
 חָשׁוּק	bands_of
@@ -3103,14 +3103,14 @@
 יָד	able_of;actions_of;arm_of;armrests;arms_of;assist_of;assistant_of;authority_of;axles_of;bank_of;banks_of;beside_of;borders_of;bounty_of;by_of;care;care_of;charge_of;coast_of;command_of;control_of;custody_of;direction_of;directions_of;divisions;enough;fist_of;force_of;genitals;grasp_of;hand;hand_of;hands;hands_of;help_of;hold_of;human_hand;influence_of;labor;leadership_of;liberality_of;means_of;measures;memorial;ministry_of;monument;monument_of;order_of;parts;paw_of;place;place_of;portion_of;possession_of;power;power_of;region_of;remaining;rule_of;service_of;shares;side_of;sides_of;signpost;someone_else_of;stays_of;strength;strength_of;tenons;tenons_of;times
 יָדִיד	beloved_of;love;love_of;lovely
 יָדַד	cast
-יָדַע	acknowledge;acknowledged;acquaintances_of;acquainted_with_of;advice;aware;became_known;been_intimate_with;care_about;care_for;cared_for;caused_~_toknow;chosen;close_friends_of;comes_to_know;comprehend;concern;consider;decide;declare;determine;discern;discerned;discovered;endowed;experience;experienced;experiencing;experts_of;familiar_friend_of;familiar_with_of;find;find_out;found_out;gain;has;has_regard;have;have_knowledge;have_sex_with;have_~_knowledge;he_knows;heed;inform;instructed;knew;knew_of;know;know_of;know_~_sexually;knowing;knowing_of;knowledge;known;known_of;knows;knows_of;leading;learn;learned;look;made_an_appointment;made_known;made_~_known;make_~_known;notice;ones_being_informed_of;perceive;perceived;possess;predict;raped;read;read_of;realize;realized;respected;see;show;show_~_distinguish;showed;skilled_of;skillful;sure;take_note;taught_the_difference;taught_~_alesson;teach;teach_of;tell;tell_of;they_know;to_be_assured;to_be_sure;to_know;to_understand;took_notice;trained;understand;understood;understood_of;was;watches_over;you_be_assured;you_be_sure;you_know
+יָדַע	acknowledge;acknowledged;acquaintances_of;acquainted_with_of;advice;aware;became_known;been_intimate_with;care_about;care_for;cared_for;caused_~_to_know;chosen;close_friends_of;comes_to_know;comprehend;concern;consider;decide;declare;determine;discern;discerned;discovered;endowed;experience;experienced;experiencing;experts_of;familiar_friend_of;familiar_with_of;find;find_out;found_out;gain;has;has_regard;have;have_knowledge;have_sex_with;have_~_knowledge;he_knows;heed;inform;instructed;knew;knew_of;know;know_of;know_~_sexually;knowing;knowing_of;knowledge;known;known_of;knows;knows_of;leading;learn;learned;look;made_an_appointment;made_known;made_~_known;make_~_known;notice;ones_being_informed_of;perceive;perceived;possess;predict;raped;read;read_of;realize;realized;respected;see;show;show_~_distinguish;showed;skilled_of;skillful;sure;take_note;taught_the_difference;taught_~_alesson;teach;teach_of;tell;tell_of;they_know;to_be_assured;to_be_sure;to_know;to_understand;took_notice;trained;understand;understood;understood_of;was;watches_over;you_be_assured;you_be_sure;you_know
 יָדָה	confess;confessed;confesses;confessing;extol;gave_thanks;give_thanks;give_~_praise;give_~_thanks;giving_thanks;made_confession;praise;shoot;strike_down;thank;thanking;thanksgiving;threw
 יָדָע	Jada
 יָדוֹן	Jadon
 יָהִיר	arrogant;haughty
 יָהַב	ascribe;bring;choose;come;give;provide;put
 יָהַד	became_jews
-יָהּ	GOD;Lord;LORD
+יָהּ	GOD;LORD;Lord
 יָוֵן	mire_of;miry
 יָוָן	Greece;Javan
 יָזִיז	Jaziz
@@ -3129,7 +3129,7 @@
 יָכֹל	able;allowed;are_~_able;attain;be_able;bear;can;can_do;could;do;endure;he_can;I_can;may;overcame;overcome;overpower;permitted;prevail;prevailed;she_can;succeed;they_can;they_will_be_capable;to_be_able;to_do;to_triumph;we_can;we_can_do;were_they_able;you_can
 יָלִיד	born_of;descendants_of
 יָלַד	act_as_midwives;bear;bear_a_child;bear_children;bearing;bearing_children;bears;bears_a_child;became_the_father;beget;begets;begetting;begotten;birth;bore;bore_children;bore_of;bore_~_children;bore_~_sons;born;born_of;borne;borne_~_children;bring;bring_forth;brought_forth;child;child_of;childbirth;children;deliver;delivered;delivers;descended;father;fathered;fathers;gave_birth;gave_birth_to;gave_~_birth;gave_~_life;give_birth;give_birth_to;give_~_birth;given_birth;given_birth_to;gives_birth;gives_birth_to;giving_birth;had;had_children;had_sons;had_~_children;has;have;have_a_child;having_borne_~_children;in_labor;labor;lay;midwife;midwives;registered;takes_effect;to_be_born;was_the_father_of;woman_in_labor
-יָלַךְ	act;banish;become;bring;bring_~_into;brought;came;came_on;carry;cause_~_towalk;come;come_away;come_back;coming;continue;continued;depart;departed;drove_~_back;fled;floated;flow;flowing;follow;followed;following;forth;get_away;get_back;get_out;get_rid_of;gliding_away;go;go_along;go_away;go_back;go_in;go_out;go_~_way;goes;goes_out;going;gone;gone_away;grow;he_continued;he_grew;I_will_go;join;journey;journeyed;keep_going;kept;kept_coming;lead;leads;leads_~_away;leave;leaving;led;led_of;left;make;march;marched;marches;marching;moved;moving;on_~_way;please;proceeded;pursue;ran;returned;send;set_out;spread;spread_out;stay_away;take;taking;they_followed;they_will_leave;took;travel;traveled;turn_to;vanishes;walk;walk_about;walked;walked_on;walking;walks;went;went_away;went_back;went_in;went_off;went_on;went_up;withdraw
+יָלַךְ	act;banish;become;bring;bring_~_into;brought;came;came_on;carry;cause_~_to_walk;come;come_away;come_back;coming;continue;continued;depart;departed;drove_~_back;fled;floated;flow;flowing;follow;followed;following;forth;get_away;get_back;get_out;get_rid_of;gliding_away;go;go_along;go_away;go_back;go_in;go_out;go_~_way;goes;goes_out;going;gone;gone_away;grow;he_continued;he_grew;I_will_go;join;journey;journeyed;keep_going;kept;kept_coming;lead;leads;leads_~_away;leave;leaving;led;led_of;left;make;march;marched;marches;marching;moved;moving;on_~_way;please;proceeded;pursue;ran;returned;send;set_out;spread;spread_out;stay_away;take;taking;they_followed;they_will_leave;took;travel;traveled;turn_to;vanishes;walk;walk_about;walked;walked_on;walking;walks;went;went_away;went_back;went_in;went_off;went_on;went_up;withdraw
 יָלַל	become_wailings;howl;wail;wails
 יָלַע	say_rashly
 יָלוֹן	Jalon
@@ -3173,7 +3173,7 @@
 יָצַע	lay_in;lie_in;make_~_bed;spread_out
 יָצַק	cast;firm;firmly_established;flowed;hard;molten;molten_of;pour;pour_out;poured;poured_out;pouring;runs;serve;served;set_down;set_~_out;spread_~_out;washed_away
 יָצַר	contrive;cramped;creator_of;distressed;fashion;fashioned;fashions;fashions_of;form;formed;formed_of;forming;forms;frustrated;hampered;in_distress;made;made_~_suffer;make_of;maker;maker_of;ordained;planned;planned_of;potter;potter's;potter's_of;potter_of;potters;pottery;preparing;shapes;shortened
-יָצַת	burned;destroyed;kindle;kindled;laid_waste;ruin;set;set_on_fire;set_~_onfire;setting_~_ablaze;they_set_fire;they_set_on_fire;they_will_set_on_fire
+יָצַת	burned;destroyed;kindle;kindled;laid_waste;ruin;set;set_on_fire;set_~_on_fire;setting_~_ablaze;they_set_fire;they_set_on_fire;they_will_set_on_fire
 יָצָא	born;born_to_of;breaks_out;bring;bring_forth;bring_out;bring_~_out;bringing;bringing_out;bringing_~_out;brings;brings_forth;brings_out;brings_~_out_of;brought;brought_about;brought_forth;brought_out;brought_~_out;brought_~_out_of;bulges;came;came_forth;came_forward;came_out;came_out_of;carried;carried_away;carried_off;carry;carry_~_out;clear_out;cleared;come;come_away;come_forth;come_off;come_on_duty_of;come_out;comes;comes_forth;comes_out;comes_up;coming_forward;coming_out;continues;depart;departed;departing;departs;descended;disgorge;draw;drawn_~_out;empty;end;escape;escaped;escapes;exacted;exile;expedition;exported;extend;extends;falls;fell;filth;flow_out;flowed;flowing;flows;fly_away;follow;followed;free;gave;get_out;get_~_out;gives;gives_~_ventto;go;go_forth;go_of;go_out;go_out_of;go_outside;go_surrender;goes;goes_forth;goes_out;going;going_off_duty_of;going_on;going_out;gone;gone_forth;gone_out;grow;grows;gushed_out;he_goes_out;he_went;he_would_come_out;issue_out;issued;known;lay;lead_forth;lead_~_out;leads_out;leave;leaves;leaving;led_out;led_~_out;left;let_~_escape;lost;march;march_out;marched_out;marches_out;one_coming_out;ones_coming_out_of;out_came;outlay;paid_~_out;passed;passing;pierced;pluck_~_out;prevails;proceed;proceeding;proceeds;produce;produced;produces;projecting;put;put_away;put_forth;put_~_out;ran;released;remove;removed;reported;risen;rising;sank;send_away;send_out;send_~_out;serve;service_of;set_out;sow;spread;spread_of;spreading;spreads;succeed_with;surrender;surrendered;take;take_~_out;taken;taken_out;to_come_out;to_go_out;to_march_out;to_surrender;took;took_~_out;utter;welling_up;went;went_away;went_forth;went_forward;went_out;went_out_of
 יָצוּעַ	bed_of;couch_of
 יָקִים	Jakim
@@ -3204,7 +3204,7 @@
 יָשִׁישׁ	aged;old
 יָשֵׁן	a_long_time;asleep;chronic;fall_asleep;fell_asleep;Jashen;previous;sleep;sleep_of;sleeps;slept;smoldering;teeth
 יָשֵׁשׁ	aged
-יָשַׁב	abide;abides;abode;cause_~_tobe_inhabited;continue;continued;dwell;dwell_in;dwell_of;dwelling;dwells;dwells_of;dwelt;enthroned;enthroned_of;gives_of;I_should_sit;inhabit;inhabitant;inhabitant_of;inhabitants;inhabitants_of;inhabited;inhabits;lay;left;lie;live;live_in;live_of;live_on;lived;lived_of;lives;living;lurking;married;marrying;occupied;placed;reign;relieve;remain;remained;remains;resided;returned;sat;sat_down;sat_of;sat_up;seat;seated;set;set_up;sets;settle;settled;settles;sit;sit_down;sit_of;sit_up;site;sits;sits_enthroned;sitting;sitting_down;spent;stand;stay;stay_up;stayed;staying;stays;take_a_~_seat;taken_~_seat;to_sit;took_up_residence;wait;waiting
+יָשַׁב	abide;abides;abode;cause_~_to_be_inhabited;continue;continued;dwell;dwell_in;dwell_of;dwelling;dwells;dwells_of;dwelt;enthroned;enthroned_of;gives_of;I_should_sit;inhabit;inhabitant;inhabitant_of;inhabitants;inhabitants_of;inhabited;inhabits;lay;left;lie;live;live_in;live_of;live_on;lived;lived_of;lives;living;lurking;married;marrying;occupied;placed;reign;relieve;remain;remained;remains;resided;returned;sat;sat_down;sat_of;sat_up;seat;seated;set;set_up;sets;settle;settled;settles;sit;sit_down;sit_of;sit_up;site;sits;sits_enthroned;sitting;sitting_down;spent;stand;stay;stay_up;stayed;staying;stays;take_a_~_seat;taken_~_seat;to_sit;took_up_residence;wait;waiting
 יָשַׁט	extended;held_out;holds_out
 יָשַׁם	appalled;become_desolate;ruined;stripped
 יָשַׁע	avenged;avenging;brought_salvation;brought_~_victory;came_to_~_rescue;deliver;delivered;deliverer;deliverers;gave_victory;give_~_victory;help;preserve;rescue;safe;save;save_of;saved;saves;saving;savior;savior_of;spare;to_help;victorious;worked_salvation
@@ -3236,7 +3236,7 @@
 יׇקְתְאֵל	Joktheel
 יׇרְקְעָם	Jorkeam
 יׇשְׁבְּקָשָׁה	Joshbekashah
-יהוה	GOD;LORD;Lord;LORD'S;Lord's;LORD's;Yahweh
+יהוה	GOD;LORD;Lord;LORD's;Lord's;LORD'S;Yahweh
 יוֹאֵל	Joel
 יוֹאָב	Joab;Joab's
 יוֹאָח	Joah
@@ -3283,7 +3283,7 @@
 יוּבָל	Jubal
 יוּכַל	Jucal
 יוּשַׁב חֶסֶד	-hesed;Jushab-
-כְּ	about;about_the;about_THE;about_the_time;about_this;according;according_to;according_to_the;accordingly;after;alike;alike_the;all_of;and_~_alike;as;as_a;as_an;as_far_as;as_for_the;as_if;as_long_as;as_much_as;as_soon_as;as_the;as_this;as_those;as_though;as_to;as_well_as;as_well_as_the;as_~_as;as_~_as_the;at;at_the;at_the_height_of;at_this;because;because_of;both_the;but;by;by_the_time;by_this;equal_to;even;even_as;exactly;follow;for;for_the;for_THE;from;if;imitating;in;in_accordance_with;in_comparison_with;in_keeping_with;in_THE;in_the;in_the_course_of;in_the_order_of;in_the_way;into;into_the;just;just_as;just_as_the;like;like_a;like_an;like_that;like_the;like_THE;likewise;more;of;of_the;on;on_the;on_the_principle_of_the;out_of;regarded_as;resembling_the;resulting_in;same;same_the;similar;similar_the;similar_to;since;so;so_the;such;such_a;such_as;such_the;such_~_as_the;surely;the_same_as;to;to_the;too_~_to;under;until;when;whenever;while;with;with_the;with_THE;yet_the
+כְּ	about;about_THE;about_the;about_the_time;about_this;according;according_to;according_to_the;accordingly;after;alike;alike_the;all_of;and_~_alike;as;as_a;as_an;as_far_as;as_for_the;as_if;as_long_as;as_much_as;as_soon_as;as_the;as_this;as_those;as_though;as_to;as_well_as;as_well_as_the;as_~_as;as_~_as_the;at;at_the;at_the_height_of;at_this;because;because_of;both_the;but;by;by_the_time;by_this;equal_to;even;even_as;exactly;follow;for;for_THE;for_the;from;if;imitating;in;in_accordance_with;in_comparison_with;in_keeping_with;in_the;in_THE;in_the_course_of;in_the_order_of;in_the_way;into;into_the;just;just_as;just_as_the;like;like_a;like_an;like_that;like_the;like_THE;likewise;more;of;of_the;on;on_the;on_the_principle_of_the;out_of;regarded_as;resembling_the;resulting_in;same;same_the;similar;similar_the;similar_to;since;so;so_the;such;such_a;such_as;such_the;such_~_as_the;surely;the_same_as;to;to_the;too_~_to;under;until;when;whenever;while;with;with_the;with_THE;yet_the
 כְּאֵב	pain;pain_of;suffering
 כְּבֵדֻת	difficulty
 כְּבָר	already;Chebar
@@ -3336,7 +3336,7 @@
 כְּרַז	issued_a_proclamation
 כְּרָא	troubled
 כְּרָן	Cheran
-כְּרוּב	cherub;Cherub;cherub_of;cherubim
+כְּרוּב	Cherub;cherub;cherub_of;cherubim
 כְּתַב	write_down;writing;written;wrote;wrote_down
 כְּתַל	wall_of;walls
 כְּתָב	book_of;document;edict;entries_of;letter;letter_of;limit;register_of;registration_of;script_of;text;writing;written_of
@@ -3467,7 +3467,7 @@
 כָּבוּל	Cabul
 כָּה	this_point
 כָּהֵן	priest;priests;priests_of
-כָּהַן	being_a_priest;decks;priest;serve_as_priests;serve_~_aspriest;serve_~_aspriests;served_as_priest;served_as_priests;serving_as_priests;succeeded_~_aspriest
+כָּהַן	being_a_priest;decks;priest;serve_as_priests;serve_~_as_priest;serve_~_as_priests;served_as_priest;served_as_priests;serving_as_priests;succeeded_~_as_priest
 כָּהָה	be_blind;dim;faint;grow_faint;grown_dim;restrain;to_be_blind;were_~_weak
 כָּוָה	burned;scorched
 כָּזְבִי	Cozbi
@@ -3483,9 +3483,9 @@
 כָּלֵב אֶפְרָתָה	-ephrathah;Caleb-
 כָּלֶה	strain
 כָּלַל	perfected
-כָּלַם	ashamed;bear_~_shame;blush;cast_reproach;confounded;did_~_harm;disgraced;dishonored;embarrassed;humiliated;in_shame;lacking;puts_~_toshame;rebuke;reproach;shame;suffered_~_harm
+כָּלַם	ashamed;bear_~_shame;blush;cast_reproach;confounded;did_~_harm;disgraced;dishonored;embarrassed;humiliated;in_shame;lacking;puts_~_to_shame;rebuke;reproach;shame;suffered_~_harm
 כָּלָא	confined;finish;hold_~_back;imprisoned;kept;restrain;restrained;shut_in;shut_up;stop;withheld;withhold
-כָּלָה	altogether;brings_~_topass;came_to_an_end;caused_~_tofail;ceased;come_to_an_end;comes_to_an_end;complete;complete_destruction;complete_end;completed;completely;consume;consumed;consumes;decided;destroy;destroyed;destroyed_~_all;destroys;destruction;destructive;determined;disappear;done;emptied;end;ended;ending;fail;failed;fails;faints;finish;finished;fulfill;full_end;gave_full_vent;gone;languishes;left;longed;made_an_end_of;make_a_~_end;perish;perished;put_an_end;reap;settle;spend;spent;strip;totally;vanish;vanish_away;vanishes;waste;wastes_away;wipe;worn_down
+כָּלָה	altogether;brings_~_to_pass;came_to_an_end;caused_~_to_fail;ceased;come_to_an_end;comes_to_an_end;complete;complete_destruction;complete_end;completed;completely;consume;consumed;consumes;decided;destroy;destroyed;destroyed_~_all;destroys;destruction;destructive;determined;disappear;done;emptied;end;ended;ending;fail;failed;fails;faints;finish;finished;fulfill;full_end;gave_full_vent;gone;languishes;left;longed;made_an_end_of;make_a_~_end;perish;perished;put_an_end;reap;settle;spend;spent;strip;totally;vanish;vanish_away;vanishes;waste;wastes_away;wipe;worn_down
 כָּמַהּ	faints
 כָּמַס	laid_up_in_store
 כָּמַר	aroused;hot;overcome
@@ -3502,7 +3502,7 @@
 כָּסַף	eager;long;longs;shame;to_long;you_longed
 כָּסָה	closed;clothed;concealed;conceals;cover;cover_up;covered;covered_of;covering;covers;forgives;hidden;hide;ignores;keep;keeps;made_a_covering;overwhelm;overwhelmed;shield;shrouded;take_refuge
 כָּסוּי	covering_of
-כָּעַס	anger;angry;enraged;given_~_offense;provoke;provoke_~_anger;provoke_~_toanger;provoked;provoked_~_toanger;provoking;provoking_~_toanger;trouble;vexation;vexed
+כָּעַס	anger;angry;enraged;given_~_offense;provoke;provoke_~_anger;provoke_~_to_anger;provoked;provoked_~_to_anger;provoking;provoking_~_to_anger;trouble;vexation;vexed
 כָּפִיס	plaster
 כָּפַל	double_over;doubled;folded_double;strike_twice
 כָּפַן	bent
@@ -3522,7 +3522,7 @@
 כָּרֻתָה	beams_of
 כָּרוֹז	herald
 כָּשֵׁר	brings_success;right;succeed
-כָּשַׁל	bring_~_toruin;brought_down;cause_~_tostumble;downfall;fail;failing;fails;fall;feeble;feeblest;overthrow;overthrown;stagger;stumble;stumbled;stumbles;stumbling;weak
+כָּשַׁל	bring_~_to_ruin;brought_down;cause_~_to_stumble;downfall;fail;failing;fails;fall;feeble;feeblest;overthrow;overthrown;stagger;stumble;stumbled;stumbles;stumbling;weak
 כָּשַׁף	sorcerer;sorcerers;sorceress;sorcery
 כָּשָׂה	sleek
 כָּתִית	beaten
@@ -3568,7 +3568,7 @@
 כּוּתָה	Cuth;Cuthah
 כוּר	pierced
 כרבל	clothed
-לְ	(namely);_the;about;about_the;according_to;according_to_the;after;after_the;against;against_him;against_the;against_THE;ahead_of;along;along_with;among;among_the;and;around;around_the;as;as_a;as_an;as_far_as;as_for;as_for_the;as_if;as_much_as;as_soon_as;as_the;as_to;at;at_from;at_the;at_THE;at_the_point_of;at_them;because;because_of;because_of_the;becoming;before;before_the;before_THE;belong_to;belong_to_the;belonged_to;belonged_to_the;belonging_to;belonging_to_the;belongs;belongs_to;belongs_to_the;bent_on;besides;between;between_the;by;by_the;by_the_time;by_way_of_the;close;come!;concerning;concerning_the;corresponding_to;due_to;during;each_the;entrance;faced_the;for;for_a;for_an;for_each;for_him;for_such;for_that;for_the;for_THE;for_their;for_them;for_themselves;for_those;for_~_sake;from;from_THE;from_the;from_those;gain;gaining;get;had;had_the;has;has_THE;has_the;have;have_the;having;hold;however;in;in_a;in_accordance_with;in_course_of;in_favor_of;in_order_that;in_order_to;in_order_~_to;in_regard_to;in_THE;in_the;in_the_order_of;in_them;in_themselves;in_~_honor;indeed;indeed_the;into;into_a;into_THE;into_the;just;leads_to;leads_~_to;like;like_the;made;near;nevertheless;next;not;nothing;of;of_the;of_THE;of_them;of_themselves;of_those;on;on_account_of;on_ahead;on_the;on_those;on_~_behalf;on_~_part;on_~_side;on_~_terms;onto_the;or_the;out_of;over;over_the;own;owned;owns;particularly;pity;possess;receive;received;refers_to;regarding;responding;result_in;same_as;so;so_as_to;so_as_~_to;so_far_as;so_that;sons_of_them;still;surely;than;that;that_not;that_the;their;them;themselves;then;therefore;therefore_now;they;though;through;throughout;thus;to;to_a;to_be;to_become;to_it;to_that;to_THE;to_the;to_their_own;to_them;to_those;to_~_belong;to_~_belongs;toward;toward_the;under;until;until_the;unto;upon;very_well;when;when_the;whether;why?;with;with_regard_to;with_respect_to;with_respect_to_the;with_the;with_them;with_those;within;X;yet
+לְ	(namely);_the;about;about_the;according_to;according_to_the;after;after_the;against;against_him;against_THE;against_the;ahead_of;along;along_with;among;among_the;and;around;around_the;as;as_a;as_an;as_far_as;as_for;as_for_the;as_if;as_much_as;as_soon_as;as_the;as_to;at;at_from;at_THE;at_the;at_the_point_of;at_them;because;because_of;because_of_the;becoming;before;before_THE;before_the;belong_to;belong_to_the;belonged_to;belonged_to_the;belonging_to;belonging_to_the;belongs;belongs_to;belongs_to_the;bent_on;besides;between;between_the;by;by_the;by_the_time;by_way_of_the;close;come!;concerning;concerning_the;corresponding_to;due_to;during;each_the;entrance;faced_the;for;for_a;for_an;for_each;for_him;for_such;for_that;for_THE;for_the;for_their;for_them;for_themselves;for_those;for_~_sake;from;from_the;from_THE;from_those;gain;gaining;get;had;had_the;has;has_THE;has_the;have;have_the;having;hold;however;in;in_a;in_accordance_with;in_course_of;in_favor_of;in_order_that;in_order_to;in_order_~_to;in_regard_to;in_the;in_THE;in_the_order_of;in_them;in_themselves;in_~_honor;indeed;indeed_the;into;into_a;into_THE;into_the;just;leads_to;leads_~_to;like;like_the;made;near;nevertheless;next;not;nothing;of;of_the;of_THE;of_them;of_themselves;of_those;on;on_account_of;on_ahead;on_the;on_those;on_~_behalf;on_~_part;on_~_side;on_~_terms;onto_the;or_the;out_of;over;over_the;own;owned;owns;particularly;pity;possess;receive;received;refers_to;regarding;responding;result_in;same_as;so;so_as_to;so_as_~_to;so_far_as;so_that;sons_of_them;still;surely;than;that;that_not;that_the;their;them;themselves;then;therefore;therefore_now;they;though;through;throughout;thus;to;to_a;to_be;to_become;to_it;to_that;to_THE;to_the;to_their_own;to_them;to_those;to_~_belong;to_~_belongs;toward;toward_the;under;until;until_the;unto;upon;very_well;when;when_the;whether;why?;with;with_regard_to;with_respect_to;with_respect_to_the;with_the;with_them;with_those;within;X;yet
 לְאֹם	among;nation_of;nations;people;peoples
 לְאֻמִּים	Leummim
 לְבִבָה	cakes
@@ -3665,7 +3665,7 @@
 לָהֵן	but;except;in_case;therefore;they;unless
 לָהַד	Lahad
 לָהַה	languished
-לָהַט	burned;burns;burns_up;consume;consumed;devour;flame;kindles;set_~_onfire;sets_on_fire;sets_~_ablaze
+לָהַט	burned;burns;burns_up;consume;consumed;devour;flame;kindles;set_~_on_fire;sets_on_fire;sets_~_ablaze
 לָהַם	delicious_morsels
 לָוָה	accompany;borrow;borrowed;borrower;borrows;join;joined;lend;lender;lending;lends;lends_of
 לָזוּת	devious_of
@@ -3889,7 +3889,7 @@
 מִגְדַּל־אֵל	-el;Migdal-
 מִגְדַּל־גַּד	-gad;Migdal-
 מִגְדַּל־עֵדֶר	Eder;tower of
-מִגְדָּל	high_~_platform_of;mounds_of;tower;tower of;Tower of;tower_of;towers;towers_of;watchtower
+מִגְדָּל	high_~_platform_of;mounds_of;tower;Tower of;tower of;tower_of;towers;towers_of;watchtower
 מִגְדָּנָה	precious_gifts;precious_things;valuable_gifts;valuable_possessions
 מִגְדֹּל	Migdol
 מִגְדּוֹל	tower_of
@@ -3977,7 +3977,7 @@
 מִנְלֶה	possessions_of
 מִנְעָל	bars_of
 מִנִּי	Minni
-מִנִּית	Minnith;minnith
+מִנִּית	minnith;Minnith
 מִסְגֶּרֶת	borders_of;fortresses_of;frames;frames_of;rim;rim_of;strongholds_of
 מִסְדְּרוֹן	vestibule
 מִסְחָר	business_of
@@ -4062,7 +4062,7 @@
 מִשְׁכַּן	dwelling_of
 מִשְׁכָּב	bed;bed_of;beds;beds_of;bier;couch_of;lies_with_of;lying_of;relation_of;rest_of;sleep_of;sleeping_with_of
 מִשְׁכָּן	dwelling_of;dwelling_place;dwelling_place_of;dwelling_places_of;dwellings;dwellings_of;habitation_of;lived_of;resting_place;tabernacle;tabernacle_of;tent_of;tents_of;where_~_dwells_of
-מִשְׁלַח	activity_of;place_~_letloose_of;work_of
+מִשְׁלַח	activity_of;place_~_let_loose_of;work_of
 מִשְׁלַחַת	band_of;discharged
 מִשְׁלוֹחַ	put_forth_of;send_of;sending_of
 מִשְׁמֶרֶת	allegiance_of;charge_of;duties;duties_of;duty_of;duty_of_watching;guard;guard_of;guard_post_of;guards;guards_of;keep;kept;offices_of;post_of;posts_of;requirements_of;responsibilities;responsibilities_of;responsibility;responsibility_of;responsible_of;safe;service;service_of
@@ -4102,7 +4102,7 @@
 מִתְרְדָת	Mithredath
 מֵאֲשֶׁר	if;that;those;what;whatever;which;who;whom
 מֵאֵן	refuse
-מֵאָה	100;200;a_hundred;a_hundred_of;hundred;Hundred;hundred_of;hundreds;hundredth;one_hundred;one_hundred_of;percentage_of;two_hundred
+מֵאָה	100;200;a_hundred;a_hundred_of;Hundred;hundred;hundred_of;hundreds;hundredth;one_hundred;one_hundred_of;percentage_of;two_hundred
 מֵאָז	now;of_old;old;since;then;time;when
 מֵאמַר	command_of;requested_of
 מֵזַח	belt;harbor
@@ -4513,7 +4513,7 @@
 מָחָר	future;in_the_future;in_time_to_come;tomorrow
 מָחוֹז	haven_of
 מָחוֹל	dance;dance_of;dancing;dancing_of;Mahol
-מָטַר	bring_rain;cause_~_tofall;pour_down;rain;rain_of;rained;rained_down;rained_upon;send_rain;send_~_rain;showers_of
+מָטַר	bring_rain;cause_~_to_fall;pour_down;rain;rain_of;rained;rained_down;rained_upon;send_rain;send_~_rain;showers_of
 מָכִי	Machi
 מָכִיר	Machir
 מָכִירִי	Machirites
@@ -4547,7 +4547,7 @@
 מָסָךְ	covering;covering_of;screen;screen_of;screening
 מָסֹרֶת	bond_of
 מָעַד	slip;tremble;unstable_of;wavering
-מָעַט	a_few;belittle;bring_~_tonothing;decrease;diminished;dwindle;few;gathered_least;gathered_little;give_less;less;make_~_fewin_number;make_~_small;small
+מָעַט	a_few;belittle;bring_~_to_nothing;decrease;diminished;dwindle;few;gathered_least;gathered_little;give_less;less;make_~_fewin_number;make_~_small;small
 מָעַי	Maai
 מָעַךְ	bruised;fondled;stuck
 מָעַל	acted_unfaithfully;acting_unfaithfully;be_unfaithful;broke_faith;broken_faith;commits;committed;dealt_treacherously;display_of_infidelity;guilty;he_acted_unfaithfully;she_is_unfaithful;she_was_unfaithful;sin;they_were_unfaithful;to_be_unfaithful;transgressed;unfaithful;unfaithfulness
@@ -4560,7 +4560,7 @@
 מָעוֹר	nakedness_of
 מָעוּף	gloom_of
 מָצַץ	drink_deeply
-מָצָא	are_here;befall;befallen;being_found;beset;brought;came_upon;catch;caught;causes_~_tohappen;celebrated;come_upon;comes;coming_on;detect;discover;discovered;enough;fall;fathom;feel;find;find_of;find_out;find_~_out;finding;finds;finds_of;found;found_of;found_out;gained;get;given;had;happened;happened_to;have;have_enough;he_is_found;left;lift;lived;meet;met;overtake;overtook;possessed;present;reached;reaped;seeking;spreads;strikes;suffice;to_be_found
+מָצָא	are_here;befall;befallen;being_found;beset;brought;came_upon;catch;caught;causes_~_to_happen;celebrated;come_upon;comes;coming_on;detect;discover;discovered;enough;fall;fathom;feel;find;find_of;find_out;find_~_out;finding;finds;finds_of;found;found_of;found_out;gained;get;given;had;happened;happened_to;have;have_enough;he_is_found;left;lift;lived;meet;met;overtake;overtook;possessed;present;reached;reaped;seeking;spreads;strikes;suffice;to_be_found
 מָצָה	drain;drained;drained_out;draining;drink;wrung_out
 מָצוֹד	siegeworks;snares;what_~_havecaught_of
 מָצוֹק	anguish;distress
@@ -4695,7 +4695,7 @@
 מוּר	change;changed;exchange;exchanged;exchanges;substituted;substitution;to_substitute
 מוּשׁ	cease;depart;departed;departs;feel;give_way;leave;left;move;remove;removes;without
 מוּשִׁי	Mushi;Mushites
-מוּת	bring_death;bring_~_death;brings_~_death;cause_the_death;corpse;dead;dead_body;dead_of;death;deceased;destroy;die;die_of;died;died_naturally;died_of;dies;dying;he_must_die;he_shall_die;he_will_be_killed;he_will_be_put_to_death;he_will_die;kill;killed;killing;kills;one_dying;put_to_death;put_~_todeath;putting_to_death;putting_~_todeath;slay;slays;they_must_die;they_would_die;to_die;to_kill;to_put_to_death;we_must_die;we_will_die;you_die;you_will_die
+מוּת	bring_death;bring_~_death;brings_~_death;cause_the_death;corpse;dead;dead_body;dead_of;death;deceased;destroy;die;die_of;died;died_naturally;died_of;dies;dying;he_must_die;he_shall_die;he_will_be_killed;he_will_be_put_to_death;he_will_die;kill;killed;killing;kills;one_dying;put_to_death;put_~_to_death;putting_to_death;putting_~_to_death;slay;slays;they_must_die;they_would_die;to_die;to_kill;to_put_to_death;we_must_die;we_will_die;you_die;you_will_die
 מוּת לַבֵּן	death;of_the_son
 מוד	measured
 נ	drip_with;them;this
@@ -4859,7 +4859,7 @@
 נֵתַח	piece;piece_of;pieces;pieces_of
 נֶאָצָה	blasphemies;revilings_of
 נֶבְרַשְׁתָּא	lampstand
-נֶגֶב	Negeb;negev;Negev;Negev_of;negev_of;south;south_of;southern;southern_side;the_Negeb;the_Negev;~south
+נֶגֶב	Negeb;Negev;negev;negev_of;Negev_of;south;south_of;southern;southern_side;the_Negeb;the_Negev;~south
 נֶגֶד	against;aloofness;before;distance;face;facing;front;front_of;in;in_front_of;in_the_presence_of;in_the_sight_of;in_~_sight;near;oppose;opposite;presence;straight;straight_ahead;suitable;to;toward;with
 נֶגֶף	plague;strikes
 נֶגַע	affliction_of;assault;blows_of;condition_of;contaminated_of;contamination;contamination_of;disease;disease_of;diseased;infection;infection_of;infectious_of;outbreak_of;plague;plagues;sore;stricken;stripes;stroke_of;wounds
@@ -4921,7 +4921,7 @@
 נָא	ah;although;here;I_pray_you;now;now!;o;oh;please;raw;then;therefore;this_time;we_beseech_you
 נָאַם	says
 נָאַף	adulterer;adulterers;adulteress;adulteresses;adulteries;adulterous;adultery;commit_adultery;commits_adultery;committed_adultery;committing_adultery
-נָאַץ	blasphemed;blossoms;despise;despise_of;despised;despised_of;despises;despising;given_occasion_~_toblaspheme;renounce;reviles;scoff;spurned;to_make_show_contempt;treated_~_withcontempt
+נָאַץ	blasphemed;blossoms;despise;despise_of;despised;despised_of;despises;despising;given_occasion_~_to_blaspheme;renounce;reviles;scoff;spurned;to_make_show_contempt;treated_~_withcontempt
 נָאַק	groan
 נָאַר	abandoned;renounced
 נָאָה	beautiful;befits
@@ -4972,7 +4972,7 @@
 נָזָה	spattered;spatters;splashed;sprinkle;sprinkled;sprinkles_of
 נָחִיר	nostrils_of
 נָחֵת	bend;bring_down;come_down;go_down;goes_deeper;going_down;pressed_down;settling;shattered;sunk
-נָחַל	allotted;apportion;apportion_the_inheritance;apportion_~_forinheritance;bequeath;distribute;distributed;distributing_~_asinheritances;divide;divide_~_foran_inheritance;endow;gave;gave_~_asan_inheritance;gave_~_inheritance;give_~_asan_inheritance;give_~_inheritance;given_~_toinherit;gives_~_asa_possession;giving_~_toinherit;have;have_an_inheritance;have_~_inheritance;heritage;inherit;inheritances_~_distributed;inherited;inherits;leave_~_foran_inheritance;leaves_an_inheritance;obtained;possess;receive;received;received_an_inheritance;received_~_inheritance;take_possession_of;take_~_as_~_possession;wills_~_possessions
+נָחַל	allotted;apportion;apportion_the_inheritance;apportion_~_forinheritance;bequeath;distribute;distributed;distributing_~_asinheritances;divide;divide_~_foran_inheritance;endow;gave;gave_~_asan_inheritance;gave_~_inheritance;give_~_asan_inheritance;give_~_inheritance;given_~_to_inherit;gives_~_asa_possession;giving_~_to_inherit;have;have_an_inheritance;have_~_inheritance;heritage;inherit;inheritances_~_distributed;inherited;inherits;leave_~_foran_inheritance;leaves_an_inheritance;obtained;possess;receive;received;received_an_inheritance;received_~_inheritance;take_possession_of;take_~_as_~_possession;wills_~_possessions
 נָחַם	appeased;becoming_a_consolation;bring_~_relief;change_~_mind;change_~_minds;comfort;comforted;comforter;comforters;comforters_of;comforts;comforts_of;condolences;console;consoled;consoling;give_~_consolation;had_compassion;have_compassion;mourning;moved_to_pity;pity;regret;regrets;regretted;relent;relented;relenting;relents;relieved;repent;repented;sorry;take_comfort
 נָחַץ	urgent
 נָחַשׁ	augury;divination;he_divines;interprets_omens;learned_by_divination;practice_divination;to_divine;watching_for_an_omen
@@ -5004,8 +5004,8 @@
 נָסַח	plucked;tear;tears_down;uprooted
 נָסַךְ	cast;casts;installed;make;pour;pour_drink_offerings;pour_out;poured;poured_out;poured_~_out;pouring_out;set_up;spread
 נָסַס	sick;sparkling
-נָסַע	brought_~_out;caused_~_toblow;departed;go_forward;journey;journey_on_~_way;journeyed;journeyed_on;led;led_out;left;marching;migrated;move_on;moved;moved_on;plucked_up;pulled_out;pulled_up;pulled_~_up;quarried;quarries;set_out;set_~_aside;sets_out;setting_out;to_continue;uprooted;wander;went;went_out;withdrew
-נָסָה	attempted;put_~_tothe_test;test;tested;testing;try;used_to;venture;ventures
+נָסַע	brought_~_out;caused_~_to_blow;departed;go_forward;journey;journey_on_~_way;journeyed;journeyed_on;led;led_out;left;marching;migrated;move_on;moved;moved_on;plucked_up;pulled_out;pulled_up;pulled_~_up;quarried;quarries;set_out;set_~_aside;sets_out;setting_out;to_continue;uprooted;wander;went;went_out;withdrew
+נָסָה	attempted;put_~_to_the_test;test;tested;testing;try;used_to;venture;ventures
 נָעִים	melodious;pleasant;pleasant_places;pleasantness;pleasures;sweet_of
 נָעֵם	go_well;pleasant;surpass_in_beauty
 נָעַל	bolt;bolted;gave_~_sandals;locked;sandals
@@ -5013,7 +5013,7 @@
 נָעַר	growl;overthrew;shake;shake_off;shake_out;shake_~_free;shaken_off;shaken_out;shakes;shook_out;swept
 נָפִישׁ	Naphish
 נָפַח	blew_~_away;blow;blows;boiling;breathe;breathed;die;fanned;sniff_at
-נָפַל	allot;allotted;apportioned;attacked;born;break_~_down;bring_down;brings_on;burst;cast;cast_lots;caused_~_tofall;collapse;collapsed;come;confined;defected;desert;deserted;deserters;deserting;disperse;drop;drops;extinguish;fail;failed;fall;fall_away;fall_down;fall_down_flat;fallen;falling;falling_down;falls;fell;fell_down;fell_down_flat;fell_out;felled;felling;give_birth;go_over;got_down;I_will_turn_down;inferior;knocks_out;laid_low;lay;lay_prostrate;leave_out;lie_down;lost;lying;one_falling;overthrow;perish;present;presenting;prostrated_myself;settled;sink;struck_~_down;stumble;sunk;surrenders;threw_down;throw;throw_down;throwing_~_down;thrown;to_come_to_ruin;turns_out;void;waste_away;you_will_come_to_ruin
+נָפַל	allot;allotted;apportioned;attacked;born;break_~_down;bring_down;brings_on;burst;cast;cast_lots;caused_~_to_fall;collapse;collapsed;come;confined;defected;desert;deserted;deserters;deserting;disperse;drop;drops;extinguish;fail;failed;fall;fall_away;fall_down;fall_down_flat;fallen;falling;falling_down;falls;fell;fell_down;fell_down_flat;fell_out;felled;felling;give_birth;go_over;got_down;I_will_turn_down;inferior;knocks_out;laid_low;lay;lay_prostrate;leave_out;lie_down;lost;lying;one_falling;overthrow;perish;present;presenting;prostrated_myself;settled;sink;struck_~_down;stumble;sunk;surrenders;threw_down;throw;throw_down;throwing_~_down;thrown;to_come_to_ruin;turns_out;void;waste_away;you_will_come_to_ruin
 נָפַץ	broken_up;crushed_to_pieces;dashes;populated;scattered;scattered_of;scattering;shatter;shattered;shattering;smash;smashed
 נָפַשׁ	refreshed
 נָפָה	naphath_of;naphoth_of;sieve_of
@@ -5051,7 +5051,7 @@
 נָשַׂג	affording;becomes_rich;obtain;overtake;overtaken;overtakes;overtook;prosper;prospers;put;reach;reached;reaches_of;remove;she_can_afford;she_would_give;to_overtake;you_will_overtake
 נָשָׂא	accept;accepted;advanced;arise;assisted;bear;bear_the_burden;bear_up;bear_with;bear_~_up;bearer;bearer_of;bearing;bearing_of;bears;being_honored_of;being_regarded_of;bore;bore_of;borne;bring;bringing;bringing_of;brought;brought_of;carried;carried_away;carried_of;carried_off;carried_~_away;carriers_of;carries;carries_~_away;carry;carry_away;carry_of;carry_off;carry_~_away;carry_~_off;carrying;carrying_of;cast;caught_~_up;compelled;containing;count!;cry_out;depends;dignitary_of;ease;endure;endured;exalt;exalted;exalting;forgave;forget;forgive;forgiven;forgiven_of;forgiving;gained_of;gather;get;given;grant;granted;greedy;he_accepted;he_lifted;he_lifts;he_respects;he_shows_partiality;heaves;high;high_~_lift;I_lift;I_lifted;I_raised;I_will_accept;I_will_show_partiality;incur;laid;lift;lift_up;lift_up_~_voice;lift_~_out;lift_~_up;lifted;lifted_up;lifted_~_up;lifts_up;lifts_~_up;loaded;lofty;make;married;moved;offer;one_being_lifted_of;ones_longing;ones_showing_partiality;pardon;partial;pay;pick_up;pick_~_up;picked_up;picked_~_up;produce;promoted;pull;put;raise;raised;receive;regard;released;remove;required;rise_up;rose;rouse;served;set;show;shown;sing;spare;spread;stirred;suffer;supplied;support;supported;supporting;take;take!;take_away;take_up;take_~_away;taken;taken_away;takes;takes_up;they_are_carried;they_counted;to_carry;to_forgive;to_take;took;took_away;took_up;uplifted;uttered;wear;wearing;will_he_accept;will_you_show_partiality;won;wore;would_he_accept;yield;you_lift;you_lifted;you_must_take;you_showed_paritality;you_take;you_will_show_partiality
 נָתִיב	path;path_of;wake
-נָתַח	cut;cut_~_inpieces;cut_~_intopieces
+נָתַח	cut;cut_~_inpieces;cut_~_into_pieces
 נָתַךְ	emptied_out;melt;melted;pour_out;pour_~_out;poured_down;poured_out
 נָתַן	add;added;allow;allowed;applied;appoint;appointed;apportion;ascribe;ascribed;assigned;attach;attached;bears;bears_fruit;bestowed;bestows;bring;bringing;brings;brought;called;cast;cause;caused;causes;change;charge;come;comes;commit;committed;conferred;consign;contributed;dedicated;deliver;deliver_of;delivered;delivered_~_up;delivers;direct;display;distribute;divide;does_he_give;enable;enabled;entrusted;establish;established;exchange;exchanged;execute;exposed;fasten;fastened;gave;gave_forth;gave_up;gave_~_over;gift;give;give_forth;give_of;give_up;give_~_back;give_~_over;give_~_up;given;given_over;given_up;given_~_over;gives;gives_of;gives_~_over;giving;giving_over;gotten;grant;granted;had;hand_over;hand_~_over;handed;handed_over;handed_over_to;hands_~_over;hang;hang_up;he_could_put;he_gave;he_gives;he_let;he_raised;he_will_be_given;he_will_grant;he_would_allow;he_would_come;he_would_give;he_would_grant;he_would_make;heap;hold;hurled;I_will_give;impose;imposed;inclined;inflicted;inflicts;injury_inflicted;inserted;issued;laid;lay;lays;leave;left;left_hanging;lend;lends;let;lift;lift_up;lifted_up;long;made;made_~_turn;make;make_of;makes;making;offer;offered;ones_being_given;paid;pay;perform;performed;permit;pitch;place;placed;plant;presented;proclaim;produce;provide;provided;provides;providing;punish;put;put_on;put_out;put_up;put_~_in;puts;putting;raise;raised;raises;regard;render;renders;repay;resounds;return;returned;reward;rewarding;send;sends;sends_out;sent;set;set_apart;set_up;setting;shares;she_will_be_given;show;showed;spend;spread;stored;strike;supplied;supplies;take;they_gave;they_put;thrown;thrown_up;thrust;to_be_given;to_deliver;to_give;took;trade;traded;treat;turned;utter;uttered;utters;wins;wish;yield;yielded;yields;you_deliver;you_give
 נָתַס	break_up
@@ -5097,7 +5097,7 @@
 נוּם	sleep;slumber;slumbers
 נוּמָה	drowsiness
 נוּן	increase;Nun
-נוּס	abated;be_a_fugitive;drives;fled;flee;flee_away;fleeing;flees;fugitive;fugitives;get_away;hide;put_~_toflight;ran;to_flee
+נוּס	abated;be_a_fugitive;drives;fled;flee;flee_away;fleeing;flees;fugitive;fugitives;get_away;hide;put_~_to_flight;ran;to_flee
 נוּעַ	disturb;fugitive;moving;restless;set_~_trembling;shake;shaken;shakes;she_reels;shook;stagger;staggered;sway;swing_to_and_fro;to_reel;to_wander;totter;tremble;trembled;wander;wander_about;wandered;wanderers
 נוּף	perfumed;present;presented;put;raise;raised;raises;shake;shed_abroad;sift;use;wave;waved;wield;wielded;wields_of
 נוּק	nursed
@@ -5268,7 +5268,7 @@
 סָפַק	clap;claps;clasp_hands;strike;strikes;struck;struck_~_together;wallow
 סָפַר	assigned;count;count_off;counted;counted_~_out;declare;declared;he_took_census_of;kept_count;measuring;number;numbered;proclaim;recite;record;recount;recounted;repeated;set_forth_~_case;speak;talk;tell;telling;told;took_a_census;utter
 סָפָה	add;bringing_disaster;caught;devastation;heap;increase;perish;sweep_away;sweep_~_away;swept_away;take;take_off
-סָקַל	clear;cleared_~_ofstones;he_must_be_stoned;he_will_be_stoned;pelted;stone;stoned;stoning;threw;to_be_stoned
+סָקַל	clear;cleared_~_of_stones;he_must_be_stoned;he_will_be_stoned;pelted;stone;stoned;stoning;threw;to_be_stoned
 סָרִיס	court_officials;court_officials_of;eunuch;eunuch_of;eunuchs;eunuchs_of;officer;officer_of;officers_of;official;officials_of;palace_officials
 סָרֵךְ	administrators;administrators_of
 סָרַח	decayed;flowing_of;hang;lounge;lounging;spreading
@@ -5309,9 +5309,9 @@
 סוּס	horse;horse's;horse_of;horses;horses';horses'_of;horses_of;mounted;stallions;swallow_of;swift
 סוּסִי	Susi
 סוּסָה	mare_of
-סוּף	bring_~_toan_end;come_to_an_end;fade;fulfilled;red;Reed;reeds;rushes;seaweed;Suph;surely_destroy;swept_away
+סוּף	bring_~_to_an_end;come_to_an_end;fade;fulfilled;red;Reed;reeds;rushes;seaweed;Suph;surely_destroy;swept_away
 סוּפָה	gale;storm;storm_of;storm_wind;Suphah;tempest;whirlwind;whirlwinds
-סוּר	abolish;abolished;avoids;away;banish;call_back;captain;caused_~_toswerve;cease;come_over;cut_off;degenerate_of;depart;departed;deposed;deprive;deprives_~_of;disappears;escape;expelled;far;get_rid_of;go_away;gone;keep;leave;left;left_~_undone;pass_away;past;put_away;rebels_of;rejected;relieved;removal;remove;removed;removes;removing;return;set_aside;slip;stay;stop;strip_away;strips;Sur;take;take_away;take_off;take_~_away;taken;taken_away;took;took_away;took_off;took_~_off;turn;turn_aside;turn_away;turn_away_of;turn_in;turn_~_aside;turn_~_away;turn_~_back;turned;turned_aside;turned_away;turning;turning_aside;turning_~_away;turns;turns_away;went_away;went_over;went_up;withdrew;without_of
+סוּר	abolish;abolished;avoids;away;banish;call_back;captain;caused_~_to_swerve;cease;come_over;cut_off;degenerate_of;depart;departed;deposed;deprive;deprives_~_of;disappears;escape;expelled;far;get_rid_of;go_away;gone;keep;leave;left;left_~_undone;pass_away;past;put_away;rebels_of;rejected;relieved;removal;remove;removed;removes;removing;return;set_aside;slip;stay;stop;strip_away;strips;Sur;take;take_away;take_off;take_~_away;taken;taken_away;took;took_away;took_off;took_~_off;turn;turn_aside;turn_away;turn_away_of;turn_in;turn_~_aside;turn_~_away;turn_~_back;turned;turned_aside;turned_away;turning;turning_aside;turning_~_away;turns;turns_away;went_away;went_over;went_up;withdrew;without_of
 סוּת	allured;drew_~_away;entice;entices;incited;inciting;induced;mislead;misleading;misleads;misled;robes_of;urged
 עֱזוּז	fury_of;might_of;power_of
 עֱלִי	pestle
@@ -5663,7 +5663,7 @@
 עָב	canopies;canopy;canopy_of;clay_of;cloud;cloud_of;clouds;clouds_of;dense_of;thick_cloud;thick_clouds;thickets
 עָבַד	be_enslaved;became_subject_to;become_slaves;been;burdened;cultivate;cultivated;do;enslave;enslaved;holding_as_slaves;imposed;labor;labored;laborer;made;made_to_serve;make_slaves;make_~_serve;make_~_slave;make_~_slaves;observe;perform;performed;plowed;profits;rendered;servant;serve;serve_of;served;serves;serves_of;serving;slave;till;tilled;tiller;tiller_of;tills_of;used;work;work_of;worked;workers;workers_of;works;worship;worshipers_of
 עָבַט	borrow;collect;lend;swerve;to_lend
-עָבַר	across;advanced;angry;assessed;avert;beyond;blow;breeds;bring_over;bring_~_over;broke_through;broken;brought;brought_~_on_~_way;brought_~_over;came;carried_~_over;carry_~_over;come;come_over;comes_over;coming;continued;cross;cross_over;crossed;crossed_over;crosses_over;crossing;crossing_over;crossing_through;current_rate;disobey;disregarded;drew_~_across;driven;enter;escaped;fail;fall_into_disuse;flood;flying;freed;full_of_wrath;go;go_back!;go_beyond;go_forward;go_on;go_over;go_through;going_against;going_down;going_over;gone;gone_over;grant_~_passage;have_no_limit;have_~_shave;invade;invaders;leave;led;led_~_past;led_~_through;liquid;made;make;march_on;marched_on;meddles;missed;moved;moved_on;obligated;offer_up;offered_up;offering_up;outran;over;overcome;overflow;overlook;overrun;overwhelming;pass;pass_along_of;pass_away;pass_beyond;pass_by;pass_by_of;pass_of;pass_on;pass_over;pass_through;passage;passed;passed_away;passed_beyond;passed_by;passed_on;passed_through;passed_~_through;passes;passes_along;passes_by;passes_on;passes_through;passing;passing_by;passing_on;passing_through;past;perish;perishing;pouring_over;proclaimed;provokes_~_toanger_of;put_away;remove;removed;repealed;sacrifice;searchers;send;sent;sent_across;sent_~_across;serve;set_apart;shave;sound;sounded;spare;spared;spread;spreading;sweep_through;swept;swept_by;take_away;take_~_away;taken_away;taken_~_away;throws_off;to_cross_over;took;transfer;transgress;transgressed;transgressing;travel;travel_of;traveled;travelers;travelers_of;turn;turn_away;very_angry;walk_on;walk_over;went;went_ahead;went_away;went_forward;went_on;went_over
+עָבַר	across;advanced;angry;assessed;avert;beyond;blow;breeds;bring_over;bring_~_over;broke_through;broken;brought;brought_~_on_~_way;brought_~_over;came;carried_~_over;carry_~_over;come;come_over;comes_over;coming;continued;cross;cross_over;crossed;crossed_over;crosses_over;crossing;crossing_over;crossing_through;current_rate;disobey;disregarded;drew_~_across;driven;enter;escaped;fail;fall_into_disuse;flood;flying;freed;full_of_wrath;go;go_back!;go_beyond;go_forward;go_on;go_over;go_through;going_against;going_down;going_over;gone;gone_over;grant_~_passage;have_no_limit;have_~_shave;invade;invaders;leave;led;led_~_past;led_~_through;liquid;made;make;march_on;marched_on;meddles;missed;moved;moved_on;obligated;offer_up;offered_up;offering_up;outran;over;overcome;overflow;overlook;overrun;overwhelming;pass;pass_along_of;pass_away;pass_beyond;pass_by;pass_by_of;pass_of;pass_on;pass_over;pass_through;passage;passed;passed_away;passed_beyond;passed_by;passed_on;passed_through;passed_~_through;passes;passes_along;passes_by;passes_on;passes_through;passing;passing_by;passing_on;passing_through;past;perish;perishing;pouring_over;proclaimed;provokes_~_to_anger_of;put_away;remove;removed;repealed;sacrifice;searchers;send;sent;sent_across;sent_~_across;serve;set_apart;shave;sound;sounded;spare;spared;spread;spreading;sweep_through;swept;swept_by;take_away;take_~_away;taken_away;taken_~_away;throws_off;to_cross_over;took;transfer;transgress;transgressed;transgressing;travel;travel_of;traveled;travelers;travelers_of;turn;turn_away;very_angry;walk_on;walk_over;went;went_ahead;went_away;went_forward;went_on;went_over
 עָבַשׁ	shrivel
 עָבַת	weave_~_together
 עָבָה	bloated;thicker
@@ -5876,7 +5876,7 @@
 עוּב	overshadowed
 עוּג	bake
 עוּגָב	flute;flute_of;pipe
-עוּד	admonish;appointed;approved;assured;brought_a_charge;call_witnesses;call_~_towitness;called_witnesses;ensnare;gave;give_warning;he_warned;helps;I_warned;say_for;stand_firm;testified;testify;to_warn;upholds;warn;warned;warning;witness;you_warn
+עוּד	admonish;appointed;approved;assured;brought_a_charge;call_witnesses;call_~_to_witness;called_witnesses;ensnare;gave;give_warning;he_warned;helps;I_warned;say_for;stand_firm;testified;testify;to_warn;upholds;warn;warned;warning;witness;you_warn
 עוּז	brought_to_a_secure_place;flee_for_safety;sought_refuge
 עוּל	against;infant_of;milch;milk;nursing;nursing_child_of
 עוּן	howl
@@ -6098,7 +6098,7 @@
 פַּתְשֶׁגֶן	copy_of
 פַּת־בָּג	choice_food_of;food;food_of;rations
 פָּאַר	adorns;beautify;boast;glorified;glorify;leave_~_thehonor
-פָּאָה	cut_~_topieces
+פָּאָה	cut_~_to_pieces
 פָּארָן	Paran
 פָּארוּר	pale
 פָּגַע	attack;attacked;came;come_upon;fall;find;happen;imposed;intercede;intervene;kill;laid;made_intercession;meet;meets;met;pray;reached;spare;strike;strike_the_mark;strike_~_down;struck_down;struck_~_down;touched;touches;touching;urge;urged
@@ -6148,11 +6148,11 @@
 פָּצַל	peeled
 פָּצַם	split_~_open
 פָּצַע	crushed_of;wounded
-פָּצַץ	breaks_~_inpieces;dashed_~_topieces
+פָּצַץ	breaks_~_inpieces;dashed_~_to_pieces
 פָּצַר	arrogance;persuaded;pressed;urged
 פָּצָה	open;open_wide;opened;opens;rescue;rescues;uttered
 פָּקִיד	commissioners;in_command;leader;officer;officer_of;officers;overseer;overseer_of;overseers
-פָּקַד	appoint;appointed;assign;assigned;attend;attended;bring;call_the_roll;called_the_roll;calls_~_toaccount;care_for;cares_for;charge;comes_to_~_aid;commit;committed;concerned;consigned;count;counted;counted_of;deposited;empty;enroll;enrolled;enrolled_of;enrollment;enrollment_of;entrusted;examined;gave_~_charge;had_the_oversight;harm;have_the_oversight;he_misses;he_will_aid;help;I_watched;in_charge_of;include;inspect;lack;longed_for;made_~_overseer;mindful;miss;missed;missing;mustered;mustering;number;number_of;numbered;numbered_of;numbers_of;officers;officers_of;overseers;prescribed;punish;punished;punishing;put;put_~_incharge;rallied;recorded;recorded_of;register;register_of;registered;see;set;sets;sought;suffer;take_care_of;to_aid;to_be_missing;to_miss;to_watch;visit;visited;visiting
+פָּקַד	appoint;appointed;assign;assigned;attend;attended;bring;call_the_roll;called_the_roll;calls_~_to_account;care_for;cares_for;charge;comes_to_~_aid;commit;committed;concerned;consigned;count;counted;counted_of;deposited;empty;enroll;enrolled;enrolled_of;enrollment;enrollment_of;entrusted;examined;gave_~_charge;had_the_oversight;harm;have_the_oversight;he_misses;he_will_aid;help;I_watched;in_charge_of;include;inspect;lack;longed_for;made_~_overseer;mindful;miss;missed;missing;mustered;mustering;number;number_of;numbered;numbered_of;numbers_of;officers;officers_of;overseers;prescribed;punish;punished;punishing;put;put_~_incharge;rallied;recorded;recorded_of;register;register_of;registered;see;set;sets;sought;suffer;take_care_of;to_aid;to_be_missing;to_miss;to_watch;visit;visited;visiting
 פָּקַח	fix;keep_~_open;open;opened;opens
 פָּרְסָאָה	persian
 פָּרִיץ	ferocious_of;robbers;violent;violent_of
@@ -6174,7 +6174,7 @@
 פָּרֹכֶת	curtain;curtain_of
 פָּרוּחַ	Paruah
 פָּרוּר	pot
-פָּשַׁח	tore_~_topieces
+פָּשַׁח	tore_~_to_pieces
 פָּשַׁט	made_a_raid;raid;raided;rush;rushed;rushed_forward;skin;skinning;strip;strip_off;stripped;stripped_off;strips;take_off;taken_off;took_off
 פָּשַׁע	committed;do_wrong;in_rebellion;offended;rebel;rebelled;rebellion;rebels;revolted;transgress;transgressed;transgressing;transgression;transgressions;transgressors
 פָּשַׂע	march
@@ -6190,7 +6190,7 @@
 פֹּארָה	boughs_of;branches_of;foliage
 פֹּה	either_side;here;one_side;side
 פֹּכֶרֶת הַצְבָיִם	-hazzebaim;Pochereth-
-פֹּעַל	accomplish;conduct_of;deeds;deeds_of;doings_of;getting_of;something;toil_of;wages_of;what_~_havedone_of;work;work_of
+פֹּעַל	accomplish;conduct_of;deeds;deeds_of;doings_of;getting_of;something;toil_of;wages_of;what_~_have_done_of;work;work_of
 פֹּת	foreheads_of;sockets
 פֻּם	mouth;mouth_of;mouths_of
 פֻּרָה	Purah
@@ -6214,7 +6214,7 @@
 פּוּץ	chase;disperse;dispersed;overflow;pour_out;scatter;scattered;scattered_of;scattering;scatters;shattered;sow;spread;spread_abroad
 פּוּק	further;gains;obtains;offer;providing;stumble;totter
 פּוּקָה	grief
-פּוּר	break_off;brings_~_tonothing;broke;pur;purim
+פּוּר	break_off;brings_~_to_nothing;broke;pur;purim
 פּוּרָה	boughs;measures;winepress
 פּוּשׁ	charge;frolic;leap;scattered
 פּוּתִי	Puthites
@@ -6468,7 +6468,7 @@
 צוּרִיאֵל	Zuriel
 צוּרִישַׁדָּי	-shaddai;Zuri-;Zurishaddai
 צוּרָה	design_of;plan_of
-צוּת	set_~_onfire
+צוּת	set_~_on_fire
 קְבֹל	battering_rams_of
 קְבֻצָה	gathers_of
 קְבֻרָה	burial;burial_of;burial_place_of;grave_of;tomb_of
@@ -6654,7 +6654,7 @@
 קָדֵשׁ בַּרְנֵעַ	-barnea;Kadesh-
 קָדַד	bowed;bowed_down;bowed_low;bowed_~_head;bowed_~_heads
 קָדַח	kindle;kindle_of;kindled;kindles
-קָדַם	anticipate;come_before;come_~_tomeet;comes_before;confront;confronted;go;in_front;meet;quick;receive;rise
+קָדַם	anticipate;come_before;come_~_to_meet;comes_before;confront;confronted;go;in_front;meet;quick;receive;rise
 קָדַר	black;blackened;clothed_~_ingloom;darken;grew_black;grow_dark;lie_in_gloom;mourn;mourning;run_dark
 קָדַשׁ	become_holy;consecrate;consecrated;consecrated_of;consecrates;consecrates_of;consecrating;consecration;declare;dedicate;dedicated;defiled;holiness;holy;holy_places_of;keep_~_holy;kept;made_~_holy;manifest_~_holiness;offerings;prepare;purifying;regard_as_holy;sanctified;sanctifies_of;sanctify;sanctify_of;set_apart;set_~_apart;show_~_holiness;show_~_holy;showed_~_holy;shows_~_holy;to_consecrate;transmit_holiness;treat_~_asholy;vindicate_the_holiness;votive_gifts_of
 קָדוֹשׁ	holy;Holy;Holy_of;holy_of;holy_offerings_of;saints;saints_of
@@ -6685,7 +6685,7 @@
 קָמָה	grown;standing_grain;standing_grain_of
 קָמוֹן	Kamon
 קָנֶה	branch;branches;branches_of;calamus;cane;cane_of;cubits;reed;reed_of;reeds;rod;rod_of;scales;shaft_of;socket_of;stalk;sweet_cane
-קָנָא	aroused_~_jealousy;envied;envious;envy;I_am_jealous;I_was_zealous;jealous;jealous_of;made_~_jealous;make_~_jealous;provoked_~_tojealousy;to_be_zealous;zeal
+קָנָא	aroused_~_jealousy;envied;envious;envy;I_am_jealous;I_was_zealous;jealous;jealous_of;made_~_jealous;make_~_jealous;provoked_~_to_jealousy;to_be_zealous;zeal
 קָנָה	acquire;acquired;acquires;bought;bought_back;buy;buy_of;buyer;buyer_of;buys;created;gains;get;gets;gotten;Kanah;maker_of;owner_of;possessed;provokes_to_jealousy;purchased;purchaser;recover;sold;to_buy;to_pay
 קָסַם	consult;divination;divination_of;divinations;diviner;diviners;diviners_of;divining;please;practice_divination;practiced_divination;used;utter_~_divinations
 קָסַס	cut_off
@@ -6698,7 +6698,7 @@
 קָצֶה	among_of;border_of;edge_of;end;end_of;ends_of;extreme_of;extremity_of;farthest_of;foot_of;frontier_of;last;last_of;mouth_of;other_of;outposts_of;outskirts_of;part_of;tip_of
 קָצַב	cut_off;shorn
 קָצַע	corners;scraped
-קָצַף	angered;angry;became_angry;became_~_angry;being_angry;enraged;provoked_~_towrath;was_~_angry
+קָצַף	angered;angry;became_angry;became_~_angry;being_angry;enraged;provoked_~_to_wrath;was_~_angry
 קָצַץ	clip_the_hair_of;cut;cut_in_pieces;cut_of;cut_off;cut_~_hair_of;shatters;stripped
 קָצַר	gather;harvesting;harvests;reap;reaped;reaper;reapers;reaping
 קָצָה	among_of;corners_of;cutting_off;edges_of;end;end_of;ends_of;ends_of_the_earth;fringes_of;quarters_of;ranks_of;reduce_the_size;scraped;scraped_off;tip_of;whole_of
@@ -6726,7 +6726,7 @@
 קָשַׁשׁ	gather;gather_together;gather_~_together;gathering;gathering_of
 קָשָׁה	cruel;difficult;distressed;fiercer;hard;harden;hardened;hardens;heavy;resisted;stiffen;stiffened;stubborn;stubbornly_refused;was_difficult
 קֹבָה	belly_of
-קֹדֶשׁ	consecrated;consecrated_offerings;consecrated_ones_of;consecrated_things;dedicated_gifts;dedicated_of;dedicated_things;dedicated_things_of;holies;holiest_of;holiness;holiness_of;Holy;holy;holy_district;holy_objects;Holy_of;holy_of;holy_offerings;holy_ones;holy_ones_of;holy_place;Holy_Place_of;Holy_Places;holy_portion;holy_thing;holy_things;holy_things_of;most_holy_of;Most_Holy_of;most_holy_ones_of;most_sacred_of;sacred;sacred_donation;sacred_donations;sacred_donations_of;sacred_of;sacred_things;sacred_things_of;sacrifices;sacrificial;sanctuary;sanctuary_of;set_apart;the_holy_ones;things_that_~_haddedicated_of;votive_gifts;votive_gifts_of;what_is_holy_of
+קֹדֶשׁ	consecrated;consecrated_offerings;consecrated_ones_of;consecrated_things;dedicated_gifts;dedicated_of;dedicated_things;dedicated_things_of;holies;holiest_of;holiness;holiness_of;Holy;holy;holy_district;holy_objects;Holy_of;holy_of;holy_offerings;holy_ones;holy_ones_of;holy_place;Holy_Place_of;Holy_Places;holy_portion;holy_thing;holy_things;holy_things_of;Most_Holy_of;most_holy_of;most_holy_ones_of;most_sacred_of;sacred;sacred_donation;sacred_donations;sacred_donations_of;sacred_of;sacred_things;sacred_things_of;sacrifices;sacrificial;sanctuary;sanctuary_of;set_apart;the_holy_ones;things_that_~_haddedicated_of;votive_gifts;votive_gifts_of;what_is_holy_of
 קֹהֶלֶת	teacher
 קֹוֶה	Kue
 קֹטֶב	destruction_of
@@ -6969,7 +6969,7 @@
 רָגַשׁ	conspire
 רָדַד	gone;spread;subdue;subdues
 רָדַם	fast_asleep;fell_into_a_deep_sleep;fell_into_a_trance;lay_stunned;lying_fast_asleep;sleeps;sound_asleep
-רָדַף	chase;chased;chases;follow;follows;gone_by;hunts;in_pursuit_of;persecute;persecute_of;persecutors_of;press_on;pursue;pursue_of;pursued;pursuer;pursuers;pursuers_of;pursues;pursuing;pursuing_of;put_~_toflight;puts_to_flight;runs_after;went_in_pursuit
+רָדַף	chase;chased;chases;follow;follows;gone_by;hunts;in_pursuit_of;persecute;persecute_of;persecutors_of;press_on;pursue;pursue_of;pursued;pursuer;pursuers;pursuers_of;pursues;pursuing;pursuing_of;put_~_to_flight;puts_to_flight;runs_after;went_in_pursuit
 רָדָה	came_down;charge;exercised_authority;had_dominion;leading_of;made_~_descend;rule;ruled;scraped;scraped_~_out;subdued;subdues
 רָהְגָּה	Rohgah
 רָהִיט	rafters_of
@@ -6992,7 +6992,7 @@
 רָחַם	compassion;compassion_on;finds_mercy;had_compassion_on;had_mercy_on;has_compassion;has_compassion_on_of;have_compassion;have_compassion_on;have_pity;have_~_compassionon;have_~_mercy;I_have_compassion_for;love;loved;merciful;mercy;obtain_mercy;pity_on;ruhamah;show_~_compassion;show_~_mercy;to_have_compassion
 רָחַף	hovering;hovers;tremble
 רָחַץ	bathe;bathed;bathing;cleansed;wash;washed;washed_away;washing
-רָחַק	away;caused_~_toshun;drive_~_far;drives_~_far;extended;far;far_away;far_off;go_far;go_~_far;gone_some_distance;keep_aloof;keep_far;keep_~_far;put_away;put_~_far;put_~_faraway;refrain;remove_~_far;removed;repugnant;sent_~_faraway;shunned;stays_far;to_go_far;very_far;went_far;withdraw_~_far;you_must_go_far
+רָחַק	away;caused_~_to_shun;drive_~_far;drives_~_far;extended;far;far_away;far_off;go_far;go_~_far;gone_some_distance;keep_aloof;keep_far;keep_~_far;put_away;put_~_far;put_~_faraway;refrain;remove_~_far;removed;repugnant;sent_~_faraway;shunned;stays_far;to_go_far;very_far;went_far;withdraw_~_far;you_must_go_far
 רָחַשׁ	overflows
 רָחָב	arrogant_of;broad;broad_of;broader;large_of;liberty;ones_broad_of;proud_of;Rahab;spacious;spacious_of;spread_out;wide
 רָחָם	carrion_vulture
@@ -7100,7 +7100,7 @@
 רוֹמָה	proudly
 רוֹמָם	extolled
 רוּד	grow_restless;restless;roam;unruly
-רוּחַ	air;anger_of;blast_of;breath;breath_of;cool_of;courage;inspired;life;mind;mind_of;motives;side_of;sides;spirit;Spirit;Spirit_of;spirit_of;spirits;spirits_of;strength_of;wind;wind_of;winds;winds_of;windy
+רוּחַ	air;anger_of;blast_of;breath;breath_of;cool_of;courage;inspired;life;mind;mind_of;motives;side_of;sides;spirit;Spirit;spirit_of;Spirit_of;spirits;spirits_of;strength_of;wind;wind_of;winds;winds_of;windy
 רוּם	aloud;become_proud;being_boldly_lifted;being_lifted;brought_up;brought_~_up;contributed;direct;eases_of;exalt;exalted;exalts;grow_tall;haughtiness_of;haughty;haughty_of;height;height_of;heights;held_up;high;higher;let_~_triumph;lift;lift_up;lift_~_up;lift_~_up_of;lifted_up;lifting;lifting_up;lifts;lifts_of;lifts_up;lofty;loud;makes_~_onhigh;offer;offered;on_high;pick_~_up;picked_up;present;presented;presenting;pride_of;proud;provided;raise;raised;raised_up;remove;removed;rise;rise_up;rose;rose_up;set_apart;set_aside;set_up;set_~_high;set_~_up;stop;stubborn;take;take_off;take_up;tall;tall_of;taller;took_away;took_up;top_of;triumphant;uplifted
 רוּמָה	Rumah
 רוּעַ	cried_out;cries_out;cry_out;let_out;make_a_joyful_noise;raise_a_war_cry;raised;raised_~_shout;shout;shout_aloud;shout_in_triumph;shout_joyfully;shouted;shouted_for_joy;shouting;sound;sound_an_alarm;sound_the_alarm
@@ -7154,7 +7154,7 @@
 שְׁחַת	corrupt;corruption
 שְׁחוֹר	soot
 שְׁחוּת	pit_of
-שְׁכֵן	caused_~_todwell;lived
+שְׁכֵן	caused_~_to_dwell;lived
 שְׁכֶם	accord;back_of;backs;mountain_slope;Shechem;Shechem's;shoulder_of;shoulders_of
 שְׁכַח	discover;discovered;find;found
 שְׁכַנְיָהוּ	Shecaniah
@@ -7166,7 +7166,7 @@
 שְׁלֵה	at_ease
 שְׁלֵוָה	prosperity_of
 שְׁלֵט	had_~_effect;made_~_ruler;overpowered;rank;rule
-שְׁלֵם	brought_~_toan_end;deliver;finished
+שְׁלֵם	brought_~_to_an_end;deliver;finished
 שְׁלַח	put_forth;send;sent
 שְׁלָם	greetings;peace;prosperity_of
 שְׁלֹמִי	Shelomi
@@ -7388,7 +7388,7 @@
 שַׁאֲרָה	close_relatives
 שַׁבְּלוּל	snail_of
 שַׁבְּתַי	Shabbethai
-שַׁבָּת	sabbath;sabbath_of;Sabbath_of;sabbaths;sabbaths_of;weeks
+שַׁבָּת	sabbath;Sabbath_of;sabbath_of;sabbaths;sabbaths_of;weeks
 שַׁבָּתוֹן	complete_rest;day_of_complete_rest;day_of_solemn_rest
 שַׁד	breast;breast_of;breasts;breasts_of
 שַׁדְרַךְ	Shadrach
@@ -7514,7 +7514,7 @@
 שָׁלִישׁ	aide_of;captain;captain_of;captains_of;measure;musical_instruments;officers;officers_of;thirty;three
 שָׁלִשָׁה	Shalishah
 שָׁלֵו	at_ease;at_ease_of;carefree;peaceful;prosperous;quiet
-שָׁלֵם	accurate;bring_~_toan_end;carry_out;complete;completed;completely;ended;finished;friendly;fulfill;fulfilled;fulfilling;full;give_back;he_must_retitute;he_will_repay;heart;made_peace;make_restitution;offer;paid;pay;paying_back;perform;render;repaid;repay;repay_of;repaying;repays;restore;reward;rewarded;safely;Salem;single;succeeded;to_pay;to_repay;to_restitute;true;uncut;whole
+שָׁלֵם	accurate;bring_~_to_an_end;carry_out;complete;completed;completely;ended;finished;friendly;fulfill;fulfilled;fulfilling;full;give_back;he_must_retitute;he_will_repay;heart;made_peace;make_restitution;offer;paid;pay;paying_back;perform;render;repaid;repay;repay_of;repaying;repays;restore;reward;rewarded;safely;Salem;single;succeeded;to_pay;to_repay;to_restitute;true;uncut;whole
 שָׁלַב	joining
 שָׁלַג	snowed
 שָׁלַח	burned;cast;cast_off;cast_out;delivered;demanded;deserted;dismiss;dismissed;divorce;divorces;driven;driving_out;escort;exile;extend;extended;extends;gave_~_inmarriage;gave_~_over;give_~_freerein;go;go_free;grow_long;gush_forth;I_sent;indicate;laid;lay;left;let_go;let_go_free;let_loose;let_~_down;let_~_go;let_~_goaway;let_~_gofree_of;lets_~_go;lets_~_loose;letting_~_go;lift;loot;pointing;put;put_forth;put_out;puts;puts_out;putting;raise;reach_out;reached;reached_down;reached_out;release;released;rushed;scattered;send;send_away;send_forth;send_of;send_out;send_~_away;send_~_back;send_~_off;send_~_out;sending;sending_of;sending_~_away;sends;sends_out;sends_~_out;sent;sent_away;sent_for;sent_of;sent_out;sent_~_away;sent_~_on_~_way;sent_~_out;set;set_free;set_~_free;shoots;shot;spreads;stirs_up;stretch_out;stretched_out;thrust;to_let_go;to_send;unleashed
@@ -7538,7 +7538,7 @@
 שָׁמַט	let_~_rest;lose;release;remit;stumbled;threw_~_down;throw_~_down;thrown_down
 שָׁמַיִם	air;heaven;heaven_of;heavens;heavens_of;sky;sky_of
 שָׁמַיִן	air;heaven;heavens;sky
-שָׁמַע	agreed;announce;announced;announces;cause_~_tobe_heard;comprehend;declare;discern;foretold;he_heard;hear;hear!;hear_of;heard;heard_of;hearing;hears;hears_of;heed;heeded;I_will_hear;known;learn;listen;listen!;listen_of;listen_to;listened;listening;listens;listens_to_of;loud-sounding;made_a_proclamation;music;obedient;obey;obeyed;obeying;obeys;overheard;playing;proclaim;proclaimed;proclaiming;proclaims;pronounced;publish;raise;reported;sang;sound;summon;summoned;to_hear;to_listen;to_obey;told;understand;understanding;understood;welcomed;witness;you_listen;you_obey
+שָׁמַע	agreed;announce;announced;announces;cause_~_to_be_heard;comprehend;declare;discern;foretold;he_heard;hear;hear!;hear_of;heard;heard_of;hearing;hears;hears_of;heed;heeded;I_will_hear;known;learn;listen;listen!;listen_of;listen_to;listened;listening;listens;listens_to_of;loud-sounding;made_a_proclamation;music;obedient;obey;obeyed;obeying;obeys;overheard;playing;proclaim;proclaimed;proclaiming;proclaims;pronounced;publish;raise;reported;sang;sound;summon;summoned;to_hear;to_listen;to_obey;told;understand;understanding;understood;welcomed;witness;you_listen;you_obey
 שָׁמַר	attentive;besieging;beware;bodyguard;careful;carefully;carried_out;charge_of;continued;devotion;did;diligently;diligently_observe;diligently_observing;do;give_heed;guard;guard_of;guarded;guarded_of;guardians_of;guards;guards_of;had_charge_of;have_charge_of;have_of;having_charge_of;heeds;hoarded;in_charge_of;indignant;keep;keep_of;keep_to;keep_watch;keeper;keeper_of;keepers_of;keeping;keeping_of;keeps;keeps_of;kept;kept_of;kept_safe;kept_watch;kept_~_inmind;look_after;look_to;looks_after;maintain;make_sure;mark;obeys_of;observe;observe_of;observed;observing;on_guard;on_~_guard;pay_regard;perform;performed;preserve;preserved;preserving;protect;protected;protects;regard;restrain;restrained;safekeeping;secured;sentinels_of;spare;spies;standing_guard;take_care;take_care_of;take_heed;tended;to_keep;to_observe;waiting;waits_for;watch;watch_for_of;watched;watched_over;watchers_of;watches;watches_of;watches_over;watching;watching_for_of;watchman;watchmen;worship;you_keep;you_observe
 שָׁמָן	fatness_of
 שָׁמָע	Shama
@@ -7549,7 +7549,7 @@
 שָׁנָה	advanced;again;age;aged;alter;annual;change;changed;changing;did_~_asecond_time;different;disguise;disobey;do_~_again;do_~_asecond_time;doubling;each_year;life_of;one-year-old;pervert;pretended;repeats;speak_again;twice;year;year_of;years;years_of
 שָׁסַס	looted;plunder;plundered
 שָׁסַע	divided;dividing;dividing_of;division;has_a_split;persuaded;tear_apart;tear_~_open;tore_~_apart
-שָׁסַף	hacked_~_topieces
+שָׁסַף	hacked_~_to_pieces
 שָׁסָה	looted;plunder;plunder_of;plundered;plundered_of;plunderers;plunderers_of;raiding
 שָׁעַן	lean;leaned;leaning;leans;lie;relied;rely;rest;supported
 שָׁעַע	blind;cheer;dandled;delight;play;shut
@@ -7575,7 +7575,7 @@
 שָׁקַף	look_down;looked;looked_down;looked_out;looks_down;looms;overlooking;overlooks;peered
 שָׁקַק	charging;leaped;longing;rush;rush_to_and_fro;thirst
 שָׁקַר	deal_falsely;false;lie
-שָׁקָה	drench;drink;drink_of;drinks_~_served;gave_~_adrink;gave_~_drink;gave_~_todrink;give_drink;give_~_drink;give_~_todrink;given_~_todrink;giving_~_adrink;irrigate;irrigated;made_~_drink;make_~_drink;moist;water;watered;waters
+שָׁקָה	drench;drink;drink_of;drinks_~_served;gave_~_adrink;gave_~_drink;gave_~_to_drink;give_drink;give_~_drink;give_~_to_drink;given_~_to_drink;giving_~_adrink;irrigate;irrigated;made_~_drink;make_~_drink;moist;water;watered;waters
 שָׁקוּף	frames;window_frames
 שָׁרִיר	muscles_of
 שָׁרֵת	service
@@ -7645,7 +7645,7 @@
 שׁוֹק	hip;leg;legs;legs_of;thigh_of
 שׁוֹר	bull_of;bulls;cattle;ox;ox_of;oxen;oxen_of
 שׁוֹרֵר	enemies_of
-שׁוּב	again;again_and_again;again_turns;answer;answer_of;answered;back;bring;bring_back;bring_~_back;bringing_back;bringing_~_back;brought;brought_back;brought_~_again;brought_~_back;call;came_again;came_back;can_you_repulse;cause_~_toreturn;come;come_back;comes_back;coming_back;deliver;dissuade;dole_out;draw_back;draw_~_back;drew_back;drives;end;fall_back;gave;get;give;give_back;give_~_back;gives;go_again;go_back;go_forth!;going;gone_back;had_~_seat;he_repays;he_returned;he_withdrew;hinder;hold_back;I_will_refuse;I_will_return;inhabited;keep;led_~_astray;led_~_back;make_~_restitution;paid;pass_~_again;past;pay;pay_~_back;put;put_back;put_~_again;put_~_back;recall;receded;recompensed;recovered;refreshes;refund;refuse;relapse;relent;render;repaid;repay;repaying;repays;repeatedly;repeats;repent;repent_of;repented;reply;reported;rescue;respond;restitution;restitution_~_made;restore;restored;restorer;restores;restrain;restrained;retire;retreat;return;returned;returning;returning_of;returns;reverse;revert;revive;revived;reviving_of;revoke;revoked;reward;rewards;send_back;send_~_back;sent_back;still;stop;subsides;take;take_back;take_~_away;take_~_back;takes;they_gave;they_returned;to_come_back;to_recede;to_repay;to_return;to_send;to_stay;to_take_back;to_turn;took_back;turn;turn_away;turn_back;turn_back_of;turn_of;turn_~_around;turn_~_away;turn_~_back;turned;turned_around;turned_away;turned_back;turning;turning_away;turning_~_away;turns;turns_away;turns_back;went_back;went_~_again;withdraw;withdrew;withheld;withhold;withholds;X;you_refuse;you_send;you_take_back
+שׁוּב	again;again_and_again;again_turns;answer;answer_of;answered;back;bring;bring_back;bring_~_back;bringing_back;bringing_~_back;brought;brought_back;brought_~_again;brought_~_back;call;came_again;came_back;can_you_repulse;cause_~_to_return;come;come_back;comes_back;coming_back;deliver;dissuade;dole_out;draw_back;draw_~_back;drew_back;drives;end;fall_back;gave;get;give;give_back;give_~_back;gives;go_again;go_back;go_forth!;going;gone_back;had_~_seat;he_repays;he_returned;he_withdrew;hinder;hold_back;I_will_refuse;I_will_return;inhabited;keep;led_~_astray;led_~_back;make_~_restitution;paid;pass_~_again;past;pay;pay_~_back;put;put_back;put_~_again;put_~_back;recall;receded;recompensed;recovered;refreshes;refund;refuse;relapse;relent;render;repaid;repay;repaying;repays;repeatedly;repeats;repent;repent_of;repented;reply;reported;rescue;respond;restitution;restitution_~_made;restore;restored;restorer;restores;restrain;restrained;retire;retreat;return;returned;returning;returning_of;returns;reverse;revert;revive;revived;reviving_of;revoke;revoked;reward;rewards;send_back;send_~_back;sent_back;still;stop;subsides;take;take_back;take_~_away;take_~_back;takes;they_gave;they_returned;to_come_back;to_recede;to_repay;to_return;to_send;to_stay;to_take_back;to_turn;took_back;turn;turn_away;turn_back;turn_back_of;turn_of;turn_~_around;turn_~_away;turn_~_back;turned;turned_around;turned_away;turned_back;turning;turning_away;turning_~_away;turns;turns_away;turns_back;went_back;went_~_again;withdraw;withdrew;withheld;withhold;withholds;X;you_refuse;you_send;you_take_back
 שׁוּבָה	returning
 שׁוּד	wastes
 שׁוּחִי	Shuhite
@@ -7756,7 +7756,7 @@
 שַׂרְעַפִּים	anxious_thoughts_of;cares_of
 שָֽׂהֲדוּ	-sahadutha
 שָֽׂכְיָה	Sachia
-שָׂבֵעַ	become_weary_of;eat_~_fill;fed_~_tothe_full;fill;filled;filled_of;filled_with;fills;full;full_of;get_enough;get_~_deserve;gorge;had_enough;had_plenty_of;had_~_enough;have_abundance;have_enough;have_plenty_of;have_too_much;having_too_much;sated;sated_of;sated_with;satisfied;satisfies;satisfy;take_~_fillof;watered_abundantly
+שָׂבֵעַ	become_weary_of;eat_~_fill;fed_~_to_the_full;fill;filled;filled_of;filled_with;fills;full;full_of;get_enough;get_~_deserve;gorge;had_enough;had_plenty_of;had_~_enough;have_abundance;have_enough;have_plenty_of;have_too_much;having_too_much;sated;sated_of;sated_with;satisfied;satisfies;satisfy;take_~_fillof;watered_abundantly
 שָׂבַר	hope;hoped;inspected;look;wait
 שָׂבָךְ	network
 שָׂבָע	abundance;plenty
@@ -7932,7 +7932,7 @@
 תִּפְתָּיֵא	magistrates
 תִּקְוָה	cord_of;expectation_of;hope;hope_of;Tikvah;what_~_hopefor_of
 תִּרְגֵּם	translated
-תִּרְגַּל	taught_~_towalk
+תִּרְגַּל	taught_~_to_walk
 תִּרְהָקָה	Tirhakah
 תִּרְזָה	cypress
 תִּרְחֲנָה	Tirhanah

@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2025-11-20 11:29 by extract_glossed_OSHB_OT_to_ESFM v0.62
+\rem ESFM file created 2025-12-31 08:56 by extract_glossed_OSHB_OT_to_ESFM v0.62
 \rem USFM file edited by ScriptedBibleEditor v0.34
 \h Nəḩem\sup yāh\sup*
 \toc1 Nəḩem\sup yāh\sup*
@@ -52,7 +52,7 @@
 \v 1 And= ʼElyāshiyⱱ =he/it_rose_up the=priest/officer the÷high and÷fellow_of÷his the÷priests and÷rebuilt DOM the_gate_of the÷sheep they consecrated÷it and÷set_up doors_of÷its and=unto the_tower_of the÷Hundred consecrated÷it to the_tower_of Ḩₐnan\sup ʼēl\sup*.
 \v 2 and÷at his/its=hand the_men_of they_built of_Yərīḩō/(Jericho) and÷at his/its=hand Zakkūr he_built the_son_of ʼImrī.
 \v 3 and=DOM the_gate_of the÷fish the_sons_of they_rebuilt the÷Haşşənāʼāh they laid_beams÷its and÷set_up doors_of÷its bolts_of÷its and÷bars_of÷its.
-\v 4 and÷at side_of÷them Mərēmōt he_repaired the_son_of Uriah the_son_of Haqqōʦ and÷at side_of÷them Məshullām he_repaired the_son_of Berek\sup yāh\sup* the_son_of Məshēyzaⱱ\sup ʼēl\sup* and÷at side_of÷them Tsādōq/(Zadok) he_repaired the_son_of Baˊₐnāʼ.
+\v 4 and÷at side_of÷them Mərēmōt he_repaired the_son_of ʼŪriy\sup yāh\sup* the_son_of Haqqōʦ and÷at side_of÷them Məshullām he_repaired the_son_of Berek\sup yāh\sup* the_son_of Məshēyzaⱱ\sup ʼēl\sup* and÷at side_of÷them Tsādōq/(Zadok) he_repaired the_son_of Baˊₐnāʼ.
 \v 5 and÷next side_of÷them they_repaired the÷Təqōˊī and÷nobles_of÷their not they_brought shoulders_of÷their in/on/at/with÷work_of supervisors_of÷their.
 \v 6 and=DOM the Jeshanah Yōyādāˊ/(Joiada) they_repaired the_son_of Pāşēaḩ and÷Məshullām the_son_of Bəşōdə\sup yāh\sup* they laid_beams÷its and÷set_up doors_of÷its and÷bolts_of÷its and÷bars_of÷its.
 \v 7 and÷at side_of÷them Məlaţ\sup yāh\sup* he_repaired the÷Gibeonite and÷Yādōn/(Jadon) the÷Mēronotī the_men_of Gibeon and÷the÷Miʦpāh under÷authority_of the_governor_of the_other_side_of the=river.
@@ -69,7 +69,7 @@
 \v 18 after÷him brothers_of÷their they_repaired Baūy the_son_of Ḩēnādād the_official_of (the)_half_of the_district_of Qəˊīlāh.
 \v 19 and÷repaired on his/its=hand ˊĒzer the_son_of Yēshūˊa/(Jeshua) the_official_of the÷Miʦpāh a_measured_portion second from÷facing the_going_up the÷armoury the÷angle.
 \v 20 after÷him he_kindled he_repaired Bārūk the_son_of Zaccai\f + \fr 3:20 \ft OSHB variant note: זבי: (x-qere) 'זַכַּ֖י': lemma=2140 n=1.0 morph=HNp id=16fZA זַכַּ֖י\f* a_measured_portion second from the÷angle to the_entrance_of the_house_of ʼElyāshiyⱱ the=priest/officer the÷high.
-\v 21 after÷him Mərēmōt he_repaired the_son_of Uriah the_son_of Haqqōʦ a_measured_portion second from÷door_of the_house_of ʼElyāshiyⱱ and=unto the_end_of the_house_of ʼElyāshiyⱱ.
+\v 21 after÷him Mərēmōt he_repaired the_son_of ʼŪriy\sup yāh\sup* the_son_of Haqqōʦ a_measured_portion second from÷door_of the_house_of ʼElyāshiyⱱ and=unto the_end_of the_house_of ʼElyāshiyⱱ.
 \v 22 and÷after÷him they_repaired the÷priests the_men_of the÷surrounding_area.
 \v 23 After÷them Binyāmīn he_repaired and÷Ḩashshəūⱱ before house_of÷their after÷them ˊAzar\sup yāh\sup* he_repaired the_son_of Maˊₐsē\sup yāh\sup* the_son_of ˊAnan\sup yāh\sup* beside house_of÷his.
 \v 24 after÷him Binnūy he_repaired the_son_of Ḩēnādād a_measured_portion second from÷house_of ˊAzar\sup yāh\sup* to the÷angle and=unto the÷corner.
@@ -152,10 +152,10 @@
 \nb
 \v 1 And=he/it_was just=as it_had_been_rebuilt the÷wall and÷set_up the÷doors and÷appointed the÷gatekeepers and÷the÷singers and÷the÷Lēviyyiy.
 \v 2 And÷put_incharge DOM Ḩₐnānī my=brother/kindred and=DOM Ḩₐnan\sup yāh\sup* the_commander_of the÷citadel over Yərūshālam/(Jerusalem) if/because he as÷man_of faithfulness and÷feared DOM the=ʼElohīm more_than÷many.
-\v 3 And÷said\f + \fr 7:3 \ft OSHB variant note: ו/יאמר: (x-qere) 'וָ/אֹמַ֣ר': lemma=c/559 morph=HC/Vqw1cs id=16EAA וָ/אֹמַ֣ר\f* to/for=them not the_gates_of they_will_be_opened of_Yərūshālam/(Jerusalem) until the_heat the÷sun and=unto they \add are\add*_standing_guard let_them_shut the÷doors and÷bar and÷appoint the_guards_of the_inhabitants_of Yərūshālam/(Jerusalem) someone in/on/at/with÷posts_of÷their and÷some before houses_of÷their_own.
+\v 3 And÷said\f + \fr 7:3 \ft OSHB variant note: ו/יאמר: (x-qere) 'וָ/אֹמַ֣ר': lemma=c/559 morph=HC/Vqw1cs id=16EAA וָ/אֹמַ֣ר\f* to/for=them not the_gates_of they_will_be_opened of_Yərūshālam/(Jerusalem) until the_heat the÷sun and=unto they \add are\add*_standing_guard let_them_shut the÷doors and÷bar and÷appoint the_guards_of the_inhabitants_of Yərūshālam/(Jerusalem) someone in/on/at/with÷posts_of÷his/its and÷some before houses_of÷their_own.
 \v 4 And÷the÷city \add was\add*_broad_of both_sides and÷large and÷the÷people \add were\add*_few in/on/at/with÷within_of÷it and÷no houses \add had_been\add*_rebuilt.
-\v 5 god_of÷my And=he/it_gave into heart_of÷my and÷assemble DOM the÷nobles and=DOM the÷officials and=DOM the÷people to÷enrolled_by_genealogy and÷found the_document_of the÷genealogy the÷came_back in/on/at/with÷first and÷found written in/on/over=him/it.
-\v 6 these \add are\add*_the_children_of the÷province the÷came_up from÷captivity_of the÷exiles whom he_had_taken_into_exile Nəⱱūkadneʦʦar the_king_of Bāⱱel and÷returned to÷Yərūshālam/(Jerusalem) and÷to÷Yəhūdāh/(Judah) each to÷town_of÷his.
+\v 5 god_of÷my And=he/it_gave into heart_of÷my and÷assemble DOM the÷nobles and=DOM the÷officials and=DOM the÷people to÷enroled_by_genealogy and÷found the_document_of the÷genealogy the÷came_back in/on/at/with÷first and÷found written in/on/over=him/it.
+\v 6 these \add are\add*_the_children_of the÷province the÷came_up from÷captivity_of the÷exiles whom he_had_taken_into_exile Nebuchadnezzar the_king_of Bāⱱel and÷returned to÷Yərūshālam/(Jerusalem) and÷to÷Yəhūdāh/(Judah) each to÷town_of÷his.
 \v 7 The=(ones_who)_went with Zərubāⱱel Yēshūˊa/(Jeshua) Nəḩem\sup yāh\sup* ˊAzar\sup yāh\sup* Raˊam\sup yāh\sup* Naḩₐmānī Mārəddəkay Bilshān Mişferet Bigvay Nəḩūm Baˊₐnāh the_number_of the_men_of the_people_of Yisrā\sup ʼēl\sup*/(Israel).
 \v 8 the_descendants_of Farˊosh/(Parosh) two_thousand one_hundred and=seventy and÷two.
 \v 9 the_descendants_of Shəfaţ\sup yāh\sup* three hundred(s) seventy and÷two.
@@ -213,7 +213,7 @@
 \v 61 and=these the÷came_up from÷Tēl- melaḩ Tēl Harsha Kərūⱱ Addon and÷ʼImmēr and=not they_were_able to=announce the_house_of ancestral_of÷their and÷descent_of÷their if from÷Yisrā\sup ʼēl\sup*/(Israel) they.
 \v 62 The_descendants_of Dəlā\sup yāh\sup* the_descendants_of Ţōⱱiy\sup yāh\sup* the_descendants_of Nəqōdāʼ six hundred(s) and÷forty and÷two.
 \v 63 and=from the÷priests the_descendants_of Ḩₐⱱay\sup yāh\sup* the_descendants_of Haqqōʦ the_descendants_of Barzillay who he_had_taken of÷daughters_of of_Barzillay the÷Gilˊādite a_wife and÷called on their=name.
-\v 64 These they_sought registration_of÷their the÷enrolled_in_the_genealogies and=not it_was_found and÷excluded_asunclean from the÷priesthood.
+\v 64 These they_sought registration_of÷their the÷enroled_in_the_genealogies and=not it_was_found and÷excluded_asunclean from the÷priesthood.
 \v 65 And=he/it_said the÷governor to/for=them (cmp) not they_will_eat of÷most_sacred_of the÷sacred_things until will_arise the=priest/officer with÷urim and÷thummim.
 \v 66 All_of the÷assembly as÷one four ten_thousand two_thousand three hundred(s) and=sixty.
 \v 67 From÷to/for÷besides_of servants_of÷their and÷female_slaves_of÷whom these \add were\add*_seven_of thousand(s) three hundred(s) thirty and=seven and÷had÷they male_singers and÷women_singing two_hundred and÷forty and÷five.
@@ -227,7 +227,7 @@
 \v 1 And= all_of =gathered the÷people as÷man one to the÷square which to=(the)_face_of/in_front_of/before the_gate_of the=waters and=they_said to÷ˊEzrāʼ the÷scribe to=bring DOM the_scroll_of the_law_of Mosheh which he_had_commanded \nd YHWH\nd* DOM Yisrā\sup ʼēl\sup*/(Israel).
 \v 2 And= ˊEzrāʼ =brought the=priest/officer DOM the÷law to=(the)_face_of/in_front_of/before the÷assembly from=man and=unto woman and=all/each/any/every \add one_who\add*_understood to÷hear in/on=day one of_the÷month the=seventh.
 \v 3 And=he/it_called in=him/it to=(the)_face_of/in_front_of/before the÷square which to=(the)_face_of/in_front_of/before the_gate_of the=waters from the=light until the_middle_of the=day before the÷men and÷the÷women and÷the÷understand and÷ears_of all_of the÷people \add were\add*_to the_scroll_of the÷law.
-\v 4 And= ˊEzrāʼ =stood the÷scribe on a_high_platform_of wood which people_had_made to=the_message/thing/matter and÷stood beside÷him Mattit\sup yāh\sup* and÷Shemaˊ and÷ˊAnā\sup yāh\sup* and÷Uriah and÷Ḩilqiy\sup yāh\sup* and÷Maˊₐsē\sup yāh\sup* on right_of÷his and÷on÷left_of÷his Pədā\sup yāh\sup* and÷Mīshā\sup ʼēl\sup* and÷Malkīy\sup yāh\sup* and÷Ḩāshum and÷Ḩashbaddānāh Zəkar\sup yāh\sup* Məshullām.
+\v 4 And= ˊEzrāʼ =stood the÷scribe on a_high_platform_of wood which people_had_made to=the_message/thing/matter and÷stood beside÷him Mattit\sup yāh\sup* and÷Shemaˊ and÷ˊAnā\sup yāh\sup* and÷ʼŪriy\sup yāh\sup* and÷Ḩilqiy\sup yāh\sup* and÷Maˊₐsē\sup yāh\sup* on right_of÷his and÷on÷left_of÷his Pədā\sup yāh\sup* and÷Mīshā\sup ʼēl\sup* and÷Malkīy\sup yāh\sup* and÷Ḩāshum and÷Ḩashbaddānāh Zəkar\sup yāh\sup* Məshullām.
 \v 5 and= ˊEzrāʼ =opened the÷book in÷sight_of all_of the÷people if/because from=under all_of the÷people he_was and÷when÷opened÷he all_of they_stood_up the÷people.
 \v 6 And= ˊEzrāʼ =he/it_blessed DOM \nd YHWH\nd* the=ʼElohīm the÷great and= all_of =answered the÷people amen amen in/on/at/with÷lifting_up_of hands_of÷their and÷bowed_down and÷worshipped to/for=\nd YHWH\nd* face ground÷to.
 \v 7 And÷Yēshūˊa/(Jeshua) and÷Bānī and÷Shērēⱱə\sup yāh\sup*\f + \fr 8:7 \ft OSHB note: We read one or more accents in L differently from BHQ.\f*\f + \fr 8:7 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* Yāmīn/(Jamin) ˊAqqūⱱ Shabtay Hōdiy\sup yāh\sup* Maˊₐsē\sup yāh\sup* Qəlīţāʼ ˊAzar\sup yāh\sup* Yōzāⱱād/(Jozabad) Ḩānān Pəlā\sup yāh\sup* and÷the÷Lēviyyiy \add were\add*_causing_to_understand DOM the÷people from_the÷law and÷the÷people \add were\add*_at places_of÷their.

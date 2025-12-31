@@ -1,4 +1,4 @@
-\id MAT - Open English Translation—Readers’ Version (OET-RV) v0.3.60
+\id MAT - Open English Translation—Readers’ Version (OET-RV) v0.4.03
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 MAT
@@ -11,7 +11,7 @@
 \mt1 Matthew
 \is1 Introduction
 \is2 Author
-\ip The writer of this document was Matthaios, known in English as Matthew and in Hebrew as Levi. He was one of the twelve apprentices of Yeshua, and named by Alfaeus his father. He was from Galilee but worked in Capernaum as a tax-collector before he left that to follow Yeshua. It’s possible that it was Yeshua who changed his name from Levi when he became a follower, and named him Matthew which means ‘the gift of God’ in Hebrew.
+\ip The writer of this document was Matthaios, known in English as Matthew and in Hebrew as Levi. He was one of Yeshua’s twelve apprentices, and named by Alfaeus his father. He was from Galilee but worked in Capernaum as a tax-collector before he left that to follow Yeshua. It’s possible that it was Yeshua who changed his name from Levi when he became a follower, and named him Matthew which means ‘the gift of God’ in Hebrew.
 \is2 This account
 \ip Matthew’s account starts by listing the ancestors of Yeshua, and then describes his birth, his immersion in water, and his temptation by the devil. He tells us about a lot of his preaching and teaching, and about how he healed many sick people in the Galilee region. After that, Matthew goes on to describe Yeshua’s trip to Yerushalem and what happened to him there. Then he explains what happened in Yeshua’s final week in Yerushalem, his execution on a stake, and his coming back to life.
 \ip This document tells how Yeshua is the messiah, promised by God to save the Jews, and all non-Jews who place their trust in him. So by means of him, God fulfills his promises to his people that were listed in the Old Testament.
@@ -30,7 +30,7 @@
 \s1 The Jewish ancestors of the messiah
 \r (Luke 3:23-38)
 \p
-\v 1 This is the genealogy of \nd Yeshua\nd* (Grk: Yaysous) the \nd messiah\nd* (Grk: Christ) the descendant of \add King\add* David the descendant of Abraham (Grk: Abraam).
+\v 1 \add This is\add* \add a genealogy\add* of \nd Yeshua\nd* (Grk: Yaysous) the \nd messiah\nd* (Grk: Christ) the descendant of \add King\add* David the descendant of Abraham (Grk: Abraam).
 \p
 \v 2 Abraham was the father of Isaac, Isaac the father of Yacob (Grk: Yakob), Yacob the father of Yudah (Grk: Youdas) and his brothers.
 \v 3 Yudah was the father of Perez (Grk: Fares) and Zerah (Grk: Zara) through Tamar (Grk: Thamar), Perez the father of Hezron (Grk: Hezrom), Hezron the father of Aram,
@@ -38,101 +38,101 @@
 \v 5 Salmon the father of Boaz (Grk: Boes) through Rahab, Boaz the father of Obed (Grk: Yobed) through Ruth (Grk: Routh), and Obed the father of Jesse (Grk: Yessai),
 \v 6 and Jesse the father of David the king.
 \p David was the father of Solomon (Grk: Solomona) through Uriah’s (Grk: Ourias) wife,
-\v 7 Solomon was the father of Rehoboam (Grk: Roboam), Rehoboam the father of Abijah (Grk: Abia), Abijah the father of Asa (Grk: Asaf),
+\v 7 Solomon was the father of Rehoboam (Grk: Roboam), Rehoboam the father of Abiyah (Grk: Abia), Abiyah the father of Asa (Grk: Asaf),
 \v 8 Asa the father of Jehoshapat (Grk: Yosafat). Jehoshapat the father of Joram (Grk: Yoram), Joram the father of Uzziah (Grk: Ozias),
 \v 9 Uzziah the father of Jotham (Grk: Yoatham), Jotham the father of Ahaz (Grk: Achaz), Ahaz the father of Hezekiah (Grk: Hezekias),
-\v 10 Hezekiah the father of Manasseh (Grk: Manasse), Manasseh the father of Amon (Grk: Amos), Amos the father of Josiah (Grk: Yosias),
+\v 10 Hezekiah the father of Manasseh (Grk: Manasse), Manasseh the father of Amon (Grk: Amos), Amon the father of Josiah (Grk: Yosias),
 \v 11 \x + \xo 1:11: \xt 2Ki 24:14-15; 2Ch 36:10; Jer 27:20.\x*Josiah was the father of Jechoniah (Grk: Yechonias) and his brothers, when they were deported to Babylon (Grk: Babulonos).
 \p
 \v 12 And after the deportation to Babylon, Jechoniah was the father of Shealtiel (Grk: Salathiel), Shealtiel was the father of Zerubbabel (Grk: Zorobabel),
 \v 13 Zerubbabel was the father of Abiud (Grk: Abioud), Abiud was the father of Eliakim, and Eliakim the father of Azor,
 \v 14 Azor the father of Zadok, Zadok the father of Achim, Achim the father of Eliud (Grk: Elioud),
 \v 15 Eliud the father of Eleazar, Eleazar the father of Matthan, Matthan the father of Yacob (Grk: Yakob),
-\v 16 Yacob the father of Yosef (Grk: Yosef), the husband of Maria (Grk: Marias) who \nd Yeshua\nd* (Grk: Yesous), the one called the \nd messiah\nd* was born to.
+\v 16 Yacob the father of Yosef, the husband of Maria (Grk: Marias) who \nd Yeshua\nd* (Grk: Yaysous), the one called the \nd messiah\nd* was born to.
 \p
 \v 17 So the generations from Abraham to David numbered fourteen, from David to the deportation to Babylon there were fourteen generations, and from the deportation to Babylon to the \nd messiah\nd* there were fourteen generations.
 \s1 The birth of the messiah
 \r (Luke 1:26-38; 2:1-7)
 \p
 \v 18 \x + \xo 1:18: \xt Luk 1:27.\x*Now this is how the birth of \nd Yeshua\nd* came about: Maria his mother was engaged to Yosef. But before they came together, she was found to be pregnant through \add the work of\add* the holy \nd spirit\nd*.
-\v 19 But Yosef, her husband \add to be\add* was a good man, and not wishing to disgrace Maria, he decided to quietly divorce her.
-\v 20 But as he was pondering this, one of Yahweh’s messengers appeared to him in a dream and told him, “Yosef, descendant of \add King\add* David, don’t to be afraid to marry Maria because the baby in her has been conceived by the holy \nd spirit\nd*.
-\v 21 \x + \xo 1:21: \xt Luk 1:31.\x*In due course she will have a son and you’ll name him \nd Yeshua\nd*, because he will save his people from their sins.”
+\v 19 But Yosef, her husband \add to be\add*, was a good man, and not wishing to disgrace Maria, he decided to quietly divorce her.
+\v 20 But as he was pondering this, one of Yahweh’s messengers appeared to him in a dream and told him, “Yosef, descendant of \add King\add* David, don’t be afraid to marry Maria, because the baby in her has been conceived by the holy \nd spirit\nd*.
+\v 21 \x + \xo 1:21: \xt Luk 1:31.\x*In due course she’ll have a son and you’ll name him \nd Yeshua\nd*, because he’ll save his people from their sins.”
 \p
-\v 22 Now all this happened in fulfilment of what Yahweh had said through the prophet,
-\v 23 \x + \xo 1:23: \xt Isa 7:14 (LXX).\x*“Listen, the virgin will get pregnant and she will have a son, and they will call him Immanuel \add (in Hebrew)\add* which means ‘\nd God\nd* with us.’ ”
+\v 22 Now all this happened in fulfilment of what \nd Yahweh\nd* had said through the prophet,
+\v 23 \x + \xo 1:23: \xt Isa 7:14 (LXX).\x*“Listen, the virgin will get pregnant and she’ll have a son, and they’ll call him Immanuel \add (in Hebrew)\add* which means ‘\nd God\nd* with us.’ ”
 \p
-\v 24 Then Yosef got up and did what Yahweh’s messenger had commanded him and he went ahead and married Maria
+\v 24 Then Yosef got up and did what Yahweh’s messenger had commanded him, and he went ahead and married Maria,
 \v 25 \x + \xo 1:25: \xt Luk 2:21.\x*but he didn’t sleep with her until after she gave birth. And Yosef named the boy \nd Yeshua\nd*.
 \c 2
 \s1 Easterners come to worship the new king
 \p
 \v 1 After \nd Yeshua\nd* had been born in Bethlehem in the province of Yudea during the time of King Herod, watchers of signs arrived in Yerushalem from the east
-\v 2 and asked, “Where is the one born as king of the Jews, because we saw his star in the east and we came to worship him.”
+\v 2 and asked, “Where’s the one born as king of the Jews? We saw his star in the east and we came to worship him.”
 \p
-\v 3 Now when King Herod heard this, he was upset and all of Yerushalem as well.
-\v 4 He gathered together all of the chief priests and those who teach the religious law to the people and asked them where the \nd Messiah\nd* was expected to be born.
+\v 3 Now when King Herod heard this, he was upset—and all of Yerushalem as well.
+\v 4 He gathered together all the chief priests and religious teachers and asked them where the \nd Messiah\nd* was expected to be born.
 \p
-\v 5 And they told him, “It’ll be in Bethlehem in Yudea because the prophet wrote:\x + \xo 2:5-6: \xt Mic 5:2.\x*
+\v 5 And they told him, “It’ll be in Bethlehem in Yudea, because the prophet wrote:\x + \xo 2:5-6: \xt Mic 5:2.\x*
 \q1
-\v 6 ‘You Bethlehem in the land of Yudah,
-\q2 are not the most insignificant of the leaders of Yudah.
-\q1 For a leader will come from you
+\v 6 ‘You, Bethlehem in the land of Yudah,
+\q2 are not the most insignificant of the leaders of Yudah,
+\q1 because a leader will come from you
 \q2 who will guide my people Yisrael.’ ”
 \p
 \v 7 Then Herod sent for the watchers of signs and met secretly with them to determine when the star had first appeared.
-\v 8 Then he sent them on to Bethlehem with these instructions: “Go on and carefully investigate about the child and when you find him, report back to me so that I can also come and worship him.”
+\v 8 Then he sent them on to Bethlehem with these instructions: “Go on and carefully investigate about the child, and when you find him, report back to me so that I can also come and worship him.”
 \p
-\v 9 So when the king had finished speaking, they departed and the star which they could see in the east went ahead of them and stopped above the place where the child was.
+\v 9 So when the king had finished speaking, they departed, and the star which they could see in the east went ahead of them and stopped above the place where the child was.
 \v 10 Seeing this, the watchers of signs were very happy indeed.
 \v 11 As they entered the house, they saw the child with his mother Maria. They bowed low and worshipped him, then they opened their chests and presented gifts of gold, frankincense, and myrrh.
 \p
-\v 12 But because they had been warned in a dream not to return to King Herod, they went home again to their own country.
+\v 12 But because they’d been warned in a dream not to return to King Herod, they went home again to their own country.
 \s1 The family escape to Egypt
 \p
-\v 13 After they had departed, one of \nd Yahweh’s\nd* messengers appeared to Yosef in a dream and said, “Get up and take the child and his mother and flee to Egypt \add (Mitsrayim)\add*. Remain there until I tell you, because \add King\add* Herod will soon search for the child in order to kill him.”
+\v 13 After they’d departed, one of \nd Yahweh’s\nd* messengers appeared to Yosef in a dream and said, “Get up and take the child and his mother and flee to Egypt \add (Mitsrayim)\add*. Remain there until I tell you, because \add King\add* Herod will soon search for the child in order to kill him.”
 \p
 \v 14 So Yosef got up during the night and took the child and his mother and departed for Egypt.
 \v 15 \x + \xo 2:15: \xt Hos 11:1.\x*They stayed there until the death of Herod, in order to fulfil what \nd Yahweh\nd* had said through the prophet \add Hoshea\add*: “I called my son out of Egypt.”
 \s1 The slaughter of baby boys
 \p
-\v 16 When \add King\add* Herod realised that he had been tricked by the watchers of signs, he got very angry and gave orders that all the sons in Bethlehem and its districts that were two years old and younger be killed, because that was the period that he had found out from the watchers of signs.
+\v 16 When \add King\add* Herod realised that he’d been tricked by the watchers of signs, he got very angry and gave orders that all the sons in Bethlehem and its districts that were two years old and younger be killed, because that was the period that he’d found out from the watchers of signs.
 \p
-\v 17 That fulfilled what had been spoken through the prophet Jeremiah which said:
+\v 17 That fulfilled what had been spoken through the prophet Jeremiah, who said:
 \q1
 \v 18 \x + \xo 2:18: \xt Jer 31:15.\x*The sound of great weeping and mourning was heard in Ramah;
 \s1 Yosef’s family return to Nazareth
 \p
-\q1 Rachel weeping for her children and she didn’t want to be comforted
+\q1 Rachel weeping for her children, and she didn’t want to be comforted,
 \q2 because her children were no more.
 \p
 \v 19 After \add King\add* Herod died, one of \nd Yahweh’s\nd* messengers appeared to Yosef in Egypt in a dream
 \v 20 and said, “Get up and take the child and his mother and go \add back\add* to the land of Yisrael, because the ones wanting to kill him have died.”
 \v 21 So Yosef got up and took the child and his mother and went \add back\add* to Yisrael.
 \p
-\v 22 But when he heard that Archelaus was reigning over Yudea instead of his father Herod, and \add also\add* having been warning in a dream, he left \add Yudea\add* and went to the Galilee area.
-\v 23 \x + \xo 2:23: \xt Mrk 1:24; Luk 2:39; Yhn 1:45.\x*Once they got there, he settled into the town of \nd Nazareth\nd*, so that what had been spoken through the prophets would be fulfilled: “He will be called a Nazarene.”
+\v 22 But when he heard that Archelaus was reigning over Yudea instead of his father Herod, and \add also\add* having been warned in a dream, he left \add Yudea\add* and went to the Galilee area.
+\v 23 \x + \xo 2:23: \xt Mrk 1:24; Luk 2:39; Yhn 1:45.\x*Once he got there, he settled into the town of \nd Nazareth\nd*, so that what had been spoken through the prophets would be fulfilled: “He’ll be called a Nazarene.”
 \c 3
 \s1 Yohan-the-immerser’s preaching
 \r (Mark 1:1-8; Luke 3:1-18; Yhn 1:19-28)
 \p
-\v 1 That was the time when Yohan-the-immerser started preaching in the Yudean wilderness
-\v 2 telling everyone,\x + \xo 3:2: \xt Mat 4:17; Mrk 1:15.\x* “Turn from your sins because the kingdom of heavens is close.
+\v 1 That was the time when Yohan-the-immerser started preaching in the Yudean wilderness,
+\v 2 telling everyone,\x + \xo 3:2: \xt Mat 4:17; Mrk 1:15.\x* “Turn from your sins, because the heavenly kingdom is close.”
 \v 3 This is the man that the prophet Isayah was talking about \add when he wrote\add*:\x + \xo 3:3: \xt Isa 40:3 (LXX).\x*
 \q1 ‘The voice of one shouting in the wilderness
 \q2 prepare the road for \nd Yahweh\nd*;
 \q2 straighten his paths.’
 \p
-\v 4 \x + \xo 3:4: \xt 2Ki 1:8.\x*Yohan himself wore clothes made from \add coarse\add* camel hair with a leather belt around his waist, and his food was locusts and wild honey.
-\v 5 \add People from\add* Yerushalem and all Yudea and all of the regions surrounding the Yordan River went out \add into the wilderness\add* to \add listen to\add* Yohan
+\v 4 \x + \xo 3:4: \xt 2Ki 1:8.\x*Yohan himself wore clothes made from \add coarse\add* camel hair, with a leather belt around his waist, and his food was locusts and wild honey.
+\v 5 \add People from\add* Yerushalem and all Yudea and all of the regions surrounding the Yordan River went out \add into the wilderness\add* to \add listen to\add* Yohan,
 \v 6 and many confessed their sins and asked him to immerse them in the river.
 \p
-\v 7 \x + \xo 3:7: \xt Mat 12:34; 23:33.\x*But when Yohan saw many from the party of the Pharisees and from the Sadducee sect coming for immersion, he told them, “You brood of snakes, who warned you all to flee from \add God’s\add* severe anger that’s coming?
+\v 7 \x + \xo 3:7: \xt Mat 12:34; 23:33.\x*But when Yohan saw many from the party of the Pharisees and from the Sadducee sect coming for immersion, he told them, “You brood of snakes, who warned you to flee from \add God’s\add* severe anger that’s coming?
 \v 8 Turning from your sins should be accompanied by evidence that you’ve changed.
 \v 9 \x + \xo 3:9: \xt Yhn 8:33.\x*And don’t think that you can just tell yourselves that you’re descendants of Abraham, because I can tell you that \nd God\nd* could turn these stones into descendants of Abraham.
-\v 10 \x + \xo 3:10: \xt Mat 7:19.\x*The axe has already been placed at the base of the trees ready to cut down any tree that’s not producing good fruit and then it’ll be thrown into the fire.
+\v 10 \x + \xo 3:10: \xt Mat 7:19.\x*The axe has already been placed at the base of the trees ready to cut down any tree that’s not producing good fruit, and then it’ll be thrown into the fire.
 \v 11 I’m immersing people in water as a sign that they’re turning away from their sins, but there’s another one coming after me who’s greater than me—so much so that I’m not even worthy to carry his sandals. He’ll immerse you in the holy \nd spirit\nd* and fire.
-\v 12 He’s already holding his fork so that he can clear his threshing floor—\add he’ll work through the pile throwing it into the air where the breeze will carry\add* the chaff away and he’ll burn that with unquenchable fire, while the \add (heavier)\add* grains of wheat will land in the pile to be brought into the barn.
+\v 12 He’s already holding his fork so that he can clear his threshing floor—\add he’ll work through the pile throwing it into the air, where the breeze will carry\add* the chaff away, and he’ll burn that with unquenchable fire, while the grains of wheat, \add which are heavier,\add* will land in the pile to be brought into the barn.”
 \s1 Yeshua gets immersed in the river
 \r (Mark 1:9-11; Luke 3:21-22)
 \p
@@ -158,17 +158,17 @@
 \p
 \v 7 \x + \xo 4:7: \xt Deu 6:16.\x*“\wj But it’s also written,\wj*” \nd Yeshua\nd* answered, “\wj that you shouldn’t test \+nd Yahweh\+nd* your \+nd God\+nd*.\wj*”
 \p
-\v 8 Then the devil took him to a very high mountains and showed him all the countries of the world with all their splendour,
-\v 9 then told him, “I’ll give all of these to you if you get down and prostrate yourself to me.”
+\v 8 Then the devil took him to a very high mountain and showed him all the countries of the world with all their splendour,
+\v 9 then told him, “I’ll give all of these to you if you get down \add on your face\add* in front of me.”
 \p
 \v 10 \x + \xo 4:10: \xt Deu 6:13.\x*“\wj Go away, Satan,\wj*” \nd Yeshua\nd* replied, “\wj because it’s written \+add in the scriptures\+add* that you should worship \+nd Yahweh\+nd* your \+nd God\+nd* and should only serve him.\wj*”
 \p
-\v 11 Then the devil left him and \add God’s\add* messengers came and looked after him.
+\v 11 Then the devil left him, and \add God’s\add* messengers came and looked after him.
 \s1 Yeshua begins his ministry
 \r (Mark 1:14-15; Luke 4:14-15)
 \p
 \v 12 \x + \xo 4:12: \xt Mat 14:3; Mrk 6:17; Luk 3:19-20.\x*When Yeshua heard that Yohan had been arrested, he withdrew up to Galilee.
-\v 13 \x + \xo 4:13: \xt Yhn 2:12.\x*He moved from \nd Nazareth\nd* across to Capernaum beside the lake in the region that had been given to the tribes of Zebulun and Naftali
+\v 13 \x + \xo 4:13: \xt Yhn 2:12.\x*He moved from \nd Nazareth\nd* across to Capernaum beside the lake in the region that had been given to the tribes of Zebulun and Naftali,
 \v 14 so that what had been written by the prophet Isayah would come true,
 \q1
 \v 15 \x + \xo 4:15-16: \xt Isa 9:1-2.\x*‘Land of Zebulun and land of Naftali,
@@ -180,7 +180,7 @@
 \q1 and those sitting in a land under the shadow of death
 \q2 had a light rise over them.’
 \p
-\v 17 \x + \xo 4:17: \xt Mat 3:2.\x*From then onwards, \nd Yeshua\nd* started preaching and telling people to turn from their sins because the kingdom of heavens is close.
+\v 17 \x + \xo 4:17: \xt Mat 3:2.\x*From then onwards, \nd Yeshua\nd* started preaching and telling people to turn from their sins because the heavenly kingdom is close.
 \s1 Yeshua calls his first four followers
 \r (Mark 1:16-20; Luke 5:1-11)
 \p
@@ -193,7 +193,7 @@
 \s1 Yeshua’s healing is very popular
 \r (Luke 6:17-19)
 \p
-\v 23 \x + \xo 4:23: \xt Mat 9:35; Mrk 1:39.\x*Then \nd Yeshua\nd* went around all of Galilee, teaching in their Jewish meeting halls and proclaiming the good message about the kingdom, and healing all the diseases and sicknesses of the people
+\v 23 \x + \xo 4:23: \xt Mat 9:35; Mrk 1:39.\x*Then \nd Yeshua\nd* went around all of Galilee, teaching in their Jewish meeting halls and proclaiming the good message about the kingdom, and healing all the people’s diseases and sicknesses,
 \v 24 and the news about this went all the way up to Syria.
 \v 25 Large crowds from Galilee and Decapolis and Yerushalem, and from all of Yudea and even beyond the Yordan River, followed after Yeshua.
 \c 5
@@ -203,7 +203,7 @@
 \v 1 After seeing all the crowds, Yeshua climbed up a hill, and when he sat down, his apprentices approached him
 \v 2 and he taught them:
 \p
-\v 3 “\wj Those who are poor in the spirit are blessed, because the kingdom of the heavens is theirs.\wj*
+\v 3 “\wj Those who are poor in the spirit are blessed, because the heavenly kingdom is theirs.\wj*
 \p
 \v 4 \x + \xo 5:4: \xt Isa 61:2.\x*“\wj Those who are mourning are blessed, because they will be comforted.\wj*
 \p
@@ -215,29 +215,29 @@
 \p
 \v 8 \x + \xo 5:8: \xt Psa 24:3.\x*“\wj Those who have pure hearts are blessed, because they will see \+nd God\+nd*.\wj*
 \p
-\v 9 “\wj Those who are peacemakers are blessed, because they will be called children of \+nd God\+nd*.\wj*
+\v 9 “\wj Those who are peacemakers are blessed, because they will be called \+nd God\+nd*’s children.\wj*
 \p
-\v 10 \x + \xo 5:10: \xt 1Pe 3:14.\x*“\wj Those who are persecuted for being godly are blessed, because the kingdom of heavens belongs to them.\wj*
+\v 10 \x + \xo 5:10: \xt 1Pe 3:14.\x*“\wj Those who are persecuted for being godly are blessed, because the heavenly kingdom belongs to them.\wj*
 \p
-\v 11 \x + \xo 5:11: \xt 1Pe 4:14.\x*“\wj Everyone who is derided or chased or lied about is blessed, along with those who have evil things said about them just because they \+add follow\+add* me.\wj*
+\v 11 \x + \xo 5:11: \xt 1Pe 4:14.\x*“\wj Everyone who’s derided or chased or lied about is blessed, along with those who have evil things said about them just because they \+add follow\+add* me.\wj*
 \v 12 \x + \xo 5:12: \xt 2Ch 36:16; Acts 7:52.\x*\wj Be happy and praising \+add God\+add* because you’ll all have a wonderful reward in the heavens, because \+add in the past\+add* they also persecuted the prophets like that.\wj*
 \s1 Being salt and light
 \r (Mark 9:50; Luke 14:34-35)
 \p
-\v 13 \x + \xo 5:13: \xt Mrk 9:50; Luk 14:34-35.\x*“\wj You are the salt of the earth, but if the salt is made tasteless, what would you all use to salt your food? The salt wouldn’t be useful for anything anymore and would just get thrown out and trampled on by the people.\wj*
+\v 13 \x + \xo 5:13: \xt Mrk 9:50; Luk 14:34-35.\x*“\wj You \add people\add* are the earth’s salt, but if the salt is made tasteless, what would you use to salt your food? The salt wouldn’t be useful for anything anymore and would just get thrown out and trampled on by the people.\wj*
 \p
-\v 14 \x + \xo 5:14: \xt Yhn 8:12; 9:5.\x*“\wj You are the light of the world. A city up on a hill can’t be hidden.\wj*
+\v 14 \x + \xo 5:14: \xt Yhn 8:12; 9:5.\x*“\wj You are the world’s light. A city up on a hill can’t be hidden.\wj*
 \v 15 \x + \xo 5:15: \xt Mrk 4:21; Luk 8:16; 11:33.\x*\wj No one lights a lamp and puts it under a basket—you put it on a lampstand and it lightens up the house.\wj*
 \v 16 \x + \xo 5:16: \xt 1Pe 2:12.\x*\wj In the same way, let your light shine in front of everyone, so that they can see your good behaviour and then might praise your father in the heavens.\wj*
 \s1 Mosheh’s law won’t be broken
 \p
-\v 17 “\wj Don’t imagine that I came to criticise the prophets or \+add Mosheh’s\+add* law. I didn’t come to oppose \+add the scriptures\+add*, but to fulfil them,\wj*
-\v 18 \x + \xo 5:18: \xt Luk 16:17.\x*\wj because I can assure you all that until heaven and earth reach their end, not one letter or mark will be taken away from the law until everything is fulfilled.\wj*
-\v 19 \wj Therefore anyone who breaks even a minor command and teaches others to do the same, will be seen as one of the least in the kingdom of the heavens, but anyone who practices and teaches the law will be considered outstanding in the kingdom.\wj*
-\v 20 \wj Let me tell all of you, unless you’re more godly than the teachers of the law and the Pharisees, there’s no way that you’ll get to enter the kingdom of the heavens.\wj*
+\v 17 “\wj Don’t imagine that I came to criticise the prophets or \+add Mosheh’s\+add* instructions. I didn’t come to oppose \+add the scriptures\+add*, but to fulfil them,\wj*
+\v 18 \x + \xo 5:18: \xt Luk 16:17.\x*\wj because I can assure you all that until heaven and earth reach their end, not one letter or mark will be taken away from those instructions until everything is fulfilled.\wj*
+\v 19 \wj Therefore anyone who breaks even a minor command, and teaches others to do the same, will be seen as one of the least in the heavenly kingdom, but anyone who practices and teaches those instructions will be considered outstanding in the kingdom.\wj*
+\v 20 \wj Let me tell all of you, unless you’re more godly than the religious teachers and the Pharisees, there’s no way that you’ll get to enter the heavenly kingdom.\wj*
 \s1 Teaching about murder and anger
 \p
-\v 21 “\wj You all heard that your ancestors were told not to murder because any murderer will be sentenced.\wj*\x + \xo 5:21: \xt Exo 20:13; Deu 5:17.\x*
+\v 21 “\wj You’ve all heard that your ancestors were told not to murder, because any murderer will be sentenced.\wj*\x + \xo 5:21: \xt Exo 20:13; Deu 5:17.\x*
 \v 22 \wj But I’m telling you that anyone who gets angry at another will be liable for judgement, and anyone who calls another person a numbskull will have to face the court, and if you call them a fool, you’re liable for hellfire.\wj*
 \v 23 \wj So if you’re there at the altar to offer your gift and remember that someone has something against you,\wj*
 \v 24 \wj leave your gift there at the altar and go and sort that out first, before coming back to offer your gift.\wj*
@@ -248,19 +248,19 @@
 \p
 \v 27 “\wj You all know that \+add the scriptures\+add* say not to commit adultery,\wj*\x + \xo 5:27: \xt Exo 20:14; Deu 5:18.\x*
 \v 28 \wj but I’m telling you that if you look at a woman lustfully then you’ve already committed adultery in your mind.\wj*
-\v 29 \wj If your right eye is causing you to stumble, then pluck it out and throw it away\wj*\x + \xo 5:29: \xt Mat 18:9; Mrk 9:47.\x*
+\v 29 \wj If your right eye is causing you to stumble, then pluck it out and throw it away,\wj*\x + \xo 5:29: \xt Mat 18:9; Mrk 9:47.\x*
 \v 30 \wj and if your right hand is causing you to stumble, cut it off and throw it away, because it’s better for you that one of your \+add ≈body parts\+add* would \+add ≈be taken than for\+add* your whole body to \+add ≈end up in the judgement fire\+add*.\wj*\x + \xo 5:30: \xt Mat 18:8; Mrk 9:43.\x*
 \s1 Teaching about divorce
 \r (Mat. 19:9; Mark 10:11-12; Luke 16:18)
 \p
 \v 31 \x + \xo 5:31: \xt Deu 24:1-4; Mat 19:7; Mrk 10:4.\x*“\wj It’s said that any man can divorce his wife just by sending her away.\wj*
-\v 32 \x + \xo 5:32: \xt Mat 19:9; Mrk 10:11-12; Luk 16:18; 1Cor 7:10-11.\x*\wj But I’m telling you all that anyone who sends his wife away, except in the case where she’s committed sexual immorality, is causing her to commit adultery, and anyone who marries a wife that’s been sent away, is causing \+add her\+add* to be committing adultery.\wj*
+\v 32 \x + \xo 5:32: \xt Mat 19:9; Mrk 10:11-12; Luk 16:18; 1Cor 7:10-11.\x*\wj But I’m telling you all that anyone who sends his wife away, except in the case where she’s committed sexual immorality, is causing her to commit adultery, and anyone who marries a wife that’s been sent away is causing \+add her\+add* to commit adultery.\wj*
 \s1 Teaching about oaths and honesty
 \p
-\v 33 \x + \xo 5:33: a \xt Lev 19:12; \xo b \xt Num 30:2; Deu 23:21.\x*“\wj Also you’ve heard that it was said to our ancestors that you shouldn’t break your oath, but you must do whatever you promised to \+nd Yahweh\+nd*.\wj*
+\v 33 \x + \xo 5:33: a \xt Lev 19:12; \xo b \xt Num 30:2; Deu 23:21.\x*“\wj Also, you’ve heard that it was said to our ancestors that you shouldn’t break your oath, but you must do whatever you promised to \+nd Yahweh\+nd*.\wj*
 \v 34 \x + \xo 5:34: a \xt Jam 5:12; \xo b \xt Isa 66:1; Mat 23:22.\x*\wj But I’m telling you not to make oaths in the first place—don’t swear by heaven because it’s God’s throne,\wj*
 \v 35 \x + \xo 5:35: a \xt Isa 66:1; \xo b \xt Psa 48:2.\x*\wj nor by the earth because it’s God’s footrest, nor by Jerusalem because it’s the supreme king’s city.\wj*
-\v 36 \wj And don’t swear by your own strength because you can’t even make one strand of hair grow a different colour.\wj*
+\v 36 \wj And don’t swear by your own strength, because you can’t even make one strand of hair grow a different colour.\wj*
 \v 37 \wj Just say ‘yes’ when you commit to doing something, and ‘no’ when you don’t, because going beyond that is \+add actually\+add* evil.\wj*
 \s1 Teaching about being taken advantage of
 \r (Luke 6:29-30)
@@ -269,20 +269,20 @@
 \v 39 \wj but I’m telling you not to resist those who want to hurt you. If someone slaps you on your right cheek, turn your left cheek towards them,\wj*
 \v 40 \wj and to the person suing you in court and claiming your robe, let them have your coat as well.\wj*
 \v 41 \wj And if someone forces you to walk a mile, walk two miles with them.\wj*
-\v 42 \wj Give whatever others request from you and don’t turn away from anyone who wants to borrow from you.\wj*
+\v 42 \wj Give whatever others request from you, and don’t turn away from anyone who wants to borrow from you.\wj*
 \s1 Love your enemies
 \r (Luke 6:27-28,32-36)
 \p
 \v 43 “\wj You’ve all heard it said it said that you should love your neighbour and hate your enemy,\wj*
-\v 44 \wj but I’m telling you all to love your enemies and to pray for anyone who’s persecuting you,\wj*
-\v 45 \wj so that all of you might become children of your father in the heavens, because he causes his sun to rise on both evil and good people and sends the rain for both godly and ungodly people.\wj*
-\v 46 \wj If you all just love people who love you, what reward would you expect for that? Don’t the tax collectors \+add even\+add* do that?\wj*
+\v 44 \wj but I’m telling you to love your enemies and to pray for anyone who’s persecuting you,\wj*
+\v 45 \wj so that you might become children of your father in the heavens, because he causes his sun to rise on both evil and good people, and sends the rain for both godly and ungodly people.\wj*
+\v 46 \wj If you \add people\add* just love people who love you, what reward would you expect for that? Don’t \+add even\+add* the tax collectors do that?\wj*
 \v 47 \wj And if you’re only polite to your own circle, how is that achieving anything? Aren’t non-Jews just the same?\wj*
-\v 48 \x + \xo 5:48: \xt Lev 19:2; Deu 18:13.\x*\wj Instead you all should \+add aim to\+add* be perfect just like your heavenly father is perfect.\wj*
+\v 48 \x + \xo 5:48: \xt Lev 19:2; Deu 18:13.\x*\wj Instead you should all \+add aim to\+add* be perfect just like your heavenly father is perfect.\wj*
 \c 6
 \s1 Giving to the poor
 \p
-\v 1 \x + \xo 6:1: \xt Mat 23:5.\x*“\wj Take care not to \+add only\+add* be obeying God in front of others so they’ll think well of you, because if you do, you’ll all certainly get no reward from your father in the heavens.\wj*
+\v 1 \x + \xo 6:1: \xt Mat 23:5.\x*“\wj \add You people should\add* take care not to \+add only\+add* obey God in front of others so they’ll think well of you, because if you do, you’ll certainly get no reward from your father in the heavens.\wj*
 \p
 \v 2 “\wj So when you’re giving to the poor, don’t make a big display of it like the hypocrites do in the meeting halls and in the streets so they’ll get the people’s praises. I can assure you that they’ve already received their reward in full.\wj*
 \v 3 \wj But when you give to the poor, don’t let your left hand know what your right hand is doing,\wj*
@@ -291,113 +291,113 @@
 \r (Luke 11:2-4)
 \p
 \v 5 \x + \xo 6:5: \xt Luk 18:10-14.\x*“\wj Whenever you pray, don’t be like the hypocrites who love to pray in the meeting halls and on street corners so everyone will notice them. I can assure you that they’ve already received their reward in full.\wj*
-\v 6 \wj Instead when you pray, go into a private room and shut the door, then pray to your father who’s not visible to you. Then your father who sees everything will reward you.\wj*
+\v 6 \wj Instead, when you pray, go into a private room and shut the door, then pray to your father who’s not visible to you. Then your father who sees everything will reward you.\wj*
 \p
-\v 7 “\wj And when you do pray, don’t babble \+add away\+add* like other religions who think they’ll be listened to just because of the number of their prayers.\wj*
-\v 8 \wj There’s no need to be like them because \+nd God\+nd* your father already knows your needs before you even ask him.\wj*
+\v 7 “\wj And when you do pray, don’t babble \+add away\+add* like people of other religions who think they’ll be listened to just because of how much they pray.\wj*
+\v 8 \wj There’s no need to be like them, because \+nd God\+nd* your father already knows your needs before you even ask him.\wj*
 \v 9 \wj So pray like this:\wj*
-\q1 \wj ‘Our father in the heavens\wj*
-\q1 \wj May we \+add always\+add* honour your name.\wj*
+\q1 \wj ‘Our father in the heavens,\wj*
+\q1 \wj we want your name to be honoured \+add forever\+add*.\wj*
 \q1
-\v 10 \wj We want your kingdom to come,\wj*
-\q1 \wj and for your plans to be fulfilled here on earth just like they are in heaven.\wj*
+\v 10 \wj We want your kingdom to come\wj*
+\q1 \wj and your plans to be fulfilled here on earth just like they are in heaven.\wj*
 \q1
 \v 11 \wj Give us \+add everything\+add* we need today\wj*
 \q1
-\v 12 \wj and write-off what we owe \+add you\+add*\wj*
-\q1 \wj as we also write-off what others owe us.\wj*
+\v 12 \wj and write off what we owe \+add you\+add*\wj*
+\q1 \wj as we also write off what others owe us.\wj*
 \q1
-\v 13 \wj Don’t bring us to \+add the point of\+add* being tempted\wj*
-\q1 \wj but keep us away from doing evil things.\wj*
+\v 13 \wj Don’t bring us to \+add the point of\+add* being tempted,\wj*
+\q1 \wj but keep us away from doing evil things.’\wj*
 \m
-\v 14 \x + \xo 6:14-15: \xt Mrk 11:25-26.\x*“\wj Because if you all forgive other people’s wrongs, then your heavenly father will also forgive your wrongs.\wj*
-\v 15 \wj But if you all don’t forgive other people’s wrongs, then your father won’t forgive your wrongs either.\wj*
+\v 14 \x + \xo 6:14-15: \xt Mrk 11:25-26.\x*“\wj Because if you \add people\add* forgive other people’s wrongs, then your heavenly father will also forgive your wrongs.\wj*
+\v 15 \wj But if you don’t forgive other people’s wrongs, then your father won’t forgive your wrongs either.\wj*
 \s1 Teaching about fasting
 \p
-\v 16 “\wj Whenever you all are abstaining from food, don’t look miserable like the hypocrites because they intentionally try to look awful so that everyone will notice that they’re fasting. I can assure you that they’ve already received their reward in full.\wj*
-\v 17 \wj Instead when you fast, comb your hair and wash your face\wj*
-\v 18 \wj so that no one will realise that you’re fasting other than your father who’s not visible to you. Then your father who sees everything will reward you.\wj*
+\v 16 “\wj Whenever you \add people\add* are abstaining from food, don’t look miserable like the hypocrites, because they intentionally try to look awful so that everyone will notice that they’re fasting. I can assure you that they’ve already received their reward in full.\wj*
+\v 17 \wj Instead, when you fast, comb your hair and wash your face\wj*
+\v 18 \wj so that no one will realise that you’re fasting, other than your father who’s not visible to you. Then your father who sees everything will reward you.\wj*
 \s1 Wealth in heaven
 \r (Luke 12:33-34)
 \p
-\v 19 \x + \xo 6:19: \xt Jam 5:2-3.\x*“\wj Don’t amass wealth for yourselves here on earth where insects and corrosion destroy things and where it can be stolen.\wj*
-\v 20 \wj Instead store your wealth in heaven where there’s no insects or corrosion or thieves \+add or scammers\+add*,\wj*
+\v 19 \x + \xo 6:19: \xt Jam 5:2-3.\x*“\wj Don’t amass wealth for yourselves here on earth, where insects and corrosion destroy things, and where it can be stolen.\wj*
+\v 20 \wj Instead, store your wealth in heaven, where there’s no destructive insects or corrosion or thieves \+add or scammers\+add*,\wj*
 \v 21 \wj because wherever your wealth is, your values will also be focussed there.\wj*
 \s1 The eyes
 \r (Luke 11:34-36)
 \p
-\v 22 “\wj Your eyes are the body’s lamps, so if your eyes are healthy, then your entire body will be bright.\wj*
+\v 22 “\wj Your eyes are your body’s lamps, so if your eyes are healthy, then your entire body will be bright.\wj*
 \v 23 \wj But if your eyes are evil, your entire body will be dark.\wj*
 \s1 God and wealth
 \r (Luke 16:13; 12:22-31)
 \p
-\v 24 “\wj No one can serve two masters because he’ll either hate one and like the other one, or else will be supporting one and despising the other, so you all can’t serve both \+nd God\+nd* and money.\wj*
+\v 24 “\wj No one can serve two masters, because they’ll either hate one and like the other one, or else will support one and despise the other. So you \add people\add* can’t serve both \+nd God\+nd* and money.\wj*
 \p
-\v 25 “\wj So that’s why I’m telling you not to worry about your \+add worldly\+add* life—\+add things like\+add* what you’ll all eat or drink, or how you look and what you’ll dress in. Isn’t life more than food, and the body more than clothing?\wj*
+\v 25 “\wj So that’s why I’m telling you all not to worry about your \+add worldly\+add* life—\+add things like\+add* what you’ll eat or drink, or how you look and what you’ll wear. Isn’t life more than food, and the body more than clothing?\wj*
 \v 26 \wj Think about the birds in the sky—they don’t plant seeds or harvest crops or gather grain into barns, but it’s your heavenly father who feeds them. Aren’t each of you worth more than them?\wj*
 \v 27 \wj Who can add an hour to their lifetime by worrying?\wj*
 \p
-\v 28 “\wj Why would you be worrying about clothes? Look how the flowers grow in the fields—they don’t work or make fabric,\wj*
-\v 29 \x + \xo 6:29: \xt 1Ki 10:4-7; 2Ch 9:3-6.\x*\wj but I can tell you that not even \+add King\+add* Solomon at the peak of his reign was dressed at well as the flowers.\wj*
-\v 30 \wj So if \+nd God\+nd* dresses the plants in the fields that are here today and thrown away tomorrow, won’t he care much more for you, you people with little faith.\wj*
+\v 28 “\wj Why would you worry about clothes? Look how the flowers grow in the fields—they don’t work or make fabric,\wj*
+\v 29 \x + \xo 6:29: \xt 1Ki 10:4-7; 2Ch 9:3-6.\x*\wj but I can tell you that not even \+add King\+add* Solomon at the peak of his reign was dressed as well as the flowers.\wj*
+\v 30 \wj So if \+nd God\+nd* dresses the plants in the fields that are here today and thrown away tomorrow, won’t he care much more for you, you people with little faith?\wj*
 \p
-\v 31 “\wj That means that you all don’t need to worry about having anything to eat or drink, or having some clothes to wear.\wj*
-\v 32 \wj People with no trust in God are trying to obtain all those things, but your heavenly father \+add already\+add* knows that you need these things.\wj*
+\v 31 “\wj That means that you \add people\add* don’t need to worry about having anything to eat or drink, or having clothes to wear.\wj*
+\v 32 \wj People with no trust in God try to obtain all those things, but your heavenly father \+add already\+add* knows that you need these things.\wj*
 \v 33 \wj So instead you should be striving \+add to enter God’s\+add* kingdom and to be guiltless in his eyes, and then all these other things will just follow.\wj*
 \v 34 \wj Don’t worry about tomorrow, because tomorrow can worry about itself—today’s problems are enough by themselves.\wj*
 \c 7
 \s1 Teaching about judging
 \r (Luke 6:37-38,41-42)
 \p
-\v 1 “\wj Don’t judge \+add others\+add* so that you won’t be judged yourselves,\wj*
+\v 1 “\wj Don’t judge \+add others\+add*, so that you won’t be judged yourselves,\wj*
 \v 2 \x + \xo 7:2: \xt Mrk 4:24.\x*\wj because you’ll all be judged in the same way that you judge others. Whatever standard you use on others will be the same standard used on you.\wj*
-\v 3 \wj And why are you looking at the speck in the eye of another person when you have a massive lump in your own eye?\wj*
+\v 3 \wj And why are you looking at the speck in another person’s eye when you have a massive lump in your own eye?\wj*
 \v 4 \wj How could you say to them, ‘Let me get the speck out of your eye,’ when the lump is still in your eye?\wj*
-\v 5 \wj What a hypocrite! First get the lump out of your own eye and you’ll be able to see clearly so then you can help them with their eye.\wj*
+\v 5 \wj What a hypocrite! First get the lump out of your own eye, and then you’ll be able to see clearly so that you can help them with their eye.\wj*
 \p
-\v 6 “\wj Don’t give special things to dogs and don’t pitch pearls to pigs, because they’ll all just trample them underfoot and then they’re just as likely to turn and attack you.\wj*
+\v 6 “\wj Don’t give special things to dogs, and don’t throw pearls to pigs, because they’ll all just trample them underfoot, and then they’re just as likely to turn and attack you.\wj*
 \s1 Requesting, searching, and knocking
 \r (Luke 11:9-13)
 \p
-\v 7 “\wj Make your requests and they’ll be given to you. Keep looking and you’ll find it. Knock \+add on doors\+add* and they’ll be opened.\wj*
-\v 8 \wj Because everyone who makes requests, receives, and everyone who searches will find, and the door will be opened for the one knocking.\wj*
-\v 9 \wj Which one of you who has a child that asks for something to eat would give them a stone?\wj*
+\v 7 “\wj Make your requests, and they’ll be given to you. Keep looking, and you’ll find it. Knock \+add on doors\+add*, and they’ll be opened.\wj*
+\v 8 \wj Everyone who asks for something will get something, and everyone who searches for something will find something, and the door will be opened for everyone who knocks.\wj*
+\v 9 \wj If you have a child that asks for something to eat, which of you would give them a stone?\wj*
 \v 10 \wj Or if the child asked for some fish, who would give them a snake?\wj*
-\v 11 \wj So if evil people know how to give good gifts to their children, how much more will your father in the heavens give good things to those who are making their requests to him?\wj*
+\v 11 \wj So if evil people know how to give good gifts to their children, how much more will your father in the heavens give good things to those who ask him?\wj*
 \p
-\v 12 \x + \xo 7:12: \xt Luk 6:31.\x*“\wj So in every area, whatever you’d like others to be doing for all of you, that’s how you should also be treating them.\wj*
+\v 12 \x + \xo 7:12: \xt Luk 6:31.\x*“\wj So in every area, whatever you’d like others to do for you, that’s how you \add people\add* should be treating them. That’s \add what Mosheh’s\add* instructions and the prophets’ \add writings were about\add*.\wj*
 \s1 The wide and narrow gates
 \r (Luke 13:24)
 \p
-\v 13 “\wj Come in through the narrow gate, because there’s a big gateway and a wide path that leads away to destruction and lots of people go that way.\wj*
-\v 14 \wj The gateway leading away to life is narrow and the path has been kept narrow and not many people find it.\wj*
+\v 13 “\wj Come in through the narrow gate, because there’s a big gateway and a wide path that leads away to destruction, and lots of people go that way.\wj*
+\v 14 \wj The gateway leading away to life is narrow, and the path has been kept narrow, and not many people find it.\wj*
 \s1 Recognising the tree by the fruit
 \r (Luke 6:43-44)
 \p
-\v 15 “\wj Watch out for false prophets who come to you in sheep’s clothing, but inside they are swindling wolves.\wj*
-\v 16 \wj You’ll all know who they are if you observe their fruit. Does anyone pick grapes from thorn bushes or figs from thistles?\wj*
+\v 15 “\wj Watch out for false prophets who come to you in sheep’s clothing, but inside they’re swindling wolves.\wj*
+\v 16 \wj You \add people\add* will know who they are if you observe their fruit. Does anyone pick grapes from thorn bushes, or figs from thistles?\wj*
 \v 17 \wj Similarly, every good tree produces good fruit, but the bad tree produces evil fruit.\wj*
-\v 18 \wj A good tree can’t produce bad fruit and a bad tree can’t produce good fruit.\wj*
-\v 19 \x + \xo 7:19: \xt Mat 3:10; Luk 3:9.\x*\wj Every tree that doesn’t produce good fruit will be chopped down and thrown in the fire.\wj*
+\v 18 \wj A good tree can’t produce bad fruit, and a bad tree can’t produce good fruit.\wj*
+\v 19 \x + \xo 7:19: \xt Mat 3:10; Luk 3:9.\x*\wj Every tree that doesn’t produce good fruit will be chopped down and thrown into the fire.\wj*
 \v 20 \x + \xo 7:20: \xt Mat 12:33.\x*\wj So then, you’ll know the false teachers by observing their fruit.\wj*
 \s1 Words need actions
 \r (Luke 13:25-27)
 \p
-\v 21 “\wj Not everyone who goes around calling me ‘master’ will enter the kingdom of heavens—only those who \+add actually\+add* do what my father who lives in the heavens wants.\wj*
-\v 22 \wj Many people will complain on \+add judgement\+add* day saying, “\+nd Master\+nd*, master, didn’t we prophesy using your name, and exorcise demons using your name, and do many miracles using your name?”\wj*
-\v 23 \x + \xo 7:23: \xt Psa 6:8.\x*\wj Then I’ll have to tell them, “I don’t even know you. Go away from me all of you whose behaviour is against \+add God’s\+add* laws.”\wj*
+\v 21 “\wj Not everyone who goes around calling me ‘master’ will enter the heavenly kingdoms—only those who \+add actually\+add* do what my father who lives in the heavens wants.\wj*
+\v 22 \wj Many people will complain on \+add judgement\+add* day saying, ‘\+nd Master\+nd*, master, didn’t we prophesy using your name, and exorcise demons using your name, and do many miracles using your name?’\wj*
+\v 23 \x + \xo 7:23: \xt Psa 6:8.\x*\wj Then I’ll have to tell them, ‘I don’t even know you. Go away from me, all of you whose behaviour is against \+add God’s\+add* laws.’\wj*
 \s1 The importance of foundations
 \r (Luke 6:47-49)
 \p
 \v 24 “\wj Therefore anyone who hears these messages of mine and puts them into practice, they can be likened to a sensible person who built their house on the rock.\wj*
-\v 25 \wj When the rains started and the floods came and the winds blew and battered that house, it was stable because it had been founded on the rock.\wj*
+\v 25 \wj When the rains started and the floods came and the winds blew and battered that house, it was stable because its foundation was the rock.\wj*
 \p
 \v 26 “\wj But anyone who hears these messages of mine and doesn’t put them into practice, they can be likened to a stupid person who built their house on the sand.\wj*
 \v 27 \wj When the rains started and the floods came and the winds blew and battered that house, it collapsed with a loud crash.\wj*”
 \s1 Yeshua’s authority
 \p
 \v 28 \x + \xo 7:28-29: \xt Mrk 1:22; Luk 4:32.\x*When \nd Yeshua\nd* had finished sharing all these messages, the crowds were astonished at his teaching
-\v 29 because he taught like someone who had authority, and not like their \add regular\add* teachers of the law.
+\v 29 because he taught like someone who had authority, and not like their \add regular\add* religious teachers.
 \c 8
 \s1 Yeshua heals a man with leprosy
 \r (Mark 1:40-45; Luke 5:12-16)
@@ -419,7 +419,7 @@
 \v 9 because I’m also a man given a position under authority with soldiers under me, and I tell this one, ‘Come here,’ and he comes, and tell my slave, ‘Do this,’ and he does it.
 \p
 \v 10 \nd Yeshua\nd* was amazed when he heard that and said to his followers \add around him\add*, “\wj I can assure you that I haven’t discovered faith like this from any Israeli.\wj*
-\v 11 \x + \xo 8:11: \xt Luk 13:29.\x*\wj I’m telling you that many people from all over the world will come and join Abraham and Isaac and Yacob at the table in the kingdom of the heavens,\wj*
+\v 11 \x + \xo 8:11: \xt Luk 13:29.\x*\wj I’m telling you that many people from all over the world will come and join Abraham and Isaac and Yacob at the table in the heavenly kingdom,\wj*
 \v 12 \x + \xo 8:12: \xt Mat 22:13; 25:30; Luk 13:28.\x*\wj but the \+add ones who thought they were the true\+add* children will be thrown out into the distant darkness where there’ll be crying and regrets.\wj*
 \v 13 Then he said to the commander, “\wj Go then and it will happen according to your faith,\wj*” and his slave was healed that very moment.
 \s1 Yeshua heals the people
@@ -528,7 +528,7 @@
 \s1 Yeshua heals a man who couldn’t talk
 \p
 \v 32 As they were leaving, some people brought a man to Yeshua who was demon-possessed and unable to talk.
-\v 33 After the demon was cast out, the man was able to speak and the crowds were amazed saying, “Never before has anything like this happened in Yisrael.”
+\v 33 After the demon was driven out, the man was able to speak and the crowds were amazed saying, “Never before has anything like this happened in Yisrael.”
 \v 34 \x + \xo 9:34: \xt Mat 10:25; 12:24; Mrk 3:22; Luk 11:15.\x*But the Pharisees said, “He casts out demons with the help of the ruler of the demons.”
 \s1 The large harvest
 \p
@@ -549,7 +549,7 @@
 \p
 \v 5 \nd Yeshua\nd* sent out these twelve, instructing them, “\wj Don’t go onto the roads of non-Jews or into the city of Samaria,\wj*
 \v 6 \wj but rather go to the lost sheep who a descendants of Yisrael.\wj*
-\v 7 \wj As you go, announce to the people that the kingdom of the heavens is close.\wj*
+\v 7 \wj As you go, announce to the people that the heavenly kingdom is close.\wj*
 \v 8 \wj Heal those who need it, bring the dead back to life, get rid of leprosy, and drive evil spirits away. You all freely received, \+add so\+add* give freely.\wj*
 \v 9 \wj Don’t accept any money for your wallets,\wj*
 \v 10 \x + \xo 10:10: \xt 1Cor 9:14; 1Tim 5:18.\x*\wj and don’t take a backpack, or a change of clothes or footwear, or a staff, because a worker deserves to be fed.\wj*
@@ -558,7 +558,7 @@
 \v 12 \wj When you enter a home, bless it,\wj*
 \v 13 \wj and if the house is worthy of it, let your peace come onto it, but if not, let your peace return to you.\wj*
 \v 14 \x + \xo 10:14: \xt Acts 13:51.\x*\wj If there’s any that don’t accept you or don’t want to hear your messages, shake the dust off your feet as you leave that house or city \+add as a sign that you all accept no responsibility for them\+add*.\wj*
-\v 15 \x + \xo 10:15: a \xt Mat 11:24; \xo b \xt Gen 19:24-28.\x*\wj I can assure you that it will be more tolerable for the towns of Sodom and Gomorrah on the day of judgement that it will be for those places.\wj*
+\v 15 \x + \xo 10:15: a \xt Mat 11:24; \xo b \xt Gen 19:24-28.\x*\wj I can assure you that it will be more tolerable for the towns of Sodom and Amorah \add (Gomorrah)\add* on the day of judgement that it will be for those places.\wj*
 \s1 The coming persecution
 \r (Mark 13:9-13; Luke 21:12-17)
 \p
@@ -621,8 +621,8 @@
 \v 8 \wj Yes, what did you all go out to see? A man wearing fine clothes? People in palaces wear fine clothes.\wj*
 \v 9 \wj So why did you go out \+add there\+add*? To see a prophet? Yes, I’m telling you that \+add he is a prophet\+add*, and even more important than the prophets.\wj*
 \v 10 \x + \xo 11:10: \xt Mal 3:1.\x*\wj He is the one that was written about: ‘See, I’m sending out my messenger ahead of you and he’ll prepare your path before you.’\wj*
-\v 11 \wj I can assure you that no person who’s ever been born is greater than Yohan-the-immerser. But even the least important person in the kingdom of heavens is greater than him.\wj*
-\v 12 \x + \xo 11:12-13: \xt Luk 16:16.\x*\wj From the time of Yohan-the-immerser through to the present time, the kingdom of the heavens has been opposed, and the opposition is grabbing at it.\wj*
+\v 11 \wj I can assure you that no person who’s ever been born is greater than Yohan-the-immerser. But even the least important person in the heavenly kingdom is greater than him.\wj*
+\v 12 \x + \xo 11:12-13: \xt Luk 16:16.\x*\wj From the time of Yohan-the-immerser through to the present time, the heavenly kingdom has been opposed, and the opposition is grabbing at it.\wj*
 \v 13 \wj All the prophets and the law prophesied before Yohan came,\wj*
 \v 14 \x + \xo 11:14: \xt Mal 4:5; Mat 17:10-13; Mrk 9:11-13.\x*\wj and now, if you’re all willing to believe it, he is Eliyah—the one who would come \+add ahead\+add*.\wj*
 \v 15 \wj Anyone who is willing, let them strive to understand this.\wj*
@@ -762,7 +762,7 @@
 \p
 \v 10 After this, his apprentices came to him and asked, “Why do you speak to the people in parables?”
 \p
-\v 11 “\wj You guys have been permitted to know the mysteries of the kingdom of the heavens,\wj*” replied Yeshua, “\wj but not those others.\wj*”
+\v 11 “\wj You guys have been permitted to know the mysteries of the heavenly kingdom,\wj*” replied Yeshua, “\wj but not those others.\wj*”
 \v 12 \x + \xo 13:12: \xt Mat 25:29; Mrk 4:25; Luk 8:18; 19:26.\x*\wj Because anyone who already has will be given more and they will end up with plenty, but anyone who doesn’t have, even what they have will be taken away from them.\wj*
 \v 13 \wj That’s why I speak to them in parables, because when they look they don’t see, and when they listen, they don’t hear or understand,\wj*
 \v 14 \x + \xo 13:14-15: \xt Isa 6:9-10 (LXX).\x*\wj and so the prophecy \+add written\+add* by Isayah is being fulfilled:\wj*
@@ -787,7 +787,7 @@
 \v 23 \wj The seed that landed on the good soil is the person who hears the message and understands it and goes on to bear fruit—some people producing a hundred times more, some sixty times, and some thirty times.\wj*”\f + \fr 13:23 \ft See http://scrollandscreen.com/biblestudyresources/Matthew%2013.1-23%20mgvh%20notes.pdf\f*
 \s1 The parable about the bad wheat
 \p
-\v 24 Then Yeshua told them another parable, saying, “\wj The kingdom of the heavens is like a farmer who’s planted good seed in his field.\wj*
+\v 24 Then Yeshua told them another parable, saying, “\wj The heavenly kingdom is like a farmer who’s planted good seed in his field.\wj*
 \v 25 \wj But the while they were all sleeping, his enemy came and spread black-grained ‘wheat’ seeds around his wheat field and left again.\wj*
 \v 26 \wj Then when the wheat grew and produced grains, the \+add poisonous\+add* ‘wheat’ could also be seen.\wj*
 \v 27 \wj The farmer’s slave came and told him, ‘Master, wasn’t it \+em good\+em* wheat seed that you planted? So why is there so much false wheat?’\wj*
@@ -797,12 +797,12 @@
 \s1 The parable about the small mustard seed
 \r (Mark 4:30-32; Luke 13:18-19)
 \p
-\v 31 Another one of his parables went like this: “\wj The kingdom of the heavens is like a mustard seed that a man planted in his field.\wj*
+\v 31 Another one of his parables went like this: “\wj The heavenly kingdom is like a mustard seed that a man planted in his field.\wj*
 \v 32 \wj Even though it’s a very small seed, it grows larger than \+add most\+add* garden plants and becomes such a large bush that birds even come and nest in its branches.\wj*”
 \s1 The parable about the yeast
 \r (Luke 13:20-21)
 \p
-\v 33 In another parable, Yeshua said, “\wj The kingdom of the heavens is like yeast, which a woman took and hid it in a month’s worth of flour, and eventually all of it rose.\wj*”
+\v 33 In another parable, Yeshua said, “\wj The heavenly kingdom is like yeast, which a woman took and hid it in a month’s worth of flour, and eventually all of it rose.\wj*”
 \s1 The reason Yeshua used parables
 \r (Mark 4:33-34)
 \p
@@ -822,14 +822,14 @@
 \v 43 \wj Then the godly people will be shining \+add as bright as\+add* the sun in their father’s kingdom. Anyone who is interested to hear, let them listen.\wj*
 \s1 The parable about the treasure in the field
 \p
-\v 44 “\wj The kingdom of the heavens is like a field that had had treasure hidden in it. When someone found the treasure, they hid it again, and with great excitement went and sold everything they had so they could buy that field.\wj*
+\v 44 “\wj The heavenly kingdom is like a field that had had treasure hidden in it. When someone found the treasure, they hid it again, and with great excitement went and sold everything they had so they could buy that field.\wj*
 \s1 The parable about the valuable pearl
 \p
-\v 45 “\wj Also the kingdom of the heavens is like a trader wanting to buy beautiful pearls,\wj*
+\v 45 “\wj Also the heavenly kingdom is like a trader wanting to buy beautiful pearls,\wj*
 \v 46 \wj and when they found one outstanding pearl, they went and sold everything they had so they could buy that pearl.\wj*
 \s1 The parable about the dragnet
 \p
-\v 47 “\wj Also the kingdom of the heavens is like a dragnet that was thrown into the lake and picked up everything from under the water.\wj*
+\v 47 “\wj Also the heavenly kingdom is like a dragnet that was thrown into the lake and picked up everything from under the water.\wj*
 \v 48 \wj When it was full, they pulled it up onto the beach and sat and sorted the catch—throwing the good catch into containers and throwing out the bad stuff.\wj*
 \v 49 \wj It’ll be just like that at the end of this age—\+add God’s\+add* messengers will be coming out and will separate evil people from the godly people,\wj*
 \v 50 \wj and they will throw the evil ones into the incinerator. There will be crying and great anguish.\wj*
@@ -837,7 +837,7 @@
 \v 51 “\wj Did you all understand all of that?\wj*
 \p “Yes,” his apprentices answered.
 \p
-\v 52 Then he said to them, “\wj Because of this, every teacher who’s been trained about the kingdom of the heavens is like a person who’s a home owner who gives presents of both new and old things of out their valuables.\wj*”
+\v 52 Then he said to them, “\wj Because of this, every teacher who’s been trained about the heavenly kingdom is like a person who’s a home owner who gives presents of both new and old things of out their valuables.\wj*”
 \s1 Those from Nazareth cannot accept the messiah
 \r (Mark 6:1-6; Luke 4:16-30)
 \p
@@ -1019,7 +1019,7 @@
 \p
 \v 17 Then \nd Yeshua\nd* answered, “\wj You are blessed, Simon BarYonah, because it wasn’t any person that revealed that to you, but rather, my father who is in the heavens.\wj*
 \v 18 \wj And I can add that you are Peter \+add (meaning ‘rock’)\+add* and I will build my assembly on this rock and the gates of hell won’t be able to hold it back.\wj*
-\v 19 \x + \xo 16:19: \xt Mat 18:18; Yhn 20:23.\x*\wj I’ve give you the keys of the kingdom of the heavens, and whatever you restrain on the earth will be restrained in the heavens, and whatever you free on the earth, will be freed in the heavens.\wj*”
+\v 19 \x + \xo 16:19: \xt Mat 18:18; Yhn 20:23.\x*\wj I’ve give you the keys of the heavenly kingdom, and whatever you restrain on the earth will be restrained in the heavens, and whatever you free on the earth, will be freed in the heavens.\wj*”
 \p
 \v 20 Then he instructed his apprentices not to tell anyone that he is the \nd messiah\nd*.
 \s1 Yeshua talks about future suffering and death
@@ -1092,11 +1092,11 @@
 \s1 Who is the greatest?
 \r (Mark 9:33-37; Luke 9:46-48; 17:1-2)
 \p
-\v 1 \x + \xo 18:1: \xt Luk 22:24.\x*Around that time his apprentices approached \nd Yeshua\nd* and asked him, “So who will be the greatest in the kingdom of the heavens?”
+\v 1 \x + \xo 18:1: \xt Luk 22:24.\x*Around that time his apprentices approached \nd Yeshua\nd* and asked him, “So who will be the greatest in the heavenly kingdom?”
 \p
 \v 2 Yeshua called in a small child and stood the child in the middle of the room
-\v 3 \x + \xo 18:3: \xt Mrk 10:15; Luk 18:17.\x*and said, “\wj I can assure you all that if you don’t turn and become like a small child, you all certainly won’t enter the kingdom of the heavens,\wj*
-\v 4 \wj so anyone who humbles themself like this small child is greater in the kingdom of the heavens.\wj*
+\v 3 \x + \xo 18:3: \xt Mrk 10:15; Luk 18:17.\x*and said, “\wj I can assure you all that if you don’t turn and become like a small child, you all certainly won’t enter the heavenly kingdom,\wj*
+\v 4 \wj so anyone who humbles themself like this small child is greater in the heavenly kingdom.\wj*
 \v 5 \wj Anyone who receives a small child like this in my name, is receiving me,\wj*
 \p
 \v 6 “\wj But anyone who causes one of these small ones who believe in me to stumble, it would have been better for that person if a heavy stone had been hung around their neck and if they’d been sunk in the deep lake.\wj*
@@ -1130,7 +1130,7 @@
 \p
 \v 22 \x + \xo 18:22: \xt Gen 4:24.\x*“\wj I won’t say seven times,\wj*” \nd Yeshua\nd* answered, “\wj but seventy times seven times!\wj*
 \p
-\v 23 “\wj It’s because of this that the kingdom of the heavens can be likened to a king who wanted to settle accounts with his slaves.\wj*
+\v 23 “\wj It’s because of this that the heavenly kingdom can be likened to a king who wanted to settle accounts with his slaves.\wj*
 \v 24 \wj So when he began the process, a man was brought in who owed him millions,\wj*
 \v 25 \wj but since he had no way of repaying it, the master commanded for him and his wife and children and all their possessions to be sold to help pay off the debt.\wj*
 \v 26 \wj Then that slave dropped to the ground and prostrated himself to the master, saying, ‘Master, give me a little more time and then I’ll be able to repay it all to you.’\wj*
@@ -1166,12 +1166,12 @@
 \v 10 His followers made the point, “If that’s the case for husband and wife, it’s better not to get married.”
 \p
 \v 11 “\wj Not everyone can accept this,\wj*” Yeshua responded, “\wj but only those with a special gift.\wj*
-\v 12 \wj Because there are some men who are born from their mother’s womb without testicles, there are some who’ve been castrated by others, and there are some who castrate themselves because of the kingdom of the heavens. Anyone who is able to accept this can accept it.\wj*”
+\v 12 \wj Because there are some men who are born from their mother’s womb without testicles, there are some who’ve been castrated by others, and there are some who castrate themselves because of the heavenly kingdom. Anyone who is able to accept this can accept it.\wj*”
 \s1 Yeshua blesses the children
 \r (Mark 10:13-16; Luke 18:15-17)
 \p
 \v 13 Then some small children were brought to Yeshua hoping that he would place his hands on them and pray for them, but the apprentices scolded them.
-\v 14 But \nd Yeshua\nd* intervened, “\wj Be patient with the children and don’t stop them from coming to me, because it’s ones like these that make up the kingdom of the heavens.\wj*”
+\v 14 But \nd Yeshua\nd* intervened, “\wj Be patient with the children and don’t stop them from coming to me, because it’s ones like these that make up the heavenly kingdom.\wj*”
 \p
 \v 15 Then after placing his hands on them, he left that place.
 \s1 Answering the rich man
@@ -1191,7 +1191,7 @@
 \p
 \v 22 But when the young man heard that, he went away despondent because he owned many properties.
 \p
-\v 23 So \nd Yeshua\nd* said to his apprentices, “\wj I can assure you that it’s \+add more\+add* difficult for a wealthy person to enter the kingdom of the heavens.\wj*
+\v 23 So \nd Yeshua\nd* said to his apprentices, “\wj I can assure you that it’s \+add more\+add* difficult for a wealthy person to enter the heavenly kingdom.\wj*
 \v 24 \wj In fact, it’s easier for a camel to go through the eye of a needle than for a wealthy person to enter God’s kingdom.\wj*”
 \p
 \v 25 When his apprentices heard that, they were very surprised and asked, “Well, who can be saved then?”
@@ -1207,7 +1207,7 @@
 \v 30 \x + \xo 19:30: \xt Mat 20:16; Luk 13:30.\x*“\wj But many who are first will end up last, and the last will be first\wj*
 \c 20
 \nb
-\v 1 \wj because the kingdom of the heavens is like a landowner who came out in the morning to hire labourers to work in his vineyard.\wj*
+\v 1 \wj because the heavenly kingdom is like a landowner who came out in the morning to hire labourers to work in his vineyard.\wj*
 \v 2 \wj They all agreed on the rate for the day and then he sent them off to work in his vineyard.\wj*
 \v 3 \wj Then around 9am he noticed some others standing idle in the marketplace,\wj*
 \v 4 \wj and he told them, ‘You can go and work in the vineyard and I’ll pay you all a fair day’s wage at the end.’\wj*
@@ -1266,7 +1266,7 @@
 \s1 The jubilant entrance of Yeshua into Yerushalem
 \r (Mark 11:1-11; Luke 19:28-40; Yhn 12:12-19)
 \p
-\v 1 When they were getting close to Yerushalem and arrived at Bethphage on the Mount of Olives, \nd Yeshua\nd* sent two of his apprentices ahead,
+\v 1 When they were getting close to Yerushalem and arrived at Bethphage on the Mt. of Olives, \nd Yeshua\nd* sent two of his apprentices ahead,
 \v 2 telling them, “\wj Go ahead to the next village and in front of you you’ll see a donkey tied up and her colt near her. Untie the donkey and bring them back here to me.\wj*
 \v 3 \wj But if anyone says anything to you, just tell them that the \+nd master\+nd* needs them, and they’ll let you take them.\wj*”
 \p
@@ -1359,7 +1359,7 @@
 \r (Luke 14:15-24)
 \p
 \v 1 \nd Yeshua\nd*, still answering them, told another parable:
-\v 2 “\wj The kingdom of the heavens is like a king who prepared the wedding reception for his son\wj*
+\v 2 “\wj The heavenly kingdom is like a king who prepared the wedding reception for his son\wj*
 \v 3 \wj and he sent out some of his slaves to remind those who’d been invited, but they didn’t want to come.\wj*
 \v 4 \wj So he sent out some other slaves, instructing them, ‘Tell those who are invited: Listen, I’ve prepared the dinner, including some of my grain-fed beef and everything’s now ready. Come to the wedding and celebrate.’\wj*
 \v 5 \wj But they ignored the message and went their various ways—one went off to his field \+add to work\+add* and another went into his business.\wj*
@@ -1403,7 +1403,7 @@
 \v 29 “\wj You’ve got it wrong,\wj*” \nd Yeshua\nd* answered, “\wj because you don’t understand either the scriptures or God’s power,\wj*
 \v 30 \wj because in the resurrection, there’ll be no marrying or getting engaged, because they’ll be like the messengers in heaven.\wj*
 \v 31 \wj But as for the resurrection of the dead, isn’t it \+add written in the scriptures\+add* that \+nd God\+nd* said,\wj*
-\v 32 \x + \xo 22:32: \xt Exo 3:6.\x*\wj ‘\+em I am\+em* Abraham’s god and Isaac’s god and Yacob’s God.’? So God is not the god of the dead, but of the living.\wj*”
+\v 32 \x + \xo 22:32: \xt Exo 3:6.\x*\wj ‘\+em I am\+em* Abraham’s god and Isaac’s god and Yacob’s god.’? So \nd God\nd* is not the god of the dead, but of the living.\wj*”
 \p
 \v 33 When the crowds heard his answer, they were amazed at his teaching.
 \s1 The most important command
@@ -1440,7 +1440,7 @@
 \v 1 Then \nd Yeshua\nd* spoke to the crowds and to his followers,
 \v 2 “\wj The religious teachers and the Pharisees party claim the authority of Mosheh.\wj*
 \v 3 \wj Because of that, do everything they tell you to do and \+add obey all the commands\+add* they tell you to obey. However, don’t follow what they \+em do\+em*, because they’re \+add only\+add* good at telling and not at doing.\wj*
-\v 4 \wj They package up heavy and unbearable loads and place them across the shoulders of the people, while they themselves won’t even more their little fingers.\wj*
+\v 4 \wj They package up heavy and unbearable loads and place them across the shoulders of the people, while they themselves won’t even move their little fingers.\wj*
 \v 5 \x + \xo 23:5: a \xt Mat 6:1; \xo b \xt Deu 6:8; \xo c \xt Num 15:38.\x*\wj Everything that they do do, is \+add only\+add* done to be a public display in front of the people, so they have big prayer boxes and fancy robes.\wj*
 \v 6 \wj They love the best place at dinners and the best seats in the meeting halls\wj*
 \v 7 \wj and being greeted in the marketplaces and to be addressed as ‘My great one’.\wj*
@@ -1452,7 +1452,7 @@
 \s1 Yeshua reveals the hypocrisy of those who are religious
 \r (Mark 12:40; Luke 11:39-42,44,52; 20:47)
 \p
-\v 13 “\wj You religious teachers and Pharisees are hypocrites and will have a bad end because you’re \+add actually\+add* keeping people away from the kingdom of the heavens—you don’t enter yourselves and nor do you allow others to enter.\wj*
+\v 13 “\wj You religious teachers and Pharisees are hypocrites and will have a bad end because you’re \+add actually\+add* keeping people away from the heavenly kingdom—you don’t enter yourselves and nor do you allow others to enter.\wj*
 \p
 \v 14 ◘
 \v 15 “\wj You religious teachers and Pharisees are hypocrites and will have a bad end because you’d travel all the way around the world to make one convert, and then you’d make him twice the son of hell that you are yourselves.\wj*
@@ -1482,7 +1482,7 @@
 \v 32 \wj actually you’re just the same as your ancestors.\wj*
 \v 33 \x + \xo 23:33: \xt Mat 3:7; 12:34; Luk 3:7.\x*\wj Bunch of snakes, brood of vipers, how \+add do you think that\+add* you’ll escape the judgement of hell?\wj*
 \v 34 \wj Because of that, listen, I’m \+add now\+add* sending out \+add more\+add* prophets and wise \+add preachers\+add* and teachers to you all. You’ll kill off some of them and have others executed on stakes. You’ll flog some of them in your meeting halls, and you’ll persecute others from city to city,\wj*
-\v 35 \x + \xo 23:35: a \xt Gen 4:8; \xo b \xt 2Ch 24:20-21.\x*\wj so that \+add the judgement for\+add* all the deaths of godly people around the world will fall on you all. This includes the blood of the innocent Abel all the way \+add through the centuries\+add* to the blood of Zechariah (son of Berekiah) who you all murdered between the temple and the altar.\wj*
+\v 35 \x + \xo 23:35: a \xt Gen 4:8; \xo b \xt 2Ch 24:20-21.\x*\wj so that \+add the judgement for\+add* all the deaths of godly people around the world will fall on you all. This includes the blood of the innocent Abel all the way \+add through the centuries\+add* to the blood of Zekaryah (son of Berekiah) who you all murdered between the temple and the altar.\wj*
 \v 36 \wj Yes, I can assure you that all these things will happen to this generation.\wj*
 \s1 Yeshua’s concern for Yerushalem
 \r (Luke 13:34-35)
@@ -1571,7 +1571,7 @@
 \c 25
 \s1 The parable about not being prepared
 \p
-\v 1 \x + \xo 25:1: \xt Luk 12:35.\x*“\wj The kingdom of the heavens can also be likened to ten young women \+add in a wedding party\+add* who took their lamps and went off to meet the groom.\wj*
+\v 1 \x + \xo 25:1: \xt Luk 12:35.\x*“\wj The heavenly kingdom can also be likened to ten young women \+add in a wedding party\+add* who took their lamps and went off to meet the groom.\wj*
 \v 2 \wj Five of them were harebrained and five were sensible.\wj*
 \v 3 \wj The less clever ones took their lamps but didn’t take any oil for them,\wj*
 \v 4 \wj whereas the sensible ones had oil in containers along with the lamps.\wj*
@@ -1851,9 +1851,9 @@
 \r (Mark 15:33-41; Luke 23:44-49; Yhn 19:28-30)
 \p
 \v 45 Around noon, the whole country became dark for three hours
-\v 46 \x + \xo 27:46: \xt Psa 22:1.\x*and then around 3pm, \nd Yeshua\nd* shouted with a loud voice, “My God, my God, why have you abandoned me?”
+\v 46 \x + \xo 27:46: \xt Psa 22:1.\x*and then around 3pm, \nd Yeshua\nd* shouted with a loud voice, “My god, my god, why have you abandoned me?”
 \p
-\v 47 Some of the people standing there heard him and thought that he was calling Eliyah\f + \fr 27:47 \ft The original words for ‘My God’ sound a bit similar to the word for ‘Eliyah’.\f*
+\v 47 Some of the people standing there heard him and thought that he was calling Eliyah\f + \fr 27:47 \ft The original words for ‘My god’ sound a bit similar to the word for ‘Eliyah’.\f*
 \v 48 \x + \xo 27:48: \xt Psa 69:21.\x*One of them ran and got a sponge and dipped it in wine vinegar, and then wrapped it around a reed and held it up to his mouth to drink from.
 \p
 \v 49 But the others were saying, “Just leave him and we’ll see whether Eliyah comes to save him.”

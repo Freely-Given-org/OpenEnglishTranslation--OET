@@ -1,4 +1,4 @@
-\id NUM - Open English Translation—Readers’ Version (OET-RV) v0.0.03
+\id NUM - Open English Translation—Readers’ Version (OET-RV) v0.0.07
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 NUM
@@ -9,15 +9,15 @@
 \toc3 Num.
 \mt1 Numbers
 \is1 Introduction
-\ip The English word ‘Numbers’ relates to the census of Israeli fighting men. Hebrew readers call this document ‘Bemidbar’ which is the fourth word in the Hebrew and means ‘In the desert’. Some European and other translations call it ‘The fourth book of Mosheh/Moses’.
-\ip telling concerning the descendants of Yisrael (called ‘Yisrael’ in older translations) inside of forty years from removal their of Mountain Sinai, until arrived them there to east of land promised of God igbehey them. The name of this document, there is/are kalabetan of very important part of this pangguhuren is the listing of Moses of descendants of Israel there to Mountain Sinai of not yet them mig-awe there. ‘pass-over’ of forty years, made e again the listing there to Moab, direction of east of River Jordan. Te middle of this the kararuwa listing of people, went the descendants of Israel of Kadis-Barniya of south eletanan of Kanaan. But from Kadis-Barniya, not/none them entered of land promised of God igbehey them. ‘pass-over’ of many years of living their of that place, went them of land direction of east of River Jordan. The one group of people Lived there, and the other crossed of River Jordan going to Kanaan.
-\ip The document of Numbers telling again concerning the people always naawei of looking forward to, nenaaldek middle of kalised, and migsukul of God and to Moses chosen by God so that is egpangulu them. telling again this concerning the pegkamatinumanen of God and of pegsagman he/his of his people without ending even still nenaawaan them of looking forward to, and disobedient. telling again this concerning the not ending serving Moses of God and of his people even still of there is/are times naaminan he of humility.
+\ip The English word ‘Numbers’ relates to the census of Israeli fighting men. Hebrew readers call this document ‘Bemidbar’ which is the fourth word in the Hebrew and means ‘In the wilderness’. Some European and other translations call it ‘The fourth book of Mosheh/Moses’.
+\ip This document tells about the descendants of Yisrael (called ‘Israel’ in older translations) inside of forty years from removal their of Mt. Sinai, until arrived them there to east of land promised of God igbehey them. The name of this document, there is/are kalabetan of very important part of this pangguhuren is the listing of Moses of descendants of Israel there to Mountain Sinai of not yet them mig-awe there. ‘pass-over’ of forty years, made e again the listing there to Moab, direction of east of River Jordan. Te middle of this the kararuwa listing of people, went the descendants of Israel of Kadis-Barniya of south eletanan of Kanaan. But from Kadis-Barniya, not/none them entered of land promised of God igbehey them. ‘pass-over’ of many years of living their of that place, went them of land direction of east of River Jordan. The one group of people Lived there, and the other crossed of River Jordan going to Kanaan.
+\ip The document of ‘Numbers’ telling again concerning the people always naawei of looking forward to, nenaaldek middle of kalised, and migsukul of God and to Moses chosen by God so that is egpangulu them. telling again this concerning the pegkamatinumanen of God and of pegsagman he/his of his people without ending even still nenaawaan them of looking forward to, and disobedient. telling again this concerning the not ending serving Moses of God and of his people even still of there is/are times naaminan he of humility.
 \iot Main components of this account
 \io1 The preparation of descendants of Israel of departure of Sinai \ior 1:1–9:23\ior*
-\io2 a. The first listing of Moses of descendants of Israel \ior 1:1–4:49\ior*
+\io2 a. The first listing of Mosheh Yisrael’s descendants \ior 1:1–4:49\ior*
 \io2 b. The various laws and beliefs \ior 5:1–8:26\ior*
 \io2 c. The second Festival of ‘pass-over’ of Messenger \ior 9:1-23\ior*
-\io1 From of Mountain Sinai going to Moab \ior 10:1–21:35\ior*
+\io1 From Mt. Sinai going to Moab \ior 10:1–21:35\ior*
 \io1 The happenings there to Moab \ior 22:1–32:42\ior*
 \io1 The places nabayaan of descendants of Israel \ior 33:1-49\ior*
 \io1 Me warning of not yet crossed of Jordan \ior 33:50–36:13\ior*
@@ -26,78 +26,65 @@
 \c 1
 \s1 The first listing of Moses of Yisrael’s descendants
 \p
-\v 1 verseOne\x + \xo 1:1-46: \xt Num 26:1-51.\x*
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
+\v 1 In April of the year after the Israeli people \add escaped from\add* Egypt \add (Heb. Mitsrayim)\add*, Yahweh spoke to Mosheh \add (Moses)\add* in the Sinai wilderness in the \add sacred\add* tent, saying,\x + \xo 1:1-46: \xt Num 26:1-51.\x*
+\v 2 “\add Count all the men who’re Yisrael’s descendants by their clans and families, being sure to list all their names\add*.
+\v 3 \add Only include those\add* who’re twenty or older and able \add to be recruited\add* as soldiers. You and Aharon must enrol them into military divisions.
+\v 4 \add The leader of each tribe will accompany\add* you.
 \p
-\v 5 ◙
-\li1 …
+\v 5 These are the names of the men who will \add assist\add* you:
+\li1 Elizur (Shedeyur’s son) from Reuven,
 \li1
-\v 6 ◙
+\v 6 Shelumiel (Tsurishaddai’s son) from Shim’on \add (Simeon)\add*,
 \li1
-\v 7 ◙
+\v 7 Nahson (Amminadav’s son) from Yehudah \add (Judah)\add*,
 \li1
-\v 8 ◙
+\v 8 Netanel (Tsuar’s son) from Yissashkar \add (Issachar)\add*,
 \li1
-\v 9 ◙
+\v 9 Eliav (Helon’s son) from Zevulun,
 \li1
-\v 10 ◙
-\li1 …
+\v 10 Elishama (Ammihud’s son) from Yosef’s son Efrayim,
+\li1 Gamliel (Pedahtsur’s son) from Yosef’s son Menashsheh \add (Manasseh)\add*,
 \li1
-\v 11 ◙
+\v 11 Avidan (Gideoni’s son) from Benyamin,
 \li1
-\v 12 ◙
+\v 12 Ahiezer (Ammishaddai’s son) from Dan,
 \li1
-\v 13 ◙
+\v 13 Pagiel (Okran’s son) from Asher,
 \li1
-\v 14 ◙
+\v 14 Elyasaf (Deuel’s son) from Gad,
 \li1
-\v 15 ◙
-\v 16 ◙
+\v 15 Ahira (Enan’s son) from Naftali.
+\v 16 They were the leaders of their tribes—chosen out of their communities, and leaders of \add units of\add* one thousand \add soldiers\add*.
 \p
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
-\v 20 ◙
-\li1 …
-\li1 …
-\li1 …
-\li1 …
-\li1 …
-\li1 …
-\li1 …
-\li1 …
-\li1 …
-\li1 …
-\li1 …
-\li1 …
-\li1 …
+\v 17 Mosheh and Aharon took those men whose names had been \add given\add*
+\v 18 and they assembled the entire community that April. \add For each tribe,\add* they recorded their ancestry by clan, counting the names of those men who were twenty or over,
+\v 19 just as Yahweh had commanded Mosheh. \add So\add* he counted them \add there\add* in the Sinai wilderness,
+\v 20-21 individually counting those \add in each tribe below\add* by their clan, and only including males who were twenty or older and able to fight in battle:
+\li1 46,500 men from the tribe of Rueven,
+\li1
+\v 22-23 59,300 men from the tribe of Shim’on \add (Simeon)\add*,
+\li1
+\v 24-25 45,560 men from the tribe of Gad,
+\li1
+\v 26-27 74,600 men from the tribe of Yehudah \add (Judah)\add*,
+\li1
+\v 28-29 54,400 men from the tribe of Yissashkar \add (Issachar)\add*,
+\li1
+\v 30-31 57,400 men from the tribe of Zevulun,
+\li1
+\v 32-33 40,500 men from the tribe of Efraim,
+\li1
+\v 34-35 32,200 men from the tribe of Menashsheh \add (Manasseh)\add*,
+\li1
+\v 36-37 35,400 men from the tribe of Benyamin,
+\li1
+\v 38-39 62,700 men from the tribe of Dan,
+\li1
+\v 40-41 41,500 men from the tribe of Asher,
+\li1
+\v 42-43 53,400 men from the tribe of Naftali.
 \p
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
-\v 28 ◙
-\v 29 ◙
-\v 30 ◙
-\v 31 ◙
-\v 32 ◙
-\v 33 ◙
-\v 34 ◙
-\v 35 ◙
-\v 36 ◙
-\v 37 ◙
-\v 38 ◙
-\v 39 ◙
-\v 40 ◙
-\v 41 ◙
-\v 42 ◙
-\v 43 ◙
-\v 44 ◙
+\v 44 Those were the ones that Mosheh and Aharon counted
 \v 45 ◙
 \v 46 ◙
 \v 47 ◙
@@ -531,7 +518,7 @@
 \v 22 ◙
 \v 23 ◙
 \c 10
-\s1 The trumpets pelata
+\s1 The silver trumpets
 \p
 \v 1 ◙
 \v 2 ◙
@@ -806,7 +793,7 @@
 \v 34 ◙
 \v 35 ◙
 \v 36 ◙
-\s1 The me palungpung of kumbale
+\s1 The me palungpung of clothing
 \p
 \v 37 ◙
 \v 38 ◙
@@ -1054,7 +1041,7 @@
 \p …
 \v 19 ◙
 \v 20 ◙
-\s1 The defeat of Sihun and of Ug
+\s1 The defeat of Sihon and of Og
 \r (Deu. 2:26–3:11)
 \p
 \v 21 ◙
@@ -1471,7 +1458,7 @@
 \v 22 ◙
 \v 23 ◙
 \c 28
-\s1 The inaldew-day sacrificing
+\s1 The daily sacrificing
 \r (Exo. 29:38-46)
 \p
 \v 1 ◙
@@ -1507,7 +1494,7 @@
 \v 23 ◙
 \v 24 ◙
 \v 25 ◙
-\s1 The sacrificing of Feast of Pegsawit
+\s1 The sacrificing of Feast of Harvest
 \r (Lev. 23:15-22)
 \p
 \v 26 \x + \xo 28:26-31: \xt Exo 23:16; 34:22; Deu 16:9-12.\x*◙
@@ -1632,7 +1619,7 @@
 \v 22 ◙
 \v 23 ◙
 \v 24 ◙
-\s1 The division of nesnatched
+\s1 The division of plunder
 \p
 \v 25 ◙
 \v 26 ◙

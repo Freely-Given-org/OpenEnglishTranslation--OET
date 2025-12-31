@@ -1,4 +1,4 @@
-\id NUM - Open English Translation—Readers' Version (OET-RV) v0.0.05
+\id NUM - Open English Translation—Readers' Version (OET-RV) v0.0.07
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 NUM
@@ -28,77 +28,64 @@
 \rem /s1 The First Census of Israel; The Census; Israel's First Census; Israel in the wilderness of Sinai
 \p
 \v 1 In April of the year¦61073 after¦61075 the Israeli people \add ≈escaped from\add* Egypt¦61077 \add (Heb. Mitsrayim)\add*, Yahweh¦61062 spoke¦61061 to Mosheh¦61065 \add (Moses¦61065)\add* in the Sinai¦61067 wilderness¦61066 in the \add ≈sacred\add* tent, saying,\x + \xo 1:1-46: \xt Num 26:1-51.\x*
-\v 2 “Lift up the head of all the congregation¦61086 of the sons of Israel¦61089, according to their clans¦61090, according to the house¦61091 of their fathers¦61092, by the number¦61093 of the names¦61094, every¦61095 male¦61097 according to their skulls,
-\v 3 ◙
-\v 4 ◙
+\v 2 “\add ≈Count all the men who're Yisrael's descendants by their clans¦61090 and families, being sure to list all their names¦61094\add*.
+\v 3 \add Only include those\add* who're twenty¦61101 or older and able \add to be recruited\add* as soldiers. You and Aharon must enrol¦61109 them into military¦61111 divisions¦61111.
+\v 4 \add ≈The leader of each tribe¦61119 will accompany\add* you.
 \p
-\v 5 ◙
-\li1 …
+\v 5 These are the names¦61128 of the men¦61129 who will \add ≈assist\add* you:
+\li1 Elizur¦61134 (Shedeyur's son) from Reuven,
 \li1
-\v 6 ◙
+\v 6 Shelumiel¦61140 (Tsurishaddai's¦61143 son) from Shim'on \add (Simeon)\add*,
 \li1
-\v 7 ◙
+\v 7 Nahson (Amminadav's son) from Yehudah \add (Judah)\add*,
 \li1
-\v 8 ◙
+\v 8 Netanel¦61152 (Tsuar's¦61155 son) from Yissashkar \add (Issachar)\add*,
 \li1
-\v 9 ◙
+\v 9 Eliav (Helon's¦61161 son) from Zevulun,
 \li1
-\v 10 ◙
-\li1 …
+\v 10 Elishama (Ammihud's¦61169 son) from Yosef's¦61164 son Efrayim,
+\li1 Gamliel (Pedahtsur's son) from Yosef's son Menashsheh \add (Manasseh¦61170)\add*,
 \li1
-\v 11 ◙
+\v 11 Avidan (Gideoni's son) from Benyamin,
 \li1
-\v 12 ◙
+\v 12 Ahiezer¦61183 (Ammishaddai's¦61186 son) from Dan,
 \li1
-\v 13 ◙
+\v 13 Pagiel¦61189 (Okran's son) from Asher,
 \li1
-\v 14 ◙
+\v 14 Elyasaf (Deuel's¦61198 son) from Gad,
 \li1
-\v 15 ◙
-\v 16 ◙
+\v 15 Ahira¦61201 (Enan's¦61204 son) from Naftali.
+\v 16 They¦61215 were the leaders of their tribes¦61211—chosen out of their communities¦61209, and leaders of \add units of\add* one thousand \add soldiers\add*.
 \p
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
-\v 20 ◙
-\li1 …
-\li1 …
-\li1 …
-\li1 …
-\li1 …
-\li1 …
-\li1 …
-\li1 …
-\li1 …
-\li1 …
-\li1 …
-\li1 …
-\li1 …
+\v 17 Mosheh¦61219 and¦61220 Aharon¦61220 took¦61218 those men¦61222 whose names had been \add ≈given\add*
+\v 18 and they assembled the entire¦61229 community¦61231 that April. \add ≈For each tribe,\add* they recorded their¦61248 ancestry¦61241 by clan, counting the names¦61243 of those men who were twenty¦61245 or over,
+\v 19 just as Yahweh¦61252 had commanded¦61251 Mosheh¦61255. \add ≈So\add* he¦61251 counted¦61256 them \add there\add* in the Sinai¦61258 wilderness¦61257,
+\v 20-21 individually counting those \add in each tribe below\add* by their¦61273 clan, and only including males who were twenty¦61278 or older and able to fight in battle:
+\li1 46,500 men from the tribe of Rueven,
+\li1
+\v 22-23 59,300 men from the tribe of Shim'on \add (Simeon¦61296)\add*,
+\li1
+\v 24-25 45,560 men from the tribe of Gad¦61327,
+\li1
+\v 26-27 74,600 men from the tribe of Yehudah¦61354 \add (Judah)\add*,
+\li1
+\v 28-29 54,400 men from the tribe of Yissashkar \add (Issachar¦61380)\add*,
+\li1
+\v 30-31 57,400 men from the tribe of Zevulun¦61406,
+\li1
+\v 32-33 40,500 men from the tribe of Efraim¦61434,
+\li1
+\v 34-35 32,200 men from the tribe of Menashsheh \add (Manasseh¦61459)\add*,
+\li1
+\v 36-37 35,400 men from the tribe of Benyamin¦61484,
+\li1
+\v 38-39 62,700 men from the tribe of Dan¦61510,
+\li1
+\v 40-41 41,500 men from the tribe of Asher¦61536,
+\li1
+\v 42-43 53,400 men from the tribe of Naftali¦61562.
 \p
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
-\v 28 ◙
-\v 29 ◙
-\v 30 ◙
-\v 31 ◙
-\v 32 ◙
-\v 33 ◙
-\v 34 ◙
-\v 35 ◙
-\v 36 ◙
-\v 37 ◙
-\v 38 ◙
-\v 39 ◙
-\v 40 ◙
-\v 41 ◙
-\v 42 ◙
-\v 43 ◙
-\v 44 ◙
+\v 44 Those were the ones that Mosheh and Aharon and the twelve Israeli leaders (one from each tribe) counted.
 \v 45 ◙
 \v 46 ◙
 \v 47 ◙
@@ -847,7 +834,7 @@
 \v 34 ◙
 \v 35 ◙
 \v 36 ◙
-\s1 The me palungpung of kumbale
+\s1 The me palungpung of clothing
 \rem /s1 Fringes on Garments; Rules about Tassels; Tassels on Clothing; Tassels on Garments
 \p
 \v 37 ◙
@@ -1733,7 +1720,7 @@
 \v 22 ◙
 \v 23 ◙
 \v 24 ◙
-\s1 The division of nesnatched
+\s1 The division of plunder
 \rem /s1 Division of the Spoils; Division of the Loot; Disposition of Captives and Booty; Dividing the Spoils
 \p
 \v 25 ◙
