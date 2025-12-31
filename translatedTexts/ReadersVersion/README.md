@@ -78,6 +78,7 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - 'b/v' names like 'Yakov'
 - 'ai/ay' names like 'Yeshai'
 - Philistines vs Filistines
+- Aram vs Syria
 - remove "years old" if it's not essential
 - make numbers consistent like '120' vs 'one hundred and twenty'
 - capitalisation of city or river after name, e.g., Ashdod City, Jordan river, Corner Gate
