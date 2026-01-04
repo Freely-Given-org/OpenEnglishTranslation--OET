@@ -33,7 +33,7 @@ If you’re a professional Bible translator or consultant or notes-writer, or if
 
 ## Schedule
 
-As of June 2025, about 2/3 of the Bible has been drafted. ([This page](https://OpenEnglishTranslation.Bible) is updated a few times per month with the progress.) Our goal is to complete the first draft and first check of the _OET_ by mid-2026.
+As of January 2026, around 85% of the Bible has been drafted. ([This page](https://OpenEnglishTranslation.Bible) is updated a few times per month with the progress.) Our goal is to complete the first draft and first check of the _OET_ by mid-2026.
 
 ## Licences
 
