@@ -322,6 +322,7 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     ('clothes','apparel'),
     ('confused','confounded'),
     ('continued','said'),
+    ('ropes','cords'),
     ('countries','nations'),('country','nation'),
     ('countryside','field'),
     ('courtyard','court'),

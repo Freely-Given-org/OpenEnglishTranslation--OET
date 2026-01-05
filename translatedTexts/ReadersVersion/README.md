@@ -73,6 +73,7 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 ## Terms to make consistent
 
 - Check consistency of keyterms, e.g., how is ‘son of God’, ‘holy spirit’, ‘kingdom of the heavens’ translated everywhere?
+- consistency of 'staff'
 - David's town / city of David
 - 'c/k' names like 'Yacob'
 - 'b/v' names like 'Yakov'
