@@ -2127,6 +2127,7 @@ wH	JOS,SA1,SA2,KI1,KI2,CH1								Gath			גַּת		H1661 (33) Josh 11:22, 1Sam 5
 H	GEN,DEU,JOS,JDG,SA1,KI1,KI2,CH1,JER,AMO,ZEP,ZEC								Gaza			עַזָּה		H5804 (21) Gen 10:19, Deu 2:23, Josh 10:41, 11:22, ..., Acts 8:26
 wH	JOS,JDG,SA1,SA2,KI1,KI2,CH1,CH2,EZR,NEH,ISA,ZEC								Geba			גֶּבַע		H1387 (18) Josh 18:24, 21:17, Jdg 20:10, 1Sam 13:3,16, ...
 H					PSA_83:7				Gebal			גְּבָל		H1381 (1) Psa 83:7*
+H					ISA_10:31				Gebim			גֵּבִים		H1374 (1) Isa 10:31*
 H					JOS_15:41,CH2_28:18				Gederoth			גְּדֵרוֹת		H1450 (1) Josh 15:41, 2Chr 28:18*
 H					JOS_12:13				Geder			גֶּדֶר		H1445 city in Canaan (1) Josh 12:13*
 H					JOS_18:17				Geliloth			גְּלִילוֹת		H1553 (1) Josh 18:17*
@@ -2136,7 +2137,7 @@ H	JOS,SA2,CH1								Geshur			גְּשׁוּר		H1650 (9) Josh 13:13, 2Sam 3:3, 
 H	JOS,JDG,SA2,KI1,CH1								Gezer			גֶּזֶר		H1507 (15) Josh 10:33, 12:12, 16:3,10, 21:21 Jdg 1:29, ...
 H					SA2_2:24				Giah			גִּיַחַ		H1520 (1) 2Sam 2:24*
 H	JOS,KI1								Gibbethon			גִּבְּתוֹן		H1405 (6) Josh 19:44, 21:23, 1Ki 15:27, 16:15,17*
-H	JOS,JDG,SA1								Gibeah			גִּבְעָה		H1390 (43) Josh 15:57, Jdg 19:12-16, 20:4-5, ...
+H	JOS,JDG,SA1,ISA,HOS								Gibeah			גִּבְעָה		H1390 (43) Josh 15:57, Jdg 19:12-16, 20:4-5, ...
 H	JOS,SA2,KI1,CH1								Gibeon			גִּבְעוֹן		H1391 (37) Josh 9:3,17, 10:1-2,4-6,10,12,41, 11:19, 18:25, 21:17, ...
 H					JDG_20:45				Gidom			גִּדְעֹם		H1440 (1) Jdg 20:45*
 H	GEN,KI1,CH2								Gihon			גִּיחוֹן		H1521 stream & river & pool(6) Gen 2:13, 1Ki 1:33,38,45, 2Chr 32:30, 33:14*
@@ -2302,7 +2303,8 @@ H					JDG_1:30				Kitron			קִטְרוֹן		H7003 (1) Jdg 1:30*
 H									Kittim			כִּתִּים		H3794 (8) Gen 10:4, Num 24:24, 1Chr 1:7, Isa 23:1,12, Jer 2:10, Eze 27:6, Dan 11:30*
 H					EZE_23:23				Koa			קוֹעַ		H6970 (1) Eze 23:23*
 H									Lachish			לָכִישׁ		H3923 (24) Josh 10:3,5,23,31-35, 12:11, 15:39, ...
-H	JDG,SA1,SA2,ISA								Laish			לַיִשׁ		H3919 (7) place Jdg 18:7,14,27,29, person 1Sam 25:44, 2Sam 3:15, place Isa 10:30*
+H	JDG,SA1,SA2,ISA								Laishah			לַיִשׁ		{ H3919 (7) place Jdg 18:7,14,27,29, person 1Sam 25:44, 2Sam 3:15, place Isa 10:30*
+H	JDG,SA1,SA2,ISA								Laish			לַיִשׁ		{ H3919 (7) place Jdg 18:7,14,27,29, person 1Sam 25:44, 2Sam 3:15, place Isa 10:30*
 H									Lebanon			לְבָנוֹן		H3844 (71) Deu 1:7, 3:25, 11:24, Josh 1:4, 9:1, ....
 H									Lebo			לְבוֹא		??? part of Lebo Hamath H2574 but usually translated as 'entrance' (?) 1Chr 13:5
 H					JDG_21:19				Lebonah			לְבוֹנָה		H3829 (1) Jdg 21:19*
@@ -2313,6 +2315,7 @@ wH	CH1,EZR,NEH								Lod			לֹד		H3850 (4) 1Chr 8:12, Ezr 2:33, Neh 7:37, 11:
 wH									Luz			לוּז		H3870 (8) Gen 28:19, 35:6, 48:3, 16:2, 18:13, Jdg 1:23,26*
 #H					JOS_15:59				Maarath			מַעֲרָת		H4638 (1) Josh 15:59*
 #H									Machir			מָכִיר		H4353 (22) Gen 50:23, Num 26:29, 27:1, 32:39-40, 36:1, Deu 3:15, ...
+H					NUM_10:31				Madmenah			מַדְמֵנָה		H4088 (1) Num 10:31*
 H					JOS_11:1,JOS_12:19				Madon			מָדוֹן		H4068 (2) Josh 11:1, 12:19*
 H	GEN,JOS,SA2,KI1,CH1								Mahanaim			מַחֲנָיִם		H4266 (13) Gen 32:2, Josh 13:26,30, 21:38, 2Sam 2:8, ...
 H					CH1_11:46				Mahavite			מַחֲוִים		H4233 (1) 1Chr 11:46*

@@ -6,7 +6,7 @@
 #
 # Script to connect OET-RV words with OET-LV words that have word numbers.
 #
-# Copyright (C) 2023-2025 Robert Hunt
+# Copyright (C) 2023-2026 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+OET@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -79,10 +79,10 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-12-30' # by RJH
+LAST_MODIFIED_DATE = '2026-01-08' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.82'
+PROGRAM_VERSION = '0.83'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -286,6 +286,7 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     # The following nominal entries handle number changes
     ('hair', 'hairs'),
     # The following verbal entries handle tense changes
+    ('and', 'And'),
     ('bend', 'bent'),
     ('calling', 'called'),
     ('gave', 'given'),
@@ -346,7 +347,7 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     ('fitting','befitting'),
     ('forgive','forgiving'),
     ('fulfilled','accomplished'),
-    ('godly','devout'),
+    ('godly','devout'),('godly','righteous'),
     ('grapevine','vine'),
     ('harvests','fruit'),
     ('heavenly','heavens'),('heavenly','heaven'),
@@ -382,7 +383,7 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     ('non-Jews','pagans'),
     ('obey','submitting'),
     ('paralysed','paralytic'),
-    ('path','way'),
+    ('path','way'),('path','road'),
     ('people','multitude'),
     ('platform','lid'),
     ('poor','humble'),
@@ -420,7 +421,7 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     ('teachers','scribes'),
     ('that','which'),
     ('themselves','hearts'),
-    ('Then','And'),
+    ('Then','And'),('then','And'),
     ('thinking','reasoning'),
     ('thinking','supposing'),
     ('undesirables','sinners'),
@@ -1516,11 +1517,11 @@ def matchOurListedSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWor
         for rvN in rvIndexList:
             rvNoun = rvWordList[rvN]
             if rvNoun.lower() == lvNoun.lower():
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchOurListedSimpleWords() is adding a number to RV '{rvNoun}' at {BBB} {c}:{v} {rvN=}")
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchOurListedSimpleWords() from {BBB} {c}:{v} {rvN=} {lvWordNumber=} {lvNoun=} is adding a number to RV {rvNoun=}")
                 result = addNumberToRVWord( BBB, c,v, rvNoun, lvWordNumber )
                 if result:
                     numAdded += 1
-                    if NT and 'N' in state.wordTable[lvWordNumber][state.wordTableHeaderList.index('GlossCaps')]:
+                    if NT and 'N' in state.wordTable['NT' if NT else 'OT'][lvWordNumber][state.wordTableHeaderList['NT' if NT else 'OT'].index('GlossCaps')]:
                         numNS += 1
             # else:
             #     dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"ERROR matchOurListedSimpleWords() would have connected LV '{lvNoun}' to RV '{rvNoun}' at {BBB} {c}:{v} {rvN=}")
