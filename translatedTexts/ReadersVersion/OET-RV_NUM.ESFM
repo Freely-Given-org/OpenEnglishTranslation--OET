@@ -1,4 +1,4 @@
-\id NUM - Open English Translation—Readers' Version (OET-RV) v0.0.10
+\id NUM - Open English Translation—Readers' Version (OET-RV) v0.0.12
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 NUM
@@ -58,7 +58,7 @@
 \v 16 They¦61215 were the leaders of their tribes¦61211—chosen out of their communities¦61209, and leaders of \add units of\add* one thousand \add soldiers\add*.
 \p
 \v 17 Mosheh¦61219 and¦61220 Aharon¦61220 took¦61218 those men¦61222 whose names had been \add ≈given\add*
-\v 18 and they assembled the entire¦61229 community¦61231 that April. \add ≈For each tribe,\add* they recorded their¦61248 ancestry¦61241 by clan, counting the names¦61243 of those men who were twenty¦61245 or over,
+\v 18 and¦61228 they assembled the entire¦61229 community¦61231 that April. \add ≈For each tribe,\add* they recorded their¦61248 ancestry¦61241 by clan, counting the names¦61243 of those men who were twenty¦61245 or over,
 \v 19 just as Yahweh¦61252 had commanded¦61251 Mosheh¦61255. \add ≈So\add* he¦61251 counted¦61256 them \add there\add* in the Sinai¦61258 wilderness¦61257,
 \v 20-21 individually counting those \add in each tribe below\add* by their¦61273 clan, and only including males who were twenty¦61278 or older and able to fight in battle:
 \li1 46,500 men from the tribe of Rueven,
@@ -91,10 +91,10 @@
 \v 47 \add ≈However,\add* the Levites \add ≈weren't listed along with the other tribes¦61640\add*
 \v 48 \add ≈because\add* Yahweh¦61648 had told Mosheh¦61651,
 \v 49 “Don't list the Levites \add ≈or count them with the other Israelis¦61667\add*.
-\v 50 \add ≈Instead,\add* appoint¦61671 \add *them\add* to manage the tent \add ≈where the copy of the agreement is kept\add*, along with all its¦61700 equipment. They must serve inside it as \add required\add*, and they should \add ≈set their tents up around¦61701 it\add*.
-\v 51 \add ≈When¦61714 it's time to leave that place\add*, the Levites¦61709 must take¦61707 \add @the tent\add* down and when camp \add ≈is set up\add*, they must erect it \add again\add*, \add ≈but\add* any stranger who approaches it must be \add ≈executed\add*.
+\v 50 \add ≈Instead,\add* appoint¦61671 \add *them\add* to manage the tent \add ≈where the copy of the agreement is kept\add*, along with all its¦61700 equipment. They must serve inside it as \add required\add*, and¦61670 they should \add ≈set their tents up around¦61701 it\add*.
+\v 51 \add ≈When¦61714 it's time to leave that place\add*, the Levites¦61709 must take¦61707 \add @the tent\add* down and¦61705 when camp \add ≈is set up\add*, they must erect it \add again\add*, \add ≈but\add* any stranger who approaches it must be \add ≈executed\add*.
 \v 52 \add When¦61721\add* the \add other\add* \add ≈Israelis¦61720\add* set up camp, each man¦61726 must set up with his army division¦61730 by their¦61730 banner,
-\v 53 \add ≈but\add* the Levites¦61747 will camp there around¦61734 the \add ≈sacred tent\add* and look after it¦61739. \add ≈That way,\add* the Israeli¦61744 community won't¦61737 make \add Yahweh\add* angry.
+\v 53 \add ≈but\add* the Levites¦61747 will camp there around¦61734 the \add ≈sacred tent\add* and¦61732 look after it¦61739. \add ≈That way,\add* the Israeli¦61744 community won't¦61737 make \add Yahweh\add* angry.
 \v 54 \add ≈So¦61754 the Israelis¦61756 did everything\add* that Yahweh¦61760 had instructed¦61759 Mosheh¦61763.
 \c 2
 \s1 The pegkateil of descendants there to camp
@@ -147,7 +147,7 @@
 \rem /s1 The Levites; The Sons of Aaron; Levites Appointed for Service; Aaron's Sons
 \p
 \v 1 \add ≈The following\add* are the descendants¦62185 of Aharon \add (Aaron¦62186)\add* and¦62187 Mosheh as on the day¦62188 when Yahweh¦62190 spoke¦62189 with Mosheh on Mt. Sinai¦62195:
-\v 2 Aharon's sons¦62199 were: Nadav (the oldest), Avihu, Eleazar¦62206, and Itamar¦62207.\x + \xo 3:2: \xt Num 26:60.\x*
+\v 2 Aharon's sons¦62199 were: Nadav (the oldest), Avihu, Eleazar¦62206, and¦62197 Itamar¦62207.\x + \xo 3:2: \xt Num 26:60.\x*
 \v 3 They¦62212 were \add all\add* anointed¦62214 as priests and \add ≈served¦62219 in that role\add*,
 \v 4 \add ≈except that\add* Nadav and Avihu died¦62221 \add ≈in front\add* of Yahweh¦62225 when they offered¦62226 \add ≈unacceptable\add* fire¦62227 to \add *him\add* in the Sinai¦62232 wilderness¦62231, and \add so\add* they had no sons. \add ≈So¦62221\add* Eleazar¦62239 and Itamar¦62240 served¦62238 as priests¦62238 \add ≈alongside\add* their¦62245 father¦62245 Aharon.\x + \xo 3:4: \xt Lev 10:1-2; Num 26:61.\x*
 \s1 The Levites as ransom for their sons
@@ -162,8 +162,8 @@
 \p
 \v 11 Then Yahweh¦62337 told Mosheh¦62340,
 \v 12 “Out of all the \add ≈Israelis¦62350\add*, I've taken¦62345 the Levites instead of the \add ≈oldest son from every¦62353 family\add*. The Levites \add ≈will be the ransom for those sons¦62358\add*, and¦62360 so they¦62360 belong to me,
-\rem /s1 The Census of the Levites
 \v 13 because every firstborn male person and animal is set aside as belonging¦62387 to me ever since I killed those firstborn males in Egypt¦62375. I am Yahweh¦62389.”
+\s1 The census of the Levites
 \rem /s1 A Census of the Levites; The Census of the Levites
 \p
 \v 14 Then in the Sinai¦62398 wilderness¦62397, Yahweh¦62393 told Mosheh¦62396,
@@ -171,121 +171,118 @@
 \v 16 \add ≈So¦62418\add* Mosheh¦62420 listed them exactly as Yahweh¦62424 had commanded¦62426 him to,
 \v 17 and these¦62430 were Levi's¦62433 sons¦62431: Gershon¦62435, Kohat¦62436, and Merari¦62437.
 \v 18 Gershon's¦62443 sons¦62441 were: Livni¦62445 and¦62446 Shimei¦62446.
-\v 19 Kohat's¦62449 sons¦62448 were: Amaran, Yitshar, Hevron, and Uzziyel.
-\v 20 Merari's¦62457 sons¦62456 were Mahli¦62459 and Mushi¦62460.
+\v 19 Kohat's¦62449 sons¦62448 were: Amaran, Yitshar, Hevron, and¦62448 Uzziyel.
+\v 20 Merari's¦62457 sons¦62456 were Mahli¦62459 and¦62456 Mushi¦62460.
 \m Those were the families of the Levites¦62464 by their clans.
 \p
 \v 21 Gershon's descendants were the Livnites and¦62471 the Shimites, so they¦62474 made up the Gershonites.
 \v 22 They had 7,500 males that were at least a month¦62485 old.
 \v 23 The Gershonite clans¦62493 were to camp on the western side of the \add ≈sacred¦62496 tent¦62496\add*,
-\v 24 and \add *their\add* leader¦62500 was Lael's¦62508 son Elyasaf.
-\v 25 Gershon's¦62513 descendants¦62511 were responsible¦62510 for the \add ≈sacred¦62516 tent¦62516\add*, including its¦62518 covering¦62518 and the entrance¦62520 curtain,
-\v 26 the courtyard curtains, and the courtyard entrance¦62529 curtain, that¦62531 surrounded \add *it\add*. Also the ropes¦62540 \add ≈used to hold them\add*.
+\v 24 and¦62500 \add *their\add* leader¦62500 was Lael's¦62508 son Elyasaf.
+\v 25 Gershon's¦62513 descendants¦62511 were responsible¦62510 for the \add ≈sacred¦62516 tent¦62516\add*, including its¦62518 covering¦62518 and¦62510 the entrance¦62520 curtain,
+\v 26 the courtyard curtains, and¦62524 the courtyard entrance¦62529 curtain, that¦62531 surrounded \add *it\add*. Also the ropes¦62540 \add ≈used to hold them\add*.
 \p
-\v 27 Kohat's descendants were the Amramites, the Yitsharites, the Hevronites, and the Uzziyelites, so they¦62554 made up the Kohatites.
+\v 27 Kohat's descendants were the Amramites, the Yitsharites, the Hevronites, and¦62544 the Uzziyelites, so they¦62554 made up the Kohatites.
 \v 28 They had 8,600 males that were at least a month¦62564 old. They were in charge of the running of the \add ≈sacred¦62572 tent¦62572\add*.
 \v 29 The Kohatite clans¦62574 were to camp of the southern¦62582 side of the \add ≈sacred¦62581 tent¦62581\add*,
-\v 30 and \add *their\add* leader¦62584 was Uzziyel's son Elitsafan.
+\v 30 and¦62584 \add *their\add* leader¦62584 was Uzziyel's son Elitsafan.
 \v 31 They were in charge of the box, the table¦62598 and the lampstand¦62599, the altars¦62600 and all the utensils used for ministry, the \add inside\add* curtain and its gear.
 \p
 \v 32 The man who organised the Levites¦62612 was Aharon's son, Eleazar¦62613 the priest¦62617. He had oversight¦62618 over all those who were responsible for the \add ≈sacred¦62621 tent¦62621\add*.
 \p
 \v 33 Merari's descendants were the Mahlites and¦62626 the Mushites, so they¦62629 made up the Merarites.
 \v 34 They had 6,200 males that were at least a month¦62640 old,
-\v 35 and their leader¦62646 was Avihayil's son Tsuriel¦62652. They were to camp on the northern¦62660 side of the \add ≈sacred¦62658 tent¦62658\add*.
-\v 36 \add *They\add* were in charge of all the frames¦62666 for the \add ≈sacred¦62667 tent¦62667\add*, its crossbars, posts, bases¦62670, all its containers and equipment¦62673,
-\v 37 as well as the pillars¦62677 \add used to make\add* the courtyard¦62678 with their bases¦62680, pegs, and ropes¦62682.
+\v 35 and¦62646 their leader¦62646 was Avihayil's son Tsuriel¦62652. They were to camp on the northern¦62660 side of the \add ≈sacred¦62658 tent¦62658\add*.
+\v 36 \add *They\add* were in charge of all the frames¦62666 for the \add ≈sacred¦62667 tent¦62667\add*, its crossbars, posts, bases¦62670, all its containers and¦62662 equipment¦62673,
+\v 37 as well as the pillars¦62677 \add used to make\add* the courtyard¦62678 with their bases¦62680, pegs, and¦62677 ropes¦62682.
 \p
-\v 38 ◙
-\v 39 ◙
-\s1 The opening of me kinakakayan
+\v 38 Mosheh¦62694 and Aharon and his sons¦62697 \add ≈set up their tents\add* \add ≈in front of\add* \add the entrance on\add* the eastern¦62687 side of the \add ≈sacred¦62700 tent\add*. They were in charge of that tent and \add ?≈the needs of\add* the \add ≈Israelis¦62702\add*. Any stranger who approached had to be \add ≈executed\add*.
+\v 39 Mosheh¦62714 and Aharon listed 22,000 Levite¦62711 males that were at least a month¦62727 old, listing them by their¦62721 clans¦62721 as \add ≈per Yahweh's instructions\add*.
+\s1 Paying the price for the firstborn sons
 \rem /s1 The Redemption of the Firstborn; The Levites Take the Place of the First-Born Sons; Redeeming the Firstborn Sons
 \p
-\v 40 ◙
-\v 41 ◙
-\v 42 ◙
-\v 43 ◙
+\v 40 Then Yahweh¦62735 told Mosheh¦62738, “List all the \add other\add* male¦62743 \add ≈Israeli¦62745\add* that are at least one month¦62748 old and \add ≈count them\add*.
+\v 41 The Levites¦62758 are for me, Yahweh¦62761, in the place of the firstborn males from every \add ≈Israeli¦62766\add* family, and¦62755 their animals are in place of the \add ≈Israelis'\add* firstborn male animals.”
+\v 42 \add ≈So¦62779\add* Mosheh¦62780 listed the firstborn¦62789 Israelis¦62790 exactly as Yahweh¦62783 had commanded¦62782 him to.
+\v 43 and¦62793 the total number of firstborn¦62796 males a month¦62802 old or more whose names¦62799 were listed came to 22,273.
 \p
-\v 44 ◙
-\v 45 ◙
-\v 46 ◙
-\v 47 ◙
-\v 48 ◙
-\v 49 ◙
-\v 50 ◙
-\v 51 ◙
+\v 44 Then Yahweh¦62814 spoke¦62813 to Mosheh¦62817,
+\v 45 “Take the Levites instead of every¦62825 firstborn¦62827 male Israeli¦62828, and the Levites' animals instead of their¦62835 animals, and the Levites will be mine—I am Yahweh¦62841.
+\v 46 To redeem the 273 firstborn¦62852 Israelis¦62854 who outnumber¦62848 the Levites¦62851,
+\v 47 collect¦62856 five silver coins for each one of them. (Use the same silver coins weighing eleven grams, that the priests use in the \add ≈sacred¦62862 tent¦62862\add*.)
+\v 48 Give that \add ≈money¦62869\add* to Aharon and¦62871 his sons¦62871 as payment of the ransom¦62872 for those excess¦62873 273 males.”
+\v 49 \add ≈So¦62876\add* Mosheh¦62877 collected that ransom money¦62879 to cover the ransom of the excess¦62882 \add not covered by the number of\add* Levites¦62885.
+\v 50 He¦62890 collected 1,365 silver coins from the firstborn¦62888 Israeli¦62889 males (using the standard weight of silver from the sanctuary¦62901)
+\v 51 and gave¦62903 \add *it\add* to Aharon and his sons¦62910 just as Yahweh¦62914 had commanded¦62916.
 \c 4
-\s1 The work of descendants of Kohat
+\s1 Kohat's descendants' duties
 \rem /s1 The Duties of the Levite Clan of Kohath; Duties of the Kohathite Clan; The Kohathites
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
+\v 1 Then Yahweh¦62924 told Mosheh¦62927 \add (Moses¦62927)\add* and Aharon \add (Aaron¦62930)\add*,
+\v 2 “\add ≈Take¦62941 a detailed census\add* of Kohat's¦62938 male descendants by their clans¦62942 and families
+\v 3 \add ≈who are from twenty-five up to fifty¦62953 years old\add* and who goes into the \add ≈sacred tent\add* to minister.
 \p
-\v 5 ◙
-\v 6 ◙
+\v 4 This is what the Kohatites are responsible for concerning the \add ≈sacred¦62971 tent including the inner room\add*:
+\v 5 When \add ≈it's time to break camp\add*, Aharon and his sons¦62976 must enter and take¦62979 down the curtain¦62981 that veils it, and then¦62974 use that to cover¦62983 the box \add ≈containing the agreement\add*.
+\v 6 Then¦62990 they must cover it with \add ?≈fine\add* leather, followed by a blue cloth, and¦62990 then¦62990 put its¦63002 \add carrying\add* poles¦63002 \add through the rings\add*.
 \p
-\v 7 ◙
-\v 8 ◙
+\v 7 They must spread¦63008 a blue cloth over the \add ≈sacred bread table¦63006\add*, then¦63004 place the dishes¦63018, pans, bowls¦63021, and¦63004 jugs for the drink-offerings on top of that, along with the \add ≈sacred\add* bread.
+\v 8 Then¦63030 they must spread¦63030 a scarlet cloth over all that, and cover¦63035 that again with \add ?≈fine\add* leather, and then¦63030 put its¦63043 poles¦63043 \add through the rings\add*.
 \p
-\v 9 ◙
-\v 10 ◙
+\v 9 They must spread a blue cloth over the lampstand with its \add oil\add* lamps, its tongs and trays¦63062, and the oil containers that¦63068 are used for it.
+\v 10 Then¦63074 they must wrap the lampstand and all its equipment in \add ?≈fine\add* leather, and place it \add all\add* on its carrying¦63089 frame¦63089.
 \p
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
+\v 11 Then¦63091 the must spread¦63095 a blue cloth over the gold¦63094 \add incense\add* altar¦63093, and cover¦63098 that again with \add ?≈fine\add* leather, and then¦63091 put its¦63106 poles¦63106 \add through the rings\add*.
+\v 12 Then¦63108 they must get all the \add other\add* utensils that they use in the \add ≈sacred¦63119 tent¦63119\add*, and cover¦63125 that again with \add ?≈fine\add* leather, and place it \add all\add* on its carrying¦63133 frame¦63133.
+\v 13 They need to remove the ashes¦63135 from the \add bronze\add* altar¦63138 and¦63139 spread¦63139 a purple¦63142 cloth¦63142 over it,
+\v 14 and put all the utensils¦63150 they use on top of it: the trays, meat forks¦63160, shovel¦63163 and basins¦63166 for the altar¦63169. Then¦63144 they must cover¦63172 it with \add ?≈fine\add* leather, and then¦63144 put its poles¦63176 \add through the rings\add*.
+\v 15 Aharon and his sons¦63181 must finish¦63178 covering¦63182 the \add ≈sacred tent\add* and all its utensils and equipment when \add ≈they're about to move camp\add*. Then¦63178 the Kohatites can come¦63197 to carry it all without touching¦63204 the \add ≈inner room\add* so they won't¦63202 die¦63208. That's the responsibility of Kohat's¦63200 descendants—\add carrying\add* the \add ≈sacred tent\add*.
 \p
-\v 16 ◙
+\v 16 Eleazar¦63218 (son of Aharon¦63222 the priest¦63223) is in charge¦63217 of the lamp oil and the fragrant¦63227 incense¦63226, the regular¦63229 grain¦63228 offering¦63228, the anointing¦63231 oil, and the oversight¦63232 of the \add ≈sacred¦63241 tent¦63241\add* and the inner room, including everything that's used inside them.
 \p
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
-\v 20 ◙
-\s1 The work of descendants of Girsun
+\v 17 Then Yahweh¦63246 told Mosheh¦63249 and Aharon,
+\v 18 “Don't allow the Kohatite Levites¦63264 to \add ≈get wiped out\add* \add by mishandling the most sacred items\add*,
+\v 19 \add ≈but take these precautions on their behalf so\add* they won't¦63271 die¦63272 when they approach the \add ≈most sacred¦63276 items\add*: Get Aharon and his sons¦63279 to go¦63280 and show \add ≈each of them personally\add* the \add ≈correct and proper way to do his duties\add*.
+\v 20 \add ≈However,\add* they must never \add go¦63294 early\add* to \add ≈set their eyes on\add* the \add ≈sacred¦63299 objects¦63299\add*, \add ≈even briefly\add*, or they'll die¦63300.”
+\s1 Gershon's descendants' duties
 \rem /s1 The Gershonites; Duties of the Gershonite Clan; The Duties of the Levite Clan of Gershon; The Gershonites and Merarites
 \p
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
-\v 28 ◙
-\s1 The work of descendants of Mirari
+\v 21 Then Yahweh¦63304 told Mosheh¦63307,
+\v 22 “\add ≈Take a detailed census\add* of Gershon's¦63315 male descendants¦63314 by their clans¦63321 and families
+\v 23 \add ≈who are from thirty¦63324 up to fifty¦63330 years old\add* and¦63326 who goes into the \add ≈sacred tent\add* to minister.
+\p
+\v 24 This is what the Gershonites are responsible for working with and¦63349 carrying:
+\v 25 They must carry¦63351 the \add inner\add* curtains from the \add ≈sacred¦63355 tent¦63355\add*, the covering, the \add ?≈fine\add* leather¦63362 covering, the entrance¦63370 curtain,
+\v 26 the courtyard curtains, and the courtyard gate curtain, along with the ropes¦63394 and other equipment for using them. That will be their ministry.
+\v 27 Aharon and his sons¦63413 \add ≈will direct\add* the Gershonites in their¦63424 duties and assign¦63425 all \add the items\add* to them.
+\v 28 That will be the ministry of Gershon's descendants¦63436 with the \add ≈sacred tent\add*, and¦63440 it will all be under the supervision of Aharon's son Itamar¦63442 the priest¦63446.
+\s1 Merari's descendants' duties
 \rem /s1 The Duties of the Levite Clan of Merari; Duties of the Merarite Clan; The Merarites
 \p
-\v 29 ◙
-\v 30 ◙
-\v 31 ◙
-\v 32 ◙
-\v 33 ◙
+\v 29 “\add ≈Take a detailed census\add* of Merari's¦63450 descendants¦63449 by their clans¦63451 and families,
+\v 30 listing the men who are from thirty¦63459 to fifty¦63465 years old and who goes into the \add ≈sacred tent\add* to minister.
+\v 31 Their duties are carrying¦63481 the frames¦63487, crossbars, posts, and¦63479 sockets for the \add ≈sacred¦63488 tent¦63488\add*,
+\v 32 the courtyard¦63494 pillars¦63493 and their bases¦63496, their pegs and ropes¦63498, and all their equipment. Every man must be assigned¦63505 by name¦63504 as to what equipment he must carry¦63510.
+\v 33 That will be the ministry of Merari's¦63516 descendants¦63515 with the \add ≈sacred tent\add*, and it will all be under the supervision of Aharon's son Itamar¦63523 the priest¦63527.
+\s1 The totals from the Levite census
 \rem /s1 The Numbering of the Levite Clans; Census of the Levites; The Census of the Levites
 \p
-\v 34 ◙
-\li1 …
-\li1 …
-\li1 …
-\li1 …
-\m
-\v 35 ◙
-\v 36 ◙
-\v 37 ◙
-\v 38 ◙
-\v 39 ◙
-\v 40 ◙
-\v 41 ◙
-\v 42 ◙
-\v 43 ◙
-\v 44 ◙
-\v 45 ◙
-\v 46 ◙
-\v 47 ◙
-\v 48 ◙
-\v 49 ◙
+\v 34 \add ≈So¦63529\add* Mosheh¦63530 and Aharon and the community¦63533 leaders¦63532 listed the Kohatites by their clans¦63538 and families,
+\v 35 \add counting\add* the men from thirty¦63543 to fifty¦63549 years old who go into the \add ≈sacred tent\add* to minister,
+\v 36 and¦63559 the total for all the clans¦63561 was 2,750.
+\v 37 That was from the Kohatite clans¦63569 who ministered at the \add ≈sacred tent\add* and were listed by Mosheh and Aharon just as Yahweh¦63583 had instructed Mosheh.
+\v 38 They counted¦63589 the Gershonites by their clans¦63592 and families,
+\v 39 \add counting\add* the men from thirty¦63597 to fifty¦63603 years old who go into the \add ≈sacred tent\add* to minister,
+\v 40 and¦63613 the total for all the clans¦63615 was 2,630.
+\v 41 That was from the Gershonite clans¦63625 who ministered at the \add ≈sacred tent\add* and were listed by Mosheh and Aharon just as Yahweh¦63640 had instructed Mosheh.
+\v 42 They counted¦63642 the Merarites by their clans and¦63642 families,
+\v 43 \add counting\add* the men from thirty¦63651 to fifty¦63657 years old who go into the \add ≈sacred tent\add* to minister,
+\v 44 and¦63672 the total for all the clans¦63669 was 3,200.
+\v 45 That was from the Merarite clans¦63676 who ministered at the \add ≈sacred tent\add* and were listed by Mosheh and Aharon just as Yahweh¦63686 had instructed Mosheh.
+\v 46 \add ≈So\add* Mosheh¦63696, Aharon, and the Israeli¦63698 leaders¦63698 counted \add all\add* the Levites¦63702 by their clans¦63703 and families,
+\v 47 \add counting\add* the men from thirty¦63708 to fifty¦63714 years old who go into the \add ≈sacred tent\add* to minister and also help with carrying¦63723 it,
+\v 48 and¦63727 the total came to 8,580.
+\v 49 Those were the ones counted¦63752 by Mosheh \add ≈following Yahweh's instructions\add*. Each man's name was listed by Mosheh, along with his duties and what was his responsibility to carry¦63751.
 \c 5
 \s1 The rescue of disgusting person
 \rem /s1 The Purity of the Camp; Purity in Israel's Camp; Unclean People; Unclean Persons
@@ -1246,10 +1243,10 @@
 \v 15 ◙
 \p
 \v 16 Yahweh¦74672 met with Bileam and \add ≈gave him a message\add* and told \add >him\add*, “Go back to Balak¦74683, and \add ≈give him that message\add*.”
-\v 17 \add ≈So¦74687\add* he \add ≈returned\add* to him where he was standing¦74690 with the leaders from Moab¦74695 beside the altar, and Balak¦74699 \add ≈asked\add* him, “What did Yahweh¦74703 say?”
+\v 17 \add ≈So¦74687\add* he \add ≈returned\add* to him where he was standing¦74690 with the leaders from Moab¦74695 beside the altar, and¦74687 Balak¦74699 \add ≈asked\add* him, “What did Yahweh¦74703 say?”
 \p
 \v 18 Then¦74705 \add @Bileam\add* \add ≈gave his speech\add*,
-\q1 “\add ≈Look here\add*, Balak¦74709, and listen¦74711.
+\q1 “\add ≈Look here\add*, Balak¦74709, and¦74705 listen¦74711.
 \q1 ≈\add ≈Pay attention\add* to me, son of Tsipor.
 \q1
 \v 19 God¦74718 doesn't lie because he's not a human¦74717 being,
