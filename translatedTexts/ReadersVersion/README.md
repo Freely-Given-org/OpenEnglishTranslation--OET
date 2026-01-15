@@ -69,6 +69,7 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - Define and implement footnote classes
 - Add word numbers for all remaining OET-RV words
 - make sure we haven't used 'tithe'
+- decide on idioms (esp. in Proverbs) using 'lips'
 
 ## Terms to make consistent
 
