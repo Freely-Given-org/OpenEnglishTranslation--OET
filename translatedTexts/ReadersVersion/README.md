@@ -80,6 +80,7 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - 'b/v' names like 'Yakov'
 - 'ai/ay' names like 'Yeshai'
 - Philistines vs Filistines
+- raised offering vs wave offering, peace offering vs fellowship offering
 - Aram vs Syria
 - remove "years old" if it's not essential
 - make numbers consistent like '120' vs 'one hundred and twenty'
@@ -96,3 +97,4 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - all the feast/celebration names, e.g., ‘Festival of Shelters’
 - 'flowing with milk and honey' vs 'very fertile'
 - last/latter days 
+- reap -> harvest
