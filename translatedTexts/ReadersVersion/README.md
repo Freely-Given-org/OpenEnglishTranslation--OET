@@ -96,5 +96,6 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - gatekeepers -> 'the men guarding the gates'
 - all the feast/celebration names, e.g., ‘Festival of Shelters’
 - 'flowing with milk and honey' vs 'very fertile'
-- last/latter days 
+- last/latter days
 - reap -> harvest
+- pledge (for loans) -> guarantee
