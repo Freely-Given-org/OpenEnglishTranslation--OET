@@ -1,4 +1,4 @@
-\id NUM - Open English Translation—Readers' Version (OET-RV) v0.0.14
+\id NUM - Open English Translation—Readers' Version (OET-RV) v0.0.16
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 NUM
@@ -28,8 +28,8 @@
 \rem /s1 The First Census of Israel; The Census; Israel's First Census; Israel in the wilderness of Sinai
 \p
 \v 1 In April of the year¦61073 after¦61075 the Israeli people \add ≈escaped from\add* Egypt¦61077 \add (Heb. Mitsrayim)\add*, Yahweh¦61062 spoke¦61061 to Mosheh¦61065 \add (Moses¦61065)\add* in the Sinai¦61067 wilderness¦61066 in the \add ≈sacred\add* tent, saying,\x + \xo 1:1-46: \xt Num 26:1-51.\x*
-\v 2 “\add ≈Count all the men who're Yisrael's descendants by their clans¦61090 and families, being sure to list all their names¦61094\add*.
-\v 3 \add Only include those\add* who're twenty¦61101 or older and able \add to be recruited\add* as soldiers. You and Aharon must enrol¦61109 them into military¦61111 divisions¦61111.
+\v 2 “\add ≈Count all the men who are Yisrael's descendants by their clans¦61090 and families, being sure to list all their names¦61094\add*.
+\v 3 \add Only include those\add* who are twenty¦61101 or older and able \add to be recruited\add* as soldiers. You and Aharon must enrol¦61109 them into military¦61111 divisions¦61111.
 \v 4 \add ≈The leader of each tribe¦61119 will accompany\add* you.
 \p
 \v 5 These are the names¦61128 of the men¦61129 who will \add ≈assist\add* you:
@@ -39,7 +39,7 @@
 \li1
 \v 7 Nahshon¦61146 (Amminadav's son) from Yehudah \add (Judah)\add*,
 \li1
-\v 8 Netanel¦61152 (Tsuar's¦61155 son) from Yissashkar \add (Issachar)\add*,
+\v 8 Netanel¦61152 (Tsuar's¦61155 son) from Yissaskar \add (Issachar)\add*,
 \li1
 \v 9 Eliav (Helon's¦61161 son) from Zevulun,
 \li1
@@ -69,7 +69,7 @@
 \li1
 \v 26-27 74,600 men from the tribe of Yehudah¦61354 \add (Judah)\add*,
 \li1
-\v 28-29 54,400 men from the tribe of Yissashkar \add (Issachar¦61380)\add*,
+\v 28-29 54,400 men from the tribe of Yissaskar \add (Issachar¦61380)\add*,
 \li1
 \v 30-31 57,400 men from the tribe of Zevulun¦61406,
 \li1
@@ -97,7 +97,7 @@
 \v 53 \add ≈but\add* the Levites¦61747 will camp there around¦61734 the \add ≈sacred tent\add* and¦61732 look after it¦61739. \add ≈That way,\add* the Israeli¦61744 community won't¦61737 make \add Yahweh\add* angry.
 \v 54 \add ≈So¦61754 the Israelis¦61756 did everything\add* that Yahweh¦61760 had instructed¦61759 Mosheh¦61763.
 \c 2
-\s1 The pegkateil of descendants there to camp
+\s1 Camp layout by tribe
 \rem /s1 The Arrangement of the Tribal Camps; The Arrangement of the Tribes in Camp; The Order of Encampment and Marching; Organization for Israel's Camp
 \p
 \v 1 Then Yahweh¦61769 told Mosheh¦61772 and Aharon:
@@ -372,140 +372,86 @@
 \p
 \v 27 “\add ≈In that way,\add* they'll put my name¦64764 on the \add ≈Israelis¦64767\add*, and I will bless¦64770 them.”
 \c 7
-\s1 The leaders' offerings
+\s1 The leaders' offerings at the altar dedication
 \rem /s1 Offerings of the Leaders; The Offerings of the Leaders; Offerings of Dedication; Offerings at the Dedication of the Tabernacle
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
+\v 1 When Mosheh¦64776 \add (Moses¦64776)\add* had finished¦64775 setting¦64777 up the \add ≈sacred¦64780 tent¦64780\add*, he anointed it \add with oil\add* and consecrated it and all its furniture¦64789, as well as the altar¦64792 and all its equipment.
+\v 2 Then¦64802 Yisrael's leaders presented \add <gifts\add*. They were the leaders of the tribes¦64810 who ruled over those who'd been listed \add for duties\add*.
+\v 3 They brought¦64817 their¦64820 gifts to Yahweh's \add ≈presence¦64837\add* in six carts¦64825 \add pulled by\add* twelve bulls. Each cart was from two leaders¦64834, and¦64817 each of the bulls was from one leader.
+\v 4 Then¦64842 Yahweh¦64844 told Mosheh¦64847:
+\v 5 “\add ≈Accept their gifts because they'll be useful for the running of the sacred tent\add*. \add ≈Distribute them appropriately to the Levites¦64863, depending on each man's duties\add*.”
+\v 6 \add ≈So¦64868\add* Mosheh¦64869 took¦64868 the carts¦64872 and the cattle and distributed them to the Levites¦64880,
+\v 7 giving two¦64884 carts¦64885 and¦64886 four¦64887 bulls¦64888 to the Gershonites¦64891 to help them with their¦64893 assigned duties.
+\v 8 Then¦64895 he gave¦64902 four¦64897 carts¦64898 and¦64895 eight¦64900 bulls¦64901 to the Merarites to help them with their¦64906 assigned duties under the supervision of the priest¦64912 (Aharon's son) Itamar¦64908.
+\v 9 \add ≈However,\add* the Kohaties weren't given any because they were responsible for carrying¦64924 the very holy objects, and¦64914 those had to be carried¦64924 on their shoulders¦64923.
 \p
-\v 10 ◙
-\v 11 ◙
+\v 10 The day¦64931 that the altar was dedicated¦64929 and anointed¦64932, the leaders brought their¦64938 gifts and presented them at the altar,
+\v 11 and¦64942 Yahweh¦64943 told Mosheh¦64946, “\add ≈Each day\add* \add for the next twelve days\add*, one leader must present his offering¦64956 for the altar¦64958 dedication¦64957.”
 \p
-\v 12 ◙
-\p …
+\v 12-83 \add ≈These were the leaders who presented their offerings:\add*
+\li1 On the first¦64964 day, Amminadav's son Nahshon¦64968 \add on behalf of\add* the tribe of Yehudah¦64973,
+\li1 on the second day, Zuar's son Netanel \add on behalf of\add* the tribe of Yissaskar,
+\li1 on the third day, Helon's son Eliav \add on behalf of\add* the tribe of Zevulun,
+\li1 on the fourth day, Shedeur's son Elizur \add on behalf of\add* the tribe of Reuven,
+\li1 on the fifth day, Tsurishaddai's son Shelumiel \add on behalf of\add* the tribe of Shimeon,
+\li1 on the sixth day, Deuel's son Elyasaf \add on behalf of\add* the tribe of Gad,
+\li1 on the seventh day, Ammihud's son Elishama \add on behalf of\add* the tribe of Efrayim,
+\li1 on the eighth day, Pedahzur's son Gamaliel \add on behalf of\add* the tribe of Menashsheh,
+\li1 on the ninth day, Gideoni's son Avidan \add on behalf of\add* the tribe of Benyamin,
+\li1 on the tenth day, Ammishaddai's son Ahiezer \add on behalf of\add* the tribe of Dan,
+\li1 on the eleventh day, Okran's son Pagiel \add on behalf of\add* the tribe of Asher,
+\li1 and on the twelfth day, Enam's son Ahira \add on behalf of\add* the tribe of Naftali.
+\p \add ≈Each of the leaders presented the following offerings:\add*
+\li1 a silver dish (1.5 kg—\add ≈all weights\add* by the standard temple measurement) and a silver bowl (800g)—both of them full of fine flour mixed with oil as a grain offering,
+\li1 a small gold dish (110g) filled with incense,
+\li1 a young bull, a ram and a one-year-old male lamb for a burnt offering,
+\li1 a male goat for a sin offering,
+\li1 two cows, five rams, five male goats, and five one-year-old rams for the peace offering.
 \p
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
-\v 28 ◙
-\v 29 ◙
-\v 30 ◙
-\v 31 ◙
-\v 32 ◙
-\v 33 ◙
-\v 34 ◙
-\v 35 ◙
-\v 36 ◙
-\v 37 ◙
-\v 38 ◙
-\v 39 ◙
-\v 40 ◙
-\v 41 ◙
-\v 42 ◙
-\v 43 ◙
-\v 44 ◙
-\v 45 ◙
-\v 46 ◙
-\v 47 ◙
-\v 48 ◙
-\v 49 ◙
-\v 50 ◙
-\v 51 ◙
-\v 52 ◙
-\v 53 ◙
-\v 54 ◙
-\v 55 ◙
-\v 56 ◙
-\v 57 ◙
-\v 58 ◙
-\v 59 ◙
-\v 60 ◙
-\v 61 ◙
-\v 62 ◙
-\v 63 ◙
-\v 64 ◙
-\v 65 ◙
-\v 66 ◙
-\v 67 ◙
-\v 68 ◙
-\v 69 ◙
-\v 70 ◙
-\v 71 ◙
-\v 72 ◙
-\v 73 ◙
-\v 74 ◙
-\v 75 ◙
-\v 76 ◙
-\v 77 ◙
-\v 78 ◙
-\v 79 ◙
-\v 80 ◙
-\v 81 ◙
-\v 82 ◙
-\v 83 ◙
-\v 84 ◙
-\v 85 ◙
-\v 86 ◙
-\v 87 ◙
-\v 88 ◙
-\v 89 ◙
+\v 84 That was the dedication¦65962 of the altar¦65963 in the day¦65964 it was anointed¦65965, when Yisrael's leaders¦65968 \add presented\add* twelve silver dishes¦65970, twelve silver bowls¦65974, and twelve gold¦65980 pans.
+\v 85 Each silver dish weighed 1.5kg (\add ≈all weights\add* by the standard temple measurement) and the silver bowls were 800g. The total weight of the silver was around 27 kg.
+\v 86 The gold pans that had been filled with incense¦66008 weighed 110g and their total weight came to 1.3kg.
+\v 87 For the burnt¦66024 offerings there was: twelve bulls¦66027, twelve rams, and twelve male one-year-old lambs¦66032 along with their¦66038 grain¦66038 offerings. There were twelve male goats for a sin offering.
+\v 88 For the peace¦66049 offering, there were 24 bulls¦66052, 60 rams, 60 male goats¦66055, 60 male one-year-old lambs¦66057. All of those were part of the dedication¦66063 offerings for the altar¦66064 after¦66065 it was anointed¦66066.
+\v 89 Then¦66069 Mosheh¦66070 entered the \add ≈sacred tent\add* to speak¦66075 with \add @Yahweh\add*. He heard the voice¦66080 speaking¦66081 to him from between¦66090 the two¦66091 images of winged-creatures that¦66085 were on the platform above the sacred box. That's how \add @Yahweh\add* spoke¦66093 to him.
 \c 8
-\s1 The pegpareket of me lamp
+\s1 Lighting the seven lamps
 \rem /s1 The Seven Lamps; Setting Up the Lamps; Placing the Lamps; Preparing the Lamps
 \p
-\v 1 \x + \xo 8:1-4: \xt Exo 25:31-40; 37:17-24.\x*◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
+\v 1 Then Yahweh¦66098 told Mosheh¦66101 \add (Moses¦66101)\add*,\x + \xo 8:1-4: \xt Exo 25:31-40; 37:17-24.\x*
+\v 2 “Tell Aharon \add (Aaron¦66107)\add* that when he \add ≈places\add* the seven¦66120 lamps \add on\add* the lampstand, \add ≈they must light¦66119 up the area in front¦66116 of it\add*.”
+\v 3 \add ≈So¦66123\add* Aharon did it just as Yahweh¦66135 had instructed¦66134, setting up the lamps on the lampstand to face¦66129 forwards.
+\v 4 The lampstand from the base to its blossoms had been made by hammering \add a single sheet\add* of gold¦66144, just as Yahweh¦66156 had shown¦66155 Mosheh¦66159.
 \s1 The dedication of Levites
 \rem /s1 Consecration and Service of the Levites; The Setting Apart of the Levites; The Purification and Dedication of the Levites; The Levites Dedicated
 \p
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
+\v 5 Then Yahweh¦66168 told Mosheh¦66171,
+\v 6 “\add ≈Out¦66180 of all the Israelis¦66179\add*, take the Levites¦66177 and¦66181 purify them.
+\v 7 This is how to make them pure: sprinkle the sin-offering water¦66191 on them, then¦66184 they must shave¦66193 their \add ≈entire¦66197 bodies\add* and wash themselves and their clothes¦66201.
+\v 8 They must take a \add ≈young\add* bull along with its grain¦66209 offering of flour¦66210 mixed¦66211 with oil, plus a \add ≈second¦66215 young\add* bull for a sin offering.
+\v 9 You¦66236 must have the Levites¦66225 stand at the front¦66226 of the \add ≈sacred tent\add* and¦66229 summon the rest of the \add ≈Israelis¦66235\add* \add there too\add*.
+\v 10 Then¦66238 you must present the Levites¦66241 \add ≈in front¦66242 of\add* Yahweh¦66243 and¦66244 the \add ≈Israeli¦66247 men\add* must place their¦66250 hands¦66250 on them.
+\v 11 \add ≈Out of all the Israelis¦66264,\add* Aharon must present¦66255 the Levites¦66259 as a raised offering to Yahweh \add ≈so they¦66266 can serve Yahweh\add* \add with their assigned duties\add*.
+\v 12 Then¦66273 the Levites must place their¦66277 hands¦66277 on the bulls' heads, and one must be given as a sin¦66285 offering and the other as a burnt¦66289 offering to Yahweh, to make the Levites \add ≈innocent in Yahweh's eyes\add*.
 \p
-\v 13 ◙
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
+\v 13 “The Levites¦66299 must stand¦66296 in front of Aharon and¦66296 his sons¦66303, then¦66296 they can be offered as a raised offering to Yahweh¦66307.
+\v 14 That's how \add *they'll\add* be \add ≈distinguished from the other Israelis¦66314\add*, and¦66316 then¦66309 \add *they'll\add* belong to me.
+\v 15 Then¦66320 the Levites¦66324 will go¦66323 to serve¦66325 at the \add ≈sacred tent\add* after¦66320 you've purified them and¦66320 presented¦66332 them as a raised offering,
+\v 16 because they're given to me by all the Israeli¦66342 people¦66342—I've taken¦66353 them for myself in place¦66344 of their firstborn male sons¦66351,
+\v 17 because every firstborn Israeli¦66362 male person and animal belongs to me. I set them apart¦66373 for myself when I killed every \add other\add* firstborn in Egypt¦66372,
+\v 18 \add ≈so\add* I've¦66386 \add now\add* taken¦66377 the Levites¦66380 instead of the firstborn¦66384 Israeli¦66385 sons¦66385.
+\v 19 Then¦66388 I've given the Levites¦66391 out of all the Israelis, to Aharon and his sons to serve \add ≈the whole country\add* by serving¦66402 in the \add ≈sacred tent\add* and making \add ≈the Israelis innocent in Yahweh's eyes\add*. That way, a plague¦66417 won't¦66413 strike the Israelis when they approach the \add ≈sacred tent\add*.”
 \p
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
+\v 20 \add ≈So¦66426\add* Mosheh and Aharon and all the \add ≈Israelis¦66432\add* did to the Levites¦66435 \add just\add* what Yahweh¦66440 had instructed¦66439 Mosheh.
+\v 21 The Levites¦66453 purified¦66452 themselves and washed¦66454 their¦66455 clothes¦66455, and Aharon offered them to Yahweh as a raised offering, and Aharon offered a sacrifice to \add ≈make them innocent in Yahweh's eyes\add*.
+\v 22 After that, the Levites went¦66470 to do their¦66475 \add assigned\add* duties at the \add ≈sacred tent\add* \add ≈working under\add* Aharon and¦66480 his sons¦66481. \add ≈The Israelis did exactly what Yahweh¦66484 told Mosheh¦66487 to do with\add* the Levites.
 \p
-\v 23 ◙
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
+\v 23 Then Yahweh¦66497 told Mosheh¦66500,
+\v 24 “These are the instructions for the Levites¦66505: from the age of twenty-five, Levite¦66505 men will begin serving¦66513 the work¦66513 in the \add ≈sacred tent\add*
+\v 25 until the age of fifty¦66519 when they must retire from that work¦66522.
+\v 26 They may then¦66528 assist¦66528 their¦66542 fellow Levites¦66541 with guard¦66534 duties¦66542, but they can no longer work \add directly\add* with the \add ≈sacred tent\add*.“
 \c 9
-\s1 The celebration of ‘pass-over’ of Messenger
+\s1 The celebration of ‘pass-over’ of the messenger
 \rem /s1 The Passover; The Passover at Sinai; The Second Passover
 \p
 \v 1 ◙
@@ -1436,7 +1382,7 @@
 \v 20 ◙
 \v 21 ◙
 \v 22 ◙
-\s1 The descendants of Yissashkar
+\s1 The descendants of Yissaskar
 \rem /s1 The Tribe of Issachar
 \p
 \v 23 ◙
