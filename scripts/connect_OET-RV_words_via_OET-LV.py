@@ -79,10 +79,10 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-01-08' # by RJH
+LAST_MODIFIED_DATE = '2026-02-10' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.83'
+PROGRAM_VERSION = '0.84'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -866,7 +866,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
     # Make a list of the books that we're going to process
     booklist_to_process = []
     for BBB in lv.books:
-        if BibleOrgSysGlobals.commandLineArguments.fastMode and BBB not in ('NUM','PRO','ISA',):
+        if BibleOrgSysGlobals.commandLineArguments.fastMode and BBB not in ('NUM','ISA',):
             continue
         if BBB in ('CO1',): continue # TODO: CO1_14:33 gives an issue
         booklist_to_process.append( BBB )
@@ -1129,6 +1129,8 @@ def check_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> None
         if discovered_RV_word_number < minLVWordNumber or discovered_RV_word_number > maxLVWordNumber:
             if haveVerseRange:
                 logging.warning( f"OET-RV {BBB} {c}:{v} {discovered_OET_RV_word_numbers=} HAS VERSE RANGE {minLVWordNumber=} {maxLVWordNumber=}" )
+            elif BBB == 'PSA':
+                logging.error( f"OET-RV {BBB} {c}:{v} {discovered_RV_word_number=} OUT OF RANGE IN (PSALM VERSIFICATION MISMATCH???) {minLVWordNumber=} {maxLVWordNumber=} from {discovered_OET_RV_word_numbers=}" )
             else:
                 raise ValueError( f"OET-RV {BBB} {c}:{v} {discovered_RV_word_number=} OUT OF RANGE {minLVWordNumber=} {maxLVWordNumber=} from {discovered_OET_RV_word_numbers=}" )
 # end of connect_OET-RV_words_via_OET-LV.check_OET_RV_Verse
@@ -1803,9 +1805,9 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
     desiredV = (v-1) if havePsalmTitles and v>1 else v
 
     if NT:
-        if wordNumber in (143_176,143_692,149_461,150_257): return None # Temp HEB 1:6, 1 Pet (nd gets put inside add field).................................................................................
+        if wordNumber in (142_216,149_264): return None # TODO: Heb 1:6, 1 Pet 2:19 (nd gets put inside add field).................................................................................
     else:
-        if wordNumber in (252_390,): return None # Temp PSA 54:1 (v1 gets put into d field).................................................................................
+        if wordNumber in (252_390,): return None # TODO: PSA 54:1 (v1 gets put into d field).................................................................................
 
     C = V = None
     foundChapter = foundVerse = False

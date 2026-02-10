@@ -1,4 +1,4 @@
-\id PRO - Open English Translation—Readers’ Version (OET-RV) v0.0.37
+\id PRO - Open English Translation—Readers’ Version (OET-RV) v0.1.00
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 PRO
@@ -9,12 +9,12 @@
 \toc3 Prv.
 \mt1 Proverbs
 \is1 Introduction
-\ip This collection of \bk Proverbs\bk*, is one way of teaching so that the people of God there is/are follow if how of living righteous/honest/sensible. Most here, that teaching concerning the living of person. The one beautiful it’s written here the: “The fear Master is reason of wisdom” (1:7; 9:10). The sayings, impeg-like if what the good egkaangey we/our if is we/our follow the wisdom and not that stupidity. Because the path of sinners, night still du of gloom (4:19), and the path of righteous/honest/sensible, like of sikan still egkasi-si kaliwaswasan egkapahan-ganaran shine until egsile en indeed the day (v18).
-\ip The proverbs are a collection of useful sayings that help to impart godly wisdom to the reader.
+\ip This collection of \bk Proverbs\bk*, is one way of teaching so that godly people have good examples of sensible life principles. Most of these sayings concern a person’s lifestyle and internal values. Perhaps the most critical proverb included in here is: “The first step towards being wise is to strive to obey Yahweh” (1:7; 9:10). The sayings illustrate the good results that can come from following wise paths and not that of stupidity, as the path of wicked people is like deep darkness (4:19), and in contrast, the path of those who do what is right, is like a bright light (v18).
+\ip These proverbs are a collection of useful sayings that help to impart godly wisdom to the reader.
 \iot Main components of this collection
 \io1 Praising wisdom \ior 1:1–9:18\ior*
-\io1 Solomon’s sayings \ior 10:1–29:27\ior*
-\io1 Agur’s speeches \ior 30:1-33\ior*
+\io1 Shelomoh’s (Solomon’s) sayings \ior 10:1–29:27\ior*
+\io1 Agur’s sayings \ior 30:1-33\ior*
 \io1 Various other proverbs \ior 31:1-31\ior*
 \rem This is still a very early look into the unfinished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
@@ -358,7 +358,7 @@
 \v 18 \add In contrast,\add* the path of those who do what is right, is like a bright light,
 \q1 →that \add keeps getting brighter until the brightest time of day\add*.
 \q1
-\v 19 The path of wicked people is like the deep darkness,
+\v 19 The path of wicked people is like deep darkness,
 \q1 →\add so they don’t even know what they’re stumbling over\add*.
 \b
 \q1
@@ -804,7 +804,7 @@
 \v 9 Give to a wise person and they’ll become wiser still.
 \q1 Inform an honest person and they’ll keep learning.
 \q1
-\v 10 \add The start of being wise is to strive to obey\add* Yahweh,
+\v 10 \add The first step towards being wise is to strive to obey\add* Yahweh,
 \q1 and \add being aware of the heavenly beings\add* is \add the beginning\add* of understanding,
 \q1
 \v 11 because it’s by me that you days \add will be extended\add*,
@@ -2725,117 +2725,196 @@
 \v 10 Don’t \add make false accusations\add* to a slave’s master,
 \q1 in case he curses you and you \add have to bear the guilt\add*.
 \p
-\v 11 There’s a generation that curses their \add fathers\add*
+\v 11 \add There’s a\add* generation that curses their \add fathers\add*
 \q1 and doesn’t bless their \add mothers\add*.
 \p
-\v 12 ◙
+\v 12 \add There’s a\add* generation who are pure in their own eyes,
+\q1 ^\add but\add* they’re not \add actually\add* washed from their filthiness.
 \p
-\v 13 ◙
+\v 13 \add There’s a\add* generation \add with very proud eyes\add*,
+\q1 and their \add eyebrows\add* are \add also\add* raised.
 \p
-\v 14 ◙
+\v 14 \add There’s a\add* generation whose teeth are swords,
+\q2 and its fangs are knives
+\q1 to eliminate from the earth those who are suffering,
+\q2 and the needy from humankind.
 \p
-\v 15 ◙
-\p …
-\q2
-\v 16 ◙
-\q2 …
-\q2 …
-\q2 …
+\v 15 The leech has two daughters: Give! Give!”
+\p There are three, maybe four, things are are never satisfied—
+\q1 four that never \add have\add* enough:
+\li1
+\v 16 \add 1.\add* the grave,
+\li1 \add 2.\add* \add a childless woman\add*,
+\li1 \add 3.\add* land that never has enough water, and
+\li1 \add 4.\add* fire that never \add stops spreading\add*.
 \p
-\v 17 ◙
+\v 17 The eye that mocks its father,
+\q1 and scorns its mother \add instead of obeying\add*,
+\q1 will be pecked out by the ravens in the valley,
+\q1 and the young vultures will eat it.
 \p
-\v 18 ◙
+\v 18 There’s three things that are too wonderful for me,
+\q1 \add maybe\add* four that I don’t understand:
+\li1
+\v 19 \add 1.\add* \add how an eagle’s soars\add* in the sky,
+\li1 \add 2.\add* \add how a snake slithers\add* over a rock,
+\li1 \add 3.\add* \add how a ship sails\add* across the ocean, and
+\li1 \add 4.\add* \add how a young man loves\add* a young woman.
+\p
+\v 20 This is the way of a woman who commits adultery:
+\q1 She eats and wipes her mouth,
+\q1 and declares that she hasn’t done \add anything wrong\add*.
+\p
+\v 21 \add There’s\add* three \add things\add* that makes the earth tremble—
+\q1 four \add things\add* it can’t \add handle\add*:
+\li1
+\v 22 \add 1.\add* a slave becoming king,
+\li1 \add 2.\add* a fool who \add has plenty to eat\add*,
+\li1
+\v 23 \add 3.\add* a hated woman who gets married, and
+\li1 \add 4.\add* a female slave who supplants her mistress.
+\p
+\v 24 There are four \add creatures\add* on the earth
+\q1 that are small but extremely wise:
+\li1
+\v 25 \add 1.\add* \add Individual\add* ants aren’t strong, but they \add store up\add* food in the summer.
+\li1
+\v 26 \add 2.\add* Rock badgers \add aren’t very powerful\add*, but they make their homes in the cliffs.
+\li1
+\v 27 \add 3.\add* Locusts don’t have a king, but they go out in formation \add like soldiers\add*.
+\li1
+\v 28 \add 4.\add* You can catch a lizard in your hands, yet they get into king’s palaces.
+\p
+\v 29 There are three things that take fancy steps—
+\q1 \add maybe\add* four that walk impressively.
+\li1
+\v 30 \add 1.\add* the lion who’s a powerful animal that doesn’t turn back from facing anything,
+\li1
+\v 31 \add 2.\add* the strutting rooster,
+\li1 \add 3.\add* male goats, and
+\li1 \add 4.\add* a king with his \add bodyguards around\add* him.
+\p
+\v 32 If you’ve been foolish enough to brag about yourself,
+\q1 \add then plan to put your\add* hand \add over\add* \add your\add* mouth,
 \q1
-\v 19 ◙
-\q2 …
-\q2 …
-\q2 …
-\p
-\v 20 ◙
-\p
-\v 21 ◙
-\q1
-\v 22 ◙
-\q2 …
-\q2
-\v 23 ◙
-\q2 …
-\p
-\v 24 ◙
-\q1
-\v 25 ◙
-\q1
-\v 26 ◙
-\q1
-\v 27 ◙
-\q1
-\v 28 ◙
-\p
-\v 29 ◙
-\q1
-\v 30 ◙
-\q1
-\v 31 ◙
-\q2 …
-\p
-\v 32 ◙
-\v 33 ◙
+\v 33 because churning milk makes butter,
+\q1 squeezing the nose makes it bloody,
+\q1 and \add stirring up\add* anger \add produces\add* strife.
 \c 31
-\s1 The sayings of King
+\s1 King Lemuel’s sayings
 \p
-\v 1 ◙
+\v 1 \add These are\add* the \add sayings\add* by King Lemuel, the burden, that his mother had taught him:
 \p
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
+\v 2 Now what my son? My son \add that I gave birth to\add*.
+\q1 The son from my \add marriage\add*.
+\q1
+\v 3 Don’t give your strength to women,
+\q1 or \add use your intelligence\add* to destroy kings.
+\q1
+\v 4 Lemuel, it’s not for kings to drink wine
+\q1 or for rulers to crave strong drink,
+\q1
+\v 5 in case they drink and forget \add their own laws\add*
+\q1 and \add end up\add* \add depriving the poor of justice\add*.
+\q1
+\v 6 Give strong drink to those who are dying,
+\q1 and wine to those who are \add bitterly depressed\add*.
+\q1
+\v 7 They’ll drink \add it\add* then forget their poverty,
+\q1 and not remember their misery any more.
 \p
-\v 8 ◙
-\v 9 ◙
+\v 8 Open your mouth for \add those who can’t speak\add*—
+\q1 for the cause of all \add those who are dying\add*.
+\q1
+\v 9 Open your mouth \add to\add* \add promote justice\add*,
+\q1 and to defend the poor and needy.
 \s1 The good spouse woman
+\qa \bd א\bd* (Alef)
 \p
-\v 10 ◙
+\v 10 Who can find a \add capable\add* wife,
+\q1 →and she’ll be worth far more than jewels?
+\qa \bd ב\bd* (Beyt)
 \p
-\v 11 ◙
+\v 11 Her husband trusts her \add completely\add*,
+\q1 →and he doesn’t lack \add in prosperity\add*.
+\qa \bd ג\bd* (Gimel)
 \p
-\v 12 ◙
+\v 12 She \add doesn’t harm him\add*, but does him good,
+\q1 \add right throughout her life\add*.
+\qa \bd ד\bd* (Dalet)
 \p
-\v 13 ◙
+\v 13 She searches for wool and flax,
+\q1 and works eagerly with her hands.
+\qa \bd ה\bd* (He)
 \p
-\v 14 ◙
+\v 14 She’s like \add those\add* merchant ships—
+\q1 she brings her food from far away.
+\qa \bd ו\bd* (Vav)
 \p
-\v 15 ◙
+\v 15 She gets up when it’s still dark
+\q1 \add to\add* provide food for her household
+\q1 and her servant girls.
+\qa \bd ז\bd* (Zayin)
 \p
-\v 16 ◙
+\v 16 She appraises a field and buys it.
+\q1 \add Using her own earnings\add*, she plants a vineyard.
+\qa \bd ח\bd* (Het)
 \p
-\v 17 ◙
+\v 17 She \add keeps herself fit\add*,
+\q1 and her arms \add are\add* strong.
+\qa \bd ט\bd* (Tet)
 \p
-\v 18 ◙
+\v 18 She’s aware that her merchandise is quality.
+\q1 Her lamp doesn’t go out at night.
+\qa \bd י\bd* (Yod)
 \p
-\v 19 ◙
+\v 19 Her hands \add work the spindle\add*—
+\q1 \add spinning thread for cloth\add*.
+\qa \bd כ\bd* (Kaf)
 \p
-\v 20 ◙
+\v 20 She’s \add generous\add* to the poor,
+\q1 and reaches out to the needy.
+\qa \bd ל\bd* (Lamed)
 \p
-\v 21 ◙
+\v 21 She’s not worried about her household when it snows,
+\q1 because \add they’re\add* all \add dressed in quality clothes\add*.
+\qa \bd מ\bd* (Mem)
 \p
-\v 22 ◙
+\v 22 She makes \add blankets\add* for herself,
+\q1 fine linen, and her purple clothing.
+\qa \bd נ\bd* (Nun)
 \p
-\v 23 ◙
+\v 23 Her husband is well-known \add in the community\add*,
+\q1 where he sits with the \add nation’s\add* elders.
+\qa \bd ס\bd* (Samek)
 \p
-\v 24 ◙
+\v 24 She makes linen clothes and sells \add them\add*,
+\q1 and she supplies sashes to the merchants.
+\qa \bd ע\bd* (Ayin)
 \p
-\v 25 ◙
+\v 25 She’s \add clothed with\add* strength and dignity,
+\q1 and she laughs \add as she thinks about the\add* future.
+\qa \bd פ\bd* (Pe)
 \p
-\v 26 ◙
+\v 26 \add It’s always wisdom that comes out of\add* her mouth,
+\q1 and loyal commitment \add guides\add* \add the instructions on her tongue\add*.
+\qa \bd צ\bd* (Tsade)
 \p
-\v 27 ◙
+\v 27 She \add keeps an eye on\add* the \add comings and\add* goings of her household,
+\q1 and she \add doesn’t indulge in\add* laziness.
+\qa \bd ק\bd* (Qof)
 \p
-\v 28 ◙
+\v 28 Her sons stand and \add compliment her\add*,
+\q1 and her husband \add also\add* praises her:
+\qa \bd ר\bd* (Resh)
 \p
-\v 29 ◙
+\v 29 “\add There’s many women with ability\add*,
+\q1 ^\add but\add* you’re \add better than any\add* of them.”
+\qa \bd ש\bd* (Sin/Shin)
 \p
-\v 30 ◙
+\v 30 Charm is deceptive, and beauty is fleeting,
+\q1 ^\add but\add* a woman that \add honours and strives to obey\add* Yahweh will be praised.
+\qa \bd ת\bd* (Tav)
 \p
-\v 31 ◙
+\v 31 Give her \add the honour that she deserves\add*,
+\q1 and let her \add abilities\add* praise her at the city gates.

@@ -970,7 +970,7 @@ H					CH1_4:8				Kos			קוֹץ		{ H6976 (1) 1Chr 4:8*
 H	CH1,EZR,NEH								Hakkoz			הַקּוֹץ		{ H6976 (5) 1Chr 24:10, Ezr 2:61, Neh 3:4,21, 7:63*
 H					CH1_15:17				Kushaiah			קוּשָׁיָהוּ		H6984 (1) 1Chr 15:17*
 H					CH1_4:21				Laadah			לַעְדָּה		H3935 (1) 1Chr 4:21*
-H									Laban			לָבָן		H3837 (55) Gen 24:29,50, 25:20, 27:43, 28:2,5, 29:5,10,13-16, ...
+H	GEN,NUM,DEU								Laban			לָבָן		H3837 (55) Gen 24:29,50, 25:20, 27:43, 28:2,5, 29:5,10,13-16, ...
 H	CH1								Ladan			לַעְדָּן		H3936 (7) 1Chr 7:26, 23:7-9, 26:21
 H					CH1_4:2				Lahad			לַהַד		H3855 (1) 1Chr 4:2*
 H					NUM_3:24				Lael			לָאֵל		H3815 (1) Num 3:24*
@@ -980,8 +980,9 @@ H	GEN,CH1								Lamech			לֶמֶךְ		{ H3929 (11) Gen 4:18-19, 23-24, 5:25-26
 H	GEN,CH1								Lamek			לֶמֶךְ		{ H3929 (11) Gen 4:18-19, 23-24, 5:25-26,28,30-31, 1Chr 1:3*
 H					JDG_4:4				Lappidoth			לַפִּידוֹת		H3941 Deborah's husband (1) Jdg 4:4*
 H					EZR_2:45,NEH_7:48				Lebanah			לְבָנָא		H3838 (2) Ezr 2:45, Neh 7:48*
-H									Leah			לֵאָה		H3812 woman (34) Gen 29:16-17,23-25,30-32, 30:9-14, ..., Ruth 4:11
-wH									Levi			לֵוִי		H3878 (58) Gen 29:34, 34:25, ..., Exo 1:2, 2:1, ...
+H	GEN,EXO,RUT,CH1								Leah			לֵאָה		H3812 woman (34) Gen 29:16-17,23-25,30-32, 30:9-14, ..., Ruth 4:11
+wH					PRO_31:1,PRO_31:4				Lemuel			לְמוּאֵל		H3927 (2) Prov 31:1,4*
+wH	GEN,EXO,NUM,DEU,JOS,CH1,CH2,EZR,NEH,JER,EZE,MAL								Levi			לֵוִי		H3878 (58) Gen 29:34, 34:25, ..., Exo 1:2, 2:1, ...
 H	EXO,NUM,CH1								Libni			לִבְנִי		H3845 (5) Exo 6:17, Num 3:18, 1Chr 6:17,20,29*
 H					CH1_7:19				Likhi			לִקְחִי		H3949 (1) 1Chr 7:19*
 H					HOS_1:6,HOS_1:8				Lo-ruhamah			לֹא-רֻחָמָה		{ H3819 space changed to hyphen (2) Hos 1:6,8*
