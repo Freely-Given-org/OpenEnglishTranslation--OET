@@ -6,7 +6,7 @@
 #
 # Script handling add_tags_to_NT_word_table functions
 #
-# Copyright (C) 2023-2025 Robert Hunt
+# Copyright (C) 2023-2026 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -50,6 +50,7 @@ CHANGELOG:
     2023-04-27 Clear table now has combined subject referents into Referents column (so now, one less column but more information)
     2024-03-08 Add OETGlossWords column and apply .tsv transforms similar to how Scripted Bible Editor does
     2025-06-19 Changed to connect timeline, etc., to EVERY word in the verse (not just the FIRST word)
+    2026-02-10 SR/VLT upgrade (only change was having less rows in the table)
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple, NamedTuple, Optional
@@ -69,10 +70,10 @@ import sys
 sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitted to PyPI
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
-LAST_MODIFIED_DATE = '2025-11-12' # by RJH
+LAST_MODIFIED_DATE = '2026-02-10' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET NT wordtable"
-PROGRAM_VERSION = '0.35'
+PROGRAM_VERSION = '0.36'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -87,7 +88,8 @@ NT_WORD_TABLE_INPUT_FILEPATH = Path( '../intermediateTexts/modified_source_VLT_E
 NT_WORD_TABLE_OUTPUT_FILENAME = 'OET-LV_NT_word_table.tsv'
 NT_WORD_TABLE_OUTPUT_FOLDERPATH = Path( '../intermediateTexts/modified_source_VLT_ESFM/' )
 NT_WORD_TABLE_OUTPUT_FILEPATH = NT_WORD_TABLE_OUTPUT_FOLDERPATH.joinpath( NT_WORD_TABLE_OUTPUT_FILENAME )
-EXPECTED_WORD_TABLE_DATA_ROW_COUNT = 168_247
+#EXPECTED_WORD_TABLE_DATA_ROW_COUNT = 168_247
+EXPECTED_WORD_TABLE_DATA_ROW_COUNT = 167_161 # v3
 RV_ESFM_OUTPUT_FOLDERPATH = Path( '../translatedTexts/ReadersVersion/' ) # We also copy the wordfile to this folder
 
 TAB = '\t'

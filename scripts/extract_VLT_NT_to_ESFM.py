@@ -6,7 +6,7 @@
 #
 # Script handling extract_VLT_NT_to_ESFM functions
 #
-# Copyright (C) 2022-2025 Robert Hunt
+# Copyright (C) 2022-2026 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -48,6 +48,7 @@ CHANGELOG:
     2025-01-15 Change periods in morphology to middle dots
     2025-02-16 Change gloss helper to use ˓˒ instead of // around gloss helper (since / also used for alternative glosses)
     2025-03-03 Added /nb line after chapter numbers
+    2026-02-09 Handle updated tables with no 'Medieval' column in the collation table (plus other relatively minor changes)
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple, Optional
@@ -61,7 +62,7 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2025-11-12' # by RJH
+LAST_MODIFIED_DATE = '2026-02-10' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
 PROGRAM_VERSION = '0.99'
@@ -75,7 +76,7 @@ VLT_GLOSS_ESFM_OUTPUT_FOLDERPATH = INTERMEDIATE_FOLDER.joinpath( 'modified_sourc
 RV_ESFM_OUTPUT_FOLDERPATH = Path( '../translatedTexts/ReadersVersion/' ) # We also copy the wordfile to this folder
 
 OUR_EXPORT_TABLE_FILENAME = 'OET-LV_NT_word_table.10columns.tsv' # We make this first 10-column version here (from the collation table)
-EXPECTED_EXPORT_WORD_TABLE_LINE_COUNT = 168_247
+EXPECTED_EXPORT_WORD_TABLE_LINE_COUNT = 167_161 #168_247
 
 
 state = None
@@ -88,7 +89,8 @@ class State:
         self.sourceCollationTableFilepath = Path( '../../CNTR-GNT/sourceExports/collation.csv' ) # Use the latest download (symbolic link)
         # self.sourceCollationTableFilepath = Path( '../../CNTR-GNT/sourceExports/collation.updated.csv' )
         self.sourceWordTableFilepath = Path( '../../CNTR-GNT/sourceExports/word.csv' ) # Use the latest download (symbolic link)
-        self.CNTRLemmaTableFilepath = Path( '../../CNTR-GNT/derivedFormats/lemmas.alphabetical.tsv' )
+        # self.CNTRLemmaTableFilepath = Path( '../../CNTR-GNT/derivedFormats/lemmas.alphabetical.tsv' ) # This file came from lemmas.xlsx emailed 2023-12-02 from GreekCNTR
+        self.CNTRLemmaTableFilepath = Path( '../../CNTR-GNT/sourceExports/lemma_202602090922.csv' ) # This file emailed 2026-02-10 from GreekCNTR
     # end of extract_VLT_NT_to_ESFM.__init__
 
 
@@ -135,24 +137,26 @@ book_csv_rows = []
 book_csv_column_counts = defaultdict(lambda: defaultdict(int))
 book_csv_column_headers = []
 
-NUM_EXPECTED_COLLATION_COLUMNS = 35
+NUM_EXPECTED_COLLATION_COLUMNS = 30
+# Last time we looked (2026-02-09) with 167,161 rows, 30-column header was:
+# CollationId,VerseId,SR,Pattern,Translatable,Align,Span,Classic,Koine,Punctuation,Capitalization,Role,Syntax,Morphology,Sic,LexemeId,Sense,GlossPre,GlossHelper,GlossWord,GlossPost,GlossPunctuation,GlossCapitalization,GlossOrder,GlossInsert,Reference,Notes,If,Then,Timestamp
 # Last time we looked (2023-08-15) with 168,229 rows, 35-column header was:
-# CollationID,VerseID,VariantID,Relation,Pattern,Translatable,Align,Span,Incomplete,Classic,Koine,Medieval,Probability,Historical,Capitalization,Punctuation,Role,Syntax,Morphology,Sic,LexemeID,Sense,GlossPre,GlossHelper,GlossWord,GlossPost,GlossPunctuation,GlossCapitalization,GlossOrder,GlossInsert,Reference,Notes,If,Then,Timestamp
+# CollationId,VerseId,VariantID,Relation,Pattern,Translatable,Align,Span,Incomplete,Classic,Koine,Medieval,Probability,Historical,Capitalization,Punctuation,Role,Syntax,Morphology,Sic,LexemeId,Sense,GlossPre,GlossHelper,GlossWord,GlossPost,GlossPunctuation,GlossCapitalization,GlossOrder,GlossInsert,Reference,Notes,If,Then,Timestamp
 # and table had many 'NULL' entries
 # Last time we looked (2023-07-24) with 168,224 rows, 35-column header was:
-# CollationID,VerseID,VariantID,Relation,Pattern,Translatable,Align,Span,Incomplete,Classic,Koine,Medieval,Probability,Historical,Capitalization,Punctuation,Role,Syntax,Morphology,Sic,LexemeID,Sense,GlossPre,GlossHelper,GlossWord,GlossPost,GlossPunctuation,GlossCapitalization,GlossOrder,GlossInsert,Reference,Notes,If,Then,Timestamp
+# CollationId,VerseId,VariantID,Relation,Pattern,Translatable,Align,Span,Incomplete,Classic,Koine,Medieval,Probability,Historical,Capitalization,Punctuation,Role,Syntax,Morphology,Sic,LexemeId,Sense,GlossPre,GlossHelper,GlossWord,GlossPost,GlossPunctuation,GlossCapitalization,GlossOrder,GlossInsert,Reference,Notes,If,Then,Timestamp
 # and table had many 'NULL' entries
 # Last time we looked (2023-03-06) with 168,262 rows, 36-column header was:
-# CollationID,VerseID,VariantID,Relation,Pattern,Translatable,Align,Span,Incomplete,Classic,Koine,Medieval,Probability,Historical,Capitalization,Punctuation,Role,Syntax,Morphology,Sic,Lemma,LexemeID,Sense,GlossPre,GlossHelper,GlossWord,GlossPost,GlossPunctuation,GlossCapitalization,GlossOrder,GlossInsert,Reference,Notes,If,Then,Timestamp
+# CollationId,VerseId,VariantID,Relation,Pattern,Translatable,Align,Span,Incomplete,Classic,Koine,Medieval,Probability,Historical,Capitalization,Punctuation,Role,Syntax,Morphology,Sic,Lemma,LexemeId,Sense,GlossPre,GlossHelper,GlossWord,GlossPost,GlossPunctuation,GlossCapitalization,GlossOrder,GlossInsert,Reference,Notes,If,Then,Timestamp
 # and table had many 'NULL' entries
 # Last time we looked (2023-03-09) with 168,263 rows, 37-column header was:
-# CollationID,VerseID,VariantID,VariantID1,Relation,Pattern,Translatable,Align,Span,Incomplete,Classic,Koine,Medieval,Probability,Historical,Capitalization,Punctuation,Role,Syntax,Morphology,Sic,Lemma,LexemeID,Sense,GlossPre,GlossHelper,GlossWord,GlossPost,GlossPunctuation,GlossCapitalization,GlossOrder,GlossInsert,Reference,Notes,If,Then,Timestamp
+# CollationId,VerseId,VariantID,VariantID1,Relation,Pattern,Translatable,Align,Span,Incomplete,Classic,Koine,Medieval,Probability,Historical,Capitalization,Punctuation,Role,Syntax,Morphology,Sic,Lemma,LexemeId,Sense,GlossPre,GlossHelper,GlossWord,GlossPost,GlossPunctuation,GlossCapitalization,GlossOrder,GlossInsert,Reference,Notes,If,Then,Timestamp
 # and table had many 'NULL' entries
 # Last time we looked (2023-03-16) with 168,263 rows, 38-column header was:
-# CollationID,VerseID,VariantID,VariantID1,Relation,Pattern,Translatable,Checking,Align,Span,Incomplete,Classic,Koine,Medieval,Probability,Historical,Capitalization,Punctuation,Role,Syntax,Morphology,Sic,Lemma,LexemeID,Sense,GlossPre,GlossHelper,GlossWord,GlossPost,GlossPunctuation,GlossCapitalization,GlossOrder,GlossInsert,Reference,Notes,If,Then,Timestamp
+# CollationId,VerseId,VariantID,VariantID1,Relation,Pattern,Translatable,Checking,Align,Span,Incomplete,Classic,Koine,Medieval,Probability,Historical,Capitalization,Punctuation,Role,Syntax,Morphology,Sic,Lemma,LexemeId,Sense,GlossPre,GlossHelper,GlossWord,GlossPost,GlossPunctuation,GlossCapitalization,GlossOrder,GlossInsert,Reference,Notes,If,Then,Timestamp
 # and table had many 'NULL' entries
 # Last time we looked (2023-03-17) with 168,263 rows, 37-column header was:
-# CollationID,VerseID,VariantID,Relation,Pattern,Translatable,Checking,Align,Span,Incomplete,Classic,Koine,Medieval,Probability,Historical,Capitalization,Punctuation,Role,Syntax,Morphology,Sic,Lemma,LexemeID,Sense,GlossPre,GlossHelper,GlossWord,GlossPost,GlossPunctuation,GlossCapitalization,GlossOrder,GlossInsert,Reference,Notes,If,Then,Timestamp
+# CollationId,VerseId,VariantID,Relation,Pattern,Translatable,Checking,Align,Span,Incomplete,Classic,Koine,Medieval,Probability,Historical,Capitalization,Punctuation,Role,Syntax,Morphology,Sic,Lemma,LexemeId,Sense,GlossPre,GlossHelper,GlossWord,GlossPost,GlossPunctuation,GlossCapitalization,GlossOrder,GlossInsert,Reference,Notes,If,Then,Timestamp
 # and table had many 'NULL' entries
 collation_csv_rows = []
 collation_csv_column_max_length_counts = {}
@@ -160,7 +164,7 @@ collation_csv_column_non_blank_counts = {}
 collation_csv_column_counts = defaultdict(lambda: defaultdict(int))
 collation_csv_column_headers = []
 
-# 'LexemeID,Lemma,LemmaE,Template,Classic,Medieval,Role,Morphology,Attested,Irregular,Movable,Clitic'
+# 'LexemeId,Lemma,LemmaE,Template,Classic,Medieval,Role,Morphology,Attested,Irregular,Movable,Clitic'
 NUM_EXPECTED_WORD_COLUMNS = 12 # and 22,385 rows # was 13 and 22,398 rows
 word_csv_rows = []
 word_csv_column_max_length_counts = {}
@@ -168,9 +172,10 @@ word_csv_column_non_blank_counts = {}
 word_csv_column_counts = defaultdict(lambda: defaultdict(int))
 word_csv_column_headers = []
 
-NUM_EXPECTED_LEMMA_COLUMNS = 4 # and 6,416 total rows
-lemma_tsv_rows = []
-lemma_tsv_column_headers = []
+# NUM_EXPECTED_LEMMA_COLUMNS = 4 # and 6,416 total rows
+NUM_EXPECTED_LEMMA_COLUMNS = 5 # and ??? total rows
+lemma_csv_rows = []
+lemma_csv_column_headers = []
 lexemeID_CNTRLemma_dict = {}
 
 
@@ -249,10 +254,10 @@ def loadSourceCollationTable() -> bool:
     # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Column headers: ({len(collation_csv_column_headers)}): {collation_csv_column_headers}")
     assert len(collation_csv_column_headers) == NUM_EXPECTED_COLLATION_COLUMNS, f"{len(collation_csv_column_headers)=} {NUM_EXPECTED_COLLATION_COLUMNS=}"
     # Check that the columns we use are still there somewhere
-    assert 'CollationID' in collation_csv_column_headers
-    assert 'VerseID' in collation_csv_column_headers
-    assert 'Classic' in collation_csv_column_headers
-    assert 'Medieval' in collation_csv_column_headers
+    assert 'CollationId' in collation_csv_column_headers
+    assert 'VerseId' in collation_csv_column_headers
+    assert 'SR' in collation_csv_column_headers # 'Probability' is gone now -- this field contains 'X' if row is included in SR and is blank if not
+    assert 'Classic' in collation_csv_column_headers # 'Medieval' is gone now
     assert 'GlossPre' in collation_csv_column_headers
     assert 'GlossHelper' in collation_csv_column_headers
     assert 'GlossWord' in collation_csv_column_headers
@@ -268,7 +273,7 @@ def loadSourceCollationTable() -> bool:
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Collation line {n} has {len(row)} columns instead of {NUM_EXPECTED_COLLATION_COLUMNS}!!!")
         row['Morphology'] = row['Morphology'].replace( '.', '·' ) # Replace period with middle dot for our use (helps to distinguish them later)
         collation_csv_rows.append(row)
-        unique_words.add(row['Medieval'])
+        unique_words.add(row['Classic']) # Was 'Medieval', but that's gone out of the collation table now
         for key, value in row.items():
             if value == 'NULL':
                 row[key] = value = None
@@ -308,7 +313,7 @@ def loadSourceWordTable() -> bool:
     # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Column headers: ({len(word_csv_column_headers)}): {word_csv_column_headers}")
     assert len(word_csv_column_headers) == NUM_EXPECTED_WORD_COLUMNS, f"{len(word_csv_column_headers)=} {NUM_EXPECTED_WORD_COLUMNS=}"
     # Check that the columns we use are still there somewhere
-    assert 'LexemeID' in word_csv_column_headers
+    assert 'LexemeId' in word_csv_column_headers
     assert 'Lemma' in word_csv_column_headers
     assert 'Medieval' in word_csv_column_headers
     assert 'Morphology' in word_csv_column_headers
@@ -345,8 +350,8 @@ def loadLemmaTable() -> bool:
     """ """
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nLoading lemma TSV file from {state.CNTRLemmaTableFilepath}…")
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_LEMMA_COLUMNS} columns…")
-    with open(state.CNTRLemmaTableFilepath, 'rt', encoding='utf-8') as lemma_tsv_file:
-        lemma_tsv_lines = lemma_tsv_file.readlines()
+    with open(state.CNTRLemmaTableFilepath, 'rt', encoding='utf-8') as lemma_csv_file:
+        lemma_tsv_lines = lemma_csv_file.readlines()
 
     # Remove any BOM
     if lemma_tsv_lines[0].startswith("\ufeff"):
@@ -354,23 +359,23 @@ def loadLemmaTable() -> bool:
         lemma_tsv_lines[0] = lemma_tsv_lines[0][1:]
 
     # Get the headers before we start
-    global lemma_tsv_column_headers
-    lemma_tsv_column_headers = [header for header in lemma_tsv_lines[0].strip().split('\t')]
+    global lemma_csv_column_headers
+    lemma_csv_column_headers = [header for header in lemma_tsv_lines[0].strip().split(',')]
     # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Column headers: ({len(collation_csv_column_headers)}): {collation_csv_column_headers}")
-    assert len(lemma_tsv_column_headers) == NUM_EXPECTED_LEMMA_COLUMNS, f"{lemma_tsv_column_headers=} {NUM_EXPECTED_LEMMA_COLUMNS=}"
+    assert len(lemma_csv_column_headers) == NUM_EXPECTED_LEMMA_COLUMNS, f"{lemma_csv_column_headers=} {NUM_EXPECTED_LEMMA_COLUMNS=}"
 
     # Read, check the number of columns, and summarise row contents all in one go
-    dict_reader = DictReader(lemma_tsv_lines, delimiter='\t')
+    dict_reader = DictReader(lemma_tsv_lines, delimiter=',')
     for n, row in enumerate(dict_reader):
         if len(row) != NUM_EXPECTED_LEMMA_COLUMNS:
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_LEMMA_COLUMNS}")
-        lemma_tsv_rows.append(row)
+        lemma_csv_rows.append(row)
 
-        ld_key = (row['LexemeID'],row['Lemma'])
+        ld_key = (row['LexemeId'],row['Lemma'])
         assert ld_key not in lexemeID_CNTRLemma_dict
-        lexemeID_CNTRLemma_dict[ld_key] = row['Greek']
+        lexemeID_CNTRLemma_dict[ld_key] = row['Medieval'] # was 'Greek'
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(lemma_tsv_rows):,} lemma TSV data rows.")
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(lemma_csv_rows):,} lemma TSV data rows.")
 
     return True
 # end of extract_VLT_NT_to_ESFM.loadLemmaTable
@@ -421,7 +426,7 @@ def export_esfm_literal_English_gloss() -> bool:
     with open(table_filepath, 'wt', encoding='utf-8') as table_output_file:
         table_output_file.write( 'Ref\tGreekWord\tSRLemma\tGreekLemma\tVLTGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\n' ) # Write TSV header row
         for collation_row_number, collation_row in enumerate(collation_csv_rows):
-            collation_id, verse_id = collation_row['CollationID'], collation_row['VerseID']
+            collation_id, verse_id = collation_row['CollationId'], collation_row['VerseId']
             assert len(collation_id) == 11 and collation_id.isdigit()
             assert collation_id.startswith( verse_id )
             book_number, chapter_number, verse_number, word_number \
@@ -520,13 +525,19 @@ def export_esfm_literal_English_gloss() -> bool:
             preformed_gloss_string = f"{'˱'+collation_row['GlossPre']+'˲ ' if collation_row['GlossPre'] else ''}{'˓'+collation_row['GlossHelper']+'˒ ' if collation_row['GlossHelper'] else ''}" \
                             f"{collation_row['GlossWord']}{' ‹'+collation_row['GlossPost']+'›' if collation_row['GlossPost'] else ''}"
             glossCapitalisationString = '' if collation_row['GlossCapitalization'] is None else collation_row['GlossCapitalization']
+
+            medieval_word = '' if collation_row['LexemeId'] is None else find_word_form(collation_row['LexemeId'], collation_row['Morphology'], collation_row['Classic'])
+            if glossCapitalisationString:
+                medieval_word = medieval_word.title()
+
             if collation_row['Koine'].startswith( '=' ): # it's a nomina sacra
                 assert 'N' not in glossCapitalisationString # already -- SR GNT doesn't currently use N -- see documentation of apply_gloss_capitalization() below
                 glossCapitalisationString = f'{glossCapitalisationString}N' # We add an extra letter
+
             adjusted_lemma, preformed_gloss_string = process_untranslated_words( collation_row, preformed_gloss_string )
-            medieval_lemma = '' if collation_row['LexemeID'] is None else find_lemma_forms(collation_row['LexemeID'], collation_row['Morphology'], collation_row['Classic'])[1]
-            # medieval_lemma = '' if collation_row['LexemeID']=='99999' else lexeme_ID_lemma_dict[collation_row['LexemeID']]
-            table_row = f"{ref}\t{collation_row['Medieval']}\t{adjusted_lemma}\t{medieval_lemma}\t{preformed_gloss_string}\t{glossCapitalisationString}\t{'' if collation_row['Probability'] is None else collation_row['Probability']}\t{collation_row['LexemeID']}\t{collation_row['Role']}\t{collation_row['Morphology']}"
+            medieval_lemma = '' if collation_row['LexemeId'] is None else find_lemma_forms(collation_row['LexemeId'], collation_row['Morphology'], collation_row['Classic'])[1]
+            # medieval_lemma = '' if collation_row['LexemeId']=='99999' else lexeme_ID_lemma_dict[collation_row['LexemeId']]
+            table_row = f"{ref}\t{medieval_word}\t{adjusted_lemma}\t{medieval_lemma}\t{preformed_gloss_string}\t{glossCapitalisationString}\t{collation_row['SR']}\t{collation_row['LexemeId']}\t{collation_row['Role']}\t{collation_row['Morphology']}"
             assert '"' not in table_row # Check in case we needed any escaping
             table_output_file.write( f'{table_row}\n' )
             # NOTE: The above code writes every table row, even for variants which aren't in the SR (but their probability column will be negative)
@@ -546,14 +557,15 @@ def export_esfm_literal_English_gloss() -> bool:
 # end of extract_VLT_NT_to_ESFM.export_esfm_literal_English_gloss
 
 
+
 find_lemma_forms_lemma_index = {}
 def find_lemma_forms(given_lexemeID:str, given_morphology:str, given_classic_word:str) -> Tuple[str,str]:
     """
     Using the word table
-        and given the above two fields from the collation table,
-        find the CNTR romanised lemma and the medieval form.
+        and given the above three fields from the collation table,
+        find the CNTR romanised lemma and the medieval form of the lemma.
     """
-    # print(f"find_lemma_forms( {given_lexemeID=}, {given_morphology=}, {given_classic_word=} )…")
+    # print(f"\nfind_lemma_forms( {given_lexemeID=}, {given_morphology=}, {given_classic_word=} )…")
     assert given_lexemeID.isdigit()
     assert given_morphology
     assert given_classic_word
@@ -561,16 +573,42 @@ def find_lemma_forms(given_lexemeID:str, given_morphology:str, given_classic_wor
         # print( f"{word_csv_column_headers=}" )
         for word_row in word_csv_rows:
             # print( f"{word_row=}" )
-            new_key = (word_row['LexemeID'],word_row['Morphology'],word_row['Classic'])
+            new_key = (word_row['LexemeId'],word_row['Morphology'],word_row['Classic'])
             assert new_key not in find_lemma_forms_lemma_index # Check for unexpected duplicates
             find_lemma_forms_lemma_index[new_key] = word_row['Lemma']
         print( f"    Created {len(find_lemma_forms_lemma_index)=:,}" )
 
     found_CNTR_lemma = find_lemma_forms_lemma_index[(given_lexemeID,given_morphology,given_classic_word)]
     found_medieval_lemma = lexemeID_CNTRLemma_dict[(given_lexemeID,found_CNTR_lemma)]
-    # print( f"{given_lexemeID=} {given_morphology=} {given_classic_word=} --> {found_CNTR_lemma=} {found_medieval_lemma=}")
+    # print( f"  {given_lexemeID=} {given_morphology=} {given_classic_word=} --> {found_CNTR_lemma=} {found_medieval_lemma=}")
     return found_CNTR_lemma, found_medieval_lemma
 # end of extract_VLT_NT_to_ESFM.find_lemma_forms
+
+
+find_word_form_index = {}
+def find_word_form(given_lexemeID:str, given_morphology:str, given_classic_word:str) -> str:
+    """
+    Using the word table
+        and given the above three fields from the collation table,
+        find the medieval form of the word.
+    """
+    # print(f"\nfind_word_form( {given_lexemeID=}, {given_morphology=}, {given_classic_word=} )…")
+    assert given_lexemeID.isdigit()
+    assert given_morphology
+    assert given_classic_word
+    if not find_word_form_index: # index the lemmas the first time
+        # print( f"{word_csv_column_headers=}" )
+        for word_row in word_csv_rows:
+            # print( f"{word_row=}" )
+            new_key = (word_row['LexemeId'],word_row['Morphology'],word_row['Classic'])
+            assert new_key not in find_word_form_index # Check for unexpected duplicates
+            find_word_form_index[new_key] = word_row['Medieval']
+        print( f"    Created {len(find_word_form_index)=:,}" )
+
+    found_CNTR_word = find_word_form_index[(given_lexemeID,given_morphology,given_classic_word)]
+    # print( f"  {given_lexemeID=} {given_morphology=} {given_classic_word=} --> {found_CNTR_word=}")
+    return found_CNTR_word
+# end of extract_VLT_NT_to_ESFM.find_word_form
 
 
 def adjust_lemma(given_lemma:str, given_Greek_word:str) -> str:
@@ -617,9 +655,11 @@ def adjust_lemma(given_lemma:str, given_Greek_word:str) -> str:
 def process_untranslated_words( given_collation_row, given_preformed_gloss_string:str ) -> Tuple[str,str]:
     """
     """
+    # print( f"\nprocess_untranslated_words( {given_collation_row=}, {given_preformed_gloss_string=} )" )
     adjusted_preformed_gloss_string = given_preformed_gloss_string
-    their_lemma,medieval_lemma = ('','') if given_collation_row['LexemeID'] is None else find_lemma_forms( given_collation_row['LexemeID'], given_collation_row['Morphology'], given_collation_row['Classic'] )
-    adjusted_lemma = adjust_lemma( their_lemma, given_collation_row['Medieval'])
+    their_lemma,medieval_lemma = ('','') if given_collation_row['LexemeId'] is None else find_lemma_forms( given_collation_row['LexemeId'], given_collation_row['Morphology'], given_collation_row['Classic'] )
+    # print( f"  {their_lemma=} {medieval_lemma=}" ); halt
+    adjusted_lemma = adjust_lemma( their_lemma, medieval_lemma) # given_collation_row['Medieval']
     if adjusted_preformed_gloss_string=='-' or adjusted_preformed_gloss_string.startswith( '-¦' ) or adjusted_preformed_gloss_string.startswith( '¶-¦' ): # an untranslated word from the VLT
         # NOTE: All of these new gloss strings also have to be entered into cleanupVLT.commandTable.tsv
         if adjusted_lemma == 'ho':
@@ -641,7 +681,7 @@ def process_untranslated_words( given_collation_row, given_preformed_gloss_strin
         elif adjusted_lemma == 'te': adjusted_preformed_gloss_string = adjusted_preformed_gloss_string.replace( '-', '¬and/both', 1 ) # Strongs #5037
         elif adjusted_lemma == 'ara': adjusted_preformed_gloss_string = adjusted_preformed_gloss_string.replace( '-', '¬/anxiety/', 1 ) # Strongs #687 (only occurs once)
         elif adjusted_lemma == 'mēte': adjusted_preformed_gloss_string = adjusted_preformed_gloss_string.replace( '-', '¬neither/nor', 1 ) # Strongs #3383 (only occurs once)
-        else: print( f"      What is untranslated word from '{adjusted_preformed_gloss_string}' and '{adjusted_lemma}' in {given_collation_row['CollationID']} {given_collation_row['Medieval']} {adjusted_lemma} {given_collation_row['Morphology']}?" )
+        else: print( f"      What is untranslated word from '{adjusted_preformed_gloss_string}' and '{adjusted_lemma}' in {given_collation_row['CollationId']} {given_collation_row['Medieval']} {adjusted_lemma} {given_collation_row['Morphology']}?" )
 
     # The problem is that capitalization has already been applied
     if adjusted_preformed_gloss_string != given_preformed_gloss_string:
@@ -661,15 +701,15 @@ def get_verse_rows(given_collation_rows: List[dict], row_index: int) -> List[lis
     """
     # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"get_verse_rows({row_index})")
     this_verse_row_list = []
-    this_verseID = given_collation_rows[row_index]['VerseID']
-    if row_index > 0: assert given_collation_rows[row_index-1]['VerseID'] != this_verseID
+    this_verseID = given_collation_rows[row_index]['VerseId']
+    if row_index > 0: assert given_collation_rows[row_index-1]['VerseId'] != this_verseID
     for ix in range(row_index, len(given_collation_rows)):
         row = given_collation_rows[ix]
-        if row['VerseID'] == this_verseID:
+        if row['VerseId'] == this_verseID:
             this_verse_row_list.append(row)
         else: # done
             break
-    check_verse_rows(this_verse_row_list, stop_on_error=True)
+    check_verse_rows(this_verse_row_list, stop_on_error=False)
     return this_verse_row_list
 # end of extract_VLT_NT_to_ESFM.get_verse_rows
 
@@ -684,9 +724,9 @@ def check_verse_rows(given_verse_row_list: List[dict], stop_on_error:bool=False)
             return
         gloss_order_set.add(row['GlossOrder'])
     if len(gloss_order_set) < len(given_verse_row_list):
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"ERROR: Verse rows for {given_verse_row_list[0]['VerseID']} have duplicate GlossOrder fields!")
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"ERROR: Verse rows for {given_verse_row_list[0]['VerseId']} have duplicate GlossOrder fields!")
         for some_row in given_verse_row_list:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {some_row['CollationID']} {some_row['VariantID']} {some_row['Align']} '{some_row['Koine']}' '{some_row['GlossWord']}' {some_row['GlossOrder']} Role={some_row['Role']} Syntax={some_row['Syntax']}")
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {some_row['CollationId']} {some_row['Align']} '{some_row['Koine']}' '{some_row['GlossWord']}' {some_row['GlossOrder']} Role={some_row['Role']} Syntax={some_row['Syntax']}")
         if stop_on_error: gloss_order_fields_for_verse_are_not_unique
 # end of extract_VLT_NT_to_ESFM.check_verse_rows
 
@@ -699,14 +739,14 @@ def get_gloss_word_index_list(given_verse_row_list: List[dict]) -> List[List[int
 
     Returns a list of lists of relative word numbers.
     """
-    verse_id = given_verse_row_list[0]['VerseID']
+    verse_id = given_verse_row_list[0]['VerseId']
 
     # Make up the display order list for this new verse
     gloss_order_dict = {}
     for index,this_verse_row in enumerate(given_verse_row_list):
-        if this_verse_row['Probability'] and not this_verse_row['CollationID'].endswith('000'): # it's in the text and not word zero
+        if this_verse_row['SR']=='X' and not this_verse_row['CollationId'].endswith('000'): # it's in the text and not word zero
             try: gloss_order_int = int(this_verse_row['GlossOrder'])
-            except ValueError: gloss_order_int = int(this_verse_row['CollationID'][8:]) # Use the word number if no GlossOrder field yet
+            except ValueError: gloss_order_int = int(this_verse_row['CollationId'][8:]) # Use the word number if no GlossOrder field yet
             assert gloss_order_int not in gloss_order_dict, f"ERROR: {verse_id} has multiple GlossOrder={gloss_order_int} entries!"
             gloss_order_dict[gloss_order_int] = index
     base_gloss_display_order_list = [index for (_gloss_order,index) in sorted(gloss_order_dict.items())]
@@ -722,7 +762,7 @@ def get_gloss_word_index_list(given_verse_row_list: List[dict]) -> List[List[int
             result_list.append(these_words_base_display_index_list)
             these_words_base_display_index_list = []
     if these_words_base_display_index_list:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Why did get_gloss_word_index_list() for {given_verse_row_list[0]['VerseID']} ({len(given_verse_row_list)} rows)"
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Why did get_gloss_word_index_list() for {given_verse_row_list[0]['VerseId']} ({len(given_verse_row_list)} rows)"
               f" have left-over words: ({len(these_words_base_display_index_list)}) {these_words_base_display_index_list}"
               f" from glossInserts: {[row['GlossInsert'] for row in given_verse_row_list]}")
     assert not these_words_base_display_index_list # at end of loop
@@ -879,7 +919,7 @@ def preform_gloss_and_word_number(thisList:List[Dict[str,str]], given_verse_row_
             if '_' in glossHelper:
                 glossHelper_bits = glossHelper.split('_', 1)
             else:
-                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Warning: Can't insert '{last_glossWord}' at underline in '{glossHelper}' at {given_verse_row['CollationID']}")
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Warning: Can't insert '{last_glossWord}' at underline in '{glossHelper}' at {given_verse_row['CollationId']}")
                 glossHelper_bits = glossHelper, ''
             preformed_word_string = f"{pre_punctuation}{'˱'+glossPre+'˲_' if glossPre else ''}˓{glossHelper_bits[0]}˒_ {last_glossWord} _˓{glossHelper_bits[1]}˒_" \
                                     f"{glossWord}{' '+BACKSLASH+'add '+glossPost+BACKSLASH+'add*' if glossPost else ''}{post_punctuation}"
@@ -906,7 +946,7 @@ def preform_gloss_and_word_number(thisList:List[Dict[str,str]], given_verse_row_
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Warning: Unexpected GlossInsert = '{last_glossInsert}' (ignored) {thisList=} {given_verse_row_index=}")
     else:
         if glossInsert and last_glossInsert and glossInsert != last_glossInsert:
-            msg = f"ERROR: preform_gloss() for {given_verse_row['CollationID']} should not have {glossInsert=} but '{last_glossInsert}'"
+            msg = f"ERROR: preform_gloss() for {given_verse_row['CollationId']} should not have {glossInsert=} but '{last_glossInsert}'"
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, msg)
             last_glossWord = f'{msg} {last_glossWord}' # Also insert the error into the returned text so it gets noticed
         if not glossInsert: # (If we do have glossInsert, leave the capitalization for the next round)

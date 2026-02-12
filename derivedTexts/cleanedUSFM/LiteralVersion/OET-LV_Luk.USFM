@@ -4,7 +4,7 @@
 \rem ESFM v0.6 LUK
 \rem WORDTABLE OET-LV_NT_word_table.tsv
 \rem The VLT source table used to create this file is Copyright © 2022 by https://GreekCNTR.org
-\rem ESFM file originally created 2025-11-12 09:01 by Extract_VLT_NT_to_ESFM v0.99
+\rem ESFM file originally created 2026-02-10 09:39 by Extract_VLT_NT_to_ESFM v0.99
 \rem USFM file edited by ScriptedBibleEditor v0.34
 \h Loukas
 \toc1 Loukas
@@ -174,11 +174,11 @@
 \v 23 And \nd Yaʸsous\nd* himself was beginning about thirty years, being \add the\add*_son, as was_being_thought, of_Yōsaʸf/(Yōşēf), the \add son\add* of_Aʸli/(ˊĒlī),
 \v 24 the \add son\add* of_Maththat/(?), the \add son\add* of_Leui/(Lēvī), the \add son\add* of_Melⱪi/(Melek), the \add son\add* of_Yanna/(Yānāh?), the \add son\add* of_Yōsaʸf,
 \v 25 the \add son\add* of_Maththathias/(Mattit\sup yāh\sup*), the \add son\add* of_Amōs/(ʼĀmōʦ), the \add son\add* of_Naoum/(Naḩūm), the \add son\add* of_Esli/(ʼElyəhōˊēynay?), the \add son\add* of_Nangai/(Nogah?),
-\v 26 the \add son\add* of_Maʼath/(Māˊaţ?), the \add son\add* of_Maththathias, the \add son\add* of_Semei/(Shimˊī), the \add son\add* of_Yōsaʸf, the \add son\add* of_Youda/(Yuţţāh/yəhūdāh),
+\v 26 the \add son\add* of_Maʼath/(Māˊaţ?), the \add son\add* of_Maththathias, the \add son\add* of_Semei/(Shimˊī), the \add son\add* of_Yōsaʸf, the \add son\add* of_Youda/(Yəhūdāh),
 \v 27 the \add son\add* of_Yōanan/(?), the \add son\add* of_Ɽaʸsa/(Rəfāyāh?), the \add son\add* of_Zorobabel/(Zərubāⱱel), the \add son\add* of_Salathiaʸl/(Shəʼaltiy\sup ʼēl\sup*), the \add son\add* of_Naʸri/(Nēriy\sup yāh\sup*),
 \v 28 the \add son\add* of_Melⱪi/(Melek), the \add son\add* of_Addi/(ˊAdī?), the \add son\add* of_Kōsam/(Qāşam?), the \add son\add* of_Elmōdam/(ʼAlmōdād?), the \add son\add* of_Aʸr/(ˊĒr?),
-\v 29 the \add son\add* of_Yaʸsous, the \add son\add* of_Eliezer/(ʼElīˊezer), the \add son\add* of_Yōreim/(Yōrām?), the \add son\add* of_Matthan/(Mattān), the \add son\add* of_Leui/(Lēvī),
-\v 30 the \add son\add* of_Sumeōn/(Shimˊōn), the \add son\add* of_Youda/(Yəhūdāh), the \add son\add* of_Yōsaʸf, the \add son\add* of_Yōnan/(?), the \add son\add* of_Eliakeim/(ʼElyāqīm),
+\v 29 the \add son\add* of_Yaʸsous/(Yəhōshūˊa), the \add son\add* of_Eliezer/(ʼElīˊezer), the \add son\add* of_Yōreim/(Yōrām?), the \add son\add* of_Matthan/(Mattān), the \add son\add* of_Leui/(Lēvī),
+\v 30 the \add son\add* of_Sumeōn/(Shimˊōn), the \add son\add* of_Youda, the \add son\add* of_Yōsaʸf, the \add son\add* of_Yōnan/(?), the \add son\add* of_Eliakeim/(ʼElyāqīm),
 \v 31 the \add son\add* of_Meleas/(Məlēʼāh?), the \add son\add* of_Mainan/(?), the \add son\add* of_Maththatha/(Maththattāh), the \add son\add* of_Nathan/(Nātān)/(Nātān), the \add son\add* of_Dawid/(Dāvid),
 \v 32 the \add son\add* of_Yessai/(Yishay), the \add son\add* of_Yōbaʸd/Ōbaʸd/(ˊŌⱱēd), the \add son\add* of_Boʼoz/(Boˊaz), the \add son\add* of_Sala/(Shelaḩ), the \add son\add* of_Naʼassōn/(Naḩshōn),
 \v 33 the \add son\add* of_Aminadab/(ˊAmminādāⱱ), the \add son\add* of_Admin/(Rām?), the \add son\add* of_Arni/(Rām?), the \add son\add* of_Hesrōm/(Ḩeʦrōn), the \add son\add* of_Fares/(Fereʦ), the \add son\add* of_Youda,
@@ -285,7 +285,7 @@
 \v 7 And the scribes and the Farisaios_\add party\add* were_watching_ him _closely, whether he_will_be_healing on the day_of_rest, in_order_that they_may_find to_be_accusing against_him.
 \v 8 But he he_had_known the speculations of_them, and said to_the man the hand being which withered: Be_raising, and stand in the midst. And having_risen_up, he_stood.
 \v 9 And the \nd Yaʸsous\nd* said, to them: I_am_asking you_all, whether it_is_permitting on_the day_of_rest to_do_good or to_do_evil, to_save life or to_destroy?
-\v 10 And having_looked_around at_all them, he_said to_him: Stretch_out the hand of_you. And he he_did, and the hand of_him. was_restored.
+\v 10 And having_looked_around at_all them, he_said to_him: Stretch_out the hand of_you. And he he_did, and the hand of_him. was_restored
 \v 11 But they were_filled with_folly, and were_discussing with one_another what wishfully they_might_do to_ the _\nd Yaʸsous/(Yəhōshūˊa)\nd*.
 \v 12 And it_became in the these days, him to_come_out on the mountain to_pray, and he_was spending_the_night in the prayer the to_\nd god\nd*.
 \v 13 And when it_became day, he_calling_out the apprentices/followers of_him, and having_chosen twelve from them, whom also ˓he˒_named ambassadors:
@@ -318,12 +318,12 @@
 \v 40 \add A\add*_apprentice/follower is not above the teacher, but everyone having_been_prepared will_be as the teacher of_him.
 \v 41 And why are_you_looking at_the speck which in the eye of_the brother of_you, but you_are_ not _observing the beam which in your own eye?
 \v 42 How are_you_being_able to_be_saying to_the brother of_you: Brother, allow I_may_throw_out the speck which in the eye of_you, not seeing yourself the beam in the eye of_you? Hypocrite, first throw_out the beam from the eye of_you, and then you_will_be_seeing_clearly to_throw_out the speck which in the eye of_the brother of_you.
-\v 43 For/Because there_is not good tree producing bad fruit, nor again \add a\add*_ bad _tree producing good fruit.
+\v 43 For/Because there_is not good tree producing bad fruit, nor contrastly \add a\add*_ bad _tree producing good fruit.
 \v 44 For/Because each tree is_being_known by its own fruit. For/Because they_are_ not _gathering figs from thorns, nor are_they_picking grapes from \add a\add*_thorn_bush.
 \v 45 The good person is_bringing_forth the good out_of the good treasure of_the heart of_him, and the evil \add person\add* is_bringing_forth the evil out_of the evil. For/Because the mouth of_him is_speaking out_of. \add the\add*_excess. of_\add the\add*_heart.
 \v 46 And why are_you_all_calling me \nd master\nd*, \nd master\nd*, and you_all_are_ not _doing what I_am_saying?
 \v 47 Everyone who coming to me, and hearing of_the messages of_me and doing them, I_will_be_showing to_you_all to_whom he_is similar:
-\v 48 he_is similar to_\add a\add*_man building \add a\add*_house, who dug and deepened and laid \add a\add*_foundation on the rock, and having_become \add a\add*_flood the flood dashed_against to_ the that _house, and it_was_ not _able to_shake it, because_of the \add thing\add* to_have_built it well.
+\v 48 he_is similar to_\add a\add*_man building \add a\add*_house, who dug and deepened and laid \add a\add*_foundation on the rock, and having_become flood the flood dashed_against to_ the that _house, and it_was_ not _able to_shake it, because_of the \add thing\add* to_have_built it well.
 \v 49 But the \add one\add* having_heard and not having_done, is similar to_\add a\add*_man having_built \add a\add*_house on the ground without \add a\add*_foundation, to_which dashed_against the flood and immediately it_fell_in, and the burst of_ the that _house became great.
 \c 7
 \nb
@@ -413,7 +413,7 @@
 \v 32 And there was \add a\add*_herd of_ many _pigs being_fed on the mountain, and they_implored him that he_may_permit to_them to_come_in into those. And he_permitted to_them.
 \v 33 And the demons having_come_out from the man, they_came_in into the pigs, and the herd rushed down the steep_bank into the lake, and was_drowned.
 \v 34 And the \add ones\add* feeding \add them\add* having_seen, the \add thing\add* having_become, they_fled and they_reported to the city and to the country.
-\v 35 And they_came_out to_see the \add thing\add* having_become, and came to the \nd Yaʸsous/(Yəhōshūˊa)\nd*, and found the man sitting, from whom the demons came_out, having_been_clothed and being_sensible before the feet of_ the _\nd Yaʸsous\nd*, and they_were_afraid.
+\v 35 And they_came_out to_see the \add thing\add* having_become, and they_came to the \nd Yaʸsous/(Yəhōshūˊa)\nd*, and found the man sitting, from whom the demons came_out, having_been_clothed and being_sensible before the feet of_ the _\nd Yaʸsous\nd*, and they_were_afraid.
 \v 36 And the \add ones\add* having_seen \add it\add* reported to_them, how the \add one\add* having_been_demon_possessed was_healed.
 \v 37 And all the multitude of_the surrounding_region of_the Gerasaʸnōn asked, him, to_go_away from them, because they_were_being_gripped_with with_ great _fear. And he having_boarded, into \add the\add*_boat, returned.
 \v 38 But the man from whom had_come_out the demons, was_beseeching of_him, to_be with him. But he_sent_ him _away saying,
@@ -425,7 +425,7 @@
 \v 44 having_approached behind, she_touched against_the fringe of_the garment of_him, and immediately the hemorrhage of_the blood of_her stopped.
 \v 45 And the \nd Yaʸsous/(Yəhōshūˊa)\nd* said: Who \add is\add* the \add one\add* having_touched against_me? And disowning \add it\add* all, the Petros said: Master, the crowds are_pressing you and they_are_pressing_in.
 \v 46 But the \nd Yaʸsous\nd* said: Someone touched against_me, because/for I knew power having_come_out from me.
-\v 47 And the woman having_seen that she_ not _escaped_notice, came trembling and having_fallen_before to_him, she_reported before all for what cause she_touched against_him, the people, and how she_was_healed immediately.
+\v 47 And the woman having_seen that she_ not _escaped_notice, came trembling and having_fallen_before to_him, she_reported before all for that cause she_touched against_him, the people, and how she_was_healed immediately.
 \v 48 And he said to_her: Daughter, the faith of_you has_healed you, be_going in peace.
 \v 49 Still of_him speaking, someone is_coming from the synagogue_leader saying, that the daughter of_you ˓Has˒_died, be_troubling the teacher no_longer.
 \v 50 But the \nd Yaʸsous\nd* having_heard, answered to_him: Be_ not _fearing, only be_believing, and she_will_be_being_healed.
@@ -494,7 +494,7 @@
 \v 55 But having_been_turned, he_gave_rebuke to_them.
 \v 56 And they_were_gone to another village.
 \v 57 And going of_them on the road, someone said to him: I_will_be_following after_you wherever if you_may_be_going_away.
-\v 58 And the \nd Yaʸsous\nd* said to_him: - foxes are_having burrows, and the birds of_the sky nests, but the son of_ the _man is_ not _having where his head may_be_laying.
+\v 58 And the \nd Yaʸsous\nd* said to_him: - foxes are_having burrows, and the birds of_the sky nests, but the son of_ the _man is_ not _having somewhere his head may_be_laying.
 \v 59 And he_said to another: Be_following after_me. But he said: \nd master\nd*, permit to_me having_gone_away, first to_bury the father of_me.
 \v 60 But he_said to_him: Leave the dead to_bury the dead by_themselves, but you having_gone_away, be_proclaiming the kingdom of_ the _\nd god\nd*.
 \v 61 And also another he_said: I_will_be_following after_you, \nd master\nd*, but first permit to_me to_bid_goodbye to_the \add ones\add* at the home of_me.
@@ -546,7 +546,7 @@
 \c 11
 \nb
 \v 1 And it_became at the \add time\add* him to_be in \add a\add*_ certain _place praying, when he_ceased, someone of_the apprentices/followers of_him said to him: \nd master\nd*, teach us to_be_praying, as also Yōannaʸs taught the apprentices/followers of_him.
-\v 2 And he_said to_them: Whenever you_all_may_be_praying, be_saying: father, let_ the name of_you _be_sanctified. let_ the kingdom of_you. _Come.
+\v 2 And he_said to_them: Whenever you_all_may_be_praying, be_saying: father, let_ the name of_you _be_sanctified. let_ the kingdom of_you. _come
 \v 3 Be_giving the the to_us daily_needed bread of_us, which in_every day.
 \v 4 And forgive to_us the sins of_us, because/for also we_ ourselves _are_forgiving to_everyone owing to_us. And not may_you_carry_in us into temptation.
 \v 5 And he_said to them: Who of you_all will_be_having \add a\add*_friend, and will_be_going to him at_midnight, and may_say to_him: Friend, lend three loaves to_me,
@@ -617,7 +617,7 @@
 \v 14 But he he_said to_him: Man, who me appointed \add a\add*_judge or arbitrator over you_all?
 \v 15 And he_said to them: Be_watching and be_keeping from all greediness, because the life of_him is not in the \add thing\add* to_be_being_plentiful to_anyone, of the \add things\add* possessing to_him.
 \v 16 And he_spoke \add a\add*_parable to them saying: The land of_\add a\add*_ certain rich _man yielded_well.
-\v 17 And he_was_reasoning by himself saying: What I_may_do, because I_am_ not _having where I_will_be_gathering_together the fruits of_me?
+\v 17 And he_was_reasoning by himself saying: What I_may_do, because I_am_ not _having somewhere I_will_be_gathering_together the fruits of_me?
 \v 18 And he_said: This I_will_be_doing: I_will_be_taking_down the barns and greater \add barns\add* of_me and I_will_be_building, I_will_be_gathering_together there all the grain and the good \add things\add* of_me.
 \v 19 And I_will_be_saying to_the soul of_me: Soul, you_are_having many good \add things\add* lying for many years, be_resting, eat, drink, be_being_gladdened.
 \v 20 But the \nd god\nd* said to_him: Foolish, on_this the night, requesting of you the soul of_you, and what you_prepared, to_whom it_will_be?
@@ -640,7 +640,7 @@
 \v 37 Blessed \add are\add* the those slaves, whom the \nd master\nd* having_come, will_be_finding watching. Truly, I_am_saying to_you_all that he_will_be_girding_about \add himself\add* and will_be_reclining them, and having_come_up, he_will_be_serving unto_them.
 \v 38 And_if he_may_come in the second even_if in the third watch, and may_find \add them\add* thus, blessed are those. 
 \v 39 But be_knowing this, that if the home_owner had_known in_what hour the thief is_coming, he_watched would and he_ would not _allowed the house of_him to_be_dug_through.
-\v 40 Also you_all be_becoming ready, because you_all_are_ not _supposing in_what hour, the son of_ the _man is_coming.
+\v 40 Also you_all be_becoming ready, because you_all_are_ not _supposing in_that hour, the son of_ the _man is_coming.
 \v 41 And the Petros said: \nd master\nd*, are_you_telling the this parable to us, or also to all?
 \v 42 And the \nd master\nd* said: Who consequently is the faithful prudent manager the, whom the \nd master\nd* will_be_appointing over the service of_him, which to_be_giving ration in season?
 \v 43 Blessed \add is\add* the that slave, whom the master of_him having_come, will_be_finding doing thus.
@@ -681,7 +681,7 @@
 \v 17 And saying of_him these \add things\add*, all the \add ones\add* opposing to_him were_being_disgraced, and all the crowd was_rejoicing at all the glorious \add things\add* which becoming by him.
 \v 18 Therefore he_was_saying: To_what is the kingdom of_ the _\nd god\nd* similar, and to_what I_will_be_likening it?
 \v 19 It_is similar to_\add a\add*_seed of_mustard, which \add a\add*_man having_taken, throw into garden of_himself, and it_grew and became into \add a\add*_tree, and The birds of_the sky nested in the branches of_it.
-\v 20 And again he_said: To_what I_will_be_likening the kingdom of_ the _\nd god\nd*?
+\v 20 And furthermore he_said: To_what I_will_be_likening the kingdom of_ the _\nd god\nd*?
 \v 21 It_is similar to_leaven, which \add a\add*_woman having_taken, hid_in in three satons of_wheat_flour, until all of_which was_leavened.
 \v 22 And he_was_passing_ by _through cities and villages teaching, and making journey toward Hierousalaʸm/(Yərūshālayim).
 \v 23 And someone said to_him: \nd master\nd*, if the \add ones\add* being_saved \add are\add* few? And he said to them,
@@ -790,7 +790,7 @@
 \v 18 Everyone which sending_away the wife of_him and marrying another, is_committing_adultery, and every the \add one\add* marrying having_been_sent_away from \add a\add*_husband, is_committing_adultery.
 \v 19 And \add a\add*_ certain _man was rich, and was_dressing_in purple and linen, being_gladdened splendidly in_every day.
 \v 20 And \add a\add*_ certain _poor \add man\add* by_\add the\add*_name Lazaros, had_been_laid at the gate of_him, having_been_ulcerated
-\v 21 and desiring to_be_satisfied from which which falling falling from the table of_the rich \add man\add*, but even the dogs coming were_licking_up the ulcers of_him.
+\v 21 and desiring to_be_satisfied from which falling from the table of_the rich \add man\add*, but even the dogs coming were_licking_up the ulcers of_him.
 \v 22 And it_became the poor \add man\add* to_die_off, and him to_be_carried_away by the messengers into the bosom of_Abraʼam/(ʼAⱱrāhām). And the rich \add man\add* died_off also and was_buried.
 \v 23 And in the Haidaʸs having_lifted_up the eyes of_him, being in torments, he_is_seeing Abraʼam from afar, and Lazaros in the bosoms of_him.
 \v 24 And he having_called said, father Abraʼam, show_mercy to_me and send Lazaros, in_order_that he_may_dip the extremity of_the finger of_him in_water, and may_cool_down the tongue of_me, because I_am_being_distressed in the this flame.
@@ -832,7 +832,7 @@
 \v 27 they_were_eating, they_were_drinking, they_were_marrying, they_were_being_betrothed, until that day Nōe came_in into the box, and the flood came and destroyed all.
 \v 28 Likewise as it_became in the days of_Lōt/(Lōţ): they_were_eating, they_were_drinking, they_were_buying, they_were_selling, they_were_planting, they_were_building, 
 \v 29 but in_that day Lōt/(Lōţ) came_out from Sodoma/(Şədom), fire and brimstone rained from \add the\add*_sky and destroyed all.
-\v 30 These \add things\add* it_will_be according_to in_that day, the son of_ the _man is_being_revealed.
+\v 30 The_same it_will_be according_to in_that day, the son of_ the _man is_being_revealed.
 \v 31 In that the day, who will_be on the housetop, and the goods of_him in his house, him_let_ not _come_down to_take_away them, and the \add one\add* in \add the\add*_field, likewise him_let_ not _return to the \add things\add* back.
 \v 32 Be_remembering about_the wife of_Lōt/(Lōţ).
 \v 33 Whoever if may_seek to_procure the life of_him, will_be_losing it, and whoever wishfully may_lose \add it\add*, will_be_keeping_ it _alive.
@@ -849,7 +849,7 @@
 \v 5 because_of this the widow which surely to_be_bringing_about trouble to_me, I_will_be_avenging her, in_order_that not coming to \add the\add*_end she_may_be_harassing me.
 \v 6 And the \nd master\nd* said: Hear what the judge of_ the _unrighteousness is_saying.
 \v 7 And the \nd god\nd* by_no_means may_ not _execute the vengeance of_the chosen of_him, which shouting to_him day and night, and is_being_patient over them?
-\v 8 I_am_saying to_you_all that he_will_be_executing the vengeance of_them in quickness. However the son of_ the _man having_come, /anxiety/ ˓will˒_he_be_finding the faith on the earth?
+\v 8 I_am_saying to_you_all that he_will_be_executing the vengeance of_them in quickness. However the son of_ the _man having_come, consequently ˓will˒_he_be_finding the faith on the earth?
 \v 9 And he_ also _spoke the this parable to some which having_trusted in themselves that they_are righteous and scorning the others:
 \v 10 Two men went_up into the temple to_pray, the one \add was\add* \add a\add*_Farisaios_\add party_member\add*, and the other \add was\add* \add a\add*_tax_collector.
 \v 11 The Farisaios_\add party_member\add* having_been_stood was_praying these \add things\add* to himself: - \nd god\nd*, I_am_giving_thanks to_you that I_am not as the rest of_the people, swindling, unrighteous, adulterers, or even as this the tax_collector.
@@ -1116,7 +1116,7 @@
 \v 15 But not_even Haʸrōdaʸs \add did\add*, because/for he_sent_ him _up. to us. And see, nothing worthy of_death is having_been_done by_him.
 \v 16 Therefore having_disciplined him, I_will_be_sending_away \add him\add*.
 \v 17
-\v 18 But they_cried_out all_together saying: Be_taking_away this \add man\add*, and send_ The Barabbas _away to_us. 
+\v 18 But They_cried_out all_together saying: Be_taking_away this \add man\add*, and send_ The Barabbas _away to_us. 
 \v 19 Who was, having_been_throw in the prison because_of \add a\add*_certain insurrection having_become in the city and murder.
 \v 20 And again the Pilatos called_out to_them, wanting to_send_ The \nd Yaʸsous/(Yəhōshūˊa)\nd* _away.
 \v 21 But they were_crying_out saying: Be_executing_on_a_stake, be_executing_on_a_stake him.
@@ -1150,7 +1150,7 @@
 \v 49 And all the acquaintances to_him had_stood from afar, and \add the\add*_women who accompanying with_him from the Galilaia/(Gālīl), seeing these \add things\add*.
 \v 50 And see, \add a\add*_man by_\add the\add*_name Yōsaʸf/(Yōşēf), being \add a\add*_council_member, and \add a\add*_ good _man and righteous
 \v 51 (this \add one\add* was not having_consented_with with_the counsel and the practice of_them), from Arimathaia, \add a\add*_city of_the Youdaiōns, who was_waiting_for the kingdom of_ the _\nd god\nd*.
-\v 52 He having_approached to_ the _Pilatos, requested the body of_ the _\nd Yaʸsous/(Yəhōshūˊa)\nd*.
+\v 52 This \add man\add* having_approached to_ the _Pilatos, requested the body of_ the _\nd Yaʸsous/(Yəhōshūˊa)\nd*.
 \v 53 And having_taken_down \add it\add*, he_wrapped it in_\add a\add*_linen_cloth and put him in \add a\add*_ rock_cut _tomb, where not_yet no_one was not lying.
 \v 54 And it_was \add the\add*_day of_preparation, and \add the\add*_day_of_rest was_dawning.
 \v 55 And the women having_followed, who were having_come_together from the Galilaia with_him, saw the tomb and how the body of_him was_laid.
@@ -1176,7 +1176,7 @@
 \v 17 And he_said to them: What_all \add are\add* the these messages that you_all_are_exchanging with one_another walking? And they_were_stood \add still\add* downthrow.
 \v 18 And \add the\add*_one by_\add the\add*_name Kleopas answering said to him, are_ you only _sojourning to_Hierousalaʸm and you_ not _knew the \add things\add* having_become in it in the these days?
 \v 19 And he_said to_them: What \add things\add*? And they said to_him: The \add things\add* concerning \nd Yaʸsous\nd* the Nazaraʸnos, who became \add a\add*_man, \add a\add*_prophet, powerful in work and message, before the \nd god\nd* and all the people,
-\v 20 and so_that the chief_priests and the rulers of_us gave_ him _over, to judgement of_death, and they_executed_on_a_stake him.
+\v 20 and how the chief_priests and the rulers of_us gave_ him _over, to judgement of_death, and they_executed_on_a_stake him.
 \v 21 But we were_hoping that he is the \add one\add* going to_be_redeeming the Israaʸl/(Yisrā\sup ʼēl\sup*). But surely also with all these \add things\add*, it_is_coming this third day, from which these \add things\add* became.
 \v 22 But also some women from us, amazed us, having_become early to the tomb
 \v 23 and not having_found the body of_him, came saying also to_have_seen \add a\add*_vision of_messengers, who are_saying him to_be_living.
