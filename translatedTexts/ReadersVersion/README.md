@@ -99,3 +99,5 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - last/latter days
 - reap -> harvest
 - pledge (for loans) -> guarantee
+- work out what we're going to do with "people/peoples" meaning "people groups"
+- convert litres (volumes) of flour to kilograms (weights)

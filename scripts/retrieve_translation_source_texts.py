@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env -S uv run
 #
 # retrieve_translation_source_texts.py
 #

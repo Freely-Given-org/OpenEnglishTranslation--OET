@@ -321,6 +321,7 @@ Asshur	Ashhur
 Asshurim	Ashuri
 Assir	Assir
 Assos	Assos
+Assyria	Asirya
 Assyria	Ashshur
 Asyncritus	Asugkritos
 Atarah	Atarah
@@ -397,7 +398,7 @@ Barnabas	Barnabas
 Barnea	Barnea
 Barsabbas	Barsabbas
 Bartholomew	Bartholomaios
-Bartimaeus	Bartimaios
+Bartimaeus	Bartimayos
 Baruch	Baruk
 Barzillai	Barzillay
 Basemath	Basemat
@@ -751,6 +752,7 @@ Elishua	Elishuea
 Eliud	Elioud
 Elizabeth	Elisabet
 Elizaphan	Elitsafan
+Elizur	Elitsur
 Elkanah	Elkanah
 Elkoshite	Elkshiy
 Elmadam	Elmodam
@@ -1094,6 +1096,7 @@ Hazarhatticon	Hatsar-Hattikon
 Hazarshual	 Hatsar-Shueal
 Hazarsusim	 Hatsar-Susim
 Hazer	 Hatser
+Hazeroth	 Hatserot
 Haziel	Haziel
 Hazor	Hatsor
 Hazzebaim	Tsevayim
@@ -1206,7 +1209,7 @@ Ibnijah	Yivniyah
 Ibri	Ivri
 Ibsam	Yivsam
 Ibzan	Ivtsan
-Ichabod	Ī-Kavod
+Ichabod	I-Kavod
 Iconium	Ikonion
 Idbash	Yidbas
 Iddo	Yiddo
@@ -1215,7 +1218,7 @@ Idumea	Idoumaia
 Igal	Yigal
 Ijon	Iyyon
 Ikkesh	Ikkesh
-Ilai	Īlay
+Ilai	Ilay
 Illyricum	Illurikon
 Imlah	Yimla
 Immanu-el	Immanu-El
@@ -1229,22 +1232,22 @@ Imri	Imri
 India	Hodu
 Iphdeiah	Yifdeyah
 Iphedeiah	Yifdeyah
-Ir	Īr
-Ir-nahash	Īr-Nahash
-Ira	Īra
-Iram	Īram
-Iri	Īri
-Irnahash	Īr-Nahash
-Isaac	Isaak
-Isaac	Yitshak	Y
-Isaiah	Aisaias
-Isaiah	Yeshayah
+Ir	Ir
+Ir-nahash	Ir-Nahash
+Ira	Ira
+Iram	Iram
+Iri	Iri
+Irnahash	Ir-Nahash
+Isaac	Isaak		Choose one!
+Isaac	Yitshak	Y	Choose one!
+Isaiah	Aisaias		Choose one!
+Isaiah	Yeshayah	Y	Choose one!
 Iscariot	Iskariotais
-Ish-bosheth	Īsh-Boshet
+Ish-bosheth	Ish-Boshet
 Ishbah	Yishbah
 Ishbak	Yishbak
-Ishbosheth	Īsh-Boshet
-Ishhod	Īshehod
+Ishbosheth	Ish-Boshet
+Ishhod	Ishehod
 Ishi	Yishei
 Ishma	Yishma
 Ishmael	Yishmael	Y
@@ -1259,19 +1262,19 @@ Ishuah	Yishvah
 Ishuai	Yishvah
 Ishvah	Yishvah
 Ishvi	Yishvi
-Israel	Israail
-Israel	Yisrael	Y
-Israel	Yisra’el	Y
+Israel	Israail		Choose one!
+Israel	Yisrael	Y	Choose one!
+Israel	Yisra’el	Y	Choose one!
 Israelite	Israeli
 Israelites	Israelis
 Issachar	Isakar
-Issachar	Yissaskar
+Issachar	Yissakar
 Isshiah	Yishshiyah
 Italian	Italia
 Italy	Italia
 Ithai	Ittay
-Ithamar	Ītamar
-Ithiel	Ītiel
+Ithamar	Itamar
+Ithiel	Itiel
 Ithmah	Yitmah
 Ithran	Yitran
 Ithream	Yitream
@@ -1306,8 +1309,8 @@ Jabez	Yaebets
 Jabin	Yavin
 Jacan	Yaekan
 Jachin	Yakin
-Jacob	Yakob	Y	Choose one!
-Jacob	Yakov	Y	Choose one!
+Jacob	Yakob	Y	Choose one or Yacob!
+Jacob	Yakov	Y	Choose one or Yacov!
 Jacobus	Yakobos
 Jada	Yada
 Jadau	Yiddo
@@ -1470,7 +1473,7 @@ Jewish	Youdaions
 Jewish	Yehudi
 Jews	Youdaions
 Jews	Yehudi
-Jezebel	Īzevel
+Jezebel	Izevel
 Jezer	Yetser
 Jeziah	Yizziyah
 Jeziel	Yezavel
@@ -1496,15 +1499,15 @@ Jobab	Yovav
 Jochebed	Yokeved
 Jodah	Youda
 Joed	Yoed
-Joel	Yoail
-Joel	Yoel	Y
+Joel	Yoail		Choose one!
+Joel	Yoel	Y	Choose one!
 Joelah	Yoelah
 Joezer	Yoezer
 Jogbehah	Yagebehah
 Joha	Yoha
 Johanan	Yohanan
-John	Yoannais
-John	Yohan	Y
+John	Yoannais		Choose one!
+John	Yohan	Y	Choose one!
 Joiada	Yoyada
 Joiakim	Yoyakim
 Joiarib	Yoyariv
@@ -1520,14 +1523,15 @@ Jonah	Yonas
 Jonah	Yonah
 Jonam	Yonan
 Jonathan	Yonatan
-Joppa	Yoppai
-Joppa	Yafo
+Joppa	Yoppai		Choose one!
+Joppa	Yafo		Choose one!
+Joppa	Yoppa		Choose one!
 Jorah	Yorah
 Jorai	Yoray
-Joram	Yoram
-Joram	Yehoram
-Jordan	Yarden
-Jordan	Yordanais
+Joram	Yoram		Choose one!
+Joram	Yehoram		Choose one!
+Jordan	Yarden		Choose one!
+Jordan	Yordanais		Choose one!
 Jorim	Yoreim
 Jorkeam	Yarekeam
 Josabad	Yozavad
@@ -1555,8 +1559,10 @@ Judah	Youda
 Judah	Yehudah
 Judaism	Youdaismos
 Judas	Youdas
+Judas	Yudas
 Jude	Youdas
 Judea	Youdaia
+Judea	Yudea
 Judean	Yehudi
 Judeans	Youdaia
 Judeans	Yehudi
@@ -1630,9 +1636,9 @@ Kitron	Kitron
 Kittim	Kittim
 Kiyyun	Kiyyun
 Koa	Koea
-Kohath	Kehat
-Kohathite	Kehati
-Kohathites	Kehati
+Kohath	Kohat
+Kohathite	Kohatite
+Kohathites	Kohatites
 Kolaiah	Kolayah
 Korah	Korah
 Korah	Karehi
@@ -2000,6 +2006,7 @@ Nehushta	Nehushta
 Nekoda	Nekoda
 Nemuel	Nemuel
 Nepheg	Nefeg
+Nephilim	Nefilim
 Nephisim	Nefisim
 Nephthalim	Nefthaleim
 Nephusim	Nefushesim
@@ -2110,6 +2117,7 @@ Patrobas	Patrobas
 Pau	Faeu
 Paul	Paulos
 Pedaiah	Pedayah
+Pedahzur	Pedahtsur
 Pekah	Fekahyah
 Pekahiah	Pekahyah
 Pekod	Fekod
@@ -2421,6 +2429,7 @@ Shebuel	Shevuel
 Shecaniah	Shekanyah
 Shechem	Shekem
 Shechem	Sukem
+Shedeur	Shedeyur
 Sheerah	Sheerah
 Shehariah	Sheharyah
 Shelah	Shelah
@@ -2821,7 +2830,7 @@ Zipporah	Tsiporah
 Ziv	Ziv
 Ziza	Ziza
 Zizah	Zizah
-Zoan	Tsoean
+Zoan	Tsoan
 Zobah	Tsovah
 Zobebah	Tsovevah
 Zoheth	Zohet
@@ -2832,6 +2841,7 @@ Zorah	Tsareah
 Zorathites	Tsareei
 Zorites	Tsareei
 Zorobabel	Zorobabel
+Zuar	Tsuar
 Zuph	Tsuf
 Zur	Tsur
 Zurishaddai	Tsurishaddai
