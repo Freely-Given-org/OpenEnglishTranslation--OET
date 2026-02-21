@@ -407,6 +407,7 @@ wH	GEN,SA1,KI1,KI2,CH1								Elah			אֵלָה		H425 (16) Gen 36:41, 1Sam 17:2,
 wH	GEN,CH1,EZR,NEH,ISA,JER								Elam			עֵילָם		H5867 (28) Gen 10:22, 14:1,9, 1Chr 1:17, 8:24, 26:3, Ezr 2:7,31, ...
 H	EZR,JER								Elasah			אֶלְעָשָׂה		{ H501 (6) Ezr 10:22, Jer 29:3*
 H	CH1								Eleasah			אֶלְעָשָׂה		{ H501 (6) 1Chr 2:39-40, 8:37, 9:43*
+H					NUM_11:26,NUM_11:27				Eldad			אֶלְדָּד		H419 (2) Num 11:26-27*
 H					GEN_25:4,CH1_1:33				Eldaah			אֶלְדָּעָה		H420 (2) Gen 25:4, 1Chr 1:33*
 wH					CH1_7:21				Elead			אֶלְעָד		H496 (1) 1Chr 7:21*
 H					CH1_7:20				Eleadah			אֶלְעָדָה		H497 (1) 1Chr 7:20*
@@ -472,7 +473,7 @@ H	KI2,EZR,ISA								haddon			חַדּוֹן		{ H634 (3) 2Ki 19:37, Ezr 4:2, Isa
 H	GEN,DEU,JOS,CH1,JER,MAL								Esau			עֵשָׂו		H6215 (97) Gen 25:25-30,32,34, 26:34, 27:1, ..., Obad 1:6, Heb 11:20
 H					CH1_8:33,CH1_9:39				Eshbaal			אַשְׁבַּעַל		H792 (2) 1Chr 8:33, 9:39*
 H					GEN_36:26,CH1_1:41				Eshban			אֶשְּׁבָּן		H790 (2) Gen 36:26, 1Chr 1:41*
-H	GEN,NUM,DEU								Eshcol			אֶשְׁכֹּל		H812 (6) Gen 14:13,24, Nm 13:23-24, 32:9, Deu 1:24*
+H	GEN,NUM,DEU								Eshcol			אֶשְׁכֹּל		H812 (6) Gen 14:13,24, Num 13:23-24, 32:9, Deu 1:24*
 H					CH1_8:39				Eshek			עֵשֶׁק		H6232 (1) 1Chr 8:39*
 H	JOS,SA1,CH1								Eshtemoa			אֶשְׁתְּמֹעַ		{ H851 (6) Josh 15:50, 21:14, 1Sam 20:28, ...
 H	JOS,SA1,CH1								Eshtemoh			אֶשְׁתְּמֹעַ		{ H851 (6) Josh 15:50, 21:14, 1Sam 20:28, ...
@@ -497,7 +498,7 @@ H					DAN_8:16,DAN_9:21				Gabriel			גַּבְרִיאֵל		H1403 angel (2) Dan
 H	JDG								Gaal			גַּעַל		H1603 (9) Jdg 9:26,28,30-31,35-37,39,41*
 wH									Gad			גָּד		H1410 (73) Gen 30:11, 35:26, ... Rev 7:5
 H					NUM_13:10				Gaddiel			גַּדִּיאֵל		H1427 (1) Num 13:10*
-H					NUM_13:10				Gaddi			גַּדִּי		H1426 (1) Num 13:11*
+H					NUM_13:11				Gaddi			גַּדִּי		H1426 (1) Num 13:11*
 H					KI2_15:14,KI2_15:17				Gadi			גָּדִי		H1424 (2) 2Ki 15:14,17*
 H					EZR_2:47,NEH_7:49				Gahar			גַּחַר		H1515 (2) Ezr 2:47, Neh 7:49*
 H					CH1_9:15,CH1_9:16,NEH_11:17				Galal			גָּלָל		H1559 (3) 1Chr 9:15-16, Neh 11:17*
@@ -1005,7 +1006,8 @@ H					CH1_12:14				Machbanai			מַכְבַּנַּי		H4344 (1) 1Chr 12:14*
 H					CH1_2:49				Machbena			מַכְבֵּנָא		H4343 (1) 1Chr 2:49*
 H	GEN,NUM,DEU,JOS,JDG,SA2,CH1								Machir			מָכִיר		{ H4353 (22) Gen 50:23, Num 26:29, 27:1, 32:39-49, ...
 H	GEN,NUM,DEU,JOS,JDG,SA2,CH1								Makir			מָכִיר		{ H4353 (22) Gen 50:23, Num 26:29, 27:1, 32:39-49, ...
-H					NUM_13:15				Machi			מָכִי		H4352 (1) Num 13:15*
+H					NUM_13:15				Machi			מָכִי		{{ H4352 (1) Num 13:15*
+H					NUM_13:15				Maki			מָכִי		{{ H4352 (1) Num 13:15*
 H					JOS_15:31,CH1_2:49				Madmannah			מַדְמַנָּה		H4089 (2) Josh 15:31, 1Chr 2:49*
 H					EZR_10:40				Machnadebai			מַכְנַדְבַי		H4367 (1) Ezr 10:40*
 H	GEN,KI2,CH1,EST,ISA,JER,DAN								Maday			מָדַי		H4074 (16) Gen 10:2, 2Ki 17:6, 18:11, 1Chr 1:5, Est 1:3,14,18-19, 10:2, ...
@@ -1062,6 +1064,7 @@ H					EZR_10:33				Mattathah			מַתַּתָּה		{ H4992 (1) Ezr 10:33*
 H	EZR,NEH								Mattenai			מַתְּנַי		H4982 (3) Ezr 10:33,37, Neh 12:19*
 H	CH1,EZR,NEH								Mattithiah			מַתִּתְיָה		H4993 (8) 1Chr 9:31, 15:18,21, 16:5, 25:3,21, Ezr 10:43, Neh 8:4*
 H					SA2_23:27				Mebunnai			מְבֻנַּי		H4012 (1) 2Sam 23:27*
+H					NUM_11:26,NUM_11:27				Medad			מֵידָד		H4312 (2) Num 11:26-27*
 H					GEN_25:2,CH1_1:32				Medan			מְדָן		H4091 (2) Gen 25:2, 1Chr 1:32*
 H					EZR_2:52,NEH_7:54				Mehida			מְחִידָא		H4240 (2) Ezr 2:52, Neh 7:54*
 H					NEH_3:7				Melatiah			מְלַטְיָה		H4424 (1) Neh 3:7*
@@ -1223,6 +1226,7 @@ H	EZE								Oholibah			אָהֱלִיבָה		H172 (6) Eze 23:4,11,22,36,44*
 H	GEN,CH1								Oholibamah			אָהֱלִיבָמָה		H173 (8) Gen 36:2,5,14,18,25,41, 1Chr 1:52*
 H	GEN,CH1								Omar			אוֹמָר		H201 (3) Gen 36:11,15, 1Chr 1:36*
 H	KI1,KI2,CH1,CH2,MIC								Omri			עָמְרִי		H6018 (18) 1Ki 16:16-17,21-23,25,27-30, ...
+wH					NUM_16:1				On			אוֹן		H203 (1) Num 16:1*
 H	GEN,CH1								Onam			אוֹנָם		H208 (4) Gen 36:23, 1Chr 1:40, 2:26,28*
 H	GEN,NUM,CH1								Onan			אוֹנָן		H209 (8) Gen 38:4,5-9, 46:12, Num 26:19, 1Chr 2:3*
 H	GEN,KI1,CH1,CH2,JOB,PSA,ISA								Ophir			אוֹפִיר		H211 (13) Gen 10:29, 1 Ki 9:28, 10:11, 22:48, 1Chr 1:23, 29:4, 2Chr 8:18, ...
@@ -1525,8 +1529,7 @@ H					NUM_26:35,CH1_7:25				Tahan			תַּחַן		H8465 (2) Num 26:35, 1Chr 7:25
 H	NUM,CH1								Tahath			תַּחַת		H8480 (6) Num 33:26-28, 1Chr 6:24,37, 7:20*
 H					KI1_11:19,KI1_11:20				Tahpenes			תַּחְפְּנֵיס		H8472 Egyptian woman (3) 1Ki 11:19-20*
 H					CH1_9:41				Tahrea			תַּחְרֵעַ		H8475 (1) 1Chr 9:41*
-H	NUM,JOS,JDG,SA2,CH1								Talmai			תַּלִמַי		{ H8526 (6) Num 13:22, Josh 15:14, Jdg 1:10, 2Sam 3:3, 13:37, 1Chr 3:2*
-H	NUM,JOS,JDG,SA2,CH1								Talimay			תַּלִמַי		{ H8526 (6) Num 13:22, Josh 15:14, Jdg 1:10, 2Sam 3:3, 13:37, 1Chr 3:2*
+H	NUM,JOS,JDG,SA2,CH1								Talmai			תַּלְמַי		H8526 (6) Num 13:22, Josh 15:14, Jdg 1:10, 2Sam 3:3, 13:37, 1Chr 3:2*
 H	CH1,EZR,NEH								Talmon			טַלְמוֹן		H2929 (5) 1Chr 9:17, Ezr 2:42, Neh 7:45, 11:19, 12:25*
 H	GEN,RUT,SA2,CH1,EZE								Tamar			תָּמָר		H8559 (24) Gen 38:6,11,13,24, Ruth 4:12
 H					EZE_8:14				Tammuz			תַּמּוּז		H8542 (1) Eze 8:14*
@@ -1595,7 +1598,8 @@ H	KI2,CH1,CH2,EZR,NEH,ISA,HOS								Uzziah			עֻזִּיָּה		H5818 (27) 2Ki
 H	EXO,LEV,NUM,CH1,CH2,NEH								Uzziel			עֻזִּיאֵל		H5816 (16) Exo 6:18,22 Lev 10:4, Num 3:19,30, 1Chr 4:42, 6:2,18, 7:7, ...
 H					EZR_10:36				Vaniah			וַנְיָה		H2057 (1) Ezr 10:36*
 H					CH1_6:28				Vashni			וַשִׁנִי		H2059 (1) 1Chr 6:28*
-H					NUM_13:14				Vophsi			וָפְסִי		H2058 (1) Num 13:14*
+H					NUM_13:14				Vophsi			וָפְסִי		{{ H2058 (1) Num 13:14*
+H					NUM_13:14				Vopshi			וָפְסִי		{{ H2058 (1) Num 13:14* The OET-LV has a mispelling here!!!
 H					GEN_36:27,CH1_1:42				Zaavan			זַעֲוָן		{ H2190 (2) Gen 36:27, 1Chr 1:42*
 H					GEN_36:27,CH1_1:42				Zavan			זַעֲוָן		{ H2190 (2) Gen 36:27, 1Chr 1:42*
 H	CH1,CH2,EZR								Zabad			זָבָד		H2066 (8) 1Chr 2:36-37, 7:21, 11:41, 2Chr 24:26, Ezr 10:27,33,43*
@@ -2293,6 +2297,8 @@ dH					JOS_15:10				Chesalon			כְּסָלוֹן/(Chesalon)		{ H3693 (1) Josh 1
 H	NUM,DEU								Kibrothhattaavah			קִבְרוֹת-הַתַּאֲוָה		{{{ H6914 (space changed to hyphen) (5) Num 11:34-35, 33:16-17, Deu 9:22*
 H	NUM,DEU								Kibroth-hattaavah			קִבְרוֹת-הַתַּאֲוָה		{{{ H6914 (space changed to hyphen) (5) Num 11:34-35, 33:16-17, Deu 9:22*
 H	NUM,DEU								Kibroth-			קִבְרוֹת-		{{{ H6914 (5) Num 11:34-35, 33:16-17, Deu 9:22*
+H	NUM,DEU								Kibroth			קִבְרוֹת		{{{ H6914 (5) Num 11:34-35, 33:16-17, Deu 9:22*
+H	NUM,DEU								Hattaavah			הַתַּאֲוָה		{{{ H6914 (5) Num 11:34-35, 33:16-17, Deu 9:22*
 H	NUM,DEU								hattaavah			הַתַּאֲוָה		{{{ H6914 (5) Num 11:34-35, 33:16-17, Deu 9:22*
 dH					CH1_13:9				Chidon			כִּידוֹן/(Chidon)		{{ H3592 (1) 1Chr 13:9*
 H					CH1_13:9				Kidon			כִּידוֹן		{{ H3592 (1) 1Chr 13:9*
