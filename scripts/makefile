@@ -1,27 +1,29 @@
 # OET makefile
 #
-# Last updated: 2025-12-06 by RJH
+# Last updated: 2026-02-24 by RJH
 #
 # CHANGELOG:
 #	2025-12-08 Copy OET LV OT & NT word tables into BSB and MSB folders
+#	2026-02-20 Produce OET-RV sections and automated TTS files for radio production
 #
 
 #=== Folder and file declarations =======================
 
-# LV_HTML := $(wildcard ../derivedTexts/simpleHTML/LiteralVersion/*.html)
+derived_audio_sections := ../derivedTexts/OET-RV_sectionReadings/MRK/MRK_S2.ogg
 derived_VREFs := ../derivedTexts/OET-RV.vref.txt ../derivedTexts/OET-LV.vref.txt
 derived_USFM := $(wildcard ../derivedTexts/cleanedUSFM/ReadersVersion/*.USFM) $(wildcard ../derivedTexts/cleanedUSFM/LiteralVersion/*.USFM)
+
 sideBySide_HTML := $(wildcard ../derivedTexts/simpleHTML/SideBySide/???.html)
 LV_OT_HTML := ../derivedTexts/simpleHTML/LiteralVersion/GEN.html ../derivedTexts/simpleHTML/LiteralVersion/MAL.html
 LV_NT_HTML := ../derivedTexts/simpleHTML/LiteralVersion/MAT.html ../derivedTexts/simpleHTML/LiteralVersion/REV.html
 RV_HTML := $(wildcard ../derivedTexts/simpleHTML/ReadersVersion/*.html)
+
 RV_ESFM := $(wildcard ../translatedTexts/ReadersVersion/*.ESFM)
-# final_LV_OT_USFM := $(wildcard ../intermediateTexts/auto_edited_OT_USFM/*.usfm)
 final_LV_OT_ESFM := $(wildcard ../intermediateTexts/auto_edited_OT_ESFM/*.ESFM)
 final_LV_NT_ESFM := $(wildcard ../intermediateTexts/auto_edited_VLT_ESFM/OET-LV_???.ESFM)
+
 LV_names_TSV_table := ../intermediateTexts/OET-LV_names_table.tsv
 LV_ESFM := $(final_LV_OT_ESFM) $(final_LV_NT_ESFM)
-# intermediate_LV_OT_USFM := $(wildcard ../intermediateTexts/modified_source_glossed_OSHB_USFM/*.usfm)
 intermediate_LV_OT_ESFM := $(wildcard ../intermediateTexts/modified_source_glossed_OSHB_ESFM/???_gloss.ESFM)
 intermediate_LV_NT_ESFM := $(wildcard ../intermediateTexts/modified_source_VLT_ESFM/???_gloss.ESFM)
 final_RV_OT_word_tables = ../translatedTexts/ReadersVersion/OET-LV_OT_morpheme_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_lemma_table.tsv
@@ -30,6 +32,7 @@ expanded_OT_TSV_tables := ../intermediateTexts/modified_source_glossed_OSHB_ESFM
 initial_OT_TSV_tables := ../intermediateTexts/glossed_OSHB/all_glosses.words.tsv ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv ../intermediateTexts/glossed_OSHB/all_glosses.lemmas.tsv
 expanded_NT_wordtable = ../intermediateTexts/modified_source_VLT_ESFM/OET-LV_NT_word_table.tsv
 original_NT_wordtable = ../intermediateTexts/modified_source_VLT_ESFM/OET-LV_NT_word_table.10columns.tsv
+
 CNTR_lemma_table = ../../CNTR-GNT/derivedFormats/lemmas.alphabetical.tsv
 CNTR_book_table = ../../CNTR-GNT/sourceExports/book.csv
 CNTR_collation_table = ../../CNTR-GNT/sourceExports/collation.csv
@@ -186,20 +189,34 @@ $(derived_USFM): $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_ESFM_to_USFM.py
 	@$(Python) convert_OET-LV-RV_ESFM_to_USFM.py
 
 $(derived_VREFs): $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_USFM_to_VREF.py
+	@$(Python) --version
 	@echo "\n\nCreate VREF.txt files from USFM…\n"
 	@$(Python) convert_OET-LV-RV_USFM_to_VREF.py
 	@echo "\n\nFinally, just count our progress…\n"
 	@$(Python) count_completed_OET-RV_verses.py
 	@$(Python) --version
 
+$(derived_audio_sections): $(RV_ESFM) export_OET-RV_to_sectionReadings.py
+	@$(Python) --version
+	@echo "\n\nCreate section readings from OET-RV…\n"
+	@$(Python) export_OET-RV_to_sectionReadings.py
+
 
 #=== Partial stuff =======================
 
-
 .PHONY: check
 check: $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
+	@$(Python) --version
 	@echo "\n\nConnect OET-RV words to OET-LV word numbers (in fast mode)…\n"
 	@$(Python) connect_OET-RV_words_via_OET-LV.py --fast
+	@echo "\n\nFinally, just count our progress…\n"
+	@$(Python) count_completed_OET-RV_verses.py
+	@$(Python) --version
+
+
+.PHONY: audio
+audio: $(derived_audio_sections)
+	@$(Python) --version
 	@echo "\n\nFinally, just count our progress…\n"
 	@$(Python) count_completed_OET-RV_verses.py
 	@$(Python) --version

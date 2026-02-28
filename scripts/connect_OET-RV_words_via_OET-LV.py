@@ -56,6 +56,7 @@ CHANGELOG:
     2025-12-12 Remove "failed on" warnings for common word 'to'
     2025-12-13 Add 'fast' flag, added 'heavenly'
     2025-12-17 Add multiprocessing for converting each book (although seems no real time advantange)
+    2026-02-24 Added more checking of consecutive opening and closing speech marks
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -79,10 +80,10 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-02-10' # by RJH
+LAST_MODIFIED_DATE = '2026-02-24' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.84'
+PROGRAM_VERSION = '0.85'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -983,9 +984,10 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
             assert '\\x*,' not in line and '\\x*.' not in line, f"Bad xref formatting in {rvESFMFilename} {lineNumber}: '{line}'"
             if line.count(' \\x ') < line.count('\\x '):
                 assert '\\x* ' in line or line.endswith('\\x*') or '\\x*—' in line, f"Missing xref space in {rvESFMFilename} {lineNumber}: '{line}'"
-            assert '“ ' not in line, f"Unexpected space at beginning of speech in {rvESFMFilename} {lineNumber}: '{line}'"
-            assert '’“' not in line, f"Unexpected consecutive speech marks in {rvESFMFilename} {lineNumber}: '{line}'"
-            assert '“’' not in line, f"Unexpected consecutive speech marks in {rvESFMFilename} {lineNumber}: '{line}'"
+            if '“ ‘' not in line:
+                assert '“ ' not in line, f"Unexpected space at beginning of speech in {rvESFMFilename} {lineNumber}: '{line}'"
+            assert '“‘' not in line and '‘“' not in line, f"Unexpected consecutive opeing speech marks in {rvESFMFilename} {lineNumber}: '{line}'"
+            assert '’“' not in line and '“’' not in line, f"Unexpected consecutive closing speech marks in {rvESFMFilename} {lineNumber}: '{line}'"
             if '’ ”' not in line and '’\\wj* ”' not in line:
                 assert ' ”' not in line, f"Unexpected space at end of speech in {rvESFMFilename} {lineNumber}: '{line}'"
             assert '≈ ' not in line, f"Unexpected space after ≈ in {rvESFMFilename} {lineNumber}: '{line}'"
