@@ -6,7 +6,7 @@
 #
 # Script to take the OET-RV NT USFM files and convert to HTML
 #
-# Copyright (C) 2022-2025 Robert Hunt
+# Copyright (C) 2022-2026 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+OET@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -42,6 +42,7 @@ CHANGELOG:
     2025-09-18 Check equal numbers of open and close parentheses
     2025-11-17 Handle s2 boxes allowing /r fields
     2025-12-08 Add nesting order check for USFM character markers
+    2026-02-24 Improve handling of nested quotes
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -63,10 +64,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Internals.InternalBibleInternals import getLeadingInt
 
 
-LAST_MODIFIED_DATE = '2025-12-08' # by RJH
+LAST_MODIFIED_DATE = '2026-02-24' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
-PROGRAM_VERSION = '0.90'
+PROGRAM_VERSION = '0.91'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -815,7 +816,8 @@ def produce_HTML_files() -> None:
             # TODO: This might need to be uncommented if there's no URLs or other HTML in the RV
             # assert '"' not in usfm_text, f"""Why do we have double quote in {source_filename}: {usfm_text[usfm_text.index('"')-20:usfm_text.index('"')+22]}"""
             assert '--' not in esfm_text, f"""Why do we have doubled hyphens in {source_filename}: {esfm_text[esfm_text.index('--')-20:esfm_text.index('--')+22]}"""
-            assert '“ ' not in esfm_text, f"""Why do we have space after double opening quote in {source_filename}: {esfm_text[esfm_text.index('“ ')-20:esfm_text.index('“ ')+22]}"""
+            if '“ ‘' not in esfm_text:
+                assert '“ ' not in esfm_text, f"""Why do we have space after double opening quote in {source_filename}: {esfm_text[esfm_text.index('“ ')-20:esfm_text.index('“ ')+22]}"""
             assert ' ”' not in esfm_text.replace('’ ”','’”').replace('’\\wj* ”','’\\wj*”'), f"""Why do we have space before double closing quote in {source_filename}: {esfm_text[esfm_text.index(' ”')-20:esfm_text.index(' ”')+22]}"""
             assert '‘ ' not in esfm_text, f"""Why do we have space after single opening quote in {source_filename}: {esfm_text[esfm_text.index('‘ ')-20:esfm_text.index('‘ ')+22]}"""
             assert ' ’' not in esfm_text.replace('” ’','”’').replace('\\add ’','’'), f"""Why do we have space before single closing quote in {source_filename}: {esfm_text[esfm_text.index(' ’')-20:esfm_text.index(' ’')+22]}"""
