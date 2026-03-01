@@ -1,4 +1,4 @@
-\id 1CH - Open English Translation—Readers' Version (OET-RV) v0.1.04
+\id 1CH - Open English Translation—Readers' Version (OET-RV) v0.1.05
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 CH1
@@ -71,7 +71,7 @@
 \p
 \v 28 Abraham's¦187306 sons¦187305 were Yitshak \add (Isaac¦187307)\add* and¦187308 Yishmael¦187308 \add (Ishmael)\add*.
 \rem /s2 Descendants of Hagar
-\v 29 These were their¦187312 family lines: The firstborn¦187313 son of Yishmael¦187314 \add (the son of Abraham's slave-wife Hagar)\add* was Nevayot, then his other sons Kedar¦187316, Adbeel¦187317, Mibsam¦187318,
+\v 29 These were their¦187312 family lines: The first¦187313 son born to Yishmael¦187314 \add (the son of Abraham's slave-wife Hagar)\add* was Nevayot, then his other sons Kedar¦187316, Adbeel¦187317, Mibsam¦187318,
 \v 30 Mishma¦187320, Dumah¦187321, Massa¦187322, Hadad¦187323, Tema¦187324,
 \v 31 Yetur, Nafish¦187327, and¦187328 Kedemah¦187328. Those were Yishmael's¦187332 \add twelve\add* sons¦187331.
 \rem /s2 Descendants of Keturah
@@ -124,7 +124,7 @@
 \s1 Yakob's descendants
 \rem /s1 The Descendants of Judah; Descendants of Israel; The Sons of Israel and the Descendants of Judah; Israel's Sons
 \p
-\v 1 These were Yisrael's sons¦187603: Reuben¦187605, Shimeon \add (Simeon¦187606)\add*, Levi¦187607, and Yehudah \add (Judah)\add*, Yissakar \add (Issachar¦187609)\add*, and Zebulun¦187610,
+\v 1 These were Yisrael's sons¦187603: Reuven¦187605, Shimeon \add (Simeon¦187606)\add*, Levi¦187607, and Yehudah \add (Judah)\add*, Yissakar \add (Issachar¦187609)\add*, and Zebulun¦187610,
 \v 2 Dan, Yosef¦187613 \add (Joseph)\add*, Benyamin¦187614, Naftali¦187615, Gad¦187616, and Asher¦187617.
 \s1 Yehudah's descendants
 \rem /s1 Judah; Descendants of Judah
@@ -214,7 +214,7 @@
 \rem /s1 Descendants of David; Descendants of David and Solomon; King David's Children
 \rem /s2 The Sons of David
 \p
-\v 1 These were David's¦188292 sons¦188291 who were born to him in Hevron: the firstborn¦188299 was Amnon¦188301 by Ahinoam¦188302 the Yezreelite, the second¦188304 Daniyel by Avigayil the Karmelite,
+\v 1 These were David's¦188292 sons¦188291 who were born to him in Hevron: the first¦188299 was Amnon¦188301 by Ahinoam¦188302 the Yezreelite, the second¦188304 Daniyel by Avigayil the Karmelite,
 \v 2 the third¦188309 Avishalom \add (Absalom¦188310)\add*, the son of Maakah (daughter¦188314 of King Talmai¦188316 of Geshur¦188318), the fourth¦188319 Adoniyyah, the son of Haggit¦188323,
 \v 3 the fifth¦188325 Shefatyah by Avital, the sixth¦188328 Yitream by his wife Eglah¦188330.
 \m
@@ -256,29 +256,29 @@
 \v 1 Yehudah's¦188530 sons¦188529 were Perets, Hetsron, Karmi, Hur¦188534, and Shoval.
 \v 2 Shoval had a son Reayah, Reayah had a son Yahat, and Yahat had Ahumai¦188549 and Lahad¦188552. Those were the ancestors of the Tsoratites.
 \v 3 Yezreel, Ishma¦188562, and Idbash¦188563 \add ≈started the clans that lived in\add* Eytam \add city\add*, and they had a sister¦188565 named Hatselelponi.
-\v 4 Hur was the firstborn¦188578 son of \add his mother\add* Efratah \add and\add* he \add ≈founded\add* Beyt-Lehem \add city\add*. Hur had these¦188574 descendants¦188575: Penuel and Ezer. Penuel \add ≈started the clans that lived in\add* Gedor¦188570 \add city\add*, and Ezer \add ≈started the clans that lived in\add* Hushah¦188573 \add city\add*.
-\v 5 \add Hetsron's son\add* Ashhur¦188584, the father¦188585 of Tekoa¦188586, had two¦188588 wives¦188589 Helah¦188590 and¦188591 Naarah¦188591,
+\v 4 Hur was the first¦188578 son born to \add his mother\add* Efratah, \add and\add* he \add ≈founded\add* Beyt-Lehem \add city\add*. Hur had these¦188574 descendants¦188575: Penuel and Ezer. Penuel \add ≈started the clans that lived in\add* Gedor¦188570 \add city\add*, and Ezer \add ≈started the clans that lived in\add* Hushah¦188573 \add city\add*.
+\v 5 \add Hetsron's son\add* Ashhur¦188584, the father¦188585 of Tekoa¦188586, had two¦188588 wives¦188589, Helah¦188590 and¦188591 Naarah¦188591,
 \v 6 and Naarah¦188595 bore him Ahuzzam¦188598, Hefer¦188601, Teymeni, and Haahashtari¦188607.
-\v 7 The sons¦188612 of \add Ashhur and¦188617 his wife\add* Helah¦188613 were Tseret¦188614, Tsohar, Etnan¦188617,
-\v 8 and Kots. Kots was the father¦188620 of Anub¦188623, Hatstsovevah, and the ancestor of the clans descended from Harum's¦188631 son Aharhel¦188628.
+\v 7 \add Ashhur and¦188617 his wife\add* Helah's¦188613 sons¦188612 were Tseret¦188614, Tsohar, Etnan¦188617,
+\v 8 and Kots. Kots was the father¦188620 of Anub¦188623 and Hatstsovevah, and the ancestor of the clans descended from Harum's¦188631 son Aharhel¦188628.
 \p
 \v 9 Yabets was more respected than his brothers¦188636. His mother¦188637 had named him Yabets \add (which sounds like the word meaning ‘pain’)\add*, saying, “It's because I bore him in pain.”
-\v 10 Yabets called¦188646 out to Yisrael's god, saying, “Oh that you would surely bless me, and would \add ≈help me\add* and enlarge¦188655 my territory, and you wouldn't \add ≈do anything to harm me\add*, so that I wouldn't be in pain.” And God¦188648 \add ≈did what Yabets requested\add*.
+\v 10 Yabets called¦188646 out to Yisrael's god, saying, “Oh, please give me a real blessing, and \add ≈help me\add* and enlarge¦188655 my territory, and don't \add ≈do anything to harm me\add*, so that I won't be in pain.” And God¦188648 \add ≈did what Yabets requested\add*.
 \rem /s1 Other Family Lists
 \p
-\v 11 \add Another descendant of Yehudah was\add* Shuhah¦188676. His brother¦188674 Kelub was the father of Mehir. Mehir was the father of Eshton¦188683.
+\v 11 \add Another of Yehudah's descendants was\add* Shuhah¦188676. His brother¦188674 Kelub was the father of Mehir. Mehir was the father of Eshton¦188683.
 \v 12 Eshton was the father¦188697 of Beyt-Rafa¦188690, Paseah¦188693, and¦188685 Tehinnah. Tehinnah \add ?≈founded\add* Nahash¦188699 city, but \add ≈lived in\add* Rekah¦188702.
 \p
-\v 13 The sons of Kenaz¦188706 were Otniel and Serayah¦188708. And the sons of Otniel were Hathath¦188711 \add ?and Meonotai\add*.\f + \fr 4:13 \ft Not in the Hebrew, but ‘sons’ was plural, so it seems that it may have been accidentally dropped out of the text.\f*
-\v 14 Meonotai has a son Ofrah¦188717, and¦188718 Serayah¦188718 fathered¦188723 Yoav, the \add ≈founder\add* of Craftsmen's Valley, because they¦188728 were craftsmen¦188727.
+\v 13 Kenaz's¦188706 sons were Otniel and Serayah¦188708. And Otniel's sons were Hathath¦188711 \add ?and Meonotai\add*.\f + \fr 4:13 \ft Not in the Hebrew, but ‘sons’ was plural, so it seems that it may have been accidentally dropped out of the text.\f*
+\v 14 Meonotai had a son Ofrah¦188717, and¦188718 Serayah¦188718 fathered¦188723 Yoav, the \add ≈founder\add* of Craftsmen's Valley, because they¦188728 were craftsmen¦188727.
 \p
-\v 15 The sons of Kalev (Yefunneh's¦188735 son) were Iru, Elah, Naam¦188738, and Elah's¦188737 son was Kenaz¦188741.
+\v 15 The sons of Kalev (Yefunneh's¦188735 son) were Iru, Elah, and Naam¦188738, and Elah's¦188737 son was Kenaz¦188741.
 \p
-\v 16 The sons¦188743 of Yehallelel¦188744 were Zif¦188745, Zifah¦188746, Tiriya, and¦188743 Asarel¦188748.
+\v 16 Yehallelel's¦188744 sons¦188743 were Zif¦188745, Zifah¦188746, Tiriya, and¦188743 Asarel¦188748.
 \p
-\v 17 The sons¦188750 of Ezrah¦188752 were Yeter¦188753, Mered, Efer¦188755, and Yalon¦188756. And \add ?@Mered's wife Bityah\add* conceived¦188757 Miryam, and Shammai¦188763, and Ishbah¦188766, the father¦188767 of Eshtemoa¦188768.
-\v 18 \add *She\add* was one of Far-oh's \add (Pharaoh's¦188793)\add* daughters¦188791. Mered's¦188796 wife who was a descendant of Yehudah \add (Judah)\add* gave birth to Yered¦188775 the father of Gedor¦188777, Hever the father of SoKo, and¦188770 Yekutiel the father of Zanoah¦188787.
-\v 19 The sons of the Hodiyyah's wife (sister¦188802 of Naham¦188803) were the father of Keilah¦188805 the Garmite¦188806, and \add ≡the father of\add* Eshtemoa¦188807 the Maakatite.
+\v 17 Ezrah's¦188752 sons¦188750 were Yeter¦188753, Mered, Efer¦188755, and Yalon¦188756. And \add ?@Mered's wife Bityah\add* conceived¦188757 Miryam, Shammai¦188763, and Ishbah¦188766, the father¦188767 of Eshtemoa¦188768.
+\v 18 \add *She\add* was one of Far-oh's \add (Pharaoh's¦188793)\add* daughters¦188791. Mered's¦188796 wife, who was a descendant of Yehudah \add (Judah)\add*, gave birth to Yered¦188775 the father of Gedor¦188777, Hever the father of Sokoh, and¦188770 Yekutiel the father of Zanoah¦188787.
+\v 19 The sons of Hodiyyah's wife (Naham's¦188803 sister¦188802) were the father of Keilah¦188805 the Garmite¦188806 and \add ≡the father of\add* Eshtemoa¦188807 the Maakatite.
 \p
 \v 20 Shimon's¦188811 sons were Amnon¦188812, Rinnah¦188813, Ben-Hanan¦188816, and Tilon¦188817.
 \rem /s1 The Descendants of Shelah; Descendants of Judah's Son Shelah
@@ -286,7 +286,7 @@
 \s1 Shelah's descendants
 \p
 \v 21 The sons of Shelah¦188827 (one of Yehudah's¦188830 sons) were Er¦188831 (father of Lekah), Laadah¦188834 (father of Mareshah¦188836 and the clans \add ≈who worked with\add* linen¦188841 at Beyt-Ashbea¦188843),
-\v 22 Yokim, and the men¦188846 of Kozeba¦188847, and Yoash¦188848 and Saraf¦188849, who ruled¦188852 in Moav and Yashubi-Lehem¦188854. (\add ≈All this from ancient¦188857 records¦188856\add*.)
+\v 22 Yokim and the men¦188846 of Kozeba¦188847, and Yoash¦188848 and Saraf¦188849, who ruled¦188852 in Moav and Yashubi-Lehem¦188854. (\add ≈All this is from ancient¦188857 records¦188856\add*.)
 \v 23 They were the potters¦188860 \add ≈who lived in\add* Netaim¦188862 and Gederah¦188863—they¦188868 lived there¦188869 and \add ≈worked for\add* the king¦188866.
 \s1 The descendants of Shimeon (Simeon)
 \rem /s1 The Descendants of Simeon; Descendants of Simeon; Simeon
@@ -294,41 +294,41 @@
 \v 24 Shimeon's¦188873 sons were Nemuel¦188874, Yamin¦188875, Yarib¦188876, Zerah¦188877, and¦188875 Shaul¦188878.
 \v 25 Shaul's son was Shallum. Shallum's son was Mivsam. Mivsam's son was Mishma¦188884.
 \v 26 The \add following were\add* Mishma's descendants: Mishma's son was Hammuel. Hammuel's¦188889 son was Zakkur. Zakkur's son was Shimei¦188893.
-\v 27 Shimei had sixteen sons and¦188896 six daughters¦188900, but none of his brothers¦188902 had many children, so Shimeon's \add ≈descendants¦188912 never were as many as those\add* of \add his younger brother\add* Yehudah¦188913 \add (Judah)\add*.
+\v 27 Shimei had sixteen sons and¦188896 six daughters¦188900, but none of his brothers¦188902 had many children, so Shimeon's \add ≈descendants¦188912 were never as numerous as those\add* of \add his younger brother\add* Yehudah¦188913 \add (Judah)\add*.
 \p
 \v 28 \add @Shimeon's descendants\add* lived¦188916 in \add these cities and towns\add*: Be'er-Sheva \add (Beersheba)\add*, Moladah¦188920, Hatsar-Shual,\x + \xo 4:28-33: \xt Josh 19:2-8.\x*
 \v 29 Bilhah, Etsem, Tolad,
 \v 30 Betuel, Hormah¦188929, Tsiklag¦188930,
 \v 31 Beyt-Markaboth, Hatsar-Susim, Beyt-Biri, and¦188932 Shaaraim¦188938. \add ≈They lived in those places until¦188941 David¦188944 became king\add*.
 \v 32 They \add also\add* lived in five¦188953 villages¦188946: Eytam, Ayin, Rimmon¦188949, Token¦188950, and¦188946 Ashan¦188951,
-\v 33 and all their villages¦188957 which¦188958 are around¦188959 these¦188961 towns as far as Baal¦188964. Those were their settlements¦188966, and they¦188967 kept¦188967 their genealogical¦188967 records¦188967.
+\v 33 and all the villages¦188957 around¦188959 these¦188961 towns as far as Baal¦188964. Those were their settlements¦188966, and they¦188967 kept¦188967 their genealogical¦188967 records¦188967.
 \p
 \v 34 \add Their clan leaders were\add* Meshovav, Yamlek, Yoshah¦188972 the son of Amatsyah,
 \v 35 Yoel, Yehu¦188978 the son of Yoshibiah¦188981, the son of Serayah¦188984, the son of Asiel¦188987,
 \v 36 as well as Elioenai, Yaakobah¦188990, Yeshohaiah¦188991, Asayah¦188992, Adiel¦188993, Yesimiel¦188994, Benayah¦188995,
-\v 37 Ziza the son of Shifi¦189000, the son of Allon¦189003, the son of Yedayah¦189006, the son of Shimri¦189009, the son of Shemayah¦189012.
+\v 37 and Ziza the son of Shifi¦189000, the son of Allon¦189003, the son of Yedayah¦189006, the son of Shimri¦189009, the son of Shemayah¦189012.
 \v 38 Those who are named above were the leaders¦189017 of their clans, and their \add extended\add* families¦189018 increased greatly¦189022 in number,
 \v 39 and¦189024 they went¦189024 to the entrance¦189025 of Gedor¦189026 (to the east of the valley¦189029) in search of pasture¦189031 for their¦189032 flocks¦189032.
 \v 40 They found¦189034 good¦189037, \add ≈fertile¦189036\add* pasture¦189035, and the land was \add ≈wide\add*, and quiet¦189041 and peaceful¦189042, because Ham's¦189046 \add ≈descendants\add* had lived¦189047 there¦189048 \add ≈previously\add*.
 \p
-\v 41 Those listed by name¦189054, went¦189051 \add there\add* in the days¦189055 of Yehudah's¦189060 King Hezekiah¦189057, and struck down the tents¦189064 of the Meunites¦189067 who were found¦189070 there. They completely annihilated them (to this day¦189076), and they lived¦189078 \add there\add* in their place¦189079 because pasture¦189082 for their flock¦189083 was there.
+\v 41 Those listed by name¦189054 went¦189051 \add there\add* in the days¦189055 of Yehudah's¦189060 King Hizkiyah¦189057 and struck down the tents¦189064 of the Meunites¦189067 who were found¦189070 there. They completely annihilated them (to this day¦189076), and they lived¦189078 \add there\add* in their place¦189079 because there was pasture¦189082 for their flocks¦189083 there.
 \v 42 Then¦189086 five¦189096 hundred¦189097 of their¦189104 men¦189095 who were descendants¦189090 of Shimeon went¦189092 to Mt. Seir¦189094, \add ≈led\add* by Yishi's sons¦189102 Pelatyah¦189098, Nearyah¦189099, Refayah, and¦189086 Uzziel¦189101.
 \v 43 They \add also\add* struck down the rest of the Amalekites¦189111 who escaped¦189110, and¦189112 they've lived¦189112 there¦189113 to this day¦189115.
 \c 5
 \s1 Reuven's descendants
 \rem /s1 Reuben; Descendants of Reuben; The Descendants of Reuben
 \p
-\v 1 Reuben was the firstborn of Yisrael \add (or Israel¦189122, also known as Yakov/Jacob)\add*, but when he \add ≈had sex with one of his father's¦189128 slave-wives\add*, his birthright was given¦189129 to the sons of Yosef¦189132 \add (Joseph)\add*, \add ≈another one of Yisrael's sons\add*. \add ≈So¦189118 Reuben wasn't recorded as inheriting\add* the birthright,\x + \xo 5:1: \xt Gen 35:22; 49:3-4; Gen 49:8-10.\x*
+\v 1 Reuven was the first \add child\add* born to Yisrael \add (or Israel¦189122, also known as Yakov/Jacob)\add*, but when he \add ≈had sex with one of his father's¦189128 slave-wives\add*, his birthright was given¦189129 to the sons of Yosef¦189132 \add (Joseph)\add*, \add ≈another one of Yisrael's sons\add*. \add ≈So¦189118 Reuven wasn't recorded as inheriting\add* the birthright,\x + \xo 5:1: \xt Gen 35:22; 49:3-4; Gen 49:8-10.\x*
 \v 2 \add ≈and although\add* Yehudah¦189141 \add (Judah)\add* was stronger¦189142 than his \add other\add* brothers¦189143 and \add ≈would be the son to produce a ruler¦189144\add*, the birthright¦189146 went to Yosef.
 \v 3 The sons¦189150 of Yisrael's eldest son Reuven were Hanok, Pallu¦189155, Hetsron, and Karmi.
 \p
-\v 4 \add Another descendant¦189159 of Reuben was\add* Yoel¦189160 and his son was Shemayah. Shemayah's¦189161 son was Gog. Gog's¦189163 son was Shimei¦189165.\x + \xo 5:6: \xt 2Ki 15:29.\x*
+\v 4 \add Another of Reuven's descendants¦189159 was\add* Yoel¦189160, and his son was Shemayah. Shemayah's¦189161 son was Gog. Gog's¦189163 son was Shimei¦189165.\x + \xo 5:6: \xt 2Ki 15:29.\x*
 \v 5 Shimei's son was Mikah. Mikah's son was Reayah. Reayah's¦189170 son was Baal¦189172.
-\v 6 Baal's son was Beerah who became a leader¦189184 of the Reubenites, \add but\add* the Assyrian King Tiglat¦189179-Pileser \add ≈captured him and took¦189178 him back to Assyria¦189182\add*.
+\v 6 Baal's son was Beerah, who became a leader¦189184 of the Reuvenites, \add but\add* the Assyrian King Tiglat¦189179-Pileser \add ≈captured him and took¦189178 him back to Assyria¦189182\add*.
 \v 7 His brothers by their clans, \add ≈as listed in their genealogical¦189189 records\add*: Yeiel¦189192 the leader, Zekaryah,
-\v 8 Bela son of Azaz¦189198, son of Shema¦189201, son of Yoel¦189204. Reuben's clan lived near the city of Aroer¦189207 \add as far north as the cities of\add* Nevo and¦189195 Baal-Meon.
+\v 8 Bela son of Azaz¦189198, son of Shema¦189201, son of Yoel¦189204. Reuven's clan lived near the city of Aroer¦189207 \add as far north as the cities of\add* Nevo and¦189195 Baal-Meon.
 \v 9 \add Some of them lived further\add* east, as far as the edge of the desert that extends to the Euphrates¦189224 River, because their¦189226 livestock¦189226 had multiplied \add back\add* in the Gilead¦189229 region.
-\v 10 (In the days¦189231 of \add King\add* Shaul¦189232, they'd battled with the Hagrites¦189237 and¦189231 \add ≈defeated them, so then¦189231\add* they'd lived¦189240 in their tents¦189241 over all \add ≈eastern¦189247\add* Gilead¦189248.)
+\v 10 (In the days¦189231 of \add King\add* Shaul¦189232, they'd battled with the Hagrites¦189237 and¦189231 \add ≈defeated them, so then¦189231\add* they'd lived¦189240 in their tents¦189241 all over \add ≈eastern¦189247\add* Gilead¦189248.)
 \s1 Gad's descendants
 \rem /s1 Descendants of Gad; The Descendants of Gad; Gad
 \p
@@ -336,16 +336,16 @@
 \v 12 Yoel was their leader, Shafam¦189264 was second-in-command, others were Yanai¦189266 and Shafat¦189267 in Bashan¦189268.
 \v 13 \add ≈Their cousins who were leaders of seven¦189280 clans were\add* Mikael, Meshullam¦189274, Sheva, Yorai¦189276, Yakan, Zia¦189278, and¦189270 Eber¦189279.
 \v 14 Those were descendants of Avihayil, the son of Huri¦189289, the son of Yaroah¦189292, the son of Gilead¦189295, the son of Mikael, the son of Yeshishai¦189301, the son of Yahdo¦189304, the son of Buz¦189307.
-\v 15 Ahi was the son of Avdiel, the son of Guni¦189315, head of their¦189318 fathers' household¦189317.
-\v 16 \add @Those descendants of Gad\add* lived¦189320 in \add ≈towns¦189323\add* in the Gilead¦189321 and Bashan¦189322 regions, and on all the pastureland¦189326 \add ≈throughout the Plain of\add* Sharon¦189327.
+\v 15 Ahi was the son of Avdiel, the son of Guni¦189315, head of their¦189318 clans.
+\v 16 \add @Those descendants of Gad\add* lived¦189320 in \add ≈towns¦189323\add* in the Gilead¦189321 and Bashan¦189322 regions, and on all the pastureland¦189326 \add ≈throughout the Sharon¦189327 Plain\add*.
 \v 17 All of them were listed in the genealogies in the days of Yehudah's¦189338 King Yotham¦189335 and Yisrael's King Yeroboam¦189340.
 \s1 The eastern warriors
 \rem /s1 The Tribes East of the Jordan; The Armies of the Eastern Tribes
 \p
-\v 18 There were 44,760 warriors descended¦189346 from strong men¦189359 in the tribes of Reuben¦189348 and Gad and the \add eastern\add* half of the tribe of Menashsheh¦189353. They all carried¦189360 shields¦189361 and swords¦189362, and bows and arrows, and were all trained to fight in battles.
-\v 19 They made war with the Hagrites¦189381, and Yetur¦189382, and Nafish¦189383, and Nodav,
+\v 18 There were 44,760 warriors descended¦189346 from strong men¦189359 in the tribes of Reuven¦189348 and Gad and the \add eastern\add* half of the tribe of Menashsheh¦189353. They all carried¦189360 shields¦189361 and swords¦189362, and bows and arrows, and were all trained to fight in battles.
+\v 19 They went to war against the Hagrites¦189381, Yetur¦189382, Nafish¦189383, and Nodav,
 \v 20 and were helped¦189386 because they called out to God in the battle¦189396. \add ≈So¦189386\add* with God answering¦189397 their prayers¦189397 because of their trust¦189401 in him, they \add ≈were able to defeat\add* the Hagrites¦189390 and their \add ≈allies\add*.
-\v 21 They captured¦189404 their livestock¦189405 including 50,000 camels¦189406, 250,000 sheep¦189409, and¦189404 2,000 donkeys¦189413, as well as 100,000 people
+\v 21 They captured¦189404 their livestock¦189405, including 50,000 camels¦189406, 250,000 sheep¦189409, and¦189404 2,000 donkeys¦189413, as well as 100,000 people,
 \v 22 because many were killed \add ≈as a result of God's assistance\add*. Then they lived¦189428 in that \add ≈area\add* until¦189430 the exile¦189432.
 \s1 Menashsheh's descendants
 \rem /s1 The Half-Tribe of Manasseh; The People of East Manasseh
@@ -355,8 +355,8 @@
 \s1 The exile of the eastern tribes
 \rem /s1 The Eastern Tribes Are Deported
 \p
-\v 25 \add ≈But¦189474\add* they disobeyed the god of their¦189476 ancestors¦189476, and¦189474 they prostituted¦189477 themselves to the gods¦189479 of the peoples¦189480 that God¦189475 had destroyed¦189485 \add ≈ahead of them\add* in that region.
-\v 26 \add ≈So¦189489\add* the god¦189490 of Yisrael¦189491 stirred¦189489 up the spirit of the Assyrian King Pul¦189496 (\add ≈also known as\add* Tilgath¦189503-Pileser). He took them into exile, that is the Reubenites, the Gadites¦189509, and the half tribe¦189511 of Menashsheh¦189512. Then¦189489 he took them to Halah¦189514, and Habor¦189515, and Hara¦189516, and the river¦189517 of Gozan¦189518 (\add where they are\add* until¦189519 this day¦189520).\x + \xo 5:26: a \xt 2Ki 15:19; \xo b \xt 2Ki 15:29; \xo c \xt 2Ki 17:6.\x*
+\v 25 \add ≈But¦189474\add* they disobeyed their¦189476 ancestors'¦189476 god, and¦189474 they prostituted¦189477 themselves to the gods¦189479 of the peoples¦189480 that God¦189475 had destroyed¦189485 \add ≈ahead of them\add* in that region.
+\v 26 \add ≈So¦189489\add* Yisrael's¦189491 god¦189490 stirred¦189489 up the spirit of the Assyrian King Pul¦189496 (\add ≈also known as\add* Tilgath¦189503-Pileser). He took them into exile—that is, the Reuvenites, the Gadites¦189509, and the half tribe¦189511 of Menashsheh¦189512. Then¦189489 he took them to Halah¦189514, Habor¦189515, Hara¦189516, and the river¦189517 of Gozan¦189518 (\add where they still are\add* to¦189519 this day¦189520).\x + \xo 5:26: a \xt 2Ki 15:19; \xo b \xt 2Ki 15:29; \xo c \xt 2Ki 17:6.\x*
 \c 6
 \s1 Levi's descendants
 \rem /s1 Descendants of Levi; The Priestly Line; The Family Line of the High Priests; Levi
