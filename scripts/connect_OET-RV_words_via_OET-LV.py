@@ -80,10 +80,10 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-02-24' # by RJH
+LAST_MODIFIED_DATE = '2026-03-05' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.85'
+PROGRAM_VERSION = '0.86'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -239,6 +239,7 @@ simpleVerbs = ('accepted','accepting','accepts','accept',
                 'united','uniting','unites','unite', 'untied','untying','unties','untie'
                 'walked','walking','walks','walk', 'wanted','wanting','wants','want', 'warned','warning','warns','warn', 'watched','watching','watches','watch',
                     'withdrew','withdrawing','withdraws','withdraw', 'withered','withering','withers','wither',
+                    'worked','work',
                     'wrote','written','writing','writes','write',
                 'yelled','yelling','yells','yell',
                 )
@@ -272,7 +273,7 @@ SIMPLE_WORDS = SIMPLE_NOUNS + verbalNouns + simpleVerbs + simpleAdverbs+ simpleA
 # assert len(set(simpleWords)) == len(simpleWords) # Check for accidental duplicates -- but may be overlaps, e.g., love is a verb and a noun
 
 
-RV_WORDS_FROM_LV_WORD_STRINGS = (
+RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('120', 'a hundred twenty'),
     ('Israelis', 'of Yisrāʼēl/Israel'),('Israeli', 'of Yisrāʼēl/Israel'),
     ('Yisrael','Yisrāʼēl/Israel'),
@@ -307,10 +308,13 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     ('appropriate','fitting'),
     ('army-commander','hosts'),
     ('arrested','captured'),('arrested','laid'),
+    ('aroma','odour'),
+    ('assembly','convocation'),
     ('astounded','amazed'),
     ('because','for/because'),('Because','For/Because'),('because','For/Because'),
     ('bedding','pallet'),
     ('believers','brothers'),
+    ('blowing','blast'),
     ('body','flesh'),
     ('boulders','stones'),
     ('box','ark'),
@@ -387,6 +391,7 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     ('path','way'),('path','road'),
     ('people','multitude'),
     ('platform','lid'),
+    ('pleasant','soothing'),
     ('poor','humble'),
     ('praised','glorifying'),
     ('preaching','proclaiming'),
@@ -399,7 +404,7 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     ('responded','said'),
     ('rock','stone'),('rocks','stones'),
     ('room','place'),
-    ('sacred','holy'),
+    ('sacred','holiness'),('sacred','holy'),('sacred','of meeting'),
     ('scared','feared'),
     ('scoffed','mocking'),
     ('See','Behold'),
@@ -420,6 +425,7 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     ('tarpaulin','cover'),
     ('taught','teaching'),
     ('teachers','scribes'),
+    ('tent','tabernacle'),
     ('that','which'),
     ('themselves','hearts'),
     ('Then','And'),('then','And'),
@@ -578,8 +584,34 @@ RV_WORDS_FROM_LV_WORD_STRINGS = (
     # ('Zerah', 'Zara'),('Zerah', 'Zara/Zeraḩ'),
     ("aren't",'not'),("can't",'not'),("didn't",'not'),("don't",'not'),("isn't",'not'),("shouldn't",'not'),("won't",'not'),
     )
-for RVWord,LVWord in RV_WORDS_FROM_LV_WORD_STRINGS:
-    assert RVWord != LVWord, f"{RVWord=}"
+for RVWord,LVWords in RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS:
+    assert RVWord != LVWords, f"{RVWord=}"
+    assert ' ' not in RVWord
+
+
+LV_SINGLE_WORDS_TO_RV_WORD_STRINGS = (
+            ('brothers', 'brothers and sisters'), ('brothers', 'fellow believers'),
+            ('Brothers', 'Brothers and sisters'), ('Brothers', 'Fellow believers'),
+            ('Brothers', 'brothers and sisters'), ('Brothers', 'fellow believers'),
+
+            ('Higgaion', 'Meditation break'),
+            ('Şelāh', 'Instrumental break'),
+            ('Truly', 'May it be so'),
+
+            ('ascent','walking uphill'),
+            ('members', 'body parts'),
+            ('risen', 'got up'),
+            ('sanctuary', 'sacred tent'),
+            ('scribes', 'religious teachers'),
+            ('seeking', 'looking for'),
+            ('synagogues', 'Jewish meeting halls'), ('synagogues', 'meeting halls'),
+            ('synagogue', 'Jewish meeting hall'), ('synagogue', 'meeting hall'),
+            ('tabernacle', 'sacred tent'),
+            ('unblemished', 'no defects'),('unblemished', 'without defects'),
+            )
+for LVWord,RVWords in LV_SINGLE_WORDS_TO_RV_WORD_STRINGS:
+    assert LVWord != RVWords, f"{RVWords=}"
+    assert ' ' not in LVWord
 
 
 class WordNumberError(ValueError):
@@ -1636,7 +1668,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
     NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
 
     numAdded = numNS = 0
-    for rvWord, lvWordStr in RV_WORDS_FROM_LV_WORD_STRINGS:
+    for rvWord, lvWordStr in RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS:
         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{rvWord=} {lvWordStr=}" )
         lvWords = lvWordStr.split( ' ' )
         assert len(lvWords) <= 3, lvWords # if more, we need to add searching code down below
@@ -1689,25 +1721,7 @@ def doGroup2( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
     This list is one LV word to many RV words
     """
     numAdded = numNS = 0
-    for lvWord, rvWordStr  in (
-            ('brothers', 'brothers and sisters'), ('brothers', 'fellow believers'),
-            ('Brothers', 'Brothers and sisters'), ('Brothers', 'Fellow believers'),
-            ('Brothers', 'brothers and sisters'), ('Brothers', 'fellow believers'),
-
-            ('Higgaion', 'Meditation break'),
-            ('Şelāh', 'Instrumental break'),
-            ('Truly', 'May it be so'),
-
-            ('ascent','walking uphill'),
-            ('members', 'body parts'),
-            ('risen', 'got up'),
-            ('sanctuary', 'sacred tent'),
-            ('scribes', 'religious teachers'),
-            ('seeking', 'looking for'),
-            ('synagogues', 'Jewish meeting halls'), ('synagogues', 'meeting halls'),
-            ('synagogue', 'Jewish meeting hall'), ('synagogue', 'meeting hall'),
-            ('tabernacle', 'sacred tent'),
-            ):
+    for lvWord, rvWordStr in LV_SINGLE_WORDS_TO_RV_WORD_STRINGS:
         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvWord=} {rvWordStr=}" )
         rvWords = rvWordStr.split( ' ' )
         assert len(rvWords) <= 4, rvWords # if more, we need to add searching code down below
