@@ -74,13 +74,15 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 ## Terms to make consistent
 
 - Check consistency of keyterms, e.g., how is ‘son of God’, ‘holy spirit’, ‘kingdom of the heavens’ translated everywhere?
-- consistency of 'staff'
+- consistency of 'staff' vs 'rod'
 - David's town / city of David
 - 'c/k' names like 'Yacob'
 - 'b/v' names like 'Yakov'
 - 'ai/ay' names like 'Yeshai'
 - Philistines vs Filistines
 - raised offering vs wave offering, peace offering vs fellowship offering
+- firstfruits -> harvest festival
+- passover/Passover/pass-over, ....
 - Aram vs Syria
 - remove "years old" if it's not essential
 - make numbers consistent like '120' vs 'one hundred and twenty'
@@ -90,7 +92,6 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - "what was right in Yahweh's eyes" "what was right in the eyes of Yahweh"
 - all our measurements, e.g., ten kilograms, ... should have \add ≈ around them
 - all our months, e.g., March, April, ... should have \add ≈ around them
-- passover/Passover, ....
 - 'house of Yahweh' vs 'Yahweh's temple' vs just 'temple'
 - treasuries vs storerooms and storehouses
 - gatekeepers -> 'the men guarding the gates'
