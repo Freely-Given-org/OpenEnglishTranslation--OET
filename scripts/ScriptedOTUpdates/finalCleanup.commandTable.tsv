@@ -4,7 +4,7 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 #									(et)			DOM	replaceEt	Replace (et) with DOM (now fixed earlier in convert_ClearMaculaOT_to_our_TSV.py)
 #									(dm)			DOM	replaceDm	Replace (dm) with DOM (now fixed earlier in convert_ClearMaculaOT_to_our_TSV.py)
 									DOM¦			\untr DOM¦\untr*	makeDOMuntr	Mark DOM as untranslatable (into English)
-									(diy)_				replaceDIY_	Remove (diy)_ annotation from Aramic 'דִּי' H1768 (cf. Hebrew H1668)
+									(diy)				replaceDIY_	Remove (diy) annotation from Aramic 'דִּי' H1768 (cf. Hebrew H1668)
 
 # Mark YHWH as divine name
 									YHWH¦			\nd YHWH¦\nd*	makeYHWH_nd	Mark YHWH as divine name

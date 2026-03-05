@@ -387,11 +387,12 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('news','report'),
     ('non-Jews','pagans'),
     ('obey','submitting'),
+    ('ordered','commanded'),
     ('paralysed','paralytic'),
     ('path','way'),('path','road'),
     ('people','multitude'),
     ('platform','lid'),
-    ('pleasant','soothing'),
+    ('pleasing','soothing'),
     ('poor','humble'),
     ('praised','glorifying'),
     ('preaching','proclaiming'),
@@ -901,7 +902,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
     for BBB in lv.books:
         if BibleOrgSysGlobals.commandLineArguments.fastMode and BBB not in ('NUM','ISA',):
             continue
-        if BBB in ('CO1',): continue # TODO: CO1_14:33 gives an issue
+        # if BBB in ('CO1',): continue # TODO: CO1_14:33 gives an issue
         booklist_to_process.append( BBB )
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Created a list of {len(booklist_to_process)} OET books to process." )
 
@@ -990,7 +991,7 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
         state.lvESFMLines = state.lvESFMText.split( '\n' )
         # Do some basic checking (better to find common editing errors sooner rather than later)
         for lineNumber,line in enumerate( state.lvESFMLines, start=1 ):
-            # assert not line.endswith(' '), f"Unexpected space at end in {lvESFMFilename} {lineNumber}: '{line}'"
+            # assert not line.endswith(' '), f"Unexpected space at end in {lvESFMFilename} {lineNumber}: '{line}'" # Should be checked elsewhere -- tends to fail on OET-LV MAT line 99
             if line.endswith(' '):
                 logging.warning( f"Unexpected space at end in {lvESFMFilename} {lineNumber}: '{line}'" )
             for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
@@ -1814,14 +1815,14 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
     fnPrint( DEBUGGING_THIS_MODULE, f"addNumberToRVWord( {BBB} {c}:{v} '{word}' {wordNumber} )" )
     assert isinstance( wordNumber, int )
     assert '¦' not in word
-    if BBB=='MAT' and v==1: print( word )
+    # if BBB=='MAT' and v==1: print( word )
 
     NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
     havePsalmTitles = BibleOrgSysGlobals.loadedBibleBooksCodes.hasPsalmTitle( BBB, str(c) )
     desiredV = (v-1) if havePsalmTitles and v>1 else v
 
     if NT:
-        if wordNumber in (142_216,149_264): return None # TODO: Heb 1:6, 1 Pet 2:19 (nd gets put inside add field).................................................................................
+        if wordNumber in (119_194,142_216,149_264): return None # TODO: 1Cor 14:33, Heb 1:6, 1 Pet 2:19 (nd gets put inside add field).................................................................................
     else:
         if wordNumber in (252_390,): return None # TODO: PSA 54:1 (v1 gets put into d field).................................................................................
 
