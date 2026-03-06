@@ -80,7 +80,7 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-03-05' # by RJH
+LAST_MODIFIED_DATE = '2026-03-06' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.86'
@@ -91,7 +91,7 @@ DEBUGGING_THIS_MODULE = False
 
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module
 # FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos
-OET_LV_ESFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/' )
+OET_LV_ESFM_InputFolderPath = project_folderpath.joinpath( 'derivedTexts/' )
 OET_LV_OT_ESFM_InputFolderPath = OET_LV_ESFM_InputFolderPath.joinpath( 'auto_edited_OT_ESFM/' )
 OET_LV_NT_ESFM_InputFolderPath = OET_LV_ESFM_InputFolderPath.joinpath( 'auto_edited_VLT_ESFM/' )
 OET_RV_ESFM_FolderPath = project_folderpath.joinpath( 'translatedTexts/ReadersVersion/' )
@@ -999,6 +999,7 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
             assert doubledND not in line, f"Double \\nd in {lvESFMFilename} {lineNumber}: '{line}'"
             assert  badAddND not in line, f"\\nd inside \\add start {lvESFMFilename} {lineNumber}: '{line}'"
             assert  badNDAdd not in line, f"\\nd inside \\add end {lvESFMFilename} {lineNumber}: '{line}'"
+            assert  ' ¦' not in line, f"Word number attached to space {lvESFMFilename} {lineNumber}: '{line}'"
             if '\\x* ' in line: # this can be ok if the xref directly follows other text
                 logger = logging.critical if ' \\x ' in line else logging.warning
                 logger( f"Double-check space after xref in {lvESFMFilename} {lineNumber}: '{line}'" )
@@ -1029,6 +1030,7 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
             assert doubledND not in line, f"Double \\nd in {rvESFMFilename} {lineNumber}: '{line}'"
             assert  badAddND not in line, f"\\nd inside \\add start {rvESFMFilename} {lineNumber}: '{line}'"
             assert  badNDAdd not in line, f"\\nd inside \\add end {rvESFMFilename} {lineNumber}: '{line}'"
+            assert  ' ¦' not in line, f"Word number attached to space {rvESFMFilename} {lineNumber}: '{line}'"
             if '\\x* ' in line: # this can be ok if the xref directly follows other text
                 logger = logging.critical if ' \\x ' in line else logging.warning
                 logger( f"Double-check space after xref in {rvESFMFilename} {lineNumber}: '{line}'" )

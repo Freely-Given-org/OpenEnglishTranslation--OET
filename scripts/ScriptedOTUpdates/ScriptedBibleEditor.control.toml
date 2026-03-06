@@ -15,7 +15,7 @@ description = "To convert USFM files to create the draft OET-LV-OT"
 inputFolder = "../../intermediateTexts/modified_source_glossed_OSHB_ESFM/"
 inputFilenameTemplate = "BBB_gloss.ESFM"
 
-outputFolder = "../../intermediateTexts/auto_edited_OT_ESFM/"
+outputFolder = "../../derivedTexts/auto_edited_OT_ESFM/"
 outputFilenameTemplate = "OET-LV_BBB.ESFM"
 clearOutputFolder = true # Removes the folder and recreates it if createOutputFolder is true (else deletes all files in the folder)
 createOutputFolder = true

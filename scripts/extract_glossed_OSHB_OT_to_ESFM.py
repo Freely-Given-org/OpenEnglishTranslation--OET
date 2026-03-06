@@ -6,7 +6,7 @@
 #
 # Script handling extract_glossed_OSHB_OT_to_ESFM functions
 #
-# Copyright (C) 2022-2025 Robert Hunt
+# Copyright (C) 2022-2026 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -77,10 +77,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2025-06-29' # by RJH
+LAST_MODIFIED_DATE = '2026-03-06' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed_OSHB_OT_to_ESFM"
 PROGRAM_NAME = "Extract glossed OSHB OT ESFM files"
-PROGRAM_VERSION = '0.62'
+PROGRAM_VERSION = '0.63'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -299,6 +299,8 @@ def export_literal_English_gloss_esfm() -> bool:
                 assert '"' not in esfm_text, f'''Why do we have double quote in {esfm_filepath}: {esfm_text[esfm_text.index('"')-20:esfm_text.index('"')+22]}'''
                 # assert esfm_text.count('‘') == esfm_text.count('’'), f"{esfm_text.count('‘')} != {esfm_text.count('’')}"
                 assert esfm_text.count('“') == esfm_text.count('”'), f"{esfm_text.count('“')} != {esfm_text.count('”')}"
+                assert ' ¦' not in esfm_text, f"Can't have word number after space in {esfm_filepath}: {esfm_text[esfm_text.index(' ¦')-20:esfm_text.index(' ¦')+22]}"
+                assert '_¦' not in esfm_text, f"Can't have _¦ in {esfm_filepath}: {esfm_text[esfm_text.index('_¦')-20:esfm_text.index('_¦')+22]}"
                 assert '~¦' not in esfm_text, f"Can't have ~¦ in {esfm_filepath}: {esfm_text[esfm_text.index('~¦')-20:esfm_text.index('~¦')+22]}"
                 with open(esfm_filepath, 'wt', encoding='utf-8') as output_file:
                     output_file.write(f"{esfm_text}\n")
@@ -678,9 +680,15 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
     Returns fields like: 'he¦2_created¦2', 'the¦7=earth/land¦7', 'And¦9=the¦9=earth¦9', and XXX
     """
     # print( f"make_gloss_adjustments_and_append_word_number( {gloss=}, {wn=} )")
+    assert gloss
     assert wn[0] == '¦' and wn[1:].isdigit()
 
-    originalGloss = gloss
+    if gloss == '_': # Why do we have these? TODO: Should they be hyphens (for untranslated words)?
+        logging.critical( f"Refusing to add word number {wn=} to {gloss=}" )
+        halt # Maybe it doesn't actually occur???
+        return gloss # Don't want a word number on this
+
+    originalGloss = gloss # Used for error/warning messages
 
     # Do some early changes/fixes
     gloss = ( gloss
@@ -688,7 +696,14 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
                 .replace( 'todrink', 'to_drink') # Not sure why this systematic error is in there ???
                 .replace( 'forhelp', 'for_help') # Not sure why this systematic error is in there ???
              )
-
+    if ' ' in gloss:
+        logging.critical( f"Replacing space(s) with underline in {gloss=} at {wn=}" )
+        gloss = gloss.replace( ' ', '_' )
+    if gloss.endswith( '_' ):
+        logging.critical( f"Removing final underline from {gloss=} at {wn=}" )
+        gloss = gloss[:-1]
+    assert '__' not in gloss
+    
     if '[' in gloss:
         # print( f"Have square brackets in {gloss=}, {wn=} )")
         assert gloss.count('[') == gloss.count(']')
@@ -736,7 +751,9 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
 
     # if '\\add' in gloss:
     #     print( f"    Returning {gloss=} from ( {originalGloss=}, {wn=} )")
+    assert f' {wn}' not in gloss, f"Wrongly placed {gloss=} from {originalGloss=}"
     assert f'*{wn}' not in gloss, f"Wrongly placed {gloss=} from {originalGloss=}"
+    assert f'_{wn}' not in gloss, f"Wrongly placed {gloss=} from {originalGloss=}"
     assert f'{wn}{wn}' not in gloss, f"Bad {gloss=} from {originalGloss=}"
     assert f'{wn[1:]}¦' not in gloss, f"Messed up {gloss=} from {originalGloss=}"
     return gloss

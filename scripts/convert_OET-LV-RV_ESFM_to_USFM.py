@@ -58,11 +58,11 @@ DEBUGGING_THIS_MODULE = False
 
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module
 # FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos
-OET_LV_OT_ESFM_FolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_OT_ESFM/' )
-OET_LV_NT_ESFM_FolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_VLT_ESFM/' )
+OET_LV_OT_ESFM_FolderPath = project_folderpath.joinpath( 'derivedTexts/auto_edited_OT_ESFM/' )
+OET_LV_NT_ESFM_FolderPath = project_folderpath.joinpath( 'derivedTexts/auto_edited_VLT_ESFM/' )
 OET_RV_ESFM_FolderPath = project_folderpath.joinpath( 'translatedTexts/ReadersVersion/' )
 assert OET_LV_OT_ESFM_FolderPath.is_dir() and OET_LV_NT_ESFM_FolderPath.is_dir() and OET_RV_ESFM_FolderPath.is_dir()
-cleaned_USFM_FolderPath = project_folderpath.joinpath( 'derivedTexts/cleanedUSFM/' )
+cleaned_USFM_FolderPath = project_folderpath.joinpath( 'furtherDerivedTexts/cleanedUSFM/' )
 OET_LV_USFM_OutputFolderPath = cleaned_USFM_FolderPath.joinpath( 'LiteralVersion/' )
 OET_RV_USFM_OutputFolderPath = cleaned_USFM_FolderPath.joinpath( 'ReadersVersion/' )
 assert cleaned_USFM_FolderPath.is_dir() and OET_LV_USFM_OutputFolderPath.is_dir() and OET_RV_USFM_OutputFolderPath.is_dir()

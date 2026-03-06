@@ -1,33 +1,34 @@
 # OET makefile
 #
-# Last updated: 2026-02-24 by RJH
+# Last updated: 2026-03-06 by RJH
 #
 # CHANGELOG:
 #	2025-12-08 Copy OET LV OT & NT word tables into BSB and MSB folders
 #	2026-02-20 Produce OET-RV sections and automated TTS files for radio production
+#	2026-03-06 Separated derivedFiles folder out with some now in furtherDerivedFiles
 #
 
 #=== Folder and file declarations =======================
 
-derived_audio_sections := ../derivedTexts/OET-RV_sectionReadings/MRK/MRK_S2.ogg
-derived_VREFs := ../derivedTexts/OET-RV.vref.txt ../derivedTexts/OET-LV.vref.txt
-derived_USFM := $(wildcard ../derivedTexts/cleanedUSFM/ReadersVersion/*.USFM) $(wildcard ../derivedTexts/cleanedUSFM/LiteralVersion/*.USFM)
+derived_audio_sections := ../furtherDerivedTexts/OET-RV_sectionReadings/MRK/MRK_S2.ogg
+derived_VREFs := ../furtherDerivedTexts/OET-RV.vref.txt ../furtherDerivedTexts/OET-LV.vref.txt
+derived_USFM := $(wildcard ../furtherDerivedTexts/cleanedUSFM/ReadersVersion/*.USFM) $(wildcard ../furtherDerivedTexts/cleanedUSFM/LiteralVersion/*.USFM)
 
-sideBySide_HTML := $(wildcard ../derivedTexts/simpleHTML/SideBySide/???.html)
-LV_OT_HTML := ../derivedTexts/simpleHTML/LiteralVersion/GEN.html ../derivedTexts/simpleHTML/LiteralVersion/MAL.html
-LV_NT_HTML := ../derivedTexts/simpleHTML/LiteralVersion/MAT.html ../derivedTexts/simpleHTML/LiteralVersion/REV.html
-RV_HTML := $(wildcard ../derivedTexts/simpleHTML/ReadersVersion/*.html)
+sideBySide_HTML := $(wildcard ../furtherDerivedTexts/simpleHTML/SideBySide/???.html)
+LV_OT_HTML := ../furtherDerivedTexts/simpleHTML/LiteralVersion/GEN.html ../furtherDerivedTexts/simpleHTML/LiteralVersion/MAL.html
+LV_NT_HTML := ../furtherDerivedTexts/simpleHTML/LiteralVersion/MAT.html ../furtherDerivedTexts/simpleHTML/LiteralVersion/REV.html
+RV_HTML := $(wildcard ../furtherDerivedTexts/simpleHTML/ReadersVersion/*.html)
 
 RV_ESFM := $(wildcard ../translatedTexts/ReadersVersion/*.ESFM)
-final_LV_OT_ESFM := $(wildcard ../intermediateTexts/auto_edited_OT_ESFM/*.ESFM)
-final_LV_NT_ESFM := $(wildcard ../intermediateTexts/auto_edited_VLT_ESFM/OET-LV_???.ESFM)
+final_LV_OT_ESFM := $(wildcard ../derivedTexts/auto_edited_OT_ESFM/*.ESFM)
+final_LV_NT_ESFM := $(wildcard ../derivedTexts/auto_edited_VLT_ESFM/OET-LV_???.ESFM)
 
-LV_names_TSV_table := ../intermediateTexts/OET-LV_names_table.tsv
+LV_names_TSV_table := ../derivedTexts/OET-LV_names_table.tsv
 LV_ESFM := $(final_LV_OT_ESFM) $(final_LV_NT_ESFM)
 intermediate_LV_OT_ESFM := $(wildcard ../intermediateTexts/modified_source_glossed_OSHB_ESFM/???_gloss.ESFM)
 intermediate_LV_NT_ESFM := $(wildcard ../intermediateTexts/modified_source_VLT_ESFM/???_gloss.ESFM)
 final_RV_OT_word_tables = ../translatedTexts/ReadersVersion/OET-LV_OT_morpheme_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_lemma_table.tsv
-final_LV_OT_word_tables = ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_word_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_lemma_table.tsv
+final_LV_OT_word_tables = ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_word_table.tsv ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_lemma_table.tsv
 expanded_OT_TSV_tables := ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_lemma_table.tsv
 initial_OT_TSV_tables := ../intermediateTexts/glossed_OSHB/all_glosses.words.tsv ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv ../intermediateTexts/glossed_OSHB/all_glosses.lemmas.tsv
 expanded_NT_wordtable = ../intermediateTexts/modified_source_VLT_ESFM/OET-LV_NT_word_table.tsv
@@ -90,20 +91,20 @@ $(LV_OT_HTML) $(LV_NT_HTML): $(final_LV_OT_ESFM)  $(final_LV_NT_ESFM) convert_OE
 # 	@$(Python) $(SBE) ScriptedOTUpdates -qe
 
 # Had $(final_LV_OT_ESFM) here before
-../intermediateTexts/auto_edited_OT_ESFM/OET-LV_GEN.ESFM ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_MAL.ESFM: $(intermediate_LV_OT_ESFM) $(SBE) $(scripted_OT_updates) $(BTranslit) $(HebrewTranslit)
+../derivedTexts/auto_edited_OT_ESFM/OET-LV_GEN.ESFM ../derivedTexts/auto_edited_OT_ESFM/OET-LV_MAL.ESFM: $(intermediate_LV_OT_ESFM) $(SBE) $(scripted_OT_updates) $(BTranslit) $(HebrewTranslit)
 	@echo "\n\nRun ScriptedBibleEditor on OT ESFM files…\n"
 	@$(Python) $(SBE) ScriptedOTUpdates -qe
 	#@echo "\n\nCopying OT word and morpheme tables from modified_source_glossed_OSHB_ESFM/ to auto_edited_OT_ESFM/…\n"
-	#@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_word_table.tsv
-	#@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv
-	#@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_lemma_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_lemma_table.tsv
+	#@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_word_table.tsv
+	#@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv
+	#@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_lemma_table.tsv ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_lemma_table.tsv
 	# Does SBE automatically do some of the above copying steps??? Well, it certainly wouldn't do both
 
 $(final_LV_OT_word_tables): $(expanded_OT_TSV_tables)
 	@echo "\n\nCopying OT word and morpheme tables from modified_source_glossed_OSHB_ESFM/ to auto_edited_OT_ESFM/…\n"
-	@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_word_table.tsv
-	@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv
-	@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_lemma_table.tsv ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_lemma_table.tsv
+	@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_word_table.tsv
+	@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv
+	@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_lemma_table.tsv ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_lemma_table.tsv
 	# Does SBE automatically do some of the above copying steps??? Well, it certainly wouldn't do both
 
 $(final_LV_NT_ESFM): $(intermediate_LV_NT_ESFM) $(SBE) $(scripted_NT_updates) $(BTranslit) $(GreekTranslit) $(HebrewTranslit) $(expanded_NT_wordtable)
@@ -164,8 +165,8 @@ $(expanded_NT_wordtable): $(original_NT_wordtable) $(Clear_Bible_NT_lowfat_TSV) 
 
 $(final_RV_OT_word_tables): $(final_LV_OT_word_tables)
 	@echo "\n\nCopying OT morpheme and lemma tables from auto_edited_OT_ESFM/ to ReadersVersion/…\n"
-	@cp -a ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_morpheme_table.tsv
-	@cp -a ../intermediateTexts/auto_edited_OT_ESFM/OET-LV_OT_lemma_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_lemma_table.tsv
+	@cp -a ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_morpheme_table.tsv
+	@cp -a ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_lemma_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_lemma_table.tsv
 	@echo "\n\nCopying final OET OT word table to BSB & MSB folders…\n"
 	@cp -a ../translatedTexts/ReadersVersion/OET-LV_OT_word_table.tsv /srv/FreelyGiven/OpenBibleData/copiedBibles/English/Berean.Bible/BSB/
 	@cp -a ../translatedTexts/ReadersVersion/OET-LV_OT_word_table.tsv /srv/FreelyGiven/OpenBibleData/copiedBibles/English/Berean.Bible/MSB/
@@ -240,7 +241,7 @@ clean_LT_OT:
 
 .PHONY: clean_LT_NT
 clean_LT_NT:
-	rm ../intermediateTexts/auto_edited_VLT_ESFM/*.ESFM
+	rm ../derivedTexts/auto_edited_VLT_ESFM/*.ESFM
 	rm ../intermediateTexts/modified_source_VLT_ESFM/*.ESFM
 
 .PHONY: clean_RT
