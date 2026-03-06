@@ -6,7 +6,7 @@
 #
 # Script handling add_tags_to_OT_word_table functions
 #
-# Copyright (C) 2023-2025 Robert Hunt
+# Copyright (C) 2023-2026 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -69,10 +69,10 @@ import sys
 sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitted to PyPI
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew #, transliterate_Greek
 
-LAST_MODIFIED_DATE = '2025-11-10' # by RJH
+LAST_MODIFIED_DATE = '2026-03-02' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET OT wordtable"
-PROGRAM_VERSION = '0.23'
+PROGRAM_VERSION = '0.24'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -296,7 +296,7 @@ def apply_OT_scripted_gloss_updates() -> bool:
                     for eBook in eBooks:
                         assert eBook in BibleOrgSysGlobals.loadedBibleBooksCodes, f"{eBook=}"
                     for iRef in iRefs.copy(): # coz we might add more to the list
-                        assert iRef.count('_')==1 and iRef.count(':') in (0,1), iRef # A chapter ref has no colon
+                        assert iRef.count('_')==1 and iRef.count(':') in (0,1), f"Unexpected/missing colon(s) in {iRefs} from {line=}" # A chapter ref has no colon
                         iRefBits = iRef.split('_')
                         assert iRefBits[0] in BibleOrgSysGlobals.loadedBibleBooksCodes, f"{iRef=}"
                         try:
