@@ -64,10 +64,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Internals.InternalBibleInternals import getLeadingInt
 
 
-LAST_MODIFIED_DATE = '2026-02-24' # by RJH
+LAST_MODIFIED_DATE = '2026-03-06' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
-PROGRAM_VERSION = '0.91'
+PROGRAM_VERSION = '0.92'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -76,8 +76,8 @@ DEBUGGING_THIS_MODULE = False
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module
 FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos
 OET_RV_ESFM_InputFolderPath = project_folderpath.joinpath( 'translatedTexts/ReadersVersion/' )
-OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'derivedTexts/simpleHTML/ReadersVersion/' )
-OET_LV_HTML_InputFolderPath = project_folderpath.joinpath( 'derivedTexts/simpleHTML/LiteralVersion/' )
+OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'furtherDerivedTexts/simpleHTML/ReadersVersion/' )
+OET_LV_HTML_InputFolderPath = project_folderpath.joinpath( 'furtherDerivedTexts/simpleHTML/LiteralVersion/' )
 assert OET_RV_ESFM_InputFolderPath.is_dir()
 assert OET_HTML_OutputFolderPath.is_dir()
 assert OET_LV_HTML_InputFolderPath.is_dir()
@@ -824,6 +824,9 @@ def produce_HTML_files() -> None:
             assert '  ' not in esfm_text, f"""Why do we have doubled spaces in {source_filename}: {esfm_text[esfm_text.index('  ')-20:esfm_text.index('  ')+22]}"""
             assert ' \\f*' not in esfm_text, f"""Why do we have footnote ending with space in {source_filename}: {esfm_text[esfm_text.index(' \\f*')-20:esfm_text.index(' \\f*')+22]}"""
             assert ' \\x*' not in esfm_text, f"""Why do we have xref ending with space in {source_filename}: {esfm_text[esfm_text.index(' \\x*')-20:esfm_text.index(' \\x*')+22]}"""
+            assert ' ¦' not in esfm_text, f"""Why do we have word number attached to space in {source_filename}: {esfm_text[esfm_text.index(' ¦')-20:esfm_text.index(' ¦')+22]}"""
+            assert '_¦' not in esfm_text, f"""Why do we have word number attached to underline in {source_filename}: {esfm_text[esfm_text.index('_¦')-20:esfm_text.index('_¦')+22]}"""
+            assert '¦¦' not in esfm_text, f"""Why do we have doubled word number character in {source_filename}: {esfm_text[esfm_text.index('¦¦')-20:esfm_text.index('¦¦')+22]}"""
             invalid_text = '\\p\n\\s'
             assert invalid_text not in esfm_text, f"""Why do we have a useless paragraph in {source_filename}: {esfm_text[esfm_text.index(invalid_text)-20:esfm_text.index(invalid_text)+22]}"""
             for lineNumber,line in enumerate( esfm_text.split( '\n' ), start=1 ):

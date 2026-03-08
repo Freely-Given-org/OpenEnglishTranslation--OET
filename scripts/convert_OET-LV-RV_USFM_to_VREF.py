@@ -60,11 +60,11 @@ assert VREF_STANDARD_InputFilePath.is_file()
 
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module
 # FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos
-cleaned_USFM_InputFolderPath = project_folderpath.joinpath( 'derivedTexts/cleanedUSFM/' )
+cleaned_USFM_InputFolderPath = project_folderpath.joinpath( 'furtherDerivedTexts/cleanedUSFM/' )
 OET_LV_USFM_InputFolderPath = cleaned_USFM_InputFolderPath.joinpath( 'LiteralVersion/' )
 OET_RV_USFM_InputFolderPath = cleaned_USFM_InputFolderPath.joinpath( 'ReadersVersion/' )
 assert cleaned_USFM_InputFolderPath.is_dir() and OET_LV_USFM_InputFolderPath.is_dir() and OET_RV_USFM_InputFolderPath.is_dir()
-VREF_OutputFolderPath = project_folderpath.joinpath( 'derivedTexts/' )
+VREF_OutputFolderPath = project_folderpath.joinpath( 'furtherDerivedTexts/' )
 assert VREF_OutputFolderPath.is_dir()
 OET_LV_VREF_OutputFilePath = VREF_OutputFolderPath.joinpath( 'OET-LV.vref.txt' )
 OET_RV_VREF_OutputFilePath = VREF_OutputFolderPath.joinpath( 'OET-RV.vref.txt' )

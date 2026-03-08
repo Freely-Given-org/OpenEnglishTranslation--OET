@@ -1,0 +1,497 @@
+\id EZR - Open English Translation—Readers’ Version (OET-RV) v0.1.08
+\usfm 3.0
+\ide UTF-8
+\rem ESFM v0.6 EZR
+\rem WORDTABLE OET-LV_OT_word_table.tsv
+\h Ezra
+\toc1 Ezra
+\toc2 Ezra
+\toc3 Ezra
+\mt1 Ezra
+\is1 Introduction
+\ip \bk The account of Ezra\bk*, is like a continuation of \bk The Chronicles\bk*—it tells us about the returning home of other Jews who had been taken to Babylon as captives, and the restoration of daily life in Yerushalem (Jerusalem) and of worshipping at the temple.
+\ip It’s divided into three main sections: 1. The declaration of King Koresh (Cyrus) of Persia (Heb. Paras) to allow a group of exiled Jews to return to Yerushalem from Babylon. 2. The rebuilding of the temple and its dedication, and the return to worshipping Yahweh there in Yerushalem. 3. The return of a different group of Jewish descendants to Yerushalem under the leadership of Ezra—the one knowledgable about God’s instructions. He assisted the Israelis to return to their beliefs and customs, so that their worshipping of the true God wouldn’t be forgotten.
+\iot Main components of this account
+\io1 The first group of exiled Jews return home \ior 1:1–2:70\ior*
+\io1 The rebuilding of the temple and its dedication \ior 3:1–6:22\ior*
+\io1 Ezra leads other exiles to return to Yehudah (Judah) \ior 7:1–10:44\ior*
+\rem This is still a very early look into the unfinished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
+\ie
+\c 1
+\s1 Koresh returns some Jews
+\p
+\v 1 In the first year that Koresh \add (Cyrus)\add* was king of Persia \add (Heb. Paras)\add*, Yahweh stirred up \add his\add* spirit in order to fulfil what \add he’d\add* spoken through the prophet Yirmeyah \add (Jeremiah)\add*.\x + \xo 1:1: \xt Jer 25:11; 29:10.\x* \add So\add* \add the king\add* distributed a written proclamation throughout his kingdom, saying,
+\v 2 “Koresh, king of Persia, declares this: Yahweh, the god of heaven, has given me all the kingdoms in the world, and he’s appointed me to build a residence for him in Yerushalem in Yehudah.\x + \xo 1:2: \xt Isa 44:28.\x*
+\v 3 Anyone among you who’s one of his followers is free to go to Yerushalem (in Yehudah) \add to help\add* build a temple there for Yisrael’s god Yahweh—the god of Yerushalem. May God go with you.
+\v 4 Those who live near these people but who are not going themselves, should donate gold and silver, and goods and livestock, plus cash as a voluntary offering for God’s temple in Yerushalem.
+\p
+\v 5 Then \add some\add* of the leaders of Benyamin and Yehudah, and \add some\add* priests and Levites—all of whom had had their spirits stirred up by God—left to go and build Yahweh’s residence in Yerushalem.
+\v 6 Their neighbours had helped them by \add donating\add* gold and silver utensils, goods and livestock, and expensive gifts, as well as the voluntary offerings of cash.
+\p
+\v 7 Then King Koresh brought out the equipment from Yahweh’s temple that Nevukadnetstsar \add (Nebuchadnezzar)\add* had brought \add all the way\add* from Yerushalem and had put in the house of his gods.
+\v 8 \add He\add* \add put the treasurer Mitedat in charge of bringing them out\add* and Sheshbatstsar, the ruler of Yehudah, \add in charge of accepting them and listing them\add*.
+\v 9 There were: thirty gold basins, one thousand silver basins, twenty-nine knives,
+\v 10 thirty gold bowls, 410 silver bowls, and a thousand other utensils,
+\v 11 \add coming to a total of 5,400 gold and silver utensils\add*. Sheshbatstsar \add took all of that with the group\add* of exiles going from Babylon to Yerushalem.
+\c 2
+\s1 The list of returning exiles
+\r (Neh. 7:4-73)
+\p
+\v 1 Out of the captives that Babylonian King Nevukadnetstsar \add (Nebuchadnezzar)\add* had brought \add as slaves\add* to Babylon, these are \add their descendants\add* who returned to Yerushalem in Yehudah—\add each person returning to their own ancestral town\add*.
+\v 2 The ones who went with Zerubabel were: Yeshua, Nehemyah, Serayah, Re’elayah, Mordecai, Bilshan, Mispar, Bigvai, Rehum, and Ba’anah.
+\p Their numbers were:
+\li1
+\v 3 2,172 descendants of Farosh,
+\li1
+\v 4 372 descendants of Shefatyah,
+\li1
+\v 5 775 descendants of Arah,
+\li1
+\v 6 2,812 descendants of Fahat-Moab, from the families of Yeshua and Yoab,
+\li1
+\v 7 1,254 descendants of Elam,
+\li1
+\v 8 945 descendants of Zattu,
+\li1
+\v 9 760 descendants of Zakkai,
+\li1
+\v 10 642 descendants of Bani,
+\li1
+\v 11 623 descendants of Bevai,
+\li1
+\v 12 1,222 descendants of Azgad,
+\li1
+\v 13 666 descendants of Adonikam,
+\li1
+\v 14 2,056 descendants of Bigvai,
+\li1
+\v 15 454 descendants of Adin,
+\li1
+\v 16 98 descendants of Ater, \add who descended\add* from Hezkiyyah,
+\li1
+\v 17 323 descendants of Betsai,
+\li1
+\v 18 112 descendants of Yorah,
+\li1
+\v 19 223 descendants of Hashum,
+\li1
+\v 20 95 descendants of Gibar.
+\p
+\v 21 \add And from these towns:\add*
+\li1 123 from Bethlehem,
+\li1
+\v 22 56 from Netofah,
+\li1
+\v 23 128 from Anatot,
+\li1
+\v 24 42 from Azmavet,
+\li1
+\v 25 743 from Kiryat-Arim, Kefirah, and Be’erot,
+\li1
+\v 26 621 from Ramah and Geva,
+\li1
+\v 27 122 from Mikmas,
+\li1
+\v 28 223 from Beyt-El and Ai,
+\li1
+\v 29 52 from Nevo,
+\li1
+\v 30 156 from Magbish,
+\li1
+\v 31 1,254 from the other Elam,
+\li1
+\v 32 320 from Harim,
+\li1
+\v 33 725 from Lod, Hadid, and Ono,
+\li1
+\v 34 345 from Yericho,
+\li1
+\v 35 3,630 from Senaah.
+\p
+\v 36 The priests \add who returned\add*:
+\li1 973 descendants of Yedaiah (descendants of Yeshua),
+\li1
+\v 37 1,052 descendants of Immer,
+\li1
+\v 38 1,247 descendants of Fashhur,
+\li1
+\v 39 1,017 descendants of Harim.
+\p
+\v 40 The Levites \add who returned\add*:
+\li1 74 descendants of Yeshua and Kadmiel, who were from the family of Hodavyah,
+\li1
+\v 41 128 musicians who were descendants of Asaf,
+\li1
+\v 42 139 gatekeepers who were descendants of the gatekeepers Shallum, Ater, Talmon, Akkub, Hatita, and Shobai,
+\p
+\v 43 The temple servants \add who returned\add*:
+\li1 The descendants of Ziha, Hasufa, and Tabaot,
+\li1
+\v 44 the descendants of Keros, Siaha, and Fadon,
+\li1
+\v 45 the descendants of Levanah, Hagavah, and Akkuv,
+\li1
+\v 46 the descendants of Hagav, Shalmai, and Hanan,
+\li1
+\v 47 the descendants of Giddel, Gahar, and Reayah,
+\li1
+\v 48 the descendants of Retsin, Nekoda, and Gazzam,
+\li1
+\v 49 the descendants of Uzza, Faseah, and Besai,
+\li1
+\v 50 the descendants of Asnah, Me’unim, and Nefusim,
+\li1
+\v 51 the descendants of Bakbuk, Hakufa, and Harhur,
+\li1
+\v 52 the descendants of Bazlut, Mehida, and Harsha,
+\li1
+\v 53 the descendants of Barkos, Sisera, and Temah,
+\li1
+\v 54 and the descendants of Netsiyah and Atifa.
+\p
+\v 55 The descendants of Shelomoh’s \add (Solomon’s)\add* servants \add who returned\add*:
+\li1 the descendants Sotai, Hassoferet, Peruda,
+\li1
+\v 56 the descendants of Yaalah, Darkon, and Giddel,
+\li1
+\v 57 the descendants of Shefatyah, Hattil, Pokeret Hatstsebayim, and Ami.
+\m
+\v 58 \add Altogether\add* there were 392 descendants of temple workers and Shelomoh’s servants \add who returned\add*.
+\p
+\v 59 \add Another group\add* went from \add the towns of\add* Tel-Melah, Tel-Harsha, Keruv, Addon, and Immer, \add but\add* they \add didn’t know their ancestry\add* \add from before they were taken as captives\add*.
+\p
+\v 60 There were 652 people who were descendants of Delayah, Toviyyah, and Nekoda,
+\v 61 and from the sons of the priests: the descendants of Havayyah; the descendants of Hakkots; and the descendants of Barzillai, who took a wife from the daughters of Barzillai the Gileadite, so he was called by their name.
+\v 62 \add They\add* had searched for their \add records\add* among the \add genealogies\add*, but \add couldn’t find\add* \add their families listed\add*, \add so\add* they were \add disqualified to serve as priests\add*.
+\v 63 \add Also\add* the governor told them that they mustn’t eat any of the holiest food until a priest \add could use the Urim and Thummim\add* \add to determine their status\add*.\x + \xo 2:63: \xt Num 27:21.\x*
+\p
+\v 64 \add Altogether in this group\add*, 42,360 people \add returned to Yehudah\add*.
+\v 65 \add not counting\add* their 7,337 male and female servants, plus 200 male and female musicians.
+\v 66 \add They also took\add* 736 horses and 245 mules,
+\v 67 435 camels and 6,720 donkeys.
+\p
+\v 68 When some of the \add heads of families\add* got to Yahweh’s temple in Yerushalem, they freely donated \add so that it could be rebuilt\add*.
+\v 69 They each donated to the treasury according to \add their individual resources\add*—\add a total of\add* sixty-one thousand gold coins, five thousand silver bars, and a hundred sets of clothing for the priests.
+\p
+\v 70 \add So\add* the priests and the Levites, and some of the people, and the singers, and the gatekeepers and the temple servants \add returned to\add* live in their \add ancestral\add* cities, and \add so\add* all the Israeli cities \add had returnees living in them\add*.\x + \xo 2:70: \xt 1Ch 9:2; Neh 11:3.\x*
+\c 3
+\s1 Rebuilding the altar
+\p
+\v 1 In the seventh month, the Israelis from their \add various\add* cities, gathered together \add in unity\add* in Yerushalem.
+\v 2 Then Yotsadak’s son Yeshua and his brothers the priests, and Shealti’el’s son Zerubavel and his brothers, and they built the altar to offer up burnt offerings to Yisrael’s god on it as is written in the law of Mosheh, the man of God.\x + \xo 3:2: \xt Exo 27:1.\x*
+\v 3 They set the altar up on its foundation because they were worried \add about trouble from\add* some of the \add other\add* people groups \add in the region\add*. Then they offered burnt offerings to Yahweh on it \add as well as the regular\add* morning and evening burnt offerings.\x + \xo 3:3: \xt Num 28:1-8.\x*
+\v 4 Then they observed the Celebration in Shelters as \add per the written instructions\add*\x + \xo 3:4: \xt Num 29:12-38.\x* with a burnt offering each day as required.
+\v 5 After that \add was over\add*, they kept up the regular burnt offerings, plus those for the new moons and other times that Yahweh required, as well as any free-will offerings to Yahweh.\x + \xo 3:5: \xt Num 28:11–29:39.\x*
+\v 6 \add Even though the temple foundation rebuilding hadn’t started yet\add*, the people started sacrificing burnt offerings to Yahweh \add from the beginning of October\add*.
+\s1 Rebuilding the temple
+\p
+\v 7 They donated cash to the stone-workers and carpenters, and food, drink, and oil to the workers from Tsidon \add (Sidon)\add* and Tsor \add (Tyre)\add* to \add float\add* cedar \add logs along the coast\add* from Lebananon into Port Yafo \add (Joppa)\add* with the permission of Persian King Koresh \add (Cyrus)\add*.
+\p
+\v 8 In the second month of second year \add since their return to\add* Yerushalem, Shealtiel’s son Zerubavel and Yotsadak’s son Yeshua, and the rest of their brothers the priests and the Levites, and \add everyone except who’d returned\add* to Yerushalem from captivity, began work on God’s residence, and they appointed the Levites who were twenty and over to act as overseers for the work of \add rebuilding\add* Yahweh’s \add temple\add*.
+\v 9 \add And\add* Yeshua with his brothers and their sons, Kadmiel and his sons, (all descendants of Yehudah) \add cooperated\add* to act as overseers for those doing the work at the \add temple\add* \add together with\add* Henadad’s sons \add and grandsons\add*, and their brothers the Levites.
+\p
+\v 10 \add When the builders had\add* laid the foundation of Yahweh’s temple, they \add got\add* the priests \add to stand there in their robes\add* with their trumpets, and Asaf’s descendants (who were Levites) with their cymbals, to praise Yahweh \add using the rhythms composed by\add* David, the \add former\add* Israeli king.\x + \xo 3:10: \xt 1Ch 25:1.\x*
+\v 11 Then they sang in response—praising and thanking Yahweh: “\add Yes,\add* he is good, because his loyal commitment to Yisrael \add will continue forever\add*.”
+\p Then all the people shouted a great shout in praise to Yahweh because the foundation of Yahweh’s \add temple\add* had been laid.\x + \xo 3:11: \xt 1Ch 16:34; 2Ch 5:13; 7:3; Psa 100:5; 106:1; 107:1; 118:1; 136:1; Jer 33:11.\x*
+\v 12 Many of the older priests and Levites, and \add clan leaders\add* who’d seen the first \add temple\add*, wept loudly \add when they witnessed\add* the founding of this \add one\add*, \add but others were shouting happily with loud voices\add*.
+\v 13 So the people couldn’t differentiate the happy sounds from the sound of the people weeping, because the people were shouting \add very loudly and it could be heard from far away\add*.
+\c 4
+\s1 Opposition to rebuilding the temple
+\p
+\v 1 \add Now\add* the enemies of Yehudah and Benyamin heard that the \add Israelis who’d come back from\add* exile were building a temple for Yisrael’s god Yahweh.
+\v 2 \add so\add* they went to Zerubavel and to the \add other\add* \add clan leaders\add* and they said to them, “Let us \add help you with the building work\add*, because like you, we \add worship\add* your god and we’ve been sacrificing to him since the days of the Assyrian king Esar-Haddon—the one who \add sent\add* us here.”\x + \xo 4:2: \xt 2Ki 17:24-41.\x*
+\p
+\v 3 \add But\add* Zerubavel, and Yeshua, and the rest of the \add Israelis clan leaders\add* said to them, “It’s not for you and for us to build a house for our god, but we ourselves together will build for Yisrael’s god Yahweh, just as the Persian King Koresh \add (Cyrus)\add* has commanded us.”
+\p
+\v 4 \add Those local\add* people had been discouraging the people of Yehudah and trying to stop them from building.
+\v 5 They’d \add also\add* hired \add influencers to work against them throughout the reigns\add* of the Persian kings Koresh \add (Cyrus)\add* and Dareyavesh \add (Darius)\add*.
+\s1 The opposition of replacement of Yerushalem
+\p
+\v 6 Now at the beginning of the reign of Ahashverosh \add (Ahasuerus or Xerxes)\add*, they \add forwarded\add* an accusation against those who lived in Yerushalem and \add throughout\add* Yehudah.
+\p
+\v 7 And in the days of Persian King Artahshasta \add (Artaxerxes)\add*, Bishlam, Mitredat, Taveel and the rest of \add their\add* companions wrote to the king. (The letter was written in Aramaic \add (Syrian)\add* and \add using that alphabet\add*).
+\p
+\v 8 Rehum \add the high commissioner\add* and Shimshai the \add provincial secretary\add* wrote a letter to King Artahshasta against Yerushalem as follows:
+\p
+\v 9 \add From\add* Rehum \add the high commissioner\add* and Shimshai the \add provincial secretary\add*, and the \add our\add* companions, the judges and the rulers, the officials, the Persians, the Erechites, the Babylonians, the Susaites (that is, the Elamites),
+\v 10 and the rest of the nations that the famous and powerful \add King\add* Asenappar exiled \add from other nations\add* and \add forced\add* them to live in the cities of Shomron \add (Samaria)\add*, and the \add province went of the Euphrates river\add*.
+\p And now
+\v 11 this is \add what the letter said\add* that they sent to him:
+\p To Artahshasta \add (Artaxerxes)\add* the king \add from\add* your servants \add on this side of\add* the river.
+\p And now
+\v 12 let it be known to the king that the Jews who \add left your region\add* have come to us at Yerushalem \add to\add* rebuild that rebellious and evil city—they’re \add currently\add* finishing the walls and repairing the \add building\add* foundations.
+\v 13 Now let it be known to the king that if that city is built and the walls are completed, \add those people\add* won’t \add pay\add* \add taxes\add*, \add or send\add* \add tributes\add*, and \add your royal treasury will lose out\add*.
+\v 14 Now, because we’ve \add had the favour\add* of the palace, and \add because we don’t want to see the king dishonoured\add*, \add that’s why we’ve sent this letter to update\add* the king,
+\v 15 so that he can search in the \add official records of the kingdom\add*. You’ll discover and learn that that city \add of Yerushalem\add* is a rebellious city and one that has caused harm to kings and provinces, and \add has harboured rebellion there for decades past\add*—\add that’s why\add* that city was destroyed.
+\v 16 We are letting the king know that if that city is \add rebuilt\add* and its walls are completed, \add then you’ll lose control of this province on this side of the Euphrates\add*.”
+\p
+\v 17 The king sent this reply:
+\p “To Rehum \add the high commissioner\add* and Shimshai \add the provincial secretary\add*, and the rest of their companions who live in Shomron \add (Samaria)\add*, and the rest of \add the people in the province west of the Euphrates\add*: Peace.
+\p And now
+\v 18 the letter that you all sent to us has been carefully read aloud to me.
+\v 19 \add I ordered my officials to search\add* \add the records\add* and discovered \add that it’s true\add* that that city has been \add rebellious and seditious\add* since ancient times.
+\v 20 Powerful kings have \add reigned from\add* Yerushalem and ruled the entire region that side of the river, and had taxes and tributes paid to them.
+\v 21 \add So command those Jews to stop rebuilding\add* the city until \add such time as I make\add* a decree.
+\v 22 \add Don’t be negligent in doing that or the damage to this kingdom might get worse\add*.”
+\p
+\v 23 When King Artahshasta’s letter \add reached\add* Rehum, Shimshai the \add secretary\add*, and their companions, and was read aloud to them all, they \add immediately\add* went to Yerushalem and \add used force to stop\add* the Jews \add from their rebuilding\add*.
+\p
+\v 24 \add So there was a period when the rebuilding of the temple in Yerushalem stopped\add*, and it \add remained paused\add* until the second year of King Dareyavesh’s reign in Persia.\x + \xo 4:24: \xt Hag 1:1; Zech 1:1.\x*
+\c 5
+\s1 The temple rebuilding continues
+\p
+\v 1 Then the prophet Haggai and Iddo’s son Zekaryah prophesied to the Jews in Yerushalem and \add across\add* Yehudah in the name of Yisrael’s god \add who they served\add*.\x + \xo 5:1: \xt Hag 1:1; Zech 1:1.\x*
+\v 2 Then Shealtiel’s son Zerubabel and Yotsadak’s son Yeshua \add took action\add* and began to \add rebuild\add* God’s \add temple\add* in Yerushalem, and the prophets \add who served\add* God were \add there\add* with them, supporting them.\x + \xo 5:2: \xt Hag 1:12; Zech 4:6-9.\x*
+\p
+\v 3 At that time, Tattenai, the governor of \add the province west of the Euphrates\add*, and Shetar-Bozenai, and their companions came to them and \add demanded\add*, “Who \add gave you all permission to rebuild this temple\add*?”
+\v 4 \add They also asked the Jews to tell them the names of the men who were working\add* on the building.
+\v 5 \add However, God was watching over the Jewish leaders\add*, and they weren’t \add actually\add* stopped. \add A report was sent\add* to \add King\add* Dareyavesh, \add then they waited for a response\add*.
+\v 6 Tattenai, the governor of \add the province west of the river\add*, and Shetar-Bozenai and his companions, the \add provincial\add* officials, sent the letter to King Dareyavesh \add (Darius)\add*—
+\v 7 this is what was written in their report:
+\p “To King Dareyavesh. All peace.
+\v 8 Let it be known to the king that we went to the province of Yehudah, to the \add temple\add* of the great God, and it is being built with large stones, and timber is being placed in the walls. This work is being done \add to a high standard\add* and \add they’re making good progress\add*.
+\p
+\v 9 “Then we asked those elders, ‘Who \add gave you all permission to rebuild this temple\add*?’
+\v 10 We also asked them their names, so that we could write down the names of \add their leaders\add* to inform you.
+\p
+\v 11 “This is the answer they \add gave\add* us, ‘We are servants of the god of the heavens and earth, and we are \add rebuilding the temple\add* that was constructed and finished many years \add ago by a famous Israeli\add* king.
+\v 12 However, because our ancestors made the god of the heavens angry, he let Babylonian King Nevukadnetstsar (\add Nebuchadnezzar, \add* the Chaldean) \add defeat them\add*, and he destroyed \add that temple\add* and caused the people to be exiled to Babylon.\x + \xo 5:12: \xt 2Ki 25:8-12; 2Ch 36:17-20; Jer 52:12-15.\x*
+\v 13 But in the first year \add of the reign of\add* Babylonian King Koresh \add (Cyrus)\add*, \add he\add* made a decree to rebuild this house of God.\x + \xo 5:13: \xt Ezr 1:2-11.\x*
+\v 14 \add What’s more,\add* the gold and silver \add containers\add* that Nevukadnetstsar had taken out from that temple that was in Yerushalem and had brought to the temple in Babylon, King Koresh took them out from the temple in Babylon and they were \add handed over\add* to the man named Sheshbatstsar who he’d appointed as governor \add over Yehudah\add*.
+\v 15 \add Koresh\add* had told him to take those containers and put them back in the temple in Yerushalem, and \add to ensure that the temple got rebuilt in the same place where it had been before\add*.
+\v 16 \add So\add* Sheshbatstsar came \add here\add* and laid the foundation of God’s house in Yerushalem, and since then, it’s been being rebuilt but isn’t finished yet.’
+\p
+\v 17 \add So\add* now, if it \add pleases\add* the king, let a search be made in \add the records in\add* the king’s treasure house there in Babylon, if it’s \add correct\add* that a decree was set by King Koresh to rebuild this house of God in Yerushalem. Then let the king send his decision on this matter back to us.”
+\c 6
+\s1 The former approval is found
+\p
+\v 1 \add So\add* King Dareyavesh \add (Darius)\add* \add ordered that a search be conducted\add* in \add all\add* the \add archives\add* where treasures had been deposited there in Babylon,
+\v 2 and one scroll was found in the fortress at Ecbatana in the province of Media, and this \add record had been made\add*:
+\p
+\v 3 “In year one of Koresh the king, \add he\add* made a decree about the house of God in Yerushalem:
+\m ‘Let the house be built in the \add same\add* place where sacrifices were \add made\add*. \add Establish\add* its foundations and \add build it 27m high and 27m wide\add*
+\v 4 with three layers of large \add stones\add* and a layer of new timber. \add That should all be paid for from the royal treasury\add*.
+\v 5 Also, the gold and silver containers from the house of God that Nevukadnetstsar had taken out from the Yerushalem temple and had brought to Babylon, must be returned to their places in the temple in Yerushalem. \add So\add* you must put them in the house of God.’ ”
+\s1 King Dareyavesh orders resumption of work
+\p
+\v 6 \add Therefore King Dareyavesh wrote:\add* “Now to Governor Tattenai \add in the province west of the Euphrates\add*, Shetar-Bozenai, and their companions, the officials who in that province:
+\p \add Keep away from that place\add*.
+\v 7 Leave alone the work on that house of God. Let the Jewish governor and elders build that \add temple\add* in its place.
+\v 8 \add So here’s my decree about what should be done for\add* those Jewish elders to build that house of God: Using the king’s treasures that come from the tribute of that west-Euphrates province, let \add those workers costs be regularly reimbursed\add* so that \add the work\add* doesn’t stop.
+\v 9 Whatever is needed (\add including young\add* bulls, or rams, or lambs for burnt offerings to the god of the heavens, wheat, salt, wine, or oil, according to the command of the priests in Yerushalem), let it be given to them day by day (that is, without delay),
+\v 10 so that they can be offering sweet-smelling sacrifices to the god of the heavens and praying for the life of the king and his sons.
+\v 11 \add Also I\add* decree that any man who changes this edict should have a beam pulled from his house, and \add after it’s sharpened and\add* \add set into the ground\add*, then he should be impaled on it. Then his \add entire\add* house should be made into a rubbish heap \add because of what he did\add*.
+\v 12 May the god who has established his name there overthrow any king or person who \add makes any attempt\add* to change \add this decree or\add* to destroy that house of God in Yerushalem. I, Dareyavesh, have \add made\add* a decree. Let it be done diligently.”
+\s1 The temple dedication
+\p
+\v 13 Then Tattenai, the governor of \add the region west of the Euphrates\add*, Shetar-Bozenai, and their companions \add worked hard to follow the instructions sent by King Dareyavesh\add* \add (Darius)\add*.
+\v 14 \add So\add* the Jewish elders \add continued\add* building, and \add they were encouraged\add* by the prophesying of the prophet Haggai and Iddo’s son Zekaryah. \add As a result of the decrees of the Persian kings Koresh, and Dareyavesh and Artahshasta\add*, they \add were able to fulfil God’s decree to rebuild\add* \add the temple\add*.\x + \xo 6:14: a \xt Hag 1:1; \xo b \xt Zech 1:1.\x*
+\v 15 The \add rebuilt\add* \add temple\add* was finished in \add mid-March\add* in the sixth year of King Dareyavesh’s reign.
+\p
+\v 16 Then the \add Israeli people\add*, the priests, and the Levites, and the \add ones that had returned from\add* exile, performed the dedication of this house of God with \add celebrations\add*.
+\v 17 \add During\add* the dedication, they offered a hundred bulls, two-hundred rams, and four-hundred lambs, as well as twelve male goats for a sin offering for all Yisrael (matching the number of the tribes).
+\v 18 Then they \add organised\add* the priests to stand in their divisions and the Levites in their sections \add to serve\add* the god who \add resides\add* in Yerushalem, according to the \add instructions written by\add* Mosheh \add (Moses)\add*.
+\s1 The Feast of ‘pass-over’ of Messenger
+\p
+\v 19 \add So the people who’d returned from exile celebrated the ‘pass-over’ in late April\add*.\x + \xo 6:19: \xt Exo 12:1-20.\x*
+\v 20 The priests and Levites \add all had to be individually\add* purified, and they slaughtered the \add lambs\add* for all the \add exiles\add* and for their brothers the priests, and for themselves.
+\v 21 \add Then all the Israelis ate\add* \add the meal\add*—those who’d returned from the exile and every one who’d separated themselves from the uncleanness of the nations of the land in order to search for Israel’s god Yahweh.
+\v 22 Then they happily enjoyed the Flat Bread Celebration for seven days, because Yahweh had \add made them happy\add*, and had caused the Assyrian king \add to show favour to\add* them, to \add assist their work rebuilding\add* the house of God, the god of Yisrael.
+\c 7
+\s1 Ezra arrives in Yerushalem
+\p
+\v 1 \add Many years later\add* in the reign of Persian King Artahshasta \add (Artaxerxes)\add*, Ezra (son of Serayah, son of Azaryah, son of Hilkiyyah,
+\v 2 son of Shallum, son of Tsadok, son of Ahitub,
+\v 3 son of Amaryah, son of Azaryah, son of Merayot,
+\v 4 son of Zerahiah, son of Uzzi, son of Bukki,
+\v 5 son of Avishua, the son of Pinhas, the son of Eleazar, the son of Aharon the head priest)
+\v 6 was a skilled \add expert\add* in the law that Yisrael’s god Yahweh had given through Mosheh \add (Moses)\add*. \add With the favour of his god Yahweh helping\add* \add Ezra\add*, the king had granted all his requests, and he travelled from Babylon \add to Yerushalem\add*.
+\v 7 \add Some Israelis, including\add* some priests and Levites, singers and gatekeepers, and some temple servants \add travelled\add* to Yerushalem in the seventh year of Artahshasta’s \add reign\add*.
+\v 8-9 They left Babylon on New Year’s Day (in early April) and \add with God’s favour\add* \add on the journey\add*, arrived in Yerushalem exactly four months later
+\v 10 because Ezra had made \add a firm resolution\add* to \add study\add* Yahweh’s \add written\add* \add instructions\add*, and to \add carefully\add* \add follow\add* \add them\add*, and to teach \add them\add* in Yisrael.
+\s1 King Artahshasta’s letter to Ezra
+\p
+\v 11 King Artahshasta \add (Artaxerxes)\add* had given a letter for Ezra the priest and scribe and \add expert\add* in Yahweh’s commands and instructions \add to take with him\add*, \add saying\add*:
+\p
+\v 12 Artahshasta, the king of kings, to the priest Ezra, the scribe of the law of the god of heavens: Peace.
+\p Now,
+\v 13 \add I hereby\add* decree that anyone in my kingdom from Yisrael (including priests and Levites) who freely offers to go to Yerushalem with you, may go.
+\v 14 \add You are sent by\add* the king and his seven counsellors to \add determine whether\add* \add the people of\add* Yehudah and Yerushalem \add are following\add* the law of your god which \add you have a copy of\add*.
+\v 15 \add You are also\add* to take the gold and silver that the king and his counsellors have freely offered to the god of Yisrael \add who lives\add* in Jerusalem,
+\v 16 along with all the gold and silver that you \add collect\add* all \add across\add* Babylon, along with the freewill \add offerings\add* of the people and the priests who freely give towards the house of God in Yerushalem.
+\p
+\v 17 \add So then\add* you should diligently \add use those funds\add* to buy bulls, rams, lambs, and \add supplies for\add* their grain offerings and drink offerings, and you should offer them on the altar at the your god’s house in Yerushalem.
+\v 18 With \add the remaining funds\add*, you can \add use them for\add* whatever seems good to you and your brothers, according to the will of your god.
+\v 19 \add Also, make sure that\add* you deliver all those \add gold and silver\add* containers that were \add handed over\add* to you for use in your god’s house in Yerushalem.
+\v 20 \add Anything else that’s\add* needed for the house of your god that \add you need to supply can be provided\add* from the king’s treasuries.
+\p
+\v 21 And I, King Artahshasta \add make\add* a decree for all the treasurers \add in the province west of\add* the river: that you all diligently help with everything that the priest Ezra (the scribe of the law of the god of the heavens) asks from you all—
+\v 22 up to three tonnes of silver, five hundred bushels of wheat, two thousand litres of wine and \add the same amount\add* of olive oil, and \add as much salt as he needs\add*.
+\v 23 Everything that the god of the heavens decreed to be done should be done exactly \add as he specified because there’s no good reason to make him angry at\add* the kingdom of the king and his sons?
+\v 24 \add Also, it should be made clear\add* that there is no authority to \add extract\add* \add taxes\add* or tribute from any priests or Levites, singers or the gatekeepers, the temple servants or the servants of that house of God.
+\p
+\v 25 As for you, Ezra, \add use the wisdom that your god has given to you to\add* appoint magistrates and judges who can judge all the people who are in \add that province\add* beyond the river—everyone who know the laws of your god (plus you should teach those who don’t know \add them\add*).
+\v 26 Anyone who \add refuses to obey\add* your god’s laws and the king’s laws, \add should receive swift\add* judgement—whether it’s confiscation of goods, or banishment, imprisonment, or \add the death sentence\add*.”
+\s1 Ezra praises Yahweh
+\p
+\v 27 Blessed be Yahweh, the god of our fathers who put it into the king’s heart to honour Yahweh’s house in Yerushalem,
+\v 28 and showed me his loyal commitment in \add dealing with\add* the king and his counsellors, and all the powerful officials of the king. And as for me, Yahweh my god \add blessed me with\add* \add initiative and\add* \add the strength to carry it out as\add* I gathered some Israeli \add leaders\add* to go \add to Yerushalem\add* with me.
+\c 8
+\s1 The returning exiles
+\p
+\v 1 Now these are the \add family\add* heads and their \add descendants by number who\add* who went with me from Babylon \add to Yerushalem\add* in the reign of King Artahshasta \add (Artaxerxes)\add*:
+\li1
+\v 2 from the descendants of Pinhas: Gershom,
+\li1 from the descendants of Itamar: Daniyyel,
+\li1 from the descendants of David: Hattush,
+\li1
+\v 3 from the descendants of Shekanyah \add and\add* Far’osh: Zekaryah and a hundred and fifty \add other\add* men,
+\li1
+\v 4 from the descendants of Pahat-Moab: Zerahyah’s son Eliehoenai and two hundred \add other\add* men,
+\li1
+\v 5 from the descendants of Shekanyah: Yahatsiel’s son and three hundred \add other\add* men,
+\li1
+\v 6 from the descendants of Adin: Yonatan’s son Eved and fifty \add other\add* men,
+\li1
+\v 7 from the descendants of Eylam: Atalyah’s son Yeshayah and seventy \add other\add* men,
+\li1
+\v 8 from the descendants of Shefatyah: Mikael’s son Zevadyah and eighty \add other\add* men;
+\li1
+\v 9 from the descendants of Yoav: Yehiel’s son Ovadyah and 218 \add other\add* men,
+\li1
+\v 10 from the descendants of Shelomit: Yosifiah’s son and one hundred and sixty \add other\add* men,
+\li1
+\v 11 from the descendants of Bevai: his son Zekaryah and twenty-eight \add other\add* men,
+\li1
+\v 12 from the descendants of Azgad: Hakkatan’s son Yohanan and one hundred and ten \add other\add* men,
+\li1
+\v 13 from the later descendants of Adonikam: Elifelet, Yeiel, and Shemayah, and sixty \add other\add* men,
+\li1
+\v 14 and from the descendants of Bigvai: Utai and Zakkur and seventy \add other\add* men.
+\s1 Ezra finds some Levites to take
+\p
+\v 15 \add Firstly,\add* I gathered them \add near\add* the river that goes to Ahava, and we camped there for three days. I \add interviewed\add* the people and the priests and \add discovered that we didn’t have any Levites included\add* \add in the group\add*.
+\v 16 \add So I summoned\add* the following leaders: Eliezer, Ariel, Shemayah, Elnatan, Yarib, \add a second\add* Elnatan, Natan, Zekaryah, and Meshullam, as well as the wise men: Yoyariv and \add a third\add* Elnatan.
+\v 17 I commanded them to go to Iddo, the leader at Kasifya, and I \add told them to tell\add* Iddo and his relatives (temple servants in Kasifya) to send us \add some Levites\add* who would \add go to Yerushalem to\add* serve in our god’s \add temple\add*.
+\v 18 \add Then since we had God’s favour\add*, they sent us a \add talented\add* man (from the sons of Mahli, son of Levi, son of Yisrael) and eighteen of his sons and \add other relatives\add*.
+\v 19 \add They also sent\add* Hashavyah and Yeshayah (from Merari’s sons), and their relatives and sons—some twenty men—
+\v 20 plus two hundred and twenty \add descendants of\add* Levite temple servants that \add King\add* David and his officials had appointed for service—all designated by name.
+\s1 Ezra’s fasting and praying
+\p
+\v 21 Then \add right\add* there by the river Ahava, I proclaimed a fast to humble ourselves \add in front of\add* our god to \add request that he’d smooth the\add* way \add ahead\add* for us, and for our children, and for all our property,
+\v 22 because I was ashamed to request an army and horsemen from the king to help us from \add possible enemies\add* on the way. \add Also, you see,\add* we had \add previously\add* told the king, “Our god \add does\add* good to all those who \add honour\add* him, but his might and his \add anger\add* are against all those who abandon him.”
+\v 23 \add So\add* we fasted and sought \add wisdom\add* from our god concerning this, and he \add listened to our requests\add*.
+\s1 The gift and donations for the temple
+\p
+\v 24 Then I chose twelve of the leaders of the priests along with Sherevyah and Hashavyah and ten of the other Levites,
+\v 25 and \add as they watched,\add* I weighed out the gold and silver, and the \add valuable\add* utensils—the offering for the house of our god that the king, and his counsellors and officials, and all the \add exiled Israelis who could be contacted\add*, had offered.
+\v 26 \add It came to\add* three tonnes of gold, twenty-one tonnes of silver, and another three tonnes of silver containers,
+\v 27 as well as twenty gold bowls that weighed another eight kilograms, and two polished bronze containers that were as valuable as gold.
+\p
+\v 28 “You are sacred to Yahweh,” I told them all, “and the \add containers and utensils\add* are sacred, and the gold and silver are a freewill offering to Yahweh, the god of your ancestors.
+\v 29 \add Look after them all carefully\add* until you weigh them out \add in front\add* of the leaders of the priests and Levites and the leaders of the Israeli elders in the chambers of Yahweh’s house in Yerushalem.”
+\v 30 So the priests and the Levites \add accepted\add* the \add receipt\add* of the gold and silver, and the containers, to take them to Yerushalem—to the house of our god.
+\s1 The return to Yerushalem
+\p
+\v 31 Then in mid-April, we set out from the river Ahava to go to Yerushalem, and \add we had God’s favour as he kept us safe from any enemies or ambushes\add* on the way.
+\v 32 \add So\add* we arrived at Yerushalem, and \add rested\add* there for three days.
+\v 33 On the fourth day, the gold and silver and the \add containers and utensils\add* were weighed out in the \add temple\add*—\add being handed over to\add* Uriyyah’s son Meremot, the priest, and with him was Pinhas’s son Eleazar (and with them were Yeshua’s son Yozavad, and Binnuy’s son Noadyah, the Levites).
+\v 34 \add They recorded all the items with their weights\add*.
+\p
+\v 35 The \add descendants of the former captives who had returned from\add* exile offered burnt offerings to Yisrael’s god: twelve bulls for all Yisrael, 96 rams, 77 lambs, then twelve male goats for a sin offering. The whole was \add presented as\add* a burnt offering to Yahweh.
+\v 36 They \add relayed\add* the king’s orders to the governors and officials of \add the province\add* beyond the river, and so they honoured the people and God’s house.
+\c 9
+\s1 Ezra’s reaction against mixed marriages
+\p
+\v 1 Now as soon as those things were finished, the leaders came to me, saying, “The people of Yisrael, and the priests and Levites haven’t kept themselves separate from \add the idolatry of\add* the peoples of the lands: the \add Canaanites, Hittites, Perizzites, the Yebusites, Ammonites, Moabites, Egyptians, and the Amorites\add*.
+\v 2 \add Instead\add*, they’ve \add taken women from those peoples as wives\add* for themselves and their sons, so they’ve \add diluted their sacred heritage with the anti-God customs of those peoples\add*. \add But the worst is that\add* it’s \add our\add* leaders and officials that have been at the forefront in this unfaithfulness.”
+\v 3 As soon as I heard that, I tore my \add clothes\add* and pulled some of the hair out of my head and beard, and I sat down appalled.
+\v 4 \add Any others who respectfully followed Yisrael’s god’s instructions\add* \add and who were concerned\add* \add about the unfaithfulness of the exiles, joined with me\add* and I sat there appalled until \add the time of\add* the evening sacrifice.
+\s1 Ezra’s prayer
+\p
+\v 5 \add So\add* I got up from my \add position of\add* humilation with my torn \add clothes\add* \add during\add* the evening sacrifice, then I \add went\add* down on my knees and spread out my palms to my god Yahweh
+\v 6 and \add prayed\add*, “My god, I’m ashamed and humiliated to raise my face to you, my god, because our sins have multiplied \add and risen\add* above \add our heads\add*, and our guilt has \add mounted\add* up as \add high as the sky\add*.
+\v 7 From \add back in\add* the time of our ancestors until today, \add we’ve been very guilty\add*, and in our \add disobedience\add*, we ourselves, \add including\add* our kings and our priests, have been \add killed by the kings of the surrounding countries, or taken captive, or been plundered, or simply put to shame, which is the case right now\add*.
+\v 8 \add But\add* now for a brief moment, favour has come from our god Yahweh \add and given\add* us remaining survivors a stake in his holy place—\add yes,\add* our god \add has cheered us up and given us a little relief from\add* our slavery.
+\v 9 Because we are slaves, yet our god hasn’t abandoned us in our slavery, but he’s \add used his loyal commitment\add* \add to us\add* \add to influence\add* the Persian king to give to us \add breathing space\add* to \add rebuild\add* the house of our god \add from\add* its ruins, and to give to us a ‘wall \add of protection\add*’ in Yerushalem and \add across\add* Yehudah.
+\p
+\v 10 “\add So\add* now, our god, what can we say after that? We’ve abandoned your instructions
+\v 11 which you \add gave us via\add* your servants, the prophets, saying, ‘The land that you’re all entering to occupy is a land of impurity, due to the impurity of the \add current inhabitants with\add* their \add evil practices\add* that have filled it from \add one end to the other\add* with their \add filth\add*.
+\v 12 \add So\add* now, don’t give your daughters to their sons \add to marry\add*, or \add vice versa\add*. And don’t \add try to make long-term peace treaties or contracts with them\add*. \add Then\add* you all will \add stay in power\add*, and eat the good things of the land, and \add be able to pass it on to your children for all their future generations\add*.’\x + \xo 9:12: \xt Exo 34:11-16; Deu 7:1-5.\x*
+\p
+\v 13 “Yet after everything that’s \add happened to us as a result\add* our evil actions and our great guilt (even though you, our god, \add didn’t punish us as harshly as you could have\add*, and you’ve \add allowed us to survive as we’re here now\add*),
+\v 14 should we return to \add disobeying your instructions\add* and to intermarrying with those people groups \add with their evil practices\add*? You’d \add rightfully\add* be angry \add enough\add* with us as \add to wipe us out completely without leaving any\add* remnant or survivors?
+\v 15 Yahweh, the god of Yisrael, you \add always do what is right\add*, because \add here\add* we are as survivors even to this day. \add So, yes, here we are standing in front of you\add* in our guilt, because none \add of us are innocent enough to stand in front of you because of what we’ve done\add*.”
+\c 10
+\s1 The people’s acceptance of their sin
+\p
+\v 1 When Ezra prayed and confessed \add like that\add*, weeping and \add bowing down low in front\add* of the \add temple\add*, an extremely \add large number of Israeli\add* men and women and children gathered around him \add to join in and weep aloud\add*.
+\v 2 Then Yehiel’s son Shekanyah (from the sons of Eylam) answered and \add admitted\add* to Ezra, “We ourselves have behaved unfaithfully towards our god and have married foreign women from the \add other\add* people groups in \add this region\add*. \add But\add* there’s still hope for Yisrael concerning this.
+\v 3 \add So\add* now, let’s \add make an agreement\add* with our god to \add send all those women back, along with their children\add*, \add following the advice\add* of my master and the ones who \add strive to obey God’s instructions\add*, and as per the law.
+\v 4 \add So take action because this is now in your hands, but\add* we’re with you. \add Lead strongly and make a clear decision\add*.”
+\p
+\v 5 \add So\add* Ezra \add took action\add* and made the leaders of the priests and Levites, and all Yisrael, to \add promise to implement this decision, and they did so\add*.
+\v 6 Then Ezra \add left that place there in front of the temple\add*, and he went to Yehohanan’s room (Elyashiv’s son) and went in. He didn’t eat or drink, but \add continued\add* mourning because of the unfaithfulness of the exiles.
+\p
+\v 7 Then \add the leaders\add* \add sent a proclamation\add* throughout Yerushalem and all Yehudah to \add all those Jews who’d returned from captivity\add*, that \add their men\add* should assemble in Yerushalem.
+\v 8 \add They were told that\add* it was the decision of the leaders and elders that anyone who didn’t arrive within three days would then forfeit all their property and would \add no longer be considered as an Israeli\add*.
+\v 9 So on the third day (in mid-December), all the men of Yehudah and Benyamin gathered in Yerushalem, and all the people sat in the \add courtyard in front of the temple\add*. They were shivering because of the rain, and \add because of\add* \add the seriousness\add* of the matter.
+\p
+\v 10 Then the priest Ezra stood up and \add announced\add*, “You yourselves have acted unfaithfully and have married foreign women, thus adding to Yisrael’s guilt \add in God’s eyes\add*.
+\v 11 Now \add however\add*, praise Yahweh, the god of your ancestors, and do \add what he’s commanded us\add* and separate yourselves from \add the other religions of\add* the peoples in this \add region\add*, including \add not marrying their\add* women.”
+\p
+\v 12 Then all the \add gathered Israelis\add* answered, “\add Yes, we do need to do what you’ve said\add*.
+\v 13 However, \add it’s the rainy season now, and there’s so many people who can’t stand outside for several days while we try to work all this out, because we’ve done so much wrong\add*.
+\v 14 \add So let’s delegate our leaders to make the decisions for all of us. Then we can arrange to meet together by city with our elders and judges to apply the decisions about our foreign wives, until God’s anger towards us about these matters cools down\add*.
+\v 15 The only ones who were against this \add plan\add* were Asahel’s on Yonatan and Tikvah’s son Yahzeyah, with the support of Meshullam and the Levite Shabetai.
+\p
+\v 16 So the \add exiled Israelis agreed to follow that plan\add*, and the names \add of the men were written down by each clan leader who then stayed behind with\add* the priest Ezra, and \add a few days later,\add* they sat down to \add start working through the lists\add*.
+\v 17 \add Some two months later,\add* they had finished \add considering all the men who had married foreign women\add*.
+\s1 The men married to foreigners
+\p
+\v 18 Some of the priests’ descendants had married foreign women, i.e., the descendants of Yotsadak’s son Yeshua and his brothers, Maaseyah, Eliezer, Yarib, and Gedalyah,
+\v 19 and they \add promised to expell\add* their wives, and \add because of their guilt, each of them sacrificed\add* a ram from their flock.
+\v 20 Then, \add also\add*:
+\li1 From Immer’s descendants: Hanani and Zevadyah,
+\li1
+\v 21 From Harim’s descendants: Maaseyah, Eliyah, Shemayah, Yehiel, and Uzziyah,
+\li1
+\v 22 From Pashhur’s descendants: Elyoeynai, Maaseyah, Yishmael, Netan’el, Yozavad, and Elasah,
+\li1
+\v 23 Among the \add other\add* Levites: Yozabad, and Shimei, and Kelayah (that is, Kelita), Petahyah, Yehudah, and Eliezer.
+\li1
+\v 24 Among the singers: Elyashiv.
+\li1 Among the temple guards: Shallum, Telem, and Uri.
+\p
+\v 25 From the other Israelis:
+\li1 From Far’osh’s descendants: Ramyah, Yizziyyah, Malkiyyah, Miyyamin, Eleazar, Malkiyyah, and Benayah.
+\li1
+\v 26 From Helam’s descendants: Mattanyah, Zekaryah, Yehiel, Avdi, Yeremot, and Eliyah.
+\li1
+\v 27 From Zattu’s descendants: Elyoeynai, Elyashiv, Mattanyah, Yeremot, Zavad, and Aziza.
+\li1
+\v 28 From Bevai’s descendants: Yehohanan, Hananyah, Zabai, and Atlai.
+\li1
+\v 29 From Bani’s descendants: Meshullam, Malluk, Adayah, Yashuv, and Sheal-Yeremot.
+\li1
+\v 30 From Pahat-Moav’s descendants: Adna, Kelal, Benayah, Maaseyah, Mattanyah, Betsalel, Binnui, and Menashsheh.
+\li1
+\v 31 From Harim’s descendants: Eliezer, Yishshiyyah, Malkiyyah, Shemayah, Shimeon,
+\v 32 Benyamin, Malluk, and Shemaryah.
+\li1
+\v 33 From Hashum’s descendants: Mattenai, Mattattah, Zavad, Elifelet, Yeremai, Menashsheh, and Shim’i.
+\li1
+\v 34 From Bani’s descendants: Maadai, Amram, Uel,
+\v 35 Benayah, Bedeyah, Keluhi,
+\v 36 Vanyah, Meremot, Elyashiv,
+\v 37 Mattanyah, Mattenai, and Yaasu.
+\li1
+\v 38 From Binnui’s descendants: Shim’i,
+\v 39 Shelemyah, Natan, Adayah,
+\v 40 Maknadbai, Shashai, Sharai,
+\v 41 Azarel, Shelemyah, Shemaryah,
+\v 42 Shallum, Amaryah, and Yosef.
+\li1
+\v 43 From Nevo’s descendants: Yeiel, Mattityah, Zavad, Zevina, Yaddai, Yoel, and Benayah.
+\p
+\v 44 All of those had married foreign women and had children \add from them\add*.

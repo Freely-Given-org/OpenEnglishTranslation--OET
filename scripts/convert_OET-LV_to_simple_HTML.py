@@ -6,7 +6,7 @@
 #
 # Script to take the OET-LV ESFM files and convert to HTML
 #
-# Copyright (C) 2022-2025 Robert Hunt
+# Copyright (C) 2022-2026 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+OET@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -60,10 +60,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-12-08' # by RJH
+LAST_MODIFIED_DATE = '2026-03-06' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.85'
+PROGRAM_VERSION = '0.86'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -71,9 +71,9 @@ DEBUGGING_THIS_MODULE = False
 
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module
 FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos
-OET_OT_ESFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_OT_ESFM/' )
-OET_NT_ESFM_InputFolderPath = project_folderpath.joinpath( 'intermediateTexts/auto_edited_VLT_ESFM/' )
-OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'derivedTexts/simpleHTML/LiteralVersion/' )
+OET_OT_ESFM_InputFolderPath = project_folderpath.joinpath( 'derivedTexts/auto_edited_OT_ESFM/' )
+OET_NT_ESFM_InputFolderPath = project_folderpath.joinpath( 'derivedTexts/auto_edited_VLT_ESFM/' )
+OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'furtherDerivedTexts/simpleHTML/LiteralVersion/' )
 THEOGRAPHIC_INPUT_FOLDER_PATH = FG_folderpath.joinpath( 'Bible_speaker_identification/outsideSources/TheographicBibleData/derivedFiles/' )
 assert OET_OT_ESFM_InputFolderPath.is_dir()
 assert OET_NT_ESFM_InputFolderPath.is_dir()
@@ -779,6 +779,10 @@ def produce_HTML_files() -> None:
             assert '  ' not in esfm_text, f"""Why do we have doubled spaces in {source_filename}: {esfm_text[esfm_text.index('  ')-20:esfm_text.index('  ')+22]}"""
             assert ' \\f*' not in esfm_text, f"""Why do we have footnote ending with space in {source_filename}: {esfm_text[esfm_text.index(' \\f*')-20:esfm_text.index(' \\f*')+22]}"""
             assert ' \\x*' not in esfm_text, f"""Why do we have xref ending with space in {source_filename}: {esfm_text[esfm_text.index(' \\x*')-20:esfm_text.index(' \\x*')+22]}"""
+            assert ' ¦' not in esfm_text, f"""Why do we have word number attached to space in {source_filename}: {esfm_text[esfm_text.index(' ¦')-20:esfm_text.index(' ¦')+22]}"""
+            assert '_¦' not in esfm_text, f"""Why do we have word number attached to underline in {source_filename}: {esfm_text[esfm_text.index('_¦')-20:esfm_text.index('_¦')+22]}"""
+            assert '¦¦' not in esfm_text, f"""Why do we have doubled word number character in {source_filename}: {esfm_text[esfm_text.index('¦¦')-20:esfm_text.index('¦¦')+22]}"""
+            assert '(diy)' not in esfm_text, f"""Why do we have '(diy)' in {source_filename}: {esfm_text[esfm_text.index('(diy)')-20:esfm_text.index('(diy)')+22]}"""
             for lineNumber,line in enumerate( esfm_text.split( '\n' ), start=1 ):
                 for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
                     # First check the overall count

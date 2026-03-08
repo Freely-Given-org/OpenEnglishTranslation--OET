@@ -76,7 +76,7 @@ assert OET_LV_NT_OT_Filepath.is_file()
 assert OET_LV_NT_NT_Filepath.is_file()
 EXPECTED_COMMAND_TABLE_HEADER = 'Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	RCase	Replace	Name	Comment'
 
-OET_LV_NAMES_TSV_OUTPUT_FILEPATH = project_folderpath.joinpath( 'intermediateTexts/OET-LV_names_table.tsv' )
+OET_LV_NAMES_TSV_OUTPUT_FILEPATH = project_folderpath.joinpath( 'derivedTexts/OET-LV_names_table.tsv' )
 assert OET_LV_NAMES_TSV_OUTPUT_FILEPATH.is_file()
 OET_LV_NAMES_TSV_HEADER = 'TraditionalName\tLVName'
 
