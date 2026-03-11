@@ -80,7 +80,7 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-03-06' # by RJH
+LAST_MODIFIED_DATE = '2026-03-09' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.86'
@@ -156,7 +156,7 @@ SIMPLE_NOUNS = ( # These are nouns that are likely to match one-to-one from the 
     'man','men', 'markets','market', 'masters','master',
         'mercy', 'messages','message', 'meetings','meeting', 'moon', 'mothers','mother', 'mouths','mouth',
     'names','name', 'nations','nation', 'nets','net', 'news', 'noises','noise',
-    'officers','officer', 'officials','official',
+    'officers','officer', 'officials','official', 'oil',
     'peace', 'pens','pen', 'people','person', 'places','place', 'powers','power', 'prayers','prayer', 'priests','priest', 'prisons','prison', 'promises','promise'
     'rivers','river', 'roads','road', 'robes','robe', 'rocks','rock', 'roofs','roof', 'rooms','room', 'ropes','rope', 'rulers','ruler',
     'sandals','sandal', 'sea',
@@ -287,21 +287,37 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('demons', 'unclean spirits'),('demon', 'unclean spirit'),
     # The following nominal entries handle number changes
     ('hair', 'hairs'),
+    # Prepositions
+    ('at','in/on/at/with'),('in','in/on/at/with'),('on','in/on/at/with'),('with','in/on/at/with'),
+
     # The following verbal entries handle tense changes
-    ('and', 'And'),
     ('bend', 'bent'),
     ('calling', 'called'),
+    ('carrying','carried'),
+    ('equip','equipped'),
+    ('forgive','forgiving'),
     ('gave', 'given'),
+    ('healed','healing'),
     ('hear', 'hearing'),
+    ('immerser','immersing'),
+    ('knowing','known'),
+    ('lowered','lowering'),
     ('prayed', 'praying'),
     ('pleasing', 'acceptable'),
+    ('purified','purify'),
+    ('repent','repenting'),
     ('requested', 'requesting'),
+    ('taught','teaching'),
+    ('walk','walking'),
+    ('wrote','written'),
+
     # Vocab differences / synonyms
     ('afraid','feared'),
     ('agreeing','confirming'),
     ('amazed','astonished'),
     ('amazed','marvelling'),
     ('ancestors','fathers'),
+    ('and', 'And'),
     ('announced','proclaiming'), ('announcing','proclaiming'),
     ('Anyone','one'),('anyone','one'),
     ('appeared','seen'),
@@ -311,6 +327,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('aroma','odour'),
     ('assembly','convocation'),
     ('astounded','amazed'),
+    ('battle','war'),
     ('because','for/because'),('Because','For/Because'),('because','For/Because'),
     ('bedding','pallet'),
     ('believers','brothers'),
@@ -319,15 +336,14 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('boulders','stones'),
     ('box','ark'),
     ('bull','ox'),('bulls','oxen'),
-    ('but','But'),
-    ('But','And'),
-    ('carrying','carried'),
+    ('But','And'),('but','And'),('But','and'),('but','and'),
     ('chasing','pursuing'),
     ('cheerful','joy'),
     ('chest','ark'),
     ('clothes','apparel'),
     ('confused','confounded'),
     ('continued','said'),
+    ('cross','pass over'),
     ('ropes','cords'),
     ('countries','nations'),('country','nation'),
     ('countryside','field'),
@@ -350,30 +366,31 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('execution','stake'),
     ('existence','became'),
     ('fitting','befitting'),
-    ('forgive','forgiving'),
     ('fulfilled','accomplished'),
+    ('God','god'),
     ('godly','devout'),('godly','righteous'),
     ('grapevine','vine'),
     ('harvests','fruit'),
     ('heavenly','heavens'),('heavenly','heaven'),
+    ('hill','mountain'),
     ('honour','glorify'),
     ('huge','great'),
-    ('instructed','commanded'),
+    ('instructed','commanded'),('instructions','commanded'),
     ('insulting','slandering'),
+    ('item','article'),('items','article'),
     ('kill','destroy'),
+    ('King','king'),
     ('kingdoms','nations'),
     ('know','knowledge'),
-    ('knowing','known'),
     ('lake','sea'),
     ('languages','tongues'),
-    ('left','came out'),
+    ('left','came out'),('left','set out'),
     ('listen','give ear'),('listen','hear'),
-    ('Listen','Behold'),('Look','Behold'),
+    ('Listen','Behold'),('listen','Behold'),('Listen','behold'),('listen','behold'),
     ('living','dwelling'),
-    ('looking','searched'),
-    ('looking','seeking'),
+    ('Look','Behold'),('look','Behold'),('Look','behold'),('look','behold'),
+    ('looking','searched'),('looking','seeking'),
     ('loudly','loud'),
-    ('lowered','lowering'),
     ('lying','lied'),
     ('mankind','humans'),
     ('mister','master'),('Mister','Master'),
@@ -384,9 +401,12 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('Mt','mountain'),
     ('necessary','fitting'),
     ('needs','let'),
+    ('Nevertheless','nevertheless'),
     ('news','report'),
     ('non-Jews','pagans'),
+    ('noticed','saw'),
     ('obey','submitting'),
+    ('own','possession'),
     ('ordered','commanded'),
     ('paralysed','paralytic'),
     ('path','way'),('path','road'),
@@ -401,6 +421,8 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('quiet','desolate'),
     ('quiet','silenced'),
     ('range','various'),
+    ('realised','saw'),
+    ('region','land'),('regions','land'),
     ('requested','prayed'),
     ('responded','said'),
     ('rock','stone'),('rocks','stones'),
@@ -411,7 +433,6 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('See','Behold'),
     ('She\'s','She'),
     ('should','let'),
-    ('should','let'),
     ('sick','sickly'),
     ('Similarly','Likewise'),
     ('sitting','reclining'),
@@ -419,32 +440,32 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('small','little'),
     ('So','And'),('So','Therefore'),
     ('songs','psalms'),
-    ('spoken','said'),
+    ('spoken','said'),('spoken','saying'),
     ('staying','dwelling'),
     ('strong','forceful'),
     ('talking','speaking'), ('talking','saying'),
     ('tarpaulin','cover'),
-    ('taught','teaching'),
     ('teachers','scribes'),
+    ('telling','proclaimed'),
     ('tent','tabernacle'),
     ('that','which'),
     ('themselves','hearts'),
     ('Then','And'),('then','And'),
-    ('thinking','reasoning'),
-    ('thinking','supposing'),
+    ('thinking','reasoning'),('thinking','supposing'),
+    ('total','all'),
+    ('town','city'),
     ('undesirables','sinners'),
     ('ungodly','unclean'),
     ('upstairs','upper'),
     ('untarnished','holy'),
     ('urged','implored'),
-    ('walk','walking'),
     ('wallet','purse'),
+    ('warriors','men'),
     ('wealthy','rich'),
     ('went','came'),
     ("What's",'What'),
     ('work','service'),
     ('wow','see'),
-    ('wrote','written'),
     ('yelled','cried'),
     ('yourselves','hearts'),
     # Capitalisation differences (sometimes just due to a change of word order)
@@ -585,7 +606,9 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     # ('Zerah', 'Zara'),('Zerah', 'Zara/Zeraḩ'),
     ("aren't",'not'),("can't",'not'),("didn't",'not'),("don't",'not'),("isn't",'not'),("shouldn't",'not'),("won't",'not'),
     )
-for RVWord,LVWords in RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS:
+for someTuple in RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS:
+    assert isinstance( someTuple, tuple), f"{someTuple=}"
+    RVWord, LVWords = someTuple
     assert RVWord != LVWords, f"{RVWord=}"
     assert ' ' not in RVWord
 
@@ -610,7 +633,9 @@ LV_SINGLE_WORDS_TO_RV_WORD_STRINGS = (
             ('tabernacle', 'sacred tent'),
             ('unblemished', 'no defects'),('unblemished', 'without defects'),
             )
-for LVWord,RVWords in LV_SINGLE_WORDS_TO_RV_WORD_STRINGS:
+for someTuple in LV_SINGLE_WORDS_TO_RV_WORD_STRINGS:
+    assert isinstance( someTuple, tuple), f"{someTuple=}"
+    LVWord,RVWords = someTuple
     assert LVWord != RVWords, f"{RVWords=}"
     assert ' ' not in LVWord
 
