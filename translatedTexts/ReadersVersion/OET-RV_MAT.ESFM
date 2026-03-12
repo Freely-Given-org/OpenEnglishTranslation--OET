@@ -1,4 +1,4 @@
-\id MAT - Open English Translation—Readers' Version (OET-RV) v0.4.10
+\id MAT - Open English Translation—Readers' Version (OET-RV) v0.4.12
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 MAT
@@ -36,8 +36,8 @@
 \v 2 Abraham was the father of Isaac, Isaac the father of Yacob (Grk: Yakob), Yacob the father of Yudah¦22 (Grk: Youdas¦22) and his¦26 brothers¦25.
 \v 3 Yudah¦27 was the father of Perez (Grk: Fares¦31) and Zerah (Grk: Zara¦34) through Tamar (Grk: Thamar¦37), Perez the father of Hezron (Grk: Hezrom), Hezron the father of Aram¦47,
 \v 4 Aram¦48 the father of Aminadab, Aminadab the father of Nahshon (Grk: Naasson¦57), Nahshon the father of Salmon¦62,
-\v 5 Salmon¦63 the father of Boaz (Grk: Boes) through Rahab¦70, Boaz the father of Obed (Grk: Yobed) through Ruth¦78 (Grk: Routh), and Obed the father of Jesse (Grk: Yessai¦83),
-\v 6 and¦85 Jesse the father of David¦88 the king¦90.
+\v 5 Salmon¦63 the father of Boaz (Grk: Boes) through Rahab¦70, Boaz the father of Obed (Grk: Yobed) through Ruth¦78 (Grk: Routh), and Obed the father of Yishay \add (Jesse, Grk: Yessai¦83)\add*,
+\v 6 and¦85 Yishay the father of David¦88 the king¦90.
 \p David was the father of Solomon¦97 (Grk: Solomona) through Uriah's (Grk: Ourias¦101) wife¦99,
 \v 7 Solomon¦102 was the father of Rehoboam (Grk: Roboam), Rehoboam the father of Abiyah (Grk: Abia), Abiyah the father of Asa (Grk: Asaf),
 \v 8 Asa the father of Jehoshapat (Grk: Yosafat). Jehoshapat the father of Joram (Grk: Yoram¦126), Joram the father of Uzziah¦131 (Grk: Ozias¦131),
@@ -117,7 +117,7 @@
 \v 21 So¦917 Yosef got up and took¦920 the child¦923 and his¦928 mother¦927 and went¦930 \add back\add* to Yisrael.
 \p
 \v 22 But¦954 when he heard¦936 that Archelaus¦939 was reigning¦940 over Yudea instead¦944 of his¦948 father¦947 Herod¦949, and \add also\add* having been warned¦953 in a dream¦956, he left \add Yudea\add* and went to the Galilee¦962 area.
-\v 23 \x + \xo 2:23: \xt Mrk 1:24; Luk 2:39; Yhn 1:45.\x*Once he got there, he settled into the town¦967 of \nd Nazareth¦969\nd*, so that what had been spoken¦973 through¦975 the prophets¦977 would be fulfilled¦971: “He'll be called a Nazarene.”\f + \fr 2:23 \ft This is not a specific quote from the Hebrew Scriptures, but note that Matthew does say ‘the prophet\bd s\bd*’ (not ‘the prophet’). This could be: ¹A play on Hebrew ‘נצר’ from Yeshayah (Isaiah) 11:1 where ‘branch/shoot’ (netser) is similar to ‘Natsaret’ (Nazareth/natsrat), ²a play on Shamshon (Samson) the ‘Nazirite’ (נְזִיר) from Heroes (Judges) 13:5,7, or ³just a slur on Yeshua being from insignificant Nazareth as per Yohan (John) 1:46.\f*
+\v 23 \x + \xo 2:23: \xt Mrk 1:24; Luk 2:39; Yhn 1:45.\x*Once he got there, he settled into the town¦967 of \nd Nazareth¦969\nd*, so that what had been spoken¦973 through¦975 the prophets¦977 would be fulfilled¦971: “He'll be called a Nazarene.”\f + \fr 2:23 \ft This is not a specific quote from the Hebrew Scriptures, but note that Matthew does say ‘the prophet\bd s\bd*’ (not ‘the prophet’). This could be: ¹A play on Hebrew ‘נצר’ from Yeshayah (Isaiah) 11:1 where ‘branch/shoot’ (netser) is similar to ‘Natsaret’ (Nazareth/natsrat), ²a play on Shimshon (Samson) the ‘Nazirite’ (נְזִיר) from Heroes (Judges) 13:5,7, or ³just a slur on Yeshua being from insignificant Nazareth as per Yohan (John) 1:46.\f*
 \c 3
 \s1 Yohan-the-immerser's preaching
 \rem /s1 The Proclamation of John the Baptist; John the Baptist and Jesus; The Preaching of John the Baptist; John the Baptist Prepares the Way
@@ -177,7 +177,7 @@
 \rem /s1 The Ministry of Jesus Begins; Jesus Begins to Preach; Jesus Begins His Ministry in Galilee; The first disciples; Jesus Begins His Work in Galilee
 \r (Mark 1:14-15; Luke 4:14-15)
 \p
-\v 12 \x + \xo 4:12: \xt Mat 14:3; Mrk 6:17; Luk 3:19-20.\x*When Yeshua heard¦1556 that Yohan had been arrested, he withdrew¦1564 up to Galilee¦1567.
+\v 12 \x + \xo 4:12: \xt Mat 14:3; Mrk 6:17; Luk 3:19-20.\x*When¦1557 Yeshua heard¦1556 that Yohan had been arrested, he withdrew¦1564 up to Galilee¦1567.
 \v 13 \x + \xo 4:13: \xt Yhn 2:12.\x*He moved from \nd Nazareth¦1572\nd* across to Capernaum¦1576 beside the lake in the region¦1583 that¦1577 had been given to the tribes of Zebulun and¦1585 Naftali,
 \v 14 so that what had been written by the prophet¦1594 Yeshayah¦1592 would come true,
 \q1
@@ -429,21 +429,21 @@
 \r (Luke 6:47-49)
 \p
 \v 24 “\wj Therefore¦3969 anyone who hears these¦3975 messages¦3974 of mine and¦3976 puts them into practice, they¦3979 can be likened¦3979 to a sensible person who built¦3985 their house¦3988 on the rock¦3992.\wj*
-\v 25 \wj When the rains started and the floods¦4000 came and the winds¦4004 blew and battered that house¦4011, it was stable because¦4017 its foundation was the rock¦4020.\wj*
+\v 25 \wj When¦3993 the rains started and the floods¦4000 came and the winds¦4004 blew and battered that house¦4011, it was stable because¦4017 its foundation was the rock¦4020.\wj*
 \p
 \v 26 “\wj But¦4021 anyone who hears these¦4029 messages¦4028 of mine and¦4021 doesn't put them into practice, they can be likened¦4034 to a stupid person who built¦4038 their house¦4041 on the sand.\wj*
-\v 27 \wj When the rains started and the floods¦4053 came and the winds¦4057 blew and battered that house¦4062, it collapsed with a loud crash.\wj*”
+\v 27 \wj When¦4046 the rains started and the floods¦4053 came and the winds¦4057 blew and battered that house¦4062, it collapsed with a loud crash.\wj*”
 \s1 Yeshua's authority
 \rem /s1 The Authority of Jesus
 \p
-\v 28 \x + \xo 7:28-29: \xt Mrk 1:22; Luk 4:32.\x*When \nd Yeshua\nd* had finished¦4076 sharing all these¦4081 messages¦4080, the crowds¦4084 were astonished¦4082 at his¦4088 teaching¦4087
+\v 28 \x + \xo 7:28-29: \xt Mrk 1:22; Luk 4:32.\x*When¦4072 \nd Yeshua¦4078\nd* had finished¦4076 sharing all these¦4081 messages¦4080, the crowds¦4084 were astonished¦4082 at his¦4088 teaching¦4087
 \v 29 because¦4092 he taught¦4093 like someone who had authority¦4096, and not like their¦4103 \add regular\add* religious¦4102 teachers¦4093.
 \c 8
 \s1 Yeshua heals a man with leprosy
 \rem /s1 Jesus Heals a Man; Jesus Cleanses a Leper; Jesus Heals a Man with Leprosy; Miracles and teaching; The Man With Leprosy
 \r (Mark 1:40-45; Luke 5:12-16)
 \p
-\v 1 When Yeshua came down from the hillside, a large crowd¦4117 followed¦4115 him,
+\v 1 When¦4109 Yeshua came down from the hillside, a large crowd¦4117 followed¦4115 him,
 \v 2 and then¦4119 a man with leprosy approached¦4122 him and knelt down in front of him and asked, “\nd Master¦4127\nd*, if you're willing¦4129, you're able to get rid of this disease.”
 \p
 \v 3 “\wj I am willing¦4143,\wj*” said Yeshua as he stretched¦4134 out his¦4148 hand¦4136 \add and¦4133 commanded\add*, “\wj Be clean.\wj*” The leprosy¦4150 disappeared immediately¦4146
@@ -452,7 +452,7 @@
 \rem /s1 The Faith of the Centurion; Jesus Heals a Centurion's Servant; Jesus Heals a Roman Officer's Servant; Faith of the Roman Officer
 \r (Luke 7:1-10)
 \p
-\v 5 When Yeshua arrived in Capernaum¦4184, a \add Roman\add* army commander approached¦4185 him and¦4178 begged him,
+\v 5 When¦4178 Yeshua arrived in Capernaum¦4184, a \add Roman\add* army commander approached¦4185 him and¦4178 begged him,
 \v 6 saying¦4192, “\nd Master¦4193\nd*, I have a slave who's paralysed¦4201 and¦4191 had to kept in bed because he's being¦4203 badly tormented¦4203.”
 \p
 \v 7 “\wj I'll come¦4212 and¦4204 heal him,\wj*” Yeshua answered.
@@ -468,7 +468,7 @@
 \rem /s1 Jesus Heals Many at Peter's House; Jesus Heals Many People
 \r (Mark 1:29-34; Luke 4:38-41)
 \p
-\v 14 When \nd Yeshua\nd* came to Peter's house¦4390, he saw¦4392 Peter's mother-in-law lying in bed with the fever¦4398.
+\v 14 When¦4384 \nd Yeshua\nd* came to Peter's house¦4390, he saw¦4392 Peter's mother-in-law lying in bed with the fever¦4398.
 \v 15 Yeshua touched¦4400 her hand¦4402 and the fever¦4408 left her. Then she¦4410 got up and looked after her guest.
 \p
 \v 16 In the evening¦4416, the people brought¦4419 many who were possessed¦4421 by evil spirits and Yeshua drove out the spirits with a command and healed¦4433 all of them that were sick¦4431.
@@ -477,7 +477,7 @@
 \rem /s1 The Cost of Following Jesus; The Would-Be Followers of Jesus
 \r (Luke 9:57-62)
 \p
-\v 18 When \nd Yeshua\nd* saw the crowd¦4459 around¦4461 him, he told \add his apprentices\add* to take him across¦4467 to the other side \add of the lake\add*.
+\v 18 When¦4454 \nd Yeshua¦4456\nd* saw the crowd¦4459 around¦4461 him, he told \add his apprentices\add* to take him across¦4467 to the other side \add of the lake\add*.
 \v 19 One of the teachers of the law came up to Yeshua and¦4468 told him¦4473, “Teacher¦4474, I'll follow¦4475 you wherever¦4477 you go.”
 \p
 \v 20 “\wj Foxes¦4487 have burrows¦4488,\wj*” said \nd Yeshua¦4485\nd*, “\wj and¦4490 birds¦4492 have their nests¦4495, but¦4497 humanity's child doesn't \+add even\+add* have a place to lay his head.\wj*”
@@ -570,7 +570,7 @@
 \p
 \v 27 As \nd Yeshua\nd* left the ruler's home, two¦5354 blind¦5355 men¦5355 followed¦5352 him¦5353 and¦5358 called out, “Have mercy¦5360 on us, son of David¦5364.”
 \p
-\v 28 When he went into the house¦5373, the blind¦5379 men¦5379 went to him and¦5369 \nd Yeshua\nd* said to them, “Do you believe¦5385 that I'm able to do this?”
+\v 28 When¦5369 he went into the house¦5373, the blind¦5379 men¦5379 went to him and¦5369 \nd Yeshua\nd* said to them, “Do you believe¦5385 that I'm able to do this?”
 \p They replied, “Yes, \nd master¦5397\nd*.”
 \p
 \v 29 Then he touched¦5399 their¦5403 eyes¦5402 saying¦5405, “Let it be done to you in line with your¦5410 faith¦5409.”
@@ -587,7 +587,7 @@
 \rem /s1 Jesus Has Pity for the People; The Workers Are Few; The Need for Workers; The Harvest Is Great, the Labourers Few
 \p
 \v 35 \x + \xo 9:35: \xt Mat 4:23; Mrk 1:39; Luk 4:44.\x*And \nd Yeshua\nd* went around¦5481 teaching¦5490 in the meeting¦5493 halls¦5493 in all the cities¦5485 and the villages¦5489 and announcing¦5496 the good¦5498 news about the kingdom¦5500, and healing¦5502 every kind of disease¦5504 and sickness¦5507.
-\v 36 \x + \xo 9:36: \xt Num 27:17; 1Ki 22:17; 2Ch 18:16; Eze 34:5; Mrk 6:34.\x*When he saw the crowds¦5517, he felt for them because¦5523 they were tired and¦5515 stressed like sheep¦5531 with no shepherd¦5534.
+\v 36 \x + \xo 9:36: \xt Num 27:17; 1Ki 22:17; 2Ch 18:16; Eze 34:5; Mrk 6:34.\x*When¦5515 he saw the crowds¦5517, he felt for them because¦5523 they were tired and¦5515 stressed like sheep¦5531 with no shepherd¦5534.
 \v 37 \x + \xo 9:37-38: \xt Luk 10:2.\x*He said to his¦5539 disciples, “The harvest¦5542 is large, but there's not enough workers¦5546.
 \v 38 So ask the owner of the harvest to send more workers¦5558 to help with it.”
 \c 10
@@ -611,7 +611,7 @@
 \v 10 \x + \xo 10:10: \xt 1Cor 9:14; 1Tim 5:18.\x*\wj and don't take a backpack, or a change of clothes or footwear, or a staff¦5739, because¦5741 a worker¦5744 deserves to be fed.\wj*
 \p
 \v 11 “\wj Whatever city¦5755 or village¦5757 you arrive at, look around to discover who is godly, and¦5753 stay with them until¦5770 you all leave.\wj*
-\v 12 \wj When you enter a home, bless it¦5779,\wj*
+\v 12 \wj When¦5774 you enter a home, bless it¦5779,\wj*
 \v 13 \wj and¦5785 if the house¦5791 is worthy of it, let your peace come onto it, but¦5785 if not, let your peace return¦5813 to you.\wj*
 \v 14 \x + \xo 10:14: \xt Acts 13:51.\x*\wj If there's any that don't accept you or don't want to hear¦5823 your messages¦5826, shake¦5841 the dust off your feet¦5848 as you leave that house¦5834 or city¦5837 \+add as a sign that you all accept no responsibility for them\+add*.\wj*
 \v 15 \x + \xo 10:15: a \xt Mat 11:24; \xo b \xt Gen 19:24-28.\x*\wj I can assure you that it will be more tolerable¦5853 for the towns of Sodom¦5856 and Amorah \add (Gomorrah¦5859)\add* on the day¦5863 of judgement¦5864 that it will be for those places.\wj*
@@ -670,7 +670,7 @@
 \rem /s1 Jesus and John the Baptist; The Messengers from John the Baptist
 \r (Luke 7:18-35)
 \p
-\v 1 When \nd Yeshua\nd* had finished¦6432 giving those instructions to his¦6439 twelve¦6437 apprentices¦6438, he \add also\add* left there¦6441 and went to teach¦6443 and preach in the Jewish cities¦6448.
+\v 1 When¦6429 \nd Yeshua\nd* had finished¦6432 giving those instructions to his¦6439 twelve¦6437 apprentices¦6438, he \add also\add* left there¦6441 and went to teach¦6443 and preach in the Jewish cities¦6448.
 \rem /s1 Recognizing the Messiah; Messengers from John the Baptist
 \p
 \v 2 Then¦6451 Yohan¦6452, who was in prison¦6456, heard¦6453 about what the \nd messiah¦6461\nd* was doing, he sent¦6462 some of his¦6467 apprentices¦6466
@@ -769,7 +769,7 @@
 \v 22 Then a man possessed¦7371 by evil spirits was brought¦7368 to Yeshua. He was blind¦7373 and unable to speak, but¦7375 Yeshua healed¦7379 him so that he could both speak and see.
 \v 23 All the people were amazed¦7394 and¦7398 were saying¦7399, “Surely¦7400 this must be the \add promised\add* descendant of David¦7406?”
 \p
-\v 24 \x + \xo 12:24: \xt Mat 9:34; 10:25.\x*When the Pharisees' party¦7409 heard¦7410 about that, they said¦7411, “That man¦7412 is only driving¦7414 out demons because he's Beelzebul, the leader of the demons.”
+\v 24 \x + \xo 12:24: \xt Mat 9:34; 10:25.\x*When¦7408 the Pharisees' party¦7409 heard¦7410 about that, they said¦7411, “That man¦7412 is only driving¦7414 out demons because he's Beelzebul, the leader of the demons.”
 \p
 \v 25 But¦7427 Yeshua, knowing¦7426 their¦7432 thoughts¦7431, said¦7433, “\wj Every¦7435 kingdom¦7436 that's divided against itself is doomed, and¦7427 any city¦7445 or household¦7447 that's divided against itself will self-destruct.\wj*
 \v 26 \wj If Satan is driving¦7464 out Satan, then¦7456 he's divided¦7467 against¦7465 himself¦7466 and¦7456 how could his¦7473 kingdom¦7472 possibly be established¦7470?\wj*
@@ -842,7 +842,7 @@
 \v 12 \x + \xo 13:12: \xt Mat 25:29; Mrk 4:25; Luk 8:18; 19:26.\x*\wj Because¦8230 anyone who already has will be given¦8232 more and¦8234 they will end up with plenty, but¦8237 anyone who doesn't have, even what they have will be taken¦8243 away from them.\wj*
 \v 13 \wj That's why I speak¦8252 to them in parables¦8249, because¦8253 when they look they don't see, and when they listen, they don't hear¦8261 or understand¦8269,\wj*
 \v 14 \x + \xo 13:14-15: \xt Isa 6:9-10 (LXX).\x*\wj and so the prophecy¦8280 \+add written\+add* by Yeshayah is being¦8276 fulfilled¦8276:\wj*
-\q1 \wj ‘When you listen you will hear¦8291 but you certainly won't understand¦8298,\wj*
+\q1 \wj ‘When¦8273 you listen you will hear¦8291 but you certainly won't understand¦8298,\wj*
 \q1 \wj and when you look you will see but you certainly won't perceive¦8306 anything.\wj*
 \q1
 \v 15 \wj Because¦8308 these people's¦8312 hearts are insensitive and they can barely hear with their ears,\wj*
@@ -961,7 +961,7 @@
 \rem /s1 Jesus Feeds the Five Thousand; Feeding the Five Thousand; More miracles and teaching
 \r (Mark 6:30-44; Luke 9:10-17; Yhn 6:1-14)
 \p
-\v 13 When \nd Yeshua\nd* heard \add what had happened to Yohan\add*, he got a boat¦9500 to take him to a quiet¦9502 place¦9503 by himself¦9505, but¦9494 the crowds¦9509 from the cities¦9516 heard about it, and¦9494 followed¦9510 him around the shore of the lake on foot¦9513.
+\v 13 When¦9494 \nd Yeshua\nd* heard \add what had happened to Yohan\add*, he got a boat¦9500 to take him to a quiet¦9502 place¦9503 by himself¦9505, but¦9494 the crowds¦9509 from the cities¦9516 heard about it, and¦9494 followed¦9510 him around the shore of the lake on foot¦9513.
 \v 14 So¦9517 when he got out of the boat, he saw¦9521 a large crowd¦9523 of people and he felt compassion¦9526 towards them, and he healed¦9533 the sick¦9536 people \add that they had brought\add*.
 \p
 \v 15 As evening¦9538 was approaching¦9541, his followers came up and asked, “This place¦9550 is quite isolated and it's already¦9554 late. Send the people back into the villages¦9566 so they¦9568 can buy themselves¦9569 something to eat.”
@@ -983,7 +983,7 @@
 \v 24 By then¦9720 the boat¦9721 was in the middle of the lake¦9731, but¦9720 it was being¦9734 beaten by the waves¦9737 because¦9740 a strong wind¦9743 had come up.
 \p
 \v 25 In the early hours of the morning, Yeshua went¦9752 out to them on the lake¦9764, walking¦9759 on the surface.
-\v 26 When his apprentices¦9768 saw him¦9771 coming over the lake¦9778, they¦9789 were worried thinking it was a ghost¦9783 and¦9785 yelling out in fear¦9788.
+\v 26 When¦9767 his apprentices¦9768 saw him¦9771 coming over the lake¦9778, they¦9789 were worried thinking it was a ghost¦9783 and¦9785 yelling out in fear¦9788.
 \p
 \v 27 But \nd Yeshua\nd* answered them immediately¦9790 saying¦9798, “\wj Be brave, I'm here, don't¦9802 worry.\wj*”
 \p
@@ -1109,7 +1109,7 @@
 \rem /s1 Jesus the Son of God; Peter's Confession of Christ; Peter's Declaration about Jesus
 \r (Mark 8:27-30; Luke 9:18-21)
 \p
-\v 13 When \nd Yeshua\nd* arrived in the outskirts of Caesarea¦10918 Philippi¦10920, he asked his¦10924 apprentices¦10923, “\wj Who are people¦10931 saying that¦10919 humanity's child \+em is\+em*?\wj*”
+\v 13 When¦10912 \nd Yeshua\nd* arrived in the outskirts of Caesarea¦10918 Philippi¦10920, he asked his¦10924 apprentices¦10923, “\wj Who are people¦10931 saying that¦10919 humanity's child \+em is\+em*?\wj*”
 \p
 \v 14 \x + \xo 16:14: \xt Mat 14:1-2; Mrk 6:14-15; Luk 9:7-8.\x*“Some say Yohan-the-immerser \add come back to life\add*,” they¦10939 answered, “but¦10940 others say the \add promised prophet\add* Eliyah, and¦10940 others, Jeremiah or one of the other prophets.”
 \p
@@ -1150,7 +1150,7 @@
 \p
 \v 5 \x + \xo 17:5: a \xt Gen 22:2; Psa 2:7; Isa 42:1; Mat 3:17; 12:18; Mrk 1:11; Luk 3:22; \xo b \xt Deu 18:15.\x*While he was still¦11414 speaking¦11416, a bright¦11419 cloud came over the top of them and wow¦11417, a voice¦11425 came out of the cloud saying¦11429, “This is my¦11434 dear son that I get great pleasure¦11439 from. Just listen to him.”
 \p
-\v 6 When the \add three\add* apprentices¦11447 heard¦11444 the voice, they¦11453 lay face¦11450 down and¦11452 were extremely scared.
+\v 6 When¦11443 the \add three\add* apprentices¦11447 heard¦11444 the voice, they¦11453 lay face¦11450 down and¦11452 were extremely scared.
 \v 7 But¦11455 \nd Yeshua\nd* went across to them, and touching¦11462 them he said¦11465, “\wj Get up now and don't¦11469 be afraid,\wj*”
 \v 8 and¦11472 when they looked around, they didn't see anyone¦11477 other than \nd Yeshua¦11484\nd* himself¦11482.
 \p
@@ -1166,7 +1166,7 @@
 \rem /s1 The Healing of a Boy With a Demon; Jesus Heals a Demon-Possessed Boy; Jesus Cures a Boy with a Demon; Jesus Heals a Boy with a Demon
 \r (Mark 9:14-29; Luke 9:37-43a)
 \p
-\v 14 When they got back to the crowd¦11602, a man¦11605 approached¦11603 Yeshua and¦11596 knelt down before¦11609 him
+\v 14 When¦11596 they got back to the crowd¦11602, a man¦11605 approached¦11603 Yeshua and¦11596 knelt down before¦11609 him
 \v 15 saying¦11612, “\nd Master¦11613\nd*, show mercy¦11614 to my¦11615 son, because¦11619 he has seizures and isn't well, often falling¦11627 into the fire¦11630 or the water¦11636.
 \v 16 I brought¦11638 him to your¦11642 apprentices¦11641, but¦11637 they weren't able to heal¦11647 him.”
 \p
@@ -1266,7 +1266,7 @@
 \rem /s1 Discussion about Divorce and Marriage; Teaching about Divorce; Jesus Teaches about Divorce; On the road to Jerusalem
 \r (Mark 10:1-12)
 \p
-\v 1 When \nd Yeshua\nd* had finished¦12743 these¦12749 messages¦12748, he left Galilee¦12753 and¦12739 went¦12757 to the Yudean regions¦12760 on the other side of the Yordan¦12766 River
+\v 1 When¦12739 \nd Yeshua\nd* had finished¦12743 these¦12749 messages¦12748, he left Galilee¦12753 and¦12739 went¦12757 to the Yudean regions¦12760 on the other side of the Yordan¦12766 River
 \v 2 and large crowds¦12770 followed¦12768 him¦12769, and he¦12773 healed¦12773 them.
 \p
 \v 3 Some from the Pharisees' party¦12780 approached¦12777 him to test him by asking, “Is there any cause¦12796 for which a man can dismiss his¦12793 wife¦12792?”
@@ -1313,7 +1313,7 @@
 \v 23 So¦13204 \nd Yeshua\nd* said¦13206 to his¦13209 apprentices¦13208, “\wj I can assure you¦13212 that it's \+add more\+add* difficult¦13216 for a wealthy¦13215 person to enter the heavenly¦13222 kingdom¦13220.\wj*
 \v 24 \wj In fact, it's easier¦13228 for a camel¦13230 to go through the eye¦13233 of a needle¦13236 than for a wealthy¦13240 person to enter God's kingdom¦13244.\wj*”
 \p
-\v 25 When his apprentices¦13251 heard¦13248 that, they were very surprised and¦13249 asked, “Well, who can be saved¦13261 then¦13249?”
+\v 25 When¦13249 his apprentices¦13251 heard¦13248 that, they were very surprised and¦13249 asked, “Well, who can be saved¦13261 then¦13249?”
 \p
 \v 26 \nd Yeshua\nd* looked them in the eyes and¦13263 answered, “\wj It's impossible¦13272 for humans¦13269, but¦13275 with \+nd God¦13277\+nd*, everything is possible¦13279.\wj*”
 \p
@@ -1332,13 +1332,13 @@
 \v 3 \wj Then¦13422 around 9am he noticed¦13431 some others¦13432 standing idle in the marketplace¦13436,\wj*
 \v 4 \wj and he told them, ‘You can go and work in the vineyard¦13447 and I'll pay you all a fair day's wage at the end.’\wj*
 \v 5 \wj So¦13458 they went¦13459 off. Then¦13458 he came out around midday and again¦13460 at 3pm and did the same.\wj*
-\v 6 \wj When he came out around 5pm and¦13473 there were still people just standing around, he asked them, ‘Why have you been idly standing here all day¦13492?’\wj*
+\v 6 \wj When¦13473 he came out around 5pm and¦13473 there were still people just standing around, he asked them, ‘Why have you been idly standing here all day¦13492?’\wj*
 \v 7 \wj ‘Because¦13496 no one has hired¦13499 us,’ they said. So he also sent them off to work in the vineyard¦13507.\wj*
 \p
 \v 8 \x + \xo 20:8: \xt Lev 19:13; Deu 24:15.\x*“\wj In the evening¦13515, the landowner instructed his¦13525 manager¦13524, ‘Call the workers¦13528 and¦13529 give¦13530 them their wages, going from the last to start until the first¦13540.’\wj*
 \v 9 \wj The ones who'd started late afternoon each received¦13550 the day's wage that the first workers had been promised,\wj*
 \v 10 \wj so those first¦13557 ones expected they'd receive¦13563 more, but¦13553 they all got the same day's wage.\wj*
-\v 11 \wj When they¦13576 got theirs, the first workers started grumbling¦13576 about the landowner\wj*
+\v 11 \wj When¦13575 they¦13576 got theirs, the first workers started grumbling¦13576 about the landowner\wj*
 \v 12 \wj and complained, ‘These¦13585 last ones only worked an hour¦13589, and yet you¦13597 paid them the same as us who worked the entire day¦13603 right through the scorching¦13606 heat!’\wj*
 \v 13 \wj ‘Buddy,’ he¦13607 said¦13614 to one of them, ‘I'm not cheating you. Didn't you agree¦13621 to work for me for the daily wage?\wj*
 \v 14 \wj Take what we agreed on and¦13626 go, but¦13630 I wanted to give¦13636 these last workers the same amount.\wj*
@@ -1375,7 +1375,7 @@
 \rem /s1 Jesus Heals Two Blind Men; Two Blind Men Receive Sight
 \r (Mark 10:46-52; Luke 18:35-43)
 \p
-\v 29 When the all left Jericho, a large crowd¦14020 followed¦14017 after¦14019 him¦14019.
+\v 29 When¦14012 the all left Jericho¦14016, a large crowd¦14020 followed¦14017 after¦14019 him¦14019.
 \v 30 Then¦14024, look, two¦14026 blind¦14027 men¦14027 heard¦14032 that \nd Yeshua\nd* was passing¦14037 by, so they¦14039 yelled¦14039 out, “Show mercy¦14042 to us, \nd master¦14045\nd*, David's descendant!”
 \p
 \v 31 The crowd¦14051 warned¦14052 them to be quiet, but¦14057 they \add just\add* yelled¦14062 out even louder, “\nd Master¦14065\nd*, David's descendant, show mercy¦14066 to us!”
@@ -1390,7 +1390,7 @@
 \rem /s1 Jesus in the temple; The Triumphant Entry into Jerusalem; Jesus' Triumphal Entry into Jerusalem
 \r (Mark 11:1-11; Luke 19:28-40; Yhn 12:12-19)
 \p
-\v 1 When they¦14118 were getting close to Yerushalem and¦14121 arrived at Bethphage¦14125 on the Mt¦14129. of Olives¦14131, \nd Yeshua\nd* sent¦14135 two¦14136 of his apprentices¦14137 ahead,
+\v 1 When¦14116 they¦14118 were getting close to Yerushalem and¦14121 arrived at Bethphage¦14125 on the Mt¦14129. of Olives¦14131, \nd Yeshua\nd* sent¦14135 two¦14136 of his apprentices¦14137 ahead,
 \v 2 telling them, “\wj Go ahead to the next village¦14144 and in front¦14146 of you you'll see a donkey tied up and her colt near her. Untie the donkey and bring¦14159 them back here to me.\wj*
 \v 3 \wj But¦14162 if anyone¦14165 says anything¦14168 to you, just tell them that the \+nd master¦14173\+nd* needs them, and¦14162 they'll let you take them.\wj*”
 \p
@@ -1437,7 +1437,7 @@
 \rem /s1 The Authority of Jesus Challenged; The Authority of Jesus Questioned; The Question about Jesus' Authority
 \r (Mark 11:27-33; Luke 20:1-8)
 \p
-\v 23 When Yeshua went back into the temple¦14588 and started teaching¦14592 \add the people¦14599\add*, the chief¦14594 priests¦14594 and the Jewish elders¦14597 came and challenged him, “What authority do you have to do these¦14604 things?”
+\v 23 When¦14581 Yeshua went back into the temple¦14588 and started teaching¦14592 \add the people¦14599\add*, the chief¦14594 priests¦14594 and the Jewish elders¦14597 came and challenged him, “What authority do you have to do these¦14604 things?”
 \p
 \v 24 “\wj Well, I have one question for you first,\wj*” \nd Yeshua\nd* answered. “\wj If you answer it, then¦14615 I'll tell you all about my authority¦14640 to do these¦14641 things.\wj*
 \v 25 \wj So¦14656, where¦14647 did Yohan's practice of immersion¦14644 come from?\wj*”
@@ -1481,7 +1481,7 @@
 \v 43 “\wj Because¦15042 of that, I'm telling you that God's kingdom¦15051 will be taken¦15047 away from all of you and be given¦15055 to a people¦15056 who will produce¦15057 a harvest.\wj*
 \v 44 \wj And anyone who falls down onto this stone will be shattered¦15069, but¦15062 anyone that this stone falls on will be \+add totally\+add* pulverised¦15075.\wj*”
 \p
-\v 45 When the chief¦15081 priests¦15081 and¦15077 the Pharisees heard¦15078 those parables¦15086, they knew¦15088 that he was talking¦15092 about¦15090 them.
+\v 45 When¦15077 the chief¦15081 priests¦15081 and¦15077 the Pharisees¦15084 heard¦15078 those parables¦15086, they knew¦15088 that he was talking¦15092 about¦15090 them.
 \v 46 They attempted to arrest him, but¦15093 couldn't because¦15103 they knew that the crowds¦15101 believed him to be a prophet¦15107 \add from God\add*.
 \c 22
 \s1 The parable about the wedding reception
@@ -1520,7 +1520,7 @@
 \v 21 “Caesar's,” they answered.
 \p “\wj Then give Caesar's things to Caesar and God's things to God,\wj*” Yeshua responded.
 \p
-\v 22 When they heard¦15495 that, they were amazed, and left him¦15499 and went¦15500 away.
+\v 22 When¦15494 they heard¦15495 that, they were amazed, and left him¦15499 and went¦15500 away.
 \s1 The question about marriage in heaven
 \rem /s1 The Question about Rising from Death; Discussion about Resurrection; The Question about the Resurrection; Marriage at the Resurrection
 \r (Mark 12:18-27; Luke 20:27-40)
@@ -1537,7 +1537,7 @@
 \v 31 \wj But as for the resurrection¦15634 of the dead¦15636, isn't¦15637 it \+add written in the scriptures\+add* that \+nd God¦15644\+nd* said,\wj*
 \v 32 \x + \xo 22:32: \xt Exo 3:6.\x*\wj ‘\+em I am\+em* Abraham's god and Isaac's god and Yacob's god.’? So \nd God¦15649\nd* is not the god of the dead, but¦15651 of the living¦15666.\wj*”
 \p
-\v 33 When the crowds¦15670 heard¦15668 his answer, they¦15671 were amazed¦15671 at his teaching¦15674.
+\v 33 When¦15667 the crowds¦15670 heard¦15668 his answer, they¦15671 were amazed¦15671 at his teaching¦15674.
 \s1 The most important command
 \rem /s1 The Most Important Commandment; The Great Commandment; The Greatest Commandment
 \r (Mark 12:28-34; Luke 10:25-28)
@@ -1639,7 +1639,7 @@
 \rem /s1 Troubles and Persecutions; Signs of the End of the Age
 \r (Mark 13:3-13; Luke 21:7-19)
 \p
-\v 3 When Yeshua was sitting¦16674 on the Mount¦16679 of Olive¦16681, his apprentices¦16688 came up to him by themselves¦16691, asking, “Tell us when all those things will happen and what the signs will be of your coming¦16705 and of the end of this age?”
+\v 3 When¦16675 Yeshua was sitting¦16674 on the Mount¦16679 of Olive¦16681, his apprentices¦16688 came up to him by themselves¦16691, asking, “Tell us when all those things will happen and what the signs will be of your coming¦16705 and of the end of this age?”
 \p
 \v 4 “\wj Watch out in case others mislead¦16722 you¦16721,\wj*” \nd Yeshua\nd* answered¦16713,
 \v 5 “\wj because¦16724 many will come claiming to be me and saying¦16731 that they're the \+nd messiah¦16736\+nd* and misleading¦16739 many.\wj*
@@ -1722,7 +1722,7 @@
 \v 2 \wj Five of them were harebrained and¦17624 five were sensible.\wj*
 \v 3 \wj The less clever ones took¦17647 their¦17645 lamps¦17643 but didn't¦17646 take any oil¦17650 for them,\wj*
 \v 4 \wj whereas the sensible ones had oil¦17659 in containers¦17662 along with the lamps¦17666.\wj*
-\v 5 \wj When the groom was held up, they started nodding¦17673 off and¦17675 napping.\wj*
+\v 5 \wj When¦17670 the groom was held up, they started nodding¦17673 off and¦17675 napping.\wj*
 \p
 \v 6 “\wj But in the middle¦17677 of the night¦17679 there was a shout, ‘Look¦17683, the groom's on his way. Come out and meet him.’\wj*
 \v 7 \wj So all the young women got up and¦17700 trimmed¦17701 \+add the wicks on\+add* their lamps¦17703,\wj*
@@ -1978,7 +1978,7 @@
 \rem /s1 Pilate Hands Jesus over to Be Crucified
 \p But they just kept yelling loudly, “Execute him on a stake¦20355.”
 \p
-\v 24 \x + \xo 27:24: \xt Deu 21:6-9.\x*When Pilate¦20359 saw that it was going nowhere other than to turn into a riot, got \add a bowl of\add* water¦20368 and¦20357 washed¦20369 his hands¦20371 \add up there\add* in front¦20373 of the crowd¦20375, announcing, “I'm innocent¦20377 of the blood¦20382 of this man who has done nothing¦20361 wrong. It's your responsibility now.”
+\v 24 \x + \xo 27:24: \xt Deu 21:6-9.\x*When¦20357 Pilate¦20359 saw that it was going nowhere other than to turn into a riot, got \add a bowl of\add* water¦20368 and¦20357 washed¦20369 his hands¦20371 \add up there\add* in front¦20373 of the crowd¦20375, announcing, “I'm innocent¦20377 of the blood¦20382 of this man who has done nothing¦20361 wrong. It's your responsibility now.”
 \p
 \v 25 “\add The responsibility for\add* his¦20399 blood¦20398 will be on us and¦20402 on our¦20406 children¦20405,” the people¦20395 shouted back.
 \p
@@ -1991,13 +1991,13 @@
 \v 28 Then¦20440 they stripped¦20441 Yeshua and¦20440 placed a \add royal\add* scarlet¦20450 robe¦20449 around¦20451 him.
 \v 29 They twisted¦20454 together¦20454 a crown¦20455 made of \add strips of\add* thorns¦20457 and plonked it¦20460 on his¦20466 head and made him hold a reed as a staff¦20468. Then they knelt down in front of him and mocked¦20481 him, saying¦20484, “Greetings¦20485, \add ≈your majesty,\add* King¦20487 of the Jews.”
 \v 30 They spat on him then¦20490 snatched the reed away and¦20490 used it to whack him on the head.
-\v 31 When they'd finished mocking him, they took the robe¦20511 off him and¦20503 dressed¦20513 him in his¦20517 own clothes¦20516 again before they led him away to the place¦20522 where he'd be executed¦20523.
+\v 31 When¦20503 they'd finished mocking him, they took the robe¦20511 off him and¦20503 dressed¦20513 him in his¦20517 own clothes¦20516 again before they led him away to the place¦20522 where he'd be executed¦20523.
 \s1 Yeshua and robbers placed on stakes
 \rem /s1 The Crucifixion of Jesus; Jesus Is Crucified
 \r (Mark 15:21-32; Luke 23:26-43; Yhn 19:17-27)
 \p
-\v 32 When they got out \add onto the street\add*, they grabbed a man¦20527 who turned out to be Simon¦20533 from Cyrene¦20528, and¦20525 they forced him¦20540 to carry¦20537 the stake¦20539.
-\v 33 When they arrived at the place called Golgotha¦20548 (which¦20549 means ‘Place of the skull¦20554’),
+\v 32 When¦20525 they got out \add onto the street\add*, they grabbed a man¦20527 who turned out to be Simon¦20533 from Cyrene¦20528, and¦20525 they forced him¦20540 to carry¦20537 the stake¦20539.
+\v 33 When¦20541 they arrived at the place called Golgotha¦20548 (which¦20549 means ‘Place¦20554 of the skull¦20554’),
 \v 34 \x + \xo 27:34: \xt Psa 69:21.\x*they gave Yeshua some wine mixed¦20565 with something bitter, but¦20566 when he tasted¦20567 it, he didn't¦20568 want to drink any.
 \p
 \v 35 \x + \xo 27:35: \xt Psa 22:18.\x*Then¦20573 they executed¦20572 him on the stake¦20572 and¦20573 divided¦20575 his¦20579 clothes¦20578 out by throwing¦20580 dice
