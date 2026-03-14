@@ -80,7 +80,7 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-03-09' # by RJH
+LAST_MODIFIED_DATE = '2026-03-14' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.86'
@@ -282,7 +282,8 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('my', 'of me'), ('your', 'of you'), ('his', 'of him'), ('her', 'of her'), ('its', 'of it'), ('our', 'of us'), ('their', 'of them'),
     ('My', 'of me'), ('Your', 'of you'), ('His', 'of him'), ('Her', 'of her'), ('Its', 'of it'), ('Our', 'of us'), ('Their', 'of them'),
     # Contractions
-    ("you're", 'you are'),
+    ("I'll", 'I will'),("I've", 'I have'),
+    ("you're", 'you are'),("you've", 'you have'),
     # Other word number changes
     ('demons', 'unclean spirits'),('demon', 'unclean spirit'),
     # The following nominal entries handle number changes
@@ -322,7 +323,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('Anyone','one'),('anyone','one'),
     ('appeared','seen'),
     ('appropriate','fitting'),
-    ('army-commander','hosts'),
+    ('Army','hosts'),('army','hosts'),
     ('arrested','captured'),('arrested','laid'),
     ('aroma','odour'),
     ('assembly','convocation'),
@@ -337,11 +338,13 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('boulders','stones'),
     ('box','ark'),
     ('bull','ox'),('bulls','oxen'),
+    ('burning','fire'),
     ('But','And'),('but','And'),('But','and'),('but','and'),
     ('chasing','pursuing'),
     ('cheerful','joy'),
     ('chest','ark'),
     ('clothes','apparel'),
+    ('commander','hosts'),
     ('confused','confounded'),
     ('continued','said'),
     ('cross','pass over'),
@@ -418,6 +421,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('praised','glorifying'),
     ('preaching','proclaiming'),
     ('produce','fruit'),
+    ('promised','sworn'),
     ('pure','holy'), ('purity','holiness'),
     ('quiet','desolate'),
     ('quiet','silenced'),
@@ -428,6 +432,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('responded','said'),
     ('river','Yarden'),
     ('rock','stone'),('rocks','stones'),
+    ('roof','housetop'),('roofs','housetops'),
     ('room','place'),
     ('sacred','holiness'),('sacred','holy'),('sacred','of meeting'),
     ('scared','feared'),
@@ -928,7 +933,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
     # Make a list of the books that we're going to process
     booklist_to_process = []
     for BBB in lv.books:
-        if BibleOrgSysGlobals.commandLineArguments.fastMode and BBB not in ('NUM','ISA',):
+        if BibleOrgSysGlobals.commandLineArguments.fastMode and BBB not in ('LEV','ISA',):
             continue
         # if BBB in ('CO1',): continue # TODO: CO1_14:33 gives an issue
         booklist_to_process.append( BBB )
