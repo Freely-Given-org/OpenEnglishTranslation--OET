@@ -6,7 +6,7 @@
 #
 # Script to delete word numbers and additional formatting out of the OET-RV and OET-LV.
 #
-# Copyright (C) 2023-2025 Robert Hunt
+# Copyright (C) 2023-2026 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+OET@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -34,6 +34,7 @@ CHANGELOG:
     2024-05-17 Removed more OET-RV additions
     2025-03-03 Add /nb after OET-LV chapter numbers
     2025-12-14 Add DC books
+    2026-03-19 Remove new ⇔ ESFM character (marking verse that's reordered in the OET-RV)
 """
 from pathlib import Path
 import re
@@ -47,10 +48,10 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, BOOKLIST_66, BOOKLIST_88
 
 
-LAST_MODIFIED_DATE = '2025-12-14' # by RJH
+LAST_MODIFIED_DATE = '2026-03-19' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_ESFM_to_USFM"
 PROGRAM_NAME = "Convert OET LV & RV ESFM files to USFM"
-PROGRAM_VERSION = '0.62'
+PROGRAM_VERSION = '0.63'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -62,7 +63,7 @@ OET_LV_OT_ESFM_FolderPath = project_folderpath.joinpath( 'derivedTexts/auto_edit
 OET_LV_NT_ESFM_FolderPath = project_folderpath.joinpath( 'derivedTexts/auto_edited_VLT_ESFM/' )
 OET_RV_ESFM_FolderPath = project_folderpath.joinpath( 'translatedTexts/ReadersVersion/' )
 assert OET_LV_OT_ESFM_FolderPath.is_dir() and OET_LV_NT_ESFM_FolderPath.is_dir() and OET_RV_ESFM_FolderPath.is_dir()
-cleaned_USFM_FolderPath = project_folderpath.joinpath( 'furtherDerivedTexts/cleanedUSFM/' )
+cleaned_USFM_FolderPath = project_folderpath.joinpath( 'exportedFiles/cleanedUSFM/' )
 OET_LV_USFM_OutputFolderPath = cleaned_USFM_FolderPath.joinpath( 'LiteralVersion/' )
 OET_RV_USFM_OutputFolderPath = cleaned_USFM_FolderPath.joinpath( 'ReadersVersion/' )
 assert cleaned_USFM_FolderPath.is_dir() and OET_LV_USFM_OutputFolderPath.is_dir() and OET_RV_USFM_OutputFolderPath.is_dir()
@@ -142,6 +143,7 @@ def main():
                 adjText = ( adjText
                             .replace( "'", '’' ) # Convert apostrophes
                             .replace( "\\q1 ≈", '\\q1 ' ).replace( "\\q2 ≈", '\\q2 ' ) # Remove 'parallelism' marker
+                            .replace( ' ⇔', ' ') # Remove "verse text swapped in order" marker from OET-RV
                         )
                 # Turn section headings into USFM Extended Study Content sidebars
                 # See https://ubsicap.github.io/usfm/master/notes_study/sidebars.html

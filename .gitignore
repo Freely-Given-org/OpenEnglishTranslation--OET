@@ -1,7 +1,7 @@
 # Our OET stuff
-furtherDerivedTexts/simpleHTML/
-furtherDerivedTexts/OET-RV_sectionReadings/
-furtherDerivedTexts/OBSOLETE_backFilledTexts/
+exportedFiles/simpleHTML/
+exportedFiles/OET-RV_sectionReadings/
+exportedFiles/OBSOLETE_backFilledTexts/
 *.pickle
 
 # Byte-compiled / optimized / DLL files

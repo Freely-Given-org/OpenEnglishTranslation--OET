@@ -10,14 +10,14 @@
 
 #=== Folder and file declarations =======================
 
-derived_audio_sections := ../furtherDerivedTexts/OET-RV_sectionReadings/MRK/MRK_S2.ogg
-derived_VREFs := ../furtherDerivedTexts/OET-RV.vref.txt ../furtherDerivedTexts/OET-LV.vref.txt
-derived_USFM := $(wildcard ../furtherDerivedTexts/cleanedUSFM/ReadersVersion/*.USFM) $(wildcard ../furtherDerivedTexts/cleanedUSFM/LiteralVersion/*.USFM)
+derived_audio_sections := ../exportedFiles/OET-RV_sectionReadings/MRK/MRK_S2.ogg
+derived_VREFs := ../exportedFiles/OET-RV.vref.txt ../exportedFiles/OET-LV.vref.txt
+derived_USFM := $(wildcard ../exportedFiles/cleanedUSFM/ReadersVersion/*.USFM) $(wildcard ../exportedFiles/cleanedUSFM/LiteralVersion/*.USFM)
 
-sideBySide_HTML := $(wildcard ../furtherDerivedTexts/simpleHTML/SideBySide/???.html)
-LV_OT_HTML := ../furtherDerivedTexts/simpleHTML/LiteralVersion/GEN.html ../furtherDerivedTexts/simpleHTML/LiteralVersion/MAL.html
-LV_NT_HTML := ../furtherDerivedTexts/simpleHTML/LiteralVersion/MAT.html ../furtherDerivedTexts/simpleHTML/LiteralVersion/REV.html
-RV_HTML := $(wildcard ../furtherDerivedTexts/simpleHTML/ReadersVersion/*.html)
+sideBySide_HTML := $(wildcard ../exportedFiles/simpleHTML/SideBySide/???.html)
+LV_OT_HTML := ../exportedFiles/simpleHTML/LiteralVersion/GEN.html ../exportedFiles/simpleHTML/LiteralVersion/MAL.html
+LV_NT_HTML := ../exportedFiles/simpleHTML/LiteralVersion/MAT.html ../exportedFiles/simpleHTML/LiteralVersion/REV.html
+RV_HTML := $(wildcard ../exportedFiles/simpleHTML/ReadersVersion/*.html)
 
 RV_ESFM := $(wildcard ../translatedTexts/ReadersVersion/*.ESFM)
 final_LV_OT_ESFM := $(wildcard ../derivedTexts/auto_edited_OT_ESFM/*.ESFM)

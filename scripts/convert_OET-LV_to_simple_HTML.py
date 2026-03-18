@@ -73,7 +73,7 @@ project_folderpath = Path(__file__).parent.parent # Find folders relative to thi
 FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos
 OET_OT_ESFM_InputFolderPath = project_folderpath.joinpath( 'derivedTexts/auto_edited_OT_ESFM/' )
 OET_NT_ESFM_InputFolderPath = project_folderpath.joinpath( 'derivedTexts/auto_edited_VLT_ESFM/' )
-OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'furtherDerivedTexts/simpleHTML/LiteralVersion/' )
+OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'exportedFiles/simpleHTML/LiteralVersion/' )
 THEOGRAPHIC_INPUT_FOLDER_PATH = FG_folderpath.joinpath( 'Bible_speaker_identification/outsideSources/TheographicBibleData/derivedFiles/' )
 assert OET_OT_ESFM_InputFolderPath.is_dir()
 assert OET_NT_ESFM_InputFolderPath.is_dir()
