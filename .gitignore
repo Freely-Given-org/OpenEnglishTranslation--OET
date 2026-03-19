@@ -1,8 +1,9 @@
 # Our OET stuff
 exportedFiles/simpleHTML/
-exportedFiles/OET-RV_sectionReadings/
 exportedFiles/OBSOLETE_backFilledTexts/
 *.pickle
+*.ogg
+*.mp3
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

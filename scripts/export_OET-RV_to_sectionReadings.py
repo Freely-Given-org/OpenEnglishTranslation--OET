@@ -51,10 +51,10 @@ from BibleOrgSys.Bible import Bible
 from BibleOrgSys.Internals.InternalBibleInternals import InternalBibleEntryList, getLeadingInt
 
 
-LAST_MODIFIED_DATE = '2026-02-27' # by RJH
+LAST_MODIFIED_DATE = '2026-03-19' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-RV_to_sectionReadings"
 PROGRAM_NAME = "Convert OET-RV to section readings"
-PROGRAM_VERSION = '0.38'
+PROGRAM_VERSION = '0.39'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -357,8 +357,8 @@ def processBook( BBB:str ) -> int:
                 assert f' {someCharacters}' not in verseText, f"Unexpected {someCharacters} character(s) in final {BBB} {reference} verse text: {verseText}"
         outputText = f"{introductionString}\n{headingString}\n\n\n{verseText}\n\n\n{tailingString}\n"
 
-        print( f"      Creating text file {n}/{len(sectionsLists['OET-RV'][BBB])} {sectionFilename}.v{PROGRAM_VERSION}.txt ({startC}:{startV}–{f'{endC}:' if endC!=startC else ''}{endV})…" )
-        with open( bookFolder.joinpath(f'{sectionFilename}.v{PROGRAM_VERSION}.txt'), 'wt', encoding='utf-8' ) as outputFile:
+        print( f"      Creating text file {n}/{len(sectionsLists['OET-RV'][BBB])} {sectionFilename}.txt ({startC}:{startV}–{f'{endC}:' if endC!=startC else ''}{endV})…" )
+        with open( bookFolder.joinpath(f'{sectionFilename}.txt'), 'wt', encoding='utf-8' ) as outputFile:
             outputFile.write( f'{outputText}\n' )
 
         if MAKE_AUDIO_FILES:
@@ -394,7 +394,7 @@ def convertToOggWithPiper( BBB:str, sectionFilename:str ):
         "--with", "pathvalidate", 
         "piper", 
         "--model", PIPER_MODEL_PATH, 
-        "--input_file", f'../exportedFiles/OET-RV_sectionReadings/{BBB}/{sectionFilename}.v{PROGRAM_VERSION}.txt', 
+        "--input_file", f'../exportedFiles/OET-RV_sectionReadings/{BBB}/{sectionFilename}.txt', 
         "--output_file", WAV_filepath
     ]
 

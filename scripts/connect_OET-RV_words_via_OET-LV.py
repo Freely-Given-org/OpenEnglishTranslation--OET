@@ -80,10 +80,10 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-03-14' # by RJH
+LAST_MODIFIED_DATE = '2026-03-20' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.86'
+PROGRAM_VERSION = '0.87'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -146,9 +146,12 @@ SIMPLE_NOUNS = ( # These are nouns that are likely to match one-to-one from the 
         'fields','field', 'figs','fig', 'fingers','finger', 'fires','fire', 'fish', 'foot','feet',
         'followers','follower',
         'friends','friend', 'fruits','fruit',
-    'gateways','gateway', 'gates','gate', 'generations','generation', 'gifts','gift', 'girls','girl', 'goats','goat', 'gods','god', 'gold',
+    'gateways','gateway', 'gates','gate',
+        'generations','generation',
+        'gifts','gift', 'girls','girl',
+        'goats','goat', 'gods','god', 'gold',
         'grace', 'grains','grain', 'grapes','grape', 'greed',
-    'handkerchiefs','handkerchief', 'hands','hand', 'happiness', 'hearts','heart', 'heavens','heaven', 'homes','home', 'honey', 'horses','horse', 'hours','hour', 'houses','house', 'husbands','husband',
+    'handkerchiefs','handkerchief', 'hands','hand', 'happiness', 'heads','head', 'hearts','heart', 'heavens','heaven', 'homes','home', 'honey', 'horses','horse', 'hours','hour', 'houses','house', 'husbands','husband',
     'idols','idol', 'ink',
     'jails','jail', 'joy', 'judgements','judgement',
     'kings','king', 'kingdoms','kingdom', 'kisses','kiss',
@@ -159,16 +162,19 @@ SIMPLE_NOUNS = ( # These are nouns that are likely to match one-to-one from the 
     'officers','officer', 'officials','official', 'oil',
     'peace', 'pens','pen', 'people','person', 'places','place', 'powers','power', 'prayers','prayer', 'priests','priest', 'prisons','prison', 'promises','promise'
     'rivers','river', 'roads','road', 'robes','robe', 'rocks','rock', 'roofs','roof', 'rooms','room', 'ropes','rope', 'rulers','ruler',
-    'sandals','sandal', 'sea',
+    'sandals','sandal', 'sashes','sash',
         'scrolls','scroll',
-        'servants','servant', 'services','service', 'shame', 'sheep', 'shepherds','shepherd', 'ships','ship',
+        'sea', 'servants','servant', 'services','service', 'shame', 'sheep', 'shepherds','shepherd', 'ships','ship',
         'signs','sign', 'silver', 'silversmiths','silversmith', 'sinners','sinner', 'sins','sin', 'sisters','sister', 'sky', 'slaves','slave',
         'soldiers','soldier', 'sons', 'souls','soul', 'spirits','spirit',
         'stars','star', 'stones','stone', 'streets','street', 'sun', 'swords','sword',
     'tables','table', 'taxes','tax',
         'teachers','teacher', 'temples','temple', 'testimonies','testimony',
         'theatres','theatre', 'things','thing', 'thrones','throne',
-        'times','time', 'tombs','tomb', 'tongues','tongue', 'towns','town', 'trees','tree', 'truth',
+        'times','time',
+        'tombs','tomb', 'tongues','tongue', 'towns','town',
+        'trees','tree', 'truth',
+        'tunics','tunic', 'turban',
     'vines','vine', 'visions','vision',
     'waists','waist', 'waters','water', 'ways','way',
         'weeks','week', 'wilderness', 'widows','widow', 'wife','wives', 'windows','window', 'winds','wind', 'woman','women', 'words','word', 'workers','worker',
@@ -291,6 +297,10 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     # Prepositions
     ('at','in/on/at/with'),('in','in/on/at/with'),('on','in/on/at/with'),('with','in/on/at/with'),
 
+    # Adjectival/Adverbial changes
+    ('golden','gold'),
+    ('loudly','loud'),
+
     # The following verbal entries handle tense changes
     ('bend', 'bent'),
     ('calling', 'called'),
@@ -373,6 +383,8 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('execution','stake'),
     ('existence','became'),
     ('fitting','befitting'),
+    ('flicked','sprinkled'),
+    ('front','face'),
     ('fulfilled','accomplished'),
     ('God','god'),
     ('godly','devout'),('godly','righteous'),
@@ -382,6 +394,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('hill','mountain'),
     ('honour','glorify'),
     ('huge','great'),
+    ('including','and'),
     ('instructed','commanded'),('instructions','commanded'),
     ('insulting','slandering'),
     ('item','article'),('items','article'),
@@ -397,13 +410,13 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('living','dwelling'),
     ('Look','Behold'),('look','Behold'),('Look','behold'),('look','behold'),
     ('looking','searched'),('looking','seeking'),
-    ('loudly','loud'),
     ('lying','lied'),
     ('mankind','humans'),
-    ('mister','master'),('Mister','Master'),
+    ('meat','flesh'),
     ('message', 'word'), ('messenger', 'word'),
     ('metres','cubits'),
     ('mind','heart'),
+    ('mister','master'),('Mister','Master'),
     ('money','reward'),
     ('Mt','mountain'),('Mt','mount'),
     ('necessary','fitting'),
@@ -418,8 +431,10 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('paralysed','paralytic'),
     ('path','way'),('path','road'),
     ('people','multitude'),
+    ('placed','laid'),
     ('platform','lid'),
     ('pleasing','soothing'),
+    ('plus','and'),
     ('poor','humble'),
     ('praised','glorifying'),
     ('preaching','proclaiming'),
@@ -431,7 +446,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('range','various'),
     ('realised','saw'),
     ('region','land'),('regions','land'),
-    ('requested','prayed'),
+    ('request','seek'),('requested','prayed'),
     ('responded','said'),
     ('river','Yarden'),
     ('rock','stone'),('rocks','stones'),
@@ -440,6 +455,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('sacred','holiness'),('sacred','holy'),('sacred','of meeting'),
     ('scared','feared'),
     ('scoffed','mocking'),
+    ('search','seek'),
     ('See','Behold'),
     ('She\'s','She'),
     ('should','let'),
@@ -462,6 +478,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('themselves','hearts'),
     ('Then','And'),('then','And'),
     ('thinking','reasoning'),('thinking','supposing'),
+    ('told','commanded'),
     ('total','all'),
     ('town','city'),
     ('undesirables','sinners'),
@@ -1824,9 +1841,9 @@ def getLVWordRow( wordWithNumber:str, testament:str ) -> Tuple[str,int,List[str]
     assert '¦' in wordWithNumber
     assert testament in ('OT','NT')
 
-    try: word,wordNumber = wordWithNumber.split( '¦' ) # Gives a ValueError if the wordNumber separator character is missing
+    try: word,wordNumber = wordWithNumber.split( '¦' ) # Gives a ValueError if the wordNumber separator character is missing or if there's multiple
     except ValueError:
-        raise WordNumberError( f"Failed to split-off word number from {wordWithNumber=}" )
+        raise WordNumberError( f"Failed to split-off word number from {testament} {wordWithNumber=}" )
     # assert word.isalpha(), f"Non-alpha '{word}'" # not true, e.g., from 'Yaʸsous/(Yəhōshūˊa)¦21754'
     try: wordNumber = int( wordNumber )
     except ValueError:
