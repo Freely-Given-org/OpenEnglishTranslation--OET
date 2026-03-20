@@ -60,10 +60,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-03-06' # by RJH
+LAST_MODIFIED_DATE = '2026-03-19' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.86'
+PROGRAM_VERSION = '0.87'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -73,7 +73,7 @@ project_folderpath = Path(__file__).parent.parent # Find folders relative to thi
 FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos
 OET_OT_ESFM_InputFolderPath = project_folderpath.joinpath( 'derivedTexts/auto_edited_OT_ESFM/' )
 OET_NT_ESFM_InputFolderPath = project_folderpath.joinpath( 'derivedTexts/auto_edited_VLT_ESFM/' )
-OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'furtherDerivedTexts/simpleHTML/LiteralVersion/' )
+OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'exportedFiles/simpleHTML/LiteralVersion/' )
 THEOGRAPHIC_INPUT_FOLDER_PATH = FG_folderpath.joinpath( 'Bible_speaker_identification/outsideSources/TheographicBibleData/derivedFiles/' )
 assert OET_OT_ESFM_InputFolderPath.is_dir()
 assert OET_NT_ESFM_InputFolderPath.is_dir()
@@ -805,7 +805,7 @@ def produce_HTML_files() -> None:
                         else:
                             assert closeIx < openIx
                             inCount -= 1
-                            assert inCount == 0
+                            assert inCount == 0, f"{characterMarker} marker bad nesting in {source_filename} {lineNumber}: '{line}'"
                             startIx = closeIx + 3
 
             book_start_html, book_html, book_end_html = convert_ESFM_to_simple_HTML( BBB, esfm_text, word_table )

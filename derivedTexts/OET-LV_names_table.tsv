@@ -80,6 +80,7 @@ Adam	ʼĀdām
 Adar	ʼAddār
 Adbeel	ʼAdbəʼēl
 Addan	ʼAddān
+Addar	 ʼAddār
 Addar	ʼAddār
 Addi	Addi
 Addi	ˊAdī
@@ -125,6 +126,7 @@ Ahi	ʼAḩī
 Ahiam	ʼAḩīʼām
 Ahian	ʼAḩyān
 Ahiezer	ʼAḩīˊezer
+Ahihud	ʼAḩīhūd
 Ahihud	ʼAḩīḩud
 Ahijah	ʼAḩiyyāh
 Ahikam	ʼAḩīqām
@@ -165,6 +167,9 @@ Allemeth	ˊĀlemet
 Allon	ʼAllōn
 Almodad	ʼAlmōdād
 Almon	ˊAlmōn
+Almon-	ˊAlmon-
+Almon-diblathaim	ˊAlmon-diⱱlātāyəmāh
+Almondiblathaim	ˊAlmon-diⱱlātāyəmāh
 Alpheus	Alfaios
 Alush	ʼĀlūsh
 Alvah	ˊAlvāh
@@ -397,6 +402,7 @@ Azgad	ˊAzgād
 Aziel	ˊAzīʼēl
 Aziza	ˊAzīzāʼ
 Azmaveth	ˊAzmāvet
+Azmon	ˊAʦmōn
 Azor	Azōr
 Azor	ˊAzzūr
 Azotus	Azōtos
@@ -404,6 +410,7 @@ Azotus	ʼAshdōd
 Azriel	ˊAzrīʼēl
 Azrikam	ˊAzrīqām
 Azubah	ˊAzūⱱāh
+Azzan	ˊAzzān
 Azzur	ˊAzzūr
 Baal	Baal
 Baal	Baˊal
@@ -475,8 +482,10 @@ Beeliada	Bəˊelyādāˊ
 Beelzeboul	Beʼelzeboul
 Beer	Bəʼēr
 Beer-	Bəʼēr
+Beer-	Bəʼēr-
 Beera	Bəʼērāʼ
 Beerah	Bəʼērāh
+Beerelim	Bəʼēr-ʼēlīm
 Beeri	Bəʼērī
 Beeroth	Bəʼērot
 Beeroth	Bəʼērōt
@@ -662,6 +671,7 @@ Chimham	Kimhām
 Chinnereth	Kinₐrōt
 Chios	Ⱪios
 Chislev	Kişlēv
+Chislon	Kişlōn
 Chittim	Kittim
 Chloe	Ⱪloaʸ
 Chorazin	Ⱪorazin
@@ -742,6 +752,7 @@ Dibon	Diyⱱvōn
 Didymus	Didumos
 Didymus	[twin]
 Diklah	Diqlāh
+Dimon	Dimōn
 Dinah	Dīnāh
 Dinhabah	Dinhāⱱāh
 Dionysius	Dionusios
@@ -780,6 +791,7 @@ Edrai	ʼEdreˊī
 Edrei	ʼEdreˊī
 Eglah	ˊEglāh
 Eglaim	 ˊEglayim
+Eglath	 ˊEglayim
 Eglon	ˊEglōn
 Egypt	Aiguptos
 Egypt	Miʦrayim
@@ -817,6 +829,7 @@ Eliam	ʼElīˊām
 Eliasaph	ʼElyāşāf
 Eliashib	ʼElyāshiyⱱ
 Eliathah	ʼElīʼātāh
+Elidad	ʼElīdād
 Eliehoenai	ʼElyəhōˊēynay
 Eliel	ʼElīʼēl
 Elienai	ʼElīˊēynay
@@ -900,6 +913,7 @@ Ephesian	Efesos
 Ephesians	Efesos
 Ephesus	Efesos
 Ephlal	ʼEflāl
+Ephod	ʼĒfod
 Ephphatha	Effatha
 Ephphatha	Fətaḩ
 Ephraim	ʼEfrayim
@@ -1232,6 +1246,7 @@ Hazar-enan	 Ḩₐʦar-ˊēynōn
 Hazar-hatticon	Ḩₐʦar-hattikōn
 Hazar-shual	 Ḩₐʦar-shūˊāl
 Hazar-susim	 Ḩₐʦar-şūşīm
+Hazaraddar	 Ḩₐʦar-ʼaddār
 Hazarenan	 Ḩₐʦar-ˊēynān
 Hazarenan	 Ḩₐʦar-ˊēynōn
 Hazarhatticon	Ḩₐʦar-hattikōn
@@ -1333,6 +1348,7 @@ Hori	Ḩorī
 Horites	Ḩorī
 Hormah	Ḩārəmāh
 Horon	Ḩōrōn
+Horonaim	Ḩoronayim
 Hosah	Ḩoşāh
 Hosea	Hōshēˊa
 Hoshaiah	Hōshiˊīh
@@ -1377,7 +1393,8 @@ Idumea	Idoumaia
 Iezer	ʼĪˊezēr
 Iezerites	ʼĪˊezrī
 Igal	Yigʼāl
-Ijeabarim	ˊĒyyiy-hāˊₐⱱārīm
+Iim	ˊIyyim
+Ijeabarim	ˊIyyiy-hāˊₐⱱārīm
 Ijon	ˊIyyōn
 Ikkesh	ˊIqqēsh
 Ilai	ˊĪlay
@@ -1444,8 +1461,9 @@ Ithrite	Yitrī
 Ittai	ʼIttay
 Iturea	Itouraios
 Ivvah	ˊIvvāh
-Iye-	ˊĒyyiy-
-Iyeabarim	ˊĒyyiy-hāˊₐⱱārīm
+Iye-	ˊIyyiy-
+Iyeabarim	ˊIyyiy-hāˊₐⱱārīm
+Iyim	ˊIyyim
 Izeharites	Yiʦhārī
 Izhar	Yiʦhār
 Izhar	Yiʦḩar
@@ -1640,13 +1658,13 @@ Jeshanah	Yəshānāh
 Jesharelah	Yəsarʼēlāh
 Jesher	Yēsher
 Jeshimon	Yəshimōn
-Jeshimoth	Hyəshimōt
+Jeshimoth	Hayshimōt
 Jeshishai	Yəshiyshāy
 Jeshohaiah	Yəshōḩāyāh
 Jeshua	Yēshūˊa
 Jeshurun	Yəshurūn
 Jesimiel	Yəshimāʼēl
-Jesimoth	Hyəshimōt
+Jesimoth	Hayshimōt
 Jesse	Yessai
 Jesse	Yishay
 Jesus	Yaʸsous
@@ -1696,6 +1714,7 @@ Joel	Yōʼēl
 Joelah	Yōˊēʼlāh
 Joezer	Yōˊezer
 Jogbehah	Yāgəbəhāh
+Jogli	Yāgəlī
 Joha	Yōḩāʼ
 Johanan	Yōḩānān
 John	Yōannaʸs
@@ -1826,6 +1845,11 @@ Kidron	Qidrōn
 Kilmad	Kilmād
 Kinnereth	Kinₐrōt
 Kir	Qīr
+Kir-	Qīr-
+Kir-haraseth	Qīr-ḩeres
+Kir-heres	Qīr-ḩeres
+Kirharaseth	Qīr-ḩeres
+Kirheres	Qīr-ḩeres
 Kiriath	Qiryat
 Kiriathaim	Qērəyātayim
 Kirjathaim	Qērəyātayim
@@ -1913,6 +1937,7 @@ Lucius	Loukios
 Lud	Lūd
 Ludim	Lūdī
 Ludites	Lūdī
+Luhith	Lūḩīt
 Luke	Loukas
 Luz	Lūz
 Lycaonia	Lukaonia
@@ -2285,6 +2310,7 @@ Nicolas	Nikolaos
 Nicopolis	Nikopolis
 Niger	Niger
 Nimrah	Nimrāh
+Nimrim	Nimrīm
 Nimrod	Nimrōd
 Nimshi	Nimshiy
 Nineveh	Nīnəvēh
@@ -2359,13 +2385,15 @@ Pai	Fāˊū
 Palal	Pālāl
 Palestina	Fəleshet
 Pallu	Pallūʼ
-Palti	Falţī
-Paltiel	Falţīʼēl
+Palti	Palţī
+Paltiel	Palţīʼēl
 Paltite	Palţī
 Pamphylia	Pamfulia
 Paphos	Pafos
 Paran	Pāʼrān
 Parmenas	Parmenas
+Parnach	Parnak
+Parnak	Parnak
 Parosh	Farˊosh
 Parthians	Parthia
 Paruah	Pārūaḩ
@@ -2386,6 +2414,7 @@ Patrobas	Patrobas
 Pau	Fāˊū
 Paul	Paulos
 Pedah-	Pədāh-
+Pedahel	Pədahʼēl
 Pedahzur	Pədāhʦūr
 Pedaiah	Pədāyāh
 Pekah	Fəqaḩyāh
@@ -2481,6 +2510,7 @@ Publius	Poplios
 Pudens	Poudaʸs
 Pul	Pūl
 Punites	Pūnī
+Punon	Pūnon
 Purah	Furāh
 Put	Pūţ
 Puteoli	Potioloi
@@ -2756,6 +2786,8 @@ Shelanites	Shēlānī
 Shelemiah	Shelemyāh
 Sheleph	Shelef
 Shelesh	Shelesh
+Shelishiyah	Shəlishiyyāh
+Shelomi	Shəlomī
 Shelomith	Shəlomīt
 Shelomoth	Shəlomōt
 Shelumiel	Shəlumīʼēl
@@ -2773,6 +2805,7 @@ Shemuel	Shəmūʼēl
 Shen	Shēn
 Shenazzar	Shenʼaʦʦar
 Sheol	Shəʼōl
+Shepham	Shəfām
 Shephatiah	Shəfaţyāh
 Shepher	Shefer
 Shephi	Shəfō
@@ -2814,6 +2847,7 @@ Shinar	Shinˊār
 Shiphi	Shifˊī
 Shiphmite	Shifmī
 Shiphrah	Shifrāh
+Shiphtan	Shifţān
 Shipi	Shifˊī
 Shirtai	Shiţray
 Shisha	Shiyshāʼ
@@ -3112,6 +3146,7 @@ Zaham	Zāham
 Zahar	Tsaḩar
 Zalaph	Tsālāf
 Zalmon	Tsalmōn
+Zalmonah	Tsalmonāh
 Zalmun	Tsalmōn
 Zalmunna	Tsalmunnāˊ
 Zamzummin	Zamzom
@@ -3197,6 +3232,7 @@ Ziph	Zīf
 Ziphah	Zīfāh
 Ziphims	Zīfī
 Ziphites	Zīfī
+Ziphron	Zifron
 Zippor	Tsipōr
 Zipporah	Tsiporāh
 Ziv	Ziv
@@ -3237,15 +3273,18 @@ bosheth	bshet
 bozenai	bōzənay
 boznai	bōzənay
 dammim	dammim
+diblathaim	diⱱlātāyəmāh
 edom	ʼₑdōm
 eglaim	 ˊeglayim
 el	ʼēl
+elim	ʼēlīm
 enan	 ˊēynān
 enan	 ˊēynōn
 ephah	ʼēyfāh
 ephrathah	ʼefrātāh
 ezer	ˊezer
 gaber	geⱱer
+gad	gād
 gader	gādēr
 geber	geⱱer
 gedi	 gedī
@@ -3262,14 +3301,15 @@ hattaavah	hattaʼₐvāh
 hatticon	hattikōn
 hattikon	hattikōn
 hazzebaim	ʦəⱱāyīm
+heres	ḩeres
 hozeh	ḩozeh
 huzoth	ḩuqqoq
 jaakan	yaˊₐqan
 jaakan	yaˊₐqān
 jashub	yāshūⱱ
 jearim	yəˊārīm
-jeshimoth	hyəshimōt
-jesimoth	hyəshimōt
+jeshimoth	hayshimōt
+jesimoth	hayshimōt
 lehem	leḩem
 maacah	maˊₐkāh
 marcaboth	hmmrəkkāⱱōt

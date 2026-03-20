@@ -70,6 +70,7 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - Add word numbers for all remaining OET-RV words
 - make sure we haven't used 'tithe'
 - decide on idioms (esp. in Proverbs) using 'lips'
+- Revisit whether words like "peace offering", "grain offering", "sin offering" would be better if hyphenated???
 
 ## Terms to make consistent
 
@@ -97,9 +98,12 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - gatekeepers -> 'the men guarding the gates'
 - all the feast/celebration names, e.g., ‘Festival of Shelters’
 - 'flowing with milk and honey' vs 'very fertile'
-- last/latter days
+- last/latter days or something completely different?
 - reap -> harvest
 - border vs boundary
 - pledge (for loans) -> guarantee
 - work out what we're going to do with "people/peoples" meaning "people groups"
 - convert litres (volumes) of flour to kilograms (weights)
+- kill/slaughter/strike for animals (e.g., sacrifices) and for people
+- altar 'horns' -> \add four\add* \add ≈projecting corners\add*
+- innards, entrails, intestines, guts

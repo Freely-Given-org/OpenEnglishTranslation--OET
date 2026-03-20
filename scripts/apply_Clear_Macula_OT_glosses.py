@@ -6,7 +6,7 @@
 #
 # Script handling apply_Clear_Macula_OT_glosses functions
 #
-# Copyright (C) 2022-2025 Robert Hunt
+# Copyright (C) 2022-2026 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -81,6 +81,7 @@ CHANGELOG:
     2024-04-26 Change 'you' to 'you(pl)' if morphology shows it's plural
     2024-11-12 Make sure 'יָהּ' is Yah (not Yahweh)
     2025-01-20 Fix reordering to handle Macula Hebrew new slightly different 'nodes' data (rather than the previous 'lowfat')
+    2026-03-19 Did the minimum to get the updated Macula Hebrew data to work
 """
 from gettext import gettext as _
 # from typing import Dict, List, Tuple
@@ -97,10 +98,10 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2025-11-03' # by RJH
+LAST_MODIFIED_DATE = '2026-03-19' # by RJH
 SHORT_PROGRAM_NAME = "apply_Clear_Macula_OT_glosses"
 PROGRAM_NAME = "Apply Macula OT glosses"
-PROGRAM_VERSION = '0.71'
+PROGRAM_VERSION = '0.72'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -473,6 +474,17 @@ def fill_known_MaculaHebrew_English_contextual_glosses() -> bool:
 def do_yalls() -> bool:
     """
     Go through all our OT glosses and change 'you' to 'you(pl)' if the morphology is plural
+
+    Morphology table:
+        A	adjective	    type 	 	 	gender 	number	state
+        C	conjunction	  	 	 	 	 	 
+        D	adverb	 	 	  	 	 	 
+        N	noun	        type	  	 	gender	number 	state
+        P	pronoun	        type	person	gender 	number
+        R	preposition	    type
+        S	suffix	        type	person	gender 	number
+        T	particle	    type	  	 	 	 	 
+        V	verb	stem	type 	person	gender 	number	state
     """
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "\nConverting to 'you(pl)' for plural and dual 2nd person pronouns plus marking plural/dual verbs…" )
 
@@ -483,9 +495,16 @@ def do_yalls() -> bool:
         if not morphology: continue # probably a seg or a note
         # print( f"{morphology=} from {WLC_row_dict}")
         PoS = morphology[0]
-        if PoS in 'ART': # adjectives, prepositions, particles
+        if PoS in 'CD': # conjunction, adverb
+            if len(morphology) > 1:
+                logging.critical( f"Unexpected morphology subfields in {WLC_row_dict}" )
             continue
-        if morphology=='Sn':
+        elif PoS in 'ART': # adjectives, conjunctions, prepositions, particles
+            continue
+        if morphology=='Sh': # suffix type = paragogic he
+            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Why Sh??? Ignoring {WLC_row_dict}" ) # paragogic he
+            continue
+        elif morphology=='Sn': # suffix type = paragogic nun
             dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Why Sn??? Ignoring {WLC_row_dict}" ) # paragogic nun
             continue
 
@@ -506,7 +525,8 @@ def do_yalls() -> bool:
             if PoS=='N':
                 if len(morphology)==5 and morphology[-1] in 'acd':
                     morphology = morphology[:-1] # Remove the final 'state' character
-            assert PoS in 'SVPN' and morphology[-1] in 'sp', f"{WLC_row_dict=}"
+            # Morphology'number' should be singular or plural or dual
+            assert PoS in 'SVPN' and morphology[-1] in 'spd', f"{PoS=} {morphology=} {morphology[-1]=} not 's' or 'p' or 'd' from {WLC_row_dict=}"
 
         numberIndicator = morphology[-1]
         if numberIndicator == 's': continue # not interested in singulars
@@ -573,9 +593,12 @@ def do_yahs() -> bool:
     num_rows_changed = 0
     for WLC_row_dict in state.WLC_morpheme_rows:
         if WLC_row_dict['NoCantillations'] == 'יָהּ':
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    {WLC_row_dict['Ref']} {WLC_row_dict['RowType']} MG='{WLC_row_dict['MorphemeGloss']}' CMG='{WLC_row_dict['ContextualMorphemeGloss']}' WG='{WLC_row_dict['WordGloss']}' CWG='{WLC_row_dict['ContextualWordGloss']}'" )
+            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    {WLC_row_dict['Ref']} {WLC_row_dict['RowType']} MG='{WLC_row_dict['MorphemeGloss']}' CMG='{WLC_row_dict['ContextualMorphemeGloss']}' WG='{WLC_row_dict['WordGloss']}' CWG='{WLC_row_dict['ContextualWordGloss']}'" )
             assert WLC_row_dict['MorphemeGloss'] in ('','LORD')
-            assert not WLC_row_dict['ContextualMorphemeGloss']
+            if WLC_row_dict['ContextualMorphemeGloss']=='Yahweh':
+                logging.critical( f"  Removing 'Yahweh' ContextualMorphemeGloss in {WLC_row_dict=}" )
+                WLC_row_dict['ContextualMorphemeGloss'] = ''
+            assert not WLC_row_dict['ContextualMorphemeGloss'], f"{WLC_row_dict=}"
             assert WLC_row_dict['WordGloss'] in ('Yah','')
             if WLC_row_dict['RowType'] in ('m','M'):
                 WLC_row_dict['MorphemeGloss'] = WLC_row_dict['ContextualMorphemeGloss'] = 'Yah'

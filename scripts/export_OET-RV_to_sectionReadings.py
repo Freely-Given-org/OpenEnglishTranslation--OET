@@ -51,10 +51,10 @@ from BibleOrgSys.Bible import Bible
 from BibleOrgSys.Internals.InternalBibleInternals import InternalBibleEntryList, getLeadingInt
 
 
-LAST_MODIFIED_DATE = '2026-02-27' # by RJH
+LAST_MODIFIED_DATE = '2026-03-19' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-RV_to_sectionReadings"
 PROGRAM_NAME = "Convert OET-RV to section readings"
-PROGRAM_VERSION = '0.38'
+PROGRAM_VERSION = '0.39'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -68,13 +68,13 @@ USE_PIPER_FLAG = False # If false, uses GoogleTTS
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module
 OET_RV_ESFM_FolderPath = project_folderpath.joinpath( 'translatedTexts/ReadersVersion/' )
 assert OET_RV_ESFM_FolderPath.is_dir()
-NORMAL_OUTPUT_FOLDER_PATH = project_folderpath.joinpath( 'furtherDerivedTexts/OET-RV_sectionReadings/' )
+NORMAL_OUTPUT_FOLDER_PATH = project_folderpath.joinpath( 'exportedFiles/OET-RV_sectionReadings/' )
 assert NORMAL_OUTPUT_FOLDER_PATH.is_dir()
 OGG_OUTPUT_FOLDER_PATH = Path( '/mnt/SSDs/Radio/RadioData/OET/' )
 assert OGG_OUTPUT_FOLDER_PATH.is_dir()
 
 PIPER_MODEL_NAME = 'en_GB-jenny_dioco-medium'
-PIPER_MODEL_PATH = f'../furtherDerivedTexts/OET-RV_sectionReadings/{PIPER_MODEL_NAME}.onnx'
+PIPER_MODEL_PATH = f'../exportedFiles/OET-RV_sectionReadings/{PIPER_MODEL_NAME}.onnx'
 assert Path(PIPER_MODEL_PATH).is_file()
 
 """
@@ -357,8 +357,8 @@ def processBook( BBB:str ) -> int:
                 assert f' {someCharacters}' not in verseText, f"Unexpected {someCharacters} character(s) in final {BBB} {reference} verse text: {verseText}"
         outputText = f"{introductionString}\n{headingString}\n\n\n{verseText}\n\n\n{tailingString}\n"
 
-        print( f"      Creating text file {n}/{len(sectionsLists['OET-RV'][BBB])} {sectionFilename}.v{PROGRAM_VERSION}.txt ({startC}:{startV}–{f'{endC}:' if endC!=startC else ''}{endV})…" )
-        with open( bookFolder.joinpath(f'{sectionFilename}.v{PROGRAM_VERSION}.txt'), 'wt', encoding='utf-8' ) as outputFile:
+        print( f"      Creating text file {n}/{len(sectionsLists['OET-RV'][BBB])} {sectionFilename}.txt ({startC}:{startV}–{f'{endC}:' if endC!=startC else ''}{endV})…" )
+        with open( bookFolder.joinpath(f'{sectionFilename}.txt'), 'wt', encoding='utf-8' ) as outputFile:
             outputFile.write( f'{outputText}\n' )
 
         if MAKE_AUDIO_FILES:
@@ -381,10 +381,10 @@ def convertToOggWithPiper( BBB:str, sectionFilename:str ):
     """
     print("        Generating speech with Piper TTS…")
 
-    WAV_filepath = f'../furtherDerivedTexts/OET-RV_sectionReadings/{BBB}/{sectionFilename}.{PIPER_MODEL_NAME}.wav'
+    WAV_filepath = f'../exportedFiles/OET-RV_sectionReadings/{BBB}/{sectionFilename}.{PIPER_MODEL_NAME}.wav'
     OGG_filename = f'{sectionFilename}.{PIPER_MODEL_NAME}.ogg'
-    OGG_filepath = f'../furtherDerivedTexts/OET-RV_sectionReadings/{BBB}/{OGG_filename}'
-    MP3_filepath = f'../furtherDerivedTexts/OET-RV_sectionReadings/{BBB}/{sectionFilename}.{PIPER_MODEL_NAME}.mp3'
+    OGG_filepath = f'../exportedFiles/OET-RV_sectionReadings/{BBB}/{OGG_filename}'
+    MP3_filepath = f'../exportedFiles/OET-RV_sectionReadings/{BBB}/{sectionFilename}.{PIPER_MODEL_NAME}.mp3'
 
     # 1. Run Piper via uv
     # We use a list for arguments to handle spaces and paths safely
@@ -394,7 +394,7 @@ def convertToOggWithPiper( BBB:str, sectionFilename:str ):
         "--with", "pathvalidate", 
         "piper", 
         "--model", PIPER_MODEL_PATH, 
-        "--input_file", f'../furtherDerivedTexts/OET-RV_sectionReadings/{BBB}/{sectionFilename}.v{PROGRAM_VERSION}.txt', 
+        "--input_file", f'../exportedFiles/OET-RV_sectionReadings/{BBB}/{sectionFilename}.txt', 
         "--output_file", WAV_filepath
     ]
 
@@ -459,10 +459,10 @@ def convertToOggWithGoogle( BBB:str, sectionFilename:str, textToSpeak:str ):
 
     accent_tld = BBB_DICT[BBB][1]
 
-    WAV_filepath = f'../furtherDerivedTexts/OET-RV_sectionReadings/{BBB}/{sectionFilename}.en_{accent_tld}.wav'
+    WAV_filepath = f'../exportedFiles/OET-RV_sectionReadings/{BBB}/{sectionFilename}.en_{accent_tld}.wav'
     OGG_filename = f'{sectionFilename}.en_{accent_tld}.ogg'
-    OGG_filepath = f'../furtherDerivedTexts/OET-RV_sectionReadings/{BBB}/{OGG_filename}'
-    MP3_filepath = f'../furtherDerivedTexts/OET-RV_sectionReadings/{BBB}/{sectionFilename}.en_{accent_tld}.mp3'
+    OGG_filepath = f'../exportedFiles/OET-RV_sectionReadings/{BBB}/{OGG_filename}'
+    MP3_filepath = f'../exportedFiles/OET-RV_sectionReadings/{BBB}/{sectionFilename}.en_{accent_tld}.mp3'
 
 
     # 1. Generate speech with gTTS
@@ -492,7 +492,7 @@ def convertToOggWithGoogle( BBB:str, sectionFilename:str, textToSpeak:str ):
         print("        Normalizing to Broadcast Standards (EBU R128) & converting to Ogg Vorbis for Pygame/Radio…")
         subprocess.run(ffmpeg_cmd, check=True, capture_output=True)
 
-        # os.remove(f'../furtherDerivedTexts/OET-RV_sectionReadings/{BBB}/{sectionFilename}.mp3')
+        # os.remove(f'../exportedFiles/OET-RV_sectionReadings/{BBB}/{sectionFilename}.mp3')
 
         print(f"        Success! Created: {MP3_filepath} and .ogg")
 

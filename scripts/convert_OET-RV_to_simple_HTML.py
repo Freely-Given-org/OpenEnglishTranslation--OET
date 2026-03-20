@@ -76,8 +76,8 @@ DEBUGGING_THIS_MODULE = False
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module
 FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos
 OET_RV_ESFM_InputFolderPath = project_folderpath.joinpath( 'translatedTexts/ReadersVersion/' )
-OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'furtherDerivedTexts/simpleHTML/ReadersVersion/' )
-OET_LV_HTML_InputFolderPath = project_folderpath.joinpath( 'furtherDerivedTexts/simpleHTML/LiteralVersion/' )
+OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'exportedFiles/simpleHTML/ReadersVersion/' )
+OET_LV_HTML_InputFolderPath = project_folderpath.joinpath( 'exportedFiles/simpleHTML/LiteralVersion/' )
 assert OET_RV_ESFM_InputFolderPath.is_dir()
 assert OET_HTML_OutputFolderPath.is_dir()
 assert OET_LV_HTML_InputFolderPath.is_dir()

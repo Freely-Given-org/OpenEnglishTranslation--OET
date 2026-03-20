@@ -1,4 +1,4 @@
-\id NUM - Open English Translation—Readers' Version (OET-RV) v0.1.00
+\id NUM - Open English Translation—Readers' Version (OET-RV) v0.1.01
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 NUM
@@ -62,10 +62,10 @@
 \v 15 Ahira¦61201 (Enan's¦61204 son) from Naftali.
 \v 16 They¦61215 were the leaders of their tribes¦61211—chosen out of their communities¦61209, and leaders of \add units of\add* one thousand \add soldiers\add*.
 \p
-\v 17 Mosheh¦61219 and¦61220 Aharon¦61220 took¦61218 those men¦61222 whose names had been \add ≈given\add*
-\v 18 and¦61228 they assembled the entire¦61229 community¦61231 that April. \add ≈For each tribe,\add* they recorded their¦61248 ancestry¦61241 by clan, counting the names¦61243 of those men who were twenty¦61245 or over,
+\v 17 Mosheh¦61219 and¦61220 Aharon¦61220 took¦61218 those men¦61222 whose names¦61226 had been \add ≈given\add*
+\v 18 and¦61228 they assembled the entire¦61229 community¦61231 that April. \add ≈For each tribe,\add* they recorded¦61236 their¦61248 ancestry¦61241 by clan, counting the names¦61243 of those men who were twenty¦61245 or over,
 \v 19 just as Yahweh¦61252 had commanded¦61251 Mosheh¦61255. \add ≈So\add* he¦61251 counted¦61256 them \add there\add* in¦61257 the Sinai¦61258 wilderness¦61257,
-\v 20-21 individually counting those \add in each tribe below\add* by their¦61273 clan, and only including males who were twenty¦61278 or older and able to fight in battle:
+\v 20-21 individually counting those \add in each tribe below\add* by their¦61273 clan, and only including¦61261 males who were twenty¦61278 or older and able to fight in battle:
 \li1 46,500 men from the tribe of Reuven,
 \li1
 \v 22-23 59,300 men from the tribe of Shimeon \add (Simeon¦61296)\add*,
@@ -96,8 +96,8 @@
 \v 47 \add ≈However,\add* the Levites \add ≈weren't listed along with¦61644 the other tribes¦61640\add*
 \v 48 \add ≈because\add* Yahweh¦61648 had told Mosheh¦61651,
 \v 49 “Don't list the Levites \add ≈or count them with the other Israelis¦61667\add*.
-\v 50 \add ≈Instead,\add* appoint¦61671 \add *them\add* to manage the tent¦61677 \add ≈where the copy of the agreement is kept\add*, along with all its¦61700 equipment. They must serve inside it as \add required\add*, and¦61670 they should \add ≈set their tents up around¦61701 it\add*.
-\v 51 \add ≈When¦61714 it's time to leave that place\add*, the Levites¦61709 must take¦61707 \add @the tent¦61706\add* down and¦61705 when camp \add ≈is set up\add*, they must erect it \add again\add*, \add ≈but¦61705\add* any stranger who approaches it must be \add ≈executed\add*.
+\v 50 \add ≈Instead,\add* appoint¦61671 \add *them\add* to manage the tent¦61677 \add ≈where the copy of the agreement is kept\add*, along with all its¦61700 equipment. They must serve¦61700 inside it as \add required\add*, and¦61670 they should \add ≈set their tents up around¦61701 it\add*.
+\v 51 \add ≈When¦61714 it's time to leave that place\add*, the Levites¦61709 must take¦61707 \add @the tent¦61706\add* down and¦61705 when camp \add ≈is set up\add*, they must erect it \add again\add*, \add ≈but¦61705\add* any stranger¦61715 who approaches¦61716 it must be \add ≈executed\add*.
 \v 52 \add When¦61721\add* the \add other\add* \add ≈Israelis¦61720\add* set up camp, each man¦61726 must set up with his army division¦61730 by their¦61730 banner,
 \v 53 \add ≈but¦61732\add* the Levites¦61747 will camp there around¦61734 the \add ≈sacred tent¦61735\add* and¦61732 look after it¦61739. \add ≈That way,\add* the Israeli¦61744 community won't¦61737 make \add Yahweh\add* angry.
 \v 54 \add ≈So¦61754 the Israelis¦61756 did everything\add* that Yahweh¦61760 had instructed¦61759 Mosheh¦61763.
@@ -146,7 +146,7 @@
 \v 32 Those¦62129 are the listed \add ≈Israelis¦62127 by their ancestral¦62131 tribes\add* \add ≈with a total¦62132 of 603,500 fighting men\add*.
 \v 33 However, \add ≈following\add* Yahweh's instructions¦62154, the Levites weren't listed among them.
 \p
-\v 34 \add ≈So¦62160\add* the \add ≈Israelis¦62162\add* did everything¦62163 that Yahweh¦62167 commanded¦62166 Mosheh¦62170. They camped¦62173 under their banners, and \add ≈travelled grouped in their tribes and clans\add*.
+\v 34 \add ≈So¦62160\add* the \add ≈Israelis¦62162\add* did everything¦62163 that Yahweh¦62167 commanded¦62166 Mosheh¦62170. They camped¦62173 under their banners, and \add ≈travelled grouped in their tribes and clans¦62178\add*.
 \c 3
 \s1 Aharon's sons
 \rem /s1 The Levites; The Sons of Aaron; Levites Appointed for Service; Aaron's Sons
@@ -154,14 +154,14 @@
 \v 1 \add ≈The following\add* are the descendants¦62185 of Aharon \add (Aaron¦62186)\add* and¦62187 Mosheh as on the day¦62188 when Yahweh¦62190 spoke¦62189 with¦62194 Mosheh on Mt¦62194. Sinai¦62195:
 \v 2 Aharon's sons¦62199 were: Nadav (the oldest), Avihu, Eleazar¦62206, and¦62197 Itamar¦62207.\x + \xo 3:2: \xt Num 26:60.\x*
 \v 3 They¦62212 were \add all\add* anointed¦62214 as priests and \add ≈served¦62219 in that role\add*,
-\v 4 \add ≈except that\add* Nadav and Avihu died¦62221 \add ≈in front\add* of Yahweh¦62225 when they offered¦62226 \add ≈unacceptable\add* fire¦62227 to \add *him\add* in the Sinai¦62232 wilderness¦62231, and \add so\add* they had no sons. \add ≈So¦62221\add* Eleazar¦62239 and Itamar¦62240 served¦62238 as priests¦62238 \add ≈alongside\add* their¦62245 father¦62245 Aharon.\x + \xo 3:4: \xt Lev 10:1-2; Num 26:61.\x*
+\v 4 \add ≈except that\add* Nadav and Avihu died¦62221 \add ≈in front¦62224\add* of Yahweh¦62225 when they offered¦62226 \add ≈unacceptable\add* fire¦62227 to \add *him\add* in the Sinai¦62232 wilderness¦62231, and \add so\add* they had no sons¦62233. \add ≈So¦62221\add* Eleazar¦62239 and Itamar¦62240 served¦62238 as priests¦62238 \add ≈alongside\add* their¦62245 father¦62245 Aharon.\x + \xo 3:4: \xt Lev 10:1-2; Num 26:61.\x*
 \s1 The Levites as ransom for their sons
 \rem /s1 The Duties of the Levites; The Levites Are Appointed to Serve the Priests
 \p
 \v 5 Then Yahweh¦62249 told Mosheh¦62252,
-\v 6 “Summon the Levites to come and stand in front¦62262 of Aharon the priest¦62264, so they can assist¦62265 him.
+\v 6 “Summon the Levites to come and stand¦62260 in front¦62262 of Aharon the priest¦62264, so they¦62265 can assist¦62265 him.
 \v 7 They must perform¦62268 duties¦62271 for him¦62271 and for the entire¦62275 community¦62277 at and around the \add ≈sacred¦62285 tent¦62285\add*,
-\v 8 including looking after all of its equipment and¦62295 \add ≈fulfilling the obligations\add* of the \add ≈Israelis¦62299\add*.
+\v 8 including¦62295 looking after all of its equipment and¦62295 \add ≈fulfilling the obligations\add* of the \add ≈Israelis¦62299\add*.
 \v 9 You must assign the Levites¦62309 to Aharon—out of all the \add ≈Israelis¦62317\add* it's them who are assigned \add to serve the priests\add*.
 \v 10 Appoint Aharon and his sons¦62325 as priests and to preserve the priesthood. Any other person \add ≈who tries to act as a priest\add* \add ≈must be executed\add*.”
 \p
@@ -184,14 +184,14 @@
 \v 22 They had 7,500 males that were at¦62479 least a month¦62485 old.
 \v 23 The Gershonite clans¦62493 were to camp on the western side of the \add ≈sacred¦62496 tent¦62496\add*,
 \v 24 and¦62500 \add *their\add* leader¦62500 was Lael's¦62508 son Elyasaf.
-\v 25 Gershon's¦62513 descendants¦62511 were responsible¦62510 for the \add ≈sacred¦62516 tent¦62516\add*, including its¦62518 covering¦62518 and¦62510 the entrance¦62520 curtain,
+\v 25 Gershon's¦62513 descendants¦62511 were responsible¦62510 for the \add ≈sacred¦62516 tent¦62516\add*, including¦62517 its¦62518 covering¦62518 and¦62510 the entrance¦62520 curtain,
 \v 26 the courtyard curtains, and¦62524 the courtyard entrance¦62529 curtain, that¦62531 surrounded \add *it\add*. Also the ropes¦62540 \add ≈used to hold them\add*.
 \p
 \v 27 Kohat's descendants were the Amramites, the Yitsharites, the Hevronites, and¦62544 the Uzziyelites, so they¦62554 made up the Kohatites.
 \v 28 They had 8,600 males that were at least a month¦62564 old. They were in charge of the running of the \add ≈sacred¦62572 tent¦62572\add*.
 \v 29 The Kohatite clans¦62574 were to camp of the southern¦62582 side of the \add ≈sacred¦62581 tent¦62581\add*,
 \v 30 and¦62584 \add *their\add* leader¦62584 was Uzziyel's son Elitsafan.
-\v 31 They were in charge of the box, the table¦62598 and the lampstand¦62599, the altars¦62600 and all the utensils used for ministry, the \add inside\add* curtain and its gear.
+\v 31 They were in charge of the box, the table¦62598 and the lampstand¦62599, the altars¦62600 and all the utensils used for ministry, the \add inside\add* curtain and its¦62608 gear.
 \p
 \v 32 The man who organised the Levites¦62612 was Aharon's son, Eleazar¦62613 the priest¦62617. He had oversight¦62618 over all those who were responsible for the \add ≈sacred¦62621 tent¦62621\add*.
 \p
@@ -201,7 +201,7 @@
 \v 36 \add *They\add* were in charge of all the frames¦62666 for the \add ≈sacred¦62667 tent¦62667\add*, its crossbars, posts, bases¦62670, all its containers and¦62662 equipment¦62673,
 \v 37 as well as the pillars¦62677 \add used to make\add* the courtyard¦62678 with their bases¦62680, pegs, and¦62677 ropes¦62682.
 \p
-\v 38 Mosheh¦62694 and Aharon and his sons¦62697 \add ≈set up their tents\add* \add ≈in front of\add* \add the entrance on\add* the eastern¦62687 side of the \add ≈sacred¦62700 tent\add*. They were in charge of that tent and \add ?≈the needs of\add* the \add ≈Israelis¦62702\add*. Any stranger who approached had to be \add ≈executed\add*.
+\v 38 Mosheh¦62694 and Aharon and his sons¦62697 \add ≈set up their tents\add* \add ≈in front¦62685 of\add* \add the entrance on\add* the eastern¦62687 side of the \add ≈sacred¦62700 tent\add*. They were in charge of that tent and \add ?≈the needs of\add* the \add ≈Israelis¦62702\add*. Any stranger¦62704 who approached¦62705 had to be \add ≈executed\add*.
 \v 39 Mosheh¦62714 and Aharon listed 22,000 Levite¦62711 males that were at least a month¦62727 old, listing them by their¦62721 clans¦62721 as \add ≈per Yahweh's instructions\add*.
 \s1 Paying the price for the firstborn sons
 \rem /s1 The Redemption of the Firstborn; The Levites Take the Place of the First-Born Sons; Redeeming the Firstborn Sons
@@ -209,13 +209,13 @@
 \v 40 Then Yahweh¦62735 told Mosheh¦62738, “List all the \add other\add* male¦62743 \add ≈Israeli¦62745\add* that are at least one month¦62748 old and \add ≈count them\add*.
 \v 41 The Levites¦62758 are for me, Yahweh¦62761, in the place of the firstborn males from every \add ≈Israeli¦62766\add* family, and¦62755 their animals are in place of the \add ≈Israelis'\add* firstborn male animals.”
 \v 42 \add ≈So¦62779\add* Mosheh¦62780 listed the firstborn¦62789 Israelis¦62790 exactly as Yahweh¦62783 had commanded¦62782 him to.
-\v 43 and¦62793 the total number of firstborn¦62796 males a month¦62802 old or more whose names¦62799 were listed came to 22,273.
+\v 43 and¦62793 the total number¦62798 of firstborn¦62796 males a month¦62802 old or more whose names¦62799 were listed came to 22,273.
 \p
 \v 44 Then Yahweh¦62814 spoke¦62813 to Mosheh¦62817,
 \v 45 “Take the Levites instead of every¦62825 firstborn¦62827 male Israeli¦62828, and the Levites' animals instead of their¦62835 animals, and the Levites will be mine—I am Yahweh¦62841.
 \v 46 To redeem the 273 firstborn¦62852 Israelis¦62854 who outnumber¦62848 the Levites¦62851,
 \v 47 collect¦62856 five silver coins for each one of them. (Use the same silver coins weighing eleven grams, that the priests use in¦62861 the \add ≈sacred¦62862 tent¦62862\add*.)
-\v 48 Give that \add ≈money¦62869\add* to Aharon and¦62871 his sons¦62871 as payment of the ransom¦62872 for those excess¦62873 273 males.”
+\v 48 Give that \add ≈money¦62869\add* to Aharon and¦62871 his sons¦62871 as payment of the ransom¦62872 for those¦62873 excess¦62873 273 males.”
 \v 49 \add ≈So¦62876\add* Mosheh¦62877 collected that ransom money¦62879 to cover the ransom of the excess¦62882 \add not covered by the number of\add* Levites¦62885.
 \v 50 He¦62890 collected 1,365 silver coins from the firstborn¦62888 Israeli¦62889 males (using the standard weight of silver from the sanctuary¦62901)
 \v 51 and gave¦62903 \add *it\add* to Aharon and his sons¦62910 just as Yahweh¦62914 had commanded¦62916.
@@ -231,19 +231,19 @@
 \v 5 When¦62974 \add ≈it's time to break camp\add*, Aharon¦62975 and his sons¦62976 must enter and take¦62979 down the curtain¦62981 that veils it, and then¦62974 use that to cover¦62983 the box \add ≈containing the agreement\add*.
 \v 6 Then¦62990 they must cover it with \add ?≈fine\add* leather, followed by a blue cloth, and¦62990 then¦62990 put its¦63002 \add carrying\add* poles¦63002 \add through the rings\add*.
 \p
-\v 7 They must spread¦63008 a blue cloth over the \add ≈sacred bread table¦63006\add*, then¦63004 place the dishes¦63018, pans, bowls¦63021, and¦63004 jugs for the drink-offerings on top of that, along with the \add ≈sacred\add* bread.
+\v 7 They must spread¦63008 a blue cloth over the \add ≈sacred bread table¦63006\add*, then¦63004 place the dishes¦63018, pans, bowls¦63021, and¦63004 jugs for the drink¦63024 offerings¦63024 on top of that, along with the \add ≈sacred\add* bread.
 \v 8 Then¦63030 they must spread¦63030 a scarlet cloth over all that, and cover¦63035 that again with¦63037 \add ?≈fine\add* leather, and then¦63030 put its¦63043 poles¦63043 \add through the rings\add*.
 \p
-\v 9 They must spread a blue cloth over the lampstand with¦63072 its \add oil\add* lamps, its tongs and trays¦63062, and the oil containers that¦63068 are used for it.
+\v 9 They must spread a blue cloth over the lampstand with¦63072 its \add oil\add* lamps, its tongs¦63059 and trays¦63062, and the oil containers that¦63068 are used for it.
 \v 10 Then¦63074 they must wrap the lampstand and all its equipment in \add ?≈fine\add* leather, and place it \add all\add* on its carrying¦63089 frame¦63089.
 \p
 \v 11 Then¦63091 the must spread¦63095 a blue cloth over the gold¦63094 \add incense\add* altar¦63093, and cover¦63098 that again with¦63100 \add ?≈fine\add* leather, and then¦63091 put its¦63106 poles¦63106 \add through the rings\add*.
-\v 12 Then¦63108 they must get all the \add other\add* utensils that they use in¦63118 the \add ≈sacred¦63119 tent¦63119\add*, and cover¦63125 that again with¦63118 \add ?≈fine\add* leather, and place it \add all\add* on¦63118 its carrying¦63133 frame¦63133.
+\v 12 Then¦63108 they must get all the \add other\add* utensils that they use in¦63118 the \add ≈sacred¦63119 tent¦63119\add*, and cover¦63125 that again with¦63118 \add ?≈fine\add* leather, and place¦63119 it \add all\add* on¦63118 its carrying¦63133 frame¦63133.
 \v 13 They need to remove the ashes¦63135 from the \add bronze\add* altar¦63138 and¦63139 spread¦63139 a purple¦63142 cloth¦63142 over it,
 \v 14 and put all the utensils¦63150 they use on top of it: the trays, meat forks¦63160, shovel¦63163 and basins¦63166 for the altar¦63169. Then¦63144 they must cover¦63172 it with \add ?≈fine\add* leather, and then¦63144 put its poles¦63176 \add through the rings\add*.
-\v 15 Aharon and his sons¦63181 must finish¦63178 covering¦63182 the \add ≈sacred tent\add* and all its utensils and equipment when \add ≈they're about to move camp\add*. Then¦63178 the Kohatites can come¦63197 to carry it all without touching¦63204 the \add ≈inner room\add* so they won't¦63202 die¦63208. That's the responsibility of Kohat's¦63200 descendants—\add carrying\add* the \add ≈sacred tent\add*.
+\v 15 Aharon and his sons¦63181 must finish¦63178 covering¦63182 the \add ≈sacred tent\add* and all its utensils and equipment when \add ≈they're about to move camp\add*. Then¦63178 the Kohatites can come¦63197 to carry it all without touching¦63204 the \add ≈inner room¦63185\add* so they won't¦63202 die¦63208. That's the responsibility of Kohat's¦63200 descendants—\add carrying\add* the \add ≈sacred tent\add*.
 \p
-\v 16 Eleazar¦63218 (son of Aharon¦63222 the priest¦63223) is in¦63241 charge¦63217 of the lamp oil and the fragrant¦63227 incense¦63226, the regular¦63229 grain¦63228 offering¦63228, the anointing¦63231 oil, and the oversight¦63232 of the \add ≈sacred¦63241 tent¦63241\add* and the inner room, including everything that's used inside them.
+\v 16 Eleazar¦63218 (son of Aharon¦63222 the priest¦63223) is in¦63241 charge¦63217 of the lamp oil and the fragrant¦63227 incense¦63226, the regular¦63229 grain¦63228 offering¦63228, the anointing¦63231 oil, and the oversight¦63232 of the \add ≈sacred¦63241 tent¦63241\add* and the inner room¦63241, including¦63226 everything that's used inside them.
 \p
 \v 17 Then Yahweh¦63246 told Mosheh¦63249 and Aharon,
 \v 18 “Don't allow the Kohatite Levites¦63264 to \add ≈get wiped out\add* \add by mishandling the most sacred items\add*,
@@ -256,7 +256,7 @@
 \v 22 “\add ≈Take a detailed census\add* of Gershon's¦63315 male descendants¦63314 by their clans¦63321 and families
 \v 23 \add ≈who are from thirty¦63324 up to fifty¦63330 years old\add* and¦63326 who goes into the \add ≈sacred¦63341 tent\add* to minister.
 \p
-\v 24 This is what the Gershonites are responsible for working with and¦63349 carrying:
+\v 24 This is what the Gershonites are responsible for working with and¦63349 carrying¦63349:
 \v 25 They must carry¦63351 the \add inner\add* curtains from the \add ≈sacred¦63355 tent¦63355\add*, the covering, the \add ?≈fine\add* leather¦63362 covering, the entrance¦63370 curtain,
 \v 26 the courtyard curtains, and the courtyard gate curtain, along with the ropes¦63394 and other equipment for using them. That will be their ministry.
 \v 27 Aharon and his sons¦63413 \add ≈will direct\add* the Gershonites in¦63427 their¦63424 duties and assign¦63425 all \add the items\add* to them.
@@ -293,16 +293,16 @@
 \rem /s1 The Purity of the Camp; Purity in Israel's Camp; Unclean People; Unclean Persons
 \p
 \v 1 Then Yahweh¦63763 told Mosheh¦63766 \add (Moses¦63766)\add*,
-\v 2 “Order¦63773 the \add ≈Israelis¦63772\add* that anyone with a skin disease¦63780 or a discharge¦63783, and anyone who's ‘unclean¦63785’ because¦63786 they touched a corpse¦63786, must be sent outside the camp.
-\v 3 Whether they're male or female¦63791, they must be sent outside¦63795 the camp so that¦63803 the whole camp doesn't become ‘unclean¦63799’ \add because\add* I'm living¦63805 there \add right\add* amongst them.”
+\v 2 “Order¦63773 the \add ≈Israelis¦63772\add* that anyone with a skin disease¦63780 or a discharge¦63783, and anyone who's ‘unclean¦63785’ because¦63786 they¦63774 touched a corpse¦63786, must be sent outside the camp.
+\v 3 Whether they're male or female¦63791, they must be sent outside¦63795 the camp so that¦63803 the whole camp doesn't become ‘unclean¦63799’ \add because\add* I'm living¦63805 there \add right\add* amongst¦63806 them.”
 \v 4 \add ≈So¦63808 the Israelis¦63811\add* did what Yahweh¦63821 told Mosheh¦63824, and¦63808 sent those people outside¦63817 the camp.
 \s1 Reparations for crimes
 \rem /s1 Confession and Restitution; Restitution for Wrongs; Repayment for Wrongs Done
 \p
 \v 5 Then Yahweh¦63832 told Mosheh¦63835,
-\v 6 “Tell the \add ≈Israelis¦63841\add* that when any man or a woman¦63846 \add ≈disobeys God by doing any of the things that humans¦63852 do\add* when they're unfaithful¦63853 towards Yahweh, then that person is guilty¦63856
-\v 7 and¦63860 they must confess¦63860 their \add ≈disobedience\add*. Then¦63860 that¦63864 person must make full reparation to whoever they wronged¦63869, along with¦63870 an extra twenty percent \add of the cost\add*.
-\v 8 \add ≈However,\add* if reparation to \add ≈the victim isn't¦63881 possible\add* \add for some reason\add*, then¦63879 it must be paid to Yahweh¦63889 via a priest¦63890, in addition to the ram \add that will be offered\add* for that person's atonement.
+\v 6 “Tell the \add ≈Israelis¦63841\add* that when any man or a woman¦63846 \add ≈disobeys God by doing any of the things that humans¦63852 do\add* when they're unfaithful¦63853 towards Yahweh¦63855, then that person is guilty¦63856
+\v 7 and¦63860 they must confess¦63860 their¦63863 \add ≈disobedience\add*. Then¦63860 that¦63864 person must make full reparation to whoever they wronged¦63869, along with¦63870 an extra twenty percent \add of the cost\add*.
+\v 8 \add ≈However,\add* if reparation to \add ≈the victim isn't¦63881 possible\add* \add for some reason\add*, then¦63879 it must be paid to Yahweh¦63889 via a priest¦63890, in addition to the ram \add that will be offered\add* for that person's¦63882 atonement¦63893.
 \v 9 Any¦63908 sacred¦63905 contributions¦63902 by the \add ≈Israelis¦63906\add* that¦63909 are presented to a priest¦63912 will belong¦63914 to him.
 \v 10 Each person's sacred¦63919 contributions will be their own, \add but¦63916\add* anything given to a priest¦63926 will belong to him¦63919.”
 \s1 Testing for an unfaithful wife
@@ -316,20 +316,20 @@
 \p
 \v 16 Then¦64037 the priest¦64039 must \add ≈lead her forward\add* and¦64037 stand¦64040 her in front¦64041 of Yahweh¦64042.
 \v 17 He must \add ≈fill\add* a pottery jar with¦64048 sacred¦64047 water, and¦64044 then¦64044 mix some dust from the floor¦64056 of \add Yahweh's\add* residence into the water.
-\v 18 Then¦64065 the priest must stand¦64065 the woman \add ≈in¦64087 front¦64070\add* of Yahweh¦64071 and¦64065 \add ≈let her hair down\add*, then¦64065 he must place the suspicion grain offering on¦64087 her palm. (It's a grain offering for jealousy¦64085.) The priest must be \add ≈holding\add* the water¦64090 of bitterness¦64091 that brings¦64092 a curse¦64092
-\v 19 and tell the woman¦64100 to make this oath: “If no \add other\add* man \add ≈slept\add* with you, and if you didn't¦64103 \add ≈dirty yourself while you're married\add*, then¦64094 be free from this water¦64115 of bitterness¦64116 that brings¦64117 a curse¦64117.
+\v 18 Then¦64065 the priest must stand¦64065 the woman \add ≈in¦64087 front¦64070\add* of Yahweh¦64071 and¦64065 \add ≈let her hair down\add*, then¦64065 he must place the suspicion grain offering on¦64087 her palm. (It's a grain offering for jealousy¦64085.) The priest must be \add ≈holding\add* the water¦64090 of bitterness¦64091 that¦64092 brings¦64092 a curse¦64092
+\v 19 and tell the woman¦64100 to make this oath: “If no \add other\add* man \add ≈slept\add* with you, and if you didn't¦64103 \add ≈dirty yourself while you're married\add*, then¦64094 be free from this water¦64115 of bitterness¦64116 that¦64117 brings¦64117 a curse¦64117.
 \v 20 \add ≈But¦64120\add* if you \add ≈have cheated on\add* your husband and become ‘unclean¦64126’ and slept with some other¦64133 guy, \add there'll be consequences\add*.
-\v 21 Then¦64136 the priest will make the woman¦64140 take that curse as an oath, and \add *he'll\add* tell \add *her\add*, “Yahweh will \add ≈make your experience\add* a curse and your people¦64152 \add ≈will see the results of the\add* oath, when Yahweh gives \add ≈disease to your genitals\add* and makes¦64153 your belly swell.
+\v 21 Then¦64136 the priest will make the woman¦64140 take that curse as an oath, and \add *he'll\add* tell \add *her\add*, “Yahweh will \add ≈make your experience\add* a curse and your people¦64152 \add ≈will see the results of the\add* oath, when Yahweh gives \add ≈disease to your genitals\add* and makes¦64153 your belly¦64161 swell.
 \v 22 This water¦64165 will \add ≈invoke\add* the curse¦64166 to make your belly¦64170 swell¦64169 and¦64164 your \add ≈genitals shrivel\add*.” Then¦64164 the woman¦64174 must say¦64173, “Indeed, let it be so.”
 \p
 \v 23 Then¦64179 the priest¦64184 must write¦64179 those curses¦64182 on¦64185 a scroll¦64185, then¦64179 wipe \add the ink\add* into the water¦64189 of bitterness¦64190.
 \v 24 He must make the woman¦64195 drink that water¦64192 of bitterness¦64199 that brings¦64200 the curse¦64200, and¦64201 \add *it\add* will enter¦64201 into her¦64202.
 \v 25 Then¦64207 he'll take the grain offering of suspicion from her hand, and hold it up \add ≈in front¦64218\add* of Yahweh¦64219, and then¦64207 take it to the altar¦64224.
 \v 26 \add *He'll\add* take¦64226 some of the grain¦64230 as a memorial¦64233 portion and¦64226 burn¦64234 it on the altar¦64235. Then¦64226 he'll make the woman¦64240 drink¦64237 the water¦64243.
-\v 27 \add ≈After she's drunk it\add*, if she was ‘unclean¦64252’ and unfaithful¦64253 to her husband¦64255, the water will carry that curse into her, and her belly will swell¦64261 and her \add ≈genitals will get diseased\add*, and the woman¦64266 will become¦64265 a curse among her people¦64269.
+\v 27 \add ≈After she's drunk it\add*, if she was ‘unclean¦64252’ and unfaithful¦64253 to her husband¦64255, the water will carry that¦64259 curse into her, and her belly¦64262 will swell¦64261 and her \add ≈genitals will get diseased\add*, and the woman¦64266 will become¦64265 a curse among her people¦64269.
 \v 28 \add ≈However,\add* if she hadn't defiled herself¦64274 and is pure, then¦64271 she'll be free and \add be able to\add* \add ≈have children\add*.
 \p
-\v 29 That's the rule about jealousy¦64284 when a wife¦64287 \add ≈cheats on\add* her husband¦64289 and¦64290 defiles¦64290 herself,
+\v 29 That's the rule about jealousy¦64284 when a wife¦64287 \add ≈cheats on\add* her husband¦64289 and¦64290 defiles¦64290 herself¦64290,
 \v 30 or when a \add ≈husband\add* \add ≈becomes jealous¦64298 and suspicious\add* and he stands¦64303 \add ≈his wife\add* \add ≈in front¦64307\add* of Yahweh¦64308, and the priest¦64311 applies this ruling to her.
 \v 31 Then¦64318 \add ≈the husband\add* will be \add ≈innocent\add*, and¦64321 that women will \add ≈bear the consequences\add* of her¦64326 wrongdoing.
 \c 6
@@ -338,31 +338,31 @@
 \p
 \v 1 Then Yahweh¦64330 told Mosheh¦64333,
 \v 2 “Tell¦64340 the \add ≈Israelis¦64339\add* that when any man or woman¦64346 wants to make a solemn vow to separate¦64352 themself to Yahweh¦64353 as a Nazirite¦64351,
-\v 3 they must keep away from wine and strong drink, and \add even\add* vinegar made from wine or strong drink, plus they mustn't drink grape juice¦64366 or eat either grapes or raisins.\x + \xo 6:3: \xt Luk 1:15.\x*
+\v 3 they must keep away from wine and strong drink, and \add even\add* vinegar made from wine or strong drink, plus¦64356 they mustn't drink grape juice¦64366 or eat either grapes or raisins.\x + \xo 6:3: \xt Luk 1:15.\x*
 \v 4 For the entire¦64379 time of their separation¦64378, they mustn't eat¦64389 anything coming from a grapevine¦64382, \add ≈not even\add* the seeds¦64384 or the skins.
 \p
 \v 5 “For the entire time¦64406 of their vow to Yahweh¦64410 as a Nazirite¦64409, they mustn't cut their hair—they must sacred¦64411 and grow their hair long.
 \p
-\v 6 “For the entire time of their separation¦64421 to Yahweh¦64422, they mustn't approach any dead¦64426 body,
-\v 7 even if it's their father¦64430 or mother¦64431, or brother¦64432 or sister¦64433. They mustn't defile themselves with¦64438 death, because their consecration¦64440 to their god¦64441 is on¦64438 their head.
+\v 6 “For¦64421 the entire time of their separation¦64421 to Yahweh¦64422, they mustn't approach any dead¦64426 body,
+\v 7 even if it's their father¦64430 or mother¦64431, or brother¦64432 or sister¦64433. They mustn't defile themselves with¦64438 death, because their consecration¦64440 to their god¦64441 is on¦64438 their head¦64444.
 \v 8 They must remain holy to Yahweh¦64451 for the whole time.
 \p
-\v 9 “\add ≈However,\add* if someone right next to them suddenly¦64459 died, that would defile¦64460 their consecrated¦64462 head, and¦64453 after the \add regular\add* seven¦64468 days of purification, they would have to shave their head.
+\v 9 “\add ≈However,\add* if someone right next to them suddenly¦64459 died, that would defile¦64460 their consecrated¦64462 head, and¦64453 after the \add regular\add* seven¦64468 days of purification¦64466, they would have to shave their head.
 \v 10 Then¦64471 on¦64471 the eighth¦64472 day¦64471, they'd have to take two doves or young¦64478 pigeons to the priest¦64482 at¦64471 the entrance¦64485 of the \add ≈sacred¦64486 tent\add*,
-\v 11 and \add *he\add* would take one for a sin¦64492 offering and the other¦64493 for a burnt¦64494 offering—making atonement¦64495 for their transgression with the corpse¦64501. Then¦64489 they would consecrate¦64502 their head again that day¦64506
+\v 11 and \add *he\add* would take one for a sin¦64492 offering and the other¦64493 for a burnt¦64494 offering—making atonement¦64495 for their transgression with the corpse¦64501. Then¦64489 they would consecrate¦64502 their head¦64505 again that day¦64506
 \v 12 and¦64509 \add ≈restart\add* their days of separation, as well as bringing¦64515 a one-year old male lamb as a guilt¦64520 offering¦64520. (Their¦64510 initial days of separation \add ≈won't count\add* because they were made ‘unclean¦64525’.)
 \p
-\v 13 “Now these are the instructions for the Nazirites: Once their days¦64533 of separation¦64534 are fulfilled, \add someone¦64535\add* must take them to the entrance¦64539 of the \add ≈sacred¦64540 tent\add*
-\v 14 and they will present¦64543 their offerings to Yahweh¦64547—an unblemished, one-year old, male lamb as a burnt¦64554 offering, and an unblemished, one-year old, female lamb as a sin¦64561 offering, plus an unblemished ram as a peace/fellowship¦64566 offering,
+\v 13 “Now these are the instructions for the Nazirites¦64530: Once their days¦64533 of separation¦64534 are fulfilled, \add someone¦64535\add* must take them to the entrance¦64539 of the \add ≈sacred¦64540 tent\add*
+\v 14 and they will present¦64543 their offerings to Yahweh¦64547—an unblemished, one-year old, male lamb as a burnt¦64554 offering, and an unblemished, one-year old, female lamb as a sin¦64561 offering, plus¦64555 an unblemished ram as a peace¦64566/fellowship¦64566 offering,
 \v 15 \add ≈along with\add* a basket¦64568 of flat breads, flour¦64570 mixed¦64572 with oil, and wafers¦64574 spread with \add olive\add* oil, and their grain¦64578 and drink¦64579 offerings¦64578.
 \v 16 The priest¦64582 must present¦64581 all that to Yahweh¦64584, and \add ≈handle\add* their sin¦64588 offering and burnt¦64591 offering.
 \v 17 The ram and the basket¦64601 of flat breads¦64602 will be offered as a peace¦64598 offering to Yahweh¦64599, and the priest¦64604 will offer their grain and wine offerings.
-\v 18 Then¦64612 the Nazirite must shave¦64612 their head of separation at the opening to the \add ≈sacred¦64615 tent\add*, and¦64612 taking the hair, must put it on the fire¦64630 under¦64633 their peace-offering sacrifice¦64634.
+\v 18 Then¦64612 the Nazirite¦64613 must shave¦64612 their head of separation at the opening to the \add ≈sacred¦64615 tent\add*, and¦64612 taking the hair, must put it on the fire¦64630 under¦64633 their peace¦64635 offering¦64635 sacrifice¦64634.
 \p
-\v 19 “The priest¦64638 will then¦64637 take the boiled¦64642 shoulder¦64641 from the ram, and one flat bread roll and one wafer¦64652 from the basket¦64651, and place them on the palms¦64658 of that Nazirite with their consecrated¦64664 head that's been shaved¦64661.
-\v 20 Then the priest will raise them as a raised offering to Yahweh¦64672. Those raised breads and the shoulder \add ≈are now sacred¦64673 and belong to\add* the priest. Then the Nazirite can drink¦64683 some wine.
+\v 19 “The priest¦64638 will then¦64637 take the boiled¦64642 shoulder¦64641 from the ram, and one flat bread roll and one wafer¦64652 from the basket¦64651, and place them on the palms¦64658 of that Nazirite¦64659 with their consecrated¦64664 head that's been shaved¦64661.
+\v 20 Then the priest will raise them as a raised offering to Yahweh¦64672. Those raised breads and the shoulder \add ≈are now sacred¦64673 and belong to\add* the priest. Then the Nazirite¦64684 can drink¦64683 some wine.
 \p
-\v 21 Those are the instructions for the Nazirite who makes a solemn oath to Yahweh¦64693 for their separation¦64696, \add ≈plus what they're able to give\add*. \add ≈They must do exactly what they promised\add* as per these instructions.”
+\v 21 Those are the instructions for the Nazirite¦64689 who makes a solemn oath to Yahweh¦64693 for their separation¦64696, \add ≈plus what they're able to give\add*. \add ≈They must do exactly what they promised\add* as per these instructions.”
 \s1 The priests' prayer for blessing
 \rem /s1 The Priestly Benediction; The Priestly Blessing
 \p
@@ -388,7 +388,7 @@
 \v 6 \add ≈So¦64868\add* Mosheh¦64869 took¦64868 the carts¦64872 and the cattle and distributed them to the Levites¦64880,
 \v 7 giving two¦64884 carts¦64885 and¦64886 four¦64887 bulls¦64888 to the Gershonites¦64891 to help them with their¦64893 assigned duties.
 \v 8 Then¦64895 he gave¦64902 four¦64897 carts¦64898 and¦64895 eight¦64900 bulls¦64901 to the Merarites to help them with¦64907 their¦64906 assigned duties under the supervision of the priest¦64912 (Aharon's son) Itamar¦64908.
-\v 9 \add ≈However,\add* the Kohaties weren't given any because they were responsible for carrying¦64924 the very holy objects, and¦64914 those had to be carried¦64924 on¦64923 their shoulders¦64923.
+\v 9 \add ≈However,\add* the Kohaties weren't given any because they¦64924 were responsible for carrying¦64924 the very holy objects, and¦64914 those had to be carried¦64924 on¦64923 their shoulders¦64923.
 \p
 \v 10 The day¦64931 that the altar was dedicated¦64929 and anointed¦64932, the leaders brought their¦64938 gifts and presented them at the altar,
 \v 11 and¦64942 Yahweh¦64943 told Mosheh¦64946, “\add ≈Each day\add* \add for the next twelve days\add*, one leader must present his offering¦64956 for the altar¦64958 dedication¦64957.”
@@ -426,30 +426,30 @@
 \v 1 Then Yahweh¦66098 told Mosheh¦66101 \add (Moses¦66101)\add*,\x + \xo 8:1-4: \xt Exo 25:31-40; 37:17-24.\x*
 \v 2 “Tell Aharon \add (Aaron¦66107)\add* that when he \add ≈places\add* the seven¦66120 lamps \add on¦66110\add* the lampstand, \add ≈they must light¦66119 up the area in¦66110 front¦66116 of it\add*.”
 \v 3 \add ≈So¦66123\add* Aharon did it just as Yahweh¦66135 had instructed¦66134, setting up the lamps on the lampstand to face¦66129 forwards.
-\v 4 The lampstand from the base to its blossoms had been made by hammering \add a single sheet\add* of gold¦66144, just as Yahweh¦66156 had shown¦66155 Mosheh¦66159.
+\v 4 The lampstand from the base to its blossoms¦66150 had been made by hammering \add a single sheet\add* of gold¦66144, just as Yahweh¦66156 had shown¦66155 Mosheh¦66159.
 \s1 The dedication of Levites
 \rem /s1 Consecration and Service of the Levites; The Setting Apart of the Levites; The Purification and Dedication of the Levites; The Levites Dedicated
 \p
 \v 5 Then Yahweh¦66168 told Mosheh¦66171,
-\v 6 “\add ≈Out¦66180 of all the Israelis¦66179\add*, take the Levites¦66177 and¦66181 purify them.
-\v 7 This is how to make them pure: sprinkle the sin-offering water¦66191 on them, then¦66184 they must shave¦66193 their \add ≈entire¦66197 bodies\add* and wash themselves and their clothes¦66201.
-\v 8 They must take a \add ≈young\add* bull along with its grain¦66209 offering of flour¦66210 mixed¦66211 with oil, plus a \add ≈second¦66215 young\add* bull for a sin offering.
+\v 6 “\add ≈Out¦66180 of all the Israelis¦66179\add*, take the Levites¦66177 and¦66181 purify¦66181 them.
+\v 7 This is how to make them pure: sprinkle the sin¦66192 offering¦66192 water¦66191 on them, then¦66184 they must shave¦66193 their \add ≈entire¦66197 bodies\add* and wash themselves¦66202 and their clothes¦66201.
+\v 8 They must take a \add ≈young\add* bull along with its grain¦66209 offering of flour¦66210 mixed¦66211 with oil, plus¦66209 a \add ≈second¦66215 young\add* bull for a sin offering.
 \v 9 You¦66236 must have the Levites¦66225 stand at the front¦66226 of the \add ≈sacred¦66227 tent\add* and¦66229 summon the rest of the \add ≈Israelis¦66235\add* \add there too\add*.
-\v 10 Then¦66238 you must present the Levites¦66241 \add ≈in front¦66242 of\add* Yahweh¦66243 and¦66244 the \add ≈Israeli¦66247 men\add* must place their¦66250 hands¦66250 on them.
-\v 11 \add ≈Out of all the Israelis¦66264,\add* Aharon must present¦66255 the Levites¦66259 as a raised offering to Yahweh \add ≈so they¦66266 can serve Yahweh\add* \add with their assigned duties\add*.
+\v 10 Then¦66238 you¦66238 must present the Levites¦66241 \add ≈in front¦66242 of\add* Yahweh¦66243 and¦66244 the \add ≈Israeli¦66247 men\add* must place their¦66250 hands¦66250 on them.
+\v 11 \add ≈Out of all the Israelis¦66264,\add* Aharon must present¦66255 the Levites¦66259 as a raised offering to Yahweh \add ≈so they¦66266 can serve¦66267 Yahweh\add* \add with their assigned duties\add*.
 \v 12 Then¦66273 the Levites must place their¦66277 hands¦66277 on the bulls' heads, and one must be given as a sin¦66285 offering and the other as a burnt¦66289 offering to Yahweh, to make the Levites \add ≈innocent in Yahweh's eyes\add*.
 \p
-\v 13 “The Levites¦66299 must stand¦66296 in front of Aharon and¦66296 his sons¦66303, then¦66296 they can be offered as a raised offering to Yahweh¦66307.
+\v 13 “The Levites¦66299 must stand¦66296 in front¦66300 of Aharon and¦66296 his sons¦66303, then¦66296 they can be offered as a raised offering to Yahweh¦66307.
 \v 14 That's how \add *they'll\add* be \add ≈distinguished from the other Israelis¦66314\add*, and¦66316 then¦66309 \add *they'll\add* belong to me.
-\v 15 Then¦66320 the Levites¦66324 will go¦66323 to serve¦66325 at the \add ≈sacred¦66328 tent\add* after¦66320 you've purified them and¦66320 presented¦66332 them as a raised offering,
+\v 15 Then¦66320 the Levites¦66324 will go¦66323 to serve¦66325 at the \add ≈sacred¦66328 tent\add* after¦66320 you've purified¦66330 them and¦66320 presented¦66332 them as a raised offering,
 \v 16 because they're given to me by all the Israeli¦66342 people¦66342—I've¦66353 taken¦66353 them for myself in place¦66344 of their firstborn male sons¦66351,
 \v 17 because every firstborn Israeli¦66362 male person and animal belongs to me. I set them apart¦66373 for myself when I killed every \add other\add* firstborn in¦66362 Egypt¦66372,
 \v 18 \add ≈so\add* I've¦66386 \add now\add* taken¦66377 the Levites¦66380 instead of the firstborn¦66384 Israeli¦66385 sons¦66385.
-\v 19 Then¦66388 I've given the Levites¦66391 out of all the Israelis, to Aharon and his sons to serve \add ≈the whole country\add* by serving¦66402 in the \add ≈sacred tent\add* and making \add ≈the Israelis innocent in Yahweh's eyes\add*. That way, a plague¦66417 won't¦66413 strike the Israelis when they approach the \add ≈sacred tent\add*.”
+\v 19 Then¦66388 I've¦66388 given the Levites¦66391 out of all the Israelis, to Aharon and his sons¦66395 to serve¦66399 \add ≈the whole country\add* by serving¦66402 in the \add ≈sacred tent\add* and making \add ≈the Israelis innocent in Yahweh's eyes\add*. That way, a plague¦66417 won't¦66413 strike the Israelis when they approach the \add ≈sacred tent\add*.”
 \p
 \v 20 \add ≈So¦66426\add* Mosheh and Aharon and all the \add ≈Israelis¦66432\add* did to the Levites¦66435 \add just\add* what Yahweh¦66440 had instructed¦66439 Mosheh.
-\v 21 The Levites¦66453 purified¦66452 themselves and washed¦66454 their¦66455 clothes¦66455, and Aharon offered them to Yahweh as a raised offering, and Aharon offered a sacrifice to \add ≈make them innocent in Yahweh's eyes\add*.
-\v 22 After that, the Levites went¦66470 to do their¦66475 \add assigned\add* duties at¦66476 the \add ≈sacred¦66476 tent\add* \add ≈working under\add* Aharon and¦66480 his sons¦66481. \add ≈The Israelis did exactly what Yahweh¦66484 told Mosheh¦66487 to do with¦66476\add* the Levites.
+\v 21 The Levites¦66453 purified¦66452 themselves¦66452 and washed¦66454 their¦66455 clothes¦66455, and Aharon offered them to Yahweh as a raised offering, and Aharon offered a sacrifice to \add ≈make them innocent in Yahweh's eyes\add*.
+\v 22 After that, the Levites went¦66470 to do their¦66475 \add assigned\add* duties at¦66476 the \add ≈sacred¦66476 tent\add* \add ≈working under\add* Aharon and¦66480 his sons¦66481. \add ≈The Israelis did exactly what Yahweh¦66484 told¦66483 Mosheh¦66487 to do with¦66476\add* the Levites.
 \p
 \v 23 Then Yahweh¦66497 told Mosheh¦66500,
 \v 24 “These are the instructions for the Levites¦66505: from the age of twenty-five, Levite¦66505 men will begin serving¦66513 the work¦66513 in¦66514 the \add ≈sacred¦66515 tent\add*
@@ -461,9 +461,9 @@
 \p
 \v 1 Then Yahweh¦66546 spoke¦66545 to Mosheh¦66549 \add (Moses¦66549)\add* in the Sinai¦66552 wilderness¦66550, in the first¦66559 month¦66558 of the second¦66554 year¦66553 \add ≈after¦66555 they'd left\add* Egypt¦66557,
 \v 2 “The \add ≈Israelis¦66565\add* must observe¦66562 ‘pass-over¦66568’ at¦66569 the appointed¦66569 time¦66569.
-\v 3 You all must \add ≈celebrate\add* it on¦66575 the evening of the 14th of this month¦66575, \add ≈following all the instructions that you've all been given previously\add*.”
+\v 3 You all must \add ≈celebrate\add* it on¦66575 the evening¦66578 of the 14th of this month¦66575, \add ≈following all the instructions that you've all been given previously\add*.”
 \v 4 \add ≈So¦66592\add* Mosheh¦66593 \add ≈ordered\add* the \add ≈Israelis¦66596\add* to \add ≈prepare\add* the ‘pass-over¦66599’,
-\v 5 and¦66601 they \add ≈celebrated\add* it in¦66605 the Sinai¦66613 wilderness¦66612 \add ≈starting\add* on¦66605 the evening of the 14th of that first¦66605 month¦66609, \add ≈following all the instructions¦66616 that Yahweh¦66617 had given\add* Mosheh¦66620.
+\v 5 and¦66601 they \add ≈celebrated\add* it in¦66605 the Sinai¦66613 wilderness¦66612 \add ≈starting\add* on¦66605 the evening¦66611 of the 14th of that first¦66605 month¦66609, \add ≈following all the instructions¦66616 that Yahweh¦66617 had given\add* Mosheh¦66620.
 \p
 \v 6 \add ≈However,\add* there were some men who were ‘unclean¦66630’ (because they'd touched a dead body) and hence they weren't able to \add ≈celebrate\add* the ‘pass-over¦66638’ that day, \add ≈so\add* they \add ≈approached\add* Mosheh¦66643 and Aharon
 \v 7 and¦66649 \add ≈asked\add* them, “We¦66668 were ‘unclean¦66654’ because we'd touched a dead body, \add but¦66649\add* \add ≈how come we're excluded\add* from presenting an offering¦66663 to Yahweh¦66664 \add ≈along with¦66665 the other Israelis¦66667\add*?”
@@ -471,10 +471,10 @@
 \v 8 “\add ≈Wait here\add*,” Mosheh¦66672 \add ≈answered\add*, “and¦66670 I'll \add ask\add* Yahweh¦66678 \add ≈what he¦66677 wants you all to do\add*.”
 \p
 \v 9 Then Yahweh¦66683 told Mosheh¦66686,
-\v 10 “Tell the \add ≈Israelis¦66692 that\add* for this and future generations, if a person is ‘unclean¦66701’ or \add ≈far from home\add*, then they can \add still\add* \add ≈observe¦66711\add* Yahweh's ‘pass-over¦66712’.
-\v 11 They can \add ≈start\add* it on¦66717 the evening of the 14th of the \em second¦66716\em* month¦66715, and eat¦66728 it \add as usual\add* with¦66717 flat bread¦66726 and bitter¦66727 herbs¦66727.
+\v 10 “Tell the \add ≈Israelis¦66692 that\add* for this and future generations¦66710, if a person is ‘unclean¦66701’ or \add ≈far from home\add*, then they can \add still\add* \add ≈observe¦66711\add* Yahweh's ‘pass-over¦66712’.
+\v 11 They can \add ≈start\add* it on¦66717 the evening¦66721 of the 14th of the \em second¦66716\em* month¦66715, and eat¦66728 it \add as usual\add* with¦66717 flat bread¦66726 and bitter¦66727 herbs¦66727.
 \v 12 They must not break¦66739 \add ≈any of the lambs bones\add*, must not leave¦66732 any of it until¦66734 the morning¦66736, and must observe¦66746 it \add ≈following all the normal instructions\add*.\x + \xo 9:12: \xt Exo 12:46; Yhn 19:36.\x*
-\v 13 \add ≈However¦66768,\add* any person who isn't¦66755 ‘unclean’ or far away, but¦66749 yet who didn't¦66755 celebrate the ‘pass-over¦66760’ \add ≈that first month\add*, must be \add ≈driven out of the community\add* and¦66749 will have to bear their \add own\add* sin¦66772.
+\v 13 \add ≈However¦66768,\add* any person¦66749 who isn't¦66755 ‘unclean’ or far away, but¦66749 yet who didn't¦66755 celebrate the ‘pass-over¦66760’ \add ≈that first month\add*, must be \add ≈driven out of the community\add* and¦66749 will have to bear their \add own\add* sin¦66772.
 \p
 \v 14 If¦66784 an \add ≈outsider is living among¦66780 you\add* and¦66777 \add ≈celebrates\add* the ‘pass-over’, they must also do it according to \add ≈all the same instructions\add*—\add ≈there's only one way to do it whether it's\add* you all, or a foreigner, or a native¦66795 of the land.
 \rem /s1 The journey from Sinai to Edom; The Cloud Above the Tabernacle; The Fiery Cloud; The Cloud and the Fire
@@ -484,7 +484,7 @@
 \v 16 \add ≈It remained like that\add* continually¦66825—the cloud¦66826 would cover¦66827 it \add during the day\add*, and then at night¦66831, it \add ≈would appear¦66828 like\add* fire¦66830.
 \v 17 \add ≈Whenever\add* the cloud \add ≈would be lifted up\add* from the tent, \add ≈then¦66833 the Israelis\add* would \add ≈leave that place¦66844\add*. \add Then¦66833\add* wherever the cloud settled¦66846 down, \add ≈that's where the Israelis would set up camp\add*,
 \v 18 \add so in that way,\add* the \add ≈Israelis¦66861 would leave a place whenever Yahweh¦66858 told them, and would set up camp whenever he told them\add*. As¦66865 long as the cloud¦66872 stayed above the residence, they would \add stay\add* camped \add in that place\add*.
-\v 19 Whenever the cloud¦66879 remained above the residence for a \add ≈long time\add*, then¦66878 the \add ≈Israelis¦66886\add* would \add ≈follow\add* Yahweh's \add ≈guidance\add* and¦66878 wouldn't \add ≈pack up camp\add*.
+\v 19 Whenever the cloud¦66879 remained above the residence for a \add ≈long¦66878 time\add*, then¦66878 the \add ≈Israelis¦66886\add* would \add ≈follow\add* Yahweh's \add ≈guidance\add* and¦66878 wouldn't \add ≈pack up camp\add*.
 \v 20 Sometimes¦66913 the cloud¦66899 would only remain above the residence for a few days¦66900, in which case they'd \add ≈leave where they'd just camped, and¦66910 move on as Yahweh¦66908 commanded\add*.
 \v 21 If the cloud was lifted up the next morning, then they'd \add ≈move on\add*—\add in¦66929 fact\add* whether day¦66932 or night¦66933 if the cloud was lifted up, then they would \add ≈move on\add*.
 \v 22 Whether it was two days or a month¦66943 or \add ≈a year\add* that the cloud¦66948 stayed¦66952 above the residence, then the \add ≈Israeli¦66957\add* camp would remain in¦66947 that place, until \add eventually\add* \add ≈moving on¦66947\add* when it was lifted¦66960 up \add again\add*.
@@ -497,20 +497,20 @@
 \v 2 “Make two¦66996 hammered¦66999 silver¦66998 trumpets¦66997 for yourself to use for \add ≈assembling the community¦67005\add* and for \add signalling when it's time\add* to leave the camp.
 \v 3 \add ≈When¦67011 both are sounded, the whole community¦67017 is to assemble¦67013 in¦67012 front of\add* you¦67014 at¦67012 the entrance¦67020 to the \add ≈sacred¦67021 tent\add*.
 \v 4 \add ≈If¦67033 just one is sounded,\add* then¦67024 it's \add only\add* the leaders¦67030 and¦67028 heads¦67031 of clans who must assemble¦67028.
-\v 5 A \add ≈single blast\add* means that the camps¦67038 on the eastern¦67040 side should \add start\add* moving out.
-\v 6 A \add ≈double blast\add* means that the camps¦67046 on the southern¦67048 side should \add start\add* moving out. \add ≈So¦67042 the blasts will signal them to get going\add*.
+\v 5 A \add ≈single blast¦67035\add* means that¦67039 the camps¦67038 on the eastern¦67040 side should \add start\add* moving out.
+\v 6 A \add ≈double blast\add* means that¦67047 the camps¦67046 on the southern¦67048 side should \add start\add* moving out. \add ≈So¦67042 the blasts will signal them to get going\add*.
 \v 7 (To assemble¦67056 the community \add as above\add*, \add ≈use long blows, not short blasts¦67057\add*.)
 \v 8 The priests¦67063 (Aharon's descendants) must be the ones to blow the trumpets¦67065. That is a \add ≈permanent\add* regulation¦67068.
 \p
-\v 9 When¦67072 you \add ≈need to defend yourselves against an attacker¦67080\add*, then¦67072 you must sound¦67082 an alarm¦67082 with¦67076 the trumpets¦67083, and you'll all be \add ≈noticed\add* by Yahweh¦67087, and you'll be saved¦67089 from your enemies¦67090.
+\v 9 When¦67072 you \add ≈need to defend yourselves against an attacker¦67080\add*, then¦67072 you must sound¦67082 an alarm¦67082 with¦67076 the trumpets¦67083, and you'll all be \add ≈noticed\add* by Yahweh¦67087, and you'll be saved¦67089 from your¦67076 enemies¦67090.
 \p
-\v 10 On festival days and at times of celebrations and at the beginning¦67095 of each new month¦67096, then¦67092 the trumpets¦67098 will be blown as the burnt¦67100 offerings and peace¦67103 offerings are made as a memorial for you all towards your god. I am your god, Yahweh¦67110.
+\v 10 On festival days and at times of celebrations and at the beginning¦67095 of each new month¦67096, then¦67092 the trumpets¦67098 will be blown as the burnt¦67100 offerings and peace¦67103 offerings are made as a memorial¦67106 for you all towards your god. I am your god, Yahweh¦67110.
 \s1 The Israelis leave Sinai
 \rem /s1 The Israelites Leave Sinai; Departure from Sinai; The Israelites Break Camp
 \p
 \v 11 Then on¦67115 the 20th of the second month in¦67115 that second year¦67115 \add (after leaving Egypt)\add*, the cloud¦67122 was lifted up from above the \add ≈sacred¦67124 tent¦67124\add*
 \v 12 and¦67127 the \add ≈Israelis¦67130\add* \add ≈started moving out from the Sinai¦67133 wilderness as per the pre-arranged order\add*. The cloud¦67135 moved to the Paran¦67137 wilderness.
-\v 13 That was the first¦67140 time that they had moved \add ≈as a result of Yahweh¦67144 signalling Mosheh¦67147\add* \add by means of the cloud\add*.
+\v 13 That was the first¦67140 time that they¦67139 had moved \add ≈as a result of Yahweh¦67144 signalling Mosheh¦67147\add* \add by means of the cloud\add*.
 \p
 \v 14 Yehudah¦67154 tribe¦67152 with¦67155 their¦67156 banner \add ≈was the first¦67155 to leave under the leadership of\add* Amminadav's¦67163 son Nahshon¦67160.
 \v 15 Tsuar's¦67174 son Netanel¦67171 led the company from Yissakar¦67170 tribe¦67168,
@@ -531,7 +531,7 @@
 \v 25 Dan¦67294 tribe with their¦67299 banner \add ≈was last to leave as the rear guard under the leadership of\add* Ammishaddai's¦67306 son Ahiezer¦67303.
 \v 26 Okran's¦67318 son Pagiel¦67315 led the company from Asher¦67314 tribe¦67312.
 \v 27 Eynan's¦67329 son Ahira¦67326 led the company from Naftali¦67325 tribe¦67323.
-\v 28 That¦67335 was \add ≈the order of the departures of the companies of the Israeli¦67333 tribes when they\add* set off.
+\v 28 That¦67335 was \add ≈the order of the departures of the companies of the Israeli¦67333 tribes when they¦67337\add* set off.
 \p
 \v 29 Then Mosheh told Hovav (son of the Midianite Reuel¦67345 who was Mosheh's father-in-law), “We're heading towards the place¦67354 that¦67355 Yahweh said he'd give¦67359 us. Come \add ≈and join us, and we'll look after you, because Yahweh has promised to look after\add* Yisrael¦67373.”
 \p
@@ -552,7 +552,7 @@
 \p
 \v 1 \add ≈One day,\add* the people¦67481 were complaining¦67482 \add about their situation\add* and \add ≈when Yahweh¦67485 heard them, it made him angry\add* \add ≈so he sent a fire¦67493 that burnt up the edges of their camp\add*.
 \v 2 The people¦67500 cried¦67499 out to Mosheh \add for help\add*, and \add *he\add* prayed¦67504 to Yahweh¦67508, and the fire¦67510 stopped,
-\v 3 and¦67512 they named that place¦67515 Taverah \add (which means ‘burning¦67522’)\add* because Yahweh's fire¦67522 had burnt among them.
+\v 3 and¦67512 they named that place¦67515 Taverah \add (which means ‘burning¦67522’)\add* because Yahweh's fire¦67522 had burnt among¦67521 them.
 \s1 The choosing of seventy elders
 \rem /s1 Quail From the Lord; Moses Chooses Seventy Leaders
 \p
@@ -569,7 +569,7 @@
 \v 12 \add ≈Was it me who\add* conceived¦67656 \add *it\add*? \add ≈Did I carry¦67670 it to the land promised to their ancestors¦67682, like I was a wet-nurse\add*?
 \v 13 All these people¦67690 come to me to ask me to give them meat to eat. Where would I get \add enough\add* meat \add to feed all\add* them?
 \v 14 I can't bear \add the load of\add* this entire¦67711 people¦67713 group by myself¦67707—it's too heavy¦67716 for me.
-\v 15 If that's what you're¦67723 doing¦67725 to me, please¦67728 kill me now if I've¦67732 found¦67732 favour¦67733 in¦67734 your eyes. \add ≈Then¦67719 I wouldn't have to suffer like this\add*.”
+\v 15 If that's what you're¦67723 doing¦67725 to me, please¦67728 kill me now if I've¦67732 found¦67732 favour¦67733 in¦67734 your eyes¦67734. \add ≈Then¦67719 I wouldn't have to suffer like this\add*.”
 \rem /s1 Moses Chooses Seventy Leaders; The Seventy Elders
 \p
 \v 16 Then Yahweh¦67742 told Mosheh¦67745, “Bring me seventy¦67749 of Yisrael's elders who you know¦67754 \add ≈are good leaders\add*, and take them to the \add ≈sacred¦67765 tent\add*, and \add ≈let them take their positions\add* there¦67768 with you.
@@ -578,7 +578,7 @@
 \v 19 You won't¦67824 \add just\add* have meat for a day or two, or for five, ten, or twenty¦67834 days,
 \v 20 you have it for a \add whole\add* month¦67839 until¦67841 it comes out your nostrils¦67845. \add Yes,\add* it'll make you all nauseous because¦67849 you rejected¦67852 Yahweh¦67855 who's among you, and you all wept \add ≈in¦67857 front of him, complaining\add*, ‘Why did we ever leave Egypt¦67864?’ ”
 \p
-\v 21 Mosheh¦67867 \add ≈queried\add*, “There's 600,000 \add ≈able to serve in¦67876 the army\add* \add plus women and¦67866 children\add*, yet you say that¦67874 you'll give them \add all\add* enough meat to eat \add every\add* day for month¦67883!
+\v 21 Mosheh¦67867 \add ≈queried\add*, “There's 600,000 \add ≈able to serve in¦67876 the army\add* \add plus¦67877 women and¦67866 children\add*, yet you say that¦67874 you'll give them \add all\add* enough meat to eat \add every\add* day for month¦67883!
 \v 22 \add ≈Even if we killed all the cattle and sheep, or caught all the fish in the sea¦67898, that wouldn't be enough meat\add* for \add all\add* them.”
 \p
 \v 23 “\add Do you think that\add* Yahweh's \add ≈powerless¦67910\add*?” Yahweh \add ≈replied\add*. “\add ≈Soon\add* you'll see¦67914 whether¦67915 or not my statement will \add ≈come¦67915 true\add*.”
@@ -605,7 +605,7 @@
 \s1 Miryam's punishment
 \rem /s1 Aaron and Miriam Jealous of Moses; The Complaints of Miriam and Aaron; Miriam Is Punished; Miriam and Aaron Oppose Moses
 \p
-\v 1 \add ≈One day,\add* Miryam and Aharon spoke¦68143 out against Mosheh¦68146 because he'd taken an \add Ethiopian\add* woman (Kushitess) as a wife,
+\v 1 \add ≈One day,\add* Miryam and Aharon spoke¦68143 out against¦68146 Mosheh¦68146 because he'd taken an \add Ethiopian\add* woman (Kushitess) as a wife,
 \v 2 and¦68160 they \add ≈challenged\add*, “Did Yahweh really only speak through Mosheh¦68164? Doesn't he also speak through us?” Yahweh heard \add what they said¦68160\add*.
 \v 3 (Now Mosheh¦68176 was \add actually\add* a very humble man¦68175—more humble than anyone else \add ≈alive\add*.)
 \p
@@ -618,12 +618,12 @@
 \v 9 \add ≈So¦68272\add* Yahweh¦68275 \add ≈was angry\add* at¦68276 \add @Miryam and¦68277 Aharon\add*. Then¦68272 he departed¦68277
 \v 10 and¦68279 the cloud¦68279 \add ≈moved\add* from the tent. Then¦68279 wow, Miryam had leprosy—her skin had gone as white as snow. As Aharon turned¦68287 to her, he saw, wow, she was leprous,
 \v 11 and \add *he\add* \add ≈begged\add* Mosheh¦68299, “Please¦68296, my master¦68301, please¦68304 don't¦68302 \add ≈make us suffer for our foolish¦68309 disrespect and disobedience\add*.
-\v 12 \add ≈Don't let her be like a still-born baby that's already starting to decompose when its mother¦68321 gives birth to it\add*.
+\v 12 \add ≈Don't let her be like a still-born baby that's already starting to decompose when its mother¦68321 gives birth to it¦68322\add*.
 \p
 \v 13 \add ≈So¦68326\add* Mosheh¦68327 \add ≈pleaded with\add* Yahweh¦68330, “God¦68332, please, please heal¦68334 her!”
 \p
 \v 14 “\add ≈If\add* her father¦68344 had spit in her face, wouldn't she \add ≈stay inside in disgrace\add* for seven days?” Yahweh¦68340 \add ≈replied\add*. “\add So\add* she must be put outside¦68355 the camp for seven days, then after¦68357 that, she \add ≈can enter again\add*.”\x + \xo 12:14: \xt Num 5:2-3.\x*
-\v 15 \add ≈So¦68360\add* Miryam was sent outside¦68362 the camp for seven¦68364 days¦68365, and¦68366 the people¦68366 didn't¦68367 \add ≈move on\add* until¦68369 after she \add was allowed\add* \add ≈to return\add*.
+\v 15 \add ≈So¦68360\add* Miryam was sent outside¦68362 the camp for seven¦68364 days¦68365, and¦68366 the people¦68366 didn't¦68367 \add ≈move on\add* until¦68369 after she¦68360 \add was allowed\add* \add ≈to return\add*.
 \v 16 After that, the people¦68376 left¦68375 Hatserot and¦68378 set up camp in¦68379 the Paran¦68380 wilderness¦68379.
 \c 13
 \s1 Twelve scouts sent into Kanaan
@@ -668,22 +668,22 @@
 \v 21 \add ≈So¦68625\add* \add @the twelve men\add* went¦68625 and¦68625 explored the region from the Tsin¦68632 wilderness¦68630 \add in the south, all the way\add* up to Rehob¦68635 at Levo¦68636-Hamat¦68637 \add in the north\add*.
 \v 22 \add They started\add* in the Negev¦68640, and¦68639 went¦68639 as far as Hevron where some of Anak's¦68650 descendents lived: Ahiman¦68646, Sheshay, Talmai¦68648. Hevron had been built¦68654 seven¦68652 years¦68653 \add ≈before\add* Tsoan¦68656 in Egypt¦68657 \add (Heb. Mitsrayim)\add*.
 \v 23 When¦68659 they got to the Eshkol¦68663 riverbed, they cut off a branch¦68666 \add ≈with\add* a cluster¦68667 of grapes¦68668, and carried¦68670 it¦68670 on¦68671 a pole between two¦68672 of them, \add ≈along with some\add* pomegranates¦68675 and figs¦68678.
-\v 24 (That place¦68680 was then called¦68682 Eshkol, \add meaning ‘cluster’\add*, because of the cluster \add of grapes\add* they'd taken from there¦68691.)
+\v 24 (That place¦68680 was then called¦68682 Eshkol, \add meaning ‘cluster’\add*, because of the cluster \add of grapes¦68687\add* they'd taken from there¦68691.)
 \s2 The reports from the scouts
 \rem /s1 The Report of the Spies; The Scouting Report
 \p
-\v 25 Forty days \add ≈later\add*, they returned¦68695 from exploring that land
+\v 25 Forty days \add ≈later\add*, they¦68695 returned¦68695 from exploring that land
 \rem /s1 Report on the Exploration
 \v 26 and went¦68703 to Kadesh¦68722 in the Paran¦68721 wilderness¦68720. There they¦68703 reported back to Mosheh¦68706 and Aharon and all the assembled people¦68715, and showed¦68731 them the fruit¦68734 from the land,
 \v 27 and told \add #them\add*, “We went¦68741 to the land where you sent¦68746 us, and it is indeed flowing¦68748 with milk and honey¦68750, and this is its fruit¦68754.
-\v 28 However, the people living in that land are powerful, and the cities¦68763 are very well fortified¦68764. Also, some of the Anak¦68770 people group live there¦68772.
+\v 28 However, the people living in that¦68761 land are powerful, and the cities¦68763 are very well fortified¦68764. Also, some of the Anak¦68770 people group live there¦68772.
 \v 29 The Amalekite people live in the Negev¦68777, and the Hittites¦68778, Yebusites, and Amorites¦68780 live in the hill country¦68782, and the Kanaanites live along the coast and \add ≈along\add* the Yarden¦68790 \add (Jordan) river\add*.”
 \p
 \v 30 Then¦68792 Kalev \add (Caleb¦68793)\add* \add raised an arm\add* to quieten¦68792 the people¦68796 in front of Mosheh¦68799 \add ≈and stated\add*, “We'll certainly go in there and take it over, because we're capable of \add going\add* against \add #them\add*.”
 \p
 \v 31 \add ≈But¦68811\add* the men¦68811 who'd gone in with him \add ≈argued\add*, “\add No,\add*, we're not able to \add battle\add* against¦68820 them because \add #they're\add* stronger¦68825 than us.”
 \v 32 Then¦68829 \add they went on¦68843 to\add* bring out a bad report¦68830 to the \add ≈Israelis¦68837\add* about the land that they'd explored, saying, “The land that we passed¦68842 to explore is a land that devours¦68847 those who live in it. \add ≈In addition,\add* all the people we saw in there were \add ≈tall\add* \add and¦68829 powerful\add*,
-\v 33 plus we saw the Nefilim¦68869 (descendants¦68865 of Anak¦68866), and we felt \add as small as\add* grasshoppers¦68872 \add ≈compared to them\add*, and \add ≈that's how they saw us as well\add*.”\x + \xo 13:33: \xt Gen 6:4.\x*
+\v 33 plus¦68870 we saw the Nefilim¦68869 (descendants¦68865 of Anak¦68866), and we felt \add as small as\add* grasshoppers¦68872 \add ≈compared to them\add*, and \add ≈that's how they saw us as well\add*.”\x + \xo 13:33: \xt Gen 6:4.\x*
 \c 14
 \s1 The people rebel
 \rem /s1 The People Complain; The People Rebel
@@ -694,16 +694,16 @@
 \v 4 \add ≈So¦68937 they¦68937 said¦68937 to each other\add*, “Let's \add ≈choose a new leader¦68943\add* to take us back to Egypt¦68945.”
 \p
 \v 5 Then¦68947 Mosheh¦68948 and¦68947 Aharon fell \add ≈to their knees with their faces¦68952 bowed in front¦68953 of all the assembled¦68956 Israelis¦68958\add*.
-\v 6 Then¦68961 Nun's¦68964 son Yehoshua and¦68961 Yefunneh's¦68968 son Kalev, two of those who'd explored that land, tore their¦68976 clothes¦68976 \add in grief\add*
+\v 6 Then¦68961 Nun's¦68964 son Yehoshua and¦68961 Yefunneh's¦68968 son Kalev, two of those¦68971 who'd explored that land, tore their¦68976 clothes¦68976 \add in grief\add*
 \v 7 and spoke to all \add ≈those Israelis¦68984 gathered there\add*, “The¦68986 land that¦68989 we¦68990 passed¦68990 throughout and explored¦68992 is a very, very good¦68994 \add ≈place\add*.
 \v 8 If Yahweh¦69003 \add ≈is pleased with\add* us, then he'll take us into \add *it\add* and give¦69010 it to us—that¦69013 land flowing¦69016 with milk and honey¦69018.
-\v 9 However, you all mustn't rebel¦69024 against Yahweh, and you mustn't be scared of the people¦69031 in¦69021 that \add ≈area\add* because they'll \add be like\add* bread¦69034 for us. \add ≈There's nothing left to protect¦69037 them as\add* Yahweh is with¦69021 us, \add so\add* don't¦69022 be afraid.”
+\v 9 However, you all mustn't rebel¦69024 against¦69021 Yahweh, and you mustn't be scared of the people¦69031 in¦69021 that \add ≈area\add* because they'll \add be like\add* bread¦69034 for us. \add ≈There's nothing left to protect¦69037 them as\add* Yahweh is with¦69021 us, \add so\add* don't¦69022 be afraid.”
 \v 10 Then¦69045 the \add ≈mass of people¦69061 talked about killing them by throwing rocks¦69051 at¦69051 them, but¦69045\add* Yahweh's \add ≈brilliant light\add* \add suddenly\add* appeared¦69054 to all the \add ≈Israelis¦69061 from the sacred¦69055\add* tent.
 \s1 Mosheh asks Yahweh to forgive
 \rem /s1 Moses Prays for the People
 \p
-\v 11 Yahweh¦69066 said¦69065 to Mosheh¦69069, “How long will this people¦69074 group spurn me for? \add ≈How long will they¦69081 refuse to believe¦69081 in¦69082 me for\add*, \add ≈despite¦69073 all the miracles that¦69085 I've done among them\add*?
-\v 12 I'll strike \add #them\add* with¦69090 a plague and destroy¦69091 them. I'm make you¦69093 into a nation¦69094 that's greater¦69096 and more powerful than them.”
+\v 11 Yahweh¦69066 said¦69065 to Mosheh¦69069, “How long will this people¦69074 group spurn¦69073 me for? \add ≈How long will they¦69081 refuse to believe¦69081 in¦69082 me for\add*, \add ≈despite¦69073 all the miracles that¦69085 I've done among them\add*?
+\v 12 I'll¦69089 strike¦69089 \add #them\add* with¦69090 a plague and destroy¦69091 them. I'm make you¦69093 into a nation¦69094 that's greater¦69096 and more powerful than them.”
 \rem /s1 Moses Intercedes for the People
 \p
 \v 13 \add ≈But¦69100\add* Mosheh¦69101 \add ≈disagreed with¦69110\add* Yahweh¦69104, “Then¦69100 Egypt¦69106 will hear¦69105 about how you¦69109 \add ≈used\add* your¦69110 power¦69110 to bring \add #these\add* people¦69113 out from among¦69115 them,
@@ -712,13 +712,13 @@
 \v 16 ‘\add That\add* Yahweh¦69171 couldn't take those people¦69175 into the land that¦69180 he promised them, so he slaughtered¦69184 them in¦69185 the wilderness¦69185.’
 \v 17 \add ≈So¦69187\add* may the power¦69191 of my master¦69192 be great¦69188, just as you've¦69194 \add previously\add* said,
 \v 18 ‘Yahweh¦69197 is \add ≈slow to anger¦69199\add* and \add ≈quick to show\add* loyal¦69202 commitment, \add ≈forgiving¦69203 disobedience and rebellion¦69205\add*. \add ≈Yet he doesn't leave the guilty\add* unpunished, \add ≈bringing the consequences\add* of the father's disobedience onto \add ≈the next three generations\add*.’
-\v 19 Please forgive¦69231 \add #this\add* people for their \add ≈disobedience\add*, \add ≈applying\add* your \add ≈incredible\add* loyal commitment like how you did when you brought these people from Egypt¦69234 all the way to here.”
+\v 19 Please forgive¦69231 \add #this\add* people for their \add ≈disobedience\add*, \add ≈applying\add* your \add ≈incredible\add* loyal¦69229 commitment like how you did when you brought these people from Egypt¦69234 all the way to here.”
 \p
 \v 20 “I've¦69241 forgiven¦69241 \add ≈as per your¦69242 request\add*,” Yahweh¦69240 \add ≈replied\add*,
 \v 21 “\add ≈however,\add* as surely¦69244 as I live and¦69244 as all the land is filled¦69248 with Yahweh's \add ?≈light\add*,
 \v 22 \add ≈and despite\add* \add *them\add* all seeing my \add ≈power\add* and the \add ≈miracles\add* that¦69269 I did \add both\add* in Egypt¦69272 and in the wilderness¦69273, they've \add now\add* tested¦69274 me \add ≈many\add* times¦69278 and \add ≈haven't done what I told them\add*,
-\v 23 \add ≈so there's no way\add* that they'll \add ≈enter\add* the land that I promised to their¦69291 ancestors¦69291. All those who despised¦69294 me won't¦69295 \add get to\add* \add ≈enter\add* it¦69296.
-\v 24 \add ≈However,\add* my servant¦69298 Kalev \add (Caleb¦69299)\add* has a different spirit¦69302 with him, and he wholeheartedly¦69305 followed¦69306 me, \add ≈so\add* I'll take him into the land \add ≈that he explored\add*, and his descendants¦69315 will inherit¦69316 it.\x + \xo 14:24: \xt Josh 14:9-12.\x*
+\v 23 \add ≈so there's no way\add* that they'll \add ≈enter\add* the land that I promised to their¦69291 ancestors¦69291. All those¦69294 who despised¦69294 me won't¦69295 \add get to\add* \add ≈enter\add* it¦69296.
+\v 24 \add ≈However,\add* my servant¦69298 Kalev \add (Caleb¦69299)\add* has a different spirit¦69302 with him, and he wholeheartedly¦69305 followed¦69306 me, \add ≈so\add* I'll¦69307 take¦69316 him into the land \add ≈that he explored\add*, and his descendants¦69315 will inherit¦69316 it.\x + \xo 14:24: \xt Josh 14:9-12.\x*
 \v 25 The Amalekites and Kanaanites live in¦69321 the valleys¦69321. Tomorrow, you all must turn¦69323 and set off towards the wilderness¦69326 via the \add ≈route to\add* the Red Sea.
 \s1 Punishment for the protestors
 \rem /s1 An Attempted Invasion is Repulsed; The Lord Punishes the Israelites; The Lord Punishes the People for Complaining
@@ -735,7 +735,7 @@
 \v 35 I, Yahweh¦69490, have spoken¦69491 that I'll¦69497 certainly do that to this evil¦69501 community¦69500 that joined together¦69503 against¦69504 me. They'll meet their¦69507 end¦69507 and¦69508 die¦69509 there¦69508 in¦69505 the wilderness¦69505.’ ”
 \p
 \v 36 \add ≈Now\add* those \add ten\add* men¦69511 who Mosheh¦69515 had sent¦69514 in to explore the land, and who'd returned¦69520 and the made the whole assembly grumble¦69521 against him because of their evil report¦69530 about the land,
-\v 37 they died¦69535 of a plague¦69542 \add ≈in¦69542 front¦69543\add* of Yahweh¦69544 after producing that evil¦69541 report¦69538.
+\v 37 they¦69535 died¦69535 of a plague¦69542 \add ≈in¦69542 front¦69543\add* of Yahweh¦69544 after producing that evil¦69541 report¦69538.
 \v 38 \add ≈However,\add* Yehoshua (\add Joshua\add*—Nun's¦69549 son) and¦69546 Kalev (\add Caleb¦69550\add*—Yefunneh's¦69553 son) who had also explored that land, continue to live on.
 \s1 The wrong-minded attempt to invade
 \rem /s1 The First Attempt to Invade the Land
@@ -769,7 +769,7 @@
 \v 12 Whatever number \add of animals\add* that¦69836 you offer, \add ≈there must be the appropriate\add* \add grain and wine offerings\add*.
 \v 13 Every¦69843 \add ≈native-born\add* \add Israeli\add* must do that when presenting a gift, all to be presented as a pleasing¦69856 aroma¦69854 to Yahweh¦69857.
 \p
-\v 14 If a \add ≈foreigner is staying with you all\add* or living among you for \add multiple\add* generations¦69868, and¦69869 they make an offering¦69869 to Yahweh¦69874 with a pleasing¦69873 aroma¦69871, then¦69859 they must \add ≈follow the same instructions\add* as all of you.
+\v 14 If a \add ≈foreigner is staying with you all\add* or living among¦69867 you for \add multiple\add* generations¦69868, and¦69869 they make an offering¦69869 to Yahweh¦69874 with a pleasing¦69873 aroma¦69871, then¦69859 they must \add ≈follow the same instructions\add* as all of you.
 \v 15 \add Yes,\add* \add ≈the same regulations apply to both you and¦69884 the foreigners living among you all\add*. \add ≈That will always apply—foreigners in front¦69892 of Yahweh¦69893 must do the same\add* as all of you.
 \v 16 One \add set of\add* instructions and regulations for \add both\add* you and the foreigner that lives among you all.
 \p
@@ -783,9 +783,9 @@
 \p
 \v 22 “\add ≈However,\add* if you \add ≈do something wrong\add* and don't¦69959 follow all these¦69965 instructions that¦69966 Yahweh¦69969 told Mosheh¦69972,
 \v 23 i.e., \add ≡don't follow\add* everything that Yahweh¦69979 has commanded through Mosheh¦69983 from when the commands were given \add right\add* through to \add ≈future\add* generations¦69991,
-\v 24 then¦69993 \add ≈assuming that it was an accident\add*, the community¦70002 must offer a young bull¦70003 for a burnt¦70008 offering to make a pleasing¦70010 aroma¦70009 for Yahweh¦70011, along with its grain¦70012 offering and¦69993 drink¦70013 offering as per the instructions, plus a male¦70015 goat¦70015 as a sin¦70019 offering.
-\v 25 \add That way\add* the priest¦70022 will make atonement¦70021 for the \add ≈Israeli¦70028 community\add* and they'll be forgiven¦70030 because it was a mistake and they'd brought¦70037 their gift as an offering to Yahweh¦70042 plus their sin offering because of their mistake.
-\v 26 The¦70055 \add ≈Israeli¦70054 community\add* will be forgiven¦70050 along with¦70058 \add ≈any foreigner living among them\add* because it accidentally affected the entire community.
+\v 24 then¦69993 \add ≈assuming that it was an accident\add*, the community¦70002 must offer a young bull¦70003 for a burnt¦70008 offering to make a pleasing¦70010 aroma¦70009 for Yahweh¦70011, along with its grain¦70012 offering and¦69993 drink¦70013 offering as per the instructions, plus¦69999 a male¦70015 goat¦70015 as a sin¦70019 offering.
+\v 25 \add That way\add* the priest¦70022 will make atonement¦70021 for the \add ≈Israeli¦70028 community\add* and they'll be forgiven¦70030 because it was a mistake and they'd brought¦70037 their gift as an offering to Yahweh¦70042 plus¦70030 their sin¦70043 offering because of their mistake.
+\v 26 The¦70055 \add ≈Israeli¦70054 community\add* will be forgiven¦70050 along with¦70058 \add ≈any foreigner living among¦70058 them\add* because it¦70050 accidentally affected the entire community.
 \p
 \v 27 “\add ≈Now\add* if a single person disobeys by mistake, then that person must present¦70072 a one-year-old female¦70073 goat¦70073 as a sin offering¦70077,
 \v 28 and¦70091 the priest¦70080 will make atonement for that person. \add In that way,\add* the one making a mistake in¦70085 front¦70087 of Yahweh¦70088 will be forgiven¦70091.
@@ -796,7 +796,7 @@
 \rem /s1 Penalty for Violating the Sabbath; Penalty for Breaking the Sabbath; The Man Who Broke the Sabbath; The Sabbath-Breaker Put to Death
 \p
 \v 32 \add One day\add* when the \add ≈Israelis¦70152\add* were in¦70153 the wilderness¦70153, they \add ≈noticed\add* a man gathering¦70156 firewood on¦70153 the rest day,
-\v 33 and those who \add ≈caught\add* him took him to Mosheh¦70169 and Aharon¦70172 and the rest of the community.
+\v 33 and those¦70163 who \add ≈caught\add* him took him to Mosheh¦70169 and Aharon¦70172 and the rest of the community.
 \v 34 They put him into custody¦70180, because it hadn't been decided¦70183 what to do with¦70180 him,
 \v 35 and Yahweh¦70191 told Mosheh¦70194, “That man¦70197 must definitely be put to death¦70196—the community must do it outside¦70204 the camp by throwing rocks¦70200 at¦70200 him.”
 \v 36 \add ≈So¦70207\add* the community took him outside¦70214 the camp, and¦70207 they executed him by throwing rocks¦70218 at¦70218 him just as Yahweh¦70222 had commanded¦70221 Mosheh¦70225.
@@ -805,7 +805,7 @@
 \p
 \v 37 Then Yahweh¦70229 told Mosheh¦70232,
 \v 38 “Tell the \add ≈Israelis¦70238 that\add* they must make tassels on the corners¦70247 of their \add outer\add* \add ≈robes\add*. Each tassel must have a blue cord, and they must do this \add ≈for all future\add* generations¦70249.
-\v 39 Then¦70258 when you see a tassel¦70260, it'll remind you of Yahweh's¦70269 instructions, and \add so\add* you'll \add ≈follow\add* them \add ≈rather than your own desires and lusts that¦70279 lead you all into unfaithfulness\add*.
+\v 39 Then¦70258 when you see¦70261 a tassel¦70260, it'll remind you of Yahweh's¦70269 instructions, and \add so\add* you'll \add ≈follow\add* them \add ≈rather than your own desires and lusts that¦70279 lead you all into unfaithfulness\add*.
 \v 40 \add Instead,\add* you'll remember¦70286 and follow my instructions, and \add ≈stay pure¦70294\add* for your god¦70295.
 \v 41 I am your god Yahweh—the one who brought¦70301 you all out of Egypt¦70304 (Heb. Mitsrayim) to be your god. I am Yahweh your god.”
 \c 16
@@ -814,10 +814,10 @@
 \p
 \v 1 \add ≈Now\add* Korah¦70314 (son of Yitshar, son of Kehat, son of Levi¦70323) \add along with\add* Datan¦70324 and Aviram (sons of Eliav) and On¦70328 (son of Pelet¦70331)\x + \xo 16:1-35: \xt Jude 11.\x*
 \v 2 \add ≈rebelled\add* against Mosheh¦70337 along with 250 \add ≈respected, Israeli¦70341\add* community leaders¦70344.
-\v 3 They \add ≈got together and challenged\add* Mosheh¦70355 and Aharon, “\add ≈You think you're great but¦70352 the entire¦70365 community is sacred¦70369 and has Yahweh among us, so why do you consider yourselves¦70373 more important than Yahweh's community?\add*”
+\v 3 They \add ≈got together and challenged\add* Mosheh¦70355 and Aharon, “\add ≈You think you're great but¦70352 the entire¦70365 community is sacred¦70369 and has Yahweh among¦70370 us, so why do you consider yourselves¦70373 more important than Yahweh's community?\add*”
 \p
-\v 4 \add ≈When¦70379\add* Mosheh¦70380 heard \add <that\add*, he fell \add ≈to his knees with his face to the ground\add*
-\v 5 and \add ≈responded\add* to Korah¦70389 and his \add ≈supporters\add*, “\add Tomorrow\add* morning¦70396 Yahweh will show who's sacred¦70406 and who belongs to him. \add ?≈Yahweh will present his chosen leader\add*. make known who is to him and the holy one, and he will present to him, and whom he chooses¦70411 he will present to him.
+\v 4 \add ≈When¦70379\add* Mosheh¦70380 heard \add <that\add*, he¦70381 fell \add ≈to his knees with his face to the ground\add*
+\v 5 and \add ≈responded\add* to Korah¦70389 and his \add ≈supporters\add*, “\add Tomorrow\add* morning¦70396 Yahweh will show who's sacred¦70406 and who belongs to him. \add ?≈Yahweh will present his chosen leader\add*. make known¦70397 who is to him and the holy one, and he will present to him, and whom he chooses¦70411 he will present to him.
 \v 6 \add ≈So\add* Korah¦70423 and¦70424 \add ≈supporters\add*, bring incense burners
 \v 7 and put \add ≈burning¦70431 coals\add* and incense¦70434 in¦70429 them, and bring them to \add ≈Yahweh's presence\add* tomorrow¦70437. Then¦70428 the man¦70439 that Yahweh chooses¦70442 will be the sacred¦70445 one. \add ≈It's you Levites who think you're\add* great.”
 \p
@@ -833,9 +833,9 @@
 \v 15 \add That made\add* Mosheh¦70572 very angry and¦70571 he told Yahweh¦70577, “Don't \add ≈accept\add* their¦70583 grain offering¦70583. I've¦70588 \add never\add* taken¦70588 \add even\add* one donkey¦70585 from them \add ≈or done anything bad to any of\add* them.”
 \p
 \v 16 Then¦70596 Mosheh¦70597 told Korah¦70600, “You and¦70596 all your¦70604 group, \add ≈must appear in front¦70606\add* of Yahweh¦70607 tomorrow¦70611, \add ≈as will\add* Aharon.
-\v 17 \add Each\add* man must bring his pan with incense¦70619 \add ≈burning in it\add* and¦70613 present¦70620 it to Yahweh¦70622—\add ≈all 250 of you as well as\add* Aharon.
+\v 17 \add Each\add* man must bring¦70620 his pan with incense¦70619 \add ≈burning in it\add* and¦70613 present¦70620 it to Yahweh¦70622—\add ≈all 250 of you as well as\add* Aharon.
 \v 18 \add ≈So¦70633\add* \add the next day,\add* they all brought their pans with \add ≈burning¦70638 coals\add* and incense¦70641 in them, and they stood¦70642 at the entrance¦70643 of the \add ≈sacred¦70644\add* tent, as did Mosheh¦70646 and Aharon¦70647.
-\v 19 plus Korah¦70651 had \add also\add* assembled¦70649 the entire¦70654 community \add ≈to oppose\add* \add @Mosheh and¦70662 Aharon\add* at the entrance¦70659 to the \add ≈sacred¦70660\add* tent. Then¦70649 Yahweh's \add ≈brilliance\add* appeared¦70662 to all the community
+\v 19 plus¦70662 Korah¦70651 had \add also\add* assembled¦70649 the entire¦70654 community \add ≈to oppose\add* \add @Mosheh and¦70662 Aharon\add* at the entrance¦70659 to the \add ≈sacred¦70660\add* tent. Then¦70649 Yahweh's \add ≈brilliance\add* appeared¦70662 to all the community
 \v 20 and Yahweh¦70674 warned Mosheh¦70677 and Aharon¦70680,
 \v 21 “Get away from \add ≈all those people\add*, then I can destroy them in an instant.”
 \p
@@ -852,8 +852,8 @@
 \v 30 \add ≈but¦70827\add* if Yahweh \add ≈does something new\add* and the ground opens¦70832 its mouth¦70836 and swallows¦70837 them and their homes and tents and \add ≈all their possessions\add*, and if they¦70850 then go¦70845 down alive¦70846 into \add ≈their grave\add*, then you'll all know¦70848 that it was because these¦70852 men¦70851 rejected Yahweh.”
 \p
 \v 31 \add ≈As soon as Mosheh had finished¦70858 speaking¦70859\add*, the ground below \add @those men\add* split¦70865 open
-\v 32 and the earth¦70871 opened¦70870 its mouth¦70874 and swallowed¦70875 them and their homes and every¦70881 man who \add ≈backed\add* Korah¦70885 along with all \add &their\add* property.
-\v 33 They went¦70891 down alive¦70897 to \add ≈their grave\add*, along with everything they owned, and then¦70891 the ground covered over them and they \add ≈vanished\add* from the \add ≈community\add*.
+\v 32 and the earth¦70871 opened¦70870 its mouth¦70874 and swallowed¦70875 them and their homes and every¦70881 man who \add ≈backed\add* Korah¦70885 along with all \add &their\add* property¦70889.
+\v 33 They¦70898 went¦70891 down alive¦70897 to \add ≈their grave\add*, along with everything they owned, and then¦70891 the ground covered¦70899 over them and they \add ≈vanished\add* from the \add ≈community\add*.
 \v 34 All¦70908 the people who were around¦70910 them fled \add away\add* \add ≈screaming because they were afraid of getting swallowed¦70917 by the earth¦70918 as well\add*.
 \p
 \v 35 Then¦70920 Yahweh¦70923 \add ≈sent\add* fire¦70920 that consumed the 250 men who were presenting incense¦70930.
@@ -887,12 +887,12 @@
 \v 2 “Tell the \add ≈Israelis\add* to bring you twelve staffs—one from each ancestral \add tribe\add* with the leader's name inscribed on it,
 \v 3 and inscribe Aharon's name on¦70970 the staff for the \add ≈Levites\add* so there's one for each tribe.
 \v 4 Put them \add all\add* in the \add ≈sacred\add* tent in front of the \add ≈sacred box\add* where I meet with you,
-\v 5 and then the staff of the man¦71012 that I choose \add to be the priest\add* will sprout. Then the \add ≈people\add* can stop complaining to me about you.”
+\v 5 and then the staff of the man¦71012 that I choose \add to be the priest\add* will sprout. Then the \add ≈people¦71005\add* can stop complaining to me about you.”
 \p
-\v 6 \add ≈So Mosheh¦71047 passed the message on to the Israeli¦71041\add* leaders and they gave him one staff for each leader—\add ≈a total¦71038 of twelve including Aharon's one\add*,
+\v 6 \add ≈So Mosheh¦71047 passed the message on to the Israeli¦71041\add* leaders and they¦71037 gave him one staff for each leader—\add ≈a total¦71038 of twelve including¦71037 Aharon's one\add*,
 \v 7 and Mosheh¦71065 \add ≈laid\add* them \add ≈in front\add* of Yahweh¦71079 in the \add ≈sacred¦71072\add* tent.
 \p
-\v 8 Then the next day when Mosheh¦71083 went¦71082 to the \add ≈sacred¦71088\add* tent, wow, he saw that Aharon's staff (\add ≈representing\add* Levi tribe) had sprouted, plus it had blossomed and produced a flower and ripened almonds!\x + \xo 17:8-10: \xt Heb 9:4.\x*
+\v 8 Then the next day when Mosheh¦71083 went¦71082 to the \add ≈sacred¦71088\add* tent, wow, he saw that Aharon's staff (\add ≈representing\add* Levi tribe) had sprouted, plus¦71082 it had blossomed and produced a flower and ripened almonds!\x + \xo 17:8-10: \xt Heb 9:4.\x*
 \v 9 Mosheh¦71097 took all the staffs \add ≈out of the tent\add* to the people \add ≈to look at\add* and¦71093 \add ≈each of the leaders\add* took back his own staff,
 \v 10 then Yahweh told Mosheh, “Put Aharon's staff \add back\add* \add ≈in front of the sacred chest\add*. \add ≈Keep it there as a reminder to\add* \add any\add* \add ≈rebels to stop complaining against me so they¦71108 won't\add* die.”
 \v 11 \add ≈So¦71118\add* Moses¦71115 did what Yahweh¦71143 had commanded.
@@ -907,16 +907,16 @@
 \v 2 Bring your \add ≈Levite\add* brothers¦71479 (your father's tribe) to \add ≈work closely with\add* you and to assist¦71488 you \add as\add* you and your sons¦71490 \add ≈perform your duties at\add* the \add ≈sacred\add* tent.
 \v 3 They must look after the tent, however, they mustn't approach the \add ≈furnishings or utensils\add*, or the altar¦71509, so that both you¦71497 and¦71496 they won't¦71510 die¦71514.
 \v 4 Then¦71522 must \add ≈work¦71531 closely with\add* you¦71523 and¦71522 \add ≈take care\add* of \add ≈all the duties to do with\add* the \add ≈sacred¦71528\add* tent, \add ≈but¦71522\add* no \add ≈outsider¦71533\add* \add ≈is allowed to approach\add*.
-\v 5 You¦71554 \add priests\add* will \add ≈take care\add* of the sacred place and the altar¦71545, and then¦71539 there won't¦71546 be anymore fury against¦71549 the \add ≈Israeli¦71553 people¦71553\add*.
-\v 6 \add ≈Now listen\add*, I've¦71558 taken¦71558 your brothers the Levites¦71562 \add ≈out from the rest of the Israelis¦71564\add* as a gift¦71567 for you—they're given to \add ≈do the duties\add* at the \add ≈sacred¦71574\add* tent.
-\v 7 \add ≈However,\add* it's you¦71579 and your¦71578 sons¦71578 who \add ≈are the priests\add* who must serve for things to do with the altar¦71587 and inside¦71588 the curtain¦71589. Your priesthood is a gift¦71592 of service¦71591, and any \add ≈outsider¦71597\add* who approaches must be executed.”
+\v 5 You¦71554 \add priests\add* will \add ≈take care\add* of the sacred¦71542 place¦71542 and the altar¦71545, and then¦71539 there won't¦71546 be anymore fury against¦71549 the \add ≈Israeli¦71553 people¦71553\add*.
+\v 6 \add ≈Now listen\add*, I've¦71558 taken¦71558 your brothers¦71561 the Levites¦71562 \add ≈out from the rest of the Israelis¦71564\add* as a gift¦71567 for you—they're given to \add ≈do the duties\add* at the \add ≈sacred¦71574\add* tent.
+\v 7 \add ≈However,\add* it's you¦71579 and your¦71578 sons¦71578 who \add ≈are the priests\add* who must serve¦71590 for things to do with the altar¦71587 and inside¦71588 the curtain¦71589. Your priesthood is a gift¦71592 of service¦71591, and any \add ≈outsider¦71597\add* who approaches¦71598 must be executed.”
 \rem /s1 Offerings for Priests and Levites; Support for the Priests and Levites; The Priests' Portion; The Share of the Priests
 \p
 \v 8 Then Yahweh¦71603 told Aharon, “\add ≈Also listen\add*, I've put you in charge¦71613 of \add ≈looking after\add* the sacred¦71617 offerings¦71614 \add ≈to me\add*. I've given¦71623 them to you and your sons¦71625 as your \add ≈permanent income\add*.
 \v 9 Every offering apart from the burnt offerings, will belong¦71632 to you. That includes their grain¦71644 offerings, their sin¦71647 offerings, and their guilt¦71650 offerings. \add ≈Once they're given, they become sacred¦71635,\add* and they're for you and your¦71658 sons¦71658.
 \v 10 You and \add ≈the males in your families\add* may eat that sacred offering \add ≈but do remember that it's sacred\add*.
 \p
-\v 11 “\add ≈In¦71682 addition,\add* the \add people's¦71681\add* raised offerings belong to you, and¦71673 they are \add ≈permanently given¦71684 to your entire families\add* to eat—everyone¦71691 who's ‘clean¦71693’ may eat them.
+\v 11 “\add ≈In¦71682 addition,\add* the \add people's¦71681\add* raised offerings belong¦71675 to you, and¦71673 they are \add ≈permanently given¦71684 to your entire families\add* to eat—everyone¦71691 who's ‘clean¦71693’ may eat them.
 \p
 \v 12 “All the best of the fresh¦71700 oil¦71700, and the new wine and grain¦71705 that¦71707 they give to Yahweh¦71710, I give to you.
 \v 13 The first¦71714 \add ≈portions of all their¦71718 harvests\add* that¦71719 they¦71721 bring¦71721 to Yahweh¦71722, belong¦71724 to you—everyone¦71725 in¦71718 your¦71728 \add ≈families\add* who's ‘clean¦71727’ may eat¦71729 them.
@@ -930,21 +930,21 @@
 \v 19 All sacred¦71829 donations by the \add ≈Israelis¦71832\add*, I've \add ≈permanently\add* given to you and your \add ≈children\add* to eat—it's an \add ≈irrevocable agreement with\add* Yahweh¦71835 for you and your \add future\add* ancestors.”
 \s1 The Levites' share
 \p
-\v 20 Yahweh¦71855 \add also\add* told Aharon, “You \add priests\add* won't¦71860 inherit \add ≈any land or property\add*—I am your share and¦71854 your inheritance \add ≈among the Israelis¦71872\add*.
+\v 20 Yahweh¦71855 \add also\add* told Aharon, “You \add priests\add* won't¦71860 inherit \add ≈any land or property\add*—I am your share and¦71854 your inheritance \add ≈among¦71867 the Israelis¦71872\add*.
 \rem /s1 The Share of the Levites
 \p
 \v 21 For an inheritance¦71884 for the \add ≈Levites\add*, I've given them all the tenths \add ≈given by the Israelis\add* as their inheritance in¦71883 exchange for their service¦71890 at¦71883 the \add ≈sacred¦71894\add* tent.
 \v 22 The¦71902 \add ≈other Israelis¦71901\add* mustn't approach that tent \add or\add* they'll \add ≈incur guilt\add* and¦71897 die¦71909,
-\v 23 \add ≈but¦71911\add* the Levites¦71912 must serve at¦71925 the \add ≈sacred¦71917\add* tent and¦71911 they must bear their¦71921 \add ≈inadequacies\add*. That¦71927 order \add ≈applies for all future generations¦71924\add*, \add ≈including\add* the not inheriting¦71929 any land \add ≈like the other Israelis¦71926\add*.
+\v 23 \add ≈but¦71911\add* the Levites¦71912 must serve¦71911 at¦71925 the \add ≈sacred¦71917\add* tent and¦71911 they must bear their¦71921 \add ≈inadequacies\add*. That¦71927 order \add ≈applies for all future generations¦71924\add*, \add ≈including¦71919\add* the not inheriting¦71929 any land \add ≈like the other Israelis¦71926\add*.
 \v 24 \add That's\add* because I've¦71949 given the Levites¦71944 that tenth that the \add ≈other Israelis¦71936\add* offer¦71940 to Yahweh¦71941 as a donation. That's why I said¦71949 that they won't¦71954 receive \add ≈any other inheritance¦71955\add*.”
 \s1 The Levites' contribution
 \rem /s1 The Levites' Tithe
 \p
 \v 25 Then Yahweh¦71960 told Mosheh¦71963,
-\v 26 “Tell the Levites¦71968: ‘When¦71966 you all receive the tenth from the \add ≈Israelis¦71976\add* that I've given to you as you inheritance¦71986, then¦71966 you must offer a tenth of that tenth as a donation to Yahweh¦71990.
-\v 27 That will be considered as your contribution \add just\add* as if it was grain¦71999 from the threshing¦72002 floor¦72002, or \add ≈juice\add* from the winepress¦72006.
+\v 26 “Tell the Levites¦71968: ‘When¦71966 you all receive the tenth from the \add ≈Israelis¦71976\add* that I've given to you as you inheritance¦71986, then¦71966 you must offer¦71987 a tenth of that tenth as a donation to Yahweh¦71990.
+\v 27 That will be considered as your contribution¦71998 \add just\add* as if it¦71996 was grain¦71999 from the threshing¦72002 floor¦72002, or \add ≈juice\add* from the winepress¦72006.
 \v 28 \add ≈So\add* when you all offer¦72009 that donation from all the tenths that you receive from the \add ≈Israelis¦72020\add*, it must then be given as Yahweh's contribution to the priest¦72029 Aharon. DOUBLE-CHECK
-\v 29 When an offering¦72033 is presented to Yahweh¦72038, it must be \add ≈the best parts of whatever is given\add*.’
+\v 29 When an offering¦72033 is presented to Yahweh¦72038, it¦72045 must be \add ≈the best parts of whatever is given\add*.’
 \v 30 Also¦72055 tell them, ‘When¦72047 you all present \add ≈the best of what was given\add*, it'll be as \add ≈it's come straight\add* from the threshing¦72057 floor¦72057 or the winepress¦72059.
 \v 31 \add The rest\add* is for your wages for the service¦72074 you all do at¦72075 the \add ≈sacred¦72075\add* tent, and¦72061 you all can eat¦72061 it \add ≈wherever you want to\add*.
 \v 32 \add ≈After¦72093 donating the best tenth from it\add*, you won't¦72078 incur guilt for what you all do with¦72083 the rest of it, \add ≈however\add* you all mustn't defile any sacred¦72090 things or you'll die¦72097.’ ”
@@ -953,30 +953,30 @@
 \rem /s1 The Water of Purification; Ashes of the Red Cow; Ceremony of the Red Heifer; The Water of Cleansing
 \p
 \v 1 Then Yahweh¦72101 told Mosheh¦72104 and Aharon,
-\v 2 “This is \add ≈a new\add* law that Yahweh¦72116 has commanded¦72115, ‘Tell the \add ≈Israelis¦72122\add* that¦72113 they must bring¦72124 you¦72125 an unblemished¦72128 red heifer¦72126 \add ≈with¦72132 no¦72128 defects¦72128\add* \add ≈and¦72124 that has never had a yoke on¦72132 its neck\add*.
-\v 3 Give it to the priest¦72146 Eleazar¦72145, and he must take it outside¦72151 the camp and have \add someone\add* slaughter¦72153 it \add ≈in front of him\add*.
+\v 2 “This is \add ≈a new\add* law that Yahweh¦72116 has commanded¦72115, ‘Tell the \add ≈Israelis¦72122\add* that¦72113 they¦72124 must bring¦72124 you¦72125 an unblemished¦72128 red heifer¦72126 \add ≈with¦72132 no¦72128 defects¦72128\add* \add ≈and¦72124 that has never had a yoke on¦72132 its neck\add*.
+\v 3 Give it to the priest¦72146 Eleazar¦72145, and he must take¦72147 it outside¦72151 the camp and have \add someone¦72153\add* slaughter¦72153 it \add ≈in front of him\add*.
 \v 4 Then¦72157 Eleazar¦72158 must get some of its¦72170 blood with¦72161 his finger¦72161 seven¦72171 times¦72172 and¦72157 \add ≈flick\add* it onto the ground \add ≈directly in¦72161 front¦72165\add* of the \add ≈sacred¦72167\add* tent.
-\v 5 Then¦72174 \add ≈while he watches\add*, they must \add completely\add* burn¦72191 the heifer¦72177—its skin and flesh¦72184, and \add including\add* its blood¦72187 and dung.
+\v 5 Then¦72174 \add ≈while he watches\add*, they must \add completely\add* burn¦72191 the heifer¦72177—its skin and flesh¦72184, and \add including¦72182\add* its blood¦72187 and dung.
 \v 6 \add ≈Meanwhile,\add* the priest¦72194 must take¦72193 some cedar¦72196 wood, hyssop¦72197, and scarlet¦72199 wool, and throw¦72200 them into \add the fire\add* where the cow is burning¦72204.
 \v 7 Then¦72207 the priest must wash his clothes¦72208 and¦72207 bathe¦72210. After that, he can return to the camp, \add ≈but¦72207\add* \add *he'll\add* be ‘unclean¦72218’ until¦72220 that evening¦72222.
 \v 8 The \add man\add* who burnt \add @the cow\add* must \add also\add* wash his clothes¦72227 and bathe¦72229, and he will \add also\add* be ‘unclean¦72232’ until¦72233 that evening¦72235.
 \v 9 A¦72253 ‘clean’ man¦72239 must collect the cow's ashes and¦72237 place them in¦72247 a \add ≈sacred\add* place outside¦72245 the camp where they can be used for water¦72255 for purification for the \add ≈Israelis¦72251\add* to purify from \add ≈disobedience\add*.
-\v 10 Then¦72260 that man who collected the ashes must \add also\add* wash his clothes¦72268 and be ‘unclean¦72269’ until¦72270 that evening¦72272. Those¦72275 regulations¦72279 will permanently apply both to \add ≈Israelis¦72274\add* and to foreigners living among them.
+\v 10 Then¦72260 that man who collected the ashes must \add also\add* wash his clothes¦72268 and be ‘unclean¦72269’ until¦72270 that evening¦72272. Those¦72275 regulations¦72279 will permanently apply both to \add ≈Israelis¦72274\add* and to foreigners living among¦72278 them.
 \s1 Contact with a corpse
 \rem /s1 Contact with a Corpse
 \p
 \v 11 “ ‘\add #All those\add* who touch¦72282 a dead¦72283, human body¦72283 will be ‘unclean¦72288’ for seven¦72289 days¦72290.
 \v 12 On the third day, they must purify themselves, and then they'll be ‘clean’ on the seventh day. (If they don't¦72303 purify themselves, they'll won't¦72303 become ‘clean’ on that seventh day—
-\v 13 if they've touched¦72314 a dead, human¦72317 body¦72316 and don't¦72321 purify¦72322 themselves, that would defile Yahweh's residence, and \add so\add* they must be \add ?≈permanently removed from the camp\add*. If the purifying water¦72333 wasn't sprinkled¦72337 on them, that ‘uncleanness¦72342’ will remain on them.)
+\v 13 if they've touched¦72314 a dead¦72315, human¦72317 body¦72316 and don't¦72321 purify¦72322 themselves, that would defile Yahweh's residence, and \add so\add* they must be \add ?≈permanently removed from the camp\add*. If the purifying water¦72333 wasn't sprinkled¦72337 on them, that ‘uncleanness¦72342’ will remain on them.)
 \p
-\v 14 “ ‘This is the regulation if a person dies in a tent: Everyone who was in the tent, and¦72358 everyone¦72352 that enters \add afterwards\add*, will all be ‘unclean¦72362’ for seven¦72363 days¦72364,
+\v 14 “ ‘This is the regulation if a person dies in a tent: Everyone¦72354 who was in the tent, and¦72358 everyone¦72352 that enters \add afterwards\add*, will all be ‘unclean¦72362’ for seven¦72363 days¦72364,
 \v 15 and¦72366 every container that¦72369 doesn't have its lid on becomes ‘unclean¦72375’.
-\v 16 \add ≈Out in\add* the countryside¦72385, who touches¦72381 the corpse of someone killed¦72386 in a fight, or any dead human¦72394 body or bone or grave¦72396, will be ‘unclean¦72397’ for seven¦72398 days¦72399.
+\v 16 \add ≈Out in\add* the countryside¦72385, who touches¦72381 the corpse of someone killed¦72386 in a fight, or any dead¦72390 human¦72394 body¦72390 or bone or grave¦72396, will be ‘unclean¦72397’ for seven¦72398 days¦72399.
 \v 17 \add ≈Someone\add* must take¦72401 some of the ashes¦72403 from that burnt cow, and¦72401 put them into a jar with some fresh, running water¦72408, then¦72401 \add pour some of it over them\add*.
-\v 18 Then¦72414 a man who's ‘clean¦72419’ must dip some hyssop¦72415 in that water¦72417 and sprinkle¦72420 it onto the tent and all the containers \add in it\add* and everyone who lives in it or who touched¦72438 the body or the bone or grave¦72445.
-\v 19 On the third¦72453 day, that ‘clean’ man must sprinkle¦72447 \add ≡that water¦72462\add* on the ‘unclean’ ones, and then¦72447 must purify¦72456 them on the seventh day. Then¦72447 he \add himself\add* must wash his clothes¦72460 and bathe¦72461, and will be ‘unclean’ until that evening¦72464.
+\v 18 Then¦72414 a man who's ‘clean¦72419’ must dip some hyssop¦72415 in that water¦72417 and sprinkle¦72420 it onto the tent and all the containers \add in it\add* and everyone¦72431 who lives in it or who touched¦72438 the body¦72443 or the bone or grave¦72445.
+\v 19 On the third¦72453 day, that ‘clean¦72448’ man must sprinkle¦72447 \add ≡that water¦72462\add* on the ‘unclean’ ones, and then¦72447 must purify¦72456 them on the seventh day. Then¦72447 he \add himself\add* must wash his clothes¦72460 and bathe¦72461, and will be ‘unclean’ until that evening¦72464.
 \p
-\v 20 “ ‘Anyone¦72481 who's ‘unclean’ and¦72466 doesn't purify¦72471 themself, that person will be \add ?≈permanently removed from the camp\add* because they've made Yahweh's sanctuary¦72480 ‘unclean’. They didn't¦72470 sprinkle¦72487 that purifying water¦72483 on themself, so they \add remain\add* ‘unclean’.
+\v 20 “ ‘Anyone¦72481 who's ‘unclean’ and¦72466 doesn't purify¦72471 themself, that person¦72466 will be \add ?≈permanently removed from the camp\add* because they've made Yahweh's sanctuary¦72480 ‘unclean’. They didn't¦72470 sprinkle¦72487 that purifying water¦72483 on themself, so they \add remain\add* ‘unclean’.
 \v 21 That will be a \add ≈permanent\add* regulation¦72495. The person who's had the purifying water sprinkled on¦72504 them must wash their clothes¦72502, and¦72492 any person who \add ≈sprinkles\add* the water will be ‘unclean¦72506’ until¦72507 that evening¦72509.
 \v 22 Anything touched by an ‘unclean’ person becomes ‘unclean’, and¦72519 anyone¦72519 who touches¦72520 an ‘unclean’ person will become ‘unclean’ until¦72522 that evening¦72524.
 \c 20
@@ -995,9 +995,9 @@
 \v 7 Then Yahweh¦72633 told Mosheh¦72636,
 \v 8 “Take \add &Aharon's\add* staff¦72642, then the two of you must command \add that\add* rock to \add ≈pour out\add* water. Then water will come out of it, and both the people and the animals will \add have plenty to\add* drink¦72664.”
 \p
-\v 9 \add ≈So¦72672\add* Mosheh¦72673 took¦72672 the staff¦72676 from \add ≈Yahweh's¦72678 residence\add* like he was told to.
-\v 10 Then¦72682 \add *the two of them\add* gathered¦72682 the people in front of the rock and¦72682 told them, “Listen now \add ≈you bunch of rebels¦72697\add*—do we have to bring¦72702 water¦72704 out of this rock for you?”
-\v 11 Then¦72706 Mosheh¦72707 raised \add ≈the staff¦72715\add* and hit the rock¦72714 twice, and water¦72718 \add ≈gushed\add* out, and so the people and their¦72722 animals were able to drink.
+\v 9 \add ≈So¦72672\add* Mosheh¦72673 took¦72672 the staff¦72676 from \add ≈Yahweh's¦72678 residence\add* like he was told¦72680 to.
+\v 10 Then¦72682 \add *the two of them\add* gathered¦72682 the people in front¦72690 of the rock and¦72682 told them, “Listen now \add ≈you bunch of rebels¦72697\add*—do we have to bring¦72702 water¦72704 out of this rock for you?”
+\v 11 Then¦72706 Mosheh¦72707 raised¦72706 \add ≈the staff¦72715\add* and hit the rock¦72714 twice, and water¦72718 \add ≈gushed\add* out, and so the people and their¦72722 animals were able to drink.
 \p
 \v 12 Then Yahweh¦72726 \add ≈scolded\add* Mosheh¦72729 and Aharon, “Because you two \add ≈publicly demonstrated that\add* you didn't¦72734 believe¦72736 \add ≈that what I say is absolute truth\add*, therefore you two won't¦72734 lead this community into the land that I've¦72754 given¦72754 them.”
 \p
@@ -1012,7 +1012,7 @@
 \p
 \v 18 \add ≈But¦72848\add* Edom's¦72850 \add king\add* \add ≈replied\add*, “You can't¦72851 pass¦72852 through my country. \add ≈If you do try to enter\add*, \add ≈I'll send my swordsmen¦72856 out against¦72858 you\add*.”
 \p
-\v 19 The \add ≈Israelis¦72862 reiterated\add*, “We'll \add ≈stay\add* on¦72866 the highway, and¦72860 if we or our¦72880 livestock¦72873 drink¦72871 \add any of\add* your water¦72870, then¦72860 we'll \add ≈pay what it's worth so that's no big deal\add*. \add ≈Just let us walk\add* through¦72881.”
+\v 19 The \add ≈Israelis¦72862 reiterated\add*, “We'll \add ≈stay\add* on¦72866 the highway¦72866, and¦72860 if we or our¦72880 livestock¦72873 drink¦72871 \add any of\add* your water¦72870, then¦72860 we'll \add ≈pay what it's worth so that's no big deal\add*. \add ≈Just let us walk\add* through¦72881.”
 \p
 \v 20 \add ≈Again\add* \add @the king\add* \add ≈responded¦72883\add*, “You may not pass¦72885 through¦72885.”
 \p Then¦72883 Edom¦72887 \add ≈sent a large, heavily-armed contingent to intimidate them\add*,
@@ -1038,12 +1038,12 @@
 \v 3 Yahweh listened¦73090 to \add ≈what they said\add* and \add ≈enabled them to defeat\add* those Kanaanites, then¦73090 they dedicated the towns \add to Yahweh\add* and destroyed¦73098 them, and they named that area ‘Hormah¦73107’ \add (which means ‘Destruction’)\add*.
 \rem /s1 The Snake Made of Bronze; The Bronze Snake
 \p
-\v 4 Then they \add all\add* left¦73110 Mt¦73112. Hor¦73111 by the road \add ≈going towards the Red\add* Sea to go¦73117 around¦73117 Edom¦73121, \add ≈but¦73110\add* the people¦73125 became¦73122 impatient¦73122 on¦73126 the way¦73126\x + \xo 21:4: \xt Deu 2:1.\x*
+\v 4 Then they¦73110 \add all\add* left¦73110 Mt¦73112. Hor¦73111 by the road \add ≈going towards the Red\add* Sea to go¦73117 around¦73117 Edom¦73121, \add ≈but¦73110\add* the people¦73125 became¦73122 impatient¦73122 on¦73126 the way¦73126\x + \xo 21:4: \xt Deu 2:1.\x*
 \v 5 and they started to grumble against God¦73130 and against Mosheh¦73131, “Why did you two bring us \add ≈out of\add* Egypt¦73134 \add just\add* to die¦73135 in¦73130 the wilderness¦73136, because there's¦73138 no bread and no water¦73141, and our¦73142 \add ≈insides detest that tasteless\add* ‘stuff’?”\x + \xo 21:5-6: \xt 1Cor 10:9.\x*
 \v 6 \add ≈So¦73147\add* Yahweh¦73148 sent \add ≈poisonous¦73151\add* snakes¦73151 into the people, and many \add ≈Israelis¦73161\add* were bitten and died.
 \p
 \v 7 The people came to Mosheh and \add ≈begged\add*, “We've \add ≈done wrong\add* by speaking out against Yahweh and against you. Pray to Yahweh \add for us\add* to get him to take the snakes¦73183 away.” \add ≈So¦73163\add* Mosheh prayed¦73184 on¦73173 the peoples' behalf,
-\v 8 and Yahweh¦73190 told \add *him\add*, “Make¦73193 \add a model of\add* a snake and put it \add up\add* on a pole, and \add ≈so that anyone who gets\add* bitten¦73205, can see it and live¦73208.”
+\v 8 and Yahweh¦73190 told \add *him\add*, “Make¦73193 \add a model of\add* a snake and put it \add up\add* on a pole, and \add ≈so that anyone¦73205 who gets\add* bitten¦73205, can see¦73206 it and live¦73208.”
 \v 9 \add ≈So¦73210\add* Mosheh¦73211 made a snake out of bronze and \add ≈attached it\add* \add to the top\add* of a pole, and \add ≈anyone¦73225 who was bitten¦73221 by a snake\add* would \add ≈recover when\add* they looked¦73226 towards the bronze snake.\x + \xo 21:9: \xt 2Ki 18:4; Yhn 3:14.\x*
 \s1 Going around Edom via Moav
 \rem /s1 From Mount Hor to the Valley of the Moabites; The Journey to Moab; Israel's Journey to Moab
@@ -1052,7 +1052,7 @@
 \v 11 \add ≈When¦73239\add* they left¦73239 Ovot, they camped¦73241 at¦73242 Iyey-Haavarim in¦73242 the wilderness¦73244 \add ≈near\add* Moav's eastern border.
 \v 12 From there¦73253 they¦73254 set off and¦73255 camped¦73255 by the Zared riverbed,
 \v 13 \add ≈before moving on¦73265\add* and camping at¦73265 \add the north side of\add* the Arnon \add river\add*, in¦73265 the wilderness¦73265 that¦73264 extends¦73266 from the Amorite¦73269 border. (The Arnon is the border between Moav and the Amorites¦73269.
-\v 14 That's why it says in the book about Yahweh's battles:
+\v 14 That's why it¦73282 says in the book about Yahweh's battles:
 \q1 “Vahev in Sufah¦73289, and the riverbeds there, and the Arnon¦73293 River
 \q1
 \v 15 and¦73301 the sloping valleys there,
@@ -1066,7 +1066,7 @@
 \v 18 the well dug by the leaders¦73337,
 \q1 ≈the \add ≈top citizens\add* dug it out.
 \q1 with¦73341 their sceptres¦73341 and their staffs¦73342.”
-\p From that wilderness¦73343, \add the people¦73340 went on¦73341\add* to Mattanah¦73344,
+\p From that¦73336 wilderness¦73343, \add the people¦73340 went on¦73341\add* to Mattanah¦73344,
 \v 19 then¦73346 through Nahaliel¦73347 and¦73348 on to Bamot¦73349
 \v 20 and¦73351 from \add *there\add* to the valley¦73352 in¦73354 the Moav countryside \add ≈where Mt. Pisgh rises above\add* the desert.
 \s1 Kings Sihon and Og defeated
@@ -1076,9 +1076,9 @@
 \v 21 Then Yisrael¦73366 sent¦73365 messengers¦73367 to the Amorite¦73373 King¦73371 Sihon¦73370,
 \v 22 “Let us pass through¦73392 your \add ≈country\add*. We won't turn off into any field¦73380 or vineyard¦73381. We won't \add ≈take\add* water¦73384 from any well. We'll \add ≈stay on¦73377\add* the king's \add ≈highway¦73386\add* until¦73389 we've \add ≈exited at¦73377\add* your \add northern\add* border.”
 \v 23 \add ≈However\add* \add King\add* Sihon¦73398 \add ≈refused them permission¦73397\add*, then¦73395 \add *he\add* \add ≈took his whole army\add* into the wilderness¦73414 to meet Yisrael¦73401, and¦73395 they attacked \add *them\add* at¦73403 Yahats \add village\add*.
-\v 24 \add ≈Nevertheless,\add* Yisrael¦73421 defeated them \add ≈in battle\add* and¦73420 took¦73425 possession¦73425 of his land from the Arnon¦73429 \add river\add* up as far as Yabok \add ≈where the Ammonites' border¦73439 was well fortified\add*.
-\v 25 \add ≈So¦73443\add* Yisrael¦73444 took those Amorite¦73455 cities \add ≈including\add* Heshbon¦73456 and \add ≈the surrounding villages¦73459\add*, and \add started\add* living in¦73456 them.
-\v 26 (Heshbon¦73462 was where the Amorite¦73466 King¦73465 Sihon¦73464 lived, as he'd \add previously\add* fought against the former¦73472 king of Moav¦73471 and \add ≈captured\add* all his land down as far as the Arnon¦73482 \add river\add*.
+\v 24 \add ≈Nevertheless,\add* Yisrael¦73421 defeated¦73420 them \add ≈in battle\add* and¦73420 took¦73425 possession¦73425 of his land from the Arnon¦73429 \add river\add* up as far as Yabok \add ≈where the Ammonites' border¦73439 was well fortified\add*.
+\v 25 \add ≈So¦73443\add* Yisrael¦73444 took those Amorite¦73455 cities \add ≈including¦73450\add* Heshbon¦73456 and \add ≈the surrounding villages¦73459\add*, and \add started\add* living in¦73456 them.
+\v 26 (Heshbon¦73462 was where the Amorite¦73466 King¦73465 Sihon¦73464 lived, as he'd \add previously\add* fought against¦73470 the former¦73472 king of Moav¦73471 and \add ≈captured\add* all his land down as far as the Arnon¦73482 \add river\add*.
 \v 27 That was why the \add ≈poets¦73488\add* say¦73487,
 \q1 “Come to Heshbon¦73490—let it be rebuilt¦73491.
 \q1 ≈Let \add King\add* Sihon's¦73494 city¦73493 be established¦73492
@@ -1118,7 +1118,7 @@
 \v 6 \add ≈So¦73740\add* now please¦73743 \add ≈come¦73741 and\add* curse this people¦73749 group for me because they are more numerous than us, \add then¦73740\add* perhaps¦73756 I'll¦73757 be able to \add ≈attack\add* them and drive¦73761 them out of the \add ≈area\add*, because I know¦73766 that¦73772 anyone you bless will be blessed, and those who you curse will be cursed.”
 \p
 \v 7 \add ≈So¦73776\add* the elders from Moav and from Midyan departed¦73776 \add ≈carrying the fees for divination¦73781 with¦73782 them\add*, and they¦73783 went¦73783 to Bileam and \add ≈passed\add* Balak's¦73790 words¦73789 on¦73782 to him.
-\v 8 \add @Bileam\add* told them, “Stay here tonight, and \add in the morning\add*, I'll bring¦73797 you back \add ≈answer, depending on what\add* Yahweh¦73802 tells me,” and \add so\add* the Moav leaders¦73805 stayed \add there\add* with Bileam.
+\v 8 \add @Bileam\add* told them, “Stay here tonight, and \add in the morning\add*, I'll¦73797 bring¦73797 you back \add ≈answer, depending on what\add* Yahweh¦73802 tells me,” and \add so\add* the Moav leaders¦73805 stayed \add there\add* with Bileam.
 \p
 \v 9 \add That night,\add* God¦73813 came¦73812 to Bileam and¦73817 \add ≈asked\add*, “Who are those men¦73819 with you¦73821?”
 \p
@@ -1131,7 +1131,7 @@
 \p
 \v 15 \add ≈However¦73909,\add* Balak sent \add back\add* a \add ≈larger group of leaders¦73911 who were even more senior than the first ones\add*,
 \v 16 and they went¦73916 and told Bileam, “Tsipor's son \add King\add* Balak¦73924 says¦73923, ‘Please don't¦73928 \add ≈refuse to come here\add*,
-\v 17 because I'll¦73945 honour you highly and do anything that you tell me to. \add ≈Just\add* please¦73948 come¦73946 and curse¦73949 this population for me.’ ”
+\v 17 because I'll¦73945 honour you highly and do anything that you tell me to. \add ≈Just¦73938\add* please¦73948 come¦73946 and curse¦73949 this population for me.’ ”
 \p
 \v 18 “\add Even\add* if Balak gave me a houseful¦73970 of gold¦73972 and¦73956 sliver,” Bileam told Balak's¦73962 servant¦73961, “I \add still\add* couldn't go¦73975 \add ≈against Yahweh's instructions, even if it was just to do something\add* small¦73982.
 \v 19 \add ≈However,\add* please¦73988 do stay here tonight, and¦73994 \add ≈I'll find out if Yahweh¦73998 might have anything else\add* to say to me.”
@@ -1142,7 +1142,7 @@
 \s1 The donkey talks
 \rem /s1 Balaam and His Donkey; Balaam, the Donkey, and the Angel
 \p
-\v 22 \add ≈However,\add* God¦74047 \add ≈got angry\add* because he'd gone, and¦74044 Yahweh's messenger¦74053 \add ≈stood in¦74055 the middle of the road¦74055 to block them\add*. \add ≈As\add* \add @Bileam\add* rode on¦74055 his donkey¦74062, accompanied by his two¦74063 servants¦74064,
+\v 22 \add ≈However,\add* God¦74047 \add ≈got angry\add* because he'd gone, and¦74044 Yahweh's messenger¦74053 \add ≈stood¦74052 in¦74055 the middle of the road¦74055 to block them\add*. \add ≈As\add* \add @Bileam\add* rode on¦74055 his donkey¦74062, accompanied by his two¦74063 servants¦74064,
 \v 23 the donkey saw Yahweh's messenger¦74071 \add ≈standing¦74073 there holding a sword¦74075 in¦74074 the middle of the road\add* and turned¦74078 off the road and went into a field¦74084. \add ≈So¦74067\add* Bileam whacked the donkey and forced it back onto the road.
 \v 24 Then¦74093 Yahweh's¦74095 messenger¦74094 moved to a place where the road was very narrow¦74096, with¦74096 vineyard¦74097 walls on¦74096 each side of the road.
 \v 25 \add ≈When¦74103\add* the donkey¦74104 saw¦74103 Yahweh's messenger¦74107, it \add ≈squeezed\add* close by the wall, and¦74103 \add in doing so\add*, \add ≈squashed\add* Bileam's foot¦74116 against the wall, \add ≈so\add* he whacked it again.
@@ -1150,12 +1150,12 @@
 \v 27 \add This time, when\add* the donkey saw the messenger¦74144, it lay down on the ground with Bileam sitting on top of it. Bileam \add ≈got very angry\add* and¦74140 whacked the donkey again with his staff¦74157.
 \v 28 Then¦74159 Yahweh¦74160 \add ≈enabled the donkey¦74164 to speak, and¦74165 it asked\add* Bileam, “What did I do to you that you beat me these three¦74174 times?”
 \p
-\v 29 “Because \add ≈you've¦74181 been messing me around\add*!” Bileam \add ≈shouted\add*. “If only \add ≈I'd been carrying a sword¦74186, then¦74177 I would have killed\add* you!”
+\v 29 “Because \add ≈you've¦74181 been messing me around\add*!” Bileam \add ≈shouted\add*. “If only \add ≈I'd been carrying a sword¦74186, then¦74177 I would have killed¦74190\add* you!”
 \p
 \v 30 “Aren't I your donkey that you've¦74202 ridden¦74202 \add ≈all your life\add*?” the donkey \add ≈asked\add* Bileam. “Have I ever \add ≈done anything like that to you before\add*?”
 \p And he said, “No.”
 \p
-\v 31 Then¦74217 Yahweh uncovered Bileam's eyes¦74221 and he saw¦74223 Yahweh's messenger¦74226 standing¦74228 \add in the middle of\add* the road¦74229 with¦74229 his sword¦74230 in his hand¦74232, and \add @Bileam\add* \add ≈fell to his knees and kept bowing his face¦74235 to the ground\add*.
+\v 31 Then¦74217 Yahweh uncovered¦74217 Bileam's eyes¦74221 and he saw¦74223 Yahweh's messenger¦74226 standing¦74228 \add in the middle of\add* the road¦74229 with¦74229 his sword¦74230 in his hand¦74232, and \add @Bileam\add* \add ≈fell to his knees and kept bowing his face¦74235 to the ground\add*.
 \v 32 Yahweh's angel \add ≈asked\add* him, “\add ≈Why did you strike¦74244 you donkey¦74247 those three¦74249 times? Listen, I came¦74253 personally to oppose you\add* because \add ≈you're choosing a very dangerous path¦74258 as far as I'm concerned¦74241\add*.
 \v 33 Your donkey saw me and¦74261 \add ≈avoided me\add* those three¦74266 times—if it hadn't I certainly would have killed¦74276 you already, \add ≈but¦74261 I would have let the donkey live\add*.”
 \p
@@ -1170,7 +1170,7 @@
 \p
 \v 38 “Look, I've¦74379 come¦74379 \add now\add*,” Bileam \add ≈answered\add* Balak¦74376, “\add ≈but¦74372 can I say whatever I want\add*? \add No,\add* \add ≈I have to deliver\add* whatever message¦74386 God¦74389 \add ≈gives me\add*.”
 \v 39 \add So¦74394\add* then¦74394 Bileam went¦74394 to Kiryat-Hutsot with Balak¦74398,
-\v 40 \add ≈where\add* Balak¦74404 sacrificed¦74403 sheep¦74406 and cattle¦74405, and \add ≈gave\add* \add some of the meat\add* to Bileam¦74408 and to the leaders who were with \add #them\add*.
+\v 40 \add ≈where\add* Balak¦74404 sacrificed¦74403 sheep¦74406 and cattle¦74405, and \add ≈gave\add* \add some of the meat\add* to Bileam¦74408 and to the leaders¦74409 who were with \add #them\add*.
 \rem /s1 Balaam's First Prophecy; Balaam's First Oracle
 \v 41 \add ≈The next\add* morning¦74414, Balak¦74416 took¦74415 Bileam uphill to Bamot¦74421-Baal¦74422, and¦74413 from there¦74424 \add @they\add* could see the outskirts¦74425 of the \add ≈Israeli camp\add*.
 \c 23
@@ -1197,8 +1197,8 @@
 \q1
 \v 9 \add ≈Yes,\add* I can see¦74561 \add #them\add* from the top of \add those\add* rocks¦74560.
 \q1 ≈I look at¦74569 \add #them\add* from the hills¦74562.
-\q1 Look, a population that lives by itself.
-\q1 ≈It doesn't count itself among the \add other\add* nations¦74569.
+\q1 Look, a population that¦74567 lives by itself.
+\q1 ≈It doesn't count itself among¦74569 the \add other\add* nations¦74569.
 \q1
 \v 10 Who can count the dust that Yakov \add leaves behind\add*?
 \q1 ≈\add ≡Who can even\add* count a quarter of the \add ≈Israelis¦74580\add*?
@@ -1217,7 +1217,7 @@
 \v 15 Bileam said¦74658 to \add ≈the king\add*, “You stand¦74662 here beside your burnt¦74666 offering¦74666, while I \add ≈go over there so\add* \add Yahweh\add* \add ≈can meet me\add*.”
 \p
 \v 16 Then¦74671 Yahweh¦74672 met with¦74678 Bileam and \add ≈gave him a message\add* and told \add >him\add*, “Go back to Balak¦74683, and \add ≈give him that message\add*.”
-\v 17 \add ≈So¦74687\add* he \add ≈returned\add* to him where he was standing¦74690 with the leaders from Moav¦74695 beside the altar, and¦74687 Balak¦74699 \add ≈asked\add* him, “What did Yahweh¦74703 say?”
+\v 17 \add ≈So¦74687\add* he \add ≈returned\add* to him where he was standing¦74690 with the leaders¦74694 from Moav¦74695 beside the altar, and¦74687 Balak¦74699 \add ≈asked\add* him, “What did Yahweh¦74703 say?”
 \p
 \v 18 Then¦74705 \add @Bileam\add* \add ≈gave his speech\add*,
 \q1 “\add ≈Look here\add*, Balak¦74709, and¦74705 listen¦74711.
@@ -1241,7 +1241,7 @@
 \q1
 \v 23 \add ≈No,\add* there's no spell against Yakov,
 \q1 ≈and no divination¦74770 against Yisrael.
-\q1 \add People\add* will talk about Yakov/Yisrael,
+\q1 \add People\add* will talk about¦74772 Yakov/Yisrael,
 \q1 →\add saying look\add* what God¦74779 has done.
 \q1
 \v 24 That population stands up like a lioness¦74784,
@@ -1256,7 +1256,7 @@
 \rem /s1 Balaam's Third Prophecy; Balaam's Third Oracle
 \p
 \v 27 Then¦74833 \add King\add* Balak¦74834 told Bileam, “Come \add ≈with me\add*. I'll take¦74841 you to another¦74845 place¦74844. Perhaps it will \add ≈pleased¦74840\add* God \add ≈if\add* you curse¦74850 \add #them\add* for me from there¦74852.”
-\v 28 \add ≈So¦74854\add* Balak¦74855 took¦74854 \add *him\add* to the top of \add Mt¦74858.\add* Peor¦74860 \add ≈that faces down\add* to the wilderness,
+\v 28 \add ≈So¦74854\add* Balak¦74855 took¦74854 \add *him\add* to the top of \add Mt¦74858.\add* Peor¦74860 \add ≈that¦74861 faces down\add* to the wilderness,
 \v 29 and \add again\add* Bileam told \add *him\add*, “Build seven altars¦74877 and prepare¦74878 seven bulls¦74882 and seven rams for me \add ≈here\add*.”
 \v 30 \add ≈So¦74886\add* Balak¦74887 \add ≈followed those instructions\add* and offered a bull¦74892 and a ram on¦74894 \add each\add* altar¦74894.
 \c 24
@@ -1273,7 +1273,7 @@
 \q1 who bows to the ground with his eyes¦74959 \add ≈wide open\add*.
 \q1
 \v 5 \add ≈Yes\add* Yakov, your tents¦74964 look good¦74963.
-\q1 ≈\add ≈Yes\add* Yisrael¦74967, \add ≈the places where you're living\add*:
+\q1 ≈\add ≈Yes\add* Yisrael¦74967, \add ≈the places¦74966 where you're living¦74966\add*:
 \q1
 \v 6 They stretch¦74970 out like a riverbed.
 \q1 ≈Like gardens¦74971 beside a river¦74973.
@@ -1281,7 +1281,7 @@
 \q1 ≈Like cedar¦74977 \add trees\add* beside the waters¦74980.
 \q1
 \v 7 Water will \add ≈spill over the top of\add* his buckets¦74985,
-\q1 and his \add ≈descendants will flow out\add* like water.
+\q1 and his \add ≈descendants will flow out\add* like water¦74984.
 \q1 \add @Yisrael's\add* king¦74991 will be greater than \add King¦74991\add* Agag¦74990,
 \q1 and his kingdom¦74993 will become honoured.
 \q1
@@ -1318,7 +1318,7 @@
 \q1 A star¦75155 has marched¦75154 out from Yakov \add (Jacob)\add*,
 \q1 ≈and a staff has risen from Yisrael¦75159 \add (Israel¦75159)\add*.
 \q1 He will crush¦75160 Moav's corners¦75161,
-\q1 ≈and destroy all of Shet's \add (Seth's)\add* descendants¦75166.
+\q1 ≈and destroy¦75163 all of Shet's \add (Seth's)\add* descendants¦75166.
 \q1
 \v 18 Edom¦75171 will become \add &their\add* possession,
 \q1 ≈\add ≈as will\add* his enemy, Seir¦75175.
@@ -1330,14 +1330,14 @@
 \p
 \v 20 Then¦75187 \add @Bileam\add* \add ≈looked towards\add* Amalek¦75190 and¦75187 \add ≈made this pronouncement\add*,
 \q1 “Amalek is the first¦75194 of the nations¦75195,
-\q2 ^\add ≈but\add* its end¦75197 will be destruction¦75199.”
+\q2 ^\add ≈but\add* its¦75197 end¦75197 will be destruction¦75199.”
 \p
 \v 21 Then¦75201 he \add ≈looked towards\add* the Kenites and \add ≈made this pronouncement\add*,
 \q1 “Your dwelling¦75209 is permanent,
 \q1 ≈and your nest is set in¦75211 the cliffs.
 \q1
 \v 22 but you Kenites will be destroyed¦75218
-\q1 when Ashhur \add ?(the Assyrians)\add* take you captive¦75224.”
+\q1 when Ashhur \add ?(the Assyrians)\add* take¦75224 you captive¦75224.”
 \p
 \v 23 Then¦75226 \add finally,\add* \add @Bileam\add* \add ≈made this pronouncement\add*,
 \q1 “Oh dear, who can \add ≈survive\add* when God¦75233 does \add all\add* that?
@@ -1359,7 +1359,7 @@
 \v 5 \add ≈So¦75316\add* Mosheh¦75317 to Yisrael's judges¦75320, “\add ≈Each of you must execute your men¦75324 who have joined¦75325 others to serve\add* Baal¦75326-Peor¦75327.”
 \p
 \v 6 \add ≈Just then¦75329, unbelievably,\add* an \add ≈Israeli¦75332\add* man¦75330 \add ≈came past\add* Mosheh¦75342 and \add ≈all the people¦75347\add* who were \add there outside\add* the \add ≈sacred¦75353\add* tent weeping¦75351, and he was bringing a Midyanite woman \add ≈with him\add*.
-\v 7 \add ≈When¦75356\add* Pinehas (son of Eleazar¦75360, son of Aharon) saw¦75356 \add <that\add*, he \add ≈came out\add* from among the \add ≈gathered people\add*, grabbed a spear¦75369,
+\v 7 \add ≈When¦75356\add* Pinehas (son of Eleazar¦75360, son of Aharon) saw¦75356 \add <that\add*, he \add ≈came out\add* from among¦75366 the \add ≈gathered people\add*, grabbed a spear¦75369,
 \v 8 and followed the \add ≈Israeli¦75374\add* man into \add &his\add* tent. He \add ≈plunged\add* the spear through the two of them—right through the man and the woman's¦75389 belly¦75392, and \add thus\add*, stopped¦75393 the plague¦75394 \add that had started\add* against the \add ≈Israelis¦75374\add*.
 \v 9 \add ≈However,\add*, twenty-four thousand¦75404 people had \add already\add* died¦75400 from the plague¦75401.
 \p
@@ -1373,7 +1373,7 @@
 \p
 \v 16 Then Yahweh¦75509 told Mosheh¦75512,
 \v 17 “\add ≈Attack\add* the Midyanites and¦75519 \add ≈destroy\add* them
-\v 18 because they were \add ≈treacherously deceiving\add* you all over the matter of Peor and Kozbi, the daughter¦75540 of one of their leaders¦75542 who was killed¦75545 on¦75526 the day¦75546 of the plague¦75548 at¦75526 \add Mt.\add* Peor.”
+\v 18 because they were \add ≈treacherously deceiving¦75526\add* you all over the matter of Peor and Kozbi, the daughter¦75540 of one of their leaders¦75542 who was killed¦75545 on¦75526 the day¦75546 of the plague¦75548 at¦75526 \add Mt.\add* Peor.”
 \c 26
 \s1 The second census
 \rem /s1 The Second Census; A Census of the New Generation; Israel's Second Census
@@ -1389,13 +1389,13 @@
 \v 7 Those¦75647 clans¦75646 added up to 43,730 men.
 \v 8 Pallu's¦75659 son was Eliav¦75660,
 \v 9 and Eliav's son were Nemuel¦75664, Datan, and Aviram. (That was the Datan and Aviram who were the leaders that rebelled\x + \xo 26:9 \xt 16:1-33.\x* against Mosheh¦75678 and Aharon when they joined Korah's¦75684 rebellion against Yahweh¦75688.
-\v 10 Then¦75690 the earth¦75691 \add ≈split open\add* and swallowed¦75695 them and Korah¦75699. Yahweh had also sent a fire¦75703 that consumed 250 men, and they¦75708 became a warning¦75709 sign.
+\v 10 Then¦75690 the earth¦75691 \add ≈split open\add* and swallowed¦75695 them and Korah¦75699. Yahweh had also sent a fire¦75703 that consumed¦75702 250 men, and they¦75708 became a warning¦75709 sign¦75709.
 \v 11 \add ≈However,\add* Korah's¦75713 descendants hadn't died¦75716 \add then¦75711\add*.)
 \s1 Shimeon's descendants
 \rem /s1 The Tribe of Simeon
 \p
-\v 12 Shimeon's descendants¦75719 came via his sons Nemuel¦75722, Yamin¦75725, Yakin,
-\v 13 Zerah, and Shaul¦75735.
+\v 12 Shimeon's descendants¦75719 came via his sons Nemuel¦75722, Yamin¦75725, Yakin¦75728,
+\v 13 Zerah¦75734, and Shaul¦75735.
 \v 14 Those¦75741 clans¦75740 added up to 22,200 men.
 \s1 Gad's descendants
 \rem /s1 The Tribe of Gad
@@ -1437,7 +1437,7 @@
 \p
 \v 35 Efrayim's descendants¦75963 came via his sons Shutelah¦75967, Beker¦75970, and Tahan¦75973,
 \v 36 Shutelah's¦75979 descendants¦75978 came via his son Eran¦75980.
-\v 37 Those clans added up to 32,500 men. These¦75984 last two¦75990 totals were \add all\add* Yosef's \add (Joseph's)\add* descendants.
+\v 37 Those clans added up to 32,500 men. These¦75984 last two¦75990 totals were \add all\add* Yosef's¦75998 \add (Joseph's)\add* descendants.
 \s1 Benyamin's descendants
 \rem /s1 The Tribe of Benjamin
 \p
@@ -1454,7 +1454,7 @@
 \rem /s1 The Tribe of Asher
 \p
 \v 44 Asher's¦76073 descendants¦76072 came via his sons Yimnah, Yishvi¦76078, and Beriah¦76081.
-\v 45 Beriah's¦76086 descendants¦76085 came via his sons Hever and Malkiel.
+\v 45 Beriah's¦76086 descendants¦76085 came via his sons Hever and Malkiel¦76090.
 \v 46 Asher's¦76097 daughter¦76095 was named Serah¦76098.
 \v 47 Those¦76104 clans¦76101 added up to 53,400 men.
 \s1 Naftali's descendants
@@ -1493,7 +1493,7 @@
 \p
 \v 1 Then the daughters of Tselofehad (son of Hefer¦76384, son of Gilead¦76387, son of Makir¦76390, son of Menashsheh) approached¦76379. \add *Their\add* names¦76400 were Mahlah¦76402, Noah¦76403, Hoglah¦76404, Milkah, and Tirtsah.
 \v 2 They stood¦76408 \add ≈in front¦76409 of\add* Mosheh¦76410 and the priest¦76413 Eleazar¦76412 and all the leaders¦76415 and the people \add there\add* at the entrance¦76419 to the \add ≈sacred¦76420\add* tent, \add and\add* \add ≈asked\add*,
-\v 3 “Our father¦76425 died in¦76427 the wilderness¦76427, \add ≈although\add* he wasn't \add ≈part of the group who joined Korah¦76440 to rebel\add* against Yahweh¦76437—it was \add ≈for his own personal disobedience\add* that he died. He didn't¦76429 have any sons¦76445
+\v 3 “Our father¦76425 died in¦76427 the wilderness¦76427, \add ≈although\add* he wasn't \add ≈part of the group who joined Korah¦76440 to rebel\add* against Yahweh¦76437—it was \add ≈for his own personal disobedience\add* that¦76434 he died. He didn't¦76429 have any sons¦76445
 \v 4 \add but\add* why should his family name¦76453 disappear from our clan \add just\add* because he had no sons? \add So\add* give¦76462 us \add ≈some land like\add* our father's¦76455 relatives will be getting.”
 \p
 \v 5 \add ≈So¦76470\add* Mosheh¦76471 took their case to Yahweh¦76477
@@ -1502,7 +1502,7 @@
 \v 8 \add ≈Also¦76509,\add* tell the \add ≈people¦76508\add* that if a man¦76512 dies \add ≈without sons\add*, then¦76506 his inheritance¦76522 should go to his daughter(s).
 \v 9 If he had no \add ≈children\add*, then¦76525 \add ≈it should go\add* to his brothers¦76534,
 \v 10 and if he has no brothers, then \add ≈it should go\add* to his father's¦76547 brothers.
-\v 11 \add ≈However,\add* if his father¦76553 had no brothers¦76552, then¦76549 the inheritance¦76557 \add ≈should go to his nearest¦76559 blood-relative to become his possession¦76562\add*. That will \add ≈become a permanent regulation\add* for Yisrael¦76566, just as Yahweh¦76571 has commanded¦76570.”
+\v 11 \add ≈However,\add* if his father¦76553 had no brothers¦76552, then¦76549 the inheritance¦76557 \add ≈should go to his nearest¦76559 blood-relative to become his possession¦76562\add*. That will \add ≈become a permanent regulation¦76567\add* for Yisrael¦76566, just as Yahweh¦76571 has commanded¦76570.”
 \s1 Yehoshua succeeds Mosheh
 \rem /s1 Joshua to Succeed Moses; Joshua Chosen to Lead Israel; Joshua Is Chosen as Successor to Moses; Joshua Appointed Moses' Successor
 \r (Deu. 31:1-8)
@@ -1520,14 +1520,14 @@
 \v 20 Give¦76720 him some of your¦76712 authority¦76712 so that all the \add ≈Israeli¦76719\add* people¦76719 can hear¦76715 \add <it\add*.
 \v 21 \add ≈When¦76722\add* \add he needs guidance\add*, he must stand¦76725 \add ≈in front¦76730\add* of the priest¦76724 Eleazar¦76723 and ask for Yahweh's decision¦76728 \add to be given via\add* the Urim. Then¦76722 \add @Yehoshua\add* and all the \add ≈people¦76743\add* will go¦76735 in or come¦76739 out as per \add @Yahweh's\add* \add ≈instructions\add*.”\x + \xo 27:21: \xt Exo 28:30; 1Sam 14:41; 28:6.\x*
 \v 22 \add ≈So¦76751\add* Mosheh¦76752 did what Yahweh¦76755 had ordered¦76754 him to, and he \add ≈presented\add* Yehoshua¦76760 to the priest¦76764 Eleazar¦76763 and to the entire¦76766 community.
-\v 23 \add @Mosheh\add* placed his hands¦76773 on¦76779 \add @Yehoshua\add* and¦76770 \add ≈commissioned¦76775\add* him¦76775, just has Yahweh¦76778 had said \add *he\add* should.
+\v 23 \add @Mosheh\add* placed¦76770 his hands¦76773 on¦76779 \add @Yehoshua\add* and¦76770 \add ≈commissioned¦76775\add* him¦76775, just has Yahweh¦76778 had said \add *he\add* should.
 \c 28
 \s1 The daily offerings
 \rem /s1 The Regular Offerings; The Daily Offerings; Daily Offerings
 \r (Exo. 29:38-46)
 \p
 \v 1 Then Yahweh¦76785 told Mosheh¦76788 \add (Moses¦76788)\add*,
-\v 2 “Give the \add ≈Israelis¦76794\add* \add <these instructions\add*: Ensure that you present¦76806 to me the offerings \add and\add* food for offerings to be burnt at¦76808 the \add ≈proper\add* time¦76808.
+\v 2 “Give the \add ≈Israelis¦76794\add* \add <these instructions\add*: Ensure that you¦76796 present¦76806 to me the offerings \add and\add* food for offerings to be burnt at¦76808 the \add ≈proper\add* time¦76808.
 \v 3 For¦76816 the \add ≈daily\add* burnt¦76824 offering, present two¦76822 one-year-old, male lambs¦76817 that¦76814 have no¦76821 defects¦76821.
 \v 4 One of those lambs must be offered in the morning¦76832, and¦76833 the other in \add ≈late afternoon\add*,
 \v 5 \add each offered¦76843\add* along with a kilogram of fine flour¦76842 mixed¦76844 with a litre of \add olive\add* oil¦76845.
@@ -1568,7 +1568,7 @@
 \v 26 “On the firstfruits¦77118 day of the harvest festival, when you all present¦77119 an offering¦77120 of fresh grain¦77120 to Yahweh¦77122, there's to be a sacred¦77126 assembly¦77124. No \add ≈regular\add* work may be done that day.\x + \xo 28:26-31: \xt Exo 23:16; 34:22; Deu 16:9-12.\x*
 \v 27 You all must present a burnt¦77137 offering¦77137 that's a pleasing¦77139 aroma¦77138 for Yahweh¦77140, \add presenting\add* two¦77145 \add young\add* bulls¦77141, one ram, and¦77136 seven¦77148 one-year-old male lambs¦77149.
 \v 28 Their \add associated\add* grain¦77153 offerings¦77153 will be three¦77157 kilograms of fine flour¦77154 mixed¦77155 with¦77156 \add olive\add* oil¦77156 for each bull¦77159, two¦77161 kilograms for the ram,
-\v 29 and one kilogram for each of the lambs.
+\v 29 and one kilogram for each of the lambs¦77171.
 \v 30 \add Also\add* for your sins, sacrifice one male¦77173 goat¦77173 to make \add ≈yourselves right with God\add*.
 \v 31 Those offerings along with their¦77188 drink offerings must be offered in addition¦77179 to the regular¦77181 burnt¦77180 offering and drink offerings. Ensure that they have no¦77184 defects¦77184.
 \c 29
@@ -1597,9 +1597,9 @@
 \p
 \v 12 “On the 15th of that seventh month¦77347, there's to be \add another\add* sacred¦77351 assembly¦77349. No \add ≈regular\add* work¦77356 may be done that day¦77346 \add which will begin\add* seven¦77363 days¦77364 of celebration¦77360.\x + \xo 29:12-38: \xt Lev 23:34; Deu 16:13-15.\x*
 \v 13 “You all must present¦77366 thirteen \add ≈young\add* bulls¦77372, two¦77379 rams, fourteen one-year-old male lambs¦77380 as a burnt¦77367 offering that will be a pleasing¦77370 aroma¦77369 for Yahweh¦77371. Ensure that they¦77387 have no¦77386 defects¦77386.
-\v 14 Their \add associated\add* grain¦77389 offerings¦77389 will be three kilograms of fine flour¦77390 mixed¦77391 with¦77392 \add olive\add* oil¦77392 for each bull¦77395, two kilograms for each ram,
+\v 14 Their \add associated\add* grain¦77389 offerings¦77389 will be three¦77393 kilograms of fine flour¦77390 mixed¦77391 with¦77392 \add olive\add* oil¦77392 for each bull¦77395, two kilograms for each ram,
 \v 15 and¦77407 one kilogram for each of the seven lambs¦77414.
-\v 16 \add Also\add* for your sins, sacrifice one male goat to make \add ≈yourselves right with God\add*, in addition¦77421 to the regular¦77423 burnt¦77422 offerings with their \add associated\add* grain¦77424 and¦77425 drink¦77425 offerings.
+\v 16 \add Also\add* for your sins, sacrifice one male¦77416 goat¦77416 to make \add ≈yourselves right with God\add*, in addition¦77421 to the regular¦77423 burnt¦77422 offerings with their \add associated\add* grain¦77424 and¦77425 drink¦77425 offerings.
 \p
 \v 17 “On the second¦77429 day¦77428, you all must offer twelve \add ≈young\add* bulls¦77430, two rams, fourteen one-year-old male lambs¦77438 without¦77444 defects¦77444,
 \v 18 and their \add associated\add* grain¦77446 and drink¦77447 offerings¦77446 \add ≈as already stipulated\add*.
@@ -1610,7 +1610,7 @@
 \v 22 \add Also\add* for your sins, sacrifice one male¦77490 goat¦77490 to make \add ≈yourselves right with God\add*, in addition¦77493 to the regular¦77495 burnt¦77494 offerings with their \add associated\add* grain¦77496 and¦77490 drink¦77497 offerings.
 \p
 \v 23 “On the fourth day¦77500, \add the sacrifice will be\add* ten¦77503 young¦77502 bulls¦77502, two¦77505 rams, fourteen year-old male lambs¦77506 without¦77512 defects¦77512,
-\v 24 and their \add associated\add* grain and drink¦77515 offerings¦77514 \add ≈as already stipulated\add*.
+\v 24 and their \add associated\add* grain¦77514 and drink¦77515 offerings¦77514 \add ≈as already stipulated\add*.
 \v 25 \add Also\add* for your sins, sacrifice one male¦77522 goat¦77522 to make \add ≈yourselves right with God\add*, in addition¦77527 to the regular¦77529 burnt¦77528 offerings with their \add associated\add* grain¦77530 and¦77531 drink¦77531 offerings.
 \p
 \v 26 “On the fifth¦77535 day¦77534, \add the sacrifice will be\add* nine¦77537 young¦77536 bulls¦77536, two¦77539 rams, fourteen year-old male lambs¦77540 without¦77546 defects¦77546,
@@ -1627,10 +1627,10 @@
 \p
 \v 35 “On the eighth¦77631 \add and final\add* day, there's to be \add another\add* sacred assembly¦77632. No \add ≈regular\add* work may be done that day.
 \v 36 You all must present¦77642 a young¦77648 bull¦77648, a ram, and¦77642 seven¦77656 one-year-old male lambs¦77652, \add all\add* unblemished¦77657, as a burnt¦77643 offering that will be a pleasing¦77646 aroma¦77645 for Yahweh¦77647.
-\v 37 Their \add associated\add* grain and drink¦77660 offerings¦77659 must be \add ≈as already stipulated\add*.
+\v 37 Their \add associated\add* grain¦77659 and drink¦77660 offerings¦77659 must be \add ≈as already stipulated\add*.
 \v 38 \add Also\add* for your sins, sacrifice one male¦77667 goat¦77667 to make \add ≈yourselves right with God\add*, in addition¦77670 to the regular¦77672 burnt¦77671 offerings with their \add associated\add* grain¦77673 and¦77667 drink¦77674 offerings.
 \p
-\v 39 “\add The above are the regulations for what\add* you all must do for Yahweh¦77678 at¦77679 the appointed¦77679 times¦77679, in¦77679 addition¦77680 to your vows and voluntary offerings, burnt¦77683 offerings, grain¦77684 and drink¦77685 offerings, and your peace offerings.”
+\v 39 “\add The above are the regulations for what\add* you all must do for Yahweh¦77678 at¦77679 the appointed¦77679 times¦77679, in¦77679 addition¦77680 to your vows and voluntary offerings, burnt¦77683 offerings, grain¦77684 and drink¦77685 offerings, and your peace¦77686 offerings.”
 \p
 \v 40 \add ≈So\add* Moses passed on to the \add ≈Israelis\add* everything that Yahweh had instructed \add *him\add*.
 \c 30
@@ -1646,14 +1646,14 @@
 \p
 \v 6 If¦77809 she¦77803 \add ≈gets engaged or married while a vow or thoughtless promise still holds\add*,
 \v 7 and her \add (future)\add* husband¦77824 hears about it and remains silent that¦77830 day, then her vow and or thoughtless promise will stand.
-\v 8 \add ≈However,\add* if her \add (future)\add* husband¦77838 forbids her \add ≈when\add* he hears her, then that¦77846 vow and \add ≈its obligations\add* won't stand, and Yahweh will forgive her.
+\v 8 \add ≈However,\add* if her \add (future)\add* husband¦77838 forbids her \add ≈when\add* he hears¦77840 her, then that¦77846 vow and \add ≈its obligations¦77845\add* won't stand, and Yahweh will forgive her.
 \p
 \v 9 \add ≈If¦77875\add* a widow or a woman who has been divorced \add ≈makes a promise, she must do what she promised\add*.
 \p
 \v 10 \add ≈If a married woman\add* makes a solemn promise, or makes a binding vow on her¦77890 own life,
 \v 11 and her husband¦77898 hears about it \add ≈but¦77895\add* says nothing and doesn't forbid her, then her vow and \add ≈all her obligations¦77903\add* will stand.
 \v 12 \add ≈However,\add* if he actually nullifies it when he hears about it, any promise that¦77924 she pronounced or binding vow on her life, won't¦77914 stand. Her¦77920 husband¦77911 has nullified them and Yahweh will forgive her,
-\v 13 \add so\add* every vow and its obligations can either be nullified¦77952 or confirmed by her¦77946 husband.
+\v 13 \add so\add* every vow and its obligations¦77947 can either be nullified¦77952 or confirmed by her¦77946 husband.
 \v 14 If her¦77970 husband¦77970 has stayed silent for \add ≈several days\add*, that will confirm¦77969 all her vows and/or obligations¦77965 because he \add ≈said nothing\add*.
 \v 15 \add ≈However,\add* if he \add ≈cancels\add* them \add sometime\add* after he'd heard¦78005 about them, then he will bear her¦77989 guilt.
 \p
@@ -1669,13 +1669,13 @@
 \v 4 one thousand men from each tribe¦78085 to go to war.”
 \p
 \v 5 \add ≈So¦78092\add* a thousand men were conscripted¦78090 from each tribe¦78094—twelve thousand equipped¦78099 for battle¦78100
-\v 6 and¦78102 Mosheh¦78104 sent¦78102 them off to war. The priest¦78115 Pinehas (Eleazar's¦78114 son) went with them, taking some sacred objects as well as the signal trumpets¦78119.
+\v 6 and¦78102 Mosheh¦78104 sent¦78102 them off to war. The priest¦78115 Pinehas (Eleazar's¦78114 son) went with them, taking some sacred¦78118 objects as well as the signal trumpets¦78119.
 \v 7 Then¦78123 they fought¦78123 Midyan¦78126 just as Yahweh¦78129 had commanded¦78128 Mosheh¦78132, and¦78133 they killed¦78133 every¦78134 male¦78136.
 \v 8 \add Among them,\add* they killed five Midyan kings: Evi, Rekem¦78151, Tsur¦78154, Hur¦78157, and¦78138 Reva, in¦78170 addition to Beor's¦78168 son Bileam \add (Balaam¦78165)\add*.
 \p
 \v 9 The \add ≈Israelis¦78175\add* took the Midyan women¦78178 and children captive¦78172, and took all their cattle¦78186, \add ≈sheep and goats\add*, and all their \add ≈possessions as plunder¦78197\add*,
-\v 10 then¦78199 they burnt down all their cities¦78202 and houses and camps¦78207.
-\v 11 They took¦78211 all the spoil¦78216 and plunder¦78220 including the people¦78221 and animals back,
+\v 10 then¦78199 they¦78208 burnt down all their cities¦78202 and houses and camps¦78207.
+\v 11 They took¦78211 all the spoil¦78216 and plunder¦78220 including¦78217 the people¦78221 and animals back,
 \v 12 and brought¦78224 it to Mosheh¦78227 and the priest¦78231 Eleazar¦78230, and to the \add ≈assembled Israelis¦78235\add* who were \add all still\add* camped on the Moav plains¦78252 beside the Yarden river opposite Yeriho \add (Jericho)\add*.
 \s1 Purifying the returning warriors
 \rem /s1 The Army Returns; Return from the War
@@ -1684,13 +1684,13 @@
 \v 14 \add ≈but¦78275\add* Mosheh¦78276 was angry¦78275 at the top army leaders who were coming back from the battle¦78286.
 \v 15 “Why¦78290 did you allow all the women to live¦78291?” \add *he\add* asked them.
 \v 16 “They're the \add ≈very ones who did what\add* Bileam \add (Balaam¦78302)\add* \add ≈suggested to urge the people to be unfaithful¦78305\add* to Yahweh at¦78301 Peor¦78311, \add ≈leading to\add* the plague¦78313 \add that struck\add* Yahweh's \add ≈people\add*.\x + \xo 31:16: \xt Num 25:1-9.\x*
-\v 17 \add ≈So¦78317 now,\add* kill all the \add ≈boys\add* plus every¦78319 woman¦78325 who's \add ≈slept with¦78322 a man\add*—
+\v 17 \add ≈So¦78317 now,\add* kill all the \add ≈boys\add* plus¦78323 every¦78319 woman¦78325 who's \add ≈slept with¦78322 a man\add*—
 \v 18 \add ≈spare only the young¦78333, unmarried girls\add* for yourselves¦78342.
 \p
-\v 19 “Then¦78344 everyone¦78351 who's killed¦78351 someone or touched¦78355 a dead body must stay outside¦78346 the camp for seven days¦78349. On the third¦78359 day, you all must purify¦78357 yourselves¦78357, and¦78344 \add again\add* on¦78356 the seventh day \add but¦78344 this time\add* including your captives¦78363.
-\v 20 \add Also,\add* you¦78382 all must purify¦78382 all your clothes, plus anything \add else\add* made of leather or goats' hair¦78376 or wood.”
+\v 19 “Then¦78344 everyone¦78351 who's killed¦78351 someone or touched¦78355 a dead body must stay outside¦78346 the camp for seven days¦78349. On the third¦78359 day, you all must purify¦78357 yourselves¦78357, and¦78344 \add again\add* on¦78356 the seventh day \add but¦78344 this time\add* including¦78353 your captives¦78363.
+\v 20 \add Also,\add* you¦78382 all must purify¦78382 all your clothes, plus¦78368 anything \add else\add* made of leather or goats' hair¦78376 or wood.”
 \p
-\v 21 Then the priest¦78387 Eleazar¦78386 told the \add ≈warriors¦78390\add* who'd gone to battle, “This is what Yahweh¦78400 has instructed¦78399 Mosheh¦78403:
+\v 21 Then the priest¦78387 Eleazar¦78386 told¦78399 the \add ≈warriors¦78390\add* who'd gone to battle¦78393, “This is what Yahweh¦78400 has instructed¦78399 Mosheh¦78403:
 \v 22 Only the gold¦78408, silver¦78411, bronze¦78414, iron, tin, and lead,
 \v 23 must pass through fire to make it ‘clean¦78434’. Nevertheless¦78435, it must still be purified¦78438 with the \add special\add* purifying water, along with anything that¦78428 wouldn't \add ≈handle\add* the fire.
 \v 24 On the seventh¦78451 day¦78450, you all must wash your clothes¦78449 and then¦78448 you'll be ‘clean¦78452’ and \add ≈be allowed to reenter\add* the camp.
@@ -1698,12 +1698,12 @@
 \rem /s1 Division of the Spoils; Division of the Loot; Disposition of Captives and Booty; Dividing the Spoils
 \p
 \v 25 Then Yahweh¦78461 told Mosheh¦78464 \add (Moses¦78464)\add*,
-\v 26 “You and the priest¦78476 Eleazar¦78475 and the \add ≈tribal leaders\add* must \add ≈list all\add* the plunder \add ≈including both\add* human and animals that were taken captive.
-\v 27 Then¦78481 you must divide¦78481 \add *it all\add* out \add equally between the two groups\add*: those¦78486 who went¦78488 out to battle¦78489, and¦78490 all \add the rest of\add* the community¦78493.
+\v 26 “You and the priest¦78476 Eleazar¦78475 and the \add ≈tribal leaders\add* must \add ≈list all\add* the plunder \add ≈including¦78473 both\add* human¦78472 and animals that were taken captive¦78471.
+\v 27 Then¦78481 you¦78481 must divide¦78481 \add *it all\add* out \add equally between the two groups\add*: those¦78486 who went¦78488 out to battle¦78489, and¦78490 all \add the rest of\add* the community¦78493.
 \v 28 \add ≈Set aside¦78495\add* a tribute¦78496 for Yahweh¦78497 from \add the plunder of\add* the \add ≈warriors¦78499\add* who fought in the battle¦78502: one from every five-hundred \add captive\add* people, and \add ≡the same\add* from the cattle¦78512 and donkeys¦78515, and from the \add ≈sheep¦78518 and goats\add*.
 \v 29 Half of that must be given to the priest¦78524 Eleazar¦78523 as the contribution¦78525 to Yahweh¦78526.
 \v 30 Then¦78528 from the half \add of the plunder\add* \add given\add* to the \add ≈community\add*, take¦78532 one from every fifty¦78539 \add captive\add* people¦78529, and \add ≡the same\add* from the cattle¦78545 and donkeys¦78548, and from the \add ≈sheep¦78551 and goats\add* and other animals. That's to be given to the Levites¦78557 because they're the ones who look after Yahweh's residence.”
-\v 31 \add ≈So¦78563\add* Mosheh and¦78565 the priest¦78566 Eleazar¦78565 did what Yahweh¦78569 had told them to do.
+\v 31 \add ≈So¦78563\add* Mosheh and¦78565 the priest¦78566 Eleazar¦78565 did what Yahweh¦78569 had told¦78568 them to do.
 \p
 \v 32 The remaining¦78576 plunder¦78579 \add after the slaughter of the boys and¦78574 the married women\add* from what the warriors had brought back was: 675,00 sheep¦78582,
 \v 33 72,000 cattle¦78593,
@@ -1721,7 +1721,7 @@
 \v 44 36,000 cattle¦78724,
 \v 45 30,500 donkeys¦78729,
 \v 46 and¦78735 16,000 \add ≈girls who hadn't been married\add*.
-\v 47 From that half for the \add ≈community\add*, Mosheh took one from every fifty¦78753 people¦78744 and animals, and gave¦78760 it to the Levites¦78762 who serve in Yahweh's tent¦78765, just as Yahweh had \add ≈instructed¦78768\add* Mosheh.
+\v 47 From that half for the \add ≈community\add*, Mosheh took¦78741 one from every fifty¦78753 people¦78744 and animals, and gave¦78760 it to the Levites¦78762 who serve in Yahweh's tent¦78765, just as Yahweh had \add ≈instructed¦78768\add* Mosheh.
 \p
 \v 48 Then¦78774 the \add ≈top army\add* officers¦78778 (the commanders over thousands, and¦78784 the commanders over hundreds¦78785), went to Mosheh¦78777
 \v 49 and \add ≈informed\add* \add *him\add*, “\add We¦78790,\add* your¦78791 servants¦78791 have \add ≈counted the soldiers who were under us,\add* and \add ≈none of our men¦78796 are\add* missing¦78802,
@@ -1742,22 +1742,22 @@
 \v 5 If we've \add ≈earnt\add* your favour¦78969, let this land be given¦78971 to your servants¦78976 for \add ≈us to own¦78977\add*, \add rather than forcing us\add* to cross¦78980 over the Yarden \add river with¦78970 all the other tribes\add*.”
 \p
 \v 6 “It wouldn't be right for your \add ≈fellow Israelis\add* to go¦78993 to war \add ≈while\add* you all \add just\add* stay here,” Mosheh¦78986 told them.
-\v 7 “\add ≈So¦78999\add* why do you discourage¦79000 \add ≈Israeli¦79005 enthusiasm\add* for crossing over into the land that¦79011 Yahweh¦79015 has given¦79013 them?
+\v 7 “\add ≈So¦78999\add* why do you¦79000 discourage¦79000 \add ≈Israeli¦79005 enthusiasm\add* for crossing over into the land that¦79011 Yahweh¦79015 has given¦79013 them?
 \v 8 Your parents did that at¦79020 Kadesh-Barnea when I sent¦79020 them \add in¦79020\add* to \add ≈survey\add* the land.\x + \xo 32:8-9: \xt Num 13:17-33.\x*
 \v 9 They went¦79029 as far as the Eshkol \add ≈valley\add* and¦79029 they saw¦79034 the land, \add ≈yet\add* they discouraged¦79038 the \add ≈people¦79042 from\add* entering the land that¦79050 Yahweh¦79054 had given¦79052 them.
 \v 10 Yahweh¦79059 \add ≈got very angry\add* that day¦79060, and¦79062 \add ≈promised\add*,
 \v 11 ‘From the men¦79068 who came¦79069 out of Egypt¦79070, no man who's twenty¦79072 or older will see¦79067 the land which¦79077 I promised to Abraham¦79079, Yitshak \add (Isaac¦79080)\add*, and Yakov \add (Jacob)\add*, because they're not \add ≈fully with\add* me.
 \v 12 \add ≈Only\add* Yefunneh's¦79092 son Kalev \add (Caleb¦79089)\add* and¦79094 Nun's¦79097 son Yehoshua \add (Joshua)\add* \add will enter\add* because they¦79099 \add ≈have believed\add* me.’
-\v 13 \add ≈So¦79103\add* Yahweh \add ≈got angry with¦79107\add* Yisrael¦79107, and¦79108 made \add ≈us\add* wander¦79108 in¦79107 the wilderness¦79109 for forty¦79110 years until¦79112 that generation¦79117 was \add ≈eliminated\add* who had \add ≈been evil¦79119 as per Yahweh's judgement\add*.
+\v 13 \add ≈So¦79103\add* Yahweh \add ≈got angry with¦79107\add* Yisrael¦79107, and¦79108 made \add ≈us\add* wander¦79108 in¦79107 the wilderness¦79109 for forty¦79110 years until¦79112 that¦79118 generation¦79117 was \add ≈eliminated\add* who had \add ≈been evil¦79119 as per Yahweh's judgement\add*.
 \v 14 \add ≈Now look here!\add* You're \add ≈standing in front of me\add* \add just\add* like your parents—a brood¦79127 of \add ≈disobedient\add* people¦79128 who'll make Yahweh¦79136 more angry with you than he was with your parents!
 \v 15 If you all turn¦79142 away from following¦79143 him¦79143, he'll \add ≈abandon¦79146\add* you all in¦79147 the wilderness¦79147 again¦79145, and you will have destroyed¦79148 this \add ≈nation\add*.”
 \p
 \v 16 \add ≈However, they¦79157 stepped\add* closer to him and said¦79157, “\add First\add* we'll build pens for our animals, and build cities¦79163 for our \add ≈families\add* \add here\add*.
-\v 17 Then¦79166 we'll equip¦79167 ourselves¦79167 for war, \add ≈to go ahead of the rest\add* of Yisrael¦79171 until¦79172 we've brought¦79176 them into their¦79179 place¦79179. \add ≈Meanwhile\add* our \add ≈families\add* will live in those fortified¦79183 cities¦79182 because \add ≈there'll still be threats from\add* those who live in \add ≈this region\add*.
+\v 17 Then¦79166 we'll equip¦79167 ourselves¦79167 for war, \add ≈to go ahead of the rest\add* of Yisrael¦79171 until¦79172 we've brought¦79176 them into their¦79179 place¦79179. \add ≈Meanwhile\add* our¦79181 \add ≈families\add* will live in those fortified¦79183 cities¦79182 because \add ≈there'll still be threats from\add* those who live in \add ≈this region\add*.
 \v 18 We¦79196 won't return¦79189 to our¦79192 \add ≈homes¦79192\add* until¦79193 every¦79197 \add ≈Israeli¦79195\add* is in possession of his inheritance¦79194.
 \v 19 We won't¦79201 take any land \add there\add* on the other¦79204 side of the Yarden \add river\add* or beyond¦79206 because this \add ≈will be\add* our¦79209 inheritance¦79202 here on the eastern¦79213 side.”
 \p
-\v 20 “If you're \add ≈going to do that\add*,” Mosheh¦79218 \add ≈responded¦79216\add*, “then you all must equip¦79228 yourselves¦79228 to \add ≈fight battles for\add* Yahweh¦79230,
+\v 20 “If you're \add ≈going to do that\add*,” Mosheh¦79218 \add ≈responded¦79216\add*, “then you all must equip¦79228 yourselves¦79228 to \add ≈fight battles¦79231 for\add* Yahweh¦79230,
 \v 21 and¦79233 all of \add &your\add* \add ≈armed warriors\add* must cross¦79233 the Yarden¦79240 \add ≈to serve\add* Yahweh¦79242 until¦79243 he's driven¦79244 his¦79248 enemies¦79247 out \add ahead of him¦79248\add*.
 \v 22 \add Once\add* the land is subdued¦79250 \add ≈before\add* Yahweh, then¦79250 you all can return¦79255. You'll be free of obligation from Yahweh and from Yisrael¦79259, and this land \add here\add* will be your possession¦79264 \add ≈from\add* Yahweh.
 \v 23 \add ≈However\add*, if you all don't¦79270 \add ≈help the rest of us\add*, you will be disobeying Yahweh¦79275, and¦79276 \add @your disobedience\add* will \add ≈catch up with you\add*.
@@ -1774,7 +1774,7 @@
 \v 31 “What Yahweh¦79409 has told you, \add &his\add* servants¦79412, that's what we'll do,” the \add ≈leaders of the Gad¦79402 and¦79403 Reuven tribes responded\add*.
 \v 32 We'll¦79416 \add ≈send armed men across\add* to Kanaan, equipped¦79418 to fight for Yahweh¦79420. \add ≈However,\add* our¦79425 inheritance¦79425 to own¦79424 will be \add here\add* on this side of the Yarden \add river\add*.”
 \p
-\v 33 \add ≈So¦79429\add* Mosheh¦79432 gave¦79429 \add <that region\add* to the tribes¦79440 of Reuben¦79437 and Gad¦79435, the half-tribe of Yosef's¦79445 son Menashsheh, \add encompassing\add* the kingdoms of the Amorite¦79451 King Sihon¦79449 and the Bashan's¦79457 King Og¦79455, plus the surrounding territories¦79460.
+\v 33 \add ≈So¦79429\add* Mosheh¦79432 gave¦79429 \add <that region\add* to the tribes¦79440 of Reuben¦79437 and Gad¦79435, the half-tribe of Yosef's¦79445 son Menashsheh, \add encompassing\add* the kingdoms of the Amorite¦79451 King Sihon¦79449 and the Bashan's¦79457 King Og¦79455, plus¦79436 the surrounding territories¦79460.
 \v 34 The Gadites rebuilt¦79465 Divon¦79471, Atarot¦79474, Aroer¦79476,
 \v 35 Atrot¦79480-Shofan¦79481, Yazer¦79484, Yogbehah¦79485,
 \v 36 Beyt-Nimrah¦79490, and¦79487 Beyt-Haran¦79490—\add all\add* fortified¦79496 cities¦79495 with pens¦79497 for their flocks.
@@ -1796,12 +1796,12 @@
 \v 4 \add ≈Meanwhile\add*, the Egyptians were burying¦79642 all their oldest sons who'd been struck¦79645 down by Yahweh¦79646 \add ≈who had\add* \add also\add* \add ≈totally humiliated\add* their gods¦79651.
 \p
 \v 5 After leaving Rameses¦79660, the \add ≈Israelis¦79659\add* \add went\add* to Sukkot and¦79661 camped¦79661 \add there\add*.
-\v 6 Then¦79664 they left Sukkit¦79665 and¦79666 camped¦79666 at Etam¦79667 at the edge of the wilderness¦79670.
+\v 6 Then¦79664 they left¦79664 Sukkit¦79665 and¦79666 camped¦79666 at Etam¦79667 at the edge of the wilderness¦79670.
 \v 7 \add ≈After\add* Etam¦79673, they turned¦79674 back to Pi-Hahirot (opposite Baal-Tsefon) and¦79672 camped¦79685 \add ≈facing\add* Migdal.
-\v 8 Then¦79689 they left¦79689 Pi-Hahirot and walked through the middle of the sea¦79695 into the Etam¦79702 wilderness and camped¦79703 at¦79693 Marah¦79704.
+\v 8 Then¦79689 they left¦79689 Pi-Hahirot¦79691 and walked through the middle¦79693 of the sea¦79695 into the Etam¦79702 wilderness and camped¦79703 at¦79693 Marah¦79704.
 \v 9 From Marah¦79707, they went¦79708 to Eylim which had twelve springs¦79713 with¦79710 seventy¦79715 palm trees¦79716 \add around them\add*, and¦79706 they camped¦79717 there¦79719.
 \v 10 \add ≈After\add* Eylam, they camped¦79723 beside the Red Sea
-\v 11 before leaving the sea and camping in the Sin¦79737 wilderness.\f + \fr 33:11 \ft Note that this is located in the southwestern Sinai Peninsula (between Eylim and Mt. Sinai), and different from the Tsin \+add (Zin)\+add* wilderness (which is located in the northern Negev desert, near Kadesh-Barnea).\f*
+\v 11 before leaving the sea¦79731 and camping in the Sin¦79737 wilderness.\f + \fr 33:11 \ft Note that this is located in the southwestern Sinai Peninsula (between Eylim and Mt. Sinai), and different from the Tsin \+add (Zin)\+add* wilderness (which is located in the northern Negev desert, near Kadesh-Barnea).\f*
 \v 12 \add ≈Travelling¦79742 from there,\add* they camped¦79743 at¦79744 Dofkah¦79744,
 \v 13 and¦79748 then¦79746 from there, at¦79749 Alush¦79749.
 \v 14 \add ≈After leaving\add* Alush¦79752, they camped¦79753 at¦79754 Refidim¦79754 \add but¦79751\add* they didn't¦79755 have water¦79759 there¦79758 to drink¦79761.
@@ -1812,7 +1812,7 @@
 \v 17 \add ≈When¦79776\add* they left¦79776 Kivot-Hattaavah, they camped¦79779 at¦79780 Hatserot,
 \v 18 and¦79784 then¦79782 from there, at¦79785 Ritmah¦79785.
 \v 19 From Ritmah¦79788, they \add went to\add* Rimmon¦79790-Perets to camp,
-\v 20 and¦79796 after that, on¦79797 to Livnah.
+\v 20 and¦79796 after that, on¦79797 to Livnah¦79797.
 \v 21 Then¦79799 they left¦79799 Livnah¦79800 and¦79801 camped¦79801 at¦79802 Rissah¦79802,
 \v 22 \add ≈before moving on¦79807 from there to\add* camp at¦79807 Kehelatah¦79807.
 \v 23 From Kehelatah¦79810, they camped¦79811 at¦79812 Mt¦79812. Shefer¦79814,
@@ -1825,13 +1825,13 @@
 \v 30 and¦79850 \add ≈next after that\add*, they camped¦79850 at¦79851 Moserot¦79851.
 \v 31 Then¦79853 they left¦79853 Moserot¦79854 and¦79855 camped¦79855 at¦79856 Bene-Yaakan.
 \v 32 From Bene-Yaakan, they \add went to\add* Hor-Haggidgad and¦79862 camped¦79862 \add there\add*,
-\v 33 then¦79866 they left¦79866 and¦79869 camped¦79869 at¦79870 Yotbatah.
+\v 33 then¦79866 they left¦79866 and¦79869 camped¦79869 at¦79870 Yotbatah¦79870.
 \v 34 Then¦79872 they left¦79872 Yotbatah and¦79874 camped¦79874 at¦79875 Avronah.
 \v 35 From Avronah, they \add went to\add* Etsyon-Gever and¦79879 camped¦79879 \add there\add*,
 \v 36 then¦79883 they left¦79883 and¦79886 camped¦79886 in¦79887 the Tsin¦79889 \add (Zin¦79889)\add* wilderness¦79887, i.e., at¦79887 Kadesh¦79891.
 \v 37 Then¦79893 they left¦79893 Kadesh¦79894 and¦79893 camped¦79895 at¦79896 Mt¦79897. Hor¦79896 by the border¦79898 with¦79896 Edom¦79900.
 \p
-\v 38 Aharon \add (Aaron¦79903)\add* the priest¦79904 \add ≈climbed\add* Mt¦79908. Hor¦79907 \add ≈following Yahweh's instructions\add*, and¦79902 then¦79902 died¦79913 there¦79914 on¦79923 the 5th of the first¦79925 month, forty years after¦79917 the \add ≈Israelis¦79920\add* had left Egypt¦79922.\x + \xo 33:38: \xt Num 20:22-28; Deu 10:6; 32:50.\x*
+\v 38 Aharon \add (Aaron¦79903)\add* the priest¦79904 \add ≈climbed\add* Mt¦79908. Hor¦79907 \add ≈following Yahweh's instructions\add*, and¦79902 then¦79902 died¦79913 there¦79914 on¦79923 the 5th of the first¦79925 month, forty¦79916 years after¦79917 the \add ≈Israelis¦79920\add* had left Egypt¦79922.\x + \xo 33:38: \xt Num 20:22-28; Deu 10:6; 32:50.\x*
 \v 39 \add *He\add* was 123 years old when he died¦79935 \add there\add* on¦79935 Mt¦79937. Hor¦79936.
 \p
 \v 40 \add ≈Meanwhile,\add* the Canaanite¦79941 king¦79942 of Arad¦79943 who lived in the Negev¦79947 in Kanaan, heard that the \add ≈Israelis¦79951\add* were coming¦79950.
@@ -1850,7 +1850,7 @@
 \p
 \v 50 Then Yahweh¦80024 spoke¦80023 to Mosheh¦80027 \add there\add* on¦80028 the Moav plains¦80028 beside the Yarden \add ≈opposite\add* Yeriho,
 \v 51 “Tell the \add ≈Israelis¦80039\add* that you're all about¦80045 to cross¦80045 the Yahweh to enter Canaan¦80052.
-\v 52 Then¦80054 you all must \add ≈drive¦80054 all the land's inhabitants¦80059 out ahead of you\add*, and destroy all their carved images and cast metal images, and all their \add ≈hilltop shrines\add*.
+\v 52 Then¦80054 you all must \add ≈drive¦80054 all the land's inhabitants¦80059 out ahead of you\add*, and destroy all their carved¦80066 images and cast metal¦80071 images, and all their \add ≈hilltop shrines\add*.
 \v 53 Take the land from there and¦80079 start to live there, because I've¦80088 given¦80088 \add *it\add* to all of you to own¦80079.
 \v 54 \add ≈Use lots\add* to divide the land up for your clans¦80100. \add ≈The larger¦80101 groups must get more than the smaller¦80106 groups\add*, then¦80095 \add ≈whatever the lot gives, that will be the area to be given within the land for that ancestral¦80121 tribe¦80120\add*.\x + \xo 33:54: \xt Num 26:54-56.\x*
 \p
@@ -1865,7 +1865,7 @@
 \p
 \v 3 “The \bd southern¦80196\bd* border will extend from the Tsin¦80199 wilderness¦80197 along the Edom¦80203 border across to the Salt \add (Dead)\add* Sea on the east,
 \v 4 cross south of the Scorpion Pass, continue to Tsin¦80221, and go south of Kadesh-Barnea. Then¦80214 it will go on to Hatsar-Addar¦80231 and proceed to Atsmon,
-\v 5 From Atsmon \add it will extend west\add* to the riverbed at the border¦80236 with Egypt¦80239, and¦80240 then¦80235 across to the \add Mediterranean\add* Sea.
+\v 5 From Atsmon \add it¦80235 will extend west\add* to the riverbed at the border¦80236 with Egypt¦80239, and¦80240 then¦80235 across to the \add Mediterranean\add* Sea.
 \p
 \v 6 “The \bd western\bd* border¦80255 will be the \add ≈Mediterranean\add* sea¦80248.
 \p
@@ -1873,20 +1873,20 @@
 \v 8 and then on to Levo-Hamat¦80277 and onward to Tsedad¦80281.
 \v 9 \add From there\add* the border will extend¦80283 to Zifron¦80285, and¦80283 it will end at Hatsar-Eynan, \add ≈completing\add* the northern¦80295 border.
 \p
-\v 10 “The \bd eastern¦80300\bd* border will begin at Hatsar-Eynan and¦80297 extend \add south\add* to Shefam¦80303,
+\v 10 “The \bd eastern¦80300\bd* border¦80299 will begin at Hatsar-Eynan and¦80297 extend \add south\add* to Shefam¦80303,
 \v 11 then go downhill to Rivlah east of Ayin, then along the \add ≈hills\add* to the east of Lake Galilee \add (Heb. Kinneret¦80319)\add*.
 \v 12 Then¦80322 the border will extend \add south\add* along the Yarden \add River\add* and¦80322 \add ≈end¦80326 at\add* the Salt \add (Dead)\add* Sea.
 \p “Those will be your \add ≈country's\add* borders.”
 \p
-\v 13 Then¦80336 Mosheh¦80337 \add ≈continued\add*, “That will be the land that¦80345 \add must be distributed\add* by lot. It'll be given by Yahweh¦80351 as an inheritance¦80346 for the nine¦80353 tribes and¦80336 the Menashsheh half-tribe\x + \xo 34:13: \xt Num 26:52-56.\x*
+\v 13 Then¦80336 Mosheh¦80337 \add ≈continued\add*, “That will be the land that¦80345 \add must be distributed\add* by lot. It'll be given by Yahweh¦80351 as an inheritance¦80346 for the nine¦80353 tribes¦80354 and¦80336 the Menashsheh half-tribe\x + \xo 34:13: \xt Num 26:52-56.\x*
 \v 14 \add as\add* the Reuven and Gad¦80368 tribes and the Menashsheh half-tribe have already received their inheritance¦80375.
-\v 15 \add Yes,\add* the \add other\add* two¦80377 and¦80379 a half tribes have taken¦80381 up their¦80382 inheritance¦80382 on the eastern¦80386 side of the Yarden \add river\add* across from Yeriho \add (Jericho)\add*.
+\v 15 \add Yes,\add* the \add other¦80383\add* two¦80377 and¦80379 a half tribes¦80378 have taken¦80381 up their¦80382 inheritance¦80382 on the eastern¦80386 side of the Yarden \add river\add* across from Yeriho \add (Jericho)\add*.
 \s1 The teachers egpepamaaren of land
 \rem /s1 Tribal Leaders; Leaders to Divide the Land; The Leaders Responsible for Dividing the Land
 \p
 \v 16 Then Yahweh¦80391 told Mosheh¦80394,
 \v 17 “These¦80397 are the men¦80399 who will \add ≈distribute\add* the land: the priest¦80408 Eleazar¦80407 and Nun's¦80412 son Yehoshua \add (Joshua)\add*,
-\v 18 as well as one leader from each tribe¦80418 to allocate the land that will be their inheritance.
+\v 18 as well as one leader from each tribe¦80418 to allocate the land that will be their inheritance¦80420.
 \v 19 Those \add tribe¦80428\add* leaders are:
 \li1 From Yehudah¦80429 \add (Judah)\add*, Yefunneh's¦80433 son Kalev \add (Caleb¦80430)\add*,
 \li1
@@ -1914,22 +1914,22 @@
 \rem /s1 Towns for the Levites; The Cities Assigned to the Levites; Cities for the Levites
 \p
 \v 1 \add ≈While\add* they were there on¦80541 the Moav plains¦80541 beside the Yarden \add river\add*, Yahweh¦80537 told Mosheh¦80540 \add (Moses¦80540)\add*.\x + \xo 35:1-8: \xt Josh 21:1-42.\x*
-\v 2 “Tell the \add Israelis¦80552\add* that out of the land that they'll \add ≈own\add*, they must give the Levites¦80555 cities for them to live in, \add ≈as well as\add* some pastureland¦80560 around¦80562 \add &those\add* cities.
+\v 2 “Tell the \add Israelis¦80552\add* that out of the land that they'll \add ≈own¦80557\add*, they must give the Levites¦80555 cities for them to live in, \add ≈as well as\add* some pastureland¦80560 around¦80562 \add &those\add* cities.
 \v 3 The cities¦80567 will be for them to live¦80569 in, and that pastureland¦80570 will be for their herds and their flocks, and for their other animals¦80575.
 \v 4 The pastureland¦80577 must extend out half a kilometre around¦80587 the walls of the Levites¦80581 cities¦80578.
 \v 5 Then¦80589 going out a kilometre \add ≈in each compass direction\add*, that will also be their land.\f + \fr 35:5 \ft It's not exactly clear what different activities would occur in these two rings of land, but remember that as much food as possible and animals would have to be brought into the city as soon as the residents received news of an approaching army.\f*
 \rem /s1 Cities of Refuge
-\v 6 The Levites¦80631 \add ≈must be given forty-two cities to live in, plus\add* you all must \add ≈designate\add* six refuge cities so that¦80629 if someone accidentally kills another, they can flee to the refuge city.
-\v 7 \add ≈That would make a total of\add* forty-eight cities¦80650, plus their¦80660 pasturelands¦80660, to be given to the Levites¦80653.
-\v 8 The larger¦80670 tribes must give more cities than the smaller¦80673 tribes, according to the area that¦80663 they inherit¦80677.”
+\v 6 The Levites¦80631 \add ≈must be given forty-two cities to live in, plus¦80642\add* you all must \add ≈designate\add* six refuge cities so that¦80629 if someone accidentally kills another, they can flee to the refuge city.
+\v 7 \add ≈That would make a total of\add* forty-eight cities¦80650, plus¦80655 their¦80660 pasturelands¦80660, to be given to the Levites¦80653.
+\v 8 The larger¦80670 tribes must give more cities than the smaller¦80673 tribes, according¦80676 to the area that¦80663 they inherit¦80677.”
 \s1 The refuge cities
 \rem /s1 Cities of Refuge; The Cities of Refuge
 \r (Deu. 19:1-13; Josh. 20:1-9)
 \p
 \v 9 Then Yahweh¦80686 told Mosheh¦80689,\x + \xo 35:9-28: \xt Deu 19:2-4; Josh 20:1-9.\x*
-\v 10 “Tell the \add ≈Israelis¦80695\add* that when you cross¦80701 the Yarden \add river\add* \add ≈to enter\add* Kanaan,
+\v 10 “Tell the \add ≈Israelis¦80695\add* that when you¦80697 cross¦80701 the Yarden \add river\add* \add ≈to enter\add* Kanaan,
 \v 11 you all must choose some cities to become ‘refuge¦80712 cities’ \add so that\add* if someone accidentally¦80721 kills another person¦80720, they can flee there¦80716.
-\v 12 The cities¦80725 will be places to stay safe from \add ≈being avenged¦80727\add* \add by the relatives\add* until¦80731 the killer can \add ≈be formally tried\add*.
+\v 12 The cities¦80725 will be places to stay safe from \add ≈being avenged¦80727\add* \add by the relatives\add* until¦80731 the killer¦80730 can \add ≈be formally tried\add*.
 \v 13 You all must \add ≈allocate\add* six refuge¦80744 cities—
 \v 14 three on the eastern side of the Yarden, and there on the western side in Kanann.
 \v 15 Both¦80766 \add ≈Israelis¦80765\add* and \add ≈foreigners living in¦80769 the country\add* can flee to \add any of\add* those six¦80771 cities¦80773—anyone¦80780 who kills \add another\add* person¦80782 by accident¦80783.
@@ -1946,11 +1946,11 @@
 \v 22 “\add ≈But¦80875\add* if someone pushes¦80881 \add @another person\add* without any hateful \add intent\add*, or throws something at¦80877 them without lying¦80890 in¦80877 wait,
 \v 23 or drops a rock¦80895 without \add ≈noticing\add* someone¦80898, and they die¦80898 \add ≈but¦80902\add* they weren't \add @that person's\add* enemy¦80908 and no harm was intended,
 \v 24 then¦80914 the community must judge¦80914 between the \add ≈one who killed\add* and¦80918 the avenger¦80919 \add ≈of the dead person\add*, in accordance with these¦80923 regulations.
-\v 25 \add If the one who killed is declared innocent\add*, then¦80925 the community must rescue them from the avenger¦80931 and return them to the refuge¦80939 city¦80938 that they'd fled to, and \add ≈that accidental killer\add* must live¦80944 there¦80943 until¦80946 after the death¦80948 of the high priest¦80949 (who had been anointed¦80953 with¦80945 sacred¦80956 oil¦80955).
+\v 25 \add If the one who killed is declared innocent\add*, then¦80925 the community must rescue them from the avenger¦80931 and return¦80933 them to the refuge¦80939 city¦80938 that they'd fled to, and \add ≈that accidental killer\add* must live¦80944 there¦80943 until¦80946 after the death¦80948 of the high priest¦80949 (who had been anointed¦80953 with¦80945 sacred¦80956 oil¦80955).
 \v 26 \add ≈However,\add* if they then¦80958 ever left the refuge¦80967 city¦80966 that they'd fled to,
 \v 27 and the avenger found them outside¦80976 the city boundary, then¦80972 \add ≈that relative of the dead person\add* is permitted to kill that person and won't¦80986 be accountable for their blood.
-\v 28 \add That's\add* because the \add ≈one who killed\add* must remain¦80993 in¦80991 that city¦80991 until¦80994 the death of the high priest—they can only return¦81003 to \add ≈their family home\add* after¦80999 the high priest's death.
-\v 29 You all must \add follow\add* these¦81011 regulations through¦81015 the generations¦81015 no matter where you live¦81017.
+\v 28 \add That's\add* because the \add ≈one who killed¦81004\add* must remain¦80993 in¦80991 that city¦80991 until¦80994 the death of the high priest—they can only return¦81003 to \add ≈their family home\add* after¦80999 the high priest's death.
+\v 29 You all must \add follow\add* these¦81011 regulations¦81013 through¦81015 the generations¦81015 no matter where you live¦81017.
 \p
 \v 30 “\add If\add* someone¦81026 murders¦81029 \add another\add* person¦81023, they're to be executed if there's evidence¦81024 from witnesses (\add plural,\add* not just one witness).
 \v 31 That sentence \add ≈can't¦81038 be changed to a fine and¦81038/or a payment to the deceased's family\add*—\add @the murderer\add* \em must\em* be executed.
@@ -1962,17 +1962,17 @@
 \rem /s1 Women Who Inherit Property; Marriage of Female Heirs; The Inheritance of Married Women; Inheritance of Zelophehad's Daughters
 \p
 \v 1 \add ≈Now\add* the leaders of the Gilead clans¦81137 (\add ≡Gilead was\add* the son of Makir¦81133, son of Menashsheh, one of Yosef's¦81139 sons) approached Mosheh¦81142 and the \add ≈Israeli¦81148\add* leaders
-\v 2 and said, “Yahweh commanded my master to \add ≈distribute\add* the land by lot as an inheritance \add ≈for the people\add*, and my master was \add also\add* commanded by Yahweh to give our brother¦81172 Tselofehad's inheritance to his daughters¦81173.\x + \xo 36:2: \xt Num 27:7.\x*
+\v 2 and said, “Yahweh commanded my master to \add ≈distribute\add* the land by lot as an inheritance \add ≈for the people¦81162\add*, and my master was \add also\add* commanded by Yahweh to give our brother¦81172 Tselofehad's inheritance to his daughters¦81173.\x + \xo 36:2: \xt Num 27:7.\x*
 \v 3 \add ≈However¦81181, if\add* they \add ended up\add* \add ≈being married by men from other\add* tribes, then¦81175 their inheritance would \add ≈pass from our tribe to their husbands' tribes, so we'd end up with less land as our tribal\add* inheritance.
 \v 4 Then¦81198 when Yisrael¦81203 celebrates the Jubilee \add Year\add*, then¦81198 that¦81209 inheritance will be added¦81204 to the inheritance of \add @their husbands'\add* tribes, and¦81198 be deducted from the inheritance of our¦81214 \add ≈ancestral¦81214\add* tribe.”
 \p
-\v 5 Then¦81218 Mosheh¦81219 \add ≈gave a ruling\add* to the \add ≈Israelis¦81222\add* \add ≈in accordance with what Yahweh¦81227 had told him\add*, “These \add ≈Yosefite men\add* are correct.
+\v 5 Then¦81218 Mosheh¦81219 \add ≈gave a ruling\add* to the \add ≈Israelis¦81222\add* \add ≈in accordance with what Yahweh¦81227 had told¦81218 him\add*, “These \add ≈Yosefite men\add* are correct.
 \v 6 Yahweh's \add ≈command¦81240\add* to Tselofehad's daughters¦81242 is that¦81238 \add ≈each of you may marry whoever you want as long as it's someone from your own\add* tribe¦81251.
 \v 7 That¦81273 way, land \add ≈in¦81268 Yisrael¦81261\add* won't¦81256 \add ≈move\add* from tribe to tribe, because \add ≈it¦81258 will always stay as part of\add* the inheritance \add ≈given to that\add* tribe.
-\v 8 \add ≈Any woman¦81288 who inherits land can only marry someone from her¦81286 own\add* tribe, so that the people will \add always\add* \add ≈retain ownership of their tribal\add* inheritance.
+\v 8 \add ≈Any woman¦81288 who inherits land can only marry someone from her¦81286 own\add* tribe¦81280, so that the people will \add always\add* \add ≈retain ownership of their tribal\add* inheritance.
 \v 9 \add &That\add* inheritance mustn't pass from tribe to tribe, but¦81297 each \add ≈Israeli¦81311\add* tribe must keep hold of its¦81307 inheritance.”
 \p
-\v 10 ⇔So Tselofehad's¦81322 daughters¦81321 obeyed what Yahweh¦81315 had told Mosheh¦81318,
+\v 10 ⇔So Tselofehad's¦81322 daughters¦81321 obeyed what Yahweh¦81315 had told¦81314 Mosheh¦81318,
 \v 11 and the \add five\add* daughters¦81330 (Mahlah¦81325, Tirtsah, Hoglah¦81327, Milkah, and Noah¦81329) married their \add ≈cousins on their father's¦81333 side\add*.
 \v 12 \add ≈The men they¦81343 married\add* were from the Menashsheh tribe (Yosef's¦81342 son), so \add ≈their land continued to belong to their father's¦81351 family and\add* tribe.
 \p

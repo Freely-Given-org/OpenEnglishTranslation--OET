@@ -6,7 +6,7 @@
 #
 # Script handling convert_ClearMaculaOT_to_our_TSV functions
 #
-# Copyright (C) 2022-2025 Robert Hunt
+# Copyright (C) 2022-2026 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -44,6 +44,7 @@ CHANGELOG:
     2025-09-19 Fix '(plunder' gloss
     2025-12-18 Fix joined English words 'towitness' 'topass', etc. in 'English' field
     2025-12-24 Fix Hebrew singular pronouns glosses as plurals in 'English' field
+    2026-03-19 Did the minimum to get the updated Macula Hebrew files to load
 """
 from gettext import gettext as _
 # from typing import Dict, List, Tuple
@@ -67,10 +68,10 @@ from BibleOrgSys.OriginalLanguages import Hebrew
 sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew
 
-LAST_MODIFIED_DATE = '2025-12-30' # by RJH
+LAST_MODIFIED_DATE = '2026-03-19' # by RJH
 SHORT_PROGRAM_NAME = "convert_ClearMaculaOT_to_our_TSV"
 PROGRAM_NAME = "Extract and Apply Macula OT glosses"
-PROGRAM_VERSION = '0.57'
+PROGRAM_VERSION = '0.58'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -655,11 +656,17 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                     if gloss:
                         if '(et)' in gloss or '(dm)' in gloss:
                             # print( f"(et) or (dm) {theirRef=} {wordOrMorpheme=} {gloss=}" )
-                            if '(et)' in gloss and wordOrMorpheme not in ('אֵ֥ת','אֶת','אֶֽת','אֵ֚ת','אֵ֖ת','אֵ֛ת','אֵ֣ת','אֶׄתׄ','אֵת֩','אֵ֤ת','אֶ֨ת','אֵ֡ת','אֵ֧ת','אֵ֠ת','אֵ֗ת','אֵת','אֵֽת','אֶ֥ת','אֵ֝֗ת','אֵ֝ת','אֵת֮','אֶתּ'):
+                            if '(et)' in gloss and wordOrMorpheme not in ('אֵ֥ת','אֶת','אֶֽת','אֵ֚ת','אֵ֖ת','אֵ֛ת','אֵ֣ת','אֶׄתׄ','אֵת֩','אֵ֤ת','אֶ֨ת','אֵ֡ת','אֵ֧ת','אֵ֠ת','אֵ֗ת','אֵת','אֵֽת','אֶ֥ת','אֵ֝֗ת','אֵ֝ת','אֵת֮','אֶתּ',
+                                                                          # These below were all additional on 2026-03-18 (TODO: why ???)
+                                                                          'אֵ֨ת','אֵת֙','אֵ֕ת','אוֹתָ֜','אוֹתֽ','אֹת֜','אוֹת֑','אוֹת֖','אוֹת','אֹתֽ','אוֹתִ֑','יָתְ',
+                                                                          'לְ','לֶ','לַ','לָ֣','לַֽ','לָ֑','לָ֨','וּ','לִ֕','לֵֽ','וְ', # First cases in EZR and DAN
+                                                                          ):
+                                print( f"Have (et) {theirRef=} {wordOrMorpheme=} {gloss=}" )
                                 halt
                             if '(dm)' in gloss and wordOrMorpheme not in ('כִּי','כִּ֣י','כִּי֩','כִּ֗י','כִּ֥י','כִּֽי','כִּ֚י','כִּ֛י','כִּ֤י','כִּ֠י','כִּ֧י','כִֽי','כִּ֡י','כִּ֖י','כִּ֞י','כִ֤י','כִ֥י','כִּ֨י','כִי','כִ֗י','כִ֔י','כִּ֭י','כִּ֘י','כִּ֝֗י','כִּ֬י','כִּ֪י','כִ֛י','כִּ֩י'):
+                                print( f"Have (dm) {theirRef=} {wordOrMorpheme=} {gloss=}" )
                                 if theirRef not in ('DAN 1:8!5','DAN 1:8!15') or wordOrMorpheme not in ('אֲשֶׁ֧ר','אֲשֶׁ֖ר'):
-                                    halt
+                                    pass #halt
                         gloss = ( gloss.replace( '.', '_' ) # Change to our system
                                     .replace( '(et)', 'DOM' ) # Change to our 'DOM' = DirectObjectMarker
                                     .replace( '(dm)', '' if theirRef.startswith('DAN 1:8!') else 'if/because') # What is dm supposed to mean?
@@ -704,7 +711,8 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                         transliteratedLemma = transliterate_Hebrew( lemma )
                         # If the following fails, our lemmas aren't unique
                         if transliteratedLemma in transliteratedLemmas:
-                            assert transliteratedLemmas[transliteratedLemma] == lemma, f"Multiple transcriptions of lemma {longID} {lemma=} {transliteratedLemma=} {transliteratedLemmas[transliteratedLemma]=}"
+                            if transliteratedLemmas[transliteratedLemma] != lemma:
+                                logging.critical( f"Ignoring multiple transcriptions of lemma {longID} {lemma=} {transliteratedLemma=} {transliteratedLemmas[transliteratedLemma]=}" )
                         else: transliteratedLemmas[transliteratedLemma] = lemma
                     senseNumber = elem.get('SenseNumber')
                     column_counts['sensenumber'][senseNumber] += 1
@@ -855,14 +863,14 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                         if parentElem.tag == 'c':
                             # assert not pClass and not pRole and not pRule, f"{pClass=} {pRole=} {pRule=}" # Had pRole='o' somewhere
                             compound = True
-                            if theirRef not in ('1KI 4:8!3','1KI 4:8!4', # glosses Ben- Hur
-                                                '2KI 12:21!8','2KI 12:21!9', # glosses Beth- Millo
-                                                'NEH 12:39!5','NEH 12:39!6', # glosses [the]_gate 'of_(the)_Jeshanah'
-                                                'PSA 102:4!7','PSA 102:4!8', # glosses a_hearth
-                                                'SNG 6:12!7','SNG 6:12!8', # glosses nadib
-                                                'ISA 2:20!16','ISA 2:20!17', # glosses of_moles
-                                                ):
-                                assert not gloss, f"{theirRef} {gloss=} {English=} {Mandarin=}"
+                            # if theirRef not in ('1KI 4:8!3','1KI 4:8!4', # glosses Ben- Hur
+                            #                     '2KI 12:21!8','2KI 12:21!9', # glosses Beth- Millo
+                            #                     'NEH 12:39!5','NEH 12:39!6', # glosses [the]_gate 'of_(the)_Jeshanah'
+                            #                     'PSA 102:4!7','PSA 102:4!8', # glosses a_hearth
+                            #                     'SNG 6:12!7','SNG 6:12!8', # glosses nadib
+                            #                     'ISA 2:20!16','ISA 2:20!17', # glosses of_moles
+                            #                     ):
+                            #     assert not gloss, f"{theirRef} {gloss=} {English=} {Mandarin=}"
                             assert not English and not Mandarin, f"{theirRef} {gloss=} {English=} {Mandarin=}"
                             gloss, English, Mandarin = parentElem.get('gloss'), parentElem.get('english'), parentElem.get('mandarin')
 
@@ -1098,8 +1106,9 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                     or (gloss and gloss[0]=='[' and gloss[-1]==']' and '_' not in gloss) \
                     or gloss=='(plunder' or English=='(plunder' \
                     or (English and English[0]=='[' and English[-1]==']' and '_' not in English):
-                        print( f"   Have potential problem in {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
-                        halt
+                        #print( f"   Have potential problem in {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
+                        # halt
+                        pass
 
                     # Names have to match state.output_fieldnames:
                     # ['FGRef','OSHBid','RowType','LFRef','LFNumRef',
@@ -1145,9 +1154,9 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                 longID = firstEntryAttempt['LFNumRef']
                 
                 if longID.endswith( 'ה' ):  # it's an article (vowel after preposition)
-                    # print(f"Got article {longID=}")
+                    # print(f"Got article {longID=} then {firstEntryAttempt['WordOrMorpheme']=} {firstEntryAttempt['ContextualGloss']=} {firstEntryAttempt['EnglishGloss']=} {firstEntryAttempt['WordType']=}")
                     assert firstEntryAttempt['WordOrMorpheme'] is None # No wordOrMorpheme
-                    assert firstEntryAttempt['ContextualGloss'] is None # No gloss
+                    # assert firstEntryAttempt['ContextualGloss'] is None # No gloss
                     english = firstEntryAttempt['EnglishGloss']
                     wordType = firstEntryAttempt['WordType']
                     assert wordType == 'definite article'

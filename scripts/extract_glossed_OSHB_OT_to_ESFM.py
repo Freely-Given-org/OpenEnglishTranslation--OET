@@ -64,6 +64,7 @@ CHANGELOG:
     2025-03-14 Properly handle added words like '[the]' and '[is]' (coming from Macula Hebrew glosses, etc.)
     ####2025-06-24 Remove superfluous final spaces from OSHB footnotes (why were they there???) Fixed upstream
     2025-06-29 Fixed a couple of systematic glossing errors ('todrink' and 'forhelp')
+    2026-03-19 Did the minimum to get the updated Macula Hebrew data to work
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple
@@ -71,16 +72,17 @@ from pathlib import Path
 from csv import DictReader
 from collections import defaultdict
 from datetime import datetime
+import re
 import logging
 
 import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2026-03-06' # by RJH
+LAST_MODIFIED_DATE = '2026-03-19' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed_OSHB_OT_to_ESFM"
 PROGRAM_NAME = "Extract glossed OSHB OT ESFM files"
-PROGRAM_VERSION = '0.63'
+PROGRAM_VERSION = '0.64'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -260,6 +262,9 @@ def loadSourceWordGlossTable() -> bool:
 # end of extract_glossed_OSHB_OT_to_ESFM.loadSourceWordGlossTable
 
 
+illegalWordLinkRegex1 = re.compile( '[0-9]¦' ) # Has digits BEFORE the broken pipe
+illegalWordLinkRegex2 = re.compile( '¦[1-9][0-9]{0,5}[a-z]' ) # Has letters immediately AFTER the wordlink number
+doubledND, badAddND, badNDAdd = '\\nd \\nd ', '\\add \\nd ', '\\nd*\\add*'
 mmmCount = wwwwCount = 0
 def export_literal_English_gloss_esfm() -> bool:
     """
@@ -361,9 +366,25 @@ def export_literal_English_gloss_esfm() -> bool:
                 last_gloss_index = gloss_index
                 if this_row_gloss: last_row_gloss = this_row_gloss # so we skip over empty glosses (like segs like maqaf)
             dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{verse_id} '{verse_text}'\n" )
+
+            # Do checks
             assert not verse_text.startswith(' '), f"{verse_id} '{verse_text}'"
+            if verse_text.endswith(' '):
+                logging.warning( f"Unexpected space at end in {verse_id}: '{verse_text}'" )
+            assert verse_text.count( '(' ) == verse_text.count( ')' ), f"Parentheses mismatch in {verse_id}: '{verse_text}'"
+            for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
+                assert verse_text.count( f'\\{characterMarker} ') == verse_text.count( f'\\{characterMarker}*'), f"{characterMarker} marker mismatch in {verse_id}: '{verse_text}'"
+            illegalWordLinkRegex1Match = illegalWordLinkRegex1.search( verse_text)
+            assert not illegalWordLinkRegex1Match, f"illegalWordLinkRegex1 failed before saving {BBB} with '{verse_text[illegalWordLinkRegex1Match.start()-5:illegalWordLinkRegex1Match.end()+5]}'" # Don't want double-ups of wordlink numbers
+            illegalWordLinkRegex2Match = illegalWordLinkRegex2.search( verse_text)
+            assert not illegalWordLinkRegex2Match, f"illegalWordLinkRegex2 failed before saving {BBB} with '{verse_text[illegalWordLinkRegex2Match.start()-5:illegalWordLinkRegex2Match.end()+5]}'" # Don't want double-ups of wordlink numbers
+            assert doubledND not in verse_text, f"Double \\nd in {verse_id}: '{verse_text}'"
+            assert  badAddND not in verse_text, f"\\nd inside \\add start {verse_id}: '{verse_text}'"
+            assert  badNDAdd not in verse_text, f"\\nd inside \\add end {verse_id}: '{verse_text}'"
+            assert  ' ¦' not in verse_text, f"Word number attached to space {verse_id}: '{verse_text}'"
             esfm_text = f"{esfm_text}\n\\v {verse_number} {verse_text}"
             assert '  ' not in esfm_text, f"ERROR1: Have double spaces in esfm text: '{esfm_text[:200]} … {esfm_text[-200:]}'"
+
             # for index_set in get_gloss_word_index_list(this_verse_row_list):
             #     print(f"{source_id} {index_set=}")
             #     if len(index_set) == 1: # single words -- the normal and easiest case
@@ -695,7 +716,47 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
                 .replace( '_[masc]', '(m)' ).replace( '_[fem]', '(f)' )
                 .replace( 'todrink', 'to_drink') # Not sure why this systematic error is in there ???
                 .replace( 'forhelp', 'for_help') # Not sure why this systematic error is in there ???
+                .replace( '[will,among_', '[will],among_' ) # Seems weird 2026-03-19 ???
+                .replace( '[will,at_', '[will],at_' ) # Seems weird 2026-03-19 ???
+                .replace( '[will,by_', '[will],by_' ) # Seems weird 2026-03-19 ???
+                .replace( '[will,in_', '[will],in_' ) # Seems weird 2026-03-19 ???
+                .replace( '[will,like_', '[will],like_' ) # Seems weird 2026-03-19 ???
+                .replace( '[will,on_', '[will],on_' ) # Seems weird 2026-03-19 ???
+                .replace( '[will,to_', '[will],to_' ) # Seems weird 2026-03-19 ???
+                .replace( '[has,to_', '[has],to_' ) # Seems weird 2026-03-19 ???
+                .replace( '[we,', '[we],' ) # 2026-03-19 ???
+                .replace( 'to,who]', 'to,[who]' ) # 2026-03-19 ???
+                .replace( '(in,', '[in],' ) # Not totally sure that it should be square brackets 2026-03-19 ???
+                .replace( '(into,', '[into],' ) # Not totally sure that it should be square brackets 2026-03-19 ???
+                # .replace( '(to,', '[to],' ) # THIS ONE OVERREACHES!!! Not totally sure that it should be square brackets 2026-03-19 ??? THIS ONE OVERREACHES!!!
+                .replace( '(with,', '[with],' ) # Not totally sure that it should be square brackets 2026-03-19 ???
+                # .replace( '(in,life', '[in],life' ) # Not totally sure that it should be square brackets 2026-03-19 ???
+                .replace( '(to,Baal', '[to],Baal' ) # 2026-03-19 ???
+                # .replace( 'and,(to,Ashtaroth', 'and,[to],Ashtaroth' ) # 2026-03-19 ???
+                .replace( '(to,gold', '[to],gold' ) # 2026-03-19 ???
+                .replace( 'and,(to,silver', 'and,[to],silver' ) # 2026-03-19 ???
+                .replace( '(to,everyone', '[to],everyone' ) # 2026-03-19 ???
+                # .replace( '(in,chariotry', '[in],chariotry' ) # 2026-03-19 ???
+                # .replace( '(in,horses', '[in],horses' ) # 2026-03-19 ???
+                .replace( '(to,breath', '[to],breath' ) # 2026-03-19 ???
+                .replace( '(to,mockers', '[to],mockers' ) # 2026-03-19 ???
+                .replace( '(to,discernment', '[to],discernment' ) # 2026-03-19 ???
+                .replace( '(to,[one_who_is]_poor', '[to],[one_who_is]_poor' ) # 2026-03-19 ???
+                .replace( '(to,youth', '[to],youth' ) # 2026-03-19 ???
+                # .replace( '(with,songs', '[with],songs' ) # 2026-03-19 ???
+                # .replace( '(in,wealth', '[in],wealth' ) # 2026-03-19 ???
+                .replace( 'and,(to,Ashtaroth', 'and,[to],Ashtaroth' ) # 2026-03-19 ???
+                .replace( '(to,many_[people]', '[to],many_[people]' ) # 2026-03-19 ???
+                # Why do these next ones give problems like:
+                #   WordNumberError: Failed to split-off word number from wordWithNumber='day¦3268one¦3268'
+                .replace( '[were]_the,faces', '[were]_the_faces' ) # 2026-03-19 Why???
+                .replace( '[which],covers', '[which]_covers' ) # 2026-03-19 Why???
+                # .replace( 'day,one', 'day_one' ) # GEN 2026-03-19 Why???
+                # .replace( 'belong,to', 'belong_to' ) # GEN 2026-03-19 Why???
              )
+    if gloss.startswith( 'be]') or gloss.startswith( 'been]') or gloss.startswith( 'who]') or gloss.startswith( 'those_who]'): gloss = f'[{gloss}' # Append missing opening bracket
+    if gloss.endswith('the_[one') or gloss.endswith('[who') or gloss.endswith('[will') or gloss.endswith('[those') or gloss.endswith('[one') or gloss.endswith('[have') or gloss.endswith('[has') or gloss.endswith('[had') or gloss.endswith('[are'):
+        gloss = f'{gloss}]' # Append missing final closing bracket
     if ' ' in gloss:
         logging.critical( f"Replacing space(s) with underline in {gloss=} at {wn=}" )
         gloss = gloss.replace( ' ', '_' )
@@ -704,11 +765,15 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
         gloss = gloss[:-1]
     assert '__' not in gloss
     
+    assert gloss.count( '(' ) == gloss.count( ')' ), f"Parentheses mismatch in  {gloss=} from {originalGloss=}, {wn=}"
     if '[' in gloss:
         # print( f"Have square brackets in {gloss=}, {wn=} )")
-        assert gloss.count('[') == gloss.count(']')
-        assert '_' in gloss or gloss.endswith('[s]') or gloss.endswith('[es]') or gloss.endswith('[en]') or gloss.endswith('[ren]')  or gloss.endswith('[question]'), \
-                        f"Unusual gloss with square brackets {gloss=}, {wn=}" # e.g., 'plant[s]', 'citi[es]', 'ox[en]', 'child[ren]', 'are=you(ms)=[question]'
+        assert gloss.count('[') == gloss.count(']'), f"Unmatched brackets {gloss=} from {originalGloss=}"
+        # TODO: Are '[which],swarms' and 'in,[month]' and 'at,[time]' outlyers ????
+        # assert '_' in gloss \
+        # or gloss.endswith('[s]') or gloss.endswith('[es]') or gloss.endswith('[en]') or gloss.endswith('[ren]') or gloss.endswith('[question]') \
+        # or '[which]' in gloss or '[month]' in gloss, \
+        #                 f"Unusual gloss with square brackets {gloss=}, {wn=}" # e.g., 'plant[s]', 'citi[es]', 'ox[en]', 'child[ren]', 'are=you(ms)=[question]'
         for compound,newCompoundList in ( ('the_one',('the','one')),
                                          ('is_it',('is','it')), ('is_the',('is','the')),
                                             ('is_one_who',('is','one_who')),('one_who_is',('one_who','is')),
@@ -726,6 +791,7 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
                                          ):
             assert len(newCompoundList) <= compound.count( '_' ) + 1
             gloss = gloss.replace( f'[{compound}]', f'[{']_['.join(newCompoundList)}]' )
+        # print( f"make_gloss_adjustments_and_append_word_number: after compound action: {gloss=} from {originalGloss=}")
         for article in ('the','a','those'):
             gloss = gloss.replace( f'[{article}]', f'\\add +{article}\\add*' )
         for copula in ('is','was','am','are','does','will','will_be','did','were','has_been','have_been','be','are_being'):
@@ -737,25 +803,45 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
         if '[' in gloss.replace('[s]','').replace('[es]','').replace('[en]','').replace('[ren]','').replace('[question]',''): # still
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Still have square brackets in {gloss=}, {wn=} )")
             gloss = gloss.replace( '[', '\\add ' ).replace( ']', '\\add*' )
+        # Now check the nesting is correct
+        startIx = inCount = 0
+        while True:
+            openIx = gloss.find( '\\add ', startIx )
+            if openIx == -1: openIx = 999_999_999
+            closeIx = gloss.find( '\\add*', startIx )
+            if closeIx == -1: closeIx = 999_999_999
+            if openIx == closeIx:
+                assert openIx == 999_999_999
+                assert inCount == 0
+                break
+            if openIx < closeIx:
+                inCount += 1
+                assert inCount == 1, f"Bad nesting in {gloss=} from {originalGloss=}, {wn=}"
+                startIx = openIx + 3
+            else:
+                assert closeIx < openIx
+                inCount -= 1
+                assert inCount == 0, f"Bad nesting in {gloss=} from {originalGloss=}, {wn=}"
+                startIx = closeIx + 3
 
     # Append the word (row) number(s) and replace comma morpheme separator
-    gloss = f"{gloss.replace('=',f'{wn}=')
-                    .replace(',',f'{wn}÷')
-                    .replace('\\add*',f'{wn}\\add*')
-                    .replace('\\add*_','PROTECTADD')
-                    .replace('~_','PROTECTED')
-                    .replace('_',f'{wn}_')
-                    .replace('PROTECTED','~_')
-                    .replace('PROTECTADD','\\add*_')}"
+    gloss = f"{gloss.replace('=', f'{wn}=')
+                    .replace('*,','PROTECTASTERISKFROMWORDNUMBER').replace(',', f'{wn}÷').replace('PROTECTASTERISKFROMWORDNUMBER','*÷')
+                    .replace('\\add*', f'{wn}\\add*')
+                    .replace('\\add*_', 'PROTECTADD')
+                    .replace('~_', 'PROTECTED')
+                    .replace('_', f'{wn}_')
+                    .replace('PROTECTED', '~_')
+                    .replace('PROTECTADD', '\\add*_')}"
     if not gloss.endswith( '*' ): gloss = f'{gloss}{wn}'
 
     # if '\\add' in gloss:
     #     print( f"    Returning {gloss=} from ( {originalGloss=}, {wn=} )")
-    assert f' {wn}' not in gloss, f"Wrongly placed {gloss=} from {originalGloss=}"
-    assert f'*{wn}' not in gloss, f"Wrongly placed {gloss=} from {originalGloss=}"
-    assert f'_{wn}' not in gloss, f"Wrongly placed {gloss=} from {originalGloss=}"
-    assert f'{wn}{wn}' not in gloss, f"Bad {gloss=} from {originalGloss=}"
-    assert f'{wn[1:]}¦' not in gloss, f"Messed up {gloss=} from {originalGloss=}"
+    assert f' {wn}' not in gloss, f"make_gloss_adjustments_and_append_word_number: wrongly placed {gloss=} from {originalGloss=}"
+    assert f'*{wn}' not in gloss, f"make_gloss_adjustments_and_append_word_number: wrongly placed {gloss=} from {originalGloss=}"
+    assert f'_{wn}' not in gloss, f"make_gloss_adjustments_and_append_word_number: wrongly placed {gloss=} from {originalGloss=}"
+    assert f'{wn}{wn}' not in gloss, f"make_gloss_adjustments_and_append_word_number: bad {gloss=} from {originalGloss=}"
+    assert f'{wn[1:]}¦' not in gloss, f"make_gloss_adjustments_and_append_word_number: messed up {gloss=} from {originalGloss=}"
     return gloss
 # end of extract_glossed_OSHB_OT_to_ESFM.make_gloss_adjustments_and_append_word_number
 

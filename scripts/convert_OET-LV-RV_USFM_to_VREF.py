@@ -7,7 +7,7 @@
 #
 # Script to convert cleaned OET USFM files to VPL vref.txt files
 #
-# Copyright (C) 2024-2025 Robert Hunt
+# Copyright (C) 2024-2026 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+OET@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -30,6 +30,9 @@ Script to convert cleaned OET USFM files
 
 TODO: Doesn't delete the \rem ESFM headers yet
 
+NOTE: This script doesn't need to remove special ESFM formatting
+        because that was already removed when the USFM files were exported
+
 
 CHANGELOG:
     2025-03-31 Adjust input folder
@@ -46,10 +49,10 @@ from BibleOrgSys.Internals.InternalBibleInternals import InternalBibleEntryList
 import BibleOrgSys.Formats.USFMBible as USFMBible
 
 
-LAST_MODIFIED_DATE = '2025-11-04' # by RJH
+LAST_MODIFIED_DATE = '2026-03-19' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_USFM_to_VREF"
 PROGRAM_NAME = "Convert OET LV & RV USFM files to VREF"
-PROGRAM_VERSION = '0.03'
+PROGRAM_VERSION = '0.04'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -60,11 +63,11 @@ assert VREF_STANDARD_InputFilePath.is_file()
 
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module
 # FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos
-cleaned_USFM_InputFolderPath = project_folderpath.joinpath( 'furtherDerivedTexts/cleanedUSFM/' )
+cleaned_USFM_InputFolderPath = project_folderpath.joinpath( 'exportedFiles/cleanedUSFM/' )
 OET_LV_USFM_InputFolderPath = cleaned_USFM_InputFolderPath.joinpath( 'LiteralVersion/' )
 OET_RV_USFM_InputFolderPath = cleaned_USFM_InputFolderPath.joinpath( 'ReadersVersion/' )
 assert cleaned_USFM_InputFolderPath.is_dir() and OET_LV_USFM_InputFolderPath.is_dir() and OET_RV_USFM_InputFolderPath.is_dir()
-VREF_OutputFolderPath = project_folderpath.joinpath( 'furtherDerivedTexts/' )
+VREF_OutputFolderPath = project_folderpath.joinpath( 'exportedFiles/' )
 assert VREF_OutputFolderPath.is_dir()
 OET_LV_VREF_OutputFilePath = VREF_OutputFolderPath.joinpath( 'OET-LV.vref.txt' )
 OET_RV_VREF_OutputFilePath = VREF_OutputFolderPath.joinpath( 'OET-RV.vref.txt' )

@@ -72,11 +72,11 @@ project_folderpath = Path(__file__).parent.parent # Find folders relative to thi
 FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos
 OET_RV_ESFM_InputFolderPath = project_folderpath.joinpath( 'translatedTexts/ReadersVersion/' )
 assert OET_RV_ESFM_InputFolderPath.is_dir()
-OET_RV_HTML_InputFolderPath = project_folderpath.joinpath( 'furtherDerivedTexts/simpleHTML/ReadersVersion/' )
+OET_RV_HTML_InputFolderPath = project_folderpath.joinpath( 'exportedFiles/simpleHTML/ReadersVersion/' )
 assert OET_RV_HTML_InputFolderPath.is_dir()
-OET_LV_HTML_InputFolderPath = project_folderpath.joinpath( 'furtherDerivedTexts/simpleHTML/LiteralVersion/' )
+OET_LV_HTML_InputFolderPath = project_folderpath.joinpath( 'exportedFiles/simpleHTML/LiteralVersion/' )
 assert OET_LV_HTML_InputFolderPath.is_dir()
-OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'furtherDerivedTexts/simpleHTML/SideBySide/' )
+OET_HTML_OutputFolderPath = project_folderpath.joinpath( 'exportedFiles/simpleHTML/SideBySide/' )
 assert OET_HTML_OutputFolderPath.is_dir()
 
 # EN_SPACE = ' '
