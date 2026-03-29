@@ -57,16 +57,18 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 ## TODO list
 
 - Go thru NT and GEN to insert \add fields
-- Replace 'whoever' with 'anyone'
-- Replace 'may' with 'can'
-- Manually mark nomina sacra in OET-RV???
 - Consider replacing J with Y, e.g., Jacob -> Yacob, John -> Yohan
+- Consider Yitshak vs Yits-hak or Yits'hak
 - Consider changing names still quite recognisable with only one letter difference, e.g., Lazarus -> Lazaros
+- Replace 'whoever' with 'anyone'
+- Replace 'may' with 'can' (except perhaps in the negative???)
+- Manually mark nomina sacra in OET-RV???
+- put \add ≈ around all modern measures???
 - Finish changing 'followers' to ‘apprentices’ where appropriate
 - Compare parallel passages and choose the best renderings
 - Define and check style of s1 section headings, i.e., tense, perfects, etc.
-- Work on consistent two levels of major and minorsection headings (s1 and s2)
-- Define and implement footnote classes
+- Work on consistent two levels of major and minor section headings (s1 and s2)
+- Define and implement footnote types/classes
 - Add word numbers for all remaining OET-RV words
 - make sure we haven't used 'tithe'
 - decide on idioms (esp. in Proverbs) using 'lips'
@@ -107,3 +109,4 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - kill/slaughter/strike for animals (e.g., sacrifices) and for people
 - altar 'horns' -> \add four\add* \add ≈projecting corners\add*
 - innards, entrails, intestines, guts
+- skin vs hide (of animal)

@@ -64,10 +64,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Internals.InternalBibleInternals import getLeadingInt
 
 
-LAST_MODIFIED_DATE = '2026-03-06' # by RJH
+LAST_MODIFIED_DATE = '2026-03-23' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
-PROGRAM_VERSION = '0.92'
+PROGRAM_VERSION = '0.93'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -947,7 +947,9 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
     done_disclaimer = False
     inParagraph = None
     inIntroduction = inRightDiv = inTable = False
-    for usfm_line in usfm_text.split( '\n' ):
+    for lineNumber,usfm_line in enumerate( usfm_text.split( '\n' ), start=1 ):
+        assert not usfm_line.startswith(' '), f"Unexpected space at start in {BBB} {lineNumber}: '{usfm_line}'"
+        assert not usfm_line.endswith(' '), f"Unexpected space at end in {BBB} {lineNumber}: '{usfm_line}'"
         if not usfm_line: continue # Ignore blank lines
         assert usfm_line.startswith( '\\' ), f"{BBB} {C}:{V} '{usfm_line}'"
         usfm_line = usfm_line[1:] # Remove the leading backslash

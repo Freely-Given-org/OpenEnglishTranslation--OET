@@ -62,7 +62,7 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2026-02-10' # by RJH
+LAST_MODIFIED_DATE = '2026-03-23' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
 PROGRAM_VERSION = '0.99'
@@ -477,6 +477,7 @@ def export_esfm_literal_English_gloss() -> bool:
                 # vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{chapter_number}:{last_verse_number} {verse_word_dict}")
                 word_matching_dict = {}
                 # Create the USFM verse text
+                assert not esfm_text.endswith( ' ' ), f"Unexpected trailing space in {BOS_BOOK_ID_MAP[book_number]} {last_chapter_number}:{last_verse_number} {esfm_text[-10:]=}"
                 esfm_text = f"{esfm_text}\n\\v {verse_number}"
                 for index_set in get_gloss_word_index_list(this_verse_row_list):
                     # print( f"{index_set=}" )

@@ -8,16 +8,16 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 
 #l									  			 	removeDoubleSpaces	Remove double spaces in entire file
 
-				rem					!			. 	replaceExclamationMark	Replace interpretive exclamation mark with period
+				rem					!			.	replaceExclamationMark	Replace interpretive exclamation mark with period
 # We need to sort out obvious questions (e.g., with question words) vs statements interpreted as questions
-#				rem					?			. 	replaceQuestionMark	Replace interpretive question mark with period
-				rem					;			, 	replaceDash	Replace interpretive semicolon with comma
-				rem					–			, 	replaceDash	Replace interpretive dash with comma
+#				rem					?			.	replaceQuestionMark	Replace interpretive question mark with period
+				rem					;			,	replaceDash	Replace interpretive semicolon with comma
+				rem					–			,	replaceDash	Replace interpretive dash with comma
 
-									, “			: 	replaceDoubleOpenQuote	Replace open quote with colon
-									”				removeDoubleCloseQuote	Remove close quote
-									, ‘			: 	replaceSingleOpenQuote	Replace open quote with colon
-									’				removeSingleCloseQuote	Remove close quote
+									, “			: 	replaceDoubleOpenQuote	Replace open double quote with colon
+									”				removeDoubleCloseQuote	Remove double close quote
+									, ‘			: 	replaceSingleOpenQuote	Replace open single quote with colon
+									’				removeSingleCloseQuote	Remove single close quote
 
 				rem					“				removeDoubleOpenQuote	Remove any remaining double open quotes
 				rem					‘				removeSingleOpenQuote	Remove any remaining single open quotes

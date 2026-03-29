@@ -60,10 +60,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-03-19' # by RJH
+LAST_MODIFIED_DATE = '2026-03-23' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.87'
+PROGRAM_VERSION = '0.88'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -784,6 +784,8 @@ def produce_HTML_files() -> None:
             assert '¦¦' not in esfm_text, f"""Why do we have doubled word number character in {source_filename}: {esfm_text[esfm_text.index('¦¦')-20:esfm_text.index('¦¦')+22]}"""
             assert '(diy)' not in esfm_text, f"""Why do we have '(diy)' in {source_filename}: {esfm_text[esfm_text.index('(diy)')-20:esfm_text.index('(diy)')+22]}"""
             for lineNumber,line in enumerate( esfm_text.split( '\n' ), start=1 ):
+                assert not line.startswith(' '), f"Unexpected space at start in {BBB} {lineNumber}: '{line}'"
+                assert not line.endswith(' '), f"Unexpected space at end in {BBB} {lineNumber}: '{line}'"
                 for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
                     # First check the overall count
                     assert line.count( f'\\{characterMarker} ' ) == line.count( f'\\{characterMarker}*' ), f"{characterMarker} marker mismatch in {source_filename} {lineNumber}: '{line}'"
