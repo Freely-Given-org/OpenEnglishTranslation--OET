@@ -43,6 +43,7 @@ CHANGELOG:
     2025-11-17 Handle s2 boxes allowing /r fields
     2025-12-08 Add nesting order check for USFM character markers
     2026-02-24 Improve handling of nested quotes
+    2026-03-31 Improve nesting order checking
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -64,10 +65,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Internals.InternalBibleInternals import getLeadingInt
 
 
-LAST_MODIFIED_DATE = '2026-03-23' # by RJH
+LAST_MODIFIED_DATE = '2026-03-31' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
-PROGRAM_VERSION = '0.93'
+PROGRAM_VERSION = '0.94'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -830,6 +831,7 @@ def produce_HTML_files() -> None:
             invalid_text = '\\p\n\\s'
             assert invalid_text not in esfm_text, f"""Why do we have a useless paragraph in {source_filename}: {esfm_text[esfm_text.index(invalid_text)-20:esfm_text.index(invalid_text)+22]}"""
             for lineNumber,line in enumerate( esfm_text.split( '\n' ), start=1 ):
+                # This loop isn't finding all the problems
                 for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
                     # First check the overall count
                     assert line.count( f'\\{characterMarker} ' ) == line.count( f'\\{characterMarker}*' ), f"{characterMarker} marker mismatch in {source_filename} {lineNumber}: '{line}'"
@@ -853,6 +855,48 @@ def produce_HTML_files() -> None:
                             inCount -= 1
                             assert inCount == 0
                             startIx = closeIx + 3
+
+                inCharMarkers = []
+                expectedMarkers = BibleOrgSysGlobals.USFMCharacterMarkers + ['f','fr','ft','x','xo','xt','fig']
+                nonNestingMarkers = ('fr','ft','xo','xt')
+                lineLen = len( line )
+                for cc,char in enumerate( line ):
+                    if cc<3: continue # Skip the paragraph marker at the beginning of the line
+                    nextChar1 = None if cc==lineLen-1 else line[cc+1]
+                    print( f"{cc} {char=} {nextChar1=}" )
+                    if char == '\\':
+                        if nextChar1 == '+':
+                            assert inCharMarkers, f"{markerName=} {inCharMarkers=} from {source_filename} {lineNumber}: '{line}'"
+                            markerName = ''
+                            for followingChar in line[cc+2:cc+6]:
+                                if followingChar == ' ':
+                                    assert markerName in expectedMarkers, f"Unexpected {markerName=} with {inCharMarkers} from {source_filename} {lineNumber}: '{line}'"
+                                    if markerName not in nonNestingMarkers:
+                                        inCharMarkers.append( markerName )
+                                    break
+                                elif followingChar == '*':
+                                    assert inCharMarkers
+                                    assert markerName in expectedMarkers, f"Unexpected {markerName=} with {inCharMarkers} from {source_filename} {lineNumber}: '{line}'"
+                                    assert inCharMarkers[-1] == markerName, f"{markerName=} {inCharMarkers=} from {source_filename} {lineNumber}: '{line}'"
+                                    inCharMarkers = inCharMarkers[:-1] # Drop the last one
+                                    break
+                                else: markerName += followingChar
+                        else:
+                            markerName = ''
+                            for followingChar in line[cc+1:cc+5]:
+                                if followingChar == ' ':
+                                    assert markerName in expectedMarkers, f"Unexpected {markerName=} with {inCharMarkers} from {source_filename} {lineNumber}: '{line}'"
+                                    if markerName not in nonNestingMarkers:
+                                        inCharMarkers.append( markerName )
+                                    break
+                                elif followingChar == '*':
+                                    assert inCharMarkers, f"{markerName=} {inCharMarkers=} from {source_filename} {lineNumber}: '{line}'"
+                                    assert markerName in expectedMarkers, f"Unexpected {markerName=} with {inCharMarkers} from {source_filename} {lineNumber}: '{line}'"
+                                    assert inCharMarkers[-1] == markerName, f"{markerName=} {inCharMarkers=} from {source_filename} {lineNumber}: '{line}'"
+                                    inCharMarkers = inCharMarkers[:-1] # Drop the last one
+                                    break
+                                else: markerName += followingChar
+                assert not inCharMarkers, f"Left over markers {inCharMarkers} from {source_filename} {lineNumber}: '{line}'"
                 if '\\x* ' in line: # this can be ok if the xref directly follows other text
                     logger = logging.critical if ' \\x ' in line else logging.warning
                     logger( f"Double-check space after xref in {source_filename} {lineNumber}: '{line}'" )
