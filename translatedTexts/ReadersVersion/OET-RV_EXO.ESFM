@@ -1,4 +1,4 @@
-\id EXO - Open English Translation—Readers' Version (OET-RV) v0.1.25
+\id EXO - Open English Translation—Readers' Version (OET-RV) v0.1.26
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 EXO
@@ -339,7 +339,7 @@
 \s1 Plague 3: Lice
 \rem /s1 A Plague of Gnats; The Third Plague: Gnats; The Plague of Gnats
 \p
-\v 16 Then Yahweh¦28856 said¦28855 to Mosheh¦28859, “Tell Aharon: Stretch out your staff and strike the dust on the ground, and it will turn into lice\f + \fr 8:16 \ft The Hebrew word ‘כֵּן/כִּנִּם’ (kēn/kinnim) could refer to either lice, gnats, or fleas. However, unlike lice, gnats don't usually \em reside\em* on people and animals (which seems to be implied by the text).\f* all over Egypt.”
+\v 16 Then Yahweh¦28856 said¦28855 to Mosheh¦28859, “Tell Aharon: Stretch out your staff and strike the dust on the ground, and it will turn into lice\f + \fr 8:16 \ft The Hebrew word ‘כֵּן/כִּנִּם’ (kēn/kinnim) could refer to either lice, gnats, or fleas. However, unlike lice, gnats don't usually \+em reside\+em* on people and animals (which seems to be implied by the text).\f* all over Egypt.”
 \v 17 So Aharon held out his staff and struck the dust \add with¦28888 it\add*, and \add the dust\add* became lice on the people and on the animals. All over Egypt¦28897, the dust turned into lice
 \v 18 and the sorcerers tried to do the same with¦28910 their magic but¦28909 they were unable to. \add So\add* there¦28923 were lice on¦28910 people¦28917 and animals
 \v 19 and the magicians said to Far'oh, “This is God's finger.” \add But¦28934 Far'oh was stubborn\add* and he didn't listen to them, just as Yahweh had said \add previously\add*.\x + \xo 8:19: \xt Luk 11:20.\x*
@@ -503,7 +503,7 @@
 \p
 \v 15 For seven days you all must only eat flat bread \add made without yeast\add*. Yes, on the first day you all must remove¦30847 any yeast from your houses¦30849, because anyone¦30854 who eats bread with yeast during those seven days, that person must be permanently driven out of Yisrael¦30859.
 \v 16 On the first¦30868 day, you all must¦30867 gather for a sacred¦30871 assembly¦30869, and¦30867 \add ≈similarly\add* on the seventh¦30873 day. No work can be done on those \add days\add* \add ≈other than meal preparation\add*.
-\v 17 You all must \add regularly¦30917\add* observe the \it Flat Bread \add Celebration\add*\it*, because on¦30902 this very day I will have brought¦30905 your divisions¦30908 out from Egypt¦30910. You all must observe this day throughout¦30916 \add future\add* generations¦30916—a statute¦30917 that you'll all celebrate forever.
+\v 17 You all must \add regularly¦30917\add* observe the \it Flat Bread \+add Celebration\+add*\it*, because on¦30902 this very day I will have brought¦30905 your divisions¦30908 out from Egypt¦30910. You all must observe this day throughout¦30916 \add future\add* generations¦30916—a statute¦30917 that you'll all celebrate forever.
 \v 18 Starting on¦30921 14th of the first¦30920 month in the evening, you all must¦30926 eat \add only\add* flat bread¦30927 until¦30928 the 21st day of the month in the evening.
 \v 19 For¦30951 seven days¦30936 you all must have no yeast in your¦30940 homes, because anyone¦30945 who eats¦30945 bread with¦30940 yeast in it¦30939, that person \add must be driven out\add* from the Israeli¦30950 people whether they're a foreigner or a native¦30953.
 \rem /s1 The First Passover
@@ -587,7 +587,7 @@
 \rem /s1 Crossing the Sea; The Pillars of Cloud and Fire; The Pillar of Cloud and the Pillar of Fire; Israel's Wilderness Detour
 \p
 \v 17 When Far'oh¦31803 released the people, God¦31810 didn't¦31807 lead them through the land of the Philistines¦31813, although \add @that way\add* was shorter, because \add *he\add* said, “\add ≈It's best if the people don't¦31807 have to face¦31825 war immediately, or they might change their minds\add* and \add then want to\add* return¦31827 to Egypt¦31828.”
-\v 18 \add So¦31830\add* God¦31831 caused¦31830 the people to take the path¦31836 going towards the wilderness¦31837 and¦31830 the Red Sea.\f + \fr 13:18 \ft Probably towards the \em Gulf of Suez\em*: see https://armstronginstitute.org/339-where-did-the-red-sea-crossing-take-place.\f* The Israeli¦31845 left Egypt¦31847 \add ≈in formation as if ready for battle¦31841\add*.
+\v 18 \add So¦31830\add* God¦31831 caused¦31830 the people to take the path¦31836 going towards the wilderness¦31837 and¦31830 the Red Sea.\f + \fr 13:18 \ft Probably towards the \+em Gulf of Suez\+em*: see https://armstronginstitute.org/339-where-did-the-red-sea-crossing-take-place.\f* The Israeli¦31845 left Egypt¦31847 \add ≈in formation as if ready for battle¦31841\add*.
 \p
 \v 19 Mosheh¦31850 \add ensured that\add* the bones of Yosef were taken with \add them\add*, because \add many years back\add* \add @Yosef\add* had made the Israelis¦31862 vow, saying, “God¦31866 will certainly take notice of you all, and¦31868 you must¦31865 take my bones up with you from here.”\x + \xo 13:19: \xt Gen 50:25; Josh 24:32.\x*
 \p
@@ -889,7 +889,7 @@
 \r (Deu. 5:1-22)
 \p
 \v 1 Then God¦34848 \add ≈gave these¦34853 instructions\add* \add to the Israelis\add*:
-\v 2 I'm¦34857 your god¦34860 Yahweh¦34859, who \add ≈rescued you\f + \fr 20:2 \ft Although modern English doesn't easily distinguish it, this discourse is addressed to singular ‘you’, i.e., to the Israelis as one group. While some of our modern, individualistic cultures might naturally interpret these rules as applying to individuals, they were given to Yisrael/Israel to implement at a national level.\f* from where you were enslaved in\add* Egypt¦34865.
+\v 2 I'm¦34857 your god¦34860 Yahweh¦34859, who \add ≈rescued you\add*\f + \fr 20:2 \ft Although modern English doesn't easily distinguish it, this discourse is addressed to singular ‘you’, i.e., to the Israelis as one group. While some of our modern, individualistic cultures might naturally interpret these rules as applying to individuals, they were given to Yisrael/Israel to implement at a national level.\f* \add ≈from where you were enslaved in\add* Egypt¦34865.
 \li1
 \v 3 You mustn't own any other¦34879 gods¦34877 \add ≈in my¦34883 sight\add*.
 \li1
@@ -999,7 +999,7 @@
 \v 2 (If a thief is discovered \add at¦35923 night\add* while breaking in¦35923, and is struck and dies, \add ≈no one should be charged for murder\add*.
 \v 3 But if it's¦35929 daylight already, then that person is guilty of murder.)
 \p \add @A thief\add* who's caught must make restitution¦35941, but if \add #they're\add* unable to pay, then \add @the thief\add* must be sold \add to cover it\add*.
-\v 4 If¦35954 a thief is found in¦35959 the possession of a stolen animal, be it¦35958 a cow or a donkey or a sheep, then \add #they\add* must pay back another¦35960 matching animal as well.\f + \fr 22:4 \ft Or possibly, must pay back \bd two\bd* additional animals.\f*
+\v 4 If¦35954 a thief is found in¦35959 the possession of a stolen animal, be it¦35958 a cow or a donkey or a sheep, then \add #they\add* must pay back another¦35960 matching animal as well.\f + \fr 22:4 \ft Or possibly, must pay back \+bd two\+bd* additional animals.\f*
 \p
 \v 5 If¦35984 a person releases their livestock to graze \add their own\add* field or vineyard, and it \add ends up\add* grazing in the someone else's field, \add @the owner of the animal\add* must¦35971 compensate from the best of their field and from the best of their vineyard.
 \p
@@ -1077,8 +1077,8 @@
 \v 14 You must¦36580 celebrate¦36580 me three times every year¦36582.
 \v 15 \add 1/\add* You must observe the \it Flat Bread Celebration\it*. You must eat¦36591 unleavened bread¦36587 for seven¦36589 days¦36590 as I commanded¦36594 you, in late March or early April because that's when you came¦36601 out from Egypt¦36602. You mustn't come without an offering.\x + \xo 23:15: \xt Exo 12:14-20; Lev 23:6-8; Num 28:17-25.\x*
 \p
-\v 16 \add 2/\add* You must observe the \it \add Spring\add* Harvest Celebration\it*, bringing the first¦36611 portion of your harvests from what you planted.
-\p \add 3/\add* You must observe the \it \add Finished\add* Harvest Celebration\it* at¦36618 the end¦36618 of the year¦36619, after you've¦36620 finished harvesting \add ≈everything you planted\add*.
+\v 16 \add 2/\add* You must observe the \it \+add Spring\+add* Harvest Celebration\it*, bringing the first¦36611 portion of your harvests from what you planted.
+\p \add 3/\add* You must observe the \it \+add Finished\+add* Harvest Celebration\it* at¦36618 the end¦36618 of the year¦36619, after you've¦36620 finished harvesting \add ≈everything you planted\add*.
 \v 17 \add So\add* all your¦36634 males¦36634 must¦36631 gather in¦36630 front of the master¦36638 Yahweh¦36640 three times¦36629 each year¦36630.
 \p
 \v 18 You mustn't sacrifice the blood¦36648 of my sacrifices together with bread \add ≈that's been risen\add*, and¦36651 all the fat \add must¦36653 be burnt during the night\add* so that none remains¦36653 in the morning¦36659.
@@ -1607,7 +1607,7 @@
 \rem /s1 The Covenant Is Renewed; The Covenant Renewed
 \rem /r (Exodus 23.14-19; Deuteronomy 7.1-5; 16.1-17)
 \p
-\v 10 \add @Yahweh\add* said, “Listen, I'm about to make an agreement in front of all your people.\f + \fr 34:10 \ft Because there's no punctuation in the original Hebrew, it's not certain if ‘in front of all your people’ goes with what it follows (as the \em OET-RV\em* has chosen), or with what follows it (as in several other translations).\f* I will do miracles that have not been \add ≈done before¦42294\add* anywhere on¦42304 the earth¦42306 or in any country \add of the world\add*. All the people that you're¦42316 among will see \add *my\add* work, because what I'm going to do with you is \add ≈awe-inspiring\add*.
+\v 10 \add @Yahweh\add* said, “Listen, I'm about to make an agreement in front of all your people.\f + \fr 34:10 \ft Because there's no punctuation in the original Hebrew, it's not certain if ‘in front of all your people’ goes with what it follows (as the \+em OET-RV\+em* has chosen), or with what follows it (as in several other translations).\f* I will do miracles that have not been \add ≈done before¦42294\add* anywhere on¦42304 the earth¦42306 or in any country \add of the world\add*. All the people that you're¦42316 among will see \add *my\add* work, because what I'm going to do with you is \add ≈awe-inspiring\add*.
 \v 11 \add ≈Be sure to obey\add* what I'm telling you today. See, I'm about¦42340 to force the Amorites¦42344, the Canaanites¦42345, the Hittites¦42346, the Perizzites¦42347, the Hivites¦42348, and the Yebusites out of the land ahead of you.
 \v 12 \add ≈Be very careful\add* not to make any treaties with¦42367 any of the \add current\add* inhabitants¦42357 of the land that¦42359 you're¦42360 about¦42361 to enter, in¦42367 case it ends up trapping you.
 \v 13 \add ≈What you must¦42373 do instead is to\add* break¦42377 down their altars¦42372 and smash¦42377 their pillars¦42376, and cut down the poles¦42380 \add used to worship their god\add* Asherah¦42380.\x + \xo 34:13: \xt Deu 16:21.\x*
@@ -1623,7 +1623,7 @@
 \p
 \v 21 \add Each week,\add* you should only work for six days¦42487, then you must¦42488 rest on¦42489 the seventh¦42490 day¦42489—\add even\add* during ploughing and harvest¦42493 times.\x + \xo 34:21: \xt Exo 20:9-10; 23:12; 31:15; 35:2; Lev 23:3; Deu 5:13-14.\x*
 \p
-\v 22 \add In the spring\add* when you begin to harvest¦42501 the first¦42500 wheat¦42502 crop, you must¦42498 have a \it Celebration of Weeks\it*, and¦42496 at the end of the year¦42506 \add in the autumn\add*, have a \it \add Finished\add* Harvest Celebration\it*.\x + \xo 34:22: a \xt Exo 23:16; Lev 23:15-21; Num 28:26-31; \xo b \xt Lev 23:39-43.\x*
+\v 22 \add In the spring\add* when you begin to harvest¦42501 the first¦42500 wheat¦42502 crop, you must¦42498 have a \it Celebration of Weeks\it*, and¦42496 at the end of the year¦42506 \add in the autumn\add*, have a \it \+add Finished\+add* Harvest Celebration\it*.\x + \xo 34:22: a \xt Exo 23:16; Lev 23:15-21; Num 28:26-31; \xo b \xt Lev 23:39-43.\x*
 \p
 \v 23 Three¦42508 times¦42509 every¦42512 year¦42510, all your¦42514 men must¦42511 present¦42511 themselves before me—Isra'el's¦42522 god¦42521, the master¦42518 Yahweh¦42520.
 \v 24 I will drive out the people groups ahead of you and expand your borders, and no one will \add ≈think of taking\add* your land \add when they know that\add* you present¦42544 yourselves¦42541 to \add *me\add* three¦42547 times¦42548 a year¦42549.
@@ -1650,7 +1650,7 @@
 \p
 \v 1 Mosheh¦42773 assembled¦42772 all the Israelis¦42780 and told¦42787 them, “These are the things¦42784 that¦42785 Yahweh¦42788 has instructed¦42787 you to do.
 \v 2 \add Every week\add*, you can work for six days¦42793, but¦42796 the seventh¦42797 day will be a sacred¦42800 rest day, \add dedicated to\add* Yahweh¦42803. Anyone¦42806 who works on¦42796 that day must¦42794 be put to death¦42809.\x + \xo 35:2: \xt Exo 20:8-11; 23:12; 31:15; 34:21; Lev 23:3; Deu 5:12-14.\x*
-\v 3 Don't light a fire¦42814\f + \fr 35:3 \ft This is effectively a command not to do any \bd cooking\bd* on the rest day.\f* in¦42815 any of your¦42816 homes on the rest days.”
+\v 3 Don't light a fire¦42814\f + \fr 35:3 \ft This is effectively a command not to do any \+bd cooking\+bd* on the rest day.\f* in¦42815 any of your¦42816 homes on the rest days.”
 \s1 The offering for Yahweh
 \rem /s1 Preparations for Making the Tabernacle; Offerings for the Sacred Tent; Materials for the Tabernacle; Gifts for the Tabernacle
 \r (Exo. 25:1-9)
@@ -1718,7 +1718,7 @@
 \v 8 Then all the \add ≈most-skilled men\add* out of the workmen made the ten¦43505 \add strips of\add* curtaining¦43506 for the residence from twisted¦43508 finely-spun linen¦43507 and blue, purple¦43510, scarlet yarn \add used to embroider\add* winged-creatures on¦43500 them.
 \v 9 Each \add ≈strip\add* was 14.5m long and two metres¦43524 wide—they were all the same size.
 \v 10 Five¦43537 \add ≈strips\add* were sewn together as one set, and¦43536 the other five as another set.
-\v 11 \add #They\add*\f + \fr 36:11 \ft It's singular ‘he’ in the original, which is confusing after v8 mentioned a group of craftsmen. The \em OET-RV\em* has chosen to follow v8 (and change the pronoun to ‘they’ in this section), but other translations are divided in how they handle this dilemma.\f* made loops¦43554 of blue on¦43561 the edge of the first¦43559 curtain at¦43561 the edge of the set, and similarly for the second¦43568 set—
+\v 11 \add #They\add*\f + \fr 36:11 \ft It's singular ‘he’ in the original, which is confusing after v8 mentioned a group of craftsmen. The \+em OET-RV\+em* has chosen to follow v8 (and change the pronoun to ‘they’ in this section), but other translations are divided in how they handle this dilemma.\f* made loops¦43554 of blue on¦43561 the edge of the first¦43559 curtain at¦43561 the edge of the set, and similarly for the second¦43568 set—
 \v 12 fifty¦43575 \add matching\add* loops on¦43573 the edge of each set so they were aligned with¦43573 each other.
 \v 13 \add #They\add* \add also\add* made fifty¦43591 gold¦43593 clips and¦43590 used them to join the \add two\add* curtain¦43597 \add sets\add* to each other to make \add the wall of\add* the sacred¦43604 tent¦43604.
 \p

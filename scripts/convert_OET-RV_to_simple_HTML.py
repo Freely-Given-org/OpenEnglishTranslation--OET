@@ -863,7 +863,7 @@ def produce_HTML_files() -> None:
                 for cc,char in enumerate( line ):
                     if cc<3: continue # Skip the paragraph marker at the beginning of the line
                     nextChar1 = None if cc==lineLen-1 else line[cc+1]
-                    print( f"{cc} {char=} {nextChar1=}" )
+                    # print( f"{cc} {char=} {nextChar1=}" )
                     if char == '\\':
                         if nextChar1 == '+':
                             assert inCharMarkers, f"{markerName=} {inCharMarkers=} from {source_filename} {lineNumber}: '{line}'"
@@ -887,6 +887,7 @@ def produce_HTML_files() -> None:
                                 if followingChar == ' ':
                                     assert markerName in expectedMarkers, f"Unexpected {markerName=} with {inCharMarkers} from {source_filename} {lineNumber}: '{line}'"
                                     if markerName not in nonNestingMarkers:
+                                        assert not inCharMarkers, f"Unexpected {markerName=} with {inCharMarkers} from {source_filename} {lineNumber}: '{line}'"
                                         inCharMarkers.append( markerName )
                                     break
                                 elif followingChar == '*':
@@ -1249,7 +1250,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                          .replace( '\\em*', '</em>' ).replace( '\\+em*', '</em>' )
                          .replace( '\\it ', '<i>' ).replace( '\\+it ', '<i>' )
                          .replace( '\\it*', '</i>' ).replace( '\\+it*', '</i>' )
-                         .replace( '\\bd ', '<b>' ).replace( '\\+bd ', '<b>' ) # Not actually required in OET-RV AFAWK
+                         .replace( '\\bd ', '<b>' ).replace( '\\+bd ', '<b>' )
                          .replace( '\\bd*', '</b>' ).replace( '\\+bd*', '</b>' )
                          .replace( '\\bdit ', '<b><i>' ).replace( '\\+bdit ', '<b><i>' ) # Not actually required in OET-RV AFAWK
                          .replace( '\\bdit*', '</i></b>' ).replace( '\\bdit*', '</i></b>' )
@@ -1259,8 +1260,8 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                          .replace( '\\nd*', '</span>' ).replace( '\\+nd*', '</span>' )
                          .replace( '\\wj ', '<span class="wj">' ).replace( '\\+wj ', '<span class="wj">' )
                          .replace( '\\wj*', '</span>' ).replace( '\\+wj*', '</span>' )
-                         .replace( '\\sc ', '<span class="sc">' ).replace( '\\sc ', '<span class="sc">' ) # Not actually required in OET-RV AFAWK
-                         .replace( '\\sc*', '</span>' ).replace( '\\sc*', '</span>' )
+                         .replace( '\\sc ', '<span class="sc">' ).replace( '\\+sc ', '<span class="sc">' )
+                         .replace( '\\sc*', '</span>' ).replace( '\\+sc*', '</span>' )
                          .replace( '\\qs ', '<span class="qs">' ).replace( '\\qs*', '</span>' )
                          .replace( '\\sig ', '<span class="sig">' ).replace( '\\sig*', '</span>' )
                          .replace( '\\tl ', '<span class="tl">' ).replace( '\\tl*', '</span>' ) \

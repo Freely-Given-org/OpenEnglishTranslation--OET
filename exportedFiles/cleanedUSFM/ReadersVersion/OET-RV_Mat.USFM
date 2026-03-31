@@ -1,4 +1,4 @@
-\id MAT - Open English Translation—Readers’ Version (OET-RV) v0.4.13
+\id MAT - Open English Translation—Readers’ Version (OET-RV) v0.4.15
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 MAT
@@ -111,7 +111,7 @@
 \v 21 So Yosef got up and took the child and his mother and went \add back\add* to Yisrael.
 \p
 \v 22 But when he heard that Archelaus was reigning over Yudea instead of his father Herod, and \add also\add* having been warned in a dream, he left \add Yudea\add* and went to the Galilee area.
-\v 23 \x + \xo 2:23: \xt Mrk 1:24; Luk 2:39; Yhn 1:45.\x*Once he got there, he settled into the town of \nd Nazareth\nd*, so that what had been spoken through the prophets would be fulfilled: “He’ll be called a Nazarene.”\f + \fr 2:23 \ft This is not a specific quote from the Hebrew Scriptures, but note that Matthew does say ‘the prophet\bd s\bd*’ (not ‘the prophet’). This could be: ¹A play on Hebrew ‘נצר’ from Yeshayah (Isaiah) 11:1 where ‘branch/shoot’ (netser) is similar to ‘Natsaret’ (Nazareth/natsrat), ²a play on Shimshon (Samson) the ‘Nazirite’ (נְזִיר) from Heroes (Judges) 13:5,7, or ³just a slur on Yeshua being from insignificant Nazareth as per Yohan (John) 1:46.\f*
+\v 23 \x + \xo 2:23: \xt Mrk 1:24; Luk 2:39; Yhn 1:45.\x*Once he got there, he settled into the town of \nd Nazareth\nd*, so that what had been spoken through the prophets would be fulfilled: “He’ll be called a Nazarene.”\f + \fr 2:23 \ft This is not a specific quote from the Hebrew Scriptures, but note that Matthew does say ‘the prophet\+bd s\+bd*’ (not ‘the prophet’). This could be: ¹A play on Hebrew ‘נצר’ from Yeshayah (Isaiah) 11:1 where ‘branch/shoot’ (netser) is similar to ‘Natsaret’ (Nazareth/natsrat), ²a play on Shimshon (Samson) the ‘Nazirite’ (נְזִיר) from Heroes (Judges) 13:5,7, or ³just a slur on Yeshua being from insignificant Nazareth as per Yohan (John) 1:46.\f*
 \c 3
 \s1 Yohan-the-immerser’s preaching
 \r (Mark 1:1-8; Luke 3:1-18; Yhn 1:19-28)
@@ -224,7 +224,7 @@
 \s1 Being salt and light
 \r (Mark 9:50; Luke 14:34-35)
 \p
-\v 13 \x + \xo 5:13: \xt Mrk 9:50; Luk 14:34-35.\x*“\wj You \add people\add* are the earth’s salt, but if the salt is made tasteless, what would you use to salt your food? The salt wouldn’t be useful for anything anymore and would just get thrown out and trampled on by the people.\wj*
+\v 13 \x + \xo 5:13: \xt Mrk 9:50; Luk 14:34-35.\x*“\wj You \+add people\+add* are the earth’s salt, but if the salt is made tasteless, what would you use to salt your food? The salt wouldn’t be useful for anything anymore and would just get thrown out and trampled on by the people.\wj*
 \p
 \v 14 \x + \xo 5:14: \xt Yhn 8:12; 9:5.\x*“\wj You are the world’s light. A city up on a hill can’t be hidden.\wj*
 \v 15 \x + \xo 5:15: \xt Mrk 4:21; Luk 8:16; 11:33.\x*\wj No one lights a lamp and puts it under a basket—you put it on a lampstand and it lightens up the house.\wj*
@@ -276,13 +276,13 @@
 \v 43 “\wj You’ve all heard it said that you should love your neighbour and hate your enemy,\wj*
 \v 44 \wj but I’m telling you to love your enemies and to pray for anyone who’s persecuting you,\wj*
 \v 45 \wj so that you might become children of your father in the heavens, because he causes his sun to rise on both evil and good people, and sends the rain for both godly and ungodly people.\wj*
-\v 46 \wj If you \add people\add* just love people who love you, what reward would you expect for that? Don’t \+add even\+add* the tax collectors do that?\wj*
+\v 46 \wj If you \+add people\+add* just love people who love you, what reward would you expect for that? Don’t \+add even\+add* the tax collectors do that?\wj*
 \v 47 \wj And if you’re only polite to your own circle, how is that achieving anything? Aren’t non-Jews just the same?\wj*
 \v 48 \x + \xo 5:48: \xt Lev 19:2; Deu 18:13.\x*\wj Instead you should all \+add aim to\+add* be perfect just like your heavenly father is perfect.\wj*
 \c 6
 \s1 Giving to the poor
 \p
-\v 1 \x + \xo 6:1: \xt Mat 23:5.\x*“\wj \add You people should\add* take care not to \+add only\+add* obey God in front of others so they’ll think well of you, because if you do, you’ll certainly get no reward from your father in the heavens.\wj*
+\v 1 \x + \xo 6:1: \xt Mat 23:5.\x*“\wj \+add You people should\+add* take care not to \+add only\+add* obey God in front of others so they’ll think well of you, because if you do, you’ll certainly get no reward from your father in the heavens.\wj*
 \p
 \v 2 “\wj So when you’re giving to the poor, don’t make a big display of it like the hypocrites do in the meeting halls and in the streets so they’ll get the people’s praises. I can assure you that they’ve already received their reward in full.\wj*
 \v 3 \wj But when you give to the poor, don’t let your left hand know what your right hand is doing,\wj*
@@ -310,11 +310,11 @@
 \v 13 \wj Don’t bring us to \+add the point of\+add* being tempted,\wj*
 \q1 \wj but keep us away from doing evil things.’\wj*
 \m
-\v 14 \x + \xo 6:14-15: \xt Mrk 11:25-26.\x*“\wj Because if you \add people\add* forgive other people’s wrongs, then your heavenly father will also forgive your wrongs.\wj*
+\v 14 \x + \xo 6:14-15: \xt Mrk 11:25-26.\x*“\wj Because if you \+add people\+add* forgive other people’s wrongs, then your heavenly father will also forgive your wrongs.\wj*
 \v 15 \wj But if you don’t forgive other people’s wrongs, then your father won’t forgive your wrongs either.\wj*
 \s1 Teaching about fasting
 \p
-\v 16 “\wj Whenever you \add people\add* are abstaining from food, don’t look miserable like the hypocrites, because they intentionally try to look awful so that everyone will notice that they’re fasting. I can assure you that they’ve already received their reward in full.\wj*
+\v 16 “\wj Whenever you \+add people\+add* are abstaining from food, don’t look miserable like the hypocrites, because they intentionally try to look awful so that everyone will notice that they’re fasting. I can assure you that they’ve already received their reward in full.\wj*
 \v 17 \wj Instead, when you fast, comb your hair and wash your face\wj*
 \v 18 \wj so that no one will realise that you’re fasting, other than your father who’s not visible to you. Then your father who sees everything will reward you.\wj*
 \s1 Wealth in heaven
@@ -331,7 +331,7 @@
 \s1 God and wealth
 \r (Luke 16:13; 12:22-31)
 \p
-\v 24 “\wj No one can serve two masters, because they’ll either hate one and like the other one, or else will support one and despise the other. So you \add people\add* can’t serve both \+nd God\+nd* and money.\wj*
+\v 24 “\wj No one can serve two masters, because they’ll either hate one and like the other one, or else will support one and despise the other. So you \+add people\+add* can’t serve both \+nd God\+nd* and money.\wj*
 \p
 \v 25 “\wj So that’s why I’m telling you all not to worry about your \+add worldly\+add* life—\+add things like\+add* what you’ll eat or drink, or how you look and what you’ll wear. Isn’t life more than food, and the body more than clothing?\wj*
 \v 26 \wj Think about the birds in the sky—they don’t plant seeds or harvest crops or gather grain into barns, but it’s your heavenly father who feeds them. Aren’t each of you worth more than them?\wj*
@@ -341,7 +341,7 @@
 \v 29 \x + \xo 6:29: \xt 1Ki 10:4-7; 2Ch 9:3-6.\x*\wj but I can tell you that not even \+add King\+add* Solomon at the peak of his reign was dressed as well as the flowers.\wj*
 \v 30 \wj So if \+nd God\+nd* dresses the plants in the fields that are here today and thrown away tomorrow, won’t he care much more for you, you people with little faith?\wj*
 \p
-\v 31 “\wj That means that you \add people\add* don’t need to worry about having anything to eat or drink, or having clothes to wear.\wj*
+\v 31 “\wj That means that you \+add people\+add* don’t need to worry about having anything to eat or drink, or having clothes to wear.\wj*
 \v 32 \wj People with no trust in God try to obtain all those things, but your heavenly father \+add already\+add* knows that you need these things.\wj*
 \v 33 \wj So instead you should be striving \+add to enter God’s\+add* kingdom and to be guiltless in his eyes, and then all these other things will just follow.\wj*
 \v 34 \wj Don’t worry about tomorrow, because tomorrow can worry about itself—today’s problems are enough by themselves.\wj*
@@ -365,7 +365,7 @@
 \v 10 \wj Or if the child asked for some fish, who would give them a snake?\wj*
 \v 11 \wj So if evil people know how to give good gifts to their children, how much more will your father in the heavens give good things to those who ask him?\wj*
 \p
-\v 12 \x + \xo 7:12: \xt Luk 6:31.\x*“\wj So in every area, whatever you’d like others to do for you, that’s how you \add people\add* should be treating them. That’s \add what Mosheh’s\add* instructions and the prophets’ \add writings were about\add*.\wj*
+\v 12 \x + \xo 7:12: \xt Luk 6:31.\x*“\wj So in every area, whatever you’d like others to do for you, that’s how you \+add people\+add* should be treating them. That’s \+add what Mosheh’s\+add* instructions and the prophets’ \+add writings were about\+add*.\wj*
 \s1 The wide and narrow gates
 \r (Luke 13:24)
 \p
@@ -375,7 +375,7 @@
 \r (Luke 6:43-44)
 \p
 \v 15 “\wj Watch out for false prophets who come to you in sheep’s clothing, but inside they’re swindling wolves.\wj*
-\v 16 \wj You \add people\add* will know who they are if you observe their fruit. Does anyone pick grapes from thorn bushes, or figs from thistles?\wj*
+\v 16 \wj You \+add people\+add* will know who they are if you observe their fruit. Does anyone pick grapes from thorn bushes, or figs from thistles?\wj*
 \v 17 \wj Similarly, every good tree produces good fruit, but the bad tree produces evil fruit.\wj*
 \v 18 \wj A good tree can’t produce bad fruit, and a bad tree can’t produce good fruit.\wj*
 \v 19 \x + \xo 7:19: \xt Mat 3:10; Luk 3:9.\x*\wj Every tree that doesn’t produce good fruit will be chopped down and thrown into the fire.\wj*
@@ -558,7 +558,7 @@
 \v 12 \wj When you enter a home, bless it,\wj*
 \v 13 \wj and if the house is worthy of it, let your peace come onto it, but if not, let your peace return to you.\wj*
 \v 14 \x + \xo 10:14: \xt Acts 13:51.\x*\wj If there’s any that don’t accept you or don’t want to hear your messages, shake the dust off your feet as you leave that house or city \+add as a sign that you all accept no responsibility for them\+add*.\wj*
-\v 15 \x + \xo 10:15: a \xt Mat 11:24; \xo b \xt Gen 19:24-28.\x*\wj I can assure you that it will be more tolerable for the towns of Sodom and Amorah \add (Gomorrah)\add* on the day of judgement that it will be for those places.\wj*
+\v 15 \x + \xo 10:15: a \xt Mat 11:24; \xo b \xt Gen 19:24-28.\x*\wj I can assure you that it will be more tolerable for the towns of Sodom and Amorah \+add (Gomorrah)\+add* on the day of judgement that it will be for those places.\wj*
 \s1 The coming persecution
 \r (Mark 13:9-13; Luke 21:12-17)
 \p
@@ -1403,7 +1403,7 @@
 \v 29 “\wj You’ve got it wrong,\wj*” \nd Yeshua\nd* answered, “\wj because you don’t understand either the scriptures or God’s power,\wj*
 \v 30 \wj because in the resurrection, there’ll be no marrying or getting engaged, because they’ll be like the messengers in heaven.\wj*
 \v 31 \wj But as for the resurrection of the dead, isn’t it \+add written in the scriptures\+add* that \+nd God\+nd* said,\wj*
-\v 32 \x + \xo 22:32: \xt Exo 3:6.\x*\wj ‘\+em I am\+em* Abraham’s god and Isaac’s god and Yacob’s god.’? So \nd God\nd* is not the god of the dead, but of the living.\wj*”
+\v 32 \x + \xo 22:32: \xt Exo 3:6.\x*\wj ‘\+em I am\+em* Abraham’s god and Isaac’s god and Yacob’s god.’? So \+nd God\+nd* is not the god of the dead, but of the living.\wj*”
 \p
 \v 33 When the crowds heard his answer, they were amazed at his teaching.
 \s1 The most important command
@@ -1426,7 +1426,7 @@
 \p
 \v 43 “\wj Then how could David,\wj*” he continued, “\wj under the \+add inspiration of God’s\+add* \+nd spirit\+nd*, call him ‘\+nd master\+nd*’ when he said,\wj*
 \q1
-\v 44 \x + \xo 22:44: \xt Psa 110:1.\x*\wj ‘\nd Yahweh\nd* said to my master:\wj*
+\v 44 \x + \xo 22:44: \xt Psa 110:1.\x*\wj ‘\+nd Yahweh\+nd* said to my master:\wj*
 \q1 \wj “Sit there on my right\wj*
 \q1 \wj until I conquer your enemies.”\wj*
 \m
@@ -1466,7 +1466,7 @@
 \v 22 \x + \xo 23:22: \xt Isa 66:1; Mat 5:34.\x*\wj And anyone who makes an oath on heaven, is bound by both God’s throne and the one who’s sitting on it.\wj*
 \p
 \v 23 \x + \xo 23:23: \xt Lev 27:30.\x*“\wj You religious teachers and Pharisees are hypocrites and will have a bad end because you give a tenth of your herbs but you ignore the weightier parts of \+add God’s\+add* commands like justice and mercy and faith. \+em Those\+em* are the things that should have been observed and not left out.\wj*
-\v 24 \wj You blind guides! You try to strain out a gnat and \add end up\add* swallowing a camel.\wj*
+\v 24 \wj You blind guides! You try to strain out a gnat and \+add end up\+add* swallowing a camel.\wj*
 \p
 \v 25 “\wj You religious teachers and Pharisees are hypocrites and will have a bad end because you scrub the outside of \+add your\+add* cups and bowls but the inside is \+add still\+add* full of greed and selfishness.\wj*
 \v 26 \wj You blind Pharisees. First you \+add should\+add* clean the inside of \+add your\+add* cup and dish so that the outside would also become clean.\wj*
@@ -1482,7 +1482,7 @@
 \v 32 \wj actually you’re just the same as your ancestors.\wj*
 \v 33 \x + \xo 23:33: \xt Mat 3:7; 12:34; Luk 3:7.\x*\wj Bunch of snakes, brood of vipers, how \+add do you think that\+add* you’ll escape the judgement of hell?\wj*
 \v 34 \wj Because of that, listen, I’m \+add now\+add* sending out \+add more\+add* prophets and wise \+add preachers\+add* and teachers to you all. You’ll kill off some of them and have others executed on stakes. You’ll flog some of them in your meeting halls, and you’ll persecute others from city to city,\wj*
-\v 35 \x + \xo 23:35: a \xt Gen 4:8; \xo b \xt 2Ch 24:20-21.\x*\wj so that \+add the judgement for\+add* all the deaths of godly people around the world will fall on you all. This includes the blood of the innocent Hevel \add (Abel)\add* all the way \+add through the centuries\+add* to the blood of Zekaryah (son of Berekiah) who you all murdered between the temple and the altar.\wj*
+\v 35 \x + \xo 23:35: a \xt Gen 4:8; \xo b \xt 2Ch 24:20-21.\x*\wj so that \+add the judgement for\+add* all the deaths of godly people around the world will fall on you all. This includes the blood of the innocent Hevel \+add (Abel)\+add* all the way \+add through the centuries\+add* to the blood of Zekaryah (son of Berekiah) who you all murdered between the temple and the altar.\wj*
 \v 36 \wj Yes, I can assure you that all these things will happen to this generation.\wj*
 \s1 Yeshua’s concern for Yerushalem
 \r (Luke 13:34-35)
@@ -1504,7 +1504,7 @@
 \v 4 “\wj Watch out in case others mislead you,\wj*” \nd Yeshua\nd* answered,
 \v 5 “\wj because many will come claiming to be me and saying that they’re the \+nd messiah\+nd* and misleading many.\wj*
 \v 6 \wj You will hear about wars and reports about wars \+add further away\+add*. Don’t be alarmed, but keep watching because these things need to happen, although that’s not yet the end\wj*
-\v 7 \wj because \add people groups will turn against each other\add* and country \add rise\add* against country, plus there’ll be famines and earthquakes.\wj*
+\v 7 \wj because \+add ≈people groups will turn against each other\+add* and country \+add ≡rise\+add* against country, plus there’ll be famines and earthquakes.\wj*
 \v 8 \wj But all of those things are just like the beginning of labour pains.\wj*
 \p
 \v 9 \x + \xo 24:9: \xt Mat 10:22.\x*“\wj Then they’ll turn \+add my followers\+add* in for persecution, and some will be killed.\wj*
@@ -1591,7 +1591,7 @@
 \r (Luke 19:11-27)
 \p
 \v 14 \x + \xo 25:14-30: \xt Luk 19:11-27.\x*“\wj It’s like a man who was leaving on a trip. He called his slaves and shared his savings among them \+add for them to manage\+add*.\wj*
-\v 15 \wj He gave five bags of silver\f + \fr 25:15 \ft Probably silver coins, or possibly gold, and perhaps each bag weighing up to 24kg, although these details aren’t vital to the story. (See https://wpmu2.azurewebsites.net/nlt/2024/02/01/word-studies-in-the-new-living-translation-τάλαντον-talanton.)\f* to one, two bags to another, and one to the other, each according to his ability, and then he departed.\wj*
+\v 15 \wj He gave five bags of silver\wj*\f + \fr 25:15 \ft Probably silver coins, or possibly gold, and perhaps each bag weighing up to 24kg, although these details aren’t vital to the story. (See https://wpmu2.azurewebsites.net/nlt/2024/02/01/word-studies-in-the-new-living-translation-τάλαντον-talanton.)\f* \wj to one, two bags to another, and one to the other, each according to his ability, and then he departed.\wj*
 \v 16 \wj In his absence, the one with five bags of silver used it for trading and gained five more bags.\wj*
 \v 17 \wj Similar, the one with two bags gained two more bags.\wj*
 \v 18 \wj But the one who received the one bag, he went off and dug a hole in the ground and hid his master’s silver.\wj*
