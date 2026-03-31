@@ -49,6 +49,7 @@ CHANGELOG:
     2025-02-16 Change gloss helper to use ˓˒ instead of // around gloss helper (since / also used for alternative glosses)
     2025-03-03 Added /nb line after chapter numbers
     2026-02-09 Handle updated tables with no 'Medieval' column in the collation table (plus other relatively minor changes)
+    2026-04-01 Added /ie at end of introduction (as although it's optional in USFM, it's part of the ESFM spec)
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple, Optional
@@ -62,10 +63,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2026-03-23' # by RJH
+LAST_MODIFIED_DATE = '2026-04-01' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
-PROGRAM_VERSION = '0.99'
+PROGRAM_VERSION = '1.0'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -464,7 +465,8 @@ def export_esfm_literal_English_gloss() -> bool:
 \\toc1 {BOOK_NAME_MAP[book_number]}
 \\toc2 {BOOK_NAME_MAP[book_number]}
 \\toc3 {book_csv_rows[book_number-1]['eAbbreviation']}
-\\mt1 {BOOK_NAME_MAP[book_number]}"""
+\\mt1 {BOOK_NAME_MAP[book_number]}
+\\ie"""
                 last_book_number = book_number
                 last_chapter_number = last_verse_number = last_word_number = 0
             if chapter_number != last_chapter_number:  # we've started a new chapter

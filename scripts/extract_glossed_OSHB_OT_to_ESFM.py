@@ -65,6 +65,7 @@ CHANGELOG:
     ####2025-06-24 Remove superfluous final spaces from OSHB footnotes (why were they there???) Fixed upstream
     2025-06-29 Fixed a couple of systematic glossing errors ('todrink' and 'forhelp')
     2026-03-19 Did the minimum to get the updated Macula Hebrew data to work
+    2026-04-01 Added /ie at end of introduction (as although it's optional in USFM, it's part of the ESFM spec)
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple
@@ -79,10 +80,10 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2026-03-19' # by RJH
+LAST_MODIFIED_DATE = '2026-04-01' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed_OSHB_OT_to_ESFM"
 PROGRAM_NAME = "Extract glossed OSHB OT ESFM files"
-PROGRAM_VERSION = '0.64'
+PROGRAM_VERSION = '1.0'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -325,7 +326,8 @@ def export_literal_English_gloss_esfm() -> bool:
 \\toc1 {English_book_name}
 \\toc2 {English_book_name}
 \\toc3 {USFM_book_code}
-\\mt1 {'Songs/Psalms' if English_book_name=='Psalms' else English_book_name}"""
+\\mt1 {'Songs/Psalms' if English_book_name=='Psalms' else English_book_name}
+\\ie"""
             last_BBB = BBB
             last_chapter_number = last_verse_number = last_word_number = 0
         if chapter_number != last_chapter_number:  # we've started a new chapter

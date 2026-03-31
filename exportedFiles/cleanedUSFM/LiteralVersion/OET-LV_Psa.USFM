@@ -5,13 +5,14 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2026-03-26 16:06 by extract_glossed_OSHB_OT_to_ESFM v0.64
+\rem ESFM file created 2026-04-01 09:25 by extract_glossed_OSHB_OT_to_ESFM v1.0
 \rem USFM file edited by ScriptedBibleEditor v0.35
 \h Psalms
 \toc1 Psalms
 \toc2 Psalms
 \toc3 Psa
 \mt1 Songs/Psalms
+\ie
 \c 1
 \nb
 \v 1 How_blessed the=man\f + \fr 1:1 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* who not he_walks in_\add the\add*÷counsel_of wicked_\add people\add* and÷in_\add the\add*÷way_of sinners not he_stands and÷in_\add the\add*÷seat_of mockers not he_sits.
