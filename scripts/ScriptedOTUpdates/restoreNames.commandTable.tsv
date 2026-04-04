@@ -1146,8 +1146,8 @@ H	KI1,CH2,JER								Micaiah			מִיכָיְהוּ		H4321 Mikayehu (18) 1Ki 22:
 H					JDG_17:1,JDG_17:4				Micaiah			מִיכָהוּ		H4319 Mikahu (2) Jdg 17:1,4*
 H	KI2,NEH								Micaiah			מִיכָיָה		{ H4320 Mikayah (3) 2Ki 22:12, Neh 12:35,41*
 H					JER_26:18				Micah			מִיכָיָה		{ H4320 Mikayah (1) Jer 26:18*
-H									Michael			מִיכָאֵל		H4317 (13) Num 13:13, 1Chr 5:13-14, 6:40, ...,  Ezr 8:8, ...
-H									Michal			מִיכָל		H4323 daughter of Saul (18) 1Sam 14:49, 18:20,27-28, ...
+H	NUM,CH1,CH2,EZR,DAN								Michael			מִיכָאֵל		H4317 (13) Num 13:13, 1Chr 5:13-14, 6:40, ...,  Ezr 8:8, ...
+H	SA1,SA2,CH1								Michal			מִיכָל		H4324 daughter of Saul (18) 1Sam 14:49, 18:20,27-28, ...
 H									Midian			מִדְיָן		H4080 (59) Gen 25:2,4, 36:25, Exo 2:15-16, 3:1, 4:19, ..., Acts 7:29
 H	CH1								Mikloth			מִקְלוֹת		H4732 (4) 1Chr 8:32, 9:37-38, 27:4*
 wH					CH1_15:18,CH1_15:21				Mikneiah			מִקְנֵיָהוּ		H4737 (2) 1Chr 15:18,21*
@@ -1155,14 +1155,14 @@ H					NEH_12:36				Milalai			מִלֲלַי		H4450 (1) Neh 12:36*
 H	KI1,KI2,CH1,ZEP								Milcom			מַלְכָּם		{ H4445 (5) 1Ki 11:5,33, 2Ki 23:13, 1Chr 8:9, Zep 1:5*
 H	KI1,KI2,CH1,ZEP								Malcam			מַלְכָּם		{ H4445 (5) 1Ki 11:5,33, 2Ki 23:13, 1Chr 8:9, Zep 1:5*
 H	GEN,NUM,JOS								Milcah			מִלְכָּה		H4435 woman (11) Gen 11:29, 22:20,23, 24:15,24,47, Num 26:33, 27:1, 36:11, Jos 17:3*
-H									Millo			מִלּוֹא		H4407 (10) Jdg 9:6,20, 2Sam 5:9, 1Ki 9:15,24, 11:27, ...
-H									Miniamin			מִנְיָמִין		H4509 (3) 2Chr 31:15, Neh 12:17,41*
-H									Miriam			מִרְיָם		H4813 (15) Exo 15:20-21, Num 12:1,4-5,10 also 1Chr 4:17 (a man)
+H	JDG,SA2,KI1,KI2,CH1,CH2								Millo			מִלּוֹא		H4407 (10) Jdg 9:6,20, 2Sam 5:9, 1Ki 9:15,24, 11:27, 2Ki 12:20, 1Chr 11:8, 2Chr 32:5*
+H					CH2_31:15,NEH_12:17,NEH_12:41				Miniamin			מִנְיָמִין		H4509 (3) 2Chr 31:15, Neh 12:17,41*
+H	EXO,NUM,CH1								Miriam			מִרְיָם		H4813 (15) Exo 15:20-21, Num 12:1,4-5,10 also 1Chr 4:17 (a man)
 wH					CH1_8:10				Mirma			מִרְמָה		{ H4821 (1) 1Chr 8:10*
 H					CH1_8:10				Mirmah			מִרְמָה		{ H4821 (1) 1Chr 8:10*
-H									Mishael			מִישָׁאֵל		H4332 (7) Exo 6:22, Lev 10:4, Neh 8:4, Dan 1:6-7,11,19*
+H	EXO,LEV,NEH,DAN								Mishael			מִישָׁאֵל		H4332 (7) Exo 6:22, Lev 10:4, Neh 8:4, Dan 1:6-7,11,19*
 H					CH1_8:12				Misham			מִשְׁעָם		H4936 (1) 1Chr 8:12*
-H									Mishma			מִשְׁמָע		H4927 (4) Gen 25:14, 1Chr 1:30, 4:25-26*
+H	GEN,CH1								Mishma			מִשְׁמָע		H4927 (4) Gen 25:14, 1Chr 1:30, 4:25-26*
 H					EZR_2:2				Mispar			מִסְפָר		H4558 (1) Ezr 2:2*
 H					NEH_7:7				Mispereth			מִסְפֶרֶת		H4559 woman (1) Neh 7:7*
 H					EZR_1:8,EZR_4:7				Mithredath			מִתְרְדָת		H4990 (2) Ezr 1:8, 4:7*
@@ -1170,7 +1170,7 @@ H									Mizraim			מִצְרַיִם		H4714 (614) Gen 10:6,13, 12:10-11,14, 13
 H	GEN,CH1								Mizzah			מִזָּה		H4199 (3) Gen 36:13,17, 1Chr 1:37*
 H									Moab			מוֹאָב		H4124 son of Lot (181) Gen 19:37, ..., Ruth 1:1
 H					NEH_12:17				Moadiah			מוֹעַדְיָה		H4153 (1) Neh 12:17*
-H									Molech			מֹלֶךְ		H4432 (9) Lev 18:21, 20:2-5, 1Ki 11:7, 2Ki 23:10, Jer 32:35, Amos 5:26*
+H	LEV,KI1,KI2,JER,AMO								Molech			מֹלֶךְ		H4432 (9) Lev 18:21, 20:2-5, 1Ki 11:7, 2Ki 23:10, Jer 32:35, Amos 5:26*
 H					CH1_2:29				Molid			מוֹלִיד		H4140 (1) 1Chr 2:29*
 H									Mordecai			מָרְדְּכַי		H4782 (60) Ezr 2:2, Neh 7:7, Est 2:5,7,10-11,15,19-22, ...
 H									Moses			מֹשֶׁה		H4872 (766) Exo 2:10-11,14-15,17,21, 3:1,3-4, ...
