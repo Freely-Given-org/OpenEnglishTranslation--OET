@@ -80,7 +80,7 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-03-25' # by RJH
+LAST_MODIFIED_DATE = '2026-04-07' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.87'
@@ -230,7 +230,8 @@ simpleVerbs = ('accepted','accepting','accepts','accept',
                     'confessed','confessing','confesses','confess',
                     'cried','crying','cries','cry',
                 'deceived','deceiving','deceives','deceive', 'defended','defending','defends','defend', 'departed','departing','departs','depart',
-                    'died','dying','dies','die', 'discussed','discussing','discusses','discuss', 'disowned','disowning','disowns','disown', 'distributed','distributing','distributes','distribute',
+                    'did','died', 'dying','dies','die', 'digs','dig','dug', 'discussed','discussing','discusses','discuss', 'disowned','disowning','disowns','disown', 'distributed','distributing','distributes','distribute',
+                    'do','done',
                     'drunk','drinking','drinks','drink',
                 'ate','eating','eats','eat', 'embraced','embracing','embraces','embrace',
                     'encouraged','encouraging','encourages','encourage', 'ended','ending','ends','end',
@@ -384,6 +385,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('bull','ox'),('bulls','oxen'),
     ('burning','fire'),
     ('But','And'),('but','And'),('But','and'),('but','and'),
+    ('cash','money'),('cash','silver'),
     ('chasing','pursuing'),
     ('cheerful','joy'),
     ('chest','ark'),
@@ -1919,7 +1921,7 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
     desiredV = (v-1) if havePsalmTitles and v>1 else v
 
     if NT:
-        if wordNumber in (119_194,142_216,149_264): return None # TODO: 1Cor 14:33, Heb 1:6, 1 Pet 2:19 (nd gets put inside add field).................................................................................
+        if wordNumber in (119_194,142_216,149_264,149303): return None # TODO: 1Cor 14:33, Heb 1:6, 1 Pet 2:19, 2:21 (nd gets put inside add field).................................................................................
     else:
         if wordNumber in (252_390,): return None # TODO: PSA 54:1 (v1 gets put into d field).................................................................................
 

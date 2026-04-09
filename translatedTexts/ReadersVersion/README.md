@@ -110,3 +110,4 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - altar 'horns' -> \add four\add* \add ≈projecting corners\add*
 - innards, entrails, intestines, guts
 - skin vs hide (of animal)
+- army commander Yahweh -> Commander-in-chief Yahweh
