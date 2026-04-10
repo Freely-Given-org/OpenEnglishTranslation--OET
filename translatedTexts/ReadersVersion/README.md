@@ -111,3 +111,4 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - innards, entrails, intestines, guts
 - skin vs hide (of animal)
 - army commander Yahweh -> Commander-in-chief Yahweh
+- proclaim -> announce ???

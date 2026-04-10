@@ -36,7 +36,7 @@ It does have the potential to make wrong connections that will need to be manual
         so that the number of wrong alignments is not huge.
 """
 from gettext import gettext as _
-from typing import List, Tuple, Optional
+# from typing import List, Tuple, Optional
 from pathlib import Path
 import glob
 import os.path
@@ -47,18 +47,14 @@ if __name__ == '__main__':
     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
-from BibleOrgSys.Bible import Bible
-from BibleOrgSys.Internals.InternalBibleInternals import getLeadingInt
-from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, BOOKLIST_66
-from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
-from BibleOrgSys.Reference.BibleVersificationSystems import BibleVersificationSystem #, BibleVersificationSystems
-from BibleOrgSys.Formats.ESFMBible import ESFMBible
+from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27
+from BibleOrgSys.Reference.BibleVersificationSystems import BibleVersificationSystem
 
 
-LAST_MODIFIED_DATE = '2025-10-08' # by RJH
+LAST_MODIFIED_DATE = '2026-04-09' # by RJH
 SHORT_PROGRAM_NAME = "count_completed_OET-RV_verses"
 PROGRAM_NAME = "Count completed OET-RV verses"
-PROGRAM_VERSION = '0.31'
+PROGRAM_VERSION = '0.35'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False

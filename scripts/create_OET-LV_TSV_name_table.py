@@ -45,10 +45,6 @@ if __name__ == '__main__':
     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
-# from BibleOrgSys.Bible import Bible
-# from BibleOrgSys.Internals.InternalBibleInternals import getLeadingInt
-# from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, BOOKLIST_66
-# from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitted to PyPI
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek

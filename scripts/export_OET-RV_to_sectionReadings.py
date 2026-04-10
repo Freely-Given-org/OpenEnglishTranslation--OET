@@ -45,10 +45,7 @@ if __name__ == '__main__':
     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
-from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, BOOKLIST_66, BOOKLIST_88
 import BibleOrgSys.Formats.ESFMBible as ESFMBible
-from BibleOrgSys.Bible import Bible
-from BibleOrgSys.Internals.InternalBibleInternals import InternalBibleEntryList, getLeadingInt
 
 
 LAST_MODIFIED_DATE = '2026-03-19' # by RJH
