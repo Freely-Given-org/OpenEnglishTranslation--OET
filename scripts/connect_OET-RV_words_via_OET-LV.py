@@ -71,8 +71,7 @@ if __name__ == '__main__':
     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
-from BibleOrgSys.Internals.InternalBibleInternals import getLeadingInt, InternalBibleEntryList
-# from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
+from BibleOrgSys.Internals.InternalBibleInternals import getPositiveLeadingInt, InternalBibleEntryList
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 
 import sys
@@ -80,7 +79,7 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-04-07' # by RJH
+LAST_MODIFIED_DATE = '2026-04-11' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.87'
@@ -358,6 +357,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     # Vocab differences / synonyms
     ('afraid','feared'),
     ('agreeing','confirming'),
+    ('always','perpetuity'),
     ('amazed','astonished'),
     ('amazed','marvelling'),
     ('ancestors','fathers'),
@@ -390,7 +390,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('cheerful','joy'),
     ('chest','ark'),
     ('clothes','apparel'),('clothes','garments'),
-    ('commander','hosts'),
+    ('Commander-in-chief','hosts'),
     ('confused','confounded'),
     ('continued','said'),
     ('cross','pass over'),
@@ -1892,7 +1892,7 @@ def getLVWordRow( wordWithNumber:str, testament:str ) -> Tuple[str,int,List[str]
     try: wordNumber = int( wordNumber )
     except ValueError:
         logging.critical( f"getLVWordRow() got non-number '{wordNumber}' from '{wordWithNumber}'" )
-        wordNumber = getLeadingInt( wordNumber )
+        wordNumber = getPositiveLeadingInt( wordNumber )
     assert wordNumber < len( state.wordTable[testament] )
     wordRow = state.wordTable[testament][wordNumber]
     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"'{word}' {wordRow}" )

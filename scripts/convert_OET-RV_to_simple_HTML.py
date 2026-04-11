@@ -62,7 +62,7 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
-from BibleOrgSys.Internals.InternalBibleInternals import getLeadingInt
+from BibleOrgSys.Internals.InternalBibleInternals import getSmallLeadingInt
 
 
 LAST_MODIFIED_DATE = '2026-03-31' # by RJH
@@ -1088,10 +1088,10 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                     assert not inTable
                     book_html = f'{book_html}</div><!--{inRightDiv}-->\n'
                     inRightDiv = False
-                book_html = f'{book_html}<div class="rightS2Box"><p class="{marker}"><span class="cv">{C}:{getLeadingInt(V)+1}</span> {rest}</p>\n'
+                book_html = f'{book_html}<div class="rightS2Box"><p class="{marker}"><span class="cv">{C}:{getSmallLeadingInt(V)+1}</span> {rest}</p>\n'
                 inRightDiv = 'rightS2Box'
             else:
-                book_html = f'{book_html}<p class="{marker}"><span class="cv">{C}:{getLeadingInt(V)+1}</span> {rest}</p>\n'
+                book_html = f'{book_html}<p class="{marker}"><span class="cv">{C}:{getSmallLeadingInt(V)+1}</span> {rest}</p>\n'
         elif marker == 'r':
             if inParagraph:
                 book_html = f'{book_html}</{inParagraph}>\n'
