@@ -1,4 +1,4 @@
-\id LEV - Open English Translation—Readers’ Version (OET-RV) v0.0.20
+\id LEV - Open English Translation—Readers’ Version (OET-RV) v0.1.02
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 LEV
@@ -7,18 +7,21 @@
 \toc1 Leviticus
 \toc2 Leviticus
 \toc3 Lev.
+\mt2 The handbook of
+\mt1 Sacred Living
+\mt3 commonly known as
 \mt1 Leviticus
 \is1 Introduction
-\ip The Latin word \bk Leviticus\bk* means ‘concerning the Levites’, who were the tribe of workers and priests who God chose serve him at the altar and in other religious ceremonies. Hebrew readers call this document ‘Vayikrā’ which is the first word in the Hebrew and means ‘And he called’ (Yahweh called Mosheh). Some European and other translations call it ‘The third book of Mosheh/Moses’.
-\ip It’s believed that of people Moses just the writer of this book there to Mountain Sinai at time of camped them there, because can be read this there to: 1:1, 4:1, 6:1,24, and of 8:1.
-\ip The Libitiku document concerning this of correct behaviour of descendants of Yisrael/Israel so that eg-isipen them clean of God. The one means eg-isipen them clean of God is the sacrificing of desire of God.
-\ip And/Now so that egkaay-ayaran indeed the sacrificing, mig-alam the god of person Aharon/Aaron and his descendants.
+\ip The Latin word \bk Leviticus\bk* means ‘concerning the Levites’, who were the tribe of workers and priests who God chose to serve him at the altar and in other religious ceremonies. Hebrew readers call this document ‘Vayikrā’ which is the first word in the Hebrew and means ‘And he called’ (Yahweh called Mosheh/Moses). Some European and other translations call it ‘The third book of Mosheh/Moses’.
+\ip It’s presumed that Mosheh wrote this document down while they were all camped there at Mt. Sinai as mentioned in a few places: 1:1, 4:1, 6:1,24, and of 8:1.
+\ip This document focuses on the proper values and behaviour that the Israelis should observe as Yahweh’s chosen and sacred people. That involved staying ‘clean’ as per Yahweh’s values by carefully following his detailed instructions, and by avoiding wickedness.
+\ip Some of the instructions apply particularly to the priests (Aharon’s/Aaron’s descendants) and to the remainder of their own tribe (the Levites that this document is often named after) who served the priests in their sacred ceremonies.
 \iot Main components of this account
-\io1 The laws concerning the offerings and of sacrifices \ior 1:1–7:38\ior*
-\io1 The dedication of Aharon and of his children males so that to become priests \ior 8:1–10:20\ior*
-\io1 The laws concerning the cleaning and of not clean \ior 11:1–15:33\ior*
-\io1 The day of forgiveness of sin \ior 16:1-34\ior*
-\io1 The laws concerning the pegpabecome_holy of birth and of worshipping \ior 17:1–27:34\ior*
+\io1 Instructions about offerings and sacrifices \ior 1:1–7:38\ior*
+\io1 The dedication of Aharon and his sons as Yahweh’s priests \ior 8:1–10:20\ior*
+\io1 Instructions about ‘clean’ and ‘unclean’ \ior 11:1–15:33\ior*
+\io1 The day for getting right with Yahweh \ior 16:1-34\ior*
+\io1 Instructions for living and worshipping as a sacred people \ior 17:1–27:34\ior*
 \rem This is still a very early look into the unfinished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
@@ -704,7 +707,7 @@
 \v 1 Then Yahweh told Mosheh:
 \p
 \v 2 Tell the \add Israeli\add* that I am their god Yahweh.
-\v 3 \add They mustn’t behave as if they’re still there in\add* Egypt, nor should they \add behave like the Caananites that were living\add* in the land that I’m taking you all into, and don’t \add emulate their customs and practices\add*.
+\v 3 \add They mustn’t behave as if they’re still there in\add* Egypt, nor should they \add behave like the Canaanites that were living\add* in the land that I’m taking you all into, and don’t \add emulate their customs and practices\add*.
 \v 4 You all must \add imbibe my values and follow my instructions\add*. I am your god Yahweh.
 \v 5 You all must \add follow my instructions and my values\add*—those who do so will live. I am your god Yahweh.\x + \xo 18:5: \xt Neh 9:29; Eze 18:9; 20:11-13; Luk 10:28; Rom 10:5; Gal 3:12.\x*
 \p
@@ -793,7 +796,7 @@
 \v 36 your scales and weights and measuring containers must be honest. I am your god Yahweh who brought you all out of Egypt \add (Heb. Mitsrayim)\add*.
 \v 37 You all must \add obey my instructions and decisions\add* and \add stick to\add* them. I am Yahweh.
 \c 20
-\s1 Penalities for disobedience
+\s1 Penalties for disobedience
 \p
 \v 1 Then Yahweh told Mosheh:
 \p
@@ -1031,7 +1034,7 @@
 \p
 \v 2 Tell the \add Israelis\add* that when you all enter the land that I’m giving you, the land must \add observe\add* a \add rest year\add* for Yahweh.
 \v 3 You can \add plant your crops\add*, prune your \add grapevines\add*, and \add harvest\add* \add all\add* its produce for six years,
-\v 4 but during the seventh year, yyou must \add allow the land to rest\add* \add to honour\add* Yahweh. You musn’t \add plant any crops or prune any grapevines\add*.
+\v 4 but during the seventh year, you must \add allow the land to rest\add* \add to honour\add* Yahweh. You mustn’t \add plant any crops or prune any grapevines\add*.
 \v 5 Don’t \add systematically\add* harvest the self-sown \add crops\add* or the grapes from the untrimmed vines. It must be a rest year for the land.
 \v 6 \add However, during\add* the rest year, the land \add will provide\add* food for you and your servants, and for your hired workers and the foreigners who are living among you,
 \v 7 as well as your livestock and the \add wild\add* animals across the land. Any produce from the land can be eaten.
@@ -1071,138 +1074,142 @@
 \v 32 The Levites’ cities and houses will belong to them permanently—the Levites \add must \+em always\+em* be able to buy them back\add*,
 \v 33 \add but\add* \add even\add* if \add they\add* \add don’t\add* \add buy them back\add*, they must be \add returned in the restoration celebration year\add* because the Levites’ houses are their \add only\add* possession among the \add Israelis\add*.
 \v 34 \add In addition,\add* they may not sell the pastureland around their cities because that’s their permanent possession.
-\s1 The pegpasambey of poor
+\s1 Assisting the poor
 \p
-\v 35 \x + \xo 25:35: \xt Deu 15:7-8.\x*◙
-\v 36 ◙
-\v 37 \x + \xo 25:37: \xt Exo 22:25; Deu 23:19-20.\x*◙
-\v 38 ◙
-\s1 The being sent away of slaves
+\v 35 If \add a fellow citizen\add* becomes poor and \add is unable to survive\add* beside you, then you must \add support\add* \add that person\add* and \add allow him to live with you like a foreigner might\add*.\x + \xo 25:35: \xt Deu 15:7-8.\x*
+\v 36 You mustn’t \add charge\add* \add that person\add* any interest \add or make a profit from him\add*, \add but\add* you must \add respect and obey\add* your god, and your \add fellow citizen\add* can \add continue\add* to live with you.
+\v 37 \add If you loan him money\add*, don’t \add charge\add* interest \add or make a profit from his\add* food.\x + \xo 25:37: \xt Exo 22:25; Deu 23:19-20.\x*
+\v 38 I am your god Yahweh who brought you all out of Egypt \add (Heb. Mitsrayim)\add* to give you the Kanaan \add region\add* \add and\add* to be your god.
+\s1 Treatment of slaves
 \p
-\v 39 \x + \xo 25:39-46: \xt Exo 21:2-6; Deu 15:12-18.\x*◙
-\v 40 ◙
-\v 41 ◙
-\v 42 ◙
-\v 43 ◙
-\v 44 ◙
-\v 45 ◙
-\v 46 ◙
+\v 39 If \add a fellow citizen\add* becomes poor and selling himself to you, don’t \add force him to work like a slave\add*—\x + \xo 25:39-46: \xt Exo 21:2-6; Deu 15:12-18.\x*
+\v 40 \add treat him\add* like a hired worker or a temporary resident. He can work with you until the \add restoration celebration\add* year
+\v 41 \add when he must be released\add* \add along with\add* his children, and he can return to his family, and to \add his clan’s land\add*,
+\v 42 because they are my slaves that I brought out of Egypt so they mustn’t be sold \add again\add* as slaves.
+\v 43 Don’t rule harshly over \add them\add* \add but rather\add*, \add respect and obey\add* your god.
+\v 44 \add If you want to have\add* male or female slaves, they you can buy them from the surrounding countries,
+\v 45 or else from the children or clans of the foreigners who are living among you—you all can \add own them\add*
+\v 46 and then pass them on to your children to own as their inheritance. You all can make them work indefinitely \add for you\add*, but you mustn’t harshly oppress your \add fellow Israelis\add*.
 \p
-\v 47 ◙
-\v 48 ◙
-\v 49 ◙
-\v 50 ◙
-\v 51 ◙
-\v 52 ◙
-\v 53 ◙
-\v 54 ◙
-\v 55 ◙
+\v 47 If a foreigner living among you \add becomes wealthy\add*, \add yet\add* your \add fellow citizen\add* becomes poor and sells himself to that resident foreigner or to a member of their clan,
+\v 48 then there’s always the right of redemption even after he’s sold himself, \add so\add* one of his brothers can \add buy him back\add*,
+\v 49 or his uncle or \add cousin\add* or another relative from the clan can \add pay to free him\add*. \add In fact,\add* he might even be able to \add buy his own way out\add*.
+\v 50 He must \add work out\add* with his master how many years from when he sold himself, until the \add restoration celebration\add* year, and \add figure out\add* the price according to the wages of a hired worker for that many years.
+\v 51 If there’s still a lot of years \add to go\add*, he’d need to repay \add most\add* of \add what he sold himself for\add*,
+\v 52 \add but\add* if it’s only a few years \add to go\add*, \add the price for his freedom would be proportionally smaller\add*.
+\v 53 While he works for \add the foreign master\add*, he must be treated like an annual hired worker. \add You others must ensure that he’s not treated\add* harshly.
+\v 54 Then even if he’s not \add bought out\add*, he and his children must be released in the \add restoration celebration\add* year
+\v 55 because the \add Israelis\add* are my slaves—my slaves because I brought them out of Egypt. I am your god Yahweh.
 \c 26
-\s1 The gifts of that obedient
+\s1 Obedience will lead to prosperity
 \r (Deu. 7:12-24; 28:1-14)
 \p
-\v 1 \x + \xo 26:1: a \xt Lev 19:4; \xo b \xt Exo 20:4; Deu 5:8; 16:21-22; 27:1.\x*◙
-\v 2 ◙
+\v 1 You all mustn’t make worthless idols or carved images for yourselves, or set up sacred pillars. In your country, you must never bow down to an \add engraved\add* stone image, because I am your god Yahweh.\x + \xo 26:1: a \xt Lev 19:4; \xo b \xt Exo 20:4; Deu 5:8; 16:21-22; 27:1.\x*
+\v 2 You all must \add observe\add* my rest days and \add honour\add* my sanctuary. I am Yahweh.
 \p
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
+\v 3 If you’ll all \add follow my instructions\add* and \add remember my rules and obey\add* them,
+\v 4 then I’ll give you all rain \add in the proper season\add*, and the land will produce crops and the trees in the countryside will produce fruit.
+\v 5 The \add grain\add* threshing will \add continue until\add* the grape harvest, and the grape harvesting will \add continue until\add* \add it’s time to plant new crops\add*, and so you’ll all have \add plenty of food\add* and you’ll live securely \add there\add* on your land.
 \p
-\v 6 ◙
-\v 7 ◙
-\v 8 ◙
-\v 9 ◙
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
-\s1 Me dusa of that not obedient
+\v 6 Then I’ll give peace \add in your country\add* \add so that\add* you’ll all sleep \add without being afraid\add*. I’ll \add remove\add* the wild animals from your \add area\add* and there’ll be no \add raids or wars\add* in your \add region\add*.
+\v 7 You’ll all \add be able to\add* chase away your enemies and \add destroy them\add*—
+\v 8 five of you will chase away a hundred, and a hundred of you will chase away ten thousand, and you’ll \add be able to defeat\add* your enemies.
+\p
+\v 9 I’ll \add give you all my attention\add* and \add bless you with many children\add*, and I’ll \add maintain\add* my agreement with you all.
+\v 10 You’ll all \add still\add* \add be eating the previous year’s grain\add* when the new harvest \add starts\add*, and you’ll have to \add move\add* out \add that left-over grain\add* \add to make room for the new\add*.
+\v 11 Then I’ll put my residence among you all and won’t \add reject\add* you,
+\v 12 and I’ll walk among you and be your god, and you’ll all be my people.
+\v 13 I am your god Yahweh who brought you all out from being slaves in Egypt, and I broke the \add chains off you\add* \add so that you all could walk with heads erect\add*.
+\s1 Punishments for disobedience
 \r (Deu. 28:15-68)
 \p
-\v 14 \x + \xo 26:14-33: \xt Deu 28:15-68.\x*◙
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
+\v 14 \add However,\add* if you all won’t listen to me and won’t \add follow all those instructions\add*,\x + \xo 26:14-33: \xt Deu 28:15-68.\x*
+\v 15 and if you all reject my regulations and my \add values\add* \add to the point of\add* hating my commands, thus breaking my agreement,
+\v 16 then this is what I’ll do to you all: I’ll \add send\add* sudden terror to you all, and \add wasting diseases and sicknesses\add*. You’ll all \add be wasting your time\add* sowing seeds \add because\add* your enemies will eat \add the harvest\add*.
+\v 17 I’ll \add take action\add* against you, and you’ll be defeated by your enemies. You’ll be ruled over by those who hate you, and you’ll all \add run away frightened\add* \add even\add* when no one’s chasing you.
 \p
-\v 18 ◙
-\v 19 ◙
-\v 20 ◙
+\v 18 If you all \add still\add* won’t listen to me \add after that\add*, then I’ll continue on to discipline you seven times over for your \add disobedience\add*.
+\v 19 Then I’ll \add smash\add* your strong pride, and I’ll make the sky like iron \add with no rain\add* and your land \add hard\add* like bronze.
+\v 20 Your \add energy spent working\add* your land will be \add just\add* wasted \add as\add* your land won’t \add produce its crops\add*, and the trees won’t \add produce any fruit\add*.
 \p
-\v 21 ◙
-\v 22 ◙
+\v 21 Then if you’re all \add still\add* \add being contrary\add* and unwilling to listen to me, then I’ll \add send\add* seven times more plagues according to your \add disobedience\add*.
+\v 22 Then I’ll send in the wild animals \add to\add* make you childless and to cut back your livestocks, \add thus diminishing your numbers\add* and \add leaving\add* your roads desolate.
 \p
-\v 23 ◙
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
+\v 23 Then \add after that\add* if you all \add still\add* \add won’t accept my discipline\add* and \add continue to oppose\add* me,
+\v 24 then I myself will \add oppose\add* you all and \add punish\add* you all seven times over for your \add disobedience\add*.
+\v 25 I’ll \add send armies against\add* you all to avenge \add the breaking of our agreement\add*. You’ll be \add shut into\add* your cities \add where\add* I’ll send diseases in for you all, and \add allow your enemies to defeat\add* you.
+\v 26 When I \add limit your food supplies\add*, ten women will bake bread in one oven and \add it will be rationed\add* by weight—you’ll all eat \add but never\add* be satisfied.
 \p
-\v 27 ◙
-\v 28 ◙
-\v 29 ◙
-\v 30 ◙
-\v 31 ◙
-\v 32 ◙
-\v 33 ◙
-\v 34 ◙
+\v 27 In spite of \add all\add* that, if you all \add still\add* won’t listen to me, and \add continue to oppose\add* me,
+\v 28 then I’ll \add be in a hostile rage against\add* you all and I’ll discipline you seven times \add more\add* for your \add disobedience\add*
+\v 29 and you’ll \add start\add* eating your own sons and daughters.
+\v 30 I’ll destroy your \add hilltop shrines\add* and cut down you incense altars, then I’ll \add pile\add* your corpses on top of your idols’ corpses, and I myself will detest you all.
+\v 31 I’ll make your cities into \add heaps of rubble\add* and I’ll devastate your sanctuaries and \add no longer\add* smell the pleasing aromas \add of your sacrifices\add*.
 \p
-\v 35 ◙
-\v 36 ◙
-\v 37 ◙
-\v 38 ◙
-\v 39 ◙
+\v 32 I’ll devastate the \add region\add*, and your enemies who live in it will be appalled.
+\v 33 Then I’ll scatter you all among \add other\add* nations and then \add armies will come in\add* after you and your land will become desolate and your cities will become \add rubble\add*,
+\v 34 and the land will enjoy all its rest \add times\add* while it’s desolate and you’re all in your enemies’ \add countries\add*. The land will \add stop producing\add* and \add enjoy its times of resting\add*.
+\v 35 It will rest all through its desolation since it didn’t get its rest times when you lived on it.
 \p
-\v 40 ◙
-\v 41 ◙
-\v 42 ◙
-\v 43 ◙
-\v 44 ◙
-\v 45 ◙
+\v 36 Then those of you who are left in your enemies’ countries, I’ll make \add you paranoid\add* \add there\add*—even the sound of a blowing leaf will make them run away as if someone’s chasing them with a sword, and they’ll fall down even when no one’s chasing them.
+\v 37 They’ll stumble over each other as if \add being attacked\add*, but there won’t be anyone chasing them, and then you all won’t have the energy to stand up against your enemies.
+\v 38 You’ll die in \add various\add* countries and your enemies will consume you.
+\v 39 Those of you who are left will rot away amongst the wickedness in your enemies’ countries and because of the wickedness of their ancestors.
 \p
-\v 46 ◙
+\v 40 \add However,\add* if they confess their wickedness and their ancestors’ wickedness, that they’ve disobeyed and neglected me, and \add been hostile towards\add* me,
+\v 41 (and that I became hostile toward them and took their into their enemies’ countries,) and humble their \add undisciplined\add* hearts and \add admit their disobedience\add*,
+\v 42 then I’ll remember my agreements with Yakov \add (Jacob)\add* and with Yitshak \add (Isaac)\add* and with Avraham, and I’ll remember \add this\add* land.
+\v 43 The land \add here\add* will have been deserted by them and will have enjoyed its \add times of rest\add*, and they’ll accept their wickedness because they rejected my \add values\add* and they \add really\add* detested my regulations.
+\v 44 \add Despite that\add*, I won’t reject them in their enemies’ countries, and I won’t detest them enough to completely destroy them \add and\add* to break my agreement with them, because I am their god Yahweh.
+\v 45 I’ll remember the \add earlier\add* agreement with their ancestors that I brought out of Egypt while all the nations watched me be their god. I am Yahweh.
+\p
+\v 46 \add The above\add* are the \add instructions and values and rules\add* that Yahweh \add instilled\add* between him and the \add Israelis\add* through Mosheh \add (Moses)\add* there at Mt. Sinai.
 \c 27
-\s1 The halad iglekat of promises
+\s1 Valuations of vows to Yahweh
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\v 4 ◙
-\v 5 ◙
-\v 6 ◙
-\v 7 ◙
+\v 1 Then Yahweh told Mosheh:
 \p
-\v 8 ◙
+\v 2 Tell the \add Israelis\add* that when someone makes a special vow \add to offer someone\add* to Yahweh,
+\v 3 a man between twenty and sixty will be valued at fifty silver \add coins\add* (according to the sanctuary standard weights)
+\v 4 and a woman at thirty coins.
+\v 5 If it’s someone between five and twenty, then it’s twenty silver coins for a male and ten for a female.
+\v 6 Between one month old and five years, it’s five silver coins for a male and three for a female.
+\v 7 For sixty years old and older, it’s fifteen silver coins for a male and ten for a female.
 \p
-\v 9 ◙
-\v 10 ◙
-\v 11 ◙
-\v 12 ◙
-\v 13 ◙
+\v 8 If \add the maker of the vow\add* can’t afford the valuation, then \add that person\add* must stand in front of the priest \add and give an account\add*, and then the priest \add can set a value that they can afford\add*.
 \p
-\v 14 ◙
-\v 15 ◙
+\v 9 If it’s an animal that they’re \add promising\add* as a gift for Yahweh, then \add that animal becomes sacred\add*—
+\v 10 it can’t be \add exchanged for a different one (either better or worse)\add*, \add but\add* if it does get substituted, then \add both animals will become sacred\add*.
+\v 11 Any ‘unclean’ animal cannot be presented to Yahweh, \add so if that’s what was promised\add*, \add the person\add* must take the animal to the priest,
+\v 12 and a priest must \add give a fair valuation according to the quality of the animal\add*—the priest’s \add decision will be final\add*.
+\v 13 \add However,\add* if it’s later bought back, then an extra twenty percent must be added to that valuation.
 \p
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
+\v 14 If someone dedicates their house as sacred to Yahweh, a priest must \add value it according to its quality\add*—the priest’s \add decision will be final\add*.
+\v 15 \add However,\add* if \add that person\add* \add decides to\add* buy back their house, then an extra twenty percent must be added to the valuation and then it \add can be theirs again\add*.
 \p
-\v 22 ◙
-\v 23 ◙
-\v 24 ◙
+\v 16 If someone dedicates part of their \add farmland\add* as sacred to Yahweh, then \add it will be valued according to how much seed\add* \add would be sown in it\add*—fifty silver coins for each 130kg of barley \add seed required\add*.
+\v 17 That would be its value if it was dedicated during the \add restoration celebration\add* year,
+\v 18 \add but in the years following,\add* the priest must calculate the field’s value \add depending on\add* how many years remain before the next \add rest\add* year.
+\v 19 \add However,\add* if \add that person\add* \add decides to\add* buy back their land, then an extra twenty percent must be added to the valuation and then it \add can be theirs again\add*.
+\v 20 If \add the person\add* doesn’t buy back the field \add but\add* sells it to someone else, then it can’t be bought back again.
+\v 21 Then when the field is released at the next \add rest year\add*, it will be sacred to Yahweh and the \add priests\add* \add will take ownership\add*.
 \p
-\v 25 ◙
+\v 22 If someone dedicates to Yahweh some land that they’ve bought (i.e., it’s not part of their clan inheritance),
+\v 23 then a priest must calculate the valuation until the \add next\add* \add restoration celebration year\add*, and it must be paid that same day —becoming sacred to Yahweh.
+\v 24 In \add that rest\add* year, the land will return to the original owner who \add has it as part of their clan inheritance\add*.
 \p
-\v 26 ◙
-\v 27 ◙
+\v 25 All valuations will \add be calculated\add* using the standard weights from the sanctuary—the \add silver coin must weigh twelve grams\add*.
 \p
-\v 28 \x + \xo 27:28: \xt Num 18:14.\x*◙
-\v 29 ◙
+\v 26 Every firstborn \add domestic animal\add* (including cows and sheep) \add automatically\add* belongs to Yahweh, and no person can \add claim to\add* ‘dedicate’ it.
+\v 27 \add However,\add* if it’s an ‘unclean’ animal then it must be bought back by paying its valuation plus an additional twenty percent, \add but\add* if it’s not bought back, then it must be sold at its valuation \add price\add*.
 \p
-\v 30 \x + \xo 27:30-33: \xt Num 18:21; Deu 14:22-29.\x*◙
-\v 31 ◙
-\v 32 ◙
-\v 33 ◙
+\v 28 If someone dedicates something to Yahweh that they own (e.g., a man or an animal, or a field), they can’t then sell it or buy it \add straight\add* back—everything that’s dedicated \add like that\add* becomes sacred to Yahweh.\x + \xo 27:28: \xt Num 18:14.\x*
 \p
-\v 34 ◙
+\v 29 Any person who’s dedicated for destruction cannot be bought back—they must be executed.
+\p
+\v 30 A tenth of all the \add harvests from the crops\add* and fruit from the trees, belongs to Yahweh. It’s sacred to Yahweh.\x + \xo 27:30-33: \xt Num 18:21; Deu 14:22-29.\x*
+\v 31 If someone \add really\add* wanted to buy back their tenth \add of their produce\add*, \add an additional\add* twenty percent must be added \add to the valuation\add*.
+\v 32 Every tenth animal of the \add mustered domestic\add* cattle and sheep and goats, is sacred to Yahweh.
+\v 33 \add The herder\add* mustn’t pick out good or bad ones, or make substitutions. (If a substitution was made, both animals then become sacred and must not be bought back.)
+\p
+\v 34 \add The above\add* are the \add instructions and rules\add* that Yahweh \add gave\add* Mosheh at Mt. Sinai for the \add Israelis\add*.
