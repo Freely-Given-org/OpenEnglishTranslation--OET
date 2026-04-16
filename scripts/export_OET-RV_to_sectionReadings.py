@@ -40,9 +40,9 @@ import subprocess
 import shutil
 import logging
 
-if __name__ == '__main__':
-    import sys
-    sys.path.insert( 0, '../../BibleOrgSys/' )
+# if __name__ == '__main__':
+#     import sys
+#     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 import BibleOrgSys.Formats.ESFMBible as ESFMBible

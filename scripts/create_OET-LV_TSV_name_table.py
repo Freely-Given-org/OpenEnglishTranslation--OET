@@ -40,12 +40,13 @@ from csv import DictReader
 import re
 import os
 
-import sys
-if __name__ == '__main__':
-    sys.path.insert( 0, '../../BibleOrgSys/' )
+# import sys
+# if __name__ == '__main__':
+#     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 
+import sys
 sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitted to PyPI
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 

@@ -80,7 +80,7 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2026-04-01' # by RJH
+LAST_MODIFIED_DATE = '2026-04-14' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed_OSHB_OT_to_ESFM"
 PROGRAM_NAME = "Extract glossed OSHB OT ESFM files"
 PROGRAM_VERSION = '1.0'
@@ -714,41 +714,68 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
     originalGloss = gloss # Used for error/warning messages
 
     # Do some early changes/fixes
+    if gloss.count('(') > gloss.count(')'):
+        gloss = ( gloss
+                .replace( '(for,', '(for),' ) # 2026-04-14 ???
+                .replace( '(has,', '(has),' ) # 2026-04-14 ???
+                .replace( '(in,', '(in),' ) # Not totally sure that it should be square brackets 2026-03-19 ???
+                .replace( '(into,', '(into),' ) # Not totally sure that it should be square brackets 2026-03-19 ???
+                .replace( '(of,', '(of),' ) # 2026-04-14 ???
+                .replace( '(to,', '(to),' ) # 2026-04-14 ???
+                .replace( '(with,', '(with),' ) # Not totally sure that it should be square brackets 2026-03-19 ???
+                )
+    if gloss.count('[') > gloss.count(']'):
+        gloss = ( gloss
+                .replace( '[has,', '[has],' ) # 2026-04-14 ???
+                .replace( '[we,', '[we],' ) # 2026-03-19 ???
+                .replace( '[will,', '[will],' ) # 2026-03-19 ???
+                )
     gloss = ( gloss
                 .replace( '_[masc]', '(m)' ).replace( '_[fem]', '(f)' )
                 .replace( 'todrink', 'to_drink') # Not sure why this systematic error is in there ???
                 .replace( 'forhelp', 'for_help') # Not sure why this systematic error is in there ???
-                .replace( '[will,among_', '[will],among_' ) # Seems weird 2026-03-19 ???
-                .replace( '[will,at_', '[will],at_' ) # Seems weird 2026-03-19 ???
-                .replace( '[will,by_', '[will],by_' ) # Seems weird 2026-03-19 ???
-                .replace( '[will,in_', '[will],in_' ) # Seems weird 2026-03-19 ???
-                .replace( '[will,like_', '[will],like_' ) # Seems weird 2026-03-19 ???
-                .replace( '[will,on_', '[will],on_' ) # Seems weird 2026-03-19 ???
-                .replace( '[will,to_', '[will],to_' ) # Seems weird 2026-03-19 ???
-                .replace( '[has,to_', '[has],to_' ) # Seems weird 2026-03-19 ???
-                .replace( '[we,', '[we],' ) # 2026-03-19 ???
+                # .replace( '[will,among_', '[will],among_' ) # Seems weird 2026-03-19 ???
+                # .replace( '[will,at_', '[will],at_' ) # Seems weird 2026-03-19 ???
+                # .replace( '[will,by_', '[will],by_' ) # Seems weird 2026-03-19 ???
+                # .replace( '[will,in_', '[will],in_' ) # Seems weird 2026-03-19 ???
+                # .replace( '[will,like_', '[will],like_' ) # Seems weird 2026-03-19 ???
+                # .replace( '[will,on_', '[will],on_' ) # Seems weird 2026-03-19 ???
+                # .replace( '[will,to_', '[will],to_' ) # Seems weird 2026-03-19 ???
+                # .replace( '[has,to_', '[has],to_' ) # Seems weird 2026-03-19 ???
+                # .replace( '(for,yourself', '[for],yourself' ) # 2026-04-14 ???
+                # .replace( '(of,[the]_Baal', '[of],[the]_Baal' ) # 2026-04-14 ???
+                # .replace( '(to,the,Galilee', '[to],the,Galilee' ) # 2026-04-14 #180645 ???
+                # .replace( '(of,[the]_ninth', '[of],[the]_ninth' ) # 2026-04-14 #181358 ???
+                # .replace( '(of,[the]_seventh', '[of],[the]_seventh' ) # 2026-04-14 ¦219889 ???
+                # .replace( '(for,themselves', '[for],themselves' ) # 2026-04-14 ¦236155 ???
+                # .replace( '(for,', '[for],' ) # 2026-04-14 ???
+                # .replace( '(has,', '[has],' ) # 2026-04-14 ???
+                # .replace( '(in,', '[in],' ) # Not totally sure that it should be square brackets 2026-03-19 ???
+                # .replace( '(into,', '[into],' ) # Not totally sure that it should be square brackets 2026-03-19 ???
+                # .replace( '(of,', '[of],' ) # 2026-04-14 ???
+                # .replace( '(to,', '[to],' ) # 2026-04-14 ???
+                # .replace( '[we,', '[we],' ) # 2026-03-19 ???
+                # .replace( '[will,', '[will],' ) # 2026-03-19 ???
+                # .replace( '(with,', '[with],' ) # Not totally sure that it should be square brackets 2026-03-19 ???
                 .replace( 'to,who]', 'to,[who]' ) # 2026-03-19 ???
-                .replace( '(in,', '[in],' ) # Not totally sure that it should be square brackets 2026-03-19 ???
-                .replace( '(into,', '[into],' ) # Not totally sure that it should be square brackets 2026-03-19 ???
                 # .replace( '(to,', '[to],' ) # THIS ONE OVERREACHES!!! Not totally sure that it should be square brackets 2026-03-19 ??? THIS ONE OVERREACHES!!!
-                .replace( '(with,', '[with],' ) # Not totally sure that it should be square brackets 2026-03-19 ???
                 # .replace( '(in,life', '[in],life' ) # Not totally sure that it should be square brackets 2026-03-19 ???
-                .replace( '(to,Baal', '[to],Baal' ) # 2026-03-19 ???
+                # .replace( '(to,Baal', '[to],Baal' ) # 2026-03-19 ???
                 # .replace( 'and,(to,Ashtaroth', 'and,[to],Ashtaroth' ) # 2026-03-19 ???
-                .replace( '(to,gold', '[to],gold' ) # 2026-03-19 ???
-                .replace( 'and,(to,silver', 'and,[to],silver' ) # 2026-03-19 ???
-                .replace( '(to,everyone', '[to],everyone' ) # 2026-03-19 ???
+                # .replace( '(to,gold', '[to],gold' ) # 2026-03-19 ???
+                # .replace( 'and,(to,silver', 'and,[to],silver' ) # 2026-03-19 ???
+                # .replace( '(to,everyone', '[to],everyone' ) # 2026-03-19 ???
                 # .replace( '(in,chariotry', '[in],chariotry' ) # 2026-03-19 ???
                 # .replace( '(in,horses', '[in],horses' ) # 2026-03-19 ???
-                .replace( '(to,breath', '[to],breath' ) # 2026-03-19 ???
-                .replace( '(to,mockers', '[to],mockers' ) # 2026-03-19 ???
-                .replace( '(to,discernment', '[to],discernment' ) # 2026-03-19 ???
-                .replace( '(to,[one_who_is]_poor', '[to],[one_who_is]_poor' ) # 2026-03-19 ???
-                .replace( '(to,youth', '[to],youth' ) # 2026-03-19 ???
+                # .replace( '(to,breath', '[to],breath' ) # 2026-03-19 ???
+                # .replace( '(to,mockers', '[to],mockers' ) # 2026-03-19 ???
+                # .replace( '(to,discernment', '[to],discernment' ) # 2026-03-19 ???
+                # .replace( '(to,[one_who_is]_poor', '[to],[one_who_is]_poor' ) # 2026-03-19 ???
+                # .replace( '(to,youth', '[to],youth' ) # 2026-03-19 ???
                 # .replace( '(with,songs', '[with],songs' ) # 2026-03-19 ???
                 # .replace( '(in,wealth', '[in],wealth' ) # 2026-03-19 ???
-                .replace( 'and,(to,Ashtaroth', 'and,[to],Ashtaroth' ) # 2026-03-19 ???
-                .replace( '(to,many_[people]', '[to],many_[people]' ) # 2026-03-19 ???
+                # .replace( 'and,(to,Ashtaroth', 'and,[to],Ashtaroth' ) # 2026-03-19 ???
+                # .replace( '(to,many_[people]', '[to],many_[people]' ) # 2026-03-19 ???
                 # Why do these next ones give problems like:
                 #   WordNumberError: Failed to split-off word number from wordWithNumber='day¦3268one¦3268'
                 .replace( '[were]_the,faces', '[were]_the_faces' ) # 2026-03-19 Why???

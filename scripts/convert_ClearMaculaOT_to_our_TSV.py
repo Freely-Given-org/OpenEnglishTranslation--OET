@@ -58,20 +58,21 @@ import logging
 from xml.etree import ElementTree
 import unicodedata
 
-if __name__ == '__main__':
-    import sys
-    sys.path.insert( 0, '../../BibleOrgSys/' )
+# if __name__ == '__main__':
+#     import sys
+#     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.OriginalLanguages import Hebrew
 
+import sys
 sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew
 
-LAST_MODIFIED_DATE = '2026-03-19' # by RJH
+LAST_MODIFIED_DATE = '2026-04-16' # by RJH
 SHORT_PROGRAM_NAME = "convert_ClearMaculaOT_to_our_TSV"
 PROGRAM_NAME = "Extract and Apply Macula OT glosses"
-PROGRAM_VERSION = '0.58'
+PROGRAM_VERSION = '0.59'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False

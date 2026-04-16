@@ -53,10 +53,11 @@ short_OSHB_TSV := ../sourceTexts/rawOSHB/OSHB.parsedOriginal.flat.morphemes.tsv
 
 #=== Script declarations =======================
 
-python3_13 := python3.13
-python3_14 := python3.14
+# python3_13 := python3.13
+# python3_14 := python3.14
 # python3_15 := ~/Downloads/Python-3.15.0a1/python
-Python := $(python3_14)
+# Python := $(python3_14)
+UVrun := uv run
 
 SBE := ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py
 BTranslit := ../../BibleTransliterations/Python/BibleTransliterations.py
@@ -79,21 +80,21 @@ RV: $(RV_HTML)
 
 $(LV_names_TSV_table): ScriptedOTUpdates/restoreNames.commandTable.tsv ScriptedVLTUpdates/OTNames.commandTable.tsv ScriptedVLTUpdates/NTNames.commandTable.tsv create_OET-LV_TSV_name_table.py
 	@echo "\n\nCreate OET-LV TSV names table from command tables…\n"
-	@$(Python) create_OET-LV_TSV_name_table.py
+	@$(UVrun) create_OET-LV_TSV_name_table.py
 
 # $(LV_HTML): $(LV_OT_HTML) $(LV_NT_HTML)
 $(LV_OT_HTML) $(LV_NT_HTML): $(final_LV_OT_ESFM)  $(final_LV_NT_ESFM) convert_OET-LV_to_simple_HTML.py $(expanded_NT_wordtable)
 	@echo "\n\nConvert OET LV ESFM files to simple HTML…\n"
-	@$(Python) convert_OET-LV_to_simple_HTML.py
+	@$(UVrun) convert_OET-LV_to_simple_HTML.py
 
 # $(final_LV_OT_USFM): $(intermediate_LV_OT_USFM) $(SBE) $(scripted_OT_updates) $(BTranslit) $(HebrewTranslit)
 # 	@echo "\n\nRun ScriptedBibleEditor on OT USFM files…\n"
-# 	@$(Python) $(SBE) ScriptedOTUpdates -qe
+# 	@$(UVrun) $(SBE) ScriptedOTUpdates -qe
 
 # Had $(final_LV_OT_ESFM) here before
 ../derivedTexts/auto_edited_OT_ESFM/OET-LV_GEN.ESFM ../derivedTexts/auto_edited_OT_ESFM/OET-LV_MAL.ESFM: $(intermediate_LV_OT_ESFM) $(SBE) $(scripted_OT_updates) $(BTranslit) $(HebrewTranslit)
 	@echo "\n\nRun ScriptedBibleEditor on OT ESFM files…\n"
-	@$(Python) $(SBE) ScriptedOTUpdates -qe
+	@$(UVrun) $(SBE) ScriptedOTUpdates -qe
 	#@echo "\n\nCopying OT word and morpheme tables from modified_source_glossed_OSHB_ESFM/ to auto_edited_OT_ESFM/…\n"
 	#@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_word_table.tsv
 	#@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv
@@ -109,53 +110,53 @@ $(final_LV_OT_word_tables): $(expanded_OT_TSV_tables)
 
 $(final_LV_NT_ESFM): $(intermediate_LV_NT_ESFM) $(SBE) $(scripted_NT_updates) $(BTranslit) $(GreekTranslit) $(HebrewTranslit) $(expanded_NT_wordtable)
 	@echo "\n\nRun ScriptedBibleEditor on NT ESFM files…\n"
-	@$(Python) $(SBE) ScriptedVLTUpdates -qe
+	@$(UVrun) $(SBE) ScriptedVLTUpdates -qe
 
 ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv: $(initial_OT_TSV_tables) $(Clear_Bible_MaculaHebrew_OT_TSV) $(scripted_OT_updates) add_tags_to_OT_word_table.py $(BTranslit) $(HebrewTranslit)
 	@echo "\n\nAdd people/places/referent tags to OET OT word table…\n"
-	@$(Python) add_tags_to_OT_word_table.py -e
+	@$(UVrun) add_tags_to_OT_word_table.py -e
 	@echo "\n\nCopying and renaming OT morpheme and lemma tables from glossed_OSHB/ to modified_source_glossed_OSHB_ESFM/…\n"
 	@cp -a ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv
 	@cp -a ../intermediateTexts/glossed_OSHB/all_glosses.lemmas.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_lemma_table.tsv
 
 $(intermediate_LV_OT_ESFM): $(expanded_OT_TSV_tables) extract_glossed_OSHB_OT_to_ESFM.py
 	@echo "\n\nExtract OT from TSV table to ESFM files…\n"
-	@$(Python) extract_glossed_OSHB_OT_to_ESFM.py -e
+	@$(UVrun) extract_glossed_OSHB_OT_to_ESFM.py -e
 
 $(initial_OT_TSV_tables): $(WLC_OT_TSV_table) $(Clear_Bible_MaculaHebrew_OT_TSV) apply_Clear_Macula_OT_glosses.py
 	@echo "\n\nApply glosses from Macula Hebrew to OT (and reorder)…\n"
-	@$(Python) apply_Clear_Macula_OT_glosses.py
+	@$(UVrun) apply_Clear_Macula_OT_glosses.py
 	# @echo "\n\nCopying and renaming OT word and morpheme tables from glossed_OSHB/ to modified_source_glossed_OSHB_ESFM/…\n"
 	# @cp -a ../intermediateTexts/glossed_OSHB/all_glosses.words.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv
 	# @cp -a ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv
 
 $(WLC_OT_TSV_table): $(short_OSHB_TSV) prepare_OSHB_for_glossing.py ourWLCHebrewGlosses.txt
 	@echo "\n\nExpand columns in OT TSV and add our custom glosses…\n"
-	@$(Python) prepare_OSHB_for_glossing.py
+	@$(UVrun) prepare_OSHB_for_glossing.py
 
 $(Clear_Bible_MaculaHebrew_OT_TSV): $(Clear_Bible_OT_lowfat_XML) $(WLC_OT_TSV_table) convert_ClearMaculaOT_to_our_TSV.py
 	@echo "\n\nConvert Macula Hebrew from XML files to TSV…\n"
-	@$(Python) convert_ClearMaculaOT_to_our_TSV.py
+	@$(UVrun) convert_ClearMaculaOT_to_our_TSV.py
 
 $(Clear_Bible_NT_lowfat_TSV): $(Clear_Bible_NT_lowfat_XML) $(BibleTags_NT_TSV_table) convert_ClearMaculaNT_to_TSV.py
 	@echo "\n\nConvert Macula Greek from XML files to TSV…\n"
-	@$(Python) convert_ClearMaculaNT_to_TSV.py
+	@$(UVrun) convert_ClearMaculaNT_to_TSV.py
 
 $(short_OSHB_TSV): $(WLC_XML) convert_OSHB_XML_to_TSV.py
 	@echo "\n\nConvert OSHB XML files to TSV…\n"
-	@$(Python) convert_OSHB_XML_to_TSV.py
+	@$(UVrun) convert_OSHB_XML_to_TSV.py
 
 $(BibleTags_TSV): $(BibleTags_OT_USFM) $(BibleTags_NT_USFM) convert_BibTags_USFM_to_TSV.py
 	@echo "\n\nConvert BibleTags USFM files to TSV…\n"
-	@$(Python) convert_BibTags_USFM_to_TSV.py
+	@$(UVrun) convert_BibTags_USFM_to_TSV.py
 
 $(intermediate_LV_NT_ESFM) $(original_NT_wordtable): $(CNTR_book_table) $(CNTR_collation_table) $(CNTR_word_table) $(CNTR_lemma_table) extract_VLT_NT_to_ESFM.py
 	@echo "\n\nExtract NT from TSV table to the various {BBB}_gloss.ESFM files…\n"
-	@$(Python) extract_VLT_NT_to_ESFM.py -e
+	@$(UVrun) extract_VLT_NT_to_ESFM.py -e
 
 $(expanded_NT_wordtable): $(original_NT_wordtable) $(Clear_Bible_NT_lowfat_TSV) $(scripted_NT_updates) add_tags_to_NT_word_table.py $(BTranslit) $(HebrewTranslit) $(GreekTranslit)
 	@echo "\n\nAdd people/places/referent tags to OET NT word table…\n"
-	@$(Python) add_tags_to_NT_word_table.py -e
+	@$(UVrun) add_tags_to_NT_word_table.py -e
 	@echo "\n\nCopying final OET NT word table to OET-RV and BSB/MSB folders…\n"
 	@cp -a $(expanded_NT_wordtable) ../translatedTexts/ReadersVersion/
 	@cp -a $(expanded_NT_wordtable) /srv/FreelyGiven/OpenBibleData/copiedBibles/English/Berean.Bible/BSB/
@@ -173,54 +174,47 @@ $(final_RV_OT_word_tables): $(final_LV_OT_word_tables)
 
 $(RV_HTML): $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py convert_OET-RV_to_simple_HTML.py $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
 	@echo "\n\nConnect OET-RV words to OET-LV word numbers (in full mode)…\n"
-	@$(Python) connect_OET-RV_words_via_OET-LV.py
+	@$(UVrun) connect_OET-RV_words_via_OET-LV.py
 	@echo "\n\nConvert OET RV ESFM files to simple HTML…\n"
-	@$(Python) convert_OET-RV_to_simple_HTML.py
+	@$(UVrun) convert_OET-RV_to_simple_HTML.py
 
 #=== Side-by-side stuff =======================
 
 $(sideBySide_HTML): $(LV_OT_HTML) $(LV_NT_HTML) $(RV_HTML) pack_HTML_side-by-side.py
 	@echo "\n\nPack LV and RV HTML files side-by-side…\n"
-	@$(Python) pack_HTML_side-by-side.py
+	@$(UVrun) pack_HTML_side-by-side.py
 
 #=== Format conversions =======================
 
 $(derived_USFM): $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_ESFM_to_USFM.py
 	@echo "\n\nCreate clean USFM files…\n"
-	@$(Python) convert_OET-LV-RV_ESFM_to_USFM.py
+	@$(UVrun) convert_OET-LV-RV_ESFM_to_USFM.py
 
 $(derived_VREFs): $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_USFM_to_VREF.py
-	@$(Python) --version
 	@echo "\n\nCreate VREF.txt files from USFM…\n"
-	@$(Python) convert_OET-LV-RV_USFM_to_VREF.py
+	@$(UVrun) convert_OET-LV-RV_USFM_to_VREF.py
 	@echo "\n\nFinally, just count our progress…\n"
-	@$(Python) count_completed_OET-RV_verses.py
-	@$(Python) --version
+	@$(UVrun) count_completed_OET-RV_verses.py
 
 $(derived_audio_sections): $(RV_ESFM) export_OET-RV_to_sectionReadings.py
-	@$(Python) --version
 	@echo "\n\nCreate section readings from OET-RV…\n"
-	@$(Python) export_OET-RV_to_sectionReadings.py
+	@$(UVrun) export_OET-RV_to_sectionReadings.py
 
 
 #=== Partial stuff =======================
 
 .PHONY: check
 check: $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
-	@$(Python) --version
 	@echo "\n\nConnect OET-RV words to OET-LV word numbers (in fast mode)…\n"
-	@$(Python) connect_OET-RV_words_via_OET-LV.py --fast
+	@$(UVrun) connect_OET-RV_words_via_OET-LV.py --fast
 	@echo "\n\nFinally, just count our progress…\n"
-	@$(Python) count_completed_OET-RV_verses.py
-	@$(Python) --version
+	@$(UVrun) count_completed_OET-RV_verses.py
 
 
 .PHONY: audio
 audio: $(derived_audio_sections)
-	@$(Python) --version
 	@echo "\n\nFinally, just count our progress…\n"
-	@$(Python) count_completed_OET-RV_verses.py
-	@$(Python) --version
+	@$(UVrun) count_completed_OET-RV_verses.py
 
 
 #=== Clean up stuff =======================
