@@ -1,0 +1,14 @@
+[project]
+name = "scripts"
+version = "0.1.0"
+description = "Build-scripts for the Open English Translation (OET) Bible files"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "bibleorgsys",
+    "bibleorgsys-rust",
+]
+
+[tool.uv.sources]
+bibleorgsys-rust = { path = "../../BibleOrgSys/Rust/bible_organisational_system", editable = true }
+bibleorgsys = { path = "../../BibleOrgSys", editable = true }

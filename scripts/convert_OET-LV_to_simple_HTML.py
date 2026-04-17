@@ -35,6 +35,7 @@ CHANGELOG:
     2025-06-24 Check for footnotes and xrefs ending in space
     2025-09-18 Check equal numbers of open and close parentheses
     2025-12-08 Add character marker checks incl. nesting order
+    2026-04-14 Handle /ie markers
 """
 from gettext import gettext as _
 from typing import List, Tuple, Set, Optional
@@ -46,9 +47,9 @@ import re
 from collections import defaultdict
 import json
 
-if __name__ == '__main__':
-    import sys
-    sys.path.insert( 0, '../../BibleOrgSys/' )
+# if __name__ == '__main__':
+#     import sys
+#     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.Bible import Bible
@@ -60,10 +61,10 @@ sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-03-23' # by RJH
+LAST_MODIFIED_DATE = '2026-04-14' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.88'
+PROGRAM_VERSION = '0.89'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -928,6 +929,8 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
             book_html = f'{book_html}<p class="{marker}">{rest}</p>\n'
         elif marker == 'toc1':
             start_html = START_HTML.replace( '__TITLE__', rest )
+        elif marker == 'ie': # at the end of the headers
+            continue # We don't need to do anything here
         elif marker == 'c':
             V = '0'
             assert rest

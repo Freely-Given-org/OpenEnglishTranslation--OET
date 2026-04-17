@@ -55,9 +55,9 @@ import glob
 import shutil
 import os.path
 
-if __name__ == '__main__':
-    import sys
-    sys.path.insert( 0, '../../BibleOrgSys/' )
+# if __name__ == '__main__':
+#     import sys
+#     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39
