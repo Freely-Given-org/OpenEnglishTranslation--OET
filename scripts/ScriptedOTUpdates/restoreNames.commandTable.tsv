@@ -1612,7 +1612,7 @@ H					CH1_4:20				Tilon			תּוּלוֹן		H8436 (1) 1Chr 4:20*
 H	GEN,JOS,JDG,CH1								Timnah			תִּמְנָה		H8553 (12) Gen 38:12-14, Josh 15:10,57, 19:43, Jdg 14:1-2,5, 2Chr 28:18*
 H	GEN,CH1								Timna			תִּמְנָע		H8555 (6) Gen 36:12,22,40, 1Chr 1:36,39,51*
 H					GEN_10:2,CH1_1:5				Tiras			תִּירָס		H8494 (2) Gen 10:2, 1Chr 1:5*
-H					KI2_19:9,ISA_37:9				Tirhakah			תִּרְהָקָה		H8640 Ethopian king (2) 2Ki 19:9, Isa 37:9*
+H					KI2_19:9,ISA_37:9				Tirhakah			תִּרְהָקָה		H8640 Ethiopian king (2) 2Ki 19:9, Isa 37:9*
 H					CH1_2:48				Tirhanah			תִּרְחֲנָה		H8647 (1) 1Chr 2:48*
 H					CH1_4:16				Tiria			תִּירְיָא		H8493 (1) 1Chr 4:16*
 H					CH1_6:34				Toah			תּוֹחַ		H8430 (1) 1Chr 6:34*
@@ -1746,10 +1746,12 @@ H									Amorites			אֲמֹרִי		{{ H567 (87) Gen 10:16, 14:7,13, 15:16,21, 
 H									Emori			אֲמֹרִי		{{ H567 (87) Gen 10:16, 14:7,13, 15:16,21, ...
 H									Anathothite			עַנְתֹתִי		{ H6069 (5) 2Sam 23:27, 1Chr 11:28, 12:3, 27:12, Jer 29:27*
 H									Anathoth			עַנְתֹתִי		{ H6069 (5) 2Sam 23:27, 1Chr 11:28, 12:3, 27:12, Jer 29:27*
-H									Arabians			עֲרָבִי		{{ H6163 (9) 2Chr 17:11, 21:16, 22:1, 26:7, Neh 2:19, 4:7, 6:1, Isa 13:20, Jer 3:2*
-wH									Arabian			עֲרָבִי		{{ H6163 (9) 2Chr 17:11, 21:16, 22:1, 26:7, Neh 2:19, 4:7, 6:1, Isa 13:20, Jer 3:2*
-wH									Arabs			עֲרָבִי		{{ H6163 (9) 2Chr 17:11, 21:16, 22:1, 26:7, Neh 2:19, 4:7, 6:1, Isa 13:20, Jer 3:2*
-wH									Arab			עֲרָבִי		{{ H6163 (9) 2Chr 17:11, 21:16, 22:1, 26:7, Neh 2:19, 4:7, 6:1, Isa 13:20, Jer 3:2*
+H	CH2,NEH,ISA,JER								Arabians			עֲרָבִי		{{ H6163 (9) 2Chr 17:11, 21:16, 22:1, 26:7, Neh 2:19, 4:7, 6:1, Isa 13:20, Jer 3:2*
+wH	CH2,NEH,ISA,JER								Arabian			עֲרָבִי		{{ H6163 (9) 2Chr 17:11, 21:16, 22:1, 26:7, Neh 2:19, 4:7, 6:1, Isa 13:20, Jer 3:2*
+wH	CH2,NEH,ISA,JER								Arabs			עֲרָבִי		{{ H6163 (9) 2Chr 17:11, 21:16, 22:1, 26:7, Neh 2:19, 4:7, 6:1, Isa 13:20, Jer 3:2*
+wH	CH2,NEH,ISA,JER								Arab			עֲרָבִי		{{ H6163 (9) 2Chr 17:11, 21:16, 22:1, 26:7, Neh 2:19, 4:7, 6:1, Isa 13:20, Jer 3:2*
+wH	KI1,CH2,ISA,JER,EZE								Arabia			עֲרָב		{{{ H6152 (6) 1Ki 10:15, 2Chr 9:14, Isa 21:13, Jer 25:24, Eze 27:21*
+wH	KI1,CH2,ISA,JER,EZE								Arabs			עֲרָב		{{{ H6152 (6) 1Ki 10:15, 2Chr 9:14, Isa 21:13, Jer 25:24, Eze 27:21*
 H									Arameans			אֲרַמִּי		{ H761 (11) Gen 25:20, 28:5, 31:20,24, Deu 26:5, ...
 H									Aramean			אֲרַמִּי		{ H761 (11) Gen 25:20, 28:5, 31:20,24, Deu 26:5, ...
 dH									Syrians			אֲרַמִּי/(Syrians)		{ H761 (11) Gen 25:20, 28:5, 31:20,24, Deu 26:5, ...
@@ -1795,6 +1797,7 @@ dH	SA1,SA2,KI1,CH1,EZE,ZEP								Cherethites			כְּרֵתִי/(Cherethites)		
 H	SA1,SA2,KI1,CH1,EZE,ZEP								Kerethites			כְּרֵתִי		{{ H3774 (8) 1Sam 30:14, 2Sam 8:18, 15:18, 20:7, 1Ki 1:44, 1Chr 18:17, Eze 25:16, Zeph 2:5*
 #H									Damascene¦			from_דַּמֶּשֶׂק		2 Cor 11:32
 H	JDG,CH1								Danites			דָּנִי		H1839 (5) Jdg 13:2, 18:1,11,30, 1Chr 12:36*
+H					ISA_21:13				Dedanites			דְּדָנִים		H1720 (1) Isa 21:13*
 #dH									Egyptians¦			\add >ones¦\add*_from¦_מִצְרַיִם/(Egypt)¦		(Eygpt gets added below)
 dH									Egyptian¦			from¦_מִצְרַיִם/(Egypt)¦		Acts 7:28 (Eygpt gets added below)
 H					NAH_1:1				Elkoshite			אֶלְקשִׁי		H512 (1) Nah 1:1*
@@ -1807,7 +1810,7 @@ H	JDG,RUT,SA1,KI1								Ephrathites			אֶפְרָתִי		{ H673 (5) Jdg 12:5, 
 H					NUM_26:36				Eranites			עֵרָנִי		H6198 (1) Num 26:36*
 H					NUM_26:16				Erites			עֵרִי		H6180 (1) Num 26:16*
 #H									Ethiopians			כּוּשִׁי		Acts 8:27
-H									Ethiopian			כּוּשִׁי		Acts 8:27
+dH									Ethiopian			כּוּשִׁי/(Ethiopian)		Acts 8:27
 H	KI1,PSA								Ezrahite			אֶזְרָחִי		H250 (3) 1Ki 4:31, Psa 88:1, 89:1*
 H	DEU,JOS,SA2,KI2,CH1								Gadites			גָּדִי		{ H1425 (15) Deu 3:12,16, Deu 4:43, 29:8, Josh 1:12, ...
 H	DEU,JOS,SA2,KI2,CH1								Gadite			גָּדִי		{ H1425 (15) Deu 3:12,16, Deu 4:43, 29:8, Josh 1:12, ...
@@ -2228,8 +2231,9 @@ H					NEH_11:29				Rimmon			 רִמּוֹן		{ H5884 (space changed to hyphen) (
 H	JOS,JDG								Eshtaol			אֶשְׁתָּאֹל		H847 (7) Josh 15:33, 19:41, Jdg 13:25, 16:31, 18:2,8,11*
 H	EXO,NUM								Etham			אֵתָם		H864 (4) Exo 13:20, Num 33:6-8*
 wH					JOS_15:42,JOS_19:7				Ether			עֵתֶר		H6281 (2) Josh 15:42, 19:7*
-wdH	GEN,KI2,CH1,EST,JOB,PSA,ISA,JER,EZE								Ethiopia			כּוּשׁ/(Ethiopia/Cush)		{ H3568 (30) Gen 2:13, 10:6-8. 2Ki 19:8, 1Chr 1:8-10, Est 1:1, ...
-wdH	GEN,KI2,CH1,EST,JOB,PSA,ISA,JER,EZE								Cush			כּוּשׁ/(Cush/Ethiopia)		{ H3568 (30) Gen 2:13, 10:6-8. 2Ki 19:8, 1Chr 1:8-10, Est 1:1, ...
+# NOTE: We already have the person Cush above (with the same H3568) but we add Ethiopia here
+wdH	GEN,KI2,CH1,EST,JOB,PSA,ISA,JER,EZE								Ethiopia			כּוּשׁ/(Ethiopia)		{ H3568 (30) Gen 2:13, 10:6-8. 2Ki 19:8, 1Chr 1:8-10, Est 1:1, ...
+#wdH	GEN,KI2,CH1,EST,JOB,PSA,ISA,JER,EZE								Cush			כּוּשׁ/(Ethiopia)		{ H3568 (30) Gen 2:13, 10:6-8. 2Ki 19:8, 1Chr 1:8-10, Est 1:1, ...
 H	GEN,DEU,JOS,SA2,KI2,CH1,CH2,JER								Euphrates			פְּרָת		H6578 (19) Gen 2:14, 15:18, Deu 1:7, 11:24, Josh 1:4, 2Sam 8:3, ...
 H	JOS,CH1								Ezem			עֶצֶם		H6107 (3) Josh 15:29, 19:3, 1Chr 4:29*
 H	NUM,DEU,KI1,CH2								Eziongaber			עֶציֹן-גֶּבֶר		{ H6100 (space changed to hyphen) (7) Num 33:35-36, Deu 2:8, 1Ki 9:26, 22:48, 2Chr 8:27, 20:36*
@@ -2452,7 +2456,8 @@ H	GEN,NUM,JOS,CH1,JER,EZE								Kiriathaim			קֵרְיָתַיִם		{ H7156 (7
 H					JOS_19:20,JOS_21:28				Kishion			קִשְׁיוֹן		H7191 (2) Josh 19:20, 21:28*
 H									Kishon			קִישׁוֹן		H7028 river (6) Jdg 4:7,13, 5:21, 1Ki 18:40, Psa 83:9*
 H					JDG_1:30				Kitron			קִטְרוֹן		H7003 (1) Jdg 1:30*
-H									Kittim			כִּתִּים		H3794 (8) Gen 10:4, Num 24:24, 1Chr 1:7, Isa 23:1,12, Jer 2:10, Eze 27:6, Dan 11:30*
+H	GEN,NUM,CH1,ISA,JER,EZE,DAN								Kittim			כִּתִּים		{ H3794 (8) Gen 10:4, Num 24:24, 1Chr 1:7, Isa 23:1,12, Jer 2:10, Eze 27:6, Dan 11:30*
+dH	GEN,NUM,CH1,ISA,JER,EZE,DAN								Cyprus			כִּתִּים/(Cyprus)		{ H3794 (8) Gen 10:4, Num 24:24, 1Chr 1:7, Isa 23:1,12, Jer 2:10, Eze 27:6, Dan 11:30*
 H					EZE_23:23				Koa			קוֹעַ		H6970 (1) Eze 23:23*
 H									Lachish			לָכִישׁ		H3923 (24) Josh 10:3,5,23,31-35, 12:11, 15:39, ...
 H	JDG,SA1,SA2,ISA								Laishah			לַיִשׁ		{ H3919 (7) place Jdg 18:7,14,27,29, person 1Sam 25:44, 2Sam 3:15, place Isa 10:30*
