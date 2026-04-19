@@ -79,7 +79,7 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-04-14' # by RJH
+LAST_MODIFIED_DATE = '2026-04-17' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.87'
@@ -264,6 +264,7 @@ simpleVerbs = ('accepted','accepting','accepts','accept',
                         'reported','reporting','reports','report',
                         'requested','requesting','requests','request',
                         'respected','respecting','respects','respect', 'restrained','restraining','restrains','restrain',
+                        'revealed','revealing','reveals','reveal',
                     'ran','running','runs','run',
                 'sailed','sailing','sails','sail', 'said','saying','says','say', 'saved','saving','saves','save',
                     'seated','seating','seats','seat', 'seduced','seducing','seduces','seduce', 'saw','seeing','seen','sees','see', 'sent','sending','sends','send', 'served','serving','serves','serve',
@@ -319,18 +320,23 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('Israelis', 'of Yisrāʼēl/Israel'),('Israeli', 'of Yisrāʼēl/Israel'),
     ('Yisrael','Yisrāʼēl/Israel'),
     ('wants', 'having an ear'),('understand', 'having an ear'),
+    
     # Greek possessive pronouns usually appear after the head noun
     ('my', 'of me'), ('your', 'of you'), ('his', 'of him'), ('her', 'of her'), ('its', 'of it'), ('our', 'of us'), ('their', 'of them'),
     ('My', 'of me'), ('Your', 'of you'), ('His', 'of him'), ('Her', 'of her'), ('Its', 'of it'), ('Our', 'of us'), ('Their', 'of them'),
+    
     # Contractions
-    ("aren't",'not'),("can't",'not'),("didn't",'not'),("don't",'not'),("isn't",'not'),("shouldn't",'not'),("won't",'not'),
+    ("aren't",'not'),("can't",'not'),("didn't",'not'),("Don't",'not'),("don't",'not'),("isn't",'not'),("shouldn't",'not'),("won't",'not'),
     ("I'll", 'I will'),("I've", 'I have'),
     ("you're", 'you are'),("you've", 'you have'),
+
     # Other word number changes
     ('demons', 'unclean spirits'),('demon', 'unclean spirit'),
+
     # The following nominal entries handle number changes
     ('hair', 'hairs'),
     ('hooves','hoof'),
+
     # Prepositions
     ('at','in/on/at/with'),('in','in/on/at/with'),('on','in/on/at/with'),('with','in/on/at/with'),
 
@@ -349,6 +355,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('healed','healing'),
     ('hear', 'hearing'),
     ('immerser','immersing'),
+    ('judge','judgements'),
     ('knowing','known'),
     ('lowered','lowering'),
     ('prayed', 'praying'),
@@ -383,6 +390,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('aroma','odour'),
     ('assembly','convocation'),
     ('astounded','amazed'),
+    ('attention','attentiveness'),
     ('back','stern'),
     ('battle','war'),
     ('because','for/because'),('Because','For/Because'),('because','For/Because'),
@@ -425,8 +433,10 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('desert','ˊₐrāⱱāh'),('plain','ˊₐrāⱱāh'),
     ('deserted','desolate'),
     ('destroyed','consumed'),('destroyed','devoured'),
+    ('destruction','devastation'),
     ('dies','corpse'), # Lev 19:28
     ('dinosaur','dragon'), # Rev 12:3
+    ('discouraged','dismayed'),
     ('driving','throwing'),
     ('eastern','east'),
     ('entire','all'),
@@ -470,12 +480,12 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('mankind','humans'),
     ('many','multiply'),
     ('meat','flesh'),
-    ('message', 'oracle'), ('message', 'word'), ('messenger', 'word'),
+    ('message', 'oracle'), ('message', 'utterance'), ('message', 'word'), ('messenger', 'word'),
     ('metres','cubits'),
     ('mind','heart'),
     ('mister','master'),('Mister','Master'),
     ('money','reward'),
-    ('mourn','weep'),
+    ('mourn','weep'), ('mourning','wailing'),
     ('Mt','mountain'),('Mt','mount'),('Mt', 'Mount'),
     ('must','will'),
     ('necessary','fitting'),
@@ -508,10 +518,12 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('quiet','desolate'),
     ('quiet','silenced'),
     ('range','various'),
+    ('ready','gird'),
     ('realised','saw'),
     ('region','land'),('regions','land'),
     ('reputation','name'),
     ('request','seek'),('requested','prayed'),
+    ('rescue','deliver'),
     ('responded','said'),
     ('river','Yarden'),
     ('rock','stone'),('rocks','stones'),('rocks','stone'),
@@ -519,11 +531,14 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('room','place'),
     ('ropes','cords'),
     ('rubble','ruin'),
-    ('sacred','holiness'),('sacred','holy'),('sacred','of meeting'),
-    ('scared','feared'),
+    ('rush','hasten'),
+    ('sacred','holiness'),('sacred','holy'), ('sacred','of meeting'), # tent of meeting
+    ('sacrificed','smoke'),
+    ('scared','dismayed'), ('scared','feared'),
     ('scoffed','mocking'),
     ('search','seek'),
     ('See','Behold'),
+    ('shaved','baldness'),
     ('She\'s','She'),
     ('shore','side'),
     ('should','let'),
@@ -568,6 +583,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('When','And'),
     ('women','daughters'),
     ('work','service'),
+    ('worn','girding'),
     ('wow','see'),
     ('yelled','cried'),
     ('yourselves','hearts'),
@@ -579,7 +595,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('Master','master'),
     ('Messiah','messiah'),
     ('We\'ll','We'),('We\'ve','We'),
-    ('Yahweh','master'),('Yahweh','YHWH'),
+    ('Yahweh','master'),('Yahweh','YHWH'),('Yahweh\'s','YHWH'),
     )
 for someTuple in RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS:
     assert isinstance( someTuple, tuple), f"{someTuple=}"

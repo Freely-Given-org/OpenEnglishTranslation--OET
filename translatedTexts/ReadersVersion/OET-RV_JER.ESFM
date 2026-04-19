@@ -1,4 +1,4 @@
-\id JER - Open English Translation—Readers' Version (OET-RV) v0.0.07
+\id JER - Open English Translation—Readers' Version (OET-RV) v0.0.09
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 JER
@@ -25,12 +25,12 @@
 \c 1
 \p
 \v 1 \add These are\add* the messages¦304124 from Hilkiyah's son, Yirmeyah—one of the priests¦304131 who were in Anatot¦304133 in Benyamin's¦304135 territory¦304134.
-\v 2 Yahweh's messages¦304139 \add started\add* coming to him when Yehudah's¦304149 King¦304148 Yoshiyah \add (Josiah,\add* Amon's¦304147 son) was in the thirteenth year¦304153 of his reign¦304154.\x + \xo 1:2: \xt 2Ki 22:3–23:27; 2Ch 34:8–35:19.\x*
+\v 2 Yahweh's¦304141 messages¦304139 \add started\add* coming to him when Yehudah's¦304149 King¦304148 Yoshiyah \add (Josiah,\add* Amon's¦304147 son) was in the thirteenth year¦304153 of his reign¦304154.\x + \xo 1:2: \xt 2Ki 22:3–23:27; 2Ch 34:8–35:19.\x*
 \v 3 \add ≈It continued\add* through the \add ≈reign\add* of Yoshiyah's son, King Yehoyakim \add (Jehoiakim)\add* until the end of the eleventh year of \add the reign\add* of Yoshiyah's son, King Tsidkiyah \add (Hezekiah)\add*—Yerushalem¦304179 \add (Jerusalem)\add* was exiled¦304178 in the fifth¦304181 month¦304180 \add of that year\add*.\x + \xo 1:3: a \xt 2Ki 23:36–24:7; 2Ch 36:5-8; \xo b \xt 2Ki 24:18–25:21; 2Ch 36:11-21.\x*
 \s1 Yirmeyah's calling
 \rem /s1 Jeremiah's Call and First Visions; Jeremiah's call and first visions; Jeremiah's Call and Commission; The Call of Jeremiah
 \q1
-\v 4 \add ≈Now\add* Yahweh's message¦304185 came to me:
+\v 4 \add ≈Now\add* Yahweh's¦304187 message¦304185 came to me:
 \q1
 \v 5 “Before¦304191 I formed¦304192 you in \add ≈your mother\add*, I \add already\add* knew¦304195 you,
 \q1 ≈and before¦304196 you came¦304197 out of the womb, I \add ≈had a plan for you\add*.
@@ -38,16 +38,16 @@
 \p
 \v 6 \add ≈But¦304204\add* I said¦304204, “Oh no, Yahweh¦304206, my master¦304206. Listen, I don't¦304209 know¦304211 how to speak¦304212, because¦304214 I'm \add just\add* a young lad.”
 \p
-\v 7 \add ≈but¦304220\add* Yahweh¦304221 told me, “Don't say that you're only a child, because¦304228 you must go¦304235 to everyone I send you to and you must tell them everything that I command¦304240 you to say.
-\v 8 Don't be afraid¦304245 of them, because¦304247 I'll be with you to rescue you.”
-\m That's Yahweh's message.
+\v 7 \add ≈but¦304220\add* Yahweh¦304221 told me, “Don't¦304223 say that you're only a child, because¦304228 you must go¦304235 to everyone I send you to and you must tell them everything that I command¦304240 you to say.
+\v 8 Don't¦304243 be afraid¦304245 of them, because¦304247 I'll be with you to rescue¦304251 you.”
+\m That's Yahweh's¦304254 message¦304252.
 \p
 \v 9 Then¦304256 Yahweh¦304257 stretched¦304256 out his hand¦304260 and touched¦304261 my mouth and said, “Listen¦304266, I've¦304269 put my messages into your mouth.
 \v 10 I'm¦304274 appointing¦304274 you¦304274 today over the nations¦304280 and kingdoms¦304283—to uproot and to break down, to destroy¦304286 and to pull down, to build¦304288 and to plant¦304289.”
-\s1 Two revelation of God
+\s1 Yahweh encourages Yirmeyah
 \rem /s1 Two Visions
 \p
-\v 11 \add ≈Another time,\add* Yahweh's message¦304293 came to me, saying, “Yirmeyah \add (Jeremiah)\add*, what do you¦304300 see?”
+\v 11 \add ≈Another time,\add* Yahweh's¦304295 message¦304293 came to me, saying, “Yirmeyah \add (Jeremiah)\add*, what do you¦304300 see?”
 \p “I see a branch¦304304 from an almond¦304305 tree¦304305,” I \add ≈replied\add*.
 \p
 \v 12 Then¦304309 Yahweh¦304310 told me, “You've done¦304312 well to see¦304313 \add <that\add*, because¦304314 I keep watch\f + \fr 1:12 \ft There's a play on words in the original here, as the Hebrew word for ‘keeping watch’ has the same consonants as the word for ‘almond’.\f* on my message¦304320 \add ≈to make sure it happens\add*.”
@@ -55,67 +55,62 @@
 \v 13 Then Yahweh¦304327 asked me a second¦304330 time what I was seeing, and I replied, “I see a pot full of boiling water and it's tipping towards the north¦304342.”
 \p
 \v 14 “\add Yes,\add* disaster will come from the north¦304347 \add and¦304344\add* be released onto all the inhabitants¦304353 of this region,” Yahweh¦304345 \add ≈continued¦304344\add*.
-\v 15 ◙
-\v 16 ◙
-\v 17 ◙
-\v 18 ◙
-\v 19 ◙
+\v 15 “Listen, I'm about¦304359 to summon¦304359 all the clans¦304362 of the northern¦304364 kingdoms¦304363, and they'll come¦304368 and \add attack\add* the walls¦304379 around¦304380 Yerushalem and all of Yehudah's¦304385 \add other\add* cities¦304384, then each \add @king\add* will place his throne¦304371 at the entrance¦304372 to Yerushalem's¦304375 gates¦304374.” That is Yahweh's¦304367 declaration.
+\v 16 “\add That's how\add* I'll¦304387 judge¦304388 \add @my people\add* for their wickedness¦304393 as they've abandoned¦304395 me and \add ≈sacrificed¦304396\add* to other¦304398 gods¦304397 and bowed¦304399 down to \add idols\add* that¦304394 they made with their own hands¦304401.
+\v 17 \add ≈So¦304403\add* \add @Yirmeyah\add*, \add ≈get yourself ready¦304404 and go\add* and tell them everything that I'll tell you. Don't¦304415 be scared¦304417 \add ≈in front of them\add* or else I'll scare you \add right there\add* \add ≈in front of them\add*!
+\v 18 And listen, today I've¦304426 you¦304426 \add as strong as\add* a fortified¦304429 city¦304428 and an iron pillar¦304430 and bronze¦304433 walls¦304432, as far as the kings¦304439 of Yehudah¦304440 \add are concerned\add*, along with their officials¦304441 and priests¦304442, and the \add ≈general population\add*.
+\v 19 They'll \add ≈oppose\add* you \add ≈but¦304446\add* they won't¦304448 \add be able to\add* defeat you because¦304452 I'll be with you to rescue¦304459 you,” says Yahweh¦304458.
 \c 2
-\s1 The pegsamsamili of Israelis of God
+\s1 Yisrael has deviated from Yahweh
 \rem /s1 God's appeal to Israel and Judah; The Lord's Case against His People; God Pleads with Israel to Repent; Israel Forsakes God; God's Care for Israel
 \p
-\v 1 ◙
-\v 2 ◙
-\q1 …
-\q2 …
-\q1 …
-\q2 …
+\v 1 Then Yahweh¦304465 \add ≈gave\add* me a message¦304463
+\v 2 to proclaim¦304470 to Yerushalem's¦304473 ears¦304471:
+\q1 “Yahweh¦304477 says¦304476: I remember¦304478 your loyal¦304480 commitment \add ≈when you were all young\add*
+\q1 ≈and your love¦304482 \add ≈when you were committed to me\add*.
+\q1 You all followed after¦304485 me in the wilderness¦304486 \add ≈where no crops were planted\add*.
 \q1
-\v 3 ◙
-\q1 …
-\q1 …
-\q2 …
-\q1 …
+\v 3 Yisrael¦304492 was set apart for Yahweh¦304493—the firstfruits of his harvest.
+\q1 All those¦304499 who devoured¦304499 it became guilty¦304500—calamity¦304501 came to them.
+\q1 That is Yahweh's¦304493 declaration.
 \s1 The sin of ancestors of Israelis
 \rem /s1 The Sin of Israel's Ancestors
 \p
-\v 4 ◙
-\v 5 ◙
-\q1 …
-\q2 …
-\q1 …
-\q2 …
+\v 4 Listen to Yahweh's¦304512 message¦304510 you \add ≈descendants\add* of Yakov \add (Jacob)\add*,
+\q1 ≈and¦304515 all you clans¦304517 \add ≈that are part\add* of Yisrael¦304519 \add (Israel¦304519)\add*.
 \q1
-\v 6 ◙
-\q2 …
-\q2 …
-\q2 …
-\q2 …
+\v 5 Yahweh¦304524 asks: what injustices¦304530 did you ancestors¦304528 find in me,
+\q1 that \add caused them\add* to become distant¦304532 from me.
+\q1 They \add ≈chased\add* after¦304535 vanity¦304536 and became vain.
 \q1
-\v 7 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 6 They didn't¦304539 \add ≈try to find out\add* where¦304541 Yahweh¦304542 was—
+\q1 \add the one\add* brought¦304543 led them out of Egypt¦304546 \add (Heb. Mitsrayim)\add*
+\q1 then¦304539 led them \add ≈through\add* the wilderness with its pits and¦304539 desert areas.
+\q1 \add It was\add* a \add ≈region¦304545\add* of deep darkness¦304555 \add ≈without water\add*—
+\q1 an \add ≈area\add* that¦304557 no one passes¦304559 through, \add ≈let alone\add* lives in.
 \q1
-\v 8 ◙
-\q1 …
-\q1 …
-\q1 …
-\q2 …
-\s1 The pegkasu of God of his people
+\v 7 Then¦304568 I took you to the Carmel \add ≈region¦304572\add*
+\q1 to eat¦304574 its fruit¦304575 and \add other\add* good¦304576 things¦304576.
+\q1 \add ≈However\add* you came¦304577 and defiled my land
+\q1 ≈and made the inheritance¦304582 \add ≈that I gave you\add* into \add ≈something detestable\add*.
+\q1
+\v 8 The priests¦304586 didn't ask where¦304589 Yahweh¦304590 was,
+\q1 and the handlers¦304591 of the law didn't know me.
+\q1 The shepherds¦304595 rebelled¦304596 against¦304597 me,
+\q1 and the prophets prophesied by Ba'al
+\q1 and they went after¦304601 \add things¦304602\add* that¦304602 wouldn't profit¦304604 them.
+\s1 Yahweh's case against his people
 \rem /s1 The Lord's Case against His People
 \q1
-\v 9 ◙
-\q2 …
-\q1 …
+\v 9 Yahweh¦304613 declares: I¦304618 will bring a case against you all,
+\q1 and I'll¦304609 contend against your \add children and\add* your grandchildren.
 \q1
-\v 10 ◙
-\q2 …
-\q1 …
+\v 10 If you all cross¦304621 over \add west\add* to the coasts¦304622 of Cypress \add island\add* and look,
+\q1 or head \add east\add* to Kedar¦304625, \add ≈ask around\add* and \add ≈pay careful¦304627 attention\add*
+\q1 to see if something like this has \add ever\add* happened¦304631 \add before\add*.
 \q1
-\v 11 ◙
-\q1 …
-\q2 …
+\v 11 Has a country¦304635 ever \add ≈swapped out\add* its gods (not that¦304643 they were \add actual\add* gods)?
+\q1 \add ≈But¦304637\add* my people¦304640 have exchanged their \add ≈greatness\add* for something \add ≈of no benefit\add*.
 \q1
 \v 12 ◙
 \q2 …
@@ -2926,7 +2921,7 @@
 \v 23 ◙
 \v 24 ◙
 \v 25 ◙
-\s1 The pegpeyilew of Moab
+\s1 The shame of Moab
 \rem /s1 Moab Will Be Humbled
 \p
 \v 26 ◙
@@ -2946,7 +2941,7 @@
 \v 37 ◙
 \v 38 ◙
 \v 39 ◙
-\s1 Kenad eg-alihu the Moab
+\s1 No longer eg-alihu the Moab
 \rem /s1 No Escape for Moab
 \p
 \v 40 ◙
