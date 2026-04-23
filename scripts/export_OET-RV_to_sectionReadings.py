@@ -202,7 +202,7 @@ def load_OET_RV() -> bool:
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  No pickle file for OET-RV." )
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, "Preloading OET-RV ESFM Bible…" )
         thisBible = ESFMBible.ESFMBible( OET_RV_ESFM_FolderPath, givenName='Open English Translation—Readers’ Version (2030)', givenAbbreviation='OET-RV' )
-        thisBible.loadAuxilliaryFiles = True
+        thisBible.loadAuxiliaryFiles = True
         # if versionAbbreviation in ('ULT','UST','UHB','UGNT','SR-GNT'):
         #     thisBible.uWencoded = True # TODO: Shouldn't be required ???
         if 'ALL' in BOOKS_TO_LOAD:
@@ -211,7 +211,7 @@ def load_OET_RV() -> bool:
             thisBible.preload()
             for BBB in BOOKS_TO_LOAD:
                 thisBible.loadBookIfNecessary( BBB )
-            thisBible.lookForAuxilliaryFilenames()
+            thisBible.lookForAuxiliaryFilenames()
 
         if BOOKS_TO_LOAD != ['ALL']:
             # Remove unwanted books in this Bible
