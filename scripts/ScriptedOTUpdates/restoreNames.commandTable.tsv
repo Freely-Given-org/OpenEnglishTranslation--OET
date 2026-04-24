@@ -4,7 +4,7 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 # NOTE 2: Although this table applies to the OET-LV, the versification used is the ENGLISH system
 # NOTE 3: Hebrew names that are also short English words (like Ham) may need the 'w' whole word flag so that the matching isn't overdone
 
-# Individuals (or gods)
+# Individuals (or gods, or named creatures)
 H									Aaron			אַהֲרֹן		H175 (347) Exo 4:14,27-30, ..., Acts 7:40
 H					KI1_4:6,NEH_11:17				Abda			עַבְדָּא		H5653 (2) 1Ki 4:6, Neh 11:17*
 H	CH1,CH2,EZR								Abdi			עַבְדִּי		H5660 (3) 1Chr 6:44, 2Chr 9:12, Ezr 10:26*
@@ -1009,6 +1009,7 @@ H					JDG_4:4				Lappidoth			לַפִּידוֹת		H3941 Deborah's husband (1) J
 H					EZR_2:45,NEH_7:48				Lebanah			לְבָנָא		H3838 (2) Ezr 2:45, Neh 7:48*
 H	GEN,EXO,RUT,CH1								Leah			לֵאָה		H3812 woman (34) Gen 29:16-17,23-25,30-32, 30:9-14, ..., Ruth 4:11
 wH					PRO_31:1,PRO_31:4				Lemuel			לְמוּאֵל		H3927 (2) Prov 31:1,4*
+H	JOB,PSA,ISA								Leviathan			לִוְיָתָן		H3882 creature (6) Job 3:8, 41:1, Psa 74:14, 104:26, 2x Isa 27:1*
 wH	GEN,EXO,NUM,DEU,JOS,CH1,CH2,EZR,NEH,JER,EZE,MAL								Levi			לֵוִי		H3878 (58) Gen 29:34, 34:25, ..., Exo 1:2, 2:1, ...
 H	EXO,NUM,CH1								Libni			לִבְנִי		H3845 (5) Exo 6:17, Num 3:18, 1Chr 6:17,20,29*
 H					CH1_7:19				Likhi			לִקְחִי		H3949 (1) 1Chr 7:19*

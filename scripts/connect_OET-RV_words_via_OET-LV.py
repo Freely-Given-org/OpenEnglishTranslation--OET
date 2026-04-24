@@ -368,6 +368,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('sell','sold'),
     ('taught','teaching'),
     ('walk','walking'),
+    ('watered','water'),
     ('wrote','written'),
 
     # Vocab differences / synonyms
@@ -448,6 +449,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('flames','fire'),
     ('flicked','sprinkled'),
     ('food','bread'),
+    ('forever','perpetuity'),
     ('front','face'),
     ('fulfilled','accomplished'),
     ('God','god'),
@@ -531,6 +533,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('room','place'),
     ('ropes','cords'),
     ('rubble','ruin'),
+    ('ruins','ruined'),
     ('rush','hasten'),
     ('sacred','holiness'),('sacred','holy'), ('sacred','of meeting'), # tent of meeting
     ('sacrificed','smoke'),
@@ -551,6 +554,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('So','And'),('So','Therefore'),
     ('someone','anyone'),
     ('songs','psalms'),
+    ('splendour','glory'),
     ('spoken','said'),('spoken','saying'),
     ('staying','dwelling'),
     ('strong','forceful'),
@@ -657,23 +661,23 @@ def main():
 
     # Load the OET-RV
     rv = ESFMBible( OET_RV_ESFM_FolderPath, givenAbbreviation='OET-RV' )
-    rv.loadAuxilliaryFiles = True
+    rv.loadAuxiliaryFiles = True
     rv.loadBooks() # So we can iterate through them all later
-    rv.lookForAuxilliaryFilenames()
+    rv.lookForAuxiliaryFilenames()
     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{rv=}")
 
     # Load the OET-LV OT
     lvOT = ESFMBible( OET_LV_OT_ESFM_InputFolderPath, givenAbbreviation='OET-LV' )
-    lvOT.loadAuxilliaryFiles = True
+    lvOT.loadAuxiliaryFiles = True
     lvOT.loadBooks() # So we can iterate through them all later
-    lvOT.lookForAuxilliaryFilenames()
+    lvOT.lookForAuxiliaryFilenames()
     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvOT=}")
 
     # Load the OET-LV NT
     lvNT = ESFMBible( OET_LV_NT_ESFM_InputFolderPath, givenAbbreviation='OET-LV' )
-    lvNT.loadAuxilliaryFiles = True
+    lvNT.loadAuxiliaryFiles = True
     lvNT.loadBooks() # So we can iterate through them all later
-    lvNT.lookForAuxilliaryFilenames()
+    lvNT.lookForAuxiliaryFilenames()
     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvNT=}")
 
     # Load the OT and NT word files
