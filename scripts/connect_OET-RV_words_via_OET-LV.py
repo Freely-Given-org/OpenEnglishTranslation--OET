@@ -57,6 +57,7 @@ CHANGELOG:
     2025-12-13 Add 'fast' flag, added 'heavenly'
     2025-12-17 Add multiprocessing for converting each book (although seems no real time advantange)
     2026-02-24 Added more checking of consecutive opening and closing speech marks
+    2026-04-23 Added more assert checks to catch Rust BOS faults
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -79,10 +80,10 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-04-17' # by RJH
+LAST_MODIFIED_DATE = '2026-04-26' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.87'
+PROGRAM_VERSION = '0.88'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -132,7 +133,7 @@ SIMPLE_NOUNS = ( # These are nouns that are likely to match one-to-one from the 
         'assemblies','assembly',
         'authorities','authority', 'axes','axe',
     'babies','baby', 'badger',
-        'beginnings','beginning', 'belts','belt',
+        'beds','bed', 'beginnings','beginning', 'belts','belt',
         'birth',
         'blood',
         'boats','boat', 'bodies','body', 'boys','boy',
@@ -369,6 +370,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('taught','teaching'),
     ('walk','walking'),
     ('watered','water'),
+    ('wrap','wraps'),
     ('wrote','written'),
 
     # Vocab differences / synonyms
@@ -920,7 +922,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
     # Make a list of the books that we're going to process
     booklist_to_process = []
     for BBB in lv.books:
-        if BibleOrgSysGlobals.commandLineArguments.fastMode and BBB not in ('ISA','JER'):
+        if BibleOrgSysGlobals.commandLineArguments.fastMode and BBB not in ('HAG','ISA','JER'):
             continue
         # if BBB in ('CO1',): continue # TODO: CO1_14:33 gives an issue
         booklist_to_process.append( BBB )
@@ -1265,6 +1267,10 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
 
     lvWords = lvAdjText.split( ' ' )
     rvWords1 = rvAdjText.split( ' ' )
+    # for lvWord in lvWords:
+    #     assert lvWord.count( '¦' ) == 1, f"Bad {lvWord=} from {BBB} {c}:{v} {lvText=}"
+    for rvWord in rvWords1:
+        assert rvWord.count( '¦' ) <= 1 or '-' in rvWord, f"Bad {rvWord=} from {BBB} {c}:{v} {lvText=}"
     # print( f"({len(rvWords)}) {rvWords=}")
     # print( f"({len(lvWords)}) {lvWords=}")
     # if BBB=='PSA' and c in (3,23,29) and v<3: print( f"{connectRef} {lvWords=} {rvWords1=}" )
@@ -1464,7 +1470,7 @@ def matchAdjustedProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[s
             # TODO: Determine how/why this happened in DEU Beeroth
             logging.critical( f"Why didn't this word get a word number? {lvCapitalisedWord=} from {BBB} {c}:{v} {lvCapitalisedWordList=}" )
             continue
-        assert '¦' in lvCapitalisedWord, f"{BBB} {c}:{v} {lvCapitalisedWord=} from {lvCapitalisedWordList=}"
+        assert lvCapitalisedWord.count( '¦' ) == 1, f"{BBB} {c}:{v} {lvCapitalisedWord=} from {lvCapitalisedWordList=}"
         capitalisedNoun,wordNumber,wordRow = getLVWordRow( lvCapitalisedWord, 'NT' if NT else 'OT' )
 
         for rvCapitalisedWord in rvCapitalisedWordList:
@@ -1844,7 +1850,7 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
     desiredV = (v-1) if havePsalmTitles and v>1 else v
 
     if NT:
-        if wordNumber in (119_194,142_216,149_264,149_303,149_665,149_715,149_739,149_829,149_847):
+        if wordNumber in (119_194,142_216,149_264,149_303,149_665,149_715,149_739,149_829,149_847,150_387):
             return None # TODO: 1Cor 14:33, Heb 1:6, 1 Pet 2:19,21, 3:15,16,18,21, 4:1 (nd gets put inside add field).................................................................................
     else:
         if wordNumber in (252_390,): return None # TODO: PSA 54:1 (v1 gets put into d field).................................................................................
