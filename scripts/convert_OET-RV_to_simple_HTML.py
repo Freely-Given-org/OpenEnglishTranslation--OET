@@ -44,6 +44,7 @@ CHANGELOG:
     2025-12-08 Add nesting order check for USFM character markers
     2026-02-24 Improve handling of nested quotes
     2026-03-31 Improve nesting order checking
+    2026-04-29 Handle fq and fqa markers
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -65,10 +66,10 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Internals.InternalBibleInternals import getSmallLeadingInt
 
 
-LAST_MODIFIED_DATE = '2026-03-31' # by RJH
+LAST_MODIFIED_DATE = '2026-04-29' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
-PROGRAM_VERSION = '0.94'
+PROGRAM_VERSION = '0.95'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -857,8 +858,8 @@ def produce_HTML_files() -> None:
                             startIx = closeIx + 3
 
                 inCharMarkers = []
-                expectedMarkers = BibleOrgSysGlobals.USFMCharacterMarkers + ['f','fr','ft','x','xo','xt','fig']
-                nonNestingMarkers = ('fr','ft','xo','xt')
+                expectedMarkers = BibleOrgSysGlobals.USFMCharacterMarkers + ['f','fr','ft','fq','fqa','x','xo','xt','fig']
+                nonNestingMarkers = ('fr','ft','fq','fqa','xo','xt')
                 lineLen = len( line )
                 for cc,char in enumerate( line ):
                     if cc<3: continue # Skip the paragraph marker at the beginning of the line
@@ -1210,7 +1211,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
         assert ftIx != -1, f"Footnote without ft at {book_html[fIx:fIx+30]}…"
         fEndIx = book_html.find( '\\f*', ftIx+3 )
         assert fEndIx != -1, f"Bad RV footnote in {BBB} around '{book_html[fIx:fIx+30]}'"
-        fnoteMiddle = book_html[ftIx+4:fEndIx].replace( '\\xt ', '' ) # No special handling here yet
+        fnoteMiddle = book_html[ftIx+4:fEndIx].replace( '\\xt ', '' ).replace( '\\fq ', '' ).replace( '\\fqa ', '' ).replace( '\\ft ', '' ) # No special handling here yet
         fnote = f'<span class="fn" title="Note: {fnoteMiddle}">[fn]</span>'
         # print( f"{BBB} {fnote}" )
         book_html = f'{book_html[:fIx]}{fnote}{book_html[fEndIx+3:]}'
