@@ -45,8 +45,8 @@ import logging
 #     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
-from BibleOrgSys.Internals.InternalBibleInternals import InternalBibleEntryList
 import BibleOrgSys.Formats.USFMBible as USFMBible
+from bible_organisational_system import InternalBibleEntryList
 
 
 LAST_MODIFIED_DATE = '2026-03-19' # by RJH

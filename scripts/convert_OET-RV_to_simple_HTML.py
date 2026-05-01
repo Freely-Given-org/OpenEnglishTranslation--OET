@@ -63,7 +63,7 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
-from BibleOrgSys.Internals.InternalBibleInternals import getSmallLeadingInt
+from bible_organisational_system import getSmallLeadingInt
 
 
 LAST_MODIFIED_DATE = '2026-04-29' # by RJH

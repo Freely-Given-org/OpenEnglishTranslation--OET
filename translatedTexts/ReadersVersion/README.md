@@ -73,6 +73,7 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - make sure we haven't used 'tithe'
 - decide on idioms (esp. in Proverbs) using 'lips'
 - Revisit whether words like "peace offering", "grain offering", "sin offering" would be better if hyphenated???
+- Change Ephraim/Efrayim to Israel where it's referring to the northern kingdom
 
 ## Terms to make consistent
 
@@ -112,3 +113,5 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - skin vs hide (of animal)
 - army commander Yahweh -> Commander-in-chief Yahweh
 - proclaim -> announce ???
+- exalt -> speak highly of
+- try to remove righteousness (doing what's right) and perhaps justice (doing what's fair) from RV
