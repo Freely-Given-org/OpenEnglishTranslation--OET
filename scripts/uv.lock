@@ -25,6 +25,10 @@ name = "bibleorgsys-rust"
 source = { editable = "../../BibleOrgSys/Rust/bible_organisational_system" }
 
 [[package]]
+name = "bos-books-codes-py"
+source = { editable = "../../BibleOrgSys/Rust/bos_books_codes_py" }
+
+[[package]]
 name = "certifi"
 version = "2026.4.22"
 source = { registry = "https://pypi.org/simple" }
@@ -105,12 +109,14 @@ source = { virtual = "." }
 dependencies = [
     { name = "bibleorgsys" },
     { name = "bibleorgsys-rust" },
+    { name = "bos-books-codes-py" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "bibleorgsys", editable = "../../BibleOrgSys" },
     { name = "bibleorgsys-rust", editable = "../../BibleOrgSys/Rust/bible_organisational_system" },
+    { name = "bos-books-codes-py", editable = "../../BibleOrgSys/Rust/bos_books_codes_py" },
 ]
 
 [[package]]

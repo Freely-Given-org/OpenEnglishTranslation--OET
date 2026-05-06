@@ -49,10 +49,10 @@ import BibleOrgSys.Formats.USFMBible as USFMBible
 from bible_organisational_system import InternalBibleEntryList
 
 
-LAST_MODIFIED_DATE = '2026-03-19' # by RJH
+LAST_MODIFIED_DATE = '2026-05-01' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_USFM_to_VREF"
 PROGRAM_NAME = "Convert OET LV & RV USFM files to VREF"
-PROGRAM_VERSION = '0.04'
+PROGRAM_VERSION = '0.05'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -136,7 +136,7 @@ def main():
                     elif marker in ('list',): pass
                     elif marker in ('rem',): pass
                     elif marker in ('ms1','mr','sr'): pass
-                    elif marker in ('s1','s2','s3','r'): pass
+                    elif marker in ('s1','s2','s3','s4','r'): pass
                     elif marker in ('b','nb'): pass
                     elif marker in ('sp','qa'): pass
                     elif marker == 'p': verseText = f'{verseText}¶ {cleanText}'

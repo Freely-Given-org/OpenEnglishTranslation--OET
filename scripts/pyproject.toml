@@ -7,8 +7,10 @@ requires-python = ">=3.14"
 dependencies = [
     "bibleorgsys",
     "bibleorgsys-rust",
+    "bos_books_codes_py",
 ]
 
 [tool.uv.sources]
 bibleorgsys-rust = { path = "../../BibleOrgSys/Rust/bible_organisational_system", editable = true }
 bibleorgsys = { path = "../../BibleOrgSys", editable = true }
+bos_books_codes_py = { path = "../../BibleOrgSys/Rust/bos_books_codes_py", editable = true }

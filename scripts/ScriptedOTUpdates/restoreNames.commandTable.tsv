@@ -1115,8 +1115,11 @@ H					CH1_8:34,CH1_9:40				Meribbaal			מְרִיב-בַּעַל		{ H4807 (space
 H					CH1_8:34,CH1_9:40				Merib-baal			מְרִיב-בַּעַל		{ H4807 (space changed to hyphen) (3) 1Chr 8:34, 9:40*
 wH					CH1_8:34,CH1_9:40				Merib			מְרִיב		{ H4807 (space changed to hyphen) (3) 1Chr 8:34, 9:40*
 wH					CH1_8:34,CH1_9:40				baal			בַּעַל		{ H4807 (space changed to hyphen) (3) 1Chr 8:34, 9:40*
-H					KI2_24:27,JER_52:31				Merodach			מְרֹדַךְ		{ H192 partial (2) 2Ki 25:27, Jer 52:31*
-H					KI2_24:27,JER_52:31				merodach			מְרֹדַךְ		{ H192 partial (2) 2Ki 25:27, Jer 52:31*
+H					KI2_24:27,JER_52:31				Merodach			מְרֹדַךְ		{{ H192 partial (2) 2Ki 25:27, Jer 52:31*
+H					KI2_24:27,JER_52:31				merodach			מְרֹדַךְ		{{ H192 partial (2) 2Ki 25:27, Jer 52:31*
+H					ISA_39:1				Merodach-baladan			מְרא-דַךְ-בַּלְאָדָן		{ H4757 (spaces changed to hyphen) (1) Isa 39:1*
+H					ISA_39:1				Merodach-			מְרא-דַךְ		{ H4757 (space changed to hyphen) (1) Isa 39:1*
+H					ISA_39:1				baladan			בַּלְאָדָן		{ H4757 (1) Isa 39:1* (See H1081 above)
 wH					CH1_8:9				Mesha			מֵישָׁא		H4331 (1) 1Chr 8:9*
 wH					KI2_3:4				Mesha			מֵישַׁע		H4338 king of Moab (1) 2Ki 3:4*
 H					DAN_1:7				Meshach			מֵישַׁךְ		H4335 Mishael (1) Dan 1:7*
@@ -1231,7 +1234,7 @@ wH	EZR,NEH								Neziah			נְצִיחַ		H5335 (2) Ezr 2:54, Neh 7:56*
 H					KI2_17:31				Nibhaz			נִבְחַז		H5026 (1) 2Ki 17:31*
 H									Nimrod			נִמְרוֹד		H5248 (4) Gen 10:8-9, 1Chr 1:10, Mic 5:6*
 H	KI1,KI2,CH2								Nimshi			נִמְשִׁי		H5250 man (5) 1Ki 19:16, 2Ki 9:2,14,20, 2Chr 22:7*
-H					KI2_19:37,ISA_37:38				Nisroch			נְסִרֹךְ		H5268 god (2) 2Ki 19:37, Isa 37:38*
+H					KI2_19:37,ISA_37:38				Nisroch			נִסְרֹךְ		H5268 god (2) 2Ki 19:37, Isa 37:38*
 H					EZR_8:33,NEH_6:14				Noadiah			נוֹעַדְיָה		H5129 (2) Ezr 8:33, Neh 6:14*
 wH		NUM,JOS							Noah			נֹחַ		H5146 (46) Gen 5:29-30,32, 6:8-10,13,22, 7:1,5-7,9,11, ...
 wH		GEN							Noah			נֹעָה		H5270 Woman (4) Num 26:33, 27:1, 36:11, Josh 17:3*
