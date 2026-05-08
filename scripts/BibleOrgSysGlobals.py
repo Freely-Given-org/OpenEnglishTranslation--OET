@@ -1462,7 +1462,6 @@ def setStrictCheckingFlag( newValue=True ):
 
 
 # Some global variables
-loadedBibleBooksCodes:Optional[List[str]] = None
 loadedUSFMMarkers:Optional[List[str]] = None
 USFMParagraphMarkers:Optional[List[str]] = None
 USFMCharacterMarkers:Optional[List[str]] = None
@@ -1475,11 +1474,7 @@ def preloadCommonData() -> None:
         This includes BibleBooksCode and USFMMarkers
     """
     # Load Bible data sets that are globally useful
-    global loadedBibleBooksCodes, loadedUSFMMarkers, USFMParagraphMarkers, USFMCharacterMarkers, USFMAllExpandedCharacterMarkers, internal_SFMs_to_remove
-
-    from BibleOrgSys.Reference.BibleBooksCodes import BibleBooksCodes
-    loadedBibleBooksCodes = BibleBooksCodes().loadData()
-    assert len(loadedBibleBooksCodes) >= 243
+    global loadedUSFMMarkers, USFMParagraphMarkers, USFMCharacterMarkers, USFMAllExpandedCharacterMarkers, internal_SFMs_to_remove
 
     from BibleOrgSys.Reference.USFM3Markers import USFM3Markers
     loadedUSFMMarkers = USFM3Markers().loadData()

@@ -74,6 +74,7 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 from bible_organisational_system import getPositiveLeadingInt, InternalBibleEntryList
+import bos_books_codes_py
 
 import sys
 sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitted to PyPI
@@ -136,15 +137,16 @@ SIMPLE_NOUNS = ( # These are nouns that are likely to match one-to-one from the 
     'babies','baby', 'badger', 'bait', 'battles','battle',
         'beds','bed', 'beginnings','beginning', 'belts','belt',
         'birds','bird', 'birth',
-        'blood',
+        'blood', 'blossoms','blossom',
         'boats','boat', 'bodies','body', 'boys','boy',
         'bread', 'breasts','breast', 'branches','branch', 'brothers','brother',
         'bulls','bull', 'burials','burial',
     'camels','camel', 'camp',
         'chairs','chair', 'chambers','chamber', 'chariots','chariot', 'chests','chest', 'children','child',
         'cities','city',
-        'coats','coat', 'collectors','collector', 'commands','command', 'companions','companion', 'compassion',
-            'cords','cord', 'councils','council', 'courtyards','courtyard', 'courts','court', 'countries','country', 'cows','cow',
+        'coats','coat', 'collectors','collector', 'commands','command', 'companions','companion',
+            'cords','cord', 'corners','corner',
+            'councils','council', 'courtyards','courtyard', 'courts','court', 'countries','country', 'cows','cow',
         'craftsmen','craftsman', 'crowds','crowd',
         'cushion',
     'danger', 'darkness', 'daughters','daughter', 'days','day',
@@ -156,8 +158,9 @@ SIMPLE_NOUNS = ( # These are nouns that are likely to match one-to-one from the 
         'exorcists','exorcist',
     'faces','face', 'faith', 'farmers','farmer', 'fathers','father',
         'fevers','fever',
-        'fields','field', 'figs','fig', 'fingers','finger', 'fires','fire', 'fish', 'feet','foot',
-        'followers','follower', 'fords','ford',
+        'fields','field', 'figs','fig', 'fingers','finger', 'fires','fire', 'fish',
+        'flowers','flower',
+        'followers','follower', 'feet','foot', 'fords','ford',
         'friends','friend', 'fruits','fruit',
     'gateways','gateway', 'gates','gate',
         'generations','generation',
@@ -208,7 +211,7 @@ SIMPLE_NOUNS = ( # These are nouns that are likely to match one-to-one from the 
         'shame', 'sheep', 'shepherds','shepherd', 'ships','ship', 'shores','shore', 'shrines','shrine',
         'sides','side', 'signs','sign', 'silver', 'silversmiths','silversmith', 'sinners','sinner', 'sins','sin', 'sisters','sister', 'sky', 'slaves','slave',
         'soldiers','soldier', 'sons', 'souls','soul', 'spirits','spirit',
-        'stars','star', 'stones','stone', 'streams','stream', 'streets','street', 'sun', 'swords','sword',
+        'stars','star', 'stones','stone', 'streams','stream', 'streets','street', 'strength', 'sun', 'swords','sword',
     'tables','table', 'taxes','tax',
         'teachers','teacher', 'temples','temple', 'tent', 'testimonies','testimony',
         'theatres','theatre', 'things','thing', 'threats','threat', 'thrones','throne', 'thumbs','thumb',
@@ -224,7 +227,7 @@ SIMPLE_NOUNS = ( # These are nouns that are likely to match one-to-one from the 
     'years','year',
     )
 assert len(set(SIMPLE_NOUNS)) == len(SIMPLE_NOUNS) # Check for accidental duplicates
-verbalNouns = ('confession', 'confidence',
+verbalNouns = ('compassion', 'confession', 'confidence',
                 'deception', 'decision', 'dedication', 'discussion', 'distribution', 'destruction',
                 'fellowship', 'forgiveness', 'fulfilment',
                 'immersion', 'repentance')
@@ -523,6 +526,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('non-Jews','pagans'),
     ('noticed','saw'),
     ('obey','submitting'),
+    ('opened','divided'),
     ('other','across'),
     ('own','possession'),
     ('ordered','commanded'),
@@ -950,7 +954,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
     # Make a list of the books that we're going to process
     booklist_to_process = []
     for BBB in lv.books:
-        if BibleOrgSysGlobals.commandLineArguments.fastMode and BBB not in ('HAG','ISA','JER'):
+        if BibleOrgSysGlobals.commandLineArguments.fastMode and BBB not in ('ISA','JER','MRK'):
             continue
         # if BBB in ('CO1',): continue # TODO: CO1_14:33 gives an issue
         booklist_to_process.append( BBB )
@@ -1094,7 +1098,7 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
             if numVerses is None: # something unusual
                 logging.critical( f"connect_OET_RV: no verses found for OET-LV {BBB} {C}" )
                 continue
-            havePsalmTitles = BibleOrgSysGlobals.loadedBibleBooksCodes.hasPsalmTitle( BBB, C )
+            havePsalmTitles = bos_books_codes_py.has_psalm_title_py( BBB, C )
             for v in range( 1, numVerses+1 ): # Note: some Psalms have an extra verse in OET-LV (because /d is v1)
                 V = str(v)
                 try:
@@ -1176,7 +1180,7 @@ def check_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> None
     This check is specifically to catch copy and paste errors where a word number accidentally gets wrongly copied into a different verse.
     """
     # fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {BBB} {c}:{v} {len(rvEntryList)}, {len(lvEntryList)} )" )
-    NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
+    NT = bos_books_codes_py.is_nt_nr_py( BBB )
     if NT:
         assert state.wordTableHeaderList['NT'].index('VLTGlossWords')+1 == GLOSS_COLUMN__NUMBER, f"{state.wordTableHeaderList['NT'].index('VLTGlossWords')+1=} {GLOSS_COLUMN__NUMBER=} {state.wordTableHeaderList=}" # Check we have the correct column below
 
@@ -1250,7 +1254,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     # fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {BBB} {c}:{v} {len(rvEntryList)}, {len(lvEntryList)} )" )
     # if connectRef == 'PSA_54:1':
     #     print( f"\nconnect_OET_RV( {connectRef} {len(rvEntryList)} {rvEntryList=}, {len(lvEntryList)} {lvEntryList=} )" )
-    NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
+    NT = bos_books_codes_py.is_nt_nr_py( BBB )
     if NT:
         assert state.wordTableHeaderList['NT'].index('VLTGlossWords')+1 == GLOSS_COLUMN__NUMBER, f"{state.wordTableHeaderList['NT'].index('VLTGlossWords')+1=} {GLOSS_COLUMN__NUMBER=} {state.wordTableHeaderList=}" # Check we have the correct column below
 
@@ -1401,7 +1405,7 @@ def matchIdenticalProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[
     fnPrint( DEBUGGING_THIS_MODULE, f"matchIdenticalProperNouns( {BBB} {c}:{v} {rvCapitalisedWordList}, {lvCapitalisedWordList} )" )
     assert rvCapitalisedWordList and lvCapitalisedWordList
 
-    NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
+    NT = bos_books_codes_py.is_nt_nr_py( BBB )
 
     # But we don't want any rvWords that are already tagged
     numAdded = numNS = 0
@@ -1470,7 +1474,7 @@ def matchAdjustedProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[s
     fnPrint( DEBUGGING_THIS_MODULE, f"matchAdjustedProperNouns( {BBB} {c}:{v} {rvCapitalisedWordList}, {lvCapitalisedWordList} )" )
     assert rvCapitalisedWordList and lvCapitalisedWordList
 
-    NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
+    NT = bos_books_codes_py.is_nt_nr_py( BBB )
 
     # But we don't want any rvWords that are already tagged
     numAdded = numNS = 0
@@ -1578,7 +1582,7 @@ def matchOurListedSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWor
     fnPrint( DEBUGGING_THIS_MODULE, f"matchOurListedSimpleWords( {BBB} {c}:{v} {rvWordList}, {lvWordList} )" )
     assert rvWordList and lvWordList
 
-    NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
+    NT = bos_books_codes_py.is_nt_nr_py( BBB )
 
     numAdded = numNS = 0
     for simpleNoun in SIMPLE_WORDS:
@@ -1634,7 +1638,7 @@ def matchWordsFirstParts( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList
     fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsFirstParts( {BBB} {c}:{v} {rvWordList}, {lvWordList} )" )
     assert rvWordList and lvWordList
 
-    NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
+    NT = bos_books_codes_py.is_nt_nr_py( BBB )
 
     # Firstly make a matching list of LV words without the word numbers
     simpleLVWordList = []
@@ -1722,7 +1726,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
     # if BBB=='KI2' and c==15 and v==28:
     #     print( f"doGroup1( {BBB} {c}:{v} {rvVerseWordList=} {lvVerseWordList=} {simpleLVWordList=} )")
     #     halt
-    NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
+    NT = bos_books_codes_py.is_nt_nr_py( BBB )
 
     numAdded = numNS = 0
     for rvWord, lvWordStr in RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS:
@@ -1873,8 +1877,8 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
     assert '¦' not in word
     # if BBB=='MAT' and v==1: print( word )
 
-    NT = BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB )
-    havePsalmTitles = BibleOrgSysGlobals.loadedBibleBooksCodes.hasPsalmTitle( BBB, str(c) )
+    NT = bos_books_codes_py.is_nt_nr_py( BBB )
+    havePsalmTitles = bos_books_codes_py.has_psalm_title_py( BBB, str(c) )
     desiredV = (v-1) if havePsalmTitles and v>1 else v
 
     if NT:

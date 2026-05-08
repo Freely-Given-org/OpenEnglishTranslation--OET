@@ -36,6 +36,7 @@ CHANGELOG:
     2025-09-18 Check equal numbers of open and close parentheses
     2025-12-08 Add character marker checks incl. nesting order
     2026-04-14 Handle /ie markers
+    2026-05-08 Upgraded to bos_books_codes_py
 """
 from gettext import gettext as _
 from typing import List, Tuple, Set, Optional
@@ -47,24 +48,23 @@ import re
 from collections import defaultdict
 import json
 
-# if __name__ == '__main__':
-#     import sys
-#     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.Bible import Bible
 from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 from BibleOrgSys.Misc import CompareBibles
+import bos_books_codes_py
+
 import sys
 sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-04-14' # by RJH
+LAST_MODIFIED_DATE = '2026-05-08' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
-PROGRAM_VERSION = '0.89'
+PROGRAM_VERSION = '0.90'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -742,9 +742,9 @@ def produce_HTML_files() -> None:
         elif BBB == 'JHN': BBB = 'LUK'
 
         bookType = None
-        if BibleOrgSysGlobals.loadedBibleBooksCodes.isOldTestament_NR( BBB ):
+        if bos_books_codes_py.is_ot_nr_py( BBB ):
             bookType = 'OT'
-        elif BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB ):
+        elif bos_books_codes_py.is_nt_nr_py( BBB ):
             bookType = 'NT'
 
         word_table = None
@@ -1191,7 +1191,7 @@ def make_NT_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_
             BBB, CVW = wordRef.split( '_', 1 )
             C, VW = CVW.split( ':', 1 )
             V, W = VW.split( 'w', 1 )
-            tidyBBB = BibleOrgSysGlobals.loadedBibleBooksCodes.tidyBBB( BBB )
+            tidy_bbb = bos_books_codes_py.tidy_bbb_py( BBB )
 
             strongs = extendedStrongs[:-1] if extendedStrongs else None # drop the last digit
 
@@ -1254,7 +1254,7 @@ def make_NT_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_
             oetLink = f'<b><a href="../{BBB}.html#C{C}V{V}">Back to OET</a></b>'
             html = f'''{'' if probability else '<div class="unusedOLWord">'}<h1>OET Wordlink #{n}{'' if probability else ' <small>(Unused Greek word variant)</small>'}</h1>
 <p>{prevLink}{oetLink}{nextLink}</p>
-<p><a title="View Statistical Restoration Greek page" href="https://GreekCNTR.org/collation/?{CNTR_BOOK_ID_MAP[BBB]}{C.zfill(3)}{V.zfill(3)}">SR GNT {tidyBBB} {C}:{V}</a>
+<p><a title="View Statistical Restoration Greek page" href="https://GreekCNTR.org/collation/?{CNTR_BOOK_ID_MAP[BBB]}{C.zfill(3)}{V.zfill(3)}">SR GNT {tidy_bbb} {C}:{V}</a>
  {probabilityField}<b>{greekWord}</b> ({transliterate_Greek(greekWord)}) {translation}
  Strongs=<a title="View Strongs dictionary entry" href="https://BibleHub.com/greek/{strongs}.htm">{extendedStrongs}</a> <small>Lemma={lemmaLink}</small><br>
  {roleField} Morphology=<b>{morphology}</b>:{moodField}{tenseField}{voiceField}{personField}{caseField}{genderField}{numberField}{f'<br>  {semanticExtras}' if semanticExtras else ''}</p>{'' if probability else f'{NEWLINE}</div><!--unusedOLWord-->'}'''
@@ -1272,7 +1272,7 @@ def make_NT_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_
                     oBBB, oCVW = oWordRef.split( '_', 1 )
                     oC, oVW = oCVW.split( ':', 1 )
                     oV, oW = oVW.split( 'w', 1 )
-                    oTidyBBB = BibleOrgSysGlobals.loadedBibleBooksCodes.tidyBBB( oBBB )
+                    oTidyBBB = bos_books_codes_py.tidy_bbb_py( oBBB )
                     if other_count == 0:
                         html = f'{html}\n<h2>Other uses ({len(thisWordNumberList)-1:,}) of {greekWord} <small>{morphology}</small> in the NT</h2>'
                     translation = '<small>(no English gloss)</small>' if oOETGlossWords=='-' else f'''English gloss=‘<b>{oFormattedGlossWords.replace('_','<span class="ul">_</span>')}</b>’'''
@@ -1355,7 +1355,7 @@ def make_NT_lemma_pages( inputFolderPath:Path, outputFolderPath:Path, word_table
             oBBB, oCVW = oWordRef.split( '_', 1 )
             oC, oVW = oCVW.split( ':', 1 )
             oV, oW = oVW.split( 'w', 1 )
-            oTidyBBB = BibleOrgSysGlobals.loadedBibleBooksCodes.tidyBBB( oBBB )
+            oTidyBBB = bos_books_codes_py.tidy_bbb_py( oBBB )
             oTidyMorphology = oMorphology[4:] if oMorphology.startswith('····') else oMorphology
             # if other_count == 0:
             translation = '<small>(no English gloss here)</small>' if oOETGlossWords=='-' else f'''English gloss=‘<b>{oFormattedGlossWords.replace('_','<span class="ul">_</span>')}</b>’'''
@@ -1502,12 +1502,12 @@ def livenMD( mdText:str ) -> str:
         mdLinkTarget = mdLinkTarget.split( '#', 1 )[1]
         if mdLinkTarget.count( '.' ) == 2: # Then it's almost certainly an OSIS B/C/V ref
             OSISBkCode, C, V = mdLinkTarget.split( '.' )
-            BBB = BibleOrgSysGlobals.loadedBibleBooksCodes.getBBBFromOSISAbbreviation( OSISBkCode )
+            BBB = bos_books_codes_py.getBBBFromOSISAbbreviation( OSISBkCode )
             ourLinkTarget = f'../{BBB}.html#C{C}V{V}'
         else:
             assert mdLinkTarget.count( '.' ) == 1 # Then it's almost certainly an OSIS B/C ref
             OSISBkCode, C = mdLinkTarget.split( '.' )
-            BBB = BibleOrgSysGlobals.loadedBibleBooksCodes.getBBBFromOSISAbbreviation( OSISBkCode )
+            BBB = bos_books_codes_py.getBBBFromOSISAbbreviation( OSISBkCode )
             ourLinkTarget = f'../{BBB}.html#C{C}'
         ourLink = f'<a href="{ourLinkTarget}">{readableRef}</a>'
         mdText = f'''{mdText[:match.start()]}{ourLink}{mdText[match.end():]}'''

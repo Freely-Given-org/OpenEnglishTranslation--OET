@@ -6,7 +6,7 @@
 #
 # Script handling convert_BibTags_USFM_to_TSV functions
 #
-# Copyright (C) 2022 Robert Hunt
+# Copyright (C) 2022-2026 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -27,7 +27,12 @@
 Script taking BibleTags Hebrew and Greek USFM files
     (which currently come from the unfoldingWord UGNT and UHB)
     and saving each set (OT and NT) into a seven-column TSV file.
+
+
+CHANGELOG:
+    2026-05-08 Upgraded to bos_books_codes_py
 """
+
 from gettext import gettext as _
 from typing import Dict, List, Tuple
 from pathlib import Path
@@ -37,12 +42,13 @@ from pathlib import Path
 #     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
+import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2022-10-19' # by RJH
+LAST_MODIFIED_DATE = '2026-05-08' # by RJH
 SHORT_PROGRAM_NAME = "convert_BibTags_USFM_to_TSV"
 PROGRAM_NAME = "Extract and Save BibleTags USFM as TSV"
-PROGRAM_VERSION = '0.50'
+PROGRAM_VERSION = '0.51'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -86,9 +92,9 @@ def handle_OT() -> bool:
 
     wordList = []
     for referenceNumber in range(1, 39+1):
-        BBB = BibleOrgSysGlobals.loadedBibleBooksCodes.getBBBFromReferenceNumber( referenceNumber )
-        Uuu = BibleOrgSysGlobals.loadedBibleBooksCodes.getUSFMAbbreviation( BBB )
-        # bookname = BibleOrgSysGlobals.loadedBibleBooksCodes.getEnglishName_NR( BBB )
+        BBB = bos_books_codes_py.get_bbb_from_reference_number_py( referenceNumber )
+        Uuu = bos_books_codes_py.reference_abbrev_to_usfm_abbrev_py( BBB )
+        # bookname = bos_books_codes_py.get_english_name_nr_py( BBB )
         filename = state.USFM_filename_template.replace( 'nn', str(referenceNumber).zfill(2) ).replace( 'UUU', Uuu.upper() )
 
         vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading {BBB} USFM file from {filename}…")
@@ -115,8 +121,8 @@ def handle_NT() -> bool:
 
     wordList = []
     for referenceNumber in range(40, 66+1):
-        BBB = BibleOrgSysGlobals.loadedBibleBooksCodes.getBBBFromReferenceNumber( referenceNumber )
-        Uuu = BibleOrgSysGlobals.loadedBibleBooksCodes.getUSFMAbbreviation( BBB )
+        BBB = bos_books_codes_py.get_bbb_from_reference_number_py( referenceNumber )
+        Uuu = bos_books_codes_py.reference_abbrev_to_usfm_abbrev_py( BBB )
         # NOTE: Matthew is at #41 (not 40)
         filename = state.USFM_filename_template.replace( 'nn', str(referenceNumber+1).zfill(2) ).replace( 'UUU', Uuu.upper() )
 

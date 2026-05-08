@@ -45,6 +45,7 @@ CHANGELOG:
     2025-12-18 Fix joined English words 'towitness' 'topass', etc. in 'English' field
     2025-12-24 Fix Hebrew singular pronouns glosses as plurals in 'English' field
     2026-03-19 Did the minimum to get the updated Macula Hebrew files to load
+    2026-05-08 Upgraded to bos_books_codes_py
 """
 from gettext import gettext as _
 # from typing import Dict, List, Tuple
@@ -64,15 +65,16 @@ import unicodedata
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.OriginalLanguages import Hebrew
+import bos_books_codes_py
 
 import sys
 sys.path.append( '../../BibleTransliterations/Python/' )
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew
 
-LAST_MODIFIED_DATE = '2026-04-16' # by RJH
+LAST_MODIFIED_DATE = '2026-05-08' # by RJH
 SHORT_PROGRAM_NAME = "convert_ClearMaculaOT_to_our_TSV"
 PROGRAM_NAME = "Extract and Apply Macula OT glosses"
-PROGRAM_VERSION = '0.59'
+PROGRAM_VERSION = '0.60'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -278,9 +280,9 @@ wordnumber_regex = re.compile( '[0-9]{12}' )
 #     # non_blank_counts = defaultdict(int)
 #     refDict = {}
 #     for referenceNumber in range(1, 39+1):
-#         BBB = BibleOrgSysGlobals.loadedBibleBooksCodes.getBBBFromReferenceNumber( referenceNumber )
+#         BBB = bos_books_codes_py.get_bbb_from_reference_number_py( referenceNumber )
 #         vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading Macula Hebrew LowFat {BBB} XML files…")
-#         Uuu = BibleOrgSysGlobals.loadedBibleBooksCodes.getUSFMAbbreviation( BBB )
+#         Uuu = bos_books_codes_py.reference_abbrev_to_usfm_abbrev_py( BBB )
 #         if Uuu=='Hos': Uuu = 'HOS' # Fix inconsistency in naming patterns
 #         filenameTemplate = MACULA_HEBREW_LOWFAT_XML_INPUT_FILENAME_TEMPLATE.replace( 'NN', str(referenceNumber).zfill(2) ).replace( 'Uuu', Uuu )
 
@@ -609,9 +611,9 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
     # non_blank_counts = defaultdict(int)
     refDict = {}
     for referenceNumber in range(1, 39+1):
-        BBB = BibleOrgSysGlobals.loadedBibleBooksCodes.getBBBFromReferenceNumber( referenceNumber )
+        BBB = bos_books_codes_py.get_bbb_from_reference_number_py( referenceNumber )
         vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading Macula Hebrew Nodes {BBB} XML files…")
-        Uuu = BibleOrgSysGlobals.loadedBibleBooksCodes.getUSFMAbbreviation( BBB )
+        Uuu = bos_books_codes_py.reference_abbrev_to_usfm_abbrev_py( BBB )
         if Uuu=='Hos': Uuu = 'HOS' # Fix inconsistency in naming patterns
         filenameTemplate = MACULA_HEBREW_NODES_XML_INPUT_FILENAME_TEMPLATE.replace( 'NN', str(referenceNumber).zfill(2) ).replace( 'Uuu', Uuu )
 
@@ -1324,7 +1326,7 @@ def removeHebrewCantillationMarks( text:str, removeMetegOrSiluq=False ) -> str:
 #         print( f"({len(maculaRow)}) {maculaRow}" )
 #         nextMaculaRow = state.macula_rows[rr+1]
 
-#         BBB = BibleOrgSysGlobals.loadedBibleBooksCodes.getBBBFromReferenceNumber( maculaRow['xml:id'][1:3] )
+#         BBB = bos_books_codes_py.get_bbb_from_reference_number_py( maculaRow['xml:id'][1:3] )
 
 #         theirRef = maculaRow['ref']
 #         wordOrMorpheme = removeHebrewCantillationMarks(maculaRow['text'], removeMetegOrSiluq=True)

@@ -6,7 +6,7 @@
 #
 # Script handling convert_ClearMaculaNT_to_TSV functions
 #
-# Copyright (C) 2022-2024 Robert Hunt
+# Copyright (C) 2022-2026 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -33,6 +33,7 @@ CHANGELOG:
     2023-03-22 Shortened referent field in our output tables
                Changed some fieldnames: Referent -> Referents, Frame -> Frames better reflecting the actual data contents
     2023-04-27 Combined subject referents into Referents column (so now, one less column)
+    2026-05-08 Upgraded to bos_books_codes_py
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple
@@ -42,11 +43,9 @@ from collections import defaultdict
 import logging
 from xml.etree import ElementTree
 
-# if __name__ == '__main__':
-#     import sys
-#     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
+import bos_books_codes_py
 
 
 LAST_MODIFIED_DATE = '2024-03-19' # by RJH
@@ -186,8 +185,8 @@ def loadClearLowFatGlossesXML() -> bool:
     column_counts = defaultdict(lambda: defaultdict(int))
     for referenceNumber in range(40, 66+1):
         nn = referenceNumber - 39 # Want Matthew starting with 1
-        BBB = BibleOrgSysGlobals.loadedBibleBooksCodes.getBBBFromReferenceNumber( referenceNumber )
-        bookname = BibleOrgSysGlobals.loadedBibleBooksCodes.getEnglishName_NR( BBB )
+        BBB = bos_books_codes_py.get_bbb_from_reference_number_py( referenceNumber )
+        bookname = bos_books_codes_py.get_english_name_nr_py( BBB )
         filename = LOWFAT_XML_FILENAME_TEMPLATE.replace( 'NN', str(nn).zfill(2) ).replace( 'wwww', bookname.lower().replace(' ','') )
         vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading {BBB} XML file from {filename}…")
         bookTree = ElementTree.parse( state.lowfat_XML_input_folderpath.joinpath( filename ) )

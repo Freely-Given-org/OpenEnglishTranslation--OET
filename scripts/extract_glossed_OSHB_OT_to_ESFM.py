@@ -66,6 +66,7 @@ CHANGELOG:
     2025-06-29 Fixed a couple of systematic glossing errors ('todrink' and 'forhelp')
     2026-03-19 Did the minimum to get the updated Macula Hebrew data to work
     2026-04-01 Added /ie at end of introduction (as although it's optional in USFM, it's part of the ESFM spec)
+    2026-05-08 Upgraded to bos_books_codes_py
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple
@@ -78,12 +79,13 @@ import logging
 
 import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
+import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-04-14' # by RJH
+LAST_MODIFIED_DATE = '2026-05-08' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed_OSHB_OT_to_ESFM"
 PROGRAM_NAME = "Extract glossed OSHB OT ESFM files"
-PROGRAM_VERSION = '1.0'
+PROGRAM_VERSION = '1.0.01'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -312,8 +314,8 @@ def export_literal_English_gloss_esfm() -> bool:
                     output_file.write(f"{esfm_text}\n")
                 vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {len(esfm_text)+1:,} bytes to {last_BBB}_gloss.ESFM" )
                 num_exported_files += 1
-            USFM_book_code = BibleOrgSysGlobals.loadedBibleBooksCodes.getUSFMAbbreviation( BBB )
-            English_book_name = BibleOrgSysGlobals.loadedBibleBooksCodes.getEnglishName_NR( BBB )
+            USFM_book_code = bos_books_codes_py.reference_abbrev_to_usfm_abbrev_py( BBB )
+            English_book_name = bos_books_codes_py.get_english_name_nr_py( BBB )
             esfm_text = f"""\\id {USFM_book_code}
 \\usfm 3.0
 \\ide UTF-8
