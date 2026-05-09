@@ -45,6 +45,7 @@ CHANGELOG:
     2026-02-24 Improve handling of nested quotes
     2026-03-31 Improve nesting order checking
     2026-04-29 Handle fq and fqa markers
+    2026-05-08 Upgraded to bos_books_codes_py
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -56,20 +57,18 @@ import glob
 import shutil
 import os.path
 
-# if __name__ == '__main__':
-#     import sys
-#     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 from bible_organisational_system import getSmallLeadingInt
+import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-04-29' # by RJH
+LAST_MODIFIED_DATE = '2026-05-08' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
-PROGRAM_VERSION = '0.95'
+PROGRAM_VERSION = '0.97'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -785,9 +784,9 @@ def produce_HTML_files() -> None:
         elif BBB == 'JHN': BBB = 'LUK'
 
         bookType = None
-        if BibleOrgSysGlobals.loadedBibleBooksCodes.isOldTestament_NR( BBB ):
+        if bos_books_codes_py.is_ot_nr_py( BBB ):
             bookType = 'OT'
-        elif BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB ):
+        elif bos_books_codes_py.is_nt_nr_py( BBB ):
             bookType = 'NT'
 
         word_table = None
@@ -1103,7 +1102,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
             # Liven section reference links
             linkedBits = []
             lastBBB = None
-            for restBit in rest[1:-1].split( '; '):
+            for restBit in rest[1:-1].replace( ',', ';').split( '; '):
                 dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{BBB} {C}:{V} r='{rest}' {restBit=}")
                 if BBB=='PSA' and restBit == 'Continuation of Song 42':
                     linkBBB = 'PSA'
@@ -1112,7 +1111,8 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                     try:
                         bkCode, linkCV = restBit.rsplit(' ', 1)
                         bkCode = bkCode.rstrip('.').replace( 'Yhn', 'Jn' ).replace( 'Yud', 'Jud' )
-                        linkBBB = BibleOrgSysGlobals.loadedBibleBooksCodes.getBBBFromEnglishText( bkCode )
+                        linkBBB = bos_books_codes_py.english_name_to_reference_abbrev_py( bkCode )
+                        # print( f"From {restBit=} {bkCode=} got {linkBBB=}")
                         if not linkBBB:
                             assert bkCode[0].isdigit(), f"{BBB} {C}:{V}: {restBit=} {bkCode=} {linkCV=} {linkBBB=} {lastBBB=}"
                             linkBBB = lastBBB
@@ -1253,8 +1253,8 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                          .replace( '\\it*', '</i>' ).replace( '\\+it*', '</i>' )
                          .replace( '\\bd ', '<b>' ).replace( '\\+bd ', '<b>' )
                          .replace( '\\bd*', '</b>' ).replace( '\\+bd*', '</b>' )
-                         .replace( '\\bdit ', '<b><i>' ).replace( '\\+bdit ', '<b><i>' ) # Not actually required in OET-RV AFAWK
-                         .replace( '\\bdit*', '</i></b>' ).replace( '\\bdit*', '</i></b>' )
+                         .replace( '\\bdit ', '<b><i>' ).replace( '\\+bdit ', '<b><i>' )
+                         .replace( '\\bdit*', '</i></b>' ).replace( '\\+bdit*', '</i></b>' )
                          .replace( '\\add ', '<span class="RVadded">' ).replace( '\\+add ', '<span class="RVadded">' )
                          .replace( '\\add*', '</span>' ).replace( '\\+add*', '</span>' )
                          .replace( '\\nd ', '<span class="nominaSacra">' ).replace( '\\+nd ', '<span class="nominaSacra">' )

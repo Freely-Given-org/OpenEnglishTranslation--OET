@@ -36,6 +36,7 @@ NOTE: This script doesn't need to remove special ESFM formatting
 
 CHANGELOG:
     2025-03-31 Adjust input folder
+    2026-05-08 Upgraded to bos_books_codes_py
 """
 from pathlib import Path
 import logging
@@ -47,12 +48,13 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 import BibleOrgSys.Formats.USFMBible as USFMBible
 from bible_organisational_system import InternalBibleEntryList
+import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-05-01' # by RJH
+LAST_MODIFIED_DATE = '2026-05-08' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_USFM_to_VREF"
 PROGRAM_NAME = "Convert OET LV & RV USFM files to VREF"
-PROGRAM_VERSION = '0.05'
+PROGRAM_VERSION = '0.10'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -101,7 +103,7 @@ def main():
                 # print( f"{vref=}" )
                 UUU, CV = vref.split( ' ' )
                 C,V = CV.split( ':' )
-                BBB = BibleOrgSysGlobals.loadedBibleBooksCodes.getBBBFromUSFMAbbreviation( UUU )
+                BBB = bos_books_codes_py.usfm_abbrev_to_reference_abbrev_py( UUU )
                 # print( f"{vref=} {UUU=} {BBB=} {C=} {V=}" )
 
                 bcvRef = (BBB, C, V)

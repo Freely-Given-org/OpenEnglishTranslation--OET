@@ -8,12 +8,14 @@ version = "0.1.1"
 source = { editable = "../../BibleOrgSys" }
 dependencies = [
     { name = "bibleorgsys-rust" },
+    { name = "bos-books-codes-py" },
     { name = "requests" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "bibleorgsys-rust", editable = "../../BibleOrgSys/Rust/bible_organisational_system" },
+    { name = "bos-books-codes-py", editable = "../../BibleOrgSys/Rust/bos_books_codes_py" },
     { name = "requests", specifier = ">=2.33.1" },
 ]
 

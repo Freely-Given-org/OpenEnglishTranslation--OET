@@ -6,7 +6,7 @@
 #
 # Script to take the OET-RV and OET-LV HTML files and display them side-by-side
 #
-# Copyright (C) 2022-2024 Robert Hunt
+# Copyright (C) 2022-2026 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+OET@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -37,6 +37,7 @@ CHANGELOG:
     2023-08-07 Move MRK before MAT, add some more styles
     2023-08-09 Rename 'underlines' button to 'marks'
     2023-08-21 Add lemma pages
+    2026-05-08 Upgraded to bos_books_codes_py
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -48,21 +49,18 @@ import glob
 import shutil
 import os.path
 
-# if __name__ == '__main__':
-#     import sys
-#     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
-from BibleOrgSys.Bible import Bible
-from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39 #, BOOKLIST_NT27
+# from BibleOrgSys.Bible import Bible
+from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
-from BibleOrgSys.Misc import CompareBibles
+import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2024-04-26' # by RJH
+LAST_MODIFIED_DATE = '2026-05-08' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
-PROGRAM_VERSION = '0.62'
+PROGRAM_VERSION = '0.63'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -1576,9 +1574,9 @@ def pack_HTML_files() -> None:
         elif BBB == 'JHN': BBB = 'LUK'
 
         bookType = None
-        if BibleOrgSysGlobals.loadedBibleBooksCodes.isOldTestament_NR( BBB ):
+        if bos_books_codes_py.is_ot_nr_py( BBB ):
             bookType = 'OT'
-        elif BibleOrgSysGlobals.loadedBibleBooksCodes.isNewTestament_NR( BBB ):
+        elif bos_books_codes_py.is_nt_nr_py( BBB ):
             bookType = 'NT'
 
         if bookType:

@@ -50,6 +50,7 @@ CHANGELOG:
     2024-12-19 Fixed bug matching word numbers when WLC uses a Ketiv
     2025-06-19 Connect Yahweh to God person and improve people connections (using altGloss and better handling fields like 'of_Moses')
     2025-06-19 Changed to connect timeline, etc., to EVERY word in the verse (not just the FIRST word)
+    2026-05-08 Upgraded to bos_books_codes_py
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple, NamedTuple, Optional
@@ -64,15 +65,16 @@ import re
 
 import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
+import bos_books_codes_py
 
 import sys
 sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitted to PyPI
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew #, transliterate_Greek
 
-LAST_MODIFIED_DATE = '2026-03-02' # by RJH
+LAST_MODIFIED_DATE = '2026-05-08' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET OT wordtable"
-PROGRAM_VERSION = '0.24'
+PROGRAM_VERSION = '0.25'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -292,13 +294,13 @@ def apply_OT_scripted_gloss_updates() -> bool:
                     iMarkers, eMarkers = fields[3].split(',') if fields[3] else [], fields[4].split(',') if fields[4] else []
                     iRefs, eRefs = fields[5].split(',') if fields[5] else [], fields[6].split(',') if fields[6] else []
                     for iBook in iBooks:
-                        assert iBook in BibleOrgSysGlobals.loadedBibleBooksCodes, f"{iBook=}"
+                        assert bos_books_codes_py.is_valid_reference_abbreviation_py( iBook ), f"{iBook=}"
                     for eBook in eBooks:
-                        assert eBook in BibleOrgSysGlobals.loadedBibleBooksCodes, f"{eBook=}"
+                        assert bos_books_codes_py.is_valid_reference_abbreviation_py( eBook ), f"{eBook=}"
                     for iRef in iRefs.copy(): # coz we might add more to the list
                         assert iRef.count('_')==1 and iRef.count(':') in (0,1), f"Unexpected/missing colon(s) in {iRefs} from {line=}" # A chapter ref has no colon
                         iRefBits = iRef.split('_')
-                        assert iRefBits[0] in BibleOrgSysGlobals.loadedBibleBooksCodes, f"{iRef=}"
+                        assert bos_books_codes_py.is_valid_reference_abbreviation_py( iRefBits[0] ), f"{iRef=}"
                         try:
                             iRefC, iRefV = iRefBits[1].split(':')
                             assert iRefC[0].isdigit() and iRefV[0].isdigit(), f"{iRef=}"
@@ -308,11 +310,11 @@ def apply_OT_scripted_gloss_updates() -> bool:
                             # We don't know how many verses in this chapter, so we'll just do 150
                             for vv in range( 1, 150+1 ):
                                 iRefs.append( f'{iRef}:{vv}' ) # Append an iref for each verse in the chapter
-                        assert int(iRefC) <= BibleOrgSysGlobals.loadedBibleBooksCodes.getMaxChapters( iRefBits[0] ), f"{iRef=}"
+                        assert int(iRefC) <= bos_books_codes_py.get_max_chapters_py( iRefBits[0] ), f"{iRef=}"
                     for eRef in eRefs.copy(): # coz we might add more to the list
                         assert eRef.count('_')==1 and eRef.count(':') in (0,1), eRef # A chapter ref has no colon
                         eRefBits = eRef.split('_')
-                        assert eRefBits[0] in BibleOrgSysGlobals.loadedBibleBooksCodes, f"{eRef=}"
+                        assert bos_books_codes_py.is_valid_reference_abbreviation_py( eRefBits[0] ), f"{eRef=}"
                         try:
                             eRefC, eRefV = eRefBits[1].split(':')
                             assert eRefC[0].isdigit() and eRefV[0].isdigit(), f"{eRef=}"
@@ -322,7 +324,7 @@ def apply_OT_scripted_gloss_updates() -> bool:
                             # We don't know how many verses in this chapter, so we'll just do 150
                             for vv in range( 1, 150+1 ):
                                 eRefs.append( f'{eRef}:{vv}' ) # Append an eref for each verse in the chapter
-                        assert int(eRefC) <= BibleOrgSysGlobals.loadedBibleBooksCodes.getMaxChapters( eRefBits[0] ), f"{eRef=}"
+                        assert int(eRefC) <= bos_books_codes_py.get_max_chapters_py( eRefBits[0] ), f"{eRef=}"
                     # print( f"From '{name}' ({givenFilepath}) have {searchText=} {replaceText=} {tags=}" )
 
                     # Adjust and save the fields

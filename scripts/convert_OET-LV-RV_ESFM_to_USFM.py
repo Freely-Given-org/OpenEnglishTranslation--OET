@@ -35,23 +35,22 @@ CHANGELOG:
     2025-03-03 Add /nb after OET-LV chapter numbers
     2025-12-14 Add DC books
     2026-03-19 Remove new ⇔ ESFM character (marking verse that's reordered in the OET-RV)
+    2026-05-08 Upgraded to bos_books_codes_py
 """
 from pathlib import Path
 import re
 import logging
 
-# if __name__ == '__main__':
-#     import sys
-#     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, BOOKLIST_66, BOOKLIST_88
+import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-03-19' # by RJH
+LAST_MODIFIED_DATE = '2026-05-08' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_ESFM_to_USFM"
 PROGRAM_NAME = "Convert OET LV & RV ESFM files to USFM"
-PROGRAM_VERSION = '0.63'
+PROGRAM_VERSION = '0.64'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -95,7 +94,7 @@ def main():
                 continue
 
             vvOutputFolderpath = OET_RV_USFM_OutputFolderPath if VV=='RV' else OET_LV_USFM_OutputFolderPath
-            try: Uuu = BibleOrgSysGlobals.loadedBibleBooksCodes.getUSFMAbbreviation( BBB )
+            try: Uuu = bos_books_codes_py.reference_abbrev_to_usfm_abbrev_py( BBB )
             except KeyError:
                 logging.critical( f"Unable to convert {BBB=} to USFM abbreviation" )
                 continue

@@ -6,7 +6,7 @@
 #
 # Script handling convert_OSHB_XML_to_TSV function
 #
-# Copyright (C) 2022-2025 Robert Hunt
+# Copyright (C) 2022-2026 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # License: See gpl-3.0.txt
 #
@@ -34,6 +34,7 @@ OSHB morphology codes can be found at https://hb.openscriptures.org/parsing/Hebr
 CHANGELOG:
     2025-01-15 Fix the single note that contains an exclamation mark ('KJV:1Kgs.22.43!b')
     2025-06-26 Fix the notes that contain a superfluous trailing space.
+    2026-05-08 Upgraded to bos_books_codes_py
 """
 from gettext import gettext as _
 # from typing import Dict, List, Tuple
@@ -45,12 +46,13 @@ import logging
 
 import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
+import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2025-06-26' # by RJH
+LAST_MODIFIED_DATE = '2026-05-08' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OSHB_XML_to_TSV"
 PROGRAM_NAME = "Convert OSHB WLC OT XML into TSV/JSON files"
-PROGRAM_VERSION = '0.60'
+PROGRAM_VERSION = '0.61'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -97,8 +99,8 @@ def load_OSHB_XML() -> bool:
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading OSHB XML files from {state.OSHB_XML_input_folderpath}…" )
 
     state.books_array, state.flat_array = [], []
-    for BBB in BibleOrgSysGlobals.loadedBibleBooksCodes:
-        if BibleOrgSysGlobals.loadedBibleBooksCodes.isOldTestament_NR( BBB ):
+    for BBB in bos_books_codes_py.get_all_reference_abbreviations_py():
+        if bos_books_codes_py.is_ot_nr_py( BBB ):
             nested_chapter_array = load_OSHB_XML_bookfile( BBB )
             if nested_chapter_array is None:
                 logging.critical( f"load_OSHB_XML() aborted after {BBB}!" )
@@ -118,9 +120,9 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
     """
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loading {BBB} OSHB XML file…" )
 
-    nn = BibleOrgSysGlobals.loadedBibleBooksCodes.getReferenceNumber( BBB )
+    nn = bos_books_codes_py.get_reference_number_py( BBB )
     assert nn < 100
-    osis_book_code = BibleOrgSysGlobals.loadedBibleBooksCodes.getOSISAbbreviation( BBB )
+    osis_book_code = bos_books_codes_py.get_osis_abbreviation_py( BBB )
     filename = f'{osis_book_code}.xml'
 
     # Adapted from https://github.com/Freely-Given-org/OS-morphhb/blob/master/morphhbXML-to-JSON.py
