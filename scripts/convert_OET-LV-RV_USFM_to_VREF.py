@@ -103,7 +103,7 @@ def main():
                 # print( f"{vref=}" )
                 UUU, CV = vref.split( ' ' )
                 C,V = CV.split( ':' )
-                BBB = bos_books_codes_py.usfm_abbrev_to_reference_abbrev_py( UUU )
+                BBB = bos_books_codes_py.usfm_abbrev_to_reference_abbrev( UUU )
                 # print( f"{vref=} {UUU=} {BBB=} {C=} {V=}" )
 
                 bcvRef = (BBB, C, V)

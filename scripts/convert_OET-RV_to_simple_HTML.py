@@ -58,8 +58,7 @@ import shutil
 import os.path
 
 from BibleOrgSys import BibleOrgSysGlobals
-from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
-from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39
+from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint, BOOKLIST_OT39
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 from bible_organisational_system import getSmallLeadingInt
 import bos_books_codes_py
@@ -784,9 +783,9 @@ def produce_HTML_files() -> None:
         elif BBB == 'JHN': BBB = 'LUK'
 
         bookType = None
-        if bos_books_codes_py.is_ot_nr_py( BBB ):
+        if bos_books_codes_py.is_ot_nr( BBB ):
             bookType = 'OT'
-        elif bos_books_codes_py.is_nt_nr_py( BBB ):
+        elif bos_books_codes_py.is_nt_nr( BBB ):
             bookType = 'NT'
 
         word_table = None
@@ -1111,7 +1110,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                     try:
                         bkCode, linkCV = restBit.rsplit(' ', 1)
                         bkCode = bkCode.rstrip('.').replace( 'Yhn', 'Jn' ).replace( 'Yud', 'Jud' )
-                        linkBBB = bos_books_codes_py.english_name_to_reference_abbrev_py( bkCode )
+                        linkBBB = bos_books_codes_py.english_name_to_reference_abbrev( bkCode )
                         # print( f"From {restBit=} {bkCode=} got {linkBBB=}")
                         if not linkBBB:
                             assert bkCode[0].isdigit(), f"{BBB} {C}:{V}: {restBit=} {bkCode=} {linkCV=} {linkBBB=} {lastBBB=}"

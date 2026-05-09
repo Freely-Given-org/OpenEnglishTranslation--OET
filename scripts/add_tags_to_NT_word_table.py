@@ -255,19 +255,19 @@ def apply_VLT_scripted_gloss_updates() -> bool:
                     iMarkers, eMarkers = fields[3].split(',') if fields[3] else [], fields[4].split(',') if fields[4] else []
                     iRefs, eRefs = fields[5].split(',') if fields[5] else [], fields[6].split(',') if fields[6] else []
                     for iBook in iBooks:
-                        assert bos_books_codes_py.is_valid_reference_abbreviation_py( iBook ), iBook
+                        assert bos_books_codes_py.is_valid_reference_abbreviation( iBook ), iBook
                     for eBook in eBooks:
-                        assert bos_books_codes_py.is_valid_reference_abbreviation_py( eBook ), eBook
+                        assert bos_books_codes_py.is_valid_reference_abbreviation( eBook ), eBook
                     for iRef in iRefs:
                         assert iRef.count('_')==1 and iRef.count(':')==1, iRef
                         iRefBits = iRef.split('_')
-                        assert bos_books_codes_py.is_valid_reference_abbreviation_py( iRefBits[0] ), iRef
+                        assert bos_books_codes_py.is_valid_reference_abbreviation( iRefBits[0] ), iRef
                         iRefC, iRefV = iRefBits[1].split(':')
                         assert iRefC[0].isdigit() and iRefV[0].isdigit(), iRef
                     for eRef in eRefs:
                         assert eRef.count('_')==1 and eRef.count(':')==1, eRef
                         eRefBits = eRef.split('_')
-                        assert bos_books_codes_py.is_valid_reference_abbreviation_py( eRefBits[0] ), eRef
+                        assert bos_books_codes_py.is_valid_reference_abbreviation( eRefBits[0] ), eRef
                         eRefC, eRefV = eRefBits[1].split(':')
                         assert eRefC[0].isdigit() and eRefV[0].isdigit(), eRef
                     # print( f"From '{name}' ({givenFilepath}) have {searchText=} {replaceText=} {tags=}" )

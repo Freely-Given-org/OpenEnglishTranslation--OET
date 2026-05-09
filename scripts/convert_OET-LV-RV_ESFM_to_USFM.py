@@ -42,8 +42,7 @@ import re
 import logging
 
 from BibleOrgSys import BibleOrgSysGlobals
-from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
-from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27, BOOKLIST_66, BOOKLIST_88
+from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint, BOOKLIST_OT39, BOOKLIST_NT27, BOOKLIST_66, BOOKLIST_88
 import bos_books_codes_py
 
 
@@ -94,7 +93,7 @@ def main():
                 continue
 
             vvOutputFolderpath = OET_RV_USFM_OutputFolderPath if VV=='RV' else OET_LV_USFM_OutputFolderPath
-            try: Uuu = bos_books_codes_py.reference_abbrev_to_usfm_abbrev_py( BBB )
+            try: Uuu = bos_books_codes_py.reference_abbrev_to_usfm_abbrev( BBB )
             except KeyError:
                 logging.critical( f"Unable to convert {BBB=} to USFM abbreviation" )
                 continue

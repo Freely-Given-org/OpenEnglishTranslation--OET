@@ -185,8 +185,8 @@ def loadClearLowFatGlossesXML() -> bool:
     column_counts = defaultdict(lambda: defaultdict(int))
     for referenceNumber in range(40, 66+1):
         nn = referenceNumber - 39 # Want Matthew starting with 1
-        BBB = bos_books_codes_py.get_bbb_from_reference_number_py( referenceNumber )
-        bookname = bos_books_codes_py.get_english_name_nr_py( BBB )
+        BBB = bos_books_codes_py.get_bbb_from_reference_number( referenceNumber )
+        bookname = bos_books_codes_py.get_english_name_nr( BBB )
         filename = LOWFAT_XML_FILENAME_TEMPLATE.replace( 'NN', str(nn).zfill(2) ).replace( 'wwww', bookname.lower().replace(' ','') )
         vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading {BBB} XML file from {filename}…")
         bookTree = ElementTree.parse( state.lowfat_XML_input_folderpath.joinpath( filename ) )
