@@ -115,3 +115,4 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - proclaim -> announce ???
 - exalt -> speak highly of
 - try to remove righteousness (doing what's right) and perhaps justice (doing what's fair) from RV
+- redeemed (replace 'bought you') -> 'paid the price to free you'

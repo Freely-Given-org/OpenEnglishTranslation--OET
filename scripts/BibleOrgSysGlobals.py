@@ -1462,7 +1462,6 @@ def setStrictCheckingFlag( newValue=True ):
 
 
 # Some global variables
-loadedUSFMMarkers:Optional[List[str]] = None
 USFMParagraphMarkers:Optional[List[str]] = None
 USFMCharacterMarkers:Optional[List[str]] = None
 USFMAllExpandedCharacterMarkers:Optional[List[str]] = None
@@ -1474,19 +1473,17 @@ def preloadCommonData() -> None:
         This includes BibleBooksCode and USFMMarkers
     """
     # Load Bible data sets that are globally useful
-    global loadedUSFMMarkers, USFMParagraphMarkers, USFMCharacterMarkers, USFMAllExpandedCharacterMarkers, internal_SFMs_to_remove
+    global USFMParagraphMarkers, USFMCharacterMarkers, USFMAllExpandedCharacterMarkers, internal_SFMs_to_remove
 
-    from BibleOrgSys.Reference.USFM3Markers import USFM3Markers
-    loadedUSFMMarkers = USFM3Markers().loadData()
-    assert len(loadedUSFMMarkers) >= 220
-    USFMParagraphMarkers = loadedUSFMMarkers.getNewlineMarkersList( 'CanonicalText' )
+    import usfm_markers_py
+    USFMParagraphMarkers = usfm_markers_py.getNewlineMarkersList( 'CanonicalText' )
     USFMParagraphMarkers.remove( 'qa' ) # This is actually a heading marker
     assert len(USFMParagraphMarkers) >= 33
-    USFMCharacterMarkers = loadedUSFMMarkers.getCharacterMarkersList()
+    USFMCharacterMarkers = usfm_markers_py.getCharacterMarkersList()
     assert len(USFMCharacterMarkers) >= 40
-    USFMAllExpandedCharacterMarkers = loadedUSFMMarkers.getCharacterMarkersList( expandNumberableMarkers=True )
+    USFMAllExpandedCharacterMarkers = usfm_markers_py.getCharacterMarkersList( expandNumberableMarkers=True )
     assert len(USFMAllExpandedCharacterMarkers) >= 64
-    internal_SFMs_to_remove = loadedUSFMMarkers.getCharacterMarkersList( includeBackslash=True, includeNestedMarkers=True, includeEndMarkers=True )
+    internal_SFMs_to_remove = usfm_markers_py.getCharacterMarkersList( includeBackslash=True, includeNestedMarkers=True, includeEndMarkers=True )
     assert len(internal_SFMs_to_remove) >= 160
     internal_SFMs_to_remove.sort( key=len, reverse=True ) # List longest first
 # end of BibleOrgSysGlobals.preloadCommonData
@@ -1592,25 +1589,8 @@ def closedown( cProgName, cProgVersion ):
 # end of BibleOrgSysGlobals.closedown
 
 
+
 setVerbosity( verbosityString )
-#if 0 and __name__ != '__main__':
-    ## Load Bible data sets that are globally useful
-    #from BibleOrgSys.Reference.BibleBooksCodes import BibleBooksCodes
-    #BibleBooksCodes = BibleBooksCodes().loadData()
-    #from BibleOrgSys.Reference.USFM3Markers import USFM3Markers
-    #USFMMarkers = USFM3Markers().loadData()
-    #USFMParagraphMarkers = USFMMarkers.getNewlineMarkersList( 'CanonicalText' )
-    ##dPrint( 'Quiet', DEBUGGING_THIS_MODULE, len(USFMParagraphMarkers), sorted(USFMParagraphMarkers) )
-    ##for marker in ( ):
-        ##dPrint( 'Quiet', DEBUGGING_THIS_MODULE, marker )
-        ##USFMParagraphMarkers.remove( marker )
-    ## was 30 ['cls', 'li1', 'li2', 'li3', 'li4', 'm', 'mi', 'p', 'pc', 'ph1', 'ph2', 'ph3', 'ph4',
-    ##    'pi1', 'pi2', 'pi3', 'pi4', 'pm', 'pmc', 'pmo', 'pmr', 'pr', 'q1', 'q2', 'q3', 'q4',
-    ##    'qm1', 'qm2', 'qm3', 'qm4']
-    ## now 34 ['cls', 'li1', 'li2', 'li3', 'li4', 'm', 'mi', 'nb', 'p', 'pc', 'ph1', 'ph2', 'ph3', 'ph4',
-    ##    'pi1', 'pi2', 'pi3', 'pi4', 'pm', 'pmc', 'pmo', 'pmr', 'pr', 'q1', 'q2', 'q3', 'q4', 'qa', 'qc',
-    ##    'qm1', 'qm2', 'qm3', 'qm4', 'qr']
-    ##dPrint( 'Quiet', DEBUGGING_THIS_MODULE, len(USFMParagraphMarkers), sorted(USFMParagraphMarkers) ); halt
 
 
 
