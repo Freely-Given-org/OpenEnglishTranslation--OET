@@ -314,8 +314,8 @@ def export_literal_English_gloss_esfm() -> bool:
                     output_file.write(f"{esfm_text}\n")
                 vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {len(esfm_text)+1:,} bytes to {last_BBB}_gloss.ESFM" )
                 num_exported_files += 1
-            USFM_book_code = bos_books_codes_py.reference_abbrev_to_usfm_abbrev_py( BBB )
-            English_book_name = bos_books_codes_py.get_english_name_nr_py( BBB )
+            USFM_book_code = bos_books_codes_py.reference_abbrev_to_usfm_abbrev( BBB )
+            English_book_name = bos_books_codes_py.get_english_name_nr( BBB )
             esfm_text = f"""\\id {USFM_book_code}
 \\usfm 3.0
 \\ide UTF-8

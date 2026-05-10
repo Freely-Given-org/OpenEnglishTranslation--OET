@@ -49,9 +49,8 @@ from collections import defaultdict
 import json
 
 from BibleOrgSys import BibleOrgSysGlobals
-from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
+from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint, BOOKLIST_OT39, BOOKLIST_NT27
 from BibleOrgSys.Bible import Bible
-from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39, BOOKLIST_NT27
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 from BibleOrgSys.Misc import CompareBibles
 import bos_books_codes_py
@@ -742,9 +741,9 @@ def produce_HTML_files() -> None:
         elif BBB == 'JHN': BBB = 'LUK'
 
         bookType = None
-        if bos_books_codes_py.is_ot_nr_py( BBB ):
+        if bos_books_codes_py.is_ot_nr( BBB ):
             bookType = 'OT'
-        elif bos_books_codes_py.is_nt_nr_py( BBB ):
+        elif bos_books_codes_py.is_nt_nr( BBB ):
             bookType = 'NT'
 
         word_table = None
@@ -1191,7 +1190,7 @@ def make_NT_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_
             BBB, CVW = wordRef.split( '_', 1 )
             C, VW = CVW.split( ':', 1 )
             V, W = VW.split( 'w', 1 )
-            tidy_bbb = bos_books_codes_py.tidy_bbb_py( BBB )
+            tidy_bbb = bos_books_codes_py.tidy_bbb( BBB )
 
             strongs = extendedStrongs[:-1] if extendedStrongs else None # drop the last digit
 
@@ -1272,7 +1271,7 @@ def make_NT_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_
                     oBBB, oCVW = oWordRef.split( '_', 1 )
                     oC, oVW = oCVW.split( ':', 1 )
                     oV, oW = oVW.split( 'w', 1 )
-                    oTidyBBB = bos_books_codes_py.tidy_bbb_py( oBBB )
+                    oTidyBBB = bos_books_codes_py.tidy_bbb( oBBB )
                     if other_count == 0:
                         html = f'{html}\n<h2>Other uses ({len(thisWordNumberList)-1:,}) of {greekWord} <small>{morphology}</small> in the NT</h2>'
                     translation = '<small>(no English gloss)</small>' if oOETGlossWords=='-' else f'''English gloss=‘<b>{oFormattedGlossWords.replace('_','<span class="ul">_</span>')}</b>’'''
@@ -1355,7 +1354,7 @@ def make_NT_lemma_pages( inputFolderPath:Path, outputFolderPath:Path, word_table
             oBBB, oCVW = oWordRef.split( '_', 1 )
             oC, oVW = oCVW.split( ':', 1 )
             oV, oW = oVW.split( 'w', 1 )
-            oTidyBBB = bos_books_codes_py.tidy_bbb_py( oBBB )
+            oTidyBBB = bos_books_codes_py.tidy_bbb( oBBB )
             oTidyMorphology = oMorphology[4:] if oMorphology.startswith('····') else oMorphology
             # if other_count == 0:
             translation = '<small>(no English gloss here)</small>' if oOETGlossWords=='-' else f'''English gloss=‘<b>{oFormattedGlossWords.replace('_','<span class="ul">_</span>')}</b>’'''

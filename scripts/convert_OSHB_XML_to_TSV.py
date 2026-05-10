@@ -47,6 +47,7 @@ import logging
 import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 import bos_books_codes_py
+print(dir(bos_books_codes_py))
 
 
 LAST_MODIFIED_DATE = '2026-05-08' # by RJH
@@ -99,8 +100,8 @@ def load_OSHB_XML() -> bool:
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading OSHB XML files from {state.OSHB_XML_input_folderpath}…" )
 
     state.books_array, state.flat_array = [], []
-    for BBB in bos_books_codes_py.get_all_reference_abbreviations_py():
-        if bos_books_codes_py.is_ot_nr_py( BBB ):
+    for BBB in bos_books_codes_py.get_all_reference_abbreviations():
+        if bos_books_codes_py.is_ot_nr( BBB ):
             nested_chapter_array = load_OSHB_XML_bookfile( BBB )
             if nested_chapter_array is None:
                 logging.critical( f"load_OSHB_XML() aborted after {BBB}!" )
@@ -120,9 +121,9 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
     """
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loading {BBB} OSHB XML file…" )
 
-    nn = bos_books_codes_py.get_reference_number_py( BBB )
+    nn = bos_books_codes_py.get_reference_number( BBB )
     assert nn < 100
-    osis_book_code = bos_books_codes_py.get_osis_abbreviation_py( BBB )
+    osis_book_code = bos_books_codes_py.get_osis_abbreviation( BBB )
     filename = f'{osis_book_code}.xml'
 
     # Adapted from https://github.com/Freely-Given-org/OS-morphhb/blob/master/morphhbXML-to-JSON.py

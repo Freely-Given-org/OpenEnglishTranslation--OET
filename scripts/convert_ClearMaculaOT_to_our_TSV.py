@@ -280,9 +280,9 @@ wordnumber_regex = re.compile( '[0-9]{12}' )
 #     # non_blank_counts = defaultdict(int)
 #     refDict = {}
 #     for referenceNumber in range(1, 39+1):
-#         BBB = bos_books_codes_py.get_bbb_from_reference_number_py( referenceNumber )
+#         BBB = bos_books_codes_py.get_bbb_from_reference_number( referenceNumber )
 #         vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading Macula Hebrew LowFat {BBB} XML files…")
-#         Uuu = bos_books_codes_py.reference_abbrev_to_usfm_abbrev_py( BBB )
+#         Uuu = bos_books_codes_py.reference_abbrev_to_usfm_abbrev( BBB )
 #         if Uuu=='Hos': Uuu = 'HOS' # Fix inconsistency in naming patterns
 #         filenameTemplate = MACULA_HEBREW_LOWFAT_XML_INPUT_FILENAME_TEMPLATE.replace( 'NN', str(referenceNumber).zfill(2) ).replace( 'Uuu', Uuu )
 
@@ -611,9 +611,9 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
     # non_blank_counts = defaultdict(int)
     refDict = {}
     for referenceNumber in range(1, 39+1):
-        BBB = bos_books_codes_py.get_bbb_from_reference_number_py( referenceNumber )
+        BBB = bos_books_codes_py.get_bbb_from_reference_number( referenceNumber )
         vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading Macula Hebrew Nodes {BBB} XML files…")
-        Uuu = bos_books_codes_py.reference_abbrev_to_usfm_abbrev_py( BBB )
+        Uuu = bos_books_codes_py.reference_abbrev_to_usfm_abbrev( BBB )
         if Uuu=='Hos': Uuu = 'HOS' # Fix inconsistency in naming patterns
         filenameTemplate = MACULA_HEBREW_NODES_XML_INPUT_FILENAME_TEMPLATE.replace( 'NN', str(referenceNumber).zfill(2) ).replace( 'Uuu', Uuu )
 
@@ -1326,7 +1326,7 @@ def removeHebrewCantillationMarks( text:str, removeMetegOrSiluq=False ) -> str:
 #         print( f"({len(maculaRow)}) {maculaRow}" )
 #         nextMaculaRow = state.macula_rows[rr+1]
 
-#         BBB = bos_books_codes_py.get_bbb_from_reference_number_py( maculaRow['xml:id'][1:3] )
+#         BBB = bos_books_codes_py.get_bbb_from_reference_number( maculaRow['xml:id'][1:3] )
 
 #         theirRef = maculaRow['ref']
 #         wordOrMorpheme = removeHebrewCantillationMarks(maculaRow['text'], removeMetegOrSiluq=True)

@@ -294,13 +294,13 @@ def apply_OT_scripted_gloss_updates() -> bool:
                     iMarkers, eMarkers = fields[3].split(',') if fields[3] else [], fields[4].split(',') if fields[4] else []
                     iRefs, eRefs = fields[5].split(',') if fields[5] else [], fields[6].split(',') if fields[6] else []
                     for iBook in iBooks:
-                        assert bos_books_codes_py.is_valid_reference_abbreviation_py( iBook ), f"{iBook=}"
+                        assert bos_books_codes_py.is_valid_reference_abbreviation( iBook ), f"{iBook=}"
                     for eBook in eBooks:
-                        assert bos_books_codes_py.is_valid_reference_abbreviation_py( eBook ), f"{eBook=}"
+                        assert bos_books_codes_py.is_valid_reference_abbreviation( eBook ), f"{eBook=}"
                     for iRef in iRefs.copy(): # coz we might add more to the list
                         assert iRef.count('_')==1 and iRef.count(':') in (0,1), f"Unexpected/missing colon(s) in {iRefs} from {line=}" # A chapter ref has no colon
                         iRefBits = iRef.split('_')
-                        assert bos_books_codes_py.is_valid_reference_abbreviation_py( iRefBits[0] ), f"{iRef=}"
+                        assert bos_books_codes_py.is_valid_reference_abbreviation( iRefBits[0] ), f"{iRef=}"
                         try:
                             iRefC, iRefV = iRefBits[1].split(':')
                             assert iRefC[0].isdigit() and iRefV[0].isdigit(), f"{iRef=}"
@@ -310,11 +310,11 @@ def apply_OT_scripted_gloss_updates() -> bool:
                             # We don't know how many verses in this chapter, so we'll just do 150
                             for vv in range( 1, 150+1 ):
                                 iRefs.append( f'{iRef}:{vv}' ) # Append an iref for each verse in the chapter
-                        assert int(iRefC) <= bos_books_codes_py.get_max_chapters_py( iRefBits[0] ), f"{iRef=}"
+                        assert int(iRefC) <= bos_books_codes_py.get_max_chapters( iRefBits[0] ), f"{iRef=}"
                     for eRef in eRefs.copy(): # coz we might add more to the list
                         assert eRef.count('_')==1 and eRef.count(':') in (0,1), eRef # A chapter ref has no colon
                         eRefBits = eRef.split('_')
-                        assert bos_books_codes_py.is_valid_reference_abbreviation_py( eRefBits[0] ), f"{eRef=}"
+                        assert bos_books_codes_py.is_valid_reference_abbreviation( eRefBits[0] ), f"{eRef=}"
                         try:
                             eRefC, eRefV = eRefBits[1].split(':')
                             assert eRefC[0].isdigit() and eRefV[0].isdigit(), f"{eRef=}"
@@ -324,7 +324,7 @@ def apply_OT_scripted_gloss_updates() -> bool:
                             # We don't know how many verses in this chapter, so we'll just do 150
                             for vv in range( 1, 150+1 ):
                                 eRefs.append( f'{eRef}:{vv}' ) # Append an eref for each verse in the chapter
-                        assert int(eRefC) <= bos_books_codes_py.get_max_chapters_py( eRefBits[0] ), f"{eRef=}"
+                        assert int(eRefC) <= bos_books_codes_py.get_max_chapters( eRefBits[0] ), f"{eRef=}"
                     # print( f"From '{name}' ({givenFilepath}) have {searchText=} {replaceText=} {tags=}" )
 
                     # Adjust and save the fields

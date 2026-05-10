@@ -50,9 +50,7 @@ import shutil
 import os.path
 
 from BibleOrgSys import BibleOrgSysGlobals
-from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
-# from BibleOrgSys.Bible import Bible
-from BibleOrgSys.Reference.BibleBooksCodes import BOOKLIST_OT39
+from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint, BOOKLIST_OT39
 from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisationalSystem
 import bos_books_codes_py
 
@@ -1574,9 +1572,9 @@ def pack_HTML_files() -> None:
         elif BBB == 'JHN': BBB = 'LUK'
 
         bookType = None
-        if bos_books_codes_py.is_ot_nr_py( BBB ):
+        if bos_books_codes_py.is_ot_nr( BBB ):
             bookType = 'OT'
-        elif bos_books_codes_py.is_nt_nr_py( BBB ):
+        elif bos_books_codes_py.is_nt_nr( BBB ):
             bookType = 'NT'
 
         if bookType:
