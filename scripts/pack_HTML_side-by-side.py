@@ -1572,9 +1572,9 @@ def pack_HTML_files() -> None:
         elif BBB == 'JHN': BBB = 'LUK'
 
         bookType = None
-        if bos_books_codes_py.is_ot_nr( BBB ):
+        if bos_books_codes_py.is_old_testament_nr( BBB ):
             bookType = 'OT'
-        elif bos_books_codes_py.is_nt_nr( BBB ):
+        elif bos_books_codes_py.is_new_testament_nr( BBB ):
             bookType = 'NT'
 
         if bookType:

@@ -93,7 +93,7 @@ def main():
                 continue
 
             vvOutputFolderpath = OET_RV_USFM_OutputFolderPath if VV=='RV' else OET_LV_USFM_OutputFolderPath
-            try: Uuu = bos_books_codes_py.reference_abbrev_to_usfm_abbrev( BBB )
+            try: Uuu = bos_books_codes_py.bos_book_code_to_usfm_abbrev( BBB )
             except KeyError:
                 logging.critical( f"Unable to convert {BBB=} to USFM abbreviation" )
                 continue

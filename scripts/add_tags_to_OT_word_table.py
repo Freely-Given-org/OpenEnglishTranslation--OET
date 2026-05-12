@@ -294,13 +294,13 @@ def apply_OT_scripted_gloss_updates() -> bool:
                     iMarkers, eMarkers = fields[3].split(',') if fields[3] else [], fields[4].split(',') if fields[4] else []
                     iRefs, eRefs = fields[5].split(',') if fields[5] else [], fields[6].split(',') if fields[6] else []
                     for iBook in iBooks:
-                        assert bos_books_codes_py.is_valid_reference_abbreviation( iBook ), f"{iBook=}"
+                        assert bos_books_codes_py.is_valid_bos_book_code( iBook ), f"{iBook=}"
                     for eBook in eBooks:
-                        assert bos_books_codes_py.is_valid_reference_abbreviation( eBook ), f"{eBook=}"
+                        assert bos_books_codes_py.is_valid_bos_book_code( eBook ), f"{eBook=}"
                     for iRef in iRefs.copy(): # coz we might add more to the list
                         assert iRef.count('_')==1 and iRef.count(':') in (0,1), f"Unexpected/missing colon(s) in {iRefs} from {line=}" # A chapter ref has no colon
                         iRefBits = iRef.split('_')
-                        assert bos_books_codes_py.is_valid_reference_abbreviation( iRefBits[0] ), f"{iRef=}"
+                        assert bos_books_codes_py.is_valid_bos_book_code( iRefBits[0] ), f"{iRef=}"
                         try:
                             iRefC, iRefV = iRefBits[1].split(':')
                             assert iRefC[0].isdigit() and iRefV[0].isdigit(), f"{iRef=}"
@@ -314,7 +314,7 @@ def apply_OT_scripted_gloss_updates() -> bool:
                     for eRef in eRefs.copy(): # coz we might add more to the list
                         assert eRef.count('_')==1 and eRef.count(':') in (0,1), eRef # A chapter ref has no colon
                         eRefBits = eRef.split('_')
-                        assert bos_books_codes_py.is_valid_reference_abbreviation( eRefBits[0] ), f"{eRef=}"
+                        assert bos_books_codes_py.is_valid_bos_book_code( eRefBits[0] ), f"{eRef=}"
                         try:
                             eRefC, eRefV = eRefBits[1].split(':')
                             assert eRefC[0].isdigit() and eRefV[0].isdigit(), f"{eRef=}"
