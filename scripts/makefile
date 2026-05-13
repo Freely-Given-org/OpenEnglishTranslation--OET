@@ -60,6 +60,7 @@ short_OSHB_TSV := ../sourceTexts/rawOSHB/OSHB.parsedOriginal.flat.morphemes.tsv
 UVrun := uv run
 
 SBE := ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py
+#SBE := ../../ScriptedBibleEditor/Rust/scripted_bible_editor/target/release/scripted_bible_editor
 BTranslit := ../../BibleTransliterations/Python/BibleTransliterations.py
 HebrewTranslit := ../../BibleTransliterations/sourceTables/Hebrew.tsv
 GreekTranslit := ../../BibleTransliterations/sourceTables/Greek.tsv
@@ -89,12 +90,12 @@ $(LV_OT_HTML) $(LV_NT_HTML): $(final_LV_OT_ESFM)  $(final_LV_NT_ESFM) convert_OE
 
 # $(final_LV_OT_USFM): $(intermediate_LV_OT_USFM) $(SBE) $(scripted_OT_updates) $(BTranslit) $(HebrewTranslit)
 # 	@echo "\n\nRun ScriptedBibleEditor on OT USFM files…\n"
-# 	@$(UVrun) $(SBE) ScriptedOTUpdates -qe
+# 	@$(SBE) ScriptedOTUpdates -qe
 
 # Had $(final_LV_OT_ESFM) here before
 ../derivedTexts/auto_edited_OT_ESFM/OET-LV_GEN.ESFM ../derivedTexts/auto_edited_OT_ESFM/OET-LV_MAL.ESFM: $(intermediate_LV_OT_ESFM) $(SBE) $(scripted_OT_updates) $(BTranslit) $(HebrewTranslit)
 	@echo "\n\nRun ScriptedBibleEditor on OT ESFM files…\n"
-	@$(UVrun) $(SBE) ScriptedOTUpdates -qe
+	@$(SBE) ScriptedOTUpdates -qe
 	#@echo "\n\nCopying OT word and morpheme tables from modified_source_glossed_OSHB_ESFM/ to auto_edited_OT_ESFM/…\n"
 	#@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_word_table.tsv
 	#@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv
@@ -110,7 +111,7 @@ $(final_LV_OT_word_tables): $(expanded_OT_TSV_tables)
 
 $(final_LV_NT_ESFM): $(intermediate_LV_NT_ESFM) $(SBE) $(scripted_NT_updates) $(BTranslit) $(GreekTranslit) $(HebrewTranslit) $(expanded_NT_wordtable)
 	@echo "\n\nRun ScriptedBibleEditor on NT ESFM files…\n"
-	@$(UVrun) $(SBE) ScriptedVLTUpdates -qe
+	@$(SBE) ScriptedVLTUpdates -qe
 
 ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv: $(initial_OT_TSV_tables) $(Clear_Bible_MaculaHebrew_OT_TSV) $(scripted_OT_updates) add_tags_to_OT_word_table.py $(BTranslit) $(HebrewTranslit)
 	@echo "\n\nAdd people/places/referent tags to OET OT word table…\n"

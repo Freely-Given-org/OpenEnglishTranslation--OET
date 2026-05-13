@@ -783,9 +783,9 @@ def produce_HTML_files() -> None:
         elif BBB == 'JHN': BBB = 'LUK'
 
         bookType = None
-        if bos_books_codes_py.is_ot_nr( BBB ):
+        if bos_books_codes_py.is_old_testament_nr( BBB ):
             bookType = 'OT'
-        elif bos_books_codes_py.is_nt_nr( BBB ):
+        elif bos_books_codes_py.is_new_testament_nr( BBB ):
             bookType = 'NT'
 
         word_table = None
@@ -1110,7 +1110,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                     try:
                         bkCode, linkCV = restBit.rsplit(' ', 1)
                         bkCode = bkCode.rstrip('.').replace( 'Yhn', 'Jn' ).replace( 'Yud', 'Jud' )
-                        linkBBB = bos_books_codes_py.english_name_to_reference_abbrev( bkCode )
+                        linkBBB = bos_books_codes_py.english_name_to_bos_book_code( bkCode )
                         # print( f"From {restBit=} {bkCode=} got {linkBBB=}")
                         if not linkBBB:
                             assert bkCode[0].isdigit(), f"{BBB} {C}:{V}: {restBit=} {bkCode=} {linkCV=} {linkBBB=} {lastBBB=}"

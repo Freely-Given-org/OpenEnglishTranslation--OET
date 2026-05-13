@@ -92,8 +92,8 @@ def handle_OT() -> bool:
 
     wordList = []
     for referenceNumber in range(1, 39+1):
-        BBB = bos_books_codes_py.get_bbb_from_reference_number( referenceNumber )
-        Uuu = bos_books_codes_py.reference_abbrev_to_usfm_abbrev( BBB )
+        BBB = bos_books_codes_py.get_bos_book_code_from_reference_number( referenceNumber )
+        Uuu = bos_books_codes_py.bos_book_code_to_usfm_abbrev( BBB )
         # bookname = bos_books_codes_py.get_english_name_nr( BBB )
         filename = state.USFM_filename_template.replace( 'nn', str(referenceNumber).zfill(2) ).replace( 'UUU', Uuu.upper() )
 
@@ -121,8 +121,8 @@ def handle_NT() -> bool:
 
     wordList = []
     for referenceNumber in range(40, 66+1):
-        BBB = bos_books_codes_py.get_bbb_from_reference_number( referenceNumber )
-        Uuu = bos_books_codes_py.reference_abbrev_to_usfm_abbrev( BBB )
+        BBB = bos_books_codes_py.get_bos_book_code_from_reference_number( referenceNumber )
+        Uuu = bos_books_codes_py.bos_book_code_to_usfm_abbrev( BBB )
         # NOTE: Matthew is at #41 (not 40)
         filename = state.USFM_filename_template.replace( 'nn', str(referenceNumber+1).zfill(2) ).replace( 'UUU', Uuu.upper() )
 

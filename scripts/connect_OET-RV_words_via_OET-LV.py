@@ -58,6 +58,8 @@ CHANGELOG:
     2025-12-17 Add multiprocessing for converting each book (although seems no real time advantange)
     2026-02-24 Added more checking of consecutive opening and closing speech marks
     2026-04-23 Added more assert checks to catch Rust BOS faults
+    2026-05-09 Switched to bos_books_codes_py
+    2026-05-12 Do more checking before adding NS nd markup
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -67,9 +69,6 @@ import logging
 import re
 import multiprocessing
 
-# if __name__ == '__main__':
-#     import sys
-#     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
@@ -81,10 +80,10 @@ sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitt
 from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-05-05' # by RJH
+LAST_MODIFIED_DATE = '2026-05-12' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.88'
+PROGRAM_VERSION = '0.89'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -489,6 +488,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('hilltop','high'),
     ('honour','glorify'),
     ('huge','great'),
+    ('humiliated','ashamed'),
     ('including','and'),
     ('instructed','commanded'),('instructions','commanded'),('instructions','regulations'),
     ('insulting','slandering'),
@@ -1180,7 +1180,7 @@ def check_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> None
     This check is specifically to catch copy and paste errors where a word number accidentally gets wrongly copied into a different verse.
     """
     # fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {BBB} {c}:{v} {len(rvEntryList)}, {len(lvEntryList)} )" )
-    NT = bos_books_codes_py.is_nt_nr( BBB )
+    NT = bos_books_codes_py.is_new_testament_nr( BBB )
     if NT:
         assert state.wordTableHeaderList['NT'].index('VLTGlossWords')+1 == GLOSS_COLUMN__NUMBER, f"{state.wordTableHeaderList['NT'].index('VLTGlossWords')+1=} {GLOSS_COLUMN__NUMBER=} {state.wordTableHeaderList=}" # Check we have the correct column below
 
@@ -1254,7 +1254,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     # fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {BBB} {c}:{v} {len(rvEntryList)}, {len(lvEntryList)} )" )
     # if connectRef == 'PSA_54:1':
     #     print( f"\nconnect_OET_RV( {connectRef} {len(rvEntryList)} {rvEntryList=}, {len(lvEntryList)} {lvEntryList=} )" )
-    NT = bos_books_codes_py.is_nt_nr( BBB )
+    NT = bos_books_codes_py.is_new_testament_nr( BBB )
     if NT:
         assert state.wordTableHeaderList['NT'].index('VLTGlossWords')+1 == GLOSS_COLUMN__NUMBER, f"{state.wordTableHeaderList['NT'].index('VLTGlossWords')+1=} {GLOSS_COLUMN__NUMBER=} {state.wordTableHeaderList=}" # Check we have the correct column below
 
@@ -1405,7 +1405,7 @@ def matchIdenticalProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[
     fnPrint( DEBUGGING_THIS_MODULE, f"matchIdenticalProperNouns( {BBB} {c}:{v} {rvCapitalisedWordList}, {lvCapitalisedWordList} )" )
     assert rvCapitalisedWordList and lvCapitalisedWordList
 
-    NT = bos_books_codes_py.is_nt_nr( BBB )
+    NT = bos_books_codes_py.is_new_testament_nr( BBB )
 
     # But we don't want any rvWords that are already tagged
     numAdded = numNS = 0
@@ -1474,7 +1474,7 @@ def matchAdjustedProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[s
     fnPrint( DEBUGGING_THIS_MODULE, f"matchAdjustedProperNouns( {BBB} {c}:{v} {rvCapitalisedWordList}, {lvCapitalisedWordList} )" )
     assert rvCapitalisedWordList and lvCapitalisedWordList
 
-    NT = bos_books_codes_py.is_nt_nr( BBB )
+    NT = bos_books_codes_py.is_new_testament_nr( BBB )
 
     # But we don't want any rvWords that are already tagged
     numAdded = numNS = 0
@@ -1582,7 +1582,7 @@ def matchOurListedSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWor
     fnPrint( DEBUGGING_THIS_MODULE, f"matchOurListedSimpleWords( {BBB} {c}:{v} {rvWordList}, {lvWordList} )" )
     assert rvWordList and lvWordList
 
-    NT = bos_books_codes_py.is_nt_nr( BBB )
+    NT = bos_books_codes_py.is_new_testament_nr( BBB )
 
     numAdded = numNS = 0
     for simpleNoun in SIMPLE_WORDS:
@@ -1638,7 +1638,7 @@ def matchWordsFirstParts( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList
     fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsFirstParts( {BBB} {c}:{v} {rvWordList}, {lvWordList} )" )
     assert rvWordList and lvWordList
 
-    NT = bos_books_codes_py.is_nt_nr( BBB )
+    NT = bos_books_codes_py.is_new_testament_nr( BBB )
 
     # Firstly make a matching list of LV words without the word numbers
     simpleLVWordList = []
@@ -1726,7 +1726,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
     # if BBB=='KI2' and c==15 and v==28:
     #     print( f"doGroup1( {BBB} {c}:{v} {rvVerseWordList=} {lvVerseWordList=} {simpleLVWordList=} )")
     #     halt
-    NT = bos_books_codes_py.is_nt_nr( BBB )
+    NT = bos_books_codes_py.is_new_testament_nr( BBB )
 
     numAdded = numNS = 0
     for rvWord, lvWordStr in RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS:
@@ -1877,7 +1877,7 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
     assert '¦' not in word
     # if BBB=='MAT' and v==1: print( word )
 
-    NT = bos_books_codes_py.is_nt_nr( BBB )
+    NT = bos_books_codes_py.is_new_testament_nr( BBB )
     havePsalmTitles = bos_books_codes_py.has_psalm_title( BBB, str(c) )
     desiredV = (v-1) if havePsalmTitles and v>1 else v
 
@@ -1928,6 +1928,7 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
                     and not line[match.end():match.end()+4] == '\\nd*' \
                     and not line[match.end():match.end()+5] == '\\+nd*':
                         addNominaSacra = True
+                        assert word in ('Messiah','Yeshua','God'), f"Why are we adding NS to {BBB} {c}:{v} {word=}?"
                         dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Adding NS on {word=} {line[match.start()-6:match.start()]=} {line[match.end():match.end()+6]=} {line=}" )
 
                 try:

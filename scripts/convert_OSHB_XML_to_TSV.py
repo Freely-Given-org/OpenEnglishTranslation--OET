@@ -100,8 +100,8 @@ def load_OSHB_XML() -> bool:
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading OSHB XML files from {state.OSHB_XML_input_folderpath}…" )
 
     state.books_array, state.flat_array = [], []
-    for BBB in bos_books_codes_py.get_all_reference_abbreviations():
-        if bos_books_codes_py.is_ot_nr( BBB ):
+    for BBB in bos_books_codes_py.get_all_bos_book_codes():
+        if bos_books_codes_py.is_old_testament_nr( BBB ):
             nested_chapter_array = load_OSHB_XML_bookfile( BBB )
             if nested_chapter_array is None:
                 logging.critical( f"load_OSHB_XML() aborted after {BBB}!" )
@@ -123,7 +123,7 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
 
     nn = bos_books_codes_py.get_reference_number( BBB )
     assert nn < 100
-    osis_book_code = bos_books_codes_py.get_osis_abbreviation( BBB )
+    osis_book_code = bos_books_codes_py.bos_to_osis_book_code( BBB )
     filename = f'{osis_book_code}.xml'
 
     # Adapted from https://github.com/Freely-Given-org/OS-morphhb/blob/master/morphhbXML-to-JSON.py

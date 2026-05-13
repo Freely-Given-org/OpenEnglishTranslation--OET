@@ -61,9 +61,9 @@ Contains functions:
     getFlattenedXML( element, locationString, idString=None, level=0 )
     isBlank( elementText )
 
-    applyStringAdjustments( originalText, adjustmentList )
+    applyStringAdjustments( original_text, adjustmentList )
     stripWordEndsPunctuation( wordToken )
-    removeStringEndings( originalText, endingsList )
+    removeStringEndings( original_text, endingsList )
 
     pickleObject( theObject, filename, folderName=None )
     unpickleObject( filename, folderName=None )
@@ -1181,12 +1181,12 @@ def isBlank( elementText ):
 # Fixing strings
 #
 
-def applyStringAdjustments( originalText, adjustmentList ):
+def applyStringAdjustments( original_text, adjustmentList ):
     """
     Applies the list of adjustments to the text and returns the new text.
 
     The adjustmentList is a list object containing 3-tuples with:
-        1/ index where field should be found (in originalText)
+        1/ index where field should be found (in original_text)
         2/ findString (null for a pure insert)
         3/ replaceString (often a different length)
 
@@ -1197,13 +1197,13 @@ def applyStringAdjustments( originalText, adjustmentList ):
             (note that all of the above indexes refer to the original string before any substitutions)
         gives "A very quick orange fox tripped over the fat dog."
     """
-    text = originalText
+    text = original_text
     offset = 0
     for ix, findStr, replaceStr in sorted(adjustmentList): # sorted with lowest index first
         lenFS, lenRS = len(findStr), len(replaceStr)
         if debugFlag: assert text[ix+offset:ix+offset+lenFS] == findStr # Our find string must be there
         elif text[ix+offset:ix+offset+lenFS] != findStr:
-            logging.error( "applyStringAdjustments programming error -- given bad data for {!r}: {}".format( originalText, adjustmentList ) )
+            logging.error( "applyStringAdjustments programming error -- given bad data for {!r}: {}".format( original_text, adjustmentList ) )
         #dPrint( 'Quiet', DEBUGGING_THIS_MODULE, "before", repr(text) )
         text = text[:ix+offset] + replaceStr + text[ix+offset+lenFS:]
         #dPrint( 'Quiet', DEBUGGING_THIS_MODULE, " after", repr(text) )
@@ -1255,12 +1255,12 @@ def stripWordEndsPunctuation( wordToken:str ) -> str:
 # end of BibleOrgSysGlobals.stripWordEndsPunctuation
 
 
-def removeStringEndings( originalText:str, endingsList:List[str] ) -> str:
+def removeStringEndings( original_text:str, endingsList:List[str] ) -> str:
     """
     Go through the given list of endings (in order)
         and remove any endings from the end of the string.
     """
-    newText = originalText
+    newText = original_text
     for ending in endingsList:
         if newText.endswith( ending ):
             newText = newText[:-len(ending)]
@@ -1476,14 +1476,14 @@ def preloadCommonData() -> None:
     global USFMParagraphMarkers, USFMCharacterMarkers, USFMAllExpandedCharacterMarkers, internal_SFMs_to_remove
 
     import usfm_markers_py
-    USFMParagraphMarkers = usfm_markers_py.getNewlineMarkersList( 'CanonicalText' )
+    USFMParagraphMarkers = usfm_markers_py.get_newline_markers_list( 'CanonicalText' )
     USFMParagraphMarkers.remove( 'qa' ) # This is actually a heading marker
     assert len(USFMParagraphMarkers) >= 33
-    USFMCharacterMarkers = usfm_markers_py.getCharacterMarkersList()
+    USFMCharacterMarkers = usfm_markers_py.get_character_markers_list()
     assert len(USFMCharacterMarkers) >= 40
-    USFMAllExpandedCharacterMarkers = usfm_markers_py.getCharacterMarkersList( expandNumberableMarkers=True )
+    USFMAllExpandedCharacterMarkers = usfm_markers_py.get_character_markers_list( expand_numberable_markers=True )
     assert len(USFMAllExpandedCharacterMarkers) >= 64
-    internal_SFMs_to_remove = usfm_markers_py.getCharacterMarkersList( includeBackslash=True, includeNestedMarkers=True, includeEndMarkers=True )
+    internal_SFMs_to_remove = usfm_markers_py.get_character_markers_list( include_backslash=True, include_nested_markers=True, include_end_markers=True )
     assert len(internal_SFMs_to_remove) >= 160
     internal_SFMs_to_remove.sort( key=len, reverse=True ) # List longest first
 # end of BibleOrgSysGlobals.preloadCommonData

@@ -741,9 +741,9 @@ def produce_HTML_files() -> None:
         elif BBB == 'JHN': BBB = 'LUK'
 
         bookType = None
-        if bos_books_codes_py.is_ot_nr( BBB ):
+        if bos_books_codes_py.is_old_testament_nr( BBB ):
             bookType = 'OT'
-        elif bos_books_codes_py.is_nt_nr( BBB ):
+        elif bos_books_codes_py.is_new_testament_nr( BBB ):
             bookType = 'NT'
 
         word_table = None
@@ -1501,12 +1501,12 @@ def livenMD( mdText:str ) -> str:
         mdLinkTarget = mdLinkTarget.split( '#', 1 )[1]
         if mdLinkTarget.count( '.' ) == 2: # Then it's almost certainly an OSIS B/C/V ref
             OSISBkCode, C, V = mdLinkTarget.split( '.' )
-            BBB = bos_books_codes_py.getBBBFromOSISAbbreviation( OSISBkCode )
+            BBB = bos_books_codes_py.osis_book_code_to_bos_book_code( OSISBkCode )
             ourLinkTarget = f'../{BBB}.html#C{C}V{V}'
         else:
             assert mdLinkTarget.count( '.' ) == 1 # Then it's almost certainly an OSIS B/C ref
             OSISBkCode, C = mdLinkTarget.split( '.' )
-            BBB = bos_books_codes_py.getBBBFromOSISAbbreviation( OSISBkCode )
+            BBB = bos_books_codes_py.osis_book_code_to_bos_book_code( OSISBkCode )
             ourLinkTarget = f'../{BBB}.html#C{C}'
         ourLink = f'<a href="{ourLinkTarget}">{readableRef}</a>'
         mdText = f'''{mdText[:match.start()]}{ourLink}{mdText[match.end():]}'''
