@@ -2,6 +2,10 @@ version = 1
 revision = 3
 requires-python = ">=3.14"
 
+[options]
+exclude-newer = "2026-05-06T22:17:13.376204435Z"
+exclude-newer-span = "P7D"
+
 [[package]]
 name = "bibleorgsys"
 version = "0.1.1"
