@@ -10,6 +10,9 @@ dependencies = [
     "bos_books_codes_py",
 ]
 
+[tool.uv]
+exclude-newer = "7 days"
+
 [tool.uv.sources]
 bibleorgsys-rust = { path = "../../BibleOrgSys/Rust/bible_organisational_system", editable = true }
 bibleorgsys = { path = "../../BibleOrgSys", editable = true }

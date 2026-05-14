@@ -58,9 +58,9 @@ from pathlib import Path
 import json
 import tomllib
 import logging
-import shutil
+# import shutil
 import os
-import unicodedata
+# import unicodedata
 import re
 
 import BibleOrgSysGlobals
