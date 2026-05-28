@@ -5,8 +5,8 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2026-05-14 08:52 by extract_glossed_OSHB_OT_to_ESFM v1.0.01
-\rem USFM file edited by ScriptedBibleEditor v0.35
+\rem ESFM file created 2026-05-27 08:52 by extract_glossed_OSHB_OT_to_ESFM v1.0.3
+\rem ESFM file edited by ScriptedBibleEditor v0.8.2 using ScriptedOTUpdates
 \h Song of Shəlomoh/(Solomon)
 \toc1 Song of Shəlomoh
 \toc2 Song of Shəlomoh
@@ -41,10 +41,10 @@
 \v 5 Sustain÷me with÷raisin-cakes refresh÷me with÷apples if/because \add am\add*_weak_of love I.
 \v 6 Hand_of÷his_left \add is\add*_under (to)÷head_of÷my and÷his_right_of÷hand it÷embraces_me.
 \v 7 I_adjure you(pl) Oh_daughters_of Yərūshālam/(Jerusalem) by÷gazelles or by÷the_does_of the=field if you(pl)_will_awaken and=if you(pl)_will_arouse DOM (the)÷love until that÷it_will_please.
-\v 8 the_sound_of my_lover_of÷my there this \add he\add*_\add is\add*_coming \add he\add*_\add is\add*_leaping over the÷mountains \add he\add*_\add is\add*_bounding over the÷hills.
-\v 9 lover_of÷my \add is\add*_like (to)_a÷gazelle or (to)÷\add the\add*_fawn_of the_deer(s) there this \add he\add*_\add is\add*_standing behind wall_of÷our \add he\add*_\add is\add*_gazing from the÷windows \add he\add*_\add is\add*_peering from the÷lattices.
+\v 8 the_sound_of my_lover_of÷my THERE this \add he\add*_\add is\add*_coming \add he\add*_\add is\add*_leaping over the÷mountains \add he\add*_\add is\add*_bounding over the÷hills.
+\v 9 lover_of÷my \add is\add*_like (to)_a÷gazelle or (to)÷\add the\add*_fawn_of the_deer(s) THERE this \add he\add*_\add is\add*_standing behind wall_of÷our \add he\add*_\add is\add*_gazing from the÷windows \add he\add*_\add is\add*_peering from the÷lattices.
 \v 10 lover_of÷my He_answered and=saying(ms) to=me arise to/for=you(fs) my_friend_of÷my my_beautiful_of÷\add one\add* and÷come to/for=you(fs).
-\v 11 If/because there the÷winter\f + \fr 2:11 \ft OSHB variant note: ה/סתו: (x-qere) 'הַ/סְּתָ֖יו': lemma=d/5638 n=1.0 morph=HTd/Ncmsa id=22ibe הַ/סְּתָ֖יו\f* it_has_passed the÷rain it_has_passed_away it_has_gone to=him/it.
+\v 11 If/because THERE the÷winter\f + \fr 2:11 \ft OSHB variant note: ה/סתו: (x-qere) 'הַ/סְּתָ֖יו': lemma=d/5638 n=1.0 morph=HTd/Ncmsa id=22ibe הַ/סְּתָ֖יו\f* it_has_passed the÷rain it_has_passed_away it_has_gone to=him/it.
 \v 12 The÷blossoms they_have_appeared in/on_the=earth the_time_of (the)÷pruning it_has_arrived and÷the_sound_of the_turtle-dove it_has_been_heard in÷land_of÷our.
 \v 13 The_fig÷tree it_has_ripened figs_of÷its_early and÷the÷vines blossom they_have_given_forth odour arise wwww\f + \fr 2:13 \ft OSHB variant note: לכי: (x-qere) 'לָ֛/ךְ': lemma=l n=0.0.0 morph=HR/Sp2fs id=22GpK לָ֛/ךְ\f* my_friend_of÷my my_beautiful_of÷\add one\add* and÷come to/for=you(fs).
 \v 14 my_dove_of÷my in÷the_clefts_of the_rock in÷the_hiding_place_of the_steep_place let÷me_see DOM form_of÷your\f + \fr 2:14 \ft OSHB note: Marks a place where we agree with BHQ against BHS in reading L.\f*\f + \fr 2:14 \ft OSHB note: Marks an anomalous form.\f*\f + \fr 2:14 \ft OSHB note: We read punctuation in L differently from BHS.\f* cause÷me_to_hear DOM voice_of÷your if/because voice_of÷your \add is\add*_sweet and÷form_of÷your \add is\add*_lovely.
@@ -59,7 +59,7 @@
 \v 4 Like÷a_little that÷I_had_passed_away from=them until that÷I_found DOM \add the÷one\add*_whom_it_loves self_of÷my I÷grasped_him and=not I÷let_him_go until that÷I÷had_brought_him to the_house_of my_mother_of÷my and=near/to the_room_of \add the_one_who\add*_conceived_me.
 \v 5 I_adjure you(pl) Oh_daughters_of Yərūshālam/(Jerusalem) by÷gazelles or by÷the_does_of the=field if you(pl)_will_awaken and=if you(pl)_will_arouse DOM (the)÷love until that÷it_will_please.
 \v 6 who this \add is\add*_coming_up from the÷wilderness like÷columns_of smoke \add she_is\add*_perfumed_of myrrh and÷frankincense from=all \add the\add*_scent-powder_of a_trader.
-\v 7 There bed_of÷his which_\add belongs\add*÷to÷Shəlomoh/(Solomon) sixty warriors \add are\add*_around to/for=her/it some÷of_the_warriors_of Yisrā\sup ʼēl\sup*/(Israel).
+\v 7 THERE bed_of÷his which_\add belongs\add*÷to÷Shəlomoh/(Solomon) sixty warriors \add are\add*_around to/for=her/it some÷of_the_warriors_of Yisrā\sup ʼēl\sup*/(Israel).
 \v 8 Of_them_of÷all\f + \fr 3:8 \ft OSHB note: We read the punctuation in L differently from BHQ.\f* \add are\add*_grasped_of a_sword trained_of warfare each_one sword_of÷his \add is\add*_on thigh_of÷his from÷dread in÷nights.\f + \fr 3:8 \ft OSHB note: Marks a place where we agree with BHQ against BHS in reading L.\f*\f + \fr 3:8 \ft OSHB note: Marks an anomalous form.\f*\f + \fr 3:8 \ft OSHB note: We read punctuation in L differently from BHS.\f*
 \v 9 a_litter he_has_made to=him/it the=king Shəlomoh from_(the)÷wood(s)_of (the)÷Ləⱱānōn.
 \v 10 Posts_of÷its he_made silver back_of÷its gold seat_of÷its purple_wool middle_of÷its \add was\add*_fitted_out leather from÷the_daughters_of Yərūshālam/(Jerusalem).

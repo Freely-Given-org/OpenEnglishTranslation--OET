@@ -67,6 +67,7 @@ CHANGELOG:
     2026-03-19 Did the minimum to get the updated Macula Hebrew data to work
     2026-04-01 Added /ie at end of introduction (as although it's optional in USFM, it's part of the ESFM spec)
     2026-05-08 Upgraded to bos_books_codes_py
+    2026-05-24 Change 'behold' glosses 'there!','here!' to 'THERE','HERE' (rather than just deleting the exclamation marks)
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple
@@ -82,10 +83,10 @@ from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-05-08' # by RJH
+LAST_MODIFIED_DATE = '2026-05-27' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed_OSHB_OT_to_ESFM"
 PROGRAM_NAME = "Extract glossed OSHB OT ESFM files"
-PROGRAM_VERSION = '1.0.01'
+PROGRAM_VERSION = '1.0.3'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -581,10 +582,13 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
             # Try to check and clean up the gloss a bit
             assert '.' not in gloss,  f"{given_verse_row}"
             # assert '_~_' not in gloss,  f"{given_verse_row}" # {'Ref': 'GEN_6:19w10', 'OSHBid': '01cUx', 'RowType': '', 'MorphemeRowList': '3667,3668', 'Strongs': 'l,2421', 'CantillationHierarchy': '', 'Morphology': 'R,Vhc', 'Word': 'לְ,הַחֲיֹ֣ת', 'NoCantillations': 'לְ,הַחֲיֹת', 'MorphemeGlosses': 'to,keep_~_alive', 'ContextualMorphemeGlosses': '', 'WordGloss': '', 'ContextualWordGloss': '', 'GlossCapitalisation': '', 'GlossPunctuation': '', 'GlossOrder': '190', 'GlossInsert': '', 'n': 2585}
-            gloss = gloss.replace( '_~_', '_' ) # TODO: What did these mean? Place to insert direct object, e.g, make_~_great,him ???
-            # assert '==' not in gloss,  f"{given_verse_row}" # {'Ref': 'GEN_4:6w8', 'OSHBid': '012B3', 'RowType': '', 'MorphemeRowList': '2149,2150,2151', 'Strongs': 'c,l,4100', 'CantillationHierarchy': '0.0', 'Morphology': 'C,R,Ti', 'Word': 'וְ,לָ֖,מָּה', 'NoCantillations': 'וְ,לָ,מָּה', 'MorphemeGlosses': 'and,to/for,why', 'ContextualMorphemeGlosses': '', 'WordGloss': 'and=for=what?', 'ContextualWordGloss': 'and==why?', 'GlossCapitalisation': '', 'GlossPunctuation': '', 'GlossOrder': '120', 'GlossInsert': '', 'n': 1465}
-            gloss = gloss.replace( '==', '=' ).replace( ',?,', ',' ).replace( ',,', ',' ) # TODO: How/Why do we have these?
-            gloss = gloss.replace( '!', '' ).replace( '=?', '' ).replace( '?', '' ) # e.g., on gloss for 'behold!', 'what?', 'will_you(fs)_be_drunk=?'
+            gloss =  (
+                gloss.replace( '_~_', '_' ) # TODO: What did these mean? Place to insert direct object, e.g, make_~_great,him ???
+                # assert '==' not in gloss,  f"{given_verse_row}" # {'Ref': 'GEN_4:6w8', 'OSHBid': '012B3', 'RowType': '', 'MorphemeRowList': '2149,2150,2151', 'Strongs': 'c,l,4100', 'CantillationHierarchy': '0.0', 'Morphology': 'C,R,Ti', 'Word': 'וְ,לָ֖,מָּה', 'NoCantillations': 'וְ,לָ,מָּה', 'MorphemeGlosses': 'and,to/for,why', 'ContextualMorphemeGlosses': '', 'WordGloss': 'and=for=what?', 'ContextualWordGloss': 'and==why?', 'GlossCapitalisation': '', 'GlossPunctuation': '', 'GlossOrder': '120', 'GlossInsert': '', 'n': 1465}
+               .replace( '==', '=' ).replace( ',?,', ',' ).replace( ',,', ',' ) # TODO: How/Why do we have these?
+                #  We want BEHOLD to retain this .replace( '!', '' )
+                .replace( '=?', '' ).replace( '?', '' ) # e.g., on gloss for 'behold!', 'what?', 'will_you(fs)_be_drunk=?'
+            )
             # assert '.' not in gloss and '!' not in gloss, f"{given_verse_row}"
             while gloss.endswith( '~' ): gloss = gloss[:-1] # Remove any trailing tildes
             while gloss.startswith( '_' ): gloss = gloss[1:] # Remove any leading underline separators
@@ -642,7 +646,8 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
                     else given_verse_row['WordGloss'] if given_verse_row['WordGloss']
                     else given_verse_row['ContextualWordGloss'] )
         wordGloss = ( wordGloss
-                        .replace( '!', '' ).replace( '?', '' ) # e.g., on gloss for 'behold!', 'what?'
+                        # .replace( '!', '' ) # e.g., on gloss for 'behold!', 'what?'
+                        .replace( '?', '' )
                         .replace( '==', '=' ).replace( ',,', ',' ) # TODO: How/Why do we have these?
                         .replace( '_~_', '_' ) # We don't seem to have a need for these place-holders (but we went back from word glosses to contextual glosses)
                     )
@@ -672,6 +677,7 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
             gloss = wordGloss
             saved_capitalisation = given_verse_row['GlossCapitalisation']
 
+
     if gloss:
         # if saved_capitalisation: print(f"{saved_capitalisation=}")
         if 'S' in saved_capitalisation:
@@ -690,7 +696,7 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
 
     # if given_verse_row['Ref'].startswith('GEN_1:4'): halt
     result = f"{gloss}{gloss_punctuation}"
-    assert '!¦' not in result, f"{given_verse_row}"
+    assert '!¦' not in result, f"{given_verse_row} {result=}"
     return result
 # end of extract_glossed_OSHB_OT_to_ESFM.preform_row_gloss
 
@@ -855,6 +861,13 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
                 assert inCount == 0, f"Bad nesting in {gloss=} from {originalGloss=}, {wn=}"
                 startIx = closeIx + 3
 
+    # Change 'behold' -- uUse capitals instead of exclamation marks
+    # if '!' in gloss: print( f"make_gloss_adjustments_and_append_word_number AAA has {wn} {gloss=}" )
+    gloss = gloss.replace( 'Behold/lo/see!', 'BEHOLD/LO/SEE' ).replace( 'There!', 'THERE' ).replace( 'Here!', 'HERE' ) \
+                    .replace( 'behold/lo/see!', 'BEHOLD/LO/SEE' ).replace( 'there!', 'THERE' ).replace( 'here!', 'HERE' ) \
+                    .replace( 'now!', 'NOW' ).replace( 'unclean!', 'UNCLEAN' ) \
+                    .replace( '!', '' ) # Otherwise just get rid of (interpreted) exclamation marks in the LV
+
     # Append the word (row) number(s) and replace comma morpheme separator
     gloss = f"{gloss.replace('=', f'{wn}=')
                     .replace('*,','PROTECTASTERISKFROMWORDNUMBER').replace(',', f'{wn}÷').replace('PROTECTASTERISKFROMWORDNUMBER','*÷')
@@ -864,6 +877,7 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
                     .replace('_', f'{wn}_')
                     .replace('PROTECTED', '~_')
                     .replace('PROTECTADD', '\\add*_')}"
+    # if gloss.endswith( '!' ): gloss = f'{gloss[:-1]}{wn}!'
     if not gloss.endswith( '*' ): gloss = f'{gloss}{wn}'
 
     # if '\\add' in gloss:
@@ -873,6 +887,7 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
     assert f'_{wn}' not in gloss, f"make_gloss_adjustments_and_append_word_number: wrongly placed {gloss=} from {originalGloss=}"
     assert f'{wn}{wn}' not in gloss, f"make_gloss_adjustments_and_append_word_number: bad {gloss=} from {originalGloss=}"
     assert f'{wn[1:]}¦' not in gloss, f"make_gloss_adjustments_and_append_word_number: messed up {gloss=} from {originalGloss=}"
+    assert '!¦' not in gloss, f"make_gloss_adjustments_and_append_word_number: messed up {gloss=} from {originalGloss=}"
     return gloss
 # end of extract_glossed_OSHB_OT_to_ESFM.make_gloss_adjustments_and_append_word_number
 

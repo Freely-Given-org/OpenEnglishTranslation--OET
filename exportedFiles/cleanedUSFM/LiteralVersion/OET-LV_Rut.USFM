@@ -5,8 +5,8 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2026-05-14 08:52 by extract_glossed_OSHB_OT_to_ESFM v1.0.01
-\rem USFM file edited by ScriptedBibleEditor v0.35
+\rem ESFM file created 2026-05-27 08:52 by extract_glossed_OSHB_OT_to_ESFM v1.0.3
+\rem ESFM file edited by ScriptedBibleEditor v0.8.2 using ScriptedOTUpdates
 \h Rūt
 \toc1 Rūt
 \toc2 Rūt
@@ -29,7 +29,7 @@
 \v 12 Go_back my_daughters_of÷my go if/because I_am_\add too\add*_old for÷belonging to÷a_husband if/because I_said there_\add is\add* to=me hope also I_belonged the=night to÷a_husband and=also I_bore sons.
 \v 13 Therefore will_you(pl)_wait until that they_will_grow_up therefore will_you_shut_yourselves_off to=not to_belong to÷a_husband no my_daughters_of÷my if/because it_is_bitter to=me very more÷than_you(pl) if/because it_has_gone_forth on÷me the_hand_of \nd YHWH\nd*.
 \v 14 And÷they_raised voice_of÷their and÷they_wept again and= Orpah =she_kissed (to)÷mother-in-law_of÷her and÷Rūt she_clung to÷her.
-\v 15 And=she/it_said there she_has_returned sister-in-law_of÷your to people_of÷her and=near/to gods_of÷her go_back after sister-in-law_of÷your.
+\v 15 And=she/it_said THERE she_has_returned sister-in-law_of÷your to people_of÷her and=near/to gods_of÷her go_back after sister-in-law_of÷your.
 \v 16 And= Rūt =she/it_said do_not entreat (on)÷me to÷abandon÷you to÷turn_back from÷after÷you if/because to where you_will_go I_will_go and÷at÷where you_will_lodge I_will_lodge people_of÷your people_of÷my and÷god_of÷your god_of÷my.
 \v 17 At÷where you_will_die I_will_die and=there I_will_be_buried thus \nd YHWH\nd* may_he_do to=me and÷thus may_he_add if/because (the)÷death it_will_separate between÷me and÷between÷you.
 \v 18 And=she/it_saw if/because_that \add was\add*_determined she to=go with÷her and÷she_ceased to÷speak to÷her.
@@ -42,7 +42,7 @@
 \v 1 And_\add belonged\add*÷to÷Nāˊₒmī a_relative\f + \fr 2:1 \ft OSHB variant note: מידע: (x-qere) 'מוֹדַ֣ע': lemma=4129 morph=HNcmsa id=08swV מוֹדַ֣ע\f* to/for=her/its=man/husband a_man mighty_of wealth from÷the_clan_of ʼElīmelek and=his/its=name \add was\add*_Boˊaz.
 \v 2 And= Rūt =she/it_said the_Mōʼāⱱite÷\add woman\add* to Nāˊₒmī let_me_go please the=field so÷that_I_may_glean\f + \fr 2:2 \ft OSHB note: Marks a place where we agree with BHQ against BHS in reading L.\f*\f + \fr 2:2 \ft OSHB note: Marks an anomalous form.\f*\f + \fr 2:2 \ft OSHB note: We read punctuation in L differently from BHS.\f* among÷grain\f + \fr 2:2 \ft OSHB note: Marks a place where we agree with BHQ against BHS in reading L.\f*\f + \fr 2:2 \ft OSHB note: Marks an anomalous form.\f*\f + \fr 2:2 \ft OSHB note: We read punctuation in L differently from BHS.\f* behind \add the\add*_\add one\add*_whom I_will_find favour in÷eyes_of÷his and=she/it_said to/for=her/it go my_daughter_of÷my.
 \v 3 And÷she_went and÷she_came and÷she_gleaned in_the=field behind the÷harvesters chance_of÷her and÷it_chanced_on the_portion_of the=field of÷Boˊaz who \add was\add*_from÷the_clan_of ʼElīmelek.
-\v 4 And=see/lo/see Boˊaz \add was\add*_coming from food/grain/bread and=he/it_said to÷harvesters \nd YHWH\nd* \add be\add*_with÷you(pl) and=they_said to=him/it may÷he_bless_you \nd YHWH\nd*.
+\v 4 And=BEHOLD/LO/SEE Boˊaz \add was\add*_coming from food/grain/bread and=he/it_said to÷harvesters \nd YHWH\nd* \add be\add*_with÷you(pl) and=they_said to=him/it may÷he_bless_you \nd YHWH\nd*.
 \v 5 And= Boˊaz =he/it_said to÷servant_of÷his \add who÷was\add*_appointed over the÷harvesters \add belongs\add*_to÷whom the_young÷woman (the)÷this.
 \v 6 And÷he_answered the÷servant \add who÷was\add*_appointed over the÷harvesters and÷he_said \add is\add*_a_young_woman Mōʼāⱱite she who÷she_returned with Nāˊₒmī from÷the_region_of Mōʼāⱱ.
 \v 7 And=she/it_said let_me_glean please and÷I_will_gather among÷sheaves behind the÷harvesters and÷she_came and÷she_has_stayed from÷then this÷morning and=unto now this sitting÷her the÷house little.
@@ -65,13 +65,13 @@
 \c 3
 \nb
 \v 1 And=she/it_said to/for=her/it Nāˊₒmī mother-in-law_of÷her my_daughter_of÷my not will_I_seek to/for=you(fs) a_resting_place that it_will_go_well to/for=you(fs).
-\v 2 And=now not \add is\add*_Boˊaz relative_of÷our whom you_were with servants_of÷his_female there he \add will_be\add*_winnowing DOM the_threshing_floor_of the_barley(s) the=night.
+\v 2 And=now not \add is\add*_Boˊaz relative_of÷our whom you_were with servants_of÷his_female THERE he \add will_be\add*_winnowing DOM the_threshing_floor_of the_barley(s) the=night.
 \v 3 And÷you_will_wash and÷you_will_anoint_yourself and÷you_will_put garments_of÷your\f + \fr 3:3 \ft OSHB variant note: שמלת/ך: (x-qere) 'שִׂמְלֹתַ֛יִ/ךְ': lemma=8071 n=1.0.0 morph=HNcfpc/Sp2fs id=08i9m שִׂמְלֹתַ֛יִ/ךְ\f* on÷yourself and÷you_will_go_down\f + \fr 3:3 \ft OSHB variant note: ו/ירדתי: (x-qere) 'וְ/יָרַ֣דְתְּ': lemma=c/3381 morph=HC/Vqq2fs id=08XPV וְ/יָרַ֣דְתְּ\f* the_threshing÷floor do_not make_yourself_known to÷man until finishes÷he to÷eat and÷to÷drink.
 \v 4 And=let_it_be when÷he÷lies_down and÷you_will_take_note_of DOM the÷place where he_will_lie_down there and÷you_will_go and÷you_will_uncover feet_of÷his and\f + \fr 3:4 \ft OSHB variant note: ו/שכבתי: (x-qere) 'וְ/שָׁכָ֑בְתְּ': lemma=c/7901 n=1 morph=HC/Vqq2fs id=08fE2 וְ/שָׁכָ֑בְתְּ\f* and=he he_will_tell to/for=you(fs) DOM \add that\add*_which you÷will_do.\f + \fr 3:4 \ft OSHB note: We read one or more vowels in L differently from BHQ.\f*
 \v 5 and=she/it_said to=her/it all that you_are_saying\f + \fr 3:5 \ft OSHB variant note: (x-qere) 'אֵלַ֖/י': lemma=413 n=0.0 morph=HR/Sp1cs id=08k23 אֵלַ֖/י\f* I_will_do.
 \v 6 And÷she_went_down the_threshing÷floor and÷she_did according÷to_all that she÷had_commanded_her mother-in-law_of÷her.
 \v 7 And= Boˊaz =he_ate and÷he_drank his/its=heart and÷it_was_good and÷he_went to÷lie_down at÷the_end_of the_heap and÷she_came in÷secrecy and÷she_uncovered feet_of÷his and÷she_lay_down.
-\v 8 And=he/it_was in÷the_middle_of the=night and÷he_trembled the=man and÷he_twisted and=see/lo/see a_woman \add was\add*_lying_down feet_of÷his.
+\v 8 And=he/it_was in÷the_middle_of the=night and÷he_trembled the=man and÷he_twisted and=BEHOLD/LO/SEE a_woman \add was\add*_lying_down feet_of÷his.
 \v 9 And=he/it_said who \add are\add*_you\f + \fr 3:9 \ft OSHB note: We agree with both BHS 1997 and BHQ on an unexpected reading.\f* and=she/it_said I \add am\add*_Rūt your(ms)=female_slave and÷you_will_spread_out skirt_of÷your over maidservant_of÷your if/because \add are\add*_a_kinsman-redeemer you.
 \v 10 And=he/it_said \add be\add*_blessed you to/for=\nd YHWH\nd* my_daughter_of÷my you_have_made_good loyalty_of÷your (the)÷latter more_than (the)÷former to=not to_go after the_young÷men whether poor and=if rich.
 \v 11 And=now my_daughter_of÷my do_not fear all that you_are_saying I_will_do for÷you if/because all_of \add is\add*_knowing the_gate_of my_people_of÷my if/because_that \add are\add*_a_woman_of ability you.
@@ -84,7 +84,7 @@
 \v 18 And=she/it_said sit_down my_daughter_of÷my until that you÷will_know how will_it_fall_out a_matter if/because not he_will_be_at_peace the=man if/because (if) he_has_finished the÷matter the=day.
 \c 4
 \nb
-\v 1 And÷Boˊaz he_went_up the÷gate and=he/it_sat_down//remained//lived there and=see/lo/see the÷kinsman-redeemer \add was\add*_passing_by whom he_had_spoken Boˊaz and=he/it_said turn÷aside sit here a_certain_one a_certain_one and÷he_turned_aside and÷he_sat_down.
+\v 1 And÷Boˊaz he_went_up the÷gate and=he/it_sat_down//remained//lived there and=BEHOLD/LO/SEE the÷kinsman-redeemer \add was\add*_passing_by whom he_had_spoken Boˊaz and=he/it_said turn÷aside sit here a_certain_one a_certain_one and÷he_turned_aside and÷he_sat_down.
 \v 2 And=he/it_took ten men of÷the_elders_of the=city and=he/it_said sit here and÷they_sat_down.
 \v 3 And=he/it_said to÷redeemer the_portion_of the=field which \add belonged\add*_to÷brother_of÷our to÷ʼElīmelek Nāˊₒmī she_has_sold who÷she_returned from÷the_region_of Mōʼāⱱ.
 \v 4 And÷I I_said I_will_uncover ear_of÷your to=say acquire_\add it\add* before \add those\add*÷sitting and÷before the_elders_of my_people_of÷my if you_will_redeem redeem and=if not he_will_redeem tell to/for=me so÷that_I_may_know\f + \fr 4:4 \ft OSHB variant note: ו/אדע: (x-qere) 'וְ/אֵֽדְעָה֙': lemma=c/3045 n=1.1.1 morph=HC/Vqh1cs id=08fbk וְ/אֵֽדְעָה֙\f* if/because there_\add is\add*_not except÷you to÷redeem and÷I \add am\add*_after÷you and=he/it_said I I_will_redeem.

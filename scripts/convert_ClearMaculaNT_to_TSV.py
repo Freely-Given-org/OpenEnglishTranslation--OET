@@ -557,9 +557,9 @@ def save_filled_TSV_file() -> bool:
     BibleOrgSysGlobals.backupAnyExistingFile( state.TSV_output_filepath, numBackups=5 )
 
     # print(len(state.lowFatWordsAndMorphemes[0]), state.lowFatWordsAndMorphemes[0]);halt
-    with open( state.TSV_output_filepath, 'wt', encoding='utf-8' ) as tsv_output_file:
+    with open( state.TSV_output_filepath, 'wt', encoding='utf-8', newline='' ) as tsv_output_file:
         tsv_output_file.write('\ufeff') # Write BOM
-        writer = DictWriter( tsv_output_file, fieldnames=state.output_fieldnames, delimiter='\t' )
+        writer = DictWriter( tsv_output_file, fieldnames=state.output_fieldnames, delimiter='\t', lineterminator='\n' )
         writer.writeheader()
         for thisTuple in state.lowFatWordsAndMorphemes:
             # print( f"{state.output_fieldnames=} {thisTuple=}" )
@@ -610,9 +610,9 @@ def save_shortened_TSV_file() -> bool:
     # print(f"({len(state.output_fieldnames)}) {state.output_fieldnames} -> ({len(shortenedFieldnames)}) {shortenedFieldnames}")
 
     # print(len(state.lowFatWordsAndMorphemes[0]), state.lowFatWordsAndMorphemes[0]);halt
-    with open( state.shortened_TSV_output_filepath, 'wt', encoding='utf-8' ) as tsv_output_file:
+    with open( state.shortened_TSV_output_filepath, 'wt', encoding='utf-8', newline='' ) as tsv_output_file:
         tsv_output_file.write('\ufeff') # Write BOM
-        writer = DictWriter( tsv_output_file, fieldnames=shortenedFieldnameList, delimiter='\t' )
+        writer = DictWriter( tsv_output_file, fieldnames=shortenedFieldnameList, delimiter='\t', lineterminator='\n' )
         writer.writeheader()
         for thisEntryDict in state.lowFatWordsAndMorphemes:
             for columnName in columnsToRemove:

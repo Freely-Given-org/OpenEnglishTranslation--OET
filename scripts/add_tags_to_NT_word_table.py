@@ -66,10 +66,8 @@ import re
 import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 import bos_books_codes_py
+from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
-import sys
-sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitted to PyPI
-from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
 
 LAST_MODIFIED_DATE = '2026-02-10' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
@@ -218,9 +216,6 @@ def apply_VLT_scripted_gloss_updates() -> bool:
     with open( filepath, 'rb' ) as controlFile:
         controlData = tomllib.load( controlFile )
 
-    load_transliteration_table( 'Hebrew' )
-    load_transliteration_table( 'Greek' )
-
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loading and applying transforms to {columnHeaders[5]} column…" )
     totalChangedGlosses = 0
     commandTables = {}
@@ -274,7 +269,7 @@ def apply_VLT_scripted_gloss_updates() -> bool:
 
                     # Adjust and save the fields
                     if 'H' in tags:
-                        newReplaceText = transliterate_Hebrew( replaceText, capitaliseHebrew=searchText[0].isupper() )
+                        newReplaceText = transliterate_Hebrew( replaceText, capitalise_hebrew=searchText[0].isupper() )
                         if newReplaceText != replaceText:
                             # print(f" Converted Hebrew '{replaceText}' to '{newReplaceText}'")
                             replaceText = newReplaceText

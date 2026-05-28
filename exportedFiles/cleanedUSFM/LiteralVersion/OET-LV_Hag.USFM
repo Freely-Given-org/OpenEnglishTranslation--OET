@@ -5,8 +5,8 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2026-05-14 08:52 by extract_glossed_OSHB_OT_to_ESFM v1.0.01
-\rem USFM file edited by ScriptedBibleEditor v0.35
+\rem ESFM file created 2026-05-27 08:52 by extract_glossed_OSHB_OT_to_ESFM v1.0.3
+\rem ESFM file edited by ScriptedBibleEditor v0.8.2 using ScriptedOTUpdates
 \h Ḩaggay
 \toc1 Ḩaggay
 \toc2 Ḩaggay
@@ -23,7 +23,7 @@
 \v 6 You(pl)_have_sown much and÷you_have_brought little you_have_eaten and÷not \add it÷was\add*_to_be_satisfied you_have_drunk and÷not \add it÷was\add*_to_become_drunk you_have_dressed and÷not \add it÷was\add*_to_be_warm to=him/it and÷the_\add one÷who\add*_earns_wages \add is\add*_earning_wages to a_bag pierced.
 \v 7 thus \nd YHWH\nd* he_says soldiers/messengers set heart_of÷your(pl) on ways_of÷your(pl).
 \v 8 Go_up the_hill÷country and÷you(pl)_will_bring wood and÷rebuild the÷house so÷that_I_may_take_pleasure in/on/over=him/it and÷so_that_I_may_be_honoured\f + \fr 1:8 \ft OSHB variant note: ו/אכבד: (x-qere) 'וְ/אֶכָּבְדָ֖ה': lemma=c/3513 n=0.0 morph=HC/VNh1cs id=37iy2 וְ/אֶכָּבְדָ֖ה\f* \nd YHWH\nd* he_says.
-\v 9 You_turned_to_look to much and=see/lo/see (into)÷little and÷you(pl)_brought_\add it\add* the÷house and÷I_blew in=him/it because_of what the_utterance_of \nd YHWH\nd* soldiers/messengers because_of house_of÷my which it \add is\add*_desolate and÷you(pl) \add are\add*_running each to÷his_own_of÷house.
+\v 9 You_turned_to_look to much and=BEHOLD/LO/SEE (into)÷little and÷you(pl)_brought_\add it\add* the÷house and÷I_blew in=him/it because_of what the_utterance_of \nd YHWH\nd* soldiers/messengers because_of house_of÷my which it \add is\add*_desolate and÷you(pl) \add are\add*_running each to÷his_own_of÷house.
 \v 10 Therefore yes/correct/thus/so on÷you(pl) \add the\add*_heavens they_have_withheld\f + \fr 1:10 \ft OSHB note: Marks a place where we agree with BHQ against BHS in reading L.\f*\f + \fr 1:10 \ft OSHB note: We read one or more consonants in L differently from BHS.\f*\f + \fr 1:10 \ft OSHB note: Marks an anomalous form.\f* from÷dew and=the=earth it_has_withheld produce_of÷its.
 \v 11 And÷I_have_summoned a_drought on the=earth/land and÷on the÷mountains and÷on the÷grain and÷on the_new÷wine and÷on the_fresh÷oil and÷on \add that\add*_which it_will_bring_forth the=soil and÷on the=humankind and÷on the=cattle/livestock and÷on all_of \add the\add*_toil_of hands.
 \v 12 and= Zərubāⱱel =he/it_listened the_son_of Shəʼaltiy\sup ʼēl\sup* and÷Yəhōshūˊa/(Joshua) the_son_of Yəhōʦādāq/(Jehozadak) the=priest/officer (the)÷great and=all/each/any/every the_remnant_of the_people to÷the_voice_of \nd YHWH\nd* god_of÷their and÷to the_words/messages_of Ḩaggay the÷prophet just=as he÷had_sent_him \nd YHWH\nd* god_of÷their and÷they_were_afraid the÷people from=face/in_front_of \nd YHWH\nd*.
@@ -43,7 +43,7 @@
 \v 9 Great it_will_be the_splendour_of the_house the=this (the)÷latter more_than the÷former \nd YHWH\nd* he_says soldiers/messengers and÷in÷place the=this I_will_give peace the_utterance_of \nd YHWH\nd* soldiers/messengers.
 \v 10 on_\add day\add*÷twenty and÷four of÷\add month\add* in=year two of÷Dārəyāvesh the_message_of it_came of_\nd YHWH\nd* to Ḩaggay the÷prophet to=say.
 \v 11 Thus \nd YHWH\nd* he_says soldiers/messengers ask please DOM the÷priests instruction to=say.
-\v 12 There he_will_carry someone flesh_of holiness in÷the_skirt_of his_garment_of÷his and÷he_will_touch with÷skirt_of÷his (to) (the)÷bread and=near/to (the)_cooked÷food and=near/to (the)÷wine and=near/to oil and=near/to every_of food will÷it_become_holy and÷they_answered the÷priests and=they_said no.
+\v 12 THERE he_will_carry someone flesh_of holiness in÷the_skirt_of his_garment_of÷his and÷he_will_touch with÷skirt_of÷his (to) (the)÷bread and=near/to (the)_cooked÷food and=near/to (the)÷wine and=near/to oil and=near/to every_of food will÷it_become_holy and÷they_answered the÷priests and=they_said no.
 \v 13 And= Ḩaggay =he/it_said if he_will_touch a_\add person\add*_unclean_of a_corpse in=all these_\add things\add* will÷it_become_unclean and÷they_answered the÷priests and=they_said it_will_become_unclean.
 \v 14 And= Ḩaggay =he_answered and=he/it_said \add is\add*_thus the÷people the=this and=thus/so/as_follows the÷nation the=this to/for=my=face/front the_utterance_of \nd YHWH\nd* and=thus/so/as_follows all_of the_work_of their_hands_of÷their and=which they_will_bring_near there \add is\add*_unclean it.
 \v 15 And=now set please heart_of÷your(pl) from the=day the=this and÷upwards from÷before put a_stone to a_stone in=(the)_palace of_\nd YHWH\nd*.

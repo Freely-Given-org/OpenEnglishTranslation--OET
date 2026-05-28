@@ -1,0 +1,14 @@
+[project]
+name = "openenglishtranslation-oet"
+version = "0.1.0"
+description = "Scripts to support the Open English Translation of the Bible"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "bible-transliterations",
+    "bibleorgsys",
+]
+
+[tool.uv.sources]
+bibleorgsys = { path = "../BibleOrgSys", editable = true }
+bible-transliterations = { path = "../BibleTransliterations/Rust", editable = true }

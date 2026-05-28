@@ -5,8 +5,8 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2026-05-14 08:52 by extract_glossed_OSHB_OT_to_ESFM v1.0.01
-\rem USFM file edited by ScriptedBibleEditor v0.35
+\rem ESFM file created 2026-05-27 08:52 by extract_glossed_OSHB_OT_to_ESFM v1.0.3
+\rem ESFM file edited by ScriptedBibleEditor v0.8.2 using ScriptedOTUpdates
 \h Proverbs
 \toc1 Proverbs
 \toc2 Proverbs
@@ -37,7 +37,7 @@
 \v 20 wisdom(s) in÷street it_cries_aloud in÷places she_gives_forth voice_of÷her.
 \v 21 At_\add the\add*÷top_of noisy_\add places\add* she_calls_out at_\add the\add*÷entrances_of \add the\add*_gates in÷city sayings_of÷her she_utters.
 \v 22 Until when Oh_naive_people will_you(pl)_love naiveté and÷mockers mockery do_they_delight_in to/for=them and÷fools will_they_hate knowledge.
-\v 23 You(pl)_will_turn_back to÷rebuke_of÷my here I_will_pour_forth to/for=you(pl) my=breath/wind/spirit let_me_declare words/messages_of÷my you(pl).
+\v 23 You(pl)_will_turn_back to÷rebuke_of÷my HERE I_will_pour_forth to/for=you(pl) my=breath/wind/spirit let_me_declare words/messages_of÷my you(pl).
 \v 24 Because I_called and÷you(pl)_refused I_stretched_out hand_of÷my and÷there_\add was\add*_not \add one_who\add*_paid_attention.
 \v 25 And÷you(pl)_ignored all_of advice_of÷my and÷rebuke_of÷my not you(pl)_yielded_to.
 \v 26 Also I at÷calamity_of÷your(pl) I_will_laugh I_will_mock when÷comes dread_of÷your(pl).
@@ -211,7 +211,7 @@
 \v 7 And÷I_saw among÷people I_observed among÷sons a_youth lacking_of heart.
 \v 8 \add he\add*_\add was\add*_passing_by in÷street beside corner_of÷her and÷the_direction_of her_house_of÷her he_strode.
 \v 9 At÷twilight in_\add the\add*÷evening \add the\add*_day in_\add the\add*÷middle_of \add the\add*_night and÷darkness.
-\v 10 And=see/lo/see a_woman to÷meet÷him \add the\add*_garment_of a_prostitute and÷guarded_of heart.
+\v 10 And=BEHOLD/LO/SEE a_woman to÷meet÷him \add the\add*_garment_of a_prostitute and÷guarded_of heart.
 \v 11 \add is\add*_boisterous she and÷rebellious in÷house_of÷her not feet_of÷her they_stay.
 \v 12 A_time in÷street a_time in÷places and÷beside every_of corner she_lies_in_wait.
 \v 13 And÷she_takes_hold\f + \fr 7:13 \ft OSHB note: We read the punctuation in L differently from BHQ.\f* in/on/over=him/it\f + \fr 7:13 \ft OSHB note: We read one or more accents in L differently from BHQ.\f*\f + \fr 7:13 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* and÷she_kisses for=him/it she_has_made_firm face_of÷her and=she/it_said to=him/it.
@@ -353,7 +353,7 @@
 \v 28 \add one_who\add*_trusts in÷wealth_of÷his he he_will_fall and÷like÷leaf righteous_\add people\add* they_will_bud.
 \v 29 \add one_who\add*_troubles household_of÷his he_will_inherit wind and÷\add will_be\add*_a_servant a_fool to_\add the\add*÷wise_of heart.
 \v 30 \add the\add*_fruit_of \add the\add*_righteous \add is\add*_a_tree_of life and÷\add one_who\add*_takes people\f + \fr 11:30 \ft OSHB note: We agree with both BHS 1997 and BHQ on an unexpected reading.\f* \add is\add*_wise.
-\v 31 There a_righteous_\add person\add* on_the=earth he_is_rewarded indeed if/because a_wicked_\add person\add* and÷a_sinner.
+\v 31 THERE a_righteous_\add person\add* on_the=earth he_is_rewarded indeed if/because a_wicked_\add person\add* and÷a_sinner.
 \c 12
 \nb
 \v 1 \add one_who\add*_loves discipline\f + \fr 12:1 \ft OSHB note: Marks a place where we agree with BHQ against BHS in reading L.\f*\f + \fr 12:1 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* \add is\add*_loving knowledge and÷\add one_who\add*_hates rebuke \add is\add*_stupid.
@@ -751,7 +751,7 @@
 \v 9 A_plan_of foolishness \add is\add*_sin and_\add is\add*÷an_abomination_of to/for=ʼĀdām/humankind a_mocker.
 \v 10 You_have_shown_yourself_without_courage in/on=day trouble \add is\add*_narrow strength_of÷your.
 \v 11 Deliver \add those_who_are_being\add*_taken to÷death and÷\add those_who_are\add*_staggering to÷slaughter if you_will_restrain.
-\v 12 If/because you_will_say here not we_knew this not \add one_who\add*_weighs hearts he does_he_perceive and÷\add one_who\add*_guards life_of÷your he does_he_know and÷will_he_repay to/for=ʼĀdām/humankind according÷to_of÷his_work.
+\v 12 If/because you_will_say HERE not we_knew this not \add one_who\add*_weighs hearts he does_he_perceive and÷\add one_who\add*_guards life_of÷your he does_he_know and÷will_he_repay to/for=ʼĀdām/humankind according÷to_of÷his_work.
 \v 13 Eat my_son_of÷my honey if/because \add it\add*_\add is\add*_good and÷honey \add is\add*_sweet on palate_of÷your.
 \v 14 Thus know wisdom for÷self_of÷your if you_find_\add it\add* and÷there_\add is\add* a_future and÷hope_of÷your not it_will_be_cut_off.
 \v 15 do_not lie_in_wait wicked_\add person\add* to_\add the\add*÷habitation_of a_righteous_\add person\add* do_not devastate place_of÷his_resting.\f + \fr 24:15 \ft OSHB note: Marks a place where we agree with BHQ against BHS in reading L.\f*\f + \fr 24:15 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f*\f + \fr 24:15 \ft OSHB note: Marks an anomalous form.\f*
@@ -770,7 +770,7 @@
 \v 28 do_not be a_witness without_cause in÷neighbour_of÷your and÷will÷you_deceive with÷lips_of÷your.
 \v 29 Do_not say just=as he_has_done to=me so I_will_do for=him/it I_will_repay to÷person according÷to_of÷his_deed.
 \v 30 At \add the\add*_field_of a_person lazy I_passed_by and÷at \add the\add*_vineyard_of a_person lacking_of heart.
-\v 31 And=see/lo/see it_had_grown_up of_it_of÷all nettles they_were_covered surface_of÷its weeds and÷the_wall_of its_stones_of÷his it_was_broken_down.
+\v 31 And=BEHOLD/LO/SEE it_had_grown_up of_it_of÷all nettles they_were_covered surface_of÷its weeds and÷the_wall_of its_stones_of÷his it_was_broken_down.
 \v 32 And÷I_saw I I_set heart_of÷my I_saw I_received instruction.
 \v 33 A_little_of sleep(s) a_little_of slumber(s) a_little_of folding_of hands to÷rest.
 \v 34 And÷it_will_come going_about poverty_of÷your and÷lack(s)_of÷your like÷a_man shield.

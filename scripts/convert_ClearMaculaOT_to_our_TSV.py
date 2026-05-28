@@ -66,10 +66,8 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.OriginalLanguages import Hebrew
 import bos_books_codes_py
+from bible_transliterations import transliterate_Hebrew
 
-import sys
-sys.path.append( '../../BibleTransliterations/Python/' )
-from BibleTransliterations import load_transliteration_table, transliterate_Hebrew
 
 LAST_MODIFIED_DATE = '2026-05-08' # by RJH
 SHORT_PROGRAM_NAME = "convert_ClearMaculaOT_to_our_TSV"
@@ -182,8 +180,6 @@ def main() -> None:
     BibleOrgSysGlobals.introduceProgram( __name__, PROGRAM_NAME_VERSION, LAST_MODIFIED_DATE )
     global state
     state = State()
-
-    load_transliteration_table( 'Hebrew' )
 
     if loadOurSourceTable():
         # if loadMaculaHebrewLowFatXMLGlosses():
@@ -1599,9 +1595,9 @@ def save_filled_morpheme_TSV_file() -> bool:
     BibleOrgSysGlobals.backupAnyExistingFile( state.morpheme_TSV_output_filepath, numBackups=5 )
 
     # print(len(state.lowFatWordsAndMorphemes[0]), state.lowFatWordsAndMorphemes[0]);halt
-    with open( state.morpheme_TSV_output_filepath, 'wt', encoding='utf-8' ) as tsv_output_file:
+    with open( state.morpheme_TSV_output_filepath, 'wt', encoding='utf-8', newline='' ) as tsv_output_file:
         tsv_output_file.write('\ufeff') # Write BOM
-        writer = DictWriter( tsv_output_file, fieldnames=state.morpheme_output_fieldnames, delimiter='\t' )
+        writer = DictWriter( tsv_output_file, fieldnames=state.morpheme_output_fieldnames, delimiter='\t', lineterminator='\n' )
         writer.writeheader()
         for thisTuple in state.maculaHebrewWordsAndMorphemes:
             thisRow = {k:thisTuple[k] for k in state.morpheme_output_fieldnames}
@@ -1650,9 +1646,9 @@ def save_shortened_morpheme_TSV_file() -> bool:
     # print(len(state.lowFatWordsAndMorphemes[0]), state.lowFatWordsAndMorphemes[0]);halt
     non_blank_counts = defaultdict(int)
     sets = defaultdict(set)
-    with open( state.morpheme_shortened_TSV_output_filepath, 'wt', encoding='utf-8' ) as tsv_output_file:
+    with open( state.morpheme_shortened_TSV_output_filepath, 'wt', encoding='utf-8', newline='' ) as tsv_output_file:
         tsv_output_file.write('\ufeff') # Write BOM
-        writer = DictWriter( tsv_output_file, fieldnames=shortenedFieldnameList, delimiter='\t' )
+        writer = DictWriter( tsv_output_file, fieldnames=shortenedFieldnameList, delimiter='\t', lineterminator='\n' )
         writer.writeheader()
         for thisEntryDict in state.maculaHebrewWordsAndMorphemes:
             for columnName in MORPHEME_COLUMNS_TO_REMOVE_FOR_SHORTENING:
@@ -1745,9 +1741,9 @@ def save_lemma_TSV_file() -> bool:
 
     non_blank_counts = defaultdict(int)
     sets = defaultdict(set)
-    with open( state.lemma_TSV_output_filepath, 'wt', encoding='utf-8' ) as tsv_output_file:
+    with open( state.lemma_TSV_output_filepath, 'wt', encoding='utf-8', newline='' ) as tsv_output_file:
         tsv_output_file.write('\ufeff') # Write BOM
-        writer = DictWriter( tsv_output_file, fieldnames=state.lemma_output_fieldnames, delimiter='\t' )
+        writer = DictWriter( tsv_output_file, fieldnames=state.lemma_output_fieldnames, delimiter='\t', lineterminator='\n' )
         writer.writeheader()
         for lemma,glosses in state.lemma_formation_dict.items():
             thisEntryDict = {}

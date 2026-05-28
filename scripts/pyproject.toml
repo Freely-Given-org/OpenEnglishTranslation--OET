@@ -5,6 +5,7 @@ description = "Build-scripts for the Open English Translation (OET) Bible files"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
+    "bible-transliterations",
     "bibleorgsys",
     "bibleorgsys-rust",
     "bos_books_codes_py",
@@ -17,3 +18,4 @@ exclude-newer = "7 days"
 bibleorgsys-rust = { path = "../../BibleOrgSys/Rust/bible_organisational_system", editable = true }
 bibleorgsys = { path = "../../BibleOrgSys", editable = true }
 bos_books_codes_py = { path = "../../BibleOrgSys/Rust/bos_books_codes_py", editable = true }
+bible-transliterations = { path = "../../BibleTransliterations/Rust", editable = true }

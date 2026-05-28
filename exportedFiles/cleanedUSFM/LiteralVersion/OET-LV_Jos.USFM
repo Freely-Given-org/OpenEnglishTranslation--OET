@@ -5,8 +5,8 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2026-05-14 08:52 by extract_glossed_OSHB_OT_to_ESFM v1.0.01
-\rem USFM file edited by ScriptedBibleEditor v0.35
+\rem ESFM file created 2026-05-27 08:52 by extract_glossed_OSHB_OT_to_ESFM v1.0.3
+\rem ESFM file edited by ScriptedBibleEditor v0.8.2 using ScriptedOTUpdates
 \h Yəhōshūˊa/(Joshua)
 \toc1 Yəhōshūˊa
 \toc2 Yəhōshūˊa
@@ -36,7 +36,7 @@
 \c 2
 \nb
 \v 1 and= Yəhōshūˊa =he_sent the_son_of Nūn from (the)÷Shiţţīm two men secretly spies to=say go see DOM the=earth/land and=DOM Yərīḩō/(Jericho) and÷they_went and=they_came \add the\add*_house_of a_woman a_prostitute and÷name_of÷her \add was\add*_Rāḩāⱱ and÷they_lay_down there÷(to).
-\v 2 And÷it_was_told to÷the_king_of Yərīḩō to=say here men they_have_come hither the=night from=(the)_sons of_Yisrā\sup ʼēl\sup*/(Israel) to÷spy_out DOM the=earth/land.
+\v 2 And÷it_was_told to÷the_king_of Yərīḩō to=say HERE men they_have_come hither the=night from=(the)_sons of_Yisrā\sup ʼēl\sup*/(Israel) to÷spy_out DOM the=earth/land.
 \v 3 And= the_king_of =he_sent of_Yərīḩō to Rāḩāⱱ to=say bring_out the÷men the=(ones_who)_went to÷you who they_came to÷house_of÷your if/because to÷spy_out DOM all_of the=earth/land they_have_come.
 \v 4 And=she/it_took the=woman DOM the_two_of the÷men and÷she÷hid_him and=she/it_said right they_came to=me the÷men and=not I_knew from÷where \add were\add*_they.
 \v 5 And=he/it_was the÷gate \add was÷about\add*_to_shut at÷darkness and÷the÷men they_went_out not I_know where did_they_go the÷men pursue quickly after÷them if/because you(pl)÷will_overtake_them.
@@ -52,7 +52,7 @@
 \v 15 And÷she÷let_them_down with÷rope through the÷window if/because house_of÷her \add was\add*_in÷the_wall_of the_city_wall and÷in÷wall she \add was\add*_dwelling.
 \v 16 And=she/it_said to/for=them to÷the_hill÷country go lest they_should_meet (in)÷you(pl) the÷pursuers and÷you_will_hide_yourselves there÷(to) three_of days until return the÷pursuers and=after you(pl)_will_go to÷way_of÷your(pl).
 \v 17 And=they_said to=her/it the÷men \add will_be\add*_free we from÷oath_of÷your the=this which you÷made_us_swear.
-\v 18 Here we \add are\add*_about_to_come on_the=earth DOM the_cord_of the_thread_of the_scarlet the=this you_will_bind in÷window which you÷let_us_down in=him/it and=DOM father_of÷your and=DOM mother_of÷your and=DOM brothers_of÷your and=DOM all_of the_household_of your_father_of÷your you_will_gather to÷yourself to÷the÷house.
+\v 18 HERE we \add are\add*_about_to_come on_the=earth DOM the_cord_of the_thread_of the_scarlet the=this you_will_bind in÷window which you÷let_us_down in=him/it and=DOM father_of÷your and=DOM mother_of÷your and=DOM brothers_of÷your and=DOM all_of the_household_of your_father_of÷your you_will_gather to÷yourself to÷the÷house.
 \v 19 And=it_was every \add one\add*_who he_will_go_out from÷the_doors_of your_house_of÷your to÷the÷outside blood_of÷his \add will÷be\add*_of÷on_his_own_head and÷we \add will_be\add*_free and=all/each/any/every \add one\add*_who he_will_be with÷you in÷house blood_of÷his \add will÷be\add*_of÷on_our_head if a_hand it_will_be in/on/over=him/it.
 \v 20 And=if you_will_tell DOM business_of÷our this and÷we_will_be free from÷oath_of÷your which you÷made_us_swear.
 \v 21 And=she/it_said according÷to_of÷your(pl)_words/messages \add be\add*_so it and÷she÷sent_them_off and÷they_went and÷she_bound DOM the_cord_of the_scarlet in÷window.
@@ -71,7 +71,7 @@
 \v 8 And=you(ms) you_will_command DOM the÷priests \add who\add*_carry_of (of)_the_box_of the_covenant to=say just÷as÷you(pl)_come to the_edge_of the_waters_of the_Yardēn/(Jordan) in÷Yardēn you(pl)_will_stand_still.
 \v 9 and= Yəhōshūˊa =he/it_said to the_people_of Yisrā\sup ʼēl\sup*/(Israel) draw_near hither and÷hear DOM the_words/messages_of \nd YHWH\nd* god_of÷your(pl).
 \v 10 And= Yəhōshūˊa =he/it_said by÷this you(pl)÷will_know if/because_that god living \add is\add*_in÷midst_of÷your(pl) and÷completely_(dispossess) he_will_dispossess from÷before_of÷you(pl) DOM the=Kənaˊₐnī and=DOM the÷Ḩittiy[s] and=DOM the=Ḩiūī and=DOM the÷Pərizzī[s] and=DOM the=Girgāshiy and÷the÷ʼAmorī[s] and÷the÷Yəⱱūşī/(Jebusite)[s].
-\v 11 Here the_box_of the_covenant the_master_of all_of the=earth/land \add is\add*_about_to_pass_on before÷you(pl) in÷Yardēn.
+\v 11 HERE the_box_of the_covenant the_master_of all_of the=earth/land \add is\add*_about_to_pass_on before÷you(pl) in÷Yardēn.
 \v 12 And=now take to/for=you(pl) two_plus_of ten man from÷the_tribes_of Yisrā\sup ʼēl\sup*/(Israel) a_man one a_man one to÷tribe.
 \v 13 And=it_was just÷as_rest the_soles_of the_feet_of the_priests \add who\add*_carry_of (of)_the_box_of \nd YHWH\nd* the_master_of all_of the=earth/land in÷the_waters_of the_Yardēn the_waters_of the_Yardēn they÷will_be_cut_off the=waters \add which÷are\add*_coming_down from÷to÷above and÷they_will_stand a_heap one.
 \v 14 And=he/it_was when÷set_out the÷people from÷tents_of÷their to÷pass_over DOM the÷Yardēn/(Jordan) and÷the÷priests \add who\add*_carry_of (of)_the÷box the÷covenant to=(the)_face_of/in_front_of/before the÷people.
@@ -118,7 +118,7 @@
 \v 10 And= the_people_of =they_encamped of_Yisrā\sup ʼēl\sup*/(Israel) at÷Gilgāl and=they_made DOM the÷passover on_\add the\add*÷four- teen day of÷month in÷evening on÷the_plains_of Yərīḩō/(Jericho).
 \v 11 And÷they_ate some÷of_the_produce_of the=earth/land from÷the_next_day_of the_passover unleavened_bread(s) and÷roasted_\add grain\add* on÷the_substance_of the=day (the)÷this.
 \v 12 And=he/it_rested the÷manna from_\add the\add*÷next_day when÷ate÷they some÷of_the_produce_of the=earth/land and=not it_belonged again to÷the_people_of Yisrā\sup ʼēl\sup*/(Israel) manna and÷they_ate some÷of_the_produce_of the_land_of Kənaˊan/(Canaan) in÷year (the)÷that.
-\v 13 and=he/it_was when÷was Yəhōshūˊa at÷Yərīḩō and÷he_lifted_up eyes_of÷his and=he/it_saw and=see/lo/see a_man \add was\add*_standing to÷before÷him and÷sword_of÷his \add was\add*_drawn in=his/its=hand and= Yəhōshūˊa/(Joshua) =he/it_went to=him/it and=he/it_said to=him/it for÷us \add are\add*_you or for÷foes_of÷our.
+\v 13 and=he/it_was when÷was Yəhōshūˊa at÷Yərīḩō and÷he_lifted_up eyes_of÷his and=he/it_saw and=BEHOLD/LO/SEE a_man \add was\add*_standing to÷before÷him and÷sword_of÷his \add was\add*_drawn in=his/its=hand and= Yəhōshūˊa/(Joshua) =he/it_went to=him/it and=he/it_said to=him/it for÷us \add are\add*_you or for÷foes_of÷our.
 \v 14 And=he/it_said no if/because I \add am\add*_the_commander_of the_army_of \nd YHWH\nd* now I_have_come and= Yəhōshūˊa =he_fell to his/its=faces/face towards=land and÷he_bowed_down and=he/it_said to=him/it what my=master saying (to) servant_of÷his.
 \v 15 And= the_commander_of =he/it_said of_the_army_of of_\nd YHWH\nd* to Yəhōshūˊa take_off sandal_of÷your from=under foot_of÷your if/because the÷place which you \add are\add*_standing on/upon/above=him/it \add is\add*_a_holy_place it and= Yəhōshūˊa =he/it_made thus.
 \c 6
@@ -173,7 +173,7 @@
 \v 19 And= Yəhōshūˊa =he/it_said to ˊĀkān my_son_of÷my put please glory to/for=\nd YHWH\nd* the_god_of Yisrā\sup ʼēl\sup*/(Israel) and÷give to=him/it confession and÷tell please to=me what have_you_done do_not hide_\add it\add* from÷me.
 \v 20 And= ˊĀkān =he_answered DOM Yəhōshūˊa and÷he_said truly I I_have_sinned to/for=\nd YHWH\nd* the_god_of Yisrā\sup ʼēl\sup*/(Israel) and÷like÷this and÷like÷this I_have_done.
 \v 21 And÷I_saw\f + \fr 7:21 \ft OSHB variant note: ו/אראה: (x-qere) 'וָ/אֵ֣רֶא': lemma=c/7200 morph=HC/Vqw1cs id=06oYz וָ/אֵ֣רֶא\f* among÷booty (the)_cloak_of Shinˊār one good and=two_hundreds shekels silver and=(the)_tongue gold one \add was\add*_fifty shekels weight_of÷its and÷I÷desired_them and÷I÷took_them and÷there÷they \add are\add*_hidden on_the=earth in_the=middle of_(the)÷tent_of÷my and÷the÷silver \add is\add*_under÷it.
-\v 22 And= Yəhōshūˊa/(Joshua) =he_sent messengers and÷they_ran to÷the÷tent and=see/lo/see \add it\add*_\add was\add*_hidden in÷tent_of÷his and÷the÷silver \add was\add*_under÷it.
+\v 22 And= Yəhōshūˊa/(Joshua) =he_sent messengers and÷they_ran to÷the÷tent and=BEHOLD/LO/SEE \add it\add*_\add was\add*_hidden in÷tent_of÷his and÷the÷silver \add was\add*_under÷it.
 \v 23 And÷they÷took_them from÷the_midst_of the_tent and÷they÷brought_them to Yəhōshūˊa and=near/to all_of the_people_of Yisrā\sup ʼēl\sup*/(Israel) and÷they÷poured_them_out to=(the)_face_of/in_front_of/before \nd YHWH\nd*.
 \v 24 And=he/it_took Yəhōshūˊa DOM ˊĀkān the_son_of Zeraḩ and=DOM the÷silver and=DOM the÷cloak and=DOM the_tongue_of the=gold and=DOM sons_of÷his and=DOM daughters_of÷his and=DOM ox[en]_of÷his and=DOM donkey[s]_of÷his and=DOM his/its=flock_of_sheep/goats and÷DOM tent_of÷his and=DOM all_of that to=him/it and=all Yisrā\sup ʼēl\sup*/(Israel) with=him/it and÷they_brought_up DOM=them the_valley_of ˊĀkōr.
 \v 25 And= Yəhōshūˊa =he/it_said why have÷you(pl)_brought_trouble_to_us he÷will_bring_trouble_to_you \nd YHWH\nd* in_the=day the=this and÷they_stoned all_of DOM=him/it Yisrā\sup ʼēl\sup*/(Israel) stone[s] and÷they_burnt DOM=them with÷fire and÷they_stoned DOM=them with÷stones.
@@ -199,7 +199,7 @@
 \v 17 And=not he_remained anyone in÷ˊAy and \sup ʼēl\sup* who not they_went_out after Yisrā\sup ʼēl\sup*/(Israel) and÷they_left DOM the=city open and÷they_pursued after Yisrā\sup ʼēl\sup*/(Israel).
 \v 18 and= \nd YHWH\nd* =he/it_said to Yəhōshūˊa stretch_out with÷javelin which \add is\add*_in÷hand_of÷your to (the)÷ˊAy if/because in÷hand_of÷your I÷will_give_it and= Yəhōshūˊa =he_stretched_out with÷javelin which in=his/its=hand to the=city.
 \v 19 And÷the÷ambush it_arose quickly from÷place_of÷its and÷they_ran just÷as_stretched_out his/its=hand and=they_came the=city and÷they÷captured_it and÷they_hurried and÷they_set_on_fire DOM the=city with÷fire.
-\v 20 And= the_men_of =they_turned of_(the)÷ˊAy behind÷them and=they_saw and=see/lo/see it_went_up the_smoke_of the=city to÷the÷heavens and=not it_was in/among=them hands to÷flee hither and÷hither and÷the÷people \add which÷was\add*_fleeing the÷wilderness it_turned_back against the÷pursuer[s].
+\v 20 And= the_men_of =they_turned of_(the)÷ˊAy behind÷them and=they_saw and=BEHOLD/LO/SEE it_went_up the_smoke_of the=city to÷the÷heavens and=not it_was in/among=them hands to÷flee hither and÷hither and÷the÷people \add which÷was\add*_fleeing the÷wilderness it_turned_back against the÷pursuer[s].
 \v 21 And÷Yəhōshūˊa/(Joshua) and=all Yisrā\sup ʼēl\sup*/(Israel) they_saw if/because_that it_had_captured the÷ambush DOM the=city and=because/when it_went_up the_smoke_of the=city and÷they_turned_back and÷they_attacked DOM the_men_of (the)÷ˊAy.
 \v 22 And=these they_came_out from the=city to÷meet÷them and=they_were to÷Yisrā\sup ʼēl\sup*/(Israel) in÷middle these from÷this and=these from÷this and÷they_defeated them until not left to=him/it a_survivor and÷a_fugitive.
 \v 23 And=DOM the_king_of (the)÷ˊAy they_captured alive and÷they_brought_near DOM=him/it to Yəhōshūˊa.
@@ -228,8 +228,8 @@
 \v 9 And=they_said to=him/it from÷a_land distant very your=servants they_have_come to÷the_name_of \nd YHWH\nd* god_of÷your if/because we_have_heard of_him_of÷the_report and=DOM all_of that he_did in÷Miʦrayim/(Egypt).
 \v 10 And=DOM all_of that he_did to÷the_two_of the_kings_of the=ʼAmorī who \add were\add*_on÷the_other_side_of the_Yardēn/(Jordan) to÷Şīḩōn the_king_of Ḩeshbōn and÷to÷ˊŌg the_king_of (the)÷Bāshān who \add was\add*_in÷ˊAshtārōt.
 \v 11 And=they_said to÷us our_of÷elders and=all the_inhabitants_of our_land_of÷our to=say take in÷hand_of÷your(pl) provision[s] for÷journey and÷go to÷meet÷them and÷you(pl)_will_say to÷them servants_of÷\add are\add*_your(pl) we and=now make to/for=us a_covenant.
-\v 12 This bread_of÷\add is\add*_our hot we_took_as_our_provisions DOM=him/it from÷homes_of÷our in/on=day we÷came_out to=go to÷you and=now here it_has_dried_up and=it_was crumbs.
-\v 13 And=these \add are\add*_the_skin-bottles_of (the)÷wine which we_filled new and=see/lo/see they_have_split and=these garments_of÷our and÷sandals_of÷our they_have_worn_out from÷the_greatness_of the_journey very.
+\v 12 This bread_of÷\add is\add*_our hot we_took_as_our_provisions DOM=him/it from÷homes_of÷our in/on=day we÷came_out to=go to÷you and=now HERE it_has_dried_up and=it_was crumbs.
+\v 13 And=these \add are\add*_the_skin-bottles_of (the)÷wine which we_filled new and=BEHOLD/LO/SEE they_have_split and=these garments_of÷our and÷sandals_of÷our they_have_worn_out from÷the_greatness_of the_journey very.
 \v 14 And=they_took the÷men some÷of÷their_sustenance and=DOM the_mouth_of \nd YHWH\nd* not they_asked.
 \v 15 And=he/it_made to/for=them Yəhōshūˊa/(Joshua) peace and÷he_made to/for=them a_covenant to÷let÷them_live and÷they_swore_an_oath to/for=them the_leaders_of the_congregation.
 \v 16 And=he/it_was from_\add the\add*÷end_of three_of days after that they_had_made to/for=them a_covenant and=they_heard if/because_that \add were\add*_near they to=him/it and÷in÷midst_of÷his they \add were\add*_dwelling.
@@ -386,7 +386,7 @@
 \v 7 \add was\add*_a_son_of forty year[s] I when÷sent Mosheh the_servant_of \nd YHWH\nd* DOM=me from barnēˊa to÷spy_out DOM the=earth/land and÷I_brought_back DOM=him/it a_message just=as with heart_of÷my.
 \v 8 And÷brothers_of÷my who they_went_up with÷me they_melted DOM the_heart_of the_people and÷I I_filled after \nd YHWH\nd* god_of÷my.
 \v 9 And= Mosheh =he_swore_an_oath in_the=day (the)=that to=say if not the=earth/land which it_trod foot_of÷your on÷it to/for=yourself(m) it_will_belong to÷an_inheritance and÷to÷children_of÷your until perpetuity if/because you_filled after \nd YHWH\nd* god_of÷my.
-\v 10 And=now here he_has_let_live \nd YHWH\nd* me just=as he_spoke this forty and÷five year[s] from÷then he_spoke \nd YHWH\nd* DOM the÷message the=this to Mosheh when it_walked Yisrā\sup ʼēl\sup*/(Israel) in÷wilderness and=now here I the=day \add am\add*_a_son_of five and=eighty year[s].
+\v 10 And=now HERE he_has_let_live \nd YHWH\nd* me just=as he_spoke this forty and÷five year[s] from÷then he_spoke \nd YHWH\nd* DOM the÷message the=this to Mosheh when it_walked Yisrā\sup ʼēl\sup*/(Israel) in÷wilderness and=now HERE I the=day \add am\add*_a_son_of five and=eighty year[s].
 \v 11 Still÷I the=day \add am\add*_strong just=as in/on=day sent me Mosheh as÷strength_of÷my then and÷as÷strength_of÷my now for÷battle and÷to÷go_out and÷to÷come.
 \v 12 And=now give to/for=me DOM the_hill÷country the=this which he_spoke \nd YHWH\nd* in_the=day (the)=that if/because you you_heard on÷day (the)=that if/because_that ˊAnāqī \add were\add*_there and÷cities large fortified perhaps \nd YHWH\nd* \add will÷be\add*_with_me and÷I÷will_dispossess_them just=as he_spoke \nd YHWH\nd*.
 \v 13 And÷he÷blessed_him Yəhōshūˊa/(Joshua) and=he/it_gave DOM Ḩeⱱrōn to÷Kālēⱱ/(Caleb) the_son_of Yəfunneh/(Jephunneh) to÷an_inheritance.
@@ -642,7 +642,7 @@
 \v 8 And=he/it_said to÷them to=say with÷riches great return to tents_of÷your(pl) and÷with÷livestock much very with÷silver and÷with÷gold and÷with÷bronze and÷with÷iron and÷with÷garments many very divide the_booty_of your(pl)_enemies_of÷your(pl) with countrymen_of÷your(pl).
 \v 9 and÷they_returned and÷they_went the_descendants_of Rəʼūⱱēn and=the_sons of_Gād and÷the_half_of the_tribe_of (the)÷Mənashsheh from÷with the_people_of Yisrā\sup ʼēl\sup*/(Israel) from÷Shiloh which in=land_of Kənaˊan/(Canaan) to=go to the_land_of (the)÷Gilˊād to the_land_of their_possession_of÷their which they_had_possessions in÷it on the_mouth_of \nd YHWH\nd* by÷the_hand_of Mosheh.
 \v 10 And=they_came to Geliloth_of the_Yardēn/(Jordan) which in=land of_Kənaˊan/(Canaan) and= the_descendants_of =they_built of_Rəʼūⱱēn and=the_sons of_Gād and÷the_half_of the_tribe_of (the)÷Mənashsheh there an_altar at the÷Yardēn an_altar large of÷appearance.
-\v 11 And= the_people_of =they_heard of_Yisrā\sup ʼēl\sup*/(Israel) to=say there they_have_built the_descendants_of Rəʼūⱱēn and=the_sons of_Gād and÷the_half_of the_tribe_of (the)÷Mənashsheh DOM the÷altar to opposite_to the_land_of Kənaˊan/(Canaan) to Geliloth_of the_Yardēn to the_side_of the_people_of Yisrā\sup ʼēl\sup*/(Israel).
+\v 11 And= the_people_of =they_heard of_Yisrā\sup ʼēl\sup*/(Israel) to=say THERE they_have_built the_descendants_of Rəʼūⱱēn and=the_sons of_Gād and÷the_half_of the_tribe_of (the)÷Mənashsheh DOM the÷altar to opposite_to the_land_of Kənaˊan/(Canaan) to Geliloth_of the_Yardēn to the_side_of the_people_of Yisrā\sup ʼēl\sup*/(Israel).
 \v 12 And= the_people_of =they_heard of_Yisrā\sup ʼēl\sup*/(Israel) and= all_of =they_assembled the_congregation_of the_people_of Yisrā\sup ʼēl\sup*/(Israel) Shiloh to÷go_up on÷them for÷war.
 \v 13 and= the_people_of =they_sent of_Yisrā\sup ʼēl\sup*/(Israel) to the_descendants_of Rəʼūⱱēn and=near/to the_descendants_of Gād and=near/to the_half_of the_tribe_of Mənashsheh to the_land_of (the)÷Gilˊād DOM Pinḩāş the_son_of ʼElˊāzār the=priest/officer.
 \v 14 And÷ten leaders with=him/it a_leader one a_leader one to_\add the\add*÷house_of a_father to=all/each/any/every the_tribes_of Yisrā\sup ʼēl\sup*/(Israel) and÷each \add was\add*_the_head_of the_house_of their_fathers_of÷their they \add belong\add*_to÷the_families_of Yisrā\sup ʼēl\sup*/(Israel).
@@ -681,7 +681,7 @@
 \v 11 And÷you(pl)_will_take_heed exceedingly to÷selves_of÷your(pl) to÷love DOM \nd YHWH\nd* god_of÷your(pl).
 \v 12 If/because if ever_(turn_back) you(pl)_will_turn_back and÷you(pl)_will_cling to÷the_remainder_of the=nations the=these \add which\add*÷remain the=these with÷you(pl) and÷you(pl)_will_intermarry (is)_in=them and÷you(pl)_will_go (is)_in=them and÷they among÷you(pl).
 \v 13 Certainly_(know) you(pl)_will_know if/because_that not he_will_increase \nd YHWH\nd* god_of÷your(pl) to÷dispossess DOM the=nations the=these from÷before÷face_of÷you(pl) and=they_will_be to/for=you(pl) (into)_a÷trap and_(into)÷a÷snare and_(into)÷a÷scourge in÷sides_of÷your(pl) and÷(into)÷pricks in÷eyes_of÷your(pl) until perish÷you(pl) from=under the=soil (the)÷good (the)÷this which he_has_given to/for=you(pl) \nd YHWH\nd* god_of÷your(pl).
-\v 14 And=see/lo/see I \add am\add*_about_to_go the=day in÷the_way_of all_of the=earth/land and÷you(pl)_know in=all heart_of÷your(pl) and=on/over=all being_of÷your(pl) if/because_that not it_has_fallen a_message one from=all the÷words/messages (the)÷good which he_spoke \nd YHWH\nd* god_of÷your(pl) on÷you(pl) (the)÷everything they_have_come to/for=you(pl) not it_has_fallen from=him/it a_message one.
+\v 14 And=BEHOLD/LO/SEE I \add am\add*_about_to_go the=day in÷the_way_of all_of the=earth/land and÷you(pl)_know in=all heart_of÷your(pl) and=on/over=all being_of÷your(pl) if/because_that not it_has_fallen a_message one from=all the÷words/messages (the)÷good which he_spoke \nd YHWH\nd* god_of÷your(pl) on÷you(pl) (the)÷everything they_have_come to/for=you(pl) not it_has_fallen from=him/it a_message one.
 \v 15 And=it_was just=as it_has_come on÷you(pl) every_of (the)÷message (the)÷good which \nd YHWH\nd* he_spoke god_of÷your(pl) to÷you(pl) so \nd YHWH\nd* he_will_bring on÷you(pl) DOM every_of (the)÷message (the)÷bad until he÷has_destroyed you(pl) from=under the=soil (the)÷good (the)÷this which he_has_given to/for=you(pl) \nd YHWH\nd* god_of÷your(pl).
 \v 16 When÷transgress÷you(pl) DOM the_covenant_of \nd YHWH\nd* god_of÷your(pl) which he_commanded you(pl) and÷you(pl)_will_go and÷you(pl)_will_serve gods other and÷you(pl)_will_bow_down to/for=them and÷it_will_burn the_anger of_\nd YHWH\nd* on÷you(pl) and÷you(pl)_will_perish quickly from=under the=earth/land (the)÷good which he_has_given to÷you(pl).
 \c 24
@@ -712,7 +712,7 @@
 \v 24 And=they_said the÷people to Yəhōshūˊa DOM \nd YHWH\nd* god_of÷our we_will_serve and÷to÷voice_of÷his we_will_listen.
 \v 25 And= Yəhōshūˊa =he_made a_covenant to÷people in_the=day (the)=that and=he/it_assigned to=him/it a_decree and÷a_judgement at÷Shəkem.
 \v 26 And= Yəhōshūˊa/(Joshua) =he_wrote DOM the÷words/messages the=these in÷the_book_of the_law_of god and=he/it_took a_stone large and÷he÷set_it_up there under the÷oak which \add was\add*_at÷the_sanctuary_of \nd YHWH\nd*.
-\v 27 and= Yəhōshūˊa =he/it_said to all_of the÷people here the÷stone (the)÷this it_will_become on÷us (into)_a÷witness if/because it it_has_heard DOM all_of the_words/messages_of \nd YHWH\nd* which he_has_spoken with÷us and÷it_will_become on÷you(pl) (into)_a÷witness lest you(pl)÷should_deny (in)÷god_of÷your(pl).
+\v 27 and= Yəhōshūˊa =he/it_said to all_of the÷people HERE the÷stone (the)÷this it_will_become on÷us (into)_a÷witness if/because it it_has_heard DOM all_of the_words/messages_of \nd YHWH\nd* which he_has_spoken with÷us and÷it_will_become on÷you(pl) (into)_a÷witness lest you(pl)÷should_deny (in)÷god_of÷your(pl).
 \v 28 And= Yəhōshūˊa =he_sent_away DOM the÷people everyone to÷his_own_of÷inheritance.
 \v 29 and=he/it_was after the÷things the=these and= Yəhōshūˊa =he/it_died the_son_of Nūn the_servant_of \nd YHWH\nd* a_son_of one_hundred and÷ten years.
 \v 30 And÷people_buried DOM=him/it in÷the_territory_of his_inheritance_of÷his at serah which \add is\add*_in÷the_hill_country_of ʼEfrayim from_\add the\add*÷north_of the_mountain_of Gaˊash.

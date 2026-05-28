@@ -402,9 +402,9 @@ def save_expanded_TSV_file() -> bool:
     Write the expanded and pre-filled WLC rows to a file.
     """
     vPrint( 'Normal', DEBUGGING_THIS_MODULE,  f"\nExporting adjusted WLC table as a single flat TSV file to {state.TSV_output_filepath}…" )
-    with open( state.TSV_output_filepath, 'wt', encoding='utf-8' ) as tsv_output_file:
+    with open( state.TSV_output_filepath, 'wt', encoding='utf-8', newline='' ) as tsv_output_file:
         tsv_output_file.write('\ufeff') # Write BOM
-        writer = DictWriter( tsv_output_file, fieldnames=state.expanded_headers, delimiter='\t' )
+        writer = DictWriter( tsv_output_file, fieldnames=state.expanded_headers, delimiter='\t', lineterminator='\n' )
         writer.writeheader()
         writer.writerows( state.WLC_rows )
     vPrint( 'Normal', DEBUGGING_THIS_MODULE,  f"  {len(state.WLC_rows):,} data rows written." )

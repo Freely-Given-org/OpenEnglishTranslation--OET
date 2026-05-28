@@ -35,7 +35,7 @@ It does have the potential to make wrong connections that will need to be manual
     but hopefully this script is relatively conservative
         so that the number of wrong alignments is not huge.
 
-TODO: This script makes wrong cross-connections between different verses where versification issues apply
+TODO: This script makes wrong cross-connections betransliterate_Hebrewtween different verses where versification issues apply
 
 
 CHANGELOG:
@@ -58,8 +58,9 @@ CHANGELOG:
     2025-12-17 Add multiprocessing for converting each book (although seems no real time advantange)
     2026-02-24 Added more checking of consecutive opening and closing speech marks
     2026-04-23 Added more assert checks to catch Rust BOS faults
-    2026-05-09 Switched to bos_books_codes_py
+    2026-05-09 Switched to Rust bos_books_codes_py
     2026-05-12 Do more checking before adding NS nd markup
+    2026-05-14 Switched to Rust bible_transliterations
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -74,16 +75,13 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
 from bible_organisational_system import getPositiveLeadingInt, InternalBibleEntryList
 import bos_books_codes_py
-
-import sys
-sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitted to PyPI
-from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
+from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-05-12' # by RJH
+LAST_MODIFIED_DATE = '2026-05-26' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.89'
+PROGRAM_VERSION = '0.91'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -220,24 +218,28 @@ SIMPLE_NOUNS = ( # These are nouns that are likely to match one-to-one from the 
         'tunics','tunic', 'turban',
     'valuation', 'vines','vine', 'visions','vision',
     'waists','waist', 'walls','wall', 'wars','war', 'waters','water', 'ways','way',
-        'weeks','week',
+        'weapons','weapon', 'weeks','week',
         'wilderness', 'widows','widow', 'wife','wives', 'windows','window', 'winds','wind',
         'woman','women', 'words','word', 'workers','worker',
     'years','year',
     )
 assert len(set(SIMPLE_NOUNS)) == len(SIMPLE_NOUNS) # Check for accidental duplicates
-verbalNouns = ('compassion', 'confession', 'confidence',
-                'deception', 'decision', 'dedication', 'discussion', 'distribution', 'destruction',
+verbalNouns = ('accusations','accusation',
+               'compassion', 'confessions','confession', 'confidence',
+                'deception', 'decisions','decision', 'dedication', 'discussions','discussion', 'distribution', 'destruction',
                 'fellowship', 'forgiveness', 'fulfilment',
                 'immersion', 'repentance')
 assert len(set(verbalNouns)) == len(verbalNouns) # Check for accidental duplicates
 # Verbs often don't work because we use the tenses differently between OET-RV and OET-LV/Greek
-simpleVerbs = ('accepted','accepting','accepts','accept',
-                    'answered','answering','answers','answer',
+simpleVerbs = ('abandoned','abandoning','abandons','abandon',
+                    'accepted','accepting','accepts','accept',
+                    'advanced','advancing','advances','advance',
+                    'anointed','anointing','anoints','anoint', 'answered','answering','answers','answer',
+                    'appointed','appointing','appoints','appoint',
                     'arrested','arresting','arrests','arrest',
                     'ascended', 'ascends','ascend', 'asked','asking','asks','ask', 'assembled','assembling','assembles','assemble',
                     'attracted','attracting','attracts','attract', 'attacked','attacking','attacks','attack',
-                'become','became','becomes','becoming', 'believed','believing','believes','believe',
+                'become','became','becomes','becoming', 'behaved','behaving','behaves','behave', 'believed','believing','believes','believe',
                     'brought','bringing','brings','bring',
                     'burnt','burning','burns','burn', 'buried','burying','buries','bury',
                 'came','coming','comes','come', 'caught','catching','catches','catch',
@@ -246,18 +248,19 @@ simpleVerbs = ('accepted','accepting','accepts','accept',
                     'cried','crying','cries','cry', 'cringed','cringes','cringe',
                 'deceived','deceiving','deceives','deceive',
                         'defended','defending','defends','defend',
+                        'delivered','delivering','delivers','deliver',
                         'departed','departing','departs','depart',
                         'descended','descends','descend',
-                    'did','died', 'dying','dies','die', 'digs','dig','dug', 'discussed','discussing','discusses','discuss', 'disowned','disowning','disowns','disown', 'distributed','distributing','distributes','distribute',
-                    'do','done',
-                    'drunk','drinking','drinks','drink',
+                    'did','doing','do','done', 'died','dying','dies','die', 'digs','dig','dug', 'discussed','discussing','discusses','discuss', 'disowned','disowning','disowns','disown', 'distributed','distributing','distributes','distribute',
+                    'dragged','dragging','drags','drag', 'drove','driving','drives','drive', 'drunk','drinking','drinks','drink',
                 'ate','eating','eats','eat', 'embraced','embracing','embraces','embrace',
                     'encouraged','encouraging','encourages','encourage', 'ended','ending','ends','end',
                     'existed','existing','exists','exist', 'extended','extending','extends','extend',
                 'feared','fearing','fears','fear',
                     'filled','filling','fills','fill',
                     'flees','flee',
-                    'followed','following','follows','follow', 'forbidding','forbids','forbid', 'forgave','forgiven','forgiving','forgives','forgive',
+                    'followed','following','follows','follow',
+                        'forbidding','forbids','forbid', 'forgave','forgiven','forgiving','forgives','forgive', 'formed','forming','forms','form',
                 'gathered','gathering','gathers','gather', 'gave','giving','gives','give',
                     'went','going','goes','go', 'greeted','greeting','greets','greet',
                 'harvested','harvesting','harvests','harvest', 'hated','hating','hates','hate',
@@ -269,16 +272,19 @@ simpleVerbs = ('accepted','accepting','accepts','accept',
                 'learnt','learning','learns','learn',
                     'listened','listening','listens','listen', 'lived','living','lives','live',
                     'looked','looking','looks','look', 'loved','loving','loves','love',
-                'magnified','magnifying','magnifies','magnify',
-                    'neasured','measuring','measures','measure',
+                'magnified','magnifying','magnifies','magnify', 'made','making','makes','make',
+                    'measured','measuring','measures','measure',
                 'obeyed','obeying','obeys','obey',
+                    'offered','offering','offers','offer',
+                    'ordered','ordering','orders','order',
                 'passed','passing','passes','pass', 'persuaded','persuading','persuades','persuade',
+                    'poured','pouring','pours','pour',
                     'practiced','practicing','practices','practice', 'praised','praising','praises','praise', 'promised','promising','promises','promise',
                     'purified','purifying','purifies','purify',
                 'raged','raging','rages','rage', 'raised','raising','raises','raise',
                     'received','receiving','receives','receive', 'recognised','recognising','recognises','recognise', 'recovered','recovering','recovers','recover',
                         'redeemed','redeems','redeem',
-                        'released','releasing','releases','release',
+                        'released','releasing','releases','release', 'relented','relenting','relents','relent', 'relied','relying','relies','rely',
                         'remained','remaining','remains','remain', 'reminded','reminding','reminds','remind', 'removed','removing','removes','remove',
                         'reported','reporting','reports','report',
                         'requested','requesting','requests','request',
@@ -292,12 +298,18 @@ simpleVerbs = ('accepted','accepting','accepts','accept',
                         'sent','sending','sends','send',
                         'served','serving','serves','serve',
                         'settled','settling','settles','settle',
-                    'shook','shaken','shaking','shakes','shake', 'shared','sharing','shares','share', 'shone','shining','shines','shine',
+                    'shook','shaken','shaking','shakes','shake', 'shared','sharing','shares','share',
+                        'shone','shining','shines','shine',
                     'sat','sitting','sits','sit',
+                    'slept','sleeping','sleeps','sleep',
                     'spoke','spoken','speaking','speaks','speak',
                     'stayed','staying','stays','stay',
+                        'stood','standing','stands','stand',
                         'stretched','stretching','stretches','stretch',
-                    'summoned','summoning','summons','summon', 'supported','supporting','supports','support',
+                    'succeeded','succeeding','succeeds','succeed',
+                        'suffered','suffering','suffers','suffer',
+                        'summoned','summoning','summons','summon',
+                        'supported','supporting','supports','support',
                 'took','taking','takes','take', 'talked','talking','talks','talk',
                     'testified','testifying','testifies','testify',
                     'thought','thinking','thinks','think', 'threw','throwing','throws','throw',
@@ -489,6 +501,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('honour','glorify'),
     ('huge','great'),
     ('humiliated','ashamed'),
+    ('hut','shelter'),
     ('including','and'),
     ('instructed','commanded'),('instructions','commanded'),('instructions','regulations'),
     ('insulting','slandering'),
@@ -546,6 +559,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('priest','priest/officer'),
     ('produce','fruit'),
     ('promised','sworn'),
+    ('pronounce','utterance'),
     ('protect','defend'),
     ('pure','holy'), ('purity','holiness'),
     ('quiet','desolate'),
@@ -560,6 +574,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('rescue','deliver'),
     ('responded','said'),
     ('river','Yarden'),
+    ('riverbed','wadi'),
     ('rock','stone'),('rocks','stones'),('rocks','stone'),
     ('roof','housetop'),('roofs','housetops'),
     ('room','place'),
@@ -574,6 +589,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('search','seek'),
     ('See','Behold'),
     ('shaved','baldness'),
+    ('shed','hut'),
     ('She\'s','She'),
     ('shrines','places'),
     ('shore','side'),
@@ -583,6 +599,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('sitting','reclining'),
     ('skies','heavens'),
     ('skin','hide'),
+    #('slave','servant'), # TODO: Need to add code to prevent this substitution if BOTH words occur in the verse.
     ('small','little'),
     ('So','And'),('So','Therefore'),
     ('someone','anyone'),
@@ -738,8 +755,6 @@ def main():
         state.wordTableHeaderList[testament] = state.wordTable[testament][0]
 
     # Load the Hebrew and Greek name tables from TSV files
-    load_transliteration_table( 'Hebrew' )
-    load_transliteration_table( 'Greek' )
     loadHebGrkNameTables()
     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{state.nameTables=}")
 
@@ -803,7 +818,7 @@ def loadHebGrkNameTables():
                 # if newReplaceText != replaceText:
                 #     # print(f" Converted Hebrew '{replaceText}' to '{newReplaceText}'")
                 #     replaceText = newReplaceText
-                replaceText = transliterate_Hebrew( replaceText, capitaliseHebrew=searchText[0].isupper() )
+                replaceText = transliterate_Hebrew( replaceText, capitalise_hebrew=searchText[0].isupper() )
                     # NOTE: The below makes it WORSE
                     # # We replace out the special characters (from our transliteration function)
                     # .replace( 'Ā', 'A' ).replace( 'Ē', 'E' )
@@ -884,7 +899,7 @@ def loadHebGrkNameTables():
             # print( f"{searchText=} {replaceText=}")
             if 'HG' in tags:
                 if searchText.startswith( 'J' ): searchText = f'Y{searchText[1:]}' # Replace first letter J with Y
-                newReplaceText = transliterate_Greek( transliterate_Hebrew( replaceText, capitaliseHebrew=searchText[0].isupper() ) )
+                newReplaceText = transliterate_Greek( transliterate_Hebrew( replaceText, capitalise_hebrew=searchText[0].isupper() ) )
                 if newReplaceText != replaceText:
                     # print(f" Converted Hebrew/Greek '{replaceText}' to '{newReplaceText}'")
                     replaceText = newReplaceText
@@ -954,7 +969,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
     # Make a list of the books that we're going to process
     booklist_to_process = []
     for BBB in lv.books:
-        if BibleOrgSysGlobals.commandLineArguments.fastMode and BBB not in ('ISA','JER','MRK'):
+        if BibleOrgSysGlobals.commandLineArguments.fastMode and BBB not in ('JER',):
             continue
         # if BBB in ('CO1',): continue # TODO: CO1_14:33 gives an issue
         booklist_to_process.append( BBB )
@@ -1911,8 +1926,7 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
             assert havePsalmTitles or BBB=='HAB', f"addNumberToRVWord( {BBB} {c}:{v} {word=} {havePsalmTitles=} {marker=} {rest=}"
             foundVerse = C==c and desiredV==1
         if foundVerse:
-            wholeWordRegexStr = f'\\b{word}\\b'
-            allWordMatches = [match for match in re.finditer( wholeWordRegexStr, line )]
+            allWordMatches = [match for match in re.finditer( f'\\b{word}\\b', line )] # Matches of the word standing alone
             if len(allWordMatches) == 1:
                 match = allWordMatches[0]
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, type(allWordMatches), type(match), match )
@@ -1920,16 +1934,23 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found {word=} {line=}" )
                 wordRow = state.wordTable['NT' if NT else 'OT'][wordNumber]
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found {word=} {line=} {wordRow=}" )
+                # TODO: Why do we often get the wrong row (in the NT at least)
+                # if BBB=='ROM' and not word[0].isupper(): # No, this fails too often
+                #     assert word in str(wordRow), f"{BBB} {c}:{v} Can't find {word=} ({wordNumber=}) in {wordRow=}"
                 addNominaSacra = False
                 if NT and 'N' in wordRow[state.wordTableHeaderList['NT'].index('GlossCaps')]: # Check that the RV doesn't already have it marked (with /nd)
                                       #   (This can happen after word numbers are deleted.)
-                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Have NS on {word=} {line[match.start()-6:match.start()]=} {line[match.end():match.end()+6]=} {line=}" )
+                    # print( f"{word=} {wordNumber=} index={state.wordTableHeaderList['NT'].index('GlossCaps')} {wordRow[state.wordTableHeaderList['NT'].index('GlossCaps')]=} {wordRow=}" )
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Have NS on {word=} {line[match.start()-6:match.start()]=} {line[match.end():match.end()+6]=} {line=}" )
                     if (match.end()==len(line) or not line[match.end()]=='¦') \
                     and not line[match.end():match.end()+4] == '\\nd*' \
                     and not line[match.end():match.end()+5] == '\\+nd*':
                         addNominaSacra = True
-                        assert word in ('Messiah','Yeshua','God'), f"Why are we adding NS to {BBB} {c}:{v} {word=}?"
-                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Adding NS on {word=} {line[match.start()-6:match.start()]=} {line[match.end():match.end()+6]=} {line=}" )
+                        if word in ('Messiah','Yeshua','God'):
+                            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Adding NS on {word=} {line[match.start()-6:match.start()]=} {line[match.end():match.end()+6]=} {line=}" )
+                        else:
+                            logging.critical( f"Why did we want to add NS to {BBB} {c}:{v} {word=}?\n{wordNumber=} {wordRow=}" )
+                            continue
 
                 try:
                     if line[match.end()] == '¦': # next character after word
