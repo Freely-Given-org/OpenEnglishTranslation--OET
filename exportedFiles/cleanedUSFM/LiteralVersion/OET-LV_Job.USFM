@@ -5,8 +5,8 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2026-05-14 08:52 by extract_glossed_OSHB_OT_to_ESFM v1.0.01
-\rem USFM file edited by ScriptedBibleEditor v0.35
+\rem ESFM file created 2026-05-27 08:52 by extract_glossed_OSHB_OT_to_ESFM v1.0.3
+\rem ESFM file edited by ScriptedBibleEditor v0.8.2 using ScriptedOTUpdates
 \h ʼIyyōⱱ/(Job)
 \toc1 ʼIyyōⱱ/(Job)
 \toc2 ʼIyyōⱱ/(Job)
@@ -26,14 +26,14 @@
 \v 9 And÷he_answered the÷adversary DOM \nd YHWH\nd* and÷he_said in÷vain has_he_feared ʼIyyōⱱ/(Job) god.
 \v 10 Not you\f + \fr 1:10 \ft OSHB variant note: את: (x-qere) 'אַ֠תָּה': lemma=859 c n=1.0.0.0 morph=HPp2ms id=18J9J אַ֠תָּה\f* have_you_put_a_hedge behind÷him and÷behind house_of÷his and÷behind all_of that to=him/it from÷round_about the_work_of his_hands_of÷his you_have_blessed and÷livestock_of÷his it_has_spread_out on_the=earth.
 \v 11 And÷but stretch_out please hand_of÷your and÷touch in=all that to=him/it if not on face_of÷your he÷will_bless_you.
-\v 12 And= \nd YHWH\nd* =he/it_said to the÷adversary there all_of that to=him/it \add is\add*_in÷hand_of÷your only to=him/it do_not stretch_out hand_of÷your and=he/it_went_out the÷adversary from÷with the_presence_of \nd YHWH\nd*.
+\v 12 And= \nd YHWH\nd* =he/it_said to the÷adversary THERE all_of that to=him/it \add is\add*_in÷hand_of÷your only to=him/it do_not stretch_out hand_of÷your and=he/it_went_out the÷adversary from÷with the_presence_of \nd YHWH\nd*.
 \v 13 And=he/it_was the=day and÷sons_of÷his and÷daughters_of÷his \add were\add*_eating and÷drinking wine in=house_of their_brother_of÷their the÷firstborn.
 \v 14 And÷a_messenger he_came to ʼIyyōⱱ/(Job) and÷he_said the÷ox[en] they_were plowing and÷the_female÷donkeys \add were\add*_grazing on hands_of÷their.
 \v 15 And= Sabean[s] =it_fell and÷it÷took_them and=DOM the÷servants they_struck_down to_\add the\add*÷mouth_of \add the\add*_sword and÷I÷have_escaped only I I÷alone to=announce to/for=you(fs).
 \v 16 Still this_\add one\add* \add was\add*_speaking and=this he_came and÷he_said the_fire_of god it_fell from the=heavens and÷it_burnt (on)÷sheep and÷(on)÷servants and÷it÷consumed_them and÷I÷have_escaped only I I÷alone to=announce to/for=you(fs).
 \v 17 Still this_\add one\add* \add was\add*_speaking and=this he_came and÷he_said \add the\add*_\add ones\add*_from_Kasdiy they_formed three companies and÷they_made_a_raid on the÷camels and÷they÷took_them and=DOM the÷servants they_struck_down to_\add the\add*÷mouth_of \add the\add*_sword and÷I÷have_escaped only I I÷alone to=announce to/for=you(fs).
 \v 18 Until this_\add one\add* \add was\add*_speaking and=this he_came and÷he_said sons_of÷your and÷daughters_of÷your \add were\add*_eating and÷drinking wine in=house_of their_brother_of÷their the÷firstborn.
-\v 19 And=see/lo/see a_wind great it_came from÷the_other_side_of the_wilderness and÷it_touched (in)_the÷four the_corners_of the_house and÷it_fell on the÷youths and÷they_died and÷I÷have_escaped only I I÷alone to=announce to/for=you(fs).
+\v 19 And=BEHOLD/LO/SEE a_wind great it_came from÷the_other_side_of the_wilderness and÷it_touched (in)_the÷four the_corners_of the_house and÷it_fell on the÷youths and÷they_died and÷I÷have_escaped only I I÷alone to=announce to/for=you(fs).
 \v 20 And= ʼIyyōⱱ/(Job) =he/it_rose_up and÷he_tore DOM robe_of÷his and÷he_shaved DOM his/its=head and÷he_fell towards=land and÷he_bowed_down.
 \v 21 And=he/it_said naked I_came_out\f + \fr 1:21 \ft OSHB variant note: יצתי: (x-qere) 'יָצָ֜אתִי': lemma=3318 n=1.2.1.0 morph=HVqp1cs id=182tS יָצָ֜אתִי\f* from÷the_womb_of my_mother_of÷my and÷naked I_will_return to÷(to)\f + \fr 1:21 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* \nd YHWH\nd* he_gave and÷\nd YHWH\nd* he_has_taken may_it_be the_name_of \nd YHWH\nd* blessed.
 \v 22 In=all this not ʼIyyōⱱ/(Job) he_sinned and=not he_ascribed offensiveness to÷god.
@@ -60,7 +60,7 @@
 \v 4 The=day (the)=that let_it_be darkness not let÷him_care_for_it god (from)÷above and÷not let_it_shine_forth on/upon/above=him/it daylight.
 \v 5 Let÷them_reclaim_it darkness and÷deep_darkness let_it_settle_down on/upon/above=him/it cloud let÷them_terrify_it \add the\add*_darkness(es)_of day.
 \v 6 The=night (the)=that let÷it_take_it gloom not let_it_rejoice among_\add the\add*÷days_of \add the\add*_year in_\add the\add*÷number_of \add the\add*_months not let_it_come.
-\v 7 There the=night (the)=that let_it_be barren not let_it_come a_cry_of_joy in=him/it.
+\v 7 THERE the=night (the)=that let_it_be barren not let_it_come a_cry_of_joy in=him/it.
 \v 8 Let÷them_curse_it \add those_who\add*_curse_of (of)_a_day the_\add ones\add*÷ready to_rouse Livyātān.
 \v 9 \add the\add*_stars_of Let_them_grow_dark its_twilight_of÷his let_it_wait for÷light and÷there_\add was\add*_not and÷not let_it_look on_\add the\add*÷eyelids_of dawn.
 \v 10 If/because not it_shut the_doors_of my_womb_of÷my and÷it_hid trouble from÷eyes_of÷my.
@@ -84,7 +84,7 @@
 \nb
 \v 1 and= ʼElīfaz =he_answered the÷Tēymānī and÷he_said.
 \v 2 Did÷someone_attempt a_message to÷you will_you_be_impatient and÷to_restrain (in)÷words/messages who is_he_able.
-\v 3 There you_have_instructed many_\add people\add* and÷hands slack you_strengthened.
+\v 3 THERE you_have_instructed many_\add people\add* and÷hands slack you_strengthened.
 \v 4 \add one_who\add*_stumbled\f + \fr 4:4 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* they÷raised words/messages_of÷your and÷knees bending you_strengthened.
 \v 5 If/because now it_comes to÷you and÷you_have_become_impatient it_reaches to÷you and÷you_have_become_dismayed.
 \v 6 Not fear_of÷\add is\add*_your confidence_of÷your hope_of÷your and÷the_integrity_of your(pl)_ways_of÷your.
@@ -99,7 +99,7 @@
 \v 15 And=spirit over face_of÷my it_passed_over the_hair_of it_made_bristle_up my_flesh_of÷my.
 \v 16 It_stood_still and=not I_recognized appearance_of÷its a_form \add was\add*_to÷before eyes_of÷my a_whisper and÷a_voice I_heard.
 \v 17 A÷person from÷god will_he_be_righteous or from÷maker_of÷his will_he_be_pure a_man.
-\v 18 There in÷servants_of÷his not he_trusts and÷against÷messengers_of÷his he_charges error.
+\v 18 THERE in÷servants_of÷his not he_trusts and÷against÷messengers_of÷his he_charges error.
 \v 19 Also \add those_who\add*_dwell_of houses_of clay who \add is\add*_in÷dust foundation_of÷their people÷crush_them to=(the)_face_of/in_front_of/before a_moth.
 \v 20 From÷morning to÷evening they_are_crushed_to_pieces from÷not_of \add one_who\add*_sets to÷perpetuity they_perish.
 \v 21 Not has_it_been_pulled_up tent-cord_of÷their in÷them will_they_die and=not with÷wisdom.
@@ -121,7 +121,7 @@
 \v 14 By_day they_meet darkness and÷like÷night they_grope at÷noon(s).
 \v 15 And÷he_saved from_\add the\add*÷sword from÷mouth_of÷their and÷from_\add the\add*÷hand_of \add the\add*_strong \add the\add*_needy.
 \v 16 And=it_became to_(the)÷\add person\add* hope and÷injustice it_shuts her/its=mouth.
-\v 17 There how_blessed \add is\add*_\add the\add*_person \add whom\add*_he÷reproves_him god and÷the_discipline_of \add the\add*_almighty do_not reject.
+\v 17 THERE how_blessed \add is\add*_\add the\add*_person \add whom\add*_he÷reproves_him god and÷the_discipline_of \add the\add*_almighty do_not reject.
 \v 18 If/because he he_causes_pain and÷he_binds_up he_smashes and÷hands_of÷his\f + \fr 5:18 \ft OSHB variant note: ו/יד/ו: (x-qere) 'וְ/יָדָ֥י/ו': lemma=c/3027 morph=HC/Ncbdc/Sp3ms id=18TMW וְ/יָדָ֥י/ו\f* they_heal.
 \v 19 In÷six troubles he÷will_deliver_you and÷in÷seven not it_will_touch (in)÷you harm.
 \v 20 In÷famine he÷will_ransom_you from÷death and÷in÷battle from_\add the\add*÷hands_of \add the\add*_sword.
@@ -131,7 +131,7 @@
 \v 24 And÷you_will_know if/because_that \add is\add*_safety tent_of÷your and÷you_will_visit estate_of÷your and=not you_will_miss.
 \v 25 And÷you_will_know if/because_that \add will_be\add*_many offspring_of÷your and÷descendants_of÷your \add will÷be\add*_like_the_vegetation_of the=earth/land.
 \v 26 You_will_go in÷full_strength to \add the\add*_grave as÷goes_up a_stack_of_sheaves at÷its_appropriate_of÷time.
-\v 27 Here this we÷have_examined_it \add is\add*_so it hear÷it and=you(ms) know to/for=you(fs).
+\v 27 HERE this we÷have_examined_it \add is\add*_so it hear÷it and=you(ms) know to/for=you(fs).
 \c 6
 \nb
 \v 1 and= ʼIyyōⱱ/(Job) =he_answered and÷he_said.
@@ -207,8 +207,8 @@
 \v 16 \add is\add*_a_fresh_\add plant\add* he\f + \fr 8:16 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* to=(the)_face_of/in_front_of/before \add the\add*_sun and÷over garden_of÷its shoot[s]_of÷its_young\f + \fr 8:16 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* it_goes_out.
 \v 17 Over a_heap roots_of÷its they_are_entangled between_of stones it_sees.
 \v 18 If someone÷will_swallow_it from÷place_of÷its and÷it_will_deny in/on/over=him/it not I÷have_seen_you.
-\v 19 There it \add is\add*_the_joy_of its=road/course and÷from_\add the\add*÷dust another they_will_spring_up.
-\v 20 There god not he_rejects a_blameless_\add person\add* and=not he_takes_hold on_\add the\add*÷hand_of evil-doers.
+\v 19 THERE it \add is\add*_the_joy_of its=road/course and÷from_\add the\add*÷dust another they_will_spring_up.
+\v 20 THERE god not he_rejects a_blameless_\add person\add* and=not he_takes_hold on_\add the\add*÷hand_of evil-doers.
 \v 21 Until he_will_fill laughter mouth_of÷your and÷lips_of÷your a_shout_of_joy.
 \v 22 \add those_of÷who\add*_hate_you they_will_be_clothed shame and_\add the\add*÷tent_of wicked_\add people\add* it_\add will\add*÷not_\add be\add*.
 \c 9
@@ -223,15 +223,15 @@
 \v 8 \add one_who\add*_stretches_out \add the\add*_heavens for=him/it=being_alone and÷\add one_who\add*_treads on \add the\add*_high_places_of \add the\add*_sea.
 \v 9 \add one_who\add*_makes \add the\add*_Bear Orion and÷Pleiades and_\add the\add*÷chambers_of \add the\add*_south.
 \v 10 \add one_who\add*_does great_\add things\add* until there_\add is\add*_not searching and÷wonders until there_\add is\add*_not number.
-\v 11 There he_will_pass_by at÷me and=not I_will_see_\add him\add* and÷he_will_pass_on and=not I_will_perceive to=him/it.
-\v 12 There he_will_snatch_away who will÷he_turn_him_back who will_he_say to=him/it what are_you_doing.
+\v 11 THERE he_will_pass_by at÷me and=not I_will_see_\add him\add* and÷he_will_pass_on and=not I_will_perceive to=him/it.
+\v 12 THERE he_will_snatch_away who will÷he_turn_him_back who will_he_say to=him/it what are_you_doing.
 \v 13 god not he_will_turn_back anger_of÷his under÷him\f + \fr 9:13 \ft OSHB variant note: תחת/ו: (x-qere) 'תַּחְתָּ֥י/ו': lemma=8478 morph=HR/Sp3ms id=18BqY תַּחְתָּ֥י/ו\f* they_lay_prostrate (of)_Rahaⱱ \add those_who\add*_help_of.
 \v 14 Indeed if/because I I÷will_answer_him I_will_choose words/messages_of÷my with=him/it.
 \v 15 Who though I_am_righteous not I_will_answer to÷judge_of÷my I_will_seek_favour.
 \v 16 If I_called and÷he÷answered_me not I_believe if/because_that he_gave_ear_to my=sound/voice.
 \v 17 Who with÷a_storm he÷crushes_me and÷he_increases bruises_of÷my without_cause.
 \v 18 Not he÷permits_me to_bring_back my=breath/wind/spirit if/because he÷surfeits_me bitter_things.
-\v 19 If to÷power a_strong_\add one\add* there and=if to÷justice who will÷he_summon_me.
+\v 19 If to÷power a_strong_\add one\add* THERE and=if to÷justice who will÷he_summon_me.
 \v 20 Though I_am_righteous mouth_of÷my_own it÷will_condemn_me_as_guilty \add am\add*_blameless I and÷it÷declared_me_crooked.
 \v 21 \add am\add*_blameless I not I_know self_of÷my I_reject life_of÷my.
 \v 22 \add is\add*_one it therefore yes/correct/thus/so I_say \add the\add*_blameless and_\add the\add*÷wicked he \add is\add*_bringing_to_an_end.
@@ -309,8 +309,8 @@
 \v 11 Not an_ear words/messages does_it_test and÷a_palate food it_tastes to=him/it.
 \v 12 \add is\add*_with÷aged_\add people\add* wisdom and÷\add is_with\add*_length_of days understanding.
 \v 13 With=him/it wisdom and÷might to=him/it counsel and÷understanding.
-\v 14 There he_tears_down and=not it_will_be_rebuilt he_shuts on a_person and=not it_will_be_opened.
-\v 15 There he_holds_back (in)÷waters and÷they_are_dry and÷he÷lets_them_untie/release and÷they_devastate \add the\add*_earth.
+\v 14 THERE he_tears_down and=not it_will_be_rebuilt he_shuts on a_person and=not it_will_be_opened.
+\v 15 THERE he_holds_back (in)÷waters and÷they_are_dry and÷he÷lets_them_untie/release and÷they_devastate \add the\add*_earth.
 \v 16 With=him/it strength and÷sound_wisdom\f + \fr 12:16 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* to=him/it \add one_who\add*_goes_astray and÷\add one_who\add*_leads_astray.
 \v 17 \add he\add*_\add is\add*_leading_away counsellors barefoot and÷judges he_makes_look_foolish.
 \v 18 \add the\add*_correction_of kings he_untie/releases and÷he_bound a_loincloth on÷loins_of÷their.
@@ -323,7 +323,7 @@
 \v 25 They_grope darkness and=not light and÷he÷made_them_wander like÷drunkard.
 \c 13
 \nb
-\v 1 There all it_has_seen eye_of÷my it_has_heard ear_of÷my and÷it_has_understood to/for=her/it.
+\v 1 THERE all it_has_seen eye_of÷my it_has_heard ear_of÷my and÷it_has_understood to/for=her/it.
 \v 2 Like÷knowledge_of÷your(pl) I_know also I not \add am\add*_falling I more÷than_you(pl).
 \v 3 But I to \add the\add*_almighty I_will_speak and÷to_argue to god I_desire.
 \v 4 And÷but you(pl) \add are_those_who\add*_smear_of falsehood \add are\add*_healers_of worthlessness of_you_of÷all.
@@ -337,10 +337,10 @@
 \v 12 Memorials_of÷your(pl) \add are\add*_proverbs_of ash[es] \add are\add*_(to)÷defenses_of clay defenses_of÷your(pl).
 \v 13 Be_silent from÷me so÷that_I_may_speak I and÷let_it_pass on÷me whatever.
 \v 14 Concerning what will_I_take flesh_of÷my in÷teeth_of÷my and÷life_of÷my will_I_put in÷palm_of÷my.
-\v 15 There he÷will_kill_me wwww\f + \fr 13:15 \ft OSHB variant note: לא: (x-qere) 'ל֣/וֹ': lemma=l morph=HR/Sp3ms id=18Vvg ל֣/וֹ\f* I_will_wait nevertheless ways_of÷my to his/its=faces/face I_will_argue.
+\v 15 THERE he÷will_kill_me wwww\f + \fr 13:15 \ft OSHB variant note: לא: (x-qere) 'ל֣/וֹ': lemma=l morph=HR/Sp3ms id=18Vvg ל֣/וֹ\f* I_will_wait nevertheless ways_of÷my to his/its=faces/face I_will_argue.
 \v 16 Also that to=me \add will÷be\add*_for_deliverance (cmp) not before÷him a_godless_\add person\add* he_will_come.
 \v 17 Listen_to carefully_(listen) speech_of÷my and÷declaration_of÷my \add be\add*_in÷ears_of÷your(pl).
-\v 18 Here please I_have_arranged a_case I_know if/because_that I I_am_in_the_right.
+\v 18 HERE please I_have_arranged a_case I_know if/because_that I I_am_in_the_right.
 \v 19 Who that will_he_conduct_a_case with=me if/because now I_will_keep_silent and÷I_will_expire.
 \v 20 Only two_\add things\add* do_not do with=me then from÷before_of÷you not I_will_hide_myself.
 \v 21 Palm_of÷your from÷on÷me put_far_away and÷dread_of÷your not let÷it_terrify_me.
@@ -391,7 +391,7 @@
 \v 12 Why does÷it_carry_you_away heart_of÷your and÷why do÷they_flash eyes_of÷your.
 \v 13 (cmp) you_will_turn against god spirit_of÷your and÷you_will_bring_out from÷mouth_of÷your words/messages.
 \v 14 What \add is\add*_a_person (cmp) he_will_be_pure and=because/when he_will_be_righteous \add one\add*_born_of a_woman.
-\v 15 There in÷his_holy_of÷\add ones\add*\f + \fr 15:15 \ft OSHB variant note: ב/קדש/ו: (x-qere) 'בִּ֭/קְדֹשָׁי/ו': lemma=b/6918 n=1.0 morph=HR/Aampc/Sp3ms id=18Vdb בִּ֭/קְדֹשָׁי/ו\f* not he_trusts and_\add the\add*÷heavens not they_are_pure in÷eyes_of÷his.
+\v 15 THERE in÷his_holy_of÷\add ones\add*\f + \fr 15:15 \ft OSHB variant note: ב/קדש/ו: (x-qere) 'בִּ֭/קְדֹשָׁי/ו': lemma=b/6918 n=1.0 morph=HR/Aampc/Sp3ms id=18Vdb בִּ֭/קְדֹשָׁי/ו\f* not he_trusts and_\add the\add*÷heavens not they_are_pure in÷eyes_of÷his.
 \v 16 Indeed if/because \add one_who\add*_\add is\add*_abhorrent and÷\add one_who\add*_\add is\add*_corrupt a_person \add who\add*_drinks like÷water unrighteousness.
 \v 17 I÷will_inform_you listen to=me and÷what I_have_seen and÷I_will_recount.
 \v 18 \add that\add*_which wise_\add people\add* they_have_told and=not they_have_hidden from÷ancestors_of÷their.
@@ -432,7 +432,7 @@
 \v 16 Face_of÷my they_are_reddened\f + \fr 16:16 \ft OSHB variant note: חמרמרה: (x-qere) 'חֳ֭מַרְמְרוּ': lemma=2560 c n=1.0 morph=HVjp3cp id=18byd חֳ֭מַרְמְרוּ\f* from weeping and_\add is\add*÷on eyelids_of÷my deep_darkness.
 \v 17 On not violence \add is\add*_in÷palms_of÷my and÷prayer_of÷my \add is\add*_pure.
 \v 18 Oh_earth do_not cover blood_of÷my and÷not a_place let_it_belong to÷outcry_of÷my.
-\v 19 Also now there in=the_heavens witness_of÷my and÷witness_of÷my \add is\add*_in_(the)÷places.
+\v 19 Also now THERE in=the_heavens witness_of÷my and÷witness_of÷my \add is\add*_in_(the)÷places.
 \v 20 \add are\add*_mocking_of÷me companions_of÷my to god eye_of÷my it_has_wept.
 \v 21 And÷he_will_argue for÷a_man with god and÷a_child_of humankind for÷companion_of÷his.
 \v 22 If/because years_of number they_will_come and÷a_way \add which\add*_not I_will_return I_will_go.
@@ -485,7 +485,7 @@
 \v 4 And÷even truly I_have_erred with÷me error_of÷my it_lodges.
 \v 5 If truly above÷me you_will_magnify_yourselves and÷you(pl)_will_argue on÷me disgrace_of÷my.\f + \fr 19:5 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f*
 \v 6 know then if/because_that god he÷has_subverted_me and÷net_of÷his over÷me he_has_closed.
-\v 7 There I_cry_out violence and=not I_am_answered I_cry_for_help and÷there_\add is\add*_not justice.
+\v 7 THERE I_cry_out violence and=not I_am_answered I_cry_for_help and÷there_\add is\add*_not justice.
 \v 8 way_of÷my he_has_walled_up and=not I_will_pass and÷on paths_of÷my darkness he_puts.
 \v 9 Honour_of÷my from÷on÷me he_has_stripped_off and÷he_has_removed the_crown_of my=head.
 \v 10 He÷has_torn_me_down all_around and÷I_have_gone and÷he_has_uprooted like÷tree hope_of÷my.
@@ -556,7 +556,7 @@
 \v 13 They_complete\f + \fr 21:13 \ft OSHB variant note: יבלו: (x-qere) 'יְכַלּ֣וּ': lemma=3615 morph=HVpi3mp id=18Kmu יְכַלּ֣וּ\f* in÷good days_of÷their and÷in÷a_moment Shəʼōl they_go_down.
 \v 14 And=they_said to÷god depart from=him/it and÷the_knowledge_of your(pl)_ways_of÷your not we_desire.
 \v 15 What \add is\add*_\add the\add*_almighty (cmp) we÷will_serve_him and÷what will_we_gain (cmp) we_will_entreat in/on/over=him/it.
-\v 16 There not \add is\add*_in÷their_own_of÷hand prosperity_of÷their \add the\add*_counsel_of wicked_\add people\add* it_is_far from÷me.
+\v 16 THERE not \add is\add*_in÷their_own_of÷hand prosperity_of÷their \add the\add*_counsel_of wicked_\add people\add* it_is_far from÷me.
 \v 17 How÷often \add the\add*_lamp_of wicked_\add people\add* is_it_extinguished and÷does_it_come on÷them calamity_of÷their pain(s) does_he_apportion in÷anger_of÷his.
 \v 18 Are_they like÷straw to=(the)_face_of/in_front_of/before a_wind and÷like÷chaff \add which\add*_it÷has_stolen_it a_storm-wind.
 \v 19 god he_stores_up for÷children_of÷his wickedness_of÷his let_him_repay to=him/it so÷that_he_may_know.
@@ -567,7 +567,7 @@
 \v 24 Pails_of÷his they_are_full milk and÷the_marrow_of his_bones_of÷his it_is_watered.
 \v 25 And=this he_will_die with÷a_soul bitter and=not he_has_eaten in÷good_of.
 \v 26 Together on dust they_will_lie and÷a_maggot it_will_cover over÷them.
-\v 27 Here I_know thoughts_of÷your(pl) and_\add the\add*÷schemes \add which\add*_on÷me you(pl)_do_violence.
+\v 27 HERE I_know thoughts_of÷your(pl) and_\add the\add*÷schemes \add which\add*_on÷me you(pl)_do_violence.
 \v 28 If/because you(pl)_say where \add is\add*_\add the\add*_house_of a_noble_\add person\add* and÷where \add is\add*_\add the\add*_tent_of \add the\add*_dwelling_places_of wicked_\add people\add*.
 \v 29 Not have_you(pl)_asked \add those_who\add*_pass_by_of \add the\add*_road and÷signs_of÷their not do_you(pl)_recognize.
 \v 30 If/because_that to÷a_day_of calamity he_is_spared an_evil_\add person\add* to÷a_day_of furi(es) they_are_brought_forth.
@@ -616,7 +616,7 @@
 \v 5 I_want_to_know \add the\add*_words/messages \add which\add*_he÷will_answer_me and÷I_want_to_understand what will_he_say to=me.
 \v 6 With÷greatness_of power\f + \fr 23:6 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* will_he_conduct_a_case with=me no surely he he_will_put on÷me.
 \v 7 There an_upright_\add person\add* \add will_be\add*_reasoning with=him/it and÷I_will_deliver to÷perpetuity from÷judge_of÷my.
-\v 8 Here forward I_go and=not_existing=he and÷backwards and=not I_perceive to=him/it.
+\v 8 HERE forward I_go and=not_existing=he and÷backwards and=not I_perceive to=him/it.
 \v 9 \add the\add*_left_side when÷acts÷he and=not I_see_\add him\add* he_turns \add the\add*_right_side and=not I_see_\add him\add*.
 \v 10 If/because he_knows \add the\add*_way with=me he÷has_tested_me like÷gold I_will_come_forth.
 \v 11 On÷step_of÷his foot_of÷my it_has_taken_hold its=road/course I_have_kept and=not I_have_turned_aside.
@@ -632,7 +632,7 @@
 \v 2 Borders people_reach flock[s] they_seize and÷they_have_pastured_\add them\add*.
 \v 3 \add the\add*_donkey_of fatherless_ones they_drive_away they_take_as_pledge \add the\add*_ox_of a_widow.
 \v 4 They_thrust_aside needy_\add people\add* from_\add the\add*÷path together they_are_made_to_hide_themselves \add the\add*_poor_\add people\add*_of \add the\add*_earth.
-\v 5 There wild_donkeys in÷wilderness they_go_forth in÷work_of÷their seeking_eagerly_of for÷food a_wilderness_plain to=him/it food for÷children.
+\v 5 THERE wild_donkeys in÷wilderness they_go_forth in÷work_of÷their seeking_eagerly_of for÷food a_wilderness_plain to=him/it food for÷children.
 \v 6 In_the=field fodder_of÷his they_harvest\f + \fr 24:6 \ft OSHB variant note: יקצירו: (x-qere) 'יִקְצ֑וֹרוּ': lemma=7114 b n=1 morph=HVqi3mp id=18Afb יִקְצ֑וֹרוּ\f* and_\add the\add*÷vineyard \add the\add*_wicked they_glean.
 \v 7 Naked they_spend_the_night from÷not_of clothing and÷there_\add is\add*_not covering in÷coldness.
 \v 8 From_\add the\add*÷rainstorm_of \add the\add*_mountains they_are_wet and÷from÷not shelter they_embrace \add the\add*_rock.
@@ -659,7 +659,7 @@
 \v 2 Dominion and÷dread with=him/it \add he\add*_\add is\add*_making peace in÷heights_of÷his.
 \v 3 \add is\add*÷there number to÷troops_of÷his and÷on whom not light_of÷his does_it_rise.
 \v 4 And÷what a_person will_he_be_righteous with god and÷what will_he_be_pure a_woman \add one\add*_born_of.
-\v 5 There up_to \add the\add*_moon and=not it_is_clear and_\add the\add*÷stars not they_are_pure in÷eyes_of÷his.
+\v 5 THERE up_to \add the\add*_moon and=not it_is_clear and_\add the\add*÷stars not they_are_pure in÷eyes_of÷his.
 \v 6 Indeed if/because a_person a_maggot and÷a_child_of humankind a_worm.
 \c 26
 \nb
@@ -676,7 +676,7 @@
 \v 11 \add the\add*_pillars_of heaven they_shake and÷they_are_astonished from÷rebuke_of÷his.
 \v 12 By÷power_of÷his he_stirred_up the=sea and÷by÷understanding_of÷his\f + \fr 26:12 \ft OSHB variant note: ו/ב/תובנת/ו: (x-qere) 'וּ֝/בִ/תְבוּנָת֗/וֹ': lemma=c/b/8394 n=0.0 morph=HC/R/Ncfsc/Sp3ms id=18EUu וּ֝/בִ/תְבוּנָת֗/וֹ\f* he_smashed Rahaⱱ.
 \v 13 By÷wind_of÷his \add the\add*_heavens \add are\add*_clearness his/its=hand it_pierced \add the\add*_snake fleeing.
-\v 14 There these \add are\add*_the_ends_of his_ways_of÷his\f + \fr 26:14 \ft OSHB variant note: דרכ/ו: (x-qere) 'דְּרָכָ֗י/ו': lemma=1870 n=1.1 morph=HNcbpc/Sp3ms id=18jpx דְּרָכָ֗י/ו\f* and÷what a_whisper_of a_message we_hear in/on/over=him/it and÷the_thunder_of his_mighty_deeds_of÷his\f + \fr 26:14 \ft OSHB variant note: גבורת/ו: (x-qere) 'גְּ֝בוּרוֹתָ֗י/ו': lemma=1369 n=0.0 morph=HNcfpc/Sp3ms id=18hwb גְּ֝בוּרוֹתָ֗י/ו\f*\f + \fr 26:14 \ft OSHB note: We read one or more consonants in L differently from BHS.\f* who will_he_understand.
+\v 14 THERE these \add are\add*_the_ends_of his_ways_of÷his\f + \fr 26:14 \ft OSHB variant note: דרכ/ו: (x-qere) 'דְּרָכָ֗י/ו': lemma=1870 n=1.1 morph=HNcbpc/Sp3ms id=18jpx דְּרָכָ֗י/ו\f* and÷what a_whisper_of a_message we_hear in/on/over=him/it and÷the_thunder_of his_mighty_deeds_of÷his\f + \fr 26:14 \ft OSHB variant note: גבורת/ו: (x-qere) 'גְּ֝בוּרוֹתָ֗י/ו': lemma=1369 n=0.0 morph=HNcfpc/Sp3ms id=18hwb גְּ֝בוּרוֹתָ֗י/ו\f*\f + \fr 26:14 \ft OSHB note: We read one or more consonants in L differently from BHS.\f* who will_he_understand.
 \c 27
 \nb
 \v 1 and= ʼIyyōⱱ/(Job) =he_repeated discourse_of÷his to_take_up and÷he_said.
@@ -690,7 +690,7 @@
 \v 9 Cry_of÷his will_he_hear god if/because it_will_come on/upon/above=him/it distress.
 \v 10 Or on \add the\add*_almighty will_he_take_delight will_he_call_on god in=all time.
 \v 11 I_will_instruct you(pl) in÷the_hand_of god \add that\add*_which \add is\add*_with \add the\add*_almighty not I_will_hide.
-\v 12 There you(pl) of_you_of÷all you(pl)_have_seen and=for=what this vanity do_you(pl)_become_vain.
+\v 12 THERE you(pl) of_you_of÷all you(pl)_have_seen and=for=what this vanity do_you(pl)_become_vain.
 \v 13 This \add is\add*_\add the\add*_portion_of a_person wicked with god and_\add the\add*÷inheritance_of ruthless_\add people\add* \add which\add*_from_\add the\add*÷almighty they_will_receive.
 \v 14 If they_will_increase children_of÷his for \add the\add*_sword and÷descendants_of÷his not they_will_be_satisfied bread.
 \v 15 Survivors_of÷his\f + \fr 27:15 \ft OSHB variant note: שריד/ו: (x-qere) 'שְׂ֭רִידָי/ו': lemma=8300 n=1.0 morph=HNcmpc/Sp3ms id=18FeL שְׂ֭רִידָי/ו\f* by÷death they_will_be_buried and÷widows_of÷his not they_will_weep.
@@ -731,7 +731,7 @@
 \v 25 For=doing for÷wind weight and=water he_has_measured with÷a_measure.
 \v 26 When÷made÷he\f + \fr 28:26 \ft OSHB note: We read one or more vowels in L differently from BHS.\f* for÷rain a_decree and÷a_path for_\add the\add*÷storm_of thunder_claps.
 \v 27 Then he÷saw_it and÷he÷recounted_it he÷established_it and=also he÷examined_it.
-\v 28 And=he/it_said to÷humankind here the_fear_of my=master it \add is\add*_wisdom and÷to_turn from÷evil \add is\add*_understanding.
+\v 28 And=he/it_said to÷humankind HERE the_fear_of my=master it \add is\add*_wisdom and÷to_turn from÷evil \add is\add*_understanding.
 \c 29
 \nb
 \v 1 and= ʼIyyōⱱ/(Job) =he_repeated discourse_of÷his to_take_up and÷he_said.
@@ -828,7 +828,7 @@
 \v 32 In÷street not a_sojourner he_passed_the_night doors_of÷my to÷path I_opened.
 \v 33 If I_have_concealed like÷humankind transgressions_of÷my by÷hiding in÷bosom_of÷my my=perversity/evil/guilt/punishment.
 \v 34 If/because I_was_terrified_of a_multitude great and_\add the\add*÷contempt_of clans it÷caused_me_to_be_dismayed and÷I_was_silent not I_went_outside \add the\add*_door.
-\v 35 Who will_he_give to=me \add one_who\add*_listens to=me here mark_of÷my \add the\add*_almighty let÷him_answer_me and÷a_document the_person_of \add which\add*_he_had_written my_case_of÷my.
+\v 35 Who will_he_give to=me \add one_who\add*_listens to=me HERE mark_of÷my \add the\add*_almighty let÷him_answer_me and÷a_document the_person_of \add which\add*_he_had_written my_case_of÷my.
 \v 36 If not on shoulder_of÷my I÷will_carry_it I÷will_tie_it_on a_crown(s) to=me.
 \v 37 The_number_of my_steps_of÷my I÷will_tell_to_him like a_chief I÷will_approach_him.
 \v 38 If on÷me land_of÷my it_cried_out and÷together furrows_of÷its they÷wept.
@@ -846,32 +846,32 @@
 \v 8 Nevertheless \add the\add*_spirit it in÷a_person and÷the_breath_of \add the\add*_almighty it÷gives_them_understanding.
 \v 9 Not many_\add people\add* they_are_wise and÷old_\add people\add* they_understand justice.
 \v 10 For=so/thus/hence I_say listen to/for=me I_will_declare knowledge_of÷my also I.
-\v 11 Here I_waited for÷words/messages_of÷your(pl) I_gave_ear to understanding(s)_of÷your(pl) until you(pl)÷searched_for words/messages.
-\v 12 And÷to÷you(pl) I_showed_myself_attentive and=see/lo/see there_\add was\add*_not (to)÷ʼIyyōⱱ/(Job) \add one_who\add*_rebuked \add one_who\add*_answered words/messages_of÷his any÷of_you(pl).
+\v 11 HERE I_waited for÷words/messages_of÷your(pl) I_gave_ear to understanding(s)_of÷your(pl) until you(pl)÷searched_for words/messages.
+\v 12 And÷to÷you(pl) I_showed_myself_attentive and=BEHOLD/LO/SEE there_\add was\add*_not (to)÷ʼIyyōⱱ/(Job) \add one_who\add*_rebuked \add one_who\add*_answered words/messages_of÷his any÷of_you(pl).
 \v 13 Lest you(pl)_should_say we_have_found wisdom god let÷him_drive_him_about not a_human.
 \v 14 And=not he_has_arranged to=me words/messages and÷with÷words/messages_of÷your(pl) not I÷will_respond_to_him.
 \v 15 They_are_dismayed not they_have_answered again they_have_moved from=them words/messages.
 \v 16 And÷will_I_wait if/because not they_speak if/because they_have_stood not they_have_answered again.
 \v 17 I_will_answer also I part_of÷my I_will_declare knowledge_of÷my also I.
 \v 18 If/because I_am_full words/messages it÷has_constrained_me the_spirit_of my_belly_of÷my.
-\v 19 Here belly_of÷my \add is\add*_like÷wine \add which\add*_not it_is_opened like÷wineskins new it_will_be_split_open.
+\v 19 HERE belly_of÷my \add is\add*_like÷wine \add which\add*_not it_is_opened like÷wineskins new it_will_be_split_open.
 \v 20 Let_me_speak so÷that_it_may_be_relief to=me let_me_open lips_of÷my so÷that_I_may_answer.
 \v 21 Not please let_me_lift_up \add the\add*_face_of anyone and=near/to anyone not I_will_give_a_title.
 \v 22 If/because not I_know I_will_give_a_title like÷a_little he÷will_carry_me_away the_\add one_of÷who\add*_made_me.
 \c 33
 \nb
 \v 1 And÷but hear please Oh_ʼIyyōⱱ/(Job) words/messages_of÷my and=all words/messages_of÷my give÷ear_to.
-\v 2 Here please I_open mouth_of÷my it_speaks tongue_of÷my on÷palate_of÷my.
+\v 2 HERE please I_open mouth_of÷my it_speaks tongue_of÷my on÷palate_of÷my.
 \v 3 \add are\add*_the_uprightness_of my_heart_of÷my words/messages_of÷my and÷the_knowledge_of my_lips_of÷my purified they_utter.
 \v 4 The_spirit_of god it÷has_made_me and÷the_breath_of \add the\add*_almighty it÷gives_me_life.
 \v 5 If you_will_be_able respond÷to_me arrange to/for=my=face/front take÷your_stand.
-\v 6 Here I \add am\add*_like÷mouth_of÷your to÷god from÷clay I_was_nipped_off also I.
-\v 7 Here of_me_of÷dread not it÷will_terrify_you and÷pressure_of÷my on÷you not it_will_be_heavy.
+\v 6 HERE I \add am\add*_like÷mouth_of÷your to÷god from÷clay I_was_nipped_off also I.
+\v 7 HERE of_me_of÷dread not it÷will_terrify_you and÷pressure_of÷my on÷you not it_will_be_heavy.
 \v 8 Surely you_have_spoken in÷ears_of÷my and_\add the\add*÷sound_of words/messages I_heard.
 \v 9 \add am\add*_pure I not transgression \add am\add*_innocent I and=not iniquity to=me.
-\v 10 Here occasions on÷me he_finds he÷considers_me to÷an_enemy to=him/it.
+\v 10 HERE occasions on÷me he_finds he÷considers_me to÷an_enemy to=him/it.
 \v 11 He_puts in÷stock[s] feet_of÷my he_watches all_of paths_of÷my.
-\v 12 Here this not you_are_in_the_right I÷will_answer_you if/because he_is_great god more÷than_a_human.
+\v 12 HERE this not you_are_in_the_right I÷will_answer_you if/because he_is_great god more÷than_a_human.
 \v 13 Why to=him/it have_you_contended if/because_that all_of words/messages_of÷his not he_answers.
 \v 14 If/because on÷one_\add occasion\add* he_speaks god and÷on÷two_\add occasions\add* not anyone÷observes_it.
 \v 15 In÷a_dream a_vision_of \add the\add*_night when÷falls deep_sleep on people in÷slumber(s) on a_bed.
@@ -888,7 +888,7 @@
 \v 26 He_prays to god and÷he÷accepted_him and=he/it_saw his/its=faces/face with÷a_shout_of_joy and÷he_restored to÷a_person righteousness_of÷his.
 \v 27 He_watches over people and=he/it_said I_have_sinned and÷upright\add ness\add* I_have_perverted and=not it_was_equal to=me.
 \v 28 He_has_ransomed self_of÷his\f + \fr 33:28 \ft OSHB variant note: נפש/י: (x-qere) 'נַ֭פְשׁ/וֹ': lemma=5315 n=1.0 morph=HNcbsc/Sp3ms id=18J2d נַ֭פְשׁ/וֹ\f* from÷passing_on in÷pit and÷life_of÷his\f + \fr 33:28 \ft OSHB variant note: ו/חית/י: (x-qere) 'וְ֝/חַיָּת/וֹ': lemma=c/2416 c n=0.0 morph=HC/Ncfsc/Sp3ms id=18Vpi וְ֝/חַיָּת/וֹ\f* on÷light it_will_look.
-\v 29 Here all_of these_\add things\add* he_does god two_times three_\add times\add* with a_man.
+\v 29 HERE all_of these_\add things\add* he_does god two_times three_\add times\add* with a_man.
 \v 30 To÷bring_back self_of÷his from \add the\add*_pit to÷be_lighted_up by÷the_light_of the=life.
 \v 31 Pay_attention Oh_ʼIyyōⱱ/(Job) listen to=me keep_quiet and÷I I_will_speak.
 \v 32 If there_\add are\add* words/messages respond÷to_me speak if/because I_desire to÷justify_you.
@@ -956,7 +956,7 @@
 \v 2 Wait to=me a_little so÷that÷I_may_inform_you if/because_that still \add are\add*_for÷god words/messages.
 \v 3 I_will_bear knowledge_of÷my (to)÷from÷afar and÷to÷maker_of÷my I_will_ascribe righteousness.
 \v 4 If/because truly not \add are\add*_falsehood words/messages_of÷my \add one\add*_complete_of knowledge(s) \add is\add*_with÷you.
-\v 5 There god \add is\add*_mighty and=not he_rejects mighty strength_of heart.
+\v 5 THERE god \add is\add*_mighty and=not he_rejects mighty strength_of heart.
 \v 6 Not he_preserves_alive \add the\add*_wicked and_\add the\add*÷justice_of afflicted_\add people\add* he_gives.
 \v 7 Not he_withdraws from_\add the\add*÷righteous eyes_of÷his and=DOM kings to÷throne and÷he÷has_made_them_sit to÷perpetuity and÷they_have_become_exalted.
 \v 8 And=if \add they\add*_\add are\add*_bound in÷fetters they÷are_caught in÷cords_of affliction.
@@ -973,15 +973,15 @@
 \v 19 Will÷it_set_in_order opulence_of÷your\f + \fr 36:19 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* not in÷distress and=all/each/any/every \add the\add*_efforts_of strength.
 \v 20 Do_not pant_for the=night to÷go_up peoples in÷their_place.
 \v 21 Take_heed do_not turn to wickedness if/because (on) this you_have_chosen more÷than_affliction.
-\v 22 There god he_is_exalted in÷power_of÷his who like÷him \add is\add*_a_teacher.
+\v 22 THERE god he_is_exalted in÷power_of÷his who like÷him \add is\add*_a_teacher.
 \v 23 Who has_he_assigned on/upon/above=him/it its=road/course and÷who has_he_said you_have_done unrighteousness.
 \v 24 Remember if/because_that you_will_magnify work_of÷his which they_have_sung people.
 \v 25 All_of humankind they_have_looked in=him/it human[s] he_looks from÷a_distance.
-\v 26 There god \add is\add*_exalted and=not we_know_\add him\add* the_number_of his_years_of÷his and=not searching.
+\v 26 THERE god \add is\add*_exalted and=not we_know_\add him\add* the_number_of his_years_of÷his and=not searching.
 \v 27 If/because he_draws_up drops_of water they_refine rain to÷mist_of÷his.
 \v 28 Which they_flow \add the\add*_clouds they_drip on humankind numerous.
 \v 29 Also if anyone_understands \add the\add*_spreading_out(s)_of dark_cloud the_noises_of his_pavilion_of÷his.
-\v 30 There he_spreads_out on/upon/above=him/it light_of÷his and÷the_roots_of the=sea he_covers.
+\v 30 THERE he_spreads_out on/upon/above=him/it light_of÷his and÷the_roots_of the=sea he_covers.
 \v 31 If/because by÷them he_judges peoples he_gives food to÷abundance.
 \v 32 Over palms he_covers light and=he/it_commanded on/upon=it(f) (in)_an÷assailant.
 \v 33 It_tells on/upon/above=him/it thunder_of÷his livestock also on \add one_who\add*_comes_up.
@@ -1091,7 +1091,7 @@
 \v 1 and= \nd YHWH\nd* =he_answered DOM ʼIyyōⱱ/(Job) and÷he_said.
 \v 2 Will÷he_contend with \add the\add*_almighty a_faultfinder \add one_who\add*_corrects god let÷him_answer_him.
 \v 3 and= ʼIyyōⱱ/(Job) =he_answered DOM \nd YHWH\nd* and÷he_said.
-\v 4 Here I_am_insignificant what will÷I_respond_to_you hand_of÷my I_put to mouth_of÷my.
+\v 4 HERE I_am_insignificant what will÷I_respond_to_you hand_of÷my I_put to mouth_of÷my.
 \v 5 one_\add time\add* I_have_spoken and=not I_will_answer and÷two_\add times\add* and=not I_will_repeat.
 \v 6 and÷he_answered \nd YHWH\nd* DOM ʼIyyōⱱ/(Job) wwww\f + \fr 40:6 \ft OSHB note: Marks a word with a final consonant that is a medial (not a final) form.\f* from\f + \fr 40:6 \ft OSHB variant note: מנ סערה: (x-qere) 'מִ֥ן': lemma=4480 a morph=HR id=189N7 מִ֥ן׀ ׀'סְעָרָ֗ה': lemma=5591 b n=1 morph=HNcfsa id=18vNp סְעָרָ֗ה\f* and÷he_said.
 \v 7 Gird_up please like÷a_man loins_of÷your I÷will_ask_you and÷make÷known_to_me.
@@ -1102,15 +1102,15 @@
 \v 12 See every_of proud_\add person\add* humble÷him and÷tread_down wicked_\add people\add* in÷their_place.
 \v 13 Hide÷them in÷dust together faces_of÷their bind_up in÷\add place\add*.
 \v 14 And=also I I÷will_praise_you if/because_that it_will_save to/for=yourself(m) hand_of÷your_right.
-\v 15 There please Behemoth which I_made with÷you grass like÷ox it_eats.
-\v 16 There please strength_of÷its \add is\add*_in÷loins_of÷its and÷strength_of÷its \add is\add*_in÷the_muscles_of its_belly_of÷his.
+\v 15 THERE please Behemoth which I_made with÷you grass like÷ox it_eats.
+\v 16 THERE please strength_of÷its \add is\add*_in÷loins_of÷its and÷strength_of÷its \add is\add*_in÷the_muscles_of its_belly_of÷his.
 \v 17 It_stiffens tail_of÷its like a_cedar the_tendons_of its_thighs_of÷his\f + \fr 40:17 \ft OSHB variant note: פחד/ו: (x-qere) 'פַחֲדָ֣י/ו': lemma=6344 morph=HNcmdc/Sp3ms id=18SUy פַחֲדָ֣י/ו\f* they_are_intertwined.
 \v 18 Bones_of÷its \add are\add*_tubes_of bronze limbs_of÷its \add are\add*_like÷a_rod_of iron.
 \v 19 It\f + \fr 40:19 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* \add is\add*_the_first_of the_ways_of god the_\add one÷who\add*_of÷made_it let_him_bring_near sword_of÷his.
 \v 20 If/because produce_of \add the\add*_mountains they_carry to=him/it and=all (the)_animal_of the=field they_play there.
 \v 21 Under thorny_lotus_plants it_lies in÷a_hiding_place_of reed[s] and÷swamp.
 \v 22 They÷cover_it thorny_lotus_plants shade_of÷its they÷surround_it \add the\add*_poplars_of \add the\add*_wadi.
-\v 23 There it_is_violent \add the\add*_river not it_makes_haste it_is_confident if/because \add the\add*_Yardēn/(Jordan) it_bursts_forth to mouth_of÷its.
+\v 23 THERE it_is_violent \add the\add*_river not it_makes_haste it_is_confident if/because \add the\add*_Yardēn/(Jordan) it_bursts_forth to mouth_of÷its.
 \v 24 By÷eyes_of÷its will÷anyone_take_it with÷snares will_anyone_pierce a_nose.
 \v 25 \f + \fr 40:25 \ft Note: KJB: ʼIyyōⱱ/(Job).41.1\f* will_you_draw_out Livyātān with÷a_fish_hook and÷with÷a_cord will_you_make_sink tongue_of÷its.
 \v 26 \f + \fr 40:26 \ft Note: KJB: ʼIyyōⱱ/(Job).41.2\f* will÷you_put a_cord in÷nose_of÷its and÷with÷a_thorn will_you_pierce jaw_of÷its.
@@ -1122,7 +1122,7 @@
 \v 32 \f + \fr 40:32 \ft Note: KJB: ʼIyyōⱱ/(Job).41.8\f* put on/upon/above=him/it palms_of÷your remember \add the\add*_battle do_not repeat.
 \c 41
 \nb
-\v 1 \f + \fr 41:1 \ft Note: KJB: ʼIyyōⱱ/(Job).41.9\f* there hope_of÷his it_is_proved_a_lie also because_of appearance_of÷its everyone_is_hurled_down.
+\v 1 \f + \fr 41:1 \ft Note: KJB: ʼIyyōⱱ/(Job).41.9\f* THERE hope_of÷his it_is_proved_a_lie also because_of appearance_of÷its everyone_is_hurled_down.
 \v 2 \f + \fr 41:2 \ft Note: KJB: ʼIyyōⱱ/(Job).41.10\f* not fierce (cmp) he÷will_rouse_it and÷who that to/for=my=face/front will_he_take_his_stand.
 \v 3 \f + \fr 41:3 \ft Note: KJB: ʼIyyōⱱ/(Job).41.11\f* who has÷he_confronted_me and÷I_will_repay under all_of the=heavens to=me it.
 \v 4 \f + \fr 41:4 \ft Note: KJB: ʼIyyōⱱ/(Job).41.12\f* wwww\f + \fr 41:4 \ft OSHB variant note: לא: (x-qere) 'לֽ/וֹ': lemma=l morph=HR/Sp3ms id=18m8G לֽ/וֹ\f* I_will_keep_silent limbs_of÷its and_\add the\add*÷matter_of strength(s) and÷the_grace_of its_arrangement_of÷his.

@@ -1,6 +1,6 @@
 # OET makefile
 #
-# Last updated: 2026-03-06 by RJH
+# Last updated: 2026-05-15 by RJH
 #
 # CHANGELOG:
 #	2025-12-08 Copy OET LV OT & NT word tables into BSB and MSB folders
@@ -10,23 +10,39 @@
 
 #=== Folder and file declarations =======================
 
+# Source of truth for which books have been translated (these are not cleaned)
+RV_ESFM_SOURCE := $(wildcard ../translatedTexts/ReadersVersion/OET-RV_???.ESFM)
+BOOKS := $(patsubst ../translatedTexts/ReadersVersion/OET-RV_%.ESFM,%,$(RV_ESFM_SOURCE))
+
+# Standard book codes for Literal Version
+ESFM_OT_BOOKS := GEN EXO LEV NUM DEU JOS JDG RUT SA1 SA2 KI1 KI2 CH1 CH2 EZR NEH EST JOB PSA PRO ECC SNG ISA JER LAM EZE DAN HOS JOL AMO OBA JNA MIC NAH HAB ZEP HAG ZEC MAL
+ESFM_NT_BOOKS := MAT MRK LUK JHN ACT ROM CO1 CO2 GAL EPH PHP COL TH1 TH2 TI1 TI2 TIT PHM HEB JAM PE1 PE2 JN1 JN2 JN3 JDE REV
+ESFM_LV_BOOKS := $(ESFM_OT_BOOKS) $(ESFM_NT_BOOKS)
+
+# USFM book codes mapping (generated from bos_books_codes_py)
+USFM_OT_BOOKS := Gen Exo Lev Num Deu Jos Jdg Rut 1Sa 2Sa 1Ki 2Ki 1Ch 2Ch Ezr Neh Est Job Psa Pro Ecc Sng Isa Jer Lam Ezk Dan Hos Jol Amo Oba Jon Mic Nah Hab Zep Hag Zec Mal
+USFM_NT_BOOKS := Mat Mar Luk Jhn Act Rom 1Co 2Co Gal Eph Php Col 1Th 2Th 1Ti 2Ti Tit Phn Heb Jas 1Pe 2Pe 1Jn 2Jn 3Jn Jud Rev
+USFM_LV_BOOKS := $(USFM_OT_BOOKS) $(USFM_NT_BOOKS)
+USFM_RV_BOOKS := Act Amo Bar 1Ch 2Ch 1Co 2Co Col Dag Dan Deu Ecc Eph Es1 Es2 Esg Est Exo Ezk Ezr Frt Gal Gen Hab Hag Heb Hos Int Isa Jas Jud Jdg Jdt Jer Jhn 1Jn 2Jn 3Jn Jon Job Jol Jos 1Ki 2Ki Lam Lev Lul 1Ma 2Ma 3Ma 4Ma Mal Man Mat Mic Mar Nah Neh Num Oba 1Pe 2Pe Phm Php Pro Ps2 Psa Rev Rom Rut 1Sa 2Sa Sir Sng 1Th 2Th 1Ti 2Ti Tit Tob Wis Zec Zep
+
 derived_audio_sections := ../exportedFiles/OET-RV_sectionReadings/MRK/MRK_S2.ogg
 derived_VREFs := ../exportedFiles/OET-RV.vref.txt ../exportedFiles/OET-LV.vref.txt
-derived_USFM := $(wildcard ../exportedFiles/cleanedUSFM/ReadersVersion/*.USFM) $(wildcard ../exportedFiles/cleanedUSFM/LiteralVersion/*.USFM)
+derived_USFM := $(patsubst %,../exportedFiles/cleanedUSFM/ReadersVersion/OET-RV_%.USFM,$(USFM_RV_BOOKS)) \
+                $(patsubst %,../exportedFiles/cleanedUSFM/LiteralVersion/OET-LV_%.USFM,$(USFM_LV_BOOKS))
 
-sideBySide_HTML := $(wildcard ../exportedFiles/simpleHTML/SideBySide/???.html)
-LV_OT_HTML := ../exportedFiles/simpleHTML/LiteralVersion/GEN.html ../exportedFiles/simpleHTML/LiteralVersion/MAL.html
-LV_NT_HTML := ../exportedFiles/simpleHTML/LiteralVersion/MAT.html ../exportedFiles/simpleHTML/LiteralVersion/REV.html
-RV_HTML := $(wildcard ../exportedFiles/simpleHTML/ReadersVersion/*.html)
+sideBySide_HTML := $(patsubst %,../exportedFiles/simpleHTML/SideBySide/%.html,$(BOOKS))
+LV_OT_HTML := $(patsubst %,../exportedFiles/simpleHTML/LiteralVersion/%.html,$(ESFM_OT_BOOKS))
+LV_NT_HTML := $(patsubst %,../exportedFiles/simpleHTML/LiteralVersion/%.html,$(ESFM_NT_BOOKS))
+RV_HTML := $(patsubst %,../exportedFiles/simpleHTML/ReadersVersion/%.html,$(BOOKS))
 
-RV_ESFM := $(wildcard ../translatedTexts/ReadersVersion/*.ESFM)
-final_LV_OT_ESFM := $(wildcard ../derivedTexts/auto_edited_OT_ESFM/*.ESFM)
-final_LV_NT_ESFM := $(wildcard ../derivedTexts/auto_edited_VLT_ESFM/OET-LV_???.ESFM)
+RV_ESFM := $(RV_ESFM_SOURCE)
+final_LV_OT_ESFM := $(patsubst %,../derivedTexts/auto_edited_OT_ESFM/OET-LV_%.ESFM,$(ESFM_OT_BOOKS))
+final_LV_NT_ESFM := $(patsubst %,../derivedTexts/auto_edited_VLT_ESFM/OET-LV_%.ESFM,$(ESFM_NT_BOOKS))
 
 LV_names_TSV_table := ../derivedTexts/OET-LV_names_table.tsv
 LV_ESFM := $(final_LV_OT_ESFM) $(final_LV_NT_ESFM)
-intermediate_LV_OT_ESFM := $(wildcard ../intermediateTexts/modified_source_glossed_OSHB_ESFM/???_gloss.ESFM)
-intermediate_LV_NT_ESFM := $(wildcard ../intermediateTexts/modified_source_VLT_ESFM/???_gloss.ESFM)
+intermediate_LV_OT_ESFM := $(patsubst %,../intermediateTexts/modified_source_glossed_OSHB_ESFM/%_gloss.ESFM,$(ESFM_OT_BOOKS))
+intermediate_LV_NT_ESFM := $(patsubst %,../intermediateTexts/modified_source_VLT_ESFM/%_gloss.ESFM,$(ESFM_NT_BOOKS))
 final_RV_OT_word_tables = ../translatedTexts/ReadersVersion/OET-LV_OT_morpheme_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_lemma_table.tsv
 final_LV_OT_word_tables = ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_word_table.tsv ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_lemma_table.tsv
 expanded_OT_TSV_tables := ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_lemma_table.tsv
@@ -59,13 +75,32 @@ short_OSHB_TSV := ../sourceTexts/rawOSHB/OSHB.parsedOriginal.flat.morphemes.tsv
 # Python := $(python3_14)
 UVrun := uv run
 
-SBE := ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py
-#SBE := ../../ScriptedBibleEditor/Rust/scripted_bible_editor/target/release/scripted_bible_editor
-BTranslit := ../../BibleTransliterations/Python/BibleTransliterations.py
+
+# For Rust, define the paths (to ensure that we have the latest release file)
+SBE_RUST_DIR := ../../ScriptedBibleEditor/Rust/scripted_bible_editor
+SBE_RUST_BIN := $(SBE_RUST_DIR)/target/release/scripted_bible_editor
+
+# Rule to build the Rust binary if sources have changed
+$(SBE_RUST_BIN): $(shell find $(SBE_RUST_DIR)/src -type f) $(SBE_RUST_DIR)/Cargo.toml
+	cd $(SBE_RUST_DIR) && cargo build --release
+
+# Choose ONE of the following
+# SBE := ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py
+SBE := $(SBE_RUST_BIN)
+
+
+# Choose ONE of the following
+# BTranslit := ../../BibleTransliterations/Python/BibleTransliterations.py
+BTranslit := ../../BibleTransliterations/Rust/src/lib.rs
+
 HebrewTranslit := ../../BibleTransliterations/sourceTables/Hebrew.tsv
 GreekTranslit := ../../BibleTransliterations/sourceTables/Greek.tsv
+
 scripted_OT_updates := $(wildcard ScriptedOTUpdates/*)
 scripted_NT_updates := $(wildcard ScriptedVLTUpdates/*)
+
+sideBySide_sentinel := ../exportedFiles/simpleHTML/SideBySide/.sentinel
+RV_word_tables_sentinel := ../translatedTexts/ReadersVersion/.word_tables_sentinel
 
 #=== Top-level/Main stuff =======================
 
@@ -83,35 +118,45 @@ $(LV_names_TSV_table): ScriptedOTUpdates/restoreNames.commandTable.tsv ScriptedV
 	@echo "\n\nCreate OET-LV TSV names table from command tables…\n"
 	@$(UVrun) create_OET-LV_TSV_name_table.py
 
-# $(LV_HTML): $(LV_OT_HTML) $(LV_NT_HTML)
-$(LV_OT_HTML) $(LV_NT_HTML): $(final_LV_OT_ESFM)  $(final_LV_NT_ESFM) convert_OET-LV_to_simple_HTML.py $(expanded_NT_wordtable)
+LV_HTML_sentinel := ../exportedFiles/simpleHTML/LiteralVersion/.html_sentinel
+
+$(LV_HTML_sentinel): $(final_LV_OT_ESFM) $(final_LV_NT_ESFM) convert_OET-LV_to_simple_HTML.py $(expanded_NT_wordtable)
 	@echo "\n\nConvert OET LV ESFM files to simple HTML…\n"
 	@$(UVrun) convert_OET-LV_to_simple_HTML.py
+	@touch $@
+
+$(LV_OT_HTML) $(LV_NT_HTML): $(LV_HTML_sentinel)
 
 # $(final_LV_OT_USFM): $(intermediate_LV_OT_USFM) $(SBE) $(scripted_OT_updates) $(BTranslit) $(HebrewTranslit)
 # 	@echo "\n\nRun ScriptedBibleEditor on OT USFM files…\n"
 # 	@$(SBE) ScriptedOTUpdates -qe
 
 # Had $(final_LV_OT_ESFM) here before
-../derivedTexts/auto_edited_OT_ESFM/OET-LV_GEN.ESFM ../derivedTexts/auto_edited_OT_ESFM/OET-LV_MAL.ESFM: $(intermediate_LV_OT_ESFM) $(SBE) $(scripted_OT_updates) $(BTranslit) $(HebrewTranslit)
+LV_OT_ESFM_sentinel := ../derivedTexts/auto_edited_OT_ESFM/.sentinel
+$(LV_OT_ESFM_sentinel): $(intermediate_LV_OT_ESFM) $(SBE) $(scripted_OT_updates) $(BTranslit) $(HebrewTranslit)
 	@echo "\n\nRun ScriptedBibleEditor on OT ESFM files…\n"
 	@$(SBE) ScriptedOTUpdates -qe
-	#@echo "\n\nCopying OT word and morpheme tables from modified_source_glossed_OSHB_ESFM/ to auto_edited_OT_ESFM/…\n"
-	#@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_word_table.tsv
-	#@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv
-	#@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_lemma_table.tsv ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_lemma_table.tsv
-	# Does SBE automatically do some of the above copying steps??? Well, it certainly wouldn't do both
+	@touch $@
 
-$(final_LV_OT_word_tables): $(expanded_OT_TSV_tables)
+$(final_LV_OT_ESFM): $(LV_OT_ESFM_sentinel)
+
+LV_OT_word_tables_sentinel := ../derivedTexts/auto_edited_OT_ESFM/.word_tables_sentinel
+$(LV_OT_word_tables_sentinel): $(expanded_OT_TSV_tables)
 	@echo "\n\nCopying OT word and morpheme tables from modified_source_glossed_OSHB_ESFM/ to auto_edited_OT_ESFM/…\n"
 	@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_word_table.tsv
 	@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_morpheme_table.tsv ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv
 	@cp -a ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_lemma_table.tsv ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_lemma_table.tsv
-	# Does SBE automatically do some of the above copying steps??? Well, it certainly wouldn't do both
+	@touch $@
 
-$(final_LV_NT_ESFM): $(intermediate_LV_NT_ESFM) $(SBE) $(scripted_NT_updates) $(BTranslit) $(GreekTranslit) $(HebrewTranslit) $(expanded_NT_wordtable)
+$(final_LV_OT_word_tables): $(LV_OT_word_tables_sentinel)
+
+LV_NT_ESFM_sentinel := ../derivedTexts/auto_edited_VLT_ESFM/.sentinel
+$(LV_NT_ESFM_sentinel): $(intermediate_LV_NT_ESFM) $(SBE) $(scripted_NT_updates) $(BTranslit) $(GreekTranslit) $(HebrewTranslit) $(expanded_NT_wordtable)
 	@echo "\n\nRun ScriptedBibleEditor on NT ESFM files…\n"
 	@$(SBE) ScriptedVLTUpdates -qe
+	@touch $@
+
+$(final_LV_NT_ESFM): $(LV_NT_ESFM_sentinel)
 
 ../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv: $(initial_OT_TSV_tables) $(Clear_Bible_MaculaHebrew_OT_TSV) $(scripted_OT_updates) add_tags_to_OT_word_table.py $(BTranslit) $(HebrewTranslit)
 	@echo "\n\nAdd people/places/referent tags to OET OT word table…\n"
@@ -165,37 +210,62 @@ $(expanded_NT_wordtable): $(original_NT_wordtable) $(Clear_Bible_NT_lowfat_TSV) 
 
 #=== RV stuff =======================
 
-$(final_RV_OT_word_tables): $(final_LV_OT_word_tables)
+$(RV_word_tables_sentinel): $(final_LV_OT_word_tables)
 	@echo "\n\nCopying OT morpheme and lemma tables from auto_edited_OT_ESFM/ to ReadersVersion/…\n"
 	@cp -a ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_morpheme_table.tsv
 	@cp -a ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_lemma_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_lemma_table.tsv
 	@echo "\n\nCopying final OET OT word table to BSB & MSB folders…\n"
 	@cp -a ../translatedTexts/ReadersVersion/OET-LV_OT_word_table.tsv /srv/FreelyGiven/OpenBibleData/copiedBibles/English/Berean.Bible/BSB/
 	@cp -a ../translatedTexts/ReadersVersion/OET-LV_OT_word_table.tsv /srv/FreelyGiven/OpenBibleData/copiedBibles/English/Berean.Bible/MSB/
+	@touch $@
 
-$(RV_HTML): $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py convert_OET-RV_to_simple_HTML.py $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
+$(final_RV_OT_word_tables): $(RV_word_tables_sentinel)
+
+RV_sentinel := ../translatedTexts/ReadersVersion/.connected_sentinel
+RV_HTML_sentinel := ../exportedFiles/simpleHTML/ReadersVersion/.html_sentinel
+
+$(RV_sentinel): $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
 	@echo "\n\nConnect OET-RV words to OET-LV word numbers (in full mode)…\n"
 	@$(UVrun) connect_OET-RV_words_via_OET-LV.py
+	@touch $@
+
+$(RV_HTML_sentinel): $(RV_sentinel) convert_OET-RV_to_simple_HTML.py $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
 	@echo "\n\nConvert OET RV ESFM files to simple HTML…\n"
 	@$(UVrun) convert_OET-RV_to_simple_HTML.py
+	@touch $@
+
+$(RV_HTML): $(RV_HTML_sentinel)
 
 #=== Side-by-side stuff =======================
 
-$(sideBySide_HTML): $(LV_OT_HTML) $(LV_NT_HTML) $(RV_HTML) pack_HTML_side-by-side.py
+$(sideBySide_sentinel): $(LV_OT_HTML) $(LV_NT_HTML) $(RV_HTML) pack_HTML_side-by-side.py
 	@echo "\n\nPack LV and RV HTML files side-by-side…\n"
 	@$(UVrun) pack_HTML_side-by-side.py
+	@touch $@
+
+$(sideBySide_HTML): $(sideBySide_sentinel)
 
 #=== Format conversions =======================
 
-$(derived_USFM): $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_ESFM_to_USFM.py
+USFM_sentinel := ../exportedFiles/cleanedUSFM/.sentinel
+
+$(USFM_sentinel): $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_ESFM_to_USFM.py
 	@echo "\n\nCreate clean USFM files…\n"
 	@$(UVrun) convert_OET-LV-RV_ESFM_to_USFM.py
+	@touch $@
 
-$(derived_VREFs): $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_USFM_to_VREF.py
+$(derived_USFM): $(USFM_sentinel)
+
+VREF_sentinel := ../exportedFiles/.vref_sentinel
+
+$(VREF_sentinel): $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_USFM_to_VREF.py
 	@echo "\n\nCreate VREF.txt files from USFM…\n"
 	@$(UVrun) convert_OET-LV-RV_USFM_to_VREF.py
 	@echo "\n\nFinally, just count our progress…\n"
 	@$(UVrun) count_completed_OET-RV_verses.py
+	@touch $@
+
+$(derived_VREFs): $(VREF_sentinel)
 
 $(derived_audio_sections): $(RV_ESFM) export_OET-RV_to_sectionReadings.py
 	@echo "\n\nCreate section readings from OET-RV…\n"
@@ -221,24 +291,26 @@ audio: $(derived_audio_sections)
 #=== Clean up stuff =======================
 
 .PHONY: clean
-clean: clean_LT clean_RT
-.PHONY: clean_LT
-clean_LT: clean_LT_OT cleanLT_NT
+clean: clean_LV clean_RV
+.PHONY: clean_LV
+clean_LT: clean_LV_OT clean_LV_NT
 
-.PHONY: clean_LT_OT
+.PHONY: clean_LV_OT
 clean_LT_OT:
-	rm ../intermediateTexts/modified_source_glossed_OSHB_USFM/*.usfm
-	rm ../intermediateTexts/modified_source_glossed_OSHB_ESFM/*.ESFM
-	rm ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv ../intermediateTexts/glossed_OSHB/lemmas.tsv
-	rm ../intermediateTexts/Clear.Bible_derived_Macula_data/Clear.Bible_MaculaHebrew.OT.morphemes.abbrev.tsv
-	rm ../intermediateTexts/glossed_OSHB/our_WLC_glosses.morphemes.tsv
-	rm ../sourceTexts/rawOSHB/OSHB.parsedOriginal.flat.morphemes.tsv
+	@echo "Clean OET LV OT intermediate texts"
+	rm -f ../intermediateTexts/modified_source_glossed_OSHB_USFM/*.usfm
+	rm -f ../intermediateTexts/modified_source_glossed_OSHB_ESFM/*.ESFM
+	rm -f ../intermediateTexts/glossed_OSHB/all_glosses.morphemes.tsv ../intermediateTexts/glossed_OSHB/lemmas.tsv
+	rm -f ../intermediateTexts/Clear.Bible_derived_Macula_data/Clear.Bible_MaculaHebrew.OT.morphemes.abbrev.tsv
+	rm -f ../intermediateTexts/glossed_OSHB/our_WLC_glosses.morphemes.tsv
+	rm -f ../sourceTexts/rawOSHB/OSHB.parsedOriginal.flat.morphemes.tsv
 
-.PHONY: clean_LT_NT
-clean_LT_NT:
-	rm ../derivedTexts/auto_edited_VLT_ESFM/*.ESFM
-	rm ../intermediateTexts/modified_source_VLT_ESFM/*.ESFM
+.PHONY: clean_LV_NT
+clean_LV_NT:
+	@echo "Clean OET LV NT intermediate and derived texts"
+	rm -f ../derivedTexts/auto_edited_VLT_ESFM/*.ESFM
+	rm -f ../intermediateTexts/modified_source_VLT_ESFM/*.ESFM
 
-.PHONY: clean_RT
-clean_RT:
-	@echo "Nothing to clean for RT yet"
+.PHONY: clean_RV
+clean_RV:
+	@echo "Nothing to clean for OET RV"

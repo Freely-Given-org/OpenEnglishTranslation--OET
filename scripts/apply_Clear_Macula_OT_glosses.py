@@ -91,17 +91,14 @@ from collections import defaultdict
 import logging
 import unicodedata
 
-# if __name__ == '__main__':
-#     import sys
-#     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2026-03-19' # by RJH
+LAST_MODIFIED_DATE = '2026-05-15' # by RJH
 SHORT_PROGRAM_NAME = "apply_Clear_Macula_OT_glosses"
 PROGRAM_NAME = "Apply Macula OT glosses"
-PROGRAM_VERSION = '0.72'
+PROGRAM_VERSION = '0.73'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -831,9 +828,9 @@ def save_filled_morpheme_TSV_file() -> bool:
 
     BibleOrgSysGlobals.backupAnyExistingFile( state.our_morpheme_TSV_output_filepath, numBackups=5 )
 
-    with open( state.our_morpheme_TSV_output_filepath, 'wt', encoding='utf-8' ) as tsv_output_file:
+    with open( state.our_morpheme_TSV_output_filepath, 'wt', encoding='utf-8', newline='' ) as tsv_output_file:
         tsv_output_file.write('\ufeff') # Write BOM
-        writer = DictWriter( tsv_output_file, fieldnames=WLC_tsv_column_headers, delimiter='\t' )
+        writer = DictWriter( tsv_output_file, fieldnames=WLC_tsv_column_headers, delimiter='\t', lineterminator='\n' )
         writer.writeheader()
         for n,row_dict in enumerate( state.WLC_morpheme_rows, start=1 ):
             if row_dict['RowType']=='m' and not row_dict['MorphemeGloss']:
@@ -861,7 +858,8 @@ def save_lemma_TSV_file() -> bool:
     Save a row for each lemma with its glosses
     This is written from state.MaculaHebrewRows.
 
-    TODO: Why is the same code in convert_ClearMaculaOT_to_our_TSV.py???
+    TODO: Why is the same code in convert_ClearMaculaOT_to_our_TSV.py
+            to create ../intermediateTexts/Clear.Bible_derived_Macula_data/Clear.Bible_MaculaHebrew.OT.lemmas.tsv ???
     """
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nCreating and exporting OT lemma table from Low Fat table as a single flat TSV file to {state.our_lemma_TSV_output_filepath}…" )
 
@@ -910,9 +908,9 @@ def save_lemma_TSV_file() -> bool:
 
     non_blank_counts = defaultdict(int)
     sets = defaultdict(set)
-    with open( state.our_lemma_TSV_output_filepath, 'wt', encoding='utf-8' ) as tsv_output_file:
+    with open( state.our_lemma_TSV_output_filepath, 'wt', encoding='utf-8', newline='' ) as tsv_output_file:
         tsv_output_file.write('\ufeff') # Write BOM
-        writer = DictWriter( tsv_output_file, fieldnames=state.lemma_output_fieldnames, delimiter='\t' )
+        writer = DictWriter( tsv_output_file, fieldnames=state.lemma_output_fieldnames, delimiter='\t', lineterminator='\n' )
         writer.writeheader()
         for lemma,glosses in state.lemma_formation_dict.items():
             for char in lemma:
@@ -965,9 +963,9 @@ def save_filled_word_TSV_file() -> bool:
     
     current_verse_ref = None
     verse_gloss_order_list = []
-    with open( state.our_word_TSV_output_filepath, 'wt', encoding='utf-8' ) as tsv_output_file:
+    with open( state.our_word_TSV_output_filepath, 'wt', encoding='utf-8', newline='' ) as tsv_output_file:
         tsv_output_file.write('\ufeff') # Write BOM
-        writer = DictWriter( tsv_output_file, fieldnames=word_tsv_column_headers, delimiter='\t' )
+        writer = DictWriter( tsv_output_file, fieldnames=word_tsv_column_headers, delimiter='\t', lineterminator='\n' )
         writer.writeheader()
 
         num_data_rows_written = 0

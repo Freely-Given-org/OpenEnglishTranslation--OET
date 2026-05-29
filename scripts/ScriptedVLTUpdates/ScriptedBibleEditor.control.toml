@@ -1,14 +1,7 @@
-# This is a sample TOML control file for the ScriptedBibleEditor
+# This is the TOML control file for the ScriptedBibleEditor
+#   for applying edits to OET-LV NT ESFM files
 #
-# Last updated: 2023-03-09 by RJH
-#
-# Available commands are:
-#
-#   title = "My Control File Title"
-#   description = "A longer description"
-#
-#   [commandTables]
-#   tableName = "filepath"
+# Last updated: 2026-05-16 by RJH
 #
 
 title = "ScriptedBibleEditor OET-LV-NT Control File"
@@ -22,6 +15,7 @@ outputFilenameTemplate = "OET-LV_BBB.ESFM"
 clearOutputFolder = true # Removes the folder and recreates it if createOutputFolder is true (else deletes all files in the folder)
 createOutputFolder = true
 
+insertSBEditorRemLine = true
 handleESFMWordNumbers = true
 
 applyOrder = "AllTablesFirst"

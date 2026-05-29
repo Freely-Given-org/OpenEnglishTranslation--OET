@@ -74,6 +74,8 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - decide on idioms (esp. in Proverbs) using 'lips'
 - Revisit whether words like "peace offering", "grain offering", "sin offering" would be better if hyphenated???
 - Change Ephraim/Efrayim to Israel where it's referring to the northern kingdom
+- Check Jn 1:1-9 against SL email
+- Go through all Gary Gagliardi articles and check OET-RV
 
 ## Terms to make consistent
 
@@ -116,3 +118,4 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - exalt -> speak highly of
 - try to remove righteousness (doing what's right) and perhaps justice (doing what's fair) from RV
 - redeemed (replace 'bought you') -> 'paid the price to free you'
+- green tree / luxuriant tree / leafy tree

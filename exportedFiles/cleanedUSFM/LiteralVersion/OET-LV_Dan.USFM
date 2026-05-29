@@ -5,8 +5,8 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2026-05-14 08:52 by extract_glossed_OSHB_OT_to_ESFM v1.0.01
-\rem USFM file edited by ScriptedBibleEditor v0.35
+\rem ESFM file created 2026-05-27 08:52 by extract_glossed_OSHB_OT_to_ESFM v1.0.3
+\rem ESFM file edited by ScriptedBibleEditor v0.8.2 using ScriptedOTUpdates
 \h Dāniyy\sup ʼēl\sup*
 \toc1 Dāniyy\sup ʼēl\sup*
 \toc2 Dāniyy\sup ʼēl\sup*
@@ -80,7 +80,7 @@
 \v 40 And÷a_kingdom fourth\f + \fr 2:40 \ft OSHB variant note: רביעיה: (x-qere) 'רְבִ֣יעָאָ֔ה': lemma=7244 n=1.1 morph=AAofsa id=27Zax רְבִ֣יעָאָ֔ה\f* it_will_be strong like÷(the)÷iron as=to because that the÷iron \add is\add*_shattering and_\add is\add*÷crushing (the)÷everything and÷like÷(the)÷iron which \add is\add*_crushing all_of these it_will_shatter and÷it_will_crush.
 \v 41 And÷that you_saw the÷feet and÷the÷toes some÷of_them\f + \fr 2:41 \ft OSHB variant note: מנ/הון: (x-qere) 'מִנְּ/הֵ֞ן': lemma=4481 n=1.2.0.0 morph=AR/Sp3fp id=27eHZ מִנְּ/הֵ֞ן\f*\f + \fr 2:41 \ft OSHB note: We read one or more consonants in L differently from BHS.\f* \add were\add*_clay of a_potter and÷some÷of_them\f + \fr 2:41 \ft OSHB variant note: ו/מנ/הון: (x-qere) 'וּ/מִנְּ/הֵ֣ין': lemma=c/4481 morph=AC/R/Sp3fp id=27rKT וּ/מִנְּ/הֵ֣ין\f* \add were\add*_iron a_kingdom divided it_will_be and=from the÷firmness of the÷iron it_will_be in÷it as=to because that you_saw the÷iron mixed with÷the_clay_of the_clay.
 \v 42 And÷the_toes_of the_feet some÷of_them\f + \fr 2:42 \ft OSHB variant note: מנ/הון: (x-qere) 'מִנְּ/הֵ֥ין': lemma=4481 morph=AR/Sp3fp id=27MSY מִנְּ/הֵ֥ין\f* \add were\add*_iron and÷some÷of_them\f + \fr 2:42 \ft OSHB variant note: ו/מנ/הון: (x-qere) 'וּ/מִנְּ/הֵ֣ין': lemma=c/4481 morph=AC/R/Sp3fp id=27ctR וּ/מִנְּ/הֵ֣ין\f* \add were\add*_clay some_of the_part_of the_kingdom it_will_be strong and÷some÷of_it it_will_be breakable.
-\v 43 Wwww\f + \fr 2:43 \ft OSHB variant note: די: (x-qere) 'וְ/דִ֣י': lemma=c/1768 morph=AC/C id=27tkv וְ/דִ֣י\f* you_saw the÷iron mixed with÷the_clay_of the_clay mixing they_will_be with÷the_offspring_of (the)÷humankind and÷not they_will_be clinging this with this here like÷that (the)÷iron not \add is\add*_mixing with (the)÷clay.
+\v 43 Wwww\f + \fr 2:43 \ft OSHB variant note: די: (x-qere) 'וְ/דִ֣י': lemma=c/1768 morph=AC/C id=27tkv וְ/דִ֣י\f* you_saw the÷iron mixed with÷the_clay_of the_clay mixing they_will_be with÷the_offspring_of (the)÷humankind and÷not they_will_be clinging this with this HERE like÷that (the)÷iron not \add is\add*_mixing with (the)÷clay.
 \v 44 And÷in÷days_of÷their of the÷kings those the_god_of he_will_set_up the=heavens a_kingdom which for=ages not it_will_be_destroyed and÷the÷kingdom to÷a_people another not it_will_be_left it_will_shatter and÷it_will_put_an_end_to all_of these the÷kingdoms and=she it_will_endure for÷(the)÷ever.
 \v 45 As=to because that you_saw that from÷(the)÷mountain it_was_cut_out a_stone which not \add was\add*_by÷hands and÷it_shattered the÷iron the÷bronze the÷clay the÷silver and÷the÷gold god great he_has_made_known to=the=king what that it_will_be after this and_\add is\add*÷certain the=dream and_\add is\add*÷trustworthy interpretation_of÷its.
 \v 46 in=then Oh/the=king Nəⱱūkadneʦʦar he_fell on face_of÷his and÷to÷Dāniyy\sup ʼēl\sup* he_paid_homage and÷offering and÷soothing_offerings he_said to÷offer_in_sacrifice to=him/it.
@@ -255,9 +255,9 @@
 \nb
 \v 1 in=year three of=(the)_reign of_Bēləshaʼʦʦr the=king a_vision it_appeared to=me I Dāniyy\sup ʼēl\sup* after the_\add one\add*÷which_it_appeared to=me at÷beginning.
 \v 2 And÷I_saw in÷vision and=he/it_was when÷saw÷I and÷I \add was\add*_in÷Shūshan the÷citadel which \add is\add*_in÷Elam the÷province and÷I_saw in÷vision and÷I I_was at the_canal_of ʼŪlay.
-\v 3 And÷I_lifted_up eyes_of÷my and÷I_saw and=see/lo/see a_ram one \add was\add*_standing to=(the)_face_of/in_front_of/before the÷canal and=to/for=him/it two_horns and÷the_two÷horns \add were\add*_high and÷the÷one \add was\add*_high more_than the=second(fs) and÷the_high÷\add one\add* \add was\add*_growing_up at÷last.
+\v 3 And÷I_lifted_up eyes_of÷my and÷I_saw and=BEHOLD/LO/SEE a_ram one \add was\add*_standing to=(the)_face_of/in_front_of/before the÷canal and=to/for=him/it two_horns and÷the_two÷horns \add were\add*_high and÷the÷one \add was\add*_high more_than the=second(fs) and÷the_high÷\add one\add* \add was\add*_growing_up at÷last.
 \v 4 I_saw DOM the÷ram goring westward and÷northward and÷southward and=all living_creatures not they_stood before÷it and÷there_\add was\add*_not \add one_who\add*_delivered from÷hand_of÷its and÷it_did according÷to_of÷its_pleasure and÷it_magnified_itself.
-\v 5 And÷I I_was observing and=see/lo/see the_he-goat_of the_goats \add was\add*_coming from the÷west over the_surface_of all_of the=earth/land and÷not \add it\add*_\add was\add*_touching on_the=earth and÷the÷he-goat a_horn_of conspicuousness \add was\add*_between eyes_of÷its.
+\v 5 And÷I I_was observing and=BEHOLD/LO/SEE the_he-goat_of the_goats \add was\add*_coming from the÷west over the_surface_of all_of the=earth/land and÷not \add it\add*_\add was\add*_touching on_the=earth and÷the÷he-goat a_horn_of conspicuousness \add was\add*_between eyes_of÷its.
 \v 6 And÷it_came to the÷ram the_possessor_of the_two_horns which I_had_seen standing to=(the)_face_of/in_front_of/before the÷canal and÷it_ran to=him/it in÷the_rage_of its_strength_of÷his.
 \v 7 And÷I÷saw_it approaching beside the÷ram and÷it_was_enraged to=him/it and÷it_struck DOM the÷ram and÷it_broke DOM the_two_of horns_of÷its and=not it_was strength in÷ram to=stand before÷it and÷it÷threw_it towards=land and÷it÷trampled_it and=not anyone_was delivering (to)÷ram from÷hand_of÷its.
 \v 8 And÷the_he-goat_of the_goats it_magnified_itself up_to muchness and÷just÷as÷it_became_mighty it_was_broken the÷horn (the)÷great and= conspicuousness =they_grew_up four in÷its_place to÷the_four the_winds_of the=heavens.
@@ -267,7 +267,7 @@
 \v 12 And÷an_army it_will_be_set over the_perpetual÷\add offering\add* in÷transgression and÷it_will_throw_down truth towards=land and÷it_will_act and÷it_will_succeed.
 \v 13 And÷I÷heard one holy_\add one\add* speaking and=he/it_said one holy_\add one\add* to÷\add one\add* \add who÷was\add*_speaking until when \add will÷be\add*_the_vision the_perpetual÷\add offering\add* and÷the÷transgression \add which\add*_desolates to_give_over and_\add the\add*÷sanctuary and÷an_army a_trampling_place.
 \v 14 And=he/it_said to=me until evening morning two_thousand and=three hundreds and= \add the\add*_sanctuary =it_will_be_put_right.
-\v 15 And=he/it_was when÷saw÷I I Dāniyy\sup ʼēl\sup* DOM the÷vision and÷I÷sought understanding and=see/lo/see \add was\add*_standing to÷before÷me like_\add the\add*÷appearance_of a_man.
+\v 15 And=he/it_was when÷saw÷I I Dāniyy\sup ʼēl\sup* DOM the÷vision and÷I÷sought understanding and=BEHOLD/LO/SEE \add was\add*_standing to÷before÷me like_\add the\add*÷appearance_of a_man.
 \v 16 And÷I_heard \add the\add*_voice_of a_person between ʼŪlay and=he/it_called and÷he_said Oh_Gaⱱrī\sup ʼēl\sup* explain to÷this_\add one\add* DOM the÷vision.
 \v 17 And÷he_came beside place_of÷my and÷when÷came÷he I_was_terrified and÷I÷fell on face_of÷my and=he/it_said to=me understand Oh_son_of humankind if/because_that \add is\add*_for_\add the\add*÷time_of \add the\add*_end the÷vision.
 \v 18 And÷when÷spoke÷he with÷me I_was_dazed on face_of÷my ground÷to_\add the\add* and÷he_touched (in)÷me and÷he÷made_me_stand on place_of÷my.
@@ -315,27 +315,27 @@
 \v 2 In_the=days the=those I Dāniyy\sup ʼēl\sup* I_was mourning three sevens days.
 \v 3 Food_of desirableness(es) not I_ate and=flesh/body and÷wine not it_came into mouth_of÷my and÷indeed_(anoint) not I_anointed_myself until were_completed three_of sevens days.
 \v 4 and÷on÷day_of twenty and÷four of÷month (the)÷first and÷I I_was on the_side_of the=river (the)÷great it \add is\add*_the_Tigris.
-\v 5 And÷I_lifted_up DOM eyes_of÷my and÷I_saw and=see/lo/see a_man one clothed linen(s) and÷loins_of÷his \add were\add*_girded with_(the)÷gold_of ʼŪfāz.
+\v 5 And÷I_lifted_up DOM eyes_of÷my and÷I_saw and=BEHOLD/LO/SEE a_man one clothed linen(s) and÷loins_of÷his \add were\add*_girded with_(the)÷gold_of ʼŪfāz.
 \v 6 And÷body_of÷his \add was\add*_like÷chrysolite and÷face_of÷his \add was\add*_like_\add the\add*÷appearance_of lightning and÷eyes_of÷his \add were\add*_like÷torches_of fire and÷arms_of÷his and÷feet_of÷his \add were\add*_like_\add the\add*÷appearance_of bronze burnished and÷the_sound_of his_words/messages_of÷his \add was\add*_like÷the_sound_of a_multitude.
 \v 7 And÷I_saw I Dāniyy\sup ʼēl\sup* I÷alone DOM the÷vision and÷the÷men who they_were with÷me not they_saw DOM the÷vision but trembling great it_fell on÷them and÷they_fled in÷hiding_themselves.
 \v 8 And÷I I_was_left_behind I÷alone and÷I_saw DOM the÷vision the=big/large/great(fs) (the)÷this and=not it_remained in÷me strength and÷vigor_of÷my it_was_changed on÷me into÷destruction and=not I_retained strength.
 \v 9 And÷I_heard DOM the_sound_of his_words/messages_of÷his and÷just÷as÷I_heard DOM the_sound_of his_words/messages_of÷his and÷I I_was dazed on face_of÷my and÷face_of÷my ground÷\add was\add*_to_\add the\add*.
-\v 10 And=see/lo/see a_hand it_touched (in)÷me and÷it÷shook_me on knees_of÷my and÷the_palms_of my_hands_of÷my.
+\v 10 And=BEHOLD/LO/SEE a_hand it_touched (in)÷me and÷it÷shook_me on knees_of÷my and÷the_palms_of my_hands_of÷my.
 \v 11 And=he/it_said to=me Oh_Dāniyy\sup ʼēl\sup* man_of preciousness(es) understand (in)÷words/messages which I \add am\add*_about_to_speak to÷you and÷stand on place_of÷your if/because now I_have_been_sent to÷you and÷when÷spoke÷he with÷me DOM the÷message the=this I_stood_up trembling.
 \v 12 And=he/it_said to=me do_not fear Oh_Dāniyy\sup ʼēl\sup* if/because from the=day (the)÷first which you_gave DOM heart_of÷your to÷understand and÷to÷humble_yourself to=(the)_face_of/in_front_of/before god_of÷your words/messages_of÷your they_were_heard and÷I I_have_come on÷words/messages_of÷your.
-\v 13 And÷the_prince_of the_kingdom_of Pāraş \add was\add*_standing to÷before÷me twenty and÷one day[s] and=see/lo/see Mīkā\sup ʼēl\sup* one of÷the_princes (the)÷chief he_came to÷help÷me and÷I I_remained_behind there beside the_kings_of Pāraş.
+\v 13 And÷the_prince_of the_kingdom_of Pāraş \add was\add*_standing to÷before÷me twenty and÷one day[s] and=BEHOLD/LO/SEE Mīkā\sup ʼēl\sup* one of÷the_princes (the)÷chief he_came to÷help÷me and÷I I_remained_behind there beside the_kings_of Pāraş.
 \v 14 And÷I_have_come to÷make÷you_understand DOM \add that\add*_which it_will_happen to÷people_of÷your in=end/latter the=days if/because still \add the\add*_vision \add is\add*_for÷days.
 \v 15 And÷when÷spoke÷he with÷me according÷the_words/messages the=these I_put face_of÷my towards=land and÷I_was_dumb.
-\v 16 And=see/lo/see like_\add the\add*÷likeness_of \add the\add*_sons_of humankind \add was\add*_touching (on) lips_of÷my and÷I_opened mouth_of÷my and÷I÷spoke and÷I÷said to the_\add one÷who_was\add*_standing to÷before÷me my=master on÷vision they_have_turned pangs_of÷my on÷me and=not I_have_retained strength.
+\v 16 And=BEHOLD/LO/SEE like_\add the\add*÷likeness_of \add the\add*_sons_of humankind \add was\add*_touching (on) lips_of÷my and÷I_opened mouth_of÷my and÷I÷spoke and÷I÷said to the_\add one÷who_was\add*_standing to÷before÷me my=master on÷vision they_have_turned pangs_of÷my on÷me and=not I_have_retained strength.
 \v 17 And÷how the_servant_of is_he_able my=master this to÷speak with my=master this and÷I from÷now not it_remains in÷me strength and÷breath not it_is_left in÷me.
 \v 18 And÷he_repeated and÷he_touched (in)÷me like_\add the\add*÷appearance_of humankind and÷he÷strengthened_me.
 \v 19 And=he/it_said do_not fear Oh_man_of preciousness(es) peace to/for=you(fs) be_strong and÷be_strong and÷when÷spoke÷he\f + \fr 10:19 \ft OSHB note: We read one or more consonants in L differently from BHS.\f* with÷me I_strengthened_myself and÷I÷said my=master let_him_speak if/because you÷have_strengthened_me.
-\v 20 And=he/it_said do÷you_know to/for=what have_I_come to÷you and=now I_will_return to÷engage_in_battle with the_prince_of Pāraş and÷I \add am\add*_about_to_go_forth and=see/lo/see the_prince_of Yāvān/(Greece) he_will_come.
+\v 20 And=he/it_said do÷you_know to/for=what have_I_come to÷you and=now I_will_return to÷engage_in_battle with the_prince_of Pāraş and÷I \add am\add*_about_to_go_forth and=BEHOLD/LO/SEE the_prince_of Yāvān/(Greece) he_will_come.
 \v 21 But I_will_tell to/for=yourself(m) DOM the_\add thing\add*÷inscribed in÷writing_of truth and÷there_\add is\add*_not one \add who\add*_shows_himself_strong with÷me on these if/because (if) Mīkā\sup ʼēl\sup* prince_of÷your(pl).
 \c 11
 \nb
 \v 1 and÷I in=year one of÷Dārəyāvesh the÷Mede standing_of÷my \add was\add*_to÷\add one_who\add*_strengthens and÷to÷a_protection to=him/it.
-\v 2 And=now truth I_will_tell to/for=you(fs) there yet three kings \add will\add*_arise for÷Pāraş and÷the_fourth÷\add king\add* he_will_gain_wealth wealth great from=all and÷according÷to_of÷his_strength by÷wealth_of÷his he_will_stir_up (the)÷everyone with the_kingdom_of Yāvān.
+\v 2 And=now truth I_will_tell to/for=you(fs) THERE yet three kings \add will\add*_arise for÷Pāraş and÷the_fourth÷\add king\add* he_will_gain_wealth wealth great from=all and÷according÷to_of÷his_strength by÷wealth_of÷his he_will_stir_up (the)÷everyone with the_kingdom_of Yāvān.
 \v 3 And= a_king_of =he_will_arise mighty and÷he_will_have_dominion dominion great and÷he_will_do according÷to_of÷his_pleasure.
 \v 4 And÷just÷as÷he_arises his/its=kingdom it_will_be_broken_up and÷it_will_be_divided to÷the_four the_winds_of the=heavens and=not to÷posterity_of÷his and=not like÷dominion_of÷his which he_had_dominion if/because his/its=kingdom it_will_be_plucked_up and÷to÷others (from)÷besides_of these.
 \v 5 And= the_king_of =he_will_become_strong of÷the_south and=from commanders_of÷his and÷he_will_become_strong on/upon/above=him/it and÷he_will_have_dominion \add will_be\add*_a_dominion great dominion_of÷his.
@@ -385,7 +385,7 @@
 \v 2 And÷many_\add people\add* of_\add the\add*÷sleepers_of of_\add the\add*_ground_of dust they_will_awake these to÷life_of perpetuity and=these to÷reproaches to÷abhorrence_of perpetuity.
 \v 3 and÷\add those÷who\add*_have_insight they_will_shine like÷the_shining_of the=firmament and÷\add those_who\add*_turn_to_righteousness_of (of)_the÷many_\add people\add* like÷stars forever÷perpetuity and÷ever.
 \v 4 and=you(ms) Oh_Dāniyy\sup ʼēl\sup* keep_secret the÷words/messages and÷seal_up the÷scroll until \add the\add*_time_of \add the\add*_end they_will_rove_about many_\add people\add* and÷it_will_increase (the)÷knowledge.
-\v 5 And÷I_saw I Dāniyy\sup ʼēl\sup* and=see/lo/see two others \add were\add*_standing one here \add was\add*_to÷the_bank_of the_River and÷one here \add was\add*_to÷the_bank_of the_River.
+\v 5 And÷I_saw I Dāniyy\sup ʼēl\sup* and=BEHOLD/LO/SEE two others \add were\add*_standing one here \add was\add*_to÷the_bank_of the_River and÷one here \add was\add*_to÷the_bank_of the_River.
 \v 6 And=he/it_said to÷man (the)_clothed_of (the)÷linen(s) who \add was\add*_from÷above (to)_the÷water_of the_River until when \add will_be\add*_the_end_of the_wonders.
 \v 7 And÷I_heard DOM the=man (the)_clothed_of (the)÷linen(s) who \add was\add*_from÷above (to)_the÷water_of the_River and÷he_raised hand_of÷his_right and÷his_left_of÷hand to the=heavens and÷he_swore by÷the_living_one_of (the)÷perpetuity if/because_that to÷a_time times and÷a_half and÷just÷as_finish to_smash \add the\add*_hand_of \add the\add*_people_of holiness they_will_be_finished all_of these_\add things\add*.
 \v 8 And÷I I_heard and=not I_understood and÷I÷said my=master what \add will_be\add*_the_outcome of_these_\add things\add*.

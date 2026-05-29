@@ -55,9 +55,7 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 from BibleOrgSys.Misc import CompareBibles
 import bos_books_codes_py
 
-import sys
-sys.path.append( '../../BibleTransliterations/Python/' )
-from BibleTransliterations import load_transliteration_table, transliterate_Greek
+from bible_transliterations import transliterate_Greek
 
 
 LAST_MODIFIED_DATE = '2026-05-08' # by RJH
@@ -1098,7 +1096,6 @@ def make_NT_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_
     global formUsageDict, lemmaDict, lemmaFormsDict, formGlossesDict, lemmaGlossesDict
 
     fnPrint( DEBUGGING_THIS_MODULE, f"make_NT_word_pages( {inputFolderPath}, {outputFolderPath}, {word_table_filenames} )" )
-    load_transliteration_table( 'Greek' )
     our_start_html = START_HTML.replace( 'BibleBook.css', 'BibleData.css' )
 
     try: os.makedirs( outputFolderPath )

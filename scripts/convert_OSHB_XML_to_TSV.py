@@ -35,6 +35,7 @@ CHANGELOG:
     2025-01-15 Fix the single note that contains an exclamation mark ('KJV:1Kgs.22.43!b')
     2025-06-26 Fix the notes that contain a superfluous trailing space.
     2026-05-08 Upgraded to bos_books_codes_py
+    2026-05-15 Removed CRs from output files
 """
 from gettext import gettext as _
 # from typing import Dict, List, Tuple
@@ -322,9 +323,9 @@ def export_table_to_files() -> bool:
     OSHB_TSV_output_filepath = Path( OSHB_TSV_OUTPUT_FILEPATH_STRING.replace( '.parsedOriginal.', '.parsedOriginal.flat.morphemes.' )
                 if BREAK_MORPHEMES else OSHB_TSV_OUTPUT_FILEPATH_STRING.replace( '.parsedOriginal.', '.parsedOriginal.flat.words.' ) )
     print( f"Exporting WLC table as a single flat TSV file ({OUTPUT_FIELDNAMES_COUNT} columns) to {OSHB_TSV_output_filepath}…" )
-    with open( OSHB_TSV_output_filepath, 'wt', encoding='utf-8' ) as tsv_output_file:
+    with open( OSHB_TSV_output_filepath, 'wt', encoding='utf-8', newline='' ) as tsv_output_file:
         tsv_output_file.write('\ufeff') # Write BOM
-        writer = DictWriter( tsv_output_file, fieldnames=OUTPUT_FIELDNAMES, delimiter='\t' )
+        writer = DictWriter( tsv_output_file, fieldnames=OUTPUT_FIELDNAMES, delimiter='\t', lineterminator='\n' )
         writer.writeheader()
         for row in state.flat_array:
             rowDict = {k:v for k,v in zip(OUTPUT_FIELDNAMES,row)}

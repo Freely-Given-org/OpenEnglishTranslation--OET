@@ -45,10 +45,7 @@ import os
 #     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
-
-import sys
-sys.path.insert( 0, '../../BibleTransliterations/Python/' ) # temp until submitted to PyPI
-from BibleTransliterations import load_transliteration_table, transliterate_Hebrew, transliterate_Greek
+from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
 LAST_MODIFIED_DATE = '2025-10-10' # by RJH
@@ -87,8 +84,6 @@ def main():
     """
     BibleOrgSysGlobals.introduceProgram( __name__, PROGRAM_NAME_VERSION, LAST_MODIFIED_DATE )
 
-    load_transliteration_table( 'Hebrew' )
-    load_transliteration_table( 'Greek' )
     if load_OET_LV_OT_names() and load_OET_LV_NT_names():
         create_OET_LV_name_table()
 # end of create_OET-LV_TSV_name_table.main
@@ -125,7 +120,7 @@ def load_OET_LV_OT_names() -> bool:
         if '/' in hebrewName:
             hebrewName = hebrewName.split( '/' )[0]
             # print( f"   {lvOTName=} {hebrewName=}" )
-        transliteratedHebrewName = transliterate_Hebrew( hebrewName, capitaliseHebrew=lvOTName[0].isupper() )
+        transliteratedHebrewName = transliterate_Hebrew( hebrewName, capitalise_hebrew=lvOTName[0].isupper() )
         OET_LV_OT_NAMES_SET.add( (lvOTName,transliteratedHebrewName) )
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(OET_LV_OT_NAMES_SET):,} OET-LV OT name pairs." )
@@ -176,7 +171,7 @@ def load_OET_LV_NT_names() -> bool:
             transliteratedGreekName = transliterate_Greek( greekName )
             OET_LV_NT_NAMES_SET.add( (lvNTName,transliteratedGreekName) )
             if hebrewName:
-                transliteratedHebrewName = transliterate_Hebrew( hebrewName, capitaliseHebrew=lvNTName[0].isupper() )
+                transliteratedHebrewName = transliterate_Hebrew( hebrewName, capitalise_hebrew=lvNTName[0].isupper() )
                 OET_LV_OT_NAMES_SET.add( (lvNTName,transliteratedHebrewName) )
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(OET_LV_NT_NAMES_SET):,} OET-LV NT names." )
