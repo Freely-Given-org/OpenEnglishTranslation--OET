@@ -46,6 +46,7 @@ CHANGELOG:
     2026-03-31 Improve nesting order checking
     2026-04-29 Handle fq and fqa markers
     2026-05-08 Upgraded to bos_books_codes_py
+    2026-05-31 Handle (remove) Psalm/Song thematic colouring markers
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -64,10 +65,10 @@ from bible_organisational_system import getSmallLeadingInt
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-05-08' # by RJH
+LAST_MODIFIED_DATE = '2026-05-31' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
-PROGRAM_VERSION = '0.97'
+PROGRAM_VERSION = '0.98'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -830,6 +831,10 @@ def produce_HTML_files() -> None:
             invalid_text = '\\p\n\\s'
             assert invalid_text not in esfm_text, f"""Why do we have a useless paragraph in {source_filename}: {esfm_text[esfm_text.index(invalid_text)-20:esfm_text.index(invalid_text)+22]}"""
             for lineNumber,line in enumerate( esfm_text.split( '\n' ), start=1 ):
+                if BBB=='PSA' and '\\z' in line: # Psalm/Song colouring markers
+                    line = line.replace( '\\zr ', '' ).replace( '\\z1 ', '' ).replace( '\\z2 ', '' ).replace( '\\z3 ', '' ).replace( '\\z4 ', '' ) \
+                                .replace( '\\zrhilite ', '' ).replace( '\\z1hilite ', '' ).replace( '\\z2hilite ', '' ).replace( '\\z3hilite ', '' ).replace( '\\z4hilite ', '' ) \
+                                .replace( '\\zrhilite*', '' ).replace( '\\z1hilite*', '' ).replace( '\\z2hilite*', '' ).replace( '\\z3hilite*', '' ).replace( '\\z4hilite*', '' )
                 # This loop isn't finding all the problems
                 for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
                     # First check the overall count
@@ -1002,6 +1007,10 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
         dPrint( 'Never', DEBUGGING_THIS_MODULE, f"{BBB} {marker}='{rest}'" )
         if marker in ('id','usfm','ide','h','toc2','toc3'):
             continue # We don't need to map those markers to HTML
+        if BBB=='PSA' and '\\z' in rest: # Psalm/Song colouring markers
+            rest = rest.replace( '\\zr ', '' ).replace( '\\z1 ', '' ).replace( '\\z2 ', '' ).replace( '\\z3 ', '' ).replace( '\\z4 ', '' ) \
+                        .replace( '\\zrhilite ', '' ).replace( '\\z1hilite ', '' ).replace( '\\z2hilite ', '' ).replace( '\\z3hilite ', '' ).replace( '\\z4hilite ', '' ) \
+                        .replace( '\\zrhilite*', '' ).replace( '\\z1hilite*', '' ).replace( '\\z2hilite*', '' ).replace( '\\z3hilite*', '' ).replace( '\\z4hilite*', '' )
         if marker == 'rem':
             # print( f"{BBB} {C}:{V} {inRightDiv=} {inParagraph=} {inTable} {marker}={rest}" )
             # assert not inRightDiv, f"{BBB} {C}:{V} {inRightDiv=} {inParagraph=} {inTable} {marker}={rest}"

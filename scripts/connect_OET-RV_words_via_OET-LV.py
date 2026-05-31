@@ -78,7 +78,7 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-05-26' # by RJH
+LAST_MODIFIED_DATE = '2026-05-31' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.91'
@@ -165,7 +165,7 @@ SIMPLE_NOUNS = ( # These are nouns that are likely to match one-to-one from the 
         'goats','goat', 'gods','god', 'gold',
         'grace', 'grains','grain', 'grapes','grape', 'grass',
             'greed',
-    'hairs','hair', 'handkerchiefs','handkerchief', 'hands','hand', 'happiness', 'hare',
+    'hairs','hair', 'handkerchiefs','handkerchief', 'hands','hand', 'happiness', 'hare', 'harvests','harvest',
         'heads','head', 'hearts','heart', 'heavens','heaven', 'hedgehogs','hedgehog',
         'hides','hide',
         'homes','home', 'honey', 'hooves','hoof', 'horsemen', 'horses','horse', 'hours','hour', 'houses','house',
@@ -240,13 +240,14 @@ simpleVerbs = ('abandoned','abandoning','abandons','abandon',
                     'ascended', 'ascends','ascend', 'asked','asking','asks','ask', 'assembled','assembling','assembles','assemble',
                     'attracted','attracting','attracts','attract', 'attacked','attacking','attacks','attack',
                 'become','became','becomes','becoming', 'behaved','behaving','behaves','behave', 'believed','believing','believes','believe',
+                    'blessed','blessing','blesses','bless',
                     'brought','bringing','brings','bring',
                     'burnt','burning','burns','burn', 'buried','burying','buries','bury',
                 'came','coming','comes','come', 'caught','catching','catches','catch',
                     'chose','choosing','chooses','choose',
                     'confessed','confessing','confesses','confess',
                     'cried','crying','cries','cry', 'cringed','cringes','cringe',
-                'deceived','deceiving','deceives','deceive',
+                'deceived','deceiving','deceives','deceive', 'decided','deciding','decides','decide',
                         'defended','defending','defends','defend',
                         'delivered','delivering','delivers','deliver',
                         'departed','departing','departs','depart',
@@ -262,7 +263,8 @@ simpleVerbs = ('abandoned','abandoning','abandons','abandon',
                     'followed','following','follows','follow',
                         'forbidding','forbids','forbid', 'forgave','forgiven','forgiving','forgives','forgive', 'formed','forming','forms','form',
                 'gathered','gathering','gathers','gather', 'gave','giving','gives','give',
-                    'went','going','goes','go', 'greeted','greeting','greets','greet',
+                    'went','going','goes','go', 'governed','governing','governs','govern',
+                    'greeted','greeting','greets','greet',
                 'harvested','harvesting','harvests','harvest', 'hated','hating','hates','hate',
                     'healed','healing','heals','heal', 'helped','helping','helps','help', 'heard','hearing','hears','hear',
                     'honoured','honouring','honours','honour',
@@ -300,7 +302,8 @@ simpleVerbs = ('abandoned','abandoning','abandons','abandon',
                         'settled','settling','settles','settle',
                     'shook','shaken','shaking','shakes','shake', 'shared','sharing','shares','share',
                         'shone','shining','shines','shine',
-                    'sat','sitting','sits','sit',
+                        'showed','showing','shows','show',
+                    'signalled','signalling','signals','signal', 'sat','sitting','sits','sit',
                     'slept','sleeping','sleeps','sleep',
                     'spoke','spoken','speaking','speaks','speak',
                     'stayed','staying','stays','stay',
@@ -321,6 +324,7 @@ simpleVerbs = ('abandoned','abandoning','abandons','abandon',
                     'worked','working','works','work',
                     'wrote','written','writing','writes','write',
                 'yelled','yelling','yells','yell',
+                    'yielded','yielding','yields','yield',
                 )
 assert len(set(simpleVerbs)) == len(simpleVerbs), [x for x in simpleVerbs if simpleVerbs.count(x)>1 ] # Check for accidental duplicates
 simpleAdverbs = ('quickly', 'immediately', 'loudly', 'suddenly',)

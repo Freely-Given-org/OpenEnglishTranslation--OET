@@ -1,4 +1,4 @@
-\id PSA - Open English Translation—Readers' Version (OET-RV) v0.2.33
+\id PSA - Open English Translation—Readers' Version (OET-RV) v0.2.34
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 PSA
@@ -30,7 +30,7 @@
 \s1 Wicked and godly roads
 \rem /s1 True Happiness; The Two Ways
 \p
-\v 1 A person will reap the benefits
+\v 1 \z1 A person will reap the benefits
 \q2 if they don't take advice¦243189 from wicked¦243190 people,
 \q2 and don't stand¦243194 \add ≈around where\add* sinners¦243192 \add ≈go\add*,
 \q2 and don't sit and join all the scoffers.
@@ -44,13 +44,13 @@
 \q2 and they prosper in everything they do.\x + \xo 1:3 \xt Gen 29:2-3.\x*
 \b
 \q1
-\v 4 \add But\add* wicked¦243235 \add people\add* won't \add prosper\add*—
+\v 4 \z2 \add But\add* wicked¦243235 \add people\add* won't \add prosper\add*—
 \q1 they're like straw that¦243240 gets blown away by the wind¦243243.
 \q1
 \v 5 The wicked¦243252 \add people\add* won't be able to stand¦243251 when \add God\add* judges¦243253 \add them\add*,
 \q1 and sinners¦243254 won't be able to join in¦243253 the assembly¦243255 of \add all the godly¦243256 people\add*,
 \q1
-\v 6 because Yahweh¦243261 knows the path \add chosen by godly¦243263 people\add*,
+\v 6 \z3 because Yahweh¦243261 knows the path \add chosen by godly¦243263 people\add*,
 \q1 but¦243264 the path of wicked¦243265 \add people\add* will be destroyed.
 \c 2
 \s1 God's chosen king
@@ -154,7 +154,7 @@
 \q1 and¦243548 \add keep\add* trusting¦243548 him.
 \b
 \q1
-\v 6 Many \add people\add* \add ≈ask\add*, “Who can show us \add anything that's\add* good¦243560?”
+\v 6 Many \add people\add* \add ≈ask\add*, “Who can show¦243558 us \add anything that's\add* good¦243560?”
 \q1 Yahweh¦243566, \add ≈shower your¦243565 favour down\add* on us.
 \q1
 \v 7 You've \add ≈made me very happy\add*,
@@ -748,7 +748,7 @@
 \d For the musical director¦245326: a song by Yahweh's¦245329 servant¦245328 David¦245330, when he sang the words¦245337 of this song to Yahweh on the day¦245340 that Yahweh rescued him from Shaul¦245350 \add (King Saul¦245350)\add* and all his \add other\add* enemies¦245348.
 \rem /d For the leader: for the Lord's servant: for David (who recited the words of this song to the Lord on the day when the Lord rescued him from the power of all his enemies and from the hand of Saul. He said:); To the leader. A Psalm of David the servant of the Lord, who addressed the words of this song to the Lord on the day when the Lord delivered him from the hand of all his enemies, and from the hand of Saul. He said:; For the director of music. Of David the servant of the Lord. He sang to the Lord the words of this song when the Lord delivered him from the hand of all his enemies and from the hand of Saul. He said:; For the choir director: A psalm of David, the servant of the Lord. He sang this song to the Lord on the day the Lord rescued him from all his enemies and from Saul.
 \q1
-\v 1 He said¦245353:
+\v 1 \z1 He said¦245353:
 \q1 I love¦245354 you¦245354, Yahweh¦245355, my \add source of\add* strength¦245356.
 \q1
 \v 2 Yahweh¦245359 is my rock, my fortress, \add ≈the one who brings me to safety\add*.
@@ -771,7 +771,7 @@
 \q1 ≈My call for help entered his presence¦245416.
 \q1 ≈It \add ≈reached\add* his ears¦245419.
 \q1
-\v 7 Then the earth¦245425 quaked¦245423 and shook¦245422.
+\v 7 \z2 Then the earth¦245425 quaked¦245423 and shook¦245422.
 \q1 ≈The foundations¦245426 of the mountains¦245427 trembled¦245428
 \q1 ≈and were shaken because¦245430 \add @God\add* \add ≈was angry\add*.
 \q1
@@ -793,7 +793,7 @@
 \v 13 Yahweh¦245496 thundered¦245493 from the heavens¦245494.
 \q1 The voice¦245499 of the highest \add >one\add* shouted.\f + \fr 18:13 \ft ‘hail and burning coals’ has been omitted from this translation as the Hebrew words are assumed to have been accidentally copied from the previous verse.\f*
 \q1
-\v 14 He shot his arrows¦245507 and scattered¦245508 his enemies—
+\v 14 He shot his arrows¦245507 and \z2hilite scattered¦245508 his enemies\z2hilite*—
 \q1 ≈many lightning¦245509 bolts, and \add ≈forced them to disperse\add*.
 \q1
 \v 15 Then the water¦245517 channels¦245516 appeared¦245514.
@@ -814,7 +814,7 @@
 \v 19 He brought¦245557 me out to a wide open place¦245558.
 \q1 ≈He saved me because¦245560 he¦245561 was pleased with¦245562 me.
 \q1
-\v 20 Yahweh¦245566 has rewarded¦245565 me because \add ≈I've done nothing wrong\add*.
+\v 20 \z3 Yahweh¦245566 has rewarded¦245565 me because \add ≈I've done nothing wrong\add*.
 \q1 ≈He has restored me because \add ≈I'm innocent\add*.
 \q1
 \v 21 because¦245574 I've¦245576 \add ≈followed\add* Yahweh's¦245578 \add ≈instructions\add*
@@ -844,7 +844,7 @@
 \v 29 \add ≈With your help\add*, I \add ≈can run¦245662 forward into the invaders\add*.
 \q1 ≈\add ≈With my god's assistance\add*, I can leap over a wall¦245667.
 \q1
-\v 30 As for God¦245670, his \add #ways are\add* perfect.
+\v 30 \z2 As for God¦245670, his \add #ways are\add* perfect.
 \q1 ≈Yahweh's¦245675 message¦245673 has been refined¦245676.
 \q1 He is a shield¦245677 to everyone who \add ≈goes to him to stay safe\add*,
 \q1
@@ -873,8 +873,8 @@
 \v 38 I smashed¦245753 them so that they were unable to \add ≈regroup\add*.
 \q1 ≈They have fallen under¦245759 my feet¦245760.
 \q1
-\v 39 You put strength¦245764 on me for battle¦245765 \add ≈like a belt around me\add*.
-\q1 You made¦245766 my enemies bow down to me.
+\v 39 You put strength¦245764 on me for \z2hilite battle¦245765\z2hilite* \add ≈like a belt around me\add*.
+\q1 You made¦245766 \z2hilite my enemies\z2hilite* bow down to me.
 \q1
 \v 40 You \add ≈allowed me to kill my¦245775 enemies¦245771\add*.
 \q1 ≈I annihilated those¦245775 who hated¦245775 me.
@@ -885,7 +885,7 @@
 \v 42 I \add ≈hammered\add* them into fine pieces like dust in the wind¦245796.
 \q1 ≈I emptied¦245799 them out like mud in the streets¦245798.
 \q1
-\v 43 You rescued me from people's feuds.
+\v 43 \z4 You rescued me from people's feuds.
 \q1 You've made me the head¦245806 over nations¦245807.
 \q1 ≈People serve¦245812 me that¦245809 I never knew¦245811 \add before\add*.
 \q1
@@ -3587,27 +3587,27 @@
 \d For the musical director¦254420: a praise song \add ≈to be accompanied by\add* stringed¦254421 instruments¦254421.
 \rem /d For the choir director: A psalm, to be accompanied by stringed instruments. A song.; For the director of music. With stringed instruments. A psalm. A song.; For the leader: on stringed instruments: a psalm: a song; To the leader: with stringed instruments. A Psalm. A Song.
 \q1
-\v 1 May God¦254426 be gracious¦254427 to us and bless¦254428 us,
-\q1 and \add ≈show kindness towards\add* us \qs (Instrumental¦254432 break¦254432.)\qs*
+\v 1 \z1 May God¦254426 be gracious¦254427 to us and \z1hilite bless¦254428\z1hilite* us,
+\q1 and \add ≈show¦254427 kindness towards\add* us \qs (Instrumental¦254432 break¦254432.)\qs*
 \q1
-\v 2 so that those living on earth¦254436 will know¦254435 what you're like.
+\v 2 so that those living on \z1hilite earth¦254436\z1hilite* will know¦254435 what you're like.
 \q1 All the nations¦254440 will \add ≈learn about\add* your salvation¦254441.
 \q1
-\v 3 Let the peoples praise you, God¦254447.
+\v 3 \zr Let the peoples praise you, God¦254447.
 \q1 ≈Let all the \add ≈people groups\add* praise you.
 \q1
-\v 4 Let the nations be glad and sing happily,
+\v 4 \z2 Let the nations be glad and sing happily,
 \q1 because¦254456 you'll judge¦254458 the peoples¦254459 with \add ≈impartiality\add*,
 \q1 ≈and govern the nations \add ≈around the world\add*. \qs (Instrumental¦254465 break¦254465.)\qs*
 \q1
-\v 5 Let the peoples praise you, God¦254471.
+\v 5 \zr Let the peoples praise you, God¦254471.
 \q1 ≈Let all the \add ≈people groups\add* praise you.
 \q1
-\v 6 The earth¦254477 has yielded its harvest¦254479.
-\q1 ≈God¦254481, our god, has blessed¦254480 us.
+\v 6 \z1 The earth¦254477 has yielded its harvest¦254479.
+\q1 ≈God¦254481, our god, has \z1hilite blessed¦254480\z1hilite* us.
 \q1
-\v 7 May God¦254486 bless¦254485 us,
-\q1 and¦254487 may \add ≈people all around the world respect\add* him.
+\v 7 May God¦254486 \z1hilite bless¦254485\z1hilite* us,
+\q1 and¦254487 may \add ≈people all around the \z1hilite world\z1hilite* respect\add* him.
 \c 68
 \s1 A song of victory
 \rem /s1 Praise and Thanksgiving; A National Song of Triumph
@@ -4292,7 +4292,7 @@
 \q1 and¦256677 my spirit makes searches¦256677 around diligently.
 \q1
 \v 7 Will my master¦256684 reject¦256682 me forever¦256681?
-\q1 ≈Will he never again¦256689 show me favour¦256688?
+\q1 ≈Will he never again¦256689 show¦256688 me favour¦256688?
 \q1
 \v 8 Was his loyal¦256694 commitment gone forever?
 \q1 ≈Had his promise failed forever?

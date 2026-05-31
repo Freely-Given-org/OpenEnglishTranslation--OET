@@ -37,6 +37,7 @@ NOTE: This script doesn't need to remove special ESFM formatting
 CHANGELOG:
     2025-03-31 Adjust input folder
     2026-05-08 Upgraded to bos_books_codes_py
+    2026-05-31 Handle (remove) Psalm/Song thematic colouring markers
 """
 from pathlib import Path
 import logging
@@ -51,10 +52,10 @@ from bible_organisational_system import InternalBibleEntryList
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-05-08' # by RJH
+LAST_MODIFIED_DATE = '2026-05-31' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_USFM_to_VREF"
 PROGRAM_NAME = "Convert OET LV & RV USFM files to VREF"
-PROGRAM_VERSION = '0.10'
+PROGRAM_VERSION = '0.11'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -128,6 +129,10 @@ def main():
                 verseText, firstWord = '', False
                 for entry in verseData:
                     marker, cleanText = entry.getMarker(), entry.getOriginalText()
+                    if cleanText and VV=='RV' and BBB=='PSA' and '\\z' in cleanText: # Psalm/Song colouring markers
+                        cleanText = cleanText.replace( '\\zr ', '' ).replace( '\\z1 ', '' ).replace( '\\z2 ', '' ).replace( '\\z3 ', '' ).replace( '\\z4 ', '' ) \
+                                    .replace( '\\zrhilite ', '' ).replace( '\\z1hilite ', '' ).replace( '\\z2hilite ', '' ).replace( '\\z3hilite ', '' ).replace( '\\z4hilite ', '' ) \
+                                    .replace( '\\zrhilite*', '' ).replace( '\\z1hilite*', '' ).replace( '\\z2hilite*', '' ).replace( '\\z3hilite*', '' ).replace( '\\z4hilite*', '' )
                     if marker[0] == '¬': pass # Ignore end markers
                     elif marker == 'c': pass # Ignore
                     elif marker == 'c~': pass # Ignore text after chapter marker
