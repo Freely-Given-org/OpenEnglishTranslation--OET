@@ -291,7 +291,7 @@ def loadClearLowFatGlossesXML() -> bool:
                         # assert pClass in ('compound',), f"{theirRef} has no role/rule {pClass=} {nestingBits}"
                         pass # Hopefully it doesn't matter
                     startElement = parentElem
-                # print( f"@{theirRef} {nestingBits=}"); halt
+                # print( f"@{theirRef} {nestingBits=}"); assert False, "We want to stop here"
                 if len(nestingBits) >= max_nesting_level:
                     max_nesting_level = len(nestingBits) + 1
 
@@ -332,7 +332,7 @@ def loadClearLowFatGlossesXML() -> bool:
                     # assert theirRef in ('MAT 4:19!4','MAT 11:28!1'), f"{theirRef=}"
                     ourReferents = list(set(ourReferents+ourSubjectReferents)) # But this loses the order sadly
                     print( f"    From the above got {ourReferents}" )
-                    # if ourReferents != ourSubjectReferents: halt
+                    # if ourReferents != ourSubjectReferents: assert False, "We want to stop here"
                     ourSubjectReferents = []
                 if ourReferents: assert not ourSubjectReferents, f"{ourReferents=} {ourSubjectReferents=}"
                 if ourSubjectReferents:
@@ -556,7 +556,7 @@ def save_filled_TSV_file() -> bool:
 
     BibleOrgSysGlobals.backupAnyExistingFile( state.TSV_output_filepath, numBackups=5 )
 
-    # print(len(state.lowFatWordsAndMorphemes[0]), state.lowFatWordsAndMorphemes[0]);halt
+    # print(len(state.lowFatWordsAndMorphemes[0]), state.lowFatWordsAndMorphemes[0]);assert False, "We want to stop here"
     with open( state.TSV_output_filepath, 'wt', encoding='utf-8', newline='' ) as tsv_output_file:
         tsv_output_file.write('\ufeff') # Write BOM
         writer = DictWriter( tsv_output_file, fieldnames=state.output_fieldnames, delimiter='\t', lineterminator='\n' )
@@ -609,7 +609,7 @@ def save_shortened_TSV_file() -> bool:
     shortenedFieldnameList = [fieldname for fieldname in state.output_fieldnames if fieldname not in columnsToRemove]
     # print(f"({len(state.output_fieldnames)}) {state.output_fieldnames} -> ({len(shortenedFieldnames)}) {shortenedFieldnames}")
 
-    # print(len(state.lowFatWordsAndMorphemes[0]), state.lowFatWordsAndMorphemes[0]);halt
+    # print(len(state.lowFatWordsAndMorphemes[0]), state.lowFatWordsAndMorphemes[0]);assert False, "We want to stop here"
     with open( state.shortened_TSV_output_filepath, 'wt', encoding='utf-8', newline='' ) as tsv_output_file:
         tsv_output_file.write('\ufeff') # Write BOM
         writer = DictWriter( tsv_output_file, fieldnames=shortenedFieldnameList, delimiter='\t', lineterminator='\n' )

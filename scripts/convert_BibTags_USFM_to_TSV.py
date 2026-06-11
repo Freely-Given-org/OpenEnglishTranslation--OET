@@ -37,9 +37,6 @@ from gettext import gettext as _
 from typing import Dict, List, Tuple
 from pathlib import Path
 
-# if __name__ == '__main__':
-#     import sys
-#     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 import bos_books_codes_py

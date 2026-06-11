@@ -104,12 +104,12 @@ except ImportError:
     pwd = None
     import getpass
 
-if __name__ == '__main__':
-    aboveFolderpath = os.path.dirname( os.path.dirname( os.path.abspath( __file__ ) ) )
-    if aboveFolderpath not in sys.path:
-        sys.path.insert( 0, aboveFolderpath )
-assert os.path.isdir( '../../BibleOrgSys/' )
-sys.path.insert( 0, '../../BibleOrgSys/' )
+# if __name__ == '__main__':
+#     aboveFolderpath = os.path.dirname( os.path.dirname( os.path.abspath( __file__ ) ) )
+#     if aboveFolderpath not in sys.path:
+#         sys.path.insert( 0, aboveFolderpath )
+# assert os.path.isdir( '../../BibleOrgSys/' )
+# sys.path.insert( 0, '../../BibleOrgSys/' )
 
 
 LAST_MODIFIED_DATE = '2022-10-03' # by RJH
@@ -524,7 +524,7 @@ def getLatestPythonModificationDate() -> str:
                                 latestDD = DD
                                 #collectedFilepaths.append( (filepath,lineBit) )
                             break
-    #dPrint( 'Quiet', DEBUGGING_THIS_MODULE, latestYYYY, latestMM, latestDD ); halt
+    #dPrint( 'Quiet', DEBUGGING_THIS_MODULE, latestYYYY, latestMM, latestDD ); assert False, "We want to stop here"
     return f'{latestYYYY}-{latestMM:02}-{latestDD:02}'
 # end of BibleOrgSysGlobals.getLatestPythonModificationDate
 
@@ -1071,7 +1071,7 @@ def checkXMLNoAttributes( element, locationString, idString=None, loadErrorsDict
                         .format( (idString+' ') if idString else '', attrib, value, locationString )
         logging.warning( warningString )
         if loadErrorsDict is not None: loadErrorsDict.append( warningString )
-        if strictCheckingFlag or debugFlag and haltOnXMLWarning: halt
+        if strictCheckingFlag or debugFlag and haltOnXMLWarning: assert False, "We want to stop here"
 # end of BibleOrgSysGlobals.checkXMLNoAttributes
 
 
@@ -1084,7 +1084,7 @@ def checkXMLNoText( element, locationString, idString=None, loadErrorsDict=None 
                         .format( (idString+' ') if idString else '', element.text, locationString )
         logging.error( errorString )
         if loadErrorsDict is not None: loadErrorsDict.append( errorString )
-        if strictCheckingFlag or debugFlag and haltOnXMLWarning: halt
+        if strictCheckingFlag or debugFlag and haltOnXMLWarning: assert False, "We want to stop here"
 # end of BibleOrgSysGlobals.checkXMLNoText
 
 def checkXMLNoTail( element, locationString, idString=None, loadErrorsDict=None ):
@@ -1096,7 +1096,7 @@ def checkXMLNoTail( element, locationString, idString=None, loadErrorsDict=None 
                         .format( (idString+' ') if idString else '', element.tail, locationString )
         logging.warning( warningString )
         if loadErrorsDict is not None: loadErrorsDict.append( warningString )
-        if strictCheckingFlag or debugFlag and haltOnXMLWarning: halt
+        if strictCheckingFlag or debugFlag and haltOnXMLWarning: assert False, "We want to stop here"
 # end of BibleOrgSysGlobals.checkXMLNoTail
 
 
@@ -1110,7 +1110,7 @@ def checkXMLNoSubelements( element, locationString, idString=None, loadErrorsDic
         logger = logging.critical if subelement.text else logging.error
         logger( errorString )
         if loadErrorsDict is not None: loadErrorsDict.append( errorString )
-        if strictCheckingFlag or debugFlag and haltOnXMLWarning: halt
+        if strictCheckingFlag or debugFlag and haltOnXMLWarning: assert False, "We want to stop here"
 # end of BibleOrgSysGlobals.checkXMLNoSubelements
 
 def checkXMLNoSubelementsWithText( element, locationString, idString=None, loadErrorsDict=None ):
@@ -1126,7 +1126,7 @@ def checkXMLNoSubelementsWithText( element, locationString, idString=None, loadE
                                 element.tail.strip() if element.tail else element.tail )
             logging.warning( warningString )
             if loadErrorsDict is not None: loadErrorsDict.append( warningString )
-            if strictCheckingFlag or debugFlag and haltOnXMLWarning: halt
+            if strictCheckingFlag or debugFlag and haltOnXMLWarning: assert False, "We want to stop here"
 # end of BibleOrgSysGlobals.checkXMLNoSubelementsWithText
 
 
@@ -1148,7 +1148,7 @@ def getFlattenedXML( element, locationString, idString=None, level=0 ):
         if attributes: result += ' ' + attributes
         result += '>'
     elif attributes:
-        #dPrint( 'Quiet', DEBUGGING_THIS_MODULE, "We are losing attributes here:", attributes ); halt
+        #dPrint( 'Quiet', DEBUGGING_THIS_MODULE, "We are losing attributes here:", attributes ); assert False, "We want to stop here"
         result += '<' + attributes + '>'
     if element.text: result += element.text
     for subelement in element:

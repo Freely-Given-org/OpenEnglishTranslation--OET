@@ -61,6 +61,7 @@ CHANGELOG:
     2026-05-09 Switched to Rust bos_books_codes_py
     2026-05-12 Do more checking before adding NS nd markup
     2026-05-14 Switched to Rust bible_transliterations
+    2026-06-11 Handle new % (changed person) \\add format
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -78,7 +79,7 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-05-31' # by RJH
+LAST_MODIFIED_DATE = '2026-06-11' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.91'
@@ -229,8 +230,8 @@ verbalNouns = ('accusations','accusation',
                'compassion', 'confessions','confession', 'confidence',
                 'deception', 'decisions','decision', 'declarations','declaration', 'dedication', 'discussions','discussion', 'distribution', 'destruction',
                 'fellowship', 'forgiveness', 'fulfilment',
-                'immersion',
-                'repentance',
+                'immersion', 'invasion',
+                'rebellion', 'repentance',
                 'utterances','utterance',
                 )
 assert len(set(verbalNouns)) == len(verbalNouns) # Check for accidental duplicates
@@ -238,6 +239,7 @@ assert len(set(verbalNouns)) == len(verbalNouns) # Check for accidental duplicat
 simpleVerbs = ('abandoned','abandoning','abandons','abandon',
                     'accepted','accepting','accepts','accept', 'acted','acting','acts','act',
                     'advanced','advancing','advances','advance',
+                    'allowed','allowing','allows','allow',
                     'anointed','anointing','anoints','anoint', 'answered','answering','answers','answer',
                     'appointed','appointing','appoints','appoint',
                     'arrested','arresting','arrests','arrest',
@@ -247,35 +249,42 @@ simpleVerbs = ('abandoned','abandoning','abandons','abandon',
                     'blessed','blessing','blesses','bless',
                     'brought','bringing','brings','bring',
                     'burnt','burning','burns','burn', 'buried','burying','buries','bury',
-                'came','coming','comes','come', 'caught','catching','catches','catch',
+                'called','calling','calls','call', 'came','coming','comes','come', 'caught','catching','catches','catch',
                     'chose','choosing','chooses','choose',
-                    'confessed','confessing','confesses','confess',
-                    'cried','crying','cries','cry', 'cringed','cringes','cringe',
+                    'claimed','claiming','claims','claim', 'closed','closing','closes','close',
+                    'confessed','confessing','confesses','confess', 'consumed','consuming','consumes','consume',
+                    'cracked','cracking','cracks','crack', 'cried','crying','cries','cry', 'cringed','cringes','cringe',
+                    'cutting','cuts','cut',
                 'deceived','deceiving','deceives','deceive', 'decided','deciding','decides','decide',
                         'defended','defending','defends','defend',
                         'delivered','delivering','delivers','deliver',
                         'departed','departing','departs','depart',
-                        'descended','descends','descend',
-                    'did','doing','do','done', 'died','dying','dies','die', 'digs','dig','dug', 'discussed','discussing','discusses','discuss', 'disowned','disowning','disowns','disown', 'distributed','distributing','distributes','distribute',
+                        'descended','descending','descends','descend', 'destroyed','destroying','destroys','destroy',
+                    'did','doing','does','do','done', 'died','dying','dies','die', 'digs','dig','dug', 'discussed','discussing','discusses','discuss', 'disowned','disowning','disowns','disown', 'distributed','distributing','distributes','distribute',
                     'dragged','dragging','drags','drag', 'drove','driving','drives','drive', 'drunk','drinking','drinks','drink',
+                    'dwelled','dwelt','dwelling','dwells','dwell',
                 'ate','eating','eats','eat', 'embraced','embracing','embraces','embrace',
-                    'encouraged','encouraging','encourages','encourage', 'ended','ending','ends','end',
+                    'encouraged','encouraging','encourages','encourage', 'ended','ending','ends','end', 'entered','entering','enters','enter',
                     'existed','existing','exists','exist', 'extended','extending','extends','extend',
-                'feared','fearing','fears','fear',
+                'fell','falling','falls','fall',
+                    'feared','fearing','fears','fear',
                     'filled','filling','fills','fill',
-                    'flees','flee',
+                    'fled','fleeing','flees','flee',
                     'followed','following','follows','follow',
                         'forbidding','forbids','forbid', 'forgave','forgiven','forgiving','forgives','forgive', 'formed','forming','forms','form',
-                'gathered','gathering','gathers','gather', 'gave','giving','gives','give',
+                'gathered','gathering','gathers','gather',
+                    'gave','giving','gives','give',
                     'went','going','goes','go', 'governed','governing','governs','govern',
                     'greeted','greeting','greets','greet',
                 'harvested','harvesting','harvests','harvest', 'hated','hating','hates','hate',
                     'healed','healing','heals','heal', 'helped','helping','helps','help', 'heard','hearing','hears','hear',
+                    'hid','hiding','hides','hide',
                     'honoured','honouring','honours','honour',
-                'imitated','imitating','imitates','imitate', 'immersed','immersing','immerses','immerse',
+                'invaded','invading','invades','invade',
+                    'imitated','imitating','imitates','imitate', 'immersed','immersing','immerses','immerse',
                 'judged','judging','judges','judge',
                 'kept','keeping','keeps','keep', 'killed','killing','kills','kill', 'knew','known','knowing','knows','know',
-                'learnt','learning','learns','learn',
+                'led','leading','leads','lead', 'learnt','learning','learns','learn',
                     'listened','listening','listens','listen', 'lived','living','lives','live',
                     'looked','looking','looks','look', 'loved','loving','loves','love',
                 'magnified','magnifying','magnifies','magnify', 'made','making','makes','make',
@@ -283,20 +292,22 @@ simpleVerbs = ('abandoned','abandoning','abandons','abandon',
                 'obeyed','obeying','obeys','obey',
                     'offered','offering','offers','offer',
                     'ordered','ordering','orders','order',
-                'passed','passing','passes','pass', 'persuaded','persuading','persuades','persuade',
+                    'opened','opening','opens','open',
+                'packed','packing','packs','pack', 'passed','passing','passes','pass', 'persuaded','persuading','persuades','persuade',
                     'poured','pouring','pours','pour',
                     'practiced','practicing','practices','practice', 'praised','praising','praises','praise', 'promised','promising','promises','promise',
-                    'purified','purifying','purifies','purify',
+                    'purchased','purchasing','purchases','purchase', 'purified','purifying','purifies','purify',
                 'raged','raging','rages','rage', 'raised','raising','raises','raise',
-                    'received','receiving','receives','receive', 'recognised','recognising','recognises','recognise', 'recovered','recovering','recovers','recover',
+                    'rebelled','rebelling','rebels','rebel',
+                        'received','receiving','receives','receive', 'recognised','recognising','recognises','recognise', 'recovered','recovering','recovers','recover',
                         'redeemed','redeems','redeem',
                         'released','releasing','releases','release', 'relented','relenting','relents','relent', 'relied','relying','relies','rely',
-                        'remained','remaining','remains','remain', 'reminded','reminding','reminds','remind', 'removed','removing','removes','remove',
+                        'remained','remaining','remains','remain', 'remembered','remembering','remembers','remember', 'reminded','reminding','reminds','remind', 'removed','removing','removes','remove',
                         'reported','reporting','reports','report',
                         'requested','requesting','requests','request',
-                        'respected','respecting','respects','respect', 'restrained','restraining','restrains','restrain',
+                        'rescued','rescuing','rescues','rescue', 'respected','respecting','respects','respect', 'restrained','restraining','restrains','restrain',
                         'revealed','revealing','reveals','reveal',
-                    'ran','running','runs','run',
+                    'ruined','ruining','ruins','ruin', 'ran','running','runs','run',
                 'sailed','sailing','sails','sail', 'said','saying','says','say', 'saved','saving','saves','save',
                     'seated','seating','seats','seat',
                         'seduced','seducing','seduces','seduce',
@@ -307,11 +318,13 @@ simpleVerbs = ('abandoned','abandoning','abandons','abandon',
                     'shook','shaken','shaking','shakes','shake', 'shared','sharing','shares','share',
                         'shone','shining','shines','shine',
                         'showed','showing','shows','show',
-                    'signalled','signalling','signals','signal', 'sat','sitting','sits','sit',
-                    'slept','sleeping','sleeps','sleep',
+                    'signalled','signalling','signals','signal', 'sinned','sinning','sins','sin', 'sat','sitting','sits','sit',
+                    'slaughtered','slaughtering','slaughters','slaughter',
+                        'slept','sleeping','sleeps','sleep',
                     'spoke','spoken','speaking','speaks','speak',
                     'stayed','staying','stays','stay',
                         'stood','standing','stands','stand',
+                        'stopped','stopping','stops','stop',
                         'stretched','stretching','stretches','stretch',
                     'succeeded','succeeding','succeeds','succeed',
                         'suffered','suffering','suffers','suffer',
@@ -321,9 +334,11 @@ simpleVerbs = ('abandoned','abandoning','abandons','abandon',
                     'testified','testifying','testifies','testify',
                     'thought','thinking','thinks','think', 'threw','throwing','throws','throw',
                     'touched','touching','touches','touch',
-                    'travelled','travelling','travels','travel', 'turned','turning','turns','turn',
-                'united','uniting','unites','unite', 'untied','untying','unties','untie'
+                    'travelled','travelling','travels','travel',
+                    'turned','turning','turns','turn',
+                'united','uniting','unites','unite', 'untied','untying','unties','untie',
                 'walked','walking','walks','walk', 'wanted','wanting','wants','want', 'warned','warning','warns','warn', 'watched','watching','watches','watch',
+                    'wore','wearing','wears','wear',
                     'withdrew','withdrawing','withdraws','withdraw', 'withered','withering','withers','wither',
                     'worked','working','works','work',
                     'wrote','written','writing','writes','write',
@@ -331,8 +346,12 @@ simpleVerbs = ('abandoned','abandoning','abandons','abandon',
                     'yielded','yielding','yields','yield',
                 )
 assert len(set(simpleVerbs)) == len(simpleVerbs), [x for x in simpleVerbs if simpleVerbs.count(x)>1 ] # Check for accidental duplicates
+for simpleVerb in simpleVerbs:
+    assert len(simpleVerb) <= 12, f"({len(simpleVerb)}) {simpleVerb}" # 'distributing'
+
 simpleAdverbs = ('quickly', 'immediately', 'loudly', 'suddenly',)
 assert len(set(simpleAdverbs)) == len(simpleAdverbs) # Check for accidental duplicates
+
 simpleAdjectives = ('alive', 'angry', 'bad', 'big', 'bitter',
                     'clean', 'cold',
                     'dangerous', 'dead', 'disobedient', 'entire', 'evil',
@@ -344,19 +363,23 @@ simpleAdjectives = ('alive', 'angry', 'bad', 'big', 'bitter',
                     'obedient', 'opposite', 'possible', 'sad', 'same', 'sick', 'small', 'sudden', 'sweet',
                     'whole', 'wide','wild', 'wounded')
 assert len(set(simpleAdjectives)) == len(simpleAdjectives) # Check for accidental duplicates
+
 # Don't use 'one' below because it has other meanings
 simpleNumbers = ('two','three','four','five','six','seven','eight','nine',
                     'ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen',
                     'twenty','thirty','forty','fifty','sixty','seventy','eighty','ninety',
                     'none')
 assert len(set(simpleNumbers)) == len(simpleNumbers) # Check for accidental duplicates
+
 pronouns = ('he','she','it', 'him','her','its', 'you','we','they', 'your','our','their',
             'himself','herself','itself', 'yourself','yourselves', 'ourselves', 'themselves',
             'everyone')
 assert len(set(pronouns)) == len(pronouns) # Check for accidental duplicates
+
 # We don't expect connectors to work very well
 connectors = ('and', 'but')
 assert len(set(connectors)) == len(connectors) # Check for accidental duplicates
+
 SIMPLE_WORDS = SIMPLE_NOUNS + verbalNouns + simpleVerbs + simpleAdverbs+ simpleAdjectives  + simpleNumbers + pronouns + connectors
 # assert len(set(simpleWords)) == len(simpleWords) # Check for accidental duplicates -- but may be overlaps, e.g., love is a verb and a noun
 
@@ -882,7 +905,7 @@ def loadHebGrkNameTables():
                 if searchText.startswith('Z') and replaceText.startswith('Ts'): # e.g., Ziklag
                     state.nameTables['OT'][replaceText].add( f'Ts{searchText[1:]}' ) # We add an extra entry
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded {len(state.nameTables['OT']):,} OT names." )
-    # print( f"{state.nameTables['OT']['Mənaḩēm']=}" ); halt
+    # print( f"{state.nameTables['OT']['Mənaḩēm']=}" ); assert False, "We want to stop here"
 
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading NT OT names from {NT_OT_NameTable_Filepath}…" )
     state.nameTables['NT_OT'] = defaultdict( set )
@@ -1142,7 +1165,7 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
                     lvVerseEntryList, _lvCcontextList = lv.getContextVerseData( (BBB, C, V) )
                 except KeyError:
                     logging.critical( f"Seems we have no OET-LV {BBB} {c}:{v} -- versification issue?" )
-                    halt
+                    assert False, "We want to stop here"
                     continue
                 # if BBB=='PSA' and v<3: # and c in (3,23,29)
                 #     dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nRV entries for {BBB} {C}:{V}: ({len(rvVerseEntryList)}) {rvVerseEntryList}")
@@ -1178,7 +1201,7 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
         assert badAddND not in newESFMtext, f"\\nd in \\add start check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(badAddND)-10:newESFMtext.index(badAddND)+35]}'"
         assert badNDAdd not in newESFMtext, f"\\nd in \\add end check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(badNDAdd)-10:newESFMtext.index(badNDAdd)+35]}'"
         # NOTE: '*?' has to have a space before it, because \\add*? might occur at the end of a question
-        for wronglyOrderedCombo in ('+?','=?','<?','>?','≡?','&?','@?',' *?','#?','^?','≈?'):
+        for wronglyOrderedCombo in ('+?','=?','<?','>?','≡?','&?','@?',' *?','#?','%?','^?','≈?'):
             assert wronglyOrderedCombo not in newESFMtext, f"Wrongly ordered combo check failed with '{wronglyOrderedCombo}' before saving {BBB} with '{newESFMtext[newESFMtext.index(wronglyOrderedCombo)-10:newESFMtext.index(wronglyOrderedCombo)+35]}'"
         with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
             esfmFile.write( newESFMtext )
@@ -1478,13 +1501,13 @@ def matchIdenticalProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[
         #     assert '¦' in capitalisedNounPair, f"{capitalisedNounPair=} from {capitalisedNounPair=}"
         #     capitalisedNoun,wordNumber,wordRow = getLVWordRow( capitalisedNounPair )
         #     dPrint( 'Info', f"'{capitalisedNoun}' {wordRow}" )
-        #     halt
+        #     assert False, "We want to stop here"
     else:
         dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchIdenticalProperNouns() lists are different sizes {len(rvCapitalisedWordList)=} and {len(lvCapitalisedWordList)=}" )
         # for capitalisedNounPair in lvCapitalisedWordList:
         #     capitalisedNoun,wordNumber,wordRow = getLVWordRow( capitalisedNounPair )
         #     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"'{capitalisedNoun}' {wordRow}" )
-        #     halt
+        #     assert False, "We want to stop here"
     return numAdded,numNS
 # end of connect_OET-RV_words_via_OET-LV.matchIdenticalProperNouns
 
@@ -1588,11 +1611,11 @@ def matchAdjustedProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[s
                     #             result = addNumberToRVWord( BBB, c,v, rvCapitalisedWord, wordNumber )
                     #             if result:
                     #                 numAdded += 1
-                    #             halt
+                    #             assert False, "We want to stop here"
                     #             break
     # if BBB=='KI2' and c==17 and v==1:
     #     print( f"{rvCapitalisedWordList=} {lvCapitalisedWordList=}" )
-    #     halt
+    #     assert False, "We want to stop here"
     return numAdded,numNS
 # end of connect_OET-RV_words_via_OET-LV.matchAdjustedProperNouns
 
@@ -1711,7 +1734,7 @@ def matchWordsManually( BBB:str, c:int,v:int, rvVerseWordList:List[str], lvVerse
     """
     fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsManually( {BBB} {c}:{v} {rvVerseWordList}, {lvVerseWordList} )" )
     assert rvVerseWordList and lvVerseWordList
-    # if BBB=='JAM' and 'Jacob' in rvVerseWordList: print( lvVerseWordList ); halt
+    # if BBB=='JAM' and 'Jacob' in rvVerseWordList: print( lvVerseWordList ); assert False, "We want to stop here"
 
     # Firstly make matching lists of LV and RV words without the word numbers
     simpleLVWordList = []
@@ -1748,7 +1771,7 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
     """
     # if BBB=='KI2' and c==15 and v==28:
     #     print( f"doGroup1( {BBB} {c}:{v} {rvVerseWordList=} {lvVerseWordList=} {simpleLVWordList=} )")
-    #     halt
+    #     assert False, "We want to stop here"
     NT = bos_books_codes_py.is_new_testament_nr( BBB )
 
     numAdded = numNS = 0

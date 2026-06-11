@@ -119,3 +119,5 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - try to remove righteousness (doing what's right) and perhaps justice (doing what's fair) from RV
 - redeemed (replace 'bought you') -> 'paid the price to free you'
 - green tree / luxuriant tree / leafy tree
+- nobles -> leading citizens
+- sword -> war
