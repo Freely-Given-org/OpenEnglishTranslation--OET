@@ -376,7 +376,7 @@ def apply_OT_scripted_gloss_updates() -> bool:
                     vPrint( 'Info', DEBUGGING_THIS_MODULE, f"Applying {commandTableName}: {tags=} {iBooks=} {eBooks=} {iMarkers=} {eMarkers=} {iRefs=} {eRefs=} {editCommand.preText=} {editCommand.sCase=} {searchText=} {editCommand.postText=} {editCommand.rCase=} {replaceText=} {editCommand.name=} {editCommand.comment}" )
                     if iMarkers or eMarkers:
                         print( f"  Unable to apply '{commandTableName}' {iMarkers=} or {eMarkers=}" )
-                        halt
+                        assert False, "We want to stop here"
 
                     if 'w' in tags: # whole words
                         myRegexSearchString = f'\\b{searchText}\\b'
@@ -431,7 +431,7 @@ def apply_OT_scripted_gloss_updates() -> bool:
                                 numReplacements += 1
                         else:
                             vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Ignored {commandTableName} '{editCommand.name}' {editCommand.comment} {tags=}" )
-                            halt
+                            assert False, "We want to stop here"
 
                         if newGloss != oldGloss:
                             columnDataList[12] = newGloss
@@ -984,7 +984,7 @@ def fill_extra_columns_and_remove_some() -> bool:
 
         lemmaList, lemmaRowList = [], []
         for dummyRange in range( 8 ): # because we sometimes have to skip over notes and segs
-            # if dummyRange > 5: halt
+            # if dummyRange > 5: assert False, "We want to stop here"
             if dummyRange > 1: dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"\n\n{dummyRange=}" )
             elif dummyRange > 0: dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{dummyRange=}" )
             if macIndex >= len(state.macula_tsv_lines):
@@ -1072,7 +1072,7 @@ def fill_extra_columns_and_remove_some() -> bool:
                 # assert ourBBB == theirMaculaBBB, f"{ourBBB=} {theirMaculaBBB=} {lastBBB=}"
                 if ourBBB != theirMaculaBBB:
                     if ourBBB != lastBBB: more = True
-                    else: halt
+                    else: assert False, "We want to stop here"
                 if not more or less:
                     ourC, ourVW = ourCVW.split( ':', 1 )
                     theirMaculaC, theirVW = theirMaculaCVW.split( ':', 1 )
@@ -1105,7 +1105,7 @@ def fill_extra_columns_and_remove_some() -> bool:
             ourColumns[4] = ','.join( lemmaRowList )
             if ourColumns[4].count(',') != ourColumns[3].count(','):
                 logging.critical( f"LemmaRowList count doesn't match MorphemeRowList count at {ourColumns[0]} {lemmaList=} {ourColumns[3]=} {ourColumns[4]=}" )
-                # halt
+                # assert False, "We want to stop here"
         state.newWordTable[ourIndex] = '\t'.join( ourColumns )
         if macIndex >= len(state.macula_tsv_lines):
             dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"RanB out of Macula lines at {ourIndex}/{len(state.newWordTable)} {ourLineStr}" )

@@ -236,7 +236,7 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
                         for noteChild in verse_element:
                             if noteChild.tag == f"{{{namespaces['osis']}}}catchWord":
                                 for attrib,value in noteChild.items():
-                                    print(attrib,value); halt # Should be no attributes
+                                    print(attrib,value); assert False, "We want to stop here" # Should be no attributes
                                 noteText = f"{noteText}{' ' if noteText else ''}{noteChild.text}:"
                                 assert 'None' not in noteText, f"BAD note: {readable_ref} {n=} {noteType=} {noteText=}"
                             elif noteChild.tag == f"{{{namespaces['osis']}}}rdg":
@@ -244,7 +244,7 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
                                     if attrib == 'type':
                                         noteText = f"{noteText}{' ' if noteText else ''}({value})"
                                         assert 'None' not in noteText, f"BAD note: {readable_ref} {n=} {noteType=} {noteText=}"
-                                    else: print(attrib,value); halt # Should be no attributes
+                                    else: print(attrib,value); assert False, "We want to stop here" # Should be no attributes
                                 for rdgChild in noteChild:
                                     if rdgChild.tag == f"{{{namespaces['osis']}}}w":
                                         noteText = f"{noteText}{' ' if noteText and noteText[-1] not in '׀־' else ''}'{rdgChild.text}':"
@@ -256,14 +256,14 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
                                         assert rdgChild.get('type') in ('x-maqqef','x-paseq'), f"Seg is {rdgChild.get('type')} {rdgChild.text=}"
                                         noteText = f"{noteText}{rdgChild.text}"
                                         assert 'None' not in noteText, f"BAD note: {readable_ref} {n=} {noteType=} {noteText=}"
-                                    else: print(rdgChild); halt
+                                    else: print(rdgChild); assert False, "We want to stop here"
                                     if rdgChild.text:
                                         noteText = f"{noteText}{' ' if noteText else ''}{rdgChild.text}"
                                         assert 'None' not in noteText, f"BAD note: {readable_ref} {n=} {noteType=} {noteText=}"
                                 if noteChild.text:
                                     noteText = f"{noteText}{noteChild.text}"
                                     assert 'None' not in noteText, f"BAD note: {readable_ref} {n=} {noteType=} {noteText=}"
-                            else: print(noteChild); halt
+                            else: print(noteChild); assert False, "We want to stop here"
                         # if readable_ref=='JER_48:44':
                         #     noteText = noteText.strip() # Need to strip multiline note
                         #     # NOTE: This doesn't work! We had to edit Jer.xml in Forked/OS-morphhb/wlc/
@@ -271,7 +271,7 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
                         #     print( f"{readable_ref} {noteText=}" )
                         vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Now note: {readable_ref} {n=} {noteType=} {noteText=}" )
                         assert '  ' not in noteText and noteText.strip()==noteText
-                        # if readable_ref=='JER_49:25': halt # Next note afterwards
+                        # if readable_ref=='JER_49:25': assert False, "We want to stop here" # Next note afterwards
                     else: # not 'variant'
                         assert noteText
                         for attrib,value in verse_element.items():
@@ -287,7 +287,7 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
 
                 else:
                     logging.critical( f"Unknown verse element at {readable_ref}: {verse_element.tag}")
-                    halt
+                    assert False, "We want to stop here"
             verseArray.append(verse_element_array)
         chapter_array.append(verseArray)
         assert len(set(id_list)) == len(id_list) # i.e., no duplicate IDs within book
@@ -310,7 +310,7 @@ def adjust_data_table() -> bool:
             if field and field.strip() != field:
                 row[columnNumber] = field.strip()
         # print( f"  {row=}")
-        # if 'Often this notation indicates a typographical error in BHS' in str(row): halt # Gen 1:12
+        # if 'Often this notation indicates a typographical error in BHS' in str(row): assert False, "We want to stop here" # Gen 1:12
 
     return True
 # end of convert_OSHB_XML_to_TSV.adjust_data_table

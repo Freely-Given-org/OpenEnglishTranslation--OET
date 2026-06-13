@@ -30,6 +30,7 @@ Script to convert OET-RV ESFM files to text files suitable for TTS processing.
 CHANGELOG:
     2026-02-24 Switched from PiperTTS to much better quality online GoogleTTS
     2026-02-26 Copy ogg files straight into Radio folder
+    2026-06-11 Handle new % (changed person) \\add format
 """
 from pathlib import Path
 import os, os.path
@@ -40,18 +41,15 @@ import subprocess
 import shutil
 import logging
 
-# if __name__ == '__main__':
-#     import sys
-#     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 import BibleOrgSys.Formats.ESFMBible as ESFMBible
 
 
-LAST_MODIFIED_DATE = '2026-03-19' # by RJH
+LAST_MODIFIED_DATE = '2026-06-11' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-RV_to_sectionReadings"
 PROGRAM_NAME = "Convert OET-RV to section readings"
-PROGRAM_VERSION = '0.39'
+PROGRAM_VERSION = '0.40'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -126,7 +124,7 @@ THINGS_TO_REMOVE = ( # Don't include \\add here because they get special treatme
     '(Tyre)',
     '(Zion)',
 )
-ADD_THINGS_TO_REMOVE = ( '?≈','≈', '=', '+', '#', '*', '&', '?@','@', '≡', '<', '>', '^', '→', '?', '' )
+ADD_THINGS_TO_REMOVE = ( '?≈','≈', '=', '+', '#', '%', '*', '&', '?@','@', '≡', '<', '>', '^', '→', '?', '' )
 
 PICKLE_FILENAME_END = '.OBD_Bible.pickle'
 

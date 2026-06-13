@@ -59,9 +59,6 @@ import logging
 from xml.etree import ElementTree
 import unicodedata
 
-# if __name__ == '__main__':
-#     import sys
-#     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.OriginalLanguages import Hebrew
@@ -323,10 +320,10 @@ wordnumber_regex = re.compile( '[0-9]{12}' )
 #                         if '(et)' in gloss or '(dm)' in gloss:
 #                             print( f"(et) or (dm) {theirRef=} {wordOrMorpheme=} {gloss=}" )
 #                             if '(et)' in gloss and wordOrMorpheme not in ('אֵ֥ת','אֶת','אֶֽת','אֵ֚ת','אֵ֖ת','אֵ֛ת','אֵ֣ת','אֶׄתׄ','אֵת֩','אֵ֤ת','אֶ֨ת','אֵ֡ת','אֵ֧ת','אֵ֠ת','אֵ֗ת','אֵת','אֵֽת','אֶ֥ת','אֵ֝֗ת','אֵ֝ת','אֵת֮','אֶתּ'):
-#                                 halt
+#                                 assert False, "We want to stop here"
 #                             if '(dm)' in gloss and wordOrMorpheme not in ('כִּי','כִּ֣י','כִּי֩','כִּ֗י','כִּ֥י','כִּֽי','כִּ֚י','כִּ֛י','כִּ֤י','כִּ֠י','כִּ֧י','כִֽי','כִּ֡י','כִּ֖י','כִּ֞י','כִ֤י','כִ֥י','כִּ֨י','כִי','כִ֗י','כִ֔י','כִּ֭י','כִּ֘י','כִּ֝֗י','כִּ֬י','כִּ֪י','כִ֛י','כִּ֩י'):
 #                                 if theirRef not in ('DAN 1:8!5','DAN 1:8!15') or wordOrMorpheme not in ('אֲשֶׁ֧ר','אֲשֶׁ֖ר'):
-#                                     halt
+#                                     assert False, "We want to stop here"
 #                         gloss = ( gloss.replace( '.', '_' ) # Change to our system
 #                                     .replace( '(et)', 'DOM' ) # Change to our 'DOM' = DirectObjectMarker
 #                                     .replace( '(dm)', '' if theirRef.startswith('DAN 1:8!') else 'if/because') # What is dm supposed to mean?
@@ -433,11 +430,11 @@ wordnumber_regex = re.compile( '[0-9]{12}' )
 #                             English = English.replace( 'temple', 'house' )
 #                     # if (gloss and '[is]' in gloss) or (English and '[is]' in English):
 #                     #     print( f"Have '[is]' in {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
-#                     #     halt
+#                     #     assert False, "We want to stop here"
 #                     # if gloss=='[is]' or English=='[is]' \
 #                     # or (gloss and gloss[0]=='[' and gloss[-1]==']' and '_' not in gloss) \
 #                     # or (English and English[0]=='[' and English[-1]==']' and '_' not in English):
-#                     #     halt
+#                     #     assert False, "We want to stop here"
 
 #                     # Get all the parent elements so we can determine the nesting
 #                     startElement = elem
@@ -493,7 +490,7 @@ wordnumber_regex = re.compile( '[0-9]{12}' )
 #                     #     if v: non_blank_counts[k] += 1
 #                     tempWordsAndMorphemes.append( entry )
 #                     # dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\n  ({len(entry)}) {entry}" ) # 28
-#                     # if len(tempWordsAndMorphemes) > 5: halt
+#                     # if len(tempWordsAndMorphemes) > 5: assert False, "We want to stop here"
 
 #             vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Got {len(tempWordsAndMorphemes):,} words/morphemes in {BBB} {chapterNumber}")
 #             assert len(set(longIDs)) == len(longIDs), f"Should be no duplicates in {longIDs=}"
@@ -519,7 +516,7 @@ wordnumber_regex = re.compile( '[0-9]{12}' )
 #                     # Add the article gloss to the previous entry
 #                     lastExpandedEntry = state.maculaHebrewWordsAndMorphemes[-1] # We'll edit the last dict entry in place
 #                     lastExpandedEntry['EnglishGloss'] = f"{lastExpandedEntry['EnglishGloss']}_{english if english else 'THE'}" # Why wasn't the gloss there?
-#                     # else: print(f"{longID} There wasn't an English gloss!!!"); halt
+#                     # else: print(f"{longID} There wasn't an English gloss!!!"); assert False, "We want to stop here"
 #                 else: # a normal word or morpheme entry
 #                     try: nextLongID = sortedTempWordsAndMorphemes[j+1]['LFNumRef']
 #                     except IndexError: nextLongID = '1'
@@ -551,7 +548,7 @@ wordnumber_regex = re.compile( '[0-9]{12}' )
 #     #     for n,currentEntry in enumerate(state.maculaHebrewWordsAndMorphemes):
 #     #         print(f"{n} ({len(currentEntry)}) {currentEntry}")
 #     #         if n > 10: break
-#     #     halt
+#     #     assert False, "We want to stop here"
 
 #     # Adjust frames to our references
 #     for lfRow in state.maculaHebrewWordsAndMorphemes:
@@ -583,7 +580,7 @@ wordnumber_regex = re.compile( '[0-9]{12}' )
 #     #     for n,currentEntry in enumerate(state.maculaHebrewWordsAndMorphemes):
 #     #         assert len(currentEntry) == len(state.output_fieldnames)-1
 #     #         if n < 5 or 'THE' in currentEntry['EnglishGloss']: print(f"{n} ({len(currentEntry)}) {currentEntry}")
-#     #     halt
+#     #     assert False, "We want to stop here"
 #     return True
 # # end of convert_ClearMaculaOT_to_our_TSV.loadMaculaHebrewLowFatXMLGlosses
 
@@ -661,11 +658,11 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                                                                           'לְ','לֶ','לַ','לָ֣','לַֽ','לָ֑','לָ֨','וּ','לִ֕','לֵֽ','וְ', # First cases in EZR and DAN
                                                                           ):
                                 print( f"Have (et) {theirRef=} {wordOrMorpheme=} {gloss=}" )
-                                halt
+                                assert False, "We want to stop here"
                             if '(dm)' in gloss and wordOrMorpheme not in ('כִּי','כִּ֣י','כִּי֩','כִּ֗י','כִּ֥י','כִּֽי','כִּ֚י','כִּ֛י','כִּ֤י','כִּ֠י','כִּ֧י','כִֽי','כִּ֡י','כִּ֖י','כִּ֞י','כִ֤י','כִ֥י','כִּ֨י','כִי','כִ֗י','כִ֔י','כִּ֭י','כִּ֘י','כִּ֝֗י','כִּ֬י','כִּ֪י','כִ֛י','כִּ֩י'):
                                 print( f"Have (dm) {theirRef=} {wordOrMorpheme=} {gloss=}" )
                                 if theirRef not in ('DAN 1:8!5','DAN 1:8!15') or wordOrMorpheme not in ('אֲשֶׁ֧ר','אֲשֶׁ֖ר'):
-                                    pass #halt
+                                    pass #assert False, "We want to stop here"
                         gloss = ( gloss.replace( '.', '_' ) # Change to our system
                                     .replace( '(et)', 'DOM' ) # Change to our 'DOM' = DirectObjectMarker
                                     .replace( '(dm)', '' if theirRef.startswith('DAN 1:8!') else 'if/because') # What is dm supposed to mean?
@@ -796,7 +793,7 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                         or 'havedone' in gloss or 'inpledge' in gloss or 'isdue' in gloss \
                         or 'letloose' in gloss \
                         or 'ofstones' in gloss or 'onfire' in gloss:
-                            print( f"Bad gloss: {gloss=} {English=}" ); halt
+                            print( f"Bad gloss: {gloss=} {English=}" ); assert False, "We want to stop here"
                     if English:
                         if 'temple' in English:
                             # print( f"{theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
@@ -841,11 +838,11 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                                             'totally','totter','tottering','totters','toward','towards','tower','towered','towers','town','towns',
                                             'together_with',):
                             if 'to_' not in English and 'too_' not in English:
-                                print( f"Got {gloss=} {English=}" ); halt
+                                print( f"Got {gloss=} {English=}" ); assert False, "We want to stop here"
                         # if English.startswith( 'call_'): print( f"{gloss=} {English=}" )
                         if 'towitness' in English or 'topass' in English or 'toaccount' in English \
                         or 'letloose' in English or 'isdue' in English or 'aspriest' in English:
-                            print( f"Bad English: {gloss=} {English=}" ); halt
+                            print( f"Bad English: {gloss=} {English=}" ); assert False, "We want to stop here"
 
                     # Get all the parent elements so we can determine the nesting
                     startElement = elem
@@ -1011,7 +1008,7 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                                         if lastEnglish == englishParts[0]: # Assume this is now the second part
                                             English = englishParts[1]
                                             # print( f"    Changed.B to {English=}" )
-                                            if gloss == 'Beth': print( f"Deleting BETH {ourRef=} {theirRef=} {glossParts=} {englishParts=} {lastGloss=} {lastEnglish=}" ); halt
+                                            if gloss == 'Beth': print( f"Deleting BETH {ourRef=} {theirRef=} {glossParts=} {englishParts=} {lastGloss=} {lastEnglish=}" ); assert False, "We want to stop here"
                                         else: # Assume that this is the first part
                                             English = englishParts[0]
                                             # print( f"    Changed.A to {English=}" )
@@ -1038,14 +1035,14 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                                         else: # Assume that this is the first part
                                             English = englishParts[0]
                                             # print( f"    Changed.A to {English=}" )
-                                    else: print( f"{ourRef=} {theirRef=} {glossParts=} {englishParts=} {lastGloss=} {lastEnglish=}" ); halt
+                                    else: print( f"{ourRef=} {theirRef=} {glossParts=} {englishParts=} {lastGloss=} {lastEnglish=}" ); assert False, "We want to stop here"
                                 elif ' ' in English:
                                     englishParts = English.split( ' ' )
                                     if len(englishParts) == 2:
                                         if lastEnglish == englishParts[0]: # Assume this is now the second part
                                             English = englishParts[1]
                                             # print( f"    Changed B to {English=}" )
-                                            if gloss == 'Beth': print( f"Deleting BETH {ourRef=} {theirRef=} {glossParts=} {englishParts=} {lastGloss=} {lastEnglish=}" ); halt
+                                            if gloss == 'Beth': print( f"Deleting BETH {ourRef=} {theirRef=} {glossParts=} {englishParts=} {lastGloss=} {lastEnglish=}" ); assert False, "We want to stop here"
                                         else: # Assume that this is the first part
                                             English = englishParts[0]
                                             # print( f"    Changed A to {English=}" )
@@ -1106,7 +1103,7 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                     or gloss=='(plunder' or English=='(plunder' \
                     or (English and English[0]=='[' and English[-1]==']' and '_' not in English):
                         #print( f"   Have potential problem in {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
-                        # halt
+                        # assert False, "We want to stop here"
                         pass
 
                     # Names have to match state.output_fieldnames:
@@ -1136,7 +1133,7 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                     #     if v: non_blank_counts[k] += 1
                     tempWordsAndMorphemes.append( entry )
                     # dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\n  ({len(entry)}) {entry}" ) # 28
-                    # if len(tempWordsAndMorphemes) > 5: halt
+                    # if len(tempWordsAndMorphemes) > 5: assert False, "We want to stop here"
                     lastGloss, lastEnglish = gloss, English
 
             vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Got {len(tempWordsAndMorphemes):,} words/morphemes in {BBB} {chapterNumber}")
@@ -1163,7 +1160,7 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                     # Add the article gloss to the previous entry
                     lastExpandedEntry = state.maculaHebrewWordsAndMorphemes[-1] # We'll edit the last dict entry in place
                     lastExpandedEntry['EnglishGloss'] = f"{lastExpandedEntry['EnglishGloss']}_{english if english else 'THE'}" # Why wasn't the gloss there?
-                    # else: print(f"{longID} There wasn't an English gloss!!!"); halt
+                    # else: print(f"{longID} There wasn't an English gloss!!!"); assert False, "We want to stop here"
                 else: # a normal word or morpheme entry
                     try: nextLongID = sortedTempWordsAndMorphemes[j+1]['LFNumRef']
                     except IndexError: nextLongID = '1'
@@ -1195,7 +1192,7 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
     #     for n,currentEntry in enumerate(state.maculaHebrewWordsAndMorphemes):
     #         print(f"{n} ({len(currentEntry)}) {currentEntry}")
     #         if n > 10: break
-    #     halt
+    #     assert False, "We want to stop here"
 
     # Adjust frames to our references
     for lfRow in state.maculaHebrewWordsAndMorphemes:
@@ -1227,7 +1224,7 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
     #     for n,currentEntry in enumerate(state.maculaHebrewWordsAndMorphemes):
     #         assert len(currentEntry) == len(state.output_fieldnames)-1
     #         if n < 5 or 'THE' in currentEntry['EnglishGloss']: print(f"{n} ({len(currentEntry)}) {currentEntry}")
-    # halt
+    # assert False, "We want to stop here"
     return True
 # end of convert_ClearMaculaOT_to_our_TSV.loadMaculaHebrewNodesXMLGlosses
 
@@ -1594,7 +1591,7 @@ def save_filled_morpheme_TSV_file() -> bool:
 
     BibleOrgSysGlobals.backupAnyExistingFile( state.morpheme_TSV_output_filepath, numBackups=5 )
 
-    # print(len(state.lowFatWordsAndMorphemes[0]), state.lowFatWordsAndMorphemes[0]);halt
+    # print(len(state.lowFatWordsAndMorphemes[0]), state.lowFatWordsAndMorphemes[0]);assert False, "We want to stop here"
     with open( state.morpheme_TSV_output_filepath, 'wt', encoding='utf-8', newline='' ) as tsv_output_file:
         tsv_output_file.write('\ufeff') # Write BOM
         writer = DictWriter( tsv_output_file, fieldnames=state.morpheme_output_fieldnames, delimiter='\t', lineterminator='\n' )
@@ -1643,7 +1640,7 @@ def save_shortened_morpheme_TSV_file() -> bool:
     # FGRef	OSHBid	RowType	WordOrMorpheme	After	Compound	WordClass	PartOfSpeech	Person	Gender	Number	WordType	State	Role	StrongNumberX	StrongLemma	Stem	Morphology	Lemma	SenseNumber	SubjRef	ParticipantRef	Frame	Greek	GreekStrong	EnglishGloss	ContextualGloss	Nesting
     # print(f"({len(state.output_fieldnames)}) {state.output_fieldnames} -> ({len(shortenedFieldnames)}) {shortenedFieldnames}")
 
-    # print(len(state.lowFatWordsAndMorphemes[0]), state.lowFatWordsAndMorphemes[0]);halt
+    # print(len(state.lowFatWordsAndMorphemes[0]), state.lowFatWordsAndMorphemes[0]);assert False, "We want to stop here"
     non_blank_counts = defaultdict(int)
     sets = defaultdict(set)
     with open( state.morpheme_shortened_TSV_output_filepath, 'wt', encoding='utf-8', newline='' ) as tsv_output_file:

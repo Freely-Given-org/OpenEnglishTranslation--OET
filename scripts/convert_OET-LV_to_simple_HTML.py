@@ -767,7 +767,7 @@ def produce_HTML_files() -> None:
                         with open( word_table_filepath, 'rt', encoding='utf-8' ) as word_table_input_file:
                             word_table = word_table_input_file.read().rstrip( '\n' ).split( '\n' ) # Remove any blank line at the end then split
                         vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Read {len(word_table):,} lines from word table at {word_table_filepath}." )
-                else: logging.critical( f"Expected {BBB} word-table '{word_table_filename}' {esfm_text[:500]}" ); halt
+                else: logging.critical( f"Expected {BBB} word-table '{word_table_filename}' {esfm_text[:500]}" ); assert False, "We want to stop here"
             assert esfm_text.count('(') == esfm_text.count(')'), f"Why do we have OET-LV_{BBB}.usfm {esfm_text.count('(')=} and {esfm_text.count(')')=}"
             assert esfm_text.count('‘') == esfm_text.count('’'), f"Why do we have OET-LV_{BBB}.usfm {esfm_text.count('‘')=} and {esfm_text.count('’')=}"
             assert esfm_text.count('“') >= esfm_text.count('”'), f"Why do we have OET-LV_{BBB}.usfm {esfm_text.count('“')=} and {esfm_text.count('”')=}"
@@ -933,7 +933,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
             assert rest
             assert '¦' not in rest
             C = rest
-            # if C=='2': halt
+            # if C=='2': assert False, "We want to stop here"
             assert C.isdigit()
             if C == '1': # Add an inspirational note
                 book_html = f'{book_html}{INTRO_PRAYER_HTML}<div class="BibleText">\n'
@@ -1072,7 +1072,7 @@ def convert_tagged_ESFM_words_to_links( BBB:str, book_html:str, word_table:List[
         try: greek = word_table[row_number].split('\t')[1]
         except IndexError:
             logging.critical( f"convert_tagged_ESFM_words_to_links( {BBB} ) index error: word='{match.group(1)}' {row_number=}/{len(word_table)} entries")
-            halt
+            assert False, "We want to stop here"
         book_html = f'{book_html[:match.start()]}<a title="{greek}" href="W/{match.group(2)}.html">{match.group(1)}</a>{book_html[match.end():]}'
         searchStartIndex = match.end() + 25 # We've added at least that many characters
         count += 1

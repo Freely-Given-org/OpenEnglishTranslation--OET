@@ -1801,14 +1801,14 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
             section = lvSectionHTML[:LVindex1]
             dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} '{lvSectionHTML[:LVindex1]}' then '{section[:60]}...{section[-30:]}'" )
             if section == '<div class="BibleText">\n': section = ''
-            # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"A ({len(section):,}) '{section}'" ); halt
+            # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"A ({len(section):,}) '{section}'" ); assert False, "We want to stop here"
             lastLVindex = LVindex1
         elif rvStartCV == 'C1': # First CV section
             LVindex1 = lvSectionHTML.index( f'<p class="LVsentence" id="C1">' )
             if nextStartCV == 'DONE':
                 section = lvSectionHTML[LVindex1:]
                 dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} remaining chars '{lvSectionHTML[:LVindex1]}' then '{lvSectionHTML[LVindex1:LVindex1+60]}...'" )
-                # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"B1 ({len(section):,}) '{section}'" ); halt
+                # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"B1 ({len(section):,}) '{section}'" ); assert False, "We want to stop here"
             else:
                 LVindex9 = lvSectionHTML.index( f' id="{nextStartCV}"', LVindex1+24 )
                 # Find our way back to the start of the HTML marker
@@ -1821,9 +1821,9 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
                     not_far_enough
                 section = lvSectionHTML[LVindex1:LVindex8].removesuffix( '\n<p class="LVsentence">' )
                 dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} {LVindex8-LVindex1} chars '{lvSectionHTML[:LVindex1]}' then '{lvSectionHTML[LVindex1:LVindex1+60]}...'" )
-                # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"B2 ({len(section):,}) '{section}'" ); halt
+                # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"B2 ({len(section):,}) '{section}'" ); assert False, "We want to stop here"
             lastLVindex += LVindex1
-            # halt
+            # assert False, "We want to stop here"
         else:
             assert n > 0
             try: LVindex2 = lvSectionHTML.index( f' id="{rvStartCV}"' )
@@ -1841,7 +1841,7 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
                 section = lvSectionHTML[LVindex1:]
                 assert section.startswith('<'), section[:10]
                 dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} remaining chars '{lvSectionHTML[:LVindex1]}' then '{lvSectionHTML[LVindex1:LVindex1+60]}...'" )
-                # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"C1 ({len(section):,}) '{section}'" ); halt
+                # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"C1 ({len(section):,}) '{section}'" ); assert False, "We want to stop here"
             else: # in the middle
                 try: LVindex9 = lvSectionHTML.index( f' id="{nextStartCV}"', LVindex2+6 )
                 except ValueError:
@@ -1857,9 +1857,9 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
                 section = lvSectionHTML[LVindex1:LVindex8]
                 assert section.startswith('<'), section[:10]
                 dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} {LVindex8=} {LVindex8-LVindex1} chars '{lvSectionHTML[LVindex1:LVindex1+40]}' then '{lvSectionHTML[LVindex8:LVindex8+60]}...'" )
-                # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"C2 ({len(section):,}) '{section}'" ); halt
+                # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"C2 ({len(section):,}) '{section}'" ); assert False, "We want to stop here"
             lastLVindex += LVindex1
-            # halt
+            # assert False, "We want to stop here"
         section = section.removesuffix( '\n' ).removesuffix( '</div><!--BibleText-->' ).removesuffix( '<p class="LVsentence">' ).removesuffix( '\n' )
         if section.startswith( '<a class="upLink" ' ) or section.startswith( '<span class="v" ' ):
             section = f'<p class="LVsentence">{section}'
@@ -1876,7 +1876,7 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
     #     newSection = lvMidHHTML[lastLVindex:]
     #     dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\n  Need to append last LV bit {len(lvMidHHTML)-lastLVindex:,} chars '{lvMidHHTML[lastLVindex:lastLVindex+40]}'")
     #     lvHTMLSections[-1] = f'{lvHTMLSections[-1]}{newSection}'
-    #     # halt
+    #     # assert False, "We want to stop here"
 
     book_html = f'{book_html}\n{TWO_COLUMN_START_HTML}\n'
 
@@ -1926,19 +1926,19 @@ def handle_Psalms( psa_start_html:str, psa_html:str, psa_end_html:str ) -> bool:
 
     ITEM_NAME = 'Item'
 
-    # print(psa_start_html); halt
+    # print(psa_start_html); assert False, "We want to stop here"
     bodyIx = psa_start_html.index('<body>')
     chapterLinksIx = psa_start_html.index('<p class="chapterLinks">')
     psa_book_links_html = psa_start_html[bodyIx+6:chapterLinksIx]
     psa_chapter_links_html = psa_start_html[chapterLinksIx:].replace( 'href="#C', 'href="PSA_' ).replace( '">C', '.html">C' )
-    # print(psa_top_links_html); halt
+    # print(psa_top_links_html); assert False, "We want to stop here"
 
-    # print(psa_html); halt
+    # print(psa_html); assert False, "We want to stop here"
     SEARCH_CHUNK = '<span class="cPsa" id="C' # Near the start of the RV chunk
     psa_html_bits = psa_html.split( SEARCH_CHUNK )
     assert len(psa_html_bits) == 151, len(psa_html_bits)
 
-    # print(psa_html_bits[0]); halt
+    # print(psa_html_bits[0]); assert False, "We want to stop here"
     endIntroIx = psa_html_bits[0].index( '<!--bookIntro-->' )
     psa_intro_html = psa_html_bits[0][:endIntroIx+16]
 
@@ -1954,10 +1954,10 @@ def handle_Psalms( psa_start_html:str, psa_html:str, psa_end_html:str ) -> bool:
                     f'{SBS_DISCLAIMER_HTML}\n{SBS_BOOK_INTRO_HTML1}'
         chunkEndIx = psa_html_bits[c-1].rindex( '<!--chunkLV-->' )
         leftover_HTML = psa_html_bits[c-1][chunkEndIx+14:]
-        # print(leftover_HTML); halt
+        # print(leftover_HTML); assert False, "We want to stop here"
         chunkEndIx = psa_html_bits[c].rindex( '<!--chunkLV-->' )
         main_PSA_HTML = psa_html_bits[c][:chunkEndIx+14]
-        # print(main_PSA_HTML); halt
+        # print(main_PSA_HTML); assert False, "We want to stop here"
         psalmHTML = f'{psalmHTML}{TWO_COLUMN_START_HTML}{leftover_HTML}{SEARCH_CHUNK}' \
                     f'{main_PSA_HTML}\n</div><!--container-->\n{back_forth_links}\n{END_HTML}'
         assert "'" not in psalmHTML

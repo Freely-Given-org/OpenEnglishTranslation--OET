@@ -318,7 +318,7 @@ def apply_VLT_scripted_gloss_updates() -> bool:
                     vPrint( 'Info', DEBUGGING_THIS_MODULE, f"Applying {commandTableName}: {tags=} {iBooks=} {eBooks=} {iMarkers=} {eMarkers=} {iRefs=} {eRefs=} {editCommand.preText=} {editCommand.sCase=} {searchText=} {editCommand.postText=} {editCommand.rCase=} {replaceText=} {editCommand.name=} {editCommand.comment}" )
                     if iMarkers or eMarkers:
                         print( f"  Unable to apply '{commandTableName}' {iMarkers=} or {eMarkers=}" )
-                        halt
+                        assert False, "We want to stop here"
 
                     if 'w' in tags: # whole words
                         myRegexSearchString = f'\\b{searchText}\\b'
@@ -369,7 +369,7 @@ def apply_VLT_scripted_gloss_updates() -> bool:
                                 numReplacements += 1
                         else:
                             vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Ignored {commandTableName} '{editCommand.name}' {editCommand.comment} {tags=}" )
-                            halt
+                            assert False, "We want to stop here"
 
                         if newGloss != oldGloss:
                             columnDataList[5] = newGloss
@@ -413,7 +413,7 @@ def associate_Theographic_people_places() -> bool:
         except KeyError: # versification difference ???
             logging.critical( f"Versification error: Unable to find {verseRef} in Theographic json" )
             assert columns_string.count( '\t' ) == 11, f"{columns_string.count(TAB)} {columns_string=}"
-            # print( f"{n} {columns_string=}" ); halt
+            # print( f"{n} {columns_string=}" ); assert False, "We want to stop here"
             # state.newTable.append( columns_string ) # What was I trying to do here? (These duplicate rows get appended to the end)
             # lastVerseRef = verseRef
             continue
@@ -459,7 +459,7 @@ def associate_Theographic_people_places() -> bool:
             # newVerse = False
             # Changed to link to EVERY word in the verse
             if verseLinkEntry['peopleGroups']:
-                halt
+                assert False, "We want to stop here"
                 # dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Could add people groups: {n} {ref} ({probability}) '{greek}' {glossCaps} '{glossWords}' {verseLinkEntry['peopleGroups']}")
                 # assert isinstance( verseLinkEntry['peopleGroups'], list )
                 # for pgID in verseLinkEntry['peopleGroups']:
@@ -469,7 +469,7 @@ def associate_Theographic_people_places() -> bool:
                 #     assert ' ' not in pgID and ';' not in pgID
                 #     links.append( pgID )
                 #     dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Added '{pgID}' to {ref}")
-                #     halt
+                #     assert False, "We want to stop here"
             if verseLinkEntry['yearNum']:
                 dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add year number: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{VLTglossWords}' {verseLinkEntry['yearNum']}")
                 assert isinstance( verseLinkEntry['yearNum'], str )

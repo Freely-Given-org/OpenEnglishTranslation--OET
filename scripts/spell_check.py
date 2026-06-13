@@ -34,6 +34,7 @@ CHANGELOG:
     2026-02-13 Seems above names tables were never used
     2026-03-24 Added Hebrew alphabet
     2026-04-16 Handle names with apostrophes in them better
+    2026-06-11 Handle new % (changed person) \\add format
 """
 from gettext import gettext as _
 # from typing import List, Tuple, Optional
@@ -43,17 +44,14 @@ from csv import DictReader
 import re
 import os
 
-# if __name__ == '__main__':
-#     import sys
-#     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2026-05-26' # by RJH
+LAST_MODIFIED_DATE = '2026-06-11' # by RJH
 SHORT_PROGRAM_NAME = "spell_check"
 PROGRAM_NAME = "OET Spell Check"
-PROGRAM_VERSION = '0.30'
+PROGRAM_VERSION = '0.32'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -224,7 +222,7 @@ def load_OET_LV_names() -> bool:
 
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(OET_LV_NAMES_SET):,} OET-LV names." )
-    # print( list(OET_LV_NAMES_SET)[:10]); halt
+    # print( list(OET_LV_NAMES_SET)[:10]); assert False, "We want to stop here"
     return True
 # end of spellCheckEnglish.load_OET_LV_names
 
@@ -256,7 +254,7 @@ def load_OET_RV_names() -> bool:
 
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(OET_RV_NAMES_SET):,} OET-RV names." )
-    # print( list(OET_RV_NAMES_SET)[:10]); halt
+    # print( list(OET_RV_NAMES_SET)[:10]); assert False, "We want to stop here"
     return True
 # end of spellCheckEnglish.load_OET_RV_names
 
@@ -273,7 +271,7 @@ def load_dict_sources() -> bool:
         with open( dictFilepath, 'rt', encoding='utf-8' ) as dictSourceFile:
             dictText = dictSourceFile.read()
         dictWords = dictText.split( '\n\\wd ')
-        # print( f"{dictWords[0]=} {dictWords[1]=} {dictWords[2]=} {dictWords[-1]=}"); halt
+        # print( f"{dictWords[0]=} {dictWords[1]=} {dictWords[2]=} {dictWords[-1]=}"); assert False, "We want to stop here"
         for entryStr in dictWords[1:]:
             entryLines = entryStr.rstrip().split( '\n' )
             # print( f"{entryLines=}")
@@ -300,7 +298,7 @@ def load_dict_sources() -> bool:
         #         BIBLE_WORD_SET.add( word )
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(BIBLE_WORD_SET):,} English and Bible words." )
-    # print( BIBLE_WORD_LIST[:10]); halt
+    # print( BIBLE_WORD_LIST[:10]); assert False, "We want to stop here"
     return True
 # end of spell_check.load_dict_sources
 
@@ -371,14 +369,16 @@ def spellCheckESFMText( text:str, location:str, nameSet:set[str] ) -> bool:
 
     lastLastWord = lastWord = ''
 
-    for addChar in ('≈','+','>','<','@','*','#','≡'):
+    for addChar in ('≈','+','>','<','@','*','#','%','≡'):
         adjText = adjText.replace( f'\\add ?{addChar}', '' ).replace( f'\\add {addChar}', '' )
-    for charMarker in ('add','+add','em','+em','nd','+nd','sc','wj','+wj','bd','+bd','it','+it','bdit','+bdit','tl',
+    for charMarker in ('add','+add','em','+em','nd','+nd','sc','+sc','wj','+wj','bd','+bd','it','+it','bdit','+bdit','tl',
                         'ior','bk','+bk','sig','sup','qs',
                         '+wh',
                         'f +','ft','fqa','fq','fl', # We intentionally omit 'fr' Why???
                         'x +','xt', # We intentionally omit 'xo' Why???
                         'jmp',
+                        'z1hilite','z2hilite','z3hilite','z4hilite','zrhilite',
+                        'z1','z2','z3','z4','zr',
                         ):
         adjText = adjText.replace( f'\\{charMarker} ', '' ).replace( f'\\{charMarker}*', '' )
     adjText =  ( adjText.replace( '—', ' ' ) # Treat em-dashes as spaces
@@ -433,7 +433,7 @@ def spellCheckESFMText( text:str, location:str, nameSet:set[str] ) -> bool:
             # Remove \add markers
             if word[0] == '?': # This one can precede the others
                 word = word[1:]
-            if word[0] in '+<=>#@*^&≈?≡→':
+            if word[0] in '+<=>#%@*^&≈?≡→':
                 word = word[1:]
             if not word: break
 

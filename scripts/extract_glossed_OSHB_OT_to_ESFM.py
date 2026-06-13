@@ -548,7 +548,7 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
             f" mg='{given_verse_row['MorphemeGlosses']}' cmg='{given_verse_row['ContextualMorphemeGlosses']}'"
             f" wg='{given_verse_row['WordGloss']}' cwg='{given_verse_row['ContextualWordGloss']}'"
             f" {consecutive=} {saved_gloss=} {saved_capitalisation=} {saved_punctuation=} {just_had_insert=})…") # {last_glossWord=} 
-    # if given_verse_row['Ref'].startswith('GEN_3:14'): halt
+    # if given_verse_row['Ref'].startswith('GEN_3:14'): assert False, "We want to stop here"
     
     gloss = gloss_punctuation = ''
     if given_verse_row['RowType'] in ('seg','note','variant note','alternative note','exegesis note'):
@@ -570,7 +570,7 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
             note_is_versification_adjustment = note_text.startswith('KJB:')
             gloss = f"\\f + \\fr {C}:{V} \\ft {'' if note_is_versification_adjustment else 'OSHB '}{given_verse_row['RowType'][0].upper() if note_is_versification_adjustment else given_verse_row['RowType'][0]}{given_verse_row['RowType'][1:]}: {note_text}\\f*"
         # if saved_gloss:
-        #     halt
+        #     assert False, "We want to stop here"
         #     assert not gloss # otherwise we'd be losing it
         #     gloss = saved_gloss
 
@@ -588,7 +588,7 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
             and ',see' not in all_glosses and 'observe' not in all_glosses and 'attention' not in all_glosses:
                 gloss = gloss.replace( 'here', 'HERE' )
                 # print( f"{given_verse_row['Ref']} {gloss=} {all_glosses=}" )
-                # if '/lo/' not in gloss and 'wow' not in gloss and 'HERE' not in gloss and '!' not in gloss: halt
+                # if '/lo/' not in gloss and 'wow' not in gloss and 'HERE' not in gloss and '!' not in gloss: assert False, "We want to stop here"
             # assert '_~_' not in gloss,  f"{given_verse_row}" # {'Ref': 'GEN_6:19w10', 'OSHBid': '01cUx', 'RowType': '', 'MorphemeRowList': '3667,3668', 'Strongs': 'l,2421', 'CantillationHierarchy': '', 'Morphology': 'R,Vhc', 'Word': 'לְ,הַחֲיֹ֣ת', 'NoCantillations': 'לְ,הַחֲיֹת', 'MorphemeGlosses': 'to,keep_~_alive', 'ContextualMorphemeGlosses': '', 'WordGloss': '', 'ContextualWordGloss': '', 'GlossCapitalisation': '', 'GlossPunctuation': '', 'GlossOrder': '190', 'GlossInsert': '', 'n': 2585}
             gloss =  (
                 gloss.replace( '_~_', '_' ) # TODO: What did these mean? Place to insert direct object, e.g, make_~_great,him ???
@@ -636,7 +636,7 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
             elif gloss.count('÷') == 2: # CH2_12:7
                 # Insert at the FINAL of the two commas
                 gloss = f'= {saved_gloss}{saved_punctuation} ='.join( gloss.rsplit( '÷', 1 ) ) # From https://stackoverflow.com/questions/2556108/rreplace-how-to-replace-the-last-occurrence-of-an-expression-in-a-string
-            else: halt
+            else: assert False, "We want to stop here"
             saved_gloss = saved_capitalisation = saved_punctuation = ''
             just_had_insert = False
 
@@ -673,7 +673,7 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
         wordGloss = make_gloss_adjustments_and_append_word_number( wordGloss, wn )
 
         if saved_gloss: # we must have reordered glosses with a word now between morphemes
-            halt
+            assert False, "We want to stop here"
             gloss = f'{saved_gloss}= {wordGloss}'
             saved_gloss = '' # Used it
             if 'S' in saved_capitalisation:
@@ -702,7 +702,7 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
         gloss = gloss_punctuation = '' # We won't return anything yet
         just_had_insert = gloss_insert
 
-    # if given_verse_row['Ref'].startswith('GEN_1:4'): halt
+    # if given_verse_row['Ref'].startswith('GEN_1:4'): assert False, "We want to stop here"
     result = f"{gloss}{gloss_punctuation}"
     assert '!¦' not in result, f"{given_verse_row} {result=}"
     return result
@@ -724,7 +724,7 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
 
     if gloss == '_': # Why do we have these? TODO: Should they be hyphens (for untranslated words)?
         logging.critical( f"Refusing to add word number {wn=} to {gloss=}" )
-        halt # Maybe it doesn't actually occur???
+        assert False, "We want to stop here" # Maybe it doesn't actually occur???
         return gloss # Don't want a word number on this
 
     originalGloss = gloss # Used for error/warning messages

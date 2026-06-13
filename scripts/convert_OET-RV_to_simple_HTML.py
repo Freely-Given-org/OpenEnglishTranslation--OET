@@ -1339,7 +1339,7 @@ def convert_ESFM_words( BBB:str, book_html:str, word_table:List[str] ) -> str:
         try: greek = word_table[row_number].split('\t')[1]
         except IndexError:
             logging.critical( f"convert_ESFM_words( {BBB} ) index error: word='{match.group(1)}' {row_number=}/{len(word_table)} entries")
-            halt
+            assert False, "We want to stop here"
         book_html = f'{book_html[:match.start()]}<a  title="{greek}" href="W/{match.group(2)}.html">{match.group(1)}</a>{book_html[match.end():]}'
         searchStartIndex = match.end() + 25 # We've added at least that many characters
         count += 1

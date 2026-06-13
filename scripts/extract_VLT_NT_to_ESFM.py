@@ -391,7 +391,7 @@ def write_gloss_esfm_book(book_number:int, book_esfm: str) -> bool:
     if '..' in book_esfm:
         ix = book_esfm.index( '..' )
         print( f"Found periods in book {book_number}: '{book_esfm[ix-20:ix+20]}'" )
-        halt
+        assert False, "We want to stop here"
     book_esfm = book_esfm.replace(',,',',').replace('..','.').replace(';;',';') \
                 .replace(',.','.').replace('.”.”','.”').replace('?”?”','?”')
     # if "another's" in book_usfm or "Lord's" in book_usfm:
@@ -661,7 +661,7 @@ def process_untranslated_words( given_collation_row, given_preformed_gloss_strin
     # print( f"\nprocess_untranslated_words( {given_collation_row=}, {given_preformed_gloss_string=} )" )
     adjusted_preformed_gloss_string = given_preformed_gloss_string
     their_lemma,medieval_lemma = ('','') if given_collation_row['LexemeId'] is None else find_lemma_forms( given_collation_row['LexemeId'], given_collation_row['Morphology'], given_collation_row['Classic'] )
-    # print( f"  {their_lemma=} {medieval_lemma=}" ); halt
+    # print( f"  {their_lemma=} {medieval_lemma=}" ); assert False, "We want to stop here"
     adjusted_lemma = adjust_lemma( their_lemma, medieval_lemma) # given_collation_row['Medieval']
     if adjusted_preformed_gloss_string=='-' or adjusted_preformed_gloss_string.startswith( '-¦' ) or adjusted_preformed_gloss_string.startswith( '¶-¦' ): # an untranslated word from the VLT
         # NOTE: All of these new gloss strings also have to be entered into cleanupVLT.commandTable.tsv
@@ -690,7 +690,7 @@ def process_untranslated_words( given_collation_row, given_preformed_gloss_strin
     if adjusted_preformed_gloss_string != given_preformed_gloss_string:
         # Let's try capitalizing again
         _, _, adjusted_preformed_gloss_string = apply_gloss_capitalization( '', '', adjusted_preformed_gloss_string, given_collation_row['GlossCapitalization'] )
-        # if '134824' in given_preformed_gloss_string: print( f"{given_preformed_gloss_string=} {given_collation_row['GlossCapitalization']=} {adjusted_preformed_gloss_string=}" ); halt
+        # if '134824' in given_preformed_gloss_string: print( f"{given_preformed_gloss_string=} {given_collation_row['GlossCapitalization']=} {adjusted_preformed_gloss_string=}" ); assert False, "We want to stop here"
 
     return adjusted_lemma, adjusted_preformed_gloss_string
 # end of process_untranslated_words function
@@ -769,7 +769,7 @@ def get_gloss_word_index_list(given_verse_row_list: List[dict]) -> List[List[int
               f" have left-over words: ({len(these_words_base_display_index_list)}) {these_words_base_display_index_list}"
               f" from glossInserts: {[row['GlossInsert'] for row in given_verse_row_list]}")
     assert not these_words_base_display_index_list # at end of loop
-    # dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"get_gloss_word_index_list for {verse_id} is returning: ({len(result_list)}) {result_list}"); halt
+    # dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"get_gloss_word_index_list for {verse_id} is returning: ({len(result_list)}) {result_list}"); assert False, "We want to stop here"
     return result_list
 # end of extract_VLT_NT_to_ESFM.get_gloss_word_index_list
 
@@ -1027,13 +1027,13 @@ def apply_gloss_capitalization(gloss_pre:str, gloss_helper:str, gloss_word:str, 
             assert something[1] != ' ', f"{something=}"
             if something[1] == '¬':
                 something = f'¶¬{something[2].upper()}{something[3:]}' # Those are WORD punctuation characters
-                # print( f"{something=}"); halt
+                # print( f"{something=}"); assert False, "We want to stop here"
             else:
                 something = f'¶{something[1].upper()}{something[2:]}' # Those are WORD punctuation characters
-                # print( f"{gloss_word=}"); halt
+                # print( f"{gloss_word=}"); assert False, "We want to stop here"
         elif something[0] == '¬':
             something = f'¬{something[1].upper()}{something[2:]}' # Those are WORD punctuation characters
-            # print( f"{gloss_word=}"); halt
+            # print( f"{gloss_word=}"); assert False, "We want to stop here"
         else:
             something = f'{something[0].upper()}{something[1:]}' # Those are WORD punctuation characters
         assert '¬the' not in something

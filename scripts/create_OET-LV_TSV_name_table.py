@@ -40,9 +40,6 @@ from csv import DictReader
 import re
 import os
 
-# import sys
-# if __name__ == '__main__':
-#     sys.path.insert( 0, '../../BibleOrgSys/' )
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
@@ -124,7 +121,7 @@ def load_OET_LV_OT_names() -> bool:
         OET_LV_OT_NAMES_SET.add( (lvOTName,transliteratedHebrewName) )
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(OET_LV_OT_NAMES_SET):,} OET-LV OT name pairs." )
-    # print( list(OET_LV_OT_NAMES_SET)[:10]); halt
+    # print( list(OET_LV_OT_NAMES_SET)[:10]); assert False, "We want to stop here"
     return True
 # end of spellCheckEnglish.load_OET_LV_names
 
@@ -175,7 +172,7 @@ def load_OET_LV_NT_names() -> bool:
                 OET_LV_OT_NAMES_SET.add( (lvNTName,transliteratedHebrewName) )
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(OET_LV_NT_NAMES_SET):,} OET-LV NT names." )
-    # print( list(OET_LV_NT_NAMES_SET)[:10]); halt
+    # print( list(OET_LV_NT_NAMES_SET)[:10]); assert False, "We want to stop here"
     return True
 # end of spellCheckEnglish.load_OET_RV_names
 

@@ -369,7 +369,7 @@ def fill_known_MaculaHebrew_English_contextual_glosses() -> bool:
             assert 'DOM' not in MaculaHebrewRow['EnglishGloss'].upper()
             if 'DOM' in MaculaHebrewRow['ContextualGloss'].upper():
                 print( f"{MaculaHebrewRow['ContextualGloss']=}" )
-                halt # Shouldn't happen now
+                assert False, "We want to stop here" # Shouldn't happen now
                 MaculaHebrewRow['ContextualGloss'] = MaculaHebrewRow['ContextualGloss'].replace( 'DOM_', '' ).replace( 'DOM', '' )
                 assert 'DOM' not in MaculaHebrewRow['ContextualGloss'].upper()
 
@@ -450,7 +450,7 @@ def fill_known_MaculaHebrew_English_contextual_glosses() -> bool:
         if WLC_morpheme_row['WordGloss']=='[is]' or WLC_morpheme_row['ContextualWordGloss']=='[is]' \
         or (WLC_morpheme_row['WordGloss'] and WLC_morpheme_row['WordGloss'][0]=='[' and WLC_morpheme_row['WordGloss'][-1]==']' and '_' not in WLC_morpheme_row['WordGloss']) \
         or (WLC_morpheme_row['ContextualWordGloss'] and WLC_morpheme_row['ContextualWordGloss'][0]=='[' and WLC_morpheme_row['ContextualWordGloss'][-1]==']' and '_' not in WLC_morpheme_row['ContextualWordGloss']):
-            halt
+            assert False, "We want to stop here"
 
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Added {num_word_glosses_added:,} MaculaHebrew English word glosses." )
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Added {num_morpheme_glosses_added:,} MaculaHebrew English morpheme glosses." )
@@ -707,8 +707,8 @@ def do_auto_reordering() -> bool:
                         dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{last1_WLC_morpheme_row['Ref']} rT={last1_WLC_morpheme_row['RowType']} wOrM={last1_WLC_morpheme_row['WordOrMorpheme']} mG={last1_WLC_morpheme_row['MorphemeGloss']}")
                         dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{this__WLC_morpheme_row['Ref']} rT={this__WLC_morpheme_row['RowType']} wOrM={this__WLC_morpheme_row['WordOrMorpheme']} mG={this__WLC_morpheme_row['MorphemeGloss']}")
                         print( "Seems we can't put subject before verb!!!" )
-                        # halt # Jer 6:29
-                    if this__WLC_morpheme_row['Ref'].startswith( 'JOS_8:2w' ): halt
+                        # assert False, "We want to stop here" # Jer 6:29
+                    if this__WLC_morpheme_row['Ref'].startswith( 'JOS_8:2w' ): assert False, "We want to stop here"
 
             # Look for verb followed by DOM and direct object then subject
             if ( last2_MaculaHebrew_morpheme_row['WordClass']=='om' and last2_MaculaHebrew_morpheme_row['PartOfSpeech']=='part'
@@ -723,7 +723,7 @@ def do_auto_reordering() -> bool:
                     last3_WLC_morpheme_row['GlossOrder'], last2_WLC_morpheme_row['GlossOrder'], last1_WLC_morpheme_row['GlossOrder'], this__WLC_morpheme_row['GlossOrder'] = \
                         last2_WLC_morpheme_row['GlossOrder'], last1_WLC_morpheme_row['GlossOrder'], this__WLC_morpheme_row['GlossOrder'], last3_WLC_morpheme_row['GlossOrder']
                     reorder_von_count += 1
-                    if this__WLC_morpheme_row['Ref'].startswith( 'JOS_8:2w' ): halt
+                    if this__WLC_morpheme_row['Ref'].startswith( 'JOS_8:2w' ): assert False, "We want to stop here"
 
         elif ( MaculaHebrew_morpheme_row['PartOfSpeech']=='n' and MaculaHebrew_morpheme_row['Nesting'].split('/')[-1] in ('N2NP','DetNP')
         and last1_MaculaHebrew_morpheme_row['WordClass']=='art' and 'DetNP' in last1_MaculaHebrew_morpheme_row['Nesting'] # Subject is determiner noun phrase
@@ -1094,7 +1094,7 @@ def save_filled_word_TSV_file() -> bool:
                 else:
                     assert word_entry['GlossOrder'] not in verse_gloss_order_list, f"Duplicate {word_entry['GlossOrder']=} in {word_entry=}"
                     verse_gloss_order_list.append( word_entry['GlossOrder'] )
-            else: halt
+            else: assert False, "We want to stop here"
 
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {num_data_rows_written:,} word data rows written." )
 

@@ -37,6 +37,7 @@ CHANGELOG:
     2026-03-19 Remove new ⇔ ESFM character (marking verse that's reordered in the OET-RV)
     2026-05-08 Upgraded to bos_books_codes_py
     2026-05-31 Handle (remove) Psalm/Song thematic colouring markers
+    2026-06-11 Handle new % (changed person) \\add format
 """
 from pathlib import Path
 import re
@@ -47,10 +48,10 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint, BOOKLIST_OT3
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-05-31' # by RJH
+LAST_MODIFIED_DATE = '2026-06-11' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_ESFM_to_USFM"
 PROGRAM_NAME = "Convert OET LV & RV ESFM files to USFM"
-PROGRAM_VERSION = '0.65'
+PROGRAM_VERSION = '0.66'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -107,7 +108,7 @@ def main():
                 def cReplace( matchObj ):
                     return f'\\c {matchObj.group(1)}\n\\nb\n\\v '
                 adjText, cCount = ESFMNakedChapterRegex.subn( cReplace, adjText )
-                # print( f"After {cCount} replacements to {BBB}, now have {adjText=}"); halt
+                # print( f"After {cCount} replacements to {BBB}, now have {adjText=}"); assert False, "We want to stop here"
                 print( f"  Added {cCount} \\nb to {BBB} chapters")
             assert '\\add ¿' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ¿"
             if VV == 'LV': # only expect + > = <
@@ -118,6 +119,7 @@ def main():
                 assert '\\add *' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED *"
                 assert '\\add @' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED @"
                 assert '\\add #' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED #"
+                assert '\\add %' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED %"
                 # assert '\\add ^' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ^" # TODO: Why???
                 assert '\\add ≈' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ≈"
             adjText = ( adjText
@@ -132,6 +134,7 @@ def main():
                             .replace( '\\add *', '\\add ' )
                             .replace( '\\add @', '\\add ' )
                             .replace( '\\add #', '\\add ' )
+                            .replace( '\\add %', '\\add ' )
                             .replace( '\\add ^', '\\add ' )
                             .replace( '\\add ≈', '\\add ' )
                             .replace( '\\untr ', '' ).replace( '\\untr*', '' )
