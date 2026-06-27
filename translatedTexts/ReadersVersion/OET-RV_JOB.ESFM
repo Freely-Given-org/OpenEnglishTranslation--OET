@@ -1,4 +1,4 @@
-\id JOB - Open English Translation—Readers' Version (OET-RV) v0.1.17
+\id JOB - Open English Translation—Readers' Version (OET-RV) v0.1.18
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 JOB
@@ -35,11 +35,11 @@
 \s1 Iyyov's prosperous life
 \rem /s1 Prologue; Job and His Family; Satan Tests Job
 \p
-\v 1 \add Once\add* there was a man called Iyyov¦232252 \add (Job)\add* who lived in¦232249 the Uz¦232251 region¦232249. \add He\add* was blameless¦232258 and righteous—both obeying God¦232261 and avoiding evil.
+\v 1 There was \add once\add* a man called Iyyov¦232252 \add (Job)\add* who lived in¦232249 the Uts¦232251 \add (Uz)\add* region¦232249. \add He\add* was blameless¦232258 and righteous—both obeying God¦232261 and avoiding evil.
 \v 2 He had seven¦232267 sons¦232268 and¦232269 three¦232269 daughters¦232270,
 \v 3 and he owned 7,000 sheep¦232277, 3,000 camels¦232280, 1,000 cattle, and 500 donkeys¦232288, as well as many slaves. Iyyov was \add richer\add* than \add anyone else\add* who lived in the area east \add of the Jordan River\add*.
 \v 4 \add Iyyov's\add* sons¦232303 \add regularly\add* held feasts in their¦232312 homes, and whenever any of them held a feast, he would invite¦232310 all his brothers and sisters¦232312 to share the meal with him.
-\v 5 \add Then¦232318 once a feast¦232322 was over\add*, Iyyov would send \add for his children\add* and consecrate them—he got up early¦232326 in the morning¦232327 and offered burnt¦232329 offerings for each of them, because¦232319 Iyyov said, “Perhaps my \add children\add* have sinned¦232336 and cursed\f + \fr 1:15 \ft Literally ‘blessed’ but it's possible that the original reading was ‘cursed’ and that scribes changed it to ‘blessed’ in order to avoid the uncomfortable concept of a person cursing God. Traditional manuscripts of the Hebrew Bible don't have a marginal notation about this (as they do in the case of 7:20), but LXX uses ‘ἐνενοήθησαν κακά’ which can be rendered as ‘have thought evil things’ and the Peshitta (Syriac) uses ‘reviled’. Many other translations also use ‘cursed’ since this is the kind of change that scribes are known to have made in similar cases.\f* God¦232339 in their¦232340 hearts¦232340.” \add ≈It was Job's regular habit to\add* \add intercede for his children\add*.
+\v 5 \add Then¦232318 once a feast¦232322 was over\add*, Iyyov would send \add for his children\add* and consecrate them—he got up early¦232326 in the morning¦232327 and offered burnt¦232329 offerings for each of them, because¦232319 Iyyov said, “Perhaps my \add children\add* have sinned¦232336 and cursed\f + \fr 1:15 \ft Literally ‘blessed’ but it's possible that the original reading was ‘cursed’ and that scribes changed it to ‘blessed’ in order to avoid the uncomfortable concept of a person cursing God. Traditional manuscripts of the Hebrew Bible don't have a marginal notation about this (as they do in the case of 7:20), but LXX uses ‘ἐνενοήθησαν κακά’ which can be rendered as ‘have thought evil things’ and the Peshitta (Syriac) uses ‘reviled’. Many other translations also use ‘cursed’ since this is the kind of change that scribes are known to have made in similar cases.\f* God¦232339 in their¦232340 hearts¦232340.” \add ≈It was Iyyov's regular habit to\add* \add intercede for his children\add*.
 \s1 Satan's first attack on Iyyov
 \rem /s1 Attack on Job's Character; Job's First Test
 \p
@@ -829,7 +829,7 @@
 \v 19 You'll lie down without being terrified¦235131.
 \q1 Many \add people\add* will be after your¦235133 favour¦235133.
 \q1
-\v 20 \add But¦235136\add* the eyes¦235136 of the wicked¦235137 will fail
+\v 20 \add But¦235136\add* the eyes¦235136 of the wicked¦235137 will fail¦235138
 \q2 and¦235136 the way¦235139 of escape¦235139 will be \add invisible\add* to them.
 \q1 Their hope will \add be limited to their¦235142 last\add* gasp of life¦235145.
 \c 12
@@ -1026,7 +1026,7 @@
 \b
 \q1
 \v 7 There's \add even\add* hope for a tree¦235713 that gets cut¦235717 down.
-\q1 It will sprout¦235719 again¦235718 and its¦235720 \add new\add* shoots¦235720 won't¦235721 fail.
+\q1 It will sprout¦235719 again¦235718 and its¦235720 \add new\add* shoots¦235720 won't¦235721 fail¦235722.
 \q1
 \v 8 Even when its roots¦235728 in the ground get old,
 \q1 ≈and its base is rotting in the soil,
@@ -1047,7 +1047,7 @@
 \q1
 \v 13 If¦235778 only you'd allow me to be hidden in¦235778 the grave,
 \q1 that you'd conceal¦235780 me until¦235781 your¦235784 anger¦235784 is passed.
-\q1 \add but¦235789\add* set a limit¦235788 and¦235789 then remember¦235789 me.
+\q1 \add but¦235789\add* set¦235785 a limit¦235788 and¦235789 then remember¦235789 me.
 \q1
 \v 14 If¦235800 a person dies, will they \add ever\add* live¦235795 again¦235795?
 \q1 I'll¦235800 keep doing my work¦235799 here until¦235801 I'm released from it.
@@ -1230,7 +1230,7 @@
 \q1
 \v 12 I was \add just living my¦236354 life\add* and he shattered¦236352 me.
 \q1 ≈He grabbed me by the neck and dashed¦236355 me to pieces¦236355.
-\q1 He set me up as a \add his\add* target¦236358.
+\q1 He set¦236356 me up as a \add his\add* target¦236358.
 \q1
 \v 13 ≈Soldiers with bows and arrows surround¦236360 me.
 \q1 He pierces¦236364 my kidneys¦236365 \add but¦236366\add* doesn't care.
@@ -2689,7 +2689,7 @@
 \v 13 Who assigned¦240628 him to be over the earth¦240630,
 \q1 ≈and¦240631 who put the whole¦240634 world¦240633 \add under\add* him?
 \q1
-\v 14 If he set his \add mind¦240640\add* on himself,
+\v 14 If he set¦240638 his \add mind¦240640\add* on himself,
 \q1 ≈gathering¦240644 his spirit and his breath¦240641 to himself,
 \q1
 \v 15 everybody would die simultaneously,

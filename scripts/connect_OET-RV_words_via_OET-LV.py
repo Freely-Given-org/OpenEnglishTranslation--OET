@@ -232,6 +232,7 @@ verbalNouns = ('accusations','accusation',
                 'fellowship', 'forgiveness', 'fulfilment',
                 'immersion', 'invasion',
                 'rebellion', 'repentance',
+                'service','servitude',
                 'utterances','utterance',
                 )
 assert len(set(verbalNouns)) == len(verbalNouns) # Check for accidental duplicates
@@ -249,12 +250,12 @@ simpleVerbs = ('abandoned','abandoning','abandons','abandon',
                     'blessed','blessing','blesses','bless',
                     'brought','bringing','brings','bring',
                     'burnt','burning','burns','burn', 'buried','burying','buries','bury',
-                'called','calling','calls','call', 'came','coming','comes','come', 'caught','catching','catches','catch',
+                'called','calling','calls','call', 'carried','carrying','carries','carry', 'came','coming','comes','come', 'caught','catching','catches','catch',
                     'chose','choosing','chooses','choose',
                     'claimed','claiming','claims','claim', 'closed','closing','closes','close',
-                    'confessed','confessing','confesses','confess', 'consumed','consuming','consumes','consume',
+                    'concealed','concealing','conceals','conceal', 'confessed','confessing','confesses','confess', 'consumed','consuming','consumes','consume',
                     'cracked','cracking','cracks','crack', 'cried','crying','cries','cry', 'cringed','cringes','cringe',
-                    'cutting','cuts','cut',
+                    'cursed','cursing','curses','curse', 'cutting','cuts','cut',
                 'deceived','deceiving','deceives','deceive', 'decided','deciding','decides','decide',
                         'defended','defending','defends','defend',
                         'delivered','delivering','delivers','deliver',
@@ -264,14 +265,14 @@ simpleVerbs = ('abandoned','abandoning','abandons','abandon',
                     'dragged','dragging','drags','drag', 'drove','driving','drives','drive', 'drunk','drinking','drinks','drink',
                     'dwelled','dwelt','dwelling','dwells','dwell',
                 'ate','eating','eats','eat', 'embraced','embracing','embraces','embrace',
-                    'encouraged','encouraging','encourages','encourage', 'ended','ending','ends','end', 'entered','entering','enters','enter',
+                    'encouraged','encouraging','encourages','encourage', 'ended','ending','ends','end', 'enslaved','enslaving','enslaves','enslave', 'entered','entering','enters','enter',
                     'existed','existing','exists','exist', 'extended','extending','extends','extend',
-                'fell','falling','falls','fall',
+                'failed','failing','fails','fail', 'fell','falling','falls','fall',
                     'feared','fearing','fears','fear',
                     'filled','filling','fills','fill',
                     'fled','fleeing','flees','flee',
                     'followed','following','follows','follow',
-                        'forbidding','forbids','forbid', 'forgave','forgiven','forgiving','forgives','forgive', 'formed','forming','forms','form',
+                        'forbidding','forbids','forbid', 'forced','forcing','forces','force', 'forgave','forgiven','forgiving','forgives','forgive', 'formed','forming','forms','form',
                 'gathered','gathering','gathers','gather',
                     'gave','giving','gives','give',
                     'went','going','goes','go', 'governed','governing','governs','govern',
@@ -279,23 +280,29 @@ simpleVerbs = ('abandoned','abandoning','abandons','abandon',
                 'harvested','harvesting','harvests','harvest', 'hated','hating','hates','hate',
                     'healed','healing','heals','heal', 'helped','helping','helps','help', 'heard','hearing','hears','hear',
                     'hid','hiding','hides','hide',
-                    'honoured','honouring','honours','honour',
+                    'honoured','honouring','honours','honour', 'horrified','horrifying','horrifies','horrify',
                 'invaded','invading','invades','invade',
                     'imitated','imitating','imitates','imitate', 'immersed','immersing','immerses','immerse',
                 'judged','judging','judges','judge',
-                'kept','keeping','keeps','keep', 'killed','killing','kills','kill', 'knew','known','knowing','knows','know',
+                'kept','keeping','keeps','keep',
+                    'killed','killing','kills','kill', 'kindled','kindling','kindles','kindle',
+                    'knew','known','knowing','knows','know',
+                'laughed','laughing','laughs','laugh',
                 'led','leading','leads','lead', 'learnt','learning','learns','learn',
                     'listened','listening','listens','listen', 'lived','living','lives','live',
                     'looked','looking','looks','look', 'loved','loving','loves','love',
-                'magnified','magnifying','magnifies','magnify', 'made','making','makes','make',
+                'magnified','magnifying','magnifies','magnify', 'made','making','makes','make', 'married','marrying','marries','marry',
                     'measured','measuring','measures','measure',
+                    'mocked','mocking','mocks','mock', 'mourned','mourning','mourns','mourn',
                 'obeyed','obeying','obeys','obey',
                     'offered','offering','offers','offer',
                     'ordered','ordering','orders','order',
                     'opened','opening','opens','open',
                 'packed','packing','packs','pack', 'passed','passing','passes','pass', 'persuaded','persuading','persuades','persuade',
                     'poured','pouring','pours','pour',
-                    'practiced','practicing','practices','practice', 'praised','praising','praises','praise', 'promised','promising','promises','promise',
+                    'practiced','practicing','practices','practice', 'praised','praising','praises','praise',
+                        'prevailed','prevailing','prevails','prevail',
+                        'promised','promising','promises','promise',
                     'purchased','purchasing','purchases','purchase', 'purified','purifying','purifies','purify',
                 'raged','raging','rages','rage', 'raised','raising','raises','raise',
                     'rebelled','rebelling','rebels','rebel',
@@ -314,7 +321,7 @@ simpleVerbs = ('abandoned','abandoning','abandons','abandon',
                         'saw','seeing','seen','sees','see',
                         'sent','sending','sends','send',
                         'served','serving','serves','serve',
-                        'settled','settling','settles','settle',
+                        'setting','sets','set', 'settled','settling','settles','settle',
                     'shook','shaken','shaking','shakes','shake', 'shared','sharing','shares','share',
                         'shone','shining','shines','shine',
                         'showed','showing','shows','show',
@@ -337,11 +344,11 @@ simpleVerbs = ('abandoned','abandoning','abandons','abandon',
                     'travelled','travelling','travels','travel',
                     'turned','turning','turns','turn',
                 'united','uniting','unites','unite', 'untied','untying','unties','untie',
-                'walked','walking','walks','walk', 'wanted','wanting','wants','want', 'warned','warning','warns','warn', 'watched','watching','watches','watch',
+                'wailed','wailing','wails','wail', 'walked','walking','walks','walk', 'wanted','wanting','wants','want', 'warned','warning','warns','warn', 'watched','watching','watches','watch',
                     'wore','wearing','wears','wear',
                     'withdrew','withdrawing','withdraws','withdraw', 'withered','withering','withers','wither',
                     'worked','working','works','work',
-                    'wrote','written','writing','writes','write',
+                    'wrapped','wrapping','wraps','wrap', 'wrote','written','writing','writes','write',
                 'yelled','yelling','yells','yell',
                     'yielded','yielding','yields','yield',
                 )
@@ -360,7 +367,9 @@ simpleAdjectives = ('alive', 'angry', 'bad', 'big', 'bitter',
                     'happy', 'high',
                     'impossible',
                     'large', 'little', 'local', 'long', 'loud', 'male', 'naked',
-                    'obedient', 'opposite', 'possible', 'sad', 'same', 'sick', 'small', 'sudden', 'sweet',
+                    'obedient', 'opposite',
+                    'possible',
+                    'sad', 'same', 'sick', 'small', 'sudden', 'sweet',
                     'whole', 'wide','wild', 'wounded')
 assert len(set(simpleAdjectives)) == len(simpleAdjectives) # Check for accidental duplicates
 
@@ -1157,7 +1166,7 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
                     adjustedRvVerseEntryList = InternalBibleEntryList()
                     for rvEntry in rvVerseEntryList:
                         rvMarker = rvEntry.getMarker()
-                        if v==1 and rvMarker in ('v~','p~'): continue # don't want these
+                        if v==1 and rvMarker in ('v~','XXXp~'): continue # don't want these
                         if v==2 and rvMarker == 'd': continue # don't want this
                         adjustedRvVerseEntryList.append( rvEntry )
                     rvVerseEntryList = adjustedRvVerseEntryList
@@ -1308,12 +1317,12 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     for rvEntry in rvEntryList:
         rvMarker, rvRest = rvEntry.getMarker(), rvEntry.getCleanText()
         # print( f"OET-RV {connectRef} {rvMarker}='{rvRest}'")
-        if rvMarker in ('v~','p~','d'):
+        if rvMarker in ('v~','XXXp~','d'):
             rvText = f"{rvText}{' ' if rvText else ''}{rvRest}"
     lvText = ''
     for lvEntry in lvEntryList:
         lvMarker,lvRest = lvEntry.getMarker(), lvEntry.getCleanText()
-        if lvMarker in ('v~','p~'):
+        if lvMarker in ('v~','XXXp~'):
             lvText = f"{lvText}{' ' if lvText else ''}{lvRest.replace('+','')}"
             # lvTextSimplified = lvText.replace('¦','').replace('0','').replace('1','').replace('2','').replace('3','').replace('4','').replace('5','').replace('6','').replace('7','').replace('8','').replace('9','') \
             #                     .replace('¬','').replace('_',' ').replace('  ',' ') \

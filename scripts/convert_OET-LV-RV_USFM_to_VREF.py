@@ -155,7 +155,7 @@ def main():
                     elif marker == 'li2': verseText = f'{verseText}{cleanText}'
                     elif marker == 'v': firstWord = True # Ignore
                     elif marker == 'v~': verseText = f'{verseText}{cleanText}'
-                    elif marker == 'p~': verseText = f'{verseText}{cleanText}'
+                    # elif marker == 'XXXp~': verseText = f'{verseText}{cleanText}'
                     elif marker == 'vw':
                         verseText = f"{verseText}{'' if firstWord else ' '}{cleanText}"
                         firstWord = False

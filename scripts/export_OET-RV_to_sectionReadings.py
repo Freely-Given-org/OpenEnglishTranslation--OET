@@ -332,7 +332,7 @@ def processBook( BBB:str ) -> int:
             # print( f"{marker=} {rest=}" )
             if marker == 'p' and verseText:
                 verseText = f'{verseText}\n\n'
-            elif marker in ('v~','p~'):
+            elif marker in ('v~','XXXp~'):
                 verseText = f'{verseText} {rest}' # We don't worry here about extra spaces here
         verseText = ESFM_WORD_NUMBER_REGEX.sub( '', verseText )
         for someString in THINGS_TO_REMOVE:
