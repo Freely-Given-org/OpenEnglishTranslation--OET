@@ -76,6 +76,7 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - Change Ephraim/Efrayim to Israel where it's referring to the northern kingdom
 - Check Jn 1:1-9 against SL email
 - Go through all Gary Gagliardi articles and check OET-RV
+- A more modern term for 'parable'?
 
 ## Terms to make consistent
 

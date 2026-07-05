@@ -80,7 +80,7 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-06-30' # by RJH
+LAST_MODIFIED_DATE = '2026-07-05' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.91'
@@ -232,7 +232,8 @@ verbalNouns = ('accusations','accusation',
                 'deception', 'decisions','decision', 'declarations','declaration', 'dedication', 'discussions','discussion', 'distribution', 'destruction',
                 'fellowship', 'forgiveness', 'fulfilment',
                 'immersion', 'invasion',
-                'rebellion', 'repentance',
+                'punishment',
+                'rebellion', 'repentance', 'restoration',
                 'service','servitude',
                 'utterances','utterance',
                 )
@@ -304,7 +305,7 @@ simpleVerbSets = ( ('abandoned','abandoning','abandons','abandon'),
                     ('practiced','practicing','practices','practice'), ('praised','praising','praises','praise'),
                         ('prevailed','prevailing','prevails','prevail'),
                         ('promised','promising','promises','promise'),
-                    ('purchased','purchasing','purchases','purchase'), ('purified','purifying','purifies','purify'),
+                    ('punished','punishing','punishes','punish'), ('purchased','purchasing','purchases','purchase'), ('purified','purifying','purifies','purify'),
                 ('raged','raging','rages','rage'), ('raised','raising','raises','raise'),
                     ('rebelled','rebelling','rebels','rebel'),
                         ('received','receiving','receives','receive'), ('recognised','recognising','recognises','recognise'), ('recovered','recovering','recovers','recover'),
@@ -314,7 +315,7 @@ simpleVerbSets = ( ('abandoned','abandoning','abandons','abandon'),
                         ('remained','remaining','remains','remain'), ('remembered','remembering','remembers','remember'), ('reminded','reminding','reminds','remind'), ('removed','removing','removes','remove'),
                         ('repaid','repaying','repays','repay'), ('reported','reporting','reports','report'),
                         ('requested','requesting','requests','request'),
-                        ('rescued','rescuing','rescues','rescue'), ('respected','respecting','respects','respect'), ('restrained','restraining','restrains','restrain'),
+                        ('rescued','rescuing','rescues','rescue'), ('respected','respecting','respects','respect'), ('restored','restoring','restores','restore'), ('restrained','restraining','restrains','restrain'),
                         ('revealed','revealing','reveals','reveal'),
                     ('rose','rising','rises','rise'),
                     ('ruined','ruining','ruins','ruin'), ('ran','running','runs','run'),
