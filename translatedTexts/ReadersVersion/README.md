@@ -121,3 +121,7 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - green tree / luxuriant tree / leafy tree
 - nobles -> leading citizens
 - sword -> war
+- clefts -> crevices
+- land you do not know -> land you've never been to
+- deeds -> actions
+- Titos -> Latin/Roman Titus???
