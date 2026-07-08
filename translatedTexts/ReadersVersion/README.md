@@ -126,3 +126,9 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - land you do not know -> land you've never been to
 - deeds -> actions
 - Titos -> Latin/Roman Titus???
+- plague -> DEADLY diseases
+- prophesying falsehood -> prophesying untruths (not lies)
+- remove 'everlasting', 'amongst', 'midst', 'upon' 'shall', most of 'may'
+
+Continue checking Mark spelling from Mrk 12:11 onwards.
+Continue revising Mark formatting from Mrk 1:21 onwards. Then Ruth.

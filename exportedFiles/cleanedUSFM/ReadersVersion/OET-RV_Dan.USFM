@@ -1,4 +1,4 @@
-\id DAN - Open English Translation—Readers’ Version (OET-RV) v0.1.08
+\id DAN - Open English Translation—Readers’ Version (OET-RV) v0.1.09
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 DAN
@@ -24,8 +24,9 @@
 \rem This is still a very early look into the unfinished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
-\ms1 The account about Daniel and his friends (1:1–6:28)
-\s1 Daniel and the friends his there to Babylon
+\ms1 The account about Daniel and his friends
+\mr (1:1–6:28)
+\s1 Daniel and his friends in Babylon
 \p
 \v 1 In the third year of Yehudah’s King Yehoyakim’s reign, Babylon’s King Nevukadnetstsar \add (Nebuchadnezzar)\add* came to Yerushalem \add (Jerusalem)\add* and besieged \add the city\add*.\x + \xo 1:1: \xt 2Ki 24:1; 2Ch 36:5-7.\x*
 \v 2 \add After two years,\add* the master \add allowed King Yehoyakim to be defeated by\add* Nevukadnetstsar who then took some of the items out of the temple and took them to Shinar \add (Babylonia)\add* where he placed them in his god’s temple storerooms.\x + \xo 1:2-4: \xt 2Ki 20:17-18; 24:10-16; 2Ch 36:10; Isa 39:7-8.\x*
@@ -168,7 +169,7 @@
 \p
 \v 30 Then the king \add gave\add* Shadrak \add (Hananyah)\add*, Meyshak \add (Misha’el)\add*, and Avednego \add (Azaryah)\add* \add more important positions in Babylon province than they had before\add*.
 \c 4
-\s1 The second dream of King Nevukadnetstsar
+\s1 Nevukadnetstsar’s second dream
 \p
 \v 1 King Nevukadnetstsar \add (Nebuchadnezzar)\add* \add sent this message\add* to all people groups, nations, and languages that live all over the world:
 \p May you \add have peace and prosperity\add*.
@@ -317,6 +318,8 @@
 \p
 \v 28 \add So\add* Daniel prospered during the reign of Dareyavesh and during the reign of Koresh \add (Cyrus)\add* the Persian.
 \c 7
+\ms1 Daniel’s visions
+\mr (7:1–12:13)
 \s1 Daniel’s vision of four creatures
 \p
 \v 1 \add Previously,\add* in Babylonian King Belshatstsar’s first year, Daniel had seen a dream and visions in his mind while lying on his bed. Then he wrote the dream down and \add gave a summary of it\add*.

@@ -415,8 +415,8 @@ wH					CH1_2:27				Eker			עֵקֶר		H6134 (1) 1Chr 2:27*
 wH					KI1_4:18				Ela			אֵלָה		H414 (1) 1Ki 4:18*
 wH	GEN,SA1,KI1,KI2,CH1								Elah			אֵלָה		H425 (16) Gen 36:41, 1Sam 17:2,19, 21:10, 1Ki 16:6,8,13-14, ...
 wH	GEN,CH1,EZR,NEH,ISA,JER								Elam			עֵילָם		H5867 (28) Gen 10:22, 14:1,9, 1Chr 1:17, 8:24, 26:3, Ezr 2:7,31, ...
-H	EZR,JER								Elasah			אֶלְעָשָׂה		{ H501 (6) Ezr 10:22, Jer 29:3*
-H	CH1								Eleasah			אֶלְעָשָׂה		{ H501 (6) 1Chr 2:39-40, 8:37, 9:43*
+H	CH1,EZR,JER								Elasah			אֶלְעָשָׂה		{ H501 (6) Ezr 10:22, Jer 29:3*
+H	CH1,EZR,JER								Eleasah			אֶלְעָשָׂה		{ H501 (6) 1Chr 2:39-40, 8:37, 9:43*
 H					NUM_11:26,NUM_11:27				Eldad			אֶלְדָּד		H419 (2) Num 11:26-27*
 H					GEN_25:4,CH1_1:33				Eldaah			אֶלְדָּעָה		H420 (2) Gen 25:4, 1Chr 1:33*
 wH					CH1_7:21				Elead			אֶלְעָד		H496 (1) 1Chr 7:21*
@@ -530,6 +530,7 @@ H					JOS_15:36,CH1_4:23				Gederah			גְּדֵרָה		H1449 woman (2) Josh 15:
 H	JOS,CH1								Gedor			גְדֹר		H1446 (7) Josh 15:58, 1Chr 4:4,18,39, 8:31, 9:37, 12:8*
 H	KI2								Gehazi			גֵּיחֲזִי		H1522 Elisha's servant (12) 2Ki 4:12,14,25,27,29,31,36, 5:20-21,25, 8:4-5*
 H					NUM_13:12				Gemalli			גְּמַלִּי		H1582 (1) Num 13:12*
+H	JER								Gemariah			גְּמַרְיָה		H1587 (5) Jer 29:3, 36,10-12,25
 H					KI1_11:20				Genubath			גְּנוּבַת		H1592 (2) 1Ki 11:20*
 wH	GEN,JDG,SA2,KI1,CH1								Gera			גֵּרָא		H1617 (9) Gen 46:21, Jdg 3:15, 2Sam 16:15, 19:16,18, 1Ki 2:8, 1Chr 8:3,5,7*
 H	EXO,JDG,CH1,EZR								Gershom			גֵּרְשֹׁם		H1647 (14) Exo 2:22, 18:3,30, 1Chr 6:16-17,20,43,62,71, 23:6,15-16, 26:24, Ezr 8:2*
@@ -1739,7 +1740,7 @@ H	NUM								shaddai			שַׁדַּי		{ H6701 (5) Num 1:6, 2:12, 7:36,41, 10:10
 # end of people
 
 
-# Tribes/Groups (including some from places rather than tribes)
+# Tribes/Groups/Families (including some from places rather than tribes)
 H									Ahohite			אֲחוֹחִי		H266 (5) 2Sam 23:9,28, 1Chr 11:12,29, 27:4*
 H									Anakim			עֲנָקִי		{ H6062 (9) Deu 1:28, 2:10-11,21, 9:2, Josh 11:21-22, 14:12,15*
 H									Anakites			עֲנָקִי		{ H6062 (9) Deu 1:28, 2:10-11,21, 9:2, Josh 11:21-22, 14:12,15*
@@ -1925,6 +1926,7 @@ H					GEN_10:13,CH1_1:11				Naphtuhites			נַפְתֻּחִים		{ H5329 (2) Ge
 H					GEN_10:13,CH1_1:11				Naphtuh			נַפְתֻּחִים		{ H5329 (2) Gen 10:13, 1Chr 1:11*
 H	NUM,JDG,LAM,AMO								Nazirites			נָזִיר		{{ H5139 (12/16) Num 6:2,13,18-21, Jdg 13:5,7, 16:17, Lam 4:7, Amo 2:12*
 H	NUM,JDG,LAM,AMO								Nazirite			נָזִיר		{{ H5139 (12/16) Num 6:2,13,18-21, Jdg 13:5,7, 16:17, Lam 4:7, Amo 2:12*
+H					JER_29:24,JER_29:31,JER_29:32				Nehelamite			נֶחֱלָמִי		H5161 (3) Jer 29:24,31-32*
 H					EZR_2:50,NEH_7:52				Nephusim			נְפוּשְׁסִים		H5300 (2) Ezr 2:50, Neh 7:52*
 H	SA2,KI2,CH1,NEH,JER								Netophathites			נְטֹפָתִי		{ H5200 (11) 2Sam 23:28-29, 2Ki 25:23, 1Chr 2:54, ...
 H	SA2,KI2,CH1,NEH,JER								Netophathite			נְטֹפָתִי		{ H5200 (11) 2Sam 23:28-29, 2Ki 25:23, 1Chr 2:54, ...
