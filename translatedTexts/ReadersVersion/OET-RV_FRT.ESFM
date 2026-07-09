@@ -1,11 +1,13 @@
-\id FRT - Open English Translation—Readers' Version (OET-RV) v0.2.04
+\id FRT - Open English Translation—Readers' Version (OET-RV) v0.3.0
 
 \periph Title Page
-\mt1 The Open English Translation
+\mt3 The
+\mt1 Open English Translation
 \mt2 of the Bible
-\pc Open English Translation
-\pc \fig |/srv/Websites/Freely-Given.org/Logo/FG_with_text_below.png|span||||\fig*
-\pc Freely-Given.org
+\mt2 (OET)
+\pc \fig |src="logos/OET-PrimaryLogo-RGB-FullColor.png" size="span" alt="Logo for OET"\fig*
+\mt2 Cheerfully created by
+\pc \fig |src="logos/FG_with_text_below.png" size="span" alt="Logo for Freely-Given.org"\fig*
 
 \periph Preface
 \mt1 Preliminary preface
@@ -59,4 +61,4 @@
 \li1 Beware of some traps interpreting the \em Literal Version\em*. Because it's not designed to be used alone (but rather alongside the \em Readers' Version\em*), it's \bd much more literal\bd* than most other ‘literal versions’. You'll quickly notice lighter colours that mark the deemphasis of words that had to be added to make the English sentences even make sense. But there's at least two other things that aren't necessarily changed in the English \em Literal Version\em*:
 \li2 Other languages use the negative differently, especially when it's doubled or tripled in the sentence. If you don't understand this, you could easily think that the original means the opposite of what the words actually appear to say. For example the double negative: “You are\em _\em* not \em _\em*caring\em _\em*about no one.” (adapted from Matthew 22:16). In natural, fluent English, we would have to reverse the second negative to get the expected meaning, ending up with \it anyone\it* as you'll find in the \em Readers' Version\em*. But in Greek, the second negative adds emphasis rather than reversing the first negative. So our \em Literal Version\em* shows you the words that are actually there (in the Greek in this case).
 \li2 Other languages may omit (or \it elide\it*) words which are clearly implied to the original reader, but which the modern English reader finds strange, e.g., a son may be divided against his father, and a daughter her mother. The elided words are ‘may be divided against’ which should follow ‘daughter’.
-\m Always check the \em Readers' Version\em* carefully for how it is translated into modern, idiomatic English before jumping to any conclusions of your own about what the original language or the \em Literal Version\em* says or doesn't say.
+\m Note: always check the \em Readers' Version\em* carefully for how it is translated into modern, idiomatic English before jumping to any conclusions of your own about what the original language or the \em Literal Version\em* says or doesn't say (especially if you're not very familiar with the culture around the original language, and its idioms).
