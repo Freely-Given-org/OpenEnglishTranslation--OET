@@ -51,10 +51,10 @@ import bos_books_codes_py
 print(dir(bos_books_codes_py))
 
 
-LAST_MODIFIED_DATE = '2026-05-08' # by RJH
+LAST_MODIFIED_DATE = '2026-07-11' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OSHB_XML_to_TSV"
 PROGRAM_NAME = "Convert OSHB WLC OT XML into TSV/JSON files"
-PROGRAM_VERSION = '0.61'
+PROGRAM_VERSION = '0.62'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -204,7 +204,7 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
                         assert len(entry) == OUTPUT_FIELDNAMES_COUNT, f"Entry should have {OUTPUT_FIELDNAMES_COUNT} fields, not {len(entry)}: {entry}"
                         state.flat_array.append( entry )
                     word_number += 1
-                    
+
 
                 elif verse_element.tag == f"{{{namespaces['osis']}}}seg":
                     numeric_ref = f"{str(nn).zfill(2)}{str(C).zfill(3)}{str(V).zfill(3)}"
@@ -231,7 +231,7 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
                     vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Got note: {readable_ref} {n=} {noteType=} {noteText=}" )
                     if noteType in ('variant','alternative','exegesis'):
                         if noteType in ('variant','alternative'):
-                            assert not noteText
+                            assert noteText is None or not noteText.strip()
                             noteText = '' # it probably was None
                         for noteChild in verse_element:
                             if noteChild.tag == f"{{{namespaces['osis']}}}catchWord":

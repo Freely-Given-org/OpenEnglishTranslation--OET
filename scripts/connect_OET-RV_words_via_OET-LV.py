@@ -80,7 +80,7 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-07-05' # by RJH
+LAST_MODIFIED_DATE = '2026-07-10' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.91'
@@ -352,7 +352,7 @@ simpleVerbSets = ( ('abandoned','abandoning','abandons','abandon'),
                     ('turned','turning','turns','turn'),
                 ('united','uniting','unites','unite'), ('untied','untying','unties','untie'),
                 ('wailed','wailing','wails','wail'), ('walked','walking','walks','walk'), ('wanted','wanting','wants','want'), ('warned','warning','warns','warn'), ('watched','watching','watches','watch'),
-                    ('wore','wearing','wears','wear'),
+                    ('weakened','weakening','weakens','weaken'), ('wore','wearing','wears','wear'),
                     ('withdrew','withdrawing','withdraws','withdraw'), ('withered','withering','withers','wither'),
                     ('worked','working','works','work'),
                     ('wrapped','wrapping','wraps','wrap'), ('wrote','written','writing','writes','write'),
@@ -406,11 +406,11 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('Israelis', 'of Yisrāʼēl/Israel'),('Israeli', 'of Yisrāʼēl/Israel'),
     ('Yisrael','Yisrāʼēl/Israel'),
     ('wants', 'having an ear'),('understand', 'having an ear'),
-    
+
     # Greek possessive pronouns usually appear after the head noun
     ('my', 'of me'), ('your', 'of you'), ('his', 'of him'), ('her', 'of her'), ('its', 'of it'), ('our', 'of us'), ('their', 'of them'),
     ('My', 'of me'), ('Your', 'of you'), ('His', 'of him'), ('Her', 'of her'), ('Its', 'of it'), ('Our', 'of us'), ('Their', 'of them'),
-    
+
     # Contractions
     ("aren't",'not'),("can't",'not'),("didn't",'not'),("Don't",'not'),("don't",'not'),("isn't",'not'),("shouldn't",'not'),("won't",'not'),
     ("I'll", 'I will'),("I've", 'I have'),
