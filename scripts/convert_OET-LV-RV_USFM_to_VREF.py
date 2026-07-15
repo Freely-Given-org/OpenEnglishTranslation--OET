@@ -49,7 +49,7 @@ from bible_organisational_system import InternalBibleEntryList
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-05-31' # by RJH
+LAST_MODIFIED_DATE = '2026-07-13' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_USFM_to_VREF"
 PROGRAM_NAME = "Convert OET LV & RV USFM files to VREF"
 PROGRAM_VERSION = '0.11'
@@ -155,7 +155,6 @@ def main():
                     elif marker == 'li2': verseText = f'{verseText}{cleanText}'
                     elif marker == 'v': firstWord = True # Ignore
                     elif marker == 'v~': verseText = f'{verseText}{cleanText}'
-                    # elif marker == 'XXXp~': verseText = f'{verseText}{cleanText}'
                     elif marker == 'vw':
                         verseText = f"{verseText}{'' if firstWord else ' '}{cleanText}"
                         firstWord = False

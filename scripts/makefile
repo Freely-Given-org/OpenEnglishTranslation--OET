@@ -6,6 +6,7 @@
 #	2025-12-08 Copy OET LV OT & NT word tables into BSB and MSB folders
 #	2026-02-20 Produce OET-RV sections and automated TTS files for radio production
 #	2026-03-06 Separated derivedFiles folder out with some now in furtherDerivedFiles
+#   2026-07-13 Removed absolute filepaths (for word-table copies) to work on laptop
 #
 
 #=== Folder and file declarations =======================
@@ -205,8 +206,8 @@ $(expanded_NT_wordtable): $(original_NT_wordtable) $(Clear_Bible_NT_lowfat_TSV) 
 	@$(UVrun) add_tags_to_NT_word_table.py -e
 	@echo "\n\nCopying final OET NT word table to OET-RV and BSB/MSB folders…\n"
 	@cp -a $(expanded_NT_wordtable) ../translatedTexts/ReadersVersion/
-	@cp -a $(expanded_NT_wordtable) /srv/FreelyGiven/OpenBibleData/copiedBibles/English/Berean.Bible/BSB/
-	@cp -a $(expanded_NT_wordtable) /srv/FreelyGiven/OpenBibleData/copiedBibles/English/Berean.Bible/MSB/
+	@cp -a $(expanded_NT_wordtable) ../../OpenBibleData/copiedBibles/English/Berean.Bible/BSB/
+	@cp -a $(expanded_NT_wordtable) ../../OpenBibleData/copiedBibles/English/Berean.Bible/MSB/
 
 #=== RV stuff =======================
 
@@ -215,8 +216,8 @@ $(RV_word_tables_sentinel): $(final_LV_OT_word_tables)
 	@cp -a ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_morpheme_table.tsv
 	@cp -a ../derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_lemma_table.tsv ../translatedTexts/ReadersVersion/OET-LV_OT_lemma_table.tsv
 	@echo "\n\nCopying final OET OT word table to BSB & MSB folders…\n"
-	@cp -a ../translatedTexts/ReadersVersion/OET-LV_OT_word_table.tsv /srv/FreelyGiven/OpenBibleData/copiedBibles/English/Berean.Bible/BSB/
-	@cp -a ../translatedTexts/ReadersVersion/OET-LV_OT_word_table.tsv /srv/FreelyGiven/OpenBibleData/copiedBibles/English/Berean.Bible/MSB/
+	@cp -a ../translatedTexts/ReadersVersion/OET-LV_OT_word_table.tsv ../../OpenBibleData/copiedBibles/English/Berean.Bible/BSB/
+	@cp -a ../translatedTexts/ReadersVersion/OET-LV_OT_word_table.tsv ../../OpenBibleData/copiedBibles/English/Berean.Bible/MSB/
 	@touch $@
 
 $(final_RV_OT_word_tables): $(RV_word_tables_sentinel)

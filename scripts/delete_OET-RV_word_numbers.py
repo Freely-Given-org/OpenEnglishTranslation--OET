@@ -34,7 +34,7 @@ Of course, it will lose any word numbers that have been manually added
 TODO: A better alternative might be one that can add an offset to any word number
         that's above a certain word number.
 
-        
+
 CHANGELOG:
     2025-03-07 Added OT processing
 """
@@ -63,7 +63,7 @@ OET_RV_ESFM_FolderPath = project_folderpath.joinpath( 'translatedTexts/ReadersVe
 assert OET_RV_ESFM_FolderPath.is_dir()
 
 
-ESFMWordNumberRegex = re.compile( '¦[1-9][0-9]{0,5}' ) # 1..6 digits
+ESFM_WORD_NUMBER_REGEX = re.compile( '¦[1-9][0-9]{0,5}' ) # 1..6 digits
 def main():
     """
     Main program to handle command line parameters and then run what they want.
@@ -80,7 +80,7 @@ def main():
             vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading {rvESFMFilepath}…" )
             with open( rvESFMFilepath, 'rt', encoding='UTF-8' ) as esfmFile:
                 rvESFMText = esfmFile.read() # We keep the original (for later comparison)
-            adjText, count = ESFMWordNumberRegex.subn( '', rvESFMText )
+            adjText, count = ESFM_WORD_NUMBER_REGEX.subn( '', rvESFMText )
             if count:
                 vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"   Deleted {count:,} word numbers from {BBB}." )
                 with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
@@ -98,7 +98,7 @@ def main():
             vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading {rvESFMFilepath}…" )
             with open( rvESFMFilepath, 'rt', encoding='UTF-8' ) as esfmFile:
                 rvESFMText = esfmFile.read() # We keep the original (for later comparison)
-            adjText, count = ESFMWordNumberRegex.subn( '', rvESFMText )
+            adjText, count = ESFM_WORD_NUMBER_REGEX.subn( '', rvESFMText )
             if count:
                 vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"   Deleted {count:,} word numbers from {BBB}." )
                 with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
