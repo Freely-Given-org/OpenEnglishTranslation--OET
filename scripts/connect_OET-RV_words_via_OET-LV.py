@@ -80,7 +80,7 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-07-10' # by RJH
+LAST_MODIFIED_DATE = '2026-07-13' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.91'
@@ -1174,7 +1174,7 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
                     adjustedRvVerseEntryList = InternalBibleEntryList()
                     for rvEntry in rvVerseEntryList:
                         rvMarker = rvEntry.getMarker()
-                        if v==1 and rvMarker in ('v~','XXXp~'): continue # don't want these
+                        if v==1 and rvMarker == 'v~': continue # don't want these
                         if v==2 and rvMarker == 'd': continue # don't want this
                         adjustedRvVerseEntryList.append( rvEntry )
                     rvVerseEntryList = adjustedRvVerseEntryList
@@ -1325,12 +1325,12 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     for rvEntry in rvEntryList:
         rvMarker, rvRest = rvEntry.getMarker(), rvEntry.getCleanText()
         # print( f"OET-RV {connectRef} {rvMarker}='{rvRest}'")
-        if rvMarker in ('v~','XXXp~','d'):
+        if rvMarker in ('v~','d'):
             rvText = f"{rvText}{' ' if rvText else ''}{rvRest}"
     lvText = ''
     for lvEntry in lvEntryList:
         lvMarker,lvRest = lvEntry.getMarker(), lvEntry.getCleanText()
-        if lvMarker in ('v~','XXXp~'):
+        if lvMarker == 'v~':
             lvText = f"{lvText}{' ' if lvText else ''}{lvRest.replace('+','')}"
             # lvTextSimplified = lvText.replace('¦','').replace('0','').replace('1','').replace('2','').replace('3','').replace('4','').replace('5','').replace('6','').replace('7','').replace('8','').replace('9','') \
             #                     .replace('¬','').replace('_',' ').replace('  ',' ') \

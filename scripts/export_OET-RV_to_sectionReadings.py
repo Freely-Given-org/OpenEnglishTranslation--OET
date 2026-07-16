@@ -156,7 +156,7 @@ def main():
 def load_OET_RV() -> bool:
     """
     Docstring for load_OET_RV
-    
+
     :return: Description
     :rtype: bool
     """
@@ -220,7 +220,7 @@ def load_OET_RV() -> bool:
                     if BBB in BOOKS_TO_LOAD:
                         newBooks[BBB] = bookObject
                 thisBible.books = newBooks
-            assert len(thisBible) 
+            assert len(thisBible)
 
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nDoing discovery for {thisBible.abbreviation} ({thisBible.name}) with {len(thisBible)} books…" )
         thisBible.discover()
@@ -293,7 +293,7 @@ ESFM_WORD_NUMBER_REGEX = re.compile( '¦[1-9][0-9]{0,5}' ) # 1..6 digits
 def processBook( BBB:str ) -> int:
     """
     Docstring for processBook
-    
+
     :param BBB: Description
     :type BBB: str
     :return: Description
@@ -332,7 +332,7 @@ def processBook( BBB:str ) -> int:
             # print( f"{marker=} {rest=}" )
             if marker == 'p' and verseText:
                 verseText = f'{verseText}\n\n'
-            elif marker in ('v~','XXXp~'):
+            elif marker == 'v~':
                 verseText = f'{verseText} {rest}' # We don't worry here about extra spaces here
         verseText = ESFM_WORD_NUMBER_REGEX.sub( '', verseText )
         for someString in THINGS_TO_REMOVE:
@@ -384,12 +384,12 @@ def convertToOggWithPiper( BBB:str, sectionFilename:str ):
     # 1. Run Piper via uv
     # We use a list for arguments to handle spaces and paths safely
     piper_cmd = [
-        "uv", "run", 
-        "--with", "piper-tts", 
-        "--with", "pathvalidate", 
-        "piper", 
-        "--model", PIPER_MODEL_PATH, 
-        "--input_file", f'../exportedFiles/OET-RV_sectionReadings/{BBB}/{sectionFilename}.txt', 
+        "uv", "run",
+        "--with", "piper-tts",
+        "--with", "pathvalidate",
+        "piper",
+        "--model", PIPER_MODEL_PATH,
+        "--input_file", f'../exportedFiles/OET-RV_sectionReadings/{BBB}/{sectionFilename}.txt',
         "--output_file", WAV_filepath
     ]
 
@@ -400,11 +400,11 @@ def convertToOggWithPiper( BBB:str, sectionFilename:str ):
         # -y overwrites existing files; -q:a 5 is high quality
         # loudnorm=I=-16 targets a standard 'integrated loudness' for radio
         ffmpeg_cmd = [
-            "ffmpeg", "-y", 
-            "-i", WAV_filepath, 
+            "ffmpeg", "-y",
+            "-i", WAV_filepath,
             "-af", "loudnorm=I=-16:TP=-1.5:LRA=11",
-            "-c:a", "libvorbis", 
-            "-q:a", "5", 
+            "-c:a", "libvorbis",
+            "-q:a", "5",
             OGG_filepath
         ]
 
