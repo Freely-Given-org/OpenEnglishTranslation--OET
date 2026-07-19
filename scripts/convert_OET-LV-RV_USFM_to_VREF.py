@@ -49,17 +49,17 @@ from bible_organisational_system import InternalBibleEntryList
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-07-13' # by RJH
+LAST_MODIFIED_DATE = '2026-07-17' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_USFM_to_VREF"
 PROGRAM_NAME = "Convert OET LV & RV USFM files to VREF"
-PROGRAM_VERSION = '0.11'
+PROGRAM_VERSION = '0.12'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
 
 
 VREF_STANDARD_InputFilePath = Path( '../../../Bibles/DataSets/Reference systems/AQuA.vref.txt' )
-assert VREF_STANDARD_InputFilePath.is_file()
+assert VREF_STANDARD_InputFilePath.is_file(), f"Unable to find vref standard input file: {VREF_STANDARD_InputFilePath}"
 
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module
 # FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos

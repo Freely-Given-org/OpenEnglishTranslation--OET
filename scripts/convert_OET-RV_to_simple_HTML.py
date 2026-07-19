@@ -65,7 +65,7 @@ from bible_organisational_system import getSmallLeadingInt
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-05-31' # by RJH
+LAST_MODIFIED_DATE = '2026-07-17' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
 PROGRAM_VERSION = '0.98'
@@ -857,7 +857,7 @@ def produce_HTML_files() -> None:
                         else:
                             assert closeIx < openIx
                             inCount -= 1
-                            assert inCount == 0
+                            assert inCount == 0, f"{characterMarker} marker mismatch in {source_filename} {lineNumber}: '{line}'"
                             startIx = closeIx + 3
 
                 inCharMarkers = []
