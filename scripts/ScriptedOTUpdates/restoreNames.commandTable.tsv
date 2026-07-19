@@ -7,6 +7,7 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 # Individuals (or gods, or named creatures)
 H									Aaron			אַהֲרֹן		H175 (347) Exo 4:14,27-30, ..., Acts 7:40
 H					KI1_4:6,NEH_11:17				Abda			עַבְדָּא		H5653 (2) 1Ki 4:6, Neh 11:17*
+H					JER_36:26				Abdeel			עַבְדְּאֵל		H5655 (1) Jer 36:26*
 H	CH1,CH2,EZR								Abdi			עַבְדִּי		H5660 (3) 1Chr 6:44, 2Chr 9:12, Ezr 10:26*
 H	JOS,JDG,CH1,CH2								Abdon			עַבְדוֹן		H5658 man and city (8) Josh 21:30, Jdg 12:13,15, 1Chr 6:74, ...
 H					DAN_1:7				Abednego			עֲבֵד-נְגוֹ		{ H5664 (space changed to hyphen) Azariah/Azaryah (1) Dan 1:7*
@@ -16,15 +17,15 @@ H					DAN_1:7				-nego			נְגוֹ		{ H5664 (space changed to hyphen) Azariah/A
 H									Nego			נְגוֹ		{ H5664 (space changed to hyphen) Azariah/Azaryah (1) Dan 1:7*
 dH	GEN								Abel			הֶבֶל/(Abel)		H1893 (8) Gen 4:2,4,8-9,25*
 wH					KI2_18:2				Abi			אֲבִי		H21 (1) 2Ki 18:2*
-H									Abiathar			אֶבְיָתָר		H54 (30) 1Sam 22:20-22, 23:6,9, ...
-H									Abida			אֲבִידָע		H28 (2) Gen 25:4, 1Chr 1:33*
-H									Abiel			אֲבִיאֵל		H22 (3) 1 Sam 9:1, 14:51, 1Chr 11:32*
-H									Abiezer			אֲבִיעֶזר		H44 (7) Josh 17:2, Jdg 6:34, 8:2, 2Sam 23:27, ...
-H									Abigail			אֲבִיגַיִל		H26 (17) 1Sam 25:3,14,18,23,32,36,39-40,42, 27:3, ...
-H									Abihail			אֲבִיהַיִל		H32 (6) Num 3:35, 1Chr 2:29, 5:14, 2Chr 11:18, Est 2:15, 9:29*
-H									Abihu			אֲבִיהוּא		H30 (12) Exo 6:23, 24:1,9, 28:1, Lev 10:1, Num 3:2,4, ...
-H									Abijah			אֲבִיָּה		H29 (29) 1Sa 8:2, 1Ki 14:1, 1Chr 2:24, 3:10, ...
-H									Abijam			אֲבִיָּם		H38 (5) 1Ki 14:31, 15:1,7-8*
+H	SA1,SA2,KI1,CH1,NEH								Abiathar			אֶבְיָתָר		H54 (30) 1Sam 22:20-22, 23:6,9, ..., Mrk 2:26
+H					GEN_25:4,CH1_1:33				Abida			אֲבִידָע		H28 (2) Gen 25:4, 1Chr 1:33*
+H					SA1_9:1,SA1_14:51,CH1_11:32				Abiel			אֲבִיאֵל		H22 (3) 1 Sam 9:1, 14:51, 1Chr 11:32*
+H	JOS,JDG,SA2,CH1								Abiezer			אֲבִיעֶזר		H44 (7) Josh 17:2, Jdg 6:34, 8:2, 2Sam 23:27, ...
+H	SA1,SA2,CH1								Abigail			אֲבִיגַיִל		H26 (17) 1Sam 25:3,14,18,23,32,36,39-40,42, 27:3, ...
+H	NUM,CH1,CH2,EST								Abihail			אֲבִיהַיִל		H32 (6) Num 3:35, 1Chr 2:29, 5:14, 2Chr 11:18, Est 2:15, 9:29*
+H	EXO,LEV,NUM,CH1								Abihu			אֲבִיהוּא		H30 (12) Exo 6:23, 24:1,9, 28:1, Lev 10:1, Num 3:2,4, ...
+H	SA1,KI1,CH1,CH2,NEH								Abijah			אֲבִיָּה		H29 (29) 1Sa 8:2, 1Ki 14:1, 1Chr 2:24, 3:10, ...
+H	KI1								Abijam			אֲבִיָּם		H38 (5) 1Ki 14:31, 15:1,7-8*
 H					GEN_10:28,CH1_1:22				Abimael			אֲבִימָאֵל		H39 (2) Gen 10:28, 1Chr 1:22*
 H									Abimelech			אֲבִימֶלֶךְ		H40 (67) Gen 20:2-4,8-10,14-15,17-18,22, ...
 H									Abinadab			אֲבִינָדָב		H41 (12) 1Sam 7:1, 16:8, 17:13, 31:2, 2Sam 6:3-4, 1Chr 2:13, 8:33, 9:39, 10:2, 13:7*
@@ -558,6 +559,8 @@ H					CH1_4:6				Haahashtari			הָאֲחַשְׁתָּרִי		H326 (1) 1Chr 4:6
 H					HAB_1:1,HAB_3:1				Habakkuk			חֲבַקּוּק		H2265 (2) Hab 1:1, 3:1*
 H					EZR_2:61,NEH_7:63				Habaiah			חֲבַיָּה		{ H2552 (2) Ezr 2:61, Neh 7:63*
 H					EZR_2:61,NEH_7:63				Hobaiah			חֲבַיָּה		{ H2552 (2) Neh 7:63*
+H					JER_35:3				Habazziniah			חֲבַצַּנְיָה		H2262 (1) Jer 35:3*
+H					JER_35:3				Habaziniah			חֲבַצַּנְיָה		H2262 (1) Jer 35:3*
 H					NEH_1:1,NEH_10:1				Hacaliah			חֲכַלְיָה		H2446 (2) Neh 1:1, 10:1*
 H	SA1								Hachilah			חֲכִילָה		H2444 (3) 1Sam 23:19, 26:1,3*
 wH					CH1_11:11,CH1_27:32				Hachmoni			חַכְמוֹנִי		{ H2453 (2) 1Chr 11:11, 27:32*
@@ -706,7 +709,8 @@ dH					CH1_4:3				Idbash			יִדְבָּשׂ/(Idbash)		H3031 (1) 1Chr 4:3*
 H						CH1_27:21,EZR_10:43			Iddo			עִדּוֹ		H5714 (10) 1Ki 4:14, 1Chr 6:21, 2Chr 12:15, 13:22, ...
 wH					NUM_26:30				Iezer			אִיעֶזֵר		{ H372 (1) Num 26:30*
 wdH					NUM_26:30				Jeezer			אִיעֶזֵר/(Jeezer)		{ H372 (1) Num 26:30*
-dH									Igal			יִגְאָל/(Igal)		H3008 (3) Num 13:7, 2Sam 23:36, 1Chr 3:22*
+dH					NUM_13:7,SA2_23:36,CH1_3:22				Igal			יִגְאָל/(Igal)		H3008 (3) Num 13:7, 2Sam 23:36, 1Chr 3:22*
+dH					JER_35:4				Igdaliah			יִגְדַּלְיָהוּ/(Igdaliah)		H3012 (1) Jer 35:4*
 H	SA2,CH1								Ikkesh			עִקֵּשׁ		H6142 (3) 2Sam 23:26, 1Chr 11:28, 27:9*
 H					CH1_11:29				Ilai			עִילַי		H5866 (1) 1Chr 11:29*
 dH	KI1,CH2								Imlah			יִמְלָא/(Imlah)		H3229 man (4) 1Ki 22:8-9, 2Chr 18:7-8*
@@ -868,7 +872,9 @@ dH									Jehoshaphat			יְהוֹשָׁפָט/(Jehoshaphat)		H3092 (84) 2Sam 8
 dH					KI2_11:2				Jehosheba			יְהוֹשֶׁבַע/(Jehosheba)		H3089 princess (1) 2Ki 11:2*
 dH	KI2,CH1,CH2								Jehozabad			יְהוֹזָבָד/(Jehozabad)		H3075 (4) 2Ki 12:21, 1Chr 26:4, 2Chr 17:18. 24:26*
 dH	CH1,HAG,ZEC								Jehozadak			יְהוֹצָדָק/(Jehozadak)		H3087 (8) 1Chr 6:14-15, Hag 1:1,12,14, 2:2,4, Zec 6:11*
-dH									Jehu			יֵהוּא/(Jehu)		H3058 (58) 1Ki 16:1,7,12, 19:16-17, 2Ki 9:2,5,11,13-14, ...
+dH	KI1,KI2,CH1,CH2,HOS								Jehu			יֵהוּא/(Jehu)		H3058 (58) 1Ki 16:1,7,12, 19:16-17, 2Ki 9:2,5,11,13-14, ...
+dH					JER_37:3				Jehucal			יְהוּכַל/(Jehucal)		H3081 (1) Jer 37:3*
+dH					JER_36:14,JER_36:21,JER_36:23				Jehudi			יְהוּדִי/(Jehudi)		H3065 (4) Jer 36:14,21,23*
 dH	CH1,CH2,EZR								Jeiel			יְעִיאֵל/(Jeiel)		{ H3273 (13) 1Chr 5:7, 9:35, 11:44, 15:18,21, 16:5, 2Chr 20:14, 26:11, 29:13, 35:9, Ezr 8:13, 10:43*
 dH	CH1,CH2,EZR								Jehiel			יְעִיאֵל/(Jehiel)		{ H3273 (13) 1Chr 5:7, 9:35, 11:44, 15:18,21, 16:5, 2Chr 20:14, 26:11, 29:13, 35:9, Ezr 8:13, 10:43*
 dH					CH1_2:41,CH1_3:18				Jekamiah			יְקַמְיָה/(Jekamiah)		{ H3359 (3) 1Chr 2:41, 3:18*
@@ -1948,7 +1954,8 @@ H	JDG,SA2,CH1								Pirathonite			פִּרְעָתוֹנִי		H6553 (5) Jdg 12:
 H					NUM_26:23				Punites			פּוּנִי		H6324 (1) Num 26:23*
 H					CH1_2:53				Puthites			פּוּתִי		H6336 (1) 1Chr 2:53*
 H					CH1_27:27				Ramathite			רָמָתִי		H7435 (1) 1Chr 27:27*
-H	JER								Rechabites			רֵכָבִים		H7397b (4) Jer 35:2-3,5,18*
+H	JER								Rechabites			רֵכָבִים		{{ H7397b (4) Jer 35:2-3,5,18*
+H	JER								Rekabites			רֵכָבִים		{{ H7397b (4) Jer 35:2-3,5,18*
 H	GEN,DEU,JOS,SA2,CH1,ISA								Rephaim			רְפָאִים		{ H7497 (25) Gen 14:5, 15:20, Deu 2:11,20, 3:11,13, Josh 12:4, ...
 H	GEN,DEU,JOS,SA2,CH1,ISA								Raphaites			רְפָאִים		{ H7497 (25) Gen 14:5, 15:20, Deu 2:11,20, 3:11,13, Josh 12:4, ...
 H	GEN,DEU,JOS,SA2,CH1,ISA								Rephaites			רְפָאִים		{ H7497 (25) Gen 14:5, 15:20, Deu 2:11,20, 3:11,13, Josh 12:4, ...
