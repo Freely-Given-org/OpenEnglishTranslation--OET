@@ -95,7 +95,7 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2026-05-15' # by RJH
+LAST_MODIFIED_DATE = '2026-07-18' # by RJH
 SHORT_PROGRAM_NAME = "apply_Clear_Macula_OT_glosses"
 PROGRAM_NAME = "Apply Macula OT glosses"
 PROGRAM_VERSION = '0.73'
@@ -474,13 +474,13 @@ def do_yalls() -> bool:
 
     Morphology table:
         A	adjective	    type 	 	 	gender 	number	state
-        C	conjunction	  	 	 	 	 	 
-        D	adverb	 	 	  	 	 	 
+        C	conjunction
+        D	adverb
         N	noun	        type	  	 	gender	number 	state
         P	pronoun	        type	person	gender 	number
         R	preposition	    type
         S	suffix	        type	person	gender 	number
-        T	particle	    type	  	 	 	 	 
+        T	particle	    type
         V	verb	stem	type 	person	gender 	number	state
     """
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "\nConverting to 'you(pl)' for plural and dual 2nd person pronouns plus marking plural/dual verbs…" )
@@ -619,7 +619,7 @@ def do_auto_reordering() -> bool:
     Does this by changing the GlossOrder fields in state.WLC_rows
         but referring to information from state.MaculaHebrewRows.
     """
-    DEBUGGING_THIS_MODULE = 99
+    # DEBUGGING_THIS_MODULE = 99
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "\nTrying to reorder WLC OT glosses…" )
 
     # First make a dictionary to easily get to our MaculaHebrew rows
@@ -636,10 +636,10 @@ def do_auto_reordering() -> bool:
     print( f"{last4_WLC_morpheme_row=}\n{last3_WLC_morpheme_row=}\n{last2_WLC_morpheme_row=}\n{last1_WLC_morpheme_row=}" )
 
     for this__WLC_morpheme_row in state.WLC_morpheme_rows[4:]: # these 'rows' are dictionaries
-        print( f"\n{this__WLC_morpheme_row=}" )
+        # print( f"\n{this__WLC_morpheme_row=}" )
         # if WLC_morpheme_row['Ref'].startswith( 'GEN_30:1w1'):
         #     print( "Stopping there" ); break
-        
+
         if this__WLC_morpheme_row['OSHBid']:
             try: MH_index = MaculaHebrew_morpheme_row_dict[this__WLC_morpheme_row['OSHBid']]
             except KeyError:
@@ -674,7 +674,7 @@ def do_auto_reordering() -> bool:
             dPrint( 'Info', DEBUGGING_THIS_MODULE, f"\n  Have a simple noun subject: {MaculaHebrew_morpheme_row['FGRef']} {MaculaHebrew_morpheme_row['RowType']} '{MaculaHebrew_morpheme_row['WordClass']}' {MaculaHebrew_morpheme_row['PartOfSpeech']} '{MaculaHebrew_morpheme_row['EnglishGloss']}'" )
 
             # Look for verb followed by subject
-            if ( '/' in last1_MaculaHebrew_morpheme_row['Nesting'] and 'V-S' in last1_MaculaHebrew_morpheme_row['Nesting'].split('/')[0] 
+            if ( '/' in last1_MaculaHebrew_morpheme_row['Nesting'] and 'V-S' in last1_MaculaHebrew_morpheme_row['Nesting'].split('/')[0]
             and last1_MaculaHebrew_morpheme_row['PartOfSpeech']=='v'
             and last1_MaculaHebrew_morpheme_row['Nesting'].split('/')[-1] == 'V2VP' ): # Verb is a single word
                 # Possibly have a verb followed by its subject (first one is Gen 1:3 'and=he_said Elohim')
@@ -732,7 +732,7 @@ def do_auto_reordering() -> bool:
             dPrint( 'Info', DEBUGGING_THIS_MODULE, f"\n  Have a determiner noun subject: {MaculaHebrew_morpheme_row['FGRef']} {MaculaHebrew_morpheme_row['RowType']} '{MaculaHebrew_morpheme_row['WordClass']}' {MaculaHebrew_morpheme_row['PartOfSpeech']} '{last1_MaculaHebrew_morpheme_row['EnglishGloss']} {MaculaHebrew_morpheme_row['EnglishGloss']}'" )
 
             # Look for verb followed by subject
-            if ( '/' in last2_MaculaHebrew_morpheme_row['Nesting'] and 'V-S' in last2_MaculaHebrew_morpheme_row['Nesting'].split('/')[0] 
+            if ( '/' in last2_MaculaHebrew_morpheme_row['Nesting'] and 'V-S' in last2_MaculaHebrew_morpheme_row['Nesting'].split('/')[0]
             and last2_MaculaHebrew_morpheme_row['PartOfSpeech']=='v'
             and last2_MaculaHebrew_morpheme_row['Nesting'].split('/')[-1] == 'V2VP' ): # Verb is a single word
                 again
@@ -767,7 +767,7 @@ def do_auto_reordering() -> bool:
             dPrint( 'Info', DEBUGGING_THIS_MODULE, f"\n  Have a double noun subject: {MaculaHebrew_morpheme_row['FGRef']} {MaculaHebrew_morpheme_row['RowType']} '{MaculaHebrew_morpheme_row['WordClass']}' {MaculaHebrew_morpheme_row['PartOfSpeech']} '{last1_MaculaHebrew_morpheme_row['EnglishGloss']} {MaculaHebrew_morpheme_row['EnglishGloss']}'" )
 
             # Look for verb followed by subject
-            if ( '/' in last2_MaculaHebrew_morpheme_row['Nesting'] and 'V-S' in last2_MaculaHebrew_morpheme_row['Nesting'].split('/')[0] 
+            if ( '/' in last2_MaculaHebrew_morpheme_row['Nesting'] and 'V-S' in last2_MaculaHebrew_morpheme_row['Nesting'].split('/')[0]
             and last2_MaculaHebrew_morpheme_row['PartOfSpeech']=='v'
             and last2_MaculaHebrew_morpheme_row['Nesting'].split('/')[-1] == 'V2VP' ): # Verb is a single word
                 # Possibly have a verb followed by its subject
@@ -888,7 +888,7 @@ def save_lemma_TSV_file() -> bool:
     print( f"{num_missing_lemmas:,} morphemes with no lemmas => {len(morphemes_with_missing_lemmas):,} unique morphemes_with_missing_lemmas={sorted(morphemes_with_missing_lemmas)}")
     print( f"Extracted {len(state.lemma_formation_dict):,} Hebrew lemmas from {len(state.MaculaHebrew_morpheme_rows):,} morphemes" )
     # print( f"{state.lemma_formation_dict=}" )
-    
+
     # Preprocess it in the sorted order
     new_dict = {}
     # state.lemma_index_dict = {}
@@ -960,7 +960,7 @@ def save_filled_word_TSV_file() -> bool:
     assert word_tsv_column_header_line == 'Ref\tOSHBid\tRowType\tMorphemeRowList\tStrongs\tCantillationHierarchy\tMorphology\tWord\tNoCantillations\tMorphemeGlosses\tContextualMorphemeGlosses\tWordGloss\tContextualWordGloss\tGlossCapitalisation\tGlossPunctuation\tGlossOrder\tGlossInsert', f"{word_tsv_column_header_line=}"
     word_tsv_column_headers = word_tsv_column_header_line.split( '\t' )
     assert len(word_tsv_column_headers) == len(WLC_tsv_column_headers)+1 == 17, f"{len(word_tsv_column_headers)=} {len(WLC_tsv_column_headers)=}"
-    
+
     current_verse_ref = None
     verse_gloss_order_list = []
     with open( state.our_word_TSV_output_filepath, 'wt', encoding='utf-8', newline='' ) as tsv_output_file:
