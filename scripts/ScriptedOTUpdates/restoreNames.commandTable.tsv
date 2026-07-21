@@ -240,7 +240,7 @@ H	NUM,DEU,PSA,HOS								Baalpeor			בַּעַל-פְּעוֹר		{{ H1187 (space
 H	NUM,DEU,PSA,HOS								Peor			פְּעוֹר		{{ H1187 (6) Num 25:3,5, Deu 4:3, Psa 106:28, Hos 9:10*
 H	SA2,CH1,EZR,NEH								Baanah			בַּעֲנָה		H1196 (9) 2Sam 4:2,5-6,9, 23:29, 1Chr 11:30, Ezr 2:2, Neh 7:7, 10:27*
 H					KI1_4:12,KI1_4:16,NEH_3:4				Baana			בַּעֲנָא		H1195 (3) 1Ki 4:12,16, Neh 3:4*
-H	KI1,KI2,CH2								Baasha			בַּעְשָׁא		H1201 (28) 1Ki 15:16-17,19,21-22,27-28,32-33, ...
+H	KI1,KI2,CH2,JER								Baasha			בַּעְשָׁא		H1201 (28) 1Ki 15:16-17,19,21-22,27-28,32-33, ...
 wH					CH1_9:15				Bakbakkar			בַּקְבַּקַּר		H1230 (1) 1Chr 9:15*
 wH					EZR_2:51,NEH_7:53				Bakbuk			בַּקְבּוּק		H1227 (2) Ezr 2:51, Neh 7:53*
 H	NEH								Bakbukiah			בַּקְבֻּקְיָה		H1229 (3) Neh 11:17, 12:9,25*
@@ -360,7 +360,7 @@ H	CH1								Kenaniah			כְּנַנְיָה		{{{ H3663 (3) 1Chr 15:22,27, 26:29
 dH					GEN_36:26,CH1_1:41				Cheran			כְּרָן/(Cheran)		{{ H3763 (2) Gen 36:26, 1Chr 1:41*
 dH					GEN_36:26,CH1_1:41				Keran			כְּרָן/(Cheran)		{{ H3763 (2) Gen 36:26, 1Chr 1:41*
 dH	RUT								Chilion			כִּלְיוֹן/(Chilion)		H3630 (3) Ruth 1:2,5, 4:9*
-dH	SA2								Chimham			כִּמְהָם/(Chimham)		H3643 (3) 2Sam 19:37-38,40*
+dH	SA2,JER								Chimham			כִּמְהָם/(Chimham)		H3643 (3) 2Sam 19:37-38,40*
 dH					NUM_34:21				Chislon			כִּסְלוֹן/(Chislon)		H3692 (1) Num 34:21*
 dH					NEH_3:15,NEH_11:5				Col-hozeh			כָּל-חֹזֶה/(Col-hozeh)		{ H3626 (2) Neh 3:15, 11:5*
 wdH					NEH_3:15,NEH_11:5				Col			כָּל/(Col)		{ H3626 (2) Neh 3:15, 11:5*
@@ -689,7 +689,7 @@ H	GEN,NUM,CH1								Hori			חֹרִי		H2753 (4) Gen 36:22,30, Num 13:5, 1Chr 1
 H	JOS,CH1								Hosah			חֹסָה		H2621 (5) Josh 19:29, 1Chr 16:38. 26:10-11,16*
 H					HOS_1:1,HOS_1:2				Hosea			הוֹשֵׁעַ		{ H1954 (3) Hos 1:1,2*
 H									Hoshea			הוֹשֵׁעַ		{ H1954 (13) Num 13:8,16, Deu 32:44, 2Ki 15:30, 17:1,3-4, ...
-H	NEH,JER								Hoshaiah			הוֹשִׁעִיה		H1955 (3) Neh 12:32, Jer 42:1, 43:2*
+H	NEH,JER								Hoshaiah			הוֺשַׁעֲיָה		H1955 (3) Neh 12:32, Jer 42:1, 43:2*
 H					CH1_3:18				Hoshama			הוֹשָׁמָע		H1953 (1) 1Chr 3:18*
 H					CH1_7:32,CH1_11:44				Hotham			חוֹתָם		H2369 (2) 1Chr 7:32, 11:44*
 H					CH1_25:4,CH1_25:28				Hothir			הוֹתִיר		H1956 (2) 1Chr 25:4,28*
@@ -2316,6 +2316,7 @@ H					JOS_12:13				Geder			גֶּדֶר		H1445 city in Canaan (1) Josh 12:13*
 H					JOS_18:17				Geliloth			גְּלִילוֹת		H1553 (1) Josh 18:17*
 H	GEN,CH2								Gerar			גְּרָר		H1642 (10) Gen 10:19, 20:1-2, 26:1,6,17,20,26, 2Chr 14:13-14*
 H	DEU,JOS,JDG								Gerizim			גְּרִזִים		H1630 mountain (4) Deu 11:29, 27:12, Josh 8:33, Jdg 9:7*
+H					JER_41:17				Geruth			גֵּרִוּת		H1628 (1) Jer 41:17*
 H	JOS,SA2,CH1								Geshur			גְּשׁוּר		H1650 (9) Josh 13:13, 2Sam 3:3, 13:37-38, 14:23,32, 15:8, 1Chr 2:23, 3:2*
 H	JOS,JDG,SA2,KI1,CH1								Gezer			גֶּזֶר		H1507 (15) Josh 10:33, 12:12, 16:3,10, 21:21 Jdg 1:29, ...
 H					SA2_2:24				Giah			גִּיַחַ		H1520 (1) 2Sam 2:24*
