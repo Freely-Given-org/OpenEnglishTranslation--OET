@@ -83,10 +83,10 @@ from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-06-05' # by RJH
+LAST_MODIFIED_DATE = '2026-07-21' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed_OSHB_OT_to_ESFM"
 PROGRAM_NAME = "Extract glossed OSHB OT ESFM files"
-PROGRAM_VERSION = '1.0.4'
+PROGRAM_VERSION = '1.0.5'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -547,9 +547,9 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"preform_row_gloss({given_verse_row['Ref']}.{given_verse_row['MorphemeRowList']},"
             f" mg='{given_verse_row['MorphemeGlosses']}' cmg='{given_verse_row['ContextualMorphemeGlosses']}'"
             f" wg='{given_verse_row['WordGloss']}' cwg='{given_verse_row['ContextualWordGloss']}'"
-            f" {consecutive=} {saved_gloss=} {saved_capitalisation=} {saved_punctuation=} {just_had_insert=})…") # {last_glossWord=} 
+            f" {consecutive=} {saved_gloss=} {saved_capitalisation=} {saved_punctuation=} {just_had_insert=})…") # {last_glossWord=}
     # if given_verse_row['Ref'].startswith('GEN_3:14'): assert False, "We want to stop here"
-    
+
     gloss = gloss_punctuation = ''
     if given_verse_row['RowType'] in ('seg','note','variant note','alternative note','exegesis note'):
         if given_verse_row['RowType'] == 'seg': # We will ignore all of these
@@ -586,7 +586,7 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
             all_glosses = f'{given_verse_row['ContextualWordGloss']} {given_verse_row['WordGloss']} {given_verse_row['ContextualMorphemeGlosses']} {given_verse_row['MorphemeGlosses']}'
             if 'behold' in all_glosses and 'to,behold' not in all_glosses and 'they,behold' not in all_glosses \
             and ',see' not in all_glosses and 'observe' not in all_glosses and 'attention' not in all_glosses:
-                gloss = gloss.replace( 'here', 'HERE' )
+                gloss = gloss.replace( 'there', 'THERE' ).replace( 'here', 'HERE' )
                 # print( f"{given_verse_row['Ref']} {gloss=} {all_glosses=}" )
                 # if '/lo/' not in gloss and 'wow' not in gloss and 'HERE' not in gloss and '!' not in gloss: assert False, "We want to stop here"
             # assert '_~_' not in gloss,  f"{given_verse_row}" # {'Ref': 'GEN_6:19w10', 'OSHBid': '01cUx', 'RowType': '', 'MorphemeRowList': '3667,3668', 'Strongs': 'l,2421', 'CantillationHierarchy': '', 'Morphology': 'R,Vhc', 'Word': 'לְ,הַחֲיֹ֣ת', 'NoCantillations': 'לְ,הַחֲיֹת', 'MorphemeGlosses': 'to,keep_~_alive', 'ContextualMorphemeGlosses': '', 'WordGloss': '', 'ContextualWordGloss': '', 'GlossCapitalisation': '', 'GlossPunctuation': '', 'GlossOrder': '190', 'GlossInsert': '', 'n': 2585}
@@ -613,7 +613,7 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
             vPrint( 'Info', DEBUGGING_THIS_MODULE, f"{given_verse_row['Ref']}.{given_verse_row['MorphemeRowList']},"
                                         f" needs a word gloss for '{given_verse_row['Word']}'"
                                         f" (from '{given_verse_row['NoCantillations']}')" )
-    
+
         if 'S' in given_verse_row['GlossCapitalisation'] \
         or (just_had_insert and 'S' in saved_capitalisation): # Start of Sentence
             gloss = f'{gloss[0].upper()}{gloss[1:]}'
@@ -809,7 +809,7 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
         logging.critical( f"Removing final underline from {gloss=} at {wn=}" )
         gloss = gloss[:-1]
     assert '__' not in gloss
-    
+
     assert gloss.count( '(' ) == gloss.count( ')' ), f"Parentheses mismatch in  {gloss=} from {originalGloss=}, {wn=}"
     if '[' in gloss:
         # print( f"Have square brackets in {gloss=}, {wn=} )")
