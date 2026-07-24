@@ -35,6 +35,7 @@ CHANGELOG:
     2026-03-24 Added Hebrew alphabet
     2026-04-16 Handle names with apostrophes in them better
     2026-06-11 Handle new % (changed person) \\add format
+    2026-07-22 Added additional possible path for TEDDict
 """
 from gettext import gettext as _
 # from typing import List, Tuple, Optional
@@ -48,10 +49,10 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2026-06-11' # by RJH
+LAST_MODIFIED_DATE = '2026-07-22' # by RJH
 SHORT_PROGRAM_NAME = "spell_check"
 PROGRAM_NAME = "OET Spell Check"
-PROGRAM_VERSION = '0.32'
+PROGRAM_VERSION = '0.33'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -71,7 +72,10 @@ OET_RV_NAMES_TSV_FILEPATH = project_folderpath.joinpath( 'translatedTexts/Reader
 assert OET_RV_NAMES_TSV_FILEPATH.is_file()
 EXPECTED_OET_RV_NAMES_TSV_HEADER = 'TraditionalName\tRVName\tExplained\tComment'
 
-TED_Dict_folderpath = Path( '../../../Documents/RobH123/TED_Dict/sourceDicts/')
+TED_Dict_folderpath1 = Path( '../../../Documents/RobH123/TED_Dict/sourceDicts/')
+TED_Dict_folderpath2 = Path( '../../../RobH123/TED_Dict/sourceDicts/')
+if TED_Dict_folderpath1.is_dir(): TED_Dict_folderpath = TED_Dict_folderpath1
+if TED_Dict_folderpath2.is_dir(): TED_Dict_folderpath = TED_Dict_folderpath2
 assert TED_Dict_folderpath.is_dir()
 
 
@@ -417,7 +421,7 @@ def spellCheckESFMText( text:str, location:str, nameSet:set[str] ) -> bool:
             #     or word.endswith('?') or word.endswith('!') \
             #     or word.endswith(':') or word.endswith(';') \
             #     or word.endswith(')') or word.endswith(']') \
-            #     or word.endswith('…'): 
+            #     or word.endswith('…'):
             #         word = word[:-1]
             #     if word.endswith( f'\\{charMarker}*' ):
             #         word = word[:-len(charMarker)-2]
@@ -426,7 +430,7 @@ def spellCheckESFMText( text:str, location:str, nameSet:set[str] ) -> bool:
             or word.endswith('?') or word.endswith('!') \
             or word.endswith(':') or word.endswith(';') \
             or word.endswith(')') or word.endswith(']') \
-            or word.endswith('…'): 
+            or word.endswith('…'):
                 word = word[:-1]
             if not word: break
 
