@@ -45,6 +45,7 @@ import re
 
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint, BOOKLIST_OT39, BOOKLIST_NT27
+from BibleOrgSys.Formats.ESFMBible import ESFM_WORD_NUMBER_REGEX
 from BibleOrgSys.Bible import Bible
 
 
@@ -63,7 +64,6 @@ OET_RV_ESFM_FolderPath = project_folderpath.joinpath( 'translatedTexts/ReadersVe
 assert OET_RV_ESFM_FolderPath.is_dir()
 
 
-ESFM_WORD_NUMBER_REGEX = re.compile( '¦[1-9][0-9]{0,5}' ) # 1..6 digits
 def main():
     """
     Main program to handle command line parameters and then run what they want.

@@ -125,6 +125,7 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - clefts -> crevices
 - land you do not know -> land you've never been to
 - deeds -> actions
+- strongholds -> fortifications
 - Titos -> Latin/Roman Titus???
 - plague -> DEADLY diseases
 - prophesying falsehood -> prophesying untruths (not lies)

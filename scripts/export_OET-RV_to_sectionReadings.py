@@ -43,7 +43,7 @@ import logging
 
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
-import BibleOrgSys.Formats.ESFMBible as ESFMBible
+from BibleOrgSys.Formats.ESFMBible import ESFMBible, ESFM_WORD_NUMBER_REGEX
 
 
 LAST_MODIFIED_DATE = '2026-06-11' # by RJH
@@ -289,7 +289,6 @@ def createOETSectionLists() -> bool:
 # end of createSectionPages.createOETSectionLists
 
 
-ESFM_WORD_NUMBER_REGEX = re.compile( '¦[1-9][0-9]{0,5}' ) # 1..6 digits
 def processBook( BBB:str ) -> int:
     """
     Docstring for processBook
