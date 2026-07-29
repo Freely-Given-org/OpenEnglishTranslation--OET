@@ -74,7 +74,7 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - decide on idioms (esp. in Proverbs) using 'lips'
 - Revisit whether words like "peace offering", "grain offering", "sin offering" would be better if hyphenated???
 - Change Ephraim/Efrayim to Israel where it's referring to the northern kingdom
-- Check Jn 1:1-9 against SL email
+- Check Jn 1:1-9 against very critical SL email
 - Go through all Gary Gagliardi articles and check OET-RV
 - A more modern term for 'parable'?
 
@@ -125,11 +125,13 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - clefts -> crevices
 - land you do not know -> land you've never been to
 - deeds -> actions
-- strongholds -> fortifications
+- strongholds -> fortifications and/or fortresses
 - Titos -> Latin/Roman Titus???
 - plague -> DEADLY diseases
 - prophesying falsehood -> prophesying untruths (not lies)
 - remove 'everlasting', 'amongst', 'midst', 'upon' 'shall', most of 'may'
+- wine-presses/wine-vats -> wine-pressing pit
+- sackcloth -> coarse, abrasive cloth
 
 Continue checking Mark spelling from Mrk 12:11 onwards.
 Continue revising Mark formatting from Mrk 1:21 onwards. Then Ruth.
