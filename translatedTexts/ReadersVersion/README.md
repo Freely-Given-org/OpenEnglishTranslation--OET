@@ -132,6 +132,9 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - remove 'everlasting', 'amongst', 'midst', 'upon' 'shall', most of 'may'
 - wine-presses/wine-vats -> wine-pressing pit
 - sackcloth -> coarse, abrasive cloth
+- bend bows -> 'use bows and arrows'
+- plaza vs square
+- refer to cities/countries, etc. as 'it', not 'he' or 'she'.
 
 Continue checking Mark spelling from Mrk 12:11 onwards.
 Continue revising Mark formatting from Mrk 1:21 onwards. Then Ruth.
