@@ -118,7 +118,7 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - proclaim -> announce ???
 - exalt -> speak highly of
 - try to remove righteousness (doing what's right) and perhaps justice (doing what's fair) from RV
-- redeemed (replace 'bought you') -> 'paid the price to free you'
+- redeemed (replace 'bought you back') -> 'paid the price to free you'
 - green tree / luxuriant tree / leafy tree
 - nobles -> leading citizens
 - sword -> war
@@ -135,6 +135,7 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - bend bows -> 'use bows and arrows'
 - plaza vs square
 - refer to cities/countries, etc. as 'it', not 'he' or 'she'.
+- 'rest' -> check if 'peace and stability' or something is more natural in modern English
 
 Continue checking Mark spelling from Mrk 12:11 onwards.
 Continue revising Mark formatting from Mrk 1:21 onwards. Then Ruth.
