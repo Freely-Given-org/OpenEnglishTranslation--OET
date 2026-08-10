@@ -1,4 +1,4 @@
-\id JER - Open English Translation—Readers' Version (OET-RV) v0.0.45
+\id JER - Open English Translation—Readers' Version (OET-RV) v0.1.00
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 JER
@@ -6,17 +6,17 @@
 \h Yirmeyah
 \toc1 Yirmeyah
 \toc2 Yirmeyah
-\toc3 Yer.
+\toc3 Yir.
 \mt1 Yirmeyah
 \mt2 (Jeremiah)
 \is1 Introduction
-\ip The prophet Yirmeyah/Jeremiah, started his vocation as a prophet around 627 B.C. and continued for just under fifty years until around 580 B.C. Te long time of serving Yirmeyah, impanpanayan he/his the people concerning the destruction coming of nation due to sins their, and of worshipping ran of false gods. And/Now saw of Yirmeyah the katumanan of prophesied he/his of time nasakup e the Yerushalem of Nibukadnisar King of Babylon. Saw/Found his again the demolition of city and temple, and the capture of many people other of King their there to Babylon. Prophesied he/his again the return of people from capture their, and the replacement of standing up of nation there to old natahuan here.
-\ip \bk The Account of Yirmeyah\bk* divided of five main sections: 1. The calling to Yirmeyah; 2. the what was said of God for of nation of Yehudah and of teachers here at time of kingdom of Husiyas, Huwakim, Hihuyakin and of Sidikiyas; 3. the all persecution of people according to it's written of Baruk secretary of Yirmeyah, including the various prophecies, and the important what happened of life of Yirmeyah; 4. the what was said of Master God concerning the various foreigner there nations; and 5. the other still story concerning the demolition of Yerushalem, and of pegkaddakep of people going to Babylon.
-\ip Merciful person Yirmeyah; very his love the his people, and disliked he/his the judging them. There are parts of document very the love his of telling concerning the sufferings he/his due to because called he of God so that to become prophets. Like fire there to heart he/his the speech of Master God, and not he/his indeed this igkeeles.
-\ip Written again of this document coming the time there is e new agreement. And/Now the that agreement eg-ay-ayaran of people of God and obeyed their, even still not/none teacher thinking them because written man e this there to me heart their. (31:31-34)
+\ip The prophet Yirmeyah/Jeremiah, started his vocation as a prophet around 627 B.C. and continued for just under fifty years until around 580 B.C. During that long period serving as a prophet,he warned the people concerning the coming destruction of the nation of Yehudah/Judah due to their wickedness including the worshipping of false gods. Then in due course, Yirmeyah saw the fulfilment of what he'd prophesied when Yerushalem was captured by King Nebuchadnezzar from Babylon. Yirmeyah witnessed the demolition of the city and Yahweh's temple, and the forced exile of many people to Babylon. Then he prophesied the return of some people from captivity, and the rebuilding of the nation.
+\ip \bk Yirmeyah's account\bk* is divided into five main sections: 1. Yirmeyah's calling; 2. Yahweh's messages to the nation of Yehudah and its teachers during the reigns of Yoshiyah/Josiah, Yehoyakim/Jehoiakim, Yehoyakin/Jehoiakin, and Tsidkiyah/Zedekiah; 3. all the persecution of people according what Yirmeyah's secretary Baruk wrote, including the various prophecies, and the important events in Yirmeyah's life; 4. what was said by Yahweh concerning the various foreign nations; and 5. the other messages concerning Yerushalem's destruction, and the capture of the people who would be exiled to Babylon.
+\ip Yirmeyah was a merciful peron and full of love towards his people, and so he disliked having to present Yahweh's judgements to them. Parts of this account documents his personal sufferings due to his calling by Yahweh to become a prophet. Yahweh's messages were like fire in his heart that he couldn't hide.
+\ip This document also writes about a new agreement coming at a future time, and that that agreement would be kept by Yahweh's people even with no teacher driving them because it would be written onto their hearts. (31:31-34)
 \iot Main components of this document
 \io1 Yirmeyah's calling \ior 1:1-19\ior*
-\io1 The prophecies concerning the kingdom of Husiyas, Huwakim, Huwakin, and of Sidikiyas \ior 2:1–25:38\ior*
+\io1 The prophecies during the reigns of Yoshiyah, Yehoyakim, Yehoyakin, and Tsidkiyah \ior 2:1–25:38\ior*
 \io1 Yirmeyah's persecution \ior 26:1–45:5\ior*
 \io1 The prophecies for nations \ior 46:1–51:64\ior*
 \io1 Yerushalem's destruction \ior 52:1-34\ior*
@@ -3404,7 +3404,7 @@
 \p
 \v 1 Yisrael's god¦327312, Commander-in-chief Yahweh¦327310 says¦327309 to Moav:
 \q1 Nevo \add ≈won't end well\add* because¦327318 it'll be devastated¦327319.
-\q1 Kiriatayim has been humiliated and captured¦327321.
+\q1 Kiryatayim has been humiliated and captured¦327321.
 \q1 Its fortress has been disgraced and shattered¦327325.\x + \xo 48:1-47: \xt Isa 15:1–16:14; 25:10-12; Eze 25:8-11; Amos 2:1-3; Zeph 2:8-11.\x*
 \q1
 \v 2 No one will praise¦327329 Moav again.
@@ -3486,7 +3486,7 @@
 \v 21 Now punishment has come¦327605 to \add Moav's\add* \add ≈high plateau\add*:
 \q1 to Holon¦327612, Yahtsah, Mefa'at,
 \v 22 Divon¦327623, Nevo, Beyt-Divlatayim,
-\v 23 Kiriatayim, Beyt-Gamul¦327637, Beyt-Meon¦327641,
+\v 23 Kiryatayim, Beyt-Gamul¦327637, Beyt-Meon¦327641,
 \v 24 Keriot¦327645, and Botsrah, and all of Moav's towns, \add both\add* near and far.
 \v 25 Moav's \add ≈power will be terminated\add* and¦327661 its¦327661 \add ≈dominance\add* will be broken¦327662.
 \s1 Moav's humiliation
@@ -4070,123 +4070,175 @@
 \q1 ‘May the violence done to me and to my flesh¦330220 be on Babylon¦330223.’
 \q1 Yerushalem¦330233 \add (Jerusalem)\add* will say,
 \q1 ‘May my blood¦330227 be on Chaldea's¦330231 inhabitants¦330225.’
-\s1 The assisting of God of Yisrael
+\s1 Yahweh's assistance to Yisrael
 \rem /s1 The Lord's Vengeance on Babylon; The Lord Will Help Israel
 \p
-\v 36 ◙
-\v 37 ◙
-\v 38 ◙
-\v 39 ◙
-\v 40 ◙
-\s1 The what happened of Babylon
+\v 36 Therefore Yahweh¦330239 says¦330238 this:
+\q1 Listen, I'm about to plead your case and bring about vengeance¦330249 for you
+\q1 because I'll¦330246 dry up Babylon's \add ?≈river\add* and make¦330254 its springs¦330257 run dry.
+\q1
+\v 37 Babylon¦330260 will become¦330259 heaps¦330262 of rubble without any inhabitants¦330270—
+\q1 a \add ≈den\add* of jackals¦330266, a horror¦330267, and¦330268 \add ≈something to whistle at\add*.
+\q1
+\v 38 \add @The Babylonians\add* will roar together like young lions.
+\q1 ≈They will growl¦330275 like lion cubs.
+\q1
+\v 39 When they become hot with greed, I'll make a feast for them
+\q1 ≈and I'll get them drunk¦330284 so they can celebrate¦330286.
+\q1 →Then they'll \add ≈enter into permanent¦330290\add* sleep and not wake up.
+\m That is Yahweh's¦330294 declaration.
+\q1
+\v 40 I'll¦330296 \add ≈send\add* them down to the slaughter¦330298,
+\q1 like lambs¦330297, rams, \add and\add* male goats¦330302.
+\s1 Punishing Babylon and its god
 \rem /s1 Babylon's Fate
 \p
-\v 41 ◙
-\v 42 ◙
-\v 43 ◙
-\v 44 ◙
+\v 41 \add ≈Wow, Babylon¦330315\add* \add (Heb. Sheshak)\add* has been captured¦330305.
+\q1 ≈\add The city\add* \add ≈praised¦330308 by the whole world\add* has been seized¦330307.
+\q1 \add ≈Wow,\add* Babylon has become¦330313 a horror¦330314 among¦330316 the nations¦330316.
+\q1
+\v 42 The sea¦330322 has come up over Babylon¦330321.
+\q1 It's been covered¦330325 by its¦330324 \add ≈violent\add* waves¦330324.
+\q1
+\v 43 Its cities¦330328 have become¦330327 a wasteland¦330329, a dry, wilderness¦330332 \add ≈region¦330330\add*—
+\q1 an \add ≈area\add* that no one lives in, and no human¦330347 being \add even\add* passes through.
+\q1
+\v 44 I'll punish Babylon's¦330353 \add god\add* Bel
+\q1 and¦330349 I'll \add ≈pull\add* what he swallowed¦330357 \add back\add* out of his mouth¦330358,
+\q1 Then¦330349 the nations¦330364 will no longer \add ≈go streaming¦330361\add* to him \add to placate him\add*.
+\q1 \add ≈What's more,\add* Babylon's walls will fall¦330369.
 \rem /s1 A Message for the Exiles
-\p …
-\v 45 ◙
-\v 46 ◙
-\v 47 ◙
-\v 48 \x + \xo 51:48: \xt Rev 18:20.\x*◙
-\v 49 \x + \xo 51:49: \xt Rev 18:24.\x*◙
-\s1 The speech of God of Israelis there to Babylon
+\q1
+\v 45 Come out from \add @Babylon\add*, my people¦330373.
+\q1 Each of you \add should\add* save¦330374 their own life¦330378 from Yahweh's¦330382 \add ≈furious anger¦330380\add*.
+\q1
+\v 46 Don't be \add ≈discouraged or afraid\add* \add ≈due to\add* the report that's heard¦330390 in the land,
+\q1 \add ≈as\add* there'll be a report one year and¦330384 the again the year after¦330395.
+\q1 There'll be violence¦330398 will in the \add ≈world\add*—ruler will be against ruler.
+\q1
+\v 47 Therefore, listen, \add ≈the time¦330407\add* is coming¦330408 when I'll¦330409 punish the Babylon's¦330413 carved idols.
+\q1 \add People\add* \add ≈across their country\add* will be ashamed¦330417,
+\q1 and their slaughtered \add >soldiers\add* will all fall¦330421 \add ≈right there in their country\add*.
+\q1
+\v 48 Then¦330424 the heavens¦330428 and the earth¦330429, and \add ≈everyone\add* in them will celebrate over Babylon's¦330427 \add fall\add*
+\q1 because¦330433 destroyers¦330438 from the north¦330434 will come¦330435 for it\x + \xo 51:48: \xt Rev 18:20.\x*
+\m That is Yahweh's¦330441 declaration.
+\v 49 As Babylon¦330445 has made Yisrael's slain \add >warriors\add* fall,
+\q1 so too their slain will fall in Babylon.\x + \xo 51:49: \xt Rev 18:24.\x*
+\s1 Yahweh's message to Israelis in Babylonia
 \rem /s1 God's Message to the Israelites in Babylonia
 \p
-\v 50 ◙
-\v 51 ◙
-\v 52 ◙
-\v 53 ◙
-\s1 The other still destruction egkeulaula of Babylon
+\v 50 \add You all\add* \add ≈who escaped¦330458 from being killed in war\add*, go¦330460 away—don't¦330461 stay still¦330463.
+\q1 Remember Yahweh¦330468 \add ≈even though you're all far away\add*.
+\q1 ≈\add ≈Start bringing\add* Yerushalem¦330469 \add (Jerusalem)\add* \add ≈to mind¦330473\add*.
+\q1
+\v 51 We're ashamed¦330475 because we've heard¦330478 insults—
+\q1 ≈\add ≈our feeling of being disgraced can be seen on\add* our faces¦330482,
+\q1 because foreigners have entered the sacred¦330488 places¦330488 in Yahweh's¦330490 house¦330489.
+\q1
+\v 52 So Yahweh¦330500 declares:
+\q1 Listen, \add ≈the time¦330496\add* is coming¦330497 when I'll¦330501 punish \add @Babylon's\add* carved idols,
+\q1 and \add &their\add* wounded¦330509 people will groan¦330508 across \add ≈that entire¦330505 region¦330507\add*.
+\q1
+\v 53 \add ≈Yes,\add* even if Babylon¦330514 \add ≈built tall towers\add* or fortified¦330517 their highest fortresses,
+\q1 destroyers¦330522 \add ≈that I've sent\add* would \add still\add* go¦330513 \add ≈there\add*.
+\m That is Yahweh's¦330526 declaration.
+\s1 More on Babylon's destruction
 \rem /s1 Further Destruction on Babylon; Babylon's Complete Destruction
 \p
-\v 54 ◙
-\q2 …
-\q2 …
+\v 54 A cry¦330530 of distress¦330530 came from Babylon¦330531—
+\q1 \add ≈terrible\add* destruction¦330532 from the land¦330534 of the Chaldeans
 \q1
-\v 55 ◙
-\q2 …
-\q1 …
-\q2 …
+\v 55 because Yahweh¦330540 is about¦330539 to destroy Babylon¦330543.
+\q1 He's causing its¦330553 loud voice¦330554 to \add ≈die away\add*.
+\q1 \add @Their enemies\add* roar like \add ≈violent ocean waves¦330549\add*—
+\q1 \add ≈their noise becomes very prominent\add*
 \q1
-\v 56 ◙
-\q2 …
-\q2 …
-\q1 …
-\q1 …
+\v 56 because a destroyer¦330562 has come¦330557 against it, against Babylon¦330561,
+\q1 and \add #their\add* soldiers have been captured¦330563.
+\q1 Their \add ≈weapons\add* are shattered¦330565 because Yahweh¦330570 is a god¦330568 of vengeance—
+\q1 he'll definitely repay them fully¦330571.
 \q1
-\v 57 ◙
-\q2 …
-\q1 …
-\q2 …
-\q2 …
+\v 57 I'll¦330574 make its princes, advisors, officials, and its soldiers¦330590 drunk¦330574,
+\q1 and they will sleep in a permanent¦330583 stupor and never wake up.
+\q1 That is the king's declaration—Commander-in-chief Yahweh¦330589 is his name¦330591.
 \q1
-\v 58 ◙
-\q2 …
-\q1 …
-\q2 …
-\q1 …
-\s1 The sending of Yirmeyah there to Babylon of rolled-up document
+\v 58 Commander-in-chief Yahweh¦330597 says this:
+\q1 Babylon's¦330600 thick walls¦330599 will be \add ≈completely demolished\add*,
+\q1 and its tall gates¦330604 will be set on fire.
+\q1 The peoples \add coming to their aid\add* will \add ?≈waste their time trying\add*—
+\q1 \add ?≈everything that the nations try to do for it will be burnt up\add*.
+\s1 Yirmeyah's message to be read out in Babylon
 \rem /s1 Jeremiah's Message Is Sent to Babylonia; Jeremiah's Message Sent to Babylon; Jeremiah's Command to Seraiah
 \p
-\v 59 ◙
-\v 60 ◙
-\v 61 ◙
-\v 62 ◙
-\v 63 \x + \xo 51:63-64: \xt Rev 18:21.\x*◙
-\v 64 ◙
-\q1 …
+\v 59 This is the message¦330620 that¦330621 the prophet¦330626 Yirmeyah \add (Jeremiah)\add* commanded¦330623 Serayah¦330629 (son of Neriyah, son of Mahseyah¦330635)
+\q1 when he went¦330636 with Yehudah's¦330642 King¦330640 Tsidkiyah \add (Zedekiah)\add*to Babylon¦330643 in the fourth¦330645 year¦330644 of his reign¦330646.
+\q1 Now Seraiah¦330629 was a chief officer¦330648,
+\q1
+\v 60 and¦330651 Yirmeyah had written on a scroll¦330665 about all the disaster that was going to come¦330659 to Babylon¦330662—
+\q1 all these¦330671 messages that were written about Babylon.
+\q1
+\v 61 Then¦330677 Yirmeyah¦330678 told Serayah¦330681, “When¦330677 you go to Babylon¦330683, \add ?≈ensure that\add* you read these¦330690 messages aloud¦330685
+\v 62 and then \add ≈pray\add*, ‘Yahweh¦330693, you yourself have declared that you would destroy this place¦330698, and then that no man or animal¦330709 will live in it and it'll be desolate¦330712 forever¦330713.’
+\v 63 Then¦330716 when you've¦330717 finished¦330717 \add ≈reading out\add* this scroll¦330721, tie a stone¦330725 to it and¦330716 throw¦330726 it into the middle¦330729 of the Euphrates¦330730 \add River\add*.\x + \xo 51:63-64: \xt Rev 18:21.\x*
+\v 64 Say, ‘Babylon¦330735 will sink like that. It won't¦330736 \add ever\add* \add ≈recover from\add* the disaster that I'm sending against it, and¦330732 they'll \add ≈become irrelevant\add*’
+\m Yirmeyah's messages end here.
 \c 52
-\s1 The demolition of Yerushalem
+\s1 Yerushalem's fall and Tsidkiyah's end
 \rem /s1 The fall of Jerusalem; The Fall of Jerusalem; The Destruction of Jerusalem Reviewed
+\s4 Southern kingdom
 \r (2 Kgs 24:18–25:7)
 \p
-\v 1 ◙
-\v 2 ◙
-\v 3 ◙
-\p …
-\v 4 \x + \xo 52:4: \xt Eze 24:2.\x*◙
-\v 5 ◙
-\v 6 ◙
-\v 7 \x + \xo 52:7: \xt Eze 33:21.\x*◙
-\v 8 ◙
-\v 9 ◙
-\v 10 ◙
-\v 11 \x + \xo 52:11: \xt Eze 12:13.\x*◙
-\s1 The pegguhus of those from-Babylon of temple
+\v 1 Tsidkiyah \add (Zedekiah¦330758)\add* was twenty-one when he began to reign \add and\add* he reigned¦330763 from Yerushalem¦330764 \add (Jerusalem)\add* for eleven years. His mother's¦330766 name¦330765 was Hamutal¦330767. (She was the daughter¦330769 of Yirmeyah from Livnah.)
+\v 2 He did what was evil¦330775 in Yahweh's¦330777 \add ≈sight\add* just as \add his father\add* Yehoyakim \add (Jehoiakim)\add* had done¦330781.
+\v 3 All these events happened¦330790 in Yerushalem¦330791 and \add across the rest of\add* Yehudah because of Yahweh's¦330789 anger¦330788, until¦330793 he drove them \add ≈out of his sight\add*.
+\p Then Tsidkiyah rebelled¦330799 against¦330801 the Babylonian king¦330801,
+\v 4 \add ≈so\add* on the 10th of the tenth¦330809 month of the ninth¦330806 year¦330805 of King Tsidkiyah's reign¦330807, the Babylonian King Nebuchadnezzar¦330813 came¦330812 and¦330804 surrounded Yerushalem¦330823 with all his army. \add ≈They took action to put\add* \add @the city\add* under siege¦330828\x + \xo 52:4: \xt Eze 24:2.\x*
+\v 5 and¦330831 the \add *it\add* \add ≈remained\add* under siege¦330833 until¦330834 the eleventh year¦330837 of King¦330838 Tsidkiyah's¦330839 \add reign\add*.
+\v 6 By the 9th of the fourth¦330842 month, the famine¦330846 was so severe¦330845 in the city¦330847 that there was no \add more\add* food for the \add ≈residents\add*.
+\v 7 Then¦330855 the city was broken¦330855 into, and¦330855 all the fighting men fled out of the city at night¦330864 by the way of the gate that¦330870 was between¦330867 the two walls¦330869 near the king's garden¦330873, even though the Chaldeans were all around¦330879 the city. So¦330855 they went in the direction of the Aravah \add plain along the Yarden river\add*.\x + \xo 52:7: \xt Eze 33:21.\x*
+\v 8 \add ≈But¦330884\add* the Chaldean army chased after¦330888 the king¦330889, and¦330884 overtook¦330890 Tsidkiyah in the Yarden river plains¦330894 near Yeriho \add (Jericho)\add*. All his army was then¦330884 scattered¦330899 away from him¦330900.
+\v 9 They captured the king and¦330902 brought¦330906 him up to the Babylonian king at Rivlah in Hamat¦330914 \add ≈region¦330913\add*, where he \add ≈passed sentence\add* on him.
+\v 10 Then¦330919 the Babylonian king¦330920 slaughtered Tsidkiyah's sons¦330925 \add ≈right there in front of\add* his eyes¦330927, and¦330919 he also slaughtered all of Yehudah's¦330934 leaders there at Rivlah.
+\v 11 Then¦330938 he had Tsidkiyah's eyes¦330940 \add ≈gouged out\add*, \add ≈shackled\add* him with¦330951 bronze chains, and¦330938 took him to Babylon¦330948 \add ≈where\add* the Babylonian king¦330946 put him in¦330951 prison until¦330955 \add ≈he died there\add*.\x + \xo 52:11: \xt Eze 12:13.\x*
+\s1 The Babylonians destroy the temple
 \rem /s1 The Temple Destroyed; The Destruction of the Temple
+\s4 Southern kingdom
 \r (2 Kgs 25:8-17)
 \p
-\v 12 ◙
-\v 13 \x + \xo 52:13: \xt 1Ki 9:8.\x*◙
-\v 14 ◙
-\v 15 ◙
-\v 16 ◙
+\v 12 Then¦330960 on the 10th of the fifth¦330961 month in the nineteenth year of the Babylonian King¦330970 Nebuchadnezzar's¦330971 reign, Nevu-Zaradan came to Yerushalem¦330985 \add (Jerusalem)\add*. He was the commander of the king's bodyguards¦330979 and¦330960 a servant of the Babylonian king.
+\v 13 He burnt \add down\add* Yahweh's¦330992 house¦331000, the king's \add ≈palace\add*, and¦330987 all the homes in Yerushalem¦331001, \add ≈as well as\add* every¦331004 \add ≈important building\add* \add in the city\add*.\x + \xo 52:13: \xt 1Ki 9:8.\x*
+\v 14 As for the walls¦331015 all around¦331017 Yerushalem¦331016, they¦331018 were pulled¦331018 down by the Babylonian army who were with the commander of the bodyguards¦331028.
+\v 15 Some of the poorer people and the rest of the people who remained¦331037 in the city¦331038, as well as those¦331041 who'd \add ≈defected\add* to the Babylonian king¦331046, and the rest of the craftsmen¦331050 were taken into exile¦331051 by Nevu-Zaradan,
+\v 16 \add ≈However,\add* Nevu-Zaradan, the commander of the bodyguards¦331063, left some of the poorest \add ≈people¦331057\add* to \add ≈work the vineyards and¦331057 the fields\add*.
 \p
-\v 17 \x + \xo 52:17-23: \xt 1Ki 7:15-47.\x*◙
-\v 18 ◙
-\v 19 ◙
-\v 20 ◙
-\v 21 ◙
-\v 22 ◙
-\v 23 ◙
-\s1 The capturing of Jews and carrying them there to Babylon
+\v 17 As for the bronze pillars¦331069 that \add ≈were part of\add* Yahweh's¦331074 \add ≈temple\add*, and the \add large\add* bronze \add basin called\add* ‘The Sea’, and the stands¦331077 that were in \add *it\add*, the Chaldeans broke¦331086 them into pieces and carried¦331088 all the bronze back to Babylon¦331094.\x + \xo 52:17-23: \xt 1Ki 7:15-47.\x*
+\v 18 The pots, shovels¦331101, lamp trimmers, bowls¦331107, and¦331096 all the bronze¦331115 utensils that¦331116 \add the priests\add* had used when serving in the temple, were all taken away by the Chaldeans.
+\v 19 \add ≈Also¦331122,\add* the basins and incense burners, the bowls, pots, lampstands¦331136, pans, and basins that¦331143 were made of gold or silver, were taken away by the commander of the king's bodyguards¦331153.
+\v 20 The two pillars¦331155, \add the large bronze basin known as\add* ‘The Sea’, and the twelve bronze bulls that were under¦331167 the stands¦331168, things that Shelomoh \add (Solomon¦331172)\add* had made¦331170 for Yahweh's¦331174 \add ≈temple\add*, \add ≈contained too much bronze to weigh¦331178\add*.
+\v 21 (Each pillar was eight¦331186 metres high \add ≈with a circumference of\add* nearly six metres. \add ≈Each pillar was hollow¦331202 with a\add* 8cm thick¦331199 \add wall\add*
+\v 22 \add ≈with\add* a bronze capital on the top. Each capital was over two metres¦331211 high, with bronze latticework and¦331204 bronze pomegranates all around¦331217.
+\v 23 There were ninety-six pomegranates on the sides of each capital, and¦331228 another hundred¦331233 pomegranates above the surrounding latticework.)
+\s1 The people of Yehudah are exiled to Babylonia
 \rem /s1 The People of Judah Are Taken to Babylonia
+\s4 Southern kingdom
 \r (2 Kgs 25:18-21, 27-30)
 \p
-\v 24 ◙
-\v 25 ◙
-\v 26 ◙
-\v 27 ◙
-\p …
-\v 28 ◙
-\v 29 ◙
-\v 30 ◙
+\v 24 The commander of the bodyguards¦331242 took the high priest Serayah¦331245 prisoner, along with the second-level priest Tsefanyah, and¦331239 the three¦331255 gatekeepers.
+\v 25 From the city, he took an \add ≈army commander¦331285\add* prisoner, as well as seven¦331274 of the king's advisers who were still in the city. He also took prisoner the king's army \add ≈recruitment\add* officer¦331268, along with sixty¦331292 important men from the \add ≈country\add* who were in the city.
+\v 26 Then¦331300 Nevu-Zaradan, the commander of the bodyguards¦331305, took¦331300 them to the Babylonian king¦331310 at Rivlah,
+\v 27 and the king¦331316 put them to death¦331318 \add there\add* at Rivlah in the Hamat¦331321 \add ≈region¦331320\add*.
+\p \add ≈So¦331314\add* Yehudah\add 's people\add* \add ≈were taken\add* out of \add ≈their¦331316 country\add* \add and\add* into exile¦331322.
+\v 28 These were the people¦331328 who Nebuchadnezzar¦331331 exiled¦331330:
+\li1 In \add Nebuchadnezzar's¦331331\add* seventh¦331334 year¦331332, 3,023 Judeans.
+\li1
+\v 29 In¦331344 \add *his\add* eighteenth¦331342 year¦331341, he took 832 people from Yerushalem¦331345.
+\li1
+\v 30 In \add *his\add* twenty-third year¦331352, Nevu-Zaradan, the commander of the king's bodyguards¦331360, exiled 745 Judean people.
+\m All those exiles totalled 4,600 people.
 \rem /s1 Jehoiachin Released; Hope for Israel's Royal Line; Jehoiachin Favoured in Captivity
 \p
-\v 31 ◙
-\v 32 ◙
-\v 33 ◙
-\v 34 ◙
+\v 31 \add Some time later\add* on the 25th of the twelfth month of the thirty-seventh year of the exile¦331380 of Yehudah's¦331384 King Yehoyakin \add (Jehoiachin)\add*, Babylon's¦331395 King Eveel-Merodak (in the first year of his reign) released King Yehoyakin from prison.
+\v 32 He spoke¦331411 \add ≈kindly\add* to him and¦331411 gave¦331414 him a seat \add ≈more honourable\add* than that of the other \add exiled\add* kings who were with him in Babylon¦331424.
+\v 33 \add @Eveel-Merodak\add* \add ≈supplied new\add* clothes¦331428 for \add @Yehoyakin\add* \add to wear\add*, and¦331426 he \add ≈ate regularly at the king's table for the rest of\add* his life¦331437.
+\v 34 He¦331448 was \add also\add* given¦331442 a \add ≈daily\add* allowance by the king¦331446 \add ≈for the rest of\add* his life¦331459.

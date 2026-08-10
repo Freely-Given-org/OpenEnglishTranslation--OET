@@ -1140,6 +1140,8 @@ H					CH1_8:34,CH1_9:40				Meribbaal			מְרִיב-בַּעַל		{ H4807 (space
 H					CH1_8:34,CH1_9:40				Merib-baal			מְרִיב-בַּעַל		{ H4807 (space changed to hyphen) (3) 1Chr 8:34, 9:40*
 wH					CH1_8:34,CH1_9:40				Merib			מְרִיב		{ H4807 (space changed to hyphen) (3) 1Chr 8:34, 9:40*
 wH					CH1_8:34,CH1_9:40				baal			בַּעַל		{ H4807 (space changed to hyphen) (3) 1Chr 8:34, 9:40*
+H					KI2_24:27,JER_52:31				Evilmerodach			אֱוִיל-מְרֹדַךְ		{{ H192 partial (2) 2Ki 25:27, Jer 52:31*
+H					KI2_24:27,JER_52:31				Evil-			אֱוִיל-		{{ H192 partial (2) 2Ki 25:27, Jer 52:31*
 H					KI2_24:27,JER_52:31				Merodach			מְרֹדַךְ		{{ H192 partial (2) 2Ki 25:27, Jer 52:31*
 H					KI2_24:27,JER_52:31				merodach			מְרֹדַךְ		{{ H192 partial (2) 2Ki 25:27, Jer 52:31*
 H					ISA_39:1				Merodach-baladan			מְרא-דַךְ-בַּלְאָדָן		{ H4757 (spaces changed to hyphen) (1) Isa 39:1*
@@ -2519,9 +2521,9 @@ H	KI2,ISA,JER								Kir-heres			קִיר-חֶרֶשׂ		{{ H7025 (space changed 
 wH	KI2,ISA,JER								Kir-			קִיר-		{{ H7025 (5) 2 Kings 3:25, Isa 16:7,11, Jer 48:31,36**
 wH	KI2,ISA,JER								Kir			קִיר-		{{ H7025 (5) 2 Kings 3:25, Isa 16:7,11, Jer 48:31,36**
 H	KI2,ISA,JER								heres			חֶרֶשׂ		{{ H7025 (space changed to hyphen) (5) 2 Kings 3:25, Isa 16:7,11, Jer 48:31,36**
-H	GEN,NUM,JOS,CH1,JER,EZE								Kiriathaim			קֵרְיָתַיִם		{ H7156 (7) Gen 14:5, Num 32:37, Josh 13:19, 1Chr 6:76, Jer 48:1,23, Eze 25:9*
-#H	GEN,NUM,JOS,CH1,JER,EZE								Kirjathaim			קֵרְיָתַיִם		{ H7156 (7) Gen 14:5, Num 32:37, Josh 13:19, 1Chr 6:76, Jer 48:1,23, Eze 25:9*
-#H	GEN,NUM,JOS,CH1,JER,EZE								Qiryataim			קֵרְיָתַיִם		{ H7156 (7) Gen 14:5, Num 32:37, Josh 13:19, 1Chr 6:76, Jer 48:1,23, Eze 25:9*
+H	GEN,NUM,JOS,CH1,JER,EZE								Kiriathaim			קִרְיָתַיִם		{ H7156 (7) Gen 14:5, Num 32:37, Josh 13:19, 1Chr 6:76, Jer 48:1,23, Eze 25:9*
+#H	GEN,NUM,JOS,CH1,JER,EZE								Kirjathaim			קִרְיָתַיִם		{ H7156 (7) Gen 14:5, Num 32:37, Josh 13:19, 1Chr 6:76, Jer 48:1,23, Eze 25:9*
+#H	GEN,NUM,JOS,CH1,JER,EZE								Qiryataim			קִרְיָתַיִם		{ H7156 (7) Gen 14:5, Num 32:37, Josh 13:19, 1Chr 6:76, Jer 48:1,23, Eze 25:9*
 H					JOS_19:20,JOS_21:28				Kishion			קִשְׁיוֹן		H7191 (2) Josh 19:20, 21:28*
 H									Kishon			קִישׁוֹן		H7028 river (6) Jdg 4:7,13, 5:21, 1Ki 18:40, Psa 83:9*
 H					JDG_1:30				Kitron			קִטְרוֹן		H7003 (1) Jdg 1:30*
