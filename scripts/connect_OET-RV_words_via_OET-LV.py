@@ -80,7 +80,7 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-07-13' # by RJH
+LAST_MODIFIED_DATE = '2026-08-16' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.91'
@@ -605,6 +605,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('praised','glorifying'),
     ('preaching','proclaiming'),
     ('priest','priest/officer'),
+    ('proclamation','announcement'),('proclamation','declaration'),('proclamation','notice'),('proclamations','declarations'),
     ('produce','fruit'),
     ('promised','sworn'),
     ('pronounce','utterance'),

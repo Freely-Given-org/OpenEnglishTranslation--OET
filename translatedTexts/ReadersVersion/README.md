@@ -136,6 +136,7 @@ Of course, we're very happy to list contributors if you desire that. (Not everyo
 - plaza vs square
 - refer to cities/countries, etc. as 'it', not 'he' or 'she'.
 - 'rest' -> check if 'peace and stability' or something is more natural in modern English
+- vow -> promise
 
 Continue checking Mark spelling from Mrk 12:11 onwards.
 Continue revising Mark formatting from Mrk 1:21 onwards. Then Ruth.
