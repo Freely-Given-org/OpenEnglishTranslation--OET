@@ -63,6 +63,7 @@ CHANGELOG:
     2026-05-14 Switched to Rust bible_transliterations
     2026-06-11 Handle new % (changed person) \\add format
     2026-06-30 Added verb sets (but they're not fully utilised yet)
+    2026-08-19 Allow ../ in lines (used in USFM jmp fields)
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -80,10 +81,10 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-08-16' # by RJH
+LAST_MODIFIED_DATE = '2026-08-19' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.91'
+PROGRAM_VERSION = '0.92'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -680,6 +681,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('urged','implored'),
     ('wallet','purse'),
     ('warriors','men'),
+    ('waters','water supplies'),
     ('wealthy','rich'),
     ('went','came'),
     ("What's",'What'),
@@ -1132,7 +1134,7 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
             assert not line.startswith(' '), f"Unexpected space at start in {rvESFMFilename} {lineNumber}: '{line}'"
             assert not line.endswith(' '), f"Unexpected space at end in {rvESFMFilename} {lineNumber}: '{line}'"
             assert '  ' not in line, f"Unexpected doubled spaces in {rvESFMFilename} {lineNumber}: '{line}'"
-            assert ',,' not in line and '..' not in line, f"Unexpected doubled punctuation in {rvESFMFilename} {lineNumber}: '{line}'"
+            assert ',,' not in line and '..' not in line.replace( '../', '' ), f"Unexpected doubled punctuation in {rvESFMFilename} {lineNumber}: '{line}'"
             assert '\\x*,' not in line and '\\x*.' not in line, f"Bad xref formatting in {rvESFMFilename} {lineNumber}: '{line}'"
             if line.count(' \\x ') < line.count('\\x '):
                 assert '\\x* ' in line or line.endswith('\\x*') or '\\x*—' in line, f"Missing xref space in {rvESFMFilename} {lineNumber}: '{line}'"

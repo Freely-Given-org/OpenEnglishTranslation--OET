@@ -262,8 +262,6 @@ VREF_sentinel := ../exportedFiles/.vref_sentinel
 $(VREF_sentinel): $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_USFM_to_VREF.py
 	@echo "\n\nCreate VREF.txt files from USFM…\n"
 	@$(UVrun) convert_OET-LV-RV_USFM_to_VREF.py
-	@echo "\n\nFinally, just count our progress…\n"
-	#@$(UVrun) count_completed_OET-RV_verses.py
 	@touch $@
 
 $(derived_VREFs): $(VREF_sentinel)
@@ -279,8 +277,6 @@ $(derived_audio_sections): $(RV_ESFM) export_OET-RV_to_sectionReadings.py
 check: $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
 	@echo "\n\nConnect OET-RV words to OET-LV word numbers (in fast mode)…\n"
 	@$(UVrun) connect_OET-RV_words_via_OET-LV.py --fast
-	@echo "\n\nFinally, just count our progress…\n"
-	#@$(UVrun) count_completed_OET-RV_verses.py
 
 
 .PHONY: audio
