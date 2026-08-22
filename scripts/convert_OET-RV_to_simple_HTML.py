@@ -65,10 +65,10 @@ from bible_organisational_system import getSmallLeadingInt
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-07-17' # by RJH
+LAST_MODIFIED_DATE = '2026-08-19' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
-PROGRAM_VERSION = '0.98'
+PROGRAM_VERSION = '0.99'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -1369,13 +1369,22 @@ def livenJMPs( BBB:str, bookHTML:str ) -> str:
         if jmpLink.startswith( 'http' ): # then it's an external internet link
             newLink = f'<a title="Go to external jump link" href="{jmpLink}">{jmpDisplay}</a>'
         else: # it's likely to be a link into another work
-            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"What is this '{jmpDisplay}' link to '{jmpLink}' expecting to jump to?" )
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"What is this '{jmpDisplay}' link to '{jmpLink}' expecting to jump to?" )
             if jmpLink.startswith( '#' ):
                 assert jmpLink.startswith( '#C' ), f"Got internal jmp {BBB} {jmpDisplay=} and {jmpLink=} from '{bookHTML[jmpStartIx:jmpEndIx+5]}'"
                 assert 'V' in jmpLink, f"Got internal jmp {BBB} {jmpDisplay=} and {jmpLink=} from '{bookHTML[jmpStartIx:jmpEndIx+5]}'"
                 Vix = jmpLink.index( 'V' )
                 refC, refV = jmpLink[2:Vix], jmpLink[Vix+1:]
                 # print( f"{jmpLink=} {BBB=} {refC=} {refV=}")
+                newLink = f'<a title="Go to internal jump link" href="{jmpLink}">{jmpDisplay}</a>'
+                # print( f"Got {newLink=}")
+            elif jmpLink.startswith( '../' ):
+                assert BBB == 'PSA'
+                assert jmpLink.startswith( '../byC/PSA' ), f"Got internal jmp {BBB} {jmpDisplay=} and {jmpLink=} from '{bookHTML[jmpStartIx:jmpEndIx+5]}'"
+                startC = jmpLink.index( '_C' )
+                endC = jmpLink.index( '.htm', startC )
+                refC, refV = jmpLink[startC+2:endC], '1'
+                print( f"{jmpLink=} {BBB=} {refC=} {refV=}")
                 newLink = f'<a title="Go to internal jump link" href="{jmpLink}">{jmpDisplay}</a>'
                 # print( f"Got {newLink=}")
             else: # unknown link type
