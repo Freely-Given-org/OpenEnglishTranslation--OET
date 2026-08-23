@@ -1,4 +1,4 @@
-\id MRK - Open English Translation—Readers' Version (OET-RV) v0.2.24
+\id MRK - Open English Translation—Readers' Version (OET-RV) v0.2.26
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 MRK
@@ -11,7 +11,7 @@
 \mt1 Markos
 \is1 Introduction
 \is2 Author
-\ip This account about Yeshua's activities and teachings was written by Markos/Mark, the son of a Jewish family who lived in Yerushalem/Jerusalem. His mother was named Maria/Mary (Acts 12:12).
+\ip This account about Yeshua's activities and teachings was written by Markos (typically shortened to ‘Mark’ in English), the son of a Jewish family who lived in Yerushalem/Jerusalem. His mother was named Maria/Mary (Acts 12:12).
 \ip Many people think he was Yohan/John Markos, a cousin of Barnabas (Col. 4:10) who accompanied Paul on his first long-distance trip to spread the good message about Yeshua the messiah (Acts 12:25, 13:13). We also know that Markos accompanied Peter (1 Peter 5:13), and some consider that it might have been Peter who narrated to Markos what Yeshua had done and taught.
 \is2 This account
 \ip This account seems to have been written for non-Jews, especially perhaps those familiar with Roman customs. So he didn't use as much ink as Matthew or Luke explaining prophecies from the Jewish scriptures but he does however, take time to explain Jewish customs to help non-Jewish readers.
@@ -45,7 +45,7 @@
 \v 5 and \add ≈many\add* from the Yudean region¦21719 and from Yerushalem \add (Jerusalem)\add* city went out to \add hear\add* him, and \add asked Yohan\add* to immerse¦21725 them in the Yarden¦21731 \add (Jordan)\add* river¦21732 as they confessed¦21735 their¦21738 sins¦21737.
 \p
 \v 6 Yohan¦21743 was dressed¦21744 in \add simple clothes made from\add* camel¦21747 hair¦21745 with a leather¦21750 belt¦21749 around¦21751 his¦21754 waist¦21753, and he \add ≈lived on\add* locusts¦21758 and wild¦21761 honey¦21760.\x + \xo 1:6: \xt 2Ki 1:8.\x*
-\v 7 He \add ≈also\add* announced¦21763, “There's a greater \add man\add* coming¦21773 \add ≈soon\add*—\add in fact\add* I'm not \add ≈even good enough\add* to bend¦21787 down and¦21762 untie¦21788 his¦21795 sandal¦21793 \add #straps\add*.
+\v 7 He \add ≈also\add* announced¦21763, “There's a greater¦21779 \add man\add* coming¦21773 \add ≈soon\add*—\add in fact\add* I'm not \add ≈even good enough\add* to bend¦21787 down and¦21762 untie¦21788 his¦21795 sandal¦21793 \add #straps\add*.
 \v 8 I immersed¦21798 you all in water¦21801, but he will immerse you in \add God's\add* holy \nd spirit¦21811\nd*.”
 \s1 Yeshua gets immersed and then tempted
 \rem /s1 The Baptism and Temptation of Jesus
@@ -276,26 +276,25 @@
 \rem /s1 A Lamp under a Bushel Basket; A Lamp on a Stand; A Lamp under a Bowl; Illustration of the Lamp
 \r (Luke 8:16-18)
 \p
-\v 21 And \add @Yeshua\add* told them, “\wj \+add ≈Obviously\+add* no one goes and gets a lamp, and then¦24691 puts it under a basket¦24706 or under the bed¦24712, but¦24691 rather they place it somewhere higher on a stand.\wj*\x + \xo 4:21: \xt Mat 5:15; Luk 11:33.\x*
-\v 22 \wj You see, nothing is hidden¦24729 that won't eventually be disclosed, and¦24736 there's¦24727 no secret¦24738 that won't eventually be revealed¦24735.\wj*\x + \xo 4:22: \xt Mat 10:26; Luk 12:2.\x*
-\v 23 \wj Anyone who wants to understand must listen carefully.\wj*”
-\p
-\v 24 And he¦24753 continued, “\wj Take care what you listen to. Because how much you judge others, so too will judgement be handed out to you, and¦24752 even more.\wj*\x + \xo 4:24: \xt Mat 7:2; Luk 6:38.\x*
-\v 25 \wj Anyone who has \+add faith\+add* will be given¦24776 \+add a reward\+add*, but¦24779 if you have none, even the little you have will be taken¦24786 away.\wj*”\x + \xo 4:25: \xt Mat 13:12; 25:29; Luk 19:26.\x*
-\s1 The parable concerning the seed
+\v 21 Then¦24691 \add @Yeshua\add* told them, “\wj \+add ≈Obviously no one goes and gets a\+add* lamp, \+add ≈and then¦24691\+add* puts it under a basket¦24706 or under the bed¦24712, \+add ≈but¦24691 rather they place\+add* it \+add somewhere higher\+add* on a stand.\wj*\x + \xo 4:21: \xt Mat 5:15; Luk 11:33.\x*
+\v 22 \wj \+add ≈You see, nothing\+add* is hidden¦24729 \+add ≈that won't\+add* \+add eventually\+add* be disclosed, and¦24736 there's¦24727 no secret¦24738 that won't \+add eventually\+add* \+add ≈be revealed¦24735\+add*.\wj*\x + \xo 4:22: \xt Mat 10:26; Luk 12:2.\x*
+\v 23 \wj Anyone who \+add ≈wants to understand must listen carefully\+add*,\wj*”
+\v 24 and he¦24753 continued, “\wj \+add ≈Take care what you listen to\+add*. \+add ?≈How much you all judge others, so too will judgement be handed out\+add* to you, and¦24752 \+add ≈even more\+add*.\wj*\x + \xo 4:24: \xt Mat 7:2; Luk 6:38.\x* DOUBLE-CHECK
+\v 25 \wj Anyone who has \+add ?faith\+add* will be given¦24776 \+add ?a reward\+add*, \+add ≈but¦24779 if you have none\+add*, even \+add ≈the little\+add* you have will be taken¦24786 away.\wj*”\x + \xo 4:25: \xt Mat 13:12; 25:29; Luk 19:26.\x* DOUBLE-CHECK
+\s1 The parable about the sprouting seed
 \rem /s1 The Parable of the Growing Seed; Illustration of the Growing Seed
 \p
-\v 26 And then¦24789, “\wj God's kingdom¦24795 is like a person throwing¦24803 some seed onto the ground.\wj*
-\v 27 \wj Whether the person sleeps¦24814 at night or stays up night and day¦24822, the seed will sprout¦24826 and grow either way, and they don't¦24831 know how it does it.\wj*
-\v 28 \wj The earth¦24838 is \+add designed\+add* to multiply the seed: first¦24840 a sprout appears, then a bigger plant, and then the full head of grain.\wj*
-\v 29 \wj Then when it's ripe, the harvester is sent in because¦24865 it's ready for harvest¦24868.\wj*”\x + \xo 4:29: \xt Yoel 3:13.\x*
+\v 26 And then¦24789, “\wj God's kingdom¦24795 is like a \+add ≈person\+add* throwing¦24803 \+add some\+add* seed onto the ground.\wj*
+\v 27 \wj \+add ≈Whether\+add* \+add @the person\+add* sleeps¦24814 \+add at night\+add* or \+add ≈stays up\+add* night and day¦24822, the seed will sprout¦24826 and grow \+add either way\+add*, and \+add ≈they\+add* don't¦24831 know how \+add it does it\+add*.\wj*
+\v 28 \wj The earth¦24838 is \+add designed\+add* \+add ≈to multiply the seed\+add*: first¦24840 a \+add ≈sprout\+add* \+add appears\+add*, then a \+add ≈bigger plant\+add*, and then the full head of grain.\wj*
+\v 29 \wj \+add ≈Then when it's ripe\+add*, \+add ≈the harvester\+add* is sent in because¦24865 \+add ≈it's ready for\+add* harvest¦24868.\wj*”\x + \xo 4:29: \xt Yoel 3:13.\x*
 \s1 The small seed produces a large result
 \rem /s1 Illustration of the Mustard Seed; The Parable of the Mustard Seed
 \r (Mat. 13:31-32,34; Luke 13:18-19)
 \p
-\v 30 Again he said¦24870, “\wj What could we liken¦24874 God's kingdom¦24877 to? Or what parable¦24886 could we explain it with?\wj*
-\v 31 \wj It's like planting a mustard¦24897 seed in the ground—a very small¦24912 seed.\wj*
-\v 32 \wj But¦24929 when it's planted¦24940 and grows up, it forms a large¦24947 bush with many branches¦24946 so that birds¦24956 can rest in its¦24954 shade.\wj*”
+\v 30 \add ≈Again\add* he said¦24870, “\wj What could we liken¦24874 God's kingdom¦24877 to? Or what parable¦24886 could we \+add ≈explain it with\+add*?\wj*
+\v 31 \wj It's like \+add ≈planting\+add* a mustard¦24897 seed in the ground—\+add ≈a very small¦24912 seed\+add*.\wj*
+\v 32 \wj \+add ≈But¦24929\+add* when it's \+add ≈planted¦24940 and grows up\+add*, it \+add ≈forms a large¦24947 bush with many\+add* branches¦24946 so that birds¦24956 can nest in its¦24954 \+add ≈shade\+add*.\wj*”
 \rem /s1 The Use of Parables
 \p
 \v 33 And so as much as they¦24970 could handle it, Yeshua shared the good message¦24968 with them via many similar word pictures.
