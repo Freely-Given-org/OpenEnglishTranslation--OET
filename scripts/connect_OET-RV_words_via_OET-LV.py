@@ -64,6 +64,7 @@ CHANGELOG:
     2026-06-11 Handle new % (changed person) \\add format
     2026-06-30 Added verb sets (but they're not fully utilised yet)
     2026-08-19 Allow ../ in lines (used in USFM jmp fields)
+    2026-08-23 Added checking for doubled spaces around USFM close character marker fields
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -81,10 +82,10 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-08-19' # by RJH
+LAST_MODIFIED_DATE = '2026-08-23' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.92'
+PROGRAM_VERSION = '0.93'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -129,7 +130,7 @@ SIMPLE_NOUNS = ( # These are nouns that are likely to match one-to-one from the 
                 #   i.e., there's really no other word for them.
     # NOTE: Some of these nouns can also be verbs -- we may need to remove those???
     # 'son' causes problems
-    'altar',
+    'altars','altar',
         'ambassadors','ambassador',
         'ancestors','ancestor', 'angels','angel', 'anger', 'animals','animal', 'ankles','ankle',
         'assemblies','assembly',
@@ -211,7 +212,7 @@ SIMPLE_NOUNS = ( # These are nouns that are likely to match one-to-one from the 
         'shame', 'sheep', 'shepherds','shepherd', 'ships','ship', 'shores','shore', 'shrines','shrine',
         'sides','side', 'signs','sign', 'silver', 'silversmiths','silversmith', 'sinners','sinner', 'sins','sin', 'sisters','sister', 'sky', 'slaves','slave',
         'soldiers','soldier', 'sons', 'souls','soul', 'spirits','spirit',
-        'stars','star', 'stones','stone', 'streams','stream', 'streets','street', 'strength', 'sun', 'swords','sword',
+        'stars','star', 'stones','stone', 'straps','strap', 'streams','stream', 'streets','street', 'strength', 'sun', 'swords','sword',
     'tables','table', 'taxes','tax',
         'teachers','teacher', 'temples','temple', 'tent', 'testimonies','testimony',
         'theatres','theatre', 'thieves','thief', 'things','thing', 'threats','threat', 'thrones','throne', 'thumbs','thumb',
@@ -250,7 +251,7 @@ simpleVerbSets = ( ('abandoned','abandoning','abandons','abandon'),
                     ('ascended','ascending','ascends','ascend'), ('asked','asking','asks','ask'), ('assembled','assembling','assembles','assemble'),
                     ('attracted','attracting','attracts','attract'), ('attacked','attacking','attacks','attack'),
                 ('banished','banishing','banishes','banish'),
-                    ('become','became','becomes','becoming'), ('behaved','behaving','behaves','behave'), ('believed','believing','believes','believe'),
+                    ('become','became','becomes','becoming'), ('behaved','behaving','behaves','behave'), ('believed','believing','believes','believe'), ('bent','bending','bends','bend'),
                     ('blessed','blessing','blesses','bless'),
                     ('brought','bringing','brings','bring'),
                     ('burnt','burning','burns','burn'), ('buried','burying','buries','bury'),
@@ -543,6 +544,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('God','god'),
     ('godly','devout'),('godly','righteous'),
     ('grapevine','vine'),
+    ('greater','mightier'),
     ('harvests','fruit'),
     ('heavenly','heavens'),('heavenly','heaven'),
     ('hill','mountain'),
@@ -1147,6 +1149,7 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
             assert '≈ ' not in line, f"Unexpected space after ≈ in {rvESFMFilename} {lineNumber}: '{line}'"
             for characterMarker in BibleOrgSysGlobals.USFMCharacterMarkers:
                 assert line.count( f'\\{characterMarker} ') == line.count( f'\\{characterMarker}*'), f"{characterMarker} marker mismatch in {rvESFMFilename} {lineNumber}: '{line}'"
+                assert  f' \\{characterMarker}* 'not in line, f"doubled spaces around close {characterMarker} marker {rvESFMFilename} {lineNumber}: '{line}'"
             assert doubledND not in line, f"Double \\nd in {rvESFMFilename} {lineNumber}: '{line}'"
             assert  badAddND not in line, f"\\nd inside \\add start {rvESFMFilename} {lineNumber}: '{line}'"
             assert  badNDAdd not in line, f"\\nd inside \\add end {rvESFMFilename} {lineNumber}: '{line}'"
