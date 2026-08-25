@@ -2,23 +2,47 @@
 
 The **_Open English Translation_ of the Bible (OET)** -- a unique, exciting, completely free and open-licensed, new modern-English Bible translation
 
-The new website is at https://OpenEnglishTranslation.Bible. (The previous one was at https://Freely-Given.org/BibleTranslations/English/OET/.) The Bible text is also available at the [_Open Bible Data_](https://github.com/Freely-Given-org/OpenBibleData) website at https://Freely-Given.org/OBD/.
+The new website is at https://OET.Bible. (The previous one was at https://Freely-Given.org/BibleTranslations/English/OET/.) The Bible text is also available at the [_Open Bible Data_](https://github.com/Freely-Given-org/OpenBibleData) website at https://Freely-Given.org/OBD/.
+
+The design features can be found under the ‘Design’ menu at https://OET.Bible.
 
 ## Background
 
-The _Open English Translation_ project has been planned for almost fifteen years (a draft of Jonah was done in 2010), although circumstances only allowed for full-time development to begin in mid-2022 after a 12+ year wait.
+The _Open English Translation_ project has been planned for over fifteen years (a draft of Jonah was done in 2010), although circumstances only allowed for full-time development to begin in mid-2022 after a 12+ year wait.
 
 ## Introduction
 
-Perhaps one of the main differences from existing English translations that should be mentioned here is this: All translations must choose to place themselves somewhere on the line that moves from being very literal (some people might perhaps naively think this is being accurate to the original), to being more helpful to the reader by being more free/dynamic (in making a translation that fills in some of the implied information that might have been obvious to the original readers). The _Open English Translation_ handles this by choosing **two points on the literal⇔dynamic line instead of just one**! The two versions (one _very_ literal and one more dynamic) are intended to be used together (and never alone).
+Perhaps one of the main differences from existing English translations that should be mentioned here is this:
+All translations must choose to place themselves somewhere on the line that moves from being very literal
+(some people might perhaps naively think this is being accurate to the original),
+to being more helpful to the reader by being more free/dynamic (in making a translation
+that fills in some of the implied information that might have been obvious to the original readers).
+The _Open English Translation_ handles this by choosing **two points on the literal⇔dynamic line instead of just one**!
+The two versions (one _very_ literal and one more dynamic) are intended to be used together (and never alone).
 
-Another major difference, is that the _Open English Translation_ **is freely available** for others to use and publish in Bible studies and similar materials (including research theses), to print, to display on any device, and even to change/customise (with only small limitations) to meet other specific needs.
+Another major difference, is that the _Open English Translation_ **is freely available** for others to use
+and publish in Bible studies and similar materials (including research theses), to analyse, to print,
+to display on any device, and even to change/customise (with only small limitations) to meet other specific needs.
 
-After several years of waiting, the _Open English Translation_ project was restarted in the second half of 2022 (as soon as the new [Statistical Restoration Greek New Testament](https://GreekCNTR.org/collation/index.htm) dataset was officially released by the [Center for New Testament Restoration](https://GreekCNTR.org)). This work started with a review of our design and work on new planned file formats, and then a focus on creating the New Testament portion of the Literal Version. Are you interested in helping or supporting this effort? If so, please use our [Contact Page](https://Freely-Given.org/Contact.html).
+Many other English Bible translations claim to be ‘modern’ (and it’s not our aim to disparage them)
+but it’s easy to see that many phrases and terms have been carried into them all the way back from
+Tyndale (1500’s) and even from Wycliffe (1300’s).
+For example, the _Open English Translation_ doesn’t start sentences with the conjunction ‘For’ as we don’t hear that in modern speech.
+(By the way, the ‘For’ in the previous sentence is a preposition, not a conjunction.)
+There’s also much less use of ‘of’ to indicate possession (e.g., ‘house of Peter’) as we tend to use apostrophe (’s) in modern English (e.g., Peter’s house). Plus we try to remove as much ‘Christianese’ as possible.
 
-The Old Testament portions will be based on the work of the [Open Scriptures Hebrew Bible](https://hb.OpenScriptures.org) team.
+After several years of waiting, the _Open English Translation_ project was restarted in the second half of 2022
+(as soon as the new [Statistical Restoration Greek New Testament](https://GreekCNTR.org/collation/index.htm) dataset was officially released by the [Center for New Testament Restoration](https://GreekCNTR.org)).
+This work started with a review of our [design](https://OET.Bible/Design/ReadersVersion/) and work on new planned file formats,
+and then a focus on creating the New Testament portion of the [Literal Version](https://OET.Bible/Design/LiteralVersion/).
+Are you interested in helping or supporting this effort?
+If so, please use our [Contact Page](https://Freely-Given.org/Contact.html) or [here](https://OET.Bible/About/Contact/).
 
-Frequently asked questions (FAQs) about the OET can be found [here](https://Freely-Given.org/BibleTranslations/English/OET/FAQs.html) (until they move to [here](https://OpenEnglishTranslation.Bible/design/FAQ)).
+The Old Testament portion is be based on the work of the [Open Scriptures Hebrew Bible](https://hb.OpenScriptures.org) team
+(although we prefer to call it ‘The Hebrew Scriptures’ rather than ‘The Old Testament’
+and we call ‘The New Testament’ ‘The Messianic Update’.)
+
+Some frequently asked questions (FAQs) about the OET can be found [here](https://OET.Bible//Discussion/FAQ/).
 
 The _Open English Translation_ will eventually be available in six versions:
 
@@ -33,7 +57,9 @@ If you’re a professional Bible translator or consultant or notes-writer, or if
 
 ## Schedule
 
-As of January 2026, around 85% of the Bible has been drafted. ([This page](https://OpenEnglishTranslation.Bible) is updated a few times per month with the progress.) Our goal is to complete the first draft and first check of the _OET_ by mid-2026.
+As of August 2026, the entire Bible has been drafted.
+([This status page](https://OET.Bible/About/Status/) is kept updated with our progress.)
+Our goal is to complete v0.5 by the end of 2027, but we need more eyes on the text.
 
 ## Licences
 
@@ -43,6 +69,9 @@ Any included scripts are licensed [GPL 3.0](https://www.GNU.org/licenses/gpl-3.0
 
 ## The inevitable event
 
-It is my request to my family and executors of my will to place all of this work into the public domain, finished or unfinished, on the event of my death. It has always been my desire that the _Open English Translation_ be a gift to the world, including the _Literal Version_, the _Readers’ Version_, and any other versions made under my control or under the auspices of Freely-Given.org.
+It is my request to my family and executors of my will to place all of this work into the public domain,
+finished or unfinished, on the event of my death.
+It has always been my desire that the _Open English Translation_ be a gift to the world, including the _Literal Version_,
+the _Readers’ Version_, and any other versions made under my control or under the auspices of Freely-Given.org.
 
 Please note that any contributions by others to this project will only be accepted on these same grounds.
