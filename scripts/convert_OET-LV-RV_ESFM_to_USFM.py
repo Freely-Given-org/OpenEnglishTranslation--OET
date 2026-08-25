@@ -26,7 +26,7 @@
 """
 Script to convert OET ESFM files with word numbers back to simple USFM files.
 
-TODO: Doesn't delete the \rem ESFM headers yet
+TODO: Doesn't delete the \\rem ESFM headers yet
 
 
 CHANGELOG:
@@ -38,6 +38,7 @@ CHANGELOG:
     2026-05-08 Upgraded to bos_books_codes_py
     2026-05-31 Handle (remove) Psalm/Song thematic colouring markers
     2026-06-11 Handle new % (changed person) \\add format
+    2026-08-24 Handle \\+add format
 """
 from pathlib import Path
 import re
@@ -48,10 +49,10 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint, BOOKLIST_OT3
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-06-11' # by RJH
+LAST_MODIFIED_DATE = '2026-08-24' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_ESFM_to_USFM"
 PROGRAM_NAME = "Convert OET LV & RV ESFM files to USFM"
-PROGRAM_VERSION = '0.66'
+PROGRAM_VERSION = '0.67'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -123,20 +124,20 @@ def main():
                 # assert '\\add ^' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ^" # TODO: Why???
                 assert '\\add ≈' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ≈"
             adjText = ( adjText
-                            .replace( '\\add ?', '\\add ' ) # This one always comes first if there's two
-                            .replace( '\\add +', '\\add ' )
+                            .replace( '\\add ?', '\\add ' ).replace( '\\+add ?', '\\+add ' ) # This one always comes first if there's two
+                            .replace( '\\add +', '\\add ' ).replace( '\\+add +', '\\+add ' )
                             .replace( '\\add ¿', '\\add ' )
-                            .replace( '\\add =', '\\add ' )
-                            .replace( '\\add <', '\\add ' )
-                            .replace( '\\add >', '\\add ' )
-                            .replace( '\\add ≡', '\\add ' )
-                            .replace( '\\add &', '\\add ' )
-                            .replace( '\\add *', '\\add ' )
-                            .replace( '\\add @', '\\add ' )
-                            .replace( '\\add #', '\\add ' )
-                            .replace( '\\add %', '\\add ' )
-                            .replace( '\\add ^', '\\add ' )
-                            .replace( '\\add ≈', '\\add ' )
+                            .replace( '\\add =', '\\add ' ).replace( '\\+add =', '\\+add ' )
+                            .replace( '\\add <', '\\add ' ).replace( '\\+add <', '\\+add ' )
+                            .replace( '\\add >', '\\add ' ).replace( '\\+add >', '\\+add ' )
+                            .replace( '\\add ≡', '\\add ' ).replace( '\\+add ≡', '\\+add ' )
+                            .replace( '\\add &', '\\add ' ).replace( '\\+add &', '\\+add ' )
+                            .replace( '\\add *', '\\add ' ).replace( '\\+add *', '\\+add ' )
+                            .replace( '\\add @', '\\add ' ).replace( '\\+add @', '\\+add ' )
+                            .replace( '\\add #', '\\add ' ).replace( '\\+add #', '\\+add ' )
+                            .replace( '\\add %', '\\add ' ).replace( '\\+add %', '\\+add ' )
+                            .replace( '\\add ^', '\\add ' ).replace( '\\+add ^', '\\+add ' )
+                            .replace( '\\add ≈', '\\add ' ).replace( '\\+add ≈', '\\+add ' )
                             .replace( '\\untr ', '' ).replace( '\\untr*', '' )
                         )
             if VV == 'LV': # remove LV specialised version of USFM \\add fields

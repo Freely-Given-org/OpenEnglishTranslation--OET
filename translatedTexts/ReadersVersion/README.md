@@ -9,15 +9,13 @@ where the words have been minimally reordered to make sense in English.
 This translation methodology is based on the idea that it’s easier
 to try to focus on creating a draft that’s natural English
 and then to fix accuracy and consistency issues later, rather than the opposite.
-There are so many Bible translations in the world,
-including in English,
-where the grammar and expressions of the translation are much more like Hebrew or Greek styles than being natural in the language that they’re being translated into.
-For instance in modern English, it's far more natural for any non-churched person to say
-‘God's kingdom’ than ‘kingdom of God’.
+There are so many Bible translations in the world, including in English,
+where the grammar and expressions of the translation are much more like Hebrew or Greek styles
+rather than being natural in the language that they’re being translated into.
+For instance in modern English, it’s far more natural for any non-churched person to say
+‘God’s kingdom’ than ‘kingdom of God’.
 
-You can read more about the design of the _OET-RV_ [here](https://OpenEnglishTranslation.Bible/Design/ReadersVersion).
-
-Currently (late-2025), over 78% of the 66 books have been rough-drafted.
+You can read more about the design of the _OET-RV_ [here](https://OET.Bible/Design/ReadersVersion).
 
 ### ‘Add’ classes
 
@@ -28,19 +26,20 @@ We use USFM \add markers but differentiate further by using an additional symbol
 - contextual additions, e.g., and \add after that\add* he said
 - application/interpretational additions, e.g., when we reword the concept to what we think the author was trying to say, but the final words that we use are not there at all in the original.
 
-See our [formats page](https://OpenEnglishTranslation.Bible/Resources/Formats) for more information on how these things are implemented.
+See our [formats page](https://OET.Bible/Resources/Formats) for more information on how these things are implemented.
 
 ## Schedule
 
-As of July 2025, about 2/3 of the Bible has been drafted. ([This page](https://OpenEnglishTranslation.Bible) is updated a few times per month with the progress.) Our goal is to complete the first draft and first check of the _OET_ by mid-2026.
+As of August 2026, the entire Bible has been drafted has been drafted after some estimated 10,000 hours of work done over a period of four full-time years. ([This page](https://OET.Bible/About/Status/) will now be kept updated with progress.)
+We’ve now moved into Phase 3 which is focused on consistency and accuracy checks.
 
 ## Disclaimer
 
-Note: This content is created by hand without any so-called ‘AI’ help.
+Note: This Biblical content is created by hand without any so-called ‘AI’ help.
 
 ## Licences
 
-Copyright (c) 2010-2025 Robert Hunt.
+Copyright (c) 2010-2026 Robert Hunt.
 
 Our _OET-RV_ Bible text is licensed [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en) (Creative Commons Attribution-ShareAlike 4.0 International).
 
@@ -50,93 +49,93 @@ It is my request to my family and executors of my will to place all of this work
 It has always been my desire that the _Open English Translation_ be a gift to the world, including the _Literal Version_, the _Readers’ Version_,
 and any other versions made under my control or under the auspices of [Freely-Given.org](https://Freely-Given.org).
 
-Please note that any contributions by others to this project will only be accepted if they're donated to Robert Hunt @ [Freely-Given.org](https://Freely-Given.org) on these same grounds.
+Please note that any contributions by others to this project will only be accepted if they’re donated to Robert Hunt @ [Freely-Given.org](https://Freely-Given.org) on these same grounds.
 (We don’t want future complications from having multiple ‘owners’ trying to exert control over this project—you can always fork and rename it if you want to make your own changes.)
-Of course, we're very happy to list contributors if you desire that. (Not everyone does.)
+Of course, we’re very happy to list contributors if you desire that. (Not everyone does.)
 
 ## TODO list
 
 - Go thru NT and GEN to insert \add fields
 - Consider replacing J with Y, e.g., Jacob -> Yacob, John -> Yohan
-- Consider Yitshak vs Yits-hak or Yits'hak
+- Consider Yitshak vs Yits-hak or Yits’hak
 - Consider changing names still quite recognisable with only one letter difference, e.g., Lazarus -> Lazaros
-- Replace 'whoever' with 'anyone'
-- Replace 'may' with 'can' (except perhaps in the negative???)
+- Replace ‘whoever’with ‘anyone’
+- Replace ‘may’with ‘can’(except perhaps in the negative???)
 - Manually mark nomina sacra in OET-RV???
 - put \add ≈ around all modern measures???
-- Finish changing 'followers' to ‘apprentices’ where appropriate
+- Finish changing ‘followers’to ‘apprentices’ where appropriate
 - Compare parallel passages and choose the best renderings
 - Define and check style of s1 section headings, i.e., tense, perfects, etc.
 - Work on consistent two levels of major and minor section headings (s1 and s2)
 - Define and implement footnote types/classes
 - Add word numbers for all remaining OET-RV words
-- make sure we haven't used 'tithe'
-- decide on idioms (esp. in Proverbs) using 'lips'
+- decide on idioms (esp. in Proverbs) using ‘lips’
 - Revisit whether words like "peace offering", "grain offering", "sin offering" would be better if hyphenated???
-- Change Ephraim/Efrayim to Israel where it's referring to the northern kingdom
 - Check Jn 1:1-9 against very critical SL email
 - Go through all Gary Gagliardi articles and check OET-RV
-- A more modern term for 'parable'?
+- A more modern term for ‘parable’?
 
 ## Terms to make consistent
 
 - Check consistency of keyterms, e.g., how is ‘son of God’, ‘holy spirit’, ‘kingdom of the heavens’ translated everywhere?
-- consistency of 'staff' vs 'rod'
-- David's town / city of David
-- 'c/k' names like 'Yacob'
-- 'b/v' names like 'Yakov'
-- 'ai/ay' names like 'Yeshai'
+- consistency of ‘staff’vs ‘rod’
+- David’s town / city of David
+- ‘c/k’names like ‘Yacob’
+- ‘b/v’names like ‘Yakov’
+- ‘ai/ay’names like ‘Yeshai’
 - Philistines vs Filistines
 - raised offering vs wave offering, peace offering vs fellowship offering
 - firstfruits -> harvest festival
+- make sure we haven’t used ‘tithe’
 - passover/Passover/pass-over, ....
+- Change Ephraim/Efrayim to Israel where it’s referring to the northern kingdom
 - Aram vs Syria
-- remove "years old" if it's not essential
-- make numbers consistent like '120' vs 'one hundred and twenty'
+- remove "years old" if it’s not essential/natural
+- make numbers consistent like ‘120’vs ‘one hundred and twenty’
 - capitalisation of city or river after name, e.g., Ashdod City, Jordan river, Corner Gate
-- "His mother's name was..." for new kings in 2 Chron
+- "His mother’s name was..." for new kings in 2 Chron
 - a record of everthing done ... was written in the scroll/book of ... after the death of a king
-- "what was right in Yahweh's eyes" "what was right in the eyes of Yahweh"
+- "what was right in Yahweh’s eyes" "what was right in the eyes of Yahweh"
 - all our measurements, e.g., ten kilograms, ... should have \add ≈ around them
 - all our months, e.g., March, April, ... should have \add ≈ around them
-- 'house of Yahweh' vs 'Yahweh's temple' vs just 'temple'
+- ‘house of Yahweh’vs ‘Yahweh’s temple’vs just ‘temple’
 - treasuries vs storerooms and storehouses
-- gatekeepers -> 'the men guarding the gates'
+- gatekeepers -> ‘the men guarding the gates’
 - all the feast/celebration names, e.g., ‘Festival of Shelters’
-- 'flowing with milk and honey' vs 'very fertile'
+- ‘flowing with milk and honey’vs ‘very fertile’
 - last/latter days or something completely different?
 - reap -> harvest
 - border vs boundary
 - pledge (for loans) -> guarantee
-- work out what we're going to do with "people/peoples" meaning "people groups"
+- work out what we’re going to do with "people/peoples" meaning "people groups"
 - convert litres (volumes) of flour to kilograms (weights)
 - kill/slaughter/strike for animals (e.g., sacrifices) and for people
-- altar 'horns' -> \add four\add* \add ≈projecting corners\add*
+- altar ‘horns’-> \add four\add* \add ≈projecting corners\add*
 - innards, entrails, intestines, guts
 - skin vs hide (of animal)
 - army commander Yahweh -> Commander-in-chief Yahweh
 - proclaim -> announce ???
 - exalt -> speak highly of
-- try to remove righteousness (doing what's right) and perhaps justice (doing what's fair) from RV
-- redeemed (replace 'bought you back') -> 'paid the price to free you'
+- try to remove righteousness (doing what’s right) and perhaps justice (doing what’s fair) from RV
+- redeemed (replace ‘bought you back’) -> ‘paid the price to free you’
 - green tree / luxuriant tree / leafy tree
 - nobles -> leading citizens
 - sword -> war
 - clefts -> crevices
-- land you do not know -> land you've never been to
+- land you do not know -> land you’ve never been to
 - deeds -> actions
 - strongholds -> fortifications and/or fortresses
 - Titos -> Latin/Roman Titus???
 - plague -> DEADLY diseases
 - prophesying falsehood -> prophesying untruths (not lies)
-- remove 'everlasting', 'amongst', 'midst', 'upon' 'shall', most of 'may'
+- remove ‘everlasting’, ‘amongst’, ‘midst’, ‘upon’, ‘shall’, most of ‘may’
 - wine-presses/wine-vats -> wine-pressing pit
 - sackcloth -> coarse, abrasive cloth
-- bend bows -> 'use bows and arrows'
+- bend bows -> ‘use bows and arrows’
 - plaza vs square
-- refer to cities/countries, etc. as 'it', not 'he' or 'she'.
-- 'rest' -> check if 'peace and stability' or something is more natural in modern English
+- refer to cities/countries, etc. as ‘it’, not ‘he’ or ‘she’.
+- ‘rest’-> check if ‘peace and stability’or something is more natural in modern English
 - vow -> promise
 
-Continue checking Mark spelling from Mrk 12:11 onwards.
-Continue revising Mark formatting from Mrk 1:21 onwards. Then Ruth.
+Continue checking Mark spelling from Mrk 14:63 onwards.
+Continue revising Mark formatting from Mrk 5:1 onwards. Then Ruth.

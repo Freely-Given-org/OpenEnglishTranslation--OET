@@ -12,7 +12,7 @@ source = { editable = "../../BibleTransliterations/Rust" }
 
 [[package]]
 name = "bibleorgsys"
-version = "0.3.5"
+version = "0.3.6"
 source = { editable = "../../BibleOrgSys" }
 dependencies = [
     { name = "bibleorgsys-rust" },

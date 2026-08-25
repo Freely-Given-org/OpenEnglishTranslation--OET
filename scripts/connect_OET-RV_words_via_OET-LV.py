@@ -1351,7 +1351,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
 
     rvAdjText = rvText.replace('◘','').replace('≈','').replace('…','') \
                 .replace('.','').replace(',','').replace(':','').replace(';','').replace('?','').replace('!','') \
-                .replace('/',' ').replace('—',' ') \
+                .replace(' / ',' ').replace('/',' ').replace('—',' ') \
                 .replace( '(', '').replace( ')', '' ) \
                 .replace( '“', '' ).replace( '”', '' ).replace( '‘', '' ).replace( '’', '') \
                 .replace('  ',' ').strip()
