@@ -92,7 +92,7 @@ SBE := $(SBE_RUST_BIN)
 
 # Choose ONE of the following
 # BTranslit := ../../BibleTransliterations/Python/BibleTransliterations.py
-BTranslit := ../../BibleTransliterations/Rust/src/lib.rs
+BTranslit := ../../BibleTransliterations/Rust/lib.src.rs ../../BibleTransliterations/Rust/build_static_tables.py ../../BibleTransliterations/Rust/build.rs
 
 HebrewTranslit := ../../BibleTransliterations/sourceTables/Hebrew.tsv
 GreekTranslit := ../../BibleTransliterations/sourceTables/Greek.tsv
