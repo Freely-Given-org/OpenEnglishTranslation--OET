@@ -46,11 +46,11 @@ Some frequently asked questions (FAQs) about the OET can be found [here](https:/
 
 The _Open English Translation_ will eventually be available in six versions:
 
-- [Literal Version](https://Freely-Given.org/BibleTranslations/English/OET/Introduction.html#OET-LV) (also see [blog](https://OpenScripture.blogspot.com/2010/05/oet-literal-version.html) announcement) which may then be printed/displayed alongside one of the:
-- [Readers’ Version](https://Freely-Given.org/BibleTranslations/English/OET/Introduction.html#OET-RV) (also see [blog](https://OpenScripture.blogspot.com/2010/06/oet-readers-version.html) announcement), the
+- [Literal Version](https://Freely-Given.org/BibleTranslations/English/OET/Introduction.html#OET-LV) (also see the original [blog](https://OpenScripture.blogspot.com/2010/05/oet-literal-version.html) announcement) which may then be printed/displayed alongside one of the:
+- [Readers’ Version](https://Freely-Given.org/BibleTranslations/English/OET/Introduction.html#OET-RV) (also see the original [blog](https://OpenScripture.blogspot.com/2010/06/oet-readers-version.html) announcement), the
 - [Colloquial Version](https://Freely-Given.org/BibleTranslations/English/OET/Introduction.html#OET-CV), the
-- [Study Version](https://Freely-Given.org/BibleTranslations/English/OET/Introduction.html#OET-SV) (also see [blog](https://OpenScripture.blogspot.com/2010/06/oet-study-version.html) announcement), or the
-- [Extended Version](https://Freely-Given.org/BibleTranslations/English/OET/Introduction.html#OET-EV) (also see [blog](https://OpenScripture.blogspot.com/2010/06/oet-extended-version.html) announcement), and possibly the
+- [Study Version](https://Freely-Given.org/BibleTranslations/English/OET/Introduction.html#OET-SV) (also see the original [blog](https://OpenScripture.blogspot.com/2010/06/oet-study-version.html) announcement), or the
+- [Extended Version](https://Freely-Given.org/BibleTranslations/English/OET/Introduction.html#OET-EV) (also see the original [blog](https://OpenScripture.blogspot.com/2010/06/oet-extended-version.html) announcement), and possibly the
 - _Digest Version_ for those who want the essence without some of the trivia (like Paul forgetting his coat in Troas).
 
 If you’re a professional Bible translator or consultant or notes-writer, or if you’re an app developer and able to help us in this endeavour, please start a conversation with us via our [Contact Page](https://Freely-Given.org/Contact.html).

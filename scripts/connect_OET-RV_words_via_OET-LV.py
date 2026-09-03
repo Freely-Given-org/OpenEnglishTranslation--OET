@@ -65,6 +65,7 @@ CHANGELOG:
     2026-06-30 Added verb sets (but they're not fully utilised yet)
     2026-08-19 Allow ../ in lines (used in USFM jmp fields)
     2026-08-23 Added checking for doubled spaces around USFM close character marker fields
+    2026-09-04 Don't add word numbers to words that are inside plain (straight) \add spans
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -82,10 +83,10 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-08-23' # by RJH
+LAST_MODIFIED_DATE = '2026-09-04' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.93'
+PROGRAM_VERSION = '0.94'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -1931,6 +1932,28 @@ def getLVWordRow( wordWithNumber:str, testament:str ) -> Tuple[str,int,List[str]
 
 
 ndStartMarker, ndEndMarker = '\\nd ', '\\nd*'
+
+# The characters that, if they immediately follow a '\add ', indicate a special
+#   rewording span (e.g., \add ≈..., \add @..., \add #...).  Words inside those
+#   special spans may keep their OET-LV word numbers.  But words inside a PLAIN
+#   straight '\add ...\add*' span are words that have been ADDED into the English
+#   text by the translator, so by definition they have no OET-LV word number and
+#   must never be given one.
+ADD_SPECIAL_CHARS = '@#≈≡*<>&%?+^'
+straightAddSpanRegex = re.compile(
+    f'\\\\add ([^{ADD_SPECIAL_CHARS}\\\\][^\\\\]*?)\\\\add\\*' ) # A plain '\add ...\add*' span
+
+def isInsideStraightAddSpan( line:str, index:int ) -> bool:
+    """
+    Return True if the character at 'index' in 'line' falls inside a PLAIN straight
+        '\add ...\add*' span (either 'added words' or a bracketed translation that
+        was added into the English text).
+    """
+    return any( match.start() < index < match.end()
+                for match in straightAddSpanRegex.finditer( line ) )
+# end of isInsideStraightAddSpan
+
+
 def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool | None:
     """
     Go through the RV USFM for BBBB and find the lines for c:v (which comes from Original/OET-LV verse numbering)
@@ -1986,6 +2009,11 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, type(allWordMatches), type(match), match )
                 assert match.group(0) == word
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found {word=} {line=}" )
+                if isInsideStraightAddSpan( line, match.start() ): # the word was ADDED into the English text
+                    logger = logging.critical if DEBUGGING_THIS_MODULE else logging.error
+                    logger( f"Refusing to add a word number to the ADDED OET-RV word '{word}' in {BBB} {C}:{V} (inside straight \\add span) from '{line[match.start()-5:match.end()+5]}'" )
+                    # already_numbered_error
+                    return False
                 wordRow = state.wordTable['NT' if NT else 'OT'][wordNumber]
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found {word=} {line=} {wordRow=}" )
                 # TODO: Why do we often get the wrong row (in the NT at least)

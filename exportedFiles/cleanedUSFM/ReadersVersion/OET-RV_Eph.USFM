@@ -1,4 +1,4 @@
-\id EPH - Open English Translation—Readers’ Version (OET-RV) v0.1.57
+\id EPH - Open English Translation—Readers’ Version (OET-RV) v0.1.58
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 EPH
@@ -25,7 +25,7 @@
 \io1 Spiritual blessings from the messiah \ior 1:3–3:21\ior*
 \io1 Proper behaviour for believers \ior 4:1–6:20\ior*
 \io1 Closing \ior 6:21-24\ior*
-\rem This is still a very early look into the unfinished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
+\rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
 \p
@@ -39,7 +39,7 @@
 \v 4 He chose us to follow him even before the creation of the world, so that we could become pure and blameless in front of him. Because of his love
 \v 5 he decided in advance to adopt us as his children through \nd Yeshua\nd* the \nd messiah\nd*. His decision gave him great pleasure
 \v 6 and now he’s praised for the greatness of his grace which favoured us, as the one he loved
-\v 7 \x + \xo 1:7: \xt Col 1:14.\x*redeemed us by means of his blood and forgave our sins. It was from the riches of his grace
+\v 7 redeemed us by means of his blood and forgave our sins. It was from the riches of his grace\x + \xo 1:7: \xt Col 1:14.\x*
 \v 8 that was poured onto us that we gain wisdom and understanding
 \v 9 as he revealed the mystery of his will to us according to his great pleasure as he himself planned.
 \v 10 He planned for the orchestration of the times, and at the right time he will gather everything, whether in heaven or here on earth, for the \nd messiah\nd*
@@ -54,14 +54,14 @@
 \v 17 asking the \nd God\nd* of our \nd master Yeshua\nd* the \nd messiah\nd* to give you spiritual wisdom and to reveal the knowledge about him.
 \v 18 I ask that your inner thoughts will be enlightened so that you’ll all know the expectation of what he’s calling you to—the riches of the greatness of his inheritance for the believers
 \v 19 and the exceeding greatness of his power to \add help\add* us who believe, according to the working of the power of his strength.
-\v 20 \x + \xo 1:20: \xt Psa 110:1.\x*He worked this power in the \nd messiah\nd* when he brought him back to life and seated him in the place of honour in heavenly places—
+\v 20 He worked this power in the \nd messiah\nd* when he brought him back to life and seated him in the place of honour in heavenly places—\x + \xo 1:20: \xt Psa 110:1.\x*
 \v 21 giving him authority over every law and government, and over every powerful group and organisation, and over every earthly title, not only in the present age but also in the age to come.
-\v 22 \x + \xo 1:22: \xt Psa 8:6.\x*Everything in existence will be under his authority and God set him in charge of all matters concerning the assembly,
+\v 22 Everything in existence will be under his authority and God set him in charge of all matters concerning the assembly,\x + \xo 1:22: \xt Psa 8:6.\x*
 \v 23 which is his body—the completeness of the messiah who completes everything.
 \c 2
 \s1 God’s mercy, grace, and plans for us
 \p
-\v 1 \x + \xo 2:1-5: \xt Col 2:13.\x*You all were dead due to your disobedience and the \add path of\add* sinning
+\v 1 You all were dead due to your disobedience and the \add path of\add* sinning\x + \xo 2:1-5: \xt Col 2:13.\x*
 \v 2 that you once walked along when you followed the trends of this world which \add in turn\add* come from the ruler of the invisible powers—he’s the spirit that works in the children of disobedience.
 \v 3 In the past, we also lived like them inside our fleshly lusts and then living out those desires and fantasies, and so we were children \add deserving\add* strong anger just like everyone else.
 \p
@@ -79,9 +79,9 @@
 \p
 \v 13 But now \add thanks to\add* \nd Yeshua\nd* the messiah, you all who were once far \add from God\add* have become close by means of the messiah’s blood.
 \v 14 He is \add the source\add* of peace \add between Jews and non-Jews\add*, having broken the dividing wall that fenced them apart and making the two into one. He took the hostility onto himself,
-\v 15 \x + \xo 2:15: \xt Col 2:14.\x*having declared the \add old \add* commands to be now void so that Jews and non-Jews can now be peaceably united.
-\v 16 \x + \xo 2:16: \xt Col 1:20.\x*By \add his death\add* on the pole, any hostility is destroyed and both groups now become just one body in God’s sight.
-\v 17 \x + \xo 2:17: \xt Isa 57:19.\x*When the messiah came, he announced the good message: peace to you all who were far \add from God\add*, and peace also to the ones who were near,
+\v 15 having declared the \add old\add* commands to be now void so that Jews and non-Jews can now be peaceably united.\x + \xo 2:15: \xt Col 2:14.\x*
+\v 16 By \add his death\add* on the pole, any hostility is destroyed and both groups now become just one body in God’s sight.\x + \xo 2:16: \xt Col 1:20.\x*
+\v 17 When the messiah came, he announced the good message: peace to you all who were far \add from God\add*, and peace also to the ones who were near,\x + \xo 2:17: \xt Isa 57:19.\x*
 \v 18 so now both groups have access to the father by means of one \nd spirit\nd* through \add the work of\add* the messiah.
 \p
 \v 19 As a result, you all are no longer strangers and foreigners, but fellow-citizens of the believers and part of God’s household
@@ -94,7 +94,7 @@
 \v 1 That’s the reason that I, Paul, am a prisoner \add due to my serving\add* \nd Yeshua\nd* the \nd messiah\nd* for you non-Jews.
 \v 2 Certainly you have heard that God assigned me the task of passing on God’s grace to you.
 \v 3 He revealed his incredible plan as I wrote briefly previously
-\v 4 \x + \xo 3:4-6: \xt Col 1:26-27.\x*and which you are all able to read to understand my insight into the incredible plan about the \nd messiah\nd*.
+\v 4 and which you are all able to read to understand my insight into the incredible plan about the \nd messiah\nd*.\x + \xo 3:4-6: \xt Col 1:26-27.\x*
 \v 5 This plan wasn’t explained to humans in previous generations but now God’s \nd spirit\nd* has revealed it to his worthy missionaries and prophets.
 \v 6 Now non-Jews can have the same inheritance and become members of the same body and can share in the same promise that was the positive message of \nd Yeshua\nd* the \nd messiah\nd*.
 \p
@@ -119,7 +119,7 @@
 \s1 Many parts and gifts but one body
 \p
 \v 1 Because of that, I, a prisoner for \nd Yahweh\nd*, am urging you all to walk worthily of the calling to which you were called
-\v 2 \x + \xo 4:2: \xt Col 3:12-13.\x*with all humility, gentleness, and patience, putting up with one another because of your love \add for them\add*,
+\v 2 with all humility, gentleness, and patience, putting up with one another because of your love \add for them\add*,\x + \xo 4:2: \xt Col 3:12-13.\x*
 \v 3 being serious about keeping the unity of \add God’s\add* \nd spirit\nd* in the bond of peace.
 \v 4 There is one body and one \nd spirit\nd*, just as you all were called to one hope when you were called.
 \v 5 There’s one \nd master\nd*, one \add system of\add* faith, one immersion,
@@ -138,7 +138,7 @@
 \v 13 until we can reach the unity of our faith and of our knowledge about God’s son—becoming mature people measured against the stature of the fullness of the \nd messiah\nd*.
 \v 14 Then we’ll no longer be \add like\add* children \add in our faith\add*, tossed around by waves and being blown by every wind of teaching used to trick us or by crafty people who scheme how to deceive us.
 \v 15 Instead, by lovingly speaking the truth, we will grow up into every aspect of him—the \nd messiah\nd* who is the head
-\v 16 \x + \xo 4:16: \xt Col 2:19.\x*that integrates the entire body together and holds it together by every one of its joints. When each component does its work, the body grows and builds itself up with love.
+\v 16 that integrates the entire body together and holds it together by every one of its joints. When each component does its work, the body grows and builds itself up with love.\x + \xo 4:16: \xt Col 2:19.\x*
 \s1 Proper behaviour for godly people
 \p
 \v 17 So I’ll say this with \nd Yahweh’s\nd* direction: you all are no longer to walk like \add unbelieving\add* pagans who \add trust\add* in their own futile thinking.
@@ -147,23 +147,23 @@
 \p
 \v 20 But you all didn’t learn that about the \nd messiah\nd*.
 \v 21 If you had heard him and listened to his teaching, you would have heard the truth from \nd Yeshua\nd*:
-\v 22 \x + \xo 4:22: \xt Col 3:9.\x*that you reject the former conduct of the old corrupted you, those seductive desires,
+\v 22 that you reject the former conduct of the old corrupted you, those seductive desires,\x + \xo 4:22: \xt Col 3:9.\x*
 \v 23 and allow the spirit driving your thoughts to be renewed
-\v 24 \x + \xo 4:24: a \xt Col 3:10; \xo b \xt Gen 1:26.\x*and so to remodel yourself as a godly person created to obey \nd God\nd* and follow the pure truth.
+\v 24 and so to remodel yourself as a godly person created to obey \nd God\nd* and follow the pure truth.\x + \xo 4:24: a \xt Col 3:10; \xo b \xt Gen 1:26.\x*
 \p
-\v 25 \x + \xo 4:25: \xt Zech 8:16.\x*So steer clear of lies—always speak the truth to those around you because we are members of each other.
-\v 26 \x + \xo 4:26: \xt Psa 4:4 (LXX).\x*Even when you’re angry, don’t sin, and don’t carry your anger through to the next day—
+\v 25 So steer clear of lies—always speak the truth to those around you because we are members of each other.\x + \xo 4:25: \xt Zech 8:16.\x*
+\v 26 Even when you’re angry, don’t sin, and don’t carry your anger through to the next day—\x + \xo 4:26: \xt Psa 4:4 (LXX).\x*
 \v 27 don’t let the devil get his foot in.
 \v 28 If you’ve been stealing, then stop it. Instead you should be a hard worker, doing good things with your hands, so that you’ll \add earn\add* enough to be able to help those who are in need.
 \v 29 Don’t let any bad talk come out of your mouths, but rather words that are helpful to encourage others and to show grace to them.
 \v 30 And don’t sadden God’s holy \nd spirit\nd*, because he is the one who recorded your names for the day when the price will be paid to buy you all back.
 \v 31 So get rid of all bitterness, and rage and severe anger, uproars and slander, and any kind of malice.
-\v 32 \x + \xo 4:32: \xt Col 3:13.\x*Instead, be kind to each other, tender-hearted, forgiving each other just like \nd God\nd* forgave you all through \add the work of\add* the \nd messiah\nd*.
+\v 32 Instead, be kind to each other, tender-hearted, forgiving each other just like \nd God\nd* forgave you all through \add the work of\add* the \nd messiah\nd*.\x + \xo 4:32: \xt Col 3:13.\x*
 \c 5
 \s1 Living in God’s light
 \p
 \v 1 So imitate \nd God\nd* like valued children \add would imitate their father\add*
-\v 2 \x + \xo 5:2: \xt Exo 29:18; Psa 40:6.\x*and immerse yourselves in love just as the \nd messiah\nd* loves you all and allowed himself to suffer for us as an offering and sacrifice which is like a pleasant fragrance to \nd God\nd*.
+\v 2 and immerse yourselves in love just as the \nd messiah\nd* loves you all and allowed himself to suffer for us as an offering and sacrifice which is like a pleasant fragrance to \nd God\nd*.\x + \xo 5:2: \xt Exo 29:18; Psa 40:6.\x*
 \p
 \v 3 It’s fitting for dedicated \add believers\add* to not even entertain thoughts of sexual immorality or impurity or greed.
 \v 4 Nor is dirty or foolish talk or crude joking fitting, but rather thankfulness.
@@ -183,44 +183,44 @@
 \q2 The \nd messiah\nd* will shine \add his light\add* on you.
 \p
 \v 15 Because of that, take great care in exactly how you’re living. Don’t live like fools, but like wise people,
-\v 16 \x + \xo 5:16: \xt Col 4:5.\x*making good use of your time, because there’s lot of evil these days.
+\v 16 making good use of your time, because there’s lot of evil these days.\x + \xo 5:16: \xt Col 4:5.\x*
 \v 17 So don’t be foolish, but rather \add strive to\add* discover what \nd Yahweh\nd* wants for you.
 \p
 \v 18 And don’t get drunk on alcohol because that’s excessive. Instead, be filled with \add God’s\add* \nd spirit\nd*,
-\v 19 \x + \xo 5:19-20: \xt Col 3:16-17.\x*sharing scriptures with each other and singing hymns and songs to praise \nd Yahweh\nd*,
+\v 19 sharing scriptures with each other and singing hymns and songs to praise \nd Yahweh\nd*,\x + \xo 5:19-20: \xt Col 3:16-17.\x*
 \v 20 always expressing thanks for everything to \add our\add* father \nd God\nd* in the authority and name of our \nd master Yeshua\nd* the \nd messiah\nd*.
 \v 21 And show your honour of the \nd messiah\nd* by placing yourselves under each other’s authority.
 \s1 Married couples
 \p
-\v 22 \x + \xo 5:22: \xt Col 3:18; 1Pe 3:1.\x*Wives should place themselves under their own husbands, just like they’re under the \nd master\nd*,
+\v 22 Wives should place themselves under their own husbands, just like they’re under the \nd master\nd*,\x + \xo 5:22: \xt Col 3:18; 1Pe 3:1.\x*
 \v 23 because the husband is the leader of the wife just like the \nd messiah\nd* is the head and saviour of his body, the church.
 \v 24 Wives should place themselves under their husbands in everything just like the church should place itself under the \nd messiah\nd*.
 \p
-\v 25 \x + \xo 5:25: \xt Col 3:19; 1Pe 3:7.\x*You husbands must love your wives, just like the \nd messiah\nd* loved the church and gave himself \add completely\add* for it,
+\v 25 You husbands must love your wives, just like the \nd messiah\nd* loved the church and gave himself \add completely\add* for it,\x + \xo 5:25: \xt Col 3:19; 1Pe 3:7.\x*
 \v 26 so that he could separate the church \add from the world\add* and wash it clean with the water of the \add good\add* message
 \v 27 in order to present the splendid church to himself—without any stains or wrinkles or anything like that—just pure and unblemished.
 \v 28 So husbands should love their wives just like their own bodies—anyone who loves his wife is loving himself.
 \v 29 No one hates their own body, but they feed and look after it, just like the \nd messiah\nd* does for the church
 \v 30 and we are parts of his body.
-\v 31 \x + \xo 5:31: \xt Gen 2:24.\x*That’s the reason why a man leaves his father and mother and becomes joined with his wife and the two of them become one unit.
+\v 31 That’s the reason why a man leaves his father and mother and becomes joined with his wife and the two of them become one unit.\x + \xo 5:31: \xt Gen 2:24.\x*
 \v 32 This is an amazing mystery but I’m talking about the \nd messiah\nd* and the church.
 \v 33 But it applies to you all: each one of you should love your wife like yourself and the wife should respect her husband.
 \c 6
 \s1 Parents and children
 \p
-\v 1 \x + \xo 6:1: \xt Col 3:20.\x*It’s right for children following \nd Yahweh\nd* to obey your parents.
-\v 2 \x + \xo 6:2-3: \xt Exo 20:12; Deu 5:16.\x*Honour your father and mother (that’s the first command that’s followed by a promise)
+\v 1 It’s right for children following \nd Yahweh\nd* to obey your parents.\x + \xo 6:1: \xt Col 3:20.\x*
+\v 2 Honour your father and mother (that’s the first command that’s followed by a promise)\x + \xo 6:2-3: \xt Exo 20:12; Deu 5:16.\x*
 \v 3 so that things will go well for you and you’ll have a long life on the earth.
 \p
-\v 4 \x + \xo 6:4: \xt Col 3:21.\x*Fathers, don’t provoke your children to anger, but bring them up caringly and teach them disciplines and instructions from \nd Yahweh\nd*.
+\v 4 Fathers, don’t provoke your children to anger, but bring them up caringly and teach them disciplines and instructions from \nd Yahweh\nd*.\x + \xo 6:4: \xt Col 3:21.\x*
 \s1 Slaves and masters
 \p
-\v 5 \x + \xo 6:5-8: \xt Col 3:22-25.\x*Slaves, submit to your human masters with respect and fear, being sincere in your hearts as if \add serving\add* the \nd messiah\nd*.
+\v 5 Slaves, submit to your human masters with respect and fear, being sincere in your hearts as if \add serving\add* the \nd messiah\nd*.\x + \xo 6:5-8: \xt Col 3:22-25.\x*
 \v 6 Don’t just please them when they’re watching, but \add work\add* as slaves of the \nd messiah\nd*, genuinely wanting to obey \nd God\nd*
 \v 7 by serving with good will. When you serve as if serving the \nd master\nd* and not people,
 \v 8 whether you’re a slave or free, it’s him who will reward you.
 \p
-\v 9 \x + \xo 6:9: a \xt Col 4:1; \xo b \xt Deu 10:17; Col 3:25.\x*\nd Masters\nd*, do the same towards your slaves. You know that both the slaves and you have the same master in the heavens, so don’t threaten them \add because\add* \add our master\add* has no favourites.
+\v 9 \nd Masters\nd*, do the same towards your slaves. You know that both the slaves and you have the same master in the heavens, so don’t threaten them \add because\add* \add our master\add* has no favourites.\x + \xo 6:9: a \xt Col 4:1; \xo b \xt Deu 10:17; Col 3:25.\x*
 \s1 Wear God’s armour
 \p
 \v 10 Concluding then, be enabled by \nd Yahweh\nd* and from the power which comes from his strength.
@@ -228,10 +228,10 @@
 \v 12 Our struggle isn’t against people, but against rulers, authorities, the powers of this world’s darkness, and the spiritual forces of wickedness in heavenly places.
 \v 13 Because of that, make use of every piece of God’s armour so that you’ll be able to resist those powers in the evil day and having done everything, to remain standing.
 \p
-\v 14 \x + \xo 6:14: a \xt Isa 11:5; \xo b \xt Isa 59:17.\x*So then, stand with the belt of truth around your waist, wearing the breastplate of righteousness,
-\v 15 \x + \xo 6:15: \xt Isa 52:7.\x*and ready your feet with the good message of peace.
+\v 14 So then, stand with the belt of truth around your waist, wearing the breastplate of righteousness,\x + \xo 6:14: a \xt Isa 11:5; \xo b \xt Isa 59:17.\x*
+\v 15 and ready your feet with the good message of peace.\x + \xo 6:15: \xt Isa 52:7.\x*
 \v 16 Whatever arises, hold up the shield of faith which you all will be able to use to extinguish all the fiery arrows of the evil one.
-\v 17 \x + \xo 6:17: \xt Isa 59:17.\x*Take the helmet of salvation and the sword of God’s \nd spirit\nd* which is the message from God.
+\v 17 Take the helmet of salvation and the sword of God’s \nd spirit\nd* which is the message from God.\x + \xo 6:17: \xt Isa 59:17.\x*
 \s1 Praying for fellow believers
 \p
 \v 18 Make your requests as you pray in the \nd spirit\nd* at every occasion and similarly staying alert and persevering as you make requests on behalf of all the dedicated \add believers\add*
@@ -239,7 +239,7 @@
 \v 20 that’s led me as a missionary to now be in prison. Ask that I would speak boldly as I should.
 \s1 Update
 \p
-\v 21 \x + \xo 6:21: \xt Acts 20:4; 2Tim 4:12.\x*Now Tychicus, a dear brother and faithful servant of \nd Yahweh\nd*, will let you know about me and how I’m doing.
+\v 21 Now Tychicus, a dear brother and faithful servant of \nd Yahweh\nd*, will let you know about me and how I’m doing.\x + \xo 6:21: \xt Acts 20:4; 2Tim 4:12.\x*
 \v 22 I’ve sent him to you for that reason—so that you all will know about us \add here\add* and that he would comfort your hearts.
 \s1 Blessings
 \p
