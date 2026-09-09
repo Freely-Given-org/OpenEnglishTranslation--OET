@@ -39,6 +39,7 @@ CHANGELOG:
     2026-05-31 Handle (remove) Psalm/Song thematic colouring markers
     2026-06-11 Handle new % (changed person) \\add format
     2026-08-24 Handle \\+add format
+    2026-08-30 Remove superfluous print output
 """
 from pathlib import Path
 import re
@@ -49,10 +50,10 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint, BOOKLIST_OT3
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-08-24' # by RJH
+LAST_MODIFIED_DATE = '2026-08-30' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_ESFM_to_USFM"
 PROGRAM_NAME = "Convert OET LV & RV ESFM files to USFM"
-PROGRAM_VERSION = '0.67'
+PROGRAM_VERSION = '0.68'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -110,7 +111,7 @@ def main():
                     return f'\\c {matchObj.group(1)}\n\\nb\n\\v '
                 adjText, cCount = ESFMNakedChapterRegex.subn( cReplace, adjText )
                 # print( f"After {cCount} replacements to {BBB}, now have {adjText=}"); assert False, "We want to stop here"
-                print( f"  Added {cCount} \\nb to {BBB} chapters")
+                if cCount > 0: print( f"  Added {cCount} \\nb to {VV} {BBB} chapters")
             assert '\\add ¿' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ¿"
             if VV == 'LV': # only expect + > = <
                 assert '\\add ?' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ?"
@@ -177,7 +178,7 @@ def main():
             if wordDeleteCount or esbCount or adjText!=vvESFMText:
                 if esbCount:
                     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      Added {esbCount:,} sidebar markers to {BBB} (for OET-RV section headings)." )
-                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Deleted {wordDeleteCount:,} word numbers from {BBB}." )
+                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Deleted {wordDeleteCount:,} ESFM word numbers from {BBB}." )
                 vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    Writing {vvUSFMFilepath}…" )
                 with open( vvUSFMFilepath, 'wt', encoding='UTF-8' ) as usfmFile:
                     usfmFile.write( adjText ) # We keep the original (for later comparison)
@@ -187,7 +188,7 @@ def main():
                 totalChangedFiles += 1
         if totalESBs:
             vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f" Added {totalESBs:,} total sidebar markers." )
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f" Deleted {totalWordDeletes:,} word numbers from {numChangedFiles:,} OET-{VV} files." )
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f" Deleted {totalWordDeletes:,} ESFM word numbers from {numChangedFiles:,} OET-{VV} USFM files." )
     if totalChangedFiles:
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Wrote a total of {totalChangedFiles:,} cleaned OET USFM files to {cleaned_USFM_FolderPath}/." )
 # end of convert_OET-LV-RV_ESFM_to_USFM.main

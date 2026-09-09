@@ -1,4 +1,4 @@
-\id PSA - Open English Translation—Readers’ Version (OET-RV) v0.3.5
+\id PSA - Open English Translation—Readers’ Version (OET-RV) v0.3.7
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 PSA
@@ -9,19 +9,19 @@
 \toc3 Songs
 \mt1 Songs
 \is1 Introduction
-\ip This collection of \bk Songs\bk* includes songs, poems, chants, and prayers that the Hebrews used in their meditation and worship, and then those eventually got added to this collection. We have chosen not to use the name ‘Psalms’ which comes from the Greek word ‘ψαλμός’ which means ‘a song sung to the harp’, because most English readers don’t even know that meaning. The title ‘Songs’ isn’t perhaps ideal, but does at least suggest that they were sung, read, or chanted with music.
+\ip This collection of \bk Songs\bk* includes songs, poems, chants, and prayers, that the Hebrews used in their meditation and worship, and then those eventually got added to this collection. We have chosen not to use the name ‘Psalms’ which comes from the Greek word ‘ψαλμός’ which means ‘a song sung to the harp’, because most English readers don’t even know that meaning. The title ‘Songs’ isn’t perhaps ideal, but does at least suggest that they were sung, read, or chanted with music.
 \ip There are many classes of the songs for believers in God: there are songs of praising and worshipping God, there are prayers requesting help or rescue from situations, requesting forgiveness, songs thanking or blessing God, and requests to curse their enemies. These prayers are sometimes personal and sometimes on behalf of the entire nation.
-\ip Seven of these songs/poems are acrostic poems, i.e., the first verse starts with the first Hebrew letter (alef) and the second with the second Hebrew letter (beyt), etc. We have chosen to display those Hebrew letters to help the English reader understand that there is that acrostic background to the poem. The seven songs are Song 25, Song 34, Song 37, Song 111, Song 112, the longest Song 119, and Song 145.
+\ip Seven of these songs/poems are acrostic poems, i.e., the first verse starts with the first Hebrew letter (alef) and the second with the second Hebrew letter (beyt), etc. We have chosen to display those Hebrew letters to help the English reader understand that there is that acrostic background to the poem. The seven songs are \jmp Song 25|link-href="../byC/PSA_C25.htm#Top"\jmp*, \jmp Song 34|link-href="../byC/PSA_C34.htm#Top"\jmp*, \jmp Song 37|link-href="../byC/PSA_C37.htm#Top"\jmp*, \jmp Song 111|link-href="../byC/PSA_C111.htm#Top"\jmp*, \jmp Song 112|link-href="../byC/PSA_C112.htm#Top"\jmp*, the longest \jmp Song 119|link-href="../byC/PSA_C119.htm#Top"\jmp*, and \jmp Song 145|link-href="../byC/PSA_C145.htm#Top"\jmp*.
 \ip Yeshua (Jesus) and other contributors to \bk The Messianic Update\bk* (The New Testament) used these songs and valued this collection for use in church worship since the beginning.
 \ip The one hundred and fifty songs are divided into five sub-collections.
 \iot Main components of this collection
-\io1 Songs 1–41
-\io1 Songs 42–72
-\io1 Songs 73–89
-\io1 Songs 90–106
-\io1 Songs 107–150
+\io1 First collection: Songs \ior 1–41\ior*
+\io1 Second collection: Songs \ior 42–72\ior*
+\io1 Third collection: Songs \ior 73–89\ior*
+\io1 Fourth collection: Songs \ior 90–106\ior*
+\io1 Fifth collection: Songs \ior 107–150\ior*
 \im There are a hundred and fifty songs, poems, and prayers in this collection that were used by the Hebrews in their worship. Many seem to have been written in the time of King David and others around the time of the end of David’s kingdom. These songs and prayers are still important today for use by Jewish believers in their worship. These songs reveal the inner emotions of the author like anger and sorrow, happiness and trusting, and hope.
-\rem This is still a very early look into the unfinished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
+\rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \cl Song
 \c 1
@@ -502,7 +502,7 @@
 \q1 but he hates those who love \add to inflict\add* violence.
 \b
 \q1
-\v 6 He rains burning coals and sulfur upon the wicked.
+\v 6 He rains burning coals and sulfur onto the wicked.
 \q1 \add He’ll send scorching hot winds to punish them\add*
 \q1
 \v 7 because Yahweh \add loves what is right, and that’s what he does\add*.
@@ -1498,7 +1498,7 @@
 \v 8 You \add didn’t allow any enemy to get the upper hand over me\add*.
 \q1 You’ve set my feet in a wide open place.
 \q1
-\v 9 Have mercy upon me, Yahweh, because I’m distressed.
+\v 9 Have mercy on me, Yahweh, because I’m distressed.
 \q1 My eyes grow weary with \add the\add* grief \add I feel in\add* my body and soul.
 \q1
 \v 10 \add Yes\add* my life is weary with sorrow
@@ -2523,7 +2523,7 @@
 \q1 and \add puts\add* nations under our \add control\add*.
 \q1
 \v 4 He chooses our inheritance for us—
-\q1 →the \add land which \add* Yakov (who he loved) was proud of. \qs (Instrumental break.)\qs*
+\q1 →the \add land which\add* Yakov (who he loved) was proud of. \qs (Instrumental break.)\qs*
 \q1
 \v 5 God has gone up with a shout,
 \q1 Yahweh \add ascended\add* with a trumpet blast.
@@ -3203,7 +3203,7 @@
 \q1 You’ve given me the inheritance \add that’s given to\add* those who honour you.
 \q1
 \v 6 You’ll \add prolong\add* the king’s life—
-\q1 his years will be like generation upon generation.
+\q1 his years will be like generation after generation.
 \q1
 \v 7 May he sit \add enthroned\add* \add in God’s presence\add* forever.
 \q1 May loyal commitment and faithfulness preserve him.
@@ -6310,7 +6310,7 @@
 \s1 My god help me
 \d A song by David for the choir director.
 \q1
-\v 1 \add You’re the \add* God that I praise—
+\v 1 \add You’re the\add*God that I praise—
 \q1 don’t be silent
 \q1
 \v 2 because the wicked and deceitful attack me.
@@ -6358,7 +6358,7 @@
 \v 16 May Yahweh do this because this man never bothered to show any loyal commitment,
 \q1 ^but instead harassed the oppressed, the needy, and the disheartened to death.
 \q1
-\v 17 He loved cursing—may it come back upon him.
+\v 17 He loved cursing—may it come back onto him.
 \q1 He had no desire to bless \add others\add*—may no blessing come to him.
 \q1
 \v 18 He wrapped himself with cursing like a cloak,
@@ -7117,10 +7117,10 @@
 \v 91 \add The heavens and the earth\add* \add implement\add* your regulations
 \q1 because all \add things\add* are your servants.
 \q1
-\v 92 If your instructions hadn’t been my delight
+\v 92 If your instructions hadn’t been my delight,
 \q1 then I would have \add died as a result of my suffering\add*.
 \q1
-\v 93 I’ll never forget your principles,
+\v 93 I’ll never forget your principles
 \q1 because through them, you’ve preserved \add my life\add*.
 \q1
 \v 94 I’m yours—save me because I \add strive to follow\add* your principles.

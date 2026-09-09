@@ -1,4 +1,4 @@
-\id 1TH - Open English Translation—Readers’ Version (OET-RV) v0.1.50
+\id 1TH - Open English Translation—Readers’ Version (OET-RV) v0.1.51
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 TH1
@@ -20,11 +20,11 @@
 \io1 Teaching concerning the messiah’s return \ior 4:13–5:11\ior*
 \io1 The final warning \ior 5:12-22\ior*
 \io1 Conclusion \ior 5:23-28\ior*
-\rem This is still a very early look into the unfinished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
+\rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
 \p
-\v 1 \x + \xo 1:1: \xt Acts 17:1.\x*\add This letter is from\add* Paul, Silas, and Timothy.
+\v 1 \add This letter is from\add* Paul, Silas, and Timothy.\x + \xo 1:1: \xt Acts 17:1.\x*
 \p \add It’s written\add* to the assembly of \add believers\add* in God the father and the \nd master Yeshua Messiah\nd* \add there\add* in Thessalonica.
 \p \add May God\add* give \add his\add* grace and peace to all of you.
 \s1 Paul praises the believers
@@ -33,7 +33,7 @@
 \v 3 remembering before our \nd God\nd* and father about your striving for the faith and the labour of love and the endurance of the hope in our \nd master Yeshua Messiah\nd*.
 \v 4 Brothers and sisters, we know that you’re all loved by \nd God\nd*—the one who chose you.
 \v 5 The good message \add that we brought\add* wasn’t just any old message, but also comes in the holy \nd spirit\nd* with power and with full assurance \add of its truth\add*. You know how we lived among you because of \add our concern\add* for you all,
-\v 6 \x + \xo 1:6: \xt Acts 17:5-9.\x*and then you all imitated both us and the \nd master\nd* after receiving the message in tribulation with a lot of excitement about the holy \nd spirit\nd*—
+\v 6 and then you all imitated both us and the \nd master\nd* after receiving the message in tribulation with a lot of excitement about the holy \nd spirit\nd*—\x + \xo 1:6: \xt Acts 17:5-9.\x*
 \v 7 so much so that you all became examples to all the believers in Macedonia and Achaia.
 \v 8 So now the message of the \nd master\nd* has been heard not only in Macedonia and Achaia, but in every place where your faith towards \nd God\nd* has been seen—so that now we don’t even need to say anything.
 \v 9 They’ve been reporting back to us about kindly we were accepted by you all and how you all turned from idols to God, to serve the living and true God
@@ -42,12 +42,12 @@
 \s1 Paul recalls his visit to Thessalonica
 \p
 \v 1 Brothers and sisters, you yourselves know that our going to \add Thessalonica\add* wasn’t wasted,
-\v 2 \x + \xo 2:2: a \xt Acts 16:19-24; \xo b \xt Acts 17:1-9.\x*but after previously suffering and being mistreated in Philippi, we spoke boldly \add at your place with God’s help\add*, to tell you all the good message from God despite a lot of opposition \add there\add*.
+\v 2 but after previously suffering and being mistreated in Philippi, we spoke boldly \add at your place with God’s help\add*, to tell you all the good message from God despite a lot of opposition \add there\add*.\x + \xo 2:2: a \xt Acts 16:19-24; \xo b \xt Acts 17:1-9.\x*
 \v 3 As we recommend \add a change in your lifestyles\add*, we don’t do it with deception or impurity or deceit,
 \v 4 but since God has approved us and entrusted the good message to us, that’s what we talk about. We don’t aim to bring pleasure to people, but rather to bring them to God—the one who approves our \add inner motives\add*.
 \v 5 As you all know, we never once came with a message of flattery, nor did we come under any pretenses (\nd God\nd* is \add our\add* witness) trying to get anything from you,
 \v 6 nor did we try to earn respect from people—neither from you all nor from anyone else
-\v 7 even though we could request support as ambassadors of \nd Messiah\nd*. But we became \add unsophisticated \add* among you, \add just\add* like children, or like a breast-feeding mother who cherishes her own children.
+\v 7 even though we could request support as ambassadors of \nd Messiah\nd*. But we became \add unsophisticated\add* among you, \add just\add* like children, or like a breast-feeding mother who cherishes her own children.
 \v 8 So in longing for you all like that, we were happy to share with you all—not only the good message from \nd God\nd*, but also \add exposing\add* our own lives because you all became dear to us.
 \v 9 Brothers and sisters, you’re remembering our work and the hardship \add that we endured\add*, working day and night so that we wouldn’t burden any of you as we proclaimed good message from \nd God\nd*.
 \p
@@ -56,8 +56,8 @@
 \v 12 how to encourage and to console \add them\add*. We testified to you so that you all would \add live lives\add* worthy of \nd God\nd*—the one who invited you into his kingdom and to \add share\add* his honour.
 \p
 \v 13 We also never stop thanking God that when you accepted God’s message that you heard from us, it wasn’t a message from humans, but truly was a message from God who is working in all of you who believed.
-\v 14 \x + \xo 2:14: \xt Acts 17:5.\x*Brothers and sisters, you became imitators of the \add other\add* assemblies of \nd God\nd* in Yudea which are \add founded on\add* \nd Messiah Yeshua\nd*. You all suffered the same things from your own countrymen that the \add strict\add* Jews did to them.
-\v 15 \x + \xo 2:15: \xt Acts 9:23,29; 13:45,50; 14:2,5,19; 17:5,13; 18:12.\x*They executed their own prophets as well as the \nd master Yeshua\nd*. They drove us out, displeasing \nd God\nd* and contrary to all people—
+\v 14 Brothers and sisters, you became imitators of the \add other\add* assemblies of \nd God\nd* in Yudea which are \add founded on\add* \nd Messiah Yeshua\nd*. You all suffered the same things from your own countrymen that the \add strict\add* Jews did to them.\x + \xo 2:14: \xt Acts 17:5.\x*
+\v 15 They executed their own prophets as well as the \nd master Yeshua\nd*. They drove us out, displeasing \nd God\nd* and contrary to all people—\x + \xo 2:15: \xt Acts 9:23,29; 13:45,50; 14:2,5,19; 17:5,13; 18:12.\x*
 \v 16 forbidding us from telling non-Jews that they \add need\add* to be saved so that they stay in their sins, but \add God’s\add* severe anger will finish them off.
 \s1 Paul’s desire to visit Thessalonica again
 \p
@@ -67,13 +67,13 @@
 \v 20 because you all make us \add both\add* happy and proud.
 \c 3
 \p
-\v 1 \x + \xo 3:1: \xt Acts 17:15.\x*When we could endure it no longer, we were happy to be left alone in Athens.
+\v 1 When we could endure it no longer, we were happy to be left alone in Athens.\x + \xo 3:1: \xt Acts 17:15.\x*
 \v 2 We sent Timothy, who’s our brother and God’s servant in the \nd messiah’s\nd* good message, so that he could strengthen you all and encourage you in your faith
 \v 3 so that no one will be upset by these difficulties because you all know that \add God\add* has appointed us for those.
 \v 4 Also, when we were with you all previously, we told you that we were going to be oppressed, and then it happened as you know.
 \v 5 So again when I could no longer endure it, I sent \add Timothy\add* to find out about your faith, just in case you’d been tempted by the tempter and then our work \add there\add* would have been wasted.
 \p
-\v 6 \x + \xo 3:6: \xt Acts 18:5.\x*But now Timothy’s returned here to us, telling us the good news about your faith and love, and how you’re always mentioning good \add things about\add* us and wanting to see us, just like we’d like to see all of you.
+\v 6 But now Timothy’s returned here to us, telling us the good news about your faith and love, and how you’re always mentioning good \add things about\add* us and wanting to see us, just like we’d like to see all of you.\x + \xo 3:6: \xt Acts 18:5.\x*
 \v 7 So \add even\add* in our distress and sufferings, we’re comforted by your faith, brothers and sisters
 \v 8 because now we can live \add happily\add* since you’re all standing firm in \nd Yahweh\nd*.
 \v 9 We’re not able to repay God for the thankfulness that we have about you, because we are certainly thrilled in God’s presence because of you all.
@@ -103,20 +103,20 @@
 \p
 \v 13 But we don’t want you to be ignorant, brothers and sisters, about those who’ve died so that you won’t mourn like others who don’t have any hope,
 \v 14 because if we believe that Yeshua died and came back to life, then we can also believe that \add when he returns,\add* Yeshua will be bringing with him those who have died.
-\v 15 \x + \xo 4:15-17: \xt 1Cor 15:51-52.\x*So this is what we’re saying in Yahweh’s message: those who are still living when the master \add returns\add*, we certainly won’t precede those who’ve already died
+\v 15 So this is what we’re saying in Yahweh’s message: those who are still living when the master \add returns\add*, we certainly won’t precede those who’ve already died\x + \xo 4:15-17: \xt 1Cor 15:51-52.\x*
 \v 16 because there’ll be an announcement from the archangel and God’s trumpet \add will sound\add* and then the \nd master\nd* will come down from heaven with a loud shout. The dead \add believers\add* in \nd Messiah\nd* will come to life again first,
 \v 17 then we who are still alive will be pulled up into the clouds together with them to meet the master in the air, and from then will always remain with \nd Yahweh\nd*.
 \v 18 So \add when someone dies,\add* comfort each other with those truths.
 \c 5
 \p
 \v 1 Concerning the times and seasons, brothers and sisters, you don’t need anything to be written
-\v 2 \x + \xo 5:2: \xt Mat 24:43; Luk 12:39; 2Pe 3:10.\x*because you already know that \nd Yahweh’s\nd* day will come like a thief comes at night.
+\v 2 because you already know that \nd Yahweh’s\nd* day will come like a thief comes at night.\x + \xo 5:2: \xt Mat 24:43; Luk 12:39; 2Pe 3:10.\x*
 \v 3 Just when they’re saying there’s peace and security, then they’ll suddenly recognise the \add imminent\add* destruction, like a pregnant woman having birth pains. They certainly won’t be able to escape,
 \v 4 but you, brothers and sisters, aren’t in darkness and likely to get surprised by a thief in the night
 \v 5 because you’re all children of the light and of the day. \add No,\add* we’re not \add part\add* of the night or of the darkness
 \v 6 so as a result, we won’t be sleeping like the others, but we’ll be alert and sober.
 \v 7 Those who sleep do it at night, and those who get drunk do it at night,
-\v 8 \x + \xo 5:8: \xt Isa 59:17; Eph 6:13-17.\x*but we \add belong\add* to the day. We’ll be dressed in the armour of faith and love, and the helmet which is the hope of \add our\add* salvation.
+\v 8 but we \add belong\add* to the day. We’ll be dressed in the armour of faith and love, and the helmet which is the hope of \add our\add* salvation.\x + \xo 5:8: \xt Isa 59:17; Eph 6:13-17.\x*
 \v 9 \nd God\nd* hasn’t assigned us to \add his\add* severe anger, but rather for obtaining salvation through our \nd master Yeshua Messiah\nd*—
 \v 10 the one who was executed on our behalf so that whether we might be \add alert and\add* watching, or whether we’re \add dead and\add* ‘sleeping’, \add either way\add* we’ll \add all\add* live together with him.
 \v 11 So comfort and encourage each other as you’ve all been doing already.

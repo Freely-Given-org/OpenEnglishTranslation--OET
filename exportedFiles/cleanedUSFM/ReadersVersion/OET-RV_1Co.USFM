@@ -1,4 +1,4 @@
-\id 1CO - Open English Translation—Readers’ Version (OET-RV) v0.1.57
+\id 1CO - Open English Translation—Readers’ Version (OET-RV) v0.1.59
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 CO1
@@ -29,13 +29,13 @@
 \io1 The coming to life of the messiah and of believers \ior 15:1-58\ior*
 \io1 The collection of aid for Christians in Yudea \ior 16:1-4\ior*
 \io1 Paul’s future plans and conclusion \ior 16:5-24\ior*
-\rem This is still a very early look into the unfinished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
+\rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
 \p
 \v 1 \add This letter is from\add* Paul, a missionary of \nd Messiah Yeshua\nd* by God’s will, and from our brother, Sosthenes.
 \p
-\v 2 \x + \xo 1:2: \xt Acts 18:1.\x*\add It’s written\add* to God’s assembly there in Corinth—to those believers in Messiah Yeshua who’ve been declared guiltless \add and\add* who’ve been called to live holy lives, along with all those who appeal to the power of our and their \nd master Yeshua Messiah\nd*, everywhere.
+\v 2 \add It’s written\add* to God’s assembly there in Corinth—to those believers in Messiah Yeshua who’ve been declared guiltless \add and\add* who’ve been called to live holy lives, along with all those who appeal to the power of our and their \nd master Yeshua Messiah\nd*, everywhere.\x + \xo 1:2: \xt Acts 18:1.\x*
 \p
 \v 3 Grace and peace to you all from \nd God\nd* our father and from the \nd master Yeshua Messiah\nd*.
 \s1 Paul thanks God for what he’s done
@@ -68,7 +68,7 @@
 \p
 \v 21 Because since the world, in God’s wisdom, didn’t know \add about\add* God through \add their\add* wisdom, God was pleased to save those who believe through the ‘foolish’ message that was preached.
 \v 22 Jews ask for miraculous signs and Greeks search for wisdom,
-\v 23 but we preach \add about how \add* \nd Messiah\nd* was executed—something the Jews can’t logic out, and which the Greeks see as \add total\add* foolishness.
+\v 23 but we preach \add about how\add*\nd Messiah\nd* was executed—something the Jews can’t logic out, and which the Greeks see as \add total\add* foolishness.
 \v 24 Yet to those who \add God\add* calls, whether Jews or Greeks, \nd Messiah\nd* is \add both\add* God’s power and his wisdom,
 \v 25 because God’s foolishness is better than humankind’s wisdom, and God’s weakness is greater than humankind’s strength.
 \p
@@ -303,7 +303,7 @@
 \p
 \v 8 Am I \add just\add* saying this from a human perspective? Doesn’t \add Mosheh’s\add* law also teach that?
 \v 9 He wrote in those laws: ‘Don’t prevent the ox from eating when it’s \add working to\add* thresh the grain.’\x + \xo 9:9: \xt Deu 25:4; 1Tim 5:18.\x*
-\v 10 Isn’t he saying that on \em our\em* behalf? \add Yes,\add* it was written for our sake \add saying\add* that anyone who’s ploughing \add a field \add* should expect \add to be paid\add*, and anyone who threshes \add the grain\add* should expect a share of the harvest.
+\v 10 Isn’t he saying that on \em our\em* behalf? \add Yes,\add* it was written for our sake \add saying\add* that anyone who’s ploughing \add a field\add* should expect \add to be paid\add*, and anyone who threshes \add the grain\add* should expect a share of the harvest.
 \v 11 If we sowed spiritual things among you, is it too much to expect a material ‘harvest’ from you?\x + \xo 9:11: \xt Rom 15:27.\x*
 \v 12 If other people have the right to this \add kind of\add* support, don’t we have a greater right?
 \p But we never took advantage of that right—instead we endured everything so that we wouldn’t do anything to hinder the \nd messiah’s\nd* good message \add from spreading\add*.
@@ -350,7 +350,7 @@
 \v 16 When we bless the ‘cup of blessing’, aren’t we sharing the messiah’s blood? When we break the bread, aren’t we sharing the messiah’s body?\x + \xo 10:16: \xt Mat 26:26-28; Mrk 14:22-24; Luk 22:19-20.\x*
 \v 17 Because there’s \add just\add* one loaf that we all eat pieces of, thus we who are many, are one body \add together\add*.
 \p
-\v 18 Consider \add the people of\add* Yisrael \add (Israel)\add* from a physical perspective: Aren’t those who eat \add portions\add* of the sacrifices, joining to the altar? RECHECK \x + \xo 10:18: \xt Lev 7:6.\x*
+\v 18 Consider \add the people of\add* Yisrael \add (Israel)\add* from a physical perspective: Aren’t those who eat \add portions\add* of the sacrifices, joining to the altar? RECHECK\x + \xo 10:18: \xt Lev 7:6.\x*
 \v 19 So what am I saying? That whether or not food is sacrificed to idols means anything? Or that an idol is anything?
 \v 20 \add No,\add* but the sacrifices of the pagans are offered to demons, not to \nd God\nd*, and I don’t want you all to be partners with demons.\x + \xo 10:20: \xt Deu 32:17 (LXX).\x*
 \v 21 You can’t drink \nd Yahweh’s\nd* cup as well as the cup of demons, nor can you partake at \nd Yahweh’s\nd* table as well as the table of demons.
@@ -498,7 +498,7 @@
 \v 13 So then, let anyone who’s speaking in another language, pray that they will be able to translate \add it\add*.
 \v 14 When I pray in another language, my spirit prays but my mind is unproductive,
 \v 15 so what should I do? \add Well,\add* I’ll pray with my spirit, but I’ll also pray with my mind. I’ll sing with my spirit, but I’ll also sing with my mind.
-\v 16 Otherwise, if you \add speak out\add*a blessing in the spirit, how can the ordinary \add listeners\add* say ‘May it be so’ after you give thanks, since they wouldn’t know what you’ve been saying.
+\v 16 Otherwise, if you \add speak out\add* a blessing in the spirit, how can the ordinary \add listeners\add* say ‘May it be so’ after you give thanks, since they wouldn’t know what you’ve been saying.
 \v 17 \add Yes,\add* you’d certainly give thanks well, but the other \add people\add* wouldn’t be encouraged.
 \p
 \v 18 I thank \nd God\nd* that I speak in other language more than all of you,
@@ -607,7 +607,7 @@
 \v 53 \add Yes,\add* it’s essential for this perishable \add body\add* to become incorruptible and for this mortal to become immortal.
 \v 54 But when this perishable \add body\add* becomes incorruptible and this mortal becomes immortal, then what was written will come true:\x + \xo 15:54: \xt Isa 25:8.\x* ‘Death is replaced by victory.’
 \q1
-\v 55 \x + \xo 15:55: \xt Hos 13:14 (LXX).\x*‘Death, where is your victory?
+\v 55 ‘Death, where is your victory?\x + \xo 15:55: \xt Hos 13:14 (LXX).\x*
 \q1 \add Yes\add* death, where is your sting?’
 \m
 \v 56 Sin is the sting of death, and sin’s power is The Law,
@@ -645,7 +645,7 @@
 \v 17 I’m pleased that Stefanas, Fortunatus, and Achaicus came because they’ve given what you all couldn’t,
 \v 18 because they refreshed my spirit and yours also, so you should show appreciation to such people.
 \p
-\v 19 \x + \xo 16:19: \xt Acts 18:2.\x*The assemblies in \add the province of\add* Asia \add Minor\add* send their greetings.
+\v 19 The assemblies in \add the province of\add* Asia \add Minor\add* send their greetings.\x + \xo 16:19: \xt Acts 18:2.\x*
 \v 20 All the brothers and sisters here send their greetings.
 \p Greet each other with an innocent kiss.
 \p
