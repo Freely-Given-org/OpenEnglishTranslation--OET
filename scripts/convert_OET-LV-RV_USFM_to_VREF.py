@@ -1,7 +1,7 @@
 #!/usr/bin/env -S uv run
 # -\*- coding: utf-8 -\*-
 # SPDX-FileCopyrightText: © 2024 Robert Hunt <Freely.Given.org+OET@gmail.com>
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: MPL-2.0
 #
 # convert_OET-LV-RV_USFM_to_VREF.py
 #
