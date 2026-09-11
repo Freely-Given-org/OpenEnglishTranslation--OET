@@ -1,4 +1,4 @@
-\id JOB - Open English Translation—Readers' Version (OET-RV) v0.1.26
+\id JOB - Open English Translation—Readers' Version (OET-RV) v0.1.29
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 JOB
@@ -108,6 +108,7 @@
 \v 1 After¦232923 that, Iyyov¦232927 spoke up and¦232931 cursed¦232931 \add the\add* day¦232934 \add of\add* his \add conception\add*.\x + \xo 3:1-19: \xt Jer 20:14-18.\x*
 \p
 \v 2 He¦232938 said¦232939:
+\sp Iyyov
 \q1
 \v 3 May the day¦232942 on which I was born perish¦232941,
 \q1 and¦232946 the night¦232946 that¦232944 said¦232947, ‘A boy has been conceived¦232948.’
@@ -193,6 +194,7 @@
 \sr (4:1–14:22)
 \p
 \v 1 Then Elifaz¦233183 (from Teman¦233184) \add ≈replied¦233182\add*:
+\sp Elifaz
 \q1
 \v 2 If \add someone\add* tries \add to talk\add* with¦233192 you, will it wear you out?
 \q1 \add But\add* who can resist \add answering\add*?
@@ -349,6 +351,7 @@
 \rem /s1 Job; Job Replies: My Complaint Is Just; Job's Second Speech: A Response to Eliphaz
 \p
 \v 1 Then Iyyov¦233634 \add (Job) responded\add*:
+\sp Iyyov
 \q1
 \v 2 If only my anguish could be truly weighed¦233638,
 \q1 and¦233641 my calamity¦233641 could be \add put\add* together¦233646 \add with it on the scales\add*.
@@ -519,6 +522,7 @@
 \rem /s1 Bildad; Bildad Speaks: Job Should Repent; Bildad's First Response to Job
 \p
 \v 1 Then Bildad¦234160 (from Shuah) answered¦234159:
+\sp Bildad
 \q1
 \v 2 \add For how much longer\add* will you¦234168 keep saying that stuff?
 \q1 The words¦234173 \add coming out\add* of your¦234175 mouth¦234175 are like a strong wind.
@@ -593,6 +597,7 @@
 \rem /s1 Job; Job's Third Speech: A Response to Bildad; Job Replies: There Is No Mediator
 \p
 \v 1 Then Iyyov¦234387 answered¦234386 saying:
+\sp Iyyov
 \q1
 \v 2 \add Yes,\add* I certainly know¦234391 that.\x + \xo 9:2: \xt Yob 4:17.\x*
 \q1 \add But\add* how can a \add person be declared innocent\add* before God¦234401?
@@ -771,6 +776,7 @@
 \rem /s1 Zophar Speaks: Job's Guilt Deserves Punishment; Zophar; Zophar's First Response to Job
 \p
 \v 1 Then Zofar¦234956 (from Naamah¦234957) answered¦234955:
+\sp Zofar
 \q1
 \v 2 Shouldn't these many words¦234961 be answered¦234963?
 \q1 Or is a man¦234966 to be acquitted¦234968 \add just by what comes from his\add* lips¦234967.
@@ -837,6 +843,7 @@
 \rem /s1 Job; Job's Fourth Speech: A Response to Zophar; Job Replies: I Am a Laughingstock
 \p
 \v 1 Then Iyyov¦235149 responded¦235150 \add to Zofar\add*:
+\sp Iyyov
 \q1
 \v 2 \add Ah,\add* you're certainly ‘the people¦235156’
 \q1 and¦235157 wisdom¦235159 will die¦235158 with you.
@@ -916,6 +923,7 @@
 \c 13
 \s1 Iyyov argues that he hasn't sinned
 \rem /s1 Job Wants to Argue His Case with God
+\sp Iyyov
 \p
 \v 1 Look here, my eyes have seen¦235386 all \add that\add*,
 \q1 ≈my ears have heard¦235388 it and understood¦235390.
@@ -1083,6 +1091,7 @@
 \sr (15:1–21:34)
 \p
 \v 1 Then Elifaz¦235884 (from Teman¦235885) replied:
+\sp Elifaz
 \q1
 \v 2 Do wise people \add just\add* answer¦235889 with knowledge¦235890 \add full\add* of wind?
 \q1 ≈Do they just fill \add themselves\add* with the east wind?
@@ -1194,6 +1203,7 @@
 \rem /s1 Job; Job's Fifth Speech: A Response to Eliphaz; Job Reaffirms His Innocence
 \p
 \v 1 Then Iyyov¦236236 answered¦236235 \add Elifaz\add*:
+\sp Iyyov
 \q1
 \v 2 I've¦236239 heard¦236239 many things like that \add before\add*.
 \q1 You come to comfort¦236242, but bring trouble¦236243 \add instead\add*.
@@ -1323,6 +1333,7 @@
 \rem /s1 Bildad; Bildad's Second Response to Job; Bildad Speaks: God Punishes the Wicked
 \p
 \v 1 Then Bildad¦236602 (from Shuah) responded¦236604 \add again\add*:
+\sp Bildad
 \q1
 \v 2 \add How long until\add* you¦236610 \add stop all those\add* words¦236612?
 \q1 \add Think first,\add* and¦236614 then afterwards¦236614 we¦236615 can speak¦236615.
@@ -1390,6 +1401,7 @@
 \rem /s1 Job's Sixth Speech: A Response to Bildad; Job; Job Replies: I Know That My Redeemer Lives
 \p
 \v 1 Iyyov¦236788 \add ≈responded¦236789 to Bildad and companions again\add*:
+\sp Iyyov
 \q1
 \v 2 \add How much longer\add* will I be tormented¦236794
 \q1 and¦236796 crushed¦236796 with¦236797 words¦236797?
@@ -1486,6 +1498,7 @@
 \rem /s1 Zophar Speaks: Wickedness Receives Just Retribution; Zophar; Zophar's Second Response to Job
 \p
 \v 1 Then Zofar (from Naamah¦237067) \add ≈responded¦237068 to Iyyov\add*:
+\sp Zofar
 \q1
 \v 2 My anxious thoughts¦237071 \add force\add* me to answer¦237072,
 \q1 because¦237073 of the turmoil that's within me.
@@ -1579,6 +1592,7 @@
 \rem /s1 Job; Job Replies: The Wicked Often Go Unpunished; Job's Seventh Speech: A Response to Zophar
 \p
 \v 1 Then Iyyov¦237328 \add ≈responded¦237329 to Zofar and the others\add*:
+\sp Iyyov
 \q1
 \v 2 Listen¦237331 carefully¦237332 to my words¦237333,
 \q1 and¦237334 let this be a consolation¦237337 for you all.
@@ -1691,6 +1705,7 @@
 \sr (22:1–27:23)
 \p
 \v 1 Then Elifaz¦237634 (from Teman¦237635) responded¦237636 \add to Iyyov\add*:
+\sp Elifaz
 \q1
 \v 2 Can a human be of use to God¦237638?\x + \xo 22:2-3: \xt Yob 35:6-8.\x*
 \q1 ≈Might a wise \add person\add* be of any use to him¦237645?
@@ -1784,6 +1799,7 @@
 \rem /s1 Job; Job Replies: My Complaint Is Bitter; Job's Eighth Speech: A Response to Eliphaz
 \p
 \v 1 Then Iyyov¦237915 responded¦237916 \add to Elifaz and the others\add*:
+\sp Iyyov
 \q1
 \v 2 Even today my complaint¦237922 is bitter.
 \q1 ≈I'm groaning¦237927 \add because my situation is so difficult\add*.
@@ -1926,6 +1942,7 @@
 \rem /s1 Bildad; Bildad Speaks: How Can a Mortal Be Righteous Before God?; Bildad's Third Response to Job
 \p
 \v 1 Then Bildad¦238332 (from Shuah) \add ≈responded¦238334 to Iyyov\add*:
+\sp Bildad
 \q1
 \v 2 Dominion¦238336 and¦238337 fear belong to God.
 \q1 He establishes peace¦238340 in¦238341 his high \add places\add*.
@@ -1946,6 +1963,7 @@
 \rem /s1 Job; Job Replies: God's Majesty Is Unsearchable; Job's Ninth Speech: A Response to Bildad
 \p
 \v 1 Then Iyyov¦238391 responded¦238392 \add to Bildad\add*:
+\sp Iyyov
 \q1
 \v 2 How have you helped¦238396 \add those\add* without power¦238399?
 \q1 ≈\add How have\add* you saved¦238400 \add those\add* \add ≈who are weak\add*?
@@ -2064,6 +2082,7 @@
 \mr (28:1-28)
 \s1 Praising wisdom
 \rem /s1 Job Speaks of Wisdom and Understanding; Interlude: Where Wisdom Is Found; God's unfathomable wisdom; In Praise of Wisdom
+\sp Iyyov
 \q1
 \v 1 Surely there's¦238751 a mine where silver¦238752 \add is extracted\add*,
 \q1 ≈and¦238754 a place¦238754 where gold¦238755 is refined¦238756.
@@ -2124,7 +2143,7 @@
 \q1
 \v 19 The \add good\add* topaz¦238927 from Ethiopia¦238929 can't be compared¦238926 with it.
 \q1 ≈It can't be paid for with gold¦238930.
-\s1 Wisdom is obeying God
+\s2 Wisdom is obeying God
 \q1
 \v 20 \add So\add* then, where does \bd wisdom¦238936\bd* come¦238938 from?
 \q1 ≈Where then, does understanding¦238942 \add ≈live\add*?
@@ -2147,8 +2166,8 @@
 \v 26 He told the rain how to behave,
 \q1 ≈and¦238994 made¦238990 the paths for the lightning¦238995 bolts when it thunders¦238996.
 \q1
-\v 27 Then he saw¦238999 \add @wisdom\add* and declared¦239000 it.
-\q1 ≈and He established¦239001 it then searched¦239004 it out.
+\v 27 Then he saw¦238999 \add @wisdom\add* and declared¦239000 it,
+\q1 ≈and he established¦239001 it then searched¦239004 it out.
 \q1
 \v 28 Then¦239006 he told humankind¦239008,\x + \xo 28:28: \xt Psa 111:10; Prv 1:7; 9:10.\x*
 \q1 ‘Listen¦239009, obeying the master¦239011—that's \bd wisdom¦239013\bd*,
@@ -2160,6 +2179,7 @@
 \rem /s1 Job's final survey of his case; Job Finishes His Defense; Job Speaks of His Former Blessings; Job's Final Statement of His Case
 \p
 \v 1 Then Iyyov continued¦239023 speaking:
+\sp Iyyov
 \q1
 \v 2 How I wish for \add my life\add* in the months¦239028 of the past,
 \q1 ≈in the days¦239031 when God¦239032 watched¦239033 over me.
@@ -2338,6 +2358,7 @@
 \c 31
 \s1 Iyyov's claims of obedience
 \rem /s1 Job's Final Protest of Innocence
+\sp Iyyov
 \p
 \v 1 I've made¦239516 an agreement¦239515 with my eyes¦239517,
 \q1 ≈\add about\add* how I'll be careful¦239519 when I look¦239519 at a young woman.
@@ -2421,7 +2442,7 @@
 \q1 and¦239769 the moon¦239769 advancing in its splendour¦239770,
 \q1
 \v 27 and my heart¦239775 was secretly¦239774 enticed¦239773,
-\q1 and my hand gave kisses¦239776 from my hand,
+\q1 and my hand¦239777 \add ≈threw kisses¦239776\add* from my mouth¦239778,
 \q1
 \v 28 this would also be an evil deserving judgement¦239785,\x + \xo 31:28a \xt Yob 31:11b.\x*
 \q1 because¦239786 I¦239788 would have denied¦239788 the god¦239789 above¦239790.
@@ -2480,7 +2501,8 @@
 \v 5 \add but\add* when \add *he\add* had seen that they \add ≈didn't¦239993 really have any answer¦239994\add*, he got angry.
 \s1 Elihu's first speech to Iyyov's three friends
 \p
-\v 6 \add So now\add* Elihi (son of Barakel¦240007 the Buzite) \add spoke up\add*:
+\v 6 \add So now\add* Elihu¦240004 (son of Barakel¦240007 the Buzite) \add spoke up\add*:
+\sp Elihu
 \q1 I'm \add only\add* young¦240010 and all of you are much older than me,
 \q1 so I was shy and reluctant to give you all my views.
 \q1
@@ -2510,7 +2532,7 @@
 \q1
 \v 14 \add But\add* \add @Iyyov\add* hasn't directed his words¦240099 against me,
 \q1 and¦240100 I¦240102 won't¦240095 answer¦240102 him¦240102 with¦240100 your¦240100 answers.
-\s1 Elihu's speeches to Iyyov
+\rem /s1 Elihu's speeches to Iyyov
 \q1
 \v 15 They're dismayed¦240104 and can't¦240105 answer¦240107 again¦240108.
 \q1 ≈\add Their\add* words¦240111 have \add ≈run away\add* from them.
@@ -2536,7 +2558,7 @@
 \v 22 I don't¦240176 know¦240177 how to \add ≈give¦240178 fancy titles¦240178\add*.
 \q1 My maker¦240181 would soon take¦240180 me away.
 \c 33
-\s1 Elihu asks Iyyov to hear him out
+\s2 Elihu asks Iyyov to hear him out
 \rem /s1 Elihu Rebukes Job; Elihu Presents His Case against Job
 \p
 \v 1 \add So\add* now Iyyov¦240187, please¦240186 hear¦240184 my speech¦240188,
@@ -2560,7 +2582,7 @@
 \q1
 \v 7 Listen, fear¦240240 of me shouldn't¦240241 terrify¦240242 you.
 \q1 ≈I won't¦240241 be putting heavy¦240247 pressure¦240243 on you.
-\s1 Elihu responds to Iyyov's speeches
+\s2 Elihu responds to Iyyov's speeches
 \q1
 \v 8 You've certainly spoken¦240250 in¦240251 my hearing¦240251,
 \q1 ≈and¦240252 I've heard¦240254 the sound¦240252 of the words¦240253:
@@ -2824,6 +2846,7 @@
 \rem /s1 Elihu Exalts God's Goodness
 \p
 \v 1 Then Elihu¦241065 continued¦241064:
+\sp Elihu
 \q1
 \v 2 \add ≈Be patient with\add* me a little¦241071 \add longer\add*
 \q1 and¦241072 I'll show you¦241072 that \add I\add* still¦241074 \add have\add* words¦241076 on God's behalf¦241075.
@@ -3012,6 +3035,7 @@
 \rem /s1 God's answer and Job's submission; The Lord Answers Job; The Lord Challenges Job; The Lord Speaks
 \p
 \v 1 Then Yahweh¦241646 answered¦241644 Iyyov from the storm:
+\sp Yahweh
 \q1
 \v 2 Who is this giving \add ≈bad advice\add*,
 \q1 with¦241661 words¦241661 that are lacking knowledge¦241664?
@@ -3244,6 +3268,7 @@
 \s1 God challenges Iyyov to answer
 \p
 \v 1 Then Yahweh¦242330 \add continued\add* to speak to Iyyov:
+\sp Yahweh
 \q1
 \v 2 Will the \add >person\add* who's been finding faults¦242340 \add now\add* argue with the provider?
 \q1 ≈Let the \add >one\add* who \add tries to\add* correct¦242341 God¦242342, give an answer¦242343.
@@ -3251,16 +3276,18 @@
 \rem /s1 Job Responds to the Lord; Job's Response to God
 \p
 \v 3 Then Iyyov answered¦242346 Yahweh¦242350:
+\sp Iyyov
 \q1
 \v 4 Indeed, I'm insignificant¦242354—what could I answer¦242356?
 \q1 I'll \add just\add* put my hand¦242357 over my mouth¦242361.
 \q1
 \v 5 I've¦242364 spoken¦242364 once, but I won't answer¦242366,
 \q1 ≈and twice¦242367, but I won't continue.
-\s1 God's response to Iyyov
+\s1 Yahweh's response to Iyyov
 \rem /s1 God's Challenge to Job; The Lord Challenges Job Again
 \p
 \v 6 Then Yahweh¦242374 again spoke to Iyyov from inside the storm:
+\sp Yahweh
 \q1
 \v 7 \add Now\add* tuck up your robe like a man¦242387 \add going into battle\add*.
 \q1 I will question¦242389 you, and you must¦242389 answer me.
@@ -3425,6 +3452,7 @@
 \rem /s1 Job; Job Responds to the Lord; Job Is Humbled and Satisfied
 \p
 \v 1 Then Iyyov answered¦242881 Yahweh¦242885:
+\sp Iyyov
 \q1
 \v 2 I know¦242888 that you can do everything¦242892,
 \q1 ≈and no one can stop you from doing what you want.
