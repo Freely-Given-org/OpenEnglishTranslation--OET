@@ -1,6 +1,6 @@
 #!/usr/bin/env -S uv run
 # -\*- coding: utf-8 -\*-
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: MPL-2.0
 #
 # convert_OET-LV-RV_ESFM_to_USFM.py
 #

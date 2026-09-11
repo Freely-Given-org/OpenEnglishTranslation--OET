@@ -1,6 +1,6 @@
 #!/usr/bin/env -S uv run
 # -\*- coding: utf-8 -\*-
-# SPDX-License-Identifier: GPL-3.0-or-later
+# SPDX-License-Identifier: MPL-2.0
 #
 # apply_Clear_Macula_OT_glosses.py
 #
@@ -8,20 +8,9 @@
 #
 # Copyright (C) 2022-2026 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
-# License: See gpl-3.0.txt
-#
-#   This program is free software: you can redistribute it and/or modify
-#   it under the terms of the GNU General Public License as published by
-#   the Free Software Foundation, either version 3 of the License, or
-#   (at your option) any later version.
-#
-#   This program is distributed in the hope that it will be useful,
-#   but WITHOUT ANY WARRANTY; without even the implied warranty of
-#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#   GNU General Public License for more details.
-#
-#   You should have received a copy of the GNU General Public License
-#   along with this program.  If not, see <https://www.gnu.org/licenses/>.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 """
 Script taking our expanded OSHB morpheme table (TSV)
@@ -82,6 +71,7 @@ CHANGELOG:
     2024-11-12 Make sure 'יָהּ' is Yah (not Yahweh)
     2025-01-20 Fix reordering to handle Macula Hebrew new slightly different 'nodes' data (rather than the previous 'lowfat')
     2026-03-19 Did the minimum to get the updated Macula Hebrew data to work
+    2026-09-04 Fix bug where M gloss got lost if only had morphemeGloss and no contextualMorphemeGloss
 """
 from gettext import gettext as _
 # from typing import Dict, List, Tuple
@@ -95,10 +85,10 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2026-07-18' # by RJH
+LAST_MODIFIED_DATE = '2026-09-04' # by RJH
 SHORT_PROGRAM_NAME = "apply_Clear_Macula_OT_glosses"
 PROGRAM_NAME = "Apply Macula OT glosses"
-PROGRAM_VERSION = '0.73'
+PROGRAM_VERSION = '0.74'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -985,7 +975,9 @@ def save_filled_word_TSV_file() -> bool:
                                                                        else 'MorphemeGloss' if new_header=='MorphemeGlosses'
                                                                        else 'ContextualMorphemeGloss' if new_header=='ContextualMorphemeGlosses'
                                                                        else new_header]
-                # print( f"{n} {original_column_dict=} {word_entry=}")
+                # if word_entry['Ref'].startswith( 'JER_48:13w8' ):
+                #     print( f"\n{n} 'w' {original_column_dict=}\n{word_entry=}")
+                # if word_entry['Ref'].startswith( 'JER_48:14' ): halt
                 writer.writerow( word_entry )
                 num_data_rows_written += 1
                 verse_ref = word_entry['Ref'].split('w')[0]
@@ -1041,7 +1033,7 @@ def save_filled_word_TSV_file() -> bool:
                 morpheme_noCantillations_list.append( original_column_dict['NoCantillations'] )
                 morpheme_glosses_list.append( original_column_dict['MorphemeGloss'] )
                 if not any(morpheme_glosses_list): morpheme_glosses_list = [] # Don't want to end up with just a comma separator there
-                contextual_morpheme_glosses_list.append( original_column_dict['ContextualMorphemeGloss'] )
+                contextual_morpheme_glosses_list.append( original_column_dict['ContextualMorphemeGloss'] if original_column_dict['ContextualMorphemeGloss'] else original_column_dict['MorphemeGloss'] )
                 assert morpheme_cantillation_hierarchy == original_column_dict['CantillationHierarchy']
                 for column_name in ('GlossCapitalisation','GlossPunctuation','GlossInsert'):
                     assert not original_column_dict[column_name], f"{n} {column_name=} {original_column_dict[column_name]=}"
@@ -1061,7 +1053,9 @@ def save_filled_word_TSV_file() -> bool:
                                         else morpheme_gloss_order if new_header=='GlossOrder'
                                         else original_column_dict['WordOrMorpheme' if new_header=='Word' else new_header]
                                         )
-                # print( f"{n} {original_column_dict=} {word_entry=}")
+                # if word_entry['Ref'].startswith( 'JER_48:13w8' ):
+                #     print( f"\n{n} 'M' {original_column_dict=}\n{word_entry=}")
+                # if word_entry['Ref'].startswith( 'JER_48:14' ): halt
                 writer.writerow( word_entry )
                 num_data_rows_written += 1
                 verse_ref = word_entry['Ref'].split('w')[0]
