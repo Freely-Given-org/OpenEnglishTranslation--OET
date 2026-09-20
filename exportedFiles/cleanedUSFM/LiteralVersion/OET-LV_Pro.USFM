@@ -5,14 +5,13 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2026-08-28 09:26 by extract_glossed_OSHB_OT_to_ESFM v1.0.5
+\rem ESFM file created 2026-09-16 11:49 by extract_glossed_OSHB_OT_to_ESFM v1.0.6
 \rem ESFM file edited by ScriptedBibleEditor v0.8.2 using ScriptedOTUpdates
 \h Proverbs
 \toc1 Proverbs
 \toc2 Proverbs
 \toc3 Pro
 \mt1 Proverbs
-\ie
 \c 1
 \nb
 \v 1 The_proverbs_of Shəlomoh/(Solomon) the_son_of Dāvid the_king_of Yisrā\sup ʼēl\sup*/(Israel).
@@ -255,7 +254,7 @@
 \v 22 \nd YHWH\nd* he÷created_me the_beginning_of its=road/course the_beginning_of his_works_of÷his from÷then.
 \v 23 From=long_ago/eternity I_was_installed from_\add the\add*÷beginning from_\add the\add*÷beginnings_of \add the\add*_earth.
 \v 24 When÷there_\add were\add*_not the_deeps I_was_brought_forth when÷there_\add were\add*_not springs abounding_of water.
-\v 25 Before mountains they_were_planted to=(the)_face_of/in_front_of/before \add the\add*_hills I_was_brought_forth.
+\v 25 Before÷before mountains they_were_planted to=(the)_face_of/in_front_of/before \add the\add*_hills I_was_brought_forth.
 \v 26 Until not he_had_made \add the\add*_earth and_\add the\add*÷open_places and_\add the\add*÷beginning_of the_dusts_of\f + \fr 8:26 \ft OSHB note: We read one or more vowels in L differently from BHQ.\f* \add the\add*_world.
 \v 27 When÷established÷he \add the\add*_heavens \add was\add*_there I when÷he÷marked_out a_circle on the_surface_of the_deep.
 \v 28 When÷he÷made_firm \add the\add*_clouds (from)÷above when÷became_strong the_springs_of the_deep.\f + \fr 8:28 \ft OSHB note: We agree with both BHS 1997 and BHQ on an unexpected reading.\f*
@@ -374,7 +373,7 @@
 \v 16 A_fool in_the=day it_is_known anger_of÷his and÷\add one_who\add*_conceals shame \add is\add*_sensible.
 \v 17 He_breathes_out faithfulness he_declares righteousness and÷a_witness_of lies deceit.
 \v 18 There_\add is\add* \add one_who\add*_speaks_rashly\f + \fr 12:18 \ft OSHB note: We read one or more accents in L differently from BHQ.\f*\f + \fr 12:18 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* like÷thrusts_of a_sword and=(the)_tongue wise_\add people\add* \add is\add*_healing.
-\v 19 A_lip_of reliability it_will_be_established forever and=unto I_will_give_rest a_tongue_of falsehood.
+\v 19 A_lip_of reliability it_will_be_established forever÷ever and=unto I_will_give_rest a_tongue_of falsehood.
 \v 20 Deceit \add is\add*_in_\add the\add*÷heart_of \add those_who\add*_devise_of (of)_evil and_\add belongs\add*÷to÷counsellors_of peace joy.
 \v 21 Not it_happens to÷righteous any_of trouble and÷wicked_\add people\add* they_are_full distress.
 \v 22 \add are\add*_(the)_abomination_of \nd YHWH\nd* lips_of falsehood and÷\add those_who\add*_do_of (of)_faithfulness delight_of÷\add are\add*_his.
@@ -562,7 +561,7 @@
 \v 10 \add is\add*_a_tower_of strength the_name_of \nd YHWH\nd* in/on/over=him/it he_runs a_righteous_\add person\add* and÷he_is_set_on_high.
 \v 11 \add the\add*_wealth a_rich_\add person\add* \add is\add*_the_town_of his_strength_of÷his and÷like÷a_wall high in÷his_own_of÷imagination.
 \v 12 To=(the)_face_of/in_front_of/before destruction \add the\add*_heart_of it_is_haughty a_person and÷\add is\add*÷before_of honour humility.
-\v 13 \add one_who\add*_brings_back a_message before he_listens \add is\add*_folly it to=him/it and÷ignominy.
+\v 13 \add one_who\add*_brings_back a_message before÷before he_listens \add is\add*_folly it to=him/it and÷ignominy.
 \v 14 \add the\add*_spirit_of a_person it_will_endure sickness_of÷his and=spirit stricken who will÷he_bear_it.
 \v 15 A_heart discerning it_acquires knowledge and_\add the\add*÷ear_of wise_\add people\add* it_seeks knowledge.
 \v 16 \add the\add*_gift_of a_person it_makes_space to=him/it and÷before_of great_\add people\add* it÷leads_him.
@@ -908,7 +907,7 @@
 \v 11 All_of his/its=breath/wind/spirit he_sends_forth a_fool and÷a_wise_\add person\add* in÷backwards he÷calms_it.
 \v 12 A_ruler \add is\add*_paying_attention on a_message_of falsehood all_of servants_of÷his \add will_be\add*_wicked.
 \v 13 \add one_who\add*_\add is\add*_poor and÷a_person_of oppression(s) they_meet_one_another \add is\add*_giving_light_to the_eyes_of both_of=them \nd YHWH\nd*.
-\v 14 A_king \add who\add*_judges in÷truth poor_\add people\add* throne_of÷his forever it_will_be_established.
+\v 14 A_king \add who\add*_judges in÷truth poor_\add people\add* throne_of÷his forever÷always it_will_be_established.
 \v 15 A_rod and÷rebuke it_gives wisdom and÷a_youth let_untie/release \add is\add*_putting_to_shame his/its=mother.
 \v 16 When÷increase wicked_\add people\add* it_increases transgression and÷righteous_\add people\add* on÷downfall_of÷their they_will_look.
 \v 17 Discipline son_of÷your and÷he÷will_give_you_rest and÷he_will_give delights to÷self_of÷your.
@@ -930,7 +929,7 @@
 \v 4 Who has_he_gone_up heaven and÷has_he_come_down who has_he_gathered \add the\add*_wind in÷the_hollow_of÷of_his_hands who has_he_wrapped \add the\add*_waters in÷cloak who has_he_set_up all_of \add the\add*_ends_of \add the\add*_earth what name_of÷\add is\add*_his and÷what \add is\add*_the_name_of his/its=son if/because you_know.
 \v 5 Every_of message_of god \add is\add*_refined \add is\add*_a_shield he for÷who]_take_refuge in/on/over=him/it.
 \v 6 Do_not add to words/messages_of÷his lest he_should_rebuke (in)÷you and÷you_will_be_proved_a_liar.
-\v 7 two_\add things\add* I_ask from÷with÷you do_not withhold_\add them\add* from÷me before I_will_die.
+\v 7 two_\add things\add* I_ask from÷with÷you do_not withhold_\add them\add* from÷me before÷before I_will_die.
 \v 8 Deceitfulness and÷a_message_of falsehood put_far_away from÷me poverty and÷wealth do_not give to=me let÷me_devour the_food_of my_allotment_of÷my.
 \v 9 Lest I_should_be_satisfied and÷I_will_deny and÷I_will_say who \add is\add*_\nd YHWH\nd* and÷lest I_should_become_impoverished and÷I_will_steal and÷I_will_seize the_name_of my_god_of÷my.
 \v 10 do_not slander a_slave to master(s)_of÷his\f + \fr 30:10 \ft OSHB variant note: אדנ/ו: (x-qere) 'אֲדֹנָ֑י/ו': lemma=113 n=1 morph=HNcmpc/Sp3ms id=206WH אֲדֹנָ֑י/ו\f* lest he÷should_curse_you and÷you_will_be_held_guilty.

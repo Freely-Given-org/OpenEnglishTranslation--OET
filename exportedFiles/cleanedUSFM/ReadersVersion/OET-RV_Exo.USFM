@@ -1,4 +1,4 @@
-\id EXO - Open English Translation—Readers’ Version (OET-RV) v0.1.37
+\id EXO - Open English Translation—Readers’ Version (OET-RV) v0.1.38
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 EXO
@@ -25,7 +25,7 @@
 \io1 God’s instructions and the agreement \ior 19:1–24:18\ior*
 \io1 The sacred tent and warnings concerning worshipping \ior 25:1–40:38\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
-\ie
+\rem NOTE: This USFM file was exported from the ESFM source file with some loss of features, so don’t edit this derived file.
 \c 1
 \s1 Yisra’el’s descendants are driven into slavery
 \p
@@ -747,7 +747,7 @@
 \v 5 “Walk on ahead of the people,” Yahweh told Mosheh, “and take some of the Israeli elders with you, and your staff—the one which you struck the river with. Take it in your hand and go.
 \v 6 Watch me. I will stand \add in front of you\add* there on the rock at Horev \add (Mt. Sinai)\add*. Then you will strike the rock and water will come out of it, and the people will drink.” \add So\add* Mosheh did that while the Israeli elders watched.
 \p
-\v 7 \add Mosheh\add* named that place \add both\add* ‘Massah’ \add (which means ‘testing’)\add* and ‘Meribah’ \add (which means ‘complaining’)\add*, because of the conflict among the Israelis and because of how they tested of Yahweh by saying, ‘Is Yahweh among us or not?’
+\v 7 \add Mosheh\add* named that place \add both\add* ‘Massah’ \add (which means ‘testing’)\add* and ‘Meribah’ \add (which means ‘complaining’)\add*, because of the conflict among the Israelis and because of how they tested Yahweh by saying, ‘Is Yahweh among us or not?’
 \s1 Mosheh’s arms held high to defeat Amalek
 \p
 \v 8 Then the Amalek \add army\add* came and attacked Yisrael at Refidim,
@@ -758,7 +758,7 @@
 \v 13 \add So this was how\add* Yehoshua defeated Amalek and his army with \add their swords\add*.
 \v 14 Then Yahweh told Mosheh, “Write this event in the book and \add read it aloud to\add* Yehoshua, because I will certainly blot out the memory of Amalek from \add off the earth\add*.”\x + \xo 17:14: \xt Deu 25:17-19; 1Sam 15:2-9.\x*
 \v 15 Then Mosheh built an altar and he named it ‘Yahweh-nissi’ \add (which means ‘Yahweh is my banner’)\add*,
-\v 16 saying, “Because \add they battled\add* against Yah’s throne, then Yahweh \add will battle\add* against Amalek from generation to generation.”
+\v 16 saying, “Because \add they battled\add* against Yah’s throne, then Yahweh \add will battle\add* against Amalek \add throughout the generations\add*.”
 \c 18
 \s1 Mosheh’s father-in-law visits
 \p

@@ -40,6 +40,7 @@ CHANGELOG:
     2026-06-11 Handle new % (changed person) \\add format
     2026-08-24 Handle \\+add format
     2026-08-30 Remove superfluous print output
+    2026-09-14 Add warning about editing exported file
 """
 from pathlib import Path
 import re
@@ -50,10 +51,10 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint, BOOKLIST_OT3
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-08-30' # by RJH
+LAST_MODIFIED_DATE = '2026-09-14' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_ESFM_to_USFM"
 PROGRAM_NAME = "Convert OET LV & RV ESFM files to USFM"
-PROGRAM_VERSION = '0.68'
+PROGRAM_VERSION = '0.69'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -160,6 +161,9 @@ def main():
                 for line in adjText.split( '\n' ):
                     if line.startswith( '\\rem /' ): # our additional section headings, etc.
                         continue # drop these
+                    if line == '\\ie': # introduction end
+                        newLines.append( '\\rem NOTE: This USFM file was exported from the ESFM source file with some loss of features, so don’t edit this derived file.' ) 
+                        # The actual 'ie' line will then be appended below as usual
                 #     if line.startswith( '\\s1 ' ):
                 #         assert not inESB
                 #         newLines.append( '\\esb \\cat s1\\cat*' )

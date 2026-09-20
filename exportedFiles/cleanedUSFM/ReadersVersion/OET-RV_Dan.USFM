@@ -1,4 +1,4 @@
-\id DAN - Open English Translation—Readers’ Version (OET-RV) v0.1.12
+\id DAN - Open English Translation—Readers’ Version (OET-RV) v0.1.13
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 DAN
@@ -22,7 +22,7 @@
 \io2 c. The heavenly messenger \ior 10:1–11:45\ior*
 \io2 d. The time of the end \ior 12:1-13\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
-\ie
+\rem NOTE: This USFM file was exported from the ESFM source file with some loss of features, so don’t edit this derived file.
 \c 1
 \ms1 The account about Daniel and his friends
 \mr (1:1–6:28)
@@ -436,7 +436,7 @@
 \v 20 While I was speaking and praying, and confessing my sin and the sin of my people Yisrael, and presenting my \add requests to\add* my god Yahweh on behalf of \add his\add* holy mountain,
 \v 21 while I was still speaking in prayer, \add God’s\add* man Gavri’el who I had seen in the \add earlier\add* vision, came \add speedily flying\add* to me at the time of the evening sacrifice.\x + \xo 9:21: \xt Luk 1:19,26.\x*
 \v 22 He told me, “Daniel, I’ve come here now to give you insight and \add to help you understand\add*.
-\v 23 \add An order was given right\add* at the beginning of your \add prayer\add* \add and fasting\add*, and I’ve come \add personally\add* to tell you, because you’re highly respected, \add so then\add* consider the message and understand the vision:
+\v 23 \add An order was given right\add* at the beginning of your \add prayer\add* \add and fasting\add*, and I’ve come \add personally\add* to tell you, because you’re highly valued, \add so then\add* consider the message and understand the vision:
 \p
 \v 24 \add It’s been decreed that there’ll be 490\add* \add years\add* for your people and your holy city, to stop the transgression, to put an end to sin, to \add pay the price\add* for \add disobedience\add*, to bring in righteousness \add that will then last forever\add*, to seal up vision and prophecy, and to anoint the most holy place. NEEDS MORE WORK
 \v 25 Know and understand that from the issuing of the \add command\add* to restore and build Yerushalem until an anointed one (a prince) \add comes\add*, there will be 49 \add years\add* and 434 \add years\add*. It’ll be built again with a plaza and a moat, but in distressing times.

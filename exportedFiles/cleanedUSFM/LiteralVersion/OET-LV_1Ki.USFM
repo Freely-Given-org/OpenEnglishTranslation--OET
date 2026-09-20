@@ -5,14 +5,13 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2026-08-28 09:26 by extract_glossed_OSHB_OT_to_ESFM v1.0.5
+\rem ESFM file created 2026-09-16 11:49 by extract_glossed_OSHB_OT_to_ESFM v1.0.6
 \rem ESFM file edited by ScriptedBibleEditor v0.8.2 using ScriptedOTUpdates
 \h 1 kings
 \toc1 1 kings
 \toc2 1 kings
 \toc3 1Ki
 \mt1 1 kings
-\ie
 \c 1
 \nb
 \v 1 And÷the÷king Dāvid he_was_old he_had_come in_the=days and÷they÷covered_him with÷clothes and=not it_was_warm to=him/it.
@@ -42,7 +41,7 @@
 \v 25 If/because he_has_gone_down the=day and=he/it_sacrificed ox[en] and÷fatling and÷sheep to=increase_in_number and=he/it_called to/from=all/each/any/every the_sons_of the=king and_(to)÷the÷commanders_of the_army and÷(to)÷ʼEⱱyātār the=priest/officer and÷THERE÷they \add are\add*_eating and÷drinking before÷him and=they_said may_he_live the=king ʼAdoniy\sup yāh\sup*.
 \v 26 And÷(to)÷me I servant_of÷your and÷(to)÷Tsādōq/(Zadok) the=priest/officer and÷(to)÷Bənā\sup yāh\sup* the_son_of Yəhōyādāˊ/(Jehoiada) and÷(to)÷Shəlomoh/(Solomon) servant_of÷your not he_has_invited.
 \v 27 (if) from÷with my=master the=king has_it_occurred the÷matter the=this and=not you_made_known DOM servant_of÷your\f + \fr 1:27 \ft OSHB variant note: עבדי/ך: (x-qere) 'עַבְדְּ/ךָ֔': lemma=5650 n=0.1 morph=HNcmsc/Sp2ms id=11mrn עַבְדְּ/ךָ֔\f* who will_he_sit on the_throne_of my=master the=king after÷him.
-\v 28 and÷he_answered the=king Dāvid and=he/it_said summon to=me (to) sheⱱaˊ and÷she_came to=(the)_face_of/in_front_of/before the=king and÷she_stood to=(the)_face_of/in_front_of/before the÷king.
+\v 28 and÷he_answered the=king Dāvid and=he/it_said summon to=me (to)÷Bath- sheⱱaˊ and÷she_came to=(the)_face_of/in_front_of/before the=king and÷she_stood to=(the)_face_of/in_front_of/before the÷king.
 \v 29 And÷he_swore_an_oath the=king and÷he_said \add by\add*_the_life of_\nd YHWH\nd* who he_has_ransomed DOM life_of÷my from=all trouble.
 \v 30 If/because just=as I_swore to/for=you(fs) by÷\nd YHWH\nd* the_god_of Yisrā\sup ʼēl\sup*/(Israel) to=say if/because Shəlomoh son_of÷your he_will_reign after÷me and=he he_will_sit on throne_of÷my in÷place_of_me if/because so I_will_do the=day (the)÷this.
 \v 31 And= Bath- =she_bowed_low sheⱱaˊ face ground and÷she_bowed_down to/for=the_king and=she/it_said my=master may_he_live the=king Dāvid to=vanishing_point.
@@ -156,11 +155,11 @@
 \v 6 And÷ʼAḩīshār \add was\add*_over the÷house and÷ʼAdonīrām the_son_of ˊAⱱdāʼ \add was\add*_over the_forced÷labour.
 \v 7 and_\add belonged\add*÷to÷Shəlomoh two_plus ten overseers over all_of Yisrā\sup ʼēl\sup*/(Israel) and÷they_supplied DOM the=king and=DOM household_of÷his a_month in÷year it_was on wwww\f + \fr 4:7 \ft OSHB variant note: אחד: (x-qere) 'הָ/אֶחָ֖ד': lemma=d/259 n=0.0 morph=HTd/Acmsa id=11vua הָ/אֶחָ֖ד\f* to÷supply.
 \v 8 and=these names_of÷\add are\add*_their son_of hur in÷the_hill_country_of ʼEfrayim.
-\v 9 Ben-_of Deker in÷Māqaʦ and÷in÷Shaˊalⱱīm and shemesh and house_of hanan.
+\v 9 Ben-_of Deker in÷Māqaʦ and÷in÷Shaˊalⱱīm and÷Bēyt- shemesh and÷Elon- house_of hanan.
 \v 10 Ben-_of Hesed in÷ʼArubōt to=him/it Sōkoh and=all the_land_of Ḩēfer.
 \v 11 Ben-_of ʼAⱱīnādāⱱ all_of the_height_of Dōr Ţāfat the_daughter_of Shəlomoh/(Solomon) she_became for=him/it to/for=(a)_woman.
-\v 12 Baˊₐnāʼ the_son_of ʼAḩīlūd Taˊₐnāk and÷Məgiddōn and=all Bēyt Shan which \add is\add*_beside (to)÷Tsₑrətān/(Zarethan) from=under to÷Yizrəˊ\sup ʼēl\sup*/(Jezreel) from shəʼān to Abel Meholah to from_\add the\add*÷other_side of÷Yāqəməˊām/(Jokmeam).
-\v 13 Ben-_of Geber in gilˊād to=him/it the_villages_of Yāʼīr/(Jair) the_son_of Mənashsheh which \add are\add*_in÷Gilˊād to=him/it the_region_of ʼArgoⱱ which \add is\add*_in÷Bāshān sixty cities large a_wall and÷bar[s]_of bronze.
+\v 12 Baˊₐnāʼ the_son_of ʼAḩīlūd Taˊₐnāk and÷Məgiddōn and=all Bēyt Shan which \add is\add*_beside (to)÷Tsₑrətān/(Zarethan) from=under to÷Yizrəˊ\sup ʼēl\sup*/(Jezreel) from÷Bēyt- shəʼān to Abel Meholah to from_\add the\add*÷other_side of÷Yāqəməˊām/(Jokmeam).
+\v 13 Ben-_of Geber in÷Rāmot- gilˊād to=him/it the_villages_of Yāʼīr/(Jair) the_son_of Mənashsheh which \add are\add*_in÷Gilˊād to=him/it the_region_of ʼArgoⱱ which \add is\add*_in÷Bāshān sixty cities large a_wall and÷bar[s]_of bronze.
 \v 14 ʼAḩīnādāⱱ the_son_of ˊIddō (to)÷Maḩₐnāyim.
 \v 15 ʼAḩīmaˊaʦ in÷Naftālī also he he_took DOM Bāsəmat the_daughter_of Shəlomoh to/for=(a)_woman.
 \v 16 Baˊₐnāʼ the_son_of Ḩūshay in÷ʼĀshēr and÷Bəˊālōt.
@@ -172,7 +171,7 @@
 \nb
 \v 1 \f + \fr 5:1 \ft Note: KJB: 1Kgs.4.21\f* and÷Shəlomoh/(Solomon) he_was ruling in=all the÷kingdoms from the=river the_land_of \add the\add*_Fəlishtiy and=unto the_border_of Miʦrayim/(Egypt) \add they\add*_\add were\add*_bringing tribute and÷\add they\add*_\add were\add*_serving DOM Shəlomoh all_of the_days_of his/its=life.
 \v 2 \f + \fr 5:2 \ft Note: KJB: 1Kgs.4.22\f* and=he/it_was the_food_of Shəlomoh for÷a_day one thirty cor[s]_of fine_flour and=sixty cor[s]_of flour.
-\v 3 \f + \fr 5:3 \ft Note: KJB: 1Kgs.4.23\f* ten cattle fat and=twenty cattle pasture and÷one_hundred sheep apart from÷deer and÷gazelle and÷roe-deer and÷birds fattened.
+\v 3 \f + \fr 5:3 \ft Note: KJB: 1Kgs.4.23\f* ten cattle fat and=twenty cattle pasture and÷one_hundred sheep apart÷apart_from from÷deer and÷gazelle and÷roe-deer and÷birds fattened.
 \v 4 \f + \fr 5:4 \ft Note: KJB: 1Kgs.4.24\f* if/because he \add was\add*_ruling in=all the_other_side_of the=river from÷Tiphsah and=unto ˊAzzāh in=all the_kings_of the_other_side_of the=river and÷peace it_belonged to=him/it from=all sides_of÷his from÷round_about.
 \v 5 \f + \fr 5:5 \ft Note: KJB: 1Kgs.4.25\f* and= Yəhūdāh =he/it_sat_down//remained//lived and÷Yisrā\sup ʼēl\sup*/(Israel) to÷security everyone under vine_of÷his_own and÷under fig_tree_of÷his_own from÷Dān and=unto Bəʼēr Shəⱱāʼ all_of the_days_of Shəlomoh.
 \v 6 \f + \fr 5:6 \ft Note: KJB: 1Kgs.4.26\f* and=he/it_was to÷Shəlomoh forty thousand stalls_of horses for÷chariotry_of÷his and÷two_plus ten thousand horsemen.
@@ -199,7 +198,7 @@
 \v 27 \f + \fr 5:27 \ft Note: KJB: 1Kgs.5.13\f* and=he/it_ascended the=king Shəlomoh forced_labour from=all Yisrā\sup ʼēl\sup*/(Israel) and=he/it_was the_forced÷labour thirty thousand man.
 \v 28 \f + \fr 5:28 \ft Note: KJB: 1Kgs.5.14\f* and÷he÷sent_them to÷Ləⱱānōn ten_of thousand(s) in÷month relays a_month they_were in÷Ləⱱānōn two months in÷home_of÷his and÷Adoniram \add was\add*_over the_forced÷labour.
 \v 29 \f + \fr 5:29 \ft Note: KJB: 1Kgs.5.15\f* and=he/it_was to÷Shəlomoh seventy thousand carrier[s]_of burden-bearer[s] and=eighty thousand stonemason[s] in÷country.
-\v 30 \f + \fr 5:30 \ft Note: KJB: 1Kgs.5.16\f* apart from÷the_leaders_of the_overseers of÷Shəlomoh who \add were\add*_over the÷work three_of thousand(s) and=three hundred(s) \add who\add*÷ruled over÷people \add who÷were\add*_doing (in)÷work.
+\v 30 \f + \fr 5:30 \ft Note: KJB: 1Kgs.5.16\f* apart÷apart from÷the_leaders_of the_overseers of÷Shəlomoh who \add were\add*_over the÷work three_of thousand(s) and=three hundred(s) \add who\add*÷ruled over÷people \add who÷were\add*_doing (in)÷work.
 \v 31 \f + \fr 5:31 \ft Note: KJB: 1Kgs.5.17\f* and=he/it_commanded the=king and÷they_quarried stones large stones costly to÷found the÷house stones_of hewn_\add stone\add*.
 \v 32 \f + \fr 5:32 \ft Note: KJB: 1Kgs.5.18\f* and÷they_cut_\add them\add*_out of_Shəlomoh the_builders_of and= of_Ḩīrām =the_builders_of and÷the÷Gebalites and÷they_prepared the÷wood(s) and÷the÷stones to÷build the÷house.
 \c 6
@@ -268,7 +267,7 @@
 \v 22 And_\add was\add*÷on the_top_of the_pillars a_work_of lili[es] and= the_work_of =it_was_complete of÷the_pillars.
 \v 23 And=he/it_made DOM the=sea throw_\add metal\add* \add was\add*_ten by÷cubit from÷lip_of÷its to lip_of÷its round all_around and_\add was\add*÷five by÷cubit height_of÷its and÷a_measuring-line_of\f + \fr 7:23 \ft OSHB variant note: ו/קוה: (x-qere) 'וְ/קָו֙': lemma=c/6961 n=0.1.0 morph=HC/Ncmsc id=11kSN וְ/קָו֙\f* thirty by÷cubit it_went_round DOM=him/it all_around.
 \v 24 And÷gourds from=under to÷lip_of÷its all_around \add were\add*_going_round DOM=him/it ten by÷cubit \add they\add*_\add were\add*_encircling DOM the=sea all_around \add were\add*_two_of rows the÷gourds \add they\add*_\add were\add*_throw in÷throwing_of÷its.
-\v 25 \add it\add*_\add was\add*_standing on two_plus_of ten ox[en] three \add were\add*_turning northward and÷three \add were\add*_turning westward and÷three \add were\add*_turning southward and÷three \add were\add*_turning eastward and÷the÷sea \add was\add*_on÷them from÷to÷above and=all hindquarters_of÷their inside÷\add were\add*_to_\add the\add*.
+\v 25 \add it\add*_\add was\add*_standing on two_plus_of ten ox[en] three \add were\add*_turning northward÷to and÷three \add were\add*_turning westward÷to and÷three \add were\add*_turning southward÷to and÷three \add were\add*_turning eastward÷to and÷the÷sea \add was\add*_on÷them from÷to÷above and=all hindquarters_of÷their inside÷\add were\add*_to_\add the\add*.
 \v 26 And÷thickness_of÷its \add was\add*_a_hand_breadth and÷lip_of÷its \add was\add*_like_\add the\add*÷work_of \add the\add*_lip_of a_cup \add the\add*_blossom_of a_lily two_thousand bath[s] it_contained.
 \v 27 and=he/it_made DOM the÷stands ten bronze \add was\add*_four by÷cubit the_length_of the_stand (the)÷one and=four by÷cubit breadth_of÷its and_\add was\add*÷three by÷cubit height_of÷its.
 \v 28 And=this \add was\add*_the_work_of the_stand rims to/for=them and÷rims \add were\add*_between the_cross÷bars.
@@ -282,7 +281,7 @@
 \v 36 And÷he_engraved on the÷plates hands_of÷its and÷on rims_of÷its\f + \fr 7:36 \ft OSHB variant note: ו/מסגרתי/ה: (x-qere) 'מִסְגְּרֹתֶ֔י/הָ': lemma=4526 n=1.1 morph=HNcfpc/Sp3fs id=11GoM מִסְגְּרֹתֶ֔י/הָ\f* cherubim lions and÷palm_trees according÷to_the_clear_space_of each and÷wreaths \add were\add*_all_around.
 \v 37 Like÷this he_made DOM the_ten the÷stands throwing one a_measurement one a_shape one \add belonged\add*_to÷all_of÷of_them.
 \v 38 and=he/it_made ten lavers_of bronze forty bath[s] it_contained the÷laver the=one \add was\add*_four by÷cubit the÷laver the=one a_laver one \add was\add*_on the÷stand the=one(f) for÷the_ten the÷stands.
-\v 39 And=he/it_gave DOM the÷stands five on the_side_of the_house from_\add the\add*÷right and÷five on the_side_of the_house from÷left_of÷its and=DOM the=sea he_put from÷the_side_of the_house (the)÷right eastward from÷in_front_of \add the\add*_south.
+\v 39 And=he/it_gave DOM the÷stands five on the_side_of the_house from_\add the\add*÷right and÷five on the_side_of the_house from÷left_of÷its and=DOM the=sea he_put from÷the_side_of the_house (the)÷right eastward÷toward from÷in_front_of \add the\add*_south.
 \v 40 and= Ḩīrām =he/it_made DOM the÷lavers and=DOM the÷shovels and=DOM the÷bowls and= Ḩīrām =they_were_ended/finished to÷do DOM all_of the÷work which he_did to/for=the_king Shəlomoh/(Solomon) the_house_of \nd YHWH\nd*.
 \v 41 Pillars two and÷the_bowls_of the_capitals which \add were\add*_on the_top_of the_pillars two and÷the÷networks two to÷cover DOM the_two_of the_bowls_of the_capitals which \add were\add*_on the_top_of the_pillars.
 \v 42 And=DOM the÷pomegranates four hundred(s) for÷the_two_of the÷networks two_of rows pomegranates for÷network (the)÷one to÷cover DOM the_two_of the_bowls_of the_capitals which \add were\add*_on the_face_of the_pillars.
@@ -390,7 +389,7 @@
 \v 23 these \add were\add*_the_leaders_of the_overseers who \add were\add*_over the÷work of÷Shəlomoh/(Solomon) fifty and=five hundred(s) \add who\add*÷ruled over÷people \add who÷were\add*_doing (in)÷work.
 \v 24 Only the_daughter_of Parˊoh she_went_up from÷the_city_of Dāvid to house_of÷her_own which he_had_built to/for=her/it then he_built DOM the÷Millōʼ.
 \v 25 And= Shəlomoh =he_offered_up three times in÷year burnt_offerings and÷peace_offerings on the÷altar which he_had_built to/for=\nd YHWH\nd* and÷he_made_smoke with=him/it\f + \fr 9:25 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* which to=(the)_face_of/in_front_of/before \nd YHWH\nd* and÷he_completed DOM the÷house.
-\v 26 And÷ship[s] he_made the=king Shəlomoh at geⱱer which \add is\add*_with ʼĒylōt on \add the\add*_shore_of \add the\add*_sea_of reed[s] in=land of_ʼEdōm.
+\v 26 And÷ship[s] he_made the=king Shəlomoh at÷ˊEʦyon- geⱱer which \add is\add*_with ʼĒylōt on \add the\add*_shore_of \add the\add*_sea_of reed[s] in=land of_ʼEdōm.
 \v 27 And= Ḩīrām =he_sent in_\add the\add*÷ship[s] DOM servants_of÷his men_of ships \add who\add*_knew_of the=sea with the_servants_of Shəlomoh.
 \v 28 And=they_came to÷ʼŌfīr and=they_took from=there gold four hundred(s) and=twenty talent[s] and÷they_brought_\add it\add* to the=king Shəlomoh.
 \c 10
@@ -409,7 +408,7 @@
 \v 12 And=he/it_made the=king DOM the_wood(s)_of the_almug(s) support[s] for÷the_house_of \nd YHWH\nd* and÷for÷the_house_of the=king and÷harps and÷lyres for÷singers not it_has_come thus wood(s)_of almug(s) and=not it_has_been_seen until the=day (the)÷this.
 \v 13 And÷the÷king Shəlomoh he_gave to÷the_queen_of Shəⱱāʼ DOM all_of desire_of÷her which she_asked (from)÷besides \add that\add*_which he_had_given to/for=her/it according÷to_the_hand_of the=king Shəlomoh and÷she_turned and÷she_went to÷her_own_of÷land she and÷servants_of÷her.
 \v 14 and=he/it_was the_weight_of the=gold which it_came to÷Shəlomoh in÷a_year one six hundred(s) sixty and÷six talent[s]_of gold.
-\v 15 Apart from÷the_men_of the_merchants and÷the_merchandise_of the_traders and=all the_kings_of the_Arab[s] and÷the_governors_of the=earth/land.
+\v 15 Apart÷besides from÷the_men_of the_merchants and÷the_merchandise_of the_traders and=all the_kings_of the_Arab[s] and÷the_governors_of the=earth/land.
 \v 16 And=he/it_made the=king Shəlomoh two_hundred body_shield[s] gold beaten six hundred(s) gold he_put_up on the_body÷shield (the)÷one.
 \v 17 And=three hundred(s) shields gold beaten three_of minas gold he_put_up on the÷shield (the)÷one and÷he÷put_them the=king the_house_of the_forest_of (the)÷Ləⱱānōn.
 \v 18 and=he/it_made the=king a_throne_of ivory great and÷he÷overlaid_it gold refined.
@@ -649,7 +648,7 @@
 \nb
 \v 1 and= ʼĒliy\sup yāh\sup* =he/it_said the÷Tishbiy one÷of_the_resident_aliens_of Gilˊād to ʼAḩʼāⱱ \add by\add*_the_life of_\nd YHWH\nd* the_god_of Yisrā\sup ʼēl\sup*/(Israel) whom I_stand before÷him if it_will_be the÷years the=these dew and÷rain if/because (if) to÷the_mouth_of my_message_of÷my.
 \v 2 and= the_message_of =he/it_was of_\nd YHWH\nd* to=him/it to=say.
-\v 3 Go from÷here and÷you_will_turn (for)÷yourself eastward and÷you_will_hide_yourself at÷the_wadi_of Kerith which \add is\add*_on the_face_of the_Yardēn/(Jordan).
+\v 3 Go from÷here and÷you_will_turn (for)÷yourself eastward÷to and÷you_will_hide_yourself at÷the_wadi_of Kerith which \add is\add*_on the_face_of the_Yardēn/(Jordan).
 \v 4 And=it_was from÷the÷wadi you_will_drink and=DOM the÷ravens I_have_commanded to÷supply÷you there.
 \v 5 And=he/it_went and=he/it_made according÷to_the_message_of \nd YHWH\nd* and=he/it_went and=he/it_sat_down//remained//lived at÷the_wadi_of Kerith which \add is\add*_on the_face_of the_Yardēn.
 \v 6 And÷the÷ravens \add were\add*_bringing to=him/it bread and=flesh/body in÷morning and÷bread and=flesh/body in÷evening and=from the÷wadi he_drank.
@@ -736,7 +735,7 @@
 \v 13 And=he/it_was just÷as_heard ʼĒliy\sup yāh\sup* and÷he_wrapped his/its=faces/face in÷cloak_of÷his and=he/it_went_out and÷he_stood the_entrance_of the_cave and=BEHOLD/LO/SEE to=him/it a_voice and=he/it_said what \add is\add*_to÷you here Oh_ʼĒliy\sup yāh\sup*.
 \v 14 And=he/it_said exceedingly_(be_zealous) I_have_been_zealous to/for=\nd YHWH\nd* the_god_of soldiers/messengers if/because they_have_abandoned covenant_of÷your the_people_of Yisrā\sup ʼēl\sup*/(Israel) DOM altars_of÷your they_have_torn_down and=DOM prophets_of÷your they_have_killed with÷sword and÷I_am_left I I÷alone and÷they_have_sought DOM life_of÷my to÷take÷it_away.
 \v 15 and= \nd YHWH\nd* =he/it_said to=him/it go go_back to÷way_of÷your the_wilderness_of÷to of_Dammeseq\f + \fr 19:15 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* and÷you_will_go and÷you_will_anoint DOM Ḩₐzā\sup ʼēl\sup* to÷king over ʼArām.
-\v 16 And=DOM Yēhūʼ/(Jehu) the_son_of Nimshiy you_will_anoint to÷king over Yisrā\sup ʼēl\sup*/(Israel) and=DOM ʼElīshāˊ the_son_of Shāfāţ from meholah you_will_anoint to÷prophet in÷place_of_you.
+\v 16 And=DOM Yēhūʼ/(Jehu) the_son_of Nimshiy you_will_anoint to÷king over Yisrā\sup ʼēl\sup*/(Israel) and=DOM ʼElīshāˊ the_son_of Shāfāţ from÷Abel- meholah you_will_anoint to÷prophet in÷place_of_you.
 \v 17 And=it_was the_\add one÷who\add*_escapes from÷the_sword_of Ḩₐzā\sup ʼēl\sup* Yēhūʼ he_will_put_to_death and÷the_\add one÷who\add*_escapes from÷the_sword_of Yēhūʼ ʼElīshāˊ he_will_put_to_death.
 \v 18 And÷I_will_leave among÷Yisrā\sup ʼēl\sup*/(Israel) seven_of thousand(s) all_of the÷knees which not they_have_bowed_down to÷Baˊal and=all (the)÷mouth which not it_has_kissed to=him/it.
 \v 19 And=he/it_went from=there and÷he_found DOM ʼElīshāˊ the_son_of Shāfāţ and=he \add was\add*_plowing two_plus ten pairs \add were\add*÷before_of÷him and=he \add was\add*_with÷two_plus the÷ten and= ʼĒliy\sup yāh\sup* =he/it_passed_through to=him/it and÷he_threw cloak_of÷his to=him/it.
@@ -744,7 +743,7 @@
 \v 21 And÷he_turned_back from÷after÷him and=he/it_took DOM the_pair_of the_ox[en] and÷he÷sacrificed_it and÷with÷the_equipment_of the_ox[en] he÷cooked_them the÷flesh and=he/it_gave to÷people and÷they_ate and=he/it_rose_up and=he/it_went after ʼĒliy\sup yāh\sup* and÷he÷served_him.
 \c 20
 \nb
-\v 1 and hₐdad the_king_of ʼArām he_gathered DOM all_of army_of÷his and=thirty and÷two king[s] with=him/it and÷horse[s] and÷chariotry and=he/it_ascended and=he/it_laid_siege on Shomrōn and÷he_fought against÷it.
+\v 1 and÷Ben- hₐdad the_king_of ʼArām he_gathered DOM all_of army_of÷his and=thirty and÷two king[s] with=him/it and÷horse[s] and÷chariotry and=he/it_ascended and=he/it_laid_siege on Shomrōn and÷he_fought against÷it.
 \v 2 And÷he_sent messengers to ʼAḩʼāⱱ the_king_of Yisrā\sup ʼēl\sup*/(Israel) to÷the÷city.
 \v 3 And=he/it_said to=him/it thus Ben he_says Hₐdad\f + \fr 20:3 \ft Note: KJB: 1Kgs.20.3\f* silver_of÷your and÷gold_of÷your to=me it and÷wives_of÷your and÷children_of÷your (the)÷good to=me they.
 \v 4 And= the_king_of =he_answered of_Yisrā\sup ʼēl\sup*/(Israel) and=he/it_said according÷to_of÷your_message my=master the=king to/for=yourself(m) I and=all that to=me.
@@ -754,12 +753,12 @@
 \v 8 And=they_said to=him/it all_of the÷elders and=all the÷people do_not listen and÷not you_must_be_willing.
 \v 9 And=he/it_said to÷the_messengers_of Ben say to÷master_of÷my the=king all that you_sent to servant_of÷your at÷first I_will_do and÷the÷thing the=this not I_am_able for=doing and÷they_went the÷messengers and÷they÷brought_him_back message.
 \v 10 And÷he_sent to=him/it Ben Hₐdad and=he/it_said thus may÷they_do to=me \add the\add*_gods and÷thus may_they_add if it_will_suffice the_dust_of Shomrōn for÷handfuls to/from=all/each/any/every the÷people which \add is\add*_at÷feet_of÷my.
-\v 11 And= the_king_of =he_answered of_Yisrā\sup ʼēl\sup*/(Israel) and=he/it_said speak not let_him_boast \add one_who\add*_girds_on like÷\add one_who\add*_untie/releases.
+\v 11 And= the_king_of =he_answered of_Yisrā\sup ʼēl\sup*/(Israel) and=he/it_said speak not let_him_boast \add one_who\add*_girds_on like÷\add one_who\add*_untie/releasens.
 \v 12 And=he/it_was just÷as_heard DOM the÷message the=this and=he \add was\add*_drinking he and÷the÷kings in÷booths and=he/it_said to servants_of÷his set_yourselves and÷they_set_themselves on the=city.
 \v 13 And=BEHOLD/LO/SEE a_prophet one he_drew_near to ʼAḩʼāⱱ the_king_of Yisrā\sup ʼēl\sup*/(Israel) and=he/it_said thus \nd YHWH\nd* he_says do÷you_see DOM all_of the÷multitude (the)÷great the=this HERE÷I \add am\add*_about_of÷to_give_it in÷hand_of÷your the=day and÷you_will_know if/because_that I \add am\add*_\nd YHWH\nd*.
 \v 14 And= ʼAḩʼāⱱ =he/it_said by÷whom and=he/it_said thus \nd YHWH\nd* he_says by÷the_young_men_of the_officials_of the_provinces and=he/it_said who will_he_begin the÷battle and=he/it_said you.
 \v 15 And÷he_mustered DOM the_young_men_of the_officials_of the_provinces and=they_were two_hundred two and=thirty and÷after÷them he_mustered DOM all_of the÷people all_of the_people_of Yisrā\sup ʼēl\sup*/(Israel) \add were\add*_seven_of thousand(s).
-\v 16 And=they_went_out at÷noontide(s) and hₐdad \add was\add*_drinking drunken in÷booths he and÷the÷kings thirty and÷two king[s] \add who_was\add*_helping DOM=him/it.
+\v 16 And=they_went_out at÷noontide(s) and÷Ben- hₐdad \add was\add*_drinking drunken in÷booths he and÷the÷kings thirty and÷two king[s] \add who_was\add*_helping DOM=him/it.
 \v 17 And= the_young_men_of =they_went_out of_the_officials_of of÷the_provinces at÷first and= Ben =he_sent Hₐdad and÷people_told to=him/it to=say men they_have_come_out from÷Shomrōn.
 \v 18 And=he/it_said if for÷peace they_have_come_out seize÷them alive and=if for÷battle they_have_come_out alive seize÷them.
 \v 19 And=these they_went_out from the=city the_young_men_of the_officials_of the_provinces and÷the÷army which \add was\add*_behind÷them.
@@ -773,7 +772,7 @@
 \v 27 And=the_sons of_Yisrā\sup ʼēl\sup*/(Israel) they_were_mustered and÷they_were_supplied and÷they_went to÷meet÷them and= the_people_of =they_encamped of_Yisrā\sup ʼēl\sup*/(Israel) before÷them like÷two_of little_flocks_of goats and÷ʼArām they_filled DOM the=earth/land.
 \v 28 And= the_man_of =he_drew_near the=ʼElohīm and=he/it_said to the_king_of Yisrā\sup ʼēl\sup*/(Israel) and=he/it_said thus \nd YHWH\nd* he_says because that they_have_said ʼArām \add is\add*_a_god_of mountains \nd YHWH\nd* and=not \add is\add*_a_god_of valleys he and÷I_will_give DOM all_of the÷multitude (the)÷great the=this in÷hand_of÷your and÷you(pl)_will_know if/because_that I \add am\add*_\nd YHWH\nd*.
 \v 29 And÷they_encamped these opposite_to these seven_of days and=he/it_was in_the=day the=seventh and÷it_drew_near the÷battle and= the_people_of =they_struck_down of_Yisrā\sup ʼēl\sup*/(Israel) DOM ʼArām one_hundred thousand foot_soldier[s] in/on=day one.
-\v 30 And÷they_fled \add those÷who\add*_remained to÷ʼAfēq into the=city and÷it_fell the÷wall on twenty and=seven thousand man \add who\add*÷remained and hₐdad he_fled and÷he_went into the=city a_room in÷a_room.
+\v 30 And÷they_fled \add those÷who\add*_remained to÷ʼAfēq into the=city and÷it_fell the÷wall on twenty and=seven thousand man \add who\add*÷remained and÷Ben- hₐdad he_fled and÷he_went into the=city a_room in÷a_room.
 \v 31 and=they_said to=him/it servants_of÷his HERE please we_have_heard if/because_that the_kings_of the_house_of Yisrā\sup ʼēl\sup*/(Israel) if/because_that \add are\add*_kings_of covenant_loyalty they let_us_put please sackcloth(s) on÷loins_of÷our and÷ropes on÷head_of÷our and÷let_us_go_out to the_king_of Yisrā\sup ʼēl\sup*/(Israel) perhaps he_will_let_live DOM life_of÷your.
 \v 32 And÷they_girded sackcloth(s) on÷loins_of÷their and÷ropes on÷heads_of÷their and=they_came to the_king_of Yisrā\sup ʼēl\sup*/(Israel) and=they_said servant_of÷your Ben Hₐdad he_says let_it_live please life_of÷my and=he/it_said \add is\add*÷still÷he alive my=brother/kindred he.
 \v 33 And÷the÷men they_observed_the_signs and÷they_hastened and÷they_caught from÷him and=they_said your(ms)=brother/kindred Ben Hₐdad and=he/it_said go fetch÷him and=he/it_went_out to=him/it Ben Hₐdad and÷he÷brought_him_up on the÷chariot.
@@ -839,7 +838,7 @@
 \v 17 And=he/it_said I_saw DOM all_of Yisrā\sup ʼēl\sup*/(Israel) scattered to the÷mountains like÷flock which there_\add is\add*_not to/for=them a_shepherd and= \nd YHWH\nd* =he/it_said not masters \add belong\add*_to÷these let_them_return each to÷his_own_of÷house in÷peace.
 \v 18 And= the_king_of =he/it_said of_Yisrā\sup ʼēl\sup*/(Israel) to Yəhōshāfāţ/(Jehoshaphat) am=not did_I_say to÷you not he_prophesies on÷me good if/because (if) evil.
 \v 19 And=he/it_said for=so/thus/hence hear the_message_of \nd YHWH\nd* I_saw DOM \nd YHWH\nd* sitting on throne_of÷his and=all the_soldier/messenger_of the=heavens standing on/upon/above=him/it from÷right_of÷his and÷from÷left_of÷his.
-\v 20 And= \nd YHWH\nd* =he/it_said who will_he_deceive DOM ʼAḩʼāⱱ so÷that_he_will_go_up and÷so_that_he_will_fall at gilˊād and=he/it_said this_\add one\add* by÷thus and=this \add was\add*_saying by÷thus.
+\v 20 And= \nd YHWH\nd* =he/it_said who will_he_deceive DOM ʼAḩʼāⱱ so÷that_he_will_go_up and÷so_that_he_will_fall at÷Rāmot- gilˊād and=he/it_said this_\add one\add* by÷thus and=this \add was\add*_saying by÷thus.
 \v 21 And=he/it_went_out the÷spirit and÷it_stood to=(the)_face_of/in_front_of/before \nd YHWH\nd* and=he/it_said I I÷will_deceive_him\f + \fr 22:21 \ft Note: KJB: 1Kgs.22.22\f* and= \nd YHWH\nd* =he/it_said to=him/it how.
 \v 22 And=he/it_said I_will_go_out and=I_will_be a_spirit_of falsehood in÷the_mouth_of all_of prophets_of÷his and=he/it_said you_will_deceive and=also you_will_prevail go_out and÷do thus.
 \v 23 And=now HERE he_has_put \nd YHWH\nd* a_spirit_of falsehood in÷the_mouth_of all_of prophets_of÷your these and=\nd YHWH\nd* he_has_spoken on÷you calamity.
@@ -868,7 +867,7 @@
 \v 46 \f + \fr 22:46 \ft Note: KJB: 1Kgs.22.45\f* and÷the_rest_of the_matters_of Yəhōshāfāţ and÷might_of÷his which he_did and=which he_waged_war not \add are\add*_they written on the_scroll_of the_matters_of the=days of÷the_kings_of of_Yəhūdāh.
 \v 47 \f + \fr 22:47 \ft Note: KJB: 1Kgs.22.46\f* and÷the_rest_of the_male_cult_prostitute[s] which it_remained in÷the_days_of ʼĀşāʼ his/its=father he_destroyed from the=earth/land.
 \v 48 \f + \fr 22:48 \ft Note: KJB: 1Kgs.22.47\f* and÷a_king there_\add was\add*_not in÷ʼEdōm an_overseer \add was\add*_king.
-\v 49 \f + \fr 22:49 \ft Note: KJB: 1Kgs.22.48\f* Yəhōshāfāţ/(Jehoshaphat) he_made\f + \fr 22:49 \ft OSHB variant note: עשר: (x-qere) 'עָשָׂה֩': lemma=6213 morph=HVqp3ms id=113AH עָשָׂה֩\f* (the)_ships_of Tarshiysh to=go to÷ʼŌfīr for÷gold and=not it_went if/because they_were_broken\f + \fr 22:49 \ft OSHB variant note: נשברה: (x-qere) 'נִשְׁבְּר֥וּ': lemma=7665 morph=HVNp3cp id=11cyX נִשְׁבְּר֥וּ\f* \add the\add*_ships at geⱱer.
+\v 49 \f + \fr 22:49 \ft Note: KJB: 1Kgs.22.48\f* Yəhōshāfāţ/(Jehoshaphat) he_made\f + \fr 22:49 \ft OSHB variant note: עשר: (x-qere) 'עָשָׂה֩': lemma=6213 morph=HVqp3ms id=113AH עָשָׂה֩\f* (the)_ships_of Tarshiysh to=go to÷ʼŌfīr for÷gold and=not it_went if/because they_were_broken\f + \fr 22:49 \ft OSHB variant note: נשברה: (x-qere) 'נִשְׁבְּר֥וּ': lemma=7665 morph=HVNp3cp id=11cyX נִשְׁבְּר֥וּ\f* \add the\add*_ships at÷ˊEʦyon- geⱱer.
 \v 50 \f + \fr 22:50 \ft Note: KJB: 1Kgs.22.49\f* then ʼAḩaz\sup yāh\sup* he_said the_son_of ʼAḩʼāⱱ to Yəhōshāfāţ servants_of÷my let_them_go with your=servants in÷the_ships and=not Yəhōshāfāţ he_was_willing.
 \v 51 \f + \fr 22:51 \ft Note: KJB: 1Kgs.22.50\f* and= Yəhōshāfāţ =he_lay_down with ancestors_of÷his and÷he_was_buried with ancestors_of÷his in÷the_city_of Dāvid his/its=father and= Yəhōrām/(Jehoram) =he_became_king his/its=son in÷place_of_him.
 \v 52 \f + \fr 22:52 \ft Note: KJB: 1Kgs.22.51\f* ʼAḩaz\sup yāh\sup* the_son_of ʼAḩʼāⱱ he_became_king over Yisrā\sup ʼēl\sup*/(Israel) in÷Shomrōn in=year seven- teen of÷Yəhōshāfāţ the_king_of Yəhūdāh/(Judah) and÷he_reigned over Yisrā\sup ʼēl\sup*/(Israel) two_years.

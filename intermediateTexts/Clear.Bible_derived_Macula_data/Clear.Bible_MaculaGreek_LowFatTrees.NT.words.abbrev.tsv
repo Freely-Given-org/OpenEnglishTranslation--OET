@@ -12719,7 +12719,7 @@ MAT_21:38w10	40Oc5	s	Οὗτός	 	pron		m	s					demonstrative	092007		21:38w6		
 MAT_21:38w11	401Rc	vc	ἐστιν	 	v	3		s	present	active	indicative			013001				V-PAI-3S	εἰμί		2076	is	Conj-CL/o=ClCl/S-VC-P
 MAT_21:38w12	406Cs	p	ὁ	 	det		m	s						092004				T-NSM	ὁ		3588	the	Conj-CL/o=ClCl/S-VC-P/p=DetNP
 MAT_21:38w13	40T5B	p	κληρονόμος	·	n		m	s					com	057009				N-NSM	κληρονόμος		2818	heir	Conj-CL/o=ClCl/S-VC-P/p=DetNP
-MAT_21:38w14	40JtA	v	δεῦτε	 	adv	2		p	present	active	imperative			084002	A0:n40021038003	21:38w3;21:38w6		V-PAM-2P	δεῦτε		1205	come	Conj-CL/o=ClCl/ClCl2/V2CL
+MAT_21:38w14	40JtA	v	δεῦτε	 	adv	2		p	present	active	imperative			084002	A0:n40021038003	21:38w6;21:38w3		V-PAM-2P	δεῦτε		1205	come	Conj-CL/o=ClCl/ClCl2/V2CL
 MAT_21:38w15	40QfL	v	ἀποκτείνωμεν	 	v	1		p	aorist	active	subjunctive			020004	A0:n40021038003 A1:n40021038016	21:38w3		V-PAS-1P	ἀποκτείνω		615	let us kill	Conj-CL/o=ClCl/ClCl2/CLaCL/V-O
 MAT_21:38w16	401lA	o	αὐτὸν	 	pron		m	s					personal	092004		21:38w6		P-ASM	αὐτός		846	him	Conj-CL/o=ClCl/ClCl2/CLaCL/V-O
 MAT_21:38w17	40PL5	o	καὶ	 	conj									089015				CONJ	καί		2532	and	Conj-CL/o=ClCl/ClCl2/CLaCL
@@ -26113,7 +26113,7 @@ MRK_12:7w9	41lpk	s	Οὗτός	 	pron		m	s					demonstrative	092007		12:6w4		D-N
 MRK_12:7w10	41VLh	vc	ἐστιν	 	v	3		s	present	active	indicative			013001				V-PAI-3S	εἰμί		2076	is	Conj-CL/o=that-VP
 MRK_12:7w11	41MMx	p	ὁ	 	det		m	s						092004				T-NSM	ὁ		3588	the	Conj-CL/o=that-VP/p=DetNP
 MRK_12:7w12	41YIu	p	κληρονόμος	·	n		m	s					com	057009				N-NSM	κληρονόμος		2818	heir	Conj-CL/o=that-VP/p=DetNP
-MRK_12:7w13	41Z8s	v	δεῦτε	 	adv	2		p	present	active	imperative			084002	A0:n41012007004	12:7w4;12:6w4		V-PAM-2P	δεῦτε		1205	come	Conj-CL/o=that-VP/CLaCL/ClCl2/V2CL
+MRK_12:7w13	41Z8s	v	δεῦτε	 	adv	2		p	present	active	imperative			084002	A0:n41012007004	12:6w4;12:7w4		V-PAM-2P	δεῦτε		1205	come	Conj-CL/o=that-VP/CLaCL/ClCl2/V2CL
 MRK_12:7w14	41CwB	v	ἀποκτείνωμεν	 	v	1		p	aorist	active	subjunctive			020004	A0:n41012007004 A1:n41012007015	12:7w4		V-PAS-1P	ἀποκτείνω		615	let us kill	Conj-CL/o=that-VP/CLaCL/ClCl2/V-O
 MRK_12:7w15	41i7D	o	αὐτόν	,	pron		m	s					personal	092004		12:6w4		P-ASM	αὐτός		846	him	Conj-CL/o=that-VP/CLaCL/ClCl2/V-O
 MRK_12:7w16	41tFU	o	καὶ	 	conj									089015				CONJ	καί		2532	and	Conj-CL/o=that-VP/CLaCL

@@ -5,14 +5,13 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2026-08-28 09:26 by extract_glossed_OSHB_OT_to_ESFM v1.0.5
+\rem ESFM file created 2026-09-16 11:49 by extract_glossed_OSHB_OT_to_ESFM v1.0.6
 \rem ESFM file edited by ScriptedBibleEditor v0.8.2 using ScriptedOTUpdates
 \h Psalms
 \toc1 Psalms
 \toc2 Psalms
 \toc3 Psa
 \mt1 Songs/Psalms
-\ie
 \c 1
 \nb
 \v 1 How_blessed the=man\f + \fr 1:1 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* who not he_walks in_\add the\add*÷counsel_of wicked_\add people\add* and÷in_\add the\add*÷way_of sinners not he_stands and÷in_\add the\add*÷seat_of mockers not he_sits.
@@ -56,7 +55,7 @@
 \v 6 \f + \fr 4:6 \ft Note: KJB: Ps.4.5\f* sacrifice sacrifices_of righteousness and÷trust to \nd YHWH\nd*.
 \v 7 \f + \fr 4:7 \ft Note: KJB: Ps.4.6\f* many_\add people\add* \add are\add*_saying who will÷he_show_us\f + \fr 4:7 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* good lift÷up on÷us the_light_of your(pl)_face_of÷your Oh_\nd YHWH\nd*.
 \v 8 \f + \fr 4:8 \ft Note: KJB: Ps.4.7\f* you_have_put joy in÷heart_of÷my more÷than_a_time_of grain_of÷\add when\add*_their and÷their_new_of÷wine they_abound.
-\v 9 \f + \fr 4:9 \ft Note: KJB: Ps.4.8\f* in÷peace together I_will_lie_down and÷I_will_sleep if/because you Oh_\nd YHWH\nd* alone to÷security you÷caused_me_to_dwell.
+\v 9 \f + \fr 4:9 \ft Note: KJB: Ps.4.8\f* in÷peace together I_will_lie_down and÷I_will_sleep if/because you Oh_\nd YHWH\nd* alone÷alone to÷security you÷caused_me_to_dwell.
 \c 5
 \nb
 \v 1 To÷choirmaster to the÷flutes a_song of÷Dāvid.
@@ -137,7 +136,7 @@
 \v 16 \f + \fr 9:16 \ft Note: KJB: Ps.9.15\f* nations they_have_sunk in_\add the\add*÷pit \add which\add*_they_made in_\add the\add*÷net which they_had_hidden foot_of÷their it_has_been_caught.
 \v 17 \f + \fr 9:17 \ft Note: KJB: Ps.9.16\f* he_has_made_himself_known \nd YHWH\nd* justice he_has_done by÷the_work_of his_hands_of÷his \add he\add*_\add is\add*_striking_down \add the\add*_wicked Higgāyōn Şelāh.
 \v 18 \f + \fr 9:18 \ft Note: KJB: Ps.9.17\f* they_will_return wicked_\add people\add* to÷Shāʼūl/(Saul)÷Shəʼōl all_of \add the\add*_nations forgetful_of god.
-\v 19 \f + \fr 9:19 \ft Note: KJB: Ps.9.18\f* if/because not to÷perpetuity he_will_be_forgotten \add the\add*_needy \add the\add*_hope_of afflicted_\add people\add*\f + \fr 9:19 \ft OSHB variant note: ענוים: (x-qere) 'עֲ֝נִיִּ֗ים': lemma=6041 n=0.0 morph=HAampa id=19twL עֲ֝נִיִּ֗ים\f* it_will_be_lost forever.
+\v 19 \f + \fr 9:19 \ft Note: KJB: Ps.9.18\f* if/because not to÷perpetuity he_will_be_forgotten \add the\add*_needy \add the\add*_hope_of afflicted_\add people\add*\f + \fr 9:19 \ft OSHB variant note: ענוים: (x-qere) 'עֲ֝נִיִּ֗ים': lemma=6041 n=0.0 morph=HAampa id=19twL עֲ֝נִיִּ֗ים\f* it_will_be_lost forever÷ever.
 \v 20 \f + \fr 9:20 \ft Note: KJB: Ps.9.19\f* arise Oh_\nd YHWH\nd* not humankind let_it_prevail \add the\add*_nations let_them_be_judged on face_of÷your.
 \v 21 \f + \fr 9:21 \ft Note: KJB: Ps.9.20\f* appoint Oh_\nd YHWH\nd* terror to/for=them \add the\add*_nations may_they_know \add are\add*_human_being[s] they Şelāh.
 \c 10
@@ -298,7 +297,7 @@
 \v 7 \f + \fr 19:7 \ft Note: KJB: Ps.19.6\f* \add is\add*_from÷the_end_of the=heavens forth_of÷its_going and÷circuit_of÷its \add is\add*_to ends_of÷their and÷there_\add is\add*_not \add a_thing\add*_hidden from÷heat_of÷its.\f + \fr 19:7 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f*
 \v 8 \f + \fr 19:8 \ft Note: KJB: Ps.19.7\f* the_instruction_of \nd YHWH\nd* \add is\add*_perfect restoring_of (of)_life the_transcript_of \nd YHWH\nd* \add is\add*_reliable making_wise_of (of)_a_simple_person.
 \v 9 \f + \fr 19:9 \ft Note: KJB: Ps.19.8\f* the_precepts_of \nd YHWH\nd* \add are\add*_upright making_glad_of (of)_\add the\add*_heart the_command_of \nd YHWH\nd* \add is\add*_pure enlightening_of (of)_eyes.
-\v 10 \f + \fr 19:10 \ft Note: KJB: Ps.19.9\f* the_fear_of \nd YHWH\nd* \add is\add*_pure enduring forever the_judgements_of \nd YHWH\nd* \add are\add*_truth they_are_righteous altogether.
+\v 10 \f + \fr 19:10 \ft Note: KJB: Ps.19.9\f* the_fear_of \nd YHWH\nd* \add is\add*_pure enduring forever÷forever the_judgements_of \nd YHWH\nd* \add are\add*_truth they_are_righteous altogether.
 \v 11 \f + \fr 19:11 \ft Note: KJB: Ps.19.10\f* (the)÷desirable more÷than_gold and÷more÷than_pure_gold much and÷sweet more÷than_honey and_\add the\add*÷honey_of honeycombs.
 \v 12 \f + \fr 19:12 \ft Note: KJB: Ps.19.11\f* also servant_of÷your \add is\add*_warned (is)_in=them \add is\add*_in÷keeping÷them consequence great.
 \v 13 \f + \fr 19:13 \ft Note: KJB: Ps.19.12\f* errors who will_he_discern from÷hidden_\add sins\add* acquit÷me.
@@ -324,7 +323,7 @@
 \v 4 \f + \fr 21:4 \ft Note: KJB: Ps.21.3\f* if/because you÷meet_him blessings_of good_thing[s] you_set to÷head_of÷his a_crown_of pure_gold.
 \v 5 \f + \fr 21:5 \ft Note: KJB: Ps.21.4\f* life he_asked from÷you you_gave_\add it\add* for=him/it length_of days forever and÷ever.
 \v 6 \f + \fr 21:6 \ft Note: KJB: Ps.21.5\f* \add is\add*_great\f + \fr 21:6 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* honour_of÷his by÷victory_of÷your splendour and÷majesty you_place on/upon/above=him/it.
-\v 7 \f + \fr 21:7 \ft Note: KJB: Ps.21.6\f* if/because you÷give_him blessings forever you÷make_him_rejoice with÷gladness with presence_of÷your.
+\v 7 \f + \fr 21:7 \ft Note: KJB: Ps.21.6\f* if/because you÷give_him blessings forever÷eternity you÷make_him_rejoice with÷gladness with presence_of÷your.
 \v 8 \f + \fr 21:8 \ft Note: KJB: Ps.21.7\f* if/because the=king \add is\add*_trusting in÷\nd YHWH\nd* and÷in÷the_covenant_loyalty_of the_Most_High not he_will_be_shaken.
 \v 9 \f + \fr 21:9 \ft Note: KJB: Ps.21.8\f* hand_of÷your it_will_find to/from=all/each/any/every enemies_of÷your hand_of÷your_right it_will_find \add those_of÷who\add*_hate_you.
 \v 10 \f + \fr 21:10 \ft Note: KJB: Ps.21.9\f* you÷will_make_them like÷a_furnace_of fire to÷the_time_of your(pl)_presence_of÷your \nd YHWH\nd* in÷anger_of÷his he÷will_swallow_them_up and÷it÷will_consume_them fire.
@@ -360,7 +359,7 @@
 \v 24 \f + \fr 22:24 \ft Note: KJB: Ps.22.23\f* Oh_\add those\add*_fearing_of (of)_\nd YHWH\nd* praise÷him Oh_all_of the_offspring_of Yaˊₐqoⱱ/(Jacob) honour÷him and÷be_afraid from=him/it Oh_all_of the_offspring_of Yisrā\sup ʼēl\sup*/(Israel).
 \v 25 \f + \fr 22:25 \ft Note: KJB: Ps.22.24\f* if/because not he_has_despised and=not he_has_detested \add the\add*_affliction_of an_afflicted_\add person\add* and=not he_has_hidden his/its=faces/face from=him/it and÷when÷he÷cried_for_help to=him/it he_heard.
 \v 26 \f + \fr 22:26 \ft Note: KJB: Ps.22.25\f* \add is\add*_from÷with÷you praise_of÷my in_\add the\add*÷assembly great vows_of÷my I_will_pay before \add those\add*_fearing_of÷him.
-\v 27 \f + \fr 22:27 \ft Note: KJB: Ps.22.26\f* they_will_eat humble_\add people\add* and÷they_will_be_satisfied they_will_praise \nd YHWH\nd* \add those_of÷who\add*_seek_him heart_of÷your(pl) may_it_live forever.
+\v 27 \f + \fr 22:27 \ft Note: KJB: Ps.22.26\f* they_will_eat humble_\add people\add* and÷they_will_be_satisfied they_will_praise \nd YHWH\nd* \add those_of÷who\add*_seek_him heart_of÷your(pl) may_it_live forever÷forever.
 \v 28 \f + \fr 22:28 \ft Note: KJB: Ps.22.27\f* they_will_remember and÷they_will_turn to \nd YHWH\nd* all_of \add the\add*_ends_of \add the\add*_earth and÷they_will_bow_down to=your=face all_of \add the\add*_clans_of \add the\add*_nations.
 \v 29 \f + \fr 22:29 \ft Note: KJB: Ps.22.28\f* if/because to/for=\nd YHWH\nd* the=royalty and÷\add he\add*_\add is\add*_ruling over÷nations.
 \v 30 \f + \fr 22:30 \ft Note: KJB: Ps.22.29\f* they_have_eaten and÷they_have_bowed_down\f + \fr 22:30 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* all_of \add the\add*_fat_\add people\add*_of \add the\add*_earth before÷him all_of they_will_bow_down dust \add those_who\add*_go_down_of and÷\add one_of÷who\add*_his_life not he_has_preserved_alive.
@@ -477,7 +476,7 @@
 \v 9 \f + \fr 30:9 \ft Note: KJB: Ps.30.8\f* to÷you Oh_\nd YHWH\nd* I_called_out and=near/to my=master I_sought_favour.
 \v 10 \f + \fr 30:10 \ft Note: KJB: Ps.30.9\f* what \add is\add*_\add the\add*_profit in÷blood_of÷my in÷my_going÷down to \add the\add*_pit will÷it÷give_thanks_to_you dust will÷it_declare faithfulness_of÷your.
 \v 11 \f + \fr 30:11 \ft Note: KJB: Ps.30.10\f* hear Oh_\nd YHWH\nd* and÷show÷favour_to_me Oh_\nd YHWH\nd*\f + \fr 30:11 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f* be a_helper to=me.
-\v 12 \f + \fr 30:12 \ft Note: KJB: Ps.30.11\f* you_turned wailing_of÷my into÷dancing to=me you_untie/releaseed sackcloth_of÷my and÷you÷girded_me joy.
+\v 12 \f + \fr 30:12 \ft Note: KJB: Ps.30.11\f* you_turned wailing_of÷my into÷dancing to=me you_untie/releasened sackcloth_of÷my and÷you÷girded_me joy.
 \v 13 \f + \fr 30:13 \ft Note: KJB: Ps.30.12\f* so_that it÷may_sing_praises_to_you honour and=not it_may_be_silent Oh_\nd YHWH\nd* god_of÷my forever÷perpetuity I÷will_give_thanks_to_you.
 \c 31
 \nb
@@ -643,7 +642,7 @@
 \v 26 All_of the=day \add he\add*_\add is\add*_showing_favour and÷\add he\add*_\add is\add*_lending and÷offspring_of÷his \add become\add*_(into)÷a_blessing.
 \v 27 Turn_away from÷evil and÷do good and÷dwell forever÷perpetuity.
 \v 28 If/because \nd YHWH\nd* \add is\add*_loving justice and=not he_will_abandon DOM his_faithful_of÷\add people\add* forever÷perpetuity they_are_preserved and_\add the\add*÷offspring_of wicked_\add people\add* it_is_cut_off.
-\v 29 righteous_\add people\add* they_will_possess \add the\add*_land and÷they_will_dwell forever on÷it.
+\v 29 righteous_\add people\add* they_will_possess \add the\add*_land and÷they_will_dwell forever÷forever on÷it.
 \v 30 \add the\add*_mouth_of \add the\add*_righteous it_utters wisdom and÷tongue_of÷his it_speaks justice.
 \v 31 The_law_of his/its=god \add is\add*_in÷heart_of÷his not steps_of÷his it_slips.
 \v 32 \add is\add*_watching a_wicked_\add person\add* for_(the)÷\add person\add* and÷\add he\add*_\add is\add*_seeking to÷kill÷him.\f + \fr 37:32 \ft OSHB note: BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.\f*
@@ -695,7 +694,7 @@
 \v 11 \f + \fr 39:11 \ft Note: KJB: Ps.39.10\f* remove from÷on÷me plague_of÷your from÷the_soldier/messengerility_of your_hand_of÷your I I_have_come_to_an_end.
 \v 12 \f + \fr 39:12 \ft Note: KJB: Ps.39.11\f* with÷rebukes on iniquity you_have_disciplined a_person and÷you_have_melted like÷moth his_desired_of÷\add thing\add* \add is\add*_only vanity all_of humankind Şelāh.
 \v 13 \f + \fr 39:13 \ft Note: KJB: Ps.39.12\f* hear prayer_of÷my Oh_\nd YHWH\nd* and÷my_cry_of÷for_help give÷ear_to to tear[s]_of÷my do_not be_silent if/because \add am\add*_a_sojourner I with÷you a_resident_alien like÷all_of ancestors_of÷my.
-\v 14 \f + \fr 39:14 \ft Note: KJB: Ps.39.13\f* smear from÷me so÷that_I_may_be_cheerful before I_will_go and÷I_\add will\add*÷not_\add be\add*.
+\v 14 \f + \fr 39:14 \ft Note: KJB: Ps.39.13\f* smear from÷me so÷that_I_may_be_cheerful before÷before I_will_go and÷I_\add will\add*÷not_\add be\add*.
 \c 40
 \nb
 \v 1 To÷choirmaster of÷Dāvid a_song.
@@ -896,7 +895,7 @@
 \c 51
 \nb
 \v 1 To÷choirmaster a_song of÷Dāvid.
-\v 2 When÷came to=him/it Nātān the÷prophet when he_had_gone into Bath- sheba.
+\v 2 When÷came to=him/it Nātān the÷prophet when÷when he_had_gone into Bath- sheba.
 \v 3 \f + \fr 51:3 \ft Note: KJB: Ps.51.1\f* show÷favour_to_me Oh_god according÷to_of÷your_covenant_loyalty according÷to_the_greatness_of your(pl)_compassion(s)_of÷your wipe_out transgressions_of÷my.
 \v 4 \f + \fr 51:4 \ft Note: KJB: Ps.51.2\f* increase\f + \fr 51:4 \ft OSHB variant note: הרבה: (x-qere) 'הֶ֭רֶב': lemma=7235 a n=1.0 morph=HVhv2ms id=19M4p הֶ֭רֶב\f* wash÷me from÷iniquity_of÷my and÷from÷sin_of÷my cleanse÷me.
 \v 5 \f + \fr 51:5 \ft Note: KJB: Ps.51.3\f* if/because transgressions_of÷my I I_know and÷sin_of÷my \add is\add*_before÷me continually.
@@ -1016,7 +1015,7 @@
 \v 7 \f + \fr 58:7 \ft Note: KJB: Ps.58.6\f* Oh_god break_away teeth_of÷their in÷mouth_of÷their \add the\add*_teeth_of young_lions break_off Oh_\nd YHWH\nd*.
 \v 8 \f + \fr 58:8 \ft Note: KJB: Ps.58.7\f* may_they_flow like waters \add which\add*_they_go_about (for)÷themselves may_he_bend arrows_of÷his\f + \fr 58:8 \ft OSHB variant note: חצ/ו: (x-qere) 'חִ֝צָּ֗י/ו': lemma=2671 n=0.0 morph=HNcmpc/Sp3ms id=19oxz חִ֝צָּ֗י/ו\f* like let_them_be_cut_off.
 \v 9 \f + \fr 58:9 \ft Note: KJB: Ps.58.8\f* like a_snail_of \add which\add*_melting_away it_goes a_miscarriage_of a_woman_of (of)_\add which\add*_not they_have_seen \add the\add*_sun.
-\v 10 \f + \fr 58:10 \ft Note: KJB: Ps.58.9\f* before they_will_perceive pots_of÷your(pl) a_thorn_bush like alive like burning he÷will_sweep_it_away.
+\v 10 \f + \fr 58:10 \ft Note: KJB: Ps.58.9\f* before÷before they_will_perceive pots_of÷your(pl) a_thorn_bush like alive like burning he÷will_sweep_it_away.
 \v 11 \f + \fr 58:11 \ft Note: KJB: Ps.58.10\f* he_will_rejoice \add the\add*_righteous if/because he_has_seen vengeance feet_of÷his he_will_bathe in÷the_blood_of the_wicked.
 \v 12 \f + \fr 58:12 \ft Note: KJB: Ps.58.11\f* and= anyone =he_will_say surely fruit \add belongs\add*_to÷righteous surely there_\add is\add* a_god \add who\add*_judges on_the=earth.
 \c 59
@@ -1042,7 +1041,7 @@
 \c 60
 \nb
 \v 1 To÷choirmaster on shushan-_of eduth a_miktam of÷Dāvid to÷teach.
-\v 2 When÷struggled÷he with ʼArām Nahₐrayim and=DOM ʼArām Tsōⱱāh/(Zobah) and÷he_turned_back Yōʼāⱱ/(Joab) and÷he_struck_down DOM ʼEdōm in_\add the\add* Salt two_plus ten thousand.
+\v 2 When÷struggled÷he with ʼArām Nahₐrayim and=DOM ʼArām Tsōⱱāh/(Zobah) and÷he_turned_back Yōʼāⱱ/(Joab) and÷he_struck_down DOM ʼEdōm in_\add the\add*÷Valley_of Salt two_plus ten thousand.
 \v 3 \f + \fr 60:3 \ft Note: KJB: Ps.60.1\f* Oh_god you÷have_rejected_us you÷have_broken_out_against_us you_have_been_angry you_will_restore to/for=us.
 \v 4 \f + \fr 60:4 \ft Note: KJB: Ps.60.2\f* you_have_made_quake \add the\add*_land you÷have_split_it_open repair fractures_of÷its if/because it_is_shaking.
 \v 5 \f + \fr 60:5 \ft Note: KJB: Ps.60.3\f* you_have_made_see people_of÷your a_hard_\add thing\add* you÷have_made_us_drink wine staggering.
@@ -1065,7 +1064,7 @@
 \v 6 \f + \fr 61:6 \ft Note: KJB: Ps.61.5\f* if/because you Oh_god you_have_listened to÷vows_of÷my you_have_given the_possession_of \add those\add*_fearing_of name_of÷(of)_your.
 \v 7 \f + \fr 61:7 \ft Note: KJB: Ps.61.6\f* days to \add the\add*_days_of \add the\add*_king you_will_add years_of÷his \add be\add*_like a_generation and÷a_generation.
 \v 8 \f + \fr 61:8 \ft Note: KJB: Ps.61.7\f* may_he_sit forever to=(the)_face_of/in_front_of/before god covenant_loyalty and÷faithfulness appoint they÷will_preserve_him.
-\v 9 \f + \fr 61:9 \ft Note: KJB: Ps.61.8\f* thus I_will_sing_praises_to name_of÷your forever I÷to÷pay vows_of÷my day day.
+\v 9 \f + \fr 61:9 \ft Note: KJB: Ps.61.8\f* thus I_will_sing_praises_to name_of÷your forever÷ever I÷to÷pay vows_of÷my day day.
 \c 62
 \nb
 \v 1 To÷choirmaster on Yədūtūn/(Jeduthun) a_song of÷Dāvid.
@@ -1547,7 +1546,7 @@
 \v 8 \f + \fr 83:8 \ft Note: KJB: Ps.83.7\f* Gebal and÷ˊAmmōn and÷Amalek Fəleshet with the_inhabitants_of Tsor/(Tyre).
 \v 9 \f + \fr 83:9 \ft Note: KJB: Ps.83.8\f* also ʼAshshūr it_has_joined_itself with÷them they_have_become an_arm for÷the_children_of Lōţ Şelāh.
 \v 10 \f + \fr 83:10 \ft Note: KJB: Ps.83.9\f* do to/for=them like÷Midyān like÷Şīşərāʼ like÷Yāⱱīn/(Jabin) at÷the_wadi_of Qīshōn.
-\v 11 \f + \fr 83:11 \ft Note: KJB: Ps.83.10\f* they_were_destroyed at dor they_became dung for÷ground.
+\v 11 \f + \fr 83:11 \ft Note: KJB: Ps.83.10\f* they_were_destroyed at÷En- dor they_became dung for÷ground.
 \v 12 \f + \fr 83:12 \ft Note: KJB: Ps.83.11\f* make÷them their_noble_of÷\add people\add* like÷ˊOrēⱱ and÷like÷Zəʼēⱱ and÷like÷Zeⱱaḩ and÷like÷Tsalmunnāˊ/(Zalmunna) all_of princes_of÷their.
 \v 13 \f + \fr 83:13 \ft Note: KJB: Ps.83.12\f* who they_said let_us_take_possession_of to/for=ourselves DOM the_pastures_of god.
 \v 14 \f + \fr 83:14 \ft Note: KJB: Ps.83.13\f* my_god_of÷my make÷them like_(the)÷dust like÷chaff to=(the)_face_of/in_front_of/before a_wind.
@@ -1617,7 +1616,7 @@
 \v 7 And÷singers like÷dancers all_of springs_of÷my on/over=you(fs).
 \c 88
 \nb
-\v 1 A_song a_song of÷the_sons_of of_Qoraḩ to÷choirmaster on machalath- leannoth a_poem of÷Hēymān the÷Ezrachite.
+\v 1 A_song a_song of÷the_sons_of of_Qoraḩ to÷choirmaster on machalath- leannoth÷leannoth a_poem of÷Hēymān the÷Ezrachite.
 \v 2 \f + \fr 88:2 \ft Note: KJB: Ps.88.1\f* Oh_\nd YHWH\nd* the_god_of my_salvation_of÷my day I_have_cried_out in÷night before÷you.
 \v 3 \f + \fr 88:3 \ft Note: KJB: Ps.88.2\f* may_it_come to=your=face prayer_of÷my incline ear_of÷your to÷my_cry_of÷of_entreaty.
 \v 4 \f + \fr 88:4 \ft Note: KJB: Ps.88.3\f* if/because it_is_surfeited with÷troubles being_of÷my and÷life_of÷my to÷Shəʼōl they_have_approached.
@@ -1667,7 +1666,7 @@
 \v 27 \f + \fr 89:27 \ft Note: KJB: Ps.89.26\f* he he÷will_call_out_to_me father_of÷\add are\add*_my you god_of÷my and÷the_rock_of my_salvation_of÷my.
 \v 28 \f + \fr 89:28 \ft Note: KJB: Ps.89.27\f* also I firstborn I÷will_make_him most_high to_\add the\add*÷kings_of \add the\add*_earth.
 \v 29 \f + \fr 89:29 \ft Note: KJB: Ps.89.28\f* forever÷perpetuity I_will_keep\f + \fr 89:29 \ft OSHB variant note: אשמור: (x-qere) 'אֶשְׁמָר': lemma=8104 morph=HVqi1cs id=19b8w אֶשְׁמָר\f* to=him/it loyalty_of÷my_covenant and÷covenant_of÷my \add will_be\add*_reliable to=him/it.
-\v 30 \f + \fr 89:30 \ft Note: KJB: Ps.89.29\f* and÷I_will_establish forever his/its=seed and÷throne_of÷his like_\add the\add*÷days_of \add the\add*_heavens.
+\v 30 \f + \fr 89:30 \ft Note: KJB: Ps.89.29\f* and÷I_will_establish forever÷forever his/its=seed and÷throne_of÷his like_\add the\add*÷days_of \add the\add*_heavens.
 \v 31 \f + \fr 89:31 \ft Note: KJB: Ps.89.30\f* if they_will_abandon sons_of÷his law_of÷my and÷in÷judgements_of÷my not they÷will_walk.
 \v 32 \f + \fr 89:32 \ft Note: KJB: Ps.89.31\f* if regulations_of÷my they_will_violate and÷commands_of÷my not they_will_keep.
 \v 33 \f + \fr 89:33 \ft Note: KJB: Ps.89.32\f* and÷I_will_punish with÷a_rod transgression_of÷their and÷with÷plagues iniquity_of÷their.
@@ -1694,7 +1693,7 @@
 \c 90
 \nb
 \v 1 A_prayer of÷Mosheh the_man_of the=ʼElohīm\f + \fr 90:1 \ft Note: KJB: Ps.90.1\f* my=master a_dwelling_place you you_have_been to/for=ourselves in÷a_generation and÷a_generation.
-\v 2 Before mountains they_were_born and÷you_brought_forth \add the\add*_earth and_\add the\add*÷world and÷from÷antiquity until perpetuity you \add are\add*_god.
+\v 2 Before÷before mountains they_were_born and÷you_brought_forth \add the\add*_earth and_\add the\add*÷world and÷from÷antiquity until perpetuity you \add are\add*_god.
 \v 3 You_return humankind to crushed_matter and=she/it_said return Oh_children_of humankind.
 \v 4 If/because a_thousand years in÷eyes_of÷your \add are\add*_like÷a_day yesterday if/because it_passes and÷a_watch in÷night.
 \v 5 You÷flood_them sleep they_are in÷morning like÷grass \add which\add*_it_sprouts_up.
@@ -1864,7 +1863,7 @@
 \v 1 A_prayer of÷an_afflicted_\add person\add* if/because he_grows_faint and÷before_of \nd YHWH\nd* he_pours_out complaint_of÷his.
 \v 2 \f + \fr 102:2 \ft Note: KJB: Ps.102.1\f* Oh_\nd YHWH\nd* hear prayer_of÷my and÷my_cry_of÷for_help to÷you let_it_come.
 \v 3 \f + \fr 102:3 \ft Note: KJB: Ps.102.2\f* do_not hide face_of÷your from÷me in/on=day \add when\add*_it_is_distress to=me incline to=me ear_of÷your in/on=day \add when\add*_I_will_call_out hurry answer÷me.
-\v 4 \f + \fr 102:4 \ft Note: KJB: Ps.102.3\f* if/because they_have_come_to_an_end in÷smoke days_of÷my and÷bones_of÷my like furnace they_have_been_burnt.
+\v 4 \f + \fr 102:4 \ft Note: KJB: Ps.102.3\f* if/because they_have_come_to_an_end in÷smoke days_of÷my and÷bones_of÷my like÷furnace furnace they_have_been_burnt.
 \v 5 \f + \fr 102:5 \ft Note: KJB: Ps.102.4\f* it_has_been_struck like÷vegetation heart_of÷my and÷it_has_withered if/because I_have_forgotten from÷eating food_of÷my.
 \v 6 \f + \fr 102:6 \ft Note: KJB: Ps.102.5\f* from÷the_sound_of my_groaning_of÷my bone[s]_of÷my it_clings to÷flesh_of÷my.
 \v 7 \f + \fr 102:7 \ft Note: KJB: Ps.102.6\f* I_am_like (to)_a÷wilderness_owl_of \add the\add*_wilderness I_am like÷an_owl_of \add the\add*_waste_places.
@@ -1886,7 +1885,7 @@
 \v 23 \f + \fr 102:23 \ft Note: KJB: Ps.102.22\f* when÷gather peoples together and÷kingdoms to÷serve DOM \nd YHWH\nd*.
 \v 24 \f + \fr 102:24 \ft Note: KJB: Ps.102.23\f* he_has_humbled in÷way strength_of÷my\f + \fr 102:24 \ft OSHB variant note: כח/ו: (x-qere) 'כֹּחִ֗/י': lemma=3581 b n=1 morph=HNcmsc/Sp1cs id=19tAh כֹּחִ֗/י\f* he_has_cut_short days_of÷my.
 \v 25 \f + \fr 102:25 \ft Note: KJB: Ps.102.24\f* I_said my_god_of÷my do_not lift÷me_up in÷the_middle_of my_days_of÷my \add are\add*_in÷a_generation_of generations years_of÷your.
-\v 26 \f + \fr 102:26 \ft Note: KJB: Ps.102.25\f* formerly the=earth/land you_founded and_\add were\add*÷the_work_of your_two's_hands_of÷your \add the\add*_heavens.
+\v 26 \f + \fr 102:26 \ft Note: KJB: Ps.102.25\f* formerly÷beginning the=earth/land you_founded and_\add were\add*÷the_work_of your_two's_hands_of÷your \add the\add*_heavens.
 \v 27 \f + \fr 102:27 \ft Note: KJB: Ps.102.26\f* they they_will_perish and=you(ms) you_will_endure and÷all_of÷of_them like÷garment they_will_wear_out like÷clothing you÷will_change_them and÷they_will_pass_away.
 \v 28 \f + \fr 102:28 \ft Note: KJB: Ps.102.27\f* and=you(ms) \add are\add*_he and÷years_of÷your not they_will_come_to_an_end.
 \v 29 \f + \fr 102:29 \ft Note: KJB: Ps.102.28\f* the_children_of your=servants they_will_dwell and÷offspring_of÷their to=your=face it_will_be_established.
@@ -2027,7 +2026,7 @@
 \v 25 And÷they_murmured in÷tents_of÷their not they_listened to÷the_voice_of \nd YHWH\nd*.
 \v 26 And÷he_raised his/its=hand to/for=them to÷make_fall them in÷wilderness.
 \v 27 And÷to÷make_fall offspring_of÷their among÷nations and÷to÷scatter÷them among÷lands.
-\v 28 And÷they_joined_themselves to Pəˊōr and÷they_ate sacrifices_of dead_\add ones\add*.
+\v 28 And÷they_joined_themselves to÷Baˊal_of Pəˊōr and÷they_ate sacrifices_of dead_\add ones\add*.
 \v 29 And÷they_provoked_\add him\add*_to_anger by÷deeds_of÷their and÷it_broke_out among÷them a_plague.
 \v 30 And= Pinḩāş =he_stood_up and÷he_mediated and÷it_was_restrained the÷plague.
 \v 31 And÷it_was_reckoned to=him/it to÷righteousness to÷a_generation and÷a_generation until perpetuity.
@@ -2155,25 +2154,25 @@
 \nb
 \v 1 Praise Yah I_will_give_thanks_to \nd YHWH\nd* in=all \add the\add*_heart in_\add the\add*÷council_of upright_\add people\add* and_\add the\add*÷congregation.
 \v 2 \add are\add*_great the_works_of \nd YHWH\nd* \add they\add*_\add are\add*_studied to/from=all/each/any/every \add those\add*_delighting_of÷in_them.
-\v 3 \add is\add*_splendour and÷majesty work_of÷his and÷righteousness_of÷his \add is\add*_enduring forever.
+\v 3 \add is\add*_splendour and÷majesty work_of÷his and÷righteousness_of÷his \add is\add*_enduring forever÷forever.
 \v 4 Remembrance he_has_appointed of÷wonders_of÷his \add is\add*_gracious and÷compassionate \nd YHWH\nd*.
 \v 5 Food he_gives to_\add those\add*÷fearing_of÷him he_remembers forever÷perpetuity covenant_of÷his.
 \v 6 The_power_of his_works_of÷his he_has_declared to÷people_of÷his to÷give to/for=them an_inheritance_of nations.
 \v 7 The_works_of his_hands_of÷his \add are\add*_faithfulness and÷justice \add are\add*_reliable all_of precepts_of÷his.
-\v 8 \add they\add*_\add are\add*_sustained forever forever÷perpetuity \add they\add*_\add are\add*_done in÷faithfulness and÷upright\add ness\add*.
+\v 8 \add they\add*_\add are\add*_sustained forever÷ever forever÷perpetuity \add they\add*_\add are\add*_done in÷faithfulness and÷upright\add ness\add*.
 \v 9 Redemption he_sent for÷people_of÷his he_ordained forever÷perpetuity covenant_of÷his \add is\add*_holy and÷to_be_feared his/its=name.
-\v 10 \add is\add*_\add the\add*_beginning_of wisdom the_fear_of \nd YHWH\nd* an_understanding good\f + \fr 111:10 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* to/from=all/each/any/every \add those_of÷who\add*_do_them praise_of÷his \add is\add*_enduring forever.
+\v 10 \add is\add*_\add the\add*_beginning_of wisdom the_fear_of \nd YHWH\nd* an_understanding good\f + \fr 111:10 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* to/from=all/each/any/every \add those_of÷who\add*_do_them praise_of÷his \add is\add*_enduring forever÷eternity.
 \c 112
 \nb
 \v 1 Praise Yah how_blessed \add is\add*_a_person fearing DOM \nd YHWH\nd* in÷commands_of÷his he_delights exceedingly.
 \v 2 Mighty on_the=earth it_will_be his/its=seed \add the\add*_generation_of upright_\add people\add* it_will_be_blessed.
-\v 3 Wealth and÷rich[es] \add are\add*_in÷house_of÷his and÷righteousness_of÷his \add is\add*_enduring forever.
+\v 3 Wealth and÷rich[es] \add are\add*_in÷house_of÷his and÷righteousness_of÷his \add is\add*_enduring forever÷forever.
 \v 4 It_rises in÷darkness light\f + \fr 112:4 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* for÷\add people\add* \add he\add*_\add is\add*_gracious and÷compassionate and÷righteous.
 \v 5 \add is\add*_good a_person \add who\add*_shows_favour and_\add who\add*÷lends \add who\add*_he_maintains affairs_of÷his with÷justice.
 \v 6 If/because forever÷perpetuity not he_will_be_shaken (into)_a÷remembrance_of perpetuity he_will_become a_righteous_\add person\add*.
 \v 7 From÷new[s] bad not he_will_be_afraid his/its=heart \add is\add*_steadfast trusting in÷\nd YHWH\nd*.
 \v 8 his/its=heart \add is\add*_sustained not he_will_be_afraid until that he_will_look on÷foes_of÷his.
-\v 9 He_scatters he_gives to_(the)÷\add people\add* righteousness_of÷his \add is\add*_enduring forever horn_of÷his it_will_be_exalted in÷honour.
+\v 9 He_scatters he_gives to_(the)÷\add people\add* righteousness_of÷his \add is\add*_enduring forever÷forever horn_of÷his it_will_be_exalted in÷honour.
 \v 10 A_wicked_\add person\add* he_will_see and÷he_will_be_angry teeth_of÷his he_will_gnash and÷he_will_melt_away \add the\add*_desire_of wicked_\add people\add* it_will_perish.
 \c 113
 \nb
@@ -2233,7 +2232,7 @@
 \v 13 A_cup_of salvation(s) I_will_lift_up and÷on÷the_name_of \nd YHWH\nd* I_will_call.
 \v 14 Vows_of÷my to/for=\nd YHWH\nd* I_will_pay (to)÷before please to/from=all/each/any/every people_of÷his.
 \v 15 \add is\add*_precious in/on=both_eyes_of \nd YHWH\nd* the÷death of÷his_faithful_of÷\add people\add*.
-\v 16 Please Oh_\nd YHWH\nd* if/because I servant_of÷\add am\add*_your I servant_of÷\add am\add*_your the_son_of your(ms)=female_slave you_have_untie/releaseed (to)÷fetters_of÷my.
+\v 16 Please Oh_\nd YHWH\nd* if/because I servant_of÷\add am\add*_your I servant_of÷\add am\add*_your the_son_of your(ms)=female_slave you_have_untie/releasened (to)÷fetters_of÷my.
 \v 17 To/for=yourself(m) I_will_sacrifice a_sacrifice_of thanksgiving and÷on÷the_name_of \nd YHWH\nd* I_will_call.
 \v 18 Vows_of÷my to/for=\nd YHWH\nd* I_will_pay (to)÷before please to/from=all/each/any/every people_of÷his.
 \v 19 In÷the_courts_of the_house_of \nd YHWH\nd* in÷the_midst_of÷of_you Oh_Yərūshālam/(Jerusalem) praise Yah.
@@ -2812,7 +2811,7 @@
 \v 3 Praise÷him Oh_sun and÷moon praise÷him Oh_all_of \add the\add*_stars_of light.
 \v 4 Praise÷him Oh_heaven_of the=heavens and÷Oh÷waters which from=under the=heavens.
 \v 5 Let_them_praise DOM the_name_of \nd YHWH\nd* if/because he he_commanded and÷they_were_created.
-\v 6 And÷he÷established_them forever forever÷perpetuity a_decree he_gave and=not it_will_pass_away.
+\v 6 And÷he÷established_them forever÷ever forever÷perpetuity a_decree he_gave and=not it_will_pass_away.
 \v 7 Praise DOM \nd YHWH\nd* from the=earth/land Oh_sea_monsters and=all the_deeps.
 \v 8 Oh_fire and÷hail snow and÷smoke wind_of storm \add which\add*_does message_of÷his.
 \v 9 Oh÷mountains and=all hills tree[s]_of fruit and=all cedars.

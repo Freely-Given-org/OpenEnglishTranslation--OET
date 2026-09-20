@@ -54,7 +54,8 @@ CHANGELOG:
     ####2025-06-24 Remove superfluous final spaces from OSHB footnotes (why were they there???) Fixed upstream
     2025-06-29 Fixed a couple of systematic glossing errors ('todrink' and 'forhelp')
     2026-03-19 Did the minimum to get the updated Macula Hebrew data to work
-    2026-04-01 Added /ie at end of introduction (as although it's optional in USFM, it's part of the ESFM spec)
+    ####2026-04-01 Added /ie at end of introduction (as although it's optional in USFM, it's part of the ESFM spec)
+                    Reversed 2026-09-16 because we have no introductory text at all so it doesn't really make sense
     2026-05-08 Upgraded to bos_books_codes_py
     2026-05-24 Change 'behold' glosses 'there!','here!' to 'THERE','HERE' (rather than just deleting the exclamation marks)
 """
@@ -72,10 +73,10 @@ from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-07-21' # by RJH
+LAST_MODIFIED_DATE = '2026-09-16' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed_OSHB_OT_to_ESFM"
 PROGRAM_NAME = "Extract glossed OSHB OT ESFM files"
-PROGRAM_VERSION = '1.0.5'
+PROGRAM_VERSION = '1.0.6'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -318,8 +319,8 @@ def export_literal_English_gloss_esfm() -> bool:
 \\toc1 {English_book_name}
 \\toc2 {English_book_name}
 \\toc3 {USFM_book_code}
-\\mt1 {'Songs/Psalms' if English_book_name=='Psalms' else English_book_name}
-\\ie"""
+\\mt1 {'Songs/Psalms' if English_book_name=='Psalms' else English_book_name}"""
+#\\ie"""
             last_BBB = BBB
             last_chapter_number = last_verse_number = last_word_number = 0
         if chapter_number != last_chapter_number:  # we've started a new chapter

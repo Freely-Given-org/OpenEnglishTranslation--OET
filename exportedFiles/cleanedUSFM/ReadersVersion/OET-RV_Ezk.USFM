@@ -1,4 +1,4 @@
-\id EZK - Open English Translation—Readers’ Version (OET-RV) v0.1.29
+\id EZK - Open English Translation—Readers’ Version (OET-RV) v0.1.30
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 EZE
@@ -20,7 +20,7 @@
 \io1 The bad prophecies concerning Gog \ior 38:1–39:29\ior*
 \io1 The revelation concerning the coming temple and nation \ior 40:1–48:35\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
-\ie
+\rem NOTE: This USFM file was exported from the ESFM source file with some loss of features, so don’t edit this derived file.
 \c 1
 \ms1 Yehezkel’s calling to be a prophet
 \mr (1:1–3:27)
@@ -494,7 +494,7 @@
 \v 21 You slaughtered my children for the idols and made them pass through the fire.
 \v 22 In all your \add evil goings on\add* and your acts of prostitution, you \add never thought back to\add* the days \add when you were young\add*, when you were naked and bare as you thrashed about in your \add own\add* blood.
 \v 23 After all your wickedness, \add you won’t end well\add*. That’s the master Yahweh’s declaration.
-\s1 The anger of God on Yerushalem
+\s1 Yahweh’s anger at Yerushalem
 \p
 \v 24 You made yourself a mound and built a raised shrine in every public square.
 \v 25 You built your raised platform at the top of every street and made your beauty a disgrace, and you spread your legs for anyone who passed by, and you multiplied your acts of prostitution.
@@ -510,7 +510,7 @@
 \v 32 You adulterous woman, you \add prefer\add* strangers \add over\add* your husband.
 \v 33 \add It’s normal for\add* \add clients to pay\add* the prostitute, but you \add do the opposite\add*: you give your wages to all your lovers and bribe them to come to you from all around for your acts of prostitution.
 \v 34 \add Yes,\add* there’s a difference between you and other women. No one offers payment for you to act as a prostitute. You’re the very opposite—you \add paid\add* them \add but\add* nothing was given to you.
-\s1 The punishment of God of Yerushalem
+\s1 Yahweh’s punishment of Yerushalem
 \p
 \v 35 Therefore, \add Yerushalem\add*, you prostitute, listen to Yahweh’s message.
 \v 36 The master Yahweh says this: ‘Because you’ve poured out your lust and uncovered your nakedness through your acts of prostitution with your lovers and with all your detestable idols, and because you gave them your children’s blood,
@@ -523,7 +523,7 @@
 \v 42 Then I’ll calm my rage against you. My anger will leave you, because I’ll be satisfied and won’t be angry \add at you\add* any longer.
 \p
 \v 43 Because you didn’t call to mind your younger days, and made me shake with anger because of all those things, therefore, listen: I myself will bring the punishment for what you’ve done down onto your own head. That’s the master Yahweh’s declaration.
-\s1 Ke what the mother like just the child woman
+\s1 Like mother, like daughter
 \p Haven’t you added prostitution to all your other detestable practices?
 \v 44 Listen, everyone who speaks proverbs about you will say, “Like mother, like daughter.”
 \v 45 You are the daughter of your mother, who detested her husband and her children, and you are the sister of your sisters, who detested their husbands and their children. Your mother was a Hittite, and your father was an Amorite.
@@ -544,7 +544,7 @@
 \v 56 \add You never even mentioned your sister Sodom in the period when you were proud\add*,
 \v 57 before your wickedness was revealed. But now you’re an object of scorn to the daughters of Aram \add (Syria)\add* and to all the daughters of the Philistines around her. People all around despise you.
 \v 58 You’ll display your shame and your disgusting actions. That’s Yahweh’s declaration.
-\s1 The agreement without ending
+\s1 The permanent agreement
 \p
 \v 59 The master Yahweh says this: ‘I’ll deal with you as you deserve—you who’ve despised your oath by breaking \add our\add* agreement.
 \v 60 But I myself will call to mind my agreement with you that was made \add when you were younger\add*, and I’ll establish a never-ending agreement with you.
@@ -552,7 +552,7 @@
 \v 62 I myself will establish my agreement with you, and you’ll know that I am Yahweh,
 \v 63 so that you’ll call everything to mind and be ashamed. Then you’ll no longer open your mouth to speak, because of your shame, when I’ve forgiven you for everything you’ve done. That’s the master Yahweh’s declaration.’ ”
 \c 17
-\s1 The two eagles and the vine
+\s1 Two eagles and the vine
 \p
 \v 1 Then Yahweh \add gave\add* me \add another\add* message:
 \v 2 “Humanity’s child, present a riddle and tell a parable to the \add Israeli people\add*.
@@ -615,7 +615,7 @@
 \p
 \v 19 \add But you people ask\add*, ‘Why doesn’t the son \add also\add* have to \add pay the cost for his family’s crimes\add*?’ \add Well\add* it’s because the son \add promotes\add* justice and godliness and \add follows\add* all my instructions. He’ll definitely live.
 \v 20 The one who sins is the one who’ll die. The children won’t \add have to\add* \add be responsible for\add* their parents’ sin, and the parents won’t \add be responsible for\add* their children’s sins—the righteousness of those who act rightly will be on themselves, and the wickedness of the wicked will be on themselves.\x + \xo 18:20: \xt Deu 24:16.\x*
-\s2 The person repent of sins he/his
+\s2 Turning away from disobedience
 \p
 \v 21 \add But\add* if the wicked \add person\add* turns away from all \add their disobedience\add*, and \add follows\add* all my instructions and \add does what’s right and fair\add*, then \add that person\add* will certainly live and not die.
 \v 22 All \add their acts of disobedience\add* won’t be called to mind against them. They’ll live by the \add right things they do\add*.
@@ -763,7 +763,7 @@
 \v 4 \add Yes,\add* in order for me to \add eliminate\add* both the righteous and the wicked from you, my sword will go out from its sheath against \add everyone\add* from the south to the north,
 \v 5 then \add everyone\add* will know that I, Yahweh, have drawn my sword from its sheath. It will no longer hold back.’
 \p
-\v 6 As for you, humanity’s child, groan \add as if your pelvis has cracked\add*. Groan \add bitterly in front of them\add*.
+\v 6 As for you, the son of humanity, groan \add as if your pelvis has cracked\add*. Groan \add bitterly in front of them\add*.
 \v 7 \add That’ll get the people\add* asking you, ‘What are you groaning about?’ Then you’ll tell \add them\add*, ‘Because of the news that’s coming, because every \add stomach will go tense\add* and every hand will tremble. \add Breathing will become difficult\add*, and every knee will \add turn to jelly\add*. Listen, it’s coming, and \add that’s what it’ll be like\add*. That’s the master Yahweh’s declaration.’ ”
 \p
 \v 8 Then Yahweh \add gave\add* me \add another\add* message:
@@ -781,7 +781,7 @@
 \q1 The sword is sharpened and polished
 \q1 and will be \add handed to\add* the one who kills!” ’ ”
 \q1
-\v 12 Call for help and wail, humanity’s child,
+\v 12 Call for help and wail, the son of humanity,
 \q1 because that sword has come against my people.
 \q1 It’s against all of Yisrael’s leaders—
 \q1 they’re thrown against the sword along with my people.
@@ -824,7 +824,7 @@
 \v 27 A ruin. A ruin. \add Yes,\add* I’ll make it a ruin. It won’t be restored until the person comes who’s assigned to execute judgement.
 \s1 Yahweh warns the Ammonites
 \p
-\v 28 So you, humanity’s child, prophesy and say, ‘The master Yahweh says this to the Ammonites concerning their coming disgrace: A sword, a sword is drawn. It’s sharpened for the slaughter in order to devour, so it’ll be like lightning.\x + \xo 21:28-32: \xt Jer 49:1-6; Eze 25:1-7; Amos 1:3-15; Zeph 2:8-11; Gen 19:36-38; Jdg 3:12-13; 10:6-11.\x*
+\v 28 So you, the son of humanity, prophesy and say, ‘The master Yahweh says this to the Ammonites concerning their coming disgrace: A sword, a sword is drawn. It’s sharpened for the slaughter in order to devour, so it’ll be like lightning.\x + \xo 21:28-32: \xt Jer 49:1-6; Eze 25:1-7; Amos 1:3-15; Zeph 2:8-11; Gen 19:36-38; Jdg 3:12-13; 10:6-11.\x*
 \v 29 While prophets see empty visions for you and perform rituals to come up with lies for you, this sword will lie on the necks of the wicked who are about to be killed, whose day of punishment has come and whose time of \add disobedience\add* is about to end.
 \rem s1 Babylon’s end ???
 \p
@@ -1143,7 +1143,7 @@
 \v 8 They’ll send you down to the pit, and you’ll die \add violently\add* like those who die at sea.
 \v 9 Will you really say, “I’m a god” to the face of one who’s \add about to\add* kill you? You’re a man and not God, and you’ll be \add at the mercy\add* of the one who \add runs you through\add*.
 \v 10 You’ll die \add like an ungodly person killed by\add* foreigners, because I’ve declared it. That’s the master Yahweh’s declaration.’ ”
-\s1 The fall of the king of Tsor
+\s1 The fall of Tsor’s king
 \p
 \v 11 Then Yahweh \add gave\add* me \add another\add* message:
 \v 12 “Humanity’s child, \add sing a mourning song\add* for the king of Tsor \add (Tyre)\add* and tell him that the master Yahweh says this:
@@ -1183,7 +1183,7 @@
 \v 19 Everyone who knew you among the people groups
 \q1 will \add shudder to look at\add* you \add now\add*—
 \q1 they will be horrified, and you \add won’t exist any longer\add*.’ ”
-\s1 The punishment of Tsidon
+\s1 Tsidon’s punishment
 \p
 \v 20 Then Yahweh \add gave\add* me \add another\add* message:\x + \xo 28:20-26: \xt Yoel 3:4-8; 1Ki 11:4-5; 1Ki 16:30-33.\x*
 \q1
@@ -1197,7 +1197,7 @@
 \v 25 The master Yahweh says that when I gather the \add Jewish people\add* from the \add nations\add* that they were scattered among, and when they \add properly honour\add* me so the nations may see, then they’ll make their homes in the land I gave to my servant Yakov \add (Jacob)\add*.
 \v 26 Then they’ll live securely within \add the land\add* and build houses, plant vineyards, and live securely. When I execute justice on all the people all around who now despise them, then they’ll know that I am their god Yahweh.’ ”
 \c 29
-\s1 The punishment of Egypt
+\s1 Egypt’s punishment
 \p
 \v 1 \add At the beginning of January\add* in the twelfth year \add since King Yoyakin (Jehoiachin) had been taken captive\add*, Yahweh \add gave me\add* a message:\x + \xo 29:1–32:32: \xt Isa 19:1-25; Jer 46:2-26.\x*
 \v 2 “Humanity’s child, \add stand firmly\add* against Egypt’s king Far-oh \add (Pharaoh)\add*. Prophesy against him and against all of Egypt,
@@ -1636,7 +1636,7 @@
 \v 15 As those men pass through the land, when they see any human bone, they’ll put a marker by it, until gravediggers come and bury it in the Hamon-Gog valley.
 \v 16 There’ll even be a city there named ‘Hamonah’ \add (which means, ‘horde’ or ‘multitude’)\add*. In that way, they’ll make the land clean \add again\add*.
 \p
-\v 17 Now, humanity’s child, the master Yahweh says this to you: Tell all the winged birds and all the wild animals in the countryside, ‘Gather together and come. Gather from all around to the sacrifice that I myself am making for you—a large sacrifice on Yisrael’s mountains, so that you can eat \add human\add* flesh and drink blood.\x + \xo 39:17-20: \xt Rev 19:17-18.\x*
+\v 17 Now, the son of humanity, the master Yahweh says this to you: Tell all the winged birds and all the wild animals in the countryside, ‘Gather together and come. Gather from all around to the sacrifice that I myself am making for you—a large sacrifice on Yisrael’s mountains, so that you can eat \add human\add* flesh and drink blood.\x + \xo 39:17-20: \xt Rev 19:17-18.\x*
 \v 18 You’ll eat warriors’ flesh and drink the blood of the \add world’s leaders\add* as if they were rams, lambs, goats, and bulls that were all fattened in Bashan.
 \v 19 Then you’ll eat fat until \add you’re\add* full \add and\add* drink blood until \add you’re\add* drunk—that’ll be the sacrifice that I’ll slaughter for you \add birds and animals\add*.
 \v 20 You’ll be satisfied at my table with \add horses, chariot drivers, warriors,\add* and every man of war. That’s the master Yahweh’s declaration.’
@@ -1794,7 +1794,7 @@
 \v 16-19 He measured each side \add of the wall\add* with \add his\add* measuring rod, \add and it was\add* 270m\f + \fr 42:16 \ft Following the Septuagint here, which seems more accurate (unless he now has a shorter measuring rod).\f* long on each of the eastern, northern, southern, and western sides.
 \v 20 \add So\add* the four sides that were measured (and thus the wall around it) was 270m on each side, and the wall separated the sacred area from the \add public area\add*.
 \c 43
-\s1 The powerful splendour of God there to temple
+\s1 God’s powerful splendour of God at the temple
 \p
 \v 1 Then the man took me to the gate that opened to the east.
 \v 2 Wow! The splendour of Yisrael’s god \add appeared towards\add* the east. His voice was like the \add roar of rushing water\add*, and the land shone with his \add brilliance\add*.\x + \xo 43:2: \xt Eze 10:3-4,18-19; 11:22-23; Rev 1:15.\x*
@@ -1830,7 +1830,7 @@
 \v 26 They must atone for the altar for seven days and purify it, and in that way they must consecrate it \add to me\add*.
 \v 27 \add After doing all that\add*, from the eighth day onward the priests will prepare you \add people\add*’s burnt offerings and your peace offerings on the altar, and I’ll accept you. That’s the master Yahweh’s declaration.”
 \c 44
-\s1 The locked doorway
+\s1 The locked gate
 \p
 \v 1 Then the man took me back to the outer sanctuary gate facing east, \add but\add* it was shut,
 \v 2 and Yahweh told me, “This gate has been sealed shut—it won’t be opened. No person will go through it, because Yisrael’s god Yahweh entered through it, so it’s \add now\add* closed.
@@ -1851,7 +1851,7 @@
 \v 12 \add However,\add* because they sacrificed to their idols, they became sinful stumbling blocks for the \add Israeli people\add*, therefore I’ve \add promised to take action\add* against them, and they’ll \add pay for their disobedience\add*. That’s the master Yahweh’s declaration.
 \v 13 They mustn’t come near to me to act as my priests or to approach any of my sacred things, the most sacred things. Instead, they’ll bear their shame and their guilt for the disgusting things they’ve done,
 \v 14 but I’ll place them as housekeepers in the temple—for all its \add mundane\add* duties and \add all the menial work\add* that’s done in it.
-\s1 The priests descendants of Saduk
+\s1 Tsadok’s descendants as priests
 \p
 \v 15 Then the Levitical priests, those descendants of Tsadok who fulfilled the duties of my sanctuary when the Israeli people were wandering away from me, they’ll approach me to worship me. They’ll stand in front of me to offer me the fat and the blood. That’s the master Yahweh’s declaration.
 \v 16 They’ll come to my sanctuary and approach my table to worship me and to fulfill their duties to me.

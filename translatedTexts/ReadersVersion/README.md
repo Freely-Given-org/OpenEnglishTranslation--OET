@@ -136,6 +136,8 @@ Of course, we’re very happy to list contributors if you desire that. (Not ever
 - refer to cities/countries, etc. as ‘it’, not ‘he’ or ‘she’.
 - ‘rest’-> check if ‘peace and stability’or something is more natural in modern English
 - vow -> promise
+- Galilee lake
+- generation to generation -> throughout the generations
 
 Continue checking Mark spelling from Mrk 14:63 onwards.
 Continue revising Mark formatting from Mrk 5:1 onwards. Then Ruth.

@@ -1,4 +1,4 @@
-\id ROM - Open English Translation—Readers’ Version (OET-RV) v0.1.40
+\id ROM - Open English Translation—Readers’ Version (OET-RV) v0.1.41
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 ROM
@@ -24,7 +24,7 @@
 \io1 Christian living \ior 12:1–15:13\ior*
 \io1 Concluding remarks and greetings \ior 15:14–16:27\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
-\ie
+\rem NOTE: This USFM file was exported from the ESFM source file with some loss of features, so don’t edit this derived file.
 \c 1
 \p
 \v 1 \add This letter is from\add* Paul, a slave of \nd Messiah Yeshua\nd* and a \nd chosen\nd* ambassador who’s been set apart for God’s good message,
@@ -306,7 +306,7 @@
 \v 5 People who are governed by their physical desires think about physical things, but those who are governed by the spirit think about spiritual things.
 \v 6 The worldly mindset \add leads to\add* death, but the \nd spiritual\nd* mindset \add leads to\add* life and peace.
 \v 7 The worldly mindset is making God your enemy because it’s not being subjected to God’s law, in fact it’s not even able to,
-\v 8 and those who are worldly aren’t able to bring pleasure to \nd God\nd*.
+\v 8 and those who are worldly aren’t able to \add do what pleases\add* \nd God\nd*.
 \p
 \v 9 And you, \add brothers and sisters,\add* aren’t worldly, but are in the spirit, if indeed God’s spirit is living in you, but anyone who doesn’t have \nd Messiah’s\nd* spirit doesn’t belong to him.
 \v 10 But if \nd Messiah\nd* is in you, while your body is dead because of sin, your \nd spirit\nd* has life because it’s \add been declared\add* guiltless.
@@ -597,9 +597,9 @@
 \c 15
 \s1 Living to please others
 \p
-\v 1 We who are powerful should be carrying the weaknesses of the powerless, rather than \add just\add* trying to bring pleasure to ourselves.
-\v 2 Each one of us should be bringing pleasure to those near us—displaying goodness and building \add them\add* up,
-\v 3 because even the \nd messiah\nd* didn’t bring pleasure to himself, but, as it was written: ‘Those who were insulting you, their insults landed on me.’\x + \xo 15:3: \xt Psa 69:9.\x*
+\v 1 We who are powerful should be carrying the weaknesses of the powerless, rather than \add just\add* trying to please ourselves.
+\v 2 Each one of us should be pleasing those near us—displaying goodness and building \add them\add* up,
+\v 3 because even the \nd messiah\nd* didn’t please himself, but, as it was written: ‘Those who were insulting you, their insults landed on me.’\x + \xo 15:3: \xt Psa 69:9.\x*
 \v 4 Everything that was written in the past was written for teaching us, so that through endurance and through encouragement from the scriptures, we would have hope.
 \v 5 May the \nd God\nd* of endurance and encouragement help you all to think likewise, just like \nd Yeshua Messiah\nd* did,
 \v 6 so that you’ll be united in your purpose and your teaching, thus honouring the \nd God\nd* and father of our \nd master\nd*, \nd Yeshua Messiah\nd*.
@@ -623,7 +623,7 @@
 \q1 and the one coming to rule over non-Jews—
 \q2 the non-Jews will \add put their\add* hope in him.’
 \p
-\v 13 May the \nd God\nd* of hope that you believe in fill you \add believers\add* with happiness and peace, so that your hope in the power of the holy \nd spirit\nd* will be \add grow to be\add* plentiful.
+\v 13 May the \nd God\nd* of hope that you believe in fill you \add believers\add* with happiness and peace, so that your hope in the power of the holy \nd spirit\nd* will \add grow to be\add* plentiful.
 \s1 Paul as missionary to non-Jews
 \p
 \v 14 My brothers and sisters, I’ve also been persuaded about you myself, that having been filled with knowledge, you’re also full of goodness and able to rebuke each other.

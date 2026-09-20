@@ -1,4 +1,4 @@
-\id EST - Open English Translation—Readers’ Version (OET-RV) v0.1.05
+\id EST - Open English Translation—Readers’ Version (OET-RV) v0.1.06
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 EST
@@ -17,38 +17,38 @@
 \io1 Haman’s execution \ior 6:1–7:10\ior*
 \io1 The Jewish people destroy their enemies \ior 8:1–10:3\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
-\ie
+\rem NOTE: This USFM file was exported from the ESFM source file with some loss of features, so don’t edit this derived file.
 \c 1
-\s1 Queen Vashti refuses King Ahasuerus
+\s1 Empress Vashti refuses Emperor Ahasuerus
 \p
-\v 1 The following events happened during the reign of \add King\add* Ahasuerus.\x + \xo 1:1: \xt Ezr 4:6.\x* (\add Also known as King Xerxes,\add* he ruled \add the empire of Persia\add* with 127 provinces from India all the way across to Ethiopia.)
-\v 2 In those days, he ruled his empire from \add a city called\add* Shushan,\f + \fr 1:2 \ft Known as ‘Susa’ in many 20th century translations, even though earlier English translations often got it correct.\f* \add Persia’s\add* capital.
+\v 1 The following events happened during the reign of \add Emperor\add* Ahasuerus.\x + \xo 1:1: \xt Ezr 4:6.\x* (\add Also known as King Xerxes,\add* he ruled the 127 provinces \add of Persia extending\add* from India to Ethiopia.)
+\v 2 In those days, he ruled his empire from Shushan,\f + \fr 1:2 \ft Known as ‘Susa’ in many 20th century translations, even though earlier English translations often got it correct.\f* city.
 \p
-\v 3 In the third year of his reign, he hosted a celebration for all of his officials and for every important person who worked for him, as well as the officers who served in the army of the \add combined empire\add* of Persia and Media, the wealthy landowners, and the officials of the provinces. The king was present in person \add to host the celebration\add*
-\v 4 which, over a period of six months, would display the incredible wealth and prestige of his empire and his personal wealth and power.
+\v 3 In the third year of his reign, he hosted a celebration for all of his officials and for every important person who worked for him, the wealthy landowners, the officials of the provinces, as well as the officers who served in the army of the \add combined empire\add* of Persia and Media. He was present in person
+\v 4 \add to host\add* the six-month celebration which, displayed the incredible wealth and prestige of his empire and his personal wealth and power.
 \p
-\v 5 Then at the end of that time, the king hosted \add another\add* celebration, but this time for all the people in the royal fort in Shushan, from the nobles to the least prestigious. He held this celebration over an entire week in the enclosed garden of the royal palace.
-\v 6 There were white and blue curtains hanging from white and purple cords attached to silver rings on marble pillars. The guests reclined on gold and silver couches set on a mosaic floor that was made of red and white marble, and mother-of-pearl and other expensive stones.
+\v 5 At the end of that time, the emperor hosted \add another\add* celebration, but this time for all the people in the royal fort in Shushan, from the nobles to the least prestigious. He held this celebration over an entire week in the enclosed garden of the royal palace.
+\v 6 There were white and blue curtains hanging from white and purple cords attached to silver rings on marble pillars. The guests reclined on gold and silver couches set on a mosaic floor made of red and white marble, mother-of-pearl and other expensive stones.
 \v 7 Drinks were served in golden goblets, and each one was a unique design. The king’s wine seemed limitless as he displayed his generosity,
-\v 8 and it was served according to his rule: There is no compulsion to drink, but all of his servants were to give each guest however much they wanted.
+\v 8 and it was served according to his rule: there was no compulsion to drink, but his servants were to give each guest however much they wanted.
 \p
-\v 9 Meanwhile, Queen Vashti was hosting a celebration for the women \add in a different part\add* of the king’s royal palace.
+\v 9 Meanwhile, Queen Vashti was hosting a celebration for the women \add in a different part\add* of the royal palace.
 \p
-\v 10 On the seventh day of the celebrations, when the king was feeling cheery from his wine-drinking, he ordered seven of his chief servants (Mehuman, Biztha, Harbona, Bigtha, Abagtha, Zethar, and Karkas)
-\v 11 to bring Queen Vashti, wearing her royal crown, to him in order to show her beauty to the people and the officials, because she was very attractive.
-\v 12 But when the servants came and told her the king’s command, Queen Vashti refused to come. When the king found this out, he got very angry and \add sat there\add* raging.
-\v 13 So he \add called over\add* his advisors who knew the law and could make good decisions, and discussed with them what he should do.
-\v 14 (His closest advisors were Karshena, Shethar, Admatha, Tarshish, Meres, Marsena, and Memukan. These seven officials were from \add various places in the empire\add* of Persia and Media and they advised the king personally, \add thus making them\add* the most powerful officials in the empire.)
-\v 15 “According to \add our\add* law,” \add the king asked,\add* “what should be done with Queen Vashti, since she refused to obey my command when the servants passed it on to her?”
+\v 10 On the last day of the celebrations, when the emperor was pleasantly tipsy, he ordered seven of his chief servants (Mehuman, Biztha, Harbona, Bigtha, Abagtha, Zethar, and Karkas)
+\v 11 to bring Queen Vashti to him, wearing her royal crown, in order to show the officials and other people how good-looking she was, because she was very beautiful.
+\v 12 The servants told her Ahasuerus’s command, but Queen Vashti refused to come. When they reported back to Ahasuerus, he was furious and \add sat there\add* raging \add for a while\add*.
 \p
-\v 16 Then Memukan answered the king, \add speaking loudly enough that\add* both the king and his officials could hear. “Queen Vashti has done wrong,” he said, “and not only against the king. She has also done wrong against all the officials and people groups in all the provinces that King Ahasuerus \add rules\add*!
-\v 17 \add Soon\add* women all over the empire will hear about what the queen did and they’ll say, ‘King Ahasuerus commanded his servants to bring Queen Vashti to him, but she didn’t go! Then women will stop respecting their husbands.
-\v 18 Even today, the leading women of Persia and Media will hear what the queen did and start doing the same to \add their husbands who are\add* officials, and this will cause \add a wave of\add* contempt and anger.
-\v 19 If it pleases you \add to do so\add*, \add your majesty\add*, you should personally issue a royal decree and have it added to the laws of Persia and Media which cannot be repealed. This decree should say that Vashti can never again come into your presence, and then you should choose a different woman for the royal position—someone who’s better than her.
-\v 20 Your decree will be proclaimed right through your empire, even though it’s so huge, and then all women, irrespective of their status or position, will honour their husbands.
+\v 13-14 Eventually he discussed it with his close advisors who knew the law and could make good decisions. (These seven officials; Karshena, Shethar, Admatha, Tarshish, Meres, Marsena and Memukan; were from \add various places.\add* They advised the emperor personally, \add so were\add* the most powerful officials in the empire.)
+\v 15 ‘According to \add our\add* law,’ \add he asked,\add* ‘what should be done with Empress Vashti, since she refused to obey my command when the servants passed it on to her?’
 \p
-\v 21 This seemed like a good idea to the king and his officials, so King Ahasuerus followed the advice of Memukan
-\v 22 and sent letters to every province in his empire. He wrote to every province using its own alphabet and to each people group in its own language. The letters said that men should be the masters over their wives and children, and that a husband should be able to give orders to his wife in his own native language \add that she should understand and obey\add*.
+\v 16 Memukan replied, \add addressing\add* the whole group, ‘Empress Vashti has done wrong, and not only against the emperor. She has also done wrong against all the officials and people groups of the empire.
+\v 17 \add Soon\add* women all over the empire will hear about what the empress did and they’ll say, “Emperor Ahasuerus commanded his servants to bring Empress Vashti to him, but she didn’t go!” Then women will stop respecting their husbands.
+\v 18 Even today, the important wives in the empire will hear what the empress did and start doing the same to their husbands; it will result in contempt on her part and anger on his.
+\v 19 If it pleases you \add to do so\add*, \add your majesty\add*, you should personally issue a royal decree and have it added to the laws of Persia and Media which cannot be repealed. This decree should say that Vashti can never again come into your presence. Then you should choose a different woman for the royal position – someone who’s better than her.
+\v 20 Have your decree proclaimed throughout your empire, even though it’s so huge, and then all women, whatever their status or position, will respect their husbands.’
+\p
+\v 21 Memukan’s advice seemed like a good idea to the emperor and his officials, so that’s what they did.
+\v 22 They wrote letters to every province using its own alphabet and to each people group in its own language. The letters said that men should be the masters over their wives and children, and that a husband should be able to give orders to his wife in his own language \add and that she should understand and obey him\add*.
 \c 2
 \s1 Beautiful Esther enters the king’s harem
 \p

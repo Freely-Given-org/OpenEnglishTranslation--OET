@@ -5,13 +5,12 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2026-08-28 09:26 by extract_glossed_OSHB_OT_to_ESFM v1.0.5
+\rem ESFM file created 2026-09-16 11:49 by extract_glossed_OSHB_OT_to_ESFM v1.0.6
 \h Ecclesiastes
 \toc1 Ecclesiastes
 \toc2 Ecclesiastes
 \toc3 Ecc
 \mt1 Ecclesiastes
-\ie
 \c 1
 \nb
 \v 1 The¦278393_words¦278393_of¦278393 Teacher¦278394 the¦278395_son¦278395_of¦278395 David¦278397 king¦278398 in¦278399÷Jerusalem¦278399.
@@ -141,7 +140,7 @@
 \c 7
 \nb
 \v 1 \add +is¦280317\add*_good¦280317 a¦280318_name¦280318 more¦280319÷than¦280319_ointment¦280319 good¦280320 and¦280321÷the¦280321_day¦280321_of¦280321 (the)¦280322÷death¦280322 more¦280323÷than¦280323_the¦280323_day¦280323_of¦280323 his¦280324_being¦280324_born¦280324.
-\v 2 \add +is¦280326\add*_good¦280326 to¦280327=go¦280327 to¦280328 a¦280330_house¦280330_of¦280330 mourning¦280332 more¦280333÷than¦280333_to¦280333_go¦280333 to¦280334 a¦280336_house¦280336_of¦280336 a¦280337_feast¦280337 because¦280338 it¦280339 \add +is¦280340\add*_the¦280340_end¦280340_of¦280340 every¦280341_of¦280341 the¦280343=humankind¦280343 and¦280344÷the¦280344_living¦280344÷person¦280344 he¦280345_will¦280345_give¦280345 to¦280346 his|its¦280348=heart¦280348.
+\v 2 \add +is¦280326\add*_good¦280326 to¦280327=go¦280327 to¦280328 a¦280330_house¦280330_of¦280330 mourning¦280332 more¦280333÷than¦280333_to¦280333_go¦280333 to¦280334 a¦280336_house¦280336_of¦280336 a¦280337_feast¦280337 because¦280338÷what¦280338 it¦280339 \add +is¦280340\add*_the¦280340_end¦280340_of¦280340 every¦280341_of¦280341 the¦280343=humankind¦280343 and¦280344÷the¦280344_living¦280344÷person¦280344 he¦280345_will¦280345_give¦280345 to¦280346 his|its¦280348=heart¦280348.
 \v 3 \add +is¦280350\add*_good¦280350 vexation¦280351 more¦280352÷than¦280352_laughter¦280352 if/because¦280353 by¦280355÷sadness¦280355_of¦280355 face¦280356 a¦280358_heart¦280358 it¦280357_will¦280357_be¦280357_good¦280357.
 \v 4 \add +the¦280360\add*_heart¦280360_of¦280360 wise¦280361_people¦280361 in¦280362=house¦280362_of¦280362 mourning¦280363 and¦280364_\add +the¦280364\add*÷heart¦280364_of¦280364 fools¦280365 in¦280366=house¦280366_of¦280366 rejoicing¦280367.
 \v 5 \add +is¦280369\add*_good¦280369 to¦280370÷listen¦280370_to¦280370 \add +the¦280371\add*_rebuke¦280371_of¦280371 a¦280372_wise¦280372_\add >person¦280372\add* from¦280373=man¦280373 \add who¦280374\add*_listens¦280374_to¦280374 \add +the¦280375\add*_song¦280375_of¦280375 fools¦280376.
@@ -168,13 +167,13 @@
 \v 26 And¦280652_\add +was¦280652\add*÷finding¦280652 I¦280653 bitter¦280654 more¦280655÷than¦280655_death¦280655 DOM¦280656 the¦280658=woman¦280658 who¦280659 she¦280661 \add +is¦280662\add*_snares¦280662 and¦280663_\add +is¦280663\add*÷nets¦280663 her|its¦280664=heart¦280664 \add +are¦280665\add*_fetters¦280665 hands¦280666_of¦280666÷her¦280666 a¦280667_\add >person¦280667\add*_good¦280667 to¦280668=(the)¦280668_face¦280668_of/in¦280668_front¦280668_of/before¦280668 the¦280669=Elohim¦280669 he¦280670_escapes¦280670 from¦280671=her|it¦280671 and¦280672÷a¦280672_sinner¦280672 he¦280673_is¦280673_captured¦280673 by¦280674÷her¦280674.
 \v 27 Consider¦280676 this¦280677 I¦280678_have¦280678_found¦280678 Teacher¦280680 she¦280679_said¦280679 one¦280681 to¦280682÷one¦280682 to¦280683÷find¦280683 \add +the¦280684\add*_scheme¦280684_of¦280684_things¦280684.
 \v 28 Which¦280686 again¦280687 it¦280689_has¦280689_sought¦280689 self¦280690_of¦280690÷my¦280690 and¦280691=not¦280691 I¦280692_have¦280692_found¦280692 a¦280693_man¦280693 one¦280694 of¦280695÷a¦280695_thousand¦280695 I¦280696_have¦280696_found¦280696 and¦280697÷a¦280697_woman¦280697 among¦280698÷all¦280698_of¦280698 these¦280700 not¦280701 I¦280702_have¦280702_found¦280702.
-\v 29 Only¦280704 consider¦280705 this¦280707 I¦280708_have¦280708_found¦280708 (cmp)¦280709 he¦280710_made¦280710 the¦280711=Elohim¦280711 DOM¦280712 the¦280714=humankind¦280714 upright¦280715 and¦280716÷they¦280716 they¦280717_have¦280717_sought¦280717 schemes¦280718 many¦280719.
+\v 29 Only¦280704÷only¦280704 consider¦280705 this¦280707 I¦280708_have¦280708_found¦280708 (cmp)¦280709 he¦280710_made¦280710 the¦280711=Elohim¦280711 DOM¦280712 the¦280714=humankind¦280714 upright¦280715 and¦280716÷they¦280716 they¦280717_have¦280717_sought¦280717 schemes¦280718 many¦280719.
 \c 8
 \nb
 \v 1 Who¦280721 \add +is¦280722\add*_like¦280722÷the¦280722_wise¦280722÷\add >person¦280722\add* and¦280723÷who¦280723 \add +is¦280724\add*_knowing¦280724 \add +the¦280725\add*_interpretation¦280725_of¦280725 a¦280726_matter¦280726 \add +the¦280727\add*_wisdom¦280727_of¦280727 anyone¦280728 it¦280729_makes¦280729_shine¦280729 his|its¦280730=faces/face¦280730 and¦280731÷the¦280731_strength¦280731_of¦280731 his|its¦280732=faces/face¦280732 it¦280733_is¦280733_changed¦280733.
 \v 2 I¦280735 \add +the¦280736\add*_mouth¦280736_of¦280736 a¦280738_king¦280738 keep¦280739 and¦280740÷on¦280740 the¦280741_cause¦280741_of¦280741 the¦280742_oath¦280742_of¦280742 God¦280743.
 \v 3 Do¦280745_not¦280745 be¦280747_hasty¦280747 from¦280748÷before¦280748_of¦280748÷him¦280748 you¦280749_will¦280749_go¦280749 do¦280750_not¦280750 stand¦280752 in¦280753÷a¦280753_matter¦280753 evil¦280754 if/because¦280755 all¦280756 that¦280758 he¦280759_will¦280759_desire¦280759 he¦280760_will¦280760_do¦280760.
-\v 4 Because¦280762 a¦280763_word¦280763_of¦280763 a¦280765_king¦280765 \add +is¦280766\add*_mastery¦280766 and¦280767÷who¦280767 will¦280768_he¦280768_say¦280768 to¦280770=him|it¦280770 what¦280771 are¦280773_you¦280773_doing¦280773.
+\v 4 Because¦280762÷that¦280762 a¦280763_word¦280763_of¦280763 a¦280765_king¦280765 \add +is¦280766\add*_mastery¦280766 and¦280767÷who¦280767 will¦280768_he¦280768_say¦280768 to¦280770=him|it¦280770 what¦280771 are¦280773_you¦280773_doing¦280773.
 \v 5 \add one¦280775_who¦280775\add*_keeps¦280775_of¦280775 (of)¦280776_a¦280776_command¦280776 not¦280777 he¦280778_will¦280778_know¦280778 a¦280779_thing¦280779 evil¦280780 and¦280781÷an¦280781_appropriate¦280781_time¦280781 and¦280782÷custom¦280782 \add +the¦280784\add*_heart¦280784 it¦280783_will¦280783_know¦280783 a¦280785_wise¦280785_\add >person¦280785\add*.
 \v 6 If/because¦280787 to/from¦280788=all/each/any/every¦280788 matter¦280790 there¦280791_\add +is¦280791\add* an¦280792_appropriate¦280792_time¦280792 and¦280793÷a¦280793_custom¦280793 if/because¦280794 the¦280796_trouble¦280796_of¦280796 the¦280797=humankind¦280797 \add +is¦280798\add*_great¦280798 on/upon/above¦280799=him|it¦280799.
 \v 7 If/because¦280801 not¦280803÷he¦280803 \add +is¦280804\add*_knowing¦280804 what¦280805 (that)¦280807_will¦280807÷it¦280807_be¦280807 if/because¦280808 just¦280809=as¦280809 it¦280810_will¦280810_be¦280810 who¦280811 will¦280812_he¦280812_tell¦280812 to¦280813=him|it¦280813.
