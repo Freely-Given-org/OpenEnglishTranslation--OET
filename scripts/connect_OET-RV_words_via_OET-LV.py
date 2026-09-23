@@ -83,7 +83,7 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-09-04' # by RJH
+LAST_MODIFIED_DATE = '2026-09-23' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.94'
@@ -527,6 +527,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('destruction','devastation'),
     ('dies','corpse'), # Lev 19:28
     ('dinosaur','dragon'), # Rev 12:3
+    ('disasters','plagues'),
     ('discouraged','dismayed'),
     ('driving','throwing'),
     ('eastern','east'),
@@ -724,6 +725,7 @@ LV_SINGLE_WORDS_TO_RV_WORD_STRINGS = (
 
             ('ascent','walking uphill'),
             ('members', 'body parts'),
+            ('plagues', 'deadly diseases'),
             ('risen', 'got up'),
             ('sanctuary', 'sacred tent'),
             ('scribes', 'religious teachers'),

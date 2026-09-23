@@ -28,7 +28,7 @@
 Script to convert cleaned OET USFM files
     to even more cleaned VPL vref.txt files.
 
-TODO: Doesn't delete the \rem ESFM headers yet
+TODO: Doesn't delete the \\rem ESFM headers yet
 
 NOTE: This script doesn't need to remove special ESFM formatting
         because that was already removed when the USFM files were exported
