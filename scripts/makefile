@@ -264,7 +264,7 @@ $(VREF_sentinel): $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_USFM_to_VREF.py
 	@echo "\n\nCreate VREF.txt files from USFM…\n"
 	@$(UVrun) convert_OET-LV-RV_USFM_to_VREF.py
 	@echo "\n\nCreate VPL files from USFM…\n"
-	#@$(UVrun) convert_OET-LV-RV_USFM_to_VPL.py
+	@$(UVrun) convert_OET-LV-RV_USFM_to_VPL.py
 	@echo "\n\nRebuild OET MCP database…\n"
 	@$(UVrun) /srv/FreelyGiven/open-english-translation-mcp-server/scripts/build_db.py
 	@touch $@
