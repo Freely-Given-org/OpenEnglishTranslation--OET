@@ -59,7 +59,6 @@ Of course, we’re very happy to list contributors if you desire that. (Not ever
 - Consider replacing J with Y, e.g., Jacob -> Yacob, John -> Yohan
 - Consider Yitshak vs Yits-hak or Yits’hak
 - Consider changing names still quite recognisable with only one letter difference, e.g., Lazarus -> Lazaros
-- Replace ‘whoever’with ‘anyone’
 - Replace ‘may’with ‘can’(except perhaps in the negative???)
 - Manually mark nomina sacra in OET-RV???
 - put \add ≈ around all modern measures???
