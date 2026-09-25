@@ -5,7 +5,7 @@
 \rem WORDTABLE OET-LV_OT_word_table.tsv
 \rem The parsed Hebrew text used to create this file is Copyright © 2019 by https://hb.openscriptures.org
 \rem Our English glosses are released CC0 by https://Freely-Given.org
-\rem ESFM file created 2026-09-16 11:49 by extract_glossed_OSHB_OT_to_ESFM v1.0.6
+\rem ESFM file created 2026-09-23 08:44 by extract_glossed_OSHB_OT_to_ESFM v1.0.6
 \rem ESFM file edited by ScriptedBibleEditor v0.8.2 using ScriptedOTUpdates
 \h Proverbs
 \toc1 Proverbs
@@ -21,7 +21,7 @@
 \v 5 Let_him_listen a_prudent_\add one\add* and÷let_him_increase learning and÷\add one_who\add*_has_understanding guidance(s) let_him_get.
 \v 6 To÷understand a_proverb and÷a_parable \add the\add*_words/messages_of learned_ones and÷parables_of÷their.
 \v 7 The_fear_of \nd YHWH\nd* \add is\add*_\add the\add*_beginning_of knowledge wisdom and÷discipline fools they_despise.
-\v 8 listen_to my_son_of÷my the_correction_of I_will_show=you(ms) and÷do_not reject the_instruction_of your_mother_of÷your.
+\v 8 listen_to my_son_of÷my the_correction_of your_father_of÷your and÷do_not reject the_instruction_of your_mother_of÷your.
 \v 9 If/because \add will_be\add*_a_wreath_of grace they for÷head_of÷your and÷necklaces for÷neck(s)_of÷your.
 \v 10 My_son_of÷my if they÷will_entice_you sinners do_not be_willing.
 \v 11 If they_will_say come with÷us let_us_lie_in_wait for÷blood let_us_lie_hidden for÷an_innocent_\add one\add* without_cause.
@@ -183,7 +183,7 @@
 \v 17 Eyes haughty a_tongue_of falsehood and÷hands \add which\add*_shed blood innocent.
 \v 18 A_heart \add which\add*_devises plans_of wickedness feet \add which\add*_hurry to÷run to÷evil.
 \v 19 \add one_who\add*_he_breathes_out lies a_witness_of falsehood and÷\add one_who\add*_spreads contentions between brothers.
-\v 20 keep my_son_of÷my the_command_of I_will_show=you(ms) and÷do_not abandon the_instruction_of your_mother_of÷your.
+\v 20 keep my_son_of÷my the_command_of your_father_of÷your and÷do_not abandon the_instruction_of your_mother_of÷your.
 \v 21 Bind÷them on heart_of÷your continually tie÷them on neck(s)_of÷your.
 \v 22 When÷you÷walk_about\f + \fr 6:22 \ft OSHB note: We read one or more accents in L differently from BHQ.\f* it_will_guide you when÷you÷lie_down it_will_watch over÷you and÷you_will_awake it it÷will_speak_to_you.
 \v 23 If/because \add is\add*_a_lamp \add the\add*_command and_\add the\add*÷instruction \add is\add*_a_light and_\add are\add*÷a_way_of life rebukes_of discipline.
@@ -726,7 +726,7 @@
 \v 22 Listen to÷father_of÷your who he÷begot_you and÷do_not despise if/because mother_of÷your she_is_old.
 \v 23 Truth buy and÷do_not sell_\add it\add* wisdom and÷discipline and÷understanding.
 \v 24 Greatly_(rejoice)\f + \fr 23:24 \ft OSHB variant note: גול: (x-qere) 'גִּ֣יל': lemma=1524 a morph=HVqa id=20KFN גִּ֣יל\f* he_rejoices\f + \fr 23:24 \ft OSHB variant note: יגול: (x-qere) 'יָ֭גִיל': lemma=1523 n=1.0 morph=HVqi3ms id=20L7f יָ֭גִיל\f* \add the\add*_father_of a_righteous_\add son\add* wwww\f + \fr 23:24 \ft OSHB variant note: יולד: (x-qere) 'וְ/יוֹלֵ֥ד': lemma=c/3205 morph=HC/Vqrmsa id=209VK וְ/יוֹלֵ֥ד\f* a_wise_\add son\add* and\f + \fr 23:24 \ft OSHB variant note: ו/ישמח: (x-qere) 'יִשְׂמַח': lemma=8055 morph=HVqi3ms id=20Toi יִשְׂמַח\f* in/on/over=him/it.
-\v 25 May_he_rejoice I_will_show=you(ms) and÷mother_of÷your and÷may_she_rejoice the_\add one_of÷who\add*_bore_you.
+\v 25 May_he_rejoice father_of÷your and÷mother_of÷your and÷may_she_rejoice the_\add one_of÷who\add*_bore_you.
 \v 26 Give my_son_of÷my heart_of÷your to=me and÷eyes_of÷your ways_of÷my let_them_observe\f + \fr 23:26 \ft OSHB variant note: תרצנה: (x-qere) 'תִּצֹּֽרְנָה': lemma=5341 n=0 morph=HVqj3fp id=20RFy תִּצֹּֽרְנָה\f*.\f + \fr 23:26 \ft OSHB note: Adaptations to a Qere which L and BHS, by their design, do not indicate.\f*
 \v 27 if/because \add is\add*_a_pit deep a_prostitute and_\add is\add*÷a_well narrow a_foreign_\add woman\add*.
 \v 28 Also she like÷a_robber she_lies_in_wait and÷\add those_who\add*_act_treacherously among÷humankind she_increases.
@@ -844,7 +844,7 @@
 \v 7 An_appetite satisfied it_treads_down honey and÷an_appetite hungry every_of bitter_\add thing\add* \add is\add*_sweet.
 \v 8 Like÷a_bird \add which\add*_wanders from nest_of÷its \add is\add*_so a_person \add who\add*_wanders from÷his_own_of÷place.
 \v 9 Oil and÷perfume it_makes_glad a_heart and÷the_sweetness_of his/its=neighbour \add is\add*_from_\add the\add*÷counsel_of a_person.
-\v 10 Friend_of÷your\f + \fr 27:10 \ft OSHB note: We read one or more accents in L differently from BHQ.\f*\f + \fr 27:10 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* and÷the_friend_of\f + \fr 27:10 \ft OSHB variant note: ו/רעה: (x-qere) 'וְ/רֵ֪עַ': lemma=c/7453 morph=HC/Ncmsc id=2044e וְ/רֵ֪עַ\f* I_will_show=you(ms) do_not abandon and÷the_house_of your(ms)=brother/kindred do_not go in/on=day your_calamity_of÷your \add is\add*_good a_neighbour near more÷than_a_brother far_away.
+\v 10 Friend_of÷your\f + \fr 27:10 \ft OSHB note: We read one or more accents in L differently from BHQ.\f*\f + \fr 27:10 \ft OSHB note: We read one or more accents in L differently than BHS. Often this notation indicates a typographical error in BHS.\f* and÷the_friend_of\f + \fr 27:10 \ft OSHB variant note: ו/רעה: (x-qere) 'וְ/רֵ֪עַ': lemma=c/7453 morph=HC/Ncmsc id=2044e וְ/רֵ֪עַ\f* your_father_of÷your do_not abandon and÷the_house_of your(ms)=brother/kindred do_not go in/on=day your_calamity_of÷your \add is\add*_good a_neighbour near more÷than_a_brother far_away.
 \v 11 Be_wise my_son_of÷my and÷make_glad heart_of÷my so÷that_I_may_bring_back \add one_of÷who\add*_taunts_me a_message.
 \v 12 A_sensible_\add person\add* he_sees evil he_hides_himself naive_people they_pass_on they_are_punished.
 \v 13 Take garment_of÷his if/because he_stands_surety_for a_stranger and÷for a_foreign_\add woman\add* hold÷it_in_pledge.

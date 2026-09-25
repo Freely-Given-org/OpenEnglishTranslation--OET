@@ -7,6 +7,7 @@
 #	2026-02-20 Produce OET-RV sections and automated TTS files for radio production
 #	2026-03-06 Separated derivedFiles folder out with some now in furtherDerivedFiles
 #   2026-07-13 Removed absolute filepaths (for word-table copies) to work on laptop
+#   2026-09-22 Added VPL export and rebuild of OET MCP database (both after vref export)
 #
 
 #=== Folder and file declarations =======================
@@ -262,6 +263,10 @@ VREF_sentinel := ../exportedFiles/.vref_sentinel
 $(VREF_sentinel): $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_USFM_to_VREF.py
 	@echo "\n\nCreate VREF.txt files from USFM…\n"
 	@$(UVrun) convert_OET-LV-RV_USFM_to_VREF.py
+	@echo "\n\nCreate VPL files from USFM…\n"
+	@$(UVrun) convert_OET-LV-RV_USFM_to_VPL.py
+	@echo "\n\nRebuild OET MCP database…\n"
+	@$(UVrun) /srv/FreelyGiven/open-english-translation-mcp-server/scripts/build_db.py
 	@touch $@
 
 $(derived_VREFs): $(VREF_sentinel)

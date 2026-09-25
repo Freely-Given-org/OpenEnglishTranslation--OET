@@ -1,4 +1,4 @@
-\id EXO - Open English Translation—Readers' Version (OET-RV) v0.1.38
+\id EXO - Open English Translation—Readers' Version (OET-RV) v0.1.41
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 EXO
@@ -110,7 +110,7 @@
 \p “I'm here,” he \add ≈replied\add*.
 \p
 \v 5 “Don't¦26202 come any closer,” \add Yahweh\add* said¦26201. “Take off your sandals¦26208 because¦26211 the place¦26212 where you're¦26214 standing¦26215 is HOLY ground¦26217.
-\v 6 I'm the god of your father and the god of Abraham¦26227, Yitshak, and Yacob¦26231.” \add So\add* Mosheh¦26233 covered hid his face because¦26235 he was scared to look¦26237 at God¦26224.
+\v 6 I'm the god of your father¦26225 and the god of Abraham¦26227, Yitshak, and Yacob¦26231.” \add So\add* Mosheh¦26233 covered hid his face because¦26235 he was scared to look¦26237 at God¦26224.
 \p
 \v 7 “I've certainly noticed the suffering¦26262 of my people¦26249 in¦26251 Egypt¦26251,” Yahweh¦26243 \add continued\add*, “I've heard¦26255 their cries as the \add slave drivers\add* oppress them—I'm unmistakingly aware of their pain.
 \v 8 \add So\add* I've¦26264 come¦26264 down to set them free from Egyptian control and to bring¦26269 them up from \add there\add* to a good¦26277 and wide land—a land flowing¦26282 with milk¦26283 and honey¦26284. \add It's currently\add* the place¦26287 of the Canaanites¦26288, the Hittites¦26289, the Amorites¦26290, the Perizzites¦26291, the Hivites¦26292, and the Yebusites¦26293.
@@ -125,7 +125,7 @@
 \v 13 “\add But listen\add*,” Mosheh¦26375 told God¦26388, “\add If\add* I'm about¦26381 to go¦26381 to the Israelis¦26385 and¦26374 if I told them, ‘Your¦26389 ancestors'¦26389 god¦26388 has sent¦26390 me to you¦26391.’ then they'd \add ask\add* me, ‘\add Oh yeah,\add* what's his name¦26397?’ then what would I tell them?”\x + \xo 3:13: \xt Exo 6:2-3.\x*
 \p
 \v 14 “I AM WHO I AM,” God¦26403 told Mosheh¦26406. “You'll \add tell them this\add*: ‘I AM (Yahweh) sent¦26416 me to you¦26412.’ ”\x + \xo 3:14: \xt Rev 1:4,8.\x*
-\v 15 Then¦26419 he \add continued\add*, “This is what you \add need\add* to tell the Israelis¦26431: ‘Yahweh¦26432, the god of your ancestors¦26434, the god of Abraham¦26436, Yitshak, and Yacob¦26440, sent me to you. This is my name forever, and this is my memorial¦26448 from generation to generation.’
+\v 15 Then¦26419 he \add continued\add*, “This is what you \add need\add* to tell the Israelis¦26431: ‘Yahweh¦26432, the god of your ancestors¦26434, the god of Abraham¦26436, Yitshak, and Yacob¦26440, sent me to you. This is my name forever, and this is my memorial¦26448 throughout the generations.’
 \v 16 Go and gather¦26453 the Israeli¦26456 elders¦26456, and tell them, ‘Yahweh¦26460, the god of your ancestors¦26462, appeared¦26463 to me, the god of Abraham¦26466, Yitshak, and Yacob¦26468, to say, “I've¦26471 certainly noticed you all and \add how you're all being treated\add* in¦26477 Egypt¦26477,
 \v 17 and I've¦26480 promised¦26479 to take you¦26481 all from your mistreatment in Egypt¦26483, away to the land where the Canaanites¦26487, Hittites¦26488, Amorites¦26489, Perizzites¦26490, Hivites¦26491, and the Yebusites¦26492 \add are currently living\add*—to a land flowing¦26496 with milk¦26497 and honey¦26498.” ’
 \p
@@ -193,7 +193,7 @@
 \p
 \v 2 \add But the king\add* said, “Who's \add this\add* ‘Yahweh’ that I should¦27185 listen¦27183 to \add him telling me\add* to let Yisrael¦27188 go? I don't¦27189 know Yahweh, and¦27178 what's more, I won't¦27189 let \add the Israelis\add* go \add anywhere\add*.”
 \p
-\v 3 “The god¦27202 of \add us\add* Hebrews¦27203 has met with us,” they¦27201 \add ≈replied\add*, “Please, let us go¦27206 three¦27209 days¦27210 into the wilderness¦27211 so we can sacrifice¦27212 to our¦27214 god Yahweh¦27213, \add because we don't want him to strike\add* us with the plague or with \add war\add*.”
+\v 3 “The god¦27202 of \add us\add* Hebrews¦27203 has met with us,” they¦27201 \add ≈replied\add*, “Please, let us go¦27206 three¦27209 days¦27210 into the wilderness¦27211 so we can sacrifice¦27212 to our¦27214 god Yahweh¦27213, \add because we don't want him to strike\add* us with \add ≈deadly diseases\add* or with \add war\add*.”
 \p
 \v 4 “Mosheh¦27227 and¦27228 Aharon¦27228,” the king¦27224 of Egypt¦27225 answered, “why are you¦27229 causing¦27229 the people¦27232 to \add slacken\add* off from their¦27233 tasks? \add Get back\add* to your¦27235 \add work\add*.”
 \v 5 And Far'oh¦27238 \add continued\add*, “Listen, there's many \add of you\add* and¦27237 you \add two\add* have caused¦27245 them to rest from their¦27247 \add duties\add*.”
@@ -372,7 +372,7 @@
 \p
 \v 1 Then Yahweh said to Mosheh¦29108, “Go in to Far'oh¦29112 and tell him: ‘This is what the god¦29119 of the Hebrews¦29120. Yahweh, says: Let my people¦29124 go \add so\add* they can serve¦29125 me.
 \v 2 Certainly if you're¦29133 unwilling to release them and if you keep holding onto them,
-\v 3 then listen. Yahweh¦29140 is about¦29141 to \add inflict\add* a very serious plague on your¦29142 livestock¦29142 which¦29143 are in¦29142 the fields¦29144—on the horses¦29145, the donkeys¦29146, the camels¦29147, the cattle¦29148, and on the flock¦29149.
+\v 3 then listen. Yahweh¦29140 is about¦29141 to \add inflict\add* a very serious \add ≈deadly disease\add* onto your¦29142 livestock¦29142 which¦29143 are in¦29142 the fields¦29144—on the horses¦29145, the donkeys¦29146, the camels¦29147, the cattle¦29148, and on the flock¦29149.
 \v 4 \add But\add* Yahweh¦29155 will distinguish¦29154 between the livestock of the Israelis and¦29154 the Egyptians—none of the Israelis' animals will die¦29163.’ ”
 \v 5 Then¦29170 Yahweh \add said when it would happen\add*, “Yahweh will do¦29175 this \add to Egypt\add* tomorrow¦29174.”
 \p
@@ -391,7 +391,7 @@
 \p
 \v 13 Then Yahweh told Mosheh¦29322, “Get up early¦29323 in the morning¦29324, and stand in front¦29326 of Far'oh¦29327 and say¦29328 to him, ‘This is what Yahweh, the god¦29334 of the Hebrews¦29335, says¦29332: Let my people¦29339 go¦29336 so they¦29340 can serve¦29340 me
 \v 14 because¦29360 this time¦29344, I'm about¦29347 to send¦29347 all my plagues¦29352 to you and your servants¦29356, and your people¦29357. \add You'll all be deeply distressed by them\add*, in order that you might know¦29359 that there¦29361 is no \add one else\add* like me in all the world.
-\v 15 \add By this time\add*, I could have reached out and struck¦29373 you and your people¦29377 with¦29378 such a plague¦29378 that you would all have been obliterated from the land.
+\v 15 \add By this time\add*, I could have reached out and struck¦29373 you and your people¦29377 with¦29378 such \add ≈deadly disease or destruction¦29379\add* that you would all have been obliterated from the land.
 \v 16 However, I've¦29387 kept you for this reason: to show¦29389 you my power¦29392 and¦29384 in order to proclaim my name¦29395 all over the world.\x + \xo 9:16: \xt Rom 9:17.\x*
 \v 17 You're still considering yourself¦29401 to be greater than my people¦29402 by failing to release them.
 \v 18 \add Now\add* listen¦29406: I'm about¦29407 to cause extremely heavy¦29411 hail to rain \add down\add* at¦29418 this time¦29408 tomorrow¦29409. \add It'll be hail like\add* which¦29413 has never been \add seen before\add* in¦29418 Egypt¦29418 from the day¦29421 it was founded¦29422 until now.
@@ -905,7 +905,7 @@
 \v 10 The seventh¦35014 day is a rest day for Yahweh¦35018 your god¦35019: you mustn't do any work—not you, or your children, or your male or female¦35037 servants, or your cattle, or the foreigners \add ≈living among you\add*—
 \v 11 because¦35049 Yahweh¦35054 made the heavens¦35057 and earth¦35060, the sea, and everything that's in them in six days¦35052. Then¦35078 he rested¦35071 on¦35070 the seventh¦35073 day, so that's why \add *he\add* blessed¦35077 the rest day and made it sacred¦35083.\x + \xo 20:11: \xt Gen 2:1-3; Exo 31:17.\x*
 \li1
-\v 12 Honour¦35089 your father and your mother¦35092, so that \add ≈you'll have a long¦35094 life\add* on the land that your god¦35101 Yahweh¦35100 is about¦35102 to give¦35102 you.\x + \xo 20:12: a \xt Deu 27:16; Mat 15:4; 19:19; Mrk 7:10; 10:19; Luk 18:20; Eph 6:2; \xo b \xt Eph 6:3.\x*
+\v 12 Honour¦35089 your father¦35089 and your mother¦35092, so that \add ≈you'll have a long¦35094 life\add* on the land that your god¦35101 Yahweh¦35100 is about¦35102 to give¦35102 you.\x + \xo 20:12: a \xt Deu 27:16; Mat 15:4; 19:19; Mrk 7:10; 10:19; Luk 18:20; Eph 6:2; \xo b \xt Eph 6:3.\x*
 \li1
 \v 13 You mustn't murder¦35108.\x + \xo 20:13: \xt Gen 9:6; Lev 24:17; Mat 5:21; 19:18; Mrk 10:19; Luk 18:20; Rom 13:9; Jam 2:11.\x*
 \li1
@@ -956,7 +956,7 @@
 \s1 Rules about violence to others
 \rem /s1 The Law concerning Violence; Laws about Violent Acts; Cases of Personal Injury; Personal Injuries
 \p
-\v 12 Whoever strikes¦35489 \add #someone\add* and¦35491 \add #that person\add* dies¦35491, must¦35489 definitely be put to death¦35493.\x + \xo 21:12: \xt Lev 24:17.\x*
+\v 12 Anyone who strikes¦35489 \add #someone\add* and¦35491 \add #that person\add* dies¦35491, must¦35489 definitely be put to death¦35493.\x + \xo 21:12: \xt Lev 24:17.\x*
 \v 13 But¦35495 if \add ≈it wasn't premeditated\add*—if God¦35498 had let it happen¦35499 as an accident—then¦35495 I'll¦35501 assign a place¦35503 where¦35504 \add @the one who hit them\add* can flee¦35505 to.\x + \xo 21:13: \xt Num 35:10-34; Deu 19:1-13; Josh 20:1-9.\x*
 \v 14 \add However,\add* if \add #someone\add* \add ≈had schemed to trap and¦35509\add* kill¦35516 \add #their\add* neighbour¦35515, then \add even if the killer clings to\add* my altar¦35519, you¦35520 must¦35511 take¦35520 \add #them\add* for execution.
 \p
@@ -1426,7 +1426,7 @@
 \rem /s1 The Tax for the Tent of the Lord's Presence; Money for the Tabernacle; The Half Shekel for the Sanctuary; Atonement Money
 \p
 \v 11 Then Yahweh¦40291 told Mosheh¦40294:
-\v 12 Whenever¦40304 you¦40298 \add ≈take a census of the Israeli¦40302 men\add*, each man must¦40298 pay a ransom¦40309 to Yahweh¦40311 for his life¦40310 when they're counted, and then the counting won't¦40314 cause a plague¦40318 among them.
+\v 12 Whenever¦40304 you¦40298 \add ≈take a census of the Israeli¦40302 men\add*, each man must¦40298 pay a ransom¦40309 to Yahweh¦40311 for his life¦40310 when they're counted, and then the counting won't¦40314 cause \add ≈deadly diseases\add* among them.
 \v 13 As each man crosses¦40327 over to stand with¦40333 those¦40330 who've been counted, he must¦40324 pay give a half-shekel coin as an offering to \add *me\add*. (That's half of the official shekel weight of 12 grams.)\x + \xo 30:13: \xt Exo 38:25-26; Mat 17:24.\x*
 \v 14 Every¦40354 man who's twenty¦40349 or older must¦40352 pay this contribution¦40353 to \add *me\add* when he's counted—
 \v 15 the wealthy¦40356 aren't¦40357 expected to pay more, and¦40360 the poor must¦40359 not pass less than this amount when they pay this ransom to \add *me\add* to make atonement¦40370 for your¦40373 lives¦40373.
@@ -1551,7 +1551,7 @@
 \v 33 \add ≈But¦41607\add* Yahweh¦41608 said¦41607 to Mosheh¦41611, “It's anyone¦41613 who sinned¦41614 against me that I'll¦41617 blot out of my book.
 \v 34 \add ≈So¦41620\add* go now \add and\add* lead the people¦41626 to where¦41628 I've¦41630 spoken¦41630 to you. See, my angel¦41633 will go \add ≈ahead of you, but¦41620\add* on¦41636 the day¦41636 \add ≈that I settle accounts\add*, then¦41620 I'll¦41638 punish them for their¦41640 sin¦41640.”
 \p
-\v 35 Then¦41642 Yahweh¦41643 sent¦41642 a plague¦41642 on the people¦41646 because they¦41649 had got Aharon¦41655 to make the \add gold\add* bull.
+\v 35 Then¦41642 Yahweh¦41643 sent¦41642 \add ≈deadly diseases\add* onto the people¦41646 because they¦41649 had got Aharon¦41655 to make the \add gold\add* bull.
 \c 33
 \s1 God tells them to leave Mt. Sinai
 \rem /s1 The Command to Leave Sinai; The Lord Orders Israel to Leave Mount Sinai

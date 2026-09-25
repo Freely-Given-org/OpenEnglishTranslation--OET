@@ -59,7 +59,6 @@ Of course, we’re very happy to list contributors if you desire that. (Not ever
 - Consider replacing J with Y, e.g., Jacob -> Yacob, John -> Yohan
 - Consider Yitshak vs Yits-hak or Yits’hak
 - Consider changing names still quite recognisable with only one letter difference, e.g., Lazarus -> Lazaros
-- Replace ‘whoever’with ‘anyone’
 - Replace ‘may’with ‘can’(except perhaps in the negative???)
 - Manually mark nomina sacra in OET-RV???
 - put \add ≈ around all modern measures???
@@ -126,18 +125,15 @@ Of course, we’re very happy to list contributors if you desire that. (Not ever
 - deeds -> actions
 - strongholds -> fortifications and/or fortresses
 - Titos -> Latin/Roman Titus???
-- plague -> DEADLY diseases
 - prophesying falsehood -> prophesying untruths (not lies)
 - remove ‘everlasting’, ‘amongst’, ‘midst’, ‘upon’, ‘shall’, most of ‘may’
-- wine-presses/wine-vats -> wine-pressing pit
 - sackcloth -> coarse, abrasive cloth
 - bend bows -> ‘use bows and arrows’
 - plaza vs square
 - refer to cities/countries, etc. as ‘it’, not ‘he’ or ‘she’.
 - ‘rest’-> check if ‘peace and stability’or something is more natural in modern English
 - vow -> promise
-- Galilee lake
-- generation to generation -> throughout the generations
 
-Continue checking Mark spelling from Mrk 14:63 onwards.
-Continue revising Mark formatting from Mrk 5:1 onwards. Then Ruth.
+Continue checking spelling from Mat 7:18 onwards --
+    done Mrk
+Continue revising Mark formatting from Mrk 9:3 onwards. Then Ruth.
