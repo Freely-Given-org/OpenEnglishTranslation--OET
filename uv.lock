@@ -8,7 +8,7 @@ source = { editable = "../BibleTransliterations/Rust" }
 
 [[package]]
 name = "bibleorgsys"
-version = "0.1.1"
+version = "0.3.6"
 source = { editable = "../BibleOrgSys" }
 dependencies = [
     { name = "bibleorgsys-rust" },
@@ -23,7 +23,7 @@ requires-dist = [
     { name = "bibleorgsys-rust", editable = "../BibleOrgSys/Rust/bible_organisational_system" },
     { name = "bos-books-codes-py", editable = "../BibleOrgSys/Rust/bos_books_codes_py" },
     { name = "pyyaml", specifier = ">=6.0.3" },
-    { name = "requests", specifier = ">=2.33.1" },
+    { name = "requests", specifier = ">=2.34.2" },
     { name = "usfm-markers-py", editable = "../BibleOrgSys/Rust/usfm_markers_py" },
 ]
 

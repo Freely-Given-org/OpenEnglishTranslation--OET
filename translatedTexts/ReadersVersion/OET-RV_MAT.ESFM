@@ -1,4 +1,4 @@
-\id MAT - Open English Translation—Readers' Version (OET-RV) v0.5.0
+\id MAT - Open English Translation—Readers' Version (OET-RV) v0.5.3
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 MAT
@@ -36,7 +36,7 @@
 \v 2 Abraham was the father of Isaac, Isaac the father of Yacob (Grk: Yakob), Yacob the father of Yudah¦22 (Grk: Youdas¦22) and his¦26 brothers¦25.
 \v 3 Yudah¦27 was the father of Perez (Grk: Fares¦31) and Zerah (Grk: Zara¦34) through Tamar (Grk: Thamar¦37), Perez the father of Hezron (Grk: Hezrom), Hezron the father of Aram¦47,
 \v 4 Aram¦48 the father of Aminadab, Aminadab the father of Nahshon (Grk: Naasson¦57), Nahshon the father of Salmon¦62,
-\v 5 Salmon¦63 the father of Boaz (Grk: Boes) through Rahab¦70, Boaz the father of Obed (Grk: Yobed) through Ruth¦78 (Grk: Routh), and Obed the father of Yishay \add (Jesse, Grk: Yessai)\add*,
+\v 5 Salmon¦63 the father of Boaz (Grk: Boes) through Rahab¦70, Boaz the father of Obed (Grk: Yobed) through Ruth¦78 (Grk: Routh), and Obed the father of Yishay \add !(Jesse, Grk: Yessai)\add*,
 \v 6 and¦85 Yishay the father of David¦88 the king¦90.
 \p David was the father of Solomon¦97 (Grk: Solomona) through Uriah's (Grk: Ourias¦101) wife¦99,
 \v 7 Solomon¦102 was the father of Rehoboam (Grk: Roboam), Rehoboam the father of Abiyah (Grk: Abia), Abiyah the father of Asa (Grk: Asaf),
@@ -94,7 +94,7 @@
 \s1 The family escape to Egypt
 \rem /s1 The Escape to Egypt
 \p
-\v 13 After they'd departed, one of \nd Yahweh's\nd* messengers¦714 appeared¦716 to Yosef in a dream¦718 and said¦725, “Get up and take the child and his¦735 mother¦734 and flee to Egypt¦739 \add (Mitsrayim)\add*. Remain there¦742 until¦743 I tell you, because¦749 \add King\add* Herod¦750 will soon search for the child in order to kill¦757 him.”
+\v 13 After they'd departed, one of \nd Yahweh's\nd* messengers¦714 appeared¦716 to Yosef in a dream¦718 and said¦725, “Get up and take the child and his¦735 mother¦734 and flee to Egypt¦739 \add !(Mitsrayim)\add*. Remain there¦742 until¦743 I tell you, because¦749 \add King\add* Herod¦750 will soon search for the child in order to kill¦757 him.”
 \p
 \v 14 So¦761 Yosef got up during the night¦773 and took¦764 the child¦767 and his¦772 mother¦771 and departed for Egypt¦777.
 \v 15 They stayed there¦780 until¦781 the death¦783 of Herod¦784, in order¦785 to fulfil¦786 what \nd Yahweh¦791\nd* had said¦795 through¦792 the prophet¦794 \add Hoshea\add*: “I called¦798 my¦801 son out of Egypt¦797.”\x + \xo 2:15: \xt Hos 11:1.\x*
@@ -460,7 +460,7 @@
 \v 8 “But¦4217 \nd master¦4222\nd*,” the commander replied, “I'm not worthy¦4225 of you¦4231 coming¦4231 to my house, but¦4232 just give the command and¦4237 my slave will be healed¦4238,
 \v 9 because¦4243 I'm also a man¦4245 given a position under authority¦4248, with soldiers¦4253 under me, and I tell this one, ‘Come here,’ and he comes, and tell my¦4268 slave¦4267, ‘Do this,’ and he does it.
 \p
-\v 10 \nd Yeshua\nd* was amazed when he heard¦4273 that, and¦4274 said¦4279 to his followers¦4281 \add around him\add*, “\wj I can assure you that I haven't discovered faith¦4290 like this from any Israeli.\wj*
+\v 10 \nd Yeshua\nd* was amazed when he heard¦4273 that, and¦4274 said¦4279 to his followers¦4281 \add around him\add*, “\wj I can assure you that I haven't discovered faith¦4290 like that from any Israeli.\wj*
 \v 11 \wj I'm telling you¦4299 that many people from all over the world will come and join Abraham¦4310 and Isaac¦4312 and Yacob¦4314 at the table in the heavenly¦4319 kingdom¦4317,\wj*\x + \xo 8:11: \xt Luk 13:29.\x*
 \v 12 \wj but¦4321 the \+add ones who thought they were the true\+add* children will be thrown¦4326 out into the distant darkness¦4329 where there'll¦4332 be crying and¦4336 regrets.\wj*\x + \xo 8:12: \xt Mat 22:13; 25:30; Luk 13:28.\x*
 \v 13 Then¦4341 he said¦4342 to the commander, “\wj Go, then¦4341, and it'll happen according to your faith,\wj*” and his slave was healed¦4355 that very moment.
@@ -1375,7 +1375,7 @@
 \rem /s1 Jesus Heals Two Blind Men; Two Blind Men Receive Sight
 \r (Mark 10:46-52; Luke 18:35-43)
 \p
-\v 29 When¦14012 they all left Yeriho¦14016 \add (Jericho)\add*, a large¦14022 crowd¦14020 followed¦14017 after¦14019 him¦14019.
+\v 29 When¦14012 they all left Yeriho¦14016 \add !(Jericho)\add*, a large¦14022 crowd¦14020 followed¦14017 after¦14019 him¦14019.
 \v 30 Then¦14024, look, two¦14026 blind¦14027 men¦14027 heard¦14032 that \nd Yeshua\nd* was passing¦14037 by, so they¦14039 yelled¦14039 out, “Show mercy¦14042 to us, \nd master¦14045\nd*, David's descendant!”
 \p
 \v 31 The crowd¦14051 warned¦14052 them to be quiet, but¦14057 they \add just\add* yelled¦14062 out even louder, “\nd Master¦14065\nd*, David's descendant, show¦14066 mercy¦14066 to us!”
@@ -1390,7 +1390,7 @@
 \rem /s1 Jesus in the temple; The Triumphant Entry into Jerusalem; Jesus' Triumphal Entry into Jerusalem
 \r (Mark 11:1-11; Luke 19:28-40; Yhn 12:12-19)
 \p
-\v 1 When¦14116 they¦14118 were getting close to Yerushalem and¦14121 arrived at Bethphage¦14125 on the Mt¦14129. of Olives¦14131, \nd Yeshua\nd* sent¦14135 two¦14136 of his apprentices¦14137 ahead,
+\v 1 When¦14116 they¦14118 were getting close to Yerushalem and¦14121 arrived at Beyt-Fagey¦14125 \add !(Bethphage)\add* on the Mt¦14129. of Olives¦14131, \nd Yeshua\nd* sent¦14135 two¦14136 of his apprentices¦14137 ahead,
 \v 2 telling them, “\wj Go ahead to the next village¦14144, and in front¦14146 of you you'll see a donkey tied up, and her colt near her. Untie the donkey and bring¦14159 them back here to me.\wj*
 \v 3 \wj But¦14162 if anyone¦14165 says anything¦14168 to you, just tell them that the \+nd master¦14173\+nd* needs them, and¦14162 they'll let you take them.\wj*”
 \p
@@ -1421,7 +1421,7 @@
 \v 16 and \add accused\add* him, \add asking,\add* “Can't you hear¦14436 what they're saying?”\x + \xo 21:16: \xt Psa 8:2 (LXX).\x*
 \p “\wj Yes, I can,\wj*” \nd Yeshua\nd* responded¦14434. “\wj Didn't you ever read \+add where it says\+add* ‘You caused praise¦14456 to come from the lips of infants¦14452 and babies’?\wj*”
 \p
-\v 17 Then¦14458 he left¦14462 the temple and Yerushalem and went¦14462 and stayed \add overnight\add* out at Bethany¦14467.
+\v 17 Then¦14458 he left¦14462 the temple and Yerushalem and went¦14462 and stayed \add overnight\add* out at Beyt-Ania¦14467 \add !(Bethany)\add*.
 \s1 Yeshua kills the fig tree
 \rem /s1 Jesus Curses the Fig Tree; The Fig Tree Withers
 \r (Mark 11:12-14,20-24)
@@ -1791,7 +1791,7 @@
 \rem /s1 Jesus Is Anointed at Bethany; The Anointing at Bethany
 \r (Mark 14:3-9; Yhn 12:1-8)
 \p
-\v 6 Meanwhile \nd Yeshua\nd* arrived in Bethany¦18573 at the house¦18575 of Simon¦18576 who \add had previously\add* had leprosy¦18579.
+\v 6 Meanwhile \nd Yeshua\nd* arrived in Beyt-Ania¦18573 \add !(Bethany)\add* at the house¦18575 of Simon¦18576 who \add had previously\add* had leprosy¦18579.
 \v 7 A woman¦18582 \add inside the house\add* came up to him carrying a \add carved\add* alabaster¦18584 flask¦18584 of very expensive lotion, which she poured¦18591 over his¦18597 head¦18596 as he was seated,\x + \xo 26:7: \xt Luk 7:37-38.\x*
 \v 8 but¦18601 some of his followers were upset when they saw this, and complained, “Why all this waste?
 \v 9 That could have been sold and¦18619 raised a lot of money to give to the poor.”
@@ -2066,7 +2066,7 @@
 \p
 \v 5 Then¦21266 the messenger¦21268 spoke to the women¦21271, “Don't¦21272 be scared because¦21277 I know that both of you are looking¦21282 for¦21282 \nd Yeshua\nd* who was executed¦21281 on a stake¦21281.
 \v 6 He isn't¦21283 here, because¦21287 he came back to life just like he said¦21289 he would. Go inside and see¦21291 the place¦21293 where¦21294 his \add body\add* was lying¦21295
-\v 7 and then¦21298 leave straight away and go and tell his¦21304 followers that he has come alive again and will go ahead of you all to Galilee¦21316. You'll see¦21311 him when you get there¦21317. Listen¦21320, I've told you now.”
+\v 7 and then¦21298 leave straight away and go and tell his¦21304 followers that he's come alive again and will go ahead of you all to Galilee¦21316. You'll see¦21311 him when you get there¦21317. Listen¦21320, I've told you now.”
 \p
 \v 8 So¦21323 they¦21335 went off quickly¦21326 with a mixture of fear¦21331 and incredible happiness, and ran¦21335 \add back\add* to tell Yeshua's followers.
 \p
@@ -2077,7 +2077,7 @@
 \p
 \v 11 After they'd left, some of the guards¦21398 \add from the tomb\add* went into the city¦21402 and¦21393 told the chief¦21406 priests¦21406 everything that had happened,
 \v 12 so they met together¦21412 with the elders¦21415 and¦21411 after some discussion, they gave¦21425 a generous amount to the soldiers¦21427
-\v 13 and told them, “Tell everyone that his followers came in the dark and stole¦21437 his body when you had fallen asleep¦21440.
+\v 13 and told them, “Tell everyone that his followers came in the dark and stole¦21437 his body when you'd fallen asleep¦21440.
 \v 14 If the governor¦21449 hears about it, we'll butter him up so that you¦21454 won't need to be afraid \add of getting punished\add*.”
 \p
 \v 15 So¦21459 they took the money and¦21459 did¦21463 what they had been asked.

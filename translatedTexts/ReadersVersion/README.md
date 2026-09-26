@@ -62,7 +62,6 @@ Of course, we’re very happy to list contributors if you desire that. (Not ever
 - Replace ‘may’with ‘can’(except perhaps in the negative???)
 - Manually mark nomina sacra in OET-RV???
 - put \add ≈ around all modern measures???
-- Finish changing ‘followers’to ‘apprentices’ where appropriate
 - Compare parallel passages and choose the best renderings
 - Define and check style of s1 section headings, i.e., tense, perfects, etc.
 - Work on consistent two levels of major and minor section headings (s1 and s2)

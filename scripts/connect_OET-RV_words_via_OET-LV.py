@@ -55,6 +55,8 @@ CHANGELOG:
     2026-08-19 Allow ../ in lines (used in USFM jmp fields)
     2026-08-23 Added checking for doubled spaces around USFM close character marker fields
     2026-09-04 Don't add word numbers to words that are inside plain (straight) \add spans
+    2026-09-25 Remove any existing word numbers from inside plain (straight) \add spans on load
+    2026-09-25 Allow word numbers in the new \add !(SomeName)\add* spans
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -72,10 +74,10 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-09-23' # by RJH
+LAST_MODIFIED_DATE = '2026-09-25' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.94'
+PROGRAM_VERSION = '0.96'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -451,6 +453,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('wrote','written'),
 
     # Vocab differences / synonyms
+    # RVword, LVwordOrPhrase
     ('addition','And'),
     ('afraid','feared'),
     ('agreeing','confirming'),
@@ -462,7 +465,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('ancestors','fathers'),
     ('and', 'And'),
     ('announced','proclaiming'), ('announcing','proclaiming'),
-    ('Anyone','one'),('anyone','one'),
+    ('Anyone','Whoever'),('anyone','whoever'),('Anyone','one'),('anyone','one'),
     ('appeared','seen'),
     ('appropriate','fitting'),
     ('Army','hosts'),('army','hosts'),
@@ -583,7 +586,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('obey','submitting'),
     ('opened','divided'),
     ('other','across'),
-    ('own','possession'),
+    ('own','possession'),('owned','having'),
     ('ordered','commanded'),
     ('paralysed','paralytic'),
     ('path','way'),('path','road'),
@@ -662,7 +665,6 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('themselves','hearts'),
     ('Then','And'),('then','And'),
     ('thinking','reasoning'),('thinking','supposing'),
-    ('time','days'),
     ('told','commanded'),
     ('total','all'),
     ('town','city'),
@@ -1123,6 +1125,11 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
     with open( rvESFMFilepath, 'rt', encoding='UTF-8' ) as esfmFile:
         state.rvESFMText = esfmFile.read() # We keep the original (for later comparison)
         state.rvESFMLines = state.rvESFMText.split( '\n' )
+        # Remove any word numbers that are inside a plain (straight) \add ...\add* span,
+        #   because those words were added into the English text, so they have no OET-LV word number
+        numStraightAddSpanRemovals = removeWordNumbersInStraightAddSpans( rvESFMFilename, state.rvESFMLines )
+        if numStraightAddSpanRemovals:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Removed a total of {numStraightAddSpanRemovals:,} word number(s) from inside straight \\add spans in {rvESFMFilename}" )
         # Do some basic checking (better to find common editing errors sooner rather than later)
         for lineNumber,line in enumerate( state.rvESFMLines, start=1 ):
             assert not line.startswith(' '), f"Unexpected space at start in {rvESFMFilename} {lineNumber}: '{line}'"
@@ -1925,12 +1932,12 @@ def getLVWordRow( wordWithNumber:str, testament:str ) -> Tuple[str,int,List[str]
 ndStartMarker, ndEndMarker = '\\nd ', '\\nd*'
 
 # The characters that, if they immediately follow a '\add ', indicate a special
-#   rewording span (e.g., \add ≈..., \add @..., \add #...).  Words inside those
+#   rewording span (e.g., \add ≈..., \add @..., \add #..., \add !(Name)...).  Words inside those
 #   special spans may keep their OET-LV word numbers.  But words inside a PLAIN
 #   straight '\add ...\add*' span are words that have been ADDED into the English
 #   text by the translator, so by definition they have no OET-LV word number and
 #   must never be given one.
-ADD_SPECIAL_CHARS = '@#≈≡*<>&%?+^'
+ADD_SPECIAL_CHARS = '@#≈≡*<>&%?+^!'
 straightAddSpanRegex = re.compile(
     f'\\\\add ([^{ADD_SPECIAL_CHARS}\\\\][^\\\\]*?)\\\\add\\*' ) # A plain '\add ...\add*' span
 
@@ -1943,6 +1950,44 @@ def isInsideStraightAddSpan( line:str, index:int ) -> bool:
     return any( match.start() < index < match.end()
                 for match in straightAddSpanRegex.finditer( line ) )
 # end of isInsideStraightAddSpan
+
+
+def removeWordNumbersInStraightAddSpans( filename:str, lines:List[str] ) -> int:
+    """
+    Remove any word numbers (¦nnnnn) that are inside a PLAIN straight '\add ...\add*' span.
+
+    Words inside such a span were ADDED into the English text by the translator,
+        so by definition they have no OET-LV word number.
+    addNumberToRVWord() now refuses to give them one,
+        but any that were inserted before that check was added still need to be cleaned up.
+
+    'lines' is modified in place.
+    Returns the number of word numbers that were removed.
+    """
+    numRemoved = 0
+    for n,line in enumerate( lines ):
+        if '¦' not in line: continue # Fast path for the many lines that have no word numbers at all
+        spanMatches = [spanMatch for spanMatch in straightAddSpanRegex.finditer( line )
+                            if '¦' in spanMatch.group(1)]
+        if not spanMatches: continue
+
+        numLineRemoved = 0
+        newLineBits, lastIndex = [], 0
+        for spanMatch in spanMatches:
+            cleanedSpanText, numSpanRemovals = wordLinkRegex.subn( '', spanMatch.group(1) ) # The span text without any word numbers
+            assert numSpanRemovals, f"Failed to remove a word number from a straight \\add span in {filename} line {n+1}: '{line[spanMatch.start():spanMatch.end()]}'"
+            assert cleanedSpanText.strip(), f"Removing the word number(s) would leave an empty straight \\add span in {filename} line {n+1}: '{line[spanMatch.start():spanMatch.end()]}'" # This shouldn't happen, but we don't want to silently create a broken field
+            numLineRemoved += numSpanRemovals
+            newLineBits.append( line[lastIndex:spanMatch.start(1)] ) # Everything up to the text inside the \add span
+            newLineBits.append( cleanedSpanText ) # The text inside the \add span, with the word numbers removed
+            lastIndex = spanMatch.end(1)
+        newLineBits.append( line[lastIndex:] ) # The rest of the line (including the closing \add*)
+
+        numRemoved += numLineRemoved
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Removed {numLineRemoved:,} word number(s) from inside straight \\add span(s) in {filename} line {n+1}: '{line[max(0,spanMatches[0].start()-10):spanMatches[-1].end()+10]}'" )
+        lines[n] = ''.join( newLineBits )
+    return numRemoved
+# end of removeWordNumbersInStraightAddSpans
 
 
 def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool | None:

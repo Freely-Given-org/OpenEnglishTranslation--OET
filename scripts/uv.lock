@@ -2,10 +2,6 @@ version = 1
 revision = 3
 requires-python = ">=3.14"
 
-[options]
-exclude-newer = "2026-09-17T15:28:21.855567724Z"
-exclude-newer-span = "P7D"
-
 [[package]]
 name = "bible-transliterations"
 source = { editable = "../../BibleTransliterations/Rust" }
