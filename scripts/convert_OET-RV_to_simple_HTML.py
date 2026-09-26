@@ -54,10 +54,10 @@ from bible_organisational_system import getSmallLeadingInt
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-08-19' # by RJH
+LAST_MODIFIED_DATE = '2026-09-26' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
-PROGRAM_VERSION = '0.99'
+PROGRAM_VERSION = '1.0.0'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -880,7 +880,7 @@ def produce_HTML_files() -> None:
                                 if followingChar == ' ':
                                     assert markerName in expectedMarkers, f"Unexpected {markerName=} with {inCharMarkers} from {source_filename} {lineNumber}: '{line}'"
                                     if markerName not in nonNestingMarkers:
-                                        assert not inCharMarkers, f"Unexpected {markerName=} with {inCharMarkers} from {source_filename} {lineNumber}: '{line}'"
+                                        # USFM allows nesting of character markers (e.g., \x inside \wj), so just append
                                         inCharMarkers.append( markerName )
                                     break
                                 elif followingChar == '*':
