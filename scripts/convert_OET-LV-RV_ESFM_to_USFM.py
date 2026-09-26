@@ -30,6 +30,7 @@ CHANGELOG:
     2026-08-24 Handle \\+add format
     2026-08-30 Remove superfluous print output
     2026-09-14 Add warning about editing exported file
+    2026-09-26 Handle new ! (alternate name) \\add format
 """
 from pathlib import Path
 import re
@@ -40,10 +41,10 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint, BOOKLIST_OT3
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-09-14' # by RJH
+LAST_MODIFIED_DATE = '2026-09-26' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_ESFM_to_USFM"
 PROGRAM_NAME = "Convert OET LV & RV ESFM files to USFM"
-PROGRAM_VERSION = '0.69'
+PROGRAM_VERSION = '0.70'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -114,6 +115,7 @@ def main():
                 assert '\\add %' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED %"
                 # assert '\\add ^' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ^" # TODO: Why???
                 assert '\\add ≈' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ≈"
+                assert '\\add !' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED !"
             adjText = ( adjText
                             .replace( '\\add ?', '\\add ' ).replace( '\\+add ?', '\\+add ' ) # This one always comes first if there's two
                             .replace( '\\add +', '\\add ' ).replace( '\\+add +', '\\+add ' )
@@ -129,6 +131,7 @@ def main():
                             .replace( '\\add %', '\\add ' ).replace( '\\+add %', '\\+add ' )
                             .replace( '\\add ^', '\\add ' ).replace( '\\+add ^', '\\+add ' )
                             .replace( '\\add ≈', '\\add ' ).replace( '\\+add ≈', '\\+add ' )
+                            .replace( '\\add !', '\\add ' ).replace( '\\+add !', '\\+add ' )
                             .replace( '\\untr ', '' ).replace( '\\untr*', '' )
                         )
             if VV == 'LV': # remove LV specialised version of USFM \\add fields
