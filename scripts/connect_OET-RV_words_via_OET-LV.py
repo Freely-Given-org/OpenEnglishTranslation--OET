@@ -57,6 +57,7 @@ CHANGELOG:
     2026-09-04 Don't add word numbers to words that are inside plain (straight) \add spans
     2026-09-25 Remove any existing word numbers from inside plain (straight) \add spans on load
     2026-09-25 Allow word numbers in the new \add !(SomeName)\add* spans
+    2026-09-26 Added matchVerbSets() to connect different forms of the same verb (e.g., 'untie' to 'untying')
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -93,9 +94,9 @@ assert OET_LV_OT_ESFM_InputFolderPath.is_dir()
 assert OET_LV_NT_ESFM_InputFolderPath.is_dir()
 assert OET_RV_ESFM_FolderPath.is_dir()
 
-OT_NameTable_Filepath = Path( 'ScriptedOTUpdates/restoreNames.commandTable.tsv' )
-NT_OT_NameTable_Filepath = Path( 'ScriptedVLTUpdates/OTNames.commandTable.tsv' )
-NT_NameTable_Filepath = Path( 'ScriptedVLTUpdates/NTNames.commandTable.tsv' )
+OT_NameTable_Filepath = Path( __file__ ).parent.joinpath( 'ScriptedOTUpdates/restoreNames.commandTable.tsv' )
+NT_OT_NameTable_Filepath = Path( __file__ ).parent.joinpath( 'ScriptedVLTUpdates/OTNames.commandTable.tsv' )
+NT_NameTable_Filepath = Path( __file__ ).parent.joinpath( 'ScriptedVLTUpdates/NTNames.commandTable.tsv' )
 COMMAND_TABLE_NUM_COLUMNS = 15
 COMMAND_HEADER_LINE = 'Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	RCase	Replace	Name	Comment'
 assert ' ' not in COMMAND_HEADER_LINE
@@ -233,7 +234,7 @@ verbalNouns = ('accusations','accusation',
                 )
 assert len(set(verbalNouns)) == len(verbalNouns) # Check for accidental duplicates
 # Verbs often don't work because we use the tenses differently between OET-RV and OET-LV/Greek
-simpleVerbSets = ( ('abandoned','abandoning','abandons','abandon'),
+SIMPLE_VERB_SETS = ( ('abandoned','abandoning','abandons','abandon'),
                     ('accepted','accepting','accepts','accept'), ('acted','acting','acts','act'),
                     ('advanced','advancing','advances','advance'),
                     ('allowed','allowing','allows','allow'),
@@ -352,8 +353,55 @@ simpleVerbSets = ( ('abandoned','abandoning','abandons','abandon'),
                     ('wrapped','wrapping','wraps','wrap'), ('wrote','written','writing','writes','write'),
                 ('yelled','yelling','yells','yell'),
                     ('yielded','yielding','yields','yield'),
+                # Additional verb sets for common tense changes
+                ('arose','arising','arises','arise','arisen'), ('awoke','awaking','awakes','awake','awoken'),
+                ('bore','bearing','bears','bear','borne'), ('beat','beating','beats','beaten'),
+                ('began','beginning','begins','begin','begun'), ('bound','binding','binds','bind'),
+                ('bit','biting','bites','bite','bitten'), ('blew','blowing','blows','blow','blown'),
+                ('broke','breaking','breaks','break','broken'), ('bred','breeding','breeds','breed'),
+                ('built','building','builds','build'), ('bought','buying','buys','buy'),
+                ('clung','clinging','clings','cling'),
+                ('crept','creeping','creeps','creep'), ('dealt','dealing','deals','deal'),
+                ('dove','diving','dives','dive','dived'), ('drew','drawing','draws','draw','drawn'),
+                ('dreamt','dreaming','dreams','dream','dreamed'), ('fed','feeding','feeds','feed'),
+                ('felt','feeling','feels','feel'), ('fought','fighting','fights','fight'),
+                ('found','finding','finds','find'), ('flung','flinging','flings','fling'),
+                ('flew','flying','flies','fly','flown'), ('forbade','forbidden'),
+                ('froze','freezing','freezes','freeze','frozen'), ('hung','hanging','hangs','hang'),
+                ('had','having','has','have'),
+                ('held','holding','holds','hold'),
+                ('knelt','kneeling','kneels','kneel'), ('laid','laying','lays','lay'),
+                ('leant','leaning','leans','lean','leaned'), ('leapt','leaping','leaps','leap','leaped'),
+                ('left','leaving','leaves','leave'), ('lent','lending','lends','lend'),
+                ('lit','lighting','lights','light','lighted'), ('lost','losing','loses','lose'),
+                ('meant','meaning','means','mean'), ('met','meeting','meets','meet'),
+                ('paid','paying','pays','pay'),
+                ('rode','riding','rides','ride','ridden'),
+                ('rang','ringing','rings','ring','rung'), ('sought','seeking','seeks','seek'),
+                ('sold','selling','sells','sell'),
+                ('shot','shooting','shoots','shoot'), ('shrank','shrinking','shrinks','shrink','shrunk'),
+                ('sang','singing','sings','sing','sung'),
+                ('sank','sinking','sinks','sink','sunk'), ('slew','slaying','slays','slay','slain'),
+                ('slid','sliding','slides','slide'), ('slung','slinging','slings','sling'),
+                ('smelt','smelling','smells','smell','smelled'), ('sowed','sowing','sows','sow','sown'),
+                ('sped','speeding','speeds','speed'), ('spent','spending','spends','spend'),
+                ('spilt','spilling','spills','spill','spilled'), ('spun','spinning','spins','spin'),
+                ('spoilt','spoiling','spoils','spoil','spoiled'),
+                ('sprang','springing','springs','spring','sprung'),
+                ('stole','stealing','steals','steal','stolen'), ('stuck','sticking','sticks','stick'),
+                ('stung','stinging','stings','sting'), ('stank','stinking','stinks','stink','stunk'),
+                ('struck','striking','strikes','strike'), ('strung','stringing','strings','string'),
+                ('strove','striving','strives','strive','striven'), ('swore','swearing','swears','swear','sworn'),
+                ('swept','sweeping','sweeps','sweep'), ('swelled','swelling','swells','swell','swollen'),
+                ('swam','swimming','swims','swim','swum'), ('swung','swinging','swings','swing'),
+                ('taught','teaching','teaches','teach'), ('tore','tearing','tears','tear','torn'),
+                ('told','telling','tells','tell'), ('throve','thriving','thrives','thrive','thriven'),
+                ('trod','treading','treads','tread','trodden'),
+                ('woke','waking','wakes','wake','woken'), ('wove','weaving','weaves','weave','woven'),
+                ('wept','weeping','weeps','weep'), ('won','winning','wins','win'),
+                ('wound','winding','winds','wind'), ('wrung','wringing','wrings','wring'),
                 )
-simpleVerbs = tuple(verb for verbSet in simpleVerbSets for verb in verbSet)
+simpleVerbs = tuple(verb for verbSet in SIMPLE_VERB_SETS for verb in verbSet)
 assert len(set(simpleVerbs)) == len(simpleVerbs), [x for x in simpleVerbs if simpleVerbs.count(x)>1 ] # Check for accidental duplicates
 for simpleVerb in simpleVerbs:
     assert len(simpleVerb) <= 12, f"({len(simpleVerb)}) {simpleVerb}" # 'distributing'
@@ -556,6 +604,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('King','king'),
     ('kingdoms','nations'),
     ('know','knowledge'),
+    ('laid','spread'),
     ('lake','sea'),
     ('large','great'),
     ('languages','tongues'),
@@ -574,6 +623,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('mind','heart'),
     ('mister','master'),('Mister','Master'),
     ('money','reward'),
+    ('mounted','sat down'),('mounted','sat'),
     ('mourn','weep'), ('mourning','wailing'),
     ('Mt','mountain'),('Mt','mount'),('Mt', 'Mount'),
     ('must','will'),
@@ -593,7 +643,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('people','multitude'),
     ('percent','add'),
     ('permanent','perpetuity'),
-    ('placed','laid'),
+    ('placed','laid'),('placing','laying'),
     ('platform','lid'),
     ('pleasing','soothing'),
     ('plus','and'),
@@ -665,6 +715,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('themselves','hearts'),
     ('Then','And'),('then','And'),
     ('thinking','reasoning'),('thinking','supposing'),
+    ('tied','bound'),
     ('told','commanded'),
     ('total','all'),
     ('town','city'),
@@ -1195,10 +1246,10 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
 
                 check_OET_RV_Verse( BBB, c, v, rvVerseEntryList, lvVerseEntryList ) # Check that any existing word numbers are in the expected range
 
-                (numSimpleListedAdds,numSimpleListedAddsNS), (numProperNounAdds,numProperNounAddsNS), (numFirstPartMatchedAdds,numFirstPartMatchedAddsNS), (numManualMatchedAdds,numManualMatchedAddsNS) \
+                (numSimpleListedAdds,numSimpleListedAddsNS), (numProperNounAdds,numProperNounAddsNS), (numFirstPartMatchedAdds,numFirstPartMatchedAddsNS), (numManualMatchedAdds,numManualMatchedAddsNS), (numVerbSetAdds,numVerbSetNS) \
                             = connect_OET_RV_Verse( BBB, c, v, rvVerseEntryList, lvVerseEntryList ) # updates state.rvESFMLines
-                bookSimpleListedAdds += numSimpleListedAdds
-                bookSimpleListedAddsNS += numSimpleListedAddsNS
+                bookSimpleListedAdds += numSimpleListedAdds + numVerbSetAdds
+                bookSimpleListedAddsNS += numSimpleListedAddsNS + numVerbSetNS
                 bookProperNounAdds += numProperNounAdds
                 bookProperNounAddsNS += numProperNounAddsNS
                 bookFirstPartMatchedAdds += numFirstPartMatchedAdds
@@ -1296,7 +1347,7 @@ def check_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> None
 
 
 GLOSS_COLUMN__NUMBER = 5
-def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tuple[Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int]]:
+def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tuple[Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int]]:
     """
     Some undocumented documentation of the NT GlossCaps column from state.wordTable:
         ●    U – lexical entry capitalized
@@ -1346,7 +1397,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
             # if lvTextSimplified.startswith( 'for ' ) or lvTextSimplified.startswith( 'For ' ) or ' for ' in lvTextSimplified or 'For ' in lvTextSimplified:
             #     print( f"FOR: {BBB}_{c}:{v}, '{lvTextSimplified.replace('for','FOR').replace('For','FOR')}'" )
             #     forList.append( f"{BBB}_{c}:{v}" )
-    if not rvText or not lvText: return (0,0), (0,0), (0,0), (0,0)
+    if not rvText or not lvText: return (0,0), (0,0), (0,0), (0,0), (0,0)
 
     rvAdjText = rvText.replace('◘','').replace('≈','').replace('…','') \
                 .replace('.','').replace(',','').replace(':','').replace(';','').replace('?','').replace('!','') \
@@ -1363,7 +1414,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     if lvAdjText.startswith( '/' ): lvAdjText = lvAdjText[1:]
     # print( f"({len(rvAdjText)}) {rvAdjText=}")
     # print( f"({len(lvAdjText)}) {lvAdjText=}")
-    if not rvAdjText or not lvAdjText: return (0,0), (0,0), (0,0), (0,0)
+    if not rvAdjText or not lvAdjText: return (0,0), (0,0), (0,0), (0,0), (0,0)
 
     lvWords = lvAdjText.split( ' ' )
     rvWords1 = rvAdjText.split( ' ' )
@@ -1410,6 +1461,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
                 rvWords.append( rvWordBit )
 
     numSimpleListedAdds,numSimpleListedNS = matchOurListedSimpleWords( BBB, c,v, rvWords, lvWords )
+    numVerbSetAdds,numVerbSetNS = matchVerbSets( BBB, c,v, rvWords, lvWords )
 
     # Now get the uppercase words
     rvUpperWords = [rvWord for rvWord in rvWords if rvWord[0].isupper()]
@@ -1446,7 +1498,8 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     return (numSimpleListedAdds,numSimpleListedNS), \
            (numIdenticalProperNounAdds+numAdjustedProperNounAdds,numIdenticalProperNounNS+numAdjustedProperNounNS), \
            (numFirstPartMatchedWords,numFirstPartMatchedWordsNS), \
-           (numHandmatches,numHandmatchesNS)
+           (numHandmatches,numHandmatchesNS), \
+           (numVerbSetAdds,numVerbSetNS)
 # end of connect_OET-RV_words_via_OET-LV.connect_OET_RV_Verse
 
 
@@ -1693,6 +1746,60 @@ def matchOurListedSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWor
 
     return numAdded,numNS
 # end of connect_OET-RV_words_via_OET-LV.matchOurListedSimpleWords
+
+
+def matchVerbSets( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:List[str] ) -> Tuple[int,int]:
+    """
+    Use SIMPLE_VERB_SETS to match different forms of the same verb.
+
+    When a verb from a set appears once in the RV and once in the LV (in any form from the set),
+        we assume that we can match them, i.e., copy the wordlink numbers from the LV into the RV.
+
+    This handles tense changes, e.g., RV 'untie' matching LV 'untying'.
+    """
+    fnPrint( DEBUGGING_THIS_MODULE, f"matchVerbSets( {BBB} {c}:{v} {rvWordList}, {lvWordList} )" )
+    assert rvWordList and lvWordList
+
+    NT = bos_books_codes_py.is_new_testament_nr( BBB )
+
+    numAdded = numNS = 0
+    
+    # For each verb set, check if any form appears in both RV and LV
+    for setIndex, verbSet in enumerate(SIMPLE_VERB_SETS):
+        # Find all forms of this verb set in the LV
+        lvIndexes = []
+        for lvN, lvWord in enumerate( lvWordList ):
+            # Extract the word part (without word number)
+            lvWordPart = lvWord.split('¦')[0] if '¦' in lvWord else lvWord
+            if lvWordPart in verbSet:
+                lvIndexes.append( lvN )
+
+        if len(lvIndexes) != 1: continue  # Need exactly one occurrence in LV
+
+        # Find all forms of this verb set in the RV
+        rvIndexes = []
+        for rvN, rvWord in enumerate( rvWordList ):
+            rvWordPart = rvWord.split('¦')[0] if '¦' in rvWord else rvWord
+            if rvWordPart in verbSet:
+                rvIndexes.append( rvN )
+
+        if len(rvIndexes) != 1: continue  # Need exactly one occurrence in RV
+
+        # We have exactly one form in each - connect them
+        rvWord = rvWordList[rvIndexes[0]]
+        if '¦' not in rvWord:
+            lvWordStr = lvWordList[lvIndexes[0]]
+            assert '¦' in lvWordStr, f"{lvIndexes[0]=} {lvWordStr=} from {lvWordList=}"
+            lvWord, lvWordNumber, lvWordRow = getLVWordRow( lvWordStr, 'NT' if NT else 'OT' )
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchVerbSets() is adding a number to RV '{rvWord}' from '{lvWord}' at {BBB} {c}:{v}")
+            result = addNumberToRVWord( BBB, c,v, rvWord, lvWordNumber )
+            if result:
+                numAdded += 1
+                if NT and 'N' in lvWordRow[state.wordTableHeaderList['NT' if NT else 'OT'].index('GlossCaps')]:
+                    numNS += 1
+
+    return numAdded,numNS
+# end of connect_OET-RV_words_via_OET-LV.matchVerbSets
 
 
 def matchWordsFirstParts( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:List[str] ) -> Tuple[int,int]:
