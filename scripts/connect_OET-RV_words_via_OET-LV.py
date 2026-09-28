@@ -462,6 +462,9 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('my', 'of me'), ('your', 'of you'), ('his', 'of him'), ('her', 'of her'), ('its', 'of it'), ('our', 'of us'), ('their', 'of them'),
     ('My', 'of me'), ('Your', 'of you'), ('His', 'of him'), ('Her', 'of her'), ('Its', 'of it'), ('Our', 'of us'), ('Their', 'of them'),
 
+    # Spelling
+    ('money-changers','moneychangers'),
+
     # Contractions
     ("aren't",'not'),("can't",'not'),("didn't",'not'),("Don't",'not'),("don't",'not'),("isn't",'not'),("shouldn't",'not'),("won't",'not'),
     ("I'll", 'I will'),("I've", 'I have'),
@@ -484,6 +487,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     # The following verbal entries handle tense changes
     ('bend', 'bent'),
     ('calling', 'called'),
+    ('came','coming'),
     ('carrying','carried'),
     ('equip','equipped'),
     ('flutter','fluttering'),
@@ -549,8 +553,10 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('bull','ox'),('bulls','oxen'),
     ('burning','fire'),
     ('But','And'),('but','And'),('But','and'),('but','and'),
+    ('buyers','buying'),
     ('cash','money'),('cash','silver'),
     ('cease','removed'),
+    ('chairs','seats'),
     ('chasing','pursuing'),
     ('cheerful','joy'),
     ('chest','ark'),
@@ -725,6 +731,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('Then','And'),('then','And'),
     ('thinking','reasoning'),('thinking','supposing'),
     ('tied','bound'),
+    ('tipped','overturned'),
     ('told','commanded'),
     ('total','all'),
     ('town','city'),
@@ -791,6 +798,12 @@ for someTuple in LV_SINGLE_WORDS_TO_RV_WORD_STRINGS:
     LVWord,RVWords = someTuple
     assert LVWord != RVWords, f"{RVWords=}"
     assert ' ' not in LVWord
+
+NAME_ADJUSTMENT_TABLE = { # Where we change too far from the accepted KJB word
+    'Menashsheh':'Manasseh',
+    'Shomron':'Samaria',
+    'Yudah':'Yehudah',
+    }
 
 
 class WordNumberError(ValueError):
@@ -885,13 +898,6 @@ def main():
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Deleting obsolete OBD Bible pickle file {something.name}…" )
             something.unlink()
 # end of connect_OET-RV_words_via_OET-LV.main
-
-
-NAME_ADJUSTMENT_TABLE = { # Where we change too far from the accepted KJB word
-    'Menashsheh':'Manasseh',
-    'Shomron':'Samaria',
-    'Yudah':'Yehudah',
-    }
 
 
 def loadOETRVNameTable() -> None:
@@ -1854,7 +1860,7 @@ def matchVerbSets( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:List[s
     NT = bos_books_codes_py.is_new_testament_nr( BBB )
 
     numAdded = numNS = 0
-    
+
     # For each verb set, check if any form appears in both RV and LV
     for setIndex, verbSet in enumerate(SIMPLE_VERB_SETS):
         # Find all forms of this verb set in the LV
