@@ -63,6 +63,7 @@ CHANGELOG:
     2026-09-28 Added matchWordsInOrder() to connect words using left-to-right clause order (reversed for '⇔' verses)
     2026-09-28 Remove word numbers from inside straight '\\add'/'\\+add' spans in ALL books on every run (even 'fast'), and report it
     2026-09-28 Use the '≈' (reworded) and '#' (changed number) '\\add' span codes to connect more words (via exposeMatchedAddSpans() and matchWordsWithChangedNumbers())
+    2026-09-28 Use the '@' '*' '%' '&' (pronoun/name/owner) and '≡' (repeated) codes too (via matchWordsBesideLvAnchor() and matchRepeatedWords()), and connect the OET-LV alternative names via matchNamesViaAltNames()
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -874,9 +875,9 @@ def main():
 
     # Connect linked words in the OET-LV to the OET-RV
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nProcessing connect words for OET OT…" )
-    connect_OET_RV( rv, lvOT, OET_LV_OT_ESFM_InputFolderPath ) # OT
+    connect_OET_RV( rv, lvOT, OET_LV_OT_ESFM_InputFolderPath, 'OT' ) # OT
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nProcessing connect words for OET NT…" )
-    connect_OET_RV( rv, lvNT, OET_LV_NT_ESFM_InputFolderPath ) # NT
+    connect_OET_RV( rv, lvNT, OET_LV_NT_ESFM_InputFolderPath, 'NT' ) # NT
 
     # Delete any saved (but now obsolete) OBD Bible pickle files
     for something in OET_RV_ESFM_FolderPath.iterdir():
@@ -1110,7 +1111,7 @@ def loadHebGrkNameTables():
 illegalWordLinkRegex1 = re.compile( '[0-9]¦' ) # Has digits BEFORE the broken pipe
 illegalWordLinkRegex2 = re.compile( '¦[1-9][0-9]{0,5}[a-z]' ) # Has letters immediately AFTER the wordlink number
 doubledND, badAddND, badNDAdd = '\\nd \\nd ', '\\add \\nd ', '\\nd*\\add*'
-def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
+def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
     """
     Firstly, load the OET-LV wordtable.
         Loads into state.wordTableHeaderList and state.wordTable.
@@ -1118,8 +1119,11 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
     Check that any existing word numbers are in the correct verse.
 
     Then connect linked words in the OET-LV to the OET-RV.
+
+    testament is either 'OT' or 'NT', and is used to label the word count summaries.
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {rv}, {lv} )" )
+    assert testament in ('OT','NT'), f"Bad {testament=}"
+    fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {rv}, {lv} {testament} )" )
 
     # Make a list of the books that we're going to process
     booklist_to_process = []
@@ -1131,8 +1135,8 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Created a list of {len(booklist_to_process)} OET books to process." )
 
     # Go through books chapters and verses
-    totalSimpleListedAdds = totalProperNounAdds = totalFirstPartMatchedAdds = totalManualMatchedAdds = totalChangedNumberAdds = totalInOrderMatchedAdds = 0
-    totalSimpleListedAddsNS = totalProperNounAddsNS = totalFirstPartMatchedAddsNS = totalManualMatchedAddsNS = totalChangedNumberAddsNS = totalInOrderMatchedAddsNS = 0 # Nomina sacra
+    totalSimpleListedAdds = totalProperNounAdds = totalFirstPartMatchedAdds = totalManualMatchedAdds = totalChangedNumberAdds = totalSpecialistAdds = totalInOrderMatchedAdds = 0
+    totalSimpleListedAddsNS = totalProperNounAddsNS = totalFirstPartMatchedAddsNS = totalManualMatchedAddsNS = totalChangedNumberAddsNS = totalSpecialistAddsNS = totalInOrderMatchedAddsNS = 0 # Nomina sacra
 
     if BibleOrgSysGlobals.maxProcesses > 1 \
     and not BibleOrgSysGlobals.alreadyMultiprocessing \
@@ -1148,7 +1152,8 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
             assert len(results) == len(booklist_to_process)
             for bookSimpleListedAdds, bookSimpleListedAddsNS, bookProperNounAdds, bookProperNounAddsNS, bookFirstPartMatchedAdds, \
                         bookFirstPartMatchedAddsNS, bookManualMatchedAdds, bookManualMatchedAddsNS, bookChangedNumberAdds, \
-                        bookChangedNumberAddsNS, bookInOrderMatchedAdds, bookInOrderMatchedAddsNS in results:
+                        bookChangedNumberAddsNS, bookSpecialistAdds, bookSpecialistAddsNS, bookInOrderMatchedAdds, \
+                        bookInOrderMatchedAddsNS in results:
                 totalSimpleListedAdds += bookSimpleListedAdds
                 totalSimpleListedAddsNS += bookSimpleListedAddsNS
                 totalProperNounAdds += bookProperNounAdds
@@ -1159,6 +1164,8 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
                 totalManualMatchedAddsNS += bookManualMatchedAddsNS
                 totalChangedNumberAdds += bookChangedNumberAdds
                 totalChangedNumberAddsNS += bookChangedNumberAddsNS
+                totalSpecialistAdds += bookSpecialistAdds
+                totalSpecialistAddsNS += bookSpecialistAddsNS
                 totalInOrderMatchedAdds += bookInOrderMatchedAdds
                 totalInOrderMatchedAddsNS += bookInOrderMatchedAddsNS
         BibleOrgSysGlobals.alreadyMultiprocessing = False
@@ -1167,7 +1174,8 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
         for BBB in booklist_to_process:
             bookSimpleListedAdds, bookSimpleListedAddsNS, bookProperNounAdds, bookProperNounAddsNS, bookFirstPartMatchedAdds, \
                 bookFirstPartMatchedAddsNS, bookManualMatchedAdds, bookManualMatchedAddsNS, bookChangedNumberAdds, \
-                bookChangedNumberAddsNS, bookInOrderMatchedAdds, bookInOrderMatchedAddsNS = connect_OET_RV_book( BBB, lv, rv, OET_LV_ESFM_InputFolderPath )
+                bookChangedNumberAddsNS, bookSpecialistAdds, bookSpecialistAddsNS, bookInOrderMatchedAdds, \
+                bookInOrderMatchedAddsNS = connect_OET_RV_book( BBB, lv, rv, OET_LV_ESFM_InputFolderPath )
             totalSimpleListedAdds += bookSimpleListedAdds
             totalSimpleListedAddsNS += bookSimpleListedAddsNS
             totalProperNounAdds += bookProperNounAdds
@@ -1178,15 +1186,17 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath ):
             totalManualMatchedAddsNS += bookManualMatchedAddsNS
             totalChangedNumberAdds += bookChangedNumberAdds
             totalChangedNumberAddsNS += bookChangedNumberAddsNS
+            totalSpecialistAdds += bookSpecialistAdds
+            totalSpecialistAddsNS += bookSpecialistAddsNS
             totalInOrderMatchedAdds += bookInOrderMatchedAdds
             totalInOrderMatchedAddsNS += bookInOrderMatchedAddsNS
 
-    if totalSimpleListedAdds or totalProperNounAdds or totalFirstPartMatchedAdds or totalManualMatchedAdds or totalChangedNumberAdds or totalInOrderMatchedAdds:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Did total of {totalSimpleListedAdds:,} simple listed adds, {totalProperNounAdds:,} proper noun adds, {totalFirstPartMatchedAdds:,} first part adds, {totalManualMatchedAdds:,} manual adds, {totalChangedNumberAdds:,} changed number adds and {totalInOrderMatchedAdds:,} in-order adds." )
-    else: vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  No new word connections made." )
-    if totalSimpleListedAddsNS or totalProperNounAddsNS or totalFirstPartMatchedAddsNS or totalManualMatchedAddsNS or totalChangedNumberAddsNS or totalInOrderMatchedAddsNS:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Did total of {totalSimpleListedAddsNS:,} simple listed nomina sacra (NS), {totalProperNounAddsNS:,} proper noun NS, {totalFirstPartMatchedAddsNS:,} first part NS, {totalManualMatchedAddsNS:,} manual NS, {totalChangedNumberAddsNS:,} changed number NS and {totalInOrderMatchedAddsNS:,} in-order NS." )
-    else: vPrint( 'Info', DEBUGGING_THIS_MODULE, "  No new nomina sacra connections made." )
+    if totalSimpleListedAdds or totalProperNounAdds or totalFirstPartMatchedAdds or totalManualMatchedAdds or totalChangedNumberAdds or totalSpecialistAdds or totalInOrderMatchedAdds:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} Did total of {totalSimpleListedAdds:,} simple listed adds, {totalProperNounAdds:,} proper noun adds, {totalFirstPartMatchedAdds:,} first part adds, {totalManualMatchedAdds:,} manual adds, {totalChangedNumberAdds:,} changed number adds, {totalSpecialistAdds:,} specialist add spans and {totalInOrderMatchedAdds:,} in-order adds." )
+    else: vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} No new word connections made." )
+    if totalSimpleListedAddsNS or totalProperNounAddsNS or totalFirstPartMatchedAddsNS or totalManualMatchedAddsNS or totalChangedNumberAddsNS or totalSpecialistAddsNS or totalInOrderMatchedAddsNS:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} Did total of {totalSimpleListedAddsNS:,} simple listed nomina sacra (NS), {totalProperNounAddsNS:,} proper noun NS, {totalFirstPartMatchedAddsNS:,} first part NS, {totalManualMatchedAddsNS:,} manual NS, {totalChangedNumberAddsNS:,} changed number NS, {totalSpecialistAddsNS:,} specialist add span NS and {totalInOrderMatchedAddsNS:,} in-order NS." )
+    else: vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  {testament} No new nomina sacra connections made." )
 # end of connect_OET-RV_words_via_OET-LV.connect_OET_RV
 
 
@@ -1215,8 +1225,8 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
 
     # wordFileName = lv[BBB].ESFMWordTableFilename
 
-    bookSimpleListedAdds = bookProperNounAdds = bookFirstPartMatchedAdds = bookManualMatchedAdds = bookChangedNumberAdds = bookInOrderMatchedAdds = 0
-    bookSimpleListedAddsNS = bookProperNounAddsNS = bookFirstPartMatchedAddsNS = bookManualMatchedAddsNS = bookChangedNumberAddsNS = bookInOrderMatchedAddsNS = 0 # Nomina sacra
+    bookSimpleListedAdds = bookProperNounAdds = bookFirstPartMatchedAdds = bookManualMatchedAdds = bookChangedNumberAdds = bookSpecialistAdds = bookInOrderMatchedAdds = 0
+    bookSimpleListedAddsNS = bookProperNounAddsNS = bookFirstPartMatchedAddsNS = bookManualMatchedAddsNS = bookChangedNumberAddsNS = bookSpecialistAddsNS = bookInOrderMatchedAddsNS = 0 # Nomina sacra
 
     lvESFMFilename = f'OET-LV_{BBB}.ESFM'
     lvESFMFilepath = OET_LV_ESFM_InputFolderPath.joinpath( lvESFMFilename )
@@ -1313,7 +1323,7 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
 
                 check_OET_RV_Verse( BBB, c, v, rvVerseEntryList, lvVerseEntryList ) # Check that any existing word numbers are in the expected range
 
-                (numSimpleListedAdds,numSimpleListedAddsNS), (numProperNounAdds,numProperNounAddsNS), (numFirstPartMatchedAdds,numFirstPartMatchedAddsNS), (numManualMatchedAdds,numManualMatchedAddsNS), (numVerbSetAdds,numVerbSetNS), (numChangedNumberAdds,numChangedNumberNS), (numInOrderMatchedAdds,numInOrderMatchedAddsNS) \
+                (numSimpleListedAdds,numSimpleListedAddsNS), (numProperNounAdds,numProperNounAddsNS), (numFirstPartMatchedAdds,numFirstPartMatchedAddsNS), (numManualMatchedAdds,numManualMatchedAddsNS), (numVerbSetAdds,numVerbSetNS), (numChangedNumberAdds,numChangedNumberNS), (numSpecialistAdds,numSpecialistNS), (numInOrderMatchedAdds,numInOrderMatchedAddsNS) \
                             = connect_OET_RV_Verse( BBB, c, v, rvVerseEntryList, lvVerseEntryList ) # updates state.rvESFMLines
                 bookSimpleListedAdds += numSimpleListedAdds + numVerbSetAdds
                 bookSimpleListedAddsNS += numSimpleListedAddsNS + numVerbSetNS
@@ -1325,6 +1335,8 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
                 bookManualMatchedAddsNS += numManualMatchedAddsNS
                 bookChangedNumberAdds += numChangedNumberAdds
                 bookChangedNumberAddsNS += numChangedNumberNS
+                bookSpecialistAdds += numSpecialistAdds
+                bookSpecialistAddsNS += numSpecialistNS
                 bookInOrderMatchedAdds += numInOrderMatchedAdds
                 bookInOrderMatchedAddsNS += numInOrderMatchedAddsNS
     else:
@@ -1349,8 +1361,8 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
             assert wronglyOrderedCombo not in newESFMtext, f"Wrongly ordered combo check failed with '{wronglyOrderedCombo}' before saving {BBB} with '{newESFMtext[newESFMtext.index(wronglyOrderedCombo)-10:newESFMtext.index(wronglyOrderedCombo)+35]}'"
         with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
             esfmFile.write( newESFMtext )
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookSimpleListedAdds:,} simple listed adds, {bookProperNounAdds:,} proper noun adds, {bookFirstPartMatchedAdds:,} first part adds, {bookManualMatchedAdds:,} manual adds, {bookChangedNumberAdds:,} changed number adds and {bookInOrderMatchedAdds:,} in-order adds for {BBB}." )
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookSimpleListedAddsNS:,} simple listed NS, {bookProperNounAddsNS:,} proper noun NS, {bookFirstPartMatchedAddsNS:,} first part NS, {bookManualMatchedAddsNS:,} manual NS, {bookChangedNumberAddsNS:,} changed number NS and {bookInOrderMatchedAddsNS:,} in-order NS for {BBB}." )
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookSimpleListedAdds:,} simple listed adds, {bookProperNounAdds:,} proper noun adds, {bookFirstPartMatchedAdds:,} first part adds, {bookManualMatchedAdds:,} manual adds, {bookChangedNumberAdds:,} changed number adds, {bookSpecialistAdds:,} specialist add span adds and {bookInOrderMatchedAdds:,} in-order adds for {BBB}." )
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookSimpleListedAddsNS:,} simple listed NS, {bookProperNounAddsNS:,} proper noun NS, {bookFirstPartMatchedAddsNS:,} first part NS, {bookManualMatchedAddsNS:,} manual NS, {bookChangedNumberAddsNS:,} changed number NS, {bookSpecialistAddsNS:,} specialist add span NS and {bookInOrderMatchedAddsNS:,} in-order NS for {BBB}." )
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      Saved OET-RV {BBB} {len(newESFMtext):,} bytes to {rvESFMFilepath}" )
     else:
         # assert bookSimpleListedAdds == bookProperNounAdds == 0
@@ -1358,7 +1370,8 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
 
     return bookSimpleListedAdds, bookSimpleListedAddsNS, bookProperNounAdds, bookProperNounAddsNS, bookFirstPartMatchedAdds, \
             bookFirstPartMatchedAddsNS, bookManualMatchedAdds, bookManualMatchedAddsNS, bookChangedNumberAdds, \
-            bookChangedNumberAddsNS, bookInOrderMatchedAdds, bookInOrderMatchedAddsNS
+            bookChangedNumberAddsNS, bookSpecialistAdds, bookSpecialistAddsNS, bookInOrderMatchedAdds, \
+            bookInOrderMatchedAddsNS
 # end of connect_OET-RV_words_via_OET-LV.connect_OET_RV_book
 
 
@@ -1419,7 +1432,7 @@ def check_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> None
 
 
 GLOSS_COLUMN__NUMBER = 5
-def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tuple[Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int]]:
+def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tuple[Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int]]:
     """
     Some undocumented documentation of the NT GlossCaps column from state.wordTable:
         ●    U – lexical entry capitalized
@@ -1469,18 +1482,15 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
             # if lvTextSimplified.startswith( 'for ' ) or lvTextSimplified.startswith( 'For ' ) or ' for ' in lvTextSimplified or 'For ' in lvTextSimplified:
             #     print( f"FOR: {BBB}_{c}:{v}, '{lvTextSimplified.replace('for','FOR').replace('For','FOR')}'" )
             #     forList.append( f"{BBB}_{c}:{v}" )
-    if not rvText or not lvText: return (0,0), (0,0), (0,0), (0,0), (0,0), (0,0), (0,0)
+    if not rvText or not lvText: return (0,0), (0,0), (0,0), (0,0), (0,0), (0,0), (0,0), (0,0)
 
     # A U+21D4 double arrow at the start of the OET-RV text means the translator did the
     #   LAST half of the OET-LV verse first, so the word order runs backwards from here on.
     #   (e.g. Mark 3:10 '⇔and a crowd...' comes before the LV's first clause.)
     reversedOrder = rvText.lstrip().startswith( ORDER_REVERSAL_CHARACTER )
-    rvAdjText = exposeMatchedAddSpans( rvText ).replace(ORDER_REVERSAL_CHARACTER,'').replace('◘','').replace('≈','').replace('…','') \
-                .replace('.','').replace(',','').replace(':','').replace(';','').replace('?','').replace('!','') \
-                .replace(' / ',' ').replace('/',' ').replace('—',' ') \
-                .replace( '(', '').replace( ')', '' ) \
-                .replace( '“', '' ).replace( '”', '' ).replace( '‘', '' ).replace( '’', '') \
-                .replace('  ',' ').strip()
+    # The exposed '\add' codes are NOT removed from this text, because splitExposedAddSpan() has
+    #   to be able to see which code each exposed span has
+    rvWords,rvAddSpans = getRVWordsAndAddSpans( rvText, connectRef )
     lvAdjText = lvText.replace('_',' ').replace('=',' ').replace('÷',' ') \
                 .replace('˱','').replace('˲','') \
                 .replace('0/','0 ').replace('1/','1 ').replace('2/','2 ').replace('3/','3 ').replace('4/','4 ').replace('5/','5 ').replace('6/','6 ').replace('7/','7 ').replace('8/','8 ').replace('9/','9 ') \
@@ -1490,17 +1500,13 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     if lvAdjText.startswith( '/' ): lvAdjText = lvAdjText[1:]
     # print( f"({len(rvAdjText)}) {rvAdjText=}")
     # print( f"({len(lvAdjText)}) {lvAdjText=}")
-    if not rvAdjText or not lvAdjText: return (0,0), (0,0), (0,0), (0,0), (0,0), (0,0), (0,0)
+    if not rvWords or not lvAdjText: return (0,0), (0,0), (0,0), (0,0), (0,0), (0,0), (0,0), (0,0)
 
     lvWords = lvAdjText.split( ' ' )
-    rvWords1 = rvAdjText.split( ' ' )
-    # for lvWord in lvWords:
-    #     assert lvWord.count( '¦' ) == 1, f"Bad {lvWord=} from {BBB} {c}:{v} {lvText=}"
-    for rvWord in rvWords1:
+    for rvWord in rvWords:
         assert rvWord.count( '¦' ) <= 1 or '-' in rvWord, f"Bad {rvWord=} from {BBB} {c}:{v} {lvText=}"
     # print( f"({len(rvWords)}) {rvWords=}")
     # print( f"({len(lvWords)}) {lvWords=}")
-    # if BBB=='PSA' and c in (3,23,29) and v<3: print( f"{connectRef} {lvWords=} {rvWords1=}" )
 
     # Remove DOM's from word list
     #   These are capitalised, but untranslated, so remove them here (because won't ever be in RV)
@@ -1523,25 +1529,20 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     #             assert lvWord.count( '¦' ) == 1, f"{connectRef} {lvWord=}" # Check that we haven't been retagging already tagged RV words
     #     if badIx is not None: lvWords.pop( badIx )
 
-    assert rvWords1
-    rvWordsToAdd = []
-    for rvWord in rvWords1:
-        assert rvWord, f"{connectRef} {rvText=} {rvAdjText=}"
-        rvWordBits = rvWord.split( '-' )
-        if len(rvWordBits) == 1: # No hyphen
-            assert rvWord.count( '¦' ) <= 1, f"{connectRef} {rvWord=} {rvText=} {rvAdjText=}" # Check that we haven't been retagging already tagged RV words
-            rvWordsToAdd.append( rvWord )
-        elif rvWordBits[1][0].isupper(): # Hyphenated and with a capital letter, e.g., Kiriat-Arba (may even have three parts)
-            for rvWordBit in rvWordBits:
-                assert rvWordBit.count( '¦' ) <= 1, f"{connectRef} {rvWordBit=} {rvText=} {rvAdjText=}" # Check that we haven't been retagging already tagged RV words
-                rvWordsToAdd.append( rvWordBit )
-    rvWords = []
-    rvAddCodes = [] # The exposed '\add' code of each word in rvWords (e.g. '#' from '\add #straps\add*'), else ''
-    for rvWord in rvWordsToAdd:
-        rvAddCode,rvWord = splitAddCode( rvWord )
-        rvWords.append( rvWord )
-        rvAddCodes.append( rvAddCode )
+    # The '\add' markers are already gone from the OET-RV text above, so all that is left of a
+    #   specialist span there is the code on the front of its first word, which we treat as a
+    #   one-word span.  The text in the OET-RV file still HAS the markers, so we use that to get
+    #   the real start and end of each span (which is what lets us number, say, both words of
+    #   Mark 5:12 '\add @the demons\add*'), as long as it gives us the same words.
+    rvLiveText = getLiveRVVerseText( BBB, c,v )
+    if rvLiveText:
+        liveWords,liveAddSpans = getRVWordsAndAddSpans( rvLiveText, connectRef )
+        if liveWords == rvWords: rvAddSpans = liveAddSpans
+        else:
+            logging.warning( f"Not using the '\\add' span starts/ends of {BBB} {c}:{v} because the two OET-RV texts gave different words" )
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{BBB} {c}:{v}\n  from object: {rvWords}\n  from file:   {liveWords}" )
 
+    numSpecialistAdds,numSpecialistNS = matchSpecialistAddSpans( BBB, c,v, rvWords, rvAddSpans, lvWords )
     numSimpleListedAdds,numSimpleListedNS = matchOurListedSimpleWords( BBB, c,v, rvWords, lvWords )
     numVerbSetAdds,numVerbSetNS = matchVerbSets( BBB, c,v, rvWords, lvWords )
 
@@ -1577,7 +1578,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
 
     numHandmatches,numHandmatchesNS = matchWordsManually( BBB, c,v, rvWords, lvWords )
 
-    numChangedNumberAdds,numChangedNumberNS = matchWordsWithChangedNumbers( BBB, c,v, rvWords, rvAddCodes, lvWords )
+    numChangedNumberAdds,numChangedNumberNS = matchWordsWithChangedNumbers( BBB, c,v, rvWords, rvAddSpans, lvWords )
 
     # Run this LAST, so that it can only take the words the other matchers didn't want
     numInOrderMatches,numInOrderMatchesNS = matchWordsInOrder( BBB, c,v, rvText, rvWords, lvWords, reversedOrder )
@@ -1588,6 +1589,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
            (numHandmatches,numHandmatchesNS), \
            (numVerbSetAdds,numVerbSetNS), \
            (numChangedNumberAdds,numChangedNumberNS), \
+           (numSpecialistAdds,numSpecialistNS), \
            (numInOrderMatches,numInOrderMatchesNS)
 # end of connect_OET-RV_words_via_OET-LV.connect_OET_RV_Verse
 
@@ -2194,6 +2196,10 @@ def matchWordsInOrder( BBB:str, c:int,v:int, rvVerseText:str, rvWordList:List[st
 # The '\add' code that means the translator changed the number, e.g. '\add #straps\add*'.
 NUMBER_CHANGE_ADD_CODE = '#'
 
+# The '\add' code that means the translator repeated something they had already said,
+#   e.g. '\add ≡the father of\add*'.
+REPEAT_ADD_CODE = '≡'
+
 # The English number changes that we can safely undo, i.e. the ones where a '#' word like
 #   'men' can only be a pluralised OET-LV 'man', and not the start of some other word.
 IRREGULAR_NUMBER_CHANGES = ( ('man','men'), ('woman','women'), ('person','people'),
@@ -2257,24 +2263,25 @@ def lvWordIsNoun( lvWordRow:List[str], testament:str ) -> bool:
 # end of lvWordIsNoun
 
 
-def matchWordsWithChangedNumbers( BBB:str, c:int,v:int, rvWordList:List[str], rvAddCodeList:List[str], lvWordList:List[str] ) -> Tuple[int,int]:
+def matchWordsWithChangedNumbers( BBB:str, c:int,v:int, rvWordList:List[str], addSpans:List[Tuple[str,int,int]], lvWordList:List[str] ) -> Tuple[int,int]:
     """
     Connect OET-RV words that the translator marked as a changed number with a
         '\add #...' span (e.g. '\add #straps\add*'), which mostly means that we turned a
         singular OET-LV saying into a plural one.
+    It works in both directions, e.g. Mark 4:29 '\add #worms\add*' against the LV 'worm', and
+        1 Samuel 17:32 '\add #the king\add*' against the LV 'Saul'.
 
     The word inside such a span is the SAME word as the OET-LV word that it translates, only
-        with the opposite number, so we can only connect it when the OET-LV word is exactly
-        one of the numberVariants() of the OET-RV word, e.g. RV '#straps' against LV 'strap'.
+    with the opposite number, so we can only connect it when the OET-LV word is exactly
+    one of the numberVariants() of the OET-RV word, e.g. RV '#straps' against LV 'strap'.
     To stay safe, the OET-LV word has to be a noun (a noun is the only kind of word whose
-        number we can change), we insist on there being exactly one such OET-LV word in the
-        verse, and we also give up if any other OET-RV word in the verse is that same OET-LV
-        word, because then we can't tell which OET-RV word is the one that goes with it.
+    number we can change), we insist on there being exactly one such OET-LV word in the
+    verse, and we also give up if any other OET-RV word in the verse is that same OET-LV
+    word, because then we can't tell which OET-RV word is the one that goes with it.
     """
     fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsWithChangedNumbers( {BBB} {c}:{v} {rvWordList} )" )
     assert rvWordList and lvWordList
-    assert len( rvWordList ) == len( rvAddCodeList )
-    if NUMBER_CHANGE_ADD_CODE not in rvAddCodeList: return 0,0
+    if not any( addCode == NUMBER_CHANGE_ADD_CODE for addCode,firstIx,lastIx in addSpans ): return 0,0
 
     NT = bos_books_codes_py.is_new_testament_nr( BBB )
     usedLVNumbers = set() # Skip any OET-LV word number that is used more than once in the verse
@@ -2287,41 +2294,333 @@ def matchWordsWithChangedNumbers( BBB:str, c:int,v:int, rvWordList:List[str], rv
 
     stillFree = getUnnumberedRVWords( BBB, c,v )
     numAdded = numNS = 0
-    for rvIx,rvAddCode in enumerate( rvAddCodeList ):
-        if rvAddCode != NUMBER_CHANGE_ADD_CODE: continue
-        rvWord = rvWordList[rvIx]
-        if '¦' in rvWord: continue # Already has a word number
-        plainRVWord = simplifyRVLVWord( rvWord )
-        if plainRVWord not in stillFree: continue # One of the earlier matchers got there first
-        if len( plainRVWord ) < MIN_NUMBER_CHANGE_WORD_LENGTH: continue
-        variants = numberVariants( plainRVWord )
-        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  {BBB} {c}:{v} RV '{rvWord}' {variants=}" )
+    for addCode,firstIx,lastIx in addSpans:
+        if addCode != NUMBER_CHANGE_ADD_CODE: continue
+        for rvIx in range( firstIx, lastIx+1 ):
+            rvWord = rvWordList[rvIx]
+            if '¦' in rvWord: continue # Already has a word number
+            plainRVWord = simplifyRVLVWord( rvWord )
+            if plainRVWord not in stillFree: continue # One of the earlier matchers got there first
+            if len( plainRVWord ) < MIN_NUMBER_CHANGE_WORD_LENGTH: continue
+            variants = numberVariants( plainRVWord )
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  {BBB} {c}:{v} RV '{rvWord}' {variants=}" )
 
+            candidateList = []
+            for lvWordStr in lvWordList:
+                lvNumber = getLVWordNumber( lvWordStr )
+                if lvNumber is None or lvNumber in usedLVNumbers: continue
+                lvWord = lvWordStr.split( '¦' )[0]
+                if not lvWord.islower(): continue # Leave proper nouns to matchIdenticalProperNouns()
+                plainLVWord = simplifyRVLVWord( lvWord )
+                if plainLVWord not in variants: continue
+                if plainLVWord == plainRVWord: continue # Same word, so the number didn't change after all
+                try:
+                    _lvWord,lvNumber,lvWordRow = getLVWordRow( lvWordStr, 'NT' if NT else 'OT' )
+                except WordNumberError as e:
+                    logging.critical( f"matchWordsWithChangedNumbers() {e} from {BBB} {c}:{v} {lvWordStr=}" )
+                    continue
+                if not lvWordIsNoun( lvWordRow, 'NT' if NT else 'OT' ):
+                    continue # Only a noun can have its number changed (so this is not e.g. LV verb 'means')
+                candidateList.append( (lvNumber,lvWord,lvWordRow) )
+            if len( candidateList ) != 1:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchWordsWithChangedNumbers() skipping ambiguous pair {BBB} {c}:{v} RV '{rvWord}' with {len(candidateList)} OET-LV candidates" )
+                continue
+            lvNumber,lvWord,lvWordRow = candidateList[0]
+            if any( '¦' not in otherRVWord and otherRVWord != rvWord and simplifyRVLVWord( otherRVWord ) == simplifyRVLVWord( lvWord ) for otherRVWord in rvWordList ):
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchWordsWithChangedNumbers() skipping {BBB} {c}:{v} RV '{rvWord}' because another RV word is '{lvWord}'" )
+                continue
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsWithChangedNumbers() is adding {lvNumber} to RV '{rvWord}' from LV '{lvWord}' at {BBB} {c}:{v}" )
+            result = addNumberToRVWord( BBB, c,v, rvWord, lvNumber )
+            if result:
+                numAdded += 1
+                if NT and 'N' in lvWordRow[state.wordTableHeaderList['NT'].index('GlossCaps')]: numNS += 1
+            else:
+                logging.warning( f"Got addNumberToRVWord( {BBB} {c}:{v} '{rvWord}' {lvNumber} ) result = {result}" )
+
+    return numAdded,numNS
+# end of connect_OET-RV_words_via_OET-LV.matchWordsWithChangedNumbers
+
+
+# The '\add' codes that stand in the place of a single OET-LV word, but where the English
+#   word that the translator wrote is NOT a translation of that OET-LV word, so the only way
+#   to find the OET-LV word is to look at the OET-LV words on either side of the span:
+#     '@' – a pronoun that we changed to a name, e.g. RV '@Yeshua' for the LV 'he',
+#     '%' – the person that we changed, e.g. RV '%they' for the LV '=them',
+#     '*' – a name that we changed to a pronoun or a description, e.g. RV '*the priest' for the LV 'Amaziah',
+#     '&' – an owner that we added, e.g. RV '&His' for the LV 'the' (the OET formats say
+#           '&' replaces 'the' with a possessive like 'his').
+# Every one of those words has to go with a particular KIND of OET-LV word, which is what
+#   the ANCHOR_ADD_CODE_TESTS below check before we accept a connection.
+# The '<', '>' and '+' and '=' codes are deliberately NOT here: '<add' and '>add' are English
+#   that the translator added (a direct object, an implied person or object) and we have no
+#   reliable way to tell which OET-LV word, if any, they stand in for.
+ANCHOR_ADD_CODE_TESTS = { '@','%','*','&' }
+
+# The OET-LV words that the '@' and '%' codes can stand in for, i.e. the person pronouns.
+#   We include the possessives ('his', 'their', ...) because a name can stand in for a
+#   possessive too (e.g. 2 Samuel 21:20 '\add @Maccabeus\add*' for the LV 'his feet').
+#   We deliberately leave out the ambiguous combinations ('he/it', 'he/she', 'they/them', ...)
+#   which the OET-LV uses when it is not sure which word it means.
+PERSON_PRONOUN_WORDS = { 'he','him','his','she','her','hers','they','them','their','theirs',
+                         'himself','herself','themselves','we','us','our','i','me','my' }
+# The OET-LV words that the '&' code can stand in for, i.e. an article or a possessive.
+OWNER_LV_WORDS = { 'the','a','an','his','her','its','their','my','our','your','yours','theirs','who','whom','whose' }
+MIN_ANCHORED_ADD_WORD_LENGTH = 2
+
+
+def lvWordIsProperNoun( lvWordRow:List[str], testament:str ) -> bool:
+    """
+    Return True if an OET-LV word is a proper noun, using the same test that
+        matchIdenticalProperNouns() uses, so that we can tell a name from a word that just
+        happens to be capitalised because it starts a sentence (e.g. LV 'Be¦1102' and 'I¦1166').
+    """
+    if testament == 'NT':
+        return lvWordRow[state.wordTableHeaderList['NT'].index('Role')].strip() == 'N'
+    glossCapitalisation = lvWordRow[state.wordTableHeaderList['OT'].index('GlossCapitalisation')]
+    return 'S' not in glossCapitalisation # 'S' means it is only capitalised because it starts a sentence
+# end of connect_OET-RV_words_via_OET-LV.lvWordIsProperNoun
+
+
+def getRVWordNumber( rvWord:str ) -> Optional[int]:
+    """
+    Pull the OET-RV word number out of a word like 'wineskins¦23221'.
+    """
+    m = re.match( r'^.*?¦(\d+)', rvWord )
+    return int(m.group(1)) if m else None
+# end of connect_OET-RV_words_via_OET-LV.getRVWordNumber
+
+
+def addNumberToAddSpan( BBB:str, c:int,v:int, rvWordList:List[str], firstIx:int, lastIx:int, lvNumber:int, lvWord:str, lvWordRow:List[str] ) -> Tuple[int,int]:
+    """
+    Give 'lvNumber' to every word of the exposed '\add' span that covers rvWordList[firstIx:lastIx+1].
+    A single OET-LV word can be rendered by several English words (e.g. Mark 5:12
+        '\add @the demons\add*' for the LV 'they'), and the human translators number all of
+        them with the one OET-LV number, so we do the same.
+    """
+    NT = bos_books_codes_py.is_new_testament_nr( BBB )
+    numAdded = numNS = 0
+    for rvIx in range( firstIx, lastIx+1 ):
+        result = addNumberToRVWord( BBB, c,v, rvWordList[rvIx], lvNumber )
+        if result:
+            numAdded += 1
+            if NT and 'N' in lvWordRow[state.wordTableHeaderList['NT'].index('GlossCaps')]: numNS += 1
+        else:
+            logging.warning( f"Got addNumberToRVWord( {BBB} {c}:{v} '{rvWordList[rvIx]}' {lvNumber} ) result = {result}" )
+    return numAdded,numNS
+# end of connect_OET-RV_words_via_OET-LV.addNumberToAddSpan
+
+
+def matchWordsBesideLvAnchor( BBB:str, c:int,v:int, rvWordList:List[str], addSpans:List[Tuple[str,int,int]], lvWordList:List[str] ) -> Tuple[int,int]:
+    """
+    Connect the OET-RV words of a '@', '%', '*' or '&' '\add' span to the OET-LV word that they
+        stand in front of, which is the OET-LV word NEXT to the OET-LV word that the OET-RV word
+        before (or after) the span is connected to.
+    For example, in Mark 1:16 the OET-RV 'Simon¦27817 ... \add @the netted men\add* came in' is
+        numbered against the OET-LV 'Simon¦27817 ˊēth¦27818 the¦27819 ˢaccâbîm¦27820', so the
+        numbered OET-RV word before the '@' span gives us the OET-LV word number 27819, and the
+        OET-LV word after that one ('ˢaccâbîm¦27820') is what the span is standing in front of.
+    We only use an OET-RV word as the anchor if it is a plain word or a one-word span, because a
+        longer '≈' or '#' span can stand for more than one OET-LV word, in which case the OET-LV
+        word next to it would not be the one that the span is next to.
+    We also insist that the OET-LV word we land on is the kind of word that the code needs (see
+        ANCHOR_ADD_CODE_TESTS and lvWordIsProperNoun()) and that the before and after anchors
+        don't disagree, so a missing or misleading anchor can't produce a wrong word number.
+    """
+    fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsBesideLvAnchor( {BBB} {c}:{v} {rvWordList} )" )
+    assert rvWordList and lvWordList
+    if not any( addCode in ANCHOR_ADD_CODE_TESTS for addCode,firstIx,lastIx in addSpans ): return 0,0
+
+    NT = bos_books_codes_py.is_new_testament_nr( BBB )
+    usedLVNumbers = set() # Skip any OET-LV word number that is used more than once in the verse
+    seenLVNumbers = set()
+    for lvWordStr in lvWordList:
+        lvNumber = getLVWordNumber( lvWordStr )
+        if lvNumber is None: continue
+        if lvNumber in seenLVNumbers: usedLVNumbers.add( lvNumber ) # e.g. LV 'been¦1544, have¦1544'
+        seenLVNumbers.add( lvNumber )
+
+    # The span that each word is inside of, so we can tell a plain word from a reworded one
+    spanAtIx = {}
+    for addCode,firstIx,lastIx in addSpans:
+        for rvIx in range( firstIx, lastIx+1 ): spanAtIx[rvIx] = (addCode,firstIx,lastIx)
+
+    stillFree = getUnnumberedRVWords( BBB, c,v )
+    numAdded = numNS = 0
+    for addCode,firstIx,lastIx in addSpans:
+        if addCode not in ANCHOR_ADD_CODE_TESTS: continue
+        if any( '¦' in rvWordList[rvIx] for rvIx in range( firstIx, lastIx+1 ) ): continue # Already numbered
+        if any( simplifyRVLVWord( rvWordList[rvIx] ) not in stillFree for rvIx in range( firstIx, lastIx+1 ) ):
+            continue # One of the earlier matchers got there first
+        candidateList = []
+        for rvDirection in ( -1, 1 ): # Look at the numbered OET-RV word before the span, then the one after
+            rvIx = firstIx - 1 if rvDirection == -1 else lastIx + 1
+            while 0 <= rvIx < len( rvWordList ):
+                span = spanAtIx.get( rvIx )
+                if span is None: break # A plain OET-RV word
+                if span[1] == span[2]: break # A one-word span, which stands for one OET-LV word
+                rvIx += rvDirection # Skip over a longer span, which can stand for several OET-LV words
+            if not ( 0 <= rvIx < len( rvWordList ) ): continue
+            anchorNumber = getRVWordNumber( rvWordList[rvIx] )
+            if anchorNumber is None: continue
+            anchorLVIndexes = [ lvIx for lvIx,lvWordStr in enumerate( lvWordList ) if getLVWordNumber( lvWordStr ) == anchorNumber ]
+            if len( anchorLVIndexes ) != 1: continue # The OET-LV word number covers more than one OET-LV word
+            # The anchor is on the left of the span, so the OET-LV word we want is on its right, and vice versa
+            candidateIx = anchorLVIndexes[0] - rvDirection
+            if not ( 0 <= candidateIx < len( lvWordList ) ): continue
+            lvWordStr = lvWordList[candidateIx]
+            lvNumber = getLVWordNumber( lvWordStr )
+            if lvNumber is None or lvNumber == anchorNumber or lvNumber in usedLVNumbers: continue
+            try:
+                lvWord,lvNumber,lvWordRow = getLVWordRow( lvWordStr, 'NT' if NT else 'OT' )
+            except WordNumberError as e:
+                logging.critical( f"matchWordsBesideLvAnchor() {e} from {BBB} {c}:{v} {lvWordStr=}" )
+                continue
+            if addCode in ( '@', '%' ):
+                if simplifyRVLVWord( lvWord ) not in PERSON_PRONOUN_WORDS: continue
+            elif addCode == '&':
+                if simplifyRVLVWord( lvWord ) not in OWNER_LV_WORDS: continue
+            elif addCode == '*':
+                if not lvWordIsProperNoun( lvWordRow, 'NT' if NT else 'OT' ): continue
+            if len( simplifyRVLVWord( lvWord ) ) < MIN_ANCHORED_ADD_WORD_LENGTH: continue
+            candidateList.append( (lvNumber,lvWord,lvWordRow) )
+        candidateNumbers = { candidate[0] for candidate in candidateList }
+        if len( candidateNumbers ) != 1:
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchWordsBesideLvAnchor() skipping {BBB} {c}:{v} '\\add {addCode}{' '.join(rvWordList[firstIx:lastIx+1])}\\add*' with {len(candidateNumbers)} OET-LV candidates" )
+            continue
+        lvNumber,lvWord,lvWordRow = candidateList[0]
+        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsBesideLvAnchor() is adding {lvNumber} to RV '{' '.join(rvWordList[firstIx:lastIx+1])}' from LV '{lvWord}' at {BBB} {c}:{v}" )
+        spanNumAdded,spanNumNS = addNumberToAddSpan( BBB, c,v, rvWordList, firstIx, lastIx, lvNumber, lvWord, lvWordRow )
+        numAdded += spanNumAdded
+        numNS += spanNumNS
+
+    return numAdded,numNS
+# end of connect_OET-RV_words_via_OET-LV.matchWordsBesideLvAnchor
+
+
+def matchRepeatedWords( BBB:str, c:int,v:int, rvWordList:List[str], addSpans:List[Tuple[str,int,int]], lvWordList:List[str] ) -> Tuple[int,int]:
+    """
+    Connect the OET-RV words of a '\add ≡...' span, which means we repeated something that we
+        had already said, to the OET-LV word that the repeat goes with.
+    Because it is a repeat, the same words occur twice in the OET-RV verse but only ONCE in the
+        OET-LV verse, so we can connect the repeated words to that single OET-LV word (e.g.
+        1 Chronicles 4:19, where 'the father of' occurs twice in the OET-RV verse and only once
+        in the OET-LV verse).
+    We insist that the words really do occur EARLIER in the same OET-RV verse, because '≡' is
+        also used to repeat something that we said in a PREVIOUS verse, and that has nothing to
+        do with the OET-LV word of this verse (e.g. 1 Chronicles 16:16 and 23:29).
+    """
+    fnPrint( DEBUGGING_THIS_MODULE, f"matchRepeatedWords( {BBB} {c}:{v} {rvWordList} )" )
+    assert rvWordList and lvWordList
+    if not any( addCode == REPEAT_ADD_CODE for addCode,firstIx,lastIx in addSpans ): return 0,0
+
+    NT = bos_books_codes_py.is_new_testament_nr( BBB )
+    stillFree = getUnnumberedRVWords( BBB, c,v )
+    numAdded = numNS = 0
+    for addCode,firstIx,lastIx in addSpans:
+        if addCode != REPEAT_ADD_CODE: continue
+        if any( '¦' in rvWordList[rvIx] for rvIx in range( firstIx, lastIx+1 ) ): continue # Already numbered
+        if any( simplifyRVLVWord( rvWordList[rvIx] ) not in stillFree for rvIx in range( firstIx, lastIx+1 ) ):
+            continue # One of the earlier matchers got there first
+        phrase = [ simplifyRVLVWord( rvWordList[rvIx] ) for rvIx in range( firstIx, lastIx+1 ) ]
+        if not any( phrase == [ simplifyRVLVWord( rvWordList[rvIx2] ) for rvIx2 in range( rvIx, rvIx+len(phrase) ) ]
+                    for rvIx in range( firstIx ) ):
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchRepeatedWords() skipping {BBB} {c}:{v} '\\add ≡{' '.join(phrase)}\\add*' because it does not occur earlier in the same verse" )
+            continue # It is a repeat of something in a previous verse, so this OET-LV word is not it
+        candidateNumbers = set()
+        candidateWord, candidateRow = None, None
+        for lvIx in range( len( lvWordList ) - len(phrase) + 1 ):
+            if [ simplifyRVLVWord( lvWordList[lvIx2].split( '¦' )[0] ) for lvIx2 in range( lvIx, lvIx+len(phrase) ) ] != phrase: continue
+            lvNumber = getLVWordNumber( lvWordList[lvIx] )
+            if lvNumber is None: continue
+            try:
+                lvWord,lvNumber,lvWordRow = getLVWordRow( lvWordList[lvIx], 'NT' if NT else 'OT' )
+            except WordNumberError as e:
+                logging.critical( f"matchRepeatedWords() {e} from {BBB} {c}:{v} {lvWordList[lvIx]=}" )
+                continue
+            candidateNumbers.add( lvNumber )
+            candidateWord, candidateRow = lvWord, lvWordRow
+        if len( candidateNumbers ) != 1:
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchRepeatedWords() skipping {BBB} {c}:{v} '\\add ≡{' '.join(phrase)}\\add*' with {len(candidateNumbers)} OET-LV candidates" )
+            continue
+        lvNumber = candidateNumbers.pop()
+        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchRepeatedWords() is adding {lvNumber} to RV '{' '.join(rvWordList[firstIx:lastIx+1])}' from LV '{candidateWord}' at {BBB} {c}:{v}" )
+        spanNumAdded,spanNumNS = addNumberToAddSpan( BBB, c,v, rvWordList, firstIx, lastIx, lvNumber, candidateWord, candidateRow )
+        numAdded += spanNumAdded
+        numNS += spanNumNS
+
+    return numAdded,numNS
+# end of connect_OET-RV_words_via_OET-LV.matchRepeatedWords
+
+
+# The OET-LV gives a name in the original language AND its English equivalent, e.g.
+#   'Yəhūdāh/Judah' or 'Samouaʸl/(Shəmūˊel)', while the OET-RV usually uses the English one,
+#   either as a plain word or inside a '\add !(Judah)\add*' span (the code that says this is the
+#   original-language name).  matchIdenticalProperNouns() only compares the two names as they
+#   are written, so it can't connect any of those; here we compare the OET-RV word against each
+#   of the OET-LV alternatives separately, and only when there is exactly one OET-LV word in the
+#   verse that it could be (so we never guess).
+lvAltNameRegex = re.compile( r'[/(]' )
+
+
+def matchNamesViaAltNames( BBB:str, c:int,v:int, rvWordList:List[str], addSpans:List[Tuple[str,int,int]], lvWordList:List[str] ) -> Tuple[int,int]:
+    """
+    Connect an OET-RV name to the OET-LV word number of an OET-LV name whose English
+        alternative is the same name, e.g. OET-RV 'Judah' (or '\add !(Judah)\add*') against
+        OET-LV 'Yəhūdāh/Judah¦367711'.
+    This only uses the OET-LV word numbers of proper nouns (see lvWordIsProperNoun()), and it
+        gives up if the OET-RV name could be any of more than one OET-LV word in the verse.
+    """
+    fnPrint( DEBUGGING_THIS_MODULE, f"matchNamesViaAltNames( {BBB} {c}:{v} {rvWordList} )" )
+    assert rvWordList and lvWordList
+    if not any( '/' in lvWordStr.split( '¦' )[0] for lvWordStr in lvWordList ): return 0,0 # No OET-LV alternative names in this verse
+    NT = bos_books_codes_py.is_new_testament_nr( BBB )
+    usedLVNumbers = set()
+    seenLVNumbers = set()
+    for lvWordStr in lvWordList:
+        lvNumber = getLVWordNumber( lvWordStr )
+        if lvNumber is None: continue
+        if lvNumber in seenLVNumbers: usedLVNumbers.add( lvNumber )
+        seenLVNumbers.add( lvNumber )
+
+    stillFree = getUnnumberedRVWords( BBB, c,v )
+    # We only match the words that are inside a '!' '\add' span, i.e. the original-language
+    #   names that the translator put next to the OET-LV name that they are an alternative name
+    #   of.  We get them from the LIVE OET-RV text, because getCleanText() has already taken the
+    #   '!' spans' '\add' markers off them, so we can't see which words they were.
+    rvLiveText = getLiveRVVerseText( BBB, c,v )
+    if not rvLiveText: return 0,0
+    _rvLiveWords,rvNameSpans = getRVWordsAndAddSpans( rvLiveText, f"{BBB} {c}:{v}", codesToExpose=('!',) )
+    if not rvNameSpans: return 0,0
+    rvNameWordList = [] # The words inside the '!' spans
+    for _code,firstIx,lastIx in rvNameSpans: rvNameWordList.extend( _rvLiveWords[firstIx:lastIx+1] )
+    numAdded = numNS = 0
+    for rvWord in rvNameWordList:
+        if '¦' in rvWord: continue # Already has a word number
+        if '\\' in rvWord: continue # One of the '\add' markers, which is not a name
+        if not rvWord[0].isupper(): continue # Only a capitalised word can be a name
+        if len( rvWord ) < MIN_ANCHORED_ADD_WORD_LENGTH: continue
+        if simplifyRVLVWord( rvWord ) not in stillFree:
+            continue # One of the earlier matchers got there first
         candidateList = []
         for lvWordStr in lvWordList:
             lvNumber = getLVWordNumber( lvWordStr )
             if lvNumber is None or lvNumber in usedLVNumbers: continue
             lvWord = lvWordStr.split( '¦' )[0]
-            if not lvWord.islower(): continue # Leave proper nouns to matchIdenticalProperNouns()
-            plainLVWord = simplifyRVLVWord( lvWord )
-            if plainLVWord not in variants: continue
-            if plainLVWord == plainRVWord: continue # Same word, so the number didn't change after all
+            if simplifyRVLVWord( lvWord ) == simplifyRVLVWord( rvWord ): continue # matchIdenticalProperNouns() has that one
+            if not any( simplifyRVLVWord( altName ) == simplifyRVLVWord( rvWord ) for altName in lvAltNameRegex.split( lvWord ) ): continue
             try:
                 _lvWord,lvNumber,lvWordRow = getLVWordRow( lvWordStr, 'NT' if NT else 'OT' )
             except WordNumberError as e:
-                logging.critical( f"matchWordsWithChangedNumbers() {e} from {BBB} {c}:{v} {lvWordStr=}" )
+                logging.critical( f"matchNamesViaAltNames() {e} from {BBB} {c}:{v} {lvWordStr=}" )
                 continue
-            if not lvWordIsNoun( lvWordRow, 'NT' if NT else 'OT' ):
-                continue # Only a noun can have its number changed (so this is not e.g. LV verb 'means')
+            if not lvWordIsProperNoun( lvWordRow, 'NT' if NT else 'OT' ): continue
             candidateList.append( (lvNumber,lvWord,lvWordRow) )
         if len( candidateList ) != 1:
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchWordsWithChangedNumbers() skipping ambiguous pair {BBB} {c}:{v} RV '{rvWord}' with {len(candidateList)} OET-LV candidates" )
+            if candidateList:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchNamesViaAltNames() skipping {BBB} {c}:{v} RV '{rvWord}' with {len(candidateList)} OET-LV candidates" )
             continue
         lvNumber,lvWord,lvWordRow = candidateList[0]
-        if any( '¦' not in otherRVWord and otherRVWord != rvWord and simplifyRVLVWord( otherRVWord ) == simplifyRVLVWord( lvWord ) for otherRVWord in rvWordList ):
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchWordsWithChangedNumbers() skipping {BBB} {c}:{v} RV '{rvWord}' because another RV word is '{lvWord}'" )
-            continue
-        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsWithChangedNumbers() is adding {lvNumber} to RV '{rvWord}' from LV '{lvWord}' at {BBB} {c}:{v}" )
+        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchNamesViaAltNames() is adding {lvNumber} to RV '{rvWord}' from LV '{lvWord}' at {BBB} {c}:{v}" )
         result = addNumberToRVWord( BBB, c,v, rvWord, lvNumber )
         if result:
             numAdded += 1
@@ -2330,7 +2629,24 @@ def matchWordsWithChangedNumbers( BBB:str, c:int,v:int, rvWordList:List[str], rv
             logging.warning( f"Got addNumberToRVWord( {BBB} {c}:{v} '{rvWord}' {lvNumber} ) result = {result}" )
 
     return numAdded,numNS
-# end of connect_OET-RV_words_via_OET-LV.matchWordsWithChangedNumbers
+# end of connect_OET-RV_words_via_OET-LV.matchNamesViaAltNames
+
+
+def matchSpecialistAddSpans( BBB:str, c:int,v:int, rvWordList:List[str], addSpans:List[Tuple[str,int,int]], lvWordList:List[str] ) -> Tuple[int,int]:
+    """
+    Run the matchers that use the meaning of a specialist '\add' code to find the OET-LV word
+        that the words of the span stand in front of, i.e. the '@', '*', '%', '&' and '≡' codes.
+    We run these BEFORE the matchers that compare the OET-RV and OET-LV words with each other,
+        because these rules use what the translator told us about the span, which is firmer
+        evidence than the OET-RV and OET-LV words happening to look similar.
+    """
+    numAdded = numNS = 0
+    for matcher in ( matchWordsBesideLvAnchor, matchRepeatedWords, matchNamesViaAltNames ):
+        result,resultNS = matcher( BBB, c,v, rvWordList, addSpans, lvWordList )
+        numAdded += result
+        numNS += resultNS
+    return numAdded,numNS
+# end of connect_OET-RV_words_via_OET-LV.matchSpecialistAddSpans
 
 
 def matchWordsManually( BBB:str, c:int,v:int, rvVerseWordList:List[str], lvVerseWordList:List[str] ) -> Tuple[int,int]:
@@ -2539,46 +2855,195 @@ specialAddSpanRegex = re.compile(
 #   different English words, and '\add #straps\add*' is the same word as an OET-LV word with
 #   the opposite number.  (The '≈' code gets removed again by the normal word clean-up, the
 #   '#' code is kept so that matchWordsWithChangedNumbers() knows what the word is.)
+#   The '@' '*' '%' '&' and '≡' codes are also exposed, because the words in those spans
+#   still stand for an OET-LV word, we just have to look for it next to the span rather than
+#   in the words of the span itself (see matchWordsBesideLvAnchor() and matchRepeatedWords()).
 #   We do NOT expose the other codes, because the words in those spans are NOT translations
 #   of a single OET-LV word:
-#     '+' and '=' and '<' and '>' and '&' are English that the translator added (an article,
-#           a copula, a direct object, an implied person or object, an owner), so there is
+#     '+' and '=' and '<' and '>' are English that the translator added (an article,
+#           a copula, a direct object, an implied person or object), so there is
 #           no OET-LV word for them
-#     '@' and '*' and '!' are a name or pronoun that we repeated or that we wrote out in
-#           place of the OET-LV word, so the OET-LV word is already numbered next to it
-#     '%' is our own choice of word, and a choice of word that happens to be a word that
-#           occurs in the OET-LV can easily be confused with it (e.g. Mark 11:23 '\add %I\add*')
-#     '^' and '≡' and '?' are the opposite of the OET-LV, or an elided thing that we repeated,
-#           or something that we are not even sure about
-ADD_CODES_TO_EXPOSE = ( '≈', '#' )
+#     '!' is the original-language name that goes with an OET-LV name that is right next to
+#           it, so those words are connected by matchNamesViaAltNames() instead
+#     '^' is the opposite of the OET-LV, and '?' means the translator is not even sure
+#           about the code
+ADD_CODES_TO_EXPOSE = ( '≈', '#', '@', '*', '%', '&', '≡' )
 addCloseMarkerRegex = re.compile( r'\\(?:\+)?add\*$' ) # The '\add*' or '\+add*' that closes a span
+addMarkerRegex = re.compile( r'\\(?:\+)?add\*?' ) # The '\add' or '\+add' and the '\add*' or '\+add*'
 
-def exposeMatchedAddSpans( rvText:str ) -> str:
+# When we expose one of the ADD_CODES_TO_EXPOSE spans above, we wrap it in these two
+#   Unicode private-use characters so that the matchers can still tell where the span
+#   starts and ends, now that the '\add' and '\add*' markers have gone:
+#       '\add ≈because\add*'  becomes  '\uE000≈because\uE001'
+# The start character is followed by the code, and the end character sits at the end of the
+#   span.  They never occur in an OET-RV verse, and splitExposedAddSpan() removes them (and
+#   the code) from the words before the matchers compare them, so they are just bookkeeping.
+ADD_SPAN_START_CHAR = '\uE000'
+ADD_SPAN_END_CHAR = '\uE001'
+addSpanMarkerRegex = re.compile( f'[{ADD_SPAN_START_CHAR}{ADD_SPAN_END_CHAR}]' )
+
+def exposeMatchedAddSpans( rvText:str, codesToExpose:tuple=ADD_CODES_TO_EXPOSE ) -> str:
     """
     Rewrite the '\add' spans of an OET-RV verse that we can use to connect words (see
-        ADD_CODES_TO_EXPOSE), by dropping the '\add <code>' and '\add*' markers and keeping
-        the code on the front of the first word of the span, e.g.
-            '\add #straps\add*' becomes '#straps'
-            '\add ≈because\add*' becomes '≈because'
+        ADD_CODES_TO_EXPOSE), by dropping the '\add <code>' and '\add*' markers and marking
+        where the span starts and ends, e.g.
+            '\add #straps\add*' becomes '\uE000#straps\uE001'
+            '\add ≈because\add*' becomes '\uE000≈because\uE001'
     Every other '\add' span is left exactly as it is, so its words stay invisible to the
         matchers (i.e. they are words that were added into the English text).
+    'codesToExpose' defaults to ADD_CODES_TO_EXPOSE, but matchNamesViaAltNames() passes in just
+        the '!' code, so that only the words of the '!' spans get exposed.
     """
     def replacer( match ):
-        if match.group( 'code' ) not in ADD_CODES_TO_EXPOSE: return match.group( 0 )
-        return f"{match.group( 'code' )}{match.group( 'text' )}"
+        code = match.group( 'code' )
+        if code not in codesToExpose: return match.group( 0 )
+        return f"{ADD_SPAN_START_CHAR}{code}{match.group( 'text' )}{ADD_SPAN_END_CHAR}"
     return specialAddSpanRegex.sub( replacer, rvText )
 # end of exposeMatchedAddSpans
+
 
 
 def splitAddCode( word:str ) -> Tuple[str,str]:
     """
     Split a leading exposed '\add' code off the front of an OET-RV word,
         e.g. '#straps' becomes ('#', 'straps').
+    This is for words taken from the LIVE OET-RV text (see getUnnumberedRVWords()), where the
+        code is still sitting in front of the word; the words that come from
+        exposeMatchedAddSpans() carry ADD_SPAN_START_CHAR/ADD_SPAN_END_CHAR instead.
     """
     if word and word[0] in ADD_CODES_TO_EXPOSE:
         return word[0], word[1:]
     return '', word
 # end of splitAddCode
+
+
+def getLiveRVVerseText( BBB:str, c:int, v:int ) -> str:
+    """
+    Return the CURRENT text of an OET-RV verse out of state.rvESFMLines, i.e. the text of all
+        its verse and '\\d' lines joined together, EXACTLY as the file has it, so the '\\add'
+        markers are still in it.
+    We need that because the OET-RV object (see connect_OET_RV_Verse()) has already thrown the
+        '\\add' markers away, which means we can no longer tell where a '\\add' specialist span
+        starts and ends from that text.
+    Returns '' if we can't find the verse.
+    """
+    havePsalmTitles = bos_books_codes_py.has_psalm_title( BBB, str(c) )
+    desiredV = (v-1) if havePsalmTitles and v>1 else v
+    verseText = ''
+    C = V = None
+    foundChapter = foundVerse = False
+    for line in state.rvESFMLines:
+        try: marker, rest = line.split( ' ', 1 )
+        except ValueError: marker, rest = line, ''
+        if marker in ('\\s1','\\s2','\\s3','\\r','\\rem') or not rest: continue
+        if marker == '\\c':
+            C = int(rest)
+            if C > c: break
+            if C == c: foundChapter = True
+        elif foundChapter and marker == '\\v':
+            Vstr, rest = rest.split( ' ', 1 )
+            V = int( Vstr.split('-',1)[0] )
+            foundVerse = C==c and V==desiredV
+        elif foundChapter and marker == '\\d':
+            foundVerse = C==c and desiredV==1
+        if not foundVerse: continue
+        if marker in ('\\v','\\d'): rest = rest.split( ' ', 1 )[1] if ' ' in rest else '' # Drop the verse number
+        verseText = f"{verseText}{' ' if verseText else ''}{rest}"
+    return verseText.strip()
+# end of connect_OET-RV_words_via_OET-LV.getLiveRVVerseText
+
+
+def getRVWordsAndAddSpans( rvText:str, connectRef:str, codesToExpose:tuple=ADD_CODES_TO_EXPOSE ) -> Tuple[List[str],List[Tuple[str,int,int]]]:
+    """
+    Return the OET-RV words of a verse, together with the exposed '\\add' specialist spans inside
+        them, as a list of (code, first word index, last word index), e.g. ('@', 4, 6) for the
+        three words of '\\add @the netted men\\add*'.
+
+    'rvText' is the text of the OET-RV verse WITH the '\\add' markers still in it (see
+        getLiveRVVerseText()), so we can see where each span starts and ends.  It can also be a
+        text that has already lost its markers, in which case we can still see the code on the
+        front of the first word of a span (e.g. '@Yeshua' for '\\add @Yeshua\\add*'), and we
+        then treat the span as being that one word, which is all that the '≈' and '#' codes need.
+    """
+    rvAdjText = exposeMatchedAddSpans( rvText, codesToExpose )
+    # getCleanText() gives us text whose '\add' spans have lost their markers, but the text
+    #   from getLiveRVVerseText() still has the markers on the spans that we didn't expose, so
+    #   remove them to get the same words from both
+    rvAdjText = addMarkerRegex.sub( '', rvAdjText ) \
+                .replace(ORDER_REVERSAL_CHARACTER,'').replace('◘','').replace('…','') \
+                .replace('.','').replace(',','').replace(':','').replace(';','').replace('?','').replace('!','') \
+                .replace(' / ',' ').replace('/',' ').replace('—',' ') \
+                .replace( '(', '').replace( ')', '' ) \
+                .replace( '“', '' ).replace( '”', '' ).replace( '‘', '' ).replace( '’', '' ) \
+                .replace('  ',' ').strip()
+    if not rvAdjText: return [],[]
+
+    rvWords = []
+    rvAddSpans = [] # The exposed '\add' specialist spans in rvWords, as (code, first word index, last word index)
+    addSpanCode = addSpanStartIx = None
+    for rvToken in rvAdjText.split( ' ' ):
+        # Note that a token can be dropped below (a hyphenated word whose second part isn't
+        #   capitalised, e.g. 'whole-heartedly'), so we have to keep track of the span markers
+        #   on such a token, or we would lose the start or the end of the '\add' span it is in
+        spanEvents,rvToken = splitExposedAddSpan( rvToken )
+        if rvToken:
+            rvWordBits = rvToken.split( '-' )
+            if len(rvWordBits) == 1: rvNewWords = [ rvToken ] # No hyphen
+            elif rvWordBits[1] and rvWordBits[1][0].isupper(): # Hyphenated and with a capital letter, e.g., Kiriat-Arba (may even have three parts)
+                rvNewWords = rvWordBits
+            else: rvNewWords = [] # Hyphenated but not capitalised, so it isn't a word we match on
+        else: rvNewWords = [] # An exposed '\add' span that holds no words
+        for event,code in spanEvents:
+            if event == 'start':
+                assert addSpanCode is None, f"Nested exposed '\\add' span at {connectRef} {rvToken=}"
+                addSpanCode = code
+                addSpanStartIx = len( rvWords ) # The index that the first new word (if any) will get
+        rvWords.extend( rvNewWords )
+        for event,code in spanEvents:
+            if event == 'start': continue
+            assert addSpanCode is not None, f"Unclosed exposed '\\add' span at {connectRef} {rvToken=}"
+            if rvWords: rvAddSpans.append( (addSpanCode,addSpanStartIx,len( rvWords )-1) )
+            addSpanCode = addSpanStartIx = None
+    assert addSpanCode is None, f"Unclosed exposed '\\add' span at {connectRef}"
+    return rvWords, [ addSpan for addSpan in rvAddSpans if addSpan[1] <= addSpan[2] ]
+# end of connect_OET-RV_words_via_OET-LV.getRVWordsAndAddSpans
+
+
+def splitExposedAddSpan( token:str ) -> Tuple[List[Tuple[str,str]],str]:
+    """
+    Pull the exposed '\add' span markers off a token that came from exposeMatchedAddSpans(),
+        e.g. '\uE000#straps' becomes ([('start','#'),('end','')], 'straps') and 'demons\uE001'
+        becomes ([('end','')], 'demons').
+    'token' must be a single word, so a word can only be the start or the end of a span (or
+        both, if the span holds a single word), but it could still be the end of one span and
+        the start of the next, so we return the events in the order that they appear in the
+        word.
+    A token that has no span markers but does start with one of the ADD_CODES_TO_EXPOSE codes
+        (e.g. '#straps' or '@Yeshua') is a span of one word that lost its '\add' markers, and we
+        return it as such, so that the caller doesn't have to treat those two cases differently.
+    """
+    if ADD_SPAN_START_CHAR not in token and ADD_SPAN_END_CHAR not in token:
+        if token[0:1] in ADD_CODES_TO_EXPOSE:
+            return [ ('start',token[0]), ('end','') ], token[1:]
+        return [], token
+    events = []
+    bits = []
+    pos = 0
+    for marker in addSpanMarkerRegex.finditer( token ):
+        bits.append( token[pos:marker.start()] )
+        pos = marker.end()
+        if marker.group( 0 ) == ADD_SPAN_START_CHAR:
+            # The '\add' code follows the start marker, but only if it is still there
+            #   (the '≈' code used to be removed by the normal word clean-up, and an
+            #   exposed span that holds no words has no code at all)
+            code = token[pos:pos+1] if token[pos:pos+1] in ADD_CODES_TO_EXPOSE else ''
+            events.append( ('start',code) )
+            if code: pos += 1
+        else:
+            events.append( ('end','') )
+    bits.append( token[pos:] )
+    return events, ''.join( bits )
+# end of splitExposedAddSpan
 
 
 def stripAddMarkers( token:str ) -> str:
@@ -2774,7 +3239,9 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
                         logger( f"Tried to append number inside abbreviated word(s) {BBB} {C}:{V} {marker} '{line[match.start():match.end()]}' (from '{line[match.start():match.end()+5]}') -> '{word}¦{wordNumber}'" )
                         # abbreviated_word_error
                         return False
-                    elif addNominaSacra and line[match.end():].startswith( ' \\add*'): # we're inside a \\add field
+                    elif addNominaSacra and line[match.end():].lstrip( ' ' ).startswith( ('\\add*','\\+add*') ): # we're inside a \add field
+                        #   Note that the '\add*' can be right up against the word (e.g. '\add @God\add*'),
+                        #   so we have to allow for there not being a space before it
                         logger = logging.critical if DEBUGGING_THIS_MODULE else logging.error
                         logger( f"Tried to append nomina sacra inside added word(s) {BBB} {C}:{V} {marker} '{line[match.start():match.end()]}' (from '{line[match.start():match.end()+5]}') -> '{word}¦{wordNumber}'" )
                         # nd_inside_add_error
