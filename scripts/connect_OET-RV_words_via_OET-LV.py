@@ -64,6 +64,7 @@ CHANGELOG:
     2026-09-28 Remove word numbers from inside straight '\\add'/'\\+add' spans in ALL books on every run (even 'fast'), and report it
     2026-09-28 Use the '≈' (reworded) and '#' (changed number) '\\add' span codes to connect more words (via exposeMatchedAddSpans() and matchWordsWithChangedNumbers())
     2026-09-28 Use the '@' '*' '%' '&' (pronoun/name/owner) and '≡' (repeated) codes too (via matchWordsBesideLvAnchor() and matchRepeatedWords()), and connect the OET-LV alternative names via matchNamesViaAltNames()
+    2026-09-29 Connect both the OET-RV name and the traditional name in its '\\add !...\\add*' span to the same OET-LV name, including two-part names like 'John Mark' (via matchNamesViaTraditionalNames(), which replaces matchNamesViaAltNames())
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -81,7 +82,7 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-09-28' # by RJH
+LAST_MODIFIED_DATE = '2026-09-29' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.99'
@@ -2558,84 +2559,209 @@ def matchRepeatedWords( BBB:str, c:int,v:int, rvWordList:List[str], addSpans:Lis
 # end of connect_OET-RV_words_via_OET-LV.matchRepeatedWords
 
 
-# The OET-LV gives a name in the original language AND its English equivalent, e.g.
-#   'Yəhūdāh/Judah' or 'Samouaʸl/(Shəmūˊel)', while the OET-RV usually uses the English one,
-#   either as a plain word or inside a '\add !(Judah)\add*' span (the code that says this is the
-#   original-language name).  matchIdenticalProperNouns() only compares the two names as they
-#   are written, so it can't connect any of those; here we compare the OET-RV word against each
-#   of the OET-LV alternatives separately, and only when there is exactly one OET-LV word in the
-#   verse that it could be (so we never guess).
+# The OET-LV gives a name in the original language AND, where we have one, its English
+#   equivalent, e.g. 'Yəhūdāh/Judah' or 'Samouaʸl/(Shəmūˊel)', while the OET-RV usually uses its
+#   own spelling of the name, and then puts the traditional/KJB spelling of it in a '!' '\add'
+#   span right after, e.g. 'Yehudah \add !(Judah)\add*' or 'Yohan Markos \add !(John Mark)\add*'.
+#   matchIdenticalProperNouns() and matchAdjustedProperNouns() can connect some of those, but not
+#   the words that are inside the '!' span, and not a name that is spread over several OET-LV
+#   words, so matchNamesViaTraditionalNames() below connects them.
 lvAltNameRegex = re.compile( r'[/(]' )
 
+# The '\add' code that says the span is the traditional/KJB spelling of the name that the OET-RV
+#   has just spelled its own way, e.g. 'Yehudah \add !(Judah)\add*'.  A '/' in front of the name
+#   ('\add !/ John Mark\add*') says that we have also changed the numbers of the words in the span.
+TRADITIONAL_NAME_ADD_CODE = '!'
 
-def matchNamesViaAltNames( BBB:str, c:int,v:int, rvWordList:List[str], addSpans:List[Tuple[str,int,int]], lvWordList:List[str] ) -> Tuple[int,int]:
+# The longest run of capitalised words in front of a '!' span that we treat as the OET-RV spelling
+#   of the name that the span is the traditional spelling of, i.e. the 'Yohan Markos' of
+#   'Yohan Markos \add !(John Mark)\add*'.  We stop at the first word that isn't capitalised.
+MAX_NAME_WORDS_BEFORE_SPAN = 4
+
+# What getTraditionalNameNumbers() found for an OET-RV word when it looked for the OET-LV name
+#   that the word is another spelling of.  We don't use None/-1 for the two ambiguous answers,
+#   because they mean opposite things: NO_LV_NAME means the rest of the name can tell us what
+#   number this word is (e.g. the 'John' of 'Yohan¦91464 \add !(John)\add*', where the OET-LV
+#   only has 'Yōannaʸs¦91464' and no 'John' word of its own), but AMBIGUOUS_LV_NAME means the
+#   word is a spelling of more than one OET-LV name in the verse, so nothing can tell us.
+NO_LV_NAME = None
+AMBIGUOUS_LV_NAME = -1
+
+
+def getLVNameSpellings( lvWord:str, nameTableKeys:tuple ) -> set:
     """
-    Connect an OET-RV name to the OET-LV word number of an OET-LV name whose English
-        alternative is the same name, e.g. OET-RV 'Judah' (or '\add !(Judah)\add*') against
-        OET-LV 'Yəhūdāh/Judah¦367711'.
-    This only uses the OET-LV word numbers of proper nouns (see lvWordIsProperNoun()), and it
-        gives up if the OET-RV name could be any of more than one OET-LV word in the verse.
+    Return all the different spellings that refer to one OET-LV name, so that we can tell which
+        OET-LV word an OET-RV name is another name of.
+    We use the parts of the OET-LV name itself (e.g. 'Yəhūdāh' and 'Judah' from
+        'Yəhūdāh/Judah'), and the OET-RV spellings that the name tables have recorded for each of
+        those parts (e.g. 'Yehudah' and 'Yihudah' — see loadHebGrkNameTables()).
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"matchNamesViaAltNames( {BBB} {c}:{v} {rvWordList} )" )
-    assert rvWordList and lvWordList
-    if not any( '/' in lvWordStr.split( '¦' )[0] for lvWordStr in lvWordList ): return 0,0 # No OET-LV alternative names in this verse
-    NT = bos_books_codes_py.is_new_testament_nr( BBB )
-    usedLVNumbers = set()
-    seenLVNumbers = set()
+    spellings = { simplifyRVLVWord( lvWord ) }
+    for key in lvAltNameRegex.split( lvWord ): # 'Yəhūdāh/Judah' becomes ['Yəhūdāh', 'Judah']
+        key = key.strip()
+        if not key: continue
+        spellings.add( simplifyRVLVWord( key ) )
+        for nameTableKey in nameTableKeys: # The name tables are keyed on the OET-LV spelling
+            spellings.update( simplifyRVLVWord( something )
+                              for something in state.nameTables[nameTableKey].get( key, set() ) )
+    return spellings
+# end of connect_OET-RV_words_via_OET-LV.getLVNameSpellings
+
+
+def getLvNameCandidates( lvWordList:List[str], nameTableKeys:tuple, testament:str ) -> List[Tuple[int,str,set]]:
+    """
+    Return the OET-LV names of a verse, each as (word number, name, all its spellings), for
+        matchNamesViaTraditionalNames() to match OET-RV names against.
+    We only use proper nouns (see lvWordIsProperNoun()).  We don't skip the words that share
+        their number with another OET-LV word in the verse, because we match names by their
+        spellings, and a number that covers two OET-LV words (e.g. Mark 1:5
+        '\add >ones¦21722\add*_from¦21722_Hierousalaʸm¦21722') is still the one number of
+        'Jerusalem'.
+    """
+    lvNameList = []
     for lvWordStr in lvWordList:
         lvNumber = getLVWordNumber( lvWordStr )
         if lvNumber is None: continue
-        if lvNumber in seenLVNumbers: usedLVNumbers.add( lvNumber )
-        seenLVNumbers.add( lvNumber )
-
-    stillFree = getUnnumberedRVWords( BBB, c,v )
-    # We only match the words that are inside a '!' '\add' span, i.e. the original-language
-    #   names that the translator put next to the OET-LV name that they are an alternative name
-    #   of.  We get them from the LIVE OET-RV text, because getCleanText() has already taken the
-    #   '!' spans' '\add' markers off them, so we can't see which words they were.
-    rvLiveText = getLiveRVVerseText( BBB, c,v )
-    if not rvLiveText: return 0,0
-    _rvLiveWords,rvNameSpans = getRVWordsAndAddSpans( rvLiveText, f"{BBB} {c}:{v}", codesToExpose=('!',) )
-    if not rvNameSpans: return 0,0
-    rvNameWordList = [] # The words inside the '!' spans
-    for _code,firstIx,lastIx in rvNameSpans: rvNameWordList.extend( _rvLiveWords[firstIx:lastIx+1] )
-    numAdded = numNS = 0
-    for rvWord in rvNameWordList:
-        if '¦' in rvWord: continue # Already has a word number
-        if '\\' in rvWord: continue # One of the '\add' markers, which is not a name
-        if not rvWord[0].isupper(): continue # Only a capitalised word can be a name
-        if len( rvWord ) < MIN_ANCHORED_ADD_WORD_LENGTH: continue
-        if simplifyRVLVWord( rvWord ) not in stillFree:
-            continue # One of the earlier matchers got there first
-        candidateList = []
-        for lvWordStr in lvWordList:
-            lvNumber = getLVWordNumber( lvWordStr )
-            if lvNumber is None or lvNumber in usedLVNumbers: continue
-            lvWord = lvWordStr.split( '¦' )[0]
-            if simplifyRVLVWord( lvWord ) == simplifyRVLVWord( rvWord ): continue # matchIdenticalProperNouns() has that one
-            if not any( simplifyRVLVWord( altName ) == simplifyRVLVWord( rvWord ) for altName in lvAltNameRegex.split( lvWord ) ): continue
-            try:
-                _lvWord,lvNumber,lvWordRow = getLVWordRow( lvWordStr, 'NT' if NT else 'OT' )
-            except WordNumberError as e:
-                logging.critical( f"matchNamesViaAltNames() {e} from {BBB} {c}:{v} {lvWordStr=}" )
-                continue
-            if not lvWordIsProperNoun( lvWordRow, 'NT' if NT else 'OT' ): continue
-            candidateList.append( (lvNumber,lvWord,lvWordRow) )
-        if len( candidateList ) != 1:
-            if candidateList:
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchNamesViaAltNames() skipping {BBB} {c}:{v} RV '{rvWord}' with {len(candidateList)} OET-LV candidates" )
+        try:
+            lvWord,lvNumber,lvWordRow = getLVWordRow( lvWordStr, testament )
+        except WordNumberError as e:
+            logging.critical( f"getLvNameCandidates() {e} from {lvWordStr=}" )
             continue
-        lvNumber,lvWord,lvWordRow = candidateList[0]
-        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchNamesViaAltNames() is adding {lvNumber} to RV '{rvWord}' from LV '{lvWord}' at {BBB} {c}:{v}" )
-        result = addNumberToRVWord( BBB, c,v, rvWord, lvNumber )
-        if result:
-            numAdded += 1
-            if NT and 'N' in lvWordRow[state.wordTableHeaderList['NT'].index('GlossCaps')]: numNS += 1
-        else:
-            logging.warning( f"Got addNumberToRVWord( {BBB} {c}:{v} '{rvWord}' {lvNumber} ) result = {result}" )
+        if not lvWordIsProperNoun( lvWordRow, testament ): continue
+        lvNameList.append( (lvNumber,lvWord,getLVNameSpellings( lvWord, nameTableKeys )) )
+    return lvNameList
+# end of connect_OET-RV_words_via_OET-LV.getLvNameCandidates
+
+
+def getNameWordsBeforeSpan( liveWords:List[str], spanFirstIx:int ) -> List[str]:
+    """
+    Return the run of capitalised words that comes immediately before a '!' '\add' span, i.e. the
+        OET-RV spelling of the name that the span is the traditional spelling of,
+        e.g. ['Yohan','Markos'] for 'Yohan Markos \add !(John Mark)\add*'.
+    We stop at the first word that isn't capitalised (e.g. 'lived'), and we only look back a few
+        words (see MAX_NAME_WORDS_BEFORE_SPAN), so that we don't sweep up an earlier name.
+    """
+    nameWords = []
+    for word in reversed( liveWords[:spanFirstIx] ):
+        if not word or not word[0].isupper(): break # Not part of a name
+        if '\\' in word: continue # One of the '\add' markers, which is not a word
+        nameWords.insert( 0, word )
+        if len( nameWords ) >= MAX_NAME_WORDS_BEFORE_SPAN: break
+    return nameWords
+# end of connect_OET-RV_words_via_OET-LV.getNameWordsBeforeSpan
+
+
+def getTraditionalNameNumbers( nameWords:List[str], lvNameList:List[Tuple[int,str,set]] ) -> dict:
+    """
+    Return the OET-LV word number for each of the still-unnumbered OET-RV words of one name, as a
+        { word: word number } dict, or an empty dict if we can't tell which OET-LV name(s) they are
+        names of (a wrong word number is much worse than a missing one, so we give up rather than
+        guess).
+    'nameWords' are the OET-RV words of the one name, in the order that they appear in the verse,
+        which is the OET-RV spelling of the name followed by the traditional spelling of it in the
+        '!' span (e.g. ['Yohan','Markos','John','Mark']), and some of them may already have a word
+        number that a human has checked.
+    We work the numbers out like this:
+        •  we look for the OET-LV name that each word is another spelling of, using
+            getLvNameCandidates()
+        •  if they all spell the names of the same OET-LV name, or each of them unambiguously
+            spells the name of a different OET-LV word, we use those numbers (which is what puts
+            the OET-LV numbers of 'John' and 'Mark' onto the 'John Mark' of
+            'Yohan¦91464 Markos¦91468 \add !(John Mark)\add*' in the right order)
+        •  if some of the words are spellings of no OET-LV word in the verse, and the rest are
+            all the same one, then the rest tell us what number to give the others as well (this
+            is what numbers the 'John' of 'Yohan \add !(John)\add*' in Mark 1:4, where the OET-LV
+            has 'Yōannaʸs¦21698' and no 'John' word of its own)
+        •  if neither of those works but the name already has exactly one word number, that one
+            number covers the whole name, e.g. the 'Yohan¦92083 Markos \add !(John Mark)\add*'
+            of Acts 13:13, where the OET-LV has just the one word that all four are names of
+    """
+    if not nameWords: return {}
+    alreadyNumbered = { getRVWordNumber( word ) for word in nameWords if getRVWordNumber( word ) is not None }
+    if len( alreadyNumbered ) > 1: return {} # The parts of this name already disagree, so we can't tell
+    freeWords = [ word for word in nameWords if getRVWordNumber( word ) is None ]
+    if not freeWords: return {} # Nothing to do
+
+    # Which OET-LV name is each of our words a spelling of?
+    numbers = []
+    for word in freeWords:
+        simpleWord = simplifyRVLVWord( word )
+        candidateNumbers = { lvNumber for lvNumber,_lvName,spellings in lvNameList if simpleWord in spellings }
+        if len( candidateNumbers ) == 1: numbers.append( candidateNumbers.pop() )
+        elif candidateNumbers: numbers.append( AMBIGUOUS_LV_NAME )
+        else: numbers.append( NO_LV_NAME )
+    knownNumbers = set( number for number in numbers if number not in (NO_LV_NAME,AMBIGUOUS_LV_NAME) )
+
+    if len( knownNumbers ) == 1: # The words are all names of the same one OET-LV name
+        lvNumber = knownNumbers.pop()
+        if alreadyNumbered and alreadyNumbered != { lvNumber }: return {} # The parts of the name disagree
+        return dict( zip( freeWords, [lvNumber]*len(freeWords) ) )
+    if len( knownNumbers ) > 1 and NO_LV_NAME not in numbers:
+        # The words are names of more than one OET-LV word, and each of them says which one
+        if alreadyNumbered and not alreadyNumbered.issubset( knownNumbers ): return {} # The parts of the name disagree
+        return dict( zip( freeWords, numbers ) )
+    # We can't work the name out from the OET-LV words, so fall back on the word number that the
+    #   OET-RV already has somewhere in the name, if there is exactly one.
+    if len( alreadyNumbered ) == 1:
+        lvNumber = alreadyNumbered.pop()
+        if all( number in (NO_LV_NAME,AMBIGUOUS_LV_NAME,lvNumber) for number in numbers ):
+            return dict( zip( freeWords, [lvNumber]*len(freeWords) ) )
+    return {}
+# end of connect_OET-RV_words_via_OET-LV.getTraditionalNameNumbers
+
+
+def matchNamesViaTraditionalNames( BBB:str, c:int,v:int, rvWordList:List[str], addSpans:List[Tuple[str,int,int]], lvWordList:List[str] ) -> Tuple[int,int]:
+    """
+    Connect an OET-RV name to the OET-LV word number of the name that it is another name of.
+
+    The translator writes the traditional/KJB spelling of a name in a '!' '\add' span right after
+        the OET-RV spelling of it, e.g. 'Yehudah \add !(Judah)\add*' against OET-LV
+        'Yəhūdāh/Judah¦367711', because the OET-RV is allowed to spell names its own way.  Both
+        spellings are one name, so we give them both the OET-LV word number, and a name that covers
+        more than one OET-LV word, e.g. 'Yohan Markos \add !(John Mark)\add*', gets one number per
+        OET-LV word, in the right order.
+    (See getTraditionalNameNumbers() for how we decide which OET-LV name(s) we are looking at.)
+    """
+    fnPrint( DEBUGGING_THIS_MODULE, f"matchNamesViaTraditionalNames( {BBB} {c}:{v} {rvWordList} )" )
+    assert rvWordList and lvWordList
+    # We get the words of the '!' spans from the LIVE OET-RV text, because getCleanText() has
+    #   already taken the '\add' markers off them, so we can't see which words they were.
+    rvLiveText = getLiveRVVerseText( BBB, c,v )
+    if not rvLiveText or TRADITIONAL_NAME_ADD_CODE not in rvLiveText: return 0,0 # No traditional names in this verse
+    liveWords,rvNameSpans = getRVWordsAndAddSpans( rvLiveText, f"{BBB} {c}:{v}",
+                                                   codesToExpose=(TRADITIONAL_NAME_ADD_CODE,),
+                                                   keepHyphenatedNames=True )
+    if not rvNameSpans: return 0,0
+
+    NT = bos_books_codes_py.is_new_testament_nr( BBB )
+    testament = 'NT' if NT else 'OT'
+    lvNameList = getLvNameCandidates( lvWordList, ('NT','NT_OT') if NT else ('OT',), testament ) # The OET-LV names in this verse
+    stillFree = getUnnumberedRVWords( BBB, c,v ) # So we don't fight with the matchers that ran before us
+    numAdded = numNS = 0
+    for _code,firstIx,lastIx in rvNameSpans:
+        # The OET-RV name, followed by the traditional name of it in the '!' span.
+        #   (We keep hyphenated names as one word — e.g. '\add !(Tiglat-Pileser)\add*' — because
+        #   the OET-RV numbers a name like that as a single word.)
+        nameWords = [ word for word in getNameWordsBeforeSpan( liveWords, firstIx ) + liveWords[firstIx:lastIx+1]
+                      if word and '\\' not in word and word[0].isupper()
+                      and len( word ) >= MIN_ANCHORED_ADD_WORD_LENGTH ]
+        if not nameWords: continue
+        numbers = getTraditionalNameNumbers( nameWords, lvNameList )
+        if not numbers:
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchNamesViaTraditionalNames() skipping {BBB} {c}:{v} {nameWords=}" )
+            continue
+        for rvWord,lvNumber in numbers.items():
+            if simplifyRVLVWord( rvWord ) not in stillFree: continue # A matcher that ran before us got there first
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchNamesViaTraditionalNames() is adding {lvNumber} to RV '{rvWord}' at {BBB} {c}:{v}" )
+            result = addNumberToRVWord( BBB, c,v, rvWord, lvNumber )
+            if result:
+                numAdded += 1
+                if NT and 'N' in state.wordTable[testament][lvNumber][state.wordTableHeaderList[testament].index('GlossCaps')]: numNS += 1
+            else:
+                logging.warning( f"Got addNumberToRVWord( {BBB} {c}:{v} '{rvWord}' {lvNumber} ) result = {result}" )
 
     return numAdded,numNS
-# end of connect_OET-RV_words_via_OET-LV.matchNamesViaAltNames
+# end of connect_OET-RV_words_via_OET-LV.matchNamesViaTraditionalNames
 
 
 def matchSpecialistAddSpans( BBB:str, c:int,v:int, rvWordList:List[str], addSpans:List[Tuple[str,int,int]], lvWordList:List[str] ) -> Tuple[int,int]:
@@ -2647,7 +2773,7 @@ def matchSpecialistAddSpans( BBB:str, c:int,v:int, rvWordList:List[str], addSpan
         evidence than the OET-RV and OET-LV words happening to look similar.
     """
     numAdded = numNS = 0
-    for matcher in ( matchWordsBesideLvAnchor, matchRepeatedWords, matchNamesViaAltNames ):
+    for matcher in ( matchWordsBesideLvAnchor, matchRepeatedWords, matchNamesViaTraditionalNames ):
         result,resultNS = matcher( BBB, c,v, rvWordList, addSpans, lvWordList )
         numAdded += result
         numNS += resultNS
@@ -2869,12 +2995,14 @@ specialAddSpanRegex = re.compile(
 #     '+' and '=' and '<' and '>' are English that the translator added (an article,
 #           a copula, a direct object, an implied person or object), so there is
 #           no OET-LV word for them
-#     '!' is the original-language name that goes with an OET-LV name that is right next to
-#           it, so those words are connected by matchNamesViaAltNames() instead
+#     '!' is the traditional/KJB spelling of the name that the OET-RV has just spelled its own
+#           way, and it goes with an OET-LV name that is right next to it, so those words are
+#           connected by matchNamesViaTraditionalNames() instead
 #     '^' is the opposite of the OET-LV, and '?' means the translator is not even sure
 #           about the code
 ADD_CODES_TO_EXPOSE = ( '≈', '#', '@', '*', '%', '&', '≡' )
 addCloseMarkerRegex = re.compile( r'\\(?:\+)?add\*$' ) # The '\add*' or '\+add*' that closes a span
+addCloseMarkerAnywhereRegex = re.compile( r'\\(?:\+)?add\*' ) # The same, but punctuation can follow it
 addMarkerRegex = re.compile( r'\\(?:\+)?add\*?' ) # The '\add' or '\+add' and the '\add*' or '\+add*'
 
 # When we expose one of the ADD_CODES_TO_EXPOSE spans above, we wrap it in these two
@@ -2897,8 +3025,8 @@ def exposeMatchedAddSpans( rvText:str, codesToExpose:tuple=ADD_CODES_TO_EXPOSE )
             '\add ≈because\add*' becomes '\uE000≈because\uE001'
     Every other '\add' span is left exactly as it is, so its words stay invisible to the
         matchers (i.e. they are words that were added into the English text).
-    'codesToExpose' defaults to ADD_CODES_TO_EXPOSE, but matchNamesViaAltNames() passes in just
-        the '!' code, so that only the words of the '!' spans get exposed.
+    'codesToExpose' defaults to ADD_CODES_TO_EXPOSE, but matchNamesViaTraditionalNames() passes in
+        just the '!' code, so that only the words of the '!' spans get exposed.
     """
     def replacer( match ):
         code = match.group( 'code' )
@@ -2947,19 +3075,18 @@ def getLiveRVVerseText( BBB:str, c:int, v:int ) -> str:
             if C > c: break
             if C == c: foundChapter = True
         elif foundChapter and marker == '\\v':
-            Vstr, rest = rest.split( ' ', 1 )
+            Vstr, rest = rest.split( ' ', 1 ) # Drop the verse number
             V = int( Vstr.split('-',1)[0] )
             foundVerse = C==c and V==desiredV
         elif foundChapter and marker == '\\d':
             foundVerse = C==c and desiredV==1
         if not foundVerse: continue
-        if marker in ('\\v','\\d'): rest = rest.split( ' ', 1 )[1] if ' ' in rest else '' # Drop the verse number
         verseText = f"{verseText}{' ' if verseText else ''}{rest}"
     return verseText.strip()
 # end of connect_OET-RV_words_via_OET-LV.getLiveRVVerseText
 
 
-def getRVWordsAndAddSpans( rvText:str, connectRef:str, codesToExpose:tuple=ADD_CODES_TO_EXPOSE ) -> Tuple[List[str],List[Tuple[str,int,int]]]:
+def getRVWordsAndAddSpans( rvText:str, connectRef:str, codesToExpose:tuple=ADD_CODES_TO_EXPOSE, keepHyphenatedNames:bool=False ) -> Tuple[List[str],List[Tuple[str,int,int]]]:
     """
     Return the OET-RV words of a verse, together with the exposed '\\add' specialist spans inside
         them, as a list of (code, first word index, last word index), e.g. ('@', 4, 6) for the
@@ -2970,6 +3097,11 @@ def getRVWordsAndAddSpans( rvText:str, connectRef:str, codesToExpose:tuple=ADD_C
         text that has already lost its markers, in which case we can still see the code on the
         front of the first word of a span (e.g. '@Yeshua' for '\\add @Yeshua\\add*'), and we
         then treat the span as being that one word, which is all that the '≈' and '#' codes need.
+
+    'keepHyphenatedNames' keeps a hyphenated capitalised name as the single word that it is in the
+        OET-RV, e.g. 'Tiglat-Pileser' in '\\add !(Tiglat-Pileser)\\add*', because we number such a
+        name as one word.  matchNamesViaTraditionalNames() needs that, but nobody else does,
+        because everywhere else the parts of a hyphenated word are compared separately.
     """
     rvAdjText = exposeMatchedAddSpans( rvText, codesToExpose )
     # getCleanText() gives us text whose '\add' spans have lost their markers, but the text
@@ -2994,7 +3126,7 @@ def getRVWordsAndAddSpans( rvText:str, connectRef:str, codesToExpose:tuple=ADD_C
         spanEvents,rvToken = splitExposedAddSpan( rvToken )
         if rvToken:
             rvWordBits = rvToken.split( '-' )
-            if len(rvWordBits) == 1: rvNewWords = [ rvToken ] # No hyphen
+            if len(rvWordBits) == 1 or keepHyphenatedNames: rvNewWords = [ rvToken ] # No hyphen, or a hyphenated name that we keep as one word
             elif rvWordBits[1] and rvWordBits[1][0].isupper(): # Hyphenated and with a capital letter, e.g., Kiriat-Arba (may even have three parts)
                 rvNewWords = rvWordBits
             else: rvNewWords = [] # Hyphenated but not capitalised, so it isn't a word we match on
@@ -3057,8 +3189,10 @@ def stripAddMarkers( token:str ) -> str:
     Reduce one token of the live OET-RV verse text to a plain word, by removing a leading
         exposed '\add' code and a trailing '\add*' close marker, e.g. '#straps' becomes
         'straps' and 'forgiven\add*' becomes 'forgiven'.
+    The close marker doesn't have to be at the very end of the token, because punctuation can
+        follow it, e.g. '!(Mary)\add*,' becomes 'Mary'.
     """
-    if '\\' in token: token = addCloseMarkerRegex.sub( '', token )
+    if '\\' in token: token = addCloseMarkerAnywhereRegex.sub( '', token )
     _addCode,token = splitAddCode( token )
     return simplifyRVLVWord( token )
 # end of stripAddMarkers
