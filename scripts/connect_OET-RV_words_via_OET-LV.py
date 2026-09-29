@@ -65,6 +65,10 @@ CHANGELOG:
     2026-09-28 Use the '≈' (reworded) and '#' (changed number) '\\add' span codes to connect more words (via exposeMatchedAddSpans() and matchWordsWithChangedNumbers())
     2026-09-28 Use the '@' '*' '%' '&' (pronoun/name/owner) and '≡' (repeated) codes too (via matchWordsBesideLvAnchor() and matchRepeatedWords()), and connect the OET-LV alternative names via matchNamesViaAltNames()
     2026-09-29 Connect both the OET-RV name and the traditional name in its '\\add !...\\add*' span to the same OET-LV name, including two-part names like 'John Mark' (via matchNamesViaTraditionalNames(), which replaces matchNamesViaAltNames())
+    2026-09-29 Pass the exposed codes to splitExposedAddSpan() and keep exposed punctuation codes out of the word cleanup, so that the '!' code (which is also sentence punctuation) survives to be reported; add the traditional names from OET-RV_names_table.tsv to the OET-LV name spellings so that 'John' can match 'Yōannaʸs'
+    2026-09-29 Stop getNameWordsBeforeSpan() at a word that belongs to another '\\add' span, so that we no longer sweep up an unrelated earlier name across e.g. the 'rebuilt' of 'from Beyt-El \\add ≈rebuilt\\add* Yeriho \\add !(Jericho)\\add*' and give it Jericho's word number
+    2026-09-29 Removed the no longer productive NAME_ADJUSTMENT_TABLE
+    2026-09-29 Report what percentage of the words have word numbers (via countWordsAndWordNumbers() and reportWordNumberPercentage()), for the OT, the NT and the whole Bible, or for the individual book(s) in 'fast' mode
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -822,13 +826,6 @@ for someTuple in LV_SINGLE_WORDS_TO_RV_WORD_STRINGS:
     assert LVWord != RVWords, f"{RVWords=}"
     assert ' ' not in LVWord
 
-NAME_ADJUSTMENT_TABLE = { # Where we change too far from the accepted KJB word
-    'Menashsheh':'Manasseh',
-    'Shomron':'Samaria',
-    'Yudah':'Yehudah',
-    }
-
-
 class WordNumberError(ValueError):
     pass
 
@@ -911,9 +908,13 @@ def main():
 
     # Connect linked words in the OET-LV to the OET-RV
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nProcessing connect words for OET OT…" )
-    connect_OET_RV( rv, lvOT, OET_LV_OT_ESFM_InputFolderPath, 'OT' ) # OT
+    numWordsOT,numWordNumberedOT = connect_OET_RV( rv, lvOT, OET_LV_OT_ESFM_InputFolderPath, 'OT' ) # OT
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nProcessing connect words for OET NT…" )
-    connect_OET_RV( rv, lvNT, OET_LV_NT_ESFM_InputFolderPath, 'NT' ) # NT
+    numWordsNT,numWordNumberedNT = connect_OET_RV( rv, lvNT, OET_LV_NT_ESFM_InputFolderPath, 'NT' ) # NT
+
+    # In 'fast' mode we only processed MRK, so the per-book figures are all we can say
+    if not BibleOrgSysGlobals.commandLineArguments.fastMode:
+        reportWordNumberPercentage( "Whole Bible", numWordsOT+numWordsNT, numWordNumberedOT+numWordNumberedNT )
 
     # Delete any saved (but now obsolete) OBD Bible pickle files
     for something in OET_RV_ESFM_FolderPath.iterdir():
@@ -950,6 +951,9 @@ def loadOETRVNameTable() -> None:
         if explained.upper() != 'Y': continue # Only the translator's decisions (not just candidates)
         # The OET-RV uses straight apostrophes inside names, but the table uses curly ones, e.g., 'Sha’ul'
         state.rvNameTable[traditionalName.replace( '’', "'" )].add( rvName.replace( '’', "'" ) )
+    state.rvNameTableInverse = defaultdict( set ) # OET-RV spelling -> set of traditional names for it
+    for traditionalName,rvNames in state.rvNameTable.items():
+        for rvName in rvNames: state.rvNameTableInverse[simplifyRVLVWord( rvName )].add( traditionalName )
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded {len(state.rvNameTable):,} decided OET-RV names covering {sum(len(v) for v in state.rvNameTable.values()):,} spellings." )
 # end of connect_OET-RV_words_via_OET-LV.loadOETRVNameTable
 
@@ -986,8 +990,6 @@ def loadHebGrkNameTables():
                 traditionalName = searchText # Save this before we mangle it below
                 if searchText.startswith( 'J' ): searchText = f'Y{searchText[1:]}' # Replace first letter J with Y
                 rvNameChoices = state.rvNameTable.get( traditionalName, set() ) # What we actually call it in the OET-RV
-                try: searchText = NAME_ADJUSTMENT_TABLE[searchText] # Do transforms
-                except KeyError: pass
 
                 # newReplaceText = transliterate_Hebrew( replaceText, capitaliseHebrew=searchText[0].isupper() )
                 # if newReplaceText != replaceText:
@@ -1150,6 +1152,11 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
     Then connect linked words in the OET-LV to the OET-RV.
 
     testament is either 'OT' or 'NT', and is used to label the word count summaries.
+
+    Returns a (numWords,numWordNumbered) tuple for this testament, i.e. how many of the OET-RV
+        words of the books that we processed could have a word number, and how many of them
+        have one (see countWordsAndWordNumbers()), so that main() can add the two testaments
+        together for a whole Bible figure.
     """
     assert testament in ('OT','NT'), f"Bad {testament=}"
     fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {rv}, {lv} {testament} )" )
@@ -1166,6 +1173,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
     # Go through books chapters and verses
     totalSimpleListedAdds = totalProperNounAdds = totalFirstPartMatchedAdds = totalManualMatchedAdds = totalChangedNumberAdds = totalSpecialistAdds = totalInOrderMatchedAdds = 0
     totalSimpleListedAddsNS = totalProperNounAddsNS = totalFirstPartMatchedAddsNS = totalManualMatchedAddsNS = totalChangedNumberAddsNS = totalSpecialistAddsNS = totalInOrderMatchedAddsNS = 0 # Nomina sacra
+    totalNumWords = totalNumWordNumbered = 0
 
     if BibleOrgSysGlobals.maxProcesses > 1 \
     and not BibleOrgSysGlobals.alreadyMultiprocessing \
@@ -1182,7 +1190,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
             for bookSimpleListedAdds, bookSimpleListedAddsNS, bookProperNounAdds, bookProperNounAddsNS, bookFirstPartMatchedAdds, \
                         bookFirstPartMatchedAddsNS, bookManualMatchedAdds, bookManualMatchedAddsNS, bookChangedNumberAdds, \
                         bookChangedNumberAddsNS, bookSpecialistAdds, bookSpecialistAddsNS, bookInOrderMatchedAdds, \
-                        bookInOrderMatchedAddsNS in results:
+                        bookInOrderMatchedAddsNS, bookNumWords, bookNumWordNumbered in results:
                 totalSimpleListedAdds += bookSimpleListedAdds
                 totalSimpleListedAddsNS += bookSimpleListedAddsNS
                 totalProperNounAdds += bookProperNounAdds
@@ -1197,6 +1205,8 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
                 totalSpecialistAddsNS += bookSpecialistAddsNS
                 totalInOrderMatchedAdds += bookInOrderMatchedAdds
                 totalInOrderMatchedAddsNS += bookInOrderMatchedAddsNS
+                totalNumWords += bookNumWords
+                totalNumWordNumbered += bookNumWordNumbered
         BibleOrgSysGlobals.alreadyMultiprocessing = False
     else: # Just single threaded
         # Process the books one by one
@@ -1204,7 +1214,7 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
             bookSimpleListedAdds, bookSimpleListedAddsNS, bookProperNounAdds, bookProperNounAddsNS, bookFirstPartMatchedAdds, \
                 bookFirstPartMatchedAddsNS, bookManualMatchedAdds, bookManualMatchedAddsNS, bookChangedNumberAdds, \
                 bookChangedNumberAddsNS, bookSpecialistAdds, bookSpecialistAddsNS, bookInOrderMatchedAdds, \
-                bookInOrderMatchedAddsNS = connect_OET_RV_book( BBB, lv, rv, OET_LV_ESFM_InputFolderPath )
+                bookInOrderMatchedAddsNS, bookNumWords, bookNumWordNumbered = connect_OET_RV_book( BBB, lv, rv, OET_LV_ESFM_InputFolderPath )
             totalSimpleListedAdds += bookSimpleListedAdds
             totalSimpleListedAddsNS += bookSimpleListedAddsNS
             totalProperNounAdds += bookProperNounAdds
@@ -1219,6 +1229,8 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
             totalSpecialistAddsNS += bookSpecialistAddsNS
             totalInOrderMatchedAdds += bookInOrderMatchedAdds
             totalInOrderMatchedAddsNS += bookInOrderMatchedAddsNS
+            totalNumWords += bookNumWords
+            totalNumWordNumbered += bookNumWordNumbered
 
     if totalSimpleListedAdds or totalProperNounAdds or totalFirstPartMatchedAdds or totalManualMatchedAdds or totalChangedNumberAdds or totalSpecialistAdds or totalInOrderMatchedAdds:
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} Did total of {totalSimpleListedAdds:,} simple listed adds, {totalProperNounAdds:,} proper noun adds, {totalFirstPartMatchedAdds:,} first part adds, {totalManualMatchedAdds:,} manual adds, {totalChangedNumberAdds:,} changed number adds, {totalSpecialistAdds:,} specialist add spans and {totalInOrderMatchedAdds:,} in-order adds." )
@@ -1226,6 +1238,9 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
     if totalSimpleListedAddsNS or totalProperNounAddsNS or totalFirstPartMatchedAddsNS or totalManualMatchedAddsNS or totalChangedNumberAddsNS or totalSpecialistAddsNS or totalInOrderMatchedAddsNS:
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} Did total of {totalSimpleListedAddsNS:,} simple listed nomina sacra (NS), {totalProperNounAddsNS:,} proper noun NS, {totalFirstPartMatchedAddsNS:,} first part NS, {totalManualMatchedAddsNS:,} manual NS, {totalChangedNumberAddsNS:,} changed number NS, {totalSpecialistAddsNS:,} specialist add span NS and {totalInOrderMatchedAddsNS:,} in-order NS." )
     else: vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  {testament} No new nomina sacra connections made." )
+    if not BibleOrgSysGlobals.commandLineArguments.fastMode: # In 'fast' mode we reported the individual books instead
+        reportWordNumberPercentage( testament, totalNumWords, totalNumWordNumbered )
+    return totalNumWords, totalNumWordNumbered
 # end of connect_OET-RV_words_via_OET-LV.connect_OET_RV
 
 
@@ -1397,10 +1412,17 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
         # assert bookSimpleListedAdds == bookProperNounAdds == 0
         vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    No changes made to OET-RV {BBB}." )
 
+    # Say how much of this book is now connected to the OET-LV.
+    #   We only do it here in 'fast' mode, because otherwise the per-testament and per-Bible
+    #   figures (printed by connect_OET_RV() and main()) say the same thing for the whole book.
+    bookNumWords,bookNumWordNumbered = countWordsAndWordNumbers( state.rvESFMLines )
+    if BibleOrgSysGlobals.commandLineArguments.fastMode:
+        reportWordNumberPercentage( f"OET-RV {BBB}", bookNumWords, bookNumWordNumbered )
+
     return bookSimpleListedAdds, bookSimpleListedAddsNS, bookProperNounAdds, bookProperNounAddsNS, bookFirstPartMatchedAdds, \
             bookFirstPartMatchedAddsNS, bookManualMatchedAdds, bookManualMatchedAddsNS, bookChangedNumberAdds, \
             bookChangedNumberAddsNS, bookSpecialistAdds, bookSpecialistAddsNS, bookInOrderMatchedAdds, \
-            bookInOrderMatchedAddsNS
+            bookInOrderMatchedAddsNS, bookNumWords, bookNumWordNumbered
 # end of connect_OET-RV_words_via_OET-LV.connect_OET_RV_book
 
 
@@ -2626,6 +2648,11 @@ def getLVNameSpellings( lvWord:str, nameTableKeys:tuple ) -> set:
         for nameTableKey in nameTableKeys: # The name tables are keyed on the OET-LV spelling
             spellings.update( simplifyRVLVWord( something )
                               for something in state.nameTables[nameTableKey].get( key, set() ) )
+    # A name also has its traditional spelling (what the '!' '\add' span holds), which the decided
+    #   OET-RV names table records against the OET-RV spellings, so add those in too.
+    for spelling in tuple( spellings ):
+        spellings.update( simplifyRVLVWord( traditionalName )
+                          for traditionalName in state.rvNameTableInverse.get( spelling, () ) )
     return spellings
 # end of connect_OET-RV_words_via_OET-LV.getLVNameSpellings
 
@@ -2655,16 +2682,23 @@ def getLvNameCandidates( lvWordList:List[str], nameTableKeys:tuple, testament:st
 # end of connect_OET-RV_words_via_OET-LV.getLvNameCandidates
 
 
-def getNameWordsBeforeSpan( liveWords:List[str], spanFirstIx:int ) -> List[str]:
+def getNameWordsBeforeSpan( liveWords:List[str], spanFirstIx:int, excludedWordIndexes:set=set() ) -> List[str]:
     """
     Return the run of capitalised words that comes immediately before a '!' '\add' span, i.e. the
         OET-RV spelling of the name that the span is the traditional spelling of,
         e.g. ['Yohan','Markos'] for 'Yohan Markos \add !(John Mark)\add*'.
     We stop at the first word that isn't capitalised (e.g. 'lived'), and we only look back a few
         words (see MAX_NAME_WORDS_BEFORE_SPAN), so that we don't sweep up an earlier name.
+    'excludedWordIndexes' are the words of the other '\add' codes, which are added English rather
+        than part of the OET-RV's own name.  Such a word ends the name (e.g. the 'rebuilt' of
+        'from Beyt-El \add ≈rebuilt\add* Yeriho \add !(Jericho)\add*'), because the OET-RV name that
+        the '!' span belongs to must be immediately next to it — otherwise we would sweep up an
+        earlier, unrelated name (e.g. 'Beyt-El' here) and might give it a wrong word number.
     """
     nameWords = []
-    for word in reversed( liveWords[:spanFirstIx] ):
+    for wordIx in reversed( range( spanFirstIx ) ):
+        word = liveWords[wordIx]
+        if wordIx in excludedWordIndexes: break # A word of another '\add' span, so the name isn't next to ours
         if not word or not word[0].isupper(): break # Not part of a name
         if '\\' in word: continue # One of the '\add' markers, which is not a word
         nameWords.insert( 0, word )
@@ -2700,7 +2734,6 @@ def getTraditionalNameNumbers( nameWords:List[str], lvNameList:List[Tuple[int,st
     """
     if not nameWords: return {}
     alreadyNumbered = { getRVWordNumber( word ) for word in nameWords if getRVWordNumber( word ) is not None }
-    if len( alreadyNumbered ) > 1: return {} # The parts of this name already disagree, so we can't tell
     freeWords = [ word for word in nameWords if getRVWordNumber( word ) is None ]
     if not freeWords: return {} # Nothing to do
 
@@ -2714,12 +2747,14 @@ def getTraditionalNameNumbers( nameWords:List[str], lvNameList:List[Tuple[int,st
         else: numbers.append( NO_LV_NAME )
     knownNumbers = set( number for number in numbers if number not in (NO_LV_NAME,AMBIGUOUS_LV_NAME) )
 
-    if len( knownNumbers ) == 1: # The words are all names of the same one OET-LV name
+    if len( knownNumbers ) == 1 and NO_LV_NAME not in numbers: # The words are all names of the same one OET-LV name
         lvNumber = knownNumbers.pop()
         if alreadyNumbered and alreadyNumbered != { lvNumber }: return {} # The parts of the name disagree
         return dict( zip( freeWords, [lvNumber]*len(freeWords) ) )
-    if len( knownNumbers ) > 1 and NO_LV_NAME not in numbers:
-        # The words are names of more than one OET-LV word, and each of them says which one
+    if not NO_LV_NAME in numbers and not AMBIGUOUS_LV_NAME in numbers:
+        # Each word says which OET-LV word it is, and they are all different ones, so we can number
+        #   them separately even when the name already has more than one number, e.g. the 'John Mark'
+        #   of 'Yohan¦91464 Markos¦91468 \add !/ John Mark\add*' in Acts 12:12
         if alreadyNumbered and not alreadyNumbered.issubset( knownNumbers ): return {} # The parts of the name disagree
         return dict( zip( freeWords, numbers ) )
     # We can't work the name out from the OET-LV words, so fall back on the word number that the
@@ -2749,11 +2784,17 @@ def matchNamesViaTraditionalNames( BBB:str, c:int,v:int, rvWordList:List[str], a
     # We get the words of the '!' spans from the LIVE OET-RV text, because getCleanText() has
     #   already taken the '\add' markers off them, so we can't see which words they were.
     rvLiveText = getLiveRVVerseText( BBB, c,v )
-    if not rvLiveText or TRADITIONAL_NAME_ADD_CODE not in rvLiveText: return 0,0 # No traditional names in this verse
-    liveWords,rvNameSpans = getRVWordsAndAddSpans( rvLiveText, f"{BBB} {c}:{v}",
-                                                   codesToExpose=(TRADITIONAL_NAME_ADD_CODE,),
-                                                   keepHyphenatedNames=True )
+    if not rvLiveText or not traditionalNameAddRegex.search( rvLiveText ): return 0,0 # No traditional names in this verse
+    liveWords,allSpans = getRVWordsAndAddSpans( rvLiveText, f"{BBB} {c}:{v}",
+                                                codesToExpose=(TRADITIONAL_NAME_ADD_CODE,),
+                                                keepHyphenatedNames=True )
+    # getRVWordsAndAddSpans() also reports the other '\add' codes that we didn't ask it to expose
+    #   (the words of those spans are still in the text, with their code in front of them), so we
+    #   must ignore those spans here, and we mustn't use their words as part of a name either.
+    rvNameSpans = [ span for span in allSpans if span[0] == TRADITIONAL_NAME_ADD_CODE ]
     if not rvNameSpans: return 0,0
+    otherSpanWords = set( rvIx for code,firstIx,lastIx in allSpans if code != TRADITIONAL_NAME_ADD_CODE
+                          for rvIx in range( firstIx, lastIx+1 ) )
 
     NT = bos_books_codes_py.is_new_testament_nr( BBB )
     testament = 'NT' if NT else 'OT'
@@ -2764,7 +2805,8 @@ def matchNamesViaTraditionalNames( BBB:str, c:int,v:int, rvWordList:List[str], a
         # The OET-RV name, followed by the traditional name of it in the '!' span.
         #   (We keep hyphenated names as one word — e.g. '\add !(Tiglat-Pileser)\add*' — because
         #   the OET-RV numbers a name like that as a single word.)
-        nameWords = [ word for word in getNameWordsBeforeSpan( liveWords, firstIx ) + liveWords[firstIx:lastIx+1]
+        nameWords = [ word for word in getNameWordsBeforeSpan( liveWords, firstIx, otherSpanWords ) \
+                            + liveWords[firstIx:lastIx+1]
                       if word and '\\' not in word and word[0].isupper()
                       and len( word ) >= MIN_ANCHORED_ADD_WORD_LENGTH ]
         if not nameWords: continue
@@ -3026,6 +3068,10 @@ ADD_CODES_TO_EXPOSE = ( '≈', '#', '@', '*', '%', '&', '≡' )
 addCloseMarkerRegex = re.compile( r'\\(?:\+)?add\*$' ) # The '\add*' or '\+add*' that closes a span
 addCloseMarkerAnywhereRegex = re.compile( r'\\(?:\+)?add\*' ) # The same, but punctuation can follow it
 addMarkerRegex = re.compile( r'\\(?:\+)?add\*?' ) # The '\add' or '\+add' and the '\add*' or '\+add*'
+# The '\add' spans that give the traditional/KJB spelling of a name, e.g. '\add !(Judah)\add*'.
+#   We can't just look for the '!' character, because a '!' can also be the punctuation at the end
+#   of what somebody says, e.g. '“You are God's son!”'.
+traditionalNameAddRegex = re.compile( r'\\(?:\+)?add (?:\?)?!' )
 
 # When we expose one of the ADD_CODES_TO_EXPOSE spans above, we wrap it in these two
 #   Unicode private-use characters so that the matchers can still tell where the span
@@ -3131,11 +3177,15 @@ def getRVWordsAndAddSpans( rvText:str, connectRef:str, codesToExpose:tuple=ADD_C
     #   remove them to get the same words from both
     rvAdjText = addMarkerRegex.sub( '', rvAdjText ) \
                 .replace(ORDER_REVERSAL_CHARACTER,'').replace('◘','').replace('…','') \
-                .replace('.','').replace(',','').replace(':','').replace(';','').replace('?','').replace('!','') \
                 .replace(' / ',' ').replace('/',' ').replace('—',' ') \
                 .replace( '(', '').replace( ')', '' ) \
-                .replace( '“', '' ).replace( '”', '' ).replace( '‘', '' ).replace( '’', '' ) \
-                .replace('  ',' ').strip()
+                .replace( '“', '' ).replace( '”', '' ).replace( '‘', '' ).replace( '’', '' )
+    # Strip the sentence punctuation, but not a punctuation character that is one of the codes we
+    #   were asked to expose: the '!' of a traditional-name span is punctuation AND its code, and
+    #   splitExposedAddSpan() has to see it to report which span it is.
+    for punctuation in ( '.', ',', ':', ';', '?', '!' ):
+        if punctuation not in codesToExpose: rvAdjText = rvAdjText.replace( punctuation, '' )
+    rvAdjText = rvAdjText.replace('  ',' ').strip()
     if not rvAdjText: return [],[]
 
     rvWords = []
@@ -3145,7 +3195,7 @@ def getRVWordsAndAddSpans( rvText:str, connectRef:str, codesToExpose:tuple=ADD_C
         # Note that a token can be dropped below (a hyphenated word whose second part isn't
         #   capitalised, e.g. 'whole-heartedly'), so we have to keep track of the span markers
         #   on such a token, or we would lose the start or the end of the '\add' span it is in
-        spanEvents,rvToken = splitExposedAddSpan( rvToken )
+        spanEvents,rvToken = splitExposedAddSpan( rvToken, codesToExpose )
         if rvToken:
             rvWordBits = rvToken.split( '-' )
             if len(rvWordBits) == 1 or keepHyphenatedNames: rvNewWords = [ rvToken ] # No hyphen, or a hyphenated name that we keep as one word
@@ -3169,7 +3219,7 @@ def getRVWordsAndAddSpans( rvText:str, connectRef:str, codesToExpose:tuple=ADD_C
 # end of connect_OET-RV_words_via_OET-LV.getRVWordsAndAddSpans
 
 
-def splitExposedAddSpan( token:str ) -> Tuple[List[Tuple[str,str]],str]:
+def splitExposedAddSpan( token:str, codesToExpose:tuple=ADD_CODES_TO_EXPOSE ) -> Tuple[List[Tuple[str,str]],str]:
     """
     Pull the exposed '\add' span markers off a token that came from exposeMatchedAddSpans(),
         e.g. '\uE000#straps' becomes ([('start','#'),('end','')], 'straps') and 'demons\uE001'
@@ -3181,6 +3231,9 @@ def splitExposedAddSpan( token:str ) -> Tuple[List[Tuple[str,str]],str]:
     A token that has no span markers but does start with one of the ADD_CODES_TO_EXPOSE codes
         (e.g. '#straps' or '@Yeshua') is a span of one word that lost its '\add' markers, and we
         return it as such, so that the caller doesn't have to treat those two cases differently.
+    'codesToExpose' is the same tuple that exposeMatchedAddSpans() was given, so that we can
+        recognise a code that it exposed but that isn't one of the usual ones (e.g. the '!' of
+        matchNamesViaTraditionalNames()).
     """
     if ADD_SPAN_START_CHAR not in token and ADD_SPAN_END_CHAR not in token:
         if token[0:1] in ADD_CODES_TO_EXPOSE:
@@ -3196,7 +3249,7 @@ def splitExposedAddSpan( token:str ) -> Tuple[List[Tuple[str,str]],str]:
             # The '\add' code follows the start marker, but only if it is still there
             #   (the '≈' code used to be removed by the normal word clean-up, and an
             #   exposed span that holds no words has no code at all)
-            code = token[pos:pos+1] if token[pos:pos+1] in ADD_CODES_TO_EXPOSE else ''
+            code = token[pos:pos+1] if token[pos:pos+1] in codesToExpose else ''
             events.append( ('start',code) )
             if code: pos += 1
         else:
@@ -3309,6 +3362,101 @@ def removeWordNumbersInStraightAddSpansInAllBooks( ) -> int:
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  No word numbers inside plain '\\add'/'\\+add' spans needed removing." )
     return numTotalRemoved
 # end of removeWordNumbersInStraightAddSpansInAllBooks
+
+
+# The OET-RV lines that hold something other than translated Bible text, so their words can never
+#   have a word number: section headings, the translator's heading comments, the titles of the
+#   poetry sections, the speaker of a saying, and the letters of an acrostic poem.
+nonTextLineMarkers = ( '\\s1','\\s2','\\s3','\\s4','\\r','\\rem','\\mr','\\ms1','\\ms2','\\sp','\\sr','\\qa' )
+# The OET-RV spans that hold something other than translated Bible text, so their words can never
+#   have a word number: the translator's notes ('\f ...\f*', including the '\fr'/'\ft' sub-parts),
+#   the cross-references ('\x ...\x*'), and the file and image links ('\jmp ...\jmp*', '\fig ...\fig*').
+nonTextSpanRegex = re.compile( r'\\(f[a-z]*|x|jmp|fig)\b.*?\\\1\*' )
+# The OET-RV characters that run two words together (e.g. 'Satan¦29058—you're¦29061'),
+#   or that are not a word at all, so that we get the same words that
+#   getRVWordsAndAddSpans() gets when it matches the OET-RV against the OET-LV
+rvWordSeparatorChars = ( ORDER_REVERSAL_CHARACTER, '◘', '…', '—', '/', '(', ')' )
+# Any other USFM marker that is left in an OET-RV verse, e.g. '\nd ' or '\wj' or '\+add*'
+#   (The '+/add*' variants are the continued-character markers, which the OET-RV uses for the
+#    nomina sacra and for the added-words spans.)
+usfmMarkerRegex = re.compile( r'\\\+?[a-zA-Z0-9]+\*?' )
+
+def stripUSFMMarker( match ) -> str:
+    """
+    Replacement function for usfmMarkerRegex: take a USFM marker out of an OET-RV verse.
+
+    We leave a space behind if the marker was stuck onto the end of the word in front of it
+        (e.g. 'God¦123\\+nd*' or 'first\\wj*second'), so that we don't run those two words together.
+    A marker that is stuck onto the front of the next word (e.g. '\\add*brothers') just goes,
+        because there is nothing in front of it to run it together with.
+    """
+    return ' ' if match.start() and not match.string[match.start()-1].isspace() else ''
+# end of stripUSFMMarker
+
+def getVerseTextWords( verseText:str ) -> List[str]:
+    """
+    Split the text of an OET-RV verse into the words that could have an OET-LV word number.
+
+    We throw away the words that can never have one, so that they are left out of the word
+        number percentages (see countWordsAndWordNumbers()):
+            the translator's notes, the cross-references and the file/image links, because they
+                are not translations of the Hebrew or Greek at all
+            the words inside a PLAIN straight '\\add ...\\add*' span, because they were ADDED into
+                the English text by the translator, so they have no OET-LV word to be numbered
+    (The words of the other '\\add' spans, e.g. '\\add ≈because\\add*', DO get word numbers,
+        because they are still translations of an OET-LV word, so we keep them here.)
+    The word numbers themselves are left attached to their words, so the caller can count them.
+    """
+    text = nonTextSpanRegex.sub( ' ', verseText ) # The notes, the cross-references and the links
+        # NOTE: These have to go first, because a note can be inside a straight '\add' span
+    text = straightAddSpanRegex.sub( ' ', text ) # The words that were ADDED into the English text
+    for separatorChar in rvWordSeparatorChars:
+        text = text.replace( separatorChar, ' ' ) # The characters that run two words together
+    text = usfmMarkerRegex.sub( stripUSFMMarker, text ).strip() # The markers that are left
+    return [ word for word in text.split() if any(char.isalnum() for char in word) ] # Ignore stray punctuation
+# end of getVerseTextWords
+
+
+def countWordsAndWordNumbers( rvESFMLines:List[str] ) -> Tuple[int,int]:
+    """
+    Count the words of an OET-RV book that could have a word number, and how many of them have one.
+
+    We only count the text of the verses (including their poetry lines, and the '\\d' lines of
+        Psalms), because that is the only text that gets connected to the OET-LV.
+    The words that can never have a word number are left out of BOTH figures
+        (see getVerseTextWords()), so that the percentage says how much of the OET-RV that we
+        have actually connected to the OET-LV.
+
+    Returns a (numWords,numWordNumbered) tuple.
+    """
+    numWords = numWordNumbered = 0
+    foundVerse = False
+    for line in rvESFMLines:
+        try: marker, rest = line.split( ' ', 1 )
+        except ValueError: marker, rest = line, '' # Only a marker
+        if not rest or marker in nonTextLineMarkers: continue
+        if marker == '\\c': foundVerse = False # A new chapter, so any verse of the last one is finished
+        elif marker == '\\v':
+            _verseNumber,_separator,rest = rest.partition( ' ' ) # Drop the verse number
+            foundVerse = True
+        elif marker == '\\d': foundVerse = True # The Psalms titles, which belong to verse 1
+        if not foundVerse: continue # Not the text of a verse, e.g. the book introduction
+        verseWords = getVerseTextWords( rest )
+        numWords += len( verseWords )
+        numWordNumbered += sum( 1 for verseWord in verseWords if '¦' in verseWord )
+    return numWords, numWordNumbered
+# end of countWordsAndWordNumbers
+
+
+def reportWordNumberPercentage( description:str, numWords:int, numWordNumbered:int ) -> None:
+    """
+    Say what percentage of the words of 'description' (e.g. 'OT' or 'Whole Bible') have a word number.
+    """
+    if not numWords:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  No words found for {description}." )
+        return
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {description} has word numbers on {numWordNumbered:,} of {numWords:,} words ({numWordNumbered*100/numWords:.1f}%)." )
+# end of reportWordNumberPercentage
 
 
 def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool | None:
