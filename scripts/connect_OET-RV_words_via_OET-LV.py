@@ -772,6 +772,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('spoken','said'),('spoken','saying'),
     ('started','began'),
     ('staying','dwelling'),
+    ('stewards','managers'),
     ('strong','forceful'),
     ('swindlers','robbers'),
     ('talking','speaking'), ('talking','saying'),
@@ -791,6 +792,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('told','commanded'),
     ('total','all'),
     ('town','city'),
+    ('trustworthy','faithful'),
     ('twenty','fifth'),
     ('undesirables','sinners'),
     ('ungodly','unclean'),
@@ -813,6 +815,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('wow','see'),
     ('yelled','cried'),
     ('yourselves','hearts'),
+    # RVword, LVwordOrPhrase
 
     # Capitalisation differences (sometimes just due to a change of word order)
     ('Brothers','brothers'),
