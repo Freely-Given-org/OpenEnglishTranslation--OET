@@ -89,6 +89,15 @@ CHANGELOG:
         such as the 'Whenever' of Mark 9:18 is no longer silently skipped
     2026-09-30 matchOurListedSimpleWords() now skips on to the next word instead of giving up on the
         whole verse when one listed word doesn't match, which is what it meant to do
+    2026-09-30 Added a translator-editable table OET-RV_wordPhrases_table.tsv for OET-RV phrases of
+        more than one English word that stand for just ONE OET-LV word (e.g. the OET-RV 'you all' for
+        the OET-LV 'you_all', and the OET-RV 'young donkey' for the OET-LV 'colt'), and give every
+        word of the OET-RV phrase that one OET-LV word number (via loadOETRVWordPhraseTable(),
+        matchWordPhrases() and addNumberToRVPhrase())
+    2026-09-30 addNumberToRVPhrase() only goes ahead when the phrase occurs exactly once in the
+        unnumbered text of the verse, and refuses a phrase whose words already carry a different word
+        number, so that a half-connected phrase (e.g. Mark 8:2 'have you all got') is finished off
+        with the number that is already there
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -128,6 +137,8 @@ assert OET_RV_ESFM_FolderPath.is_dir()
 OET_RV_NAMES_TABLE_FILEPATH = OET_RV_ESFM_FolderPath.joinpath( 'OET-RV_names_table.tsv' )
 OET_RV_NAMES_TABLE_HEADER = 'TraditionalName\tRVName\tExplained\tComment'
 assert OET_RV_NAMES_TABLE_FILEPATH.is_file()
+OET_RV_WORD_PHRASES_TABLE_FILEPATH = OET_RV_ESFM_FolderPath.joinpath( 'OET-RV_wordPhrases_table.tsv' )
+OET_RV_WORD_PHRASES_TABLE_HEADER = 'LVWord\tRVWords\tEnabled\tComment'
 OT_NameTable_Filepath = Path( __file__ ).parent.joinpath( 'ScriptedOTUpdates/restoreNames.commandTable.tsv' )
 NT_OT_NameTable_Filepath = Path( __file__ ).parent.joinpath( 'ScriptedVLTUpdates/OTNames.commandTable.tsv' )
 NT_NameTable_Filepath = Path( __file__ ).parent.joinpath( 'ScriptedVLTUpdates/NTNames.commandTable.tsv' )
@@ -923,6 +934,9 @@ def main():
     loadHebGrkNameTables()
     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{state.nameTables=}")
 
+    # Load the OET-RV words that are more than one word for one OET-LV word, e.g. 'you all'
+    loadOETRVWordPhraseTable()
+
     # Display anywhere where we still have 'for' that should perhaps be 'because'
     # show_fors( lv )
 
@@ -976,6 +990,51 @@ def loadOETRVNameTable() -> None:
         for rvName in rvNames: state.rvNameTableInverse[simplifyRVLVWord( rvName )].add( traditionalName )
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded {len(state.rvNameTable):,} decided OET-RV names covering {sum(len(v) for v in state.rvNameTable.values()):,} spellings." )
 # end of connect_OET-RV_words_via_OET-LV.loadOETRVNameTable
+
+
+def loadOETRVWordPhraseTable() -> None:
+    """
+    Load the translator's decisions about the OET-RV words that are MORE THAN ONE English word
+        which together translate just ONE OET-LV word, e.g.
+            the OET-LV 'you_all' (one Hebrew or Greek word, the plural 'you') which the OET-RV
+                often writes as the two words 'you all' (1,281 times in the OET-RV)
+            the OET-LV 'colt' which the OET-RV writes as the two words 'young donkey'
+        (The other way round, i.e. several OET-LV words for one OET-RV word, is the OET-LV's own
+        'first word/English gloss' convention, e.g. the OET-LV 'he/it' or 'possessions/wealth',
+        and matchWordsInOrder() already lets any of those alternatives match the OET-RV word.)
+
+    'LVWord' is the OET-LV word, spelled the way the OET-LV spells it, i.e. with an underscore
+        between the parts of one word ('you_all'); a space works there too.
+    'RVWords' is what the OET-RV actually uses, with a space between the words ('you all').
+    Only the rows that the translator has flagged with an 'Enabled' of 'Y' are used, so that
+        candidates can be listed in the table without being acted on yet (as with the names table).
+    """
+    state.rvWordPhrases = {} # (simplified LV words) -> (simplified RV words), e.g. ('you','all') -> ('you','all')
+    if not OET_RV_WORD_PHRASES_TABLE_FILEPATH.is_file():
+        logging.warning( f"Can't find the OET-RV word phrases table {OET_RV_WORD_PHRASES_TABLE_FILEPATH}, so no multi-word translations will be connected" )
+        return
+    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading enabled OET-RV word phrases from {OET_RV_WORD_PHRASES_TABLE_FILEPATH}…" )
+    state.rvWordPhrasesSearch = {} # (simplified RV words) -> (RV words as the OET-RV spells them)
+    tsvLines = OET_RV_WORD_PHRASES_TABLE_FILEPATH.read_text( encoding='utf-8' ).rstrip().split( '\n' )
+    if tsvLines[0].startswith( '﻿' ): tsvLines[0] = tsvLines[0][1:] # Remove any BOM
+    assert tsvLines[0] == OET_RV_WORD_PHRASES_TABLE_HEADER, f"Expected '{OET_RV_WORD_PHRASES_TABLE_HEADER}' but found '{tsvLines[0]}' in {OET_RV_WORD_PHRASES_TABLE_FILEPATH}"
+
+    for line in tsvLines[1:]:
+        fields = line.split( '\t' )
+        if len(fields) < 3: continue # Some editors delete trailing columns
+        lvWordStr, rvWordsStr, enabled = fields[0].strip(), fields[1].strip(), fields[2].strip()
+        if not lvWordStr or not rvWordsStr: continue
+        if enabled.upper() != 'Y': continue # Only the translator's decisions (not just candidates)
+        lvWords = tuple( simplifyRVLVWord( word ) for word in lvWordStr.replace( '_', ' ' ).split() )
+        rvWords = tuple( rvWordsStr.split() )
+        assert lvWords and all( lvWords ), f"Bad LVWord '{lvWordStr}' in {OET_RV_WORD_PHRASES_TABLE_FILEPATH}"
+        if len( rvWords ) < 2:
+            logging.warning( f"Skipping the OET-RV word phrases row '{lvWordStr}' -> '{rvWordsStr}', because a single OET-RV word belongs in EQUIVALENT_LV_RV_WORDS instead" )
+            continue
+        state.rvWordPhrases[ lvWords ] = tuple( simplifyRVLVWord( word ) for word in rvWords )
+        state.rvWordPhrasesSearch[ tuple( simplifyRVLVWord( word ) for word in rvWords ) ] = rvWords
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded {len(state.rvWordPhrases):,} enabled OET-RV word phrases." )
+# end of connect_OET-RV_words_via_OET-LV.loadOETRVWordPhraseTable
 
 # The name command tables record a name the way the OET-LV text spells it, which means with the
 #   '¦' word number, with the '\add …\add*' gloss helpers that come with it, and with the '_' that
@@ -1256,8 +1315,8 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Created a list of {len(booklist_to_process)} OET books to process." )
 
     # Go through books chapters and verses
-    totalSimpleListedAdds = totalProperNounAdds = totalFirstPartMatchedAdds = totalManualMatchedAdds = totalChangedNumberAdds = totalSpecialistAdds = totalInOrderMatchedAdds = 0
-    totalSimpleListedAddsNS = totalProperNounAddsNS = totalFirstPartMatchedAddsNS = totalManualMatchedAddsNS = totalChangedNumberAddsNS = totalSpecialistAddsNS = totalInOrderMatchedAddsNS = 0 # Nomina sacra
+    totalWordPhraseAdds = totalSimpleListedAdds = totalProperNounAdds = totalFirstPartMatchedAdds = totalManualMatchedAdds = totalChangedNumberAdds = totalSpecialistAdds = totalInOrderMatchedAdds = 0
+    totalWordPhraseAddsNS = totalSimpleListedAddsNS = totalProperNounAddsNS = totalFirstPartMatchedAddsNS = totalManualMatchedAddsNS = totalChangedNumberAddsNS = totalSpecialistAddsNS = totalInOrderMatchedAddsNS = 0 # Nomina sacra
     totalNumWords = totalNumWordNumbered = 0
 
     if BibleOrgSysGlobals.maxProcesses > 1 \
@@ -1272,10 +1331,12 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
         with multiprocessing.Pool( processes=BibleOrgSysGlobals.maxProcesses ) as pool: # start worker processes
             results = pool.map( _connect_OET_RV_book_MP, parameters ) # have the pool do our loads
             assert len(results) == len(booklist_to_process)
-            for bookSimpleListedAdds, bookSimpleListedAddsNS, bookProperNounAdds, bookProperNounAddsNS, bookFirstPartMatchedAdds, \
+            for bookWordPhraseAdds, bookWordPhraseAddsNS, bookSimpleListedAdds, bookSimpleListedAddsNS, bookProperNounAdds, bookProperNounAddsNS, bookFirstPartMatchedAdds, \
                         bookFirstPartMatchedAddsNS, bookManualMatchedAdds, bookManualMatchedAddsNS, bookChangedNumberAdds, \
                         bookChangedNumberAddsNS, bookSpecialistAdds, bookSpecialistAddsNS, bookInOrderMatchedAdds, \
                         bookInOrderMatchedAddsNS, bookNumWords, bookNumWordNumbered in results:
+                totalWordPhraseAdds += bookWordPhraseAdds
+                totalWordPhraseAddsNS += bookWordPhraseAddsNS
                 totalSimpleListedAdds += bookSimpleListedAdds
                 totalSimpleListedAddsNS += bookSimpleListedAddsNS
                 totalProperNounAdds += bookProperNounAdds
@@ -1296,10 +1357,12 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
     else: # Just single threaded
         # Process the books one by one
         for BBB in booklist_to_process:
-            bookSimpleListedAdds, bookSimpleListedAddsNS, bookProperNounAdds, bookProperNounAddsNS, bookFirstPartMatchedAdds, \
+            bookWordPhraseAdds, bookWordPhraseAddsNS, bookSimpleListedAdds, bookSimpleListedAddsNS, bookProperNounAdds, bookProperNounAddsNS, bookFirstPartMatchedAdds, \
                 bookFirstPartMatchedAddsNS, bookManualMatchedAdds, bookManualMatchedAddsNS, bookChangedNumberAdds, \
                 bookChangedNumberAddsNS, bookSpecialistAdds, bookSpecialistAddsNS, bookInOrderMatchedAdds, \
                 bookInOrderMatchedAddsNS, bookNumWords, bookNumWordNumbered = connect_OET_RV_book( BBB, lv, rv, OET_LV_ESFM_InputFolderPath )
+            totalWordPhraseAdds += bookWordPhraseAdds
+            totalWordPhraseAddsNS += bookWordPhraseAddsNS
             totalSimpleListedAdds += bookSimpleListedAdds
             totalSimpleListedAddsNS += bookSimpleListedAddsNS
             totalProperNounAdds += bookProperNounAdds
@@ -1317,8 +1380,8 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
             totalNumWords += bookNumWords
             totalNumWordNumbered += bookNumWordNumbered
 
-    if totalSimpleListedAdds or totalProperNounAdds or totalFirstPartMatchedAdds or totalManualMatchedAdds or totalChangedNumberAdds or totalSpecialistAdds or totalInOrderMatchedAdds:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} Did total of {totalSimpleListedAdds:,} simple listed adds, {totalProperNounAdds:,} proper noun adds, {totalFirstPartMatchedAdds:,} first part adds, {totalManualMatchedAdds:,} manual adds, {totalChangedNumberAdds:,} changed number adds, {totalSpecialistAdds:,} specialist add spans and {totalInOrderMatchedAdds:,} in-order adds." )
+    if totalWordPhraseAdds or totalSimpleListedAdds or totalProperNounAdds or totalFirstPartMatchedAdds or totalManualMatchedAdds or totalChangedNumberAdds or totalSpecialistAdds or totalInOrderMatchedAdds:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} Did total of {totalWordPhraseAdds:,} word phrase adds, {totalSimpleListedAdds:,} simple listed adds, {totalProperNounAdds:,} proper noun adds, {totalFirstPartMatchedAdds:,} first part adds, {totalManualMatchedAdds:,} manual adds, {totalChangedNumberAdds:,} changed number adds, {totalSpecialistAdds:,} specialist add spans and {totalInOrderMatchedAdds:,} in-order adds." )
     else: vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} No new word connections made." )
     if totalSimpleListedAddsNS or totalProperNounAddsNS or totalFirstPartMatchedAddsNS or totalManualMatchedAddsNS or totalChangedNumberAddsNS or totalSpecialistAddsNS or totalInOrderMatchedAddsNS:
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} Did total of {totalSimpleListedAddsNS:,} simple listed nomina sacra (NS), {totalProperNounAddsNS:,} proper noun NS, {totalFirstPartMatchedAddsNS:,} first part NS, {totalManualMatchedAddsNS:,} manual NS, {totalChangedNumberAddsNS:,} changed number NS, {totalSpecialistAddsNS:,} specialist add span NS and {totalInOrderMatchedAddsNS:,} in-order NS." )
@@ -1354,8 +1417,8 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
 
     # wordFileName = lv[BBB].ESFMWordTableFilename
 
-    bookSimpleListedAdds = bookProperNounAdds = bookFirstPartMatchedAdds = bookManualMatchedAdds = bookChangedNumberAdds = bookSpecialistAdds = bookInOrderMatchedAdds = 0
-    bookSimpleListedAddsNS = bookProperNounAddsNS = bookFirstPartMatchedAddsNS = bookManualMatchedAddsNS = bookChangedNumberAddsNS = bookSpecialistAddsNS = bookInOrderMatchedAddsNS = 0 # Nomina sacra
+    bookWordPhraseAdds = bookSimpleListedAdds = bookProperNounAdds = bookFirstPartMatchedAdds = bookManualMatchedAdds = bookChangedNumberAdds = bookSpecialistAdds = bookInOrderMatchedAdds = 0
+    bookWordPhraseAddsNS = bookSimpleListedAddsNS = bookProperNounAddsNS = bookFirstPartMatchedAddsNS = bookManualMatchedAddsNS = bookChangedNumberAddsNS = bookSpecialistAddsNS = bookInOrderMatchedAddsNS = 0 # Nomina sacra
 
     lvESFMFilename = f'OET-LV_{BBB}.ESFM'
     lvESFMFilepath = OET_LV_ESFM_InputFolderPath.joinpath( lvESFMFilename )
@@ -1452,8 +1515,10 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
 
                 check_OET_RV_Verse( BBB, c, v, rvVerseEntryList, lvVerseEntryList ) # Check that any existing word numbers are in the expected range
 
-                (numSimpleListedAdds,numSimpleListedAddsNS), (numProperNounAdds,numProperNounAddsNS), (numFirstPartMatchedAdds,numFirstPartMatchedAddsNS), (numManualMatchedAdds,numManualMatchedAddsNS), (numVerbSetAdds,numVerbSetNS), (numChangedNumberAdds,numChangedNumberNS), (numSpecialistAdds,numSpecialistNS), (numInOrderMatchedAdds,numInOrderMatchedAddsNS) \
+                (numWordPhraseAdds,numWordPhraseNS), (numSimpleListedAdds,numSimpleListedAddsNS), (numProperNounAdds,numProperNounAddsNS), (numFirstPartMatchedAdds,numFirstPartMatchedAddsNS), (numManualMatchedAdds,numManualMatchedAddsNS), (numVerbSetAdds,numVerbSetNS), (numChangedNumberAdds,numChangedNumberNS), (numSpecialistAdds,numSpecialistNS), (numInOrderMatchedAdds,numInOrderMatchedAddsNS) \
                             = connect_OET_RV_Verse( BBB, c, v, rvVerseEntryList, lvVerseEntryList ) # updates state.rvESFMLines
+                bookWordPhraseAdds += numWordPhraseAdds
+                bookWordPhraseAddsNS += numWordPhraseNS
                 bookSimpleListedAdds += numSimpleListedAdds + numVerbSetAdds
                 bookSimpleListedAddsNS += numSimpleListedAddsNS + numVerbSetNS
                 bookProperNounAdds += numProperNounAdds
@@ -1490,8 +1555,8 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
             assert wronglyOrderedCombo not in newESFMtext, f"Wrongly ordered combo check failed with '{wronglyOrderedCombo}' before saving {BBB} with '{newESFMtext[newESFMtext.index(wronglyOrderedCombo)-10:newESFMtext.index(wronglyOrderedCombo)+35]}'"
         with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
             esfmFile.write( newESFMtext )
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookSimpleListedAdds:,} simple listed adds, {bookProperNounAdds:,} proper noun adds, {bookFirstPartMatchedAdds:,} first part adds, {bookManualMatchedAdds:,} manual adds, {bookChangedNumberAdds:,} changed number adds, {bookSpecialistAdds:,} specialist add span adds and {bookInOrderMatchedAdds:,} in-order adds for {BBB}." )
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookSimpleListedAddsNS:,} simple listed NS, {bookProperNounAddsNS:,} proper noun NS, {bookFirstPartMatchedAddsNS:,} first part NS, {bookManualMatchedAddsNS:,} manual NS, {bookChangedNumberAddsNS:,} changed number NS, {bookSpecialistAddsNS:,} specialist add span NS and {bookInOrderMatchedAddsNS:,} in-order NS for {BBB}." )
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookWordPhraseAdds:,} word phrase adds, {bookSimpleListedAdds:,} simple listed adds, {bookProperNounAdds:,} proper noun adds, {bookFirstPartMatchedAdds:,} first part adds, {bookManualMatchedAdds:,} manual adds, {bookChangedNumberAdds:,} changed number adds, {bookSpecialistAdds:,} specialist add span adds and {bookInOrderMatchedAdds:,} in-order adds for {BBB}." )
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookWordPhraseAddsNS:,} word phrase NS, {bookSimpleListedAddsNS:,} simple listed NS, {bookProperNounAddsNS:,} proper noun NS, {bookFirstPartMatchedAddsNS:,} first part NS, {bookManualMatchedAddsNS:,} manual NS, {bookChangedNumberAddsNS:,} changed number NS, {bookSpecialistAddsNS:,} specialist add span NS and {bookInOrderMatchedAddsNS:,} in-order NS for {BBB}." )
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      Saved OET-RV {BBB} {len(newESFMtext):,} bytes to {rvESFMFilepath}" )
     else:
         # assert bookSimpleListedAdds == bookProperNounAdds == 0
@@ -1504,7 +1569,7 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
     if BibleOrgSysGlobals.commandLineArguments.fastMode:
         reportWordNumberPercentage( f"OET-RV {BBB}", bookNumWords, bookNumWordNumbered )
 
-    return bookSimpleListedAdds, bookSimpleListedAddsNS, bookProperNounAdds, bookProperNounAddsNS, bookFirstPartMatchedAdds, \
+    return bookWordPhraseAdds, bookWordPhraseAddsNS, bookSimpleListedAdds, bookSimpleListedAddsNS, bookProperNounAdds, bookProperNounAddsNS, bookFirstPartMatchedAdds, \
             bookFirstPartMatchedAddsNS, bookManualMatchedAdds, bookManualMatchedAddsNS, bookChangedNumberAdds, \
             bookChangedNumberAddsNS, bookSpecialistAdds, bookSpecialistAddsNS, bookInOrderMatchedAdds, \
             bookInOrderMatchedAddsNS, bookNumWords, bookNumWordNumbered
@@ -1568,7 +1633,7 @@ def check_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> None
 
 
 GLOSS_COLUMN__NUMBER = 5
-def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tuple[Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int]]:
+def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tuple[Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int]]:
     """
     Some undocumented documentation of the NT GlossCaps column from state.wordTable:
         ●    U – lexical entry capitalized
@@ -1618,7 +1683,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
             # if lvTextSimplified.startswith( 'for ' ) or lvTextSimplified.startswith( 'For ' ) or ' for ' in lvTextSimplified or 'For ' in lvTextSimplified:
             #     print( f"FOR: {BBB}_{c}:{v}, '{lvTextSimplified.replace('for','FOR').replace('For','FOR')}'" )
             #     forList.append( f"{BBB}_{c}:{v}" )
-    if not rvText or not lvText: return (0,0), (0,0), (0,0), (0,0), (0,0), (0,0), (0,0), (0,0)
+    if not rvText or not lvText: return (0,0), (0,0), (0,0), (0,0), (0,0), (0,0), (0,0), (0,0), (0,0)
 
     # A U+21D4 double arrow at the start of the OET-RV text means the translator did the
     #   LAST half of the OET-LV verse first, so the word order runs backwards from here on.
@@ -1636,7 +1701,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     if lvAdjText.startswith( '/' ): lvAdjText = lvAdjText[1:]
     # print( f"({len(rvAdjText)}) {rvAdjText=}")
     # print( f"({len(lvAdjText)}) {lvAdjText=}")
-    if not rvWords or not lvAdjText: return (0,0), (0,0), (0,0), (0,0), (0,0), (0,0), (0,0), (0,0)
+    if not rvWords or not lvAdjText: return (0,0), (0,0), (0,0), (0,0), (0,0), (0,0), (0,0), (0,0), (0,0)
 
     lvWords = lvAdjText.split( ' ' )
     for rvWord in rvWords:
@@ -1678,6 +1743,7 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
             logging.warning( f"Not using the '\\add' span starts/ends of {BBB} {c}:{v} because the two OET-RV texts gave different words" )
             dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{BBB} {c}:{v}\n  from object: {rvWords}\n  from file:   {liveWords}" )
 
+    numWordPhraseAdds,numWordPhraseNS = matchWordPhrases( BBB, c,v, rvWords, lvWords, reversedOrder )
     numSpecialistAdds,numSpecialistNS = matchSpecialistAddSpans( BBB, c,v, rvWords, rvAddSpans, lvWords )
     numSimpleListedAdds,numSimpleListedNS = matchOurListedSimpleWords( BBB, c,v, rvWords, lvWords )
     numVerbSetAdds,numVerbSetNS = matchVerbSets( BBB, c,v, rvWords, lvWords )
@@ -1719,7 +1785,8 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     # Run this LAST, so that it can only take the words the other matchers didn't want
     numInOrderMatches,numInOrderMatchesNS = matchWordsInOrder( BBB, c,v, rvText, rvWords, lvWords, reversedOrder )
 
-    return (numSimpleListedAdds,numSimpleListedNS), \
+    return (numWordPhraseAdds,numWordPhraseNS), \
+           (numSimpleListedAdds,numSimpleListedNS), \
            (numIdenticalProperNounAdds+numAdjustedProperNounAdds,numIdenticalProperNounNS+numAdjustedProperNounNS), \
            (numFirstPartMatchedWords,numFirstPartMatchedWordsNS), \
            (numHandmatches,numHandmatchesNS), \
@@ -2318,6 +2385,90 @@ def getLVWordNumber( lvWordStr:str ) -> Optional[int]:
     m = re.match( r'^.*?¦(\d+)', lvWordStr )
     return int(m.group(1)) if m else None
 # end of getLVWordNumber
+
+
+# The words in between two words of a phrase, i.e. whitespace and any USFM markers, so that we
+#   can match a phrase whose words the translator has wrapped in a '\add' span or separated with
+#   e.g. '\wj' or a '\n' line marker, e.g. the 'young donkey' of '\+add ≈young donkey\+add*'.
+rvPhraseSeparatorRegex = r'(?:[ ]|\\\+?[a-zA-Z0-9]+\*?)+'
+
+def matchWordPhrases( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:List[str], reversedOrder:bool ) -> Tuple[int,int]:
+    """
+    Connect the OET-RV words that are MORE THAN ONE English word but stand for just ONE OET-LV
+        word, using the pairs that the translator has listed in OET-RV_wordPhrases_table.tsv, e.g.
+            the OET-RV 'you all' against the OET-LV 'you_all', the one plural 'you' word
+            the OET-RV 'young donkey' against the OET-LV 'colt'
+    Every word of the OET-RV phrase gets the one OET-LV word number, because that is the way the
+        human translators number such a phrase (see addNumberToAddSpan() for the same convention
+        on an '\add' span like Mark 5:12 '\add @the demons\add*' for the LV 'they').
+
+    This has to run FIRST, because the little words that these phrases are made of ('you', 'all',
+        'young', 'donkey') are exactly the words that we refuse to match on their own, and because
+        the table records a decision that the translator has already made.
+    """
+    fnPrint( DEBUGGING_THIS_MODULE, f"matchWordPhrases( {BBB} {c}:{v} {reversedOrder=} {rvWordList}, {lvWordList} )" )
+    if not state.rvWordPhrases: return 0,0
+    assert rvWordList and lvWordList
+    if reversedOrder: vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  {BBB} {c}:{v} is an order-reversed verse" )
+
+    # Where is each of our OET-LV phrases in this verse?  (The OET-LV has already had its
+    #   '_' turned into a space, so the one OET-LV word 'you_all¦N_all¦N' is two lvWordList
+    #   entries that share the one word number N.  We insist on that, so that we only take a
+    #   phrase that really is ONE OET-LV word.)
+    lvCandidates = {} # (simplified LV words) -> [ (first word index, lv word number) ]
+    for lvWords in state.rvWordPhrases:
+        candidates = []
+        for ix in range( len( lvWordList ) - len( lvWords ) + 1 ):
+            lvNumbers, isMatch = set(), True
+            for offset,lvWord in enumerate( lvWords ):
+                lvWordStr = lvWordList[ ix + offset ]
+                lvNumber = getLVWordNumber( lvWordStr )
+                if lvNumber is None or simplifyRVLVWord( lvWordStr.split( '¦' )[0] ) != lvWord:
+                    isMatch = False; break
+                lvNumbers.add( lvNumber )
+            if isMatch and len( lvNumbers ) == 1: candidates.append( (ix, lvNumbers.pop()) )
+        if candidates: lvCandidates[ lvWords ] = candidates
+    if not lvCandidates: return 0,0
+
+    # The OET-RV words in the simplified form that we compare in.  Note that a word which already
+    #   has a word number is allowed here, because a phrase can be half connected already -- e.g.
+    #   Mark 8:2 'How much bread have you all got?' has the number on the 'you' from another matcher
+    #   but not yet on the 'all' -- and also because getUnnumberedRVWords()'s 'still free' words
+    #   don't see through a closing marker like Mark 14:27 'you¦31031 all\wj*'.  addNumberToRVPhrase()
+    #   does the real checking on the live OET-RV lines instead: it only goes ahead if the phrase
+    #   occurs exactly once, and it only fills in the words that have no number yet, and only if the
+    #   numbers that are already there are the ones that we want.
+    rvPlainWords = [ simplifyRVLVWord( rvWordStr.split( '¦' )[0] ) for rvWordStr in rvWordList ]
+
+    # Try the longest phrase first at each word, so that the most specific row wins
+    phraseLengths = sorted( { len(rvWords) for rvWords in state.rvWordPhrases }, reverse=True )
+    rvIxRange = range( len( rvWordList )-1, -1, -1 ) if reversedOrder else range( len( rvWordList ) )
+    usedLvIndexes, numAdded = set(), 0
+    for ix in rvIxRange:
+        lvWords = None
+        for length in phraseLengths:
+            if ix + length > len( rvWordList ): continue
+            if all( '¦' in rvWord for rvWord in rvWordList[ix:ix+length] ): continue # This phrase is already fully numbered
+            rvWords = tuple( rvPlainWords[ix:ix+length] )
+            lvWords = next( (key for key,value in state.rvWordPhrases.items() if value == rvWords ), None )
+            if lvWords is not None: break # This is the most specific phrase that starts at this word
+        if lvWords is None: continue
+
+        lvCandidatesForThisPhrase = lvCandidates[lvWords]
+        if reversedOrder: lvCandidatesForThisPhrase = lvCandidatesForThisPhrase[::-1] # The OET-RV meets them in the opposite order
+        for candidateIx,lvNumber in lvCandidatesForThisPhrase: # The OET-LV phrases, in the order the OET-RV meets them
+            if candidateIx in usedLvIndexes: continue # This OET-LV phrase is already spoken for
+            rvPhraseWords = state.rvWordPhrasesSearch[rvWords]
+            phraseAdds,phraseNS = addNumberToRVPhrase( BBB, c,v, rvPhraseWords, lvNumber )
+            if not phraseAdds:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchWordPhrases() could not use '{rvWords}' for the LV '{lvWords}¦{lvNumber}' at {BBB} {c}:{v}" )
+                break # Don't keep looking, or a second OET-RV phrase would get this same OET-LV number
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordPhrases() is adding {lvNumber} to the {phraseAdds} RV words of '{rvWords}' from LV '{lvWords}' at {BBB} {c}:{v}" )
+            usedLvIndexes.add( candidateIx )
+            numAdded += phraseAdds
+            break
+    return numAdded,0 # None of our phrases are nomina sacra
+# end of connect_OET-RV_words_via_OET-LV.matchWordPhrases
 
 
 def matchWordsInOrder( BBB:str, c:int,v:int, rvVerseText:str, rvWordList:List[str], lvWordList:List[str], reversedOrder:bool ) -> Tuple[int,int]:
@@ -3755,6 +3906,106 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
             else:
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord {BBB} {c}:{v} '{word}' found {len(allWordMatches)=}" )
 # end of connect_OET-RV_words_via_OET-LV.addNumberToRVWord
+
+
+def addNumberToRVPhrase( BBB:str, c:int,v:int, rvPhraseWords:List[str], lvNumber:int ) -> Tuple[int,int]:
+    """
+    Give 'lvNumber' to every word of the OET-RV phrase 'rvPhraseWords', wherever that phrase is in
+        the verse, e.g. both words of the 'young donkey' that the OET-RV uses for the OET-LV 'colt'.
+
+    addNumberToRVWord() can only number a word that occurs ONCE in the verse, which almost never
+        works for the little words that these phrases are made of: Mark 6:10 has both the 'you' of
+        'you all' and the 'you' of "you're", so neither 'you' can be found on its own.  So this
+        looks for the whole PHRASE instead, and only goes ahead if the phrase occurs exactly once
+        in the unnumbered text of the verse (a verse that uses the phrase twice could be using the
+        two occurrences for two different OET-LV words, and we can't tell which is which without
+        an alignment).  A word of the phrase that already has a word number keeps it, so that a
+        repeat of the same phrase elsewhere in the verse is not counted as a second candidate, and
+        so that a phrase that one of the other matchers has half connected can be finished off --
+        but only if the number that is already there is the one that we want to give the phrase.
+
+    Returns the number of word numbers added, and the number of nomina sacra added (always 0,
+        because none of the words that we put phrases together from are nomina sacra).
+    """
+    assert isinstance( lvNumber, int )
+    assert len( rvPhraseWords ) > 1, f"addNumberToRVPhrase needs more than one OET-RV word, not {rvPhraseWords=}"
+    fnPrint( DEBUGGING_THIS_MODULE, f"addNumberToRVPhrase( {BBB} {c}:{v} {rvPhraseWords} {lvNumber} )" )
+    havePsalmTitles = bos_books_codes_py.has_psalm_title( BBB, str(c) )
+    desiredV = (v-1) if havePsalmTitles and v>1 else v
+
+    # Build a regex that matches the words of the phrase in order, with any whitespace and USFM
+    #   markers allowed in between, and with an already existing word number allowed after a word
+    phraseRegexBits = []
+    for ix,word in enumerate( rvPhraseWords ):
+        if phraseRegexBits: phraseRegexBits.append( rvPhraseSeparatorRegex )
+        phraseRegexBits.append( rf'\b(?P<word{ix}>{re.escape(word)})\b(?:¦\d+)?' )
+    phraseRegex = re.compile( ''.join( phraseRegexBits ), re.IGNORECASE )
+
+    C = V = None
+    foundChapter = foundVerse = False
+    occurrences = [] # The (line number, match) of each place in this verse where the phrase is still unnumbered
+    for n,line in enumerate( state.rvESFMLines[:] ): # iterate through a copy
+        try: marker, rest = line.split( ' ', 1 )
+        except ValueError: marker, rest = line, '' # Only a marker
+        if marker in ('\\s1','\\s2','\\s3','\\r','\\rem') or not rest: continue
+        if marker == '\\c':
+            C = int(rest)
+            if C > c: break
+            if C == c: foundChapter = True
+        elif foundChapter and marker == '\\v':
+            Vstr, rest = rest.split( ' ', 1 )
+            try: V = int(Vstr)
+            except ValueError: V = int(Vstr.split('-',1)[0]) # It can be a range like 21-22
+            foundVerse = C==c and V==desiredV
+        elif foundChapter and marker == '\\d':
+            foundVerse = C==c and desiredV==1
+        if not foundVerse: continue
+        # Blank out the notes, the cross-references and the links, because the translator's
+        #   notes often quote the OET-RV text, but keep the length the same so that the
+        #   match.start() indexes below still point at the right characters of the real line
+        searchLine = nonTextSpanRegex.sub( lambda match: ' '*( match.end() - match.start() ), line )
+        for match in phraseRegex.finditer( searchLine ):
+            rvSpans = [ match.span( f'word{ix}' ) for ix in range(len(rvPhraseWords)) ] # The (start,end) of each word of the phrase
+            if all( rvEnd < len(line) and line[rvEnd] == '¦' for rvStart,rvEnd in rvSpans ):
+                continue # This occurrence already has all of its word numbers
+            occurrences.append( (n,match) )
+
+    if len( occurrences ) != 1:
+        # Zero means the OET-RV really doesn't use the phrase here, and more than one means we
+        #   can't tell which occurrence stands for this OET-LV word without an alignment
+        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVPhrase() found the phrase '{rvPhraseWords}' {len( occurrences ):,} times in the unnumbered text of OET-RV {BBB} {c}:{v}, not exactly once" )
+        return 0,0
+
+    n,match = occurrences[0]
+    line = state.rvESFMLines[n] # Get this again, in case a previous call has changed the line
+    rvSpans = [ match.span( f'word{ix}' ) for ix in range(len(rvPhraseWords)) ]
+    # A word of the phrase that one of the other matchers has already numbered has to carry the
+    #   same number that we are about to give the rest of the phrase, or we have no idea which
+    #   OET-LV word that other matcher had in mind
+    for rvStart,rvEnd in rvSpans:
+        if rvEnd >= len(line) or line[rvEnd] != '¦': continue # This word is unnumbered
+        existingNumber = int( re.match( r'¦(\d+)', line[rvEnd:] ).group(1) )
+        if existingNumber != lvNumber:
+            logger = logging.critical if DEBUGGING_THIS_MODULE else logging.error
+            logger( f"Refusing to add the OET-LV word number {lvNumber} to the OET-RV phrase '{' '.join(rvPhraseWords)}' in {BBB} {c}:{v}, because the word '{line[rvStart:rvEnd]}' is already numbered {existingNumber}" )
+            return 0,0
+    if any( isInsideStraightAddSpan( line, rvStart ) for rvStart,rvEnd in rvSpans ):
+        # These words are inside a plain '\add' span, which removeWordNumbersInStraightAddSpans()
+        #   deliberately leaves unnumbered, so a number here would just be stripped out again
+        logger = logging.critical if DEBUGGING_THIS_MODULE else logging.error
+        logger( f"Refusing to add a word number to the ADDED OET-RV phrase '{' '.join(rvPhraseWords)}' in {BBB} {c}:{v} (inside straight \\add or \\+add span)" )
+        return 0,0
+
+    # Add the numbers from the end of the line backwards, so that the earlier indexes
+    #   stay valid as we go
+    numAdded = 0
+    for rvStart,rvEnd in reversed( rvSpans ):
+        if rvEnd < len(state.rvESFMLines[n]) and state.rvESFMLines[n][rvEnd] == '¦': continue # This word already has a word number
+        state.rvESFMLines[n] = f'{state.rvESFMLines[n][:rvEnd]}¦{lvNumber}{state.rvESFMLines[n][rvEnd:]}'
+        numAdded += 1
+    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVPhrase() added ¦{lvNumber} to {numAdded} word(s) of '{rvPhraseWords}' in OET-RV {BBB} {c}:{v}" )
+    return numAdded,0
+# end of connect_OET-RV_words_via_OET-LV.addNumberToRVPhrase
 
 
 if __name__ == '__main__':
