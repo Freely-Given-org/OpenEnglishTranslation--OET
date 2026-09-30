@@ -69,6 +69,26 @@ CHANGELOG:
     2026-09-29 Stop getNameWordsBeforeSpan() at a word that belongs to another '\\add' span, so that we no longer sweep up an unrelated earlier name across e.g. the 'rebuilt' of 'from Beyt-El \\add ≈rebuilt\\add* Yeriho \\add !(Jericho)\\add*' and give it Jericho's word number
     2026-09-29 Removed the no longer productive NAME_ADJUSTMENT_TABLE
     2026-09-29 Report what percentage of the words have word numbers (via countWordsAndWordNumbers() and reportWordNumberPercentage()), for the OT, the NT and the whole Bible, or for the individual book(s) in 'fast' mode
+    2026-09-30 Look up the OET-RV name spellings in the OET-LV name command tables without the
+        extras that those tables carry, i.e. ignore the '\\add ...\\add*' gloss helpers and the '¦'
+        word numbers, and register the last plain word of each '/' or '(' alternative as well, so that
+        e.g. the OET-LV 'Farisaios¦_\add (religious leaders)\add*' can be the OET-RV 'Pharisee'
+    2026-09-30 Keep a hyphenated word that isn't capitalised as the one word that the OET-RV and the
+        OET-LV both use (e.g. 'empty-handed'), while still splitting a capitalised one (e.g. 'Yahweh-nissi')
+    2026-09-30 Connect a short word that is exactly the same on both sides (MIN_EXACT_MATCH_WORD_LENGTH
+        = 3, e.g. the OET-RV 'put' of Mark 12:1), but not the little English function words that the
+        translators have deliberately left unnumbered (LITTLE_FUNCTION_WORDS)
+    2026-09-30 Connect an OET-RV word to an OET-LV word that means the same thing but is a different
+        word (EQUIVALENT_LV_RV_WORDS, e.g. the OET-RV 'Whenever' against the OET-LV 'wherever'), and
+        let a capitalised OET-LV word take part when we have such a synonym for it
+    2026-09-30 Let matchWordsInOrder() use two different OET-LV words that share one word number
+        (e.g. the OET-LV 'put¦32436' and 'around¦32436' of Mark 12:1), while still skipping an OET-LV
+        word that the verse gives exactly the same word and number twice
+    2026-09-30 Give addNumberToRVWord() the OET-RV word as the OET-RV really spells it (via
+        unSimplifyRVWord()), because it searches for that spelling, so that a capitalised OET-RV word
+        such as the 'Whenever' of Mark 9:18 is no longer silently skipped
+    2026-09-30 matchOurListedSimpleWords() now skips on to the next word instead of giving up on the
+        whole verse when one listed word doesn't match, which is what it meant to do
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -86,7 +106,7 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-09-29' # by RJH
+LAST_MODIFIED_DATE = '2026-09-30' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '0.99'
@@ -957,6 +977,65 @@ def loadOETRVNameTable() -> None:
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded {len(state.rvNameTable):,} decided OET-RV names covering {sum(len(v) for v in state.rvNameTable.values()):,} spellings." )
 # end of connect_OET-RV_words_via_OET-LV.loadOETRVNameTable
 
+# The name command tables record a name the way the OET-LV text spells it, which means with the
+#   '¦' word number, with the '\add …\add*' gloss helpers that come with it, and with the '_' that
+#   joins the English glosses of the one OET-LV word, e.g. the Search 'Pharisee¦' and Replace
+#   'Φαρισαῖος¦_\add party¦\add*' of the OET-RV 'Pharisees', or the Search 'Arabs¦' and Replace
+#   '\add >ones¦\add*_from¦_Ἀραβία¦' of the OET-RV 'Arabs'.  A name lookup on the plain OET-LV
+#   name ('Farisaios', 'Arabia') can't find such a key, so cleanNameTableField() and
+#   getPlainNameKeys() below give us the plain spelling of the name as well.
+NAME_GLOSS_HELPER_REGEX = re.compile( r'\\add[^*]*\\add\*' ) # e.g. the '\add party¦\add*' of 'Φαρισαῖος¦_\add party¦\add*'
+WORD_NUMBER_MARKER_REGEX = re.compile( r'¦\d*' ) # e.g. '¦32660', or a bare '¦' that has lost its number
+NAME_ALTERNATIVE_REGEX = re.compile( r'[/(]' ) # The '/' or '(' of an alternative spelling, e.g. 'Yəhūdāh/Judah'
+# The English words that the OET-LV uses to gloss one OET-LV word, which are never the name
+#   itself, e.g. the 'from' of 'from¦X_Ἀραβία¦X' or the 'tribe of' of
+#   'from¦X_tribe¦X_of¦X_לֵוִי¦X'.
+NAME_GLOSS_WORDS = { 'a','an','in','of','one','ones','supporters','the','tribe' }
+
+
+def cleanNameTableField( name:str ) -> str:
+    """
+    Return a name from a name command table with the OET-LV word number marker taken off it,
+        e.g. 'Pharisee¦' becomes 'Pharisee', so that it matches an OET-RV name.
+    """
+    return WORD_NUMBER_MARKER_REGEX.sub( '', name ).strip()
+# end of connect_OET-RV_words_via_OET-LV.cleanNameTableField
+
+
+def getPlainNameKeys( replaceText:str ) -> List[str]:
+    """
+    Return the plain word that a name command table records a name as, i.e. without the word
+        number marker, the gloss helpers and the '_' joins, so that a name lookup on the OET-LV
+        name itself can find it, e.g. ['Farisaios'] for 'Φαρισαῖος¦_\\add party¦\\add*' and
+        ['Arabia'] for '\\add >ones¦\\add*_from¦_Ἀραβία¦'.
+
+    We take the LAST plain word of each alternative, because that is the name itself, with the
+        English glosses in front of it ('ones from Arabia', 'from tribe of Levi'), while any plain
+        word that comes AFTER the name qualifies it, and so is a different name: the 'zaʸlōtaʸs' of
+        'Φαρισαῖος¦_zaʸlōtaʸs¦_\\add group¦_member¦\\add*' is a Zealot, not a Pharisee.
+    """
+    cleaned = WORD_NUMBER_MARKER_REGEX.sub( ' ', NAME_GLOSS_HELPER_REGEX.sub( ' ', replaceText ) )
+    keys = []
+    for alternative in NAME_ALTERNATIVE_REGEX.split( cleaned ):
+        words = [ word for word in alternative.replace( '_', ' ' ).split() if word not in NAME_GLOSS_WORDS ]
+        if words: keys.append( words[-1] )
+    return keys
+# end of connect_OET-RV_words_via_OET-LV.getPlainNameKeys
+
+
+def addPlainNameKeys( nameTableKey:str, replaceText:str, searchText:str, rvNameChoices:set ) -> None:
+    """
+    Save a name from a name command table under the plain OET-LV name as well as under the full
+        Replace text (which has the word number marker, the gloss helpers and the '_' joins in it),
+        so that both matchAdjustedProperNouns() and getLVNameSpellings() can find it when they look
+        the OET-LV name up, e.g. the OET-RV 'Pharisee' against the OET-LV 'Farisaios'.
+    """
+    for plainName in getPlainNameKeys( replaceText ):
+        state.nameTables[nameTableKey][plainName].update( rvNameChoices )
+        state.nameTables[nameTableKey][plainName].add( searchText )
+# end of connect_OET-RV_words_via_OET-LV.addPlainNameKeys
+
+
 def loadHebGrkNameTables():
     """
     Loads three TSV files into state.nameTables
@@ -987,6 +1066,7 @@ def loadHebGrkNameTables():
             tags, searchText, replaceText = fields[0], fields[9], fields[12]
             # print( f"{searchText=} {replaceText=}")
             if 'H' in tags:
+                searchText = cleanNameTableField( searchText ) # Take off any OET-LV word number marker, e.g. 'Chaldeans¦'
                 traditionalName = searchText # Save this before we mangle it below
                 if searchText.startswith( 'J' ): searchText = f'Y{searchText[1:]}' # Replace first letter J with Y
                 rvNameChoices = state.rvNameTable.get( traditionalName, set() ) # What we actually call it in the OET-RV
@@ -1052,6 +1132,7 @@ def loadHebGrkNameTables():
                     state.nameTables['OT'][replaceText].add( searchText.replace( 'z', 'ts' ) ) # We add an extra entry
                 if searchText.startswith('Z') and replaceText.startswith('Ts'): # e.g., Ziklag
                     state.nameTables['OT'][replaceText].add( f'Ts{searchText[1:]}' ) # We add an extra entry
+                addPlainNameKeys( 'OT', replaceText, searchText, rvNameChoices )
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded {len(state.nameTables['OT']):,} OT names." )
     # print( f"{state.nameTables['OT']['Mənaḩēm']=}" ); assert False, "We want to stop here"
 
@@ -1077,6 +1158,7 @@ def loadHebGrkNameTables():
             tags, searchText, replaceText = fields[0], fields[9], fields[12]
             # print( f"{searchText=} {replaceText=}")
             if 'HG' in tags:
+                searchText = cleanNameTableField( searchText ) # Take off any OET-LV word number marker
                 traditionalName = searchText # Save this before we mangle it below
                 if searchText.startswith( 'J' ): searchText = f'Y{searchText[1:]}' # Replace first letter J with Y
                 rvNameChoices = state.rvNameTable.get( traditionalName, set() ) # What we actually call it in the OET-RV
@@ -1094,6 +1176,7 @@ def loadHebGrkNameTables():
                 # assert replaceText not in state.nameTables['NT_OT'], f"{tags=} {searchText=} {replaceText=}"
                 state.nameTables['NT_OT'][replaceText].update( rvNameChoices )
                 state.nameTables['NT_OT'][replaceText].add( searchText )
+                addPlainNameKeys( 'NT_OT', replaceText, searchText, rvNameChoices )
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded {len(state.nameTables['NT_OT']):,} NT OT names." )
 
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading NT names from {NT_NameTable_Filepath}…" )
@@ -1118,6 +1201,7 @@ def loadHebGrkNameTables():
             tags, searchText, replaceText = fields[0], fields[9], fields[12]
             # print( f"{searchText=} {replaceText=}")
             if 'G' in tags:
+                searchText = cleanNameTableField( searchText ) # Take off any OET-LV word number marker, e.g. 'Pharisees¦'
                 traditionalName = searchText # Save this before we mangle it below
                 if searchText.startswith( 'J' ): searchText = f'Y{searchText[1:]}' # Replace first letter J with Y
                 rvNameChoices = state.rvNameTable.get( traditionalName, set() ) # What we actually call it in the OET-RV
@@ -1135,6 +1219,7 @@ def loadHebGrkNameTables():
                 # assert replaceText not in state.nameTables['NT'], f"{tags=} {searchText=} {replaceText=}"
                 state.nameTables['NT'][replaceText].update( rvNameChoices )
                 state.nameTables['NT'][replaceText].add( searchText )
+                addPlainNameKeys( 'NT', replaceText, searchText, rvNameChoices )
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded {len(state.nameTables['NT']):,} NT names." )
 # end of connect_OET-RV_words_via_OET-LV.loadHebGrkNameTables
 
@@ -1865,7 +1950,9 @@ def matchOurListedSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWor
         if not rvIndexList: continue
 
         if len(rvIndexList) != 1 or len(lvIndexList) != 1: # then I don't think we can guarantee matching the right words
-            return numAdded,numNS
+            # Skip just this word and carry on with the rest of SIMPLE_WORDS, because a word that
+            #   occurs twice in the verse says nothing about any of the other words in it
+            continue
         assert len(rvIndexList) == len(lvIndexList), f"{BBB} {c}:{v} {simpleNoun=} {rvIndexList=} {lvIndexList=}"
 
         lvNumbers = []
@@ -2007,6 +2094,81 @@ def matchWordsFirstParts( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList
 #   'mother-in-law' from 'mother' apart.
 ORDER_MATCH_PREFIX_LENGTH = 7
 
+# The shortest word that matchWordsInOrder() will connect on the strength of being the SAME word,
+#   which is much less than ORDER_MATCH_PREFIX_LENGTH, because an exact match is exact however
+#   short it is: the OET-RV 'put' of Mark 12:1 is the OET-LV 'put¦32436' and nothing else.
+#   Three letters is as short as we dare, because a one or two letter word is nearly always one
+#   of the little English function words ('a', 'of', 'to', 'is') that the translators have
+#   deliberately not numbered, and a wrong word number is much worse than a missing one.
+MIN_EXACT_MATCH_WORD_LENGTH = 3
+
+# The little English words that matchWordsInOrder() must not connect just because they are short
+#   and exactly the same on both sides, because the OET-RV translators have deliberately not
+#   numbered them: an OET-LV 'and¦1234' and an OET-RV 'and' tell us nothing about which of the
+#   'and's of a verse is which, and a wrong word number is much worse than a missing one.
+#   These are the English closed-class words, i.e. the ones that carry the grammar of a sentence
+#   rather than its meaning, sorted and grouped by what they are below.  Content words are not
+#   here, so the short content words do get connected, e.g. the OET-RV 'put' of Mark 12:1.
+#   (The one or two letter members of these classes, e.g. 'a', 'of', 'to', 'is', 'or', don't need to
+#       be here, because they are already shorter than MIN_EXACT_MATCH_WORD_LENGTH.  Longer ones
+#       like 'because' and 'although' are already long enough to match on their own.)
+#   This list is only consulted for the short words that MIN_EXACT_MATCH_WORD_LENGTH lets through,
+#   so it can never take away a word number that the longer-word rules have already given.
+LITTLE_FUNCTION_WORDS = {
+    # determiners
+    'all', 'another', 'any', 'both', 'each', 'either', 'every', 'few', 'her', 'his', 'its', 'least',
+    'less', 'many', 'more', 'most', 'much', 'neither', 'none', 'one', 'ones', 'other', 'others', 'our',
+    'own', 'some', 'such', 'that', 'the', 'their', 'these', 'this', 'those', 'your',
+    # pronouns
+    'anyone', 'hers', 'herself', 'him', 'himself', 'itself', 'mine', 'myself', 'nobody', 'ours',
+    'ourselves', 'she', 'someone', 'them', 'themselves', 'they', 'what', 'whatever', 'which', 'who',
+    'whom', 'whose', 'you', 'yours', 'yourself', 'yourselves',
+    # prepositions
+    'about', 'above', 'across', 'after', 'against', 'along', 'among', 'around', 'atop', 'before',
+    'behind', 'below', 'beside', 'besides', 'between', 'beyond', 'during', 'from', 'into', 'like',
+    'near', 'off', 'onto', 'out', 'over', 'since', 'through', 'till', 'toward', 'towards', 'under',
+    'until', 'unto', 'up', 'upon', 'via', 'with', 'within', 'without',
+    # conjunctions
+    'and', 'but', 'for', 'nor', 'than', 'though', 'unless', 'while', 'yet',
+    # auxiliaries and copulas
+    'are', 'been', 'being', 'can', 'cannot', 'could', 'did', 'does', 'doing', 'had', 'has', 'have',
+    'may', 'might', 'must', 'ought', 'shall', 'should', 'was', 'were', 'will', 'would',
+    # adverbs and particles
+    'again', 'ago', 'already', 'also', 'always', 'away', 'back', 'down', 'else', 'enough', 'even',
+    'ever', 'far', 'here', 'how', 'just', 'never', 'not', 'now', 'often', 'once', 'only', 'quite',
+    'rather', 'still', 'then', 'there', 'thus', 'too', 'very', 'when', 'where', 'why', 'yes',
+    # other little grammar words
+    'let', 'lets', 'well',
+}
+
+def unSimplifyRVWord( rvWord:str ) -> str:
+    """
+    Undo simplifyRVLVWord() as far as addNumberToRVWord() needs, i.e. give back a word that
+        actually appears in the OET-RV text, so it can be found there.
+
+    We take the parts off that the OET-RV word list adds but the live text doesn't have, namely a
+        leading exposed '\add' code and a trailing '\add*' close marker (which only the last word
+        on a line has).  We deliberately keep the original capitalisation, because
+        addNumberToRVWord() searches for the word as the OET-RV spells it, so the OET-RV
+        'Whenever' of Mark 9:18 has to be looked for as 'Whenever' and not as 'whenever'.
+    """
+    if '\\' in rvWord: rvWord = addCloseMarkerAnywhereRegex.sub( '', rvWord )
+    _addCode,rvWord = splitAddCode( rvWord )
+    return rvWord
+# end of unSimplifyRVWord
+
+
+# The OET-RV and the OET-LV sometimes use different English words for the one OET-LV word, so we
+#   let matchWordsInOrder() connect those as well, e.g. the OET-RV 'Whenever' of Mark 6:10 is the
+#   OET-LV 'Wherever¦26350'.  We only put a word here when it really does mean the same thing,
+#   because a synonym match is weaker evidence than the same word.
+#   Each entry is { an OET-RV word: the OET-LV words that it can stand for }, and we also work it
+#   the other way round, so it doesn't matter which side of a pair we list.
+EQUIVALENT_LV_RV_WORDS = { # All lower case, i.e. the simplifyRVLVWord() forms
+    'whenever': { 'wherever' }, # The OET-LV 'wherever' is a temporal 'whenever' in Mark 6:10, 6:56 and 9:18
+}
+EQUIVALENT_LV_RV_WORDS.update( { lvWord:{rvWord} for rvWord,lvWords in EQUIVALENT_LV_RV_WORDS.items() for lvWord in lvWords } )
+
 # The U+21D4 double arrow that the translator puts at the start of an OET-RV verse
 #   whose clauses were translated in the opposite order to the OET-LV verse.
 ORDER_REVERSAL_CHARACTER = '\u21d4'
@@ -2032,20 +2194,22 @@ def scoreRVLVWords( rvWord:str, lvWord:str ) -> Optional[Tuple[str,int]]:
     Score how confidently an OET-RV word and an OET-LV word are the same word.
 
     Returns a (description, score) tuple, or None if they are too different to connect.
-    A wrong word number is much worse than a missing one, so we only score the three
+    A wrong word number is much worse than a missing one, so we only score the four
         unambiguous kinds of match:
-            •  the same word, allowing for a case difference, so RV 'Preparation'
-                matches LV 'preparation'
+            •  the same word, however short it is, allowing for a case difference, so RV
+                'Preparation' matches LV 'preparation' and RV 'put' matches LV 'put'
             •  the same word once its inflectional ending is allowed for, so RV
                 'wineskin' matches LV 'wineskins'
             •  a long shared opening, so RV 'money-changers' matches LV 'moneychangers'
                 and RV 'immerse' matches LV 'immersing'
+            •  one of the EQUIVALENT_LV_RV_WORDS pairs, so RV 'Whenever' matches LV 'wherever'
     We deliberately do NOT score 'mother-in-law' against LV 'mother', or
         'demon-possessed' against LV 'demon', because those are different words.
     """
     r,l = simplifyRVLVWord( rvWord ), simplifyRVLVWord( lvWord )
-    if len(r) < ORDER_MATCH_PREFIX_LENGTH or len(l) < 3: return None
-    if r == l: return ('same word', 100)
+    if r == l and len(r) >= MIN_EXACT_MATCH_WORD_LENGTH: return ('same word', 100)
+    if l in EQUIVALENT_LV_RV_WORDS.get( r, set() ): return ('another word for the same thing', 60)
+    if len(r) < ORDER_MATCH_PREFIX_LENGTH or len(l) < MIN_EXACT_MATCH_WORD_LENGTH: return None
     shorter,longer = (r,l) if len(r) < len(l) else (l,r)
     if shorter == longer[:len(shorter)] and len(shorter) >= ORDER_MATCH_PREFIX_LENGTH \
         and len(longer)-len(shorter) <= 3: # e.g. RV 'wineskin' against LV 'wineskins'
@@ -2107,11 +2271,14 @@ def bestMonotoneAlignmentScore( scoreMatrix:List[List[Optional[Tuple[str,int]]]]
 
 def getUnnumberedRVWords( BBB:str, c:int, v:int ) -> set:
     """
-    Return the set of plain words in the CURRENT OET-RV verse that don't have a word number yet.
+    Return the set of plain words in the CURRENT OET-RV verse that don't have a word number yet,
+        each in the simplified form that the matchers compare in, i.e. the form that
+        simplifyRVLVWord() gives, so that a capitalised, hyphenated or possessive word is still
+        recognised as the same word.
 
     The rvWordList that the matchers get is a snapshot taken at the start of the verse, so a
         matcher that runs after another one can't tell from it what has already been numbered.
-        This reads the live OET-RV lines instead, so we can safely run after the other matchers.
+    This reads the live OET-RV lines instead, so we can safely run after the other matchers.
     """
     havePsalmTitles = bos_books_codes_py.has_psalm_title( BBB, str(c) )
     desiredV = (v-1) if havePsalmTitles and v>1 else v
@@ -2135,7 +2302,8 @@ def getUnnumberedRVWords( BBB:str, c:int, v:int ) -> set:
         if not foundVerse: continue
         for token in rest.split():
             if '¦' in token or token.startswith( '\\' ): continue
-            freeWords.add( stripAddMarkers( token ) ) # stripAddMarkers() removes a leading '\add' code and a trailing '\add*'
+            plainToken = simplifyRVLVWord( stripAddMarkers( token ) ) # stripAddMarkers() removes a leading '\add' code and a trailing '\add*'
+            if plainToken: freeWords.add( plainToken ) # Skip a token that is only punctuation
     return freeWords
 # end of getUnnumberedRVWords
 
@@ -2175,13 +2343,18 @@ def matchWordsInOrder( BBB:str, c:int,v:int, rvVerseText:str, rvWordList:List[st
     if reversedOrder: vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  {BBB} {c}:{v} is an order-reversed verse" )
 
     NT = bos_books_codes_py.is_new_testament_nr( BBB )
-    usedLVNumbers = set() # Skip any OET-LV word number that is used more than once in the verse
-    seenLVNumbers = set()
+    # We skip an OET-LV word that the verse gives the same number to more than once, because such a
+    #   word tells us nothing that its twin doesn't, e.g. LV 'been¦1544, have¦1544'.  We do NOT skip
+    #   a number that two DIFFERENT OET-LV words share, because which of the two a pair belongs to
+    #   is then decided by the word itself: the OET-RV 'put' of Mark 12:1 is the OET-LV 'put¦32436'
+    #   and not the 'around¦32436' that shares its number.
+    lvWordCount = {}
     for lvWordStr in lvWordList:
         lvNumber = getLVWordNumber( lvWordStr )
         if lvNumber is None: continue
-        if lvNumber in seenLVNumbers: usedLVNumbers.add( lvNumber ) # e.g. LV 'been¦1544, have¦1544'
-        seenLVNumbers.add( lvNumber )
+        key = ( lvWordStr.split( '¦' )[0], lvNumber )
+        lvWordCount[key] = lvWordCount.get( key, 0 ) + 1
+    repeatedLVWords = { key for key,count in lvWordCount.items() if count > 1 }
 
     # Build our OET-RV rows.  We only handle plain words that are still unnumbered, and we
     #   skip nomina sacra, because matchIdenticalProperNouns() and addNumberToRVWord() do those.
@@ -2190,9 +2363,13 @@ def matchWordsInOrder( BBB:str, c:int,v:int, rvVerseText:str, rvWordList:List[st
     for ix,rvWordStr in enumerate( rvWordList ):
         if '¦' in rvWordStr: continue # Already has a word number
         plainWord = simplifyRVLVWord( rvWordStr )
-        if len(plainWord) < ORDER_MATCH_PREFIX_LENGTH: continue
+        if len(plainWord) < MIN_EXACT_MATCH_WORD_LENGTH: continue # Too short to match on safely
+        if len(plainWord) < ORDER_MATCH_PREFIX_LENGTH and plainWord in LITTLE_FUNCTION_WORDS:
+            continue # A little English function word, which the OET-RV has deliberately not numbered
         if plainWord not in stillFree: continue # One of the earlier matchers got there first
-        rvRows.append( (ix, plainWord) )
+        # We score the plain (simplified) word, but we have to give addNumberToRVWord() the word
+        #   as the OET-RV really spells it, because that is what it searches the OET-RV text for.
+        rvRows.append( (ix, plainWord, unSimplifyRVWord( rvWordStr ) ) )
     if not rvRows: return 0,0
 
     # Build our OET-LV columns, running them backwards for an order-reversed verse.
@@ -2204,10 +2381,14 @@ def matchWordsInOrder( BBB:str, c:int,v:int, rvVerseText:str, rvWordList:List[st
     for ix in lvIndexList:
         lvWordStr = lvWordList[ix]
         lvNumber = getLVWordNumber( lvWordStr )
-        if lvNumber is None or lvNumber in usedLVNumbers: continue
+        if lvNumber is None: continue
         lvWord = lvWordStr.split( '¦' )[0]
+        if (lvWord,lvNumber) in repeatedLVWords: continue
         for alternative in lvWord.split( '/' ):
-            if not alternative.islower(): continue # Leave proper nouns to matchIdenticalProperNouns()
+            if not alternative.islower() and simplifyRVLVWord( alternative ) not in EQUIVALENT_LV_RV_WORDS:
+                continue # Leave proper nouns to matchIdenticalProperNouns(), unless we have a synonym for this one
+                       #   (e.g. the OET-LV 'Wherever¦26350' of Mark 6:10, which is an ordinary word that just happens
+                       #    to start a sentence, and which we have decided can be the OET-RV 'Whenever')
             if NT and 'N' in state.wordTable['NT'][lvNumber][state.wordTableHeaderList['NT'].index('GlossCaps')]:
                 continue # Leave nomina sacra alone
             lvCols.append( (ix, alternative, lvNumber) )
@@ -2215,7 +2396,7 @@ def matchWordsInOrder( BBB:str, c:int,v:int, rvVerseText:str, rvWordList:List[st
 
     # Score every RV word against every LV word
     scoreMatrix = [ [ None ]*len(lvCols) for _ in rvRows ]
-    for rowIx,(rvIx,rvWord) in enumerate( rvRows ):
+    for rowIx,(rvIx,rvWord,rvSearchWord) in enumerate( rvRows ):
         for colIx,(lvIx,lvWord,lvNumber) in enumerate( lvCols ):
             cell = scoreRVLVWords( rvWord, lvWord )
             if cell: scoreMatrix[rowIx][colIx] = cell
@@ -2225,7 +2406,7 @@ def matchWordsInOrder( BBB:str, c:int,v:int, rvVerseText:str, rvWordList:List[st
 
     numAdded = numNS = 0
     for rowIx,colIx in alignment:
-        rvIx,rvWord = rvRows[rowIx]
+        rvIx,rvWord,rvSearchWord = rvRows[rowIx]
         lvIx,lvWord,lvNumber = lvCols[colIx]
         # Only trust this pair if the best alignment would be WORSE without it
         scoreWithoutPair, _ = bestMonotoneAlignmentScore( scoreMatrix, bannedPair=(rowIx,colIx) )
@@ -2234,7 +2415,7 @@ def matchWordsInOrder( BBB:str, c:int,v:int, rvVerseText:str, rvWordList:List[st
             continue
         why = scoreMatrix[rowIx][colIx][0]
         dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsInOrder() is adding {lvNumber} to RV '{rvWord}' from LV '{lvWord}' ({why}) at {BBB} {c}:{v}" )
-        result = addNumberToRVWord( BBB, c,v, rvWord, lvNumber )
+        result = addNumberToRVWord( BBB, c,v, rvSearchWord, lvNumber )
         if result:
             numAdded += 1
         else:
@@ -3167,9 +3348,13 @@ def getRVWordsAndAddSpans( rvText:str, connectRef:str, codesToExpose:tuple=ADD_C
         then treat the span as being that one word, which is all that the '≈' and '#' codes need.
 
     'keepHyphenatedNames' keeps a hyphenated capitalised name as the single word that it is in the
-        OET-RV, e.g. 'Tiglat-Pileser' in '\\add !(Tiglat-Pileser)\\add*', because we number such a
+        OET-RV, e.g. 'Tiglat-Pileser' in '\add !(Tiglat-Pileser)\add*', because we number such a
         name as one word.  matchNamesViaTraditionalNames() needs that, but nobody else does,
         because everywhere else the parts of a hyphenated word are compared separately.
+    A hyphenated word that is NOT capitalised, e.g. 'empty-handed', is the one word that the OET-RV
+        and the OET-LV both use, so we keep it as one word (see simplifyRVLVWord(), which takes the
+        hyphens out before it compares the two).  A capitalised one is still split into its parts,
+        because there the OET-LV usually glosses the parts as separate words.
     """
     rvAdjText = exposeMatchedAddSpans( rvText, codesToExpose )
     # getCleanText() gives us text whose '\add' spans have lost their markers, but the text
@@ -3201,7 +3386,8 @@ def getRVWordsAndAddSpans( rvText:str, connectRef:str, codesToExpose:tuple=ADD_C
             if len(rvWordBits) == 1 or keepHyphenatedNames: rvNewWords = [ rvToken ] # No hyphen, or a hyphenated name that we keep as one word
             elif rvWordBits[1] and rvWordBits[1][0].isupper(): # Hyphenated and with a capital letter, e.g., Kiriat-Arba (may even have three parts)
                 rvNewWords = rvWordBits
-            else: rvNewWords = [] # Hyphenated but not capitalised, so it isn't a word we match on
+            elif not rvToken[0].isupper(): rvNewWords = [ rvToken ] # Hyphenated but not capitalised, e.g. 'empty-handed', which is one word in the OET-RV and in the OET-LV
+            else: rvNewWords = [] # A capitalised name whose second part is a word of its own, e.g. 'Yahweh-nissi', which we leave to the proper-noun matchers
         else: rvNewWords = [] # An exposed '\add' span that holds no words
         for event,code in spanEvents:
             if event == 'start':
