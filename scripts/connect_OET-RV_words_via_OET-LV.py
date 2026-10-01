@@ -24,7 +24,8 @@ It does have the potential to make wrong connections that will need to be manual
     but hopefully this script is relatively conservative
         so that the number of wrong alignments is not huge.
 
-TODO: This script makes wrong cross-connections betransliterate_Hebrewtween different verses where versification issues apply
+TODO: This script makes wrong cross-connections between different verses where versification issues apply
+        but that will eventually be fixed in BibleOrgSys (not here).
 
 
 CHANGELOG:
@@ -76,8 +77,12 @@ CHANGELOG:
     2026-09-30 Keep a hyphenated word that isn't capitalised as the one word that the OET-RV and the
         OET-LV both use (e.g. 'empty-handed'), while still splitting a capitalised one (e.g. 'Yahweh-nissi')
     2026-09-30 Connect a short word that is exactly the same on both sides (MIN_EXACT_MATCH_WORD_LENGTH
-        = 3, e.g. the OET-RV 'put' of Mark 12:1), but not the little English function words that the
-        translators have deliberately left unnumbered (LITTLE_FUNCTION_WORDS)
+        = 2, e.g. the OET-RV 'put' of Mark 12:1).  This used to be 3, and matchWordsInOrder() also
+        used to skip the little English function words that the translators have deliberately left
+        unnumbered (LITTLE_FUNCTION_WORDS, now kept only on record).  The order-preserving alignment
+        and its every-alignment-agrees test turned out to be selective enough that we can now number
+        the little words too, which connected 62,601 more OET-RV words across the whole Bible
+        (197,116 of 933,964 = 21.1% before, 259,706 = 27.8% after)
     2026-09-30 Connect an OET-RV word to an OET-LV word that means the same thing but is a different
         word (EQUIVALENT_LV_RV_WORDS, e.g. the OET-RV 'Whenever' against the OET-LV 'wherever'), and
         let a capitalised OET-LV word take part when we have such a synonym for it
@@ -875,26 +880,11 @@ state = State()
 
 
 # forList = []
-def _apply_relaxation_flags():
-    try:
-        args = BibleOrgSysGlobals.commandLineArguments
-        if getattr(args, 'relaxShortWords', False):
-            globals()['MIN_EXACT_MATCH_WORD_LENGTH'] = 2
-            globals()['LITTLE_FUNCTION_WORDS'] = set()
-            return
-        if getattr(args, 'relaxShortOnly', False):
-            globals()['MIN_EXACT_MATCH_WORD_LENGTH'] = 2
-        if getattr(args, 'includeLittleFunctionWords', False):
-            globals()['LITTLE_FUNCTION_WORDS'] = set()
-    except Exception:
-        pass
-
 def main():
     """
     Main program to handle command line parameters and then run what they want.
     """
     BibleOrgSysGlobals.introduceProgram( __name__, PROGRAM_NAME_VERSION, LAST_MODIFIED_DATE )
-    _apply_relaxation_flags()
 
     # global genericBookList
     # genericBibleOrganisationalSystem = BibleOrganisationalSystem( 'GENERIC-KJV-ENG' )
@@ -1506,12 +1496,32 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
                 logging.critical( f"connect_OET_RV: no verses found for OET-LV {BBB} {C}" )
                 continue
             havePsalmTitles = bos_books_codes_py.has_psalm_title( BBB, C )
+            rvNumVerses = rv.getNumVerses( BBB, c ) # the OET-RV follows the original-language versification
             for v in range( 1, numVerses+1 ): # Note: some Psalms have an extra verse in OET-LV (because /d is v1)
                 V = str(v)
+                rvV = str(v-1) if havePsalmTitles and v>1 else V
                 try:
-                    rvVerseEntryList, _rvCcontextList = rv.getContextVerseData( (BBB, C, str(v-1) if havePsalmTitles and v>1 else V) )
+                    rvVerseEntryList, _rvCcontextList = rv.getContextVerseData( (BBB, C, rvV) )
                 except KeyError:
-                    logging.critical( f"Seems we have no OET-RV {BBB} {c}:{v} -- versification issue?" )
+                    # Most of these are NOT a problem, so don't cry wolf about them.  The OET-LV uses
+                    #   English versification, which sometimes gives a chapter one or more verses at
+                    #   the end that the original language doesn't have, and the OET-RV follows the
+                    #   original.  So the OET-RV chapter simply runs out before the OET-LV one, and
+                    #   there is no OET-RV text for those verses to be connected to: skipping them is
+                    #   the correct thing to do.  We measured all 139 such verses across the whole
+                    #   Bible and every one of them is a contiguous run at the END of its chapter,
+                    #   i.e. plain truncation, with no interior gap anywhere that would suggest a
+                    #   verse has been misplaced and could be causing a wrong cross-connection.
+                    if rvNumVerses and int(rvV) > rvNumVerses:
+                        logging.info( f"OET-RV {BBB} {c} ends at verse {rvNumVerses}, "
+                                      f"but OET-LV has {numVerses}, so skipping OET-LV {c}:{v} "
+                                      f"(English versification has more verses in this chapter)" )
+                    else:
+                        # A verse missing from the MIDDLE of the chapter, or a chapter that the OET-RV
+                        #   doesn't have at all, is a real difference that somebody should look at.
+                        logging.critical( f"Seems we have no OET-RV {BBB} {c}:{v} -- versification issue? "
+                                          f"(the OET-RV verse we wanted is {rvV}, and this OET-RV chapter "
+                                          f"has {rvNumVerses if rvNumVerses else 'no'} verse(s))" )
                     continue
                 # OET-RV has /d and v1 all inside v1, but we need to separate them out to match OET-LV correctly
                 if havePsalmTitles and v in (1,2):
@@ -2183,10 +2193,11 @@ ORDER_MATCH_PREFIX_LENGTH = 7
 # The shortest word that matchWordsInOrder() will connect on the strength of being the SAME word,
 #   which is much less than ORDER_MATCH_PREFIX_LENGTH, because an exact match is exact however
 #   short it is: the OET-RV 'put' of Mark 12:1 is the OET-LV 'put¦32436' and nothing else.
-#   Three letters is as short as we dare, because a one or two letter word is nearly always one
-#   of the little English function words ('a', 'of', 'to', 'is') that the translators have
-#   deliberately not numbered, and a wrong word number is much worse than a missing one.
-MIN_EXACT_MATCH_WORD_LENGTH = 3
+#   Two letters, because matchWordsInOrder() only connects a word when every equally good
+#   order-preserving alignment agrees on it (see bestMonotoneAlignmentScore()), and even the
+#   one and two letter words come out safely on a full-corpus run: the RV 'the' of CO1 1:9 is the
+#   LV 'the¦113151' and not any of the other 'the's of the verse.
+MIN_EXACT_MATCH_WORD_LENGTH = 2
 
 # The little English words that matchWordsInOrder() must not connect just because they are short
 #   and exactly the same on both sides, because the OET-RV translators have deliberately not
@@ -2200,6 +2211,11 @@ MIN_EXACT_MATCH_WORD_LENGTH = 3
 #       like 'because' and 'although' are already long enough to match on their own.)
 #   This list is only consulted for the short words that MIN_EXACT_MATCH_WORD_LENGTH lets through,
 #   so it can never take away a word number that the longer-word rules have already given.
+#   It is now EMPTY, i.e. we no longer hold these words back.  matchWordsInOrder() only numbers a
+#   word when every equally good order-preserving alignment agrees on it, and that proved strong
+#   enough to number the little words safely across the whole Bible, so this list only remains as a
+#   record of the words that were being held back, and of why we used to do that.  Put a word back
+#   in here to hold that one word back again.
 LITTLE_FUNCTION_WORDS = {
     # determiners
     'all', 'another', 'any', 'both', 'each', 'either', 'every', 'few', 'her', 'his', 'its', 'least',
@@ -2226,6 +2242,10 @@ LITTLE_FUNCTION_WORDS = {
     # other little grammar words
     'let', 'lets', 'well',
 }
+# We keep the words above on record, but we don't hold any of them back, so matchWordsInOrder()
+#   is free to number them.  This is what makes them a record only.
+LITTLE_FUNCTION_WORDS_HELD_BACK = LITTLE_FUNCTION_WORDS
+LITTLE_FUNCTION_WORDS = set()
 
 def unSimplifyRVWord( rvWord:str ) -> str:
     """
@@ -4068,12 +4088,6 @@ if __name__ == '__main__':
     # Configure basic Bible Organisational System (BOS) set-up
     parser = BibleOrgSysGlobals.setup( PROGRAM_NAME, PROGRAM_VERSION )
     parser.add_argument("-f", "--fast", action="store_true", dest="fastMode", default=False, help="only work on unfinished books")
-    parser.add_argument("--relax-short-words", action="store_true", dest="relaxShortWords", default=False,
-                        help="allow MIN_EXACT_MATCH_WORD_LENGTH=2 and don't skip short function words in order matching")
-    parser.add_argument("--relax-short-only", action="store_true", dest="relaxShortOnly", default=False,
-                        help="set MIN_EXACT_MATCH_WORD_LENGTH=2 only")
-    parser.add_argument("--include-little-function-words", action="store_true", dest="includeLittleFunctionWords", default=False,
-                        help="do not skip LITTLE_FUNCTION_WORDS in order matching")
     BibleOrgSysGlobals.addStandardOptionsAndProcess( parser, exportAvailable=False )
 
     main()
