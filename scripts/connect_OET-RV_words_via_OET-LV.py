@@ -442,14 +442,15 @@ SIMPLE_VERB_SETS = ( ('abandoned','abandoning','abandons','abandon'),
                 ('taught','teaching','teaches','teach'), ('tore','tearing','tears','tear','torn'),
                 ('told','telling','tells','tell'), ('throve','thriving','thrives','thrive','thriven'),
                 ('trod','treading','treads','tread','trodden'),
+                ('understood','understanding','understands','understand'),
                 ('woke','waking','wakes','wake','woken'), ('wove','weaving','weaves','weave','woven'),
                 ('wept','weeping','weeps','weep'), ('won','winning','wins','win'),
                 ('wound','winding','winds','wind'), ('wrung','wringing','wrings','wring'),
                 )
 simpleVerbs = tuple(verb for verbSet in SIMPLE_VERB_SETS for verb in verbSet)
 assert len(set(simpleVerbs)) == len(simpleVerbs), [x for x in simpleVerbs if simpleVerbs.count(x)>1 ] # Check for accidental duplicates
-for simpleVerb in simpleVerbs:
-    assert len(simpleVerb) <= 12, f"({len(simpleVerb)}) {simpleVerb}" # 'distributing'
+for simpleVerb in simpleVerbs: # Just a safety check in case we miss a comma and python concatenates consecutive words
+    assert len(simpleVerb) <= 11 or simpleVerb in ('distributing','slaughtering','understanding'), f"({len(simpleVerb)}) {simpleVerb}"
 
 simpleAdverbs = ('quickly', 'immediately', 'loudly', 'suddenly',)
 assert len(set(simpleAdverbs)) == len(simpleAdverbs) # Check for accidental duplicates
@@ -668,7 +669,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('laid','spread'),
     ('lake','sea'),
     ('large','great'),
-    ('languages','tongues'),
+    ('language','tongue'),('languages','tongues'),
     ('left','came out'),('left','set out'),
     ('listen','give ear'),('listen','hear'),
     ('Listen','Behold'),('listen','Behold'),('Listen','behold'),('listen','behold'),
@@ -874,11 +875,26 @@ state = State()
 
 
 # forList = []
+def _apply_relaxation_flags():
+    try:
+        args = BibleOrgSysGlobals.commandLineArguments
+        if getattr(args, 'relaxShortWords', False):
+            globals()['MIN_EXACT_MATCH_WORD_LENGTH'] = 2
+            globals()['LITTLE_FUNCTION_WORDS'] = set()
+            return
+        if getattr(args, 'relaxShortOnly', False):
+            globals()['MIN_EXACT_MATCH_WORD_LENGTH'] = 2
+        if getattr(args, 'includeLittleFunctionWords', False):
+            globals()['LITTLE_FUNCTION_WORDS'] = set()
+    except Exception:
+        pass
+
 def main():
     """
     Main program to handle command line parameters and then run what they want.
     """
     BibleOrgSysGlobals.introduceProgram( __name__, PROGRAM_NAME_VERSION, LAST_MODIFIED_DATE )
+    _apply_relaxation_flags()
 
     # global genericBookList
     # genericBibleOrganisationalSystem = BibleOrganisationalSystem( 'GENERIC-KJV-ENG' )
@@ -2368,7 +2384,9 @@ def getUnnumberedRVWords( BBB:str, c:int, v:int ) -> set:
             V = int( Vstr.split('-',1)[0] )
             foundVerse = C==c and V==desiredV
         elif foundChapter and marker == '\\d':
-            foundVerse = C==c and desiredV==1
+            # Only a '\d' line before the '\v' of verse 1 belongs to verse 1 (see the long
+            #   explanation in addNumberToRVWord()); the '\d' line at the end of HAB is not.
+            foundVerse = C==c and desiredV==1 and V is None
         if not foundVerse: continue
         for token in rest.split():
             if '¦' in token or token.startswith( '\\' ): continue
@@ -3399,7 +3417,7 @@ specialAddSpanRegex = re.compile(
 #           connected by matchNamesViaTraditionalNames() instead
 #     '^' is the opposite of the OET-LV, and '?' means the translator is not even sure
 #           about the code
-ADD_CODES_TO_EXPOSE = ( '≈', '#', '@', '*', '%', '&', '≡' )
+ADD_CODES_TO_EXPOSE = ( '≈', '#', '@', '*', '%', '&', '≡', '<', '>' )
 addCloseMarkerRegex = re.compile( r'\\(?:\+)?add\*$' ) # The '\add*' or '\+add*' that closes a span
 addCloseMarkerAnywhereRegex = re.compile( r'\\(?:\+)?add\*' ) # The same, but punctuation can follow it
 addMarkerRegex = re.compile( r'\\(?:\+)?add\*?' ) # The '\add' or '\+add' and the '\add*' or '\+add*'
@@ -3482,7 +3500,9 @@ def getLiveRVVerseText( BBB:str, c:int, v:int ) -> str:
             V = int( Vstr.split('-',1)[0] )
             foundVerse = C==c and V==desiredV
         elif foundChapter and marker == '\\d':
-            foundVerse = C==c and desiredV==1
+            # Only a '\d' line before the '\v' of verse 1 belongs to verse 1 (see the long
+            #   explanation in addNumberToRVWord()); the '\d' line at the end of HAB is not.
+            foundVerse = C==c and desiredV==1 and V is None
         if not foundVerse: continue
         verseText = f"{verseText}{' ' if verseText else ''}{rest}"
     return verseText.strip()
@@ -3622,6 +3642,26 @@ def isInsideStraightAddSpan( line:str, index:int ) -> bool:
     return any( match.start() < index < match.end()
                 for match in straightAddSpanRegex.finditer( line ) )
 # end of isInsideStraightAddSpan
+
+
+ndStartMarkerRegex = re.compile( r'\\\+?nd ' ) # A nomina sacra open marker, e.g. '\nd ' or '\+nd '
+ndEndMarkerRegex = re.compile( r'\\\+?nd\*' ) # A nomina sacra close marker, e.g. '\nd*' or '\+nd*'
+
+def isInsideNominaSacraSpan( line:str, index:int ) -> bool:
+    """
+    Return True if the character at 'index' in 'line' is inside a nomina sacra
+        '\\nd ...\\nd*' span that has already been opened before 'index'.
+
+    We count the open and the close markers that come before 'index' rather than matching
+        '\\nd ...\\nd*' spans with a single regex, because we cannot pair the markers up with a
+        regex once they are nested, and nesting them is exactly the fault that this function
+        exists to detect: an earlier run could insert a '\\nd ...\\nd*' span around a word that
+        was already the first word of one, giving 'son¦113159 \\nd \\nd Yeshua¦113161\\nd*'.
+    """
+    numOpens = len( ndStartMarkerRegex.findall( line[:index] ))
+    numCloses = len( ndEndMarkerRegex.findall( line[:index] ))
+    return numOpens > numCloses
+# end of isInsideNominaSacraSpan
 
 
 def removeWordNumbersInStraightAddSpans( filename:str, lines:List[str] ) -> int:
@@ -3846,7 +3886,14 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
         elif foundChapter and marker == '\\d':
             dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"addNumberToRVWord D searching {BBB} {C}:{V} {marker}='{rest}'")
             assert havePsalmTitles or BBB=='HAB', f"addNumberToRVWord( {BBB} {c}:{v} {word=} {havePsalmTitles=} {marker=} {rest=}"
-            foundVerse = C==c and desiredV==1
+            # A '\d' line is only the title of verse 1 if it comes BEFORE the '\v' of verse 1, which
+            #   is where the Psalm titles sit.  We must check V is still None, because a '\d' line
+            #   anywhere else in the chapter is not part of verse 1 at all.  HAB is the case in
+            #   point: its single '\d' line (the musical direction for the book) sits AFTER 3:19, so
+            #   without this check we claimed it for HAB 3:1 and numbered a word in it with a word
+            #   number from 3:1, because 3:1 happens to have more than one 'the' for us to choose
+            #   between, so we carried on looking and found a line with exactly one.
+            foundVerse = C==c and desiredV==1 and V is None
         if foundVerse:
             allWordMatches = [match for match in re.finditer( f'\\b{word}\\b', line )] # Matches of the word standing alone
             if len(allWordMatches) == 1:
@@ -3871,7 +3918,8 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
                     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Have NS on {word=} {line[match.start()-6:match.start()]=} {line[match.end():match.end()+6]=} {line=}" )
                     if (match.end()==len(line) or not line[match.end()]=='¦') \
                     and not line[match.end():match.end()+4] == '\\nd*' \
-                    and not line[match.end():match.end()+5] == '\\+nd*':
+                    and not line[match.end():match.end()+5] == '\\+nd*' \
+                    and not isInsideNominaSacraSpan( line, match.start() ):
                         addNominaSacra = True
                         if word in ('Messiah','Yeshua','God'):
                             dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Adding NS on {word=} {line[match.start()-6:match.start()]=} {line[match.end():match.end()+6]=} {line=}" )
@@ -3961,7 +4009,9 @@ def addNumberToRVPhrase( BBB:str, c:int,v:int, rvPhraseWords:List[str], lvNumber
             except ValueError: V = int(Vstr.split('-',1)[0]) # It can be a range like 21-22
             foundVerse = C==c and V==desiredV
         elif foundChapter and marker == '\\d':
-            foundVerse = C==c and desiredV==1
+            # Only a '\d' line before the '\v' of verse 1 belongs to verse 1 (see the long
+            #   explanation in addNumberToRVWord()); the '\d' line at the end of HAB is not.
+            foundVerse = C==c and desiredV==1 and V is None
         if not foundVerse: continue
         # Blank out the notes, the cross-references and the links, because the translator's
         #   notes often quote the OET-RV text, but keep the length the same so that the
@@ -4018,6 +4068,12 @@ if __name__ == '__main__':
     # Configure basic Bible Organisational System (BOS) set-up
     parser = BibleOrgSysGlobals.setup( PROGRAM_NAME, PROGRAM_VERSION )
     parser.add_argument("-f", "--fast", action="store_true", dest="fastMode", default=False, help="only work on unfinished books")
+    parser.add_argument("--relax-short-words", action="store_true", dest="relaxShortWords", default=False,
+                        help="allow MIN_EXACT_MATCH_WORD_LENGTH=2 and don't skip short function words in order matching")
+    parser.add_argument("--relax-short-only", action="store_true", dest="relaxShortOnly", default=False,
+                        help="set MIN_EXACT_MATCH_WORD_LENGTH=2 only")
+    parser.add_argument("--include-little-function-words", action="store_true", dest="includeLittleFunctionWords", default=False,
+                        help="do not skip LITTLE_FUNCTION_WORDS in order matching")
     BibleOrgSysGlobals.addStandardOptionsAndProcess( parser, exportAvailable=False )
 
     main()
