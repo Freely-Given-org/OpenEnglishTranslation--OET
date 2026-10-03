@@ -103,6 +103,18 @@ CHANGELOG:
         unnumbered text of the verse, and refuses a phrase whose words already carry a different word
         number, so that a half-connected phrase (e.g. Mark 8:2 'have you all got') is finished off
         with the number that is already there
+    2026-10-04 Names in the OET-RV now match via a normalised name index (normalizeNameKey +
+        splitNameKey + namePartsIndex built by loadHebGrkNameTables(), and baseNameInCandidates())
+        which strips diacritics/macrons/superscripts and splits 'Yəhūdāh/(Judah)' into parts,
+        so e.g. the OET-RV 'Yeshua' can match the OET-LV 'Yaʸsous/(Yəhōshūˊa)'.  Also:
+        - treat two-column rows of OET-RV_names_table.tsv as candidates as well (not just the 'Y' rows),
+          and feed them into rvNameCandidates so that the name command tables can use them
+        - treat 'YHWH' in the OET-LV as the OET-RV 'Yahweh'/'LORD' (explicitly added in
+          loadHebGrkNameTables())
+        - let matchIdenticalProperNouns() connect identical capitalised words in equal lists
+        - let matchWordsInOrder() also match words that differ by an inflectional ending of
+          up to three letters beyond the five-letter prefix (e.g. RV 'master' with LV 'masters')
+        - greatly extended the contraction map in RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -111,6 +123,7 @@ from collections import defaultdict
 import logging
 import re
 import multiprocessing
+import unicodedata
 
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
@@ -120,7 +133,7 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-10-02' # by RJH
+LAST_MODIFIED_DATE = '2026-10-04' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '1.0.0'
@@ -663,6 +676,27 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ("aren't",'not'),("can't",'not'),("didn't",'not'),("Don't",'not'),("don't",'not'),("isn't",'not'),("shouldn't",'not'),("won't",'not'),
     ("I'll", 'I will'),("I've", 'I have'),
     ("you're", 'you are'),("you've", 'you have'),
+    ("didn't", 'did not'),("don't", 'do not'),("doesn't", 'does not'),("isn't", 'is not'),
+    ("wasn't", 'was not'),("weren't", 'were not'),("haven't", 'have not'),("hasn't", 'has not'),
+    ("hadn't", 'had not'),("wouldn't", 'would not'),("couldn't", 'could not'),("mustn't", 'must not'),
+    ("shouldn't", 'should not'),("can't", 'can not'),("won't", 'will not'),
+    ("He's", 'He is'),("he's", 'he is'),("She's", 'She is'),("she's", 'she is'),
+    ("It's", 'It is'),("it's", 'it is'),("That's", 'That is'),("that's", 'that is'),
+    ("There's", 'There is'),("there's", 'there is'),("There’s", 'There is'),
+    ("You're", 'You are'),("We're", 'We are'),("we're", 'we are'),
+    ("They're", 'They are'),("they're", 'they are'),
+    ("I'm", 'I am'),("you're", 'you are'),("We're", 'We are'),
+    ("He'll", 'He will'),("he'll", 'he will'),("She'll", 'She will'),("she'll", 'she will'),
+    ("They'll", 'They will'),("they'll", 'they will'),("You'll", 'You will'),("you'll", 'you will'),
+    ("It'll", 'It will'),("it'll", 'it will'),("We'll", 'We will'),("we'll", 'we will'),
+    ("They've", 'They have'),("they've", 'they have'),("We've", 'We have'),("we've", 'we have'),
+    ("He'd", 'He would'),("he'd", 'he would'),("They'd", 'They would'),("they'd", 'they would'),
+    ("I'd", 'I would'),("you'd", 'you would'),("You'd", 'You would'),("We'd", 'We would'),("we'd", 'we would'),
+    ("Let's", 'Let us'),("What's", 'What is'),("what's", 'what is'),
+    ("Who's", 'Who is'),("who's", 'who is'),("Here's", 'Here is'),("here's", 'here is'),
+    ("Where's", 'Where is'),("where's", 'where is'),("When's", 'When is'),("when's", 'when is'),
+    ("Why's", 'Why is'),("why's", 'why is'),
+    ("He'd", 'He had'),("They'd", 'They had'),("God's", 'of god'),("God’s", 'of god'),
 
     # Other word number changes
     ('demons', 'unclean spirits'),('demon', 'unclean spirit'),
@@ -1121,6 +1155,7 @@ def loadOETRVNameTable() -> None:
     """
     vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading decided OET-RV names from {OET_RV_NAMES_TABLE_FILEPATH}…" )
     state.rvNameTable = defaultdict( set ) # traditionalName -> set of accepted OET-RV spellings
+    state.rvNameCandidates = defaultdict( set ) # traditionalName -> set of ALL known OET-RV spellings (decided or not)
     with open( OET_RV_NAMES_TABLE_FILEPATH, 'rt', encoding='utf-8' ) as namesTableFile:
         tsvLines = namesTableFile.read().rstrip().split( '\n' )
     if tsvLines[0].startswith( '\ufeff' ): tsvLines[0] = tsvLines[0][1:] # Remove any BOM
@@ -1128,11 +1163,13 @@ def loadOETRVNameTable() -> None:
 
     for line in tsvLines[1:]:
         fields = line.split( '\t' )
-        if len(fields) < 3: continue # Some editors delete trailing columns
-        traditionalName, rvName, explained = fields[0].strip(), fields[1].strip(), fields[2].strip()
+        if len(fields) < 2: continue # Some editors delete trailing columns
+        traditionalName, rvName = fields[0].strip(), fields[1].strip()
+        explained = fields[2].strip() if len(fields) >= 3 else ''
         if not traditionalName or not rvName: continue
-        if explained.upper() != 'Y': continue # Only the translator's decisions (not just candidates)
         # The OET-RV uses straight apostrophes inside names, but the table uses curly ones, e.g., 'Sha’ul'
+        state.rvNameCandidates[traditionalName.replace( '’', "'" )].add( rvName.replace( '’', "'" ) )
+        if explained.upper() != 'Y': continue # Only the translator's decisions (not just candidates)
         state.rvNameTable[traditionalName.replace( '’', "'" )].add( rvName.replace( '’', "'" ) )
     state.rvNameTableInverse = defaultdict( set ) # OET-RV spelling -> set of traditional names for it
     for traditionalName,rvNames in state.rvNameTable.items():
@@ -1277,7 +1314,7 @@ def loadHebGrkNameTables():
                 searchText = cleanNameTableField( searchText ) # Take off any OET-LV word number marker, e.g. 'Chaldeans¦'
                 traditionalName = searchText # Save this before we mangle it below
                 if searchText.startswith( 'J' ): searchText = f'Y{searchText[1:]}' # Replace first letter J with Y
-                rvNameChoices = state.rvNameTable.get( traditionalName, set() ) # What we actually call it in the OET-RV
+                rvNameChoices = state.rvNameTable.get( traditionalName, set() ) | state.rvNameCandidates.get( traditionalName, set() ) # What we actually call it in the OET-RV
 
                 # newReplaceText = transliterate_Hebrew( replaceText, capitaliseHebrew=searchText[0].isupper() )
                 # if newReplaceText != replaceText:
@@ -1369,7 +1406,7 @@ def loadHebGrkNameTables():
                 searchText = cleanNameTableField( searchText ) # Take off any OET-LV word number marker
                 traditionalName = searchText # Save this before we mangle it below
                 if searchText.startswith( 'J' ): searchText = f'Y{searchText[1:]}' # Replace first letter J with Y
-                rvNameChoices = state.rvNameTable.get( traditionalName, set() ) # What we actually call it in the OET-RV
+                rvNameChoices = state.rvNameTable.get( traditionalName, set() ) | state.rvNameCandidates.get( traditionalName, set() ) # What we actually call it in the OET-RV
                 newReplaceText = transliterate_Greek( transliterate_Hebrew( replaceText, capitalise_hebrew=searchText[0].isupper() ) )
                 if newReplaceText != replaceText:
                     # print(f" Converted Hebrew/Greek '{replaceText}' to '{newReplaceText}'")
@@ -1412,7 +1449,7 @@ def loadHebGrkNameTables():
                 searchText = cleanNameTableField( searchText ) # Take off any OET-LV word number marker, e.g. 'Pharisees¦'
                 traditionalName = searchText # Save this before we mangle it below
                 if searchText.startswith( 'J' ): searchText = f'Y{searchText[1:]}' # Replace first letter J with Y
-                rvNameChoices = state.rvNameTable.get( traditionalName, set() ) # What we actually call it in the OET-RV
+                rvNameChoices = state.rvNameTable.get( traditionalName, set() ) | state.rvNameCandidates.get( traditionalName, set() ) # What we actually call it in the OET-RV
                 newReplaceText = transliterate_Greek( replaceText )
                 if newReplaceText != replaceText:
                     # print(f" Converted Greek '{replaceText}' to '{newReplaceText}'")
@@ -1429,7 +1466,40 @@ def loadHebGrkNameTables():
                 state.nameTables['NT'][replaceText].add( searchText )
                 addPlainNameKeys( 'NT', replaceText, searchText, rvNameChoices )
     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded {len(state.nameTables['NT']):,} NT names." )
+
+    # Add the divine-name forms that the LV uses directly (not produced by a Hebrew transliteration)
+    state.nameTables['OT']['YHWH'].update( { 'Yahweh', 'LORD', 'Lord' } )
+    # A normalised, flattened index of every name spelling known to the command tables,
+    #   so that we can match an OET-LV capitalised word whose transliteration doesn't match
+    #   any table key exactly (accents on/off, macrons, superscripts, slash alternatives, etc.)
+    state.namePartsIndex = defaultdict( set )
+    for nameTable in state.nameTables.values():
+        for tableKey,rvNameCandidates in nameTable.items():
+            for part in splitNameKey( tableKey ):
+                normalised = normalizeNameKey( part )
+                if normalised:
+                    state.namePartsIndex[normalised].update( rvNameCandidates )
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Built a normalised name index of {len(state.namePartsIndex):,} entries." )
 # end of connect_OET-RV_words_via_OET-LV.loadHebGrkNameTables
+
+
+_NAME_KEY_SEPARATORS = re.compile( r'[/()\[\]{}\\+_]' )
+_NAME_KEY_STRIP_CHARS = " ˊ'‘’`ʹʼ¨¯´˸ـ-"
+
+def splitNameKey( name:str ) -> List[str]:
+    """Split a name key into its alternatives, e.g. 'Dawid/(Dāvid)' -> ['Dawid', 'Dāvid']."""
+    return [ part for part in _NAME_KEY_SEPARATORS.split( name ) if part.strip() ]
+# end of splitNameKey
+
+
+def normalizeNameKey( name:str ) -> str:
+    """Reduce a name to a lowercase ASCII form with no diacritics or accessorisation,
+        so that e.g. 'Yəhōyāqīm' and 'YEHOIAKIM' and 'Yəhōyākīm' all look alike."""
+    name = unicodedata.normalize( 'NFKD', name )
+    name = ''.join( ch for ch in name if unicodedata.category( ch ) != 'Mn' )
+    for ch in _NAME_KEY_STRIP_CHARS: name = name.replace( ch, '' )
+    return name.lower().strip( '.,;:!?"“”‘’-' )
+# end of normalizeNameKey
 
 
 illegalWordLinkRegex1 = re.compile( '[0-9]¦' ) # Has digits BEFORE the broken pipe
@@ -2032,20 +2102,28 @@ def matchIdenticalProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[
                 result = addNumberToRVWord( BBB, c,v, rvCapitalisedWordList[0], wordNumber )
                 if result:
                     numAdded += 1
-    elif len(rvCapitalisedWordList) == len(lvCapitalisedWordList):
-        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchIdenticalProperNouns() lists are equal size ({len(rvCapitalisedWordList)})" )
-        return numAdded,numNS
-        # for capitalisedNounPair in capitalisedNounPair:
-        #     assert '¦' in capitalisedNounPair, f"{capitalisedNounPair=} from {capitalisedNounPair=}"
-        #     capitalisedNoun,wordNumber,wordRow = getLVWordRow( capitalisedNounPair )
-        #     dPrint( 'Info', f"'{capitalisedNoun}' {wordRow}" )
-        #     assert False, "We want to stop here"
     else:
-        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchIdenticalProperNouns() lists are different sizes {len(rvCapitalisedWordList)=} and {len(lvCapitalisedWordList)=}" )
-        # for capitalisedNounPair in lvCapitalisedWordList:
-        #     capitalisedNoun,wordNumber,wordRow = getLVWordRow( capitalisedNounPair )
-        #     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"'{capitalisedNoun}' {wordRow}" )
-        #     assert False, "We want to stop here"
+        # Try to connect identical spellings between the two lists one by one (regardless of order)
+        for rvCapitalisedWord in rvCapitalisedWordList[:]:
+            for lvCapitalisedWord in lvCapitalisedWordList[:]:
+                assert '¦' in lvCapitalisedWord, f"{lvCapitalisedWordList=}"
+                lvNoun = lvCapitalisedWord.split( '¦' )[0]
+                if simplifyRVLVWord( lvNoun ) == simplifyRVLVWord( rvCapitalisedWord ):
+                    capitalisedNoun,wordNumber,wordRow = getLVWordRow( lvCapitalisedWord, 'NT' if NT else 'OT' )
+                    proceed = False
+                    if NT:
+                        if wordRow[state.wordTableHeaderList['NT'].index('Role')] == 'N': proceed = True
+                    else:
+                        if wordRow[state.wordTableHeaderList['OT'].index('GlossCapitalisation')] != 'S': proceed = True
+                    if proceed:
+                        result = addNumberToRVWord( BBB, c,v, rvCapitalisedWord, wordNumber )
+                        if result:
+                            numAdded += 1
+                            if NT and 'N' in wordRow[state.wordTableHeaderList['NT'].index('GlossCaps')]:
+                                numNS += 1
+                            rvCapitalisedWordList.remove( rvCapitalisedWord )
+                            lvCapitalisedWordList.remove( lvCapitalisedWord )
+                    break
     return numAdded,numNS
 # end of connect_OET-RV_words_via_OET-LV.matchIdenticalProperNouns
 
@@ -2096,66 +2174,46 @@ def matchAdjustedProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[s
                 wordRole = wordRow[state.wordTableHeaderList['NT'].index('Role')]
                 dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  matchAdjustedProperNouns NT '{capitalisedNoun}' {wordRole}" )
                 if wordRole == 'N': # let's assume it's a proper noun
-                    if capitalisedNoun in state.nameTables['NT']:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {BBB} {c}:{v} {capitalisedNoun=} {state.nameTables['NT'][capitalisedNoun]=}")
-                        for something in state.nameTables['NT'][capitalisedNoun]:
-                            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    {capitalisedNoun=} {something=} from {state.nameTables['NT'][capitalisedNoun]=}")
-                            if something == rvCapitalisedWord:
-                                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchAdjustedProperNouns {BBB} {c}:{v} adding number to NT {rvCapitalisedWord}")
-                                result = addNumberToRVWord( BBB, c,v, rvCapitalisedWord, wordNumber )
-                                if result:
-                                    numAdded += 1
-                                if 'N' in wordRow[state.wordTableHeaderList['NT'].index('GlossCaps')]:
-                                    numNS += 1
-                                break
-                    elif capitalisedNoun in state.nameTables['NT_OT']:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {BBB} {c}:{v} {capitalisedNoun=} {state.nameTables['NT_OT'][capitalisedNoun]=}")
-                        for something in state.nameTables['NT_OT'][capitalisedNoun]:
-                            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    {capitalisedNoun=} {something=} from {state.nameTables['NT_OT'][capitalisedNoun]=}")
-                            if something == rvCapitalisedWord:
-                                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchAdjustedProperNouns {BBB} {c}:{v} adding number to NT {rvCapitalisedWord}")
-                                result = addNumberToRVWord( BBB, c,v, rvCapitalisedWord, wordNumber )
-                                if result:
-                                    numAdded += 1
-                                if 'N' in wordRow[state.wordTableHeaderList['NT'].index('GlossCaps')]:
-                                    numNS += 1
-                                break
+                    if baseNameInCandidates( capitalisedNoun, rvCapitalisedWord, 'NT' ) or baseNameInCandidates( capitalisedNoun, rvCapitalisedWord, 'NT_OT' ):
+                        result = addNumberToRVWord( BBB, c,v, rvCapitalisedWord, wordNumber )
+                        if result:
+                            numAdded += 1
+                        if 'N' in wordRow[state.wordTableHeaderList['NT'].index('GlossCaps')]:
+                            numNS += 1
             else: # OT
                 glossCaps = wordRow[state.wordTableHeaderList['OT'].index('GlossCapitalisation')]
                 dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  matchAdjustedProperNouns OT {capitalisedNoun=} {glossCaps=}" )
                 if glossCaps != 'S': # start of sentence
-                    if capitalisedNoun in state.nameTables['OT']:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {BBB} {c}:{v} {capitalisedNoun=} {state.nameTables['OT'][capitalisedNoun]=}")
-                        for something in state.nameTables['OT'][capitalisedNoun]:
-                            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    {capitalisedNoun=} {something=} from {state.nameTables['OT'][capitalisedNoun]=}")
-                            if something == rvCapitalisedWord:
-                                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchAdjustedProperNouns {BBB} {c}:{v} adding number to OT {rvCapitalisedWord}")
-                                result = addNumberToRVWord( BBB, c,v, rvCapitalisedWord, wordNumber )
-                                if result:
-                                    numAdded += 1
-                                break
-                            elif f"{something}'s" == rvCapitalisedWord:
-                                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchAdjustedProperNouns {BBB} {c}:{v} adding number to possessive OT {rvCapitalisedWord}")
-                                result = addNumberToRVWord( BBB, c,v, rvCapitalisedWord, wordNumber )
-                                if result:
-                                    numAdded += 1
-                                break
-                    # elif rvCapitalisedWord.endswith( "'s" ) and capitalisedNoun[:-2] in state.nameTables['OT']:
-                    #     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {BBB} {c}:{v} {capitalisedNoun=} {state.nameTables['OT'][capitalisedNoun[:-2]]=}")
-                    #     for something in state.nameTables['OT'][capitalisedNoun[:-2]]:
-                    #         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    {capitalisedNoun=} {something=} from {state.nameTables['OT'][capitalisedNoun[:-2]]=}")
-                    #         if f"{something}'s" == rvCapitalisedWord:
-                    #             dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchAdjustedProperNouns {BBB} {c}:{v} adding number to OT {rvCapitalisedWord}")
-                    #             result = addNumberToRVWord( BBB, c,v, rvCapitalisedWord, wordNumber )
-                    #             if result:
-                    #                 numAdded += 1
-                    #             assert False, "We want to stop here"
-                    #             break
-    # if BBB=='KI2' and c==17 and v==1:
-    #     print( f"{rvCapitalisedWordList=} {lvCapitalisedWordList=}" )
-    #     assert False, "We want to stop here"
+                    if baseNameInCandidates( capitalisedNoun, rvCapitalisedWord, 'OT' ):
+                        result = addNumberToRVWord( BBB, c,v, rvCapitalisedWord, wordNumber )
+                        if result:
+                            numAdded += 1
     return numAdded,numNS
 # end of connect_OET-RV_words_via_OET-LV.matchAdjustedProperNouns
+
+
+def baseNameInCandidates( capitalisedNoun:str, rvCapitalisedWord:str, nameTableKey:str ) -> bool:
+    """Return True if the LV proper noun and the RV word are names recorded as 
+        alternatives in the command-table name lists.
+    We look both names up through their normalised forms (see normalizeNameKey()),
+        because the OET-LV spelling often differs from the OET-LV command-table key
+        (e.g. the LV 'Dawid/(Dāvid)' against the command-table 'Dawid/(Dāwid)').
+    """
+    rvBase = rvCapitalisedWord
+    if rvCapitalisedWord.endswith( "'s" ): rvBase = rvCapitalisedWord[:-2] # possessive
+    for lvPart in splitNameKey( capitalisedNoun ):
+        normalised = normalizeNameKey( lvPart )
+        if not normalised: continue
+        for something in state.namePartsIndex.get( normalised, () ):
+            if something == rvCapitalisedWord or something == rvBase or f"{something}'s" == rvCapitalisedWord:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Name match: LV '{lvPart}' ≈ RV '{rvCapitalisedWord}' (via '{something}' of {normalised})" )
+                return True
+    # Also let the unchanged (exact) spelling match, as before
+    for something in state.nameTables[nameTableKey].get( capitalisedNoun, () ):
+        if something == rvCapitalisedWord or something == rvBase or f"{something}'s" == rvCapitalisedWord:
+            return True
+    return False
+# end of connect_OET-RV_words_via_OET-LV.baseNameInCandidates
 
 
 def matchOurListedSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:List[str] ) -> Tuple[int,int]:
@@ -2455,9 +2513,9 @@ def scoreRVLVWords( rvWord:str, lvWord:str ) -> Optional[Tuple[str,int]]:
     r,l = simplifyRVLVWord( rvWord ), simplifyRVLVWord( lvWord )
     if r == l and len(r) >= MIN_EXACT_MATCH_WORD_LENGTH: return ('same word', 100)
     if l in EQUIVALENT_LV_RV_WORDS.get( r, set() ): return ('another word for the same thing', 60)
-    if len(r) < ORDER_MATCH_PREFIX_LENGTH or len(l) < MIN_EXACT_MATCH_WORD_LENGTH: return None
+    if len(r) < 5 or len(l) < 3: return None
     shorter,longer = (r,l) if len(r) < len(l) else (l,r)
-    if shorter == longer[:len(shorter)] and len(shorter) >= ORDER_MATCH_PREFIX_LENGTH \
+    if shorter == longer[:len(shorter)] and len(shorter) >= 5 \
         and len(longer)-len(shorter) <= 3: # e.g. RV 'wineskin' against LV 'wineskins'
         return ('inflectional ending', 90)
     n = 0
@@ -3159,8 +3217,12 @@ def getLVNameSpellings( lvWord:str, nameTableKeys:tuple ) -> set:
         if not key: continue
         spellings.add( simplifyRVLVWord( key ) )
         for nameTableKey in nameTableKeys: # The name tables are keyed on the OET-LV spelling
+            for something in state.nameTables[nameTableKey].get( key, set() ):
+                spellings.add( simplifyRVLVWord( something ) )
+        normalised = normalizeNameKey( key )
+        if normalised: # The normalised index lets an RV word match an LV name whose transliteration differs slightly
             spellings.update( simplifyRVLVWord( something )
-                              for something in state.nameTables[nameTableKey].get( key, set() ) )
+                              for something in state.namePartsIndex.get( normalised, () ) )
     # A name also has its traditional spelling (what the '!' '\add' span holds), which the decided
     #   OET-RV names table records against the OET-RV spellings, so add those in too.
     for spelling in tuple( spellings ):
