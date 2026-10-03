@@ -327,7 +327,7 @@ SIMPLE_VERB_SETS = ( ('abandoned','abandoning','abandons','abandon'),
                     ('followed','following','follows','follow'),
                         ('forbidding','forbids','forbid'), ('forced','forcing','forces','force'), ('forgave','forgiven','forgiving','forgives','forgive'), ('formed','forming','forms','form'),
                 ('gathered','gathering','gathers','gather'),
-                    ('gave','giving','gives','give'),
+                    ('gave','giving','gives','give','given'),
                     ('went','going','goes','go'), ('governed','governing','governs','govern'),
                     ('greeted','greeting','greets','greet'),
                 ('harvested','harvesting','harvests','harvest'), ('hated','hating','hates','hate'),
@@ -344,6 +344,7 @@ SIMPLE_VERB_SETS = ( ('abandoned','abandoning','abandons','abandon'),
                 ('led','leading','leads','lead'), ('learnt','learning','learns','learn'),
                     ('listened','listening','listens','listen'), ('lived','living','lives','live'),
                     ('looked','looking','looks','look'), ('loved','loving','loves','love'),
+                    ('lowered','lowering','lowers','lower'),
                 ('magnified','magnifying','magnifies','magnify'), ('made','making','makes','make'), ('married','marrying','marries','marry'),
                     ('measured','measuring','measures','measure'),
                     ('mocked','mocking','mocks','mock'), ('mourned','mourning','mourns','mourn'),
@@ -354,6 +355,7 @@ SIMPLE_VERB_SETS = ( ('abandoned','abandoning','abandons','abandon'),
                 ('packed','packing','packs','pack'), ('passed','passing','passes','pass'), ('persuaded','persuading','persuades','persuade'),
                     ('poured','pouring','pours','pour'),
                     ('practiced','practicing','practices','practice'), ('praised','praising','praises','praise'),
+                            ('prayed','praying','prays','pray'),
                         ('prevailed','prevailing','prevails','prevail'),
                         ('promised','promising','promises','promise'), ('prophesied','prophesying','prophesies','prophesy'),
                     ('punished','punishing','punishes','punish'), ('purchased','purchasing','purchases','purchase'), ('purified','purifying','purifies','purify'),
@@ -364,7 +366,7 @@ SIMPLE_VERB_SETS = ( ('abandoned','abandoning','abandons','abandon'),
                         ('reigned','reigning','reigns','reign'),
                         ('released','releasing','releases','release'), ('relented','relenting','relents','relent'), ('relied','relying','relies','rely'),
                         ('remained','remaining','remains','remain'), ('remembered','remembering','remembers','remember'), ('reminded','reminding','reminds','remind'), ('removed','removing','removes','remove'),
-                        ('repaid','repaying','repays','repay'), ('reported','reporting','reports','report'),
+                        ('repaid','repaying','repays','repay'), ('repented','repenting','repents','repent'), ('reported','reporting','reports','report'),
                         ('requested','requesting','requests','request'),
                         ('rescued','rescuing','rescues','rescue'), ('respected','respecting','respects','respect'), ('restored','restoring','restores','restore'), ('restrained','restraining','restrains','restrain'),
                         ('revealed','revealing','reveals','reveal'),
@@ -400,7 +402,8 @@ SIMPLE_VERB_SETS = ( ('abandoned','abandoning','abandons','abandon'),
                     ('travelled','travelling','travels','travel'),
                     ('turned','turning','turns','turn'),
                 ('united','uniting','unites','unite'), ('untied','untying','unties','untie'),
-                ('wailed','wailing','wails','wail'), ('walked','walking','walks','walk'), ('wanted','wanting','wants','want'), ('warned','warning','warns','warn'), ('watched','watching','watches','watch'),
+                ('wailed','wailing','wails','wail'), ('walked','walking','walks','walk'), ('wanted','wanting','wants','want'), ('warned','warning','warns','warn'),
+                        ('watched','watching','watches','watch'), ('watered','watering','waters','water'),
                     ('weakened','weakening','weakens','weaken'), ('wore','wearing','wears','wear'),
                     ('withdrew','withdrawing','withdraws','withdraw'), ('withered','withering','withers','wither'),
                     ('worked','working','works','work'),
@@ -530,33 +533,6 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('golden','gold'),
     ('loudly','loud'),
 
-    # The following verbal entries handle tense changes
-    ('calling', 'called'),
-    ('came','coming'),
-    ('forgive','forgiving'),
-    ('gave', 'given'),
-    ('healed','healing'),
-    ('hear', 'hearing'),
-    ('immerser','immersing'),
-    ('judge','judgements'),
-    ('knowing','known'),
-    ('lowered','lowering'),
-    ('prayed', 'praying'),
-    ('pleasing', 'acceptable'),
-    ('purified','purify'),
-    ('removed','remove'),
-    ('repent','repenting'),
-    ('requested', 'requesting'),
-    ('right','truth'), # Mrk 12:32
-    ('said','saying'),
-    ('saying','said'), # Mrk 12:32
-    ('sell','sold'),
-    ('taught','teaching'),
-    ('walk','walking'),
-    ('watered','water'),
-    ('wrap','wraps'),
-    ('wrote','written'),
-
     # Vocab differences / synonyms
     # RVword, LVwordOrPhrase
     ('about','concerning'), # Mrk 12:26
@@ -667,11 +643,13 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('huge','great'),
     ('humiliated','ashamed'),
     ('hut','shelter'),
+    ('immerser','immersing'),
     ('including','and'),
     ('instructed','commanded'),('instructions','commanded'),('instructions','regulations'),
     ('insulted','dishonoured'),('insulting','slandering'),
     ('Israelis','people'),
     ('item','article'),('items','article'),
+    ('judge','judgements'),
     ('kill','destroy'),
     ('King','king'),
     ('kingdoms','nations'),
@@ -720,7 +698,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('permanent','perpetuity'),
     ('placed','laid'),('placing','laying'),
     ('platform','lid'),
-    ('pleasing','soothing'),
+    ('pleasing', 'acceptable'),('pleasing','soothing'),
     ('plus','and'),
     ('poor','humble'),
     ('population','multitude'),
@@ -745,6 +723,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('request','seek'),('requested','prayed'),
     ('rescue','deliver'),
     ('responded','said'),
+    ('right','truth'), # Mrk 12:32
     ('river','Yarden'),
     ('riverbed','wadi'),
     ('rock','stone'),('rocks','stones'),('rocks','stone'),
@@ -752,7 +731,6 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('room','place'),
     ('ropes','cords'),
     ('rubble','ruin'),
-    ('ruins','ruined'),
     ('rush','hasten'),
     ('sacred','holiness'),('sacred','holy'), ('sacred','of meeting'), # tent of meeting
     ('sacrificed','smoke'),
@@ -847,6 +825,9 @@ for someTuple in RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS:
     RVWord, LVWords = someTuple
     assert RVWord != LVWords, f"{RVWord=}"
     assert ' ' not in RVWord
+    for simpleVerbSet in SIMPLE_VERB_SETS:
+        if LVWords in simpleVerbSet:
+            assert RVWord not in simpleVerbSet, f"Can simplify {RVWord=} {LVWords=}"
 
 
 LV_SINGLE_WORDS_TO_RV_WORD_STRINGS = (
@@ -878,7 +859,7 @@ for someTuple in LV_SINGLE_WORDS_TO_RV_WORD_STRINGS:
     LVWord,RVWords = someTuple
     assert LVWord != RVWords, f"{RVWords=}"
     assert ' ' not in LVWord
-    assert ' ' in RVWord
+    assert ' ' in RVWords
 
 class WordNumberError(ValueError):
     pass
