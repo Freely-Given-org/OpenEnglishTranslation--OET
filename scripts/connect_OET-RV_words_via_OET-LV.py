@@ -24,7 +24,8 @@ It does have the potential to make wrong connections that will need to be manual
     but hopefully this script is relatively conservative
         so that the number of wrong alignments is not huge.
 
-TODO: This script makes wrong cross-connections betransliterate_Hebrewtween different verses where versification issues apply
+TODO: This script makes wrong cross-connections between different verses where versification issues apply
+        but that will eventually be fixed in BibleOrgSys (not here).
 
 
 CHANGELOG:
@@ -76,8 +77,12 @@ CHANGELOG:
     2026-09-30 Keep a hyphenated word that isn't capitalised as the one word that the OET-RV and the
         OET-LV both use (e.g. 'empty-handed'), while still splitting a capitalised one (e.g. 'Yahweh-nissi')
     2026-09-30 Connect a short word that is exactly the same on both sides (MIN_EXACT_MATCH_WORD_LENGTH
-        = 3, e.g. the OET-RV 'put' of Mark 12:1), but not the little English function words that the
-        translators have deliberately left unnumbered (LITTLE_FUNCTION_WORDS)
+        = 2, e.g. the OET-RV 'put' of Mark 12:1).  This used to be 3, and matchWordsInOrder() also
+        used to skip the little English function words that the translators have deliberately left
+        unnumbered (LITTLE_FUNCTION_WORDS, now kept only on record).  The order-preserving alignment
+        and its every-alignment-agrees test turned out to be selective enough that we can now number
+        the little words too, which connected 62,601 more OET-RV words across the whole Bible
+        (197,116 of 933,964 = 21.1% before, 259,706 = 27.8% after)
     2026-09-30 Connect an OET-RV word to an OET-LV word that means the same thing but is a different
         word (EQUIVALENT_LV_RV_WORDS, e.g. the OET-RV 'Whenever' against the OET-LV 'wherever'), and
         let a capitalised OET-LV word take part when we have such a synonym for it
@@ -442,14 +447,15 @@ SIMPLE_VERB_SETS = ( ('abandoned','abandoning','abandons','abandon'),
                 ('taught','teaching','teaches','teach'), ('tore','tearing','tears','tear','torn'),
                 ('told','telling','tells','tell'), ('throve','thriving','thrives','thrive','thriven'),
                 ('trod','treading','treads','tread','trodden'),
+                ('understood','understanding','understands','understand'),
                 ('woke','waking','wakes','wake','woken'), ('wove','weaving','weaves','weave','woven'),
                 ('wept','weeping','weeps','weep'), ('won','winning','wins','win'),
                 ('wound','winding','winds','wind'), ('wrung','wringing','wrings','wring'),
                 )
 simpleVerbs = tuple(verb for verbSet in SIMPLE_VERB_SETS for verb in verbSet)
 assert len(set(simpleVerbs)) == len(simpleVerbs), [x for x in simpleVerbs if simpleVerbs.count(x)>1 ] # Check for accidental duplicates
-for simpleVerb in simpleVerbs:
-    assert len(simpleVerb) <= 12, f"({len(simpleVerb)}) {simpleVerb}" # 'distributing'
+for simpleVerb in simpleVerbs: # Just a safety check in case we miss a comma and python concatenates consecutive words
+    assert len(simpleVerb) <= 11 or simpleVerb in ('distributing','slaughtering','understanding'), f"({len(simpleVerb)}) {simpleVerb}"
 
 simpleAdverbs = ('quickly', 'immediately', 'loudly', 'suddenly',)
 assert len(set(simpleAdverbs)) == len(simpleAdverbs) # Check for accidental duplicates
@@ -668,7 +674,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('laid','spread'),
     ('lake','sea'),
     ('large','great'),
-    ('languages','tongues'),
+    ('language','tongue'),('languages','tongues'),
     ('left','came out'),('left','set out'),
     ('listen','give ear'),('listen','hear'),
     ('Listen','Behold'),('listen','Behold'),('Listen','behold'),('listen','behold'),
@@ -1490,12 +1496,32 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
                 logging.critical( f"connect_OET_RV: no verses found for OET-LV {BBB} {C}" )
                 continue
             havePsalmTitles = bos_books_codes_py.has_psalm_title( BBB, C )
+            rvNumVerses = rv.getNumVerses( BBB, c ) # the OET-RV follows the original-language versification
             for v in range( 1, numVerses+1 ): # Note: some Psalms have an extra verse in OET-LV (because /d is v1)
                 V = str(v)
+                rvV = str(v-1) if havePsalmTitles and v>1 else V
                 try:
-                    rvVerseEntryList, _rvCcontextList = rv.getContextVerseData( (BBB, C, str(v-1) if havePsalmTitles and v>1 else V) )
+                    rvVerseEntryList, _rvCcontextList = rv.getContextVerseData( (BBB, C, rvV) )
                 except KeyError:
-                    logging.critical( f"Seems we have no OET-RV {BBB} {c}:{v} -- versification issue?" )
+                    # Most of these are NOT a problem, so don't cry wolf about them.  The OET-LV uses
+                    #   English versification, which sometimes gives a chapter one or more verses at
+                    #   the end that the original language doesn't have, and the OET-RV follows the
+                    #   original.  So the OET-RV chapter simply runs out before the OET-LV one, and
+                    #   there is no OET-RV text for those verses to be connected to: skipping them is
+                    #   the correct thing to do.  We measured all 139 such verses across the whole
+                    #   Bible and every one of them is a contiguous run at the END of its chapter,
+                    #   i.e. plain truncation, with no interior gap anywhere that would suggest a
+                    #   verse has been misplaced and could be causing a wrong cross-connection.
+                    if rvNumVerses and int(rvV) > rvNumVerses:
+                        logging.info( f"OET-RV {BBB} {c} ends at verse {rvNumVerses}, "
+                                      f"but OET-LV has {numVerses}, so skipping OET-LV {c}:{v} "
+                                      f"(English versification has more verses in this chapter)" )
+                    else:
+                        # A verse missing from the MIDDLE of the chapter, or a chapter that the OET-RV
+                        #   doesn't have at all, is a real difference that somebody should look at.
+                        logging.critical( f"Seems we have no OET-RV {BBB} {c}:{v} -- versification issue? "
+                                          f"(the OET-RV verse we wanted is {rvV}, and this OET-RV chapter "
+                                          f"has {rvNumVerses if rvNumVerses else 'no'} verse(s))" )
                     continue
                 # OET-RV has /d and v1 all inside v1, but we need to separate them out to match OET-LV correctly
                 if havePsalmTitles and v in (1,2):
@@ -2167,10 +2193,11 @@ ORDER_MATCH_PREFIX_LENGTH = 7
 # The shortest word that matchWordsInOrder() will connect on the strength of being the SAME word,
 #   which is much less than ORDER_MATCH_PREFIX_LENGTH, because an exact match is exact however
 #   short it is: the OET-RV 'put' of Mark 12:1 is the OET-LV 'put¦32436' and nothing else.
-#   Three letters is as short as we dare, because a one or two letter word is nearly always one
-#   of the little English function words ('a', 'of', 'to', 'is') that the translators have
-#   deliberately not numbered, and a wrong word number is much worse than a missing one.
-MIN_EXACT_MATCH_WORD_LENGTH = 3
+#   Two letters, because matchWordsInOrder() only connects a word when every equally good
+#   order-preserving alignment agrees on it (see bestMonotoneAlignmentScore()), and even the
+#   one and two letter words come out safely on a full-corpus run: the RV 'the' of CO1 1:9 is the
+#   LV 'the¦113151' and not any of the other 'the's of the verse.
+MIN_EXACT_MATCH_WORD_LENGTH = 2
 
 # The little English words that matchWordsInOrder() must not connect just because they are short
 #   and exactly the same on both sides, because the OET-RV translators have deliberately not
@@ -2184,6 +2211,11 @@ MIN_EXACT_MATCH_WORD_LENGTH = 3
 #       like 'because' and 'although' are already long enough to match on their own.)
 #   This list is only consulted for the short words that MIN_EXACT_MATCH_WORD_LENGTH lets through,
 #   so it can never take away a word number that the longer-word rules have already given.
+#   It is now EMPTY, i.e. we no longer hold these words back.  matchWordsInOrder() only numbers a
+#   word when every equally good order-preserving alignment agrees on it, and that proved strong
+#   enough to number the little words safely across the whole Bible, so this list only remains as a
+#   record of the words that were being held back, and of why we used to do that.  Put a word back
+#   in here to hold that one word back again.
 LITTLE_FUNCTION_WORDS = {
     # determiners
     'all', 'another', 'any', 'both', 'each', 'either', 'every', 'few', 'her', 'his', 'its', 'least',
@@ -2210,6 +2242,10 @@ LITTLE_FUNCTION_WORDS = {
     # other little grammar words
     'let', 'lets', 'well',
 }
+# We keep the words above on record, but we don't hold any of them back, so matchWordsInOrder()
+#   is free to number them.  This is what makes them a record only.
+LITTLE_FUNCTION_WORDS_HELD_BACK = LITTLE_FUNCTION_WORDS
+LITTLE_FUNCTION_WORDS = set()
 
 def unSimplifyRVWord( rvWord:str ) -> str:
     """
@@ -2368,7 +2404,9 @@ def getUnnumberedRVWords( BBB:str, c:int, v:int ) -> set:
             V = int( Vstr.split('-',1)[0] )
             foundVerse = C==c and V==desiredV
         elif foundChapter and marker == '\\d':
-            foundVerse = C==c and desiredV==1
+            # Only a '\d' line before the '\v' of verse 1 belongs to verse 1 (see the long
+            #   explanation in addNumberToRVWord()); the '\d' line at the end of HAB is not.
+            foundVerse = C==c and desiredV==1 and V is None
         if not foundVerse: continue
         for token in rest.split():
             if '¦' in token or token.startswith( '\\' ): continue
@@ -3399,7 +3437,7 @@ specialAddSpanRegex = re.compile(
 #           connected by matchNamesViaTraditionalNames() instead
 #     '^' is the opposite of the OET-LV, and '?' means the translator is not even sure
 #           about the code
-ADD_CODES_TO_EXPOSE = ( '≈', '#', '@', '*', '%', '&', '≡' )
+ADD_CODES_TO_EXPOSE = ( '≈', '#', '@', '*', '%', '&', '≡', '<', '>' )
 addCloseMarkerRegex = re.compile( r'\\(?:\+)?add\*$' ) # The '\add*' or '\+add*' that closes a span
 addCloseMarkerAnywhereRegex = re.compile( r'\\(?:\+)?add\*' ) # The same, but punctuation can follow it
 addMarkerRegex = re.compile( r'\\(?:\+)?add\*?' ) # The '\add' or '\+add' and the '\add*' or '\+add*'
@@ -3482,7 +3520,9 @@ def getLiveRVVerseText( BBB:str, c:int, v:int ) -> str:
             V = int( Vstr.split('-',1)[0] )
             foundVerse = C==c and V==desiredV
         elif foundChapter and marker == '\\d':
-            foundVerse = C==c and desiredV==1
+            # Only a '\d' line before the '\v' of verse 1 belongs to verse 1 (see the long
+            #   explanation in addNumberToRVWord()); the '\d' line at the end of HAB is not.
+            foundVerse = C==c and desiredV==1 and V is None
         if not foundVerse: continue
         verseText = f"{verseText}{' ' if verseText else ''}{rest}"
     return verseText.strip()
@@ -3622,6 +3662,26 @@ def isInsideStraightAddSpan( line:str, index:int ) -> bool:
     return any( match.start() < index < match.end()
                 for match in straightAddSpanRegex.finditer( line ) )
 # end of isInsideStraightAddSpan
+
+
+ndStartMarkerRegex = re.compile( r'\\\+?nd ' ) # A nomina sacra open marker, e.g. '\nd ' or '\+nd '
+ndEndMarkerRegex = re.compile( r'\\\+?nd\*' ) # A nomina sacra close marker, e.g. '\nd*' or '\+nd*'
+
+def isInsideNominaSacraSpan( line:str, index:int ) -> bool:
+    """
+    Return True if the character at 'index' in 'line' is inside a nomina sacra
+        '\\nd ...\\nd*' span that has already been opened before 'index'.
+
+    We count the open and the close markers that come before 'index' rather than matching
+        '\\nd ...\\nd*' spans with a single regex, because we cannot pair the markers up with a
+        regex once they are nested, and nesting them is exactly the fault that this function
+        exists to detect: an earlier run could insert a '\\nd ...\\nd*' span around a word that
+        was already the first word of one, giving 'son¦113159 \\nd \\nd Yeshua¦113161\\nd*'.
+    """
+    numOpens = len( ndStartMarkerRegex.findall( line[:index] ))
+    numCloses = len( ndEndMarkerRegex.findall( line[:index] ))
+    return numOpens > numCloses
+# end of isInsideNominaSacraSpan
 
 
 def removeWordNumbersInStraightAddSpans( filename:str, lines:List[str] ) -> int:
@@ -3846,7 +3906,14 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
         elif foundChapter and marker == '\\d':
             dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"addNumberToRVWord D searching {BBB} {C}:{V} {marker}='{rest}'")
             assert havePsalmTitles or BBB=='HAB', f"addNumberToRVWord( {BBB} {c}:{v} {word=} {havePsalmTitles=} {marker=} {rest=}"
-            foundVerse = C==c and desiredV==1
+            # A '\d' line is only the title of verse 1 if it comes BEFORE the '\v' of verse 1, which
+            #   is where the Psalm titles sit.  We must check V is still None, because a '\d' line
+            #   anywhere else in the chapter is not part of verse 1 at all.  HAB is the case in
+            #   point: its single '\d' line (the musical direction for the book) sits AFTER 3:19, so
+            #   without this check we claimed it for HAB 3:1 and numbered a word in it with a word
+            #   number from 3:1, because 3:1 happens to have more than one 'the' for us to choose
+            #   between, so we carried on looking and found a line with exactly one.
+            foundVerse = C==c and desiredV==1 and V is None
         if foundVerse:
             allWordMatches = [match for match in re.finditer( f'\\b{word}\\b', line )] # Matches of the word standing alone
             if len(allWordMatches) == 1:
@@ -3871,7 +3938,8 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
                     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Have NS on {word=} {line[match.start()-6:match.start()]=} {line[match.end():match.end()+6]=} {line=}" )
                     if (match.end()==len(line) or not line[match.end()]=='¦') \
                     and not line[match.end():match.end()+4] == '\\nd*' \
-                    and not line[match.end():match.end()+5] == '\\+nd*':
+                    and not line[match.end():match.end()+5] == '\\+nd*' \
+                    and not isInsideNominaSacraSpan( line, match.start() ):
                         addNominaSacra = True
                         if word in ('Messiah','Yeshua','God'):
                             dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Adding NS on {word=} {line[match.start()-6:match.start()]=} {line[match.end():match.end()+6]=} {line=}" )
@@ -3961,7 +4029,9 @@ def addNumberToRVPhrase( BBB:str, c:int,v:int, rvPhraseWords:List[str], lvNumber
             except ValueError: V = int(Vstr.split('-',1)[0]) # It can be a range like 21-22
             foundVerse = C==c and V==desiredV
         elif foundChapter and marker == '\\d':
-            foundVerse = C==c and desiredV==1
+            # Only a '\d' line before the '\v' of verse 1 belongs to verse 1 (see the long
+            #   explanation in addNumberToRVWord()); the '\d' line at the end of HAB is not.
+            foundVerse = C==c and desiredV==1 and V is None
         if not foundVerse: continue
         # Blank out the notes, the cross-references and the links, because the translator's
         #   notes often quote the OET-RV text, but keep the length the same so that the
