@@ -133,6 +133,7 @@ Of course, we’re very happy to list contributors if you desire that. (Not ever
 - ‘rest’-> check if ‘peace and stability’or something is more natural in modern English
 - vow -> promise
 - scripture(s) vs Scripture(s)
+- offspring to descendants (except for animals)
 
 Continue checking spelling from Mat 7:18 onwards --
     done Mrk

@@ -120,10 +120,10 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-09-30' # by RJH
+LAST_MODIFIED_DATE = '2026-10-02' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '0.99'
+PROGRAM_VERSION = '1.0.0'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -298,14 +298,17 @@ SIMPLE_VERB_SETS = ( ('abandoned','abandoning','abandons','abandon'),
                     ('blessed','blessing','blesses','bless'),
                     ('brought','bringing','brings','bring'),
                     ('burnt','burning','burns','burn'), ('buried','burying','buries','bury'),
-                ('called','calling','calls','call'), ('carried','carrying','carries','carry'), ('came','coming','comes','come'),
+                ('called','calling','calls','call'),
+                        ('came','coming','comes','come'),
+                        ('carried','carrying','carries','carry'),
                         ('caught','catching','catches','catch'), ('caused','causing','causes','cause'),
                     ('chased','chasing','chases','chase'), ('chose','choosing','chooses','choose'),
                     ('claimed','claiming','claims','claim'), ('closed','closing','closes','close'),
                     ('concealed','concealing','conceals','conceal'), ('confessed','confessing','confesses','confess'), ('consumed','consuming','consumes','consume'),
                     ('cracked','cracking','cracks','crack'), ('cried','crying','cries','cry'), ('cringed','cringes','cringe'),
                     ('cursed','cursing','curses','curse'), ('cutting','cuts','cut'),
-                ('deceived','deceiving','deceives','deceive'), ('decided','deciding','decides','decide'), ('declared','declaring','declares','declare'),
+                ('dared','daring','dares','dare'),
+                    ('deceived','deceiving','deceives','deceive'), ('decided','deciding','decides','decide'), ('declared','declaring','declares','declare'),
                         ('defended','defending','defends','defend'),
                         ('delivered','delivering','delivers','deliver'),
                         ('departed','departing','departs','depart'),
@@ -315,11 +318,12 @@ SIMPLE_VERB_SETS = ( ('abandoned','abandoning','abandons','abandon'),
                     ('dwelled','dwelt','dwelling','dwells','dwell'),
                 ('ate','eating','eats','eat'), ('embraced','embracing','embraces','embrace'),
                     ('encouraged','encouraging','encourages','encourage'), ('ended','ending','ends','end'), ('enslaved','enslaving','enslaves','enslave'), ('entered','entering','enters','enter'),
+                    ('equipped','equipping','equips','equip'),
                     ('existed','existing','exists','exist'), ('extended','extending','extends','extend'),
                 ('failed','failing','fails','fail'), ('fell','falling','falls','fall'),
                     ('feared','fearing','fears','fear'),
                     ('filled','filling','fills','fill'),
-                    ('fled','fleeing','flees','flee'),
+                    ('fled','fleeing','flees','flee'), ('fluttered','fluttering','flutters','flutter'),
                     ('followed','following','follows','follow'),
                         ('forbidding','forbids','forbid'), ('forced','forcing','forces','force'), ('forgave','forgiven','forgiving','forgives','forgive'), ('formed','forming','forms','form'),
                 ('gathered','gathering','gathers','gather'),
@@ -527,12 +531,8 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('loudly','loud'),
 
     # The following verbal entries handle tense changes
-    ('bend', 'bent'),
     ('calling', 'called'),
     ('came','coming'),
-    ('carrying','carried'),
-    ('equip','equipped'),
-    ('flutter','fluttering'),
     ('forgive','forgiving'),
     ('gave', 'given'),
     ('healed','healing'),
@@ -547,7 +547,9 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('removed','remove'),
     ('repent','repenting'),
     ('requested', 'requesting'),
+    ('right','truth'), # Mrk 12:32
     ('said','saying'),
+    ('saying','said'), # Mrk 12:32
     ('sell','sold'),
     ('taught','teaching'),
     ('walk','walking'),
@@ -557,6 +559,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
 
     # Vocab differences / synonyms
     # RVword, LVwordOrPhrase
+    ('about','concerning'), # Mrk 12:26
     ('addition','And'),
     ('afraid','feared'),('afraid','fearing'),
     ('agreeing','confirming'),
@@ -626,6 +629,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('deserted','desolate'),
     ('destroyed','consumed'),('destroyed','devoured'),
     ('destruction','devastation'),
+    ('died','dead'), # Mrk 12:26
     ('dies','corpse'), # Lev 19:28
     ('dinosaur','dragon'), # Rev 12:3
     ('disasters','plagues'),
@@ -633,12 +637,13 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('driving','throwing'),
     ('eastern','east'),
     ('eliminate','destroying'),
+    ('engaged','betrothed'),
     ('entire','all'),
     ('everyone','people'), ('Everyone','one'),('everyone','one'),
     ('execution','stake'),
     ('existence','became'),
     ('exposed','uncovered'),
-    ('finally','last'),
+    ('finally','Lastly'),('finally','last'),
     ('fitting','befitting'),
     ('flames','fire'),
     ('flattered','saying'),
@@ -676,8 +681,8 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('large','great'),
     ('language','tongue'),('languages','tongues'),
     ('left','came out'),('left','set out'),
-    ('listen','give ear'),('listen','hear'),
     ('Listen','Behold'),('listen','Behold'),('Listen','behold'),('listen','behold'),
+    ('listen','give ear'),('Listen','hearing'),('listen','hear'),
     ('living','dwelling'),
     ('Look','Behold'),('look','Behold'),('Look','behold'),('look','behold'),
     ('looking','searched'),('looking','seeking'),
@@ -754,6 +759,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('sanctuary','hideout'),
     ('scared','dismayed'), ('scared','feared'),
     ('scoffed','mocking'),
+    ('scriptures','scroll'), # Mrk 12:26
     ('search','seek'),
     ('second','another'),
     ('See','Behold'),
@@ -793,6 +799,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('Then','And'),('then','And'),
     ('thinking','reasoning'),('thinking','supposing'),
     ('third','another'),
+    ('thoughtful','intelligently'), # Mrk 12:34
     ('tied','bound'),
     ('tipped','overturned'),
     ('told','commanded'),
@@ -805,6 +812,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('upstairs','upper'),
     ('untarnished','holy'),
     ('urged','implored'),
+    ('very','much'), # Mrk 12:27
     ('wallet','purse'),
     ('warriors','men'),
     ('waters','water supplies'),
@@ -812,13 +820,15 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('wealthy','rich'),
     ('went','came'),
     ('what','whatever'),("What's",'What'),
-    ('When','And'),
+    ('When','And'),('When','whenever'),
     ('whole','all'),
+    ('will','are'),
     ('women','daughters'),
     ('work','service'),
     ('worship','bow'),
     ('worn','girding'),
     ('wow','see'),
+    ('wrong','strayed'), # Mrk 12:24,27
     ('yelled','cried'),
     ('yourselves','hearts'),
     # RVword, LVwordOrPhrase
@@ -848,7 +858,10 @@ LV_SINGLE_WORDS_TO_RV_WORD_STRINGS = (
             ('Şelāh', 'Instrumental break'),
             ('Truly', 'May it be so'),
 
+            ('approached','came closer'), # Mrk 12:28
             ('ascent','walking uphill'),
+            ('first','most important'), # Mrk 12:29
+            ('greater','more important'), # Mrk 12:31
             ('members', 'body parts'),
             ('plagues', 'deadly diseases'),
             ('risen', 'got up'),
@@ -865,6 +878,7 @@ for someTuple in LV_SINGLE_WORDS_TO_RV_WORD_STRINGS:
     LVWord,RVWords = someTuple
     assert LVWord != RVWords, f"{RVWords=}"
     assert ' ' not in LVWord
+    assert ' ' in RVWord
 
 class WordNumberError(ValueError):
     pass
