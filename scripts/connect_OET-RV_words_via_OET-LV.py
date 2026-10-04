@@ -16,13 +16,48 @@
 Every word in the OET-LV has a word number tag suffixed to it,
     which connects it back to / aligns it with the Hebrew or Greek word it is translated from.
 
-This script attempts to deduce how some of those same word are translated in the OET-RV
+This script attempts to deduce how some of those same words are translated in the OET-RV
     and automatically connect them with the same word number tag.
 
 It does have the potential to make wrong connections that will need to be manually fixed
         when the rest of the OET-RV words are aligned,
     but hopefully this script is relatively conservative
         so that the number of wrong alignments is not huge.
+
+Specialised \\add spans:
+    Normal character markers start with a backslash,
+        but embedded character markers (often inside a '\\wj ' words-of-Jesus span)
+            must have a + character after the backslash for both the opening and the closing marker.
+    '\\add ' spans must be closed by '\\add*' markers.
+        '\\+add ' spans must be closed by '\\+add*' markers.
+    Formats are described at
+        ../../OpenEnglishTranslation-website/src/pages/Resources/Formats.astro
+    Pure '\\add ' or '\\+add ' spans:
+        Any existing word numbers should be removed.
+        No new word numbers should be added to these spans.
+        Words inside these spans should not be included in word linking statistics.
+    Pronoun referrent '\\add @' or '\\+add @' spans:
+        Expect the proper noun or fuller description in the OET-RV
+            to match a pronoun or simpler description like 'the one' in the OET-LV.
+    Pronoun substitution '\\add *' or '\\+add *' spans:
+        Expect the pronoun or simpler description in the OET-RV
+            to match a proper noun or fuller description in the OET-LV.
+    Implied person or object '\\add >' or '\\+add >' spans:
+        As these are implied by the context and by the previous word in the sentence (often an article),
+            then they should be assigned the same word number as the word that they're implied from.
+    Added ownership '\\add &' or '\\+add &' spans:
+        In this case 'the hand' might become '\\add &his\\add* hand'.
+        and 'followers' might become '\\add &his\\add* followers'.
+        If there's a matching article present, then the OET-RV possessive pronoun
+            can be linked to the word number of that OET-LV article.
+    Elided '\\add ≡' or '\\+add ≡' spans:
+        If the original text that was implied here and then formally reinstated
+            can be found earlier in the same verse or in the previous verse,
+                then it can be given those matching word number(s).
+        TODO: This requires an update in word number checking
+            so that a lower word number (from a previous verse) can be allowed in an elided segment.
+    Reworded '\\add ≈' or '\\+add ≈' spans:
+        Can be matched to OET-LV words, but more difficult expected.
 
 TODO: This script makes wrong cross-connections between different verses where versification issues apply
         but that will eventually be fixed in BibleOrgSys (not here).
@@ -136,7 +171,7 @@ from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 LAST_MODIFIED_DATE = '2026-10-04' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '1.0.0'
+PROGRAM_VERSION = '1.0.1'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -708,14 +743,18 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     # Prepositions
     ('at','in/on/at/with'),('in','in/on/at/with'),('on','in/on/at/with'),('with','in/on/at/with'),
 
+    # Pronouns
+    ('those','these'),
+
     # Adjectival/Adverbial changes
     ('golden','gold'),
     ('loudly','loud'),
 
     # Vocab differences / synonyms
     # RVword, LVwordOrPhrase
-    ('about','concerning'), # Mrk 12:26
+    ('about','concerning'),('about','of'), # Mrk 12:26
     ('addition','And'),
+    ('advance','beforehand'), # Mrk 13:11
     ('afraid','feared'),('afraid','fearing'),
     ('agreeing','confirming'),
     ('agreement','covenant'),
@@ -726,7 +765,8 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('ancestors','fathers'),
     ('and', 'And'),
     ('announced','proclaiming'), ('announcing','proclaiming'),
-    ('Anyone','Whoever'),('anyone','whoever'),('Anyone','one'),('anyone','one'),
+    ('Anyone','Whoever'),('anyone','whoever'),
+        ('Anyone','one'),('anyone','ones'),('anyone','one'),
     ('anything','all things'),
     ('appeared','seen'),
     ('appropriate','fitting'),
@@ -737,7 +777,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('astounded','amazed'),
     ('attention','attentiveness'),
     ('back','stern'),
-    ('battle','war'),
+    ('battle','war'),('battles','wars'),
     ('because','for/because'),('Because','For/Because'),('because','For/Because'),
     ('because','if/because'),
     ('bedding','pallet'),
@@ -755,6 +795,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('burning','fire'),
     ('But','And'),('but','And'),('But','and'),('but','and'),
     ('buyers','buying'),
+    ('careful','watching'), # Mrk 13:9
     ('cash','money'),('cash','silver'),
     ('cease','removed'),
     ('chairs','seats'),
@@ -766,6 +807,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('commented','saying'),
     ('confused','confounded'),
     ('continued','said'),
+    ('Countries','nation'),('countries','nation'), # Mrk 13:8
     ('cross','pass over'),
     ('could','may'),
     ('countries','nations'),('country','nation'),
@@ -795,7 +837,8 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('engaged','betrothed'),
     ('entire','all'),
     ('everyone','people'), ('Everyone','one'),('everyone','one'),
-    ('execution','stake'),
+    ('executed','death'), # Mrk 13:12
+        ('execution','stake'),
     ('existence','became'),
     ('exposed','uncovered'),
     ('finally','Lastly'),('finally','last'),
@@ -805,20 +848,23 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('flicked','sprinkled'),
     ('food','bread'),
     ('forever','perpetuity'),
-    ('front','face'),
+    ('front','before'),('front','face'), # Mrk 13:9
     ('fulfilled','accomplished'),
     ('God','god'),
+    ("God's",'holy'), # Mrk 13:11
     ('godly','devout'),('godly','righteous'),
     ('grabbed','taken'),
     ('grapevine','vine'),
     ('greater','mightier'),
+    ('hand','giving'), # Mrk 13:11
     ('happen','becoming'),
     ('harvests','fruit'),
     ('heavenly','heavens'),('heavenly','heaven'),
-    ('hill','mountain'),
+    ('hills','mountains'),('hill','mountain'),
     ('hilltop','high'),
     ('honest','true'),
     ('honour','glorify'),
+    ('horrible','abomination'), # Mrk 13:14
     ('huge','great'),
     ('humiliated','ashamed'),
     ('hut','shelter'),
@@ -878,6 +924,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('placed','laid'),('placing','laying'),
     ('platform','lid'),
     ('pleasing', 'acceptable'),('pleasing','soothing'),
+    ('Plenty','Many'),
     ('plus','and'),
     ('poor','humble'),
     ('population','multitude'),
@@ -893,6 +940,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('quiet','desolate'),
     ('quiet','silenced'),
     ('range','various'),
+    ('readers','reading'), # Mrk 13:14
     ('ready','gird'),
     ('realised','saw'),
     ('region','land'),('regions','land'),
@@ -902,7 +950,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('request','seek'),('requested','prayed'),
     ('rescue','deliver'),
     ('responded','said'),
-    ('right','truth'), # Mrk 12:32
+    ('right','fitting'),('right','truth'), # Mrk 13:10, 12:32
     ('river','Yarden'),
     ('riverbed','wadi'),
     ('rock','stone'),('rocks','stones'),('rocks','stone'),
@@ -963,10 +1011,11 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('total','all'),
     ('town','city'),
     ('trustworthy','faithful'),
+    ('turned','giving'), # Mrk 13:9
     ('twenty','fifth'),
     ('undesirables','sinners'),
     ('ungodly','unclean'),
-    ('upstairs','upper'),
+    ('upstairs','housetop'),('upstairs','upper'), # Mrk 13:15
     ('untarnished','holy'),
     ('urged','implored'),
     ('very','much'), # Mrk 12:27
@@ -978,10 +1027,12 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('went','came'),
     ('what','whatever'),("What's",'What'),
     ('When','And'),('When','whenever'),
+    ('whipped','beat'), # Mrk 13:9
     ('whole','all'),
     ('will','are'),
     ('women','daughters'),
     ('work','service'),
+    ('worried','alarmed'), # Mrk 13:7
     ('worship','bow'),
     ('worn','girding'),
     ('wow','see'),
@@ -2193,7 +2244,7 @@ def matchAdjustedProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[s
 
 
 def baseNameInCandidates( capitalisedNoun:str, rvCapitalisedWord:str, nameTableKey:str ) -> bool:
-    """Return True if the LV proper noun and the RV word are names recorded as 
+    """Return True if the LV proper noun and the RV word are names recorded as
         alternatives in the command-table name lists.
     We look both names up through their normalised forms (see normalizeNameKey()),
         because the OET-LV spelling often differs from the OET-LV command-table key
