@@ -58,7 +58,7 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-02-10' # by RJH
+LAST_MODIFIED_DATE = '2026-10-06' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET NT wordtable"
 PROGRAM_VERSION = '0.36'
@@ -100,29 +100,35 @@ def main() -> None:
     global state
     state = State()
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Reading existing table entries from {NT_WORD_TABLE_INPUT_FILEPATH}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Reading existing table entries from {NT_WORD_TABLE_INPUT_FILEPATH}…" )
     with open( NT_WORD_TABLE_INPUT_FILEPATH, 'rt', encoding='utf-8' ) as old_table_file:
         state.oldTable = old_table_file.read().rstrip( '\n' ).split( '\n' )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.oldTable):,} old table entries ({state.oldTable[0].count(TAB)+1} columns)." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.oldTable):,} old table entries ({state.oldTable[0].count(TAB)+1} columns)." )
 
     expand_table_columns() # Creates state.newTable from state.oldTable
 
     apply_VLT_scripted_gloss_updates()
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Reading Theographic Bible Data json entries from {JSON_VERSES_DB_FILEPATH}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Reading Theographic Bible Data json entries from {JSON_VERSES_DB_FILEPATH}…" )
     with open( JSON_VERSES_DB_FILEPATH, 'rt', encoding='utf-8' ) as json_file:
         state.verseIndex = json.load( json_file )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.verseIndex):,} json verse entries." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.verseIndex):,} json verse entries." )
 
     associate_Theographic_people_places()
 
     tag_trinity_persons()
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nReading Greek Macula tsv entries from {MACULA_GREEK_TSV_FILEPATH}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nReading Greek Macula tsv entries from {MACULA_GREEK_TSV_FILEPATH}…" )
     with open( MACULA_GREEK_TSV_FILEPATH, 'rt', encoding='utf-8' ) as macula_tsv_file:
         macula_tsv_lines = macula_tsv_file.readlines()
     if macula_tsv_lines[0].startswith( '\ufeff' ): # remove any BOM
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of source tsv file…" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of source tsv file…" )
         macula_tsv_lines[0] = macula_tsv_lines[0][1:]
     # Get the headers before we start
     column_line_string = macula_tsv_lines[0].rstrip( '\n' )
@@ -135,7 +141,8 @@ def main() -> None:
     state.macula_tsv_lines = []
     for macula_line in macula_tsv_lines:
         state.macula_tsv_lines.append( macula_line.rstrip( '\n' ).split( '\t' ) )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.macula_tsv_lines):,} Greek Macula table entries ({column_line_string.count(TAB)+1} columns)." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.macula_tsv_lines):,} Greek Macula table entries ({column_line_string.count(TAB)+1} columns)." )
 
     tag_referents_from_macula_data()
 
@@ -150,7 +157,8 @@ def expand_table_columns() -> bool:
         Tags (left empty)
     """
     columnHeaders = state.oldTable[0]
-    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Old word table column headers = '{columnHeaders}'" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Old word table column headers = '{columnHeaders}'" )
     assert columnHeaders == 'Ref\tGreekWord\tSRLemma\tGreekLemma\tVLTGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology' # If not, probably need to fix some stuff
 
     state.newTable = [ f"{columnHeaders.replace(f'{TAB}VLTGlossWords{TAB}',f'{TAB}VLTGlossWords{TAB}OETGlossWords{TAB}')}{TAB}Tags" ]
@@ -201,20 +209,24 @@ def apply_VLT_scripted_gloss_updates() -> bool:
 
     # Firstly we read the TOML control file
     filepath = SCRIPTED_UPDATES_TABLES_INPUT_FOLDERPATH.joinpath( 'ScriptedBibleEditor.control.toml' )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Loading control file: {filepath}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Loading control file: {filepath}…" )
     with open( filepath, 'rb' ) as controlFile:
         controlData = tomllib.load( controlFile )
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loading and applying transforms to {columnHeaders[5]} column…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loading and applying transforms to {columnHeaders[5]} column…" )
     totalChangedGlosses = 0
     commandTables = {}
     for commandTableName, givenFilepath in controlData['commandTables'].items():
         if commandTableName in ('fixGlossPre','fixGlossHelpers','fixGlossPost','cleanupVLT','finalFixes'): # These ones aren't relevant
-            vPrint( 'Info', DEBUGGING_THIS_MODULE, f" Completely ignoring command table file: {commandTableName}" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                vPrint( 'Info', DEBUGGING_THIS_MODULE, f" Completely ignoring command table file: {commandTableName}" )
             continue
         completeFilepath = SCRIPTED_UPDATES_TABLES_INPUT_FOLDERPATH.joinpath( givenFilepath )
         if os.path.isfile(completeFilepath):
-            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading command table file: {completeFilepath}…" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading command table file: {completeFilepath}…" )
             assert commandTableName not in commandTables
             commandTables[commandTableName] = []
             with open( completeFilepath, 'rt', encoding='utf-8' ) as commandTableFile:
@@ -304,7 +316,8 @@ def apply_VLT_scripted_gloss_updates() -> bool:
                     tags = tags.replace( 'c', '' ) # Can't even remember what this tag is from finalFixes 'JtB's announcement'
                     
                     # We're going to do the changes to the entire word table right here!
-                    vPrint( 'Info', DEBUGGING_THIS_MODULE, f"Applying {commandTableName}: {tags=} {iBooks=} {eBooks=} {iMarkers=} {eMarkers=} {iRefs=} {eRefs=} {editCommand.preText=} {editCommand.sCase=} {searchText=} {editCommand.postText=} {editCommand.rCase=} {replaceText=} {editCommand.name=} {editCommand.comment}" )
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"Applying {commandTableName}: {tags=} {iBooks=} {eBooks=} {iMarkers=} {eMarkers=} {iRefs=} {eRefs=} {editCommand.preText=} {editCommand.sCase=} {searchText=} {editCommand.postText=} {editCommand.rCase=} {replaceText=} {editCommand.name=} {editCommand.comment}" )
                     if iMarkers or eMarkers:
                         print( f"  Unable to apply '{commandTableName}' {iMarkers=} or {eMarkers=}" )
                         assert False, "We want to stop here"
@@ -321,7 +334,8 @@ def apply_VLT_scripted_gloss_updates() -> bool:
                         BBB, CV = bcvwRef.split( '_' )
                         if (iBooks and BBB not in iBooks) \
                         or BBB in eBooks:
-                            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Skipping {BBB} at {bcvwRef} with {iBooks=} {eBooks=}" )
+                            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Skipping {BBB} at {bcvwRef} with {iBooks=} {eBooks=}" )
                             continue
                         C, VW = CV.split( ':' )
                         V, W = VW.split( 'w' )
@@ -329,7 +343,8 @@ def apply_VLT_scripted_gloss_updates() -> bool:
                         if (iRefs and bcvRef not in iRefs) \
                         or bcvRef in eRefs:
                             if eRefs:
-                                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Skipping {bcvRef} at {bcvwRef} with {iRefs=} {eRefs=}" )
+                                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                                    vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Skipping {bcvRef} at {bcvwRef} with {iRefs=} {eRefs=}" )
                             continue 
                         assert C.isdigit(), f"{C=}"
                         assert V.isdigit(), f"{V=}"
@@ -357,7 +372,8 @@ def apply_VLT_scripted_gloss_updates() -> bool:
                                 searchStartIndex = match.start() + len(replaceText)
                                 numReplacements += 1
                         else:
-                            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Ignored {commandTableName} '{editCommand.name}' {editCommand.comment} {tags=}" )
+                            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+                                vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Ignored {commandTableName} '{editCommand.name}' {editCommand.comment} {tags=}" )
                             assert False, "We want to stop here"
 
                         if newGloss != oldGloss:
@@ -368,13 +384,16 @@ def apply_VLT_scripted_gloss_updates() -> bool:
                             numChangedGlosses += 1
                             totalChangedGlosses += 1
                     if numChangedGlosses:
-                        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"Made {numChangedGlosses:,} '{commandTableName}' OET gloss changes from scripted tables" )
+                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"Made {numChangedGlosses:,} '{commandTableName}' OET gloss changes from scripted tables" )
                     
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded and applied {len(commandTables[commandTableName])} command{'' if len(commandTables[commandTableName])==1 else 's'} for '{commandTableName}'." )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded and applied {len(commandTables[commandTableName])} command{'' if len(commandTables[commandTableName])==1 else 's'} for '{commandTableName}'." )
         else: vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      '{completeFilepath}' is not a file!" )
 
     if totalChangedGlosses:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Made total {totalChangedGlosses:,} OET gloss changes from scripted tables" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Made total {totalChangedGlosses:,} OET gloss changes from scripted tables" )
 
     return True
 # end of add_tags_to_NT_word_table.apply_VLT_scripted_gloss_updates
@@ -385,7 +404,8 @@ def associate_Theographic_people_places() -> bool:
     Using the Theographic Bible Data, tag Greek word lines in our table
         with keys for people, places, etc.
     """
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nAssociating Greek words with json keys…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nAssociating Greek words with json keys…" )
 
     # columnHeaders = state.oldTable[0]
     # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Old word table column headers = '{columnHeaders}'" )
@@ -409,9 +429,11 @@ def associate_Theographic_people_places() -> bool:
         assert not verseLinkEntry['peopleGroups'] # Why is this true??? Ah, because only has a handful of OT references!!!
 
         if 'U' in glossCaps: # or 'G' in glossCaps: ???
-            dPrint( 'Never', DEBUGGING_THIS_MODULE, f"{wordRef} {verseLinkEntry=}" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 5:
+                dPrint( 'Never', DEBUGGING_THIS_MODULE, f"{wordRef} {verseLinkEntry=}" )
             if verseLinkEntry['people']:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Need to add people: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{VLTglossWords}' {verseLinkEntry['people']}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Need to add people: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{VLTglossWords}' {verseLinkEntry['people']}")
                 assert isinstance( verseLinkEntry['people'], list )
                 for personID in verseLinkEntry['people']:
                     assert personID[0] == 'P' and ' ' not in personID and ';' not in personID
@@ -420,7 +442,8 @@ def associate_Theographic_people_places() -> bool:
                         personName = personName[:-1] # Drop the final digit
                     if personName in VLTglossWords:
                         tags.append( personID )
-                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{personID}' to {wordRef} for '{VLTglossWords}'")
+                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{personID}' to {wordRef} for '{VLTglossWords}'")
                         numAddedPeople += 1
                     else:
                         for thgName,srName in (('Israel','Jacob'),('Pharez','Perez'),('Zerah','Zara'),('Tamar','Thamar'),('Hezron','Esrom'),('Ram','Aram'),('Amminadab','Aminadab'),('Nahshon','Naasson'),
@@ -428,11 +451,13 @@ def associate_Theographic_people_places() -> bool:
                                                ('Jehoiachin','Jechonias'),('Shealtiel','Salathiel'),('Zerubbabel','Zorobabel'),('Sadoc','Zadok')):
                             if personName==thgName and srName in VLTglossWords:
                                 tags.append( personID )
-                                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{personID}' to {wordRef} for '{VLTglossWords}'")
+                                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{personID}' to {wordRef} for '{VLTglossWords}'")
                                 numAddedPeople += 1
                                 break
             if verseLinkEntry['places']:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Need to add places: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{VLTglossWords}' {verseLinkEntry['places']}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Need to add places: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{VLTglossWords}' {verseLinkEntry['places']}")
                 assert isinstance( verseLinkEntry['places'], list )
                 for placeID in verseLinkEntry['places']:
                     assert placeID[0] == 'L'
@@ -442,7 +467,8 @@ def associate_Theographic_people_places() -> bool:
                     if placeName in VLTglossWords:
                         assert ' ' not in placeID and ';' not in placeID
                         tags.append( placeID )
-                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{placeID}' to {wordRef} for '{VLTglossWords}'")
+                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{placeID}' to {wordRef} for '{VLTglossWords}'")
                         numAddedLocations += 1
         if probability: # and newVerse: # These ones we can link to the first (included) word in the verse
             # newVerse = False
@@ -460,15 +486,18 @@ def associate_Theographic_people_places() -> bool:
                 #     dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Added '{pgID}' to {ref}")
                 #     assert False, "We want to stop here"
             if verseLinkEntry['yearNum']:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add year number: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{VLTglossWords}' {verseLinkEntry['yearNum']}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add year number: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{VLTglossWords}' {verseLinkEntry['yearNum']}")
                 assert isinstance( verseLinkEntry['yearNum'], str )
                 tag = f"Y{verseLinkEntry['yearNum']}"
                 assert ' ' not in tag and ';' not in tag
                 tags.append( tag )
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
                 numAddedYears += 1
             if verseLinkEntry['eventsDescribed']:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add events: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{VLTglossWords}' {verseLinkEntry['eventsDescribed']}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add events: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{VLTglossWords}' {verseLinkEntry['eventsDescribed']}")
                 assert isinstance( verseLinkEntry['eventsDescribed'], list )
                 for eventID in verseLinkEntry['eventsDescribed']:
                     # personName = personID[1:] # First prefix letter is P for person
@@ -477,15 +506,18 @@ def associate_Theographic_people_places() -> bool:
                     tag = f"E{eventID.replace(' ','_')}"
                     assert ' ' not in tag and ';' not in tag
                     tags.append( tag )
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
                     numAddedEvents += 1
             if verseLinkEntry['timeline']:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add timeline: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{VLTglossWords}' {verseLinkEntry['timeline']}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add timeline: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{VLTglossWords}' {verseLinkEntry['timeline']}")
                 assert isinstance( verseLinkEntry['timeline'], str )
                 tag = f"T{verseLinkEntry['timeline'].replace(' ','_')}"
                 assert ' ' not in tag and ';' not in tag
                 tags.append( tag )
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
                 numAddedTimelines += 1
         # Put the new column in the table
         # print( f"{n=} {columns_string=} {tags=}" )
@@ -495,7 +527,8 @@ def associate_Theographic_people_places() -> bool:
         state.newTable[n] = newLine
         # lastVerseRef = verseRef
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{numAddedPeople=:,} {numAddedPeopleGroups=:,} {numAddedLocations=:,} {numAddedEvents=:,} {numAddedYears=:,} {numAddedTimelines=:,}" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{numAddedPeople=:,} {numAddedPeopleGroups=:,} {numAddedLocations=:,} {numAddedEvents=:,} {numAddedYears=:,} {numAddedTimelines=:,}" )
 
     assert len(state.newTable) == EXPECTED_WORD_TABLE_DATA_ROW_COUNT+1, f"{EXPECTED_WORD_TABLE_DATA_ROW_COUNT=} {len(state.newTable)}"
     return True
@@ -526,7 +559,8 @@ def tag_trinity_persons() -> bool:
         ●    e – emphasized words (scare quotes)
     The lowercase letters mark other significant places where the words are not normally capitalized.
     """
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nTagging trinity persons in our table…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nTagging trinity persons in our table…" )
 
     # Expect column headers 'Ref\tGreekWord\tSRLemma\tGreekLemma\tVLTGlossWords\tOETGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\tTags'
     columnHeaders = state.newTable[0].split( '\t' )
@@ -563,7 +597,8 @@ def tag_trinity_persons() -> bool:
             assert newLine.count( '\t' ) == 11, f"{newLine.count(TAB)} {newLine=}"
             state.newTable[n] = newLine
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {numAddedGod=:,} {numAddedJesus=:,} {numAddedHolySpirit=:,} Total added={numAddedGod+numAddedJesus+numAddedHolySpirit:,}" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {numAddedGod=:,} {numAddedJesus=:,} {numAddedHolySpirit=:,} Total added={numAddedGod+numAddedJesus+numAddedHolySpirit:,}" )
     return True
 # end of add_tags_to_NT_word_table.tag_trinity_persons
 
@@ -583,7 +618,8 @@ def tag_referents_from_macula_data() -> bool:
     """
     # global DEBUGGING_THIS_MODULE
     # DEBUGGING_THIS_MODULE = 99
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nAssociating Macula referents with our table entries…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nAssociating Macula referents with our table entries…" )
 
     # First make a book index into our table (for greater search efficiency down below)
     lastBBB = None
@@ -607,7 +643,8 @@ def tag_referents_from_macula_data() -> bool:
     for n,maculaRowList in enumerate( state.macula_tsv_lines[1:], start=1 ):
         BBB = maculaRowList[0][:3]
         if BBB != lastBBB:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Processing {BBB}…")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Processing {BBB}…")
             bookStartIndex,bookEndIndex = ourBBBIndex[BBB]
             lastBBB = BBB
         # if n > 110: break
@@ -617,10 +654,12 @@ def tag_referents_from_macula_data() -> bool:
             # dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{n} ({type(maculaRowList)}) {maculaRowList}" )
             referentIDs = maculaRowList[16].split( ';' )
             referentWordID, referentGreek = maculaRowList[0], maculaRowList[3]
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {referentWordID} ({maculaRowList[5]}) '{referentGreek}' ({len(referentIDs)}) {referentIDs}")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {referentWordID} ({maculaRowList[5]}) '{referentGreek}' ({len(referentIDs)}) {referentIDs}")
             for referentID in referentIDs:
                 fullReferentID = f'{maculaRowList[0][:4]}{referentID}' # Add the bookcode in
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Need to find {fullReferentID}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Need to find {fullReferentID}")
 
                 # So do we need to search backwards or forwards?
                 referentC, referentV, referentW = int(referentWordID[4:].split(':')[0]), int(referentWordID[4:].split(':')[-1].split('w')[0]), int(referentWordID[4:].split('w')[-1])
@@ -635,7 +674,8 @@ def tag_referents_from_macula_data() -> bool:
                 offsetAmount = (abs(referentC-referredC)+1)*50*40 if searchAmount[1]=='C' else (abs(referentV-referredV)+1)*40 if searchAmount[1]=='V' else 30
                 if searchAmount[0]=='-': offsetAmount = -offsetAmount; step = -1
                 else: step = 1
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    Got {searchAmount=} going from {referentWordID} ({referentC},{referentV},{referentW}) to {referentID} ({referredC},{referredV},{referredW}) so {offsetAmount=} and {step=}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    Got {searchAmount=} going from {referentWordID} ({referentC},{referentV},{referentW}) to {referentID} ({referredC},{referredV},{referredW}) so {offsetAmount=} and {step=}")
                 # Firstly we also have to find the referred word in the macula table
                 # Usually it's before the referent, but can be after, e.g., "and you, Bethlehem"
                 for m in range( n, n+offsetAmount, step ):
@@ -644,11 +684,13 @@ def tag_referents_from_macula_data() -> bool:
                         # print( f"      Found {m} {state.macula_tsv_lines[m]}")
                         break
                 else:
-                    dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Got {searchAmount=} going from {referentWordID} ({referentC},{referentV},{referentW}) to {referentID} ({referredC},{referredV},{referredW}) so {offsetAmount=} and {step=}")
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 2:
+                        dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Got {searchAmount=} going from {referentWordID} ({referentC},{referentV},{referentW}) to {referentID} ({referredC},{referredV},{referredW}) so {offsetAmount=} and {step=}")
                     logging.critical( f"<<<< @{referentWordID} can't find {fullReferentID} '{referentGreek}' >>>>" )
                 referredWordID, referredGreekWord = state.macula_tsv_lines[m][0], state.macula_tsv_lines[m][3]
                 # We expect that the referredWordID is BEFORE the referentWordID
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    {referentWordID=} {referentGreek=} {referredWordID=} {referredGreekWord=}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    {referentWordID=} {referentGreek=} {referredWordID=} {referredGreekWord=}")
 
                 # Find the parts of our table for this verse / verses
                 referentVerseID, referredVerseID = referentWordID.split('w')[0], referredWordID.split('w')[0]
@@ -668,7 +710,8 @@ def tag_referents_from_macula_data() -> bool:
                     if rowItems[1] == referentGreek:
                         # print( f"  REFERENT {p} {rowItems}" )
                         possibleReferentRowIndices.append( p )
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Found {len(possibleReferentRowIndices)}/{len(ourReferentVerseRowIndices)} referent verse row(s) that might match {referentWordID} '{referentGreek}'")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Found {len(possibleReferentRowIndices)}/{len(ourReferentVerseRowIndices)} referent verse row(s) that might match {referentWordID} '{referentGreek}'")
 
                 # Now try to find the referred Greek word
                 possibleReferredRowIndices = []
@@ -677,7 +720,8 @@ def tag_referents_from_macula_data() -> bool:
                     if rowItems[1] == referredGreekWord:
                         # print( f"  REFERRED {p} {rowItems}" )
                         possibleReferredRowIndices.append( p )
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Found {len(possibleReferredRowIndices)}/{len(ourReferredVerseRowIndices)} referred verse row(s) that might match {referentWordID} '{referredGreekWord}'")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Found {len(possibleReferredRowIndices)}/{len(ourReferredVerseRowIndices)} referred verse row(s) that might match {referentWordID} '{referredGreekWord}'")
                 
                 if not possibleReferredRowIndices: # have a second attempt
                     for p in ourReferredVerseRowIndices:
@@ -686,7 +730,8 @@ def tag_referents_from_macula_data() -> bool:
                             # print( f"  REFERRED {p} {rowItems}" )
                             possibleReferredRowIndices.append( p )
                         # else: print( f"{rowItems[1][:4]} != {referredGreekWord[:4]}")
-                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Loosely found {len(possibleReferredRowIndices)} referred verse row(s) that might match {referentWordID} '{referredGreekWord}'")
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Loosely found {len(possibleReferredRowIndices)} referred verse row(s) that might match {referentWordID} '{referredGreekWord}'")
 
                 def appendNewTags( ixReferent:int, ixReferred:int ):
                     """
@@ -701,7 +746,8 @@ def tag_referents_from_macula_data() -> bool:
                     Uses many global variables as well as the declared nonlocal ones.
                     """
                     nonlocal totalReferencePairAdds, totalPersonAdds, totalLocationAdds, totalAdds
-                    fnPrint( DEBUGGING_THIS_MODULE, f"appendNewTags( {ixReferent=}, {ixReferred=} )" )
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+                        fnPrint( DEBUGGING_THIS_MODULE, f"appendNewTags( {ixReferent=}, {ixReferred=} )" )
 
                     referrentRowIndex = possibleReferentRowIndices[ixReferent]
                     referredRowIndex = possibleReferredRowIndices[ixReferred]
@@ -748,13 +794,17 @@ def tag_referents_from_macula_data() -> bool:
                 # end of appendNewTags function
 
                 if not possibleReferentRowIndices:
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    <<< Unable to find referent {referentVerseID} '{referentGreek}' in {len(possibleReferentRowIndices)} rows >>>")
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    <<< Unable to find referent {referentVerseID} '{referentGreek}' in {len(possibleReferentRowIndices)} rows >>>")
                     for p in ourReferentVerseRowIndices:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
+                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
                 elif not possibleReferredRowIndices:
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    <<< Unable to find referred {referredVerseID} '{referredGreekWord}' in {len(possibleReferredRowIndices)} rows >>>")
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    <<< Unable to find referred {referredVerseID} '{referredGreekWord}' in {len(possibleReferredRowIndices)} rows >>>")
                     for p in ourReferredVerseRowIndices:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
+                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
 
                 elif len(possibleReferentRowIndices)==1 and len(possibleReferredRowIndices)==1: # This is the easiest case
                     appendNewTags( ixReferent=0, ixReferred=0 )
@@ -763,11 +813,13 @@ def tag_referents_from_macula_data() -> bool:
                     referentWordNumber = int( referentWordID.split('w')[-1] )
                     possibleWordNumbers = []
                     for p in possibleReferentRowIndices:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
+                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
                         possibleWordNumbers.append( int( state.newTable[p].split(TAB)[0].split('w')[-1] ) )
                     wordNumberDistances = [abs(referentWordNumber-possibleWordNumber) for possibleWordNumber in possibleWordNumbers]
                     minWordNumberDistance = min( wordNumberDistances )
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Have {referentWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Have {referentWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
                     if wordNumberDistances.count( minWordNumberDistance ) == 1: # only one has this minimum distance
                         appendNewTags( ixReferent=wordNumberDistances.index( minWordNumberDistance ), ixReferred=0 )
                 elif len(possibleReferentRowIndices) == 1: # we know where we're coming from
@@ -775,11 +827,13 @@ def tag_referents_from_macula_data() -> bool:
                     referredWordNumber = int( referredWordID.split('w')[-1] )
                     possibleWordNumbers = []
                     for p in possibleReferredRowIndices:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
+                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
                         possibleWordNumbers.append( int( state.newTable[p].split(TAB)[0].split('w')[-1] ) )
                     wordNumberDistances = [abs(referredWordNumber-possibleWordNumber) for possibleWordNumber in possibleWordNumbers]
                     minWordNumberDistance = min( wordNumberDistances )
-                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"      Have {referredWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"      Have {referredWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
                     if wordNumberDistances.count( minWordNumberDistance ) == 1: # only one has this minimum distance
                         appendNewTags( ixReferent=0, ixReferred=wordNumberDistances.index( minWordNumberDistance ) )
                 else:
@@ -793,22 +847,26 @@ def tag_referents_from_macula_data() -> bool:
                     referentWordNumber = int( referentWordID.split('w')[-1] )
                     possibleWordNumbers = []
                     for p in possibleReferentRowIndices:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
+                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
                         possibleWordNumbers.append( int( state.newTable[p].split(TAB)[0].split('w')[-1] ) )
                     wordNumberDistances = [abs(referentWordNumber-possibleWordNumber) for possibleWordNumber in possibleWordNumbers]
                     minWordNumberDistance = min( wordNumberDistances )
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Have {referentWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Have {referentWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
                     if wordNumberDistances.count( minWordNumberDistance ) == 1: # only one has this minimum distance
                         ixReferent = wordNumberDistances.index( minWordNumberDistance )
 
                     referredWordNumber = int( referredWordID.split('w')[-1] )
                     possibleWordNumbers = []
                     for p in possibleReferredRowIndices:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
+                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
                         possibleWordNumbers.append( int( state.newTable[p].split(TAB)[0].split('w')[-1] ) )
                     wordNumberDistances = [abs(referredWordNumber-possibleWordNumber) for possibleWordNumber in possibleWordNumbers]
                     minWordNumberDistance = min( wordNumberDistances )
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Have {referredWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Have {referredWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
                     if wordNumberDistances.count( minWordNumberDistance ) == 1: # only one has this minimum distance
                         ixReferred = wordNumberDistances.index( minWordNumberDistance )
 
@@ -823,11 +881,16 @@ def tag_referents_from_macula_data() -> bool:
                     try: del ixReferred 
                     except UnboundLocalError: pass
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Added {totalPersonAdds:,} referred person tags")
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Added {totalLocationAdds:,} referred location tags")
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Added {totalAdds:,} total referred person/location tags")
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Added {totalReferencePairAdds:,} total back/forth referrent tag pairs")
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Skipped {numUnmatched:,} referrent tag pairs (probably GNT differences)")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Added {totalPersonAdds:,} referred person tags")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Added {totalLocationAdds:,} referred location tags")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Added {totalAdds:,} total referred person/location tags")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Added {totalReferencePairAdds:,} total back/forth referrent tag pairs")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Skipped {numUnmatched:,} referrent tag pairs (probably GNT differences)")
     return True
 # end of add_tags_to_NT_word_table.tag_referents_from_macula_data
 
@@ -843,7 +906,8 @@ def write_new_table() -> bool:
         for line in state.newTable:
             assert line.count( '\t' ) == 11, f"{line.count(TAB)} {line=}"
             new_table_output_file.write( f'{line}\n' )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Wrote {len(state.newTable):,} lines to {NT_WORD_TABLE_OUTPUT_FILEPATH} ({state.newTable[0].count(TAB)+1} columns).")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Wrote {len(state.newTable):,} lines to {NT_WORD_TABLE_OUTPUT_FILEPATH} ({state.newTable[0].count(TAB)+1} columns).")
 
     # Also use the same word file for the OET-RV -- now done in the makefile
     # shutil.copy2( NT_WORD_TABLE_OUTPUT_FILEPATH, RV_ESFM_OUTPUT_FOLDERPATH.joinpath( NT_WORD_TABLE_OUTPUT_FILENAME ) )

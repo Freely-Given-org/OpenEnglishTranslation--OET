@@ -34,7 +34,7 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2025-10-10' # by RJH
+LAST_MODIFIED_DATE = '2026-10-06' # by RJH
 SHORT_PROGRAM_NAME = "create_OET-LV_TSV_name_table"
 PROGRAM_NAME = "Make OET-LV name table"
 PROGRAM_VERSION = '0.20'
@@ -80,14 +80,17 @@ def load_OET_LV_OT_names() -> bool:
     """
     Load the names we use from the tsv names table
     """
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Loading {OET_LV_OT_Names_Filepath}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Loading {OET_LV_OT_Names_Filepath}…" )
     with open( OET_LV_OT_Names_Filepath, 'rt', encoding='utf-8') as inputTSVFile:
         initialTSVLines = inputTSVFile.read().rstrip().split( '\n' )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {len(initialTSVLines):,} lines loaded from {OET_LV_OT_Names_Filepath.name}.\n" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {len(initialTSVLines):,} lines loaded from {OET_LV_OT_Names_Filepath.name}.\n" )
 
     # Remove any BOM
     if initialTSVLines[0].startswith("\ufeff"):
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of TSV file…")
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of TSV file…")
         initialTSVLines[0] = initialTSVLines[0][1:]
     assert initialTSVLines[0] == EXPECTED_COMMAND_TABLE_HEADER
 
@@ -109,7 +112,8 @@ def load_OET_LV_OT_names() -> bool:
         transliteratedHebrewName = transliterate_Hebrew( hebrewName, capitalise_hebrew=lvOTName[0].isupper() )
         OET_LV_OT_NAMES_SET.add( (lvOTName,transliteratedHebrewName) )
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(OET_LV_OT_NAMES_SET):,} OET-LV OT name pairs." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(OET_LV_OT_NAMES_SET):,} OET-LV OT name pairs." )
     # print( list(OET_LV_OT_NAMES_SET)[:10]); assert False, "We want to stop here"
     return True
 # end of spellCheckEnglish.load_OET_LV_names
@@ -121,14 +125,17 @@ def load_OET_LV_NT_names() -> bool:
     Load the names we use from the two tsv names tables
     """
     for filepath in (OET_LV_NT_OT_Filepath, OET_LV_NT_NT_Filepath):
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Loading {filepath}…" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Loading {filepath}…" )
         with open( filepath, 'rt', encoding='utf-8') as inputTSVFile:
             initialTSVLines = inputTSVFile.read().rstrip().split( '\n' )
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {len(initialTSVLines):,} lines loaded from {filepath.name}.\n" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {len(initialTSVLines):,} lines loaded from {filepath.name}.\n" )
 
         # Remove any BOM
         if initialTSVLines[0].startswith("\ufeff"):
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of TSV file…")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of TSV file…")
             initialTSVLines[0] = initialTSVLines[0][1:]
         assert initialTSVLines[0] == EXPECTED_COMMAND_TABLE_HEADER
 
@@ -160,7 +167,8 @@ def load_OET_LV_NT_names() -> bool:
                 transliteratedHebrewName = transliterate_Hebrew( hebrewName, capitalise_hebrew=lvNTName[0].isupper() )
                 OET_LV_OT_NAMES_SET.add( (lvNTName,transliteratedHebrewName) )
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(OET_LV_NT_NAMES_SET):,} OET-LV NT names." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(OET_LV_NT_NAMES_SET):,} OET-LV NT names." )
     # print( list(OET_LV_NT_NAMES_SET)[:10]); assert False, "We want to stop here"
     return True
 # end of spellCheckEnglish.load_OET_RV_names
@@ -169,11 +177,13 @@ def load_OET_LV_NT_names() -> bool:
 def create_OET_LV_name_table() -> bool:
     """
     """
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Create OET-LV TSV name table…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Create OET-LV TSV name table…" )
 
     combinedSet = OET_LV_OT_NAMES_SET
     combinedSet.update( OET_LV_NT_NAMES_SET )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Have a total of {len(combinedSet):,} OET-LV names." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Have a total of {len(combinedSet):,} OET-LV names." )
 
     with open( OET_LV_NAMES_TSV_OUTPUT_FILEPATH, 'wt', encoding='utf-8' ) as outputFile:
         outputFile.write( f"{OET_LV_NAMES_TSV_HEADER}\n" )
@@ -181,7 +191,8 @@ def create_OET_LV_name_table() -> bool:
             # print( f"{engName=} {origLanguageName=}" )
             outputFile.write( f"{engName}\t{origLanguageName}\n" )
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {len(combinedSet):,} OET-LV names to {OET_LV_NAMES_TSV_OUTPUT_FILEPATH.name}." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {len(combinedSet):,} OET-LV names to {OET_LV_NAMES_TSV_OUTPUT_FILEPATH.name}." )
     return True
 # end of create_OET-LV_TSV_name_table.spellCheckOET_RV
 

@@ -54,7 +54,7 @@ from bible_organisational_system import InternalBibleEntryList
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-09-23' # by RJH
+LAST_MODIFIED_DATE = '2026-10-06' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_USFM_to_VPL"
 PROGRAM_NAME = "Convert OET LV & RV USFM files to Verse-per-line format"
 PROGRAM_VERSION = '0.15'
@@ -80,7 +80,8 @@ def main():
     # Convert both USFM Bibles into VPL
     for VV in ('LV','RV'):
         versionAbbreviation = f'OET-{VV}'
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nProcessing {versionAbbreviation}…" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nProcessing {versionAbbreviation}…" )
 
         # Ensure that our output folder exists and define our outfile file
         outputFolderpath = VREF_OutputFolderPath #.joinpath( f'{VV}/' )
@@ -88,11 +89,13 @@ def main():
         outputFilename = f'{versionAbbreviation}.vpl'
         outputFilepath = outputFolderpath.joinpath( outputFilename )
 
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Preloading '{versionAbbreviation}' USFM Bible…" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Preloading '{versionAbbreviation}' USFM Bible…" )
         thisBible = USFMBible.USFMBible( OET_RV_USFM_InputFolderPath if VV=='RV' else OET_LV_USFM_InputFolderPath,
                                         givenAbbreviation=versionAbbreviation, encoding='utf-8' )
         thisBible.loadBooks() # So we can iterate through them all below
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"preloadVersion() loaded {thisBible}" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"preloadVersion() loaded {thisBible}" )
 
         totalLinesWritten = blankLinesWritten = verseLinesWritten = versificationErrorCount = 0
         with open( outputFilepath, 'wt', encoding='utf-8' ) as vplOutputFile:
@@ -179,7 +182,8 @@ def main():
                         vplOutputFile.write( f'{ref}\t{verseText}\n' )
                         verseLinesWritten += 1
                         totalLinesWritten += 1
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Wrote {totalLinesWritten:,} lines to OET-{VV} file ({verseLinesWritten:,} verses, {versificationErrorCount:,} versification problems, {blankLinesWritten:,} blank)." )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Wrote {totalLinesWritten:,} lines to OET-{VV} file ({verseLinesWritten:,} verses, {versificationErrorCount:,} versification problems, {blankLinesWritten:,} blank)." )
 # end of convert_OET-LV-RV_USFM_to_VPL.main
 
 

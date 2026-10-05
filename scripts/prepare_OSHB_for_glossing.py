@@ -47,7 +47,7 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.OriginalLanguages import Hebrew
 
 
-LAST_MODIFIED_DATE = '2025-06-26' # by RJH
+LAST_MODIFIED_DATE = '2026-10-06' # by RJH
 SHORT_PROGRAM_NAME = "Prepare_OSHB_for_glossing"
 PROGRAM_NAME = "Prepare OSHB for glossing"
 PROGRAM_VERSION = '0.52'
@@ -107,19 +107,23 @@ def loadWLCSourceTable() -> bool:
     but also loads it into state.WLC_rows
     """
     global WLC_tsv_column_headers
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading WLC tsv file from {state.OSHB_TSV_input_filepath}…")
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_WLC_COLUMNS} columns…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading WLC tsv file from {state.OSHB_TSV_input_filepath}…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_WLC_COLUMNS} columns…")
     with open(state.OSHB_TSV_input_filepath, 'rt', encoding='utf-8') as tsv_file:
         tsv_lines = tsv_file.readlines()
 
     # Remove any BOM
     if tsv_lines[0].startswith("\ufeff"):
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of WLC tsv file…")
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of WLC tsv file…")
         tsv_lines[0] = tsv_lines[0][1:]
 
     # Get the headers before we start
     WLC_tsv_column_headers = [header for header in tsv_lines[0].strip().split('\t')]
-    dPrint('Info', DEBUGGING_THIS_MODULE, f"Column headers: ({len(WLC_tsv_column_headers)}): {WLC_tsv_column_headers}")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+        dPrint('Info', DEBUGGING_THIS_MODULE, f"Column headers: ({len(WLC_tsv_column_headers)}): {WLC_tsv_column_headers}")
     assert len(WLC_tsv_column_headers) == NUM_EXPECTED_WLC_COLUMNS
 
     # Read, check the number of columns, and summarise row contents all in one go
@@ -133,7 +137,8 @@ def loadWLCSourceTable() -> bool:
         state.WLC_rows.append(row)
         row_type = row['RowType']
         if row_type != 'm' and assembled_word:
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{assembled_word=}")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{assembled_word=}")
             unique_words.add(assembled_word)
             assembled_word = ''
         if row_type == 'seg':
@@ -157,11 +162,16 @@ def loadWLCSourceTable() -> bool:
         #             WLC_tsv_column_max_length_counts[key] = len(value)
         #         WLC_tsv_column_non_blank_counts[key] += 1
         #     WLC_tsv_column_counts[key][value] += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.WLC_rows):,} (tsv) WLC data rows.")
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Have {len(unique_words):,} unique Hebrew words.")
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Have {len(unique_morphemes):,} unique Hebrew morphemes.")
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Have {seg_count:,} Hebrew segment markers.")
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Have {note_count:,} notes.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.WLC_rows):,} (tsv) WLC data rows.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Have {len(unique_words):,} unique Hebrew words.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Have {len(unique_morphemes):,} unique Hebrew morphemes.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Have {seg_count:,} Hebrew segment markers.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Have {note_count:,} notes.")
 
     return True
 # end of prepare_OSHB_for_glossing.loadWLCSourceTable
@@ -183,7 +193,8 @@ def create_expanded_TSV_table() -> bool:
 
     Also mark the last morpheme in a word-set with M (instead of m)
     """
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE,  f"\nCreating expanded TSV table with {len(state.expanded_headers)} columns…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE,  f"\nCreating expanded TSV table with {len(state.expanded_headers)} columns…" )
     new_rows = []
     last_OSIS_base_id, last_row = '', []
     last_V = 0
@@ -262,10 +273,12 @@ def prefill_known_glosses() -> bool:
     Load our text file with our exported OT glosses (from our BibleOrgSys Interlineariser.py)
         and apply the glosses to the OSHB TSV table.
     """
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "\n  Prefilling TSV table with our own previously known glosses…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "\n  Prefilling TSV table with our own previously known glosses…")
 
     # Firstly, load all of our own predone WLC glosses into dicts
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loading previously done glosses from {state.our_predone_glosses_filepath}…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loading previously done glosses from {state.our_predone_glosses_filepath}…")
     ourPredoneWordGlossDict = {}
     morphemeGlossDict = defaultdict(set)
     wordsSpecificGlossesDict, refsSpecificGlossesDict = {}, {}
@@ -304,7 +317,8 @@ def prefill_known_glosses() -> bool:
     assert len(wordsSpecificGlossesDict) == len(refsSpecificGlossesDict)
 
     # Now apply those predone glosses to the WLC rows
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Applying {len(ourPredoneWordGlossDict):,} word and {len(morphemeGlossDict):,} morpheme glosses and {len(refsSpecificGlossesDict):,} specific glosses…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Applying {len(ourPredoneWordGlossDict):,} word and {len(morphemeGlossDict):,} morpheme glosses and {len(refsSpecificGlossesDict):,} specific glosses…")
     numAppliedWordGlosses = numAppliedMorphemeGlosses = numAppliedSpecificGlosses = numManualMorphemeGlosses = 0
     combinedMorphemes = ''
     verseSegNoteCount = 0
@@ -376,8 +390,9 @@ def prefill_known_glosses() -> bool:
             combinedMorphemes = '' # reset
         lastVerseRef = thisVerseRef
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      Applied {numAppliedWordGlosses:,} word and {numAppliedMorphemeGlosses:,} morpheme glosses\n"
-          f"        with {numManualMorphemeGlosses:,} manual morphome glosses and {numAppliedSpecificGlosses:,} specific glosses…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      Applied {numAppliedWordGlosses:,} word and {numAppliedMorphemeGlosses:,} morpheme glosses\n"
+              f"        with {numManualMorphemeGlosses:,} manual morphome glosses and {numAppliedSpecificGlosses:,} specific glosses…")
 
     return True
 # end of prepare_OSHB_for_glossing.prefill_known_glosses
@@ -387,13 +402,15 @@ def save_expanded_TSV_file() -> bool:
     """
     Write the expanded and pre-filled WLC rows to a file.
     """
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE,  f"\nExporting adjusted WLC table as a single flat TSV file to {state.TSV_output_filepath}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE,  f"\nExporting adjusted WLC table as a single flat TSV file to {state.TSV_output_filepath}…" )
     with open( state.TSV_output_filepath, 'wt', encoding='utf-8', newline='' ) as tsv_output_file:
         tsv_output_file.write('\ufeff') # Write BOM
         writer = DictWriter( tsv_output_file, fieldnames=state.expanded_headers, delimiter='\t', lineterminator='\n' )
         writer.writeheader()
         writer.writerows( state.WLC_rows )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE,  f"  {len(state.WLC_rows):,} data rows written." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE,  f"  {len(state.WLC_rows):,} data rows written." )
 
     return True
 # end of prepare_OSHB_for_glossing.save_expanded_TSV_file

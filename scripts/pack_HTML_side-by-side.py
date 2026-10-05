@@ -44,7 +44,7 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-05-08' # by RJH
+LAST_MODIFIED_DATE = '2026-10-06' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
 PROGRAM_VERSION = '0.63'
@@ -1549,7 +1549,8 @@ genericBookList = []
 def pack_HTML_files() -> None:
     """
     """
-    fnPrint( DEBUGGING_THIS_MODULE, "pack_HTML_files()" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, "pack_HTML_files()" )
 
     numBooksProcessed = 0
     for BBB in genericBookList: # includes intro, etc.
@@ -1656,7 +1657,8 @@ def pack_HTML_files() -> None:
     #                             f'<p><a href="index.html">OET-RV-LV Index</a></p>\n{whole_NT_html}\n'
     #                             f'<p><a href="index.html">OET-RV-LV Index</a></p>\n{END_HTML}' )
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Finished processing {numBooksProcessed} HTML books." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Finished processing {numBooksProcessed} HTML books." )
 # end of pack_HTML_side-by-side.pack_HTML_files()
 
 
@@ -1665,7 +1667,8 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
     We use the RV USFM to find the book name, etc.
         Also we use the intro from the RV HTML.
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"extract_and_combine_simple_HTML( {BBB}, ({len(rvUSFM):,}), ({len(rvHTML):,}), ({len(lvHTML):,}) )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"extract_and_combine_simple_HTML( {BBB}, ({len(rvUSFM):,}), ({len(rvHTML):,}), ({len(lvHTML):,}) )" )
 
     if BBB in BOOKLIST_OT39:
         links_html = BACK_FORTH_LINKS_HTML_TEMPLATE.replace('__REST__', '' ) #'Whole <a href="OET-RV-LV-Torah.html">Torah/Pentateuch</a> (for easy searching of multiple books, etc.)' )
@@ -1781,14 +1784,16 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
     hadVersificationErrors = False
     for n, (rvStartCV, rvEndCV, rvSectionHTML) in enumerate( rvHTMLExpandedSections ):
         nextStartCV = rvHTMLExpandedSections[n+1][0] if n < len(rvHTMLExpandedSections)-1 else 'DONE'
-        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"\n{BBB} {n}/{len(rvHTMLExpandedSections)}: {rvStartCV=} {rvEndCV=} {nextStartCV=} {lastLVindex=} lvSectionHTML='{lvMidHHTML[lastLVindex:lastLVindex+60]}...'" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"\n{BBB} {n}/{len(rvHTMLExpandedSections)}: {rvStartCV=} {rvEndCV=} {nextStartCV=} {lastLVindex=} lvSectionHTML='{lvMidHHTML[lastLVindex:lastLVindex+60]}...'" )
         lvSectionHTML = lvMidHHTML[lastLVindex:]
         if not rvStartCV:
             # assert n == 0 ??? No longer true now we have book introductions
             # assert lastLVindex == 0 ??? No longer true now we have book introductions
             LVindex1 = lvSectionHTML.index( '<p class="LVsentence" id="C1">' )
             section = lvSectionHTML[:LVindex1]
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} '{lvSectionHTML[:LVindex1]}' then '{section[:60]}...{section[-30:]}'" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} '{lvSectionHTML[:LVindex1]}' then '{section[:60]}...{section[-30:]}'" )
             if section == '<div class="BibleText">\n': section = ''
             # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"A ({len(section):,}) '{section}'" ); assert False, "We want to stop here"
             lastLVindex = LVindex1
@@ -1796,7 +1801,8 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
             LVindex1 = lvSectionHTML.index( f'<p class="LVsentence" id="C1">' )
             if nextStartCV == 'DONE':
                 section = lvSectionHTML[LVindex1:]
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} remaining chars '{lvSectionHTML[:LVindex1]}' then '{lvSectionHTML[LVindex1:LVindex1+60]}...'" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} remaining chars '{lvSectionHTML[:LVindex1]}' then '{lvSectionHTML[LVindex1:LVindex1+60]}...'" )
                 # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"B1 ({len(section):,}) '{section}'" ); assert False, "We want to stop here"
             else:
                 LVindex9 = lvSectionHTML.index( f' id="{nextStartCV}"', LVindex1+24 )
@@ -1806,10 +1812,12 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
                     if lvSectionHTML[LVindex8] == '<':
                         break
                 else:
-                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvSectionHTML[LVindex8-50:LVindex8+50]}")
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvSectionHTML[LVindex8-50:LVindex8+50]}")
                     not_far_enough
                 section = lvSectionHTML[LVindex1:LVindex8].removesuffix( '\n<p class="LVsentence">' )
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} {LVindex8-LVindex1} chars '{lvSectionHTML[:LVindex1]}' then '{lvSectionHTML[LVindex1:LVindex1+60]}...'" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} {LVindex8-LVindex1} chars '{lvSectionHTML[:LVindex1]}' then '{lvSectionHTML[LVindex1:LVindex1+60]}...'" )
                 # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"B2 ({len(section):,}) '{section}'" ); assert False, "We want to stop here"
             lastLVindex += LVindex1
             # assert False, "We want to stop here"
@@ -1829,7 +1837,8 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
             if nextStartCV == 'DONE':
                 section = lvSectionHTML[LVindex1:]
                 assert section.startswith('<'), section[:10]
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} remaining chars '{lvSectionHTML[:LVindex1]}' then '{lvSectionHTML[LVindex1:LVindex1+60]}...'" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} remaining chars '{lvSectionHTML[:LVindex1]}' then '{lvSectionHTML[LVindex1:LVindex1+60]}...'" )
                 # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"C1 ({len(section):,}) '{section}'" ); assert False, "We want to stop here"
             else: # in the middle
                 try: LVindex9 = lvSectionHTML.index( f' id="{nextStartCV}"', LVindex2+6 )
@@ -1845,7 +1854,8 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
                 else: not_far_enough
                 section = lvSectionHTML[LVindex1:LVindex8]
                 assert section.startswith('<'), section[:10]
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} {LVindex8=} {LVindex8-LVindex1} chars '{lvSectionHTML[LVindex1:LVindex1+40]}' then '{lvSectionHTML[LVindex8:LVindex8+60]}...'" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} {LVindex8=} {LVindex8-LVindex1} chars '{lvSectionHTML[LVindex1:LVindex1+40]}' then '{lvSectionHTML[LVindex8:LVindex8+60]}...'" )
                 # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"C2 ({len(section):,}) '{section}'" ); assert False, "We want to stop here"
             lastLVindex += LVindex1
             # assert False, "We want to stop here"
@@ -1859,7 +1869,8 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
         # assert section.count('<p ')+section.count('<p>') == section.count('</p'), f"{BBB} {n} LV {startCV} {endCV} {section.count('<p ')}+{section.count('<p>')}={section.count('<p ')+section.count('<p>')} != {section.count('</p')} '{section}'"
         lvHTMLSections.append( section )
 
-    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Got {len(rvHTMLExpandedSections)} RV section(s) and {len(lvHTMLSections)} LV section(s)")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Got {len(rvHTMLExpandedSections)} RV section(s) and {len(lvHTMLSections)} LV section(s)")
     assert len(lvHTMLSections) == len(rvHTMLExpandedSections), f"{len(lvHTMLSections)} != {len(rvHTMLExpandedSections)}"
     # if lastLVindex < len(lvMidHHTML) - 1:
     #     newSection = lvMidHHTML[lastLVindex:]
@@ -1911,7 +1922,8 @@ def handle_Psalms( psa_start_html:str, psa_html:str, psa_end_html:str ) -> bool:
     """
     This code is a bit fragile coz it depends on the exact formatting.
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"handle_Psalms( ({len(psa_start_html):,}), ({len(psa_html):,}), ({len(psa_end_html):,}) )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"handle_Psalms( ({len(psa_start_html):,}), ({len(psa_html):,}), ({len(psa_end_html):,}) )" )
 
     ITEM_NAME = 'Item'
 
@@ -1977,7 +1989,8 @@ def copy_wordlink_files( sourceFolder:Path, destinationFolder:Path ) -> bool:
 
     Also P_ and L_ person and location files.
     """
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET NT word-link HTML files from {sourceFolder}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET NT word-link HTML files from {sourceFolder}…" )
     try: os.makedirs( destinationFolder.joinpath( 'W/' ) )
     except FileExistsError: pass # it was already there
     copyCount = 0
@@ -1985,9 +1998,11 @@ def copy_wordlink_files( sourceFolder:Path, destinationFolder:Path ) -> bool:
         shutil.copy( filename, destinationFolder.joinpath( 'W/' ) ) # Want the time to be updated or else "make" doesn't function correctly
         # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
         copyCount += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET NT word-link HTML files to {destinationFolder.joinpath( 'W/' )}.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET NT word-link HTML files to {destinationFolder.joinpath( 'W/' )}.")
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET NT word-link HTML files from {sourceFolder}…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET NT word-link HTML files from {sourceFolder}…")
     try: os.makedirs( destinationFolder.joinpath( 'Lm/' ) )
     except FileExistsError: pass # it was already there
     copyCount = 0
@@ -1995,9 +2010,11 @@ def copy_wordlink_files( sourceFolder:Path, destinationFolder:Path ) -> bool:
         shutil.copy( filename, destinationFolder.joinpath( 'Lm/' ) ) # Want the time to be updated or else "make" doesn't function correctly
         # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
         copyCount += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET NT lexeme HTML files to {destinationFolder.joinpath( 'Lm/' )}.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET NT lexeme HTML files to {destinationFolder.joinpath( 'Lm/' )}.")
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET person HTML files from {sourceFolder}…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET person HTML files from {sourceFolder}…")
     try: os.makedirs( destinationFolder.joinpath( 'Pe/' ) )
     except FileExistsError: pass # it was already there
     copyCount = 0
@@ -2005,9 +2022,11 @@ def copy_wordlink_files( sourceFolder:Path, destinationFolder:Path ) -> bool:
         shutil.copy( filename, destinationFolder.joinpath( 'Pe/' ) ) # Want the time to be updated or else "make" doesn't function correctly
         # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
         copyCount += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET person HTML files to {destinationFolder.joinpath( 'Pe/' )}.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET person HTML files to {destinationFolder.joinpath( 'Pe/' )}.")
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET location HTML files from {sourceFolder}…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET location HTML files from {sourceFolder}…")
     try: os.makedirs( destinationFolder.joinpath( 'Loc/' ) )
     except FileExistsError: pass # it was already there
     copyCount = 0
@@ -2015,7 +2034,8 @@ def copy_wordlink_files( sourceFolder:Path, destinationFolder:Path ) -> bool:
         shutil.copy( filename, destinationFolder.joinpath( 'Loc/' ) ) # Want the time to be updated or else "make" doesn't function correctly
         # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
         copyCount += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET location HTML files to {destinationFolder.joinpath( 'Loc/' )}.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET location HTML files to {destinationFolder.joinpath( 'Loc/' )}.")
 # end of convert_OET-RV_to_simple_HTML.copy_wordlink_files()
 
 

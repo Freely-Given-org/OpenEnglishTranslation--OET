@@ -38,7 +38,7 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2026-07-22' # by RJH
+LAST_MODIFIED_DATE = '2026-10-06' # by RJH
 SHORT_PROGRAM_NAME = "spell_check"
 PROGRAM_NAME = "OET Spell Check"
 PROGRAM_VERSION = '0.33'
@@ -182,9 +182,11 @@ def main():
         spellCheck_OET_RV()
 
     if BAD_WORD_SET:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Found {len(BAD_WORD_SET):,} different bad words: {sorted(BAD_WORD_SET)}" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Found {len(BAD_WORD_SET):,} different bad words: {sorted(BAD_WORD_SET)}" )
     if BAD_WORD_LIST:
-        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"Found {len(BAD_WORD_LIST):,} total bad words: {BAD_WORD_LIST}" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"Found {len(BAD_WORD_LIST):,} total bad words: {BAD_WORD_LIST}" )
 # end of spell_check.main
 
 
@@ -193,14 +195,17 @@ def load_OET_LV_names() -> bool:
     """
     Load the names we use from the tsv names table
     """
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Loading {OET_LV_NAMES_TSV_FILEPATH}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Loading {OET_LV_NAMES_TSV_FILEPATH}…" )
     with open( OET_LV_NAMES_TSV_FILEPATH, 'rt', encoding='utf-8') as inputTSVFile:
         initialTSVLines = inputTSVFile.read().rstrip().split( '\n' )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {len(initialTSVLines):,} lines loaded from {OET_LV_NAMES_TSV_FILEPATH.name}." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {len(initialTSVLines):,} lines loaded from {OET_LV_NAMES_TSV_FILEPATH.name}." )
 
     # Remove any BOM
     if initialTSVLines[0].startswith("\ufeff"):
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of TSV file…")
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of TSV file…")
         initialTSVLines[0] = initialTSVLines[0][1:]
     assert initialTSVLines[0] == EXPECTED_OET_LV_NAMES_TSV_HEADER
 
@@ -214,7 +219,8 @@ def load_OET_LV_names() -> bool:
                 OET_LV_NAMES_SET.add( rvNameBit )
 
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(OET_LV_NAMES_SET):,} OET-LV names." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(OET_LV_NAMES_SET):,} OET-LV names." )
     # print( list(OET_LV_NAMES_SET)[:10]); assert False, "We want to stop here"
     return True
 # end of spellCheckEnglish.load_OET_LV_names
@@ -225,14 +231,17 @@ def load_OET_RV_names() -> bool:
     """
     Load the names we use from the tsv names table
     """
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Loading {OET_RV_NAMES_TSV_FILEPATH}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Loading {OET_RV_NAMES_TSV_FILEPATH}…" )
     with open( OET_RV_NAMES_TSV_FILEPATH, 'rt', encoding='utf-8') as inputTSVFile:
         initialTSVLines = inputTSVFile.read().rstrip().replace( '’', "'" ).split( '\n' ) # Change apostrophe back to simple one
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {len(initialTSVLines):,} lines loaded from {OET_RV_NAMES_TSV_FILEPATH.name}." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {len(initialTSVLines):,} lines loaded from {OET_RV_NAMES_TSV_FILEPATH.name}." )
 
     # Remove any BOM
     if initialTSVLines[0].startswith("\ufeff"):
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of TSV file…")
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of TSV file…")
         initialTSVLines[0] = initialTSVLines[0][1:]
     assert initialTSVLines[0] == EXPECTED_OET_RV_NAMES_TSV_HEADER
 
@@ -246,7 +255,8 @@ def load_OET_RV_names() -> bool:
                 OET_RV_NAMES_SET.add( rvNameBit )
 
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(OET_RV_NAMES_SET):,} OET-RV names." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(OET_RV_NAMES_SET):,} OET-RV names." )
     # print( list(OET_RV_NAMES_SET)[:10]); assert False, "We want to stop here"
     return True
 # end of spellCheckEnglish.load_OET_RV_names
@@ -257,7 +267,8 @@ def load_dict_sources() -> bool:
     Load the words from the SIL Toolbox source files.
     """
     global BIBLE_WORD_SET
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Load English and Bible words from source dictionaries in {TED_Dict_folderpath}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Load English and Bible words from source dictionaries in {TED_Dict_folderpath}…" )
 
     for dictFilename in ('EnglishDict.db','BibleDict.db'):
         dictFilepath = TED_Dict_folderpath.joinpath( dictFilename )
@@ -290,7 +301,8 @@ def load_dict_sources() -> bool:
         #             assert subscript.isdigit()
         #         BIBLE_WORD_SET.add( word )
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(BIBLE_WORD_SET):,} English and Bible words." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(BIBLE_WORD_SET):,} English and Bible words." )
     # print( BIBLE_WORD_LIST[:10]); assert False, "We want to stop here"
     return True
 # end of spell_check.load_dict_sources
@@ -299,7 +311,8 @@ def load_dict_sources() -> bool:
 def spellCheck_OET_RV() -> bool:
     """
     """
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nSpell check selected OET-RV files…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nSpell check selected OET-RV files…" )
 
     numCheckedFiles = 0
     for filename in sorted( os.listdir( OET_RV_ESFM_FolderPath ) ):
@@ -312,12 +325,14 @@ def spellCheck_OET_RV() -> bool:
         spellCheckFile( BBB, filepath, OET_RV_NAMES_SET )
         numCheckedFiles += 1
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Checked {numCheckedFiles:,} OET-RV files." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Checked {numCheckedFiles:,} OET-RV files." )
     return True
 # end of spell_check.spellCheckOET_RV
 
 def spellCheckFile( BBB:str, filepath:str|Path, nameSet:set[str] ) -> bool:
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Checking spelling of {filepath}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Checking spelling of {filepath}…" )
 
     with open( filepath, 'rt', encoding='utf-8' ) as checkFile:
         C = V = '0'

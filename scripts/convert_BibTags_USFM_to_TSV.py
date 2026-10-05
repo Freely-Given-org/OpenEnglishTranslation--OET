@@ -31,7 +31,7 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-05-08' # by RJH
+LAST_MODIFIED_DATE = '2026-10-06' # by RJH
 SHORT_PROGRAM_NAME = "convert_BibTags_USFM_to_TSV"
 PROGRAM_NAME = "Extract and Save BibleTags USFM as TSV"
 PROGRAM_VERSION = '0.51'
@@ -74,7 +74,8 @@ def main() -> None:
 def handle_OT() -> bool:
     """
     """
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading OT USFM files from {state.OT_USFM_input_folderpath}/…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading OT USFM files from {state.OT_USFM_input_folderpath}/…")
 
     wordList = []
     for referenceNumber in range(1, 39+1):
@@ -83,18 +84,21 @@ def handle_OT() -> bool:
         # bookname = bos_books_codes_py.get_english_name_nr( BBB )
         filename = state.USFM_filename_template.replace( 'nn', str(referenceNumber).zfill(2) ).replace( 'UUU', Uuu.upper() )
 
-        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading {BBB} USFM file from {filename}…")
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading {BBB} USFM file from {filename}…")
         with open(state.OT_USFM_input_folderpath.joinpath(filename), 'rt', encoding='utf-8') as usfm_file:
             usfm_text = usfm_file.read()
 
             # Remove any BOM
             if usfm_text[0].startswith("\ufeff"):
-                vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of our OT USFM file…")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+                    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of our OT USFM file…")
                 usfm_text[0] = usfm_text[0][1:]
 
             wordList += parseBook( BBB, usfm_text )
 
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loaded {len(wordList):,} word entries in OT wordList.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loaded {len(wordList):,} word entries in OT wordList.")
 
     return saveWordList( 'BibTags.OT.words.tsv', wordList )
 # end of convert_BibTags_USFM_to_TSV.handle_OT
@@ -103,7 +107,8 @@ def handle_OT() -> bool:
 def handle_NT() -> bool:
     """
     """
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading NT USFM files from {state.NT_USFM_input_folderpath}/…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading NT USFM files from {state.NT_USFM_input_folderpath}/…")
 
     wordList = []
     for referenceNumber in range(40, 66+1):
@@ -112,18 +117,21 @@ def handle_NT() -> bool:
         # NOTE: Matthew is at #41 (not 40)
         filename = state.USFM_filename_template.replace( 'nn', str(referenceNumber+1).zfill(2) ).replace( 'UUU', Uuu.upper() )
 
-        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading {BBB} USFM file from {filename}…")
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading {BBB} USFM file from {filename}…")
         with open(state.NT_USFM_input_folderpath.joinpath(filename), 'rt', encoding='utf-8') as usfm_file:
             usfm_text = usfm_file.read()
 
             # Remove any BOM
             if usfm_text[0].startswith("\ufeff"):
-                vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of our OT USFM file…")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+                    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of our OT USFM file…")
                 usfm_text[0] = usfm_text[0][1:]
 
             wordList += parseBook( BBB, usfm_text )
 
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loaded {len(wordList):,} word entries in NT wordList.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loaded {len(wordList):,} word entries in NT wordList.")
 
     return saveWordList( 'BibTags.NT.words.tsv', wordList )
 # end of convert_BibTags_USFM_to_TSV.handle_NT
@@ -166,7 +174,8 @@ def parseBook( BBB:str, usfmText:str ):
 def parseWords( ref:str, wordsText:str ):
     """
     """
-    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Handling {ref} word(s): {wordsText}")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Handling {ref} word(s): {wordsText}")
     assert 1 <= wordsText.count('\\w*') <= 4
     assert wordsText.endswith('\\w*') or wordsText[-1] in ']׃פ׀ס־׆' or wordsText[-1] in ',.?!:;—)…'
     bits = wordsText.split('\\w*')
@@ -176,7 +185,8 @@ def parseWords( ref:str, wordsText:str ):
         if not bit:
             assert b == len(bits) - 1 # Must be last bit
             continue
-        dPrint( 'Never', DEBUGGING_THIS_MODULE, f"    Handle {ref} bit: {b} '{bit}'")
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 5:
+            dPrint( 'Never', DEBUGGING_THIS_MODULE, f"    Handle {ref} bit: {b} '{bit}'")
         if b==0 or '\\w' in bit:
             leadingPunctuation, word, attributeDict = parseWord( ref, bit )
             allBits.append(leadingPunctuation); allBits.append(word); allBits.append(attributeDict)
@@ -200,7 +210,8 @@ def parseWords( ref:str, wordsText:str ):
 def parseWord( ref:str, wordText:str ):
     """
     """
-    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Handling {ref} word: {wordText}")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Handling {ref} word: {wordText}")
     assert '\\w*' not in wordText
     if '\\w ' in wordText:
         assert wordText.count('\\w ') == 1
@@ -228,7 +239,8 @@ def parseFootnote( ref:str, footnoteText:str ):
     assert footnoteText.count('\\f*') == 1
     assert footnoteText.endswith('\\f*')
     footnoteText = footnoteText[:-3] # Remove end marker
-    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Ignoring {ref} footnote: {footnoteText}")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Ignoring {ref} footnote: {footnoteText}")
 # end of convert_BibTags_USFM_to_TSV.parseFootnote
 
 
@@ -239,7 +251,8 @@ def parseApparatus( ref:str, apparatusJSON:str ):
     apparatusJSON = apparatusJSON[:-16] # Remove end marker
     assert apparatusJSON.startswith('{"words":[') \
         and (apparatusJSON.endswith('"]}') or apparatusJSON.endswith('[]}'))
-    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Ignoring {ref} apparatus: {apparatusJSON}")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Ignoring {ref} apparatus: {apparatusJSON}")
 # end of convert_BibTags_USFM_to_TSV.parseApparatus
 
 
@@ -247,7 +260,8 @@ def saveWordList( filename:str, wordList:list) -> bool:
     """
     """
     filepath = state.TSV_output_folderpath.joinpath(filename)
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nSaving TSV data to {filepath}…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nSaving TSV data to {filepath}…")
     
     BibleOrgSysGlobals.backupAnyExistingFile( filepath, numBackups=5 )
 

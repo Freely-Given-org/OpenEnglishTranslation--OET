@@ -38,7 +38,7 @@ from bible_organisational_system import InternalBibleEntryList
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-07-17' # by RJH
+LAST_MODIFIED_DATE = '2026-10-06' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_USFM_to_VREF"
 PROGRAM_NAME = "Convert OET LV & RV USFM files to VREF"
 PROGRAM_VERSION = '0.12'
@@ -75,14 +75,17 @@ def main():
 
     # Now convert both USFM Bibles into VPL
     for VV in ('LV','RV'):
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nProcessing OET-{VV}…" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nProcessing OET-{VV}…" )
 
         versionAbbreviation = f'OET-{VV}'
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Preloading '{versionAbbreviation}' USFM Bible…" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Preloading '{versionAbbreviation}' USFM Bible…" )
         thisBible = USFMBible.USFMBible( OET_RV_USFM_InputFolderPath if VV=='RV' else OET_LV_USFM_InputFolderPath,
                                         givenAbbreviation=versionAbbreviation, encoding='utf-8' )
         thisBible.loadBooks() # So we can iterate through them all below
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"preloadVersion() loaded {thisBible}" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"preloadVersion() loaded {thisBible}" )
 
         totalLinesWritten = blankLinesWritten = verseLinesWritten = versificationErrorCount = 0
         with open( OET_RV_VREF_OutputFilePath if VV=='RV' else OET_LV_VREF_OutputFilePath, 'wt', encoding='utf-8' ) as vrefOutputFile:
@@ -151,7 +154,8 @@ def main():
                 vrefOutputFile.write( f'{verseText}\n' )
                 verseLinesWritten += 1
                 totalLinesWritten += 1
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Wrote {totalLinesWritten:,} lines to OET-{VV} file ({verseLinesWritten:,} verses, {versificationErrorCount:,} versification problems, {blankLinesWritten:,} blank)." )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Wrote {totalLinesWritten:,} lines to OET-{VV} file ({verseLinesWritten:,} verses, {versificationErrorCount:,} versification problems, {blankLinesWritten:,} blank)." )
 # end of convert_OET-LV-RV_USFM_to_VREF.main
 
 

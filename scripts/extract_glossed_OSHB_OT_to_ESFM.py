@@ -73,7 +73,7 @@ from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-09-16' # by RJH
+LAST_MODIFIED_DATE = '2026-10-06' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed_OSHB_OT_to_ESFM"
 PROGRAM_NAME = "Extract glossed OSHB OT ESFM files"
 PROGRAM_VERSION = '1.0.6'
@@ -133,7 +133,8 @@ def main() -> None:
         # Delete any saved (but now obsolete) OBD Bible pickle files
         for something in INTERMEDIATE_FOLDER.iterdir():
             if something.name.endswith( '.OBD_Bible.pickle' ):
-                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Deleting obsolete OBD Bible pickle file {something.name}…" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Deleting obsolete OBD Bible pickle file {something.name}…" )
                 something.unlink()
 
     else: print( f"\nFAILED to load words!\n" )
@@ -214,14 +215,17 @@ def loadSourceWordGlossTable() -> bool:
     Load the AllGlosses word TSV file using DictReader.
     """
     global source_morpheme_tsv_column_headers
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading {'UPDATED ' if 'updated' in str(state.sourceWordTableFilepath) else ''}source tsv file from {state.sourceWordTableFilepath}…")
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_OSHB_WORD_COLUMNS} columns…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading {'UPDATED ' if 'updated' in str(state.sourceWordTableFilepath) else ''}source tsv file from {state.sourceWordTableFilepath}…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_OSHB_WORD_COLUMNS} columns…")
     with open(state.sourceWordTableFilepath, 'rt', encoding='utf-8') as tsv_file:
         tsv_lines = tsv_file.readlines()
 
     # Remove any BOM
     if tsv_lines[0].startswith("\ufeff"):
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of source word tsv file…")
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of source word tsv file…")
         tsv_lines[0] = tsv_lines[0][1:]
 
     # Get the headers before we start
@@ -249,8 +253,10 @@ def loadSourceWordGlossTable() -> bool:
                     source_word_tsv_column_max_length_counts[key] = len(value)
                 source_word_tsv_column_non_blank_counts[key] += 1
             source_word_tsv_column_counts[key][value] += 1
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loaded {len(source_word_tsv_rows):,} source word tsv data rows.")
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Have {len(unique_words):,} unique Hebrew words (without cantillation marks).")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loaded {len(source_word_tsv_rows):,} source word tsv data rows.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Have {len(unique_words):,} unique Hebrew words (without cantillation marks).")
 
     return len(source_word_tsv_rows) > 0
 # end of extract_glossed_OSHB_OT_to_ESFM.loadSourceWordGlossTable
@@ -264,7 +270,8 @@ def export_literal_English_gloss_esfm() -> bool:
     """
     Use the GlossOrder field to export the English gloss.
     """
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nExporting ESFM plain text literal English files to {OT_ESFM_OUTPUT_FOLDERPATH}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nExporting ESFM plain text literal English files to {OT_ESFM_OUTPUT_FOLDERPATH}…" )
     final_table_filename = 'OET-LV_OT_word_table.tsv' # Will be made later by associate_LV_people_places.py
 
     last_BBB = last_verse_id = None
@@ -303,7 +310,8 @@ def export_literal_English_gloss_esfm() -> bool:
                 assert '~¦' not in esfm_text, f"Can't have ~¦ in {esfm_filepath}: {esfm_text[esfm_text.index('~¦')-20:esfm_text.index('~¦')+22]}"
                 with open(esfm_filepath, 'wt', encoding='utf-8') as output_file:
                     output_file.write(f"{esfm_text}\n")
-                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {len(esfm_text)+1:,} bytes to {last_BBB}_gloss.ESFM" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {len(esfm_text)+1:,} bytes to {last_BBB}_gloss.ESFM" )
                 num_exported_files += 1
             USFM_book_code = bos_books_codes_py.bos_book_code_to_usfm_abbrev( BBB )
             English_book_name = bos_books_codes_py.get_english_name_nr( BBB )
@@ -340,19 +348,23 @@ def export_literal_English_gloss_esfm() -> bool:
                 # HebrewWord = this_verse_row['Word']
                 # NOTE: All glosses here include the word number after the word/morphemes, e.g., 'In¦1=beginning¦1'
                 this_row_gloss = preform_row_gloss(gloss_index==(last_gloss_index+1), this_verse_row)
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  preform_row_gloss() returned '{this_row_gloss}'" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  preform_row_gloss() returned '{this_row_gloss}'" )
                 if this_row_gloss.startswith( 'of¦' ) and 'of¦' in last_row_gloss and not last_row_gloss.startswith( 'of¦' ):
                     adj_last_row_gloss = last_row_gloss
                     while adj_last_row_gloss[-1] in '¦1234567890':
                         adj_last_row_gloss = adj_last_row_gloss[:-1] # Drop off last char
                     if adj_last_row_gloss.endswith( '_of' ):
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  preform_row_gloss() {BBB} {chapter_number}:{verse_number} with {this_verse_row=}")
+                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  preform_row_gloss() {BBB} {chapter_number}:{verse_number} with {this_verse_row=}")
                         adj_row_gloss = this_row_gloss[4:]
                         while adj_row_gloss and adj_row_gloss[0] in '1234567890': adj_row_gloss = adj_row_gloss[1:]
                         if adj_row_gloss:
-                            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  preform_row_gloss() {BBB} {chapter_number}:{verse_number} returned {adj_row_gloss=} from {this_row_gloss=} with {adj_last_row_gloss=} from {last_row_gloss=} with {verse_text=}" )
+                            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  preform_row_gloss() {BBB} {chapter_number}:{verse_number} returned {adj_row_gloss=} from {this_row_gloss=} with {adj_last_row_gloss=} from {last_row_gloss=} with {verse_text=}" )
                             assert adj_row_gloss[0] ==  '_' or adj_row_gloss[0] ==  '÷', f"{adj_row_gloss=}"
-                            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  preform_row_gloss() {BBB} {chapter_number}:{verse_number} after {last_row_gloss=} adjusting '{this_row_gloss}' to '{adj_row_gloss[1:]}'" )
+                            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  preform_row_gloss() {BBB} {chapter_number}:{verse_number} after {last_row_gloss=} adjusting '{this_row_gloss}' to '{adj_row_gloss[1:]}'" )
                             this_row_gloss = adj_row_gloss[1:]
                         else: this_row_gloss = '' # We must have deleted the sole 'of' word
                 if this_row_gloss:
@@ -360,7 +372,8 @@ def export_literal_English_gloss_esfm() -> bool:
                 assert '  ' not in verse_text, f"ERROR1: Have double spaces (marked ‼‼) in {verse_id} verse text: '{verse_text.replace('  ','‼‼')}'"
                 last_gloss_index = gloss_index
                 if this_row_gloss: last_row_gloss = this_row_gloss # so we skip over empty glosses (like segs like maqaf)
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{verse_id} '{verse_text}'\n" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{verse_id} '{verse_text}'\n" )
 
             # Do checks
             assert not verse_text.startswith(' '), f"{verse_id} '{verse_text}'"
@@ -423,12 +436,16 @@ def export_literal_English_gloss_esfm() -> bool:
         esfm_filepath = OT_ESFM_OUTPUT_FOLDERPATH.joinpath( f'{last_BBB}_gloss.ESFM' )
         with open(esfm_filepath, 'wt', encoding='utf-8') as output_file:
             output_file.write(f"{esfm_text}\n")
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {len(esfm_text)+1:,} bytes to {last_BBB}_gloss.ESFM" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {len(esfm_text)+1:,} bytes to {last_BBB}_gloss.ESFM" )
         num_exported_files += 1
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {num_exported_files} ESFM files exported" )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    {wwwwCount:,} word glosses unknown (wwww)" )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    {mmmCount:,} morpheme glosses unknown (mmm)" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {num_exported_files} ESFM files exported" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    {wwwwCount:,} word glosses unknown (wwww)" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    {mmmCount:,} morpheme glosses unknown (mmm)" )
     return num_exported_files > 0
 # end of extract_glossed_OSHB_OT_to_ESFM.export_literal_English_gloss_esfm
 
@@ -452,7 +469,8 @@ def get_verse_rows(given_source_rows: List[dict], row_index: int) -> List[list]:
             break
     assert this_verse_row_list
     check_verse_rows(this_verse_row_list, stop_on_error=True)
-    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"\n{this_verseID} ({len(this_verse_row_list)}) {this_verse_row_list=}")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"\n{this_verseID} ({len(this_verse_row_list)}) {this_verse_row_list=}")
     return this_verse_row_list
 # end of extract_glossed_OSHB_OT_to_ESFM.get_verse_rows
 
@@ -496,7 +514,8 @@ def get_gloss_word_index_list(given_verse_row_list: List[dict]) -> List[int]:
         gloss_order_dict[gloss_order_int] = index
     base_gloss_display_order_list = [index for (_gloss_order,index) in sorted(gloss_order_dict.items())]
     assert len(base_gloss_display_order_list) == len(given_verse_row_list)
-    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"\nget_gloss_word_index_list for {verse_id} is got: ({len(base_gloss_display_order_list)}) {base_gloss_display_order_list}")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"\nget_gloss_word_index_list for {verse_id} is got: ({len(base_gloss_display_order_list)}) {base_gloss_display_order_list}")
     return base_gloss_display_order_list
 
     # these_words_base_display_index_list, result_list = [], []
@@ -534,10 +553,11 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
     """
     # DEBUGGING_THIS_MODULE = 99
     global saved_gloss, saved_capitalisation, saved_punctuation, just_had_insert, mmmCount, wwwwCount
-    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"preform_row_gloss({given_verse_row['Ref']}.{given_verse_row['MorphemeRowList']},"
-            f" mg='{given_verse_row['MorphemeGlosses']}' cmg='{given_verse_row['ContextualMorphemeGlosses']}'"
-            f" wg='{given_verse_row['WordGloss']}' cwg='{given_verse_row['ContextualWordGloss']}'"
-            f" {consecutive=} {saved_gloss=} {saved_capitalisation=} {saved_punctuation=} {just_had_insert=})…") # {last_glossWord=}
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"preform_row_gloss({given_verse_row['Ref']}.{given_verse_row['MorphemeRowList']},"
+                f" mg='{given_verse_row['MorphemeGlosses']}' cmg='{given_verse_row['ContextualMorphemeGlosses']}'"
+                f" wg='{given_verse_row['WordGloss']}' cwg='{given_verse_row['ContextualWordGloss']}'"
+                f" {consecutive=} {saved_gloss=} {saved_capitalisation=} {saved_punctuation=} {just_had_insert=})…") # {last_glossWord=}
     # if given_verse_row['Ref'].startswith('GEN_3:14'): assert False, "We want to stop here"
 
     gloss = gloss_punctuation = ''
@@ -548,7 +568,8 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
             #     gloss = f'{gloss}.'
             # else:
             assert given_verse_row['Morphology'] in ('x-maqqef','x-sof-pasuq','x-pe','x-paseq','x-samekh','x-reversednun'), f"Got seg '{given_verse_row['Morphology']}'"
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Ignoring {given_verse_row['Morphology']} seg!" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Ignoring {given_verse_row['Morphology']} seg!" )
             saved_capitalisation = ''
         elif 'note' in given_verse_row['RowType']:
             src = 'NOTE'
@@ -600,9 +621,10 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
         else: # no gloss
             gloss = 'mmm' # This sequence doesn't occur in any words
             mmmCount += 1
-            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"{given_verse_row['Ref']}.{given_verse_row['MorphemeRowList']},"
-                                        f" needs a word gloss for '{given_verse_row['Word']}'"
-                                        f" (from '{given_verse_row['NoCantillations']}')" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"{given_verse_row['Ref']}.{given_verse_row['MorphemeRowList']},"
+                                            f" needs a word gloss for '{given_verse_row['Word']}'"
+                                            f" (from '{given_verse_row['NoCantillations']}')" )
 
         if 'S' in given_verse_row['GlossCapitalisation'] \
         or (just_had_insert and 'S' in saved_capitalisation): # Start of Sentence
@@ -612,7 +634,8 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
 
         gloss = make_gloss_adjustments_and_append_word_number( gloss, wn )
         if just_had_insert:
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"Have insert with {gloss=}" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"Have insert with {gloss=}" )
             assert not saved_capitalisation
             # Not totally sure what all the different divider chars mean (but we'll change many of them to = as we go)
             if gloss.count('=') == 1:
@@ -653,9 +676,10 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
         if not wordGloss:
             wordGloss = 'wwww' # Sequence doesn't occur in any English words so easy to find
             wwwwCount += 1
-            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"{given_verse_row['Ref']}.{given_verse_row['MorphemeRowList']},"
-                                            f" needs a word gloss for '{given_verse_row['Word']}'"
-                                            f" (from '{given_verse_row['NoCantillations']}')" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"{given_verse_row['Ref']}.{given_verse_row['MorphemeRowList']},"
+                                                f" needs a word gloss for '{given_verse_row['Word']}'"
+                                                f" (from '{given_verse_row['NoCantillations']}')" )
         if 'S' in given_verse_row['GlossCapitalisation']:
             wordGloss = f'{wordGloss[0].upper()}{wordGloss[1:]}'
         wn = f"¦{given_verse_row['n']}"
@@ -836,7 +860,8 @@ def make_gloss_adjustments_and_append_word_number( gloss:str, wn=str ) -> str:
             gloss = gloss.replace( f'[{implied}]', f'\\add >{implied}\\add*' )
         gloss = gloss.replace( '_[it]', '_\\add >it\\add*' ) # Can also occur at beginning of word, but don't want that one
         if '[' in gloss.replace('[s]','').replace('[es]','').replace('[en]','').replace('[ren]','').replace('[question]',''): # still
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Still have square brackets in {gloss=}, {wn=} )")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Still have square brackets in {gloss=}, {wn=} )")
             gloss = gloss.replace( '[', '\\add ' ).replace( ']', '\\add*' )
         # Now check the nesting is correct
         startIx = inCount = 0

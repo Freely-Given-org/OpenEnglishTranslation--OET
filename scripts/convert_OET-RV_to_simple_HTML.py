@@ -54,7 +54,7 @@ from bible_organisational_system import getSmallLeadingInt
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-09-26' # by RJH
+LAST_MODIFIED_DATE = '2026-10-06' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
 PROGRAM_VERSION = '1.0.0'
@@ -761,7 +761,8 @@ def produce_HTML_files() -> None:
     """
     """
     global whole_Torah_html, whole_NT_html
-    fnPrint( DEBUGGING_THIS_MODULE, "produce_HTML_files()" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, "produce_HTML_files()" )
 
     numBooksProcessed = 0
     for BBB in genericBookList: # includes intro, etc.
@@ -795,7 +796,8 @@ def produce_HTML_files() -> None:
                         word_table_filepath = OET_RV_ESFM_InputFolderPath.joinpath( word_table_filename )
                         with open( word_table_filepath, 'rt', encoding='utf-8' ) as word_table_input_file:
                             word_table = word_table_input_file.read().split( '\n' )
-                        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Read {len(word_table):,} lines from word table at {word_table_filepath}." )
+                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Read {len(word_table):,} lines from word table at {word_table_filepath}." )
                 else:
                     logging.critical( f"No ESFM word-table defined in {BBB} book from {source_filename}" )
             assert esfm_text.count('(') == esfm_text.count(')'), f"Why do we have OET-RV_{BBB}.usfm {esfm_text.count('(')=} and {esfm_text.count(')')=}"
@@ -944,12 +946,14 @@ def produce_HTML_files() -> None:
                                 f'<p><a href="index.html">OET-RV Index</a></p>\n{whole_NT_html}\n'
                                 f'<p><a href="index.html">OET-RV Index</a></p>\n{END_HTML}' )
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Finished processing {numBooksProcessed} HTML books." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Finished processing {numBooksProcessed} HTML books." )
 # end of convert_OET-RV_to_simple_HTML.produce_HTML_files()
 
 
 def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[List[str]] ) -> Tuple[str, str, str]:
-    fnPrint( DEBUGGING_THIS_MODULE, f"convert_ESFM_to_simple_HTML( {BBB}, ({len(usfm_text)}), ({'None' if word_table is None else len(word_table)}) )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"convert_ESFM_to_simple_HTML( {BBB}, ({len(usfm_text)}), ({'None' if word_table is None else len(word_table)}) )" )
 
     links_html_template = '<p>__PREVIOUS__OET-RV <a href="index.html#Index">Book index</a>,' \
                  ' <a href="index.html#Intro">Intro</a>, <a href="index.html#Key">Key</a>,' \
@@ -978,7 +982,8 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
     # Remove \\figs
     usfm_text, count = re.subn( '\\\\fig [^\\\\]+?\\\\fig\\*', '', usfm_text )
     if count > 0:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Removed {count:,} figure fields from {BBB} USFM" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Removed {count:,} figure fields from {BBB} USFM" )
 
     C = V = '0'
     book_html = ''
@@ -993,7 +998,8 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
         usfm_line = usfm_line[1:] # Remove the leading backslash
         try: marker, rest = usfm_line.split( ' ', 1 )
         except ValueError: marker, rest = usfm_line, ''
-        dPrint( 'Never', DEBUGGING_THIS_MODULE, f"{BBB} {marker}='{rest}'" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 5:
+            dPrint( 'Never', DEBUGGING_THIS_MODULE, f"{BBB} {marker}='{rest}'" )
         if marker in ('id','usfm','ide','h','toc2','toc3'):
             continue # We don't need to map those markers to HTML
         if BBB=='PSA' and '\\z' in rest: # Psalm/Song colouring markers
@@ -1100,7 +1106,8 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
             linkedBits = []
             lastBBB = None
             for restBit in rest[1:-1].replace( ',', ';').split( '; '):
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{BBB} {C}:{V} r='{rest}' {restBit=}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{BBB} {C}:{V} r='{rest}' {restBit=}")
                 if BBB=='PSA' and restBit == 'Continuation of Song 42':
                     linkBBB = 'PSA'
                     link = f'<a href="{linkBBB}.html#C42V11">{restBit}</a>' # Link to last verse of Psa 42
@@ -1115,9 +1122,11 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                             linkBBB = lastBBB
                         assert linkBBB, f"{BBB} {C}:{V}: {restBit=} {bkCode=} {linkCV=} {linkBBB=} {lastBBB=}"
                     except ValueError: linkCV = restBit # and use the last book code
-                    dPrint( 'Never', DEBUGGING_THIS_MODULE, f"  {bkCode=} {linkBBB=} {linkCV=}" )
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 5:
+                        dPrint( 'Never', DEBUGGING_THIS_MODULE, f"  {bkCode=} {linkBBB=} {linkCV=}" )
                     firstCVRef = linkCV.replace('–','-').split('-')[0]
-                    dPrint( 'Never', DEBUGGING_THIS_MODULE, f"  {firstCVRef=}")
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 5:
+                        dPrint( 'Never', DEBUGGING_THIS_MODULE, f"  {firstCVRef=}")
                     try: linkC, linkV = firstCVRef.split(':', 1)
                     except ValueError:
                         if linkBBB == 'PSA': # Often a reference to an entire Psalm
@@ -1126,7 +1135,8 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                             linkC, linkV = '1', firstCVRef
                         else: # might just be a single verse
                             linkV = firstCVRef
-                    dPrint( 'Never', DEBUGGING_THIS_MODULE, f"  {firstCVRef=} {linkC=}:{linkV=}")
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 5:
+                        dPrint( 'Never', DEBUGGING_THIS_MODULE, f"  {firstCVRef=} {linkC=}:{linkV=}")
                     link = f'<a href="{linkBBB}.html#C{linkC}V{linkV}">{restBit}</a>'
                 linkedBits.append(link)
                 lastBBB = linkBBB
@@ -1190,7 +1200,8 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
             book_html = f'{book_html}</div><!--bookIntro-->\n'
             inIntroduction = False
         elif marker not in ('ie','cl'):
-            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Found unexpected {marker} marker in {BBB}" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 2:
+                dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Found unexpected {marker} marker in {BBB}" )
             logging.critical( f"{BBB} {C}:{V} RV has unexpected USFM marker: \\{marker}='{rest}'" )
             book_html = f'{book_html}<p>GOT UNEXPECTED{marker}={rest}</p>'
     assert not inRightDiv
@@ -1283,9 +1294,11 @@ def convert_ESFM_words( BBB:str, book_html:str, word_table:List[str] ) -> str:
     Handle ESFM word numbers like 'written¦21763'
         which are handled by RegEx replacements.
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"convert_ESFM_words( {BBB}, ({len(book_html)}), ({len(word_table)}) )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"convert_ESFM_words( {BBB}, ({len(book_html)}), ({len(word_table)}) )" )
 
-    vPrint( 'Info', DEBUGGING_THIS_MODULE, f"convert_ESFM_words( {BBB}, ({len(book_html)}), ({len(word_table)}) )…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"convert_ESFM_words( {BBB}, ({len(book_html)}), ({len(word_table)}) )…" )
 
     # First find "compound" words like 'stood_up' or 'upper_room' or 'came_in or 'brought_up'
     #   which have a wordlink number at the end,
@@ -1332,7 +1345,8 @@ def convert_ESFM_words( BBB:str, book_html:str, word_table:List[str] ) -> str:
         book_html = f'{book_html[:match.start()]}<a  title="{greek}" href="W/{match.group(2)}.html">{match.group(1)}</a>{book_html[match.end():]}'
         searchStartIndex = match.end() + 25 # We've added at least that many characters
         count += 1
-    vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Made {count:,} OET-RV {BBB} ESFM words into live links." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Made {count:,} OET-RV {BBB} ESFM words into live links." )
 
     return book_html
 # end of convert_OET-RV_to_simple_HTML.convert_ESFM_words function
@@ -1352,13 +1366,15 @@ def livenJMPs( BBB:str, bookHTML:str ) -> str:
         assert jmpEndIx != -1
         # dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Handling jmp {BBB} {searchStartIx} {jmpStartIx} {jmpPipeIx} {jmpEndIx} '{html[jmpStartIx:jmpEndIx+5]}'" )
         jmpDisplay, jmpLinkBit = bookHTML[jmpStartIx+5:jmpPipeIx], bookHTML[jmpPipeIx+1:jmpEndIx]
-        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Got jmp {BBB} {jmpDisplay=} and {jmpLinkBit=} from '{bookHTML[jmpStartIx:jmpEndIx+5]}'" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Got jmp {BBB} {jmpDisplay=} and {jmpLinkBit=} from '{bookHTML[jmpStartIx:jmpEndIx+5]}'" )
         assert jmpLinkBit.startswith( 'link-href="' ) and jmpLinkBit.endswith( '"' )
         jmpLink = jmpLinkBit[11:-1]
         if jmpLink.startswith( 'http' ): # then it's an external internet link
             newLink = f'<a title="Go to external jump link" href="{jmpLink}">{jmpDisplay}</a>'
         else: # it's likely to be a link into another work
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"What is this '{jmpDisplay}' link to '{jmpLink}' expecting to jump to?" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"What is this '{jmpDisplay}' link to '{jmpLink}' expecting to jump to?" )
             if jmpLink.startswith( '#' ):
                 assert jmpLink.startswith( '#C' ), f"Got internal jmp {BBB} {jmpDisplay=} and {jmpLink=} from '{bookHTML[jmpStartIx:jmpEndIx+5]}'"
                 assert 'V' in jmpLink, f"Got internal jmp {BBB} {jmpDisplay=} and {jmpLink=} from '{bookHTML[jmpStartIx:jmpEndIx+5]}'"
@@ -1418,7 +1434,8 @@ def copy_wordlink_files( sourceFolder:Path, destinationFolder:Path ) -> bool:
 
     Also P_ and L_ person and location files.
     """
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET NT word-link HTML files from {sourceFolder}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET NT word-link HTML files from {sourceFolder}…" )
     try: os.makedirs( destinationFolder.joinpath( 'W/' ) )
     except FileExistsError: pass # it was already there
     copyCount = 0
@@ -1426,9 +1443,11 @@ def copy_wordlink_files( sourceFolder:Path, destinationFolder:Path ) -> bool:
         shutil.copy( filename, destinationFolder.joinpath( 'W/' ) ) # Want the time to be updated or else "make" doesn't function correctly
         # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
         copyCount += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET NT word-link HTML files to {destinationFolder.joinpath( 'W/' )}.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET NT word-link HTML files to {destinationFolder.joinpath( 'W/' )}.")
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET NT word-link HTML files from {sourceFolder}…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET NT word-link HTML files from {sourceFolder}…")
     try: os.makedirs( destinationFolder.joinpath( 'Lm/' ) )
     except FileExistsError: pass # it was already there
     copyCount = 0
@@ -1436,9 +1455,11 @@ def copy_wordlink_files( sourceFolder:Path, destinationFolder:Path ) -> bool:
         shutil.copy( filename, destinationFolder.joinpath( 'Lm/' ) ) # Want the time to be updated or else "make" doesn't function correctly
         # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
         copyCount += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET NT lexeme HTML files to {destinationFolder.joinpath( 'Lm/' )}.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET NT lexeme HTML files to {destinationFolder.joinpath( 'Lm/' )}.")
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET person HTML files from {sourceFolder}…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET person HTML files from {sourceFolder}…")
     try: os.makedirs( destinationFolder.joinpath( 'Pe/' ) )
     except FileExistsError: pass # it was already there
     copyCount = 0
@@ -1446,9 +1467,11 @@ def copy_wordlink_files( sourceFolder:Path, destinationFolder:Path ) -> bool:
         shutil.copy( filename, destinationFolder.joinpath( 'Pe/' ) ) # Want the time to be updated or else "make" doesn't function correctly
         # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
         copyCount += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET person HTML files to {destinationFolder.joinpath( 'Pe/' )}.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET person HTML files to {destinationFolder.joinpath( 'Pe/' )}.")
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET location HTML files from {sourceFolder}…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET location HTML files from {sourceFolder}…")
     try: os.makedirs( destinationFolder.joinpath( 'Loc/' ) )
     except FileExistsError: pass # it was already there
     copyCount = 0
@@ -1456,7 +1479,8 @@ def copy_wordlink_files( sourceFolder:Path, destinationFolder:Path ) -> bool:
         shutil.copy( filename, destinationFolder.joinpath( 'Loc/' ) ) # Want the time to be updated or else "make" doesn't function correctly
         # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
         copyCount += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET location HTML files to {destinationFolder.joinpath( 'Loc/' )}.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET location HTML files to {destinationFolder.joinpath( 'Loc/' )}.")
 # end of convert_OET-RV_to_simple_HTML.copy_wordlink_files()
 
 

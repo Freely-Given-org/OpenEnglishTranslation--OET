@@ -168,7 +168,7 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-10-04' # by RJH
+LAST_MODIFIED_DATE = '2026-10-06' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '1.0.2'
@@ -1192,21 +1192,24 @@ def main():
     rv.loadAuxiliaryFiles = True
     rv.loadBooks() # So we can iterate through them all later
     rv.lookForAuxiliaryFilenames()
-    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{rv=}")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{rv=}")
 
     # Load the OET-LV OT
     lvOT = ESFMBible( OET_LV_OT_ESFM_InputFolderPath, givenAbbreviation='OET-LV' )
     lvOT.loadAuxiliaryFiles = True
     lvOT.loadBooks() # So we can iterate through them all later
     lvOT.lookForAuxiliaryFilenames()
-    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvOT=}")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvOT=}")
 
     # Load the OET-LV NT
     lvNT = ESFMBible( OET_LV_NT_ESFM_InputFolderPath, givenAbbreviation='OET-LV' )
     lvNT.loadAuxiliaryFiles = True
     lvNT.loadBooks() # So we can iterate through them all later
     lvNT.lookForAuxiliaryFilenames()
-    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvNT=}")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvNT=}")
 
     # Load the OT and NT word files
     state.wordTable, state.wordTableHeaderList = {}, {}
@@ -1218,23 +1221,29 @@ def main():
         wordFileName = lvBookObject.ESFMWordTableFilename
         if wordFileName:
             assert wordFileName.endswith( '.tsv' )
-            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found ESFMBible filename '{wordFileName}' for {lv.abbreviation} {BBB}" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found ESFMBible filename '{wordFileName}' for {lv.abbreviation} {BBB}" )
             if lv.ESFMWordTables[wordFileName]:
-                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found ESFMBible loaded '{wordFileName}' word link lines: {len(lv.ESFMWordTables[wordFileName]):,}" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found ESFMBible loaded '{wordFileName}' word link lines: {len(lv.ESFMWordTables[wordFileName]):,}" )
             else:
-                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  No word links loaded yet for '{wordFileName}'" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  No word links loaded yet for '{wordFileName}'" )
             if lv.ESFMWordTables[wordFileName] is None:
                 with open( input_folder_path.joinpath(wordFileName), 'rt', encoding='UTF-8' ) as wordFile:
                     lv.ESFMWordTables[wordFileName] = wordFile.read().split( '\n' )
-                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  connect_OET_RV loaded {len(lv.ESFMWordTables[wordFileName]):,} total rows from {wordFileName}" )
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  connect_OET_RV loaded column names were: ({len(lv.ESFMWordTables[wordFileName][0])}) {lv.ESFMWordTables[wordFileName][0]}" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  connect_OET_RV loaded {len(lv.ESFMWordTables[wordFileName]):,} total rows from {wordFileName}" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  connect_OET_RV loaded column names were: ({len(lv.ESFMWordTables[wordFileName][0])}) {lv.ESFMWordTables[wordFileName][0]}" )
         state.wordTable[testament] = [row.split('\t') for row in lv.ESFMWordTables[wordFileName]]
         state.wordTableHeaderList[testament] = state.wordTable[testament][0]
 
     # Load the Hebrew and Greek name tables from TSV files
     loadOETRVNameTable()
     loadHebGrkNameTables()
-    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{state.nameTables=}")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{state.nameTables=}")
 
     # Load the OET-RV words that are more than one word for one OET-LV word, e.g. 'you all'
     loadOETRVWordPhraseTable()
@@ -1243,9 +1252,11 @@ def main():
     # show_fors( lv )
 
     # Connect linked words in the OET-LV to the OET-RV
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nProcessing connect words for OET OT…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nProcessing connect words for OET OT…" )
     numWordsOT,numWordNumberedOT = connect_OET_RV( rv, lvOT, OET_LV_OT_ESFM_InputFolderPath, 'OT' ) # OT
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nProcessing connect words for OET NT…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nProcessing connect words for OET NT…" )
     numWordsNT,numWordNumberedNT = connect_OET_RV( rv, lvNT, OET_LV_NT_ESFM_InputFolderPath, 'NT' ) # NT
 
     # In 'fast' mode we only processed MRK, so the per-book figures are all we can say
@@ -1255,7 +1266,8 @@ def main():
     # Delete any saved (but now obsolete) OBD Bible pickle files
     for something in OET_RV_ESFM_FolderPath.iterdir():
         if something.name.endswith( '.OBD_Bible.pickle' ):
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Deleting obsolete OBD Bible pickle file {something.name}…" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Deleting obsolete OBD Bible pickle file {something.name}…" )
             something.unlink()
 # end of connect_OET-RV_words_via_OET-LV.main
 
@@ -1272,7 +1284,8 @@ def loadOETRVNameTable() -> None:
         with an 'Explained' flag of 'Y'.
     Rows without that flag are just candidates, so we deliberately ignore them.
     """
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading decided OET-RV names from {OET_RV_NAMES_TABLE_FILEPATH}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading decided OET-RV names from {OET_RV_NAMES_TABLE_FILEPATH}…" )
     state.rvNameTable = defaultdict( set ) # traditionalName -> set of accepted OET-RV spellings
     state.rvNameCandidates = defaultdict( set ) # traditionalName -> set of ALL known OET-RV spellings (decided or not)
     with open( OET_RV_NAMES_TABLE_FILEPATH, 'rt', encoding='utf-8' ) as namesTableFile:
@@ -1293,7 +1306,8 @@ def loadOETRVNameTable() -> None:
     state.rvNameTableInverse = defaultdict( set ) # OET-RV spelling -> set of traditional names for it
     for traditionalName,rvNames in state.rvNameTable.items():
         for rvName in rvNames: state.rvNameTableInverse[simplifyRVLVWord( rvName )].add( traditionalName )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded {len(state.rvNameTable):,} decided OET-RV names covering {sum(len(v) for v in state.rvNameTable.values()):,} spellings." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded {len(state.rvNameTable):,} decided OET-RV names covering {sum(len(v) for v in state.rvNameTable.values()):,} spellings." )
 # end of connect_OET-RV_words_via_OET-LV.loadOETRVNameTable
 
 
@@ -1318,7 +1332,8 @@ def loadOETRVWordPhraseTable() -> None:
     if not OET_RV_WORD_PHRASES_TABLE_FILEPATH.is_file():
         logging.warning( f"Can't find the OET-RV word phrases table {OET_RV_WORD_PHRASES_TABLE_FILEPATH}, so no multi-word translations will be connected" )
         return
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading enabled OET-RV word phrases from {OET_RV_WORD_PHRASES_TABLE_FILEPATH}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading enabled OET-RV word phrases from {OET_RV_WORD_PHRASES_TABLE_FILEPATH}…" )
     state.rvWordPhrasesSearch = {} # (simplified RV words) -> (RV words as the OET-RV spells them)
     tsvLines = OET_RV_WORD_PHRASES_TABLE_FILEPATH.read_text( encoding='utf-8' ).rstrip().split( '\n' )
     if tsvLines[0].startswith( '﻿' ): tsvLines[0] = tsvLines[0][1:] # Remove any BOM
@@ -1338,7 +1353,8 @@ def loadOETRVWordPhraseTable() -> None:
             continue
         state.rvWordPhrases[ lvWords ] = tuple( simplifyRVLVWord( word ) for word in rvWords )
         state.rvWordPhrasesSearch[ tuple( simplifyRVLVWord( word ) for word in rvWords ) ] = rvWords
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded {len(state.rvWordPhrases):,} enabled OET-RV word phrases." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded {len(state.rvWordPhrases):,} enabled OET-RV word phrases." )
 # end of connect_OET-RV_words_via_OET-LV.loadOETRVWordPhraseTable
 
 # The name command tables record a name the way the OET-LV text spells it, which means with the
@@ -1408,7 +1424,8 @@ def loadHebGrkNameTables():
     """
     state.nameTables = {}
 
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading OT names from {OT_NameTable_Filepath}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading OT names from {OT_NameTable_Filepath}…" )
     state.nameTables['OT'] = defaultdict( set )
     with open( OT_NameTable_Filepath, 'rt', encoding='utf-8' ) as commandTableFile:
         line_number = 0
@@ -1497,10 +1514,12 @@ def loadHebGrkNameTables():
                 if searchText.startswith('Z') and replaceText.startswith('Ts'): # e.g., Ziklag
                     state.nameTables['OT'][replaceText].add( f'Ts{searchText[1:]}' ) # We add an extra entry
                 addPlainNameKeys( 'OT', replaceText, searchText, rvNameChoices )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded {len(state.nameTables['OT']):,} OT names." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded {len(state.nameTables['OT']):,} OT names." )
     # print( f"{state.nameTables['OT']['Mənaḩēm']=}" ); assert False, "We want to stop here"
 
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading NT OT names from {NT_OT_NameTable_Filepath}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading NT OT names from {NT_OT_NameTable_Filepath}…" )
     state.nameTables['NT_OT'] = defaultdict( set )
     with open( NT_OT_NameTable_Filepath, 'rt', encoding='utf-8' ) as commandTableFile:
         line_number = 0
@@ -1541,9 +1560,11 @@ def loadHebGrkNameTables():
                 state.nameTables['NT_OT'][replaceText].update( rvNameChoices )
                 state.nameTables['NT_OT'][replaceText].add( searchText )
                 addPlainNameKeys( 'NT_OT', replaceText, searchText, rvNameChoices )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded {len(state.nameTables['NT_OT']):,} NT OT names." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded {len(state.nameTables['NT_OT']):,} NT OT names." )
 
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading NT names from {NT_NameTable_Filepath}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading NT names from {NT_NameTable_Filepath}…" )
     state.nameTables['NT'] = defaultdict( set )
     with open( NT_NameTable_Filepath, 'rt', encoding='utf-8' ) as commandTableFile:
         line_number = 0
@@ -1584,7 +1605,8 @@ def loadHebGrkNameTables():
                 state.nameTables['NT'][replaceText].update( rvNameChoices )
                 state.nameTables['NT'][replaceText].add( searchText )
                 addPlainNameKeys( 'NT', replaceText, searchText, rvNameChoices )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded {len(state.nameTables['NT']):,} NT names." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded {len(state.nameTables['NT']):,} NT names." )
 
     # Add the divine-name forms that the LV uses directly (not produced by a Hebrew transliteration)
     state.nameTables['OT']['YHWH'].update( { 'Yahweh', 'LORD', 'Lord' } )
@@ -1598,7 +1620,8 @@ def loadHebGrkNameTables():
                 normalised = normalizeNameKey( part )
                 if normalised:
                     state.namePartsIndex[normalised].update( rvNameCandidates )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Built a normalised name index of {len(state.namePartsIndex):,} entries." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Built a normalised name index of {len(state.namePartsIndex):,} entries." )
 # end of connect_OET-RV_words_via_OET-LV.loadHebGrkNameTables
 
 
@@ -1641,7 +1664,8 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
         together for a whole Bible figure.
     """
     assert testament in ('OT','NT'), f"Bad {testament=}"
-    fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {rv}, {lv} {testament} )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {rv}, {lv} {testament} )" )
 
     # Make a list of the books that we're going to process
     booklist_to_process = []
@@ -1650,7 +1674,8 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
             continue
         # if BBB in ('CO1',): continue # TODO: CO1_14:33 gives an issue
         booklist_to_process.append( BBB )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Created a list of {len(booklist_to_process)} OET books to process." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Created a list of {len(booklist_to_process)} OET books to process." )
 
     # Go through books chapters and verses
     totalWordPhraseAdds = totalSimpleListedAdds = totalProperNounAdds = totalFirstPartMatchedAdds = totalManualMatchedAdds = totalChangedNumberAdds = totalSpecialistAdds = totalInOrderMatchedAdds = 0
@@ -1719,10 +1744,12 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
             totalNumWordNumbered += bookNumWordNumbered
 
     if totalWordPhraseAdds or totalSimpleListedAdds or totalProperNounAdds or totalFirstPartMatchedAdds or totalManualMatchedAdds or totalChangedNumberAdds or totalSpecialistAdds or totalInOrderMatchedAdds:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} Did total of {totalWordPhraseAdds:,} word phrase adds, {totalSimpleListedAdds:,} simple listed adds, {totalProperNounAdds:,} proper noun adds, {totalFirstPartMatchedAdds:,} first part adds, {totalManualMatchedAdds:,} manual adds, {totalChangedNumberAdds:,} changed number adds, {totalSpecialistAdds:,} specialist add spans and {totalInOrderMatchedAdds:,} in-order adds." )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} Did total of {totalWordPhraseAdds:,} word phrase adds, {totalSimpleListedAdds:,} simple listed adds, {totalProperNounAdds:,} proper noun adds, {totalFirstPartMatchedAdds:,} first part adds, {totalManualMatchedAdds:,} manual adds, {totalChangedNumberAdds:,} changed number adds, {totalSpecialistAdds:,} specialist add spans and {totalInOrderMatchedAdds:,} in-order adds." )
     else: vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} No new word connections made." )
     if totalSimpleListedAddsNS or totalProperNounAddsNS or totalFirstPartMatchedAddsNS or totalManualMatchedAddsNS or totalChangedNumberAddsNS or totalSpecialistAddsNS or totalInOrderMatchedAddsNS:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} Did total of {totalSimpleListedAddsNS:,} simple listed nomina sacra (NS), {totalProperNounAddsNS:,} proper noun NS, {totalFirstPartMatchedAddsNS:,} first part NS, {totalManualMatchedAddsNS:,} manual NS, {totalChangedNumberAddsNS:,} changed number NS, {totalSpecialistAddsNS:,} specialist add span NS and {totalInOrderMatchedAddsNS:,} in-order NS." )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} Did total of {totalSimpleListedAddsNS:,} simple listed nomina sacra (NS), {totalProperNounAddsNS:,} proper noun NS, {totalFirstPartMatchedAddsNS:,} first part NS, {totalManualMatchedAddsNS:,} manual NS, {totalChangedNumberAddsNS:,} changed number NS, {totalSpecialistAddsNS:,} specialist add span NS and {totalInOrderMatchedAddsNS:,} in-order NS." )
     else: vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  {testament} No new nomina sacra connections made." )
     if not BibleOrgSysGlobals.commandLineArguments.fastMode: # In 'fast' mode we reported the individual books instead
         reportWordNumberPercentage( testament, totalNumWords, totalNumWordNumbered )
@@ -1737,7 +1764,8 @@ def _connect_OET_RV_book_MP( givenParameters ):
 
     Parameter is a 4-tuple containing the parameters.
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"_connect_OET_RV_book_MP( {givenParameters} )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"_connect_OET_RV_book_MP( {givenParameters} )" )
     return connect_OET_RV_book( *givenParameters )
 # end of connect_OET-RV_words_via_OET-LV._connect_OET_RV_book_MP
 
@@ -1750,8 +1778,10 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
 
     Then connect linked words in the OET-LV to the OET-RV.
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV_book( {BBB} )" )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Processing connect words for OET {BBB}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV_book( {BBB} )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Processing connect words for OET {BBB}…" )
 
     # wordFileName = lv[BBB].ESFMWordTableFilename
 
@@ -1787,7 +1817,8 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
         #   because those words were added into the English text, so they have no OET-LV word number
         numStraightAddSpanRemovals = removeWordNumbersInStraightAddSpans( rvESFMFilename, state.rvESFMLines )
         if numStraightAddSpanRemovals:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Removed a total of {numStraightAddSpanRemovals:,} word number(s) from inside straight '\\add'/'\\+add' spans in {rvESFMFilename}" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Removed a total of {numStraightAddSpanRemovals:,} word number(s) from inside straight '\\add'/'\\+add' spans in {rvESFMFilename}" )
         # Do some basic checking (better to find common editing errors sooner rather than later)
         for lineNumber,line in enumerate( state.rvESFMLines, start=1 ):
             assert not line.startswith(' '), f"Unexpected space at start in {rvESFMFilename} {lineNumber}: '{line}'"
@@ -1819,7 +1850,8 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
     if numChapters >= 1:
         for c in range( 1, numChapters+1 ):
             C = str(c)
-            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Connecting words for {BBB} {C}…" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Connecting words for {BBB} {C}…" )
             numVerses = lv.getNumVerses( BBB, c )
             if numVerses is None: # something unusual
                 logging.critical( f"connect_OET_RV: no verses found for OET-LV {BBB} {C}" )
@@ -1892,13 +1924,15 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
                 bookInOrderMatchedAdds += numInOrderMatchedAdds
                 bookInOrderMatchedAddsNS += numInOrderMatchedAddsNS
     else:
-        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"connect_OET_RV {BBB} has {numChapters} chapters!!!" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"connect_OET_RV {BBB} has {numChapters} chapters!!!" )
         assert BBB in ('INT','FRT',)
 
     newESFMtext = '\n'.join( state.rvESFMLines ) \
                         .replace( '\\nd* \\nd ', ' ' ) # Concatenate consecutive nd fields
     if newESFMtext != state.rvESFMText:
-        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{BBB} ESFM text has changed {len(state.rvESFMText):,} chars -> {len(newESFMtext):,} chars" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{BBB} ESFM text has changed {len(state.rvESFMText):,} chars -> {len(newESFMtext):,} chars" )
         if BBB=='ACT': newESFMtext = newESFMtext.replace( ' 120¦', ' 12Z¦' ) # Avoid false alarm
         illegalWordLinkRegex1Match = illegalWordLinkRegex1.search( newESFMtext)
         assert not illegalWordLinkRegex1Match, f"illegalWordLinkRegex1 failed before saving {BBB} with '{newESFMtext[illegalWordLinkRegex1Match.start()-5:illegalWordLinkRegex1Match.end()+5]}'" # Don't want double-ups of wordlink numbers
@@ -1913,12 +1947,16 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
             assert wronglyOrderedCombo not in newESFMtext, f"Wrongly ordered combo check failed with '{wronglyOrderedCombo}' before saving {BBB} with '{newESFMtext[newESFMtext.index(wronglyOrderedCombo)-10:newESFMtext.index(wronglyOrderedCombo)+35]}'"
         with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
             esfmFile.write( newESFMtext )
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookWordPhraseAdds:,} word phrase adds, {bookSimpleListedAdds:,} simple listed adds, {bookProperNounAdds:,} proper noun adds, {bookFirstPartMatchedAdds:,} first part adds, {bookManualMatchedAdds:,} manual adds, {bookChangedNumberAdds:,} changed number adds, {bookSpecialistAdds:,} specialist add span adds and {bookInOrderMatchedAdds:,} in-order adds for {BBB}." )
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookWordPhraseAddsNS:,} word phrase NS, {bookSimpleListedAddsNS:,} simple listed NS, {bookProperNounAddsNS:,} proper noun NS, {bookFirstPartMatchedAddsNS:,} first part NS, {bookManualMatchedAddsNS:,} manual NS, {bookChangedNumberAddsNS:,} changed number NS, {bookSpecialistAddsNS:,} specialist add span NS and {bookInOrderMatchedAddsNS:,} in-order NS for {BBB}." )
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      Saved OET-RV {BBB} {len(newESFMtext):,} bytes to {rvESFMFilepath}" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookWordPhraseAdds:,} word phrase adds, {bookSimpleListedAdds:,} simple listed adds, {bookProperNounAdds:,} proper noun adds, {bookFirstPartMatchedAdds:,} first part adds, {bookManualMatchedAdds:,} manual adds, {bookChangedNumberAdds:,} changed number adds, {bookSpecialistAdds:,} specialist add span adds and {bookInOrderMatchedAdds:,} in-order adds for {BBB}." )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookWordPhraseAddsNS:,} word phrase NS, {bookSimpleListedAddsNS:,} simple listed NS, {bookProperNounAddsNS:,} proper noun NS, {bookFirstPartMatchedAddsNS:,} first part NS, {bookManualMatchedAddsNS:,} manual NS, {bookChangedNumberAddsNS:,} changed number NS, {bookSpecialistAddsNS:,} specialist add span NS and {bookInOrderMatchedAddsNS:,} in-order NS for {BBB}." )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      Saved OET-RV {BBB} {len(newESFMtext):,} bytes to {rvESFMFilepath}" )
     else:
         # assert bookSimpleListedAdds == bookProperNounAdds == 0
-        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    No changes made to OET-RV {BBB}." )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    No changes made to OET-RV {BBB}." )
 
     # Say how much of this book is now connected to the OET-LV.
     #   We only do it here in 'fast' mode, because otherwise the per-testament and per-Bible
@@ -2099,7 +2137,8 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
         if liveWords == rvWords: rvAddSpans = liveAddSpans
         else:
             logging.warning( f"Not using the '\\add' span starts/ends of {BBB} {c}:{v} because the two OET-RV texts gave different words" )
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{BBB} {c}:{v}\n  from object: {rvWords}\n  from file:   {liveWords}" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{BBB} {c}:{v}\n  from object: {rvWords}\n  from file:   {liveWords}" )
 
     numWordPhraseAdds,numWordPhraseNS = matchWordPhrases( BBB, c,v, rvWords, lvWords, reversedOrder )
     numSpecialistAdds,numSpecialistNS = matchSpecialistAddSpans( BBB, c,v, rvWords, rvAddSpans, lvWords )
@@ -2112,7 +2151,8 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     # print( f"{rvText=} {lvText=}" )
 
     if lvUpperWords and lvText[0].isupper(): # Try to determine why the first word was capitalised
-        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{lvUpperWords=} from {lvText=}")
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{lvUpperWords=} from {lvText=}")
         firstLVUpperWord, firstLVUpperNumber = lvUpperWords[0].split( '¦' )
         rowForFirstLVUpperWord = state.wordTable['NT' if NT else 'OT'][int(firstLVUpperNumber)]
         if NT:
@@ -2175,7 +2215,8 @@ def matchIdenticalProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[
         but could both be added at the same time?
         Jn 3:22, 4:3, 12:36,39, 21:10 Act 11:30,13:31,15:25,40,16:31,18:8
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"matchIdenticalProperNouns( {BBB} {c}:{v} {rvCapitalisedWordList}, {lvCapitalisedWordList} )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"matchIdenticalProperNouns( {BBB} {c}:{v} {rvCapitalisedWordList}, {lvCapitalisedWordList} )" )
     assert rvCapitalisedWordList and lvCapitalisedWordList
 
     NT = bos_books_codes_py.is_new_testament_nr( BBB )
@@ -2187,13 +2228,15 @@ def matchIdenticalProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[
         # print( f"{BBB} {c}:{v} {rvN} {rvCapitalisedWord=} from {rvCapitalisedWordList}")
         if '¦' in rvCapitalisedWord:
             _rvCapitalisedWord, rvWordNumber = rvCapitalisedWord.split('¦')
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchIdenticalProperNouns( {BBB} {c}:{v} ) removing already tagged '{rvCapitalisedWord}' from RV list…")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchIdenticalProperNouns( {BBB} {c}:{v} ) removing already tagged '{rvCapitalisedWord}' from RV list…")
             rvCapitalisedWordList.pop( rvN - numRemovedRV )
             numRemovedRV += 1
             numRemovedLV = 0 # Extra work because we're deleting from same list that we're iterating through (a copy of)
             for lvN,lvCapitalisedWord in enumerate( lvCapitalisedWordList[:] ):
                 if lvCapitalisedWord.endswith( f'¦{rvWordNumber}' ):
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchIdenticalProperNouns( {BBB} {c}:{v} ) removing already tagged '{lvCapitalisedWord}' from LV list…")
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchIdenticalProperNouns( {BBB} {c}:{v} ) removing already tagged '{lvCapitalisedWord}' from LV list…")
                     lvCapitalisedWordList.pop( lvN - numRemovedLV )
                     numRemovedLV += 1
     if not rvCapitalisedWordList or not lvCapitalisedWordList:
@@ -2206,7 +2249,8 @@ def matchIdenticalProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[
         capitalisedNoun,wordNumber,wordRow = getLVWordRow( lvCapitalisedWordList[0], 'NT' if NT else 'OT' )
         if NT:
             wordRole = wordRow[state.wordTableHeaderList['NT'].index('Role')]
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  '{capitalisedNoun}' {wordRole}" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  '{capitalisedNoun}' {wordRole}" )
             if wordRole == 'N': # let's assume it's a proper noun
                 # print( f"matchIdenticalProperNouns {BBB} {c}:{v} adding number to {rvCapitalisedWordList[0]}")
                 result = addNumberToRVWord( BBB, c,v, rvCapitalisedWordList[0], wordNumber )
@@ -2216,7 +2260,8 @@ def matchIdenticalProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[
                         numNS += 1
         else: # OT
             glossCaps = wordRow[state.wordTableHeaderList['OT'].index('GlossCapitalisation')]
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  {capitalisedNoun=} {glossCaps=}" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  {capitalisedNoun=} {glossCaps=}" )
             if glossCaps != 'S': # start of sentence
                 result = addNumberToRVWord( BBB, c,v, rvCapitalisedWordList[0], wordNumber )
                 if result:
@@ -2252,7 +2297,8 @@ def matchAdjustedProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[s
     Given a list of capitalised words from OET-RV and OET-LV,
         see if we can match any proper nouns using the ScriptedBibleEditor name tables
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"matchAdjustedProperNouns( {BBB} {c}:{v} {rvCapitalisedWordList}, {lvCapitalisedWordList} )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"matchAdjustedProperNouns( {BBB} {c}:{v} {rvCapitalisedWordList}, {lvCapitalisedWordList} )" )
     assert rvCapitalisedWordList and lvCapitalisedWordList
 
     NT = bos_books_codes_py.is_new_testament_nr( BBB )
@@ -2264,21 +2310,25 @@ def matchAdjustedProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[s
         # print( f"{BBB} {c}:{v} {rvN} {rvCapitalisedWord=} from {rvCapitalisedWordList}")
         if '¦' in rvCapitalisedWord:
             _rvCapitalisedWord, rvWordNumber = rvCapitalisedWord.split('¦')
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchAdjustedProperNouns( {BBB} {c}:{v} ) removing already tagged '{rvCapitalisedWord}' from RV list…")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchAdjustedProperNouns( {BBB} {c}:{v} ) removing already tagged '{rvCapitalisedWord}' from RV list…")
             rvCapitalisedWordList.pop( rvN - numRemovedRV )
             numRemovedRV += 1
             numRemovedLV = 0 # Extra work because we're deleting from same list that we're iterating through (a copy of)
             for lvN,lvCapitalisedWord in enumerate( lvCapitalisedWordList[:] ):
                 if lvCapitalisedWord.endswith( f'¦{rvWordNumber}' ):
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchAdjustedProperNouns( {BBB} {c}:{v} ) removing already tagged '{lvCapitalisedWord}' from LV list…")
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchAdjustedProperNouns( {BBB} {c}:{v} ) removing already tagged '{lvCapitalisedWord}' from LV list…")
                     lvCapitalisedWordList.pop( lvN - numRemovedLV )
                     numRemovedLV += 1
     if not rvCapitalisedWordList or not lvCapitalisedWordList:
         return numAdded,numNS # nothing left to do here
 
-    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"\n{BBB} {c}:{v} {rvCapitalisedWordList=} {lvCapitalisedWordList=}" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"\n{BBB} {c}:{v} {rvCapitalisedWordList=} {lvCapitalisedWordList=}" )
     for lvCapitalisedWord in lvCapitalisedWordList:
-        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvCapitalisedWord=} from {lvCapitalisedWordList=}" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvCapitalisedWord=} from {lvCapitalisedWordList=}" )
         if '¦' not in lvCapitalisedWord:
             # TODO: Determine how/why this happened in DEU Beeroth
             logging.critical( f"Why didn't this word get a word number? {lvCapitalisedWord=} from {BBB} {c}:{v} {lvCapitalisedWordList=}" )
@@ -2287,11 +2337,13 @@ def matchAdjustedProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[s
         capitalisedNoun,wordNumber,wordRow = getLVWordRow( lvCapitalisedWord, 'NT' if NT else 'OT' )
 
         for rvCapitalisedWord in rvCapitalisedWordList:
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{rvCapitalisedWord=} from {rvCapitalisedWordList=}" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{rvCapitalisedWord=} from {rvCapitalisedWordList=}" )
             assert rvCapitalisedWord.replace("'",'').isalpha(), f"{rvCapitalisedWordList=}" # It might contain an apostrophe
             if NT:
                 wordRole = wordRow[state.wordTableHeaderList['NT'].index('Role')]
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  matchAdjustedProperNouns NT '{capitalisedNoun}' {wordRole}" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  matchAdjustedProperNouns NT '{capitalisedNoun}' {wordRole}" )
                 if wordRole == 'N': # let's assume it's a proper noun
                     if baseNameInCandidates( capitalisedNoun, rvCapitalisedWord, 'NT' ) or baseNameInCandidates( capitalisedNoun, rvCapitalisedWord, 'NT_OT' ):
                         result = addNumberToRVWord( BBB, c,v, rvCapitalisedWord, wordNumber )
@@ -2301,7 +2353,8 @@ def matchAdjustedProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[s
                             numNS += 1
             else: # OT
                 glossCaps = wordRow[state.wordTableHeaderList['OT'].index('GlossCapitalisation')]
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  matchAdjustedProperNouns OT {capitalisedNoun=} {glossCaps=}" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  matchAdjustedProperNouns OT {capitalisedNoun=} {glossCaps=}" )
                 if glossCaps != 'S': # start of sentence
                     if baseNameInCandidates( capitalisedNoun, rvCapitalisedWord, 'OT' ):
                         result = addNumberToRVWord( BBB, c,v, rvCapitalisedWord, wordNumber )
@@ -2325,7 +2378,8 @@ def baseNameInCandidates( capitalisedNoun:str, rvCapitalisedWord:str, nameTableK
         if not normalised: continue
         for something in state.namePartsIndex.get( normalised, () ):
             if something == rvCapitalisedWord or something == rvBase or f"{something}'s" == rvCapitalisedWord:
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Name match: LV '{lvPart}' ≈ RV '{rvCapitalisedWord}' (via '{something}' of {normalised})" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Name match: LV '{lvPart}' ≈ RV '{rvCapitalisedWord}' (via '{something}' of {normalised})" )
                 return True
     # Also let the unchanged (exact) spelling match, as before
     for something in state.nameTables[nameTableKey].get( capitalisedNoun, () ):
@@ -2340,7 +2394,8 @@ def matchOurListedSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWor
     If the simple word (e.g., nouns) only occur once in the RV verse and once in the LV verse,
         we assume that we can match them, i.e., copy the wordlink numbers from the LV into the RV.
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"matchOurListedSimpleWords( {BBB} {c}:{v} {rvWordList}, {lvWordList} )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"matchOurListedSimpleWords( {BBB} {c}:{v} {rvWordList}, {lvWordList} )" )
     assert rvWordList and lvWordList
 
     NT = bos_books_codes_py.is_new_testament_nr( BBB )
@@ -2377,7 +2432,8 @@ def matchOurListedSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWor
         for rvN in rvIndexList:
             rvNoun = rvWordList[rvN]
             if rvNoun.lower() == lvNoun.lower():
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchOurListedSimpleWords() from {BBB} {c}:{v} {rvN=} {lvWordNumber=} {lvNoun=} is adding a number to RV {rvNoun=}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchOurListedSimpleWords() from {BBB} {c}:{v} {rvN=} {lvWordNumber=} {lvNoun=} is adding a number to RV {rvNoun=}")
                 result = addNumberToRVWord( BBB, c,v, rvNoun, lvWordNumber )
                 if result:
                     numAdded += 1
@@ -2399,7 +2455,8 @@ def matchVerbSets( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:List[s
 
     This handles tense changes, e.g., RV 'untie' matching LV 'untying'.
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"matchVerbSets( {BBB} {c}:{v} {rvWordList}, {lvWordList} )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"matchVerbSets( {BBB} {c}:{v} {rvWordList}, {lvWordList} )" )
     assert rvWordList and lvWordList
 
     NT = bos_books_codes_py.is_new_testament_nr( BBB )
@@ -2433,7 +2490,8 @@ def matchVerbSets( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:List[s
             lvWordStr = lvWordList[lvIndexes[0]]
             assert '¦' in lvWordStr, f"{lvIndexes[0]=} {lvWordStr=} from {lvWordList=}"
             lvWord, lvWordNumber, lvWordRow = getLVWordRow( lvWordStr, 'NT' if NT else 'OT' )
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchVerbSets() is adding a number to RV '{rvWord}' from '{lvWord}' at {BBB} {c}:{v}")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchVerbSets() is adding a number to RV '{rvWord}' from '{lvWord}' at {BBB} {c}:{v}")
             result = addNumberToRVWord( BBB, c,v, rvWord, lvWordNumber )
             if result:
                 numAdded += 1
@@ -2452,7 +2510,8 @@ def matchWordsFirstParts( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList
 
     This handles tense changes, e.g., LV despising and RV despised.
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsFirstParts( {BBB} {c}:{v} {rvWordList}, {lvWordList} )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsFirstParts( {BBB} {c}:{v} {rvWordList}, {lvWordList} )" )
     assert rvWordList and lvWordList
 
     NT = bos_books_codes_py.is_new_testament_nr( BBB )
@@ -2471,14 +2530,17 @@ def matchWordsFirstParts( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList
     for lvIx,lvWord in enumerate( simpleLVWordList ):
         if len(lvWord) < 5: continue # We only process longer words
         if simpleLVWordList.count( lvWord ) != 1: continue # We can't distinguish between two usages in one verse
-        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvWord=} {lvNumber=}" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvWord=} {lvNumber=}" )
 
         lvWordStart = lvWord[:5] # Get the first 5 letters
-        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Looking for RV '{lvWordStart}' from LV '{lvWord}'" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Looking for RV '{lvWordStart}' from LV '{lvWord}'" )
         rvIndexes = []
         for rvIx,rvWord in enumerate( rvWordList ):
             if rvWord.startswith( lvWordStart ):
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Found RV '{rvWord}' in {BBB} {c}:{v}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Found RV '{rvWord}' in {BBB} {c}:{v}")
                 rvIndexes.append( rvIx )
 
         if len(rvIndexes) == 1: # Only one RV word starts with those same letters
@@ -2486,7 +2548,8 @@ def matchWordsFirstParts( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList
             if '¦' not in rvWord:
                 assert '¦' in lvWordList[lvIx], f"{lvIx=} {lvWordList[lvIx]=} from {lvWordList=}"
                 lvWord,lvWordNumber,lvWordRow = getLVWordRow( lvWordList[lvIx], 'NT' if NT else 'OT' )
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsFirstParts() is adding a number to RV '{rvWord}' from '{lvWord}' at {BBB} {c}:{v} {rvIx=}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsFirstParts() is adding a number to RV '{rvWord}' from '{lvWord}' at {BBB} {c}:{v} {rvIx=}")
                 result = addNumberToRVWord( BBB, c,v, rvWord, lvWordNumber )
                 if result:
                     numAdded += 1
@@ -2764,7 +2827,8 @@ def matchWordPhrases( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:Lis
         'young', 'donkey') are exactly the words that we refuse to match on their own, and because
         the table records a decision that the translator has already made.
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"matchWordPhrases( {BBB} {c}:{v} {reversedOrder=} {rvWordList}, {lvWordList} )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"matchWordPhrases( {BBB} {c}:{v} {reversedOrder=} {rvWordList}, {lvWordList} )" )
     if not state.rvWordPhrases: return 0,0
     assert rvWordList and lvWordList
     if reversedOrder: vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  {BBB} {c}:{v} is an order-reversed verse" )
@@ -2819,9 +2883,11 @@ def matchWordPhrases( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:Lis
             rvPhraseWords = state.rvWordPhrasesSearch[rvWords]
             phraseAdds,phraseNS = addNumberToRVPhrase( BBB, c,v, rvPhraseWords, lvNumber )
             if not phraseAdds:
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchWordPhrases() could not use '{rvWords}' for the LV '{lvWords}¦{lvNumber}' at {BBB} {c}:{v}" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchWordPhrases() could not use '{rvWords}' for the LV '{lvWords}¦{lvNumber}' at {BBB} {c}:{v}" )
                 break # Don't keep looking, or a second OET-RV phrase would get this same OET-LV number
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordPhrases() is adding {lvNumber} to the {phraseAdds} RV words of '{rvWords}' from LV '{lvWords}' at {BBB} {c}:{v}" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordPhrases() is adding {lvNumber} to the {phraseAdds} RV words of '{rvWords}' from LV '{lvWords}' at {BBB} {c}:{v}" )
             usedLvIndexes.add( candidateIx )
             numAdded += phraseAdds
             break
@@ -2840,7 +2906,8 @@ def matchOrderedRuns( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:Lis
         on both sides has the same width, and (c) every positional pair is an exact
         match (or a pair learned from such a matching segment), otherwise we add nothing.
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"matchOrderedRuns( {BBB} {c}:{v} )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"matchOrderedRuns( {BBB} {c}:{v} )" )
     assert rvWordList and lvWordList
     NT = bos_books_codes_py.is_new_testament_nr( BBB )
     stillFree = getUnnumberedRVWords( BBB, c,v )
@@ -2911,7 +2978,8 @@ def matchOrderedRuns( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:Lis
         if not allMatch: continue
         for rvTok, grp in zip(rvGap, gapGroups):
             num = int( grp['num'] )
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchOrderedRuns adding {num} to open RV gap word '{rvTok}' from gap LV {grp['tokens']} at {BBB} {c}:{v}" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchOrderedRuns adding {num} to open RV gap word '{rvTok}' from gap LV {grp['tokens']} at {BBB} {c}:{v}" )
             result = addNumberToRVWord( BBB, c,v, rvTok, num )
             if result:
                 numAdded += 1
@@ -2931,7 +2999,8 @@ def matchArticlePrecedesLinkedNoun( BBB:str, c:int,v:int, rvWordList:List[str], 
     We require that the following noun occurs only this once in each verse, and that the
         article number hasn't already been used on another RV word.
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"matchArticlePrecedesLinkedNoun( {BBB} {c}:{v} )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"matchArticlePrecedesLinkedNoun( {BBB} {c}:{v} )" )
     NT = bos_books_codes_py.is_new_testament_nr( BBB )
     stillFree = getUnnumberedRVWords( BBB, c,v )
     lvWordsParsed = []
@@ -2970,7 +3039,8 @@ def matchArticlePrecedesLinkedNoun( BBB:str, c:int,v:int, rvWordList:List[str], 
         # Ensure LV prev article is free: no RV word already carries that number
         already = any( tok.split( '¦', 1 )[1] == str( lvPrevNumber ) for tok in rvWordList if '¦' in tok )
         if already: continue
-        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchArticlePrecedesLinkedNoun() adding {lvPrevNumber} to {rvArt} before {noun} at {BBB} {c}:{v}" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchArticlePrecedesLinkedNoun() adding {lvPrevNumber} to {rvArt} before {noun} at {BBB} {c}:{v}" )
         # Local insertion: find '{article} {noun}' on a single OT/NT line
         found = False
         for n,line in enumerate( state.rvESFMLines[:] ):
@@ -3007,7 +3077,8 @@ def matchWordsInOrder( BBB:str, c:int,v:int, rvVerseText:str, rvWordList:List[st
     To stay safe, we only use a pair if EVERY highest-scoring order-preserving alignment of
         the verse uses it, i.e. there is no equally good alignment that pairs something else.
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsInOrder( {BBB} {c}:{v} {reversedOrder=} {rvWordList}, {lvWordList} )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsInOrder( {BBB} {c}:{v} {reversedOrder=} {rvWordList}, {lvWordList} )" )
     assert rvWordList and lvWordList
     if reversedOrder: vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  {BBB} {c}:{v} is an order-reversed verse" )
 
@@ -3094,10 +3165,12 @@ def matchWordsInOrder( BBB:str, c:int,v:int, rvVerseText:str, rvWordList:List[st
         # Only trust this pair if the best alignment would be WORSE without it
         scoreWithoutPair, _ = bestMonotoneAlignmentScore( scoreMatrix, bannedPair=(rowIx,colIx) )
         if scoreWithoutPair >= bestScore:
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchWordsInOrder() skipping ambiguous pair {BBB} {c}:{v} RV '{rvWord}' LV '{lvWord}¦{lvNumber}'" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchWordsInOrder() skipping ambiguous pair {BBB} {c}:{v} RV '{rvWord}' LV '{lvWord}¦{lvNumber}'" )
             continue
         why = scoreMatrix[rowIx][colIx][0]
-        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsInOrder() is adding {lvNumber} to RV '{rvWord}' from LV '{lvWord}' ({why}) at {BBB} {c}:{v}" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsInOrder() is adding {lvNumber} to RV '{rvWord}' from LV '{lvWord}' ({why}) at {BBB} {c}:{v}" )
         result = addNumberToRVWord( BBB, c,v, rvSearchWord, lvNumber )
         if result:
             numAdded += 1
@@ -3197,7 +3270,8 @@ def matchWordsWithChangedNumbers( BBB:str, c:int,v:int, rvWordList:List[str], ad
     verse, and we also give up if any other OET-RV word in the verse is that same OET-LV
     word, because then we can't tell which OET-RV word is the one that goes with it.
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsWithChangedNumbers( {BBB} {c}:{v} {rvWordList} )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsWithChangedNumbers( {BBB} {c}:{v} {rvWordList} )" )
     assert rvWordList and lvWordList
     if not any( addCode == NUMBER_CHANGE_ADD_CODE for addCode,firstIx,lastIx in addSpans ): return 0,0
 
@@ -3221,7 +3295,8 @@ def matchWordsWithChangedNumbers( BBB:str, c:int,v:int, rvWordList:List[str], ad
             if plainRVWord not in stillFree: continue # One of the earlier matchers got there first
             if len( plainRVWord ) < MIN_NUMBER_CHANGE_WORD_LENGTH: continue
             variants = numberVariants( plainRVWord )
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  {BBB} {c}:{v} RV '{rvWord}' {variants=}" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  {BBB} {c}:{v} RV '{rvWord}' {variants=}" )
 
             candidateList = []
             for lvWordStr in lvWordList:
@@ -3241,13 +3316,16 @@ def matchWordsWithChangedNumbers( BBB:str, c:int,v:int, rvWordList:List[str], ad
                     continue # Only a noun can have its number changed (so this is not e.g. LV verb 'means')
                 candidateList.append( (lvNumber,lvWord,lvWordRow) )
             if len( candidateList ) != 1:
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchWordsWithChangedNumbers() skipping ambiguous pair {BBB} {c}:{v} RV '{rvWord}' with {len(candidateList)} OET-LV candidates" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchWordsWithChangedNumbers() skipping ambiguous pair {BBB} {c}:{v} RV '{rvWord}' with {len(candidateList)} OET-LV candidates" )
                 continue
             lvNumber,lvWord,lvWordRow = candidateList[0]
             if any( '¦' not in otherRVWord and otherRVWord != rvWord and simplifyRVLVWord( otherRVWord ) == simplifyRVLVWord( lvWord ) for otherRVWord in rvWordList ):
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchWordsWithChangedNumbers() skipping {BBB} {c}:{v} RV '{rvWord}' because another RV word is '{lvWord}'" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchWordsWithChangedNumbers() skipping {BBB} {c}:{v} RV '{rvWord}' because another RV word is '{lvWord}'" )
                 continue
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsWithChangedNumbers() is adding {lvNumber} to RV '{rvWord}' from LV '{lvWord}' at {BBB} {c}:{v}" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsWithChangedNumbers() is adding {lvNumber} to RV '{rvWord}' from LV '{lvWord}' at {BBB} {c}:{v}" )
             result = addNumberToRVWord( BBB, c,v, rvWord, lvNumber )
             if result:
                 numAdded += 1
@@ -3344,7 +3422,8 @@ def matchWordsBesideLvAnchor( BBB:str, c:int,v:int, rvWordList:List[str], addSpa
         ANCHOR_ADD_CODE_TESTS and lvWordIsProperNoun()) and that the before and after anchors
         don't disagree, so a missing or misleading anchor can't produce a wrong word number.
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsBesideLvAnchor( {BBB} {c}:{v} {rvWordList} )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsBesideLvAnchor( {BBB} {c}:{v} {rvWordList} )" )
     assert rvWordList and lvWordList
     if not any( addCode in ANCHOR_ADD_CODE_TESTS for addCode,firstIx,lastIx in addSpans ): return 0,0
 
@@ -3403,10 +3482,12 @@ def matchWordsBesideLvAnchor( BBB:str, c:int,v:int, rvWordList:List[str], addSpa
             candidateList.append( (lvNumber,lvWord,lvWordRow) )
         candidateNumbers = { candidate[0] for candidate in candidateList }
         if len( candidateNumbers ) != 1:
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchWordsBesideLvAnchor() skipping {BBB} {c}:{v} '\\add {addCode}{' '.join(rvWordList[firstIx:lastIx+1])}\\add*' with {len(candidateNumbers)} OET-LV candidates" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchWordsBesideLvAnchor() skipping {BBB} {c}:{v} '\\add {addCode}{' '.join(rvWordList[firstIx:lastIx+1])}\\add*' with {len(candidateNumbers)} OET-LV candidates" )
             continue
         lvNumber,lvWord,lvWordRow = candidateList[0]
-        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsBesideLvAnchor() is adding {lvNumber} to RV '{' '.join(rvWordList[firstIx:lastIx+1])}' from LV '{lvWord}' at {BBB} {c}:{v}" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsBesideLvAnchor() is adding {lvNumber} to RV '{' '.join(rvWordList[firstIx:lastIx+1])}' from LV '{lvWord}' at {BBB} {c}:{v}" )
         spanNumAdded,spanNumNS = addNumberToAddSpan( BBB, c,v, rvWordList, firstIx, lastIx, lvNumber, lvWord, lvWordRow )
         numAdded += spanNumAdded
         numNS += spanNumNS
@@ -3427,7 +3508,8 @@ def matchRepeatedWords( BBB:str, c:int,v:int, rvWordList:List[str], addSpans:Lis
         also used to repeat something that we said in a PREVIOUS verse, and that has nothing to
         do with the OET-LV word of this verse (e.g. 1 Chronicles 16:16 and 23:29).
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"matchRepeatedWords( {BBB} {c}:{v} {rvWordList} )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"matchRepeatedWords( {BBB} {c}:{v} {rvWordList} )" )
     assert rvWordList and lvWordList
     if not any( addCode == REPEAT_ADD_CODE for addCode,firstIx,lastIx in addSpans ): return 0,0
 
@@ -3442,7 +3524,8 @@ def matchRepeatedWords( BBB:str, c:int,v:int, rvWordList:List[str], addSpans:Lis
         phrase = [ simplifyRVLVWord( rvWordList[rvIx] ) for rvIx in range( firstIx, lastIx+1 ) ]
         if not any( phrase == [ simplifyRVLVWord( rvWordList[rvIx2] ) for rvIx2 in range( rvIx, rvIx+len(phrase) ) ]
                     for rvIx in range( firstIx ) ):
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchRepeatedWords() skipping {BBB} {c}:{v} '\\add ≡{' '.join(phrase)}\\add*' because it does not occur earlier in the same verse" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchRepeatedWords() skipping {BBB} {c}:{v} '\\add ≡{' '.join(phrase)}\\add*' because it does not occur earlier in the same verse" )
             continue # It is a repeat of something in a previous verse, so this OET-LV word is not it
         candidateNumbers = set()
         candidateWord, candidateRow = None, None
@@ -3458,10 +3541,12 @@ def matchRepeatedWords( BBB:str, c:int,v:int, rvWordList:List[str], addSpans:Lis
             candidateNumbers.add( lvNumber )
             candidateWord, candidateRow = lvWord, lvWordRow
         if len( candidateNumbers ) != 1:
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchRepeatedWords() skipping {BBB} {c}:{v} '\\add ≡{' '.join(phrase)}\\add*' with {len(candidateNumbers)} OET-LV candidates" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchRepeatedWords() skipping {BBB} {c}:{v} '\\add ≡{' '.join(phrase)}\\add*' with {len(candidateNumbers)} OET-LV candidates" )
             continue
         lvNumber = candidateNumbers.pop()
-        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchRepeatedWords() is adding {lvNumber} to RV '{' '.join(rvWordList[firstIx:lastIx+1])}' from LV '{candidateWord}' at {BBB} {c}:{v}" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchRepeatedWords() is adding {lvNumber} to RV '{' '.join(rvWordList[firstIx:lastIx+1])}' from LV '{candidateWord}' at {BBB} {c}:{v}" )
         spanNumAdded,spanNumNS = addNumberToAddSpan( BBB, c,v, rvWordList, firstIx, lastIx, lvNumber, candidateWord, candidateRow )
         numAdded += spanNumAdded
         numNS += spanNumNS
@@ -3650,7 +3735,8 @@ def matchNamesViaTraditionalNames( BBB:str, c:int,v:int, rvWordList:List[str], a
         OET-LV word, in the right order.
     (See getTraditionalNameNumbers() for how we decide which OET-LV name(s) we are looking at.)
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"matchNamesViaTraditionalNames( {BBB} {c}:{v} {rvWordList} )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"matchNamesViaTraditionalNames( {BBB} {c}:{v} {rvWordList} )" )
     assert rvWordList and lvWordList
     # We get the words of the '!' spans from the LIVE OET-RV text, because getCleanText() has
     #   already taken the '\add' markers off them, so we can't see which words they were.
@@ -3683,11 +3769,13 @@ def matchNamesViaTraditionalNames( BBB:str, c:int,v:int, rvWordList:List[str], a
         if not nameWords: continue
         numbers = getTraditionalNameNumbers( nameWords, lvNameList )
         if not numbers:
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchNamesViaTraditionalNames() skipping {BBB} {c}:{v} {nameWords=}" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchNamesViaTraditionalNames() skipping {BBB} {c}:{v} {nameWords=}" )
             continue
         for rvWord,lvNumber in numbers.items():
             if simplifyRVLVWord( rvWord ) not in stillFree: continue # A matcher that ran before us got there first
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchNamesViaTraditionalNames() is adding {lvNumber} to RV '{rvWord}' at {BBB} {c}:{v}" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchNamesViaTraditionalNames() is adding {lvNumber} to RV '{rvWord}' at {BBB} {c}:{v}" )
             result = addNumberToRVWord( BBB, c,v, rvWord, lvNumber )
             if result:
                 numAdded += 1
@@ -3719,7 +3807,8 @@ def matchSpecialistAddSpans( BBB:str, c:int,v:int, rvWordList:List[str], addSpan
 def matchWordsManually( BBB:str, c:int,v:int, rvVerseWordList:List[str], lvVerseWordList:List[str] ) -> Tuple[int,int]:
     """
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsManually( {BBB} {c}:{v} {rvVerseWordList}, {lvVerseWordList} )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsManually( {BBB} {c}:{v} {rvVerseWordList}, {lvVerseWordList} )" )
     assert rvVerseWordList and lvVerseWordList
     # if BBB=='JAM' and 'Jacob' in rvVerseWordList: print( lvVerseWordList ); assert False, "We want to stop here"
 
@@ -3763,15 +3852,18 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
 
     numAdded = numNS = 0
     for rvWord, lvWordStr in RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS:
-        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{rvWord=} {lvWordStr=}" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{rvWord=} {lvWordStr=}" )
         lvWords = lvWordStr.split( ' ' )
         assert len(lvWords) <= 3, lvWords # if more, we need to add searching code down below
 
-        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Looking for RV '{rvWord}'" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Looking for RV '{rvWord}'" )
         rvIndexes = []
         for rvIx,thisRvWord in enumerate( rvVerseWordList ):
             if thisRvWord == rvWord:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  matchWordsManually group1 found RV '{rvWord}' in {BBB} {c}:{v}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  matchWordsManually group1 found RV '{rvWord}' in {BBB} {c}:{v}")
                 rvIndexes.append( rvIx )
 
         if len(rvIndexes) == 1: # Only one RV word matches
@@ -3794,10 +3886,12 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
                 else: # no match (no break from above/inner loop)
                     continue # in the outer loop
                 assert matchedLvWordCount == len(lvWords)
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManually group1 {BBB} {c}:{v} matched {rvWord=} {lvWords=}" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManually group1 {BBB} {c}:{v} matched {rvWord=} {lvWords=}" )
                 assert '¦' in lvVerseWordList[lvIx], f"{lvIx=} {lvVerseWordList[lvIx]=} from {lvVerseWordList=}"
                 lvWord,lvWordNumber,lvWordRow = getLVWordRow( lvVerseWordList[lvIx], 'NT' if NT else 'OT' )
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManually group1 is adding a number to RV '{rvWord}' from '{lvWord}' at {BBB} {c}:{v} {lvIx=}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManually group1 is adding a number to RV '{rvWord}' from '{lvWord}' at {BBB} {c}:{v} {lvIx=}")
                 result = addNumberToRVWord( BBB, c,v, rvWord, lvWordNumber )
                 if result:
                     numAdded += 1
@@ -3816,15 +3910,18 @@ def doGroup2( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
     """
     numAdded = numNS = 0
     for lvWord, rvWordStr in LV_SINGLE_WORDS_TO_RV_WORD_STRINGS:
-        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvWord=} {rvWordStr=}" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvWord=} {rvWordStr=}" )
         rvWords = rvWordStr.split( ' ' )
         assert len(rvWords) <= 4, rvWords # if more, we need to add searching code down below
 
-        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Looking for LV '{lvWord}'" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Looking for LV '{lvWord}'" )
         lvIndexes = []
         for lvIx,thisLvWord in enumerate( simpleLVWordList ):
             if thisLvWord == lvWord:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  matchWordsManually group2 found LV '{lvWord}' in {BBB} {c}:{v}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  matchWordsManually group2 found LV '{lvWord}' in {BBB} {c}:{v}")
                 lvIndexes.append( lvIx )
 
         if len(lvIndexes) == 1: # Only one LV word matches
@@ -3844,23 +3941,28 @@ def doGroup2( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
                     if rvIx < len(simpleRVWordList)-1:
                         if simpleRVWordList[rvIx+1] == rvWords[1]:
                             matchedRvWordCount += 1
-                            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"        Matched 2/{len(rvWords)} @ {rvIx+1} with '{rvVerseWordList[rvIx+1]}' from '{rvWordStr}'")
+                            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"        Matched 2/{len(rvWords)} @ {rvIx+1} with '{rvVerseWordList[rvIx+1]}' from '{rvWordStr}'")
                             if matchedRvWordCount == len(rvWords): break # matched two words
                             if rvIx < len(simpleRVWordList)-2:
                                 if simpleRVWordList[rvIx+2] == rvWords[2]:
                                     matchedRvWordCount += 1
-                                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"          Matched 3/{len(rvWords)} @ {rvIx+2} with '{rvVerseWordList[rvIx+2]}' from '{rvWordStr}'")
+                                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"          Matched 3/{len(rvWords)} @ {rvIx+2} with '{rvVerseWordList[rvIx+2]}' from '{rvWordStr}'")
                                     if matchedRvWordCount == len(rvWords): break # matched three words
                                     if rvIx < len(simpleRVWordList)-3:
                                         if simpleRVWordList[rvIx+3] == rvWords[3]:
                                             matchedRvWordCount += 1
-                                            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"          Matched 4/{len(rvWords)} @ {rvIx+3} with '{rvVerseWordList[rvIx+3]}' from '{rvWordStr}'")
+                                            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                                                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"          Matched 4/{len(rvWords)} @ {rvIx+3} with '{rvVerseWordList[rvIx+3]}' from '{rvWordStr}'")
                                             if matchedRvWordCount == len(rvWords): break # matched four words
             else: # no match (no break from above/inner loop)
                 continue # in the outer loop
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    matchWordsManually group2 {BBB} {c}:{v} matched {lvWord=} {rvWords=}" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    matchWordsManually group2 {BBB} {c}:{v} matched {lvWord=} {rvWords=}" )
             # lvWord,lvWordNumber,lvWordRow = getLVWordRow( lvWordList[lvIx] )
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManually group2 is adding a number to RV {rvWords} from '{lvWord}' at {BBB} {c}:{v} {rvIx=}")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsManually group2 is adding a number to RV {rvWords} from '{lvWord}' at {BBB} {c}:{v} {rvIx=}")
             for rvWord in rvWords:
                 result = addNumberToRVWord( BBB, c,v, rvWord, lvWordNumber )
                 if result:
@@ -3875,7 +3977,8 @@ def doGroup2( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
 def getLVWordRow( wordWithNumber:str, testament:str ) -> Tuple[str,int,List[str]]:
     """
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"getLVWordRow( {wordWithNumber}, {testament} )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"getLVWordRow( {wordWithNumber}, {testament} )" )
     assert '¦' in wordWithNumber
     assert testament in ('OT','NT')
 
@@ -3889,7 +3992,8 @@ def getLVWordRow( wordWithNumber:str, testament:str ) -> Tuple[str,int,List[str]
         wordNumber = getPositiveLeadingInt( wordNumber )
     assert wordNumber < len( state.wordTable[testament] )
     wordRow = state.wordTable[testament][wordNumber]
-    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"'{word}' {wordRow}" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"'{word}' {wordRow}" )
     return word,wordNumber,wordRow
 # end of connect_OET-RV_words_via_OET-LV.getLVWordRow
 
@@ -4215,7 +4319,8 @@ def removeWordNumbersInStraightAddSpans( filename:str, lines:List[str] ) -> int:
         newLineBits.append( line[lastIndex:] ) # The rest of the line (including the closing \add*)
 
         numRemoved += numLineRemoved
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Removed {numLineRemoved:,} word number(s) from inside a straight '\\add'/'\\+add' span in {filename} line {n+1}: '{line[max(0,spanMatches[0].start()-10):spanMatches[-1].end()+10]}'" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Removed {numLineRemoved:,} word number(s) from inside a straight '\\add'/'\\+add' span in {filename} line {n+1}: '{line[max(0,spanMatches[0].start()-10):spanMatches[-1].end()+10]}'" )
         lines[n] = ''.join( newLineBits )
     return numRemoved
 # end of removeWordNumbersInStraightAddSpans
@@ -4235,7 +4340,8 @@ def removeWordNumbersInStraightAddSpansInAllBooks( ) -> int:
     Prints a message saying what it did, so it is obvious if it changed anything.
     Returns the total number of word numbers that were removed.
     """
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nRemoving any word numbers from inside plain '\\add'/'\\+add' spans in all OET-RV books…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nRemoving any word numbers from inside plain '\\add'/'\\+add' spans in all OET-RV books…" )
     numBooksChanged = 0
     numTotalRemoved = 0
     for rvESFMFilepath in sorted( OET_RV_ESFM_FolderPath.glob( 'OET-RV_*.ESFM' ) ):
@@ -4253,11 +4359,14 @@ def removeWordNumbersInStraightAddSpansInAllBooks( ) -> int:
             esfmFile.write( newText )
         numBooksChanged += 1
         numTotalRemoved += numRemoved
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Removed {numRemoved:,} word number(s) from inside plain '\\add'/'\\+add' spans in {rvESFMFilepath.name} and saved it." )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Removed {numRemoved:,} word number(s) from inside plain '\\add'/'\\+add' spans in {rvESFMFilepath.name} and saved it." )
     if numTotalRemoved:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Removed a total of {numTotalRemoved:,} wrongly-placed word number(s) from inside plain '\\add'/'\\+add' spans in {numBooksChanged:,} OET-RV book(s)." )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Removed a total of {numTotalRemoved:,} wrongly-placed word number(s) from inside plain '\\add'/'\\+add' spans in {numBooksChanged:,} OET-RV book(s)." )
     else:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  No word numbers inside plain '\\add'/'\\+add' spans needed removing." )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  No word numbers inside plain '\\add'/'\\+add' spans needed removing." )
     return numTotalRemoved
 # end of removeWordNumbersInStraightAddSpansInAllBooks
 
@@ -4351,9 +4460,11 @@ def reportWordNumberPercentage( description:str, numWords:int, numWordNumbered:i
     Say what percentage of the words of 'description' (e.g. 'OT' or 'Whole Bible') have a word number.
     """
     if not numWords:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  No words found for {description}." )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  No words found for {description}." )
         return
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {description} has word numbers on {numWordNumbered:,} of {numWords:,} words ({numWordNumbered*100/numWords:.1f}%)." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {description} has word numbers on {numWordNumbered:,} of {numWords:,} words ({numWordNumbered*100/numWords:.1f}%)." )
 # end of reportWordNumberPercentage
 
 
@@ -4391,7 +4502,8 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
         then append the word number
         and also surround it with a nomina sacra span if necessary
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"addNumberToRVWord( {BBB} {c}:{v} '{word}' {wordNumber} )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"addNumberToRVWord( {BBB} {c}:{v} '{word}' {wordNumber} )" )
     assert isinstance( wordNumber, int )
     assert '¦' not in word
     # if BBB=='MAT' and v==1: print( word )
@@ -4411,7 +4523,8 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
     for n,line in enumerate( state.rvESFMLines[:] ): # iterate through a copy
         try: marker, rest = line.split( ' ', 1 )
         except ValueError: marker, rest = line, '' # Only a marker
-        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"addNumberToRVWord A searching {BBB} {C}:{V} {marker}='{rest}'" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"addNumberToRVWord A searching {BBB} {C}:{V} {marker}='{rest}'" )
         if marker in ('\\s1','\\s2','\\s3','\\r','\\rem') or not rest:
             continue # Skip these fields (so we don't add word numbers to headings, etc.)
         if marker == '\\c':
@@ -4419,14 +4532,16 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
             if C > c: return False # Gone too far
             if C == c: foundChapter = True
         elif foundChapter and marker == '\\v':
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"addNumberToRVWord B searching {BBB} {C}:{V} {marker}='{rest}'")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"addNumberToRVWord B searching {BBB} {C}:{V} {marker}='{rest}'")
             Vstr, rest = rest.split( ' ', 1 )
             try: V = int(Vstr)
             except ValueError: # might be a range like 21-22
                 V = int(Vstr.split('-',1)[0])
             foundVerse = C==c and V==desiredV
         elif foundChapter and marker == '\\d':
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"addNumberToRVWord D searching {BBB} {C}:{V} {marker}='{rest}'")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"addNumberToRVWord D searching {BBB} {C}:{V} {marker}='{rest}'")
             assert havePsalmTitles or BBB=='HAB', f"addNumberToRVWord( {BBB} {c}:{v} {word=} {havePsalmTitles=} {marker=} {rest=}"
             # A '\d' line is only the title of verse 1 if it comes BEFORE the '\v' of verse 1, which
             #   is where the Psalm titles sit.  We must check V is still None, because a '\d' line
@@ -4441,16 +4556,19 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
             allWordMatches = [match for match in re.finditer( f'\\b{word}\\b', searchLine )] # Matches of the word standing alone
             if len(allWordMatches) == 1:
                 match = allWordMatches[0]
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, type(allWordMatches), type(match), match )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, type(allWordMatches), type(match), match )
                 assert match.group(0) == word
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found {word=} {line=}" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found {word=} {line=}" )
                 if isInsideStraightAddSpan( line, match.start() ): # the word was ADDED into the English text
                     logger = logging.critical if DEBUGGING_THIS_MODULE else logging.error
                     logger( f"Refusing to add a word number to the ADDED OET-RV word '{word}' in {BBB} {C}:{V} (inside straight \\add or \\+add span) from '{line[match.start()-5:match.end()+5]}'" )
                     # already_numbered_error
                     return False
                 wordRow = state.wordTable['NT' if NT else 'OT'][wordNumber]
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found {word=} {line=} {wordRow=}" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Found {word=} {line=} {wordRow=}" )
                 # TODO: Why do we often get the wrong row (in the NT at least)
                 # if BBB=='ROM' and not word[0].isupper(): # No, this fails too often
                 #     assert word in str(wordRow), f"{BBB} {c}:{v} Can't find {word=} ({wordNumber=}) in {wordRow=}"
@@ -4458,14 +4576,16 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
                 if NT and 'N' in wordRow[state.wordTableHeaderList['NT'].index('GlossCaps')]: # Check that the RV doesn't already have it marked (with /nd)
                                       #   (This can happen after word numbers are deleted.)
                     # print( f"{word=} {wordNumber=} index={state.wordTableHeaderList['NT'].index('GlossCaps')} {wordRow[state.wordTableHeaderList['NT'].index('GlossCaps')]=} {wordRow=}" )
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Have NS on {word=} {line[match.start()-6:match.start()]=} {line[match.end():match.end()+6]=} {line=}" )
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Have NS on {word=} {line[match.start()-6:match.start()]=} {line[match.end():match.end()+6]=} {line=}" )
                     if (match.end()==len(line) or not line[match.end()]=='¦') \
                     and not line[match.end():match.end()+4] == '\\nd*' \
                     and not line[match.end():match.end()+5] == '\\+nd*' \
                     and not isInsideNominaSacraSpan( line, match.start() ):
                         addNominaSacra = True
                         if word in ('Messiah','Yeshua','God'):
-                            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Adding NS on {word=} {line[match.start()-6:match.start()]=} {line[match.end():match.end()+6]=} {line=}" )
+                            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Adding NS on {word=} {line[match.start()-6:match.start()]=} {line[match.end():match.end()+6]=} {line=}" )
                         else:
                             logging.critical( f"Why did we want to add NS to {BBB} {c}:{v} {word=}?\n{wordNumber=} {wordRow=}" )
                             continue
@@ -4490,15 +4610,18 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
                     else: # seems all ok
                         state.rvESFMLines[n] = f'''{line[:match.start()]}{ndStartMarker if addNominaSacra else ''}{word}¦{wordNumber}{ndEndMarker if addNominaSacra else ''}{line[match.end():]}'''
                         # print( f"{word=} {line=}" )
-                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord() added ¦{wordNumber}{' and nomina sacra' if addNominaSacra else ''} to '{word}' in OET-RV {BBB} {c}:{v}" )
+                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord() added ¦{wordNumber}{' and nomina sacra' if addNominaSacra else ''} to '{word}' in OET-RV {BBB} {c}:{v}" )
                         return True
                 except IndexError: # if the word is at the END OF THE LINE
                     assert line.endswith( word )
                     state.rvESFMLines[n] = f'''{line[:-len(word)]}{ndStartMarker if addNominaSacra else ''}{word}¦{wordNumber}{ndEndMarker if addNominaSacra else ''}'''
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord() added ¦{wordNumber}{' and nomina sacra' if addNominaSacra else ''} to final '{word}' in OET-RV {BBB} {c}:{v}" )
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord() added ¦{wordNumber}{' and nomina sacra' if addNominaSacra else ''} to final '{word}' in OET-RV {BBB} {c}:{v}" )
                     return True
             else:
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord {BBB} {c}:{v} '{word}' found {len(allWordMatches)=}" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVWord {BBB} {c}:{v} '{word}' found {len(allWordMatches)=}" )
 # end of connect_OET-RV_words_via_OET-LV.addNumberToRVWord
 
 
@@ -4523,7 +4646,8 @@ def addNumberToRVPhrase( BBB:str, c:int,v:int, rvPhraseWords:List[str], lvNumber
     """
     assert isinstance( lvNumber, int )
     assert len( rvPhraseWords ) > 1, f"addNumberToRVPhrase needs more than one OET-RV word, not {rvPhraseWords=}"
-    fnPrint( DEBUGGING_THIS_MODULE, f"addNumberToRVPhrase( {BBB} {c}:{v} {rvPhraseWords} {lvNumber} )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"addNumberToRVPhrase( {BBB} {c}:{v} {rvPhraseWords} {lvNumber} )" )
     havePsalmTitles = bos_books_codes_py.has_psalm_title( BBB, str(c) )
     desiredV = (v-1) if havePsalmTitles and v>1 else v
 
@@ -4569,7 +4693,8 @@ def addNumberToRVPhrase( BBB:str, c:int,v:int, rvPhraseWords:List[str], lvNumber
     if len( occurrences ) != 1:
         # Zero means the OET-RV really doesn't use the phrase here, and more than one means we
         #   can't tell which occurrence stands for this OET-LV word without an alignment
-        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVPhrase() found the phrase '{rvPhraseWords}' {len( occurrences ):,} times in the unnumbered text of OET-RV {BBB} {c}:{v}, not exactly once" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVPhrase() found the phrase '{rvPhraseWords}' {len( occurrences ):,} times in the unnumbered text of OET-RV {BBB} {c}:{v}, not exactly once" )
         return 0,0
 
     n,match = occurrences[0]
@@ -4599,7 +4724,8 @@ def addNumberToRVPhrase( BBB:str, c:int,v:int, rvPhraseWords:List[str], lvNumber
         if rvEnd < len(state.rvESFMLines[n]) and state.rvESFMLines[n][rvEnd] == '¦': continue # This word already has a word number
         state.rvESFMLines[n] = f'{state.rvESFMLines[n][:rvEnd]}¦{lvNumber}{state.rvESFMLines[n][rvEnd:]}'
         numAdded += 1
-    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVPhrase() added ¦{lvNumber} to {numAdded} word(s) of '{rvPhraseWords}' in OET-RV {BBB} {c}:{v}" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  addNumberToRVPhrase() added ¦{lvNumber} to {numAdded} word(s) of '{rvPhraseWords}' in OET-RV {BBB} {c}:{v}" )
     return numAdded,0
 # end of connect_OET-RV_words_via_OET-LV.addNumberToRVPhrase
 

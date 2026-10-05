@@ -47,7 +47,7 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-05-08' # by RJH
+LAST_MODIFIED_DATE = '2026-10-06' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
 PROGRAM_VERSION = '0.90'
@@ -716,7 +716,8 @@ def produce_HTML_files() -> None:
     """
     """
     global whole_Torah_html, whole_NT_html
-    fnPrint( DEBUGGING_THIS_MODULE, "produce_HTML_files()" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, "produce_HTML_files()" )
 
     numBooksProcessed = 0
     for BBB in genericBookList: # includes intro, etc.
@@ -738,7 +739,8 @@ def produce_HTML_files() -> None:
             sourceFolderPath = OET_NT_ESFM_InputFolderPath if bookType=='NT' else OET_OT_ESFM_InputFolderPath
             source_filename = f'OET-LV_{BBB}.ESFM' if 'ESFM' in str(sourceFolderPath) else f'OET-LV_{BBB}.usfm'
             source_filepath = sourceFolderPath.joinpath( source_filename )
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Reading {source_filepath}…" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Reading {source_filepath}…" )
             with open( source_filepath, 'rt', encoding='utf-8' ) as esfm_input_file:
                 esfm_text = esfm_input_file.read()
             if bookType == 'OT': # We have three different morpheme break characters (which all have their own word numbers pre-applied)
@@ -755,7 +757,8 @@ def produce_HTML_files() -> None:
                         word_table_filepath = sourceFolderPath.joinpath( word_table_filename )
                         with open( word_table_filepath, 'rt', encoding='utf-8' ) as word_table_input_file:
                             word_table = word_table_input_file.read().rstrip( '\n' ).split( '\n' ) # Remove any blank line at the end then split
-                        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Read {len(word_table):,} lines from word table at {word_table_filepath}." )
+                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Read {len(word_table):,} lines from word table at {word_table_filepath}." )
                 else: logging.critical( f"Expected {BBB} word-table '{word_table_filename}' {esfm_text[:500]}" ); assert False, "We want to stop here"
             assert esfm_text.count('(') == esfm_text.count(')'), f"Why do we have OET-LV_{BBB}.usfm {esfm_text.count('(')=} and {esfm_text.count(')')=}"
             assert esfm_text.count('‘') == esfm_text.count('’'), f"Why do we have OET-LV_{BBB}.usfm {esfm_text.count('‘')=} and {esfm_text.count('’')=}"
@@ -856,7 +859,8 @@ def produce_HTML_files() -> None:
                                 f'<p><a href="index.html">OET-LV Index</a></p>\n{whole_NT_html}\n'
                                 f'<p><a href="index.html">OET-LV Index</a></p>\n{END_HTML}' )
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Finished processing {numBooksProcessed} HTML books." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Finished processing {numBooksProcessed} HTML books." )
 # end of convert_OET-LV_to_simple_HTML.produce_HTML_files function
 
 
@@ -867,7 +871,8 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
 
     The exception is the word numbers which are handled by RegEx replacements in a separate function.
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"convert_ESFM_to_simple_HTML( {BBB}, ({len(usfm_text)}), ({'None' if word_table is None else len(word_table)}) )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"convert_ESFM_to_simple_HTML( {BBB}, ({len(usfm_text)}), ({'None' if word_table is None else len(word_table)}) )" )
 
     links_html_template = '<p>__PREVIOUS__OET-LV <a href="index.html#Index">Book index</a>,' \
                  ' <a href="index.html#Intro">Intro</a>, <a href="index.html#Key">Key</a>,' \
@@ -1014,9 +1019,11 @@ def convert_tagged_ESFM_words_to_links( BBB:str, book_html:str, word_table:List[
     Handle ESFM word numbers like 'written¦21763'
         which are handled by RegEx replacements.
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"convert_tagged_ESFM_words_to_links( {BBB}, ({len(book_html)}), ({len(word_table)}) )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"convert_tagged_ESFM_words_to_links( {BBB}, ({len(book_html)}), ({len(word_table)}) )" )
 
-    vPrint( 'Info', DEBUGGING_THIS_MODULE, f"convert_tagged_ESFM_words_to_links( {BBB}, ({len(book_html)}), ({len(word_table)}) )…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"convert_tagged_ESFM_words_to_links( {BBB}, ({len(book_html)}), ({len(word_table)}) )…" )
 
     # First find "compound" words like 'stood_up' or 'upper_room' or 'came_in or 'brought_up'
     #   which have a wordlink number at the end,
@@ -1043,7 +1050,8 @@ def convert_tagged_ESFM_words_to_links( BBB:str, book_html:str, word_table:List[
         searchStartIndex = match.end() + 2 # We've added at least that many characters
         count += 1
     if count > 0:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Renumbered {count:,} OET-LV {BBB} 'compound' ESFM words." )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Renumbered {count:,} OET-LV {BBB} 'compound' ESFM words." )
 
     # Make each linked word into a html link
     #   and then put a span around it so it can have a pop-up "title"
@@ -1066,7 +1074,8 @@ def convert_tagged_ESFM_words_to_links( BBB:str, book_html:str, word_table:List[
         searchStartIndex = match.end() + 25 # We've added at least that many characters
         count += 1
     book_html = book_html.replace( 'SSsupP', '<sup>' ).replace( 'ESsupP', '</sup>' ) # Restores our 'hidden' HTML markup
-    vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Made {count:,} OET-LV {BBB} ESFM words into live links." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Made {count:,} OET-LV {BBB} ESFM words into live links." )
 
     return book_html
 # end of convert_OET-LV_to_simple_HTML.convert_tagged_ESFM_words_to_links function
@@ -1084,27 +1093,32 @@ def make_NT_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_
     """
     global formUsageDict, lemmaDict, lemmaFormsDict, formGlossesDict, lemmaGlossesDict
 
-    fnPrint( DEBUGGING_THIS_MODULE, f"make_NT_word_pages( {inputFolderPath}, {outputFolderPath}, {word_table_filenames} )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"make_NT_word_pages( {inputFolderPath}, {outputFolderPath}, {word_table_filenames} )" )
     our_start_html = START_HTML.replace( 'BibleBook.css', 'BibleData.css' )
 
     try: os.makedirs( outputFolderPath )
     except FileExistsError: pass # it was already there
 
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Making word table pages for {word_table_filenames}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Making word table pages for {word_table_filenames}…" )
     for word_table_filename in word_table_filenames:
         if '_OT_' in word_table_filename: continue # We only do NT here
         word_table_filepath = inputFolderPath.joinpath( word_table_filename )
         with open( word_table_filepath, 'rt', encoding='utf-8' ) as word_table_input_file:
             word_table = word_table_input_file.read().rstrip( '\n' ).split( '\n' ) # Remove any blank line at the end then split
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Read {len(word_table):,} lines from word table at {word_table_filepath}." )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Read {len(word_table):,} lines from word table at {word_table_filepath}." )
 
         columnHeaders = word_table[0]
-        dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Word table column headers = '{columnHeaders}'" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 1:
+            dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Word table column headers = '{columnHeaders}'" )
         assert columnHeaders == 'Ref\tGreekWord\tSRLemma\tGreekLemma\tVLTGlossWords\tOETGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\tTags', columnHeaders # If not, probably need to fix some stuff
 
         # First make a list of each place the same Greek word (and matching morphology) is used
         # TODO: The word table has Matthew at the beginning (whereas the OET places John and Mark at the beginning) so we do JHN first
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Finding all uses of {len(word_table)-1:,} words in {word_table_filename}…" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Finding all uses of {len(word_table)-1:,} words in {word_table_filename}…" )
         # Process John first
         for n, columns_string in enumerate( word_table[1:], start=1 ):
             if columns_string.startswith( 'JHN' ):
@@ -1157,7 +1171,8 @@ def make_NT_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_
                     lemmaGlossesDict[SRLemma].add( formattedGlossWords )
 
         # Now create the individual word pages
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f" Making pages for {len(word_table)-1:,} words in {word_table_filename}…" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f" Making pages for {len(word_table)-1:,} words in {word_table_filename}…" )
         for n, columns_string in enumerate( word_table[1:], start=1 ):
             assert columns_string.count( '\t' ) == 11, f"{n} ({columns_string.count(TAB)}) '{columns_string}'" # Be wary of editors that truncate trailing whitespace / tabs
             # print( n, columns_string )
@@ -1273,7 +1288,8 @@ def make_NT_word_pages( inputFolderPath:Path, outputFolderPath:Path, word_table_
             html = f"{our_start_html.replace('__TITLE__',greekWord)}\n{html}\n{END_HTML}"
             with open( outputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
                 html_output_file.write( html )
-            vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Wrote {len(html):,} characters to {output_filename}" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 4:
+                vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Wrote {len(html):,} characters to {output_filename}" )
 
     return len(word_table) - 1
 # end of convert_OET-LV_to_simple_HTML.make_NT_word_pages function
@@ -1284,26 +1300,31 @@ def make_NT_lemma_pages( inputFolderPath:Path, outputFolderPath:Path, word_table
     """
     global lemmaDict, lemmaFormsDict, lemmaGlossesDict, formUsageDict
 
-    fnPrint( DEBUGGING_THIS_MODULE, f"make_NT_lemma_pages( {inputFolderPath}, {outputFolderPath}, {word_table_filenames} )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"make_NT_lemma_pages( {inputFolderPath}, {outputFolderPath}, {word_table_filenames} )" )
     our_start_html = START_HTML.replace( 'BibleBook.css', 'BibleData.css' )
 
     try: os.makedirs( outputFolderPath )
     except FileExistsError: pass # it was already there
 
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Making lemma table pages for {word_table_filenames}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Making lemma table pages for {word_table_filenames}…" )
     for word_table_filename in word_table_filenames:
         if '_OT_' in word_table_filename: continue # We only do NT here
         word_table_filepath = inputFolderPath.joinpath( word_table_filename )
         with open( word_table_filepath, 'rt', encoding='utf-8' ) as word_table_input_file:
             word_table = word_table_input_file.read().rstrip( '\n' ).split( '\n' ) # Remove any blank line at the end then split
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Read {len(word_table):,} lines from word table at {word_table_filepath}." )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Read {len(word_table):,} lines from word table at {word_table_filepath}." )
 
         columnHeaders = word_table[0]
-        dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Word table column headers = '{columnHeaders}'" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 1:
+            dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Word table column headers = '{columnHeaders}'" )
         assert columnHeaders == 'Ref\tGreekWord\tSRLemma\tGreekLemma\tVLTGlossWords\tOETGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\tTags', columnHeaders # If not, probably need to fix some stuff
 
 
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Making {len(lemmaDict):,} lemma pages…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Making {len(lemmaDict):,} lemma pages…" )
 
     lemmaList = sorted( [lemma for lemma in lemmaDict] )
 
@@ -1355,7 +1376,8 @@ def make_NT_lemma_pages( inputFolderPath:Path, outputFolderPath:Path, word_table
         html = f"{our_start_html.replace('__TITLE__',f'Greek lemma ‘{lemma}’')}\n{html}\n{END_HTML}"
         with open( outputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
             html_output_file.write( html )
-        vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Wrote {len(html):,} characters to {output_filename}" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 4:
+            vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Wrote {len(html):,} characters to {output_filename}" )
 # end of createOETReferencePages.make_NT_lemma_pages
 
 
@@ -1365,7 +1387,8 @@ def make_person_pages( outputFolderPath:Path ) -> int:
 
     There's almost identical code in createOETGreekWordsPages() in OpenBibleData createWordPages.py (sadly)
     """
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Making person pages…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Making person pages…" )
     our_start_html = START_HTML.replace( 'BibleBook.css', 'BibleData.css' )
 
     try: os.makedirs( outputFolderPath )
@@ -1373,7 +1396,8 @@ def make_person_pages( outputFolderPath:Path ) -> int:
 
     with open( THEOGRAPHIC_INPUT_FOLDER_PATH.joinpath( 'normalised_People.json' ), 'rb' ) as people_file:
         peopleDict = json.load( people_file )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(peopleDict):,} person entries." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(peopleDict):,} person entries." )
 
     # Firstly, make a list of all the keys
     peopleKeys = []
@@ -1407,7 +1431,8 @@ def make_person_pages( outputFolderPath:Path ) -> int:
 {END_HTML}'''
         with open( outputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
             html_output_file.write( html )
-        vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Wrote {len(bodyHtml):,} characters to {output_filename}" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 4:
+            vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Wrote {len(bodyHtml):,} characters to {output_filename}" )
 # end of convert_OET-LV_to_simple_HTML.make_person_pages function
 
 
@@ -1417,7 +1442,8 @@ def make_location_pages( outputFolderPath:Path ) -> int:
 
     There's almost identical code in createOETGreekWordsPages() in OpenBibleData createWordPages.py (sadly)
     """
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Making location pages…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Making location pages…" )
     our_start_html = START_HTML.replace( 'BibleBook.css', 'BibleData.css' )
 
     try: os.makedirs( outputFolderPath )
@@ -1425,7 +1451,8 @@ def make_location_pages( outputFolderPath:Path ) -> int:
 
     with open( THEOGRAPHIC_INPUT_FOLDER_PATH.joinpath( 'normalised_Places.json' ), 'rb' ) as locations_file:
         locationsDict = json.load( locations_file )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(locationsDict):,} location entries." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(locationsDict):,} location entries." )
 
     # Firstly, make a list of all the keys
     placeKeys = []
@@ -1459,7 +1486,8 @@ def make_location_pages( outputFolderPath:Path ) -> int:
 {END_HTML}'''
         with open( outputFolderPath.joinpath(output_filename), 'wt', encoding='utf-8' ) as html_output_file:
             html_output_file.write( html )
-        vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Wrote {len(html):,} characters to {output_filename}" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 4:
+            vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Wrote {len(html):,} characters to {output_filename}" )
 # end of convert_OET-LV_to_simple_HTML.make_location_pages function
 
 
@@ -1469,7 +1497,8 @@ def livenMD( mdText:str ) -> str:
     Take markdown style links like '[Gen. 35:16](/gen#Gen.35.16)'
         and convert to HTML links.
     """
-    fnPrint( DEBUGGING_THIS_MODULE, f"livenMD( {mdText[:140]}… )" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
+        fnPrint( DEBUGGING_THIS_MODULE, f"livenMD( {mdText[:140]}… )" )
 
     # Firstly, try to improve the overall formatting
     mdText = mdText.replace( '\n\n', '</p><p>' ).replace( '\n', '<br>' )
@@ -1482,7 +1511,8 @@ def livenMD( mdText:str ) -> str:
         match = mdLinkRegex.search( mdText, searchStartIndex )
         if not match:
             break
-        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {match=} {match.groups()=}" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {match=} {match.groups()=}" )
         readableRef, mdLinkTarget = match.group(1), match.group(2)
         mdLinkTarget = mdLinkTarget.split( '#', 1 )[1]
         if mdLinkTarget.count( '.' ) == 2: # Then it's almost certainly an OSIS B/C/V ref

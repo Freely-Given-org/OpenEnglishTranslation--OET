@@ -53,7 +53,7 @@ import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
-LAST_MODIFIED_DATE = '2026-09-16' # by RJH
+LAST_MODIFIED_DATE = '2026-10-06' # by RJH
 SHORT_PROGRAM_NAME = "Extract_VLT_NT_to_ESFM"
 PROGRAM_NAME = "Extract VLT NT ESFM files from TSV"
 PROGRAM_VERSION = '1.0.1'
@@ -185,20 +185,23 @@ def main() -> None:
         # Delete any saved (but now obsolete) OBD Bible pickle files
         for something in INTERMEDIATE_FOLDER.iterdir():
             if something.name.endswith( '.OBD_Bible.pickle' ):
-                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Deleting obsolete OBD Bible pickle file {something.name}…" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Deleting obsolete OBD Bible pickle file {something.name}…" )
                 something.unlink()
 # end of extract_VLT_NT_to_ESFM.main
 
 
 def loadBookTable() -> bool:
     """ """
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nLoading book CSV file from {state.bookTableFilepath}…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nLoading book CSV file from {state.bookTableFilepath}…")
     with open(state.bookTableFilepath, 'rt', encoding='utf-8') as book_csv_file:
         book_csv_lines = book_csv_file.readlines()
 
     # Remove any BOM
     if book_csv_lines[0].startswith("\ufeff"):
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of book CSV file…")
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of book CSV file…")
         book_csv_lines[0] = book_csv_lines[0][1:]
 
     # Get the headers before we start
@@ -211,7 +214,8 @@ def loadBookTable() -> bool:
     dict_reader = DictReader(book_csv_lines)
     for n, row in enumerate(dict_reader):
         if len(row) != NUM_EXPECTED_BOOK_COLUMNS:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_BOOK_COLUMNS}")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_BOOK_COLUMNS}")
         # Add an adjusted title
         row['adjustedTitle'] = row['Title'].replace('Κατὰ ','').replace('Πρὸς ','')
         book_csv_rows.append(row)
@@ -220,7 +224,8 @@ def loadBookTable() -> bool:
                 row[key] = value = None
             # book_csv_column_sets[key].add(value)
             book_csv_column_counts[key][value] += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(book_csv_rows):,} book CSV data rows.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(book_csv_rows):,} book CSV data rows.")
 
     return True
 # end of extract_VLT_NT_to_ESFM.loadBookTable
@@ -230,14 +235,17 @@ def loadSourceCollationTable() -> bool:
     """
     """
     global collation_csv_column_headers
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nLoading {'UPDATED ' if 'updated' in str(state.sourceCollationTableFilepath) else ''}collation CSV file from {state.sourceCollationTableFilepath}…")
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_COLLATION_COLUMNS} columns…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nLoading {'UPDATED ' if 'updated' in str(state.sourceCollationTableFilepath) else ''}collation CSV file from {state.sourceCollationTableFilepath}…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_COLLATION_COLUMNS} columns…")
     with open(state.sourceCollationTableFilepath, 'rt', encoding='utf-8') as csv_file:
         csv_lines = csv_file.readlines()
 
     # Remove any BOM
     if csv_lines[0].startswith("\ufeff"):
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of collation CSV file…")
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of collation CSV file…")
         csv_lines[0] = csv_lines[0][1:]
 
     # Get the headers before we start
@@ -261,7 +269,8 @@ def loadSourceCollationTable() -> bool:
     unique_words = set()
     for n, row in enumerate(dict_reader):
         if len(row) != NUM_EXPECTED_COLLATION_COLUMNS:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Collation line {n} has {len(row)} columns instead of {NUM_EXPECTED_COLLATION_COLUMNS}!!!")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Collation line {n} has {len(row)} columns instead of {NUM_EXPECTED_COLLATION_COLUMNS}!!!")
         row['Morphology'] = row['Morphology'].replace( '.', '·' ) # Replace period with middle dot for our use (helps to distinguish them later)
         collation_csv_rows.append(row)
         unique_words.add(row['Classic']) # Was 'Medieval', but that's gone out of the collation table now
@@ -278,8 +287,10 @@ def loadSourceCollationTable() -> bool:
                 collation_csv_column_non_blank_counts[key] += 1
             collation_csv_column_counts[key][value] += 1
     assert len(collation_csv_rows) == EXPECTED_EXPORT_WORD_TABLE_LINE_COUNT, f"{EXPECTED_EXPORT_WORD_TABLE_LINE_COUNT=} {len(collation_csv_rows)}"
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(collation_csv_rows):,} collation CSV data rows.")
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Have {len(unique_words):,} unique Greek words.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(collation_csv_rows):,} collation CSV data rows.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Have {len(unique_words):,} unique Greek words.")
 
     return True
 # end of extract_VLT_NT_to_ESFM.loadSourceCollationTable
@@ -289,14 +300,17 @@ def loadSourceWordTable() -> bool:
     """
     """
     global word_csv_column_headers
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nLoading {'UPDATED ' if 'updated' in str(state.sourceWordTableFilepath) else ''}word CSV file from {state.sourceWordTableFilepath}…")
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_WORD_COLUMNS} columns…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nLoading {'UPDATED ' if 'updated' in str(state.sourceWordTableFilepath) else ''}word CSV file from {state.sourceWordTableFilepath}…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_WORD_COLUMNS} columns…")
     with open(state.sourceWordTableFilepath, 'rt', encoding='utf-8') as csv_file:
         csv_lines = csv_file.readlines()
 
     # Remove any BOM
     if csv_lines[0].startswith("\ufeff"):
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of word CSV file…")
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of word CSV file…")
         csv_lines[0] = csv_lines[0][1:]
 
     # Get the headers before we start
@@ -314,7 +328,8 @@ def loadSourceWordTable() -> bool:
     unique_words = set()
     for n, row in enumerate(dict_reader):
         if len(row) != NUM_EXPECTED_WORD_COLUMNS:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Word line {n} has {len(row)} columns instead of {NUM_EXPECTED_WORD_COLUMNS}!!!")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Word line {n} has {len(row)} columns instead of {NUM_EXPECTED_WORD_COLUMNS}!!!")
         row['Morphology'] = row['Morphology'].replace( '.', '·' ) # Replace period with middle dot for our use (helps to distinguish them later)
         word_csv_rows.append(row)
         unique_words.add(row['Medieval'])
@@ -330,8 +345,10 @@ def loadSourceWordTable() -> bool:
                     word_csv_column_max_length_counts[key] = len(value)
                 word_csv_column_non_blank_counts[key] += 1
             word_csv_column_counts[key][value] += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(word_csv_rows):,} word CSV data rows.")
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Have {len(unique_words):,} unique Greek words.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(word_csv_rows):,} word CSV data rows.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Have {len(unique_words):,} unique Greek words.")
 
     return True
 # end of extract_VLT_NT_to_ESFM.loadSourceWordTable
@@ -339,14 +356,17 @@ def loadSourceWordTable() -> bool:
 
 def loadLemmaTable() -> bool:
     """ """
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nLoading lemma TSV file from {state.CNTRLemmaTableFilepath}…")
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_LEMMA_COLUMNS} columns…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nLoading lemma TSV file from {state.CNTRLemmaTableFilepath}…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_LEMMA_COLUMNS} columns…")
     with open(state.CNTRLemmaTableFilepath, 'rt', encoding='utf-8') as lemma_csv_file:
         lemma_tsv_lines = lemma_csv_file.readlines()
 
     # Remove any BOM
     if lemma_tsv_lines[0].startswith("\ufeff"):
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of lemma TSV file…")
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of lemma TSV file…")
         lemma_tsv_lines[0] = lemma_tsv_lines[0][1:]
 
     # Get the headers before we start
@@ -359,14 +379,16 @@ def loadLemmaTable() -> bool:
     dict_reader = DictReader(lemma_tsv_lines, delimiter=',')
     for n, row in enumerate(dict_reader):
         if len(row) != NUM_EXPECTED_LEMMA_COLUMNS:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_LEMMA_COLUMNS}")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_LEMMA_COLUMNS}")
         lemma_csv_rows.append(row)
 
         ld_key = (row['LexemeId'],row['Lemma'])
         assert ld_key not in lexemeID_CNTRLemma_dict
         lexemeID_CNTRLemma_dict[ld_key] = row['Medieval'] # was 'Greek'
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(lemma_csv_rows):,} lemma TSV data rows.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(lemma_csv_rows):,} lemma TSV data rows.")
 
     return True
 # end of extract_VLT_NT_to_ESFM.loadLemmaTable
@@ -404,7 +426,8 @@ def export_esfm_literal_English_gloss() -> bool:
 
     Simultaneously creates the word data table (TSV) from the collation table.
     """
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nExporting ESFM plain text literal English files…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nExporting ESFM plain text literal English files…" )
     last_book_number = 39 # Start here coz we only do NT
     last_chapter_number = last_verse_number = last_word_number = 0
     last_verse_id = None
@@ -412,7 +435,8 @@ def export_esfm_literal_English_gloss() -> bool:
     num_books_written = 0
     final_NT_word_table_filename = 'OET-LV_NT_word_table.tsv' # Will be made later by add_tags_to_NT_word_table.py
     table_filepath = VLT_GLOSS_ESFM_OUTPUT_FOLDERPATH.joinpath( OUR_EXPORT_TABLE_FILENAME )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Exporting ESFM auxilliary word table to {table_filepath}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Exporting ESFM auxilliary word table to {table_filepath}…" )
     next_word_number = 1 # word count includes variants
     with open(table_filepath, 'wt', encoding='utf-8') as table_output_file:
         table_output_file.write( 'Ref\tGreekWord\tSRLemma\tGreekLemma\tVLTGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology\n' ) # Write TSV header row
@@ -539,7 +563,8 @@ def export_esfm_literal_English_gloss() -> bool:
     if esfm_text: # write the last book
         if write_gloss_esfm_book( last_book_number, esfm_text ):
             num_books_written += 1
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {num_books_written} books to {VLT_GLOSS_ESFM_OUTPUT_FOLDERPATH}.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {num_books_written} books to {VLT_GLOSS_ESFM_OUTPUT_FOLDERPATH}.")
 
     # Now done in add_tags_to_NT_word_table.py
     # # Also use the same word file for the OET-RV
@@ -717,9 +742,11 @@ def check_verse_rows(given_verse_row_list: List[dict], stop_on_error:bool=False)
             return
         gloss_order_set.add(row['GlossOrder'])
     if len(gloss_order_set) < len(given_verse_row_list):
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"ERROR: Verse rows for {given_verse_row_list[0]['VerseId']} have duplicate GlossOrder fields!")
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"ERROR: Verse rows for {given_verse_row_list[0]['VerseId']} have duplicate GlossOrder fields!")
         for some_row in given_verse_row_list:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {some_row['CollationId']} {some_row['Align']} '{some_row['Koine']}' '{some_row['GlossWord']}' {some_row['GlossOrder']} Role={some_row['Role']} Syntax={some_row['Syntax']}")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {some_row['CollationId']} {some_row['Align']} '{some_row['Koine']}' '{some_row['GlossWord']}' {some_row['GlossOrder']} Role={some_row['Role']} Syntax={some_row['Syntax']}")
         if stop_on_error: gloss_order_fields_for_verse_are_not_unique
 # end of extract_VLT_NT_to_ESFM.check_verse_rows
 
@@ -755,9 +782,10 @@ def get_gloss_word_index_list(given_verse_row_list: List[dict]) -> List[List[int
             result_list.append(these_words_base_display_index_list)
             these_words_base_display_index_list = []
     if these_words_base_display_index_list:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Why did get_gloss_word_index_list() for {given_verse_row_list[0]['VerseId']} ({len(given_verse_row_list)} rows)"
-              f" have left-over words: ({len(these_words_base_display_index_list)}) {these_words_base_display_index_list}"
-              f" from glossInserts: {[row['GlossInsert'] for row in given_verse_row_list]}")
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Why did get_gloss_word_index_list() for {given_verse_row_list[0]['VerseId']} ({len(given_verse_row_list)} rows)"
+                  f" have left-over words: ({len(these_words_base_display_index_list)}) {these_words_base_display_index_list}"
+                  f" from glossInserts: {[row['GlossInsert'] for row in given_verse_row_list]}")
     assert not these_words_base_display_index_list # at end of loop
     # dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"get_gloss_word_index_list for {verse_id} is returning: ({len(result_list)}) {result_list}"); assert False, "We want to stop here"
     return result_list
@@ -781,9 +809,10 @@ def preform_gloss_and_word_number(thisList:List[Dict[str,str]], given_verse_row_
     if row_offset is not None: assert isinstance( row_offset, int )
 
     given_verse_row = thisList[given_verse_row_index]
-    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"preform_gloss({given_verse_row['GlossPre']}"
-                        f".{given_verse_row['GlossHelper']}.{given_verse_row['GlossWord']}"
-                        f".{given_verse_row['GlossPost']}, {last_glossWord=})…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"preform_gloss({given_verse_row['GlossPre']}"
+                            f".{given_verse_row['GlossHelper']}.{given_verse_row['GlossWord']}"
+                            f".{given_verse_row['GlossPost']}, {last_glossWord=})…")
     try:
         last_given_verse_row = thisList[last_given_verse_row_index]
         last_glossInsert = last_given_verse_row['GlossInsert']
@@ -792,7 +821,8 @@ def preform_gloss_and_word_number(thisList:List[Dict[str,str]], given_verse_row_
     if last_glossInsert:
         last_pre_punctuation, last_post_punctuation = separate_punctuation(last_given_verse_row['GlossPunctuation'])
         last_glossCapitalization = last_given_verse_row['GlossCapitalization']
-        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {last_glossInsert=}" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {last_glossInsert=}" )
 
     glossPre, glossHelper, glossWord, glossPost, glossPunctuation, glossCapitalization \
         = given_verse_row['GlossPre'], given_verse_row['GlossHelper'], given_verse_row['GlossWord'], given_verse_row['GlossPost'], given_verse_row['GlossPunctuation'], given_verse_row['GlossCapitalization']
@@ -912,7 +942,8 @@ def preform_gloss_and_word_number(thisList:List[Dict[str,str]], given_verse_row_
             if '_' in glossHelper:
                 glossHelper_bits = glossHelper.split('_', 1)
             else:
-                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Warning: Can't insert '{last_glossWord}' at underline in '{glossHelper}' at {given_verse_row['CollationId']}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Warning: Can't insert '{last_glossWord}' at underline in '{glossHelper}' at {given_verse_row['CollationId']}")
                 glossHelper_bits = glossHelper, ''
             preformed_word_string = f"{pre_punctuation}{'˱'+glossPre+'˲_' if glossPre else ''}˓{glossHelper_bits[0]}˒_ {last_glossWord} _˓{glossHelper_bits[1]}˒_" \
                                     f"{glossWord}{' '+BACKSLASH+'add '+glossPost+BACKSLASH+'add*' if glossPost else ''}{post_punctuation}"
@@ -936,11 +967,13 @@ def preform_gloss_and_word_number(thisList:List[Dict[str,str]], given_verse_row_
                                     f"{glossWord}_> {last_glossWord} <_\\add {glossPost}\\add*{post_punctuation}"
             last_glossWord = ''
         else:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Warning: Unexpected GlossInsert = '{last_glossInsert}' (ignored) {thisList=} {given_verse_row_index=}")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Warning: Unexpected GlossInsert = '{last_glossInsert}' (ignored) {thisList=} {given_verse_row_index=}")
     else:
         if glossInsert and last_glossInsert and glossInsert != last_glossInsert:
             msg = f"ERROR: preform_gloss() for {given_verse_row['CollationId']} should not have {glossInsert=} but '{last_glossInsert}'"
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, msg)
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, msg)
             last_glossWord = f'{msg} {last_glossWord}' # Also insert the error into the returned text so it gets noticed
         if not glossInsert: # (If we do have glossInsert, leave the capitalization for the next round)
             glossPre, glossHelper, glossWord = apply_gloss_capitalization(glossPre, glossHelper, glossWord, glossCapitalization)
@@ -982,7 +1015,8 @@ def separate_punctuation(given_punctuation:str) -> Tuple[str,str]:
                 post_punctuation = f'{temporary_copied_punctuation[-1]}{post_punctuation}'
                 temporary_copied_punctuation = temporary_copied_punctuation[:-1]
             else:
-                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"ERROR: punctuation character(s) '{temporary_copied_punctuation}' is not handled yet! ({given_punctuation=})")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"ERROR: punctuation character(s) '{temporary_copied_punctuation}' is not handled yet! ({given_punctuation=})")
                 if __name__ == "__main__": stop_right_here
                 break
         if __name__ == "__main__": # don't want this to fail when in the gloss editor

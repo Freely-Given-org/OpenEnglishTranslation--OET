@@ -35,7 +35,7 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.Formats.ESFMBible import ESFMBible, ESFM_WORD_NUMBER_REGEX
 
 
-LAST_MODIFIED_DATE = '2026-06-11' # by RJH
+LAST_MODIFIED_DATE = '2026-10-06' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-RV_to_sectionReadings"
 PROGRAM_NAME = "Convert OET-RV to section readings"
 PROGRAM_VERSION = '0.40'
@@ -136,9 +136,11 @@ def main():
                     totalSectionsWritten += processBook( BBB )
                     numBooksProcessed += 1
                     if USE_PIPER_FLAG is False and BBB != list(BBB_DICT)[-1]: # Not the last book to process
-                        vPrint( 'Normal', DEBUGGING_THIS_MODULE, "Having a rest between Bible books for gTTS bandwidth…" )
+                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                            vPrint( 'Normal', DEBUGGING_THIS_MODULE, "Having a rest between Bible books for gTTS bandwidth…" )
                         sleep( 1000 ) # Delay between books
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Wrote {totalSectionsWritten:,} section {'file sets' if MAKE_AUDIO_FILES else 'text files'} for {numBooksProcessed} book(s): {BOOKS_TO_LOAD}." )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Wrote {totalSectionsWritten:,} section {'file sets' if MAKE_AUDIO_FILES else 'text files'} for {numBooksProcessed} book(s): {BOOKS_TO_LOAD}." )
 # end of convert_OET-RV_to_sectionReadings.main
 
 
@@ -156,29 +158,36 @@ def load_OET_RV() -> bool:
                         if TEST_MODE_FLAG \
                         else f'OET-RV{PICKLE_FILENAME_END}'
     pickleFolderPath = OET_RV_ESFM_FolderPath if OET_RV_ESFM_FolderPath.is_dir() else OET_RV_ESFM_FolderPath.parent
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nLooking for {f"'{pickleFilename}'" if BibleOrgSysGlobals.verbosityLevel>1 else 'pickle'} file for ‘OET-RV’{f' in {pickleFolderPath}/' if BibleOrgSysGlobals.verbosityLevel>2 else ''} …" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nLooking for {f"'{pickleFilename}'" if BibleOrgSysGlobals.verbosityLevel>1 else 'pickle'} file for ‘OET-RV’{f' in {pickleFolderPath}/' if BibleOrgSysGlobals.verbosityLevel>2 else ''} …" )
     pickleFilePath = pickleFolderPath.joinpath( pickleFilename )
-    dPrint( 'Never', DEBUGGING_THIS_MODULE, f"{OET_RV_ESFM_FolderPath=} {pickleFilename=} {pickleFolderPath=} {pickleFilePath=}" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 5:
+        dPrint( 'Never', DEBUGGING_THIS_MODULE, f"{OET_RV_ESFM_FolderPath=} {pickleFilename=} {pickleFolderPath=} {pickleFilePath=}" )
     if pickleFilePath.is_file():
         pickleIsObsolete = False
         pickleMTime = pickleFilePath.stat().st_mtime # A large integer
-        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"preloadVersions found {pickleFilename=}" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"preloadVersions found {pickleFilename=}" )
         for somePath in pickleFolderPath.iterdir():
-            dPrint( 'Never', DEBUGGING_THIS_MODULE, f"{pickleFolderPath=} {somePath=} {type(somePath)=}" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 5:
+                dPrint( 'Never', DEBUGGING_THIS_MODULE, f"{pickleFolderPath=} {somePath=} {type(somePath)=}" )
             if somePath.is_file() and not str(somePath).endswith( PICKLE_FILENAME_END ):
                 fileMTime = somePath.stat().st_mtime # A large integer
                 if fileMTime > pickleMTime:
                     pickleIsObsolete = True
-                    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"OET-RV pickle is obsolete because {somePath.name} is more recent." )
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"OET-RV pickle is obsolete because {somePath.name} is more recent." )
                     break
             else:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Ignoring pickle file or folder {somePath=} {somePath.name=}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Ignoring pickle file or folder {somePath=} {somePath.name=}")
         if not pickleIsObsolete:
             try:
                 newBibleObj = BibleOrgSysGlobals.unpickleObject( pickleFilename, pickleFolderPath )
                 # dPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"newObj is {newBibleObj}" )
                 # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loaded OET-RV {type(newBibleObj)} pickle file: {pickleFilename}." )
-                vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"preloadVersions() loaded pickled {newBibleObj if BibleOrgSysGlobals.verbosityLevel>=2 else 'OET-RV'}" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+                    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"preloadVersions() loaded pickled {newBibleObj if BibleOrgSysGlobals.verbosityLevel>=2 else 'OET-RV'}" )
                 assert 'discoveryResults' in newBibleObj.__dict__ # .discover() should have been called before it was saved
                 preloadedBible = newBibleObj
                 return True
@@ -186,8 +195,10 @@ def load_OET_RV() -> bool:
                 logging.critical( f"Failed to load OET-RV pickle file: Ran out of input from {pickleFilename} in {pickleFolderPath}")
                 return False
     else:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  No pickle file for OET-RV." )
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, "Preloading OET-RV ESFM Bible…" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, "  No pickle file for OET-RV." )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, "Preloading OET-RV ESFM Bible…" )
         thisBible = ESFMBible.ESFMBible( OET_RV_ESFM_FolderPath, givenName='Open English Translation—Readers’ Version (2030)', givenAbbreviation='OET-RV' )
         thisBible.loadAuxiliaryFiles = True
         # if versionAbbreviation in ('ULT','UST','UHB','UGNT','SR-GNT'):
@@ -203,7 +214,8 @@ def load_OET_RV() -> bool:
         if BOOKS_TO_LOAD != ['ALL']:
             # Remove unwanted books in this Bible
             if len(thisBible) > len(BOOKS_TO_LOAD):
-                vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Reducing {thisBible.abbreviation} {len(thisBible)} books down to {len(BOOKS_TO_LOAD)}…" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+                    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Reducing {thisBible.abbreviation} {len(thisBible)} books down to {len(BOOKS_TO_LOAD)}…" )
                 newBooks = {}
                 for BBB,bookObject in thisBible.books.items():
                     if BBB in BOOKS_TO_LOAD:
@@ -211,7 +223,8 @@ def load_OET_RV() -> bool:
                 thisBible.books = newBooks
             assert len(thisBible)
 
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nDoing discovery for {thisBible.abbreviation} ({thisBible.name}) with {len(thisBible)} books…" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nDoing discovery for {thisBible.abbreviation} ({thisBible.name}) with {len(thisBible)} books…" )
         thisBible.discover()
         assert 'discoveryResults' in thisBible.__dict__
         preloadedBible = thisBible
@@ -224,7 +237,8 @@ def load_OET_RV() -> bool:
                 assert versionAbbreviation == 'MSB'
                 pickleFolderPath = OET_RV_ESFM_FolderPath[0]
         thisBible.pickle( pickleFilename, pickleFolderPath )
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Saved pickle file: {pickleFilename}." )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Saved pickle file: {pickleFilename}." )
         return True
 
     logging.critical( f"Failed to load OET-RV from {OET_RV_ESFM_FolderPath}" )
@@ -290,7 +304,8 @@ def processBook( BBB:str ) -> int:
     bookFolder = NORMAL_OUTPUT_FOLDER_PATH.joinpath( f'{BBB}/' )
     try: os.makedirs( bookFolder )
     except FileExistsError: pass # they were already there
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Processing {BBB} into {bookFolder}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Processing {BBB} into {bookFolder}…" )
 
     count = 0
     for n,startC,startV,endC,endV,sectionName,_contextList,verseEntryList,sectionFilename in sectionsLists['OET-RV'][BBB]:

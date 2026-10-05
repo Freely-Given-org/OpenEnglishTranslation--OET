@@ -37,7 +37,7 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2024-03-19' # by RJH
+LAST_MODIFIED_DATE = '2026-10-06' # by RJH
 SHORT_PROGRAM_NAME = "Convert_ClearMaculaNT_to_TSV"
 PROGRAM_NAME = "Extract and Apply Macula OT glosses"
 PROGRAM_VERSION = '0.23'
@@ -119,19 +119,23 @@ def loadBibleTagsNTSourceTable() -> bool:
     """
     """
     global BibTags_tsv_column_headers
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading BibleTags NT tsv file from {state.BibTags_TSV_input_filepath}…")
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_BIBLE_TAGS_COLUMNS} columns…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading BibleTags NT tsv file from {state.BibTags_TSV_input_filepath}…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_BIBLE_TAGS_COLUMNS} columns…")
     with open(state.BibTags_TSV_input_filepath, 'rt', encoding='utf-8') as tsv_file:
         tsv_lines = tsv_file.readlines()
 
     # Remove any BOM
     if tsv_lines[0].startswith("\ufeff"):
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of our NT tsv file…")
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of our NT tsv file…")
         tsv_lines[0] = tsv_lines[0][1:]
 
     # Get the headers before we start
     BibTags_tsv_column_headers = [header for header in tsv_lines[0].strip().split('\t')]
-    dPrint('Info', DEBUGGING_THIS_MODULE, f"Column headers: ({len(BibTags_tsv_column_headers)}): {BibTags_tsv_column_headers}")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+        dPrint('Info', DEBUGGING_THIS_MODULE, f"Column headers: ({len(BibTags_tsv_column_headers)}): {BibTags_tsv_column_headers}")
     assert len(BibTags_tsv_column_headers) == NUM_EXPECTED_BIBLE_TAGS_COLUMNS
 
     # Read, check the number of columns, and summarise row contents all in one go
@@ -153,8 +157,10 @@ def loadBibleTagsNTSourceTable() -> bool:
                     BibTags_tsv_column_max_length_counts[key] = len(value)
                 BibTags_tsv_column_non_blank_counts[key] += 1
             BibTags_tsv_column_counts[key][value] += 1
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.BibTags_rows):,} (tsv) BibTags data rows.")
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Have {len(unique_words):,} unique Greek words.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.BibTags_rows):,} (tsv) BibTags data rows.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Have {len(unique_words):,} unique Greek words.")
 
     return True
 # end of convert_ClearMaculaNT_to_TSV.loadBibleTagsNTSourceTable
@@ -165,7 +171,8 @@ def loadClearLowFatGlossesXML() -> bool:
     Extract glosses out of fields 
     Reorganise columns and add our extra columns
     """
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading Clear.Bible 'low fat' NT glosses from {state.lowfat_XML_input_folderpath}/…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading Clear.Bible 'low fat' NT glosses from {state.lowfat_XML_input_folderpath}/…" )
     
     # namespaces = { 'osis': 'http://www.bibletechnologies.net/2003/OSIS/namespace' }
     # namespaces = { 'xml': 'http://www.w3.org/XML/1998/namespace' }
@@ -177,12 +184,14 @@ def loadClearLowFatGlossesXML() -> bool:
         BBB = bos_books_codes_py.get_bos_book_code_from_reference_number( referenceNumber )
         bookname = bos_books_codes_py.get_english_name_nr( BBB )
         filename = LOWFAT_XML_FILENAME_TEMPLATE.replace( 'NN', str(nn).zfill(2) ).replace( 'wwww', bookname.lower().replace(' ','') )
-        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading {BBB} XML file from {filename}…")
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading {BBB} XML file from {filename}…")
         bookTree = ElementTree.parse( state.lowfat_XML_input_folderpath.joinpath( filename ) )
 
         # First make a table of parents so we can find them later
         parentMap = {child:parent for parent in bookTree.iter() for child in parent if child.tag in ('w','wg')}
-        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Loaded {len(parentMap):,} parent entries." )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Loaded {len(parentMap):,} parent entries." )
         # print( str(parentMap)[:5000])
 
         # Now load all the word (w) fields for the chapter into a temporary list
@@ -355,7 +364,8 @@ def loadClearLowFatGlossesXML() -> bool:
                     for fieldname in state.output_fieldnames:
                         if fieldname not in ('FGRef','BibTagId'): assert fieldname in entry, f"{fieldname} missing from entry"
 
-        vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Got {len(tempWordsAndMorphemes):,} words/morphemes in {BBB}" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 4:
+            vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Got {len(tempWordsAndMorphemes):,} words/morphemes in {BBB}" )
         assert len(set(longIDs)) == len(longIDs), f"Should be no duplicates in {longIDs=}"
 
         # Note that because of the phrase/clause nesting, we can get the word fields in the wrong order
@@ -376,16 +386,20 @@ def loadClearLowFatGlossesXML() -> bool:
             assert len(newExpandedDictEntry) == len(state.output_fieldnames)-1, f"{len(newExpandedDictEntry)=} vs {len(state.output_fieldnames)=}" # BibTagId field to be added below
             state.lowFatWordsAndMorphemes.append( newExpandedDictEntry )
 
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Got total of {len(state.lowFatWordsAndMorphemes):,} words/morphemes")
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      Max nesting level = {max_nesting_level}" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Got total of {len(state.lowFatWordsAndMorphemes):,} words/morphemes")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      Max nesting level = {max_nesting_level}" )
     if 1:  # Just so we can turn it off and on easily
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nDetailed counts for {len(column_counts):,} fields:")
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nDetailed counts for {len(column_counts):,} fields:")
         for field_name in column_counts:
             this_set = column_counts[field_name]
             this_set_length = len(this_set)
             if this_set_length < 55:
-                vPrint( 'Normal', DEBUGGING_THIS_MODULE, # Sort them with most frequent first
-                    f"\n{field_name}: ({this_set_length}) {dict(sorted(this_set.items(), key=lambda x:x[1], reverse=True))}" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                    vPrint( 'Normal', DEBUGGING_THIS_MODULE, # Sort them with most frequent first
+                        f"\n{field_name}: ({this_set_length}) {dict(sorted(this_set.items(), key=lambda x:x[1], reverse=True))}" )
             else: vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\n{field_name} has {this_set_length:,} unique options -- display suppressed." )
     # if 0:
     #     for n,currentEntry in enumerate(state.lowFatWordsAndMorphemes):
@@ -450,7 +464,8 @@ def add_BibleTags_ids() -> bool:
 
     So match the entries and add them in.
     """
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nMatching rows in both tables to add BibleTags ids…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nMatching rows in both tables to add BibleTags ids…" )
 
     # We expect ['Ref', 'BibTagId', 'Word', 'Lemma', 'Strong', 'Morphology', 'After']
     BibTags_dict = {row['Ref']:(row['Word'],row['Morphology'],row['BibTagId']) for row in state.BibTags_rows} # We include the morphology for extra checking
@@ -493,7 +508,8 @@ def add_BibleTags_ids() -> bool:
             adjustedRowID = f'{verseID}w{wordNumber+offset}'
             try:
                 foundWord, foundMorphology, foundID = BibTags_dict[adjustedRowID]
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Got {foundID} for {offset=} {adjustedRowID}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Got {foundID} for {offset=} {adjustedRowID}")
                 assert foundWord==word, f"ID's now matched {adjustedRowID} from {ourID} and got {foundID}, but not text ({len(foundWord)}) '{foundWord}' != ({len(word)}) '{word}'"
                 assert foundMorphology==morphology, f"ID's now matched {adjustedRowID} from {ourID} and got {foundID}, but not morphology '{foundMorphology}'!='{morphology}'"
                 newMoreExpandedDictEntry = {'FGRef':ourID, 'BibTagId':foundID, **secondEntryAttempt}
@@ -510,7 +526,8 @@ def add_BibleTags_ids() -> bool:
             adjustedRowID = f'{verseID}w{wordNumber+offset}'
             try:
                 foundWord, foundMorphology, foundID = BibTags_dict[adjustedRowID]
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Got {foundID} for {offset=} {adjustedRowID}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Got {foundID} for {offset=} {adjustedRowID}")
                 assert foundWord==word, f"ID's now matched {adjustedRowID} from {ourID} and got {foundID}, but not text ({len(foundWord)}) '{foundWord}' != ({len(word)}) '{word}'"
                 assert foundMorphology==morphology, f"ID's now matched {adjustedRowID} from {ourID} and got {foundID}, but not morphology '{foundMorphology}'!='{morphology}'"
                 newMoreExpandedDictEntry = {'FGRef':ourID, 'BibTagId':foundID, **secondEntryAttempt}
@@ -528,8 +545,10 @@ def add_BibleTags_ids() -> bool:
         for fieldname in state.output_fieldnames: assert fieldname in newLowFatWordsAndMorphemes[-1]
         lastVerseID = verseID
 
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Added {addedCount:,} BibTags IDs" )
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Skipped {skippedCount:,} BibTags IDs" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Added {addedCount:,} BibTags IDs" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Skipped {skippedCount:,} BibTags IDs" )
 
     assert len(newLowFatWordsAndMorphemes) == len(state.lowFatWordsAndMorphemes)
     state.lowFatWordsAndMorphemes = newLowFatWordsAndMorphemes
@@ -541,7 +560,8 @@ def save_filled_TSV_file() -> bool:
     """
     Save table as a single TSV file (about 25 MB).
     """
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nExporting filled NT Low Fat table as a single flat TSV file to {state.TSV_output_filepath}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nExporting filled NT Low Fat table as a single flat TSV file to {state.TSV_output_filepath}…" )
 
     BibleOrgSysGlobals.backupAnyExistingFile( state.TSV_output_filepath, numBackups=5 )
 
@@ -556,7 +576,8 @@ def save_filled_TSV_file() -> bool:
             thisRow = {k:thisTuple[k] for k in state.output_fieldnames} # Make sure we have the fields in the correct output order
             # print( f"\n{thisRow=}" )
             writer.writerow( thisRow )
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {len(state.lowFatWordsAndMorphemes):,} data rows written." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {len(state.lowFatWordsAndMorphemes):,} data rows written." )
 
     if 1: # Collect and print stats
         non_blank_counts, blank_counts = defaultdict(int), defaultdict(int)
@@ -568,14 +589,17 @@ def save_filled_TSV_file() -> bool:
                 sets[fieldname].add( value )
         for fieldname,count in blank_counts.items():
             assert count < len(state.lowFatWordsAndMorphemes), f"Field is never filled: '{fieldname}'"
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nCounts of non-blank fields for {len(state.lowFatWordsAndMorphemes):,} rows:" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nCounts of non-blank fields for {len(state.lowFatWordsAndMorphemes):,} rows:" )
         for fieldname,count in non_blank_counts.items():
             non_blank_count_str = 'all' if count==len(state.lowFatWordsAndMorphemes) else f'{count:,}'
             unique_count_str = 'all' if len(sets[fieldname])==len(state.lowFatWordsAndMorphemes) else f'{len(sets[fieldname]):,}'
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {fieldname}: {non_blank_count_str} non-blank entries (with {unique_count_str} unique entries)" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {fieldname}: {non_blank_count_str} non-blank entries (with {unique_count_str} unique entries)" )
             assert count # Otherwise we're including a field that contains nothing!
             if len(sets[fieldname]) < 50:
-                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    being: {sets[fieldname]}" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    being: {sets[fieldname]}" )
 
     return True
 # end of convert_ClearMaculaNT_to_TSV.save_filled_TSV_file
@@ -588,7 +612,8 @@ def save_shortened_TSV_file() -> bool:
 
     Of course, this makes the table less self-documenting!
     """
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nExporting shortened NT Low Fat table as a single flat TSV file to {state.TSV_output_filepath}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nExporting shortened NT Low Fat table as a single flat TSV file to {state.TSV_output_filepath}…" )
 
     BibleOrgSysGlobals.backupAnyExistingFile( state.shortened_TSV_output_filepath, numBackups=5 )
 
@@ -626,7 +651,8 @@ def save_shortened_TSV_file() -> bool:
             assert len(thisEntryDict) == len(state.output_fieldnames) - len(columnsToRemove)
             writer.writerow( thisEntryDict )
 
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {len(state.lowFatWordsAndMorphemes):,} shortened data rows written." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {len(state.lowFatWordsAndMorphemes):,} shortened data rows written." )
     return True
 # end of convert_ClearMaculaNT_to_TSV.save_shortened_TSV_file
 

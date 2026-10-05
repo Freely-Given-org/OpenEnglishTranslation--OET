@@ -38,7 +38,7 @@ from BibleOrgSys.Formats.ESFMBible import ESFM_WORD_NUMBER_REGEX
 from BibleOrgSys.Bible import Bible
 
 
-LAST_MODIFIED_DATE = '2026-02-10' # by RJH
+LAST_MODIFIED_DATE = '2026-10-06' # by RJH
 SHORT_PROGRAM_NAME = "delete_OET-RV_word_numbers"
 PROGRAM_NAME = "Delete word numbers from OET-RV NT"
 PROGRAM_VERSION = '0.04'
@@ -66,17 +66,20 @@ def main():
             # if BBB != 'PSA': continue
             rvESFMFilename = f'OET-RV_{BBB}.ESFM'
             rvESFMFilepath = OET_RV_ESFM_FolderPath.joinpath( rvESFMFilename )
-            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading {rvESFMFilepath}…" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+                vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading {rvESFMFilepath}…" )
             with open( rvESFMFilepath, 'rt', encoding='UTF-8' ) as esfmFile:
                 rvESFMText = esfmFile.read() # We keep the original (for later comparison)
             adjText, count = ESFM_WORD_NUMBER_REGEX.subn( '', rvESFMText )
             if count:
-                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"   Deleted {count:,} word numbers from {BBB}." )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"   Deleted {count:,} word numbers from {BBB}." )
                 with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
                     esfmFile.write( adjText ) # We keep the original (for later comparison)
                 totalDeletes += count
                 numChangedFiles += 1
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"   Deleted {totalDeletes:,} word numbers from {numChangedFiles:,} OET-RV OT files." )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"   Deleted {totalDeletes:,} word numbers from {numChangedFiles:,} OET-RV OT files." )
 
     response = input( "Are you sure you want to delete word numbers from the OET-RV NT? ").upper()
     if response in ( 'Y', 'YES' ):
@@ -84,17 +87,20 @@ def main():
         for BBB in BOOKLIST_NT27:
             rvESFMFilename = f'OET-RV_{BBB}.ESFM'
             rvESFMFilepath = OET_RV_ESFM_FolderPath.joinpath( rvESFMFilename )
-            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading {rvESFMFilepath}…" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+                vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loading {rvESFMFilepath}…" )
             with open( rvESFMFilepath, 'rt', encoding='UTF-8' ) as esfmFile:
                 rvESFMText = esfmFile.read() # We keep the original (for later comparison)
             adjText, count = ESFM_WORD_NUMBER_REGEX.subn( '', rvESFMText )
             if count:
-                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"   Deleted {count:,} word numbers from {BBB}." )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"   Deleted {count:,} word numbers from {BBB}." )
                 with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
                     esfmFile.write( adjText ) # We keep the original (for later comparison)
                 totalDeletes += count
                 numChangedFiles += 1
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"   Deleted {totalDeletes:,} word numbers from {numChangedFiles:,} OET-RV NT files." )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"   Deleted {totalDeletes:,} word numbers from {numChangedFiles:,} OET-RV NT files." )
 # end of delete_OET-RV_word_numbers.main
 
 

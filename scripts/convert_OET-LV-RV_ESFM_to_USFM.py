@@ -41,7 +41,7 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint, BOOKLIST_OT3
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-09-26' # by RJH
+LAST_MODIFIED_DATE = '2026-10-06' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_ESFM_to_USFM"
 PROGRAM_NAME = "Convert OET LV & RV ESFM files to USFM"
 PROGRAM_VERSION = '0.70'
@@ -72,14 +72,16 @@ def main():
 
     totalChangedFiles = 0
     for VV in ('LV','RV'):
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Processing {VV} files…" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Processing {VV} files…" )
         totalWordDeletes = totalESBs = numChangedFiles = 0
         for BBB in BOOKLIST_66 if VV=='LV' else BOOKLIST_88:
             vvInputFolderpath = OET_RV_ESFM_FolderPath if VV=='RV' \
                     else OET_LV_OT_ESFM_FolderPath if BBB in BOOKLIST_OT39 else OET_LV_NT_ESFM_FolderPath
             vvESFMFilename = f'OET-{VV}_{BBB}.ESFM'
             vvESFMFilepath = vvInputFolderpath.joinpath( vvESFMFilename )
-            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading {vvESFMFilepath}…" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading {vvESFMFilepath}…" )
             try:
                 with open( vvESFMFilepath, 'rt', encoding='UTF-8' ) as esfmFile:
                     vvESFMText = esfmFile.read() # We keep the original (for later comparison)
@@ -173,9 +175,12 @@ def main():
                 adjText = '\n'.join( newLines )
             if wordDeleteCount or esbCount or adjText!=vvESFMText:
                 if esbCount:
-                    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      Added {esbCount:,} sidebar markers to {BBB} (for OET-RV section headings)." )
-                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Deleted {wordDeleteCount:,} ESFM word numbers from {BBB}." )
-                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    Writing {vvUSFMFilepath}…" )
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      Added {esbCount:,} sidebar markers to {BBB} (for OET-RV section headings)." )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    vPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Deleted {wordDeleteCount:,} ESFM word numbers from {BBB}." )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    Writing {vvUSFMFilepath}…" )
                 with open( vvUSFMFilepath, 'wt', encoding='UTF-8' ) as usfmFile:
                     usfmFile.write( adjText ) # We keep the original (for later comparison)
                 totalWordDeletes += wordDeleteCount
@@ -183,10 +188,13 @@ def main():
                 numChangedFiles += 1
                 totalChangedFiles += 1
         if totalESBs:
-            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f" Added {totalESBs:,} total sidebar markers." )
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f" Deleted {totalWordDeletes:,} ESFM word numbers from {numChangedFiles:,} OET-{VV} USFM files." )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+                vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f" Added {totalESBs:,} total sidebar markers." )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f" Deleted {totalWordDeletes:,} ESFM word numbers from {numChangedFiles:,} OET-{VV} USFM files." )
     if totalChangedFiles:
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Wrote a total of {totalChangedFiles:,} cleaned OET USFM files to {cleaned_USFM_FolderPath}/." )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Wrote a total of {totalChangedFiles:,} cleaned OET USFM files to {cleaned_USFM_FolderPath}/." )
 # end of convert_OET-LV-RV_ESFM_to_USFM.main
 
 

@@ -57,7 +57,7 @@ from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew #, transliterate_Greek
 
-LAST_MODIFIED_DATE = '2026-05-08' # by RJH
+LAST_MODIFIED_DATE = '2026-10-06' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET OT wordtable"
 PROGRAM_VERSION = '0.25'
@@ -100,53 +100,66 @@ def main() -> None:
     state = State()
 
     # Read the existing lemma table
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Reading existing lemma table entries from {LEMMA_TABLE_INPUT_FILEPATH}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Reading existing lemma table entries from {LEMMA_TABLE_INPUT_FILEPATH}…" )
     with open( LEMMA_TABLE_INPUT_FILEPATH, 'rt', encoding='utf-8' ) as old_table_file:
         file_data = old_table_file.read()
         if file_data.startswith( '\ufeff' ): # remove any BOM
-            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of source lemma table tsv file…" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+                vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of source lemma table tsv file…" )
             file_data = file_data[1:]
         state.lemmaTable = file_data.rstrip( '\n' ).split( '\n' )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.lemmaTable):,} existing lemma table entries ({state.lemmaTable[0].count(TAB)+1} columns)." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.lemmaTable):,} existing lemma table entries ({state.lemmaTable[0].count(TAB)+1} columns)." )
 
     # Read the existing morpheme table
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Reading existing morpheme table entries from {MORPHEME_TABLE_INPUT_FILEPATH}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Reading existing morpheme table entries from {MORPHEME_TABLE_INPUT_FILEPATH}…" )
     with open( MORPHEME_TABLE_INPUT_FILEPATH, 'rt', encoding='utf-8' ) as old_table_file:
         file_data = old_table_file.read()
         if file_data.startswith( '\ufeff' ): # remove any BOM
-            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of source morpheme table tsv file…" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+                vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of source morpheme table tsv file…" )
             file_data = file_data[1:]
         state.morphemeTable = file_data.rstrip( '\n' ).split( '\n' )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.morphemeTable):,} existing morpheme table entries ({state.morphemeTable[0].count(TAB)+1} columns)." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.morphemeTable):,} existing morpheme table entries ({state.morphemeTable[0].count(TAB)+1} columns)." )
 
     # Read our old word table
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Reading existing word table entries from {WORD_TABLE_INPUT_FILEPATH}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Reading existing word table entries from {WORD_TABLE_INPUT_FILEPATH}…" )
     with open( WORD_TABLE_INPUT_FILEPATH, 'rt', encoding='utf-8' ) as old_table_file:
         file_data = old_table_file.read()
         if file_data.startswith( '\ufeff' ): # remove any BOM
-            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of source word table tsv file…" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+                vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of source word table tsv file…" )
             file_data = file_data[1:]
         state.oldWordTable = file_data.rstrip( '\n' ).split( '\n' )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.oldWordTable):,} old word table entries ({state.oldWordTable[0].count(TAB)+1} columns)." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.oldWordTable):,} old word table entries ({state.oldWordTable[0].count(TAB)+1} columns)." )
 
     expand_table_columns() # Creates state.newWordTable from state.oldWordTable by inserting and appending empty columns
 
     if not DEBUGGING_THIS_MODULE: apply_OT_scripted_gloss_updates()
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Reading Theographic Bible Data json entries from {JSON_VERSES_DB_INPUT_FILEPATH}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Reading Theographic Bible Data json entries from {JSON_VERSES_DB_INPUT_FILEPATH}…" )
     with open( JSON_VERSES_DB_INPUT_FILEPATH, 'rt', encoding='utf-8' ) as json_file:
         state.verseIndex = json.load( json_file )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.verseIndex):,} json verse entries." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.verseIndex):,} json verse entries." )
 
     associate_Theographic_people_places()
 
     tag_trinity_persons()
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nReading Hebrew Macula tsv entries from {MACULA_HEBREW_TSV_INPUT_FILEPATH}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nReading Hebrew Macula tsv entries from {MACULA_HEBREW_TSV_INPUT_FILEPATH}…" )
     with open( MACULA_HEBREW_TSV_INPUT_FILEPATH, 'rt', encoding='utf-8' ) as macula_tsv_file:
         macula_tsv_lines = macula_tsv_file.readlines()
     if macula_tsv_lines[0].startswith( '\ufeff' ): # remove any BOM
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of source tsv file…" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of source tsv file…" )
         macula_tsv_lines[0] = macula_tsv_lines[0][1:]
     # Get the headers before we start
     column_line_string = macula_tsv_lines[0].rstrip( '\n' )
@@ -155,7 +168,8 @@ def main() -> None:
     state.macula_tsv_lines = []
     for macula_line in macula_tsv_lines:
         state.macula_tsv_lines.append( macula_line.rstrip( '\n' ).split( '\t' ) )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.macula_tsv_lines):,} Hebrew Macula table entries ({column_line_string.count(TAB)+1} columns)." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.macula_tsv_lines):,} Hebrew Macula table entries ({column_line_string.count(TAB)+1} columns)." )
 
     # tag_referents_from_macula_data() # No 'referents' data in Macula Hebrew yet
 
@@ -174,7 +188,8 @@ def expand_table_columns() -> bool:
     """
     assert len(state.oldWordTable) < 382_000, f"{len(state.oldWordTable)=}"
     columnHeaders = state.oldWordTable[0]
-    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Old word table column headers = '{columnHeaders!r}'" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Old word table column headers = '{columnHeaders!r}'" )
     assert columnHeaders == 'Ref\tOSHBid\tRowType\tMorphemeRowList\tStrongs\tCantillationHierarchy\tMorphology\tWord\tNoCantillations\tMorphemeGlosses\tContextualMorphemeGlosses\tWordGloss\tContextualWordGloss\tGlossCapitalisation\tGlossPunctuation\tGlossOrder\tGlossInsert' # If not, probably need to fix some stuff
 
     # We'll insert a LemmaRowList column and at the end, append Role, Nesting, and Tags columns
@@ -240,20 +255,24 @@ def apply_OT_scripted_gloss_updates() -> bool:
 
     # Firstly we read the TOML control file
     filepath = SCRIPTED_UPDATES_TABLES_INPUT_FOLDERPATH.joinpath( 'ScriptedBibleEditor.control.toml' )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Loading control file: {filepath}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Loading control file: {filepath}…" )
     with open( filepath, 'rb' ) as controlFile:
         controlData = tomllib.load( controlFile )
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loading and applying transforms to {columnHeaders[12]} column…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loading and applying transforms to {columnHeaders[12]} column…" )
     totalChangedGlosses = 0
     commandTables = {}
     for commandTableName, givenFilepath in controlData['commandTables'].items():
         if 0 and commandTableName in ('fixGlossPre','fixGlossHelpers','fixGlossPost','cleanupVLT','finalFixes'): # These ones aren't relevant
-            vPrint( 'Info', DEBUGGING_THIS_MODULE, f" Completely ignoring command table file: {commandTableName}" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                vPrint( 'Info', DEBUGGING_THIS_MODULE, f" Completely ignoring command table file: {commandTableName}" )
             continue
         completeFilepath = SCRIPTED_UPDATES_TABLES_INPUT_FOLDERPATH.joinpath( givenFilepath )
         if os.path.isfile(completeFilepath):
-            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading command table file: {completeFilepath}…" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading command table file: {completeFilepath}…" )
             assert commandTableName not in commandTables
             commandTables[commandTableName] = []
             with open( completeFilepath, 'rt', encoding='utf-8' ) as commandTableFile:
@@ -362,7 +381,8 @@ def apply_OT_scripted_gloss_updates() -> bool:
                     tags = tags.replace( 'c', '' ) # Can't even remember what this tag is from finalFixes 'JtB's announcement'
                     
                     # We're going to do the changes to the entire word table right here!
-                    vPrint( 'Info', DEBUGGING_THIS_MODULE, f"Applying {commandTableName}: {tags=} {iBooks=} {eBooks=} {iMarkers=} {eMarkers=} {iRefs=} {eRefs=} {editCommand.preText=} {editCommand.sCase=} {searchText=} {editCommand.postText=} {editCommand.rCase=} {replaceText=} {editCommand.name=} {editCommand.comment}" )
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"Applying {commandTableName}: {tags=} {iBooks=} {eBooks=} {iMarkers=} {eMarkers=} {iRefs=} {eRefs=} {editCommand.preText=} {editCommand.sCase=} {searchText=} {editCommand.postText=} {editCommand.rCase=} {replaceText=} {editCommand.name=} {editCommand.comment}" )
                     if iMarkers or eMarkers:
                         print( f"  Unable to apply '{commandTableName}' {iMarkers=} or {eMarkers=}" )
                         assert False, "We want to stop here"
@@ -379,7 +399,8 @@ def apply_OT_scripted_gloss_updates() -> bool:
                         BBB, CV = bcvwRef.split( '_' )
                         if (iBooks and BBB not in iBooks) \
                         or BBB in eBooks:
-                            vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Skipping {BBB} at {bcvwRef} with {iBooks=} {eBooks=}" )
+                            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 4:
+                                vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Skipping {BBB} at {bcvwRef} with {iBooks=} {eBooks=}" )
                             continue
                         C, VW = CV.split( ':' )
                         try: V, W = VW.split( 'w' )
@@ -391,7 +412,8 @@ def apply_OT_scripted_gloss_updates() -> bool:
                         if (iRefs and bcvRef not in iRefs) \
                         or bcvRef in eRefs:
                             if eRefs:
-                                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Skipping {bcvRef} at {bcvwRef} with {iRefs=} {eRefs=}" )
+                                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                                    vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Skipping {bcvRef} at {bcvwRef} with {iRefs=} {eRefs=}" )
                             continue 
                         assert C.isdigit(), f"{C=}"
                         assert V.isdigit(), f"{V=}"
@@ -419,7 +441,8 @@ def apply_OT_scripted_gloss_updates() -> bool:
                                 searchStartIndex = match.start() + len(replaceText)
                                 numReplacements += 1
                         else:
-                            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Ignored {commandTableName} '{editCommand.name}' {editCommand.comment} {tags=}" )
+                            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+                                vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Ignored {commandTableName} '{editCommand.name}' {editCommand.comment} {tags=}" )
                             assert False, "We want to stop here"
 
                         if newGloss != oldGloss:
@@ -430,13 +453,16 @@ def apply_OT_scripted_gloss_updates() -> bool:
                             numChangedGlosses += 1
                             totalChangedGlosses += 1
                     if numChangedGlosses:
-                        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"Made {numChangedGlosses:,} '{commandTableName}' OET gloss changes from scripted tables" )
+                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"Made {numChangedGlosses:,} '{commandTableName}' OET gloss changes from scripted tables" )
                     
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded and applied {len(commandTables[commandTableName])} command{'' if len(commandTables[commandTableName])==1 else 's'} for '{commandTableName}'." )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Loaded and applied {len(commandTables[commandTableName])} command{'' if len(commandTables[commandTableName])==1 else 's'} for '{commandTableName}'." )
         else: vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      '{completeFilepath}' is not a file!" )
 
     if totalChangedGlosses:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Made total {totalChangedGlosses:,} OET gloss changes from scripted tables" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Made total {totalChangedGlosses:,} OET gloss changes from scripted tables" )
 
     assert 381_000 < len(state.newWordTable) < 382_000, f"{len(state.newWordTable)=}"
     return True
@@ -448,7 +474,8 @@ def associate_Theographic_people_places() -> bool:
     Using the Theographic Bible Data, tag Hebrew word lines in our table
         with keys for people, places, etc.
     """
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nAssociating Hebrew words with Theographic json keys…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nAssociating Hebrew words with Theographic json keys…" )
     assert 381_000 < len(state.newWordTable) < 382_000, f"{len(state.newWordTable)=}"
 
     numAddedPeople = numAddedPeopleGroups = numAddedLocations = numAddedEvents = numAddedYears = numAddedTimelines = 0
@@ -483,9 +510,11 @@ def associate_Theographic_people_places() -> bool:
 
         if gloss: # and gloss[0].isupper(): # That rules out glosses like 'of_Moses'
         # if 'U' in glossCaps: # or 'G' in glossCaps: ???
-            dPrint( 'Never', DEBUGGING_THIS_MODULE, f"{wordRef} {verseLinkEntry=}" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 5:
+                dPrint( 'Never', DEBUGGING_THIS_MODULE, f"{wordRef} {verseLinkEntry=}" )
             if verseLinkEntry['people']:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Need to add people: {n} {wordRef} '{noCantillations}' {glossCaps} '{gloss}' {verseLinkEntry['people']}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Need to add people: {n} {wordRef} '{noCantillations}' {glossCaps} '{gloss}' {verseLinkEntry['people']}")
                 assert isinstance( verseLinkEntry['people'], list )
                 for personID in verseLinkEntry['people']:
                     assert personID[0]=='P' and ' ' not in personID and ';' not in personID
@@ -495,7 +524,8 @@ def associate_Theographic_people_places() -> bool:
                     # dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Looking for theographic '{personName}' at {wordRef} for {gloss=} {altGloss=}")
                     if personName in gloss or personName in altGloss:
                         tags.append( personID )
-                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added AAA '{personID}' to {wordRef} for {gloss=} {altGloss=}")
+                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added AAA '{personID}' to {wordRef} for {gloss=} {altGloss=}")
                         numAddedPeople += 1
                     else:
                         for thgName,oetName in (('God','Yahweh'),('Israel','Jacob'),
@@ -504,11 +534,13 @@ def associate_Theographic_people_places() -> bool:
                                             ('Jehoiachin','Jechonias'),('Shealtiel','Salathiel'),('Zerubbabel','Zorobabel'),('Sadoc','Zadok')):
                             if personName==thgName and (oetName in gloss or oetName in altGloss):
                                 tags.append( personID )
-                                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added BBB '{personID}' to {wordRef} for {gloss=} {altGloss=}")
+                                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added BBB '{personID}' to {wordRef} for {gloss=} {altGloss=}")
                                 numAddedPeople += 1
                                 break # from inner loop
             if verseLinkEntry['places']:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Need to add places: {n} {wordRef} '{noCantillations}' {glossCaps} {gloss=} {altGloss=} {verseLinkEntry['places']}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Need to add places: {n} {wordRef} '{noCantillations}' {glossCaps} {gloss=} {altGloss=} {verseLinkEntry['places']}")
                 assert isinstance( verseLinkEntry['places'], list )
                 for placeID in verseLinkEntry['places']:
                     assert placeID[0] == 'L'
@@ -518,14 +550,16 @@ def associate_Theographic_people_places() -> bool:
                     if placeName in gloss:
                         assert ' ' not in placeID and ';' not in placeID
                         tags.append( placeID )
-                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{placeID}' to {wordRef} for {gloss=} {altGloss=}")
+                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{placeID}' to {wordRef} for {gloss=} {altGloss=}")
                         numAddedLocations += 1
 
         # if newVerse: # These ones we can link to the first (included) word in the verse
         #     newVerse = False
         # Changed to link to EVERY word in the verse
         if verseLinkEntry['peopleGroups']:
-            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Could add people groups: {n} {wordRef} '{noCantillations}' {glossCaps} {gloss=} {altGloss=} {verseLinkEntry['peopleGroups']}")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 2:
+                dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Could add people groups: {n} {wordRef} '{noCantillations}' {glossCaps} {gloss=} {altGloss=} {verseLinkEntry['peopleGroups']}")
             assert isinstance( verseLinkEntry['peopleGroups'], list )
             for pgID in verseLinkEntry['peopleGroups']:
                 # personName = pgID[1:] # First prefix letter is P for person
@@ -534,18 +568,22 @@ def associate_Theographic_people_places() -> bool:
                 assert ' ' not in pgID and ';' not in pgID
                 tag = f"G{pgID.replace(' ','_')}"
                 tags.append( tag )
-                dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 2:
+                    dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
                 numAddedPeopleGroups += 1
         if verseLinkEntry['yearNum']:
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add year number: {n} {wordRef} '{noCantillations}' {glossCaps} {gloss=} {altGloss=} {verseLinkEntry['yearNum']}")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add year number: {n} {wordRef} '{noCantillations}' {glossCaps} {gloss=} {altGloss=} {verseLinkEntry['yearNum']}")
             assert isinstance( verseLinkEntry['yearNum'], str )
             tag = f"Y{verseLinkEntry['yearNum']}"
             assert ' ' not in tag and ';' not in tag
             tags.append( tag )
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
             numAddedYears += 1
         if verseLinkEntry['eventsDescribed']:
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add events: {n} {wordRef} '{noCantillations}' {glossCaps} {gloss=} {altGloss=} {verseLinkEntry['eventsDescribed']}")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add events: {n} {wordRef} '{noCantillations}' {glossCaps} {gloss=} {altGloss=} {verseLinkEntry['eventsDescribed']}")
             assert isinstance( verseLinkEntry['eventsDescribed'], list )
             for eventID in verseLinkEntry['eventsDescribed']:
                 # personName = personID[1:] # First prefix letter is P for person
@@ -554,15 +592,18 @@ def associate_Theographic_people_places() -> bool:
                 tag = f"E{eventID.replace(' ','_')}"
                 assert ' ' not in tag and ';' not in tag
                 tags.append( tag )
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
                 numAddedEvents += 1
         if verseLinkEntry['timeline']:
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add timeline: {n} {wordRef} '{noCantillations}' {glossCaps} {gloss=} {altGloss=} {verseLinkEntry['timeline']}")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add timeline: {n} {wordRef} '{noCantillations}' {glossCaps} {gloss=} {altGloss=} {verseLinkEntry['timeline']}")
             assert isinstance( verseLinkEntry['timeline'], str )
             tag = f"T{verseLinkEntry['timeline'].replace(' ','_')}"
             assert ' ' not in tag and ';' not in tag
             tags.append( tag )
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
             numAddedTimelines += 1
 
         # Put the new column in the table
@@ -573,7 +614,8 @@ def associate_Theographic_people_places() -> bool:
         state.newWordTable[n] = newLine
         # lastVerseRef = verseRef
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{numAddedPeople=:,} {numAddedPeopleGroups=:,} {numAddedLocations=:,} {numAddedEvents=:,} {numAddedYears=:,} {numAddedTimelines=:,}" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{numAddedPeople=:,} {numAddedPeopleGroups=:,} {numAddedLocations=:,} {numAddedEvents=:,} {numAddedYears=:,} {numAddedTimelines=:,}" )
     assert 381_000 < len(state.newWordTable) < 382_000, f"{len(state.newWordTable)=}"
     return True
 # end of add_tags_to_OT_word_table.associate_Theographic_people_places
@@ -583,7 +625,8 @@ TAG_COLUMN_NUMBER = 20
 def tag_trinity_persons() -> bool:
     """
     """
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nTagging trinity persons in our table…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nTagging trinity persons in our table…" )
     assert 381_000 < len(state.newWordTable) < 382_000, f"{len(state.newWordTable)=}"
 
     # 0    1       2        3                4             5        6                      7           8     9                10               11                         12         13                   14                   15                16          17          18     19       20
@@ -631,7 +674,8 @@ def tag_trinity_persons() -> bool:
             assert newLine.count( '\t' ) == 20, f"{newLine.count(TAB)} {newLine=}"
             state.newWordTable[n] = newLine
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {numAddedGod=:,} {numAddedHolySpirit=:,} Total added={numAddedGod+numAddedHolySpirit:,}" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {numAddedGod=:,} {numAddedHolySpirit=:,} Total added={numAddedGod+numAddedHolySpirit:,}" )
     return True
 # end of add_tags_to_OT_word_table.tag_trinity_persons
 
@@ -937,7 +981,8 @@ def fill_extra_columns_and_remove_some() -> bool:
         lemma, _glosses = lemmaStr.split('\t')
         # print( f"{n} {lemma=} {_glosses=}")
         state.lemmaDict[lemma] = str(n)
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Loaded {len(state.lemmaDict):,} lemma index entries into state.lemmaDict." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Loaded {len(state.lemmaDict):,} lemma index entries into state.lemmaDict." )
 
     # Fill in the lemmaRowList, role, and nesting columns
     macIndex = 1 # Macula index
@@ -952,7 +997,8 @@ def fill_extra_columns_and_remove_some() -> bool:
 
         if ourColumns[2] in ('seg','note','variant note','alternative note','exegesis note'):
             numConsecutiveMismatches = 0
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Skipping our {ourRef} {ourColumns[2]}")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Skipping our {ourRef} {ourColumns[2]}")
             continue # because we were successful
 
         ourRef = ourColumns[0]
@@ -969,7 +1015,8 @@ def fill_extra_columns_and_remove_some() -> bool:
         if numKs > 0:
             incrementedW = str( int(ourW) + numKs )
             ourRef = f'{ourBBB}_{ourC}:{ourV}w{incrementedW}'
-            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"KETIV ({numKs}) increased from {ourColumns[0]} to {ourRef=}" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 2:
+                dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"KETIV ({numKs}) increased from {ourColumns[0]} to {ourRef=}" )
 
         lemmaList, lemmaRowList = [], []
         for dummyRange in range( 8 ): # because we sometimes have to skip over notes and segs
@@ -977,7 +1024,8 @@ def fill_extra_columns_and_remove_some() -> bool:
             if dummyRange > 1: dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"\n\n{dummyRange=}" )
             elif dummyRange > 0: dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{dummyRange=}" )
             if macIndex >= len(state.macula_tsv_lines):
-                dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"RanA out of Macula lines at {ourIndex}/{len(state.newWordTable)} {ourLineStr}" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 2:
+                    dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"RanA out of Macula lines at {ourIndex}/{len(state.newWordTable)} {ourLineStr}" )
                 break # no more macula lines
             theirMaculaColumns = state.macula_tsv_lines[macIndex] # Already in a list
             assert len(theirMaculaColumns) == 28, f"{len(theirMaculaColumns)} {theirMaculaColumns=}"
@@ -987,7 +1035,8 @@ def fill_extra_columns_and_remove_some() -> bool:
 
             if theirMaculaColumns[0] == ourRef: # references match exactly, so then it's a word
                 numConsecutiveMismatches = 0
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Matched word {ourRef}=={theirMaculaColumns[0]} {theirMaculaColumns[1]} {ourColumns[1]} {theirMaculaColumns[2]} {ourColumns[2]} R='{theirMaculaColumns[13]}' N='{theirMaculaColumns[27]}'")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Matched word {ourRef}=={theirMaculaColumns[0]} {theirMaculaColumns[1]} {ourColumns[1]} {theirMaculaColumns[2]} {ourColumns[2]} R='{theirMaculaColumns[13]}' N='{theirMaculaColumns[27]}'")
                 assert 'w' in theirMaculaColumns[2] # Might be 'Aw'
                 ourColumns[18], ourColumns[19] = theirMaculaColumns[13], theirMaculaColumns[27]
                 theirMaculaLemma = theirMaculaColumns[18]
@@ -997,17 +1046,20 @@ def fill_extra_columns_and_remove_some() -> bool:
                     try: lemmaRowList.append( state.lemmaDict[theirMaculaLemma] ) # Save the lemma row number(s)
                     except KeyError:
                         lemmaRowList.append( '###MISSING-A1###' )
-                        dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"###MISSING-A1### {ourIndex=} {macIndex=} {ourLineStr=}" )
+                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 2:
+                            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"###MISSING-A1### {ourIndex=} {macIndex=} {ourLineStr=}" )
                 else:
                     lemmaRowList.append( '###MISSING-B1###' )
-                    dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"###MISSING-B1### {ourIndex=} {macIndex=} {ourLineStr=}" )
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 2:
+                        dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"###MISSING-B1### {ourIndex=} {macIndex=} {ourLineStr=}" )
                 macIndex += 1
                 break # from inner dummy loop because we were successful
             elif theirMaculaColumns[0].startswith( ourRef ): # their reference starts with our reference (coz they have a's and b's suffixes), then theirs is a morpheme that's part of our word
                 numConsecutiveMismatches = 0
                 role = nesting = ''
                 while 'm' in theirMaculaColumns[2]:
-                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Matched morpheme {ourRef} in {theirMaculaColumns[0]} {theirMaculaColumns[1]} {ourColumns[1]} {theirMaculaColumns[2]} {ourColumns[2]} R='{theirMaculaColumns[13]}' N='{theirMaculaColumns[27]}'")
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Matched morpheme {ourRef} in {theirMaculaColumns[0]} {theirMaculaColumns[1]} {ourColumns[1]} {theirMaculaColumns[2]} {ourColumns[2]} R='{theirMaculaColumns[13]}' N='{theirMaculaColumns[27]}'")
                     if 0: # disabled 2-25-01-10 after switching from LowFat to Nodes -- not totally sure of the implications
                         assert not role or theirMaculaColumns[13]==role or ourRef.startswith( 'ECC_4:10' ), f"{ourRef}!={theirMaculaColumns[0]} {ourColumns[1]} vs {theirMaculaColumns[1]} {role=} vs {theirMaculaColumns[13]} " # TODO: dunno why ???
                     # assert nesting is None or theirLine[27] == nesting
@@ -1022,13 +1074,16 @@ def fill_extra_columns_and_remove_some() -> bool:
                         try: lemmaRowList.append( state.lemmaDict[theirMaculaLemma] ) # Save the lemma row number(s)
                         except KeyError:
                             lemmaRowList.append( '###MISSING-A2###' )
-                            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"###MISSING-A2### {ourIndex=} {macIndex=} {ourLineStr=}" )
+                            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 2:
+                                dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"###MISSING-A2### {ourIndex=} {macIndex=} {ourLineStr=}" )
                     else:
                         lemmaRowList.append( '###MISSING-B2###' )
-                        dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"###MISSING-B2### {ourIndex=} {macIndex=} {ourLineStr=}" )
+                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 2:
+                            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"###MISSING-B2### {ourIndex=} {macIndex=} {ourLineStr=}" )
                     macIndex += 1
                     theirMaculaColumns = state.macula_tsv_lines[macIndex] # Already in a list
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Matched Morpheme {ourColumns[0]} in {theirMaculaColumns[0]} {theirMaculaColumns[1]} {ourColumns[1]} {theirMaculaColumns[2]} {ourColumns[2]} R='{theirMaculaColumns[13]}' N='{theirMaculaColumns[27]}'")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Matched Morpheme {ourColumns[0]} in {theirMaculaColumns[0]} {theirMaculaColumns[1]} {ourColumns[1]} {theirMaculaColumns[2]} {ourColumns[2]} R='{theirMaculaColumns[13]}' N='{theirMaculaColumns[27]}'")
                 assert 'M' in theirMaculaColumns[2] # Might be 'AM'
                 if theirMaculaColumns[13] != role:
                     role = f'{role}{theirMaculaColumns[13]}' # Append the different role onto the end
@@ -1044,10 +1099,12 @@ def fill_extra_columns_and_remove_some() -> bool:
                     try: lemmaRowList.append( state.lemmaDict[theirMaculaLemma] ) # Save the lemma row number(s)
                     except KeyError:
                         lemmaRowList.append( '###MISSING-A3###' )
-                        dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"###MISSING-A3### {ourIndex=} {macIndex=} {ourLineStr=}" )
+                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 2:
+                            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"###MISSING-A3### {ourIndex=} {macIndex=} {ourLineStr=}" )
                 else:
                     lemmaRowList.append( '###MISSING-B3###' )
-                    dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"###MISSING-B3### {ourIndex=} {macIndex=} {ourLineStr=}" )
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 2:
+                        dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"###MISSING-B3### {ourIndex=} {macIndex=} {ourLineStr=}" )
                 macIndex += 1
                 break # from inner dummy loop because we were successful
             else:
@@ -1097,7 +1154,8 @@ def fill_extra_columns_and_remove_some() -> bool:
                 # assert False, "We want to stop here"
         state.newWordTable[ourIndex] = '\t'.join( ourColumns )
         if macIndex >= len(state.macula_tsv_lines):
-            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"RanB out of Macula lines at {ourIndex}/{len(state.newWordTable)} {ourLineStr}" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 2:
+                dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"RanB out of Macula lines at {ourIndex}/{len(state.newWordTable)} {ourLineStr}" )
             break # no more macula lines
         if numConsecutiveMismatches > 34: # Gen 39:9 after w7 missing has about 25 rows, 1Sam 9:1, 20:2, 24:9 has about 30 rows
             logging.critical( f"Aborted around {ourColumns[0]} {theirMaculaColumns[0]}")
@@ -1130,11 +1188,13 @@ def write_new_table() -> bool:
         for line in state.newWordTable:
             assert line.count( '\t' ) == 18, f"{line.count(TAB)} {line=}"
             new_table_output_file.write( f'{line}\n' )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Wrote {len(state.newWordTable):,} lines to {WORD_TABLE_OUTPUT_FILEPATH} ({state.newWordTable[0].count(TAB)+1} columns).")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Wrote {len(state.newWordTable):,} lines to {WORD_TABLE_OUTPUT_FILEPATH} ({state.newWordTable[0].count(TAB)+1} columns).")
     
     # Also use the same word file for the OET-RV
     shutil.copy2( WORD_TABLE_OUTPUT_FILEPATH, RV_ESFM_OUTPUT_FOLDERPATH.joinpath( WORD_TABLE_OUTPUT_FILENAME ) )
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Also copied {WORD_TABLE_OUTPUT_FILENAME} to {RV_ESFM_OUTPUT_FOLDERPATH}.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Also copied {WORD_TABLE_OUTPUT_FILENAME} to {RV_ESFM_OUTPUT_FOLDERPATH}.")
 
     return True
 # end of add_tags_to_OT_word_table.write_new_table

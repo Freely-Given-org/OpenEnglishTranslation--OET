@@ -40,7 +40,7 @@ import bos_books_codes_py
 print(dir(bos_books_codes_py))
 
 
-LAST_MODIFIED_DATE = '2026-07-11' # by RJH
+LAST_MODIFIED_DATE = '2026-10-06' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OSHB_XML_to_TSV"
 PROGRAM_NAME = "Convert OSHB WLC OT XML into TSV/JSON files"
 PROGRAM_VERSION = '0.62'
@@ -87,7 +87,8 @@ def load_OSHB_XML() -> bool:
     """
     Loads data from the XML files for all 39 WLC OT books
     """
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading OSHB XML files from {state.OSHB_XML_input_folderpath}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading OSHB XML files from {state.OSHB_XML_input_folderpath}…" )
 
     state.books_array, state.flat_array = [], []
     for BBB in bos_books_codes_py.get_all_bos_book_codes():
@@ -98,8 +99,10 @@ def load_OSHB_XML() -> bool:
                 return False
             state.books_array.append( nested_chapter_array )
 
-    vPrint( 'Quiet',  DEBUGGING_THIS_MODULE, f"  Loaded {len(state.flat_array):,} total data rows{' (with breaks at morphemes)' if BREAK_MORPHEMES else ''}.")
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Found {state.numKetivs:,} total KETIV words used." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet',  DEBUGGING_THIS_MODULE, f"  Loaded {len(state.flat_array):,} total data rows{' (with breaks at morphemes)' if BREAK_MORPHEMES else ''}.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Found {state.numKetivs:,} total KETIV words used." )
 
     return True
 # end of convert_OSHB_XML_to_TSV.load_OSHB_XML
@@ -109,7 +112,8 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
     """
     Loads data from the XML file for a single WLC OT book
     """
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loading {BBB} OSHB XML file…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loading {BBB} OSHB XML file…" )
 
     nn = bos_books_codes_py.get_reference_number( BBB )
     assert nn < 100
@@ -217,7 +221,8 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
                     #     # NOTE: This doesn't work! We had to edit Jer.xml in Forked/OS-morphhb/wlc/
                     #     while '  ' in noteText: noteText = noteText.replace( '  ', ' ' )
                     #     print( f"{readable_ref} {noteText=}" )
-                    vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Got note: {readable_ref} {n=} {noteType=} {noteText=}" )
+                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 4:
+                        vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Got note: {readable_ref} {n=} {noteType=} {noteText=}" )
                     if noteType in ('variant','alternative','exegesis'):
                         if noteType in ('variant','alternative'):
                             assert noteText is None or not noteText.strip()
@@ -258,7 +263,8 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
                         #     # NOTE: This doesn't work! We had to edit Jer.xml in Forked/OS-morphhb/wlc/
                         #     while '  ' in noteText: noteText = noteText.replace( '  ', ' ' )
                         #     print( f"{readable_ref} {noteText=}" )
-                        vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Now note: {readable_ref} {n=} {noteType=} {noteText=}" )
+                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 4:
+                            vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Now note: {readable_ref} {n=} {noteType=} {noteText=}" )
                         assert '  ' not in noteText and noteText.strip()==noteText
                         # if readable_ref=='JER_49:25': assert False, "We want to stop here" # Next note afterwards
                     else: # not 'variant'
@@ -281,7 +287,8 @@ def load_OSHB_XML_bookfile( BBB:str ) -> list:
         chapter_array.append(verseArray)
         assert len(set(id_list)) == len(id_list) # i.e., no duplicate IDs within book
 
-    vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    Loaded {len(chapter_array):,} XML chapters." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    Loaded {len(chapter_array):,} XML chapters." )
 
     return chapter_array
 # end of convert_OSHB_XML_to_TSV.load_OSHB_XML_bookfile

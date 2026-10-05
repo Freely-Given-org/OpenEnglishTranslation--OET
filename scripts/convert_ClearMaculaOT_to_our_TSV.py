@@ -55,7 +55,7 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew
 
 
-LAST_MODIFIED_DATE = '2026-05-08' # by RJH
+LAST_MODIFIED_DATE = '2026-10-06' # by RJH
 SHORT_PROGRAM_NAME = "convert_ClearMaculaOT_to_our_TSV"
 PROGRAM_NAME = "Extract and Apply Macula OT glosses"
 PROGRAM_VERSION = '0.60'
@@ -181,19 +181,23 @@ def loadOurSourceTable() -> bool:
     """
     """
     global WLC_tsv_column_headers
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading our WLC tsv file from {state.our_TSV_input_filepath}…")
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_OUR_WLC_COLUMNS} columns…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading our WLC tsv file from {state.our_TSV_input_filepath}…")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Expecting {NUM_EXPECTED_OUR_WLC_COLUMNS} columns…")
     with open(state.our_TSV_input_filepath, 'rt', encoding='utf-8') as tsv_file:
         tsv_lines = tsv_file.readlines()
 
     # Remove any BOM
     if tsv_lines[0].startswith("\ufeff"):
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of our WLC tsv file…")
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "  Handling Byte Order Marker (BOM) at start of our WLC tsv file…")
         tsv_lines[0] = tsv_lines[0][1:]
 
     # Get the headers before we start
     WLC_tsv_column_headers = [header for header in tsv_lines[0].strip().split('\t')]
-    dPrint('Info', DEBUGGING_THIS_MODULE, f"Column headers: ({len(WLC_tsv_column_headers)}): {WLC_tsv_column_headers}")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+        dPrint('Info', DEBUGGING_THIS_MODULE, f"Column headers: ({len(WLC_tsv_column_headers)}): {WLC_tsv_column_headers}")
     assert len(WLC_tsv_column_headers) == NUM_EXPECTED_OUR_WLC_COLUMNS
 
     # Read, check the number of columns, and summarise row contents all in one go
@@ -232,11 +236,16 @@ def loadOurSourceTable() -> bool:
                     WLC_tsv_column_max_length_counts[key] = len(value)
                 WLC_tsv_column_non_blank_counts[key] += 1
             WLC_tsv_column_counts[key][value] += 1
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.our_WLC_rows):,} (tsv) WLC data rows.")
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Have {len(unique_words):,} unique Hebrew words.")
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Have {len(unique_morphemes):,} unique Hebrew morphemes.")
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Have {seg_count:,} Hebrew segment markers.")
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Have {note_count:,} notes.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.our_WLC_rows):,} (tsv) WLC data rows.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Have {len(unique_words):,} unique Hebrew words.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Have {len(unique_morphemes):,} unique Hebrew morphemes.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Have {seg_count:,} Hebrew segment markers.")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Have {note_count:,} notes.")
 
     return True
 # end of convert_ClearMaculaOT_to_our_TSV.loadOurSourceTable
@@ -586,7 +595,8 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
     Extract glosses out of fields 
     Reorganise columns and add our extra columns
     """
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading Clear.Bible OT 'nodes' glosses from {state.macula_Hebrew_Nodes_XML_input_folderpath}/…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nLoading Clear.Bible OT 'nodes' glosses from {state.macula_Hebrew_Nodes_XML_input_folderpath}/…" )
     
     max_nesting_level = 0
     column_counts = defaultdict(lambda: defaultdict(int))
@@ -594,7 +604,8 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
     refDict = {}
     for referenceNumber in range(1, 39+1):
         BBB = bos_books_codes_py.get_bos_book_code_from_reference_number( referenceNumber )
-        vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading Macula Hebrew Nodes {BBB} XML files…")
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Loading Macula Hebrew Nodes {BBB} XML files…")
         Uuu = bos_books_codes_py.bos_book_code_to_usfm_abbrev( BBB )
         if Uuu=='Hos': Uuu = 'HOS' # Fix inconsistency in naming patterns
         filenameTemplate = MACULA_HEBREW_NODES_XML_INPUT_FILENAME_TEMPLATE.replace( 'NN', str(referenceNumber).zfill(2) ).replace( 'Uuu', Uuu )
@@ -608,7 +619,8 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
 
             # First make a table of parents so we can find them later
             parentMap = {child:parent for parent in chapterTree.iter() for child in parent if child.tag in ('m','c','Node')}
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Loaded {len(parentMap):,} parent entries." )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
+                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Loaded {len(parentMap):,} parent entries." )
 
             # Now load all the morpheme (m) fields for the chapter into a temporary list
             tempWordsAndMorphemes = []
@@ -791,7 +803,8 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                                 assert 'ב' not in wordOrMorpheme
                                 assert 'ת' not in wordOrMorpheme
                             if 'ב' in wordOrMorpheme and 'ת' in wordOrMorpheme: # probably 'בֵּית'
-                                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Changing English 'temple' to 'house' for {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
+                                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                                    vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Changing English 'temple' to 'house' for {theirRef=} {wordOrMorpheme=} {gloss=} {English=}" )
                                 assert 'כ' not in wordOrMorpheme
                                 assert 'ל' not in wordOrMorpheme
                                 English = English.replace( 'temple', 'house' )
@@ -1125,7 +1138,8 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                     # if len(tempWordsAndMorphemes) > 5: assert False, "We want to stop here"
                     lastGloss, lastEnglish = gloss, English
 
-            vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Got {len(tempWordsAndMorphemes):,} words/morphemes in {BBB} {chapterNumber}")
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 4:
+                vPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Got {len(tempWordsAndMorphemes):,} words/morphemes in {BBB} {chapterNumber}")
             assert len(set(longIDs)) == len(longIDs), f"Should be no duplicates in {longIDs=}"
 
             # Note that because of the phrase/clause nesting, we can get the word fields in the wrong order
@@ -1198,16 +1212,20 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
             # print( f"  {frame=}" )
             lfRow['Frame'] = frame
 
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Got total of {len(state.maculaHebrewWordsAndMorphemes):,} words/morphemes")
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      Max nesting level = {max_nesting_level}" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Got total of {len(state.maculaHebrewWordsAndMorphemes):,} words/morphemes")
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      Max nesting level = {max_nesting_level}" )
     if 1:  # Just so we can turn it off and on easily
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nDetailed counts for {len(column_counts):,} fields:")
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nDetailed counts for {len(column_counts):,} fields:")
         for field_name in column_counts:
             this_set = column_counts[field_name]
             this_set_length = len(this_set)
             if this_set_length < 55:
-                vPrint( 'Normal', DEBUGGING_THIS_MODULE, # Sort them with most frequent first
-                    f"\n{field_name}: ({this_set_length}) {dict(sorted(this_set.items(), key=lambda x:x[1], reverse=True))}" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                    vPrint( 'Normal', DEBUGGING_THIS_MODULE, # Sort them with most frequent first
+                        f"\n{field_name}: ({this_set_length}) {dict(sorted(this_set.items(), key=lambda x:x[1], reverse=True))}" )
             else: vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\n{field_name} has {this_set_length:,} unique options -- display suppressed." )
     # if 1:
     #     for n,currentEntry in enumerate(state.maculaHebrewWordsAndMorphemes):
@@ -1471,7 +1489,8 @@ def MacHeb_add_OSHB_ids() -> bool:
 
     So match the entries and add them in.
     """
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "\nMatching rows in both tables to add OSHB ids for LF…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "\nMatching rows in both tables to add OSHB ids for LF…" )
 
     our_WLC_dict = {row['Ref']:(row['RowType'].endswith('K'),row['NoCantillations'],row['Morphology'],row['OSHBid']) for row in state.our_WLC_rows} # We include the morphology for extra checking
     if DEBUGGING_THIS_MODULE:
@@ -1520,7 +1539,8 @@ def MacHeb_add_OSHB_ids() -> bool:
             adjustedRowID = f'{verseID}w{wordNumber+offset}{suffix}'
             try:
                 foundKetivFlag, foundWordOrMorpheme, foundMorphology, foundID = our_WLC_dict[adjustedRowID]
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Got {foundID} for {offset=} {foundKetivFlag=} {adjustedRowID}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Got {foundID} for {offset=} {foundKetivFlag=} {adjustedRowID}")
                 if not foundKetivFlag: # Doesn't always work on Ketivs
                     assert foundWordOrMorpheme==wordOrMorpheme, f"ID's now matched {adjustedRowID} from {ourID} and got {foundID}, but not text ({len(foundWordOrMorpheme)}) '{foundWordOrMorpheme}' != ({len(wordOrMorpheme)}) '{wordOrMorpheme}'"
                     assert foundMorphology==morphology, f"ID's now matched {adjustedRowID} from {ourID} and got {foundID}, but not morphology '{foundMorphology}'!='{morphology}'"
@@ -1546,7 +1566,8 @@ def MacHeb_add_OSHB_ids() -> bool:
             adjustedRowID = f'{verseID}w{wordNumber+offset}{suffix}'
             try:
                 foundKetivFlag, foundWordOrMorpheme, foundMorphology, foundID = our_WLC_dict[adjustedRowID]
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Got {foundID} for {offset=} {foundKetivFlag=} {adjustedRowID}")
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Got {foundID} for {offset=} {foundKetivFlag=} {adjustedRowID}")
                 if not foundKetivFlag: # Doesn't always work on Ketivs
                     assert foundWordOrMorpheme==wordOrMorpheme, f"ID's now matched {adjustedRowID} from {ourID} and got {foundID}, but not text ({len(foundWordOrMorpheme)}) '{foundWordOrMorpheme}' != ({len(wordOrMorpheme)}) '{wordOrMorpheme}'"
                     assert foundMorphology==morphology, f"ID's now matched {adjustedRowID} from {ourID} and got {foundID}, but not morphology '{foundMorphology}'!='{morphology}'"
@@ -1576,7 +1597,8 @@ def save_filled_morpheme_TSV_file() -> bool:
     """
     Save table as a single TSV file (about 94 MB).
     """
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nExporting filled OT Low Fat table as a single flat TSV file to {state.morpheme_TSV_output_filepath}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nExporting filled OT Low Fat table as a single flat TSV file to {state.morpheme_TSV_output_filepath}…" )
 
     BibleOrgSysGlobals.backupAnyExistingFile( state.morpheme_TSV_output_filepath, numBackups=5 )
 
@@ -1589,7 +1611,8 @@ def save_filled_morpheme_TSV_file() -> bool:
             thisRow = {k:thisTuple[k] for k in state.morpheme_output_fieldnames}
             # print( f"{state.output_fieldnames=} {thisTuple=} {thisRow=}" )
             writer.writerow( thisRow )
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {len(state.maculaHebrewWordsAndMorphemes):,} data rows written ({len(state.morpheme_output_fieldnames)} fields) to {state.morpheme_TSV_output_filepath}." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {len(state.maculaHebrewWordsAndMorphemes):,} data rows written ({len(state.morpheme_output_fieldnames)} fields) to {state.morpheme_TSV_output_filepath}." )
 
     if 1: # Collect and print stats
         non_blank_counts, blank_counts = defaultdict(int), defaultdict(int)
@@ -1601,14 +1624,17 @@ def save_filled_morpheme_TSV_file() -> bool:
                 sets[fieldname].add( value )
         for fieldname,count in blank_counts.items():
             assert count < len(state.maculaHebrewWordsAndMorphemes), f"save_filled_morpheme_TSV_file: '{fieldname}' field is never filled"
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nCounts of non-blank fields for {len(state.maculaHebrewWordsAndMorphemes):,} rows:" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nCounts of non-blank fields for {len(state.maculaHebrewWordsAndMorphemes):,} rows:" )
         for fieldname,count in non_blank_counts.items():
             non_blank_count_str = 'all' if count==len(state.maculaHebrewWordsAndMorphemes) else f'{count:,}'
             unique_count_str = 'all' if len(sets[fieldname])==len(state.maculaHebrewWordsAndMorphemes) else f'{len(sets[fieldname]):,}'
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {fieldname}: {non_blank_count_str} non-blank entries (with {unique_count_str} unique entries)" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {fieldname}: {non_blank_count_str} non-blank entries (with {unique_count_str} unique entries)" )
             assert count # Otherwise we're including a field that contains nothing!
             if len(sets[fieldname]) < 50:
-                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    being: {sets[fieldname]}" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    being: {sets[fieldname]}" )
 
     return True
 # end of convert_ClearMaculaOT_to_our_TSV.save_filled_morpheme_TSV_file
@@ -1621,7 +1647,8 @@ def save_shortened_morpheme_TSV_file() -> bool:
 
     Of course, this makes the table less self-documenting!
     """
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nExporting shortened OT Low Fat table as a single flat TSV file to {state.morpheme_TSV_output_filepath}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nExporting shortened OT Low Fat table as a single flat TSV file to {state.morpheme_TSV_output_filepath}…" )
 
     BibleOrgSysGlobals.backupAnyExistingFile( state.morpheme_shortened_TSV_output_filepath, numBackups=5 )
 
@@ -1663,17 +1690,21 @@ def save_shortened_morpheme_TSV_file() -> bool:
             for fieldname,value in thisEntryDict.items():
                 if value: non_blank_counts[fieldname] += 1
                 sets[fieldname].add( value )
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {len(state.maculaHebrewWordsAndMorphemes):,} shortened ({len(state.morpheme_output_fieldnames)} - {len(MORPHEME_COLUMNS_TO_REMOVE_FOR_SHORTENING)} = {len(thisEntryDict)} fields) data rows written to {state.morpheme_shortened_TSV_output_filepath}." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {len(state.maculaHebrewWordsAndMorphemes):,} shortened ({len(state.morpheme_output_fieldnames)} - {len(MORPHEME_COLUMNS_TO_REMOVE_FOR_SHORTENING)} = {len(thisEntryDict)} fields) data rows written to {state.morpheme_shortened_TSV_output_filepath}." )
 
     if 1: # Print stats
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nCounts of non-blank fields for {len(state.maculaHebrewWordsAndMorphemes):,} rows:" )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nCounts of non-blank fields for {len(state.maculaHebrewWordsAndMorphemes):,} rows:" )
         for fieldname,count in non_blank_counts.items():
             non_blank_count_str = 'all' if count==len(state.maculaHebrewWordsAndMorphemes) else f'{count:,}'
             unique_count_str = 'all' if len(sets[fieldname])==len(state.maculaHebrewWordsAndMorphemes) else f'{len(sets[fieldname]):,}'
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {fieldname}: {non_blank_count_str} non-blank entries (with {unique_count_str} unique entries)" )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {fieldname}: {non_blank_count_str} non-blank entries (with {unique_count_str} unique entries)" )
             assert count # Otherwise we're including a field that contains nothing!
             if len(sets[fieldname]) < 50:
-                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    being: {sets[fieldname]}" )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    being: {sets[fieldname]}" )
 
     return True
 # end of convert_ClearMaculaOT_to_our_TSV.save_shortened_morpheme_TSV_file
@@ -1687,7 +1718,8 @@ def save_lemma_TSV_file() -> bool:
 
     TODO: Why is the same code in apply_Clear_Macula_OT_glosses.py???
     """
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nCreating and exporting OT lemma table from Macula Hebrew as a single flat TSV file to {state.lemma_TSV_output_filepath}…" )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nCreating and exporting OT lemma table from Macula Hebrew as a single flat TSV file to {state.lemma_TSV_output_filepath}…" )
 
 
     # Firstly, let's create the lemma table
@@ -1740,7 +1772,8 @@ def save_lemma_TSV_file() -> bool:
             for fieldname,value in thisEntryDict.items():
                 if value: non_blank_counts[fieldname] += 1
                 sets[fieldname].add( value )
-    vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {len(state.lemma_formation_dict):,} lemma ({len(state.lemma_output_fieldnames)} fields) data rows written to {state.lemma_TSV_output_filepath}." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  {len(state.lemma_formation_dict):,} lemma ({len(state.lemma_output_fieldnames)} fields) data rows written to {state.lemma_TSV_output_filepath}." )
 
     # if 1: # Print stats
     #     vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nCounts of non-blank fields for {len(state.lemma_formation_dict):,} rows:" )

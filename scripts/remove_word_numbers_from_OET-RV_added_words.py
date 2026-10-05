@@ -41,7 +41,7 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint
 from BibleOrgSys.Formats.ESFMBible import ESFM_WORD_NUMBER_REGEX
 
 
-LAST_MODIFIED_DATE = '2026-09-28'
+LAST_MODIFIED_DATE = '2026-10-06'
 SHORT_PROGRAM_NAME = "Remove_word_numbers_from_added_OET-RV_words"
 PROGRAM_NAME = "Remove word numbers from OET-RV straight \\add spans"
 PROGRAM_VERSION = '1.0.1'
@@ -103,15 +103,17 @@ def main():
             changedFiles += 1
             totalChangedLines += numChangedLines
             totalNumbersRemoved += numNumbersRemoved
-            vPrint( 'Quiet', DEBUGGING_THIS_MODULE,
-                f"  {esfmFilepath.name}: changed {numChangedLines:,} lines "
-                f"removing {numNumbersRemoved:,} word numbers." )
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
+                vPrint( 'Quiet', DEBUGGING_THIS_MODULE,
+                    f"  {esfmFilepath.name}: changed {numChangedLines:,} lines "
+                    f"removing {numNumbersRemoved:,} word numbers." )
             if not BibleOrgSysGlobals.commandLineArguments.dryRun:
                 with open( esfmFilepath, 'wt', encoding='utf-8' ) as esfmFile:
                     esfmFile.write( '\n'.join( newLines ) )
 
-    vPrint( 'Normal', DEBUGGING_THIS_MODULE,
-           f"\nRemoved {totalNumbersRemoved:,} OET-RV word numbers from {totalChangedLines:,} lines in {changedFiles:,} files." )
+    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+        vPrint( 'Normal', DEBUGGING_THIS_MODULE,
+               f"\nRemoved {totalNumbersRemoved:,} OET-RV word numbers from {totalChangedLines:,} lines in {changedFiles:,} files." )
 # end of remove_word_numbers_from_added_OET-RV_words.main
 
 
