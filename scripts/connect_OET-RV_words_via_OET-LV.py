@@ -1101,6 +1101,12 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('towards','toward'), ('seven','sevenfold'), ('fortified','fortification'),
     ('beautiful','beauty'), ('clothes','clothing'), ('chariots','chariotry'),
     ('time','hour'),
+    # Translation differences found in OET-RV Mark chapters 1-13
+    ('spoke','said'), ('spoken','said'), ('speaking','saying'), ('spoke','answering'),
+    ('answered','said'), ('replied','said'),
+    ('parents','mother'), ('parents','father'),
+    ('buns','loaves'), ('fish','fishes'),
+    ('mothers','parents'), ('fathers','parents'),
     # RVword, LVwordOrPhrase
 
     # Capitalisation differences (sometimes just due to a change of word order)
@@ -2915,6 +2921,74 @@ def matchOrderedRuns( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:Lis
 # end of matchOrderedRuns
 
 
+ARTICLE_WORDS = ('the','a','an')
+def matchArticlePrecedesLinkedNoun( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:List[str] ) -> Tuple[int,int]:
+    """
+    Link an unnumbered RV article ('the'/'a'/'an') when the very next RV word is already
+        linked, and the OET-LV token immediately before that word carries the same article
+        with a free number, e.g. RV 'the father¦34205' after earlier anchors, and LV
+        'except¦34202 not/lest¦34203 the¦34204 father¦34205'.
+    We require that the following noun occurs only this once in each verse, and that the
+        article number hasn't already been used on another RV word.
+    """
+    fnPrint( DEBUGGING_THIS_MODULE, f"matchArticlePrecedesLinkedNoun( {BBB} {c}:{v} )" )
+    NT = bos_books_codes_py.is_new_testament_nr( BBB )
+    stillFree = getUnnumberedRVWords( BBB, c,v )
+    lvWordsParsed = []
+    for lvTok in lvWordList:
+        try: lvWord,lvNumber = lvTok.split( '¦', 1 )
+        except ValueError: continue
+        try: lvNumber = int( lvNumber )
+        except ValueError:
+            lvNumber = getPositiveLeadingInt( lvNumber ) if lvNumber else None
+        lvWordsParsed.append( (lvWord, lvNumber) )
+    numAdded = numNS = 0
+    rvSimpleCount = {}
+    for w in rvWordList:
+        sw = simplifyRVLVWord( w.split( '¦', 1 )[0] )
+        if sw: rvSimpleCount[sw] = rvSimpleCount.get( sw, 0 ) + 1
+    for ix in range( len( rvWordList ) - 1 ):
+        rvArt = rvWordList[ix]
+        if '¦' in rvArt: continue
+        if simplifyRVLVWord( rvArt ) not in ARTICLE_WORDS: continue
+        noun = rvWordList[ix + 1]
+        if '¦' not in noun: continue
+        try: nounNumber = int( noun.split( '¦', 1 )[1] )
+        except (ValueError, IndexError): continue
+        nounSimple = simplifyRVLVWord( noun.split( '¦', 1 )[0] )
+        if not nounSimple or rvSimpleCount.get( nounSimple, 0 ) != 1: continue
+        if simplifyRVLVWord( rvArt ) not in stillFree: continue
+        lvNounIndexes = [ i for i,(lvW,lvN) in enumerate( lvWordsParsed ) if lvN == nounNumber ]
+        if len( lvNounIndexes ) != 1: continue
+        lvNounIdx = lvNounIndexes[0]
+        if lvNounIdx == 0: continue
+        lvPrevRaw, lvPrevNumber = lvWordsParsed[ lvNounIdx - 1 ]
+        if lvPrevNumber is None or lvPrevNumber == nounNumber: continue
+        lvPrevSimple = lvPrevRaw.strip( '_' )
+        candidates = { simplifyRVLVWord( x ) for x in re.split( r'[/(]', lvPrevSimple ) if x }
+        if simplifyRVLVWord( rvArt ) not in candidates: continue
+        # Ensure LV prev article is free: no RV word already carries that number
+        already = any( tok.split( '¦', 1 )[1] == str( lvPrevNumber ) for tok in rvWordList if '¦' in tok )
+        if already: continue
+        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchArticlePrecedesLinkedNoun() adding {lvPrevNumber} to {rvArt} before {noun} at {BBB} {c}:{v}" )
+        # Local insertion: find '{article} {noun}' on a single OT/NT line
+        found = False
+        for n,line in enumerate( state.rvESFMLines[:] ):
+            pattern = re.escape( rvArt ) + r' |' + re.escape( noun )
+            try: Mv = re.search( re.escape( rvArt ) + r'\s+' + re.escape( noun ), line)
+            except IndexError: Mv = None
+            if Mv is None: continue
+            if isInsideStraightAddSpan( line, Mv.start() ): continue
+            state.rvESFMLines[n] = re.sub( re.escape( rvArt ) + r'\s+' + re.escape( noun ), re.escape( rvArt ) + f'¦{lvPrevNumber} ' + re.escape( noun ), state.rvESFMLines[n], count=1 )
+            found = True
+            break
+        if found:
+            numAdded += 1
+            # articles are never nomina sacra
+    return numAdded,numNS
+# end of matchArticlePrecedesLinkedNoun
+
+
 def matchWordsInOrder( BBB:str, c:int,v:int, rvVerseText:str, rvWordList:List[str], lvWordList:List[str], reversedOrder:bool ) -> Tuple[int,int]:
     """
     The OET-RV follows the OET-LV clause order roughly from left to right through each verse,
@@ -2939,6 +3013,8 @@ def matchWordsInOrder( BBB:str, c:int,v:int, rvVerseText:str, rvWordList:List[st
 
     # First try bounded order-run alignment between already-anchored words
     runNumAdded,runNumNS = matchOrderedRuns( BBB, c,v, rvWordList, lvWordList )
+    # Then try the safe "article before already numbered noun" case
+    artNumAdded,artNumNS = matchArticlePrecedesLinkedNoun( BBB, c,v, rvWordList, lvWordList )
 
     NT = bos_books_codes_py.is_new_testament_nr( BBB )
     # We skip an OET-LV word that the verse gives the same number to more than once, because such a
@@ -2984,13 +3060,22 @@ def matchWordsInOrder( BBB:str, c:int,v:int, rvVerseText:str, rvWordList:List[st
         if (lvWord,lvNumber) in repeatedLVWords: continue
         for alternative in lvWord.split( '/' ):
             if not alternative.islower() and simplifyRVLVWord( alternative ) not in EQUIVALENT_LV_RV_WORDS:
-                continue # Leave proper nouns to matchIdenticalProperNouns(), unless we have a synonym for this one
-                       #   (e.g. the OET-LV 'Wherever¦26350' of Mark 6:10, which is an ordinary word that just happens
-                       #    to start a sentence, and which we have decided can be the OET-RV 'Whenever')
+                # Allow short/common capitalised words (e.g. 'But', 'And', 'So') that are
+                #   capitalised only because a verse begins with them, while still leaving
+                #   proper nouns to the proper noun matchers.
+                try:
+                    lvWordRow = state.wordTable['NT' if NT else 'OT'][lvNumber]
+                    lvRole = lvWordRow[state.wordTableHeaderList['NT' if NT else 'OT'].index('Role')].strip()
+                except Exception:
+                    lvRole = '?'
+                if lvRole == 'N':
+                    continue # Leave proper nouns alone
+                if lvRole not in ('C','D','P','T','E','I','V','A'):
+                    continue # Unknown part of speech; play it safe
             if NT and 'N' in state.wordTable['NT'][lvNumber][state.wordTableHeaderList['NT'].index('GlossCaps')]:
                 continue # Leave nomina sacra alone
             lvCols.append( (ix, alternative, lvNumber) )
-    if not lvCols: return runNumAdded,runNumNS
+    if not lvCols: return runNumAdded + artNumAdded, runNumNS + artNumNS
 
     # Score every RV word against every LV word
     scoreMatrix = [ [ None ]*len(lvCols) for _ in rvRows ]
@@ -3020,7 +3105,8 @@ def matchWordsInOrder( BBB:str, c:int,v:int, rvVerseText:str, rvWordList:List[st
             logging.warning( f"Got addNumberToRVWord( {BBB} {c}:{v} '{rvWord}' {lvNumber} ) result = {result}" )
 
     numAdded = numAdded + runNumAdded
-    numNS = numNS + runNumNS
+    numNS = numNS + runNumNS + artNumNS
+    numAdded = numAdded + artNumAdded
     return numAdded,numNS
 # end of connect_OET-RV_words_via_OET-LV.matchWordsInOrder
 
@@ -4271,6 +4357,30 @@ def reportWordNumberPercentage( description:str, numWords:int, numWordNumbered:i
 # end of reportWordNumberPercentage
 
 
+def maskFootnoteSpans( line:str ) -> str:
+    """
+    Replace the contents of any '\\f ...\\f*' footnote span with spaces,
+        while keeping the line the same length so that character offsets stay valid.
+    This lets us search for words inside the verse text without matching
+        identical wording that happens to sit in a footnote (e.g. 'first')."""
+    bits = []
+    i = 0
+    while True:
+        start = line.find( '\\f ', i )
+        if start < 0: break
+        end = line.find( '\\f*', start )
+        if end < 0:
+            logging.warning( f"Unterminated \\f footnote span in: '{line}'" )
+            break
+        end += len( '\\f*' )
+        bits.append( line[i:start] )
+        bits.append( ' ' * (end - start) )
+        i = end
+    bits.append( line[i:] )
+    return ''.join( bits )
+# end of maskFootnoteSpans
+
+
 def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool | None:
     """
     Go through the RV USFM for BBBB and find the lines for c:v (which comes from Original/OET-LV verse numbering)
@@ -4327,7 +4437,8 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
             #   between, so we carried on looking and found a line with exactly one.
             foundVerse = C==c and desiredV==1 and V is None
         if foundVerse:
-            allWordMatches = [match for match in re.finditer( f'\\b{word}\\b', line )] # Matches of the word standing alone
+            searchLine = maskFootnoteSpans( line )
+            allWordMatches = [match for match in re.finditer( f'\\b{word}\\b', searchLine )] # Matches of the word standing alone
             if len(allWordMatches) == 1:
                 match = allWordMatches[0]
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, type(allWordMatches), type(match), match )
