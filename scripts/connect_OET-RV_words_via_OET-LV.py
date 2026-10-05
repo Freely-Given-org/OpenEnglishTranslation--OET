@@ -171,7 +171,7 @@ from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 LAST_MODIFIED_DATE = '2026-10-04' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '1.0.1'
+PROGRAM_VERSION = '1.0.2'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -741,7 +741,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ("You're", 'You are'),("We're", 'We are'),("we're", 'we are'),
     ("They're", 'They are'),("they're", 'they are'),
     ("I'm", 'I am'),("you're", 'you are'),("We're", 'We are'),
-    ("He'll", 'He will'),("he'll", 'he will'),("She'll", 'She will'),("she'll", 'she will'),
+    ("He'll", 'He will'),("He'll", 'he will'),("he'll", 'he will'),("She'll", 'She will'),("she'll", 'she will'),
     ("They'll", 'They will'),("they'll", 'they will'),("You'll", 'You will'),("you'll", 'you will'),
     ("It'll", 'It will'),("it'll", 'it will'),("We'll", 'We will'),("we'll", 'we will'),
     ("They've", 'They have'),("they've", 'they have'),("We've", 'We have'),("we've", 'we have'),
@@ -774,10 +774,11 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     # RVword, LVwordOrPhrase
     ('about','concerning'),('about','of'), # Mrk 12:26
     ('addition','And'),
-    ('advance','beforehand'), # Mrk 13:11
+    ('advance','beforehand'),('advance','previously'), # Mrk 13:11,23
     ('afraid','feared'),('afraid','fearing'),
     ('agreeing','confirming'),
     ('agreement','covenant'),
+    ('alert','watching'), # Mrk 13:34
     ('Also','And'),
     ('always','perpetuity'),
     ('amazed','astonished'),
@@ -794,6 +795,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('arrest','apprehend'),('arrested','captured'),('arrested','laid'),
     ('aroma','odour'),
     ('assembly','convocation'),
+    ('assure','Truly'), # Mrk 13:30
     ('astounded','amazed'),
     ('attention','attentiveness'),
     ('back','stern'),
@@ -811,6 +813,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('boulders','stones'),
     ('bought','redeemed'),
     ('box','ark'),
+    ('brightness','glory'), # Mrk 13:26
     ('bull','ox'),('bulls','oxen'),
     ('burning','fire'),
     ('But','And'),('but','And'),('But','and'),('but','and'),
@@ -822,7 +825,10 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('chasing','pursuing'),
     ('cheerful','joy'),
     ('chest','ark'),
+    ('close','near'), # Mrk 13:28
     ('clothes','apparel'),('clothes','garments'),
+    ('collapse','passing away'), # Mrk 13:31
+    ('collect','gathering'), # Mrk 13:27
     ('Commander-in-chief','hosts'),
     ('commented','saying'),
     ('confused','confounded'),
@@ -836,6 +842,8 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('cow','ox'),('cows','oxen'),
     ('creation','beginning'),
     ('crowd','multitude'),
+    ('date','day'), # Mrk 13:32
+    ('dawn','cockcrow'), # Mrk 13:35
     ('dearly','beloved'),
     ('decide','purposed'),
     ('decision','evaluate'),('decisions','judgements'),
@@ -846,6 +854,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('deserted','desolate'),
     ('destroyed','consumed'),('destroyed','devoured'),
     ('destruction','devastation'),
+    ('die','pass away'), # Mrk 13:30
     ('died','dead'), # Mrk 12:26
     ('dies','corpse'), # Lev 19:28
     ('dinosaur','dragon'), # Rev 12:3
@@ -856,7 +865,8 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('eliminate','destroying'),
     ('engaged','betrothed'),
     ('entire','all'),
-    ('everyone','people'), ('Everyone','one'),('everyone','one'),
+    ('everyone','all'),('everyone','people'),('everyone','one'),('everyone','you all'),
+        ('Everyone','one'),
     ('executed','death'), # Mrk 13:12
         ('execution','stake'),
     ('existence','became'),
@@ -876,8 +886,9 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('grabbed','taken'),
     ('grapevine','vine'),
     ('greater','mightier'),
+    ('guard','doorkeeper'), # Mrk 13:34
     ('hand','giving'), # Mrk 13:11
-    ('happen','becoming'),
+    ('happen','become'),('happen','becoming'),('happening','becoming'), # Mrk 13:29
     ('harvests','fruit'),
     ('heavenly','heavens'),('heavenly','heaven'),
     ('hills','mountains'),('hill','mountain'),
@@ -886,14 +897,18 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('honour','glorify'),
     ('horrible','abomination'), # Mrk 13:14
     ('huge','great'),
+    ('humanity','man'), # Mrk 13:26
     ('humiliated','ashamed'),
     ('hut','shelter'),
     ('immerser','immersing'),
     ('including','and'),
-    ('instructed','commanded'),('instructions','commanded'),('instructions','regulations'),
+    ('incredible','great'), # Mrk 13:26
+    ('instructed','commanded'),('instructs','commanded'), # Mrk 13:34
+    ('instructions','commanded'),('instructions','regulations'),
     ('insulted','dishonoured'),('insulting','slandering'),
     ('Israelis','people'),
     ('item','article'),('items','article'),
+    ('jobs','work'), # Mrk 13:34
     ('judge','judgements'),
     ('kill','destroy'),
     ('King','king'),
@@ -904,6 +919,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('large','great'),
     ('language','tongue'),('languages','tongues'),
     ('left','came out'),('left','set out'),
+    ('lesson','parable'), # Mrk 13:28
     ('Listen','Behold'),('listen','Behold'),('Listen','behold'),('listen','behold'),
     ('listen','give ear'),('Listen','hearing'),('listen','hear'),
     ('living','dwelling'),
@@ -925,23 +941,28 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('Mt','mountain'),('Mt','mount'),('Mt', 'Mount'),
     ('murdered','killed'),('murdered','killing'),
     ('must','will'),
+    ('napping','sleeping'), # Mrk 13:36
     ('necessary','fitting'),
     ('needs','let'),
+    ('never','no means'), # Mrk 13:31
     ('Nevertheless','nevertheless'),
     ('news','report'),
     ('non-Jews','pagans'),
     ('noticed','saw'),
     ('obey','submitting'),
+    ('observe','watching'), # Mrk 13:33
+    ('only','except'), # Mrk 13:32
     ('opened','divided'),
     ('other','across'),
     ('own','possession'),('owned','having'),
     ('ordered','commanded'),
     ('paralysed','paralytic'),
     ('path','way'),('path','road'),
-    ('people','humans'),('people','multitude'),
+    ('people','humans'),('people','multitude'),('people','ones'),
     ('percent','add'),
     ('permanent','perpetuity'),
     ('placed','laid'),('placing','laying'),
+    ('planet','earth'), # Mrk 13:31
     ('platform','lid'),
     ('pleasing', 'acceptable'),('pleasing','soothing'),
     ('Plenty','Many'),
@@ -970,6 +991,8 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('request','seek'),('requested','prayed'),
     ('rescue','deliver'),
     ('responded','said'),
+    ('responsibilities','authority'), # Mrk 13:34
+    ('return','coming'), # Mrk 13:35
     ('right','fitting'),('right','truth'), # Mrk 13:10, 12:32
     ('river','Yarden'),
     ('riverbed','wadi'),
@@ -997,7 +1020,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('sick','sickly'),
     ('Similarly','Likewise'),
     ('sitting','reclining'),
-    ('skies','heavens'),
+    ('sky','heaven'),('skies','heavens'),
     ('skin','hide'),
     #('slave','servant'), # TODO: Need to add code to prevent this substitution if BOTH words occur in the verse.
     ('small','little'),
@@ -1016,7 +1039,10 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('tarpaulin','cover'),
     ('tattoo','inscription'), # Lev 19:28
     ('teachers','scribes'),
-    ('tell','saying'),('telling','proclaimed'),('telling','speaking'),('tells','say'),
+    ('teachings','messages'), # Mrk 13:31
+    ('tell','saying'),
+        ('telling','proclaimed'),('telling','saying'),('telling','speaking'),
+        ('tells','say'),
     ('tent','tabernacle'),
     ('territory','land'),
     ('that','this'),('that','which'),
@@ -1026,10 +1052,12 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('third','another'),
     ('thoughtful','intelligently'), # Mrk 12:34
     ('tied','bound'),
+    ('time','hour'), # Mrk 13:32
     ('tipped','overturned'),
     ('told','commanded'),
     ('total','all'),
     ('town','city'),
+    ('trip','travelling'), # Mrk 13:34
     ('trustworthy','faithful'),
     ('turned','giving'), # Mrk 13:9
     ('twenty','fifth'),
@@ -1040,6 +1068,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('urged','implored'),
     ('very','much'), # Mrk 12:27
     ('wallet','purse'),
+    ('warned','spoken'), # Mrk 13:23
     ('warriors','men'),
     ('waters','water supplies'),
     ('way','how'),
