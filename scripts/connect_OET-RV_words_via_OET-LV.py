@@ -317,6 +317,11 @@ SIMPLE_NOUNS = ( # These are nouns that are likely to match one-to-one from the 
         'wilderness', 'widows','widow', 'wife','wives', 'windows','window', 'winds','wind',
         'woman','women', 'words','word', 'workers','worker',
     'years','year',
+        'ages','age', 'chiefs','chief', 'elders','elder', 'earths','earth',
+        'laws','law', 'messengers','messenger',
+        'nights','night', 'prophets','prophet', 'voices','voice',
+        'worlds','world', 'apprentices','apprentice',
+        'rest', 'righteousness',
     )
 assert len(set(SIMPLE_NOUNS)) == len(SIMPLE_NOUNS) # Check for accidental duplicates
 verbalNouns = ('accusations','accusation',
@@ -648,6 +653,16 @@ SIMPLE_VERB_SETS = (
     ('wrung', 'wringing', 'wrings', 'wring'),
     ('yelled', 'yelling', 'yells', 'yell'),
     ('yielded', 'yielding', 'yields', 'yield'),
+    ('tested', 'testing', 'tests', 'test'),
+    ('tempted', 'tempting', 'tempts', 'tempt'),
+    ('cleansed', 'cleansing', 'cleanses', 'cleanse'),
+    ('doubted', 'doubting', 'doubts', 'doubt'),
+    ('boasted', 'boasting', 'boasts', 'boast'),
+    ('rejoiced', 'rejoicing', 'rejoices', 'rejoice'),
+    ('returned', 'returning', 'returns', 'return'),
+    ('opposed', 'opposing', 'opposes', 'oppose'),
+    ('wished', 'wishing', 'wishes', 'wish'),
+    ('sacrificed', 'sacrificing', 'sacrifices', 'sacrifice'),
 )
 simpleVerbs = tuple(verb for verbSet in SIMPLE_VERB_SETS for verb in verbSet)
 # Allow overlapping forms that legitimately belong to different verb paradigms (e.g., lay/lie, saw, set, spread, beat etc.)
@@ -657,7 +672,9 @@ assert len(duplicates) == 0, f"Accidental duplicates in simpleVerbs: {duplicates
 for simpleVerb in simpleVerbs: # Just a safety check in case we miss a comma and python concatenates consecutive words
     assert len(simpleVerb) <= 11 or simpleVerb in ('distributing','slaughtering','understanding'), f"({len(simpleVerb)}) {simpleVerb}"
 
-simpleAdverbs = ('quickly', 'immediately', 'loudly', 'suddenly',)
+simpleAdverbs = ('quickly', 'immediately', 'loudly', 'suddenly',
+                 'now', 'then', 'again', 'still', 'only', 'even',
+                 'indeed', 'certainly', 'perhaps',)
 assert len(set(simpleAdverbs)) == len(simpleAdverbs) # Check for accidental duplicates
 
 simpleAdjectives = ('alive', 'angry', 'bad', 'big', 'bitter',
@@ -671,6 +688,9 @@ simpleAdjectives = ('alive', 'angry', 'bad', 'big', 'bitter',
                     'obedient', 'opposite',
                     'possible',
                     'sad', 'same', 'sick', 'small', 'sudden', 'sweet',
+                    'eternal', 'golden', 'heavy', 'mighty', 'new', 'old', 'precious',
+                    'similar', 'spiritual', 'full', 'blind', 'blameless', 'unleavened',
+                    'numerous', 'ready',
                     'whole', 'wide','wild', 'wounded')
 assert len(set(simpleAdjectives)) == len(simpleAdjectives) # Check for accidental duplicates
 
@@ -1039,6 +1059,19 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('wrong','strayed'), # Mrk 12:24,27
     ('yelled','cried'),
     ('yourselves','hearts'),
+    # Words added after analysis of unmatched LV glosses
+    ('missionaries','ambassadors'), ('chains','bonds'),
+    ('forever','eternal'), ('miracles','signs'), ('miracles','wonders'),
+    ('dear','beloved'), ('killed','slain'), ('faithfulness','loyalty'),
+    ('leaders','rulers'), ('leader','ruler'), ('servants','slaves'),
+    ('nations','peoples'), ('should','ought'), ('work','labour'),
+    ('encouraged','exhorting'), ('wanted','wishing'),
+    ('years','year[s]'), ('year','year[s]'), ('days','day[s]'), ('day','day[s]'),
+    ('cubits','cubit[s]'), ('cubit','cubit[s]'), ('reeds','reed[s]'), ('reed','reed[s]'),
+    ('so','yes'), ('so','correct'), ('so','thus'),
+    ('towards','toward'), ('seven','sevenfold'), ('fortified','fortification'),
+    ('beautiful','beauty'), ('clothes','clothing'), ('chariots','chariotry'),
+    ('time','hour'),
     # RVword, LVwordOrPhrase
 
     # Capitalisation differences (sometimes just due to a change of word order)
@@ -2761,6 +2794,98 @@ def matchWordPhrases( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:Lis
 # end of connect_OET-RV_words_via_OET-LV.matchWordPhrases
 
 
+def matchOrderedRuns( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:List[str] ) -> Tuple[int,int]:
+    """
+    Between two already numbered OET-RV words, the unnumbered OET-RV words and the
+        corresponding OET-LV tokens with different word numbers in the same gap must form
+        a one-to-one ordered mapping.  When the gap RV words and the gap LV word-groups
+        line up exactly in count, we can connect the words position by position.
+
+    The numbers are only added when (a) the RV words are all still unnumbered, (b) the gap
+        on both sides has the same width, and (c) every positional pair is an exact
+        match (or a pair learned from such a matching segment), otherwise we add nothing.
+    """
+    fnPrint( DEBUGGING_THIS_MODULE, f"matchOrderedRuns( {BBB} {c}:{v} )" )
+    assert rvWordList and lvWordList
+    NT = bos_books_codes_py.is_new_testament_nr( BBB )
+    stillFree = getUnnumberedRVWords( BBB, c,v )
+
+    # Parse LV tokens into a list of groups by consecutive equal LV number
+    lvGroups = [] # list of dicts: { num, tokens:[...], alts:[...] }
+    lastNum = None
+    for lvTok in lvWordList:
+        try: lvWord,lvNumber = lvTok.split( '¦', 1 )
+        except ValueError:
+            if lvTok != 'to':
+                logging.critical( f"matchOrderedRuns failed on {lvTok=} from {BBB} {c}:{v}" )
+            lvNumber = None # We treat anomalous as a splitter below
+        else:
+            try: lvNumber = int( lvNumber )
+            except ValueError:
+                lvNumber = getPositiveLeadingInt( lvNumber ) if lvNumber else None
+        if lastNum != lvNumber:
+            lvGroups.append( {'num': lvNumber, 'tokens': [], 'alts': set()} )
+            lastNum = lvNumber
+        lvGroups[-1]['tokens'].append( lvTok )
+        lvWord = lvTok.split( '¦', 1 )[0].strip( '_' )
+        for candidate in re.split( r'[/(]', lvWord ):
+            candidate = candidate.strip( '_' )
+            if candidate:
+                lvGroups[-1]['alts'].add( candidate )
+
+    numAdded = numNS = 0
+    anchorIdx = []
+    for ix,word in enumerate( rvWordList ):
+        if '¦' in word:
+            anchorIdx.append( ix )
+    if len(anchorIdx)<2: return 0,0
+
+    # collect training pairs across any safe one-to-one gap, then apply
+    CANDIDATE_PAIRS = defaultdict( int )
+    for pi,ni in zip( anchorIdx[:-1], anchorIdx[1:] ):
+        rvGap = [w for w in rvWordList[pi+1:ni] if '¦' not in w]
+        # find LV gap groups strictly between pi's number and ni's number
+        try: numA = int( rvWordList[pi].split('¦',1)[1] )
+        except (ValueError, IndexError): continue
+        try: numB = int( rvWordList[ni].split('¦',1)[1] )
+        except (ValueError, IndexError): continue
+        gapGroups = [grp for grp in lvGroups if grp['num'] is not None and grp['num'] > numA and grp['num'] < numB]
+        if len(rvGap) == len(gapGroups) and len(rvGap)>0:
+            for rvTok, grp in zip(rvGap, gapGroups):
+                for alt in grp['alts']:
+                    if simplifyRVLVWord( rvTok ) == simplifyRVLVWord( alt ):
+                        CANDIDATE_PAIRS[ (simplifyRVLVWord( rvTok ), simplifyRVLVWord( alt )) ] += 1
+
+    for pi,ni in zip( anchorIdx[:-1], anchorIdx[1:] ):
+        rvGap = [w for w in rvWordList[pi+1:ni] if '¦' not in w]
+        try: numA = int( rvWordList[pi].split('¦',1)[1] )
+        except (ValueError, IndexError): continue
+        try: numB = int( rvWordList[ni].split('¦',1)[1] )
+        except (ValueError, IndexError): continue
+        gapGroups = [grp for grp in lvGroups if grp['num'] is not None and grp['num'] > numA and grp['num'] < numB]
+        if len(rvGap) == 0 or len(gapGroups)==0 or len(rvGap) != len(gapGroups):
+            continue
+        if any( simplifyRVLVWord( w ) not in stillFree for w in rvGap ): continue
+        allMatch = True
+        for rvTok, grp in zip(rvGap, gapGroups):
+            cand = [alt for alt in grp['alts'] if simplifyRVLVWord( rvTok ) == simplifyRVLVWord( alt )]
+            if cand: continue
+            cand2 = [alt for alt in grp['alts'] if (simplifyRVLVWord( rvTok ), simplifyRVLVWord( alt )) in CANDIDATE_PAIRS]
+            if not cand2:
+                allMatch = False; break
+        if not allMatch: continue
+        for rvTok, grp in zip(rvGap, gapGroups):
+            num = int( grp['num'] )
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchOrderedRuns adding {num} to open RV gap word '{rvTok}' from gap LV {grp['tokens']} at {BBB} {c}:{v}" )
+            result = addNumberToRVWord( BBB, c,v, rvTok, num )
+            if result:
+                numAdded += 1
+                if NT and 'N' in state.wordTable['NT'][num][state.wordTableHeaderList['NT'].index('GlossCaps')]:
+                    numNS += 1
+    return numAdded,numNS
+# end of matchOrderedRuns
+
+
 def matchWordsInOrder( BBB:str, c:int,v:int, rvVerseText:str, rvWordList:List[str], lvWordList:List[str], reversedOrder:bool ) -> Tuple[int,int]:
     """
     The OET-RV follows the OET-LV clause order roughly from left to right through each verse,
@@ -2782,6 +2907,9 @@ def matchWordsInOrder( BBB:str, c:int,v:int, rvVerseText:str, rvWordList:List[st
     fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsInOrder( {BBB} {c}:{v} {reversedOrder=} {rvWordList}, {lvWordList} )" )
     assert rvWordList and lvWordList
     if reversedOrder: vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  {BBB} {c}:{v} is an order-reversed verse" )
+
+    # First try bounded order-run alignment between already-anchored words
+    runNumAdded,runNumNS = matchOrderedRuns( BBB, c,v, rvWordList, lvWordList )
 
     NT = bos_books_codes_py.is_new_testament_nr( BBB )
     # We skip an OET-LV word that the verse gives the same number to more than once, because such a
@@ -2833,7 +2961,7 @@ def matchWordsInOrder( BBB:str, c:int,v:int, rvVerseText:str, rvWordList:List[st
             if NT and 'N' in state.wordTable['NT'][lvNumber][state.wordTableHeaderList['NT'].index('GlossCaps')]:
                 continue # Leave nomina sacra alone
             lvCols.append( (ix, alternative, lvNumber) )
-    if not lvCols: return 0,0
+    if not lvCols: return runNumAdded,runNumNS
 
     # Score every RV word against every LV word
     scoreMatrix = [ [ None ]*len(lvCols) for _ in rvRows ]
@@ -2862,6 +2990,8 @@ def matchWordsInOrder( BBB:str, c:int,v:int, rvVerseText:str, rvWordList:List[st
         else:
             logging.warning( f"Got addNumberToRVWord( {BBB} {c}:{v} '{rvWord}' {lvNumber} ) result = {result}" )
 
+    numAdded = numAdded + runNumAdded
+    numNS = numNS + runNumNS
     return numAdded,numNS
 # end of connect_OET-RV_words_via_OET-LV.matchWordsInOrder
 
