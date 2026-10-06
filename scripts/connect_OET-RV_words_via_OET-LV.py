@@ -158,7 +158,11 @@ CHANGELOG:
         same OET-RV against OET-LV OT word-table (Morphology 'V...') analysis
     2026-10-06 Removed the conservative "only Messiah/Yeshua/God" nomina sacra allow-list, so that
         a genuine OET-LV nomina sacra match (e.g. the RV "God's¦" at Mrk 8:33, 9:1, 7:9, 7:13)
-        now always gets its \nd ... \nd* (or \+nd ...\+nd*) markup; the CRITICAL messages are gone
+        now always gets its \\nd ... \\nd* (or \\+nd ... \\+nd*) markup; the CRITICAL messages are gone
+    2026-10-06 Added NT noun/adjective singular/plural variant pairs to
+        RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS (e.g. ('fish','fishes'), ('body','bodies'),
+        ('sign','signs'), ('authority','authorities') ...), which connected ~40 more OET-RV
+        words in Mark.
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -331,6 +335,52 @@ SIMPLE_NOUNS = ( # These are nouns that are likely to match one-to-one from the 
         'nights','night', 'prophets','prophet', 'voices','voice',
         'worlds','world', 'apprentices','apprentice',
         'rest', 'righteousness',
+    # Singular/plural noun entries added 2026-10-06 (NT and OT)
+    'adulteries', 'adultery', 'area', 'areas', 'armies', 'army',
+    'arrow', 'arrows', 'back', 'backs', 'bank', 'banks',
+    'barn', 'barns', 'beard', 'beards', 'bellies', 'belly',
+    'belong', 'belongs', 'blessing', 'blessings', 'bone', 'bones',
+    'border', 'borders', 'bowl', 'bowls', 'bridle', 'bridles',
+    'camps', 'cart', 'carts', 'case', 'cases', 'cedar',
+    'cedars', 'chain', 'chains', 'cheek', 'cheeks', 'clan',
+    'clans', 'cloud', 'clouds', 'coal', 'coals', 'commander',
+    'commanders', 'compassion', 'compassions', 'complaint', 'complaints', 'conscience',
+    'consciences', 'contribution', 'contributions', 'corpse', 'corpses', 'creature',
+    'creatures', 'curtain', 'curtains', 'cypress', 'cypresses', 'design',
+    'designs', 'desire', 'desires', 'dispute', 'disputes', 'duties',
+    'duty', 'edge', 'edges', 'enemies', 'enemy', 'escape',
+    'escapees', 'farm', 'farms', 'fishes', 'flame', 'flames',
+    'flesh', 'fleshes', 'flock', 'flocks', 'food', 'foods',
+    'foundation', 'foundations', 'frame', 'frames', 'grave', 'graves',
+    'grumbling', 'grumblings', 'harp', 'harps', 'heap', 'heaps',
+    'horn', 'horns', 'human', 'humans', 'incenses', 'inside',
+    'insides', 'instruction', 'instructions', 'island', 'islands', 'lamp',
+    'lamps', 'lightning', 'lightnings', 'like', 'likes', 'livestock',
+    'livestocks', 'load', 'loads', 'lust', 'lusts', 'male',
+    'males', 'mark', 'marks', 'meat', 'meats', 'mile',
+    'miles', 'mind', 'minds', 'month', 'months', 'moth',
+    'moths', 'mound', 'mounds', 'mountain', 'mountains', 'mule',
+    'mules', 'multitude', 'multitudes', 'murder', 'murders', 'neck',
+    'necks', 'need', 'needs', 'oath', 'oaths', 'obligation',
+    'obligations', 'pain', 'pains', 'pair', 'pairs', 'parable',
+    'parables', 'part', 'parts', 'pasture', 'pastureland', 'pasturelands',
+    'pastures', 'path', 'paths', 'peoples', 'persecution', 'persecutions',
+    'pipe', 'pipes', 'pomegranate', 'pomegranates', 'present', 'presents',
+    'rain', 'rains', 'reed', 'reeds', 'region', 'regions',
+    'root', 'roots', 'rubies', 'ruby', 'rule', 'rules',
+    'sack', 'sacks', 'sale', 'sales', 'scripture', 'scriptures',
+    'seed', 'seeds', 'shield', 'shields', 'shoulder', 'shoulders',
+    'sickness', 'sicknesses', 'skill', 'skills', 'skin', 'skins',
+    'song', 'songs', 'spice', 'spices', 'staff', 'staffs',
+    'step', 'steps', 'suffering', 'sufferings', 'tail', 'tails',
+    'teaching', 'teachings', 'temptation', 'temptations', 'tenant', 'tenants',
+    'tents', 'terror', 'terrors', 'thorn', 'thorns', 'thunder',
+    'thunders', 'tool', 'tools', 'tradition', 'traditions', 'trial',
+    'trials', 'tribe', 'tribes', 'trouble', 'troubles', 'twin',
+    'twins', 'unbeliever', 'unbelievers', 'village', 'villages', 'wage',
+    'wages', 'wave', 'waves', 'weakness', 'weaknesses', 'wildernesss',
+    'will', 'wills', 'wine', 'wines', 'wineskin', 'wineskins',
+    'witness', 'witnesses', 'worries', 'worry',
     )
 assert len(set(SIMPLE_NOUNS)) == len(SIMPLE_NOUNS) # Check for accidental duplicates
 verbalNouns = ('accusations','accusation',
@@ -2533,19 +2583,23 @@ def matchOurListedSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWor
     NT = bos_books_codes_py.is_new_testament_nr( BBB )
 
     numAdded = numNS = 0
+    nounWords = set(SIMPLE_NOUNS) | set(verbalNouns) # Only nouns get number-variant matching; verbs and adjectives are handled elsewhere
     for simpleNoun in SIMPLE_WORDS:
         # print( f"{simpleNoun}" )
+        searchForms = (simpleNoun,)
+        if simpleNoun in nounWords:
+            searchForms = (simpleNoun,) + tuple(numberVariants( simpleNoun ))
         lvIndexList = []
         for lvN,lvWord in enumerate( lvWordList ):
             # assert lvWord.isalpha(), f"'{lvWord}'" # Might contain an apostrophe
-            if f'{simpleNoun}¦' in lvWord:
+            if any( f'{form}¦' in lvWord for form in searchForms ):
                 lvIndexList.append( lvN )
         if not lvIndexList: continue
         # print( f"{BBB} {c}:{v} {simpleNoun=} {lvIndexList=}" )
         rvIndexList = []
         for rvN,rvWord in enumerate( rvWordList ):
             # assert rvWord.isalpha(), f"'{rvWord}'" # Might contain an apostrophe
-            if rvWord == simpleNoun:
+            if rvWord == simpleNoun or ( simpleNoun in nounWords and rvWord in numberVariants( simpleNoun ) ):
                 rvIndexList.append( rvN )
         if not rvIndexList: continue
 
@@ -2563,7 +2617,7 @@ def matchOurListedSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWor
         assert len(lvNumbers) == 1 # NOT TRUE: If there's two 'camels' in the verse, we expect both to have the same word number
         for rvN in rvIndexList:
             rvNoun = rvWordList[rvN]
-            if rvNoun.lower() == lvNoun.lower():
+            if rvNoun.lower() == lvNoun.lower() or ( simpleNoun in nounWords and ( lvNoun.lower() in numberVariants( rvNoun.lower() ) or rvNoun.lower() in numberVariants( lvNoun.lower() ) ) ):
                 if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
                     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchOurListedSimpleWords() from {BBB} {c}:{v} {rvN=} {lvWordNumber=} {lvNoun=} is adding a number to RV {rvNoun=}")
                 result = addNumberToRVWord( BBB, c,v, rvNoun, lvWordNumber )
@@ -4116,7 +4170,7 @@ def getLVWordRow( wordWithNumber:str, testament:str ) -> Tuple[str,int,List[str]
 
     try: word,wordNumber = wordWithNumber.split( '¦' ) # Gives a ValueError if the wordNumber separator character is missing or if there's multiple
     except ValueError:
-        raise WordNumberError( f"Failed to split-off word number from {testament} {wordWithNumber=}" )
+        raise WordNumberError( f"Failed to split-off OET-LV word number from {testament} {wordWithNumber=}" )
     # assert word.isalpha(), f"Non-alpha '{word}'" # not true, e.g., from 'Yaʸsous/(Yəhōshūˊa)¦21754'
     try: wordNumber = int( wordNumber )
     except ValueError:
