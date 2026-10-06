@@ -32,31 +32,31 @@ Specialised \\add spans:
         '\\+add ' spans must be closed by '\\+add*' markers.
     Formats are described at
         ../../OpenEnglishTranslation-website/src/pages/Resources/Formats.astro
-    Pure '\\add ' or '\\+add ' spans:
+    Pure '\\add ' or '\\+add ' or '\\add ?' or '\\+add ?' spans:
         Any existing word numbers should be removed.
         No new word numbers should be added to these spans.
         Words inside these spans should not be included in word linking statistics.
-    Pronoun referrent '\\add @' or '\\+add @' spans:
+    Pronoun referrent '\\add @' or '\\+add @' or '\\add ?@' or '\\+add ?@' spans:
         Expect the proper noun or fuller description in the OET-RV
             to match a pronoun or simpler description like 'the one' in the OET-LV.
-    Pronoun substitution '\\add *' or '\\+add *' spans:
+    Pronoun substitution '\\add *' or '\\+add *' or '\\add ?*' or '\\+add ?*' spans:
         Expect the pronoun or simpler description in the OET-RV
             to match a proper noun or fuller description in the OET-LV.
-    Implied person or object '\\add >' or '\\+add >' spans:
+    Implied person or object '\\add >' or '\\+add >' or '\\add ?>' or '\\+add ?>' spans:
         As these are implied by the context and by the previous word in the sentence (often an article),
             then they should be assigned the same word number as the word that they're implied from.
-    Added ownership '\\add &' or '\\+add &' spans:
+    Added ownership '\\add &' or '\\+add &' or '\\add ?&' or '\\+add ?&' spans:
         In this case 'the hand' might become '\\add &his\\add* hand'.
         and 'followers' might become '\\add &his\\add* followers'.
         If there's a matching article present, then the OET-RV possessive pronoun
             can be linked to the word number of that OET-LV article.
-    Elided '\\add ≡' or '\\+add ≡' spans:
+    Elided '\\add ≡' or '\\+add ≡' or '\\add ?≡' or '\\+add ?≡' spans:
         If the original text that was implied here and then formally reinstated
             can be found earlier in the same verse or in the previous verse,
                 then it can be given those matching word number(s).
         TODO: This requires an update in word number checking
             so that a lower word number (from a previous verse) can be allowed in an elided segment.
-    Reworded '\\add ≈' or '\\+add ≈' spans:
+    Reworded '\\add ≈' or '\\+add ≈' or '\\add ?≈' or '\\+add ?≈' spans:
         Can be matched to OET-LV words, but more difficult expected.
 
 TODO: This script makes wrong cross-connections between different verses where versification issues apply
@@ -171,7 +171,7 @@ from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 LAST_MODIFIED_DATE = '2026-10-06' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '1.0.2'
+PROGRAM_VERSION = '1.0.3'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -391,6 +391,7 @@ SIMPLE_VERB_SETS = (
     ('crept', 'creeping', 'creeps', 'creep'),
     ('cried', 'crying', 'cries', 'cry'),
     ('cringed', 'cringes', 'cringe'),
+    ('crowed','crowing','crows','crow'),
     ('cursed', 'cursing', 'curses', 'curse'),
     ('cut', 'cutting', 'cuts', 'cut'),
     ('dared', 'daring', 'dares', 'dare'),
@@ -473,6 +474,7 @@ SIMPLE_VERB_SETS = (
     ('kept', 'keeping', 'keeps', 'keep'),
     ('killed', 'killing', 'kills', 'kill'),
     ('kindled', 'kindling', 'kindles', 'kindle'),
+    ('kissed','kissing','kisses','kiss'),
     ('knelt', 'kneeled', 'kneeling', 'kneels', 'kneel'),
     ('knew', 'known', 'knowing', 'knows', 'know'),
     ('laid', 'laying', 'lays', 'lay'),
@@ -778,6 +780,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('afraid','feared'),('afraid','fearing'),
     ('agreeing','confirming'),
     ('agreement','covenant'),
+    ('ahead','before'), # Mrk 14:28
     ('alert','watching'), # Mrk 13:34
     ('Also','And'),
     ('always','perpetuity'),
@@ -792,12 +795,16 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('appeared','seen'),
     ('appropriate','fitting'),
     ('Army','hosts'),('army','hosts'),
-    ('arrest','apprehend'),('arrested','captured'),('arrested','laid'),
+    ('arrest','apprehend'),
+        ('arrested','apprehended'),('arrested','captured'),('arrested','laid'), # Mrk 14:49
     ('aroma','odour'),
+    ('asked','saying'), # Mrk 14:37
+    ('asleep','sleeping'), # Mrk 14:40
     ('assembly','convocation'),
     ('assure','Truly'), # Mrk 13:30
     ('astounded','amazed'),
     ('attention','attentiveness'),
+    ('avoid','pass'), # Mrk 14:35
     ('back','stern'),
     ('battle','war'),('battles','wars'),
     ('because','for/because'),('Because','For/Because'),('because','For/Because'),
@@ -833,6 +840,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('commented','saying'),
     ('confused','confounded'),
     ('continued','said'),
+    ('contradicted','saying'), # Mrk 14:29
     ('Countries','nation'),('countries','nation'), # Mrk 13:8
     ('cross','pass over'),
     ('could','may'),
@@ -860,13 +868,18 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('dinosaur','dragon'), # Rev 12:3
     ('disasters','plagues'),
     ('discouraged','dismayed'),
+    ('disown','renounce'), # Mrk 14:31
     ('driving','throwing'),
+    ('each','all'), # Mrk 14:23
     ('eastern','east'),
     ('eliminate','destroying'),
     ('engaged','betrothed'),
+    ('ensure','order'), # Mrk 14:19
+    ('enthusiastic','eager'), # Mrk 14:38
     ('entire','all'),
     ('everyone','all'),('everyone','people'),('everyone','one'),('everyone','you all'),
         ('Everyone','one'),
+    ('evil','sinners'), # Mrk 14:41
     ('executed','death'), # Mrk 13:12
         ('execution','stake'),
     ('existence','became'),
@@ -881,13 +894,13 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('front','before'),('front','face'), # Mrk 13:9
     ('fulfilled','accomplished'),
     ('God','god'),
-    ("God's",'holy'), # Mrk 13:11
+    ("God's",'god'),("God's",'holy'), # Mrk 14:25, 13:11
     ('godly','devout'),('godly','righteous'),
-    ('grabbed','taken'),
-    ('grapevine','vine'),
+    ('grab','apprehend'),('grabbed','taken'),
+    ('grapevine','vine'),('grapes','vine'), # Mrk 14:25
     ('greater','mightier'),
-    ('guard','doorkeeper'), # Mrk 13:34
-    ('hand','giving'), # Mrk 13:11
+    ('guard','doorkeeper'),('guard','securely'), # Mrk 13:34, 14:44
+    ('hand','giving'),('handed','given'), # Mrk 13:11, 14:41
     ('happen','become'),('happen','becoming'),('happening','becoming'), # Mrk 13:29
     ('harvests','fruit'),
     ('heavenly','heavens'),('heavenly','heaven'),
@@ -895,6 +908,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('hilltop','high'),
     ('honest','true'),
     ('honour','glorify'),
+        ('honoured','great'), # Mrk 14:45
     ('horrible','abomination'), # Mrk 13:14
     ('huge','great'),
     ('humanity','man'), # Mrk 13:26
@@ -913,10 +927,12 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('kill','destroy'),
     ('King','king'),
     ('kingdoms','nations'),
+    ('knelt','falling'), # Mrk 14:35
     ('know','knowledge'),
     ('laid','spread'),
     ('lake','sea'),
     ('large','great'),
+    ('land','property'), # Mrk 14:32
     ('language','tongue'),('languages','tongues'),
     ('left','came out'),('left','set out'),
     ('lesson','parable'), # Mrk 13:28
@@ -961,6 +977,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('people','humans'),('people','multitude'),('people','ones'),
     ('percent','add'),
     ('permanent','perpetuity'),
+    ('picked','taken'), # Mrk 14:23
     ('placed','laid'),('placing','laying'),
     ('planet','earth'), # Mrk 13:31
     ('platform','lid'),
@@ -971,6 +988,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('population','multitude'),
     ('praised','glorifying'),
     ('preaching','proclaiming'),
+    ('prearranged','given'), # Mrk 14:44
     ('priest','priest/officer'),
     ('proclamation','announcement'),('proclamation','declaration'),('proclamation','notice'),('proclamations','declarations'),
     ('produce','fruit'),
@@ -990,7 +1008,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('reputation','name'),
     ('request','seek'),('requested','prayed'),
     ('rescue','deliver'),
-    ('responded','said'),
+    ('responded','said'),('responded','saying'), # Mrk 14:30
     ('responsibilities','authority'), # Mrk 13:34
     ('return','coming'), # Mrk 13:35
     ('right','fitting'),('right','truth'), # Mrk 13:10, 12:32
@@ -1010,6 +1028,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('scriptures','scroll'), # Mrk 12:26
     ('search','seek'),
     ('second','another'),
+    ('secured','apprehended'), # Mrk 14:46
     ('See','Behold'),
     ('shaved','baldness'),
     ('shed','hut'),
@@ -1018,7 +1037,8 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('shore','side'),
     ('should','let'),
     ('sick','sickly'),
-    ('Similarly','Likewise'),
+    ('Similarly','Likewise'),('similar','likewise'), # Mrk 14:31
+    ('single','one'), # Mrk 14:37
     ('sitting','reclining'),
     ('sky','heaven'),('skies','heavens'),
     ('skin','hide'),
@@ -1027,7 +1047,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('So','And'),('So','Therefore'),
     ('someone','anyone'),
     ('something','one message'),
-    ('songs','psalms'),
+    ('songs','psalms'),('songs','hymns'), # Mrk 14:26
     ('splendour','glory'),
     ('spoken','said'),('spoken','saying'),
     ('started','began'),
@@ -1039,7 +1059,8 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('tarpaulin','cover'),
     ('tattoo','inscription'), # Lev 19:28
     ('teachers','scribes'),
-    ('teachings','messages'), # Mrk 13:31
+    ('teaching','saying'), # Mrk 14:27
+        ('teachings','messages'), # Mrk 13:31
     ('tell','saying'),
         ('telling','proclaimed'),('telling','saying'),('telling','speaking'),
         ('tells','say'),
@@ -1048,13 +1069,14 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('that','this'),('that','which'),
     ('themselves','hearts'),
     ('Then','And'),('then','And'),
+    ('thief','robber'), # Mrk 14:48
     ('thinking','reasoning'),('thinking','supposing'),
     ('third','another'),
     ('thoughtful','intelligently'), # Mrk 12:34
     ('tied','bound'),
     ('time','hour'), # Mrk 13:32
     ('tipped','overturned'),
-    ('told','commanded'),
+    ('told','commanded'),('told','saying'),# Mrk 14:34
     ('total','all'),
     ('town','city'),
     ('trip','travelling'), # Mrk 13:34
@@ -2606,7 +2628,7 @@ LITTLE_FUNCTION_WORDS = {
     'ourselves', 'she', 'someone', 'them', 'themselves', 'they', 'what', 'whatever', 'which', 'who',
     'whom', 'whose', 'you', 'yours', 'yourself', 'yourselves',
     # prepositions
-    'about', 'above', 'across', 'after', 'against', 'along', 'among', 'around', 'atop', 'before',
+    'about', 'above', 'across', 'after', 'against', 'ahead', 'along', 'among', 'around', 'atop', 'before',
     'behind', 'below', 'beside', 'besides', 'between', 'beyond', 'during', 'from', 'into', 'like',
     'near', 'off', 'onto', 'out', 'over', 'since', 'through', 'till', 'toward', 'towards', 'under',
     'until', 'unto', 'up', 'upon', 'via', 'with', 'within', 'without',
