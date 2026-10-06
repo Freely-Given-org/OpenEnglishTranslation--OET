@@ -150,6 +150,15 @@ CHANGELOG:
         - let matchWordsInOrder() also match words that differ by an inflectional ending of
           up to three letters beyond the five-letter prefix (e.g. RV 'master' with LV 'masters')
         - greatly extended the contraction map in RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS
+    2026-10-06 Greatly expanded SIMPLE_VERB_SETS by comparing OET-RV and OET-LV NT verses
+        to find verbs where a different tense/form is used on the two sides, so that
+        matchVerbSets() can connect e.g. the RV 'warm' with the LV 'warming', or the RV 'dips'
+        with the LV 'dipping'
+    2026-10-06 Added the first OT-specific verb sets (play, provoke, slip, wean) after running the
+        same OET-RV against OET-LV OT word-table (Morphology 'V...') analysis
+    2026-10-06 Removed the conservative "only Messiah/Yeshua/God" nomina sacra allow-list, so that
+        a genuine OET-LV nomina sacra match (e.g. the RV "God's¦" at Mrk 8:33, 9:1, 7:9, 7:13)
+        now always gets its \nd ... \nd* (or \+nd ...\+nd*) markup; the CRITICAL messages are gone
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -665,6 +674,102 @@ SIMPLE_VERB_SETS = (
     ('opposed', 'opposing', 'opposes', 'oppose'),
     ('wished', 'wishing', 'wishes', 'wish'),
     ('sacrificed', 'sacrificing', 'sacrifices', 'sacrifice'),
+    # Added 2026-10-06 by comparing OET-RV and OET-LV NT verses to find different verb tenses
+    ('accompanied', 'accompanying', 'accompanies', 'accompany'),
+    ('accused', 'accusing', 'accuses', 'accuse'),
+    ('addressed', 'addressing', 'addresses', 'address'),
+    ('appeared', 'appearing', 'appears', 'appear'),
+    ('approached', 'approaching', 'approaches', 'approach'),
+    ('approved', 'approving', 'approves', 'approve'),
+    ('aspired', 'aspiring', 'aspires', 'aspire'),
+    ('begged', 'begging', 'begs', 'beg'),
+    ('benefited', 'benefitted', 'benefiting', 'benefitting', 'benefits', 'benefit'),
+    ('blamed', 'blaming', 'blames', 'blame'),
+    ('bowed', 'bowing', 'bows', 'bow'),
+    ('burdened', 'burdening', 'burdens', 'burden'),
+    ('castrated', 'castrating', 'castrates', 'castrate'),
+    ('comforted', 'comforting', 'comforts', 'comfort'),
+    ('committed', 'committing', 'commits', 'commit'),
+    ('commended', 'commending', 'commends', 'commend'),
+    ('contributed', 'contributing', 'contributes', 'contribute'),
+    ('confirmed', 'confirming', 'confirms', 'confirm'),
+    ('conformed', 'conforming', 'conforms', 'conform'),
+    ('cooperated', 'cooperating', 'cooperates', 'cooperate'),
+    ('described', 'describing', 'describes', 'describe'),
+    ('despaired', 'despairing', 'despairs', 'despair'),
+    ('detested', 'detesting', 'detests', 'detest'),
+    ('dipped', 'dipping', 'dips', 'dip'),
+    ('dishonoured', 'dishonouring', 'dishonours', 'dishonour'),
+    ('displayed', 'displaying', 'displays', 'display'),
+    ('distressed', 'distressing', 'distresses', 'distress'),
+    ('divided', 'dividing', 'divides', 'divide'),
+    ('escaped', 'escaping', 'escapes', 'escape'),
+    ('envied', 'envying', 'envies', 'envy'),
+    ('examined', 'examining', 'examines', 'examine'),
+    ('explained', 'explaining', 'explains', 'explain'),
+    ('fainted', 'fainting', 'faints', 'faint'),
+    ('fasted', 'fasting', 'fasts', 'fast'),
+    ('feasted', 'feasting', 'feasts', 'feast'),
+    ('flashed', 'flashing', 'flashes', 'flash'),
+    ('foamed', 'foaming', 'foams', 'foam'),
+    ('fulfilled', 'fulfilling', 'fulfils', 'fulfills', 'fulfil', 'fulfill'),
+    ('guarded', 'guarding', 'guards', 'guard'),
+    ('happened', 'happening', 'happens', 'happen'),
+    ('humbled', 'humbling', 'humbles', 'humble'),
+    ('joined', 'joining', 'joins', 'join'),
+    ('justified', 'justifying', 'justifies', 'justify'),
+    ('knocked', 'knocking', 'knocks', 'knock'),
+    ('laboured', 'labouring', 'labours', 'labour'),
+    ('lifted', 'lifting', 'lifts', 'lift'),
+    ('mastered', 'mastering', 'masters', 'master'),
+    ('misled', 'misleading', 'misleads', 'mislead'),
+    ('mistreated', 'mistreating', 'mistreats', 'mistreat'),
+    ('nodded', 'nodding', 'nods', 'nod'),
+    ('noticed', 'noticing', 'notices', 'notice'),
+    ('obsessed', 'obsessing', 'obsesses', 'obsess'),
+    ('observed', 'observing', 'observes', 'observe'),
+    ('oppressed', 'oppressing', 'oppresses', 'oppress'),
+    ('overcame', 'overcoming', 'overcomes', 'overcome'),
+    ('perished', 'perishing', 'perishes', 'perish'),
+    ('perplexed', 'perplexing', 'perplexes', 'perplex'),
+    ('persecuted', 'persecuting', 'persecutes', 'persecute'),
+    ('planted', 'planting', 'plants', 'plant'),
+    ('plucked', 'plucking', 'plucks', 'pluck'),
+    ('pondered', 'pondering', 'ponders', 'ponder'),
+    ('possessed', 'possessing', 'possesses', 'possess'),
+    ('prepared', 'preparing', 'prepares', 'prepare'),
+    ('pretended', 'pretending', 'pretends', 'pretend'),
+    ('produced', 'producing', 'produces', 'produce'),
+    ('pushed', 'pushing', 'pushes', 'push'),
+    ('read', 'reading', 'reads'),
+    ('reaped', 'reaping', 'reaps', 'reap'),
+    ('reasoned', 'reasoning', 'reasons', 'reason'),
+    ('rejected', 'rejecting', 'rejects', 'reject'),
+    ('rested', 'resting', 'rests', 'rest'),
+    ('revered', 'revering', 'reveres', 'revere'),
+    ('scorned', 'scorning', 'scorns', 'scorn'),
+    ('searched', 'searching', 'searches', 'search'),
+    ('shouted', 'shouting', 'shouts', 'shout'),
+    ('slandered', 'slandering', 'slanders', 'slander'),
+    ('snatched', 'snatching', 'snatches', 'snatch'),
+    ('spared', 'sparing', 'spares', 'spare'),
+    ('strained', 'straining', 'strains', 'strain'),
+    ('strengthened', 'strengthening', 'strengthens', 'strengthen'),
+    ('submitted', 'submitting', 'submits', 'submit'),
+    ('supplied', 'supplying', 'supplies', 'supply'),
+    ('supposed', 'supposing', 'supposes', 'suppose'),
+    ('threshed', 'threshing', 'threshes', 'thresh'),
+    ('trumpeted', 'trumpeting', 'trumpets', 'trumpet'),
+    ('unloaded', 'unloading', 'unloads', 'unload'),
+    ('waited', 'waiting', 'waits', 'wait'),
+    ('warmed', 'warming', 'warms', 'warm'),
+    ('washed', 'washing', 'washes', 'wash'),
+    ('worshipped', 'worshipping', 'worshiped', 'worshiping', 'worships', 'worship'),
+    # Added 2026-10-06 (OT) verbs where the OET-RV and OET-LV use a different tense/form
+    ('played', 'playing', 'plays', 'play'),
+    ('provoked', 'provoking', 'provokes', 'provoke'),
+    ('slipped', 'slipping', 'slips', 'slip'),
+    ('weaned', 'weaning', 'weans', 'wean'),
 )
 simpleVerbs = tuple(verb for verbSet in SIMPLE_VERB_SETS for verb in verbSet)
 # Allow overlapping forms that legitimately belong to different verb paradigms (e.g., lay/lie, saw, set, spread, beat etc.)
@@ -672,7 +777,7 @@ allowed_overlaps = {'beat','become','cut','hit','hurt','lay','let','put','quit',
 duplicates = [x for x in simpleVerbs if simpleVerbs.count(x)>1 and x not in allowed_overlaps]
 assert len(duplicates) == 0, f"Accidental duplicates in simpleVerbs: {duplicates}"
 for simpleVerb in simpleVerbs: # Just a safety check in case we miss a comma and python concatenates consecutive words
-    assert len(simpleVerb) <= 11 or simpleVerb in ('distributing','slaughtering','understanding'), f"({len(simpleVerb)}) {simpleVerb}"
+    assert len(simpleVerb) <= 13, f"({len(simpleVerb)}) {simpleVerb}"
 
 simpleAdverbs = ('quickly', 'immediately', 'loudly', 'suddenly',
                  'now', 'then', 'again', 'still', 'only', 'even',
@@ -4605,12 +4710,8 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool 
                     and not line[match.end():match.end()+5] == '\\+nd*' \
                     and not isInsideNominaSacraSpan( line, match.start() ):
                         addNominaSacra = True
-                        if word in ('Messiah','Yeshua','God'):
-                            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Adding NS on {word=} {line[match.start()-6:match.start()]=} {line[match.end():match.end()+6]=} {line=}" )
-                        else:
-                            logging.critical( f"Why did we want to add NS to {BBB} {c}:{v} {word=}?\n{wordNumber=} {wordRow=}" )
-                            continue
+                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Adding NS on {word=} {line[match.start()-6:match.start()]=} {line[match.end():match.end()+6]=} {line=}" )
 
                 try:
                     if line[match.end()] == '¦': # next character after word
