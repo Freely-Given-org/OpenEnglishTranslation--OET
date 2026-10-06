@@ -989,6 +989,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
         ('execution','stake'),
     ('existence','became'),
     ('exposed','uncovered'),
+    ('fellow','man'), # Mrk 14:51
     ('finally','Lastly'),('finally','last'),
     ('fitting','befitting'),
     ('flames','fire'),
@@ -998,6 +999,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('forever','perpetuity'),
     ('front','before'),('front','face'), # Mrk 13:9
     ('fulfilled','accomplished'),
+    ('gathered','coming together'), # Mrk 14:53
     ('God','god'),
     ("God's",'god'),("God's",'holy'), # Mrk 14:25, 13:11
     ('godly','devout'),('godly','righteous'),
@@ -1119,6 +1121,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('right','fitting'),('right','truth'), # Mrk 13:10, 12:32
     ('river','Yarden'),
     ('riverbed','wadi'),
+    ('robe','cloth'), # Mrk 14:51
     ('rock','stone'),('rocks','stones'),('rocks','stone'),
     ('roof','housetop'),('roofs','housetops'),
     ('room','place'),
@@ -1200,6 +1203,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('waters','water supplies'),
     ('way','how'),
     ('wealthy','rich'),
+    ('wearing','clothed'), # Mrk 14:51
     ('went','came'),
     ('what','whatever'),("What's",'What'),
     ('When','And'),('When','whenever'),
@@ -1267,6 +1271,7 @@ LV_SINGLE_WORDS_TO_RV_WORD_STRINGS = (
             ('approached','came closer'), # Mrk 12:28
             ('ascent','walking uphill'),
             ('first','most important'), # Mrk 12:29
+            ('fled','ran away'), # Mrk 14:52
             ('greater','more important'), # Mrk 12:31
             ('members', 'body parts'),
             ('plagues', 'deadly diseases'),
