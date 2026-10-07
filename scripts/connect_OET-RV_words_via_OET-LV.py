@@ -635,6 +635,7 @@ SIMPLE_VERB_SETS = (
     ('shut', 'shutting', 'shuts', 'shut'),
     ('signalled', 'signalling', 'signals', 'signal'),
     ('sinned', 'sinning', 'sins', 'sin'),
+    ('slapped','slapping','slaps','slap'),
     ('slew', 'slain', 'slaying', 'slays', 'slay'),
     ('slept', 'sleeping', 'sleeps', 'sleep'),
     ('slid', 'sliding', 'slides', 'slide'),
@@ -929,14 +930,17 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
 
     # Vocab differences / synonyms
     # RVword, LVwordOrPhrase
-    ('about','concerning'),('about','of'), # Mrk 12:26
+    ('about','concerning'),('about','of'),('about','whom'), # Mrk 12:26, 14:71
+    ('accusations','testimony'), # Mrk 14:59
     ('addition','And'),
     ('advance','beforehand'),('advance','previously'), # Mrk 13:11,23
     ('afraid','feared'),('afraid','fearing'),
+    ('agreed','same'), # Mrk 14:56
     ('agreeing','confirming'),
     ('agreement','covenant'),
     ('ahead','before'), # Mrk 14:28
     ('alert','watching'), # Mrk 13:34
+    ('align','same'), # Mrk 14:59
     ('Also','And'),
     ('always','perpetuity'),
     ('amazed','astonished'),
@@ -953,6 +957,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('arrest','apprehend'),
         ('arrested','apprehended'),('arrested','captured'),('arrested','laid'), # Mrk 14:49
     ('aroma','odour'),
+    ('around','by'), # Mrk 14:69
     ('asked','saying'), # Mrk 14:37
     ('asleep','sleeping'), # Mrk 14:40
     ('assembly','convocation'),
@@ -984,10 +989,12 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('cash','money'),('cash','silver'),
     ('cease','removed'),
     ('chairs','seats'),
+    ('charge','testimony'),('charges','testimony'), # Mrk 14:56,57
     ('chasing','pursuing'),
     ('cheerful','joy'),
     ('chest','ark'),
     ('close','near'), # Mrk 13:28
+    ('closely','focused'), # Mrk 14:67
     ('clothes','apparel'),('clothes','garments'),
     ('collapse','passing away'), # Mrk 13:31
     ('collect','gathering'), # Mrk 13:27
@@ -1004,15 +1011,18 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('courtyard','court'),
     ('cow','ox'),('cows','oxen'),
     ('creation','beginning'),
+    ('cried','weeping'), # Mrk 14:72
     ('crowd','multitude'),
     ('date','day'), # Mrk 13:32
     ('dawn','cockcrow'), # Mrk 13:35
     ('dearly','beloved'),
     ('decide','purposed'),
     ('decision','evaluate'),('decisions','judgements'),
+    ('defend','answering'), # Mrk 14:60
     ('deformed','withered'),
-    # ('demon','unclean'),('demons','spirits'),
+    ('demolish','tearing'), # Mrk 14:58
     ('demon-possessed','unclean'),
+    ('denied','disowned'),('denied','disowning'), # Mrk 14:68,70
     ('desert','ˊₐrāⱱāh'),('plain','ˊₐrāⱱāh'),
     ('deserted','desolate'),
     ('destroyed','consumed'),('destroyed','devoured'),
@@ -1024,6 +1034,8 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('disasters','plagues'),
     ('discouraged','dismayed'),
     ('disown','renounce'), # Mrk 14:31
+    ('distance','afar'), # Mrk 14:54
+    ('down','below'), # Mrk 14:66
     ('driving','throwing'),
     ('each','all'), # Mrk 14:23
     ('eastern','east'),
@@ -1057,6 +1069,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('grapevine','vine'),('grapes','vine'), # Mrk 14:25
     ('greater','mightier'),
     ('guard','doorkeeper'),('guard','securely'), # Mrk 13:34, 14:44
+    ('guy\'s','man'), # Mrk 14:69
     ('hand','giving'),('handed','given'), # Mrk 13:11, 14:41
     ('happen','become'),('happen','becoming'),('happening','becoming'), # Mrk 13:29
     ('harvests','fruit'),
@@ -1076,7 +1089,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('incredible','great'), # Mrk 13:26
     ('instructed','commanded'),('instructs','commanded'), # Mrk 13:34
     ('instructions','commanded'),('instructions','regulations'),
-    ('insulted','dishonoured'),('insulting','slandering'),
+    ('insult','slander'),('insulted','dishonoured'),('insulting','slandering'), # Mrk 14:64
     ('Israelis','people'),
     ('item','article'),('items','article'),
     ('jobs','work'), # Mrk 13:34
@@ -1091,12 +1104,14 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('large','great'),
     ('land','property'), # Mrk 14:32
     ('language','tongue'),('languages','tongues'),
+    ('later','after'), # Mrk 14:70
     ('left','came out'),('left','set out'),
     ('lesson','parable'), # Mrk 13:28
     ('Listen','Behold'),('listen','Behold'),('Listen','behold'),('listen','behold'),
     ('listen','give ear'),('Listen','hearing'),('listen','hear'),
     ('living','dwelling'),
     ('Look','Behold'),('look','Behold'),('Look','behold'),('look','behold'),
+    ('looked','focused'), # Mrk 14:67
     ('looking','searched'),('looking','seeking'),
     ('loved','beloved'),
     ('lying','lied'),
@@ -1105,6 +1120,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('marvelled','astonished'),
     ('meat','flesh'),
     ('message', 'oracle'), ('message', 'utterance'), ('message', 'word'), ('messenger', 'word'),
+    ('met','known'), # Mrk 14:71
     ('metres','cubits'),
     ('mind','heart'),
     ('mister','master'),('Mister','Master'),
@@ -1113,7 +1129,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('mourn','weep'), ('mourning','wailing'),
     ('Mt','mountain'),('Mt','mount'),('Mt', 'Mount'),
     ('murdered','killed'),('murdered','killing'),
-    ('must','will'),
+    ('must','truly'),('must','will'), # Mrk 14:70
     ('napping','sleeping'), # Mrk 13:36
     ('necessary','fitting'),
     ('needs','let'),
@@ -1124,6 +1140,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('noticed','saw'),
     ('obey','submitting'),
     ('observe','watching'), # Mrk 13:33
+    ('offered','giving'), # Mrk 14:57
     ('only','except'), # Mrk 13:32
     ('opened','divided'),
     ('other','across'),
@@ -1171,7 +1188,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('right','fitting'),('right','truth'), # Mrk 13:10, 12:32
     ('river','Yarden'),
     ('riverbed','wadi'),
-    ('robe','cloth'), # Mrk 14:51
+    ('robe','cloth'),('robe','clothes'), # Mrk 14:51,63
     ('rock','stone'),('rocks','stones'),('rocks','stone'),
     ('roof','housetop'),('roofs','housetops'),
     ('room','place'),
@@ -1180,6 +1197,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('rush','hasten'),
     ('sacred','holiness'),('sacred','holy'), ('sacred','of meeting'), # tent of meeting
     ('sacrificed','smoke'),
+    ('same','again'), # Mrk 14:70
     ('sanctuary','hideout'),
     ('scared','dismayed'), ('scared','feared'),
     ('scoffed','mocking'),
@@ -1188,9 +1206,13 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('second','another'),
     ('secured','apprehended'), # Mrk 14:46
     ('See','Behold'),
+    ('sentenced','condemned'),('sentenced','put'), # Mrk 14:55,64
+    ('servants','attendants'), # Mrk 14:54
+    ('several','many'), # Mrk 14:56
     ('shaved','baldness'),
     ('shed','hut'),
     ('She\'s','She'),
+    ('shouted','saying'), # Mrk 14:63
     ('shrines','places'),
     ('shore','side'),
     ('should','let'),
@@ -1226,7 +1248,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('territory','land'),
     ('that','this'),('that','which'),
     ('themselves','hearts'),
-    ('Then','And'),('then','And'),
+    ('Then','And'),('then','And'),('then','immediately'), # Mrk 14:72
     ('thief','robber'), # Mrk 14:48
     ('thinking','reasoning'),('thinking','supposing'),
     ('third','another'),
@@ -1239,6 +1261,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('town','city'),
     ('trip','travelling'), # Mrk 13:34
     ('trustworthy','faithful'),
+    ('trying','seeking'), # Mrk 14:55
     ('turned','giving'), # Mrk 13:9
     ('twenty','fifth'),
     ('undesirables','sinners'),
@@ -1318,13 +1341,16 @@ LV_SINGLE_WORDS_TO_RV_WORD_STRINGS = (
             ('Şelāh', 'Instrumental break'),
             ('Truly', 'May it be so'),
 
+            ('anymore','any more'), # Mrk 14:63
             ('approached','came closer'), # Mrk 12:28
             ('ascent','walking uphill'),
+            ('false','making up'), # Mrk 14:56
             ('first','most important'), # Mrk 12:29
             ('fled','ran away'), # Mrk 14:52
             ('greater','more important'), # Mrk 12:31
             ('members', 'body parts'),
             ('plagues', 'deadly diseases'),
+            ('right','honoured position'), # Mrk 14:62
             ('risen', 'got up'),
             ('sanctuary', 'sacred tent'),
             ('scribes', 'religious teachers'),
@@ -1332,6 +1358,7 @@ LV_SINGLE_WORDS_TO_RV_WORD_STRINGS = (
             ('synagogues', 'Jewish meeting halls'), ('synagogues', 'meeting halls'),
             ('synagogue', 'Jewish meeting hall'), ('synagogue', 'meeting hall'),
             ('tabernacle', 'sacred tent'),
+            ('three-times','three times'), # Mrk 14:72
             ('unblemished', 'no defects'),('unblemished', 'without defects'),
             )
 for someTuple in LV_SINGLE_WORDS_TO_RV_WORD_STRINGS:
