@@ -1321,6 +1321,26 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('Messiah','messiah'),
     ('We\'ll','We'),('We\'ve','We'),
     ('Yahweh','master'),('Yahweh','YHWH'),('Yahweh\'s','YHWH'),
+
+    # Additional single-word mappings from Mark analysis (2026-10-07)
+    # Non-verb mappings (verbs handled by matchVerbSets)
+    ('forgiven','forgiveness'),
+    ('many','all'),
+    ('also','and'),
+    ('man','one'),
+    ('soon','shortly'),
+    ('fishermen','fishers'),
+    ('sons','son'),
+    ('regular','scribes'),
+    ('just','this'),
+    ('quiet','deserted'),
+    ('other','neighbouring'),
+    ('driving','throwing_out'),
+    ('felt','having_been_feeling'),
+    ('reached','having_stretched_out'),
+    ('started','began'),
+    ('spreading','spreading_abroad'),
+    ('could','able'),
     )
 for someTuple in RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS:
     assert isinstance( someTuple, tuple), f"{someTuple=}"
@@ -1360,6 +1380,19 @@ LV_SINGLE_WORDS_TO_RV_WORD_STRINGS = (
             ('tabernacle', 'sacred tent'),
             ('three-times','three times'), # Mrk 14:72
             ('unblemished', 'no defects'),('unblemished', 'without defects'),
+
+            # Additional mappings from Mark analysis (2026-10-07) - LV single word -> RV multi-word phrase
+            ('forgiveness', 'have been forgiven'),
+            ('all', 'many people'),
+            ('and', 'and also'),
+            ('one', 'one man'),
+            ('shortly', 'soon after'),
+            ('fishers', 'fishers of men'),
+            ('son', 'son of Zebedee'),
+            ('scribes', 'religious teachers'),
+            ('this', 'just happened'),
+            ('deserted', 'quiet place'),
+            ('neighbouring', 'neighbouring villages'),
             )
 for someTuple in LV_SINGLE_WORDS_TO_RV_WORD_STRINGS:
     assert isinstance( someTuple, tuple), f"{someTuple=}"
@@ -1887,8 +1920,8 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Created a list of {len(booklist_to_process)} OET books to process." )
 
     # Go through books chapters and verses
-    totalWordPhraseAdds = totalSimpleListedAdds = totalProperNounAdds = totalFirstPartMatchedAdds = totalManualMatchedAdds = totalChangedNumberAdds = totalSpecialistAdds = totalInOrderMatchedAdds = 0
-    totalWordPhraseAddsNS = totalSimpleListedAddsNS = totalProperNounAddsNS = totalFirstPartMatchedAddsNS = totalManualMatchedAddsNS = totalChangedNumberAddsNS = totalSpecialistAddsNS = totalInOrderMatchedAddsNS = 0 # Nomina sacra
+    totalWordPhraseAdds = totalSimpleListedAdds = totalProperNounAdds = totalFirstPartMatchedAdds = totalManualMatchedAdds = totalChangedNumberAdds = totalRewordedAdds = totalSpecialistAdds = totalInOrderMatchedAdds = 0
+    totalWordPhraseAddsNS = totalSimpleListedAddsNS = totalProperNounAddsNS = totalFirstPartMatchedAddsNS = totalManualMatchedAddsNS = totalChangedNumberAddsNS = totalRewordedAddsNS = totalSpecialistAddsNS = totalInOrderMatchedAddsNS = 0 # Nomina sacra
     totalNumWords = totalNumWordNumbered = 0
 
     if BibleOrgSysGlobals.maxProcesses > 1 \
@@ -1952,13 +1985,13 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
             totalNumWords += bookNumWords
             totalNumWordNumbered += bookNumWordNumbered
 
-    if totalWordPhraseAdds or totalSimpleListedAdds or totalProperNounAdds or totalFirstPartMatchedAdds or totalManualMatchedAdds or totalChangedNumberAdds or totalSpecialistAdds or totalInOrderMatchedAdds:
+    if totalWordPhraseAdds or totalSimpleListedAdds or totalProperNounAdds or totalFirstPartMatchedAdds or totalManualMatchedAdds or totalChangedNumberAdds or totalRewordedAdds or totalSpecialistAdds or totalInOrderMatchedAdds:
         if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} Did total of {totalWordPhraseAdds:,} word phrase adds, {totalSimpleListedAdds:,} simple listed adds, {totalProperNounAdds:,} proper noun adds, {totalFirstPartMatchedAdds:,} first part adds, {totalManualMatchedAdds:,} manual adds, {totalChangedNumberAdds:,} changed number adds, {totalSpecialistAdds:,} specialist add spans and {totalInOrderMatchedAdds:,} in-order adds." )
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} Did total of {totalWordPhraseAdds:,} word phrase adds, {totalSimpleListedAdds:,} simple listed adds, {totalProperNounAdds:,} proper noun adds, {totalFirstPartMatchedAdds:,} first part adds, {totalManualMatchedAdds:,} manual adds, {totalChangedNumberAdds:,} changed number adds, {totalRewordedAdds:,} reworded adds, {totalSpecialistAdds:,} specialist add spans and {totalInOrderMatchedAdds:,} in-order adds." )
     else: vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} No new word connections made." )
-    if totalSimpleListedAddsNS or totalProperNounAddsNS or totalFirstPartMatchedAddsNS or totalManualMatchedAddsNS or totalChangedNumberAddsNS or totalSpecialistAddsNS or totalInOrderMatchedAddsNS:
+    if totalSimpleListedAddsNS or totalProperNounAddsNS or totalFirstPartMatchedAddsNS or totalManualMatchedAddsNS or totalChangedNumberAddsNS or totalRewordedAddsNS or totalSpecialistAddsNS or totalInOrderMatchedAddsNS:
         if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} Did total of {totalSimpleListedAddsNS:,} simple listed nomina sacra (NS), {totalProperNounAddsNS:,} proper noun NS, {totalFirstPartMatchedAddsNS:,} first part NS, {totalManualMatchedAddsNS:,} manual NS, {totalChangedNumberAddsNS:,} changed number NS, {totalSpecialistAddsNS:,} specialist add span NS and {totalInOrderMatchedAddsNS:,} in-order NS." )
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} Did total of {totalSimpleListedAddsNS:,} simple listed nomina sacra (NS), {totalProperNounAddsNS:,} proper noun NS, {totalFirstPartMatchedAddsNS:,} first part NS, {totalManualMatchedAddsNS:,} manual NS, {totalChangedNumberAddsNS:,} changed number NS, {totalRewordedAddsNS:,} reworded NS, {totalSpecialistAddsNS:,} specialist add span NS and {totalInOrderMatchedAddsNS:,} in-order NS." )
     else: vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  {testament} No new nomina sacra connections made." )
     if not BibleOrgSysGlobals.commandLineArguments.fastMode: # In 'fast' mode we reported the individual books instead
         reportWordNumberPercentage( testament, totalNumWords, totalNumWordNumbered )
@@ -1994,8 +2027,8 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
 
     # wordFileName = lv[BBB].ESFMWordTableFilename
 
-    bookWordPhraseAdds = bookSimpleListedAdds = bookProperNounAdds = bookFirstPartMatchedAdds = bookManualMatchedAdds = bookChangedNumberAdds = bookSpecialistAdds = bookInOrderMatchedAdds = 0
-    bookWordPhraseAddsNS = bookSimpleListedAddsNS = bookProperNounAddsNS = bookFirstPartMatchedAddsNS = bookManualMatchedAddsNS = bookChangedNumberAddsNS = bookSpecialistAddsNS = bookInOrderMatchedAddsNS = 0 # Nomina sacra
+    bookWordPhraseAdds = bookSimpleListedAdds = bookProperNounAdds = bookFirstPartMatchedAdds = bookManualMatchedAdds = bookChangedNumberAdds = bookRewordedAdds = bookSpecialistAdds = bookInOrderMatchedAdds = 0
+    bookWordPhraseAddsNS = bookSimpleListedAddsNS = bookProperNounAddsNS = bookFirstPartMatchedAddsNS = bookManualMatchedAddsNS = bookChangedNumberAddsNS = bookRewordedAddsNS = bookSpecialistAddsNS = bookInOrderMatchedAddsNS = 0 # Nomina sacra
 
     lvESFMFilename = f'OET-LV_{BBB}.ESFM'
     lvESFMFilepath = OET_LV_ESFM_InputFolderPath.joinpath( lvESFMFilename )
@@ -2157,9 +2190,9 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
         with open( rvESFMFilepath, 'wt', encoding='UTF-8' ) as esfmFile:
             esfmFile.write( newESFMtext )
         if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookWordPhraseAdds:,} word phrase adds, {bookSimpleListedAdds:,} simple listed adds, {bookProperNounAdds:,} proper noun adds, {bookFirstPartMatchedAdds:,} first part adds, {bookManualMatchedAdds:,} manual adds, {bookChangedNumberAdds:,} changed number adds, {bookSpecialistAdds:,} specialist add span adds and {bookInOrderMatchedAdds:,} in-order adds for {BBB}." )
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookWordPhraseAdds:,} word phrase adds, {bookSimpleListedAdds:,} simple listed adds, {bookProperNounAdds:,} proper noun adds, {bookFirstPartMatchedAdds:,} first part adds, {bookManualMatchedAdds:,} manual adds, {bookChangedNumberAdds:,} changed number adds, {bookRewordedAdds:,} reworded adds, {bookSpecialistAdds:,} specialist add span adds and {bookInOrderMatchedAdds:,} in-order adds for {BBB}." )
         if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookWordPhraseAddsNS:,} word phrase NS, {bookSimpleListedAddsNS:,} simple listed NS, {bookProperNounAddsNS:,} proper noun NS, {bookFirstPartMatchedAddsNS:,} first part NS, {bookManualMatchedAddsNS:,} manual NS, {bookChangedNumberAddsNS:,} changed number NS, {bookSpecialistAddsNS:,} specialist add span NS and {bookInOrderMatchedAddsNS:,} in-order NS for {BBB}." )
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookWordPhraseAddsNS:,} word phrase NS, {bookSimpleListedAddsNS:,} simple listed NS, {bookProperNounAddsNS:,} proper noun NS, {bookFirstPartMatchedAddsNS:,} first part NS, {bookManualMatchedAddsNS:,} manual NS, {bookChangedNumberAddsNS:,} changed number NS, {bookRewordedAddsNS:,} reworded NS, {bookSpecialistAddsNS:,} specialist add span NS and {bookInOrderMatchedAddsNS:,} in-order NS for {BBB}." )
         if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      Saved OET-RV {BBB} {len(newESFMtext):,} bytes to {rvESFMFilepath}" )
     else:
@@ -2778,10 +2811,11 @@ def matchWordsFirstParts( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList
 
 # The number of matching leading characters we need before we trust an OET-RV word and an
 #   OET-LV word to be the same word, e.g. RV 'money-changers' against LV 'moneychangers'.
-#   Seven (not five or six) because a shorter shared run isn't enough to tell e.g.
-#   'protesting' from 'prostrating', 'determined' from 'destroyed' or
-#   'mother-in-law' from 'mother' apart.
-ORDER_MATCH_PREFIX_LENGTH = 7
+#   Five (not seven) because we also check that the alignment is order-preserving and
+#   unambiguous, which prevents false matches like 'protesting' vs 'prostrating'.
+#   This allows inflectional matches like 'immersing'/'immersed' (6 chars) and
+#   'forgiveness'/'forgiven' (6 chars).
+ORDER_MATCH_PREFIX_LENGTH = 5
 
 # The shortest word that matchWordsInOrder() will connect on the strength of being the SAME word,
 #   which is much less than ORDER_MATCH_PREFIX_LENGTH, because an exact match is exact however
@@ -2865,6 +2899,104 @@ def unSimplifyRVWord( rvWord:str ) -> str:
 #   the other way round, so it doesn't matter which side of a pair we list.
 EQUIVALENT_LV_RV_WORDS = { # All lower case, i.e. the simplifyRVLVWord() forms
     'whenever': { 'wherever' }, # The OET-LV 'wherever' is a temporal 'whenever' in Mark 6:10, 6:56 and 9:18
+    
+    # NT-wide equivalences (single-word, from RV-LV analysis)
+    'begins': { 'beginning' },
+    'turned': { 'became' },
+    'announcing': { 'proclaiming' },
+    'immersed': { 'immersing', 'immersion' },
+    'forgiven': { 'forgiveness' },
+    'many': { 'all' },
+    'went': { 'was_going', 'came', 'going' },
+    'hear': { 'hearing' },
+    'asked': { 'asking' },
+    'dressed': { 'having_dressed', 'dressed' },
+    'lived': { 'living', 'feeding' },
+    'also': { 'and' },
+    'man': { 'one' },
+    'soon': { 'shortly' },
+    'bend': { 'stoop' },
+    'arrested': { 'to_be_given_over', 'given_over' },
+    'promised': { 'fulfilled' },
+    'turn': { 'repentance' },
+    'fishermen': { 'fishers' },
+    'left': { 'having_left', 'followed' },
+    'sons': { 'son' },
+    'leaving': { 'having_left' },
+    'taught': { 'was_teaching' },
+    'regular': { 'scribes' },
+    'demon-possessed': { 'with an unclean spirit' },
+    'yelled': { 'called' },
+    'scolded': { 'gave rebuke' },
+    'threw': { 'having_convulsed' },
+    'cried': { 'having_called' },
+    'asked': { 'debating' },
+    'just': { 'this' },
+    'spread': { 'came_out' },
+    'brought': { 'bringing' },
+    'healed': { 'healed' },
+    'commanded': { 'throw_out' },
+    'got': { 'having_risen_up' },
+    'quiet': { 'a deserted' },
+    'came': { 'searched' },
+    'we': { 'we_may_be_going elsewhere into' },
+    'other': { 'neighbouring' },
+    'villages': { 'villages' },
+    'driving': { 'throwing_out' },
+    'felt': { 'having_been_feeling' },
+    'reached': { 'having_stretched_out' },
+    'sent': { 'sent him_forth', 'is_sending' },
+    'started': { 'began to_be_proclaiming much and to_be_spreading_abroad' },
+    'spreading': { 'spreading_abroad the message' },
+    'could': { 'no_longer able' },
+    
+    # High-frequency function word variations (NT-wide)
+    'that': { 'which', 'who' },
+    'who': { 'whom', 'who' },
+    'them': { 'those', 'them' },
+    'up': { 'up' },
+    'out': { 'out', 'forth' },
+    'so': { 'so', 'thus' },
+    'just': { 'just', 'only' },
+    'like': { 'like', 'as' },
+    'their': { 'their', 'theirs' },
+    'when': { 'when', 'whenever' },
+    'what': { 'what', 'whatever' },
+    'do': { 'do', 'did', 'does' },
+    'have': { 'have', 'has', 'had' },
+    'one': { 'one', 'someone' },
+    'some': { 'some', 'any' },
+    'there': { 'there', 'here' },
+    'then': { 'then', 'when' },
+    'than': { 'than', 'from' },
+    'into': { 'into', 'in', 'to' },
+    'upon': { 'upon', 'on' },
+    'unto': { 'unto', 'to' },
+    'because': { 'because', 'for', 'since' },
+    'although': { 'although', 'though' },
+    'until': { 'until', 'till' },
+    'while': { 'while', 'whilst' },
+    'against': { 'against', 'towards' },
+    'before': { 'before', 'ere' },
+    'after': { 'after', 'later' },
+    'since': { 'since', 'because' },
+    'through': { 'through', 'thru' },
+    'during': { 'during', 'in' },
+    'without': { 'without', 'except' },
+    'within': { 'within', 'in' },
+    'beneath': { 'beneath', 'under' },
+    'beside': { 'beside', 'by' },
+    'between': { 'between', 'among' },
+    'beyond': { 'beyond', 'past' },
+    'around': { 'around', 'about' },
+    'across': { 'across', 'over' },
+    'along': { 'along', 'by' },
+    'amid': { 'amid', 'among' },
+    'among': { 'among', 'amidst' },
+    'toward': { 'toward', 'towards' },
+    'towards': { 'towards', 'toward' },
+    'within': { 'within', 'inside' },
+    'without': { 'without', 'outside' },
 }
 EQUIVALENT_LV_RV_WORDS.update( { lvWord:{rvWord} for rvWord,lvWords in EQUIVALENT_LV_RV_WORDS.items() for lvWord in lvWords } )
 
@@ -4140,8 +4272,8 @@ def doGroup2( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
         if len(lvIndexes) == 1: # Only one LV word matches
             lvWordStr = lvVerseWordList[lvIndexes[0]]
             assert '¦' in lvWordStr
-            lvWord, lvWordNumber = lvWordStr.split( '¦' )
-            lvWordNumber = int( lvWordNumber )
+            lvWord, lvWordNumber = lvWordStr.split( '¦', 1 )
+            lvWordNumber = getPositiveLeadingInt( lvWordNumber )
             # print( f"    here with {lvWordStr} -> '{lvWord}' and {lvWordNumber=}")
 
             # Now see if we have the RV word(s)
