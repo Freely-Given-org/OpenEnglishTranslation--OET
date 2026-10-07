@@ -83,6 +83,7 @@ Of course, we’re very happy to list contributors if you desire that. (Not ever
 - ‘ai/ay’names like ‘Yeshai’
 - Philistines vs Filistines
 - raised offering vs wave offering, peace offering vs fellowship offering
+- cross/pole/stake -> post
 - firstfruits -> harvest festival
 - make sure we haven’t used ‘tithe’
 - passover/Passover/pass-over, ....
