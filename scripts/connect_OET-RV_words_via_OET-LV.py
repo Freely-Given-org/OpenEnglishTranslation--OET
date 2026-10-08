@@ -1008,7 +1008,8 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('clothes','apparel'),('clothes','garments'),
     ('collapse','passing away'), # Mrk 13:31
     ('collect','gathering'), # Mrk 13:27
-    ('Commander-in-chief','hosts'),
+    ('commander','centurion'), # Mrk 15:39
+        ('Commander-in-chief','hosts'),
     ('commented','saying'),
     ('confused','confounded'),
     ('continued','said'),
@@ -1023,6 +1024,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('creation','beginning'),
     ('cried','weeping'), # Mrk 14:72
     ('crowd','multitude'),
+    ('dark','darkness'), # Mrk 15:33
     ('date','day'), # Mrk 13:32
     ('dawn','cockcrow'), # Mrk 13:35
     ('dearly','beloved'),
@@ -1030,6 +1032,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('decision','evaluate'),('decisions','judgements'),
     ('declined','not'), # Mrk 15:23
     ('defend','answering'), # Mrk 14:60
+    ('definitely','Truly'), # Mrk 15:39
     ('deformed','withered'),
     ('demanded','saying'), # Mrk 15:14
     ('demolish','tearing'), # Mrk 14:58
@@ -1040,7 +1043,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('destroyed','consumed'),('destroyed','devoured'),
     ('destruction','devastation'),
     ('die','pass away'), # Mrk 13:30
-    ('died','dead'), # Mrk 12:26
+    ('died','dead'),('died','expired'), # Mrk 12:26, 15:39
     ('dies','corpse'), # Lev 19:28
     ('dinosaur','dragon'), # Rev 12:3
     ('disasters','plagues'),
@@ -1058,9 +1061,11 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('entire','all'),
     ('everyone','all'),('everyone','people'),('everyone','one'),('everyone','you all'),
         ('Everyone','one'),
+    ('everywhere','all'), # Mrk 15:33
     ('evil','sinners'), # Mrk 14:41
     ('executed','death'), # Mrk 13:12
         ('execution','stake'),
+    ('exhaled','expired'), # Mrk 15:37
     ('existence','became'),
     ('exposed','uncovered'),
     ('fellow','man'), # Mrk 14:51
@@ -1075,6 +1080,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('front','before'),('front','face'), # Mrk 13:9
     ('fulfilled','accomplished'),
     ('gathered','coming together'), # Mrk 14:53
+    ('get','take'), # Mrk 15:36
     ('God','god'),
     ("God's",'god'),("God's",'holy'), # Mrk 14:25, 13:11
     ('godly','devout'),('godly','righteous'),
@@ -1087,6 +1093,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('happen','become'),('happen','becoming'),('happening','becoming'), # Mrk 13:29
     ('harvests','fruit'),
     ('heavenly','heavens'),('heavenly','heaven'),
+    ('held','giving'), # Mrk 15:36
     ('hills','mountains'),('hill','mountain'),
     ('hilltop','high'),
     ('honest','true'),
@@ -1099,7 +1106,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('hurling','many'), # Mrk 15:3
     ('hut','shelter'),
     ('immerser','immersing'),
-    ('including','and'),
+    ('included','among'),('including','and'), # Mrk 15:40
     ('incredible','great'), # Mrk 13:26
     ('instructed','commanded'),('instructs','commanded'), # Mrk 13:34
     ('instructions','commanded'),('instructions','regulations'),
@@ -1150,6 +1157,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('murdered','killed'),('murdered','killing'),
     ('must','truly'),('must','will'), # Mrk 14:70
     ('napping','sleeping'), # Mrk 13:36
+    ('nearby','by'), # Mrk 15:35
     ('necessary','fitting'),
     ('needs','let'),
     ('never','no means'), # Mrk 13:31
@@ -1172,6 +1180,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('people','humans'),('people','multitude'),('people','ones'),
     ('percent','add'),
     ('permanent','perpetuity'),
+    ('permission','requested'), # Mrk 15:43
     ('picked','taken'), # Mrk 14:23
     ('placed','laid'),('placing','laying'),
     ('planet','earth'), # Mrk 13:31
@@ -1252,16 +1261,19 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     #('slave','servant'), # TODO: Need to add code to prevent this substitution if BOTH words occur in the verse.
     ('small','little'),
     ('So','And'),('So','Therefore'),
-    ('someone','anyone'),
+    ('soaked','filled'), # Mrk 15:36
+    ('someone','anyone'),('someone','One'), # Mrk 15:36
     ('something','one message'),
     ('songs','psalms'),('songs','hymns'), # Mrk 14:26
+    ('sour','vinegar'), # Mrk 15:36
     ('spiced','myrrh'), # Mrk 15:23
     ('splendour','glory'),
     ('spoken','said'),('spoken','saying'),
     ('started','began'),
     ('staying','dwelling'),
+    ('steeled','courage'), # Mrk 15:43
     ('stewards','managers'),
-    ('stick','staff'), # Mrk 15:19
+    ('stick','staff'),('stick','reed'), # Mrk 15:19,36
     ('strong','forceful'),
     ('swindlers','robbers'),
     ('taken','carried'), # Mrk 15:1
@@ -1280,9 +1292,11 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('themselves','hearts'),
     ('Then','And'),('then','And'),('then','immediately'), # Mrk 14:72
     ('thief','robber'), # Mrk 14:48
+    ('think','wondered'), #
     ('thinking','reasoning'),('thinking','supposing'),
     ('third','another'),
-    ('thoughtful','intelligently'), # Mrk 12:34
+    ('thought','saying'), # Mrk 15:35
+        ('thoughtful','intelligently'), # Mrk 12:34
     ('tied','bound'),
     ('time','hour'), # Mrk 13:32
     ('tipped','overturned'),
@@ -1323,6 +1337,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('written','inscribed'), # Mrk 15:26
     ('wrong','strayed'),('wrong','evil'), # Mrk 12:24,27, 15:14
     ('yelled','cried'),
+    ('young','little'), # Mrk 15:40
     ('yourselves','hearts'),
     # Words added after analysis of unmatched LV glosses
     ('missionaries','ambassadors'), ('chains','bonds'),
@@ -1393,9 +1408,11 @@ LV_SINGLE_WORDS_TO_RV_WORD_STRINGS = (
             ('Şelāh', 'Instrumental break'),
             ('Truly', 'May it be so'),
 
+            ('afar','Further back'), # Mrk 15:40
             ('anymore','any more'), # Mrk 14:63
             ('approached','came closer'), # Mrk 12:28
             ('ascent','walking uphill'),
+            ('day before','pre-day'), # Mrk 15:42
             ('false','making up'), # Mrk 14:56
             ('first','most important'), # Mrk 12:29
             ('fled','ran away'), # Mrk 14:52
