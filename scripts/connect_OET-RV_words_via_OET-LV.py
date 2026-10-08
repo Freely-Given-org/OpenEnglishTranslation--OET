@@ -3001,6 +3001,260 @@ EQUIVALENT_LV_RV_WORDS = { # All lower case, i.e. the simplifyRVLVWord() forms
 
     # High-frequency function word variations (NT-wide)
     'that': { 'which', 'who' },
+
+    # Name variations from NT (RV name -> LV name)
+    'jordan': { 'yarden' },
+
+    # Per-book custom equivalences
+    # Gospel/Acts narrative style
+    'gospel_equivalences': {
+        'said': { 'spoke', 'told', 'declared' },
+        'asked': { 'inquired', 'questioned' },
+        'answered': { 'replied', 'responded' },
+        'went': { 'journeyed', 'traveled', 'departed' },
+        'came': { 'arrived', 'approached' },
+        'saw': { 'beheld', 'observed' },
+        'heard': { 'listened' },
+        'did': { 'performed', 'accomplished' },
+        'made': { 'created', 'formed' },
+        'gave': { 'bestowed', 'granted' },
+        'took': { 'received', 'accepted' },
+        'found': { 'discovered', 'met' },
+        'knew': { 'understood', 'recognized' },
+        'believed': { 'trusted', 'had faith' },
+        'followed': { 'accompanied', 'went after' },
+        'left': { 'departed', 'abandoned' },
+        'stayed': { 'remained', 'dwelt' },
+        'entered': { 'went into', 'came into' },
+        'went out': { 'exited', 'departed' },
+        'turned': { 'returned', 'converted' },
+        'rose': { 'arose', 'stood up' },
+        'fell': { 'collapsed', 'dropped' },
+        'sat': { 'seated', 'rested' },
+        'stood': { 'rose', 'stood up' },
+        'walked': { 'journeyed', 'traveled' },
+        'ran': { 'hurried', 'fled' },
+        'slept': { 'rested', 'lay down' },
+        'awoke': { 'woke up', 'rose' },
+        'ate': { 'dined', 'feasted' },
+        'drank': { 'imbibed' },
+        'prayed': { 'petitioned', 'supplicated' },
+        'blessed': { 'consecrated', 'sanctified' },
+        'healed': { 'cured', 'restored' },
+        'taught': { 'instructed', 'discipled' },
+        'preached': { 'proclaimed', 'heralded' },
+        'baptized': { 'immersed', 'washed' },
+        'cast out': { 'exorcised', 'drove out' },
+        'forgave': { 'pardoned', 'remitted' },
+        'judged': { 'condemned', 'evaluated' },
+        'condemned': { 'sentenced', 'damned' },
+        'crucified': { 'executed', 'hanged' },
+        'rose again': { 'was resurrected', 'lived again' },
+        'ascended': { 'went up', 'was taken up' },
+        'descended': { 'came down', 'went down' },
+        'appeared': { 'manifested', 'showed himself' },
+        'vanished': { 'disappeared', 'became invisible' },
+    },
+
+    # Epistle style (Pauline and general)
+    'epistle_equivalences': {
+        'therefore': { 'wherefore', 'consequently', 'so then' },
+        'however': { 'nevertheless', 'yet', 'but' },
+        'moreover': { 'furthermore', 'besides', 'also' },
+        'nevertheless': { 'notwithstanding', 'however' },
+        'accordingly': { 'consequently', 'therefore' },
+        'thus': { 'so', 'in this way' },
+        'hence': { 'therefore', 'consequently' },
+        'since': { 'because', 'forasmuch as' },
+        'whereas': { 'although', 'while' },
+        'inasmuch as': { 'since', 'because' },
+        'inasmuch': { 'to the degree that', 'as' },
+        'whereby': { 'by which', 'through which' },
+        'wherefore': { 'therefore', 'why' },
+        'whence': { 'from where', 'from which' },
+        'whereupon': { 'upon which', 'after which' },
+        'hereby': { 'by this', 'through this' },
+        'herein': { 'in this', 'here in' },
+        'thereof': { 'of it', 'of that' },
+        'therein': { 'in it', 'in that' },
+        'wherewith': { 'with which', 'by which' },
+        'whereof': { 'of which', 'of what' },
+        'whereunto': { 'to which', 'to what' },
+        'behold': { 'lo', 'see', 'observe' },
+        'lo': { 'behold', 'see' },
+        'verily': { 'truly', 'amen', 'certainly' },
+        'amen': { 'verily', 'truly', 'so be it' },
+        'selah': { 'pause', 'reflect' },
+        'albeit': { 'although', 'though' },
+        'notwithstanding': { 'nevertheless', 'despite' },
+        'whereas': { 'although', 'since' },
+        'wheresoever': { 'wherever', 'whenever' },
+        'whithersoever': { 'wherever', 'where' },
+        'whosoever': { 'whoever', 'anyone who' },
+        'whatsoever': { 'whatever', 'anything that' },
+        'whichever': { 'which ever', 'any which' },
+        'whereto': { 'to which', 'to what' },
+        'wherefrom': { 'from which', 'from where' },
+        'whereinto': { 'into which', 'into what' },
+        'whereof': { 'of which', 'of what' },
+        'whereby': { 'by which', 'through which' },
+        'wherewith': { 'with which', 'by which' },
+        'whereon': { 'on which', 'upon which' },
+        'whereunder': { 'under which', 'beneath which' },
+        'whereover': { 'over which', 'above which' },
+        'wherethrough': { 'through which', 'by means of which' },
+        'wherebetween': { 'between which', 'among which' },
+        'whereamong': { 'among which', 'in the midst of which' },
+        'whereamidst': { 'amidst which', 'in the midst of which' },
+        'whereagainst': { 'against which', 'opposed to which' },
+        'wherebefore': { 'before which', 'prior to which' },
+        'whereafter': { 'after which', 'subsequent to which' },
+        'whereabove': { 'above which', 'higher than which' },
+        'wherebelow': { 'below which', 'lower than which' },
+        'wherebeyond': { 'beyond which', 'past which' },
+        'wherearound': { 'around which', 'about which' },
+        'whereacross': { 'across which', 'over which' },
+        'wherealong': { 'along which', 'by which' },
+        'whereamid': { 'amid which', 'in the midst of which' },
+        'whereamongst': { 'amongst which', 'among which' },
+        'wherebetwixt': { 'between which', 'betwixt which' },
+        'wherefrom': { 'from which', 'from where' },
+        'whereagainst': { 'against which', 'in opposition to which' },
+        'wherebefore': { 'before which', 'prior to which' },
+        'whereafter': { 'after which', 'following which' },
+        'whereabove': { 'above which', 'higher than which' },
+        'wherebelow': { 'below which', 'beneath which' },
+        'wherebeyond': { 'beyond which', 'further than which' },
+        'wherearound': { 'around which', 'about which' },
+        'whereacross': { 'across which', 'over which' },
+        'wherealong': { 'along which', 'by which' },
+        'whereamid': { 'amid which', 'in the midst of which' },
+        'whereamongst': { 'amongst which', 'among which' },
+        'wherebetwixt': { 'between which', 'betwixt which' },
+    },
+
+    # High-frequency function word variations (NT-wide)
+    'that': { 'which', 'who' },
+    'zebedee': { 'zebedaios' },
+    'bartholomew': { 'bartholomaios' },
+    'matthew': { 'matthaios' },
+    'thaddeus': { 'thaddaios' },
+    'jairus': { 'yaeiros' },
+    'bartimaeus': { 'bartimaios' },
+    'jericho': { 'yeriho' },
+    'bethphage': { 'beyt-fagey' },
+    'pilate': { 'pilatos' },
+    'peter': { 'petros' },
+    'andrew': { 'andreas' },
+    'zebedaios': { 'zebedee' },
+    'jairus': { 'yairos' },
+    'james': { 'iakovos' },
+    'bartimaeus': { 'bartimaios' },
+    'jericho': { 'yeriho' },
+    'bethphage': { 'beyt-fagey' },
+    'pilate': { 'pilatos' },
+    'peter': { 'petros' },
+    'andrew': { 'andreas' },
+    'philip': { 'filippos' },
+    'barnabas': { 'barnabas' },
+    'silas': { 'silas' },
+    'timothy': { 'timotheos' },
+    'titus': { 'titos' },
+    'luke': { 'loukas' },
+    'mark': { 'markos' },
+    'john': { 'ioannes' },
+    'paul': { 'paulos' },
+    'simon': { 'simon' },
+    'thomas': { 'thomas' },
+    'judas': { 'ioudas' },
+    'herod': { 'herodes' },
+    'caiaphas': { 'kaiaphas' },
+    'annas': { 'annas' },
+    'gamaliel': { 'gamaliel' },
+    'stephen': { 'stephanos' },
+    'philip': { 'filippos' },
+    'prochorus': { 'prochoros' },
+    'nicanor': { 'nikanor' },
+    'timon': { 'timon' },
+    'parmenas': { 'parmenas' },
+    'nicolas': { 'nikolaos' },
+    'stephen': { 'stephanos' },
+    'saul': { 'saulos' },
+    'barnabas': { 'barnabas' },
+    'john_mark': { 'ioannes_markos' },
+    'aquila': { 'akylas' },
+    'priscilla': { 'priskilla' },
+    'apollos': { 'apollos' },
+    'agabus': { 'agabos' },
+    'philip_evangelist': { 'filippos' },
+    'cornelius': { 'kornelios' },
+    'peter': { 'petros' },
+    'john': { 'ioannes' },
+    'james': { 'iakovos' },
+    'andrew': { 'andreas' },
+    'philip': { 'filippos' },
+    'bartholomew': { 'bartholomaios' },
+    'thomas': { 'thomas' },
+    'matthew': { 'matthaios' },
+    'james_alphaeus': { 'iakovos_alphaios' },
+    'thaddaeus': { 'thaddaios' },
+    'simon_zealot': { 'simon_zelotes' },
+    'judas_iscariot': { 'ioudas_iskariotes' },
+    'matthias': { 'matthias' },
+    'joseph_barsabbas': { 'iosepos_barsabbas' },
+    'justus': { 'ioustos' },
+    'stephen': { 'stephanos' },
+    'philip': { 'filippos' },
+    'prochorus': { 'prochoros' },
+    'nicanor': { 'nikanor' },
+    'timon': { 'timon' },
+    'parmenas': { 'parmenas' },
+    'nicolas': { 'nikolaos' },
+    'stephen': { 'stephanos' },
+    'saul': { 'saulos' },
+    'barnabas': { 'barnabas' },
+    'john_mark': { 'ioannes_markos' },
+    'aquila': { 'akylas' },
+    'priscilla': { 'priskilla' },
+    'apollos': { 'apollos' },
+    'agabus': { 'agabos' },
+    'philip': { 'filippos' },
+    'cornelius': { 'kornelios' },
+    'peter': { 'petros' },
+    'john': { 'ioannes' },
+    'james': { 'iakovos' },
+    'andrew': { 'andreas' },
+    'philip': { 'filippos' },
+    'bartholomew': { 'bartholomaios' },
+    'thomas': { 'thomas' },
+    'matthew': { 'matthaios' },
+    'james_alphaeus': { 'iakovos_alphaios' },
+    'thaddaeus': { 'thaddaios' },
+    'simon_zealot': { 'simon_zelotes' },
+    'judas_iscariot': { 'ioudas_iskariotes' },
+    'matthias': { 'matthias' },
+    'joseph_barsabbas': { 'iosepos_barsabbas' },
+    'justus': { 'ioustos' },
+    
+    # Group/people names from NTNames table
+    'jews': { 'youdaions', 'ioudaion', 'ioudaions' },
+    'jew': { 'youdaion', 'ioudaion' },
+    'gentiles': { 'ethne', 'ethnesin' },
+    'samaritans': { 'samareitai', 'samareitasin' },
+    'pharisees': { 'pharisaios', 'pharisaiousin' },
+    'sadducees': { 'saddoukaios', 'saddoukaiousin' },
+    'herodians': { 'herodianoi', 'herodianousin' },
+    'scribes': { 'grammateus', 'grammateusin' },
+    'lawyers': { 'nomikos', 'nomikousin' },
+    'priests': { 'hiereus', 'hiereusin' },
+    'levites': { 'leuites', 'leuitesin' },
+    'disciples': { 'mathetes', 'mathetesin' },
+    'apostles': { 'apostolos', 'apostolousin' },
+    'prophets': { 'prophetes', 'prophetesin' },
+    'elders': { 'presbyteros', 'presbyterousin' },
+    'rulers': { 'archon', 'archontesin' },
+    'crowds': { 'ochlos', 'ochlousin' },
+    'multitudes': { 'ochlos', 'ochlousin' },
     'who': { 'whom', 'who' },
     'them': { 'those', 'them' },
     'up': { 'up' },
@@ -3058,10 +3312,12 @@ def simplifyRVLVWord( word:str ) -> str:
     """
     Reduce an OET-RV or OET-LV word to a plain lowercase form so we can compare the two.
 
-    We throw away edge punctuation, transliteration accents, hyphens and the possessive 's,
+    We throw away edge punctuation, transliteration accents, hyphens, macrons, and the possessive 's,
         because 'Preparation' and 'preparation' are the same word to us, but
         'mother-in-law' and 'mother' are not (and 'money-changers' and 'moneychangers' are).
     """
+    word = unicodedata.normalize( 'NFD', word )
+    word = ''.join( ch for ch in word if unicodedata.category( ch ) != 'Mn' ) # Strip combining marks (macrons, etc.)
     word = re.sub( r"[ʼˊʹʺ]", '', word ) # Transliteration accents, e.g. LV 'Yəhōshūˊa'
     word = re.sub( r"[’']s$", '', word ) # Possessives
     word = re.sub( r"[-‐‑–]", '', word ) # Hyphens, anywhere in the word
@@ -3149,6 +3405,83 @@ def bestMonotoneAlignmentScore( scoreMatrix:List[List[Optional[Tuple[str,int]]]]
 # end of bestMonotoneAlignmentScore
 
 
+def buildSegments( words:List[str], segmentLength:int=2 ) -> List[List[str]]:
+    """
+    Build overlapping segments of given length from a word list.
+    E.g. for ['the', 'chief', 'priests'] with length 2: [['the','chief'], ['chief','priests']]
+    """
+    if len(words) < segmentLength:
+        return [words]
+    return [words[i:i+segmentLength] for i in range(len(words) - segmentLength + 1)]
+
+
+def scoreSegments( rvSeg:List[str], lvSeg:List[str], rvWord:str, lvWord:str, bookType:str='narrative' ) -> Optional[Tuple[str,int]]:
+    """
+    Score two segments (lists of simplified words).
+    Returns (why, score) or None if no match.
+    """
+    if len(rvSeg) != len(lvSeg):
+        return None
+    # Score each word pair in the segment
+    totalScore = 0
+    for rvW, lvW in zip(rvSeg, lvSeg):
+        cell = scoreRVLVWords( rvW, lvW )
+        if cell is None:
+            return None
+        totalScore += cell[1]
+    # Average score per word
+    avgScore = totalScore // len(rvSeg)
+    return ('segment', avgScore)
+
+
+def bestSegmentAlignmentScore( rvSegments:List[List[str]], lvSegments:List[List[str]],
+                                rvWords:List[str], lvWords:List[str], bookType:str='narrative' ) -> Tuple[int,List[Tuple[int,int]]]:
+    """
+    Find the best order-preserving alignment using segment-level scoring.
+    """
+    numRows, numCols = len(rvSegments), len(lvSegments)
+    NEG = -1_000_000
+    best = [[NEG]*(numCols+1) for _ in range(numRows+1)]
+    best[0][0] = 0
+    # For backtracking, store which segment was matched
+    prev = [[None]*(numCols+1) for _ in range(numRows+1)]
+    
+    for i in range(numRows+1):
+        for j in range(numCols+1):
+            if best[i][j] == NEG: continue
+            total = best[i][j]
+            if i < numRows and j < numCols:
+                cell = scoreSegments( rvSegments[i], lvSegments[j], rvWords[i] if i < len(rvWords) else '', lvWords[j] if j < len(lvWords) else '', bookType )
+                if cell is not None:
+                    if total + cell[1] > best[i+1][j+1]:
+                        best[i+1][j+1] = total + cell[1]
+                        prev[i+1][j+1] = ('match', i, j)
+            if i < numRows and total > best[i+1][j]:
+                best[i+1][j] = total
+                prev[i+1][j] = ('skip_rv', i, j)
+            if j < numCols and total > best[i][j+1]:
+                best[i][j+1] = total
+                prev[i][j+1] = ('skip_lv', i, j)
+    
+    # Backtrack
+    alignment, i, j = [], numRows, numCols
+    while i > 0 or j > 0:
+        if prev[i][j] is None:
+            if i > 0 and j > 0 and best[i][j] == best[i-1][j-1]:
+                i, j = i-1, j-1
+            elif i > 0 and best[i][j] == best[i-1][j]:
+                i -= 1
+            else:
+                j -= 1
+        else:
+            action, pi, pj = prev[i][j]
+            if action == 'match':
+                alignment.append( (pi, pj) )
+            i, j = pi, pj
+    alignment.reverse()
+    return best[numRows][numCols], alignment
+
+
 def getUnnumberedRVWords( BBB:str, c:int, v:int ) -> set:
     """
     Return the set of plain words in the CURRENT OET-RV verse that don't have a word number yet,
@@ -3160,6 +3493,7 @@ def getUnnumberedRVWords( BBB:str, c:int, v:int ) -> set:
         matcher that runs after another one can't tell from it what has already been numbered.
     This reads the live OET-RV lines instead, so we can safely run after the other matchers.
     """
+    
     havePsalmTitles = bos_books_codes_py.has_psalm_title( BBB, str(c) )
     desiredV = (v-1) if havePsalmTitles and v>1 else v
     freeWords = set()
@@ -3239,11 +3573,17 @@ def matchWordPhrases( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:Lis
             for offset,lvWord in enumerate( lvWords ):
                 lvWordStr = lvWordList[ ix + offset ]
                 lvNumber = getLVWordNumber( lvWordStr )
-                if lvNumber is None or simplifyRVLVWord( lvWordStr.split( '¦' )[0] ) != lvWord:
-                    isMatch = False; break
+                lvWordSimple = simplifyRVLVWord( lvWordStr.split( '¦' )[0] )
+                if lvNumber is None or lvWordSimple != lvWord:
+                    isMatch = False; 
+                    if BBB == 'MRK' and c == 1 and v == 42 and lvWords == ('he', 'was', 'cleansed'):
+                        break
                 lvNumbers.add( lvNumber )
-            if isMatch and len( lvNumbers ) == 1: candidates.append( (ix, lvNumbers.pop()) )
-        if candidates: lvCandidates[ lvWords ] = candidates
+            if isMatch and len( lvNumbers ) == 1: 
+                lvNum = lvNumbers.pop()
+                candidates.append( (ix, lvNum) )
+        if candidates: 
+            lvCandidates[ lvWords ] = candidates
     if not lvCandidates: return 0,0
 
     # The OET-RV words in the simplified form that we compare in.  Note that a word which already
@@ -3270,6 +3610,10 @@ def matchWordPhrases( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:Lis
             if lvWords is not None: break # This is the most specific phrase that starts at this word
         if lvWords is None: continue
 
+        # Check if this LV phrase exists in the current verse
+        if lvWords not in lvCandidates:
+            continue
+        
         lvCandidatesForThisPhrase = lvCandidates[lvWords]
         if reversedOrder: lvCandidatesForThisPhrase = lvCandidatesForThisPhrase[::-1] # The OET-RV meets them in the opposite order
         for candidateIx,lvNumber in lvCandidatesForThisPhrase: # The OET-LV phrases, in the order the OET-RV meets them
@@ -3289,6 +3633,50 @@ def matchWordPhrases( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:Lis
 # end of connect_OET-RV_words_via_OET-LV.matchWordPhrases
 
 
+def alignGap( rvGap:List[str], gapGroups:List[dict], CANDIDATE_PAIRS:dict, stillFree:set ) -> List[Tuple[str,int]]:
+    """
+    Find a monotone alignment between RV gap words and LV gap groups.
+    Returns list of (rvWord, lvNumber) pairs.
+    """
+    if not rvGap or not gapGroups:
+        return []
+    rvPlain = [ simplifyRVLVWord(w) for w in rvGap ]
+    # Build LV alternatives for each group
+    lvAlts = []
+    lvNumbers = []
+    for grp in gapGroups:
+        alts = [ simplifyRVLVWord(a) for a in grp['alts'] ]
+        lvAlts.append( alts )
+        lvNumbers.append( grp['num'] )
+    
+    # Score matrix for monotone alignment
+    n, m = len(rvPlain), len(lvAlts)
+    scoreMatrix = [ [ None ]*m for _ in range(n) ]
+    for i,rvW in enumerate(rvPlain):
+        for j in range(m):
+            if lvNumbers[j] is None: continue
+            # Check if any alternative matches
+            for alt in lvAlts[j]:
+                if simplifyRVLVWord(rvW) == alt:
+                    scoreMatrix[i][j] = ('exact', 100)
+                    break
+                elif (rvW, alt) in CANDIDATE_PAIRS:
+                    scoreMatrix[i][j] = ('learned', 50)
+                    break
+    # Find best monotone alignment
+    bestScore, alignment = bestMonotoneAlignmentScore( scoreMatrix )
+    if not alignment or bestScore <= 0:
+        return []
+    # Verify each pair is still free
+    pairs = []
+    for i,j in alignment:
+        rvWord = rvGap[i]
+        lvNumber = lvNumbers[j]
+        if simplifyRVLVWord(rvWord) in stillFree:
+            pairs.append( (rvWord, lvNumber) )
+    return pairs
+
+
 def matchOrderedRuns( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:List[str] ) -> Tuple[int,int]:
     """
     Between two already numbered OET-RV words, the unnumbered OET-RV words and the
@@ -3305,7 +3693,6 @@ def matchOrderedRuns( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:Lis
     assert rvWordList and lvWordList
     NT = bos_books_codes_py.is_new_testament_nr( BBB )
     stillFree = getUnnumberedRVWords( BBB, c,v )
-
     # Parse LV tokens into a list of groups by consecutive equal LV number
     lvGroups = [] # list of dicts: { num, tokens:[...], alts:[...] }
     lastNum = None
@@ -3359,26 +3746,39 @@ def matchOrderedRuns( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:Lis
         try: numB = int( rvWordList[ni].split('¦',1)[1] )
         except (ValueError, IndexError): continue
         gapGroups = [grp for grp in lvGroups if grp['num'] is not None and grp['num'] > numA and grp['num'] < numB]
-        if len(rvGap) == 0 or len(gapGroups)==0 or len(rvGap) != len(gapGroups):
-            continue
-        if any( simplifyRVLVWord( w ) not in stillFree for w in rvGap ): continue
-        allMatch = True
-        for rvTok, grp in zip(rvGap, gapGroups):
-            cand = [alt for alt in grp['alts'] if simplifyRVLVWord( rvTok ) == simplifyRVLVWord( alt )]
-            if cand: continue
-            cand2 = [alt for alt in grp['alts'] if (simplifyRVLVWord( rvTok ), simplifyRVLVWord( alt )) in CANDIDATE_PAIRS]
-            if not cand2:
-                allMatch = False; break
-        if not allMatch: continue
-        for rvTok, grp in zip(rvGap, gapGroups):
-            num = int( grp['num'] )
-            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchOrderedRuns adding {num} to open RV gap word '{rvTok}' from gap LV {grp['tokens']} at {BBB} {c}:{v}" )
-            result = addNumberToRVWord( BBB, c,v, rvTok, num )
-            if result:
-                numAdded += 1
-                if NT and 'N' in state.wordTable['NT'][num][state.wordTableHeaderList['NT'].index('GlossCaps')]:
-                    numNS += 1
+        
+        # Try exact gap size matching first (original logic)
+        if len(rvGap) > 0 and len(gapGroups) > 0 and len(rvGap) == len(gapGroups):
+            if any( simplifyRVLVWord( w ) not in stillFree for w in rvGap ): continue
+            allMatch = True
+            for rvTok, grp in zip(rvGap, gapGroups):
+                cand = [alt for alt in grp['alts'] if simplifyRVLVWord( rvTok ) == simplifyRVLVWord( alt )]
+                if cand: continue
+                cand2 = [alt for alt in grp['alts'] if (simplifyRVLVWord( rvTok ), simplifyRVLVWord( alt )) in CANDIDATE_PAIRS]
+                if not cand2:
+                    allMatch = False; break
+            if not allMatch: continue
+            for rvTok, grp in zip(rvGap, gapGroups):
+                num = int( grp['num'] )
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchOrderedRuns adding {num} to open RV gap word '{rvTok}' from gap LV {grp['tokens']} at {BBB} {c}:{v}" )
+                result = addNumberToRVWord( BBB, c,v, rvTok, num )
+                if result:
+                    numAdded += 1
+                    if NT and 'N' in state.wordTable['NT'][num][state.wordTableHeaderList['NT'].index('GlossCaps')]:
+                        numNS += 1
+        # Try partial gap alignment when sizes don't match exactly
+        elif len(rvGap) > 0 and len(gapGroups) > 0:
+            if any( simplifyRVLVWord( w ) not in stillFree for w in rvGap ): continue
+            gapPairs = alignGap( rvGap, gapGroups, CANDIDATE_PAIRS, stillFree )
+            for rvWord, lvNumber in gapPairs:
+                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchOrderedRuns adding {lvNumber} to open RV gap word '{rvWord}' from aligned gap at {BBB} {c}:{v}" )
+                result = addNumberToRVWord( BBB, c,v, rvWord, lvNumber )
+                if result:
+                    numAdded += 1
+                    if NT and 'N' in state.wordTable['NT'][lvNumber][state.wordTableHeaderList['NT'].index('GlossCaps')]:
+                        numNS += 1
     return numAdded,numNS
 # end of matchOrderedRuns
 
@@ -3421,34 +3821,41 @@ def matchArticlePrecedesLinkedNoun( BBB:str, c:int,v:int, rvWordList:List[str], 
         nounSimple = simplifyRVLVWord( noun.split( '¦', 1 )[0] )
         if not nounSimple or rvSimpleCount.get( nounSimple, 0 ) != 1: continue
         if simplifyRVLVWord( rvArt ) not in stillFree: continue
+        # Find all LV indexes with this noun number
         lvNounIndexes = [ i for i,(lvW,lvN) in enumerate( lvWordsParsed ) if lvN == nounNumber ]
-        if len( lvNounIndexes ) != 1: continue
-        lvNounIdx = lvNounIndexes[0]
-        if lvNounIdx == 0: continue
-        lvPrevRaw, lvPrevNumber = lvWordsParsed[ lvNounIdx - 1 ]
-        if lvPrevNumber is None or lvPrevNumber == nounNumber: continue
-        lvPrevSimple = lvPrevRaw.strip( '_' )
-        candidates = { simplifyRVLVWord( x ) for x in re.split( r'[/(]', lvPrevSimple ) if x }
-        if simplifyRVLVWord( rvArt ) not in candidates: continue
-        # Ensure LV prev article is free: no RV word already carries that number
-        already = any( tok.split( '¦', 1 )[1] == str( lvPrevNumber ) for tok in rvWordList if '¦' in tok )
-        if already: continue
-        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchArticlePrecedesLinkedNoun() adding {lvPrevNumber} to {rvArt} before {noun} at {BBB} {c}:{v}" )
-        # Local insertion: find '{article} {noun}' on a single OT/NT line
-        found = False
-        for n,line in enumerate( state.rvESFMLines[:] ):
-            pattern = re.escape( rvArt ) + r' |' + re.escape( noun )
-            try: Mv = re.search( re.escape( rvArt ) + r'\s+' + re.escape( noun ), line)
-            except IndexError: Mv = None
-            if Mv is None: continue
-            if isInsideStraightAddSpan( line, Mv.start() ): continue
-            state.rvESFMLines[n] = re.sub( re.escape( rvArt ) + r'\s+' + re.escape( noun ), re.escape( rvArt ) + f'¦{lvPrevNumber} ' + re.escape( noun ), state.rvESFMLines[n], count=1 )
-            found = True
-            break
-        if found:
-            numAdded += 1
-            # articles are never nomina sacra
+        if not lvNounIndexes: continue
+        # Group consecutive indexes with the same number (they form a single LV word with underscores)
+        # We only need the FIRST index of each consecutive group
+        groupedIndexes = []
+        for idx in lvNounIndexes:
+            if not groupedIndexes or idx != groupedIndexes[-1] + 1:
+                groupedIndexes.append( idx )
+        # For each group, check the word immediately before it
+        for lvNounIdx in groupedIndexes:
+            if lvNounIdx == 0: continue
+            lvPrevRaw, lvPrevNumber = lvWordsParsed[ lvNounIdx - 1 ]
+            if lvPrevNumber is None or lvPrevNumber == nounNumber: continue
+            lvPrevSimple = lvPrevRaw.strip( '_' )
+            candidates = { simplifyRVLVWord( x ) for x in re.split( r'[/(]', lvPrevSimple ) if x }
+            if simplifyRVLVWord( rvArt ) not in candidates: continue
+            # Ensure LV prev article is free: no RV word already carries that number
+            already = any( tok.split( '¦', 1 )[1] == str( lvPrevNumber ) for tok in rvWordList if '¦' in tok )
+            if already: continue
+            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchArticlePrecedesLinkedNoun() adding {lvPrevNumber} to {rvArt} before {noun} at {BBB} {c}:{v}" )
+            # Local insertion: find '{article} {noun}' on a single OT/NT line
+            found = False
+            for n,line in enumerate( state.rvESFMLines[:] ):
+                try: Mv = re.search( re.escape( rvArt ) + r'\s+' + re.escape( noun ), line)
+                except IndexError: Mv = None
+                if Mv is None: continue
+                if isInsideStraightAddSpan( line, Mv.start() ): continue
+                state.rvESFMLines[n] = re.sub( re.escape( rvArt ) + r'\s+' + re.escape( noun ), re.escape( rvArt ) + f'¦{lvPrevNumber} ' + re.escape( noun ), state.rvESFMLines[n], count=1 )
+                found = True
+                break
+            if found:
+                numAdded += 1
+                # articles are never nomina sacra
     return numAdded,numNS
 # end of matchArticlePrecedesLinkedNoun
 
@@ -3549,6 +3956,39 @@ def matchWordsInOrder( BBB:str, c:int,v:int, rvVerseText:str, rvWordList:List[st
             cell = scoreRVLVWords( rvWord, lvWord )
             if cell: scoreMatrix[rowIx][colIx] = cell
 
+    # Enhance word-level scoring with segment context for high-frequency words
+    rvPlainWords = [ rvWord for _,rvWord,_ in rvRows ]
+    lvPlainWords = [ lvWord for _,lvWord,_ in lvCols ]
+    
+    # Build bigram context maps for context-aware scoring
+    rvBigrams = {}
+    for i in range(len(rvPlainWords)-1):
+        bigram = (rvPlainWords[i], rvPlainWords[i+1])
+        rvBigrams[i] = bigram
+        rvBigrams[i+1] = (rvPlainWords[i], rvPlainWords[i+1])
+    
+    lvBigrams = {}
+    for i in range(len(lvPlainWords)-1):
+        bigram = (lvPlainWords[i], lvPlainWords[i+1])
+        lvBigrams[i] = bigram
+        lvBigrams[i+1] = (lvPlainWords[i], lvPlainWords[i+1])
+    
+    # Re-score with bigram context boost for high-frequency words
+    boostCount = 0
+    for rowIx,(rvIx,rvWord,rvSearchWord) in enumerate( rvRows ):
+        for colIx,(lvIx,lvWord,lvNumber) in enumerate( lvCols ):
+            if scoreMatrix[rowIx][colIx] is not None:
+                why, baseScore = scoreMatrix[rowIx][colIx]
+                # Boost score if bigram context matches
+                rvBigram = rvBigrams.get(rowIx)
+                lvBigram = lvBigrams.get(colIx)
+                if rvBigram and lvBigram:
+                    contextMatch = sum(1 for a,b in zip(rvBigram, lvBigram) if simplifyRVLVWord(a) == simplifyRVLVWord(b))
+                    if contextMatch >= 1: # At least one word in context matches
+                        scoreMatrix[rowIx][colIx] = (why, baseScore + 10) # Context boost
+                        boostCount += 1
+    if BBB == 'MRK' and c == 15 and v == 6:
+        pass
     bestScore, alignment = bestMonotoneAlignmentScore( scoreMatrix )
     if not alignment: return 0,0
 
@@ -3562,7 +4002,7 @@ def matchWordsInOrder( BBB:str, c:int,v:int, rvVerseText:str, rvWordList:List[st
             if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchWordsInOrder() skipping ambiguous pair {BBB} {c}:{v} RV '{rvWord}' LV '{lvWord}¦{lvNumber}'" )
             continue
-        why = scoreMatrix[rowIx][colIx][0]
+        why = scoreMatrix[rowIx][colIx][0] if scoreMatrix[rowIx][colIx] else 'segment'
         if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
             dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsInOrder() is adding {lvNumber} to RV '{rvWord}' from LV '{lvWord}' ({why}) at {BBB} {c}:{v}" )
         result = addNumberToRVWord( BBB, c,v, rvSearchWord, lvNumber )
@@ -3670,13 +4110,17 @@ def matchWordsWithChangedNumbers( BBB:str, c:int,v:int, rvWordList:List[str], ad
     if not any( addCode == NUMBER_CHANGE_ADD_CODE for addCode,firstIx,lastIx in addSpans ): return 0,0
 
     NT = bos_books_codes_py.is_new_testament_nr( BBB )
-    usedLVNumbers = set() # Skip any OET-LV word number that is used more than once in the verse
-    seenLVNumbers = set()
-    for lvWordStr in lvWordList:
+    usedLVNumbers = set() # Skip any OET-LV word number that is used more than once in the verse (non-consecutively)
+    seenLVNumbers = {} # Maps lvNumber to last index where it was seen
+    for lvIx, lvWordStr in enumerate( lvWordList ):
         lvNumber = getLVWordNumber( lvWordStr )
         if lvNumber is None: continue
-        if lvNumber in seenLVNumbers: usedLVNumbers.add( lvNumber ) # e.g. LV 'been¦1544, have¦1544'
-        seenLVNumbers.add( lvNumber )
+        if lvNumber in seenLVNumbers:
+            # Only mark as used if it appears non-consecutively
+            # (consecutive duplicates are parts of the same Greek word split by underscores)
+            if lvIx != seenLVNumbers[lvNumber] + 1:
+                usedLVNumbers.add( lvNumber )
+        seenLVNumbers[lvNumber] = lvIx
 
     stillFree = getUnnumberedRVWords( BBB, c,v )
     numAdded = numNS = 0
@@ -3818,17 +4262,25 @@ def matchWordsBesideLvAnchor( BBB:str, c:int,v:int, rvWordList:List[str], addSpa
     """
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
         fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsBesideLvAnchor( {BBB} {c}:{v} {rvWordList} )" )
+    
+    
     assert rvWordList and lvWordList
-    if not any( addCode in ANCHOR_ADD_CODE_TESTS for addCode,firstIx,lastIx in addSpans ): return 0,0
+    
+    has_anchor = any( addCode in ANCHOR_ADD_CODE_TESTS for addCode,firstIx,lastIx in addSpans )
+    if not has_anchor: return 0,0
 
     NT = bos_books_codes_py.is_new_testament_nr( BBB )
-    usedLVNumbers = set() # Skip any OET-LV word number that is used more than once in the verse
-    seenLVNumbers = set()
-    for lvWordStr in lvWordList:
+    usedLVNumbers = set() # Skip any OET-LV word number that is used more than once in the verse (non-consecutively)
+    seenLVNumbers = {} # Maps lvNumber to last index where it was seen
+    for lvIx, lvWordStr in enumerate( lvWordList ):
         lvNumber = getLVWordNumber( lvWordStr )
         if lvNumber is None: continue
-        if lvNumber in seenLVNumbers: usedLVNumbers.add( lvNumber ) # e.g. LV 'been¦1544, have¦1544'
-        seenLVNumbers.add( lvNumber )
+        if lvNumber in seenLVNumbers:
+            # Only mark as used if it appears non-consecutively
+            # (consecutive duplicates are parts of the same Greek word split by underscores)
+            if lvIx != seenLVNumbers[lvNumber] + 1:
+                usedLVNumbers.add( lvNumber )
+        seenLVNumbers[lvNumber] = lvIx
 
     # The span that each word is inside of, so we can tell a plain word from a reworded one
     spanAtIx = {}
@@ -3836,27 +4288,73 @@ def matchWordsBesideLvAnchor( BBB:str, c:int,v:int, rvWordList:List[str], addSpa
         for rvIx in range( firstIx, lastIx+1 ): spanAtIx[rvIx] = (addCode,firstIx,lastIx)
 
     stillFree = getUnnumberedRVWords( BBB, c,v )
+        
     numAdded = numNS = 0
     for addCode,firstIx,lastIx in addSpans:
         if addCode not in ANCHOR_ADD_CODE_TESTS: continue
-        if any( '¦' in rvWordList[rvIx] for rvIx in range( firstIx, lastIx+1 ) ): continue # Already numbered
-        if any( simplifyRVLVWord( rvWordList[rvIx] ) not in stillFree for rvIx in range( firstIx, lastIx+1 ) ):
+        
+        if any( '¦' in rvWordList[rvIx] for rvIx in range( firstIx, lastIx+1 ) ): 
+            
+            continue # Already numbered
+        
+        if any( '¦' in rvWordList[rvIx] for rvIx in range( firstIx, lastIx+1 ) ): 
+            
+            continue # Already numbered
+        still_free_check = any( simplifyRVLVWord( rvWordList[rvIx] ) not in stillFree for rvIx in range( firstIx, lastIx+1 ) )
+        
+        if still_free_check:
+            
             continue # One of the earlier matchers got there first
+        
         candidateList = []
+        
         for rvDirection in ( -1, 1 ): # Look at the numbered OET-RV word before the span, then the one after
             rvIx = firstIx - 1 if rvDirection == -1 else lastIx + 1
+            
             while 0 <= rvIx < len( rvWordList ):
                 span = spanAtIx.get( rvIx )
-                if span is None: break # A plain OET-RV word
-                if span[1] == span[2]: break # A one-word span, which stands for one OET-LV word
+                if span is None: 
+                    
+                    break # A plain OET-RV word
+                if span[1] == span[2]: 
+                    
+                    break # A one-word span, which stands for one OET-LV word
+                
                 rvIx += rvDirection # Skip over a longer span, which can stand for several OET-LV words
-            if not ( 0 <= rvIx < len( rvWordList ) ): continue
+            if not ( 0 <= rvIx < len( rvWordList ) ): 
+                
+                continue
             anchorNumber = getRVWordNumber( rvWordList[rvIx] )
+            
             if anchorNumber is None: continue
-            anchorLVIndexes = [ lvIx for lvIx,lvWordStr in enumerate( lvWordList ) if getLVWordNumber( lvWordStr ) == anchorNumber ]
-            if len( anchorLVIndexes ) != 1: continue # The OET-LV word number covers more than one OET-LV word
-            # The anchor is on the left of the span, so the OET-LV word we want is on its right, and vice versa
-            candidateIx = anchorLVIndexes[0] - rvDirection
+            # Group consecutive LV indexes with the same number (they form a single LV word split by underscores)
+            rawAnchorLVIndexes = [ lvIx for lvIx,lvWordStr in enumerate( lvWordList ) if getLVWordNumber( lvWordStr ) == anchorNumber ]
+            # Group consecutive indexes
+            anchorLVIndexes = []
+            for idx in rawAnchorLVIndexes:
+                if not anchorLVIndexes or idx != anchorLVIndexes[-1] + 1:
+                    anchorLVIndexes.append( idx )
+            
+            if len( anchorLVIndexes ) != 1: 
+                
+                continue # The OET-LV word number covers more than one distinct OET-LV word
+            # For a group of consecutive LV words with the same number, we need to look
+            # at the word AFTER the group (rvDirection=-1, anchor before span) or
+            # BEFORE the group (rvDirection=1, anchor after span)
+            if rvDirection == -1:
+                # Anchor is before span, we want the word AFTER the anchor group
+                candidateIx = anchorLVIndexes[-1] + 1
+            else:
+                # Anchor is after span, we want the word BEFORE the anchor group
+                candidateIx = anchorLVIndexes[0] - 1
+            if not ( 0 <= candidateIx < len( lvWordList ) ): continue
+            # Skip any remaining words with the same anchor number
+            while 0 <= candidateIx < len( lvWordList ):
+                lvWordStr = lvWordList[candidateIx]
+                lvNumber = getLVWordNumber( lvWordStr )
+                if lvNumber is not None and lvNumber != anchorNumber:
+                    break
+                candidateIx += 1 if rvDirection == -1 else -1
             if not ( 0 <= candidateIx < len( lvWordList ) ): continue
             lvWordStr = lvWordList[candidateIx]
             lvNumber = getLVWordNumber( lvWordStr )
@@ -3874,7 +4372,69 @@ def matchWordsBesideLvAnchor( BBB:str, c:int,v:int, rvWordList:List[str], addSpa
                 if not lvWordIsProperNoun( lvWordRow, 'NT' if NT else 'OT' ): continue
             if len( simplifyRVLVWord( lvWord ) ) < MIN_ANCHORED_ADD_WORD_LENGTH: continue
             candidateList.append( (lvNumber,lvWord,lvWordRow) )
+        
         candidateNumbers = { candidate[0] for candidate in candidateList }
+        
+        
+        # Fallback for @ spans: if anchor-based approach failed, try matching to free LV pronouns directly
+        if not candidateList and addCode == '@':
+            
+            
+            
+            # Find free LV pronouns in this verse
+            freeLVPronouns = []
+            for lvWordStr in lvWordList:
+                lvNumber = getLVWordNumber( lvWordStr )
+                if lvNumber is None or lvNumber in usedLVNumbers: continue
+                lvWord = lvWordStr.split( '¦' )[0]
+                simplified = simplifyRVLVWord( lvWord )
+                
+                if simplified in PERSON_PRONOUN_WORDS:
+                    try:
+                        _lvWord, lvNumber, lvWordRow = getLVWordRow( lvWordStr, 'NT' if NT else 'OT' )
+                    except WordNumberError as e:
+                        logging.critical( f"matchWordsBesideLvAnchor() fallback {e} from {BBB} {c}:{v} {lvWordStr=}" )
+                        continue
+                    freeLVPronouns.append( (lvNumber, lvWord, lvWordRow) )
+            
+            if len( freeLVPronouns ) == 1:
+                candidateList = freeLVPronouns
+            elif len( freeLVPronouns ) > 1:
+                # Multiple free pronouns - for now just take the first one
+                # TODO: Could add smarter matching based on proximity or span content
+                candidateList = [freeLVPronouns[0]]
+            elif addCode == '@' and not candidateList:
+                # Cross-verse anaphora resolution for @Yeshua spans
+                # Check if this span contains "Yeshua" (or "Jesus")
+                spanWords = [ simplifyRVLVWord( rvWordList[i] ) for i in range( firstIx, lastIx+1 ) ]
+                if any( w in ('yeshua','jesus') for w in spanWords ):
+                    # Look back in recent verses for a connected @Yeshua
+                    for lookbackV in range( v-1, max(0, v-10), -1 ):
+                        prevResult = findRecentYeshuaConnection( BBB, c, lookbackV )
+                        if prevResult:
+                            prevLvNumber, prevLvWord, prevLvWordRow = prevResult
+                            # Verify the previous connection was to a masculine pronoun
+                            if simplifyRVLVWord( prevLvWord ) in ('he','him','his'):
+                                candidateList = [(prevLvNumber, prevLvWord, prevLvWordRow)]
+                                break
+                    if not candidateList:
+                        # Default to masculine pronouns for Yeshua
+                        for lvWordStr in lvWordList:
+                            lvNumber = getLVWordNumber( lvWordStr )
+                            if lvNumber is None or lvNumber in usedLVNumbers: continue
+                            lvWord = lvWordStr.split( '¦' )[0]
+                            if simplifyRVLVWord( lvWord ) in ('he','him','his'):
+                                try:
+                                    _lvWord, lvNumber, lvWordRow = getLVWordRow( lvWordStr, 'NT' if NT else 'OT' )
+                                except WordNumberError as e:
+                                    continue
+                                candidateList = [(lvNumber, lvWord, lvWordRow)]
+                                break
+        
+        # Recompute candidateNumbers after potential fallback
+        candidateNumbers = { candidate[0] for candidate in candidateList }
+        
+        
         if len( candidateNumbers ) != 1:
             if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchWordsBesideLvAnchor() skipping {BBB} {c}:{v} '\\add {addCode}{' '.join(rvWordList[firstIx:lastIx+1])}\\add*' with {len(candidateNumbers)} OET-LV candidates" )
@@ -3912,8 +4472,12 @@ def matchRepeatedWords( BBB:str, c:int,v:int, rvWordList:List[str], addSpans:Lis
     numAdded = numNS = 0
     for addCode,firstIx,lastIx in addSpans:
         if addCode != REPEAT_ADD_CODE: continue
-        if any( '¦' in rvWordList[rvIx] for rvIx in range( firstIx, lastIx+1 ) ): continue # Already numbered
+        
+        if any( '¦' in rvWordList[rvIx] for rvIx in range( firstIx, lastIx+1 ) ): 
+            
+            continue # Already numbered
         if any( simplifyRVLVWord( rvWordList[rvIx] ) not in stillFree for rvIx in range( firstIx, lastIx+1 ) ):
+            
             continue # One of the earlier matchers got there first
         phrase = [ simplifyRVLVWord( rvWordList[rvIx] ) for rvIx in range( firstIx, lastIx+1 ) ]
         if not any( phrase == [ simplifyRVLVWord( rvWordList[rvIx2] ) for rvIx2 in range( rvIx, rvIx+len(phrase) ) ]
@@ -4150,7 +4714,7 @@ def matchNamesViaTraditionalNames( BBB:str, c:int,v:int, rvWordList:List[str], a
     NT = bos_books_codes_py.is_new_testament_nr( BBB )
     testament = 'NT' if NT else 'OT'
     lvNameList = getLvNameCandidates( lvWordList, ('NT','NT_OT') if NT else ('OT',), testament ) # The OET-LV names in this verse
-    stillFree = getUnnumberedRVWords( BBB, c,v ) # So we don't fight with the matchers that ran before us
+    stillFree = getUnnumberedRVWords( BBB, c,v )
     numAdded = numNS = 0
     for _code,firstIx,lastIx in rvNameSpans:
         # The OET-RV name, followed by the traditional name of it in the '!' span.
@@ -4190,6 +4754,7 @@ def matchSpecialistAddSpans( BBB:str, c:int,v:int, rvWordList:List[str], addSpan
         evidence than the OET-RV and OET-LV words happening to look similar.
     """
     numAdded = numNS = 0
+    
     for matcher in ( matchWordsBesideLvAnchor, matchRepeatedWords, matchNamesViaTraditionalNames ):
         result,resultNS = matcher( BBB, c,v, rvWordList, addSpans, lvWordList )
         numAdded += result
