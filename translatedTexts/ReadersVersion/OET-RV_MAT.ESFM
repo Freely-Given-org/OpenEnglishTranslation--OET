@@ -1,4 +1,4 @@
-\id MAT - Open English Translation—Readers' Version (OET-RV) v0.5.7
+\id MAT - Open English Translation—Readers' Version (OET-RV) v0.5.8
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 MAT
@@ -11,13 +11,13 @@
 \mt1 Matthew
 \is1 Introduction
 \is2 Author
-\ip The writer of this document was Matthaios, known in English as Matthew and in Hebrew as Levi. He was one of Yeshua's twelve apprentices, and named by Alfaeus his father. He was from Galilee but worked in Capernaum as a tax-collector before he left that to follow Yeshua. It's possible that it was Yeshua who changed his name from Levi when he became a follower, and named him Matthew which means ‘the gift of God’ in Hebrew.
+\ip The writer of this document was known in Greek as Matthaios, in English as Matthew, and in Hebrew as Levi. He was one of Yeshua's twelve apprentices, and named by Alfaeus his father. He was from Galilee but worked in Capernaum as a tax-collector before he left that to follow Yeshua/Jesus. It's possible that it was Yeshua who changed his name from Levi when he became a follower, and named him Matthew which means ‘the gift of God’ in Hebrew.
 \is2 This account
-\ip Matthew's account starts by listing the ancestors of Yeshua, and then describes his birth, his immersion in water, and his temptation by the devil. He tells us about a lot of his preaching and teaching, and about how he healed many sick people in the Galilee region. After that, Matthew goes on to describe Yeshua's trip to Yerushalem and what happened to him there. Then he explains what happened in Yeshua's final week in Yerushalem, his execution on a stake, and his coming back to life.
+\ip Matthew's account starts by listing the ancestors of Yeshua, and then describes Yeshua's birth, his immersion in water, and his temptation by the devil. He tells us about a lot of his preaching and teaching, and about how he healed many sick people in the Galilee region. After that, Matthew goes on to describe Yeshua's trip down to Yerushalem/Jerusalem and what happened to him there. Then he explains what happened in Yeshua's final week in Yerushalem, his execution on a stake, and his coming back to life.
 \ip This document tells how Yeshua is the messiah, promised by God to save the Jews, and all non-Jews who place their trust in him. So by means of him, God fulfills his promises to his people that were listed in the Old Testament.
 \ip This good message reveals Yeshua as the great teacher to explain God's law. Here in this document, Matthew records five lengthy teaching sessions about God's kingdom: (1) The preaching on the hill about people's behaviour, their responsibilities, and what they might expect to receive in God's kingdom (chapters 5–7); (2) warning the twelve apprentices about their works (chapter 10); (3) the parables about God's kingdom (chapter 13); (4) the teaching concerning the way to become a follower (chapter 18); and (5) the teaching concerning the end of this age and God's kingdom which is coming. (chapters 24–25).
 \iot Main components of Matthew's account
-\io1 The ancestors and the birth of Yeshua the messiah \ior 1:1–2:23\ior*
+\io1 The ancestors and birth of Yeshua the messiah \ior 1:1–2:23\ior*
 \io1 The work of Yohan-the-immerser \ior 3:1-12\ior*
 \io1 The immersion and the temptation of Yeshua \ior 3:13–4:11\ior*
 \io1 The work and teaching of Yeshua in Galilee \ior 4:12–18:35\ior*
@@ -31,25 +31,25 @@
 \rem /s1 The ancestry of the Messiah; The Record of Jesus' Ancestors; The Genealogy of Jesus; The Genealogy of Jesus the Messiah; The Ancestors of Jesus Christ
 \r (Luke 3:23-38)
 \p
-\v 1 \add This is\add* \add ≈a genealogy\add* of \nd Yeshua¦3\nd* (Grk: Yaysous) the \nd messiah¦4\nd* (Grk: Christ) the descendant of \add King\add* David¦6 the descendant of Abraham¦8 (Grk: Abraam).
+\v 1 \add This is\add* \add ≈a genealogy\add* of \nd Yeshua¦3\nd* (Grk: \add !Yaysous\add*) the \nd messiah¦4\nd* (Grk: \add !Christ\add*) a descendant of \add King\add* David¦6, a descendant of Abraham¦8 (Grk: \add !Abraam\add*).
 \p
-\v 2 Abraham was the father of Isaac, Isaac the father of Yacob (Grk: Yakob¦17), Yacob the father of Yudah¦22 (Grk: Youdas¦22) and¦14 his¦26 brothers¦25.
-\v 3 Yudah¦27 was the father of Perez (Grk: Fares¦31) and¦32 Zerah (Grk: Zara¦34) through Tamar (Grk: Thamar¦37), Perez the father of Hezron (Grk: Hezrom), Hezron the father of Aram¦47,
-\v 4 Aram¦48 the father of Aminadab, Aminadab the father of Nahshon (Grk: Naasson¦57), Nahshon the father of Salmon¦62,
-\v 5 Salmon¦63 the father of Boaz (Grk: Boes) through Rahab¦70, Boaz the father of Obed (Grk: Yobed) through Ruth¦78 (Grk: Routh), and¦80 Obed the father of Yishay¦83 \add !(Jesse¦83, Grk: Yessai¦83)\add*,
+\v 2 Abraham \add ≈was the father of\add* Isaac, Isaac \add ≈the father of\add* Yacob (Grk: \add !Yakob¦17\add*), Yacob \add ≈the father of\add* Yudah¦22 (Grk: \add !Youdas¦22\add*) and his¦26 brothers¦25.
+\v 3 Yudah¦27 \add ≈was the father of\add* Perez (Grk: Fares¦31) and¦32 Zerah (Grk: Zara¦34) through Tamar (Grk: Thamar¦37), Perez \add ≈the father of\add* Hezron (Grk: Hezrom), Hezron \add ≈the father of\add* Aram¦47,
+\v 4 Aram¦48 \add ≈the father of\add* Aminadab, Aminadab \add ≈the father of\add* Nahshon (Grk: Naasson¦57), Nahshon \add ≈the father of\add* Salmon¦62,
+\v 5 Salmon¦63 \add ≈the father of\add* Boaz (Grk: Boes) through Rahab¦70, Boaz \add ≈the father of\add* Obed (Grk: Yobed) through Ruth¦78 (Grk: Routh), and¦80 Obed \add ≈the father of\add* Yishay¦83 \add !(Jesse¦83, Grk: Yessai¦83)\add*,
 \v 6 and¦85 Yishay¦84 the father of¦98 David¦88 the king¦90.
-\p David was the¦89 father of Solomon¦97 (Grk: Solomona) through Uriah's (Grk: Ourias¦101) wife¦99,
-\v 7 Solomon¦102 was the father of Rehoboam (Grk: Roboam¦106), Rehoboam the father of Abiyah (Grk: Abia¦112), Abiyah the father of Asa (Grk: Asaf¦116),
-\v 8 Asa the father of Jehoshapat (Grk: Yosafat¦121). Jehoshapat the father of Joram (Grk: Yoram¦126), Joram the father of Uzziah¦131 (Grk: Ozias¦131),
-\v 9 Uzziah¦132 the father of Jotham (Grk: Yoatham¦136), Jotham the father of Ahaz (Grk: Achaz¦141), Ahaz the father of Hezekiah¦146 (Grk: Hezekias),
-\v 10 Hezekiah¦147 the father of Manasseh (Grk: Manasse), Manasseh the father of Amon (Grk: Amos¦157), Amon the father of Josiah (Grk: Yosias¦164),
-\v 11 Josiah was the¦168 father of¦173 Jechoniah (Grk: Yechonias¦169) and¦166 his¦173 brothers¦172, when they were deported¦176 to¦177 Babylon (Grk: Babulonos¦177).\x + \xo 1:11: \xt 2Ki 24:14-15; 2Ch 36:10; Jer 27:20.\x*
+\p David \add ≈was the father of\add* Solomon¦97 (Grk: Solomona) through Uriah's (Grk: Ourias¦101) wife¦99,
+\v 7 Solomon¦102 \add ≈was the father of\add* Rehoboam (Grk: Roboam¦106), Rehoboam \add ≈the father of\add* Abiyah (Grk: Abia¦112), Abiyah \add ≈the father of\add* Asa (Grk: Asaf¦116),
+\v 8 Asa \add ≈the father of\add* Jehoshapat (Grk: Yosafat¦121). Jehoshapat \add ≈the father of\add* Joram (Grk: Yoram¦126), Joram \add ≈the father of\add* Uzziah¦131 (Grk: Ozias¦131),
+\v 9 Uzziah¦132 \add ≈the father of\add* Jotham (Grk: Yoatham¦136), Jotham \add ≈the father of\add* Ahaz (Grk: Achaz¦141), Ahaz \add ≈the father of\add* Hezekiah¦146 (Grk: Hezekias),
+\v 10 Hezekiah¦147 \add ≈the father of\add* Manasseh (Grk: Manasse), Manasseh \add ≈the father of\add* Amon (Grk: Amos¦157), Amon \add ≈the father of\add* Josiah (Grk: Yosias¦164),
+\v 11 Josiah \add ≈was the father of\add* Jechoniah (Grk: Yechonias¦169) and¦166 his¦173 brothers¦172, when they were deported¦176 to¦177 Babylon (Grk: Babulonos¦177).\x + \xo 1:11: \xt 2Ki 24:14-15; 2Ch 36:10; Jer 27:20.\x*
 \p
-\v 12 And¦179 after¦178 the¦180 deportation¦181 to¦182 Babylon¦182, Jechoniah was the father of Shealtiel (Grk: Salathiel¦187), Shealtiel was the father of Zerubbabel (Grk: Zorobabel¦193),
-\v 13 Zerubbabel was the father of Abiud (Grk: Abioud¦199), Abiud was the father of Eliakim, and¦206 Eliakim the father of Azor¦209,
-\v 14 Azor¦210 the father of Zadok, Zadok the father of Achim, Achim the father of Eliud¦224 (Grk: Elioud¦224),
-\v 15 Eliud¦225 the father of Eleazar, Eleazar the father of Matthan, Matthan the father of Yacob¦239 (Grk: Yakob),
-\v 16 Yacob¦240 the father of Yosef¦244, the¦245 husband¦246 of Maria¦247 (Grk: Marias) who \nd Yeshua¦251\nd* (Grk: Yaysous), the one called¦253 the \nd messiah¦254\nd* was¦250 born¦250 to.
+\v 12 And¦179 after¦178 the¦180 deportation¦181 to¦182 Babylon¦182, Jechoniah \add ≈was the father of\add* Shealtiel (Grk: Salathiel¦187), Shealtiel \add ≈was the father of\add* Zerubbabel (Grk: Zorobabel¦193),
+\v 13 Zerubbabel \add ≈was the father of\add* Abiud (Grk: Abioud¦199), Abiud \add ≈was the father of\add* Eliakim, and¦206 Eliakim \add ≈the father of\add* Azor¦209,
+\v 14 Azor¦210 \add ≈the father of\add* Zadok, Zadok \add ≈the father of\add* Achim, Achim \add ≈the father of\add* Eliud¦224 (Grk: Elioud¦224),
+\v 15 Eliud¦225 \add ≈the father of\add* Eleazar, Eleazar \add ≈the father of\add* Matthan, Matthan \add ≈the father of\add* Yacob¦239 (Grk: Yakob),
+\v 16 Yacob¦240 \add ≈the father of\add* Yosef¦244, the¦245 husband¦246 of Maria¦247 (Grk: Marias) who \nd Yeshua¦251\nd* (Grk: Yaysous), the one called¦253 the \nd messiah¦254\nd* was¦250 born¦250 to.
 \p
 \v 17 So¦256 the generations from Abraham¦260 to David numbered fourteen, from David to the deportation to Babylon there were fourteen generations, and¦274 from the deportation to Babylon to the \nd messiah¦281\nd* there were fourteen generations.
 \s1 The birth of the messiah
