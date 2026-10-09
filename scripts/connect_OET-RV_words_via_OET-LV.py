@@ -187,10 +187,10 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-10-06' # by RJH
+LAST_MODIFIED_DATE = '2026-10-09' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '1.1.1'
+PROGRAM_VERSION = '1.2.1'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -236,159 +236,458 @@ assert COMMAND_HEADER_LINE.count( '\t' ) == COMMAND_TABLE_NUM_COLUMNS - 1
 #     comment: str        # 14
 
 
-SIMPLE_NOUNS = ( # These are nouns that are likely to match one-to-one from the OET-LV to the OET-RV
-                #   i.e., there's really no other word for them.
-    # NOTE: Some of these nouns can also be verbs -- we may need to remove those???
-    # 'son' causes problems
-    'altars','altar',
-        'ambassadors','ambassador',
-        'ancestors','ancestor', 'angels','angel', 'anger', 'animals','animal', 'ankles','ankle',
-        'assemblies','assembly',
-        'authorities','authority', 'axes','axe',
-    'babies','baby', 'badger', 'bait', 'battles','battle',
-        'beds','bed', 'beginnings','beginning', 'belts','belt',
-        'birds','bird', 'birth',
-        'blood', 'blossoms','blossom',
-        'boats','boat', 'bodies','body', 'boys','boy',
-        'bread', 'breasts','breast', 'branches','branch', 'brothers','brother',
-        'bulls','bull', 'burials','burial',
-    'camels','camel', 'camp',
-        'chairs','chair', 'chambers','chamber', 'chariots','chariot', 'chests','chest', 'children','child',
-        'cities','city',
-        'coats','coat', 'collectors','collector', 'commands','command', 'companions','companion',
-            'cords','cord', 'corners','corner',
-            'councils','council', 'courtyards','courtyard', 'courts','court', 'countries','country', 'cows','cow',
-        'craftsmen','craftsman', 'crowds','crowd',
-        'cushion',
-    'danger', 'darkness', 'daughters','daughter', 'days','day',
-        'death', 'deceivers','deceiver', 'deer', 'dens','den',
-        'donkeys','donkey', 'doors','door', 'doves','dove', 'dreams','dream', 'dyes','dye',
-    'eagles','eagle', 'ears','ear',
-        'entrance',
-        'eyes','eye',
-        'exorcists','exorcist',
-    'faces','face', 'faith', 'farmers','farmer', 'fathers','father',
-        'fevers','fever',
-        'fields','field', 'figs','fig', 'fingers','finger', 'fires','fire', 'fish',
-        'flowers','flower',
-        'followers','follower', 'feet','foot', 'fords','ford',
-        'friends','friend', 'fruits','fruit',
-    'gateways','gateway', 'gates','gate',
-        'generations','generation',
-        'gifts','gift', 'girls','girl',
-        'goats','goat', 'gods','god', 'gold',
-        'grace', 'grains','grain', 'grapes','grape', 'grass',
-            'greed',
-    'hairs','hair', 'handkerchiefs','handkerchief', 'hands','hand', 'happiness', 'hare', 'harvests','harvest',
-        'heads','head', 'hearts','heart', 'heavens','heaven', 'hedgehogs','hedgehog',
-        'hides','hide',
-        'homes','home', 'honey', 'hooves','hoof', 'horsemen', 'horses','horse', 'hours','hour', 'houses','house',
-        'husbands','husband',
-        'hyenas','hyena',
-    'idols','idol', 'incense', 'ink',
-    'jails','jail', 'joy', 'judgements','judgement',
-    'kidneys','kidney', 'kings','king', 'kingdoms','kingdom', 'kisses','kiss',
-    'lambs','lamb', 'lands','land', 'languages','language',
-        'leaders','leader', 'leather', 'letters','letter',
-        'life', 'lights','light', 'lines','line', 'lions','lion', 'lips','lip', 'liver',
-        'loaf','loaves', 'locusts','locust',
-    'man','men', 'markets','market', 'masters','master',
-        'mercy', 'messages','message', 'meetings','meeting',
-        'milk',
-        'moon', 'mothers','mother', 'mouths','mouth',
-    'names','name', 'nations','nation',
-        'neighbours','neighbour', 'nests','nest', 'nets','net', 'news',
-        'nobles','noble', 'noises','noise', 'noses','nose',
-    'offerings','offering', 'officers','officer', 'officials','official',
-        'oil',
-        'ostriches','ostrich',
-        'owls','owl',
-    'palms','palm',
-        'peace', 'pens','pen', 'people','person',
-        'pig',
-        'places','place',
-        'powers','power',
-        'prayers','prayer',
-            'priests','priest', 'princes','prince', 'prisons','prison',
-            'promises','promise'
-    'queens','queen',
-    'rabbit', 'ravens','raven',
-        'rivers','river',
-        'roads','road', 'robes','robe', 'robbers','robber', 'rocks','rock', 'roofs','roof', 'rooms','room', 'ropes','rope',
-        'ruins','ruin', 'rulers','ruler', 'rust',
-    'sandals','sandal', 'sashes','sash',
-        'scrolls','scroll',
-        'sea', 'servants','servant', 'services','service',
-        'shame', 'sheep', 'shepherds','shepherd', 'ships','ship', 'shores','shore', 'shrines','shrine',
-        'sides','side', 'signs','sign', 'silver', 'silversmiths','silversmith', 'sinners','sinner', 'sins','sin', 'sisters','sister', 'sky', 'slaves','slave',
-        'soldiers','soldier', 'sons', 'souls','soul', 'spirits','spirit',
-        'stars','star', 'stones','stone', 'straps','strap', 'streams','stream', 'streets','street', 'strength', 'sun', 'swords','sword',
-    'tables','table', 'taxes','tax',
-        'teachers','teacher', 'temples','temple', 'tent', 'testimonies','testimony',
-        'theatres','theatre', 'thieves','thief', 'things','thing', 'threats','threat', 'thrones','throne', 'thumbs','thumb',
-        'times','time',
-        'toes','toe', 'tombs','tomb', 'tongues','tongue', 'towers','tower', 'towns','town',
-        'trees','tree', 'truth',
-        'tunics','tunic', 'turban',
-    'valuation', 'vines','vine', 'visions','vision',
-    'waists','waist', 'walls','wall', 'wars','war', 'waters','water', 'ways','way',
-        'weapons','weapon', 'weeks','week',
-        'wilderness', 'widows','widow', 'wife','wives', 'windows','window', 'winds','wind',
-        'woman','women', 'words','word', 'workers','worker',
-    'years','year',
-        'ages','age', 'chiefs','chief', 'elders','elder', 'earths','earth',
-        'laws','law', 'messengers','messenger',
-        'nights','night', 'prophets','prophet', 'voices','voice',
-        'worlds','world', 'apprentices','apprentice',
-        'rest', 'righteousness',
-    # Singular/plural noun entries added 2026-10-06 (NT and OT)
-    'adulteries', 'adultery', 'area', 'areas', 'armies', 'army',
-    'arrow', 'arrows', 'back', 'backs', 'bank', 'banks',
-    'barn', 'barns', 'beard', 'beards', 'bellies', 'belly',
-    'belong', 'belongs', 'blessing', 'blessings', 'bone', 'bones',
-    'border', 'borders', 'bowl', 'bowls', 'bridle', 'bridles',
-    'camps', 'cart', 'carts', 'case', 'cases', 'cedar',
-    'cedars', 'chain', 'chains', 'cheek', 'cheeks', 'clan',
-    'clans', 'cloud', 'clouds', 'coal', 'coals', 'commander',
-    'commanders', 'compassion', 'compassions', 'complaint', 'complaints', 'conscience',
-    'consciences', 'contribution', 'contributions', 'corpse', 'corpses', 'creature',
-    'creatures', 'curtain', 'curtains', 'cypress', 'cypresses', 'design',
-    'designs', 'desire', 'desires', 'dispute', 'disputes', 'duties',
-    'duty', 'edge', 'edges', 'enemies', 'enemy', 'escape',
-    'escapees', 'farm', 'farms', 'fishes', 'flame', 'flames',
-    'flesh', 'fleshes', 'flock', 'flocks', 'food', 'foods',
-    'foundation', 'foundations', 'frame', 'frames', 'grave', 'graves',
-    'grumbling', 'grumblings', 'harp', 'harps', 'heap', 'heaps',
-    'horn', 'horns', 'human', 'humans', 'incenses', 'inside',
-    'insides', 'instruction', 'instructions', 'island', 'islands', 'lamp',
-    'lamps', 'lightning', 'lightnings', 'like', 'likes', 'livestock',
-    'livestocks', 'load', 'loads', 'lust', 'lusts', 'male',
-    'males', 'mark', 'marks', 'meat', 'meats', 'mile',
-    'miles', 'mind', 'minds', 'month', 'months', 'moth',
-    'moths', 'mound', 'mounds', 'mountain', 'mountains', 'mule',
-    'mules', 'multitude', 'multitudes', 'murder', 'murders', 'neck',
-    'necks', 'need', 'needs', 'oath', 'oaths', 'obligation',
-    'obligations', 'pain', 'pains', 'pair', 'pairs', 'parable',
-    'parables', 'part', 'parts', 'pasture', 'pastureland', 'pasturelands',
-    'pastures', 'path', 'paths', 'peoples', 'persecution', 'persecutions',
-    'pipe', 'pipes', 'pomegranate', 'pomegranates', 'present', 'presents',
-    'rain', 'rains', 'reed', 'reeds', 'region', 'regions',
-    'root', 'roots', 'rubies', 'ruby', 'rule', 'rules',
-    'sack', 'sacks', 'sale', 'sales', 'scripture', 'scriptures',
-    'seed', 'seeds', 'shield', 'shields', 'shoulder', 'shoulders',
-    'sickness', 'sicknesses', 'skill', 'skills', 'skin', 'skins',
-    'song', 'songs', 'spice', 'spices', 'staff', 'staffs',
-    'step', 'steps', 'suffering', 'sufferings', 'tail', 'tails',
-    'teaching', 'teachings', 'temptation', 'temptations', 'tenant', 'tenants',
-    'tents', 'terror', 'terrors', 'thorn', 'thorns', 'thunder',
-    'thunders', 'tool', 'tools', 'tradition', 'traditions', 'trial',
-    'trials', 'tribe', 'tribes', 'trouble', 'troubles', 'twin',
-    'twins', 'unbeliever', 'unbelievers', 'village', 'villages', 'wage',
-    'wages', 'wave', 'waves', 'weakness', 'weaknesses', 'wildernesss',
-    'will', 'wills', 'wine', 'wines', 'wineskin', 'wineskins',
-    'witness', 'witnesses', 'worries', 'worry',
-    )
-assert len(set(SIMPLE_NOUNS)) == len(SIMPLE_NOUNS) # Check for accidental duplicates
+SIMPLE_NOUN_PAIRS = (# These are noun pairs (plural, singular) that are likely to match one-to-one from the OET-LV to the OET-RV
+#   i.e., there's really no other word for them.
+# NOTE: Some of these nouns can also be verbs -- we may need to remove those???
+# 'son' causes problems
+# Format: (plural_form, singular_form) -- use same form twice for uncountable/invariable nouns
+    ('altars', 'altar'),
+    ('ambassadors', 'ambassador'),
+    ('ancestors', 'ancestor'),
+    ('angels', 'angel'),
+    ('anger', 'anger'),  # invariable/uncountable
+    ('animals', 'animal'),
+    ('ankles', 'ankle'),
+    ('assemblies', 'assembly'),
+    ('authorities', 'authority'),
+    ('axes', 'axe'),
+    ('babies', 'baby'),
+    ('badger', 'badger'),  # invariable/uncountable
+    ('bait', 'bait'),  # invariable/uncountable
+    ('battles', 'battle'),
+    ('beds', 'bed'),
+    ('beginnings', 'beginning'),
+    ('belts', 'belt'),
+    ('birds', 'bird'),
+    ('birth', 'birth'),  # invariable/uncountable
+    ('blood', 'blood'),  # invariable/uncountable
+    ('blossoms', 'blossom'),
+    ('boats', 'boat'),
+    ('bodies', 'body'),
+    ('boys', 'boy'),
+    ('bread', 'bread'),  # invariable/uncountable
+    ('breasts', 'breast'),
+    ('branches', 'branch'),
+    ('brothers', 'brother'),
+    ('bulls', 'bull'),
+    ('burials', 'burial'),
+    ('camels', 'camel'),
+    ('camp', 'camp'),  # invariable/uncountable
+    ('chairs', 'chair'),
+    ('chambers', 'chamber'),
+    ('chariots', 'chariot'),
+    ('chests', 'chest'),
+    ('children', 'child'),
+    ('cities', 'city'),
+    ('coats', 'coat'),
+    ('collectors', 'collector'),
+    ('commands', 'command'),
+    ('companions', 'companion'),
+    ('cords', 'cord'),
+    ('corners', 'corner'),
+    ('councils', 'council'),
+    ('courtyards', 'courtyard'),
+    ('courts', 'court'),
+    ('countries', 'country'),
+    ('cows', 'cow'),
+    ('craftsmen', 'craftsmen'),  # invariable/uncountable
+    ('craftsman', 'craftsman'),  # invariable/uncountable
+    ('crowds', 'crowd'),
+    ('cushion', 'cushion'),  # invariable/uncountable
+    ('danger', 'danger'),  # invariable/uncountable
+    ('darkness', 'darkness'),  # invariable/uncountable
+    ('daughters', 'daughter'),
+    ('days', 'day'),
+    ('death', 'death'),  # invariable/uncountable
+    ('deceivers', 'deceiver'),
+    ('deer', 'deer'),  # invariable/uncountable
+    ('dens', 'den'),
+    ('donkeys', 'donkey'),
+    ('doors', 'door'),
+    ('doves', 'dove'),
+    ('dreams', 'dream'),
+    ('dyes', 'dye'),
+    ('eagles', 'eagle'),
+    ('ears', 'ear'),
+    ('entrance', 'entrance'),  # invariable/uncountable
+    ('eyes', 'eye'),
+    ('exorcists', 'exorcist'),
+    ('faces', 'face'),
+    ('faith', 'faith'),  # invariable/uncountable
+    ('farmers', 'farmer'),
+    ('fathers', 'father'),
+    ('fevers', 'fever'),
+    ('fields', 'field'),
+    ('figs', 'fig'),
+    ('fingers', 'finger'),
+    ('fires', 'fire'),
+    ('fish', 'fish'),  # invariable/uncountable
+    ('flowers', 'flower'),
+    ('followers', 'follower'),
+    ('feet', 'foot'),
+    ('fords', 'ford'),
+    ('friends', 'friend'),
+    ('fruits', 'fruit'),
+    ('gateways', 'gateway'),
+    ('gates', 'gate'),
+    ('generations', 'generation'),
+    ('gifts', 'gift'),
+    ('girls', 'girl'),
+    ('goats', 'goat'),
+    ('gods', 'god'),
+    ('gold', 'gold'),  # invariable/uncountable
+    ('grace', 'grace'),  # invariable/uncountable
+    ('grains', 'grain'),
+    ('grapes', 'grape'),
+    ('grass', 'grass'),  # invariable/uncountable
+    ('greed', 'greed'),  # invariable/uncountable
+    ('hairs', 'hair'),
+    ('handkerchiefs', 'handkerchief'),
+    ('hands', 'hand'),
+    ('happiness', 'happiness'),  # invariable/uncountable
+    ('hare', 'hare'),  # invariable/uncountable
+    ('harvests', 'harvest'),
+    ('heads', 'head'),
+    ('hearts', 'heart'),
+    ('heavens', 'heaven'),
+    ('hedgehogs', 'hedgehog'),
+    ('hides', 'hide'),
+    ('homes', 'home'),
+    ('honey', 'honey'),  # invariable/uncountable
+    ('hooves', 'hoof'),
+    ('horsemen', 'horsemen'),  # invariable/uncountable
+    ('horses', 'horse'),
+    ('hours', 'hour'),
+    ('houses', 'house'),
+    ('husbands', 'husband'),
+    ('hyenas', 'hyena'),
+    ('idols', 'idol'),
+    ('incense', 'incense'),  # invariable/uncountable
+    ('ink', 'ink'),  # invariable/uncountable
+    ('jails', 'jail'),
+    ('joy', 'joy'),  # invariable/uncountable
+    ('judgements', 'judgement'),
+    ('kidneys', 'kidney'),
+    ('kings', 'king'),
+    ('kingdoms', 'kingdom'),
+    ('kisses', 'kiss'),
+    ('lambs', 'lamb'),
+    ('lands', 'land'),
+    ('languages', 'language'),
+    ('leaders', 'leader'),
+    ('leather', 'leather'),  # invariable/uncountable
+    ('letters', 'letter'),
+    ('life', 'life'),  # invariable/uncountable
+    ('lights', 'light'),
+    ('lines', 'line'),
+    ('lions', 'lion'),
+    ('lips', 'lip'),
+    ('liver', 'liver'),  # invariable/uncountable
+    ('loaves', 'loaf'),
+    ('locusts', 'locust'),
+    ('men', 'man'),
+    ('markets', 'market'),
+    ('masters', 'master'),
+    ('mercy', 'mercy'),  # invariable/uncountable
+    ('messages', 'message'),
+    ('meetings', 'meeting'),
+    ('milk', 'milk'),  # invariable/uncountable
+    ('moon', 'moon'),  # invariable/uncountable
+    ('mothers', 'mother'),
+    ('mouths', 'mouth'),
+    ('names', 'name'),
+    ('nations', 'nation'),
+    ('neighbours', 'neighbour'),
+    ('nests', 'nest'),
+    ('nets', 'net'),
+    ('news', 'news'),  # invariable/uncountable
+    ('nobles', 'noble'),
+    ('noises', 'noise'),
+    ('noses', 'nose'),
+    ('offerings', 'offering'),
+    ('officers', 'officer'),
+    ('officials', 'official'),
+    ('oil', 'oil'),  # invariable/uncountable
+    ('ostriches', 'ostrich'),
+    ('owls', 'owl'),
+    ('palms', 'palm'),
+    ('peace', 'peace'),  # invariable/uncountable
+    ('pens', 'pen'),
+    ('people', 'person'),
+    ('pig', 'pig'),  # invariable/uncountable
+    ('places', 'place'),
+    ('powers', 'power'),
+    ('prayers', 'prayer'),
+    ('priests', 'priest'),
+    ('princes', 'prince'),
+    ('prisons', 'prison'),
+    ('promises', 'promise'),
+    ('queens', 'queen'),
+    ('rabbit', 'rabbit'),  # invariable/uncountable
+    ('ravens', 'raven'),
+    ('rivers', 'river'),
+    ('roads', 'road'),
+    ('robes', 'robe'),
+    ('robbers', 'robber'),
+    ('rocks', 'rock'),
+    ('roofs', 'roof'),
+    ('rooms', 'room'),
+    ('ropes', 'rope'),
+    ('ruins', 'ruin'),
+    ('rulers', 'ruler'),
+    ('rust', 'rust'),  # invariable/uncountable
+    ('sandals', 'sandal'),
+    ('sashes', 'sash'),
+    ('scrolls', 'scroll'),
+    ('sea', 'sea'),  # invariable/uncountable
+    ('servants', 'servant'),
+    ('services', 'service'),
+    ('shame', 'shame'),  # invariable/uncountable
+    ('sheep', 'sheep'),  # invariable/uncountable
+    ('shepherds', 'shepherd'),
+    ('ships', 'ship'),
+    ('shores', 'shore'),
+    ('shrines', 'shrine'),
+    ('sides', 'side'),
+    ('signs', 'sign'),
+    ('silver', 'silver'),  # invariable/uncountable
+    ('silversmiths', 'silversmith'),
+    ('sinners', 'sinner'),
+    ('sins', 'sin'),
+    ('sisters', 'sister'),
+    ('sky', 'sky'),  # invariable/uncountable
+    ('slaves', 'slave'),
+    ('soldiers', 'soldier'),
+    ('sons', 'sons'),  # invariable/uncountable
+    ('souls', 'soul'),
+    ('spirits', 'spirit'),
+    ('stars', 'star'),
+    ('stones', 'stone'),
+    ('straps', 'strap'),
+    ('streams', 'stream'),
+    ('streets', 'street'),
+    ('strength', 'strength'),  # invariable/uncountable
+    ('sun', 'sun'),  # invariable/uncountable
+    ('swords', 'sword'),
+    ('tables', 'table'),
+    ('taxes', 'tax'),
+    ('teachers', 'teacher'),
+    ('temples', 'temple'),
+    ('tent', 'tent'),  # invariable/uncountable
+    ('testimonies', 'testimony'),
+    ('theatres', 'theatre'),
+    ('thieves', 'thief'),
+    ('things', 'thing'),
+    ('threats', 'threat'),
+    ('thrones', 'throne'),
+    ('thumbs', 'thumb'),
+    ('times', 'time'),
+    ('toes', 'toe'),
+    ('tombs', 'tomb'),
+    ('tongues', 'tongue'),
+    ('towers', 'tower'),
+    ('towns', 'town'),
+    ('trees', 'tree'),
+    ('truth', 'truth'),  # invariable/uncountable
+    ('tunics', 'tunic'),
+    ('turban', 'turban'),  # invariable/uncountable
+    ('valuation', 'valuation'),  # invariable/uncountable
+    ('vines', 'vine'),
+    ('visions', 'vision'),
+    ('waists', 'waist'),
+    ('walls', 'wall'),
+    ('wars', 'war'),
+    ('waters', 'water'),
+    ('ways', 'way'),
+    ('weapons', 'weapon'),
+    ('weeks', 'week'),
+    ('wilderness', 'wilderness'),  # invariable/uncountable
+    ('widows', 'widow'),
+    ('wives', 'wife'),
+    ('windows', 'window'),
+    ('winds', 'wind'),
+    ('women', 'woman'),
+    ('words', 'word'),
+    ('workers', 'worker'),
+    ('years', 'year'),
+    ('ages', 'age'),
+    ('chiefs', 'chief'),
+    ('elders', 'elder'),
+    ('earths', 'earth'),
+    ('laws', 'law'),
+    ('messengers', 'messenger'),
+    ('nights', 'night'),
+    ('prophets', 'prophet'),
+    ('voices', 'voice'),
+    ('worlds', 'world'),
+    ('apprentices', 'apprentice'),
+    ('rest', 'rest'),  # invariable/uncountable
+    ('righteousness', 'righteousness'),  # invariable/uncountable
+    ('adulteries', 'adultery'),
+    ('areas', 'area'),
+    ('armies', 'army'),
+    ('arrows', 'arrow'),
+    ('backs', 'back'),
+    ('banks', 'bank'),
+    ('barns', 'barn'),
+    ('beards', 'beard'),
+    ('bellies', 'belly'),
+    ('belongs', 'belong'),
+    ('blessings', 'blessing'),
+    ('bones', 'bone'),
+    ('borders', 'border'),
+    ('bowls', 'bowl'),
+    ('bridles', 'bridle'),
+    ('camps', 'camps'),  # invariable/uncountable
+    ('carts', 'cart'),
+    ('cases', 'case'),
+    ('cedars', 'cedar'),
+    ('chains', 'chain'),
+    ('cheeks', 'cheek'),
+    ('clans', 'clan'),
+    ('clouds', 'cloud'),
+    ('coals', 'coal'),
+    ('commanders', 'commander'),
+    ('compassions', 'compassion'),
+    ('complaints', 'complaint'),
+    ('consciences', 'conscience'),
+    ('contributions', 'contribution'),
+    ('corpses', 'corpse'),
+    ('creatures', 'creature'),
+    ('curtains', 'curtain'),
+    ('cypresses', 'cypress'),
+    ('designs', 'design'),
+    ('desires', 'desire'),
+    ('disputes', 'dispute'),
+    ('duties', 'duty'),
+    ('edges', 'edge'),
+    ('enemies', 'enemy'),
+    ('escapees', 'escape'),
+    ('farms', 'farm'),
+    ('fishes', 'fishes'),  # invariable/uncountable
+    ('flames', 'flame'),
+    ('fleshes', 'flesh'),
+    ('flocks', 'flock'),
+    ('foods', 'food'),
+    ('foundations', 'foundation'),
+    ('frames', 'frame'),
+    ('graves', 'grave'),
+    ('grumblings', 'grumbling'),
+    ('harps', 'harp'),
+    ('heaps', 'heap'),
+    ('horns', 'horn'),
+    ('humans', 'human'),
+    ('incenses', 'incenses'),  # invariable/uncountable
+    ('insides', 'inside'),
+    ('instructions', 'instruction'),
+    ('islands', 'island'),
+    ('lamps', 'lamp'),
+    ('lightnings', 'lightning'),
+    ('likes', 'like'),
+    ('livestocks', 'livestock'),
+    ('loads', 'load'),
+    ('lusts', 'lust'),
+    ('males', 'male'),
+    ('marks', 'mark'),
+    ('meats', 'meat'),
+    ('miles', 'mile'),
+    ('minds', 'mind'),
+    ('months', 'month'),
+    ('moths', 'moth'),
+    ('mounds', 'mound'),
+    ('mountains', 'mountain'),
+    ('mules', 'mule'),
+    ('multitudes', 'multitude'),
+    ('murders', 'murder'),
+    ('necks', 'neck'),
+    ('needs', 'need'),
+    ('oaths', 'oath'),
+    ('obligations', 'obligation'),
+    ('pains', 'pain'),
+    ('pairs', 'pair'),
+    ('parables', 'parable'),
+    ('parts', 'part'),
+    ('pasture', 'pasture'),  # invariable/uncountable
+    ('pasturelands', 'pastureland'),
+    ('pastures', 'pastures'),  # invariable/uncountable
+    ('paths', 'path'),
+    ('peoples', 'peoples'),  # invariable/uncountable
+    ('persecutions', 'persecution'),
+    ('pipes', 'pipe'),
+    ('pomegranates', 'pomegranate'),
+    ('presents', 'present'),
+    ('rains', 'rain'),
+    ('reeds', 'reed'),
+    ('regions', 'region'),
+    ('roots', 'root'),
+    ('rubies', 'ruby'),
+    ('rules', 'rule'),
+    ('sacks', 'sack'),
+    ('sales', 'sale'),
+    ('scriptures', 'scripture'),
+    ('seeds', 'seed'),
+    ('shields', 'shield'),
+    ('shoulders', 'shoulder'),
+    ('sicknesses', 'sickness'),
+    ('skills', 'skill'),
+    ('skins', 'skin'),
+    ('songs', 'song'),
+    ('spices', 'spice'),
+    ('staffs', 'staff'),
+    ('steps', 'step'),
+    ('sufferings', 'suffering'),
+    ('tails', 'tail'),
+    ('teachings', 'teaching'),
+    ('temptations', 'temptation'),
+    ('tenants', 'tenant'),
+    ('tents', 'tents'),  # invariable/uncountable
+    ('terrors', 'terror'),
+    #('things','thing'),
+    ('thorns', 'thorn'),
+    ('thunders', 'thunder'),
+    ('tools', 'tool'),
+    ('traditions', 'tradition'),
+    ('trials', 'trial'),
+    ('tribes', 'tribe'),
+    ('troubles', 'trouble'),
+    ('twins', 'twin'),
+    ('unbelievers', 'unbeliever'),
+    ('villages', 'village'),
+    ('wages', 'wage'),
+    ('waves', 'wave'),
+    ('weaknesses', 'weakness'),
+    ('wildernesss', 'wildernesss'),  # invariable/uncountable
+    ('wills', 'will'),
+    ('wines', 'wine'),
+    ('wineskins', 'wineskin'),
+    ('witnesses', 'witness'),
+    ('worries', 'worry'),
+    ('disciples', 'disciple'),
+    ('pharisees', 'pharisee'),
+    ('scribes', 'scribe'),
+    ('centurions', 'centurion'),
+    ('governors', 'governor'),
+    ('sanhedrins', 'sanhedrin'),
+    ('synagogues', 'synagogue'),
+    ('miracles', 'miracle'),
+    ('wonders', 'wonder'),
+    ('gospels', 'gospel'),
+    ('epistles', 'epistle'),
+    ('covenants', 'covenant'),
+    ('commandments', 'commandment'),
+    ('vows', 'vow'),
+    ('curses', 'curse'),
+
+)
+assert len(set(SIMPLE_NOUN_PAIRS)) == len(SIMPLE_NOUN_PAIRS) # Check for accidental duplicates
+
+# Flatten SIMPLE_NOUN_PAIRS (tuple of (plural, singular) pairs) into a flat tuple of all forms
+SIMPLE_NOUNS_FLAT = tuple(form for pair in SIMPLE_NOUN_PAIRS for form in pair)
+# Asserts below are not true because of invariable pairs above
+#for simpleNoun in SIMPLE_NOUNS_FLAT:
+#    assert SIMPLE_NOUNS_FLAT.count( simpleNoun ) == 1, f"{simpleNoun=} {SIMPLE_NOUNS_FLAT.count( simpleNoun )}"
+#assert len(set(SIMPLE_NOUNS_FLAT)) == len(SIMPLE_NOUNS_FLAT) # Check for accidental duplicates in flattened form
+
 verbalNouns = ('accusations','accusation',
                'behaviour',
                'compassion', 'confessions','confession', 'confidence',
@@ -827,6 +1126,8 @@ SIMPLE_VERB_SETS = (
     ('provoked', 'provoking', 'provokes', 'provoke'),
     ('slipped', 'slipping', 'slips', 'slip'),
     ('weaned', 'weaning', 'weans', 'wean'),
+    # Added 'be' auxiliary verbs
+    ('am','is','are','was','were','being','been','be'),
 )
 simpleVerbs = tuple(verb for verbSet in SIMPLE_VERB_SETS for verb in verbSet)
 # Allow overlapping forms that legitimately belong to different verb paradigms (e.g., lay/lie, saw, set, spread, beat etc.)
@@ -874,7 +1175,7 @@ assert len(set(pronouns)) == len(pronouns) # Check for accidental duplicates
 connectors = ('and', 'but')
 assert len(set(connectors)) == len(connectors) # Check for accidental duplicates
 
-SIMPLE_WORDS = SIMPLE_NOUNS + verbalNouns + simpleVerbs + simpleAdverbs+ simpleAdjectives  + simpleNumbers + pronouns + connectors
+SIMPLE_WORDS = SIMPLE_NOUNS_FLAT + verbalNouns + simpleVerbs + simpleAdverbs+ simpleAdjectives  + simpleNumbers + pronouns + connectors
 # assert len(set(simpleWords)) == len(simpleWords) # Check for accidental duplicates -- but may be overlaps, e.g., love is a verb and a noun
 
 
@@ -968,7 +1269,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('asked','saying'),('asked','requesting'), # Mrk 14:37, 15:8
     ('asleep','sleeping'), # Mrk 14:40
     ('assembly','convocation'),
-    ('assure','Truly'), # Mrk 13:30
+    ('assure','Truly'),('assured','saying'), # Mrk 13:30, 16:^
     ('astounded','amazed'),('astounded','marvelling'), # Mrk 15:5
     ('attention','attentiveness'),
     ('avoid','pass'), # Mrk 14:35
@@ -999,10 +1300,12 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('cash','money'),('cash','silver'),
     ('cease','removed'),
     ('chairs','seats'),
+    ('chamber','tomb'), # Mrk 16:2
     ('charge','testimony'),('charges','testimony'), # Mrk 14:56,57
     ('chasing','pursuing'),
     ('cheerful','joy'),
     ('chest','ark'),
+    ('chiselled','hewn'), # Mrk 15:46
     ('close','near'), # Mrk 13:28
     ('closely','focused'), # Mrk 14:67
     ('clothes','apparel'),('clothes','garments'),
@@ -1051,6 +1354,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('disown','renounce'), # Mrk 14:31
     ('distance','afar'), # Mrk 14:54
     ('down','below'), # Mrk 14:66
+    ('dressed','clothed'), # Mrk 16:5
     ('driving','throwing'),
     ('each','all'), # Mrk 14:23
     ('eastern','east'),
@@ -1059,6 +1363,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('ensure','order'), # Mrk 14:19
     ('enthusiastic','eager'), # Mrk 14:38
     ('entire','all'),
+    ('entrance','door'), # Mrk 16:3
     ('everyone','all'),('everyone','people'),('everyone','one'),('everyone','you all'),
         ('Everyone','one'),
     ('everywhere','all'), # Mrk 15:33
@@ -1070,6 +1375,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('exposed','uncovered'),
     ('fellow','man'), # Mrk 14:51
     ('finally','Lastly'),('finally','last'),
+    ('find','saw'), # Mrk 16:5
     ('fitting','befitting'),
     ('flames','fire'),
     ('flattered','saying'),
@@ -1108,6 +1414,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('immerser','immersing'),
     ('included','among'),('including','and'), # Mrk 15:40
     ('incredible','great'), # Mrk 13:26
+    ('indeed','already'), # Mrk 15:44
     ('instructed','commanded'),('instructs','commanded'), # Mrk 13:34
     ('instructions','commanded'),('instructions','regulations'),
     ('insult','slander'),('insulted','dishonoured'),('insulted','slandering'),('insulting','slandering'), # Mrk 14:64, 15:29
@@ -1169,9 +1476,10 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('observe','watching'), # Mrk 13:33
     ('offered','giving'), # Mrk 14:57
     ('only','except'), # Mrk 13:32
-    ('opened','divided'),
+    ('opened','divided'),('opening','door'), # Mrk 15:46
     ('other','across'),
     ('outside','out'), # Mrk 15:20
+    ('over','elapsed'), # Mrk 16:1
     ('own','possession'),('owned','having'),
     ('ordered','commanded'),
     ('paralysed','paralytic'),
@@ -1180,7 +1488,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('people','humans'),('people','multitude'),('people','ones'),
     ('percent','add'),
     ('permanent','perpetuity'),
-    ('permission','requested'), # Mrk 15:43
+    ('permission','requested'), ('permission','granted'), # Mrk 15:43,45
     ('picked','taken'), # Mrk 14:23
     ('placed','laid'),('placing','laying'),
     ('planet','earth'), # Mrk 13:31
@@ -1207,7 +1515,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('range','various'),
     ('readers','reading'), # Mrk 13:14
     ('ready','gird'),
-    ('realised','saw'),
+    ('realised','saw'),('realised','saying'), # Mrk 16:3
     ('rebuild','building'), # Mrk 15:29
     ('region','land'),('regions','land'),
     ('release','send'), # Mrk 15:9
@@ -1225,6 +1533,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('riverbed','wadi'),
     ('robe','cloth'),('robe','clothes'), # Mrk 14:51,63
     ('rock','stone'),('rocks','stones'),('rocks','stone'),
+        ('rockface','rock'), # Mrk 15:46
     ('roof','housetop'),('roofs','housetops'),
     ('room','place'),
     ('ropes','cords'),
@@ -1235,7 +1544,8 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('saluting','greeting'), # Mrk 15:18
     ('same','again'), # Mrk 14:70
     ('sanctuary','hideout'),
-    ('scared','dismayed'), ('scared','feared'),
+    ('saw','observing'), # Mrk 16:4
+    ('scared','dismayed'), ('scared','feared'),('scared','fearing'), # Mrk 16:*
     ('scoffed','mocking'),
     ('scriptures','scroll'), # Mrk 12:26
     ('search','seek'),
@@ -1245,6 +1555,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('sentenced','condemned'),('sentenced','put'), # Mrk 14:55,64
     ('servants','attendants'), # Mrk 14:54
     ('several','many'), # Mrk 14:56
+    ('shaking','trembling'), # Mrk 16:8
     ('shaved','baldness'),
     ('shed','hut'),
     ('She\'s','She'),
@@ -1275,9 +1586,13 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('stewards','managers'),
     ('stick','staff'),('stick','reed'), # Mrk 15:19,36
     ('strong','forceful'),
+    ('stunned','amazed'),('stunned','amazement'), # Mrk 16:5,8
+    ('Sunday','first'), # Mrk 16:2
+    ('surprised','amazed'), # Mrk 16:6
     ('swindlers','robbers'),
     ('taken','carried'), # Mrk 15:1
-    ('talking','speaking'), ('talking','saying'),
+    ('talk','spoke'), # Mrk 16:8
+        ('talking','speaking'), ('talking','saying'),
     ('tarpaulin','cover'),
     ('tattoo','inscription'), # Lev 19:28
     ('teachers','scribes'),
@@ -1302,6 +1617,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('tipped','overturned'),
     ('told','commanded'),('told','saying'),# Mrk 14:34
     ('total','all'),
+        ('totally','greatly'), # Mrk 16:5
     ('town','city'),
     ('trip','travelling'), # Mrk 13:34
     ('trustworthy','faithful'),
@@ -1313,15 +1629,16 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('upstairs','housetop'),('upstairs','upper'), # Mrk 13:15
     ('untarnished','holy'),
     ('urged','implored'),
-    ('very','much'), # Mrk 12:27
+    ('very','much'),('very','exceedingly'), # Mrk 12:27, 16:2
     ('wallet','purse'),
     ('warned','spoken'), # Mrk 13:23
     ('warriors','men'),
+    ('watching','observing'), # Mrk 15:47
     ('waters','water supplies'),
     ('way','how'),
     ('wealthy','rich'),
     ('wearing','clothed'), # Mrk 14:51
-    ('went','came'),
+    ('went','came'),('went','come'), # Mrk 16:5
     ('whacking','striking'), # Mrk 15:19
     ('what','whatever'),("What's",'What'),
     ('When','And'),('When','whenever'),
@@ -1388,11 +1705,47 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('started','began'),
     ('spreading','spreading_abroad'),
     ('could','able'),
-    )
+    
+    # Additional vocabulary mappings from Mark analysis (2026-10-09)
+    # Non-verb mappings (verbs handled by matchVerbSets)
+    ('apprentices', 'apprentices/followers'),
+    ('religious', 'scribes'),
+    ('lake', 'sea'),
+    ('started', 'began'),
+    #('heals', 'healed'), # Already in SIMPLE_VERB_TABLE
+    ('happen', 'become'),
+    ('enter', 'go in'),
+    ('replied', 'answered'),
+    ('listen', 'hear'),
+    ('arrested', 'given over'),
+    ('continued', 'remained'),
+    ('responded', 'answered'),
+    ('understand', 'know'),
+    ('noticed', 'saw'),
+    ('wants', 'wills'),
+    ('yelled', 'cried out'),
+    ('scolded', 'rebuked'),
+    ('arrived', 'came'),
+    ('preaching', 'proclaiming'),
+    ('crowd', 'multitude'),
+    #('teaching', 'teaching'),
+    #('authority', 'authority'),
+    #('temple', 'temple'),
+    #('teacher', 'teacher'),
+    ('chief', 'chief priest'),
+    #('life', 'life'),
+    #('time', 'time'),
+    #('person', 'person'),
+    #('place', 'place'),
+    #('home', 'home'),
+    #('house', 'house'),
+    #('word', 'word'),
+    #('things', 'thing'),
+)
 for someTuple in RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS:
-    assert isinstance( someTuple, tuple), f"{someTuple=}"
+    assert isinstance( someTuple, tuple), f'{someTuple=}'
     RVWord, LVWords = someTuple
-    assert RVWord != LVWords, f"{RVWord=}"
+    assert RVWord != LVWords, f'{RVWord=}'
     assert ' ' not in RVWord
     for simpleVerbSet in SIMPLE_VERB_SETS:
         if LVWords in simpleVerbSet:
@@ -1412,22 +1765,27 @@ LV_SINGLE_WORDS_TO_RV_WORD_STRINGS = (
             ('anymore','any more'), # Mrk 14:63
             ('approached','came closer'), # Mrk 12:28
             ('ascent','walking uphill'),
-            ('day before','pre-day'), # Mrk 15:42
+            ('asked','find out'), # Mrk 15:44
+            ('bore','was the father of'),('bore','the father of'), # Mat 1
+            ('pre-day','day before'), # Mrk 15:42
             ('false','making up'), # Mrk 14:56
             ('first','most important'), # Mrk 12:29
-            ('fled','ran away'), # Mrk 14:52
+            ('fled','ran away'),('fled','took off running'), # Mrk 14:52, 16:8
             ('greater','more important'), # Mrk 12:31
             ('members', 'body parts'),
+            ('known', 'found out'), # Mrk 15:45
             ('plagues', 'deadly diseases'),
+            ('raised','came back to life'), # Mrk 16:6
             ('right','honoured position'), # Mrk 14:62
             ('risen', 'got up'),
             ('sanctuary', 'sacred tent'),
             ('scribes', 'religious teachers'),
-            ('seeking', 'looking for'),
+            ('seeking', 'looking for'), # Mrk 16:6
             ('synagogues', 'Jewish meeting halls'), ('synagogues', 'meeting halls'),
             ('synagogue', 'Jewish meeting hall'), ('synagogue', 'meeting hall'),
             ('tabernacle', 'sacred tent'),
             ('three-times','three times'), # Mrk 14:72
+            ('tomb','burial chamber'), # Mrk 15:46
             ('unblemished', 'no defects'),('unblemished', 'without defects'),
 
             # Additional mappings from Mark analysis (2026-10-07) - LV single word -> RV multi-word phrase
@@ -1442,13 +1800,101 @@ LV_SINGLE_WORDS_TO_RV_WORD_STRINGS = (
             ('this', 'just happened'),
             ('deserted', 'quiet place'),
             ('neighbouring', 'neighbouring villages'),
-            )
+            
+            # Reverse mappings for vocabulary from Mark analysis (2026-10-09)
+            #('apprentices/followers', 'apprentices'),
+            #('scribes', 'religious'),
+            #('sea', 'lake'),
+            #('began', 'started'),
+            #('healed', 'heals'),
+            #('become', 'happen'),
+            #('go in', 'enter'),
+            #('answered', 'replied'),
+            #('hear', 'listen'),
+            #('given over', 'arrested'),
+            #('remained', 'continued'),
+            #('know', 'understand'),
+            #('saw', 'noticed'),
+            #('wills', 'wants'),
+            #('cried out', 'yelled'),
+            #('rebuked', 'scolded'),
+            #('came', 'arrived'),
+            #('proclaiming', 'preaching'),
+            #('multitude', 'crowd'),
+            #('chief priest', 'chief'),
+
+            # Reverse mappings for vocabulary from Mark analysis (2026-10-09)
+            #('apprentices/followers', 'apprentices'),
+            #('scribes', 'religious'),
+            #('sea', 'lake'),
+            #('began', 'started'),
+            #('healed', 'heals'),
+            #('become', 'happen'),
+            #('go in', 'enter'),
+            #('answered', 'replied'),
+            #('hear', 'listen'),
+            #('given over', 'arrested'),
+            #('remained', 'continued'),
+            #('know', 'understand'),
+            #('saw', 'noticed'),
+            #('wills', 'wants'),
+            #('cried out', 'yelled'),
+            #('rebuked', 'scolded'),
+            #('came', 'arrived'),
+            #('proclaiming', 'preaching'),
+            #('multitude', 'crowd'),
+            #('chief priest', 'chief'),
+
+            # Reverse mappings for vocabulary from Mark analysis (2026-10-09)
+            #('apprentices/followers', 'apprentices'),
+            #('scribes', 'religious'),
+            #('sea', 'lake'),
+            #('began', 'started'),
+            #('healed', 'heals'),
+            #('become', 'happen'),
+            #('go in', 'enter'),
+            #('answered', 'replied'),
+            #('hear', 'listen'),
+            #('given over', 'arrested'),
+            #('remained', 'continued'),
+            #('know', 'understand'),
+            #('saw', 'noticed'),
+            #('wills', 'wants'),
+            #('cried out', 'yelled'),
+            #('rebuked', 'scolded'),
+            #('came', 'arrived'),
+            #('proclaiming', 'preaching'),
+            #('multitude', 'crowd'),
+            #('chief priest', 'chief'),
+
+            # Reverse mappings for vocabulary from Mark analysis (2026-10-09)
+            #('apprentices/followers', 'apprentices'),
+            #('scribes', 'religious'),
+            #('sea', 'lake'),
+            #('began', 'started'),
+            #('healed', 'heals'),
+            #('become', 'happen'),
+            #('go in', 'enter'),
+            #('answered', 'replied'),
+            #('hear', 'listen'),
+            #('given over', 'arrested'),
+            #('remained', 'continued'),
+            #('know', 'understand'),
+            #('saw', 'noticed'),
+            #('wills', 'wants'),
+            #('cried out', 'yelled'),
+            #('rebuked', 'scolded'),
+            #('came', 'arrived'),
+            #('proclaiming', 'preaching'),
+            #('multitude', 'crowd'),
+            #('chief priest', 'chief')
+    )
 for someTuple in LV_SINGLE_WORDS_TO_RV_WORD_STRINGS:
     assert isinstance( someTuple, tuple), f"{someTuple=}"
     LVWord,RVWords = someTuple
     assert LVWord != RVWords, f"{RVWords=}"
-    assert ' ' not in LVWord
-    assert ' ' in RVWords
+    assert ' ' not in LVWord, f"Unexpected space in {LVWord=}"
+    assert ' ' in RVWords, f'Expected a space in {RVWords=}'
 
 class WordNumberError(ValueError):
     pass
@@ -2558,10 +3004,14 @@ def matchIdenticalProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[
                 if result:
                     numAdded += 1
     else:
-        # Try to connect identical spellings between the two lists one by one (regardless of order)
-        for rvCapitalisedWord in rvCapitalisedWordList[:]:
-            for lvCapitalisedWord in lvCapitalisedWordList[:]:
-                assert '¦' in lvCapitalisedWord, f"{lvCapitalisedWordList=}"
+        # Try to connect identical spellings between the two lists
+        # If the lists have the same length and structure, try to match in order
+        if len(rvCapitalisedWordList) == len(lvCapitalisedWordList):
+            # Try order-based matching first
+            for i, rvCapitalisedWord in enumerate(rvCapitalisedWordList[:]):
+                if i >= len(lvCapitalisedWordList): break
+                lvCapitalisedWord = lvCapitalisedWordList[i]
+                if '¦' not in lvCapitalisedWord: continue
                 lvNoun = lvCapitalisedWord.split( '¦' )[0]
                 if simplifyRVLVWord( lvNoun ) == simplifyRVLVWord( rvCapitalisedWord ):
                     capitalisedNoun,wordNumber,wordRow = getLVWordRow( lvCapitalisedWord, 'NT' if NT else 'OT' )
@@ -2578,7 +3028,49 @@ def matchIdenticalProperNouns( BBB:str, c:int,v:int, rvCapitalisedWordList:List[
                                 numNS += 1
                             rvCapitalisedWordList.remove( rvCapitalisedWord )
                             lvCapitalisedWordList.remove( lvCapitalisedWord )
-                    break
+            # If still have items, fall back to cross-matching
+            for rvCapitalisedWord in rvCapitalisedWordList[:]:
+                for lvCapitalisedWord in lvCapitalisedWordList[:]:
+                    assert '¦' in lvCapitalisedWord, f"{lvCapitalisedWordList=}"
+                    lvNoun = lvCapitalisedWord.split( '¦' )[0]
+                    if simplifyRVLVWord( lvNoun ) == simplifyRVLVWord( rvCapitalisedWord ):
+                        capitalisedNoun,wordNumber,wordRow = getLVWordRow( lvCapitalisedWord, 'NT' if NT else 'OT' )
+                        proceed = False
+                        if NT:
+                            if wordRow[state.wordTableHeaderList['NT'].index('Role')] == 'N': proceed = True
+                        else:
+                            if wordRow[state.wordTableHeaderList['OT'].index('GlossCapitalisation')] != 'S': proceed = True
+                        if proceed:
+                            result = addNumberToRVWord( BBB, c,v, rvCapitalisedWord, wordNumber )
+                            if result:
+                                numAdded += 1
+                                if NT and 'N' in wordRow[state.wordTableHeaderList['NT'].index('GlossCaps')]:
+                                    numNS += 1
+                                rvCapitalisedWordList.remove( rvCapitalisedWord )
+                                lvCapitalisedWordList.remove( lvCapitalisedWord )
+                        break
+        else:
+            # Try to connect identical spellings between the two lists one by one (regardless of order)
+            for rvCapitalisedWord in rvCapitalisedWordList[:]:
+                for lvCapitalisedWord in lvCapitalisedWordList[:]:
+                    assert '¦' in lvCapitalisedWord, f"{lvCapitalisedWordList=}"
+                    lvNoun = lvCapitalisedWord.split( '¦' )[0]
+                    if simplifyRVLVWord( lvNoun ) == simplifyRVLVWord( rvCapitalisedWord ):
+                        capitalisedNoun,wordNumber,wordRow = getLVWordRow( lvCapitalisedWord, 'NT' if NT else 'OT' )
+                        proceed = False
+                        if NT:
+                            if wordRow[state.wordTableHeaderList['NT'].index('Role')] == 'N': proceed = True
+                        else:
+                            if wordRow[state.wordTableHeaderList['OT'].index('GlossCapitalisation')] != 'S': proceed = True
+                        if proceed:
+                            result = addNumberToRVWord( BBB, c,v, rvCapitalisedWord, wordNumber )
+                            if result:
+                                numAdded += 1
+                                if NT and 'N' in wordRow[state.wordTableHeaderList['NT'].index('GlossCaps')]:
+                                    numNS += 1
+                                rvCapitalisedWordList.remove( rvCapitalisedWord )
+                                lvCapitalisedWordList.remove( lvCapitalisedWord )
+                        break
     return numAdded,numNS
 # end of connect_OET-RV_words_via_OET-LV.matchIdenticalProperNouns
 
@@ -2692,7 +3184,7 @@ def matchOurListedSimpleWords( BBB:str, c:int,v:int, rvWordList:List[str], lvWor
     NT = bos_books_codes_py.is_new_testament_nr( BBB )
 
     numAdded = numNS = 0
-    nounWords = set(SIMPLE_NOUNS) | set(verbalNouns) # Only nouns get number-variant matching; verbs and adjectives are handled elsewhere
+    nounWords = set(SIMPLE_NOUNS_FLAT) | set(verbalNouns) # Only nouns get number-variant matching; verbs and adjectives are handled elsewhere
     for simpleNoun in SIMPLE_WORDS:
         # print( f"{simpleNoun}" )
         searchForms = (simpleNoun,)
@@ -3317,8 +3809,9 @@ def simplifyRVLVWord( word:str ) -> str:
         'mother-in-law' and 'mother' are not (and 'money-changers' and 'moneychangers' are).
     """
     word = unicodedata.normalize( 'NFD', word )
-    word = ''.join( ch for ch in word if unicodedata.category( ch ) != 'Mn' ) # Strip combining marks (macrons, etc.)
-    word = re.sub( r"[ʼˊʹʺ]", '', word ) # Transliteration accents, e.g. LV 'Yəhōshūˊa'
+    word = ''.join( ch for ch in word if unicodedata.category( ch ) not in ('Mn', 'Lm') ) # Strip combining marks and modifier letters
+    word = re.sub( r"[ʼˊʹʺʸˈ]", '', word ) # Transliteration accents
+    word = re.sub( r"/.*$", '', word ) # Strip parenthetical alternatives like /(Miryām)
     word = re.sub( r"[’']s$", '', word ) # Possessives
     word = re.sub( r"[-‐‑–]", '', word ) # Hyphens, anywhere in the word
     return word.lower().strip( '.,;:!?"“”‘’()' )
