@@ -1,4 +1,4 @@
-\id MAT - Open English Translation—Readers' Version (OET-RV) v0.5.8
+\id MAT - Open English Translation—Readers' Version (OET-RV) v0.5.9
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 MAT
@@ -11,7 +11,7 @@
 \mt1 Matthew
 \is1 Introduction
 \is2 Author
-\ip The writer of this document was known in Greek as Matthaios, in English as Matthew, and in Hebrew as Levi. He was one of Yeshua's twelve apprentices, and named by Alfaeus his father. He was from Galilee but worked in Capernaum as a tax-collector before he left that to follow Yeshua/Jesus. It's possible that it was Yeshua who changed his name from Levi when he became a follower, and named him Matthew which means ‘the gift of God’ in Hebrew.
+\ip The writer of this document was known in Greek as Matthaios,  in Hebrew as Levi, and is most commonly known in English as Matthew. He was one of Yeshua's twelve apprentices, and named by Alfaeus his father. He was from Galilee but worked in Capernaum as a tax-collector before he left that to follow Yeshua/Jesus. It's possible that it was Yeshua who changed his name from Levi when he became a follower, and named him Matthew which means ‘the gift of God’ in Hebrew.
 \is2 This account
 \ip Matthew's account starts by listing the ancestors of Yeshua, and then describes Yeshua's birth, his immersion in water, and his temptation by the devil. He tells us about a lot of his preaching and teaching, and about how he healed many sick people in the Galilee region. After that, Matthew goes on to describe Yeshua's trip down to Yerushalem/Jerusalem and what happened to him there. Then he explains what happened in Yeshua's final week in Yerushalem, his execution on a stake, and his coming back to life.
 \ip This document tells how Yeshua is the messiah, promised by God to save the Jews, and all non-Jews who place their trust in him. So by means of him, God fulfills his promises to his people that were listed in the Old Testament.
@@ -34,30 +34,30 @@
 \v 1 \add This is\add* \add ≈a genealogy\add* of \nd Yeshua¦3\nd* (Grk: \add !Yaysous\add*) the¦4 \nd messiah¦4\nd* (Grk: \add !Christ\add*) a descendant of \add King\add* David¦6, a descendant of Abraham¦8 (Grk: \add !Abraam¦8\add*).
 \p
 \v 2 Abraham \add ≈was the father of\add* Isaac, Isaac \add ≈the father of\add* Yacob (Grk: \add !Yakob¦17\add*), Yacob \add ≈the father of\add* Yudah¦22 (Grk: \add !Youdas¦22\add*) and¦23 his¦26 brothers¦25.
-\v 3 Yudah¦27 \add ≈was the father of\add* Perez (Grk: Fares¦31) and¦32 Zerah (Grk: Zara¦34) through Tamar (Grk: Thamar¦37), Perez \add ≈the father of\add* Hezron (Grk: Hezrom), Hezron \add ≈the father of\add* Aram¦47,
-\v 4 Aram¦48 \add ≈the father of\add* Aminadab, Aminadab \add ≈the father of\add* Nahshon (Grk: Naasson¦57), Nahshon \add ≈the father of\add* Salmon¦62,
-\v 5 Salmon¦63 \add ≈the father of\add* Boaz (Grk: Boes) through Rahab¦70, Boaz \add ≈the father of\add* Obed (Grk: Yobed) through Ruth¦78 (Grk: Routh), and¦80 Obed \add ≈the father of\add* Yishay¦83 \add !(Jesse¦83, Grk: Yessai¦83)\add*,
+\v 3 Yudah¦27 \add ≈was the father of\add* Perez (Grk: \add !Fares¦31\add*) and¦32 Zerah (Grk: \add !Zara¦34\add*) through Tamar (Grk: \add !Thamar¦37\add*), Perez \add ≈the father of\add* Hezron (Grk: \add !Hezrom\add*), Hezron \add ≈the father of\add* Aram¦47,
+\v 4 Aram¦48 \add ≈the father of\add* Aminadab, Aminadab \add ≈the father of\add* Nahshon (Grk: \add !Naasson¦57\add*), Nahshon \add ≈the father of\add* Salmon¦62,
+\v 5 Salmon¦63 \add ≈the father of\add* Boaz (Grk: \add !Boes\add*) through Rahab¦70, Boaz \add ≈the father of\add* Obed (Grk: \add !Yobed\add*) through Ruth¦78 (Grk: \add !Routh\add*), and¦80 Obed \add ≈the father of\add* Yishay¦83 \add !(Jesse¦83, Grk: \add !Yessai¦83\add*)\add*,
 \v 6 and¦85 Yishay¦84 the father of¦98 David¦88 the¦89 king¦90.
-\p David \add ≈was the¦87 father of\add* Solomon¦97 (Grk: Solomona) through Uriah's (Grk: Ourias¦101) wife¦99,
-\v 7 Solomon¦102 \add ≈was the father of\add* Rehoboam (Grk: Roboam¦106), Rehoboam \add ≈the father of\add* Abiyah (Grk: Abia¦112), Abiyah \add ≈the father of\add* Asa (Grk: Asaf¦116),
-\v 8 Asa \add ≈the father of\add* Jehoshapat (Grk: Yosafat¦121). Jehoshapat \add ≈the father of\add* Joram (Grk: Yoram¦126), Joram \add ≈the father of\add* Uzziah¦131 (Grk: Ozias¦131),
-\v 9 Uzziah¦132 \add ≈the father of\add* Jotham (Grk: Yoatham¦136), Jotham \add ≈the father of\add* Ahaz (Grk: Achaz¦141), Ahaz \add ≈the father of\add* Hezekiah¦146 (Grk: Hezekias),
-\v 10 Hezekiah¦147 \add ≈the father of\add* Manasseh (Grk: Manasse), Manasseh \add ≈the father of\add* Amon (Grk: Amos¦157), Amon \add ≈the father of\add* Josiah (Grk: Yosias¦164),
-\v 11 Josiah \add ≈was¦167 the¦167 father¦167 of¦167\add* Jechoniah (Grk: Yechonias¦169) and¦166 his¦173 brothers¦172, when they were deported¦176 to¦177 Babylon (Grk: Babulonos¦177).\x + \xo 1:11: \xt 2Ki 24:14-15; 2Ch 36:10; Jer 27:20.\x*
+\p David \add ≈was the¦87 father of\add* Solomon¦97 (Grk: \add !Solomona\add*) through Uriah's (Grk: \add !Ourias¦101\add*) wife¦99,
+\v 7 Solomon¦102 \add ≈was the father of\add* Rehoboam (Grk: \add !Roboam¦106\add*), Rehoboam \add ≈the father of\add* Abiyah (Grk: \add !Abia¦112\add*), Abiyah \add ≈the father of\add* Asa (Grk: \add !Asaf¦116\add*),
+\v 8 Asa \add ≈the father of\add* Jehoshapat (Grk: \add !Yosafat¦121\add*). Jehoshapat \add ≈the father of\add* Joram (Grk: \add !Yoram¦126\add*), Joram \add ≈the father of\add* Uzziah¦131 (Grk: \add !Ozias¦131\add*),
+\v 9 Uzziah¦132 \add ≈the father of\add* Jotham (Grk: \add !Yoatham¦136\add*), Jotham \add ≈the father of\add* Ahaz (Grk: \add !Achaz¦141\add*), Ahaz \add ≈the father of\add* Hezekiah¦146 (Grk: \add !Hezekias\add*),
+\v 10 Hezekiah¦147 \add ≈the father of\add* Manasseh (Grk: \add !Manasse\add*), Manasseh \add ≈the father of\add* Amon (Grk: \add !Amos¦157\add*), Amon \add ≈the father of\add* Josiah (Grk: \add !Yosias¦164\add*),
+\v 11 Josiah \add ≈was¦167 the¦167 father¦167 of¦167\add* Jechoniah (Grk: \add !Yechonias¦169\add*) and¦166 his¦173 brothers¦172, when they were deported¦176 to¦177 Babylon (Grk: \add !Babulonos¦177\add*).\x + \xo 1:11: \xt 2Ki 24:14-15; 2Ch 36:10; Jer 27:20.\x*
 \p
-\v 12 And¦179 after¦178 the¦180 deportation¦181 to¦182 Babylon¦182, Jechoniah \add ≈was the father of\add* Shealtiel (Grk: Salathiel¦187), Shealtiel \add ≈was the father of\add* Zerubbabel (Grk: Zorobabel¦193),
-\v 13 Zerubbabel \add ≈was the father of\add* Abiud (Grk: Abioud¦199), Abiud \add ≈was the father of\add* Eliakim, and¦206 Eliakim \add ≈the father of\add* Azor¦209,
-\v 14 Azor¦210 \add ≈the father of\add* Zadok, Zadok \add ≈the father of\add* Achim, Achim \add ≈the father of\add* Eliud¦224 (Grk: Elioud¦224),
-\v 15 Eliud¦225 \add ≈the father of\add* Eleazar, Eleazar \add ≈the father of\add* Matthan, Matthan \add ≈the father of\add* Yacob¦239 (Grk: Yakob),
-\v 16 Yacob¦240 \add ≈the father¦242 of\add* Yosef¦244, the¦245 husband¦246 of Maria¦247 (Grk: Marias) who \nd Yeshua¦251\nd* (Grk: Yaysous), the one called¦253 the¦254 \nd messiah¦254\nd* was¦250 born¦250 to.
+\v 12 Then¦179 after¦178 the¦180 deportation¦181 to¦182 Babylon¦182, Jechoniah \add ≈was the father of\add* Shealtiel (Grk: \add !Salathiel¦187\add*), Shealtiel \add ≈was the father of\add* Zerubbabel (Grk: \add !Zorobabel¦193\add*),
+\v 13 Zerubbabel \add ≈was the father of\add* Abiud (Grk: \add !Abioud¦199\add*), Abiud \add ≈was the father of\add* Eliakim, and¦206 Eliakim \add ≈the father of\add* Azor¦209,
+\v 14 Azor¦210 \add ≈the father of\add* Zadok, Zadok \add ≈the father of\add* Achim, Achim \add ≈the father of\add* Eliud¦224 (Grk: \add !Elioud¦224\add*),
+\v 15 Eliud¦225 \add ≈the father of\add* Eleazar, Eleazar \add ≈the father of\add* Matthan, Matthan \add ≈the father of\add* Yacob¦239 (Grk: \add !Yakob\add*),
+\v 16 Yacob¦240 \add ≈the father¦242 of\add* Yosef¦244, the¦245 husband¦246 of Maria¦247 (Grk: \add !Marias\add*) who \nd Yeshua¦251\nd* (Grk: \add !Yaysous\add*), the one called¦253 the¦254 \nd messiah¦254\nd* was¦250 born¦250 to.
 \p
-\v 17 So¦256 the generations from Abraham¦260 to David numbered fourteen, from David to the deportation to Babylon there were fourteen generations, and¦274 from the deportation to Babylon to the¦281 \nd messiah¦281\nd* there were fourteen generations.
-\s1 The birth of the messiah
+\v 17 So¦256 the generations from Abraham¦260 to David \add numbered\add* fourteen, from David to the deportation to Babylon there were fourteen generations, and¦274 from the deportation to Babylon to the¦281 \nd messiah¦281\nd* there were fourteen generations.
+\s1 The messiah's birth
 \rem /s1 The Birth of Jesus the Messiah; The Birth of Jesus Christ; The birth and infancy of Jesus
 \r (Luke 1:26-38; 2:1-7)
 \p
-\v 18 Now this is how the¦289 birth¦290 of \nd Yeshua¦287\nd* came \nd about¦287\nd*: Maria¦299 his¦298 mother¦297 was engaged¦294 to Yosef¦301. But¦285 before¦302 they came together¦304, she¦306 was found¦306 to be pregnant through \add the work of\add* the holy¦312 \nd spirit¦311\nd*.\x + \xo 1:18: \xt Luk 1:27.\x*
-\v 19 But¦314 Yosef¦313, her husband¦316 \add to be\add*, was¦326 a good man, and¦314 not¦321 wishing to disgrace Maria, he decided to quietly divorce her.
+\v 18 \add Now\add* this is how the¦289 birth¦290 of \nd Yeshua¦287\nd* \add ≈came about¦287\add*: Maria¦299 his¦298 mother¦297 was engaged¦294 to Yosef¦301. But¦285 before¦302 they came together¦304, she¦306 was found¦306 to be pregnant through \add the work of\add* the holy¦312 \nd spirit¦311\nd*.\x + \xo 1:18: \xt Luk 1:27.\x*
+\v 19 \add ≈But¦314\add* her husband¦316 \add to be\add*, Yosef¦313, was¦326 a \add ≈godly\add* \add >man\add*, and¦314 not¦321 wishing to disgrace Maria, he decided to quietly divorce her.
 \v 20 But¦331 as he was¦340 pondering this, one of Yahweh's messengers¦335 appeared¦340 to him in a dream¦339 and told¦342 him, “Yosef¦343, descendant of \add King\add* David¦345, don't¦346 be¦347 afraid¦347 to marry Maria¦349, because¦354 the baby in her¦356 has been¦357 conceived by the holy¦361 \nd spirit¦359\nd*.
 \v 21 In due course she'll¦363 have a son¦365 and¦364 you'll¦367 name¦369 him¦370 \nd Yeshua¦371\nd*, because¦373 he'll¦372 save¦374 his¦370 people¦376 from¦378 their¦381 sins¦380.”\x + \xo 1:21: \xt Luk 1:31.\x*
 \p

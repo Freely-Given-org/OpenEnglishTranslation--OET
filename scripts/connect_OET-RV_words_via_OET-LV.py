@@ -64,6 +64,13 @@ Specialised \\add spans:
             so that a lower word number (from a previous verse) can be allowed in an elided segment.
     Reworded '\\add ≈' or '\\+add ≈' or '\\add ?≈' or '\\+add ?≈' spans:
         Can be matched to OET-LV words, but more difficult expected.
+    Alternate '\\add !' or '\\+add !' or '\\add ?!' or '\\+add ?!' name spans:
+        Because an English Bible translation is using a mixture of Hebrew, Greek, and English names,
+            we often want to display more than one form of the name to the reader.
+        The OET-RV mostly puts a rough Hebrew or Greek transliteration first,
+            followed by the traditional name in parentheses,
+            e.g., 'Shelomo (\\add !Solomon\\add*)'
+        Both forms of the name should be linked to the OET-LV name by having the same word number.
 
 TODO: This script makes wrong cross-connections between different verses where versification issues apply
         but that will eventually be fixed in BibleOrgSys (not here).
@@ -1126,7 +1133,7 @@ SIMPLE_VERB_SETS = (
     ('provoked', 'provoking', 'provokes', 'provoke'),
     ('slipped', 'slipping', 'slips', 'slip'),
     ('weaned', 'weaning', 'weans', 'wean'),
-    # Added 'be' auxiliary verbs
+    # 'be' auxiliary verbs
     ('am','is','are','was','were','being','been','be'),
 )
 simpleVerbs = tuple(verb for verbSet in SIMPLE_VERB_SETS for verb in verbSet)
@@ -1351,6 +1358,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('dinosaur','dragon'), # Rev 12:3
     ('disasters','plagues'),
     ('discouraged','dismayed'),
+    ('disgrace','expose'), # Mat 1:19
     ('disown','renounce'), # Mrk 14:31
     ('distance','afar'), # Mrk 14:54
     ('down','below'), # Mrk 14:66
@@ -1502,6 +1510,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('praised','glorifying'),
     ('preaching','proclaiming'),
     ('prearranged','given'), # Mrk 14:44
+    ('pregnant','womb'), # Mat 1:18
     ('pressed','putting'), # Mrk 15:17
     ('priest','priest/officer'),
     ('proclamation','announcement'),('proclamation','declaration'),('proclamation','notice'),('proclamations','declarations'),
@@ -1612,6 +1621,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('third','another'),
     ('thought','saying'), # Mrk 15:35
         ('thoughtful','intelligently'), # Mrk 12:34
+    ('through','by'), # Mat 1:18
     ('tied','bound'),
     ('time','hour'), # Mrk 13:32
     ('tipped','overturned'),
@@ -1645,6 +1655,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('whipped','beat'), # Mrk 13:9
     ('whole','all'),
     ('will','are'),
+    ('wishing','willing'), # Mat 1:19
     ('women','daughters'),
     ('work','service'),
     ('worried','alarmed'), # Mrk 13:7
@@ -1705,7 +1716,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('started','began'),
     ('spreading','spreading_abroad'),
     ('could','able'),
-    
+
     # Additional vocabulary mappings from Mark analysis (2026-10-09)
     # Non-verb mappings (verbs handled by matchVerbSets)
     ('apprentices', 'apprentices/followers'),
@@ -1800,7 +1811,7 @@ LV_SINGLE_WORDS_TO_RV_WORD_STRINGS = (
             ('this', 'just happened'),
             ('deserted', 'quiet place'),
             ('neighbouring', 'neighbouring villages'),
-            
+
             # Reverse mappings for vocabulary from Mark analysis (2026-10-09)
             #('apprentices/followers', 'apprentices'),
             #('scribes', 'religious'),
@@ -3727,7 +3738,7 @@ EQUIVALENT_LV_RV_WORDS = { # All lower case, i.e. the simplifyRVLVWord() forms
     'matthias': { 'matthias' },
     'joseph_barsabbas': { 'iosepos_barsabbas' },
     'justus': { 'ioustos' },
-    
+
     # Group/people names from NTNames table
     'jews': { 'youdaions', 'ioudaion', 'ioudaions' },
     'jew': { 'youdaion', 'ioudaion' },
@@ -3938,7 +3949,7 @@ def bestSegmentAlignmentScore( rvSegments:List[List[str]], lvSegments:List[List[
     best[0][0] = 0
     # For backtracking, store which segment was matched
     prev = [[None]*(numCols+1) for _ in range(numRows+1)]
-    
+
     for i in range(numRows+1):
         for j in range(numCols+1):
             if best[i][j] == NEG: continue
@@ -3955,7 +3966,7 @@ def bestSegmentAlignmentScore( rvSegments:List[List[str]], lvSegments:List[List[
             if j < numCols and total > best[i][j+1]:
                 best[i][j+1] = total
                 prev[i][j+1] = ('skip_lv', i, j)
-    
+
     # Backtrack
     alignment, i, j = [], numRows, numCols
     while i > 0 or j > 0:
@@ -3986,7 +3997,7 @@ def getUnnumberedRVWords( BBB:str, c:int, v:int ) -> set:
         matcher that runs after another one can't tell from it what has already been numbered.
     This reads the live OET-RV lines instead, so we can safely run after the other matchers.
     """
-    
+
     havePsalmTitles = bos_books_codes_py.has_psalm_title( BBB, str(c) )
     desiredV = (v-1) if havePsalmTitles and v>1 else v
     freeWords = set()
@@ -4068,14 +4079,14 @@ def matchWordPhrases( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:Lis
                 lvNumber = getLVWordNumber( lvWordStr )
                 lvWordSimple = simplifyRVLVWord( lvWordStr.split( '¦' )[0] )
                 if lvNumber is None or lvWordSimple != lvWord:
-                    isMatch = False; 
+                    isMatch = False;
                     if BBB == 'MRK' and c == 1 and v == 42 and lvWords == ('he', 'was', 'cleansed'):
                         break
                 lvNumbers.add( lvNumber )
-            if isMatch and len( lvNumbers ) == 1: 
+            if isMatch and len( lvNumbers ) == 1:
                 lvNum = lvNumbers.pop()
                 candidates.append( (ix, lvNum) )
-        if candidates: 
+        if candidates:
             lvCandidates[ lvWords ] = candidates
     if not lvCandidates: return 0,0
 
@@ -4106,7 +4117,7 @@ def matchWordPhrases( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:Lis
         # Check if this LV phrase exists in the current verse
         if lvWords not in lvCandidates:
             continue
-        
+
         lvCandidatesForThisPhrase = lvCandidates[lvWords]
         if reversedOrder: lvCandidatesForThisPhrase = lvCandidatesForThisPhrase[::-1] # The OET-RV meets them in the opposite order
         for candidateIx,lvNumber in lvCandidatesForThisPhrase: # The OET-LV phrases, in the order the OET-RV meets them
@@ -4141,7 +4152,7 @@ def alignGap( rvGap:List[str], gapGroups:List[dict], CANDIDATE_PAIRS:dict, still
         alts = [ simplifyRVLVWord(a) for a in grp['alts'] ]
         lvAlts.append( alts )
         lvNumbers.append( grp['num'] )
-    
+
     # Score matrix for monotone alignment
     n, m = len(rvPlain), len(lvAlts)
     scoreMatrix = [ [ None ]*m for _ in range(n) ]
@@ -4239,7 +4250,7 @@ def matchOrderedRuns( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:Lis
         try: numB = int( rvWordList[ni].split('¦',1)[1] )
         except (ValueError, IndexError): continue
         gapGroups = [grp for grp in lvGroups if grp['num'] is not None and grp['num'] > numA and grp['num'] < numB]
-        
+
         # Try exact gap size matching first (original logic)
         if len(rvGap) > 0 and len(gapGroups) > 0 and len(rvGap) == len(gapGroups):
             if any( simplifyRVLVWord( w ) not in stillFree for w in rvGap ): continue
@@ -4452,20 +4463,20 @@ def matchWordsInOrder( BBB:str, c:int,v:int, rvVerseText:str, rvWordList:List[st
     # Enhance word-level scoring with segment context for high-frequency words
     rvPlainWords = [ rvWord for _,rvWord,_ in rvRows ]
     lvPlainWords = [ lvWord for _,lvWord,_ in lvCols ]
-    
+
     # Build bigram context maps for context-aware scoring
     rvBigrams = {}
     for i in range(len(rvPlainWords)-1):
         bigram = (rvPlainWords[i], rvPlainWords[i+1])
         rvBigrams[i] = bigram
         rvBigrams[i+1] = (rvPlainWords[i], rvPlainWords[i+1])
-    
+
     lvBigrams = {}
     for i in range(len(lvPlainWords)-1):
         bigram = (lvPlainWords[i], lvPlainWords[i+1])
         lvBigrams[i] = bigram
         lvBigrams[i+1] = (lvPlainWords[i], lvPlainWords[i+1])
-    
+
     # Re-score with bigram context boost for high-frequency words
     boostCount = 0
     for rowIx,(rvIx,rvWord,rvSearchWord) in enumerate( rvRows ):
@@ -4755,10 +4766,10 @@ def matchWordsBesideLvAnchor( BBB:str, c:int,v:int, rvWordList:List[str], addSpa
     """
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
         fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsBesideLvAnchor( {BBB} {c}:{v} {rvWordList} )" )
-    
-    
+
+
     assert rvWordList and lvWordList
-    
+
     has_anchor = any( addCode in ANCHOR_ADD_CODE_TESTS for addCode,firstIx,lastIx in addSpans )
     if not has_anchor: return 0,0
 
@@ -4781,44 +4792,44 @@ def matchWordsBesideLvAnchor( BBB:str, c:int,v:int, rvWordList:List[str], addSpa
         for rvIx in range( firstIx, lastIx+1 ): spanAtIx[rvIx] = (addCode,firstIx,lastIx)
 
     stillFree = getUnnumberedRVWords( BBB, c,v )
-        
+
     numAdded = numNS = 0
     for addCode,firstIx,lastIx in addSpans:
         if addCode not in ANCHOR_ADD_CODE_TESTS: continue
-        
-        if any( '¦' in rvWordList[rvIx] for rvIx in range( firstIx, lastIx+1 ) ): 
-            
+
+        if any( '¦' in rvWordList[rvIx] for rvIx in range( firstIx, lastIx+1 ) ):
+
             continue # Already numbered
-        
-        if any( '¦' in rvWordList[rvIx] for rvIx in range( firstIx, lastIx+1 ) ): 
-            
+
+        if any( '¦' in rvWordList[rvIx] for rvIx in range( firstIx, lastIx+1 ) ):
+
             continue # Already numbered
         still_free_check = any( simplifyRVLVWord( rvWordList[rvIx] ) not in stillFree for rvIx in range( firstIx, lastIx+1 ) )
-        
+
         if still_free_check:
-            
+
             continue # One of the earlier matchers got there first
-        
+
         candidateList = []
-        
+
         for rvDirection in ( -1, 1 ): # Look at the numbered OET-RV word before the span, then the one after
             rvIx = firstIx - 1 if rvDirection == -1 else lastIx + 1
-            
+
             while 0 <= rvIx < len( rvWordList ):
                 span = spanAtIx.get( rvIx )
-                if span is None: 
-                    
+                if span is None:
+
                     break # A plain OET-RV word
-                if span[1] == span[2]: 
-                    
+                if span[1] == span[2]:
+
                     break # A one-word span, which stands for one OET-LV word
-                
+
                 rvIx += rvDirection # Skip over a longer span, which can stand for several OET-LV words
-            if not ( 0 <= rvIx < len( rvWordList ) ): 
-                
+            if not ( 0 <= rvIx < len( rvWordList ) ):
+
                 continue
             anchorNumber = getRVWordNumber( rvWordList[rvIx] )
-            
+
             if anchorNumber is None: continue
             # Group consecutive LV indexes with the same number (they form a single LV word split by underscores)
             rawAnchorLVIndexes = [ lvIx for lvIx,lvWordStr in enumerate( lvWordList ) if getLVWordNumber( lvWordStr ) == anchorNumber ]
@@ -4827,9 +4838,9 @@ def matchWordsBesideLvAnchor( BBB:str, c:int,v:int, rvWordList:List[str], addSpa
             for idx in rawAnchorLVIndexes:
                 if not anchorLVIndexes or idx != anchorLVIndexes[-1] + 1:
                     anchorLVIndexes.append( idx )
-            
-            if len( anchorLVIndexes ) != 1: 
-                
+
+            if len( anchorLVIndexes ) != 1:
+
                 continue # The OET-LV word number covers more than one distinct OET-LV word
             # For a group of consecutive LV words with the same number, we need to look
             # at the word AFTER the group (rvDirection=-1, anchor before span) or
@@ -4865,15 +4876,15 @@ def matchWordsBesideLvAnchor( BBB:str, c:int,v:int, rvWordList:List[str], addSpa
                 if not lvWordIsProperNoun( lvWordRow, 'NT' if NT else 'OT' ): continue
             if len( simplifyRVLVWord( lvWord ) ) < MIN_ANCHORED_ADD_WORD_LENGTH: continue
             candidateList.append( (lvNumber,lvWord,lvWordRow) )
-        
+
         candidateNumbers = { candidate[0] for candidate in candidateList }
-        
-        
+
+
         # Fallback for @ spans: if anchor-based approach failed, try matching to free LV pronouns directly
         if not candidateList and addCode == '@':
-            
-            
-            
+
+
+
             # Find free LV pronouns in this verse
             freeLVPronouns = []
             for lvWordStr in lvWordList:
@@ -4881,7 +4892,7 @@ def matchWordsBesideLvAnchor( BBB:str, c:int,v:int, rvWordList:List[str], addSpa
                 if lvNumber is None or lvNumber in usedLVNumbers: continue
                 lvWord = lvWordStr.split( '¦' )[0]
                 simplified = simplifyRVLVWord( lvWord )
-                
+
                 if simplified in PERSON_PRONOUN_WORDS:
                     try:
                         _lvWord, lvNumber, lvWordRow = getLVWordRow( lvWordStr, 'NT' if NT else 'OT' )
@@ -4889,7 +4900,7 @@ def matchWordsBesideLvAnchor( BBB:str, c:int,v:int, rvWordList:List[str], addSpa
                         logging.critical( f"matchWordsBesideLvAnchor() fallback {e} from {BBB} {c}:{v} {lvWordStr=}" )
                         continue
                     freeLVPronouns.append( (lvNumber, lvWord, lvWordRow) )
-            
+
             if len( freeLVPronouns ) == 1:
                 candidateList = freeLVPronouns
             elif len( freeLVPronouns ) > 1:
@@ -4923,11 +4934,11 @@ def matchWordsBesideLvAnchor( BBB:str, c:int,v:int, rvWordList:List[str], addSpa
                                     continue
                                 candidateList = [(lvNumber, lvWord, lvWordRow)]
                                 break
-        
+
         # Recompute candidateNumbers after potential fallback
         candidateNumbers = { candidate[0] for candidate in candidateList }
-        
-        
+
+
         if len( candidateNumbers ) != 1:
             if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  matchWordsBesideLvAnchor() skipping {BBB} {c}:{v} '\\add {addCode}{' '.join(rvWordList[firstIx:lastIx+1])}\\add*' with {len(candidateNumbers)} OET-LV candidates" )
@@ -4965,12 +4976,12 @@ def matchRepeatedWords( BBB:str, c:int,v:int, rvWordList:List[str], addSpans:Lis
     numAdded = numNS = 0
     for addCode,firstIx,lastIx in addSpans:
         if addCode != REPEAT_ADD_CODE: continue
-        
-        if any( '¦' in rvWordList[rvIx] for rvIx in range( firstIx, lastIx+1 ) ): 
-            
+
+        if any( '¦' in rvWordList[rvIx] for rvIx in range( firstIx, lastIx+1 ) ):
+
             continue # Already numbered
         if any( simplifyRVLVWord( rvWordList[rvIx] ) not in stillFree for rvIx in range( firstIx, lastIx+1 ) ):
-            
+
             continue # One of the earlier matchers got there first
         phrase = [ simplifyRVLVWord( rvWordList[rvIx] ) for rvIx in range( firstIx, lastIx+1 ) ]
         if not any( phrase == [ simplifyRVLVWord( rvWordList[rvIx2] ) for rvIx2 in range( rvIx, rvIx+len(phrase) ) ]
@@ -5247,7 +5258,7 @@ def matchSpecialistAddSpans( BBB:str, c:int,v:int, rvWordList:List[str], addSpan
         evidence than the OET-RV and OET-LV words happening to look similar.
     """
     numAdded = numNS = 0
-    
+
     for matcher in ( matchWordsBesideLvAnchor, matchRepeatedWords, matchNamesViaTraditionalNames ):
         result,resultNS = matcher( BBB, c,v, rvWordList, addSpans, lvWordList )
         numAdded += result
