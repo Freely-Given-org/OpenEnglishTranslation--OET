@@ -138,4 +138,5 @@ Of course, we’re very happy to list contributors if you desire that. (Not ever
 
 Continue checking spelling from Mat 7:18 onwards --
     done Mrk
-Continue revising Mark formatting from Mrk 9:3 onwards. Then Ruth.
+Continue revising Matthew formatting from Mat 2:13 onwards. Then Ruth???
+    done Mrk

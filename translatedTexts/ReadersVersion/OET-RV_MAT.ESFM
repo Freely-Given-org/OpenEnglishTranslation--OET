@@ -1,4 +1,4 @@
-\id MAT - Open English Translation—Readers' Version (OET-RV) v0.5.9
+\id MAT - Open English Translation—Readers' Version (OET-RV) v0.5.11
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 MAT
@@ -33,8 +33,8 @@
 \p
 \v 1 \add This is\add* \add ≈a genealogy\add* of \nd Yeshua¦3\nd* (Grk: \add !Yaysous\add*) the¦4 \nd messiah¦4\nd* (Grk: \add !Christ\add*) a descendant of \add King\add* David¦6, a descendant of Abraham¦8 (Grk: \add !Abraam¦8\add*).
 \p
-\v 2 Abraham \add ≈was the father of\add* Isaac, Isaac \add ≈the father of\add* Yacob (Grk: \add !Yakob¦17\add*), Yacob \add ≈the father of\add* Yudah¦22 (Grk: \add !Youdas¦22\add*) and¦23 his¦26 brothers¦25.
-\v 3 Yudah¦27 \add ≈was the father of\add* Perez (Grk: \add !Fares¦31\add*) and¦32 Zerah (Grk: \add !Zara¦34\add*) through Tamar (Grk: \add !Thamar¦37\add*), Perez \add ≈the father of\add* Hezron (Grk: \add !Hezrom\add*), Hezron \add ≈the father of\add* Aram¦47,
+\v 2 Abraham \add ≈was the father of\add* Isaac, Isaac \add ≈the father of\add* Yacob (Grk: \add !Yakob¦17\add*), Yacob \add ≈the father of\add* Yehudah¦22 (Grk: \add !Youdas¦22\add*) and¦23 his¦26 brothers¦25.
+\v 3 Yehudah¦27 \add ≈was the father of\add* Perez (Grk: \add !Fares¦31\add*) and¦32 Zerah (Grk: \add !Zara¦34\add*) through Tamar (Grk: \add !Thamar¦37\add*), Perez \add ≈the father of\add* Hezron (Grk: \add !Hezrom\add*), Hezron \add ≈the father of\add* Aram¦47,
 \v 4 Aram¦48 \add ≈the father of\add* Aminadab, Aminadab \add ≈the father of\add* Nahshon (Grk: \add !Naasson¦57\add*), Nahshon \add ≈the father of\add* Salmon¦62,
 \v 5 Salmon¦63 \add ≈the father of\add* Boaz (Grk: \add !Boes\add*) through Rahab¦70, Boaz \add ≈the father of\add* Obed (Grk: \add !Yobed\add*) through Ruth¦78 (Grk: \add !Routh\add*), and¦80 Obed \add ≈the father of\add* Yishay¦83 \add !(Jesse¦83, Grk: \add !Yessai¦83\add*)\add*,
 \v 6 and¦85 Yishay¦84 the father of¦98 David¦88 the¦89 king¦90.
@@ -57,67 +57,66 @@
 \r (Luke 1:26-38; 2:1-7)
 \p
 \v 18 \add Now\add* this is how the¦289 birth¦290 of \nd Yeshua¦287\nd* \add ≈came about¦287\add*: Maria¦299 his¦298 mother¦297 was engaged¦294 to Yosef¦301. But¦285 before¦302 they came together¦304, she¦306 was found¦306 to be pregnant through \add the work of\add* the holy¦312 \nd spirit¦311\nd*.\x + \xo 1:18: \xt Luk 1:27.\x*
-\v 19 \add ≈But¦314\add* her husband¦316 \add to be\add*, Yosef¦313, was¦326 a \add ≈godly\add* \add >man\add*, and¦314 not¦321 wishing to disgrace Maria, he decided to quietly divorce her.
-\v 20 But¦331 as he was¦340 pondering this, one of Yahweh's messengers¦335 appeared¦340 to him in a dream¦339 and told¦342 him, “Yosef¦343, descendant of \add King\add* David¦345, don't¦346 be¦347 afraid¦347 to marry Maria¦349, because¦354 the baby in her¦356 has been¦357 conceived by the holy¦361 \nd spirit¦359\nd*.
-\v 21 In due course she'll¦363 have a son¦365 and¦364 you'll¦367 name¦369 him¦370 \nd Yeshua¦371\nd*, because¦373 he'll¦372 save¦374 his¦370 people¦376 from¦378 their¦381 sins¦380.”\x + \xo 1:21: \xt Luk 1:31.\x*
+\v 19 \add ≈But¦314\add* her husband¦316 \add to be\add*, Yosef¦313, was¦326 a \add ≈godly\add* \add >man\add*, and¦314 not¦321 wishing to disgrace Maria, he \add ≈decided to quietly divorce\add* her.
+\v 20 But¦331 as he was¦340 pondering that, one of Yahweh's messengers¦335 appeared¦340 to him in a dream¦339 and told¦342 him, “Yosef¦343, descendant of \add King\add* David¦345, don't¦346 be¦347 afraid¦347 to marry Maria¦349, because¦354 the baby in her¦356 has been¦357 conceived by the holy¦361 \nd spirit¦359\nd*.
+\v 21 \add In due course\add* she'll¦363 have a son¦365 and¦364 you'll¦367 \add ≈name¦369\add* him¦370 \nd Yeshua¦371\nd*, because¦373 he'll¦372 save¦374 his¦370 people¦376 from¦378 their¦381 sins¦380.”\x + \xo 1:21: \xt Luk 1:31.\x*
 \p
-\v 22 Now all¦384 this¦382 happened in¦386 fulfilment¦387 of what \nd Yahweh¦392\nd* had said¦397 through¦393 the¦395 prophet¦396,
-\v 23 “Listen¦398, the¦399 virgin¦400 will¦403 get pregnant and she'll have¦403 a son¦406, and they'll¦408 call¦408 him¦412 Immanuel¦413 \add (in Hebrew)\add* which¦414 means¦416 ‘\nd God¦420\nd* with¦417 us¦418.’ ”\x + \xo 1:23: \xt Isa 7:14 (LXX).\x*
+\v 22 \add ≈Now\add* all¦384 that¦382 happened in¦386 fulfilment¦387 of what \nd Yahweh¦392\nd* had said¦397 through¦393 the¦395 prophet¦396,
+\v 23 “Listen¦398, the¦399 virgin¦400 will¦403 \add ≈get pregnant\add* and she'll have¦403 a son¦406, and they'll¦408 call¦408 him¦412 Immanuel¦413 \add (in Hebrew)\add* which¦414 \add ≈means¦416\add* ‘\nd God¦420\nd* with¦417 us¦418.’ ”\x + \xo 1:23: \xt Isa 7:14 (LXX).\x*
 \p
-\v 24 Then¦423 Yosef¦425 got up and did¦429 what Yahweh's messenger¦434 had¦421 commanded¦431 him¦432, and he went ahead and married Maria,
-\v 25 but¦442 he¦456 didn't¦443 sleep with her¦446 until¦447 after she¦449 gave birth. And¦442 Yosef named the¦457 boy \nd Yeshua¦460\nd*.\x + \xo 1:25: \xt Luk 2:21.\x*
+\v 24 Then¦423 Yosef¦425 \add ≈got up\add* and did¦429 what Yahweh's messenger¦434 had¦421 commanded¦431 him¦432, and he \add went ahead and\add* married \add @Maria\add*,
+\v 25 \add ≈but¦442\add* he¦456 didn't¦443 sleep with her¦446 until¦447 \add after\add* she¦449 had given birth. Yosef named \add @the boy\add* \nd Yeshua¦460\nd*.\x + \xo 1:25: \xt Luk 2:21.\x*
 \c 2
 \s1 Easterners come to worship the new king
 \rem /s1 The Visit of the Wise Men; The Visit of the Magi; Visitors from the East
 \p
-\v 1 After \nd Yeshua¦463\nd* had¦464 been¦464 born¦464 in Bethlehem¦466 in the province of Yudea¦468 during the time¦470 of King¦473 Herod¦471, watchers of signs arrived¦478 in Yerushalem¦480 from¦476 the east¦477
-\v 2 and asked¦481, “Where's¦482 the one born¦485 as king¦486 of¦487 the Jews¦488? We¦489 saw¦489 his¦491 star¦493 in¦494 the¦495 east¦496 and we¦498 came¦498 to¦499 worship him¦500.”
+\v 1 \add ≈After\add* \nd Yeshua¦463\nd* had¦464 been¦464 born¦464 in Bethlehem¦466 in Yudea¦468 province during the time¦470 of King¦473 Herod¦471, \add ?≈watchers of signs\add* arrived¦478 in Yerushalem¦480 from¦476 the east¦477
+\v 2 and \add ≈asked¦481\add*, “Where's¦482 the one born¦485 as king¦486 of¦487 the Jews¦488? We¦489 saw¦489 his¦491 star¦493 in¦494 the¦495 east¦496 and we¦498 came¦498 to¦499 \add ≈worship\add* him¦500.”
 \p
-\v 3 Now when King¦505 Herod¦506 heard¦501 this, he was¦507 upset—and¦508 all¦509 of Yerushalem¦510 as well.
-\v 4 He¦522 gathered¦514 together¦514 all¦515 the¦516 chief¦517 priests¦517 and religious¦519 teachers¦519 and asked them¦524 where¦525 the¦527 \nd Messiah¦527\nd* was¦522 expected to be born¦528.
+\v 3 \add ≈Now when\add* King¦505 Herod¦506 heard¦501 that, he was¦507 upset, and¦508 all¦509 of Yerushalem¦510 \add ≈as well\add*.
+\v 4 He¦522 gathered¦514 together¦514 all¦515 the¦516 chief¦517 priests¦517 and religious¦519 teachers¦519 and asked them¦524 where¦525 the¦527 \nd Messiah¦527\nd* was¦522 \add expected\add* to be born¦528.
 \p
-\v 5 And¦530 they¦529 told him¦532, “It'll be¦539 in Bethlehem¦534 in Yudea¦536, because¦538 the¦541 prophet¦542 wrote¦539:\x + \xo 2:5-6: \xt Mic 5:2.\x*
+\v 5 “It'll be¦539 in Bethlehem¦534 in Yudea¦536,” they¦529 told him¦532, “because¦538 the¦541 prophet¦542 wrote¦539:\x + \xo 2:5-6: \xt Mic 5:2.\x*
 \q1
-\v 6 ‘You¦544, Bethlehem¦545 in the¦557 land¦546 of¦549 Yudah¦549,
-\q2 are¦555 not the most insignificant of the leaders¦558 of Yudah,
+\v 6 ‘You¦544, Bethlehem¦545 in Yehudah's¦549 \add ≈territory\add*,
+\q2 are¦555 not the most insignificant of the Yehudah's leaders¦558,
 \q1 because¦563 a¦566 leader will¦568 come¦565 from you¦562
 \q2 who¦567 will guide my¦571 people¦570 Yisrael¦573.’ ”
 \p
-\v 7 Then¦574 Herod¦575 sent for the watchers of¦586 signs and met secretly¦576 with them¦583 to determine when the star¦588 had¦577 first appeared¦587.
-\v 8 Then¦589 he¦594 sent¦590 them¦591 on to Bethlehem¦593 with these instructions: “Go on and carefully investigate about the¦601 child¦602, and when¦604 you¦606 find¦606 him, report¦609 back to me¦610 so¦611 that¦611 I can also¦612 come¦613 and worship him.”
+\v 7 Then¦574 Herod¦575 sent for the \add ≈watchers of¦586 signs\add* and \add met\add* secretly¦576 with them¦583 to determine when the star¦588 had¦577 \add first\add* appeared¦587.
+\v 8 Then¦589 he¦594 sent¦590 them¦591 \add on\add* to Bethlehem¦593 \add ≈with these instructions\add*: “Go on and carefully investigate about the¦601 child¦602, and when¦604 you¦606 find¦606 him, report¦609 \add back\add* to me¦610 so¦611 that¦611 I can also¦612 come¦613 and \add ≈worship\add* him.”
 \p
-\v 9 So¦617 when the¦620 king¦621 had finished speaking, they departed, and the¦625 star¦626 which¦627 they could see¦624 in¦629 the¦630 east¦631 went¦632 ahead¦632 of them¦634 and stopped above the place where¦640 the¦642 child¦644 was¦641.
-\v 10 Seeing this, the¦648 watchers of signs were¦650 very¦653 happy indeed.
-\v 11 As they entered the¦657 house¦658, they saw¦659 the¦661 child¦663 with¦665 his¦669 mother¦668 Maria¦666. They¦672 bowed low and worshipped him¦673, then¦654 they opened¦675 their¦678 chests and presented gifts¦681 of¦678 gold¦682, frankincense¦684, and myrrh¦686.
+\v 9 \add ≈So¦617 when\add* the¦620 king¦621 had finished speaking, they departed, and the¦625 star¦626 which¦627 they could see¦624 in¦629 the¦630 east¦631 went¦632 ahead¦632 of them¦634 and stopped above \add the place\add* where¦640 the¦642 child¦644 was¦641.
+\v 10 Seeing that, \add @the watchers of signs\add* were¦650 very¦653 happy \add ≈indeed\add*.
+\v 11 As they entered the¦657 house¦658, they saw¦659 the¦661 child¦663 with¦665 his¦669 mother¦668 Maria¦666. They¦672 bowed low and worshipped him¦673, then¦654 they opened¦675 their¦678 \add ≈chests\add* and presented gifts¦681 of¦678 gold¦682, frankincense¦684, and myrrh¦686.
 \p
-\v 12 But¦687 because they'd been¦688 warned¦688 in¦689 a dream¦690 not¦691 to return¦692 to King Herod¦694, they went home again to their¦703 own country¦702.
+\v 12 \add ≈However¦687,\add* \add because\add* they'd been¦688 warned¦688 in¦689 a dream¦690 not¦691 to return¦692 to \add King\add* Herod¦694, they went \add home again\add* to their¦703 \add ≈own\add* country¦702.
 \s1 The family escape to Egypt
 \rem /s1 The Escape to Egypt
 \p
-\v 13 After they'd departed, one of¦735 \nd Yahweh's\nd* messengers¦714 appeared¦716 to Yosef¦722 in a dream¦718 and said¦725, “Get up and take¦727 the child and his¦735 mother¦734 and flee¦737 to Egypt¦739 \add !(Mitsrayim¦739)\add*. Remain there¦742 until¦743 I tell¦745 you¦746, because¦749 \add King\add* Herod¦750 will soon search for¦749 the child in order to kill¦757 him¦758.”
+\v 13 \add ≈After they'd departed\add*, \add ≈one of\add* \nd Yahweh's\nd* messengers¦714 appeared¦716 to Yosef¦722 in a dream¦718 and said¦725, “\add ≈Leave now\add* and take¦727 the child and his¦735 mother¦734, and flee¦737 to Egypt¦739 \add !(Mitsrayim¦739)\add*. Remain there¦742 until¦743 I tell¦745 you¦746, because¦749 \add King\add* Herod¦750 \add ≈will soon\add* search for¦749 the child \add in order\add* to kill¦757 him¦758.”
 \p
-\v 14 So¦761 Yosef got up during the night¦773 and took¦764 the¦765 child¦767 and his¦772 mother¦771 and departed for Egypt¦777.
-\v 15 They stayed there¦780 until¦781 the¦782 death¦783 of Herod¦784, in¦785 order¦785 to fulfil¦786 what \nd Yahweh¦791\nd* had¦788 said¦795 through¦792 the¦793 prophet¦794 \add Hoshea\add*: “I called¦798 my¦801 son¦800 out¦796 of Egypt¦797.”\x + \xo 2:15: \xt Hos 11:1.\x*
+\v 14 \add ≈So¦761\add* \add @Yosef\add* \add got ready during\add* the night¦773 and took¦764 the¦765 child¦767 and his¦772 mother¦771 and departed for Egypt¦777.
+\v 15 \add #They\add* stayed there¦780 until¦781 Herod's death¦783, in¦785 order¦785 to fulfil¦786 what \nd Yahweh¦791\nd* had¦788 said¦795 through¦792 the¦793 prophet¦794 \add Hoshea\add*: “I called¦798 my¦801 son¦800 out¦796 of Egypt¦797.”\x + \xo 2:15: \xt Hos 11:1.\x*
 \s1 The slaughter of baby boys
 \rem /s1 The Massacre of the Infants
 \p
-\v 16 When¦802 \add King\add* Herod¦803 realised that he'd been tricked by¦807 the watchers of signs, he got very¦811 angry and gave orders that all¦815 the sons in¦819 Bethlehem¦820 and its¦826 districts that were two¦829 years¦829 old and younger be killed¦814, because that was¦806 the period that he'd found out¦813 from¦839 the watchers of signs.
+\v 16 \add ≈When¦802\add* \add King\add* Herod¦803 realised that he'd been \add ≈tricked\add* by¦807 the \add ≈watchers of signs\add*, he got very¦811 angry and \add ≈gave orders\add* that all¦815 the \add ≈sons\add* in¦819 Bethlehem¦820 and its¦826 districts that were two¦829 years¦829 old and younger be killed¦814, \add ≈because that was¦806 the period\add* that he'd found out¦813 from¦839 the \add ≈watchers of signs\add*.
 \p
-\v 17 That fulfilled¦843 what had¦845 been¦845 spoken¦845 through¦848 the¦850 prophet¦851 Jeremiah, who said¦852:
+\v 17 That fulfilled¦843 what had¦845 been¦845 spoken¦845 through¦848 the¦850 prophet¦851 Yirmeyah \add !(Jeremiah)\add*, who said¦852:
 \q1
-\v 18 The¦865 sound of¦867 great¦862 weeping¦859 and¦868 mourning¦861 was¦856 heard¦856 in¦854 Ramah¦855;\x + \xo 2:18: \xt Jer 31:15.\x*
-\s1 Yosef's family return to Nazareth
+\v 18 The¦865 sound of¦867 terrible¦862 weeping¦859 and¦868 mourning¦861 was¦856 heard¦856 in¦854 Ramah¦855;\x + \xo 2:18: \xt Jer 31:15.\x*
+\q1 Rahel \add !(Rachel¦863)\add* weeping for¦865 her¦867 children¦866, and \add ≡she\add* didn't¦869 want¦870 to¦872 be¦872 comforted¦872,
+\q2 because¦873 \add @her children\add* \add ≈were no more\add*.
+\s1 Yosef's family return to Nazaret
 \rem /s1 The Return from Egypt; The Return to Nazareth
 \p
-\q1 Rachel¦863 weeping for¦865 her¦867 children¦866, and she didn't¦869 want¦870 to¦872 be¦872 comforted¦872,
-\q2 because¦873 her children were no more.
+\v 19 \add ≈After\add* \add King\add* Herod¦879 died¦876, \add one of\add* \nd Yahweh's\nd* messengers¦881 appeared¦883 to¦888 Yosef¦888 in Egypt¦890 in a dream¦885
+\v 20 and said¦891, “\add ≈Get ready\add* and take¦893 the¦894 child¦896 and his¦901 mother¦900 \add back\add* to Yisrael¦906, because¦908 the ones wanting \add ≈to kill him\add* have¦907 died¦907.”
+\v 21 \add ≈So¦917\add* \add @Yosef\add* \add ≈packed up\add* and took¦920 the¦921 child¦923 and his¦928 mother¦927 and went¦930 \add back\add* to Yisrael¦935.
 \p
-\v 19 After \add King\add* Herod¦879 died¦876, one of \nd Yahweh's\nd* messengers¦881 appeared¦883 to¦888 Yosef¦888 in Egypt¦890 in a dream¦885
-\v 20 and said¦891, “Get up and take¦893 the¦894 child¦896 and his¦901 mother¦900 and go¦903 \add back\add* to the land¦905 of¦906 Yisrael¦906, because¦908 the ones wanting to kill him¦901 have¦907 died¦907.”
-\v 21 So¦917 Yosef got up and took¦920 the¦921 child¦923 and his¦928 mother¦927 and went¦930 \add back\add* to Yisrael¦935.
-\p
-\v 22 But¦954 when he heard¦936 that¦938 Archelaus¦939 was¦950 reigning¦940 over¦943 Yudea instead¦944 of¦944 his¦948 father¦947 Herod¦949, and \add also\add* having¦953 been¦953 warned¦953 in¦955 a dream¦956, he left \add Yudea\add* and went¦952 to¦952 the¦959 Galilee¦962 area.
-\v 23 Once he got there, he settled into¦966 the town¦967 of \nd Nazareth¦969\nd*, so¦970 that¦970 what had been¦973 spoken¦973 through¦975 the¦976 prophets¦977 would be fulfilled¦971: “He'll¦980 be called¦980 a Nazarene¦979.”\f + \fr 2:23 \ft This is not a specific quote from the Hebrew Scriptures, but note that Matthew does say ‘the prophet\+bd s\+bd*’ (not ‘the prophet’). This could be: ¹A play on Hebrew ‘נצר’ from Yeshayah (Isaiah) 11:1 where ‘branch/shoot’ (netser) is similar to ‘Natsaret’ (Nazareth/natsrat), ²a play on Shimshon (Samson) the ‘Nazirite’ (נְזִיר) from Heroes (Judges) 13:5,7, or ³just a slur on Yeshua being from insignificant Nazareth as per Yohan (John) 1:46.\f*\x + \xo 2:23: \xt Mrk 1:24; Luk 2:39; Yhn 1:45.\x*
+\v 22 However¦954, when he heard¦936 that¦938 Arkelaos¦939 was¦950 reigning¦940 over¦943 Yudea instead¦944 of¦944 his¦948 father¦947 Herod¦949, and \add also\add* having¦953 been¦953 warned¦953 in¦955 a dream¦956, he left \add Yudea\add* and went¦952 \add north\add* to¦952 the¦959 Galilee¦962 area.
+\v 23 Once he got there, he settled into¦966 the town¦967 of Nazaret¦969, so¦970 that¦970 what had been¦973 spoken¦973 through¦975 the¦976 prophets¦977 would be fulfilled¦971: “He'll¦980 be called¦980 a Nazarene¦979.”\f + \fr 2:23 \ft This is not a specific quote from the Hebrew Scriptures, but note that Matthew does say ‘the prophet\+bd s\+bd*’ (not ‘the prophet’). This could be: ¹A play on Hebrew ‘נצר’ from Yeshayah (Isaiah) 11:1 where ‘branch/shoot’ (netser) is similar to ‘Natsaret’ (Nazaret/natsrat), ²a play on Shimshon (Samson) the ‘Nazirite’ (נְזִיר) from Heroes (Judges) 13:5,7, or ³just a slur on Yeshua being from insignificant Nazaret as per Yohan (John) 1:46.\f*\x + \xo 2:23: \xt Mrk 1:24; Luk 2:39; Yhn 1:45.\x*
 \c 3
 \s1 Yohan-the-immerser's preaching
 \rem /s1 The Proclamation of John the Baptist; John the Baptist and Jesus; The Preaching of John the Baptist; John the Baptist Prepares the Way
@@ -178,7 +177,7 @@
 \r (Mark 1:14-15; Luke 4:14-15)
 \p
 \v 12 When¦1557 Yeshua heard¦1556 that¦1560 Yohan¦1561 had¦1556 been¦1563 arrested¦1563, he¦1564 withdrew¦1564 up to Galilee¦1567.\x + \xo 4:12: \xt Mat 14:3; Mrk 6:17; Luk 3:19-20.\x*
-\v 13 He¦1574 moved from \nd Nazareth¦1572\nd* across to Capernaum¦1576 beside the lake in¦1582 the region¦1583 that¦1577 had been¦1577 given to the tribes of¦1584 Zebulun¦1584 and¦1585 Naftali¦1586,\x + \xo 4:13: \xt Yhn 2:12.\x*
+\v 13 He¦1574 moved from Nazaret¦1572 across to Capernaum¦1576 beside the lake in¦1582 the region¦1583 that¦1577 had been¦1577 given to the tribes of¦1584 Zebulun¦1584 and¦1585 Naftali¦1586,\x + \xo 4:13: \xt Yhn 2:12.\x*
 \v 14 so that¦1587 what had¦1590 been¦1590 written by¦1591 the¦1593 prophet¦1594 Yeshayah¦1592 would come true,
 \q1
 \v 15 ‘Land¦1600 of Zebulun and¦1599 land¦1600 of Naftali,\x + \xo 4:15-16: \xt Isa 9:1-2.\x*
@@ -924,13 +923,13 @@
 \p “Yes¦9134,” his apprentices answered.
 \p
 \v 52 Then¦9137 he¦9136 said¦9139 to¦9141 them¦9141, “\wj Because¦9142 of this¦9143, every¦9144 teacher who's¦9160 been¦9146 trained¦9146 about¦9142 the¦9153 heavenly¦9154 kingdom¦9151 is¦9157 like a¦9158 home¦9159 owner¦9159 who gives presents of both new¦9167 and¦9137 old¦9169 things of out¦9163 their valuables.\wj*”
-\s1 Those from Nazareth cannot accept the messiah
+\s1 Those from Nazaret cannot accept the messiah
 \rem /s1 Jesus Is Rejected at Nazareth; A Prophet Without Honour
 \r (Mark 6:1-6; Luke 4:16-30)
 \p
 \v 53 After \nd Yeshua¦9175\nd* had finished¦9173 explaining the¦9174 parables¦9177, he¦9179 left that place,
 \rem /s1 The Rejection of Jesus at Nazareth
-\v 54 went¦9182 to his hometown¦9186 \add of Nazareth\add*, and taught¦9188 the people in¦9190 the \add ≈Jewish¦9192 meeting¦9192 hall¦9192\add*. They were amazed¦9195 at his teaching¦9188, asking \add each other\add*, “Where¦9199 did this¦9207 fellow¦9200 get his wisdom¦9206 and his ability to do miracles¦9210?
+\v 54 went¦9182 to his hometown¦9186 \add of Nazaret\add*, and taught¦9188 the people in¦9190 the \add ≈Jewish¦9192 meeting¦9192 hall¦9192\add*. They were amazed¦9195 at his teaching¦9188, asking \add each other\add*, “Where¦9199 did this¦9207 fellow¦9200 get his wisdom¦9206 and his ability to do miracles¦9210?
 \v 55 Isn't he the¦9214 son¦9217 of¦9215 Yosef, the carpenter¦9216? Don't¦9211 we know his mother¦9221 Maria¦9224 and his brothers¦9227 Yacob¦9229 and Yosef and Simon¦9235 and Yudas¦9237?
 \v 56 Aren't his¦9241 sisters¦9240 still here in town? So¦9238 where¦9247 did he get all¦9243 these¦9250 abilities?”
 \v 57 As a result, they¦9254 didn't¦9263 have any respect for him.\x + \xo 13:57: \xt Yhn 4:44.\x*
@@ -1111,7 +1110,7 @@
 \p
 \v 13 When¦10912 \nd Yeshua¦10914\nd* arrived in the outskirts of Caesarea¦10918 Philippi¦10920, he asked¦10921 his¦10924 apprentices¦10923, “\wj Who are¦10928 people¦10931 saying¦10928 the¦10935 son¦10936 of humanity¦10938 \+em is\+em*?\wj*”
 \p
-\v 14 “Some say Yohan-the-immerser \add come back to life\add*,” they¦10939 answered¦10941, “but¦10940 others say the \add promised prophet\add* Eliyah¦10950, and¦10940 others, Jeremiah or¦10954 one¦10955 of¦10956 the other¦10949 prophets¦10957.”\x + \xo 16:14: \xt Mat 14:1-2; Mrk 6:14-15; Luk 9:7-8.\x*
+\v 14 “Some say Yohan-the-immerser \add come back to life\add*,” they¦10939 answered¦10941, “but¦10940 others say the \add promised prophet\add* Eliyah¦10950, and¦10940 others, Yirmeyah \add !(Jeremiah)\add* or¦10954 one¦10955 of¦10956 the other¦10949 prophets¦10957.”\x + \xo 16:14: \xt Mat 14:1-2; Mrk 6:14-15; Luk 9:7-8.\x*
 \p
 \v 15 “\wj But¦10963 you yourselves,\wj*” he¦10958 asked¦10958, “\wj Who do \+em you\+em* say I am?\wj*”
 \p
@@ -1408,7 +1407,7 @@
 \p
 \v 10 As they entered Yerushalem¦14317, everyone¦14319 in¦14314 the¦14320 city¦14321 was¦14318 stunned, asking, “Who¦14323 is¦14324 this¦14325?”
 \p
-\v 11 The¦14326 crowds¦14329 responded¦14330, “It's the prophet \nd Yeshua¦14337\nd*—the prophet from¦14339 \nd Nazareth¦14340\nd* in Galilee¦14342!”
+\v 11 The¦14326 crowds¦14329 responded¦14330, “It's the prophet \nd Yeshua¦14337\nd*—the prophet from¦14339 Nazaret¦14340 in Galilee¦14342!”
 \s1 Anger aroused in the temple
 \rem /s1 Jesus Goes to the Temple; Jesus Cleanses the Temple; Jesus Clears the Temple; Jesus at the Temple
 \r (Mark 11:15-19; Luke 19:45-48; Yhn 2:13-22)
@@ -1576,7 +1575,7 @@
 \v 2 “\wj The¦15876 religious¦15877 teachers¦15877 and¦15878 the¦15879 Pharisee¦15880 party¦15880 claim Mosheh's¦15872 authority.\wj*
 \v 3 \wj Because¦15905 of¦15901 that, do everything they tell you to do, and \+add obey all the commands\+add* they tell you to obey. However, don't¦15902 \+add ≈copy\+add* what they \+em do\+em*, because¦15905 they're¦15904 \+add only\+add* good at telling¦15904, not¦15907 doing.\wj*
 \v 4 \wj They¦15909 package up \+add ≈unbearably\+add* heavy¦15914 loads and put them¦15919 on the¦15921 people's¦15924 shoulders¦15922, while they¦15925 themselves won't¦15931 even \+add ≈lift a finger to help\+add*.\wj*
-\v 5 \wj Everything they \+em do\+em* do is \+add only\+add* done to¦15943 be¦15943 a public display in¦15941 front of¦15951 the¦15944 people¦15945, so they have big prayer boxes and¦15952 fancy robes.\wj*\x + \xo 23:5: a \xt 
+\v 5 \wj Everything they \+em do\+em* do is \+add only\+add* done to¦15943 be¦15943 a public display in¦15941 front of¦15951 the¦15944 people¦15945, so they have big prayer boxes and¦15952 fancy robes.\wj*\x + \xo 23:5: a \xt
 Mat 6:1; \xo b \xt Deu 6:8; \xo c \xt Num 15:38.\x*
 \v 6 \wj They¦15959 love¦15959 the best places¦15964 at¦15965 dinners and¦15968 the best seats¦15970 in¦15971 the \+add ≈Jewish¦15973 meeting¦15973 halls¦15973\+add*.\wj*
 \v 7 \wj \+add They love\+add* being¦15981 greeted¦15976 in¦15977 the¦15978 marketplaces¦15979 and addressed as ‘my¦15985 great¦15985 one’.\wj*
@@ -1916,7 +1915,7 @@ Mat 6:1; \xo b \xt Deu 6:8; \xo c \xt Num 15:38.\x*
 \v 69 Meanwhile Peter¦19834 was¦19836 sitting¦19836 outside¦19837 in¦19838 the¦19839 courtyard¦19840 when a servant¦19845 girl¦19845 went up to¦19843 him¦19843 and¦19841 said¦19846, “You were one¦19844 of the ones with¦19850 \nd Yeshua¦19851\nd* from Galilee¦19854.”
 \p
 \v 70 But¦19856 Peter disowned¦19857 Yeshua in front¦19858 of them all¦19860 saying¦19862, “I've¦19864 got no idea what¦19865 you're¦19866 talking¦19862 about.”
-\v 71 Then¦19871 he went¦19869 out¦19869 the¦19875 gate¦19876, but¦19871 someone else saw¦19877 him¦19878 and¦19871 she¦19882 told¦19882 the others, “This man¦19887 was¦19888 with¦19889 \nd Yeshua¦19890\nd* from¦19892 \nd Nazareth¦19892\nd*.”
+\v 71 Then¦19871 he went¦19869 out¦19869 the¦19875 gate¦19876, but¦19871 someone else saw¦19877 him¦19878 and¦19871 she¦19882 told¦19882 the others, “This man¦19887 was¦19888 with¦19889 \nd Yeshua¦19890\nd* from¦19892 Nazaret¦19892.”
 \p
 \v 72 Again¦19894, Peter disowned¦19895 Yeshua with¦19896 an¦19897 oath¦19897, “I don't¦19900 even know¦19901 the¦19902 guy.”
 \p
@@ -1945,7 +1944,7 @@ Mat 6:1; \xo b \xt Deu 6:8; \xo c \xt Num 15:38.\x*
 \v 7 They¦20079 got advice and¦20077 decided to buy¦20079 the¦20084 potter's¦20085 field¦20083 \add that was for sale\add* to make it a cemetery for people from out of¦20084 town,
 \v 8 so that¦20094 place got called¦20091 ‘The¦20095 field¦20095 of¦20096 blood¦20096’ until today¦20099.
 \p
-\v 9 And¦20110 so the message¦20103 which had been¦20104 \add written\add* by the¦20107 prophet¦20108 Jeremiah¦20106 was fulfilled¦20102, ‘They¦20111 took¦20111 the¦20112 thirty¦20113 silver¦20114 coins¦20114, the price of¦20117 the one who was sold, the price set by the Israelis¦20123,\x + \xo 27:9-10: \xt Zech 11:12-13.\x*
+\v 9 And¦20110 so the message¦20103 which had been¦20104 \add written\add* by the¦20107 prophet¦20108 Yirmeyah \add !(Jeremiah¦20106)\add* was fulfilled¦20102, ‘They¦20111 took¦20111 the¦20112 thirty¦20113 silver¦20114 coins¦20114, the price of¦20117 the one who was sold, the price set by the Israelis¦20123,\x + \xo 27:9-10: \xt Zech 11:12-13.\x*
 \v 10 and¦20124 they¦20125 gave¦20125 the coins for¦20129 the¦20132 potter's¦20133 field¦20131, as¦20134 \nd Yahweh¦20137\nd* directed¦20135 me¦20136.’
 \s1 Yeshua faces Pilate
 \rem /s1 Jesus Before Pilate; Jesus' Trial before Pilate; Pilate Questions Jesus

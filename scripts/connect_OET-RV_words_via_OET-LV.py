@@ -18,6 +18,8 @@ Every word in the OET-LV has a word number tag suffixed to it,
 
 This script attempts to deduce how some of those same words are translated in the OET-RV
     and automatically connect them with the same word number tag.
+In general, it attempts to match the longer words and the names / proper nouns
+    in the verse first, the later tries to connect the smaller words.
 
 It does have the potential to make wrong connections that will need to be manually fixed
         when the rest of the OET-RV words are aligned,
@@ -1245,6 +1247,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     # Vocab differences / synonyms
     # RVword, LVwordOrPhrase
     ('about','concerning'),('about','of'),('about','whom'), # Mrk 12:26, 14:71
+    ('above','over'), # Mat 2:9
     ('accusations','testimony'), # Mrk 14:59
     ('addition','And'),
     ('advance','beforehand'),('advance','previously'), # Mrk 13:11,23
@@ -1261,19 +1264,21 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('amazed','marvelling'),
     ('ancestors','fathers'),
     ('and', 'And'),
-    ('angrily','anger'), # Mrk 3:5
+    ('angry','enraged'), # Mat 2:16
+        ('angrily','anger'), # Mrk 3:5
     ('announced','proclaiming'), ('announcing','proclaiming'),
     ('Anyone','Whoever'),('anyone','whoever'),
         ('Anyone','one'),('anyone','ones'),('anyone','one'),
     ('anything','all things'),
     ('appeared','seen'),
     ('appropriate','fitting'),
+    ('area','districts'), # Mat 2:22
     ('Army','hosts'),('army','hosts'),
     ('arrest','apprehend'),
         ('arrested','apprehended'),('arrested','captured'),('arrested','laid'), # Mrk 14:49
     ('aroma','odour'),
     ('around','by'), # Mrk 14:69
-    ('asked','saying'),('asked','requesting'), # Mrk 14:37, 15:8
+    ('asked','saying'),('asked','requesting'),('asked','inquiring'), # Mrk 14:37, 15:8, Mat 2:4
     ('asleep','sleeping'), # Mrk 14:40
     ('assembly','convocation'),
     ('assure','Truly'),('assured','saying'), # Mrk 13:30, 16:^
@@ -1296,7 +1301,8 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('both','two'),
     ('boulders','stones'),
     ('bought','redeemed'),
-    ('bowing','prostrating'), # Mrk 15:19
+    ('bowed','fallen'), # Mat 2:11
+        ('bowing','prostrating'), # Mrk 15:19
     ('box','ark'),
     ('brightness','glory'), # Mrk 13:26
     ('bull','ox'),('bulls','oxen'),
@@ -1348,10 +1354,12 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('demolish','tearing'), # Mrk 14:58
     ('demon-possessed','unclean'),
     ('denied','disowned'),('denied','disowning'), # Mrk 14:68,70
+    ('departed','gone'),('departed','withdrawn'),('departed','withdrew'), # Mat 2:9,13,14
     ('desert','ˊₐrāⱱāh'),('plain','ˊₐrāⱱāh'),
     ('deserted','desolate'),
     ('destroyed','consumed'),('destroyed','devoured'),
     ('destruction','devastation'),
+    ('determine','ascertained'), # Mat 2:7
     ('die','pass away'), # Mrk 13:30
     ('died','dead'),('died','expired'), # Mrk 12:26, 15:39
     ('dies','corpse'), # Lev 19:28
@@ -1361,6 +1369,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('disgrace','expose'), # Mat 1:19
     ('disown','renounce'), # Mrk 14:31
     ('distance','afar'), # Mrk 14:54
+    ('divorce','send'), # Mat 1:19
     ('down','below'), # Mrk 14:66
     ('dressed','clothed'), # Mrk 16:5
     ('driving','throwing'),
@@ -1369,6 +1378,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('eliminate','destroying'),
     ('engaged','betrothed'),
     ('ensure','order'), # Mrk 14:19
+    ('entered','come'), # Mat 2:11
     ('enthusiastic','eager'), # Mrk 14:38
     ('entire','all'),
     ('entrance','door'), # Mrk 16:3
@@ -1402,10 +1412,13 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('grapevine','vine'),('grapes','vine'), # Mrk 14:25
     ('greater','mightier'),
     ('guard','doorkeeper'),('guard','securely'), # Mrk 13:34, 14:44
+    ('guide','shepherding'), # Mat 2:6
     ('guy\'s','man'), # Mrk 14:69
     ('hand','giving'),('handed','given'), # Mrk 13:11, 14:41
     ('happen','become'),('happen','becoming'),('happening','becoming'), # Mrk 13:29
+    ('happy','elated'), # Mat 2:10
     ('harvests','fruit'),
+    ('have','bearing'), # Mat 1:21
     ('heavenly','heavens'),('heavenly','heaven'),
     ('held','giving'), # Mrk 15:36
     ('hills','mountains'),('hill','mountain'),
@@ -1423,9 +1436,11 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('included','among'),('including','and'), # Mrk 15:40
     ('incredible','great'), # Mrk 13:26
     ('indeed','already'), # Mrk 15:44
+    ('insignificant','least'), # Mat 2:6
     ('instructed','commanded'),('instructs','commanded'), # Mrk 13:34
     ('instructions','commanded'),('instructions','regulations'),
     ('insult','slander'),('insulted','dishonoured'),('insulted','slandering'),('insulting','slandering'), # Mrk 14:64, 15:29
+    ('investigate','search'), # Mat 2:8
     ('Israelis','people'),
     ('item','article'),('items','article'),
     ('jealous','envy'), # Mrk 15:10
@@ -1456,6 +1471,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('lying','lied'),
     ('mankind','humans'),
     ('many','multiply'),
+    ('marry','receive'), # Mat 1:20
     ('marvelled','astonished'),
     ('means','translated'), # Mrk 15:22
     ('meat','flesh'),
@@ -1495,6 +1511,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('path','way'),('path','road'),
     ('people','humans'),('people','multitude'),('people','ones'),
     ('percent','add'),
+    ('period','time'),
     ('permanent','perpetuity'),
     ('permission','requested'), ('permission','granted'), # Mrk 15:43,45
     ('picked','taken'), # Mrk 14:23
@@ -1504,6 +1521,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('pleasing', 'acceptable'),('pleasing','soothing'),
     ('Plenty','Many'),
     ('plus','and'),
+    ('pondering','considered'), # Mat 1:20
     ('poor','humble'),
     ('population','multitude'),
     ('post','stake'), # Mrk 15:13
@@ -1511,6 +1529,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('preaching','proclaiming'),
     ('prearranged','given'), # Mrk 14:44
     ('pregnant','womb'), # Mat 1:18
+    ('presented','offered'), # Mat 2:11
     ('pressed','putting'), # Mrk 15:17
     ('priest','priest/officer'),
     ('proclamation','announcement'),('proclamation','declaration'),('proclamation','notice'),('proclamations','declarations'),
@@ -1519,12 +1538,12 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('pronounce','utterance'),
     ('protect','defend'),
     ('pure','holy'), ('purity','holiness'),
-    ('quiet','desolate'),
-    ('quiet','silenced'),
+    ('quiet','desolate'),('quiet','silenced'),
+        ('quietly','secretly'), # Mat 1:19
     ('range','various'),
     ('readers','reading'), # Mrk 13:14
     ('ready','gird'),
-    ('realised','saw'),('realised','saying'), # Mrk 16:3
+    ('realised','saw'),('realised','saying'),('realised','seen'), # Mrk 16:3, Mat 2:16
     ('rebuild','building'), # Mrk 15:29
     ('region','land'),('regions','land'),
     ('release','send'), # Mrk 15:9
@@ -1557,10 +1576,11 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('scared','dismayed'), ('scared','feared'),('scared','fearing'), # Mrk 16:*
     ('scoffed','mocking'),
     ('scriptures','scroll'), # Mrk 12:26
-    ('search','seek'),
+    ('search','seek'),('search','seeking'), # Mat 2:13
     ('second','another'),
     ('secured','apprehended'), # Mrk 14:46
     ('See','Behold'),
+        ('Seeing','seen'), # Mat 2:10
     ('sentenced','condemned'),('sentenced','put'), # Mrk 14:55,64
     ('servants','attendants'), # Mrk 14:54
     ('several','many'), # Mrk 14:56
@@ -1585,6 +1605,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('someone','anyone'),('someone','One'), # Mrk 15:36
     ('something','one message'),
     ('songs','psalms'),('songs','hymns'), # Mrk 14:26
+    ('sons','boys'), # Mat 2:16
     ('sour','vinegar'), # Mrk 15:36
     ('spiced','myrrh'), # Mrk 15:23
     ('splendour','glory'),
@@ -1594,6 +1615,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('steeled','courage'), # Mrk 15:43
     ('stewards','managers'),
     ('stick','staff'),('stick','reed'), # Mrk 15:19,36
+    ('stopped','stood'), # Mat 2:9
     ('strong','forceful'),
     ('stunned','amazed'),('stunned','amazement'), # Mrk 16:5,8
     ('Sunday','first'), # Mrk 16:2
@@ -1611,7 +1633,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
         ('telling','proclaimed'),('telling','saying'),('telling','speaking'),
         ('tells','say'),
     ('tent','tabernacle'),
-    ('territory','land'),
+    ('territory','land'), # Mat 2:6
     ('that','this'),('that','which'),
     ('themselves','hearts'),
     ('Then','And'),('then','And'),('then','immediately'), # Mrk 14:72
@@ -1625,7 +1647,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('tied','bound'),
     ('time','hour'), # Mrk 13:32
     ('tipped','overturned'),
-    ('told','commanded'),('told','saying'),# Mrk 14:34
+    ('told','commanded'),('told','saying'),('told','said'), # Mrk 14:34, Mat 2:5
     ('total','all'),
         ('totally','greatly'), # Mrk 16:5
     ('town','city'),
@@ -1636,11 +1658,13 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('twenty','fifth'),
     ('undesirables','sinners'),
     ('ungodly','unclean'),
+    ('upset','disturbed'), # Mat 2:3
     ('upstairs','housetop'),('upstairs','upper'), # Mrk 13:15
     ('untarnished','holy'),
     ('urged','implored'),
     ('very','much'),('very','exceedingly'), # Mrk 12:27, 16:2
     ('wallet','purse'),
+    ('wanting','seeking'), # Mat 2:20
     ('warned','spoken'), # Mrk 13:23
     ('warriors','men'),
     ('watching','observing'), # Mrk 15:47
@@ -1659,19 +1683,27 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('women','daughters'),
     ('work','service'),
     ('worried','alarmed'), # Mrk 13:7
-    ('worship','bow'),
+    ('worship','bow'),('worship','prostrate'), # Mat 2:2
+        ('worshipped','prostrated'), # Mat 2:11
     ('worn','girding'),
     ('wow','see'),
     ('written','inscribed'), # Mrk 15:26
     ('wrong','strayed'),('wrong','evil'), # Mrk 12:24,27, 15:14
     ('yelled','cried'),
     ('young','little'), # Mrk 15:40
+        ('younger','lower'), # Mat 2:16
     ('yourselves','hearts'),
+
     # Words added after analysis of unmatched LV glosses
-    ('missionaries','ambassadors'), ('chains','bonds'),
-    ('forever','eternal'), ('miracles','signs'), ('miracles','wonders'),
-    ('dear','beloved'), ('killed','slain'), ('faithfulness','loyalty'),
-    ('leaders','rulers'), ('leader','ruler'), ('servants','slaves'),
+    ('missionaries','ambassadors'),
+    ('chains','bonds'),
+    ('forever','eternal'),
+    ('miracles','signs'), ('miracles','wonders'),
+    ('dear','beloved'),
+    ('killed','slain'),
+    ('faithfulness','loyalty'),
+    ('leaders','rulers'), ('leader','ruler'),
+    ('servants','slaves'),
     ('nations','peoples'), ('should','ought'), ('work','labour'),
     ('encouraged','exhorting'), ('wanted','wishing'),
     ('years','year[s]'), ('year','year[s]'), ('days','day[s]'), ('day','day[s]'),
@@ -1776,6 +1808,7 @@ LV_SINGLE_WORDS_TO_RV_WORD_STRINGS = (
             ('anymore','any more'), # Mrk 14:63
             ('approached','came closer'), # Mrk 12:28
             ('ascent','walking uphill'),
+            ('ascertained','found out'), # Mat 2:16
             ('asked','find out'), # Mrk 15:44
             ('bore','was the father of'),('bore','the father of'), # Mat 1
             ('pre-day','day before'), # Mrk 15:42
@@ -1784,9 +1817,12 @@ LV_SINGLE_WORDS_TO_RV_WORD_STRINGS = (
             ('fled','ran away'),('fled','took off running'), # Mrk 14:52, 16:8
             ('greater','more important'), # Mrk 12:31
             ('members', 'body parts'),
+            ('knowing','sleep with'), # Mat 1:25
             ('known', 'found out'), # Mrk 15:45
             ('plagues', 'deadly diseases'),
             ('raised','came back to life'), # Mrk 16:6
+                ('raised','Get ready'), # Mat 2:20
+                ('raised','packed up'), # Mat 2:21
             ('right','honoured position'), # Mrk 14:62
             ('risen', 'got up'),
             ('sanctuary', 'sacred tent'),
