@@ -41,10 +41,10 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint, BOOKLIST_OT3
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-10-06' # by RJH
+LAST_MODIFIED_DATE = '2026-10-10' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_ESFM_to_USFM"
 PROGRAM_NAME = "Convert OET LV & RV ESFM files to USFM"
-PROGRAM_VERSION = '0.70'
+PROGRAM_VERSION = '0.71'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -106,16 +106,16 @@ def main():
                 # print( f"After {cCount} replacements to {BBB}, now have {adjText=}"); assert False, "We want to stop here"
                 if cCount > 0: print( f"  Added {cCount} \\nb to {VV} {BBB} chapters")
             assert '\\add ¿' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ¿"
-            if VV == 'LV': # only expect + > = <
+            if VV == 'LV': # only expect + > = < &
                 assert '\\add ?' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ?"
                 assert '\\add -' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ¿"
                 assert '\\add ≡' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ≡"
-                assert '\\add &' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED &"
+                #assert '\\add &' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED &"
                 assert '\\add *' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED *"
                 assert '\\add @' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED @"
                 assert '\\add #' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED #"
                 assert '\\add %' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED %"
-                # assert '\\add ^' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ^" # TODO: Why???
+                assert '\\add ^' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ^" # TODO: Why???
                 assert '\\add ≈' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED ≈"
                 assert '\\add !' not in adjText, f"OET-LV {BBB} {adjText} UNEXPECTED !"
             adjText = ( adjText

@@ -1319,7 +1319,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('cheerful','joy'),
     ('chest','ark'),
     ('chiselled','hewn'), # Mrk 15:46
-    ('close','near'), # Mrk 13:28
+    ('close','near'),('close','neared'), # Mrk 13:28, Mat 3:2
     ('closely','focused'), # Mrk 14:67
     ('clothes','apparel'),('clothes','garments'),
     ('collapse','passing away'), # Mrk 13:31
@@ -1824,6 +1824,7 @@ LV_SINGLE_WORDS_TO_RV_WORD_STRINGS = (
             ('raised','came back to life'), # Mrk 16:6
                 ('raised','Get ready'), # Mat 2:20
                 ('raised','packed up'), # Mat 2:21
+            ('repenting','Turn from'), # Mat 3:2
             ('right','honoured position'), # Mrk 14:62
             ('risen', 'got up'),
             ('sanctuary', 'sacred tent'),
