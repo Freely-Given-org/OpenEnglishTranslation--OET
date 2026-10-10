@@ -196,10 +196,10 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-10-09' # by RJH
+LAST_MODIFIED_DATE = '2026-10-10' # by RJH
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '1.2.1'
+PROGRAM_VERSION = '1.2.2'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -1583,6 +1583,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
         ('Seeing','seen'), # Mat 2:10
     ('sentenced','condemned'),('sentenced','put'), # Mrk 14:55,64
     ('servants','attendants'), # Mrk 14:54
+    ('settled','dwelt'), # Mat 2:@3
     ('several','many'), # Mrk 14:56
     ('shaking','trembling'), # Mrk 16:8
     ('shaved','baldness'),
@@ -1610,7 +1611,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('spiced','myrrh'), # Mrk 15:23
     ('splendour','glory'),
     ('spoken','said'),('spoken','saying'),
-    ('started','began'),
+    ('started','began'),('started','arriving'), # Mat 3:1
     ('staying','dwelling'),
     ('steeled','courage'), # Mrk 15:43
     ('stewards','managers'),

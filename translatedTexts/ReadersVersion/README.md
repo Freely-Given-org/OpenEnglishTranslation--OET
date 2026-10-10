@@ -135,6 +135,7 @@ Of course, we’re very happy to list contributors if you desire that. (Not ever
 - vow -> promise
 - scripture(s) vs Scripture(s)
 - offspring to descendants (except for animals)
+- do we want words like 'dwelt' in the OET-LV???
 
 Continue checking spelling from Mat 7:18 onwards --
     done Mrk
