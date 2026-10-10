@@ -1,4 +1,4 @@
-\id MAT - Open English Translation—Readers' Version (OET-RV) v0.5.11
+\id MAT - Open English Translation—Readers' Version (OET-RV) v0.5.12
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 MAT
@@ -36,7 +36,7 @@
 \v 2 Abraham \add ≈was the father of\add* Isaac, Isaac \add ≈the father of\add* Yacob (Grk: \add !Yakob¦17\add*), Yacob \add ≈the father of\add* Yehudah¦22 (Grk: \add !Youdas¦22\add*) and¦23 his¦26 brothers¦25.
 \v 3 Yehudah¦27 \add ≈was the father of\add* Perez (Grk: \add !Fares¦31\add*) and¦32 Zerah (Grk: \add !Zara¦34\add*) through Tamar (Grk: \add !Thamar¦37\add*), Perez \add ≈the father of\add* Hezron (Grk: \add !Hezrom\add*), Hezron \add ≈the father of\add* Aram¦47,
 \v 4 Aram¦48 \add ≈the father of\add* Aminadab, Aminadab \add ≈the father of\add* Nahshon (Grk: \add !Naasson¦57\add*), Nahshon \add ≈the father of\add* Salmon¦62,
-\v 5 Salmon¦63 \add ≈the father of\add* Boaz (Grk: \add !Boes\add*) through Rahab¦70, Boaz \add ≈the father of\add* Obed (Grk: \add !Yobed\add*) through Ruth¦78 (Grk: \add !Routh\add*), and¦80 Obed \add ≈the father of\add* Yishay¦83 \add !(Jesse¦83, Grk: \add !Yessai¦83\add*)\add*,
+\v 5 Salmon¦63 \add ≈the father of\add* Boaz (Grk: \add !Boes\add*) through Rahab¦70, Boaz \add ≈the father of\add* Obed (Grk: \add !Yobed\add*) through Ruth¦78 (Grk: \add !Routh\add*), and¦80 Obed \add ≈the father of\add* Yishay¦83 \add !(Jesse¦83\add*, Grk: \add !Yessai¦83)\add*,
 \v 6 and¦85 Yishay¦84 the father of¦98 David¦88 the¦89 king¦90.
 \p David \add ≈was the¦87 father of\add* Solomon¦97 (Grk: \add !Solomona\add*) through Uriah's (Grk: \add !Ourias¦101\add*) wife¦99,
 \v 7 Solomon¦102 \add ≈was the father of\add* Rehoboam (Grk: \add !Roboam¦106\add*), Rehoboam \add ≈the father of\add* Abiyah (Grk: \add !Abia¦112\add*), Abiyah \add ≈the father of\add* Asa (Grk: \add !Asaf¦116\add*),
@@ -124,13 +124,13 @@
 \p
 \v 1 \add ≈That was¦986 the time¦984 when\add* Yohan-the-immerser started preaching¦990 in¦991 the Yudean wilderness¦993,
 \v 2 telling¦997 \add everyone\add*,\x + \xo 3:2: \xt Mat 4:17; Mrk 1:15.\x* “\add ≈Turn from your sins\add*, because¦1000 the¦1003 heavenly¦1004 kingdom¦1002 is close.”
-\v 3 This¦1005 is¦1007 the man that¦1005 the¦1013 prophet¦1014 Yeshayah¦1012 was talking¦1015 about¦1017 \add when he wrote\add*:\x + \xo 3:3: \xt Isa 40:3 (LXX).\x*
-\q1 ‘The¦1016 voice¦1016 of¦1017 one shouting¦1017 in¦1018 the¦1019 wilderness¦1020
+\v 3 This¦1005 is¦1007 the \add >man\add* that¦1005 the¦1013 prophet¦1014 Yeshayah¦1012 \add !(Isaiah)\add* was talking¦1015 about¦1017 \add when he wrote\add*:\x + \xo 3:3: \xt Isa 40:3 (LXX).\x*
+\q1 ‘The¦1016 voice¦1016 of¦1017 \add >one\add* shouting¦1017 in¦1018 the¦1019 wilderness¦1020
 \q2 prepare¦1021 the road for¦1006 \nd Yahweh¦1024\nd*;
 \q2 straighten¦1025 his¦1029 paths¦1028.’
 \p
-\v 4 Yohan¦1033 himself¦1030 wore clothes¦1036 made from¦1038 \add coarse\add* camel¦1040 hair¦1039, with a¦1040 leather¦1043 belt¦1042 around¦1044 his waist¦1046, and his food¦1050 was¦1052 locusts¦1054 and wild¦1057 honey¦1056.\x + \xo 3:4: \xt 2Ki 1:8.\x*
-\v 5 \add People from\add* Yerushalem¦1062 and all Yudea¦1066 and all of¦1071 the¦1069 regions¦1070 surrounding¦1070 the¦1071 Yordan¦1072 River went¦1059 out¦1059 \add into the wilderness\add* to \add listen to\add* Yohan,
+\v 4 Yohan¦1033 himself¦1030 wore clothes¦1036 made from¦1038 \add coarse\add* camel¦1040 hair¦1039, with a¦1040 leather¦1043 belt¦1042 around¦1044 his waist¦1046, and \add ≈he lived on\add* locusts¦1054 and wild¦1057 honey¦1056.\x + \xo 3:4: \xt 2Ki 1:8.\x*
+\v 5 \add People from\add* Yerushalem¦1062 and all Yudea¦1066 and all of¦1071 the¦1069 \add #regions¦1070\add* surrounding¦1070 the¦1071 Yordan¦1072 River, went¦1059 out¦1059 \add into the wilderness to listen\add* to Yohan,
 \v 6 and many confessed¦1081 their¦1084 sins¦1083 and asked him¦1080 to immerse¦1074 them¦1084 in¦1075 the¦1076 river.
 \p
 \v 7 But¦1090 when Yohan saw¦1085 many¦1087 from the¦1088 party¦1089 of the¦1088 Pharisees¦1089 and¦1090 from the Sadducee¦1091 sect¦1091 coming for immersion¦1095, he¦1097 told them¦1098, “You¦1103 brood of snakes, who¦1101 warned¦1102 you¦1103 to¦1098 flee¦1104 from \add God's\add* severe¦1108 anger¦1108 that's coming?\x + \xo 3:7: \xt Mat 12:34; 23:33.\x*

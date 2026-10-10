@@ -1559,6 +1559,7 @@ RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
     ('right','fitting'),('right','truth'), # Mrk 13:10, 12:32
     ('river','Yarden'),
     ('riverbed','wadi'),
+    ('road','way'), # Mat 3:3
     ('robe','cloth'),('robe','clothes'), # Mrk 14:51,63
     ('rock','stone'),('rocks','stones'),('rocks','stone'),
         ('rockface','rock'), # Mrk 15:46
@@ -1816,6 +1817,7 @@ LV_SINGLE_WORDS_TO_RV_WORD_STRINGS = (
             ('false','making up'), # Mrk 14:56
             ('first','most important'), # Mrk 12:29
             ('fled','ran away'),('fled','took off running'), # Mrk 14:52, 16:8
+            ('food','lived on'), # Mat 3:4
             ('greater','more important'), # Mrk 12:31
             ('members', 'body parts'),
             ('knowing','sleep with'), # Mat 1:25
