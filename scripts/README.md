@@ -124,19 +124,47 @@ If you’re a professional Bible translator or app developer and able to help us
 
 ## Connecting OET-RV words to OET-LV word numbers
 
-`connect_OET-RV_words_via_OET-LV.py` copies existing OET-LV source-word numbers
-onto corresponding OET-RV words. Its lexical tables remain in that script;
-`oet_alignment.py` contains the position-preserving tokenizer and alignment
-algorithm. Neither changes the translation wording.
+The `connect_OET-RV_words_via_OET-LV/` folder contains the connector and its
+supporting modules. The connector copies existing OET-LV source-word numbers
+onto corresponding OET-RV words without changing the translation wording.
+
+| File in the connector folder | Responsibility |
+| --- | --- |
+| `connect_OET-RV_words_via_OET-LV.py` | Command-line options, Bible loading, matching passes, ESFM edits and reports. |
+| `oet_alignment.py` | Position-preserving tokenizer and alignment algorithm. |
+| `oet_noun_tables.py` | Noun plural/singular pairs and additional verbal nouns. |
+| `oet_verb_tables.py` | Verb paradigms and their permitted overlapping forms. |
+| `oet_word_tables.py` | Smaller vocabulary lists, combined simple-word vocabulary, positional equivalences and directional single-word pairs. |
+| `oet_phrase_tables.py` | Directional RV-word/LV-phrase and LV-word/RV-phrase mappings, always with a multiword phrase on one side. |
+
+Edit the literal tables in the relevant module; flattened collections and
+reverse mappings are derived on import. Each module documents its row format
+and retains the existing validation checks. These modules do not load Bible files.
+
+Keep entries alphabetical by the first word, ignoring case, punctuation and
+diacritics. Noun pairs use the plural form; verb sets use the base present form
+at the end of each tuple. Retain grammatical form order within each tuple,
+numerical order in the number list, and matching priority among alternatives
+for the same word. Historical sections such as “additional mappings” should
+be merged into the alphabetical sequence.
+
+Directional single-word pairs remain case-sensitive and are not automatically
+reversed. The final integer in each RV-word/LV-phrase row says how many
+single-word alternatives for that RV word precede the phrase. This preserves
+matching priority across the two files; review it when inserting or reordering
+that RV word's single-word alternatives.
+
+The optional `OET-RV_wordPhrases_table.tsv` remains in
+`translatedTexts/ReadersVersion/` and is loaded by the connector.
 
 From the repository root, use the existing scripts environment:
 
 ```sh
 # Preview selected books without writing any ESFM files (JNA is Jonah).
-uv run --project scripts scripts/connect_OET-RV_words_via_OET-LV.py --books RUT JNA MRK PHM --dry-run --report /tmp/oet-links.json
+uv run --project scripts scripts/connect_OET-RV_words_via_OET-LV/connect_OET-RV_words_via_OET-LV.py --books RUT JNA MRK PHM --dry-run --report /tmp/oet-links.json
 
 # Produce reviewable copies of all 66 books and an audit of proposed links.
-uv run --project scripts scripts/connect_OET-RV_words_via_OET-LV.py --output-dir /tmp/oet-linked-books --report /tmp/oet-links.json
+uv run --project scripts scripts/connect_OET-RV_words_via_OET-LV/connect_OET-RV_words_via_OET-LV.py --output-dir /tmp/oet-linked-books --report /tmp/oet-links.json
 
 # Run the regression tests.
 uv run --project scripts python -m unittest discover -s scripts/tests -v
@@ -144,9 +172,8 @@ uv run --project scripts python -m unittest discover -s scripts/tests -v
 
 Without `--dry-run` or `--output-dir`, the script updates selected source books
 in place, as before. Use `--books MRK` for Mark alone; omit `--books` to process
-all books. Plain-add
-cleanup now applies only to selected books and takes place in memory before
-matching; previews therefore do not edit unselected books or delete source
+all books. Plain-add cleanup now applies only to selected books and takes place
+in memory before matching; previews therefore do not edit unselected books or delete source
 pickle files. An output directory contains ESFM proposals, not a complete
 standalone build with auxiliary tables. `--report` uses one process so the
 JSON can collect all books and accepted links deterministically. Normal BOS
@@ -164,12 +191,29 @@ logging/settings files may still be created during a dry run.
    source IDs. An anchor is located at its matching English gloss within a
    multiword source group where possible. Local changes of word order therefore
    do not force the entire verse into a single monotone alignment.
+   A gloss already identified by a strong existing link is reserved even if
+   reordered anchors put it inside another gap. Other glosses with the same
+   source number remain available (e.g. “put” and “around”).
 4. Accept a proposed number only when every best alignment of that gap agrees.
    Forward/backward dynamic programming computes this in O(RV words × LV words)
    per gap, instead of repeating the entire calculation for each proposed pair.
    Slash-separated gloss alternatives occupy one column. Separate English words
    with the same source number remain separate columns.
-5. Insert links by source position, from right to left. This permits several
+   Retain the supporting columns until all gaps have been checked. If two
+   independent gaps claim the same LV column, reject the competing proposals
+   together rather than letting gap order decide which occurrence gets it.
+5. Recover short phrase movements across a nearby linked block using the
+   separate `propose_phrase_movements()` rule. It requires 2–6 consecutive
+   strong lexical matches, including at least two previously unlinked content
+   words with distinct source numbers. Existing neighbouring links cannot
+   justify moving a lone ambiguous word. The crossed block is limited to six
+   words in each text. Both texts must stay within punctuation boundaries;
+   added spans are excluded. Outer
+   anchors must agree, source words already linked outside the phrase cannot
+   be borrowed, and competing destinations or competing RV occurrences cause
+   rejection. This handles “rooster crowed for the second time” against “for
+   the second time a rooster crowed” without a verse-specific rule.
+6. Insert links by source position, from right to left. This permits several
    occurrences of `the`, `her`, etc. to receive distinct numbers. Repeat the
    positional pass until it cannot add another link. Previously numbered words
    remain untouched, apart from the documented plain-add cleanup.
@@ -198,6 +242,12 @@ A leading `⇔` means a **clause swap**, not a reversal of individual words.
 The aligner can rotate the LV sequence when existing anchors expose one clear
 switch between two runs. Otherwise it retains local anchored gaps and skips
 conflicting bounds. This is deliberately incomplete clause segmentation.
+The smaller phrase-movement rule retains punctuation separately from the
+cleaned glosses and logs accepted links as `local phrase movement`. Punctuation
+is a conservative boundary estimate, not a grammatical parser: it can reject
+valid movements around commas and cannot identify every unpunctuated clause.
+Synonym-only and shared-prefix scores are too weak for this rule; existing
+exact, curated verb-form and inflection scores qualify.
 
 ### Evaluation and remaining work
 
@@ -218,12 +268,31 @@ source number and matching rule. Individual link counts can differ from the
 coverage delta because separately numbered hyphenated components are counted
 as one displayed word by the established coverage counter.
 
-All 29 regression tests pass. Tests cover repeated words, alternative glosses sharing a number, semantic spans,
+All 46 regression tests pass. Tests cover repeated words, alternative glosses sharing a number, semantic spans,
 ambiguous pronouns, local reordering, clause swaps, notes, contractions, nested
 formatting, verse bridges, Psalm titles, and preservation of existing links.
 The ambiguity calculation is also compared with exhaustive enumeration on 400
 small score matrices. A second script run can still discover additional links
 through legacy lexical/name passes after the new anchors become available.
+Phrase-movement regressions cover both directions, the repeated phrases in
+Mark 14:72 (including partially/manual-linked starting states), preservation
+of existing numbers, idempotence, punctuation fences, conflicts between gaps,
+ambiguous/reused source words, weak evidence and overlong movements.
+
+### Further restructuring
+
+The tables, positional representation and alignment engine now have separate
+responsibilities. Gap alignment and bounded phrase movement share anchor
+resolution, check competing source claims, and return proposals to the same
+position-based writer. Mark 14:72
+is a regression fixture, not a condition in the matching code.
+
+The older lexical/name passes still edit the verse as they run, which makes
+their order significant. Before adding broader semantic or paraphrase rules,
+the next structural improvement should make those passes emit candidates with
+RV spans, LV source groups, evidence and provenance. One shared selection stage
+could then resolve conflicts before a single write stage. A hand-checked verse
+set should measure precision separately from coverage during that migration.
 
 Known limitations remain: existing incorrect links can constrain later matches;
 versification mismatches are still delegated to BibleOrgSys; broad synonym and

@@ -1,6 +1,6 @@
 # OET makefile
 #
-# Last updated: 2026-05-15 by RJH
+# Last updated: 2026-10-11 by RJH
 #
 # CHANGELOG:
 #	2025-12-08 Copy OET LV OT & NT word tables into BSB and MSB folders
@@ -8,6 +8,7 @@
 #	2026-03-06 Separated derivedFiles folder out with some now in furtherDerivedFiles
 #   2026-07-13 Removed absolute filepaths (for word-table copies) to work on laptop
 #   2026-09-22 Added VPL export and rebuild of OET MCP database (both after vref export)
+#   2026-10-11 connect_OET-RV_words_via_OET-LV.py moved into its own folder
 #
 
 #=== Folder and file declarations =======================
@@ -76,6 +77,9 @@ short_OSHB_TSV := ../sourceTexts/rawOSHB/OSHB.parsedOriginal.flat.morphemes.tsv
 # python3_15 := ~/Downloads/Python-3.15.0a1/python
 # Python := $(python3_14)
 UVrun := uv run
+
+# Reconnect when the matching code or any of its editable tables changes.
+CONNECTOR_PY := $(wildcard connect_OET-RV_words_via_OET-LV/*.py)
 
 
 # For Rust, define the paths (to ensure that we have the latest release file)
@@ -226,9 +230,9 @@ $(final_RV_OT_word_tables): $(RV_word_tables_sentinel)
 RV_sentinel := ../translatedTexts/ReadersVersion/.connected_sentinel
 RV_HTML_sentinel := ../exportedFiles/simpleHTML/ReadersVersion/.html_sentinel
 
-$(RV_sentinel): $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
+$(RV_sentinel): $(LV_ESFM) $(RV_ESFM) $(CONNECTOR_PY) $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
 	@echo "\n\nConnect OET-RV words to OET-LV word numbers (in full mode)…\n"
-	@$(UVrun) connect_OET-RV_words_via_OET-LV.py
+	@$(UVrun) connect_OET-RV_words_via_OET-LV/connect_OET-RV_words_via_OET-LV.py
 	@touch $@
 
 $(RV_HTML_sentinel): $(RV_sentinel) convert_OET-RV_to_simple_HTML.py $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
@@ -279,9 +283,9 @@ $(derived_audio_sections): $(RV_ESFM) export_OET-RV_to_sectionReadings.py
 #=== Partial stuff =======================
 
 .PHONY: check
-check: $(LV_ESFM) $(RV_ESFM) connect_OET-RV_words_via_OET-LV.py $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
-	@echo "\n\nConnect OET-RV words to OET-LV word numbers (in fast mode)…\n"
-	@$(UVrun) connect_OET-RV_words_via_OET-LV.py --fast
+check: $(LV_ESFM) $(RV_ESFM) $(CONNECTOR_PY) $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
+	@echo "\n\nConnect OET-RV words to OET-LV word numbers (Mark only)…\n"
+	@$(UVrun) connect_OET-RV_words_via_OET-LV/connect_OET-RV_words_via_OET-LV.py --books MRK
 
 
 .PHONY: audio
