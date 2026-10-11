@@ -121,3 +121,138 @@ We aim to fix that as soon as we are able to design (yet another) improved Bible
 ## Prologue
 
 If you’re a professional Bible translator or app developer and able to help us in this endeavour, please start a conversation with us via our [Contact Page](https://Freely-Given.org/Contact.html).
+
+## Connecting OET-RV words to OET-LV word numbers
+
+`connect_OET-RV_words_via_OET-LV.py` copies existing OET-LV source-word numbers
+onto corresponding OET-RV words. Its lexical tables remain in that script;
+`oet_alignment.py` contains the position-preserving tokenizer and alignment
+algorithm. Neither changes the translation wording.
+
+From the repository root, use the existing scripts environment:
+
+```sh
+# Preview selected books without writing any ESFM files (JNA is Jonah).
+uv run --project scripts scripts/connect_OET-RV_words_via_OET-LV.py --books RUT JNA MRK PHM --dry-run --report /tmp/oet-links.json
+
+# Produce reviewable copies of all 66 books and an audit of proposed links.
+uv run --project scripts scripts/connect_OET-RV_words_via_OET-LV.py --output-dir /tmp/oet-linked-books --report /tmp/oet-links.json
+
+# Run the regression tests.
+uv run --project scripts python -m unittest discover -s scripts/tests -v
+```
+
+Without `--dry-run` or `--output-dir`, the script updates selected source books
+in place, as before. Use `--books MRK` for Mark alone; omit `--books` to process
+all books. Plain-add
+cleanup now applies only to selected books and takes place in memory before
+matching; previews therefore do not edit unselected books or delete source
+pickle files. An output directory contains ESFM proposals, not a complete
+standalone build with auxiliary tables. `--report` uses one process so the
+JSON can collect all books and accepted links deterministically. Normal BOS
+logging/settings files may still be created during a dry run.
+
+### How matching works
+
+1. Parse only the selected books, index their verse lines once, and retain
+   character positions, existing numbers and `add` classes for each word.
+2. Apply curated lexical, verb, name and phrase mappings. Reverse indexes avoid
+   scanning every noun and verb set for every verse. Spelling-only insertion
+   requires a unique full word across the entire verse, including poetry lines.
+3. Align unnumbered occurrences between existing links. The bounds use the
+   **order of words in the LV text**, not the numerical order of Hebrew/Greek
+   source IDs. An anchor is located at its matching English gloss within a
+   multiword source group where possible. Local changes of word order therefore
+   do not force the entire verse into a single monotone alignment.
+4. Accept a proposed number only when every best alignment of that gap agrees.
+   Forward/backward dynamic programming computes this in O(RV words × LV words)
+   per gap, instead of repeating the entire calculation for each proposed pair.
+   Slash-separated gloss alternatives occupy one column. Separate English words
+   with the same source number remain separate columns.
+5. Insert links by source position, from right to left. This permits several
+   occurrences of `the`, `her`, etc. to receive distinct numbers. Repeat the
+   positional pass until it cannot add another link. Previously numbered words
+   remain untouched, apart from the documented plain-add cleanup.
+
+The specialist classes are handled as follows:
+
+| Class | Treatment |
+| --- | --- |
+| Plain `add`, or `?` without a specialist class | Exclude from matching and coverage; remove old numbers. |
+| `@` | Align a whole referent phrase with an LV pronoun; use clear singular/plural cues where available. |
+| `%` | Align changed-person wording with an LV pronoun. |
+| `*` | Align a substituted pronoun/phrase with an identified LV proper noun. Broader descriptions still need more work. |
+| `&` | Match an LV article or possessive in the bounded gap. |
+| `>` | Share the immediately preceding translated word's number, if available in this verse. |
+| `≈`, `#` | Allow lexical, curated synonym and inflection matches; do not equate arbitrary paraphrases by position alone. |
+| `≡` | Allow repeated-word matching within the same verse; no previous-verse number borrowing. |
+| `!` | Use the traditional-name matcher. |
+| `+`, `=`, `<`, `^` | No new automatic positional links. These need more specific grammatical or semantic evidence. |
+
+Nested `\+add` and uncertain specialist codes such as `?@` retain the base
+class's meaning. Notes, cross-references, headings and marker names cannot
+become matchable words. Nomina sacra use `+nd` inside another character field;
+no new `nd` is inserted inside an `add` span.
+
+A leading `⇔` means a **clause swap**, not a reversal of individual words.
+The aligner can rotate the LV sequence when existing anchors expose one clear
+switch between two runs. Otherwise it retains local anchored gaps and skips
+conflicting bounds. This is deliberately incomplete clause segmentation.
+
+### Evaluation and remaining work
+
+The October 2026 evaluation used the existing numbers as its starting point.
+The old script made no new links in Ruth, Mark or Philemon on rerun. The revised
+full-corpus preview increased coverage from about **46.4% to 56.2%** (roughly
+68,289 additional numbered words) in approximately 90 seconds on the local
+machine, including loading and JSON reporting. These are **coverage figures,
+not measured alignment accuracy**; run the commands above for current figures.
+The original selected-book run took about 414 seconds and still loaded all
+books; the revised small-book previews took a few seconds. Those timings include
+startup and depend on filesystem caching and logging, so they are not an
+isolated algorithm benchmark.
+
+The JSON reports per-book eligible words, before/after counts, net added words,
+plain-add removals and individual accepted links with verse, line, spelling,
+source number and matching rule. Individual link counts can differ from the
+coverage delta because separately numbered hyphenated components are counted
+as one displayed word by the established coverage counter.
+
+All 29 regression tests pass. Tests cover repeated words, alternative glosses sharing a number, semantic spans,
+ambiguous pronouns, local reordering, clause swaps, notes, contractions, nested
+formatting, verse bridges, Psalm titles, and preservation of existing links.
+The ambiguity calculation is also compared with exhaustive enumeration on 400
+small score matrices. A second script run can still discover additional links
+through legacy lexical/name passes after the new anchors become available.
+
+Known limitations remain: existing incorrect links can constrain later matches;
+versification mismatches are still delegated to BibleOrgSys; broad synonym and
+prefix rules can confuse senses; complex multiword paraphrases and multi-source
+phrases need a richer alignment representation. The optional
+`OET-RV_wordPhrases_table.tsv` is absent from this checkout, so that particular
+curated phrase pass has no entries (the script's older phrase tables still run).
+
+The next useful step is a manually checked, stratified sample of verses and
+**precision/recall by matching rule**, including narrative, poetry, epistles,
+`⇔` and the different `add` classes. Then extend phrase mappings from those
+examples. A semantic model could propose difficult clause/phrase correspondences
+into the same review report, with deterministic source-number and formatting
+checks before applying them. Optimising the percentage alone would encourage
+incorrect links, especially where earlier automatic numbers are already wrong.
+
+### Reviewed removals during this cleanup
+
+In addition to 22 numbers inside uncertain plain `add ?…` spans, ten clearly
+misassigned numbers were removed from Mark. The translation wording was retained.
+
+| Verse | Removed number(s) | Reason |
+| --- | --- | --- |
+| 1:45 | `@Yeshua¦22584` | 22584 is the healed man's subject pronoun; the later pronoun for Yeshua is 22596. |
+| 2:15 | `@Levi's¦22959` | 22959 is the person reclining, not the house's owner (22964). |
+| 2:15 | `his¦22964` before “followers” | The followers' possessive is 22977, not the earlier house-owner pronoun. |
+| 2:15 | `sitting¦22956` | The tax collectors and sinners reclining use 22971; 22956 belongs to the earlier subject. |
+| 3:4 | `Is¦23450` | 23450 is “he is saying”; “Is it permitting” is 23455. |
+| 5:38 | `@Yeshua¦25976` | 25976 is plural “they are coming”; the subject of observing belongs to 25986. |
+| 8:22 | `@the¦28762 people¦28762` | 28762 is the object “him”, not the people bringing (28757). |
+| 8:22 | `@Yeshua¦28762` after “to” | This earlier object is “bring to him” (28758), not the later “implore him” (28762). |
+| 14:12 | `@Yeshua's¦34549` | 34549 is “they were sacrificing”; the apprentices' possessive is 34554. |
