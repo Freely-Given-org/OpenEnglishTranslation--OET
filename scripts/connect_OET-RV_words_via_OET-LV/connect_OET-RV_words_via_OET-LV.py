@@ -185,6 +185,8 @@ CHANGELOG:
         the connector's own folder under scripts/.
     2026-10-11 Added bounded phrase transpositions with strong lexical evidence and
         punctuation boundaries; preserved existing links and rejected competing moves.
+    2026-10-11 Repeat matching for each book until no links are added, retaining
+        in-memory edits across passes and reporting per-pass additions.
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -216,7 +218,7 @@ from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 LAST_MODIFIED_DATE = '2026-10-11'
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '1.4.0'
+PROGRAM_VERSION = '1.5.0'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -271,6 +273,8 @@ class State:
     """
     A place to store some of the global stuff that needs to be passed around.
     """
+    def __init__(self):
+        self.bookLinkAdditions = 0 # Increment only after a successful insertion.
 # end of State class
 
 state = State()
@@ -465,7 +469,7 @@ def loadOETRVWordPhraseTable() -> None:
         rvWords = tuple( rvWordsStr.split() )
         assert lvWords and all( lvWords ), f"Bad LVWord '{lvWordStr}' in {OET_RV_WORD_PHRASES_TABLE_FILEPATH}"
         if len( rvWords ) < 2:
-            logging.warning( f"Skipping the OET-RV word phrases row '{lvWordStr}' -> '{rvWordsStr}', because a single OET-RV word belongs in EQUIVALENT_LV_RV_WORDS instead" )
+            logging.warning( f"Skipping the OET-RV word phrases row '{lvWordStr}' -> '{rvWordsStr}', because a single OET-RV word belongs in SINGLE_WORD_MAPPINGS instead" )
             continue
         state.rvWordPhrases[ lvWords ] = tuple( simplifyRVLVWord( word ) for word in rvWords )
         state.rvWordPhrasesSearch[ tuple( simplifyRVLVWord( word ) for word in rvWords ) ] = rvWords
@@ -811,54 +815,38 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
         with multiprocessing.Pool( processes=BibleOrgSysGlobals.maxProcesses ) as pool: # start worker processes
             results = pool.map( _connect_OET_RV_book_MP, parameters ) # have the pool do our loads
             assert len(results) == len(booklist_to_process)
-            for bookWordPhraseAdds, bookWordPhraseAddsNS, bookSimpleListedAdds, bookSimpleListedAddsNS, bookProperNounAdds, bookProperNounAddsNS, bookFirstPartMatchedAdds, \
-                        bookFirstPartMatchedAddsNS, bookManualMatchedAdds, bookManualMatchedAddsNS, bookChangedNumberAdds, \
-                        bookChangedNumberAddsNS, bookSpecialistAdds, bookSpecialistAddsNS, bookInOrderMatchedAdds, \
-                        bookInOrderMatchedAddsNS, bookNumWords, bookNumWordNumbered in results:
-                totalWordPhraseAdds += bookWordPhraseAdds
-                totalWordPhraseAddsNS += bookWordPhraseAddsNS
-                totalSimpleListedAdds += bookSimpleListedAdds
-                totalSimpleListedAddsNS += bookSimpleListedAddsNS
-                totalProperNounAdds += bookProperNounAdds
-                totalProperNounAddsNS += bookProperNounAddsNS
-                totalFirstPartMatchedAdds += bookFirstPartMatchedAdds
-                totalFirstPartMatchedAddsNS += bookFirstPartMatchedAddsNS
-                totalManualMatchedAdds += bookManualMatchedAdds
-                totalManualMatchedAddsNS += bookManualMatchedAddsNS
-                totalChangedNumberAdds += bookChangedNumberAdds
-                totalChangedNumberAddsNS += bookChangedNumberAddsNS
-                totalSpecialistAdds += bookSpecialistAdds
-                totalSpecialistAddsNS += bookSpecialistAddsNS
-                totalInOrderMatchedAdds += bookInOrderMatchedAdds
-                totalInOrderMatchedAddsNS += bookInOrderMatchedAddsNS
-                totalNumWords += bookNumWords
-                totalNumWordNumbered += bookNumWordNumbered
         BibleOrgSysGlobals.alreadyMultiprocessing = False
     else: # Just single threaded
-        # Process the books one by one
-        for BBB in booklist_to_process:
-            bookWordPhraseAdds, bookWordPhraseAddsNS, bookSimpleListedAdds, bookSimpleListedAddsNS, bookProperNounAdds, bookProperNounAddsNS, bookFirstPartMatchedAdds, \
-                bookFirstPartMatchedAddsNS, bookManualMatchedAdds, bookManualMatchedAddsNS, bookChangedNumberAdds, \
-                bookChangedNumberAddsNS, bookSpecialistAdds, bookSpecialistAddsNS, bookInOrderMatchedAdds, \
-                bookInOrderMatchedAddsNS, bookNumWords, bookNumWordNumbered = connect_OET_RV_book( BBB, lv, rv, OET_LV_ESFM_InputFolderPath )
-            totalWordPhraseAdds += bookWordPhraseAdds
-            totalWordPhraseAddsNS += bookWordPhraseAddsNS
-            totalSimpleListedAdds += bookSimpleListedAdds
-            totalSimpleListedAddsNS += bookSimpleListedAddsNS
-            totalProperNounAdds += bookProperNounAdds
-            totalProperNounAddsNS += bookProperNounAddsNS
-            totalFirstPartMatchedAdds += bookFirstPartMatchedAdds
-            totalFirstPartMatchedAddsNS += bookFirstPartMatchedAddsNS
-            totalManualMatchedAdds += bookManualMatchedAdds
-            totalManualMatchedAddsNS += bookManualMatchedAddsNS
-            totalChangedNumberAdds += bookChangedNumberAdds
-            totalChangedNumberAddsNS += bookChangedNumberAddsNS
-            totalSpecialistAdds += bookSpecialistAdds
-            totalSpecialistAddsNS += bookSpecialistAddsNS
-            totalInOrderMatchedAdds += bookInOrderMatchedAdds
-            totalInOrderMatchedAddsNS += bookInOrderMatchedAddsNS
-            totalNumWords += bookNumWords
-            totalNumWordNumbered += bookNumWordNumbered
+        results = [connect_OET_RV_book(BBB, lv, rv, OET_LV_ESFM_InputFolderPath)
+                   for BBB in booklist_to_process]
+
+    # Worker-local state is not shared with the parent, so carry pass counts in
+    # the returned results and aggregate both execution modes in book order.
+    bookPassCounts = {}
+    for BBB, result in zip(booklist_to_process, results):
+        bookWordPhraseAdds, bookWordPhraseAddsNS, bookSimpleListedAdds, bookSimpleListedAddsNS, bookProperNounAdds, bookProperNounAddsNS, bookFirstPartMatchedAdds, \
+            bookFirstPartMatchedAddsNS, bookManualMatchedAdds, bookManualMatchedAddsNS, bookChangedNumberAdds, \
+            bookChangedNumberAddsNS, bookSpecialistAdds, bookSpecialistAddsNS, bookInOrderMatchedAdds, \
+            bookInOrderMatchedAddsNS, bookNumWords, bookNumWordNumbered, bookNumPasses = result
+        bookPassCounts[BBB] = bookNumPasses
+        totalWordPhraseAdds += bookWordPhraseAdds
+        totalWordPhraseAddsNS += bookWordPhraseAddsNS
+        totalSimpleListedAdds += bookSimpleListedAdds
+        totalSimpleListedAddsNS += bookSimpleListedAddsNS
+        totalProperNounAdds += bookProperNounAdds
+        totalProperNounAddsNS += bookProperNounAddsNS
+        totalFirstPartMatchedAdds += bookFirstPartMatchedAdds
+        totalFirstPartMatchedAddsNS += bookFirstPartMatchedAddsNS
+        totalManualMatchedAdds += bookManualMatchedAdds
+        totalManualMatchedAddsNS += bookManualMatchedAddsNS
+        totalChangedNumberAdds += bookChangedNumberAdds
+        totalChangedNumberAddsNS += bookChangedNumberAddsNS
+        totalSpecialistAdds += bookSpecialistAdds
+        totalSpecialistAddsNS += bookSpecialistAddsNS
+        totalInOrderMatchedAdds += bookInOrderMatchedAdds
+        totalInOrderMatchedAddsNS += bookInOrderMatchedAddsNS
+        totalNumWords += bookNumWords
+        totalNumWordNumbered += bookNumWordNumbered
 
     if totalWordPhraseAdds or totalSimpleListedAdds or totalProperNounAdds or totalFirstPartMatchedAdds or totalManualMatchedAdds or totalChangedNumberAdds or totalRewordedAdds or totalSpecialistAdds or totalInOrderMatchedAdds:
         if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
@@ -868,6 +856,10 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
         if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} Did total of {totalSimpleListedAddsNS:,} simple listed nomina sacra (NS), {totalProperNounAddsNS:,} proper noun NS, {totalFirstPartMatchedAddsNS:,} first part NS, {totalManualMatchedAddsNS:,} manual NS, {totalChangedNumberAddsNS:,} changed number NS, {totalRewordedAddsNS:,} reworded NS, {totalSpecialistAddsNS:,} specialist add span NS and {totalInOrderMatchedAddsNS:,} in-order NS." )
     else: vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  {testament} No new nomina sacra connections made." )
+    if any(passes > 1 for passes in bookPassCounts.values()):
+        details = ', '.join(f'{BBB}={passes}' for BBB, passes in bookPassCounts.items())
+        vPrint('Normal', DEBUGGING_THIS_MODULE,
+               f"  {testament} book passes: {details}; total {sum(bookPassCounts.values()):,} book passes.")
     if not selected:
         reportWordNumberPercentage( testament, totalNumWords, totalNumWordNumbered )
     return totalNumWords, totalNumWordNumbered
@@ -888,12 +880,14 @@ def _connect_OET_RV_book_MP( givenParameters ):
 
 def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
     """
-    Firstly, load the OET-LV wordtable.
-        Loads into state.wordTableHeaderList and state.wordTable.
+    Connect one book until a complete pass inserts no more source-word numbers.
 
-    Check that any existing word numbers are in the correct verse.
-
-    Then connect linked words in the OET-LV to the OET-RV.
+    The shared insertion function counts actual additions, independently of rule
+    statistics or displayed-word coverage (which groups hyphenated components).
+    It only fills unnumbered tokens, so additions are monotonic and the loop must
+    finish. Preview and output-directory runs use the same in-memory loop.
+    Return rule totals, final coverage, and the number of complete book passes
+    (including the last pass with no additions).
     """
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
         fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV_book( {BBB} )" )
@@ -966,6 +960,102 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
                 logger = logging.critical if ' \\x ' in line else logging.warning
                 logger( f"Double-check space after xref in {rvESFMFilename} {lineNumber}: '{line}'" )
 
+    # Only books that gain links need another pass. Retain their live lines and
+    # parsed verse pairs in memory; cleanup and saving each happen just once.
+    verseEntries = list(iterAlignmentVerseEntries(BBB, lv, rv))
+    state.bookLinkAdditions = 0
+    passLinkAdditions = []
+    while True:
+        beforePass = state.bookLinkAdditions
+        for c, v, rvVerseEntryList, lvVerseEntryList in verseEntries:
+            (numWordPhraseAdds,numWordPhraseNS), (numSimpleListedAdds,numSimpleListedAddsNS), (numProperNounAdds,numProperNounAddsNS), (numFirstPartMatchedAdds,numFirstPartMatchedAddsNS), (numManualMatchedAdds,numManualMatchedAddsNS), (numVerbSetAdds,numVerbSetNS), (numChangedNumberAdds,numChangedNumberNS), (numSpecialistAdds,numSpecialistNS), (numInOrderMatchedAdds,numInOrderMatchedAddsNS) \
+                        = connect_OET_RV_Verse( BBB, c, v, rvVerseEntryList, lvVerseEntryList ) # updates state.rvESFMLines
+            bookWordPhraseAdds += numWordPhraseAdds
+            bookWordPhraseAddsNS += numWordPhraseNS
+            bookSimpleListedAdds += numSimpleListedAdds + numVerbSetAdds
+            bookSimpleListedAddsNS += numSimpleListedAddsNS + numVerbSetNS
+            bookProperNounAdds += numProperNounAdds
+            bookProperNounAddsNS += numProperNounAddsNS
+            bookFirstPartMatchedAdds += numFirstPartMatchedAdds
+            bookFirstPartMatchedAddsNS += numFirstPartMatchedAddsNS
+            bookManualMatchedAdds += numManualMatchedAdds
+            bookManualMatchedAddsNS += numManualMatchedAddsNS
+            bookChangedNumberAdds += numChangedNumberAdds
+            bookChangedNumberAddsNS += numChangedNumberNS
+            bookSpecialistAdds += numSpecialistAdds
+            bookSpecialistAddsNS += numSpecialistNS
+            bookInOrderMatchedAdds += numInOrderMatchedAdds
+            bookInOrderMatchedAddsNS += numInOrderMatchedAddsNS
+        addedThisPass = state.bookLinkAdditions - beforePass
+        passLinkAdditions.append(addedThisPass)
+        vPrint('Normal', DEBUGGING_THIS_MODULE,
+               f"    {BBB} pass {len(passLinkAdditions)} added {addedThisPass:,} word links."
+               + (" Reprocessing…" if addedThisPass else " Finished."))
+        if not addedThisPass:
+            break
+
+    newESFMtext = '\n'.join( state.rvESFMLines ) \
+                        .replace( '\\nd* \\nd ', ' ' ) # Concatenate consecutive nd fields
+    if newESFMtext != state.rvESFMText:
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
+            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{BBB} ESFM text has changed {len(state.rvESFMText):,} chars -> {len(newESFMtext):,} chars" )
+        if BBB=='ACT': newESFMtext = newESFMtext.replace( ' 120¦', ' 12Z¦' ) # Avoid false alarm
+        illegalWordLinkRegex1Match = illegalWordLinkRegex1.search( newESFMtext)
+        assert not illegalWordLinkRegex1Match, f"illegalWordLinkRegex1 failed before saving {BBB} with '{newESFMtext[illegalWordLinkRegex1Match.start()-5:illegalWordLinkRegex1Match.end()+5]}'" # Don't want double-ups of wordlink numbers
+        if BBB=='ACT': newESFMtext = newESFMtext.replace( ' 12Z¦', ' 120¦' ) # Avoided false alarm
+        illegalWordLinkRegex2Match = illegalWordLinkRegex2.search( newESFMtext)
+        assert not illegalWordLinkRegex2Match, f"illegalWordLinkRegex2 failed before saving {BBB} with '{newESFMtext[illegalWordLinkRegex2Match.start()-5:illegalWordLinkRegex2Match.end()+5]}'" # Don't want double-ups of wordlink numbers
+        assert doubledND not in newESFMtext, f"doubled \\nd check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(doubledND)-10:newESFMtext.index(doubledND)+35]}'"
+        assert badAddND not in newESFMtext, f"\\nd in \\add start check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(badAddND)-10:newESFMtext.index(badAddND)+35]}'"
+        assert badNDAdd not in newESFMtext, f"\\nd in \\add end check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(badNDAdd)-10:newESFMtext.index(badNDAdd)+35]}'"
+        # NOTE: '*?' has to have a space before it, because \\add*? might occur at the end of a question
+        for wronglyOrderedCombo in ('+?','=?','<?','>?','≡?','&?','@?',' *?','#?','%?','^?','≈?'):
+            assert wronglyOrderedCombo not in newESFMtext, f"Wrongly ordered combo check failed with '{wronglyOrderedCombo}' before saving {BBB} with '{newESFMtext[newESFMtext.index(wronglyOrderedCombo)-10:newESFMtext.index(wronglyOrderedCombo)+35]}'"
+        options = BibleOrgSysGlobals.commandLineArguments
+        destination = options.output_dir / rvESFMFilename if options.output_dir else rvESFMFilepath
+        if not options.dry_run:
+            destination.write_text(newESFMtext, encoding='utf-8')
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookWordPhraseAdds:,} word phrase adds, {bookSimpleListedAdds:,} simple listed adds, {bookProperNounAdds:,} proper noun adds, {bookFirstPartMatchedAdds:,} first part adds, {bookManualMatchedAdds:,} manual adds, {bookChangedNumberAdds:,} changed number adds, {bookRewordedAdds:,} reworded adds, {bookSpecialistAdds:,} specialist add span adds and {bookInOrderMatchedAdds:,} in-order adds for {BBB}." )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookWordPhraseAddsNS:,} word phrase NS, {bookSimpleListedAddsNS:,} simple listed NS, {bookProperNounAddsNS:,} proper noun NS, {bookFirstPartMatchedAddsNS:,} first part NS, {bookManualMatchedAddsNS:,} manual NS, {bookChangedNumberAddsNS:,} changed number NS, {bookRewordedAddsNS:,} reworded NS, {bookSpecialistAddsNS:,} specialist add span NS and {bookInOrderMatchedAddsNS:,} in-order NS for {BBB}." )
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      {'Previewed' if options.dry_run else 'Saved'} OET-RV {BBB} {len(newESFMtext):,} characters ({destination})" )
+    else:
+        # assert bookSimpleListedAdds == bookProperNounAdds == 0
+        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
+            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    No changes made to OET-RV {BBB}." )
+
+    # Say how much of this book is now connected to the OET-LV.
+    #   Selected-book runs report each book; full runs report testament and Bible totals
+    #   in connect_OET_RV() and main().
+    bookNumWords,bookNumWordNumbered = countWordsAndWordNumbers( state.rvESFMLines )
+    options = BibleOrgSysGlobals.commandLineArguments
+    if options.output_dir and not options.dry_run and newESFMtext == state.rvESFMText:
+        (options.output_dir / rvESFMFilename).write_text(newESFMtext, encoding='utf-8')
+    state.bookReports.append(dict(book=BBB, words=bookNumWords, before=beforeLinked,
+                                  after=bookNumWordNumbered, added=bookNumWordNumbered-beforeLinked,
+                                  removed_plain_add=numStraightAddSpanRemovals,
+                                  passes=len(passLinkAdditions),
+                                  links_added=state.bookLinkAdditions,
+                                  pass_additions=passLinkAdditions))
+    if options.books:
+        reportWordNumberPercentage( f"OET-RV {BBB}", bookNumWords, bookNumWordNumbered )
+
+    return bookWordPhraseAdds, bookWordPhraseAddsNS, bookSimpleListedAdds, bookSimpleListedAddsNS, bookProperNounAdds, bookProperNounAddsNS, bookFirstPartMatchedAdds, \
+            bookFirstPartMatchedAddsNS, bookManualMatchedAdds, bookManualMatchedAddsNS, bookChangedNumberAdds, \
+            bookChangedNumberAddsNS, bookSpecialistAdds, bookSpecialistAddsNS, bookInOrderMatchedAdds, \
+            bookInOrderMatchedAddsNS, bookNumWords, bookNumWordNumbered, len(passLinkAdditions)
+# end of connect_OET-RV_words_via_OET-LV.connect_OET_RV_book
+
+
+def iterAlignmentVerseEntries(BBB, lv, rv):
+    """Resolve and check a book's verse pairs once, before repeated matching.
+
+    Entries retain the original parsed text. Matching reads the current RV text
+    through getLiveRVVerseText(), so new links are visible on every pass without
+    reparsing a Bible or repeating versification diagnostics.
+    """
     numChapters = lv.getNumChapters( BBB )
     if numChapters >= 1:
         for c in range( 1, numChapters+1 ):
@@ -1025,79 +1115,11 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
 
                 check_OET_RV_Verse( BBB, c, v, rvVerseEntryList, lvVerseEntryList ) # Check that any existing word numbers are in the expected range
 
-                (numWordPhraseAdds,numWordPhraseNS), (numSimpleListedAdds,numSimpleListedAddsNS), (numProperNounAdds,numProperNounAddsNS), (numFirstPartMatchedAdds,numFirstPartMatchedAddsNS), (numManualMatchedAdds,numManualMatchedAddsNS), (numVerbSetAdds,numVerbSetNS), (numChangedNumberAdds,numChangedNumberNS), (numSpecialistAdds,numSpecialistNS), (numInOrderMatchedAdds,numInOrderMatchedAddsNS) \
-                            = connect_OET_RV_Verse( BBB, c, v, rvVerseEntryList, lvVerseEntryList ) # updates state.rvESFMLines
-                bookWordPhraseAdds += numWordPhraseAdds
-                bookWordPhraseAddsNS += numWordPhraseNS
-                bookSimpleListedAdds += numSimpleListedAdds + numVerbSetAdds
-                bookSimpleListedAddsNS += numSimpleListedAddsNS + numVerbSetNS
-                bookProperNounAdds += numProperNounAdds
-                bookProperNounAddsNS += numProperNounAddsNS
-                bookFirstPartMatchedAdds += numFirstPartMatchedAdds
-                bookFirstPartMatchedAddsNS += numFirstPartMatchedAddsNS
-                bookManualMatchedAdds += numManualMatchedAdds
-                bookManualMatchedAddsNS += numManualMatchedAddsNS
-                bookChangedNumberAdds += numChangedNumberAdds
-                bookChangedNumberAddsNS += numChangedNumberNS
-                bookSpecialistAdds += numSpecialistAdds
-                bookSpecialistAddsNS += numSpecialistNS
-                bookInOrderMatchedAdds += numInOrderMatchedAdds
-                bookInOrderMatchedAddsNS += numInOrderMatchedAddsNS
+                yield c, v, rvVerseEntryList, lvVerseEntryList
     else:
         if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
             dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"connect_OET_RV {BBB} has {numChapters} chapters!!!" )
         assert BBB in ('INT','FRT',)
-
-    newESFMtext = '\n'.join( state.rvESFMLines ) \
-                        .replace( '\\nd* \\nd ', ' ' ) # Concatenate consecutive nd fields
-    if newESFMtext != state.rvESFMText:
-        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{BBB} ESFM text has changed {len(state.rvESFMText):,} chars -> {len(newESFMtext):,} chars" )
-        if BBB=='ACT': newESFMtext = newESFMtext.replace( ' 120¦', ' 12Z¦' ) # Avoid false alarm
-        illegalWordLinkRegex1Match = illegalWordLinkRegex1.search( newESFMtext)
-        assert not illegalWordLinkRegex1Match, f"illegalWordLinkRegex1 failed before saving {BBB} with '{newESFMtext[illegalWordLinkRegex1Match.start()-5:illegalWordLinkRegex1Match.end()+5]}'" # Don't want double-ups of wordlink numbers
-        if BBB=='ACT': newESFMtext = newESFMtext.replace( ' 12Z¦', ' 120¦' ) # Avoided false alarm
-        illegalWordLinkRegex2Match = illegalWordLinkRegex2.search( newESFMtext)
-        assert not illegalWordLinkRegex2Match, f"illegalWordLinkRegex2 failed before saving {BBB} with '{newESFMtext[illegalWordLinkRegex2Match.start()-5:illegalWordLinkRegex2Match.end()+5]}'" # Don't want double-ups of wordlink numbers
-        assert doubledND not in newESFMtext, f"doubled \\nd check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(doubledND)-10:newESFMtext.index(doubledND)+35]}'"
-        assert badAddND not in newESFMtext, f"\\nd in \\add start check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(badAddND)-10:newESFMtext.index(badAddND)+35]}'"
-        assert badNDAdd not in newESFMtext, f"\\nd in \\add end check failed before saving {BBB} with '{newESFMtext[newESFMtext.index(badNDAdd)-10:newESFMtext.index(badNDAdd)+35]}'"
-        # NOTE: '*?' has to have a space before it, because \\add*? might occur at the end of a question
-        for wronglyOrderedCombo in ('+?','=?','<?','>?','≡?','&?','@?',' *?','#?','%?','^?','≈?'):
-            assert wronglyOrderedCombo not in newESFMtext, f"Wrongly ordered combo check failed with '{wronglyOrderedCombo}' before saving {BBB} with '{newESFMtext[newESFMtext.index(wronglyOrderedCombo)-10:newESFMtext.index(wronglyOrderedCombo)+35]}'"
-        options = BibleOrgSysGlobals.commandLineArguments
-        destination = options.output_dir / rvESFMFilename if options.output_dir else rvESFMFilepath
-        if not options.dry_run:
-            destination.write_text(newESFMtext, encoding='utf-8')
-        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookWordPhraseAdds:,} word phrase adds, {bookSimpleListedAdds:,} simple listed adds, {bookProperNounAdds:,} proper noun adds, {bookFirstPartMatchedAdds:,} first part adds, {bookManualMatchedAdds:,} manual adds, {bookChangedNumberAdds:,} changed number adds, {bookRewordedAdds:,} reworded adds, {bookSpecialistAdds:,} specialist add span adds and {bookInOrderMatchedAdds:,} in-order adds for {BBB}." )
-        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookWordPhraseAddsNS:,} word phrase NS, {bookSimpleListedAddsNS:,} simple listed NS, {bookProperNounAddsNS:,} proper noun NS, {bookFirstPartMatchedAddsNS:,} first part NS, {bookManualMatchedAddsNS:,} manual NS, {bookChangedNumberAddsNS:,} changed number NS, {bookRewordedAddsNS:,} reworded NS, {bookSpecialistAddsNS:,} specialist add span NS and {bookInOrderMatchedAddsNS:,} in-order NS for {BBB}." )
-        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      {'Previewed' if options.dry_run else 'Saved'} OET-RV {BBB} {len(newESFMtext):,} characters ({destination})" )
-    else:
-        # assert bookSimpleListedAdds == bookProperNounAdds == 0
-        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
-            vPrint( 'Info', DEBUGGING_THIS_MODULE, f"    No changes made to OET-RV {BBB}." )
-
-    # Say how much of this book is now connected to the OET-LV.
-    #   Selected-book runs report each book; full runs report testament and Bible totals
-    #   in connect_OET_RV() and main().
-    bookNumWords,bookNumWordNumbered = countWordsAndWordNumbers( state.rvESFMLines )
-    options = BibleOrgSysGlobals.commandLineArguments
-    if options.output_dir and not options.dry_run and newESFMtext == state.rvESFMText:
-        (options.output_dir / rvESFMFilename).write_text(newESFMtext, encoding='utf-8')
-    state.bookReports.append(dict(book=BBB, words=bookNumWords, before=beforeLinked,
-                                  after=bookNumWordNumbered, added=bookNumWordNumbered-beforeLinked,
-                                  removed_plain_add=numStraightAddSpanRemovals))
-    if options.books:
-        reportWordNumberPercentage( f"OET-RV {BBB}", bookNumWords, bookNumWordNumbered )
-
-    return bookWordPhraseAdds, bookWordPhraseAddsNS, bookSimpleListedAdds, bookSimpleListedAddsNS, bookProperNounAdds, bookProperNounAddsNS, bookFirstPartMatchedAdds, \
-            bookFirstPartMatchedAddsNS, bookManualMatchedAdds, bookManualMatchedAddsNS, bookChangedNumberAdds, \
-            bookChangedNumberAddsNS, bookSpecialistAdds, bookSpecialistAddsNS, bookInOrderMatchedAdds, \
-            bookInOrderMatchedAddsNS, bookNumWords, bookNumWordNumbered
-# end of connect_OET-RV_words_via_OET-LV.connect_OET_RV_book
 
 
 wordLinkRegex = re.compile( '¦[1-9][0-9]{0,5}' )
@@ -3004,6 +3026,7 @@ def applyRVTokenLink(BBB, c, v, token, number, reason):
     startND, endND = ('\\+nd ', '\\+nd*') if nested else ('\\nd ', '\\nd*')
     replacement = f'{startND if addNS else ""}{token.text}¦{number}{endND if addNS else ""}'
     state.rvESFMLines[token.line] = line[:token.start] + replacement + line[token.end:]
+    state.bookLinkAdditions += 1
     if BibleOrgSysGlobals.commandLineArguments.report:
         state.audit.append(dict(book=BBB, chapter=c, verse=v, line=token.line+1,
                                 word=token.text, number=number, reason=reason))

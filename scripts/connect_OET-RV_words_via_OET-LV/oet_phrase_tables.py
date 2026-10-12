@@ -8,7 +8,9 @@
 
 RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS rows are (RV word, LV phrase, words_before).
 The final integer is the number of that RV word's single-word alternatives in
-RV_SINGLE_WORDS_FROM_LV_WORDS to try before this phrase. Zero means phrase first.
+the derived RV_SINGLE_WORDS_FROM_LV_WORDS lookup to try before this phrase.
+These are the two-column and 'both' entries in SINGLE_WORD_MAPPINGS; 'aligned'
+entries do not count towards this priority. Zero means phrase first.
 This preserves the existing priority when single-word and phrase alternatives
 compete. Keep each RV word's phrase rows in order, with nondecreasing priorities;
 review these priorities if inserting or reordering its single-word alternatives.

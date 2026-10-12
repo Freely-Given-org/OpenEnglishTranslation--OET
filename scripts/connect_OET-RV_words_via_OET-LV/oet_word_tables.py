@@ -4,19 +4,22 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-"""Simple vocabulary and single-word equivalences for RV/LV matching.
+"""Simple vocabulary and single-word mappings for RV/LV matching.
 
 SIMPLE_WORDS combines the noun and verb tables with the smaller lists below.
-EQUIVALENT_LV_RV_WORDS contains lower-case RV-to-LV alternatives, followed by
-the existing reverse-map expansion, for positional alignment.
-RV_SINGLE_WORDS_FROM_LV_WORDS rows are (RV word, LV word), matched case-sensitively
-and only in that direction when both occurrences are unique in the verse.
-Rows are alphabetised by RV word, ignoring case, punctuation and diacritics.
-Alternatives for the same word retain their matching priority. Do not automatically
-reverse or normalise these rows. Some pairs also occur in EQUIVALENT_LV_RV_WORDS
-because positional alignment can handle repeated occurrences; that is intentional.
-Edit the literal tables, not the derived collections. These modules are data
-and validation only, with no Bible loading.
+SINGLE_WORD_MAPPINGS is the one maintained list of single-word correspondences:
+    (RV word, LV word) matches exact case and direction, requiring unique words.
+    (word, word, 'aligned') supports normalised, bidirectional positional matching.
+    (RV word, LV word, 'both') supports both of those matching passes.
+The aligned pass can distinguish repeated occurrences using their positions;
+its synonym candidates have a weaker score than identical words or verb forms.
+Do not automatically give directional-only pairs aligned matching as well.
+
+Rows are alphabetised by the first word, ignoring case, punctuation and
+diacritics. Alternatives for the same RV word retain their matching priority.
+The two working lookups EQUIVALENT_LV_RV_WORDS and RV_SINGLE_WORDS_FROM_LV_WORDS
+are derived from this list; edit SINGLE_WORD_MAPPINGS, not those lookups.
+These modules contain data and validation only, with no Bible loading.
 """
 
 from oet_noun_tables import SIMPLE_NOUNS_FLAT, verbalNouns
@@ -74,196 +77,11 @@ SIMPLE_WORDS = tuple(dict.fromkeys(
 ))
 
 
-# The OET-RV and the OET-LV sometimes use different English words for the one OET-LV word, so we
-#   let matchWordsInOrder() connect those as well, e.g. the OET-RV 'Whenever' of Mark 6:10 is the
-#   OET-LV 'Wherever¦26350'.  We only put a word here when it really does mean the same thing,
-#   because a synonym match is weaker evidence than the same word.
-#   Each entry is { an OET-RV word: the OET-LV words that it can stand for }, and we also work it
-#   the other way round, so it doesn't matter which side of a pair we list.
-EQUIVALENT_LV_RV_WORDS = { # Lower-case single words; each pair is listed only once.
-    'across': { 'over' },
-    'after': { 'later' },
-    'agabus': { 'agabos' },
-    'against': { 'towards' },
-    'all': { 'every', 'many' }, # MAT 4:5
-    'allowable': { 'permitting' }, # LUK 6:9
-    'along': { 'by' },
-    'also': { 'and' },
-    'although': { 'though' },
-    'amid': { 'among' },
-    'among': { 'amidst' },
-    'ancestor': { 'father' }, # CH1 2:55
-    'andrew': { 'andreas' },
-    'announcing': { 'proclaiming' },
-    'apostles': { 'apostolos', 'apostolousin' },
-    'apron': { 'ephod' }, # EXO 25:7
-    'aquila': { 'akylas' },
-    'arm': { 'hand' }, # EXO 14:16
-    'arms': { 'hands' }, # MAT 4:6
-    'around': { 'about' },
-    'arrogant': { 'haughty' }, # EZE 16:50
-    'asked': { 'debating' },
-    'banner': { 'standard' }, # ISA 11:12
-    'bartholomew': { 'bartholomaios' },
-    'bartimaeus': { 'bartimaios' },
-    'bash': { 'strike' }, # MAT 4:6
-    'because': { 'for', 'since' },
-    'before': { 'ere' },
-    'bend': { 'stoop' },
-    'beneath': { 'under' },
-    'beside': { 'by' },
-    'best': { 'choicest' }, # DEU 33:21
-    'between': { 'among' },
-    'beyond': { 'past' },
-    'caiaphas': { 'kaiaphas' },
-    'came': { 'searched' },
-    'celebrate': { 'rejoice' }, # DEU 26:11
-    'certainly': { 'surely' }, # EXO 21:15
-    'commander': { 'chief' }, # JDG 11:8
-    'cornelius': { 'kornelios' },
-    'creation': { 'foundation' }, # EPH 1:4
-    'crowds': { 'ochlos', 'ochlousin' },
-    'disciples': { 'mathetes', 'mathetesin' },
-    'disobedience': { 'transgression' }, # ISA 53:8
-    'during': { 'in' },
-    'elders': { 'presbyteros', 'presbyterousin' },
-    'entire': { 'whole' }, # EPH 2:21
-    'entrance': { 'opening' }, # EXO 33:8
-    'familiar': { 'acquainted' }, # ISA 53:3
-    'firewood': { 'woods' }, # CH1 21:23
-    'fishermen': { 'fishers' },
-    'flat': { 'unleavened' }, # DEU 16:8
-    'foreigner': { 'sojourner' }, # DEU 27:19
-    'foreigners': { 'sojourner', 'strangers' }, # DEU 16:14; EZE 11:9
-    'forgiven': { 'forgiveness' },
-    'gentiles': { 'ethne', 'ethnesin' },
-    'happily': { 'joy' }, # ISA 52:8
-    'heads': { 'ears' }, # GEN 41:22
-    'herod': { 'herodes' },
-    'herodians': { 'herodianoi', 'herodianousin' },
-    'high': { 'chief' }, # HEB 4:15
-    'immersed': { 'immersion' },
-    'informed': { 'told' }, # KI1 20:17
-    'into': { 'in', 'to' },
-    'jairus': { 'yairos' },
-    'james': { 'iakovos' },
-    'jericho': { 'yeriho' },
-    'jew': { 'ioudaion', 'youdaion' },
-    'jews': { 'ioudaion', 'ioudaions', 'youdaions' },
-    'john': { 'ioannes' },
-    'jordan': { 'yarden' },
-    'judas': { 'ioudas' },
-    'just': { 'only' },
-    'justus': { 'ioustos' },
-    'knelt': { 'fell' }, # LUK 8:28
-    'lawyers': { 'nomikos', 'nomikousin' },
-    'led': { 'judged' }, # JDG 10:2
-    'left': { 'followed' },
-    'levites': { 'leuites', 'leuitesin' },
-    'lies': { 'falsehood' }, # DAN 11:27
-    'light': { 'kindle' }, # AMO 1:14
-    'like': { 'as' },
-    'lived': { 'feeding' },
-    'luke': { 'loukas' },
-    'man': { 'one' },
-    'mark': { 'markos' },
-    'matthew': { 'matthaios' },
-    'miracle': { 'sign' }, # CH2 32:31
-    'missionary': { 'ambassador' }, # CO1 9:1
-    'multitudes': { 'ochlos', 'ochlousin' },
-    'nicanor': { 'nikanor' },
-    'nicolas': { 'nikolaos' },
-    'noticed': { 'seen' }, # ACT 7:24
-    'oldest': { 'firstborn' }, # CH1 3:15
-    'one': { 'someone' },
-    'ordination': { 'installation' }, # LEV 8:22
-    'other': { 'neighbouring' },
-    'out': { 'forth' },
-    'paul': { 'paulos' },
-    'peter': { 'petros' },
-    'pharisees': { 'pharisaios', 'pharisaiousin' },
-    'philip': { 'filippos' },
-    'pilate': { 'pilatos' },
-    'priests': { 'hiereus', 'hiereusin' },
-    'principles': { 'precepts' }, # PSA 119:93
-    'priscilla': { 'priskilla' },
-    'prochorus': { 'prochoros' },
-    'promised': { 'fulfilled', 'swore' }, # ACT 2:30: promised / swore
-    'prophets': { 'prophetes', 'prophetesin' },
-    'realise': { 'knew' }, # JHN 8:27
-    'realised': { 'knew' }, # CH1 14:2
-    'regular': { 'scribes' },
-    'residence': { 'tabernacle' }, # EXO 25:9
-    'residents': { 'inhabitants' }, # ISA 10:31
-    'rulers': { 'archon', 'archontesin' },
-    'sadducees': { 'saddoukaios', 'saddoukaiousin' },
-    'samaritans': { 'samareitai', 'samareitasin' },
-    'saul': { 'saulos' },
-    'scared': { 'afraid' }, # EXO 3:6
-    'scribes': { 'grammateus', 'grammateusin' },
-    'servant': { 'slave' }, # CH1 2:34
-    'shelters': { 'tents' }, # LUK 9:33
-    'siblings': { 'brothers' }, # JOS 2:18
-    'slaughtered': { 'slain' }, # DEU 32:42
-    'so': { 'thus' },
-    'some': { 'any' },
-    'sons': { 'son' }, # Still needed by positional alignment when the noun repeats.
-    'soon': { 'shortly' },
-    'stephen': { 'stephanos' },
-    'suffering': { 'affliction' }, # LAM 1:7
-    'thaddaeus': { 'thaddaios' },
-    'thaddeus': { 'thaddaios' },
-    'than': { 'from' },
-    'that': { 'which', 'who' },
-    'their': { 'theirs' },
-    'them': { 'those' },
-    'then': { 'when' },
-    'there': { 'here' },
-    'through': { 'thru' },
-    'timothy': { 'timotheos' },
-    'titus': { 'titos' },
-    'toward': { 'towards' },
-    'turn': { 'repentance' },
-    'turned': { 'became' },
-    'until': { 'till' },
-    'unto': { 'to' },
-    'upon': { 'on' },
-    'utensils': { 'vessels' }, # EXO 37:16
-    'washbasin': { 'laver' }, # EXO 30:18
-    'went': { 'came' },
-    'what': { 'whatever' },
-    'when': { 'whenever' },
-    'whenever': { 'wherever' }, # The OET-LV 'wherever' is a temporal 'whenever' in Mark 6:10, 6:56 and 9:18
-    'while': { 'whilst' },
-    'who': { 'whom' },
-    'within': { 'inside' },
-    'without': { 'outside' },
-    'yelled': { 'called' },
-    'zebedaios': { 'zebedee' },
-}
-
-# Equivalences are lexical alternatives, not identity or verb-inflection mappings.
-for rvWord,lvWords in EQUIVALENT_LV_RV_WORDS.items():
-    assert isinstance(lvWords, set) and lvWords, f'{rvWord=} {lvWords=}'
-    assert rvWord not in lvWords, f'Redundant identity mapping: {rvWord}'
-    for word in (rvWord, *lvWords):
-        assert word == word.lower() and not any(c in word for c in ' _=÷'), f'Expected a lower-case single word: {word}'
-    for verbSet in SIMPLE_VERB_SETS:
-        if rvWord in verbSet:
-            assert lvWords.isdisjoint(verbSet), f'Already covered by verb forms: {rvWord} {lvWords}'
-
-# Snapshot the original alternatives so adding reverse pairs cannot create transitive matches.
-# Accumulate alternatives: e.g. 'chief' can mean both 'commander' and 'high'.
-for rvWord,lvWords in tuple((word, tuple(words)) for word,words in EQUIVALENT_LV_RV_WORDS.items()):
-    for lvWord in lvWords:
-        EQUIVALENT_LV_RV_WORDS.setdefault(lvWord, set()).add(rvWord)
-
-
-# Case-sensitive, directional alternatives, alphabetised by RV word.
-# Alternatives for the same RV word retain their existing matching priority.
-# Multiword LV alternatives are in oet_phrase_tables.py; the connector merges
-# them with these alternatives using the phrase rows' explicit priority.
-RV_SINGLE_WORDS_FROM_LV_WORDS = (
+# Single-word correspondences, alphabetised by the first word.
+# Two-column rows keep their exact RV -> LV direction and matching priority.
+# 'aligned' adds only the positional match; 'both' also keeps the unique match.
+# Multiword alternatives and their insertion priorities live in oet_phrase_tables.py.
+SINGLE_WORD_MAPPINGS = (
     ('abandon', 'forsakes'), # PRO 15:10
     ('abandon', 'leave'), # NUM 32:15
     ('abandons', 'forsakes'), # PRO 28:13
@@ -305,6 +123,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('acknowledgement', 'confessed'), # ROM 10:10
     ('acknowledging', 'confessing'), # MAT 11:25
     ('acquired', 'acquisition'), # PRO 21:6
+    ('across', 'over', 'aligned'),
     ('act', 'behave'), # ISA 1:4
     ('act', 'does'), # PRO 14:17
     ('act', 'work'), # PRO 21:8
@@ -345,6 +164,8 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('afraid', 'fear'), # DEU 17:13
     ('afraid', 'fears'), # KI1 1:51
     ('afterwards', 'afterward'), # HEB 12:17
+    ('agabus', 'agabos', 'aligned'),
+    ('against', 'towards', 'aligned'),
     ('agreed','same'), # Mrk 14:56
     ('agreeing','confirming'),
     ('agreement','covenant'),
@@ -357,6 +178,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('alive', 'lived'), # LUK 15:32
     ('alive', 'lives'), # SA1 20:31
     ('alive', 'living'), # ACT 25:24
+    ('all', 'every', 'aligned'), # MAT 4:5
     ('allied', 'alliance'), # CH2 20:37
     ('Allow', 'let'), # RUT 2:2
     ('allow', 'grant'), # PSA 140:8
@@ -364,12 +186,15 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('allow', 'permit'), # PSA 55:22
     ('allow', 'permitted'), # JDG 1:34
     ('allow', 'permitting'), # CO2 12:4
+    ('allowable', 'permitting', 'aligned'), # LUK 6:9
     ('allowed', 'left'), # JDG 2:23
     ('allowed', 'permitted'), # GEN 31:7
     ('allowed', 'permitting'), # LUK 6:4
     ('along', 'alongside'), # CH1 26:16
+    ('along', 'by', 'aligned'),
     ('Also','And'),
-    ('also','and'),
+    ('also','and', 'both'),
+    ('although', 'though', 'aligned'),
     ('always','perpetuity'),
     ('amazed','astonished'),
     ('amazed','marvelling'),
@@ -380,12 +205,15 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('ambush', 'ambushers'), # JDG 9:25
     ('ambushes', 'ambusher'), # EZR 8:31
     ('ambushes', 'ambushers'), # JER 51:12
+    ('amid', 'among', 'aligned'),
+    ('among', 'amidst', 'aligned'),
     ('amongst', 'among'), # ACT 20:29
     ('ancestors','fathers'),
     ('ancestors', 'ancestral'), # ACT 24:14
     ('ancestral', 'ancestors'), # KI2 9:28
     ('ancestry', 'ancestors'), # EZR 2:59
     ('ancient', 'antiquity'), # ISA 46:10
+    ('andrew', 'andreas', 'aligned'),
     ('angel', 'messenger'), # EXO 32:34
     ('angels', 'messengers'), # ROM 8:38
     ('anger', 'rage'), # EST 7:10
@@ -418,7 +246,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('announced', 'declared'), # ISA 48:14
     ('announced', 'proclaimed'), # DEU 15:2
     ('announcement', 'proclamation'), # DAN 5:29
-    ('announcing','proclaiming'),
+    ('announcing','proclaiming', 'both'),
     ('annulled', 'annulment'), # HEB 7:18
     ('anointed', 'oil'), # ZEC 4:14
     ('answer', 'respond'), # JOB 20:2
@@ -430,6 +258,8 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('anyone','ones'),
     ('anyone','one'),
     ('apart', 'separated'), # HEB 7:26
+    ('apostles', 'apostolos', 'aligned'),
+    ('apostles', 'apostolousin', 'aligned'),
     ('appear', 'appearance'), # NUM 9:16
     ('appear', 'present'), # ISA 1:12
     ('appearance', 'appearing'), # TH2 2:8
@@ -455,6 +285,8 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('approaching', 'near'), # JHN 6:19
     ('approaching', 'nearing'), # ACT 10:9
     ('appropriate','fitting'),
+    ('apron', 'ephod', 'aligned'), # EXO 25:7
+    ('aquila', 'akylas', 'aligned'),
     ('arbitrate', 'decide'), # MIC 4:3
     ('area','districts'), # Mat 2:22
     ('area', 'region'), # LUK 7:17
@@ -462,8 +294,10 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ("aren't",'not'),
     ('arguing', 'debating'), # ACT 6:9
     ('arid', 'waterless'), # MAT 12:43
+    ('arm', 'hand', 'aligned'), # EXO 14:16
     ('armour', 'armor'), # LUK 11:22
     ('armoured', 'armours'), # CH2 26:14
+    ('arms', 'hands', 'aligned'), # MAT 4:6
     ('Army','hosts'),
     ('army','hosts'),
     ('aroma','odour'),
@@ -471,6 +305,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('around', 'round'), # CH2 17:9
     ('around', 'surround'), # PSA 7:7
     ('around', 'surroundings'), # KI2 23:5
+    ('around', 'about', 'aligned'),
     ('arrangements', 'plans'), # EZE 42:11
     ('arrest','apprehend'),
     ('arrested','apprehended'), # Mrk 14:49
@@ -487,6 +322,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('arrogance', 'loftiness'), # JOB 20:6
     ('arrogant', 'arrogance'), # JN1 2:16
     ('arrogant', 'proud'), # HAB 2:5
+    ('arrogant', 'haughty', 'aligned'), # EZE 16:50
     ('arrogantly', 'pride'), # PSA 10:2
     ('ashamed', 'shame'), # PSA 119:116
     ('ashes', 'ash[es]'), # DAN 9:3
@@ -506,6 +342,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('asked', 'petition'), # PSA 106:15
     ('asked', 'said'), # ACT 2:37
     ('asked', 'say'), # CH1 13:12
+    ('asked', 'debating', 'aligned'),
     ('asking', 'inquiring'), # LUK 18:36
     ('asking', 'requesting'), # ACT 25:3
     ('asking', 'said'), # JDG 21:3
@@ -597,10 +434,14 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('bandages', 'binding'), # PSA 147:3
     ('bandages', 'binds'), # JOB 5:18
     ('banner', 'signs'), # NUM 2:2
+    ('banner', 'standard', 'aligned'), # ISA 11:12
     ('banquet', 'feast'), # DAN 5:10
     ('barren', 'bare'), # JER 7:29
+    ('bartholomew', 'bartholomaios', 'aligned'),
+    ('bartimaeus', 'bartimaios', 'aligned'),
     ('base','root'),
     ('bases', 'stands'), # KI2 25:16
+    ('bash', 'strike', 'aligned'), # MAT 4:6
     ('basin', 'laver'), # EXO 30:28
     ('basins', 'bowls'), # CH2 4:22
     ('basins', 'laver'), # KI2 16:17
@@ -629,9 +470,12 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('Because','For/Because'),
     ('because','For/Because'),
     ('because','if/because'),
+    ('because', 'for', 'aligned'),
+    ('because', 'since', 'aligned'),
     ('bedding','pallet'),
     ('bedroom', 'chamber'), # CH2 22:11
     ('bedroom', 'chambers'), # SNG 1:4
+    ('before', 'ere', 'aligned'),
     ('beg', 'imploring'), # MRK 5:7
     ('begged', 'implored'), # MRK 5:12
     ('begged', 'imploring'), # ACT 21:12
@@ -653,19 +497,24 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('below', 'beneath'), # AMO 2:9
     ('belt', 'loincloth'), # KI2 1:8
     ('belts', 'loincloth'), # EZE 23:15
+    ('bend', 'stoop', 'aligned'),
+    ('beneath', 'under', 'aligned'),
     ('beneficial', 'benefitting'), # CO1 6:12
     ('benefit', 'profit'), # JOB 22:3
     ('benefit', 'profits'), # JER 2:11
     ('bent', 'inclined'), # HOS 11:4
+    ('beside', 'by', 'aligned'),
     ('besiege', 'siege'), # ISA 29:3
     ('besieged', 'siege'), # KI1 16:17
     ('besieged', 'surrounded'), # LAM 3:5
     ('besieging', 'siege'), # KI1 15:27
+    ('best', 'choicest', 'aligned'), # DEU 33:21
     ('bestower', 'bestows'), # ISA 23:8
     ('betrayed', 'betrayer'), # LUK 6:16
     ('betrayed', 'treacherously'), # LAM 1:2
     ('betrays', 'treacherously'), # HAB 2:5
     ('better', 'good'), # AMO 6:2
+    ('between', 'among', 'aligned'),
     ('Big', 'great'), # MAT 15:30
     ('big', 'great'), # ACT 17:4
     ('big', 'large'), # GAL 6:11
@@ -820,6 +669,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('buttocks', 'buttock[s]'), # CH1 19:4
     ('buyer', 'buys'), # EZE 7:12
     ('buyers','buying'),
+    ('caiaphas', 'kaiaphas', 'aligned'),
     ('calamity', 'destruction'), # JOB 6:2
     ('calamity', 'trouble'), # PRO 24:16
     ('Call', 'summon'), # JER 51:27
@@ -846,6 +696,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('came', 'near'), # SA1 17:16
     ('came', 'returned'), # KI2 9:36
     ('came', 'went'), # DEU 2:32
+    ('came', 'searched', 'aligned'),
     ('camels', 'camel[s]'), # KI2 8:9
     ('camp', 'encamp'), # ISA 29:3
     ('camp', 'encamped'), # JDG 6:33
@@ -908,6 +759,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('cedar', 'cedar[s]'), # ISA 41:19
     ('Celebrate', 'observe'), # KI2 23:21
     ('celebrate', 'observe'), # DEU 16:10
+    ('celebrate', 'rejoice', 'aligned'), # DEU 26:11
     ('celebrated', 'observed'), # CH2 35:19
     ('celebrates', 'observe'), # NUM 9:14
     ('celebration', 'celebrate'), # NUM 29:12
@@ -919,6 +771,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('centre', 'middle'), # CH2 6:13
     ('ceremony', 'service'), # EXO 12:25
     ('certain', 'certainly'), # CO1 9:22
+    ('certainly', 'surely', 'aligned'), # EXO 21:15
     ('chain', 'necklace'), # DAN 5:7
     ('chains','bonds'),
     ('chains', 'fetter[s]'), # LAM 3:7
@@ -1066,6 +919,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('commander','centurion'), # Mrk 15:39
     ('commander', 'leader'), # CH1 27:8
     ('commander', 'official'), # JER 51:27
+    ('commander', 'chief', 'aligned'), # JDG 11:8
     ('Commander-in-chief','hosts'),
     ('commanders', 'leaders'), # CH1 15:25
     ('commanders', 'officials'), # CH2 23:13
@@ -1164,6 +1018,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('convulsion', 'convulsed'), # MRK 1:26
     ('convulsions', 'convulsed'), # MRK 9:26
     ('copy', 'imitating'), # JN3 1:11
+    ('cornelius', 'kornelios', 'aligned'),
     ('cornerstone', 'corner'), # ACT 4:11
     ('corpses', 'corpse[s]'), # JER 7:33
     ('correct', 'right'), # JOB 27:5
@@ -1231,6 +1086,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('crawling', 'creeps'), # LEV 20:25
     ('created', 'made'), # ACT 4:24
     ('creation','beginning'),
+    ('creation', 'foundation', 'aligned'), # EPH 1:4
     ('creator', 'created'), # COL 3:10
     ('creature', 'animal'), # REV 13:1
     ('creature', 'beast'), # DAN 7:23
@@ -1253,6 +1109,8 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('crossing', 'fords'), # JDG 12:6
     ('crossing', 'pass'), # DEU 31:13
     ('crowd','multitude'),
+    ('crowds', 'ochlos', 'aligned'),
+    ('crowds', 'ochlousin', 'aligned'),
     ('cruel', 'cruelty'), # PRO 27:4
     ('cruel', 'ruthless'), # PSA 71:4
     ('cruelty', 'cruel'), # PRO 12:10
@@ -1543,6 +1401,8 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('discerning', 'distinguish'), # KI1 3:9
     ('discerning', 'distinguishing'), # CO1 11:29
     ('discerning', 'understanding'), # KI1 3:12
+    ('disciples', 'mathetes', 'aligned'),
+    ('disciples', 'mathetesin', 'aligned'),
     ('discipline', 'chasten'), # HOS 7:12
     ('discipline', 'correction'), # JER 17:23
     ('discipline', 'disciplinedpl'), # LEV 26:23
@@ -1577,6 +1437,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('dismay', 'terrified'), # ISA 13:8
     ('dismayed', 'disturbed'), # PSA 6:10
     ('dismayed', 'terrified'), # JER 23:4
+    ('disobedience', 'transgression', 'aligned'), # ISA 53:8
     ('disobeyed', 'disobedient'), # NEH 9:26
     ('disown','renounce'), # Mrk 14:31
     ('dispersed', 'dispersion'), # JAM 1:1
@@ -1670,6 +1531,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('drunkenness', 'drinking'), # ECC 10:17
     ('drunks', 'drunkards'), # NAH 1:10
     ('dumb', 'silent'), # PE2 2:16
+    ('during', 'in', 'aligned'),
     ('dying', 'death'), # HEB 11:5
     ('dying', 'perish'), # JOB 29:13
     ('dying', 'perishing'), # JOB 31:19
@@ -1686,6 +1548,8 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('eaten', 'consumed'), # PSA 69:9
     ('effect', 'effective'), # HEB 9:17
     ('elders', 'old'), # JDG 2:7
+    ('elders', 'presbyteros', 'aligned'),
+    ('elders', 'presbyterousin', 'aligned'),
     ('eldest', 'firstborn'), # CH1 8:30
     ('eliminate','destroying'),
     ('eliminate', 'extinguish'), # EZE 32:7
@@ -1735,9 +1599,11 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('enticed', 'deceived'), # JOB 31:9
     ('enticing', 'enticements'), # LAM 2:14
     ('entire','all'),
+    ('entire', 'whole', 'aligned'), # EPH 2:21
     ('entirely', 'entirety'), # EXO 28:31
     ('entrance','door'), # Mrk 16:3
     ('entrance', 'gate'), # EXO 32:26
+    ('entrance', 'opening', 'aligned'), # EXO 33:8
     ('enveloped', 'swallowed'), # CO2 5:4
     ('envied', 'jealous'), # GEN 30:1
     ('envious', 'jealous'), # PRO 24:1
@@ -1827,6 +1693,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('false', 'falsehood'), # EZE 13:8
     ('falsely', 'false'), # MAT 15:19
     ('falsely', 'falsehood'), # PSA 119:78
+    ('familiar', 'acquainted', 'aligned'), # ISA 53:3
     ('families', 'clan'), # JDG 13:2
     ('families', 'clans'), # AMO 3:2
     ('families', 'household'), # JOB 21:21
@@ -1839,7 +1706,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('famished', 'hungry'), # GEN 41:55
     ('fasted', 'fastings'), # CO2 11:27
     ('fat', 'fatness'), # ISA 17:4
-    ('father', 'ancestor'), # CH1 29:10
+    ('father', 'ancestor', 'both'), # CH1 29:10; positional: CH1 2:55
     ('fathers','parents'),
     ('fathers', 'ancestors'), # DEU 30:9
     ('Fatten', 'fat'), # ISA 6:10
@@ -1900,9 +1767,10 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('firebrands', 'firewood'), # ISA 7:4
     ('firepans', 'fire-pans'), # EXO 38:3
     ('fire-trays', 'fire-pans'), # EXO 27:3
+    ('firewood', 'woods', 'aligned'), # CH1 21:23
     ('firm', 'strong'), # DAN 9:27
     ('firstfruits', 'first-fruits'), # EZE 44:30
-    ('fishermen','fishers'),
+    ('fishermen','fishers', 'both'),
     ('fishers', 'fishermen'), # MAT 4:19
     ('fitting','befitting'),
     ('fix', 'set'), # EZE 40:4
@@ -1910,6 +1778,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('flames','fire'),
     ('flaming', 'burning'), # PRO 26:18
     ('flash', 'shine'), # JOB 37:15
+    ('flat', 'unleavened', 'aligned'), # DEU 16:8
     ('flattered','saying'),
     ('flattery', 'flattering'), # DAN 11:32
     ('flattery', 'smooth'), # PSA 5:9
@@ -1957,12 +1826,15 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('foreigner', 'alien'), # EXO 12:45
     ('foreigner', 'foreign'), # DEU 17:15
     ('foreigner', 'foreignness'), # ISA 56:3
+    ('foreigner', 'sojourner', 'aligned'), # DEU 27:19
     ('Foreigners', 'foreignness'), # PSA 18:44
     ('foreigners', 'alien'), # NUM 35:15
     ('foreigners', 'alien[s]'), # LEV 25:6
     ('foreigners', 'aliens'), # LEV 25:23
     ('foreigners', 'foreign'), # JDG 19:12
     ('foreigners', 'foreignness'), # EXO 12:43
+    ('foreigners', 'sojourner', 'aligned'), # DEU 16:14; EZE 11:9
+    ('foreigners', 'strangers', 'aligned'), # DEU 16:14; EZE 11:9
     ('forest', 'tree[s]'), # PSA 74:5
     ('forested', 'forest'), # JOS 17:15
     ('forever','perpetuity'),
@@ -1973,7 +1845,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('forgive', 'atone'), # PSA 65:3
     ('forgive', 'atonement'), # CH2 29:24
     ('forgive', 'forgiveness'), # ACT 5:31
-    ('forgiven','forgiveness'),
+    ('forgiven','forgiveness', 'both'),
     ('forgiven', 'atoned'), # ISA 22:14
     ('forgiven', 'atonement'), # EZE 16:63
     ('forgives', 'forgiveness'), # COL 1:14
@@ -2072,6 +1944,8 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('generals', 'leaders'), # DAN 9:6
     ('generations', 'generation[s]'), # CH1 16:15
     ('generous', 'generosity'), # ROM 12:8
+    ('gentiles', 'ethne', 'aligned'),
+    ('gentiles', 'ethnesin', 'aligned'),
     ('gentle', 'gentleness'), # CO1 4:21
     ('gentleness', 'gentle'), # PHP 4:5
     ('genuineness', 'genuine'), # CO2 8:8
@@ -2261,6 +2135,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('happened', 'occurred'), # JDG 19:30
     ('happened', 'passed'), # CH1 29:30
     ('happening','becoming'), # Mrk 13:29
+    ('happily', 'joy', 'aligned'), # ISA 52:8
     ('happy','elated'), # Mat 2:10
     ('happy', 'blessed'), # PRO 14:21
     ('happy', 'glad'), # ISA 35:1
@@ -2289,6 +2164,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('have','bearing'), # Mat 1:21
     ('head', 'chief'), # CH1 23:11
     ('heads', 'chiefs'), # CH2 5:2
+    ('heads', 'ears', 'aligned'), # GEN 41:22
     ('heal', 'cure'), # LUK 7:3
     ('healed', 'clean'), # KI2 5:12
     ('health', 'healthy'), # MRK 5:34
@@ -2318,6 +2194,9 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('herds', 'cattle'), # EXO 34:3
     ('herds', 'herd[s]'), # DEU 12:6
     ('heritage', 'inheritance'), # JOB 20:29
+    ('herod', 'herodes', 'aligned'),
+    ('herodians', 'herodianoi', 'aligned'),
+    ('herodians', 'herodianousin', 'aligned'),
     ('hesitated', 'delayed'), # GEN 19:16
     ('hidden', 'concealed'), # LUK 9:45
     ('hide', 'concealing'), # GEN 18:17
@@ -2327,6 +2206,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('high', 'heights'), # JOB 25:2
     ('high', 'loftiness'), # PSA 62:4
     ('high', 'lofty'), # ISA 2:14
+    ('high', 'chief', 'aligned'), # HEB 4:15
     ('highway', 'way'), # NUM 21:22
     ('hill','mountain'),
     ('hill', 'mountains'), # KI2 2:16
@@ -2440,7 +2320,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('imagine', 'think'), # MAT 5:17
     ('imitate', 'imitators'), # CO1 4:16
     ('imitated', 'imitators'), # TH1 1:6
-    ('immersed', 'immersion'), # ACT 13:24
+    ('immersed', 'immersion', 'both'), # ACT 13:24
     ('immerser','immersing'),
     ('immortal', 'immortality'), # CO1 15:53
     ('impatient', 'short'), # MIC 2:7
@@ -2470,6 +2350,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('infant', 'sucking'), # LAM 2:11
     ('infants', 'sucking'), # PSA 8:2
     ('inform', 'known'), # EZR 5:10
+    ('informed', 'told', 'aligned'), # KI1 20:17
     ('informing', 'known'), # CO1 12:3
     ('inhabit', 'dwell'), # AMO 9:14
     ('inhabit', 'inhabitant'), # EZE 7:7
@@ -2505,7 +2386,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('inscribed', 'engraved'), # CO2 3:7
     ('inside', 'inner'), # DEU 32:25
     ('inside', 'midst'), # DAN 7:15
-    ('inside', 'within'), # CH2 3:4
+    ('inside', 'within', 'both'), # CH2 3:4
     ('insides', 'inner'), # ISA 16:11
     ('insightful', 'insight'), # PRO 12:8
     ('insignificant','least'), # Mat 2:6
@@ -2542,6 +2423,8 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('interior', 'middle'), # SNG 3:10
     ('intervene', 'interposed'), # ISA 59:16
     ('intervened', 'mediated'), # PSA 106:30
+    ('into', 'in', 'aligned'),
+    ('into', 'to', 'aligned'),
     ('intoxicated', 'drunk'), # REV 17:2
     ('invaded', 'attacks'), # HAB 3:16
     ('invalidate', 'annul'), # JOB 40:8
@@ -2556,18 +2439,29 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('item','article'),
     ('items','article'),
     ('jacinth', 'hyacinth'), # REV 21:20
+    ('jairus', 'yairos', 'aligned'),
+    ('james', 'iakovos', 'aligned'),
     ('jealous','envy'), # Mrk 15:10
     ('jealous', 'envious'), # PSA 106:16
     ('jealous', 'jealousy'), # ACT 13:45
     ('jealous', 'zealous'), # NUM 11:29
     ('jealously', 'jealousy'), # ROM 13:13
+    ('jericho', 'yeriho', 'aligned'),
+    ('jew', 'ioudaion', 'aligned'),
+    ('jew', 'youdaion', 'aligned'),
     ('jewels', 'corals'), # PRO 8:11
+    ('jews', 'ioudaion', 'aligned'),
+    ('jews', 'ioudaions', 'aligned'),
+    ('jews', 'youdaions', 'aligned'),
     ('job', 'business'), # ECC 1:13
     ('jobs','work'), # Mrk 13:34
+    ('john', 'ioannes', 'aligned'),
     ('joined', 'united'), # ECC 9:4
+    ('jordan', 'yarden', 'aligned'),
     ('jostling', 'thrust'), # JOL 2:8
     ('journeys', 'journeyings'), # NUM 33:1
     ('joy', 'pleasure'), # ECC 2:2
+    ('judas', 'ioudas', 'aligned'),
     ('judge','judgements'),
     ('judge', 'judgement'), # DEU 17:8
     ('judge', 'justice'), # ISA 40:14
@@ -2582,12 +2476,14 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('jump', 'leapt'), # ACT 19:16
     ('jumps', 'leaps'), # JOB 37:1
     ('just','this'),
+    ('just', 'only', 'aligned'),
     ('justice', 'judge'), # PRO 31:9
     ('justice', 'judgement'), # ISA 5:16
     ('justice', 'judgements'), # PSA 119:149
     ('justice', 'justify'), # ISA 5:23
     ('justice', 'right'), # JOB 27:2
     ('justice', 'uprightness'), # PSA 45:6
+    ('justus', 'ioustos', 'aligned'),
     ('Keep', 'preserve'), # PSA 119:107
     ('keep', 'holding'), # JHN 10:24
     ('keep', 'observe'), # PSA 119:33
@@ -2624,10 +2520,12 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('kindness', 'loyalty'), # GEN 20:13
     ('King', 'kingdom'), # DEU 3:4
     ('king', 'kingdom'), # MAT 16:28
-    ('kingdoms','nations'),
+    ('kingdoms','nations'), # MAT 4:8
+    ('kingdoms','countries'), # MAT 4:8
     ('kingly','purple'), # Mrk 15:17
     ('kings', 'kingdoms'), # CH2 12:8
     ('knelt','falling'), # Mrk 14:35
+    ('knelt', 'fell', 'aligned'), # LUK 8:28
     ('knew', 'foreknew'), # ROM 8:29
     ('know','knowledge'),
     ('know', 'acknowledge'), # JOB 7:10
@@ -2655,7 +2553,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('large','great'),
     ('larger', 'large'), # DEU 25:14
     ('last', 'finished'), # JOS 5:6
-    ('later','after'), # Mrk 14:70
+    ('later','after', 'both'), # Mrk 14:70
     ('lattice', 'window-lattice'), # JDG 5:28
     ('latticework', 'network'), # JER 52:23
     ('latticework', 'networks'), # CH2 4:12
@@ -2667,6 +2565,8 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('lawlessness', 'lawless'), # PE2 2:8
     ('lawsuit', 'case'), # LAM 3:36
     ('lawsuits', 'case'), # EXO 23:6
+    ('lawyers', 'nomikos', 'aligned'),
+    ('lawyers', 'nomikousin', 'aligned'),
     ('leader','ruler'),
     ('leader', 'chief'), # CH1 5:7
     ('leader', 'judge'), # JDG 2:19
@@ -2700,6 +2600,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('led', 'guided'), # DEU 32:12
     ('led', 'taken'), # PRO 24:11
     ('led', 'took'), # CH1 8:7
+    ('led', 'judged', 'aligned'), # JDG 10:2
     ('leeks', 'leek[s]'), # NUM 11:5
     ('left', 'abandoned'), # ISA 18:6
     ('left', 'departed'), # ACT 18:1
@@ -2708,6 +2609,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('left', 'remain'), # LEV 26:39
     ('left', 'remains'), # ISA 7:22
     ('left', 'went'), # ACT 10:7
+    ('left', 'followed', 'aligned'),
     ('lengthen', 'length'), # DEU 30:20
     ('lengthen', 'long'), # KI1 3:14
     ('leprosy', 'disease'), # CH2 26:19
@@ -2719,8 +2621,11 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('let', 'allowing'), # ACT 19:30
     ('let', 'permit'), # EXO 3:19
     ('let', 'permits'), # JOB 9:18
+    ('levites', 'leuites', 'aligned'),
+    ('levites', 'leuitesin', 'aligned'),
     ('liberate', 'liberty'), # ISA 61:1
     ('liberates', 'free'), # PSA 146:7
+    ('lies', 'falsehood', 'aligned'), # DAN 11:27
     ('life', 'alive'), # PSA 119:93
     ('life', 'lifes'), # DAN 7:12
     ('life', 'live'), # EZE 37:9
@@ -2735,11 +2640,13 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('lifted', 'raised'), # EPH 2:6
     ('light', 'brightness'), # ISA 50:10
     ('light', 'shone'), # JOB 10:22
+    ('light', 'kindle', 'aligned'), # AMO 1:14
     ('lighter', 'lighten'), # JNA 1:5
     ('lightly', 'lightness'), # JER 3:9
     ('like', 'corresponding'), # EXO 38:18
     ('like', 'similar'), # JHN 8:55
     ('like', 'wishing'), # JHN 18:39
+    ('like', 'as', 'aligned'),
     ('limit', 'restrain'), # JOB 15:8
     ('linger', 'delay'), # PRO 23:30
     ('lips', 'mouth'), # EZE 33:31
@@ -2784,6 +2691,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('lived', 'inhabitants'), # CH1 4:40
     ('lived', 'life'), # EXO 6:20
     ('lived', 'sojourned'), # DEU 26:5
+    ('lived', 'feeding', 'aligned'),
     ('lives', 'alive'), # EZE 13:22
     ('lives', 'dwell'), # JER 51:43
     ('lives', 'dwelling'), # ISA 33:5
@@ -2856,6 +2764,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('lowliest', 'insignificant'), # SA1 9:21
     ('lowly', 'small'), # GEN 19:11
     ('loyal', 'loyalty'), # KI1 8:23
+    ('luke', 'loukas', 'aligned'),
     ('lying', 'deceiving'), # HOS 4:2
     ('lyres', 'harps'), # CH1 15:21
     ('made', 'caused'), # AMO 4:10
@@ -2876,17 +2785,18 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('makes', 'caused'), # LAM 3:6
     ('makes', 'causing'), # PSA 104:14
     ('making', 'establish'), # GEN 9:9
-    ('man','one'),
+    ('man','one', 'both'),
     ('man', 'humankind'), # GEN 2:15
     ('man', 'person'), # PRO 28:2
     ('manager', 'management'), # LUK 16:2
     ('mankind','humans'),
     ('many','multiply'),
-    ('many','all'),
+    ('many','all', 'both'), # MAT 4:5
     ('march', 'go'), # DEU 28:25
     ('marched', 'going'), # EXO 14:8
     ('marches', 'go'), # JOL 2:8
     ('marches', 'goes'), # HAB 1:6
+    ('mark', 'markos', 'aligned'),
     ('market', 'marketplace'), # MRK 7:4
     ('marketplace', 'square'), # PSA 55:11
     ('marketplaces', 'market'), # EZE 27:24
@@ -2901,6 +2811,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('masters', 'head'), # LAM 1:5
     ('masters', 'owners'), # SA2 1:6
     ('matters', 'message/thing/matter'), # EZR 10:14
+    ('matthew', 'matthaios', 'aligned'),
     ('mauled', 'tore'), # KI2 2:24
     ('meadow', 'pastureland'), # HOS 9:13
     ('mean', 'hateful'), # TIT 3:3
@@ -2972,6 +2883,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('minister', 'serve'), # CH1 15:2
     ('ministered', 'serves'), # NUM 4:37
     ('ministering', 'serve'), # CH2 5:14
+    ('miracle', 'sign', 'aligned'), # CH2 32:31
     ('miracles','signs'),
     ('miracles','wonders'),
     ('miscarriages', 'miscarrying'), # EXO 23:26
@@ -2981,6 +2893,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('misfortune', 'disaster'), # JOB 12:5
     ('missing', 'lacked'), # CO1 1:7
     ('missionaries','ambassadors'),
+    ('missionary', 'ambassador', 'aligned'), # CO1 9:1
     ('mister','master'),
     ('Mister','Master'),
     ('mistreat', 'afflict'), # EXO 22:22
@@ -3032,6 +2945,8 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('multiplied', 'increase'), # JOB 29:18
     ('multiplied', 'increased'), # JOS 24:3
     ('multiply', 'increase'), # DEU 7:13
+    ('multitudes', 'ochlos', 'aligned'),
+    ('multitudes', 'ochlousin', 'aligned'),
     ('murdered','killed'),
     ('murdered','killing'),
     ('murderer', 'killer'), # NUM 35:19
@@ -3080,6 +2995,8 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('news', 'information'), # EZE 24:26
     ('news', 'message'), # JOS 22:33
     ('news', 'new[s]'), # PSA 112:7
+    ('nicanor', 'nikanor', 'aligned'),
+    ('nicolas', 'nikolaos', 'aligned'),
     ('night', 'night[s]'), # GEN 7:12
     ('nights', 'night[s]'), # DEU 9:9
     ('night-time', 'night'), # KI2 7:12
@@ -3102,6 +3019,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('notice', 'regard'), # RUT 2:19
     ('noticed','saw'),
     ('noticed', 'found'), # NUM 15:32
+    ('noticed', 'seen', 'aligned'), # ACT 7:24
     ('numerous', 'great'), # DEU 30:5
     ('oath', 'swear'), # HOS 4:15
     ('oath', 'swears'), # JER 51:14
@@ -3146,9 +3064,11 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('older', 'aged'), # JOB 32:6
     ('older', 'old'), # EZE 16:46
     ('oldest', 'old'), # SA1 17:28
+    ('oldest', 'firstborn', 'aligned'), # CH1 3:15
     ('olive', 'olive[s]'), # EXO 27:20
     ('olives', 'olive[s]'), # MIC 6:15
     ('on','in/on/at/with'),
+    ('one', 'someone', 'aligned'),
     ('only','except'), # Mrk 13:32
     ('onward', 'onwards'), # EZE 43:27
     ('opened','divided'), # Mrk 15:46
@@ -3175,11 +3095,13 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('ordered', 'said'), # NEH 13:9
     ('ordered', 'sayingms'), # DAN 3:19
     ('orderly', 'order'), # CO1 14:40
+    ('ordination', 'installation', 'aligned'), # LEV 8:22
     ('ornaments', 'ornament[s]'), # EZE 7:20
     ('orphan', 'fatherless'), # DEU 27:19
     ('orphans', 'fatherless'), # MAL 3:5
     ('other','across'),
-    ('other','neighbouring'),
+    ('other','neighbouring', 'both'),
+    ('out', 'forth', 'aligned'),
     ('outer', 'outermost'), # EXO 26:4
     ('out-house', 'outhouses'), # KI2 10:27
     ('outnumber', 'excess'), # NUM 3:46
@@ -3238,7 +3160,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('Passover','feast'), # Mrk 15:6
     ('pass-over', 'passover'), # CH2 35:6
     ('pass-over', 'passovers'), # CH2 35:7
-    ('past', 'beyond'), # HEB 11:11
+    ('past', 'beyond', 'both'), # HEB 11:11
     ('pastureland', 'pasture'), # CH1 5:16
     ('pasturelands', 'pasture'), # CH1 13:2
     ('path','way'),
@@ -3252,6 +3174,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('paths', 'ways'), # HOS 9:8
     ('patiently', 'patience'), # PE1 3:20
     ('patiently', 'patient'), # LUK 18:7
+    ('paul', 'paulos', 'aligned'),
     ('pay', 'give'), # EZE 16:41
     ('pay', 'giving'), # LUK 23:2
     ('payment', 'tribute'), # EZE 27:15
@@ -3324,7 +3247,11 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('perversions', 'perverseness'), # EZE 9:9
     ('perversity', 'perverseness'), # PRO 15:4
     ('pestered', 'urged'), # JDG 16:16
+    ('peter', 'petros', 'aligned'),
     ('petition', 'prayer'), # JER 7:16
+    ('pharisees', 'pharisaios', 'aligned'),
+    ('pharisees', 'pharisaiousin', 'aligned'),
+    ('philip', 'filippos', 'aligned'),
     ('physically', 'flesh'), # ROM 9:5
     ('pick', 'take'), # JHN 5:8
     ('pick', 'taken'), # LUK 5:24
@@ -3334,6 +3261,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('picking', 'taken'), # LUK 22:19
     ('picking', 'taking'), # LUK 19:21
     ('piece', 'part'), # LUK 24:42
+    ('pilate', 'pilatos', 'aligned'),
     ('pile', 'heap'), # RUT 3:7
     ('pile', 'heaped'), # HAB 1:10
     ('piled', 'heap'), # JOS 7:26
@@ -3512,6 +3440,10 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('priestly', 'priests'), # CH2 31:17
     ('priests', 'priesthood'), # EXO 29:9
     ('priests', 'priestly'), # LUK 1:9
+    ('priests', 'hiereus', 'aligned'),
+    ('priests', 'hiereusin', 'aligned'),
+    ('principles', 'precepts', 'aligned'), # PSA 119:93
+    ('priscilla', 'priskilla', 'aligned'),
     ('prison', 'imprisoned'), # JDG 16:21
     ('prison', 'imprisonment'), # CH2 18:26
     ('prison', 'prisoners'), # ECC 4:14
@@ -3522,6 +3454,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('privately', 'secrecy'), # SA1 18:22
     ('problems', 'troubles'), # MAT 26:10
     ('proceed', 'go'), # DEU 1:26
+    ('prochorus', 'prochoros', 'aligned'),
     ('proclaim', 'proclaimer'), # TI1 2:7
     ('proclaim', 'proclamation'), # TIT 1:3
     ('proclaimed', 'proclamation'), # TI2 4:17
@@ -3544,6 +3477,8 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('promised','sworn'),
     ('promised', 'foretold'), # GAL 3:8
     ('promised', 'words/messages'), # CH1 25:5
+    ('promised', 'fulfilled', 'aligned'), # ACT 2:30: promised / swore
+    ('promised', 'swore', 'aligned'), # ACT 2:30: promised / swore
     ('promises', 'oath'), # SA2 21:7
     ('promises', 'oaths'), # MRK 6:26
     ('promoted', 'exalted'), # EST 5:11
@@ -3563,6 +3498,8 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('prophet', 'seer'), # CH2 16:10
     ('prophetic', 'prophecy'), # REV 22:19
     ('prophets', 'prophetic'), # PE2 1:19
+    ('prophets', 'prophetes', 'aligned'),
+    ('prophets', 'prophetesin', 'aligned'),
     ('prosper', 'succeed'), # DAN 8:12
     ('prosper', 'successful'), # DAN 8:25
     ('prospered', 'successful'), # CH1 29:23
@@ -3703,10 +3640,12 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('ready','gird'),
     ('ready', 'prepare'), # EZE 7:14
     ('ready', 'prepared'), # PSA 7:12
+    ('realise', 'knew', 'aligned'), # JHN 8:27
     ('realised','saw'), # Mrk 16:3, Mat 2:16
     ('realised','saying'), # Mrk 16:3, Mat 2:16
     ('realised','seen'), # Mrk 16:3, Mat 2:16
     ('realised', 'understood'), # MAT 17:13
+    ('realised', 'knew', 'aligned'), # CH1 14:2
     ('reason', 'cause'), # CO2 6:3
     ('reason', 'caused'), # EXO 9:16
     ('rebel', 'rebellion'), # JER 28:16
@@ -3768,7 +3707,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('regions','land'),
     ('regret', 'regretful'), # MAT 21:32
     ('regretted', 'regretful'), # MAT 21:29
-    ('regular','scribes'),
+    ('regular','scribes', 'both'),
     ('regular', 'continuity'), # NUM 4:16
     ('regular', 'perpetual'), # DAN 8:11
     ('regulation', 'ordinance'), # LEV 5:10
@@ -3894,6 +3833,8 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('rescuing', 'salvation'), # PSA 118:21
     ('rescuing', 'save'), # JER 30:10
     ('reserve', 'store'), # GEN 41:36
+    ('residence', 'tabernacle', 'aligned'), # EXO 25:9
+    ('residents', 'inhabitants', 'aligned'), # ISA 10:31
     ('resides', 'rests'), # PRO 14:33
     ('resist', 'stand'), # NAH 1:6
     ('resolution', 'resolved'), # JER 4:28
@@ -4069,6 +4010,8 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('ruler', 'prince'), # EZE 12:10
     ('ruler', 'rule'), # PSA 8:6
     ('rulers', 'princes'), # PRO 28:2
+    ('rulers', 'archon', 'aligned'),
+    ('rulers', 'archontesin', 'aligned'),
     ('rules', 'decree'), # PSA 99:7
     ('rules', 'decrees'), # PSA 119:5
     ('rules', 'regulations'), # DEU 6:20
@@ -4093,6 +4036,8 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('sacrificed', 'offered'), # PE1 2:24
     ('sacrifices', 'offering'), # CH1 21:29
     ('Sacrificing', 'offering'), # EXO 29:14
+    ('sadducees', 'saddoukaios', 'aligned'),
+    ('sadducees', 'saddoukaiousin', 'aligned'),
     ('safe', 'safety'), # JOB 21:9
     ('safety', 'refuge'), # JER 17:17
     ('safety', 'security'), # EZE 39:6
@@ -4103,6 +4048,8 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('sailors', 'mariners'), # EZE 27:9
     ('saluting','greeting'), # Mrk 15:18
     ('salvation', 'deliverance'), # JOB 13:16
+    ('samaritans', 'samareitai', 'aligned'),
+    ('samaritans', 'samareitasin', 'aligned'),
     ('same','again'), # Mrk 14:70
     ('sanctified', 'consecrated'), # ISA 13:3
     ('sanctuary','hideout'),
@@ -4113,6 +4060,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('sashes', 'belt'), # PRO 31:24
     ('satisfy', 'fill'), # PRO 6:30
     ('satisfy', 'satiety'), # PRO 13:25
+    ('saul', 'saulos', 'aligned'),
     ('Save', 'deliver'), # PSA 22:20
     ('save', 'deliver'), # EZE 33:12
     ('save', 'delivered'), # ISA 36:19
@@ -4148,6 +4096,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('scared','dismayed'), # Mrk 16:*
     ('scared','feared'), # Mrk 16:*
     ('scared','fearing'), # Mrk 16:*
+    ('scared', 'afraid', 'aligned'), # EXO 3:6
     ('scarlet', 'crimson'), # LAM 4:5
     ('scatter', 'disperse'), # EZE 5:10
     ('scatter', 'sprinkle'), # EZE 10:2
@@ -4175,6 +4124,8 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('scorning', 'rejected'), # JDG 9:38
     ('scorns', 'despises'), # PRO 30:17
     ('screen', 'cover'), # EXO 40:3
+    ('scribes', 'grammateus', 'aligned'),
+    ('scribes', 'grammateusin', 'aligned'),
     ('scriptures','scroll'), # Mrk 12:26
     ('seams', 'leak[s]'), # EZE 27:9
     ('search','seek'), # Mat 2:13
@@ -4256,6 +4207,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('servant', 'maids'), # PRO 27:27
     ('servant', 'maidservant'), # KI1 1:17
     ('servant', 'subject'), # KI2 17:3
+    ('servant', 'slave', 'aligned'), # CH1 2:34
     ('servants','attendants'), # Mrk 14:54
     ('servants','slaves'),
     ('servants', 'subjects'), # CH1 21:3
@@ -4314,6 +4266,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('sheep', 'ram'), # LEV 7:23
     ('sheep', 'rams'), # LEV 22:19
     ('shekels', 'shekel[s]'), # GEN 23:15
+    ('shelters', 'tents', 'aligned'), # LUK 9:33
     ('shepherds', 'sheep-tenders'), # AMO 1:1
     ('She\'s','She'),
     ('shining', 'brightness'), # JOL 2:10
@@ -4347,6 +4300,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('shows', 'revealed'), # CO2 3:3
     ('shrines','places'),
     ('shut', 'closed'), # GEN 7:16
+    ('siblings', 'brothers', 'aligned'), # JOS 2:18
     ('sick','sickly'),
     ('sick', 'sickness'), # ISA 1:5
     ('siege', 'siege-work'), # EZE 17:17
@@ -4395,6 +4349,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('slaps', 'striking'), # LUK 6:29
     ('slaughter', 'kill'), # ZEC 11:5
     ('slaughtered', 'killed'), # GEN 34:25
+    ('slaughtered', 'slain', 'aligned'), # DEU 32:42
     ('slaughterhouse', 'slaughter'), # ACT 8:32
     ('slave', 'maid'), # EXO 2:5
     ('slave', 'maidservant'), # GEN 16:2
@@ -4445,11 +4400,12 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('So','Therefore'),
     ('so','yes'),
     ('so','correct'),
-    ('so','thus'),
+    ('so','thus', 'both'),
     ('soaked','filled'), # Mrk 15:36
     ('soil', 'ground'), # JOL 1:10
     ('soldiers', 'soldier/messenger'), # CH2 18:18
     ('soldiers', 'soldier[s]'), # KI1 20:29
+    ('some', 'any', 'aligned'),
     ('someone','anyone'), # Mrk 15:36
     ('someone','One'), # Mrk 15:36
     ('son', 'child'), # ECC 12:12
@@ -4457,7 +4413,8 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('songs','hymns'), # Mrk 14:26
     ('sons','boys'), # Mat 2:16
     ('sons', 'children'), # GEN 22:20
-    ('soon','shortly'),
+    ('sons', 'son', 'aligned'), # Still needed by positional alignment when the noun repeats.
+    ('soon','shortly', 'both'),
     ('sorcerer', 'magician'), # ACT 13:8
     ('sorcery', 'sorcerer'), # DEU 18:10
     ('sorcery', 'sorcerers'), # MAL 3:5
@@ -4574,6 +4531,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('stealing', 'thefts'), # MAT 15:19
     ('steeled','courage'), # Mrk 15:43
     ('steep', 'descent'), # MIC 1:4
+    ('stephen', 'stephanos', 'aligned'),
     ('steps', 'step[s]'), # PRO 16:9
     ('stewards','managers'),
     ('stick','staff'), # Mrk 15:19,36
@@ -4709,6 +4667,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('suffer', 'sufferings'), # PE1 1:11
     ('suffered', 'sufferings'), # HEB 2:10
     ('suffering', 'pain'), # JOB 2:13
+    ('suffering', 'affliction', 'aligned'), # LAM 1:7
     ('sufferings', 'pains'), # JOB 9:28
     ('summit', 'top'), # SA2 15:32
     ('summoned', 'call'), # EXO 10:16
@@ -4859,6 +4818,9 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('testimony', 'testified'), # JHN 5:33
     ('testimony', 'testifies'), # PRO 25:18
     ('testing', 'trial'), # HEB 3:8
+    ('thaddaeus', 'thaddaios', 'aligned'),
+    ('thaddeus', 'thaddaios', 'aligned'),
+    ('than', 'from', 'aligned'),
     ('thank', 'thank-offering'), # JER 17:26
     ('thank', 'thank-offerings'), # PSA 56:12
     ('thank', 'thanksgiving'), # CH2 33:16
@@ -4873,11 +4835,16 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('thanksgiving', 'thank-offering'), # AMO 4:5
     ('thanksgiving', 'thanks'), # NEH 11:17
     ('that','this'),
-    ('that','which'),
+    ('that','which', 'both'),
+    ('that', 'who', 'aligned'),
+    ('their', 'theirs', 'aligned'),
+    ('them', 'those', 'aligned'),
     ('themselves','hearts'),
     ('Then','And'), # Mrk 14:72
     ('then','And'), # Mrk 14:72
     ('then','immediately'), # Mrk 14:72
+    ('then', 'when', 'aligned'),
+    ('there', 'here', 'aligned'),
     ('thick', 'thickness'), # CH2 4:5
     ('thicker', 'thick'), # CH2 10:10
     ('thickets', 'thicket[s]'), # JER 50:44
@@ -4927,6 +4894,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('threw', 'hurled'), # JNA 1:5
     ('thrive', 'prosper'), # EZE 17:10
     ('through','by'), # Mat 1:18
+    ('through', 'thru', 'aligned'),
     ('throw', 'hurl'), # JNA 1:12
     ('thrown', 'thrust'), # ISA 49:21
     ('thunderbolts', 'thunder'), # JOB 38:25
@@ -4942,9 +4910,11 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('timber', 'wood'), # HAG 1:8
     ('timber', 'woods'), # CH1 22:14
     ('time','hour'), # Mrk 13:32
+    ('timothy', 'timotheos', 'aligned'),
     ('tipped','overturned'),
     ('tired', 'wearied'), # JHN 4:6
     ('tired', 'weary'), # ISA 43:22
+    ('titus', 'titos', 'aligned'),
     ('told','commanded'), # Mrk 14:34, Mat 2:5
     ('told','saying'), # Mrk 14:34, Mat 2:5
     ('told','said'), # Mrk 14:34, Mat 2:5
@@ -4990,7 +4960,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('total','all'),
     ('totally','greatly'), # Mrk 16:5
     ('touch', 'reaches'), # JOB 4:5
-    ('toward', 'towards'), # GEN 12:9
+    ('toward', 'towards', 'both'), # GEN 12:9
     ('towards','toward'),
     ('towered', 'lofty'), # EZE 19:11
     ('town','city'),
@@ -5099,11 +5069,11 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('Turn', 'return'), # PSA 6:4
     ('turn', 'becoming'), # JHN 16:20
     ('turn', 'changed'), # EXO 7:17
-    ('turn', 'repentance'), # ACT 20:21
+    ('turn', 'repentance', 'both'), # ACT 20:21
     ('turn', 'return'), # KI1 8:33
     ('turn', 'returned'), # PSA 18:37
     ('turned','giving'), # Mrk 13:9
-    ('turned', 'became'), # GEN 19:26
+    ('turned', 'became', 'both'), # GEN 19:26
     ('turned', 'become'), # ISA 1:22
     ('turned', 'bent'), # EZE 17:7
     ('turned', 'changed'), # EXO 7:20
@@ -5150,6 +5120,9 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('untarnished', 'holiness'), # CH1 16:10
     ('untie', 'untie/release'), # ISA 32:20
     ('untied', 'untie/release'), # GEN 49:21
+    ('until', 'till', 'aligned'),
+    ('unto', 'to', 'aligned'),
+    ('upon', 'on', 'aligned'),
     ('uproot', 'pluck'), # KI1 14:15
     ('uprooted', 'plucked'), # EZE 19:12
     ('upset','disturbed'), # Mat 2:3
@@ -5165,6 +5138,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('urging', 'exhorting'), # CO2 2:8
     ('useless', 'uselessly'), # MAT 15:9
     ('utensils', 'articles'), # EXO 31:9
+    ('utensils', 'vessels', 'aligned'), # EXO 37:16
     ('valley', 'wadi'), # CH2 20:16
     ('valleys', 'valley[s]'), # NUM 14:25
     ('valleys', 'wadis'), # KI1 18:5
@@ -5264,6 +5238,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('warriors','men'),
     ('warriors', 'mighty'), # SA2 1:22
     ('wash', 'washer'), # ISA 7:3
+    ('washbasin', 'laver', 'aligned'), # EXO 30:18
     ('washed', 'bathed'), # SA2 12:20
     ('washed', 'washer'), # KI2 18:17
     ('waste', 'rot'), # EZE 4:17
@@ -5311,7 +5286,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('weight', 'weighed'), # JER 32:10
     ('welcome', 'received'), # LUK 9:53
     ('We\'ll','We'),
-    ('went','came'), # Mrk 16:5
+    ('went','came', 'both'), # Mrk 16:5
     ('went','come'), # Mrk 16:5
     ('went', 'moved'), # EZE 10:22
     ('went', 'passed'), # EST 4:17
@@ -5322,16 +5297,20 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('western', 'westward'), # EZE 48:10
     ('We\'ve','We'),
     ('whacking','striking'), # Mrk 15:19
-    ('what','whatever'),
+    ('what','whatever', 'both'),
     ("What's",'What'),
     ('wheels', 'wheel[s]'), # EXO 14:25
     ('When','And'),
     ('When','whenever'),
+    ('when', 'whenever', 'aligned'),
+    ('whenever', 'wherever', 'aligned'), # The OET-LV 'wherever' is a temporal 'whenever' in Mark 6:10, 6:56 and 9:18
+    ('while', 'whilst', 'aligned'),
     ('whipped','beat'), # Mrk 13:9
     ('whirlwind', 'storm'), # ZEC 7:14
     ('whirlwind', 'storm-wind'), # HOS 8:7
     ('whirlwinds', 'storm-winds'), # ISA 21:1
     ('white', 'whitened'), # REV 7:14
+    ('who', 'whom', 'aligned'),
     ('whole','all'),
     ('Wicked', 'wickedness'), # PRO 16:12
     ('wicked', 'evil'), # GEN 39:9
@@ -5371,6 +5350,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('withdraw', 'take'), # REV 6:4
     ('within', 'inner'), # HOS 5:4
     ('within', 'inward'), # GEN 25:23
+    ('without', 'outside', 'aligned'),
     ('witness', 'see'), # DEU 28:34
     ('witnessed', 'saw'), # LUK 5:26
     ('witnessed', 'seen'), # JHN 6:14
@@ -5449,7 +5429,7 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('year','year[s]'),
     ('years','year[s]'),
     ('yelled','cried'),
-    ('yelled', 'called'), # GEN 39:18
+    ('yelled', 'called', 'both'), # GEN 39:18
     ('yelled', 'crying'), # ACT 19:28
     ('yelled', 'shouted'), # SA1 25:14
     ('yelling', 'cried'), # MAT 14:26
@@ -5470,14 +5450,36 @@ RV_SINGLE_WORDS_FROM_LV_WORDS = (
     ('youngest', 'younger'), # LUK 22:26
     ('yourselves','hearts'),
     ('youthful', 'youths'), # JER 31:19
+    ('zebedaios', 'zebedee', 'aligned'),
 )
-assert len(set(RV_SINGLE_WORDS_FROM_LV_WORDS)) == len(RV_SINGLE_WORDS_FROM_LV_WORDS)
-for someTuple in RV_SINGLE_WORDS_FROM_LV_WORDS:
-    assert isinstance(someTuple, tuple), f'{someTuple=}'
-    RVWord, LVWord = someTuple
-    assert RVWord.lower() != LVWord.lower(), f'{someTuple=}'
-    assert len(RVWord.split()) == len(LVWord.split()) == 1, f'Expected single words: {someTuple}'
-    assert '_' not in RVWord+LVWord, f'Unexpected phrase separator: {someTuple}'
-    for simpleVerbSet in SIMPLE_VERB_SETS:
-        if LVWord.lower() in simpleVerbSet:
-            assert RVWord.lower() not in simpleVerbSet, f'Can simplify {someTuple=}'
+
+# Derived lookups for the two matching passes; do not maintain entries here.
+# Add only the listed positional pairs and their reverses, never transitive pairs.
+EQUIVALENT_LV_RV_WORDS = {}
+_uniqueWordPairs = []
+_seenWordPairs = set()
+_seenAlignedPairs = set()
+for mapping in SINGLE_WORD_MAPPINGS:
+    assert isinstance(mapping, tuple) and len(mapping) in (2, 3), f'{mapping=}'
+    rvWord, lvWord = mapping[:2]
+    mode = mapping[2] if len(mapping) == 3 else 'unique'
+    assert mode in ('unique', 'aligned', 'both'), f'Unknown matching mode: {mapping}'
+    assert len(rvWord.split()) == len(lvWord.split()) == 1, f'Expected single words: {mapping}'
+    assert '_' not in rvWord+lvWord, f'Unexpected phrase separator: {mapping}'
+    assert rvWord.lower() != lvWord.lower(), f'Redundant identity mapping: {mapping}'
+    assert (rvWord, lvWord) not in _seenWordPairs, f'Duplicate mapping: {mapping}'
+    _seenWordPairs.add((rvWord, lvWord))
+    for verbSet in SIMPLE_VERB_SETS:
+        if lvWord.lower() in verbSet:
+            assert rvWord.lower() not in verbSet, f'Already covered by verb forms: {mapping}'
+    if mode in ('aligned', 'both'):
+        for word in (rvWord, lvWord):
+            assert word == word.lower() and not any(c in word for c in ' _=÷'), f'Expected a lower-case single word: {word}'
+        pair = frozenset((rvWord, lvWord))
+        assert pair not in _seenAlignedPairs, f'Duplicate bidirectional mapping: {mapping}'
+        _seenAlignedPairs.add(pair)
+        EQUIVALENT_LV_RV_WORDS.setdefault(rvWord, set()).add(lvWord)
+        EQUIVALENT_LV_RV_WORDS.setdefault(lvWord, set()).add(rvWord)
+    if mode in ('unique', 'both'):
+        _uniqueWordPairs.append((rvWord, lvWord))
+RV_SINGLE_WORDS_FROM_LV_WORDS = tuple(_uniqueWordPairs)
