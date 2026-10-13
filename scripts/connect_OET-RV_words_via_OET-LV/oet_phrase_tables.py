@@ -6,411 +6,402 @@
 
 """Directional mappings involving actual multiword phrases.
 
-RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS rows are (RV word, LV phrase, words_before).
-The final integer is the number of that RV word's single-word alternatives in
-the derived RV_SINGLE_WORDS_FROM_LV_WORDS lookup to try before this phrase.
-These are the two-column and 'both' entries in SINGLE_WORD_MAPPINGS; 'aligned'
-entries do not count towards this priority. Zero means phrase first.
-This preserves the existing priority when single-word and phrase alternatives
-compete. Keep each RV word's phrase rows in order, with nondecreasing priorities;
-review these priorities if inserting or reordering its single-word alternatives.
+RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS rows are (RV word, LV phrase).
 LV_SINGLE_WORDS_TO_RV_WORD_STRINGS rows are (LV word, RV multiword phrase).
 Both tables are alphabetised by the single word in the first column, ignoring
-case, punctuation and diacritics. Alternatives for the same word retain their
-matching priority. The mappings are case-sensitive and directional; do not
-reverse their rows.
+case, punctuation and diacritics. The mappings are directional; never reverse
+rows automatically. Matching ignores sentence case and compares all eligible
+alternatives in one alignment graph. Table order does not choose a winner.
+The old words_before priority column was removed with the direct-write matcher.
 The optional OET-RV_wordPhrases_table.tsv is still loaded by the main script.
 """
 
 RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS = (
-    ('120', 'a hundred twenty', 0),
-    ('accompanied', 'went with', 0), # RV JDG 4:9
-    ('action', 'carry out', 2), # RV HOS 11:9
-    ('alcohol', 'strong drink', 0), # RV DEU 29:6 / LV DEU 29:5
-    ('ambush', 'lie in wait', 2), # RV PSA 59:3 / LV PSA 59:4
-    ('ambush', 'lay in wait', 2), # RV JDG 9:34
-    ('ambush', 'lying in wait', 2), # RV JOS 8:4
-    ('ambushed', 'lay in wait', 0), # RV LAM 4:19
-    ('ambushes', 'lie in wait', 2), # RV DEU 19:11
-    ('ambushing', 'lying in wait', 0), # RV SA1 24:11 / LV SA1 24:12
-    ('anything','all things', 0),
-    ('approach', 'draw near', 1), # DEU 2:19
-    ('approach', 'drawn near', 1), # ISA 41:5
-    ('approach', 'drew near', 1), # EXO 14:20
-    ('approached', 'drew near', 1), # DEU 4:11
-    ('approaches', 'draw near', 0), # LEV 22:3
-    ('Arouse', 'Wake up', 0), # RV PSA 35:23
-    ('arrested', 'given over', 3),
-    ('ascend', 'go up', 0), # PSA 24:3
-    ('ascend', 'went up', 0), # EPH 4:9
-    ('ascended', 'gone up', 0), # EPH 4:8
-    ('ascended', 'went up', 0), # RV PSA 68:18 / LV PSA 68:19
-    ('ascending', 'going up', 0), # GEN 28:12
-    ('assemble', 'set up', 3), # RV EXO 26:30
-    ('bed', 'lie with', 0), # RV GEN 39:7
-    ('boxwood', 'box tree[s]', 0), # RV ISA 41:19
-    ('bulge', 'comes out', 0), # RV PSA 73:7
-    ('calms', 'makes quiet', 0), # RV PRO 15:18
-    ("can't", 'can not', 1),
-    ('chased', 'go after', 3), # RV RUT 3:10
-    ('cheerfully', 'for joy', 1), # RV PSA 92:4 / LV PSA 92:5
-    ('chief', 'chief priest', 0),
-    ('climb', 'go up', 1), # RV EXO 8:3 / LV EXO 7:28
-    ('Climb', 'Go up', 0), # RV DEU 32:49
-    ('climb', 'goes up', 1), # RV PRO 21:22
-    ('climb', 'gone up', 1), # RV ACT 8:31
-    ('climbed', 'went up', 0), # RV EXO 17:10
-    ('climbed', 'gone up', 0), # RV MAT 14:32
-    ('climbs', 'going up', 0), # RV JHN 10:1
-    ('closed', 'stopped up', 2), # RV NEH 4:7 / LV NEH 4:1
-    ('collapse','passing away', 0), # Mrk 13:31
-    ('collapsed', 'fell in', 0), # RV LUK 6:49
-    ('collected', 'piled up', 2), # RV EXO 8:14 / LV EXO 8:10
-    ('considered', 'looked at', 4), # RV NUM 23:21
-    ("couldn't", 'could not', 0),
-    ('cried', 'call out', 4), # RV PSA 119:145
-    ('cross','pass over', 0),
-    ('cross', 'passed over', 1), # RV DEU 2:14
-    ('Cross', 'pass over', 0), # RV JOS 4:5
-    ('cross', 'passes over', 1), # RV ISA 23:2
-    ('crossed', 'passing over', 2), # RV JDG 8:4
-    ('crosses', 'passes over', 0), # RV EXO 30:13
-    ('crossing', 'passed over', 2), # RV JOS 3:1
-    ('crossing', 'passing over', 2), # RV NUM 32:7
-    ('dedicated', 'given over', 3), # RV ACT 15:26
-    ('deflect', 'turn away', 0), # RV PRO 29:8
-    ('deliver', 'giving birth', 0), # RV ISA 37:3
-    ('demon', 'unclean spirit', 0),
-    ('demons', 'unclean spirits', 0),
-    ('depart', 'go out', 0), # GEN 31:13
-    ('departed', 'went out', 4), # GEN 47:10
-    ('departed', 'set out', 4), # RV EXO 19:2
-    ('descend', 'come down', 0), # ISA 31:4
-    ('descend', 'go down', 0), # ISA 5:14
-    ('Descend', 'come down', 0), # RV SNG 4:8
-    ('descended', 'came down', 0), # EPH 4:9
-    ('descended', 'come down', 1), # EPH 4:10
-    ('descended', 'went down', 2), # EXO 15:5
-    ('descending', 'going down', 0), # GEN 28:12
-    ('descending', 'coming down', 0), # RV SA1 10:5
-    ("didn't", 'did not', 1),
-    ('die','pass away', 0), # Mrk 13:30
-    ('disappeared', 'went away', 0), # RV MRK 1:42
-    ('disappears', 'melting away', 0), # RV PSA 58:8 / LV PSA 58:9
-    ('discard', 'put away', 0), # RV HEB 12:1
-    ('discovered', 'search out', 5), # RV PSA 44:21 / LV PSA 44:22
-    ('dismiss', 'send away', 0), # RV MAT 19:3
-    ('dismissed', 'sent away', 0), # RV ACT 23:22
-    ('dismissed', 'send away', 0), # RV MAT 14:22
-    ("doesn't", 'does not', 0),
-    ("don't", 'do not', 1),
-    ('draw', 'bring out', 1), # RV EZE 21:3 / LV EZE 21:8
-    ('drawn', 'brought out', 0), # RV EZE 21:5 / LV EZE 21:10
-    ('dying', 'passing away', 4), # RV PRO 31:8
-    ('eliminate', 'wipe out', 2), # RV DEU 25:19
-    ('emerge', 'come out', 0), # RV LUK 1:22
-    ('enter', 'go in', 0),
-    ('enter', 'came in', 0), # JHN 18:28
-    ('enter', 'come in', 0), # HEB 3:19
-    ('enter', 'coming in', 0), # HEB 3:18
-    ('enter', 'went in', 0), # RV JER 7:2
-    ('enter', 'gone into', 0), # RV DEU 18:9
-    ('entered', 'came in', 1), # JHN 13:27
-    ('entered', 'come in', 1), # ACT 10:25
-    ('entered', 'go into', 1), # RV DEU 26:1
-    ('entered', 'gone in', 1), # RV EZE 4:14
-    ('entered', 'went in', 1), # RV EXO 24:18
-    ('entered', 'gone into', 1), # RV JOB 38:22
-    ('entering', 'come in', 0), # LUK 1:28
-    ('entering', 'coming in', 0), # HEB 3:11
-    ('entering', 'go into', 0), # RV NUM 32:9
-    ('enters', 'coming in', 0), # JHN 10:1
-    ('enters', 'come in', 0), # RV JER 9:21 / LV JER 9:20
-    ('enters', 'goes into', 0), # RV LEV 14:46
-    ('erase', 'wipe out', 0), # RV JER 18:23
-    ('erase', 'wiping out', 0), # RV REV 3:5
-    ('erased', 'wiped out', 0), # RV ACT 3:19
-    ('erected', 'set up', 1), # RV CH2 33:3
-    ('escaped', 'ran away', 3), # RV JDG 9:21
-    ('establish', 'set up', 1), # RV AMO 5:15
-    ('everyone','you all', 3),
-    ('exclude', 'throw out', 0), # RV REV 11:2
-    ('execute', 'put to death', 0), # RV ISA 11:4
-    ('exited', 'went out', 0), # EST 8:15
-    ('exiting', 'going out', 1), # EXO 19:1
-    ('expecting', 'waiting for', 2), # RV ISA 64:3 / LV ISA 64:2
-    ('expels', 'throwing out', 0), # RV JN3 1:10
-    ('fall', 'go down', 2), # RV HAG 2:22
-    ('fall', 'coming down', 2), # RV REV 13:13
-    ('felled', 'cut down', 0), # RV ISA 9:10 / LV ISA 9:9
-    ('finish', 'make an end', 3), # RV NUM 16:45 / LV NUM 17:10
-    ('flee', 'take flight', 0), # RV JER 50:3
-    ('follow', 'coming after', 4), # RV ACT 19:4
-    ('follow', 'Come after', 4), # RV MAT 4:19
-    ('followed', 'going behind', 3), # RV GEN 32:19 / LV GEN 32:20
-    ('fought', 'engaged in battle', 2), # RV JOS 10:29
-    ('fulfill', 'carry out', 0), # RV DEU 8:18
-    ('gathered','coming together', 0), # Mrk 14:53
-    ("God's", 'of god', 0),
-    ("God’s", 'of god', 0),
-    ('grab', 'take hold of', 3), # RV ZEC 14:13
-    ('grab', 'taking hold of', 3), # RV MAT 12:11
-    ('grows', 'coming out', 2), # RV KI1 4:33 / LV KI1 5:13
-    ("hadn't", 'had not', 0),
-    ('handed', 'turned over', 3), # RV CH1 10:14
-    ('happens', 'fall out', 0), # RV RUT 3:18
-    ("hasn't", 'has not', 0),
-    ("haven't", 'have not', 0),
-    ('Hear', 'give ear', 0), # PSA 78:1
-    ('hear', 'give ear', 0), # PSA 77:1
-    ("He'd", 'He would', 0),
-    ("he'd", 'he would', 0),
-    ("He'd", 'He had', 0),
-    ("He'll", 'He will', 0),
-    ("He'll", 'he will', 0),
-    ("he'll", 'he will', 0),
-    ('her', 'of her', 0),
-    ('Her', 'of her', 0),
-    ("Here's", 'Here is', 0),
-    ("here's", 'here is', 0),
-    ("He's", 'He is', 0),
-    ("he's", 'he is', 0),
-    ('highest', 'Most High', 0), # RV PSA 83:18 / LV PSA 83:19
-    ('his', 'of him', 0),
-    ('His', 'of him', 0),
-    ('holding', 'keeps back', 2), # RV PRO 21:26
-    ('humble', 'bring low', 2), # RV DAN 4:37 / LV DAN 4:34
-    ('humiliated', 'bringing low', 2), # RV DAN 5:19
-    ("I'd", 'I would', 0),
-    ("I'll", 'I will', 0),
-    ("I'm", 'I am', 0),
-    ('implement', 'carry out', 0), # RV JER 29:10
-    ('incinerated', 'burn up', 1), # RV MAT 13:30
-    ('inhabit', 'dwell in', 1), # AMO 9:14
-    ('installing', 'set up', 0), # RV NEH 3:3
-    ("isn't", 'is not', 1),
-    ('Israeli', 'of Yisrāʼēl/Israel', 0),
-    ('Israelis', 'of Yisrāʼēl/Israel', 0),
-    ('Israelis', '>ones from Israaʸl/Yisrāʼēl', 0), # ACT 3:12: the demonym, not the earlier crowd (people).
-    ('issue', 'go forth', 0), # RV EST 1:19
-    ('issuing', 'going forth', 0), # RV DAN 9:25
-    ("It'll", 'It will', 0),
-    ("it'll", 'it will', 0),
-    ('its', 'of it', 0),
-    ('Its', 'of it', 0),
-    ("It's", 'It is', 0),
-    ("it's", 'it is', 0),
-    ("I've", 'I have', 0),
-    ('kept', 'held firm', 5), # RV PSA 17:5
-    ('kill', 'put to death', 2), # CH2 23:7
-    ('kill', 'cut off', 6), # RV EZE 21:3 / LV EZE 21:8
-    ('killed', 'put to death', 3), # CO2 6:9
-    ('killed', 'putting to death', 3), # EZE 13:19
-    ('killing', 'put to death', 1), # GEN 18:25
-    ('leave', 'pass on', 5), # RV GEN 18:5
-    ('Leave', 'Go out', 2), # RV GEN 8:16
-    ('leave', 'passed on', 5), # RV CH2 18:23
-    ('leaves', 'goes out', 4), # RV PSA 41:6 / LV PSA 41:7
-    ('leaves', 'go out', 4), # RV DEU 24:2
-    ('leaves', 'goes forth', 4), # RV ISA 55:11
-    ('leaves', 'going away', 4), # RV LUK 9:39
-    ('leaving', 'goes out', 4), # RV CH2 16:1
-    ('left','came out', 0),
-    ('left','set out', 0),
-    ("Let's", 'Let us', 0),
-    ('lick', 'lap up', 0), # RV KI1 21:19
-    ('licked', 'lapped up', 0), # RV KI1 21:19
-    ('lift', 'bring up', 2), # RV EZE 37:12
-    ('lifted', 'taken up', 1), # RV DAN 6:23 / LV DAN 6:24
-    ('lifted', 'brought up', 1), # RV GEN 37:28
-    ('listen','give ear', 2),
-    ('Listen', 'give ear', 3), # ACT 2:14
-    ('locked', 'shut up', 1), # RV JER 33:1
-    ('lowered', 'let down', 0), # RV ACT 10:11
-    ('lowered', 'brought down', 0), # RV GEN 44:11
-    ('meetings', 'coming together', 0), # RV CO1 11:34
-    ('minds', 'inner of being', 2), # RV PSA 62:4 / LV PSA 62:5
-    ('mounted','sat down', 0),
-    ('mounting', 'going up', 0), # RV GEN 31:10
-    ('musicians', 'flute players', 0), # RV MAT 9:23
-    ("mustn't", 'must not', 0),
-    ('my', 'of me', 0),
-    ('My', 'of me', 0),
-    ('never','no means', 0), # Mrk 13:31
-    ('obtained', 'took hold', 0), # RV CH2 7:22
-    ('our', 'of us', 0),
-    ('Our', 'of us', 0),
-    ('produce', 'bring forth', 5), # RV ISA 55:10
-    ('produces', 'brings forth', 1), # RV ISA 61:11
-    ('producing', 'bringing out', 0), # RV HEB 6:8
-    ('producing', 'brought out', 0), # RV NUM 14:37
-    ('raged', 'in a tumult', 0), # RV PSA 46:6 / LV PSA 46:7
-    ('raise', 'bring up', 2), # RV EZE 26:3
-    ('raised', 'bring up', 2), # RV ISA 49:21
-    ('raises', 'brings up', 0), # RV EZE 26:3
-    ('refuse', 'turn away', 1), # RV KI1 2:16
-    ('Rejoice', 'Shout for joy', 0), # RV PSA 33:1
-    ('release', 'let go', 3), # RV EXO 9:28
-    ('released', 'brought out', 3), # RV JER 20:3
-    ('released', 'let go', 3), # RV EXO 13:17
-    ('releases', 'let go', 1), # RV EXO 22:5 / LV EXO 22:4
-    ('releasing', 'let go', 0), # RV JER 34:14
-    ('remove', 'lift up', 2), # RV LEV 6:10 / LV LEV 6:3
-    ('repaid', 'give back', 0), # RV LUK 12:59
-    ('repay', 'bring back', 2), # RV PSA 54:5 / LV PSA 54:7
-    ('repay', 'give back', 2), # RV LUK 7:42
-    ('repay', 'giving back', 2), # RV MAT 18:29
-    ('repaying', 'giving back', 0), # RV PE1 3:9
-    ('repaying', 'give back', 0), # RV MAT 18:25
-    ('reprimanded', 'gave rebuke', 0), # RV MRK 8:33
-    ('rest', 'lie down', 1), # EZE 34:15
-    ('rest', 'lying down', 2), # PSA 139:3
-    ('Return', 'go back', 1), # GEN 44:25
-    ('return', 'turn back', 6), # DEU 30:2
-    ('return', 'turned back', 6), # ISA 9:13
-    ('return', 'go back', 7), # RV GEN 43:13
-    ('return', 'turning back', 7), # RV CH2 36:13
-    ('returned', 'turned back', 4), # JOS 11:10
-    ('returned', 'went back', 5), # GEN 44:13
-    ('returned', 'brought back', 5), # RV JDG 17:4
-    ('returning', 'went back', 1), # SA1 6:16
-    ('returning', 'bring back', 1), # RV SA2 19:10 / LV SA2 19:11
-    ('returning', 'brought back', 1), # RV SA2 16:8
-    ('reversed', 'turn back', 0), # RV EZE 7:13
-    ('rise', 'go up', 3), # RV ISA 40:31
-    ('rise', 'come up', 3), # RV EXO 10:12
-    ('rises', 'go up', 1), # RV JOB 20:6
-    ('rising', 'went up', 0), # RV GEN 19:28
-    ('rising', 'going up', 0), # RV REV 19:3
-    ('rose', 'went up', 1), # RV ACT 10:4
-    ('sacred','of meeting', 2), # tent of meeting
-    ('safe', 'good care', 2), # RV SA1 22:23
-    ('sank', 'went down', 0), # RV PSA 107:26
-    ('scratched', 'made marks', 0), # RV SA1 21:13 / LV SA1 21:14
-    ('season', 'appointed of time', 1), # RV HOS 2:9 / LV HOS 2:11
-    ('seat', 'sat down', 2), # RV HEB 1:3
-    ('seating', 'sit down', 0), # RV TH2 2:4
-    ('severed', 'cut off', 0), # RV DEU 23:1 / LV DEU 23:2
-    ("She'll", 'She will', 0),
-    ("she'll", 'she will', 0),
-    ("She's", 'She is', 0),
-    ("she's", 'she is', 0),
-    ('shortened', 'cut short', 0), # RV PSA 89:45 / LV PSA 89:46
-    ("shouldn't", 'should not', 1),
-    ('shout', 'cry out', 1), # JER 47:2
-    ('shouted', 'cried out', 2), # JHN 11:43
-    ('shouted', 'crying out', 3), # ACT 12:22
-    ('shouting', 'crying out', 3), # ACT 21:34
-    ('shouts', 'calling out', 2), # RV JER 49:21
-    ('sleep', 'lie down', 0), # DEU 24:13
-    ('slept', 'lay down', 0), # KI1 21:27
-    ('smash', 'dash in pieces', 2), # RV KI2 8:12
-    ('snap', 'tear apart', 0), # RV NAH 1:13
-    ('something','one message', 0),
-    ('start', 'take up', 1), # RV JER 9:18 / LV JER 9:17
-    ('started', 'set out', 4), # RV GEN 46:1
-    ('stop', 'put an end', 4), # RV NUM 17:5 / LV NUM 17:20
-    ('Stop', 'turn back', 1), # RV KI2 18:14
-    ('stop', 'turned back', 4), # RV KI1 13:33
-    ('stopped', 'turned back', 5), # RV CH2 12:12
-    ('strayed', 'turned aside', 1), # RV PSA 44:18 / LV PSA 44:19
-    ('strip', 'laid bare', 0), # RV HAB 3:13
-    ('summarised', 'summed up', 0), # RV ROM 13:9
-    ('sunk', 'went down', 1), # RV PSA 104:8
-    ('support', 'stand by', 3), # RV ACT 24:13
-    ('surrounding', 'round about', 1), # RV JOL 3:11 / LV JOL 4:11
-    ('thank', 'give thanks', 0), # CH1 16:4
-    ('thank', 'gives thanks', 0), # ISA 38:18
-    ('thank', 'giving thanks', 0), # CO1 1:14
-    ('thanked', 'give thanks', 0), # CH1 25:3
-    ('thanked', 'giving thanks', 0), # ACT 28:15
-    ('thanking', 'giving thanks', 0), # CH1 29:13
-    ('thanks', 'giving thanks', 0), # EPH 5:20
-    ('thanksgiving', 'gave thanks', 0), # NEH 11:17
-    ('thanksgiving', 'give thanks', 0), # CH2 31:2
-    ("That's", 'That is', 0),
-    ("that's", 'that is', 0),
-    ('their', 'of them', 0),
-    ('Their', 'of them', 0),
-    ("There's", 'There is', 0),
-    ("there's", 'there is', 0),
-    ("There’s", 'There is', 0),
-    ("They'd", 'They would', 0),
-    ("they'd", 'they would', 0),
-    ("They'd", 'They had', 0),
-    ("They'll", 'They will', 0),
-    ("they'll", 'they will', 0),
-    ("They're", 'They are', 0),
-    ("they're", 'they are', 0),
-    ("They've", 'They have', 0),
-    ("they've", 'they have', 0),
-    ('threw', 'shook off', 1), # RV PSA 136:15
-    ('together', 'one another', 0), # RV PSA 85:10 / LV PSA 85:11
-    ('trim', 'cut off', 0), # RV JER 9:26 / LV JER 9:25
-    ('turn', 'bend down', 6), # RV JOS 24:23
-    ('understand', 'having an ear', 0),
-    ('undressed', 'stripping off', 0), # RV NEH 4:23 / LV NEH 4:17
-    ('wants', 'having an ear', 0),
-    ("wasn't", 'was not', 0),
-    ('watch', 'look on', 3), # RV GEN 21:16
-    ('waters','water supplies', 0),
-    ('weak', 'faints away', 2), # RV PSA 142:3 / LV PSA 142:4
-    ("We'd", 'We would', 0),
-    ("we'd", 'we would', 0),
-    ("We'll", 'We will', 0),
-    ("we'll", 'we will', 0),
-    ("We're", 'We are', 0),
-    ("we're", 'we are', 0),
-    ("weren't", 'were not', 0),
-    ("We've", 'We have', 0),
-    ("we've", 'we have', 0),
-    ("What's", 'What is', 0),
-    ("what's", 'what is', 0),
-    ("When's", 'When is', 0),
-    ("when's", 'when is', 0),
-    ("Where's", 'Where is', 0),
-    ("where's", 'where is', 0),
-    ("Who's", 'Who is', 0),
-    ("who's", 'who is', 0),
-    ("Why's", 'Why is', 0),
-    ("why's", 'why is', 0),
-    ('withdraw', 'draw back', 1), # RV PSA 74:11
-    ("won't", 'will not', 1),
-    ('worn-out', 'worn out', 0), # RV JOS 9:13
-    ('Worship', 'bow down', 1), # CH1 16:29
-    ('worship', 'bow down', 2), # CH2 7:19
-    ('worship', 'bowed down', 3), # SA2 15:32
-    ('worship', 'paid homage', 4), # DAN 2:46
-    ('worship', 'pay homage', 4), # DAN 3:5
-    ('worship', 'paying homage', 4), # DAN 3:7
-    ('worshipped', 'bowed down', 2), # CH2 7:22
-    ('worshipping', 'bowing down', 1), # EZE 8:16
-    ("wouldn't", 'would not', 0),
-    ('yelled', 'cried out', 1),
-    ('yelled', 'crying out', 3), # ACT 19:28
-    ('yelled', 'Crying out', 4), # RV ACT 22:23
-    ('yelling', 'cried out', 1), # ACT 7:57
-    ('yelling', 'crying out', 2), # ACT 19:32
-    ("you'd", 'you would', 0),
-    ("You'd", 'You would', 0),
-    ("You'll", 'You will', 0),
-    ("you'll", 'you will', 0),
-    ('your', 'of you', 0),
-    ('Your', 'of you', 0),
-    ("you're", 'you are', 0),
-    ("You're", 'You are', 0),
-    ("you've", 'you have', 0),
+    ('120', 'a hundred twenty'),
+    ('accompanied', 'went with'), # RV JDG 4:9
+    ('action', 'carry out'), # RV HOS 11:9
+    ('alcohol', 'strong drink'), # RV DEU 29:6 / LV DEU 29:5
+    ('ambush', 'lie in wait'), # RV PSA 59:3 / LV PSA 59:4
+    ('ambush', 'lay in wait'), # RV JDG 9:34
+    ('ambush', 'lying in wait'), # RV JOS 8:4
+    ('ambushed', 'lay in wait'), # RV LAM 4:19
+    ('ambushes', 'lie in wait'), # RV DEU 19:11
+    ('ambushing', 'lying in wait'), # RV SA1 24:11 / LV SA1 24:12
+    ('anything','all things'),
+    ('approach', 'draw near'), # DEU 2:19
+    ('approach', 'drawn near'), # ISA 41:5
+    ('approach', 'drew near'), # EXO 14:20
+    ('approached', 'drew near'), # DEU 4:11
+    ('approaches', 'draw near'), # LEV 22:3
+    ('Arouse', 'Wake up'), # RV PSA 35:23
+    ('arrested', 'given over'),
+    ('ascend', 'go up'), # PSA 24:3
+    ('ascend', 'went up'), # EPH 4:9
+    ('ascended', 'gone up'), # EPH 4:8
+    ('ascended', 'went up'), # RV PSA 68:18 / LV PSA 68:19
+    ('ascending', 'going up'), # GEN 28:12
+    ('assemble', 'set up'), # RV EXO 26:30
+    ('bed', 'lie with'), # RV GEN 39:7
+    ('boxwood', 'box tree[s]'), # RV ISA 41:19
+    ('bulge', 'comes out'), # RV PSA 73:7
+    ('calms', 'makes quiet'), # RV PRO 15:18
+    ("can't", 'can not'),
+    ('chased', 'go after'), # RV RUT 3:10
+    ('cheerfully', 'for joy'), # RV PSA 92:4 / LV PSA 92:5
+    ('chief', 'chief priest'),
+    ('climb', 'go up'), # RV EXO 8:3 / LV EXO 7:28
+    ('Climb', 'Go up'), # RV DEU 32:49
+    ('climb', 'goes up'), # RV PRO 21:22
+    ('climb', 'gone up'), # RV ACT 8:31
+    ('climbed', 'went up'), # RV EXO 17:10
+    ('climbed', 'gone up'), # RV MAT 14:32
+    ('climbs', 'going up'), # RV JHN 10:1
+    ('closed', 'stopped up'), # RV NEH 4:7 / LV NEH 4:1
+    ('collapse','passing away'), # Mrk 13:31
+    ('collapsed', 'fell in'), # RV LUK 6:49
+    ('collected', 'piled up'), # RV EXO 8:14 / LV EXO 8:10
+    ('considered', 'looked at'), # RV NUM 23:21
+    ("couldn't", 'could not'),
+    ('cried', 'call out'), # RV PSA 119:145
+    ('cross','pass over'),
+    ('cross', 'passed over'), # RV DEU 2:14
+    ('Cross', 'pass over'), # RV JOS 4:5
+    ('cross', 'passes over'), # RV ISA 23:2
+    ('crossed', 'passing over'), # RV JDG 8:4
+    ('crosses', 'passes over'), # RV EXO 30:13
+    ('crossing', 'passed over'), # RV JOS 3:1
+    ('crossing', 'passing over'), # RV NUM 32:7
+    ('dedicated', 'given over'), # RV ACT 15:26
+    ('deflect', 'turn away'), # RV PRO 29:8
+    ('deliver', 'giving birth'), # RV ISA 37:3
+    ('demon', 'unclean spirit'),
+    ('demons', 'unclean spirits'),
+    ('depart', 'go out'), # GEN 31:13
+    ('departed', 'went out'), # GEN 47:10
+    ('departed', 'set out'), # RV EXO 19:2
+    ('descend', 'come down'), # ISA 31:4
+    ('descend', 'go down'), # ISA 5:14
+    ('Descend', 'come down'), # RV SNG 4:8
+    ('descended', 'came down'), # EPH 4:9
+    ('descended', 'come down'), # EPH 4:10
+    ('descended', 'went down'), # EXO 15:5
+    ('descending', 'going down'), # GEN 28:12
+    ('descending', 'coming down'), # RV SA1 10:5
+    ("didn't", 'did not'),
+    ('die','pass away'), # Mrk 13:30
+    ('disappeared', 'went away'), # RV MRK 1:42
+    ('disappears', 'melting away'), # RV PSA 58:8 / LV PSA 58:9
+    ('discard', 'put away'), # RV HEB 12:1
+    ('discovered', 'search out'), # RV PSA 44:21 / LV PSA 44:22
+    ('dismiss', 'send away'), # RV MAT 19:3
+    ('dismissed', 'sent away'), # RV ACT 23:22
+    ('dismissed', 'send away'), # RV MAT 14:22
+    ("doesn't", 'does not'),
+    ("don't", 'do not'),
+    ('draw', 'bring out'), # RV EZE 21:3 / LV EZE 21:8
+    ('drawn', 'brought out'), # RV EZE 21:5 / LV EZE 21:10
+    ('dying', 'passing away'), # RV PRO 31:8
+    ('eliminate', 'wipe out'), # RV DEU 25:19
+    ('emerge', 'come out'), # RV LUK 1:22
+    ('enter', 'go in'),
+    ('enter', 'came in'), # JHN 18:28
+    ('enter', 'come in'), # HEB 3:19
+    ('enter', 'coming in'), # HEB 3:18
+    ('enter', 'went in'), # RV JER 7:2
+    ('enter', 'gone into'), # RV DEU 18:9
+    ('entered', 'came in'), # JHN 13:27
+    ('entered', 'come in'), # ACT 10:25
+    ('entered', 'go into'), # RV DEU 26:1
+    ('entered', 'gone in'), # RV EZE 4:14
+    ('entered', 'went in'), # RV EXO 24:18
+    ('entered', 'gone into'), # RV JOB 38:22
+    ('entering', 'come in'), # LUK 1:28
+    ('entering', 'coming in'), # HEB 3:11
+    ('entering', 'go into'), # RV NUM 32:9
+    ('enters', 'coming in'), # JHN 10:1
+    ('enters', 'come in'), # RV JER 9:21 / LV JER 9:20
+    ('enters', 'goes into'), # RV LEV 14:46
+    ('erase', 'wipe out'), # RV JER 18:23
+    ('erase', 'wiping out'), # RV REV 3:5
+    ('erased', 'wiped out'), # RV ACT 3:19
+    ('erected', 'set up'), # RV CH2 33:3
+    ('escaped', 'ran away'), # RV JDG 9:21
+    ('establish', 'set up'), # RV AMO 5:15
+    ('everyone','you all'),
+    ('exclude', 'throw out'), # RV REV 11:2
+    ('execute', 'put to death'), # RV ISA 11:4
+    ('exited', 'went out'), # EST 8:15
+    ('exiting', 'going out'), # EXO 19:1
+    ('expecting', 'waiting for'), # RV ISA 64:3 / LV ISA 64:2
+    ('expels', 'throwing out'), # RV JN3 1:10
+    ('fall', 'go down'), # RV HAG 2:22
+    ('fall', 'coming down'), # RV REV 13:13
+    ('felled', 'cut down'), # RV ISA 9:10 / LV ISA 9:9
+    ('finish', 'make an end'), # RV NUM 16:45 / LV NUM 17:10
+    ('flee', 'take flight'), # RV JER 50:3
+    ('follow', 'coming after'), # RV ACT 19:4
+    ('follow', 'Come after'), # RV MAT 4:19
+    ('followed', 'going behind'), # RV GEN 32:19 / LV GEN 32:20
+    ('fought', 'engaged in battle'), # RV JOS 10:29
+    ('fulfill', 'carry out'), # RV DEU 8:18
+    ('gathered','coming together'), # Mrk 14:53
+    ("God's", 'of god'),
+    ("God’s", 'of god'),
+    ('grab', 'take hold of'), # RV ZEC 14:13
+    ('grab', 'taking hold of'), # RV MAT 12:11
+    ('grows', 'coming out'), # RV KI1 4:33 / LV KI1 5:13
+    ("hadn't", 'had not'),
+    ('handed', 'turned over'), # RV CH1 10:14
+    ('happens', 'fall out'), # RV RUT 3:18
+    ("hasn't", 'has not'),
+    ("haven't", 'have not'),
+    ('Hear', 'give ear'), # PSA 78:1
+    ('hear', 'give ear'), # PSA 77:1
+    ("He'd", 'He would'),
+    ("he'd", 'he would'),
+    ("He'd", 'He had'),
+    ("He'll", 'He will'),
+    ("He'll", 'he will'),
+    ("he'll", 'he will'),
+    ('her', 'of her'),
+    ('Her', 'of her'),
+    ("Here's", 'Here is'),
+    ("here's", 'here is'),
+    ("He's", 'He is'),
+    ("he's", 'he is'),
+    ('highest', 'Most High'), # RV PSA 83:18 / LV PSA 83:19
+    ('his', 'of him'),
+    ('His', 'of him'),
+    ('holding', 'keeps back'), # RV PRO 21:26
+    ('humble', 'bring low'), # RV DAN 4:37 / LV DAN 4:34
+    ('humiliated', 'bringing low'), # RV DAN 5:19
+    ("I'd", 'I would'),
+    ("I'll", 'I will'),
+    ("I'm", 'I am'),
+    ('implement', 'carry out'), # RV JER 29:10
+    ('incinerated', 'burn up'), # RV MAT 13:30
+    ('inhabit', 'dwell in'), # AMO 9:14
+    ('installing', 'set up'), # RV NEH 3:3
+    ("isn't", 'is not'),
+    ('Israeli', 'of Yisrāʼēl/Israel'),
+    ('Israelis', 'of Yisrāʼēl/Israel'),
+    ('Israelis', '>ones from Israaʸl/Yisrāʼēl'), # ACT 3:12: the demonym, not the earlier crowd (people).
+    ('issue', 'go forth'), # RV EST 1:19
+    ('issuing', 'going forth'), # RV DAN 9:25
+    ("It'll", 'It will'),
+    ("it'll", 'it will'),
+    ('its', 'of it'),
+    ('Its', 'of it'),
+    ("It's", 'It is'),
+    ("it's", 'it is'),
+    ("I've", 'I have'),
+    ('kept', 'held firm'), # RV PSA 17:5
+    ('kill', 'put to death'), # CH2 23:7
+    ('kill', 'cut off'), # RV EZE 21:3 / LV EZE 21:8
+    ('killed', 'put to death'), # CO2 6:9
+    ('killed', 'putting to death'), # EZE 13:19
+    ('killing', 'put to death'), # GEN 18:25
+    ('leave', 'pass on'), # RV GEN 18:5
+    ('Leave', 'Go out'), # RV GEN 8:16
+    ('leave', 'passed on'), # RV CH2 18:23
+    ('leaves', 'goes out'), # RV PSA 41:6 / LV PSA 41:7
+    ('leaves', 'go out'), # RV DEU 24:2
+    ('leaves', 'goes forth'), # RV ISA 55:11
+    ('leaves', 'going away'), # RV LUK 9:39
+    ('leaving', 'goes out'), # RV CH2 16:1
+    ('left','came out'),
+    ('left','set out'),
+    ("Let's", 'Let us'),
+    ('lick', 'lap up'), # RV KI1 21:19
+    ('licked', 'lapped up'), # RV KI1 21:19
+    ('lift', 'bring up'), # RV EZE 37:12
+    ('lifted', 'taken up'), # RV DAN 6:23 / LV DAN 6:24
+    ('lifted', 'brought up'), # RV GEN 37:28
+    ('listen','give ear'),
+    ('Listen', 'give ear'), # ACT 2:14
+    ('locked', 'shut up'), # RV JER 33:1
+    ('lowered', 'let down'), # RV ACT 10:11
+    ('lowered', 'brought down'), # RV GEN 44:11
+    ('meetings', 'coming together'), # RV CO1 11:34
+    ('minds', 'inner of being'), # RV PSA 62:4 / LV PSA 62:5
+    ('mounted','sat down'),
+    ('mounting', 'going up'), # RV GEN 31:10
+    ('musicians', 'flute players'), # RV MAT 9:23
+    ("mustn't", 'must not'),
+    ('my', 'of me'),
+    ('My', 'of me'),
+    ('never','no means'), # Mrk 13:31
+    ('obtained', 'took hold'), # RV CH2 7:22
+    ('our', 'of us'),
+    ('Our', 'of us'),
+    ('produce', 'bring forth'), # RV ISA 55:10
+    ('produces', 'brings forth'), # RV ISA 61:11
+    ('producing', 'bringing out'), # RV HEB 6:8
+    ('producing', 'brought out'), # RV NUM 14:37
+    ('raged', 'in a tumult'), # RV PSA 46:6 / LV PSA 46:7
+    ('raise', 'bring up'), # RV EZE 26:3
+    ('raised', 'bring up'), # RV ISA 49:21
+    ('raises', 'brings up'), # RV EZE 26:3
+    ('refuse', 'turn away'), # RV KI1 2:16
+    ('Rejoice', 'Shout for joy'), # RV PSA 33:1
+    ('release', 'let go'), # RV EXO 9:28
+    ('released', 'brought out'), # RV JER 20:3
+    ('released', 'let go'), # RV EXO 13:17
+    ('releases', 'let go'), # RV EXO 22:5 / LV EXO 22:4
+    ('releasing', 'let go'), # RV JER 34:14
+    ('remove', 'lift up'), # RV LEV 6:10 / LV LEV 6:3
+    ('repaid', 'give back'), # RV LUK 12:59
+    ('repay', 'bring back'), # RV PSA 54:5 / LV PSA 54:7
+    ('repay', 'give back'), # RV LUK 7:42
+    ('repay', 'giving back'), # RV MAT 18:29
+    ('repaying', 'giving back'), # RV PE1 3:9
+    ('repaying', 'give back'), # RV MAT 18:25
+    ('reprimanded', 'gave rebuke'), # RV MRK 8:33
+    ('rest', 'lie down'), # EZE 34:15
+    ('rest', 'lying down'), # PSA 139:3
+    ('Return', 'go back'), # GEN 44:25
+    ('return', 'turn back'), # DEU 30:2
+    ('return', 'turned back'), # ISA 9:13
+    ('return', 'go back'), # RV GEN 43:13
+    ('return', 'turning back'), # RV CH2 36:13
+    ('returned', 'turned back'), # JOS 11:10
+    ('returned', 'went back'), # GEN 44:13
+    ('returned', 'brought back'), # RV JDG 17:4
+    ('returning', 'went back'), # SA1 6:16
+    ('returning', 'bring back'), # RV SA2 19:10 / LV SA2 19:11
+    ('returning', 'brought back'), # RV SA2 16:8
+    ('reversed', 'turn back'), # RV EZE 7:13
+    ('rise', 'go up'), # RV ISA 40:31
+    ('rise', 'come up'), # RV EXO 10:12
+    ('rises', 'go up'), # RV JOB 20:6
+    ('rising', 'went up'), # RV GEN 19:28
+    ('rising', 'going up'), # RV REV 19:3
+    ('rose', 'went up'), # RV ACT 10:4
+    ('sacred','of meeting'), # tent of meeting
+    ('safe', 'good care'), # RV SA1 22:23
+    ('sank', 'went down'), # RV PSA 107:26
+    ('scratched', 'made marks'), # RV SA1 21:13 / LV SA1 21:14
+    ('season', 'appointed of time'), # RV HOS 2:9 / LV HOS 2:11
+    ('seat', 'sat down'), # RV HEB 1:3
+    ('seating', 'sit down'), # RV TH2 2:4
+    ('severed', 'cut off'), # RV DEU 23:1 / LV DEU 23:2
+    ("She'll", 'She will'),
+    ("she'll", 'she will'),
+    ("She's", 'She is'),
+    ("she's", 'she is'),
+    ('shortened', 'cut short'), # RV PSA 89:45 / LV PSA 89:46
+    ("shouldn't", 'should not'),
+    ('shout', 'cry out'), # JER 47:2
+    ('shouted', 'cried out'), # JHN 11:43
+    ('shouted', 'crying out'), # ACT 12:22
+    ('shouting', 'crying out'), # ACT 21:34
+    ('shouts', 'calling out'), # RV JER 49:21
+    ('sleep', 'lie down'), # DEU 24:13
+    ('slept', 'lay down'), # KI1 21:27
+    ('smash', 'dash in pieces'), # RV KI2 8:12
+    ('snap', 'tear apart'), # RV NAH 1:13
+    ('something','one message'),
+    ('start', 'take up'), # RV JER 9:18 / LV JER 9:17
+    ('started', 'set out'), # RV GEN 46:1
+    ('stop', 'put an end'), # RV NUM 17:5 / LV NUM 17:20
+    ('Stop', 'turn back'), # RV KI2 18:14
+    ('stop', 'turned back'), # RV KI1 13:33
+    ('stopped', 'turned back'), # RV CH2 12:12
+    ('strayed', 'turned aside'), # RV PSA 44:18 / LV PSA 44:19
+    ('strip', 'laid bare'), # RV HAB 3:13
+    ('summarised', 'summed up'), # RV ROM 13:9
+    ('sunk', 'went down'), # RV PSA 104:8
+    ('support', 'stand by'), # RV ACT 24:13
+    ('surrounding', 'round about'), # RV JOL 3:11 / LV JOL 4:11
+    ('thank', 'give thanks'), # CH1 16:4
+    ('thank', 'gives thanks'), # ISA 38:18
+    ('thank', 'giving thanks'), # CO1 1:14
+    ('thanked', 'give thanks'), # CH1 25:3
+    ('thanked', 'giving thanks'), # ACT 28:15
+    ('thanking', 'giving thanks'), # CH1 29:13
+    ('thanks', 'giving thanks'), # EPH 5:20
+    ('thanksgiving', 'gave thanks'), # NEH 11:17
+    ('thanksgiving', 'give thanks'), # CH2 31:2
+    ("That's", 'That is'),
+    ("that's", 'that is'),
+    ('their', 'of them'),
+    ('Their', 'of them'),
+    ("There's", 'There is'),
+    ("there's", 'there is'),
+    ("There’s", 'There is'),
+    ("They'd", 'They would'),
+    ("they'd", 'they would'),
+    ("They'd", 'They had'),
+    ("They'll", 'They will'),
+    ("they'll", 'they will'),
+    ("They're", 'They are'),
+    ("they're", 'they are'),
+    ("They've", 'They have'),
+    ("they've", 'they have'),
+    ('threw', 'shook off'), # RV PSA 136:15
+    ('together', 'one another'), # RV PSA 85:10 / LV PSA 85:11
+    ('trim', 'cut off'), # RV JER 9:26 / LV JER 9:25
+    ('turn', 'bend down'), # RV JOS 24:23
+    ('understand', 'having an ear'),
+    ('undressed', 'stripping off'), # RV NEH 4:23 / LV NEH 4:17
+    ('wants', 'having an ear'),
+    ("wasn't", 'was not'),
+    ('watch', 'look on'), # RV GEN 21:16
+    ('waters','water supplies'),
+    ('weak', 'faints away'), # RV PSA 142:3 / LV PSA 142:4
+    ("We'd", 'We would'),
+    ("we'd", 'we would'),
+    ("We'll", 'We will'),
+    ("we'll", 'we will'),
+    ("We're", 'We are'),
+    ("we're", 'we are'),
+    ("weren't", 'were not'),
+    ("We've", 'We have'),
+    ("we've", 'we have'),
+    ("What's", 'What is'),
+    ("what's", 'what is'),
+    ("When's", 'When is'),
+    ("when's", 'when is'),
+    ("Where's", 'Where is'),
+    ("where's", 'where is'),
+    ("Who's", 'Who is'),
+    ("who's", 'who is'),
+    ("Why's", 'Why is'),
+    ("why's", 'why is'),
+    ('withdraw', 'draw back'), # RV PSA 74:11
+    ("won't", 'will not'),
+    ('worn-out', 'worn out'), # RV JOS 9:13
+    ('Worship', 'bow down'), # CH1 16:29
+    ('worship', 'bow down'), # CH2 7:19
+    ('worship', 'bowed down'), # SA2 15:32
+    ('worship', 'paid homage'), # DAN 2:46
+    ('worship', 'pay homage'), # DAN 3:5
+    ('worship', 'paying homage'), # DAN 3:7
+    ('worshipped', 'bowed down'), # CH2 7:22
+    ('worshipping', 'bowing down'), # EZE 8:16
+    ("wouldn't", 'would not'),
+    ('yelled', 'cried out'),
+    ('yelled', 'crying out'), # ACT 19:28
+    ('yelled', 'Crying out'), # RV ACT 22:23
+    ('yelling', 'cried out'), # ACT 7:57
+    ('yelling', 'crying out'), # ACT 19:32
+    ("you'd", 'you would'),
+    ("You'd", 'You would'),
+    ("You'll", 'You will'),
+    ("you'll", 'you will'),
+    ('your', 'of you'),
+    ('Your', 'of you'),
+    ("you're", 'you are'),
+    ("You're", 'You are'),
+    ("you've", 'you have'),
 )
-assert len({(rv, lv) for rv, lv, _ in RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS}) == len(RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS)
-_phrasePriorities = {}
+assert len({(rv, lv) for rv, lv in RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS}) == len(RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS)
 for someTuple in RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS:
     assert isinstance(someTuple, tuple), f'{someTuple=}'
-    RVWord, LVWords, wordsBefore = someTuple
+    RVWord, LVWords = someTuple
     assert len(RVWord.split()) == 1, f'Expected a single RV word: {someTuple}'
     assert len(LVWords.split()) > 1, f'Expected an LV phrase: {someTuple}'
     assert '_' not in RVWord+LVWords, f'Use spaces between phrase words: {someTuple}'
-    assert isinstance(wordsBefore, int) and wordsBefore >= _phrasePriorities.get(RVWord, 0), f'{someTuple=}'
-    _phrasePriorities[RVWord] = wordsBefore
 
 
 LV_SINGLE_WORDS_TO_RV_WORD_STRINGS = (
@@ -457,6 +448,7 @@ LV_SINGLE_WORDS_TO_RV_WORD_STRINGS = (
     ('fled','took off running'), # Mrk 14:52, 16:8
     ('flees', 'fly away'), # RV NAH 3:17
     ('food','lived on'), # Mat 3:4
+    ('foolish', 'less sensible'), # MAT 25:8: the modifier changes the sense of 'sensible'.
     ('forgiveness', 'have been forgiven'),
     ('give', 'pass on'), # RV ACT 7:38
     ('greater','more important'), # Mrk 12:31

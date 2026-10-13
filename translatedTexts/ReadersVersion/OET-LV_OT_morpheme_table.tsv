@@ -10382,7 +10382,7 @@ GEN_18:28w4b	01eJmb	M	6662	1.1.0	Aampa	צַּדִּיקִם֙	צַּדִּיקִ
 GEN_18:28w5	01t8y	w	2568	1.1	Acmsa	חֲמִשָּׁ֔ה	חֲמִשָּׁה			five	five			70	
 GEN_18:28w6a	017q4a	m	i		Ti	הֲ	הֲ	?	will					80	
 GEN_18:28w6b	017q4b	M	7843		Vhi2ms	תַשְׁחִ֥ית	תַשְׁחִית	destroy	you_destroy?					90	
-GEN_18:28w7a	01c2va	m	b	1.0	Rd	בַּ	בַּ	in/on/at/with	for					100	
+GEN_18:28w7a	01c2va	m	b	1.0	R	בַּ	בַּ	in/on/at/with	for					100	
 GEN_18:28w7b	01c2vb	M	2568	1.0	Acmsa	חֲמִשָּׁ֖ה	חֲמִשָּׁה	five	five					110	
 GEN_18:28w8	01gth	w	853		To	אֶת	אֶת			DOM	DOM			120	
 GEN_18:28		seg			x-maqqef	־								130	
@@ -42501,13 +42501,13 @@ EXO_9:11		seg			x-maqqef	־								170
 EXO_9:11w10	02adv	w	1961		Vqp3ms	הָיָ֣ה	הָיָה			it_became	it_was			180	
 EXO_9:11w11a	02tpca	m	d	0.1	Td	הַ	הַ	the	the					190	
 EXO_9:11w11b	02tpcb	M	7822	0.1	Ncmsa	שְּׁחִ֔ין	שְּׁחִין	boils	boil[s]					200	
-EXO_9:11w12a	029g8a	m	b	0.0	R	בַּֽ	בַּ	in/on/at/with						210	
-EXO_9:11w12b	029g8b	M	2748	0.0	Ncmpa	חֲרְטֻמִּ֖ם	חֲרְטֻמִּם							220	
+EXO_9:11w12a	029g8a	m	b	0.0	Rd	בַּֽ	בַּ	in/on/at/with	on					210	
+EXO_9:11w12b	029g8b	M	2748	0.0	Ncmpa	חֲרְטֻמִּ֖ם	חֲרְטֻמִּם	magicians	soothsayer-priests					220	
 EXO_9:11w13a	02ud1a	m	c		C	וּ	וּ	and	and					230	
 EXO_9:11w13b	02ud1b	m	b		R	בְ	בְ	in/on/at/with	on					240	
 EXO_9:11w13c	02ud1c	M	3605		Ncmsc	כָל	כָל	all_of	all_of	and=on/over=all				250	
 EXO_9:11		seg			x-maqqef	־								260	
-EXO_9:11w14	02ZMC	w	4713	0	Np	מִצְרָֽיִם	מִצְרָיִם							270	
+EXO_9:11w14	02ZMC	w	4713	0	Np	מִצְרָֽיִם	מִצְרָיִם			Egyptians	Egypt			270	
 EXO_9:11		seg			x-sof-pasuq	׃							.	280	
 EXO_9:12w1a	02EHta	m	c		C	וַ	וַ	and	and			S		20	
 EXO_9:12w1b	02EHtb	M	2388		Vpw3ms	יְחַזֵּ֤ק	יְחַזֵּק	hardened	he_made_strong					30	
@@ -44360,25 +44360,25 @@ EXO_12:3w4	021cW	w	5712		Ncfsc	עֲדַ֤ת	עֲדַת			community_of	the_congre
 EXO_12:3w5	02AjK	w	3478	1.1.0	Np	יִשְׂרָאֵל֙	יִשְׂרָאֵל			Yisrael	of_Israel			70	
 EXO_12:3w6a	02pFJa	m	l	1.1	R	לֵ	לֵ	to	(cmp)					80	
 EXO_12:3w6b	02pFJb	M	559	1.1	Vqc	אמֹ֔ר	אמֹר	saying		to=say				90	
-EXO_12:3w7a	02K1Xa	m	b	1.0	R	בֶּ	בֶּ	in/on/at/with	on					100	
-EXO_12:3w7b	02K1Xb	M	6218	1.0	Ncmsa	עָשֹׂ֖ר	עָשֹׂר							110	
+EXO_12:3w7a	02K1Xa	m	b	1.0	Rd	בֶּ	בֶּ	in/on/at/with	on					100	
+EXO_12:3w7b	02K1Xb	M	6218	1.0	Ncmsa	עָשֹׂ֖ר	עָשֹׂר	tenth	ten					110	
 EXO_12:3w8a	02mKXa	m	l		Rd	לַ	לַ	of_the	of					120	
-EXO_12:3w8b	02mKXb	M	2320		Ncmsa	חֹ֣דֶשׁ	חֹדֶשׁ							130	
+EXO_12:3w8b	02mKXb	M	2320		Ncmsa	חֹ֣דֶשׁ	חֹדֶשׁ	month	month					130	
 EXO_12:3w9a	02Mpta	m	d	1	Td	הַ	הַ	the	(the)					140	
-EXO_12:3w9b	02Mptb	M	2088	1	Pdxms	זֶּ֑ה	זֶּה			the=this				150	
+EXO_12:3w9b	02Mptb	M	2088	1	Pdxms	זֶּ֑ה	זֶּה	this	this	the=this				150	
 EXO_12:3w10a	02wP4a	m	c		C	וְ	וְ	and	and					160	
-EXO_12:3w10b	02wP4b	M	3947		Vqi3mp	יִקְח֣וּ	יִקְחוּ							170	
+EXO_12:3w10b	02wP4b	M	3947		Vqi3mp	יִקְח֣וּ	יִקְחוּ	take	they_will_take					170	
 EXO_12:3w11a	02jmUa	m	l	0.0.1	R	לָ	לָ	for	for					180	
-EXO_12:3w11b	02jmUb	M		0.0.1	Sp3mp	הֶ֗ם	הֶם			to/for=them				190	
-EXO_12:3w12	02eRW	w	376	0.0.0	Ncmsa	אִ֛ישׁ	אִישׁ			(a)_man				200	
-EXO_12:3w13	02tQY	w	7716		Ncbsa	שֶׂ֥ה	שֶׂה							210	
+EXO_12:3w11b	02jmUb	M		0.0.1	Sp3mp	הֶ֗ם	הֶם	themselves	themselves	to/for=them				190	
+EXO_12:3w12	02eRW	w	376	0.0.0	Ncmsa	אִ֛ישׁ	אִישׁ			(a)_man	everyone			200	
+EXO_12:3w13	02tQY	w	7716		Ncbsa	שֶׂ֥ה	שֶׂה			lamb	a_lamb			210	
 EXO_12:3w14a	02R4Ta	m	l		R	לְ	לְ	for	for					220	
 EXO_12:3w14b	02R4Tb	M	1004 b		Ncmsc	בֵית	בֵית	families_of	a_household_of					230	
 EXO_12:3		seg			x-maqqef	־								240	
-EXO_12:3w15	024cT	w	1	0.0	Ncmpa	אָבֹ֖ת	אָבֹת							250	
-EXO_12:3w16	02m9t	w	7716		Ncbsa	שֶׂ֥ה	שֶׂה							260	
-EXO_12:3w17a	02MxNa	m	l	0	Rd	לַ	לַ	to/for						270	
-EXO_12:3w17b	02MxNb	M	1004 b	0	Ncmsa	בָּֽיִת	בָּיִת							280	
+EXO_12:3w15	024cT	w	1	0.0	Ncmpa	אָבֹ֖ת	אָבֹת			fathers'	fathers			250	
+EXO_12:3w16	02m9t	w	7716		Ncbsa	שֶׂ֥ה	שֶׂה			lamb	a_lamb			260	
+EXO_12:3w17a	02MxNa	m	l	0	Rd	לַ	לַ	for_the	for					270	
+EXO_12:3w17b	02MxNb	M	1004 b	0	Ncmsa	בָּֽיִת	בָּיִת	household	household					280	
 EXO_12:3		seg			x-sof-pasuq	׃							.	290	
 EXO_12:4w1a	02HKEa	m	c		C	וְ	וְ	and	and			S		10	
 EXO_12:4w1b	02HKEb	M	518 a		C	אִם	אִם	if	if	and=if				20	
@@ -47655,7 +47655,7 @@ EXO_16:1w13	02Lkz	w	362	1.0	Np	אֵילִ֖ם	אֵילִם			Elim	Elim			210
 EXO_16:1w14a	02a35a	m	c		C	וּ	וּ	and	and					220	
 EXO_16:1w14b	02a35b	M	996		R	בֵ֣ין	בֵין	between	between	and=between				230	
 EXO_16:1w15	0285C	w	5514	1	Np	סִינָ֑י	סִינָי			Sinai	Sinai			240	
-EXO_16:1w16a	02duBa	m	b		Rd	בַּ	בַּ	in/on/at/with	on_[the]					250	
+EXO_16:1w16a	02duBa	m	b		R	בַּ	בַּ	in/on/at/with	on_[the]					250	
 EXO_16:1w16b	02duBb	M	2568		Acmsa	חֲמִשָּׁ֨ה	חֲמִשָּׁה	five	fif-					260	
 EXO_16:1w17	02Dd8	w	6240		Acmsa	עָשָׂ֥ר	עָשָׂר			ten	teen			270	
 EXO_16:1w18	022Ez	w	3117	0.1.0	Ncmsa	יוֹם֙	יוֹם			day	day			280	
@@ -48124,25 +48124,25 @@ EXO_16:17w7c	02QMcc	M	4591	0	Vhrmsa	מַּמְעִֽיט	מַּמְעִיט	less
 EXO_16:17		seg			x-sof-pasuq	׃							.	140	
 EXO_16:18w1a	02vNka	m	c		C	וַ	וַ	and	and			S		10	
 EXO_16:18w1b	02vNkb	M	4058		Vqw3mp	יָּמֹ֣דּוּ	יָּמֹדּוּ	measured	they_measured_[it]					20	
-EXO_16:18w2a	02Rs6a	m	b	1.2	R	בָ	בָ	in/on/at/with	by					30	
-EXO_16:18w2b	02Rs6b	M	6016 b	1.2	Ncmsa	עֹ֔מֶר	עֹמֶר							40	
+EXO_16:18w2a	02Rs6a	m	b	1.2	Rd	בָ	בָ	in/on/at/with	by					30	
+EXO_16:18w2b	02Rs6b	M	6016 b	1.2	Ncmsa	עֹ֔מֶר	עֹמֶר	omer	omer					40	
 EXO_16:18w3a	02aq4a	m	c		C	וְ	וְ	and	and					50	
-EXO_16:18w3b	02aq4b	M	3808		Tn	לֹ֤א	לֹא			and=not				60	
-EXO_16:18w4	02yyt	w	5736	1.1.0	Vhp3ms	הֶעְדִּיף֙	הֶעְדִּיף							70	
+EXO_16:18w3b	02aq4b	M	3808		Tn	לֹ֤א	לֹא	no	not	and=not				60	
+EXO_16:18w4	02yyt	w	5736	1.1.0	Vhp3ms	הֶעְדִּיף֙	הֶעְדִּיף			over	he_had_a_surplus			70	
 EXO_16:18w5a	02J2da	m	d	1.1	Td	הַ	הַ	the	the_[one					80	
-EXO_16:18w5b	02J2db	M	7235 a	1.1	Vhrmsa	מַּרְבֶּ֔ה	מַּרְבֶּה							90	
+EXO_16:18w5b	02J2db	M	7235 a	1.1	Vhrmsa	מַּרְבֶּ֔ה	מַּרְבֶּה	gathered_much	who]_made_much					90	
 EXO_16:18w6a	02CqTa	m	c	1.0	C	וְ	וְ	and	and					100	
 EXO_16:18w6b	02CqTb	m	d	1.0	Td	הַ	הַ	the	the_[one					110	
-EXO_16:18w6c	02CqTc	M	4591	1.0	Vhrmsa	מַּמְעִ֖יט	מַּמְעִיט							120	
-EXO_16:18w7	02MTY	w	3808		Tn	לֹ֣א	לֹא			not				130	
-EXO_16:18w8	02VoC	w	2637	1	Vhp3ms	הֶחְסִ֑יר	הֶחְסִיר							140	
-EXO_16:18w9	02Vpi	w	376		Ncmsa	אִ֥ישׁ	אִישׁ			(a)_man				150	
+EXO_16:18w6c	02CqTc	M	4591	1.0	Vhrmsa	מַּמְעִ֖יט	מַּמְעִיט	gathered_little	who]_made_little					120	
+EXO_16:18w7	02MTY	w	3808		Tn	לֹ֣א	לֹא			not	not			130	
+EXO_16:18w8	02VoC	w	2637	1	Vhp3ms	הֶחְסִ֑יר	הֶחְסִיר			had_~_lack	he_had_a_lack			140	
+EXO_16:18w9	02Vpi	w	376		Ncmsa	אִ֥ישׁ	אִישׁ			(a)_man	everyone			150	
 EXO_16:18w10a	02PBTa	m	l		R	לְ	לְ	as_much_as	to					160	
-EXO_16:18w10b	02PBTb	M	6310		Ncmsc	פִֽי	פִי							170	
+EXO_16:18w10b	02PBTb	M	6310		Ncmsc	פִֽי	פִי	need_of	the_mouth_of					170	
 EXO_16:18		seg			x-maqqef	־								180	
-EXO_16:18w11a	02HGRa	m	400	0.0	Ncmsc	אָכְל֖	אָכְל							190	
-EXO_16:18w11b	02HGRb	M		0.0	Sp3ms	וֹ	וֹ							200	
-EXO_16:18w12	026sk	w	3950	0	Vqp3cp	לָקָֽטוּ	לָקָטוּ							210	
+EXO_16:18w11a	02HGRa	m	400	0.0	Ncmsc	אָכְל֖	אָכְל	eat_of	his_food_of					190	
+EXO_16:18w11b	02HGRb	M		0.0	Sp3ms	וֹ	וֹ	he	his					200	
+EXO_16:18w12	026sk	w	3950	0	Vqp3cp	לָקָֽטוּ	לָקָטוּ			gathered	they_had_gathered			210	
 EXO_16:18		seg			x-sof-pasuq	׃							.	220	
 EXO_16:19w1a	02k8Ea	m	c		C	וַ	וַ	and	and			S		20	
 EXO_16:19w1b	02k8Eb	M	559		Vqw3ms	יֹּ֥אמֶר	יֹּאמֶר	said	he_said	and=he|it_said				30	
@@ -48218,19 +48218,19 @@ EXO_16:22w6	02c32	w	4932	1.1	Ncmsa	מִשְׁנֶ֔ה	מִשְׁנֶה			twice	d
 EXO_16:22w7	02Xsg	w	8147		Acmdc	שְׁנֵ֥י	שְׁנֵי			two_of	(the)_two_of			110	
 EXO_16:22w8a	02sZva	m	d	1.0	Td	הָ	הָ	the	(the)					120	
 EXO_16:22w8b	02sZvb	M	6016 b	1.0	Ncmsa	עֹ֖מֶר	עֹמֶר	omers	omer[s]					130	
-EXO_16:22w9a	02S9xa	m	l	1	R	לָ	לָ	for_the	for					140	
-EXO_16:22w9b	02S9xb	M	259	1	Acmsa	אֶחָ֑ד	אֶחָד							150	
+EXO_16:22w9a	02S9xa	m	l	1	Rd	לָ	לָ	for_the	for					140	
+EXO_16:22w9b	02S9xb	M	259	1	Acmsa	אֶחָ֑ד	אֶחָד	each	one					150	
 EXO_16:22w10a	02CfQa	m	c	0.1.0	C	וַ	וַ	and	and					160	
-EXO_16:22w10b	02CfQb	M	935	0.1.0	Vqw3mp	יָּבֹ֨אוּ֙	יָּבֹאוּ			and=they_came				170	
+EXO_16:22w10b	02CfQb	M	935	0.1.0	Vqw3mp	יָּבֹ֨אוּ֙	יָּבֹאוּ	came	they_came	and=they_came				170	
 EXO_16:22w11	02ZGT	w	3605		Ncmsc	כָּל	כָּל			all/each/any/every	all_of			180	
 EXO_16:22		seg			x-maqqef	־								190	
-EXO_16:22w12	02zLW	w	5387 a		Ncmpc	נְשִׂיאֵ֣י	נְשִׂיאֵי							200	
-EXO_16:22w13a	02tDQa	m	d	0.1	Td	הָֽ	הָ	the						210	
-EXO_16:22w13b	02tDQb	M	5712	0.1	Ncfsa	עֵדָ֔ה	עֵדָה							220	
-EXO_16:22w14a	02oNha	m	c	0.0	C	וַ	וַ	and						230	
-EXO_16:22w14b	02oNhb	M	5046	0.0	Vhw3mp	יַּגִּ֖ידוּ	יַּגִּידוּ							240	
-EXO_16:22w15a	02S1Ya	m	l	0	R	לְ	לְ	to/for						250	
-EXO_16:22w15b	02S1Yb	M	4872	0	Np	מֹשֶֽׁה	מֹשֶֽׁה							260	
+EXO_16:22w12	02zLW	w	5387 a		Ncmpc	נְשִׂיאֵ֣י	נְשִׂיאֵי			leaders_of	the_leaders_of			200	
+EXO_16:22w13a	02tDQa	m	d	0.1	Td	הָֽ	הָ	the	of					210	
+EXO_16:22w13b	02tDQb	M	5712	0.1	Ncfsa	עֵדָ֔ה	עֵדָה	community	the_congregation					220	
+EXO_16:22w14a	02oNha	m	c	0.0	C	וַ	וַ	and	and					230	
+EXO_16:22w14b	02oNhb	M	5046	0.0	Vhw3mp	יַּגִּ֖ידוּ	יַּגִּידוּ	told	they_told					240	
+EXO_16:22w15a	02S1Ya	m	l	0	R	לְ	לְ	to	to					250	
+EXO_16:22w15b	02S1Yb	M	4872	0	Np	מֹשֶֽׁה	מֹשֶֽׁה	Moses	Moses					260	
 EXO_16:22		seg			x-sof-pasuq	׃							.	270	
 EXO_16:23w1a	02DG9a	m	c		C	וַ	וַ	and	and			S		10	
 EXO_16:23w1b	02DG9b	M	559		Vqw3ms	יֹּ֣אמֶר	יֹּאמֶר	said	he_said	and=he|it_said				20	
@@ -50526,7 +50526,7 @@ EXO_20:6w1b	02kh1b	M	6213 a		Vqrmsa	עֹ֥שֶׂה	עֹשֶׂה	showing	does				
 EXO_20:6		alternative note				וְ/עֹ֥שֶׂה: (x-accent)וְ/עֹ֤שֶׂה								30	
 EXO_20:6w2	02HfB	w	2617 a	1.0	Ncmsa	חֶ֖סֶד	חֶסֶד			steadfast_love	covenant_loyalty			40	
 EXO_20:6		alternative note				חֶ֖סֶד: (x-accent)חֶ֨סֶד֙								50	
-EXO_20:6w3a	021Hva	m	l	1	Rd	לַ	לַ	to	to					60	
+EXO_20:6w3a	021Hva	m	l	1	R	לַ	לַ	to	to					60	
 EXO_20:6w3b	021Hvb	M	505	1	Acbpa	אֲלָפִ֑ים	אֲלָפִים	thousands	thousands					70	
 EXO_20:6		alternative note				לַ/אֲלָפִ֑ים: (x-accent)לַ/אֲלָפִ֔ים								80	
 EXO_20:6w4a	02y4ba	m	l	0.0	R	לְ	לְ	of	of					90	
@@ -53452,7 +53452,7 @@ EXO_24:10w10b	02eaqb	m	k		R	כְ	כְ	like	like					160
 EXO_24:10w10c	02eaqc	M	6106		Ncfsc	עֶ֥צֶם	עֶצֶם	very_of	the_substance_of					170	
 EXO_24:10w11a	02azRa	m	d	0.0	Td	הַ	הַ	the	of					180	
 EXO_24:10w11b	02azRb	M	8064	0.0	Ncmpa	שָּׁמַ֖יִם	שָּׁמַיִם	sky	the_heavens	the=heavens				190	
-EXO_24:10w12a	02jQQa	m	l	0	Rd	לָ	לָ	for	to					200	
+EXO_24:10w12a	02jQQa	m	l	0	R	לָ	לָ	for	to					200	
 EXO_24:10w12b	02jQQb	M	2892 a	0	Ncmsa	טֹֽהַר	טֹהַר	clear	purity					210	
 EXO_24:10		seg			x-sof-pasuq	׃							.	220	
 EXO_24:11w1a	02sDba	m	c		C	וְ	וְ	and	and			S		10	
@@ -55623,7 +55623,7 @@ EXO_27:18w5a	02PDca	m	c	1.0.1.0	C	וְ	וְ	and	and_[the]					70
 EXO_27:18w5b	02PDcb	M	7341	1.0.1.0	Ncmsa	רֹ֣חַב	רֹחַב	width	breadth					80	
 EXO_27:18		seg			x-paseq	׀								90	
 EXO_27:18w6	027ta	w	2572		Acbpa	חֲמִשִּׁ֣ים	חֲמִשִּׁים			fifty	[will_be]_fifty			100	
-EXO_27:18w7a	02PrJa	m	b	1.0.1	Rd	בַּ	בַּ	in/on/at/with	on					110	
+EXO_27:18w7a	02PrJa	m	b	1.0.1	R	בַּ	בַּ	in/on/at/with	on					110	
 EXO_27:18w7b	02PrJb	M	2572	1.0.1	Acbpa	חֲמִשִּׁ֗ים	חֲמִשִּׁים	fifty	fifty					120	
 EXO_27:18w8a	02SiGa	m	c	1.0.0	C	וְ	וְ	and	and_[the]					130	
 EXO_27:18w8b	02SiGb	M	6967	1.0.0	Ncfsa	קֹמָ֛ה	קֹמָה	height	height					140	
@@ -59972,7 +59972,7 @@ EXO_32:27w14a	02Chia	m	c	0.1.0.0	C	וָ	וָ	and	and					210
 EXO_32:27w14b	02Chib	M	7725	0.1.0.0	Vqv2mp	שׁ֜וּבוּ	שׁוּבוּ	go_forth!	return					220	
 EXO_32:27w15a	02LJra	m	m		R	מִ	מִ	from	from					230	
 EXO_32:27w15b	02LJrb	M	8179		Ncmsa	שַּׁ֤עַר	שַּׁעַר	gate	gate					240	
-EXO_32:27w16a	02gifa	m	l	0.1.0	Rd	לָ	לָ	to	to					250	
+EXO_32:27w16a	02gifa	m	l	0.1.0	R	לָ	לָ	to	to					250	
 EXO_32:27w16b	02gifb	M	8179	0.1.0	Ncmsa	שַׁ֨עַר֙	שַׁעַר	gate	gate					260	
 EXO_32:27w17a	02Mzna	m	b	0.1	Rd	בַּֽ	בַּֽ	in/on/at/with	in					270	
 EXO_32:27w17b	02Mznb	M	4264	0.1	Ncbsa	מַּחֲנֶ֔ה	מַּחֲנֶה	camp	camp					280	
@@ -83595,7 +83595,7 @@ LEV_23:5w9a	03Y3aa	m	l	0	R	לַ	לַ	to	to					140
 LEV_23:5w9b	03Y3ab	M	3068	0	Np	יהוָֽה	יהוָה	Lord	Yahweh	to/for=YHWH				150	
 LEV_23:5		seg			x-sof-pasuq	׃							.	160	
 LEV_23:6w1a	03T6Ra	m	c		C	וּ	וּ	and	and			S		10	
-LEV_23:6w1b	03T6Rb	m	b		Rd	בַ	בַ	in/on/at/with	[will					20	
+LEV_23:6w1b	03T6Rb	m	b		R	בַ	בַ	in/on/at/with	[will					20	
 LEV_23:6w1c	03T6Rc	M	2568		Acfsa	חֲמִשָּׁ֨ה	חֲמִשָּׁה	five	be]_on_[the]_fif-					30	
 LEV_23:6w2	03h5B	w	6240		Acmsa	עָשָׂ֥ר	עָשָׂר			ten	teen			40	
 LEV_23:6w3	03ABc	w	3117	1.1.0	Ncmsa	יוֹם֙	יוֹם			day	day			50	
@@ -84228,7 +84228,7 @@ LEV_23:34w3	037iD	w	1121 a		Ncmpc	בְּנֵ֥י	בְּנֵי			sons_of	the_peop
 LEV_23:34w4	03vN5	w	3478	1.0	Np	יִשְׂרָאֵ֖ל	יִשְׂרָאֵל			Yisrael	of_Israel			50	
 LEV_23:34w5a	03r2Ka	m	l	1	R	לֵ	לֵ	to	(cmp)					60	
 LEV_23:34w5b	03r2Kb	M	559	1	Vqc	אמֹ֑ר	אמֹר	saying		to=say				70	
-LEV_23:34w6a	03dfsa	m	b		Rd	בַּ	בַּ	in/on/at/with	[is]_on_[the]					80	
+LEV_23:34w6a	03dfsa	m	b		R	בַּ	בַּ	in/on/at/with	[is]_on_[the]					80	
 LEV_23:34w6b	03dfsb	M	2568		Acmsa	חֲמִשָּׁ֨ה	חֲמִשָּׁה	five	fif-					90	
 LEV_23:34w7	03EtH	w	6240	0.1.1.0	Acmsa	עָשָׂ֜ר	עָשָׂר			ten	teen			100	
 LEV_23:34w8	035KR	w	3117	0.1.1	Ncmsa	י֗וֹם	יוֹם			day	day			110	
@@ -84351,7 +84351,7 @@ LEV_23:38w14a	032Mja	m	l	0	R	לַ	לַ	to	to					300
 LEV_23:38w14b	032Mjb	M	3068	0	Np	יהוָֽה	יהוָה	LORD	Yahweh	to/for=YHWH				310	
 LEV_23:38		seg			x-sof-pasuq	׃							.	320	
 LEV_23:39w1	03YVq	w	389	1.1.1.1	Ta	אַ֡ךְ	אַךְ			now	surely	S		10	
-LEV_23:39w2a	03r5ma	m	b		Rd	בַּ	בַּ	in/on/at/with	on_[the]					20	
+LEV_23:39w2a	03r5ma	m	b		R	בַּ	בַּ	in/on/at/with	on_[the]					20	
 LEV_23:39w2b	03r5mb	M	2568		Acmsa	חֲמִשָּׁה֩	חֲמִשָּׁה	five	fif-					30	
 LEV_23:39w3	032oJ	w	6240		Acmsa	עָשָׂ֨ר	עָשָׂר			ten	teen			40	
 LEV_23:39w4	03Ev1	w	3117	1.1.1.0	Ncmsa	י֜וֹם	יוֹם			day	day			50	
@@ -87128,7 +87128,7 @@ LEV_26:39w6a	03bEDa	m	341	1	Vqrmpc	אֹיְבֵי	אֹיְבֵי	enemies_of	your
 LEV_26:39w6b	03bEDb	M		1	Sp2mp	כֶ֑ם	כֶם	your(pl)	your(pl)					130	
 LEV_26:39w7a	03SVRa	m	c	0.0.0	C	וְ	וְ	and	and					140	
 LEV_26:39w7b	03SVRb	M	637	0.0.0	D	אַ֛ף	אַף	also	also					150	
-LEV_26:39w8a	03fKna	m	b		Rd	בַּ	בַּ	in/on/at/with	in					160	
+LEV_26:39w8a	03fKna	m	b		R	בַּ	בַּ	in/on/at/with	in					160	
 LEV_26:39w8b	03fKnb	M	5771		Ncbpc	עֲוֺנֹ֥ת	עֲוֺנֹת	iniquities_of	the_iniquities_of					170	
 LEV_26:39w9a	03gfAa	m	1	0.0	Ncmpc	אֲבֹתָ֖	אֲבֹתָ	ancestors_of	their_ancestors_of					180	
 LEV_26:39w9b	03gfAb	M		0.0	Sp3mp	ם	ם	their	their					190	
@@ -87237,7 +87237,7 @@ LEV_26:43w5	03UPU	w	853		To	אֶת	אֶת			DOM	DOM			90
 LEV_26:43		seg			x-maqqef	־								100	
 LEV_26:43w6a	03iGGa	m	7676	1.1.1	Ncbpc	שַׁבְּתֹתֶ֗י	שַׁבְּתֹתֶי	sabbaths_of	sabbaths_of					110	
 LEV_26:43w6b	03iGGb	M		1.1.1	Sp3fs	הָ	הָ	its	its					120	
-LEV_26:43w7a	0384Ra	m	b	1.1.0	Rd	בָּ	בָּ	in/on/at/with	when					130	
+LEV_26:43w7a	0384Ra	m	b	1.1.0	R	בָּ	בָּ	in/on/at/with	when					130	
 LEV_26:43w7b	0384Rb	m	8074	1.1.0	VHc	הְשַׁמָּ	הְשַׁמָּ	lying_desolate	it					140	
 LEV_26:43w7c	0384Rc	M		1.1.0	Sp3fs	ה֙	ה	its	is_made_desolate					150	
 LEV_26:43w8a	03giLa	m	m	1.1	R	מֵ	מֵ	without	from					160	
@@ -87504,7 +87504,7 @@ LEV_27:7w10	03jck	w	2568		Acmsa	חֲמִשָּׁ֥ה	חֲמִשָּׁה			five	f
 LEV_27:7w11	03Mxs	w	6240	1.0	Acmsa	עָשָׂ֖ר	עָשָׂר			ten	teen			190	
 LEV_27:7w12	03y1n	w	8255	1	Ncmsa	שָׁ֑קֶל	שָׁקֶל			shekels	shekel[s]			200	
 LEV_27:7w13a	03FQHa	m	c	0.0	C	וְ	וְ	and	and					210	
-LEV_27:7w13b	03FQHb	m	l	0.0	R	לַ	לַ	for_the	of					220	
+LEV_27:7w13b	03FQHb	m	l	0.0	Rd	לַ	לַ	for_the	of					220	
 LEV_27:7w13c	03FQHc	M	5347	0.0	Ncfsa	נְּקֵבָ֖ה	נְּקֵבָה	female	female					230	
 LEV_27:7w14	03Xv1	w	6235		Acmsa	עֲשָׂרָ֥ה	עֲשָׂרָה			ten	ten			240	
 LEV_27:7w15	03yTs	w	8255	0	Ncmpa	שְׁקָלִֽים	שְׁקָלִים			shekels	shekels			250	
@@ -88129,30 +88129,30 @@ LEV_27:33w2	03QYR	w	1239	1.0.0	Vpi3ms	יְבַקֵּ֛ר	יְבַקֵּר			insp
 LEV_27:33w3	03t4w	w	996		R	בֵּֽין	בֵּין			between	between			30	
 LEV_27:33		seg			x-maqqef	־								40	
 LEV_27:33w4	031E8	w	2896 a		Aamsa	ט֥וֹב	טוֹב			good	good			50	
-LEV_27:33w5a	03gzna	m	l	1.0	R	לָ	לָ	or_the	and					60	
-LEV_27:33w5b	03gznb	M	7451 a	1.0	Aamsa	רַ֖ע	רַע							70	
+LEV_27:33w5a	03gzna	m	l	1.0	Rd	לָ	לָ	or_the	and					60	
+LEV_27:33w5b	03gznb	M	7451 a	1.0	Aamsa	רַ֖ע	רַע	bad	bad					70	
 LEV_27:33w6a	03JxXa	m	c		C	וְ	וְ	and	and					80	
-LEV_27:33w6b	03JxXb	M	3808		Tn	לֹ֣א	לֹא			and=not				90	
-LEV_27:33w7a	03QBXa	m	4171	1	Vhi3ms	יְמִירֶ֑	יְמִירֶ							100	
+LEV_27:33w6b	03JxXb	M	3808		Tn	לֹ֣א	לֹא	not	not	and=not				90	
+LEV_27:33w7a	03QBXa	m	4171	1	Vhi3ms	יְמִירֶ֑	יְמִירֶ	exchange	he					100	
 LEV_27:33w7b	03QBXb	M		1	Sp3ms	נּוּ	נּוּ	it	will_exchange_it					110	
 LEV_27:33w8a	03Kqea	m	c		C	וְ	וְ	and	and					120	
 LEV_27:33w8b	03Kqeb	M	518 a		C	אִם	אִם	if	if	and=if				130	
 LEV_27:33		seg			x-maqqef	־								140	
-LEV_27:33w9	03TpL	w	4171		Vha	הָמֵ֣ר	הָמֵר							150	
-LEV_27:33w10a	03fUha	m	4171	0.1	Vhi3ms	יְמִירֶ֔	יְמִירֶ							160	
-LEV_27:33w10b	03fUhb	M		0.1	Sp3ms	נּוּ	נּוּ							170	
-LEV_27:33w11a	03tSoa	m	c		C	וְ	וְ	and						180	
-LEV_27:33w11b	03tSob	M	1961		Vqq3ms	הָֽיָה	הָיָה			and=it_was				190	
+LEV_27:33w9	03TpL	w	4171		Vha	הָמֵ֣ר	הָמֵר			to_substitute	actually_(exchange)			150	
+LEV_27:33w10a	03fUha	m	4171	0.1	Vhi3ms	יְמִירֶ֔	יְמִירֶ	substitution	he					160	
+LEV_27:33w10b	03fUhb	M		0.1	Sp3ms	נּוּ	נּוּ	it	will_exchange_it					170	
+LEV_27:33w11a	03tSoa	m	c		C	וְ	וְ	and	and					180	
+LEV_27:33w11b	03tSob	M	1961		Vqq3ms	הָֽיָה	הָיָה	be	it_will_be	and=it_was				190	
 LEV_27:33		seg			x-maqqef	־								200	
-LEV_27:33w12	03T22	w	1931		Pp3ms	ה֧וּא	הוּא			he|it				210	
-LEV_27:33w13a	036AMa	m	c	0.0.0	C	וּ	וּ	and						220	
-LEV_27:33w13b	036AMb	m	8545	0.0.0	Ncfsc	תְמוּרָת֛	תְמוּרָת							230	
-LEV_27:33w13c	036AMc	M		0.0.0	Sp3ms	וֹ	וֹ							240	
-LEV_27:33w14	03NVJ	w	1961		Vqi3ms	יִֽהְיֶה	יִהְיֶה			will_belong				250	
+LEV_27:33w12	03T22	w	1931		Pp3ms	ה֧וּא	הוּא			he|it	it			210	
+LEV_27:33w13a	036AMa	m	c	0.0.0	C	וּ	וּ	and	and					220	
+LEV_27:33w13b	036AMb	m	8545	0.0.0	Ncfsc	תְמוּרָת֛	תְמוּרָת	substitute_of	substitute_of					230	
+LEV_27:33w13c	036AMc	M		0.0.0	Sp3ms	וֹ	וֹ	its	its					240	
+LEV_27:33w14	03NVJ	w	1961		Vqi3ms	יִֽהְיֶה	יִהְיֶה			will_belong	it_will_be			250	
 LEV_27:33		seg			x-maqqef	־								260	
-LEV_27:33w15	031SB	w	6944	0.0	Ncmsa	קֹ֖דֶשׁ	קֹדֶשׁ							270	
-LEV_27:33w16	03djB	w	3808		Tn	לֹ֥א	לֹא			not				280	
-LEV_27:33w17	03Btk	w	1350 a	0	VNi3ms	יִגָּאֵֽל	יִגָּאֵל							290	
+LEV_27:33w15	031SB	w	6944	0.0	Ncmsa	קֹ֖דֶשׁ	קֹדֶשׁ			holy	a_holy_thing			270	
+LEV_27:33w16	03djB	w	3808		Tn	לֹ֥א	לֹא			not	not			280	
+LEV_27:33w17	03Btk	w	1350 a	0	VNi3ms	יִגָּאֵֽל	יִגָּאֵל			redeemed	it_will_be_redeemed			290	
 LEV_27:33		seg			x-sof-pasuq	׃							.	300	
 LEV_27:34w1	03paa	w	428		Pdxcp	אֵ֣לֶּה	אֵלֶּה			these	these	S		10	
 LEV_27:34w2a	03pEia	m	d	1.0.1	Td	הַ	הַ	the	[are]_the					20	
@@ -110645,7 +110645,7 @@ NUM_28:16w8a	041Bia	m	l	0	R	לַ	לַ	to	to					130
 NUM_28:16w8b	041Bib	M	3068	0	Np	יהוָֽה	יהוָה	Lord	Yahweh	to/for=YHWH				140	
 NUM_28:16		seg			x-sof-pasuq	׃							.	150	
 NUM_28:17w1a	04vJ9a	m	c		C	וּ	וּ	and	and			S		10	
-NUM_28:17w1b	04vJ9b	m	b		Rd	בַ	בַ	in/on/at/with	[will					20	
+NUM_28:17w1b	04vJ9b	m	b		R	בַ	בַ	in/on/at/with	[will					20	
 NUM_28:17w1c	04vJ9c	M	2568		Acfsa	חֲמִשָּׁ֨ה	חֲמִשָּׁה	five	be]_on_[the]_fif-					30	
 NUM_28:17w2	047BK	w	6240		Acmsa	עָשָׂ֥ר	עָשָׂר			ten	teen			40	
 NUM_28:17w3	04VGu	w	3117	1.0.0	Ncmsa	י֛וֹם	יוֹם			day	day			50	
@@ -111124,7 +111124,7 @@ NUM_29:11w11c	04Hiuc	M		0	Sp3mp	הֶֽם	הֶֽם	their	offerings					210
 NUM_29:11		seg			x-sof-pasuq	׃							.	220	
 NUM_29:11		seg			x-pe	פ						S		230	
 NUM_29:12w1a	04gfma	m	c		C	וּ	וּ	and	and					10	
-NUM_29:12w1b	04gfmb	m	b		Rd	בַ	בַ	in/on/at/with	on_[the]					20	
+NUM_29:12w1b	04gfmb	m	b		R	בַ	בַ	in/on/at/with	on_[the]					20	
 NUM_29:12w1c	04gfmc	M	2568		Acfsa	חֲמִשָּׁה֩	חֲמִשָּׁה	five	fif-					30	
 NUM_29:12w2	04ua2	w	6240		Acmsa	עָשָׂ֨ר	עָשָׂר			ten	teen			40	
 NUM_29:12w3	04EBF	w	3117	1.1.1.0	Ncmsa	י֜וֹם	יוֹם			day	day			50	
@@ -114394,7 +114394,7 @@ NUM_33:3w3a	04iXua	m	b		Rd	בַּ	בַּ	in/on/at/with	in					50
 NUM_33:3w3b	04iXub	M	2320		Ncmsa	חֹ֣דֶשׁ	חֹדֶשׁ	month	month					60	
 NUM_33:3w4a	04GDVa	m	d	1.1	Td	הָֽ	הָ	the	(the)					70	
 NUM_33:3w4b	04GDVb	M	7223	1.1	Aomsa	רִאשׁ֔וֹן	רִאשׁוֹן	first	first					80	
-NUM_33:3w5a	04rRqa	m	b		Rd	בַּ	בַּ	in/on/at/with	on_[the]					90	
+NUM_33:3w5a	04rRqa	m	b		R	בַּ	בַּ	in/on/at/with	on_[the]					90	
 NUM_33:3w5b	04rRqb	M	2568		Acmsa	חֲמִשָּׁ֥ה	חֲמִשָּׁה	five	fif-					100	
 NUM_33:3w6	04Y6o	w	6240	1.0.0	Acmsa	עָשָׂ֛ר	עָשָׂר			ten	teen			110	
 NUM_33:3w7	04y7J	w	3117	1.0	Ncmsa	י֖וֹם	יוֹם			day	day			120	
@@ -121617,7 +121617,7 @@ DEU_5:10w1b	056nGb	M	6213 a		Vqrmsa	עֹ֥שֶׂה	עֹשֶׂה	showing	does				
 DEU_5:10		alternative note				וְ/עֹ֥שֶׂה: (x-accent)וְ/עֹ֤שֶׂה								30	
 DEU_5:10w2	05p6C	w	2617 a	1.0	Ncmsa	חֶ֖סֶד	חֶסֶד			steadfast_love	covenant_loyalty			40	
 DEU_5:10		alternative note				חֶ֖סֶד: (x-accent)חֶ֨סֶד֙								50	
-DEU_5:10w3a	05Dn5a	m	l	1	Rd	לַֽ	לַ	to	to					60	
+DEU_5:10w3a	05Dn5a	m	l	1	R	לַֽ	לַ	to	to					60	
 DEU_5:10w3b	05Dn5b	M	505	1	Acbpa	אֲלָפִ֑ים	אֲלָפִים	thousands	thousands					70	
 DEU_5:10		alternative note				לַֽ/אֲלָפִ֑ים: (x-accent)לַֽ/אֲלָפִ֔ים								80	
 DEU_5:10w4a	057mca	m	l	0.0	R	לְ	לְ	of	of					90	
@@ -133481,7 +133481,7 @@ DEU_22:10w3a	05S9ia	m	b		R	בְּ	בְּ	in/on/at/with	with					40
 DEU_22:10w3b	05S9ib	M	7794		Ncmsa	שׁוֹר	שׁוֹר	ox	an_ox					50	
 DEU_22:10		seg			x-maqqef	־								60	
 DEU_22:10w4a	05Mv3a	m	c	0.0	C	וּ	וּ	and	and					70	
-DEU_22:10w4b	05Mv3b	m	b	0.0	Rd	בַ	בַ	in/on/at/with	with					80	
+DEU_22:10w4b	05Mv3b	m	b	0.0	R	בַ	בַ	in/on/at/with	with					80	
 DEU_22:10w4c	05Mv3c	M	2543	0.0	Ncbsa	חֲמֹ֖ר	חֲמֹר	donkey	a_donkey					90	
 DEU_22:10w5	05wVV	w	3162 b	0	D	יַחְדָּֽו	יַחְדָּו			together	together			100	
 DEU_22:10		seg			x-sof-pasuq	׃							.	110	
@@ -147989,41 +147989,41 @@ JOS_8:1w29b	06suRb	M		0	Sp3ms	וֹ	וֹ	his	his					530
 JOS_8:1		seg			x-sof-pasuq	׃							.	540	
 JOS_8:2w1a	06LXwa	m	c		C	וְ	וְ	and	and			S		10	
 JOS_8:2w1b	06LXwb	M	6213 a		Vqq2ms	עָשִׂ֨יתָ	עָשִׂיתָ	do	you_will_do					20	
-JOS_8:2w2a	06unaa	m	l	1.1.1.0	R	לָ	לָ	to_THE	to					30	
-JOS_8:2w2b	06unab	M	5857	1.1.1.0	Np	עַ֜י	עַי							40	
+JOS_8:2w2a	06unaa	m	l	1.1.1.0	Rd	לָ	לָ	to_THE	to					30	
+JOS_8:2w2b	06unab	M	5857	1.1.1.0	Np	עַ֜י	עַי	Ai	Ai					40	
 JOS_8:2w3a	06em6a	m	c	1.1.1	C	וּ	וּ	and	and					50	
 JOS_8:2w3b	06em6b	m	l	1.1.1	R	לְ	לְ	to	to					60	
-JOS_8:2w3c	06em6c	m	4428	1.1.1	Ncmsc	מַלְכָּ֗	מַלְכָּ							70	
+JOS_8:2w3c	06em6c	m	4428	1.1.1	Ncmsc	מַלְכָּ֗	מַלְכָּ	king_of	king_of					70	
 JOS_8:2w3d	06em6d	M		1.1.1	Sp3fs	הּ	הּ	its	its					80	
 JOS_8:2w4a	06157a	m	k		R	כַּ	כַּ	just_as	just					90	
-JOS_8:2w4b	06157b	M	834 d		Tr	אֲשֶׁ֨ר	אֲשֶׁר			just=as				100	
-JOS_8:2w5	06quT	w	6213 a		Vqp2ms	עָשִׂ֤יתָ	עָשִׂיתָ			you(ms)_have_done/made				110	
-JOS_8:2w6a	066Voa	m	l	1.1.0	R	לִֽ	לִ	to/for						120	
-JOS_8:2w6b	066Vob	M	3405	1.1.0	Np	ירִיחוֹ֙	ירִיחוֹ							130	
+JOS_8:2w4b	06157b	M	834 d		Tr	אֲשֶׁ֨ר	אֲשֶׁר	which	as	just=as				100	
+JOS_8:2w5	06quT	w	6213 a		Vqp2ms	עָשִׂ֤יתָ	עָשִׂיתָ			you(ms)_have_done/made	you_did			110	
+JOS_8:2w6a	066Voa	m	l	1.1.0	R	לִֽ	לִ	to	to					120	
+JOS_8:2w6b	066Vob	M	3405	1.1.0	Np	ירִיחוֹ֙	ירִיחוֹ	Jericho	Jericho					130	
 JOS_8:2w7a	06E91a	m	c	1.1	C	וּ	וּ	and	and					140	
 JOS_8:2w7b	06E91b	m	l	1.1	R	לְ	לְ	to	to					150	
-JOS_8:2w7c	06E91c	m	4428	1.1	Ncmsc	מַלְכָּ֔	מַלְכָּ							160	
+JOS_8:2w7c	06E91c	m	4428	1.1	Ncmsc	מַלְכָּ֔	מַלְכָּ	king_of	king_of					160	
 JOS_8:2w7d	06E91d	M		1.1	Sp3fs	הּ	הּ	its	its					170	
 JOS_8:2w8	063Cf	w	7535		Ta	רַק	רַק			only	only			180	
 JOS_8:2		seg			x-maqqef	־								190	
-JOS_8:2w9a	06bsia	m	7998		Ncmsc	שְׁלָלָ֥	שְׁלָלָ							200	
-JOS_8:2w9b	06bsib	M			Sp3fs	הּ	הּ							210	
-JOS_8:2w10a	06MWqa	m	c	1.0	C	וּ	וּ	and						220	
-JOS_8:2w10b	06MWqb	m	929	1.0	Ncfsc	בְהֶמְתָּ֖	בְהֶמְתָּ							230	
-JOS_8:2w10c	06MWqc	M		1.0	Sp3fs	הּ	הּ							240	
-JOS_8:2w11	0634f	w	962		Vqi2mp	תָּבֹ֣זּוּ	תָּבֹזּוּ							250	
-JOS_8:2w12a	06aVYa	m	l	1	R	לָ	לָ	to/for						260	
-JOS_8:2w12b	06aVYb	M		1	Sp2mp	כֶ֑ם	כֶם			to/for=you(pl)				270	
-JOS_8:2w13	06hNg	w	7760 a		Vqv2ms	שִׂים	שִׂים							280	
+JOS_8:2w9a	06bsia	m	7998		Ncmsc	שְׁלָלָ֥	שְׁלָלָ	spoil_of	booty_of					200	
+JOS_8:2w9b	06bsib	M			Sp3fs	הּ	הּ	its	its					210	
+JOS_8:2w10a	06MWqa	m	c	1.0	C	וּ	וּ	and	and					220	
+JOS_8:2w10b	06MWqb	m	929	1.0	Ncfsc	בְהֶמְתָּ֖	בְהֶמְתָּ	livestock_of	livestock_of					230	
+JOS_8:2w10c	06MWqc	M		1.0	Sp3fs	הּ	הּ	its	its					240	
+JOS_8:2w11	0634f	w	962		Vqi2mp	תָּבֹ֣זּוּ	תָּבֹזּוּ			take_as_booty	you(pl)_will_plunder			250	
+JOS_8:2w12a	06aVYa	m	l	1	R	לָ	לָ	for	for					260	
+JOS_8:2w12b	06aVYb	M		1	Sp2mp	כֶ֑ם	כֶם	yourselves	yourselves	to/for=you(pl)				270	
+JOS_8:2w13	06hNg	w	7760 a		Vqv2ms	שִׂים	שִׂים			set	set			280	
 JOS_8:2		seg			x-maqqef	־								290	
-JOS_8:2w14a	06G8oa	m	l		R	לְ	לְ	to/for						300	
-JOS_8:2w14b	06G8ob	M			Sp2ms	ךָ֥	ךָ			to/for=yourself(m)				310	
-JOS_8:2w15	063Gd	w	693	0.0.0	Vqrmsa	אֹרֵ֛ב	אֹרֵב							320	
-JOS_8:2w16a	06iWka	m	l	0.0	Rd	לָ	לָ	to/for						330	
-JOS_8:2w16b	06iWkb	M	5892 b	0.0	Ncfsa	עִ֖יר	עִיר							340	
-JOS_8:2w17a	06mCga	m	m	0	R	מֵ	מֵ	from						350	
-JOS_8:2w17b	06mCgb	m	310 a	0	R	אַחֲרֶֽי	אַחֲרֶֽי							360	
-JOS_8:2w17c	06mCgc	M		0	Sp3fs	הָ	הָ							370	
+JOS_8:2w14a	06G8oa	m	l		R	לְ	לְ	for	(for					300	
+JOS_8:2w14b	06G8ob	M			Sp2ms	ךָ֥	ךָ	yourself	yourself	to/for=yourself(m)				310	
+JOS_8:2w15	063Gd	w	693	0.0.0	Vqrmsa	אֹרֵ֛ב	אֹרֵב			ambush	an_ambush			320	
+JOS_8:2w16a	06iWka	m	l	0.0	Rd	לָ	לָ	against_the	for					330	
+JOS_8:2w16b	06iWkb	M	5892 b	0.0	Ncfsa	עִ֖יר	עִיר	city	city					340	
+JOS_8:2w17a	06mCga	m	m	0	R	מֵ	מֵ	at	(from)					350	
+JOS_8:2w17b	06mCgb	m	310 a	0	R	אַחֲרֶֽי	אַחֲרֶֽי	behind	behind					360	
+JOS_8:2w17c	06mCgc	M		0	Sp3fs	הָ	הָ	it	it					370	
 JOS_8:2		seg			x-sof-pasuq	׃							.	380	
 JOS_8:3w1a	06tq2a	m	c		C	וַ	וַ	and	and			S		20	
 JOS_8:3w1b	06tq2b	M	6965 b		Vqw3ms	יָּ֧קָם	יָּקָם	set_out	he_arose	and=he|it_rose_up				30	
@@ -148212,19 +148212,19 @@ JOS_8:9w11a	06dP1a	m	d	1.0	Td	הָ	הָ	the	(the)					190
 JOS_8:9w11b	06dP1b	M	5857	1.0	Np	עַ֖י	עַי	Ai	Ai					200	
 JOS_8:9w12a	06G4wa	m	m		R	מִ	מִ	to	from_[the]					210	
 JOS_8:9w12b	06G4wb	M	3220		Ncmsa	יָּ֣ם	יָּם	west	west					220	
-JOS_8:9w13a	06bsJa	m	l	1	R	לָ	לָ	of_THE	of					230	
-JOS_8:9w13b	06bsJb	M	5857	1	Np	עָ֑י	עָי							240	
-JOS_8:9w14a	06WFxa	m	c		C	וַ	וַ	and	and					250	
-JOS_8:9w14b	06WFxb	M	3885 a		Vqw3ms	יָּ֧לֶן	יָּלֶן							260	
-JOS_8:9w15	06fnp	w	3091	0.0.0	Np	יְהוֹשֻׁ֛עַ	יְהוֹשֻׁעַ							270	
+JOS_8:9w13a	06bsJa	m	l	1	Rd	לָ	לָ	of_THE	of					230	
+JOS_8:9w13b	06bsJb	M	5857	1	Np	עָ֑י	עָי	Ai	Ai					240	
+JOS_8:9w14a	06WFxa	m	c		C	וַ	וַ	and	and					260	
+JOS_8:9w14b	06WFxb	M	3885 a		Vqw3ms	יָּ֧לֶן	יָּלֶן	spent	he_stayed					270	
+JOS_8:9w15	06fnp	w	3091	0.0.0	Np	יְהוֹשֻׁ֛עַ	יְהוֹשֻׁעַ			Joshua	Joshua			250	_
 JOS_8:9w16a	0631Ta	m	b		Rd	בַּ	בַּ	in/on/at/with	in					280	
-JOS_8:9w16b	0631Tb	M	3915		Ncmsa	לַּ֥יְלָה	לַּיְלָה							290	
+JOS_8:9w16b	0631Tb	M	3915		Ncmsa	לַּ֥יְלָה	לַּיְלָה	night	night					290	
 JOS_8:9w17a	06CPta	m	d	0.0	Td	הַ	הַ	the	(the)					300	
-JOS_8:9w17b	06CPtb	M	1931	0.0	Pp3ms	ה֖וּא	הוּא			(the)=that				310	
+JOS_8:9w17b	06CPtb	M	1931	0.0	Pp3ms	ה֖וּא	הוּא	that	that	(the)=that				310	
 JOS_8:9w18a	06beXa	m	b		R	בְּ	בְּ	in/on/at/with	among					320	
-JOS_8:9w18b	06beXb	M	8432		Ncmsc	ת֥וֹךְ	תוֹךְ			in_the=middle				330	
+JOS_8:9w18b	06beXb	M	8432		Ncmsc	ת֥וֹךְ	תוֹךְ	among_of		in_the=middle				330	
 JOS_8:9w19a	06RAca	m	d	0	Td	הָ	הָ	the	the					340	
-JOS_8:9w19b	06RAcb	M	5971 a	0	Ncmsa	עָֽם	עָם							350	
+JOS_8:9w19b	06RAcb	M	5971 a	0	Ncmsa	עָֽם	עָם	people	people					350	
 JOS_8:9		seg			x-sof-pasuq	׃							.	360	
 JOS_8:10w1a	061AVa	m	c		C	וַ	וַ	and	and			S		20	
 JOS_8:10w1b	061AVb	M	7925		Vhw3ms	יַּשְׁכֵּ֤ם	יַּשְׁכֵּם	rose_early	he_rose_early					30	
@@ -148272,19 +148272,19 @@ JOS_8:11w11a	06qura	m	c	0.1.0	C	וַֽ	וַֽ	and	and					190
 JOS_8:11w11b	06qurb	M	2583	0.1.0	Vqw3mp	יַּחֲנוּ֙	יַּחֲנוּ	camped	they_encamped					200	
 JOS_8:11w12a	06kHka	m	m		R	מִ	מִ	on	from_[the]					210	
 JOS_8:11w12b	06kHkb	M	6828		Ncfsc	צְּפ֣וֹן	צְּפוֹן	north_of	north_of					220	
-JOS_8:11w13a	066Dha	m	l	0.1	R	לָ	לָ	of_THE	of					230	
-JOS_8:11w13b	066Dhb	M	5857	0.1	Np	עַ֔י	עַי							240	
+JOS_8:11w13a	066Dha	m	l	0.1	Rd	לָ	לָ	of_THE	of					230	
+JOS_8:11w13b	066Dhb	M	5857	0.1	Np	עַ֔י	עַי	Ai	Ai					240	
 JOS_8:11w14a	06oAsa	m	c	0.0	C	וְ	וְ	and	and					250	
 JOS_8:11w14b	06oAsb	m	d	0.0	Td	הַ	הַ	the	the					260	
-JOS_8:11w14c	06oAsc	M	1516	0.0	Ncbsa	גַּ֖י	גַּי							270	
-JOS_8:11w15a	069eGa	mK	996		R	בינ	בינ							280	
+JOS_8:11w14c	06oAsc	M	1516	0.0	Ncbsa	גַּ֖י	גַּי	valley	valley					270	
+JOS_8:11w15a	069eGa	mK	996		R	בינ	בינ	between	[was]_between					280	
 JOS_8:11w15b	069eGb	MK			Sp3ms	ו	ו	them	it					290	
 JOS_8:11		variant note				בינ/ו: (x-qere) 'בֵּינָ֥י/ו': lemma=996 morph=HR/Sp3ms id=06PZV בֵּינָ֥י/ו								300	
-JOS_8:11w16a	06GDRa	m	c		C	וּ	וּ	and						310	
-JOS_8:11w16b	06GDRb	M	996		R	בֵין	בֵין			and=between				320	
+JOS_8:11w16a	06GDRa	m	c		C	וּ	וּ	and	and					310	
+JOS_8:11w16b	06GDRb	M	996		R	בֵין	בֵין	between	between	and=between				320	
 JOS_8:11		seg			x-maqqef	־								330	
-JOS_8:11w17a	0683xa	m	d	0	Td	הָ	הָ	the						340	
-JOS_8:11w17b	0683xb	M	5857	0	Np	עָֽי	עָי							350	
+JOS_8:11w17a	0683xa	m	d	0	Td	הָ	הָ	the	(the)					340	
+JOS_8:11w17b	0683xb	M	5857	0	Np	עָֽי	עָי	Ai	Ai					350	
 JOS_8:11		seg			x-sof-pasuq	׃							.	360	
 JOS_8:12w1a	06JGHa	m	c	1.1	C	וַ	וַ	and	and			S		10	
 JOS_8:12w1b	06JGHb	M	3947	1.1	Vqw3ms	יִּקַּ֕ח	יִּקַּח	took	he_took	and=he|it_took				20	
@@ -148421,7 +148421,7 @@ JOS_8:16w3b	06bVTb	M	5971 a	1.1.0	Ncmsa	עָם֙	עָם	people	people					60
 JOS_8:16w4	06Vdb	w	834 a		Tr	אֲשֶׁ֣ר	אֲשֶׁר			which/who	which			70	
 JOS_8:16w5a	06GEna	mK	b		Rd	ב	ב	in/on/at/with	[was]_in					80	
 JOS_8:16w5b	06GEnb	MK	5892 b		Ncfsa	עיר	עיר	Ai	Ai					90	
-JOS_8:16		variant note				ב/עיר: (x-qere) 'בָּ/עַ֔י': lemma=b/5857 n=1.1 morph=HR/Np id=06JcF בָּ/עַ֔י								100	
+JOS_8:16		variant note				ב/עיר: (x-qere) 'בָּ/עַ֔י': lemma=b/5857 n=1.1 morph=HRd/Np id=06JcF בָּ/עַ֔י								100	
 JOS_8:16w6a	06GWda	m	l	1.0	R	לִ	לִ	to	to					110	
 JOS_8:16w6b	06GWdb	M	7291	1.0	Vqc	רְדֹּ֖ף	רְדֹּף	pursue	pursue					120	
 JOS_8:16w7a	06S7ba	m	310 a	1	R	אַחֲרֵי	אַחֲרֵי	after	after					130	
@@ -149140,7 +149140,7 @@ JOS_9:3w7	063fc	w	3091	0.0.0	Np	יְהוֹשֻׁ֛עַ	יְהוֹשֻׁעַ			Jo
 JOS_9:3w8a	06TYPa	m	l	0.0	R	לִֽ	לִ	to	to					90	
 JOS_9:3w8b	06TYPb	M	3405	0.0	Np	ירִיח֖וֹ	ירִיחוֹ	Jericho	Jericho					100	
 JOS_9:3w9a	06pVNa	m	c	0	C	וְ	וְ	and	and					110	
-JOS_9:3w9b	06pVNb	m	l	0	R	לָ	לָ	to_THE	to					120	
+JOS_9:3w9b	06pVNb	m	l	0	Rd	לָ	לָ	to_THE	to					120	
 JOS_9:3w9c	06pVNc	M	5857	0	Np	עָֽי	עָי	Ai	Ai					130	
 JOS_9:3		seg			x-sof-pasuq	׃							.	140	
 JOS_9:4w1a	06Nkua	m	c		C	וַ	וַ	and	and			S		10	
@@ -149851,25 +149851,25 @@ JOS_10:1w16d	06iAjd	M		1.1	Sp3fs	הּ	הּ	its	its					290
 JOS_10:1w17	06aWd	w	3651 c		Tm	כֵּן	כֵּן			yes/correct/thus/so	so			300	
 JOS_10:1		seg			x-maqqef	־								310	
 JOS_10:1w18	06Vuh	w	6213 a		Vqp3ms	עָשָׂ֥ה	עָשָׂה			he|it_had_made	he_had_done			320	
-JOS_10:1w19a	064nGa	m	l	1.0	R	לָ	לָ	to_THE	to					330	
-JOS_10:1w19b	064nGb	M	5857	1.0	Np	עַ֖י	עַי							340	
+JOS_10:1w19a	064nGa	m	l	1.0	Rd	לָ	לָ	to_THE	to					330	
+JOS_10:1w19b	064nGb	M	5857	1.0	Np	עַ֖י	עַי	Ai	Ai					340	
 JOS_10:1w20a	06D7Ra	m	c	1	C	וּ	וּ	and	and					350	
 JOS_10:1w20b	06D7Rb	m	l	1	R	לְ	לְ	to	to					360	
-JOS_10:1w20c	06D7Rc	m	4428	1	Ncmsc	מַלְכָּ֑	מַלְכָּ							370	
+JOS_10:1w20c	06D7Rc	m	4428	1	Ncmsc	מַלְכָּ֑	מַלְכָּ	king_of	king_of					370	
 JOS_10:1w20d	06D7Rd	M		1	Sp3fs	הּ	הּ	its	its					380	
 JOS_10:1w21a	06fw9a	m	c		C	וְ	וְ	and	and_if/because					390	
-JOS_10:1w21b	06fw9b	M	3588 a		C	כִ֨י	כִי			and=because/when				400	
-JOS_10:1w22	06znQ	w	7999 b	0.1.0.0	Vhp3cp	הִשְׁלִ֜ימוּ	הִשְׁלִימוּ							410	
-JOS_10:1w23	06ZdC	w	3427		Vqrmpc	יֹשְׁבֵ֤י	יֹשְׁבֵי							420	
-JOS_10:1w24	062MP	w	1391	0.1.0	Np	גִבְעוֹן֙	גִבְעוֹן							430	
+JOS_10:1w21b	06fw9b	M	3588 a		C	כִ֨י	כִי	that	that	and=because/when				400	
+JOS_10:1w22	06znQ	w	7999 b	0.1.0.0	Vhp3cp	הִשְׁלִ֜ימוּ	הִשְׁלִימוּ			made_peace	they_had_made_peace			410	
+JOS_10:1w23	06ZdC	w	3427		Vqrmpc	יֹשְׁבֵ֤י	יֹשְׁבֵי			inhabitants_of	the_inhabitants_of			420	
+JOS_10:1w24	062MP	w	1391	0.1.0	Np	גִבְעוֹן֙	גִבְעוֹן			Gibeon	of_Gibeon			430	
 JOS_10:1w25	06Exz	w	854		R	אֶת	אֶת			DOM	with			440	
 JOS_10:1		seg			x-maqqef	־								450	
-JOS_10:1w26	063Cy	w	3478	0.1	Np	יִשְׂרָאֵ֔ל	יִשְׂרָאֵל			Yisrael				460	
-JOS_10:1w27a	06EDba	m	c	0.0	C	וַ	וַ	and						470	
-JOS_10:1w27b	06EDbb	M	1961	0.0	Vqw3mp	יִּֽהְי֖וּ	יִּהְיוּ			and=they_were				480	
-JOS_10:1w28a	06xv7a	m	b	0	R	בְּ	בְּ	in/on/at/with						490	
-JOS_10:1w28b	06xv7b	m	7130	0	Ncmsc	קִרְבָּֽ	קִרְבָּ							500	
-JOS_10:1w28c	06xv7c	M		0	Sp3mp	ם	ם							510	
+JOS_10:1w26	063Cy	w	3478	0.1	Np	יִשְׂרָאֵ֔ל	יִשְׂרָאֵל			Yisrael	Israel			460	
+JOS_10:1w27a	06EDba	m	c	0.0	C	וַ	וַ	and	and					470	
+JOS_10:1w27b	06EDbb	M	1961	0.0	Vqw3mp	יִּֽהְי֖וּ	יִּהְיוּ	were	they_were	and=they_were				480	
+JOS_10:1w28a	06xv7a	m	b	0	R	בְּ	בְּ	in/on/at/with	in					490	
+JOS_10:1w28b	06xv7b	m	7130	0	Ncmsc	קִרְבָּֽ	קִרְבָּ	near_of	midst_of					500	
+JOS_10:1w28c	06xv7c	M		0	Sp3mp	ם	ם	them	their					510	
 JOS_10:1		seg			x-sof-pasuq	׃							.	520	
 JOS_10:2w1a	06r5Ya	m	c		C	וַ	וַ	and	and			S		10	
 JOS_10:2w1b	06r5Yb	M	3372		Vqw3mp	יִּֽירְא֣וּ	יִּירְאוּ	feared	they_were_afraid					20	
@@ -172056,8 +172056,8 @@ JDG_13:8		seg			x-maqqef	־								270
 JDG_13:8w18	078Zb	w	6213 a	0.0	Vqi1cp	נַּעֲשֶׂ֖ה	נַּעֲשֶׂה			do	will_we_do			280	
 JDG_13:8w19a	07Lata	m	l		Rd	לַ	לַ	concerning_the	for					290	
 JDG_13:8w19b	07Latb	M	5288		Ncmsa	נַּ֥עַר	נַּעַר	boy	lad					300	
-JDG_13:8w20a	07dYoa	m	d	0	Rd	הַ	הַ	the	[who					310	
-JDG_13:8w20b	07dYob	M	3205	0	VQsmsa	יּוּלָּֽד	יּוּלָּד							320	
+JDG_13:8w20a	07dYoa	m	d	0	Td	הַ	הַ	the	[who					310	
+JDG_13:8w20b	07dYob	M	3205	0	VQsmsa	יּוּלָּֽד	יּוּלָּד	born	is]_about_to_be_born					320	
 JDG_13:8		seg			x-sof-pasuq	׃							.	330	
 JDG_13:9w1a	07b1ba	m	c		C	וַ	וַ	and	and			S		10	
 JDG_13:9w1b	07b1bb	M	8085		Vqw3ms	יִּשְׁמַ֥ע	יִּשְׁמַע	listened	he_listened	and=he|it_listened				20	
@@ -172290,8 +172290,8 @@ JDG_13:17w8	07S39	w	3588 a		C	כִּֽי	כִּי			that/for/because/then/when	i
 JDG_13:17		seg			x-maqqef	־								120	
 JDG_13:17w9	0766Y	w	935		Vqi3ms	יָבֹ֥א	יָבֹא			come_true	it_will_come			140	
 JDG_13:17w10a	071wEa	mK	1697		Ncmpc	דברי	דברי	words_of	word_of					130	
-JDG_13:17w10b	071wEb	MK			Pp2ms	ך	ך	your	your					150	
-JDG_13:17		variant note				דברי/ך: (x-qere) 'דְבָרְ/ךָ֖': lemma=1697 n=0.0 morph=HNcmsc/Pp2ms id=07LNG דְבָרְ/ךָ֖								160	
+JDG_13:17w10b	071wEb	MK			Sp2ms	ך	ך	your	your					150	
+JDG_13:17		variant note				דברי/ך: (x-qere) 'דְבָרְ/ךָ֖': lemma=1697 n=0.0 morph=HNcmsc/Sp2ms id=07LNG דְבָרְ/ךָ֖								160	
 JDG_13:17w11a	071VDa	m	c	0	C	וְ	וְ	and	and					170	
 JDG_13:17w11b	071VDb	m	3513	0	Vpp1cp	כִבַּדְנֽוּ	כִבַּדְנוּ	honor	we					180	
 JDG_13:17w11c	071VDc	M		0	Sp2ms	ךָ	ךָ	you	will_honor_you					190	
@@ -172453,7 +172453,7 @@ JDG_13:23w12b	07QLnb	M	4503	1.1	Ncfsa	מִנְחָ֔ה	מִנְחָה	grain_offe
 JDG_13:23w13a	07Rz1a	m	c		C	וְ	וְ	and	and					220	
 JDG_13:23w13b	07Rz1b	M	3808		Tn	לֹ֥א	לֹא	not	not	and=not				230	
 JDG_13:23w14a	07AR3a	m	7200	1.0	Vhp3ms	הֶרְאָ֖	הֶרְאָ	shown	he					240	
-JDG_13:23w14b	07AR3b	M		1.0	Pp1cp	נוּ	נוּ	us	showed_us					250	
+JDG_13:23w14b	07AR3b	M		1.0	Sp1cp	נוּ	נוּ	us	showed_us					250	
 JDG_13:23w15	076J4	w	853		To	אֶת	אֶת			DOM	DOM			260	
 JDG_13:23		seg			x-maqqef	־								270	
 JDG_13:23w16	077AJ	w	3605		Ncmsc	כָּל	כָּל			all/each/any/every	all_of			280	
@@ -172889,7 +172889,7 @@ JDG_14:14w1b	07TwCb	M	559		Vqw3ms	יֹּ֣אמֶר	יֹּאמֶר	said	he_said	a
 JDG_14:14w2a	07Eioa	m	l	1.1.1	R	לָ	לָ	to	to					30	
 JDG_14:14w2b	07Eiob	M		1.1.1	Sp3mp	הֶ֗ם	הֶם	them	them	to/for=them				40	
 JDG_14:14w3a	07tLCa	m	m	1.1.0	R	מֵ	מֵ	out_of	from					50	
-JDG_14:14w3b	07tLCb	m	d	1.1.0	Rd	הָֽ	הָ	the						60	
+JDG_14:14w3b	07tLCb	m	d	1.1.0	Td	הָֽ	הָ	the	the					60	
 JDG_14:14w3c	07tLCc	M	398	1.1.0	Vqrmsa	אֹכֵל֙	אֹכֵל	eater	eater					70	
 JDG_14:14w4	077Pm	w	3318		Vqp3ms	יָצָ֣א	יָצָא			he|it_went_forth	it_came_out			80	
 JDG_14:14w5	07CaG	w	3978	1.1	Ncmsa	מַאֲכָ֔ל	מַאֲכָל			something_to_eat	food			90	
@@ -172951,7 +172951,7 @@ JDG_14:15w20b	07rhNb	M	784	1	Ncbsa	אֵ֑שׁ	אֵשׁ	fire	fire					400
 JDG_14:15w21a	07mL7a	m	d	0.1	Td	הַ	הַ	the	?					410	
 JDG_14:15w21b	07mL7b	m	l	0.1	R	לְ	לְ	to	to					420	
 JDG_14:15w21c	07mL7c	m	3423	0.1	Vqc	יָרְשֵׁ֕	יָרְשֵׁ	rob	impoverish					430	
-JDG_14:15w21d	07mL7d	M		0.1	Pp1cp	נוּ	נוּ	us	us					440	
+JDG_14:15w21d	07mL7d	M		0.1	Sp1cp	נוּ	נוּ	us	us					440	
 JDG_14:15w22	07Lfy	w	7121		Vqp2mp	קְרָאתֶ֥ם	קְרָאתֶם			invited	did_you(pl)_invite			450	
 JDG_14:15w23a	074Uma	m	l	0.0	R	לָ֖	לָ	to	(to)					460	
 JDG_14:15w23b	074Umb	M		0.0	Sp1cp	נוּ	נוּ	us	us	to/for=us				470	
@@ -174498,7 +174498,7 @@ JDG_16:24w20b	07H6bb	M		0	Sp1cp	נוּ	נוּ	us	[ones]					360
 JDG_16:24		seg			x-sof-pasuq	׃							.	370	
 JDG_16:25w1a	07JGXa	m	c	1.2.0	C	וַֽ	וַֽ	and	and			S		10	
 JDG_16:25w1b	07JGXb	M	1961	1.2.0	Vqw3ms	יְהִי֙	יְהִי	happened	it_was	and=he|it_was				20	
-JDG_16:25w2	07rb5	w	3588 a		C	כי	כי							30	
+JDG_16:25w2	07rb5	wK	3588 a		C	כי	כי							30	
 JDG_16:25w3	07saF	wK	2896 a		Vqp3ms	טוב	טוב							40	
 JDG_16:25		variant note				כי טוב: (x-qere) 'כְּ/ט֣וֹב': lemma=k/2896 a morph=HR/Vqc id=07URH כְּ/ט֣וֹב								50	
 JDG_16:25w4a	074Bma	m	3820 a	1.2	Ncmsc	לִבָּ֔	לִבָּ	hearts_of	heart_of					60	
@@ -179039,7 +179039,7 @@ JDG_21:24w4	07Mcv	w	3478	1.1.0	Np	יִשְׂרָאֵל֙	יִשְׂרָאֵל			
 JDG_21:24w5a	07Jkxa	m	b		Rd	בָּ	בָּ	in/on/at/with	at					80	
 JDG_21:24w5b	07Jkxb	M	6256		Ncbsa	עֵ֣ת	עֵת	time	time					90	
 JDG_21:24w6a	07bzSa	m	d	1.1	Td	הַ	הַ	the	(the)					100	
-JDG_21:24w6b	07bzSb	M	1931	1.1	Pp3fs	הִ֔יא	הִיא							110	
+JDG_21:24w6b	07bzSb	M	1931	1.1	Sp3fs	הִ֔יא	הִיא	that	that					110	
 JDG_21:24w7	07VrM	w	376		Ncmsa	אִ֥ישׁ	אִישׁ			(a)_man	each_man			120	
 JDG_21:24w8a	07TCda	m	l	1.0	R	לְ	לְ	to	to					130	
 JDG_21:24w8b	07TCdb	m	7626	1.0	Ncmsc	שִׁבְט֖	שִׁבְט	tribe_of	tribe_of					140	
@@ -179855,46 +179855,46 @@ RUT_2:8w20b	08rZHb	M		0	Sp1cs	י	י	my	my_female					330
 RUT_2:8		seg			x-sof-pasuq	׃							.	340	
 RUT_2:9w1a	08GtTa	m	5869 a	1.1.0.0	Ncbdc	עֵינַ֜יִ	עֵינַיִ	eyes_of	eyes_of			S		10	
 RUT_2:9w1b	08GtTb	M		1.1.0.0	Sp2fs	ךְ	ךְ	your	your					20	
-RUT_2:9w2a	08kwza	m	b		R	בַּ	בַּ	in/on/at/with	[be]_on					30	
-RUT_2:9w2b	08kwzb	M	7704 b		Ncmsa	שָּׂדֶ֤ה	שָּׂדֶה			in_the=field				40	
+RUT_2:9w2a	08kwza	m	b		Rd	בַּ	בַּ	in/on/at/with	[be]_on					30	
+RUT_2:9w2b	08kwzb	M	7704 b		Ncmsa	שָּׂדֶ֤ה	שָּׂדֶה	field	field	in_the=field				40	
 RUT_2:9w3	08tc4	w	834 a		Tr	אֲשֶׁר	אֲשֶׁר			which/who	which			50	
 RUT_2:9		seg			x-maqqef	־								60	
-RUT_2:9w4a	08CMDa	m	7114 b	1.1.0	Vqi3mp	יִקְצֹרוּ	יִקְצֹרוּ							70	
-RUT_2:9w4b	08CMDb	M		1.1.0	Sn	ן֙	ן							80	
-RUT_2:9w5a	085eqa	m	c		C	וְ	וְ	and						90	
-RUT_2:9w5b	085eqb	M	1980		Vqq2fs	הָלַ֣כְתִּ	הָלַכְתִּ							100	
+RUT_2:9w4a	08CMDa	m	7114 b	1.1.0	Vqi3mp	יִקְצֹרוּ	יִקְצֹרוּ	harvesting	they					70	
+RUT_2:9w4b	08CMDb	M		1.1.0	Sn	ן֙	ן		are_harvesting					80	
+RUT_2:9w5a	085eqa	m	c		C	וְ	וְ	and	and					90	
+RUT_2:9w5b	085eqb	M	1980		Vqq2fs	הָלַ֣כְתִּ	הָלַכְתִּ	go	you_will_go					100	
 RUT_2:9		note		Q		Marks a place where we agree with BHQ against BHS in reading L.								110	
 RUT_2:9		note		n		Marks an anomalous form.								120	
 RUT_2:9		note		v		We read one or more vowels in L differently from BHS.								130	
-RUT_2:9w6a	08Cj2a	m	310 a	1.1	R	אַחֲרֵי	אַחֲרֵי							140	
-RUT_2:9w6b	08Cj2b	M		1.1	Sp3fp	הֶ֔ן	הֶן							150	
-RUT_2:9w7a	08Ttma	m	i		Ti	הֲ	הֲ							160	
-RUT_2:9w7b	08Ttmb	M	3808		Tn	ל֥וֹא	לוֹא			am=not				170	
-RUT_2:9w8	086Vi	w	6680	1.0.0	Vpp1cs	צִוִּ֛יתִי	צִוִּיתִי							180	
-RUT_2:9w9	08V8W	w	853		To	אֶת	אֶת			DOM				190	
+RUT_2:9w6a	08Cj2a	m	310 a	1.1	R	אַחֲרֵי	אַחֲרֵי	after	behind					140	
+RUT_2:9w6b	08Cj2b	M		1.1	Sp3fp	הֶ֔ן	הֶן	them	them					150	
+RUT_2:9w7a	08Ttma	m	i		Ti	הֲ	הֲ	?	?					160	
+RUT_2:9w7b	08Ttmb	M	3808		Tn	ל֥וֹא	לוֹא	not	not	am=not				170	
+RUT_2:9w8	086Vi	w	6680	1.0.0	Vpp1cs	צִוִּ֛יתִי	צִוִּיתִי			ordered	have_I_commanded			180	
+RUT_2:9w9	08V8W	w	853		To	אֶת	אֶת			DOM	DOM			190	
 RUT_2:9		seg			x-maqqef	־								200	
-RUT_2:9w10a	08zg2a	m	d	1.0	Td	הַ	הַ	the						210	
-RUT_2:9w10b	08zg2b	M	5288	1.0	Ncmpa	נְּעָרִ֖ים	נְּעָרִים							220	
-RUT_2:9w11a	08gXha	m	l		R	לְ	לְ	to/for						230	
-RUT_2:9w11b	08gXhb	M	1115		C	בִלְתִּ֣י	בִלְתִּי			to=not				240	
-RUT_2:9w12a	083iRa	m	5060	1	Vqc	נָגְעֵ֑	נָגְעֵ							250	
-RUT_2:9w12b	083iRb	M		1	Sp2fs	ךְ	ךְ							260	
-RUT_2:9w13a	08RoGa	m	c	0.2.1	C	וְ	וְ	and						270	
-RUT_2:9w13b	08RoGb	M	6770	0.2.1	Vqq2fs	צָמִ֗ת	צָמִת							280	
-RUT_2:9w14a	08jP7a	m	c	0.2.0	C	וְ	וְ	and						290	
-RUT_2:9w14b	08jP7b	M	1980	0.2.0	Vqq2fs	הָלַכְתְּ֙	הָלַכְתְּ							300	
-RUT_2:9w15	08vCn	w	413		R	אֶל	אֶל			to/towards				310	
+RUT_2:9w10a	08zg2a	m	d	1.0	Td	הַ	הַ	the	the_young					210	
+RUT_2:9w10b	08zg2b	M	5288	1.0	Ncmpa	נְּעָרִ֖ים	נְּעָרִים	young_men	men					220	
+RUT_2:9w11a	08gXha	m	l		R	לְ	לְ	to/for	to					230	
+RUT_2:9w11b	08gXhb	M	1115		C	בִלְתִּ֣י	בִלְתִּי	not	not	to=not				240	
+RUT_2:9w12a	083iRa	m	5060	1	Vqc	נָגְעֵ֑	נָגְעֵ	touch	to					250	
+RUT_2:9w12b	083iRb	M		1	Sp2fs	ךְ	ךְ	you	touch_you					260	
+RUT_2:9w13a	08RoGa	m	c	0.2.1	C	וְ	וְ	and	and					270	
+RUT_2:9w13b	08RoGb	M	6770	0.2.1	Vqq2fs	צָמִ֗ת	צָמִת	thirsty	you_will_be_thirsty					280	
+RUT_2:9w14a	08jP7a	m	c	0.2.0	C	וְ	וְ	and	and					290	
+RUT_2:9w14b	08jP7b	M	1980	0.2.0	Vqq2fs	הָלַכְתְּ֙	הָלַכְתְּ	go	you_will_go					300	
+RUT_2:9w15	08vCn	w	413		R	אֶל	אֶל			to/towards	to			310	
 RUT_2:9		seg			x-maqqef	־								320	
-RUT_2:9w16a	08jv3a	m	d	0.2	Td	הַ	הַ	the						330	
-RUT_2:9w16b	08jv3b	M	3627	0.2	Ncmpa	כֵּלִ֔ים	כֵּלִים			the=vessels				340	
-RUT_2:9w17a	08ggLa	m	c	0.1	C	וְ	וְ	and						350	
-RUT_2:9w17b	08ggLb	M	8354	0.1	Vqq2fs	שָׁתִ֕ית	שָׁתִית							360	
-RUT_2:9w18a	08MVqa	m	m		R	מֵ	מֵ	from						370	
-RUT_2:9w18b	08MVqb	M	834 c		Tr	אֲשֶׁ֥ר	אֲשֶׁר							380	
-RUT_2:9w19a	08g1ya	m	7579	0.0	Vqi3mp	יִשְׁאֲב֖וּ	יִשְׁאֲבוּ							390	
-RUT_2:9w19b	08g1yb	M		0.0	Sn	ן	ן							400	
-RUT_2:9w20a	08CBHa	m	d	0	Td	הַ	הַ	the						410	
-RUT_2:9w20b	08CBHb	M	5288	0	Ncmpa	נְּעָרִֽים	נְּעָרִים							420	
+RUT_2:9w16a	08jv3a	m	d	0.2	Td	הַ	הַ	the	the					330	
+RUT_2:9w16b	08jv3b	M	3627	0.2	Ncmpa	כֵּלִ֔ים	כֵּלִים	jars	vessels	the=vessels				340	
+RUT_2:9w17a	08ggLa	m	c	0.1	C	וְ	וְ	and	and					350	
+RUT_2:9w17b	08ggLb	M	8354	0.1	Vqq2fs	שָׁתִ֕ית	שָׁתִית	drink	you_will_drink					360	
+RUT_2:9w18a	08MVqa	m	m		R	מֵ	מֵ	from	some					370	
+RUT_2:9w18b	08MVqb	M	834 c		Tr	אֲשֶׁ֥ר	אֲשֶׁר	what	of_[that]_which					380	
+RUT_2:9w19a	08g1ya	m	7579	0.0	Vqi3mp	יִשְׁאֲב֖וּ	יִשְׁאֲבוּ	drawn	they					390	
+RUT_2:9w19b	08g1yb	M		0.0	Sn	ן	ן		will_draw					400	
+RUT_2:9w20a	08CBHa	m	d	0	Td	הַ	הַ	the	the_young					410	
+RUT_2:9w20b	08CBHb	M	5288	0	Ncmpa	נְּעָרִֽים	נְּעָרִים	young_men	men					420	
 RUT_2:9		seg			x-sof-pasuq	׃							.	430	
 RUT_2:10w1a	083t6a	m	c	1.1.0	C	וַ	וַ	and	and			S		10	
 RUT_2:10w1b	083t6b	M	5307	1.1.0	Vqw3fs	תִּפֹּל֙	תִּפֹּל	fell	she_fell					20	
@@ -185199,7 +185199,7 @@ SA1_6:18w4	09BaQ	w	3605		Ncmsc	כָּל	כָּל			all/each/any/every	of_all_of	
 SA1_6:18		seg			x-maqqef	־								70	
 SA1_6:18w5	0998x	w	5892 b		Ncfpc	עָרֵ֤י	עָרֵי			cities_of	the_cities_of			80	
 SA1_6:18w6	09jFf	w	6430	1.2.0	Ngmpa	פְלִשְׁתִּים֙	פְלִשְׁתִּים			Philistines	[belonging]_to_[the]_Philistines			90	
-SA1_6:18w7a	09GR3a	m	l		Rd	לַ	לַ	belonging_to	of					100	
+SA1_6:18w7a	09GR3a	m	l		R	לַ	לַ	belonging_to	of					100	
 SA1_6:18w7b	09GR3b	M	2568		Acmsc	חֲמֵ֣שֶׁת	חֲמֵשֶׁת	five_of	the_five_of					110	
 SA1_6:18w8a	09qQNa	m	d	1.2	Td	הַ	הַ	the	the					120	
 SA1_6:18w8b	09qQNb	M	5633 a	1.2	Ncmpa	סְּרָנִ֔ים	סְּרָנִים	rulers	rulers					130	
@@ -216268,26 +216268,26 @@ SA2_15:18w9b	10j46b	M	6432	1	Ngmsa	פְּלֵתִ֑י	פְּלֵתִי	Pelethite
 SA2_15:18w10a	10tWxa	m	c		C	וְ	וְ	and	and					210	
 SA2_15:18w10b	10tWxb	M	3605		Ncmsc	כָֽל	כָל	all_of	all_of	and=all				220	
 SA2_15:18		seg			x-maqqef	־								230	
-SA2_15:18w11a	103VFa	m	d	0.1.1.0	Rd	הַ	הַ	the						240	
-SA2_15:18w11b	103VFb	M	1663	0.1.1.0	Ngmsa	גִּתִּ֞ים	גִּתִּים							250	
-SA2_15:18w12	10a9R	w	8337		Acfsa	שֵׁשׁ	שֵׁשׁ							260	
+SA2_15:18w11a	103VFa	m	d	0.1.1.0	Td	הַ	הַ	the	the					240	
+SA2_15:18w11b	103VFb	M	1663	0.1.1.0	Ngmsa	גִּתִּ֞ים	גִּתִּים	Gittites	Gittites					250	
+SA2_15:18w12	10a9R	w	8337		Acfsa	שֵׁשׁ	שֵׁשׁ			six	six			260	
 SA2_15:18		seg			x-maqqef	־								270	
-SA2_15:18w13	10BUv	w	3967		Acbpa	מֵא֣וֹת	מֵאוֹת			hundreds				280	
-SA2_15:18w14	106Ay	w	376	0.1.1	Ncmsa	אִ֗ישׁ	אִישׁ			(a)_man				290	
-SA2_15:18w15	10buH	w	834 a		Tr	אֲשֶׁר	אֲשֶׁר			which/who				300	
+SA2_15:18w13	10BUv	w	3967		Acbpa	מֵא֣וֹת	מֵאוֹת			hundreds	hundred(s)			280	
+SA2_15:18w14	106Ay	w	376	0.1.1	Ncmsa	אִ֗ישׁ	אִישׁ			(a)_man	man			290	
+SA2_15:18w15	10buH	w	834 a		Tr	אֲשֶׁר	אֲשֶׁר			which/who	who			300	
 SA2_15:18		seg			x-maqqef	־								310	
-SA2_15:18w16	10s74	w	935		Vqp3cp	בָּ֤אוּ	בָּאוּ			they_went				320	
-SA2_15:18w17a	10Qema	m	b	0.1.0	R	בְ	בְ	in/on/at/with						330	
-SA2_15:18w17b	10Qemb	m	7272	0.1.0	Ncfsc	רַגְל	רַגְל							340	
-SA2_15:18w17c	10Qemc	M		0.1.0	Sp3ms	וֹ֙	וֹ							350	
-SA2_15:18w18a	10okpa	m	m	0.1	R	מִ	מִ	from						360	
-SA2_15:18w18b	10okpb	M	1661	0.1	Np	גַּ֔ת	גַּת							370	
-SA2_15:18w19	105Q5	w	5674 a	0.0	Vqrmpa	עֹבְרִ֖ים	עֹבְרִים							380	
-SA2_15:18w20	10qJK	w	5921 a		R	עַל	עַל			on/upon/above/on_account_of//he|it_went_in				390	
+SA2_15:18w16	10s74	w	935		Vqp3cp	בָּ֤אוּ	בָּאוּ			they_went	they_had_come			320	
+SA2_15:18w17a	10Qema	m	b	0.1.0	R	בְ	בְ	in/on/at/with	at					330	
+SA2_15:18w17b	10Qemb	m	7272	0.1.0	Ncfsc	רַגְל	רַגְל	feet_of	foot_of					340	
+SA2_15:18w17c	10Qemc	M		0.1.0	Sp3ms	וֹ֙	וֹ	him	his					350	
+SA2_15:18w18a	10okpa	m	m	0.1	R	מִ	מִ	from	from					360	
+SA2_15:18w18b	10okpb	M	1661	0.1	Np	גַּ֔ת	גַּת	Gath	Gath					370	
+SA2_15:18w19	105Q5	w	5674 a	0.0	Vqrmpa	עֹבְרִ֖ים	עֹבְרִים			passed_on	[were]_passing_by			380	
+SA2_15:18w20	10qJK	w	5921 a		R	עַל	עַל			on/upon/above/on_account_of//he|it_went_in	on			390	
 SA2_15:18		seg			x-maqqef	־								400	
-SA2_15:18w21	10QZB	w	6440		Ncbpc	פְּנֵ֥י	פְּנֵי			face/surface_of				410	
-SA2_15:18w22a	10Br9a	m	d	0	Td	הַ	הַ	the						420	
-SA2_15:18w22b	10Br9b	M	4428	0	Ncmsa	מֶּֽלֶךְ	מֶּֽלֶךְ							430	
+SA2_15:18w21	10QZB	w	6440		Ncbpc	פְּנֵ֥י	פְּנֵי			face/surface_of	the_face_of			410	
+SA2_15:18w22a	10Br9a	m	d	0	Td	הַ	הַ	the	of					420	
+SA2_15:18w22b	10Br9b	M	4428	0	Ncmsa	מֶּֽלֶךְ	מֶּֽלֶךְ	king	the_king					430	
 SA2_15:18		seg			x-sof-pasuq	׃							.	440	
 SA2_15:19w1a	10CaPa	m	c		C	וַ	וַ	and	and			S		10	
 SA2_15:19w1b	10CaPb	M	559		Vqw3ms	יֹּ֤אמֶר	יֹּאמֶר	said	he_said	and=he|it_said				20	
@@ -222279,7 +222279,7 @@ SA2_21:12w21	105nE	w	834 a		Tr	אֲשֶׁ֨ר	אֲשֶׁר			which/who	where			3
 SA2_21:12w22a	104P3a	mK	8518		Vqp3cp	תלו	תלו	hung	they					320	
 SA2_21:12w22b	104P3b	MK			Sp3mp	ם	ם	them	had_hung_them_up					330	
 SA2_21:12		variant note				תלו/ם: (x-qere) 'תְּלָא֥וּ/ם': lemma=8518 morph=HVqp3cp/Sp3mp id=102PP תְּלָא֥וּ/ם								340	
-SA2_21:12w23	10nn6	w	8033		D	שם	שם							350	
+SA2_21:12w23	10nn6	wK	8033		D	שם	שם							350	
 SA2_21:12w24a	10srQa	mK	d		Td	ה	ה	the	there					360	
 SA2_21:12w24b	10srQb	MK	6430		Ngmpa	פלשתים	פלשתים	at	(to)					370	
 SA2_21:12		variant note				שם ה/פלשתים: (x-qere) 'שָׁ֨מָּ/ה֙': lemma=8033 n=0.1.0 morph=HD/Sd id=10gnL שָׁ֨מָּ/ה֙ 'פְּלִשְׁתִּ֔ים': lemma=6430 n=0.1 morph=HNgmpa id=10u2Q פְּלִשְׁתִּ֔ים								380	
@@ -235925,7 +235925,7 @@ KI1_10:29w6	11jTj	w	3967		Acbpa	מֵא֣וֹת	מֵאוֹת			hundreds	hundred(s
 KI1_10:29w7	11yoM	w	3701	1.1	Ncmsa	כֶּ֔סֶף	כֶּסֶף			silver	silver			110	
 KI1_10:29w8a	11u9ca	m	c	1.0	C	וְ	וְ	and	and					120	
 KI1_10:29w8b	11u9cb	M	5483 b	1.0	Ncmsa	ס֖וּס	סוּס	horse	a_horse					130	
-KI1_10:29w9a	11npBa	m	b		Rd	בַּ	בַּ	in/on/at/with	for					140	
+KI1_10:29w9a	11npBa	m	b		R	בַּ	בַּ	in/on/at/with	for					140	
 KI1_10:29w9b	11npBb	M	2572		Acbpa	חֲמִשִּׁ֣ים	חֲמִשִּׁים	fifty	fifty					150	
 KI1_10:29w10a	11nhGa	m	c	1	C	וּ	וּ	and	and					160	
 KI1_10:29w10b	11nhGb	M	3967	1	Acbsa	מֵאָ֑ה	מֵאָה	a_hundred	one_hundred					170	
@@ -238064,7 +238064,7 @@ KI1_12:32w4a	11XKfa	m	b		Rd	בַּ	בַּ	in/on/at/with	in					60
 KI1_12:32w4b	11XKfb	M	2320		Ncmsa	חֹ֣דֶשׁ	חֹדֶשׁ	month	month					70	
 KI1_12:32w5a	11vNza	m	d		Td	הַ	הַ	the	(the)					80	
 KI1_12:32w5b	11vNzb	M	8066		Aomsa	שְּׁמִינִ֣י	שְּׁמִינִי	eighth	eighth					90	
-KI1_12:32w6a	11oQNa	m	b		Rd	בַּ	בַּ	in/on/at/with	on_[the]					100	
+KI1_12:32w6a	11oQNa	m	b		R	בַּ	בַּ	in/on/at/with	on_[the]					100	
 KI1_12:32w6b	11oQNb	M	2568		Acmsa	חֲמִשָּֽׁה	חֲמִשָּׁה	five	fif-					110	
 KI1_12:32		seg			x-maqqef	־								120	
 KI1_12:32w7	116xQ	w	6240		Acmsa	עָשָׂר֩	עָשָׂר			ten	teen			130	
@@ -238124,7 +238124,7 @@ KI1_12:33w6a	1152Wa	m	b		R	בְּ	בְּ	in/on/at/with	in					110
 KI1_12:33w6b	1152Wb	M	1008+		Np	בֵֽית	בֵית	Beth-		in=house_of				120	
 KI1_12:33		seg			x-maqqef	־								130	
 KI1_12:33w7	11FHV	w	1008	1.1.1	Np	אֵ֗ל	אֵל			-el				140	
-KI1_12:33w8a	11vLxa	m	b		Rd	בַּ	בַּ	in/on/at/with	on_[the]					150	
+KI1_12:33w8a	11vLxa	m	b		R	בַּ	בַּ	in/on/at/with	on_[the]					150	
 KI1_12:33w8b	11vLxb	M	2568		Acmsa	חֲמִשָּׁ֨ה	חֲמִשָּׁה	five	fif-					160	
 KI1_12:33w9	11E9J	w	6240		Acmsa	עָשָׂ֥ר	עָשָׂר			ten	teen			170	
 KI1_12:33w10	11Ywv	w	3117	1.1.0	Ncmsa	יוֹם֙	יוֹם			day	day			180	
@@ -253103,7 +253103,7 @@ KI2_6:25w17	12vw5	wK	3123		Ncfpa	יונים	יונים			dove's_dung	doves'_dung
 KI2_6:25		variant note				חרייונים: (x-qere) 'דִּבְיוֹנִ֖ים': lemma=1686 n=0.0 morph=HNcmpa id=12Bqs דִּבְיוֹנִ֖ים								260	
 KI2_6:25		note		a		Adaptations to a Qere which L and BHS, by their design, do not indicate.								270	
 KI2_6:25		exegesis note				A single word in the text has been divided for exegesis.								280	
-KI2_6:25w18a	12UA1a	m	b		Rd	בַּ	בַּ	in/on/at/with	for					290	
+KI2_6:25w18a	12UA1a	m	b		R	בַּ	בַּ	in/on/at/with	for					290	
 KI2_6:25w18b	12UA1b	M	2568		Acmsa	חֲמִשָּׁה	חֲמִשָּׁה	five	five					300	
 KI2_6:25		seg			x-maqqef	־								310	
 KI2_6:25w19	12gLR	w	3701	0	Ncmsa	כָֽסֶף	כָסֶף			shekels_of_silver	silver			320	
@@ -272676,8 +272676,8 @@ CH1_5:9w1c	13jQ2c	M	4217	1.1.1	Ncmsa	מִּזְרָ֗ח	מִּזְרָח	east	ea
 CH1_5:9w2	1326m	w	3427	1.1.0	Vqp3ms	יָשַׁב֙	יָשַׁב			lived	he_dwelt			40	
 CH1_5:9w3	13pu5	w	5704		R	עַד	עַד			until	to			50	
 CH1_5:9		seg			x-maqqef	־								60	
-CH1_5:9w4a	13eofa	m	935		R	לְ	לְ		[the]					70	
-CH1_5:9w4b	13eofb	M			Vqc	ב֣וֹא	בוֹא		entrance					80	
+CH1_5:9w4a	13eofa	m	l		R	לְ	לְ	to/for	[the]					70	
+CH1_5:9w4b	13eofb	M	935		Vqc	ב֣וֹא	בוֹא		entrance					80	
 CH1_5:9		exegesis note				WLC has this word divided as לְב֣וֹא								90	
 CH1_5:9w5a	134Tha	m	4057 b	1.1	Ncmsa	מִדְבָּ֔רָ	מִדְבָּרָ	desert	wilderness					100	
 CH1_5:9w5b	134Thb	M		1.1	Sd	ה	ה	into	of_(to)_[the]					110	
@@ -286035,7 +286035,7 @@ CH1_25:21w5c	13QGvc	M		0.0	Sp3ms	ו	ו	his	his					90
 CH1_25:21w6	13L7y	w	8147		Acmda	שְׁנֵ֥ים	שְׁנֵים			two	two_plus			100	
 CH1_25:21w7	13nu8	w	6240	0	Acmsa	עָשָֽׂר	עָשָׂר			ten	ten			110	
 CH1_25:21		seg			x-sof-pasuq	׃							.	120	
-CH1_25:22w1a	13n1ya	m	l		Rd	לַ	לַ	to	for			S		10	
+CH1_25:22w1a	13n1ya	m	l		R	לַ	לַ	to	for			S		10	
 CH1_25:22w1b	13n1yb	M	2568		Acmsa	חֲמִשָּׁ֤ה	חֲמִשָּׁה	five	fif-					20	
 CH1_25:22w2	13Zkm	w	6240	0.1.0	Acmsa	עָשָׂר֙	עָשָׂר			ten	teen			30	
 CH1_25:22w3a	13qVKa	m	l	0.1	R	לִֽ	לִ	to	to					40	
@@ -289652,7 +289652,7 @@ CH2_1:17w6	14kDm	w	3967		Acbpa	מֵא֣וֹת	מֵאוֹת			hundreds	hundred(s)
 CH2_1:17w7	14doW	w	3701	1.1	Ncmsa	כֶּ֔סֶף	כֶּסֶף			silver	silver			110	
 CH2_1:17w8a	14eRaa	m	c	1.0	C	וְ	וְ	and	and					120	
 CH2_1:17w8b	14eRab	M	5483 b	1.0	Ncmsa	ס֖וּס	סוּס	horse	a_horse					130	
-CH2_1:17w9a	14kDfa	m	b		Rd	בַּ	בַּ	in/on/at/with	for					140	
+CH2_1:17w9a	14kDfa	m	b		R	בַּ	בַּ	in/on/at/with	for					140	
 CH2_1:17w9b	14kDfb	M	2572		Acbpa	חֲמִשִּׁ֣ים	חֲמִשִּׁים	fifty	fifty					150	
 CH2_1:17w10a	1463Ga	m	c	1	C	וּ	וּ	and	and					160	
 CH2_1:17w10b	1463Gb	M	3967	1	Acbsa	מֵאָ֑ה	מֵאָה	one_hundred	one_hundred					170	
@@ -305046,8 +305046,8 @@ CH2_26:8w6a	14vrKa	m	8034	0.1.0	Ncmsc	שְׁמ	שְׁמ	fame_of	name_of					80	_
 CH2_26:8w6b	14vrKb	M		0.1.0	Sp3ms	וֹ֙	וֹ	his	his	his|its=name				110	
 CH2_26:8w7	14k1r	w	5704		R	עַד	עַד			until	to			120	
 CH2_26:8		seg			x-maqqef	־								130	
-CH2_26:8w8a	14CZZa	m	935		R	לְ	לְ		the					140	
-CH2_26:8w8b	14CZZb	M			Vqc	ב֣וֹא	בוֹא		entrance					150	
+CH2_26:8w8a	14CZZa	m	l		R	לְ	לְ	to/for	the					140	
+CH2_26:8w8b	14CZZb	M	935		Vqc	ב֣וֹא	בוֹא		entrance					150	
 CH2_26:8		exegesis note				WLC has this word divided as לְב֣וֹא								160	
 CH2_26:8w9	14bCc	w	4714	0.1	Np	מִצְרַ֔יִם	מִצְרַיִם			Egypt	of_Egypt			170	
 CH2_26:8w10	14Bmn	w	3588 a		C	כִּ֥י	כִּי			that/for/because/then/when	if/because			180	
@@ -306228,7 +306228,7 @@ CH2_28:15w17c	14xYXc	M		1.1.1	Sp3mp	ם	ם	them	anointed_them					380
 CH2_28:15w18a	14YGCa	m	c		C	וַ	וַ	and	and					390	
 CH2_28:15w18b	14YGCb	m	5095		Vpw3mp	יְנַהֲל֤וּ	יְנַהֲלוּ	carrying	they					400	
 CH2_28:15w18c	14YGCc	M			Sp3mp	ם	ם	them	led_them					410	
-CH2_28:15w19a	14YiZa	m	b	1.1.0	Rd	בַּ	בַּ	in/on/at/with	on					420	
+CH2_28:15w19a	14YiZa	m	b	1.1.0	R	בַּ	בַּ	in/on/at/with	on					420	
 CH2_28:15w19b	14YiZb	M	2543	1.1.0	Ncbpa	חֲמֹרִים֙	חֲמֹרִים	donkeys	donkeys					430	
 CH2_28:15w20a	14v4Sa	m	l		R	לְ	לְ	for	(to)					440	
 CH2_28:15w20b	14v4Sb	M	3605		Ncmsc	כָל	כָל	all_of	any_of	to/from=all/each/any/every				450	
@@ -307648,8 +307648,8 @@ CH2_30:2w8a	14ZKia	m	d	0.0	Td	הַ	הַ	the	the					170
 CH2_30:2w8b	14ZKib	M	6453	0.0	Ncmsa	פֶּ֖סַח	פֶּסַח	passover	passover					180	
 CH2_30:2w9a	14A59a	m	b		Rd	בַּ	בַּ	in/on/at/with	in					190	
 CH2_30:2w9b	14A59b	M	2320		Ncmsa	חֹ֥דֶשׁ	חֹדֶשׁ	month	month					200	
-CH2_30:2w10a	14R8xa	m	d	0	Rd	הַ	הַ	the	(the)					210	
-CH2_30:2w10b	14R8xb	M	8145	0	Ncbsa	שֵּׁנִֽי	שֵּׁנִי			the=second				220	
+CH2_30:2w10a	14R8xa	m	d	0	Td	הַ	הַ	the	(the)					210	
+CH2_30:2w10b	14R8xb	M	8145	0	Ncbsa	שֵּׁנִֽי	שֵּׁנִי	second	second	the=second				220	
 CH2_30:2		seg			x-sof-pasuq	׃							.	230	
 CH2_30:3w1	14AwL	w	3588 a		C	כִּ֣י	כִּי			that/for/because/then/when	if/because	S		10	
 CH2_30:3w2	14bmt	w	3808		Tn	לֹ֧א	לֹא			not	not			20	
@@ -308994,8 +308994,8 @@ CH2_31:19w19b	14w3Ub	m	l		R	לְ	לְ	to	to					330
 CH2_31:19w19c	14w3Uc	M	3605		Ncmsc	כָל	כָל	everyone_of	all_of	and=to/for=all				340	
 CH2_31:19		seg			x-maqqef	־								350	
 CH2_31:19w20	14Fyk	w	3187	0.0	Vtc	הִתְיַחֵ֖שׂ	הִתְיַחֵשׂ			enrolled	[the]_genealogical_enrolment			360	
-CH2_31:19w21a	141hJa	m	b	0	R	בַּ	בַּ	in/on/at/with	among					370	
-CH2_31:19w21b	141hJb	M	3881	0	Ngmpa	לְוִיִּֽם	לְוִיִּם							380	
+CH2_31:19w21a	141hJa	m	b	0	Rd	בַּ	בַּ	in/on/at/with	among					370	
+CH2_31:19w21b	141hJb	M	3881	0	Ngmpa	לְוִיִּֽם	לְוִיִּם	Levites	Levites					380	
 CH2_31:19		seg			x-sof-pasuq	׃							.	390	
 CH2_31:20w1a	14Ecua	m	c		C	וַ	וַ	and	and			S		10	
 CH2_31:20w1b	14Ecub	M	6213 a		Vqw3ms	יַּ֧עַשׂ	יַּעַשׂ	did	he_did	and=he|it_made				20	
@@ -310910,8 +310910,8 @@ CH2_34:6w5a	14xfsa	m	c		C	וְ	וְ	and	and					90
 CH2_34:6w5b	14xfsb	M	5704		R	עַד	עַד	as_far_as	to	and=unto				100	
 CH2_34:6		seg			x-maqqef	־								110	
 CH2_34:6w6	14TB9	w	5321	1	Np	נַפְתָּלִ֑י	נַפְתָּלִי			Naphtali	Naphtali			120	
-CH2_34:6w7a	14iDca	m	b		R	ב	ב	in/on/at/with						130	
-CH2_34:6w7b	14iDcb	M	2022		Ncmsc	הר	הר							140	
+CH2_34:6w7a	14iDca	mK	b		R	ב	ב	in/on/at/with						130	
+CH2_34:6w7b	14iDcb	MK	2022		Ncmsc	הר	הר							140	
 CH2_34:6w8a	14rFVa	mK	1004 b		Ncmpc	בתי	בתי	in	with					150	
 CH2_34:6w8b	14rFVb	MK			Sp3mp	הם	הם	ruins_of	swords_of					160	
 CH2_34:6		variant note				ב/הר בתי/הם: (x-qere) 'בְּ/חַרְבֹתֵי/הֶ֖ם': lemma=b/2719 n=0.0 morph=HR/Ncfpc/Sp3mp id=14CXE בְּ/חַרְבֹתֵי/הֶ֖ם								170	
@@ -315080,8 +315080,8 @@ EZR_4:2w9	15GXC	w	1129		Vqi1cp	נִבְנֶ֣ה	נִבְנֶה			let_us_build	le
 EZR_4:2w10a	15Y6ka	m	5973 a	1.2	R	עִמָּ	עִמָּ	with	with					170	
 EZR_4:2w10b	15Y6kb	M		1.2	Sp2mp	כֶ֔ם	כֶם	you(pl)	you(pl)					180	
 EZR_4:2w11	15ctR	w	3588 a		C	כִּ֣י	כִּי			that/for/because/then/when	if/because			190	
-EZR_4:2w12a	15Qq3a	m	k	1.1	Rd	כָ	כָ	like	like					200	
-EZR_4:2w12b	15Qq3b	M		1.1	Pp2mp	כֶ֔ם	כֶם							210	
+EZR_4:2w12a	15Qq3a	m	k	1.1	R	כָ	כָ	like	like					200	
+EZR_4:2w12b	15Qq3b	M		1.1	Sp2mp	כֶ֔ם	כֶם	you(pl)	you(pl)					210	
 EZR_4:2w13	15GdR	w	1875	1.0	Vqi1cp	נִדְר֖וֹשׁ	נִדְרוֹשׁ			seek	we_seek			220	
 EZR_4:2w14a	15kV4a	m	l	1	R	לֵֽ	לֵ	to	(to)					230	
 EZR_4:2w14b	15kV4b	m	430	1	Ncmpc	אלֹהֵי	אלֹהֵי	God_of	God_of					240	
@@ -315123,8 +315123,8 @@ EZR_4:3		seg			x-maqqef	־								160
 EZR_4:3w10a	15PTTa	m	l		R	לָ֣	לָ	have	for					170	
 EZR_4:3w10b	15PTTb	M			Sp2mp	כֶם	כֶם	you(pl)	you(pl)	to/for=you(pl)				180	
 EZR_4:3w11a	151bYa	m	c	1.1	C	וָ	וָ	and	and					190	
-EZR_4:3w11b	151bYb	m	l	1.1	Rd	לָ֔	לָ	with	for					200	
-EZR_4:3w11c	151bYc	M		1.1	Pp1cp	נוּ	נוּ	us	us					210	
+EZR_4:3w11b	151bYb	m	l	1.1	R	לָ֔	לָ	with	for					200	
+EZR_4:3w11c	151bYc	M		1.1	Sp1cp	נוּ	נוּ	us	us					210	
 EZR_4:3w12a	15GMza	m	l		R	לִ	לִ	in	to					220	
 EZR_4:3w12b	15GMzb	M	1129		Vqc	בְנ֥וֹת	בְנוֹת	building	build					230	
 EZR_4:3w13	15uCN	w	1004 b	1.0	Ncmsa	בַּ֖יִת	בַּיִת			house	a_house			240	
@@ -315222,8 +315222,8 @@ EZR_4:7w6	159jq	w	2870 a	1.1.0	Np	טָֽבְאֵל֙	טָבְאֵל			Tabeel	Tab
 EZR_4:7w7a	15uFya	m	c		C	וּ	וּ	and	and					90	
 EZR_4:7w7b	15uFyb	M	7605		Ncmsc	שְׁאָ֣ר	שְׁאָר	rest_of	the_rest_of					100	
 EZR_4:7w8a	15rnWa	mK	3674		Ncmpc	כנות	כנות	colleagues_of	his_associates_of					110	
-EZR_4:7w8b	15rnWb	MK			Pp3ms	ו	ו	his	his					120	
-EZR_4:7		variant note				כנות/ו: (x-qere) 'כְּנָוֺתָ֔י/ו': lemma=3674 n=1.1 morph=HNcmpc/Pp3ms id=15to2 כְּנָוֺתָ֔י/ו								130	
+EZR_4:7w8b	15rnWb	MK			Sp3ms	ו	ו	his	his					120	
+EZR_4:7		variant note				כנות/ו: (x-qere) 'כְּנָוֺתָ֔י/ו': lemma=3674 n=1.1 morph=HNcmpc/Sp3ms id=15to2 כְּנָוֺתָ֔י/ו								130	
 EZR_4:7w9	15XrY	w	5921 a		R	עַל	עַל			on/upon/above/on_account_of//he|it_went_in	to			140	
 EZR_4:7		seg			x-maqqef	־								150	
 EZR_4:7w10	154De	wK	783 a		Np	ארתחששתא	ארתחששתא			Artaxerxes	Artaxerxes			160	
@@ -323699,7 +323699,7 @@ NEH_6:15w4a	16qcUa	m	c	1.0	C	וַ	וַ	and	and					70
 NEH_6:15w4b	16qcUb	M	2568	1.0	Acmsa	חֲמִשָּׁ֖ה	חֲמִשָּׁה	five	five					80	
 NEH_6:15w5a	168e9a	m	l	1	R	לֶ	לֶ	of	of					90	
 NEH_6:15w5b	168e9b	M	435	1	Np	אֱל֑וּל	אֱלוּל	Elul	Elul					100	
-NEH_6:15w6a	16iuca	m	l		Rd	לַ	לַ	in	to					110	
+NEH_6:15w6a	16iuca	m	l		R	לַ	לַ	in	to					110	
 NEH_6:15w6b	16iucb	M	2572		Acbpa	חֲמִשִּׁ֥ים	חֲמִשִּׁים	fifty	fifty					120	
 NEH_6:15w7a	164pWa	m	c	0.0	C	וּ	וּ	and	and					130	
 NEH_6:15w7b	164pWb	M	8147	0.0	Acmda	שְׁנַ֖יִם	שְׁנַיִם	two	two					140	
@@ -327896,16 +327896,16 @@ NEH_11:21w1a	16gMka	m	c	1.0	C	וְ	וְ	and	and			S		10
 NEH_11:21w1b	16gMkb	m	d	1.0	Td	הַ	הַ	the	the_temple					20	
 NEH_11:21w1c	16gMkc	M	5411	1.0	Ncmpa	נְּתִינִ֖ים	נְּתִינִים	temple_servants	servants					30	
 NEH_11:21w2	16wFk	w	3427		Vqrmpa	יֹשְׁבִ֣ים	יֹשְׁבִים			lived	[were]_dwelling			40	
-NEH_11:21w3a	161yVa	m	b	1	R	בָּ	בָּ	in/on/at/with	on					50	
-NEH_11:21w3b	161yVb	M	6077	1	Np	עֹ֑פֶל	עֹפֶל							60	
+NEH_11:21w3a	161yVa	m	b	1	Rd	בָּ	בָּ	in/on/at/with	on					50	
+NEH_11:21w3b	161yVb	M	6077	1	Np	עֹ֑פֶל	עֹפֶל	ophel	Ophel					60	
 NEH_11:21w4a	16UKsa	m	c		C	וְ	וְ	and	and					70	
-NEH_11:21w4b	16UKsb	M	6727		Np	צִיחָ֥א	צִיחָא							80	
+NEH_11:21w4b	16UKsb	M	6727		Np	צִיחָ֥א	צִיחָא	Ziha	Ziha					80	
 NEH_11:21w5a	16mMQa	m	c	0.0	C	וְ	וְ	and	and					90	
-NEH_11:21w5b	16mMQb	M	1658	0.0	Np	גִשְׁפָּ֖א	גִשְׁפָּא							100	
+NEH_11:21w5b	16mMQb	M	1658	0.0	Np	גִשְׁפָּ֖א	גִשְׁפָּא	Gishpa	Gishpa					100	
 NEH_11:21w6	16akU	w	5921 a		R	עַל	עַל			on/upon/above/on_account_of//he|it_went_in	[were]_over			110	
 NEH_11:21		seg			x-maqqef	־								120	
-NEH_11:21w7a	16FdPa	m	d	0	Td	הַ	הַ	the						130	
-NEH_11:21w7b	16FdPb	M	5411	0	Ncmpa	נְּתִינִֽים	נְּתִינִים							140	
+NEH_11:21w7a	16FdPa	m	d	0	Td	הַ	הַ	the	the_temple					130	
+NEH_11:21w7b	16FdPb	M	5411	0	Ncmpa	נְּתִינִֽים	נְּתִינִים	temple_servants	servants					140	
 NEH_11:21		seg			x-sof-pasuq	׃							.	150	
 NEH_11:21		seg			x-pe	פ						S		160	
 NEH_11:22w1a	16fBNa	m	c		C	וּ	וּ	and	and					10	
@@ -334862,7 +334862,7 @@ EST_9:18w10a	17reXa	m	b	1	R	בּ֑	בּ	in/on/at/with	in					190
 EST_9:18w10b	17reXb	M		1	Sp3ms	וֹ	וֹ	him	it	in/on/over=him|it				200	
 EST_9:18w11a	17Lnga	m	c	0.2.1	C	וְ	וְ	and	and					210	
 EST_9:18w11b	17Lngb	M	5117	0.2.1	Ncmsa	נ֗וֹחַ	נוֹחַ	rested	they_rested					220	
-EST_9:18w12a	17CzSa	m	b		Rd	בַּ	בַּ	in/on/at/with	on_[day]					230	
+EST_9:18w12a	17CzSa	m	b		R	בַּ	בַּ	in/on/at/with	on_[day]					230	
 EST_9:18w12b	17CzSb	M	2568		Acmsa	חֲמִשָּׁ֤ה	חֲמִשָּׁה	five	fif-					240	
 EST_9:18w13	17RCv	w	6240	0.2.0	Acmsa	עָשָׂר֙	עָשָׂר			ten	teen			250	
 EST_9:18w14a	17x1ha	m	b	0.2	R	בּ֔	בּ	in/on/at/with	in					260	
@@ -341207,9 +341207,9 @@ JOB_16:15w4a	18ywWa	m	1539	1	Ncmsc	גִלְדִּ֑	גִלְדִּ	skin_of	skin_
 JOB_16:15w4b	18ywWb	M		1	Sp1cs	י	י	my	my					50	
 JOB_16:15w5a	18aNza	m	c		C	וְ	וְ	and	and					60	
 JOB_16:15w5b	18aNzb	M	5953 d		Vmp1cs	עֹלַ֖לְתִּי	עֹלַלְתִּי	buried	I_have_inserted					70	
-JOB_16:15w6a	18f9aa	m	b		R	בֶ	בֶ	in/on/at/with	in					80	
-JOB_16:15w6b	18f9ab	M	6083		Ncmsa	עָפָ֣ר	עָפָר							90	
-JOB_16:15w7a	1865ia	m	7161 a	0	Ncbsc	קַרְנִֽ	קַרְנִ							100	
+JOB_16:15w6a	18f9aa	m	b		Rd	בֶ	בֶ	in/on/at/with	in					80	
+JOB_16:15w6b	18f9ab	M	6083		Ncmsa	עָפָ֣ר	עָפָר	dust	dust					90	
+JOB_16:15w7a	1865ia	m	7161 a	0	Ncbsc	קַרְנִֽ	קַרְנִ	strength_of	horn_of					100	
 JOB_16:15w7b	1865ib	M		0	Sp1cs	י	י	my	my					110	
 JOB_16:15		seg			x-sof-pasuq	׃							.	120	
 JOB_16:16w1a	18fh4a	m	6440		Ncbpc	פָּנַ֣	פָּנַ	face_of	face_of			S		10	
@@ -348461,7 +348461,7 @@ JOB_38:1w2	18hrv	w	3068		Np	יְהוָ֣ה	יְהוָה			YHWH	Yahweh			40
 JOB_38:1w3	18vzq	w	853		To	אֶת	אֶת			DOM	DOM			50	
 JOB_38:1		seg			x-maqqef	־								60	
 JOB_38:1w4	18RTB	w	347	1.0	Np	אִ֭יּוֹב	אִיּוֹב			Job	Job			70	
-JOB_38:1w5	18rDJ	w	4480 a		R	מנ	מנ							80	
+JOB_38:1w5	18rDJ	wK	4480 a		R	מנ	מנ							80	
 JOB_38:1		note		M		Marks a word with a final consonant that is a medial (not a final) form.								90	
 JOB_38:1w6a	18ZbDa	mK	d		Td	ה	ה	the	the					100	
 JOB_38:1w6b	18ZbDb	MK	5591 b		Ncfsa	סערה	סערה	whirlwind	tempest					110	
@@ -348609,7 +348609,7 @@ JOB_38:12w1d	18Saud	M		1.0	Sp2ms	ךָ	ךָ	your	your					40
 JOB_38:12		note		1		BHS has been faithful to the Leningrad Codex where there might be a question of the validity of the form and we keep the same form as BHS.								50	
 JOB_38:12w2	18sbY	w	6680		Vpp2ms	צִוִּ֣יתָ	צִוִּיתָ			commanded	have_you_commanded			60	
 JOB_38:12w3	18oxz	w	1242	1	Ncmsa	בֹּ֑קֶר	בֹּקֶר			morning	morning			70	
-JOB_38:12w4	18ZpB	w	3045		Vpp2ms	ידעתה	ידעתה							80	
+JOB_38:12w4	18ZpB	wK	3045		Vpp2ms	ידעתה	ידעתה							80	
 JOB_38:12w5	181bx	wK	7837		Ncmsa	שחר	שחר			caused_~_to_know	have_you_caused_to_know?			90	
 JOB_38:12		variant note				ידעתה שחר: (x-qere) 'יִדַּ֖עְתָּה': lemma=3045 morph=HVpp2ms id=18xRA יִדַּ֖עְתָּה 'הַ/שַּׁ֣חַר': lemma=d/7837 morph=HTd/Ncmsa id=18CvE הַ/שַּׁ֣חַר								100	
 JOB_38:12		note		k		We read one or more consonants in L differently from BHS.								110	
@@ -349430,7 +349430,7 @@ JOB_40:6w2	18Cqq	w	3068		Np	יְהוָ֣ה	יְהוָה			YHWH	Yahweh			40
 JOB_40:6w3	18GM2	w	853		To	אֶת	אֶת			DOM	DOM			50	
 JOB_40:6		seg			x-maqqef	־								60	
 JOB_40:6w4	18Nac	w	347	1.0	Np	אִ֭יּוֹב	אִיּוֹב			Job	Job			70	
-JOB_40:6w5	187qo	w	4480 a		R	מנ	מנ							80	
+JOB_40:6w5	187qo	wK	4480 a		R	מנ	מנ							80	
 JOB_40:6		note		M		Marks a word with a final consonant that is a medial (not a final) form.								90	
 JOB_40:6w6	18htN	wK	5591 b		Ncfsa	סערה	סערה			out_of	from			100	
 JOB_40:6		variant note				מנ סערה: (x-qere) 'מִ֥ן': lemma=4480 a morph=HR id=189N7 מִ֥ן׀ ׀'סְעָרָ֗ה': lemma=5591 b n=1 morph=HNcfsa id=18vNp סְעָרָ֗ה								110	
@@ -355375,13 +355375,13 @@ PSA_23:5w4	19oQH	w	5048		R	נֶ֥גֶד	נֶגֶד			in_the_presence_of	before		
 PSA_23:5w5a	19FgVa	m	6887 d	1	Vqrmpc	צֹרְרָ֑	צֹרְרָ	enemies_of	foes_of					80	
 PSA_23:5w5b	19FgVb	M		1	Sp1cs	י	י	my	my					90	
 PSA_23:5w6	19sAH	w	1878		Vpp2ms	דִּשַּׁ֖נְתָּ	דִּשַּׁנְתָּ			anoint	you_have_refreshed			100	
-PSA_23:5w7a	19fPEa	m	b		R	בַ	בַ	in/on/at/with	with					110	
-PSA_23:5w7b	19fPEb	M	8081		Ncmsa	שֶּׁ֥מֶן	שֶּׁמֶן							120	
-PSA_23:5w8a	19kFYa	m	7218 a	0.0	Ncmsc	רֹ֝אשִׁ֗	רֹאשִׁ							130	
+PSA_23:5w7a	19fPEa	m	b		Rd	בַ	בַ	in/on/at/with	with					110	
+PSA_23:5w7b	19fPEb	M	8081		Ncmsa	שֶּׁ֥מֶן	שֶּׁמֶן	oil	oil					120	
+PSA_23:5w8a	19kFYa	m	7218 a	0.0	Ncmsc	רֹ֝אשִׁ֗	רֹאשִׁ	head_of	head_of					130	
 PSA_23:5w8b	19kFYb	M		0.0	Sp1cs	י	י	my	my	my=head				140	
-PSA_23:5w9a	19oVMa	m	3563 a		Ncfsc	כּוֹסִ֥	כּוֹסִ							150	
+PSA_23:5w9a	19oVMa	m	3563 a		Ncfsc	כּוֹסִ֥	כּוֹסִ	cup_of	cup_of					150	
 PSA_23:5w9b	19oVMb	M			Sp1cs	י	י	my	my					160	
-PSA_23:5w10	19DD6	w	7310	0	Ncfsa	רְוָיָֽה	רְוָיָה							170	
+PSA_23:5w10	19DD6	w	7310	0	Ncfsa	רְוָיָֽה	רְוָיָה			overflows	[is]_saturation			170	
 PSA_23:5		seg			x-sof-pasuq	׃							.	180	
 PSA_23:6w1	19T6s	w	389	1.0.0	Ta	אַ֤ךְ	אַךְ			surely	surely	S		10	
 PSA_23:6		seg			x-paseq	׀								20	
@@ -365840,9 +365840,9 @@ PSA_66:9w4a	191kra	m	c		C	וְ	וְ	and	and					70
 PSA_66:9w4b	191krb	M	3808		Tn	לֹֽא	לֹא	not	not	and=not				80	
 PSA_66:9		seg			x-maqqef	־								90	
 PSA_66:9w5	19yuD	w	5414		Vqp3ms	נָתַ֖ן	נָתַן			he|it_gave	he_has_permitted			100	
-PSA_66:9w6a	19yRpa	m	l		R	לַ	לַ	to_the	to					110	
-PSA_66:9w6b	19yRpb	M	4132		Vqc	מּ֣וֹט	מּוֹט							120	
-PSA_66:9w7a	19qoba	m	7272	0	Ncfsc	רַגְלֵֽ	רַגְלֵ							130	
+PSA_66:9w6a	19yRpa	m	l		Rd	לַ	לַ	to_the	to					110	
+PSA_66:9w6b	19yRpb	M	4132		Vqc	מּ֣וֹט	מּוֹט	slip	slip					120	
+PSA_66:9w7a	19qoba	m	7272	0	Ncfsc	רַגְלֵֽ	רַגְלֵ	feet_of	foot_of					130	
 PSA_66:9w7b	19qobb	M		0	Sp1cp	נוּ	נוּ	our	our					140	
 PSA_66:9		seg			x-sof-pasuq	׃							.	150	
 PSA_66:10w1	19DQR	w	3588 a		C	כִּֽי	כִּי			that/for/because/then/when	if/because	S		10	
@@ -366368,23 +366368,23 @@ PSA_68:18w9b	1935bb	M	6944	0	Ncmsa	קֹּֽדֶשׁ	קֹּדֶשׁ	sanctuary	hol
 PSA_68:18		seg			x-sof-pasuq	׃							.	140	
 PSA_68:19		note				KJV:Ps.68.18						S		10	
 PSA_68:19w1	19HND	w	5927		Vqp2ms	עָ֘לִ֤יתָ	עָלִיתָ			ascended	you_went_up			20	
-PSA_68:19w2a	19TcEa	m	l	1.1.0	Td	לַ	לַ	on_the	to					30	
-PSA_68:19w2b	19TcEb	M	4791	1.1.0	Ncmsa	מָּר֨וֹם	מָּרוֹם							40	
+PSA_68:19w2a	19TcEa	m	l	1.1.0	Rd	לַ	לַ	on_the	to					30	
+PSA_68:19w2b	19TcEb	M	4791	1.1.0	Ncmsa	מָּר֨וֹם	מָּרוֹם	high	height					40	
 PSA_68:19		seg			x-paseq	׀								50	
-PSA_68:19w3	19LkG	w	7617		Vqp2ms	שָׁ֘בִ֤יתָ	שָׁבִיתָ							60	
-PSA_68:19w4	19xf6	w	7628 a	1.1	Ncbsa	שֶּׁ֗בִי	שֶּׁבִי							70	
-PSA_68:19w5	196cM	w	3947		Vqp2ms	לָקַ֣חְתָּ	לָקַחְתָּ							80	
-PSA_68:19w6	19CWb	w	4979	1.0	Ncfpa	מַ֭תָּנוֹת	מַתָּנוֹת							90	
-PSA_68:19w7a	19DAva	m	b	1	Rd	בָּ	בָּ	in/on/at/with						100	
-PSA_68:19w7b	19DAvb	M	120	1	Ncmsa	אָדָ֑ם	אָדָם							110	
-PSA_68:19w8a	19CSFa	m	c		C	וְ	וְ	and						120	
-PSA_68:19w8b	19CSFb	M	637		D	אַ֥ף	אַף							130	
-PSA_68:19w9	19PJu	w	5637	0.1	Vqrmpa	ס֝וֹרְרִ֗ים	סוֹרְרִים							140	
-PSA_68:19w10a	196EFa	m	l	0.0	R	לִ	לִ	to/for						150	
-PSA_68:19w10b	196EFb	M	7931	0.0	Vqc	שְׁכֹּ֤ן	שְׁכֹּן							160	
+PSA_68:19w3	19LkG	w	7617		Vqp2ms	שָׁ֘בִ֤יתָ	שָׁבִיתָ			leading	you_took_captive			60	
+PSA_68:19w4	19xf6	w	7628 a	1.1	Ncbsa	שֶּׁ֗בִי	שֶּׁבִי			captives	captive[s]			70	
+PSA_68:19w5	196cM	w	3947		Vqp2ms	לָקַ֣חְתָּ	לָקַחְתָּ			received	you_took			80	
+PSA_68:19w6	19CWb	w	4979	1.0	Ncfpa	מַ֭תָּנוֹת	מַתָּנוֹת			gifts	gifts			90	
+PSA_68:19w7a	19DAva	m	b	1	Rd	בָּ	בָּ	in/on/at/with	among					100	
+PSA_68:19w7b	19DAvb	M	120	1	Ncmsa	אָדָ֑ם	אָדָם	men	humankind					110	
+PSA_68:19w8a	19CSFa	m	c		C	וְ	וְ	and	and					120	
+PSA_68:19w8b	19CSFb	M	637		D	אַ֥ף	אַף	even	even					130	
+PSA_68:19w9	19PJu	w	5637	0.1	Vqrmpa	ס֝וֹרְרִ֗ים	סוֹרְרִים			rebellious	[those_who_are]_rebellious			140	
+PSA_68:19w10a	196EFa	m	l	0.0	R	לִ	לִ	that	to					150	
+PSA_68:19w10b	196EFb	M	7931	0.0	Vqc	שְׁכֹּ֤ן	שְׁכֹּן	dwell	dwell					160	
 PSA_68:19		seg			x-paseq	׀								170	
 PSA_68:19w11	19ght	w	3050		Np	יָ֬הּ	יָהּ			Yah	Yah			180	
-PSA_68:19w12	19oxR	w	430	0	Ncmpa	אֱלֹהִֽים	אֱלֹהִים			Elohim				190	
+PSA_68:19w12	19oxR	w	430	0	Ncmpa	אֱלֹהִֽים	אֱלֹהִים			Elohim	God			190	
 PSA_68:19		seg			x-sof-pasuq	׃							.	200	
 PSA_68:20		note				KJV:Ps.68.19						S		10	
 PSA_68:20w1	19aNV	w	1288		Vqsmsa	בָּ֤ר֣וּךְ	בָּרוּךְ			blessed	[be]_blessed			30	
@@ -382444,15 +382444,15 @@ PSA_121:2		seg			x-sof-pasuq	׃							.	100
 PSA_121:3w1	19xND	w	408		Tn	אַל	אַל			not	not	S		10	
 PSA_121:3		seg			x-maqqef	־								20	
 PSA_121:3w2	19uEt	w	5414		Vqj3ms	יִתֵּ֣ן	יִתֵּן			he|it_gave	may_he_permit			30	
-PSA_121:3w3a	19J7aa	m	l		R	לַ	לַ	to_the	to					40	
-PSA_121:3w3b	19J7ab	M	4132		Vqc	מּ֣וֹט	מּוֹט							50	
-PSA_121:3w4a	19GBPa	m	7272	1	Ncfsc	רַגְלֶ֑	רַגְלֶ							60	
+PSA_121:3w3a	19J7aa	m	l		Rd	לַ	לַ	to_the	to					40	
+PSA_121:3w3b	19J7ab	M	4132		Vqc	מּ֣וֹט	מּוֹט	slip	slip					50	
+PSA_121:3w4a	19GBPa	m	7272	1	Ncfsc	רַגְלֶ֑	רַגְלֶ	foot_of	foot_of					60	
 PSA_121:3w4b	19GBPb	M		1	Sp2ms	ךָ	ךָ	your	your					70	
 PSA_121:3w5	19mjk	w	408		Tn	אַל	אַל			not	not			80	
 PSA_121:3		seg			x-maqqef	־								90	
-PSA_121:3w6	19NKg	w	5123	0.0	Vqj3ms	יָ֝נ֗וּם	יָנוּם							100	
-PSA_121:3w7a	194BJa	m	8104	0	Vqrmsc	שֹֽׁמְרֶֽ	שֹׁמְרֶֽ							110	
-PSA_121:3w7b	194BJb	M		0	Sp2ms	ךָ	ךָ							120	
+PSA_121:3w6	19NKg	w	5123	0.0	Vqj3ms	יָ֝נ֗וּם	יָנוּם			slumber	may_he_slumber			100	
+PSA_121:3w7a	194BJa	m	8104	0	Vqrmsc	שֹֽׁמְרֶֽ	שֹׁמְרֶֽ	keeps_of	protector_of					110	
+PSA_121:3w7b	194BJb	M		0	Sp2ms	ךָ	ךָ	you	your					120	
 PSA_121:3		seg			x-sof-pasuq	׃							.	130	
 PSA_121:4w1	198rP	w	2009		Tm	הִנֵּ֣ה	הִנֵּה			behold/lo/see!	there!	S		10	
 PSA_121:4w2	19oBy	w	3808		Tn	לֹֽא	לֹא			not	not			20	
@@ -384794,10 +384794,10 @@ PSA_139:12w6b	19jRrb	M	3915	1.0	Ncmsa	לַיְלָה	לַיְלָה	night	night	
 PSA_139:12w7a	19U6ea	m	k		Rd	כַּ	כַּ	as_the	like					110	
 PSA_139:12w7b	19U6eb	M	3117		Ncmsa	יּ֣וֹם	יּוֹם	day	day					120	
 PSA_139:12w8	198SZ	w	215	1	Vhi3ms	יָאִ֑יר	יָאִיר			bright	it_shines			130	
-PSA_139:12w9a	19KRLa	m	k	0.0	R	כַּ֝	כַּ	as/like						140	
-PSA_139:12w9b	19KRLb	M	2825	0.0	Ncfsa	חֲשֵׁיכָ֗ה	חֲשֵׁיכָה							150	
+PSA_139:12w9a	19KRLa	m	k	0.0	Rd	כַּ֝	כַּ	for_THE	as					140	
+PSA_139:12w9b	19KRLb	M	2825	0.0	Ncfsa	חֲשֵׁיכָ֗ה	חֲשֵׁיכָה	darkness	darkness					150	
 PSA_139:12w10a	196raa	m	k	0	Rd	כָּ	כָּ	as_the	as					160	
-PSA_139:12w10b	196rab	M	219 a	0	Ncfsa	אוֹרָֽה	אוֹרָה							170	
+PSA_139:12w10b	196rab	M	219 a	0	Ncfsa	אוֹרָֽה	אוֹרָה	light	light					170	
 PSA_139:12		seg			x-sof-pasuq	׃							.	180	
 PSA_139:13w1	19GKC	w	3588 a		C	כִּֽי	כִּי			that/for/because/then/when	if/because	S		10	
 PSA_139:13		seg			x-maqqef	־								20	
@@ -397082,15 +397082,15 @@ PRO_27:19w1a	20Qu5a	m	k	1.0	Rd	כַּ֭	כַּ	as_the	like			S		10
 PRO_27:19w1b	20Qu5b	M	4325	1.0	Ncmpa	מַּיִם	מַּיִם	water	water					20	
 PRO_27:19w2a	20L3Ta	m	d		Td	הַ	הַ	the	the					30	
 PRO_27:19w2b	20L3Tb	M	6440		Ncbpa	פָּנִ֣ים	פָּנִים	face	face					40	
-PRO_27:19w3a	20dpva	m	l	1	R	לַ	לַ	to_the	to					50	
-PRO_27:19w3b	20dpvb	M	6440	1	Ncbpa	פָּנִ֑ים	פָּנִים							60	
-PRO_27:19w4	206Kf	w	3651 c		Tm	כֵּ֤ן	כֵּן			yes/correct/thus/so				70	
-PRO_27:19w5	205Nn	w	3820 a		Ncmsc	לֵֽב	לֵב							80	
+PRO_27:19w3a	20dpva	m	l	1	Rd	לַ	לַ	to_the	to					50	
+PRO_27:19w3b	20dpvb	M	6440	1	Ncbpa	פָּנִ֑ים	פָּנִים	face	face					60	
+PRO_27:19w4	206Kf	w	3651 c		Tm	כֵּ֤ן	כֵּן			yes/correct/thus/so	so			70	
+PRO_27:19w5	205Nn	w	3820 a		Ncmsc	לֵֽב	לֵב			heart_of	the_heart_of			80	
 PRO_27:19		seg			x-maqqef	־								90	
-PRO_27:19w6a	20R25a	m	d	0.0	Td	הָ֝	הָ	the						100	
-PRO_27:19w6b	20R25b	M	120	0.0	Ncmsa	אָדָ֗ם	אָדָם			the=humankind				110	
-PRO_27:19w7a	20d3ea	m	l	0	Rd	לָ	לָ	to/for						120	
-PRO_27:19w7b	20d3eb	M	120	0	Ncmsa	אָדָֽם	אָדָם							130	
+PRO_27:19w6a	20R25a	m	d	0.0	Td	הָ֝	הָ	the	of					100	
+PRO_27:19w6b	20R25b	M	120	0.0	Ncmsa	אָדָ֗ם	אָדָם	man	the_person	the=humankind				110	
+PRO_27:19w7a	20d3ea	m	l	0	Rd	לָ	לָ	to_the	to					120	
+PRO_27:19w7b	20d3eb	M	120	0	Ncmsa	אָדָֽם	אָדָם	man	person					130	
 PRO_27:19		seg			x-sof-pasuq	׃							.	140	
 PRO_27:20w1	20jsg	w	7585		Np	שְׁא֣וֹל	שְׁאוֹל			sheol	Sheol	S		10	
 PRO_27:20w2a	20H7ta	mK	c		C	ו	ו	and	and					20	
@@ -402933,7 +402933,7 @@ ECC_9:12w10a	21fXsa	m	b		R	בִּ	בִּ	in/on/at/with	in					160
 ECC_9:12w10b	21fXsb	M	4685 c		Ncfsa	מְצוֹדָ֣ה	מְצוֹדָה	net	a_net					170	
 ECC_9:12w11	21dHg	w	7451 a	1.2	Aafsa	רָעָ֔ה	רָעָה			cruel	evil			180	
 ECC_9:12w12a	21Cdua	m	c	1.1	C	וְ	וְ	and	and					190	
-ECC_9:12w12b	21Cdub	m	k	1.1	R	כַ֨	כַ	as/like						200	
+ECC_9:12w12b	21Cdub	m	k	1.1	Rd	כַ֨	כַ	like_the	like					200	
 ECC_9:12w12c	21Cduc	M	6833	1.1	Ncbpa	צִּפֳּרִ֔ים	צִּפֳּרִים	birds	birds					210	
 ECC_9:12w13a	21s9pa	m	d	1.0	Td	הָ	הָ	the	[which					220	
 ECC_9:12w13b	21s9pb	M	270	1.0	Vqsfpa	אֲחֻז֖וֹת	אֲחֻזוֹת	caught	are]_caught					230	
@@ -405390,12 +405390,12 @@ SNG_5:12		seg			x-maqqef	־								60
 SNG_5:12w4	22ayu	w	650		Ncmpc	אֲפִ֣יקֵי	אֲפִיקֵי			streams_of	channels_of			70	
 SNG_5:12w5	22izi	w	4325	1	Ncmpa	מָ֑יִם	מָיִם			water	water			80	
 SNG_5:12w6	22cNi	w	7364	0.1.0	Vqrfpa	רֹֽחֲצוֹת֙	רֹחֲצוֹת			bathed	washing			90	
-SNG_5:12w7a	222Z3a	m	b	0.1	R	בֶּֽ	בֶּֽ	in/on/at/with	in					100	
-SNG_5:12w7b	222Z3b	M	2461	0.1	Ncmsa	חָלָ֔ב	חָלָב							110	
-SNG_5:12w8	22bTo	w	3427	0.0	Vqrfpa	יֹשְׁב֖וֹת	יֹשְׁבוֹת							120	
+SNG_5:12w7a	222Z3a	m	b	0.1	Rd	בֶּֽ	בֶּֽ	in/on/at/with	in					100	
+SNG_5:12w7b	222Z3b	M	2461	0.1	Ncmsa	חָלָ֔ב	חָלָב	milk	milk					110	
+SNG_5:12w8	22bTo	w	3427	0.0	Vqrfpa	יֹשְׁב֖וֹת	יֹשְׁבוֹת			set	sitting			120	
 SNG_5:12w9	22hvK	w	5921 a		R	עַל	עַל			on/upon/above/on_account_of//he|it_went_in	on			130	
 SNG_5:12		seg			x-maqqef	־								140	
-SNG_5:12w10	22XQw	w	4402	0	Ncfsa	מִלֵּֽאת	מִלֵּאת							150	
+SNG_5:12w10	22XQw	w	4402	0	Ncfsa	מִלֵּֽאת	מִלֵּאת			jewels	fullness			150	
 SNG_5:12		seg			x-sof-pasuq	׃							.	160	
 SNG_5:13w1a	22Ssia	m	3895	1.1.0	Ncbdc	לְחָיָ	לְחָיָ	cheeks_of	cheeks_of			S		10	
 SNG_5:13w1b	22Ssib	M		1.1.0	Sp3ms	ו֙	ו	his	his					20	
@@ -425813,7 +425813,7 @@ ISA_44:24w13c	237wic	M		0.1	Sp1cs	י	י	me	alone					200
 ISA_44:24w14	23ogM	w	7554		Vqrmsc	רֹקַ֥ע	רֹקַע			spread_out_of	[who]_beat_out_of			210	
 ISA_44:24w15a	23sdYa	m	d	0.0	Td	הָ	הָ	the	the					220	
 ISA_44:24w15b	23sdYb	M	776	0.0	Ncbsa	אָ֖רֶץ	אָרֶץ	earth	earth	the=earth/land				230	
-ISA_44:24w16	23Pzf	w	4325		Ncmpc	מי	מי							240	
+ISA_44:24w16	23Pzf	wK	4325		Ncmpc	מי	מי							240	
 ISA_44:24w17a	23yH3a	mK	854		R	את	את	who?	from					250	
 ISA_44:24w17b	23yH3b	MK			Sp1cs	י	י	with	with					260	
 ISA_44:24		variant note				מי את/י: (x-qere) 'מֵ/אִתִּֽ/י': lemma=m/854 n=0 morph=HR/R/Sp1cs id=23BvR מֵ/אִתִּֽ/י								270	
@@ -432741,14 +432741,14 @@ ISA_61:10w11	238tt	w	4598		Ncmsc	מְעִ֥יל	מְעִיל			robe_of	a_robe_of
 ISA_61:10w12	2396b	w	6666	1.0	Ncfsa	צְדָקָ֖ה	צְדָקָה			righteousness	righteousness			180	
 ISA_61:10w13a	233Sya	m	3271	1	Vqi3ms	יְעָטָ֑	יְעָטָ	covered	he					190	
 ISA_61:10w13b	233Syb	M		1	Sp1cs	נִי	נִי	me	has_covered_me					200	
-ISA_61:10w14a	23GNwa	m	k	0.1.0	R	כֶּֽ	כֶּֽ	as_the	like					210	
-ISA_61:10w14b	23GNwb	M	2860	0.1.0	Ncmsa	חָתָן֙	חָתָן							220	
-ISA_61:10w15	235qs	w	3547		Vpi3ms	יְכַהֵ֣ן	יְכַהֵן							230	
-ISA_61:10w16	23TKk	w	6287	0.1	Ncmsa	פְּאֵ֔ר	פְּאֵר							240	
+ISA_61:10w14a	23GNwa	m	k	0.1.0	Rd	כֶּֽ	כֶּֽ	as_the	like					210	
+ISA_61:10w14b	23GNwb	M	2860	0.1.0	Ncmsa	חָתָן֙	חָתָן	bridegroom	bridegroom					220	
+ISA_61:10w15	235qs	w	3547		Vpi3ms	יְכַהֵ֣ן	יְכַהֵן			decks	[who]_he_acts_like_a_priest			230	
+ISA_61:10w16	23TKk	w	6287	0.1	Ncmsa	פְּאֵ֔ר	פְּאֵר			garland	a_turban			240	
 ISA_61:10w17a	23UJca	m	c	0.0	C	וְ	וְ	and	and					250	
 ISA_61:10w17b	23UJcb	m	k	0.0	Rd	כַ	כַ	as_the	like					260	
-ISA_61:10w17c	23UJcc	M	3618	0.0	Ncfsa	כַּלָּ֖ה	כַּלָּה							270	
-ISA_61:10w18	238cz	w	5710 b		Vqi3fs	תַּעְדֶּ֥ה	תַּעְדֶּה							280	
+ISA_61:10w17c	23UJcc	M	3618	0.0	Ncfsa	כַּלָּ֖ה	כַּלָּה	bride	bride					270	
+ISA_61:10w18	238cz	w	5710 b		Vqi3fs	תַּעְדֶּ֥ה	תַּעְדֶּה			adorns	[who]_she_adorns_herself			280	
 ISA_61:10w19a	232aya	m	3627	0	Ncmpc	כֵלֶֽי	כֵלֶֽי	jewels_of	ornaments_of					290	
 ISA_61:10w19b	232ayb	M		0	Sp3fs	הָ	הָ	her	her					300	
 ISA_61:10		seg			x-sof-pasuq	׃							.	310	
@@ -449688,9 +449688,9 @@ JER_23:18w9b	24DAvb	M		1	Sp3ms	וֹ	וֹ	his	his					140
 JER_23:18w10	24CSF	w	4310		Ti	מִֽי	מִי			who?	who?			150	
 JER_23:18		seg			x-maqqef	־								160	
 JER_23:18w11	24PJu	w	7181		Vhp3ms	הִקְשִׁ֥יב	הִקְשִׁיב			given_heed	has_he_paid_attention_to			170	
-JER_23:18w12a	246EFa	mK	1697		C	דבר	דבר	word_of	word_of					180	
-JER_23:18w12b	246EFb	MK			Vqw3ms	י	י	his	his					190	
-JER_23:18		variant note				דבר/י: (x-qere) 'דְּבָר֖/וֹ': lemma=1697 n=0.0 morph=HC/Vqw3ms id=24ght דְּבָר֖/וֹ								200	
+JER_23:18w12a	246EFa	mK	1697		Ncmsc	דבר	דבר	word_of	word_of					180	
+JER_23:18w12b	246EFb	MK			Sp1cs	י	י	his	his					190	
+JER_23:18		variant note				דבר/י: (x-qere) 'דְּבָר֖/וֹ': lemma=1697 n=0.0 morph=HNcmsc/Sp3ms id=24ght דְּבָר֖/וֹ								200	
 JER_23:18w13a	24oxRa	m	c	0	C	וַ	וַ	and	and					210	
 JER_23:18w13b	24oxRb	M	8085	0	Vqw3ms	יִּשְׁמָֽע	יִּשְׁמָע	heard	has_he_listened?					220	
 JER_23:18		seg			x-sof-pasuq	׃							.	230	
@@ -456419,7 +456419,7 @@ JER_32:4w19	24oJo	w	853		To	אֶת	אֶת			DOM	DOM			310
 JER_32:4		seg			x-maqqef	־								320	
 JER_32:4w20a	241DDa	mK	5869 a		Ncbdc	עינ	עינ	eye_of	eyes_of					330	
 JER_32:4w20b	241DDb	MK			Sp3ms	ו	ו	him	his					340	
-JER_32:4		variant note				עינ/ו: (x-qere) 'עֵינָ֥י/ו': lemma=5869 a morph=HTd/Aofsa id=24Gnb עֵינָ֥י/ו								350	
+JER_32:4		variant note				עינ/ו: (x-qere) 'עֵינָ֥י/ו': lemma=5869 a morph=HNcbdc/Sp3ms id=24Gnb עֵינָ֥י/ו								350	
 JER_32:4w21	245Up	w	7200	0	Vqi3fp	תִּרְאֶֽינָה	תִּרְאֶֽינָה			see	they_will_see			360	
 JER_32:4		seg			x-sof-pasuq	׃							.	370	
 JER_32:5w1a	24Mkoa	m	c	1.1.0.0	C	וּ	וּ	and	and			S		10	
@@ -456806,7 +456806,7 @@ JER_32:17w19	24aTU	w	1697	0	Ncmsa	דָּבָֽר	דָּבָר			thing	thing			36
 JER_32:17		seg			x-sof-pasuq	׃							.	370	
 JER_32:18w1	24R6q	w	6213 a		Vqrmsa	עֹ֤שֶׂה	עֹשֶׂה			producing	[you_are]_doing	S		10	
 JER_32:18w2	24Zwe	w	2617 a	1.2.0	Ncmsa	חֶ֨סֶד֙	חֶסֶד			steadfast_love	covenant_loyalty			20	
-JER_32:18w3a	24z3Sa	m	l	1.2	Rd	לַֽ	לַֽ	to	to					30	
+JER_32:18w3a	24z3Sa	m	l	1.2	R	לַֽ	לַֽ	to	to					30	
 JER_32:18w3b	24z3Sb	M	505	1.2	Acbpa	אֲלָפִ֔ים	אֲלָפִים	thousands	thousands					40	
 JER_32:18w4a	24dY7a	m	c	1.1.0	C	וּ	וּ	and	and					50	
 JER_32:18w4b	24dY7b	M	7999 a	1.1.0	Vprmsa	מְשַׁלֵּם֙	מְשַׁלֵּם	repay	[you_are]_paying_back					60	
@@ -468370,8 +468370,8 @@ JER_48:43w7	24s7Z	w	5002		Ncmsc	נְאֻם	נְאֻם			declares_of	the_utteranc
 JER_48:43		seg			x-maqqef	־								110	
 JER_48:43w8	242tr	w	3068	0	Np	יְהוָֽה	יְהוָה			YHWH	of_Yahweh			120	
 JER_48:43		seg			x-sof-pasuq	׃							.	130	
-JER_48:44w1a	24PtSa	m	d		Td	ה	ה	the				S		10	
-JER_48:44w1b	24PtSb	M	5211		Vqrmsa	ניס	ניס							20	
+JER_48:44w1a	24PtSa	mK	d		Td	ה	ה	the	the_[one			S		10	
+JER_48:44w1b	24PtSb	MK	5211		Vqrmsa	ניס	ניס	flees	who]_flees					20	
 JER_48:44		exegesis note				WLC has this word divided as הניס								30	
 JER_48:44		variant note				הניס: (x-qere) 'הַ/נָּ֞ס': lemma=d/5127 n=1.2.0.0 morph=HTd/Vqrmsa id=24Rwm הַ/נָּ֞ס								40	
 JER_48:44w2a	24Vrxa	m	m		R	מִ	מִ	from	from					50	
@@ -475180,7 +475180,7 @@ LAM_4:3w8a	25bmLa	m	5971 a		Ncmsc	עַמִּ֣	עַמִּ	people_of	my_people_of
 LAM_4:3w8b	25bmLb	M			Sp1cs	י	י	my	my					130	
 LAM_4:3w9a	25DK9a	m	l	0.1	R	לְ	לְ	as	[has					140	
 LAM_4:3w9b	25DK9b	M	393	0.1	Aamsa	אַכְזָ֔ר	אַכְזָר	cruel	become]_(into)_cruel					150	
-LAM_4:3w10	257vQ	w	3588 a		C	כי	כי							160	
+LAM_4:3w10	257vQ	wK	3588 a		C	כי	כי							160	
 LAM_4:3w11	25JoL	wK	3283		Ncmpa	ענים	ענים							170	
 LAM_4:3		variant note				כי ענים: (x-qere) 'כַּ/יְעֵנִ֖ים': lemma=k/3283 n=0.0 morph=HRd/Ncmpa id=25Zzg כַּ/יְעֵנִ֖ים								180	
 LAM_4:3w12a	25k3ma	m	b	0	Rd	בַּ	בַּ	in/on/at/with	in					190	
@@ -475829,7 +475829,7 @@ EZE_1:1w2b	26Nvkb	M	7970		Acbpa	שְׁלֹשִׁ֣ים	שְׁלֹשִׁים	thir
 EZE_1:1w3	26TyA	w	8141	1.1.1	Ncfsa	שָׁנָ֗ה	שָׁנָה			year	year			60	
 EZE_1:1w4a	26vuQa	m	b	1.1.0	Rd	בָּֽ	בָּ	in/on/at/with	in					70	
 EZE_1:1w4b	26vuQb	M	7243	1.1.0	Aomsa	רְבִיעִי֙	רְבִיעִי	fourth	[month]					80	
-EZE_1:1w5a	26TSca	m	b		Rd	בַּ	בַּ	in/on/at/with	on_[day]					90	
+EZE_1:1w5a	26TSca	m	b		R	בַּ	בַּ	in/on/at/with	on_[day]					90	
 EZE_1:1w5b	26TScb	M	2568		Acmsa	חֲמִשָּׁ֣ה	חֲמִשָּׁה	fifth	five					100	
 EZE_1:1w6a	26k5Pa	m	l	1.1	Rd	לַ	לַ	of_the	of					110	
 EZE_1:1w6b	26k5Pb	M	2320	1.1	Ncmsa	חֹ֔דֶשׁ	חֹדֶשׁ	month	month					120	
@@ -475853,7 +475853,7 @@ EZE_1:1w15b	26PB6b	M	7200	0.0	Vqw1cs	אֶרְאֶ֖ה	אֶרְאֶה	saw	I_saw		
 EZE_1:1w16	2637c	w	4759 a		Ncfpc	מַרְא֥וֹת	מַרְאוֹת			visions_of	visions_of			300	
 EZE_1:1w17	26x9c	w	430	0	Ncmpa	אֱלֹהִֽים	אֱלֹהִים			Elohim	God			310	
 EZE_1:1		seg			x-sof-pasuq	׃							.	320	
-EZE_1:2w1a	26yNBa	m	b	1.0	Rd	בַּ	בַּ	in/on/at/with	on_[day]			S		10	
+EZE_1:2w1a	26yNBa	m	b	1.0	R	בַּ	בַּ	in/on/at/with	on_[day]			S		10	
 EZE_1:2w1b	26yNBb	M	2568	1.0	Acmsa	חֲמִשָּׁ֖ה	חֲמִשָּׁה	fifth	five					20	
 EZE_1:2w2a	2629ta	m	l	1	Rd	לַ	לַ	of_the	of					30	
 EZE_1:2w2b	2629tb	M	2320	1	Ncmsa	חֹ֑דֶשׁ	חֹדֶשׁ	month	month					40	
@@ -479569,7 +479569,7 @@ EZE_8:1w3a	26eUya	m	d	1.2.1	Td	הַ	הַ	the	(the)					60
 EZE_8:1w3b	26eUyb	M	8345	1.2.1	Aofsa	שִּׁשִּׁ֗ית	שִּׁשִּׁית	sixth	sixth					70	
 EZE_8:1w4a	26Vaka	m	b	1.2.0	Rd	בַּ	בַּ	in/on/at/with	in					80	
 EZE_8:1w4b	26Vakb	M	8345	1.2.0	Aomsa	שִּׁשִּׁי֙	שִּׁשִּׁי	sixth	[month]					90	
-EZE_8:1w5a	26oiNa	m	b		Rd	בַּ	בַּ	in/on/at/with	on_[day]					100	
+EZE_8:1w5a	26oiNa	m	b		R	בַּ	בַּ	in/on/at/with	on_[day]					100	
 EZE_8:1w5b	26oiNb	M	2568		Acmsa	חֲמִשָּׁ֣ה	חֲמִשָּׁה	fifth	five					110	
 EZE_8:1w6a	26vnQa	m	l	1.2	Rd	לַ	לַ	of_the	of					120	
 EZE_8:1w6b	26vnQb	M	2320	1.2	Ncmsa	חֹ֔דֶשׁ	חֹדֶשׁ	month	month					130	
@@ -496407,7 +496407,7 @@ EZE_32:17w2a	262XCa	m	b		R	בִּ	בִּ	in/on/at/with	in					30
 EZE_32:17w2b	262XCb	M	8147		Acfdc	שְׁתֵּ֣י	שְׁתֵּי	two_of	two_plus_of					40	
 EZE_32:17w3	26g2n	w	6240		Acfsa	עֶשְׂרֵ֣ה	עֶשְׂרֵה			teen	ten			50	
 EZE_32:17w4	26BLL	w	8141	1.1	Ncfsa	שָׁנָ֔ה	שָׁנָה			year	year			60	
-EZE_32:17w5a	26jcka	m	b		Rd	בַּ	בַּ	in/on/at/with	on_[day]					70	
+EZE_32:17w5a	26jcka	m	b		R	בַּ	בַּ	in/on/at/with	on_[day]					70	
 EZE_32:17w5b	26jckb	M	2568		Acmsa	חֲמִשָּׁ֥ה	חֲמִשָּׁה	five	fif-					80	
 EZE_32:17w6	26Mxs	w	6240	1.0	Acmsa	עָשָׂ֖ר	עָשָׂר			ten	teen			90	
 EZE_32:17w7a	26y1na	m	l	1	Rd	לַ	לַ	of_the	of					100	
@@ -497395,7 +497395,7 @@ EZE_33:21w3	262Vc	w	6240		Acfsa	עֶשְׂרֵ֣ה	עֶשְׂרֵה			teen	ten		
 EZE_33:21w4	26sqH	w	8141	1.0.1	Ncfsa	שָׁנָ֗ה	שָׁנָה			year	year			60	
 EZE_33:21w5a	26aSba	m	b	1.0.0	Rd	בָּ	בָּ	in/on/at/with	in					70	
 EZE_33:21w5b	26aSbb	M	6224	1.0.0	Aomsa	עֲשִׂרִ֛י	עֲשִׂרִי	tenth	[month]					80	
-EZE_33:21w6a	26MJua	m	b		Rd	בַּ	בַּ	in/on/at/with	on_[day]					90	
+EZE_33:21w6a	26MJua	m	b		R	בַּ	בַּ	in/on/at/with	on_[day]					90	
 EZE_33:21w6b	26MJub	M	2568		Acmsa	חֲמִשָּׁ֥ה	חֲמִשָּׁה	fifth	five					100	
 EZE_33:21w7a	261dCa	m	l	1.0	Rd	לַ	לַ	of_the	of					110	
 EZE_33:21w7b	261dCb	M	2320	1.0	Ncmsa	חֹ֖דֶשׁ	חֹדֶשׁ	month	month					120	
@@ -500425,7 +500425,7 @@ EZE_37:17w7b	269bGb	M	6086		Ncmsa	עֵ֣ץ	עֵץ	stick	a_piece_of_wood					120
 EZE_37:17w8	26UNy	w	259	1	Acmsa	אֶחָ֑ד	אֶחָד			one(ms)	one			130	
 EZE_37:17w9a	26UXza	m	c		C	וְ	וְ	and	and					140	
 EZE_37:17w9b	26UXzb	M	1961		Vqq3cp	הָי֥וּ	הָיוּ	become	they_will_become	and=they_will_be				150	
-EZE_37:17w10a	26xKba	m	l	0.0	Rd	לַ	לַ	into	(into)					160	
+EZE_37:17w10a	26xKba	m	l	0.0	R	לַ	לַ	into	(into)					160	
 EZE_37:17w10b	26xKbb	M	259	0.0	Acmpa	אֲחָדִ֖ים	אֲחָדִים	one	one(s)					170	
 EZE_37:17w11a	26MJ2a	m	b	0	R	בְּ	בְּ	in/on/at/with	in					180	
 EZE_37:17w11b	26MJ2b	m	3027	0	Ncbsc	יָדֶֽ	יָדֶֽ	hand_of	hand_of					190	
@@ -504441,10 +504441,10 @@ EZE_42:8w12b	26fPxb	M	1964	0.0	Ncmsa	הֵיכָ֖ל	הֵיכָל	temple	the_temp
 EZE_42:8w13	26UoH	w	3967		Acbsa	מֵאָ֥ה	מֵאָה			hundred	a_hundred			200	
 EZE_42:8w14	26x6g	w	520 a	0	Ncfsa	אַמָּֽה	אַמָּה			cubits	cubit[s]			210	
 EZE_42:8		seg			x-sof-pasuq	׃							.	220	
-EZE_42:9w1a	26Mwva	m	c		C	ו	ו	and				S		10	
-EZE_42:9w1b	26Mwvb	m	m		R	מ	מ	from						20	
-EZE_42:9w1c	26Mwvc	m	8478		R	תחת	תחת							30	
-EZE_42:9w1d	26Mwvd	M			Sd	ה	ה							40	
+EZE_42:9w1a	26Mwva	mK	c		C	ו	ו	and				S		10	
+EZE_42:9w1b	26Mwvb	mK	m		R	מ	מ							20	
+EZE_42:9w1c	26Mwvc	mK	8478		R	תחת	תחת							30	
+EZE_42:9w1d	26Mwvd	MK			Sd	ה	ה							40	
 EZE_42:9w2	26DfV	wK	3957		Ncfpa	לשכות	לשכות							50	
 EZE_42:9		variant note				ו/מ/תחת/ה לשכות: (x-qere) 'וּ/מִ/תַּ֖חַת': lemma=c/m/8478 n=1.0 morph=HC/R/R id=262Lg וּ/מִ/תַּ֖חַת 'הַ/לְּשָׁכ֣וֹת': lemma=d/3957 morph=HTd/Ncfpa id=26CYE הַ/לְּשָׁכ֣וֹת								60	
 EZE_42:9w3a	26FUJa	m	d	1	Td	הָ	הָ	the	(the)					70	
@@ -506513,7 +506513,7 @@ EZE_45:2w4a	26WyYa	m	d	1.1	Td	הַ	הַ	the	the_holy					60
 EZE_45:2w4b	26WyYb	M	6944	1.1	Ncmsa	קֹּ֔דֶשׁ	קֹּדֶשׁ	sanctuary	place					70	
 EZE_45:2w5	26NnB	w	2568		Acfsa	חֲמֵ֥שׁ	חֲמֵשׁ			five	five			80	
 EZE_45:2w6	26fhh	w	3967	1.0.0	Acbpa	מֵא֛וֹת	מֵאוֹת			hundreds	hundred_[cubits]			90	
-EZE_45:2w7a	26Yvra	m	b		Rd	בַּ	בַּ	in/on/at/with	by					100	
+EZE_45:2w7a	26Yvra	m	b		R	בַּ	בַּ	in/on/at/with	by					100	
 EZE_45:2w7b	26Yvrb	M	2568		Acfsa	חֲמֵ֥שׁ	חֲמֵשׁ	five	five					110	
 EZE_45:2w8	26t31	w	3967	1.0	Acbpa	מֵא֖וֹת	מֵאוֹת			hundreds	hundred_[cubits]			120	
 EZE_45:2w9	26kjm	w	7251		VPsmsa	מְרֻבָּ֣ע	מְרֻבָּע			square	a_square			130	
@@ -507147,7 +507147,7 @@ EZE_45:24w9b	26WxTb	M	374	0	Ncfsa	אֵיפָֽה	אֵיפָה	ephah	ephah					15
 EZE_45:24		seg			x-sof-pasuq	׃							.	160	
 EZE_45:25w1a	26mMWa	m	b	1.1.0.0	Rd	בַּ	בַּ	in/on/at/with	in			S		10	
 EZE_45:25w1b	26mMWb	M	7637	1.1.0.0	Aomsa	שְּׁבִיעִ֡י	שְּׁבִיעִי	seventh	[month]					20	
-EZE_45:25w2a	26zzqa	m	b		Rd	בַּ	בַּ	in/on/at/with	on					30	
+EZE_45:25w2a	26zzqa	m	b		R	בַּ	בַּ	in/on/at/with	on					30	
 EZE_45:25w2b	26zzqb	M	2568		Acmsa	חֲמִשָּׁה֩	חֲמִשָּׁה	five	fif-					40	
 EZE_45:25w3	26amd	w	6240		Acmsa	עָשָׂ֨ר	עָשָׂר			ten	teen			50	
 EZE_45:25w4	264qo	w	3117		Ncmsa	י֤וֹם	יוֹם			day	day			60	
@@ -509047,7 +509047,7 @@ EZE_48:20w3	26Bbw	w	2568		Acmsa	חֲמִשָּׁ֤ה	חֲמִשָּׁה			five	[
 EZE_48:20w4a	264YVa	m	c	1.1.0	C	וְ	וְ	and	and					60	
 EZE_48:20w4b	264YVb	M	6242	1.1.0	Acbpa	עֶשְׂרִים֙	עֶשְׂרִים	twenty	twenty	and=twenty				70	
 EZE_48:20w5	26GNf	w	505	1.1	Acbsa	אֶ֔לֶף	אֶלֶף			thousand	thousand_[cubits]			80	
-EZE_48:20w6a	261xGa	m	b		Rd	בַּ	בַּ	in/on/at/with	by					90	
+EZE_48:20w6a	261xGa	m	b		R	בַּ	בַּ	in/on/at/with	by					90	
 EZE_48:20w6b	261xGb	M	2568		Acmsa	חֲמִשָּׁ֥ה	חֲמִשָּׁה	five	five					100	
 EZE_48:20w7a	26R6aa	m	c	1.0	C	וְ	וְ	and	and					110	
 EZE_48:20w7b	26R6ab	M	6242	1.0	Acbpa	עֶשְׂרִ֖ים	עֶשְׂרִים	twenty	twenty	and=twenty				120	
@@ -514913,7 +514913,7 @@ DAN_6:6w11	27son	Aw	5931	1	Ncfsa	עִלָּ֑א	עִלָּא			ground_for_compla
 DAN_6:6w12	27g5s	Aw	3861	0.1	C	לָהֵ֕ן	לָהֵן			therefore/except	except			160	
 DAN_6:6w13	27xyw	Aw	7912		Vhp1cp	הַשְׁכַּ֥חְנָֽה	הַשְׁכַּחְנָה			find	we_have_found			170	
 DAN_6:6w14a	27UeHa	Am	5922	0.0	R	עֲל֖וֹ	עֲלוֹ	against	concerning					180	
-DAN_6:6w14b	27UeHb	AM		0.0	Pp3ms	הִי	הִי	it	him					190	
+DAN_6:6w14b	27UeHb	AM		0.0	Sp3ms	הִי	הִי	it	him					190	
 DAN_6:6w15a	27LdRa	Am	b		R	בְּ	בְּ	in/on/at/with	in					200	
 DAN_6:6w15b	27LdRb	AM	1882		Ncfsc	דָ֥ת	דָת	law_of	the_law_of					210	
 DAN_6:6w16a	27LmRa	Am	426	0	Ncmsc	אֱלָהֵֽ	אֱלָהֵ	god_of	of					220	
@@ -515919,8 +515919,8 @@ DAN_7:6w17c	271ouc	AM		0.1	Td	א	א	the	beast					280
 DAN_7:6w18a	27bjQa	Am	c	0.0	C	וְ	וְ	and	and					290	
 DAN_7:6w18b	27bjQb	AM	7985	0.0	Ncmsa	שָׁלְטָ֖ן	שָׁלְטָן	dominion	dominion					300	
 DAN_7:6w19	27A2U	Aw	3052		VQp3ms	יְהִ֥יב	יְהִיב			given	it_was_given			310	
-DAN_7:6w20a	27ZM7a	Am	l	0	C	לַֽ	לַֽ	to	to					320	
-DAN_7:6w20b	27ZM7b	AM		0	Acbsa	הּ	הּ	it	it					330	
+DAN_7:6w20a	27ZM7a	Am	l	0	R	לַֽ	לַֽ	to	to					320	
+DAN_7:6w20b	27ZM7b	AM		0	Sp3fs	הּ	הּ	it	it					330	
 DAN_7:6		seg			x-sof-pasuq	׃							.	340	
 DAN_7:7w1	27jY6	Aw	870		R	בָּאתַ֣ר	בָּאתַר			after	after	S		10	
 DAN_7:7w2	27XbX	Aw	1836		Pdxms	דְּנָה֩	דְּנָה			this/about_this	this			20	
@@ -521205,7 +521205,7 @@ HOS_3:2w1b	28oYpb	m	3739 a		Vqw1cs	אֶכְּרֶ֣	אֶכְּרֶ	bought	I					
 HOS_3:2w1c	28oYpc	M			Sp3fs	הָ	הָ	her	bought_her					30	
 HOS_3:2w2a	28Phta	m	l	1.1	R	לִּ֔	לִּ	for	for					40	
 HOS_3:2w2b	28Phtb	M		1.1	Sp1cs	י	י	myself	myself	to/for=me				50	
-HOS_3:2w3a	28idya	m	b		Rd	בַּ	בַּ	in/on/at/with	for					60	
+HOS_3:2w3a	28idya	m	b		R	בַּ	בַּ	in/on/at/with	for					60	
 HOS_3:2w3b	28idyb	M	2568		Acmsa	חֲמִשָּׁ֥ה	חֲמִשָּׁה	five	fif-					70	
 HOS_3:2w4	28PU6	w	6240	1.0	Acmsa	עָשָׂ֖ר	עָשָׂר			ten	teen			80	
 HOS_3:2w5	28FCP	w	3701	1	Ncmsa	כָּ֑סֶף	כָּסֶף			silver	silver			90	
@@ -521834,14 +521834,14 @@ HOS_5:8w2	28KTJ	w	7782	1.1.0	Ncmsa	שׁוֹפָר֙	שׁוֹפָר			horn	a_horn
 HOS_5:8w3a	28twLa	m	b	1.1	Rd	בַּ	בַּ	in/on/at/with	in					30	
 HOS_5:8w3b	28twLb	M	1390	1.1	Np	גִּבְעָ֔ה	גִּבְעָה	Gibeah	Gibeah					40	
 HOS_5:8w4	283MS	w	2689	1.0	Ncfsa	חֲצֹצְרָ֖ה	חֲצֹצְרָה			trumpet	a_trumpet			50	
-HOS_5:8w5a	28GnDa	m	b	1	R	בָּ	בָּ	in/on/at/with	in					60	
-HOS_5:8w5b	28GnDb	M	7414	1	Np	רָמָ֑ה	רָמָה							70	
-HOS_5:8w6	28rVJ	w	7321	0.1.0	Vhv2mp	הָרִ֨יעוּ֙	הָרִיעוּ							80	
-HOS_5:8w7	28w2R	w	1007+		Np	בֵּ֣ית	בֵּית			house_of				90	
-HOS_5:8w8	28JsR	w	1007	0.1	Np	אָ֔וֶן	אָוֶן							100	
-HOS_5:8w9a	28Sv8a	m	310 a	0.0	R	אַחֲרֶ֖י	אַחֲרֶי							110	
+HOS_5:8w5a	28GnDa	m	b	1	Rd	בָּ	בָּ	in/on/at/with	in					60	
+HOS_5:8w5b	28GnDb	M	7414	1	Np	רָמָ֑ה	רָמָה	Ramah	Ramah					70	
+HOS_5:8w6	28rVJ	w	7321	0.1.0	Vhv2mp	הָרִ֨יעוּ֙	הָרִיעוּ			sound_the_alarm	sound_an_alarm			80	
+HOS_5:8w7	28w2R	w	1007+		Np	בֵּ֣ית	בֵּית			house_of	Beth			90	
+HOS_5:8w8	28JsR	w	1007	0.1	Np	אָ֔וֶן	אָוֶן			-aven	Aven			100	
+HOS_5:8w9a	28Sv8a	m	310 a	0.0	R	אַחֲרֶ֖י	אַחֲרֶי	behind	after					110	
 HOS_5:8w9b	28Sv8b	M		0.0	Sp2ms	ךָ	ךָ	you	you					120	
-HOS_5:8w10	28adR	w	1144	0	Np	בִּנְיָמִֽין	בִּנְיָמִין							130	
+HOS_5:8w10	28adR	w	1144	0	Np	בִּנְיָמִֽין	בִּנְיָמִין			Benjamin	O_Benjamin			130	
 HOS_5:8		seg			x-sof-pasuq	׃							.	140	
 HOS_5:9w1	28xek	w	669	1.1.0	Np	אֶפְרַ֨יִם֙	אֶפְרַיִם			Ephraim	Ephraim	S		10	
 HOS_5:9w2a	28UEHa	m	l		R	לְ	לְ	to	(into)_a					20	
@@ -523931,10 +523931,10 @@ HOS_13:1w6a	28aypa	m	b	1	R	בְּ	בְּ	in/on/at/with	in					70
 HOS_13:1w6b	28aypb	M	3478	1	Np	יִשְׂרָאֵ֑ל	יִשְׂרָאֵל	Israel	Israel					80	
 HOS_13:1w7a	28zG9a	m	c		C	וַ	וַ	and	and					90	
 HOS_13:1w7b	28zG9b	M	816		Vqw3ms	יֶּאְשַׁ֥ם	יֶּאְשַׁם	incurred_guilt	he_became_guilty					100	
-HOS_13:1w8a	28DUxa	m	b	0.0	R	בַּ	בַּ	in/on/at/with	by					110	
-HOS_13:1w8b	28DUxb	M	1168 a	0.0	Np	בַּ֖עַל	בַּעַל							120	
-HOS_13:1w9a	28G26a	m	c	0	C	וַ	וַ	and						130	
-HOS_13:1w9b	28G26b	M	4191	0	Vqw3ms	יָּמֹֽת	יָּמֹת			and=he|it_died				140	
+HOS_13:1w8a	28DUxa	m	b	0.0	Rd	בַּ	בַּ	in/on/at/with	by					110	
+HOS_13:1w8b	28DUxb	M	1168 a	0.0	Np	בַּ֖עַל	בַּעַל	Baal	Baal					120	
+HOS_13:1w9a	28G26a	m	c	0	C	וַ	וַ	and	and					130	
+HOS_13:1w9b	28G26b	M	4191	0	Vqw3ms	יָּמֹֽת	יָּמֹת	died	he_died	and=he|it_died				140	
 HOS_13:1		seg			x-sof-pasuq	׃							.	150	
 HOS_13:2w1a	28r7oa	m	c	1.1.1.0	C	וְ	וְ	and	and			S		10	
 HOS_13:2w1b	28r7ob	M	6258	1.1.1.0	D	עַתָּ֣ה	עַתָּה	now	now	and=now				20	
@@ -526146,7 +526146,7 @@ AMO_1:3w12	30NQN	w	5921 a		R	עַל	עַל			on/upon/above/on_account_of//he|it_
 AMO_1:3		seg			x-maqqef	־								170	
 AMO_1:3w13a	30uLfa	m	1758	0.0.0	Vqc	דּוּשָׁ֛	דּוּשָׁ	threshed	threshed					180	
 AMO_1:3w13b	30uLfb	M		0.0.0	Sp3mp	ם	ם	they	they					190	
-AMO_1:3w14a	30kA7a	m	b		Rd	בַּ	בַּ	in/on/at/with	with_(the)					200	
+AMO_1:3w14a	30kA7a	m	b		R	בַּ	בַּ	in/on/at/with	with_(the)					200	
 AMO_1:3w14b	30kA7b	M	2742 a		Ncmpc	חֲרֻצ֥וֹת	חֲרֻצוֹת	threshing_sledges_of	threshing_sledges_of					210	
 AMO_1:3w15a	303TSa	m	d	0.0	Td	הַ	הַ	the	of_(the)					220	
 AMO_1:3w15b	303TSb	M	1270	0.0	Ncmsa	בַּרְזֶ֖ל	בַּרְזֶל	iron	iron					230	
@@ -538053,17 +538053,17 @@ HAG_2:19w7b	37irWb	m	d	1.0.0	Td	הָ	הָ	the	the					160
 HAG_2:19w7c	37irWc	M	7416	1.0.0	Ncmsa	רִמּ֛וֹן	רִמּוֹן	pomegranate	pomegranate					170	
 HAG_2:19w8a	37x72a	m	c		C	וְ	וְ	and	and					180	
 HAG_2:19w8b	37x72b	M	6086		Ncmsc	עֵ֥ץ	עֵץ	tree_of	the_tree_of	and=tree				190	
-HAG_2:19w9a	37FYVa	m	d	1.0	Rd	הַ	הַ	the	of					200	
-HAG_2:19w9b	37FYVb	M	2132	1.0	Ncmsa	זַּ֖יִת	זַּיִת							210	
-HAG_2:19w10	37Uoo	w	3808		Tn	לֹ֣א	לֹא			not				220	
-HAG_2:19w11	37sC3	w	5375	1	Vqp3ms	נָשָׂ֑א	נָשָׂא							230	
+HAG_2:19w9a	37FYVa	m	d	1.0	Td	הַ	הַ	the	of					200	
+HAG_2:19w9b	37FYVb	M	2132	1.0	Ncmsa	זַּ֖יִת	זַּיִת	olive	the_olive					210	
+HAG_2:19w10	37Uoo	w	3808		Tn	לֹ֣א	לֹא			not	not			220	
+HAG_2:19w11	37sC3	w	5375	1	Vqp3ms	נָשָׂ֑א	נָשָׂא			borne	it_has_borne_[fruit]			230	
 HAG_2:19w12	374CS	w	4480 a		R	מִן	מִן			from/more_than	from			240	
 HAG_2:19		seg			x-maqqef	־								250	
-HAG_2:19w13a	376n2a	m	d		Td	הַ	הַ	the						260	
-HAG_2:19w13b	376n2b	M	3117		Ncmsa	יּ֥וֹם	יּוֹם			the=day				270	
-HAG_2:19w14a	37HqYa	m	d	0.0	Td	הַ	הַ	the						280	
-HAG_2:19w14b	37HqYb	M	2088	0.0	Pdxms	זֶּ֖ה	זֶּה			the=this				290	
-HAG_2:19w15	37BFZ	w	1288	0	Vpi1cs	אֲבָרֵֽךְ	אֲבָרֵךְ							300	
+HAG_2:19w13a	376n2a	m	d		Td	הַ	הַ	the	the					260	
+HAG_2:19w13b	376n2b	M	3117		Ncmsa	יּ֥וֹם	יּוֹם	day	day	the=day				270	
+HAG_2:19w14a	37HqYa	m	d	0.0	Td	הַ	הַ	the	(the)					280	
+HAG_2:19w14b	37HqYb	M	2088	0.0	Pdxms	זֶּ֖ה	זֶּה	this	this	the=this				290	
+HAG_2:19w15	37BFZ	w	1288	0	Vpi1cs	אֲבָרֵֽךְ	אֲבָרֵךְ			bless	I_will_bless			300	
 HAG_2:19		seg			x-sof-pasuq	׃							.	310	
 HAG_2:19		seg			x-samekh	ס						S		320	
 HAG_2:20w1a	37shya	m	c		C	וַ	וַ	and	and					20	
@@ -540419,20 +540419,20 @@ ZEC_7:5		seg			x-maqqef	־								170
 ZEC_7:5w10	38C5b	w	6684		Vqp2mp	צַמְתֶּ֨ם	צַמְתֶּם			fasted	you(pl)_fasted			180	
 ZEC_7:5w11a	38KGKa	m	c	0.1.1.0	C	וְ	וְ	and	and					190	
 ZEC_7:5w11b	38KGKb	M	5594	0.1.1.0	Vqa	סָפ֜וֹד	סָפוֹד	lamented	you_mourned					200	
-ZEC_7:5w12a	38V8ja	m	b		R	בַּ	בַּ	in/on/at/with	in					210	
-ZEC_7:5w12b	38V8jb	M	2549		Aomsa	חֲמִישִׁ֣י	חֲמִישִׁי							220	
+ZEC_7:5w12a	38V8ja	m	b		Rd	בַּ	בַּ	in/on/at/with	in					210	
+ZEC_7:5w12b	38V8jb	M	2549		Aomsa	חֲמִישִׁ֣י	חֲמִישִׁי	fifth	[month]					220	
 ZEC_7:5w13a	38PaRa	m	c	0.1.1	C	וּ	וּ	and	and					230	
 ZEC_7:5w13b	38PaRb	m	b	0.1.1	Rd	בַ	בַ	in/on/at/with	in					240	
-ZEC_7:5w13c	38PaRc	M	7637	0.1.1	Aomsa	שְּׁבִיעִ֗י	שְּׁבִיעִי							250	
-ZEC_7:5w14a	38Enva	m	c	0.1.0	C	וְ	וְ	and						260	
-ZEC_7:5w14b	38Envb	M	2088	0.1.0	Pdxms	זֶה֙	זֶה			and=this				270	
-ZEC_7:5w15	388Dt	w	7657		Acbpa	שִׁבְעִ֣ים	שִׁבְעִים			seventy				280	
-ZEC_7:5w16	38iSw	w	8141	0.1	Ncfsa	שָׁנָ֔ה	שָׁנָה			year				290	
-ZEC_7:5w17a	38cX6a	m	i		Ti	הֲ	הֲ							300	
-ZEC_7:5w17b	38cX6b	M	6684		Vqa	צ֥וֹם	צוֹם							310	
-ZEC_7:5w18a	38nM3a	m	6684	0.0	Vqp2mp	צַמְתֻּ֖	צַמְתֻּ							320	
-ZEC_7:5w18b	38nM3b	M		0.0	Sp1cs	נִי	נִי							330	
-ZEC_7:5w19	387Xe	w	589	0	Pp1cs	אָֽנִי	אָנִי							340	
+ZEC_7:5w13c	38PaRc	M	7637	0.1.1	Aomsa	שְּׁבִיעִ֗י	שְּׁבִיעִי	seventh	[month]					250	
+ZEC_7:5w14a	38Enva	m	c	0.1.0	C	וְ	וְ	and	and					260	
+ZEC_7:5w14b	38Envb	M	2088	0.1.0	Pdxms	זֶה֙	זֶה	these	this	and=this				270	
+ZEC_7:5w15	388Dt	w	7657		Acbpa	שִׁבְעִ֣ים	שִׁבְעִים			seventy	seventy			280	
+ZEC_7:5w16	38iSw	w	8141	0.1	Ncfsa	שָׁנָ֔ה	שָׁנָה			year	year[s]			290	
+ZEC_7:5w17a	38cX6a	m	i		Ti	הֲ	הֲ	?	really					300	
+ZEC_7:5w17b	38cX6b	M	6684		Vqa	צ֥וֹם	צוֹם	to_fast	(fast)?					310	
+ZEC_7:5w18a	38nM3a	m	6684	0.0	Vqp2mp	צַמְתֻּ֖	צַמְתֻּ	fasted	did					320	
+ZEC_7:5w18b	38nM3b	M		0.0	Sp1cs	נִי	נִי	me	you_fast_for_me					330	
+ZEC_7:5w19	387Xe	w	589	0	Pp1cs	אָֽנִי	אָנִי			me	me			340	
 ZEC_7:5		seg			x-sof-pasuq	׃							.	350	
 ZEC_7:6w1a	38noNa	m	c		C	וְ	וְ	and	and			S		10	
 ZEC_7:6w1b	38noNb	M	3588 a		C	כִ֥י	כִי	when	if/because	and=because/when				20	
@@ -541492,17 +541492,17 @@ ZEC_9:12w1	38dpu	w	7725	1.1.0	Vqv2mp	שׁ֚וּבוּ	שׁוּבוּ			return	re
 ZEC_9:12w2a	38bEma	m	l	1.1	R	לְ	לְ	to	to_[the]					20	
 ZEC_9:12w2b	38bEmb	M	1225	1.1	Ncmsa	בִצָּר֔וֹן	בִצָּרוֹן	stronghold	stronghold					30	
 ZEC_9:12w3	38jsC	w	615	1.0	Ncmpc	אֲסִירֵ֖י	אֲסִירֵי			prisoners_of	O_prisoners_of			40	
-ZEC_9:12w4a	38VLVa	m	d	1	Rd	הַ	הַ	the	of_(the)					50	
-ZEC_9:12w4b	38VLVb	M	8615 b	1	Ncfsa	תִּקְוָ֑ה	תִּקְוָה							60	
+ZEC_9:12w4a	38VLVa	m	d	1	Td	הַ	הַ	the	of_(the)					50	
+ZEC_9:12w4b	38VLVb	M	8615 b	1	Ncfsa	תִּקְוָ֑ה	תִּקְוָה	hope	hope					60	
 ZEC_9:12w5	38RYi	w	1571		Ta	גַּם	גַּם			also/yet	also			70	
 ZEC_9:12		seg			x-maqqef	־								80	
-ZEC_9:12w6a	38VMSa	m	d	0.1	Td	הַ	הַ	the						90	
-ZEC_9:12w6b	38VMSb	M	3117	0.1	Ncmsa	יּ֕וֹם	יּוֹם			the=day				100	
-ZEC_9:12w7	38WwP	w	5046		Vhrmsa	מַגִּ֥יד	מַגִּיד							110	
-ZEC_9:12w8	389hJ	w	4932	0.0	Ncmsa	מִשְׁנֶ֖ה	מִשְׁנֶה							120	
-ZEC_9:12w9	38wDc	w	7725		Vhi1cs	אָשִׁ֥יב	אָשִׁיב							130	
-ZEC_9:12w10a	381MEa	m	l	0	R	לָֽ	לָ	to/for						140	
-ZEC_9:12w10b	381MEb	M		0	Sp2fs	ךְ	ךְ			to/for=you(fs)				150	
+ZEC_9:12w6a	38VMSa	m	d	0.1	Td	הַ	הַ	the	this					90	
+ZEC_9:12w6b	38VMSb	M	3117	0.1	Ncmsa	יּ֕וֹם	יּוֹם	day	day	the=day				100	
+ZEC_9:12w7	38WwP	w	5046		Vhrmsa	מַגִּ֥יד	מַגִּיד			declare	[I_am]_declaring			110	
+ZEC_9:12w8	389hJ	w	4932	0.0	Ncmsa	מִשְׁנֶ֖ה	מִשְׁנֶה			double	double			120	
+ZEC_9:12w9	38wDc	w	7725		Vhi1cs	אָשִׁ֥יב	אָשִׁיב			restore	I_will_restore			130	
+ZEC_9:12w10a	381MEa	m	l	0	R	לָֽ	לָ	to	to					140	
+ZEC_9:12w10b	381MEb	M		0	Sp2fs	ךְ	ךְ	you	you	to/for=you(fs)				150	
 ZEC_9:12		seg			x-sof-pasuq	׃							.	160	
 ZEC_9:13w1	38bxs	w	3588 a		C	כִּֽי	כִּי			that/for/because/then/when	if/because	S		10	
 ZEC_9:13		seg			x-maqqef	־								20	

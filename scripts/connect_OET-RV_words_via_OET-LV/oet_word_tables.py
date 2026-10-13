@@ -8,19 +8,25 @@
 
 SIMPLE_WORDS combines the noun and verb tables with the smaller lists below.
 SINGLE_WORD_MAPPINGS is the one maintained list of single-word correspondences:
-    (RV word, LV word) preserves exact case and direction.
+    (RV word, LV word) preserves direction; selection ignores sentence case.
     (word, word, 'aligned') supports normalised, bidirectional positional matching.
-    (RV word, LV word, 'both') supports both of those matching passes.
+    (RV word, LV word, 'both') permits both symmetric alignment and directional recovery.
 The positional pass can distinguish repeated occurrences of directional pairs,
 at a lower score than identical words, inflections and symmetric alternatives.
-The verse-wide fallback still requires unique words. Do not make directional
+Verse-wide lexical recovery requires mutually unique matches. Do not make directional
 pairs symmetric or expand them transitively.
 
 Rows are alphabetised by the first word, ignoring case, punctuation and
-diacritics. Alternatives for the same RV word retain their matching priority.
+diacritics. All alternatives compete on evidence and context, not row order.
 The two working lookups EQUIVALENT_LV_RV_WORDS and RV_SINGLE_WORDS_FROM_LV_WORDS
 are derived from this list; edit SINGLE_WORD_MAPPINGS, not those lookups.
 These modules contain data and validation only, with no Bible loading.
+
+Review new pairs in mapped passages, including repeated occurrences and other
+senses of each word. A missing entry (e.g. weightier -> heavier, MAT 23:23) is
+different from an unresolved alignment: adding vocabulary must not force a
+choice between indistinguishable source occurrences. Co-occurrence alone is
+not evidence of equivalence, and idioms belong in the phrase table.
 """
 
 from oet_noun_tables import SIMPLE_NOUNS_FLAT, verbalNouns
@@ -79,7 +85,7 @@ SIMPLE_WORDS = tuple(dict.fromkeys(
 
 
 # Single-word correspondences, alphabetised by the first word.
-# Two-column rows keep their exact RV -> LV direction and matching priority.
+# Two-column rows keep their RV -> LV direction.
 # 'aligned' adds only the positional match; 'both' also keeps the unique match.
 # Multiword alternatives and their insertion priorities live in oet_phrase_tables.py.
 SINGLE_WORD_MAPPINGS = (
@@ -171,6 +177,7 @@ SINGLE_WORD_MAPPINGS = (
     ('afraid','fearing'),
     ('afraid', 'fear'), # DEU 17:13
     ('afraid', 'fears'), # KI1 1:51
+    ('afraid', 'fearful'), # MRK 4:40 (reviewed 2026-10-13)
     ('afterwards', 'afterward'), # HEB 12:17
     ('agabus', 'agabos', 'aligned'),
     ('against', 'towards', 'aligned'),
@@ -179,7 +186,9 @@ SINGLE_WORD_MAPPINGS = (
     ('agony', 'tormented'), # RV REV 12:2
     ('agreed','same'), # Mrk 14:56
     ('agreeing','confirming'),
+    ('agreeing', 'consenting'), # ACT 8:1 (reviewed 2026-10-13)
     ('agreement','covenant'),
+    ('agrees', 'consenting'), # CO1 7:12 (reviewed 2026-10-13)
     ('ahead','before'), # Mrk 14:28
     ('alert','watching'), # Mrk 13:34
     ('alienated', 'estranged'), # COL 1:21
@@ -212,10 +221,12 @@ SINGLE_WORD_MAPPINGS = (
     ('also','and', 'both'),
     ('although', 'though', 'aligned'),
     ('always','perpetuity'),
+    ('always', 'continually'), # CH1 23:31 (reviewed 2026-10-13)
     ('amassed', 'gathered'), # RV CH2 24:11
     ('amazed','astonished'),
     ('amazed','marvelling'),
     ('amazed', 'amazement'), # LUK 4:36
+    ('amazed', 'marvelled'), # ACT 7:31 (reviewed 2026-10-13)
     ('amazing', 'awesome'), # RV ISA 64:3 / LV ISA 64:2
     ('ambassadors', 'messengers'), # EZE 17:15
     ('ambition', 'ambitious'), # TH1 4:11
@@ -237,6 +248,7 @@ SINGLE_WORD_MAPPINGS = (
     ('angels', 'messengers'), # ROM 8:38
     ('anger', 'rage'), # EST 7:10
     ('anger', 'rages'), # CO2 12:20
+    ('anger', 'fury'), # HEB 10:27 (reviewed 2026-10-13)
     ('angering', 'provoked'), # CH2 28:25
     ('angrily','anger'), # Mrk 3:5
     ('angry','enraged'), # Mat 2:16
@@ -405,6 +417,7 @@ SINGLE_WORD_MAPPINGS = (
     ('associates', 'companions'), # ISA 44:11
     ('assure','Truly'), # Mrk 13:30, 16:^
     ('assured','saying'), # Mrk 13:30, 16:^
+    ('astonished', 'marvelled'), # ACT 10:45 (reviewed 2026-10-13)
     ('astounded','amazed'), # Mrk 15:5
     ('astounded','marvelling'), # Mrk 15:5
     ('astounded', 'astonished'), # JOB 26:11
@@ -496,6 +509,7 @@ SINGLE_WORD_MAPPINGS = (
     ('battlefield', 'field'), # RV JDG 5:18
     ('battles','wars'),
     ('battling', 'fighting'), # SA1 31:1
+    ('beach', 'shore'), # ACT 21:5 (reviewed 2026-10-13)
     ('beans', 'bean[s]'), # EZE 4:9
     ('bear', 'carry'), # NUM 11:14
     ('bear', 'endure'), # JER 44:22
@@ -655,6 +669,7 @@ SINGLE_WORD_MAPPINGS = (
     ('bread', 'bread[s]'), # KI1 14:3
     ('bread', 'food'), # EZE 16:19
     ('bread', 'wheat'), # RV PSA 81:16 / LV PSA 81:17
+    ('breadrolls', 'loaves'), # LUK 9:13 (reviewed 2026-10-13)
     ('Break', 'tear'), # JDG 6:25
     ('break', 'tear'), # GEN 27:40
     ('break', 'violate'), # PSA 89:31
@@ -699,6 +714,7 @@ SINGLE_WORD_MAPPINGS = (
     ('brought', 'led'), # ACT 18:12
     ('brought', 'taking'), # JHN 21:13
     ('brought', 'took'), # EXO 2:10
+    ('buds', 'bulbs'), # EXO 25:31 (reviewed 2026-10-13)
     ('build', 'established'), # PSA 107:36
     ('build', 'rebuild'), # HAG 1:8
     ('build', 'make'), # RV DEU 16:21
@@ -813,6 +829,7 @@ SINGLE_WORD_MAPPINGS = (
     ('cattle', 'cattles'), # DEU 7:13
     ('cattle', 'herd[s]'), # GEN 47:17
     ('cattle', 'ox[en]'), # RV GEN 32:5 / LV GEN 32:6
+    ('cattle', 'livestock'), # CH2 14:15 (reviewed 2026-10-13)
     ('caught', 'captured'), # ISA 13:15
     ('caught', 'taken'), # JOS 7:15
     ('Cause', 'make'), # JER 31:7
@@ -823,6 +840,7 @@ SINGLE_WORD_MAPPINGS = (
     ('caused', 'done'), # NUM 11:11
     ('caused', 'made'), # EXO 9:12
     ('causes', 'makes'), # JOB 37:13
+    ('cavalry', 'horsemen'), # ISA 31:1 (reviewed 2026-10-13)
     ('cease','removed'),
     ('cedar', 'cedar[s]'), # ISA 41:19
     ('Celebrate', 'observe'), # KI2 23:21
@@ -833,6 +851,7 @@ SINGLE_WORD_MAPPINGS = (
     ('celebration', 'celebrate'), # NUM 29:12
     ('celebration', 'festivities'), # LUK 14:8
     ('celebration', 'observed'), # NEH 8:18
+    ('celebration', 'festival'), # EZE 45:23 (reviewed 2026-10-13)
     ('celebrations', 'festivities'), # LUK 12:36
     ('census', 'number'), # CH1 27:23
     ('centre', 'center'), # EZE 38:12
@@ -902,6 +921,7 @@ SINGLE_WORD_MAPPINGS = (
     ('choice', 'choicest'), # EZE 20:40
     ('chooses', 'taking'), # RV GEN 27:46
     ('chosen', 'found'), # RV PSA 89:20 / LV PSA 89:21
+    ('church', 'assembly'), # CO1 4:17 (reviewed 2026-10-13)
     ('circumcised', 'circumcision'), # EPH 2:11
     ('circumcision', 'circumcise'), # LUK 2:21
     ('cities', 'town'), # HAB 2:8
@@ -913,6 +933,7 @@ SINGLE_WORD_MAPPINGS = (
     ('clans', 'divisions'), # JDG 5:15
     ('clapped', 'struck'), # KI2 11:12
     ('clay', 'mud'), # PSA 40:2
+    ('clay', 'earthenware'), # JER 32:14 (reviewed 2026-10-13)
     ('clean', 'cleanness'), # SA2 22:21
     ('clean', 'cleanse'), # EZE 39:12
     ('clean', 'cleansed'), # ACT 10:15
@@ -966,7 +987,9 @@ SINGLE_WORD_MAPPINGS = (
     ('coastal', 'islands'), # EZE 27:35
     ('coastlines', 'coast'), # ISA 20:6
     ('coasts', 'islands'), # EZE 27:7
+    ('coat', 'garment'), # PRO 20:16 (reviewed 2026-10-13)
     ('cold', 'coldness'), # JOB 24:7
+    ('collapsed', 'fell'), # HEB 11:30 (reviewed 2026-10-13)
     ('collect','gathering'), # Mrk 13:27
     ('collect', 'gather'), # NUM 19:9
     ('collect', 'gathers'), # RV JER 9:22 / LV JER 9:21
@@ -1060,6 +1083,7 @@ SINGLE_WORD_MAPPINGS = (
     ('connecting', 'joined'), # EXO 36:22
     ('conquered', 'captured'), # RV JER 50:46
     ('conquered', 'subdued'), # RV SA2 8:11
+    ('conquered', 'overcame'), # REV 3:21 (reviewed 2026-10-13)
     ('conqueror', 'dispossesses'), # MIC 1:15
     ('conquerors', 'conquering'), # ROM 8:37
     ('conscripted', 'selected'), # NUM 31:5
@@ -1084,7 +1108,9 @@ SINGLE_WORD_MAPPINGS = (
     ('consume', 'devour'), # EZE 36:14
     ('consume', 'eat'), # RV DEU 14:26
     ('consumed', 'ate'), # CH2 7:1
+    ('container', 'vessel'), # JER 48:11 (reviewed 2026-10-13)
     ('containers', 'kettles'), # MRK 7:4
+    ('containers', 'vessels'), # CO2 4:7 (reviewed 2026-10-13)
     ('contempt', 'abhorrence'), # DAN 12:2
     ('contempt', 'scorn'), # JOB 16:10
     ('contempt', 'mockery'), # RV PSA 44:13 / LV PSA 44:14
@@ -1096,6 +1122,7 @@ SINGLE_WORD_MAPPINGS = (
     ('continual', 'continuity'), # EXO 29:42
     ('continually', 'continuance'), # AMO 1:11
     ('continually', 'continuity'), # EXO 30:8
+    ('continually', 'always'), # COL 1:3 (reviewed 2026-10-13)
     ('continue', 'continually'), # HAB 1:17
     ('continue', 'remain'), # TI1 2:15
     ('continue', 'remaining'), # ACT 11:23
@@ -1226,6 +1253,7 @@ SINGLE_WORD_MAPPINGS = (
     ('crooked', 'perverse'), # PRO 8:8
     ('crop', 'craw'), # RV LEV 1:16
     ('cross', 'pass'), # DEU 3:25
+    ('crossbars', 'bars'), # EXO 26:26 (reviewed 2026-10-13)
     ('crossed', 'pass'), # JOS 4:1
     ('crossed', 'passed'), # CH2 21:9
     ('crossing', 'fords'), # JDG 12:6
@@ -1403,6 +1431,7 @@ SINGLE_WORD_MAPPINGS = (
     ('deported', 'deportation'), # MAT 1:11
     ('deposed', 'removed'), # CH2 36:3
     ('depraved', 'perverted'), # RV MAT 17:17
+    ('depths', 'deeps'), # ISA 63:13 (reviewed 2026-10-13)
     ('derision', 'mockery'), # EZE 23:32
     ('descend', 'falls'), # RV PRO 17:20
     ('descendant', 'descent'), # REV 22:16
@@ -1474,6 +1503,7 @@ SINGLE_WORD_MAPPINGS = (
     ('destruction', 'destroyed'), # EXO 9:15
     ('destruction', 'destroying'), # CH1 21:12
     ('destruction', 'perish'), # OBA 1:12
+    ('destruction', 'ruin'), # PRO 10:14 (reviewed 2026-10-13)
     ('destructive', 'destroyer'), # JER 51:1
     ('destructive', 'destroying'), # MAT 6:20
     ('destructive', 'destruction'), # EZE 9:1
@@ -1526,6 +1556,8 @@ SINGLE_WORD_MAPPINGS = (
     ('dignified', 'dignity'), # TI1 3:4
     ('dignity', 'honour'), # PRO 31:25
     ('diligent', 'diligently'), # PRO 13:24
+    ('dinner', 'supper'), # CO1 11:20 (reviewed 2026-10-13)
+    ('dinners', 'suppers'), # LUK 20:46 (reviewed 2026-10-13)
     ('dinosaur','dragon'), # Rev 12:3
     ('directed', 'led'), # RV PRO 4:11
     ('direction', 'directed'), # CH2 12:14
@@ -1567,6 +1599,7 @@ SINGLE_WORD_MAPPINGS = (
     ('disdain', 'scorn'), # RV EZE 36:5
     ('disease', 'plague'), # CH1 21:22
     ('disease', 'sickness'), # CH2 21:18
+    ('disease', 'pestilence'), # CH2 7:13 (reviewed 2026-10-13)
     ('diseases', 'plague'), # PSA 91:3
     ('diseases', 'plagues'), # GEN 12:17
     ('diseases', 'sickness'), # EXO 15:26
@@ -1621,6 +1654,7 @@ SINGLE_WORD_MAPPINGS = (
     ('divination', 'divine'), # MIC 3:11
     ('divination', 'diviner'), # JOS 13:22
     ('diviners', 'divine'), # MIC 3:7
+    ('diviners', 'soothsayers'), # ISA 19:3 (reviewed 2026-10-13)
     ('division', 'group'), # NUM 2:4
     ('division', 'groups'), # NUM 1:52
     ('divisions', 'groups'), # NUM 1:3
@@ -1735,6 +1769,7 @@ SINGLE_WORD_MAPPINGS = (
     ('eldest', 'firstborn'), # CH1 8:30
     ('eliminate','destroying'),
     ('eliminate', 'extinguish'), # EZE 32:7
+    ('eliminate', 'destroy'), # CH2 12:12 (reviewed 2026-10-13)
     ('embarrassed', 'abashed'), # JER 15:9
     ('embers', 'coals'), # PRO 26:21
     ('emerald-looking', 'emerald'), # REV 4:3
@@ -1750,6 +1785,8 @@ SINGLE_WORD_MAPPINGS = (
     ('encourage', 'comforters'), # RV PSA 69:20 / LV PSA 69:21
     ('encouraged','exhorting'),
     ('encouraged', 'strengthened'), # SA1 23:16
+    ('encouragement', 'exhortation'), # ACT 9:31 (reviewed 2026-10-13)
+    ('encouraging', 'exhorting'), # CO2 5:20 (reviewed 2026-10-13)
     ('end', 'cease'), # EZE 33:28
     ('end', 'complete'), # ACT 20:24
     ('end', 'completed'), # EST 1:5
@@ -1849,6 +1886,7 @@ SINGLE_WORD_MAPPINGS = (
     ('exceeding', 'surpassing'), # EPH 1:19
     ('exceeds', 'surpassing'), # EPH 3:19
     ('excellence', 'excellent'), # CO2 4:7
+    ('execute', 'kill'), # JHN 18:31 (reviewed 2026-10-13)
     ('executed','death'), # Mrk 13:12
     ('execution','stake'),
     ('exempt', 'free'), # RV SA1 17:25
@@ -1859,6 +1897,7 @@ SINGLE_WORD_MAPPINGS = (
     ('exiting', 'going'), # EXO 19:1
     ('expand', 'enlarge'), # RV EXO 34:24
     ('expanded', 'enlarge'), # PSA 119:32
+    ('expectation', 'hope'), # CO2 3:12 (reviewed 2026-10-13)
     ('expected', 'look'), # HAG 1:9
     ('expecting', 'awaiting'), # CO1 16:11
     ('expecting', 'wait'), # PSA 71:14
@@ -1890,6 +1929,7 @@ SINGLE_WORD_MAPPINGS = (
     ('extension', 'prolonging'), # DAN 7:12
     ('extent', 'measure'), # RV PSA 39:4 / LV PSA 39:5
     ('extortion', 'oppression'), # RV ECC 5:8 / LV ECC 5:7
+    ('extremely', 'exceedingly'), # LUK 18:23 (reviewed 2026-10-13)
     ('eyelashes', 'eyelids'), # PRO 6:25
     ('Ezrahite', 'Ezrachite'), # RV KI1 4:31 / LV KI1 5:11
     ('face', 'cheek'), # KI1 22:24
@@ -1956,6 +1996,7 @@ SINGLE_WORD_MAPPINGS = (
     ('feed', 'grazes'), # RV PSA 80:13 / LV PSA 80:14
     ('feeding', 'eat'), # DEU 8:3
     ('fellow','man'), # Mrk 14:51
+    ('festival', 'feast'), # JHN 6:4 (reviewed 2026-10-13)
     ('festivals', 'feasts'), # AMO 5:21
     ('fetch', 'bring'), # KI1 22:9
     ('fever', 'feverish'), # MAT 8:14
@@ -2177,6 +2218,7 @@ SINGLE_WORD_MAPPINGS = (
     ('further', 'furthermore'), # CO1 3:20
     ('further', 'farther'), # RV LUK 24:28
     ('fury', 'rage'), # EZE 6:12
+    ('fury', 'anger'), # EZE 22:21 (reviewed 2026-10-13)
     ('futile', 'futility'), # ISA 30:7
     ('future', 'later'), # RV PSA 102:18 / LV PSA 102:19
     ('gain', 'profit'), # CO1 15:32
@@ -2208,6 +2250,7 @@ SINGLE_WORD_MAPPINGS = (
     ('genealogies', 'genealogical'), # CH2 31:18
     ('generals', 'leaders'), # DAN 9:6
     ('generations', 'generation[s]'), # CH1 16:15
+    ('generosity', 'grace'), # ROM 5:21 (reviewed 2026-10-13)
     ('generous', 'generosity'), # ROM 12:8
     ('generously', 'abundantly'), # RV PSA 65:10 / LV PSA 65:11
     ('gentiles', 'ethne', 'aligned'),
@@ -2275,6 +2318,7 @@ SINGLE_WORD_MAPPINGS = (
     ('goats', 'she-goats'), # SNG 4:1
     ('god-haters', 'god-hating'), # ROM 1:30
     ('godlessness', 'ungodliness'), # RV TI2 2:16
+    ('godliness', 'devoutness'), # PE2 1:3 (reviewed 2026-10-13)
     ('godly','devout'),
     ('godly','righteous'),
     ("God's",'god'), # Mrk 14:25, 13:11
@@ -2349,6 +2393,7 @@ SINGLE_WORD_MAPPINGS = (
     ('greatest', 'greater'), # CO1 13:13
     ('greatly', 'abundance'), # CH1 4:38
     ('greatness', 'great'), # EZE 38:23
+    ('greatness', 'glory'), # CO2 3:18 (reviewed 2026-10-13)
     ('greed', 'greediness'), # EPH 5:3
     ('greedily', 'greediness'), # EPH 4:19
     ('green', 'greenery'), # GEN 1:30
@@ -2356,6 +2401,7 @@ SINGLE_WORD_MAPPINGS = (
     ('grew', 'raised'), # ACT 13:1
     ('grief', 'vexation'), # PSA 10:14
     ('grief', 'sorrow'), # RV PSA 13:2 / LV PSA 13:3
+    ('grief', 'mourning'), # REV 18:7 (reviewed 2026-10-13)
     ('grieving', 'mourning'), # RV REV 21:4
     ('grinding', 'grinders'), # ECC 12:3
     ('gripping', 'hold'), # MIC 4:9
@@ -2377,6 +2423,7 @@ SINGLE_WORD_MAPPINGS = (
     ('grows', 'sprouting'), # HEB 12:15
     ('grows', 'sprouts'), # PSA 90:6
     ('grumbled', 'murmured'), # DEU 1:27
+    ('guarantee', 'surety'), # PRO 11:15 (reviewed 2026-10-13)
     ('guarantor', 'guarantee'), # HEB 7:22
     ('guard','doorkeeper'), # Mrk 13:34, 14:44
     ('guard','securely'), # Mrk 13:34, 14:44
@@ -2430,6 +2477,7 @@ SINGLE_WORD_MAPPINGS = (
     ('happened', 'passed'), # CH1 29:30
     ('happening','becoming'), # Mrk 13:29
     ('happily', 'joy', 'aligned'), # ISA 52:8
+    ('happiness', 'gladness'), # EST 8:16 (reviewed 2026-10-13)
     ('happy','elated'), # Mat 2:10
     ('happy', 'blessed'), # PRO 14:21
     ('happy', 'glad'), # ISA 35:1
@@ -2549,6 +2597,7 @@ SINGLE_WORD_MAPPINGS = (
     ('homes', 'dwellings'), # RV LUK 16:9
     ('honest','true'),
     ('honest', 'righteousness'), # GEN 30:33
+    ('honestly', 'truly'), # JHN 1:51 (reviewed 2026-10-13)
     ('honeycomb', 'honey'), # SA1 14:25
     ('honour','glorify'),
     ('honour', 'beautify'), # EZR 7:27
@@ -2556,6 +2605,7 @@ SINGLE_WORD_MAPPINGS = (
     ('honour', 'greatness'), # PSA 71:21
     ('honour', 'fear'), # RV PSA 40:3 / LV PSA 40:4
     ('honour', 'fearing'), # RV PSA 60:4 / LV PSA 60:6
+    ('honour', 'glory'), # ACT 12:23 (reviewed 2026-10-13)
     ('honourable', 'honour'), # ISA 5:13
     ('honourable', 'honoured'), # ISA 3:5
     ('honourable', 'noble'), # PSA 45:9
@@ -2580,6 +2630,7 @@ SINGLE_WORD_MAPPINGS = (
     ('hostages', 'pledges'), # CH2 25:24
     ('hostility', 'enmities'), # GAL 5:20
     ('hostility', 'enmity'), # EPH 2:14
+    ('hostility', 'animosity'), # HOS 9:7 (reviewed 2026-10-13)
     ('hot', 'live'), # ISA 6:6
     ('house', 'habitation'), # PRO 21:20
     ('house', 'home'), # MRK 14:14
@@ -2587,6 +2638,7 @@ SINGLE_WORD_MAPPINGS = (
     ('houseful', 'house'), # NUM 22:18
     ('household', 'house'), # ACT 7:10
     ('house-servants', 'servants'), # PE1 2:18
+    ('however', 'nevertheless'), # CH2 30:11 (reviewed 2026-10-13)
     ('hug', 'embraced'), # MRK 9:36
     ('huge','great'),
     ('hugged', 'embraced'), # LUK 15:20
@@ -2662,6 +2714,7 @@ SINGLE_WORD_MAPPINGS = (
     ('imprisoned', 'captive'), # ROM 7:23
     ('imprisoned', 'shut'), # JER 32:2
     ('imprisoned', 'confined'), # RV KI2 17:4
+    ('imprisonment', 'bonds'), # ACT 23:29 (reviewed 2026-10-13)
     ('imprisons', 'shut'), # JOB 11:10
     ('impure', 'impurity'), # EPH 4:19
     ('impure', 'unclean'), # ECC 9:2
@@ -2670,6 +2723,7 @@ SINGLE_WORD_MAPPINGS = (
     ('in','in/on/at/with'),
     ('incense', 'smoke'), # CH2 34:25
     ('incinerated', 'burned'), # MAT 13:40
+    ('incinerator', 'furnace'), # MAT 13:42 (reviewed 2026-10-13)
     ('inclined', 'inclination'), # GEN 8:21
     ('included','among'), # Mrk 15:40
     ('including','and'), # Mrk 15:40
@@ -2679,6 +2733,7 @@ SINGLE_WORD_MAPPINGS = (
     ('increasingly', 'increase'), # DAN 11:39
     ('incredible','great'), # Mrk 13:26
     ('indeed','already'), # Mrk 15:44
+    ('indicating', 'signifying'), # JHN 12:33 (reviewed 2026-10-13)
     ('indignant', 'indignation'), # LAM 2:6
     ('individual', 'person'), # RV JOB 34:29
     ('indulge', 'gratify'), # ECC 2:3
@@ -2729,6 +2784,7 @@ SINGLE_WORD_MAPPINGS = (
     ('insignificant','least'), # Mat 2:6
     ('insignificant', 'lowly'), # EZE 29:14
     ('inspect', 'visit'), # JOB 5:24
+    ('inspecting', 'examining'), # NEH 2:13 (reviewed 2026-10-13)
     ('instant', 'moment'), # ISA 51:4
     ('instead', 'rather'), # ROM 14:13
     ('instruct', 'teach'), # PRO 22:19
@@ -2782,11 +2838,14 @@ SINGLE_WORD_MAPPINGS = (
     ('Israeli', 'Yisrāʼēl/Israel'), # RV SA1 24:2 / LV SA1 24:3
     ('Israelis','people'),
     ('Israelis', 'Yisrāʼēl/Israel'), # RV HOS 1:10 / LV HOS 2:1
+    ('issues', 'questions'), # ACT 25:19 (reviewed 2026-10-13)
     ('item','article'),
     ('items','article'),
+    ('items', 'articles'), # CH2 9:24 (reviewed 2026-10-13)
     ('jacinth', 'hyacinth'), # REV 21:20
     ('jairus', 'yairos', 'aligned'),
     ('james', 'iakovos', 'aligned'),
+    ('jars', 'waterpots'), # JHN 2:6 (reviewed 2026-10-13)
     ('jealous','envy'), # Mrk 15:10
     ('jealous', 'envious'), # PSA 106:16
     ('jealous', 'jealousy'), # ACT 13:45
@@ -2932,6 +2991,7 @@ SINGLE_WORD_MAPPINGS = (
     ('lawyers', 'nomikousin', 'aligned'),
     ('lay', 'put'), # RV PSA 84:3 / LV PSA 84:4
     ('lay', 'set'), # RV PSA 38:12 / LV PSA 38:13
+    ('lazy', 'idle'), # TIT 1:12 (reviewed 2026-10-13)
     ('leader','ruler'),
     ('leader', 'chief'), # CH1 5:7
     ('leader', 'judge'), # JDG 2:19
@@ -2952,6 +3012,7 @@ SINGLE_WORD_MAPPINGS = (
     ('leash', 'cord'), # RV JOB 41:2 / LV JOB 40:26
     ('least', 'insignificant'), # JNA 3:5
     ('least', 'little'), # NUM 11:32
+    ('leather', 'hide'), # LEV 13:48 (reviewed 2026-10-13)
     ('Leave', 'depart'), # JOB 21:14
     ('Leave', 'go'), # CH2 26:18
     ('leave', 'depart'), # JDG 16:17
@@ -3151,6 +3212,7 @@ SINGLE_WORD_MAPPINGS = (
     ('loot', 'plunder'), # PSA 68:12
     ('looted', 'plundered'), # JER 50:37
     ('looted', 'plunder'), # RV ZEC 2:9 / LV ZEC 2:13
+    ('lotion', 'ointment'), # JHN 12:5 (reviewed 2026-10-13)
     ('lots', 'plentiful'), # RV DAN 4:12 / LV DAN 4:9
     ('loud', 'sound'), # PSA 102:5
     ('louder','exceedingly'), # Mrk 15:14
@@ -3199,6 +3261,7 @@ SINGLE_WORD_MAPPINGS = (
     ('man', 'human'), # RV ACT 10:26
     ('manager', 'management'), # LUK 16:2
     ('mankind','humans'),
+    ('mankind', 'humankind'), # DAN 4:32 (reviewed 2026-10-13)
     ("man's", 'human'), # RV PE2 2:16
     ('many','multiply'),
     ('many','all', 'both'), # MAT 4:5
@@ -3226,6 +3289,7 @@ SINGLE_WORD_MAPPINGS = (
     ('matters', 'message/thing/matter'), # EZR 10:14
     ('matthew', 'matthaios', 'aligned'),
     ('mauled', 'tore'), # KI2 2:24
+    ('maybe', 'perhaps'), # ISA 47:12 (reviewed 2026-10-13)
     ('meadow', 'pastureland'), # HOS 9:13
     ('mean', 'hateful'), # TIT 3:3
     ('means','translated'), # Mrk 15:22
@@ -3300,6 +3364,7 @@ SINGLE_WORD_MAPPINGS = (
     ('minister', 'serve'), # CH1 15:2
     ('ministered', 'serves'), # NUM 4:37
     ('ministering', 'serve'), # CH2 5:14
+    ('ministry', 'service'), # CO2 5:18 (reviewed 2026-10-13)
     ('minor', 'small'), # RV SA2 7:19
     ('miracle', 'sign', 'aligned'), # CH2 32:31
     ('miracles','signs'),
@@ -3434,6 +3499,7 @@ SINGLE_WORD_MAPPINGS = (
     ('news', 'new[s]'), # PSA 112:7
     ('News', 'words/messages'), # RV PRO 18:8
     ('nicanor', 'nikanor', 'aligned'),
+    ('nicknamed', 'called'), # ACT 1:23 (reviewed 2026-10-13)
     ('nicolas', 'nikolaos', 'aligned'),
     ('night', 'night[s]'), # GEN 7:12
     ('nights', 'night[s]'), # DEU 9:9
@@ -3790,6 +3856,7 @@ SINGLE_WORD_MAPPINGS = (
     ('plant', 'plant[s]'), # GEN 1:30
     ('plant', 'set'), # ISA 41:19
     ('plant', 'shoot'), # ISA 53:2
+    ('planted', 'sown'), # MAT 13:24 (reviewed 2026-10-13)
     ('planter', 'planting'), # CO1 3:7
     ('plants', 'plant[s]'), # GEN 9:3
     ('plants', 'plantation'), # ISA 5:7
@@ -4325,6 +4392,7 @@ SINGLE_WORD_MAPPINGS = (
     ('remembrance', 'remember'), # PSA 77:6
     ('reminder', 'memorial'), # EXO 13:9
     ('reminder', 'sign'), # RV NUM 16:38 / LV NUM 17:3
+    ('reminder', 'remembrance'), # PE2 1:13 (reviewed 2026-10-13)
     ('remnant', 'leave'), # EZE 6:8
     ('remnant', 'left'), # ZEC 9:7
     ('remote', 'remotest'), # JDG 19:18
@@ -4808,6 +4876,7 @@ SINGLE_WORD_MAPPINGS = (
     ('seller', 'sells'), # EZE 7:12
     ('semen', 'seed'), # RV LEV 15:16
     ('send', 'bring'), # RV JOL 3:11 / LV JOL 4:11
+    ('sensible', 'prudent'), # MAT 25:2 (reviewed 2026-10-13)
     ('sensitive', 'delicate'), # DEU 28:54
     ('sent', 'dismissals'), # EXO 18:2
     ('sent', 'stretched'), # RV PSA 80:11 / LV PSA 80:12
@@ -4948,6 +5017,7 @@ SINGLE_WORD_MAPPINGS = (
     ('silenced', 'silent'), # JER 47:5
     ('silent', 'silence'), # JOB 11:3
     ('silent', 'dumb'), # RV EZE 24:27
+    ('silent', 'quiet'), # LUK 14:4 (reviewed 2026-10-13)
     ('silently', 'silent'), # EZE 24:17
     ('silver-plated', 'silver'), # ISA 30:22
     ('similar','likewise'), # Mrk 14:31
@@ -5063,6 +5133,7 @@ SINGLE_WORD_MAPPINGS = (
     ('sons', 'children'), # GEN 22:20
     ('sons', 'son', 'aligned'), # Still needed by positional alignment when the noun repeats.
     ('soon','shortly', 'both'),
+    ('soon', 'quickly'), # JHN 13:27 (reviewed 2026-10-13)
     ('sorcerer', 'magician'), # ACT 13:8
     ('sorcerers', 'magicians/soothsayers'), # RV GEN 41:24
     ('sorcery', 'sorcerer'), # DEU 18:10
@@ -5216,6 +5287,7 @@ SINGLE_WORD_MAPPINGS = (
     ('stillborn', 'miscarriage'), # ECC 6:3
     ('stingers', 'stings'), # REV 9:10
     ('stir', 'raise'), # HAB 1:6
+    ('stir', 'arouse'), # SNG 2:7 (reviewed 2026-10-13)
     ('stirred', 'aroused'), # PSA 45:1
     ('stock', 'livestock'), # RV KI1 18:5
     ('stocks', 'stock[s]'), # JER 20:2
@@ -5315,6 +5387,7 @@ SINGLE_WORD_MAPPINGS = (
     ('stunned','amazed'), # Mrk 16:5,8
     ('stunned','amazement'), # Mrk 16:5,8
     ('stunned', 'astonished'), # MRK 10:26
+    ('stupid', 'foolish'), # LUK 11:40 (reviewed 2026-10-13)
     ('stupidity', 'foolishness'), # PRO 5:23
     ('subdue', 'tame'), # MRK 5:4
     ('subdued', 'humbled'), # CH2 13:18
@@ -5471,6 +5544,7 @@ SINGLE_WORD_MAPPINGS = (
     ('tell', 'speaks'), # JOB 9:7
     ('tell', 'spoke'), # KI1 4:32
     ('Tell', 'recount'), # RV JOL 1:3
+    ('tell', 'announce'), # JOB 1:15 (reviewed 2026-10-13)
     ('telling','proclaimed'),
     ('telling','saying'),
     ('telling','speaking'),
@@ -5758,6 +5832,7 @@ SINGLE_WORD_MAPPINGS = (
     ('troubled', 'disturbed'), # DAN 2:1
     ('troubles', 'afflicted'), # PSA 119:67
     ('troubles', 'distress'), # PSA 77:2
+    ('troubles', 'tribulation'), # JHN 16:33 (reviewed 2026-10-13)
     ('troublesome', 'trouble'), # ISA 10:1
     ('trough', 'channel'), # GEN 24:20
     ('trough', 'manger'), # LUK 2:7
@@ -5848,6 +5923,7 @@ SINGLE_WORD_MAPPINGS = (
     ('unfaithful', 'unfaithfulness'), # CH2 29:19
     ('ungodly','unclean'),
     ('unimportant', 'insignificant'), # RV PSA 119:141
+    ('uninhabited', 'desolate'), # MAT 23:38 (reviewed 2026-10-13)
     ('unintentionally', 'inadvertence'), # LEV 4:2
     ('united', 'joined'), # ROM 12:9
     ('unity', 'oneness'), # EPH 4:3
@@ -5883,6 +5959,7 @@ SINGLE_WORD_MAPPINGS = (
     ('useless', 'uselessly'), # MAT 15:9
     ('utensils', 'articles'), # EXO 31:9
     ('utensils', 'vessels', 'aligned'), # EXO 37:16
+    ('valid', 'true'), # JHN 5:31 (reviewed 2026-10-13)
     ('valley', 'wadi'), # CH2 20:16
     ('valleys', 'valley[s]'), # NUM 14:25
     ('valleys', 'wadis'), # KI1 18:5
@@ -6059,6 +6136,7 @@ SINGLE_WORD_MAPPINGS = (
     ('weighing', 'weight'), # JOS 7:21
     ('weighs', 'weight'), # PRO 27:3
     ('weight', 'weighed'), # JER 32:10
+    ('weightier', 'heavier'), # MAT 23:23 (reviewed 2026-10-13)
     ('welcome', 'received'), # LUK 9:53
     ('We\'ll','We'),
     ('went','came', 'both'), # Mrk 16:5
@@ -6168,9 +6246,11 @@ SINGLE_WORD_MAPPINGS = (
     ('work', 'toil'), # ECC 2:24
     ('work', 'toils'), # PRO 16:26
     ('worked', 'served'), # RV HOS 12:12 / LV HOS 12:13
+    ('worked', 'laboured'), # JHN 4:38 (reviewed 2026-10-13)
     ('workers', 'doers'), # RV KI2 12:15 / LV KI2 12:16
     ('workers', 'doer[s]'), # RV NEH 2:16
     ('working', 'toil'), # ECC 4:9
+    ('working', 'labouring'), # CO1 4:12 (reviewed 2026-10-13)
     ('workmanship', 'work'), # RV MIC 5:13 / LV MIC 5:12
     ('world', 'earth'), # ACT 3:25
     ('world', 'earth/land'), # CH1 16:14
@@ -6226,6 +6306,7 @@ SINGLE_WORD_MAPPINGS = (
     ('Yakob', 'Yaˊₐqoⱱ/Jacob'), # RV PSA 22:23 / LV PSA 22:24
     ('year','year[s]'),
     ('years','year[s]'),
+    ('yeast', 'leaven'), # CO1 5:6 (reviewed 2026-10-13)
     ('Yehoram', 'Yəhōrām/Jehoram'), # RV KI2 12:18 / LV KI2 12:19
     ('Yehozabad', 'Yəhōzāⱱād/Jehozabad'), # RV KI2 12:21 / LV KI2 12:22
     ('Yehudah', 'Yəhūdāh/Judah'), # RV JOL 3:8 / LV JOL 4:8

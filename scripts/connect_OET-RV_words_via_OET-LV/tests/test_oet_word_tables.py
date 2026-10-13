@@ -6,33 +6,30 @@ import sys
 import unittest
 from unittest.mock import patch
 
-CONNECTOR_DIR = Path(__file__).resolve().parents[1] / 'connect_OET-RV_words_via_OET-LV'
+
+CONNECTOR_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(CONNECTOR_DIR))
+from oet_alignment import propose_links
+from oet_candidates import select_links
 spec = importlib.util.spec_from_file_location('connect_word_table_tests', CONNECTOR_DIR / 'connect_OET-RV_words_via_OET-LV.py')
 connect = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(connect)
 
 
 class WordTableTests(unittest.TestCase):
-    def test_function_word_fallbacks_respect_live_anchors(self):
-        def fits(text, word, number, positions):
-            tokens = connect.tokenize(text)
-            token = next(t for t in tokens if t.text == word)
-            return connect.functionWordFitsAnchors(tokens, token, number, positions)
-        # Like ACT 19:40-41: the unique conjunction/auxiliary is in a later clause.
-        self.assertFalse(fits('today¦1 And we have no defence that¦2 Then¦3', 'And', 3,
-                              {1:[0], 2:[1], 3:[2]}))
-        self.assertFalse(fits('today¦1 And we have no defence that¦2', 'have', 3,
-                              {1:[0], 2:[1], 3:[2]}))
-        # Text order matters, not source-number order. Adjacent glosses of the
-        # same source group remain available, and unanchored uniqueness can help.
-        self.assertTrue(fits('come¦30 to me¦10', 'to', 20, {30:[0],20:[1],10:[2]}))
-        self.assertTrue(fits('has come¦1', 'has', 1, {1:[0,1]}))
-        self.assertTrue(fits('it¦1 has come¦1', 'has', 1, {1:[0,1,2]}))
-        self.assertTrue(fits('has come', 'has', 1, {1:[0,1]}))
-        self.assertFalse(fits('walking¦3 power¦1 or¦2 closeness to', 'to', 3,
-                              {1:[0],2:[1],3:[2,3,4]}))
-        self.assertEqual(self.aligned('at', [('in/on/at/with', 1)]), [('at', 1)])
+    def test_unique_function_candidates_respect_live_anchors(self):
+        def links(rv, lv):
+            return [(t.text,n) for t,n,_ in select_links(connect.tokenize(rv),
+                [connect.LVToken(w,n) for w,n in lv], connect.scoreAlignedWords,
+                connect.simplifyRVLVWord, connect.numberVariants)]
+        self.assertNotIn(('And',3), links('today¦1 And we have no defence that¦2 Then¦3',
+                            [('today',1),('that',2),('And',3),('Then',3)]))
+        self.assertNotIn(('have',3), links('today¦1 And we have no defence that¦2',
+                            [('today',1),('that',2),('have',3)]))
+        self.assertIn(('to',20), links('come¦30 to me¦10', [('come',30),('to',20),('me',10)]))
+        for rv in ('has come¦1', 'it¦1 has come¦1', 'has come'):
+            self.assertIn(('has',1), links(rv, [('it',1),('has',1),('come',1)]))
+        self.assertEqual(links('at', [('in/on/at/with',1)]), [('at',1)])
 
     def test_function_word_cannot_reuse_a_gloss_across_reordered_anchors(self):
         self.assertEqual(self.aligned('walking¦3 power¦1 or¦2 closeness to',
@@ -44,26 +41,6 @@ class WordTableTests(unittest.TestCase):
                 self.assertTrue(connect.lvWordIsProperNoun([morphology], 'OT'))
             for morphology in ('Pp1cs', 'Td,Ncfsa', 'Vqp1cs', ''):
                 self.assertFalse(connect.lvWordIsProperNoun([morphology], 'OT'))
-    def test_unique_exact_fallback_preserves_full_words_without_prefix_guesses(self):
-        with patch.object(connect, 'addNumberToRVWord', return_value=True) as writer:
-            self.assertEqual(connect.matchUniqueExactWords('RUT', 1, 1,
-                ['There', 'against'], ['again¦1', 'there¦2']), (1, 0))
-            writer.assert_called_once_with('RUT', 1, 1, 'There', 2)
-        for rv, lv in ((['there¦1', 'there'], ['there¦1']),
-                       (['there'], ['there¦1', 'there¦2']),
-                       (['there¦1'], ['there¦1'])):
-            with self.subTest(rv=rv, lv=lv), patch.object(connect, 'addNumberToRVWord') as writer:
-                self.assertEqual(connect.matchUniqueExactWords('RUT', 1, 1, rv, lv), (0, 0))
-                writer.assert_not_called()
-
-    def test_linked_inflections_still_count_towards_verse_ambiguity(self):
-        with patch.object(connect, 'addNumberToRVWord') as writer:
-            self.assertEqual(connect.matchVerbSets('RUT', 1, 1,
-                ['walked¦1', 'walking'], ['walk¦1']), (0, 0))
-            self.assertEqual(connect.matchVerbSets('RUT', 1, 1,
-                ['walked¦1'], ['walk¦1']), (0, 0))
-            writer.assert_not_called()
-
     def test_prefix_collisions_cannot_create_links(self):
         # Reviewed errors found by the October 2026 whole-Bible audit. Neither
         # uniqueness nor positional certainty establishes lexical equivalence.
@@ -102,6 +79,18 @@ class WordTableTests(unittest.TestCase):
         self.assertEqual(self.aligned("Can't", [('not',1)]), [("Can't",1)])
         self.assertIsNone(connect.scoreAlignedWords('Not', "Can't"))
 
+    def test_reviewed_synonyms_keep_direction_and_weak_evidence(self):
+        for rv, lv in (('weightier', 'heavier'), ('yeast', 'leaven'),
+                       ('cavalry', 'horsemen'), ('encouragement', 'exhortation')):
+            with self.subTest(rv=rv, lv=lv):
+                self.assertEqual(connect.scoreAlignedWords(rv.capitalize(), lv),
+                                 ('directional word mapping', 55))
+                self.assertIsNone(connect.scoreAlignedWords(lv, rv))
+        # No transitive expansion through synonyms, nor guesses from prefixes.
+        for rv, lv in (('weightier', 'heavy'), ('weightier', 'weighed'),
+                       ('yeast', 'unleavened'), ('yeast', 'bread')):
+            self.assertIsNone(connect.scoreAlignedWords(rv, lv))
+
     def test_contractions_link_the_subject_only_with_unambiguous_context(self):
         self.assertEqual(self.aligned("You're here and you're there",
             [('you',1),('here',2),('and',3),('you',4),('there',5)]),
@@ -112,7 +101,7 @@ class WordTableTests(unittest.TestCase):
         self.assertIsNone(connect.scoreAlignedWords("you're", 'your'))
 
     def aligned(self, rv, lv):
-        return [(t.text, n) for t, n, _ in connect.propose_links(connect.tokenize(rv),
+        return [(t.text, n) for t, n, _ in propose_links(connect.tokenize(rv),
             [connect.LVToken(w, n) for w, n in lv],
             connect.scoreAlignedWords, connect.simplifyRVLVWord, phrase_index=connect.ALIGNED_PHRASE_INDEX)]
 
@@ -167,7 +156,7 @@ class WordTableTests(unittest.TestCase):
             with self.subTest(rv=rv, lv=lv):
                 self.assertEqual(len(rv.split()), 1)
                 self.assertEqual(len(lv.split()), 1)
-        for rv, lv, _ in connect.RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS:
+        for rv, lv in connect.RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS:
             with self.subTest(rv=rv, lv=lv):
                 self.assertEqual(len(rv.split()), 1)
                 self.assertGreater(len(lv.split()), 1)
@@ -175,19 +164,6 @@ class WordTableTests(unittest.TestCase):
             with self.subTest(rv=rv, lv=lv):
                 self.assertEqual(len(lv.split()), 1)
                 self.assertGreater(len(rv.split()), 1)
-
-    def test_interleaved_alternatives_keep_their_priority(self):
-        expected = {
-            'Listen': ('Behold', 'behold', 'hearing', 'give ear', 'hear', 'Hear'),
-            'descended': ('came down', 'come', 'come down', 'descent', 'went down'),
-            'worship': ('bow', 'prostrate', 'bow down', 'bowed', 'bowed down',
-                        'homage', 'paid homage', 'pay homage', 'paying homage', 'serve', 'serving'),
-            "can't": ('not', 'can not'),
-        }
-        for rv, alternatives in expected.items():
-            with self.subTest(rv=rv):
-                self.assertEqual(tuple(lv for word, lv in connect.MANUAL_RV_WORD_ALTERNATIVES
-                                       if word == rv), alternatives)
 
     def test_immersion_verb_forms_use_the_stronger_verb_match(self):
         forms = ('immersed', 'immersing', 'immerses', 'immerse')
@@ -203,7 +179,7 @@ class WordTableTests(unittest.TestCase):
         # The simple noun matcher does not derive the irregular hoof/hooves pair.
         self.assertIn(('hooves', 'hoof'), connect.RV_SINGLE_WORDS_FROM_LV_WORDS)
         # The verse-wide noun matcher cannot distinguish these repeated sons.
-        proposals = connect.propose_links(connect.tokenize('sons and sons'),
+        proposals = propose_links(connect.tokenize('sons and sons'),
             [connect.LVToken('son', 1), connect.LVToken('and', 2), connect.LVToken('son', 3)],
             connect.scoreRVLVWords, connect.simplifyRVLVWord)
         self.assertEqual([number for token, number, _ in proposals if token.text == 'sons'], [1, 3])

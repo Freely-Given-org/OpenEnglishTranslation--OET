@@ -38,6 +38,8 @@ class LVToken:
     proper: bool = False
     boundary_before: bool = False
     boundary_after: bool = False
+    noun: bool = False
+    names: frozenset[str] = frozenset()
 
 
 MARKER = re.compile(r'\\(?P<name>\+?[a-zA-Z][a-zA-Z0-9]*)(?P<close>\*)? ?')
@@ -333,20 +335,20 @@ def phrase_edges(units, columns, phrase_index, occupied):
         return []
     result = []
     rv_words = [u[0].text.casefold() if len(u) == 1 and u[0].linkable
-                and u[0].code not in SEMANTIC_CODES | {'!'} else None for u in units]
+                and u[0].code not in SEMANTIC_CODES | {'!', '≡'} else None for u in units]
     lv_words = [{w.casefold() for w in (c.text, *c.text.split('/'))} for c in columns]
     for i, word in enumerate(rv_words):
         for rv_phrase, lv_phrase in phrase_index.get(word, ()):
             end_i = i+len(rv_phrase)
             if tuple(rv_words[i:end_i]) != rv_phrase:
                 continue
-            if not _same_clause([u[0] for u in units[i:end_i]]):
+            if not same_clause([u[0] for u in units[i:end_i]]):
                 continue
             for j in range(len(columns)-len(lv_phrase)+1):
                 end_j = j+len(lv_phrase)
                 if (any(pos in occupied for pos in range(j,end_j))
                         or len({c.number for c in columns[j:end_j]}) != 1
-                        or not _same_clause(columns[j:end_j])):
+                        or not same_clause(columns[j:end_j])):
                     continue
                 if all(w in lv_words[pos] for pos,w in enumerate(lv_phrase, start=j)):
                     result.append((i, end_i, j, end_j, 85*len(rv_phrase)))
@@ -479,7 +481,8 @@ def _movement_window(start, end, first, last, anchors, anchor_indexes, m):
     return None  # It fits the ordinary gap, or would need more than one swap.
 
 
-def _same_clause(words):
+def same_clause(words):
+    """Whether adjacent tokens/columns have no intervening punctuation boundary."""
     return not any(a.boundary_after or b.boundary_before
                    for a, b in zip(words, words[1:]))
 
@@ -552,8 +555,8 @@ def propose_phrase_movements(units, columns, lexical_score, normalise, pending):
                 token, col = live[ri][0], columns[ci]
                 if token.number is not None and token.number != col.number:
                     break
-                if length > 1 and (not _same_clause([live[ri-1][0], token])
-                                   or not _same_clause(columns[ci-1:ci+1])):
+                if length > 1 and (not same_clause([live[ri-1][0], token])
+                                   or not same_clause(columns[ci-1:ci+1])):
                     break
                 if not strongly_matches(token, col):
                     break
@@ -572,8 +575,8 @@ def propose_phrase_movements(units, columns, lexical_score, normalise, pending):
                 if window is None:
                     continue
                 a, b, x, y = window
-                if (not all(eligible[a:b]) or not _same_clause([u[0] for u in live[a:b]])
-                        or not _same_clause(columns[x:y])):
+                if (not all(eligible[a:b]) or not same_clause([u[0] for u in live[a:b]])
+                        or not same_clause(columns[x:y])):
                     continue
                 candidates.append(tuple(new_pairs))
     choices, claims = defaultdict(set), defaultdict(set)
@@ -589,7 +592,20 @@ def propose_phrase_movements(units, columns, lexical_score, normalise, pending):
     return [(t, number, 'local phrase movement') for t, number in accepted.items()]
 
 
-def propose_links(tokens, columns, lexical_score, normalise, reversed_clauses=False, phrase_index=None):
+def alignment_units(tokens):
+    """Group semantic spans consistently for alignment and source ownership."""
+    units = []
+    for token in tokens:
+        if token.code in UNLINKED_ADD_CODES and token.number is not None:
+            token = replace(token, number=None) # Old invalid links cannot be anchors.
+        if token.code in SEMANTIC_CODES and units and units[-1][0].span == token.span:
+            units[-1].append(token)
+        else:
+            units.append([token])
+    return units
+
+
+def propose_links(tokens, columns, lexical_score, normalise, reversed_clauses=False, phrase_index=None, word_score=None):
     """Propose positional links in gaps bounded by existing source numbers.
 
     Existing links are immutable anchors, including locally reordered phrases.
@@ -599,14 +615,7 @@ def propose_links(tokens, columns, lexical_score, normalise, reversed_clauses=Fa
     phrase-movement rule can cross ordered anchors with strong lexical evidence.
     No previous verse is consulted and proximity alone never creates a link.
     """
-    units = []
-    for token in tokens:
-        if token.code in UNLINKED_ADD_CODES and token.number is not None:
-            token = replace(token, number=None) # Old invalid links cannot be anchors.
-        if token.code in SEMANTIC_CODES and units and units[-1][0].span == token.span:
-            units[-1].append(token)
-        else:
-            units.append([token])
+    units = alignment_units(tokens)
     if reversed_clauses:
         columns = rotated_columns(columns, units)
     positions = defaultdict(list)
@@ -684,8 +693,10 @@ def propose_links(tokens, columns, lexical_score, normalise, reversed_clauses=Fa
                         if col.number not in left_numbers and any(w in OWNERS for w in alternatives): score = 100
                     elif code == '*':
                         if col.proper: score = 100
-                    elif code != '!':
+                    elif code not in ('!', '≡'):
                         scores = [lexical_score(unit[0].text, w) for w in (col.text, *col.text.split('/'))]
+                        if word_score is not None:
+                            scores.append(word_score(unit[0], col))
                         score = max((s[1] for s in scores if s), default=None)
                 row.append(score)
             matrix.append(row)
@@ -743,7 +754,7 @@ def propose_local_context(units, columns, positions, anchors, occupied, normalis
                 continue
             head = units[neighbour][0]
             if (head.code is not None or normalise(head.text) in MOVEMENT_FUNCTION_WORDS
-                    or not _same_clause([u[0] for u in units[min(i, neighbour):max(i, neighbour)+1]])):
+                    or not same_clause([u[0] for u in units[min(i, neighbour):max(i, neighbour)+1]])):
                 continue
             for pos in anchor_map[neighbour]:
                 if not any(normalise(head.text) == normalise(w) for w in columns[pos].text.split('/')):
@@ -755,7 +766,7 @@ def propose_local_context(units, columns, positions, anchors, occupied, normalis
                                       if 0 < j-pos <= 3
                                       and all(c.number == head.number for c in columns[pos:j+1]))
                 for j in candidates:
-                    if (j in occupied or not _same_clause(columns[min(pos,j):max(pos,j)+1])
+                    if (j in occupied or not same_clause(columns[min(pos,j):max(pos,j)+1])
                             or not any(word == normalise(w) for w in columns[j].text.split('/'))):
                         continue
                     choices[token].add(j)

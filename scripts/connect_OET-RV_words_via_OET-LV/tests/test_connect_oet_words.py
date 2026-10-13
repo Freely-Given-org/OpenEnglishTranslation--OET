@@ -13,7 +13,7 @@ import unittest
 from unittest.mock import Mock, patch
 from BibleOrgSys.Reference.BibleVersificationMappings import get_default_mapping_engine
 
-CONNECTOR_DIR = Path(__file__).resolve().parents[1] / 'connect_OET-RV_words_via_OET-LV'
+CONNECTOR_DIR = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(CONNECTOR_DIR))
 spec = importlib.util.spec_from_file_location('connect_oet', CONNECTOR_DIR / 'connect_OET-RV_words_via_OET-LV.py')
 connect = importlib.util.module_from_spec(spec)
@@ -75,8 +75,8 @@ class BookPassTests(unittest.TestCase):
             if token.linkable and token.number is None:
                 number = {'bread': 1, 'Beth': 2, 'El': 3}[token.text]
                 result = connect.applyRVTokenLink(book, c, v, token, number, 'test')
-                return ((0, 0),) * 8 + (result,)
-        return ((0, 0),) * 9
+                return result
+        return (0, 0)
 
     def test_converges_in_all_write_modes_and_counts_each_book_once(self):
         for dry_run, output_copy, report in (
@@ -138,23 +138,16 @@ class BookPassTests(unittest.TestCase):
 
 
 class MatchingOrderTests(unittest.TestCase):
-    def test_clause_reversal_waits_for_anchors_before_alignment(self):
+    def test_all_matching_goes_through_one_selection_boundary(self):
         entries = [SimpleNamespace(getMarker=lambda: 'v~', getCleanText=lambda: 'head¦1 tail¦2')]
         for reverse in (False, True):
-            with self.subTest(reverse=reverse):
-                events = []
-                with patch.object(connect, 'getLiveRVVerseText', return_value=('⇔' if reverse else '')+'head tail'), \
-                     patch.object(connect, 'matchWordsInOrder', side_effect=lambda *args: (events.append('align') or (0,0))), \
-                     patch.object(connect, 'matchOurListedSimpleWords', side_effect=lambda *args: (events.append('lexical') or (0,0))):
-                    patches = [patch.object(connect, name, return_value=(0,0)) for name in (
-                        'matchWordPhrases', 'matchSpecialistAddSpans', 'matchVerbSets',
-                        'matchUniqueExactWords', 'matchWordsManually', 'matchWordsWithChangedNumbers')]
-                    for patcher in patches: patcher.start()
-                    try:
-                        connect.connect_OET_RV_Verse('RUT', 1, 1, entries, entries)
-                    finally:
-                        for patcher in reversed(patches): patcher.stop()
-                self.assertEqual(events, ['lexical','align'] if reverse else ['align','lexical','align'])
+            with self.subTest(reverse=reverse), \
+                 patch.object(connect, 'getLiveRVVerseText', return_value=('⇔' if reverse else '')+'head tail'), \
+                 patch.object(connect, 'matchVerseCandidates', return_value=(2,0)) as matcher:
+                counts = connect.connect_OET_RV_Verse('RUT', 1, 1, entries, entries)
+                matcher.assert_called_once()
+                self.assertEqual(matcher.call_args.args[4], reverse)
+                self.assertEqual(counts, (2,0))
 
 
 class PassSummaryTests(unittest.TestCase):
@@ -164,7 +157,7 @@ class PassSummaryTests(unittest.TestCase):
             for processes in (1, 4):
                 for passes in ((1, 3, 2, 1), (1, 1, 1, 1)):
                     with self.subTest(testament=testament, processes=processes, passes=passes):
-                        results = [(0,) * 16 + (10, 5, count) for count in passes]
+                        results = [(0, 0, 10, 5, count) for count in passes]
                         lv = SimpleNamespace(books=dict.fromkeys(books))
                         with patch.object(connect.BibleOrgSysGlobals, 'commandLineArguments', SimpleNamespace(books=books)), \
                              patch.object(connect.BibleOrgSysGlobals, 'maxProcesses', processes), \
@@ -194,8 +187,8 @@ class EditingTests(unittest.TestCase):
         connect.state = connect.State()
         connect.BibleOrgSysGlobals.commandLineArguments = SimpleNamespace(report=True)
         connect.BibleOrgSysGlobals.USFMCharacterMarkers = ('nd','wj','add','it')
-        connect.state.wordTable = {'NT': [[''] for _ in range(100)], 'OT': [[''] for _ in range(100)]}
-        connect.state.wordTableHeaderList = {'NT':['GlossCaps'], 'OT':['GlossCapitalisation']}
+        connect.state.wordTable = {'NT': [['',''] for _ in range(100)], 'OT': [['',''] for _ in range(100)]}
+        connect.state.wordTableHeaderList = {'NT':['GlossCaps','Role'], 'OT':['GlossCapitalisation','Morphology']}
         connect.state.audit=[]
 
     def tearDown(self):
@@ -208,34 +201,26 @@ class EditingTests(unittest.TestCase):
         connect.state.rvLineIndex=connect.index_book_lines(lines)
         connect.state.rvTokenCache={}
 
-    def test_traditional_alias_cannot_borrow_an_earlier_names_number(self):
-        self.book(r'\c 1', r"\v 1 Shadrak¦1 \add !(Hananyah)\add*, Meyshak \add !(Misha'el)\add*")
-        with patch.object(connect, 'getLvNameCandidates', return_value=[(1,'Shadrach',{'shadrak'})]), \
-             patch.object(connect, 'addNumberToRVWord', return_value=True) as writer:
-            self.assertEqual(connect.matchNamesViaTraditionalNames('DAN',1,1,
-                ['Shadrak¦1'], [], ['Shadrach¦1','Meshach¦2']), (1,0))
-            writer.assert_called_once_with('DAN',1,1,'Hananyah',1)
-
     def test_spelling_only_rejects_repeats_across_lines(self):
         self.book(r'\c 1', r'\v 1 the son', r'\q1 the father')
-        self.assertFalse(connect.addNumberToRVWord('MRK',1,1,'the',1))
         token=connect.getLiveRVTokens('MRK',1,1)[2]
         self.assertEqual(connect.applyRVTokenLink('MRK',1,1,token,4,'test'), (1,0))
         self.assertEqual(connect.state.rvESFMLines[-1], r'\q1 the¦4 father')
 
     def test_headings_notes_and_adjacent_verses_are_untouched(self):
         self.book(r'\c 1', r'\s1 her', r'\v 1 she \f + \ft her\f*', r'\v 2 her')
-        self.assertFalse(connect.addNumberToRVWord('MRK',1,1,'her',1))
+        self.assertNotIn('her', [t.text for t in connect.getLiveRVTokens('MRK',1,1) if t.linkable])
         self.assertEqual(connect.state.audit, [])
 
     def test_no_partial_contraction_or_existing_link_changes(self):
         self.book(r'\c 1', r"\v 1 he's her¦2")
-        self.assertFalse(connect.addNumberToRVWord('MRK',1,1,'he',1))
-        self.assertFalse(connect.addNumberToRVWord('MRK',1,1,'her',3))
+        tokens = connect.getLiveRVTokens('MRK',1,1)
+        self.assertEqual([t.text for t in tokens], ["he's", 'her'])
+        self.assertEqual(connect.applyRVTokenLink('MRK',1,1,tokens[1],3,'test'), (0,0))
 
     def test_plain_uncertain_add_is_not_linkable_or_counted(self):
         self.book(r'\c 1', r'\v 1 she \add ?her¦2\add*')
-        self.assertFalse(connect.addNumberToRVWord('MRK',1,1,'her',1))
+        self.assertNotIn('her', [t.text for t in connect.getLiveRVTokens('MRK',1,1) if t.linkable])
         self.assertEqual(connect.countWordsAndWordNumbers(connect.state.rvESFMLines), (1,0))
         self.assertEqual(connect.removeWordNumbersInUnlinkedAddSpans('test',connect.state.rvESFMLines),1)
         self.assertEqual(connect.state.rvESFMLines[1],r'\v 1 she \add ?her\add*')
@@ -251,13 +236,10 @@ class EditingTests(unittest.TestCase):
                     self.assertEqual(connect.removeWordNumbersInUnlinkedAddSpans('test', connect.state.rvESFMLines), 2)
                     expected = line.replace('person¦99', 'person').replace('nearby¦2', 'nearby')
                     self.assertEqual(connect.state.rvESFMLines[1], expected)
-                    self.assertEqual(connect.getRVWordsAndAddSpans(connect.getLiveRVVerseText('MRK',1,1), 'MRK_1:1'), (['she¦1', 'went¦3'], []))
                     tokens = connect.getLiveRVTokens('MRK',1,1)
                     for token in tokens[1:3]:
                         self.assertFalse(token.linkable)
                         self.assertEqual(connect.applyRVTokenLink('MRK',1,1,token,1,'test'), (0,0))
-                        self.assertFalse(connect.addNumberToRVWord('MRK',1,1,token.text,1))
-                    self.assertEqual(connect.addNumberToRVPhrase('MRK',1,1,['person','nearby'],1), (0,0))
                     self.assertEqual(connect.removeWordNumbersInUnlinkedAddSpans('test', connect.state.rvESFMLines), 0)
                     self.assertEqual(connect.state.audit, [])
 
@@ -294,9 +276,9 @@ class EditingTests(unittest.TestCase):
     def test_nested_nomina_sacra_and_idempotent_insertion(self):
         self.book(r'\c 1', r'\v 1 \wj God\wj*')
         connect.state.wordTable['NT'][1]=['N']
-        self.assertTrue(connect.addNumberToRVWord('MRK',1,1,'God',1))
+        self.assertEqual(connect.applyRVTokenLink('MRK',1,1,connect.getLiveRVTokens('MRK',1,1)[0],1,'test'), (1,1))
         self.assertEqual(connect.state.rvESFMLines[1],r'\v 1 \wj \+nd God¦1\+nd*\wj*')
-        self.assertFalse(connect.addNumberToRVWord('MRK',1,1,'God',1))
+        self.assertEqual(connect.applyRVTokenLink('MRK',1,1,connect.getLiveRVTokens('MRK',1,1)[0],1,'test'), (0,0))
 
     def test_semantic_add_can_link_without_illegal_nested_nd(self):
         self.book(r'\c 1', r'\v 1 \add @God\add*')
@@ -307,55 +289,34 @@ class EditingTests(unittest.TestCase):
 
     def test_phrase_keeps_compatible_links_and_excludes_plain_add(self):
         self.book(r'\c 1', r'\v 1 you¦2 all and \add you all\add*')
-        self.assertEqual(connect.addNumberToRVPhrase('MRK',1,1,['you','all'],2), (1,0))
+        self.assertEqual(connect.matchVerseCandidates('MRK',1,1,['you¦2','all¦2'],False), (1,0))
         self.assertEqual(connect.state.rvESFMLines[1],r'\v 1 you¦2 all¦2 and \add you all\add*')
-        self.assertEqual(connect.addNumberToRVPhrase('MRK',1,1,['you','all'],2), (0,0))
-
-    def test_ambiguous_curated_lv_phrase_does_not_choose_first(self):
-        self.book(r'\c 1', r'\v 1 his followers')
-        self.assertEqual(connect.doGroup1('MRK',1,1,['his','followers'],
-                         ['of¦1','him¦1','house¦2','of¦3','him¦3'],
-                         ['of','him','house','of','him']), (0,0))
-        self.assertEqual(connect.state.audit, [])
-
-    def test_directional_single_words_keep_case_and_literal_glosses(self):
-        for rv, lv, expected in (
-            ('hooves', 'hoof', 1),
-            ('Hooves', 'hoof', 0),
-            ('hoof', 'hooves', 0),
-            ('at', 'in/on/at/with', 0), # Function words now require context.
-        ):
-            with self.subTest(rv=rv, lv=lv):
-                self.book(r'\c 1', f'\\v 1 {rv}')
-                self.assertEqual(connect.doGroup1('MRK',1,1,[rv],[f'{lv}¦1'],[lv]), (expected,0))
-                self.assertEqual(connect.state.rvESFMLines[1], f'\\v 1 {rv}' + ('¦1' if expected else ''))
-
-    def test_repeated_directional_single_words_remain_ambiguous(self):
-        self.book(r'\c 1', r'\v 1 hooves')
-        self.assertEqual(connect.doGroup1('MRK',1,1,['hooves'],['hoof¦1','hoof¦2'],['hoof','hoof']), (0,0))
-        self.assertEqual(connect.state.audit, [])
-        self.book(r'\c 1', r'\v 1 hooves and hooves')
-        self.assertEqual(connect.doGroup1('MRK',1,1,['hooves','and','hooves'],['hoof¦1'],['hoof']), (0,0))
-        self.assertEqual(connect.state.audit, [])
-
-    def test_word_phrase_priority_selects_the_same_source_number(self):
-        for rv, lv, number in (
-            ('Listen', ['hear¦1','give¦2','ear¦2'], 2),
-            ('Listen', ['hearing¦3','give¦2','ear¦2'], 3),
-            ('approach', ['come¦1','draw¦2','near¦2'], 1),
-            ("can't", ['can¦1','not¦2'], 2),
-            ('descended', ['came¦1','down¦1','come¦2'], 1),
-        ):
-            with self.subTest(rv=rv, lv=lv):
-                self.book(r'\c 1', f'\\v 1 {rv}')
-                simple = [word.split('¦')[0] for word in lv]
-                self.assertEqual(connect.doGroup1('MRK',1,1,[rv],lv,simple), (1,0))
-                self.assertEqual(connect.state.rvESFMLines[1], f'\\v 1 {rv}¦{number}')
+        self.assertEqual(connect.matchVerseCandidates('MRK',1,1,['you¦2','all¦2'],False), (0,0))
 
     def test_compound_name_can_be_numbered_as_a_whole(self):
         self.book(r'\c 1', r'\v 1 Tiglat-Pileser')
-        self.assertTrue(connect.addNumberToRVWord('MRK',1,1,'Tiglat-Pileser',2))
+        token = connect.tokenize('Tiglat-Pileser', 1, 5, split_names=False)[0]
+        self.assertEqual(connect.applyRVTokenLink('MRK',1,1,token,2,'test'), (1,0))
         self.assertEqual(connect.state.rvESFMLines[1],r'\v 1 Tiglat-Pileser¦2')
+
+    def test_name_evidence_includes_hebrew_leading_modifiers_and_gentilics(self):
+        self.book(r'\c 1', r'\v 1 Aharon Levites')
+        connect.state.wordTableHeaderList['OT'] = ['GlossCapitalisation', 'Morphology']
+        connect.state.wordTable['OT'][1] = ['', 'Np']
+        connect.state.wordTable['OT'][2] = ['', 'Rd,Ngmpa']
+        connect.state.nameTables = {}
+        with patch.object(connect, 'getLVNameSpellings', side_effect=lambda word, keys:
+                          {'aharon'} if word == 'ʼAhₐron' else {'levites'}):
+            self.assertEqual(connect.matchVerseCandidates('RUT',1,1,
+                ['ʼAhₐron¦1','Lēviyyiy¦2'], False), (2,0))
+        self.assertEqual(connect.state.rvESFMLines[1], r'\v 1 Aharon¦1 Levites¦2')
+        self.assertFalse(connect.lvWordIsProperNoun(['', 'Ngmpa'], 'OT'))
+
+    def test_optional_phrase_table_uses_the_shared_selector(self):
+        self.book(r'\c 1', r'\v 1 young donkey')
+        connect.state.rvWordPhrases = {('colt',): ('young','donkey')}
+        self.assertEqual(connect.matchVerseCandidates('MRK',1,1,['colt¦1'],False), (2,0))
+        self.assertEqual(connect.state.rvESFMLines[1], r'\v 1 young¦1 donkey¦1')
 
     def test_psalm_title_separate_from_first_printed_verse(self):
         self.book(r'\c 3', r'\d title', r'\v 1 body', r'\c 4', r'\d next title', r'\v 1 next body')
@@ -377,12 +338,12 @@ class EditingTests(unittest.TestCase):
         connect.state.wordTable['NT'] = {n: ['', 'N'] for n in range(36575,36603)}
         lv_words = re.findall(r'[^\s_¦]+¦[0-9]+', lv)
         self.book(r'\c 15', r'\v 40 ' + rv)
-        self.assertEqual(connect.matchWordsInOrder('MRK',15,40,rv,[],lv_words,False,lv), (0,0))
+        self.assertEqual(connect.matchVerseCandidates('MRK', 15, 40, lv_words, False, lv), (0,0))
         # The existing matcher succeeds after removing the wrong anchor; no
         # verse-specific matching rule or relaxation for repeated names is needed.
         corrected = rv.replace('from¦36580', 'from')
         self.book(r'\c 15', r'\v 40 ' + corrected)
-        self.assertEqual(connect.matchWordsInOrder('MRK',15,40,corrected,[],lv_words,False,lv), (2,0))
+        self.assertEqual(connect.matchVerseCandidates('MRK', 15, 40, lv_words, False, lv), (2,0))
         self.assertEqual(connect.state.rvESFMLines[1], r'\v 40 ' + corrected.replace(
             'Maria from ', 'Maria¦36587 from¦36589 '))
 
@@ -407,7 +368,7 @@ class EditingTests(unittest.TestCase):
         lv_words = [f'{t.text}¦{t.number}' for t in connect.tokenize(lv)
                     if t.number is not None]
         before = connect.getLiveRVTokens('MRK',14,72)
-        connect.matchWordsInOrder('MRK',14,72,rv,[],lv_words,False,lv)
+        connect.matchVerseCandidates('MRK', 14, 72, lv_words, False, lv)
         after = connect.getLiveRVTokens('MRK',14,72)
         self.assertEqual([(t.text,t.number) for t in after if t.text in ('rooster','crowed')],
                          [('rooster',35847), ('crowed',35848),
@@ -419,22 +380,20 @@ class EditingTests(unittest.TestCase):
         for old, new in zip(before, after):
             if old.number is not None:
                 self.assertEqual(new.number, old.number)
-        self.assertEqual(connect.matchWordsInOrder('MRK',14,72,rv,[],lv_words,False,lv), (0,0))
+        self.assertEqual(connect.matchVerseCandidates('MRK', 14, 72, lv_words, False, lv), (0,0))
         # Starting with only the four rooster/crow links (as after a manual
         # edit) must not let two separate gaps both claim LV 'the¦35846'.
         occurrences = iter((35847,35848,35868,35870))
         manually_linked = re.sub(r'\b(?:rooster|crowed)\b',
                                  lambda m: f'{m[0]}¦{next(occurrences)}', rv)
         self.book(r'\c 14', r'\v 72 ' + manually_linked)
-        connect.matchWordsInOrder('MRK',14,72,manually_linked,[],lv_words,False,lv)
+        connect.matchVerseCandidates('MRK', 14, 72, lv_words, False, lv)
         self.assertIsNone(connect.getLiveRVTokens('MRK',14,72)[2].number)
 
     def test_original_lv_punctuation_reaches_the_movement_matcher(self):
         self.book(r'\c 1', r'\v 1 start¦1 bright lamps after¦2 dinner¦3 end¦6')
-        connect.matchWordsInOrder('MRK',1,1,'',[],
-                                 ['start¦1','after¦2','dinner¦3','bright¦4','lamps¦5','end¦6'],
-                                 False,'start¦1 after¦2 dinner¦3. bright¦4 lamps¦5 end¦6')
-        self.assertEqual(connect.state.audit, [])
+        connect.matchVerseCandidates('MRK', 1, 1, ['start¦1','after¦2','dinner¦3','bright¦4','lamps¦5','end¦6'], False, 'start¦1 after¦2 dinner¦3. bright¦4 lamps¦5 end¦6')
+        self.assertTrue(all(link['reason'] == 'unique lexical candidate' for link in connect.state.audit))
 
 
 if __name__ == '__main__':

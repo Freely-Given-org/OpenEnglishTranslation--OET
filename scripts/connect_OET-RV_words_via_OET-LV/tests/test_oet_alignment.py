@@ -5,7 +5,7 @@ import random
 import sys
 import unittest
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'connect_OET-RV_words_via_OET-LV'))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from oet_alignment import (LVToken, certain_alignment, certain_span_alignment, index_book_lines,
                            propose_links, tokenize, with_clause_boundaries)
 
