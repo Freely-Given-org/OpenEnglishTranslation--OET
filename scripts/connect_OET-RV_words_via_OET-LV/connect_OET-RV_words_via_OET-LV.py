@@ -18,9 +18,15 @@ Every word in the OET-LV has a word number tag suffixed to it,
 
 This script attempts to deduce how some of those same words are translated in the OET-RV
     and automatically connect them with the same word number tag.
-Curated lexical/name/phrase rules establish initial links. Then position-based
-    matching connects remaining occurrences in gaps bounded by existing links,
-    using specialised add spans and the documented clause order.
+Curated specialist spans and phrases are followed by positional word/phrase
+    alignment, using specialised add spans and the documented clause order.
+    Context is considered before verse-wide lexical/name fallback rules commit
+    additional anchors. Alignment then repeats using those new anchors.
+    Shared spelling prefixes are not lexical evidence. Reviewed related forms
+    and positive contraction subjects are weak positional candidates only.
+    Function-word fallbacks must respect existing contextual anchors.
+    Rebuild tests must start without numbers as well as with existing links:
+    preserving historical links can hide links the script cannot reconstruct.
 Use --dry-run and --report to evaluate changes, or --output-dir to inspect ESFM
     proposals separately. See scripts/README.md for usage, limits and validation.
 
@@ -43,19 +49,22 @@ Specialised \\add spans:
     Formats are described at
         ../../../OpenEnglishTranslation-website/src/pages/Resources/Formats.astro
 
-    Pure '\\add ' or '\\+add ' or '\\add ?' or '\\+add ?' spans:
+    Unlinked additions: plain '\\add ' spans and context-supplied '\\add <'/'\\add >' spans,
+        including their uncertain '?' forms and nested '\\+add' equivalents:
         Any existing word numbers should be removed.
         No new word numbers should be added to these spans.
         Words inside these spans should not be included in word linking statistics.
+        Context supplies these words; they have no corresponding OET-LV source word.
+        The '\\add <' form is used when an English verb really needs a direct object.
+        The '\\add >' form is used often after an article where 'the' refers to 'the one' or 'the person'.
     Pronoun referrent '\\add @' or '\\+add @' or '\\add ?@' or '\\+add ?@' spans:
         Expect the proper noun or fuller description in the OET-RV
             to match a pronoun or simpler description like 'the one' in the OET-LV.
+        Known plural heads such as Israelis take precedence over capitalisation;
+            individual names such as Barnabas must not be guessed plural from 's'.
     Pronoun substitution '\\add *' or '\\+add *' or '\\add ?*' or '\\+add ?*' spans:
         Expect the pronoun or simpler description in the OET-RV
             to match a proper noun or fuller description in the OET-LV.
-    Implied person or object '\\add >' or '\\+add >' or '\\add ?>' or '\\+add ?>' spans:
-        As these are implied by the context and by the previous word in the sentence (often an article),
-            then they should be assigned the same word number as the word that they're implied from.
     Added ownership '\\add &' or '\\+add &' or '\\add ?&' or '\\+add ?&' spans:
         In this case 'the hand' might become '\\add &his\\add* hand' or '\\add &that\\add* hand'.
         and 'followers' might become '\\add &his\\add* followers'.
@@ -77,8 +86,12 @@ Specialised \\add spans:
             e.g., 'Shelomo (\\add !Solomon\\add*)'
         Both forms of the name should be linked to the OET-LV name by having the same word number.
 
-TODO: This script makes wrong cross-connections between different verses where versification issues apply
-        but that will eventually be fixed in BibleOrgSys (not here).
+Versification: OET-RV uses English (BOS 'eng'); OET-LV uses original ('org').
+    BOS maps complete RV passages before any word matching. Verse bridges stay
+    together, chapter changes are followed, and Psalm titles use BOS declarations.
+    Non-exact mappings and absent LV text are reported and left unlinked.
+    Unused LV verses are audited too, exposing incomplete BOS split/merge data.
+    All editing addresses and report chapter/verse fields use printed RV numbers.
 
 
 CHANGELOG:
@@ -187,6 +200,29 @@ CHANGELOG:
         punctuation boundaries; preserved existing links and rejected competing moves.
     2026-10-11 Repeat matching for each book until no links are added, retaining
         in-memory edits across passes and reporting per-pass additions.
+    2026-10-11 Treat < and > additions like plain additions: remove existing
+        numbers and exclude them from matching and coverage, including ?/+add forms.
+    2026-10-12 Audit clean rebuilds; align context before lexical fallbacks; index
+        directional tables; align repeated directional words and whole phrases;
+        recognise I/a, curated noun pairs and LV pronoun metadata; recover
+        exact adjacent article/preposition and same-source possessive phrases.
+    2026-10-12 Resolve complete eng → org passages through BOS before matching;
+        remove Psalm offsets and audit unrepresented LV source verses.
+        Include every paired verse's final coverage and texts in JSON reports.
+    2026-10-13 Replace arbitrary prefix/ending guesses with reviewed related-form
+        families in their own table module, retaining a unique full-word fallback;
+        normalise LV bracketed suffixes and
+        reflexive-pronoun annotations; align directional pairs without case bias
+        and recognise positive contraction subjects. Count already linked forms
+        when checking verse-wide lexical ambiguity; recognise capitalised plural
+        referents before singular names. Remove three misleading directional pairs;
+        distinguish the Israeli demonym phrase from a generic crowd of people.
+        Require OT proper-noun morphology and abstain from weak semantic matches
+        across overlapping reordered clauses or a preceding name's article.
+        Recognise singular common-noun referents and stop traditional-name
+        scans at earlier alias spans; explicitly map Shadrak and Meyshak.
+        Bound function-word fallbacks by live anchors and prevent their reuse
+        across overlapping reordered clauses.
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -200,9 +236,11 @@ import json
 import time
 from functools import lru_cache
 
-from oet_alignment import (LVToken, SEMANTIC_CODES, index_book_lines, tokenize,
-                           propose_links, with_clause_boundaries)
-from oet_noun_tables import SIMPLE_NOUNS_FLAT, verbalNouns
+from oet_alignment import (LVToken, SEMANTIC_CODES, UNLINKED_ADD_CODES, MOVEMENT_FUNCTION_WORDS, index_book_lines, tokenize,
+                           propose_links, with_clause_boundaries, unlinked_add_spans)
+from oet_versification import audit_unmapped_lv, resolve_alignment_passages
+from oet_derived_word_tables import RELATED_WORD_GROUPS, CONTRACTION_SUBJECTS
+from oet_noun_tables import SIMPLE_NOUN_PAIRS, SIMPLE_NOUNS_FLAT, verbalNouns
 from oet_verb_tables import SIMPLE_VERB_SETS
 from oet_word_tables import SIMPLE_WORDS, EQUIVALENT_LV_RV_WORDS, RV_SINGLE_WORDS_FROM_LV_WORDS
 from oet_phrase_tables import RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS, LV_SINGLE_WORDS_TO_RV_WORD_STRINGS
@@ -210,15 +248,15 @@ from oet_phrase_tables import RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS, LV_SINGLE_WO
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.Formats.ESFMBible import ESFMBible
-from bible_organisational_system import getPositiveLeadingInt, InternalBibleEntryList
+from bible_organisational_system import getPositiveLeadingInt
 import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-10-11'
+LAST_MODIFIED_DATE = '2026-10-13'
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
-PROGRAM_VERSION = '1.5.0'
+PROGRAM_VERSION = '1.9.0'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -280,9 +318,9 @@ class State:
 state = State()
 
 
-def loadAlignmentBible(folder, abbreviation):
+def loadAlignmentBible(folder, abbreviation, versification):
     """Avoid parsing all 66 books when --books selects a subset."""
-    bible = ESFMBible(folder, givenAbbreviation=abbreviation)
+    bible = ESFMBible(folder, givenAbbreviation=abbreviation, versification=versification)
     bible.loadAuxiliaryFiles = True
     options = BibleOrgSysGlobals.commandLineArguments
     selected = options.books
@@ -321,9 +359,9 @@ def main():
     if options.output_dir:
         options.output_dir.mkdir(parents=True, exist_ok=True)
 
-    rv = loadAlignmentBible(OET_RV_ESFM_FolderPath, 'OET-RV')
-    lvOT = loadAlignmentBible(OET_LV_OT_ESFM_InputFolderPath, 'OET-LV')
-    lvNT = loadAlignmentBible(OET_LV_NT_ESFM_InputFolderPath, 'OET-LV')
+    rv = loadAlignmentBible(OET_RV_ESFM_FolderPath, 'OET-RV', 'eng')
+    lvOT = loadAlignmentBible(OET_LV_OT_ESFM_InputFolderPath, 'OET-LV', 'org')
+    lvNT = loadAlignmentBible(OET_LV_NT_ESFM_InputFolderPath, 'OET-LV', 'org')
 
     # Load the OT and NT word files
     state.wordTable, state.wordTableHeaderList = {}, {}
@@ -799,8 +837,8 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Created a list of {len(booklist_to_process)} OET books to process." )
 
     # Go through books chapters and verses
-    totalWordPhraseAdds = totalSimpleListedAdds = totalProperNounAdds = totalFirstPartMatchedAdds = totalManualMatchedAdds = totalChangedNumberAdds = totalRewordedAdds = totalSpecialistAdds = totalInOrderMatchedAdds = 0
-    totalWordPhraseAddsNS = totalSimpleListedAddsNS = totalProperNounAddsNS = totalFirstPartMatchedAddsNS = totalManualMatchedAddsNS = totalChangedNumberAddsNS = totalRewordedAddsNS = totalSpecialistAddsNS = totalInOrderMatchedAddsNS = 0 # Nomina sacra
+    totalWordPhraseAdds = totalSimpleListedAdds = totalProperNounAdds = totalUniqueExactMatchedAdds = totalManualMatchedAdds = totalChangedNumberAdds = totalRewordedAdds = totalSpecialistAdds = totalInOrderMatchedAdds = 0
+    totalWordPhraseAddsNS = totalSimpleListedAddsNS = totalProperNounAddsNS = totalUniqueExactMatchedAddsNS = totalManualMatchedAddsNS = totalChangedNumberAddsNS = totalRewordedAddsNS = totalSpecialistAddsNS = totalInOrderMatchedAddsNS = 0 # Nomina sacra
     totalNumWords = totalNumWordNumbered = 0
 
     if BibleOrgSysGlobals.maxProcesses > 1 \
@@ -824,8 +862,8 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
     # the returned results and aggregate both execution modes in book order.
     bookPassCounts = {}
     for BBB, result in zip(booklist_to_process, results):
-        bookWordPhraseAdds, bookWordPhraseAddsNS, bookSimpleListedAdds, bookSimpleListedAddsNS, bookProperNounAdds, bookProperNounAddsNS, bookFirstPartMatchedAdds, \
-            bookFirstPartMatchedAddsNS, bookManualMatchedAdds, bookManualMatchedAddsNS, bookChangedNumberAdds, \
+        bookWordPhraseAdds, bookWordPhraseAddsNS, bookSimpleListedAdds, bookSimpleListedAddsNS, bookProperNounAdds, bookProperNounAddsNS, bookUniqueExactMatchedAdds, \
+            bookUniqueExactMatchedAddsNS, bookManualMatchedAdds, bookManualMatchedAddsNS, bookChangedNumberAdds, \
             bookChangedNumberAddsNS, bookSpecialistAdds, bookSpecialistAddsNS, bookInOrderMatchedAdds, \
             bookInOrderMatchedAddsNS, bookNumWords, bookNumWordNumbered, bookNumPasses = result
         bookPassCounts[BBB] = bookNumPasses
@@ -835,8 +873,8 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
         totalSimpleListedAddsNS += bookSimpleListedAddsNS
         totalProperNounAdds += bookProperNounAdds
         totalProperNounAddsNS += bookProperNounAddsNS
-        totalFirstPartMatchedAdds += bookFirstPartMatchedAdds
-        totalFirstPartMatchedAddsNS += bookFirstPartMatchedAddsNS
+        totalUniqueExactMatchedAdds += bookUniqueExactMatchedAdds
+        totalUniqueExactMatchedAddsNS += bookUniqueExactMatchedAddsNS
         totalManualMatchedAdds += bookManualMatchedAdds
         totalManualMatchedAddsNS += bookManualMatchedAddsNS
         totalChangedNumberAdds += bookChangedNumberAdds
@@ -848,16 +886,16 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
         totalNumWords += bookNumWords
         totalNumWordNumbered += bookNumWordNumbered
 
-    if totalWordPhraseAdds or totalSimpleListedAdds or totalProperNounAdds or totalFirstPartMatchedAdds or totalManualMatchedAdds or totalChangedNumberAdds or totalRewordedAdds or totalSpecialistAdds or totalInOrderMatchedAdds:
+    if totalWordPhraseAdds or totalSimpleListedAdds or totalProperNounAdds or totalUniqueExactMatchedAdds or totalManualMatchedAdds or totalChangedNumberAdds or totalRewordedAdds or totalSpecialistAdds or totalInOrderMatchedAdds:
         if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} Did total of {totalWordPhraseAdds:,} word phrase adds, {totalSimpleListedAdds:,} simple listed adds, {totalProperNounAdds:,} proper noun adds, {totalFirstPartMatchedAdds:,} first part adds, {totalManualMatchedAdds:,} manual adds, {totalChangedNumberAdds:,} changed number adds, {totalRewordedAdds:,} reworded adds, {totalSpecialistAdds:,} specialist add spans and {totalInOrderMatchedAdds:,} in-order adds." )
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} Did total of {totalWordPhraseAdds:,} word phrase adds, {totalSimpleListedAdds:,} simple listed adds, {totalProperNounAdds:,} proper noun adds, {totalUniqueExactMatchedAdds:,} unique exact adds, {totalManualMatchedAdds:,} manual adds, {totalChangedNumberAdds:,} changed number adds, {totalRewordedAdds:,} reworded adds, {totalSpecialistAdds:,} specialist add spans and {totalInOrderMatchedAdds:,} in-order adds." )
     else: vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} No new word connections made." )
-    if totalSimpleListedAddsNS or totalProperNounAddsNS or totalFirstPartMatchedAddsNS or totalManualMatchedAddsNS or totalChangedNumberAddsNS or totalRewordedAddsNS or totalSpecialistAddsNS or totalInOrderMatchedAddsNS:
+    if totalSimpleListedAddsNS or totalProperNounAddsNS or totalUniqueExactMatchedAddsNS or totalManualMatchedAddsNS or totalChangedNumberAddsNS or totalRewordedAddsNS or totalSpecialistAddsNS or totalInOrderMatchedAddsNS:
         if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} Did total of {totalSimpleListedAddsNS:,} simple listed nomina sacra (NS), {totalProperNounAddsNS:,} proper noun NS, {totalFirstPartMatchedAddsNS:,} first part NS, {totalManualMatchedAddsNS:,} manual NS, {totalChangedNumberAddsNS:,} changed number NS, {totalRewordedAddsNS:,} reworded NS, {totalSpecialistAddsNS:,} specialist add span NS and {totalInOrderMatchedAddsNS:,} in-order NS." )
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  {testament} Did total of {totalSimpleListedAddsNS:,} simple listed nomina sacra (NS), {totalProperNounAddsNS:,} proper noun NS, {totalUniqueExactMatchedAddsNS:,} unique exact NS, {totalManualMatchedAddsNS:,} manual NS, {totalChangedNumberAddsNS:,} changed number NS, {totalRewordedAddsNS:,} reworded NS, {totalSpecialistAddsNS:,} specialist add span NS and {totalInOrderMatchedAddsNS:,} in-order NS." )
     else: vPrint( 'Info', DEBUGGING_THIS_MODULE, f"  {testament} No new nomina sacra connections made." )
     if any(passes > 1 for passes in bookPassCounts.values()):
-        details = ', '.join(f'{BBB}={passes}' for BBB, passes in bookPassCounts.items())
+        details = ', '.join(f'{BBB}={passes}' for BBB, passes in bookPassCounts.items() if passes > 1)
         vPrint('Normal', DEBUGGING_THIS_MODULE,
                f"  {testament} book passes: {details}; total {sum(bookPassCounts.values()):,} book passes.")
     if not selected:
@@ -896,8 +934,8 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
 
     # wordFileName = lv[BBB].ESFMWordTableFilename
 
-    bookWordPhraseAdds = bookSimpleListedAdds = bookProperNounAdds = bookFirstPartMatchedAdds = bookManualMatchedAdds = bookChangedNumberAdds = bookRewordedAdds = bookSpecialistAdds = bookInOrderMatchedAdds = 0
-    bookWordPhraseAddsNS = bookSimpleListedAddsNS = bookProperNounAddsNS = bookFirstPartMatchedAddsNS = bookManualMatchedAddsNS = bookChangedNumberAddsNS = bookRewordedAddsNS = bookSpecialistAddsNS = bookInOrderMatchedAddsNS = 0 # Nomina sacra
+    bookWordPhraseAdds = bookSimpleListedAdds = bookProperNounAdds = bookUniqueExactMatchedAdds = bookManualMatchedAdds = bookChangedNumberAdds = bookRewordedAdds = bookSpecialistAdds = bookInOrderMatchedAdds = 0
+    bookWordPhraseAddsNS = bookSimpleListedAddsNS = bookProperNounAddsNS = bookUniqueExactMatchedAddsNS = bookManualMatchedAddsNS = bookChangedNumberAddsNS = bookRewordedAddsNS = bookSpecialistAddsNS = bookInOrderMatchedAddsNS = 0 # Nomina sacra
 
     lvESFMFilename = f'OET-LV_{BBB}.ESFM'
     lvESFMFilepath = OET_LV_ESFM_InputFolderPath.joinpath( lvESFMFilename )
@@ -927,12 +965,12 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
         state.rvLineIndex = index_book_lines(state.rvESFMLines)
         state.rvTokenCache = {}
         beforeWords, beforeLinked = countWordsAndWordNumbers(state.rvESFMLines)
-        # Remove any word numbers that are inside a plain (straight) \add ...\add* span,
-        #   because those words were added into the English text, so they have no OET-LV word number
-        numStraightAddSpanRemovals = removeWordNumbersInStraightAddSpans( rvESFMFilename, state.rvESFMLines )
-        if numStraightAddSpanRemovals:
+        # Plain, < and > additions have no OET-LV counterpart; remove their
+        # numbers before matching, including uncertain and nested +add forms.
+        numUnlinkedAddSpanRemovals = removeWordNumbersInUnlinkedAddSpans( rvESFMFilename, state.rvESFMLines )
+        if numUnlinkedAddSpanRemovals:
             if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Removed a total of {numStraightAddSpanRemovals:,} word number(s) from inside straight '\\add'/'\\+add' spans in {rvESFMFilename}" )
+                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Removed a total of {numUnlinkedAddSpanRemovals:,} word number(s) from plain, < or > add spans in {rvESFMFilename}" )
         # Do some basic checking (better to find common editing errors sooner rather than later)
         for lineNumber,line in enumerate( state.rvESFMLines, start=1 ):
             assert not line.startswith(' '), f"Unexpected space at start in {rvESFMFilename} {lineNumber}: '{line}'"
@@ -968,7 +1006,7 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
     while True:
         beforePass = state.bookLinkAdditions
         for c, v, rvVerseEntryList, lvVerseEntryList in verseEntries:
-            (numWordPhraseAdds,numWordPhraseNS), (numSimpleListedAdds,numSimpleListedAddsNS), (numProperNounAdds,numProperNounAddsNS), (numFirstPartMatchedAdds,numFirstPartMatchedAddsNS), (numManualMatchedAdds,numManualMatchedAddsNS), (numVerbSetAdds,numVerbSetNS), (numChangedNumberAdds,numChangedNumberNS), (numSpecialistAdds,numSpecialistNS), (numInOrderMatchedAdds,numInOrderMatchedAddsNS) \
+            (numWordPhraseAdds,numWordPhraseNS), (numSimpleListedAdds,numSimpleListedAddsNS), (numProperNounAdds,numProperNounAddsNS), (numUniqueExactMatchedAdds,numUniqueExactMatchedAddsNS), (numManualMatchedAdds,numManualMatchedAddsNS), (numVerbSetAdds,numVerbSetNS), (numChangedNumberAdds,numChangedNumberNS), (numSpecialistAdds,numSpecialistNS), (numInOrderMatchedAdds,numInOrderMatchedAddsNS) \
                         = connect_OET_RV_Verse( BBB, c, v, rvVerseEntryList, lvVerseEntryList ) # updates state.rvESFMLines
             bookWordPhraseAdds += numWordPhraseAdds
             bookWordPhraseAddsNS += numWordPhraseNS
@@ -976,8 +1014,8 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
             bookSimpleListedAddsNS += numSimpleListedAddsNS + numVerbSetNS
             bookProperNounAdds += numProperNounAdds
             bookProperNounAddsNS += numProperNounAddsNS
-            bookFirstPartMatchedAdds += numFirstPartMatchedAdds
-            bookFirstPartMatchedAddsNS += numFirstPartMatchedAddsNS
+            bookUniqueExactMatchedAdds += numUniqueExactMatchedAdds
+            bookUniqueExactMatchedAddsNS += numUniqueExactMatchedAddsNS
             bookManualMatchedAdds += numManualMatchedAdds
             bookManualMatchedAddsNS += numManualMatchedAddsNS
             bookChangedNumberAdds += numChangedNumberAdds
@@ -988,7 +1026,7 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
             bookInOrderMatchedAddsNS += numInOrderMatchedAddsNS
         addedThisPass = state.bookLinkAdditions - beforePass
         passLinkAdditions.append(addedThisPass)
-        vPrint('Normal', DEBUGGING_THIS_MODULE,
+        vPrint( 'Normal' if addedThisPass else 'Info', DEBUGGING_THIS_MODULE,
                f"    {BBB} pass {len(passLinkAdditions)} added {addedThisPass:,} word links."
                + (" Reprocessing…" if addedThisPass else " Finished."))
         if not addedThisPass:
@@ -1016,9 +1054,9 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
         if not options.dry_run:
             destination.write_text(newESFMtext, encoding='utf-8')
         if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookWordPhraseAdds:,} word phrase adds, {bookSimpleListedAdds:,} simple listed adds, {bookProperNounAdds:,} proper noun adds, {bookFirstPartMatchedAdds:,} first part adds, {bookManualMatchedAdds:,} manual adds, {bookChangedNumberAdds:,} changed number adds, {bookRewordedAdds:,} reworded adds, {bookSpecialistAdds:,} specialist add span adds and {bookInOrderMatchedAdds:,} in-order adds for {BBB}." )
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookWordPhraseAdds:,} word phrase adds, {bookSimpleListedAdds:,} simple listed adds, {bookProperNounAdds:,} proper noun adds, {bookUniqueExactMatchedAdds:,} unique exact adds, {bookManualMatchedAdds:,} manual adds, {bookChangedNumberAdds:,} changed number adds, {bookRewordedAdds:,} reworded adds, {bookSpecialistAdds:,} specialist add span adds and {bookInOrderMatchedAdds:,} in-order adds for {BBB}." )
         if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookWordPhraseAddsNS:,} word phrase NS, {bookSimpleListedAddsNS:,} simple listed NS, {bookProperNounAddsNS:,} proper noun NS, {bookFirstPartMatchedAddsNS:,} first part NS, {bookManualMatchedAddsNS:,} manual NS, {bookChangedNumberAddsNS:,} changed number NS, {bookRewordedAddsNS:,} reworded NS, {bookSpecialistAddsNS:,} specialist add span NS and {bookInOrderMatchedAddsNS:,} in-order NS for {BBB}." )
+            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Did {bookWordPhraseAddsNS:,} word phrase NS, {bookSimpleListedAddsNS:,} simple listed NS, {bookProperNounAddsNS:,} proper noun NS, {bookUniqueExactMatchedAddsNS:,} unique exact NS, {bookManualMatchedAddsNS:,} manual NS, {bookChangedNumberAddsNS:,} changed number NS, {bookRewordedAddsNS:,} reworded NS, {bookSpecialistAddsNS:,} specialist add span NS and {bookInOrderMatchedAddsNS:,} in-order NS for {BBB}." )
         if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"      {'Previewed' if options.dry_run else 'Saved'} OET-RV {BBB} {len(newESFMtext):,} characters ({destination})" )
     else:
@@ -1035,150 +1073,107 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
         (options.output_dir / rvESFMFilename).write_text(newESFMtext, encoding='utf-8')
     state.bookReports.append(dict(book=BBB, words=bookNumWords, before=beforeLinked,
                                   after=bookNumWordNumbered, added=bookNumWordNumbered-beforeLinked,
-                                  removed_plain_add=numStraightAddSpanRemovals,
+                                  removed_plain_add=numUnlinkedAddSpanRemovals, # Includes < and > additions.
+                                  mapping_skipped=state.mappingSkipped,
+                                  unmapped_lv=state.unmappedLV,
+                                  mapped_passages=len(state.alignmentPassages),
                                   passes=len(passLinkAdditions),
                                   links_added=state.bookLinkAdditions,
                                   pass_additions=passLinkAdditions))
+    if options.report:
+        # Include unchanged verses, so a coverage audit does not depend on which
+        # words this particular run happened to add. Use the final live RV text.
+        state.bookReports[-1]['verses'] = [
+            summariseVerseAlignment(BBB, c, v, lvEntries)
+            for c, v, _, lvEntries in verseEntries]
     if options.books:
         reportWordNumberPercentage( f"OET-RV {BBB}", bookNumWords, bookNumWordNumbered )
 
-    return bookWordPhraseAdds, bookWordPhraseAddsNS, bookSimpleListedAdds, bookSimpleListedAddsNS, bookProperNounAdds, bookProperNounAddsNS, bookFirstPartMatchedAdds, \
-            bookFirstPartMatchedAddsNS, bookManualMatchedAdds, bookManualMatchedAddsNS, bookChangedNumberAdds, \
+    return bookWordPhraseAdds, bookWordPhraseAddsNS, bookSimpleListedAdds, bookSimpleListedAddsNS, bookProperNounAdds, bookProperNounAddsNS, bookUniqueExactMatchedAdds, \
+            bookUniqueExactMatchedAddsNS, bookManualMatchedAdds, bookManualMatchedAddsNS, bookChangedNumberAdds, \
             bookChangedNumberAddsNS, bookSpecialistAdds, bookSpecialistAddsNS, bookInOrderMatchedAdds, \
             bookInOrderMatchedAddsNS, bookNumWords, bookNumWordNumbered, len(passLinkAdditions)
 # end of connect_OET-RV_words_via_OET-LV.connect_OET_RV_book
 
 
 def iterAlignmentVerseEntries(BBB, lv, rv):
-    """Resolve and check a book's verse pairs once, before repeated matching.
+    """Resolve mapped passages once; subsequent passes read the live RV lines.
 
-    Entries retain the original parsed text. Matching reads the current RV text
-    through getLiveRVVerseText(), so new links are visible on every pass without
-    reparsing a Bible or repeating versification diagnostics.
+    c/v now always identify the first *RV* verse in a matching passage. Its
+    complete RV and LV reference lists are retained separately for the audit.
     """
-    numChapters = lv.getNumChapters( BBB )
-    if numChapters >= 1:
-        for c in range( 1, numChapters+1 ):
-            C = str(c)
-            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 3:
-                vPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Connecting words for {BBB} {C}…" )
-            numVerses = lv.getNumVerses( BBB, c )
-            if numVerses is None: # something unusual
-                logging.critical( f"connect_OET_RV: no verses found for OET-LV {BBB} {C}" )
-                continue
-            havePsalmTitles = bos_books_codes_py.has_psalm_title( BBB, C )
-            rvNumVerses = rv.getNumVerses( BBB, c ) # the OET-RV follows the original-language versification
-            for v in range( 1, numVerses+1 ): # Note: some Psalms have an extra verse in OET-LV (because /d is v1)
-                V = str(v)
-                rvV = str(v-1) if havePsalmTitles and v>1 else V
-                try:
-                    rvVerseEntryList, _rvCcontextList = rv.getContextVerseData( (BBB, C, rvV) )
-                except KeyError:
-                    # Most of these are NOT a problem, so don't cry wolf about them.  The OET-LV uses
-                    #   English versification, which sometimes gives a chapter one or more verses at
-                    #   the end that the original language doesn't have, and the OET-RV follows the
-                    #   original.  So the OET-RV chapter simply runs out before the OET-LV one, and
-                    #   there is no OET-RV text for those verses to be connected to: skipping them is
-                    #   the correct thing to do.  We measured all 139 such verses across the whole
-                    #   Bible and every one of them is a contiguous run at the END of its chapter,
-                    #   i.e. plain truncation, with no interior gap anywhere that would suggest a
-                    #   verse has been misplaced and could be causing a wrong cross-connection.
-                    if rvNumVerses and int(rvV) > rvNumVerses:
-                        logging.info( f"OET-RV {BBB} {c} ends at verse {rvNumVerses}, "
-                                      f"but OET-LV has {numVerses}, so skipping OET-LV {c}:{v} "
-                                      f"(English versification has more verses in this chapter)" )
-                    else:
-                        # A verse missing from the MIDDLE of the chapter, or a chapter that the OET-RV
-                        #   doesn't have at all, is a real difference that somebody should look at.
-                        logging.critical( f"Seems we have no OET-RV {BBB} {c}:{v} -- versification issue? "
-                                          f"(the OET-RV verse we wanted is {rvV}, and this OET-RV chapter "
-                                          f"has {rvNumVerses if rvNumVerses else 'no'} verse(s))" )
-                    continue
-                # OET-RV has /d and v1 all inside v1, but we need to separate them out to match OET-LV correctly
-                if havePsalmTitles and v in (1,2):
-                    adjustedRvVerseEntryList = InternalBibleEntryList()
-                    for rvEntry in rvVerseEntryList:
-                        rvMarker = rvEntry.getMarker()
-                        if v==1 and rvMarker == 'v~': continue # don't want these
-                        if v==2 and rvMarker == 'd': continue # don't want this
-                        adjustedRvVerseEntryList.append( rvEntry )
-                    rvVerseEntryList = adjustedRvVerseEntryList
-                try:
-                    lvVerseEntryList, _lvCcontextList = lv.getContextVerseData( (BBB, C, V) )
-                except KeyError:
-                    logging.critical( f"Seems we have no OET-LV {BBB} {c}:{v} -- versification issue?" )
-                    assert False, "We want to stop here"
-                    continue
-                # if BBB=='PSA' and v<3: # and c in (3,23,29)
-                #     dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\nRV entries for {BBB} {C}:{V}: ({len(rvVerseEntryList)}) {rvVerseEntryList}")
-                #     dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"LV entries for {BBB} {C}:{V}: ({len(lvVerseEntryList)}) {lvVerseEntryList}")
-
-                check_OET_RV_Verse( BBB, c, v, rvVerseEntryList, lvVerseEntryList ) # Check that any existing word numbers are in the expected range
-
-                yield c, v, rvVerseEntryList, lvVerseEntryList
-    else:
-        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"connect_OET_RV {BBB} has {numChapters} chapters!!!" )
-        assert BBB in ('INT','FRT',)
+    passages, skipped = resolve_alignment_passages(BBB, rv, lv, state.rvESFMLines)
+    state.alignmentPassages = {passage.key: passage for passage in passages}
+    state.rvAlignmentLines = {passage.key: passage.lines for passage in passages}
+    state.mappingSkipped = skipped
+    state.unmappedLV = audit_unmapped_lv(BBB, rv, lv, state.lvESFMLines, passages)
+    if state.unmappedLV:
+        missing = ', '.join(f'{c}:{v}{suffix or ""}' for _,c,v,suffix in
+                            (gap['lv_reference'] for gap in state.unmappedLV))
+        vPrint('Normal', DEBUGGING_THIS_MODULE,
+               f'    WARNING: OET-LV {BBB} {missing} not represented in the RV mappings; '
+               'check BOS mapping data / RV verse coverage (see unmapped_lv in --report).')
+    for issue in skipped:
+        refs = ', '.join(f'{b} {c}:{v}{suffix or ""}' for b,c,v,suffix in issue['rv_references'])
+        diagnostics = issue.get('mapping', {}).get('diagnostics', ())
+        reason = '; '.join(dict.fromkeys(d['message'] for d in diagnostics)) or issue.get('message', issue['status'])
+        logging.warning(f'Skipping OET-RV {refs}: {issue["status"]}: {reason}')
+    vPrint('Info', DEBUGGING_THIS_MODULE,
+           f'    {BBB}: resolved {len(passages):,} RV passages (eng → org); skipped {len(skipped):,}.')
+    for passage in passages:
+        c, v = passage.key
+        check_OET_RV_Verse(BBB, c, v, (), passage.lv_entries)
+        yield c, v, (), passage.lv_entries
 
 
-wordLinkRegex = re.compile( '¦[1-9][0-9]{0,5}' )
-def check_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> None:
+wordLinkRegex = re.compile('¦[1-9][0-9]{0,5}')
+def check_OET_RV_Verse(BBB:str, c:int, v:int, rvEntryList, lvEntryList) -> None:
+    """Require existing links to occur in the complete mapped LV passage.
+
+    A min/max range admitted unrelated intervening IDs and did not work for
+    disjoint mappings. Membership also removes the old Psalm/bridge exceptions.
+    Excluded additions have already been cleaned from the live RV text.
     """
-    If the OET-RV verse has any existing word numbers,
-        check against the OET-LV verse to ensure that they're in the correct range.
-
-    This check is specifically to catch copy and paste errors where a word number accidentally gets wrongly copied into a different verse.
-    """
-    # fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {BBB} {c}:{v} {len(rvEntryList)}, {len(lvEntryList)} )" )
-    NT = bos_books_codes_py.is_new_testament_nr( BBB )
-    if NT:
-        assert state.wordTableHeaderList['NT'].index('VLTGlossWords')+1 == GLOSS_COLUMN__NUMBER, f"{state.wordTableHeaderList['NT'].index('VLTGlossWords')+1=} {GLOSS_COLUMN__NUMBER=} {state.wordTableHeaderList=}" # Check we have the correct column below
-
-    discovered_OET_RV_word_numbers = []
-    haveVerseRange = False
-    for rvEntry in rvEntryList:
-        rvMarker, rvRest = rvEntry.getMarker(), rvEntry.getCleanText()
-        if rvMarker == 'v' and '-' in rvRest: haveVerseRange = True
-        # print( f"Check OET-RV {BBB} {c}:{v} {rvMarker}='{rvRest}'")
-        startIndex = 0
-        while True:
-            wordLinkRegexMatch = wordLinkRegex.search( rvRest, startIndex )
-            if not wordLinkRegexMatch: break
-            # print( f"Check OET-RV {BBB} {c}:{v} {rvMarker}='{rvRest}' {wordLinkRegexMatch.group()=}" )
-            discovered_OET_RV_word_numbers.append( int( wordLinkRegexMatch.group()[1:]) )
-            startIndex = wordLinkRegexMatch.end() + 1
-    if not discovered_OET_RV_word_numbers:
-        return # nothing to see here
-    # print( f"Check OET-RV {BBB} {c}:{v} {discovered_OET_RV_word_numbers=}" )
-
-    minLVWordNumber, maxLVWordNumber = 999_9999, 0
-    for lvEntry in lvEntryList:
-        lvMarker,lvRest = lvEntry.getMarker(), lvEntry.getCleanText()
-        # print( f"Check OET-LV {BBB} {c}:{v} {lvMarker}='{lvRest}'")
-        startIndex = 0
-        while True:
-            wordLinkRegexMatch = wordLinkRegex.search( lvRest, startIndex )
-            if not wordLinkRegexMatch: break
-            # print( f"Check OET-LV {BBB} {c}:{v} {lvMarker}='{lvRest}' {wordLinkRegexMatch.group()=}" )
-            wordNumber = int( wordLinkRegexMatch.group()[1:])
-            if wordNumber < minLVWordNumber: minLVWordNumber = wordNumber
-            if wordNumber > maxLVWordNumber: maxLVWordNumber = wordNumber
-            startIndex = wordLinkRegexMatch.end() + 1
-    # print( f"Check OET-RV {BBB} {c}:{v} {minLVWordNumber=} {maxLVWordNumber=}" )
-
-    for discovered_RV_word_number in discovered_OET_RV_word_numbers:
-        if discovered_RV_word_number < minLVWordNumber or discovered_RV_word_number > maxLVWordNumber:
-            if haveVerseRange:
-                logging.warning( f"OET-RV {BBB} {c}:{v} {discovered_OET_RV_word_numbers=} HAS VERSE RANGE {minLVWordNumber=} {maxLVWordNumber=}" )
-            elif BBB == 'PSA':
-                logging.error( f"OET-RV {BBB} {c}:{v} {discovered_RV_word_number=} OUT OF RANGE IN (PSALM VERSIFICATION MISMATCH???) {minLVWordNumber=} {maxLVWordNumber=} from {discovered_OET_RV_word_numbers=}" )
-            else:
-                raise ValueError( f"OET-RV {BBB} {c}:{v} {discovered_RV_word_number=} OUT OF RANGE {minLVWordNumber=} {maxLVWordNumber=} from {discovered_OET_RV_word_numbers=}" )
-# end of connect_OET-RV_words_via_OET-LV.check_OET_RV_Verse
+    allowed = {int(match[1:]) for entry in lvEntryList if entry.getMarker() in ('v~', 'd')
+               for match in wordLinkRegex.findall(entry.getCleanText())}
+    invalid = {token.number for token in getLiveRVTokens(BBB, c, v)
+               if token.number is not None and token.code not in UNLINKED_ADD_CODES
+               and token.number not in allowed}
+    if invalid:
+        raise ValueError(f'OET-RV {BBB} {c}:{v} word numbers {sorted(invalid)} '
+                         'do not belong to its mapped OET-LV passage')
 
 
 GLOSS_COLUMN__NUMBER = 5
+
+
+def summariseVerseAlignment(BBB, c, v, lvEntries):
+    """Return paired verse texts and coverage, excluding the same add spans as totals."""
+    rvText = getLiveRVVerseText(BBB, c, v)
+    words = getVerseTextWords(rvText)
+    return dict(chapter=c, verse=v, **state.alignmentPassages[c, v].metadata(),
+                words=len(words), linked=sum('¦' in w for w in words),
+                rv=nonTextSpanRegex.sub('', rvText),
+                lv=' '.join(e.getCleanText() for e in lvEntries if e.getMarker() in ('v~', 'd')),
+                unlinked=[dict(word=t.text, code=t.code) for t in getLiveRVTokens(BBB,c,v)
+                          if t.number is None and t.code not in UNLINKED_ADD_CODES])
+
+
+def normaliseLVVerseText(lvText):
+    """Normalise parsed LV gloss text without making pronoun annotations words."""
+    # These parenthesised suffixes describe pronoun number/gender, not spelling.
+    # Removing just the parentheses turned you(pl) into an unmatchable "youpl".
+    lvAdjText = re.sub(r'(?<![A-Za-z])(you|your|yours|yourself|yourselves|himself|herself|itself|themselves)\((?:pl|sg|m|f|ms|fs)\)', r'\1', lvText, flags=re.IGNORECASE)
+    lvAdjText = lvAdjText.replace('_',' ').replace('=',' ').replace('÷',' ') \
+                .replace('˱','').replace('˲','') \
+                .replace('0/','0 ').replace('1/','1 ').replace('2/','2 ').replace('3/','3 ').replace('4/','4 ').replace('5/','5 ').replace('6/','6 ').replace('7/','7 ').replace('8/','8 ').replace('9/','9 ') \
+                .replace('.','').replace(',','').replace(':','').replace(';','').replace('?','').replace('!','') \
+                .replace( '(', '').replace( ')', '' ) \
+                .replace('   ',' ').replace('  ',' ').strip()
+    if lvAdjText.startswith( '/' ): lvAdjText = lvAdjText[1:]
+    return lvAdjText
+
+
 def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tuple[Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int],Tuple[int,int]]:
     """
     Some undocumented documentation of the NT GlossCaps column from state.wordTable:
@@ -1209,16 +1204,10 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     if NT:
         assert state.wordTableHeaderList['NT'].index('VLTGlossWords')+1 == GLOSS_COLUMN__NUMBER, f"{state.wordTableHeaderList['NT'].index('VLTGlossWords')+1=} {GLOSS_COLUMN__NUMBER=} {state.wordTableHeaderList=}" # Check we have the correct column below
 
-    rvText = ''
-    for rvEntry in rvEntryList:
-        rvMarker, rvRest = rvEntry.getMarker(), rvEntry.getCleanText()
-        # print( f"OET-RV {connectRef} {rvMarker}='{rvRest}'")
-        if rvMarker in ('v~','d'):
-            rvText = f"{rvText}{' ' if rvText else ''}{rvRest}"
     lvText = ''
     for lvEntry in lvEntryList:
         lvMarker,lvRest = lvEntry.getMarker(), lvEntry.getCleanText()
-        if lvMarker == 'v~':
+        if lvMarker in ('v~', 'd'):
             lvText = f"{lvText}{' ' if lvText else ''}{lvRest.replace('+','')}"
             # lvTextSimplified = lvText.replace('¦','').replace('0','').replace('1','').replace('2','').replace('3','').replace('4','').replace('5','').replace('6','').replace('7','').replace('8','').replace('9','') \
             #                     .replace('¬','').replace('_',' ').replace('  ',' ') \
@@ -1238,20 +1227,12 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     # The exposed '\add' codes are NOT removed from this text, because splitExposedAddSpan() has
     #   to be able to see which code each exposed span has
     rvWords,rvAddSpans = getRVWordsAndAddSpans( rvText, connectRef )
-    lvAdjText = lvText.replace('_',' ').replace('=',' ').replace('÷',' ') \
-                .replace('˱','').replace('˲','') \
-                .replace('0/','0 ').replace('1/','1 ').replace('2/','2 ').replace('3/','3 ').replace('4/','4 ').replace('5/','5 ').replace('6/','6 ').replace('7/','7 ').replace('8/','8 ').replace('9/','9 ') \
-                .replace('.','').replace(',','').replace(':','').replace(';','').replace('?','').replace('!','') \
-                .replace( '(', '').replace( ')', '' ) \
-                .replace('   ',' ').replace('  ',' ').strip()
-    if lvAdjText.startswith( '/' ): lvAdjText = lvAdjText[1:]
-    # print( f"({len(rvAdjText)}) {rvAdjText=}")
-    # print( f"({len(lvAdjText)}) {lvAdjText=}")
-    if not rvWords or not lvAdjText: return (0,0), (0,0), (0,0), (0,0), (0,0), (0,0), (0,0), (0,0), (0,0)
-
-    lvWords = lvAdjText.split( ' ' )
+    lvAdjText = normaliseLVVerseText(lvText)
+    if not rvWords or not lvAdjText:
+        return ((0,0),) * 9
+    lvWords = lvAdjText.split()
     for rvWord in rvWords:
-        assert rvWord.count( '¦' ) <= 1 or '-' in rvWord, f"Bad {rvWord=} from {BBB} {c}:{v} {lvText=}"
+        assert rvWord.count('¦') <= 1 or '-' in rvWord, f"Bad {rvWord=} from {BBB} {c}:{v} {lvText=}"
     # print( f"({len(rvWords)}) {rvWords=}")
     # print( f"({len(lvWords)}) {lvWords=}")
 
@@ -1276,8 +1257,24 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     #             assert lvWord.count( '¦' ) == 1, f"{connectRef} {lvWord=}" # Check that we haven't been retagging already tagged RV words
     #     if badIx is not None: lvWords.pop( badIx )
 
+    # Spelling-only function-word fallbacks must respect live RV anchors. Cache
+    # LV text positions once per passage; source IDs themselves are not ordered.
+    lvNumberPositions = defaultdict(list)
+    for position, word in enumerate(lvWords):
+        if (number := getLVWordNumber(word)) is not None:
+            lvNumberPositions[number].append(position)
+    state.functionWordContext = (BBB, c, v), lvNumberPositions
+
     numWordPhraseAdds,numWordPhraseNS = matchWordPhrases( BBB, c,v, rvWords, lvWords, reversedOrder )
     numSpecialistAdds,numSpecialistNS = matchSpecialistAddSpans( BBB, c,v, rvWords, rvAddSpans, lvWords )
+    # Establish context before the verse-wide fallback rules commit a synonym
+    # in the wrong clause. This matters especially after deleting all numbers.
+    # For example, GEN 2:5 'ground' belongs to the final 'soil', not the earlier
+    # 'earth'. A unique spelling alone cannot choose between those alternatives.
+    # A marked clause reversal needs lexical/name anchors to infer its rotation;
+    # do not bootstrap it with an alignment in the original LV clause order.
+    earlyOrderAdds,earlyOrderNS = (0,0) if reversedOrder else matchWordsInOrder(
+        BBB, c,v, rvText, rvWords, lvWords, reversedOrder, lvText)
     numSimpleListedAdds,numSimpleListedNS = matchOurListedSimpleWords( BBB, c,v, rvWords, lvWords )
     numVerbSetAdds,numVerbSetNS = matchVerbSets( BBB, c,v, rvWords, lvWords )
 
@@ -1310,19 +1307,21 @@ def connect_OET_RV_Verse( BBB:str, c:int,v:int, rvEntryList, lvEntryList ) -> Tu
     numIdenticalProperNounAdds,numIdenticalProperNounNS = matchIdenticalProperNouns( BBB, c,v, rvUpperWords, lvUpperWords ) if rvUpperWords and lvUpperWords else (0,0)
     numAdjustedProperNounAdds,numAdjustedProperNounNS = matchAdjustedProperNouns( BBB, c,v, rvUpperWords, lvUpperWords ) if rvUpperWords and lvUpperWords else (0,0)
 
-    numFirstPartMatchedWords,numFirstPartMatchedWordsNS = matchWordsFirstParts( BBB, c,v, rvWords, lvWords )
+    numUniqueExactMatchedWords,numUniqueExactMatchedWordsNS = matchUniqueExactWords( BBB, c,v, rvWords, lvWords )
 
     numHandmatches,numHandmatchesNS = matchWordsManually( BBB, c,v, rvWords, lvWords )
 
     numChangedNumberAdds,numChangedNumberNS = matchWordsWithChangedNumbers( BBB, c,v, rvWords, rvAddSpans, lvWords )
 
-    # Run this LAST, so that it can only take the words the other matchers didn't want
+    # Refine the alignment after lexical/name rules have supplied more anchors.
     numInOrderMatches,numInOrderMatchesNS = matchWordsInOrder( BBB, c,v, rvText, rvWords, lvWords, reversedOrder, lvText )
+    numInOrderMatches += earlyOrderAdds
+    numInOrderMatchesNS += earlyOrderNS
 
     return (numWordPhraseAdds,numWordPhraseNS), \
            (numSimpleListedAdds,numSimpleListedNS), \
            (numIdenticalProperNounAdds+numAdjustedProperNounAdds,numIdenticalProperNounNS+numAdjustedProperNounNS), \
-           (numFirstPartMatchedWords,numFirstPartMatchedWordsNS), \
+           (numUniqueExactMatchedWords,numUniqueExactMatchedWordsNS), \
            (numHandmatches,numHandmatchesNS), \
            (numVerbSetAdds,numVerbSetNS), \
            (numChangedNumberAdds,numChangedNumberNS), \
@@ -1584,6 +1583,10 @@ def getLexicalIndexes():
         forms = {word} | (numberVariants(word) if word in nounWords else set())
         for form in forms:
             simple[form.lower()].add(word)
+    for plural, singular in SIMPLE_NOUN_PAIRS:
+        # Keep the actual curated pair (e.g. hoof/hooves), not just suffix guesses.
+        simple[plural.lower()].add(singular)
+        simple[singular.lower()].add(singular)
     verbs = defaultdict(set)
     for index, forms in enumerate(SIMPLE_VERB_SETS):
         for form in forms:
@@ -1595,9 +1598,10 @@ def matchIndexedWords(BBB, c, v, rvWords, lvWords, formIndex):
     """Match a lexical group only if each verse contains one occurrence of it."""
     rvGroups, lvGroups = defaultdict(set), defaultdict(set)
     for i, word in enumerate(rvWords):
-        if '¦' not in word:
-            for group in formIndex.get(word.lower(), ()):
-                rvGroups[group].add(i)
+        # Already linked inflections still count as occurrences. Ignoring them
+        # made a later pass reuse the sole LV verb for a second RV occurrence.
+        for group in formIndex.get(word.split('¦', 1)[0].lower(), ()):
+            rvGroups[group].add(i)
     for i, word in enumerate(lvWords):
         if getLVWordNumber(word) is not None:
             for alternative in word.split('¦', 1)[0].split('/'):
@@ -1610,6 +1614,8 @@ def matchIndexedWords(BBB, c, v, rvWords, lvWords, formIndex):
         if len(rvGroups[group]) != 1 or len(lvGroups[group]) != 1:
             continue
         ri, li = next(iter(rvGroups[group])), next(iter(lvGroups[group]))
+        if '¦' in rvWords[ri]:
+            continue # Count linked occurrences for ambiguity, but never rewrite them.
         number = getLVWordNumber(lvWords[li])
         if addNumberToRVWord(BBB, c, v, rvWords[ri], number):
             added += 1
@@ -1627,77 +1633,23 @@ def matchVerbSets(BBB, c, v, rvWordList, lvWordList):
     return matchIndexedWords(BBB, c, v, rvWordList, lvWordList, getLexicalIndexes()[1])
 
 
-def matchWordsFirstParts( BBB:str, c:int,v:int, rvWordList:List[str], lvWordList:List[str] ) -> Tuple[int,int]:
+def matchUniqueExactWords(BBB, c, v, rvWordList, lvWordList):
+    """Recover a unique full spelling when clause order hides it from alignment.
+
+    The old five-letter-prefix fallback also supplied useful *exact* matches
+    outside the small simple-word table. Retain those, with the original
+    minimum length, but require the entire spelling (ignoring case). Count
+    every occurrence, including already numbered ones and LV alternatives.
+    Related forms belong in positional alignment, not this verse-wide fallback.
+    The index makes this linear in the verse lengths instead of repeated scans.
     """
-    If the longish word only occurs once in the LV word list
-        and a similar starting word only occurs on in the RV word list
-            we assume that we can match them, i.e., copy the wordlink numbers from the LV into the RV.
-
-    This handles tense changes, e.g., LV despising and RV despised.
-    """
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
-        fnPrint( DEBUGGING_THIS_MODULE, f"matchWordsFirstParts( {BBB} {c}:{v} {rvWordList}, {lvWordList} )" )
-    assert rvWordList and lvWordList
-
-    NT = bos_books_codes_py.is_new_testament_nr( BBB )
-
-    # Firstly make a matching list of LV words without the word numbers
-    simpleLVWordList = []
-    for lvWordStr in lvWordList:
-        try: lvWord, lvNumber = lvWordStr.split( '¦' )
-        except ValueError:
-            if lvWordStr != 'to':
-                logging.critical( f"matchWordsFirstParts failed on {lvWordStr=} from {BBB} {c}:{v} {lvWordList=}" )
-            lvWord = lvWordStr # One or two little mess-ups
-        simpleLVWordList.append( lvWord )
-
-    numAdded = numNS = 0
-    for lvIx,lvWord in enumerate( simpleLVWordList ):
-        if len(lvWord) < 5: continue # We only process longer words
-        if simpleLVWordList.count( lvWord ) != 1: continue # We can't distinguish between two usages in one verse
-        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvWord=} {lvNumber=}" )
-
-        lvWordStart = lvWord[:5] # Get the first 5 letters
-        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Looking for RV '{lvWordStart}' from LV '{lvWord}'" )
-        rvIndexes = []
-        for rvIx,rvWord in enumerate( rvWordList ):
-            if rvWord.startswith( lvWordStart ):
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Found RV '{rvWord}' in {BBB} {c}:{v}")
-                rvIndexes.append( rvIx )
-
-        if len(rvIndexes) == 1: # Only one RV word starts with those same letters
-            rvWord = rvWordList[rvIndexes[0]]
-            if '¦' not in rvWord:
-                assert '¦' in lvWordList[lvIx], f"{lvIx=} {lvWordList[lvIx]=} from {lvWordList=}"
-                lvWord,lvWordNumber,lvWordRow = getLVWordRow( lvWordList[lvIx], 'NT' if NT else 'OT' )
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"matchWordsFirstParts() is adding a number to RV '{rvWord}' from '{lvWord}' at {BBB} {c}:{v} {rvIx=}")
-                result = addNumberToRVWord( BBB, c,v, rvWord, lvWordNumber )
-                if result:
-                    numAdded += 1
-                    if NT and 'N' in lvWordRow[state.wordTableHeaderList['NT' if NT else 'OT'].index('GlossCaps')]:
-                        numNS += 1
-                else:
-                    logging.warning( f"Got addNumberToRVWord( {BBB} {c}:{v} '{rvWord}' {lvWordNumber} ) result = {result}" )
-                    # why_did_we_fail
-
-    return numAdded,numNS
-# end of connect_OET-RV_words_via_OET-LV.matchWordsFirstParts
+    words = {word.split('¦', 1)[0].lower() for word in rvWordList}
+    exactIndex = {word: {word} for word in words if len(word) >= 5}
+    return matchIndexedWords(BBB, c, v, rvWordList, lvWordList, exactIndex)
 
 
-# The number of matching leading characters we need before we trust an OET-RV word and an
-#   OET-LV word to be the same word, e.g. RV 'money-changers' against LV 'moneychangers'.
-#   Five (not seven) because we also check that the alignment is order-preserving and
-#   unambiguous, which reduces false matches like 'protesting' vs 'prostrating'.
-#   This allows inflectional matches like 'immersing'/'immersed' (6 chars) and
-#   'forgiveness'/'forgiven' (6 chars).
-ORDER_MATCH_PREFIX_LENGTH = 5
-
-# One-letter words remain excluded from lexical matching; semantic % spans can
-# still match 'I'. The dynamic program checks ambiguity even for short words.
+# The English words 'I' and 'a' can align when context resolves their occurrence.
+# Other one-letter fragments remain excluded.
 MIN_EXACT_MATCH_WORD_LENGTH = 2
 
 
@@ -1715,6 +1667,7 @@ def simplifyRVLVWord( word:str ) -> str:
         because 'Preparation' and 'preparation' are the same word to us, but
         'mother-in-law' and 'mother' are not (and 'money-changers' and 'moneychangers' are).
     """
+    word = re.sub(r'\[([a-z]+)\]', r'\1', word) # LV optional suffixes: son[s], branch[es].
     word = unicodedata.normalize( 'NFD', word )
     word = ''.join( ch for ch in word if unicodedata.category( ch ) not in ('Mn', 'Lm') ) # Strip combining marks and modifier letters
     word = re.sub( r"[ʼˊʹʺʸˈ]", '', word ) # Transliteration accents
@@ -1725,39 +1678,63 @@ def simplifyRVLVWord( word:str ) -> str:
 # end of simplifyRVLVWord
 
 
-@lru_cache(maxsize=131072)
-def scoreRVLVWords( rvWord:str, lvWord:str ) -> Optional[Tuple[str,int]]:
-    """
-    Score how confidently an OET-RV word and an OET-LV word are the same word.
+@lru_cache(maxsize=1)
+def getRelatedWordIndex():
+    """Expand reviewed families through curated inflections, never through synonyms."""
+    nouns, verbs = getLexicalIndexes()
+    nounForms, verbForms = defaultdict(set), defaultdict(set)
+    for word, groups in nouns.items():
+        for group in groups: nounForms[group].add(word)
+    for word, groups in verbs.items():
+        for group in groups: verbForms[group].add(word)
+    result = defaultdict(set)
+    for index, family in enumerate(RELATED_WORD_GROUPS):
+        forms = set(family)
+        for word in family:
+            for group in nouns.get(word, ()): forms.update(nounForms[group])
+            for group in verbs.get(word, ()): forms.update(verbForms[group])
+        for form in forms: result[simplifyRVLVWord(form)].add(index)
+    return result
 
-    Returns a (description, score) tuple, or None if they are too different to connect.
-    These are candidate scores, not guarantees of semantic equivalence:
-        the bounded alignment supplies additional positional evidence.
-            •  the same word, however short it is, allowing for a case difference, so RV
-                'Preparation' matches LV 'preparation' and RV 'put' matches LV 'put'
-            •  the same word once its inflectional ending is allowed for, so RV
-                'wineskin' matches LV 'wineskins'
-            •  a long shared opening, so RV 'money-changers' matches LV 'moneychangers'
-                and RV 'immerse' matches LV 'immersing'
-            •  one of the EQUIVALENT_LV_RV_WORDS pairs, so RV 'Whenever' matches LV 'wherever'
-    The inherited long-prefix heuristic can confuse different words and senses.
-    Agreement across optimal alignments does not itself prove semantic accuracy.
+
+@lru_cache(maxsize=131072)
+def scoreRVLVWords(rvWord: str, lvWord: str) -> Optional[Tuple[str, int]]:
+    """Score lexical evidence; shared initial letters alone supply none.
+
+    Inflections come from the curated noun/verb sets. Related forms and synonyms
+    have lower weights than exact words and cannot justify phrase movements.
+    Candidates still need an unambiguous anchored alignment. In particular,
+    'against' is not an inflection of 'again', and 'brides' is not 'bridegroom'.
     """
-    r,l = simplifyRVLVWord( rvWord ), simplifyRVLVWord( lvWord )
-    if r == l and len(r) >= MIN_EXACT_MATCH_WORD_LENGTH: return ('same word', 100)
-    if l in EQUIVALENT_LV_RV_WORDS.get( r, set() ): return ('another word for the same thing', 60)
+    r, l = simplifyRVLVWord(rvWord), simplifyRVLVWord(lvWord)
+    if r == l and (len(r) >= MIN_EXACT_MATCH_WORD_LENGTH or r in ('a', 'i')):
+        return 'same word', 100
     verbs = getLexicalIndexes()[1]
-    if verbs.get(r, set()) & verbs.get(l, set()): return ('curated verb forms', 95)
-    if len(r) < 5 or len(l) < 3: return None
-    shorter,longer = (r,l) if len(r) < len(l) else (l,r)
-    if shorter == longer[:len(shorter)] and len(shorter) >= 5 \
-        and len(longer)-len(shorter) <= 3: # e.g. RV 'wineskin' against LV 'wineskins'
-        return ('inflectional ending', 90)
-    n = 0
-    while n < min( len(r), len(l) ) and r[n] == l[n]: n += 1
-    if n >= ORDER_MATCH_PREFIX_LENGTH: return (f'same first {n} letters', 70)
+    if verbs.get(r, set()) & verbs.get(l, set()): return 'curated verb forms', 95
+    nouns = getLexicalIndexes()[0]
+    if nouns.get(r, set()) & nouns.get(l, set()): return 'curated noun forms', 95
+    if l in EQUIVALENT_LV_RV_WORDS.get(r, set()): return 'another word for the same thing', 60
+    related = getRelatedWordIndex()
+    if related.get(r, set()) & related.get(l, set()): return 'reviewed related forms', 50
     return None
-# end of scoreRVLVWords
+
+
+@lru_cache(maxsize=65536)
+def scoreAlignedWords(rvWord, lvWord):
+    """Add one-way curated alternatives to positional matching, at lower weight.
+
+    Ignore sentence capitalisation while preserving the RV -> LV direction. These candidates
+    compete with all other words in the gap; they are not global synonyms and
+    cannot justify phrase movement, which requires a score of at least 90.
+    """
+    lexical = scoreRVLVWords(rvWord, lvWord)
+    if lexical and lexical[1] >= 55:
+        return lexical
+    if lvWord.casefold() in DIRECTIONAL_WORD_INDEX.get(rvWord.casefold(), ()):
+        return 'directional word mapping', 55
+    if CONTRACTION_SUBJECTS.get(rvWord.casefold().replace('’', "'")) == lvWord.casefold():
+        return 'contraction subject', 55
+    return lexical
 
 
 def getUnnumberedRVWords( BBB:str, c:int, v:int ) -> set:
@@ -1892,7 +1869,7 @@ def matchWordsInOrder( BBB:str, c:int,v:int, rvVerseText:str, rvWordList:List[st
     added = ns = 0
     while True:
         proposals = propose_links(getLiveRVTokens(BBB, c, v), columns,
-                                  scoreRVLVWords, simplifyRVLVWord, reversedOrder)
+                                  scoreAlignedWords, simplifyRVLVWord, reversedOrder, ALIGNED_PHRASE_INDEX)
         passAdded = 0
         # Work right to left, so recorded character offsets remain valid.
         for token, number, reason in sorted(proposals, key=lambda p: (p[0].line, p[0].start), reverse=True):
@@ -2085,15 +2062,17 @@ MIN_ANCHORED_ADD_WORD_LENGTH = 2
 
 def lvWordIsProperNoun( lvWordRow:List[str], testament:str ) -> bool:
     """
-    Return True if an OET-LV word is a proper noun, using the same test that
-        matchIdenticalProperNouns() uses, so that we can tell a name from a word that just
-        happens to be capitalised because it starts a sentence (e.g. LV 'Be¦1102' and 'I¦1166').
+    Identify a source proper noun, not merely a capitalised English gloss.
+
+    OT morphology marks proper nouns with Np, including prefixed words such
+    as R,Np. Absence of a sentence-capitalisation flag does not establish this:
+    the pronoun 'I' and many common nouns/verbs also have an empty flag.
     """
     if testament == 'NT':
         return (lvWordRow[state.wordTableHeaderList['NT'].index('Role')].strip() == 'N'
                 and 'W' in lvWordRow[state.wordTableHeaderList['NT'].index('GlossCaps')])
-    glossCapitalisation = lvWordRow[state.wordTableHeaderList['OT'].index('GlossCapitalisation')]
-    return 'S' not in glossCapitalisation # 'S' means it is only capitalised because it starts a sentence
+    morphology = lvWordRow[state.wordTableHeaderList['OT'].index('Morphology')]
+    return any(part.startswith('Np') for part in morphology.split(','))
 # end of connect_OET-RV_words_via_OET-LV.lvWordIsProperNoun
 
 
@@ -2384,8 +2363,11 @@ def matchNamesViaTraditionalNames( BBB:str, c:int,v:int, rvWordList:List[str], a
     #   must ignore those spans here, and we mustn't use their words as part of a name either.
     rvNameSpans = [ span for span in allSpans if span[0] == TRADITIONAL_NAME_ADD_CODE ]
     if not rvNameSpans: return 0,0
-    otherSpanWords = set( rvIx for code,firstIx,lastIx in allSpans if code != TRADITIONAL_NAME_ADD_CODE
-                          for rvIx in range( firstIx, lastIx+1 ) )
+    # Any preceding span ends the current name, including another ! alias.
+    # Otherwise "Shadrak !(Hananyah), Meyshak !(Misha'el)" can inherit
+    # Shadrak's number for Meyshak through the earlier capitalised alias.
+    otherSpanWords = {rvIx for _code,firstIx,lastIx in allSpans
+                          for rvIx in range(firstIx, lastIx+1)}
 
     NT = bos_books_codes_py.is_new_testament_nr( BBB )
     testament = 'NT' if NT else 'OT'
@@ -2496,6 +2478,21 @@ def combineManualWordAlternatives(wordPairs, phraseRows):
 MANUAL_RV_WORD_ALTERNATIVES = combineManualWordAlternatives(
     RV_SINGLE_WORDS_FROM_LV_WORDS, RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS)
 
+# Keep table priority, but visit only spellings actually present in the verse.
+# Scanning thousands of unrelated alternatives dominated clean rebuilds.
+MANUAL_WORD_INDEX = defaultdict(list)
+for _priority, (_rvWord, _lvPhrase) in enumerate(MANUAL_RV_WORD_ALTERNATIVES):
+    MANUAL_WORD_INDEX[_rvWord].append((_priority, _rvWord, _lvPhrase.split()))
+DIRECTIONAL_WORD_INDEX = defaultdict(set)
+for _rvWord, _lvWord in RV_SINGLE_WORDS_FROM_LV_WORDS:
+    DIRECTIONAL_WORD_INDEX[_rvWord.casefold()].add(_lvWord.casefold())
+ALIGNED_PHRASE_INDEX = defaultdict(list)
+for _rvPhrase, _lvPhrase in (
+        *((rv, lv) for rv, lv, _ in RV_SINGLE_WORDS_FROM_LV_WORD_STRINGS),
+        *((rv, lv) for lv, rv in LV_SINGLE_WORDS_TO_RV_WORD_STRINGS)):
+    _rvWords, _lvWords = tuple(_rvPhrase.casefold().split()), tuple(_lvPhrase.casefold().split())
+    ALIGNED_PHRASE_INDEX[_rvWords[0]].append((_rvWords, _lvWords))
+
 
 def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:List[str], simpleLVWordList:List[str] ) -> Tuple[int,int]:
     """Match curated one-RV-word translations only when the LV word/phrase is unique.
@@ -2505,10 +2502,10 @@ def doGroup1( BBB:str, c:int, v:int, rvVerseWordList:List[str], lvVerseWordList:
     """
     NT = bos_books_codes_py.is_new_testament_nr(BBB)
     added = ns = 0
-    for rvWord, lvPhrase in MANUAL_RV_WORD_ALTERNATIVES:
-        if rvVerseWordList.count(rvWord) != 1:
-            continue
-        words = lvPhrase.split()
+    candidates = sorted(row for word in set(rvVerseWordList)
+                        if rvVerseWordList.count(word) == 1
+                        for row in MANUAL_WORD_INDEX.get(word, ()))
+    for _, rvWord, words in candidates:
         matches = [i for i in range(len(simpleLVWordList)-len(words)+1)
                    if simpleLVWordList[i:i+len(words)] == words]
         if len(matches) != 1:
@@ -2614,19 +2611,11 @@ def getLVWordRow( wordWithNumber:str, testament:str ) -> Tuple[str,int,List[str]
 # end of connect_OET-RV_words_via_OET-LV.getLVWordRow
 
 
-# The characters that, if they immediately follow a '\add ', indicate a special
-#   rewording span (e.g., \add ≈..., \add @..., \add #..., \add !(Name)...).  Words inside those
-#   special spans may keep their OET-LV word numbers.  But words inside a PLAIN
-#   straight '\add ...\add*' span are words that have been ADDED into the English
-#   text by the translator, so by definition they have no OET-LV word number and
-#   must never be given one.
-#   The 'added words' spans are written both as '\add ...\add*' and as '\+add ...\+add*',
-#   and the two mean exactly the same thing, so we treat them identically.
-#   (Don't confuse '\+add people\+add*' with '\add +the\add*' — the 'OET-LV' uses
-#   '\add +the¦1234\add*' for an inserted article that DOES have a word number.)
+# Specialist add codes describe the translator's relationship to the source.
+# Plain, < and > additions (including uncertain forms) have no source word:
+# unlinked_add_spans() identifies them for cleanup and coverage consistently
+# with Token.linkable. Nested \+add markers have exactly the same semantics.
 ADD_SPECIAL_CHARS = '@#≈≡*<>&%?+^!='
-straightAddSpanRegex = re.compile(
-    r'\\\+?add \??([^@#≈≡*<>&%?+^!=\\][^\\]*?)\\\+?add\*')
 
 
 # A '\add <code>...<text>\add*' specialist span.  The code is what the translator is telling us
@@ -2637,9 +2626,9 @@ specialAddSpanRegex = re.compile(
     f'\\\\\\+?add (?P<code>\\?[{ADD_SPECIAL_CHARS}]|[{ADD_SPECIAL_CHARS}])(?P<text>[^\\\\]*?)\\\\\\+?add\\*' )
 
 # Specialist span words available to lexical and formatting-aware passes.
-# Plain additions, +/=/< and ^ are excluded from new automatic connections.
+# Plain additions and <, >, +, =, ^ are excluded from automatic connections.
 # Traditional-name (!) spans have their own matching pass.
-ADD_CODES_TO_EXPOSE = ( '≈', '#', '@', '*', '%', '&', '≡', '>' )
+ADD_CODES_TO_EXPOSE = ( '≈', '#', '@', '*', '%', '&', '≡' )
 addCloseMarkerRegex = re.compile( r'\\(?:\+)?add\*$' ) # The '\add*' or '\+add*' that closes a span
 addCloseMarkerAnywhereRegex = re.compile( r'\\(?:\+)?add\*' ) # The same, but punctuation can follow it
 addMarkerRegex = re.compile( r'\\(?:\+)?add\*?' ) # The '\add' or '\+add' and the '\add*' or '\+add*'
@@ -2681,10 +2670,8 @@ def exposeMatchedAddSpans( rvText:str, codesToExpose:tuple=ADD_CODES_TO_EXPOSE )
 
 
 def getRVVerseLines(BBB:str, c:int, v:int):
-    """Resolve the existing Psalm-title convention once, then use the book index."""
-    if bos_books_codes_py.has_psalm_title(BBB, str(c)):
-        v = 0 if v == 1 else v-1
-    return state.rvLineIndex.get((c, v), ())
+    """Use printed RV coordinates; a mapped passage may contain several verses."""
+    return getattr(state, 'rvAlignmentLines', state.rvLineIndex).get((c, v), ())
 
 
 def getLiveRVTokens(BBB:str, c:int, v:int):
@@ -2834,15 +2821,9 @@ def splitExposedAddSpan( token:str, codesToExpose:tuple=ADD_CODES_TO_EXPOSE ) ->
 # end of splitExposedAddSpan
 
 
-def isInsideStraightAddSpan( line:str, index:int ) -> bool:
-    """
-    Return True if the character at 'index' in 'line' falls inside a PLAIN straight
-        '\\add ...\\add*' or '\\+add ...\\+add*' span (either 'added words' or a bracketed
-        translation that was added into the English text).
-    """
-    return any( match.start() < index < match.end()
-                for match in straightAddSpanRegex.finditer( line ) )
-# end of isInsideStraightAddSpan
+def isInsideUnlinkedAddSpan(line:str, index:int) -> bool:
+    """Whether an offset is inside a plain, < or > addition, including +add/? forms."""
+    return any(start < index < end for start, end in unlinked_add_spans(line))
 
 
 ndStartMarkerRegex = re.compile( r'\\\+?nd ' ) # A nomina sacra open marker, e.g. '\nd ' or '\+nd '
@@ -2865,44 +2846,29 @@ def isInsideNominaSacraSpan( line:str, index:int ) -> bool:
 # end of isInsideNominaSacraSpan
 
 
-def removeWordNumbersInStraightAddSpans( filename:str, lines:List[str] ) -> int:
-    """
-    Remove any word numbers (¦nnnnn) that are inside a PLAIN straight '\\add ...\\add*'
-        or '\\+add ...\\+add*' span.
+def removeWordNumbersInUnlinkedAddSpans(filename:str, lines:List[str]) -> int:
+    """Remove source numbers from plain, < and > additions in place.
 
-    Words inside such a span were ADDED into the English text by the translator,
-        so by definition they have no OET-LV word number.
-    addNumberToRVWord() now refuses to give them one,
-        but any that were inserted before that check was added still need to be cleaned up.
-
-    'lines' is modified in place.
-    Returns the number of word numbers that were removed.
+    These words have no source-word counterpart. Nested character fields and
+    uncertain codes do not change that rule. Preserve wording and all markers.
+    Return the number of individual source-number suffixes removed.
     """
     numRemoved = 0
-    for n,line in enumerate( lines ):
-        if '¦' not in line: continue # Fast path for the many lines that have no word numbers at all
-        spanMatches = [spanMatch for spanMatch in straightAddSpanRegex.finditer( line )
-                            if '¦' in spanMatch.group(1)]
-        if not spanMatches: continue
-
+    for n, line in enumerate(lines):
+        if '¦' not in line:
+            continue
         numLineRemoved = 0
-        newLineBits, lastIndex = [], 0
-        for spanMatch in spanMatches:
-            cleanedSpanText, numSpanRemovals = wordLinkRegex.subn( '', spanMatch.group(1) ) # The span text without any word numbers
-            assert numSpanRemovals, f"Failed to remove a word number from a straight \\add span in {filename} line {n+1}: '{line[spanMatch.start():spanMatch.end()]}'"
-            assert cleanedSpanText.strip(), f"Removing the word number(s) would leave an empty straight \\add span in {filename} line {n+1}: '{line[spanMatch.start():spanMatch.end()]}'" # This shouldn't happen, but we don't want to silently create a broken field
-            numLineRemoved += numSpanRemovals
-            newLineBits.append( line[lastIndex:spanMatch.start(1)] ) # Everything up to the text inside the \add span
-            newLineBits.append( cleanedSpanText ) # The text inside the \add span, with the word numbers removed
-            lastIndex = spanMatch.end(1)
-        newLineBits.append( line[lastIndex:] ) # The rest of the line (including the closing \add*)
-
-        numRemoved += numLineRemoved
-        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-            vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Removed {numLineRemoved:,} word number(s) from inside a straight '\\add'/'\\+add' span in {filename} line {n+1}: '{line[max(0,spanMatches[0].start()-10):spanMatches[-1].end()+10]}'" )
-        lines[n] = ''.join( newLineBits )
+        for start, end in reversed(list(unlinked_add_spans(line))):
+            cleaned, removed = wordLinkRegex.subn('', line[start:end])
+            line = line[:start] + cleaned + line[end:]
+            numLineRemoved += removed
+        if numLineRemoved:
+            vPrint('Normal', DEBUGGING_THIS_MODULE,
+                   f"    Removed {numLineRemoved:,} word number(s) from plain, < or > add spans in {filename} line {n+1}.")
+            lines[n] = line
+            numRemoved += numLineRemoved
     return numRemoved
-# end of removeWordNumbersInStraightAddSpans
+# end of removeWordNumbersInUnlinkedAddSpans
 
 
 # The OET-RV lines that hold something other than translated Bible text, so their words can never
@@ -2942,15 +2908,16 @@ def getVerseTextWords( verseText:str ) -> List[str]:
         number percentages (see countWordsAndWordNumbers()):
             the translator's notes, the cross-references and the file/image links, because they
                 are not translations of the Hebrew or Greek at all
-            the words inside a PLAIN straight '\\add ...\\add*' span, because they were ADDED into
-                the English text by the translator, so they have no OET-LV word to be numbered
+            plain, < and > additions (including ?/+add forms), because they have
+                no corresponding OET-LV word to be numbered
     (The words of the other '\\add' spans, e.g. '\\add ≈because\\add*', DO get word numbers,
         because they are still translations of an OET-LV word, so we keep them here.)
     The word numbers themselves are left attached to their words, so the caller can count them.
     """
     text = nonTextSpanRegex.sub( ' ', verseText ) # The notes, the cross-references and the links
-        # NOTE: These have to go first, because a note can be inside a straight '\add' span
-    text = straightAddSpanRegex.sub( ' ', text ) # The words that were ADDED into the English text
+        # NOTE: These have to go first, because a note can be inside an add span.
+    for start, end in reversed(list(unlinked_add_spans(text))):
+        text = text[:start] + ' ' + text[end:] # Additions with no source-word counterpart
     for separatorChar in rvWordSeparatorChars:
         text = text.replace( separatorChar, ' ' ) # The characters that run two words together
     text = usfmMarkerRegex.sub( stripUSFMMarker, text ).strip() # The markers that are left
@@ -2980,7 +2947,7 @@ def countWordsAndWordNumbers( rvESFMLines:List[str] ) -> Tuple[int,int]:
         elif marker == '\\v':
             _verseNumber,_separator,rest = rest.partition( ' ' ) # Drop the verse number
             foundVerse = True
-        elif marker == '\\d': foundVerse = True # The Psalms titles, which belong to verse 1
+        elif marker == '\\d': foundVerse = True # Scriptural titles, whether separate or part of verse 1
         if not foundVerse: continue # Not the text of a verse, e.g. the book introduction
         verseWords = getVerseTextWords( rest )
         numWords += len( verseWords )
@@ -3033,15 +3000,50 @@ def applyRVTokenLink(BBB, c, v, token, number, reason):
     return 1, int(bool(addNS))
 
 
+# Function words need the positional/phrase matcher even when their spelling is
+# unique. For example, ACT 19:40-41 "And ... have no defence" must not borrow
+# "And having said" from the dismissal sentence after the quotation.
+CONTEXT_ONLY_WORDS = MOVEMENT_FUNCTION_WORDS
+AUXILIARY_WORDS = {'am', 'is', 'are', 'was', 'were', 'be', 'been', 'being',
+                   'have', 'has', 'had', 'having', 'do', 'does', 'did',
+                   'will', 'would', 'shall', 'should', 'can', 'could', 'may', 'might', 'must'}
+
+
+def functionWordFitsAnchors(tokens, token, number, positions):
+    """Reject a weak spelling match that contradicts established passage order.
+
+    Neighbouring source groups are inclusive: an auxiliary can share its verb's
+    number, including a multiword translation. A source group owned only
+    elsewhere cannot be borrowed. Auxiliaries also stay within neighbour bounds;
+    ordinary articles/prepositions can change position around a content word.
+    With no anchors yet, the caller's verse-wide uniqueness check still applies.
+    """
+    if number not in positions:
+        return False
+    index = tokens.index(token)
+    left = next((t for t in reversed(tokens[:index]) if t.number in positions), None)
+    right = next((t for t in tokens[index+1:] if t.number in positions), None)
+    neighbours = {t.number for t in (left, right) if t is not None}
+    if number not in neighbours and any(t.number == number for t in tokens if t != token):
+        return False
+    if token.text.casefold() not in AUXILIARY_WORDS:
+        return True
+    lo = min(positions[left.number]) if left else -1
+    hi = max(positions[right.number]) if right else float('inf')
+    return any(lo <= position <= hi for position in positions[number])
+
+
 def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
     """Legacy spelling-only match: require a unique full word in the whole verse.
 
     Positional alignment calls applyRVTokenLink directly for repeated words.
-    Never match inside a contraction, a footnote, a heading or a plain add span.
-    Semantic substitutions are reserved for the position-based matcher.
+    Never match inside a contraction, a footnote, a heading, or a plain, < or > addition.
+    Semantic substitutions require positional matching. Function-word fallbacks
+    may not contradict existing anchors or reuse a distant source group.
     """
     assert isinstance(wordNumber, int) and '¦' not in word
-    matches = [t for t in getLiveRVTokens(BBB, c, v) if t.text == word and t.linkable
+    tokens = getLiveRVTokens(BBB, c, v)
+    matches = [t for t in tokens if t.text == word and t.linkable
                and t.code not in SEMANTIC_CODES]
     if not matches and '-' in word:
         # Traditional-name mappings can intentionally number a whole compound
@@ -3051,6 +3053,12 @@ def addNumberToRVWord( BBB:str, c:int,v:int, word:str, wordNumber:int ) -> bool:
                    if t.text == word and t.linkable and t.code not in SEMANTIC_CODES]
     if len(matches) != 1:
         return False
+    if word.casefold() in CONTEXT_ONLY_WORDS:
+        context = getattr(state, 'functionWordContext', None)
+        if context is None or context[0] != (BBB, c, v):
+            return False
+        if not functionWordFitsAnchors(tokens, matches[0], wordNumber, context[1]):
+            return False
     return bool(applyRVTokenLink(BBB, c, v, matches[0], wordNumber, 'lexical/name rule')[0])
 
 

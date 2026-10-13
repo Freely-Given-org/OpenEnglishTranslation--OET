@@ -152,6 +152,7 @@ SIMPLE_NOUN_PAIRS = (# These are noun pairs (plural, singular) that are likely t
     ('baals', 'baal'),
     ('babblings', 'babbling'),
     ('babies', 'baby'),
+    ('babylonians', 'babylonian'),
     ('backgrounds', 'background'),
     ('backs', 'back'),
     ('badgers', 'badger'),

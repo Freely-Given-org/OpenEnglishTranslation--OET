@@ -1628,6 +1628,7 @@ SIMPLE_VERB_SETS = (
     ('spoilt', 'spoiled', 'spoiling', 'spoils', 'spoil'),
     ('sponged', 'sponging', 'sponges', 'sponge'),
     ('sported', 'sporting', 'sports', 'sport'),
+    ('spotted', 'spotting', 'spots', 'spot'), # RV JOB 23:9; CH1 10:3
     ('spouted', 'spouting', 'spouts', 'spout'),
     ('spreading', 'spreads', 'spread'),
     ('sprang', 'sprung', 'springing', 'springs', 'spring'),
