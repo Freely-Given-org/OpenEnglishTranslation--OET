@@ -1,0 +1,654 @@
+{
+  "date": "2026-10-13",
+  "purpose": "Review missing RV to LV vocabulary after MAT 23:23 weightier/heavier report",
+  "method": "Mine unlinked content words in short anchor-bounded gaps in all 31,055 mapped passages; manually review chosen pairs in verse context. Compare a serial fresh rebuild with the same frozen unnumbered RV and unchanged LV inputs used for the v2.0 engine audit.",
+  "scope": "75 explicitly directional pairs plus foolish -> less sensible phrase; no matching-engine changes. All output in ignored preview copies; RV source files not rewritten.",
+  "limitations": "Coverage is not semantic accuracy. This comparison isolates table changes on frozen RV wording, not concurrent RV edits. A reviewed pair can remain unresolved when repeated words or source order leave competing candidates. Losses and reassignments are retained in the change ledger.",
+  "totals": [
+    {
+      "corpus": "OT",
+      "words": 520681,
+      "before": 319035,
+      "after": 319354,
+      "delta": 319,
+      "before_percent": 61.27264102204613,
+      "after_percent": 61.333906941102136
+    },
+    {
+      "corpus": "NT",
+      "words": 175063,
+      "before": 106443,
+      "after": 106720,
+      "delta": 277,
+      "before_percent": 60.80268246288479,
+      "after_percent": 60.96091121481981
+    },
+    {
+      "corpus": "Bible",
+      "words": 695744,
+      "before": 425478,
+      "after": 426074,
+      "delta": 596,
+      "before_percent": 61.1543901205041,
+      "after_percent": 61.2400538128967
+    }
+  ],
+  "books": [
+    {
+      "book": "ACT",
+      "words": 23607,
+      "before": 13701,
+      "after": 13724,
+      "delta": 23
+    },
+    {
+      "book": "CO1",
+      "words": 9071,
+      "before": 5007,
+      "after": 5023,
+      "delta": 16
+    },
+    {
+      "book": "CO2",
+      "words": 5875,
+      "before": 3443,
+      "after": 3466,
+      "delta": 23
+    },
+    {
+      "book": "COL",
+      "words": 1975,
+      "before": 1242,
+      "after": 1245,
+      "delta": 3
+    },
+    {
+      "book": "EPH",
+      "words": 3089,
+      "before": 1738,
+      "after": 1754,
+      "delta": 16
+    },
+    {
+      "book": "GAL",
+      "words": 3204,
+      "before": 1769,
+      "after": 1770,
+      "delta": 1
+    },
+    {
+      "book": "HEB",
+      "words": 6744,
+      "before": 3997,
+      "after": 4004,
+      "delta": 7
+    },
+    {
+      "book": "JAM",
+      "words": 2494,
+      "before": 1341,
+      "after": 1341,
+      "delta": 0
+    },
+    {
+      "book": "JDE",
+      "words": 662,
+      "before": 313,
+      "after": 315,
+      "delta": 2
+    },
+    {
+      "book": "JHN",
+      "words": 19175,
+      "before": 11917,
+      "after": 11957,
+      "delta": 40
+    },
+    {
+      "book": "JN1",
+      "words": 2503,
+      "before": 1634,
+      "after": 1634,
+      "delta": 0
+    },
+    {
+      "book": "JN2",
+      "words": 309,
+      "before": 172,
+      "after": 172,
+      "delta": 0
+    },
+    {
+      "book": "JN3",
+      "words": 333,
+      "before": 164,
+      "after": 164,
+      "delta": 0
+    },
+    {
+      "book": "LUK",
+      "words": 24789,
+      "before": 15546,
+      "after": 15569,
+      "delta": 23
+    },
+    {
+      "book": "MAT",
+      "words": 23015,
+      "before": 14744,
+      "after": 14785,
+      "delta": 41
+    },
+    {
+      "book": "MRK",
+      "words": 13332,
+      "before": 8453,
+      "after": 8464,
+      "delta": 11
+    },
+    {
+      "book": "PE1",
+      "words": 2330,
+      "before": 1343,
+      "after": 1347,
+      "delta": 4
+    },
+    {
+      "book": "PE2",
+      "words": 1559,
+      "before": 910,
+      "after": 914,
+      "delta": 4
+    },
+    {
+      "book": "PHM",
+      "words": 454,
+      "before": 301,
+      "after": 301,
+      "delta": 0
+    },
+    {
+      "book": "PHP",
+      "words": 2195,
+      "before": 1283,
+      "after": 1288,
+      "delta": 5
+    },
+    {
+      "book": "REV",
+      "words": 11129,
+      "before": 7526,
+      "after": 7540,
+      "delta": 14
+    },
+    {
+      "book": "ROM",
+      "words": 9116,
+      "before": 5264,
+      "after": 5295,
+      "delta": 31
+    },
+    {
+      "book": "TH1",
+      "words": 1901,
+      "before": 1209,
+      "after": 1211,
+      "delta": 2
+    },
+    {
+      "book": "TH2",
+      "words": 1022,
+      "before": 643,
+      "after": 643,
+      "delta": 0
+    },
+    {
+      "book": "TI1",
+      "words": 2432,
+      "before": 1352,
+      "after": 1355,
+      "delta": 3
+    },
+    {
+      "book": "TI2",
+      "words": 1715,
+      "before": 922,
+      "after": 925,
+      "delta": 3
+    },
+    {
+      "book": "TIT",
+      "words": 1033,
+      "before": 509,
+      "after": 514,
+      "delta": 5
+    },
+    {
+      "book": "AMO",
+      "words": 3864,
+      "before": 2392,
+      "after": 2392,
+      "delta": 0
+    },
+    {
+      "book": "CH1",
+      "words": 17087,
+      "before": 10496,
+      "after": 10505,
+      "delta": 9
+    },
+    {
+      "book": "CH2",
+      "words": 20923,
+      "before": 13005,
+      "after": 13021,
+      "delta": 16
+    },
+    {
+      "book": "DAN",
+      "words": 10445,
+      "before": 6261,
+      "after": 6267,
+      "delta": 6
+    },
+    {
+      "book": "SNG",
+      "words": 2557,
+      "before": 1850,
+      "after": 1853,
+      "delta": 3
+    },
+    {
+      "book": "ZEC",
+      "words": 5584,
+      "before": 3610,
+      "after": 3611,
+      "delta": 1
+    },
+    {
+      "book": "ZEP",
+      "words": 1422,
+      "before": 848,
+      "after": 850,
+      "delta": 2
+    },
+    {
+      "book": "DEU",
+      "words": 23361,
+      "before": 13632,
+      "after": 13647,
+      "delta": 15
+    },
+    {
+      "book": "ECC",
+      "words": 5098,
+      "before": 2776,
+      "after": 2775,
+      "delta": -1
+    },
+    {
+      "book": "EST",
+      "words": 5590,
+      "before": 2605,
+      "after": 2607,
+      "delta": 2
+    },
+    {
+      "book": "EXO",
+      "words": 26831,
+      "before": 16894,
+      "after": 16927,
+      "delta": 33
+    },
+    {
+      "book": "EZE",
+      "words": 35058,
+      "before": 19793,
+      "after": 19803,
+      "delta": 10
+    },
+    {
+      "book": "EZR",
+      "words": 6118,
+      "before": 3934,
+      "after": 3945,
+      "delta": 11
+    },
+    {
+      "book": "GEN",
+      "words": 31618,
+      "before": 21846,
+      "after": 21850,
+      "delta": 4
+    },
+    {
+      "book": "HAB",
+      "words": 1436,
+      "before": 747,
+      "after": 748,
+      "delta": 1
+    },
+    {
+      "book": "HAG",
+      "words": 901,
+      "before": 517,
+      "after": 518,
+      "delta": 1
+    },
+    {
+      "book": "HOS",
+      "words": 4732,
+      "before": 3166,
+      "after": 3169,
+      "delta": 3
+    },
+    {
+      "book": "ISA",
+      "words": 33041,
+      "before": 20666,
+      "after": 20685,
+      "delta": 19
+    },
+    {
+      "book": "JDG",
+      "words": 16230,
+      "before": 10345,
+      "after": 10351,
+      "delta": 6
+    },
+    {
+      "book": "JER",
+      "words": 37163,
+      "before": 23865,
+      "after": 23892,
+      "delta": 27
+    },
+    {
+      "book": "JNA",
+      "words": 1181,
+      "before": 743,
+      "after": 744,
+      "delta": 1
+    },
+    {
+      "book": "JOB",
+      "words": 15789,
+      "before": 9500,
+      "after": 9515,
+      "delta": 15
+    },
+    {
+      "book": "JOL",
+      "words": 1862,
+      "before": 1338,
+      "after": 1338,
+      "delta": 0
+    },
+    {
+      "book": "JOS",
+      "words": 15190,
+      "before": 9581,
+      "after": 9582,
+      "delta": 1
+    },
+    {
+      "book": "KI1",
+      "words": 20227,
+      "before": 12131,
+      "after": 12140,
+      "delta": 9
+    },
+    {
+      "book": "KI2",
+      "words": 19962,
+      "before": 12260,
+      "after": 12266,
+      "delta": 6
+    },
+    {
+      "book": "LAM",
+      "words": 3091,
+      "before": 1923,
+      "after": 1928,
+      "delta": 5
+    },
+    {
+      "book": "LEV",
+      "words": 20156,
+      "before": 12056,
+      "after": 12083,
+      "delta": 27
+    },
+    {
+      "book": "MAL",
+      "words": 1658,
+      "before": 928,
+      "after": 928,
+      "delta": 0
+    },
+    {
+      "book": "MIC",
+      "words": 2856,
+      "before": 1804,
+      "after": 1803,
+      "delta": -1
+    },
+    {
+      "book": "NAH",
+      "words": 1105,
+      "before": 577,
+      "after": 577,
+      "delta": 0
+    },
+    {
+      "book": "NEH",
+      "words": 8911,
+      "before": 5361,
+      "after": 5365,
+      "delta": 4
+    },
+    {
+      "book": "NUM",
+      "words": 23518,
+      "before": 14019,
+      "after": 14033,
+      "delta": 14
+    },
+    {
+      "book": "OBA",
+      "words": 563,
+      "before": 302,
+      "after": 302,
+      "delta": 0
+    },
+    {
+      "book": "PRO",
+      "words": 14075,
+      "before": 8134,
+      "after": 8150,
+      "delta": 16
+    },
+    {
+      "book": "PSA",
+      "words": 41267,
+      "before": 24218,
+      "after": 24257,
+      "delta": 39
+    },
+    {
+      "book": "RUT",
+      "words": 2432,
+      "before": 1288,
+      "after": 1288,
+      "delta": 0
+    },
+    {
+      "book": "SA1",
+      "words": 20886,
+      "before": 13099,
+      "after": 13106,
+      "delta": 7
+    },
+    {
+      "book": "SA2",
+      "words": 16893,
+      "before": 10525,
+      "after": 10533,
+      "delta": 8
+    }
+  ],
+  "tag_changes": {
+    "added": 649,
+    "removed": 53,
+    "changed": 13
+  },
+  "passes": 132,
+  "max_rss_mib": 966.0859375,
+  "regression_tests": 130,
+  "checks": {
+    "books": 66,
+    "mapping_skipped": 0,
+    "unmapped_lv": 0,
+    "passages": 31055,
+    "numbered_tokens": 426515
+  },
+  "mapping_revisions": [
+    "519af776ab65d89a51e37f750779250f940459ef+bos-supplement-2.7871fb0b24ae7aa2af32aaaf80292f284a6355db6f7c5fc2be0d87e172789940"
+  ],
+  "withheld": [
+    {
+      "rv": "disobeyed",
+      "lv": "sinned",
+      "refs": [
+        "ROM 5:12",
+        "CH1 21:8",
+        "CH1 21:17",
+        "CH2 6:39",
+        "KI1 8:50",
+        "LAM 1:8"
+      ],
+      "reason": "Withheld: enabling this pair displaces possessive matches in JER 3:25 (our God/Our ancestors) to source words for ancestors/youth. Requires a separate alignment fix."
+    },
+    {
+      "rv": "innocent",
+      "lv": "blameless",
+      "refs": [
+        "JOB 9:21",
+        "PSA 15:2",
+        "PSA 64:4"
+      ],
+      "reason": "Withheld: the new blameless anchor makes PRO 11:5 right claim makes_straight (272143), although the source correspondence is righteousness (272141). Needs a separate sense/alignment fix."
+    }
+  ],
+  "rebuilt_after_review": [
+    "CH1",
+    "CH2",
+    "DEU",
+    "HEB",
+    "ISA",
+    "JER",
+    "JOB",
+    "JOS",
+    "KI1",
+    "LAM",
+    "LUK",
+    "MAT",
+    "PHP",
+    "PRO",
+    "PSA",
+    "REV",
+    "ROM",
+    "SA1",
+    "SA2"
+  ],
+  "phrase_additions": [
+    {
+      "rv": "less sensible",
+      "lv": "foolish",
+      "reference": "MAT 25:8",
+      "number": 17708
+    }
+  ],
+  "reviewed_pairs": 75,
+  "pairs_with_new_direct_links": 75,
+  "new_direct_synonym_links": 556,
+  "final_code_sha256": {
+    "oet_word_tables.py": "b36b16d84b8a81644193b47ee50cc80cebdc38a3430616a0b4501f4193e6ee97",
+    "oet_verb_tables.py": "c81745ec77057160548202648b35d19bf54d453745329f94e55c49cf65fa9a1e",
+    "oet_phrase_tables.py": "a824e9a9cbc33c3a077284a9e96eb55fae12e5197f8b0b89593efac45b0e9a16",
+    "oet_alignment.py": "888cfaa11825c4151d167b3519e8efcf29d727261cb15f0286bbd0ba60e7c6c4",
+    "oet_versification.py": "8df2f2b9d932751df8106d0318fc3a3e9b678b870d63b1c72cab52e0d48788ad",
+    "connect_OET-RV_words_via_OET-LV.py": "43fcfc07e92636d33752a0adb0d68c1d3a21bab6a8a58efed448fc3876beb689",
+    "oet_derived_word_tables.py": "10412a3a5a3c1e2f7f37429153b3796ebfa3be3f1ce39bedcd82e2ebad4c97cc",
+    "oet_candidates.py": "fddeaa4035d9093c4b912c5acfcef068c853bf976087bbf931a33b7cacd5e057",
+    "oet_noun_tables.py": "7e47b2dd713119392fb83ef4d8f097c6aff6ba72fd1fed360024c1e6a87ee2ea"
+  },
+  "preview_output_sha256": {
+    "OET-RV_CH1.ESFM": "1a7fd4e85b5f552c66abfa3a8569c81258ef6ec6ffe0d5b96284497de7ed97a3",
+    "OET-RV_JN2.ESFM": "1a923d71e0bb27e5f78988e47f336ce2a7ead29e62e1737370bd1e91b3927542",
+    "OET-RV_HAG.ESFM": "5a6ea97050b74ed6463766809ee72babcbda5257f3f12dbbf220d6bb1b9047be",
+    "OET-RV_JNA.ESFM": "f1442432b4b02e74692be2292f3cd02280e43e29bd468389f5a35a7d7ea3a668",
+    "OET-RV_JHN.ESFM": "b434a8c805f3557587187f9a2d8cfe8f1379d27ba09f32b39a27803ede98d3ae",
+    "OET-RV_PE1.ESFM": "9b38106741e87e1c119c6e247922b545467376c8ce8fbe8469983c9549bf19d2",
+    "OET-RV_SNG.ESFM": "47ee916e3939a87d912e504e40ccb34df5d76029c217aeba7470ce307ff3e4bb",
+    "OET-RV_EPH.ESFM": "fa4115017b3d2d958151f17b6238de61f25a22504d86881b43f2a1d8fea17824",
+    "OET-RV_RUT.ESFM": "074e5306097537de312993a5b5283dcc8a860e7351b61414b33b6feef3185700",
+    "OET-RV_TH1.ESFM": "a579ac7a349122cbcba0cb807eb5e5df6d7b28a3cd1067580b51b3b21a01d842",
+    "OET-RV_TI1.ESFM": "55b9c633a0e7cefa870ffbd44c7757e4992bec982d88045c37cb8134d9397925",
+    "OET-RV_KI2.ESFM": "4396cc3a9a686616e14136c4ffd12b1143a8df5e1f03f4857ba08abb996b5220",
+    "OET-RV_LEV.ESFM": "dcb16640920da1ad487d7a5a52003b78115e9dfc2bd265d5b95dc87dbbca73b0",
+    "OET-RV_JOS.ESFM": "f9da618325425335ea19f77d2d962400981d7e3c3f8a129a6ebe5b8479dbf29b",
+    "OET-RV_HEB.ESFM": "65e221aa44d891f1fca238300aa4783e9748efc5e35f650f60b3dcab4e21d95c",
+    "OET-RV_MRK.ESFM": "3aa36e5427ad722ce7aa8d671ee8bae5f468285a43ac4734241da62edbca7487",
+    "OET-RV_PHP.ESFM": "f72d712e0715e41bab666b06b2340407fecc73561ca9d042968497a00b3f6132",
+    "OET-RV_OBA.ESFM": "8fd0e4f3c4bf2bb9e7dbe12005d31f85b66457c46f5ee7d64c656dc9be80317a",
+    "OET-RV_JOL.ESFM": "2637a476cb9874763ec07cd56ce88bff9bdcbfe1f15d38419b4098ae8a85998c",
+    "OET-RV_PSA.ESFM": "fd13dc7a5bbe61b1d81a8e1aa4ec1ac6787ef2e620d8bd71e18805387306b04b",
+    "OET-RV_PE2.ESFM": "8a225f9948e10cf794fcfee939ce740e7c5108d7acc06c6403df553d2f928bfe",
+    "OET-RV_JN3.ESFM": "f16a459c46776fb21805921bda174e7f3508a4a5061b6abdcaf017959717ec54",
+    "OET-RV_GAL.ESFM": "d73214413134ec93d0e7cbafef816815cbc2251e924a90849c3d64288be15be1",
+    "OET-RV_JN1.ESFM": "c8ee9b610a4358a3c202cc983d2b91fe6e1cd12f2d6a352f72d0b2e2631261b6",
+    "OET-RV_MAT.ESFM": "30abc45aa8b8dca48581b091d433fbb8cd84cb0f5d519847b6260876ae848f8e",
+    "OET-RV_CO1.ESFM": "f734d97fb47978910c5998a8321ccb2cf50e4dd822477e9407fc3920dc8afaea",
+    "OET-RV_ISA.ESFM": "bfc52a124df1e92d15a6e0a1b6b299aeda2e58bd00a97a8bf113ded181db5662",
+    "OET-RV_EZE.ESFM": "82ca531f5ceb36100de037d52d09bb76be01bb19ce5038dfbf403c53fe5fdb16",
+    "OET-RV_ECC.ESFM": "8908c2ccfda507ff969bb6f565536d93cacb4cb2b5419516ddc69ad81831a709",
+    "OET-RV_JOB.ESFM": "7ebbc96f6ad697e761fbfccc4dd855d9856b32d436946a013e2f52207434cdb8",
+    "OET-RV_JER.ESFM": "b2b14081e1baad31a558d058f0b447524b6f6da0a9bebb5ada45c7063f6d6555",
+    "OET-RV_PHM.ESFM": "a8c2e0ce3c745ee0da248bffd247c92a2ab737ed52ee083fcc5a7a569fc330cc",
+    "OET-RV_HOS.ESFM": "a2a5a4297b9dce63206408644cda216c0e1e1f20b1f5c7e3a26c88c3af4ed9fd",
+    "OET-RV_NAH.ESFM": "2b67e99c91bb323d1d7a9cdcff0d568803843f60e92b33f78cdd442727fc77e9",
+    "OET-RV_ROM.ESFM": "ec1a99bd0ba837ea6eba3539337f3b9c20e784aaeb93c89e70e21d4ae4037a8d",
+    "OET-RV_COL.ESFM": "aaf0d0983e04494952b1ba11bf76c02a5e3e2b31239c7fe68c6e522dfd7da549",
+    "OET-RV_LAM.ESFM": "fd028c88ef9b3a78357b8c07796f277b331bd004a867482997fa561216cee25f",
+    "OET-RV_TIT.ESFM": "8bd9418c68115a1916274e366c38c476e2187e429c5785a58e28bfb1e8acfe3a",
+    "OET-RV_AMO.ESFM": "af2be543216ed43272d8b0c1679c580e66a43dd0c5e3edd3a451b9f0dfbb3adf",
+    "OET-RV_MAL.ESFM": "c9442c62656c5cd2ad1c7d7b3e71a349b8ad4d1f69b3cb9bf0fdb6e7396c1bfe",
+    "OET-RV_ZEC.ESFM": "19467c1dc8f2f1a450d3d0435afcba32cbe0df44f8895baff5b3b29eff00a3cf",
+    "OET-RV_NUM.ESFM": "fe9f397da2fc31305915a8179750e89809609e6880366ae5219de1c839e240cd",
+    "OET-RV_LUK.ESFM": "4dd78196d88c93ac7664df02fdd8e1de984be4aed70033bc0f33123fc830c36c",
+    "OET-RV_EST.ESFM": "4bb5c18bcc454f4fed8aafad0dfa2797ab0d4ed23d6d99074b9da222ec300508",
+    "OET-RV_TI2.ESFM": "a617f5938c5df09486a6453dcccba9badea3a4c90562ebb07633aed1f7e33e5a",
+    "OET-RV_KI1.ESFM": "6abf08efc4050473c3ed5c56e8f734b24edb653b1975c86eae9c32d85e18fdcf",
+    "OET-RV_HAB.ESFM": "eab68b5f5565307c87727c6ab8ed73de3619e0d7519242d4be475b77ce7e7c8e",
+    "OET-RV_JAM.ESFM": "6374e856955a7c045fda4ff75859876febdbce7276098379001b0aee168a7696",
+    "OET-RV_TH2.ESFM": "3626c94994945abd05185af01a1c09179f59453e83089d5a6db5372bb8f9ec06",
+    "OET-RV_ZEP.ESFM": "85eaf9c12ae6a77a8093d5aef7c63f90c180f1a88ca98b0df97022b16cd595c4",
+    "OET-RV_NEH.ESFM": "21c4f5ee1c69644ff00ac5656bbba203103f45be0f20f0256eb8e7d528be45ad",
+    "OET-RV_EZR.ESFM": "72a6518d065b14b9666c13b25c8f25178a93292f48e692adc2fab5f9e942d7e9",
+    "OET-RV_SA1.ESFM": "65d91cada495a32778aac2cb08228575fb32f98a88682591f82239d29bb9fd73",
+    "OET-RV_SA2.ESFM": "bec8df55e6693088f05c96fd38dd22c22051b80ecd1c6818bc7d93b7a2fdfc99",
+    "OET-RV_DAN.ESFM": "0d8f8de474a08b84bbc469fdb20e384896372c842b6ccb0157e0eaa6c3497684",
+    "OET-RV_ACT.ESFM": "cdff929f02b9a4027513b5ac050d5152111e84578f472187dbfcede0f26c7b06",
+    "OET-RV_REV.ESFM": "ebbffd65c20df02650ba3c6a60f89d3b8dddaefe4c72eed19bf994aa54d1a0eb",
+    "OET-RV_DEU.ESFM": "69b265f01745d8983586b998cd1aa65cd3210bd41f4c144c75ef1c40118ebe59",
+    "OET-RV_CH2.ESFM": "63c95a7b359cd539d0e7b55bbe242957233829ccfb237381ae2006d8a5307707",
+    "OET-RV_EXO.ESFM": "73ff3647dfb2bc00017767bf4f079e7b171ce09c3568a452f71a0b2a31626cec",
+    "OET-RV_CO2.ESFM": "61eec8d446063fe2eb7177a92a566348c5690c1c40670129c27843c133fc301d",
+    "OET-RV_MIC.ESFM": "547c643bf542665b04f3d793b1906bee1242bf3ebe24b8203df6f78334e772ec",
+    "OET-RV_PRO.ESFM": "8a2528649cb218902dfe01a3a1f1e7582846c65654c2cbdd4db8d5f7141b4864",
+    "OET-RV_GEN.ESFM": "05c0cc3bfdf7d121e58d7c0a44832bfc4c9f8bc8d5c4c9a0ffacbf44a15fca3b",
+    "OET-RV_JDE.ESFM": "23dc33b7b41a649183180adf899e86f9e5aaa130947a8e775928be089c398e98",
+    "OET-RV_JDG.ESFM": "42f89c7ec47f2905950530c0e2bae27ce5a5b8e135b315c1effef303a90ee2d6"
+  }
+}

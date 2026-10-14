@@ -1,0 +1,3241 @@
+{
+  "date": "2026-10-13",
+  "version": "2.0.0",
+  "scope": "Candidate-engine consolidation; preview outputs only. No RV source files were rewritten by this work.",
+  "baseline": "Frozen user rebuild: 428428 / 695744 eligible displayed words. Concurrent RV edits are recorded separately and were not overwritten.",
+  "tests": {
+    "count": 125,
+    "result": "passed",
+    "command": "scripts/.venv/bin/python -m unittest discover -s scripts/connect_OET-RV_words_via_OET-LV/tests"
+  },
+  "execution": "Sequential four-book batches, -1, all generated files on SSD; peak RSS is per batch, not a measurement of an unbatched all-book run.",
+  "limitations": "Coverage is not precision. Structural checks cover all mapped passages; only the listed examples and regression fixtures received targeted semantic review. Both valid gains and valid losses exist. Existing links remain anchors, so incremental coverage is not rebuild coverage.",
+  "runs": {
+    "fresh-engine": {
+      "coverage": {
+        "OT": {
+          "words": 520681,
+          "baseline_linked": 321423,
+          "linked": 319035,
+          "net_change": -2388,
+          "percent": 61.27264102204613,
+          "baseline_percent": 61.731271162189515
+        },
+        "NT": {
+          "words": 175063,
+          "baseline_linked": 107005,
+          "linked": 106443,
+          "net_change": -562,
+          "percent": 60.80268246288479,
+          "baseline_percent": 61.12370975020421
+        },
+        "Bible": {
+          "words": 695744,
+          "baseline_linked": 428428,
+          "linked": 425478,
+          "net_change": -2950,
+          "percent": 61.1543901205041,
+          "baseline_percent": 61.57839665164198
+        }
+      },
+      "token_changes": {
+        "added": 9558,
+        "removed": 12482,
+        "changed": 1789
+      },
+      "books": [
+        {
+          "book": "AMO",
+          "words": 3864,
+          "before": 0,
+          "after": 2392,
+          "added": 2392,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 146,
+          "passes": 2,
+          "links_added": 2401,
+          "pass_additions": [
+            2401,
+            0
+          ],
+          "baseline_linked": 2410,
+          "net_change_from_baseline": -18
+        },
+        {
+          "book": "CH1",
+          "words": 17087,
+          "before": 0,
+          "after": 10496,
+          "added": 10496,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 933,
+          "passes": 2,
+          "links_added": 10547,
+          "pass_additions": [
+            10547,
+            0
+          ],
+          "baseline_linked": 10675,
+          "net_change_from_baseline": -179
+        },
+        {
+          "book": "CH2",
+          "words": 20923,
+          "before": 0,
+          "after": 13005,
+          "added": 13005,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 822,
+          "passes": 2,
+          "links_added": 13031,
+          "pass_additions": [
+            13031,
+            0
+          ],
+          "baseline_linked": 13160,
+          "net_change_from_baseline": -155
+        },
+        {
+          "book": "DAN",
+          "words": 10445,
+          "before": 0,
+          "after": 6261,
+          "added": 6261,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 357,
+          "passes": 2,
+          "links_added": 6261,
+          "pass_additions": [
+            6261,
+            0
+          ],
+          "baseline_linked": 6296,
+          "net_change_from_baseline": -35
+        },
+        {
+          "book": "DEU",
+          "words": 23361,
+          "before": 0,
+          "after": 13632,
+          "added": 13632,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 959,
+          "passes": 2,
+          "links_added": 13640,
+          "pass_additions": [
+            13640,
+            0
+          ],
+          "baseline_linked": 13765,
+          "net_change_from_baseline": -133
+        },
+        {
+          "book": "ECC",
+          "words": 5098,
+          "before": 0,
+          "after": 2776,
+          "added": 2776,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 222,
+          "passes": 2,
+          "links_added": 2776,
+          "pass_additions": [
+            2776,
+            0
+          ],
+          "baseline_linked": 2773,
+          "net_change_from_baseline": 3
+        },
+        {
+          "book": "EST",
+          "words": 5590,
+          "before": 0,
+          "after": 2605,
+          "added": 2605,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 166,
+          "passes": 2,
+          "links_added": 2605,
+          "pass_additions": [
+            2605,
+            0
+          ],
+          "baseline_linked": 2653,
+          "net_change_from_baseline": -48
+        },
+        {
+          "book": "EXO",
+          "words": 26831,
+          "before": 0,
+          "after": 16894,
+          "added": 16894,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 1213,
+          "passes": 2,
+          "links_added": 16898,
+          "pass_additions": [
+            16898,
+            0
+          ],
+          "baseline_linked": 16962,
+          "net_change_from_baseline": -68
+        },
+        {
+          "book": "EZE",
+          "words": 35058,
+          "before": 0,
+          "after": 19793,
+          "added": 19793,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 1270,
+          "passes": 2,
+          "links_added": 19802,
+          "pass_additions": [
+            19802,
+            0
+          ],
+          "baseline_linked": 20050,
+          "net_change_from_baseline": -257
+        },
+        {
+          "book": "EZR",
+          "words": 6118,
+          "before": 0,
+          "after": 3934,
+          "added": 3934,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 279,
+          "passes": 2,
+          "links_added": 3942,
+          "pass_additions": [
+            3942,
+            0
+          ],
+          "baseline_linked": 3953,
+          "net_change_from_baseline": -19
+        },
+        {
+          "book": "GEN",
+          "words": 31618,
+          "before": 0,
+          "after": 21846,
+          "added": 21846,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 1531,
+          "passes": 2,
+          "links_added": 21888,
+          "pass_additions": [
+            21888,
+            0
+          ],
+          "baseline_linked": 21930,
+          "net_change_from_baseline": -84
+        },
+        {
+          "book": "HAB",
+          "words": 1436,
+          "before": 0,
+          "after": 747,
+          "added": 747,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 56,
+          "passes": 2,
+          "links_added": 747,
+          "pass_additions": [
+            747,
+            0
+          ],
+          "baseline_linked": 750,
+          "net_change_from_baseline": -3
+        },
+        {
+          "book": "HAG",
+          "words": 901,
+          "before": 0,
+          "after": 517,
+          "added": 517,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 38,
+          "passes": 2,
+          "links_added": 517,
+          "pass_additions": [
+            517,
+            0
+          ],
+          "baseline_linked": 530,
+          "net_change_from_baseline": -13
+        },
+        {
+          "book": "HOS",
+          "words": 4732,
+          "before": 0,
+          "after": 3166,
+          "added": 3166,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 197,
+          "passes": 2,
+          "links_added": 3178,
+          "pass_additions": [
+            3178,
+            0
+          ],
+          "baseline_linked": 3172,
+          "net_change_from_baseline": -6
+        },
+        {
+          "book": "ISA",
+          "words": 33041,
+          "before": 0,
+          "after": 20666,
+          "added": 20666,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 1291,
+          "passes": 2,
+          "links_added": 20673,
+          "pass_additions": [
+            20673,
+            0
+          ],
+          "baseline_linked": 20715,
+          "net_change_from_baseline": -49
+        },
+        {
+          "book": "JDG",
+          "words": 16230,
+          "before": 0,
+          "after": 10345,
+          "added": 10345,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 618,
+          "passes": 2,
+          "links_added": 10378,
+          "pass_additions": [
+            10378,
+            0
+          ],
+          "baseline_linked": 10451,
+          "net_change_from_baseline": -106
+        },
+        {
+          "book": "JER",
+          "words": 37163,
+          "before": 0,
+          "after": 23865,
+          "added": 23865,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 1364,
+          "passes": 2,
+          "links_added": 23878,
+          "pass_additions": [
+            23878,
+            0
+          ],
+          "baseline_linked": 24000,
+          "net_change_from_baseline": -135
+        },
+        {
+          "book": "JNA",
+          "words": 1181,
+          "before": 0,
+          "after": 743,
+          "added": 743,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 48,
+          "passes": 2,
+          "links_added": 743,
+          "pass_additions": [
+            743,
+            0
+          ],
+          "baseline_linked": 743,
+          "net_change_from_baseline": 0
+        },
+        {
+          "book": "JOB",
+          "words": 15789,
+          "before": 0,
+          "after": 9500,
+          "added": 9500,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 1070,
+          "passes": 2,
+          "links_added": 9500,
+          "pass_additions": [
+            9500,
+            0
+          ],
+          "baseline_linked": 9502,
+          "net_change_from_baseline": -2
+        },
+        {
+          "book": "JOL",
+          "words": 1862,
+          "before": 0,
+          "after": 1338,
+          "added": 1338,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 73,
+          "passes": 2,
+          "links_added": 1338,
+          "pass_additions": [
+            1338,
+            0
+          ],
+          "baseline_linked": 1345,
+          "net_change_from_baseline": -7
+        },
+        {
+          "book": "JOS",
+          "words": 15190,
+          "before": 0,
+          "after": 9581,
+          "added": 9581,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 658,
+          "passes": 2,
+          "links_added": 9659,
+          "pass_additions": [
+            9659,
+            0
+          ],
+          "baseline_linked": 9637,
+          "net_change_from_baseline": -56
+        },
+        {
+          "book": "KI1",
+          "words": 20227,
+          "before": 0,
+          "after": 12131,
+          "added": 12131,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 816,
+          "passes": 2,
+          "links_added": 12163,
+          "pass_additions": [
+            12163,
+            0
+          ],
+          "baseline_linked": 12259,
+          "net_change_from_baseline": -128
+        },
+        {
+          "book": "KI2",
+          "words": 19962,
+          "before": 0,
+          "after": 12260,
+          "added": 12260,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 719,
+          "passes": 2,
+          "links_added": 12280,
+          "pass_additions": [
+            12280,
+            0
+          ],
+          "baseline_linked": 12406,
+          "net_change_from_baseline": -146
+        },
+        {
+          "book": "LAM",
+          "words": 3091,
+          "before": 0,
+          "after": 1923,
+          "added": 1923,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 154,
+          "passes": 2,
+          "links_added": 1923,
+          "pass_additions": [
+            1923,
+            0
+          ],
+          "baseline_linked": 1933,
+          "net_change_from_baseline": -10
+        },
+        {
+          "book": "LEV",
+          "words": 20156,
+          "before": 0,
+          "after": 12056,
+          "added": 12056,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 859,
+          "passes": 2,
+          "links_added": 12056,
+          "pass_additions": [
+            12056,
+            0
+          ],
+          "baseline_linked": 12122,
+          "net_change_from_baseline": -66
+        },
+        {
+          "book": "MAL",
+          "words": 1658,
+          "before": 0,
+          "after": 928,
+          "added": 928,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 55,
+          "passes": 2,
+          "links_added": 928,
+          "pass_additions": [
+            928,
+            0
+          ],
+          "baseline_linked": 933,
+          "net_change_from_baseline": -5
+        },
+        {
+          "book": "MIC",
+          "words": 2856,
+          "before": 0,
+          "after": 1804,
+          "added": 1804,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 105,
+          "passes": 2,
+          "links_added": 1805,
+          "pass_additions": [
+            1805,
+            0
+          ],
+          "baseline_linked": 1803,
+          "net_change_from_baseline": 1
+        },
+        {
+          "book": "NAH",
+          "words": 1105,
+          "before": 0,
+          "after": 577,
+          "added": 577,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 47,
+          "passes": 2,
+          "links_added": 577,
+          "pass_additions": [
+            577,
+            0
+          ],
+          "baseline_linked": 578,
+          "net_change_from_baseline": -1
+        },
+        {
+          "book": "NEH",
+          "words": 8911,
+          "before": 0,
+          "after": 5361,
+          "added": 5361,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 405,
+          "passes": 2,
+          "links_added": 5375,
+          "pass_additions": [
+            5375,
+            0
+          ],
+          "baseline_linked": 5391,
+          "net_change_from_baseline": -30
+        },
+        {
+          "book": "NUM",
+          "words": 23518,
+          "before": 0,
+          "after": 14019,
+          "added": 14019,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 1205,
+          "passes": 2,
+          "links_added": 14038,
+          "pass_additions": [
+            14038,
+            0
+          ],
+          "baseline_linked": 14161,
+          "net_change_from_baseline": -142
+        },
+        {
+          "book": "OBA",
+          "words": 563,
+          "before": 0,
+          "after": 302,
+          "added": 302,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 21,
+          "passes": 2,
+          "links_added": 302,
+          "pass_additions": [
+            302,
+            0
+          ],
+          "baseline_linked": 311,
+          "net_change_from_baseline": -9
+        },
+        {
+          "book": "PRO",
+          "words": 14075,
+          "before": 0,
+          "after": 8134,
+          "added": 8134,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 914,
+          "passes": 2,
+          "links_added": 8134,
+          "pass_additions": [
+            8134,
+            0
+          ],
+          "baseline_linked": 8163,
+          "net_change_from_baseline": -29
+        },
+        {
+          "book": "PSA",
+          "words": 41267,
+          "before": 0,
+          "after": 24218,
+          "added": 24218,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 2523,
+          "passes": 2,
+          "links_added": 24221,
+          "pass_additions": [
+            24221,
+            0
+          ],
+          "baseline_linked": 24512,
+          "net_change_from_baseline": -294
+        },
+        {
+          "book": "RUT",
+          "words": 2432,
+          "before": 0,
+          "after": 1288,
+          "added": 1288,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 85,
+          "passes": 2,
+          "links_added": 1292,
+          "pass_additions": [
+            1292,
+            0
+          ],
+          "baseline_linked": 1309,
+          "net_change_from_baseline": -21
+        },
+        {
+          "book": "SA1",
+          "words": 20886,
+          "before": 0,
+          "after": 13099,
+          "added": 13099,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 810,
+          "passes": 2,
+          "links_added": 13122,
+          "pass_additions": [
+            13122,
+            0
+          ],
+          "baseline_linked": 13149,
+          "net_change_from_baseline": -50
+        },
+        {
+          "book": "SA2",
+          "words": 16893,
+          "before": 0,
+          "after": 10525,
+          "added": 10525,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 694,
+          "passes": 2,
+          "links_added": 10547,
+          "pass_additions": [
+            10547,
+            0
+          ],
+          "baseline_linked": 10619,
+          "net_change_from_baseline": -94
+        },
+        {
+          "book": "SNG",
+          "words": 2557,
+          "before": 0,
+          "after": 1850,
+          "added": 1850,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 117,
+          "passes": 2,
+          "links_added": 1851,
+          "pass_additions": [
+            1851,
+            0
+          ],
+          "baseline_linked": 1843,
+          "net_change_from_baseline": 7
+        },
+        {
+          "book": "ZEC",
+          "words": 5584,
+          "before": 0,
+          "after": 3610,
+          "added": 3610,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 211,
+          "passes": 2,
+          "links_added": 3611,
+          "pass_additions": [
+            3611,
+            0
+          ],
+          "baseline_linked": 3619,
+          "net_change_from_baseline": -9
+        },
+        {
+          "book": "ZEP",
+          "words": 1422,
+          "before": 0,
+          "after": 848,
+          "added": 848,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 53,
+          "passes": 2,
+          "links_added": 848,
+          "pass_additions": [
+            848,
+            0
+          ],
+          "baseline_linked": 840,
+          "net_change_from_baseline": 8
+        },
+        {
+          "book": "ACT",
+          "words": 23607,
+          "before": 0,
+          "after": 13701,
+          "added": 13701,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 1006,
+          "passes": 2,
+          "links_added": 13702,
+          "pass_additions": [
+            13702,
+            0
+          ],
+          "baseline_linked": 13870,
+          "net_change_from_baseline": -169
+        },
+        {
+          "book": "CO1",
+          "words": 9071,
+          "before": 0,
+          "after": 5007,
+          "added": 5007,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 437,
+          "passes": 2,
+          "links_added": 5007,
+          "pass_additions": [
+            5007,
+            0
+          ],
+          "baseline_linked": 5004,
+          "net_change_from_baseline": 3
+        },
+        {
+          "book": "CO2",
+          "words": 5875,
+          "before": 0,
+          "after": 3443,
+          "added": 3443,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 256,
+          "passes": 2,
+          "links_added": 3443,
+          "pass_additions": [
+            3443,
+            0
+          ],
+          "baseline_linked": 3434,
+          "net_change_from_baseline": 9
+        },
+        {
+          "book": "COL",
+          "words": 1975,
+          "before": 0,
+          "after": 1242,
+          "added": 1242,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 95,
+          "passes": 2,
+          "links_added": 1242,
+          "pass_additions": [
+            1242,
+            0
+          ],
+          "baseline_linked": 1250,
+          "net_change_from_baseline": -8
+        },
+        {
+          "book": "EPH",
+          "words": 3089,
+          "before": 0,
+          "after": 1738,
+          "added": 1738,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 154,
+          "passes": 2,
+          "links_added": 1738,
+          "pass_additions": [
+            1738,
+            0
+          ],
+          "baseline_linked": 1746,
+          "net_change_from_baseline": -8
+        },
+        {
+          "book": "GAL",
+          "words": 3204,
+          "before": 0,
+          "after": 1769,
+          "added": 1769,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 149,
+          "passes": 2,
+          "links_added": 1769,
+          "pass_additions": [
+            1769,
+            0
+          ],
+          "baseline_linked": 1753,
+          "net_change_from_baseline": 16
+        },
+        {
+          "book": "HEB",
+          "words": 6744,
+          "before": 0,
+          "after": 3997,
+          "added": 3997,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 303,
+          "passes": 2,
+          "links_added": 3997,
+          "pass_additions": [
+            3997,
+            0
+          ],
+          "baseline_linked": 4013,
+          "net_change_from_baseline": -16
+        },
+        {
+          "book": "JAM",
+          "words": 2494,
+          "before": 0,
+          "after": 1341,
+          "added": 1341,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 108,
+          "passes": 2,
+          "links_added": 1341,
+          "pass_additions": [
+            1341,
+            0
+          ],
+          "baseline_linked": 1334,
+          "net_change_from_baseline": 7
+        },
+        {
+          "book": "JDE",
+          "words": 662,
+          "before": 0,
+          "after": 313,
+          "added": 313,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 24,
+          "passes": 2,
+          "links_added": 313,
+          "pass_additions": [
+            313,
+            0
+          ],
+          "baseline_linked": 311,
+          "net_change_from_baseline": 2
+        },
+        {
+          "book": "JHN",
+          "words": 19175,
+          "before": 0,
+          "after": 11917,
+          "added": 11917,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 879,
+          "passes": 2,
+          "links_added": 11917,
+          "pass_additions": [
+            11917,
+            0
+          ],
+          "baseline_linked": 11963,
+          "net_change_from_baseline": -46
+        },
+        {
+          "book": "JN1",
+          "words": 2503,
+          "before": 0,
+          "after": 1634,
+          "added": 1634,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 103,
+          "passes": 2,
+          "links_added": 1634,
+          "pass_additions": [
+            1634,
+            0
+          ],
+          "baseline_linked": 1643,
+          "net_change_from_baseline": -9
+        },
+        {
+          "book": "JN2",
+          "words": 309,
+          "before": 0,
+          "after": 172,
+          "added": 172,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 13,
+          "passes": 2,
+          "links_added": 172,
+          "pass_additions": [
+            172,
+            0
+          ],
+          "baseline_linked": 173,
+          "net_change_from_baseline": -1
+        },
+        {
+          "book": "JN3",
+          "words": 333,
+          "before": 0,
+          "after": 164,
+          "added": 164,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 15,
+          "passes": 2,
+          "links_added": 164,
+          "pass_additions": [
+            164,
+            0
+          ],
+          "baseline_linked": 173,
+          "net_change_from_baseline": -9
+        },
+        {
+          "book": "LUK",
+          "words": 24789,
+          "before": 0,
+          "after": 15546,
+          "added": 15546,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 1151,
+          "passes": 2,
+          "links_added": 15546,
+          "pass_additions": [
+            15546,
+            0
+          ],
+          "baseline_linked": 15685,
+          "net_change_from_baseline": -139
+        },
+        {
+          "book": "MAT",
+          "words": 23015,
+          "before": 0,
+          "after": 14744,
+          "added": 14744,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 1071,
+          "passes": 2,
+          "links_added": 14744,
+          "pass_additions": [
+            14744,
+            0
+          ],
+          "baseline_linked": 14858,
+          "net_change_from_baseline": -114
+        },
+        {
+          "book": "MRK",
+          "words": 13332,
+          "before": 0,
+          "after": 8453,
+          "added": 8453,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 677,
+          "passes": 2,
+          "links_added": 8453,
+          "pass_additions": [
+            8453,
+            0
+          ],
+          "baseline_linked": 8525,
+          "net_change_from_baseline": -72
+        },
+        {
+          "book": "PE1",
+          "words": 2330,
+          "before": 0,
+          "after": 1343,
+          "added": 1343,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 105,
+          "passes": 2,
+          "links_added": 1343,
+          "pass_additions": [
+            1343,
+            0
+          ],
+          "baseline_linked": 1344,
+          "net_change_from_baseline": -1
+        },
+        {
+          "book": "PE2",
+          "words": 1559,
+          "before": 0,
+          "after": 910,
+          "added": 910,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 61,
+          "passes": 2,
+          "links_added": 910,
+          "pass_additions": [
+            910,
+            0
+          ],
+          "baseline_linked": 922,
+          "net_change_from_baseline": -12
+        },
+        {
+          "book": "PHM",
+          "words": 454,
+          "before": 0,
+          "after": 301,
+          "added": 301,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 25,
+          "passes": 2,
+          "links_added": 301,
+          "pass_additions": [
+            301,
+            0
+          ],
+          "baseline_linked": 304,
+          "net_change_from_baseline": -3
+        },
+        {
+          "book": "PHP",
+          "words": 2195,
+          "before": 0,
+          "after": 1283,
+          "added": 1283,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 104,
+          "passes": 2,
+          "links_added": 1283,
+          "pass_additions": [
+            1283,
+            0
+          ],
+          "baseline_linked": 1286,
+          "net_change_from_baseline": -3
+        },
+        {
+          "book": "REV",
+          "words": 11129,
+          "before": 0,
+          "after": 7526,
+          "added": 7526,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 405,
+          "passes": 2,
+          "links_added": 7526,
+          "pass_additions": [
+            7526,
+            0
+          ],
+          "baseline_linked": 7506,
+          "net_change_from_baseline": 20
+        },
+        {
+          "book": "ROM",
+          "words": 9116,
+          "before": 0,
+          "after": 5264,
+          "added": 5264,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 433,
+          "passes": 2,
+          "links_added": 5264,
+          "pass_additions": [
+            5264,
+            0
+          ],
+          "baseline_linked": 5270,
+          "net_change_from_baseline": -6
+        },
+        {
+          "book": "TH1",
+          "words": 1901,
+          "before": 0,
+          "after": 1209,
+          "added": 1209,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 89,
+          "passes": 2,
+          "links_added": 1209,
+          "pass_additions": [
+            1209,
+            0
+          ],
+          "baseline_linked": 1214,
+          "net_change_from_baseline": -5
+        },
+        {
+          "book": "TH2",
+          "words": 1022,
+          "before": 0,
+          "after": 643,
+          "added": 643,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 47,
+          "passes": 2,
+          "links_added": 643,
+          "pass_additions": [
+            643,
+            0
+          ],
+          "baseline_linked": 636,
+          "net_change_from_baseline": 7
+        },
+        {
+          "book": "TI1",
+          "words": 2432,
+          "before": 0,
+          "after": 1352,
+          "added": 1352,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 113,
+          "passes": 2,
+          "links_added": 1352,
+          "pass_additions": [
+            1352,
+            0
+          ],
+          "baseline_linked": 1357,
+          "net_change_from_baseline": -5
+        },
+        {
+          "book": "TI2",
+          "words": 1715,
+          "before": 0,
+          "after": 922,
+          "added": 922,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 82,
+          "passes": 2,
+          "links_added": 922,
+          "pass_additions": [
+            922,
+            0
+          ],
+          "baseline_linked": 920,
+          "net_change_from_baseline": 2
+        },
+        {
+          "book": "TIT",
+          "words": 1033,
+          "before": 0,
+          "after": 509,
+          "added": 509,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 46,
+          "passes": 2,
+          "links_added": 509,
+          "pass_additions": [
+            509,
+            0
+          ],
+          "baseline_linked": 511,
+          "net_change_from_baseline": -2
+        }
+      ],
+      "book_passes": 132,
+      "peak_batch_rss_kib": 792744,
+      "validation": {
+        "checks": {
+          "books": 66,
+          "mapping_skipped": 0,
+          "unmapped_lv": 0,
+          "passages": 31055,
+          "numbered_tokens": 425919
+        },
+        "failures": [],
+        "lv_input_changes": [],
+        "rv_snapshot_changes": [],
+        "concurrent_rv_edits": [
+          "translatedTexts/ReadersVersion/OET-RV_CH1.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_JN2.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_HAG.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_JNA.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_JHN.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_RUT.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_KI2.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_JOS.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_HEB.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_MRK.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_PSA.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_GAL.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_JN1.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_MAT.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_CO1.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_ISA.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_EZE.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_ECC.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_JOB.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_JER.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_HOS.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_ROM.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_COL.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_MAL.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_ZEC.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_NUM.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_LUK.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_EST.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_TI2.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_KI1.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_TH2.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_EZR.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_SA2.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_DAN.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_ACT.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_REV.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_DEU.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_CH2.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_EXO.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_CO2.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_GEN.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_JDG.ESFM"
+        ],
+        "mapping_revisions": [
+          "519af776ab65d89a51e37f750779250f940459ef+bos-supplement-2.7871fb0b24ae7aa2af32aaaf80292f284a6355db6f7c5fc2be0d87e172789940"
+        ],
+        "selection_reasons": {
+          "anchored order": 357320,
+          "add &": 854,
+          "unique lexical candidate": 53553,
+          "linked phrase context": 7222,
+          "add @": 2229,
+          "curated phrase": 2586,
+          "traditional name alias": 1021,
+          "add %": 229,
+          "add *": 629,
+          "explicit same-verse repeat": 189,
+          "local phrase movement": 87
+        },
+        "regressions": {
+          "MAT 4:6": [
+            [
+              "arms",
+              1462
+            ]
+          ],
+          "MRK 13:11": [
+            [
+              "are",
+              33740
+            ]
+          ],
+          "MRK 14:5": [
+            [
+              "was",
+              34405
+            ]
+          ],
+          "MRK 14:72": [
+            [
+              "rooster",
+              35847
+            ],
+            [
+              "crowed",
+              35848
+            ],
+            [
+              "rooster",
+              35868
+            ],
+            [
+              "crowed",
+              35870
+            ]
+          ],
+          "MRK 15:40": [
+            [
+              "was",
+              36575
+            ],
+            [
+              "Maria",
+              36587
+            ],
+            [
+              "Maria",
+              36591
+            ]
+          ],
+          "CH1 1:4": [
+            [
+              "Japeth",
+              187066
+            ]
+          ],
+          "CH1 1:34": [
+            [
+              "Yitshak",
+              187372
+            ],
+            [
+              "Yitshak's",
+              187375
+            ]
+          ],
+          "RUT 4:4": [
+            [
+              "I",
+              null
+            ],
+            [
+              "I",
+              null
+            ],
+            [
+              "are",
+              null
+            ],
+            [
+              "are",
+              null
+            ],
+            [
+              "I",
+              125033
+            ]
+          ],
+          "RUT 4:18": [
+            [
+              "Perez's",
+              125329
+            ],
+            [
+              "was",
+              null
+            ]
+          ]
+        }
+      },
+      "output_sha256": {
+        "OET-RV_ACT.ESFM": "3d31e811fc4c5d34ab8748c97113ee928e5c509e9f0b5fada620af3f45b32449",
+        "OET-RV_AMO.ESFM": "af2be543216ed43272d8b0c1679c580e66a43dd0c5e3edd3a451b9f0dfbb3adf",
+        "OET-RV_CH1.ESFM": "abf916c463378d51aa16fd952bd32e79a8c57133e636d930022d00ac5ec27ad3",
+        "OET-RV_CH2.ESFM": "f4c254eb6cf06404361b38e57ec2c1395997aea89e5d1525f63d8eef311cb12e",
+        "OET-RV_CO1.ESFM": "799bd6d39561cbae327703a89d913aaaf1488779d0f885e67ec9c5ddcef38dbb",
+        "OET-RV_CO2.ESFM": "c6243774c1f8d5091db1c3b88bfca2e5759223b06ce3186bfb55c5514ee865f5",
+        "OET-RV_COL.ESFM": "8dbb89c7bb99b02dba22d9f30142e5696d3fccbafac91525452fd7ed189317d6",
+        "OET-RV_DAN.ESFM": "ff0d73d5c1200e5abb65c263ec13482e01b5783f3fba871c61a791889160075c",
+        "OET-RV_DEU.ESFM": "b81cf14fe97aa8cf57018a22cdf2f41e80cb04e091ef999d4f8f93edfe07c036",
+        "OET-RV_ECC.ESFM": "4f270b996470739dc74f9ac9cbac14716d426c67edfe6d642acafc9ff98f9312",
+        "OET-RV_EPH.ESFM": "d1c35200ab2d3715d05dc1929f9bcdd5771a83ad46464db28da92fa6d0ae542a",
+        "OET-RV_EST.ESFM": "2caf71a9f1db5ef2c1e74e0b93ebe0d5ab5fb78f1c7b8f8e25132ab329e60f92",
+        "OET-RV_EXO.ESFM": "93211eb6ef64895fa66994d4509d8c1ecc2871f81d42a1a4dbe507a6c7ad072b",
+        "OET-RV_EZE.ESFM": "9a1522c7d378e98c74c75c1d38437e7347789251526dfb292b717220381bfc03",
+        "OET-RV_EZR.ESFM": "bcf4db0806a6813f0d430200d539186c421cff904d105efc7f9d44766b785bee",
+        "OET-RV_GAL.ESFM": "9f50bc65a0e2c582628a6add497b3c348034aa70ceccbe27c9a4d99d13c4387a",
+        "OET-RV_GEN.ESFM": "c920bc65e1cf2042382e4da65327af1bdcb6c31bb2ecdf716ba726eef000f173",
+        "OET-RV_HAB.ESFM": "60b626c697c7a054255d3d75ee25ab57d0972100534f7ef6b44184b17176891c",
+        "OET-RV_HAG.ESFM": "4c9e2bcc39107a5d9066d5b5720daeea4fb6e3931a1323c17cfdba07503764da",
+        "OET-RV_HEB.ESFM": "0e642c1490f149edfd0ad5d511e0c5fd4a4d4f51ab6bf185004e2746150f4b40",
+        "OET-RV_HOS.ESFM": "5197b1a82c97ef87abde7c756437513399d8d59fd67fa09cb377ff5bace5f84e",
+        "OET-RV_ISA.ESFM": "7f2571a4a96dc72fc8babc90403f96d47c08af28026fd808f039fa205eb41a9a",
+        "OET-RV_JAM.ESFM": "6374e856955a7c045fda4ff75859876febdbce7276098379001b0aee168a7696",
+        "OET-RV_JDE.ESFM": "4bc5cae66f57169d10806c25f85b84b927b9ba0fb2a4a5dcd17180c0aebf0c5d",
+        "OET-RV_JDG.ESFM": "d87f3f16474421710f79d3ecd79996cf4d8e2e483b31706d8d47ac490dbd63e7",
+        "OET-RV_JER.ESFM": "8b4949d79f0530d9784b62188824b11794524cbb4094a324601ae2b93d27150e",
+        "OET-RV_JHN.ESFM": "1c1a36dfb9846a7f67889a3cd86a6c0f3a9a81c9fa337c03a008031553be1c0f",
+        "OET-RV_JN1.ESFM": "c8ee9b610a4358a3c202cc983d2b91fe6e1cd12f2d6a352f72d0b2e2631261b6",
+        "OET-RV_JN2.ESFM": "1a923d71e0bb27e5f78988e47f336ce2a7ead29e62e1737370bd1e91b3927542",
+        "OET-RV_JN3.ESFM": "f16a459c46776fb21805921bda174e7f3508a4a5061b6abdcaf017959717ec54",
+        "OET-RV_JNA.ESFM": "837753f0c8761797f69dc65aa0b976a9ea0b57bae2e91ee69f670ae5a54f3d65",
+        "OET-RV_JOB.ESFM": "c685b3c9fab25e5ea478eb0dc4546d5c4e458892929770b7a80db5f608d2cb7c",
+        "OET-RV_JOL.ESFM": "2637a476cb9874763ec07cd56ce88bff9bdcbfe1f15d38419b4098ae8a85998c",
+        "OET-RV_JOS.ESFM": "b9b2203c2e86b7b6f351f8a5ee6f31082c57d6d8b3c0ab15e39191baa27dd0f1",
+        "OET-RV_KI1.ESFM": "fba67aecaeb056151d9bed4a5c466b45588fd1aea367e1d70f00e307afa22279",
+        "OET-RV_KI2.ESFM": "7d13c45d3b1745e9a8d1526517d808fc29bf2a29dc81e3d3e488453ae0c90885",
+        "OET-RV_LAM.ESFM": "2c83fd8866e5445ccc41e7b972c1b93b68e5dd4326ae6716ed58f026cbd9431b",
+        "OET-RV_LEV.ESFM": "9ea9a300a14040e888e47b61eb67eb716616fb59518ff79e9939bd9467eee8a2",
+        "OET-RV_LUK.ESFM": "6a29cbde0e8799448e7c0dc280b4580308d5ddd9f86290c43d83fd401aa02a85",
+        "OET-RV_MAL.ESFM": "c9442c62656c5cd2ad1c7d7b3e71a349b8ad4d1f69b3cb9bf0fdb6e7396c1bfe",
+        "OET-RV_MAT.ESFM": "ced3be87681e0b97b2e6aaf3c883e67ec49838037676cee1d486afd38fffed1a",
+        "OET-RV_MIC.ESFM": "426f52225cb9924cd14edceb0e83c850a01f66092fdcf11c145487b4d7284fd2",
+        "OET-RV_MRK.ESFM": "83ecc7dd49a28da4839c10b5aa97dc4147441f791f23029cd42d350680003ad1",
+        "OET-RV_NAH.ESFM": "2b67e99c91bb323d1d7a9cdcff0d568803843f60e92b33f78cdd442727fc77e9",
+        "OET-RV_NEH.ESFM": "12ed331187d513cffbeb8373a0cef148cada5a6e9d9e0e60b8b606aaafb7347c",
+        "OET-RV_NUM.ESFM": "f54772ef993439ec35ee660ec07575084a1fd390f61db85272dca769dd2065d9",
+        "OET-RV_OBA.ESFM": "8fd0e4f3c4bf2bb9e7dbe12005d31f85b66457c46f5ee7d64c656dc9be80317a",
+        "OET-RV_PE1.ESFM": "9cecd8ff66e7116c6a1172fa912c49f1e18eb06396402cdc9fe1a8848657232a",
+        "OET-RV_PE2.ESFM": "64f331dc0ce03939f4c06b0a6ea8f1668e70ab01e2848f3738554c4153386fcf",
+        "OET-RV_PHM.ESFM": "a8c2e0ce3c745ee0da248bffd247c92a2ab737ed52ee083fcc5a7a569fc330cc",
+        "OET-RV_PHP.ESFM": "e58b6e9417125a254dc7563749b0009004cc98ea60121a7494852b623bd6e747",
+        "OET-RV_PRO.ESFM": "263974ae733893fe9869b07390632d4b68f698066f5f972362b838d0ee060de0",
+        "OET-RV_PSA.ESFM": "90e7f86a2b635c307b9aa5d3713c3ade53277f731677da7b311bd217d1d20e65",
+        "OET-RV_REV.ESFM": "1a0a3c5da8db931c5d702d66e554312d9c0b6b1bc1b1a15ce1de28f440fcf113",
+        "OET-RV_ROM.ESFM": "1fa3c76bfc54d4b3ea3f80f18d843c63fa44a2c579d134851d44373ee3593eae",
+        "OET-RV_RUT.ESFM": "074e5306097537de312993a5b5283dcc8a860e7351b61414b33b6feef3185700",
+        "OET-RV_SA1.ESFM": "aa5546b1156f18cf2c3d8abaed388490465af9621b0a20befb30a0502fefe8a5",
+        "OET-RV_SA2.ESFM": "2b66ef55ccfb525cd927864e773dd594eed4500db4994451db4320f94fadd601",
+        "OET-RV_SNG.ESFM": "1aee6ea85a6a155435fe106e5aad518be96cefd537f8d94f75914104f773c3a0",
+        "OET-RV_TH1.ESFM": "cf92c2043ac59126628185eec36d5259d6eb4737dcfa5ef8fd17115d32ed13c2",
+        "OET-RV_TH2.ESFM": "3626c94994945abd05185af01a1c09179f59453e83089d5a6db5372bb8f9ec06",
+        "OET-RV_TI1.ESFM": "8dceea4bddee99b01f695a13cb75fd910e038f1355ef24a519aea681499e43a2",
+        "OET-RV_TI2.ESFM": "6a7d74194ae2d747cd5421e7c527ebc649c5078377cf13a1f74c58f13b9baf9d",
+        "OET-RV_TIT.ESFM": "5586cc947b57270991e9c37abff275a3cc6e37939022690f3553363b2bce3bac",
+        "OET-RV_ZEC.ESFM": "be9120cdbb3c05a4120565100ead8694108261f457d2570ccb183acc3e9fcee4",
+        "OET-RV_ZEP.ESFM": "873cf7218c98bbc36d4dc72be210f6430d400d2c6a03e8c8724ec2bf63024cdb"
+      }
+    },
+    "incremental-engine": {
+      "coverage": {
+        "OT": {
+          "words": 520681,
+          "baseline_linked": 321423,
+          "linked": 326798,
+          "net_change": 5375,
+          "percent": 62.763573089857324,
+          "baseline_percent": 61.731271162189515
+        },
+        "NT": {
+          "words": 175063,
+          "baseline_linked": 107005,
+          "linked": 108767,
+          "net_change": 1762,
+          "percent": 62.13020455493165,
+          "baseline_percent": 61.12370975020421
+        },
+        "Bible": {
+          "words": 695744,
+          "baseline_linked": 428428,
+          "linked": 435565,
+          "net_change": 7137,
+          "percent": 62.604204994940666,
+          "baseline_percent": 61.57839665164198
+        }
+      },
+      "token_changes": {
+        "added": 7168
+      },
+      "books": [
+        {
+          "book": "AMO",
+          "words": 3864,
+          "before": 2410,
+          "after": 2437,
+          "added": 27,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 146,
+          "passes": 2,
+          "links_added": 28,
+          "pass_additions": [
+            28,
+            0
+          ],
+          "baseline_linked": 2410,
+          "net_change_from_baseline": 27
+        },
+        {
+          "book": "CH1",
+          "words": 17087,
+          "before": 10675,
+          "after": 10917,
+          "added": 242,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 933,
+          "passes": 2,
+          "links_added": 250,
+          "pass_additions": [
+            250,
+            0
+          ],
+          "baseline_linked": 10675,
+          "net_change_from_baseline": 242
+        },
+        {
+          "book": "CH2",
+          "words": 20923,
+          "before": 13160,
+          "after": 13383,
+          "added": 223,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 822,
+          "passes": 2,
+          "links_added": 224,
+          "pass_additions": [
+            224,
+            0
+          ],
+          "baseline_linked": 13160,
+          "net_change_from_baseline": 223
+        },
+        {
+          "book": "DAN",
+          "words": 10445,
+          "before": 6296,
+          "after": 6394,
+          "added": 98,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 357,
+          "passes": 2,
+          "links_added": 98,
+          "pass_additions": [
+            98,
+            0
+          ],
+          "baseline_linked": 6296,
+          "net_change_from_baseline": 98
+        },
+        {
+          "book": "DEU",
+          "words": 23361,
+          "before": 13765,
+          "after": 14000,
+          "added": 235,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 959,
+          "passes": 2,
+          "links_added": 235,
+          "pass_additions": [
+            235,
+            0
+          ],
+          "baseline_linked": 13765,
+          "net_change_from_baseline": 235
+        },
+        {
+          "book": "ECC",
+          "words": 5098,
+          "before": 2773,
+          "after": 2831,
+          "added": 58,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 222,
+          "passes": 2,
+          "links_added": 58,
+          "pass_additions": [
+            58,
+            0
+          ],
+          "baseline_linked": 2773,
+          "net_change_from_baseline": 58
+        },
+        {
+          "book": "EST",
+          "words": 5590,
+          "before": 2653,
+          "after": 2713,
+          "added": 60,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 166,
+          "passes": 2,
+          "links_added": 60,
+          "pass_additions": [
+            60,
+            0
+          ],
+          "baseline_linked": 2653,
+          "net_change_from_baseline": 60
+        },
+        {
+          "book": "EXO",
+          "words": 26831,
+          "before": 16962,
+          "after": 17221,
+          "added": 259,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 1213,
+          "passes": 2,
+          "links_added": 259,
+          "pass_additions": [
+            259,
+            0
+          ],
+          "baseline_linked": 16962,
+          "net_change_from_baseline": 259
+        },
+        {
+          "book": "EZE",
+          "words": 35058,
+          "before": 20050,
+          "after": 20310,
+          "added": 260,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 1270,
+          "passes": 2,
+          "links_added": 260,
+          "pass_additions": [
+            260,
+            0
+          ],
+          "baseline_linked": 20050,
+          "net_change_from_baseline": 260
+        },
+        {
+          "book": "EZR",
+          "words": 6118,
+          "before": 3953,
+          "after": 4016,
+          "added": 63,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 279,
+          "passes": 2,
+          "links_added": 63,
+          "pass_additions": [
+            63,
+            0
+          ],
+          "baseline_linked": 3953,
+          "net_change_from_baseline": 63
+        },
+        {
+          "book": "GEN",
+          "words": 31618,
+          "before": 21930,
+          "after": 22350,
+          "added": 420,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 1531,
+          "passes": 2,
+          "links_added": 424,
+          "pass_additions": [
+            424,
+            0
+          ],
+          "baseline_linked": 21930,
+          "net_change_from_baseline": 420
+        },
+        {
+          "book": "HAB",
+          "words": 1436,
+          "before": 750,
+          "after": 763,
+          "added": 13,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 56,
+          "passes": 2,
+          "links_added": 13,
+          "pass_additions": [
+            13,
+            0
+          ],
+          "baseline_linked": 750,
+          "net_change_from_baseline": 13
+        },
+        {
+          "book": "HAG",
+          "words": 901,
+          "before": 530,
+          "after": 536,
+          "added": 6,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 38,
+          "passes": 2,
+          "links_added": 6,
+          "pass_additions": [
+            6,
+            0
+          ],
+          "baseline_linked": 530,
+          "net_change_from_baseline": 6
+        },
+        {
+          "book": "HOS",
+          "words": 4732,
+          "before": 3172,
+          "after": 3214,
+          "added": 42,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 197,
+          "passes": 2,
+          "links_added": 42,
+          "pass_additions": [
+            42,
+            0
+          ],
+          "baseline_linked": 3172,
+          "net_change_from_baseline": 42
+        },
+        {
+          "book": "ISA",
+          "words": 33041,
+          "before": 20715,
+          "after": 21048,
+          "added": 333,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 1291,
+          "passes": 2,
+          "links_added": 333,
+          "pass_additions": [
+            333,
+            0
+          ],
+          "baseline_linked": 20715,
+          "net_change_from_baseline": 333
+        },
+        {
+          "book": "JDG",
+          "words": 16230,
+          "before": 10451,
+          "after": 10633,
+          "added": 182,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 618,
+          "passes": 2,
+          "links_added": 184,
+          "pass_additions": [
+            184,
+            0
+          ],
+          "baseline_linked": 10451,
+          "net_change_from_baseline": 182
+        },
+        {
+          "book": "JER",
+          "words": 37163,
+          "before": 24000,
+          "after": 24401,
+          "added": 401,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 1364,
+          "passes": 2,
+          "links_added": 401,
+          "pass_additions": [
+            401,
+            0
+          ],
+          "baseline_linked": 24000,
+          "net_change_from_baseline": 401
+        },
+        {
+          "book": "JNA",
+          "words": 1181,
+          "before": 743,
+          "after": 758,
+          "added": 15,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 48,
+          "passes": 2,
+          "links_added": 15,
+          "pass_additions": [
+            15,
+            0
+          ],
+          "baseline_linked": 743,
+          "net_change_from_baseline": 15
+        },
+        {
+          "book": "JOB",
+          "words": 15789,
+          "before": 9502,
+          "after": 9650,
+          "added": 148,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 1070,
+          "passes": 2,
+          "links_added": 148,
+          "pass_additions": [
+            148,
+            0
+          ],
+          "baseline_linked": 9502,
+          "net_change_from_baseline": 148
+        },
+        {
+          "book": "JOL",
+          "words": 1862,
+          "before": 1345,
+          "after": 1353,
+          "added": 8,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 73,
+          "passes": 2,
+          "links_added": 8,
+          "pass_additions": [
+            8,
+            0
+          ],
+          "baseline_linked": 1345,
+          "net_change_from_baseline": 8
+        },
+        {
+          "book": "JOS",
+          "words": 15190,
+          "before": 9637,
+          "after": 9818,
+          "added": 181,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 658,
+          "passes": 2,
+          "links_added": 189,
+          "pass_additions": [
+            189,
+            0
+          ],
+          "baseline_linked": 9637,
+          "net_change_from_baseline": 181
+        },
+        {
+          "book": "KI1",
+          "words": 20227,
+          "before": 12259,
+          "after": 12488,
+          "added": 229,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 816,
+          "passes": 2,
+          "links_added": 230,
+          "pass_additions": [
+            230,
+            0
+          ],
+          "baseline_linked": 12259,
+          "net_change_from_baseline": 229
+        },
+        {
+          "book": "KI2",
+          "words": 19962,
+          "before": 12406,
+          "after": 12612,
+          "added": 206,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 719,
+          "passes": 2,
+          "links_added": 208,
+          "pass_additions": [
+            208,
+            0
+          ],
+          "baseline_linked": 12406,
+          "net_change_from_baseline": 206
+        },
+        {
+          "book": "LAM",
+          "words": 3091,
+          "before": 1933,
+          "after": 1951,
+          "added": 18,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 154,
+          "passes": 2,
+          "links_added": 18,
+          "pass_additions": [
+            18,
+            0
+          ],
+          "baseline_linked": 1933,
+          "net_change_from_baseline": 18
+        },
+        {
+          "book": "LEV",
+          "words": 20156,
+          "before": 12122,
+          "after": 12325,
+          "added": 203,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 859,
+          "passes": 2,
+          "links_added": 203,
+          "pass_additions": [
+            203,
+            0
+          ],
+          "baseline_linked": 12122,
+          "net_change_from_baseline": 203
+        },
+        {
+          "book": "MAL",
+          "words": 1658,
+          "before": 933,
+          "after": 949,
+          "added": 16,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 55,
+          "passes": 2,
+          "links_added": 16,
+          "pass_additions": [
+            16,
+            0
+          ],
+          "baseline_linked": 933,
+          "net_change_from_baseline": 16
+        },
+        {
+          "book": "MIC",
+          "words": 2856,
+          "before": 1803,
+          "after": 1843,
+          "added": 40,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 105,
+          "passes": 2,
+          "links_added": 40,
+          "pass_additions": [
+            40,
+            0
+          ],
+          "baseline_linked": 1803,
+          "net_change_from_baseline": 40
+        },
+        {
+          "book": "NAH",
+          "words": 1105,
+          "before": 578,
+          "after": 589,
+          "added": 11,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 47,
+          "passes": 2,
+          "links_added": 11,
+          "pass_additions": [
+            11,
+            0
+          ],
+          "baseline_linked": 578,
+          "net_change_from_baseline": 11
+        },
+        {
+          "book": "NEH",
+          "words": 8911,
+          "before": 5391,
+          "after": 5472,
+          "added": 81,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 405,
+          "passes": 2,
+          "links_added": 82,
+          "pass_additions": [
+            82,
+            0
+          ],
+          "baseline_linked": 5391,
+          "net_change_from_baseline": 81
+        },
+        {
+          "book": "NUM",
+          "words": 23518,
+          "before": 14161,
+          "after": 14416,
+          "added": 255,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 1205,
+          "passes": 2,
+          "links_added": 256,
+          "pass_additions": [
+            256,
+            0
+          ],
+          "baseline_linked": 14161,
+          "net_change_from_baseline": 255
+        },
+        {
+          "book": "OBA",
+          "words": 563,
+          "before": 311,
+          "after": 313,
+          "added": 2,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 21,
+          "passes": 2,
+          "links_added": 2,
+          "pass_additions": [
+            2,
+            0
+          ],
+          "baseline_linked": 311,
+          "net_change_from_baseline": 2
+        },
+        {
+          "book": "PRO",
+          "words": 14075,
+          "before": 8163,
+          "after": 8286,
+          "added": 123,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 914,
+          "passes": 2,
+          "links_added": 123,
+          "pass_additions": [
+            123,
+            0
+          ],
+          "baseline_linked": 8163,
+          "net_change_from_baseline": 123
+        },
+        {
+          "book": "PSA",
+          "words": 41267,
+          "before": 24512,
+          "after": 24814,
+          "added": 302,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 2523,
+          "passes": 2,
+          "links_added": 302,
+          "pass_additions": [
+            302,
+            0
+          ],
+          "baseline_linked": 24512,
+          "net_change_from_baseline": 302
+        },
+        {
+          "book": "RUT",
+          "words": 2432,
+          "before": 1309,
+          "after": 1340,
+          "added": 31,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 85,
+          "passes": 2,
+          "links_added": 31,
+          "pass_additions": [
+            31,
+            0
+          ],
+          "baseline_linked": 1309,
+          "net_change_from_baseline": 31
+        },
+        {
+          "book": "SA1",
+          "words": 20886,
+          "before": 13149,
+          "after": 13412,
+          "added": 263,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 810,
+          "passes": 2,
+          "links_added": 264,
+          "pass_additions": [
+            264,
+            0
+          ],
+          "baseline_linked": 13149,
+          "net_change_from_baseline": 263
+        },
+        {
+          "book": "SA2",
+          "words": 16893,
+          "before": 10619,
+          "after": 10825,
+          "added": 206,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 694,
+          "passes": 2,
+          "links_added": 207,
+          "pass_additions": [
+            207,
+            0
+          ],
+          "baseline_linked": 10619,
+          "net_change_from_baseline": 206
+        },
+        {
+          "book": "SNG",
+          "words": 2557,
+          "before": 1843,
+          "after": 1864,
+          "added": 21,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 117,
+          "passes": 2,
+          "links_added": 21,
+          "pass_additions": [
+            21,
+            0
+          ],
+          "baseline_linked": 1843,
+          "net_change_from_baseline": 21
+        },
+        {
+          "book": "ZEC",
+          "words": 5584,
+          "before": 3619,
+          "after": 3685,
+          "added": 66,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 211,
+          "passes": 2,
+          "links_added": 66,
+          "pass_additions": [
+            66,
+            0
+          ],
+          "baseline_linked": 3619,
+          "net_change_from_baseline": 66
+        },
+        {
+          "book": "ZEP",
+          "words": 1422,
+          "before": 840,
+          "after": 868,
+          "added": 28,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 53,
+          "passes": 2,
+          "links_added": 28,
+          "pass_additions": [
+            28,
+            0
+          ],
+          "baseline_linked": 840,
+          "net_change_from_baseline": 28
+        },
+        {
+          "book": "ACT",
+          "words": 23607,
+          "before": 13870,
+          "after": 14090,
+          "added": 220,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 1006,
+          "passes": 2,
+          "links_added": 220,
+          "pass_additions": [
+            220,
+            0
+          ],
+          "baseline_linked": 13870,
+          "net_change_from_baseline": 220
+        },
+        {
+          "book": "CO1",
+          "words": 9071,
+          "before": 5004,
+          "after": 5123,
+          "added": 119,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 437,
+          "passes": 2,
+          "links_added": 119,
+          "pass_additions": [
+            119,
+            0
+          ],
+          "baseline_linked": 5004,
+          "net_change_from_baseline": 119
+        },
+        {
+          "book": "CO2",
+          "words": 5875,
+          "before": 3434,
+          "after": 3527,
+          "added": 93,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 256,
+          "passes": 2,
+          "links_added": 93,
+          "pass_additions": [
+            93,
+            0
+          ],
+          "baseline_linked": 3434,
+          "net_change_from_baseline": 93
+        },
+        {
+          "book": "COL",
+          "words": 1975,
+          "before": 1250,
+          "after": 1270,
+          "added": 20,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 95,
+          "passes": 2,
+          "links_added": 20,
+          "pass_additions": [
+            20,
+            0
+          ],
+          "baseline_linked": 1250,
+          "net_change_from_baseline": 20
+        },
+        {
+          "book": "EPH",
+          "words": 3089,
+          "before": 1746,
+          "after": 1778,
+          "added": 32,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 154,
+          "passes": 2,
+          "links_added": 32,
+          "pass_additions": [
+            32,
+            0
+          ],
+          "baseline_linked": 1746,
+          "net_change_from_baseline": 32
+        },
+        {
+          "book": "GAL",
+          "words": 3204,
+          "before": 1753,
+          "after": 1792,
+          "added": 39,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 149,
+          "passes": 2,
+          "links_added": 39,
+          "pass_additions": [
+            39,
+            0
+          ],
+          "baseline_linked": 1753,
+          "net_change_from_baseline": 39
+        },
+        {
+          "book": "HEB",
+          "words": 6744,
+          "before": 4013,
+          "after": 4080,
+          "added": 67,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 303,
+          "passes": 2,
+          "links_added": 67,
+          "pass_additions": [
+            67,
+            0
+          ],
+          "baseline_linked": 4013,
+          "net_change_from_baseline": 67
+        },
+        {
+          "book": "JAM",
+          "words": 2494,
+          "before": 1334,
+          "after": 1368,
+          "added": 34,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 108,
+          "passes": 2,
+          "links_added": 34,
+          "pass_additions": [
+            34,
+            0
+          ],
+          "baseline_linked": 1334,
+          "net_change_from_baseline": 34
+        },
+        {
+          "book": "JDE",
+          "words": 662,
+          "before": 311,
+          "after": 318,
+          "added": 7,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 24,
+          "passes": 2,
+          "links_added": 7,
+          "pass_additions": [
+            7,
+            0
+          ],
+          "baseline_linked": 311,
+          "net_change_from_baseline": 7
+        },
+        {
+          "book": "JHN",
+          "words": 19175,
+          "before": 11963,
+          "after": 12157,
+          "added": 194,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 879,
+          "passes": 2,
+          "links_added": 194,
+          "pass_additions": [
+            194,
+            0
+          ],
+          "baseline_linked": 11963,
+          "net_change_from_baseline": 194
+        },
+        {
+          "book": "JN1",
+          "words": 2503,
+          "before": 1643,
+          "after": 1657,
+          "added": 14,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 103,
+          "passes": 2,
+          "links_added": 14,
+          "pass_additions": [
+            14,
+            0
+          ],
+          "baseline_linked": 1643,
+          "net_change_from_baseline": 14
+        },
+        {
+          "book": "JN2",
+          "words": 309,
+          "before": 173,
+          "after": 177,
+          "added": 4,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 13,
+          "passes": 2,
+          "links_added": 4,
+          "pass_additions": [
+            4,
+            0
+          ],
+          "baseline_linked": 173,
+          "net_change_from_baseline": 4
+        },
+        {
+          "book": "JN3",
+          "words": 333,
+          "before": 173,
+          "after": 176,
+          "added": 3,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 15,
+          "passes": 2,
+          "links_added": 3,
+          "pass_additions": [
+            3,
+            0
+          ],
+          "baseline_linked": 173,
+          "net_change_from_baseline": 3
+        },
+        {
+          "book": "LUK",
+          "words": 24789,
+          "before": 15685,
+          "after": 15907,
+          "added": 222,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 1151,
+          "passes": 2,
+          "links_added": 222,
+          "pass_additions": [
+            222,
+            0
+          ],
+          "baseline_linked": 15685,
+          "net_change_from_baseline": 222
+        },
+        {
+          "book": "MAT",
+          "words": 23015,
+          "before": 14858,
+          "after": 15053,
+          "added": 195,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 1071,
+          "passes": 2,
+          "links_added": 195,
+          "pass_additions": [
+            195,
+            0
+          ],
+          "baseline_linked": 14858,
+          "net_change_from_baseline": 195
+        },
+        {
+          "book": "MRK",
+          "words": 13332,
+          "before": 8525,
+          "after": 8652,
+          "added": 127,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 677,
+          "passes": 2,
+          "links_added": 127,
+          "pass_additions": [
+            127,
+            0
+          ],
+          "baseline_linked": 8525,
+          "net_change_from_baseline": 127
+        },
+        {
+          "book": "PE1",
+          "words": 2330,
+          "before": 1344,
+          "after": 1371,
+          "added": 27,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 105,
+          "passes": 2,
+          "links_added": 27,
+          "pass_additions": [
+            27,
+            0
+          ],
+          "baseline_linked": 1344,
+          "net_change_from_baseline": 27
+        },
+        {
+          "book": "PE2",
+          "words": 1559,
+          "before": 922,
+          "after": 929,
+          "added": 7,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 61,
+          "passes": 2,
+          "links_added": 7,
+          "pass_additions": [
+            7,
+            0
+          ],
+          "baseline_linked": 922,
+          "net_change_from_baseline": 7
+        },
+        {
+          "book": "PHM",
+          "words": 454,
+          "before": 304,
+          "after": 305,
+          "added": 1,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 25,
+          "passes": 2,
+          "links_added": 1,
+          "pass_additions": [
+            1,
+            0
+          ],
+          "baseline_linked": 304,
+          "net_change_from_baseline": 1
+        },
+        {
+          "book": "PHP",
+          "words": 2195,
+          "before": 1286,
+          "after": 1309,
+          "added": 23,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 104,
+          "passes": 2,
+          "links_added": 23,
+          "pass_additions": [
+            23,
+            0
+          ],
+          "baseline_linked": 1286,
+          "net_change_from_baseline": 23
+        },
+        {
+          "book": "REV",
+          "words": 11129,
+          "before": 7506,
+          "after": 7618,
+          "added": 112,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 405,
+          "passes": 2,
+          "links_added": 112,
+          "pass_additions": [
+            112,
+            0
+          ],
+          "baseline_linked": 7506,
+          "net_change_from_baseline": 112
+        },
+        {
+          "book": "ROM",
+          "words": 9116,
+          "before": 5270,
+          "after": 5390,
+          "added": 120,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 433,
+          "passes": 2,
+          "links_added": 120,
+          "pass_additions": [
+            120,
+            0
+          ],
+          "baseline_linked": 5270,
+          "net_change_from_baseline": 120
+        },
+        {
+          "book": "TH1",
+          "words": 1901,
+          "before": 1214,
+          "after": 1238,
+          "added": 24,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 89,
+          "passes": 2,
+          "links_added": 24,
+          "pass_additions": [
+            24,
+            0
+          ],
+          "baseline_linked": 1214,
+          "net_change_from_baseline": 24
+        },
+        {
+          "book": "TH2",
+          "words": 1022,
+          "before": 636,
+          "after": 654,
+          "added": 18,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 47,
+          "passes": 2,
+          "links_added": 18,
+          "pass_additions": [
+            18,
+            0
+          ],
+          "baseline_linked": 636,
+          "net_change_from_baseline": 18
+        },
+        {
+          "book": "TI1",
+          "words": 2432,
+          "before": 1357,
+          "after": 1375,
+          "added": 18,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 113,
+          "passes": 2,
+          "links_added": 18,
+          "pass_additions": [
+            18,
+            0
+          ],
+          "baseline_linked": 1357,
+          "net_change_from_baseline": 18
+        },
+        {
+          "book": "TI2",
+          "words": 1715,
+          "before": 920,
+          "after": 937,
+          "added": 17,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 82,
+          "passes": 2,
+          "links_added": 17,
+          "pass_additions": [
+            17,
+            0
+          ],
+          "baseline_linked": 920,
+          "net_change_from_baseline": 17
+        },
+        {
+          "book": "TIT",
+          "words": 1033,
+          "before": 511,
+          "after": 516,
+          "added": 5,
+          "removed_plain_add": 0,
+          "mapping_skipped": [],
+          "unmapped_lv": [],
+          "mapped_passages": 46,
+          "passes": 2,
+          "links_added": 5,
+          "pass_additions": [
+            5,
+            0
+          ],
+          "baseline_linked": 511,
+          "net_change_from_baseline": 5
+        }
+      ],
+      "book_passes": 132,
+      "peak_batch_rss_kib": 745860,
+      "validation": {
+        "checks": {
+          "books": 66,
+          "mapping_skipped": 0,
+          "unmapped_lv": 0,
+          "passages": 31055,
+          "numbered_tokens": 436011
+        },
+        "failures": [],
+        "lv_input_changes": [],
+        "rv_snapshot_changes": [],
+        "concurrent_rv_edits": [
+          "translatedTexts/ReadersVersion/OET-RV_CH1.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_JN2.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_HAG.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_JNA.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_JHN.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_RUT.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_KI2.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_JOS.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_HEB.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_MRK.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_PSA.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_GAL.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_JN1.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_MAT.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_CO1.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_ISA.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_EZE.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_ECC.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_JOB.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_JER.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_HOS.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_ROM.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_COL.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_MAL.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_ZEC.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_NUM.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_LUK.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_EST.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_TI2.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_KI1.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_TH2.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_EZR.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_SA2.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_DAN.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_ACT.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_REV.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_DEU.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_CH2.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_EXO.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_CO2.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_GEN.ESFM",
+          "translatedTexts/ReadersVersion/OET-RV_JDG.ESFM"
+        ],
+        "mapping_revisions": [
+          "519af776ab65d89a51e37f750779250f940459ef+bos-supplement-2.7871fb0b24ae7aa2af32aaaf80292f284a6355db6f7c5fc2be0d87e172789940"
+        ],
+        "selection_reasons": {
+          "unique lexical candidate": 4747,
+          "curated phrase": 513,
+          "anchored order": 1503,
+          "add @": 5,
+          "traditional name alias": 97,
+          "explicit same-verse repeat": 145,
+          "linked phrase context": 100,
+          "add *": 53,
+          "add &": 1,
+          "local phrase movement": 4
+        },
+        "regressions": {
+          "MAT 4:6": [
+            [
+              "arms",
+              1462
+            ]
+          ],
+          "MRK 13:11": [
+            [
+              "are",
+              33740
+            ]
+          ],
+          "MRK 14:5": [
+            [
+              "was",
+              34405
+            ]
+          ],
+          "MRK 14:72": [
+            [
+              "rooster",
+              35847
+            ],
+            [
+              "crowed",
+              35848
+            ],
+            [
+              "rooster",
+              35868
+            ],
+            [
+              "crowed",
+              35870
+            ]
+          ],
+          "MRK 15:40": [
+            [
+              "was",
+              36575
+            ],
+            [
+              "Maria",
+              36587
+            ],
+            [
+              "Maria",
+              36591
+            ]
+          ],
+          "CH1 1:4": [
+            [
+              "Japeth",
+              187066
+            ]
+          ],
+          "CH1 1:34": [
+            [
+              "Yitshak",
+              187372
+            ],
+            [
+              "Yitshak's",
+              187372
+            ]
+          ],
+          "RUT 4:4": [
+            [
+              "I",
+              125007
+            ],
+            [
+              "I",
+              125008
+            ],
+            [
+              "are",
+              null
+            ],
+            [
+              "are",
+              null
+            ],
+            [
+              "I",
+              125033
+            ]
+          ],
+          "RUT 4:18": [
+            [
+              "Perez's",
+              125328
+            ],
+            [
+              "was",
+              null
+            ]
+          ]
+        }
+      },
+      "output_sha256": {
+        "OET-RV_ACT.ESFM": "f0f800f84d620885f0c7bfa1557f7c8e8b9fb9d9d3c1099347cc195c406d47b5",
+        "OET-RV_AMO.ESFM": "b4c5793da429349848c10e962dcd4c01627ee05b08922b1e6dc07186e76721e9",
+        "OET-RV_CH1.ESFM": "785295ae8aa895e04caeeb0c87a0c55361468271f4e31cce1593e71a0d7dd86b",
+        "OET-RV_CH2.ESFM": "5e60e553e7038d1ac8ae7a59c767bba8f5abb6ddbf49b3961067996d3cffdae3",
+        "OET-RV_CO1.ESFM": "2ccb5d88d30eb9b0344341d13c9cd79dc31e6690c76792b78e582d187b4e514f",
+        "OET-RV_CO2.ESFM": "ff2b049552faed62e1d141e4fe2ca010260735adeb2b441d245678e8bdb59a31",
+        "OET-RV_COL.ESFM": "9cd17d00e4ec94387193fd2402770f6ffc6fc07813b6cbf90360465e586e6157",
+        "OET-RV_DAN.ESFM": "7dad6e4b58ae8e4f687a3d802b5fb2e7c8679e41596a29ae8bce810094afd1ab",
+        "OET-RV_DEU.ESFM": "a6d838bd0691838f3e3f63d7620b3012e59f5fa9cbd4e668480eead731fb8d30",
+        "OET-RV_ECC.ESFM": "9eabcc42a82ab45edf9b394d795ca0551ec1fa01559d6dd95a3accad4a186299",
+        "OET-RV_EPH.ESFM": "4a173145de4fd27ba774191183b80728f0b9bf9c3de4643380e7004036f2a827",
+        "OET-RV_EST.ESFM": "705eeaa6e0d2fbd3d9f632873a8a210ed25847995ca239e14a6081b39caf9ae8",
+        "OET-RV_EXO.ESFM": "906ca8bb84a0448880812d0072c55eeaa562e1c8d8e61628772804317d0f5e4b",
+        "OET-RV_EZE.ESFM": "2cda2ecb6e718d090a2a8b2117047c9bd990e83173905b60db12268b5f0275a2",
+        "OET-RV_EZR.ESFM": "1388a32c8cdef44b1f2b5c7c0f760420c5c94e6dcdef44808ab976f507295813",
+        "OET-RV_GAL.ESFM": "dea6f94aac17d96b2e0a1393e010e0954dd57281989a1e03c2330442e1f0d714",
+        "OET-RV_GEN.ESFM": "1f3f499896274efd18a51dcb1470a9f7615c66208c0be201c6a6e5ecd9813cbe",
+        "OET-RV_HAB.ESFM": "9590583fa0665325ee3b25b007d48579f212606e5ffa00727373d7910416cd16",
+        "OET-RV_HAG.ESFM": "31af482968a270cb474766d0c9decb6c00f8b342b3c8e9159c3eeae7258f6761",
+        "OET-RV_HEB.ESFM": "a98fe28a922fa9517a7d9891f5fb2696957e65ab45fcca59a00382cb767090b1",
+        "OET-RV_HOS.ESFM": "f2828dfc31962e1c7b3090e960520cc33b7077d5cf3506e1a97414a6dd21a800",
+        "OET-RV_ISA.ESFM": "821ec6aaca98cf7f8aad64189da4fe6d9e24b43c28dd3c20594f2a5290f1e61c",
+        "OET-RV_JAM.ESFM": "a2b34238b544586df1ea356e012da956e4fb3fef67b0b9e671b8f3e19c1057d6",
+        "OET-RV_JDE.ESFM": "82467c0a4d914f79e25d395b2768985f544b37bebc4755e3dd1abea819721673",
+        "OET-RV_JDG.ESFM": "c70f99d0c4e321e603dba69cd57eba6a99b2159188dc3bf5b7d66ab33745d53b",
+        "OET-RV_JER.ESFM": "06468e420c55dcbe33098dbdb00c6d0b4c87021a74cc61cf304e0c1d28a612fe",
+        "OET-RV_JHN.ESFM": "393c59f3616b946bb501a28b4fb2fd68ae6c9376c4a1a14b6f6133ffa47d0074",
+        "OET-RV_JN1.ESFM": "4a3b147b073141700b45f3b4da09bc77a13161b15f5ad190185ad2ee4ef6f9d5",
+        "OET-RV_JN2.ESFM": "56b9bba36eb1f0b24d770ca54c8994f9e04a06a76c4c966a946fe9c6946ce053",
+        "OET-RV_JN3.ESFM": "875368f562ddec5c956f369f9e129d49a928502b28c0fa9b162b1df4c6089a70",
+        "OET-RV_JNA.ESFM": "9b51e5895c9d3bed6e793e60d513c0f1ae145c458e33fe851dabb075e5a6e41e",
+        "OET-RV_JOB.ESFM": "c34ee399d667a43530f031d1355d69b4523586ef0491b19c90cbbac26b9ba531",
+        "OET-RV_JOL.ESFM": "bc80383215adbfca0b8821b3c1b9728c80ba1aca75587f13387556b49d837bd1",
+        "OET-RV_JOS.ESFM": "adc4870942e62939a34ecc0fd6ed245956ef044ad1d4e33fafea9c1685263fdc",
+        "OET-RV_KI1.ESFM": "b39cd521036ee4e5245f5836fc828df7c48070451aefcea34b472719ad30f5ad",
+        "OET-RV_KI2.ESFM": "cf1960985c88e9c379bc458eca2f1a75da8cc8438adba3b6b4687be45abe61c1",
+        "OET-RV_LAM.ESFM": "c10d60518c427f3de08a978a96e5fb5cbb4afbf3d78d1e9b718a31a326b02741",
+        "OET-RV_LEV.ESFM": "674c6cc319fcd9c04fe63b77314783f0687b031000c220d080646af281e3982b",
+        "OET-RV_LUK.ESFM": "b8e969e78ead647a6e0b9b12393be06410bde71c9450ffc1d57b03cf5ffe3ee0",
+        "OET-RV_MAL.ESFM": "7014cc869e6f1e23b9e5ea315fe205f8447c76a85e89775bc2b6ae053b747619",
+        "OET-RV_MAT.ESFM": "f4c35e065a39b15e668f0eed52f660cd287738066913821760c3bb367a9a987d",
+        "OET-RV_MIC.ESFM": "51c8fe70094aec8779d2957fab79969ed932a2123dddddfa408cb55b5675d783",
+        "OET-RV_MRK.ESFM": "0c36152afe72314091638c14fcac94f628fc265ed58b6b890242c0536bb68e12",
+        "OET-RV_NAH.ESFM": "68624a3d6e82bd9a3680aba88af9688748409b30b3e2eeeba74734c2ecdf6e10",
+        "OET-RV_NEH.ESFM": "e2db6e29fb612f97b0899ea170d562f468e011edac8259bfa9cc82d04ef11aa1",
+        "OET-RV_NUM.ESFM": "2663d6f571fe25fdd1b9c23fc60dde7e8730c8364bc7044e88a809bc1a90c608",
+        "OET-RV_OBA.ESFM": "a1ede021209bde1b8da7ebe50ea8fa15fabd39db2822828815358827093898d2",
+        "OET-RV_PE1.ESFM": "cff9794b68df74861993d7f07901d473c6419e86d33f3d20434aef8bf62e15f8",
+        "OET-RV_PE2.ESFM": "c35f240250c9be6c024182d260d78e62b1d566db17b1f5b9e8fe380ddb649c58",
+        "OET-RV_PHM.ESFM": "b572b05d9d48e4595d04aea7c7c7c8fec360e92998e0df3deda33d59a7065b57",
+        "OET-RV_PHP.ESFM": "1aebca1d42900f2881b21e6ad0c9e2673ba7d6c5926b2e6791121e108a2999fb",
+        "OET-RV_PRO.ESFM": "b26d8bae254cf7f7dee232c1771c7cb4d24f17097ceb73b4f18b837e4e28aee3",
+        "OET-RV_PSA.ESFM": "f504e6d4a0b57f06e02b5aafbb672fe91f5711385990cd17c73f1e961b0c797a",
+        "OET-RV_REV.ESFM": "49924e6217c92c349dbf6151b6d798ac04aef75bfe2d2928e014250d0fdc608d",
+        "OET-RV_ROM.ESFM": "694dd41bbd6372c3e4829e9e0097259d7cb25d981a157dc1a6cb328b62ada5e0",
+        "OET-RV_RUT.ESFM": "71c9e7b10ebf317433121b2dc2557cc8d6551c5c41b4a8ddc646aab2375fbbc1",
+        "OET-RV_SA1.ESFM": "d8b506373e5820c9fcc04d85ce2054c537380096663a50f9bfe2f8025dac1299",
+        "OET-RV_SA2.ESFM": "ee152395800af5a8719ad3c6522c196b1d157de239f79bd967bcc6df1f36197a",
+        "OET-RV_SNG.ESFM": "73037c00f9c5d52d098b6b1acbe5ea9f19045eaf5e608b21c925e8155db2a4c5",
+        "OET-RV_TH1.ESFM": "5c833c15a4d3380df4111108cd082cdf6fbdf17f117d74a79f1b6887feebc570",
+        "OET-RV_TH2.ESFM": "a6ed31d7ff53d3b4b95d27e132694e5d5c178470ff25bdcb002d0ff8ffbcb925",
+        "OET-RV_TI1.ESFM": "1215f50994c8057813eebeebdc584dc2024c36886a96b24e6d90bc2f2b23c305",
+        "OET-RV_TI2.ESFM": "de6e943ecec6b7c406d287c3ad52316af9d2e336b7e3df4a8ff92b47b277489a",
+        "OET-RV_TIT.ESFM": "b6c809d2a0571250c59d67d9f8624151e62d6a6738ec72146dcc306719ddf986",
+        "OET-RV_ZEC.ESFM": "f0ccb4ca3b0f7047db6f1c99a2bae4e5b4db11a1916fc61db62c2b29078ecae7",
+        "OET-RV_ZEP.ESFM": "9b3efecfaf81ada1dbb04965861ee6347d12a14dadce8a32ba1831075291e22f"
+      }
+    }
+  },
+  "input_sha256": {
+    "translatedTexts/ReadersVersion/OET-RV_CH1.ESFM": "a1575441b98f81e080c293033fa633033d068ab8a5ae66511ab09ae48e25d3b5",
+    "translatedTexts/ReadersVersion/OET-RV_JN2.ESFM": "57edd896c4aa2328b25ff5fcfe06bba75951f3da70890458f09d4684fed257a2",
+    "translatedTexts/ReadersVersion/OET-RV_HAG.ESFM": "1b25e3c092508d267cf3084369f736564e7294ab7876e4a5c0ee581e98cd8c65",
+    "translatedTexts/ReadersVersion/OET-RV_JNA.ESFM": "46f10d8297a758d23854a445fd519d8e000506a7412512e1ea16e1f0c81594ae",
+    "translatedTexts/ReadersVersion/OET-RV_JHN.ESFM": "751f8420f185ec10fa95b3bc9db83979e8bc744928f6787083beb03a227cc7e9",
+    "translatedTexts/ReadersVersion/OET-RV_PE1.ESFM": "bc544589dc25e12cc04c1e627e5020d12ebbe68e0eb6c86b4c12a667d451b432",
+    "translatedTexts/ReadersVersion/OET-RV_SNG.ESFM": "15b08c3d5e18f1bbe19c1f1da0c5560bbf1c8bcfbedc3a11a36bd5fe6420a605",
+    "translatedTexts/ReadersVersion/OET-RV_EPH.ESFM": "4ee5887f9b0781d44cf4dfb49e58f7fa5e5e09474ae0ef402e8c33f35f506a78",
+    "translatedTexts/ReadersVersion/OET-RV_RUT.ESFM": "2f46e268a02eef14e2b0fb83489ca760d59e71992fa3e1bf4c27651bb7bba0f5",
+    "translatedTexts/ReadersVersion/OET-RV_TH1.ESFM": "1a7ebdb94e90ea35af490572052b23f9cde27b4f00dd5a34a260ce810f222290",
+    "translatedTexts/ReadersVersion/OET-RV_MA2.ESFM": "9919ab2d40aa01d65f940400c3bb16a057467e5e87c9e8da375ead78f7313133",
+    "translatedTexts/ReadersVersion/OET-RV_TI1.ESFM": "94fd252ea6c046c45e84c538a0c17885c2af76261ece8c2935540ee61c40f490",
+    "translatedTexts/ReadersVersion/OET-RV_FRT.ESFM": "e147bea3db390c70582c7e889c81d6079816f9744a1e9f44f524118d2be4e15a",
+    "translatedTexts/ReadersVersion/OET-RV_KI2.ESFM": "c9f06fe2f9bc1bf3397b770727c4ec3584dbeb3f89cf40b7e35b7b72e1e098a1",
+    "translatedTexts/ReadersVersion/OET-RV_LEV.ESFM": "90beb20e62f20b54d6e2eff5ef8155e970867fec528b8c6af20bc6471b5b06b3",
+    "translatedTexts/ReadersVersion/OET-RV_JOS.ESFM": "65ed495bddd94a7172eafd933b4ba7be3f8218a50867fcbdbf0f75617375b78a",
+    "translatedTexts/ReadersVersion/OET-RV_WIS.ESFM": "76f56e60c5bc52412301708ff74c21436c083001033e7254be418ff8ac679dd6",
+    "translatedTexts/ReadersVersion/OET-RV_HEB.ESFM": "74144d6d1f103910c4a4e55536cb32d2624c9c58de3bcec9df6ac8cef5f69dc9",
+    "translatedTexts/ReadersVersion/OET-RV_MRK.ESFM": "fb76bb72b33abdc6a5b1e543722e9af2dd057fa5085409c54d40e4f057c57b32",
+    "translatedTexts/ReadersVersion/OET-RV_PHP.ESFM": "a013df6f1fe3117f73940301d0f97a16defb75db30fda72af58c398ae390c958",
+    "translatedTexts/ReadersVersion/OET-RV_OBA.ESFM": "39fc7887b56f6dad2f2171203bf1f8c353df9172e4553e5d684ca877b025cda5",
+    "translatedTexts/ReadersVersion/OET-RV_JOL.ESFM": "ecced7617dff28ccd0e195014d6fa924a1287688afb2f3de4635041fd505768c",
+    "translatedTexts/ReadersVersion/OET-RV_MA4.ESFM": "274083b9e88170f1dc332d44587c34fbbbe92c1a2b792a5300d5e8d2f19e225f",
+    "translatedTexts/ReadersVersion/OET-RV_PSA.ESFM": "33d78db4810a3e1a605979ad594408887b103ac63e6d2b1873024cb31ffd56f3",
+    "translatedTexts/ReadersVersion/OET-RV_PE2.ESFM": "34818e716ccb118f717c934421008b8d5b5b527787cafc5761e7984af9925a91",
+    "translatedTexts/ReadersVersion/OET-RV_JN3.ESFM": "45198fe36c919b8294aad1d004404c34f254e0e4035c6ab1efda39c1b8c1d866",
+    "translatedTexts/ReadersVersion/OET-RV_JDT.ESFM": "980082f22d6cea37eceb111264c45935eb16ab76448a960624850cd128530b85",
+    "translatedTexts/ReadersVersion/OET-RV_GAL.ESFM": "4c5a5a6e5d83a4b58b911b2abbe17d5bda9141d073e15b3a75808648b78e2401",
+    "translatedTexts/ReadersVersion/OET-RV_TOB.ESFM": "bbe7ea279f20b3debdf4316d6693f204380f3853e0249b1c4f47b043d7f86487",
+    "translatedTexts/ReadersVersion/OET-RV_PS2.ESFM": "bec024d52ab3217d5ca2edf3b0b46b494b43ba7cadaa42086848a8f417739297",
+    "translatedTexts/ReadersVersion/OET-RV_INT.ESFM": "a690eef2149db5cb86682e51c4a02baed87a8df00681cabedbfc4ae340932c09",
+    "translatedTexts/ReadersVersion/OET-RV_JN1.ESFM": "e5eed53fea9ab2dea186b9df0c00f8c4d6153d1687a899aaa13b01908eb0eacd",
+    "translatedTexts/ReadersVersion/OET-RV_MAT.ESFM": "655ae22e50a71c59b4d1435e20f3ae2361b478d73cdf7bf8a25d69582cc9e0c8",
+    "translatedTexts/ReadersVersion/OET-RV_CO1.ESFM": "95369651dc412cf760a6d16935db3ba2f3aa9042053f427ef4501b7aa23d0b2d",
+    "translatedTexts/ReadersVersion/OET-RV_ISA.ESFM": "460d772aaefe8cc5ee5e20e91d4f77f27cc4931a171ba00b1a5e5dcb329cc982",
+    "translatedTexts/ReadersVersion/OET-RV_EZE.ESFM": "a35de39fcd9927982c983fa9485511e9d425a56d512beb5f4acea1bcaa2680e7",
+    "translatedTexts/ReadersVersion/OET-RV_MA3.ESFM": "0eb28232f17a68b22cef9ab3e370dbe718797b5da838e004be95da3b7662588f",
+    "translatedTexts/ReadersVersion/OET-RV_ECC.ESFM": "9bce5c4b7c5e8fadcfb316af8562aec0c6d2eb889408e75a9d6512fc2c88cf31",
+    "translatedTexts/ReadersVersion/OET-RV_JOB.ESFM": "c109684ea7cd2da39c628d57a95a23fc805de7a7cafde4d39652182faccf5432",
+    "translatedTexts/ReadersVersion/OET-RV_JER.ESFM": "b2a48369df6663a75a15c510aad394bacef30b0181148c7ade8761ec9bf5313e",
+    "translatedTexts/ReadersVersion/OET-RV_PHM.ESFM": "55e228a117f8342af821824994bf3863d2b2ec5e9362311096c7791653ac5762",
+    "translatedTexts/ReadersVersion/OET-RV_HOS.ESFM": "de463861110b11035199386203a4181b41000dff013ff62114136903b0ec6484",
+    "translatedTexts/ReadersVersion/OET-RV_NAH.ESFM": "ef5fc7ec4c1a2e43f0a512f4c766475560f13deaec747eb00356643f89e71dd4",
+    "translatedTexts/ReadersVersion/OET-RV_ROM.ESFM": "c94802ed97cc70a158e26f75cd86485c733d215d8ede52589e287cfef985d4f3",
+    "translatedTexts/ReadersVersion/OET-RV_COL.ESFM": "b745ac96c2db4257c367b8d06d84abb4a687609adcfbac212a4e008ab44ff65f",
+    "translatedTexts/ReadersVersion/OET-RV_SIR.ESFM": "f3c2e26d5c5cfe3925589d1ff65253138663005089a74953f071b54835902450",
+    "translatedTexts/ReadersVersion/OET-RV_LAM.ESFM": "7d9c6301a85cde9093fa88f08d2ce6a8560a815de9143af2ca6884e139279a1b",
+    "translatedTexts/ReadersVersion/OET-RV_TIT.ESFM": "91da0077784700d8791fd12b7543ada3090ecdb98c5f0bb7e955a927166db2d4",
+    "translatedTexts/ReadersVersion/OET-RV_AMO.ESFM": "647c13e61d460a2ff07043625fc4605159a0ea51cd662882ed977f308c08cfda",
+    "translatedTexts/ReadersVersion/OET-RV_ESG.ESFM": "0190bcd6173b7e7eb729589d4423eecc5f0c32839f5c701da319b78e2aa47a64",
+    "translatedTexts/ReadersVersion/OET-RV_DAG.ESFM": "6ff798ac4d09d17af89ffdd847b77521665c4dc4efe15ee8cd595347d6653278",
+    "translatedTexts/ReadersVersion/OET-RV_MAL.ESFM": "dfc2eaa9c59da04c49a1828c4c35a81f08b0a75684e8395fdc4d93962a41b708",
+    "translatedTexts/ReadersVersion/OET-RV_ZEC.ESFM": "3963ef6e8a9ad4ba5bfa38d53c5b76b50f1341cd1856c47cb762254edbb0bda1",
+    "translatedTexts/ReadersVersion/OET-RV_ES2.ESFM": "5ad9f76fcc50ded10b9b8aad3910159739a6beffaf77675b81b2ba32de5d1cc9",
+    "translatedTexts/ReadersVersion/OET-RV_NUM.ESFM": "2c0d5053fcebee5263f09130207b54619240ec3ee204c47caa2a4240f7a2aa2a",
+    "translatedTexts/ReadersVersion/OET-RV_LUK.ESFM": "0beafe4dd5ccf8d7011d9141694a0c8e7cc3d754f7e2c3e31247faa2526dbd4b",
+    "translatedTexts/ReadersVersion/OET-RV_EST.ESFM": "f8b13d0a25b9bf1259586adbe8265098a487257531242cfd2d477bdc9b588d8a",
+    "translatedTexts/ReadersVersion/OET-RV_MAN.ESFM": "41231000edb5a95fd0dc1ff2cf296ba765fc3fe4e61c7e13cd7471e79eb0f641",
+    "translatedTexts/ReadersVersion/OET-RV_TI2.ESFM": "90067f714c036d1315fc72959a87ed06a6f97519fd3067c898a0f333fae462f0",
+    "translatedTexts/ReadersVersion/OET-RV_KI1.ESFM": "045a4c82931b81b501759cc548e505a5ab028e32b3a234a4c6408218891b46bd",
+    "translatedTexts/ReadersVersion/OET-RV_HAB.ESFM": "0c401bdc9368b03d50ddd38958d6627b04d4ae633d3a1eb068cc41f822dfac5f",
+    "translatedTexts/ReadersVersion/OET-RV_JAM.ESFM": "b322464648378f0bd101dd1de740cf72d1a69b9261ea60d7d9058f1642d6ae41",
+    "translatedTexts/ReadersVersion/OET-RV_BAR.ESFM": "f34fae0c8ea16e549c6b52c3ce1bd2ad3f398f7723500a05561f1085a8446477",
+    "translatedTexts/ReadersVersion/OET-RV_TH2.ESFM": "2b0d1305f4dde09399c5cf1abe1e12b649780bfd368e5e4a29acaaffc38889ea",
+    "translatedTexts/ReadersVersion/OET-RV_ZEP.ESFM": "280a71f637425eec573d9a5ca131860625e647f8940ac8a003f4d84d1bb23106",
+    "translatedTexts/ReadersVersion/OET-RV_ES1.ESFM": "ec96cd92b3730f701865958016d42ddffd4b6f8e2a9a84e3d10c9223914907ff",
+    "translatedTexts/ReadersVersion/OET-RV_NEH.ESFM": "c90845e7c2bd09924c9b08c92c60d500e69813478f6b98cb14d912feacf3e5a9",
+    "translatedTexts/ReadersVersion/OET-RV_MA1.ESFM": "02c4c67058ad05d48ceb53e4c5624907f93b72936e6a32513ed642a5bbb69322",
+    "translatedTexts/ReadersVersion/OET-RV_EZR.ESFM": "5bee972d44a1cc49d64fa474138f2ebdff21ab7ce76f975e3d5fefc9224bd953",
+    "translatedTexts/ReadersVersion/OET-RV_SA1.ESFM": "b686a903069d743ea3c3594be22a94be7c442322ca766637482b00303f01846a",
+    "translatedTexts/ReadersVersion/OET-RV_SA2.ESFM": "fedd8360510668104d9620d237bd48e5ae739ffda8b6524edc04f95a50f0faaa",
+    "translatedTexts/ReadersVersion/OET-RV_DAN.ESFM": "bc28ff0f1a14292d420c21429bb488ea8506f76c3a06b5d9af5f0ca5d6272487",
+    "translatedTexts/ReadersVersion/OET-RV_ACT.ESFM": "b8bf220d07da53a3ab134c31fd1aa915746d49e050f60a18b638faed80fd5b91",
+    "translatedTexts/ReadersVersion/OET-RV_REV.ESFM": "0f9e35d706b38eec2f3f499712ee6f7e0d4a88cdfe524b1ce451f16db4fcecc3",
+    "translatedTexts/ReadersVersion/OET-RV_DEU.ESFM": "f1fd643b00a994668d39cba344ad22a3ad5bb9edde4a77a57c85e180fa7ca39d",
+    "translatedTexts/ReadersVersion/OET-RV_CH2.ESFM": "2b7ae4d8c85a8b5eee78c7e9b7bc42b21f5545116b61aadac5e84956b65cbdaa",
+    "translatedTexts/ReadersVersion/OET-RV_EXO.ESFM": "91e19002b04300a9f711af408fa762d77de2a12de1dcb5188c22a3cb22ad7f86",
+    "translatedTexts/ReadersVersion/OET-RV_CO2.ESFM": "9ec1dad93ac43ddd0f17e066f7255bf9b1f9996704d869e3b7ae847699f6980f",
+    "translatedTexts/ReadersVersion/OET-RV_MIC.ESFM": "0fa858aa260b4afe020d83f3f8ee15a7035283d71f2cf690faf7bea2c49b8276",
+    "translatedTexts/ReadersVersion/OET-RV_PRO.ESFM": "16d3fa76f7ae7fbe382a82dee6ba406bb74631b6e6c23644f8b6ef7497d3c3d3",
+    "translatedTexts/ReadersVersion/OET-RV_GEN.ESFM": "37af90e10641cc9208699cdeae80b5c7b075cd73dbfdeaee4e9fc6c85e64c9e8",
+    "translatedTexts/ReadersVersion/OET-RV_JDE.ESFM": "20c09fdc48e706cfcffc726329358372b386e4576edc7b9e4b9ec15a4257b0f4",
+    "translatedTexts/ReadersVersion/OET-RV_JDG.ESFM": "a0d45e9e09b7e0865c6f4ebd079d45605567c27782a104abb260236b07401caa",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_morpheme_table.tsv": "8563d63d3c125e1aed7418a9917e205cd9a90e46ef7c64d1f3d12a88e5e2a5b8",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_NUM.ESFM": "b8f52402ce4662f44ac067b9e559943cbf8769552665a138f7be843f3340dae8",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_SNG.ESFM": "b3e6ea5516cad25cdcb49150691da9355f726cbdfaff5239c53e9768180bf963",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_EZE.ESFM": "9bfcdfb8b36647382194287b362b0343be2cf800a642a44c8075978026e11c87",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_NEH.ESFM": "0af1174aeb21d6f84898311b1146798c4123ac071984d1354f081edaf3df45b6",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_DAN.ESFM": "ef35c6a5e711f99f1a09ddb9eb57eb5819354ef59ce0450411ca0cdf3e211b08",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_SA2.ESFM": "71f2fe80e49a8672e1d90a4e038015bb9f1d0eee721a268fb051d011b345452e",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_KI2.ESFM": "7dea078ee8053ad88c4cb85d865e74b1fb888146a642b81d6c6c619e625573e1",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_ZEC.ESFM": "7679b4d0ca94d02d5799d07909d55b4dfe8b25522d1b1e9a6a106556f6033a10",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_RUT.ESFM": "3be991527abc14a513640e360fcc94516301df2adc4eb945a0de89adfcc97968",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_ISA.ESFM": "ee4c92a331a46c771a3ac9fb4b63fc726e9bd73f71bf33ee86453b147423e8fe",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_JER.ESFM": "356c0c07fff509d0c44385a32132c75b19dcaa593f65e24b83b855a2f105b111",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_MIC.ESFM": "a87f0310544396f2e7bffc34cf4a4e0ee714b938b275bdea2f95f140bb9e0cd0",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_PSA.ESFM": "13dd0b1369314da3aaa207f252788bd84aa2f9c3ba0003e8e7ea6a047caef5a1",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_CH1.ESFM": "1c50fb212acaf85c849b947e5de94ce9d022b33d9bd3e7ed8176531d43deb2ba",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_DEU.ESFM": "6f12290c97b7684ebd3611e1b60c28df9c4cbc7d1aad57ee5ae292eb97bdef3a",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_ECC.ESFM": "cfb010c45aa142d2ebdcd9ff2e665b5639028e328e6965c322913b96c01314cf",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_JOS.ESFM": "0d3e8db5793e7c0ff9ef5fe8a3def5c08da947f0fef6692c2ae3b2419fcbdfc6",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_NAH.ESFM": "1764783df301c7791a90d2aa62dc1db1fffa9d178801c169c801ac2451665b56",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_lemma_table.tsv": "0033e781586011400b40928c7ff1e0be8168577cce0803e15645f65a68f2d200",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_EST.ESFM": "021f7872f07757328308b0a20371329db7ccad51222eac58638f69815eb4675b",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_ZEP.ESFM": "4ab6813a23b2bda77dbed53295ed54e8d69190a304f0f6284d4750b1a9731d2a",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_HAG.ESFM": "66938872b3f75fa7be2f298650eb1e84689f3bd464b177dbc596500e64491fbe",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_JNA.ESFM": "97f1852b9aed3ebe53116f92b85a087d5119728379855a497e4ce8f2fad8efc4",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_JDG.ESFM": "98e2a83586892d5d3b1386be87d01286aab9d9ce2c497a5812c6d1ca59c88825",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_OBA.ESFM": "8f549337b96b90f739e54c4858b43ced38fcd89edd9bb0aeafef6a1a6d5a24f4",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_LEV.ESFM": "36c025b1e4d801bc40f295d0bb919bcba393869b637eddb1b3880ec2f884424f",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_GEN.ESFM": "f25778a22dcf3a11045765422b6a3178d646c71cf1471c8a8eb57c8a826bb948",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_EZR.ESFM": "0193758def7c9a2b278b34119b56c9f033b1d44e2f103f6562b1b663bbd3e00e",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_MAL.ESFM": "4547a87e26d3bd5d7e53f6e025c111691c17892ca5839040b09cf72201e19b90",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_JOL.ESFM": "45d5720093324c2a3f91d63726d6e5d4a14f6a083af85122c56a17a53d171702",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_JOB.ESFM": "4fb7c1c2ba37a4e5e711aad26aa040d4406b14b0f32d3df993ce97c9b99222fe",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_PRO.ESFM": "09c33f24ca240c10294d44edfe796b06009ca57d2d21cb0a9bb95768964a7720",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_HAB.ESFM": "ea49a7ac49aabe305f2b4c74943d78183e774734fb7eab2d10af6b97377f3be8",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_HOS.ESFM": "2bd8a950d188af22597f0fe8e7ca345f249fde57e681b17ff06b59ae1bb2253b",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_AMO.ESFM": "beaeec1727939712d9492ea211472fcbbcc505310cc9cc647d9cffc7e42c1bd5",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_OT_word_table.tsv": "32588de4c841d4a020f73faa46b42d852100eb758d38001a84a92e33f79a4e45",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_EXO.ESFM": "674e395effbfcc79050f6e3e4dd7d7b624721b442c6ff55a8ba4fcbd4a4d5da6",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_SA1.ESFM": "e97e2a34cd4a64a70d144239e05ac6c66f2bfd648ae1cb4bd51d60d1ddce45c2",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_CH2.ESFM": "0431f35a0f803d3c5b7f070b0d524ef77423044117372938e2e8a1f5f3891cfb",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_LAM.ESFM": "b8f9c7a1e8a3b4c2e74aa3ae6020f9da766aa94e8c043e4ab8575bc0f861ea43",
+    "derivedTexts/auto_edited_OT_ESFM/OET-LV_KI1.ESFM": "765c6108bdfd5213fbd33444f031b6b2f0a9e6d0b11129c21e44afef9b4727df",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_CO2.ESFM": "6b41844e83e0166a5c6eda8ff886f265def4e7992d3df85f844924e119f7cae0",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_GAL.ESFM": "6e3aad19648fa340b5810531fdb8e8ddbd9c817d031d6bc40125211003e7c8f0",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_JN2.ESFM": "494621fce20c9b6b2352e3e266915dc13ba682c95d217542a10c39b376a9eefe",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_ACT.ESFM": "4d9f8f4e19f2d25a1bc3f37b483368fccda5d4e0b448fe5e39bdc998f9dac7ca",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_COL.ESFM": "848dc9dc4961194dfcc3926fd801e46f60d6c7e92f11a117331629ba185847b9",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_PE1.ESFM": "42fd312a2a782adcaae05dcbf3c0c55bc09033351cef8b549d74eb94d9c1b4f2",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_JN1.ESFM": "a5390b34909ad20bade1939a8e38078098a5bca85a8da68ae88a56caf30a3e16",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_PHM.ESFM": "e81340bf27ac07c5e34df21e5246a25bba2cf999780a0dc1e16712b87e816f6a",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_ROM.ESFM": "ca62e892a2594c4c515f4d6afbeced619d117bee4e0e973c83548afe0081c5d2",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_EPH.ESFM": "63ddc2e0e30dd1789458381fcbe20ec9220ceba42b7777ae850ec9d9457a482b",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_TH1.ESFM": "95ec4f89e8c6bac61762ace55393cfc346d2119dee511163a651d89e6b1ab254",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_JN3.ESFM": "98e39242861c7fc88eb4430ba9bd097a1e3c7338e3571ee72962483e9dd8e898",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_JHN.ESFM": "3a2e06224bcb7379b2e13565dfd8363b6a497cd73d6079c40967e3f3ebc19c92",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_TH2.ESFM": "25e373d4be67510e76a6d304075f7c2f224928b159caa113f18adb19d55e51d0",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_NT_word_table.tsv": "03c020f2ce6826ee2ab965b0cb310f6e8f997840a323709c6f96b52cc6f86c2b",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_JAM.ESFM": "4bc598918e784dc908c31deda364a534360be3b5be4751bc5bfd2a9ae36db023",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_PE2.ESFM": "a1dd994d7d9b2e3bbf107d8d22ed171f2be7a190e42d5f3130117206ddbbca7e",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_TI1.ESFM": "8c8c88fae2ae05a43ee8d653a9201b50f2577ba23ca5469977a931d47f2db470",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_JDE.ESFM": "f141626441f2fce0482e10090f6a8660f5d658f54553ddf5f7d2fc1b77be7ce2",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_MAT.ESFM": "277239c13b7d899f69af7765ae0281b6fc7576007ab24a38ee3e1f833bacfa20",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_HEB.ESFM": "dbe51cdb66815ba06cb21fddb21fac3eb9d3ba0e7a8b9a98607880915c2bd49c",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_MRK.ESFM": "c6c69af1cea4aa727f92c46f7e1743f4b45f531141d3b6b75739e9c1ee5bc171",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_TIT.ESFM": "9cb1b9e0e798d1ef2aeb938ebe30d826c1d93e67b93718ca8cf70912ddb76587",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_PHP.ESFM": "793e2490ff1b500e7ff0e0c5e9bb8b9152e7e7d33547309a5905a1cae59e155f",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_REV.ESFM": "d074814549b972c78aa373299a29f1a43848c24f8193f0ac97a8561120263512",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_TI2.ESFM": "560cd564e7ddf192017cc1ba705540757d6e8f14334bc440bd3ca19d5b80ae6f",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_CO1.ESFM": "58fa4343b8c75ebf33a25ff902766fa0809870a487dfeeafd608a019125d3c42",
+    "derivedTexts/auto_edited_VLT_ESFM/OET-LV_LUK.ESFM": "288b2b1b3d990cea3283410f00ffa858fcc5c38f3e26308cd6c33769dee60fde"
+  },
+  "implementation_sha256": {
+    "connect_OET-RV_words_via_OET-LV.py": "43fcfc07e92636d33752a0adb0d68c1d3a21bab6a8a58efed448fc3876beb689",
+    "oet_alignment.py": "888cfaa11825c4151d167b3519e8efcf29d727261cb15f0286bbd0ba60e7c6c4",
+    "oet_candidates.py": "fddeaa4035d9093c4b912c5acfcef068c853bf976087bbf931a33b7cacd5e057",
+    "oet_derived_word_tables.py": "10412a3a5a3c1e2f7f37429153b3796ebfa3be3f1ce39bedcd82e2ebad4c97cc",
+    "oet_noun_tables.py": "7e47b2dd713119392fb83ef4d8f097c6aff6ba72fd1fed360024c1e6a87ee2ea",
+    "oet_phrase_tables.py": "e87982fade1af83fac795689e558d274f101806040af594d839719ebb037aad2",
+    "oet_verb_tables.py": "c81745ec77057160548202648b35d19bf54d453745329f94e55c49cf65fa9a1e",
+    "oet_versification.py": "8df2f2b9d932751df8106d0318fc3a3e9b678b870d63b1c72cab52e0d48788ad",
+    "oet_word_tables.py": "38c70c8c8c832f77cb7a3c5ac41d9759ccc2b4e96c49574d471b9c10c0d421f7"
+  },
+  "raw_artifacts": "/mnt/SSD/FreelyGiven/OpenEnglishTranslation--OET/.cache/oet-candidate-engine-20261013"
+}

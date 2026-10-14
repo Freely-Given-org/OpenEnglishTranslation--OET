@@ -1,0 +1,155 @@
+[
+  {
+    "reference": "MAT 23:23",
+    "rv": "“\\wj You¦16270 \\+add ≈religious¦16271 teachers¦16271\\+add* and¦16272 Pharisees¦16273 are hypocrites¦16274 and will have a bad end because¦16275 you¦16276 give a tenth of your herbs but¦16302 you¦16286 ignore the¦16287 weightier parts of¦16289 \\+add &God's¦16291\\+add* commands like justice¦16292 and¦16293 mercy¦16296 and¦16298 faith¦16300. \\+add ≈It's good\\+add* to \\+add @tithe\\+add*, \\+add ≈but\\+add* those \\+add other things should also be observed and\\+add* not¦16306 left¦16308 \\+add out\\+add*.\\wj*\\x + \\xo 23:23: \\xt Lev 27:30.\\x*",
+    "lv": "Woe¦16269 to¦16270_you¦16270_all¦16270, scribes¦16271 and¦16272 Farisaios¦16273_party¦16273, hypocrites¦16274. Because¦16275 you¦16276_all¦16276_are¦16276_tithing¦16276 the¦16277 mint¦16278 and¦16279 the¦16280 dill¦16281 and¦16282 the¦16283 cummin¦16284, and¦16285 you¦16286_all¦16286_left¦16286 the¦16287 heavier¦16288 of¦16289_the¦16289 law¦16290: the¦16291 justice¦16292 and¦16293 the¦16294 mercy¦16296 and¦16298 the¦16299 faith¦16300. But¦16302 it¦16303_was¦16303_fitting¦16303 to¦16304_do¦16304 these¦16301 >things¦16301, and¦16305_those¦16305 not¦16306 to¦16308_leave¦16308.",
+    "expected": [
+      [
+        "weightier",
+        16288
+      ]
+    ]
+  },
+  {
+    "reference": "MAT 13:33",
+    "rv": "In another¦8744 parable¦8745, \\add @Yeshua¦8747\\add* said¦8747, “\\wj The¦8752 heavenly¦8755 kingdom¦8753 is¦8751 like¦8750 yeast, which¦8757 a¦8759 woman¦8759 took¦8758 and hid¦8761 in¦8761 a month's worth of¦8763 flour¦8763, and eventually all¦8769 of¦8767 it rose.\\wj*”",
+    "lv": "Another¦8744 parable¦8745 he¦8747_spoke¦8747 to¦8748_them¦8748: the¦8752 kingdom¦8753 of¦8754_the¦8754 heavens¦8755 is¦8751 Similar¦8750 to¦8756_leaven¦8756, which¦8757 +a¦8759_woman¦8759 having¦8758_taken¦8758, hid¦8761_in¦8761 in¦8762 three¦8765 satons¦8764 of¦8763_wheat¦8763_flour¦8763, until¦8766 all¦8769 of¦8767_which¦8767 was¦8768_leavened¦8768.",
+    "expected": [
+      [
+        "yeast",
+        8756
+      ]
+    ]
+  },
+  {
+    "reference": "CO2 3:18",
+    "rv": "All¦121803 \\nd of¦121809\\nd* us who've had¦121804 \\add &our¦121809\\add* \\add #faces¦121805\\add* unveiled¦121804 are reflecting¦121810 \\nd Yahweh's\\nd* greatness, and that same¦121814 image¦121815 transforms¦121816 us from¦121818 greatness to¦121820 greatness. This comes from¦121823 \\nd Yahweh¦121824\\nd* who is \\nd the¦121825 spirit¦121825\\nd*.",
+    "lv": "But¦121802 we¦121801 all¦121803 having¦121804_been¦121804_unveiled¦121804 in¦121805_face¦121805, the¦121806 glory¦121807 of¦121809_+the¦121809_master¦121809 reflecting¦121810, in¦121813_the¦121813 same¦121814 image¦121815 we¦121816_are¦121816_being¦121816_transformed¦121816, from¦121818 glory¦121819 to¦121820 glory¦121821, just¦121822_as¦121822 from¦121823 of¦121824_+the¦121824_master¦121824, +the¦121825_spirit¦121825.",
+    "expected": [
+      [
+        "greatness",
+        121819
+      ],
+      [
+        "greatness",
+        121821
+      ]
+    ]
+  },
+  {
+    "reference": "EXO 5:17",
+    "rv": "“You're¦27428 all lazy—plain lazy!” \\add the king responded\\add*. “That's why you're¦27433 saying¦27434, ‘Let¦27435 us¦27435 go¦27435 sacrifice¦27436 to¦27437 Yahweh¦27437.’",
+    "lv": "And¦27426=he/it¦27426_said¦27426 +are¦27427_idle¦27427 you(pl)¦27428 +are¦27429_idle¦27429 therefore¦27430 yes/correct/thus/so¦27432 you(pl)¦27433 +are¦27434_saying¦27434 let¦27435_us¦27435_go¦27435 let¦27436_us¦27436_sacrifice¦27436 to/for¦27437=YHWH¦27437.",
+    "expected": [],
+    "unresolved": [
+      "lazy"
+    ]
+  },
+  {
+    "reference": "HOS 9:8",
+    "rv": "The prophet¦365438 is¦365433 the watchman¦365433 over Efrayim¦365434\\add /Yisrael\\add* with¦365435 my¦365437 god, \\add but\\add* the bird-catcher's \\add #traps¦365439 are¦365441\\add* on¦365441 all¦365443 of¦365443 his¦365445 paths¦365445, and there's hostility in¦365447 his¦365448 god's¦365448 house¦365447.",
+    "lv": "ʼEfrayim¦365434 +was¦365433_a¦365433_watchman¦365433 with¦365435 god¦365437_of¦365437÷my¦365437 a¦365438_prophet¦365438 a¦365439_trap¦365439_of¦365439 a¦365440_fowler¦365440 +is¦365441_on¦365441 all¦365443_of¦365443 ways¦365445_of¦365445÷his¦365445 animosity¦365446 in¦365447=house¦365447_of¦365447 his/its¦365448=god¦365448.",
+    "expected": [
+      [
+        "hostility",
+        365446
+      ]
+    ]
+  },
+  {
+    "reference": "ISA 31:1",
+    "rv": "Those¦292792 who¦292792 go¦292792 down¦292792 to Egypt¦292793 for¦292794 help¦292794 \\add ≈won't end well\\add*. They¦292798 depend¦292798 on¦292795 horses¦292797 and¦292799 rely¦292799 on¦292800 chariots¦292802 that are¦292804 many¦292804, ≈and¦292805 on¦292805 cavalry that are¦292809 very¦292810 numerous¦292809, \\add ≈but¦292811\\add* they¦292812 don't look¦292812 \\add ≈towards\\add* Yisrael's¦292816 holy¦292815 \\add >one\\add*, and¦292817 they¦292821 don't \\add ≈request¦292821 help\\add* from Yahweh¦292819.",
+    "lv": "woe¦292791_to¦292791 those¦292792÷who¦292792_go¦292792_down¦292792 Miʦrayim/(Egypt)¦292793 for¦292794÷help¦292794 on¦292795 horses¦292797 they¦292798_depend¦292798 and¦292799÷they¦292799_have¦292799_relied¦292799 on¦292800 chariotry¦292802 if/because¦292803 it¦292804_+is¦292804_many¦292804 and¦292805÷on¦292805 horsemen¦292806 if/because¦292807 they¦292809_are¦292809_numerous¦292809 exceedingly¦292810 and¦292811=not¦292811 they¦292812_look¦292812 on¦292813 the¦292815_holy¦292815_>one¦292815_of¦292815 Yisrāʼēl/(Israel)¦292816 and¦292817=DOM¦292817 YHWH¦292819 not¦292820 they¦292821_seek¦292821.",
+    "expected": [
+      [
+        "cavalry",
+        292806
+      ]
+    ]
+  },
+  {
+    "reference": "JER 32:14",
+    "rv": "Yisrael's¦319607 god¦319606, Commander-in-chief Yahweh¦319604 says¦319603 this: Take¦319608 these¦319612 documents¦319614, both this receipt of¦319614 purchase¦319615 that's¦319618 sealed¦319618 and¦319619 the unsealed copies, and¦319623 put¦319623 them¦319623 into¦319624 a¦319624 clay jar so¦319627 they'll¦319628 last for a long time¦319629,",
+    "lv": "Thus¦319601 YHWH¦319604 he¦319603_says¦319603 soldiers/messengers¦319605 the¦319606_god¦319606_of¦319606 Yisrāʼēl/(Israel)¦319607 take¦319608 DOM¦319609 the¦319611÷documents¦319611 the¦319612=these¦319612 DOM¦319613 the¦319614_document¦319614_of¦319614 the¦319615_purchase¦319615 the¦319616=this¦319616 and¦319617=DOM¦319617 the¦319618_one¦319618÷which¦319618_was¦319618_sealed¦319618 and¦319619=DOM¦319619 +the¦319620_document¦319620_of¦319620 (the)¦319621÷uncovered¦319621 the¦319622=this¦319622 and¦319623÷you¦319623÷will¦319623_put¦319623_them¦319623 in¦319624÷a¦319624_vessel¦319624_of¦319624 earthenware¦319626 so¦319627_that¦319627 they¦319628_may¦319628_remain¦319628 days¦319629 many¦319630.",
+    "expected": [
+      [
+        "clay",
+        319626
+      ]
+    ]
+  },
+  {
+    "reference": "JHN 2:7",
+    "rv": "So \\nd Yeshua¦63443\\nd* told¦63440 them to fill¦63444 the¦63445 jars with¦63447 water¦63447, and¦63448 they¦63449 filled¦63449 them¦63450 up.",
+    "lv": "Is¦63440_saying¦63440 to¦63441_them¦63441 the¦63442 Yaʸsous¦63443: Fill¦63444 the¦63445 waterpots¦63446 with¦63447_water¦63447. And¦63448 they¦63449_filled¦63449 them¦63450 to¦63451 upward¦63452.",
+    "expected": [
+      [
+        "jars",
+        63446
+      ]
+    ]
+  },
+  {
+    "reference": "ACT 9:31",
+    "rv": "After that the¦89074 \\add #assemblies¦89078\\add* of believers throughout¦89079 Yudea¦89082 and¦89083 Galilee¦89084 and¦89085 Shomron¦89086 \\add !(Samaria¦89086)\\add* had¦89087 peace¦89089 and¦89093 grew in¦89096 their respect¦89097 and service of¦89098 the¦89098 \\nd master¦89099\\nd*, as well as increasing in¦89101 numbers through the¦89101 encouragement of¦89103 the¦89103 holy¦89104 \\nd spirit¦89105\\nd*.",
+    "lv": "The¦89074 indeed¦89075 Therefore¦89076 assembly¦89078 throughout¦89079 all¦89080 of¦89082_ the¦89081 _Youdaia¦89082, and¦89083 Galilaia/(Gālīl)¦89084, and¦89085 Samareia/(Shomrōn)¦89086, was¦89087_having¦89087 peace¦89089, being¦89092_built¦89092 and¦89093 going¦89095 in¦89096_the¦89096 fear¦89097 of¦89098_the¦89098 master¦89099, and¦89100 it¦89107_was¦89107_being¦89107_multiplied¦89107 in¦89101_the¦89101 exhortation¦89102 of¦89103_the¦89103 holy¦89104 spirit¦89105.",
+    "expected": [
+      [
+        "encouragement",
+        89102
+      ]
+    ]
+  },
+  {
+    "reference": "PE2 1:6",
+    "rv": "to that knowledge¦150600 add self-control¦150602; to that self-control¦150606 add endurance¦150608; to that endurance¦150612 add godliness;",
+    "lv": "and¦150598 in¦150597 the¦150599 knowledge¦150600 the¦150601 self-control¦150602, and¦150604 in¦150603 the¦150605 self-control¦150606 the¦150607 endurance¦150608, and¦150610 in¦150609 the¦150611 endurance¦150612 the¦150613 devoutness¦150614,",
+    "expected": [
+      [
+        "godliness",
+        150614
+      ]
+    ]
+  },
+  {
+    "reference": "NEH 2:15",
+    "rv": "\\add ≈So¦222395\\add* I¦222395 went¦222396 up¦222396 the creek bed \\add ≈in¦222397 the dark¦222398, carefully inspecting\\add* the wall¦222401, before turning¦222402 back¦222402 and¦222403 returning¦222403 \\add quietly\\add* through the¦222405 Valley¦222405 Gate¦222404.",
+    "lv": "And¦222395÷I¦222395_was¦222395 going¦222396_up¦222396 in¦222397÷wadi¦222397 night¦222398 and¦222399÷I¦222399_was¦222399 examining¦222400 (on)¦222401÷wall¦222401 and¦222402÷I¦222402_turned¦222402_back¦222402 and¦222403÷I¦222403_went¦222403 in¦222404÷the¦222404_gate¦222404_of¦222404 the¦222405_valley¦222405 and¦222406÷I¦222406_returned¦222406.",
+    "expected": [
+      [
+        "inspecting",
+        222400
+      ]
+    ]
+  },
+  {
+    "reference": "PRO 20:16",
+    "rv": "Take¦274812 the person's coat if¦274815 they've used it to guarantee the loan of a¦274818 stranger¦274818, ≈and¦274819 hold¦274822 it¦274822 in¦274822 pledge¦274822 \\add ≡if they did it for\\add* a¦274820 foreign¦274820 \\add >woman\\add*.",
+    "lv": "Take¦274812 garment¦274814_of¦274814÷his¦274814 if/because¦274815 he¦274817_stands¦274817_surety¦274817_for¦274817 a¦274818_stranger¦274818 and¦274819÷for¦274819 a¦274820_foreign¦274820_>woman¦274820 hold¦274822÷it¦274822_in¦274822_pledge¦274822.",
+    "expected": [
+      [
+        "coat",
+        274814
+      ],
+      [
+        "guarantee",
+        274817
+      ]
+    ]
+  },
+  {
+    "reference": "MAT 25:8",
+    "rv": "\\wj and¦17707 the¦17706 less sensible ones asked¦17711 the¦17709 others, ‘Here, give¦17712 us¦17713 some of¦17715 your¦17718 oil¦17717 because¦17719 our¦17722 lamps¦17721 are¦17724 starting to splutter.’\\wj*",
+    "lv": "And¦17707 the¦17706 foolish¦17708 said¦17711 to¦17709_the¦17709 prudent¦17710: Give¦17712 to¦17713_us¦17713 of¦17715 the¦17716 olive¦17717_oil¦17717 of¦17718_you¦17718_all¦17718, because¦17719 the¦17720 lamps¦17721 of¦17722_us¦17722 are¦17724_being¦17724_extinguished¦17724.",
+    "expected": [
+      [
+        "less",
+        17708
+      ],
+      [
+        "sensible",
+        17708
+      ]
+    ]
+  }
+]
