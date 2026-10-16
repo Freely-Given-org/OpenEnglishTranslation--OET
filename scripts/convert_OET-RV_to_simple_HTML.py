@@ -36,6 +36,7 @@ CHANGELOG:
     2026-04-29 Handle fq and fqa markers
     2026-05-08 Upgraded to bos_books_codes_py
     2026-05-31 Handle (remove) Psalm/Song thematic colouring markers
+    2026-10-17 Fix handling of (longer) \\bdit character marker
 """
 from gettext import gettext as _
 from typing import List, Tuple, Optional
@@ -54,10 +55,10 @@ from bible_organisational_system import getSmallLeadingInt
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-10-06' # by RJH
+LAST_MODIFIED_DATE = '2026-10-17' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
-PROGRAM_VERSION = '1.0.0'
+PROGRAM_VERSION = '1.0.1'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -863,7 +864,7 @@ def produce_HTML_files() -> None:
                         if nextChar1 == '+':
                             assert inCharMarkers, f"{markerName=} {inCharMarkers=} from {source_filename} {lineNumber}: '{line}'"
                             markerName = ''
-                            for followingChar in line[cc+2:cc+6]:
+                            for followingChar in line[cc+2:cc+7]:
                                 if followingChar == ' ':
                                     assert markerName in expectedMarkers, f"Unexpected {markerName=} with {inCharMarkers} from {source_filename} {lineNumber}: '{line}'"
                                     if markerName not in nonNestingMarkers:
@@ -878,7 +879,7 @@ def produce_HTML_files() -> None:
                                 else: markerName += followingChar
                         else:
                             markerName = ''
-                            for followingChar in line[cc+1:cc+5]:
+                            for followingChar in line[cc+1:cc+6]:
                                 if followingChar == ' ':
                                     assert markerName in expectedMarkers, f"Unexpected {markerName=} with {inCharMarkers} from {source_filename} {lineNumber}: '{line}'"
                                     if markerName not in nonNestingMarkers:
