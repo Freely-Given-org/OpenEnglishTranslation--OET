@@ -12,6 +12,7 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 # an to a before a consonant
 									\add +an¦\add*_ b			\add +a¦\add*_ b		e.g., HEB_11:7 an box THIS DIDN'T WORK AT FIRST SO ALSO FIXED IN wordingAdjustments (which comes earlier)
 									\add +an¦\add*_ l			\add +a¦\add*_ l		e.g., Mark 6:35 an late hour
+									\add +an¦\add*_ m			\add +a¦\add*_ m		e.g., Mat 2:13 an messenger
 
 # Fix English word order (Gloss Insert can currently only do one fix at a time)
 #									send¦_out¦ them¦ 			send¦_ them¦ _out¦ 		e.g., Mark 5:10 after 'not' HAVE NO WAY YET TO SWAP ORDER OF WORD NUMBERS
