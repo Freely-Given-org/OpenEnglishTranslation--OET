@@ -72,6 +72,8 @@ CHANGELOG:
     2025-01-20 Fix reordering to handle Macula Hebrew new slightly different 'nodes' data (rather than the previous 'lowfat')
     2026-03-19 Did the minimum to get the updated Macula Hebrew data to work
     2026-09-04 Fix bug where M gloss got lost if only had morphemeGloss and no contextualMorphemeGloss
+    2026-10-21 Recover missing word glosses from uniquely matched Macula words and explicit OSHB qere readings,
+                    and prevent duplicated leannoth in Psalm 88:1
 """
 from gettext import gettext as _
 # from typing import Dict, List, Tuple
@@ -83,12 +85,13 @@ import unicodedata
 
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
+from ot_gloss_fallbacks import fix_known_gloss_duplication, recover_missing_word_glosses
 
 
-LAST_MODIFIED_DATE = '2026-10-06' # by RJH
+LAST_MODIFIED_DATE = '2026-10-21' # by RJH
 SHORT_PROGRAM_NAME = "apply_Clear_Macula_OT_glosses"
 PROGRAM_NAME = "Apply Macula OT glosses"
-PROGRAM_VERSION = '0.74'
+PROGRAM_VERSION = '0.75'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -145,6 +148,8 @@ def main() -> None:
     if loadOurOwnSourceTable():
         if loadOurMaculaHebrewTable():
             if fill_known_MaculaHebrew_English_contextual_glosses():
+                recovered = recover_missing_word_glosses(state.WLC_morpheme_rows, state.MaculaHebrew_morpheme_rows)
+                vPrint('Normal', DEBUGGING_THIS_MODULE, f"  Recovered {recovered:,} missing word glosses from Macula readings.")
                 if do_yalls() and do_yahs():
                     if do_auto_reordering():
                         save_filled_morpheme_TSV_file()
@@ -1147,6 +1152,7 @@ def save_filled_word_TSV_file() -> bool:
                 # if word_entry['Ref'].startswith( 'JER_48:13w8' ):
                 #     print( f"\n{n} 'M' {original_column_dict=}\n{word_entry=}")
                 # if word_entry['Ref'].startswith( 'JER_48:14' ): halt
+                fix_known_gloss_duplication(word_entry)
                 writer.writerow( word_entry )
                 num_data_rows_written += 1
                 verse_ref = word_entry['Ref'].split('w')[0]

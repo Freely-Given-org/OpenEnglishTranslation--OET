@@ -9,6 +9,7 @@ dependencies = [
     "bibleorgsys",
     "bibleorgsys-rust",
     "bos_books_codes_py",
+    "pydantic>=2.14.1",
 ]
 
 [tool.uv]

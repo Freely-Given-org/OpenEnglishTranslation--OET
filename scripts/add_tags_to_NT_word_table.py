@@ -40,6 +40,7 @@ CHANGELOG:
     2024-03-08 Add OETGlossWords column and apply .tsv transforms similar to how Scripted Bible Editor does
     2025-06-19 Changed to connect timeline, etc., to EVERY word in the verse (not just the FIRST word)
     2026-02-10 SR/VLT upgrade (only change was having less rows in the table)
+    2026-10-21 Use BOS VLT-to-KJV passage mappings for Theographic metadata, preserving native word IDs.
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple, NamedTuple, Optional
@@ -54,14 +55,17 @@ import re
 
 import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
+from BibleOrgSys.Reference.BibleVersificationMappings import (
+    MappingStatus, VersificationMappingError, get_default_mapping_engine,
+)
 import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-10-06' # by RJH
+LAST_MODIFIED_DATE = '2026-10-21' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET NT wordtable"
-PROGRAM_VERSION = '0.36'
+PROGRAM_VERSION = '0.37'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -70,6 +74,10 @@ DEBUGGING_THIS_MODULE = False
 SCRIPTED_UPDATES_TABLES_INPUT_FOLDERPATH = Path( 'ScriptedVLTUpdates/' )
 
 JSON_VERSES_DB_FILEPATH = Path( '../../Bible_speaker_identification/outsideSources/TheographicBibleData/derivedFiles/normalised_Verses.json' )
+# VLT v3 follows original NT divisions, but retains KJV order at PHP 1:16-17.
+# Theographic uses KJV divisions, including JN3 1:14 and REV 13:1 combined text.
+WORD_TABLE_VERSIFICATION = 'VLT'
+THEOGRAPHIC_VERSIFICATION = 'KJV'
 MACULA_GREEK_TSV_FILEPATH = Path( '../intermediateTexts/Clear.Bible_derived_Macula_data/Clear.Bible_MaculaGreek_LowFatTrees.NT.words.abbrev.tsv' )
 
 NT_WORD_TABLE_INPUT_FILEPATH = Path( '../intermediateTexts/modified_source_VLT_ESFM/OET-LV_NT_word_table.10columns.tsv' )
@@ -399,6 +407,46 @@ def apply_VLT_scripted_gloss_updates() -> bool:
 # end of add_tags_to_NT_word_table.apply_VLT_scripted_gloss_updates
 
 
+def get_Theographic_verse_metadata(verseRef:str, verseIndex:dict) -> dict:
+    """Combine metadata for the complete BOS passage corresponding to a native verse.
+
+    These are verse-level annotations, so an indivisible target verse supplies
+    metadata to each of its source parts. BOS alone determines those groups.
+    Keep all distinct annotations, including different years/timelines, without
+    changing the word-table reference, word numbers, row order, or glosses.
+    Missing mappings/data stop the build before write_new_table can save an
+    incompletely tagged table; they never fall back to a same-number JSON key.
+    """
+    BBB, CV = verseRef.split('_')
+    C, V = CV.split(':')
+    mapping = get_default_mapping_engine().convert_passage(
+        WORD_TABLE_VERSIFICATION, THEOGRAPHIC_VERSIFICATION, ((BBB,C,V,None),))
+    if mapping.status != MappingStatus.EXACT:
+        raise ValueError(f'Cannot tag {WORD_TABLE_VERSIFICATION} word-table verse {verseRef} '
+            f'from {THEOGRAPHIC_VERSIFICATION} Theographic data: {mapping.status.value}; '
+            + '; '.join(d.message for d in mapping.diagnostics)) from VersificationMappingError(mapping)
+    metadata = {field:[] for field in ('people','peopleGroups','places','eventsDescribed','yearNums','timelines')}
+    for book,chapter,verse,suffix in mapping.references:
+        key = f'{book}_{chapter}:{verse}{suffix or ""}'
+        try:
+            entry = verseIndex[key]
+        except KeyError as error:
+            raise ValueError(f'Cannot tag {WORD_TABLE_VERSIFICATION} word-table verse {verseRef}: '
+                f'mapped {THEOGRAPHIC_VERSIFICATION} key {key} is missing from '
+                f'Theographic data {JSON_VERSES_DB_FILEPATH}') from error
+        for field,outputField in (('people','people'), ('peopleGroups','peopleGroups'),
+                ('places','places'), ('eventsDescribed','eventsDescribed'),
+                ('yearNum','yearNums'), ('timeline','timelines')):
+            value = entry[field]
+            scalar = field in ('yearNum','timeline')
+            if not isinstance(value, str if scalar else list):
+                raise ValueError(f'Invalid Theographic {key} field {field}: {value!r}')
+            for annotation in ([value] if scalar else value):
+                if annotation and annotation not in metadata[outputField]:
+                    metadata[outputField].append(annotation)
+    return metadata
+
+
 def associate_Theographic_people_places() -> bool:
     """
     Using the Theographic Bible Data, tag Greek word lines in our table
@@ -412,20 +460,14 @@ def associate_Theographic_people_places() -> bool:
     # assert columnHeaders == 'Ref\tGreekWord\tSRLemma\tGreekLemma\tVLTGlossWords\tGlossCaps\tProbability\tStrongsExt\tRole\tMorphology' # If not, probably need to fix some stuff
 
     numAddedPeople = numAddedPeopleGroups = numAddedLocations = numAddedEvents = numAddedYears = numAddedTimelines = 0
-    lastVerseRef = None
+    verseMetadata = {} # Resolve each native verse once, including variant word rows.
     for n, columns_string in enumerate( state.newTable[1:], start=1 ):
         wordRef, greekWord, _srLemma, _greekLemma, VLTglossWords, OETGlossWords, glossCaps,probability, _extendedStrongs, _roleLetter, _morphology, _tags = columns_string.split( '\t' )
         tags:List[str] = []
         verseRef = wordRef.split('w')[0]
-        # newVerse = verseRef != lastVerseRef
-        try: verseLinkEntry = state.verseIndex[verseRef]
-        except KeyError: # versification difference ???
-            logging.critical( f"Versification error: Unable to find {verseRef} in Theographic json" )
-            assert columns_string.count( '\t' ) == 11, f"{columns_string.count(TAB)} {columns_string=}"
-            # print( f"{n} {columns_string=}" ); assert False, "We want to stop here"
-            # state.newTable.append( columns_string ) # What was I trying to do here? (These duplicate rows get appended to the end)
-            # lastVerseRef = verseRef
-            continue
+        if verseRef not in verseMetadata:
+            verseMetadata[verseRef] = get_Theographic_verse_metadata(verseRef, state.verseIndex)
+        verseLinkEntry = verseMetadata[verseRef]
         assert not verseLinkEntry['peopleGroups'] # Why is this true??? Ah, because only has a handful of OT references!!!
 
         if 'U' in glossCaps: # or 'G' in glossCaps: ???
@@ -485,11 +527,11 @@ def associate_Theographic_people_places() -> bool:
                 #     links.append( pgID )
                 #     dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Added '{pgID}' to {ref}")
                 #     assert False, "We want to stop here"
-            if verseLinkEntry['yearNum']:
+            for yearNum in verseLinkEntry['yearNums']:
                 if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add year number: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{VLTglossWords}' {verseLinkEntry['yearNum']}")
-                assert isinstance( verseLinkEntry['yearNum'], str )
-                tag = f"Y{verseLinkEntry['yearNum']}"
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add year number: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{VLTglossWords}' {yearNum}")
+                assert isinstance( yearNum, str )
+                tag = f"Y{yearNum}"
                 assert ' ' not in tag and ';' not in tag
                 tags.append( tag )
                 if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
@@ -509,11 +551,11 @@ def associate_Theographic_people_places() -> bool:
                     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
                         dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
                     numAddedEvents += 1
-            if verseLinkEntry['timeline']:
+            for timeline in verseLinkEntry['timelines']:
                 if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add timeline: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{VLTglossWords}' {verseLinkEntry['timeline']}")
-                assert isinstance( verseLinkEntry['timeline'], str )
-                tag = f"T{verseLinkEntry['timeline'].replace(' ','_')}"
+                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add timeline: {n} {wordRef} ({probability}) '{greekWord}' {glossCaps} '{VLTglossWords}' {timeline}")
+                assert isinstance( timeline, str )
+                tag = f"T{timeline.replace(' ','_')}"
                 assert ' ' not in tag and ';' not in tag
                 tags.append( tag )
                 if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
@@ -525,7 +567,6 @@ def associate_Theographic_people_places() -> bool:
         newLine = f"{columns_string}{';'.join(tags)}"
         assert newLine.count( '\t' ) == 11, f"{newLine.count(TAB)} {newLine=}"
         state.newTable[n] = newLine
-        # lastVerseRef = verseRef
 
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"{numAddedPeople=:,} {numAddedPeopleGroups=:,} {numAddedLocations=:,} {numAddedEvents=:,} {numAddedYears=:,} {numAddedTimelines=:,}" )

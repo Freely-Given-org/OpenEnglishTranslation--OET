@@ -58,6 +58,8 @@ CHANGELOG:
                     Reversed 2026-09-16 because we have no introductory text at all so it doesn't really make sense
     2026-05-08 Upgraded to bos_books_codes_py
     2026-05-24 Change 'behold' glosses 'there!','here!' to 'THERE','HERE' (rather than just deleting the exclamation marks)
+    2026-10-21 Prefer English alternatives to (cmp), recover missing word glosses from matched Macula readings,
+                    and prevent duplicated leannoth in Psalm 88:1
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple
@@ -71,12 +73,13 @@ import logging
 import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 import bos_books_codes_py
+from ot_gloss_fallbacks import fix_known_gloss_duplication, recover_missing_word_glosses, select_gloss
 
 
-LAST_MODIFIED_DATE = '2026-10-06' # by RJH
+LAST_MODIFIED_DATE = '2026-10-21' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed_OSHB_OT_to_ESFM"
 PROGRAM_NAME = "Extract glossed OSHB OT ESFM files"
-PROGRAM_VERSION = '1.0.6'
+PROGRAM_VERSION = '1.0.7'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -85,6 +88,7 @@ DEBUGGING_THIS_MODULE = False
 INTERMEDIATE_FOLDER = Path( '../intermediateTexts/' )
 # TSV_SOURCE_MORPHEME_TABLE_FILEPATH = INTERMEDIATE_FOLDER.joinpath( 'glossed_OSHB/all_glosses.morphemes.tsv' )
 TSV_SOURCE_WORD_TABLE_FILEPATH = INTERMEDIATE_FOLDER.joinpath( 'glossed_OSHB/all_glosses.words.tsv' )
+MACULA_MORPHEME_TABLE_FILEPATH = INTERMEDIATE_FOLDER.joinpath( 'Clear.Bible_derived_Macula_data/Clear.Bible_MaculaHebrew.OT.morphemes.abbrev.tsv' )
 OT_ESFM_OUTPUT_FOLDERPATH = INTERMEDIATE_FOLDER.joinpath( 'modified_source_glossed_OSHB_ESFM/' )
 
 TAB = '\t'
@@ -241,6 +245,7 @@ def loadSourceWordGlossTable() -> bool:
     for n, row in enumerate(dict_reader):
         if len(row) != NUM_EXPECTED_OSHB_WORD_COLUMNS:
             logging.critical(f"Line {n} has {len(row)} columns instead of {NUM_EXPECTED_OSHB_WORD_COLUMNS}!!!")
+        fix_known_gloss_duplication(row)
         source_word_tsv_rows.append(row)
         unique_words.add(row['NoCantillations'])
         for key, value in row.items():
@@ -257,6 +262,14 @@ def loadSourceWordGlossTable() -> bool:
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Loaded {len(source_word_tsv_rows):,} source word tsv data rows.")
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"    Have {len(unique_words):,} unique Hebrew words (without cantillation marks).")
+
+    # Also support existing word tables that predate the importer's fallback.
+    if MACULA_MORPHEME_TABLE_FILEPATH.is_file():
+        with open(MACULA_MORPHEME_TABLE_FILEPATH, encoding='utf-8-sig', newline='') as macula_file:
+            recovered = recover_missing_word_glosses(source_word_tsv_rows, DictReader(macula_file, delimiter='\t'))
+        vPrint('Normal', DEBUGGING_THIS_MODULE, f"  Recovered {recovered:,} missing word glosses from Macula readings.")
+    else:
+        logging.warning("Macula table unavailable for missing-gloss recovery: %s", MACULA_MORPHEME_TABLE_FILEPATH)
 
     return len(source_word_tsv_rows) > 0
 # end of extract_glossed_OSHB_OT_to_ESFM.loadSourceWordGlossTable
@@ -587,10 +600,7 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
 
     elif ',' in given_verse_row['MorphemeRowList']: # then the word consists of two or more morphemes
         # We give priority to the contextual word gloss (as the word gloss can be overwhelming with so many options e.g., 'on/upon/above/on_account_of')
-        src, gloss = ('CWG',given_verse_row['ContextualWordGloss']) if given_verse_row['ContextualWordGloss'] \
-                    else ('WG',given_verse_row['WordGloss']) if given_verse_row['WordGloss'] \
-                    else ('CMG',given_verse_row['ContextualMorphemeGlosses']) if given_verse_row['ContextualMorphemeGlosses'] \
-                    else ('MG',given_verse_row['MorphemeGlosses'])
+        src, gloss = select_gloss(given_verse_row)
         if gloss:
             # Try to check and clean up the gloss a bit
             assert '.' not in gloss,  f"{src=} {gloss=} {given_verse_row}"
@@ -662,10 +672,7 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
         #             else given_verse_row['WordGloss'] )
         # We give priority to the contextual word gloss (as the word gloss can be overwhelming with so many options e.g., 'on/upon/above/on_account_of')
         #   but we'll add that extra info to our word pages
-        src,wordGloss = ( ('CWG',given_verse_row['ContextualWordGloss'])
-                        if given_verse_row['ContextualWordGloss'] and not given_verse_row['ContextualWordGloss'][-1].isdigit() # Try to avoid fields like '1,000'
-                    else ('WG',given_verse_row['WordGloss']) if given_verse_row['WordGloss']
-                    else ('CWG',given_verse_row['ContextualWordGloss']) )
+        src,wordGloss = select_gloss(given_verse_row)
         wordGloss = ( wordGloss
                         # .replace( '!', '' ) # e.g., on gloss for 'behold!', 'what?'
                         .replace( '?', '' )

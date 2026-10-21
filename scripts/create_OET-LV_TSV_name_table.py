@@ -7,7 +7,7 @@
 #
 # Script to create TSV table of names for OET-LV from the ScriptedBibleEditor OT & NT command tables.
 #
-# Copyright (C) 2025 Robert Hunt
+# Copyright (C) 2025-2026 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+OET@gmail.com>
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -20,6 +20,7 @@ CHANGELOG:
     2024-03-13 Added check for duplicated words
     2025-03-10 Added support for a few more internal USFM markers
     2025-10-10 Added support for (OET) LV & RV names tables
+    2026-10-21 Transliterate all NT name alternatives according to their script (including both Greek forms of Obed)
 """
 from gettext import gettext as _
 # from typing import List, Tuple, Optional
@@ -34,10 +35,10 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-10-06' # by RJH
+LAST_MODIFIED_DATE = '2026-10-21' # by RJH
 SHORT_PROGRAM_NAME = "create_OET-LV_TSV_name_table"
 PROGRAM_NAME = "Make OET-LV name table"
-PROGRAM_VERSION = '0.20'
+PROGRAM_VERSION = '0.22'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -145,7 +146,7 @@ def load_OET_LV_NT_names() -> bool:
             if '\\sup' in row['Replace']: continue
 
             lvNTName = row['Search'].replace( '¦', '' )
-            greekName = ( row['Replace'].replace( '¦', '' ).replace( '?', '' )
+            nameAlternatives = ( row['Replace'].replace( '¦', '' ).replace( '?', '' )
                             .removeprefix( '\\add >ones\\add*_from_' )
                             .removeprefix( 'supporters_of_' )
                             .removeprefix( 'member_of_' )
@@ -154,18 +155,17 @@ def load_OET_LV_NT_names() -> bool:
                             .removesuffix( '_\\add party_member\\add*' ).removesuffix( '_\\add party\\add*' )
                             .removesuffix( '_\\add sect_member\\add*' ).removesuffix( '_\\add sect\\add*' )
                         )
-            # print( f"{n} {lvNTName=} {greekName=}" )
-            if '/' in greekName:
-                # assert greekName.count( '/' ) == 1, f"{n} {lvNTName=} {greekName=}" # Fails on Jodah
-                greekName, hebrewName = greekName.split( '/' )[:2]
-                hebrewName = hebrewName.lstrip('(').rstrip(')')
-                # print( f"   {lvNTName=} {greekName=} {hebrewName=}" )
-            else: hebrewName = None
-            transliteratedGreekName = transliterate_Greek( greekName )
-            OET_LV_NT_NAMES_SET.add( (lvNTName,transliteratedGreekName) )
-            if hebrewName:
-                transliteratedHebrewName = transliterate_Hebrew( hebrewName, capitalise_hebrew=lvNTName[0].isupper() )
-                OET_LV_OT_NAMES_SET.add( (lvNTName,transliteratedHebrewName) )
+            # A slash can separate two Greek forms (Obed) or two Hebrew forms
+            # inside parentheses (Jodah), so position does not identify language.
+            for name in nameAlternatives.split( '/' ):
+                name = name.lstrip('(').rstrip(')')
+                if not name: continue # e.g., an unknown Hebrew form written as (?)
+                if any('\u05d0' <= character <= '\u05ea' for character in name):
+                    transliteratedName = transliterate_Hebrew( name, capitalise_hebrew=lvNTName[0].isupper() )
+                    OET_LV_OT_NAMES_SET.add( (lvNTName,transliteratedName) )
+                else:
+                    transliteratedName = transliterate_Greek( name )
+                    OET_LV_NT_NAMES_SET.add( (lvNTName,transliteratedName) )
 
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(OET_LV_NT_NAMES_SET):,} OET-LV NT names." )
