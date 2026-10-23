@@ -1,4 +1,4 @@
-\id ISA - Open English Translation—Readers’ Version (OET-RV) v0.1.14
+\id ISA - Open English Translation—Readers’ Version (OET-RV) v0.1.15
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 ISA
@@ -26,7 +26,7 @@
 \rem NOTE: This USFM file was exported from the ESFM source file with some loss of features, so don’t edit this derived file.
 \c 1
 \p
-\v 1 \add This is\add* the vision of Yeshayah (son of Amots), which he saw concerning Yehudah \add (Judah)\add* and Yerushalem in the days of Uzziyah, Yotam, Ahaz, and Hizkiyah, kings of Yehudah.\x + \xo 1:1: a \xt 2Ki 15:1-7; 2Ch 26:1-23; \xo b \xt 2Ki 15:32-38; 2Ch 27:1-9; \xo c \xt 2Ki 16:1-20; 2Ch 28:1-27; \xo d \xt 2Ki 18:1–20:21; 2Ch 29:1–32:33.\x*
+\v 1 \add This is\add* the vision of Yeshayah (son of Amots), which he saw concerning Yehudah \add (Judah)\add* and Yerushalem in the days of Uzziyah,\x + \xo 1:1: \xt 2Ki 15:1-7; 2Ch 26:1-23.\x* Yotam,\x + \xo 1:1: \xt 2Ki 15:32-38; 2Ch 27:1-9.\x* Ahaz,\x + \xo 1:1: \xt 2Ki 16:1-20; 2Ch 28:1-27.\x* and Hizkiyah,\x + \xo 1:1: \xt 2Ki 18:1–20:21; 2Ch 29:1–32:33.\x* kings of Yehudah.
 \s1 Yahweh scolds Yehudah
 \s4 Southern kingdom
 \p
@@ -45,7 +45,7 @@
 \q1 Descendants of \add those in the habit of doing evil things\add*.
 \q1 Children who act corruptly.
 \q1 They have abandoned Yahweh.
-\q1 They have despised Yisrael’s holy one.
+\q1 They have despised Yisrael’s holy \add one\add*.
 \q1 They have estranged themselves from him.
 \q1
 \v 5 Why do you \add want more beatings\add*?
@@ -179,9 +179,9 @@
 \v 4 He’ll judge between the nations,
 \q1 and will \add settle cases\add* for many \add different\add* peoples.
 \q1 They’ll hammer their swords into plough blades,
-\q1 and their spears into pruning hooks.
+\q1 and their spears into pruning hooks.\x + \xo 2:4: \xt Yoel 3:10.\x*
 \q1 \add The nations will stop attacking each other\add*,
-\q1 and they won’t \add go to\add* war again.\x + \xo 2:4: \xt Yoel 3:10.\x*
+\q1 and they won’t \add go to\add* war again.
 \b
 \q1
 \v 5 \add You descendants\add* of Yakov,
@@ -216,7 +216,7 @@
 \q1 and Yahweh alone will be \add honoured\add* on that day.
 \q1
 \v 12 because Commander-in-chief Yahweh \add has chosen\add* a day
-\q1 \add for judgement against\add* those who are proud and aloof,
+\q1 \add for judgement against\add* \add those who are\add* proud and aloof,
 \q1 and against every arrogant person—\add they’ll all\add* be humbled.
 \q1
 \v 13 \add It’s also against\add* all the high and mighty cedars in Lebanon,
@@ -442,7 +442,7 @@
 \b
 \q1
 \v 15 Everyone will be \add brought into submission\add* and humbled.
-\q1 All the proud people will be \add humiliated\add*,
+\q1 All the proud \add people\add* will be \add humiliated\add*,
 \q1
 \v 16 and Commander-in-chief Yahweh will be \add honoured for his justice\add*.
 \q1 God will demonstrate his \add holiness\add* by \add doing what is right\add*.
@@ -456,7 +456,7 @@
 \q1
 \v 19 They say, ‘Let him hurry,
 \q1 let him \add speed up\add* his work so we can see \add what he’s doing\add*,
-\q1 and let the counsel of the holy one of Yisrael approach,
+\q1 and let the counsel of the holy \add one\add* of Yisrael approach,
 \q1 and let it come and let us know.’
 \q1
 \v 20 Those who call evil good, and good evil, \add won’t end well\add*.
@@ -464,14 +464,14 @@
 \q1 or who set bitter as sweet and sweet as bitter!
 \b
 \q1
-\v 21 Those who are wise in their own eyes \add won’t end well\add*,
+\v 21 \add Those who are\add* wise in their own eyes \add won’t end well\add*,
 \q1 nor those who \add think they’re clever\add*.
 \b
 \q1
 \v 22 Those who are experts at drinking wine \add won’t end well\add*,
 \q1 nor those whose strength is mixing strong \add drinks\add*,
 \q1
-\v 23 or those who take a bribe then say a wicked person is innocent,
+\v 23 or those who take a bribe then say a wicked \add person\add* is innocent,
 \q1 or those that deny justice to innocent people.
 \q1
 \v 24 Therefore, the \add roots\add* \add of their families\add* will rot,
@@ -479,7 +479,7 @@
 \q1 just like how a tongue of fire devours stubble \add in a field\add*
 \q1 and the dry grass goes up in flame,
 \q1 because they’ve rejected Commander-in-chief Yahweh’s instructions,
-\q1 and they’ve despised the message from the holy one of Yisrael.
+\q1 and they’ve despised the message from the holy \add one\add* of Yisrael.
 \q1
 \v 25 That’s why Yahweh \add got very angry at\add* his people,
 \q1 and he’s \add taken action\add* against them and has struck them.
@@ -515,7 +515,7 @@
 \c 6
 \s1 The showing of God to Yeshayah
 \p
-\v 1 In the year \add that King Uzziyah died\add*, I saw my master sitting on a tall, elevated throne, and his \add long robe covered the temple floor\add*.\x + \xo 6:1: \xt 2Ki 15:7; 2Ch 26:23.\x*
+\v 1 In the year \add that King Uzziyah died\add*,\x + \xo 6:1: \xt 2Ki 15:7; 2Ch 26:23.\x* I saw my master sitting on a tall, elevated throne, and his \add long robe covered the temple floor\add*.
 \v 2 There were ‘serafs’ standing above him. They each had six wings—they used two to cover their \add faces\add*, two to cover their feet, and two to fly with.
 \v 3 They were calling out to each other,
 \q1 “Commander-in-chief Yahweh is holy, \add yes, fully holy\add*.
@@ -596,7 +596,7 @@
 \v 15 He’ll know how to refuse evil and do good \add by the time that he can\add* eat yoghurt and honey.
 \v 16 \add However,\add* before the child \add is old enough to do that\add*, the \add countries\add* of the two kings that you’re afraid of, will become deserted.
 \p
-\v 17 \add But instead,\add* Yahweh will bring the Assyrian king to \add attack\add* you and your people, and \add David’s dynasty will be under it’s greatest stress\add* since Efrayim \add (Yisrael)\add* broke away from Yehudah \add (Judah)\add*.”
+\v 17 \add But instead,\add* Yahweh will bring the Assyrian king to \add attack\add* you and your people, and \add David’s dynasty will be under its greatest stress\add* since Efrayim \add (Yisrael)\add* broke away from Yehudah \add (Judah)\add*.”
 \p
 \v 18 \add When that happens,\add* Yahweh will whistle for a fly that’s in Egypt’s distant streams, and for a bee that’s in Assyria.
 \v 19 They’ll all come and settle down in deserted valleys and cracks in the rocks, and in all the thornbushes and watering holes.
@@ -622,7 +622,7 @@
 \v 5 Then Yahweh continued to speak to me again, saying,
 \v 6 “\add Yehudah\add* has refused the \add gentle\add* waters of Shiloah and \add instead\add* \add requests help\add* from \add King\add* Retsin and Remalyah’s son \add King Pekah\add*,
 \v 7 \add so\add* therefore my master will send the waters of a large, powerful river onto them: the Assyrian king and all his \add majestic power\add*. It’ll come like a flood filling all the channels then overflowing all its banks.
-\v 8 It will sweep across Yehudah, flooding yet moving on until it reaches \add your\add* neck. It’s \add edges\add* will cover your entire \add country\add*, Immanuel.”
+\v 8 It will sweep across Yehudah, flooding yet moving on until it reaches \add your\add* neck. Its \add edges\add* will cover your entire \add country\add*, Immanuel.”
 \q1
 \v 9 Raise the war cry, peoples, and be \add terrified\add*,
 \q1 and \add listen\add*, all you distant places in the world.
@@ -636,14 +636,14 @@
 \v 11 \add Yes,\add* Yahweh spoke strongly to me, and warned me not to \add behave like other people\add*, saying,
 \v 12 “Don’t say ‘conspiracy’ everyone time that other people do, and don’t be afraid when they’re afraid, and don’t \add live in dread\add*.\x + \xo 8:12-13: \xt 1Pe 3:14-15.\x*
 \v 13 Only \add honour\add* Commander-in-chief Yahweh, and \add be concerned about him\add* and fear him.
-\v 14 He’ll be like your \add safe retreat\add*. He’ll be \add both\add* the stone that strikes and the rock that makes both Yisrael and Yehudah stumble, and \add like\add* a trap for the inhabitants of Yerushalem.\x + \xo 8:14-15: \xt 1Pe 2:8.\x*
-\v 15 Many people will stumble over \add that stone and that rock\add* and fall and be broken, or be snared and captured.”
+\v 14 He’ll be like your \add safe retreat\add*. He’ll be \add both\add* the stone that strikes and the rock that makes both Yisrael and Yehudah stumble,\x + \xo 8:14-15: \xt 1Pe 2:8.\x* and \add like\add* a trap for the inhabitants of Yerushalem.
+\v 15 Many \add people\add* will stumble over \add that stone and that rock\add* and fall and be broken, or be snared and captured.”
 \s1 Warning about consulting mediums
 \p
 \v 16 Tie up this report and seal up these \add instructions\add* for my apprentices.
 \v 17 I’ll wait for Yahweh \add to act\add*. He’s \add distanced himself\add* from Yakov’s descendants, \add but I’ll continue to expect his help\add*.\x + \xo 8:17: \xt Heb 2:13.\x*
 \p
-\v 18 \add Both\add* I \add myself,\add* and the children that Yahweh has given me, are like directions and warning signs for Yisrael, that come from Commander-in-chief Yahweh who lives on Mt. Tsiyyon \add (Zion)\add*.\x + \xo 8:18: \xt Heb 2:13.\x*
+\v 18 \add Both\add* I \add myself,\add* and the children that Yahweh has given me,\x + \xo 8:18: \xt Heb 2:13.\x* are like directions and warning signs for Yisrael, that come from Commander-in-chief Yahweh who lives on Mt. Tsiyyon \add (Zion)\add*.
 \p
 \v 19 \add When\add* they tell you all to consult mediums and fortunetellers who chirp and mutter, shouldn’t the people consult their god \add rather than the dead guiding\add* the living?
 \s1 The time of sadness
@@ -682,8 +682,8 @@
 \v 7 His government will be \add without borders\add*—
 \q1 with peace \add that’s never broken\add*.
 \q1 He’ll rule on David’s throne, and over his kingdom,
-\q1 to establish it and sustain it with justice and with fairness from now \add onwards\add*.
-\q1 The zeal of Commander-in-chief Yahweh will do that.\x + \xo 9:7: \xt Luk 1:32-33.\x*
+\q1 to establish it and sustain it with justice and with fairness from now \add onwards\add*.\x + \xo 9:7: \xt Luk 1:32-33.\x*
+\q1 The zeal of Commander-in-chief Yahweh will do that.
 \s1 Yahweh’s anger at Yisrael
 \q1
 \v 8 My master sent a message against Yakov,
@@ -801,7 +801,7 @@
 \q1 I gathered it from \add all over the world\add*
 \q1 \add but\add* no one fluttered a wing, or opened a mouth and chirped.
 \p
-\v 15 Will the axe \add say its greater\add* than the person who swings it?
+\v 15 Will the axe \add say it’s greater\add* than the person who swings it?
 \q1 Will the saw praise itself more than the one who uses it?
 \q1 As if a rod could move those who are lifting it up,
 \q1 or a staff could lift up what’s not made from wood.
@@ -813,19 +813,19 @@
 \q1 \add he’ll get his fingers burnt\add* like with a burning flame.
 \q1
 \v 17 Then Yisrael’s light will become a fire,
-\q1 and its holy one a flame,
+\q1 and its holy \add one\add* a flame,
 \q1 →and it will burn and devour his thorns and his briers in one day.
 \q1
 \v 18 His \add beautiful\add* forest and his fruitful land
 \q1 \add will be steadily destroyed\add*,
-\q1 like a sick person who wastes away.
+\q1 like a sick \add person\add* who wastes away.
 \q1
 \v 19 There’ll be so few trees left in his forest that \add even\add* a child could count them.
 \s1 Only a remnant will return
 \p
 \v 20 \add At that time,\add* the remnant of Yisrael, i.e., the survivors of Yakov’s descendants, will no longer rely on that \add king\add* who makes them suffer, but instead will rely on Yahweh, Yisrael’s holy one.
 \v 21 A remnant of \add Yisrael\add* will return to their powerful god.
-\v 22 Although the \add Israelis\add* are \add currently\add* very numerous, \add only\add* a remnant will return. Destruction has been decreed \add because justice must prevail\add*\x + \xo 10:22-23: \xt Rom 9:27.\x*
+\v 22 Although the \add Israelis\add* are \add currently\add* very numerous, \add only\add* a remnant will return.\x + \xo 10:22-23: \xt Rom 9:27.\x* Destruction has been decreed \add because justice must prevail\add*
 \v 23 \add Yes,\add* complete destruction has been decreed by my master Yahweh and he’s about to apply it \add throughout the country\add*.
 \s1 Yahweh will punish Assyria
 \p
@@ -855,7 +855,7 @@
 \q1 and the \add high and mighty\add* will be brought low.
 \q1
 \v 34 He’ll chop down the thickets in the forest with an axe,
-\q1 →and Lebanon will be felled by the mighty one.
+\q1 →and Lebanon will be felled by the mighty \add one\add*.
 \c 11
 \s1 The future, peaceful kingdom
 \p
@@ -897,7 +897,7 @@
 \q1 \add just\add* as the waters cover the sea.\x + \xo 11:9: \xt Hab 2:14.\x*
 \s1 The return of a remnant
 \p
-\v 10 Then on that day, Yishay’s \add (Jesse’s)\add* root will stand as a signal to the peoples. Nations will search for him, and his residence will be \add wonderful\add*.\x + \xo 11:10: \xt Rom 15:12.\x*
+\v 10 Then on that day, Yishay’s \add (Jesse’s)\add* root will stand as a signal to the peoples. Nations will search for him,\x + \xo 11:10: \xt Rom 15:12.\x* and his residence will be \add wonderful\add*.
 \v 11 \add At that time\add*, my master will again \add exercise\add* \add his power\add* to recover a remnant of his people who remain in Assyria, Egypt, Patros, Kush \add (Ethiopia)\add*, Eylam, Shinar, Hamat, and from \add various\add* islands.
 \q1
 \v 12 He’ll raise a banner for the nations,
@@ -942,7 +942,7 @@
 \q1 \add Make sure everyone in the world knows about them\add*.
 \q1
 \v 6 Yell and shout happily, you inhabitants of Tsiyyon \add (Zion)\add*,
-\q1 because Yisrael’s holy one is powerful among you.”
+\q1 because Yisrael’s holy \add one\add* is powerful among you.”
 \c 13
 \s1 Yahweh’s punishment of Babylon
 \p
@@ -1019,9 +1019,9 @@
 \q1 They’ll have no mercy on \add your infants\add*,
 \q1 and \add won’t show\add* any pity on your children.
 \q1
-\v 19 \add Yes,\add* that admirable kingdom of Babylon,\x + \xo 13:19: \xt Gen 19:24.\x*
+\v 19 \add Yes,\add* that admirable kingdom of Babylon,
 \q1 the pride of the Chaldeans,
-\q1 will be destroyed by God like Sodom and Amorah \add (Gomorrah)\add* \add were\add*.
+\q1 will be destroyed by God like Sodom and Amorah \add (Gomorrah)\add* \add were\add*.\x + \xo 13:19: \xt Gen 19:24.\x*
 \q1
 \v 20 It’ll never be inhabited again,
 \q1 or lived in from \add one generation to the next\add*.
@@ -1130,11 +1130,11 @@
 \v 23 I’ll make it into a place where owls live, and pools of water, and I’ll sweep her with the broom of destruction.” That’s the declaration from Commander-in-chief Yahweh.
 \s1 Destroyed by God the ones from-Asirya
 \p
-\v 24 Commander-in-chief Yahweh has promised,\x + \xo 14:24-27: \xt Isa 10:5-34; Nah 1:1–3:19; Zeph 2:13-15.\x*
+\v 24 Commander-in-chief Yahweh has promised,
 \q1 “Everything that I intended will certainly happen,
 \q1 and what I’ve planned will come to pass.
 \q1
-\v 25 To break Asirya \add (Assyria)\add* in my land,
+\v 25 To break Asirya \add (Assyria)\add*\x + \xo 14:25: \xt Isa 10:5-34; Nah 1:1–3:19; Zeph 2:13-15.\x* in my land,
 \q1 and trample them \add down\add* on my hills.
 \q1 Its yoke will be lifted from their \add necks\add*
 \q1 and its burden lifted from their shoulder.
@@ -1146,7 +1146,7 @@
 \q1 His \add arm\add* is stretched out and who could turn it back?
 \s1 Yahweh will destroy the Philistines
 \p
-\v 28 In the year that King Ahaz \add died\add*, this \add message\add* came:\x + \xo 14:28: \xt 2Ki 16:20; 2Ch 28:27.\x*
+\v 28 In the year that King Ahaz \add died\add*,\x + \xo 14:28: \xt 2Ki 16:20; 2Ch 28:27.\x* this \add message\add* came:
 \p
 \v 29 All you Philistines, don’t celebrate that the rod that struck you is \add now\add* broken,
 \q1 because out of the root of that snake, a viper will grow,
@@ -1469,7 +1469,7 @@
 \v 8 Then the watchman\f + \fr 21:8 \ft We follow the Dead Sea Scrolls here—the Hebrew has ‘a lion’.\f* calls out,
 \q1 “My master, I’ve stood day after day on this watchtower,
 \q1 and spent the nights stationed at my post,
-\v 9 \add so listen,\add* a rider is coming with a pair of horses, and he \add brings the news\add* that Babylon has fallen, \add yes\add* fallen, and all its \add carved idols lie\add* broken on the ground.”\x + \xo 21:9: \xt Rev 14:8; 18:2.\x*
+\v 9 \add so listen,\add* a rider is coming with a pair of horses, and he \add brings the news\add* that Babylon has fallen, \add yes\add* fallen,\x + \xo 21:9: \xt Rev 14:8; 18:2.\x* and all its \add carved idols lie\add* broken on the ground.”
 \p
 \v 10 \add Oh\add* my down-trodden \add people\add* \add who’ve been trampled all over\add*.
 \q1 I’ve \add passed on\add* to you all what I heard from Yisrael’s god, Commander-in-chief Yahweh.
@@ -1598,7 +1598,7 @@
 \q1 whose merchants were honoured \add around the world\add*?
 \p
 \v 9 Commander-in-chief Yahweh planned it to dishonour the pride from all that splendour—
-\q1 to treat the honoured people of the world with contempt.
+\q1 to treat the honoured \add people\add* of the world with contempt.
 \q1
 \v 10 Go across your land like the river does.
 \q1 \add You\add* daughter of Tarshish, there’s no restraint any more.
@@ -1748,9 +1748,9 @@
 \v 7 Then on that mountain, he’ll swallow up the \add bedsheet\add* that’s covering all the peoples,
 \q1 and the web that’s woven over all the nations.
 \q1
-\v 8 My master will \add permanently\add* swallow death up.
-\q1 Yahweh will wipe the tears away from every face.
-\q1 He’s removed his people’s disgrace from all the earth, because Yahweh has spoken.\x + \xo 25:8: a \xt 1Cor 15:54; \xo b \xt Rev 7:17; 21:4.\x*
+\v 8 My master will \add permanently\add* swallow death up.\x + \xo 25:8: \xt 1Cor 15:54.\x*
+\q1 Yahweh will wipe the tears away from every face.\x + \xo 25:8: \xt Rev 7:17; 21:4.\x*
+\q1 He’s removed his people’s disgrace from all the earth, because Yahweh has spoken.
 \p
 \v 9 Then \add at the time\add* it will be said, ‘Look, that’s our god.
 \q1 We \add put our hope in\add* him, and he saved us.
@@ -1819,7 +1819,7 @@
 \v 13 Yahweh our god, we’ve been ruled over by other masters,
 \q1 but you only, are the one that we \add honour\add*.
 \q1
-\v 14 \add Those\add* dead ones won’t live—those departed spirits won’t rise \add again\add*,
+\v 14 \add Those\add* dead \add ones\add* won’t live—those departed spirits won’t rise \add again\add*,
 \q1 \add indeed\add* you’ve visited and destroyed them,
 \q1 and \add erased\add* all memory of them.
 \q1
@@ -1852,8 +1852,8 @@
 \c 27
 \p
 \v 1 \add At that time\add*, Yahweh will \add use his extremely powerful\add* sword,
-\q1 to punish the slithering \add sea monster\add* Leviathan—Leviathan the twisting \add snake-like creature\add*,
-\q1 and he’ll kill the monster that’s in the ocean.\x + \xo 27:1: \xt Yob 41:1; Psa 74:14; 104:26.\x*
+\q1 to punish the slithering \add sea monster\add* Leviathan—Leviathan the twisting \add snake-like creature\add*,\x + \xo 27:1: \xt Yob 41:1; Psa 74:14; 104:26.\x*
+\q1 and he’ll kill the monster that’s in the ocean.
 \p
 \v 2 \add When that happens\add*, sing \add about a delightful\add* vineyard.
 \q1
@@ -1904,7 +1904,7 @@
 \s1 A warning for Shomron \add (Samaria)\add*
 \p
 \v 1 \add You won’t end well\add* \add Shomron\add*, you proud crown of Efrayim’s drunkards
-\q1 or it’s beauty \add and\add* splendour that’s fading like a flower \add past its prime\add*.
+\q1 or its beauty \add and\add* splendour that’s fading like a flower \add past its prime\add*.
 \q1 There at the head of a lush valley that’s struck down by wine.
 \q1
 \v 2 Look, the master \add is sending\add* a \add very powerful\add* \add one\add*,
@@ -1975,9 +1975,9 @@
 \q1 and \add floods\add* will drown the hiding place.\x + \xo 28:17b: \xt 28:15b.\x*
 \q1
 \v 18 Then your agreement with death will be dissolved,
-\q1 and your understanding with the grave \add will collapse\add*.
+\q1 and your understanding with the grave \add will collapse\add*.\x + \xo 28:18: \xt 28:15.\x*
 \q1 When the overwhelming scourge comes past,
-\q1 →you’ll all be overwhelmed by it.\x + \xo 28:18: \xt 28:15.\x*
+\q1 →you’ll all be overwhelmed by it.
 \q1
 \v 19 When it comes past, it’ll take you all
 \q1 because it’ll come past morning by morning, \add and\add* day and night.
@@ -2057,8 +2057,8 @@
 \q1 Get drunk, but not with wine.
 \q1 Stagger, but not from strong drink,
 \q1
-\v 10 because Yahweh has poured a spirit of deep sleep out onto you all,\x + \xo 29:10: \xt Rom 11:8.\x*
-\q1 and has shut your prophets’ eyes,
+\v 10 because Yahweh has poured a spirit of deep sleep out onto you all,
+\q1 and has shut your prophets’ eyes,\x + \xo 29:10: \xt Rom 11:8.\x*
 \q1 and has covered your visionaries’ heads.
 \q1
 \v 11 Then to you all, the entire vision will be like the words sealed in a scroll—
@@ -2321,7 +2321,7 @@
 \q1 and his heart \add plans disobedience\add* for doing ungodly \add things\add*
 \q1 and by speaking error about Yahweh.
 \q1 He keeps those empty who have a hungry appetite,
-\q1 and he deprives those who are thirsty.
+\q1 and he deprives those \add who are\add* thirsty.
 \q1
 \v 7 As for the scoundrel, evil is his \add weapon\add*.
 \q1 He plans to ruin those \add already\add* suffering with false \add stories\add*,
@@ -2465,7 +2465,7 @@
 \v 23 Your ropes are coming undone—they can’t secure the base of the mast.
 \q1 They can’t spread the sail out.
 \q1 Then the large booty onboard will be divided as plunder—
-\q1 even lame people will take some spoil.
+\q1 even lame \add people\add* will take some spoil.
 \q1
 \v 24 None of the residents will say that they’re sick—
 \q1 the people who live there will be forgiven \add for their disobedience\add*.
@@ -2511,9 +2511,9 @@
 \q1 and its dust into sulfur,
 \q1 and its land will become burning pitch.
 \q1
-\v 10 \add It’ll burn\add* night and day and its smoke will permanently go up.
+\v 10 \add It’ll burn\add* night and day and its smoke will permanently go up.\x + \xo 34:10: \xt Rev 14:11; 19:3.\x*
 \q1 It’ll be a wasteland \add throughout\add* the generations
-\q1 and no one will \add ever\add* pass through it again.\x + \xo 34:10: \xt Rev 14:11; 19:3.\x*
+\q1 and no one will \add ever\add* pass through it again.
 \q1
 \v 11 \add Desert owls and hedgehogs\add* will take it over—
 \q1 owls and \add ravens\add* will live there.
@@ -2812,8 +2812,8 @@
 \q1 She’s received double \add punishment\add* from Yahweh for all her sins.
 \b
 \q1
-\v 3 A voice calls out in the wilderness\f + \fr 40:3 \ft It’s unclear from the Hebrew if the \+bdit voice\+bdit* is in the wilderness, or if the \+bdit path\+bdit* is in the wilderness.\f* to clear the path for Yahweh.\x + \xo 40:3: \xt Mat 3:3; Mrk 1:3; Yhn 1:23.\x*
-\q1 Make a straight road in the Aravah \add plain\add* for our god.
+\v 3 A voice calls out in the wilderness\f + \fr 40:3 \ft It’s unclear from the Hebrew if the \+bdit voice\+bdit* is in the wilderness, or if the \+bdit path\+bdit* is in the wilderness.\f* to clear the path for Yahweh.
+\q1 Make a straight road in the Aravah \add plain\add* for our god.\x + \xo 40:3: \xt Mat 3:3; Mrk 1:3; Yhn 1:23.\x*
 \q1
 \v 4 Every valley will be \add filled in\add* and every mountain and hill will be \add flattened\add*,
 \q1 and \add so\add* the \add slopes\add* will be \add levelled\add* and the rough places \add smoothed out\add*,
@@ -2822,9 +2822,9 @@
 \q1 because \add that’s what\add* Yahweh \add has declared\add*.
 \b
 \q1
-\v 6 A voice says, ‘\add Call out\add*!’ and I \add ask\add*, ‘What should I \add call out\add*?’\x + \xo 40:6-8: \xt Jam 1:10-11; 1Pe 1:24-25.\x*
+\v 6 A voice says, ‘\add Call out\add*!’ and I \add ask\add*, ‘What should I \add call out\add*?’
 \q1 \add Say that\add* all \add people are like\add* grass—
-\q1 all their ‘loyal commitment’ \add is as temporary\add* as a flower in the countryside.
+\q1 all their ‘loyal commitment’ \add is as temporary\add* as a flower in the countryside.\x + \xo 40:6-8: \xt Jam 1:10-11; 1Pe 1:24-25.\x*
 \q1
 \v 7 The grass dries up \add and\add* the flower wilts
 \q1 when Yahweh’s breath blows over it.
@@ -2839,10 +2839,10 @@
 \q1 Tell Yehudah’s cities that their god is here.
 \b
 \q1
-\v 10 Look, my master Yahweh will be coming \add with strength\add*,\x + \xo 40:10: \xt Isa 62:11; Rev 22:12.\x*
+\v 10 Look, my master Yahweh will be coming \add with strength\add*,
 \q1 and he will be ruling \add with power\add*.
 \q1 Look, \add he’s bringing his reward\add*
-\q1 and his wages are \add there\add* \add in front of him\add*.
+\q1 and his wages are \add there\add* \add in front of him\add*.\x + \xo 40:10: \xt Isa 62:11; Rev 22:12.\x*
 \q1
 \v 11 He will tend his flock like a shepherd \add does\add*.\x + \xo 40:11: \xt Eze 34:15; Yhn 10:11.\x*
 \q1 He will \add hold\add* the lambs \add to his chest\add*.
@@ -2854,8 +2854,8 @@
 \q1 \add Who can\add* count the dust grains on the earth,
 \q1 and has weighed the mountains with scales and the hills with balances?
 \q1
-\v 13 Who has \add told\add* Yahweh’s spirit \add what to do\add*,\x + \xo 40:13: \xt Rom 11:34; 1Cor 2:16.\x*
-\q1 and has any person \add given him good advice\add*?
+\v 13 Who has \add told\add* Yahweh’s spirit \add what to do\add*,
+\q1 and has any person \add given him good advice\add*?\x + \xo 40:13: \xt Rom 11:34; 1Cor 2:16.\x*
 \q1
 \v 14 Who did he \add ask for advice\add*?
 \q1 Who \add informed him about something\add*?
@@ -2874,8 +2874,8 @@
 \q1 He \add considers their combined power\add* as \add useless and worthless\add*.
 \b
 \q1
-\v 18 Who could you compare God with?\x + \xo 40:18-19: \xt Acts 17:29.\x*
-\q1 What \add is there that you all could say is anything\add* like him?
+\v 18 Who could you compare God with?
+\q1 What \add is there that you all could say is anything\add* like him?\x + \xo 40:18-19: \xt Acts 17:29.\x*
 \q1
 \v 19 An idol that was cast by a craftsman,
 \q1 overlaid with gold by a goldsmith,
@@ -3100,7 +3100,7 @@
 \q1 and nor will I allow images \add to receive the praise that should come to me\add*.
 \q1
 \v 9 Listen, things \add said\add* before have come \add to pass\add*
-\q1 and I’m about to \add reveal\add* new things—
+\q1 and I’m about to \add reveal\add* new \add things\add*—
 \q1 I’ll \add let you all know about\add* them before they \add come to be\add*.
 \s1 A song to praise Yahweh
 \q1
@@ -3151,7 +3151,7 @@
 \q1 Who’s blind like \add my partner\add* in \add our\add* agreement,
 \q1 or blind like Yahweh’s servant.
 \q1
-\v 20 You see many things \add but\add* don’t \add take any notice\add*.
+\v 20 You see many \add things\add* \add but\add* don’t \add take any notice\add*.
 \q1 Your ears are open \add but\add* \add you\add* don’t listen.
 \p
 \v 21 Yahweh was pleased to \add do what’s right\add*—
@@ -3432,9 +3432,9 @@
 \q1 Who \add was it who helped\add* me?
 \q1
 \v 25 \add Who else\add* frustrates the \add sign\add* of empty-talkers,
-\q1 and makes diviners look foolish?\x + \xo 44:25: \xt 1Cor 1:20.\x*
+\q1 and makes diviners look foolish?
 \q1 \add Who else\add* turns wise \add people\add* back
-\q1 and makes their knowledge \add seem\add* foolish?
+\q1 and makes their knowledge \add seem\add* foolish?\x + \xo 44:25: \xt 1Cor 1:20.\x*
 \q1
 \v 26 \add Who else\add* confirms the words of his \add prophet\add*,
 \q1 and fulfills the advice of his messengers
@@ -3445,10 +3445,10 @@
 \v 27 \add Who else\add* tells the deep sea to dry out,
 \q1 and makes your rivers dry up?
 \q1
-\v 28 \add Who else\add* calls \add King\add* Cyrus \add (Heb. Koresh)\add* ‘my shepherd’,\x + \xo 44:28: \xt 2Ch 36:23; Ezr 1:2.\x*
+\v 28 \add Who else\add* calls \add King\add* Cyrus \add (Heb. Koresh)\add* ‘my shepherd’,
 \q1 and says that he’ll do everything I want?
 \q1 \add Who else\add* says that Yerushalem will be rebuilt,
-\q1 and that the temple foundations will be \add restored\add*.
+\q1 and that the temple foundations will be \add restored\add*.\x + \xo 44:28: \xt 2Ch 36:23; Ezr 1:2.\x*
 \c 45
 \s1 Yahweh send Cyrus
 \p
@@ -3482,7 +3482,7 @@
 \q1
 \v 7 I formed the light and created the darkness.
 \q1 I bring peace and prosperity, and I cause disasters.
-\q1 It’s me, Yahweh, who does all those things.
+\q1 It’s me, Yahweh, who does all those \add things\add*.
 \q1
 \v 8 Rain down from above \add you\add* skies,
 \q1 and let the clouds \add pour down godliness\add*.
@@ -3560,8 +3560,8 @@
 \q1
 \v 23 I’ve \add solemnly promised\add* \add that\add*—
 \q1 \add I only say what’s right\add* and \add I don’t change my mind\add*,
-\q1 because every knee will bow to me.\x + \xo 45:23: \xt Rom 14:11; Php 2:10-11.\x*
-\q1 Every tongue will promise \add allegiance to me\add*.
+\q1 because every knee will bow to me.
+\q1 Every tongue will promise \add allegiance to me\add*.\x + \xo 45:23: \xt Rom 14:11; Php 2:10-11.\x*
 \b
 \p
 \v 24 They’ll say that righteousness and strength are only in Yahweh.
@@ -3662,10 +3662,10 @@
 \q1 you didn’t \add consider\add* its outcome.
 \q1
 \v 8 Now listen to this \add you\add* over-indulged \add woman\add* who lives in security,
-\q1 saying in her heart, ‘\add No one else is important except me\add*.\x + \xo 47:8-9: \xt Rev 18:7-8.\x*
-\q1 \add I’ll never be a widow or lose my children\add*.’
+\q1 saying in her heart, ‘\add No one else is important except me\add*.
+\q1 \add I’ll never be a widow or lose my children\add*.’\x + \xo 47:8-9: \xt Rev 18:7-8.\x*
 \q1
-\v 9 \add But\add* both of these things will \add suddenly happen\add* to you:
+\v 9 \add But\add* both of these \add things\add* will \add suddenly happen\add* to you:
 \q1 Bereavement and childless \add will hit\add* in one day.
 \q1 They’ll come on you with completeness \add despite\add* your plentiful sorceries
 \q1 \add and\add* the power of your multiple spells.
@@ -3722,8 +3722,8 @@
 \q1
 \v 6 You’ve heard—\add now\add* \add investigate\add* all of it.
 \q1 \add Won’t you admit that what I tell you\add* \add is true\add*?
-\q1 \add Now\add* I’ll tell you new things,
-\q1 and secret things that you didn’t \add previously\add* know.
+\q1 \add Now\add* I’ll tell you new \add things\add*,
+\q1 and secret \add things\add* that you didn’t \add previously\add* know.
 \q1
 \v 7 \add They’re activated now—not in the past\add*,
 \q1 and you hadn’t heard of them \add happening\add* before today
@@ -3757,7 +3757,7 @@
 \b
 \q1
 \v 14 Gather together all of you and listen.
-\q1 \add Which\add* of \add those idols\add* has announced these things?
+\q1 \add Which\add* of \add those idols\add* has announced these \add things\add*?
 \q1 Yahweh’s \add dearest ally\add* will implement \add Yahweh’s\add* desire on Babylon
 \q1 and \add apply his power to\add* \add those\add* Chaldeans.
 \q1
@@ -3784,8 +3784,8 @@
 \q1 and had its name \add removed from my presence\add*.
 \b
 \q1
-\v 20 Go away from Babylon.\x + \xo 48:20: \xt Rev 18:4.\x*
-\q1 Flee from \add those\add* Chaldeans.
+\v 20 Go away from Babylon.
+\q1 Flee from \add those\add* Chaldeans.\x + \xo 48:20: \xt Rev 18:4.\x*
 \q1 Proclaim this with a happy song.
 \q1 Send it out to the \add ends\add* of the earth to say:
 \q1 Yahweh has \add paid the price to free\add* his servant Yakov.
@@ -3800,12 +3800,12 @@
 \s1 Yahweh’s servant
 \s2 The second servant song
 \q1
-\v 1 Listen to me \add you\add* islands,\x + \xo 49:1: \xt Jer 1:5.\x*
+\v 1 Listen to me \add you\add* islands,
 \q1 and pay attention \add you\add* \add distant\add* peoples.
 \q1 Yahweh called me \add from before I was born\add*—
-\q1 he \add knew\add* my name when I was still inside my mother.
+\q1 he \add knew\add* my name when I was still inside my mother.\x + \xo 49:1: \xt Jer 1:5.\x*
 \q1
-\v 2 He made my mouth like a sharp sword \add that\add* he hid in the shadow of his hand.\x + \xo 49:2: \xt Heb 4:12; Rev 1:16.\x*
+\v 2 He made my mouth like a sharp sword\x + \xo 49:2: \xt Heb 4:12; Rev 1:16.\x* \add that\add* he hid in the shadow of his hand.
 \q1 He made me into a polished arrow \add that\add* he hid in his quiver.
 \q1
 \v 3 Then he told me, ‘Yisrael, you’re my servant,
@@ -3826,11 +3826,11 @@
 \q1 and my god has been my strength.
 \b
 \q1
-\v 6 \add Also\add* he says,\x + \xo 49:6: a \xt Isa 42:6; Luk 2:32; Acts 26:23; \xo b \xt Acts 13:47.\x*
+\v 6 \add Also\add* he says,
 \q1 ‘It’s too insignificant for you to be my servant to raise up Yakov’s tribes
 \q1 and to bring back those from Yisrael who’ve been preserved.
-\q1 I’ll make you into a light for the nations—
-\q1 to be \add the one who\add* takes salvation to the \add ends\add* of the earth for me.’
+\q1 I’ll make you into a light for the nations\x + \xo 49:6: \xt Isa 42:6; Luk 2:32; Acts 26:23.\x*—
+\q1 to be \add the one who\add* takes salvation to the \add ends\add* of the earth for me.’\x + \xo 49:6: \xt Acts 13:47.\x*
 \b
 \q1
 \v 7 Yahweh, Yisrael’s holy \add one\add*,
@@ -3854,10 +3854,10 @@
 \q1 They’ll graze \add along\add* roads,
 \q1 and over all the pasture on bare hills.
 \q1
-\v 10 They won’t be hungry or thirsty,\x + \xo 49:10: \xt Rev 7:16-17.\x*
+\v 10 They won’t be hungry or thirsty,
 \q1 and the burning heat of the sun won’t \add beat down\add* on them,
 \q1 because they’ll be guided by \add one\add* who has compassion on them
-\q1 and he’ll lead them to springs of water.
+\q1 and he’ll lead them to springs of water.\x + \xo 49:10: \xt Rev 7:16-17.\x*
 \b
 \q1
 \v 11 I’ll make all my mountains into a road,
@@ -3962,17 +3962,17 @@
 \q1 I haven’t been rebellious
 \q1 \add and\add* I haven’t turned back \add from what I was asked\add*.
 \q1
-\v 6 I gave my back to those who struck me,\x + \xo 50:6: \xt Mat 26:67; Mrk 14:65.\x*
+\v 6 I gave my back to those who struck me,
 \q1 and my cheeks to those who made them bare.
-\q1 I didn’t hide my face from insults and \add getting spat on\add*
+\q1 I didn’t hide my face from insults and \add getting spat on\add*\x + \xo 50:6: \xt Mat 26:67; Mrk 14:65.\x*
 \q1
 \v 7 \add but\add* \add my\add* master Yahweh will help me.
 \q1 Therefore I’m not humiliated,
 \q1 so I’ve made my face \add look determined\add* like flint
 \q1 because I know that I won’t be ashamed.
 \q1
-\v 8 The \add one who’ll declare me innocent\add* is close by.\x + \xo 50:8-9: \xt Rom 8:33-34.\x*
-\q1 Who will \add bring charges against me\add*? Let’s stand \add in court\add* together.
+\v 8 The \add one who’ll declare me innocent\add* is close by.
+\q1 Who will \add bring charges against me\add*?\x + \xo 50:8-9: \xt Rom 8:33-34.\x* Let’s stand \add in court\add* together.
 \q1 Who is \add my accuser\add*? Let him approach me.
 \q1
 \v 9 Listen, my master Yahweh will help me.
@@ -4086,7 +4086,7 @@
 \q1 and there’s no one to hold her hand out of all the children that she’s brought up.
 \b
 \q1
-\v 19 Those two things have happened to you:
+\v 19 Those two \add things\add* have happened to you:
 \q1 Who shows sympathy to you \add after\add* the devastation and destruction?
 \q1 \add Who\add* comforts you \add after\add* the famine and \add war\add*?
 \q1
@@ -4108,9 +4108,9 @@
 \c 52
 \s1 Yahweh will rescue Yerushalem
 \q1
-\v 1 Wake up, wake up, \add strengthen yourself\add* Tsiyyon \add (Zion)\add*.\x + \xo 52:1: \xt Rev 21:2-27.\x*
+\v 1 Wake up, wake up, \add strengthen yourself\add* Tsiyyon \add (Zion)\add*.
 \q1 Put your beautiful clothes on, Yerushalem, \add sacred\add* city,
-\q1 because the uncircumcised and the ‘unclean’ people won’t enter you again.
+\q1 because the uncircumcised and the ‘unclean’ people won’t enter you again.\x + \xo 52:1: \xt Rev 21:2-27.\x*
 \q1
 \v 2 Shake yourself free from the dust.
 \q1 \add Take action\add*, \add you\add* captive Yerushalem.
@@ -4126,14 +4126,14 @@
 \p
 \v 5 Now Yahweh \add declares\add*:
 \q1 My people were taken for \add no reason\add*.
-\q1 His rulers mock him\x + \xo 52:5: \xt Rom 2:24.\x*
-\q1 and my name is continually slandered \add throughout\add* the day.
+\q1 His rulers mock him
+\q1 and my name is continually slandered \add throughout\add* the day.\x + \xo 52:5: \xt Rom 2:24.\x*
 \m That is Yahweh’s declaration.
 \p
 \v 6 Therefore my people will know my name because on that day
 \q1 it will be me speaking and saying, ‘Here I am.’
 \q1
-\v 7 How delightful is the one who brings good news across the mountains announcing peace—\x + \xo 52:7: \xt Nah 1:15; Acts 10:36; Rom 10:15; Eph 6:15.\x*
+\v 7 How delightful is the one who brings good news across the mountains announcing peace\x + \xo 52:7: \xt Nah 1:15; Acts 10:36; Rom 10:15; Eph 6:15.\x*—
 \q1 bringing good news that announces \add a coming rescuer\add*,
 \q1 \add and\add* telling Tsiyyon that their god reigns.
 \q1
@@ -4160,7 +4160,7 @@
 \v 13 Listen, my servant will prosper—
 \q1 he’ll be \add promoted and highly honoured\add*.
 \q1
-\v 14 Many people were horrified at you—his appearance was so disfigured
+\v 14 Many \add people\add* were horrified at you—his appearance was so disfigured
 \q1 and his body \add was so disfigured\add* \add that he no longer looked like a man\add*.
 \q1
 \v 15 So he’ll startle many nations.
@@ -4168,8 +4168,8 @@
 \q1 they’ll see and understand what they hadn’t heard about.\x + \xo 52:15: \xt Rom 15:21.\x*
 \c 53
 \p
-\v 1 Who has believed our message,\x + \xo 53:1: \xt Rom 10:16; Yhn 12:38.\x*
-\q1 and who has Yahweh’s \add power\add* been revealed to?
+\v 1 Who has believed our message,
+\q1 and who has Yahweh’s \add power\add* been revealed to?\x + \xo 53:1: \xt Rom 10:16; Yhn 12:38.\x*
 \q1
 \v 2 He grew \add in front of\add* him like a young plant,
 \q1 and like a root out of the dry ground.
@@ -4183,9 +4183,9 @@
 \b
 \q1
 \v 4 \add Despite that\add*, he’s borne our sicknesses
-\q1 and carried our pains.
+\q1 and carried our pains.\x + \xo 53:4: \xt Mat 8:17.\x*
 \q1 We \add thought\add* that he’d been struck down by God—
-\q1 attacked and made to suffer.\x + \xo 53:4: \xt Mat 8:17.\x*
+\q1 attacked and made to suffer.
 \q1
 \v 5 \add But\add* he was pierced for our disobedience,
 \q1 and crushed for our wicked actions.
@@ -4193,20 +4193,20 @@
 \q1 and we were healed \add thanks\add* to his wounds.\x + \xo 53:5: \xt 1Pe 2:24.\x*
 \q1
 \v 6 We’ve all strayed away like sheep—
-\q1 \add everyone’s gone in their own direction\add*
-\q1 and Yahweh has placed all our disobedience onto him.\x + \xo 53:6: \xt 1Pe 2:25.\x*
+\q1 \add everyone’s gone in their own direction\add*\x + \xo 53:6: \xt 1Pe 2:25.\x*
+\q1 and Yahweh has placed all our disobedience onto him.
 \b
 \q1
 \v 7 He was oppressed and tormented
-\q1 \add but\add* like a lamb being led away to be slaughtered, he didn’t open his mouth,
-\q1 and like a sheep that’s silent in front of its shearers, he didn’t open his mouth.\x + \xo 53:7: \xt Rev 5:6.\x*
+\q1 \add but\add* like a lamb being led away to be slaughtered,\x + \xo 53:7: \xt Rev 5:6.\x* he didn’t open his mouth,
+\q1 and like a sheep that’s silent in front of its shearers, he didn’t open his mouth.
 \q1
 \v 8 \add After\add* oppression and judgement, he was taken away,
 \q1 \add but how many of his peers even cared\add* that he was cut off from the land of the living?
 \q1 He was wounded because of the disobedience of my people.
 \q1
 \v 9 His burial place was among the criminals,
-\q1 and a rich man at his death,
+\q1 and a rich \add man\add* at his death,
 \q1 although he’d committed no \add violent\add* acts,
 \q1 and \add had never spoken deceitfully\add*.\x + \xo 53:9: \xt 1Pe 2:22.\x*
 \b
@@ -4222,17 +4222,17 @@
 \q1 and he will carry their disobedience.
 \q1
 \v 12 \add Because of that,\add* I’ll allocate a portion for him.
-\q1 He’ll divide out the plunder to a powerful people
+\q1 He’ll divide out the plunder to a powerful \add people\add*
 \q1 because he poured out his life \add resulting in\add* his death.
-\q1 He was included with the wicked,
-\q1 and he bore the disobedience of many people,
-\q1 and he intervened on behalf of the disobedient.\x + \xo 53:12: \xt Luk 22:37.\x*
+\q1 He was included with the wicked,\x + \xo 53:12: \xt Luk 22:37.\x*
+\q1 and he bore the disobedience of many \add people\add*,
+\q1 and he intervened on behalf of the disobedient.
 \c 54
 \s1 Yahweh’s love for Yerushalem
 \p
-\v 1 Sing happily \add you\add* barren women who has never given birth.\x + \xo 54:1: \xt Gal 4:27.\x*
+\v 1 Sing happily \add you\add* barren \add women\add* who has never given birth.
 \q1 Break into a cheery song and \add celebrate\add*, \add you\add* who’ve never been in labour,
-\q1 because the desolate woman \add now\add* has more children than the married woman did says Yahweh.
+\q1 because the desolate \add woman\add* \add now\add* has more children than the married \add woman\add* did says Yahweh.\x + \xo 54:1: \xt Gal 4:27.\x*
 \q1
 \v 2 Widen your tent and stretch your tent curtains further out without restraint.
 \q1 Make your tent ropes longer and \add drive your stakes in deep\add*
@@ -4399,10 +4399,10 @@
 \q1 who \add observe\add* the rest day without defiling it,
 \q1 and who cling to my agreement,
 \q1
-\v 7 I’ll bring them to my \add sacred\add* mountain\x + \xo 56:7: \xt Mat 21:13; Mrk 11:17; Luk 19:46.\x*
+\v 7 I’ll bring them to my \add sacred\add* mountain
 \q1 and make them happy in my \add temple where people pray\add*.
 \q1 Their burnt offerings and sacrifices \add will be acceptable\add* on my altar,
-\q1 because my \add temple\add* will be called a prayer house for all the \add nations\add*.
+\q1 because my \add temple\add* will be called a prayer house for all the \add nations\add*.\x + \xo 56:7: \xt Mat 21:13; Mrk 11:17; Luk 19:46.\x*
 \p
 \v 8 My master Yahweh, who gathers Yisrael’s outcasts, \add says\add* this:
 \q1 I’ll gather others \add beside those already\add* gathered.
@@ -4744,9 +4744,9 @@
 \q1 \add yet\add* in my favour I’ve had compassion towards you.
 \q1
 \v 11 Then your \add city\add* gates will be always open—
-\q1 they won’t be shut day or night,\x + \xo 60:11: \xt Rev 21:25-26.\x*
+\q1 they won’t be shut day or night,
 \q1 \add so\add* the wealth from \add other\add* nations can be brought to you,
-\q1 with their kings being led \add captive\add*.
+\q1 with their kings being led \add captive\add*.\x + \xo 60:11: \xt Rev 21:25-26.\x*
 \q1
 \v 12 \add Yes,\add* any nation or kingdom that won’t serve you will perish,
 \q1 and the nations will be \add completely destroyed\add*.
@@ -4782,10 +4782,10 @@
 \q1 and praise \add like\add* \add your city\add* gates.
 \b
 \q1
-\v 19 The sun will no longer be your light \add during\add* the day,\x + \xo 60:19: \xt Rev 21:23; 22:5.\x*
+\v 19 The sun will no longer be your light \add during\add* the day,
 \q1 nor will the moon’s brightness shine for you,
 \q1 \add but rather,\add* Yahweh will be your \add perpetual\add* light,
-\q1 and your god will be your \add brilliant light\add*.
+\q1 and your god will be your \add brilliant light\add*.\x + \xo 60:19: \xt Rev 21:23; 22:5.\x*
 \q1
 \v 20 Your sun will no longer set,
 \q1 and your moon will no longer disappear,
@@ -4809,9 +4809,9 @@
 \q1 to decree freedom for those taken captive,
 \q1 and to liberate those who are chained up.
 \q1
-\v 2 \add He’s sent me\add* to proclaim the year of Yahweh’s favour,\x + \xo 61:2: \xt Mat 5:4.\x*
+\v 2 \add He’s sent me\add* to proclaim the year of Yahweh’s favour,
 \q1 and a day of our god’s vengeance,
-\q1 and to comfort all those who mourn.
+\q1 and to comfort all those who mourn.\x + \xo 61:2: \xt Mat 5:4.\x*
 \q1
 \v 3 \add It’ll be a time\add* to give Tsiyyon’s mourners a \add nice\add* turban instead of ashes \add on their heads\add*,
 \q1 oil \add to show\add* joy \add on their faces\add* instead of mourning,
@@ -4850,9 +4850,9 @@
 \v 10 I’m \add going to really celebrate\add* Yahweh.
 \q1 My inner being will be glad about my god
 \q1 because he has dressed me in clothes of a \add free person\add*.
-\q1 He’s clothed me with the robe of a \add person declared innocent\add*\x + \xo 61:10: \xt Rev 21:2.\x*
+\q1 He’s clothed me with the robe of a \add person declared innocent\add*
 \q1 like the groom puts on a \add nice\add* turban,
-\q1 and the bride adorns herself with jewelry.
+\q1 and the bride adorns herself with jewelry.\x + \xo 61:10: \xt Rev 21:2.\x*
 \q1
 \v 11 Just as the \add soil\add* produces growth,
 \q1 and as the seeds in the garden start to sprout,
@@ -4906,9 +4906,9 @@
 \q1 Build up, build up the highway. Clear away the stones to raise up a banner for the nations.
 \q1
 \v 11 Listen, Yahweh has proclaimed to the \add ends\add* of the earth:
-\q1 Tell Tsiyyon’s daughter to look because \add her\add* rescue is about to \add happen\add*.\x + \xo 62:11: \xt Isa 40:10; Rev 22:12.\x*
+\q1 Tell Tsiyyon’s daughter to look because \add her\add* rescue is about to \add happen\add*.
 \q1 Look, he’s brought his reward with him,
-\q1 and his wages \add go ahead of\add* him.
+\q1 and his wages \add go ahead of\add* him.\x + \xo 62:11: \xt Isa 40:10; Rev 22:12.\x*
 \q1
 \v 12 The ones that Yahweh \add has paid to have freed\add*
 \q1 will be called ‘the \add sacred\add* people’ by \add others\add*.
@@ -4938,10 +4938,10 @@
 \v 4 because \add I had decided that this was\add* the day of vengeance,
 \q1 and the year had come \add for me to buy my people’s freedom\add*.
 \q1
-\v 5 I looked and there wasn’t anyone to help,\x + \xo 63:5: \xt Isa 59:16.\x*
+\v 5 I looked and there wasn’t anyone to help,
 \q1 and I was appalled that no one \add assisted\add*,
 \q1 \add but\add* my \add power\add* gave me victory,
-\q1 and my rage sustained me.
+\q1 and my rage sustained me.\x + \xo 63:5: \xt Isa 59:16.\x*
 \q1
 \v 6 I trod down peoples in my \add anger\add*,
 \q1 and in my rage, I made them drunk,
@@ -5095,8 +5095,8 @@
 \q1 and my servants will live there.
 \q1
 \v 10 The Sharon \add plain\add* will become a pasture for the flocks,
-\q1 and the Akor valley will be a resting place for cattle
-\q1 for my people who search for me.\x + \xo 65:10: \xt Josh 7:24-26.\x*
+\q1 and the Akor valley\x + \xo 65:10: \xt Josh 7:24-26.\x* will be a resting place for cattle
+\q1 for my people who search for me.
 \b
 \q1
 \v 11 \add But\add* you all who abandon Yahweh,
@@ -5157,15 +5157,15 @@
 \v 24 Before they \add even\add* call out, I’ll answer \add them\add*—
 \q1 while they’re still speaking, I’ll hear \add them\add*.
 \q1
-\v 25 The wolf and the lamb will graze together,\x + \xo 65:25: \xt Isa 11:6-9.\x*
+\v 25 The wolf and the lamb will graze together,
 \q1 and the lion will eat straw like the cow.
 \q1 The snake’s food will be dirt and they won’t cause any harm,
-\q1 and \add nothing will be destroyed\add* on my \add sacred\add* mountain says Yahweh.
+\q1 and \add nothing will be destroyed\add* on my \add sacred\add* mountain says Yahweh.\x + \xo 65:25: \xt Isa 11:6-9.\x*
 \c 66
 \s1 Hypocrisy in worship
 \p
-\v 1 Yahweh says this:\x + \xo 66:1: a \xt Mat 5:34; 23:22; \xo b \xt Mat 5:35.\x*
-\q1 The heavens are my throne and the earth is my footstool.
+\v 1 Yahweh says this:
+\q1 The heavens are my throne\x + \xo 66:1: \xt Mat 5:34; 23:22.\x* and the earth is my footstool.\x + \xo 66:1: \xt Mat 5:35.\x*
 \q1 Where \add then,\add* could you all build a house for me,
 \q1 and where could be a place for me to \add relax\add*?
 \q1
@@ -5200,8 +5200,8 @@
 \q1 the sound of Yahweh \add giving his enemies what they deserve\add*.
 \b
 \q1
-\v 7 Before it went into labour, it \add already\add* gave birth.\x + \xo 66:7: \xt Rev 12:5.\x*
-\q1 Before the pain hit it, it delivered a son.
+\v 7 Before it went into labour, it \add already\add* gave birth.
+\q1 Before the pain hit it, it delivered a son.\x + \xo 66:7: \xt Rev 12:5.\x*
 \q1
 \v 8 Who’s heard anything like that \add before\add*?
 \q1 Who’s seen those \add sorts of\add* things?
@@ -5260,5 +5260,5 @@
 \m That’s what Yahweh says.
 \p
 \v 24 Then they’ll go out and see the corpses of those who rebelled against me,
-\q1 because the maggots won’t die and their fire won’t be extinguished,
-\q1 and all \add creatures\add* will \add find them\add* \add abhorrent\add*.\x + \xo 66:24: \xt Mrk 9:48.\x*
+\q1 because the maggots won’t die and their fire won’t be extinguished,\x + \xo 66:24: \xt Mrk 9:48.\x*
+\q1 and all \add creatures\add* will \add find them\add* \add abhorrent\add*.

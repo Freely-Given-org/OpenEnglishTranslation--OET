@@ -23,6 +23,7 @@ CHANGELOG:
                Changed some fieldnames: Referent -> Referents, Frame -> Frames better reflecting the actual data contents
     2023-04-27 Combined subject referents into Referents column (so now, one less column)
     2026-05-08 Upgraded to bos_books_codes_py
+    2026-10-22 Map passages with BOS and replace fuzzy same-position IDs with certain Greek alignment.
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple
@@ -35,15 +36,20 @@ from xml.etree import ElementTree
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 import bos_books_codes_py
+from greek_word_alignment import mapped_word_matches, words_match
 
 
-LAST_MODIFIED_DATE = '2026-10-06' # by RJH
+LAST_MODIFIED_DATE = '2026-10-22' # by RJH
 SHORT_PROGRAM_NAME = "Convert_ClearMaculaNT_to_TSV"
-PROGRAM_NAME = "Extract and Apply Macula OT glosses"
-PROGRAM_VERSION = '0.23'
+PROGRAM_NAME = "Convert Macula NT words and attach BibleTags IDs"
+PROGRAM_VERSION = '0.24'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
+
+# Macula uses org. BibleTags separates ACT 19:41 but keeps original CO2 13:12-13.
+MACULA_VERSIFICATION = 'org'
+BIBLE_TAGS_VERSIFICATION = 'BibleTagsNT'
 
 
 # LOWFAT_XML_INPUT_FOLDERPATH = Path( '../../Forked/macula-greek/Nestle1904/lowfat/' )
@@ -409,151 +415,19 @@ def loadClearLowFatGlossesXML() -> bool:
 # end of convert_ClearMaculaNT_to_TSV.loadClearLowFatGlossesXML
 
 
-def words_match( greekWord1, greekWord2, loose=True ) -> bool:
-    """
-    """
-    if greekWord1==greekWord2: return True
-    lower1, lower2 = greekWord1.lower(), greekWord2.lower()
-    if lower1==lower2: return True
-    if not loose: return False
-
-    # Handle special cases, e.g., spelling differences between Nestle1904 (Clear.Bible) and unfoldingWord UGNT (BibleTags)
-    for knownWord1,knownWord2 in ( ('Ἰωσίαν'.lower(), 'Ἰωσείαν'.lower()),
-                                    ('Ἰωσίας'.lower(), 'Ἰωσείας'.lower()),
-                                    ('παρέλαβε', 'παρέλαβεν'),
-                                    ('λείαν', 'λίαν'),
-                                    ):
-        if lower1==knownWord1 and lower2==knownWord2:
-            return True
-
-    # Remove accents
-    for charSet,simpleChar in ( ('ἀἁἂἃἄἅἆἇάὰάᾀᾁᾂᾃᾄᾅᾆᾇᾰᾱᾲᾳᾴᾶᾷἈἉἊἋἌἍἎἏΆᾈᾉᾊᾋᾌᾍᾎᾏᾸᾹᾺΆᾼ','α'),
-                                ('ἐἑἒἓἔἕέὲέἘἙἚἛἜἝῈΈΈ','ε'),
-                                ('ἠἡἢἣἤἥἦἧὴήᾐᾑᾒᾓᾔᾕᾖᾗῂῃῄῆῇήἨἩἪἫἬἭἮἯᾘᾙᾚᾛᾜᾝᾞᾟῊΉῌΉ','η'),
-                                ('ἰἱἲἳἴἵἶἷὶίῐῑῒΐῖῗΐίϊΐίἸἹἺἻἼἽἾἿῚΊῘῙΊΪ','ι'),
-                                ('ὀὁὂὃὄὅὸόόὈὉὊὋὌὍῸΌΌ','o'),
-                                ('ὐὑὒὓὔὕὖὗὺύῠῡῢΰῦῧΰύϋὙὛὝὟῨῩῪΎΎΫ','υ'),
-                                ('ὠὡὢὣὤὥὦὧὼώᾠᾡᾢᾣᾤᾥᾦᾧῲῳῴῶῷώὨὩὪὫὬὭὮὯᾨᾩᾪᾫᾬᾭᾮᾯῺΏῼΏ','ω'),
-                                # ('ῤῥῬ','ρ'),
-                                # ('῞ʹ͵΄᾽᾿῍῎῏῝῞῟῭΅`΅´῾῀῁',''),
-                                ):
-            for char in charSet:
-                lower1 = lower1.replace(char, simpleChar)
-                lower2 = lower2.replace(char, simpleChar)
-    if lower1 == lower2:
-        return True
-
-    # Handle mostly similar words
-    identicalStartCount = identicalEndCount = 0
-    for char1,char2 in zip(greekWord1, greekWord2):
-        if char1==char2:
-            identicalStartCount += 1
-        else: break
-    for char1,char2 in zip(reversed(greekWord1), reversed(greekWord2)):
-        if char1==char2:
-            identicalEndCount += 1
-        else: break
-    # print(identicalStartCount,identicalEndCount)
-    return (identicalStartCount+identicalEndCount) >= len(greekWord1) -2
-# end of convert_ClearMaculaNT_to_TSV.words_match
-
-
 def add_BibleTags_ids() -> bool:
-    """
-    The Clear.Bible data doesn't use the 5-character BibleTags id fields.
-
-    So match the entries and add them in.
-    """
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nMatching rows in both tables to add BibleTags ids…" )
-
-    # We expect ['Ref', 'BibTagId', 'Word', 'Lemma', 'Strong', 'Morphology', 'After']
-    BibTags_dict = {row['Ref']:(row['Word'],row['Morphology'],row['BibTagId']) for row in state.BibTags_rows} # We include the morphology for extra checking
-
-    offset = addedCount = skippedCount = 0
-    lastVerseID = None
-    newLowFatWordsAndMorphemes = []
-    for n,secondEntryAttempt in enumerate(state.lowFatWordsAndMorphemes):
-        assert len(secondEntryAttempt) == len(state.output_fieldnames)-1
-        ourID, word, morphology = secondEntryAttempt['FGRef'], secondEntryAttempt['Word'], secondEntryAttempt['Morphology']
-        # print(n, ourID, word, morphology)
-        verseID, wordPart = ourID.split('w')
-        assert wordPart.isdigit()
-        wordNumber = int( wordPart )
-
-        if verseID != lastVerseID:
-            offset = 0 # Restart at start of verse
-        adjustedRowID = f'{verseID}w{wordNumber+offset}'
-        try:
-            foundWord, foundMorphology, foundID = BibTags_dict[adjustedRowID]
-            # print("  ",foundWord, foundMorphology, foundID)
-            # print(f"({len(foundWord)}) {foundWord} ({len(word)}) {word} {foundWord==word}")
-            assert words_match( foundWord, word), f"ID's matched {adjustedRowID} from {ourID} and got {foundID}, but not text ({len(foundWord)}) '{foundWord}' != ({len(word)}) '{word}'"
-            # Seems we can't match morphology, cf. foundMorphology='Gr,N,,,,,NFS,' vs. morphology='N-NSF'
-            # print(f"{foundMorphology=} {morphology=}")
-            # for mBit in morphology:
-            #     assert mBit in foundMorphology, \
-            #         f"ID's matched {adjustedRowID} from {ourID} and got {foundID}, but not morphology '{foundMorphology}'!='{morphology}'"
-            # assert foundMorphology==morphology \
-            #     or (foundMorphology=='Rd' and morphology=='R'), \
-            #     f"ID's matched {adjustedRowID} from {ourID} and got {foundID}, but not morphology '{foundMorphology}'!='{morphology}'"
-            # print(f"({len(secondEntryAttempt)}) {secondEntryAttempt=}")
-            newMoreExpandedDictEntry = {'FGRef':ourID, 'BibTagId':foundID, **secondEntryAttempt}
-            addedCount += 1
-            # print(f"({len(newMoreExpandedDictEntry)}) {newMoreExpandedDictEntry=}")
-            assert len(newMoreExpandedDictEntry) == len(state.output_fieldnames), f"{len(newMoreExpandedDictEntry)=} vs {len(state.output_fieldnames)=}" # BibTagId field to be added below
-            newLowFatWordsAndMorphemes.append( newMoreExpandedDictEntry )
-        except KeyError:
-            logging.warning( f"Failed to find BibleTags id for {offset=} {ourID}: '{word}' {morphology}" )
-            adjustedRowID = f'{verseID}w{wordNumber+offset}'
-            try:
-                foundWord, foundMorphology, foundID = BibTags_dict[adjustedRowID]
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Got {foundID} for {offset=} {adjustedRowID}")
-                assert foundWord==word, f"ID's now matched {adjustedRowID} from {ourID} and got {foundID}, but not text ({len(foundWord)}) '{foundWord}' != ({len(word)}) '{word}'"
-                assert foundMorphology==morphology, f"ID's now matched {adjustedRowID} from {ourID} and got {foundID}, but not morphology '{foundMorphology}'!='{morphology}'"
-                newMoreExpandedDictEntry = {'FGRef':ourID, 'BibTagId':foundID, **secondEntryAttempt}
-                addedCount += 1
-                assert len(newMoreExpandedDictEntry) == len(state.output_fieldnames), f"{len(newMoreExpandedDictEntry)=} vs {len(state.output_fieldnames)=}" # BibTagId field to be added below
-                newLowFatWordsAndMorphemes.append( newMoreExpandedDictEntry )
-            except (KeyError, AssertionError):
-                logging.error( f"Failed to find BibleTags id for {offset=} {adjustedRowID} from {ourID}: '{secondEntryAttempt['Word']}'")
-                newMoreExpandedDictEntry = {'FGRef':ourID, 'BibTagId':'', **secondEntryAttempt}
-                assert len(newMoreExpandedDictEntry) == len(state.output_fieldnames), f"{len(newMoreExpandedDictEntry)=} vs {len(state.output_fieldnames)=}" # BibTagId field to be added below
-                newLowFatWordsAndMorphemes.append( newMoreExpandedDictEntry )
-        except AssertionError:
-            logging.warning( f"Failed to match text for {offset=} {ourID}: '{foundWord}' vs '{word}' {foundMorphology} vs {morphology}")
-            adjustedRowID = f'{verseID}w{wordNumber+offset}'
-            try:
-                foundWord, foundMorphology, foundID = BibTags_dict[adjustedRowID]
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Got {foundID} for {offset=} {adjustedRowID}")
-                assert foundWord==word, f"ID's now matched {adjustedRowID} from {ourID} and got {foundID}, but not text ({len(foundWord)}) '{foundWord}' != ({len(word)}) '{word}'"
-                assert foundMorphology==morphology, f"ID's now matched {adjustedRowID} from {ourID} and got {foundID}, but not morphology '{foundMorphology}'!='{morphology}'"
-                newMoreExpandedDictEntry = {'FGRef':ourID, 'BibTagId':foundID, **secondEntryAttempt}
-                addedCount += 1
-                assert len(newMoreExpandedDictEntry) == len(state.output_fieldnames), f"{len(newMoreExpandedDictEntry)=} vs {len(state.output_fieldnames)=}" # BibTagId field to be added below
-                newLowFatWordsAndMorphemes.append( newMoreExpandedDictEntry )
-            except (KeyError, AssertionError):
-                logging.error( f"Failed to find BibleTags id for {offset=} {adjustedRowID} from {ourID}: '{secondEntryAttempt['Word']}'")
-                newMoreExpandedDictEntry = {'FGRef':ourID, 'BibTagId':'', **secondEntryAttempt}
-                skippedCount += 1
-                assert len(newMoreExpandedDictEntry) == len(state.output_fieldnames), f"{len(newMoreExpandedDictEntry)=} vs {len(state.output_fieldnames)=}" # BibTagId field to be added below
-                newLowFatWordsAndMorphemes.append( newMoreExpandedDictEntry )
-        # Check we haven't ended up with anything missing or any extra stuff
-        for fieldname in newLowFatWordsAndMorphemes[-1]: assert fieldname in state.output_fieldnames
-        for fieldname in state.output_fieldnames: assert fieldname in newLowFatWordsAndMorphemes[-1]
-        lastVerseID = verseID
-
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Added {addedCount:,} BibTags IDs" )
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Skipped {skippedCount:,} BibTags IDs" )
-
-    assert len(newLowFatWordsAndMorphemes) == len(state.lowFatWordsAndMorphemes)
-    state.lowFatWordsAndMorphemes = newLowFatWordsAndMorphemes
+    """Associate native IDs only after BOS maps and aligns complete passages."""
+    matches = mapped_word_matches(state.lowFatWordsAndMorphemes, state.BibTags_rows,
+                                  MACULA_VERSIFICATION, BIBLE_TAGS_VERSIFICATION)
+    output = []
+    for n, row in enumerate(state.lowFatWordsAndMorphemes):
+        identifier = state.BibTags_rows[matches[n]]['BibTagId'] if n in matches else ''
+        output.append({**row, 'BibTagId': identifier})
+    state.lowFatWordsAndMorphemes = output
+    vPrint('Quiet', DEBUGGING_THIS_MODULE,
+           f"  Added {len(matches):,} BibleTags IDs; left {len(output)-len(matches):,} unresolved.")
     return True
-# end of convert_ClearMaculaNT_to_TSV.loadClearLowFatGlossesXML
+# end of convert_ClearMaculaNT_to_TSV.add_BibleTags_ids
 
 
 def save_filled_TSV_file() -> bool:

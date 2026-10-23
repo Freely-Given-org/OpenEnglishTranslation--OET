@@ -1,4 +1,4 @@
-\id GEN - Open English Translation—Readers’ Version (OET-RV) v0.1.59
+\id GEN - Open English Translation—Readers’ Version (OET-RV) v0.1.60
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 GEN
@@ -34,7 +34,7 @@
 \p
 \v 1 In the beginning, God\f + \fr 1:1 \ft As per common practice, we use ‘God’ through the Hebrew scriptures for the word ‘elohim’. Note that ‘elohim’ is a Hebrew language plural, and is translated more literally as ‘gods’ in a few places. However the connected Hebrew verb translated ‘created’ here is clearly a singular form, so the singular noun ‘God’ fits better here and everywhere where ‘elohim’ is used with other verbs marked as being singular. The mysterious plurality of God is confirmed in v26 where ‘our’ is used to refer to him/them.\f* created the heavens and the earth.
 \v 2 The earth \add was formless\add* and empty and darkness covered the surface of the deep \add waters\add* and God’s spirit was hovering over the waters’ surface.
-\v 3 Then God said, “Let there be light,” and light came into existence,\x + \xo 1:3: \xt 2Cor 4:6.\x*
+\v 3 Then God said, “Let there be light,”\x + \xo 1:3: \xt 2Cor 4:6.\x* and light came into existence,
 \v 4 and God observed that the light was good. Then \add he\add* separated the light from the darkness.
 \v 5 God named the light \em daytime\em*, and the darkness he named \em nighttime\em*. Then evening came, and \add later\add* morning came, \add and that was the end of the\add* first day.
 \p
@@ -63,7 +63,7 @@
 \v 24 Then God said, “Let the land bring forth every kind of living creature: livestock and every crawling creature and every kind of living thing on the earth.” Everything happened \add exactly\add* as he commanded,
 \v 25 \add so\add* \add he\add* made every kind of creature of the earth, and every kind of livestock, and every kind of crawling creature on the ground. And God saw that \add what he had done\add* was good.
 \p
-\v 26 Then God said, “Let us make man in our image, according to our likeness, and let them rule over the fish in the sea and over the \add birds\add* in the sky and over the livestock and over all the earth, and over every creature moving on the earth.”\x + \xo 1:26: \xt 1Cor 11:7.\x*
+\v 26 Then God said, “Let us make man in our image, according to our likeness,\x + \xo 1:26: \xt 1Cor 11:7.\x* and let them rule over the fish in the sea and over the \add birds\add* in the sky and over the livestock and over all the earth, and over every creature moving on the earth.”
 \v 27 Then God created humankind in his image, \add yes,\add* created in the image of God—male and female he created them.\x + \xo 1:27-28: \xt Gen 5:1-2.\x*
 \v 28 Then God blessed them and told them, “Be fruitful and multiply, and fill the earth and \add take control\add* of it. You’re \add in charge of\add* the fish in the sea and the \add birds\add* in the sky and over every living thing that moves on the earth.”
 \v 29 Then God said, “Look, I’ve given you every plant throughout the whole earth that yields seed, and every tree that has fruit with a seed or seeds inside it. They will be yours for food,
@@ -84,7 +84,7 @@
 \v 7 Then Yahweh God formed the \add first\add* man out of the dust on the ground and he breathed into his nostrils the breath of life, and the man became a living person.\x + \xo 2:7: \xt 1Cor 15:45.\x*
 \p
 \v 8 Now in the east, Yahweh God had planted a garden in Eden, and he put the man there that he had formed.
-\v 9 \add He\add* \add also\add* caused all kinds of trees to grow there—\add some\add* that are pleasant to look at and good for food. In the middle of the garden was the tree of life and the tree of the knowledge of good and evil\x + \xo 2:9: \xt Rev 2:7; 22:2,14.\x*
+\v 9 \add He\add* \add also\add* caused all kinds of trees to grow there—\add some\add* that are pleasant to look at and good for food. In the middle of the garden was the tree of life\x + \xo 2:9: \xt Rev 2:7; 22:2,14.\x* and the tree of the knowledge of good and evil
 \p
 \v 10 A river flowed out of Eden to water the garden, and then from there it split into four rivers.
 \v 11 The first \add river\add* was named Pishon, and it winds around through the entire region of Havilah, where there’s gold.
@@ -115,7 +115,7 @@
 \c 3
 \s1 The couple disobey God
 \p
-\v 1 Now the snake was the craftiest of all the \add wild\add* \add animals\add* that Yahweh God had created, and \add one day\add* he asked the woman, “Did God really command you to not eat \add fruit\add* from any of the \add trees\add* in the garden?”\x + \xo 3:1: \xt Rev 12:9; 20:2.\x*
+\v 1 Now the snake\x + \xo 3:1: \xt Rev 12:9; 20:2.\x* was the craftiest of all the \add wild\add* \add animals\add* that Yahweh God had created, and \add one day\add* he asked the woman, “Did God really command you to not eat \add fruit\add* from any of the \add trees\add* in the garden?”
 \p
 \v 2 “No,” answered the woman, “we can eat the fruit from \add any\add* of the trees in the garden,
 \v 3 except from the tree that is in the centre. \add He\add* commanded \add us\add* to not eat that fruit or even touch it, because if we do, we will die!”
@@ -135,8 +135,8 @@
 \p
 \v 12 “The woman that you put here beside me,” answered the man, “she gave me \add some\add* fruit from the tree and I ate it.”
 \p
-\v 13 Then Yahweh God asked the woman, “What did you do?”\x + \xo 3:13: \xt 2Cor 11:3; 1Tim 2:14.\x*
-\p “The snake tricked me, so I ate \add some of the fruit\add*,” the woman replied.
+\v 13 Then Yahweh God asked the woman, “What did you do?”
+\p “The snake tricked me, so I ate \add some of the fruit\add*,”\x + \xo 3:13: \xt 2Cor 11:3; 1Tim 2:14.\x* the woman replied.
 \s1 God’s judgements after they disobeyed
 \p
 \v 14 Then Yahweh God said to the snake,
@@ -146,9 +146,9 @@
 \q2 and you’ll eat dust all the rest of your life.
 \q1
 \v 15 I’ll put hostility between you and the woman
-\q2 between your descendants and hers.
+\q2 between your descendants and hers.\x + \xo 3:15: \xt Rev 12:17.\x*
 \q1 He will crush your head
-\q2 and you’ll strike \add his\add* heel.”\x + \xo 3:15: \xt Rev 12:17.\x*
+\q2 and you’ll strike \add his\add* heel.”
 \p
 \v 16 To the woman \add God\add* said,
 \q1 “I’ll sharply increase your pain in childbirth.
@@ -156,11 +156,11 @@
 \q1 Your desire will be for your husband
 \q2 and he will rule over you.”
 \p
-\v 17 Then \add God\add* said to the man,\x + \xo 3:17-18: \xt Heb 6:8.\x*
+\v 17 Then \add God\add* said to the man,
 \q1 “Because you did what your wife told you
 \q2 and ate from that tree
 \q2 that I’d told you not to eat from,
-\q1 then the ground will be cursed because of you.
+\q1 then the ground will be cursed because of you.\x + \xo 3:17-18: \xt Heb 6:8.\x*
 \q1 You’ll have to work hard to get food from it
 \q2 all the rest of your life.
 \q1
@@ -231,7 +231,7 @@
 \r (1 Chr. 1:1-4)
 \p
 \v 1 This is the list of Adam’s descendants. When God had created humankind, he made them in \add his\add* own likeness.\x + \xo 5:1-2: \xt Gen 1:27-28.\x*
-\v 2 He created them as male and female, and he blessed them and named them ‘humans’.\x + \xo 5:2: \xt Mat 19:4; Mrk 10:6.\x*
+\v 2 He created them as male and female,\x + \xo 5:2: \xt Mat 19:4; Mrk 10:6.\x* and he blessed them and named them ‘humans’.
 \v 3 When Adam was 130 years old, he had \add a son\add* who was like him in many ways, and he named him Shet (Seth).
 \v 4 After Shet’s birth, Adam lived \add another\add* 800 years and had \add other\add* sons and daughters.
 \v 5 \add So\add* Adam lived a total of 930 years, and \add then\add* he died.
@@ -274,10 +274,10 @@
 \c 6
 \s1 Humankind’s evil
 \p
-\v 1 When people began to multiply on the earth’s surface, and they were having daughters,\x + \xo 6:1-4: \xt Yob 1:6; 2:1.\x*
-\v 2 God’s sons saw that men’s daughters were beautiful, and they took any that they wanted for themselves as wives.
+\v 1 When people began to multiply on the earth’s surface, and they were having daughters,
+\v 2 God’s sons\x + \xo 6:2: \xt Yob 1:6; 2:1.\x* saw that men’s daughters were beautiful, and they took any that they wanted for themselves as wives.
 \v 3 Then Yahweh said, “My Spirit won’t tolerate people forever, because they are physical beings, therefore their \add remaining\add* time will be 120 years.”
-\v 4 The NEFILIM were on the earth in those days and also after that, when the sons of God went to the daughters of humankind and they bore children for them. INVESTIGATE They were the mighty \add warriors\add* of long ago—those famous men.\x + \xo 6:4: \xt Num 13:33.\x*
+\v 4 The NEFILIM\x + \xo 6:4: \xt Num 13:33.\x* were on the earth in those days and also after that, when the sons of God went to the daughters of humankind and they bore children for them. INVESTIGATE They were the mighty \add warriors\add* of long ago—those famous men.
 \p
 \v 5 Then Yahweh saw that the humankind’s wickedness on the earth was extensive, and that every inclination of their inner thoughts was only evil all day long.\x + \xo 6:5-8: \xt Mat 24:37; Luk 17:26; 1Pe 3:20.\x*
 \v 6 \add So\add* Yahweh regretted that he had made humankind on the earth and he was deeply saddened,
@@ -285,7 +285,7 @@
 \v 8 However, Yahweh noticed Noah and \add was pleased with him\add*.
 \s1 Noah makes a barge
 \p
-\v 9 This is the \add account\add* of Noah: \add He\add* was a man who obeyed God, blameless among the people of his time and \add he\add* walked around with God.\x + \xo 6:9: \xt 2Pe 2:5.\x*
+\v 9 This is the \add account\add* of Noah:\x + \xo 6:9: \xt 2Pe 2:5.\x* \add He\add* was a man who obeyed God, blameless among the people of his time and \add he\add* walked around with God.
 \v 10 Noah had three sons: Yafet (Japheth), Shem, and Ham.
 \p
 \v 11 Now God noticed that \add humankind\add* was corrupt and very \add violent\add*.
@@ -359,7 +359,7 @@
 \s1 Noah’s sacrifice and Yahweh’s promise
 \p
 \v 20 Then Noah built an altar to Yahweh, and he took \add some\add* of every kind of clean animal and every kind of clean bird, and he offered \add them as\add* burnt offerings on the altar.
-\v 21 \add When\add* Yahweh smelt the pleasing aroma, \add he\add* said \add to himself\add*, “I’ll never curse the ground because of humankind again, even though the humankind’s hearts \add are inclined\add* from their youth \add to do\add* evil \add things\add*. And I’ll never again \add destroy\add* every living thing again like I’ve \add just\add* done.
+\v 21 \add When\add* Yahweh smelt the pleasing aroma, \add he\add* said \add to himself\add*, “I’ll never curse the ground because of humankind again, even though the humankind’s hearts \add are inclined\add* from their youth \add to do\add* evil \add things\add*. And I’ll never again \add destroy\add* every living \add thing\add* again like I’ve \add just\add* done.
 \p
 \v 22 As long as the earth \add continues to\add* exist,
 \q1 seedtime and harvest time,
@@ -373,7 +373,7 @@
 \v 1 Then God blessed Noah and his sons and said to them, “Be fruitful and multiply and fill the earth.\x + \xo 9:1: \xt Gen 1:28.\x*
 \v 2 \add Now\add* every living creature on the earth will be afraid and terrified of you, including every bird \add that flies\add* in the sky, along with every creature that moves on land, and all the fish in the ocean. I have put them \add all\add* under your \add authority\add*.
 \v 3 \add From now on\add* every creature that is alive and moves can be eaten as food—just like I \add previously\add* provided you green plants \add for food\add*, \add now\add* I provide you everything \add for food\add*—
-\v 4 the only exception is meat with it’s life blood \add still\add* in it.\x + \xo 9:4: \xt Lev 7:26-27; 17:10-14; 19:26; Deu 12:16,23; 15:23.\x*
+\v 4 the only exception is meat with its life blood \add still\add* in it.\x + \xo 9:4: \xt Lev 7:26-27; 17:10-14; 19:26; Deu 12:16,23; 15:23.\x*
 \v 5 Also, I will certainly require blood as payment for people’s lives: if anyone murders another person, I require that the murderer must die, and even if an animal kills a human being, I require that it must die.
 \v 6 \add Yes,\add* if anyone sheds human blood, the others must shed the murderer’s blood, because God made human beings in \add his\add* image.\x + \xo 9:6: \xt Exo 20:13; Gen 1:26.\x*
 \v 7 \add So\add* \add then,\add* be fruitful and multiply—have children on the earth and become numerous.\x + \xo 9:7: \xt Gen 1:28.\x*
@@ -510,7 +510,7 @@
 \v 5 \add He\add* took his wife Sarai and his nephew Lot and all their possessions that they had accumulated and the people who they had acquired in Haran, and they set out to go to the land of Canaan.
 \p When they arrived in the Canaan region,
 \v 6 \add they\add* continued travelling as far as the city of Shekem, to Moreh’s oak tree. (The Canaanites were \add still\add* living in that region at that time.)
-\v 7 Then Yahweh came to Abram and told him, “I’ll give this land to your descendants.” So \add Abram\add* built an altar there \add and made a burnt offering\add* to Yahweh, who had appeared to him.\x + \xo 12:7: \xt Acts 7:5; Gal 3:16.\x*
+\v 7 Then Yahweh came to Abram and told him, “I’ll give this land to your descendants.”\x + \xo 12:7: \xt Acts 7:5; Gal 3:16.\x* So \add Abram\add* built an altar there \add and made a burnt offering\add* to Yahweh, who had appeared to him.
 \v 8 Then from there he went on to the hills to the east of Beyt-El (Beyt-El) and pitched his \add tents\add*, with Beyt-El on the west and Ai on the east. He built an altar to Yahweh there, and \add sacrificed and\add* prayed to Yahweh
 \v 9 before continuing \add south down\add* toward the Negev \add desert\add*.
 \s1 Abram goes to Egypt
@@ -518,7 +518,7 @@
 \v 10 \add One time when\add* there was \add a drought causing\add* a severe food shortage, Abram \add and his household\add* travelled \add west\add* across to Egypt \add (Mitsrayim)\add* to stay there.
 \v 11 Just before they arrived in Mitsrayim, \add Abram\add* said to his wife Sarai, “Listen, you’re a \add very\add* beautiful woman,
 \v 12 \add so\add* when the Egyptians see you they’ll say, ‘This is his wife,’ and they’ll kill me but let you live.
-\v 13 \add Please\add* tell them that you’re my sister so they’ll treat me well because of you and let me live.”\x + \xo 12:13: \xt Gen 20:2; 26:7.\x*
+\v 13 \add Please\add* tell them that you’re my sister\x + \xo 12:13: \xt Gen 20:2; 26:7.\x* so they’ll treat me well because of you and let me live.”
 \v 14 \add So\add* that’s what happened when \add they\add* entered Mitsrayim—the Egyptians \add indeed\add* noticed that Sarai was very beautiful,
 \v 15 and \add when\add* Far’oh’s \add (Pharaoh’s)\add* officials saw her, so they told him \add about her beauty\add*, and she was taken into Far’oh’s \add palace\add*.
 \v 16 He treated Abram well \add (thinking he was the brother)\add*, so he \add was given\add* flocks and herds, male and female donkeys, male and female slaves, and camels.
@@ -541,7 +541,7 @@
 \p
 \v 8 \add So\add* Abram said to Lot, “Let’s not have quarrelling between you and I, or between yours herdsmen and mine, because we’re \add relatives\add*.
 \v 9 Isn’t the whole land available to you? So let’s separate. If you go to the left then I’ll go right, or if you go to the right then I’ll go left.”
-\v 10 Lot looked \add all around\add* and saw that all the plain of the Yordan \add river valley\add* was well-watered through towards Tso’ar, \add just\add* like Yahweh’s garden \add had been\add* before \add he\add* destroyed Sodom and Amorah \add (Gomorrah)\add*, and like the land of Egypt.\x + \xo 13:10: \xt Gen 2:10.\x*
+\v 10 Lot looked \add all around\add* and saw that all the plain of the Yordan \add river valley\add* was well-watered through towards Tso’ar, \add just\add* like Yahweh’s garden\x + \xo 13:10: \xt Gen 2:10.\x* \add had been\add* before \add he\add* destroyed Sodom and Amorah \add (Gomorrah)\add*, and like the land of Egypt.
 \v 11 Lot chose all of the Yordan plain for himself, and so \add he\add* travelled to the east and they separated from each other.
 \v 12 \add So\add* Abram settled in the land of Canaan, and Lot settled in the cities of the plain and moved his tents as far as Sodom.
 \v 13 \add However,\add* the people of Sodom were extremely wicked, \add constantly\add* disobeying Yahweh.
@@ -668,7 +668,7 @@
 \v 6 I’ll make you \add and your descendants\add* very fruitful so that they form nations and some of them will become kings.
 \p
 \v 7 I’ll establish my agreement with you and your future \add descendants\add* for all the following generations. It will be an agreement that \add never ends\add*, that I’ll be the your god and God of your future \add descendants\add*.\x + \xo 17:7: \xt Luk 1:55.\x*
-\v 8 I’ll give this land that you’re staying in—the entire region of Canaan—to you and your descendants as a permanent possession, and I’ll be their god.”\x + \xo 17:8: \xt Acts 7:5.\x*
+\v 8 I’ll give this land that you’re staying in—the entire region of Canaan—to you and your descendants as a permanent possession,\x + \xo 17:8: \xt Acts 7:5.\x* and I’ll be their god.”
 \p
 \v 9 Then God told Abraham, “\add For your part,\add*, you and your descendants after you throughout \add all\add* their generations must follow the requirements of our agreement.
 \v 10 This is the agreement that you and all your future \add descendants\add* are to follow: every male among you must be circumcised.\x + \xo 17:10: \xt Acts 7:8; Rom 4:11.\x*
@@ -716,7 +716,7 @@
 \v 12 \add so\add* \add when she heard that\add*, \add she\add* laughed to herself and said, “Now that \add my body’s\add* worn out, will I have the pleasure \add of a child\add*? \add Even\add* my master’s \add too\add* old.”\x + \xo 18:12: \xt 1Pe 3:6.\x*
 \p
 \v 13 Then Yahweh spoke to Abraham, “Why is it that Sarah laughed, saying, ‘Will I really have a child when I’m old?’
-\v 14 Is anything too hard for Yahweh? I’ll return \add here\add* to you \add next year in the spring\add* and Sarah will have a son.”\x + \xo 18:14: \xt Luk 1:37.\x*
+\v 14 Is anything too hard for Yahweh?\x + \xo 18:14: \xt Luk 1:37.\x* I’ll return \add here\add* to you \add next year in the spring\add* and Sarah will have a son.”
 \p
 \v 15 But Sarah was afraid and denied it by saying, “I didn’t laugh.”
 \p “No, because you did laugh,” he said.
@@ -735,7 +735,7 @@
 \v 24 What if there were fifty people in the city \add who’ve obeyed you\add*? Would you really destroy the city and all its people and not save it for the sake of those fifty?
 \v 25 Surely you wouldn’t do anything like that—killing the good people along with the evil ones, so that they all just get treated the same? Certainly you wouldn’t do that? Wouldn’t the one who judges the entire world be more fair?”
 \p
-\v 26 “If I find fifty godly people in Sodom,” Yahweh answered, “then I’ll spare the whole city for their sake.”
+\v 26 “If I find fifty godly \add people\add* in Sodom,” Yahweh answered, “then I’ll spare the whole city for their sake.”
 \p
 \v 27 “Listen, I’ve been bold enough to \add question\add* my master, even though I’m \add just\add* dust and ashes,” Abraham said \add again\add*.
 \v 28 “Suppose they’re five short of the fifty? Would you destroy the whole city because of five?”
@@ -770,7 +770,7 @@
 \p
 \v 9 But they insisted, “Stand back!” Then they said \add to each other\add*, “This guy came to stay with us, and now he’s judging us. We’ll treat you worse than them!” Then they started pushing hard against Lot and \add came closer\add* to break down the door.
 \v 10 But the \add two visitors\add* reached out their \add hands\add* and pulled Lot into the house and shut the door \add again\add*.
-\v 11 Then they struck the men who were at the entrance of the house with blindness—\add all of them\add* from the lowly to the prominent men—so that they gave up trying to find the door.\x + \xo 19:11: \xt 2Ki 6:18.\x*
+\v 11 Then they struck the men who were at the entrance of the house with blindness\x + \xo 19:11: \xt 2Ki 6:18.\x*—\add all of them\add* from the lowly to the prominent men—so that they gave up trying to find the door.
 \s1 Lot and family leave Sodom
 \p
 \v 12 Then the men said to Lot, “Who else belongs to you here, a son-in-law or your sons or your daughters or anyone else who belongs to you in the city? Take them out from this place,
@@ -815,7 +815,7 @@
 \s1 Abraham and Abimelech and Sarah
 \p
 \v 1 Then Abraham travelled from there to the Negev region and he settled between Kadesh and Shur, staying in Gerar for a while.
-\v 2 Abraham had told \add people\add* his wife Sarah was his sister, so Abimelech the king of Gerar sent for Sarah and took her.\x + \xo 20:2: \xt Gen 12:13; 26:7.\x*
+\v 2 Abraham had told \add people\add* his wife Sarah was his sister,\x + \xo 20:2: \xt Gen 12:13; 26:7.\x* so Abimelech the king of Gerar sent for Sarah and took her.
 \v 3 \add But\add* God came to Abimelech in a dream in the night and told him, “Listen, you’re \add as good as\add* dead because of that woman you took because she is married to a husband.”
 \p
 \v 4 Now Abimelech hadn’t gone near to her, so he said, “My master, would you destroy a nation even though it’s innocent?
@@ -870,7 +870,7 @@
 \v 21 He settled in the Paran wilderness, and \add in due course\add* his mother found an Egyptian girl for him to marry.
 \s1 Abraham and Abimelech’s agreement
 \p
-\v 22 \add One day\add* \add King\add* Abimelech and Ficol, the commander of his army, spoke to Abraham, saying, “\add We can see that\add* God is with you in everything you do.\x + \xo 21:22: \xt Gen 26:26.\x*
+\v 22 \add One day\add* \add King\add* Abimelech and Ficol, the commander of his army,\x + \xo 21:22: \xt Gen 26:26.\x* spoke to Abraham, saying, “\add We can see that\add* God is with you in everything you do.
 \v 23 \add So\add* then, swear to me here by God \add that you won’t treat\add* me or my children or my descendants \add badly\add*, and that’ll you’ll be kind to this country just as I showed kindness to you.”
 \p
 \v 24 “I swear it,” Abraham replied.
@@ -890,10 +890,10 @@
 \c 22
 \s1 God tests Abraham over Yitshak
 \p
-\v 1 \add Several years later,\add* God \add decided to\add* test Abraham, calling him, “Abraham.”\x + \xo 22:1-13: \xt Heb 11:17-19.\x*
+\v 1 \add Several years later,\add* God \add decided to\add* test Abraham,\x + \xo 22:1-13: \xt Heb 11:17-19.\x* calling him, “Abraham.”
 \p “Here I am,” he replied.
 \p
-\v 2 “Take your son Yitshak who you love, your only son,” \add God\add* commanded him, “and go to the Moriah region and sacrifice him there as a burnt offering on one of the mountains that I’ll \add point out\add* to you.”\x + \xo 22:2: \xt 2Ch 3:1.\x*
+\v 2 “Take your son Yitshak who you love, your only son,” \add God\add* commanded him, “and go to the Moriah region\x + \xo 22:2: \xt 2Ch 3:1.\x* and sacrifice him there as a burnt offering on one of the mountains that I’ll \add point out\add* to you.”
 \p
 \v 3 \add So\add* Abraham got up early in the morning and saddled his donkey. Then he took two of his young men with him and his son Yitshak, and he cut \add some\add* firewood for the burnt offering. Then they left to go to the place that God had told him.
 \v 4 On the third day Abraham \add looked up ahead\add* and he could see the place from a distance,
@@ -917,8 +917,8 @@
 \v 14 \add So\add* Abraham named that place ‘Yahweh will provide’, and to this day it’s still said, “Yahweh will provide on his mountain.”
 \p
 \v 15 Then the Yahweh’s messenger called Abraham from the sky a second time
-\v 16 saying, “I, Yahweh, make this declaration by my \add authority and truth\add* that because you did that and didn’t withhold your only son,\x + \xo 22:16-17: \xt Heb 6:13-14.\x*
-\v 17 I’ll bless you tremendously and I’ll cause your \add descendants\add* to be \add as numerous\add* as the stars in the sky and as the sand on the beach, and your \add descendants\add* will be victorious over their enemies.\x + \xo 22:17: \xt Heb 11:12.\x*
+\v 16 saying, “I, Yahweh, make this declaration by my \add authority and truth\add*\x + \xo 22:16-17: \xt Heb 6:13-14.\x* that because you did that and didn’t withhold your only son,
+\v 17 I’ll bless you tremendously and I’ll cause your \add descendants\add* to be \add as numerous\add* as the stars in the sky and as the sand on the beach,\x + \xo 22:17: \xt Heb 11:12.\x* and your \add descendants\add* will be victorious over their enemies.
 \v 18 Because you obeyed what I said, all the nations of the earth will be blessed through your descendants.”\x + \xo 22:18: \xt Acts 3:25.\x*
 \v 19 Then Abraham returned to his young men and they all continued on \add home\add* together to Beer-Sheva, and Abraham \add continued\add* living \add there\add*.
 \s1 Nahor’s descendants
@@ -1068,7 +1068,7 @@
 \p
 \v 8 Then Abraham \add breathed his last\add* and died at a good old age, elderly and \add satisfied\add*, and he joined his \add ancestors in death\add*.
 \v 9 His sons Yitshak and Yishma’el buried him in Makpelah’s cave (in the field of Efron, Zohar the Hittite’s son, which faced Mamre)—
-\v 10 the field that Abraham had bought from Het’s sons. So Abraham\add ’s body was laid there alongside that of\add* his wife Sarah.\x + \xo 25:10: \xt Gen 23:3-16.\x*
+\v 10 the field that Abraham had bought from Het’s sons.\x + \xo 25:10: \xt Gen 23:3-16.\x* So Abraham\add ’s body was laid there alongside that of\add* his wife Sarah.
 \v 11 After \add his\add* death, God blessed his son Yitshak \add who\add* lived near Be’er-Lahai-Roi.
 \s1 Yishma’el’s Descendants
 \r (1 Chr. 1:28-31)
@@ -1086,11 +1086,11 @@
 \v 20 and Yitshak was forty years old when he married Rebekah. (She was the daughter of Bethuel the Aramean from Paddan-Aram, the sister of Lavan the Aramean.)
 \v 21 \add In due course,\add* Yitshak prayed to Yahweh on his wife’s behalf because she was barren. Yahweh \add answered his prayer\add* and his wife Rebekah got pregnant,
 \v 22 \add but the twins kept jostling\add* each other within her \add womb\add*, so she asked, “Why’s this happening to me?” She \add also\add* asked Yahweh about it
-\v 23 and \add he\add* responded,\x + \xo 25:23: \xt Rom 9:12.\x*
+\v 23 and \add he\add* responded,
 \q1 “There’s two nations inside your womb—
 \q2 two \add different\add* peoples will come from within you.
 \q1 One group will become stronger than the other,
-\q2 and the older will serve the younger.”
+\q2 and the older will serve the younger.”\x + \xo 25:23: \xt Rom 9:12.\x*
 \p
 \v 24 When the time came to give birth, she gave birth to twin \add boys\add*.
 \v 25 The firstborn came out quite red and covered with hair like a fur coat, so they named him ‘Esaw’ \add (which means ‘hairy’)\add*.
@@ -1107,8 +1107,8 @@
 \p
 \v 32 “Listen, I’m dying \add of starvation\add*,” said Esaw, “so what use would a future inheritance be to me?”
 \p
-\v 33 “\add Well\add* then, \add make a vow\add* to me,” insisted Yacob.\x + \xo 25:33: \xt Heb 12:16.\x*
-\p So \add Esaw\add* promised him, \add effectively\add* selling his future inheritance to Yacob,
+\v 33 “\add Well\add* then, \add make a vow\add* to me,” insisted Yacob.
+\p So \add Esaw\add* promised him, \add effectively\add* selling his future inheritance to Yacob,\x + \xo 25:33: \xt Heb 12:16.\x*
 \v 34 and Yacob gave him some of the lentil stew and \add some\add* bread. \add So\add* Esaw ate and drank and left \add again\add*, thus despising his own inheritance \add as firstborn son\add*.
 \c 26
 \s1 Yitshak moves to Gerar
@@ -1120,7 +1120,7 @@
 \v 5 because Abraham obeyed me by keeping my requirements, my commands, my decrees, and my laws.”
 \p
 \v 6 \add So\add* Yitshak settled \add there\add* in Gerar.
-\v 7 Then the men of the place asked about his wife, and he said, “She’s my sister,” because he was afraid to say, “She’s my wife.” He was thinking, “What if the men in this place kill me because Rebekah is so beautiful to look at.”\x + \xo 26:7: \xt Gen 12:13; 20:2.\x*
+\v 7 Then the men of the place asked about his wife, and he said, “She’s my sister,”\x + \xo 26:7: \xt Gen 12:13; 20:2.\x* because he was afraid to say, “She’s my wife.” He was thinking, “What if the men in this place kill me because Rebekah is so beautiful to look at.”
 \v 8 Then when he’d been in that area for quite a while, the Philistine King Abimelech looked down from a window and saw that \add to his surprise\add*, Yitshak was laughing \add together\add* with his wife Rebekah.
 \v 9 \add So\add* Abimelech called for Yitshak and said, “Hey, she’s really your wife! So how could you say, ‘She’s my sister’?”
 \p “Because I said \add to myself\add*, ‘I might die because of her.’,” Yitshak replied.
@@ -1202,10 +1202,10 @@
 \p
 \v 25 \add So\add* \add Yitshak\add* \add told him\add*, “Bring the food \add here\add* and I’ll eat some of my son’s game, so that \add I can then\add* bless you.” \add So\add* \add Yacob\add* took it to him and he ate, and then he brought wine to him and he drank.
 \v 26 Then Yitshak asked \add Yacob\add*, “My son, please come close and kiss me.”
-\v 27 \add So\add* he went close and kissed him. \add His dad noticed\add* the smell of his clothes, so he blessed him saying,\x + \xo 27:27-29: \xt Heb 11:20.\x*
+\v 27 \add So\add* he went close and kissed him. \add His dad noticed\add* the smell of his clothes, so he blessed him saying,
 \q1 “\add Ah yes,\add* the smell of my son
 \q2 is like the \add pleasant\add* fragrance of \add the\add* countryside
-\q2 that Yahweh has blessed.
+\q2 that Yahweh has blessed.\x + \xo 27:27-29: \xt Heb 11:20.\x*
 \q1
 \v 28 May God give you dew from the sky
 \q2 and riches from the land,
@@ -1215,8 +1215,8 @@
 \q2 and may nations bow down to you.
 \q1 Be master over your brothers,
 \q2 and may your mother’s sons bow down to you.
-\q1 \add May\add* those \add who\add* curse you be cursed,\x + \xo 27:29: \xt Gen 12:3.\x*
-\q2 and \add may\add* those \add who\add* bless you be blessed.”
+\q1 \add May\add* those \add who\add* curse you be cursed,
+\q2 and \add may\add* those \add who\add* bless you be blessed.”\x + \xo 27:29: \xt Gen 12:3.\x*
 \s1 Esaw begs for a secondary blessing
 \p
 \v 30 Then just as Yitshak had finished blessing Yacob, and as Yacob had only just gone out from his father’s presence, his brother Esaw his brother \add returned\add* from his hunting.
@@ -1231,21 +1231,21 @@
 \p
 \v 35 But \add Yitshak\add* replied, “Your brother came \add in and deceived me\add* and he’s taken your blessing!”
 \p
-\v 36 “\add Yes,\add* his name Yacob \add (meaning ‘deceiver’) suits him exactly!\add*”\x + \xo 27:36: \xt Gen 25:29-34.\x* said \add Esaw\add*. “\add First\add* he took my inheritance and man, now he’s also taken my blessing!” Then he \add asked\add*, “Haven’t you \add at least\add* saved a blessing for me?”
+\v 36 “\add Yes,\add* his name Yacob \add (meaning ‘deceiver’) suits him exactly!\add*” said \add Esaw\add*. “\add First\add* he took my inheritance\x + \xo 27:36: \xt Gen 25:29-34.\x* and man, now he’s also taken my blessing!” Then he \add asked\add*, “Haven’t you \add at least\add* saved a blessing for me?”
 \p
 \v 37 But Yitshak replied, “Listen, I’ve made him master over you, and I’ve given all his brothers to him as slaves. And I’ve sustained him with grain and wine. So then, what \add else\add* can I do for you, my son?”
 \p
 \v 38 “My father, Did you \add only\add* have \em one\em* blessing that you \add could give\add*?” Esaw \add asked\add*. “Bless me too, my father!” Then Esaw sobbed loudly.\x + \xo 27:38: \xt Heb 12:17.\x*
 \p
-\v 39 Then his father Yitshak responded and said to him,\x + \xo 27:39-40: \xt Heb 11:20.\x*
+\v 39 Then his father Yitshak responded and said to him,
 \q1 “Listen, you \add and your descendants\add* will live
 \q2 away from the \add most fertile land\add* on the earth\f + \fr 27:39 \ft The Hebrew text is ambiguous here. It could mean: (1) “away from the fatness of the earth and away from the dew of the heavens from above.” or “in a place/region where the earth/land/ground is not rich/fertile and where there is very little dew/rain.” or “in a place/region where the land/soil is not good for farming and where there is not much rain.” or (2) “of the fatness of the earth and of the dew of the heavens from above.” or “in a place where the land is good/fertile for farming and where there is plenty of dew/rain.”\f*
-\q1 in a place that doesn’t get dew from the sky.
+\q1 in a place that doesn’t get dew from the sky.\x + \xo 27:39-40: \xt Heb 11:20.\x*
 \q1
-\v 40 You \add and your descendants\add* will live by your sword,\x + \xo 27:40: \xt Gen 36:8; 2Ki 8:20.\x*
+\v 40 You \add and your descendants\add* will live by your sword,
 \q2 and you’ll serve your brother.
 \q1 But when you become restless
-\q2 you’ll \add all\add* break away from serving them.
+\q2 you’ll \add all\add* break away from serving them.\x + \xo 27:40: \xt Gen 36:8; 2Ki 8:20.\x*
 \p
 \v 41 \add From that time onwards,\add* Esaw hated Yacob because of the blessing that \add their\add* father had blessed him with, and Esaw said \add to himself\add*, “My father’s \add funeral\add* \add can’t be that far away\add*—\add after that\add* I’ll kill my brother Yacob.”
 \p
@@ -1317,7 +1317,7 @@
 \p After \add Yacob\add* had stayed with \add Lavan\add* and \add worked for him\add* for a whole month,
 \v 15 Lavan said to \add him\add*, “Should you work for me for nothing just because you’re my relative? Tell me, what \add should I pay you\add*?”
 \p
-\v 16 Now Lavan had two daughters: the older one was named Le’ah, and the younger one was named Rahel \add (Rachel)\add*.
+\v 16 Now Lavan had two daughters: the older one was named Le’ah, and the younger \add one\add* was named Rahel \add (Rachel)\add*.
 \v 17 Le’ah had \add pretty\add* eyes, but Rahel was \add extremely beautiful in every way\add*.
 \p
 \v 18 \add Now\add* Yacob \add was in love with\add* Rahel, so he \add answered\add*, “I’ll \add work for\add* you \add for\add* seven years \add so I can marry\add* your younger daughter Rahel.”
@@ -1419,13 +1419,13 @@
 \v 5 and he told them, “I’ve \add noticed\add* your father’s \add attitude\add* and that he’s not \add positive\add* toward me \add like he was a few days\add* ago, but my father’s god has been with me.
 \v 6 You \add both\add* know that I’ve served your father with all my strength,
 \v 7 \add but\add* your father has deceived me and changed my wages ten times. However, God hasn’t allowed him to harm me.
-\v 8 \add When he told me\add*: ‘The speckled animals will be your wages,’ then all the flocks bore speckled young. But when he \add told me\add*: ‘The streaked ones will be your wages,’ then all the flocks bore streaked young.
+\v 8 \add When he told me\add*: ‘The speckled animals will be your wages,’ then all the flocks bore speckled young. But when he \add told me\add*: ‘The streaked \add ones\add* will be your wages,’ then all the flocks bore streaked young.
 \v 9 \add In that way,\add* God took your father’s animals away from him and gave them to me.
 \p
 \v 10 “\add One day during\add* the season when the flocks were \add mating\add*, I \add looked up\add* and saw in a dream that, wow, the male goats that were mounting the flocks were streaked, speckled, and spotted.
 \v 11 Then God’s messenger said to me in the dream, ‘Yacob!’ and I said, ‘\add I’m listening\add*.’
 \v 12 Then he \add told me\add*, ‘Please \add look up\add* and \add observe that\add* all the male goats that are mounting the \add flocks\add* are streaked, speckled, and spotted, because I have seen everything that Lavan is doing to you.
-\v 13 I’m the god of Beyt-El, where you anointed a pillar—where you vowed a vow to me. Now \add pack\add* up and depart from this land, and return to the land where you were born.’ ”\x + \xo 31:13: \xt Gen 28:18-22.\x*
+\v 13 I’m the god of Beyt-El, where you anointed a pillar—where you vowed a vow to me.\x + \xo 31:13: \xt Gen 28:18-22.\x* Now \add pack\add* up and depart from this land, and return to the land where you were born.’ ”
 \p
 \v 14 Then Rahel and Le’ah replied, “\add Yes,\add* we’re not expecting any portion or inheritance from our father’s \add property\add*.
 \v 15 Doesn’t he just \add treat\add* us like foreigners \add now\add*? \add Yes,\add* he sold us and then he \add frittered away all the money that should have been\add* ours,
@@ -1499,7 +1499,7 @@
 \v 9 Then \add he\add* \add prayed\add*, “Yahweh, God of my grandfather Abraham, and God of my father Yitshak, who said to me, ‘Return to your land and to your relatives, and I will cause things to prosper with you,’
 \v 10 I’m unworthy of all the kindnesses and of all the faithfulness that you have shown \add me\add* your slave, because I crossed this Yordan \add River\add* with \add only\add* my staff, but now I’ve become two camps.
 \v 11 Please save me from my brother Esaw, because I’m afraid that he’ll come and attack me and the \add mothers\add* with the children.
-\v 12 But you said,\x + \xo 32:12: \xt Gen 22:17.\x* ‘I will surely cause things to prosper with you, and I’ll make your \add descendants\add* as \add numerous as\add* the sand \add grains on the beach\add* which are too many to be counted.’ ”
+\v 12 But you said, ‘I will surely cause things to prosper with you, and I’ll make your \add descendants\add* as \add numerous as\add* the sand \add grains on the beach\add* which are too many to be counted.’ ”\x + \xo 32:12: \xt Gen 22:17.\x*
 \p
 \v 13 Then he stayed there for that night and he \add selected\add* \add gifts\add* for his brother Esaw from what he had with him:
 \v 14 two hundred female and twenty male goats, two hundred ewes and twenty rams,
@@ -1524,8 +1524,8 @@
 \p
 \v 28 “You won’t be called Yacob anymore,” the man said, “but \add you’ll be\add* ‘Yisra’el’ \add (‘Israel’,\add* \add which means ‘he struggled with God’)\add*, because you have struggled with God and with men, and you won.”\x + \xo 32:28: \xt Gen 35:10.\x*
 \p
-\v 29 “Please tell \add me\add* \em your\em* name,” Yacob \add requested\add*.\x + \xo 32:29: \xt Jdg 13:17-18.\x*
-\p “Why \add would you want to know\add* my name?” \add the man replied\add*, then he blessed \add Yacob\add* there.
+\v 29 “Please tell \add me\add* \em your\em* name,” Yacob \add requested\add*.
+\p “Why \add would you want to know\add* my name?”\x + \xo 32:29: \xt Jdg 13:17-18.\x* \add the man replied\add*, then he blessed \add Yacob\add* there.
 \p
 \v 30 \add So\add* Yacob named the place ‘Penu’el’ \add (also spelt ‘Peni’el’, which means ‘God’s face’)\add*, because he said, “I saw God face to face, yet my life was preserved.”
 \v 31 And the sun rose above him as he passed through Penu’el, and he was limping because of his hip.
@@ -1621,7 +1621,7 @@
 \v 8 Then Rebekah’s nurse Deborah died and was buried under the oak tree below Beyt-El \add so\add* he named \add the place\add* ‘Allon Bakut’ \add (which means ‘oak of weeping’)\add*.
 \p
 \v 9 \add Now that Yacob had left\add* Paddan-Aram and \add come back to Beyt-El\add*, God appeared to him \add there\add* again and blessed him
-\v 10 and told him, “Your name is Yacob \add but\add* you won’t be called Yacob anymore. \add From now on,\add* you’ll be called Yisra’el (‘Israel’).” So \add again\add*\x + \xo 35:10: \xt Gen 32:28.\x* \add God\add* called \add him\add* Yisra’el.
+\v 10 and told him, “Your name is Yacob \add but\add* you won’t be called Yacob anymore. \add From now on,\add* you’ll be called Yisra’el (‘Israel’).”\x + \xo 35:10: \xt Gen 32:28.\x* So \add again\add* \add God\add* called \add him\add* Yisra’el.
 \v 11 Then God \add also told\add* him, “I’m God the provider. Be fruitful and multiply. Out of you will come a nation and a community of nations, and kings will come from your \add descendants\add*,\x + \xo 35:11-12: \xt Gen 17:4-8.\x*
 \v 12 and I’ll give you the land that I gave to Abraham and to Isaac, and \add in the future,\add* I’ll give the land to your descendants after you.”
 \v 13 After God finished talking to \add Yacob\add*, he left him and went \add back\add* up.
@@ -1730,7 +1730,7 @@
 \v 9 Then \add Yosef\add* \add had\add* another dream, and \add again\add* he told his brothers, “Listen, I \add had\add* another dream, and wow, the sun and the moon and eleven stars were bowing down to me.”
 \p
 \v 10 \add When\add* he told his father and his brothers, his father scolded him, “What’s this dream that you \add had\add*? Will your mother and I and your brothers \add actually\add* come to bow down to the ground to you?”
-\v 11 \add Consequently\add* his brothers envied him, but his father \add kept pondering it\add*.\x + \xo 37:11: \xt Acts 7:9.\x*
+\v 11 \add Consequently\add* his brothers envied him,\x + \xo 37:11: \xt Acts 7:9.\x* but his father \add kept pondering it\add*.
 \s1 Yosef is sold by his brothers
 \p
 \v 12 \add Sometime after that,\add* \add Yosef’s\add* brothers went to shepherd their father’s \add flocks\add* near Shekem.
@@ -1814,7 +1814,7 @@
 \p
 \v 25 \add So they got her and\add* brought her out, \add but\add* she sent a message to her father-in-law, saying, “It was the man who these things belong to that got me pregnant.” Then she \add added\add*, “Please identify whose signet ring and cords and staff these are.”
 \p
-\v 26 \add When\add* Yehudah recognised \add the items\add*, he admitted, “She’s more \add in the right\add* than I am,\x + \xo 38:26: \xt 37:11.\x* because I didn’t give my son Shelah to her.” \add But\add* he didn’t \add lie with her again\add*.
+\v 26 \add When\add* Yehudah recognised \add the items\add*, he admitted, “She’s more \add in the right\add* than I am, because I didn’t give my son Shelah to her.”\x + \xo 38:26: \xt 38:11.\x* \add But\add* he didn’t \add lie with her again\add*.
 \p
 \v 27 When the time came for \add Tamar\add* to give birth, wow, \add she was going to have twins\add*.
 \v 28 \add While\add* she was giving birth, one \add of the babies poked\add* out a hand and the midwife tied a scarlet thread \add around its wrist\add*, saying, “This one came out first.”
@@ -1824,7 +1824,7 @@
 \s1 Yosef and Potifar’s wife
 \p
 \v 1 \add Meanwhile,\add* Yosef had been taken down to Egypt, and an Egyptian man named Potifar had bought him from the Ishmaelites who had taken him down there. \add Potifar was\add* the chief of the guards for Far’oh \add (Pharaoh)\add*.
-\v 2 Yosef \add lived\add* in the house of his Egyptian master, and Yahweh was with him and he was successful \add at his work\add*.\x + \xo 39:2: \xt Acts 7:9.\x*
+\v 2 Yosef \add lived\add* in the house of his Egyptian master, and Yahweh was with him\x + \xo 39:2: \xt Acts 7:9.\x* and he was successful \add at his work\add*.
 \v 3 His master \add noticed\add* that Yahweh was with him and that Yahweh made everything that he did succeed,
 \v 4 \add so\add* Yosef earned his favour as he served him. Then \add Potifar\add* \add put him in charge of\add* his \add entire\add* household and \add everything that he owned\add*.
 \v 5 \add From that time onwards,\add* Yahweh blessed that Egyptian household because of Yosef, and Yahweh’s blessing \add even extended\add* from everything in the home \add all the way out\add* to \add the\add* countryside.
@@ -1847,7 +1847,7 @@
 \p
 \v 19 When \add Yosef’s\add* master heard his wife tell what his slave \add had tried\add* to do to her, he \add became furious\add*.
 \v 20 \add He\add* took him and threw him into the prison \add built\add* for the king’s prisoners.
-\v 21 \add But\add* Yahweh was with Yosef and was kind to him and \add caused the prison warden to\add* \add be pleased with him\add*,\x + \xo 39:21: \xt Acts 7:9.\x*
+\v 21 \add But\add* Yahweh was with Yosef\x + \xo 39:21: \xt Acts 7:9.\x* and was kind to him and \add caused the prison warden to\add* \add be pleased with him\add*,
 \v 22 \add so\add* the warden \add put him in charge of\add* all the \add other\add* prisoners and \add Yosef ended up being\add* \add in charge of\add* everything that happened inside.
 \v 23 Then the warden didn’t need to \add concern himself\add* with anything that was going on because Yahweh was with \add Yosef\add* and helped him succeed in \add everything\add* he did.
 \c 40
@@ -1893,7 +1893,7 @@
 \v 5 Then he fell asleep \add again\add* and had a second dream. And wow, seven good, fat heads of grain came up on one stalk.
 \v 6 \add But\add* wow, seven thin heads of grain sprouted after them—these heads of grain had been scorched by the \add hot, desert\add* wind.
 \v 7 Then the thin heads of grain swallowed up the seven good, fat heads. \add At that point\add*, Far’oh woke up, and \add realised that\add* it had been a dream.
-\v 8 \add That\add* morning, Far’oh’s spirit was troubled, so he sent for all the sorcerers and wise men of Egypt and \add he\add* told them his \add dreams\add*, but no one could interpret them for \add the king\add*.\x + \xo 41:8: \xt Dan 2:2.\x*
+\v 8 \add That\add* morning, Far’oh’s spirit was troubled, so he sent for all the sorcerers and wise \add men\add* of Egypt\x + \xo 41:8: \xt Dan 2:2.\x* and \add he\add* told them his \add dreams\add*, but no one could interpret them for \add the king\add*.
 \p
 \v 9 Then the chief of the cupbearers spoke with Far’oh saying, “I’ve \add just\add* \add remembered\add* my \add broken promise\add* today.
 \v 10 \add The king\add* had been angry with his servants, and he put me in the custody of the chief of the guards \add in his prison\add*—me and the chief of the bakers.
@@ -1951,7 +1951,7 @@
 \v 52 \add His\add* second \add son\add* he named ‘Efrayim’ \add (which means ‘fruitful’)\add*, because he said, “God has made me fruitful in the land of my difficulties.”
 \p
 \v 53 Then the seven years of plenty in Egypt came to an end
-\v 54 and the seven years of famine started, just as Yosef had said. The famine \add covered the entire wider region\add*, but \add it was different in\add* Egypt.\x + \xo 41:54: \xt Acts 7:11.\x*
+\v 54 and the seven years of famine started, just as Yosef had said. The famine \add covered the entire wider region\add*,\x + \xo 41:54: \xt Acts 7:11.\x* but \add it was different in\add* Egypt.
 \v 55 All the land of Egypt became famished, and the people cried to \add the king\add* for food, so Far’oh said to all the Egyptians, “Go to Yosef \add and\add* do whatever he tells you.”\x + \xo 41:55: \xt Yhn 2:5.\x*
 \v 56 The famine was \add right across the country\add*, so Yosef opened all the grain stores and sold grain to the Egyptians. \add But\add* the famine in Egypt was \add really\add* severe.
 \v 57 Then \add people from much further away started\add* coming to Egypt to buy grain from Yosef, because the famine was severe in the \add entire wider region\add*.
@@ -1969,7 +1969,7 @@
 \p “From the land of Canaan to buy food,” they \add answered\add*.
 \p
 \v 8 Yosef had recognised his brothers, but they hadn’t recognised him,
-\v 9 and \add just then\add* \add he\add* remembered the dreams that he had dreamed about them, \add so\add* he said to them, “You are spies. You’ve \add all\add* come to \add discover any weak points in this country’s defences\add*.”\x + \xo 42:9: \xt Gen 37:5-10.\x*
+\v 9 and \add just then\add* \add he\add* remembered the dreams that he had dreamed about them,\x + \xo 42:9: \xt Gen 37:5-10.\x* \add so\add* he said to them, “You are spies. You’ve \add all\add* come to \add discover any weak points in this country’s defences\add*.”
 \p
 \v 10 “No, my master,” they \add answered\add*. “Your servants have \add only\add* come to buy food.
 \v 11 We’re \add all\add* sons of \add the same\add* man. We’re \add being\add* honest. Your servants are not spies.”
@@ -1988,7 +1988,7 @@
 \v 20 Then \add when\add* you will bring me your youngest brother so that \add I can verify your statements\add*, then you won’t die.” So they \add agreed\add*,
 \v 21 saying to each other \add (in Hebrew)\add*, “We are truly guilty concerning our brother \add Yosef\add*, because we saw the distress of his soul when he pleaded with us, but we didn’t \add take any notice\add*. \add That’s why\add* this \add predicament has happened to\add* us.”
 \p
-\v 22 “Didn’t I \add beg\add* you \add all\add* not to sin against the lad?” Reuben spoke up. “But you wouldn’t listen, so now, see, \add now we’re having to account for\add* his blood.”\x + \xo 42:22: \xt Gen 37:21-22.\x*
+\v 22 “Didn’t I \add beg\add* you \add all\add* not to sin against the lad?”\x + \xo 42:22: \xt Gen 37:21-22.\x* Reuben spoke up. “But you wouldn’t listen, so now, see, \add now we’re having to account for\add* his blood.”
 \v 23 (\add But\add* they didn’t know that Yosef understood them, because \add he and them had been speaking through an interpreter\add*.)
 \v 24 \add Yosef\add* turned away from them \add briefly so they couldn’t see his tears\add*, then he turned back toward them and spoke to them. Then he had Simeon \add separated\add* from \add the group\add* and tied up in front of them.
 \v 25 Then Yosef ordered \add his servants\add* and they filled their bags with grain, and he \add quietly\add* ordered them to return each man’s silver \add back\add* to his sack and to give them provisions to them for the road.
@@ -2155,7 +2155,7 @@
 \p
 \v 8 These are the names of Yisrael’s sons who went to Egypt, \add that is\add* Yacob and his sons: \bd Yacob\bd*’s firstborn was Reuben,
 \v 9 and \bd Reuben\bd*’s sons were Hanoch and Pallu and Hezron and Carmi.
-\v 10 \bd Simeon\bd*’s sons were Yemuel, Yamin, Ohad, Yakin, Zohar, and Shaul, the son of a Canaanite woman.
+\v 10 \bd Simeon\bd*’s sons were Yemuel, Yamin, Ohad, Yakin, Zohar, and Shaul, the son of a Canaanite \add woman\add*.
 \v 11 \bd Levi\bd*’s sons were Gershon, Kohath, and Merari.
 \v 12 \bd Yehudah\bd*’s sons were Er, Onan, Shelah, Perez, and Zerah, but Er and Onan had died in Canaan. Perez’ sons were Hezron and Hamul.
 \v 13 \bd Yissakar\bd*’s sons were Tola, Puvah, Yob, and Shimron.
@@ -2268,9 +2268,9 @@
 \v 18 telling his father, “My father, that’s wrong because that one is my oldest son. Put your right hand on \em his\em* head.”
 \v 19 But his father \add pushed back\add*, “I know, my son, I know. \add Manasseh\add* will also become a people, and he will also be great. Nevertheless his younger brother will be the greater one, and his descendants will become a multitude of nations.”
 \p
-\v 20 \add So\add* \add Yisra’el\add* blessed \add Efrayim and Manasseh\add* that day saying,\x + \xo 48:20: \xt Heb 11:21.\x*
+\v 20 \add So\add* \add Yisra’el\add* blessed \add Efrayim and Manasseh\add* that day saying,
 \q1 “\add After this, my descendants\add* will bless \add people\add* by saying,
-\q1 ‘May God make you like Efrayim and like Manasseh.’ ”
+\q1 ‘May God make you like Efrayim and like Manasseh.’ ”\x + \xo 48:20: \xt Heb 11:21.\x*
 \m (Notice that he put Efrayim before Manasseh.)
 \p
 \v 21 Then Yisra’el told Yosef, “Listen, I’m about to die, and God will be with you and take you back to the land of your ancestors.
@@ -2402,7 +2402,7 @@
 \p
 \v 29 Then \add Yacob\add* instructed them, “I’m about to go and join my ancestors. Bury me with them in the cave in the field \add that was bought from\add* Efron the Hittite,
 \v 30 in the cave that is in Makpelah’s field in front of Mamre in Canaan. That’s \add the cave that my grandfather\add* Abraham bought with the field from Efron the Hittite as property for a burial place.\x + \xo 49:30: \xt Gen 23:3-20.\x*
-\v 31 Abraham and his wife Sarah were buried there, along with \add their son\add* Isaac and his wife Rebekah, and I \add also\add* buried \add my wife\add* Le’ah there.\x + \xo 49:31: a \xt Gen 25:9-10; \xo b \xt Gen 35:29.\x*
+\v 31 Abraham and his wife Sarah were buried there,\x + \xo 49:31: \xt Gen 25:9-10.\x* along with \add their son\add* Isaac and his wife Rebekah,\x + \xo 49:31: \xt Gen 35:29.\x* and I \add also\add* buried \add my wife\add* Le’ah there.
 \v 32 That field and the cave in it was bought from the descendants of Het.
 \v 33 \add When\add* Yacob finished giving those instructions to his sons, he pulled his feet up into the bed \add and lay\add* and \add breathed his last\add* and \add his spirit joined his ancestors\add*.\x + \xo 49:33: \xt Acts 7:15.\x*
 \c 50
@@ -2412,7 +2412,7 @@
 \v 3 over the next forty days (which is the normal time for embalming), and the Egyptians mourned for him for seventy days.
 \p
 \v 4 After those mourning days were over, Yosef spoke to Far’oh’s \add servants\add*, saying, “Please, if I have found favour in your eyes, please tell Far’oh that
-\v 5 my father made me swear, saying, ‘Listen, I am dying. You must bury me in my grave that I dug for myself in Canaan.’ So now, please \add ask Far’oh to\add* let me go up there and bury my father, then I’ll return.”\x + \xo 50:5: \xt Gen 47:29-31.\x*
+\v 5 my father made me swear, saying, ‘Listen, I am dying. You must bury me in my grave that I dug for myself in Canaan.’\x + \xo 50:5: \xt Gen 47:29-31.\x* So now, please \add ask Far’oh to\add* let me go up there and bury my father, then I’ll return.”
 \p
 \v 6 “Go up and bury your father just like he made you promise.” was the reply back from Far’oh.
 \p

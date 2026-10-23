@@ -731,6 +731,7 @@ SINGLE_WORD_MAPPINGS = (
     ('bundles', 'sheaves'), # RUT 2:15
     ('buns','loaves'),
     ('burden', 'load'), # GEN 49:15
+    ('burial', 'bury'), # MAT 26:12; contextual relatives also protect JER 22:19's exact buried.
     ('burial', 'tomb'), # JDG 16:31
     ('burial', 'burying'), # RV JHN 19:40
     ('burn', 'smoke'), # EXO 29:13
@@ -1626,6 +1627,7 @@ SINGLE_WORD_MAPPINGS = (
     ('dismayed', 'terrified'), # JER 23:4
     ('disobedience', 'transgression', 'aligned'), # ISA 53:8
     ('disobeyed', 'disobedient'), # NEH 9:26
+    ('disobeyed', 'sinned'), # JER 3:25
     ('disown','renounce'), # Mrk 14:31
     ('dispersed', 'dispersion'), # JAM 1:1
     ('display', 'show'), # MIC 7:15
@@ -2768,6 +2770,7 @@ SINGLE_WORD_MAPPINGS = (
     ('innermost', 'inner'), # EZE 36:26
     ('innocent', 'acquit'), # JOB 9:28
     ('innocent', 'acquitted'), # PSA 19:13
+    ('innocent', 'blameless'), # PRO 11:5
     ('innocent', 'innocence'), # SA2 15:11
     ('inquire', 'consult'), # KI2 1:3
     ('inquire', 'enquire'), # SA1 22:15

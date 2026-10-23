@@ -36,11 +36,14 @@ We use this information to update our OET word-table
     that was created by extract_VLT_NT_to_ESFM.py
 
 CHANGELOG:
+    2026-10-22 Use BOS source profiles for mapped metadata, passages and export/navigation.
     2023-04-27 Clear table now has combined subject referents into Referents column (so now, one less column but more information)
     2024-03-08 Add OETGlossWords column and apply .tsv transforms similar to how Scripted Bible Editor does
     2025-06-19 Changed to connect timeline, etc., to EVERY word in the verse (not just the FIRST word)
     2026-02-10 SR/VLT upgrade (only change was having less rows in the table)
     2026-10-21 Use BOS VLT-to-KJV passage mappings for Theographic metadata, preserving native word IDs.
+    2026-10-22 Align Macula referents through BOS; preserve native rows and abstain on ambiguity.
+    2026-10-22 Normalize Theographic book codes with BOS (USFM EZK becomes BOS EZE).
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple, NamedTuple, Optional
@@ -59,13 +62,15 @@ from BibleOrgSys.Reference.BibleVersificationMappings import (
     MappingStatus, VersificationMappingError, get_default_mapping_engine,
 )
 import bos_books_codes_py
+from theographic import normalise_book_codes, mapped_verse_metadata
+from greek_word_alignment import mapped_word_matches
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-10-21' # by RJH
+LAST_MODIFIED_DATE = '2026-10-22' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET NT wordtable"
-PROGRAM_VERSION = '0.37'
+PROGRAM_VERSION = '0.38'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -76,6 +81,7 @@ SCRIPTED_UPDATES_TABLES_INPUT_FOLDERPATH = Path( 'ScriptedVLTUpdates/' )
 JSON_VERSES_DB_FILEPATH = Path( '../../Bible_speaker_identification/outsideSources/TheographicBibleData/derivedFiles/normalised_Verses.json' )
 # VLT v3 follows original NT divisions, but retains KJV order at PHP 1:16-17.
 # Theographic uses KJV divisions, including JN3 1:14 and REV 13:1 combined text.
+MACULA_VERSIFICATION = 'org'
 WORD_TABLE_VERSIFICATION = 'VLT'
 THEOGRAPHIC_VERSIFICATION = 'KJV'
 MACULA_GREEK_TSV_FILEPATH = Path( '../intermediateTexts/Clear.Bible_derived_Macula_data/Clear.Bible_MaculaGreek_LowFatTrees.NT.words.abbrev.tsv' )
@@ -122,7 +128,7 @@ def main() -> None:
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Reading Theographic Bible Data json entries from {JSON_VERSES_DB_FILEPATH}…" )
     with open( JSON_VERSES_DB_FILEPATH, 'rt', encoding='utf-8' ) as json_file:
-        state.verseIndex = json.load( json_file )
+        state.verseIndex = normalise_book_codes(json.load(json_file))
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.verseIndex):,} json verse entries." )
 
@@ -408,43 +414,9 @@ def apply_VLT_scripted_gloss_updates() -> bool:
 
 
 def get_Theographic_verse_metadata(verseRef:str, verseIndex:dict) -> dict:
-    """Combine metadata for the complete BOS passage corresponding to a native verse.
-
-    These are verse-level annotations, so an indivisible target verse supplies
-    metadata to each of its source parts. BOS alone determines those groups.
-    Keep all distinct annotations, including different years/timelines, without
-    changing the word-table reference, word numbers, row order, or glosses.
-    Missing mappings/data stop the build before write_new_table can save an
-    incompletely tagged table; they never fall back to a same-number JSON key.
-    """
-    BBB, CV = verseRef.split('_')
-    C, V = CV.split(':')
-    mapping = get_default_mapping_engine().convert_passage(
-        WORD_TABLE_VERSIFICATION, THEOGRAPHIC_VERSIFICATION, ((BBB,C,V,None),))
-    if mapping.status != MappingStatus.EXACT:
-        raise ValueError(f'Cannot tag {WORD_TABLE_VERSIFICATION} word-table verse {verseRef} '
-            f'from {THEOGRAPHIC_VERSIFICATION} Theographic data: {mapping.status.value}; '
-            + '; '.join(d.message for d in mapping.diagnostics)) from VersificationMappingError(mapping)
-    metadata = {field:[] for field in ('people','peopleGroups','places','eventsDescribed','yearNums','timelines')}
-    for book,chapter,verse,suffix in mapping.references:
-        key = f'{book}_{chapter}:{verse}{suffix or ""}'
-        try:
-            entry = verseIndex[key]
-        except KeyError as error:
-            raise ValueError(f'Cannot tag {WORD_TABLE_VERSIFICATION} word-table verse {verseRef}: '
-                f'mapped {THEOGRAPHIC_VERSIFICATION} key {key} is missing from '
-                f'Theographic data {JSON_VERSES_DB_FILEPATH}') from error
-        for field,outputField in (('people','people'), ('peopleGroups','peopleGroups'),
-                ('places','places'), ('eventsDescribed','eventsDescribed'),
-                ('yearNum','yearNums'), ('timeline','timelines')):
-            value = entry[field]
-            scalar = field in ('yearNum','timeline')
-            if not isinstance(value, str if scalar else list):
-                raise ValueError(f'Invalid Theographic {key} field {field}: {value!r}')
-            for annotation in ([value] if scalar else value):
-                if annotation and annotation not in metadata[outputField]:
-                    metadata[outputField].append(annotation)
-    return metadata
+    """Retrieve verse-level metadata through the shared Theographic adapter."""
+    return mapped_verse_metadata(verseRef, verseIndex, WORD_TABLE_VERSIFICATION,
+                                 dataset=JSON_VERSES_DB_FILEPATH)
 
 
 def associate_Theographic_people_places() -> bool:
@@ -645,293 +617,60 @@ def tag_trinity_persons() -> bool:
 
 
 def tag_referents_from_macula_data() -> bool:
+    """Copy Macula referent edges through certain, BOS-mapped word matches.
+
+    The lookup keys remain Macula's native FGRefs; R/F tags refer to original
+    OET table row numbers. Unused VLT variants cannot acquire active referents.
     """
-    Using the Referent field from the Clear.Bible Macula Greek data
-        (already loaded from a TSV file preprocessed by our convert_ClearMaculaNT_to_TSV.py)
-        add referent tags to our existing table.
+    macula_header, *macula_lines = state.macula_tsv_lines
+    macula_rows = [dict(zip(macula_header, row, strict=True)) for row in macula_lines]
+    macula_index = {}
+    for n, row in enumerate(macula_rows):
+        if row['FGRef'] in macula_index:
+            raise ValueError(f"Macula: duplicate word reference {row['FGRef']}")
+        macula_index[row['FGRef']] = n
+    edges = []
+    for n, row in enumerate(macula_rows):
+        for reference in filter(None, row['Referents'].split(';')):
+            target = f"{row['FGRef'][:4]}{reference}"
+            if target not in macula_index:
+                raise ValueError(f"Macula referent from {row['FGRef']}: missing target {target} in {MACULA_GREEK_TSV_FILEPATH}")
+            if n != macula_index[target]:
+                edges.append((n, macula_index[target]))
 
-    Note that we are using the SR-GNT
-        and Clear used the Nestle 1904,
-        so some matches won't fit.
-
-    Note also that our table includes variant words (unused in the SR-GNT),
-        so we have to also take account of that.
-    """
-    # global DEBUGGING_THIS_MODULE
-    # DEBUGGING_THIS_MODULE = 99
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, "\nAssociating Macula referents with our table entries…" )
-
-    # First make a book index into our table (for greater search efficiency down below)
-    lastBBB = None
-    ourBBBIndex = {}
-    for p,ourRowStr in enumerate( state.newTable[1:], start=1 ):
-        BBB = ourRowStr[:3]
-        if BBB != lastBBB:
-            if lastBBB is not None:
-                ourBBBIndex[lastBBB] = (startIndex,p)
-            startIndex = p
-            lastBBB = BBB
-    ourBBBIndex[BBB] = (startIndex,p)
-
-    assert state.macula_tsv_lines[0][0] == 'FGRef' # Check our index value of 0
-    assert state.macula_tsv_lines[0][3] == 'Word' # Check our index value of 3
-    assert state.macula_tsv_lines[0][5] == 'WordClass' # Check our index value of 5
-    assert state.macula_tsv_lines[0][16] == 'Referents' # Check our index value of 16
-
-    totalAdds = totalReferencePairAdds = totalPersonAdds = totalLocationAdds = numUnmatched = 0
-    lastBBB = None
-    for n,maculaRowList in enumerate( state.macula_tsv_lines[1:], start=1 ):
-        BBB = maculaRowList[0][:3]
-        if BBB != lastBBB:
-            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-                vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Processing {BBB}…")
-            bookStartIndex,bookEndIndex = ourBBBIndex[BBB]
-            lastBBB = BBB
-        # if n > 110: break
-        # if totalAdds > 5: break
-
-        if maculaRowList[16]:
-            # dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{n} ({type(maculaRowList)}) {maculaRowList}" )
-            referentIDs = maculaRowList[16].split( ';' )
-            referentWordID, referentGreek = maculaRowList[0], maculaRowList[3]
-            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {referentWordID} ({maculaRowList[5]}) '{referentGreek}' ({len(referentIDs)}) {referentIDs}")
-            for referentID in referentIDs:
-                fullReferentID = f'{maculaRowList[0][:4]}{referentID}' # Add the bookcode in
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Need to find {fullReferentID}")
-
-                # So do we need to search backwards or forwards?
-                referentC, referentV, referentW = int(referentWordID[4:].split(':')[0]), int(referentWordID[4:].split(':')[-1].split('w')[0]), int(referentWordID[4:].split('w')[-1])
-                referredC, referredV, referredW = int(referentID.split(':')[0]), int(referentID.split(':')[-1].split('w')[0]), int(referentID.split('w')[-1])
-                searchAmount = '-C' if referredC<referentC else '+C' if referredC>referentC else None
-                if searchAmount is None: searchAmount = '-V' if referredV<referentV else '+V' if referredV>referentV else None
-                if searchAmount is None: searchAmount = '-W' if referredW<referentW else '+W' if referredW>referentW else None
-                if searchAmount is None:
-                    logging.critical( f"Are we linking to ourselves??? Failed going from {referentWordID} ({referentC},{referentV},{referentW}) to {referentID} ({referredC},{referredV},{referredW})" )
-                    continue
-                assert searchAmount is not None, f"Failed going from {referentWordID} ({referentC},{referentV},{referentW}) to {referentID} ({referredC},{referredV},{referredW})"
-                offsetAmount = (abs(referentC-referredC)+1)*50*40 if searchAmount[1]=='C' else (abs(referentV-referredV)+1)*40 if searchAmount[1]=='V' else 30
-                if searchAmount[0]=='-': offsetAmount = -offsetAmount; step = -1
-                else: step = 1
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    Got {searchAmount=} going from {referentWordID} ({referentC},{referentV},{referentW}) to {referentID} ({referredC},{referredV},{referredW}) so {offsetAmount=} and {step=}")
-                # Firstly we also have to find the referred word in the macula table
-                # Usually it's before the referent, but can be after, e.g., "and you, Bethlehem"
-                for m in range( n, n+offsetAmount, step ):
-                    # print( f"      {m} {state.macula_tsv_lines[m]}")
-                    if state.macula_tsv_lines[m][0] == fullReferentID:
-                        # print( f"      Found {m} {state.macula_tsv_lines[m]}")
-                        break
-                else:
-                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 2:
-                        dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Got {searchAmount=} going from {referentWordID} ({referentC},{referentV},{referentW}) to {referentID} ({referredC},{referredV},{referredW}) so {offsetAmount=} and {step=}")
-                    logging.critical( f"<<<< @{referentWordID} can't find {fullReferentID} '{referentGreek}' >>>>" )
-                referredWordID, referredGreekWord = state.macula_tsv_lines[m][0], state.macula_tsv_lines[m][3]
-                # We expect that the referredWordID is BEFORE the referentWordID
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    {referentWordID=} {referentGreek=} {referredWordID=} {referredGreekWord=}")
-
-                # Find the parts of our table for this verse / verses
-                referentVerseID, referredVerseID = referentWordID.split('w')[0], referredWordID.split('w')[0]
-                ourReferentVerseRowIndices, ourReferredVerseRowIndices = [], []
-                for p,ourRowStr in enumerate( state.newTable[bookStartIndex:bookEndIndex], start=bookStartIndex ):
-                    if ourRowStr.startswith( f'{referredVerseID}w' ):
-                        # print( f"  to REFERRED {p} {ourRowStr}" )
-                        ourReferredVerseRowIndices.append( p )
-                    if ourRowStr.startswith( f'{referentVerseID}w' ):
-                        # print( f"  fr REFERENT {p} {ourRowStr}" )
-                        ourReferentVerseRowIndices.append( p )
-
-                # First try to find our referent Greek word
-                possibleReferentRowIndices = []
-                for p in ourReferentVerseRowIndices:
-                    rowItems = state.newTable[p].split( '\t' )
-                    if rowItems[1] == referentGreek:
-                        # print( f"  REFERENT {p} {rowItems}" )
-                        possibleReferentRowIndices.append( p )
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Found {len(possibleReferentRowIndices)}/{len(ourReferentVerseRowIndices)} referent verse row(s) that might match {referentWordID} '{referentGreek}'")
-
-                # Now try to find the referred Greek word
-                possibleReferredRowIndices = []
-                for p in ourReferredVerseRowIndices:
-                    rowItems = state.newTable[p].split( '\t' )
-                    if rowItems[1] == referredGreekWord:
-                        # print( f"  REFERRED {p} {rowItems}" )
-                        possibleReferredRowIndices.append( p )
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Found {len(possibleReferredRowIndices)}/{len(ourReferredVerseRowIndices)} referred verse row(s) that might match {referentWordID} '{referredGreekWord}'")
-                
-                if not possibleReferredRowIndices: # have a second attempt
-                    for p in ourReferredVerseRowIndices:
-                        rowItems = state.newTable[p].split( '\t' )
-                        if rowItems[1][:3] == referredGreekWord[:3]: # Last letters might be different?
-                            # print( f"  REFERRED {p} {rowItems}" )
-                            possibleReferredRowIndices.append( p )
-                        # else: print( f"{rowItems[1][:4]} != {referredGreekWord[:4]}")
-                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Loosely found {len(possibleReferredRowIndices)} referred verse row(s) that might match {referentWordID} '{referredGreekWord}'")
-
-                def appendNewTags( ixReferent:int, ixReferred:int ):
-                    """
-                    We establish a referred (R) and from (F) link for referents marked in Macula
-
-                    Also, if there's a person or location link in the referred word, we copy that back to the referent word.
-
-                    However, our word numbers vary (because our GNT is different, plus we include unused/variant words in our word count)
-                        so we have to fix up the word number as well.
-                        UPDATED: We now put the row number instead
-
-                    Uses many global variables as well as the declared nonlocal ones.
-                    """
-                    nonlocal totalReferencePairAdds, totalPersonAdds, totalLocationAdds, totalAdds
-                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
-                        fnPrint( DEBUGGING_THIS_MODULE, f"appendNewTags( {ixReferent=}, {ixReferred=} )" )
-
-                    referrentRowIndex = possibleReferentRowIndices[ixReferent]
-                    referredRowIndex = possibleReferredRowIndices[ixReferred]
-                    existingReferentRowStr = state.newTable[referrentRowIndex]
-                    existingReferredRowStr = state.newTable[referredRowIndex]
-
-                    existingReferentRowFields = existingReferentRowStr.split( '\t' )
-                    existingReferredRowFields = existingReferredRowStr.split( '\t' )
-
-                    existingReferentRowTags = existingReferentRowFields[TAG_COLUMN_NUMBER].split( ';' ) if existingReferentRowFields[TAG_COLUMN_NUMBER] else []
-                    existingReferredRowTags = existingReferredRowFields[TAG_COLUMN_NUMBER].split( ';' ) if existingReferredRowFields[TAG_COLUMN_NUMBER] else []
-
-                    # We decided that the row number is a better link
-                    # elReferentWordID = existingReferentRowFields[0][4:] # } We drop the BBB_ because referent/referred pairs
-                    # elReferredWordID = existingReferredRowFields[0][4:] # }   only occur within the same book
-                    # existingReferentRowTags.append( f'R{elReferredWordID}' )
-                    # existingReferredRowTags.append( f'F{elReferentWordID}' )
-
-                    existingReferentRowTags.append( f'R{referredRowIndex}' )
-                    existingReferredRowTags.append( f'F{referrentRowIndex}' )
-
-                    totalReferencePairAdds += 1
-
-                    for referredTag in existingReferredRowTags:
-                        if referredTag.startswith( 'P' ): # Found a person tag
-                            # Add the person tag to our referent line
-                            existingReferentRowTags.append( referredTag )
-                            totalPersonAdds += 1
-                            totalAdds += 1
-                        elif referredTag.startswith( 'L' ): # Found a location tag
-                            # Add the person tag to our referent line
-                            existingReferentRowTags.append( referredTag )
-                            totalLocationAdds += 1
-                            totalAdds += 1
-                    # dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    Added {numAdded} tag(s) so now {existingReferentRowTags}" )
-                    existingReferentRowFields[TAG_COLUMN_NUMBER] = ';'.join( existingReferentRowTags )
-                    newLine = '\t'.join( existingReferentRowFields )
-                    assert newLine.count( '\t' ) == 11, f"{newLine.count(TAB)} {newLine=}"
-                    state.newTable[possibleReferentRowIndices[ixReferent]] = newLine
-                    existingReferredRowFields[TAG_COLUMN_NUMBER] = ';'.join( existingReferredRowTags )
-                    newLine = '\t'.join( existingReferredRowFields )
-                    assert newLine.count( '\t' ) == 11, f"{newLine.count(TAB)} {newLine=}"
-                    state.newTable[possibleReferredRowIndices[ixReferred]] = newLine
-                # end of appendNewTags function
-
-                if not possibleReferentRowIndices:
-                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    <<< Unable to find referent {referentVerseID} '{referentGreek}' in {len(possibleReferentRowIndices)} rows >>>")
-                    for p in ourReferentVerseRowIndices:
-                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
-                elif not possibleReferredRowIndices:
-                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    <<< Unable to find referred {referredVerseID} '{referredGreekWord}' in {len(possibleReferredRowIndices)} rows >>>")
-                    for p in ourReferredVerseRowIndices:
-                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
-
-                elif len(possibleReferentRowIndices)==1 and len(possibleReferredRowIndices)==1: # This is the easiest case
-                    appendNewTags( ixReferent=0, ixReferred=0 )
-                elif len(possibleReferredRowIndices) == 1: # we know where we're going
-                    assert len(possibleReferentRowIndices) > 1 # but don't know where we're coming from (yet)
-                    referentWordNumber = int( referentWordID.split('w')[-1] )
-                    possibleWordNumbers = []
-                    for p in possibleReferentRowIndices:
-                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
-                        possibleWordNumbers.append( int( state.newTable[p].split(TAB)[0].split('w')[-1] ) )
-                    wordNumberDistances = [abs(referentWordNumber-possibleWordNumber) for possibleWordNumber in possibleWordNumbers]
-                    minWordNumberDistance = min( wordNumberDistances )
-                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Have {referentWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
-                    if wordNumberDistances.count( minWordNumberDistance ) == 1: # only one has this minimum distance
-                        appendNewTags( ixReferent=wordNumberDistances.index( minWordNumberDistance ), ixReferred=0 )
-                elif len(possibleReferentRowIndices) == 1: # we know where we're coming from
-                    assert len(possibleReferredRowIndices) > 1 # but don't know where we're going to (yet)
-                    referredWordNumber = int( referredWordID.split('w')[-1] )
-                    possibleWordNumbers = []
-                    for p in possibleReferredRowIndices:
-                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
-                        possibleWordNumbers.append( int( state.newTable[p].split(TAB)[0].split('w')[-1] ) )
-                    wordNumberDistances = [abs(referredWordNumber-possibleWordNumber) for possibleWordNumber in possibleWordNumbers]
-                    minWordNumberDistance = min( wordNumberDistances )
-                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"      Have {referredWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
-                    if wordNumberDistances.count( minWordNumberDistance ) == 1: # only one has this minimum distance
-                        appendNewTags( ixReferent=0, ixReferred=wordNumberDistances.index( minWordNumberDistance ) )
-                else:
-                    assert len(possibleReferentRowIndices)>1 and len(possibleReferredRowIndices)>1 # both!
-                    # if len(possibleReferentRowIndices) != 1:
-                    #     for p in possibleReferentRowIndices:
-                    #         print( f"       {state.newTable[p].split( TAB )}" )
-                    # if len(possibleReferredRowIndices) != 1:
-                    #     for p in possibleReferredRowIndices:
-                    #         print( f"       {state.newTable[p].split( TAB )}" )
-                    referentWordNumber = int( referentWordID.split('w')[-1] )
-                    possibleWordNumbers = []
-                    for p in possibleReferentRowIndices:
-                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
-                        possibleWordNumbers.append( int( state.newTable[p].split(TAB)[0].split('w')[-1] ) )
-                    wordNumberDistances = [abs(referentWordNumber-possibleWordNumber) for possibleWordNumber in possibleWordNumbers]
-                    minWordNumberDistance = min( wordNumberDistances )
-                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Have {referentWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
-                    if wordNumberDistances.count( minWordNumberDistance ) == 1: # only one has this minimum distance
-                        ixReferent = wordNumberDistances.index( minWordNumberDistance )
-
-                    referredWordNumber = int( referredWordID.split('w')[-1] )
-                    possibleWordNumbers = []
-                    for p in possibleReferredRowIndices:
-                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"       {state.newTable[p].split( TAB )}" )
-                        possibleWordNumbers.append( int( state.newTable[p].split(TAB)[0].split('w')[-1] ) )
-                    wordNumberDistances = [abs(referredWordNumber-possibleWordNumber) for possibleWordNumber in possibleWordNumbers]
-                    minWordNumberDistance = min( wordNumberDistances )
-                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      Have {referredWordNumber=} and {possibleWordNumbers=} giving {wordNumberDistances=} with {minWordNumberDistance=}")
-                    if wordNumberDistances.count( minWordNumberDistance ) == 1: # only one has this minimum distance
-                        ixReferred = wordNumberDistances.index( minWordNumberDistance )
-
-                    try: # will fail if both ixReferent and ixReferred are not declared
-                        appendNewTags( ixReferent, ixReferred )
-                    except UnboundLocalError:
-                        logging.critical( f"Unable to find a referent and a referrer row for {referentWordID=} {referentGreek=} {referredWordID=} {referredGreekWord=}" )
-                        numUnmatched += 1
-                    # Make them both undefined again
-                    try: del ixReferent
-                    except UnboundLocalError: pass
-                    try: del ixReferred 
-                    except UnboundLocalError: pass
-
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Added {totalPersonAdds:,} referred person tags")
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Added {totalLocationAdds:,} referred location tags")
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Added {totalAdds:,} total referred person/location tags")
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Added {totalReferencePairAdds:,} total back/forth referrent tag pairs")
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Skipped {numUnmatched:,} referrent tag pairs (probably GNT differences)")
+    fields = [line.split('\t') for line in state.newTable]
+    # Fixed schema already validated when the table is expanded. Keep row indexes.
+    native_indexes, target_rows = [], []
+    for n, row in enumerate(fields[1:], 1):
+        if row[7]:  # Probability: a word selected for the source text.
+            native_indexes.append(n)
+            target_rows.append(dict(Ref=row[0], GreekWord=row[1], GreekLemma=row[3]))
+    matches = mapped_word_matches(macula_rows, target_rows,
+                                  MACULA_VERSIFICATION, WORD_TABLE_VERSIFICATION)
+    tags = [list(dict.fromkeys(row[TAG_COLUMN_NUMBER].split(';'))) if row[TAG_COLUMN_NUMBER] else []
+            for row in fields[1:]]
+    tags.insert(0, [])  # Header is not a word row.
+    added = unresolved = 0
+    for source, target in edges:
+        if source not in matches or target not in matches:
+            unresolved += 1
+            continue
+        source_row, target_row = native_indexes[matches[source]], native_indexes[matches[target]]
+        source_tags, target_tags = tags[source_row], tags[target_row]
+        ref_tag, from_tag = f'R{target_row}', f'F{source_row}'
+        if ref_tag not in source_tags:
+            source_tags.append(ref_tag)
+            added += 1
+        if from_tag not in target_tags:
+            target_tags.append(from_tag)
+        for tag in target_tags:
+            if tag.startswith(('P', 'L')) and tag not in source_tags:
+                source_tags.append(tag)
+    for n, row in enumerate(fields[1:], 1):
+        row[TAG_COLUMN_NUMBER] = ';'.join(tags[n])
+        state.newTable[n] = '\t'.join(row)
+    vPrint('Normal', DEBUGGING_THIS_MODULE,
+           f"Added {added:,} Macula referent pairs; left {unresolved:,} unresolved.")
     return True
 # end of add_tags_to_NT_word_table.tag_referents_from_macula_data
 

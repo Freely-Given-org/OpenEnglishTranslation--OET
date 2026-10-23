@@ -729,8 +729,9 @@ def propose_local_context(units, columns, positions, anchors, occupied, normalis
     e.g. 'the king' after another linked phrase. Requiring two *new* content
     words for a phrase movement misses these partially linked phrases. Here the
     existing content-word link and exact adjacency on BOTH sides supply evidence.
-    Possessives may also move within one source word's gloss ('father of my' ->
-    'my father'). No other word order or synonym inference is made.
+    Possessives and copulas may also move within one source word's gloss
+    ('father of my' -> 'my father', 'blessed are' -> 'are blessed'). The head
+    and function word must both match exactly. No synonym inference is made.
 
     Reserve individual English columns and reject competing RV claims. A source
     number may have other gloss components already linked, but the proposed
@@ -738,8 +739,10 @@ def propose_local_context(units, columns, positions, anchors, occupied, normalis
     fences. This fallback runs only after ordinary alignment has settled.
     """
     function_words = {'the', 'a', 'an', 'of', 'to', 'in', 'on', 'for', 'with',
-                      'by', 'from', 'my', 'your', 'his', 'her', 'our', 'their', 'its'}
+                      'by', 'from', 'my', 'your', 'his', 'her', 'our', 'their', 'its',
+                      'is', 'are', 'was', 'were', 'be', 'been', 'being'}
     possessives = {'my', 'your', 'his', 'her', 'our', 'their', 'its'}
+    copulas = {'is', 'are', 'was', 'were', 'be', 'been', 'being'}
     anchor_map = dict(anchors)
     choices, claims = defaultdict(set), defaultdict(set)
     for i, unit in enumerate(units):
@@ -761,7 +764,7 @@ def propose_local_context(units, columns, positions, anchors, occupied, normalis
                     continue # A weak or paraphrased anchor is insufficient evidence.
                 adjacent = pos-1 if i < neighbour else pos+1
                 candidates = {adjacent} if 0 <= adjacent < len(columns) else set()
-                if word in possessives and i < neighbour:
+                if word in possessives | copulas and i < neighbour:
                     candidates.update(j for j in positions[head.number]
                                       if 0 < j-pos <= 3
                                       and all(c.number == head.number for c in columns[pos:j+1]))

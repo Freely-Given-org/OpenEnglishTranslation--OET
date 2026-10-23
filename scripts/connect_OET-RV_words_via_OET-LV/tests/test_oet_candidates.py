@@ -2,6 +2,7 @@
 from itertools import permutations
 import json
 from pathlib import Path
+import re
 import sys
 import unittest
 
@@ -86,6 +87,129 @@ class CandidateTests(unittest.TestCase):
         self.assertEqual(self.links('yeast', [('leaven', 1), ('leaven', 2)]), [])
         self.assertEqual(self.links('yeast and yeast', [('leaven', 1), ('and', 2), ('leaven', 3)]),
                          [('yeast', 1), ('and', 2), ('yeast', 3)])
+
+    def test_reviewed_related_forms_in_complete_mapped_passages(self):
+        fixtures = json.loads(Path(__file__).with_name('related_form_passages.json').read_text())
+        for passage in fixtures:
+            for fresh in (False, True):
+                with self.subTest(reference=passage['reference'], fresh=fresh):
+                    tokens = [token for n, line in enumerate(passage['rv_lines'])
+                              for token in tokenize(re.sub(r'¦\d+', '', line) if fresh else line, n)]
+                    columns = [LVToken(**{**col, 'names': frozenset(col['names'])})
+                               for col in passage['columns']]
+                    selected = dict((t, number) for t, number, _ in select_links(
+                        tokens, columns, connect.scoreAlignedWords, connect.simplifyRVLVWord,
+                        connect.numberVariants, phrase_index=connect.ALIGNED_PHRASE_INDEX,
+                        directional_index=connect.DIRECTIONAL_WORD_INDEX))
+                    wanted = {word for word, _ in passage['expected']}
+                    expected = passage.get('expected_fresh', passage['expected']) if fresh else passage['expected']
+                    self.assertEqual([(t.text, t.number or selected.get(t)) for t in tokens
+                                      if t.text in wanted], [tuple(x) for x in expected])
+                    self.assertFalse(any(t in selected for t in tokens if not t.linkable))
+
+    def test_related_forms_abstain_on_ambiguous_and_already_claimed_sources(self):
+        for rv, lv in (('leprosy', 'lepers'), ('deafness', 'deaf'), ('muteness', 'mute')):
+            with self.subTest(rv=rv):
+                self.assertEqual(self.links(rv, [(lv, 1), (lv, 2)]), [])
+                self.assertEqual(self.links(f'{rv}¦1 {rv}', [(lv, 1)]), [])
+                for marker in ('add', '+add'):
+                    self.assertEqual(self.links(f'\\{marker} >{rv}\\{marker}*', [(lv, 1)]), [])
+
+    def test_burial_mapping_does_not_steal_an_exact_buried_source(self):
+        self.assertEqual(self.links('burial', [('bury', 1)]), [('burial', 1)])
+        self.assertEqual(self.links('buried', [('burial', 1), ('buried', 2)]), [('buried', 2)])
+        self.assertEqual(connect.scoreAlignedWords('buried', 'burial'), ('reviewed related forms', 50))
+
+    def test_knowledge_family_does_not_chain_through_know(self):
+        self.assertIsNotNone(connect.scoreAlignedWords('knowledge', 'known'))
+        self.assertIsNotNone(connect.scoreAlignedWords('knowledgable', 'knowledge'))
+        self.assertIsNone(connect.scoreAlignedWords('knowledgable', 'known'))
+
+    def test_context_regressions_in_complete_passages(self):
+        fixtures = json.loads(Path(__file__).with_name('context_passages.json').read_text())
+        expected = {'PRO 14:7': {11:272943}, 'ECC 10:10': {20:281543},
+                    'DEU 22:20': {4:92638},
+                    'DAN 3:1': {19:357747}, 'EZR 6:3': {32:219339, 41:219344},
+                    'JER 22:19': {2:313996}, 'PSA 1:1': {1:243183}}
+        forbidden = {'DEU 22:20': {11:92638}, 'ROM 9:18': {9:109415, 10:109415},
+                     'DAN 3:1': {15:357745, 18:357745}, 'ECC 7:5': {18:280373},
+                     'NUM 19:22': {14:72519}, 'PSA 1:1': {4:243189}, 'JER 21:5': {11:313411}}
+        for passage in fixtures:
+            for fresh in (False, True):
+                with self.subTest(reference=passage['reference'], fresh=fresh):
+                    rv = re.sub(r'¦\d+', '', passage['rv']) if fresh else passage['rv']
+                    tokens = tokenize(rv)
+                    columns = [LVToken(**{**col, 'names': frozenset(col['names'])}) for col in passage['columns']]
+                    selected = dict((t, n) for t, n, _ in select_links(tokens, columns,
+                        connect.scoreAlignedWords, connect.simplifyRVLVWord, connect.numberVariants,
+                        phrase_index=connect.ALIGNED_PHRASE_INDEX, directional_index=connect.DIRECTIONAL_WORD_INDEX))
+                    for i, n in expected.get(passage['reference'], {}).items():
+                        self.assertEqual(tokens[i].number or selected.get(tokens[i]), n)
+                    if fresh and passage['reference'] == 'ROM 9:18':
+                        self.assertEqual(selected.get(tokens[6]), 109412)
+                    for i, n in forbidden.get(passage['reference'], {}).items():
+                        self.assertNotEqual(selected.get(tokens[i]), n)
+                    self.assertFalse(any(t in selected for t in tokens if not t.linkable))
+
+    def test_generic_heads_cannot_jump_across_simultaneously_selected_anchors(self):
+        for rv in ('wise¦1 \\add >person\\add* sings¦3 foolish¦4 people',
+                   'wise \\add >person\\add* sings foolish people'):
+            self.assertNotIn(('people',2), self.links(rv,
+                [('wise',1),('man',2),('sings',3),('foolish',4)]))
+
+    def test_article_requires_its_own_head(self):
+        self.assertNotIn(('the',2), self.links('the benefits advice¦2',
+            [('the',2),('counsel',2)]))
+        self.assertIn(('the',1), self.links('the wise¦2', [('the',1),('wise',2)]))
+
+    def test_auxiliary_belongs_to_its_following_predicate(self):
+        columns = [('blessed',1), ('are',1), ('the',2), ('poor',3)]
+        tokens = tokenize('those who are poor¦3 are blessed¦1')
+        selected = dict((t, n) for t, n, _ in select_links(tokens,
+            [LVToken(*col) for col in columns], connect.scoreAlignedWords,
+            connect.simplifyRVLVWord, connect.numberVariants))
+        self.assertNotIn(tokens[2], selected)
+        self.assertIn(('are',1), self.links('are blessed¦1', columns))
+        self.assertIn(('are',2), self.links('are rich¦2', [('being',2),('rich',2)]))
+
+    def test_noun_suffix_cannot_possess_another_noun(self):
+        columns = [LVToken('god',1,noun=True), LVToken('of',1,noun=True),
+                   LVToken('our',1,noun=True), LVToken('and',2,noun=True),
+                   LVToken('ancestors',2,noun=True)]
+        self.assertNotIn(('our',1), self.links('our ancestors¦2', columns))
+        self.assertIn(('our',1), self.links('our god¦1', columns))
+
+    def test_relative_pronoun_needs_its_own_following_predicate(self):
+        columns = [('sick',1),('who',2),('were',3),('healed',3)]
+        self.assertNotIn(('who',2), self.links('those who were sick¦1 were healed¦3', columns))
+        self.assertIn(('who',2), self.links('who were healed¦3', columns))
+
+    def test_complete_moral_phrase_outweighs_partial_spatial_match(self):
+        self.assertEqual(self.links(r"innocent \add >person\add* \add ≈does what's right\add*",
+            [('righteousness',1),('blameless',2),('makes',3),('straight',3)]),
+            [('innocent',2),('does',1),("what's",1),('right',1)])
+
+    def test_remaining_ambiguities_in_complete_passages(self):
+        fixtures = json.loads(Path(__file__).with_name('ambiguity_passages.json').read_text())
+        for p in fixtures:
+            columns = [LVToken(**{**col, 'names': frozenset(col['names'])}) for col in p['columns']]
+            for version in ('before', 'after'):
+                for fresh in (False, True):
+                    with self.subTest(reference=p['reference'], version=version, fresh=fresh):
+                        rv = re.sub(r'¦\d+', '', p[version]) if fresh else p[version]
+                        tokens = tokenize(rv)
+                        found = {i: t.number for i,t in enumerate(tokens) if t.number is not None}
+                        added = {tokens.index(t): n for t,n,_ in select_links(tokens, columns,
+                            connect.scoreAlignedWords, connect.simplifyRVLVWord, connect.numberVariants,
+                            phrase_index=connect.ALIGNED_PHRASE_INDEX,
+                            directional_index=connect.DIRECTIONAL_WORD_INDEX)}
+                        found.update(added)
+                        if fresh:
+                            for i,n in p['forbidden']:
+                                self.assertNotEqual(found.get(i), n)
+                            for i,n in p['expected_fresh']:
+                                self.assertEqual(found.get(i), n)
+                        self.assertFalse(any(i in added for i,t in enumerate(tokens) if not t.linkable))
 
     def test_phrase_modifier_prevents_a_synonym_from_reversing_the_meaning(self):
         self.assertEqual(self.links('the less sensible asked the sensible',

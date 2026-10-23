@@ -42,6 +42,7 @@ preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: #, l
 
 
 CHANGELOG:
+    2026-10-22 Buffer complete subject phrases after verb prefixes and capitalise after gloss repairs.
     2025-01-19 Check the glosses a bit more (especially having no superfluous periods which cause a line break in the OET-LV)
                     plus remove double 'of', e.g., house_of of_Dan -> house_of Dan
     2025-01-21 Start to handle GlossInsert fields
@@ -76,10 +77,10 @@ import bos_books_codes_py
 from ot_gloss_fallbacks import fix_known_gloss_duplication, recover_missing_word_glosses, select_gloss
 
 
-LAST_MODIFIED_DATE = '2026-10-21' # by RJH
+LAST_MODIFIED_DATE = '2026-10-22' # by RJH
 SHORT_PROGRAM_NAME = "extract_glossed_OSHB_OT_to_ESFM"
 PROGRAM_NAME = "Extract glossed OSHB OT ESFM files"
-PROGRAM_VERSION = '1.0.7'
+PROGRAM_VERSION = '1.0.8'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -363,23 +364,7 @@ def export_literal_English_gloss_esfm() -> bool:
                 this_row_gloss = preform_row_gloss(gloss_index==(last_gloss_index+1), this_verse_row)
                 if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
                     dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  preform_row_gloss() returned '{this_row_gloss}'" )
-                if this_row_gloss.startswith( 'of¦' ) and 'of¦' in last_row_gloss and not last_row_gloss.startswith( 'of¦' ):
-                    adj_last_row_gloss = last_row_gloss
-                    while adj_last_row_gloss[-1] in '¦1234567890':
-                        adj_last_row_gloss = adj_last_row_gloss[:-1] # Drop off last char
-                    if adj_last_row_gloss.endswith( '_of' ):
-                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  preform_row_gloss() {BBB} {chapter_number}:{verse_number} with {this_verse_row=}")
-                        adj_row_gloss = this_row_gloss[4:]
-                        while adj_row_gloss and adj_row_gloss[0] in '1234567890': adj_row_gloss = adj_row_gloss[1:]
-                        if adj_row_gloss:
-                            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  preform_row_gloss() {BBB} {chapter_number}:{verse_number} returned {adj_row_gloss=} from {this_row_gloss=} with {adj_last_row_gloss=} from {last_row_gloss=} with {verse_text=}" )
-                            assert adj_row_gloss[0] ==  '_' or adj_row_gloss[0] ==  '÷', f"{adj_row_gloss=}"
-                            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  preform_row_gloss() {BBB} {chapter_number}:{verse_number} after {last_row_gloss=} adjusting '{this_row_gloss}' to '{adj_row_gloss[1:]}'" )
-                            this_row_gloss = adj_row_gloss[1:]
-                        else: this_row_gloss = '' # We must have deleted the sole 'of' word
+                this_row_gloss = remove_repeated_of(last_row_gloss, this_row_gloss)
                 if this_row_gloss:
                     verse_text = f"{verse_text}{'' if not verse_text or this_row_gloss[0] in '.,' or this_row_gloss.startswith(FOOTNOTE_START) or this_row_gloss.startswith(XREF_START) else ' '}{this_row_gloss}"
                 assert '  ' not in verse_text, f"ERROR1: Have double spaces (marked ‼‼) in {verse_id} verse text: '{verse_text.replace('  ','‼‼')}'"
@@ -389,6 +374,7 @@ def export_literal_English_gloss_esfm() -> bool:
                 dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{verse_id} '{verse_text}'\n" )
 
             # Do checks
+            assert not just_had_insert and not saved_gloss, f'Unconsumed subject phrase in {verse_id}'
             assert not verse_text.startswith(' '), f"{verse_id} '{verse_text}'"
             if verse_text.endswith(' '):
                 logging.warning( f"Unexpected space at end in {verse_id}: '{verse_text}'" )
@@ -554,6 +540,31 @@ def get_gloss_word_index_list(given_verse_row_list: List[dict]) -> List[int]:
 
 saved_gloss = saved_capitalisation = saved_punctuation = ''
 just_had_insert = False
+
+
+def remove_repeated_of(previous_gloss: str, gloss: str) -> str:
+    """Keep 'king_of of_Babylon' from repeating the English preposition.
+
+    Apply the same cleanup to ordinary output and buffered subject phrases.
+    The surviving words retain their original word-number links.
+    """
+    if (gloss.startswith('of¦') and 'of¦' in previous_gloss
+            and not previous_gloss.startswith('of¦')
+            and previous_gloss.rstrip('¦0123456789').endswith('_of')):
+        remainder = gloss[3:].lstrip('0123456789')
+        if not remainder:
+            return ''
+        assert remainder[0] in '_÷', f'Unexpected of-gloss: {gloss!r}'
+        return remainder[1:]
+    return gloss
+
+
+def capitalise_gloss(gloss: str) -> str:
+    """Capitalise display text after bracket repairs and ESFM markup conversion."""
+    return re.sub(r'^((?:\\add [+=><]?)?[\[(_‘“]*)([a-z])',
+                  lambda m: m[1] + m[2].upper(), gloss)
+
+
 def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: #, last_given_verse_row: Dict[str,str]=None, last_glossWord:str=None) -> str:
     """
     Returns the gloss to display for this word row (may be nothing if we have a current GlossInsert)
@@ -566,6 +577,26 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
     """
     # DEBUGGING_THIS_MODULE = 99
     global saved_gloss, saved_capitalisation, saved_punctuation, just_had_insert, mmmCount, wwwwCount
+    if given_verse_row['GlossInsert']:
+        # Every word in a subject NP can be queued, including words with
+        # articles/suffixes. Format each independently so it cannot consume the
+        # previously queued subject as though it were the receiving verb.
+        assert given_verse_row['GlossInsert'] == '_'
+        pending = saved_gloss, saved_capitalisation, saved_punctuation, just_had_insert
+        saved_gloss = saved_capitalisation = saved_punctuation = ''
+        just_had_insert = False
+        try:
+            part = preform_row_gloss(consecutive, dict(given_verse_row, GlossInsert=''))
+        finally:
+            saved_gloss, saved_capitalisation, saved_punctuation, just_had_insert = pending
+        part = remove_repeated_of(saved_gloss + saved_punctuation, part)
+        saved_gloss = ' '.join(filter(None, (saved_gloss + saved_punctuation, part)))
+        saved_punctuation = ''
+        just_had_insert = True
+        return ''
+    if just_had_insert and given_verse_row['RowType'] == 'seg':
+        assert given_verse_row['Morphology'] == 'x-maqqef' and not given_verse_row['GlossPunctuation']
+        return ''
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
         dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"preform_row_gloss({given_verse_row['Ref']}.{given_verse_row['MorphemeRowList']},"
                 f" mg='{given_verse_row['MorphemeGlosses']}' cmg='{given_verse_row['ContextualMorphemeGlosses']}'"
@@ -636,30 +667,26 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
                                             f" needs a word gloss for '{given_verse_row['Word']}'"
                                             f" (from '{given_verse_row['NoCantillations']}')" )
 
-        if 'S' in given_verse_row['GlossCapitalisation'] \
-        or (just_had_insert and 'S' in saved_capitalisation): # Start of Sentence
-            gloss = f'{gloss[0].upper()}{gloss[1:]}'
-
         wn = f"¦{given_verse_row['n']}"
 
         gloss = make_gloss_adjustments_and_append_word_number( gloss, wn )
+        if 'S' in given_verse_row['GlossCapitalisation'] \
+        or (just_had_insert and 'S' in saved_capitalisation): # Start of Sentence
+            gloss = capitalise_gloss(gloss)
         if just_had_insert:
             if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
                 dPrint( 'Info', DEBUGGING_THIS_MODULE, f"Have insert with {gloss=}" )
             assert not saved_capitalisation
-            # Not totally sure what all the different divider chars mean (but we'll change many of them to = as we go)
-            if gloss.count('=') == 1:
-                gloss = gloss.replace( '=', f'= {saved_gloss}{saved_punctuation} =')
-            elif gloss.count(',') == 1:
-                gloss = gloss.replace( ',', f'= {saved_gloss}{saved_punctuation} =')
-            elif gloss.count('÷') == 1:
-                gloss = gloss.replace( '÷', f'= {saved_gloss}{saved_punctuation} =')
-            elif gloss.count('_') == 1:
-                gloss = gloss.replace( '_', f'_ {saved_gloss}{saved_punctuation} _')
-            elif gloss.count('÷') == 2: # CH2_12:7
-                # Insert at the FINAL of the two commas
-                gloss = f'= {saved_gloss}{saved_punctuation} ='.join( gloss.rsplit( '÷', 1 ) ) # From https://stackoverflow.com/questions/2556108/rreplace-how-to-replace-the-last-occurrence-of-an-expression-in-a-string
-            else: assert False, "We want to stop here"
+            # Insert after every prefix, including mixed separators in a
+            # gloss such as 'and=when,he_came'. Underscores normally join the
+            # English words of a single morpheme, so retain only the old
+            # unambiguous one-underscore fallback when no boundary is marked.
+            boundary = max(gloss.rfind(separator) for separator in '=,÷')
+            joiner = '='
+            if boundary < 0 and gloss.count('_') == 1:
+                boundary, joiner = gloss.index('_'), '_'
+            assert boundary >= 0, f"No prefix boundary for subject insertion in {given_verse_row['Ref']}: {gloss!r}"
+            gloss = f'{gloss[:boundary]}{joiner} {saved_gloss}{saved_punctuation} {joiner}{gloss[boundary+1:]}'
             saved_gloss = saved_capitalisation = saved_punctuation = ''
             just_had_insert = False
 
@@ -687,18 +714,18 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
                 vPrint( 'Info', DEBUGGING_THIS_MODULE, f"{given_verse_row['Ref']}.{given_verse_row['MorphemeRowList']},"
                                                 f" needs a word gloss for '{given_verse_row['Word']}'"
                                                 f" (from '{given_verse_row['NoCantillations']}')" )
-        if 'S' in given_verse_row['GlossCapitalisation']:
-            wordGloss = f'{wordGloss[0].upper()}{wordGloss[1:]}'
         wn = f"¦{given_verse_row['n']}"
 
         wordGloss = make_gloss_adjustments_and_append_word_number( wordGloss, wn )
+        if 'S' in given_verse_row['GlossCapitalisation']:
+            wordGloss = capitalise_gloss(wordGloss)
 
         if saved_gloss: # we must have reordered glosses with a word now between morphemes
             assert False, "We want to stop here"
             gloss = f'{saved_gloss}= {wordGloss}'
             saved_gloss = '' # Used it
             if 'S' in saved_capitalisation:
-                gloss = f'{gloss[0].upper()}{gloss[1:]}'
+                gloss = capitalise_gloss(gloss)
                 saved_capitalisation = ''
             just_had_insert = True
         else: # no saved gloss -- just an ordinary word
@@ -711,17 +738,10 @@ def preform_row_gloss(consecutive:bool, given_verse_row: Dict[str,str]) -> str: 
         # if saved_capitalisation: print(f"{saved_capitalisation=}")
         if 'S' in saved_capitalisation:
             # print(f"Capitalise ({saved_capitalisation}) '{gloss}'")
-            gloss = f'{gloss[0].upper()}{gloss[1:]}'
+            gloss = capitalise_gloss(gloss)
             # print( f"  Now '{gloss}'")
             saved_capitalisation = ''
     gloss_punctuation = given_verse_row['GlossPunctuation']
-
-    gloss_insert = given_verse_row['GlossInsert']
-    if gloss_insert: # we want to save this word
-        assert gloss_insert == '_' # for now, ignore what it is
-        saved_gloss, saved_capitalisation, saved_punctuation = gloss, given_verse_row['GlossCapitalisation'], gloss_punctuation
-        gloss = gloss_punctuation = '' # We won't return anything yet
-        just_had_insert = gloss_insert
 
     # if given_verse_row['Ref'].startswith('GEN_1:4'): assert False, "We want to stop here"
     result = f"{gloss}{gloss_punctuation}"

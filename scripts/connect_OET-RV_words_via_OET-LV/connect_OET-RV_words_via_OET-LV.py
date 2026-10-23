@@ -86,7 +86,7 @@ Specialised \\add spans:
             e.g., 'Shelomo (\\add !Solomon\\add*)'
         Both forms of the name should be linked to the OET-LV name by having the same word number.
 
-Versification: OET-RV uses English (BOS 'eng'); OET-LV uses original ('org').
+Versification: Use the explicit BOS OET-RV and OET-LV source profiles.
     BOS maps complete RV passages before any word matching. Verse bridges stay
     together, chapter changes are followed, and Psalm titles use BOS declarations.
     Non-exact mappings and absent LV text are reported and left unlinked.
@@ -95,6 +95,7 @@ Versification: OET-RV uses English (BOS 'eng'); OET-LV uses original ('org').
 
 
 CHANGELOG:
+    2026-10-22 Use BOS source profiles for mapped metadata, passages and export/navigation.
     2023-07-31 Added character marker checks for each RV line
     2023-08-29 Added nomina sacra (NS) for connected words in RV
     2023-09-11 Fix bug that connected the wrong (not the same) simple words
@@ -257,7 +258,7 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-10-13'
+LAST_MODIFIED_DATE = '2026-10-22'
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '2.0.0'
@@ -359,9 +360,9 @@ def main():
     if options.output_dir:
         options.output_dir.mkdir(parents=True, exist_ok=True)
 
-    rv = loadAlignmentBible(OET_RV_ESFM_FolderPath, 'OET-RV', 'eng')
-    lvOT = loadAlignmentBible(OET_LV_OT_ESFM_InputFolderPath, 'OET-LV', 'org')
-    lvNT = loadAlignmentBible(OET_LV_NT_ESFM_InputFolderPath, 'OET-LV', 'org')
+    rv = loadAlignmentBible(OET_RV_ESFM_FolderPath, 'OET-RV', 'OET-RV')
+    lvOT = loadAlignmentBible(OET_LV_OT_ESFM_InputFolderPath, 'OET-LV', 'OET-LV')
+    lvNT = loadAlignmentBible(OET_LV_NT_ESFM_InputFolderPath, 'OET-LV', 'OET-LV')
 
     # Load the OT and NT word files
     state.wordTable, state.wordTableHeaderList = {}, {}
@@ -1070,7 +1071,7 @@ def iterAlignmentVerseEntries(BBB, lv, rv):
         reason = '; '.join(dict.fromkeys(d['message'] for d in diagnostics)) or issue.get('message', issue['status'])
         logging.warning(f'Skipping OET-RV {refs}: {issue["status"]}: {reason}')
     vPrint('Info', DEBUGGING_THIS_MODULE,
-           f'    {BBB}: resolved {len(passages):,} RV passages (eng → org); skipped {len(skipped):,}.')
+           f'    {BBB}: resolved {len(passages):,} RV passages (OET-RV → OET-LV); skipped {len(skipped):,}.')
     for passage in passages:
         c, v = passage.key
         check_OET_RV_Verse(BBB, c, v, (), passage.lv_entries)

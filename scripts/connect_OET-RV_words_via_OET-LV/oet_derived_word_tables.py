@@ -9,6 +9,14 @@ also expands members through the existing curated noun/verb inflection tables.
 This replaces guessing from the first five letters. Do not add unrelated words
 such as again/against, there/therefore, conceived/concerning or bride/bridegroom.
 Do not infer names from this table: transliteration/name tables handle those.
+
+The 23 October 2026 corpus review added/extended 17 families, including
+leper/leprosy (MAT 11:5) and mute/muteness, deaf/deafness (MRK 9:25).
+See audits/2026-10-23-related-forms-summary.json for the comparison and
+the original withheld families. The subsequent context audit enables six more
+families after strengthening occurrence ownership and phrase boundaries. Keep
+know/knowledge separate from knowledge/knowledgeable: related families are not
+transitive synonyms. See audits/2026-10-23-context-summary.json.
 """
 
 RELATED_WORD_GROUPS = tuple(tuple(row.split()) for row in (
@@ -30,12 +38,14 @@ RELATED_WORD_GROUPS = tuple(tuple(row.split()) for row in (
     'appear appearance',
     'appoint appointment',
     'arrogant arrogance',
+    'asleep sleep',
     'assemble assembly',
     'associate association',
     'atone atonement',
     'attend attention attentive',
     'avenge avenger',
     'backward backwards',
+    'bald baldy baldness',
     'basket basketful',
     'beautiful beauty beautify',
     'behave behaviour behavior',
@@ -43,7 +53,9 @@ RELATED_WORD_GROUPS = tuple(tuple(row.split()) for row in (
     'benefit beneficial',
     'bitter bitterly bitterness',
     'blind blindness',
+    'bury burial',
     'blood bloods bloody bloodshed bloodthirsty',
+    'bold boldly boldness',
     'bound boundary',
     'breath breathe',
     'breastplate breastpiece',
@@ -98,9 +110,10 @@ RELATED_WORD_GROUPS = tuple(tuple(row.split()) for row in (
     'create creation creator',
     'cruel cruelty',
     'danger dangerous',
+    'dark darker darkest darkness darken',
+    'deaf deafness',
     'death deathly',
-    'deceive deceit deceitful deceitfully deceitfulness',
-    'deception deceptive',
+    'deceive deceit deceitful deceitfully deceitfulness deception deceptive',
     'dedicate dedication',
     'defend defence defense defender',
     'defile defilement',
@@ -156,6 +169,7 @@ RELATED_WORD_GROUPS = tuple(tuple(row.split()) for row in (
     'favourite favouritism',
     'fever feverish',
     'filth filthiness',
+    'firm firmly',
     'first firstly firstborn firstfruit firstfruits',
     'flesh fleshly',
     'flint flinty',
@@ -181,6 +195,7 @@ RELATED_WORD_GROUPS = tuple(tuple(row.split()) for row in (
     'genuine genuineness',
     'gloom gloomy',
     'glory glorious',
+    'gold golden',
     'govern governor',
     'grace graceful',
     'grass grassy',
@@ -200,6 +215,7 @@ RELATED_WORD_GROUPS = tuple(tuple(row.split()) for row in (
     'human humanity humankind humanly',
     'humble humbly humbler',
     'humiliate humiliation',
+    'hunger hungry',
     'hypocritical hypocrisy',
     'idolater idolatrous',
     'ignorant ignorance',
@@ -220,12 +236,13 @@ RELATED_WORD_GROUPS = tuple(tuple(row.split()) for row in (
     'jealous jealously jealousy',
     'jewellery jewelry',
     'judge judgement judgment',
+    'know knowledge',
     'knowledge knowledgeable knowledgable',
     'labour labourer',
     'large larger largest',
     'laugh laughter laughingstock',
     'lawless lawlessness',
-    'leprosy leprous',
+    'leper leprosy leprous',
     'liberate liberty',
     'listen listener',
     'loyal loyalty',
@@ -249,6 +266,8 @@ RELATED_WORD_GROUPS = tuple(tuple(row.split()) for row in (
     'mourn mourner',
     'murder murderous murderer',
     'music musical',
+    'mercy merciful mercifully',
+    'mute muteness',
     'mysterious mystery',
     'naive naivete naivety',
     'naked nakedness',
@@ -258,7 +277,7 @@ RELATED_WORD_GROUPS = tuple(tuple(row.split()) for row in (
     'necessary necessity',
     'night nighttime',
     'north northern northerly northward',
-    'obedient obediently obedience',
+    'obey obedient obediently obedience',
     'offence offense offend offensive offensiveness',
     'officer official',
     'onward onwards',
@@ -346,6 +365,7 @@ RELATED_WORD_GROUPS = tuple(tuple(row.split()) for row in (
     'resurrect resurrection',
     'revere reverence',
     'right righteous righteousness righteously rightful rightly',
+    'rock rocky',
     'rotten rottenness',
     'royal royalty',
     'second secondly',
@@ -379,7 +399,7 @@ RELATED_WORD_GROUPS = tuple(tuple(row.split()) for row in (
     'store storehouse storeroom',
     'storm stormy',
     'straight straighten',
-    'strength strengthen',
+    'strength strengthen strong',
     'strong stronger strongest strongly',
     'stubborn stubbornly stubbornness',
     'submit submission submissively',
@@ -410,6 +430,7 @@ RELATED_WORD_GROUPS = tuple(tuple(row.split()) for row in (
     'treat treatment',
     'trick trickery',
     'trouble troublesome',
+    'true truth',
     'truth truthful truthfully',
     'uncertain uncertainty',
     'unchanging unchangeable',
@@ -424,6 +445,7 @@ RELATED_WORD_GROUPS = tuple(tuple(row.split()) for row in (
     'upward upwards',
     'urgent urgently',
     'useless uselessly',
+    'vain vainly',
     'victory victorious',
     'violence violent violently',
     'virgin virginity',
@@ -443,7 +465,10 @@ RELATED_WORD_GROUPS = tuple(tuple(row.split()) for row in (
     'widow widowhood',
     'willing willingly willingness',
     'winepress winepressing',
+    'wide width',
+    'wise wiser wisest wisely wisdom',
     'wonder wonderful wonderfully',
+    'wood wooden',
     'world worldly',
     'worship worshipper',
     'worth worthy worthily',
@@ -451,6 +476,7 @@ RELATED_WORD_GROUPS = tuple(tuple(row.split()) for row in (
     'wrong wrongly wrongness',
     'young younger youngest',
     'youth youthful',
+    'zeal zealous zealously',
 ))
 assert all(len(group) >= 2 and len(set(group)) == len(group) for group in RELATED_WORD_GROUPS)
 assert len(set(RELATED_WORD_GROUPS)) == len(RELATED_WORD_GROUPS)

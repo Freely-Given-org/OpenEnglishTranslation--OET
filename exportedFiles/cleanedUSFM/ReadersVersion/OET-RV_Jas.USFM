@@ -1,4 +1,4 @@
-\id JAS - Open English Translation—Readers’ Version (OET-RV) v0.1.51
+\id JAS - Open English Translation—Readers’ Version (OET-RV) v0.1.52
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 JAM
@@ -31,7 +31,7 @@
 \rem NOTE: This USFM file was exported from the ESFM source file with some loss of features, so don’t edit this derived file.
 \c 1
 \p
-\v 1 \add This letter is from\add* Yacob, a slave for \nd God\nd* and for \add the\add* \nd master Yeshua the messiah\nd*. \add It’s written\add* to the tribes who have ended up \add dispersed\add* \add into many nations\add*:\x + \xo 1:1: \xt Mat 13:55; Mrk 6:3; Acts 15:13; Gal 1:19.\x* Greetings.
+\v 1 \add This letter is from\add* Yacob,\x + \xo 1:1: \xt Mat 13:55; Mrk 6:3; Acts 15:13; Gal 1:19.\x* a slave for \nd God\nd* and for \add the\add* \nd master Yeshua the messiah\nd*. \add It’s written\add* to the tribes who have ended up \add dispersed\add* \add into many nations\add*: Greetings.
 \s1 Gaining endurance and requesting wisdom
 \p
 \v 2 Be cheerful my \add fellow believers\add*, when you face a range of difficult situations,
@@ -75,7 +75,7 @@
 \p
 \v 1 My dear \add brothers and sisters\add*, as you live out your faith in our honoured \nd master Yeshua the messiah\nd*, don’t show favouritism to others.
 \v 2 For \add example\add*, if a man in nicely cut clothes and wearing an expensive gold ring came into to your meeting as well as a poor man in filthy clothes
-\v 3 and you told the well-dressed one, ‘You sit here in this good chair,’ while telling the poor man, ‘You stand over here,’ or ‘You sit here on the mat,’
+\v 3 and you told the well-dressed one, ‘You sit here in this good chair,’ while telling the poor \add man\add*, ‘You stand over here,’ or ‘You sit here on the mat,’
 \v 4 wouldn’t that discrimination show that you have judged them with evil motives.
 \v 5 Listen my dear \add brothers and sisters\add*, didn’t \nd God\nd* chose the poor in this world to be rich in faith and participants in the kingdom which he promises to those who love him?
 \v 6 But you dishonour the poor, even though it’s the wealthier people who oppress you and bring court cases against you.
@@ -85,7 +85,7 @@
 \v 8 However if you are obeying the golden law, then when you love your neighbour as yourself,\x + \xo 2:8: \xt Lev 19:18.\x* you’ll be doing well according to the \add scriptures\add*.
 \v 9 But if you’re showing favouritism, then you’re all sinning by breaking the law.
 \v 10 Because anyone who tries to keep the law but slips up in one area, they’re still guilty of breaking the law.
-\v 11 The same \add God\add* who said, ‘Don’t commit adultery,’ also said, ‘Don’t murder,’\x + \xo 2:11: a \xt Exo 20:14; Deu 5:18; \xo b \xt Exo 20:13; Deu 5:17.\x* so if you’re not committing adultery but you murder someone, then you’ve broken the law.
+\v 11 The same \add God\add* who said, ‘Don’t commit adultery,’\x + \xo 2:11: \xt Exo 20:14; Deu 5:18.\x* also said, ‘Don’t murder,’\x + \xo 2:11: \xt Exo 20:13; Deu 5:17.\x* so if you’re not committing adultery but you murder someone, then you’ve broken the law.
 \v 12 So speak and live your life knowing that you’re going to be judged by the law that gives freedom,
 \v 13 because judgement will be dispensed without mercy to \add those\add* who haven’t been putting mercy into practice. Yes, mercy wins out over judgement.
 \s1 Faith in action
@@ -100,7 +100,7 @@
 \v 20 But the vain person \add still\add* wants to know if faith without good deeds is wasted?
 \v 21 Wasn’t our ancestor Abraham considered right with God due to \add his\add* \em actions\em* when he offered up his son Isaac on the altar?\x + \xo 2:21: \xt Gen 22:1-14.\x*
 \v 22 So his faith was working together with his actions, and it was by his actions that his faith was perfected.
-\v 23 This fulfilled the scripture that says, ‘Abraham believed in \nd God\nd* and so he was consider to \add be right\add* with God, and was called a friend \nd of God\nd*.’\x + \xo 2:23: a \xt Gen 15:6; \xo b \xt 2Ch 20:7; Isa 41:8.\x*
+\v 23 This fulfilled the scripture that says, ‘Abraham believed in \nd God\nd* and so he was consider to \add be right\add* with God,\x + \xo 2:23: \xt Gen 15:6.\x* and was called a friend \nd of God\nd*.’\x + \xo 2:23: \xt 2Ch 20:7; Isa 41:8.\x*
 \v 24 So you can see that a person is considered right with God due to \add his\add* actions, and not just by \add their\add* ‘faith’.
 \v 25 Similarly the prostitute Rahab was made right by \add her\add* actions when she welcomed the \add Hebrew\add* messengers and then helped them get away by a different route.\x + \xo 2:25: \xt Josh 2:1-21.\x*
 \v 26 Just like a body is dead once the spirit has departed, so too faith is dead if it’s not demonstrated by good deeds.
@@ -109,7 +109,7 @@
 \p
 \v 1 My \add brothers and sisters\add*, not everyone should desire to be a teacher because we know that us teachers \add will be judged\add* more strictly.
 \v 2 We all stumble in many ways. If there was someone who never said anything wrong, this person would be perfect and also able to have self-control over their entire body.
-\v 3 With horses, we can put the \add bridle\add* in it’s \add mouth\add* so we can make them do what we want, and so we can direct the whole animal.
+\v 3 With \add a horse\add*, we can put \add a bridle\add* into its \add mouth\add* so we can make them do what we want, and so we can direct the whole animal.
 \v 4 Similarly, even huge ships that are being driven on by strong winds are controlled by a small rudder and can be steered wherever the captain desires.
 \v 5 So too the tongue is only small but can make extensive claims.
 \p Yes, a tiny flame can ignite an entire forest
@@ -136,7 +136,7 @@
 \v 3 and when you all do ask, it doesn’t get answered because you ask with wrong \add motives\add*—trying get what you want to spend on your own wants.
 \v 4 You’re just like prostitutes. Don’t you realise that if you befriend the world then you’re opposing \nd God\nd*, so anyone who befriends the world makes themself an enemy \nd of God\nd*.
 \v 5 Do you think that the scripture means nothing when it says, ‘\add God’s\add* \nd spirit\nd* jealously longs to live in us’?
-\v 6 However, he’s good at giving grace so that’s why it says, ‘\nd God\nd* opposes proud people but gives grace to humble ones.’\x + \xo 4:6: \xt Prv 3:34 (LXX).\x*
+\v 6 However, he’s good at giving grace so that’s why it says, ‘\nd God\nd* opposes proud \add people\add* but gives grace to humble ones.’\x + \xo 4:6: \xt Prv 3:34 (LXX).\x*
 \v 7 So strive then \nd to\nd* do what \nd God\nd* wants of you. Resist the devil and he will flee away from you.
 \v 8 When you all approach \nd God\nd*, he will move closer to you. So keep your hands clean you sinners, and keep your hearts pure you who can’t make up your minds about God.
 \v 9 Be miserable, and mourn and weep. Change your laughing into crying and your happiness into sadness
@@ -155,7 +155,7 @@
 \c 5
 \s1 The bad ending of wealthy prigs
 \p
-\v 1 So you wealthy people, come and cry about the miseries that are about to hit you all.
+\v 1 So you wealthy \add people\add*, come and cry about the miseries that are about to hit you all.
 \v 2 Your riches have rotted and your clothes have become moth-eaten.\x + \xo 5:2-3: \xt Mat 6:19.\x*
 \v 3 Your gold and silver has corroded, and that corrosion will speak out against you and will eat away your bodies like fire because you stored up wealth in this final age.
 \v 4 The unpaid \add wages\add* of the workers who harvested your fields are crying out\x + \xo 5:4: \xt Deu 24:14-15.\x* and the desperate requests of those harvesters have been heard by army commander \nd Yahweh\nd*.
@@ -168,17 +168,17 @@
 \p
 \v 9 And don’t moan about each other, my \add fellow believers\add*, so that you all won’t be judged for it, because truly, the judge is just outside about to come in the doors.
 \v 10 Look at the prophets who spoke out \nd the\nd* messages from \nd Yahweh\nd*—they’re good \add examples\add* of suffering and patience \add for you to follow\add*
-\v 11 and now we consider them as heroes for their endurance. You all heard about Yob’s endurance and then you yourselves witnessed what happened to \add Yeshua\add* \add our\add* \nd master\nd*,\x + \xo 5:11: a \xt Yob 1:21-22; 2:10; \xo b \xt Psa 103:8.\x* and you saw his compassion and mercy.
+\v 11 and now we consider them as heroes for their endurance. You all heard about Yob’s endurance\x + \xo 5:11: \xt Yob 1:21-22; 2:10.\x* and then you yourselves witnessed what happened to \add Yeshua\add* \add our\add* \nd master\nd*, and you saw his compassion and mercy.\x + \xo 5:11: \xt Psa 103:8.\x*
 \p
 \v 12 But most importantly, \add brothers and sisters\add*, don’t swear by heaven or earth or by any other kind of oath but \add simply\add* be honest so that ‘yes’ means yes and ‘no’ means no,\x + \xo 5:12: \xt Mat 5:34-37.\x* then you won’t end up getting \add judged\add*.
 \s1 The power of prayer and restoration
 \p
 \v 13 Is anyone among you going through hard times? If so, they should be praying. Is anyone feeling cheerful? If so, they should be singing praises.
-\v 14 Is anyone among you sick? If so, that person should call the leaders \add of the assembly\add* and get them to anoint them with oil and to pray for them\x + \xo 5:14: \xt Mrk 6:13.\x* in the \add name and authority\add* of \add Yeshua\add* \add our\add* \nd master\nd*.
+\v 14 Is anyone among you sick? If so, that person should call the leaders \add of the assembly\add* and get them to anoint them with oil\x + \xo 5:14: \xt Mrk 6:13.\x* and to pray for them in the \add name and authority\add* of \add Yeshua\add* \add our\add* \nd master\nd*.
 \v 15 Then that declaration of faith will save the weak person and the \nd master\nd* will lift him/her up, and if they’ve sinned, then \add their\add* sins will also be forgiven.
 \v 16 So confess your sins to each other and pray for each other so that all of you can be healed, because when an obedient believer prays, it has a real effect.
 \v 17 Eliyah was a person just similar to us, and when he prayed for the rain to stop, it stopped, and it didn’t rain again for three and a half years.\x + \xo 5:17: \xt 1Ki 17:1; 18:1.\x*
 \v 18 Then he prayed again, and the rain came down from the sky and the land sprouted and started to bear fruit again.\x + \xo 5:18: \xt 1Ki 18:42-45.\x*
 \p
 \v 19 My \add fellow believers\add*, if any of you have wandered from the truth and someone helps them back,
-\v 20 then you should know that someone who helps a sinner to come back from their deceitful \add ways\add* will be saving their soul from death,\x + \xo 5:20: \xt Prv 10:12; 1Pe 4:8.\x* and \add their\add* many sins can be forgiven.
+\v 20 then you should know that someone who helps a sinner to come back from their deceitful \add ways\add* will be saving their soul from death, and \add their\add* many sins can be forgiven.\x + \xo 5:20: \xt Prv 10:12; 1Pe 4:8.\x*

@@ -14,6 +14,7 @@
 
 """
 CHANGELOG:
+    2026-10-22 Use BOS source profiles for mapped metadata, passages and export/navigation.
     2023-08-07 Move MRK before MAT
     2023-08-16 Handle gloss pre/helper/post markings from updated wordtables
     2023-08-21 Add lemma pages
@@ -30,6 +31,8 @@ CHANGELOG:
 from gettext import gettext as _
 from typing import List, Tuple, Set, Optional
 from pathlib import Path
+from oet_html_links import scripture_link
+from oet_html_alignment import render_editorial_brackets
 from datetime import datetime
 import logging
 import os
@@ -47,7 +50,7 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-10-06' # by RJH
+LAST_MODIFIED_DATE = '2026-10-22' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-LV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-LV ESFM to simple HTML"
 PROGRAM_VERSION = '0.90'
@@ -994,9 +997,8 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
     book_html = book_html.replace( 'ə', '<span class="schwa">ə</span>' )
     if BBB in BOOKLIST_OT39: # Hebrew direct object markers (DOMs)
         book_html = book_html.replace( 'DOM', '<span class="dom">DOM</span>' ) \
-                        .replace( '[was]', '<span class="addCopula">was</span>' ) \
-                        .replace( '[', '<span class="add">' ) \
-                        .replace( ']', '</span>' )
+                        .replace( '[was]', '<span class="addCopula">was</span>' )
+        book_html = render_editorial_brackets(book_html)
 
     # All done
     return ( book_start_html,
@@ -1070,7 +1072,14 @@ def convert_tagged_ESFM_words_to_links( BBB:str, book_html:str, word_table:List[
         except IndexError:
             logging.critical( f"convert_tagged_ESFM_words_to_links( {BBB} ) index error: word='{match.group(1)}' {row_number=}/{len(word_table)} entries")
             assert False, "We want to stop here"
-        book_html = f'{book_html[:match.start()]}<a title="{greek}" href="W/{match.group(2)}.html">{match.group(1)}</a>{book_html[match.end():]}'
+        word = match.group(1)
+        # Keep paired editorial brackets inside the anchor (tear[s]), but
+        # move an unmatched opening/closing bracket outside it ([who ...]).
+        prefix = '[' * max(0, word.count('[')-word.count(']'))
+        suffix = ']' * max(0, word.count(']')-word.count('['))
+        assert word.startswith(prefix) and word.endswith(suffix), (BBB,word)
+        word = word[len(prefix):len(word)-len(suffix) if suffix else None]
+        book_html = f'{book_html[:match.start()]}{prefix}<a title="{greek}" href="W/{match.group(2)}.html">{word}</a>{suffix}{book_html[match.end():]}' 
         searchStartIndex = match.end() + 25 # We've added at least that many characters
         count += 1
     book_html = book_html.replace( 'SSsupP', '<sup>' ).replace( 'ESsupP', '</sup>' ) # Restores our 'hidden' HTML markup
@@ -1365,7 +1374,7 @@ def make_NT_lemma_pages( inputFolderPath:Path, outputFolderPath:Path, word_table
             oTidyMorphology = oMorphology[4:] if oMorphology.startswith('····') else oMorphology
             # if other_count == 0:
             translation = '<small>(no English gloss here)</small>' if oOETGlossWords=='-' else f'''English gloss=‘<b>{oFormattedGlossWords.replace('_','<span class="ul">_</span>')}</b>’'''
-            html = f'''{html}\n<p class="lemmaLine"><a title="View OET {oTidyBBB} text" href="../OET/byC/{oBBB}_C{oC}.html#C{oC}V{oV}">OET {oTidyBBB} {oC}:{oV}</a> Greek word=<b><a title="Go to word page" href="../W/{oN}.html">{oGreek}</a></b> ({transliterate_Greek(oGreek)}) <small>Morphology={oTidyMorphology}</small> {translation} <a title="Go to Statistical Restoration Greek page" href="https://GreekCNTR.org/collation/?{CNTR_BOOK_ID_MAP[oBBB]}{oC.zfill(3)}{oV.zfill(3)}">SR GNT {oTidyBBB} {oC}:{oV} word {oW}</a></p>'''
+            html = f'''{html}\n<p class="lemmaLine"><a title="View OET {oTidyBBB} text" href="../{oBBB}.html#C{oC}V{oV}">OET {oTidyBBB} {oC}:{oV}</a> Greek word=<b><a title="Go to word page" href="../W/{oN}.html">{oGreek}</a></b> ({transliterate_Greek(oGreek)}) <small>Morphology={oTidyMorphology}</small> {translation} <a title="Go to Statistical Restoration Greek page" href="https://GreekCNTR.org/collation/?{CNTR_BOOK_ID_MAP[oBBB]}{oC.zfill(3)}{oV.zfill(3)}">SR GNT {oTidyBBB} {oC}:{oV} word {oW}</a></p>'''
             # other_count += 1
             # if other_count >= 120:
             #     html = f'{html}\n<p class="summary">({len(thisWordNumberList)-other_count-1:,} more examples not listed)</p>'
@@ -1504,31 +1513,16 @@ def livenMD( mdText:str ) -> str:
     mdText = mdText.replace( '\n\n', '</p><p>' ).replace( '\n', '<br>' )
     mdText = mdText.replace( "'", '’' ) # Improve apostrophes
 
-    # Now liven links
-    count = 0
-    searchStartIndex = 0
-    while True: # Look for links that we could maybe liven
-        match = mdLinkRegex.search( mdText, searchStartIndex )
-        if not match:
-            break
-        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {match=} {match.groups()=}" )
-        readableRef, mdLinkTarget = match.group(1), match.group(2)
-        mdLinkTarget = mdLinkTarget.split( '#', 1 )[1]
-        if mdLinkTarget.count( '.' ) == 2: # Then it's almost certainly an OSIS B/C/V ref
-            OSISBkCode, C, V = mdLinkTarget.split( '.' )
-            BBB = bos_books_codes_py.osis_book_code_to_bos_book_code( OSISBkCode )
-            ourLinkTarget = f'../{BBB}.html#C{C}V{V}'
-        else:
-            assert mdLinkTarget.count( '.' ) == 1 # Then it's almost certainly an OSIS B/C ref
-            OSISBkCode, C = mdLinkTarget.split( '.' )
-            BBB = bos_books_codes_py.osis_book_code_to_bos_book_code( OSISBkCode )
-            ourLinkTarget = f'../{BBB}.html#C{C}'
-        ourLink = f'<a href="{ourLinkTarget}">{readableRef}</a>'
-        mdText = f'''{mdText[:match.start()]}{ourLink}{mdText[match.end():]}'''
-        searchStartIndex = match.end() + 10 # We've added at least that many characters
-        count += 1
-    return mdText
+    def replace_link(match):
+        readableRef, target = match.groups()
+        # Theographic's biblical references use KJV coordinates.
+        osis = target.split('#',1)[1].split('.')
+        if len(osis) not in (2,3):
+            raise ValueError(f'Unsupported Theographic link {target!r}')
+        book = bos_books_codes_py.osis_book_code_to_bos_book_code(osis[0])
+        return scripture_link('KJV','OET-LV',book,osis[1],osis[2] if len(osis)==3 else None,readableRef)
+    return mdLinkRegex.sub(replace_link,mdText)
+
 # end of convert_OET-LV_to_simple_HTML.livenMD function
 
 

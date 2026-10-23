@@ -1,4 +1,4 @@
-\id MAT - Open English Translation—Readers' Version (OET-RV) v0.5.18
+\id MAT - Open English Translation—Readers' Version (OET-RV) v0.5.19
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 MAT
@@ -36,7 +36,7 @@
 \v 2 Abraham¦9 \add ≈was¦10 the¦10 father¦10 of¦10\add* Isaac¦12, Isaac¦13 \add ≈the¦15 father¦15 of¦15\add* Yacob¦17 (Grk: \add !Yakob\add*), Yacob¦18 \add ≈the¦20 father¦20 of¦20\add* Yehudah¦22 (Grk: \add !Youdas\add*) and¦23 his¦26 brothers¦25.
 \v 3 Yehudah¦27 \add ≈was¦29 the¦29 father¦29 of¦29\add* Perez¦31 (Grk: \add !Fares\add*) and¦32 Zerah¦34 (Grk: \add !Zara\add*) through Tamar¦37 (Grk: \add !Thamar\add*), Perez¦38 \add ≈the¦40 father¦40 of¦40\add* Hezron¦42 (Grk: \add !Hezrom\add*), Hezron¦43 \add ≈the¦45 father¦45 of¦45\add* Aram¦47,
 \v 4 Aram¦48 \add ≈the¦50 father¦50 of¦50\add* Aminadab¦52, Aminadab¦53 \add ≈the¦55 father¦55 of¦55\add* Nahshon¦57 (Grk: \add !Naasson\add*), Nahshon¦58 \add ≈the¦60 father¦60 of¦60\add* Salmon¦62,
-\v 5 Salmon¦63 \add ≈the¦65 father¦65 of¦65\add* Boaz¦67 (Grk: \add !Boes\add*) through Rahab¦70, Boaz¦71 \add ≈the¦73 father¦73 of¦73\add* Obed¦75 (Grk: \add !Yobed\add*) through Ruth¦78 (Grk: \add !Routh\add*), and¦80 Obed¦79 \add ≈the¦81 father¦81 of¦81\add* Yishay¦83 \add !(Jesse¦83\add*, Grk: \add !Yessai)\add*,
+\v 5 Salmon¦63 \add ≈the¦65 father¦65 of¦65\add* Boaz¦67 (Grk: \add !Boes\add*) through Rahab¦70, Boaz¦71 \add ≈the¦73 father¦73 of¦73\add* Obed¦75 (Grk: \add !Yobed\add*) through Ruth¦78 (Grk: \add !Routh\add*),\x + \xo 1:5: \xt Rut 4:13,17.\x* and¦80 Obed¦79 \add ≈the¦81 father¦81 of¦81\add* Yishay¦83 \add !(Jesse¦83\add*, Grk: \add !Yessai)\add*,
 \v 6 and¦85 Yishay¦84 \add ≈the¦86 father¦86 of¦86\add* David¦88 the¦89 king¦90.
 \p David¦91 \add ≈was¦95 the¦95 father¦95 of¦95\add* Solomon¦97 (Grk: \add !Solomona\add*) through Uriah's¦101 (Grk: \add !Ourias\add*) wife¦99,
 \v 7 Solomon¦102 \add ≈was¦104 the¦104 father¦104 of¦104\add* Rehoboam¦106 (Grk: \add !Roboam\add*), Rehoboam¦107 \add ≈the¦109 father¦109 of¦109\add* Abiyah (Grk: \add !Abia\add*), Abiyah \add ≈the¦114 father¦114 of¦114\add* Asa (Grk: \add !Asaf\add*),
@@ -49,17 +49,17 @@
 \v 13 Zerubbabel \add ≈was¦196 the¦196 father¦196 of¦196\add* Abiud¦199 (Grk: \add !Abioud\add*), Abiud¦200 \add ≈was¦202 the¦202 father¦202 of¦202\add* Eliakim¦204, and¦206 Eliakim¦205 \add ≈the¦207 father¦207 of¦207\add* Azor¦209,
 \v 14 Azor¦210 \add ≈the¦212 father¦212 of¦212\add* Zadok¦214, Zadok¦215 \add ≈the¦217 father¦217 of¦217\add* Achim¦219, Achim¦220 \add ≈the¦222 father¦222 of¦222\add* Eliud¦224 (Grk: \add !Elioud\add*),
 \v 15 Eliud¦225 \add ≈the¦227 father¦227 of¦227\add* Eleazar¦229, Eleazar¦230 \add ≈the¦232 father¦232 of¦232\add* Matthan¦234, Matthan¦235 \add ≈the¦237 father¦237 of¦237\add* Yacob¦239 (Grk: \add !Yakob\add*),
-\v 16 Yacob¦240 \add ≈the¦242 father¦242 of¦242\add* Yosef¦244, the¦245 husband¦246 of¦247 Maria¦247 (Grk: \add !Marias\add*) who¦249 \nd Yeshua¦251\nd* (Grk: \add !Yaysous\add*), the¦252 \nd one\nd* called¦253 \nd the¦254 messiah¦254\nd* was born¦250 to.
+\v 16 Yacob¦240 \add ≈the¦242 father¦242 of¦242\add* Yosef¦244, the¦245 husband¦246 of¦247 Maria¦247 (Grk: \add !Marias\add*) who¦249 \nd Yeshua¦251\nd* (Grk: \add !Yaysous\add*), the¦252 \nd one\nd* called¦253 \nd the¦254 messiah¦254\nd* was¦250 born¦250 to.
 \p
 \v 17 So¦256 the¦257 generations¦258 from¦259 Abraham¦260 to¦261 David¦262 \add numbered\add* fourteen¦264, from¦266 David¦267 to the¦269 deportation¦270 to¦271 Babylon¦271 there were fourteen¦273 generations¦272, and¦274 from¦275 the¦276 deportation¦277 to¦278 Babylon¦278 to¦279 the¦280 \nd messiah¦281\nd* there were fourteen¦283 generations¦282.
 \s1 The messiah's birth
 \rem /s1 The Birth of Jesus the Messiah; The Birth of Jesus Christ; The birth and infancy of Jesus
 \r (Luke 1:26-38; 2:1-7)
 \p
-\v 18 \add Now\add* this is how the¦289 birth¦290 \nd of¦287 Yeshua¦287\nd* \add ≈came about\add*: Maria¦299 his¦298 mother¦297 was¦294 engaged¦294 to¦301 Yosef¦301. But before¦302 they came¦304 together¦304, she¦306 was¦306 found¦306 to be pregnant¦308 through¦310 \add the work of\add* \nd the¦311\nd* holy¦312 \nd spirit¦311\nd*.\x + \xo 1:18: \xt Luk 1:27.\x*
+\v 18 \add Now\add* this is how the¦289 birth¦290 \nd of¦287 Yeshua¦287\nd* \add ≈came about\add*: Maria¦299 his¦298 mother¦297 was¦294 engaged¦294 to¦301 Yosef¦301.\x + \xo 1:18: \xt Luk 1:27.\x* But before¦302 they came¦304 together¦304, she¦306 was¦306 found¦306 to be pregnant¦308 through¦310 \add the work of\add* \nd the¦311\nd* holy¦312 \nd spirit¦311\nd*.
 \v 19 \add ≈But¦314\add* her¦317 husband¦316 \add to be\add*, Yosef¦313, was¦319 a \add ≈godly¦318\add* \add >man\add*, and¦320 not¦321 wishing¦322 to¦324 disgrace¦324 \add @Maria¦323\add*, he \add ≈decided to¦328 quietly¦327 divorce¦328\add* her¦329.
 \v 20 But¦331 as he was¦333 pondering¦333 that, one of¦332 Yahweh's \add #messengers¦335\add* appeared¦340 to¦341 him¦341 in¦338 a¦339 dream¦339 and told¦342 him, “Yosef¦343, descendant¦344 of¦345 \add King\add* David¦345, don't¦346 be¦347 afraid¦347 to¦348 marry¦348 Maria¦349, because¦354 the¦353 baby in¦355 her¦356 has¦357 been¦357 conceived by \nd the¦359\nd* holy¦361 \nd spirit¦359\nd*.
-\v 21 \add In due course\add* she'll¦363 have¦363 a¦365 son¦365 and¦366 you'll¦367 \add ≈name¦369\add* him¦370 \nd Yeshua¦371\nd*, because¦373 he'll¦372 save¦374 his¦377 people¦376 from¦378 their¦381 sins¦380.”\x + \xo 1:21: \xt Luk 1:31.\x*
+\v 21 \add In due course\add* she'll¦363 have¦363 a¦365 son¦365 and¦366 you'll¦367 \add ≈name¦369\add* him¦370 \nd Yeshua¦371\nd*,\x + \xo 1:21: \xt Luk 1:31.\x* because¦373 he'll¦372 save¦374 his¦377 people¦376 from¦378 their¦381 sins¦380.”
 \p
 \v 22 \add ≈Now\add* all¦384 that¦382 happened in¦386 \add ≈fulfilment¦387\add* of what \nd Yahweh¦392\nd* had¦389 said¦389 through¦393 the¦395 prophet¦396,
 \v 23 “Listen¦398, the¦399 virgin¦400 will¦403 \add ≈get pregnant¦402\add* and¦404 she'll have¦405 a¦406 son¦406, and¦407 they'll¦408 call¦408 him¦412 Immanuel¦413 \add (in Hebrew)\add* which¦414 \add ≈means¦416\add* ‘\nd God¦420\nd* with¦417 us¦418.’ ”\x + \xo 1:23: \xt Isa 7:14 (LXX).\x*
@@ -76,12 +76,12 @@
 \v 3 \add ≈Now when¦502\add* King¦505 Herod¦506 heard¦501 that, he was¦507 upset¦507, and¦508 all¦509 of Yerushalem¦510 \add ≈as well\add*.
 \v 4 He gathered¦514 together¦514 all¦515 the¦516 chief¦517 priests¦517 and¦518 \add ≈religious¦519 teachers¦519\add* and asked¦522 them¦524 where¦525 the¦526 \nd Messiah¦527\nd* was¦528 \add expected\add* to be¦528 born¦528.
 \p
-\v 5 “It'll be in¦533 Bethlehem¦534 in Yudea¦536,” they told¦531 him¦532, “because¦538 the¦541 prophet¦542 wrote¦539:\x + \xo 2:5-6: \xt Mic 5:2.\x*
+\v 5 “It'll be in¦533 Bethlehem¦534 in Yudea¦536,” they told¦531 him¦532, “because¦538 the¦541 prophet¦542 wrote¦539:
 \q1
 \v 6 ‘You¦544, Bethlehem¦545 in Yehudah's¦549 \add ≈territory¦546\add*,
 \q2 are¦555 not the¦557 most insignificant¦554 of¦559 the Yehudah's¦559 leaders¦558,
 \q1 because¦563 a leader will¦565 come¦565 from you
-\q2 who¦567 will¦568 guide¦568 my¦571 people¦570 Yisrael¦573.’ ”
+\q2 who¦567 will¦568 guide¦568 my¦571 people¦570 Yisrael¦573.’ ”\x + \xo 2:6: \xt Mic 5:2.\x*
 \p
 \v 7 Then¦574 Herod¦575 sent for the \add ≈watchers of signs\add* and \add met\add* secretly¦576 with them to determine¦580 when the star¦588 had \add first\add* appeared¦587.
 \v 8 Then¦589 he sent¦590 them¦591 \add on\add* to¦592 Bethlehem¦593 \add ≈with these instructions\add*: “Go¦596 on and carefully investigate¦598 about the¦601 child¦602, and¦605 when¦604 you¦606 find¦606 him, report¦609 \add back\add* to¦610 me¦610 so¦611 that¦611 I can also¦612 come¦613 and \add ≈worship¦614\add* him¦615.”
@@ -105,9 +105,9 @@
 \p
 \v 17 That fulfilled¦843 what had¦845 been¦845 spoken¦845 through¦848 the¦850 prophet¦851 Yirmeyah¦849 \add !(Jeremiah¦849)\add*, who said¦852:
 \q1
-\v 18 The sound¦853 of terrible weeping¦859 and¦860 mourning¦861 was heard¦856 in Ramah¦855;\x + \xo 2:18: \xt Jer 31:15.\x*
+\v 18 The sound¦853 of terrible weeping¦859 and¦860 mourning¦861 was¦856 heard¦856 in Ramah¦855;
 \q1 Rahel¦863 \add !(Rachel¦863)\add* weeping¦864 for¦865 her¦867 children¦866, and¦868 \add ≡she\add* didn't¦869 want¦870 to¦872 be¦872 comforted¦872,
-\q2 because¦873 \add @her¦875 children¦875\add* \add ≈were¦875 no more\add*.
+\q2 because¦873 \add @her¦875 children¦875\add* \add ≈were¦875 no more\add*.\x + \xo 2:18: \xt Jer 31:15.\x*
 \s1 Yosef's family return to Nazaret
 \rem /s1 The Return from Egypt; The Return to Nazareth
 \p
@@ -116,26 +116,26 @@
 \v 21 \add ≈So¦917\add* \add @Yosef¦916\add* \add ≈packed¦919 up¦919\add* and took¦920 the¦921 child¦923 and¦925 his¦928 mother¦927 and¦929 went¦930 \add back\add* to¦932 Yisrael¦935.
 \p
 \v 22 However, when he heard¦936 that¦938 Arkelaos¦939 was¦940 \add now\add* reigning¦940 over¦943 Yudea¦943 (instead¦944 of¦944 his¦948 father¦947 Herod¦949), and¦954 \add also\add* having¦953 been¦953 warned¦953 in¦955 a¦956 dream¦956, he¦957 left \add Yudea\add* and went¦952 \add north\add* to¦958 the Galilee¦962 area¦960.
-\v 23 \add ≈Once he got there\add*, he settled¦965 into¦966 a¦967 town¦967 \add ≈called¦968\add* Nazaret¦969, and so¦970 what had¦973 been¦973 spoken¦973 through¦975 the¦976 prophets¦977 would be fulfilled¦971: “He'll¦980 be¦980 called¦980 a¦979 Nazarene¦979.”\f + \fr 2:23 \ft This is not a specific quote from the Hebrew Scriptures, but note that Matthew does say ‘the prophet\+bd s\+bd*’ (not ‘the prophet’). This could be: ¹A play on Hebrew ‘נצר’ from Yeshayah/Isaiah 11:1 where ‘branch/shoot’ (netser) is similar to ‘Natsaret’ (Nazaret/natsrat), ²a play on Shimshon (Samson) the ‘Nazirite’ (נְזִיר) from Heroes (Judges) 13:5,7, or ³just a slur on Yeshua being from insignificant Nazaret (Nazareth) as per Yohan (John) 1:46.\f*\x + \xo 2:23: \xt Mrk 1:24; Luk 2:39; Yhn 1:45.\x*
+\v 23 \add ≈Once he got there\add*, he settled¦965 into¦966 a¦967 town¦967 \add ≈called¦968\add* Nazaret¦969, and so¦970 what had¦973 been¦973 spoken¦973 through¦975 the¦976 prophets¦977 would be¦971 fulfilled¦971: “He'll¦980 be¦980 called¦980 a¦979 Nazarene¦979.”\f + \fr 2:23 \ft This is not a specific quote from the Hebrew Scriptures, but note that Matthew does say ‘the prophet\+bd s\+bd*’ (not ‘the prophet’). This could be: ¹A play on Hebrew ‘נצר’ from Yeshayah/Isaiah 11:1 where ‘branch/shoot’ (netser) is similar to ‘Natsaret’ (Nazaret/natsrat), ²a play on Shimshon (Samson) the ‘Nazirite’ (נְזִיר) from Heroes (Judges) 13:5,7, or ³just a slur on Yeshua being from insignificant Nazaret (Nazareth) as per Yohan (John) 1:46.\f*\x + \xo 2:23: \xt Mrk 1:24; Luk 2:39; Yhn 1:45.\x*
 \c 3
 \s1 Yohan-the-immerser's preaching
 \rem /s1 The Proclamation of John the Baptist; John the Baptist and Jesus; The Preaching of John the Baptist; John the Baptist Prepares the Way
 \r (Mark 1:1-8; Luke 3:1-18; Yhn 1:19-28)
 \p
 \v 1 \add ≈That was the¦983 time¦984 when¦982\add* Yohan-the-immerser started¦986 preaching¦990 in¦991 the¦992 Yudean wilderness¦993,
-\v 2 telling¦997 \add everyone\add*,\x + \xo 3:2: \xt Mat 4:17; Mrk 1:15.\x* “\add ≈Turn¦998 from¦998 your sins\add*, because¦1000 the¦1001 heavenly¦1004 kingdom¦1002 is close¦999.”
-\v 3 This¦1005 is¦1007 the¦1008 \add >man\add* that the¦1013 prophet¦1014 Yeshayah¦1012 \add !(Isaiah¦1012)\add* was talking¦1015 about \add when he wrote\add*:\x + \xo 3:3: \xt Isa 40:3 (LXX).\x*
+\v 2 telling¦997 \add everyone\add*, “\add ≈Turn¦998 from¦998 your sins\add*, because¦1000 the¦1001 heavenly¦1004 kingdom¦1002 is close¦999.”\x + \xo 3:2: \xt Mat 4:17; Mrk 1:15.\x*
+\v 3 This¦1005 is¦1007 the¦1008 \add >man\add* that the¦1013 prophet¦1014 Yeshayah¦1012 \add !(Isaiah¦1012)\add* was talking¦1015 about \add when he wrote\add*:
 \q1 ‘The¦1016 voice¦1016 of¦1017 \add >one\add* shouting¦1017 in¦1018 the¦1019 wilderness¦1020
 \q2 prepare¦1021 the¦1022 road¦1023 for \nd Yahweh¦1024\nd*;
-\q2 straighten¦1025 his¦1029 paths¦1028.’
+\q2 straighten¦1025 his¦1029 paths¦1028.’\x + \xo 3:3: \xt Isa 40:3 (LXX).\x*
 \p
-\v 4 Yohan¦1033 himself¦1030 wore clothes¦1036 made from¦1038 \add coarse\add* camel¦1040 \add #hair¦1039\add*, with a¦1042 leather¦1043 belt¦1042 around¦1044 his waist¦1046, and¦1049 \add ≈he lived¦1050 on¦1050\add* locusts¦1054 and¦1055 wild¦1057 honey¦1056.\x + \xo 3:4: \xt 2Ki 1:8.\x*
+\v 4 Yohan¦1033 himself¦1030 wore clothes¦1036 made from¦1038 \add coarse\add* camel¦1040 \add #hair¦1039\add*, with a¦1042 leather¦1043 belt¦1042 around¦1044 his waist¦1046,\x + \xo 3:4: \xt 2Ki 1:8.\x* and¦1049 \add ≈he lived¦1050 on¦1050\add* locusts¦1054 and¦1055 wild¦1057 honey¦1056.
 \v 5 \add People from\add* Yerushalem¦1062 and¦1063 all¦1064 Yudea¦1066 and¦1067 all¦1068 of the¦1069 \add #regions¦1070\add* surrounding¦1070 the¦1071 Yordan¦1072 \add River\add*, went¦1059 out¦1059 \add into the wilderness to listen\add* to¦1060 \add @Yohan¦1061\add*,
 \v 6 ⇔and \add @many\add* confessed¦1081 their¦1084 sins¦1083 and¦1073 \add asked\add* him to immerse¦1074 them in¦1075 the¦1076 river¦1078.
 \p
-\v 7 But¦1086 \add ≈when\add* \add @Yohan\add* saw¦1085 many¦1087 from the party¦1089 of¦1088 the¦1088 Pharisees¦1089 and¦1090 from the Sadducee¦1091 sect¦1091 coming¦1092 for immersion¦1095, he¦1097 told¦1097 them¦1098, “You brood¦1099 of¦1100 snakes¦1100, who¦1101 warned¦1102 you¦1103 all¦1103 to¦1104 flee¦1104 from¦1105 \add &God's¦1106\add* severe¦1108 anger¦1108 that's coming?\x + \xo 3:7: \xt Mat 12:34; 23:33.\x*
+\v 7 But¦1086 \add ≈when\add* \add @Yohan\add* saw¦1085 many¦1087 from the party¦1089 of¦1088 the¦1088 Pharisees¦1089 and¦1090 from the Sadducee¦1091 sect¦1091 coming¦1092 for immersion¦1095, he¦1097 told¦1097 them¦1098, “You brood¦1099 of¦1100 snakes¦1100,\x + \xo 3:7: \xt Mat 12:34; 23:33.\x* who¦1101 warned¦1102 you¦1103 all¦1103 to¦1104 flee¦1104 from¦1105 \add &God's¦1106\add* severe¦1108 anger¦1108 that's coming?
 \v 8 \add ≈Turning¦1116 from your sins\add* \add ≈should be accompanied by\add* \add ≈evidence¦1111 that you've changed\add*.
-\v 9 And¦1117 don't¦1118 think¦1119 that you can just tell¦1120 yourselves¦1122 that you're Abraham's¦1126 \add ≈descendants\add*, because¦1128 I¦1127 can tell¦1127 you¦1129 that¦1130 \nd God¦1133\nd* could¦1131 turn these¦1137 stones¦1136 into¦1138 descendants¦1139 of Abraham¦1141.\x + \xo 3:9: \xt Yhn 8:33.\x*
+\v 9 And¦1117 don't¦1118 think¦1119 that you can just tell¦1120 yourselves¦1122 that you're Abraham's¦1126 \add ≈descendants\add*,\x + \xo 3:9: \xt Yhn 8:33.\x* because¦1128 I¦1127 can tell¦1127 you¦1129 that¦1130 \nd God¦1133\nd* could¦1131 turn these¦1137 stones¦1136 into¦1138 descendants¦1139 of Abraham¦1141.
 \v 10 The¦1146 axe¦1147 has already¦1143 \add ≈been¦1153 placed¦1153 at the¦1149 base¦1150\add* of¦1151 the¦1151 trees¦1152 \add ready\add* to cut¦1161 down any tree¦1156 that's not¦1157 producing¦1158 good¦1160 fruit¦1159, and¦1162 then it'll be¦1166 thrown¦1166 into¦1164 the¦1165 fire¦1165.\x + \xo 3:10: \xt Mat 7:19.\x*
 \v 11 I'm¦1167 immersing¦1172 \add @people\add* in¦1173 water¦1174 \add as a sign that\add* \add ≈they're turning¦1177 away from their sins\add*, but there's \add another\add* one¦1168 coming¦1182 after¦1180 me¦1181 who's greater¦1183 than¦1183 me¦1184—\add ≈so much so that\add* I'm¦1188 not¦1187 even worthy¦1189 to¦1192 carry¦1192 his sandals¦1191. He'll¦1193 immerse¦1195 you¦1194 in¦1196 \nd the¦1197\nd* holy¦1198 \nd spirit¦1197\nd* and¦1199 with¦1200 fire¦1200.
 \v 12 He's \add already\add* \add ≈holding\add* his fork¦1203 so¦1208 that he¦1209 can clear¦1209 his threshing¦1211 floor¦1211—\add he'll work through the pile throwing it into the air, where the breeze will carry\add* the¦1222 chaff¦1224 away, and he'll¦1225 burn¦1225 it with¦1226 unquenchable¦1227 fire¦1226, while the \add heavier grains of\add* wheat¦1216 \add will land in the pile\add* to be brought into¦1218 the¦1219 barn¦1220.”
@@ -176,18 +176,18 @@
 \rem /s1 The Ministry of Jesus Begins; Jesus Begins to Preach; Jesus Begins His Ministry in Galilee; The first disciples; Jesus Begins His Work in Galilee
 \r (Mark 1:14-15; Luke 4:14-15)
 \p
-\v 12 When¦1557 \add @Yeshua\add* heard¦1556 that¦1560 Yohan¦1561 had been¦1563 \add ≈arrested¦1563\add*, he¦1564 withdrew¦1564 \add up\add* to¦1565 Galilee¦1567.\x + \xo 4:12: \xt Mat 14:3; Mrk 6:17; Luk 3:19-20.\x*
-\v 13 Then¦1568 \add ≈he moved from\add* Nazaret¦1572 across to Capernaum¦1576 beside¦1578 the¦1578 lake, in¦1582 the¦1583 regions¦1583 \add that had been given to the tribes\add* of¦1584 Zebulun¦1584 and¦1585 Naftali¦1586,\x + \xo 4:13: \xt Yhn 2:12.\x*
+\v 12 When¦1557 \add @Yeshua\add* heard¦1556 that¦1560 Yohan¦1561 had been¦1563 \add ≈arrested¦1563\add*,\x + \xo 4:12: \xt Mat 14:3; Mrk 6:17; Luk 3:19-20.\x* he¦1564 withdrew¦1564 \add up\add* to¦1565 Galilee¦1567.
+\v 13 Then¦1568 \add ≈he moved from\add* Nazaret¦1572 across to Capernaum¦1576 beside¦1578 the¦1578 lake,\x + \xo 4:13: \xt Yhn 2:12.\x* in¦1582 the¦1583 regions¦1583 \add that had been given to the tribes\add* of¦1584 Zebulun¦1584 and¦1585 Naftali¦1586,
 \v 14 so that¦1587 what had¦1590 been¦1590 written by¦1591 the¦1593 prophet¦1594 Yeshayah¦1592 \add !(Isaiah¦1592)\add* \add ≈would come true\add*,
 \q1
-\v 15 ‘Land¦1597 of¦1598 Zebulun and¦1599 land¦1600 of¦1601 Naftali,\x + \xo 4:15-16: \xt Isa 9:1-2.\x*
+\v 15 ‘Land¦1597 of¦1598 Zebulun and¦1599 land¦1600 of¦1601 Naftali,
 \q2 the way¦1602 of¦1603 the¦1603 sea¦1603 beyond¦1604 the¦1605 Yordan¦1606 \add river\add*;
 \q2 Galilee¦1607 of¦1609 the¦1609 non-Jews.
 \q1
 \v 16 The¦1611 people¦1612 sitting¦1614 in¦1615 darkness¦1617
 \q2 saw¦1622 a¦1621 powerful¦1623 light¦1621,
 \q1 and¦1624 those sitting¦1627 in¦1629 a¦1630 land¦1630 \add ≈under\add* the shadow¦1632 of¦1633 death¦1633
-\q2 had a¦1634 light¦1634 rise¦1635 over them¦1636.’
+\q2 had a¦1634 light¦1634 rise¦1635 over them¦1636.’\x + \xo 4:15-16: \xt Isa 9:1-2.\x*
 \p
 \v 17 From¦1637 then¦1638 \add onwards\add*, \nd Yeshua¦1642\nd* started¦1640 preaching¦1643 and¦1644 telling \add <people\add* to¦1645 \add ≈turn¦1646 from¦1646 their sins\add* because¦1648 the¦1649 heavenly¦1652 kingdom¦1650 is close¦1647.\x + \xo 4:17: \xt Mat 3:2.\x*
 \s1 Yeshua calls his first four followers
@@ -218,17 +218,17 @@
 \rem /s1 True Happiness
 \rem /r (Luke 6.20-23)
 \p
-\v 3 “\wj Those who are¦1868 poor¦1870 in¦1871 the¦1871 spirit¦1872 are blessed¦1868, because¦1873 the¦1876 heavenly¦1879 kingdom¦1877 is theirs.\wj*
+\v 3 “\wj Those \+add >who are\+add* poor¦1870 in¦1871 the¦1871 spirit¦1872 are¦1868 blessed¦1868, because¦1873 the¦1876 heavenly¦1879 kingdom¦1877 is theirs.\wj*
 \p
 \v 4 “\wj Those who are¦1880 mourning¦1882 are blessed¦1880, because¦1884 they'll¦1885 be¦1886 comforted¦1886.\wj*\x + \xo 5:4: \xt Isa 61:2.\x*
 \p
 \v 5 “\wj Those who are¦1887 gentle¦1889 are blessed¦1887, because¦1890 they'll¦1891 inherit¦1892 the¦1893 \+add ≈world¦1894\+add*.\wj*\x + \xo 5:5: \xt Psa 37:11.\x*
 \p
-\v 6 “\wj Those who are¦1895 hungry¦1897 and¦1898 thirsty¦1899 \+add ≈to obey God\+add* are blessed¦1895, because¦1902 they'll¦1903 be¦1904 satisfied¦1904.\wj*\x + \xo 5:6: \xt Isa 55:1-2.\x*
+\v 6 “\wj Those \+add >who are\+add* hungry¦1897 and¦1898 thirsty¦1899 \+add ≈to obey God\+add* are¦1895 blessed¦1895, because¦1902 they'll¦1903 be¦1904 satisfied¦1904.\wj*\x + \xo 5:6: \xt Isa 55:1-2.\x*
 \p
 \v 7 “\wj Those who are¦1905 merciful¦1907 are blessed¦1905, because¦1908 they'll¦1909 receive mercy¦1910.\wj*
 \p
-\v 8 “\wj Those who have pure¦1913 \+add #hearts¦1915\+add* are blessed¦1911, because¦1916 they'll¦1917 see¦1920 \+nd God¦1919\+nd*.\wj*\x + \xo 5:8: \xt Psa 24:3.\x*
+\v 8 “\wj Those who have pure¦1913 \+add #hearts¦1915\+add* are¦1911 blessed¦1911, because¦1916 they'll¦1917 see¦1920 \+nd God¦1919\+nd*.\wj*\x + \xo 5:8: \xt Psa 24:3.\x*
 \p
 \v 9 “\wj Those who are¦1921 peacemakers¦1923 are blessed¦1921, because¦1924 they'll¦1925 be¦1928 called¦1928 \+nd God¦1927\+nd*'s children¦1926.\wj*
 \p
@@ -242,7 +242,7 @@
 \p
 \v 13 “\wj You¦1988 \+add people\+add* are¦1989 the¦1990 \+add ≈world's¦1993\+add* salt¦1991, but¦1995 if¦1994 the¦1996 salt¦1997 is¦1999 made¦1999 tasteless¦1999, what¦2001 would¦2002 you use to salt¦2002 your food? \+add @The¦2006 salt¦2006\+add* wouldn't be¦2006 useful for¦2003 anything anymore¦2007 and would \+add just\+add* get thrown¦2011 out¦2012 and trampled¦2014 on by¦2015 the¦2016 people¦2017.\wj*\x + \xo 5:13: \xt Mrk 9:50; Luk 14:34-35.\x*
 \p
-\v 14 “\wj You¦2018 are¦2019 the¦2022 world's¦2023 light¦2021. A¦2026 city¦2026 up on¦2028 a¦2029 hill¦2029 can't¦2024 be¦2027 hidden¦2027.\wj*\x + \xo 5:14: \xt Yhn 8:12; 9:5.\x*
+\v 14 “\wj You¦2018 are¦2019 the¦2022 world's¦2023 light¦2021.\x + \xo 5:14: \xt Yhn 8:12; 9:5.\x* A¦2026 city¦2026 up on¦2028 a¦2029 hill¦2029 can't¦2024 be¦2027 hidden¦2027.\wj*
 \v 15 \wj No one lights¦2032 a¦2033 lamp¦2033 and¦2034 puts¦2035 it¦2036 under¦2037 a¦2040 basket¦2040—you put it on¦2042 a lampstand¦2044 and¦2045 it¦2046 lightens up the¦2050 house¦2051.\wj*\x + \xo 5:15: \xt Mrk 4:21; Luk 8:16; 11:33.\x*
 \v 16 \wj In the same way, let¦2053 your light¦2055 shine¦2053 \+add ≈in¦2057 front¦2057 of¦2057\+add* everyone¦2059, so¦2060 that¦2060 they¦2061 can see¦2061 your good¦2064 behaviour and¦2066 then might¦2067 praise¦2067 your father¦2069 in¦2073 the¦2074 heavens¦2075.\wj*\x + \xo 5:16: \xt 1Pe 2:12.\x*
 \s1 Mosheh's law won't be broken
@@ -255,7 +255,7 @@
 \s1 Teaching about murder and anger
 \rem /s1 Murder; Teaching about Anger; Concerning Anger
 \p
-\v 21 “\wj You've¦2180 all¦2180 heard¦2180 that¦2181 your ancestors were¦2182 told¦2182 not¦2185 to murder¦2186, because any murderer¦2191 will¦2193 be¦2193 sentenced.\wj*\x + \xo 5:21: \xt Exo 20:13; Deu 5:17.\x*
+\v 21 “\wj You've¦2180 all¦2180 heard¦2180 that¦2181 your ancestors were¦2182 told¦2182 not¦2185 to murder¦2186,\x + \xo 5:21: \xt Exo 20:13; Deu 5:17.\x* because any murderer¦2191 will¦2193 be¦2193 sentenced.\wj*
 \v 22 \wj But¦2197 I'm¦2196 telling¦2198 you¦2199 that¦2200 anyone who gets angry¦2203 at another will¦2210 be¦2210 liable¦2209 for judgement¦2212, and¦2214 anyone¦2213 who calls another person a numbskull will¦2222 have to¦2223 face the¦2223 court, and¦2226 if \+add %you\+add* call them a fool, \+add %you're\+add* liable¦2231 for hellfire.\wj*
 \v 23 \wj So¦2239 if¦2238 you're there¦2248 at¦2245 the¦2246 altar¦2247 to offer¦2240 your gift¦2243 and¦2248 remember that¦2252 someone has¦2256 something¦2257 against¦2258 you¦2259,\wj*
 \v 24 \wj leave¦2260 your gift¦2263 there¦2261 at the¦2266 altar¦2267 and¦2268 go¦2269 and sort that out first¦2270, before¦2265 coming¦2278 back to¦2273 offer¦2279 your gift¦2282.\wj*
@@ -278,9 +278,9 @@
 \s1 Teaching about oaths and honesty
 \rem /s1 Teaching about Vows; Concerning Oaths
 \p
-\v 33 “\wj Also, you've¦2478 heard¦2478 that¦2479 it¦2480 was¦2480 said¦2480 to¦2481 our ancestors that you¦2484 shouldn't¦2483 break your¦2492 \+add #oath¦2491\+add*, but¦2487 you¦2485 must¦2485 do whatever you promised to¦2488 \+nd Yahweh¦2489\+nd*.\wj*\x + \xo 5:33: a \xt Lev 19:12; \xo b \xt Num 30:2; Deu 23:21.\x*
-\v 34 \wj But¦2494 I'm¦2493 telling¦2495 you¦2496 not¦2497 to¦2498 \+add ≈make oaths\+add* in the first place—don't swear¦2498 by¦2501 heaven¦2503 because¦2504 it's¦2506 \nd God's¦2508\nd* throne¦2505,\wj*\x + \xo 5:34: a \xt Jam 5:12; \xo b \xt Isa 66:1; Mat 23:22.\x*
-\v 35 \wj nor¦2509 by¦2510 the¦2511 earth¦2512 because¦2513 it's¦2515 \+add @God's¦2518\+add* footrest¦2514, nor¦2519 by Yerushalem¦2521 because¦2522 it's¦2524 the¦2525 supreme king's¦2527 city¦2523.\wj*\x + \xo 5:35: a \xt Isa 66:1; \xo b \xt Psa 48:2.\x*
+\v 33 “\wj Also, you've¦2478 heard¦2478 that¦2479 it¦2480 was¦2480 said¦2480 to¦2481 our ancestors that you¦2484 shouldn't¦2483 break your¦2492 \+add #oath¦2491\+add*,\x + \xo 5:33: \xt Lev 19:12.\x* but¦2487 you¦2485 must¦2485 do whatever you promised to¦2488 \+nd Yahweh¦2489\+nd*.\wj*\x + \xo 5:33: \xt Num 30:2; Deu 23:21.\x*
+\v 34 \wj But¦2494 I'm¦2493 telling¦2495 you¦2496 not¦2497 to¦2498 \+add ≈make oaths\+add* in the first place\x + \xo 5:34: \xt Jam 5:12.\x*—don't swear¦2498 by¦2501 heaven¦2503 because¦2504 it's¦2506 \nd God's¦2508\nd* throne¦2505,\wj*\x + \xo 5:34: \xt Isa 66:1; Mat 23:22.\x*
+\v 35 \wj nor¦2509 by¦2510 the¦2511 earth¦2512 because¦2513 it's¦2515 \+add @God's¦2518\+add* footrest¦2514,\x + \xo 5:35: \xt Isa 66:1.\x* nor¦2519 by Yerushalem¦2521 because¦2522 it's¦2524 the¦2525 supreme king's¦2527 city¦2523.\wj*\x + \xo 5:35: \xt Psa 48:2.\x*
 \v 36 \wj And don't swear¦2534 by¦2530 your¦2533 own strength, because¦2535 you¦2537 can't¦2536 even make¦2543 one¦2538 strand of hair¦2540 grow a different colour.\wj*
 \v 37 \wj Just say ‘yes’ when you commit to doing something, and¦2558 ‘no’ when¦2558 you don't, because going beyond that is¦2564 \+add actually\+add* evil¦2563.\wj*
 \s1 Teaching about being taken advantage of
@@ -298,7 +298,7 @@
 \p
 \v 43 “\wj You've¦2651 all¦2651 heard¦2651 it¦2653 said¦2653 that¦2652 you¦2654 should love¦2654 your neighbour¦2656 and¦2658 hate¦2659 your enemy¦2662,\wj*
 \v 44 \wj but¦2665 I'm¦2664 telling¦2666 you to love¦2668 your¦2672 enemies¦2671 and¦2685 to pray¦2686 for¦2687 anyone who's persecuting¦2692 you¦2693,\wj*
-\v 45 \wj so¦2694 that¦2694 you¦2695 might¦2695 become¦2695 children¦2696 of¦2697 your¦2699 father¦2698 in¦2701 the¦2703 heavens¦2703, because¦2704 he¦2708 causes his¦2707 sun¦2706 to rise¦2708 on¦2709 both evil¦2710 and¦2711 good¦2712 people, and¦2713 sends the¦2716 rain¦2714 for both godly¦2716 and¦2717 ungodly people.\wj*
+\v 45 \wj so¦2694 that¦2694 you¦2695 might¦2695 become¦2695 children¦2696 of¦2697 your¦2699 father¦2698 in¦2701 the¦2703 heavens¦2703, because¦2704 he¦2708 causes his¦2707 sun¦2706 to rise¦2708 on¦2709 both evil¦2710 and¦2711 good¦2712 \+add >people\+add*, and¦2713 sends the¦2716 rain¦2714 for both godly¦2716 and¦2717 ungodly people.\wj*
 \v 46 \wj If¦2719 you¦2721 \+add people\+add* just love¦2721 people who love¦2723 you¦2724, what¦2725 reward¦2726 would you¦2727 expect for that? Don't¦2729 \+add even\+add* the¦2731 tax¦2732 collectors¦2732 do¦2736 that?\wj*
 \v 47 \wj And¦2737 if¦2738 you're¦2739 only¦2744 polite to your¦2743 own circle, how is¦2747 that achieving anything? Aren't¦2748 non-Jews just the¦2754 same¦2755?\wj*
 \v 48 \wj Instead you¦2760 should all¦2760 \+add aim to\+add* be¦2758 perfect¦2761 just like¦2762 your¦2766 heavenly¦2772 father¦2765 is¦2774 perfect¦2773.\wj*\x + \xo 5:48: \xt Lev 19:2; Deu 18:13.\x*
@@ -306,7 +306,7 @@
 \s1 Giving to the poor
 \rem /s1 Giving to the Needy; Concerning Almsgiving; Teaching about Charity; Teaching about Giving to the Needy
 \p
-\v 1 “\wj \+add You people should\+add* take¦2775 care not¦2782 to¦2783 \+add only\+add* obey God \+add ≈in¦2784 front¦2784 of¦2784\+add* others so¦2792 they'll think well of you, because if¦2791 you¦2797 do, you'll certainly get no¦2796 reward¦2795 from your father¦2800 in¦2803 the¦2804 heavens¦2805.\wj*\x + \xo 6:1: \xt Mat 23:5.\x*
+\v 1 “\wj \+add You people should\+add* take¦2775 care not¦2782 to¦2783 \+add only\+add* obey God \+add ≈in¦2784 front¦2784 of¦2784\+add* others so¦2792 they'll think well of you,\x + \xo 6:1: \xt Mat 23:5.\x* because if¦2791 you¦2797 do, you'll certainly get no¦2796 reward¦2795 from your father¦2800 in¦2803 the¦2804 heavens¦2805.\wj*
 \p
 \v 2 “\wj So¦2807 when¦2806 you're giving to the poor, don't¦2811 make a big display of it like¦2815 the¦2816 hypocrites¦2817 do¦2818 in¦2819 the¦2820 \+add ≈Jewish¦2821 meeting¦2821 halls¦2821\+add* and¦2822 in¦2823 the¦2824 streets¦2825 so¦2826 they'll¦2827 get the¦2829 people's¦2830 praises. I¦2833 can assure¦2831 you¦2834 that¦2826 they've¦2835 already received¦2835 their¦2838 reward¦2837 in full.\wj*
 \v 3 \wj But¦2840 when you¦2839 give to the poor, don't¦2843 let¦2844 your left¦2846 hand¦2846 know¦2844 what¦2848 your right¦2851 hand¦2851 is¦2849 doing¦2849,\wj*
@@ -315,7 +315,7 @@
 \rem /s1 Concerning Prayer; Teaching about Prayer; Teaching about Prayer and Fasting
 \r (Luke 11:2-4)
 \p
-\v 5 “\wj Whenever¦2879 you¦2880 pray¦2880, don't¦2882 be¦2884 like¦2885 the¦2887 hypocrites¦2888 who love¦2890 to¦2903 pray¦2903 in¦2892 the¦2893 \+add ≈Jewish¦2894 meeting¦2894 halls¦2894\+add* and¦2895 on¦2896 street corners¦2898 so¦2905 everyone¦2909 will notice them. I¦2911 can assure¦2910 you¦2912 that¦2905 they've¦2914 already received¦2914 their¦2917 reward¦2916 in full.\wj*\x + \xo 6:5: \xt Luk 18:10-14.\x*
+\v 5 “\wj Whenever¦2879 you¦2880 pray¦2880, don't¦2882 be¦2884 like¦2885 the¦2887 hypocrites¦2888 who love¦2890 to¦2903 pray¦2903 in¦2892 the¦2893 \+add ≈Jewish¦2894 meeting¦2894 halls¦2894\+add* and¦2895 on¦2896 street corners¦2898 so¦2905 everyone¦2909 will notice them.\x + \xo 6:5: \xt Luk 18:10-14.\x* I¦2911 can assure¦2910 you¦2912 that¦2905 they've¦2914 already received¦2914 their¦2917 reward¦2916 in full.\wj*
 \v 6 \wj Instead, when¦2921 you¦2923 pray¦2923, go into¦2925 a private¦2927 room¦2927 and¦2929 shut¦2930 the¦2931 door¦2932, then pray¦2934 to¦2935 your father¦2936 who's¦2938 not visible to you. Then¦2942 your father¦2944 who sees¦2947 everything will¦2951 reward you¦2953.\wj*
 \p
 \v 7 “\wj And¦2958 when you do pray¦2957, don't¦2959 babble¦2960 \+add away\+add* like¦2962 people of¦2972 other religions who think¦2966 they'll¦2973 be¦2973 listened¦2973 to¦2973 just because of how much they pray.\wj*
@@ -347,7 +347,7 @@
 \rem /s1 Treasures in Heaven; Concerning Treasures; Teaching about Money and Possessions; Riches in Heaven
 \r (Luke 12:33-34)
 \p
-\v 19 “\wj Don't¦3197 amass wealth for yourselves here on¦3201 earth¦3203, where¦3204 insects and¦3206 corrosion¦3207 destroy¦3208 things, and¦3210 where¦3211 it can be stolen¦3215.\wj*\x + \xo 6:19: \xt Jam 5:2-3.\x*
+\v 19 “\wj Don't¦3197 amass wealth for yourselves here on¦3201 earth¦3203, where¦3204 insects and¦3206 corrosion¦3207 destroy¦3208 things,\x + \xo 6:19: \xt Jam 5:2-3.\x* and¦3210 where¦3211 it can be stolen¦3215.\wj*
 \v 20 \wj Instead, store¦3216 your wealth in¦3221 heaven¦3222, where¦3223 there's no destructive¦3229 insects or corrosion¦3228 or thieves¦3232 \+add or scammers\+add*,\wj*
 \v 21 \wj because¦3239 wherever¦3238 your¦3244 wealth is¦3240, your¦3251 values will¦3246 also¦3247 be¦3246 focused there¦3245.\wj*
 \s1 The eyes
@@ -369,10 +369,10 @@
 \p
 \v 28 “\wj Why¦3409 would you¦3410 worry¦3410 about¦3407 clothes¦3408? Look how¦3416 the¦3412 flowers grow¦3418 in the¦3414 \+add #fields¦3415\+add*—they¦3420 don't¦3419 work or make fabric,\wj*
 \v 29 \wj but¦3426 I¦3425 can tell¦3425 you¦3427 that¦3428 not¦3429 even¦3429 \+add King\+add* Solomon¦3430 at the¦3433 peak of¦3435 his reign was dressed¦3436 as well as the flowers.\wj*\x + \xo 6:29: \xt 1Ki 10:4-7; 2Ch 9:3-6.\x*
-\v 30 \wj So¦3458 if¦3441 \+nd God¦3457\+nd* dresses¦3459 the¦3443 plants in the¦3445 \+add #fields¦3446\+add* that are¦3450 here today¦3447 and¦3451 thrown¦3455 away tomorrow¦3452, won't¦3460 he care much¦3461 more¦3462 for¦3463 you, you people with little¦3464 faith¦3464?\wj*
+\v 30 \wj So¦3458 if¦3441 \+nd God¦3457\+nd* dresses¦3459 the¦3443 plants in the¦3445 \+add #fields¦3446\+add* that are¦3450 here today¦3447 and¦3451 thrown¦3455 away tomorrow¦3452, won't¦3460 he care much¦3461 more¦3462 for¦3463 you, you \+add >people with\+add* little¦3464 faith¦3464?\wj*
 \p
 \v 31 “\wj That means that you¦3467 \+add people\+add* don't¦3465 need to worry¦3467 about having anything to eat¦3470 or¦3471 drink¦3473, or¦3474 having clothes¦3476 to wear.\wj*
-\v 32 \wj People with no trust in God try¦3485 to obtain all¦3477 those¦3480 things, but your¦3492 heavenly¦3494 father¦3491 \+add already\+add* knows¦3486 that¦3495 you¦3496 need¦3496 these¦3497 things.\wj*
+\v 32 \wj People with no trust in God try¦3485 to obtain all¦3477 those¦3480 \+add >things\+add*, but your¦3492 heavenly¦3494 father¦3491 \+add already\+add* knows¦3486 that¦3495 you¦3496 need¦3496 these¦3497 \+add >things\+add*.\wj*
 \v 33 \wj So instead you should be¦3499 striving \+add to enter God's\+add* kingdom¦3504 and¦3508 to be guiltless in his¦3512 eyes, and¦3513 then all¦3515 these¦3514 other things will¦3516 just follow.\wj*
 \v 34 \wj Don't¦3518 worry¦3520 about tomorrow, because¦3525 tomorrow can worry¦3527 about¦3529 itself¦3529—today's problems are¦3533 enough by themselves.\wj*
 \c 7
@@ -396,10 +396,10 @@
 \v 8 \wj Everyone¦3665 who asks¦3668 for something will get¦3669 something, and¦3670 everyone who searches¦3673 for something will find¦3674 something, and¦3675 the¦3676 door will¦3678 be¦3678 opened¦3678 for everyone who knocks¦3677.\wj*
 \v 9 \wj If you have a¦3685 child¦3692 that asks¦3688 for something to eat, which¦3681 of¦3683 you¦3684 would¦3697 give¦3697 them a¦3696 stone¦3696?\wj*
 \v 10 \wj Or¦3700 if the child asked¦3704 for some fish¦3703, who would¦3708 give¦3708 them a¦3707 snake¦3707?\wj*
-\v 11 \wj So¦3711 if¦3710 evil¦3713 people know¦3715 how to¦3718 give¦3718 good¦3717 gifts¦3716 to¦3719 their children¦3720, how¦3722 much¦3722 more¦3723 will your father¦3725 in¦3728 the¦3729 heavens¦3730 give¦3731 good¦3732 things to¦3733 those who¦3727 ask¦3734 him¦3735?\wj*
+\v 11 \wj So¦3711 if¦3710 evil¦3713 people know¦3715 how to¦3718 give¦3718 good¦3717 gifts¦3716 to¦3719 their children¦3720, how¦3722 much¦3722 more¦3723 will your father¦3725 in¦3728 the¦3729 heavens¦3730 give¦3731 good¦3732 \+add >things\+add* to¦3733 those who¦3727 ask¦3734 him¦3735?\wj*
 \rem /s1 The Golden Rule
 \p
-\v 12 “\wj So¦3737 in every¦3736 area, whatever you'd like¦3738 others to¦3744 do for¦3753 you, that's how you \+add people\+add* should be¦3750 treating them¦3751. That's \+add what\+add* \+add &Mosheh's¦3755\+add* instructions¦3756 and¦3757 the¦3758 prophets¦3759' \+add writings were about\+add*.\wj*\x + \xo 7:12: \xt Luk 6:31.\x*
+\v 12 “\wj So¦3737 in every¦3736 area, whatever you'd like¦3738 others to¦3744 do for¦3753 you, that's how you \+add people\+add* should be¦3750 treating them¦3751.\x + \xo 7:12: \xt Luk 6:31.\x* That's \+add what\+add* \+add &Mosheh's¦3755\+add* instructions¦3756 and¦3757 the¦3758 prophets¦3759' \+add writings were about\+add*.\wj*
 \s1 The wide and narrow gates
 \rem /s1 The Narrow and Wide Gates; The Narrow Gate
 \r (Luke 13:24)
@@ -435,15 +435,15 @@
 \s1 Yeshua's authority
 \rem /s1 The Authority of Jesus
 \p
-\v 28 When¦4074 \nd Yeshua¦4078\nd* had finished¦4076 sharing all these¦4081 messages¦4080, the¦4083 crowds¦4084 were¦4082 astonished¦4082 at¦4085 his¦4088 teaching¦4087\x + \xo 7:28-29: \xt Mrk 1:22; Luk 4:32.\x*
-\v 29 because¦4092 he¦4091 taught¦4093 like¦4095 someone who had¦4097 authority¦4096, and¦4098 not¦4099 like¦4100 their¦4103 \add regular\add* \add ≈religious¦4102 teachers¦4102\add*.
+\v 28 When¦4074 \nd Yeshua¦4078\nd* had finished¦4076 sharing all these¦4081 messages¦4080, the¦4083 crowds¦4084 were¦4082 astonished¦4082 at¦4085 his¦4088 teaching¦4087
+\v 29 because¦4092 he¦4091 taught¦4093 like¦4095 someone who had¦4097 authority¦4096,\x + \xo 7:28-29: \xt Mrk 1:22; Luk 4:32.\x* and¦4098 not¦4099 like¦4100 their¦4103 \add regular\add* \add ≈religious¦4102 teachers¦4102\add*.
 \c 8
 \s1 Yeshua heals a man with leprosy
 \rem /s1 Jesus Heals a Man; Jesus Cleanses a Leper; Jesus Heals a Man with Leprosy; Miracles and teaching; The Man With Leprosy
 \r (Mark 1:40-45; Luke 5:12-16)
 \p
 \v 1 When¦4109 \add @Yeshua¦4111\add* came¦4108 down¦4108 from¦4112 the¦4113 hillside, a large¦4118 \add #crowd¦4117\add* followed¦4115 him¦4116,
-\v 2 and¦4119 then a¦4121 man with leprosy approached¦4122 him and knelt down in front of him and asked¦4126, “\nd Master¦4127\nd*, if¦4128 you're¦4129 willing¦4129, you're¦4130 able¦4130 to¦4132 \add ≈get rid of\add* this disease.”
+\v 2 and¦4119 then a¦4121 \add >man with\add* leprosy¦4121 approached¦4122 him and knelt down in front of him and asked¦4126, “\nd Master¦4127\nd*, if¦4128 you're¦4129 willing¦4129, you're¦4130 able¦4130 to¦4132 \add ≈get rid of\add* this disease.”
 \p
 \v 3 “\wj I¦4143 am¦4143 willing¦4143,\wj*” said¦4142 \add @Yeshua\add* as he stretched¦4134 out¦4134 his¦4135 hand¦4136 \add and commanded\add*, “\wj Be¦4144 clean¦4144.\wj*” The¦4149 leprosy¦4150 disappeared immediately¦4146,
 \v 4 and¦4151 \nd Yeshua¦4156\nd* told¦4152 him¦4154, “\wj Make sure that¦4170 you¦4159 don't tell¦4159 anyone¦4158 \+add about this\+add*, but¦4160 you do need to go¦4161 and show¦4163 yourself to¦4164 the¦4164 priest¦4165 and¦4166 make the¦4168 offering¦4167 required by Mosheh's¦4172 law as a¦4174 testimony¦4174 to¦4175 \+add the authorities\+add*.\wj*”\x + \xo 8:4: \xt Lev 14:1-32.\x*
@@ -536,7 +536,7 @@
 \v 11 Some people from the¦4996 Pharisee¦4997 party¦4997 noticed this and said¦4998 to¦5000 his¦5002 apprentices¦5001, “How come your¦5018 teacher¦5017 eats¦5015 with¦5008 tax¦5010 collectors¦5010 and¦5012 sinners¦5013?”
 \p
 \v 12 But¦5021 \add @Yeshua¦5020\add* heard¦5023 this and said¦5024, “People who are¦5028 well don't¦5026 need¦5027 a¦5031 doctor¦5031—only the¦5034 ones with problems do.
-\v 13 So go¦5037 and \add ≈find out\add* the meaning of this¦5041: I¦5044 like mercy¦5043, not¦5046 sacrifice¦5047. After all, it's sinners¦5055 that I¦5050 came¦5050 to¦5051 call¦5051, not people \add who are considered\add* righteous¦5052.”\x + \xo 9:13: a \xt Mat 12:7; \xo b \xt Hos 6:6.\x*
+\v 13 So go¦5037 and \add ≈find out\add* the meaning of this¦5041: I¦5044 like mercy¦5043, not¦5046 sacrifice¦5047.\x + \xo 9:13: \xt Mat 12:7.\x*\x + \xo 9:13: \xt Hos 6:6.\x* After all, it's sinners¦5055 that I¦5050 came¦5050 to¦5051 call¦5051, not \add >people\add* \add who are considered\add* righteous¦5052.”
 \s1 Yeshua is asked about fasting
 \rem /s1 Jesus Questioned About Fasting; A Discussion about Fasting; The Question about Fasting
 \r (Mark 2:18-22; Luke 5:33-39)
@@ -605,31 +605,31 @@
 \v 5 \nd Yeshua¦5654\nd* sent¦5652 out¦5652 those¦5648 twelve¦5650, instructing them¦5656, “\wj Don't¦5662 go¦5663 onto the roads non-Jews use, or into the city¦5666 of¦5667 Samaria¦5667,\wj*
 \v 6 \wj but¦5672 rather¦5673 go¦5671 to¦5674 the¦5675 lost¦5678 sheep¦5676 who are Yisrael's¦5680 descendants.\wj*
 \v 7 \wj As you go¦5681, announce¦5683 to the people that¦5685 the¦5687 heavenly¦5690 kingdom¦5688 is close¦5686.\wj*
-\v 8 \wj Heal¦5692 those who need it, \+add ≈bring the¦5695 dead¦5695 back to life\+add*, \+add ≈get rid of\+add* leprosy, and drive evil spirits away. You¦5708 \+add apprentices\+add* received¦5708 \+add ≈free of charge\+add*, \+add so\+add* give¦5710 \+add ≈free of charge\+add*.\wj*
+\v 8 \wj Heal¦5692 those who need it, \+add ≈bring the¦5695 dead¦5695 back to life\+add*, \+add ≈get rid of\+add* leprosy¦5697, and drive evil spirits away. You¦5708 \+add apprentices\+add* received¦5708 \+add ≈free of charge\+add*, \+add so\+add* give¦5710 \+add ≈free of charge\+add*.\wj*
 \v 9 \wj Don't accept any money¦5716 for your¦5723 wallets,\wj*
 \v 10 \wj and don't take a backpack¦5726, or a change of clothes or footwear, or a staff¦5739, because¦5741 a worker¦5744 deserves to be¦5740 fed.\wj*\x + \xo 10:10: \xt 1Cor 9:14; 1Tim 5:18.\x*
 \p
 \v 11 “\wj Whatever¦5752 city¦5755 or¦5756 village¦5757 you¦5758 \+add apprentices\+add* arrive¦5758 at, look¦5761 around to discover who's¦5762 godly, and¦5768 stay¦5769 with them until¦5770 you¦5772 leave.\wj*
 \v 12 \wj When¦5774 you enter¦5773 a home¦5777, bless it¦5779,\wj*
 \v 13 \wj and¦5785 if¦5786 the¦5790 house¦5791 is¦5788 worthy¦5792 of it, your peace is to come¦5793 into it¦5799, but if¦5801 not¦5803, your peace¦5808 is¦5813 to return¦5813 to¦5810 you¦5812.\wj*
-\v 14 \wj If there's any that don't¦5818 accept¦5820 you¦5821 or don't want to hear¦5823 your messages¦5826, shake¦5841 the¦5843 dust¦5844 off¦5841 your feet¦5848 as you¦5849 leave that house¦5834 or¦5835 city¦5837, \+add as a sign that you apprentices accept no responsibility for them\+add*.\wj*\x + \xo 10:14: \xt Acts 13:51.\x*
-\v 15 \wj I¦5851 can assure¦5850 you¦5852 that¦5868 it'll¦5854 be¦5854 more¦5853 tolerable¦5853 for¦5855 the¦5855 towns¦5867 of¦5856 Sodom¦5856 and¦5857 Amorah¦5859 \+add (Gomorrah)\+add* on¦5861 the¦5863 day¦5863 of¦5864 judgement¦5864 than¦5865 it will be for¦5867 those places.\wj*\x + \xo 10:15: a \xt Mat 11:24; \xo b \xt Gen 19:24-28.\x*
+\v 14 \wj If there's any that don't¦5818 accept¦5820 you¦5821 or don't want to hear¦5823 your messages¦5826, shake¦5841 the¦5843 dust¦5844 off¦5841 your feet¦5848 as you¦5849 leave that house¦5834 or¦5835 city¦5837,\x + \xo 10:14: \xt Acts 13:51.\x* \+add as a sign that you apprentices accept no responsibility for them\+add*.\wj*
+\v 15 \wj I¦5851 can assure¦5850 you¦5852 that¦5868 it'll¦5854 be¦5854 more¦5853 tolerable¦5853 for¦5855 the¦5855 towns¦5867 of¦5856 Sodom¦5856 and¦5857 Amorah¦5859 \+add (Gomorrah)\+add*\x + \xo 10:15: \xt Gen 19:24-28.\x* on¦5861 the¦5863 day¦5863 of¦5864 judgement¦5864 than¦5865 it will be for¦5867 those places.\wj*\x + \xo 10:15: \xt Mat 11:24.\x*
 \s1 The coming persecution
 \rem /s1 Coming Persecutions
 \r (Mark 13:9-13; Luke 21:12-17)
 \p
-\v 16 “\wj Look¦5869 out, because I'm¦5870 sending¦5871 you¦5872 out¦5871 like¦5873 sheep¦5874 among¦5877 wolves¦5879, so¦5881 you'll need to be¦5880 as shrewd¦5882 as¦5883 snakes¦5886 and¦5888 as innocent¦5890 as¦5891 doves¦5893.\wj*\x + \xo 10:16: \xt Luk 10:3.\x*
+\v 16 “\wj Look¦5869 out, because I'm¦5870 sending¦5871 you¦5872 out¦5871 like¦5873 sheep¦5874 among¦5877 wolves¦5879,\x + \xo 10:16: \xt Luk 10:3.\x* so¦5881 you'll need to be¦5880 as shrewd¦5882 as¦5883 snakes¦5886 and¦5888 as innocent¦5890 as¦5891 doves¦5893.\wj*
 \v 17 \wj But¦5895 watch out, because¦5901 there's people¦5898 who'll turn you¦5902 in to the councils¦5904, and¦5905 then you'll be¦5913 flogged¦5913 in¦5906 their¦5912 \+add ≈meeting¦5910 halls¦5910\+add*.\wj*\x + \xo 10:17-20: \xt Mrk 13:9-11; Luk 12:11-12; 21:12-15.\x*
 \v 18 \wj You'll¦5923 be¦5923 stood \+add ≈in¦5916 front¦5916 of¦5916\+add* governors¦5917 and¦5919 even kings¦5921 on¦5927 my account¦5927, but it'll be a¦5930 testimony¦5930 to¦5931 them¦5931 and¦5932 to¦5933 the¦5933 non-Jews.\wj*
 \v 19 \wj However, whenever¦5935 they¦5937 turn you¦5940 in, you¦5942 don't¦5941 need to worry¦5942 about what to say or how¦5943 to say¦5946 it, because¦5948 whatever¦5955 you¦5956 \+add apprentices\+add* need to say¦5956 will¦5947 be¦5947 given¦5947 to¦5949 you¦5949 at the¦5952 \+add right\+add* time¦5954,\wj*
 \v 20 \wj because¦5959 you¦5960 won't¦5958 be¦5961 the¦5962 ones speaking¦5963, but¦5964 it'll be your¦5969 father's¦5968 \+nd spirit¦5966\+nd* speaking¦5971 through you¦5973.\wj*
 \p
 \v 21 “\wj One sibling will¦5974 turn another in to be executed¦5980, and¦5981 a father¦5982 his child¦5983, and¦5985 children¦5988 will¦5986 be¦5986 rebelling¦5986 against¦5989 \+add &their\+add* parents¦5990 and¦5991 having them¦5993 put¦5992 to¦5992 death¦5992.\wj*\x + \xo 10:21: \xt Mrk 13:12; Luk 21:16.\x*
-\v 22 \wj You¦5995 \+add apprentices\+add* will¦5995 be¦5995 hated¦5996 by¦5997 everyone¦5998 because¦5999 of¦5999 my¦6002 name¦6001, but¦6004 the¦6003 ones who endure¦6005 until the¦6007 end¦6007, they're the ones who'll be¦6009 saved¦6009.\wj*\x + \xo 10:22: a \xt Mat 24:9; Mrk 13:13; Luk 21:17; \xo b \xt Mat 24:13; Mrk 13:13.\x*
+\v 22 \wj You¦5995 \+add apprentices\+add* will¦5995 be¦5995 hated¦5996 by¦5997 everyone¦5998 because¦5999 of¦5999 my¦6002 name¦6001,\x + \xo 10:22: \xt Mat 24:9; Mrk 13:13; Luk 21:17.\x* but¦6004 the¦6003 ones who endure¦6005 until the¦6007 end¦6007, they're the ones who'll be¦6009 saved¦6009.\wj*\x + \xo 10:22: \xt Mat 24:13; Mrk 13:13.\x*
 \v 23 \wj Whenever¦6010 they¦6012 persecute¦6012 you¦6014 in¦6015 one city¦6017, escape to¦6020 the¦6021 next¦6022 city, because¦6037 I¦6038 can assure¦6036 you¦6039 that¦6018 you¦6043 won't¦6042 get through¦6041 all¦6043 the¦6044 cities¦6045 in Yisrael¦6047 before the¦6051 son¦6052 of¦6054 humanity¦6054 comes¦6050.\wj*
 \p
-\v 24 “\wj An apprentice¦6057 isn't¦6055 above¦6058 \+add &their¦6059\+add* teacher¦6060, nor¦6062 is a¦6063 slave¦6063 above¦6064 their master¦6066.\wj*\x + \xo 10:24: a \xt Luk 6:40; \xo b \xt Yhn 13:16; 15:20.\x*
-\v 25 \wj The¦6069 apprentice¦6070 is happy to \+add eventually\+add* become¦6072 like¦6073 their teacher¦6075, and¦6077 the¦6078 slave¦6079 \+add ≡to become\+add* like¦6080 their master¦6082. If¦6084 they¦6092 accuse the¦6085 home¦6087 owner¦6087 of being a devil, then \+add ≈they'll do that¦6071 even more¦6097 to other members of his household¦6100\+add*.\wj*\x + \xo 10:25: \xt Mat 9:34; 12:24; Mrk 3:22; Luk 11:15.\x*
+\v 24 “\wj An apprentice¦6057 isn't¦6055 above¦6058 \+add &their¦6059\+add* teacher¦6060,\x + \xo 10:24: \xt Luk 6:40.\x* nor¦6062 is a¦6063 slave¦6063 above¦6064 their master¦6066.\wj*\x + \xo 10:24: \xt Yhn 13:16; 15:20.\x*
+\v 25 \wj The¦6069 apprentice¦6070 is happy to \+add eventually\+add* become¦6072 like¦6073 their teacher¦6075, and¦6077 the¦6078 slave¦6079 \+add ≡to become\+add* like¦6080 their master¦6082. If¦6084 they¦6092 accuse the¦6085 home¦6087 owner¦6087 of being a devil,\x + \xo 10:25: \xt Mat 9:34; 12:24; Mrk 3:22; Luk 11:15.\x* then \+add ≈they'll do that¦6071 even more¦6097 to other members of his household¦6100\+add*.\wj*
 \s1 Who to fear
 \rem /s1 Whom to Fear
 \r (Luke 12:2-7)
@@ -651,8 +651,8 @@
 \r (Luke 12:51-53; 14:26-27)
 \p
 \v 34 “\wj Don't¦6264 imagine¦6266 that¦6267 I¦6268 came¦6268 to¦6269 bring¦6269 peace¦6270 to¦6272 the¦6273 earth¦6274. No, I¦6276 came¦6276 to¦6277 bring¦6277 war, not peace¦6279,\wj*
-\v 35 \wj because¦6283 I¦6282 came¦6282 to¦6284 divide¦6284 a¦6286 son against¦6288 his¦6291 father¦6290, and¦6292 a¦6293 daughter¦6293 against¦6294 her¦6297 mother, and¦6298 a¦6299 daughter-in-law¦6299 against¦6300 her¦6303 mother-in-law,\wj*\x + \xo 10:35-36: \xt Mic 7:6.\x*
-\v 36 \wj and¦6304 \+add #people¦6307\+add* will have enemies¦6305 in their own \+add #households¦6309\+add*.\wj*
+\v 35 \wj because¦6283 I¦6282 came¦6282 to¦6284 divide¦6284 a¦6286 son against¦6288 his¦6291 father¦6290, and¦6292 a¦6293 daughter¦6293 against¦6294 her¦6297 mother, and¦6298 a¦6299 daughter-in-law¦6299 against¦6300 her¦6303 mother-in-law,\wj*
+\v 36 \wj and¦6304 \+add #people¦6307\+add* will have enemies¦6305 in their own \+add #households¦6309\+add*.\wj*\x + \xo 10:35-36: \xt Mic 7:6.\x*
 \p
 \v 37 “\wj Anyone who loves¦6312 their father¦6313 or¦6314 mother¦6315 more than \+add ≡they love\+add* me¦6317 is¦6319 not¦6318 worthy¦6321 of¦6320 being mine, and¦6322 anyone who loves¦6324 their son¦6325 or¦6326 daughter¦6327 more than \+add ≡they love\+add* me¦6329 is¦6331 not¦6330 worthy¦6333 of¦6332 being mine.\wj*
 \v 38 \wj Anyone who¦6335 doesn't pick¦6337 up their own execution post, \+add and carry it\+add* as they follow¦6342 me¦6344, is¦6346 not¦6345 worthy¦6348 of¦6347 being mine.\wj*\x + \xo 10:38: \xt Mat 16:24; Mrk 8:34; Luk 9:23.\x*
@@ -661,9 +661,9 @@
 \rem /s1 Rewards
 \r (Mark 9:41)
 \p
-\v 40 \wj Anyone who accepts you¦6369 is¦6371 accepting¦6371 me¦6370, and¦6372 anyone who accepts me¦6375 is¦6377 accepting¦6377 the¦6378 one who sent¦6379 me¦6380 \+add down here\+add*.\wj*\x + \xo 10:40: a \xt Luk 10:16; Yhn 13:20; \xo b \xt Mrk 9:37; Luk 9:48.\x*
-\v 41 \wj Anyone who accepts a¦6383 prophet¦6383 in¦6384 the name¦6385 of¦6386 a¦6386 prophet¦6386 will¦6389 receive¦6389 the¦6387 reward¦6387 of¦6388 a¦6388 prophet¦6388, and¦6390 anyone who accepts a¦6393 godly¦6393 person in¦6394 the¦6395 name¦6395 of¦6396 a¦6396 godly¦6396 person will¦6399 receive¦6399 the¦6397 reward¦6397 of¦6398 a¦6398 godly¦6398 person.\wj*
-\v 42 \wj Anyone¦6401 who, as one¦6405 \+add of\+add* \+add &my¦6406\+add* apprentices¦6416, gives¦6404 a¦6410 cup¦6410 of¦6412 cool¦6412 water¦6412 to one of these¦6409 little¦6408 ones to¦6404 drink¦6404, I'm¦6418 telling¦6418 you¦6419 that that person certainly won't¦6421 lose¦6422 their reward¦6426.\wj*
+\v 40 \wj Anyone who accepts you¦6369 is¦6371 accepting¦6371 me¦6370,\x + \xo 10:40: \xt Luk 10:16; Yhn 13:20.\x* and¦6372 anyone who accepts me¦6375 is¦6377 accepting¦6377 the¦6378 one who sent¦6379 me¦6380 \+add down here\+add*.\wj*\x + \xo 10:40: \xt Mrk 9:37; Luk 9:48.\x*
+\v 41 \wj Anyone who accepts a¦6383 prophet¦6383 in¦6384 the name¦6385 of¦6386 a¦6386 prophet¦6386 will¦6389 receive¦6389 the¦6387 reward¦6387 of¦6388 a¦6388 prophet¦6388, and¦6390 anyone who accepts a¦6393 godly¦6393 \+add >person\+add* in¦6394 the¦6395 name¦6395 of¦6396 a¦6396 godly¦6396 \+add >person\+add* will¦6399 receive¦6399 the¦6397 reward¦6397 of¦6398 a¦6398 godly¦6398 \+add >person\+add*.\wj*
+\v 42 \wj Anyone¦6401 who, as one¦6405 \+add of\+add* \+add &my¦6406\+add* apprentices¦6416, gives¦6404 a¦6410 cup¦6410 of¦6412 cool¦6412 water¦6412 to one of these¦6409 little¦6408 \+add >ones\+add* to¦6404 drink¦6404, I'm¦6418 telling¦6418 you¦6419 that that person certainly won't¦6421 lose¦6422 their reward¦6426.\wj*
 \c 11
 \s1 Yeshua and Yohan-the-immerser
 \rem /s1 Jesus and John the Baptist; The Messengers from John the Baptist
@@ -676,7 +676,7 @@
 \v 3 to¦6469 ask¦6468 \add @Yeshua¦6469\add*, “Are¦6471 you¦6470 the¦6472 promised one, or¦6475 should we¦6477 be waiting¦6477 for¦6476 someone else?”
 \p
 \v 4 “\wj \+add Well,\+add*\wj*” \nd Yeshua¦6482\nd* answered¦6479, “\wj go¦6485 and tell¦6483 Yohan¦6488 everything you're¦6490 hearing¦6490 and¦6491 seeing¦6492:\wj*
-\v 5 \wj people who were blind¦6493 can see¦6494 now, lame¦6496 people are¦6497 \+add now\+add* walking¦6497, people with leprosy are¦6499 ‘clean¦6499’, deaf¦6501 people can \+add now\+add* hear¦6502, dead¦6504 people have been¦6505 \+add ≈brought back to life\+add*, and¦6506 the good¦6508 message¦6508 is being declared¦6508 to poor¦6507 people.\wj*\x + \xo 11:5: a \xt Isa 35:5-6; \xo b \xt Isa 61:1.\x*
+\v 5 \wj \+add >people who were\+add* blind¦6493 can see¦6494 now, lame¦6496 \+add >people\+add* are¦6497 \+add now\+add* walking¦6497, \+add >people with\+add* leprosy¦6498 are¦6499 ‘clean¦6499’, deaf¦6501 \+add >people\+add* can \+add now\+add* hear¦6502,\x + \xo 11:5: \xt Isa 35:5-6.\x* dead¦6504 \+add >people\+add* have been¦6505 \+add ≈brought back to life\+add*, and¦6506 the good¦6508 message¦6508 is being declared¦6508 to poor¦6507 \+add >people\+add*.\wj*\x + \xo 11:5: \xt Isa 61:1.\x*
 \v 6 \wj Anyone who's¦6512 not¦6515 embarrassed by me will be blessed¦6510.\wj*”
 \rem /s1 Jesus Praises John the Baptist
 \p
@@ -684,7 +684,7 @@
 \v 8 \wj Yes, \+add I'm asking you all\+add*, what¦6542 did you¦6543 go out¦6543 to¦6544 see¦6544? A¦6545 man¦6545 wearing fine¦6548 clothes¦6548? People in¦6556 palaces¦6558 wear¦6555 fine¦6554 clothes¦6554.\wj*
 \v 9 \wj So why¦6564 did you¦6565 go out¦6565 \+add there\+add*? To¦6569 see¦6569 a¦6568 prophet¦6568? Yes¦6570, I'm¦6571 telling¦6571 you¦6572 that \+add he is a prophet\+add*, and¦6573 even more¦6574 important¦6574 than¦6574 the prophets¦6575.\wj*
 \v 10 \wj He's the one that¦6576 was written¦6581 about: ‘See¦6582, I'm¦6583 sending¦6584 out¦6584 my¦6587 messenger¦6586 ahead¦6588 of¦6590 you¦6590, and he'll get your¦6595 path¦6594 ready¦6592 for you¦6597.’\wj*\x + \xo 11:10: \xt Mal 3:1.\x*
-\v 11 \wj I¦6599 can assure¦6598 you¦6600 that no person who's ever been¦6602 born¦6605 is greater¦6608 than¦6608 Yohan-the-immerser. But¦6614 even the¦6615 least¦6615 important person in¦6616 the¦6617 heavenly¦6620 kingdom¦6618 is¦6623 greater¦6621 than¦6621 him.\wj*
+\v 11 \wj I¦6599 can assure¦6598 you¦6600 that no \+add >person who's ever been\+add* born¦6605 is greater¦6608 than¦6608 Yohan-the-immerser. But¦6614 even the¦6615 least¦6615 important person in¦6616 the¦6617 heavenly¦6620 kingdom¦6618 is¦6623 greater¦6621 than¦6621 him.\wj*
 \v 12 \wj From¦6625 the¦6627 time¦6628 of¦6629 Yohan-the-immerser through to the¦6630 present time, the¦6634 heavenly¦6637 kingdom¦6635 has been¦6638 opposed, and¦6639 the opposition is¦6643 grabbing¦6643 at it¦6644.\wj*\x + \xo 11:12-13: \xt Luk 16:16.\x*
 \v 13 \wj All¦6645 the¦6647 prophets¦6648 and¦6649 the¦6650 law¦6651 prophesied¦6655 before Yohan¦6653 came,\wj*
 \v 14 \wj and¦6656 now, if¦6657 you¦6658 \+add crowds\+add* are¦6658 willing¦6658 to¦6659 believe it¦6659, he's¦6660 Eliyah¦6662—the¦6663 one who would come¦6665 \+add in advance\+add*.\wj*\x + \xo 11:14: \xt Mal 4:5; Mat 17:10-13; Mrk 9:11-13.\x*
@@ -699,18 +699,18 @@
 \r (Luke 10:13-15)
 \p
 \v 20 Then¦6750 \add @Yeshua¦6751\add* began¦6751 deriding¦6754 the¦6755 cities¦6756 he'd done most¦6763 of his¦6765 miracles¦6764 in, because¦6766 they¦6768 hadn't turned¦6759 away from their sins.
-\v 21 “\wj Chorazin¦6771, you're¦6773 doomed. Bethsaida¦6775, you're doomed. Because¦6776 if¦6777 the¦6785 miracles¦6786 that¦6787 were done in¦6789 you¦6790 had been done in¦6779 Tyre¦6780 and¦6781 Tsidon¦6782, they¦6798 would¦6792 have shown their turning away from their sins by wearing coarse cloth and¦6795 showering themselves with ashes¦6796.\wj*\x + \xo 11:21: \xt Isa 23:1-18; Eze 26:1–28:26; Yoel 3:4-8; Amos 1:9-10; Zech 9:2-4.\x*
+\v 21 “\wj Chorazin¦6771, you're¦6773 doomed. Bethsaida¦6775, you're doomed. Because¦6776 if¦6777 the¦6785 miracles¦6786 that¦6787 were done in¦6789 you¦6790 had been done in¦6779 Tyre¦6780 and¦6781 Tsidon¦6782,\x + \xo 11:21: \xt Isa 23:1-18; Eze 26:1–28:26; Yoel 3:4-8; Amos 1:9-10; Zech 9:2-4.\x* they¦6798 would¦6792 have shown their turning away from their sins by wearing coarse cloth and¦6795 showering themselves with ashes¦6796.\wj*
 \v 22 \wj However¦6799, I'm¦6800 telling¦6800 you¦6801 \+add cities\+add* that it'll¦6806 be¦6806 more¦6805 tolerable¦6805 for¦6802 the people of Tyre¦6802 and¦6803 Tsidon¦6804 on judgement¦6809 day¦6808 than¦6811 it will be for¦6812 you¦6812.\wj*
-\v 23 \wj Same with you¦6814, Capernaum¦6815. You won't¦6816 be¦6822 lifted¦6822 up¦6822 to¦6818 heaven¦6820, but instead you'll¦6826 be¦6826 sent down¦6826 to¦6824 hell, because¦6828 if¦6829 the¦6834 miracles¦6835 which¦6836 were done in¦6838 you¦6839 had¦6837 been¦6833 done in¦6830 Sodom¦6831, that city would¦6843 still be here today¦6847.\wj*\x + \xo 11:23: a \xt Isa 14:13-15; \xo b \xt Gen 19:24-28.\x*
+\v 23 \wj Same with you¦6814, Capernaum¦6815. You won't¦6816 be¦6822 lifted¦6822 up¦6822 to¦6818 heaven¦6820, but instead you'll¦6826 be¦6826 sent down¦6826 to¦6824 hell,\x + \xo 11:23: \xt Isa 14:13-15.\x* because¦6828 if¦6829 the¦6834 miracles¦6835 which¦6836 were done in¦6838 you¦6839 had¦6837 been¦6833 done in¦6830 Sodom¦6831,\x + \xo 11:23: \xt Gen 19:24-28.\x* that city would¦6843 still be here today¦6847.\wj*
 \v 24 \wj However¦6848, I'm¦6849 telling¦6849 you¦6850, \+add Capernaum\+add*, that¦6851 it'll¦6856 be¦6856 more¦6855 tolerable¦6855 for¦6852 the¦6852 people of¦6854 Sodom¦6854 on judgement¦6861 day¦6860 than¦6863 it will be for¦6864 you¦6864.\wj*”\x + \xo 11:24: \xt Mat 10:15; Luk 10:12.\x*
 \s1 Yeshua's load is light
 \rem /s1 Rest for the Weary; Come to Me and Rest; Jesus Thanks His Father; Jesus' Prayer of Thanksgiving
 \r (Luke 10:21-22)
 \p
-\v 25 At¦6866 that¦6867 time¦6869, \nd Yeshua¦6873\nd* said¦6874, “\wj I'm¦6875 acknowledging¦6875 you¦6876, father¦6877, \+nd master¦6878\+nd* of¦6879 heaven¦6880 and¦6881 earth¦6883, because you¦6885 hid¦6885 these¦6887 things from¦6888 ‘wise¦6889’ and¦6890 ‘intelligent¦6891’ people and¦6892 revealed¦6893 them¦6894 to¦6895 the ‘naive’.\wj*
+\v 25 At¦6866 that¦6867 time¦6869, \nd Yeshua¦6873\nd* said¦6874, “\wj I'm¦6875 acknowledging¦6875 you¦6876, father¦6877, \+nd master¦6878\+nd* of¦6879 heaven¦6880 and¦6881 earth¦6883, because you¦6885 hid¦6885 these¦6887 \+add >things\+add* from¦6888 ‘wise¦6889’ and¦6890 ‘intelligent¦6891’ \+add >people\+add* and¦6892 revealed¦6893 them¦6894 to¦6895 the ‘naive’.\wj*
 \v 26 \wj Yes¦6896, father¦6898, because¦6899 that was your desire.\wj*
 \p
-\v 27 \wj My¦6912 father has given¦6908 control of everything over¦6908 to¦6907 me¦6907, but¦6913 no¦6914 one¦6914 really knows¦6916 the¦6917 son¦6918 except¦6919 the¦6921 father¦6922, and no one really knows¦6927 the¦6924 father¦6925 except¦6928 the¦6930 son¦6931 and¦6932 anyone¦6926 who¦6933 the¦6938 son¦6939 wants¦6936 to¦6940 tell about him.\wj*\x + \xo 11:27: a \xt Yhn 3:35; \xo b \xt Yhn 1:18; 10:15.\x*
+\v 27 \wj My¦6912 father has given¦6908 control of everything over¦6908 to¦6907 me¦6907,\x + \xo 11:27: \xt Yhn 3:35.\x* but¦6913 no¦6914 one¦6914 really knows¦6916 the¦6917 son¦6918 except¦6919 the¦6921 father¦6922, and no one really knows¦6927 the¦6924 father¦6925 except¦6928 the¦6930 son¦6931 and¦6932 anyone¦6926 who¦6933 the¦6938 son¦6939 wants¦6936 to¦6940 tell about him.\wj*\x + \xo 11:27: \xt Yhn 1:18; 10:15.\x*
 \p
 \v 28 \wj Come¦6941 to¦6942 me¦6943 all¦6944 of you¦6945 who are tired¦6946 and¦6947 feel overloaded, and¦6950 I'll¦6950 help you¦6952 relax.\wj*
 \v 29 \wj You can take¦6953 on¦6957 my¦6956 workload and¦6959 learn¦6960 from¦6961 me¦6962, because¦6963 I'm¦6965 gentle¦6964 and¦6966 humble¦6967, and¦6970 your¦6975 souls¦6974 will¦6971 be¦6971 able to relax,\wj*\x + \xo 11:29: \xt Jer 6:16.\x*
@@ -723,11 +723,11 @@
 \v 1 At¦6987 that¦6988 time¦6990, \nd Yeshua¦6993\nd* was¦6991 going¦6991 through¦6997 some fields of grain on a rest¦6996 \add #day¦6996\add*, and¦7002 his¦7004 apprentices¦7003 were hungry¦7005 and¦7006 began¦7007 to¦7008 pluck¦7008 some heads¦7011 of¦7011 grain¦7011 and¦7013 crunch them.\x + \xo 12:1: \xt Deu 23:25.\x*
 \v 2 But¦7016 some people from the¦7015 Pharisees¦7017' party¦7017 saw¦7018 them and said¦7020, “Look¦7022, your¦7025 apprentices¦7024 are¦7026 harvesting on¦7031 a rest¦7032 day¦7032, when it's¦7029 not¦7028 permitted¦7029.”
 \p
-\v 3 “\wj Haven't you¦7038 read¦7038 about what¦7039 David¦7041 did¦7040 when¦7042 he¦7043 and¦7045 his fighters were hungry¦7043?\wj*” \add @Yeshua¦7048\add* responded¦7035.\x + \xo 12:3-4: \xt 1Sam 21:1-6.\x*
-\v 4 \wj He¦7051 went¦7051 into¦7052 \nd God's¦7056\nd* tent and¦7057 they¦7064 ate¦7064 the¦7058 Bread¦7059 of¦7060 the¦7060 Presence¦7062, which¦7066 none of them were¦7071 allowed¦7069 to¦7073 eat¦7073—only¦7082 the¦7080 priests¦7081.\wj*\x + \xo 12:4: \xt Lev 24:9.\x*
+\v 3 “\wj Haven't you¦7038 read¦7038 about what¦7039 David¦7041 did¦7040 when¦7042 he¦7043 and¦7045 his fighters were hungry¦7043?\wj*” \add @Yeshua¦7048\add* responded¦7035.
+\v 4 \wj He¦7051 went¦7051 into¦7052 \nd God's¦7056\nd* tent and¦7057 they¦7064 ate¦7064 the¦7058 Bread¦7059 of¦7060 the¦7060 Presence¦7062,\x + \xo 12:3-4: \xt 1Sam 21:1-6.\x* which¦7066 none of them were¦7071 allowed¦7069 to¦7073 eat¦7073—only¦7082 the¦7080 priests¦7081.\wj*\x + \xo 12:4: \xt Lev 24:9.\x*
 \v 5 \wj Or¦7083 haven't you¦7085 understood¦7085 that¦7089 when the¦7095 priests¦7096 work in¦7097 the¦7098 temple¦7099 on the¦7100 rest day¦7101, it's against the¦7087 law¦7088, and¦7103 yet they're¦7105 innocent¦7104?\wj*\x + \xo 12:5: \xt Num 28:9-10.\x*
 \v 6 \wj But¦7108 I'm¦7106 telling¦7106 you¦7109 that¦7110 someone greater¦7113 than¦7113 the¦7111 temple¦7112 is¦7115 here¦7116.\wj*
-\v 7 \wj But¦7118 you¦7119 \+add Pharisees\+add* should have¦7119 known¦7119 that¦7121 what¦7120 I¦7124 want¦7124 is mercy¦7123 rather than \+add #sacrifices¦7127\+add*—you¦7130 shouldn't¦7128 have convicted¦7130 the¦7131 innocent¦7132,\wj*\x + \xo 12:7: a \xt Mat 9:13; \xo b \xt Hos 6:6.\x*
+\v 7 \wj But¦7118 you¦7119 \+add Pharisees\+add* should have¦7119 known¦7119 that¦7121 what¦7120 I¦7124 want¦7124 is mercy¦7123 rather than \+add #sacrifices¦7127\+add*\x + \xo 12:7: \xt Mat 9:13.\x*\x + \xo 12:7: \xt Hos 6:6.\x*—you¦7130 shouldn't¦7128 have convicted¦7130 the¦7131 innocent¦7132,\wj*
 \v 8 \wj because¦7134 the¦7139 son¦7140 of¦7142 humanity¦7142 is¦7135 the \+nd master¦7133\+nd* over the¦7137 rest¦7138 day¦7138.\wj*
 \s1 The man with the clawed fist
 \rem /s1 The Man with a Withered Hand; The Man with a Paralysed Hand
@@ -748,7 +748,7 @@
 \v 16 but¦7277 warned¦7278 them¦7279 not¦7281 to¦7279 reveal who¦7280 he was,
 \v 17 in¦7285 order¦7285 to fulfil¦7287 what the¦7292 prophet¦7293 Yeshayah¦7291 \add !(Isaiah¦7291)\add* had written:
 \q1
-\v 18 ‘See¦7295 my servant¦7297 who¦7300 I¦7301 chose¦7301,\x + \xo 12:18-21: \xt Isa 42:1-4 (LXX).\x*
+\v 18 ‘See¦7295 my servant¦7297 who¦7300 I¦7301 chose¦7301,
 \q1 the¦7302 one I dearly love and who my¦7304 soul¦7311 takes¦7309 pleasure¦7309 in.
 \q1 I¦7313 will¦7313 place¦7313 my \nd spirit¦7315\nd* on¦7317 him¦7318
 \q2 and¦7319 he¦7323 will¦7323 bring justice¦7320 to¦7321 the¦7321 nations.
@@ -760,7 +760,7 @@
 \q2 and¦7345 certainly won't extinguish¦7350 a¦7346 smoldering¦7347 wick¦7346,
 \q1 before he¦7353 sends¦7353 justice¦7357 forward into¦7354 victory¦7355.
 \q1
-\v 21 The¦7364 other nations will¦7365 \add ≈put their hope¦7365 in¦7361\add* his¦7363 \add ≈name¦7362 and authority\add*.’
+\v 21 The¦7364 other nations will¦7365 \add ≈put their hope¦7365 in¦7361\add* his¦7363 \add ≈name¦7362 and authority\add*.’\x + \xo 12:18-21: \xt Isa 42:1-4 (LXX).\x*
 \s1 Yeshua accused of being the leader of demons
 \rem /s1 Jesus and Beelzebub; Jesus and Beelzebul; Jesus and the Prince of Demons
 \r (Mark 3:20-30; Luke 11:14-23)
@@ -785,7 +785,7 @@
 \r (Luke 6:43-45)
 \p
 \v 33 “\wj Either¦7622 make¦7623 both the¦7625 tree¦7627 and¦7629 its fruit¦7631 good¦7633, or¦7635 make¦7636 them both bad, because¦7646 a tree¦7651 is¦7653 known¦7653 by¦7645 its fruit¦7648.\wj*\x + \xo 12:33: \xt Mat 7:20; Luk 6:44.\x*
-\v 34 \wj You brood¦7655 of¦7657 snakes¦7657! You're evil¦7662 inside, so why do you think you can say¦7661 anything that's good¦7660? After all¦7659, \+add &your¦7670\+add* \+add #mouths¦7671\+add* speak¦7672 out¦7664 of¦7664 what's plentiful in \+add &your\+add* \+add #hearts¦7669\+add*.\wj*\x + \xo 12:34: a \xt Mat 3:7; 23:33; Luk 3:7; \xo b \xt Mat 15:18; Luk 6:45.\x*
+\v 34 \wj You brood¦7655 of¦7657 snakes¦7657!\x + \xo 12:34: \xt Mat 3:7; 23:33; Luk 3:7.\x* You're evil¦7662 inside, so why do you think you can say¦7661 anything that's good¦7660? After all¦7659, \+add &your¦7670\+add* \+add #mouths¦7671\+add* speak¦7672 out¦7664 of¦7664 what's plentiful in \+add &your\+add* \+add #hearts¦7669\+add*.\wj*\x + \xo 12:34: \xt Mat 15:18; Luk 6:45.\x*
 \v 35 \wj A good¦7675 person¦7676 produces good¦7685 words out¦7677 of¦7677 their store of \+add ≈goodness¦7679\+add*, and¦7686 an evil¦7688 person¦7689 produces evil¦7695 words out¦7690 of¦7690 their store of evil¦7692.\wj*
 \p
 \v 36 “\wj But¦7697 I'm¦7696 telling¦7696 you¦7698 that people¦7709 will¦7711 have to give¦7711 an¦7715 account¦7715 on judgement¦7718 day¦7717 for every¦7700 worthless sentence they've spoken¦7706,\wj*
@@ -797,9 +797,9 @@
 \v 38 Then¦7732 some¦7735 of¦7736 the¦7736 \add ≈religious¦7737 teachers¦7737\add* and¦7738 some from the Pharisees¦7739' party¦7739 responded¦7733 to¦7734 him¦7734, “Teacher¦7741, we¦7742 want¦7742 to¦7746 see¦7746 a¦7745 sign¦7745 from¦7743 you¦7744.”\x + \xo 12:38: \xt Mat 16:1; Mrk 8:11; Luk 11:16.\x*
 \p
 \v 39 “\wj It's an evil¦7753 and¦7754 adulterous¦7755 generation¦7752 that's \+add ≈looking¦7757 for¦7757\+add* a¦7756 sign¦7756,\wj*” answered¦7749 \add @Yeshua\add*, “\wj and¦7758 no sign¦7759 will be¦7761 given¦7761 to¦7763 it¦7763 apart from the¦7766 sign¦7767 of¦7768 the¦7769 prophet¦7770 Yonah¦7768 \+add (Jonah)\+add*.\wj*\x + \xo 12:39: \xt Mat 16:4; Mrk 8:12.\x*
-\v 40 \wj Just like¦7772 Yonah¦7775 was¦7774 in¦7776 the¦7777 belly¦7778 of¦7779 the¦7779 huge¦7780 fish¦7780 for three¦7781 days¦7782 and¦7783 three¦7784 nights¦7785, in the same way, the¦7789 son¦7790 of¦7792 humanity¦7792 will¦7787 be¦7787 three¦7798 days¦7799 and¦7800 three¦7801 nights¦7802 in¦7793 the¦7794 heart¦7795 of¦7796 the¦7796 earth¦7797.\wj*\x + \xo 12:40: \xt Yonah 1:17.\x*
-\v 41 \wj The¦7803 inhabitants of Nineveh¦7804 will¦7805 stand¦7805 up¦7805 and¦7814 condemn¦7815 this¦7813 generation¦7812 on judgement¦7808 day, because¦7817 they¦7818 turned away from their sins when Yonah¦7822 preached, and¦7823 look¦7824, now there's someone here¦7827 who's greater¦7825 than¦7825 Yonah¦7826.\wj*\x + \xo 12:41: \xt Yonah 3:5.\x*
-\v 42 \wj The¦7828 queen¦7828 of¦7829 the¦7829 south¦7829 will¦7830 get up and¦7838 condemn¦7839 this¦7837 generation¦7836 on judgement¦7833 day, because¦7841 she¦7842 travelled a great distance to¦7848 hear¦7848 \+add King\+add* Solomon's¦7852 wisdom¦7850, and¦7853 look¦7854, now there's someone here¦7857 who's greater¦7855 than¦7855 Solomon¦7856.\wj*\x + \xo 12:42: \xt 1Ki 10:1-10; 2Ch 9:1-12.\x*
+\v 40 \wj Just like¦7772 Yonah¦7775 was¦7774 in¦7776 the¦7777 belly¦7778 of¦7779 the¦7779 huge¦7780 fish¦7780 for three¦7781 days¦7782 and¦7783 three¦7784 nights¦7785,\x + \xo 12:40: \xt Yonah 1:17.\x* in the same way, the¦7789 son¦7790 of¦7792 humanity¦7792 will¦7787 be¦7787 three¦7798 days¦7799 and¦7800 three¦7801 nights¦7802 in¦7793 the¦7794 heart¦7795 of¦7796 the¦7796 earth¦7797.\wj*
+\v 41 \wj The¦7803 inhabitants of Nineveh¦7804 will¦7805 stand¦7805 up¦7805 and¦7814 condemn¦7815 this¦7813 generation¦7812 on judgement¦7808 day, because¦7817 they¦7818 turned away from their sins when Yonah¦7822 preached,\x + \xo 12:41: \xt Yonah 3:5.\x* and¦7823 look¦7824, now there's someone here¦7827 who's greater¦7825 than¦7825 Yonah¦7826.\wj*
+\v 42 \wj The¦7828 queen¦7828 of¦7829 the¦7829 south¦7829 will¦7830 get up and¦7838 condemn¦7839 this¦7837 generation¦7836 on judgement¦7833 day, because¦7841 she¦7842 travelled a great distance to¦7848 hear¦7848 \+add King\+add* Solomon's¦7852 wisdom¦7850,\x + \xo 12:42: \xt 1Ki 10:1-10; 2Ch 9:1-12.\x* and¦7853 look¦7854, now there's someone here¦7857 who's greater¦7855 than¦7855 Solomon¦7856.\wj*
 \s1 The demon's revenge
 \rem /s1 The Return of the Evil Spirit; The Return of the Unclean Spirit
 \r (Luke 11:24-26)
@@ -840,23 +840,23 @@
 \v 11 “\wj You¦8216 guys have¦8217 been¦8217 permitted to¦8218 know¦8218 the¦8219 heavenly¦8224 kingdom's¦8222 mysteries¦8220,\wj*” replied \add @Yeshua\add*, “\wj but¦8226 not those¦8225 other people,\wj*
 \v 12 \wj because¦8230 anyone¦8229 who \+add already\+add* has¦8231 will¦8232 be¦8232 given¦8232 more, and¦8234 they'll end up with plenty, but¦8237 anyone¦8236 who doesn't have¦8239, even¦8240 what¦8241 they do have¦8242 will¦8243 be¦8243 taken¦8243 away¦8243 from¦8244 them.\wj*\x + \xo 13:12: \xt Mat 25:29; Mrk 4:25; Luk 8:18; 19:26.\x*
 \v 13 \wj That's why I¦8252 speak¦8252 to them in¦8248 parables¦8249, because¦8253 when they look they don't¦8257 see¦8258, and¦8260 when they listen¦8261, they¦8264 don't¦8263 hear¦8264 or understand¦8269,\wj*
-\v 14 \wj and¦8273 so the¦8279 prophecy¦8280 \+add written\+add* by \add !(Isaiah)\add* is¦8276 being¦8276 fulfilled¦8276:\wj*\x + \xo 13:14-15: \xt Isa 6:9-10 (LXX).\x*
+\v 14 \wj and¦8273 so the¦8279 prophecy¦8280 \+add written\+add* by \add !(Isaiah)\add* is¦8276 being¦8276 fulfilled¦8276:\wj*
 \q1 \wj ‘When you listen¦8291 you¦8292 will¦8292 hear¦8292, but¦8295 you¦8298 certainly won't¦8297 understand¦8298,\wj*
 \q1 \wj and¦8299 when you look you will¦8301 see¦8301, but¦8303 you¦8306 certainly won't¦8305 perceive¦8306 anything,\wj*
 \q1
 \v 15 \wj because¦8308 these people's¦8312 hearts are¦8307 insensitive, and¦8314 they¦8319 can barely hear¦8319 with¦8315 their ears¦8316,\wj*
 \q1 \wj and¦8320 they¦8324 shut¦8324 their eyes¦8322 so they can't see with them¦8323.\wj*
 \q1 \wj Otherwise they¦8326 might¦8326 see¦8326 with¦8327 their eyes¦8328, and¦8330 hear¦8334 with¦8331 their ears¦8332,\wj*
-\q1 \wj and¦8335 understand¦8338 with¦8336 their heart¦8337, and¦8339 then return¦8340 to me, and¦8342 then I¦8343 would¦8343 heal¦8343 them¦8345.’\wj*
+\q1 \wj and¦8335 understand¦8338 with¦8336 their heart¦8337, and¦8339 then return¦8340 to me, and¦8342 then I¦8343 would¦8343 heal¦8343 them¦8345.’\wj*\x + \xo 13:14-15: \xt Isa 6:9-10 (LXX).\x*
 \p
-\v 16 “\wj But¦8347 your eyes¦8350 are blessed¦8348, because¦8351 they¦8352 can see¦8352, and¦8353 your ears¦8355 also, because¦8357 they¦8359 can hear¦8359,\wj*\x + \xo 13:16-17: \xt Luk 10:23-24.\x*
+\v 16 “\wj But¦8347 your eyes¦8350 are¦8348 blessed¦8348, because¦8351 they¦8352 can see¦8352, and¦8353 your ears¦8355 also, because¦8357 they¦8359 can hear¦8359,\wj*\x + \xo 13:16-17: \xt Luk 10:23-24.\x*
 \v 17 \wj because¦8361 I¦8362 can assure¦8360 you¦8363 guys that¦8364 many¦8365 prophets¦8366 and¦8367 godly¦8368 people¦8368 wanted¦8369 to¦8370 see¦8370 what¦8371 you're¦8372 seeing¦8372, but¦8373 they¦8377 didn't¦8374 see¦8377, and¦8378 they wanted to¦8379 hear¦8379 what¦8380 you're¦8381 hearing¦8381, but¦8382 they¦8384 didn't¦8383 hear¦8384 it either.\wj*
 \s1 The meaning/salvation of parable concerning the planting
 \rem /s1 Jesus Explains the Parable of the Sower; The Parable of the Sower Explained
 \r (Mark 4:13-20; Luke 8:11-15)
 \p
 \v 18 “\wj So¦8386 now listen¦8387 to \+add the meaning of\+add* the¦8388 parable¦8389 about¦8390 the¦8390 person spreading seed¦8391.\wj*
-\v 19 \wj Everyone¦8392 who hears¦8393 the¦8394 message¦8395 about¦8396 the¦8396 kingdom¦8397 and¦8398 doesn't understand¦8401 it, the¦8403 evil¦8404 one comes¦8402 and¦8405 snatches¦8406 what was¦8408 sown¦8408 in¦8410 that person's heart¦8412. That's the¦8417 seed¦8421 that landed by¦8418 the¦8419 path¦8420.\wj*
+\v 19 \wj Everyone¦8392 who hears¦8393 the¦8394 message¦8395 about¦8396 the¦8396 kingdom¦8397 and¦8398 doesn't understand¦8401 it, the¦8403 evil¦8404 \+add >one\+add* comes¦8402 and¦8405 snatches¦8406 what was¦8408 sown¦8408 in¦8410 that person's heart¦8412. That's the¦8417 seed¦8421 that landed by¦8418 the¦8419 path¦8420.\wj*
 \v 20 \wj The¦8422 seed¦8427 that¦8428 landed on¦8424 the¦8425 rocky¦8426 ground, that's the¦8430 person who hears¦8434 the¦8431 message¦8432 and¦8435 is immediately¦8436 happy to accept¦8440 it¦8441,\wj*
 \v 21 \wj but¦8444 doesn't have¦8443 any \+add #roots¦8445\+add* of their own, so¦8444 it's just fleeting—they stumble¦8460 as soon as there's any difficulties or¦8454 persecution¦8455 because¦8456 of¦8456 the¦8457 message¦8458.\wj*
 \v 22 \wj The¦8461 seed¦8466 that¦8468 landed among¦8463 the¦8464 thorns¦8465 is¦8469 the¦8470 person who hears¦8474 the¦8471 message¦8472, but¦8475 the¦8476 \+add ≈world's\+add* \+add #worries¦8477\+add* and¦8481 wealth's¦8485 seductiveness¦8483 choke¦8487 out the¦8488 message¦8489 and¦8490 it¦8492 becomes¦8492 unfruitful¦8491.\wj*
@@ -886,9 +886,9 @@
 \rem /s1 The Use of Parables; Jesus' Use of Parables
 \r (Mark 4:33-34)
 \p
-\v 34 \nd Yeshua¦8774\nd* told¦8772 all¦8771 these¦8770 things to¦8777 the¦8777 crowds¦8778 in the form of parables¦8776. In fact he¦8784 said¦8784 nothing¦8782 that wasn't a¦8781 parable¦8781,
-\v 35 so¦8787 that¦8787 what had¦8790 been¦8790 \add written\add* by¦8791 the¦8793 prophet¦8794 would¦8796 be¦8796 fulfilled¦8788:\x + \xo 13:35: \xt Psa 78:2.\x*
-\q1 ‘I¦8802 will¦8802 be¦8802 saying¦8795 things that have¦8803 been¦8803 hidden¦8803 since the¦8805 creation¦8805 of¦8806 the¦8806 world¦8806.’
+\v 34 \nd Yeshua¦8774\nd* told¦8772 all¦8771 these¦8770 \add >things\add* to¦8777 the¦8777 crowds¦8778 in the form of parables¦8776. In fact he¦8784 said¦8784 nothing¦8782 that wasn't a¦8781 parable¦8781,
+\v 35 so¦8787 that¦8787 what had¦8790 been¦8790 \add written\add* by¦8791 the¦8793 prophet¦8794 would¦8796 be¦8796 fulfilled¦8788:
+\q1 ‘I¦8802 will¦8802 be¦8802 saying¦8795 things that have¦8803 been¦8803 hidden¦8803 since the¦8805 creation¦8805 of¦8806 the¦8806 world¦8806.’\x + \xo 13:35: \xt Psa 78:2.\x*
 \s1 Yeshua explains about the false wheat
 \rem /s1 The Parable of the Weeds Explained; Jesus Explains the Parable of the Weeds; The Wheat and Weeds Explained
 \p
@@ -900,7 +900,7 @@
 \v 40 \wj Therefore¦8898 at the end of¦8914 this age¦8915, the false wheat plants will be¦8899 gathered¦8899 and¦8903 incinerated¦8906.\wj*
 \v 41 \wj The¦8919 son¦8920 of¦8922 humanity¦8922 will¦8918 send¦8918 out¦8918 his messengers¦8924 to remove all¦8932 the¦8933 temptations¦8934 out¦8928 of¦8928 his kingdom¦8930, as well as everyone¦8932 who doesn't obey \+add God's\+add* law,\wj*
 \v 42 \wj and¦8940 they'll¦8941 throw¦8941 them¦8943 into¦8944 the¦8945 incinerator¦8946, and there'll¦8949 be¦8950 crying¦8952 and¦8953 a lot of¦8957 anguish.\wj*
-\v 43 \wj Then¦8958 the¦8959 godly¦8960 people will¦8962 shine¦8962 \+add as bright as\+add* the¦8964 sun¦8965 in¦8966 their¦8971 father's¦8970 kingdom¦8968. Anyone who's interested in hearing¦8976, let¦8976 them listen¦8976.\wj*
+\v 43 \wj Then¦8958 the¦8959 godly¦8960 \+add >people\+add* will¦8962 shine¦8962 \+add as bright as\+add* the¦8964 sun¦8965 in¦8966 their¦8971 father's¦8970 kingdom¦8968. Anyone who's interested in hearing¦8976, let¦8976 them listen¦8976.\wj*
 \s1 The parable about the treasure in the field
 \rem /s1 The Parables of the Hidden Treasure and the Pearl; The Parable of the Hidden Treasure; Three Parables; Illustration of the Hidden Treasure
 \p
@@ -915,14 +915,14 @@
 \p
 \v 47 “\wj The¦9044 heavenly¦9047 kingdom¦9045 is¦9043 also like¦9042 a¦9048 dragnet¦9048 that was¦9049 thrown¦9049 into¦9050 the¦9051 lake¦9052 and¦9053 picked up everything¦9055 from under the water.\wj*
 \v 48 \wj When¦9059 it¦9061 was¦9061 full, they pulled¦9062 it up¦9062 onto the¦9067 beach¦9068 and¦9069 sat¦9070 and sorted the catch—throwing the¦9072 good¦9074 catch into¦9075 containers¦9078 and¦9080 throwing¦9083 out¦9082 the¦9079 bad¦9081 stuff.\wj*
-\v 49 \wj It'll¦9087 be¦9087 just like that at the¦9089 end of¦9091 this age¦9093—\+add &God's¦9095\+add* messengers¦9096 will¦9094 come¦9094 out¦9094 and¦9099 separate¦9100 the¦9101 evil¦9102 people from¦9103 the godly¦9106 people,\wj*
+\v 49 \wj It'll¦9087 be¦9087 just like that at the¦9089 end of¦9091 this age¦9093—\+add &God's¦9095\+add* messengers¦9096 will¦9094 come¦9094 out¦9094 and¦9099 separate¦9100 the¦9101 evil¦9102 \+add >people\+add* from¦9103 the godly¦9106 \+add >people\+add*,\wj*
 \v 50 \wj and¦9107 they'll¦9108 throw¦9108 the evil ones into¦9111 the¦9112 incinerator¦9113. There'll¦9116 be¦9117 crying¦9119 and¦9120 a lot of¦9124 anguish.\wj*
 \rem /s1 New Truths and Old; Treasures New and Old
 \p
 \v 51 “\wj Did you¦9129 all¦9129 understand¦9129 all¦9131 of that?\wj*”
 \p “Yes¦9134,” his apprentices answered¦9132.
 \p
-\v 52 Then¦9137 he¦9136 said¦9139 to¦9141 them¦9141, “\wj Because¦9142 of¦9142 this¦9143, every¦9144 teacher who's been¦9146 trained¦9146 about¦9153 the¦9153 heavenly¦9154 kingdom¦9151 is¦9157 like¦9155 a¦9159 home¦9159 owner¦9159 who¦9160 gives presents of both new¦9167 and¦9168 old¦9169 things of out¦9163 their valuables.\wj*”
+\v 52 Then¦9137 he¦9136 said¦9139 to¦9141 them¦9141, “\wj Because¦9142 of¦9142 this¦9143, every¦9144 teacher who's been¦9146 trained¦9146 about¦9153 the¦9153 heavenly¦9154 kingdom¦9151 is¦9157 like¦9155 a¦9159 home¦9159 owner¦9159 who¦9160 gives presents of both new¦9167 and¦9168 old¦9169 \+add >things\+add* of out¦9163 their valuables.\wj*”
 \s1 Those from Nazaret cannot accept the messiah
 \rem /s1 Jesus Is Rejected at Nazareth; A Prophet Without Honour
 \r (Mark 6:1-6; Luke 4:16-30)
@@ -932,8 +932,8 @@
 \v 54 went¦9182 to¦9183 his hometown¦9186 \add of Nazaret\add*, and taught¦9188 the people in¦9190 the¦9191 \add ≈Jewish¦9192 meeting¦9192 hall¦9192\add*. They were¦9195 amazed¦9195 at his teaching, asking¦9198 \add each other\add*, “Where¦9199 did this¦9200 fellow¦9200 get¦9210 \add &his¦9205\add* wisdom¦9206 and¦9208 his ability to do miracles¦9210?
 \v 55 Isn't¦9211 he the¦9214 son¦9217 of¦9215 Yosef, the¦9215 carpenter¦9216? Don't¦9218 we know his mother¦9221 Maria¦9224 and¦9225 his brothers¦9227 Yacob¦9229 and¦9230 Yosef¦9232 and¦9234 Simon¦9235 and¦9236 Yudas¦9237?
 \v 56 Aren't¦9242 his¦9241 sisters¦9240 \add still\add* here in town? So¦9248 where¦9247 did he get¦9251 all these¦9250 abilities?”
-\v 57 As a result, they¦9254 didn't have any respect for him¦9257.\x + \xo 13:57: \xt Yhn 4:44.\x*
-\p But¦9259 \nd Yeshua¦9260\nd* said¦9261 to¦9262 them¦9262, “\wj A¦9265 prophet¦9265 is¦9264 not¦9263 dishonoured¦9266 except¦9267 in¦9269 his own hometown¦9272 and¦9274 among his¦9278 own household¦9277.\wj*”
+\v 57 As a result, they¦9254 didn't have any respect for him¦9257.
+\p But¦9259 \nd Yeshua¦9260\nd* said¦9261 to¦9262 them¦9262, “\wj A¦9265 prophet¦9265 is¦9264 not¦9263 dishonoured¦9266 except¦9267 in¦9269 his own hometown¦9272 and¦9274 among his¦9278 own household¦9277.\wj*”\x + \xo 13:57: \xt Yhn 4:44.\x*
 \v 58 \add ≈So¦9279\add* he¦9281 didn't¦9280 do¦9281 many¦9284 miracles¦9283 there¦9282 because¦9285 of¦9285 their¦9290 disbelief¦9288.
 \c 14
 \s1 The beheading of Yohan-the-immerser
@@ -961,7 +961,7 @@
 \r (Mark 6:30-44; Luke 9:10-17; Yhn 6:1-14)
 \p
 \v 13 When¦9494 \nd Yeshua¦9496\nd* heard¦9493 \add what had happened to Yohan\add*, he got a boat¦9500 to¦9501 take him to a¦9502 quiet¦9502 place¦9503 by¦9504 himself¦9505, but¦9506 the¦9508 crowds¦9509 from¦9514 the¦9515 cities¦9516 heard about it, and followed¦9510 him¦9511 around the lake's shore on¦9513 foot¦9513.
-\v 14 \add ≈So\add* when he got out¦9518 of the boat, he¦9521 saw¦9521 a¦9523 large¦9522 crowd¦9523 of people, and¦9525 he¦9526 felt¦9526 compassion¦9526 towards them¦9529, and¦9532 he healed¦9533 the¦9534 sick¦9536 people \add they'd brought\add*.
+\v 14 \add ≈So\add* when he got out¦9518 of the boat, he¦9521 saw¦9521 a¦9523 large¦9522 crowd¦9523 of people, and¦9525 he¦9526 felt¦9526 compassion¦9526 towards them¦9529, and¦9532 he healed¦9533 the¦9534 sick¦9536 \add >people\add* \add they'd brought\add*.
 \p
 \v 15 As evening¦9538 was approaching¦9541, \add &his¦9543\add* apprentices¦9544 came¦9541 up and requested, “This place¦9550 is¦9548 quite isolated, and¦9551 it's already¦9554 late. Send¦9557 the¦9559 people back into¦9563 the¦9564 villages¦9566 so they¦9568 can buy¦9568 themselves¦9569 something to eat.”
 \p
@@ -1010,16 +1010,16 @@
 \v 2 “Why¦9970 do your¦9973 apprentices¦9972 break¦9974 the¦9975 \add #traditions¦9976\add* handed¦9983 down by \add &our¦9977\add* elders¦9978? They¦9981 don't¦9979 do the hand-washing ceremony before eating¦9987.”
 \p
 \v 3 “\wj Well why¦9995 do you¦9997 break¦9998 \nd God's¦10002\nd* command¦10000 because¦10003 of¦10003 your¦10006 tradition¦10005?\wj*” \add @Yeshua¦10006\add* responded.
-\v 4 “\wj \+nd God¦10009\+nd* told us to honour¦10013 our fathers¦10015 and¦10017 mothers¦10019, and¦10021 also¦10021 that anyone who speaks¦10023 evil¦10023 about¦10024 their father¦10024 or¦10025 mother¦10026 deserves the death¦10027 penalty.\wj*\x + \xo 15:4: a \xt Exo 20:12; Deu 5:16; \xo b \xt Exo 21:17; Lev 20:9.\x*
+\v 4 “\wj \+nd God¦10009\+nd* told us to honour¦10013 our fathers¦10015 and¦10017 mothers¦10019,\x + \xo 15:4: \xt Exo 20:12; Deu 5:16.\x* and¦10021 also¦10021 that anyone who speaks¦10023 evil¦10023 about¦10024 their father¦10024 or¦10025 mother¦10026 deserves the death¦10027 penalty.\wj*\x + \xo 15:4: \xt Exo 21:17; Lev 20:9.\x*
 \v 5 \wj But¦10030 if¦10046 someone tells \+add &their¦10037\+add* father¦10038 or¦10039 mother¦10041 that whatever¦10043 \+add help\+add* \+add %they¦10049\+add* may¦10049 have expected from \+add %them¦10048\+add* is now given away as a¦10042 gift¦10042, then you \+add people\+add* say¦10036\wj*
 \v 6 \wj that they're not¦10054 \+add actually\+add* dishonouring their parents¦10058. So¦10064 by saying that, you're¦10065 overriding \nd God's¦10072\nd* message¦10069 with your¦10076 own tradition¦10075.\wj*
-\v 7 \wj You hypocrites¦10077! The prophet¦10079 Yeshayah¦10082 \add !(Isaiah¦10082)\add* was right¦10078 about¦10080 you¦10081 \+add people\+add* when he wrote:\wj*\x + \xo 15:7-9: \xt Isa 29:13 (LXX).\x*
+\v 7 \wj You hypocrites¦10077! The prophet¦10079 Yeshayah¦10082 \add !(Isaiah¦10082)\add* was right¦10078 about¦10080 you¦10081 \+add people\+add* when he wrote:\wj*
 \q1
 \v 8 \wj ‘These people¦10087 honour¦10096 me¦10095 with their lips¦10094,\wj*
 \q2 \wj But¦10098 their \+add #hearts¦10099\+add* are¦10103 far¦10101 away¦10101 from¦10105 me¦10106.\wj*
 \q1
 \v 9 \wj Their worship¦10109 of me¦10110 is useless¦10107,\wj*
-\q2 \wj They teach¦10111 human¦10114 ideas as¦10113 if they're¦10109 commands¦10113.’\wj* ”
+\q2 \wj They teach¦10111 human¦10114 ideas as¦10113 if they're¦10109 commands¦10113.’\wj* ”\x + \xo 15:8-9: \xt Isa 29:13 (LXX).\x*
 \s1 True ‘dirtiness’
 \rem /s1 Things That Defile; The Things That Make a Person Unclean
 \r (Mark 7:14-23)
@@ -1030,7 +1030,7 @@
 \v 12 \add &His¦10151\add* apprentices¦10152 then¦10149 came¦10150 up to¦10156 him and told him, “You¦10157 know¦10157 that¦10158 the¦10159 Pharisees¦10160 were¦10164 offended¦10164 by what you just said¦10155?”
 \p
 \v 13 “\wj Every¦10169 plant¦10170,\wj*” \add @Yeshua\add* answered¦10167, “\wj that¦10171 wasn't planted¦10173 by my¦10176 heavenly¦10178 father¦10175 will¦10179 get pulled out.\wj*
-\v 14 \wj Just ignore them¦10181. They're¦10185 blind¦10186 guides¦10184, and¦10191 if¦10193 a blind¦10190 person's leading another blind¦10192 person, both¦10195 of them will¦10200 stumble into¦10197 a¦10198 pit¦10198.\wj*”\x + \xo 15:14: \xt Luk 6:39.\x*
+\v 14 \wj Just ignore them¦10181. They're¦10185 blind¦10186 guides¦10184, and¦10191 if¦10193 a blind¦10190 person's leading another blind¦10192 \+add >person\+add*, both¦10195 of them will¦10200 stumble into¦10197 a¦10198 pit¦10198.\wj*”\x + \xo 15:14: \xt Luk 6:39.\x*
 \p
 \v 15 But¦10202 Peter¦10204 asked¦10205 him¦10206, “So explain your saying¦10205 to¦10209 us¦10209.”
 \p
@@ -1061,8 +1061,8 @@
 \rem /s1 Jesus Cures Many People; Jesus Feeds the Four Thousand; Jesus Heals Many People
 \p
 \v 29 Then¦10449 \nd Yeshua¦10453\nd* left¦10450 that place, and after walking along¦10455 Lake¦10457 Galilee¦10459, he climbed up¦10461 a hill¦10464 and sat¦10465 down.
-\v 30 Big¦10471 crowds¦10470 came¦10468 up to¦10469 him¦10469, bringing people who were lame¦10477, maimed¦10481, blind¦10482, or mute¦10483, and¦10484 many¦10486 others¦10485, and¦10487 they¦10488 laid¦10488 them¦10489 down¦10488 \add ≈in¦10491 front¦10491 of¦10491\add* him¦10494, and¦10497 he¦10498 healed¦10498 them¦10499.
-\v 31 The¦10503 crowds¦10505 marvelled¦10507, seeing¦10508 people speaking¦10512 who'd been mute¦10510, and maimed¦10514 people \add now\add* healthy¦10515, and¦10516 lame¦10517 people walking¦10518. and¦10519 blind¦10521 people \add now\add* seeing¦10522, and¦10523 they¦10524 praised¦10524 Yisrael's¦10528 \nd God¦10527\nd*.
+\v 30 Big¦10471 crowds¦10470 came¦10468 up to¦10469 him¦10469, bringing \add >people who were\add* lame¦10477, maimed¦10481, blind¦10482, or mute¦10483, and¦10484 many¦10486 others¦10485, and¦10487 they¦10488 laid¦10488 them¦10489 down¦10488 \add ≈in¦10491 front¦10491 of¦10491\add* him¦10494, and¦10497 he¦10498 healed¦10498 them¦10499.
+\v 31 The¦10503 crowds¦10505 marvelled¦10507, seeing¦10508 people speaking¦10512 who'd been mute¦10510, and maimed¦10514 \add >people\add* \add now\add* healthy¦10515, and¦10516 lame¦10517 \add >people\add* walking¦10518. and¦10519 blind¦10521 \add >people\add* \add now\add* seeing¦10522, and¦10523 they¦10524 praised¦10524 Yisrael's¦10528 \nd God¦10527\nd*.
 \s1 The feeding of 4,000 families
 \rem /s1 Jesus Feeds Four Thousand; Feeding the Four Thousand
 \r (Mark 8:1-10)
@@ -1088,7 +1088,7 @@
 \v 1 Some people from the¦10696 Pharisees¦10697' party¦10697 and¦10698 some from the Sadducee¦10699 sect¦10699 approached¦10695 \add @Yeshua\add*, and, trying to tempt¦10700 him, they¦10701 asked¦10701 him¦10703 to make a¦10705 sign¦10705 in the¦10707 sky¦10708 to¦10709 show¦10709 \add his power\add* to¦10710 them¦10710.\x + \xo 16:1: \xt Mat 12:38; Luk 11:16.\x*
 \v 2 But¦10712 he¦10711 replied,
 \v 3 ◘
-\v 4 “\wj This is an evil¦10753 and¦10754 adulterous¦10755 generation¦10752 that's wanting¦10759 a¦10757 sign¦10757, and¦10760 no sign¦10761 will be¦10763 given¦10763 to¦10764 it¦10764 except¦10765 for the¦10767 sign¦10768 of¦10769 Yonah¦10769.\wj*” Then¦10772 he left¦10773 them¦10774 and went¦10775 away¦10775.\x + \xo 16:4: \xt Mat 12:39; Luk 11:29.\x*
+\v 4 “\wj This is an evil¦10753 and¦10754 adulterous¦10755 generation¦10752 that's wanting¦10759 a¦10757 sign¦10757, and¦10760 no sign¦10761 will be¦10763 given¦10763 to¦10764 it¦10764 except¦10765 for the¦10767 sign¦10768 of¦10769 Yonah¦10769.\wj*”\x + \xo 16:4: \xt Mat 12:39; Luk 11:29.\x* Then¦10772 he left¦10773 them¦10774 and went¦10775 away¦10775.
 \s1 The yeast of the Pharisees and Sadducees
 \rem /s1 The Yeast of the Pharisees and Sadducees
 \r (Mark 8:14-21)
@@ -1135,7 +1135,7 @@
 \v 24 Then¦11187 \nd Yeshua¦11189\nd* told¦11190 his apprentices¦11192, “\wj If¦11194 anyone¦11195 wants¦11196 to¦11199 follow¦11199 me¦11198, they need to suppress their own desires and be¦11209 ready to sacrifice and to suffer, and then follow¦11209 me¦11210,\wj*\x + \xo 16:24: \xt Mat 10:38; Luk 14:27.\x*
 \v 25 \wj because¦11212 anyone¦11211 who wants¦11215 to¦11219 save¦11219 their life¦11217 will¦11220 lose¦11220 it¦11221, but¦11223 anyone¦11222 who loses¦11225 their life¦11228 on¦11230 my account¦11230 will¦11232 find¦11232 it¦11233.\wj*\x + \xo 16:25: \xt Mat 10:39; Luk 17:33; Yhn 12:25.\x*
 \v 26 \wj What¦11234 help would it be to a¦11238 person¦11238 if¦11239 they gain¦11243 everything in the¦11240 world¦11241, and yet lose¦11248 their soul¦11246? Or¦11249 \+add put another way\+add*, what¦11250 could a¦11252 person¦11252 give¦11251 in exchange¦11253 for¦11254 their soul¦11255?\wj*
-\v 27 \wj The¦11259 son¦11260 of¦11262 humanity¦11262 is¦11257 going¦11257 to¦11263 return¦11263 displaying his father's¦11268 splendour¦11266, accompanied by his¦11269 messengers¦11273, and¦11277 then¦11278 he'll¦11279 reward each¦11281 individual according¦11282 to¦11282 their behaviour.\wj*\x + \xo 16:27: a \xt Mat 25:31; \xo b \xt Psa 62:12; Rom 2:6.\x*
+\v 27 \wj The¦11259 son¦11260 of¦11262 humanity¦11262 is¦11257 going¦11257 to¦11263 return¦11263 displaying his father's¦11268 splendour¦11266, accompanied by his¦11269 messengers¦11273,\x + \xo 16:27: \xt Mat 25:31.\x* and¦11277 then¦11278 he'll¦11279 reward each¦11281 individual according¦11282 to¦11282 their behaviour.\wj*\x + \xo 16:27: \xt Psa 62:12; Rom 2:6.\x*
 \v 28 \wj I¦11289 can assure¦11288 you¦11290 that¦11291 some¦11293 people standing¦11297 here¦11295 won't¦11300 experience death¦11302 until¦11303 they¦11305 first see¦11305 the¦11306 son¦11307 of¦11309 humanity¦11309 coming¦11310 \+add ≈as king¦11313\+add*.\wj*”
 \c 17
 \s1 Yeshua's face shines brightly
@@ -1147,7 +1147,7 @@
 \v 3 Then¦11370 look¦11371, Mosheh¦11375 and¦11376 Eliyah¦11377 appeared, and \add @the three apprentices\add* could see¦11373 them¦11374 talking with \add @Yeshua¦11380\add*.
 \v 4 Then¦11383 Peter¦11385 spoke¦11382 up and said¦11386 \nd to¦11388 Yeshua¦11388\nd*, “\nd Master¦11389\nd*, it's¦11391 good¦11390 that we're here¦11393. If¦11395 you¦11396 want¦11396, I¦11398 could make¦11398 three¦11400 shelters¦11401 here¦11399: one¦11404 for¦11403 you¦11403, one¦11408 for¦11406 Mosheh¦11406, and¦11409 one¦11413 for¦11411 Eliyah¦11411.”
 \p
-\v 5 While he was still¦11414 speaking¦11416, a¦11418 bright¦11419 cloud¦11418 came over the top of them¦11422, and¦11423 wow¦11424, a¦11425 voice¦11425 came out¦11426 of¦11426 the¦11427 cloud¦11428 saying¦11429, “This¦11430 is¦11431 my¦11434 dear¦11436 son¦11433 that I¦11439 get¦11439 great pleasure¦11439 from¦11442. Just listen¦11441 to him¦11442.”\x + \xo 17:5: a \xt Gen 22:2; Psa 2:7; Isa 42:1; Mat 3:17; 12:18; Mrk 1:11; Luk 3:22; \xo b \xt Deu 18:15.\x*
+\v 5 While he was still¦11414 speaking¦11416, a¦11418 bright¦11419 cloud¦11418 came over the top of them¦11422, and¦11423 wow¦11424, a¦11425 voice¦11425 came out¦11426 of¦11426 the¦11427 cloud¦11428 saying¦11429, “This¦11430 is¦11431 my¦11434 dear¦11436 son¦11433 that I¦11439 get¦11439 great pleasure¦11439 from¦11442.\x + \xo 17:5: \xt Gen 22:2; Psa 2:7; Isa 42:1; Mat 3:17; 12:18; Mrk 1:11; Luk 3:22.\x* Just listen¦11441 to him¦11442.”\x + \xo 17:5: \xt Deu 18:15.\x*
 \p
 \v 6 When¦11443 the \add three\add* apprentices¦11447 heard¦11444 the voice, they lay face¦11450 down and¦11452 were¦11453 extremely¦11454 scared¦11453.
 \v 7 But¦11455 \nd Yeshua¦11459\nd* went across to them, and¦11460 touching¦11462 them¦11463, he¦11465 said¦11465, “\wj Get up \+add now\+add* and¦11468 don't¦11469 be¦11470 afraid¦11470,\wj*”
@@ -1158,7 +1158,7 @@
 \v 10 So¦11515 his¦11520 apprentices¦11519 asked¦11516 him¦11517, “Why¦11522 do the¦11524 \add ≈religious¦11525 teachers¦11525\add* say¦11526 that¦11527 Eliyah¦11528 has to¦11531 come¦11531 \add before the messiah\add*?”\x + \xo 17:10: \xt Mal 4:5.\x*
 \p
 \v 11 “\wj In a way, Eliyah¦11540 is¦11542 coming¦11542,\wj*” he said¦11537, “\wj and¦11544 he'll restore¦11545 everything.\wj*
-\v 12 \wj But I'm¦11548 also¦11566 telling¦11548 you¦11550 that¦11551 in another way, Eliyah¦11552 already¦11553 came¦11554, and¦11555 they¦11557 didn't¦11556 recognise¦11557 him¦11558. Instead, they¦11560 \+add mistreated\+add* him¦11562 just however they¦11564 wanted¦11564, and¦11566 the¦11567 son¦11568 of¦11570 humanity¦11570 will suffer¦11572 from their actions like that too.\wj*”\x + \xo 17:12: \xt Mat 11:14.\x*
+\v 12 \wj But I'm¦11548 also¦11566 telling¦11548 you¦11550 that¦11551 in another way, Eliyah¦11552 already¦11553 came¦11554, and¦11555 they¦11557 didn't¦11556 recognise¦11557 him¦11558. Instead, they¦11560 \+add mistreated\+add* him¦11562 just however they¦11564 wanted¦11564,\x + \xo 17:12: \xt Mat 11:14.\x* and¦11566 the¦11567 son¦11568 of¦11570 humanity¦11570 will suffer¦11572 from their actions like that too.\wj*”
 \p
 \v 13 Then¦11575 the¦11577 apprentices¦11578 realised¦11576 that¦11579 he¦11584 was talking¦11584 to¦11585 them¦11585 about¦11580 Yohan-the-immerser.
 \s1 Yeshua drives a demon out of a boy
@@ -1186,7 +1186,7 @@
 \s1 Paying the temple tax
 \rem /s1 Payment of the Temple Tax; Jesus and the Temple Tax
 \p
-\v 24 Then when they got to¦11802 Capernaum¦11803, the¦11805 tax-collectors collecting the¦11806 poll tax approached¦11804 Peter¦11811 and¦11812 asked¦11813 him, “Isn't¦11820 your¦11818 teacher¦11817 going to pay¦11821 the¦11822 tax?”\x + \xo 17:24: \xt Exo 30:13; 38:26.\x*
+\v 24 Then when they got to¦11802 Capernaum¦11803, the¦11805 tax-collectors collecting the¦11806 poll tax\x + \xo 17:24: \xt Exo 30:13; 38:26.\x* approached¦11804 Peter¦11811 and¦11812 asked¦11813 him, “Isn't¦11820 your¦11818 teacher¦11817 going to pay¦11821 the¦11822 tax?”
 \p
 \v 25 “Yes¦11826, he¦11825 will.” replied¦11825 \add @Peter\add*.
 \p Then when he went¦11832 inside the¦11837 house¦11838, before he could say anything, \nd Yeshua¦11842\nd* asked him¦11840, “\wj What¦11844 do you¦11845 think¦11846, Simon¦11847? Do \+add ≈this world's¦11851\+add* kings¦11849 extract \+add #taxes¦11858\+add* from their¦11862 own children¦11861, or¦11863 from¦11864 strangers¦11866?\wj*”
@@ -1208,7 +1208,7 @@
 \rem /s1 Temptations to Sin
 \rem /r (Mark 9.42-48; Luke 17.1,2)
 \p
-\v 6 “\wj But¦12019 anyone¦12018 who causes one¦12022 of¦12024 these¦12025 little¦12024 ones who believe¦12027 in¦12028 me¦12029 to stumble¦12021, it¦12030 would have been¦12030 better for¦12031 that¦12032 person if a¦12034 heavy¦12035 stone¦12034 had been¦12033 hung¦12033 around¦12036 their neck¦12040 and¦12042 they'd been¦12043 sunk¦12043 in¦12044 the deep lake¦12048.\wj*
+\v 6 “\wj But¦12019 anyone¦12018 who causes one¦12022 of¦12024 these¦12025 little¦12024 \+add >ones\+add* who believe¦12027 in¦12028 me¦12029 to stumble¦12021, it¦12030 would have been¦12030 better for¦12031 that¦12032 person if a¦12034 heavy¦12035 stone¦12034 had been¦12033 hung¦12033 around¦12036 their neck¦12040 and¦12042 they'd been¦12043 sunk¦12043 in¦12044 the deep lake¦12048.\wj*
 \v 7 \wj The¦12050 world¦12051 suffers due to temptations¦12054, because¦12056 it's¦12057 \+add ≈necessary¦12055\+add* for temptations¦12060 to¦12058 come¦12058, but it won't be good for the¦12065 person¦12066 who¦12069 brings the¦12070 temptation¦12071.\wj*
 \p
 \v 8 “\wj If¦12073 your¦12077 hand¦12076 or¦12078 foot¦12080 causes you¦12081 to stumble¦12082, cut¦12085 it¦12087 off¦12085 and¦12088 throw¦12089 it¦12089 away, because it's¦12094 better¦12092 for¦12093 you¦12093 to¦12095 enter¦12095 \+add eternal\+add* life¦12098 maimed¦12101 or¦12102 lame¦12105 than¦12106 to¦12113 be¦12113 thrown¦12113 into¦12114 the¦12117 eternal¦12118 fire¦12116 with two¦12107 hands¦12108 and two¦12110 feet¦12111.\wj*\x + \xo 18:8: \xt Mat 5:30.\x*
@@ -1217,13 +1217,13 @@
 \rem /s1 The Parable of the Lost Sheep
 \r (Luke 15:3-7)
 \p
-\v 10 “\wj Make sure that you¦12155 \+add apprentices\+add* don't¦12154 despise¦12155 any of¦12156 these¦12160 little¦12159 ones, because¦12166 I'm¦12165 telling¦12165 you¦12167 that¦12168 their¦12171 messengers¦12170 in¦12172 the¦12174 heavens¦12174 are¦12178 always in front¦12180 of¦12181 my¦12183 father¦12182 who's¦12184 in¦12185 the¦12187 heavens¦12187.\wj*
+\v 10 “\wj Make sure that you¦12155 \+add apprentices\+add* don't¦12154 despise¦12155 any of¦12156 these¦12160 little¦12159 \+add >ones\+add*, because¦12166 I'm¦12165 telling¦12165 you¦12167 that¦12168 their¦12171 messengers¦12170 in¦12172 the¦12174 heavens¦12174 are¦12178 always in front¦12180 of¦12181 my¦12183 father¦12182 who's¦12184 in¦12185 the¦12187 heavens¦12187.\wj*
 \rem /s1 Story of the Lost Sheep
 \p
 \v 11 ◘\f + \fr 18:11 \ft Some Greek manuscripts add in the text of Luke 19:10 here: because the son of humanity came to look for those who are lost, and save them.\f*
 \v 12 “\wj What¦12197 do you¦12199 think¦12200 about this? A¦12203 man¦12204 had a¦12205 hundred¦12205 sheep¦12206, and¦12207 one¦12209 of¦12210 them¦12211 strayed¦12208 away. Won't¦12212 he leave¦12213 the¦12216 ninety-nine there in the¦12221 hills¦12222 and¦12223 go¦12224 and look¦12226 for the¦12227 sheep¦12227 that was¦12228 missing?\wj*
 \v 13 \wj And¦12229 if¦12230 he¦12231 happens to¦12232 find¦12232 it¦12233, I¦12235 can assure¦12234 you¦12236 that¦12237 he'll¦12238 be¦12238 happier about that one than¦12242 about the¦12244 ninety-nine who never strayed¦12249 away.\wj*
-\v 14 \wj In the same way, your¦12259 father¦12256 in¦12261 the¦12263 heavens¦12263 doesn't want \+add even\+add* one¦12267 of¦12269 these¦12270 little¦12269 ones to die¦12265.\wj*
+\v 14 \wj In the same way, your¦12259 father¦12256 in¦12261 the¦12263 heavens¦12263 doesn't want \+add even\+add* one¦12267 of¦12269 these¦12270 little¦12269 \+add >ones\+add* to die¦12265.\wj*
 \s1 Confronting an offender
 \rem /s1 Correcting a Fellow Believer; When Someone Sins; Reproving Another Who Sins; A Brother Who Sins Against You
 \p
@@ -1256,7 +1256,7 @@
 \v 30 \wj But the other wasn't willing¦12620, and¦12618 he¦12620 went¦12624 and had the man thrown¦12625 into¦12627 prison¦12628 until¦12629 he¦12631 repaid¦12631 what he owed¦12635.\wj*
 \v 31 \wj The other slaves who'd observed all¦12657 this were¦12646 very¦12647 upset, so¦12650 they¦12652 went¦12651 and informed the¦12653 master¦12654 about¦12655 what had¦12660 happened.\wj*
 \v 32 \wj So then¦12661 the¦12664 master¦12665 called¦12662 in \+add the slave that he'd forgiven\+add* and told¦12667 him¦12668, ‘You evil¦12670 slave¦12669! I¦12676 forgave¦12676 you¦12677 that¦12675 entire¦12672 debt because¦12678 you¦12679 pleaded¦12679 with me¦12680.\wj*
-\v 33 \wj Wouldn't it¦12682 have been reasonable for you¦12685 also¦12684 to¦12686 have shown¦12686 mercy¦12686 to¦12687 your¦12689 fellow slave just like¦12690 I¦12691 was merciful to¦12694 you¦12694?’\wj*
+\v 33 \wj Wouldn't it¦12682 have been reasonable for you¦12685 also¦12684 to¦12686 have shown¦12686 mercy¦12686 to¦12687 your¦12689 fellow slave just like¦12690 I¦12691 was merciful¦12695 to¦12694 you¦12694?’\wj*
 \v 34 \wj Then¦12697 the¦12699 master¦12700, who was¦12698 \+add now\+add* quite angry¦12698, handed¦12702 him¦12703 over¦12702 to¦12704 the¦12704 torturers until¦12706 he¦12708 could¦12708 repay¦12708 everything¦12709 that¦12710 he owed¦12711.\wj*
 \p
 \v 35 “\wj So¦12713 that's how my¦12719 heavenly¦12721 father¦12718 will¦12723 treat you¦12724 if¦12725 you¦12727 don't¦12726 genuinely forgive¦12727 others around you¦12735.\wj*”
@@ -1299,9 +1299,9 @@
 \p
 \v 17 “\wj Why¦13081 are¦13083 you¦13083 asking¦13083 me¦13082 about¦13085 what's good¦13087?\wj*” \add @Yeshua\add* responded¦13079. “\wj \+add Only\+add* one¦13093 is¦13094 good¦13096. But¦13099 if¦13098 you're¦13100 wanting¦13100 to¦13106 enter¦13106 into¦13102 life¦13104, you should obey \+add &God's¦13109\+add* commands¦13110.\wj*”
 \p
-\v 18 “Which¦13113 ones?” he¦13111 asked¦13111.\x + \xo 19:18: a \xt Exo 20:13; Deu 5:17; \xo b \xt Exo 20:14; Deu 5:18; \xo c \xt Exo 20:15; Deu 5:19; \xo d \xt Exo 20:16; Deu 5:20.\x*
-\p “\wj Don't¦13121 murder¦13122,\wj*” \nd Yeshua¦13117\nd* answered¦13119, “\wj don't mess with another person's spouse, don't steal¦13126, don't¦13127 lie in court,\wj*
-\v 19 \wj honour¦13129 your¦13130 parents¦13131, and¦13133 love¦13137 your¦13134 neighbour¦13139 like¦13141 yourself¦13142.\wj*”\x + \xo 19:19: a \xt Exo 20:12; Deu 5:16; \xo b \xt Lev 19:18.\x*
+\v 18 “Which¦13113 ones?” he¦13111 asked¦13111.
+\p “\wj Don't¦13121 murder¦13122,\wj*”\x + \xo 19:18: \xt Exo 20:13; Deu 5:17.\x* \nd Yeshua¦13117\nd* answered¦13119, “\wj don't mess with another person's spouse,\x + \xo 19:18: \xt Exo 20:14; Deu 5:18.\x* don't steal¦13126,\x + \xo 19:18: \xt Exo 20:15; Deu 5:19.\x* don't¦13127 lie in court,\wj*\x + \xo 19:18: \xt Exo 20:16; Deu 5:20.\x*
+\v 19 \wj honour¦13129 your¦13130 parents¦13131,\x + \xo 19:19: \xt Exo 20:12; Deu 5:16.\x* and¦13133 love¦13137 your¦13134 neighbour¦13139 like¦13141 yourself¦13142.\wj*”\x + \xo 19:19: \xt Lev 19:18.\x*
 \p
 \v 20 “I've¦13151 kept¦13151 all¦13147 of those¦13148,” the¦13145 young¦13146 man¦13146 said¦13143, “so what¦13155 else do I¦13157 need to do?”
 \p
@@ -1309,8 +1309,8 @@
 \p
 \v 22 But¦13189 when the¦13190 young¦13191 man¦13191 heard¦13188 that, he¦13195 went¦13195 away¦13195 despondent, because¦13198 he¦13197 owned¦13199 many¦13202 properties¦13201.
 \p
-\v 23 \add ≈So¦13204\add* \nd Yeshua¦13205\nd* said¦13206 to¦13207 his¦13209 apprentices¦13208, “\wj I¦13211 can assure¦13210 you¦13212 that¦13213 it's hard¦13216 for a¦13215 wealthy¦13215 person to enter¦13217 the¦13219 heavenly¦13222 kingdom¦13220.\wj*
-\v 24 \wj In fact, it's¦13229 easier¦13228 for¦13230 a¦13230 camel¦13230 to¦13237 go¦13237 through the¦13233 eye¦13233 of¦13236 a¦13236 needle¦13236 than¦13239 for a¦13240 wealthy¦13240 person to¦13241 enter¦13241 \nd God's¦13246\nd* kingdom¦13244.\wj*”
+\v 23 \add ≈So¦13204\add* \nd Yeshua¦13205\nd* said¦13206 to¦13207 his¦13209 apprentices¦13208, “\wj I¦13211 can assure¦13210 you¦13212 that¦13213 it's hard¦13216 for a¦13215 wealthy¦13215 \+add >person\+add* to enter¦13217 the¦13219 heavenly¦13222 kingdom¦13220.\wj*
+\v 24 \wj In fact, it's¦13229 easier¦13228 for¦13230 a¦13230 camel¦13230 to¦13237 go¦13237 through the¦13233 eye¦13233 of¦13236 a¦13236 needle¦13236 than¦13239 for a¦13240 wealthy¦13240 \+add >person\+add* to¦13241 enter¦13241 \nd God's¦13246\nd* kingdom¦13244.\wj*”
 \p
 \v 25 When¦13249 \add &his¦13250\add* apprentices¦13251 heard¦13248 that, they were¦13253 very¦13256 surprised and asked¦13257, “Well, who¦13258 can be¦13261 saved¦13261 then?”
 \p
@@ -1318,7 +1318,7 @@
 \p
 \v 27 “Hey,” Peter¦13285 reacted, “we¦13289 left¦13290 everything to follow¦13293 you¦13295, so¦13292 what'll¦13296 happen to¦13299 us¦13299?”
 \p
-\v 28 “\wj I can assure¦13306 you,\wj*” \nd Yeshua¦13302\nd* told¦13303 them¦13304, “\wj that¦13309 after¦13313 \+add the world\+add* is remade and the¦13319 son¦13320 of¦13322 humanity¦13322 sits¦13318 down¦13318 on¦13323 his¦13326 splendid throne¦13324, you¦13330 \+add apprentices\+add* who¦13311 followed¦13312 me will also¦13328 sit¦13327 on¦13331 twelve¦13332 thrones¦13333, ruling over Yisrael's¦13339 twelve¦13336 tribes¦13337.\wj*\x + \xo 19:28: a \xt Mat 25:31; \xo b \xt Luk 22:30.\x*
+\v 28 “\wj I can assure¦13306 you,\wj*” \nd Yeshua¦13302\nd* told¦13303 them¦13304, “\wj that¦13309 after¦13313 \+add the world\+add* is remade and the¦13319 son¦13320 of¦13322 humanity¦13322 sits¦13318 down¦13318 on¦13323 his¦13326 splendid throne¦13324,\x + \xo 19:28: \xt Mat 25:31.\x* you¦13330 \+add apprentices\+add* who¦13311 followed¦13312 me will also¦13328 sit¦13327 on¦13331 twelve¦13332 thrones¦13333, ruling over Yisrael's¦13339 twelve¦13336 tribes¦13337.\wj*\x + \xo 19:28: \xt Luk 22:30.\x*
 \v 29 \wj And¦13340 everyone¦13341 who¦13342 left¦13344 \+add &their\+add* houses¦13345, or¦13346 brothers¦13347 or¦13348 sisters¦13349, or¦13350 father¦13351 or¦13352 mother¦13353, or¦13354 wife¦13355 or¦13356 children¦13357, or¦13358 farms¦13359, on¦13362 account¦13362 of my¦13364 name¦13365 and commission, will¦13370 be¦13370 repaid a hundred¦13367 times over, and¦13371 will¦13374 inherit¦13374 eternal¦13373 life¦13372.\wj*
 \s1 The last will be first
 \rem /s1 The Labourers in the Vineyard; The Workers in the Vineyard; The Parable of the Workers in the Vineyard; Story of the Vineyard Workers
@@ -1334,11 +1334,11 @@
 \v 6 \wj When¦13473 he came¦13477 out¦13477 around¦13472 5pm, and¦13484 there were still people just standing around, he¦13485 asked¦13485 them¦13486, ‘Why¦13487 have¦13489 you¦13489 been idly standing¦13489 here¦13488 all¦13490 day¦13492?’\wj*
 \v 7 \wj ‘Because¦13496 no¦13497 one¦13497 has hired¦13499 us¦13498,’ they said. So he¦13500 also¦13503 sent them off to work in the¦13506 vineyard¦13507.\wj*
 \p
-\v 8 “\wj In the evening¦13515, the landowner instructed his¦13525 manager¦13524, ‘Call¦13526 the¦13527 workers¦13528 and¦13529 give¦13530 them¦13531 \+add &their¦13532\+add* \+add #wages¦13533\+add*, starting¦13534 with the¦13536 last¦13537 \+add to start work, and ending with\+add* the¦13539 first¦13540.’\wj*\x + \xo 20:8: \xt Lev 19:13; Deu 24:15.\x*
+\v 8 “\wj In the evening¦13515, the landowner instructed his¦13525 manager¦13524, ‘Call¦13526 the¦13527 workers¦13528 and¦13529 give¦13530 them¦13531 \+add &their¦13532\+add* \+add #wages¦13533\+add*,\x + \xo 20:8: \xt Lev 19:13; Deu 24:15.\x* starting¦13534 with the¦13536 last¦13537 \+add to start work, and ending with\+add* the¦13539 first¦13540.’\wj*
 \v 9 \wj The ones who'd started late afternoon each¦13551 received¦13550 the day's wage \+add that the first workers had been promised\+add*,\wj*
-\v 10 \wj \+add ≈so¦13553\+add* those first¦13557 ones expected they'd¦13563 receive¦13563 more¦13560, but¦13564 they¦13573 all got the same day's wage.\wj*
+\v 10 \wj \+add ≈so¦13553\+add* those first¦13557 \+add >ones\+add* expected they'd¦13563 receive¦13563 more¦13560, but¦13564 they¦13573 all got the same day's wage.\wj*
 \v 11 \wj When¦13575 they¦13576 got theirs, the first workers started grumbling¦13576 about the¦13579 landowner,\wj*
-\v 12 \wj and complained, ‘These¦13585 last¦13587 ones only worked¦13590 an hour¦13589, and¦13591 yet you¦13597 paid them¦13594 the same as us¦13593 who worked the entire day¦13603 right through the¦13605 scorching¦13606 heat¦13606!’\wj*
+\v 12 \wj and complained, ‘These¦13585 last¦13587 \+add >ones\+add* only worked¦13590 an hour¦13589, and¦13591 yet you¦13597 paid them¦13594 the same as us¦13593 who worked the entire day¦13603 right through the¦13605 scorching¦13606 heat¦13606!’\wj*
 \v 13 \wj ‘Buddy,’ he¦13607 said¦13614 to¦13611 one¦13611 of them, ‘I'm¦13617 not¦13616 cheating you¦13618. Didn't¦13619 you¦13621 agree¦13621 to work for¦13620 me¦13622 for \+add ≈the usual daily wage\+add*?\wj*
 \v 14 \wj Take¦13623 what¦13624 we agreed on and¦13626 go¦13627, but¦13630 I¦13628 wanted¦13628 to¦13636 give¦13636 these last¦13634 workers the same amount.\wj*
 \v 15 \wj Or¦13641 aren't¦13642 I¦13649 permitted¦13644 to¦13650 do¦13650 what¦13648 I want with¦13651 my own \+add money\+add*? Or¦13654 \+add ≈do you¦13658 look at me maliciously\+add* just because¦13661 I'm¦13662 generous?’\wj*
@@ -1366,7 +1366,7 @@
 \v 23 “\wj Well, you¦13833 will¦13833 indeed share my suffering,\wj*” \add @Yeshua¦13832\add* responded¦13825. “\wj But on¦13842 the¦13842 other¦13842 hand¦13842, sitting¦13843 on¦13844 my right¦13845 and¦13848 my left¦13850 is¦13853 not¦13852 my decision to¦13856 make—\+add ≈it's¦13859 for the¦13861 people my father's¦13862 prepared¦13859 those places for.\+add*\wj*”
 \p
 \v 24 Now the¦13866 other ten¦13867, who'd heard¦13865 all this, resented¦13869 the¦13872 two¦13873 brothers¦13874,
-\v 25 but¦13876 \nd Yeshua¦13877\nd* called¦13878 them¦13879 \add over\add* and said¦13880, “\wj You¦13882 \+add apprentices\+add* know¦13882 that¦13883 the¦13884 rulers¦13885 of¦13886 other nations \+add ≈practice total¦13882 control\+add* over¦13890 their people, as do other powerful¦13893 people.\wj*\x + \xo 20:25-26: \xt Luk 22:25-26.\x*
+\v 25 but¦13876 \nd Yeshua¦13877\nd* called¦13878 them¦13879 \add over\add* and said¦13880, “\wj You¦13882 \+add apprentices\+add* know¦13882 that¦13883 the¦13884 rulers¦13885 of¦13886 other nations \+add ≈practice total¦13882 control\+add* over¦13890 their people, as do other powerful¦13893 \+add >people\+add*.\wj*\x + \xo 20:25-26: \xt Luk 22:25-26.\x*
 \v 26 \wj But¦13903 among¦13909 you¦13910, it shouldn't¦13896 be¦13899 like that. Instead, anyone¦13904 who wants¦13907 to¦13912 become¦13912 \+add ≈important\+add* should be¦13915 your¦13917 servant¦13918,\wj*\x + \xo 20:26-27: \xt Mat 23:11; Mrk 9:35; Luk 22:26.\x*
 \v 27 \wj and¦13919 anyone¦13920 who wants¦13923 to¦13926 be¦13926 first¦13928 should be¦13930 your¦13932 slave¦13933,\wj*
 \v 28 \wj in the same way that the¦13935 son¦13936 of¦13938 humanity¦13938 didn't¦13939 come¦13940 to¦13941 be¦13941 served¦13941, but¦13942 to¦13943 serve¦13943 \+add others\+add* and¦13944 to¦13945 give¦13945 his life¦13947 as \+add ≈the cost of¦13948 freeing\+add* many¦13951 people.\wj*”
@@ -1395,10 +1395,10 @@
 \p
 \v 4 “\wj All¦14187 this¦14185 is happening so¦14186 that¦14189 the¦14191 message¦14191 that was \+add written\+add* by¦14198 the¦14199 prophet¦14200 will come to pass:\wj*
 \q1
-\v 5 \wj ‘Tell¦14202 the¦14203 daughter¦14204 of¦14205 Tsiyyon/Zion:\wj*\x + \xo 21:5: \xt Zech 9:9.\x*
+\v 5 \wj ‘Tell¦14202 the¦14203 daughter¦14204 of¦14205 Tsiyyon/Zion:\wj*
 \q1 \wj “Look¦14206, your¦14210 king¦14209 is¦14211 coming¦14211,\wj*
 \q1 \wj gentle¦14213, and¦14214 riding¦14215 a¦14217 donkey¦14217,\wj*
-\q1 \wj and¦14218 a¦14220 colt¦14220, a¦14222 donkey's¦14222 offspring.” ’\wj* ”
+\q1 \wj and¦14218 a¦14220 colt¦14220, a¦14222 donkey's¦14222 offspring.” ’\wj* ”\x + \xo 21:5: \xt Zech 9:9.\x*
 \p
 \v 6 \add ≈So¦14224\add* the¦14225 \add two\add* apprentices¦14226 left¦14223 and¦14227 did¦14228 what \nd Yeshua¦14235\nd* had told them¦14233.
 \v 7 They¦14237 brought¦14237 back the¦14238 donkey¦14239 and¦14240 the¦14241 colt¦14242, and¦14243 they¦14244 put¦14244 their¦14249 coats¦14250 on¦14245 them¦14247, and¦14252 he¦14256 sat¦14256 on¦14256 them¦14259.
@@ -1417,8 +1417,8 @@
 \p
 \v 14 The blind¦14396 and¦14398 lame¦14399 \add people\add* in¦14401 the¦14402 temple¦14403 approached¦14393 \add @Yeshua¦14395\add*, and¦14404 he¦14405 healed¦14405 them¦14406.
 \v 15 But¦14408 the¦14409 chief¦14410 priests¦14410 and¦14411 \add ≈religious¦14413 teachers¦14413\add*, having¦14407 seen¦14407 him do¦14417 miracles¦14415, and¦14418 having heard the¦14419 children¦14420 in¦14423 the¦14424 temple¦14425 yelling¦14422 out ‘David's¦14431 descendant¦14430, honoured¦14428 rescuer¦14428!’ became angry
-\v 16 and¦14433 \add accused\add* him¦14435, \add asking,\add* “Can't you¦14436 hear¦14436 what¦14437 they're saying¦14439?”\x + \xo 21:16: \xt Psa 8:2 (LXX).\x*
-\p “\wj Yes¦14446, I can,\wj*” \nd Yeshua¦14442\nd* responded¦14443. “\wj Didn't you¦14448 ever read¦14448 \+add where it says\+add* ‘You¦14455 caused praise¦14456 to come from the lips¦14451 of¦14452 infants¦14452 and¦14453 babies’?\wj*”
+\v 16 and¦14433 \add accused\add* him¦14435, \add asking,\add* “Can't you¦14436 hear¦14436 what¦14437 they're saying¦14439?”
+\p “\wj Yes¦14446, I can,\wj*” \nd Yeshua¦14442\nd* responded¦14443. “\wj Didn't you¦14448 ever read¦14448 \+add where it says\+add* ‘You¦14455 caused praise¦14456 to come from the lips¦14451 of¦14452 infants¦14452 and¦14453 babies’?\wj*”\x + \xo 21:16: \xt Psa 8:2 (LXX).\x*
 \p
 \v 17 Then¦14458 he¦14462 left¦14462 the¦14464 temple and Yerushalem and went and stayed \add overnight\add* out at Beyt-Ania \add !(Bethany)\add*.
 \s1 Yeshua kills the fig tree
@@ -1436,15 +1436,15 @@
 \rem /s1 The Authority of Jesus Challenged; The Authority of Jesus Questioned; The Question about Jesus' Authority
 \r (Mark 11:27-33; Luke 20:1-8)
 \p
-\v 23 When¦14581 \add @Yeshua¦14585\add* went¦14583 back into¦14586 the¦14587 temple¦14588 and started teaching¦14592 \add the people\add*, the¦14593 chief¦14594 priests¦14594 and¦14595 the¦14596 Jewish elders¦14597 came¦14589 and challenged him¦14591, \add ≈asking¦14600,\add* “What¦14602 authority¦14603 do you¦14605 have to do¦14605 these¦14604 things?”
+\v 23 When¦14581 \add @Yeshua¦14585\add* went¦14583 back into¦14586 the¦14587 temple¦14588 and started teaching¦14592 \add the people\add*, the¦14593 chief¦14594 priests¦14594 and¦14595 the¦14596 Jewish elders¦14597 came¦14589 and challenged him¦14591, \add ≈asking¦14600,\add* “What¦14602 authority¦14603 do you¦14605 have to do¦14605 these¦14604 \add >things\add*?”
 \p
-\v 24 “\wj Well, I¦14623 have one¦14627 question for you first,\wj*” \nd Yeshua¦14617\nd* answered¦14614. “\wj If¦14630 you¦14631 answer it, then¦14615 I'll¦14633 tell¦14637 you¦14636 all¦14636 about \+add &my\+add* authority¦14640 to do¦14642 these¦14641 things.\wj*
+\v 24 “\wj Well, I¦14623 have one¦14627 question for you first,\wj*” \nd Yeshua¦14617\nd* answered¦14614. “\wj If¦14630 you¦14631 answer it, then¦14615 I'll¦14633 tell¦14637 you¦14636 all¦14636 about \+add &my\+add* authority¦14640 to do¦14642 these¦14641 \+add >things\+add*.\wj*
 \v 25 \wj So, where¦14647 did Yohan's¦14646 practice of immersion¦14644 come from?\wj*”
 \p They¦14655 discussed this among¦14659 themselves¦14660, saying¦14661, “If¦14662 we¦14663 say¦14663 from¦14664 heaven¦14665, he'll¦14666 ask¦14666 us¦14667 why¦14669 we didn't¦14671 believe¦14672 \add @Yohan¦14673\add*.
 \v 26 But¦14675 if¦14674 we¦14676 say¦14676 it was a human¦14678 idea, then the¦14681 crowd¦14682 might revolt against us, since¦14684 they consider Yohan¦14689 to be a¦14686 prophet¦14686.”
 \v 27 \add ≈So¦14692\add* they¦14696 answered¦14696, “We¦14698 don't¦14697 know¦14698.”
 \rem /s1 Story of the Two Sons; The Parable of the Two Sons
-\p “\wj \+add Well then,\+add* nor will I¦14706 tell¦14707 you¦14708 about \+add &my\+add* authority¦14712 to do¦14714 these¦14713 things,\wj*” \nd Yeshua¦14695\nd* answered.
+\p “\wj \+add Well then,\+add* nor will I¦14706 tell¦14707 you¦14708 about \+add &my\+add* authority¦14712 to do¦14714 these¦14713 \+add >things\+add*,\wj*” \nd Yeshua¦14695\nd* answered.
 \s1 The parable about obedience
 \p
 \v 28 “\wj But¦14716 what¦14715 does it¦14718 matter to¦14717 you¦14717 \+add people\+add*, anyway? There was a¦14719 man¦14719 who had¦14722 two¦14725 children¦14724, and¦14726 he went up to¦14728 the¦14728 first¦14730 one and told¦14731 him, ‘Son¦14732, go¦14733 and work¦14735 in¦14736 my¦14742 vineyard¦14740 today¦14734.’\wj*
@@ -1458,7 +1458,7 @@
 \rem /s1 The Parable of the Wicked Tenants; Story of the Evil Farmers; The Parable of the Tenants in the Vineyard
 \r (Mark 12:1-12; Luke 20:9-19)
 \p
-\v 33 “\wj Listen¦14853 to another¦14851 parable¦14852: A landowner planted¦14859 a¦14860 vineyard¦14860 and¦14861 fenced¦14862 it¦14863, and¦14865 he carved a¦14869 wine-pressing¦14869 \+add pit\+add* into¦14867 it¦14868 and¦14870 built¦14871 a¦14872 watchtower. Then¦14873 he rented¦14874 it¦14875 out¦14874 to¦14876 tenant¦14876 farmers¦14876 and¦14877 moved¦14878 away.\wj*\x + \xo 21:33: \xt Isa 5:1-2.\x*
+\v 33 “\wj Listen¦14853 to another¦14851 parable¦14852: A landowner planted¦14859 a¦14860 vineyard¦14860 and¦14861 fenced¦14862 it¦14863, and¦14865 he carved a¦14869 wine-pressing¦14869 \+add pit\+add* into¦14867 it¦14868 and¦14870 built¦14871 a¦14872 watchtower.\x + \xo 21:33: \xt Isa 5:1-2.\x* Then¦14873 he rented¦14874 it¦14875 out¦14874 to¦14876 tenant¦14876 farmers¦14876 and¦14877 moved¦14878 away.\wj*
 \v 34 \wj At harvest time, he¦14886 sent¦14886 some of his slaves¦14888 to¦14890 the¦14891 tenant¦14892 farmers¦14892 to¦14894 bring back his share of the harvest.\wj*
 \v 35 \wj However, the¦14901 tenants¦14902 grabbed¦14900 his¦14905 slaves¦14904 and beat¦14908 them. They¦14911 killed¦14911 some and threw¦14914 rocks¦14914 at others.\wj*
 \v 36 \wj So the owner sent¦14918 a larger group of slaves¦14920, but the¦14922 tenants did¦14925 the same¦14916 things to¦14926 them¦14926.\wj*
@@ -1471,14 +1471,14 @@
 \p
 \v 41 “He'll¦14992 brutally destroy¦14992 those¦14993 wicked¦14990 tenants,” they answered¦14988, “then¦14994 he'll rent¦14997 the¦14995 vineyard¦14996 out¦14997 to¦14999 other¦14999 tenant¦15000 farmers¦15000, who'll¦15001 give¦15002 him¦15004 his share of¦15010 the harvest.”
 \p
-\v 42 Then \nd Yeshua¦15014\nd* said¦15011 to¦15012 them¦15012, “\wj Haven't you¦15016 ever read¦15016 \+add this\+add* in¦15017 the¦15018 scriptures¦15019? \+add It says:\+add*\wj*\x + \xo 21:42: \xt Psa 118:22-23.\x*
+\v 42 Then \nd Yeshua¦15014\nd* said¦15011 to¦15012 them¦15012, “\wj Haven't you¦15016 ever read¦15016 \+add this\+add* in¦15017 the¦15018 scriptures¦15019? \+add It says:\+add*\wj*
 \q1 \wj ‘The¦15020 stone¦15020 which¦15021 the¦15023 builders¦15024 rejected¦15022,\wj*
 \q2 \wj this¦15025 would become¦15026 the cornerstone¦15029.\wj*
 \q1 \wj This¦15034 one came from¦15030 \+nd Yahweh¦15031\+nd*,\wj*
-\q2 \wj and¦15035 it¦15036 was¦15036 amazing to see.’\wj*
+\q2 \wj and¦15035 it¦15036 was¦15036 amazing to see.’\wj*\x + \xo 21:42: \xt Psa 118:22-23.\x*
 \p
 \v 43 “\wj Because¦15042 of¦15042 that¦15043, I'm¦15044 telling¦15044 you¦15045 that¦15046 \nd God's¦15053\nd* kingdom¦15051 will¦15047 be¦15047 taken¦15047 away¦15047 from¦15048 you¦15049 \+add people\+add*, and¦15054 be¦15055 given¦15055 to¦15056 a¦15056 people¦15056 group who'll produce¦15057 a harvest.\wj*
-\v 44 \wj Anyone who falls¦15064 down onto this¦15068 stone¦15067 will¦15069 be¦15069 shattered¦15069, and anyone this stone falls on¦15070 will¦15075 be¦15075 \+add totally\+add* pulverised¦15075.\wj*”
+\v 44 \wj Anyone who falls¦15064 down onto this¦15068 stone¦15067 will¦15069 be¦15069 shattered¦15069,\x + \xo 21:44: \xt Isa 8:14-15.\x* and anyone this stone falls on¦15070 will¦15075 be¦15075 \+add totally\+add* pulverised¦15075.\wj*”\x + \xo 21:44: \xt Dan 2:34-35,44-45.\x*
 \p
 \v 45 When¦15077 the¦15080 chief¦15081 priests¦15081 and¦15082 the¦15083 Pharisees¦15084 heard¦15078 those parables¦15086, they¦15088 knew¦15088 he¦15092 was¦15092 talking¦15092 about¦15090 them¦15091.
 \v 46 They attempted¦15094 to¦15096 arrest¦15096 him¦15095, but couldn't, because¦15103 they¦15098 knew the¦15099 crowds¦15101 believed him¦15108 to be a¦15107 prophet¦15107 \add from God\add*.
@@ -1497,7 +1497,7 @@
 \v 7 “\wj Now the¦15214 king¦15217 was¦15221 angry¦15221 and¦15222 sent¦15223 in his¦15228 soldiers to destroy¦15229 those¦15232 murderers¦15231 and¦15233 burn their¦15236 city¦15235.\wj*
 \v 8 \wj Then¦15238 he¦15239 told¦15239 his¦15242 slaves¦15241, ‘Well, the¦15243 wedding¦15245 reception is¦15247 ready¦15246, but \+add ≈the people\+add* who were¦15250 invited¦15250 aren't¦15251 worthy¦15253 to come.\wj*
 \v 9 \wj So¦15255 spread out on the¦15259 roads¦15261 and¦15262 invite¦15267 everyone¦15266 you¦15266 find¦15266 to come¦15254 to¦15268 the¦15269 reception.’\wj*
-\v 10 \wj \+add ≈So¦15271\+add* those¦15276 slaves¦15274 went¦15272 out¦15272 onto the¦15278 roads¦15279 and invited everyone¦15281 they¦15284 found¦15284—both¦15286 evil¦15285 and¦15287 good¦15288 people, and¦15289 then the seats at the¦15291 wedding¦15293 reception were¦15290 all¦15281 full.\wj*
+\v 10 \wj \+add ≈So¦15271\+add* those¦15276 slaves¦15274 went¦15272 out¦15272 onto the¦15278 roads¦15279 and invited everyone¦15281 they¦15284 found¦15284—both¦15286 evil¦15285 and¦15287 good¦15288 \+add >people\+add*, and¦15289 then the seats at the¦15291 wedding¦15293 reception were¦15290 all¦15281 full.\wj*
 \p
 \v 11 “\wj But¦15300 when the¦15301 king¦15302 came¦15299 in¦15299 to¦15303 meet¦15303 the¦15304 seated guests, he¦15306 saw¦15306 a¦15308 man¦15308 there¦15307 who wasn't dressed¦15311 in¦15311 the proper clothes¦15312 for a wedding¦15313,\wj*
 \v 12 \wj and¦15314 demanded¦15315, ‘Friend¦15317, how¦15318 did you¦15320 get in¦15320 here¦15321 without the right clothes¦15324?’ But¦15327 the man had nothing to say¦15315.\wj*
@@ -1524,7 +1524,7 @@
 \rem /s1 The Question about Rising from Death; Discussion about Resurrection; The Question about the Resurrection; Marriage at the Resurrection
 \r (Mark 12:18-27; Luke 20:27-40)
 \p
-\v 23 On¦15502 \add ≈the¦15504 same\add* day¦15505, some \add people\add* from the Sadducee¦15508 sect¦15508 (who claim \add ≈people won't¦15511 rise back to life after dying\add*) approached¦15506 \add @Yeshua¦15507\add* and¦15514 asked¦15515,\x + \xo 22:23: \xt Acts 23:8.\x*
+\v 23 On¦15502 \add ≈the¦15504 same\add* day¦15505, some \add people\add* from the Sadducee¦15508 sect¦15508 (who claim \add ≈people won't¦15511 rise back to life after dying\add*)\x + \xo 22:23: \xt Acts 23:8.\x* approached¦15506 \add @Yeshua¦15507\add* and¦15514 asked¦15515,
 \v 24 “Teacher¦15518, Mosheh¦15519 wrote that if¦15521 a married man dies¦15523 childless, his brother¦15531 should marry¦15528 the¦15533 widow and¦15536 in that way raise¦15537 children¦15538 for¦15539 his deceased brother¦15540.\x + \xo 22:24: \xt Deu 25:5.\x*
 \v 25 Well, there were¦15542 seven¦15546 brothers¦15547 amongst¦15544 us¦15545, and¦15548 the¦15549 first¦15550 one got married¦15551 and then died¦15552 childless. So¦15553 his¦15560 brother¦15562 married the widow.
 \v 26 The same happened for the¦15566 second¦15567 \add ≡brother\add*, and¦15568 the¦15569 third¦15570, all the way to¦15571 the¦15572 seventh.
@@ -1534,7 +1534,7 @@
 \v 29 “\wj You've¦15603 got it wrong¦15603,\wj*” \nd Yeshua¦15600\nd* answered¦15597, “\wj because you don't¦15604 understand either the¦15606 scriptures¦15607 or \nd God's¦15612\nd* power¦15610.\wj*
 \v 30 \wj \+add ≈When people come back to life\+add*, there'll be¦15618 no marrying¦15618 or getting engaged¦15620, because¦15614 they'll¦15630 be¦15630 like¦15623 the messengers¦15624 in¦15627 heaven¦15629.\wj*
 \v 31 \wj But¦15632 as for \+add ≈coming back to¦15641 life after dying\+add*, isn't¦15637 it \+add written in the scriptures\+add* that \+nd God¦15644\+nd* said¦15645,\wj*
-\v 32 \wj ‘\+em I¦15646 am¦15647\+em* Abraham's¦15650 \+nd god\+nd* and Isaac's¦15654 \+nd god\+nd* and Yacob's¦15658 god.’? \+nd God\+nd* isn't¦15659 the¦15661 \+nd god¦15662\+nd* of¦15664 dead¦15664 \+add people\+add*, but¦15665 of¦15666 living¦15666 ones.\wj*”\x + \xo 22:32: \xt Exo 3:6.\x*
+\v 32 \wj ‘\+em I¦15646 am¦15647\+em* Abraham's¦15650 \+nd god\+nd* and Isaac's¦15654 \+nd god\+nd* and Yacob's¦15658 god.’?\x + \xo 22:32: \xt Exo 3:6.\x* \+nd God\+nd* isn't¦15659 the¦15661 \+nd god¦15662\+nd* of¦15664 dead¦15664 \+add people\+add*, but¦15665 of¦15666 living¦15666 ones.\wj*”
 \p
 \v 33 When¦15667 the¦15669 crowds¦15670 heard¦15668 his answer, they¦15671 were¦15671 amazed¦15671 at¦15672 his teaching¦15674.
 \s1 The most important command
@@ -1559,9 +1559,9 @@
 \p
 \v 43 “\wj Then how¦15795 could David¦15797,\wj*” he continued, “\wj \+add inspired by\+add* \+add &God's\+add* \+nd spirit¦15799\+nd*, call¦15800 him¦15802 ‘\+nd master¦15801\+nd*’ when he said¦15806,\wj*
 \q1
-\v 44 \wj ‘\+nd Yahweh¦15809\+nd* said¦15807 to¦15810 my \+nd master¦15811\+nd*:\wj*\x + \xo 22:44: \xt Psa 110:1.\x*
+\v 44 \wj ‘\+nd Yahweh¦15809\+nd* said¦15807 to¦15810 my \+nd master¦15811\+nd*:\wj*
 \q1 \wj “Sit¦15813 there at my right¦15815\wj*
-\q1 \wj until¦15817 I¦15819 conquer your enemies¦15821”?\wj*
+\q1 \wj until¦15817 I¦15819 conquer your enemies¦15821”?\wj*\x + \xo 22:44: \xt Psa 110:1.\x*
 \m
 \v 45 \wj So¦15829 if¦15828 David¦15830 calls¦15833 him¦15834 ‘\+nd master¦15835\+nd*’, how¦15836 could he¦15839 be his¦15838 descendant¦15837?\wj*”
 \p
@@ -1575,13 +1575,13 @@
 \v 2 “\wj The¦15876 \+add ≈religious¦15877 teachers¦15877\+add* and¦15878 the¦15879 Pharisee¦15880 party¦15880 claim Mosheh's¦15872 \+add ≈authority\+add*.\wj*
 \v 3 \wj Because of that, do everything they¦15888 tell¦15888 you to do¦15892, and¦15894 \+add obey all the commands\+add* they tell you to obey. However, don't¦15902 \+add ≈copy\+add* what they \+em do¦15903\+em*, because¦15905 they're¦15904 \+add only\+add* good at telling¦15904, not¦15907 doing¦15908.\wj*
 \v 4 \wj They¦15909 package up \+add ≈unbearably¦15917\+add* heavy¦15914 loads¦15912 and¦15918 put¦15919 them¦15919 on the¦15923 people's¦15924 shoulders¦15922, while they¦15925 themselves won't¦15931 even \+add ≈lift a finger¦15929 to help\+add*.\wj*
-\v 5 \wj Everything they¦15940 \+em do\+em* do is¦15940 \+add only\+add* done¦15940 to¦15943 be¦15943 a public display in¦15941 front of the¦15944 people¦15945, so they¦15946 have big prayer boxes and¦15952 fancy robes.\wj*\x + \xo 23:5: a \xt Mat 6:1; \xo b \xt Deu 6:8; \xo c \xt Num 15:38.\x*
+\v 5 \wj Everything they¦15940 \+em do\+em* do is¦15940 \+add only\+add* done¦15940 to¦15943 be¦15943 a public display in¦15941 front of the¦15944 people¦15945,\x + \xo 23:5: \xt Mat 6:1.\x* so they¦15946 have big prayer boxes\x + \xo 23:5: \xt Deu 6:8.\x* and¦15952 fancy robes.\wj*\x + \xo 23:5: \xt Num 15:38.\x*
 \v 6 \wj They¦15959 love¦15959 the¦15963 best¦15964 \+add #places¦15964\+add* at¦15965 dinners¦15967 and¦15968 the¦15969 best¦15970 seats¦15970 in¦15971 the¦15972 \+add ≈Jewish¦15973 meeting¦15973 halls¦15973\+add*.\wj*
-\v 7 \wj \+add ≡They love\+add* being greeted¦15976 in¦15977 the¦15978 marketplaces¦15979 and¦15980 addressed¦15981 as ‘my¦15985 great¦15985 one’.\wj*
-\v 8 \wj But¦15988 don't¦15989 let anyone call¦15990 you ‘my¦15991 great¦15991 one’, because¦15993 you only have one leader, and¦16003 you're¦16004 all \+add ≈brothers¦16005 and¦16005 sisters¦16005\+add*,\wj*
+\v 7 \wj \+add ≡They love\+add* being greeted¦15976 in¦15977 the¦15978 marketplaces¦15979 and¦15980 addressed¦15981 as ‘my¦15985 great¦15985 \+add >one\+add*’.\wj*
+\v 8 \wj But¦15988 don't¦15989 let anyone call¦15990 you ‘my¦15991 great¦15991 \+add >one\+add*’, because¦15993 you only have one¦15992 leader, and¦16003 you're¦16004 all \+add ≈brothers¦16005 and¦16005 sisters¦16005\+add*,\wj*
 \v 9 \wj and¦16007 don't¦16009 call¦16010 anyone \+add here\+add* on¦16013 earth¦16015 your ‘Father¦16008’, because¦16017 you only have one¦16016 father—\+add a\+add* heavenly¦16027 \+add one\+add*.\wj*
 \v 10 \wj Don't let anyone call¦16030 you¦16030 their mentor, because¦16032 you only have one teacher, and that's \+nd the¦16044\+nd* \+nd messiah¦16044\+nd*.\wj*
-\v 11 \wj The¦16045 most important¦16047 person will¦16050 be¦16050 everyone's servant¦16052,\wj*\x + \xo 23:11: \xt Mat 20:26-27; Mrk 9:35; 10:43-44; Luk 22:26.\x*
+\v 11 \wj The¦16045 most important¦16047 \+add >person\+add* will¦16050 be¦16050 everyone's servant¦16052,\wj*\x + \xo 23:11: \xt Mat 20:26-27; Mrk 9:35; 10:43-44; Luk 22:26.\x*
 \v 12 \wj and¦16054 anyone¦16053 who praises themself will be humbled¦16057, and¦16058 anyone¦16059 who humbles¦16060 themself will¦16062 be¦16062 praised.\wj*\x + \xo 23:12: \xt Luk 14:11; 18:14.\x*
 \s1 Yeshua reveals the hypocrisy of those who are religious
 \rem /s1 Jesus Condemns Their Hypocrisy
@@ -1600,26 +1600,26 @@
 \v 21 \wj Anyone who \+add ≈makes a promise¦16238\+add* on the¦16240 temple¦16241 is¦16242 bound by both the temple and \+add @God\+add* who lives¦16248 in¦16248 it¦16250.\wj*
 \v 22 \wj And¦16251 anyone who \+add ≈makes a promise¦16253\+add* on heaven¦16256 is¦16257 bound by¦16258 both \nd God's¦16262\nd* throne¦16260 and¦16263 the¦16265 one who's sitting¦16266 on¦16267 it¦16268.\wj*\x + \xo 23:22: \xt Isa 66:1; Mat 5:34.\x*
 \p
-\v 23 “\wj You¦16270 \+add ≈religious¦16271 teachers¦16271\+add* and¦16272 Pharisees¦16273 are hypocrites¦16274 and will have a bad end, because¦16275 you¦16276 give a tenth of your herbs, but you¦16286 ignore the¦16287 weightier¦16288 parts of¦16289 \+add &God's¦16291\+add* commands, like justice¦16292, mercy¦16296, and¦16298 faith¦16300. \+add ≈It's¦16303 good\+add* to¦16304 \+add @tithe\+add*, \+add ≈but¦16305\+add* those¦16305 \+add other things should also be observed, and\+add* not¦16306 left¦16308 \+add out\+add*.\wj*\x + \xo 23:23: \xt Lev 27:30.\x*
+\v 23 “\wj You¦16270 \+add ≈religious¦16271 teachers¦16271\+add* and¦16272 Pharisees¦16273 are hypocrites¦16274 and will have a bad end, because¦16275 you¦16276 give a tenth of your herbs,\x + \xo 23:23: \xt Lev 27:30.\x* but you¦16286 ignore the¦16287 weightier¦16288 parts of¦16289 \+add &God's¦16291\+add* commands, like justice¦16292, mercy¦16296, and¦16298 faith¦16300. \+add ≈It's¦16303 good\+add* to¦16304 \+add @tithe\+add*, \+add ≈but¦16305\+add* those¦16305 \+add other things should also be observed, and\+add* not¦16306 left¦16308 \+add out\+add*.\wj*
 \v 24 \wj You blind¦16310 guides¦16309! You¦16311 try to strain¦16312 out¦16312 a gnat¦16314, and¦16317 \+add end up\+add* swallowing¦16320 a camel¦16318.\wj*
 \p
 \v 25 “\wj You¦16322 \+add ≈religious¦16323 teachers¦16323\+add* and¦16324 Pharisees¦16325 are hypocrites¦16326 and will have a bad end, because¦16327 you¦16328 scrub the¦16329 outsides¦16331 of¦16332 \+add &your¦16332\+add* \+add #cups¦16333\+add* and¦16334 bowls, but¦16338 the insides¦16337 are¦16339 \+add still\+add* full¦16339 of¦16340 greed and¦16342 selfishness.\wj*
 \v 26 \wj You blind¦16346 Pharisees¦16345! First¦16348 you \+add should\+add* clean the¦16349 inside¦16350 of¦16351 \+add &your¦16351\+add* cup¦16352 or dish¦16355, so¦16353 that¦16356 the¦16359 outside¦16362 can also¦16358 become¦16357 clean¦16365.\wj*
 \p
-\v 27 “\wj You¦16367 \+add ≈religious¦16368 teachers¦16368\+add* and¦16369 Pharisees¦16370 are hypocrites¦16371 and will have a bad end, because¦16372 you're¦16374 like¦16374 whitewashed¦16376 tombs¦16375. On¦16381 the outside they might look¦16382 nice, but the¦16387 insides¦16386 are¦16388 full¦16388 of¦16390 dead¦16391 \+add people's\+add* bones¦16390 and¦16392 all kinds of \+add #impurities¦16394\+add*,\wj*\x + \xo 23:27: \xt Acts 23:3.\x*
+\v 27 “\wj You¦16367 \+add ≈religious¦16368 teachers¦16368\+add* and¦16369 Pharisees¦16370 are hypocrites¦16371 and will have a bad end, because¦16372 you're¦16374 like¦16374 whitewashed¦16376 tombs¦16375.\x + \xo 23:27: \xt Acts 23:3.\x* On¦16381 the outside they might look¦16382 nice, but the¦16387 insides¦16386 are¦16388 full¦16388 of¦16390 dead¦16391 \+add people's\+add* bones¦16390 and¦16392 all kinds of \+add #impurities¦16394\+add*,\wj*
 \v 28 \wj so¦16395 even though the¦16401 people¦16402 might see¦16400 your godly¦16403 \+add ≈facade\+add*, actually your insides¦16404 are¦16406 full¦16407 of¦16409 hypocrisy¦16409 and¦16410 lawlessness¦16411.\wj*
 \s1 Punishment for mistreating prophets
 \rem /s1 Jesus Predicts Their Punishment
 \r (Luke 11:47-51)
 \p
-\v 29 “\wj You¦16413 \+add ≈religious¦16414 teachers¦16414\+add* and¦16415 Pharisees¦16416 are hypocrites¦16417 and will have a bad end because¦16418 you¦16419 \+add re\+add*build¦16419 the¦16422 prophets¦16423' tombs and¦16424 adorn¦16425 the¦16426 tombs¦16427 of¦16428 godly¦16429 people,\wj*
+\v 29 “\wj You¦16413 \+add ≈religious¦16414 teachers¦16414\+add* and¦16415 Pharisees¦16416 are hypocrites¦16417 and will have a bad end because¦16418 you¦16419 \+add re\+add*build¦16419 the¦16422 prophets¦16423' tombs and¦16424 adorn¦16425 the¦16426 tombs¦16427 of¦16428 godly¦16429 \+add >people\+add*,\wj*
 \v 30 \wj and¦16430 you¦16431 tell¦16431 yourselves, ‘If¦16433 we'd¦16435 lived back in¦16436 those days¦16438, we¦16445 wouldn't have had any part in¦16449 killing the¦16452 prophets¦16453.’\wj*
 \v 31 \wj By saying that, you're¦16455 admitting to¦16456 yourselves¦16456 that¦16457 you're¦16459 the descendants¦16458 of¦16460 the¦16460 ones who killed the¦16462 prophets¦16463—\wj*
 \v 32 \wj actually you're¦16465 just the same as your¦16472 ancestors¦16471.\wj*
 \v 33 \wj Bunch of snakes¦16473, brood¦16474 of¦16475 vipers¦16475, how¦16476 \+add do you think that\+add* you'll¦16477 escape¦16477 the¦16479 judgement¦16480 of¦16482 hell?\wj*\x + \xo 23:33: \xt Mat 3:7; 12:34; Luk 3:7.\x*
 \v 34 \wj Because¦16483 of¦16483 that¦16484, listen, I'm¦16486 \+add now\+add* sending¦16487 out¦16487 \+add more\+add* prophets¦16491 and¦16492 wise¦16493 \+add preachers\+add* and¦16494 teachers¦16495 to¦16489 you¦16490 all¦16490. You'll¦16499 kill¦16499 off¦16499 some of them and¦16500 have others executed¦16501 on¦16501 stakes¦16501. You'll¦16506 flog¦16506 some of¦16503 them¦16504 in¦16507 your¦16510 \+add ≈Jewish¦16509 meeting¦16509 halls¦16509\+add*, and¦16511 you'll¦16512 persecute¦16512 others from¦16513 city¦16514 to¦16515 city¦16516,\wj*
-\v 35 \wj so¦16517 that¦16517 \+add the judgement for\+add* all¦16521 the deaths of godly¦16523 people around the¦16526 world¦16527 will fall¦16518 on¦16519 you¦16520 all¦16520. This includes the¦16529 blood¦16530 of¦16531 the innocent Hevel¦16531 \+add (Abel)\+add* all the¦16532 way \+add through the centuries\+add* to¦16534 the¦16535 blood¦16536 of¦16537 Zekaryah¦16537 (son¦16538 of¦16539 Berekiah¦16539) who¦16540 you¦16541 all¦16541 murdered¦16541 between¦16542 the¦16543 temple¦16544 and¦16545 the¦16546 altar¦16547.\wj*\x + \xo 23:35: a \xt Gen 4:8; \xo b \xt 2Ch 24:20-21.\x*
-\v 36 \wj Yes, I¦16549 can assure¦16548 you¦16550 that all these¦16555 things will¦16552 happen to this¦16559 generation¦16558.\wj*
+\v 35 \wj so¦16517 that¦16517 \+add the judgement for\+add* all¦16521 the deaths of godly¦16523 people around the¦16526 world¦16527 will fall¦16518 on¦16519 you¦16520 all¦16520. This includes the¦16529 blood¦16530 of¦16531 the innocent Hevel¦16531 \+add (Abel)\+add*\x + \xo 23:35: \xt Gen 4:8.\x* all the¦16532 way \+add through the centuries\+add* to¦16534 the¦16535 blood¦16536 of¦16537 Zekaryah¦16537 (son¦16538 of¦16539 Berekiah¦16539) who¦16540 you¦16541 all¦16541 murdered¦16541 between¦16542 the¦16543 temple¦16544 and¦16545 the¦16546 altar¦16547.\wj*\x + \xo 23:35: \xt 2Ch 24:20-21.\x*
+\v 36 \wj Yes, I¦16549 can assure¦16548 you¦16550 that all these¦16555 \+add >things\+add* will¦16552 happen to this¦16559 generation¦16558.\wj*
 \s1 Yeshua's concern for Yerushalem
 \rem /s1 The Lament over Jerusalem; Jesus Grieves over Jerusalem; Jesus' Love for Jerusalem
 \r (Luke 13:34-35)
@@ -1633,12 +1633,12 @@
 \r (Mark 13:1-2; Luke 21:5-6)
 \p
 \v 1 As \nd Yeshua¦16630\nd* exited the¦16634 temple¦16635, he approached¦16638 his¦16641 followers¦16640 and asked them to¦16642 show¦16642 him¦16643 around the¦16644 buildings¦16645,
-\v 2 “\wj You¦16655 can see¦16655 all¦16658 of this,\wj*” he said¦16652, “\wj but I¦16660 can assure¦16659 you¦16661 that¦16670 it'll be¦16673 torn¦16673 down¦16673 so thoroughly that one stone won't be left¦16665 on¦16668 top of another.\wj*”
+\v 2 “\wj You¦16655 can see¦16655 all¦16658 of this,\wj*” he said¦16652, “\wj but I¦16660 can assure¦16659 you¦16661 that¦16670 it'll be¦16673 torn¦16673 down¦16673 so thoroughly that one stone won't be¦16665 left¦16665 on¦16668 top of another.\wj*”
 \s1 Future calamities and persecution
 \rem /s1 Troubles and Persecutions; Signs of the End of the Age
 \r (Mark 13:3-13; Luke 21:7-19)
 \p
-\v 3 When¦16675 \add @Yeshua¦16676\add* was sitting¦16674 on¦16677 the¦16678 Mt¦16679. of¦16681 Olives¦16681, \add &his¦16687\add* apprentices¦16688 came¦16685 up to¦16686 him¦16686 by¦16690 themselves¦16691, asking¦16692, “Tell¦16693 us¦16694 when¦16696 all those¦16697 things will¦16698 happen and¦16699 what¦16700 the¦16701 \add #signs¦16702\add* will be of¦16703 your¦16704 coming¦16705 and¦16707 of the end of this age¦16711?”
+\v 3 When¦16675 \add @Yeshua¦16676\add* was sitting¦16674 on¦16677 the¦16678 Mt¦16679. of¦16681 Olives¦16681, \add &his¦16687\add* apprentices¦16688 came¦16685 up to¦16686 him¦16686 by¦16690 themselves¦16691, asking¦16692, “Tell¦16693 us¦16694 when¦16696 all those¦16697 \add >things\add* will¦16698 happen and¦16699 what¦16700 the¦16701 \add #signs¦16702\add* will be of¦16703 your¦16704 coming¦16705 and¦16707 of the end of this age¦16711?”
 \p
 \v 4 ⇔“\wj Watch¦16718 out¦16718 in case others mislead¦16722 you¦16721,\wj*” \nd Yeshua¦16715\nd* answered¦16713,
 \v 5 “\wj because¦16724 many¦16723 will¦16725 come¦16725 claiming to be¦16725 me¦16730 and saying¦16731 that they're the¦16735 \+nd messiah¦16736\+nd* and¦16737 misleading¦16739 many¦16738.\wj*
@@ -1657,13 +1657,13 @@
 \rem /s1 The Desolating Sacrilege; The Awful Horror
 \r (Mark 13:14-23; Luke 21:20-24)
 \p
-\v 15 “\wj So¦16878 whenever¦16877 you¦16880 all¦16880 see¦16880 the¦16881 irreverent object that¦16885 the¦16890 prophet¦16891 Daniel¦16889 wrote about¦16884 being¦16886 placed in¦16894 the¦16895 holy¦16896 place¦16895 (anyone reading¦16898 this should¦16899 try to understand¦16899 it),\wj*\x + \xo 24:15: \xt Dan 9:27; 11:31; 12:11.\x*
+\v 15 “\wj So¦16878 whenever¦16877 you¦16880 all¦16880 see¦16880 the¦16881 irreverent object that¦16885 the¦16890 prophet¦16891 Daniel¦16889 wrote about¦16884 being¦16886 placed in¦16894 the¦16895 holy¦16896 place¦16895\x + \xo 24:15: \xt Dan 9:27; 11:31; 12:11.\x* (anyone reading¦16898 this should¦16899 try to understand¦16899 it),\wj*
 \v 16 \wj those in¦16902 Yudea¦16904 should¦16905 flee¦16905 to¦16906 the¦16908 hills¦16909,\wj*
 \v 17 \wj anyone outside on¦16912 the¦16913 \+add flat\+add* roof¦16914 shouldn't¦16915 go back inside to¦16918 get¦16918 things out¦16922 of¦16922 the¦16923 house¦16924,\wj*\x + \xo 24:17-18: \xt Luk 17:31.\x*
 \v 18 \wj and¦16926 anyone in¦16928 the¦16929 field¦16930 shouldn't¦16931 go back¦16933 \+add to the house\+add* to¦16934 get¦16934 their coat¦16937.\wj*
 \v 19 \wj It will be very difficult for pregnant¦16944 women¦16942 and¦16946 breast-feeding¦16948 mothers in¦16950 those¦16951 days¦16953,\wj*
 \v 20 \wj but¦16955 pray¦16954 that¦16956 your¦16962 escape¦16961 won't¦16957 be in¦16963 winter¦16963 or on¦16966 a¦16966 rest¦16966 day¦16966.\wj*
-\v 21 \wj This will¦16968 be¦16968 followed by incredible¦16972 troubles¦16971 like¦16973 nothing that has¦16975 been observed in this world¦16979 from¦16977 creation¦16978 until¦16980 the¦16981 present time¦16981, and which won't¦16985 happen¦16986 like that again—\wj*\x + \xo 24:21: \xt Dan 12:1; Rev 7:14.\x*
+\v 21 \wj This will¦16968 be¦16968 followed by incredible¦16972 troubles¦16971 like¦16973 nothing that has¦16975 been observed in this world¦16979 from¦16977 creation¦16978 until¦16980 the¦16981 present time¦16981, and which won't¦16985 happen¦16986 like that again\x + \xo 24:21: \xt Dan 12:1; Rev 7:14.\x*—\wj*
 \v 22 \wj in fact if those¦16994 days¦16993 weren't shortened¦16991, nobody would¦16996 survive, however because¦17000 of¦17000 the¦17002 chosen¦17003, those¦17008 days¦17007 will¦17004 be¦17004 shortened¦17004.\wj*
 \p
 \v 23 “\wj Then¦17009 if¦17010 anyone¦17011 says¦17013, ‘Look¦17014, here's¦17015 the¦17016 \+nd messiah¦17017\+nd*’ or¦17018 ‘Here¦17020 he¦17020 is¦17020’, don't¦17021 believe¦17022 it¦17022,\wj*
@@ -1678,7 +1678,7 @@
 \rem /s1 The Coming of the Son of Man
 \r (Mark 13:24-27; Luke 21:25-28)
 \p
-\v 29 “\wj But¦17100 immediately¦17099 after¦17101 the¦17102 troubles¦17103 of¦17105 that time¦17105, the¦17107 sun¦17108 will¦17109 go dark and¦17110 the¦17111 moon¦17112 won't¦17113 give¦17114 its¦17117 light. The¦17119 stars¦17120 will¦17121 fall¦17121 from¦17123 the¦17124 sky¦17125 and¦17126 the¦17127 powers¦17128 of¦17129 the¦17129 heavens¦17130 will¦17131 be¦17131 shaken¦17131.\wj*\x + \xo 24:29: a \xt Isa 13:10; Yoel 2:10,31; 3:15; Rev 6:12; \xo b \xt Isa 13:10; Eze 32:7; Yoel 2:10; 3:15; \xo c \xt Isa 34:4; Rev 6:13.\x*
+\v 29 “\wj But¦17100 immediately¦17099 after¦17101 the¦17102 troubles¦17103 of¦17105 that time¦17105, the¦17107 sun¦17108 will¦17109 go dark¦17109\x + \xo 24:29: \xt Isa 13:10; Yoel 2:10,31; 3:15; Rev 6:12.\x* and¦17110 the¦17111 moon¦17112 won't¦17113 give¦17114 its¦17117 light.\x + \xo 24:29: \xt Isa 13:10; Eze 32:7; Yoel 2:10; 3:15.\x* The¦17119 stars¦17120 will¦17121 fall¦17121 from¦17123 the¦17124 sky¦17125 and¦17126 the¦17127 powers¦17128 of¦17129 the¦17129 heavens¦17130 will¦17131 be¦17131 shaken¦17131.\wj*\x + \xo 24:29: \xt Isa 34:4; Rev 6:13.\x*
 \v 30 \wj And¦17132 then¦17133 a miracle¦17136 will¦17134 appear in¦17142 the¦17144 sky¦17144 as the son of humanity arrives. All¦17150 the¦17151 peoples of¦17153 the¦17153 earth¦17154 will¦17148 be¦17148 upset and¦17155 they'll¦17156 see¦17156 the¦17157 son¦17158 of¦17160 humanity¦17160 arriving on¦17162 the¦17163 clouds¦17164 in the¦17165 sky¦17166 with¦17167 power¦17168 and¦17170 great¦17172 splendour¦17171.\wj*\x + \xo 24:30: \xt Dan 7:13; Zech 12:10-14; Rev 1:7.\x*
 \v 31 \wj There'll be a¦17180 trumpet¦17180 blast as he sends¦17175 out¦17175 his messengers¦17177 to bring together¦17185 all his chosen¦17188 people from every part of the earth—from one \+add pole\+add* to¦17197 the¦17199 other.\wj*
 \s1 Watch the fig tree
@@ -1686,8 +1686,8 @@
 \r (Mark 13:28-31; Luke 21:29-33)
 \p
 \v 32 “\wj \+add ≈So¦17217\+add* learn¦17220 the¦17221 parable¦17222 about¦17216 the¦17218 fig¦17219 tree¦17219: whenever¦17223 its¦17228 \+add #branches¦17227\+add* green up and¦17231 leaves¦17233 start to sprout¦17234 out¦17234, you¦17236 know¦17236 that¦17238 summer¦17242 is¦17239 coming¦17239.\wj*
-\v 33 \wj In the same way, whenever¦17246 you¦17247 see¦17247 all¦17250 those¦17249 things happening, you'll¦17251 know¦17251 then that¦17253 \+add the end of this age\+add* is¦17255 very close¦17254.\wj*
-\v 34 \wj I¦17259 can assure¦17258 you¦17260 that¦17261 that¦17267 generation¦17266 won't¦17263 pass¦17264 away¦17264 until¦17268 all¦17270 of those¦17271 things happen¦17273.\wj*
+\v 33 \wj In the same way, whenever¦17246 you¦17247 see¦17247 all¦17250 those¦17249 \+add >things\+add* happening, you'll¦17251 know¦17251 then that¦17253 \+add the end of this age\+add* is¦17255 very close¦17254.\wj*
+\v 34 \wj I¦17259 can assure¦17258 you¦17260 that¦17261 that¦17267 generation¦17266 won't¦17263 pass¦17264 away¦17264 until¦17268 all¦17270 of those¦17271 \+add >things\+add* happen¦17273.\wj*
 \v 35 \wj The¦17274 sky¦17275 and¦17276 the¦17277 earth¦17278 will¦17279 pass¦17279 away¦17279, but¦17282 my¦17284 messages¦17283 will certainly \+em not¦17286\+em* pass¦17287 away¦17287.\wj*
 \s1 The day of his return isn't known
 \rem /s1 The Day and Hour Unknown; No One Knows the Day and Hour; The Necessity for Watchfulness
@@ -1696,7 +1696,7 @@
 \v 36 “\wj No¦17296 one¦17296 knows¦17297 the¦17290 \+add exact\+add* day¦17291 or time¦17295—not¦17298 even¦17298 the¦17299 messengers¦17300 in the¦17301 heavens¦17302 or the¦17304 son¦17305—only¦17311 the¦17308 father¦17309 knows it.\wj*
 \v 37 \wj The¦17322 coming¦17323 of¦17324 the¦17324 son¦17325 of¦17327 humanity¦17327 will¦17320 be¦17320 just like it was in Noah's¦17318 time¦17316.\wj*\x + \xo 24:37: \xt Gen 6:5-8.\x*
 \v 38 \wj In¦17332 the¦17333 days¦17334 leading up to the¦17338 flood¦17339, people were eating¦17340 and¦17341 drinking¦17342, and marrying¦17344 and¦17345 getting engaged¦17346—right until¦17348 the very day¦17351 that¦17349 Noah¦17353 entered¦17352 the¦17355 barge.\wj*
-\v 39 \wj They¦17359 didn't¦17358 realise¦17359 that anything was coming until¦17361 the¦17364 flood¦17365 came¦17363 and¦17366 took¦17367 everything away¦17367. It'll be just like that at the¦17373 coming¦17374 of¦17375 the¦17375 son¦17376 of¦17378 humanity¦17378.\wj*\x + \xo 24:39: \xt Gen 7:6-24.\x*
+\v 39 \wj They¦17359 didn't¦17358 realise¦17359 that anything was coming until¦17361 the¦17364 flood¦17365 came¦17363 and¦17366 took¦17367 everything away¦17367.\x + \xo 24:39: \xt Gen 7:6-24.\x* It'll be just like that at the¦17373 coming¦17374 of¦17375 the¦17375 son¦17376 of¦17378 humanity¦17378.\wj*
 \v 40 \wj Two¦17382 people will¦17381 be¦17381 working out on the¦17384 farm—one¦17387 will be¦17388 taken¦17388 and¦17389 one¦17391 left¦17392 behind.\wj*
 \v 41 \wj Two¦17393 people will be grinding grain—one¦17399 will be¦17400 taken¦17400 and¦17401 one¦17402 left¦17403 behind.\wj*
 \v 42 \wj So¦17414 be¦17413 watching¦17413, because¦17415 none of you¦17417 know¦17417 exactly when your¦17423 \+nd master¦17422\+nd* will return¦17424.\wj*
@@ -1727,7 +1727,7 @@
 \v 7 \wj So all¦17696 the¦17697 young women got up and¦17700 trimmed¦17701 \+add the wicks on\+add* their lamps¦17703,\wj*
 \v 8 \wj and¦17707 the¦17706 less¦17708 sensible¦17708 ones asked¦17711 the¦17709 others, ‘Here, give¦17712 us¦17713 some of¦17715 your¦17718 oil¦17717 because¦17719 our¦17722 lamps¦17721 are¦17724 starting to splutter.’\wj*
 \v 9 \wj But¦17726 the¦17727 sensible¦17728 ones answered¦17725, ‘We don't¦17732 have enough for¦17735 everyone¦17738. You¦17738 need to go¦17740 to¦17743 the¦17744 stall and¦17746 buy¦17747 some for¦17748 your lamps.’\wj*
-\v 10 \wj However, while they were still away¦17751 buying¦17754 \+add oil\+add*, the¦17756 groom¦17757 appeared and¦17758 those who were ready¦17760 went¦17761 in¦17761 with¦17762 him¦17763 to¦17764 the¦17765 wedding¦17766 and¦17767 the¦17769 door¦17770 was¦17768 shut¦17768.\wj*
+\v 10 \wj However, while they were still away¦17751 buying¦17754 \+add oil\+add*, the¦17756 groom¦17757 appeared and¦17758 those \+add >who were\+add* ready¦17760 went¦17761 in¦17761 with¦17762 him¦17763 to¦17764 the¦17765 wedding¦17766 and¦17767 the¦17769 door¦17770 was¦17768 shut¦17768.\wj*
 \p
 \v 11 “\wj Later¦17771 the¦17776 other¦17777 young women arrived¦17773 and¦17775 called out, ‘Master¦17780, master¦17781, let us¦17783 in.’\wj*\x + \xo 25:11-12: \xt Luk 13:25.\x*
 \v 12 \wj But¦17785 he¦17784 answered¦17786, ‘I¦17789 can assure¦17788 you¦17790 all¦17790 that I¦17792 don't¦17791 know¦17792 you¦17793.’\wj*
@@ -1745,9 +1745,9 @@
 \p
 \v 19 “\wj Eventually the¦17907 master¦17908 of¦17910 those¦17911 slaves¦17910 returned, and¦17912 he¦17913 \+add called them in\+add* to settle¦17913 up their accounts¦17913.\wj*
 \v 20 \wj The¦17921 slave who'd received¦17925 five¦17923 bags of¦17924 silver¦17924 approached¦17919, also bringing¦17926 the¦17927 other¦17927 five¦17928 bags, and said¦17930, ‘Master¦17931, you¦17935 entrusted me¦17934 with five bags, and look¦17936, I¦17940 gained¦17940 another¦17937 five¦17938.’\wj*
-\v 21 \wj ‘Well¦17950 done¦17950, good¦17953 and¦17954 faithful¦17955 slave¦17952,’ said¦17944 the master. ‘You¦17959 were¦17959 faithful¦17960 over¦17957 a¦17958 few¦17958 things, so I'll¦17964 \+add ≈put you¦17963 in¦17965 charge of¦17969\+add* a lot more things. Come¦17965 and join your¦17971 master¦17970 in celebrating.’\wj*
+\v 21 \wj ‘Well¦17950 done¦17950, good¦17953 and¦17954 faithful¦17955 slave¦17952,’ said¦17944 the master. ‘You¦17959 were¦17959 faithful¦17960 over¦17957 a¦17958 few¦17958 \+add >things\+add*, so I'll¦17964 \+add ≈put you¦17963 in¦17965 charge of¦17969\+add* a lot more things. Come¦17965 and join your¦17971 master¦17970 in celebrating.’\wj*
 \v 22 \wj The slave who'd received two¦17977 bags approached¦17972 and said¦17980, ‘Master¦17981, you¦17985 entrusted me with two¦17982 bags of¦17983 silver¦17983. Look¦17986, I¦17992 gained¦17992 another¦17988 two¦17989.’\wj*
-\v 23 \wj ‘Well¦18000 done¦18000, good¦18003 and¦18004 faithful¦18005 slave¦18002,’ said¦17995 the master. ‘You¦18009 were¦18009 faithful¦18010 over¦18007 a¦18008 few¦18008 things, so I'll¦18015 \+add ≈put you¦18014 in¦18016 charge of¦18020\+add* a lot more things. Come¦18016 and join your¦18022 master¦18021 in celebrating.’\wj*
+\v 23 \wj ‘Well¦18000 done¦18000, good¦18003 and¦18004 faithful¦18005 slave¦18002,’ said¦17995 the master. ‘You¦18009 were¦18009 faithful¦18010 over¦18007 a¦18008 few¦18008 \+add >things\+add*, so I'll¦18015 \+add ≈put you¦18014 in¦18016 charge of¦18020\+add* a lot more things. Come¦18016 and join your¦18022 master¦18021 in celebrating.’\wj*
 \v 24 \wj Then¦18024 the¦18026 slave with¦18027 one¦18028 bag of¦18030 silver¦18030 also¦18025 approached¦18023 and said¦18032, ‘Master¦18033, I¦18034 knew¦18034 that¦18036 you'd¦18038 are¦18038 hard¦18037 man¦18039, harvesting¦18042 where¦18043 you¦18045 didn't¦18044 plant, and¦18046 gathering¦18047 where you¦18052 didn't¦18050 spread¦18052 seed.\wj*
 \v 25 \wj \+add ≈So¦18053\+add* because I was¦18054 afraid¦18054, I¦18058 went¦18055 and hid¦18058 your¦18061 silver¦18060 in¦18062 the¦18063 ground¦18064. So look¦18065, here's all of it back.’\wj*
 \v 26 \wj ‘You evil¦18077 and¦18080 lazy slave¦18078,’ his¦18074 master¦18073 answered¦18070. ‘You¦18082 know¦18082 that¦18083 I¦18088 harvest¦18088 where¦18089 I¦18091 didn't¦18090 plant and¦18092 gather¦18093 where I¦18096 didn't¦18095 spread¦18096 seed\wj*
@@ -1758,13 +1758,13 @@
 \s1 Separating sheep and goats
 \rem /s1 The Sheep and the Goats; The Judgment of the Nations; The Final Judgment
 \p
-\v 31 “\wj But¦18177 when¦18176 the¦18179 son¦18180 of¦18182 humanity¦18182 comes¦18178 in¦18183 his glory¦18185 and¦18187 all¦18188 the¦18189 messengers¦18191 with¦18192 him¦18193, then¦18194 he'll¦18195 sit¦18195 down¦18195 on¦18196 his splendid throne¦18197\wj*\x + \xo 25:31: a \xt Mat 16:27; \xo b \xt Mat 19:28.\x*
+\v 31 “\wj But¦18177 when¦18176 the¦18179 son¦18180 of¦18182 humanity¦18182 comes¦18178 in¦18183 his glory¦18185 and¦18187 all¦18188 the¦18189 messengers¦18191 with¦18192 him¦18193,\x + \xo 25:31: \xt Mat 16:27.\x* then¦18194 he'll¦18195 sit¦18195 down¦18195 on¦18196 his splendid throne¦18197\wj*\x + \xo 25:31: \xt Mat 19:28.\x*
 \v 32 \wj and¦18200 all¦18205 the¦18206 nations¦18207 will¦18201 be¦18201 gathered¦18201 together¦18201 \+add ≈in¦18203 front¦18203 of¦18203\+add* him¦18204. He'll separate¦18211 them¦18212 all from¦18213 each other, just like¦18215 a shepherd¦18217 separates the¦18219 sheep¦18220 from¦18221 the¦18222 goats¦18224.\wj*
 \v 33 \wj Then¦18225 the¦18227 sheep¦18229 will¦18226 be¦18226 standing¦18226 on¦18228 his right¦18231, and the¦18233 goats¦18235 on¦18236 his left¦18237\wj*
 \v 34 \wj and the¦18241 king¦18242 will¦18240 say¦18240 to¦18243 the¦18243 \+add ≡sheep\+add* on¦18244 his¦18246 right¦18245, ‘Come¦18247 all of you who've been¦18249 blessed¦18249 by my¦18252 father¦18251. \+add Now\+add* you'll inherit¦18253 the¦18255 kingdom¦18258 that has¦18256 been¦18256 prepared¦18256 for¦18257 you¦18257 since the¦18260 creation¦18260 of¦18261 the¦18261 world¦18261\wj*
 \v 35 \wj because¦18263 I¦18262 was hungry¦18262 and¦18264 you¦18265 gave¦18265 me¦18266 something to¦18267 eat¦18267, I¦18269 was thirsty¦18269 and¦18270 you¦18271 gave¦18271 me¦18272 something to¦18271 drink¦18271, I¦18275 was¦18275 a¦18274 stranger¦18274 and¦18276 you¦18277 accommodated me¦18278,\wj*
 \v 36 \wj I was naked¦18279 and¦18280 you¦18281 gave me¦18282 clothes¦18281, I¦18283 was sick and¦18284 you¦18285 visited¦18285 me¦18286, I¦18289 was¦18289 in¦18287 prison¦18288 and¦18290 you¦18291 came¦18291 to¦18292 \+add see\+add* me¦18293.’\wj*
-\v 37 \wj Then¦18294 those godly¦18298 people will¦18295 ask¦18299, ‘\+nd Master¦18300\+nd*, when¦18301 did we¦18303 ever see¦18303 you¦18302 hungry¦18304 and¦18305 we¦18306 fed¦18306 you, or¦18307 thirsty¦18308 and¦18309 we¦18310 gave¦18310 you a drink¦18310?\wj*
+\v 37 \wj Then¦18294 those godly¦18298 \+add >people\+add* will¦18295 ask¦18299, ‘\+nd Master¦18300\+nd*, when¦18301 did we¦18303 ever see¦18303 you¦18302 hungry¦18304 and¦18305 we¦18306 fed¦18306 you, or¦18307 thirsty¦18308 and¦18309 we¦18310 gave¦18310 you a drink¦18310?\wj*
 \v 38 \wj And¦18312 when¦18311 did we¦18314 see¦18314 you¦18313 as a¦18316 stranger¦18316 and¦18317 accommodate you, or¦18320 naked¦18321 and¦18322 we¦18323 clothed¦18323 you?\wj*
 \v 39 \wj And¦18326 when¦18325 did we¦18328 see¦18328 you¦18327 in¦18332 prison¦18333, and¦18334 we¦18335 came¦18335 to¦18336 \+add see\+add* you¦18337?’\wj*
 \v 40 \wj Then¦18338 the¦18340 king¦18341 will¦18342 answer¦18339 them¦18343, ‘I¦18347 can assure¦18346 you¦18348 that whenever you¦18351 did¦18351 it¦18351 to¦18352 one¦18352 of the¦18357 least¦18358 of¦18353 these¦18353 my¦18356 \+add ≈brothers¦18355 and¦18355 sisters¦18355\+add*, then you¦18360 did¦18360 it¦18360 to¦18359 me¦18359.’\wj*
@@ -1781,7 +1781,7 @@
 \r (Mark 14:1-2; Luke 22:1-2; Yhn 11:45-53)
 \p
 \v 1 After \nd Yeshua¦18491\nd* had completed¦18489 \add &his¦18493\add* teaching, he¦18500 told¦18500 his¦18503 apprentices¦18502,
-\v 2 “\wj The¦18510 pass-over¦18511 celebration is¦18512 in two¦18507 more days¦18508, and¦18513 the¦18514 son¦18515 of¦18517 humanity¦18517 will be¦18518 handed¦18518 over¦18518 to¦18521 be¦18521 executed¦18521 on¦18521 a¦18521 stake¦18521.\wj*”\x + \xo 26:2: \xt Exo 12:1-27.\x*
+\v 2 “\wj The¦18510 pass-over¦18511 celebration is¦18512 in two¦18507 more days¦18508,\x + \xo 26:2: \xt Exo 12:1-27.\x* and¦18513 the¦18514 son¦18515 of¦18517 humanity¦18517 will be¦18518 handed¦18518 over¦18518 to¦18521 be¦18521 executed¦18521 on¦18521 a¦18521 stake¦18521.\wj*”
 \p
 \v 3 At that time, the¦18524 chief¦18525 priests¦18525 and¦18530 the¦18531 \add local\add* elders¦18532 were¦18523 gathered¦18523 together¦18523 in¦18535 the¦18536 courtyard¦18537 of¦18538 Caiaphas¦18542, the¦18538 chief¦18539 priest¦18539,
 \v 4 and¦18543 they¦18544 plotted¦18544 together¦18544 to devise a way to arrest¦18551 \nd Yeshua¦18548\nd* so¦18552 they¦18553 could¦18553 execute¦18553 him.
@@ -1796,8 +1796,8 @@
 \v 9 That¦18614 could¦18612 have been¦18617 sold¦18617 and¦18619 raised a lot of money to¦18620 give¦18620 to¦18622 the¦18622 poor¦18622.”
 \p
 \v 10 But¦18624 \nd Yeshua¦18626\nd* knew¦18623 what they were saying¦18627 and responded, “\wj Why¦18629 are¦18631 you¦18631 all¦18631 causing problems¦18630 for this woman¦18633, because¦18635 she¦18637 did¦18637 something beautiful¦18636 for me¦18639.\wj*
-\v 11 \wj You'll¦18644 always¦18640 have¦18644 the¦18642 poor¦18643 with¦18645 you, but¦18648 you¦18651 won't¦18649 always¦18650 have¦18651 me¦18647 \+add around\+add*.\wj*\x + \xo 26:11: \xt Deu 15:11.\x*
-\v 12 \wj This¦18655 woman¦18655 put¦18652 this¦18658 lotion¦18657 on¦18659 my¦18662 body¦18661 in a sense as a burial \+add spice\+add*.\wj*
+\v 11 \wj You'll¦18644 always¦18640 have¦18644 the¦18642 poor¦18643 with¦18645 you,\x + \xo 26:11: \xt Deu 15:11.\x* but¦18648 you¦18651 won't¦18649 always¦18650 have¦18651 me¦18647 \+add around\+add*.\wj*
+\v 12 \wj This¦18655 woman¦18655 put¦18652 this¦18658 lotion¦18657 on¦18659 my¦18662 body¦18661 in a sense as a burial¦18665 \+add spice\+add*.\wj*
 \v 13 \wj I¦18671 can assure¦18669 you¦18672 all¦18672 that wherever¦18673 the¦18677 good¦18678 message¦18678 \+add about me\+add* is¦18676 retold anywhere in¦18680 the¦18682 world¦18683, this¦18688 woman¦18688 and what¦18686 she did¦18687 will also¦18685 be¦18684 mentioned as a¦18690 memorial¦18690 to her¦18691.\wj*”
 \s1 Yudas agrees to turn in Yeshua
 \rem /s1 Judas Agrees to Betray Jesus
@@ -1833,7 +1833,7 @@
 \v 26 Then¦18924 during the¦18928 meal, \nd Yeshua¦18929\nd* took¦18927 some bread¦18932 and¦18933 blessed¦18934 \add it\add*, then he¦18937 broke¦18937 it¦18937 into pieces and¦18938 gave¦18941 it to¦18942 \add &his¦18942\add* apprentices¦18943, saying¦18946, “\wj Take¦18948 this¦18950 and eat¦18949 it—it's my¦18955 body¦18954.\wj*”
 \p
 \v 27 Then¦18956 he took¦18957 a¦18959 cup¦18959 \add of wine\add* and¦18960 after giving¦18961 thanks¦18961, he¦18962 shared it¦18962 with them¦18963 saying¦18964, “\wj Everyone¦18968 drink¦18965 some,\wj*
-\v 28 \wj because¦18970 this¦18969 is¦18971 my¦18974 blood¦18973 of¦18976 the¦18976 agreement¦18978 which is \+add about to\+add* be poured¦18983 out¦18983 for¦18984 the forgiveness¦18985 of¦18986 the sins¦18986 of many¦18982 people.\wj*\x + \xo 26:28: a \xt Exo 24:8; \xo b \xt Jer 31:31-34.\x*
+\v 28 \wj because¦18970 this¦18969 is¦18971 my¦18974 blood¦18973\x + \xo 26:28: \xt Exo 24:8.\x* of¦18976 the¦18976 agreement¦18978\x + \xo 26:28: \xt Jer 31:31-34.\x* which is \+add about to\+add* be poured¦18983 out¦18983 for¦18984 the forgiveness¦18985 of¦18986 the sins¦18986 of many¦18982 people.\wj*
 \v 29 \wj I¦18987 can assure you¦18989 all¦18989 that¦19005 I¦18993 certainly won't¦18992 drink¦18993 this¦18997 \+add pass-over\+add* wine again until¦19002 I'm¦19008 able to drink¦19008 it¦19007 together with¦19011 you¦19012 all¦19012 in¦19014 my¦19019 father's¦19018 kingdom¦19016.\wj*”
 \p
 \v 30 Then¦19020 they sang¦19021 some songs¦19021 before heading out¦19022 \add of the city\add* to¦19023 the¦19024 Mt¦19025. of¦19027 Olives¦19027.
@@ -1884,8 +1884,8 @@
 \v 53 \wj Don't¦19493 you¦19489 realise that¦19492 I¦19494 could¦19494 just ask my¦19500 father¦19499 and¦19501 he¦19502 would¦19502 place over a dozen¦19509 divisions of heavenly soldiers here \+add ≈in front of\+add* me¦19503,\wj*
 \v 54 \wj however then the¦19519 scriptures¦19520 that¦19521 tell what will happen wouldn't get fulfilled¦19517.\wj*”
 \p
-\v 55 Then turning to¦19534 the¦19534 crowds¦19535, \nd Yeshua¦19532\nd* said¦19530, “\wj So you¦19540 all¦19540 came¦19540 out¦19540 with¦19541 swords¦19542 and¦19543 clubs¦19544 as¦19536 if you were arresting a¦19538 thief¦19538?\wj*\x + \xo 26:55: \xt Luk 19:47; 21:37.\x*
-\v 56 \wj I was sitting, teaching every¦19566 day in¦19568 the temple but you didn't arrest me there.\wj*”
+\v 55 Then turning to¦19534 the¦19534 crowds¦19535, \nd Yeshua¦19532\nd* said¦19530, “\wj So you¦19540 all¦19540 came¦19540 out¦19540 with¦19541 swords¦19542 and¦19543 clubs¦19544 as¦19536 if you were arresting a¦19538 thief¦19538?\wj*
+\v 56 \wj I was sitting, teaching every¦19566 day in¦19568 the temple\x + \xo 26:56: \xt Luk 19:47; 21:37.\x* but you didn't arrest me there.\wj*”
 \s1 Yeshua is interrogated by the Jewish leaders
 \rem /s1 Jesus before the Council; Jesus before the High Priest; Before the Sanhedrin
 \r (Mark 14:53-65; Luke 22:54-55,63-71; Yhn 18:13-14,19-24)
@@ -1901,9 +1901,9 @@
 \p
 \v 64 “\wj You¦19744 said¦19745 it¦19745,\wj*” \nd Yeshua¦19743\nd* responded¦19740. “\wj However¦19746, I¦19747 can tell¦19747 you¦19748 all¦19748 that from¦19750 now¦19751 on, you'll¦19752 see¦19752 the¦19753 son¦19754 of¦19756 humanity¦19756 sitting¦19757 beside God in the¦19759 position of¦19761 power¦19761 and¦19762 coming¦19763 in¦19764 the¦19765 clouds¦19766 in the¦19767 sky¦19768.\wj*”\x + \xo 26:64: \xt Dan 7:13.\x*
 \p
-\v 65 Then¦19769 the¦19770 chief¦19771 priest¦19771 tore¦19772 his¦19775 robes¦19774 and said¦19777, “He¦19782 belittled \add God\add*. Why¦19783 would we¦19787 need¦19786 more witnesses¦19789 after that? See¦19790 here, you¦19792 all¦19792 heard¦19792 him slander¦19794 \add God\add*.\x + \xo 26:65-66: \xt Lev 24:16.\x*
+\v 65 Then¦19769 the¦19770 chief¦19771 priest¦19771 tore¦19772 his¦19775 robes¦19774 and said¦19777, “He¦19782 belittled \add God\add*. Why¦19783 would we¦19787 need¦19786 more witnesses¦19789 after that? See¦19790 here, you¦19792 all¦19792 heard¦19792 him slander¦19794 \add God\add*.
 \v 66 What¦19796 do you¦19797 all¦19797 think¦19798 \add now\add*?
-\p “He¦19808 should get the death¦19807 penalty,” they answered¦19801.
+\p “He¦19808 should get the death¦19807 penalty,”\x + \xo 26:65-66: \xt Lev 24:16.\x* they answered¦19801.
 \p
 \v 67 Then¦19809 they¦19810 spat¦19810 in¦19811 \add @Yeshua's\add* face¦19813 and¦19815 they¦19816 beat¦19816 him¦19817 and¦19820 slapped¦19821 him\x + \xo 26:67: \xt Isa 50:6.\x*
 \v 68 saying¦19823, “Prophesy¦19824 to¦19825 us¦19825, \nd messiah¦19826\nd*. Who¦19827 was¦19828 it that just slapped¦19830 you¦19831?”
@@ -1933,7 +1933,7 @@
 \rem /s1 The Death of Judas; The Suicide of Judas
 \r (Acts 1:18-19)
 \p
-\v 3 When¦20004 Yudas¦20006, (the¦20007 one who had turned¦20008 him¦20010 in) saw¦20005 that¦20011 he¦20012 was¦20012 being sentenced¦20012 to death, he¦20016 regretted¦20013 his actions and returned¦20016 the¦20018 payment to¦20021 the¦20021 chief¦20022 priests¦20022 and¦20023 elders¦20025\x + \xo 27:3-8: \xt Acts 1:18-19.\x*
+\v 3 When¦20004 Yudas¦20006, (the¦20007 one who had turned¦20008 him¦20010 in) saw¦20005 that¦20011 he¦20012 was¦20012 being sentenced¦20012 to death, he¦20016 regretted¦20013 his actions and returned¦20016 the¦20018 payment to¦20021 the¦20021 chief¦20022 priests¦20022 and¦20023 elders¦20025
 \v 4 saying¦20026, “I've¦20027 sinned¦20027 and turned in an innocent¦20031 man.”
 \p “What's¦20036 that got to¦20037 do with us¦20038?” they asked. “You¦20039 sort out \add your own problems\add*.”
 \p
@@ -1941,10 +1941,10 @@
 \p
 \v 6 The¦20056 chief¦20058 priests¦20058 took¦20059 the¦20060 money¦20061 and decided, “We can't¦20063 legally deposit the money to¦20066 the¦20069 temple¦20070 treasury¦20070 because¦20072 it's¦20075 blood¦20074 money.”
 \v 7 They got advice¦20076 and decided to buy¦20079 the¦20082 potter's¦20085 field¦20083 \add that was for sale\add* to make it a¦20087 cemetery for¦20088 people from out of¦20084 town,
-\v 8 so¦20090 that¦20094 place got called¦20091 ‘The¦20095 field¦20095 of¦20096 blood¦20096’ until today¦20099.
+\v 8 so¦20090 that¦20094 place got called¦20091 ‘The¦20095 field¦20095 of¦20096 blood¦20096’\x + \xo 27:3-8: \xt Acts 1:18-19.\x* until today¦20099.
 \p
-\v 9 And so the¦20103 message¦20103 which had¦20104 been¦20104 \add written\add* by¦20105 the¦20107 prophet¦20108 Yirmeyah¦20106 \add !(Jeremiah¦20106)\add* was¦20102 fulfilled¦20102, ‘They¦20111 took¦20111 the¦20112 thirty¦20113 silver¦20114 coins¦20114, the¦20115 price¦20116 of¦20117 the¦20117 one who was¦20118 sold, the price set by¦20121 the¦20122 Israelis¦20123,\x + \xo 27:9-10: \xt Zech 11:12-13.\x*
-\v 10 and¦20124 they¦20125 gave¦20125 the coins for¦20129 the¦20132 potter's¦20133 field¦20131, as¦20134 \nd Yahweh¦20137\nd* directed¦20135 me¦20136.’
+\v 9 And so the¦20103 message¦20103 which had¦20104 been¦20104 \add written\add* by¦20105 the¦20107 prophet¦20108 Yirmeyah¦20106 \add !(Jeremiah¦20106)\add* was¦20102 fulfilled¦20102, ‘They¦20111 took¦20111 the¦20112 thirty¦20113 silver¦20114 coins¦20114, the¦20115 price¦20116 of¦20117 the¦20117 one who was¦20118 sold, the price set by¦20121 the¦20122 Israelis¦20123,
+\v 10 and¦20124 they¦20125 gave¦20125 the coins for¦20129 the¦20132 potter's¦20133 field¦20131, as¦20134 \nd Yahweh¦20137\nd* directed¦20135 me¦20136.’\x + \xo 27:9-10: \xt Zech 11:12-13.\x*
 \s1 Yeshua faces Pilate
 \rem /s1 Jesus Before Pilate; Jesus' Trial before Pilate; Pilate Questions Jesus
 \r (Mark 15:2-5; Luke 23:3-5; Yhn 18:33-38)
@@ -1977,7 +1977,7 @@
 \rem /s1 Pilate Hands Jesus over to Be Crucified
 \p But¦20349 they¦20348 just kept yelling¦20352 loudly, “Execute¦20355 him¦20355 on¦20355 a¦20355 stake¦20355.”
 \p
-\v 24 When¦20357 Pilate¦20359 saw¦20356 that¦20360 it¦20362 was going nowhere other than to turn¦20366 into a¦20365 riot, got \add a bowl of\add* water¦20368 and washed¦20369 his¦20370 hands¦20371 \add up there\add* in¦20373 front¦20373 of¦20373 the¦20374 crowd¦20375, announcing, “I'm¦20378 innocent¦20377 of¦20380 the¦20381 blood¦20382 of this¦20387 man who has done nothing¦20361 wrong. It's¦20390 your responsibility \add now\add*.”\x + \xo 27:24: \xt Deu 21:6-9.\x*
+\v 24 When¦20357 Pilate¦20359 saw¦20356 that¦20360 it¦20362 was going nowhere other than to turn¦20366 into a¦20365 riot, got \add a bowl of\add* water¦20368 and washed¦20369 his¦20370 hands¦20371 \add up there\add* in¦20373 front¦20373 of¦20373 the¦20374 crowd¦20375,\x + \xo 27:24: \xt Deu 21:6-9.\x* announcing, “I'm¦20378 innocent¦20377 of¦20380 the¦20381 blood¦20382 of this¦20387 man who has done nothing¦20361 wrong. It's¦20390 your responsibility \add now\add*.”
 \p
 \v 25 ⇔“\add The responsibility for\add* his¦20399 blood¦20398 will be on¦20400 us¦20401 and¦20402 on¦20403 our¦20406 children¦20405,” the¦20394 people¦20395 shouted back.
 \p
@@ -1997,7 +1997,7 @@
 \p
 \v 32 When¦20525 they got out¦20524 \add onto the street\add*, they¦20526 grabbed a¦20527 man¦20527 who turned out to be Simon¦20533 from Cyrene¦20528, and they¦20535 forced him to carry¦20537 the¦20538 stake¦20539.
 \v 33 When¦20541 they arrived¦20542 at the place¦20545 called¦20547 Golgotha¦20548 (which¦20549 means ‘Place¦20555 of¦20554 the¦20554 skull¦20554’),
-\v 34 they¦20558 gave¦20558 \add @Yeshua\add* some wine¦20561 mixed¦20565 with¦20563 something bitter, but when he tasted¦20567 it¦20567, he¦20570 didn't¦20568 want to¦20571 drink¦20571 any.\x + \xo 27:34: \xt Psa 69:21.\x*
+\v 34 they¦20558 gave¦20558 \add @Yeshua\add* some wine¦20561 mixed¦20565 with¦20563 something bitter,\x + \xo 27:34: \xt Psa 69:21.\x* but when he tasted¦20567 it¦20567, he¦20570 didn't¦20568 want to¦20571 drink¦20571 any.
 \p
 \v 35 Then¦20573 they executed¦20572 him on¦20572 the stake¦20572 and divided¦20575 his¦20579 clothes¦20578 out by throwing¦20580 dice\x + \xo 27:35: \xt Psa 22:18.\x*
 \v 36 as they¦20604 sat¦20603 there¦20606 guarding¦20604 him¦20605.
@@ -2005,11 +2005,11 @@
 \v 38 Two¦20628 robbers¦20629 were¦20625 also executed¦20625 on¦20625 stakes¦20625—one¦20630 on¦20631 \add &his¦20632\add* right¦20632 and¦20633 one¦20634 on¦20635 his left¦20636.\f + \fr 27:38 \ft https://www.billmounce.com/monday-with-mounce/when-then-then-mt-27-38\f*
 \p
 \v 39 Many of the¦20637 people passing¦20639 by bad-mouthed him¦20641, shaking¦20642 their¦20648 heads¦20646\x + \xo 27:39: \xt Psa 22:7; 109:25.\x*
-\v 40 and¦20649 saying¦20650, “Ha, you reckoned you could demolish¦20653 the¦20654 temple¦20655 and¦20656 rebuild¦20660 it¦20660 in¦20657 three¦20658 days¦20659 so save¦20661 yourself¦20662 \add now\add*—if¦20663 you're¦20665 \add really\add* \nd God's¦20667\nd* son¦20664, just step down¦20670 off that stake¦20673.”\x + \xo 27:40: \xt Mat 26:61; Yhn 2:19.\x*
+\v 40 and¦20649 saying¦20650, “Ha, you reckoned you could demolish¦20653 the¦20654 temple¦20655 and¦20656 rebuild¦20660 it¦20660 in¦20657 three¦20658 days¦20659\x + \xo 27:40: \xt Mat 26:61; Yhn 2:19.\x* so save¦20661 yourself¦20662 \add now\add*—if¦20663 you're¦20665 \add really\add* \nd God's¦20667\nd* son¦20664, just step down¦20670 off that stake¦20673.”
 \p
 \v 41 Similarly¦20674, the¦20677 chief¦20678 priests¦20678 and the¦20681 \add ≈religious¦20682 teachers¦20682\add* and¦20684 the elders¦20685 mocked¦20679 him saying¦20690,
 \v 42 “Ha, he¦20693 saved¦20693 others¦20692 but he¦20696 can't¦20695 even save¦20697 himself¦20694. If he's¦20701 Yisrael's¦20700 king¦20699, let¦20702 him¦20702 come¦20702 down¦20702 now¦20703 from¦20704 the¦20705 stake¦20706 and¦20707 then we'll¦20708 believe¦20708 in¦20711 him¦20712.
-\v 43 He¦20715 \add ≈put his trust¦20715 in¦20716\add* \nd God¦20719\nd*, so let¦20721 \add @God¦20721\add* rescue¦20721 him now¦20722 if¦20724 he¦20725 wants¦20725 him¦20726, because¦20728 he¦20727 did claim to be¦20732 \nd God's¦20731\nd* son¦20733.”\x + \xo 27:43: \xt Psa 22:8.\x*
+\v 43 He¦20715 \add ≈put his trust¦20715 in¦20716\add* \nd God¦20719\nd*, so let¦20721 \add @God¦20721\add* rescue¦20721 him now¦20722 if¦20724 he¦20725 wants¦20725 him¦20726,\x + \xo 27:43: \xt Psa 22:8.\x* because¦20728 he¦20727 did claim to be¦20732 \nd God's¦20731\nd* son¦20733.”
 \p
 \v 44 Even the¦20739 robbers¦20740 who were being executed¦20743 beside him¦20745 derided¦20746 him¦20747.
 \s1 Yeshua calls out and then dies
@@ -2026,7 +2026,7 @@
 \p
 \v 50 Then¦20853 \nd Yeshua¦20854\nd* made a¦20858 loud¦20859 cry¦20856 and sent¦20860 his¦20861 spirit¦20862 away¦20860.
 \p
-\v 51 Then¦20863, wow¦20864, the¦20865 curtain¦20866 inside the¦20867 temple¦20868 was¦20869 torn¦20869 apart from¦20874 the top¦20875 to¦20876 the bottom¦20877, and¦20880 there was¦20884 an earthquake and¦20885 splitting of rocks¦20887.\x + \xo 27:51: \xt Exo 26:31-33.\x*
+\v 51 Then¦20863, wow¦20864, the¦20865 curtain¦20866 inside the¦20867 temple¦20868 was¦20869 torn¦20869 apart from¦20874 the top¦20875 to¦20876 the bottom¦20877,\x + \xo 27:51: \xt Exo 26:31-33.\x* and¦20880 there was¦20884 an earthquake and¦20885 splitting of rocks¦20887.
 \v 52 Some tombs¦20892 came open¦20893 and¦20895 many¦20896 bodies¦20897 of¦20898 godly people \add ≈came alive again\add*
 \v 53 and¦20903 leaving the¦20906 tombs¦20907 after¦20908 his¦20911 resurrection¦20910, they¦20913 went¦20913 into¦20914 God's¦20916 city¦20917 where many¦20921 people saw them.
 \p
@@ -2087,5 +2087,5 @@
 \v 16 The¦21482 eleven¦21482 apprentices¦21483 travelled¦21484 up to¦21485 Galilee¦21487 to¦21488 the¦21489 hill¦21490 that \nd Yeshua¦21495\nd* had \add previously\add* told them¦21493 to go¦21484 to,\x + \xo 28:16: \xt Mat 26:32; Mrk 14:28.\x*
 \v 17 and¦21496 when they saw¦21497 him¦21498 there, they \add immediately\add* bowed down to the ground, even though their minds \add ^weren't sure\add* \add that it was really him\add*.
 \v 18 Then¦21504 \nd Yeshua¦21507\nd* \add ≈came¦21505 closer¦21505\add* and told¦21508 them¦21509, “\wj I have been¦21511 given¦21511 authority¦21514 over both heavenly¦21517 and¦21519 earthly¦21522 affairs\wj*
-\v 19 \wj so¦21526 I want you to leave here and go¦21523 and train¦21527 followers¦21527 in every¦21528 country¦21530, immersing¦21531 them¦21533 \+add in water\+add* with the¦21535 \+add ≈authority\+add* of¦21537 the¦21537 father¦21538 and¦21539 the¦21540 son¦21541 and¦21542 the¦21543 holy¦21544 \+nd spirit¦21545\+nd*.\wj*\x + \xo 28:19: \xt Acts 1:8.\x*
+\v 19 \wj so¦21526 I want you to leave here and go¦21523 and train¦21527 followers¦21527 in every¦21528 country¦21530,\x + \xo 28:19: \xt Acts 1:8.\x* immersing¦21531 them¦21533 \+add in water\+add* with the¦21535 \+add ≈authority\+add* of¦21537 the¦21537 father¦21538 and¦21539 the¦21540 son¦21541 and¦21542 the¦21543 holy¦21544 \+nd spirit¦21545\+nd*.\wj*
 \v 20 \wj Then teach¦21546 them¦21547 to¦21548 do everything just like¦21550 I¦21551 instructed¦21551 all of you. And¦21553 listen, I¦21555 will be¦21559 with¦21557 you¦21558 all¦21558 every¦21560 day¦21562 right through until¦21563 the¦21564 end of¦21566 \+add this\+add* age¦21567.\wj*”

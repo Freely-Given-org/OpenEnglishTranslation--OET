@@ -36,10 +36,13 @@ We use this information to update our OET word-table
     that was created by extract_glossed_OSHB_OT_to_ESFM.py
 
 CHANGELOG:
+    2026-10-22 Use BOS source profiles for mapped metadata, passages and export/navigation.
     2024-12-19 Fixed bug matching word numbers when WLC uses a Ketiv
     2025-06-19 Connect Yahweh to God person and improve people connections (using altGloss and better handling fields like 'of_Moses')
     2025-06-19 Changed to connect timeline, etc., to EVERY word in the verse (not just the FIRST word)
     2026-05-08 Upgraded to bos_books_codes_py
+    2026-10-22 Normalize Theographic book codes with BOS (USFM EZK becomes BOS EZE).
+               Match Hebrew metadata by validated native IDs, complete spelling, and morphology.
 """
 from gettext import gettext as _
 from typing import Dict, List, Tuple, NamedTuple, Optional
@@ -55,12 +58,14 @@ import re
 import BibleOrgSysGlobals
 from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 import bos_books_codes_py
+from theographic import normalise_book_codes, mapped_verse_metadata
+from hebrew_word_alignment import matched_word_groups
 from bible_transliterations import transliterate_Hebrew #, transliterate_Greek
 
-LAST_MODIFIED_DATE = '2026-10-06' # by RJH
+LAST_MODIFIED_DATE = '2026-10-22' # by RJH
 SHORT_PROGRAM_NAME = "Add_wordtable_people_places_referrents"
 PROGRAM_NAME = "Add People&Places tags to OET OT wordtable"
-PROGRAM_VERSION = '0.25'
+PROGRAM_VERSION = '0.26'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -145,7 +150,7 @@ def main() -> None:
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Reading Theographic Bible Data json entries from {JSON_VERSES_DB_INPUT_FILEPATH}…" )
     with open( JSON_VERSES_DB_INPUT_FILEPATH, 'rt', encoding='utf-8' ) as json_file:
-        state.verseIndex = json.load( json_file )
+        state.verseIndex = normalise_book_codes(json.load(json_file))
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Loaded {len(state.verseIndex):,} json verse entries." )
 
@@ -479,24 +484,20 @@ def associate_Theographic_people_places() -> bool:
     assert 381_000 < len(state.newWordTable) < 382_000, f"{len(state.newWordTable)=}"
 
     numAddedPeople = numAddedPeopleGroups = numAddedLocations = numAddedEvents = numAddedYears = numAddedTimelines = 0
-    # lastVerseRef = None
+    verseMetadata = {}
     for n, columns_string in enumerate( state.newWordTable[1:], start=1 ):
         wordRef, _OSHBid, rowType, _morphemeRowList, _lemmaRowList, _strongs, _cantillationHierarchy, _morphology, _word, noCantillations, morphemeGlosses, contextualMorphemeGlosses, wordGloss, contextualWordGloss, glossCaps, _glossPunctuation, _glossOrder, _glossInsert, _role, _nesting, _tags = columns_string.split( '\t' )
         if rowType in ('seg','note','variant note','alternative note','exegesis note'):
             assert columns_string.count( '\t' ) == 20, f"{columns_string.count(TAB)} {columns_string=}"
             # state.newWordTable.append( columns_string )
-            lastVerseRef = verseRef
             continue
         tags:List[str] = []
         verseRef = wordRef.split('w')[0]
         # newVerse = verseRef != lastVerseRef
-        try: verseLinkEntry = state.verseIndex[verseRef]
-        except KeyError: # versification difference ???
-            logging.critical( f"Versification error: Unable to find {verseRef} in Theographic json" )
-            assert columns_string.count( '\t' ) == 20, f"{columns_string.count(TAB)} {columns_string=}"
-            # state.newWordTable.append( columns_string )
-            # lastVerseRef = verseRef
-            continue
+        if verseRef not in verseMetadata:
+            verseMetadata[verseRef] = mapped_verse_metadata(
+                verseRef, state.verseIndex, 'org', dataset=JSON_VERSES_DB_INPUT_FILEPATH)
+        verseLinkEntry = verseMetadata[verseRef]
 
         gloss = contextualWordGloss if contextualWordGloss \
                 else wordGloss if wordGloss \
@@ -571,15 +572,10 @@ def associate_Theographic_people_places() -> bool:
                 if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 2:
                     dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
                 numAddedPeopleGroups += 1
-        if verseLinkEntry['yearNum']:
-            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add year number: {n} {wordRef} '{noCantillations}' {glossCaps} {gloss=} {altGloss=} {verseLinkEntry['yearNum']}")
-            assert isinstance( verseLinkEntry['yearNum'], str )
-            tag = f"Y{verseLinkEntry['yearNum']}"
-            assert ' ' not in tag and ';' not in tag
-            tags.append( tag )
-            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
+        for value in verseLinkEntry['yearNums']:
+            tag = 'Y' + value.replace(' ', '_')
+            assert ';' not in tag
+            tags.append(tag)
             numAddedYears += 1
         if verseLinkEntry['eventsDescribed']:
             if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
@@ -595,15 +591,10 @@ def associate_Theographic_people_places() -> bool:
                 if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
                     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
                 numAddedEvents += 1
-        if verseLinkEntry['timeline']:
-            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Could add timeline: {n} {wordRef} '{noCantillations}' {glossCaps} {gloss=} {altGloss=} {verseLinkEntry['timeline']}")
-            assert isinstance( verseLinkEntry['timeline'], str )
-            tag = f"T{verseLinkEntry['timeline'].replace(' ','_')}"
-            assert ' ' not in tag and ';' not in tag
-            tags.append( tag )
-            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Added '{tag}' to {wordRef}")
+        for value in verseLinkEntry['timelines']:
+            tag = 'T' + value.replace(' ', '_')
+            assert ';' not in tag
+            tags.append(tag)
             numAddedTimelines += 1
 
         # Put the new column in the table
@@ -984,183 +975,28 @@ def fill_extra_columns_and_remove_some() -> bool:
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Loaded {len(state.lemmaDict):,} lemma index entries into state.lemmaDict." )
 
-    # Fill in the lemmaRowList, role, and nesting columns
-    macIndex = 1 # Macula index
-    numConsecutiveMismatches = 0
-    ourLastV = None
-    for ourIndex, ourLineStr in enumerate( state.newWordTable[1:], start=1 ):
-        # print( f"{ix=} {ourLineStr=}" )
-        # if ourLineStr.startswith( 'KI2_4:10' ): break
-
-        assert ourLineStr.count( '\t' ) == 20, f"{ourLineStr.count(TAB)} {ourLineStr=}"
-        ourColumns = ourLineStr.split( '\t' )
-
-        if ourColumns[2] in ('seg','note','variant note','alternative note','exegesis note'):
-            numConsecutiveMismatches = 0
-            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Skipping our {ourRef} {ourColumns[2]}")
-            continue # because we were successful
-
-        ourRef = ourColumns[0]
-        ourBBB, ourCVW = ourRef.split( '_' )
-        ourC, ourVW = ourCVW.split( ':' )
-        ourV, ourW = ourVW.split( 'w' ) # There's always a word number because notes and segs are already handled above
-    
-        if ourV != ourLastV:
-            numKs = 0 # Reset for a new verse
-        ourLastV = ourV
-
-        if ourColumns[2] == 'K': # then we have a Ketiv, and so we have to increase our word number to match theirs (coz they miss the Qere)
-            numKs += 1
-        if numKs > 0:
-            incrementedW = str( int(ourW) + numKs )
-            ourRef = f'{ourBBB}_{ourC}:{ourV}w{incrementedW}'
-            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 2:
-                dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"KETIV ({numKs}) increased from {ourColumns[0]} to {ourRef=}" )
-
-        lemmaList, lemmaRowList = [], []
-        for dummyRange in range( 8 ): # because we sometimes have to skip over notes and segs
-            # if dummyRange > 5: assert False, "We want to stop here"
-            if dummyRange > 1: dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"\n\n{dummyRange=}" )
-            elif dummyRange > 0: dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{dummyRange=}" )
-            if macIndex >= len(state.macula_tsv_lines):
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 2:
-                    dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"RanA out of Macula lines at {ourIndex}/{len(state.newWordTable)} {ourLineStr}" )
-                break # no more macula lines
-            theirMaculaColumns = state.macula_tsv_lines[macIndex] # Already in a list
-            assert len(theirMaculaColumns) == 28, f"{len(theirMaculaColumns)} {theirMaculaColumns=}"
-            if ourLineStr.startswith( 'KI2_4:3' ):
-                print( f"\n{ourIndex=}: {ourColumns}\n{macIndex=}: {theirMaculaColumns}")
-                print( f"  {dummyRange=} {ourColumns[0]=} {ourColumns[2]=} {ourColumns[3]=} wordGloss='{ourColumns[12]}' {lemmaList=} {lemmaRowList=}" )
-
-            if theirMaculaColumns[0] == ourRef: # references match exactly, so then it's a word
-                numConsecutiveMismatches = 0
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Matched word {ourRef}=={theirMaculaColumns[0]} {theirMaculaColumns[1]} {ourColumns[1]} {theirMaculaColumns[2]} {ourColumns[2]} R='{theirMaculaColumns[13]}' N='{theirMaculaColumns[27]}'")
-                assert 'w' in theirMaculaColumns[2] # Might be 'Aw'
-                ourColumns[18], ourColumns[19] = theirMaculaColumns[13], theirMaculaColumns[27]
-                theirMaculaLemma = theirMaculaColumns[18]
-                # print( f"{ourColumns[0]} {theirMaculaColumns[0]} {theirMaculaLemma=}" )
-                lemmaList.append( theirMaculaLemma )
-                if theirMaculaLemma:
-                    try: lemmaRowList.append( state.lemmaDict[theirMaculaLemma] ) # Save the lemma row number(s)
-                    except KeyError:
-                        lemmaRowList.append( '###MISSING-A1###' )
-                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 2:
-                            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"###MISSING-A1### {ourIndex=} {macIndex=} {ourLineStr=}" )
-                else:
-                    lemmaRowList.append( '###MISSING-B1###' )
-                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 2:
-                        dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"###MISSING-B1### {ourIndex=} {macIndex=} {ourLineStr=}" )
-                macIndex += 1
-                break # from inner dummy loop because we were successful
-            elif theirMaculaColumns[0].startswith( ourRef ): # their reference starts with our reference (coz they have a's and b's suffixes), then theirs is a morpheme that's part of our word
-                numConsecutiveMismatches = 0
-                role = nesting = ''
-                while 'm' in theirMaculaColumns[2]:
-                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Matched morpheme {ourRef} in {theirMaculaColumns[0]} {theirMaculaColumns[1]} {ourColumns[1]} {theirMaculaColumns[2]} {ourColumns[2]} R='{theirMaculaColumns[13]}' N='{theirMaculaColumns[27]}'")
-                    if 0: # disabled 2-25-01-10 after switching from LowFat to Nodes -- not totally sure of the implications
-                        assert not role or theirMaculaColumns[13]==role or ourRef.startswith( 'ECC_4:10' ), f"{ourRef}!={theirMaculaColumns[0]} {ourColumns[1]} vs {theirMaculaColumns[1]} {role=} vs {theirMaculaColumns[13]} " # TODO: dunno why ???
-                    # assert nesting is None or theirLine[27] == nesting
-                    # Above failed on
-                    #   morpheme GEN_1:2w1a 01LN3a  m 13,14,15 R='' N='cj2cjp'
-                    #   morpheme GEN_1:2w1b 01LN3b  m 13,14,15 R='' N='cj2cjp/s-v-o/s=detnp'
-                    role, nesting = theirMaculaColumns[13], theirMaculaColumns[27]
-                    theirMaculaLemma = theirMaculaColumns[18]
-                    # print( f"{ourColumns[0]} {theirMaculaColumns[0]} {theirMaculaLemma=}" )
-                    lemmaList.append( theirMaculaLemma )
-                    if theirMaculaLemma:
-                        try: lemmaRowList.append( state.lemmaDict[theirMaculaLemma] ) # Save the lemma row number(s)
-                        except KeyError:
-                            lemmaRowList.append( '###MISSING-A2###' )
-                            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 2:
-                                dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"###MISSING-A2### {ourIndex=} {macIndex=} {ourLineStr=}" )
-                    else:
-                        lemmaRowList.append( '###MISSING-B2###' )
-                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 2:
-                            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"###MISSING-B2### {ourIndex=} {macIndex=} {ourLineStr=}" )
-                    macIndex += 1
-                    theirMaculaColumns = state.macula_tsv_lines[macIndex] # Already in a list
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"Matched Morpheme {ourColumns[0]} in {theirMaculaColumns[0]} {theirMaculaColumns[1]} {ourColumns[1]} {theirMaculaColumns[2]} {ourColumns[2]} R='{theirMaculaColumns[13]}' N='{theirMaculaColumns[27]}'")
-                assert 'M' in theirMaculaColumns[2] # Might be 'AM'
-                if theirMaculaColumns[13] != role:
-                    role = f'{role}{theirMaculaColumns[13]}' # Append the different role onto the end
-                # assert theirLine[27] == nesting
-                # Above failed on
-                #   morpheme GEN_1:1w6a 01k5Pa  m 8,9 R='' N='pp-v-s-o/o=npanp/cj2cjp'
-                #   Morpheme GEN_1:1w6b 01k5Pb  M 8,9 R='' N='pp-v-s-o/o=npanp/cj2cjp/ompnp'
-                ourColumns[18], ourColumns[19] = role, nesting
-                theirMaculaLemma = theirMaculaColumns[18]
-                # print( f"{ourColumns[0]} {theirMaculaColumns[0]} {theirMaculaLemma=}" )
-                lemmaList.append( theirMaculaLemma )
-                if theirMaculaLemma:
-                    try: lemmaRowList.append( state.lemmaDict[theirMaculaLemma] ) # Save the lemma row number(s)
-                    except KeyError:
-                        lemmaRowList.append( '###MISSING-A3###' )
-                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 2:
-                            dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"###MISSING-A3### {ourIndex=} {macIndex=} {ourLineStr=}" )
-                else:
-                    lemmaRowList.append( '###MISSING-B3###' )
-                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 2:
-                        dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"###MISSING-B3### {ourIndex=} {macIndex=} {ourLineStr=}" )
-                macIndex += 1
-                break # from inner dummy loop because we were successful
-            else:
-                numConsecutiveMismatches += 1
-                if numConsecutiveMismatches > 25:
-                    logging.critical( f"Aborted around {ourColumns[0]} {theirMaculaColumns[0]}")
-                    break # Gen 39:9 after w7 missing has about 25 rows
-                ourBBB, ourCVW = ourColumns[0].split( '_', 1 )
-                theirMaculaBBB, theirMaculaCVW = theirMaculaColumns[0].split( '_', 1 )
-                less = more = False
-                # assert ourBBB == theirMaculaBBB, f"{ourBBB=} {theirMaculaBBB=} {lastBBB=}"
-                if ourBBB != theirMaculaBBB:
-                    if ourBBB != lastBBB: more = True
-                    else: assert False, "We want to stop here"
-                if not more or less:
-                    ourC, ourVW = ourCVW.split( ':', 1 )
-                    theirMaculaC, theirVW = theirMaculaCVW.split( ':', 1 )
-                    less = int(ourC) < int(theirMaculaC)
-                    more = int(ourC) > int(theirMaculaC)
-                if not more or less:
-                    ourV, ourW = ourVW.split( 'w', 1 )
-                    theirMaculaV, theirMaculaW = theirVW.split( 'w', 1 )
-                    less = int(ourV) < int(theirMaculaV)
-                    more = int(ourV) > int(theirMaculaV)
-                if not more or less:
-                    ourWint = int(ourW)
-                    try: theirMaculaWint = int(theirMaculaW)
-                    except ValueError: theirMaculaWint = int(theirMaculaW[:-1]) # Remove suffix
-                    less = ourWint < theirMaculaWint
-                    more = ourWint > theirMaculaWint
-                # NOTE: Can also happen with versification issues
-                # We currently get as far as DEU_22:16
-                if less: #ourColumns[0] < theirMaculaColumns[0]: # string comparison
-                    logging.critical( f"Missing word in Macula Hebrew??? {ourC}:{ourV}w{ourW}<{theirMaculaC}:{theirMaculaV}w{theirMaculaW} {dummyRange=} {numConsecutiveMismatches=}\n We have a mismatch ({numConsecutiveMismatches}) with \n  {ourIndex}: {ourLineStr}\n  {macIndex}: {theirMaculaColumns}")
-                    break # from inner dummy loop (which uses mIx but we haven't changed it)
-                elif more: # it might be the opposite
-                    logging.critical( f"Extra word in Macula Hebrew??? {ourC}:{ourV}w{ourW}>{theirMaculaC}:{theirMaculaV}w{theirMaculaW} {dummyRange=} {numConsecutiveMismatches=}\n We have a mismatch ({numConsecutiveMismatches}) with \n  {ourIndex}: {ourLineStr}\n  {macIndex}: {theirMaculaColumns}")
-                    macIndex += 1 # Advance 'their' row
-                else:
-                    print( f"Neither more nor less {ourC}:{ourV}w{ourW} vs {theirMaculaC}:{theirMaculaV}w{theirMaculaW} {dummyRange=} {numConsecutiveMismatches=}" )
-            lastBBB = ourBBB
-        if lemmaRowList:
-            # print( lemmaRowList )
-            ourColumns[4] = ','.join( lemmaRowList )
-            if ourColumns[4].count(',') != ourColumns[3].count(','):
-                logging.critical( f"LemmaRowList count doesn't match MorphemeRowList count at {ourColumns[0]} {lemmaList=} {ourColumns[3]=} {ourColumns[4]=}" )
-                # assert False, "We want to stop here"
-        state.newWordTable[ourIndex] = '\t'.join( ourColumns )
-        if macIndex >= len(state.macula_tsv_lines):
-            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 2:
-                dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"RanB out of Macula lines at {ourIndex}/{len(state.newWordTable)} {ourLineStr}" )
-            break # no more macula lines
-        if numConsecutiveMismatches > 34: # Gen 39:9 after w7 missing has about 25 rows, 1Sam 9:1, 20:2, 24:9 has about 30 rows
-            logging.critical( f"Aborted around {ourColumns[0]} {theirMaculaColumns[0]}")
-            raise ValueError( f"add_tags_to_OT_word_table.fill_extra_columns_and_remove_some() aborted matching around {ourColumns[0]} {theirMaculaColumns[0]}")
-            # break # from outer loop
+    # 2026-10-22: match complete words by validated native OSHB identities.
+    # Macula word numbers change after qere expansions (e.g. GEN 30:11).
+    ourRows = [dict(zip(ourHeaderColumns, line.split('\t'), strict=True))
+               for line in state.newWordTable[1:]]
+    maculaRows = [dict(zip(theirHeaderColumns, row, strict=True))
+                  for row in state.macula_tsv_lines[1:]]
+    matches = matched_word_groups(maculaRows, ourRows)
+    for index, parts in matches.items():
+        row = ourRows[index]
+        row['LemmaRowList'] = ','.join(state.lemmaDict.get(part['Lemma'], '###MISSING-A###')
+                                      if part['Lemma'] else '###MISSING-B###' for part in parts)
+        # Preserve the established rendering convention for a multi-part word.
+        role_part = parts[-2] if len(parts) > 1 else parts[0]
+        row['Role'], row['Nesting'] = role_part['Role'], role_part['Nesting']
+        if parts[-1]['Role'] != row['Role']:
+            row['Role'] += parts[-1]['Role']
+        state.newWordTable[index+1] = '\t'.join(row[k] for k in ourHeaderColumns)
+    unmatched = sum('w' in row['Ref'] for n,row in enumerate(ourRows) if n not in matches)
+    if unmatched:
+        logging.warning('Macula Hebrew: left metadata unassigned for %s words without '
+                        'a complete, unambiguous OSHB ID/spelling/morphology match', unmatched)
+    vPrint('Normal', DEBUGGING_THIS_MODULE, f'Filled metadata for {len(matches):,} validated Hebrew words.')
 
     # Remove the OSHBid and CantillationHierarchy columns
     assert 381_000 < len(state.newWordTable) < 382_000, f"{len(state.newWordTable)=}"

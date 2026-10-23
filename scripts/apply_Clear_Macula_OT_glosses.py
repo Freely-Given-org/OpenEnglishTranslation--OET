@@ -74,6 +74,8 @@ CHANGELOG:
     2026-09-04 Fix bug where M gloss got lost if only had morphemeGloss and no contextualMorphemeGloss
     2026-10-21 Recover missing word glosses from uniquely matched Macula words and explicit OSHB qere readings,
                     and prevent duplicated leannoth in Psalm 88:1
+    2026-10-22 Reorder complete subject phrases and transfer sentence capitalisation.
+    2026-10-22 Validate OSHB identities and replace next-row guesses with unique same-verse matches.
 """
 from gettext import gettext as _
 # from typing import Dict, List, Tuple
@@ -85,13 +87,15 @@ import unicodedata
 
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
+from hebrew_word_alignment import matched_morphemes
+from hebrew_gloss_order import reorder_subject_phrases
 from ot_gloss_fallbacks import fix_known_gloss_duplication, recover_missing_word_glosses
 
 
-LAST_MODIFIED_DATE = '2026-10-21' # by RJH
+LAST_MODIFIED_DATE = '2026-10-22' # by RJH
 SHORT_PROGRAM_NAME = "apply_Clear_Macula_OT_glosses"
 PROGRAM_NAME = "Apply Macula OT glosses"
-PROGRAM_VERSION = '0.75'
+PROGRAM_VERSION = '0.77'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -366,14 +370,15 @@ def fill_known_MaculaHebrew_English_contextual_glosses() -> bool:
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
         vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "\nFilling TSV table with Clear.Bible contextual English MaculaHebrew glosses…" )
 
-    # First make a dictionary to easily get to our WLC rows
-    WLC_dict = {row['OSHBid']:n for n,row in enumerate(state.WLC_morpheme_rows) if row['OSHBid'] and row['RowType'] not in ('seg','note')}
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-        dPrint('Info', DEBUGGING_THIS_MODULE, f"  {len(WLC_dict):,} entries in WLC dict")
+    matches = matched_morphemes(state.MaculaHebrew_morpheme_rows, state.WLC_morpheme_rows)
+    unassigned = len(state.MaculaHebrew_morpheme_rows) - len(matches)
+    if unassigned:
+        logging.warning('Macula Hebrew: %s morphemes have no verified OSHB match; '
+                        'leaving their gloss transfer unresolved', unassigned)
 
     num_empty_MaculaHebrew_word_glosses = num_word_glosses_added = num_word_glosses_skipped = num_contextual_word_glosses_added = 0
     num_empty_MaculaHebrew_morpheme_glosses = num_morpheme_glosses_added = num_morpheme_glosses_skipped = num_contextual_morpheme_glosses_added = 0
-    for MaculaHebrewRow in state.MaculaHebrew_morpheme_rows:
+    for macula_index, MaculaHebrewRow in enumerate(state.MaculaHebrew_morpheme_rows):
         if DEBUGGING_THIS_MODULE:
             print( f"{MaculaHebrewRow=}" )
             # if MaculaHebrewRow['FGRef'].startswith( 'GEN_13:11' ): missing_glosses_in_GEN_13_10
@@ -396,18 +401,10 @@ def fill_known_MaculaHebrew_English_contextual_glosses() -> bool:
             else: raise Exception("Unexpected MaculaHebrew type")
             continue
 
-        if MaculaHebrewRow['OSHBid']:
-            n = WLC_dict[MaculaHebrewRow['OSHBid']]
-            guessed = False
-        else:
-            # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Skipped low fat row without OSHBid: {MaculaHebrewRow['FGRef']} '{MaculaHebrewRow['WordOrMorpheme']}'")
-            n += 1 # Try the next row after the one using in the previous loop
-            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Next row is: {state.WLC_morpheme_rows[n]}")
-            if state.WLC_morpheme_rows[n]['NoCantillations'] != MaculaHebrewRow['WordOrMorpheme']:
-                logging.critical( f"Next row guess didn't match {MaculaHebrewRow['FGRef']} '{MaculaHebrewRow['WordOrMorpheme']}' '{state.WLC_morpheme_rows[n]['NoCantillations']}'" )
-                continue
-            guessed = True
+        if macula_index not in matches:
+            continue
+        n = matches[macula_index]
+        guessed = not MaculaHebrewRow['OSHBid']  # Verified unique same-verse fallback.
 
         WLC_morpheme_row = state.WLC_morpheme_rows[n]
         if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
@@ -495,10 +492,12 @@ def fill_known_MaculaHebrew_English_contextual_glosses() -> bool:
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Skipped {num_empty_MaculaHebrew_word_glosses:,} empty MaculaHebrew English word glosses." )
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Skipped {num_empty_MaculaHebrew_morpheme_glosses:,} empty MaculaHebrew English morpheme glosses." )
-    assert num_word_glosses_added > 80_000 # otherwise something stopped working
-    assert num_morpheme_glosses_added > 210_000 # otherwise something stopped working
-    assert num_contextual_word_glosses_added > 150_000 # otherwise something stopped working
-    assert num_contextual_morpheme_glosses_added > 20 # otherwise something stopped working
+    # These historical totals validate a full import, not an isolated passage.
+    if len(state.WLC_morpheme_rows) > 300_000:
+        assert num_word_glosses_added > 80_000 # otherwise something stopped working
+        assert num_morpheme_glosses_added > 210_000 # otherwise something stopped working
+        assert num_contextual_word_glosses_added > 150_000 # otherwise something stopped working
+        assert num_contextual_morpheme_glosses_added > 20 # otherwise something stopped working
     return num_word_glosses_added > 0
 # end of apply_Clear_Macula_OT_glosses.fill_known_MaculaHebrew_English_contextual_glosses
 
@@ -657,243 +656,12 @@ def do_yahs() -> bool:
 
 
 def do_auto_reordering() -> bool:
-    """
-    Reordering OT glosses to try to put subjects before their verbs, etc.
-    Does this by changing the GlossOrder fields in state.WLC_rows
-        but referring to information from state.MaculaHebrewRows.
-    """
-    # DEBUGGING_THIS_MODULE = 99
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "\nTrying to reorder WLC OT glosses…" )
-
-    # First make a dictionary to easily get to our MaculaHebrew rows
-    MaculaHebrew_morpheme_row_dict = {row['OSHBid']:n for n,row in enumerate(state.MaculaHebrew_morpheme_rows) if row['OSHBid']}
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 1:
-        dPrint('Quiet', DEBUGGING_THIS_MODULE, f"  {len(MaculaHebrew_morpheme_row_dict):,} entries in MaculaHebrew dict")
-
-    reorder_vn_count = reorder_von_count = reorder_vnn_count = reorder_vdn_count = 0
-    last4_WLC_morpheme_row = state.WLC_morpheme_rows[0] # in
-    last3_WLC_morpheme_row = state.WLC_morpheme_rows[1] # beginning
-    last2_WLC_morpheme_row = state.WLC_morpheme_rows[2] # he_created
-    last1_WLC_morpheme_row = state.WLC_morpheme_rows[3] # Elohim
-    # Manually put subject Elohim before he_created before we start the loop from the next morpheme
-    last2_WLC_morpheme_row['GlossOrder'], last1_WLC_morpheme_row['GlossOrder'] = last1_WLC_morpheme_row['GlossOrder'], last2_WLC_morpheme_row['GlossOrder']
-    print( f"{last4_WLC_morpheme_row=}\n{last3_WLC_morpheme_row=}\n{last2_WLC_morpheme_row=}\n{last1_WLC_morpheme_row=}" )
-
-    for this__WLC_morpheme_row in state.WLC_morpheme_rows[4:]: # these 'rows' are dictionaries
-        # print( f"\n{this__WLC_morpheme_row=}" )
-        # if WLC_morpheme_row['Ref'].startswith( 'GEN_30:1w1'):
-        #     print( "Stopping there" ); break
-
-        if this__WLC_morpheme_row['OSHBid']:
-            try: MH_index = MaculaHebrew_morpheme_row_dict[this__WLC_morpheme_row['OSHBid']]
-            except KeyError:
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Skipped MaculaHebrew row without OSHBid: {this__WLC_morpheme_row['Ref']} {this__WLC_morpheme_row['OSHBid']}")
-                last4_WLC_morpheme_row = last3_WLC_morpheme_row
-                last3_WLC_morpheme_row = last2_WLC_morpheme_row
-                last2_WLC_morpheme_row = last1_WLC_morpheme_row
-                last1_WLC_morpheme_row = this__WLC_morpheme_row
-                continue
-        else:
-            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 5:
-                dPrint( 'Never', DEBUGGING_THIS_MODULE, f"  Skipped WLC row without OSHBid: {this__WLC_morpheme_row['Ref']}")
-            assert this__WLC_morpheme_row['RowType']=='seg' or 'note' in this__WLC_morpheme_row['RowType']
-            last4_WLC_morpheme_row = last3_WLC_morpheme_row
-            last3_WLC_morpheme_row = last2_WLC_morpheme_row
-            last2_WLC_morpheme_row = last1_WLC_morpheme_row
-            last1_WLC_morpheme_row = this__WLC_morpheme_row
-            continue
-
-        last4_MaculaHebrew_morpheme_row = state.MaculaHebrew_morpheme_rows[MH_index-4]
-        last3_MaculaHebrew_morpheme_row = state.MaculaHebrew_morpheme_rows[MH_index-3]
-        last2_MaculaHebrew_morpheme_row = state.MaculaHebrew_morpheme_rows[MH_index-2]
-        last1_MaculaHebrew_morpheme_row = state.MaculaHebrew_morpheme_rows[MH_index-1]
-        MaculaHebrew_morpheme_row = state.MaculaHebrew_morpheme_rows[MH_index]
-
-        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    lastMH4 {last4_MaculaHebrew_morpheme_row['FGRef']}\t{last4_MaculaHebrew_morpheme_row['RowType']}  {last4_MaculaHebrew_morpheme_row['EnglishGloss']}\twC={last4_MaculaHebrew_morpheme_row['WordClass']}\tPoS={last4_MaculaHebrew_morpheme_row['PartOfSpeech']}\twT={last4_MaculaHebrew_morpheme_row['WordType']}\t{last4_MaculaHebrew_morpheme_row['Nesting']}" )
-        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    lastMH3 {last3_MaculaHebrew_morpheme_row['FGRef']}\t{last3_MaculaHebrew_morpheme_row['RowType']}  {last3_MaculaHebrew_morpheme_row['EnglishGloss']}\twC={last3_MaculaHebrew_morpheme_row['WordClass']}\tPoS={last3_MaculaHebrew_morpheme_row['PartOfSpeech']}\twT={last3_MaculaHebrew_morpheme_row['WordType']}\t{last3_MaculaHebrew_morpheme_row['Nesting']}" )
-        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    lastMH2 {last2_MaculaHebrew_morpheme_row['FGRef']}\t{last2_MaculaHebrew_morpheme_row['RowType']}  {last2_MaculaHebrew_morpheme_row['EnglishGloss']}\twC={last2_MaculaHebrew_morpheme_row['WordClass']}\tPoS={last2_MaculaHebrew_morpheme_row['PartOfSpeech']}\twT={last2_MaculaHebrew_morpheme_row['WordType']}\t{last2_MaculaHebrew_morpheme_row['Nesting']}" )
-        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    lastMH1 {last1_MaculaHebrew_morpheme_row['FGRef']}\t{last1_MaculaHebrew_morpheme_row['RowType']}  {last1_MaculaHebrew_morpheme_row['EnglishGloss']}\twC={last1_MaculaHebrew_morpheme_row['WordClass']}\tPoS={last1_MaculaHebrew_morpheme_row['PartOfSpeech']}\twT={last1_MaculaHebrew_morpheme_row['WordType']}\t{last1_MaculaHebrew_morpheme_row['Nesting']}" )
-        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"    M_H_Row {MaculaHebrew_morpheme_row['FGRef']}\t{MaculaHebrew_morpheme_row['RowType']}  {MaculaHebrew_morpheme_row['EnglishGloss']}\twC={MaculaHebrew_morpheme_row['WordClass']}\tPoS={MaculaHebrew_morpheme_row['PartOfSpeech']}\twT={MaculaHebrew_morpheme_row['WordType']}\t{MaculaHebrew_morpheme_row['Nesting']}" )
-
-        if MaculaHebrew_morpheme_row['PartOfSpeech']=='n' and MaculaHebrew_morpheme_row['Nesting'].split('/')[-1]=='N2NP': # Subject is single noun
-            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"\n  Have a simple noun subject: {MaculaHebrew_morpheme_row['FGRef']} {MaculaHebrew_morpheme_row['RowType']} '{MaculaHebrew_morpheme_row['WordClass']}' {MaculaHebrew_morpheme_row['PartOfSpeech']} '{MaculaHebrew_morpheme_row['EnglishGloss']}'" )
-
-            # Look for verb followed by subject
-            if ( '/' in last1_MaculaHebrew_morpheme_row['Nesting'] and 'V-S' in last1_MaculaHebrew_morpheme_row['Nesting'].split('/')[0]
-            and last1_MaculaHebrew_morpheme_row['PartOfSpeech']=='v'
-            and last1_MaculaHebrew_morpheme_row['Nesting'].split('/')[-1] == 'V2VP' ): # Verb is a single word
-                # Possibly have a verb followed by its subject (first one is Gen 1:3 'and=he_said Elohim')
-                if last1_MaculaHebrew_morpheme_row['EnglishGloss'] in ('be','was','there_was'):
-                    continue # skip these
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      {last1_MaculaHebrew_morpheme_row['FGRef']}\t{last1_MaculaHebrew_morpheme_row['RowType']}\t{last1_MaculaHebrew_morpheme_row['EnglishGloss']}\t{last1_MaculaHebrew_morpheme_row['WordClass']}\t{last1_MaculaHebrew_morpheme_row['PartOfSpeech']}\t{last1_MaculaHebrew_morpheme_row['Nesting']}" )
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      {MaculaHebrew_morpheme_row['FGRef']}\t{MaculaHebrew_morpheme_row['RowType']}\t{MaculaHebrew_morpheme_row['EnglishGloss']}\t{MaculaHebrew_morpheme_row['WordClass']}\t{MaculaHebrew_morpheme_row['PartOfSpeech']}\t{MaculaHebrew_morpheme_row['Nesting']}" )
-                # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  {last1_WLC_morpheme_row['Ref']}\t{last1_WLC_morpheme_row['GlossOrder']}")
-                # dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  {WLC_morpheme_row['Ref']}\t{WLC_morpheme_row['GlossOrder']}")
-                if int(last1_WLC_morpheme_row['GlossOrder']) < int(this__WLC_morpheme_row['GlossOrder']):
-                    print( f"{last2_WLC_morpheme_row=}\n{last1_WLC_morpheme_row=}\n{this__WLC_morpheme_row=}" )
-                    if 'w' in last1_WLC_morpheme_row['RowType']: # a word -- can be 'w', 'wK', 'Aw'
-                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    Let's swap the v-s order for this word {this__WLC_morpheme_row['Ref'].split('w')[0]} '{last1_WLC_morpheme_row['WordGloss']}' '{this__WLC_morpheme_row['WordGloss']}'")
-                        last1_WLC_morpheme_row['GlossOrder'], this__WLC_morpheme_row['GlossOrder'] = this__WLC_morpheme_row['GlossOrder'], last1_WLC_morpheme_row['GlossOrder']
-                        reorder_vn_count += 1
-                    elif 'M' in last1_WLC_morpheme_row['RowType'] and 'm' in last2_WLC_morpheme_row['RowType'] and 'm' not in last3_WLC_morpheme_row['RowType']: # a final morpheme preceded by another morpheme
-                        # it's more complicated because it has to go into the middle of two morphemes so we have to use GlossInsert
-                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    Let's swap the v-s order for these two morphemes {this__WLC_morpheme_row['Ref'].split('w')[0]} '{last2_WLC_morpheme_row['WordGloss']}' '{last1_WLC_morpheme_row['WordGloss']}' '{this__WLC_morpheme_row['WordGloss']}'")
-                        last2_WLC_morpheme_row['GlossOrder'], last1_WLC_morpheme_row['GlossOrder'], this__WLC_morpheme_row['GlossOrder'] = last1_WLC_morpheme_row['GlossOrder'], this__WLC_morpheme_row['GlossOrder'], last2_WLC_morpheme_row['GlossOrder']
-                        this__WLC_morpheme_row['GlossInsert'] = '_'
-                        reorder_vn_count += 1
-                    elif 'M' in last1_WLC_morpheme_row['RowType'] and 'm' in last2_WLC_morpheme_row['RowType'] and 'm' in last3_WLC_morpheme_row['RowType'] and 'm' not in last4_WLC_morpheme_row['RowType']: # a final morpheme preceded by another two morphemes
-                        # it's more complicated because it has to go into the middle of three morphemes so we have to use GlossInsert
-                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    Let's swap the v-s order for these three morphemes {this__WLC_morpheme_row['Ref'].split('w')[0]} '{last3_WLC_morpheme_row['WordGloss']}' '{last2_WLC_morpheme_row['WordGloss']}' '{last1_WLC_morpheme_row['WordGloss']}' '{this__WLC_morpheme_row['WordGloss']}'")
-                        last3_WLC_morpheme_row['GlossOrder'], last2_WLC_morpheme_row['GlossOrder'], last1_WLC_morpheme_row['GlossOrder'], this__WLC_morpheme_row['GlossOrder'] = last2_WLC_morpheme_row['GlossOrder'], last1_WLC_morpheme_row['GlossOrder'], this__WLC_morpheme_row['GlossOrder'], last3_WLC_morpheme_row['GlossOrder']
-                        this__WLC_morpheme_row['GlossInsert'] = '_'
-                        reorder_vn_count += 1 # Num 5:22, Josh 8:2, 2Ch 12:7
-                    else:
-                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{last2_WLC_morpheme_row['Ref']} rT={last2_WLC_morpheme_row['RowType']} wOrM={last2_WLC_morpheme_row['WordOrMorpheme']} mG={last2_WLC_morpheme_row['MorphemeGloss']}")
-                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{last1_WLC_morpheme_row['Ref']} rT={last1_WLC_morpheme_row['RowType']} wOrM={last1_WLC_morpheme_row['WordOrMorpheme']} mG={last1_WLC_morpheme_row['MorphemeGloss']}")
-                        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                            dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{this__WLC_morpheme_row['Ref']} rT={this__WLC_morpheme_row['RowType']} wOrM={this__WLC_morpheme_row['WordOrMorpheme']} mG={this__WLC_morpheme_row['MorphemeGloss']}")
-                        print( "Seems we can't put subject before verb!!!" )
-                        # assert False, "We want to stop here" # Jer 6:29
-                    if this__WLC_morpheme_row['Ref'].startswith( 'JOS_8:2w' ): assert False, "We want to stop here"
-
-            # Look for verb followed by DOM and direct object then subject
-            if ( last2_MaculaHebrew_morpheme_row['WordClass']=='om' and last2_MaculaHebrew_morpheme_row['PartOfSpeech']=='part'
-                and '/' in last2_MaculaHebrew_morpheme_row['Nesting'] and 'V-O-S' in last2_MaculaHebrew_morpheme_row['Nesting'].split('/')[0]
-            and last3_MaculaHebrew_morpheme_row['Nesting'].split('/')[-1] == 'V2VP' ): # Verb is a single word
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      {last3_MaculaHebrew_morpheme_row['FGRef']}\t{last3_MaculaHebrew_morpheme_row['RowType']}\t{last3_MaculaHebrew_morpheme_row['EnglishGloss']}\t{last3_MaculaHebrew_morpheme_row['WordClass']}\t{last3_MaculaHebrew_morpheme_row['PartOfSpeech']}\t{last3_MaculaHebrew_morpheme_row['Nesting']}" )
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      {last2_MaculaHebrew_morpheme_row['FGRef']}\t{last2_MaculaHebrew_morpheme_row['RowType']}\t{last2_MaculaHebrew_morpheme_row['EnglishGloss']}\t{last2_MaculaHebrew_morpheme_row['WordClass']}\t{last2_MaculaHebrew_morpheme_row['PartOfSpeech']}\t{last2_MaculaHebrew_morpheme_row['Nesting']}" )
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      {last1_MaculaHebrew_morpheme_row['FGRef']}\t{last1_MaculaHebrew_morpheme_row['RowType']}\t{last1_MaculaHebrew_morpheme_row['EnglishGloss']}\t{last1_MaculaHebrew_morpheme_row['WordClass']}\t{last1_MaculaHebrew_morpheme_row['PartOfSpeech']}\t{last1_MaculaHebrew_morpheme_row['Nesting']}" )
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      {MaculaHebrew_morpheme_row['FGRef']}\t{MaculaHebrew_morpheme_row['RowType']}\t{MaculaHebrew_morpheme_row['EnglishGloss']}\t{MaculaHebrew_morpheme_row['WordClass']}\t{MaculaHebrew_morpheme_row['PartOfSpeech']}\t{MaculaHebrew_morpheme_row['Nesting']}" )
-                if int(last3_WLC_morpheme_row['GlossOrder']) < int(last2_WLC_morpheme_row['GlossOrder']) < int(last1_WLC_morpheme_row['GlossOrder']) < int(this__WLC_morpheme_row['GlossOrder']):
-                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    Let's swap the v-o-s order for {this__WLC_morpheme_row['Ref'].split('w')[0]} '{last3_WLC_morpheme_row['WordGloss']}' '{this__WLC_morpheme_row['WordGloss']}'")
-                    last3_WLC_morpheme_row['GlossOrder'], last2_WLC_morpheme_row['GlossOrder'], last1_WLC_morpheme_row['GlossOrder'], this__WLC_morpheme_row['GlossOrder'] = \
-                        last2_WLC_morpheme_row['GlossOrder'], last1_WLC_morpheme_row['GlossOrder'], this__WLC_morpheme_row['GlossOrder'], last3_WLC_morpheme_row['GlossOrder']
-                    reorder_von_count += 1
-                    if this__WLC_morpheme_row['Ref'].startswith( 'JOS_8:2w' ): assert False, "We want to stop here"
-
-        elif ( MaculaHebrew_morpheme_row['PartOfSpeech']=='n' and MaculaHebrew_morpheme_row['Nesting'].split('/')[-1] in ('N2NP','DetNP')
-        and last1_MaculaHebrew_morpheme_row['WordClass']=='art' and 'DetNP' in last1_MaculaHebrew_morpheme_row['Nesting'] # Subject is determiner noun phrase
-        and 'DetNP' not in state.MaculaHebrew_morpheme_rows[MH_index+1]['Nesting'] ): # But not a triple one
-            everywhere
-            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"\n  Have a determiner noun subject: {MaculaHebrew_morpheme_row['FGRef']} {MaculaHebrew_morpheme_row['RowType']} '{MaculaHebrew_morpheme_row['WordClass']}' {MaculaHebrew_morpheme_row['PartOfSpeech']} '{last1_MaculaHebrew_morpheme_row['EnglishGloss']} {MaculaHebrew_morpheme_row['EnglishGloss']}'" )
-
-            # Look for verb followed by subject
-            if ( '/' in last2_MaculaHebrew_morpheme_row['Nesting'] and 'V-S' in last2_MaculaHebrew_morpheme_row['Nesting'].split('/')[0]
-            and last2_MaculaHebrew_morpheme_row['PartOfSpeech']=='v'
-            and last2_MaculaHebrew_morpheme_row['Nesting'].split('/')[-1] == 'V2VP' ): # Verb is a single word
-                again
-                # Possibly have a verb followed by its subject
-                # if last2_MaculaHebrew_row['EnglishGloss'] in ('be','was','there_was'):
-                #     continue # skip these
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      {last2_MaculaHebrew_morpheme_row['FGRef']}\t{last2_MaculaHebrew_morpheme_row['RowType']}\t{last2_MaculaHebrew_morpheme_row['EnglishGloss']}\t{last2_MaculaHebrew_morpheme_row['WordClass']}\t{last2_MaculaHebrew_morpheme_row['PartOfSpeech']}\t{last2_MaculaHebrew_morpheme_row['Nesting']}" )
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      {last1_MaculaHebrew_morpheme_row['FGRef']}\t{last1_MaculaHebrew_morpheme_row['RowType']}\t{last1_MaculaHebrew_morpheme_row['EnglishGloss']}\t{last1_MaculaHebrew_morpheme_row['WordClass']}\t{last1_MaculaHebrew_morpheme_row['PartOfSpeech']}\t{last1_MaculaHebrew_morpheme_row['Nesting']}" )
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      {MaculaHebrew_morpheme_row['FGRef']}\t{MaculaHebrew_morpheme_row['RowType']}\t{MaculaHebrew_morpheme_row['EnglishGloss']}\t{MaculaHebrew_morpheme_row['WordClass']}\t{MaculaHebrew_morpheme_row['PartOfSpeech']}\t{MaculaHebrew_morpheme_row['Nesting']}" )
-                if int(last2_WLC_morpheme_row['GlossOrder']) < int(last1_WLC_morpheme_row['GlossOrder']) < int(this__WLC_morpheme_row['GlossOrder']):
-                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    Let's swap the v-s order for {this__WLC_morpheme_row['Ref'].split('w')[0]} '{last2_WLC_morpheme_row['WordGloss']} {last1_WLC_morpheme_row['WordGloss']}' '{this__WLC_morpheme_row['WordGloss']}'")
-                    last2_WLC_morpheme_row['GlossOrder'], last1_WLC_morpheme_row['GlossOrder'], this__WLC_morpheme_row['GlossOrder'] = this__WLC_morpheme_row['GlossOrder'], last2_WLC_morpheme_row['GlossOrder'], last1_WLC_morpheme_row['GlossOrder']
-                    reorder_vdn_count += 1
-
-            # # Look for verb followed by DOM and direct object then subject
-            # if ( last2_MaculaHebrew_row['WordClass']=='om' and last2_MaculaHebrew_row['PartOfSpeech']=='part'
-            #     and '/' in last2_MaculaHebrew_row['Nesting'] and 'v-o-s' in last2_MaculaHebrew_row['Nesting'].split('/')[-2]
-            # and last3_MaculaHebrew_row['Nesting'].split('/')[-1] == 'v=v2vp' ): # Verb is a single word
-            #     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      {last3_MaculaHebrew_row['FGRef']}\t{last3_MaculaHebrew_row['RowType']}\t{last3_MaculaHebrew_row['EnglishGloss']}\t{last3_MaculaHebrew_row['WordClass']}\t{last3_MaculaHebrew_row['PartOfSpeech']}\t{last3_MaculaHebrew_row['Nesting']}" )
-            #     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      {last2_MaculaHebrew_row['FGRef']}\t{last2_MaculaHebrew_row['RowType']}\t{last2_MaculaHebrew_row['EnglishGloss']}\t{last2_MaculaHebrew_row['WordClass']}\t{last2_MaculaHebrew_row['PartOfSpeech']}\t{last2_MaculaHebrew_row['Nesting']}" )
-            #     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      {last1_MaculaHebrew_row['FGRef']}\t{last1_MaculaHebrew_row['RowType']}\t{last1_MaculaHebrew_row['EnglishGloss']}\t{last1_MaculaHebrew_row['WordClass']}\t{last1_MaculaHebrew_row['PartOfSpeech']}\t{last1_MaculaHebrew_row['Nesting']}" )
-            #     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      {MaculaHebrew_row['FGRef']}\t{MaculaHebrew_row['RowType']}\t{MaculaHebrew_row['EnglishGloss']}\t{MaculaHebrew_row['WordClass']}\t{MaculaHebrew_row['PartOfSpeech']}\t{MaculaHebrew_row['Nesting']}" )
-            #     if int(last3_WLC_row['GlossOrder']) < int(WLC_morpheme_row['GlossOrder']):
-            #         dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    Let's swap the v-o-s order for {WLC_morpheme_row['Ref'].split('w')[0]} '{last3_WLC_row['WordGloss']}' '{WLC_morpheme_row['WordGloss']}'")
-            #         last3_WLC_row['GlossOrder'], last2_WLC_row['GlossOrder'], last1_WLC_row['GlossOrder'], WLC_morpheme_row['GlossOrder'] = \
-            #             last2_WLC_row['GlossOrder'], last1_WLC_row['GlossOrder'], WLC_morpheme_row['GlossOrder'], last3_WLC_row['GlossOrder']
-            #         reorder_count += 1
-
-        elif ( MaculaHebrew_morpheme_row['PartOfSpeech']=='n' and 'Np-Appos' in MaculaHebrew_morpheme_row['Nesting']
-        and last1_MaculaHebrew_morpheme_row['PartOfSpeech']=='n' and 'Np-Appos' in last1_MaculaHebrew_morpheme_row['Nesting'] # Subject is double noun
-        and 'Np-Appos' not in state.MaculaHebrew_morpheme_rows[MH_index+1]['Nesting'] ): # But not a triple one
-            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                dPrint( 'Info', DEBUGGING_THIS_MODULE, f"\n  Have a double noun subject: {MaculaHebrew_morpheme_row['FGRef']} {MaculaHebrew_morpheme_row['RowType']} '{MaculaHebrew_morpheme_row['WordClass']}' {MaculaHebrew_morpheme_row['PartOfSpeech']} '{last1_MaculaHebrew_morpheme_row['EnglishGloss']} {MaculaHebrew_morpheme_row['EnglishGloss']}'" )
-
-            # Look for verb followed by subject
-            if ( '/' in last2_MaculaHebrew_morpheme_row['Nesting'] and 'V-S' in last2_MaculaHebrew_morpheme_row['Nesting'].split('/')[0]
-            and last2_MaculaHebrew_morpheme_row['PartOfSpeech']=='v'
-            and last2_MaculaHebrew_morpheme_row['Nesting'].split('/')[-1] == 'V2VP' ): # Verb is a single word
-                # Possibly have a verb followed by its subject
-                doubleN_VS
-                if last2_MaculaHebrew_morpheme_row['EnglishGloss'] in ('be','was','there_was'):
-                    continue # skip these
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      {last2_MaculaHebrew_morpheme_row['FGRef']}\t{last2_MaculaHebrew_morpheme_row['RowType']}\t{last2_MaculaHebrew_morpheme_row['EnglishGloss']}\t{last2_MaculaHebrew_morpheme_row['WordClass']}\t{last2_MaculaHebrew_morpheme_row['PartOfSpeech']}\t{last2_MaculaHebrew_morpheme_row['Nesting']}" )
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      {last1_MaculaHebrew_morpheme_row['FGRef']}\t{last1_MaculaHebrew_morpheme_row['RowType']}\t{last1_MaculaHebrew_morpheme_row['EnglishGloss']}\t{last1_MaculaHebrew_morpheme_row['WordClass']}\t{last1_MaculaHebrew_morpheme_row['PartOfSpeech']}\t{last1_MaculaHebrew_morpheme_row['Nesting']}" )
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      {MaculaHebrew_morpheme_row['FGRef']}\t{MaculaHebrew_morpheme_row['RowType']}\t{MaculaHebrew_morpheme_row['EnglishGloss']}\t{MaculaHebrew_morpheme_row['WordClass']}\t{MaculaHebrew_morpheme_row['PartOfSpeech']}\t{MaculaHebrew_morpheme_row['Nesting']}" )
-                if int(last2_WLC_morpheme_row['GlossOrder']) < int(last1_WLC_morpheme_row['GlossOrder']) < int(this__WLC_morpheme_row['GlossOrder']):
-                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                        dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    Let's swap the v-s order for {this__WLC_morpheme_row['Ref'].split('w')[0]} '{last2_WLC_morpheme_row['WordGloss']} {last1_WLC_morpheme_row['WordGloss']}' '{this__WLC_morpheme_row['WordGloss']}'")
-                    last2_WLC_morpheme_row['GlossOrder'], last1_WLC_morpheme_row['GlossOrder'], this__WLC_morpheme_row['GlossOrder'] = this__WLC_morpheme_row['GlossOrder'], last2_WLC_morpheme_row['GlossOrder'], last1_WLC_morpheme_row['GlossOrder']
-                    reorder_vnn_count += 1
-
-            # # Look for verb followed by DOM and direct object then subject
-            # if ( last2_MaculaHebrew_row['WordClass']=='om' and last2_MaculaHebrew_row['PartOfSpeech']=='part'
-            #     and '/' in last2_MaculaHebrew_row['Nesting'] and 'v-o-s' in last2_MaculaHebrew_row['Nesting'].split('/')[-2]
-            # and last3_MaculaHebrew_row['Nesting'].split('/')[-1] == 'v=v2vp' ): # Verb is a single word
-            #     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      {last3_MaculaHebrew_row['FGRef']}\t{last3_MaculaHebrew_row['RowType']}\t{last3_MaculaHebrew_row['EnglishGloss']}\t{last3_MaculaHebrew_row['WordClass']}\t{last3_MaculaHebrew_row['PartOfSpeech']}\t{last3_MaculaHebrew_row['Nesting']}" )
-            #     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      {last2_MaculaHebrew_row['FGRef']}\t{last2_MaculaHebrew_row['RowType']}\t{last2_MaculaHebrew_row['EnglishGloss']}\t{last2_MaculaHebrew_row['WordClass']}\t{last2_MaculaHebrew_row['PartOfSpeech']}\t{last2_MaculaHebrew_row['Nesting']}" )
-            #     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      {last1_MaculaHebrew_row['FGRef']}\t{last1_MaculaHebrew_row['RowType']}\t{last1_MaculaHebrew_row['EnglishGloss']}\t{last1_MaculaHebrew_row['WordClass']}\t{last1_MaculaHebrew_row['PartOfSpeech']}\t{last1_MaculaHebrew_row['Nesting']}" )
-            #     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"      {MaculaHebrew_row['FGRef']}\t{MaculaHebrew_row['RowType']}\t{MaculaHebrew_row['EnglishGloss']}\t{MaculaHebrew_row['WordClass']}\t{MaculaHebrew_row['PartOfSpeech']}\t{MaculaHebrew_row['Nesting']}" )
-            #     if int(last3_WLC_row['GlossOrder']) < int(WLC_morpheme_row['GlossOrder']):
-            #         dPrint( 'Info', DEBUGGING_THIS_MODULE, f"    Let's swap the v-o-s order for {WLC_morpheme_row['Ref'].split('w')[0]} '{last3_WLC_row['WordGloss']}' '{WLC_morpheme_row['WordGloss']}'")
-            #         last3_WLC_row['GlossOrder'], last2_WLC_row['GlossOrder'], last1_WLC_row['GlossOrder'], WLC_morpheme_row['GlossOrder'] = \
-            #             last2_WLC_row['GlossOrder'], last1_WLC_row['GlossOrder'], WLC_morpheme_row['GlossOrder'], last3_WLC_row['GlossOrder']
-            #         reorder_count += 1
-
-        # Processing at end of each loop
-        last4_WLC_morpheme_row = last3_WLC_morpheme_row
-        last3_WLC_morpheme_row = last2_WLC_morpheme_row
-        last2_WLC_morpheme_row = last1_WLC_morpheme_row
-        last1_WLC_morpheme_row = this__WLC_morpheme_row
-
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Reordered {reorder_vn_count:,} single-noun v-s pairs." )
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Reordered {reorder_vdn_count:,} determiner-noun v-s sets." )
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Reordered {reorder_von_count:,} single-noun v-o-s pairs." )
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"    Reordered {reorder_vnn_count:,} double-noun v-s sets." )
-    assert reorder_vn_count > 7_000 # Otherwise something has gone wrong
-    # assert reorder_vdn_count > 0 # Otherwise something isn't working
-    assert reorder_von_count > 60 # Otherwise something has gone wrong
-    # assert reorder_vnn_count > 0 # Otherwise something isn't working
-    total_count = reorder_vn_count + reorder_von_count + reorder_vnn_count + reorder_vdn_count
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"  Reordered {total_count:,} total sets." )
-
+    """Put complete, aligned Macula subject phrases before their verbs."""
+    vPrint('Quiet', DEBUGGING_THIS_MODULE, "\nTrying to reorder WLC OT glosses…")
+    counts = reorder_subject_phrases(state.WLC_morpheme_rows, state.MaculaHebrew_morpheme_rows)
+    vPrint('Normal', DEBUGGING_THIS_MODULE,
+           f"    Reordered {counts['VS']:,} V-S and {counts['VOS']:,} V-O-S clauses"
+           f" ({counts['multiword_subjects']:,} with multiword subjects).")
     return True
 # end of apply_Clear_Macula_OT_glosses.do_auto_reordering
 
@@ -1056,7 +824,7 @@ def save_filled_word_TSV_file() -> bool:
 
         num_data_rows_written = 0
         morpheme_row_list, morpheme_strongs_list, morpheme_morphology_list, morpheme_list, morpheme_noCantillations_list, morpheme_glosses_list, contextual_morpheme_glosses_list = [], [], [], [], [], [], []
-        morpheme_gloss_capitalisation = ''
+        morpheme_gloss_capitalisation = morpheme_gloss_insert = ''
         ref = OSHB_id = morpheme_cantillation_hierarchy = morpheme_gloss_order = None
         for n,original_column_dict in enumerate( state.WLC_morpheme_rows, start=1 ):
             # print( f"{n} {original_column_dict}" )
@@ -1112,6 +880,9 @@ def save_filled_word_TSV_file() -> bool:
                     assert morpheme_cantillation_hierarchy == original_column_dict['CantillationHierarchy']
                 for column_name in ('WordGloss','ContextualWordGloss','GlossPunctuation'):
                     assert not original_column_dict[column_name], f"{n} {column_name=} {original_column_dict[column_name]=}"
+                if original_column_dict['GlossInsert']:
+                    assert not morpheme_gloss_insert
+                    morpheme_gloss_insert = original_column_dict['GlossInsert']
                 if original_column_dict['GlossCapitalisation']:
                     assert not morpheme_gloss_capitalisation
                     morpheme_gloss_capitalisation = original_column_dict['GlossCapitalisation']
@@ -1146,6 +917,7 @@ def save_filled_word_TSV_file() -> bool:
                                         else ','.join(morpheme_glosses_list) if new_header=='MorphemeGlosses'
                                         else (','.join(contextual_morpheme_glosses_list) if any(contextual_morpheme_glosses_list) else '') if new_header=='ContextualMorphemeGlosses' # Don't just put commas in if all empty strings
                                         else morpheme_gloss_capitalisation if new_header=='GlossCapitalisation'
+                                        else morpheme_gloss_insert if new_header=='GlossInsert'
                                         else morpheme_gloss_order if new_header=='GlossOrder'
                                         else original_column_dict['WordOrMorpheme' if new_header=='Word' else new_header]
                                         )
@@ -1163,7 +935,7 @@ def save_filled_word_TSV_file() -> bool:
                     assert word_entry['GlossOrder'] not in verse_gloss_order_list, f"Duplicate {word_entry['GlossOrder']=} in {word_entry=}"
                     verse_gloss_order_list.append( word_entry['GlossOrder'] )
                 morpheme_row_list, morpheme_strongs_list, morpheme_morphology_list, morpheme_list, morpheme_noCantillations_list, morpheme_glosses_list, contextual_morpheme_glosses_list = [], [], [], [], [], [], []
-                morpheme_gloss_capitalisation = ''
+                morpheme_gloss_capitalisation = morpheme_gloss_insert = ''
                 ref = OSHB_id = morpheme_cantillation_hierarchy = morpheme_gloss_order = None
             elif original_column_dict['RowType'] in ('seg','note','variant note','alternative note','exegesis note'):
                 assert not original_column_dict['OSHBid']

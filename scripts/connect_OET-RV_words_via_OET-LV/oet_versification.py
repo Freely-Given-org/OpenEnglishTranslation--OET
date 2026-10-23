@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: MPL-2.0
-"""Resolve complete RV (eng) passages to LV (org) text through BibleOrgSys.
+"""Resolve complete RV passages to LV text through BibleOrgSys.
 
 The matcher writes using *printed RV* addresses and character offsets. BOS
 alone converts scripture addresses. A stored RV bridge is one matching unit;

@@ -35,6 +35,7 @@ CHANGELOG:
     2025-12-24 Fix Hebrew singular pronouns glosses as plurals in 'English' field
     2026-03-19 Did the minimum to get the updated Macula Hebrew files to load
     2026-05-08 Upgraded to bos_books_codes_py
+    2026-10-22 Align complete Hebrew words within native verses before assigning OSHB IDs.
 """
 from gettext import gettext as _
 # from typing import Dict, List, Tuple
@@ -52,13 +53,14 @@ from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.OriginalLanguages import Hebrew
 import bos_books_codes_py
+from hebrew_word_alignment import align_morphemes_by_verse
 from bible_transliterations import transliterate_Hebrew
 
 
-LAST_MODIFIED_DATE = '2026-10-06' # by RJH
+LAST_MODIFIED_DATE = '2026-10-22' # by RJH
 SHORT_PROGRAM_NAME = "convert_ClearMaculaOT_to_our_TSV"
 PROGRAM_NAME = "Extract and Apply Macula OT glosses"
-PROGRAM_VERSION = '0.60'
+PROGRAM_VERSION = '0.61'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -1483,112 +1485,14 @@ def removeHebrewCantillationMarks( text:str, removeMetegOrSiluq=False ) -> str:
 
 
 def MacHeb_add_OSHB_ids() -> bool:
-    """
-    The Clear.Bible data doesn't use the 5-character OSHB id fields
-        (which we augment to 6-characters).
-
-    So match the entries and add them in.
-    """
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, "\nMatching rows in both tables to add OSHB ids for LF…" )
-
-    our_WLC_dict = {row['Ref']:(row['RowType'].endswith('K'),row['NoCantillations'],row['Morphology'],row['OSHBid']) for row in state.our_WLC_rows} # We include the morphology for extra checking
-    if DEBUGGING_THIS_MODULE:
-        testVerseRef = 'GEN_26:33'
-        print( "\nOur WLC rows:" )
-        print( " Ref\t\tOSHBid\tRowType\tWrd/Mrph\tMorph\tMorphemeGloss\tContextualMG\tWordGloss\tContextualWG" )
-        for row in state.our_WLC_rows:
-            if row['Ref'].startswith( testVerseRef ):
-                print( f" {row['Ref']}\t{row['OSHBid'] if row['OSHBid'] else '     '}\t {row['RowType']}\t'{row['WordOrMorpheme']}'\t\t{row['Morphology']}\t{row['MorphemeGloss'] if row['MorphemeGloss'] else '~     '}\t{row['ContextualMorphemeGloss'] if row['ContextualMorphemeGloss'] else '~     '}\t{row['WordGloss'] if row['WordGloss'] else '~     '}\t{row['ContextualWordGloss'] if row['ContextualWordGloss'] else '~'}" )
-        print()
-
-    offset = 0
-    lastVerseID = None
-    newLowFatWordsAndMorphemes = []
-    for _n,secondEntryAttempt in enumerate(state.maculaHebrewWordsAndMorphemes):
-        assert len(secondEntryAttempt) == len(state.morpheme_output_fieldnames)-1
-        ourID, wordOrMorpheme, morphology = secondEntryAttempt['FGRef'], removeHebrewCantillationMarks(secondEntryAttempt['WordOrMorpheme'], removeMetegOrSiluq=True), secondEntryAttempt['Morphology']
-        verseID, wordPart = ourID.split('w')
-        if wordPart.isdigit():
-            wordNumber,suffix = int( wordPart ), ''
-        else:
-            wordNumber,suffix = int( wordPart[:-1] ), wordPart[-1]
-        if DEBUGGING_THIS_MODULE:
-            if ourID.startswith( testVerseRef ):
-                print( f"{ourID=}, '{wordOrMorpheme=}' {morphology=}" ) # '{rowTuple30[-1]}'
-
-        if verseID != lastVerseID:
-            offset = 0 # Restart at start of verse
-        adjustedRowID = f'{verseID}w{wordNumber+offset}{suffix}'
-        try:
-            foundKetivFlag, foundWordOrMorpheme, foundMorphology, foundID = our_WLC_dict[adjustedRowID]
-            assert foundWordOrMorpheme==wordOrMorpheme, f"ID's matched {adjustedRowID} from {ourID} and got {foundID}, but not text ({len(foundWordOrMorpheme)}) '{foundWordOrMorpheme}' != ({len(wordOrMorpheme)}) '{wordOrMorpheme}'"
-            assert foundMorphology==morphology \
-                or (foundMorphology=='Rd' and morphology=='R'), \
-                f"ID's matched {adjustedRowID} from {ourID} and got {foundID}, but not morphology '{foundMorphology}'!='{morphology}'"
-            # print(f"({len(secondEntryAttempt)}) {secondEntryAttempt=}")
-            newMoreExpandedDictEntry = {'FGRef':ourID, 'OSHBid':foundID, **secondEntryAttempt}
-            # print(f"({len(newMoreExpandedDictEntry)}) {newMoreExpandedDictEntry=}")
-            assert len(newMoreExpandedDictEntry) == len(state.morpheme_output_fieldnames), f"{len(newMoreExpandedDictEntry)=} vs {len(state.morpheme_output_fieldnames)=}" # OSHBid field to be added below
-            newLowFatWordsAndMorphemes.append( newMoreExpandedDictEntry )
-        except KeyError:
-            logging.warning( f"Failed to find OSHB id for {offset=} {ourID}: '{wordOrMorpheme}' {morphology}" )
-            assert 'w' in ourID
-            if suffix in ('','a'):
-                offset -= 1
-            adjustedRowID = f'{verseID}w{wordNumber+offset}{suffix}'
-            try:
-                foundKetivFlag, foundWordOrMorpheme, foundMorphology, foundID = our_WLC_dict[adjustedRowID]
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Got {foundID} for {offset=} {foundKetivFlag=} {adjustedRowID}")
-                if not foundKetivFlag: # Doesn't always work on Ketivs
-                    assert foundWordOrMorpheme==wordOrMorpheme, f"ID's now matched {adjustedRowID} from {ourID} and got {foundID}, but not text ({len(foundWordOrMorpheme)}) '{foundWordOrMorpheme}' != ({len(wordOrMorpheme)}) '{wordOrMorpheme}'"
-                    assert foundMorphology==morphology, f"ID's now matched {adjustedRowID} from {ourID} and got {foundID}, but not morphology '{foundMorphology}'!='{morphology}'"
-                newMoreExpandedDictEntry = {'FGRef':ourID, 'OSHBid':foundID, **secondEntryAttempt}
-                assert len(newMoreExpandedDictEntry) == len(state.morpheme_output_fieldnames), f"{len(newMoreExpandedDictEntry)=} vs {len(state.morpheme_output_fieldnames)=}" # OSHBid field to be added below
-                newLowFatWordsAndMorphemes.append( newMoreExpandedDictEntry )
-            except (KeyError, AssertionError):
-                logging.error( f"Failed to find OSHB id for {offset=} {adjustedRowID} from {ourID}: '{secondEntryAttempt['WordOrMorpheme']}'")
-                newMoreExpandedDictEntry = {'FGRef':ourID, 'OSHBid':'', **secondEntryAttempt}
-                assert len(newMoreExpandedDictEntry) == len(state.morpheme_output_fieldnames), f"{len(newMoreExpandedDictEntry)=} vs {len(state.morpheme_output_fieldnames)=}" # OSHBid field to be added below
-                newLowFatWordsAndMorphemes.append( newMoreExpandedDictEntry )
-                if DEBUGGING_THIS_MODULE:
-                    print( f"{_n} {state.maculaHebrewWordsAndMorphemes[_n]}" )
-                    print( f"{_n+1} {state.maculaHebrewWordsAndMorphemes[_n+1]}" )
-                    print( f"{_n+2} {state.maculaHebrewWordsAndMorphemes[_n+2]}" )
-                    print( f"{_n+3} {state.maculaHebrewWordsAndMorphemes[_n+3]}" )
-                    haltA
-        except AssertionError:
-            logging.warning( f"Failed to match text or morphology for {offset=} {ourID}: '{foundWordOrMorpheme}' vs '{wordOrMorpheme}' {foundMorphology} vs {morphology}")
-            assert 'w' in ourID
-            if suffix in ('','a'):
-                offset -= 1
-            adjustedRowID = f'{verseID}w{wordNumber+offset}{suffix}'
-            try:
-                foundKetivFlag, foundWordOrMorpheme, foundMorphology, foundID = our_WLC_dict[adjustedRowID]
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
-                    dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  Got {foundID} for {offset=} {foundKetivFlag=} {adjustedRowID}")
-                if not foundKetivFlag: # Doesn't always work on Ketivs
-                    assert foundWordOrMorpheme==wordOrMorpheme, f"ID's now matched {adjustedRowID} from {ourID} and got {foundID}, but not text ({len(foundWordOrMorpheme)}) '{foundWordOrMorpheme}' != ({len(wordOrMorpheme)}) '{wordOrMorpheme}'"
-                    assert foundMorphology==morphology, f"ID's now matched {adjustedRowID} from {ourID} and got {foundID}, but not morphology '{foundMorphology}'!='{morphology}'"
-                newMoreExpandedDictEntry = {'FGRef':ourID, 'OSHBid':foundID, **secondEntryAttempt}
-                assert len(newMoreExpandedDictEntry) == len(state.morpheme_output_fieldnames), f"{len(newMoreExpandedDictEntry)=} vs {len(state.morpheme_output_fieldnames)=}" # OSHBid field to be added below
-                newLowFatWordsAndMorphemes.append( newMoreExpandedDictEntry )
-            except (KeyError, AssertionError):
-                logging.error( f"Failed to find OSHB id for {offset=} {adjustedRowID} from {ourID}: '{secondEntryAttempt['WordOrMorpheme']}'")
-                newMoreExpandedDictEntry = {'FGRef':ourID, 'OSHBid':'', **secondEntryAttempt}
-                assert len(newMoreExpandedDictEntry) == len(state.morpheme_output_fieldnames), f"{len(newMoreExpandedDictEntry)=} vs {len(state.morpheme_output_fieldnames)=}" # OSHBid field to be added below
-                newLowFatWordsAndMorphemes.append( newMoreExpandedDictEntry )
-                if DEBUGGING_THIS_MODULE:
-                    haltB
-        # Check we haven't ended up with anything missing or any extra stuff
-        for fieldname in newLowFatWordsAndMorphemes[-1]: assert fieldname in state.morpheme_output_fieldnames
-        for fieldname in state.morpheme_output_fieldnames: assert fieldname in newLowFatWordsAndMorphemes[-1]
-        lastVerseID = verseID
-
-    assert len(newLowFatWordsAndMorphemes) == len(state.maculaHebrewWordsAndMorphemes)
-    state.maculaHebrewWordsAndMorphemes = newLowFatWordsAndMorphemes
-
+    """Attach native OSHB IDs through certain, complete-word Hebrew matches."""
+    matches = align_morphemes_by_verse(state.maculaHebrewWordsAndMorphemes, state.our_WLC_rows)
+    state.maculaHebrewWordsAndMorphemes = [
+        {**row, 'OSHBid':state.our_WLC_rows[matches[n]]['OSHBid'] if n in matches else ''}
+        for n,row in enumerate(state.maculaHebrewWordsAndMorphemes)]
+    vPrint('Normal', DEBUGGING_THIS_MODULE,
+           f'Attached {len(matches):,} verified native OSHB IDs; left '
+           f'{len(state.maculaHebrewWordsAndMorphemes)-len(matches):,} unresolved.')
     return True
 # end of convert_ClearMaculaOT_to_our_TSV.MacHeb_add_OSHB_ids
 

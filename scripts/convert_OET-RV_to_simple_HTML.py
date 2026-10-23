@@ -14,6 +14,7 @@
 
 """
 CHANGELOG:
+    2026-10-22 Use BOS source profiles for mapped metadata, passages and export/navigation.
     2023-03-21 Added handling for three verses at once (when verse content is reordered)
     2023-05-28 Remove USFM fig fields
     2023-08-07 Handle ESFM multiple section headings, move MRK before MAT
@@ -41,6 +42,8 @@ CHANGELOG:
 from gettext import gettext as _
 from typing import List, Tuple, Optional
 from pathlib import Path
+from oet_html_alignment import add_title_anchors
+from oet_html_links import copy_reference_pages
 from datetime import datetime
 import logging
 import re
@@ -55,7 +58,7 @@ from bible_organisational_system import getSmallLeadingInt
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-10-17' # by RJH
+LAST_MODIFIED_DATE = '2026-10-22' # by RJH
 SHORT_PROGRAM_NAME = "Convert_OET-RV_to_simple_HTML"
 PROGRAM_NAME = "Convert OET-RV ESFM to simple HTML"
 PROGRAM_VERSION = '1.0.1'
@@ -1058,17 +1061,15 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
                 assert ':' not in V # We don't handle chapter ranges here yet (and probably don't need to)
                 V1, V2 = V.split( '-' )
 
-                if int(V2) == int(V1)+1: # we want both verse numbers to be searchable
-                    book_html = f'{book_html}{"" if book_html.endswith(">") else " "}' \
-                        + f'''{f"""<span id="C{C}"></span><span class="{'cPsa' if BBB=='PSA' else 'c'}" id="C{C}V1">{C}</span>""" if V1=="1" else f"""<span class="v" id="C{C}V{V1}">{V1}-</span>"""}''' \
-                        + f'<span class="v" id="C{C}V{V2}">{V2}{NARROW_NON_BREAK_SPACE}</span>' \
-                        + (rest if rest else '◘')
-                else:
-                    #assert int(V2)==int(V1)+2, f"{BBB} {C}:{V} {V1=} {V2=}" # We don't fully handle four verse reordering yet
-                    book_html = f'{book_html}{"" if book_html.endswith(">") else " "}' \
-                        + f'''{f"""<span id="C{C}"></span><span class="{'cPsa' if BBB=='PSA' else 'c'}" id="C{C}V1">{C}</span>""" if V1=="1" else f"""<span class="v" id="C{C}V{V1}">{V1}-</span>"""}''' \
-                        + f'<span class="v" id="C{C}V{int(V1)+1}"><span class="v" id="C{C}V{V2}">{V2}{NARROW_NON_BREAK_SPACE}</span></span>' \
-                        + (rest if rest else '◘')
+                if int(V2) <= int(V1):
+                    raise ValueError(f'{BBB} {C}:{V}: invalid stored verse bridge')
+                # Every native component is a navigation anchor, including
+                # long bridges such as NUM 7:12-83. The text stays unsplit.
+                first = (f'<span id="C{C}"></span><span class="{"cPsa" if BBB=="PSA" else "c"}" id="C{C}V1">{C}</span>'
+                         if V1=='1' else f'<span class="v" id="C{C}V{V1}">{V1}-</span>')
+                middle = ''.join(f'<span id="C{C}V{v}"></span>' for v in range(int(V1)+1,int(V2)))
+                last = f'<span class="v" id="C{C}V{V2}">{V2}{NARROW_NON_BREAK_SPACE}</span>'
+                book_html += ('' if book_html.endswith('>') else ' ') + first + middle + last + (rest or '◘')
             else: # it's a simple verse number
                 assert V.isdigit(), f"Expected a verse number digit with {V=} {rest=}"
                 book_html = f'{book_html}{"" if book_html.endswith(">") or book_html.endswith("—") else " "}' \
@@ -1209,6 +1210,7 @@ def convert_ESFM_to_simple_HTML( BBB:str, usfm_text:str, word_table:Optional[Lis
     if inParagraph:
         book_html = f'{book_html}</{inParagraph}>\n'
     book_html = f'{book_html}</div><!--BibleText-->'
+    book_html = add_title_anchors(BBB,book_html)
 
     # Handle all footnotes in one go (we don't check for matching \fr fields)
     searchStartIx = 0
@@ -1429,59 +1431,11 @@ def livenIORs( BBB:str, bookHTML:str ) -> str:
 
 
 def copy_wordlink_files( sourceFolder:Path, destinationFolder:Path ) -> bool:
-    """
-    Copy the W_nnnnn.html wordlink and lemma HMTL files across.
-        (There's around 168,262 of these.)
+    """Copy reference pages, mapping LV backlinks to this RV-based navigation."""
+    count = copy_reference_pages(sourceFolder, destinationFolder, 'OET-RV')
+    vPrint('Normal', DEBUGGING_THIS_MODULE, f'Copied {count:,} reference pages with mapped links.')
+    return True
 
-    Also P_ and L_ person and location files.
-    """
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET NT word-link HTML files from {sourceFolder}…" )
-    try: os.makedirs( destinationFolder.joinpath( 'W/' ) )
-    except FileExistsError: pass # it was already there
-    copyCount = 0
-    for filename in glob.glob( os.path.join( sourceFolder.joinpath( 'W/' ), '*.html' ) ):
-        shutil.copy( filename, destinationFolder.joinpath( 'W/' ) ) # Want the time to be updated or else "make" doesn't function correctly
-        # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
-        copyCount += 1
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET NT word-link HTML files to {destinationFolder.joinpath( 'W/' )}.")
-
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET NT word-link HTML files from {sourceFolder}…")
-    try: os.makedirs( destinationFolder.joinpath( 'Lm/' ) )
-    except FileExistsError: pass # it was already there
-    copyCount = 0
-    for filename in glob.glob( os.path.join( sourceFolder.joinpath( 'Lm/' ), '*.html' ) ):
-        shutil.copy( filename, destinationFolder.joinpath( 'Lm/' ) ) # Want the time to be updated or else "make" doesn't function correctly
-        # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
-        copyCount += 1
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET NT lexeme HTML files to {destinationFolder.joinpath( 'Lm/' )}.")
-
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET person HTML files from {sourceFolder}…")
-    try: os.makedirs( destinationFolder.joinpath( 'Pe/' ) )
-    except FileExistsError: pass # it was already there
-    copyCount = 0
-    for filename in glob.glob( os.path.join( sourceFolder.joinpath( 'Pe/' ), 'P_*.html' ) ):
-        shutil.copy( filename, destinationFolder.joinpath( 'Pe/' ) ) # Want the time to be updated or else "make" doesn't function correctly
-        # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
-        copyCount += 1
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET person HTML files to {destinationFolder.joinpath( 'Pe/' )}.")
-
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET location HTML files from {sourceFolder}…")
-    try: os.makedirs( destinationFolder.joinpath( 'Loc/' ) )
-    except FileExistsError: pass # it was already there
-    copyCount = 0
-    for filename in glob.glob( os.path.join( sourceFolder.joinpath( 'Loc/' ), 'L_*.html' ) ):
-        shutil.copy( filename, destinationFolder.joinpath( 'Loc/' ) ) # Want the time to be updated or else "make" doesn't function correctly
-        # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
-        copyCount += 1
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET location HTML files to {destinationFolder.joinpath( 'Loc/' )}.")
 # end of convert_OET-RV_to_simple_HTML.copy_wordlink_files()
 
 

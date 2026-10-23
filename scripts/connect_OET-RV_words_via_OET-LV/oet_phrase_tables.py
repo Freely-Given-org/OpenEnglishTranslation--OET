@@ -479,6 +479,7 @@ LV_SINGLE_WORDS_TO_RV_WORD_STRINGS = (
     ('repenting','Turn from'), # Mat 3:2
     ('return', 'give back'), # RV PSA 69:4 / LV PSA 69:5
     ('right','honoured position'), # Mrk 14:62
+    ('righteousness', "does what's right"), # PRO 11:5
     ('risen', 'got up'),
     ('sanctuary', 'sacred tent'),
     ('scribes', 'religious teachers'),

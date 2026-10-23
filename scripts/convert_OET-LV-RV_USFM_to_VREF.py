@@ -24,12 +24,16 @@ NOTE: This script doesn't need to remove special ESFM formatting
 
 
 CHANGELOG:
+    2026-10-22 Use BOS source profiles for mapped metadata, passages and export/navigation.
     2025-03-31 Adjust input folder
     2026-05-08 Upgraded to bos_books_codes_py
     2026-05-31 Handle (remove) Psalm/Song thematic colouring markers
 """
 from pathlib import Path
 import logging
+import json
+from oet_exports import export_passage, native_passages
+from BibleOrgSys.Reference.BibleVersificationMappings import get_default_mapping_engine
 
 from BibleOrgSys import BibleOrgSysGlobals
 from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
@@ -38,7 +42,7 @@ from bible_organisational_system import InternalBibleEntryList
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-10-06' # by RJH
+LAST_MODIFIED_DATE = '2026-10-22' # by RJH
 SHORT_PROGRAM_NAME = "convert_OET-LV-RV_USFM_to_VREF"
 PROGRAM_NAME = "Convert OET LV & RV USFM files to VREF"
 PROGRAM_VERSION = '0.12'
@@ -47,17 +51,14 @@ PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 DEBUGGING_THIS_MODULE = False
 
 
-VREF_STANDARD_InputFilePath = Path( '../../../Bibles/DataSets/Reference systems/AQuA.vref.txt' )
-assert VREF_STANDARD_InputFilePath.is_file(), f"Unable to find vref standard input file: {VREF_STANDARD_InputFilePath}"
+VREF_STANDARD_InputFilePath = Path(__file__).resolve().parents[3] / 'Bibles/DataSets/Reference systems/AQuA.vref.txt'
 
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module
 # FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos
 cleaned_USFM_InputFolderPath = project_folderpath.joinpath( 'exportedFiles/cleanedUSFM/' )
 OET_LV_USFM_InputFolderPath = cleaned_USFM_InputFolderPath.joinpath( 'LiteralVersion/' )
 OET_RV_USFM_InputFolderPath = cleaned_USFM_InputFolderPath.joinpath( 'ReadersVersion/' )
-assert cleaned_USFM_InputFolderPath.is_dir() and OET_LV_USFM_InputFolderPath.is_dir() and OET_RV_USFM_InputFolderPath.is_dir()
 VREF_OutputFolderPath = project_folderpath.joinpath( 'exportedFiles/' )
-assert VREF_OutputFolderPath.is_dir()
 OET_LV_VREF_OutputFilePath = VREF_OutputFolderPath.joinpath( 'OET-LV.vref.txt' )
 OET_RV_VREF_OutputFilePath = VREF_OutputFolderPath.joinpath( 'OET-RV.vref.txt' )
 
@@ -82,80 +83,35 @@ def main():
         if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
             vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Preloading '{versionAbbreviation}' USFM Bible…" )
         thisBible = USFMBible.USFMBible( OET_RV_USFM_InputFolderPath if VV=='RV' else OET_LV_USFM_InputFolderPath,
-                                        givenAbbreviation=versionAbbreviation, encoding='utf-8' )
+                                        givenAbbreviation=versionAbbreviation, encoding='utf-8', versification=versionAbbreviation )
         thisBible.loadBooks() # So we can iterate through them all below
         if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
             vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"preloadVersion() loaded {thisBible}" )
 
-        totalLinesWritten = blankLinesWritten = verseLinesWritten = versificationErrorCount = 0
-        with open( OET_RV_VREF_OutputFilePath if VV=='RV' else OET_LV_VREF_OutputFilePath, 'wt', encoding='utf-8' ) as vrefOutputFile:
-            for vref in vrefs:
-                # print( f"{vref=}" )
-                UUU, CV = vref.split( ' ' )
-                C,V = CV.split( ':' )
-                BBB = bos_books_codes_py.usfm_abbrev_to_bos_book_code( UUU )
-                # print( f"{vref=} {UUU=} {BBB=} {C=} {V=}" )
-
-                bcvRef = (BBB, C, V)
-                try: result = thisBible.getContextVerseData( bcvRef )
-                except KeyError:
-                    logging.error( f"Probable versification error with {bcvRef=}" )
-                    vrefOutputFile.write( '\n' )
-                    versificationErrorCount += 1
-                    totalLinesWritten += 1
-                    continue
-                if result is None:
-                    if BBB not in ('TOB','JDT','ESG','WIS','SIR','BAR','LJE','PAZ','SUS','BEL','MA1','MA2','MA3','MA4','GES','LES','MAN','PS2','ODE','PSS','EZA','JUB','ENO'):
-                        print( f"Unable to fetch {bcvRef=}" )
-                    vrefOutputFile.write( '\n' )
-                    blankLinesWritten += 1
-                    totalLinesWritten += 1
-                    continue
-                verseData, _context = result
-                #dPrint( 'Quiet', DEBUGGING_THIS_MODULE, "gVT", self.name, BCVReference, verseData )
-                assert isinstance( verseData, InternalBibleEntryList )
-                #if BibleOrgSysGlobals.debugFlag: assert 1 <= len(verseData) <= 5
-                verseText, firstWord = '', False
-                for entry in verseData:
-                    marker, cleanText = entry.getMarker(), entry.getOriginalText()
-                    if cleanText and VV=='RV' and BBB=='PSA' and '\\z' in cleanText: # Psalm/Song colouring markers
-                        cleanText = cleanText.replace( '\\zr ', '' ).replace( '\\z1 ', '' ).replace( '\\z2 ', '' ).replace( '\\z3 ', '' ).replace( '\\z4 ', '' ) \
-                                    .replace( '\\zrhilite ', '' ).replace( '\\z1hilite ', '' ).replace( '\\z2hilite ', '' ).replace( '\\z3hilite ', '' ).replace( '\\z4hilite ', '' ) \
-                                    .replace( '\\zrhilite*', '' ).replace( '\\z1hilite*', '' ).replace( '\\z2hilite*', '' ).replace( '\\z3hilite*', '' ).replace( '\\z4hilite*', '' )
-                    if marker[0] == '¬': pass # Ignore end markers
-                    elif marker == 'c': pass # Ignore
-                    elif marker == 'c~': pass # Ignore text after chapter marker
-                    elif marker == 'c#': pass # Ignore print chapter number
-                    elif marker == 'cl': pass # Ignore cl markers AFTER the '\c 1' marker (the text for the individual chapter/psalm heading)
-                    elif marker == 'v=': pass # Ignore the verse number (not to be printed) that the next field(s) (usually a section heading) logically belong together with
-                    elif marker == 'd': verseText += '¦' + cleanText + '¦'
-                    elif marker in ('list',): pass
-                    elif marker in ('rem',): pass
-                    elif marker in ('ms1','mr','sr'): pass
-                    elif marker in ('s1','s2','s3','s4','r'): pass
-                    elif marker in ('b','nb'): pass
-                    elif marker in ('sp','qa'): pass
-                    elif marker == 'p': verseText = f'{verseText}¶ {cleanText}'
-                    elif marker == 'q1': verseText += '₁ ' + cleanText
-                    elif marker == 'q2': verseText += '₂ ' + cleanText
-                    elif marker == 'q3': verseText += '₃ ' + cleanText
-                    elif marker == 'q4': verseText += '₄ ' + cleanText
-                    elif marker == 'm': verseText += '§ ' + cleanText
-                    elif marker == 'mi': verseText = f'{verseText}{cleanText}'
-                    elif marker == 'pi1': verseText = f'{verseText}{cleanText}'
-                    elif marker == 'li1': verseText = f'{verseText}{cleanText}'
-                    elif marker == 'li2': verseText = f'{verseText}{cleanText}'
-                    elif marker == 'v': firstWord = True # Ignore
-                    elif marker == 'v~': verseText = f'{verseText}{cleanText}'
-                    elif marker == 'vw':
-                        verseText = f"{verseText}{'' if firstWord else ' '}{cleanText}"
-                        firstWord = False
-                    else: logging.critical( f"InternalBible.getVerseText Unknown marker '{marker}'='{cleanText}'" )
-                vrefOutputFile.write( f'{verseText}\n' )
-                verseLinesWritten += 1
-                totalLinesWritten += 1
-        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
-            vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Wrote {totalLinesWritten:,} lines to OET-{VV} file ({verseLinesWritten:,} verses, {versificationErrorCount:,} versification problems, {blankLinesWritten:,} blank)." )
+        # AQuA's canonical reference inventory uses BOS original coordinates.
+        # Non-canonical books have no OET text and retain their blank slots.
+        output = OET_RV_VREF_OutputFilePath if VV == 'RV' else OET_LV_VREF_OutputFilePath
+        lines, records, cache = [], [], {}
+        for line_number, vref in enumerate(vrefs, 1):
+            usfm, cv = vref.split()
+            c, v = cv.split(':')
+            book = bos_books_codes_py.usfm_abbrev_to_bos_book_code(usfm)
+            if book not in BibleOrgSysGlobals.BOOKLIST_66:
+                lines.append('')
+                continue
+            text, record = export_passage(thisBible, 'org', ((book,c,v,None),), cache)
+            lines.append(text)
+            if record['combined'] or record['native'] != record['requested']:
+                records.append(dict(line=line_number, **record))
+        # Resolve every passage before replacing either export.
+        output.write_text('\n'.join(lines)+'\n', encoding='utf-8')
+        output.with_suffix(output.suffix+'.mapping.json').write_text(json.dumps(dict(
+            mapping_revision=get_default_mapping_engine().data_revision,
+            source_profile=versionAbbreviation, target_profile='org',
+            reference_file=str(VREF_STANDARD_InputFilePath), line_count=len(lines),
+            combined_policy='Repeat labelled complete passage in each affected slot',
+            mappings=records), ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+        vPrint('Quiet', DEBUGGING_THIS_MODULE, f'Wrote {len(lines):,} lines to {output}')
 # end of convert_OET-LV-RV_USFM_to_VREF.main
 
 

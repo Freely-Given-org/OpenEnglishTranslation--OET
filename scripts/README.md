@@ -437,6 +437,157 @@ initial anchors. Acts 19:40–41's
 “And … have no defence” must not borrow “And having said” from the dismissal
 sentence after the quotation.
 
+### 23 October 2026 related forms and supplied nouns
+
+Matthew 11:5's `leprosy` had no lexical evidence for LV `lepers`: the existing
+`leprosy/leprous` family omitted `leper`. Adding that member also uses the
+existing curated `leper/lepers` inflection. An otherwise empty gap alone still
+does not justify a link. The RV word now carries **6498**.
+
+The scan covered all 66 books and 31,055 BOS-mapped passages. Nehemiah 7:68 was
+left out as explicitly unsupported by BOS because it has no Hebrew reference
+counterpart. The [reviewed vocabulary ledger](connect_OET-RV_words_via_OET-LV/audits/2026-10-23-related-forms.tsv)
+records 17 added/extended related-form families and one directional pair,
+including `deafness/deaf`, `muteness/mute`, `gold/golden`, and `burial → bury`.
+The selection engine and its ambiguity safeguards are unchanged.
+
+Comparing the frozen source snapshot with these table changes adds **70 links
+in 32 books**. Those reviewed additions were applied to the RV source files;
+the [new-link ledger](connect_OET-RV_words_via_OET-LV/audits/2026-10-23-new-links.tsv)
+gives each word, number and LV gloss. Comparing the same passages with all RV
+numbers removed gives 77 added tags, three removed tags and one reassignment
+(net +74). These fresh comparison outputs were not applied. The
+[comparison ledger](connect_OET-RV_words_via_OET-LV/audits/2026-10-23-link-comparison.tsv)
+records both modes. Existing links remain immutable in incremental runs.
+
+**179 supplied human nouns in 36 books** were marked with `\add >` or nested
+`\+add >`, including Matthew 11:5's remaining `poor people`. The user's three
+existing markers in that verse were preserved. The
+[formatting ledger](connect_OET-RV_words_via_OET-LV/audits/2026-10-23-supplied-nouns.tsv)
+records all edits and their LV passages. Explicit LV human nouns and uncertain
+paraphrases were left alone. These are reviewed source edits; the connector
+does not automatically classify new supplied nouns.
+
+Five broader families were withheld after they exposed incorrect links in
+other passages: `know/knowledge`, `strength/strong`, `true/truth`,
+`mercy/merciful`, and `wide/width`. A symmetric `bury/burial` family also
+misassigned Jeremiah 22:19's `buried`, so only RV `burial` → LV `bury` was
+added. Three otherwise plausible formatting edits were withheld after full
+connector reruns exposed false downstream matches: Ecclesiastes 7:5's
+`wise person`, Numbers 19:22's first `unclean person`, and Psalm 1:1's
+`wicked people`. The [audit summary](connect_OET-RV_words_via_OET-LV/audits/2026-10-23-related-forms-summary.json)
+explains these cases and retains before/after book hashes.
+
+All **133 tests** pass, including 14 complete mapped-passage fixtures checked
+with and without existing links. Validation preserved every original word,
+word number and addition code across the 43 changed books, checked new IDs
+against their mapped LV passages, and checked marker balance and unnumbered
+supplied nouns. Fresh selection before/after the retained formatting edits
+is identical. Final production dry runs of all 43 changed books add no further
+links and remove no addition-span numbers. Raw snapshots and comparisons are
+in the ignored `.cache/oet-leprosy-20261023/` directory. Exported files were
+not regenerated.
+
+### 23 October 2026 context follow-up
+
+The follow-up fixes the matching problems behind the withheld families and
+formatting edits above. Weak positional matches cannot displace stronger unique
+lexical evidence, including a stranded exact word outside the current anchor
+window. Related families do not chain: `know/knowledge` remains separate from
+`knowledge/knowledgeable`. Unique exact conjunctions at punctuation boundaries
+help fence clauses. Generic noun heads also respect anchors selected in the
+same round. Articles, possessives and noun-attached conjunctions cannot borrow
+another established head, and a copula inside an LV noun gloss needs supporting
+RV content. Incomplete repeated weak matches require adjacent anchor evidence.
+
+These checks enable all six previously withheld families: `know/knowledge`,
+`strength/strong`, `true/truth`, `mercy/merciful`, `wide/width`, and `bury/burial`.
+The [case-by-case audit](connect_OET-RV_words_via_OET-LV/audits/2026-10-23-context-summary.json)
+explains the failure modes and records validation and before/after hashes.
+The connector still abstains where reordering leaves insufficient evidence;
+for example, fresh Deuteronomy 22:20 no longer assigns `been` to the earlier
+`was`, but does not recover `been` without its existing reviewed anchor.
+
+**44 additional links in 24 books** were individually reviewed and applied:
+40 from the connector/table changes and four made possible by supplied-word
+markup. The [link ledger](connect_OET-RV_words_via_OET-LV/audits/2026-10-23-context-links.tsv)
+records each source expression. **204 additional supplied spans (251 words)
+in 43 books** were marked: 40 before adjectives/participles and 164 after them.
+This includes both `people who were` and `people with` in Matthew 11:5 and all
+three previously withheld formatting cases. Explicit LV head nouns were
+retained, e.g. Luke 17:12's `men` while marking the connective `with`.
+The [formatting ledger](connect_OET-RV_words_via_OET-LV/audits/2026-10-23-context-formatting.tsv)
+includes each replacement and its LV passage. These remain reviewed source
+edits, rather than automatic grammatical rewriting by the connector.
+
+The comparison again covers **66 books / 31,055 mapped passages**, using
+unaltered LV metadata and BOS mappings. The
+[comparison ledger](connect_OET-RV_words_via_OET-LV/audits/2026-10-23-context-comparison.tsv)
+includes incremental and fresh runs. Fresh runs are diagnostic and were not
+applied: 495 additions, 11,333 abstentions on formerly proposed links, and
+1,184 reassignments (net -10,838 links). Those counts describe changed
+predictions, not a claim that every fresh prediction has been manually verified.
+The applied incremental additions were all reviewed. Existing translation
+words, punctuation, link numbers, and addition codes were preserved across
+all **45 changed source books**.
+
+All **137 tests** pass, including twelve complete context-regression passages.
+Final production dry runs of all 66 books add no further links and remove no
+addition-span numbers. Nehemiah 7:68 remains the explicitly unsupported BOS
+mapping, with no same-number fallback. Raw snapshots and intermediate reports
+are in ignored `.cache/oet-context-20261023/`. Exported files were not regenerated.
+
+### 23 October 2026 remaining-ambiguity follow-up
+
+This review adds **172 further word links** (161 selected by the connector and
+11 individually reviewed links across reordered phrases), and marks **176
+supplied spans containing 257 words in 35 books**. Six misplaced existing
+numbers were corrected and ten removed; the connector itself still leaves
+saved numbers immutable. All translation wording, punctuation, and existing
+addition codes are preserved across the **51 changed source books**.
+
+Auxiliaries now require their own following predicate. This distinguishes the
+two occurrences of `are` in `those who are poor … are blessed` (Matthew 5:3).
+Exact local recovery also handles `blessed are` → `are blessed` within one
+source word, recovering the main predicate's auxiliary without borrowing it
+for the relative phrase. Relative `who` checks its following predicate, and
+possessive suffixes attached to an LV noun cannot possess a different RV noun.
+A reviewed whole phrase takes precedence over a weak match of one of its words.
+
+These changes allow the previously withheld `disobeyed` → `sinned` and
+`innocent` → `blameless` entries. The phrase `does what's right` → `righteousness`
+prevents Proverbs 11:5's moral `right` from taking spatial `makes straight`.
+Reviewed source corrections fix the swapped subjects in Romans 9:18, the
+possessive in Jeremiah 3:25, and the adjective/abstract noun in Proverbs 11:5.
+The remaining uniquely identifiable `true` in Deuteronomy 22:20 and the two
+converted units in Daniel 3:1 were linked by review. Ezra 6:3's fused `27m`
+still combines two LV source words and is left unresolved.
+
+The supplied spans include further nominal expansions such as `those who are`,
+`who were`, and `person who's ever been`, plus 114 `things` heads where the LV
+explicitly supplies that noun after a demonstrative or quantifier. Genuine
+articles, copulas, and head nouns are retained. Nine of the removed numbers
+were misplaced on words receiving the new markup; the other was Luke 18:24's
+`are`, incorrectly attached to `entering`. Markup remains a reviewed editorial
+operation rather than an automatic grammar rewrite.
+
+The [audit summary](connect_OET-RV_words_via_OET-LV/audits/2026-10-23-ambiguity-summary.json)
+records the cases, limitations and source hashes. Separate ledgers list
+[new links](connect_OET-RV_words_via_OET-LV/audits/2026-10-23-ambiguity-links.tsv),
+[corrected/removed links](connect_OET-RV_words_via_OET-LV/audits/2026-10-23-ambiguity-corrections.tsv),
+and [supplied spans](connect_OET-RV_words_via_OET-LV/audits/2026-10-23-ambiguity-formatting.tsv).
+The frozen-source [engine comparison](connect_OET-RV_words_via_OET-LV/audits/2026-10-23-ambiguity-comparison.tsv)
+covers 66 books / 31,055 mapped passages. Diagnostic fresh selection changes
+from 416,770 to 408,316 links: 265 additions, 8,719 abstentions, and 165
+reassignments. Those fresh outputs were not applied or comprehensively reviewed;
+all applied incremental changes were reviewed separately.
+
+All **142 tests** pass, including ten complete passages checked before/after
+the reviewed edits, with and without saved links. Final production dry runs of
+all 66 books add no links and remove no addition-span numbers. Nehemiah 7:68
+remains the explicitly unsupported mapping. Raw snapshots and comparisons are
+in ignored `.cache/oet-ambiguity-20261023/`. Exports were not regenerated.
+
 ### 13 October 2026 synonym review
 
 Matthew 23:23's `weightier` had no lexical evidence for LV `heavier`.

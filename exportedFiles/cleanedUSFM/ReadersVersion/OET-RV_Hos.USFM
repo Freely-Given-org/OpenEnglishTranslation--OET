@@ -1,4 +1,4 @@
-\id HOS - Open English Translation—Readers’ Version (OET-RV) v0.1.58
+\id HOS - Open English Translation—Readers’ Version (OET-RV) v0.1.59
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 HOS
@@ -20,14 +20,14 @@
 \rem NOTE: This USFM file was exported from the ESFM source file with some loss of features, so don’t edit this derived file.
 \c 1
 \p
-\v 1 This is Yahweh’s message that came to Beeri’s son Hoshea \add (Hosea)\add* in the time of Kings Uzziyah, Yotam, Ahaz, and Hizkiyah, of Yehudah \add (Judah)\add*, \add and was also during the reign of\add* Yoash’s son King Yeroboam in Yisrael \add (Israel)\add*.\x + \xo 1:1: a \xt 2Ki 15:1-7; 2Ch 26:1-23; \xo b \xt 2Ki 15:32-38; 2Ch 27:1-8; \xo c \xt 2Ki 16:1-20; 2Ch 28:1-27; \xo d \xt 2Ki 18:1–20:21; 2Ch 29:1–32:33; \xo e \xt 2Ki 14:23-29.\x*
+\v 1 This is Yahweh’s message that came to Beeri’s son Hoshea \add (Hosea)\add* in the time of Kings Uzziyah,\x + \xo 1:1: \xt 2Ki 15:1-7; 2Ch 26:1-23.\x* Yotam,\x + \xo 1:1: \xt 2Ki 15:32-38; 2Ch 27:1-8.\x* Ahaz,\x + \xo 1:1: \xt 2Ki 16:1-20; 2Ch 28:1-27.\x* and Hizkiyah,\x + \xo 1:1: \xt 2Ki 18:1–20:21; 2Ch 29:1–32:33.\x* of Yehudah \add (Judah)\add*, \add and was also during the reign of\add* Yoash’s son King Yeroboam\x + \xo 1:1: \xt 2Ki 14:23-29.\x* in Yisrael \add (Israel)\add*.
 \s1 Hoshea’s wife and children
 \s4 Northern kingdom
 \p
 \v 2 When Yahweh first spoke through Hoshea, \add he\add* told \add him\add*, “Go and \add get yourself a prostitute for a wife\add* and have children \add from her\add*, because the \add country\add* is committing flagrant prostitution by forsaking Yahweh.”
 \p
 \v 3 \add So\add* he went and \add married\add* Divlayim’s daughter Gomer, and she \add got pregnant\add* and bore him a son.
-\v 4 Then Yahweh told him, “Name him Yizre’el, because in a little while I’ll avenge the blood \add shed\add* in the Yizre’el \add valley\add* on Yehu’s \add family\add*, and I’ll put an end to the kingdom of Yisrael.\x + \xo 1:4: \xt 2Ki 10:11.\x*
+\v 4 Then Yahweh told him, “Name him Yizre’el, because in a little while I’ll avenge the blood \add shed\add* in the Yizre’el \add valley\add* on Yehu’s \add family\add*,\x + \xo 1:4: \xt 2Ki 10:11.\x* and I’ll put an end to the kingdom of Yisrael.
 \v 5 \add At that time\add* in the Yizre’el valley, I’ll break Yisrael’s \add military power\add*.”
 \p
 \v 6 Then \add Gomer\add* conceived again and bore a daughter, and \add Yahweh\add* told \add Hoshea\add*, “Name her Lo-Ruhamah \add (which means ‘No mercy’)\add*, because I’ll no longer have mercy on the \add Israelis, and I won’t\add* forgive them at all.
@@ -339,8 +339,8 @@
 \q1 I’ve killed them with the messages \add that I’ve spoken\add*.
 \q1 \add My\add* \add judgement\add* is like the light that \add shines out\add*.
 \q1
-\v 6 because I desire loyal commitment \add rather than\add* \add sacrifices\add*,
-\q1 and knowledge about God rather than burnt offerings.\x + \xo 6:6: \xt Mat 9:13; 12:7.\x*
+\v 6 because I desire loyal commitment \add rather than\add* \add sacrifices\add*,\x + \xo 6:6: \xt Mat 9:13; 12:7.\x*
+\q1 and knowledge about God rather than burnt offerings.
 \q1
 \v 7 Like Adam, they broke the agreement.
 \q1 They were unfaithful to me.
@@ -352,7 +352,7 @@
 \q1 so the priests band together to commit murder on the way to Shekem.
 \q1 Surely they’ve committed shameful crimes.
 \q1
-\v 10 I’ve seen a horrible thing among the \add Israelis\add*.
+\v 10 I’ve seen a horrible \add thing\add* among the \add Israelis\add*.
 \q1 Efrayim’s prostitution is there—Yisrael is defiled.
 \b
 \q1
@@ -511,20 +511,20 @@
 \b
 \q1
 \v 7 The days of punishment have come.
-\q1 The days of retribution have come.
+\q1 The days of retribution have come.\x + \xo 9:7: \xt Luk 21:22.\x*
 \q1 Let Yisrael know these things.
 \q1 The prophet is a fool,
 \q1 the man \add of the spirit\add* is insane,
 \q1 because of the \add extent of your disobedience\add*
-\q1 and \add your\add* \add intense\add* hostility.\x + \xo 9:7: \xt Luk 21:22.\x*
+\q1 and \add your\add* \add intense\add* hostility.
 \q1
 \v 8 The prophet is the watchman over Efrayim\add /Yisrael\add* with my god,
 \q1 \add but\add* the bird-catcher’s \add traps are\add* on all of his paths,
 \q1 and there’s hostility in his god’s house.
 \q1
-\v 9 They have deeply corrupted themselves as in the time of Gibeah.
+\v 9 They have deeply corrupted themselves as in the time of Gibeah.\x + \xo 9:9: \xt Jdg 19:1-30.\x*
 \q1 He will remember their iniquity.
-\q1 He will punish their sins.\x + \xo 9:9: \xt Jdg 19:1-30.\x*
+\q1 He will punish their sins.
 \s1 The consequences of Yisrael’s sin
 \s4 Northern kingdom
 \q1
@@ -552,7 +552,7 @@
 \q1 Because of the wickedness of their actions, I’ll drive them out of my house.
 \q1 I \add won’t love them any more\add*—all their leaders are rebels.
 \q1
-\v 16 Efrayim is stricken—it’s root has withered \add so now\add* it can’t bear any fruit.
+\v 16 Efrayim is stricken—its root has withered \add so now\add* it can’t bear any fruit.
 \q1 Even if they give birth, I will kill the precious ones of their womb.”
 \s1 The prophet’s message about Yisrael
 \s4 Northern kingdom
@@ -661,9 +661,9 @@
 \v 8 How can I give you up, Efrayim?
 \q1 How can I hand you over, Yisrael?
 \q1 How can I make you like Adamah?
-\q1 How can I make you like Tsevoim?
+\q1 How can I make you like Tsevoim?\x + \xo 11:8: \xt Deu 29:23.\x*
 \q1 My heart is turned over within me—
-\q1 all my compassions are aroused.\x + \xo 11:8: \xt Deu 29:23.\x*
+\q1 all my compassions are aroused.
 \q1
 \v 9 I won’t put my fierce anger \add into action\add*.
 \q1 I won’t destroy Efrayim\add /Yisrael\add* again,
@@ -700,8 +700,8 @@
 \q1 and will punish Yakov \add for what they’ve done\add*.
 \q1 He will repay \add them\add* according to \add how they behaved\add*.
 \q1
-\v 3 In the womb he took his brother by the heel,
-\q1 and in his manhood he struggled with God.\x + \xo 12:3: \xt Gen 25:26.\x*
+\v 3 In the womb he took his brother by the heel,\x + \xo 12:3: \xt Gen 25:26.\x*
+\q1 and in his manhood he struggled with God.
 \q1
 \v 4 He struggled with the messenger and prevailed.
 \q1 He wept and begged for his favour.
@@ -745,8 +745,8 @@
 \q1 Yisrael worked \add to earn\add* a wife,
 \q1 and for a wife, he kept sheep.\x + \xo 12:12: \xt Gen 29:1-20.\x*
 \q1
-\v 13 Yahweh used the prophet \add Mosheh\add* to bring Yisrael out of Egypt,
-\q1 and so \add Yisrael\add* \add was preserved\add* by a prophet.\x + \xo 12:13: \xt Exo 12:50-51.\x*
+\v 13 Yahweh used the prophet \add Mosheh\add* to bring Yisrael out of Egypt,\x + \xo 12:13: \xt Exo 12:50-51.\x*
+\q1 and so \add Yisrael\add* \add was preserved\add* by a prophet.
 \q1
 \v 14 Efrayim has provoked \add bitter\add* anger,
 \q1 so his master will \add hold him to account for bloodshed\add*
@@ -796,8 +796,8 @@
 \q1 and \add your\add* \add other\add* leaders
 \q1 that you’d talked about, saying, ‘Give me a king and princes’?\x + \xo 13:10: \xt 1Sam 8:5-6.\x*
 \q1
-\v 11 I gave you a king in my anger,
-\q1 then I took him away in my rage.\x + \xo 13:11: a \xt 1Sam 10:17-24; \xo b \xt 1Sam 15:26.\x*
+\v 11 I gave you a king in my anger,\x + \xo 13:11: \xt 1Sam 10:17-24.\x*
+\q1 then I took him away in my rage.\x + \xo 13:11: \xt 1Sam 15:26.\x*
 \b
 \q1
 \v 12 Efrayim’s \add disobedience\add* is \add wrapped\add* up.
@@ -810,8 +810,8 @@
 \v 14 Will I ransom them from the hand of \add the grave\add*?
 \q1 Will I redeem them from death?
 \q1 Death, where are your plagues?
-\q1 Grave, where is your destruction?
-\q1 My eyes \add won’t be displaying any\add* compassion.”\x + \xo 13:14: \xt 1Cor 15:55.\x*
+\q1 Grave, where is your destruction?\x + \xo 13:14: \xt 1Cor 15:55.\x*
+\q1 My eyes \add won’t be displaying any\add* compassion.”
 \q1
 \v 15 Though he flourishes among \add his\add* brothers, an east wind will come.
 \q1 Yahweh’s wind will come up from the wilderness.
@@ -863,7 +863,7 @@
 \q1 your fruit comes from me.”
 \s1 Conclusion
 \q1
-\v 9 Let \add those\add* who are wise, understand these things.
+\v 9 Let \add those\add* who are wise, understand these \add things\add*.
 \q1 Anyone who’s discerning, let them know them
 \q1 because Yahweh’s ways are right,
 \q1 and righteous \add people\add* will \add follow\add* them,

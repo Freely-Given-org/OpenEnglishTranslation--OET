@@ -1,8 +1,10 @@
 # OET makefile
 #
-# Last updated: 2026-10-11 by RJH
+# Last updated: 2026-10-23
 #
 # CHANGELOG:
+#   2026-10-23 Correct HTML book dependencies and track converter completion.
+#   2026-10-22 Rebuild mapped exports/HTML when helpers or BOS profiles change.
 #	2025-12-08 Copy OET LV OT & NT word tables into BSB and MSB folders
 #	2026-02-20 Produce OET-RV sections and automated TTS files for radio production
 #	2026-03-06 Separated derivedFiles folder out with some now in furtherDerivedFiles
@@ -10,6 +12,8 @@
 #   2026-09-22 Added VPL export and rebuild of OET MCP database (both after vref export)
 #   2026-10-11 connect_OET-RV_words_via_OET-LV.py moved into its own folder
 #
+
+BOS_mapping_data := $(wildcard ../../BibleOrgSys/BibleOrgSys/DataFiles/VersificationMappings/*.json)
 
 #=== Folder and file declarations =======================
 
@@ -22,6 +26,9 @@ ESFM_OT_BOOKS := GEN EXO LEV NUM DEU JOS JDG RUT SA1 SA2 KI1 KI2 CH1 CH2 EZR NEH
 ESFM_NT_BOOKS := MAT MRK LUK JHN ACT ROM CO1 CO2 GAL EPH PHP COL TH1 TH2 TI1 TI2 TIT PHM HEB JAM PE1 PE2 JN1 JN2 JN3 JDE REV
 ESFM_LV_BOOKS := $(ESFM_OT_BOOKS) $(ESFM_NT_BOOKS)
 
+# HTML converters only generate OT/NT books, not front matter or extra books.
+HTML_BOOKS := $(filter $(ESFM_LV_BOOKS),$(BOOKS))
+
 # USFM book codes mapping (generated from bos_books_codes_py)
 USFM_OT_BOOKS := Gen Exo Lev Num Deu Jos Jdg Rut 1Sa 2Sa 1Ki 2Ki 1Ch 2Ch Ezr Neh Est Job Psa Pro Ecc Sng Isa Jer Lam Ezk Dan Hos Jol Amo Oba Jon Mic Nah Hab Zep Hag Zec Mal
 USFM_NT_BOOKS := Mat Mar Luk Jhn Act Rom 1Co 2Co Gal Eph Php Col 1Th 2Th 1Ti 2Ti Tit Phn Heb Jas 1Pe 2Pe 1Jn 2Jn 3Jn Jud Rev
@@ -33,10 +40,10 @@ derived_VREFs := ../exportedFiles/OET-RV.vref.txt ../exportedFiles/OET-LV.vref.t
 derived_USFM := $(patsubst %,../exportedFiles/cleanedUSFM/ReadersVersion/OET-RV_%.USFM,$(USFM_RV_BOOKS)) \
                 $(patsubst %,../exportedFiles/cleanedUSFM/LiteralVersion/OET-LV_%.USFM,$(USFM_LV_BOOKS))
 
-sideBySide_HTML := $(patsubst %,../exportedFiles/simpleHTML/SideBySide/%.html,$(BOOKS))
+sideBySide_HTML := $(patsubst %,../exportedFiles/simpleHTML/SideBySide/%.html,$(HTML_BOOKS))
 LV_OT_HTML := $(patsubst %,../exportedFiles/simpleHTML/LiteralVersion/%.html,$(ESFM_OT_BOOKS))
 LV_NT_HTML := $(patsubst %,../exportedFiles/simpleHTML/LiteralVersion/%.html,$(ESFM_NT_BOOKS))
-RV_HTML := $(patsubst %,../exportedFiles/simpleHTML/ReadersVersion/%.html,$(BOOKS))
+RV_HTML := $(patsubst %,../exportedFiles/simpleHTML/ReadersVersion/%.html,$(HTML_BOOKS))
 
 RV_ESFM := $(RV_ESFM_SOURCE)
 final_LV_OT_ESFM := $(patsubst %,../derivedTexts/auto_edited_OT_ESFM/OET-LV_%.ESFM,$(ESFM_OT_BOOKS))
@@ -126,7 +133,7 @@ $(LV_names_TSV_table): ScriptedOTUpdates/restoreNames.commandTable.tsv ScriptedV
 
 LV_HTML_sentinel := ../exportedFiles/simpleHTML/LiteralVersion/.html_sentinel
 
-$(LV_HTML_sentinel): $(final_LV_OT_ESFM) $(final_LV_NT_ESFM) convert_OET-LV_to_simple_HTML.py $(expanded_NT_wordtable)
+$(LV_HTML_sentinel): $(final_LV_OT_ESFM) $(final_LV_NT_ESFM) convert_OET-LV_to_simple_HTML.py oet_html_links.py oet_html_alignment.py oet_exports.py $(BOS_mapping_data) $(expanded_NT_wordtable)
 	@echo "\n\nConvert OET LV ESFM files to simple HTML…\n"
 	@$(UVrun) convert_OET-LV_to_simple_HTML.py
 	@touch $@
@@ -164,7 +171,7 @@ $(LV_NT_ESFM_sentinel): $(intermediate_LV_NT_ESFM) $(SBE) $(scripted_NT_updates)
 
 $(final_LV_NT_ESFM): $(LV_NT_ESFM_sentinel)
 
-../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv: $(initial_OT_TSV_tables) $(Clear_Bible_MaculaHebrew_OT_TSV) $(scripted_OT_updates) add_tags_to_OT_word_table.py $(BTranslit) $(HebrewTranslit)
+../intermediateTexts/modified_source_glossed_OSHB_ESFM/OET-LV_OT_word_table.tsv: $(initial_OT_TSV_tables) $(Clear_Bible_MaculaHebrew_OT_TSV) $(scripted_OT_updates) add_tags_to_OT_word_table.py theographic.py $(BOS_mapping_data) hebrew_word_alignment.py word_sequence_alignment.py ot_gloss_fallbacks.py $(BTranslit) $(HebrewTranslit)
 	@echo "\n\nAdd people/places/referent tags to OET OT word table…\n"
 	@$(UVrun) add_tags_to_OT_word_table.py -e
 	@echo "\n\nCopying and renaming OT morpheme and lemma tables from glossed_OSHB/ to modified_source_glossed_OSHB_ESFM/…\n"
@@ -175,7 +182,7 @@ $(intermediate_LV_OT_ESFM): $(expanded_OT_TSV_tables) extract_glossed_OSHB_OT_to
 	@echo "\n\nExtract OT from TSV table to ESFM files…\n"
 	@$(UVrun) extract_glossed_OSHB_OT_to_ESFM.py -e
 
-$(initial_OT_TSV_tables): $(WLC_OT_TSV_table) $(Clear_Bible_MaculaHebrew_OT_TSV) apply_Clear_Macula_OT_glosses.py
+$(initial_OT_TSV_tables): $(WLC_OT_TSV_table) $(Clear_Bible_MaculaHebrew_OT_TSV) apply_Clear_Macula_OT_glosses.py hebrew_gloss_order.py hebrew_word_alignment.py word_sequence_alignment.py ot_gloss_fallbacks.py
 	@echo "\n\nApply glosses from Macula Hebrew to OT (and reorder)…\n"
 	@$(UVrun) apply_Clear_Macula_OT_glosses.py
 	# @echo "\n\nCopying and renaming OT word and morpheme tables from glossed_OSHB/ to modified_source_glossed_OSHB_ESFM/…\n"
@@ -186,11 +193,11 @@ $(WLC_OT_TSV_table): $(short_OSHB_TSV) prepare_OSHB_for_glossing.py ourWLCHebrew
 	@echo "\n\nExpand columns in OT TSV and add our custom glosses…\n"
 	@$(UVrun) prepare_OSHB_for_glossing.py
 
-$(Clear_Bible_MaculaHebrew_OT_TSV): $(Clear_Bible_OT_lowfat_XML) $(WLC_OT_TSV_table) convert_ClearMaculaOT_to_our_TSV.py
+$(Clear_Bible_MaculaHebrew_OT_TSV): $(Clear_Bible_OT_lowfat_XML) $(WLC_OT_TSV_table) convert_ClearMaculaOT_to_our_TSV.py hebrew_word_alignment.py word_sequence_alignment.py ot_gloss_fallbacks.py
 	@echo "\n\nConvert Macula Hebrew from XML files to TSV…\n"
 	@$(UVrun) convert_ClearMaculaOT_to_our_TSV.py
 
-$(Clear_Bible_NT_lowfat_TSV): $(Clear_Bible_NT_lowfat_XML) $(BibleTags_NT_TSV_table) convert_ClearMaculaNT_to_TSV.py
+$(Clear_Bible_NT_lowfat_TSV): $(Clear_Bible_NT_lowfat_XML) $(BibleTags_NT_TSV_table) convert_ClearMaculaNT_to_TSV.py greek_word_alignment.py word_sequence_alignment.py
 	@echo "\n\nConvert Macula Greek from XML files to TSV…\n"
 	@$(UVrun) convert_ClearMaculaNT_to_TSV.py
 
@@ -206,7 +213,7 @@ $(intermediate_LV_NT_ESFM) $(original_NT_wordtable): $(CNTR_book_table) $(CNTR_c
 	@echo "\n\nExtract NT from TSV table to the various {BBB}_gloss.ESFM files…\n"
 	@$(UVrun) extract_VLT_NT_to_ESFM.py -e
 
-$(expanded_NT_wordtable): $(original_NT_wordtable) $(Clear_Bible_NT_lowfat_TSV) $(scripted_NT_updates) add_tags_to_NT_word_table.py $(BTranslit) $(HebrewTranslit) $(GreekTranslit)
+$(expanded_NT_wordtable): $(original_NT_wordtable) $(Clear_Bible_NT_lowfat_TSV) $(scripted_NT_updates) add_tags_to_NT_word_table.py theographic.py $(BOS_mapping_data) greek_word_alignment.py word_sequence_alignment.py $(BTranslit) $(HebrewTranslit) $(GreekTranslit)
 	@echo "\n\nAdd people/places/referent tags to OET NT word table…\n"
 	@$(UVrun) add_tags_to_NT_word_table.py -e
 	@echo "\n\nCopying final OET NT word table to OET-RV and BSB/MSB folders…\n"
@@ -230,12 +237,12 @@ $(final_RV_OT_word_tables): $(RV_word_tables_sentinel)
 RV_sentinel := ../translatedTexts/ReadersVersion/.connected_sentinel
 RV_HTML_sentinel := ../exportedFiles/simpleHTML/ReadersVersion/.html_sentinel
 
-$(RV_sentinel): $(LV_ESFM) $(RV_ESFM) $(CONNECTOR_PY) $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
+$(RV_sentinel): $(LV_ESFM) $(RV_ESFM) $(CONNECTOR_PY) $(BOS_mapping_data) $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
 	@echo "\n\nConnect OET-RV words to OET-LV word numbers (in full mode)…\n"
 	@$(UVrun) connect_OET-RV_words_via_OET-LV/connect_OET-RV_words_via_OET-LV.py
 	@touch $@
 
-$(RV_HTML_sentinel): $(RV_sentinel) convert_OET-RV_to_simple_HTML.py $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
+$(RV_HTML_sentinel): $(RV_sentinel) convert_OET-RV_to_simple_HTML.py oet_html_links.py oet_html_alignment.py oet_exports.py $(BOS_mapping_data) $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
 	@echo "\n\nConvert OET RV ESFM files to simple HTML…\n"
 	@$(UVrun) convert_OET-RV_to_simple_HTML.py
 	@touch $@
@@ -244,7 +251,8 @@ $(RV_HTML): $(RV_HTML_sentinel)
 
 #=== Side-by-side stuff =======================
 
-$(sideBySide_sentinel): $(LV_OT_HTML) $(LV_NT_HTML) $(RV_HTML) pack_HTML_side-by-side.py
+# Track converter completion as well as edits to individual generated HTML files.
+$(sideBySide_sentinel): $(LV_HTML_sentinel) $(RV_HTML_sentinel) $(LV_OT_HTML) $(LV_NT_HTML) $(RV_HTML) pack_HTML_side-by-side.py oet_html_links.py oet_html_alignment.py oet_exports.py $(BOS_mapping_data)
 	@echo "\n\nPack LV and RV HTML files side-by-side…\n"
 	@$(UVrun) pack_HTML_side-by-side.py
 	@touch $@
@@ -264,7 +272,7 @@ $(derived_USFM): $(USFM_sentinel)
 
 VREF_sentinel := ../exportedFiles/.vref_sentinel
 
-$(VREF_sentinel): $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_USFM_to_VREF.py
+$(VREF_sentinel): $(USFM_sentinel) $(LV_ESFM) $(RV_ESFM) convert_OET-LV-RV_USFM_to_VREF.py convert_OET-LV-RV_USFM_to_VPL.py oet_exports.py $(BOS_mapping_data)
 	@echo "\n\nCreate VREF.txt files from USFM…\n"
 	@$(UVrun) convert_OET-LV-RV_USFM_to_VREF.py
 	@echo "\n\nCreate VPL files from USFM…\n"

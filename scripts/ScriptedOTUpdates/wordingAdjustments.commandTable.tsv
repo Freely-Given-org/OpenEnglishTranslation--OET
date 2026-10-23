@@ -21,7 +21,7 @@ w									ark			box		1Chr 15:24 Use w/word flag so it doesn't mess with words co
 									casts			throws		Matt 17:19
 									cast himself			threw himself		John 21:7 (cast can be present or past!)
 									being/_cast			being/_thrown		Matt 3:10 (cast can be present or past!)
-									cast			throw		Matt 17:19 (cast can be present or past!)
+w									cast			throw		Matt 17:19 (cast can be present or past!) but prevent downcast
 									Cherubim			heavenly_beings		Heb 9:5 (plural)
 									commandment			command		Psa 119:6 (plural)
 									desert			wilderness		Jhn 1:23
@@ -39,7 +39,7 @@ w									forsake			abandon
 H									Hallelujah			Praise_יָהּ		Rev 19:3
 									Hosanna			Blessed_saviour		Matt 21:9 Lit. "save now"! Can this be improved further?
 									hosts			soldiers/messengers
-									host			soldier/messenger
+w									host			soldier/messenger
 									legion			army_division		Matt 26:53 6,100 + 726 = 6,826, also gets the plural
 									Legion			Many_thousands		Mrk 5:9 as a name
 									loosed			untied/released		Matt 16:19
@@ -47,7 +47,7 @@ H									Hallelujah			Praise_יָהּ		Rev 19:3
 #									loosening			untying/releasing		Dan 5:12 loosened knots
 #									loosen			untie/release		Isa 58:6 loosen the bonds
 									looses			unties/releases		Matt 16:19
-									loose			untie/release		Matt 16:19
+w									loose			untie/release		Matt 16:19
 									Lord			master
 									lord			master		1 Pet 3:6
 w									magi			wise_men

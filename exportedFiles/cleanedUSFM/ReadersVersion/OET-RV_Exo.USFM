@@ -1,4 +1,4 @@
-\id EXO - Open English Translation—Readers’ Version (OET-RV) v0.1.43
+\id EXO - Open English Translation—Readers’ Version (OET-RV) v0.1.44
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 EXO
@@ -70,7 +70,7 @@
 \p
 \v 8 “\add Yes,\add* go,” answered Far’oh’s daughter, and the girl went and got the baby’s mother.
 \v 9 “Take this baby,” said the \add princess\add*, “and breastfeed him for me, and I’ll pay you \add for doing it\add*.” \add So\add* the woman took the baby and \add looked after\add* him.
-\v 10 \add When\add* the boy had grown \add enough\add*, she brought him \add back\add* to Far’oh’s daughter and he became her son. She named him ‘Mosheh’\f + \fr 2:10 \ft More familiar to most English readers as ‘Moses’ from the Greek ‘Μωσῆς’ (Mōsaʸs) but Greek doesn’t have an ‘h’ or a ‘sh’ so by going through Greek we ended up with something quite different from his real name. However, English does have those sounds and letters, so there’s no reason why we can’t get this name correct.\f* \add (which means ‘pulled out’)\add* because she said that she’d \add plucked\add* him out of the \add river\add*.\x + \xo 2:10: \xt Acts 7:21.\x*
+\v 10 \add When\add* the boy had grown \add enough\add*, she brought him \add back\add* to Far’oh’s daughter and he became her son.\x + \xo 2:10: \xt Acts 7:21.\x* She named him ‘Mosheh’\f + \fr 2:10 \ft More familiar to most English readers as ‘Moses’ from the Greek ‘Μωσῆς’ (Mōsaʸs) but Greek doesn’t have an ‘h’ or a ‘sh’ so by going through Greek we ended up with something quite different from his real name. However, English does have those sounds and letters, so there’s no reason why we can’t get this name correct.\f* \add (which means ‘pulled out’)\add* because she said that she’d \add plucked\add* him out of the \add river\add*.
 \s1 Mosheh escapes to Midyan
 \p
 \v 11 \add Later on\add* when Mosheh was fully grown, he went out to visit \add the Hebrews\add* and saw their \add forced labour\add*, and he saw an Egyptian man beating a Hebrew man—one of his own people.\x + \xo 2:11-14: \xt Acts 7:23-28.\x*
@@ -78,7 +78,7 @@
 \v 13 The next day, he went out \add again\add* and wow, two Hebrew men were fighting each other, and he said to the man in the wrong, “Why are you hitting your \add fellow Hebrew\add*?”
 \p
 \v 14 “Who made you the ruler and judge over us?” \add the man replied\add*. “Are you \add planning\add* to kill me like you killed \add that\add* Egyptian?” Then Mosheh was afraid because he realised that what he’d done had \add probably become widely\add* known.
-\v 15 \add Indeed,\add* when Far’oh heard about it, he \add ordered\add* Mosheh to be killed. \add So\add* Mosheh had to flee from \add the king\add* and he \add took off east\add* to live in Midian and he stayed near the well.\x + \xo 2:15: \xt Acts 7:29; Heb 11:27.\x*
+\v 15 \add Indeed,\add* when Far’oh heard about it, he \add ordered\add* Mosheh to be killed. \add So\add* Mosheh had to flee from \add the king\add* and he \add took off east\add* to live in Midian\x + \xo 2:15: \xt Acts 7:29; Heb 11:27.\x* and he stayed near the well.
 \p
 \v 16 The priest there in Midian had seven daughters, and they would come to the well to draw water out and fill up the troughs there so their father’s \add sheep and goats\add* could drink.
 \v 17 Now some male shepherds came along and \add started to\add* shoo their flock away, but Mosheh got involved and helped them so that their animals could drink.
@@ -218,8 +218,8 @@
 \v 1 Then Yahweh said to Mosheh, “Now you’ll see what I’ll do to Far’oh. \add I’ll use my power to force him to\add* let them go, and then \add using my power again\add* he’ll \add actually\add* drive them out of his \add country\add*.”
 \s1 God promises to rescue the people
 \p
-\v 2 Then God spoke to Mosheh \add again\add*, “I am Yahweh\x + \xo 6:2-3: \xt Gen 17:1; 28:3; 35:11; Exo 3:13-15.\x*
-\v 3 and I \add revealed myself\add* to Abraham, to Isaac, and to Yacob as El Shaddai (God the provider) but they didn’t know me by my name Yahweh.
+\v 2 Then God spoke to Mosheh \add again\add*, “I am Yahweh
+\v 3 and I \add revealed myself\add* to Abraham, to Isaac, and to Yacob as El Shaddai (God the provider) but they didn’t know me by my name Yahweh.\x + \xo 6:2-3: \xt Gen 17:1; 28:3; 35:11; Exo 3:13-15.\x*
 \v 4 \add What’s more,\add* I made an agreement with them: to give them the Canaan region—the area which they had been staying in.
 \v 5 \add Furthermore,\add* I’ve heard the complaints from the Israelis who have been enslaved by the Egyptians, and I have remembered my agreement.
 \v 6 Therefore, tell the Israelis, ‘I am Yahweh and I will \add help you escape from\add* the \add control\add* of the Egyptians and rescue you from their slavery. I’ll buy you out of slavery using my \add power\add* and by \add punishing the Egyptians for this injustice\add*.
@@ -236,9 +236,9 @@
 \v 14 The following were the leaders of the clans:
 \p The sons of \bd Reuben\bd* (Yisra’el’s eldest son) were Hanoch, Pallu, Hezron, and Karmi, and \add they headed\add* the clans of Reuben.
 \p
-\v 15 \bd Simeon\bd*’s sons were Yemuel, Yamin, Ohad, Yakin, Zohar, and Shaul—the son of a Canaanite woman, and \add they headed\add* the clans of Simeon.
+\v 15 \bd Simeon\bd*’s sons were Yemuel, Yamin, Ohad, Yakin, Zohar, and Shaul—the son of a Canaanite \add woman\add*, and \add they headed\add* the clans of Simeon.
 \p
-\v 16 \bd Levi\bd*’s sons were Gershon, Kohath, and Merari. Levi was 137 years old when he died.\x + \xo 6:16-19: \xt Num 3:17-20; 26:57-58; 1Ch 6:16-19.\x*
+\v 16 \bd Levi\bd*’s sons were Gershon, Kohath, and Merari.\x + \xo 6:16-19: \xt Num 3:17-20; 26:57-58; 1Ch 6:16-19.\x* Levi was 137 years old when he died.
 \v 17 Gershon’s sons were Libni and Shimei, and \add they headed\add* their clans.
 \v 18 Kohath’s sons were Amram, Izhar, Hebron, and Uzziel. Kohath was 133 years old when he died.
 \v 19 Merari’s sons were Mahli and Mushi, and \add all of those headed\add* the clans of Levi.
@@ -321,7 +321,7 @@
 \v 16 Then Yahweh said to Mosheh, “Tell Aharon: Stretch out your staff and strike the dust on the ground, and it will turn into lice\f + \fr 8:16 \ft The Hebrew word ‘כֵּן/כִּנִּם’ (kēn/kinnim) could refer to either lice, gnats, or fleas. However, unlike lice, gnats don’t usually \+em reside\+em* on people and animals (which seems to be implied by the text).\f* all over Egypt.”
 \v 17 So Aharon held out his staff and struck the dust \add with it\add*, and \add the dust\add* became lice on the people and on the animals. All over Egypt, the dust turned into lice
 \v 18 and the sorcerers tried to do the same with their magic but they were unable to. \add So\add* there were lice on people and animals
-\v 19 and the magicians said to Far’oh, “This is God’s finger.” \add But Far’oh\add* \add was stubborn\add* and he didn’t listen to them, just as Yahweh had said \add previously\add*.\x + \xo 8:19: \xt Luk 11:20.\x*
+\v 19 and the magicians said to Far’oh, “This is God’s finger.”\x + \xo 8:19: \xt Luk 11:20.\x* \add But Far’oh\add* \add was stubborn\add* and he didn’t listen to them, just as Yahweh had said \add previously\add*.
 \s1 Plague 4: The swarm
 \p
 \v 20 Then Yahweh said to Mosheh, “Get up early in the morning and \add when you see Far’oh\add* coming down to the river, station yourself in front of \add him\add* and tell him, ‘Yahweh saw that you \add must\add* let my people go \add so\add* they can serve me.
@@ -374,7 +374,7 @@
 \p
 \v 22 “Raise your arm up toward the sky,” Yahweh told Mosheh, “and hail \add will strike\add* all over Egypt—on the people and animals and on every plant in the Egyptian countryside.”
 \v 23 \add So\add* Mosheh lifted his staff to the sky, and Yahweh sent thunder and hail, and \add lightning caused fires\add* on the land, and \add so\add* Yahweh rained hail \add down\add* onto Egypt.
-\v 24 There was hail, and \add also\add* fire coming \add down\add* in the middle of the hail. It was very heavy, such as had never been in all of Egypt since it became a nation.\x + \xo 9:24: \xt Rev 8:7; 16:21.\x*
+\v 24 There was hail, and \add also\add* fire coming \add down\add* in the middle of the hail.\x + \xo 9:24: \xt Rev 8:7; 16:21.\x* It was very heavy, such as had never been in all of Egypt since it became a nation.
 \v 25 The hail struck everything in Egypt—everything that was in the countryside, from people to animals. \add It also\add* struck every plant and broke every tree \add out\add* in the countryside.
 \v 26 Only in the Goshen region where the Israelis were, was there no hail.
 \p
@@ -453,7 +453,7 @@
 \c 12
 \s1 Meal preparations to avoid death
 \p
-\v 1 Then Yahweh told Mosheh and Aharon in Egypt,\x + \xo 12:1-13: \xt Lev 23:5; Num 9:1-5; 28:16; Deu 16:1-2.\x*
+\v 1 Then Yahweh told Mosheh and Aharon in Egypt,
 \v 2 “This month is to become the beginning of the months for you all—\add from now on\add* it will be the first month of the \add new\add* year.
 \v 3 Assemble the people and tell them that on the tenth of this month, every man who’s the head of the household must select a lamb or young goat \add for\add* \add his\add* \add family\add*.
 \v 4 \add But\add* if the household’s too small \add to cook\add* a whole animal, then \add neighbours can combine and share—budgeting\add* on how much each person eats.
@@ -463,7 +463,7 @@
 \v 8 They must roast them on the fire and eat the meat that night, along with flat bread and bitter herbs.
 \v 9 Don’t eat any of the meat raw and don’t boil it in water—it must be roasted over the fire with its head, legs, and internal organs.
 \v 10 Nothing must be left by morning—anything that’s \add not eaten\add* must be burnt in the fire.
-\v 11 And this is how you all must eat it: with your belts fastened on your waists, your sandals on your feet, and your \add staffs\add* in your \add hands\add*. You all must eat it in a hurry. It is the Passover to Yahweh.
+\v 11 And this is how you all must eat it: with your belts fastened on your waists, your sandals on your feet, and your \add staffs\add* in your \add hands\add*. You all must eat it in a hurry. It is the Passover to Yahweh.\x + \xo 12:1-13: \xt Lev 23:5; Num 9:1-5; 28:16; Deu 16:1-2.\x*
 \p
 \v 12 Then during that night, I will move throughout Egypt and I will \add kill\add* all the \add oldest males\add*—\add both people and animals\add*. I will \add execute\add* judgement on all the gods of Egypt. I am Yahweh.
 \v 13 That blood \add on the doorposts and lintel\add* will be your sign on the houses which you are all in. I will see the blood and will pass over above you all, and the plague won’t \add affect\add* you all with destruction as I strike against Egypt.
@@ -490,7 +490,7 @@
 \s1 The death of all the oldest male offspring
 \p
 \v 29 Then, in the middle of the night, Yahweh struck all the oldest males in Egypt, from the oldest son of Far’oh who sat on his throne, to the firstborn of the \add prisoner in the dungeon\add* and all \add oldest male offspring\add* of the animals.\x + \xo 12:29: \xt Exo 4:22-23.\x*
-\v 30 During the night, all the Egyptians got up, including Far’oh and all his servants. There was \add tremendous wailing throughout\add* Egypt because \add it was a very rare house\add* where there wasn’t someone dead.
+\v 30 During the night, all the Egyptians got up, including Far’oh and all his servants. There was \add tremendous wailing throughout\add* Egypt because \add it was a very rare house\add* where there wasn’t \add someone\add* dead.
 \v 31 \add Far’oh\add* called for Mosheh and Aharon in the night and told \add them\add*, “Pack up and get out from among my people—you \add two\add* and all the other Israelis. Go and serve Yahweh as you’ve said.
 \v 32 Also take your flocks and your herds as you’ve said, and go. And bless me as well.
 \p
@@ -600,8 +600,8 @@
 \q1 “I will sing to Yahweh because he’s been so successful—
 \q1 he’s thrown both the \add horses\add* and their riders into the sea.
 \q1
-\v 2 I will sing about Yahweh, my source of strength,\x + \xo 15:2: \xt Psa 118:14; Isa 12:2.\x*
-\q2 and the one who saves me.
+\v 2 I will sing about Yahweh, my source of strength,
+\q2 and the one who saves me.\x + \xo 15:2: \xt Psa 118:14; Isa 12:2.\x*
 \q1 I will praise him because he’s my god—
 \q1 he’s my father’s god and I will honour him.
 \q1
@@ -691,7 +691,7 @@
 \v 2 and all the Israelis murmured against Mosheh and Aharon \add there\add* in the wilderness,
 \v 3 saying, “If only \add Yahweh had killed us\add* in Egypt, \add where we’d be\add* sitting by a pot of meat eating bread until we’re full, because you’ve brought us out into this wilderness to \add starve us all to death\add*.”
 \p
-\v 4 Then Yahweh told Mosheh, “\add Just\add* watch me make food rain down from the sky for you all. Then the people will be able to go out every day and gather enough for that day so that I can test them: Will they obey my law or not?\x + \xo 16:4: \xt Yhn 6:31.\x*
+\v 4 Then Yahweh told Mosheh, “\add Just\add* watch me make food rain down from the sky for you all.\x + \xo 16:4: \xt Yhn 6:31.\x* Then the people will be able to go out every day and gather enough for that day so that I can test them: Will they obey my law or not?
 \v 5 \add But every Friday\add* they can \add gather and\add* prepare twice as much as what they gather on the other days.”
 \p
 \v 6 \add So\add* Mosheh and Aharon told all the Israelis, “This evening you’ll all know that Yahweh was the one who brought you out from Egypt.
@@ -716,7 +716,7 @@
 \p
 \v 21 \add So\add* \add from that day onwards,\add* they gathered it every morning, depending on how many they were feeding, and then when the sun got hot, \add the rest\add* melted \add away\add*.
 \v 22 On the \add Friday\add*, they gathered twice as much—around \add four litres\add* for each person—and all the leaders of the community came and informed Mosheh
-\v 23 and he told them, “This is what Yahweh said: Tomorrow is a rest day to be \add set aside\add* for Yahweh. \add So bake or cook your food, and keep the left-overs overnight to use in\add* the morning.”\x + \xo 16:23: \xt Exo 20:8-11.\x*
+\v 23 and he told them, “This is what Yahweh said: Tomorrow is a rest day to be \add set aside\add* for Yahweh.\x + \xo 16:23: \xt Exo 20:8-11.\x* \add So bake or cook your food, and keep the left-overs overnight to use in\add* the morning.”
 \v 24 \add So\add* they did what Mosheh had told them and kept the left-overs until the morning, and it didn’t stink or have any bugs in it.
 \v 25 On that Saturday morning, Mosheh told them, “Go ahead and eat the previously cooked food because today is set aside for Yahweh and so you all won’t find any more \add on the ground\add*—
 \v 26 you’ll gather it for six days \add each week\add*, but on the Saturday, there won’t be any.”
@@ -728,7 +728,7 @@
 \p
 \v 31 The Israelis named it ‘manna’ \add (which sounds like Hebrew ‘What is it?’)\add*. It was white like coriander seed, and it tasted like \add wafers\add* with honey.\x + \xo 16:31: \xt Num 11:7-8.\x*
 \v 32 Then Mosheh said, “This is the procedure that Yahweh has commanded: Keep a full measure of it for preservation for your descendants so that they can see the food which I fed you in the wilderness, when I brought you out from Egypt.”
-\v 33 \add So\add* Mosheh said to Aharon, “Take a jar and fill it with the full two litres of manna. Place it in front of Yahweh for preservation for your descendants.”\x + \xo 16:33: \xt Heb 9:4.\x*
+\v 33 \add So\add* Mosheh said to Aharon, “Take a jar and fill it with the full two litres of manna.\x + \xo 16:33: \xt Heb 9:4.\x* Place it in front of Yahweh for preservation for your descendants.”
 \v 34 \add So\add* Aharon \add prepared the jar and kept it\add* (and would \add eventually\add* place it \add in the box\add* with the \add stone tablets\add*.)
 \v 35 The Israelis ate manna for forty years, until they \add eventually\add* \add left the wilderness\add* and came to the \add borders\add* of the region of Canaan.\x + \xo 16:35: \xt Josh 5:12.\x*
 \v 36 (Two litres is called an ‘omer’ which is a tenth of a ‘efah’.)
@@ -763,8 +763,8 @@
 \s1 Mosheh’s father-in-law visits
 \p
 \v 1 \add Now\add* Yetro (Jethro), the priest at Midian and Mosheh’s father-in-law, heard about everything that God had done for Mosheh and for his people the Israelis—that Yahweh had brought \add the Israelis\add* out of Egypt.
-\v 2 (Yetro had \add been looking after\add* Mosheh’s wife Zipporah \add and their two sons\add* after he had sent her back\x + \xo 18:2-3: \xt Exo 2:21-22.\x*
-\v 3 along with \add their\add* two sons. One was named ‘Gershom’ \add (which sounds like the Hebrew word for ‘foreigner’)\add* because \add Mosheh\add* had said, “I’ve been a foreigner living in another country.”\x + \xo 18:3: \xt Acts 7:29.\x*
+\v 2 (Yetro had \add been looking after\add* Mosheh’s wife Zipporah\x + \xo 18:2-3: \xt Exo 2:21-22.\x* \add and their two sons\add* after he had sent her back
+\v 3 along with \add their\add* two sons.\x + \xo 18:3: \xt Acts 7:29.\x* One was named ‘Gershom’ \add (which sounds like the Hebrew word for ‘foreigner’)\add* because \add Mosheh\add* had said, “I’ve been a foreigner living in another country.”
 \v 4 \add Their\add* other son’s name was ‘Eliezer’ \add (which sounds like the Hebrew word that means ‘God helps me’\add*, because Mosheh had said, “God, who my father worshipped, has helped me and \add stopped the Egyptian king Far’oh from killing me\add*.”))
 \p
 \v 5 \add So\add* \add now\add* Mosheh’s father-in-law brought \add Mosheh’s\add* wife and sons to the wilderness where \add the people\add* were camping \add near\add* the mountain of God.
@@ -805,8 +805,8 @@
 \v 3 Yahweh called Mosheh from the mountain, so he climbed up and God gave him this message and asked him to pass it on to Yacob’s descendants, the Israelis:
 \p
 \v 4 “You yourselves saw what I did to the Egyptians—how I carried you on eagles’ wings and brought you all \add here\add* to myself.
-\v 5 And now, if you all carefully listen to my \add words\add* and keep my agreement, then \add your nation\add* will be my possession, \add separate\add* from all the \add others\add*, because all the earth is mine,\x + \xo 19:5-6: \xt 1Pe 2:9.\x*
-\v 6 \add So\add* you all will be my kingdom of priests and a nation \add dedicated to me\add*.” (That’s the \add message\add* to pass on to the Israelis.)\x + \xo 19:6: \xt Rev 1:6; 5:10.\x*
+\v 5 And now, if you all carefully listen to my \add words\add* and keep my agreement, then \add your nation\add* will be my possession, \add separate\add* from all the \add others\add*,\x + \xo 19:5-6: \xt 1Pe 2:9.\x* because all the earth is mine,
+\v 6 \add So\add* you all will be my kingdom of priests and a nation \add dedicated to me\add*.”\x + \xo 19:6: \xt Rev 1:6; 5:10.\x* (That’s the \add message\add* to pass on to the Israelis.)
 \v 7 \add So\add* Mosheh descended \add again\add* and summoned the Israeli elders, then he passed on that \add message\add* \add just\add* as Yahweh had commanded him,
 \v 8 and all the people responded together, \add agreeing\add*, “We’ll do everything that Yahweh has said.” Then Mosheh took the people’s response back to Yahweh
 \v 9 and Yahweh told \add him\add*, “Look, I’ll come to you in a thick cloud so that the people will be able to hear when I speak with you \add so they’ll also continue to\add* trust you.”
@@ -818,14 +818,14 @@
 \v 14 \add So\add* Mosheh went down the mountain to the people. He purified them and they \add all\add* washed their clothes,
 \v 15 and he told \add them\add*, “Abstain from sexual relations, and be ready by the third day.”
 \p
-\v 16 \add So\add* on the morning of the third day, there was thunder and lightning and a thick cloud on the mountain, and an extremely loud horn blast, and all the people in the camp were trembling.\x + \xo 19:16: \xt Rev 4:5.\x*
+\v 16 \add So\add* on the morning of the third day, there was thunder and lightning\x + \xo 19:16: \xt Rev 4:5.\x* and a thick cloud on the mountain, and an extremely loud horn blast, and all the people in the camp were trembling.
 \v 17 Then Mosheh \add led\add* the people out of the camp to \add go and\add* meet God, and they stationed themselves at the \add foot\add* of the mountain.
 \v 18 Yahweh descended onto Mt. Sinai \add surrounded\add* by fire and the entire mountain smoked. Its smoke went up like the smoke from a furnace, and the whole mountain trembled violently.
 \v 19 Then it happened \add after\add* the sound of the horn got extremely loud, that Mosheh was speaking and God was answering him in a voice.
 \v 20 Yahweh had descended onto the top of Mt. Sinai, and \add he\add* called Mosheh up to the top of the mountain, \add so\add* Mosheh ascended.
 \v 21 \add But\add* Yahweh told \add him\add*, “Go \add back\add* down and warn the people in case they force their way through to look at \add me\add* and many of them perish.
 \v 22 Also, the priests who come nearer to \add me\add*, they \add must be very careful to purify themselves\add* in case \add I\add* \add suddenly punish\add* them.”
-\v 23 \add But\add* Mosheh \add questioned\add* Yahweh, “The people aren’t able to come up on Mt. Sinai, because you yourself warned us,\x + \xo 19:23 \xt 19:12.\x* ‘Set boundaries all around the mountain to keep it sacred.’ ”
+\v 23 \add But\add* Mosheh \add questioned\add* Yahweh, “The people aren’t able to come up on Mt. Sinai, because you yourself warned us, ‘Set boundaries all around the mountain to keep it sacred.’ ”\x + \xo 19:23 \xt 19:12.\x*
 \v 24 “Go \add back\add* down,” Yahweh \add responded\add*, “and bring Aharon back up with you. \add However,\add* the priests and the people \add must not cross the boundary\add* to come up to \add me\add*, in case \add I\add* \add suddenly punish\add* them.”
 \v 25 \add So\add* Mosheh went down and spoke to the people.
 \c 20
@@ -848,7 +848,7 @@
 \v 10 The seventh day is a rest day for Yahweh your god: you mustn’t do any work—not you, or your children, or your male or female servants, or your cattle, or the foreigners \add living among you\add*—
 \v 11 because Yahweh made the heavens and earth, the sea, and everything that’s in them in six days. Then he rested on the seventh day, so that’s why \add he\add* blessed the rest day and made it sacred.\x + \xo 20:11: \xt Gen 2:1-3; Exo 31:17.\x*
 \li1
-\v 12 Honour your father and your mother, so that \add you’ll have a long life\add* on the land that your god Yahweh is about to give you.\x + \xo 20:12: a \xt Deu 27:16; Mat 15:4; 19:19; Mrk 7:10; 10:19; Luk 18:20; Eph 6:2; \xo b \xt Eph 6:3.\x*
+\v 12 Honour your father and your mother,\x + \xo 20:12: \xt Deu 27:16; Mat 15:4; 19:19; Mrk 7:10; 10:19; Luk 18:20; Eph 6:2.\x* so that \add you’ll have a long life\add* on the land that your god Yahweh is about to give you.\x + \xo 20:12: \xt Eph 6:3.\x*
 \li1
 \v 13 You mustn’t murder.\x + \xo 20:13: \xt Gen 9:6; Lev 24:17; Mat 5:21; 19:18; Mrk 10:19; Luk 18:20; Rom 13:9; Jam 2:11.\x*
 \li1
@@ -891,7 +891,7 @@
 \v 8 If the man who bought her \add wanted her to become his slave-wife\add*, but \add later\add* \add he isn’t pleased with her behaviour\add*, he must allow her to be \add bought back\add* by her \add relatives\add*. He has no authority to sell her on to outsiders, because that would \add break the understanding of proper treatment\add* of her.
 \v 9 Or if he selected her \add to become his son’s slave-wife\add*, then he must treat her \add like a daughter would expect to be treated\add*.
 \v 10 If he \add go on to take another slave-wife\add*, he mustn’t reduce \add the first one’s\add* food or clothing, or her marital \add rights\add*,
-\v 11 \add but\add* if he doesn’t provide these three things to her, then she can go free without \add having to pay anything\add*.
+\v 11 \add but\add* if he doesn’t provide these three \add things\add* to her, then she can go free without \add having to pay anything\add*.
 \s1 Rules about violence to others
 \p
 \v 12 Anyone who strikes someone and that person dies, must definitely be put to death.\x + \xo 21:12: \xt Lev 24:17.\x*
@@ -971,7 +971,7 @@
 \v 23 \add because\add* if you \add do\add* and they ask me to help them, I’ll help them
 \v 24 and \add get angry\add*. I’ll \add cause you all to die\add* in battle, and your wives will become widows and your children will become fatherless.
 \p
-\v 25 If you loan money to any my people who are poor, you mustn’t act like an \add impartial\add* creditor to \add them\add*—you mustn’t charge \add them\add* interest.\x + \xo 22:25: \xt Lev 25:35-38; Deu 15:7-11; 23:19-20.\x*
+\v 25 If you loan money to any my people \add who are\add* poor, you mustn’t act like an \add impartial\add* creditor to \add them\add*—you mustn’t charge \add them\add* interest.\x + \xo 22:25: \xt Lev 25:35-38; Deu 15:7-11; 23:19-20.\x*
 \v 26 If you actually take the your neighbour’s \add cloak\add* as a security, you must return it to them by sunset,\x + \xo 22:26-27: \xt Deu 24:10-13.\x*
 \v 27 because it’s their only covering. What else could they cover themselves with when they try to sleep? If they cry out to me, I’ll \add act on it\add*, because I’m compassionate.
 \p
@@ -1048,7 +1048,7 @@
 \v 6 Mosheh took half of the blood \add from the sacrifices\add* and put it into basins. He sprinkled \add the other\add* half of the blood onto the altar.
 \v 7 Then he took the scroll with the agreement \add written on it\add* and read it out loud to the people, and they \add responded\add*, “We’ll obey everything that Yahweh has instructed.”
 \p
-\v 8 Then Mosheh took the blood \add in the bowls\add* and sprinkled it onto the people, telling \add them\add*, “Look. \add This is\add* the blood \add confirming\add* the agreement that Yahweh has made with you according to \add what you just heard\add*.”\x + \xo 24:8: a \xt Mat 26:28; Mrk 14:24; Luk 22:20; 1Cor 11:25; Heb 10:29; \xo b \xt Heb 9:19-20.\x*
+\v 8 Then Mosheh took the blood \add in the bowls\add* and sprinkled it onto the people,\x + \xo 24:8: \xt Heb 9:19-20.\x* telling \add them\add*, “Look. \add This is\add* the blood \add confirming\add* the agreement\x + \xo 24:8: \xt Mat 26:28; Mrk 14:24; Luk 22:20; 1Cor 11:25; Heb 10:29.\x* that Yahweh has made with you according to \add what you just heard\add*.”
 \p
 \v 9 Then Mosheh, Aharon, Nadab, Abihu, and seventy Israeli elders climbed up \add the mountain\add*
 \v 10 and they saw the god of Yisrael. Under his feet was something like a tile made of sapphire that \add looked so pure that it was as clear\add* as the sky.
@@ -1235,7 +1235,7 @@
 \v 28 Then tie the rings on the sacred pouch to the rings on the apron with a blue cord so that the pouch sits above the waistband and can’t come loose from the apron.
 \p
 \v 29 Then \add whenever\add* Aharon enters the sacred inner room \add to stand\add* in front of \add me\add*, he’ll be carrying the names of Yisra’el’s sons over his heart on the sacred pouch that’ll be used for \add making decisions\add*.
-\v 30 Then place the ‘Urim’ and the ‘Tummim’\f + \fr 28:30 \ft These two objects appear abruptly in the text—they haven’t been described previously—in fact, they’re not described anywhere, so we don’t really know much about them except that it seems they were used somehow to indicate Yahweh’s decision on important matters. Although we presume that Mosheh must have already been familiar with them, sadly we’re unable to translate these two Hebrew words, because we’re not.\f* in the sacred pouch so they’ll be over Aharon’s heart when he goes in before Yahweh, thus Aharon will continually bear the decisions of the Israelis over his heart before Yahweh.\x + \xo 28:30: \xt Num 27:21; Deu 33:8; Ezr 2:63; Neh 7:65.\x*
+\v 30 Then place the ‘Urim’ and the ‘Tummim’\f + \fr 28:30 \ft These two objects appear abruptly in the text—they haven’t been described previously—in fact, they’re not described anywhere, so we don’t really know much about them except that it seems they were used somehow to indicate Yahweh’s decision on important matters. Although we presume that Mosheh must have already been familiar with them, sadly we’re unable to translate these two Hebrew words, because we’re not.\f*\x + \xo 28:30: \xt Num 27:21; Deu 33:8; Ezr 2:63; Neh 7:65.\x* in the sacred pouch so they’ll be over Aharon’s heart when he goes in before Yahweh, thus Aharon will continually bear the decisions of the Israelis over his heart before Yahweh.
 \s1 The other parts of the uniform
 \r (Exo. 39:22-31)
 \p
@@ -1337,20 +1337,20 @@
 \p
 \v 11 Then Yahweh told Mosheh:
 \v 12 Whenever you \add take a census of the Israeli men\add*, each man must pay a ransom to Yahweh for his life when they’re counted, and then the counting won’t cause \add deadly diseases\add* among them.
-\v 13 As each man crosses over to stand with those who’ve been counted, he must pay give a half-shekel coin as an offering to \add me\add*. (That’s half of the official shekel weight of 12 grams.)\x + \xo 30:13: \xt Exo 38:25-26; Mat 17:24.\x*
+\v 13 As each man crosses over to stand with those who’ve been counted, he must pay give a half-shekel coin as an offering to \add me\add*.\x + \xo 30:13: \xt Exo 38:25-26; Mat 17:24.\x* (That’s half of the official shekel weight of 12 grams.)
 \v 14 Every man who’s twenty or older must pay this contribution to \add me\add* when he’s counted—
 \v 15 the wealthy aren’t expected to pay more, and the poor must not pass less than this amount when they pay this ransom to \add me\add* to make atonement for your lives.
 \v 16 Then you must take that money from the Israelis and use it for work on the \add sacred\add* tent—it will be a reminder to \add me\add* that you all have made atonement for your lives.
 \s1 The washbasin
 \p
 \v 17 The Yahweh told Mosheh:
-\v 18 Make a bronze washbasin with a bronze base. Place it between the \add sacred\add* tent and the altar, and fill it with water\x + \xo 30:18: \xt Exo 38:8.\x*
+\v 18 Make a bronze washbasin with a bronze base.\x + \xo 30:18: \xt Exo 38:8.\x* Place it between the \add sacred\add* tent and the altar, and fill it with water
 \v 19 and Aharon and his sons must wash their hands and feet in it.
 \v 20 Before they go into the \add sacred\add* tent, they must wash with water so that won’t die, and \add also\add* when they’re going to the altar to burn \add offerings\add* to \add me\add*—
 \v 21 they must wash their hands and feet so they won’t die. This will be a rule for them and for all their descendants throughout the generations.
 \s1 The anointing oil
 \p
-\v 22 Then Yahweh told Mosheh:\x + \xo 30:22-38: \xt Exo 37:29.\x*
+\v 22 Then Yahweh told Mosheh:
 \v 23 Then you yourself must collect these spices: 6kg of \add fragrant sap\add* named myrrh, then 3kg of fragrant cinnamon, 3kg of fragrant cane,
 \v 24 and 6kg of fragrant casia bark. (Use the official weight for everything.) Also, four litres of olive oil.
 \v 25 Get a professional perfumer to make this into a \add sacred\add*, fragrant, anointing oil.
@@ -1369,7 +1369,7 @@
 \v 35 and get a professional ointment mixer to add salt and make it into pure incense that will be sacred.
 \v 36 Pulverise some of it into a fine powder and put it in front of the box containing the \add stone\add* slabs inside the sacred tent. This incense must be regarded as being very \add sacred\add*.
 \v 37 No one else should make any incense for yourselves with this same recipe—it must be regarded as sacred to \add me\add*.
-\v 38 Anyone who makes anything similar for its fragrance must be \add expelled from the community\add*.
+\v 38 Anyone who makes anything similar for its fragrance must be \add expelled from the community\add*.\x + \xo 30:22-38: \xt Exo 37:29.\x*
 \c 31
 \s1 Bezalel and Oholiab
 \r (Exo. 35:30–36:1)
@@ -1402,7 +1402,7 @@
 \v 12 Then Yahweh told Mosheh:
 \v 13 Tell the Israelis that you all must certainly observe the \add weekly\add* rest day because \add the rest day\add* is a sign between me and you all throughout your generations, so that you will know that I am Yahweh, who \add wants to distinguish you from other nations\add*.
 \v 14 \add So\add* you all must observe the rest day because it’s sacred for you. Anyone who \add treats it as an ordinary day\add* must be put to death. Anyone who works on it must be \add expelled from the community\add*.
-\v 15 There’s six days for working, and then the seventh is a rest day—\add dedicated\add* to \add me\add*. Anyone who works on it must certainly be put to death.\x + \xo 31:15: \xt Exo 20:8-11; 23:12; 34:21; 35:2; Lev 23:3; Deu 5:12-14.\x*
+\v 15 There’s six days for working, and then the seventh is a rest day—\add dedicated\add* to \add me\add*.\x + \xo 31:15: \xt Exo 20:8-11; 23:12; 34:21; 35:2; Lev 23:3; Deu 5:12-14.\x* Anyone who works on it must certainly be put to death.
 \v 16 The Israelis must observe the rest day for all future generations. There’s \add no ending\add* to this agreement
 \v 17 between me and the Israelis. It’s a never-ending sign that \add I\add* made the heavens and the earth in six days, and then rested on the seventh day and was refreshed.\x + \xo 31:17: \xt Exo 20:11.\x*
 \p
@@ -1457,7 +1457,7 @@
 \c 33
 \s1 God tells them to leave Mt. Sinai
 \p
-\v 1 Then Yahweh \add told\add* Mosheh, “Go \add and\add* pack up from here, you and the people that you brought out of Egypt. Go to the land which I promised to Abraham, to Yitshak, and to Yacob, \add when I told them that\add* I’d give it to \add their descendants\add*.\x + \xo 33:1: a \xt Gen 12:7; \xo b \xt Gen 26:3; \xo c \xt Gen 28:13.\x*
+\v 1 Then Yahweh \add told\add* Mosheh, “Go \add and\add* pack up from here, you and the people that you brought out of Egypt. Go to the land which I promised to Abraham,\x + \xo 33:1: \xt Gen 12:7.\x* to Yitshak,\x + \xo 33:1: \xt Gen 26:3.\x* and to Yacob,\x + \xo 33:1: \xt Gen 28:13.\x* \add when I told them that\add* I’d give it to \add their descendants\add*.
 \v 2 I’ll send an angel \add ahead of you\add*, and I’ll drive out the Canaanites, the Amorites, the Hittites, the Perizzites, the Hivites, and the Yebusites.
 \v 3 \add It’s\add* a land flowing with milk and honey, but I won’t \add stay among you\add* in case I \add decide to\add* destroy you on the way because you’re \add stubborn\add* people.”\x + \xo 33:3 \xt 32:9.\x*
 \p
@@ -1517,19 +1517,19 @@
 \p
 \v 18 You must observe the Flat Bread Celebration \add every year\add* as I instructed you. For seven days you must eat \add only\add* bread that hasn’t been risen, at the appointed time in late March or early April because that’s when you came out of Egypt.\x + \xo 34:18: \xt Exo 12:14-20; Lev 23:6-8; Num 28:16-25.\x*
 \v 19 All of your eldest male offspring belong to me, \add including your sons\add* and the first males born from your cattle and sheep and goats.\x + \xo 34:19: \xt Exo 13:2.\x*
-\v 20 If it’s a male donkey, a lamb can be given as a ransom instead, but if you don’t pay a ransom then you must kill the donkey. \add It’s compulsory to\add* ransom your eldest sons. \add Don’t come to worship me without bringing something\add*.\x + \xo 34:20: \xt Exo 13:13.\x*
+\v 20 If it’s a male donkey, a lamb can be given as a ransom instead, but if you don’t pay a ransom then you must kill the donkey. \add It’s compulsory to\add* ransom your eldest sons.\x + \xo 34:20: \xt Exo 13:13.\x* \add Don’t come to worship me without bringing something\add*.
 \p
 \v 21 \add Each week,\add* you should only work for six days, then you must rest on the seventh day—\add even\add* during ploughing and harvest times.\x + \xo 34:21: \xt Exo 20:9-10; 23:12; 31:15; 35:2; Lev 23:3; Deu 5:13-14.\x*
 \p
-\v 22 \add In the spring\add* when you begin to harvest the first wheat crop, you must have a \it Celebration of Weeks\it*, and at the end of the year \add in the autumn\add*, have a \it \+add Finished\+add* Harvest Celebration\it*.\x + \xo 34:22: a \xt Exo 23:16; Lev 23:15-21; Num 28:26-31; \xo b \xt Lev 23:39-43.\x*
+\v 22 \add In the spring\add* when you begin to harvest the first wheat crop, you must have a \it Celebration of Weeks\it*,\x + \xo 34:22: \xt Exo 23:16; Lev 23:15-21; Num 28:26-31.\x* and at the end of the year \add in the autumn\add*, have a \it \+add Finished\+add* Harvest Celebration\it*.\x + \xo 34:22: \xt Lev 23:39-43.\x*
 \p
 \v 23 Three times every year, all your men must present themselves before me—Isra’el’s god, the master Yahweh.
 \v 24 I will drive out the people groups ahead of you and expand your borders, and no one will \add think of taking\add* your land \add when they know that\add* you present yourselves to \add me\add* three times a year.
 \p
 \v 25 Don’t \add wave bread\add* \add that’s been risen\add* when offering a sacrifice. Don’t allow any part of the sacrifice for the ‘pass-over’ celebration to \add still be there in\add* the morning.\x + \xo 34:25: \xt Exo 12:10.\x*
 \p
-\v 26 You must bring the best of the first parts of your harvests to \add my\add* residence.\x + \xo 34:26: a \xt Deu 26:2; \xo b \xt Deu 14:21.\x*
-\p Don’t boil a young goat in its mother’s milk.
+\v 26 You must bring the best of the first parts of your harvests to \add my\add* residence.\x + \xo 34:26: \xt Deu 26:2.\x*
+\p Don’t boil a young goat in its mother’s milk.\x + \xo 34:26: \xt Deu 14:21.\x*
 \p
 \v 27 Yahweh \add told\add* Mosheh, “Write down these words for yourself, because \add it’s in accordance with\add* these words that I’ve made an agreement with you and with Yisrael.”
 \v 28 \add Mosheh\add* was there with Yahweh for forty days and nights, and \add during that time\add* he didn’t eat or \add even\add* drink water, and he wrote the ten commands of the agreement on the \add stone\add* slabs.
@@ -1545,7 +1545,7 @@
 \s1 Instructions for the rest day
 \p
 \v 1 Mosheh assembled all the Israelis and told them, “These are the things that Yahweh has instructed you to do.
-\v 2 \add Every week\add*, you can work for six days, but the seventh day will be a sacred rest day, \add dedicated to\add* Yahweh. Anyone who works on that day must be put to death.\x + \xo 35:2: \xt Exo 20:8-11; 23:12; 31:15; 34:21; Lev 23:3; Deu 5:12-14.\x*
+\v 2 \add Every week\add*, you can work for six days, but the seventh day will be a sacred rest day, \add dedicated to\add* Yahweh.\x + \xo 35:2: \xt Exo 20:8-11; 23:12; 31:15; 34:21; Lev 23:3; Deu 5:12-14.\x* Anyone who works on that day must be put to death.
 \v 3 Don’t light a fire\f + \fr 35:3 \ft This is effectively a command not to do any \+bd cooking\+bd* on the rest day.\f* in any of your homes on the rest \add days\add*.”
 \s1 The offering for Yahweh
 \r (Exo. 25:1-9)
@@ -1639,7 +1639,7 @@
 \v 35 \add They\add* made a curtain from twisted finely-spun linen, and a skillful workman embroidered winged creatures on them with blue, purple, scarlet yarn.
 \v 36 \add They\add* made four pillars of acacia wood overlaid with gold, as well as their gold hooks and four bases cast from silver.
 \v 37 \add They\add* made a curtain for the tent entrance—an embroiderer made it from twisted finely-spun linen and blue, purple, and scarlet yarn,
-\v 38 along with it’s five pillars and their hooks. The tops of the pillars were overlaid with gold, and their five bases \add were made of\add* bronze.
+\v 38 along with its five pillars and their hooks. The tops of the pillars were overlaid with gold, and their five bases \add were made of\add* bronze.
 \c 37
 \s1 Making the sacred box
 \r (Exo. 25:10-22)
@@ -1697,7 +1697,7 @@
 \s1 Making the washbasin
 \r (Exo. 30:18)
 \p
-\v 8 Then he made a bronze washbasin and base. \add They were made\add* with the bronze from the mirrors of the serving women who served at the entrance of the \add sacred\add* tent.\x + \xo 38:8: \xt Exo 30:18.\x*
+\v 8 Then he made a bronze washbasin and base.\x + \xo 38:8: \xt Exo 30:18.\x* \add They were made\add* with the bronze from the mirrors of the serving women who served at the entrance of the \add sacred\add* tent.
 \s1 Making the courtyard
 \r (Exo. 27:9-19)
 \p
@@ -1722,7 +1722,7 @@
 \p
 \v 24 The gold that they used for the construction of the sacred tent was measured at 965kg. This was the gold from the wave offering and was weighed using the official standard weights.
 \v 25 The silver contributed by the people was measured at 3,420kg \add also\add* using the official weights.\x + \xo 38:25-26: \xt Exo 30:11-16.\x*
-\v 26 \add During the census,\add* every male who was twenty years old or older paid a 5g silver coin—a total of 603,550 men.\x + \xo 38:26: \xt Mat 17:24.\x*
+\v 26 \add During the census,\add* every male who was twenty years old or older paid a 5g silver coin\x + \xo 38:26: \xt Mat 17:24.\x*—a total of 603,550 men.
 \v 27 They’d used 3,400kg of silver to make the bases \add under the pillars that supported\add* the sacred tent’s curtains (34kg for each of one hundred bases)
 \v 28 and the other twenty kilograms were used for the hooks for the pillars and for the caps on the tops of them.
 \v 29 The bronze from the wave offering came to 2,400kg

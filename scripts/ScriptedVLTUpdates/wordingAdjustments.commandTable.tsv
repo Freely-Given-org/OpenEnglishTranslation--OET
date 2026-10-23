@@ -12,6 +12,7 @@ Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	R
 									all¦ ˱of¦˲_you¦_all¦			all¦ ˱of¦˲_you¦		2Th 3:16 (also handles 'of_all of_you_all') WARNING: could match 'call of...'
 									Amen			Truly		Rev 19:4
 									an¦_angel¦			a¦_messenger¦		Jhn 12:29 Luke 2:9
+									˓an¦˒_angel¦			˓a¦˒_messenger¦		Mat 2:13 Keep the added article correct when angel becomes messenger
 w									angel			messenger		Use w/word flag so it doesn't mess with words like 'evangelise'
 									angels			messengers		1 Pet 3:22
 									˓an¦˒_ark¦			˓a¦˒_box¦		{ 1 Pet 3:20
@@ -32,13 +33,15 @@ w									ark			box		{ 1 Pet 3:20 Use w/word flag so it doesn't mess with words 
 									being¦˒_cast¦			being¦˒_thrown¦		Matt 3:10 (cast can be present or past!)
 									was¦˒_cast¦			was¦˒_thrown¦		Jhn 15:6
 					JHN_19:24				cast			threw		(cast can be present or past!)
-									cast			throw		Matt 17:19 (cast can be present or past!)
+w									cast			throw		Matt 17:19 (cast can be present or past!) but prevent downcast
 									CASTRAT			castrat		Matt 19:12 Restore castrate, castrated, castrating, castration
 									Cherubim¦			heavenly¦_beings¦		Heb 9:5 (plural)
 									Christians¦			followers¦_of¦_the¦_messiah¦
 									Christian¦			follower¦_of¦_the¦_messiah¦
 d									Christ¦			chosen¦_one¦/messiah¦
 									commandment			command		Also works for plural Rev 14:12
+									contrastly			in_contrast		Mat 4:7
+									Contrastly			In_contrast		Mat 4:7
 w									cross			stake		Use w/word flag so it doesn't mess with words like "across"
 									crucified him			executed_ him _on_a_stake		Two word numbers still NOT HANDLED by ScriptedBibleEditor
 									crucified¦			executed¦_on¦_a¦_stake¦

@@ -18,6 +18,11 @@ from oet_alignment import (SEMANTIC_CODES, MOVEMENT_FUNCTION_WORDS, alignment_un
                            linked_phrase_columns, phrase_edges, propose_links, same_clause)
 
 
+# These nouns often supply the English head of an adjective. Even an exact
+# leftover "person" elsewhere in the verse does not establish its referent.
+CONTEXTUAL_HEADS = {'person', 'people', 'one', 'ones', 'thing', 'things'}
+
+
 @dataclass(frozen=True)
 class Candidate:
     """An atomic set of (RV occurrence, source number) assignments.
@@ -124,7 +129,7 @@ class Evidence:
         return positions
 
 
-def unique_word_candidates(tokens, evidence):
+def unique_word_candidates(tokens, evidence, bound_context=True):
     """Recover mutual unique lexical matches, counting linked occurrences too.
 
     Related forms, pronoun substitutions and contraction subjects require
@@ -161,7 +166,7 @@ def unique_word_candidates(tokens, evidence):
         number = evidence.columns[next(iter(positions))].number
         # Function words are especially prone to borrowing a verb/article from
         # a different clause. They need an ordered, unoccupied anchor window.
-        if token.text.casefold() in MOVEMENT_FUNCTION_WORDS:
+        if bound_context and token.text.casefold() in MOVEMENT_FUNCTION_WORDS | CONTEXTUAL_HEADS:
             i = tokens.index(token)
             left = next((t for t in reversed(tokens[:i]) if t.linkable and t.number is not None), None)
             right = next((t for t in tokens[i+1:] if t.linkable and t.number is not None), None)
@@ -302,11 +307,13 @@ def select_links(tokens, columns, lexical_score, normalise, number_variants,
     evidence = Evidence(columns, lexical_score, normalise, number_variants, directional_index)
     result = {}
     while True:
+        indexes = {t: i for i, t in enumerate(live)}
         units = alignment_units(live)
         candidates = list(unique_word_candidates(live, evidence))
         candidates.extend(phrase_candidates(units, evidence, phrase_index))
         candidates.extend(alias_candidates(live, evidence))
         candidates.extend(repeat_candidates(live, evidence))
+        anchors = list(existing_claims(units, evidence, phrase_index))
         # A marked clause swap needs lexical/name anchors before its rotation
         # can be inferred. Never bootstrap it by assuming the original order.
         anchored = [t for t in live if t.linkable and t.number is not None]
@@ -318,18 +325,95 @@ def select_links(tokens, columns, lexical_score, normalise, number_variants,
                 # includes phrases such as "you all" and whole semantic spans.
                 groups = []
                 for t, n, reason in sorted(proposals, key=lambda p: (p[0].line, p[0].start)):
-                    if groups and groups[-1][-1][1] == n and live.index(t) == live.index(groups[-1][-1][0])+1:
+                    if groups and groups[-1][-1][1] == n and indexes[t] == live.index(groups[-1][-1][0])+1:
                         groups[-1].append((t, n, reason))
                     else:
                         groups.append([(t, n, reason)])
                 candidates.extend(Candidate(tuple((t,n) for t,n,_ in group),
                     frozenset(j for t,n,_ in group for j in evidence.locations(t,n)),
                     group[0][2], 3) for group in groups)
-        anchors = list(existing_claims(units, evidence, phrase_index))
         # The alignment solver has already checked ownership of saved anchors
         # per English column. Passing its whole bundle through a second coarse
         # ownership check would incorrectly reject other glosses of that word.
-        contextual = [c for c in candidates if c.priority == 3]
+        # Include unique lexical witnesses outside the current anchor window
+        # for vetoes only. If "was" is stranded by reordered "true", that still
+        # does not license the later "been" to take its exact LV "was".
+        strong = [candidate for candidate in unique_word_candidates(live, evidence, bound_context=False)
+                  if all((score := evidence.word(t, columns[j])) and score[1] >= 90
+                          for t, _ in candidate.bindings for j in candidate.claims)]
+        whole_phrases = select_candidates([c for c in candidates if c.reason == 'curated phrase'], anchors)
+        clause_fences = []
+        if not reversed_clauses:
+            for candidate in strong:
+                token, _ = candidate.bindings[0]
+                if (token.text.casefold() in {'and', 'but', 'or'} and token.boundary_before
+                        and all(columns[j].boundary_before for j in candidate.claims)):
+                    clause_fences.append((indexes[token], candidate.claims))
+        def respects_stronger_evidence(candidate):
+            for token, number in candidate.bindings:
+                positions = evidence.locations(token, number)
+                for boundary, fence in clause_fences:
+                    if ((indexes[token] < boundary and min(positions) > max(fence))
+                            or (indexes[token] > boundary and max(positions) < min(fence))):
+                        return False
+                if token.code in SEMANTIC_CODES:
+                    continue
+                score = max((s[1] for j in evidence.locations(token, number)
+                             if (s := evidence.word(token, columns[j]))), default=0)
+                if score < 90 and any(token in dict(phrase.bindings)
+                                     and dict(phrase.bindings)[token] != number for phrase in whole_phrases):
+                    # The meaning of a reviewed whole expression outweighs a
+                    # weak match of one word ("does what's right" is moral
+                    # righteousness, not an adjacent "makes straight").
+                    return False
+                for alternative in strong:
+                    other, other_number = alternative.bindings[0]
+                    if token == other and score < 90 and number != other_number:
+                        return False
+                    if (score < 90 and number != other_number
+                            and other.text.casefold() in {'is', 'are', 'was', 'were', 'be', 'been'}
+                            and indexes[other] == indexes[token]-1
+                            and same_clause([other, token])):
+                        # Let the stronger anchor settle before a weaker edge
+                        # changes the order of the gap around it.
+                        if max(positions) < min(alternative.claims):
+                            return False
+                    # A different occurrence's exact word is stronger evidence
+                    # than this auxiliary's inflection ("was true ... been").
+                    if token != other and candidate.claims & alternative.claims:
+                        best = max(evidence.word(other, columns[j])[1] for j in alternative.claims)
+                        if score < best:
+                            return False
+            return True
+        contextual = [c for c in candidates if c.priority == 3 and respects_stronger_evidence(c)]
+        proposed = {t: n for candidate in contextual for t, n in candidate.bindings}
+        def complete_repeated_alternative(candidate):
+            for token, number in candidate.bindings:
+                if token.code in SEMANTIC_CODES:
+                    continue
+                score = max((s[1] for j in evidence.locations(token, number)
+                             if (s := evidence.word(token, columns[j]))), default=0)
+                if score >= 90:
+                    continue
+                copies = [t for t in live if t.linkable and t.text.casefold() == token.text.casefold()]
+                alternatives = {col.number for col in columns if evidence.word(token, col)}
+                if len(copies) > 1 and len(alternatives) > 1 and any(
+                        t.number is None and t not in proposed for t in copies):
+                    i = indexes[token]
+                    # An immediately aligned neighbour still identifies local
+                    # phrases such as "from glory to glory", even if a third
+                    # occurrence elsewhere in the verse remains unresolved.
+                    if not any(0 <= i+step < len(live) and live[i+step].number is not None
+                               and same_clause(live[min(i,i+step):max(i,i+step)+1])
+                               and any(j+step in evidence.locations(live[i+step], live[i+step].number)
+                                       for j in evidence.locations(token, number))
+                               for step in (-1, 1)):
+                        return False
+            return True
+        # A partial ordered path is insufficient for repeated weak alternatives
+        # in reordered phrases: the second "metres" must not take the first
+        # "cubits" while the first "metres" has no match at all.
+        contextual = [candidate for candidate in contextual if complete_repeated_alternative(candidate)]
         selected = contextual + select_candidates([c for c in candidates if c.priority != 3], anchors + contextual)
         # Validate function words against the content anchors selected in THIS
         # round too. Keep a compatible joint alignment intact: discarding all
@@ -341,11 +425,11 @@ def select_links(tokens, columns, lexical_score, normalise, number_variants,
                    and t.text.casefold() not in MOVEMENT_FUNCTION_WORDS
                    for t, _ in c.bindings)]
         if content:
-            indexes = {t: i for i, t in enumerate(live)}
             fixed = {i: t.number for i, t in enumerate(live) if t.linkable and t.number is not None}
             fixed.update((indexes[t], n) for c in content for t, n in c.bindings)
             def fits_content(candidate):
-                if candidate in content or candidate.reason in {
+                generic_head = any(t.text.casefold() in CONTEXTUAL_HEADS for t, _ in candidate.bindings)
+                if (candidate in content and not generic_head) or candidate.reason in {
                         'curated phrase', 'traditional name alias', 'explicit same-verse repeat'}:
                     return True
                 rows = [indexes[t] for t, _ in candidate.bindings]
@@ -358,7 +442,7 @@ def select_links(tokens, columns, lexical_score, normalise, number_variants,
                             owner_number == number and same_clause(live[min(indexes[token],owner):max(indexes[token],owner)+1])
                             for owner, owner_number in fixed.items()):
                         return False
-                if candidate.priority == 3:
+                if candidate.priority == 3 and not generic_head:
                     return True  # Preserve the graph's joint positional evidence.
                 if reversed_clauses:
                     return False  # Stabilise lexical/name anchors before recovery.
@@ -366,6 +450,78 @@ def select_links(tokens, columns, lexical_score, normalise, number_variants,
                 hi = max(evidence.locations(live[right], fixed[right]), default=len(columns)) if right is not None else len(columns)
                 return any(lo <= j <= hi for j in candidate.claims)
             selected = [c for c in selected if fits_content(c)]
+        # A copula inside an LV content gloss needs its following RV predicate.
+        # This also prevents a measurement's "was" from borrowing another
+        # measurement's "+was_cubits".
+        # An article/possessive belongs to its own adjacent head, not any
+        # surviving article inside a large alignment gap. In "the benefits ...
+        # advice", LV "the counsel" cannot supply "the benefits". A following
+        # content anchor also disambiguates "its foundations" from "its height".
+        assigned = {t: t.number for t in live if t.linkable and t.number is not None}
+        assigned.update((t, n) for candidate in selected for t, n in candidate.bindings)
+        def has_head(candidate):
+            if candidate.reason in {'curated phrase', 'traditional name alias', 'explicit same-verse repeat'}:
+                return True
+            for token, number in candidate.bindings:
+                if token.code is None and token.text.casefold() == 'who':
+                    head = next((t for t in live[indexes[token]+1:]
+                                 if t.linkable and t.text.casefold() not in MOVEMENT_FUNCTION_WORDS), None)
+                    if head is not None and head in assigned:
+                        # A later relative clause's "who" cannot supply the
+                        # English expansion of an earlier adjective/participle.
+                        predicates = [next((col for col in columns[j+1:]
+                                            if col.text.casefold() not in MOVEMENT_FUNCTION_WORDS), None)
+                                      for j in evidence.locations(token, number)]
+                        if not any(col is not None and col.number == assigned[head] for col in predicates):
+                            return False
+                if (token.code not in SEMANTIC_CODES
+                        and token.text.casefold() in {'and', 'or', 'but'}
+                        and any(col.number == number and col.noun
+                                and col.text.casefold() not in MOVEMENT_FUNCTION_WORDS for col in columns)
+                        and any(n == number and t.text.casefold() not in MOVEMENT_FUNCTION_WORDS
+                                for t, n in assigned.items())):
+                    head = next((t for t in live[indexes[token]+1:] if t.linkable
+                                 and t.text.casefold() not in MOVEMENT_FUNCTION_WORDS), None)
+                    if head is None or assigned.get(head) != number:
+                        return False
+                if (token.code not in SEMANTIC_CODES
+                        and token.text.casefold() in {'is', 'are', 'was', 'were', 'be', 'been', 'being'}
+                        and any(col.number == number and col.text.casefold() not in MOVEMENT_FUNCTION_WORDS
+                                for col in columns)):
+                    # An auxiliary inside a source gloss belongs to that
+                    # predicate, not a nearby relative phrase: "who are poor
+                    # are blessed" must not lend blessed's "are" to poor.
+                    head = next((t for t in live[indexes[token]+1:]
+                                 if t.text.casefold() not in MOVEMENT_FUNCTION_WORDS), None)
+                    if (head is None or assigned.get(head) != number
+                            or not same_clause(live[indexes[token]:indexes[head]+1])):
+                        return False
+                if token.code is not None or token.text.casefold() not in {
+                        'the', 'a', 'an', 'its', 'my', 'your', 'his', 'her', 'our', 'their'}:
+                    continue
+                if not (any(n == number and t.text.casefold() not in MOVEMENT_FUNCTION_WORDS
+                            for t, n in assigned.items())
+                        or (token.text.casefold() in {'its', 'my', 'your', 'his', 'her', 'our', 'their'}
+                            and any(col.number == number and col.noun for col in columns))):
+                    continue  # No competing head has been established yet.
+                following = live[indexes[token]+1:]
+                head = next((t for t in following if t.linkable), None)
+                if head is None or not same_clause(live[indexes[token]:indexes[head]+1]):
+                    return False
+                if head not in assigned:
+                    return False
+                if assigned[head] == number:
+                    continue
+                if (token.text.casefold() in {'its', 'my', 'your', 'his', 'her', 'our', 'their'}
+                        and any(col.number == number and col.noun for col in columns)):
+                    return False  # A noun's suffix cannot possess the next noun.
+                if not any(0 < k-j <= 3
+                           and all(col.text.casefold() in MOVEMENT_FUNCTION_WORDS for col in columns[j+1:k])
+                           for j in evidence.locations(token, number)
+                           for k in evidence.locations(head, assigned[head])):
+                    return False
+            return True
+        selected = [candidate for candidate in selected if has_head(candidate)]
         additions = {}
         for candidate in sorted(selected, key=lambda c: (-c.priority, c.reason,
                                 tuple((t.line,t.start,n) for t,n in c.bindings))):

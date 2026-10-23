@@ -21,6 +21,7 @@ Uses the OET-RV USFM to create the headers
         so they'll display side-by-side.
 
 CHANGELOG:
+    2026-10-22 Use BOS source profiles for mapped metadata, passages and export/navigation.
     2023-03-29 Make entire top&bottom section headings into clickable links
     2023-07-24 Expand out Checking instructions
     2023-08-07 Move MRK before MAT, add some more styles
@@ -31,6 +32,8 @@ CHANGELOG:
 from gettext import gettext as _
 from typing import List, Tuple, Optional
 from pathlib import Path
+from oet_html_alignment import align_sections, load_lv
+from oet_html_links import copy_reference_pages
 from datetime import datetime
 import logging
 import re
@@ -44,7 +47,7 @@ from BibleOrgSys.Reference.BibleOrganisationalSystems import BibleOrganisational
 import bos_books_codes_py
 
 
-LAST_MODIFIED_DATE = '2026-10-06' # by RJH
+LAST_MODIFIED_DATE = '2026-10-22' # by RJH
 SHORT_PROGRAM_NAME = "pack_HTML_side-by-side"
 PROGRAM_NAME = "Pack RV and LV simple HTML together"
 PROGRAM_VERSION = '0.63'
@@ -1696,6 +1699,7 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
     book_html = ''
     book_h_field = None
     section1_headers = []
+    pending_section_headers = []
     for usfm_line in rvUSFM.split( '\n' ):
         if not usfm_line: continue # Ignore blank lines
         assert usfm_line.startswith( '\\' )
@@ -1734,9 +1738,11 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
             except ValueError: V, rest = rest, ''
             if '-' in V: # for a verse range
                 V = V.split( '-', 1 )[0]
+            section1_headers.extend((C,V,heading) for heading in pending_section_headers)
+            pending_section_headers.clear()
         elif marker == 's1':
             # print( f"{BBB} {C} {V} '{rest}'" )
-            section1_headers.append( (C,str(int(V)+1),rest) ) # We assume it will be the next verse -- right most of the time
+            pending_section_headers.append(rest)
 
     # Get the intro of the RV chapter/verse HTML and append it
     ourRVStartMarkerIndex = rvHTML.index( '<div class="bookIntro">' )
@@ -1754,129 +1760,12 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
     ourLVEndMarkerIndex = lvHTML.rindex( '<p class="chapterLinks"><a title="Go to chapter" href="#C1">C1</a>' ) # This follows </div>
     lvMidHHTML = lvHTML[ourLVStartMarkerIndex:ourLVEndMarkerIndex]
 
-    # Now break the RV up by section
-    rvHTMLExpandedSections = []
-    for n, rvSectionHTML in enumerate( rvMidHHTML.split( '<div class="rightS1Box">' ) ):
-        try:
-            CclassIndex1 = rvSectionHTML.index( 'id="C' )
-            CclassIndex2 = rvSectionHTML.index( '"', CclassIndex1+4 )
-            rvStartCV = rvSectionHTML[CclassIndex1+4:CclassIndex2]
-            CclassIndex8 = rvSectionHTML.rindex( 'id="C' )
-            CclassIndex9 = rvSectionHTML.index( '"', CclassIndex8+4 )
-            rvEndCV = rvSectionHTML[CclassIndex8+4:CclassIndex9]
-            # dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"\n  {BBB} {n:,}: {startCV=} {endCV=}")
-        except ValueError:
-            # dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n:,}: No Cid in {rvSectionHTML=}" )
-            rvStartCV, rvEndCV = '', 'C1'
-        if n == 0:
-            rvSectionHTML = rvSectionHTML.replace( '<div class="BibleText">', '' )
-        # else: # actually only for the last one
-        rvSectionHTML = rvSectionHTML.replace( '</div><!--BibleText-->', '' )
-        if '</div><!--rightS1Box-->' in rvSectionHTML:
-            rvSectionHTML = f'<div class="rightS1Box">{rvSectionHTML}'
-        assert rvSectionHTML.count('<div ')+rvSectionHTML.count('<div>') == rvSectionHTML.count('</div'), f"{BBB} {n} RV {rvStartCV} {rvEndCV} {rvSectionHTML.count('<div ')}+{rvSectionHTML.count('<div>')}={rvSectionHTML.count('<div ')+rvSectionHTML.count('<div>')} != {rvSectionHTML.count('</div')} '{rvSectionHTML}'"
-        assert rvSectionHTML.count('<p ')+rvSectionHTML.count('<p>') == rvSectionHTML.count('</p'), f"{BBB} {n} RV {rvStartCV} {rvEndCV} {rvSectionHTML.count('<p ')}+{rvSectionHTML.count('<p>')}={rvSectionHTML.count('<p ')+rvSectionHTML.count('<p>')} != {rvSectionHTML.count('</p')} '{rvSectionHTML}'"
-        rvHTMLExpandedSections.append( (rvStartCV, rvEndCV, rvSectionHTML) )
-
-    # Now we need to break the LV into the same number of sections
-    lvHTMLSections = []
-    lastLVindex = 0
-    hadVersificationErrors = False
-    for n, (rvStartCV, rvEndCV, rvSectionHTML) in enumerate( rvHTMLExpandedSections ):
-        nextStartCV = rvHTMLExpandedSections[n+1][0] if n < len(rvHTMLExpandedSections)-1 else 'DONE'
-        if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-            dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"\n{BBB} {n}/{len(rvHTMLExpandedSections)}: {rvStartCV=} {rvEndCV=} {nextStartCV=} {lastLVindex=} lvSectionHTML='{lvMidHHTML[lastLVindex:lastLVindex+60]}...'" )
-        lvSectionHTML = lvMidHHTML[lastLVindex:]
-        if not rvStartCV:
-            # assert n == 0 ??? No longer true now we have book introductions
-            # assert lastLVindex == 0 ??? No longer true now we have book introductions
-            LVindex1 = lvSectionHTML.index( '<p class="LVsentence" id="C1">' )
-            section = lvSectionHTML[:LVindex1]
-            if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} '{lvSectionHTML[:LVindex1]}' then '{section[:60]}...{section[-30:]}'" )
-            if section == '<div class="BibleText">\n': section = ''
-            # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"A ({len(section):,}) '{section}'" ); assert False, "We want to stop here"
-            lastLVindex = LVindex1
-        elif rvStartCV == 'C1': # First CV section
-            LVindex1 = lvSectionHTML.index( f'<p class="LVsentence" id="C1">' )
-            if nextStartCV == 'DONE':
-                section = lvSectionHTML[LVindex1:]
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} remaining chars '{lvSectionHTML[:LVindex1]}' then '{lvSectionHTML[LVindex1:LVindex1+60]}...'" )
-                # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"B1 ({len(section):,}) '{section}'" ); assert False, "We want to stop here"
-            else:
-                LVindex9 = lvSectionHTML.index( f' id="{nextStartCV}"', LVindex1+24 )
-                # Find our way back to the start of the HTML marker
-                for x in range( 30 ):
-                    LVindex8 = LVindex9 - x
-                    if lvSectionHTML[LVindex8] == '<':
-                        break
-                else:
-                    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"{lvSectionHTML[LVindex8-50:LVindex8+50]}")
-                    not_far_enough
-                section = lvSectionHTML[LVindex1:LVindex8].removesuffix( '\n<p class="LVsentence">' )
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} {LVindex8-LVindex1} chars '{lvSectionHTML[:LVindex1]}' then '{lvSectionHTML[LVindex1:LVindex1+60]}...'" )
-                # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"B2 ({len(section):,}) '{section}'" ); assert False, "We want to stop here"
-            lastLVindex += LVindex1
-            # assert False, "We want to stop here"
-        else:
-            assert n > 0
-            try: LVindex2 = lvSectionHTML.index( f' id="{rvStartCV}"' )
-            except ValueError:
-                logging.critical( f"{BBB} Unable to find '{rvStartCV}' in LV -- probable versification error" )
-                hadVersificationErrors = True
-                LVindex2 = lvSectionHTML.index( f' id="C' ) # Just find any suitable place -- we won't have the correct chunk
-            # Find our way back to the start of the HTML marker
-            for x in range( 30 ):
-                LVindex1 = LVindex2 - x
-                if lvSectionHTML[LVindex1] == '<':
-                    break
-            else: not_far_enough
-            if nextStartCV == 'DONE':
-                section = lvSectionHTML[LVindex1:]
-                assert section.startswith('<'), section[:10]
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} remaining chars '{lvSectionHTML[:LVindex1]}' then '{lvSectionHTML[LVindex1:LVindex1+60]}...'" )
-                # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"C1 ({len(section):,}) '{section}'" ); assert False, "We want to stop here"
-            else: # in the middle
-                try: LVindex9 = lvSectionHTML.index( f' id="{nextStartCV}"', LVindex2+6 )
-                except ValueError:
-                    logging.error( f"{BBB} {rvStartCV} Unable to find '{nextStartCV}' in LV -- probable versification error" )
-                    hadVersificationErrors = True
-                    LVindex9 = lvSectionHTML.index( f' id="C', LVindex2+8 ) # Just find any suitable place
-                # Find our way back to the start of the HTML marker
-                for x in range( 30 ):
-                    LVindex8 = LVindex9 - x
-                    if lvSectionHTML[LVindex8] == '<':
-                        break
-                else: not_far_enough
-                section = lvSectionHTML[LVindex1:LVindex8]
-                assert section.startswith('<'), section[:10]
-                if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-                    dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  {n}: {LVindex1=} {LVindex8=} {LVindex8-LVindex1} chars '{lvSectionHTML[LVindex1:LVindex1+40]}' then '{lvSectionHTML[LVindex8:LVindex8+60]}...'" )
-                # if BBB == 'MRK': dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"C2 ({len(section):,}) '{section}'" ); assert False, "We want to stop here"
-            lastLVindex += LVindex1
-            # assert False, "We want to stop here"
-        section = section.removesuffix( '\n' ).removesuffix( '</div><!--BibleText-->' ).removesuffix( '<p class="LVsentence">' ).removesuffix( '\n' )
-        if section.startswith( '<a class="upLink" ' ) or section.startswith( '<span class="v" ' ):
-            section = f'<p class="LVsentence">{section}'
-        assert section.count('<div ')+section.count('<div>') == section.count('</div'), f"{BBB} {n} LV {rvStartCV} {rvEndCV} {section.count('<div ')}+{section.count('<div>')}={section.count('<div ')+section.count('<div>')} != {section.count('</div')} '{section}'"
-# NEXT LINE TEMPORARILY DISABLED
-        if section.count('<p ')+section.count('<p>') != section.count('</p'):
-            logging.error( f"{BBB} {n} LV {rvStartCV} {rvEndCV} has mismatching <p> openers: {section.count('<p ')}+{section.count('<p>')}={section.count('<p ')+section.count('<p>')} != {section.count('</p')}\n        '{section}'" )
-        # assert section.count('<p ')+section.count('<p>') == section.count('</p'), f"{BBB} {n} LV {startCV} {endCV} {section.count('<p ')}+{section.count('<p>')}={section.count('<p ')+section.count('<p>')} != {section.count('</p')} '{section}'"
-        lvHTMLSections.append( section )
-
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 4:
-        dPrint( 'Verbose', DEBUGGING_THIS_MODULE, f"  Got {len(rvHTMLExpandedSections)} RV section(s) and {len(lvHTMLSections)} LV section(s)")
-    assert len(lvHTMLSections) == len(rvHTMLExpandedSections), f"{len(lvHTMLSections)} != {len(rvHTMLExpandedSections)}"
-    # if lastLVindex < len(lvMidHHTML) - 1:
-    #     newSection = lvMidHHTML[lastLVindex:]
-    #     dPrint( 'Normal', DEBUGGING_THIS_MODULE, f"\n  Need to append last LV bit {len(lvMidHHTML)-lastLVindex:,} chars '{lvMidHHTML[lastLVindex:lastLVindex+40]}'")
-    #     lvHTMLSections[-1] = f'{lvHTMLSections[-1]}{newSection}'
-    #     # assert False, "We want to stop here"
+    # BOS retrieves complete native passages before HTML is paired. Sections
+    # sharing an indivisible passage are joined; no arbitrary anchor fallback.
+    pairs = align_sections(BBB,rvMidHHTML,lvMidHHTML,
+                          load_lv(str(project_folderpath), 'OT' if BBB in BOOKLIST_OT39 else 'NT'))
+    rvHTMLExpandedSections = [('', '', rv) for rv,lv in pairs]
+    lvHTMLSections = [lv for rv,lv in pairs]
 
     book_html = f'{book_html}\n{TWO_COLUMN_START_HTML}\n'
 
@@ -1891,10 +1780,8 @@ def extract_and_combine_simple_HTML( BBB:str, rvUSFM:str, rvHTML:str, lvHTML:str
             with open( OET_HTML_OutputFolderPath.joinpath(f'{BBB}-LV-{q}.html'), 'wt', encoding='utf-8' ) as html_output_file:
                 html_output_file.write( f'<!DOCTYPE html><html lang="en-US"><head><title>LV {BBB} {q}</title></head><body>\n' \
                                         f'<p>{_startCV} to {_endCV} (next {nextStartCV})</p>\n{lv}</body></html>' )
-        # Before we make the page, we need to remove the CV id (duplicate) fields from the LV
-        Cregex, CVregex = ' id="C\\d{1,3}"', ' id="C\\d{1,3}V\\d{1,3}"'
-        lv = re.sub( CVregex, '', lv)
-        lv = re.sub( Cregex, '', lv)
+        lv = re.sub(r' id="(C\d+(?:V\d+)?)"', r' id="LV-\1"', lv)
+        lv = re.sub(r'href="#(C\d+(?:V\d+)?)"', r'href="#LV-\1"', lv)
         if DEBUGGING_THIS_MODULE:
             rv = f'{rv}<hr style="height:2px;border-width:0;color:gray;background-color:red">'
             lv = f'{lv}<hr style="height:2px;border-width:0;color:gray;background-color:orange">'
@@ -1935,13 +1822,25 @@ def handle_Psalms( psa_start_html:str, psa_html:str, psa_end_html:str ) -> bool:
     # print(psa_top_links_html); assert False, "We want to stop here"
 
     # print(psa_html); assert False, "We want to stop here"
-    SEARCH_CHUNK = '<span class="cPsa" id="C' # Near the start of the RV chunk
-    psa_html_bits = psa_html.split( SEARCH_CHUNK )
-    assert len(psa_html_bits) == 151, len(psa_html_bits)
-
-    # print(psa_html_bits[0]); assert False, "We want to stop here"
-    endIntroIx = psa_html_bits[0].index( '<!--bookIntro-->' )
-    psa_intro_html = psa_html_bits[0][:endIntroIx+16]
+    endIntroIx = psa_html.index('<!--bookIntro-->')
+    psa_intro_html = psa_html[:endIntroIx+16]
+    psalm_chunks = {str(c): [] for c in range(1,151)}
+    pending = []
+    chunk_pattern = re.compile(r'<div class="chunkRV">(.*?)</div><!--chunkRV-->\s*<div class="chunkLV">(.*?)</div><!--chunkLV-->', re.S)
+    for match in chunk_pattern.finditer(psa_html):
+        chapters = set(re.findall(r' id="C(\d+)V\d+"', match[1]))
+        if not chapters:
+            pending.append(match[0])
+            continue
+        if len(chapters) != 1:
+            raise ValueError(f'Combined RV passage crosses Psalm pages: {chapters}')
+        chapter = chapters.pop()
+        psalm_chunks[chapter].extend((*pending, match[0]))
+        pending.clear()
+    if pending:
+        psalm_chunks['150'].extend(pending)
+    if any(not chunks for chunks in psalm_chunks.values()):
+        raise ValueError('Missing mapped Psalm HTML chunks')
 
     for c in range( 1, 150+1):
         start_html = SBS_START_HTML.replace( '__TITLE__', f"Song (Psalm) {c}" )
@@ -1953,14 +1852,9 @@ def handle_Psalms( psa_start_html:str, psa_html:str, psa_end_html:str ) -> bool:
             .replace( '__REST__', '')
         psalmHTML = f'{start_html}{back_forth_links}\n<h1>Song (Psalm) {c}</h1>\n' \
                     f'{SBS_DISCLAIMER_HTML}\n{SBS_BOOK_INTRO_HTML1}'
-        chunkEndIx = psa_html_bits[c-1].rindex( '<!--chunkLV-->' )
-        leftover_HTML = psa_html_bits[c-1][chunkEndIx+14:]
-        # print(leftover_HTML); assert False, "We want to stop here"
-        chunkEndIx = psa_html_bits[c].rindex( '<!--chunkLV-->' )
-        main_PSA_HTML = psa_html_bits[c][:chunkEndIx+14]
-        # print(main_PSA_HTML); assert False, "We want to stop here"
-        psalmHTML = f'{psalmHTML}{TWO_COLUMN_START_HTML}{leftover_HTML}{SEARCH_CHUNK}' \
-                    f'{main_PSA_HTML}\n</div><!--container-->\n{back_forth_links}\n{END_HTML}'
+        # Use complete mapped RV/LV pairs, including each Psalm's title.
+        main_PSA_HTML = '\n'.join(psalm_chunks[str(c)])
+        psalmHTML = f'{psalmHTML}{TWO_COLUMN_START_HTML}{main_PSA_HTML}\n</div><!--container-->\n{back_forth_links}\n{END_HTML}'
         assert "'" not in psalmHTML
         with open( OET_HTML_OutputFolderPath.joinpath(f'PSA_{c}.html'), 'wt', encoding='utf-8' ) as html_psalm_file:
             html_psalm_file.write( psalmHTML )
@@ -1983,59 +1877,11 @@ def handle_Psalms( psa_start_html:str, psa_html:str, psa_end_html:str ) -> bool:
 # NOTE: An identical function exists in convert_OET-RV_to_simple_HTML.py
 #   but we can't import that one because of the hyphen in the name
 def copy_wordlink_files( sourceFolder:Path, destinationFolder:Path ) -> bool:
-    """
-    Copy the W_nnnnn.html wordlink and lemma HMTL files across.
-        (There's around 168,262 of these.)
+    """Copy reference pages, mapping LV backlinks to this RV-based navigation."""
+    count = copy_reference_pages(sourceFolder, destinationFolder, 'OET-RV')
+    vPrint('Normal', DEBUGGING_THIS_MODULE, f'Copied {count:,} reference pages with mapped links.')
+    return True
 
-    Also P_ and L_ person and location files.
-    """
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET NT word-link HTML files from {sourceFolder}…" )
-    try: os.makedirs( destinationFolder.joinpath( 'W/' ) )
-    except FileExistsError: pass # it was already there
-    copyCount = 0
-    for filename in glob.glob( os.path.join( sourceFolder.joinpath( 'W/' ), '*.html' ) ):
-        shutil.copy( filename, destinationFolder.joinpath( 'W/' ) ) # Want the time to be updated or else "make" doesn't function correctly
-        # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
-        copyCount += 1
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET NT word-link HTML files to {destinationFolder.joinpath( 'W/' )}.")
-
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET NT word-link HTML files from {sourceFolder}…")
-    try: os.makedirs( destinationFolder.joinpath( 'Lm/' ) )
-    except FileExistsError: pass # it was already there
-    copyCount = 0
-    for filename in glob.glob( os.path.join( sourceFolder.joinpath( 'Lm/' ), '*.html' ) ):
-        shutil.copy( filename, destinationFolder.joinpath( 'Lm/' ) ) # Want the time to be updated or else "make" doesn't function correctly
-        # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
-        copyCount += 1
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET NT lexeme HTML files to {destinationFolder.joinpath( 'Lm/' )}.")
-
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET person HTML files from {sourceFolder}…")
-    try: os.makedirs( destinationFolder.joinpath( 'Pe/' ) )
-    except FileExistsError: pass # it was already there
-    copyCount = 0
-    for filename in glob.glob( os.path.join( sourceFolder.joinpath( 'Pe/' ), 'P_*.html' ) ):
-        shutil.copy( filename, destinationFolder.joinpath( 'Pe/' ) ) # Want the time to be updated or else "make" doesn't function correctly
-        # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
-        copyCount += 1
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET person HTML files to {destinationFolder.joinpath( 'Pe/' )}.")
-
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Copying OET location HTML files from {sourceFolder}…")
-    try: os.makedirs( destinationFolder.joinpath( 'Loc/' ) )
-    except FileExistsError: pass # it was already there
-    copyCount = 0
-    for filename in glob.glob( os.path.join( sourceFolder.joinpath( 'Loc/' ), 'L_*.html' ) ):
-        shutil.copy( filename, destinationFolder.joinpath( 'Loc/' ) ) # Want the time to be updated or else "make" doesn't function correctly
-        # shutil.copy2( filename, destinationFolder ) # copy2 copies the file attributes as well (e.g., creation date/time)
-        copyCount += 1
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
-        vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Copied {copyCount:,} OET location HTML files to {destinationFolder.joinpath( 'Loc/' )}.")
 # end of convert_OET-RV_to_simple_HTML.copy_wordlink_files()
 
 
