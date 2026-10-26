@@ -1,4 +1,4 @@
-\id EZR - Open English Translation—Readers' Version (OET-RV) v0.1.12
+\id EZR - Open English Translation—Readers' Version (OET-RV) v0.1.13
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 EZR
@@ -10,7 +10,7 @@
 \mt1 Ezra
 \is1 Introduction
 \ip \bk The account of Ezra\bk*, is like a continuation of \bk The Chronicles\bk*—it tells us about the returning home of other Jews who had been taken to Babylon as captives, and the restoration of daily life in Yerushalem (Jerusalem) and of worshipping at the temple.
-\ip It's divided into three main sections: 1. The declaration of King Koresh (Cyrus) of Persia (Heb. Paras) to allow a group of exiled Jews to return to Yerushalem from Babylon. 2. The rebuilding of the temple and its dedication, and the return to worshipping Yahweh there in Yerushalem. 3. The return of a different group of Jewish descendants to Yerushalem under the leadership of Ezra—the one knowledgable about God's instructions. He assisted the Israelis to return to their beliefs and customs, so that their worshipping of the true God wouldn't be forgotten.
+\ip It's divided into three main sections: 1. The declaration of King Koresh (Cyrus) of Persia (Heb. Paras) to allow a group of exiled Jews to return to Yerushalem from Babylon. 2. The rebuilding of the temple and its dedication, and the return to worshipping Yahweh there in Yerushalem. 3. The return of a different group of Jewish descendants to Yerushalem under the leadership of Ezra—the one knowledgeable about God's instructions. He assisted the Israelis to return to their beliefs and customs, so that their worshipping of the true God wouldn't be forgotten.
 \iot Main components of this account
 \io1 The first group of exiled Jews return home \ior 1:1–2:70\ior*
 \io1 The rebuilding of the temple and its dedication \ior 3:1–6:22\ior*
@@ -196,7 +196,7 @@
 \v 9 \add ≈And¦218263\add* Yeshua¦218264 with his¦218265 brothers and their sons, Kadmiel¦218267 and¦218268 his¦218268 sons¦218269, (all descendants of¦218269 Yehudah¦218271) \add ≈cooperated\add* to¦218273 act¦218273 as¦218273 overseers¦218273 for those doing the¦218277 work¦218277 at the \add ≈temple¦218278\add* \add together with\add* Henadad's¦218282 sons¦218283 \add ≈and grandsons\add*, and their brothers the¦218285 Levites¦218285.
 \p
 \v 10 \add ≈When¦218287 the¦218288 builders¦218288 had\add* laid the¦218291 \add ≈foundation¦218287\add* of¦218291 Yahweh's¦218292 temple¦218291, they¦218293 \add ≈got\add* the¦218294 priests¦218294 \add ≈to stand there in their robes\add* with¦218296 \add &their\add* trumpets¦218296, and¦218297 Asaf's¦218300 descendants¦218298 (who were Levites¦218297) with¦218301 \add &their\add* cymbals¦218301, to¦218302 praise¦218302 Yahweh¦218305 \add ≈using the¦218308 rhythms composed by\add* David¦218309, the¦218310 \add former\add* Israeli¦218312 king¦218310.\x + \xo 3:10: \xt 1Ch 25:1.\x*
-\v 11 Then¦218314 they¦218314 sang¦218314 in response—praising¦218315 and¦218316 thanking¦218316 Yahweh¦218317: “\add ≈Yes,\add* he¦218319 is¦218319 good¦218319, because¦218320 his¦218323 loyal¦218323 commitment to Yisrael¦218326 \add ≈will continue forever¦218322\add*.”\x + \xo 3:11: \xt 1Ch 16:34; 2Ch 5:13; 7:3; Psa 100:5; 106:1; 107:1; 118:1; 136:1; Jer 33:11.\x*
+\v 11 Then¦218314 they¦218314 sang¦218314 in response—praising¦218315 and¦218316 thanking¦218316 Yahweh¦218317: “\add ≈Yes,\add* he¦218319 is¦218319 good¦218319, because¦218320 his¦218323 loyal¦218323 commitment¦218323 to Yisrael¦218326 \add ≈will continue forever¦218322\add*.”\x + \xo 3:11: \xt 1Ch 16:34; 2Ch 5:13; 7:3; Psa 100:5; 106:1; 107:1; 118:1; 136:1; Jer 33:11.\x*
 \p Then¦218327 all¦218327 the¦218329 people¦218329 shouted¦218330 a¦218331 great¦218333 shout¦218331 in praise¦218334 to¦218335 Yahweh¦218335 because¦218336 the¦218338 \add ≈foundation¦218337\add* of¦218338 Yahweh's¦218340 \add temple\add* had been laid.
 \v 12 Many¦218343 of¦218344 the¦218344 older¦218348 priests¦218344 and¦218345 Levites¦218345, and¦218346 \add ≈clan leaders\add* who'd¦218349 seen¦218350 the first¦218354 \add ≈temple¦218357\add*, wept¦218359 loudly \add ≈when¦218355 they witnessed\add* the¦218357 founding¦218355 of¦218358 this¦218356 \add *one\add*, \add ≈but¦218362 others were shouting¦218363 happily¦218363 with¦218364 loud voices¦218366\add*.
 \v 13 \add ≈So¦218368\add* the¦218369 people¦218369 couldn't differentiate the¦218371 happy sounds¦218371 from the sound¦218374 of¦218375 the¦218375 people weeping¦218375, because¦218377 the¦218378 people¦218378 were¦218379 shouting¦218379 \add ≈very loudly and¦218382 it¦218383 could be¦218383 heard¦218383 from¦218386 far away\add*.
@@ -352,12 +352,12 @@
 \rem /s1 Ezra Praises the Lord; Ezra Praises God
 \p
 \v 27 Blessed¦220271 be Yahweh¦220272, the¦220273 god¦220273 of¦220273 our¦220274 fathers¦220274 who¦220275 put¦220276 it into¦220278 the¦220279 king's¦220279 heart¦220278 to¦220280 honour¦220280 Yahweh's¦220284 house¦220283 in¦220286 Yerushalem¦220286,
-\v 28 and¦220288 showed me¦220288 his loyal¦220291 commitment in¦220292 \add ≈dealing with\add* the¦220293 king¦220293 and¦220294 his¦220294 counsellors¦220294, and¦220295 all¦220295 the¦220297 powerful¦220299 officials¦220297 of¦220297 the¦220298 king¦220298. And¦220300 as for me, Yahweh¦220304 my¦220305 god¦220305 \add ≈blessed me¦220306 with\add* \add initiative and\add* \add ≈the strength¦220301 to¦220302 carry it out as\add* I¦220307 gathered¦220307 some Israeli¦220308 \add ≈leaders¦220309\add* to¦220310 go¦220310 \add ≈to Yerushalem\add* with¦220311 me¦220311.
+\v 28 and¦220288 showed me¦220288 his loyal¦220291 commitment¦220291 in¦220292 \add ≈dealing with\add* the¦220293 king¦220293 and¦220294 his¦220294 counsellors¦220294, and¦220295 all¦220295 the¦220297 powerful¦220299 officials¦220297 of¦220297 the¦220298 king¦220298. And¦220300 as for me, Yahweh¦220304 my¦220305 god¦220305 \add ≈blessed me¦220306 with\add* \add initiative and\add* \add ≈the strength¦220301 to¦220302 carry it out as\add* I¦220307 gathered¦220307 some Israeli¦220308 \add ≈leaders¦220309\add* to¦220310 go¦220310 \add ≈to Yerushalem\add* with¦220311 me¦220311.
 \c 8
 \s1 The returning exiles
 \rem /s1 Exiles Who Returned with Ezra; Heads of Families Who Returned with Ezra; List of the Family Heads Returning With Ezra; The People Who Returned from Exile
 \p
-\v 1 Now these¦220314 are¦220315 the¦220315 \add ≈family\add* heads¦220315 and¦220317 their¦220317 \add ≈descendants by number who\add* who went¦220318 with¦220319 me¦220319 from¦220323 Babylon¦220323 \add ≈to Yerushalem\add* in¦220320 the¦220320 reign¦220320 of¦220320 King¦220322 Artahshasta \add !(Artaxerxes)\add*:
+\v 1 Now these¦220314 are¦220315 the¦220315 \add ≈family\add* heads¦220315 and¦220317 their¦220317 \add ≈descendants by number\add* who¦220318 went¦220318 with¦220319 me¦220319 from¦220323 Babylon¦220323 \add ≈to Yerushalem\add* in¦220320 the¦220320 reign¦220320 of¦220320 King¦220322 Artahshasta \add !(Artaxerxes)\add*:
 \rem /s1 Ezra Finds Levites for the Temple (was before v3)
 \li1
 \v 2 from¦220326 the¦220326 descendants¦220326 of¦220327 Pinhas¦220327: Gershom¦220328,
@@ -434,11 +434,11 @@
 \s1 Ezra's prayer
 \rem /s1 Ezra's Prayer
 \p
-\v 5 \add ≈So¦220978\add* I¦220980 got up from¦220981 my \add position of\add* humilation¦220981 with my¦220981 torn¦220982 \add ≈clothes¦220983\add* \add during\add* the¦220979 evening¦220979 sacrifice¦220978, then I¦220985 \add ≈went\add* down¦220985 on¦220986 my¦220988 knees¦220988 and¦220989 spread¦220989 out¦220989 my¦220990 palms¦220990 to¦220991 my¦220994 god¦220994 Yahweh¦220993
+\v 5 \add ≈So¦220978\add* I¦220980 got up from¦220981 my \add position of\add* humiliation¦220981 with my¦220981 torn¦220982 \add ≈clothes¦220983\add* \add during\add* the¦220979 evening¦220979 sacrifice¦220978, then I¦220985 \add ≈went\add* down¦220985 on¦220986 my¦220988 knees¦220988 and¦220989 spread¦220989 out¦220989 my¦220990 palms¦220990 to¦220991 my¦220994 god¦220994 Yahweh¦220993
 \v 6 and¦220996 \add ≈prayed\add*, “My¦220997 god¦220997, I'm¦220998 ashamed¦220998 and¦220999 humiliated¦220999 to¦221000 raise¦221000 my¦221001 face¦221002 to¦221003 you¦221003, my god, because¦221004 our¦221005 sins have¦221006 multiplied¦221006 \add and risen\add* above \add ≈our heads¦221008\add*, and¦221009 our¦221009 guilt¦221009 has \add ≈mounted\add* up¦221000 as \add ≈high as the sky¦221012\add*.
 \v 7 From¦221014 \add back in\add* the¦221014 time¦221014 of¦221014 our¦221015 ancestors¦221015 until¦221019 today, \add ≈we've¦221016 been¦221017 very guilty¦221017\add*, and¦221022 in¦221022 our¦221022 \add ≈disobedience\add*, we¦221024 ourselves, \add including\add* our kings¦221025 and our¦221025 priests¦221026, have¦221023 been¦221023 \add ≈killed by the kings¦221029 of¦221029 the¦221030 surrounding countries¦221030, or taken captive¦221032, or been plundered¦221033, or simply put to shame¦221034, which is the case right now\add*.
 \v 8 \add ≈But¦221039\add* now¦221039 for a¦221040 brief¦221040 moment¦221042, favour¦221044 has¦221043 come¦221043 from¦221045 our god Yahweh¦221047 \add and given\add* us¦221050 remaining survivors¦221051 a¦221055 stake in¦221056 his holy place¦221056—\add yes,\add* our¦221059 god¦221060 \add ≈has cheered us up and¦221061 given¦221061 us¦221061 a¦221063 little¦221063 relief from\add* our¦221064 slavery¦221064.
-\v 9 Because¦221066 we are¦221068 slaves¦221068, yet our¦221070 god hasn't abandoned¦221075 us¦221075 in our¦221076 slavery, but¦221077 he's¦221077 \add ≈used his loyal¦221080 commitment\add* \add to us\add* \add ≈to¦221081 influence\add* the Persian \add #king¦221082\add* to give¦221084 to¦221086 us¦221086 \add ≈breathing space\add* to¦221088 \add ≈rebuild\add* the¦221091 house¦221091 of¦221091 our¦221092 god¦221092 \add ≈from\add* its¦221096 ruins¦221096, and¦221097 to give¦221097 to¦221099 us¦221099 a¦221100 ‘wall¦221100 \add of protection\add*’ in¦221102 Yerushalem¦221102 and \add ≈across\add* Yehudah¦221101.
+\v 9 Because¦221066 we are¦221068 slaves¦221068, yet our¦221070 god hasn't abandoned¦221075 us¦221075 in our¦221076 slavery, but¦221077 he's¦221077 \add ≈used his loyal¦221080 commitment¦221080\add* \add to us\add* \add ≈to¦221081 influence\add* the Persian \add #king¦221082\add* to give¦221084 to¦221086 us¦221086 \add ≈breathing space\add* to¦221088 \add ≈rebuild\add* the¦221091 house¦221091 of¦221091 our¦221092 god¦221092 \add ≈from\add* its¦221096 ruins¦221096, and¦221097 to give¦221097 to¦221099 us¦221099 a¦221100 ‘wall¦221100 \add of protection\add*’ in¦221102 Yerushalem¦221102 and \add ≈across\add* Yehudah¦221101.
 \p
 \v 10 “\add ≈So¦221105\add* now¦221105, our¦221109 god¦221109, what¦221106 can we¦221108 say¦221108 after¦221110 that¦221112? We've¦221114 abandoned¦221114 your¦221115 instructions¦221115
 \v 11 which¦221117 you¦221118 \add ≈gave us via\add* your¦221120 servants¦221120, the¦221121 prophets¦221121, saying¦221122, ‘The¦221123 land¦221123 that¦221124 you're¦221125 all entering to¦221127 occupy¦221127 is¦221128 a¦221128 land¦221128 of¦221128 impurity¦221129, due to the¦221131 impurity¦221131 of¦221131 the \add ≈current inhabitants with\add* their¦221134 \add ≈evil practices\add* that¦221135 have¦221136 filled¦221136 it¦221136 from¦221137 \add ≈one end to¦221138 the other\add* with¦221141 their¦221141 \add ≈filth\add*.
@@ -479,7 +479,7 @@
 \rem /s3 Priests, listed by clans
 \p
 \v 18 Some of¦221591 the¦221591 priests'¦221591 descendants had¦221593 married¦221593 foreign¦221595 women¦221594, i.e., the¦221596 descendants¦221596 of Yotsadak's¦221602 son¦221600 Yeshua¦221599 and¦221603 his¦221603 brothers¦221603, Maaseyah¦221604, Eliezer¦221605, Yarib¦221606, and¦221607 Gedalyah¦221607,
-\v 19 and¦221609 they¦221609 \add ≈promised to¦221611 expell\add* their wives¦221612, and \add ≈because of¦221612 their¦221612 guilt¦221613, each of them sacrificed\add* a¦221614 ram¦221614 from their flock¦221616.
+\v 19 and¦221609 they¦221609 \add ≈promised to¦221611 expel\add* their wives¦221612, and \add ≈because of¦221612 their¦221612 guilt¦221613, each of them sacrificed\add* a¦221614 ram¦221614 from their flock¦221616.
 \v 20 Then¦221622, \add also\add*:
 \li1 From Immer's¦221623 descendants¦221622: Hanani¦221624 and¦221625 Zevadyah¦221625,
 \li1
