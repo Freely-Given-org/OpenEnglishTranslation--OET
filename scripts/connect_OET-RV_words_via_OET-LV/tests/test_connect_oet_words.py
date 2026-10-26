@@ -280,12 +280,81 @@ class EditingTests(unittest.TestCase):
         self.assertEqual(connect.state.rvESFMLines[1],r'\v 1 \wj \+nd God¦1\+nd*\wj*')
         self.assertEqual(connect.applyRVTokenLink('MRK',1,1,connect.getLiveRVTokens('MRK',1,1)[0],1,'test'), (0,0))
 
+    def test_possessive_number_follows_apostrophe_before_closing_quote(self):
+        self.book(r'\c 1', "\\v 1 ‘houses'’, foundations.")
+        self.assertEqual(connect.matchVerseCandidates('RUT',1,1,['houses¦1','foundations¦2'],False), (2,0))
+        self.assertEqual(connect.state.rvESFMLines[1], "\\v 1 ‘houses'¦1’, foundations¦2.")
+        self.assertEqual(connect.matchVerseCandidates('RUT',1,1,['houses¦1','foundations¦2'],False), (0,0))
+
+    def test_correct_possessive_number_is_read_and_preserved(self):
+        self.book(r'\c 1', "\\v 1 waters'¦1 surfaces¦2.")
+        self.assertEqual([(t.text,t.number) for t in connect.getLiveRVTokens('RUT',1,1)],
+                         [("waters'",1),('surfaces',2)])
+        self.assertEqual(connect.matchVerseCandidates('RUT',1,1,['waters¦1','surfaces¦2'],False), (0,0))
+        self.assertEqual(connect.state.rvESFMLines[1], "\\v 1 waters'¦1 surfaces¦2.")
+
+    def test_insertion_rejects_stale_end_before_apostrophe(self):
+        self.book(r'\c 1', "\\v 1 houses' foundations")
+        truncated = connect.tokenize('houses', 1, 5)[0]
+        self.assertEqual(connect.applyRVTokenLink('RUT',1,1,truncated,1,'test'), (0,0))
+        self.assertEqual(connect.state.rvESFMLines[1], "\\v 1 houses' foundations")
+
+    def test_insertion_rejects_apostrophe_hidden_by_formatting(self):
+        for tail in (r"\add 's death\add*", r"\bd*'s sons", r"\+nd*'s children",
+                     r"\add s\add*", r"\bd*s"):
+            with self.subTest(tail=tail):
+                line = r'\v 1 mother' + tail
+                self.book(r'\c 1', line)
+                truncated = connect.tokenize('mother', 1, 5)[0]
+                self.assertEqual(connect.applyRVTokenLink('RUT',1,1,truncated,1,'test'), (0,0))
+                self.assertEqual(connect.state.rvESFMLines[1], line)
+
+    def test_whole_possessive_before_supplied_noun_stays_linked(self):
+        self.book(r'\c 1', r"\v 1 mother's \add death\add*.")
+        self.assertEqual(connect.matchVerseCandidates('RUT',1,1,['mother¦1'],False), (1,0))
+        expected = r"\v 1 mother's¦1 \add death\add*."
+        self.assertEqual(connect.state.rvESFMLines[1], expected)
+        self.assertEqual(connect.removeWordNumbersInUnlinkedAddSpans('test',connect.state.rvESFMLines),0)
+        self.assertEqual(connect.matchVerseCandidates('RUT',1,1,['mother¦1'],False), (0,0))
+        self.assertEqual(connect.state.rvESFMLines[1], expected)
+
+    def test_whole_possessive_keeps_style_and_closing_quote_outside_number(self):
+        self.book(r'\c 1', r"\v 1 ‘\bd mother's\bd*’")
+        self.assertEqual(connect.matchVerseCandidates('RUT',1,1,['mother¦1'],False), (1,0))
+        self.assertEqual(connect.state.rvESFMLines[1], r"\v 1 ‘\bd mother's¦1\bd*’")
+
     def test_semantic_add_can_link_without_illegal_nested_nd(self):
         self.book(r'\c 1', r'\v 1 \add @God\add*')
         connect.state.wordTable['NT'][1]=['N']
         token=connect.getLiveRVTokens('MRK',1,1)[0]
         self.assertEqual(connect.applyRVTokenLink('MRK',1,1,token,1,'test'), (1,0))
         self.assertEqual(connect.state.rvESFMLines[1],r'\v 1 \add @God¦1\add*')
+
+    def test_optional_plural_number_follows_complete_word(self):
+        self.book(r'\c 1', r'\v 1 daughter(s).')
+        self.assertEqual(connect.matchVerseCandidates('RUT',1,1,['daughter¦1'],False), (1,0))
+        self.assertEqual(connect.state.rvESFMLines[1],r'\v 1 daughter(s)¦1.')
+        self.assertEqual([(t.text,t.number) for t in connect.getLiveRVTokens('RUT',1,1)],
+                         [('daughter(s)',1)])
+        self.assertEqual(connect.matchVerseCandidates('RUT',1,1,['daughter¦1'],False), (0,0))
+
+    def test_stale_token_cannot_insert_before_plural_ending(self):
+        for ending in ('s', '(s)'):
+            with self.subTest(ending=ending):
+                line = r'\v 1 daughter' + ending + '.'
+                self.book(r'\c 1', line)
+                truncated = connect.tokenize('daughter', 1, 5)[0]
+                self.assertEqual(connect.applyRVTokenLink('RUT',1,1,truncated,1,'test'), (0,0))
+                self.assertEqual(connect.state.rvESFMLines[1],line)
+
+    def test_formatted_contraction_and_plural_are_kept_as_whole_words(self):
+        self.book(r'\c 1', r"\v 1 \add ≈Didn't¦1\add* the \add #ages¦2\add* end?")
+        self.assertEqual([(t.text,t.number,t.code) for t in connect.getLiveRVTokens('RUT',1,1)][:3],
+                         [("Didn't",1,'≈'),('the',None,None),('ages',2,'#')])
+        self.assertEqual(connect.removeWordNumbersInUnlinkedAddSpans('test',connect.state.rvESFMLines),0)
+        self.book(r'\c 1', r"\v 1 Did\add n't\add* I reveal myself?")
+        truncated = connect.tokenize('Did', 1, 5)[0]
+        self.assertEqual(connect.applyRVTokenLink('RUT',1,1,truncated,1,'test'), (0,0))
 
     def test_phrase_keeps_compatible_links_and_excludes_plain_add(self):
         self.book(r'\c 1', r'\v 1 you¦2 all and \add you all\add*')

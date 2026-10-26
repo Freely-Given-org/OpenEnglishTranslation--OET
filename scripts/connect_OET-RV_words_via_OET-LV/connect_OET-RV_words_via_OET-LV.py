@@ -242,7 +242,8 @@ import time
 from functools import lru_cache
 
 from oet_alignment import (LVToken, UNLINKED_ADD_CODES, index_book_lines, tokenize,
-                           with_clause_boundaries, unlinked_add_spans)
+                           with_clause_boundaries, unlinked_add_spans, is_word_fragment,
+                           OPTIONAL_PLURAL)
 from oet_candidates import select_links
 from oet_versification import audit_unmapped_lv, resolve_alignment_passages
 from oet_derived_word_tables import RELATED_WORD_GROUPS, CONTRACTION_SUBJECTS
@@ -1186,11 +1187,13 @@ def simplifyRVLVWord( word:str ) -> str:
         'mother-in-law' and 'mother' are not (and 'money-changers' and 'moneychangers' are).
     """
     word = re.sub(r'\[([a-z]+)\]', r'\1', word) # LV optional suffixes: son[s], branch[es].
+    word = OPTIONAL_PLURAL.sub(r'\1', word) # RV optional plurals: daughter(s), box(es).
     word = unicodedata.normalize( 'NFD', word )
     word = ''.join( ch for ch in word if unicodedata.category( ch ) not in ('Mn', 'Lm') ) # Strip combining marks and modifier letters
     word = re.sub( r"[ʼˊʹʺʸˈ]", '', word ) # Transliteration accents
     word = re.sub( r"/.*$", '', word ) # Strip parenthetical alternatives like /(Miryām)
-    word = re.sub( r"[’']s$", '', word ) # Possessives
+    word = word.removesuffix("'") # Plural possessives and names ending in s.
+    word = re.sub( r"[’']s$", '', word ) # Singular possessives
     word = re.sub( r"[-‐‑–]", '', word ) # Hyphens, anywhere in the word
     return word.lower().strip( '.,;:!?"“”‘’()' )
 # end of simplifyRVLVWord
@@ -1226,6 +1229,8 @@ def scoreRVLVWords(rvWord: str, lvWord: str) -> Optional[Tuple[str, int]]:
     """
     r, l = simplifyRVLVWord(rvWord), simplifyRVLVWord(lvWord)
     if r == l and (len(r) >= MIN_EXACT_MATCH_WORD_LENGTH or r in ('a', 'i')):
+        if OPTIONAL_PLURAL.search(rvWord):
+            return 'optional plural', 95 # Do not prefer plural over its curated singular form.
         return 'same word', 100
     verbs = getLexicalIndexes()[1]
     if verbs.get(r, set()) & verbs.get(l, set()): return 'curated verb forms', 95
@@ -1245,9 +1250,11 @@ def scoreAlignedWords(rvWord, lvWord):
     compete with all other words in the gap; they are not global synonyms and
     cannot justify phrase movement, which requires a score of at least 90.
     """
+    rvWord = rvWord.removesuffix("'")
     lexical = scoreRVLVWords(rvWord, lvWord)
     if lexical and lexical[1] >= 55:
         return lexical
+    rvWord = OPTIONAL_PLURAL.sub(r'\1', rvWord)
     if lvWord.casefold() in DIRECTIONAL_WORD_INDEX.get(rvWord.casefold(), ()):
         return 'directional word mapping', 55
     if CONTRACTION_SUBJECTS.get(rvWord.casefold().replace('’', "'")) == lvWord.casefold():
@@ -1625,7 +1632,8 @@ def applyRVTokenLink(BBB, c, v, token, number, reason):
     line = state.rvESFMLines[token.line]
     if not token.linkable or token.number is not None:
         return 0, 0
-    if line[token.start:token.end] != token.text or line[token.end:token.end+1] == '¦':
+    if (line[token.start:token.end] != token.text or line[token.end:token.end+1] == '¦'
+            or is_word_fragment(line, token.start, token.end)):
         return 0, 0  # A caller supplied a stale position.
     NT = bos_books_codes_py.is_new_testament_nr(BBB)
     addNS = (NT and 'N' in state.wordTable['NT'][number][state.wordTableHeaderList['NT'].index('GlossCaps')]

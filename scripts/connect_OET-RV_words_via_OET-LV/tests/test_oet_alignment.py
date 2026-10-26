@@ -64,6 +64,77 @@ class PhraseAlignmentTests(unittest.TestCase):
                                                [(0,1,0,2,110)]), {0:(7,frozenset((0,1)))})
 
 
+class ApostropheTokenTests(unittest.TestCase):
+    def test_terminal_apostrophe_is_part_of_word_and_existing_number(self):
+        text = "‘houses'¦12’, Yudas'¦13; waters'¦14."
+        tokens = tokenize(text, 7, 23)
+        self.assertEqual([(t.text,t.number) for t in tokens],
+                         [("houses'",12),("Yudas'",13),("waters'",14)])
+        for token in tokens:
+            self.assertEqual(text[token.start-23:token.end-23], token.text)
+            self.assertEqual(text[token.end-23], '¦')
+        self.assertEqual([t.match_text for t in tokens], ['houses','Yudas','waters'])
+
+    def test_quotes_and_sentence_punctuation_remain_outside_word(self):
+        for ending in ('.', ',', ';', ':', '!', '?', '’', '’,”', ')', '—'):
+            with self.subTest(ending=ending):
+                text = "houses'" + ending
+                token = tokenize(text)[0]
+                self.assertEqual(token.text, "houses'")
+                self.assertEqual(text[token.end:], ending)
+        self.assertEqual([t.text for t in tokenize("‘houses’ ‘house's’ don't Sha'ul")],
+                         ['houses',"house's","don't","Sha'ul"])
+
+    def test_possessive_keeps_plural_semantic_referent(self):
+        from oet_alignment import referent_pronouns, PLURAL_PRONOUNS
+        self.assertEqual(referent_pronouns(tokenize("people'")), PLURAL_PRONOUNS)
+
+    def test_formatting_cannot_turn_apostrophe_suffix_into_separate_word(self):
+        for text in (r"mother\add 's death\add*", r"\nd God\nd*'s children",
+                     r"\add *He\add*'d said", r"\bd Simeon\bd*'s sons",
+                     r"mother\+add ?>'s death\+add*", r"age\add s\add*",
+                     r"Did\add n't\add*", r"servant\bd*s"):
+            with self.subTest(text=text):
+                tokens = tokenize(text)
+                self.assertTrue(tokens[0].word_fragment)
+                self.assertFalse(tokens[0].linkable)
+                self.assertTrue(tokens[1].word_fragment)
+                self.assertFalse(tokens[1].linkable)
+
+    def test_formatting_with_space_or_curly_quote_does_not_split_word(self):
+        for text in (r"\nd God\nd* said", r"\nd God\nd* 's",
+                     r"\bd mother\bd*’", r"mother \add death\add*"):
+            with self.subTest(text=text):
+                self.assertFalse(tokenize(text)[0].word_fragment)
+                self.assertTrue(tokenize(text)[0].linkable)
+
+    def test_supplied_prefix_keeps_numbered_stem_at_end_of_word(self):
+        for text, stem in ((r'\add re\add*build¦12','build'),
+                           (r'\add fire\add*wood¦12','wood')):
+            with self.subTest(text=text):
+                token = tokenize(text)[-1]
+                self.assertEqual((token.text,token.number),(stem,12))
+                self.assertTrue(token.linkable)
+                self.assertFalse(token.word_fragment)
+
+
+class OptionalPluralTokenTests(unittest.TestCase):
+    def test_optional_plural_is_part_of_numbered_word(self):
+        text = 'daughter(s)¦76523, branch(es)¦12.'
+        tokens = tokenize(text, 2, 10)
+        self.assertEqual([(t.text,t.match_text,t.number) for t in tokens],
+                         [('daughter(s)','daughters',76523),('branch(es)','branches',12)])
+        for t in tokens:
+            self.assertEqual(text[t.start-10:t.end-10],t.text)
+            self.assertEqual(text[t.end-10], '¦')
+
+    def test_ordinary_parentheses_and_optional_number_remain_distinct(self):
+        from oet_alignment import PRONOUNS, referent_pronouns
+        self.assertEqual([t.text for t in tokenize('daughter (sons) (daughters)')],
+                         ['daughter','sons','daughters'])
+        self.assertEqual(referent_pronouns(tokenize('daughter(s)')), PRONOUNS)
+
+
 class LocalContextTests(unittest.TestCase):
     def test_article_follows_its_linked_noun_across_a_phrase_movement(self):
         self.assertEqual(links('start¦1 after¦4 dinner¦5 the king¦3 end¦6',

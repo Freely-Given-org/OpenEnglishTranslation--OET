@@ -145,7 +145,7 @@ def unique_word_candidates(tokens, evidence, bound_context=True):
         scored = [(score, j) for j, col in enumerate(evidence.columns)
                   if (score := evidence.word(token, col))
                   and (score[1] >= 90 or score[0] == 'directional word mapping'
-                       or any(w.casefold() in evidence.directional_index.get(token.text.casefold(), ())
+                       or any(w.casefold() in evidence.directional_index.get(token.match_text.casefold(), ())
                               for w in (col.text, *col.text.split('/'))))]
         if not scored:
             continue
@@ -166,7 +166,7 @@ def unique_word_candidates(tokens, evidence, bound_context=True):
         number = evidence.columns[next(iter(positions))].number
         # Function words are especially prone to borrowing a verb/article from
         # a different clause. They need an ordered, unoccupied anchor window.
-        if bound_context and token.text.casefold() in MOVEMENT_FUNCTION_WORDS | CONTEXTUAL_HEADS:
+        if bound_context and token.match_text.casefold() in MOVEMENT_FUNCTION_WORDS | CONTEXTUAL_HEADS:
             i = tokens.index(token)
             left = next((t for t in reversed(tokens[:i]) if t.linkable and t.number is not None), None)
             right = next((t for t in tokens[i+1:] if t.linkable and t.number is not None), None)
@@ -346,7 +346,7 @@ def select_links(tokens, columns, lexical_score, normalise, number_variants,
         if not reversed_clauses:
             for candidate in strong:
                 token, _ = candidate.bindings[0]
-                if (token.text.casefold() in {'and', 'but', 'or'} and token.boundary_before
+                if (token.match_text.casefold() in {'and', 'but', 'or'} and token.boundary_before
                         and all(columns[j].boundary_before for j in candidate.claims)):
                     clause_fences.append((indexes[token], candidate.claims))
         def respects_stronger_evidence(candidate):
@@ -371,7 +371,7 @@ def select_links(tokens, columns, lexical_score, normalise, number_variants,
                     if token == other and score < 90 and number != other_number:
                         return False
                     if (score < 90 and number != other_number
-                            and other.text.casefold() in {'is', 'are', 'was', 'were', 'be', 'been'}
+                            and other.match_text.casefold() in {'is', 'are', 'was', 'were', 'be', 'been'}
                             and indexes[other] == indexes[token]-1
                             and same_clause([other, token])):
                         # Let the stronger anchor settle before a weaker edge
@@ -395,7 +395,7 @@ def select_links(tokens, columns, lexical_score, normalise, number_variants,
                              if (s := evidence.word(token, columns[j]))), default=0)
                 if score >= 90:
                     continue
-                copies = [t for t in live if t.linkable and t.text.casefold() == token.text.casefold()]
+                copies = [t for t in live if t.linkable and t.match_text.casefold() == token.match_text.casefold()]
                 alternatives = {col.number for col in columns if evidence.word(token, col)}
                 if len(copies) > 1 and len(alternatives) > 1 and any(
                         t.number is None and t not in proposed for t in copies):
@@ -422,13 +422,13 @@ def select_links(tokens, columns, lexical_score, normalise, number_variants,
         # "given" is simultaneously becoming an anchor in an earlier clause.
         content = [c for c in selected if any(t.number is None
                    and t.code not in SEMANTIC_CODES
-                   and t.text.casefold() not in MOVEMENT_FUNCTION_WORDS
+                   and t.match_text.casefold() not in MOVEMENT_FUNCTION_WORDS
                    for t, _ in c.bindings)]
         if content:
             fixed = {i: t.number for i, t in enumerate(live) if t.linkable and t.number is not None}
             fixed.update((indexes[t], n) for c in content for t, n in c.bindings)
             def fits_content(candidate):
-                generic_head = any(t.text.casefold() in CONTEXTUAL_HEADS for t, _ in candidate.bindings)
+                generic_head = any(t.match_text.casefold() in CONTEXTUAL_HEADS for t, _ in candidate.bindings)
                 if (candidate in content and not generic_head) or candidate.reason in {
                         'curated phrase', 'traditional name alias', 'explicit same-verse repeat'}:
                     return True
@@ -463,9 +463,9 @@ def select_links(tokens, columns, lexical_score, normalise, number_variants,
             if candidate.reason in {'curated phrase', 'traditional name alias', 'explicit same-verse repeat'}:
                 return True
             for token, number in candidate.bindings:
-                if token.code is None and token.text.casefold() == 'who':
+                if token.code is None and token.match_text.casefold() == 'who':
                     head = next((t for t in live[indexes[token]+1:]
-                                 if t.linkable and t.text.casefold() not in MOVEMENT_FUNCTION_WORDS), None)
+                                 if t.linkable and t.match_text.casefold() not in MOVEMENT_FUNCTION_WORDS), None)
                     if head is not None and head in assigned:
                         # A later relative clause's "who" cannot supply the
                         # English expansion of an earlier adjective/participle.
@@ -475,33 +475,33 @@ def select_links(tokens, columns, lexical_score, normalise, number_variants,
                         if not any(col is not None and col.number == assigned[head] for col in predicates):
                             return False
                 if (token.code not in SEMANTIC_CODES
-                        and token.text.casefold() in {'and', 'or', 'but'}
+                        and token.match_text.casefold() in {'and', 'or', 'but'}
                         and any(col.number == number and col.noun
                                 and col.text.casefold() not in MOVEMENT_FUNCTION_WORDS for col in columns)
-                        and any(n == number and t.text.casefold() not in MOVEMENT_FUNCTION_WORDS
+                        and any(n == number and t.match_text.casefold() not in MOVEMENT_FUNCTION_WORDS
                                 for t, n in assigned.items())):
                     head = next((t for t in live[indexes[token]+1:] if t.linkable
-                                 and t.text.casefold() not in MOVEMENT_FUNCTION_WORDS), None)
+                                 and t.match_text.casefold() not in MOVEMENT_FUNCTION_WORDS), None)
                     if head is None or assigned.get(head) != number:
                         return False
                 if (token.code not in SEMANTIC_CODES
-                        and token.text.casefold() in {'is', 'are', 'was', 'were', 'be', 'been', 'being'}
+                        and token.match_text.casefold() in {'is', 'are', 'was', 'were', 'be', 'been', 'being'}
                         and any(col.number == number and col.text.casefold() not in MOVEMENT_FUNCTION_WORDS
                                 for col in columns)):
                     # An auxiliary inside a source gloss belongs to that
                     # predicate, not a nearby relative phrase: "who are poor
                     # are blessed" must not lend blessed's "are" to poor.
                     head = next((t for t in live[indexes[token]+1:]
-                                 if t.text.casefold() not in MOVEMENT_FUNCTION_WORDS), None)
+                                 if t.match_text.casefold() not in MOVEMENT_FUNCTION_WORDS), None)
                     if (head is None or assigned.get(head) != number
                             or not same_clause(live[indexes[token]:indexes[head]+1])):
                         return False
-                if token.code is not None or token.text.casefold() not in {
+                if token.code is not None or token.match_text.casefold() not in {
                         'the', 'a', 'an', 'its', 'my', 'your', 'his', 'her', 'our', 'their'}:
                     continue
-                if not (any(n == number and t.text.casefold() not in MOVEMENT_FUNCTION_WORDS
+                if not (any(n == number and t.match_text.casefold() not in MOVEMENT_FUNCTION_WORDS
                             for t, n in assigned.items())
-                        or (token.text.casefold() in {'its', 'my', 'your', 'his', 'her', 'our', 'their'}
+                        or (token.match_text.casefold() in {'its', 'my', 'your', 'his', 'her', 'our', 'their'}
                             and any(col.number == number and col.noun for col in columns))):
                     continue  # No competing head has been established yet.
                 following = live[indexes[token]+1:]
@@ -512,7 +512,7 @@ def select_links(tokens, columns, lexical_score, normalise, number_variants,
                     return False
                 if assigned[head] == number:
                     continue
-                if (token.text.casefold() in {'its', 'my', 'your', 'his', 'her', 'our', 'their'}
+                if (token.match_text.casefold() in {'its', 'my', 'your', 'his', 'her', 'our', 'their'}
                         and any(col.number == number and col.noun for col in columns)):
                     return False  # A noun's suffix cannot possess the next noun.
                 if not any(0 < k-j <= 3

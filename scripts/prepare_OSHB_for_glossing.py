@@ -6,7 +6,7 @@
 #
 # Script handling prepare_OSHB_for_glossing functions
 #
-# Copyright (C) 2022-2025 Robert Hunt
+# Copyright (C) 2022-2026 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
 # This Source Code Form is subject to the terms of the Mozilla Public
 # License, v. 2.0. If a copy of the MPL was not distributed with this
@@ -30,6 +30,7 @@ Also inserts our own glosses (Gen,Ruth,etc.) into some columns.
 OSHB morphology codes can be found at https://hb.openscriptures.org/parsing/HebrewMorphologyCodes.html.
 
 CHANGELOG:
+    2026-10-26 Carry sentence capitalisation past notes and section markers to the next word.
     2024-03-21 Replace some \\u05c4 (Hebrew upper dot) and \\u05c5 (Hebrew lower dot) characters in some notes
     2025-06-26 Allow for shorter notes now that any superfluous trailing space has been removed
 """
@@ -47,10 +48,10 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from BibleOrgSys.OriginalLanguages import Hebrew
 
 
-LAST_MODIFIED_DATE = '2026-10-06' # by RJH
+LAST_MODIFIED_DATE = '2026-10-26' # by RJH
 SHORT_PROGRAM_NAME = "Prepare_OSHB_for_glossing"
 PROGRAM_NAME = "Prepare OSHB for glossing"
-PROGRAM_VERSION = '0.52'
+PROGRAM_VERSION = '0.53'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -200,6 +201,7 @@ def create_expanded_TSV_table() -> bool:
     last_V = 0
     glossCapitalisation = 'S' # First word is start of sentence
     for row in state.WLC_rows:
+        is_word_or_morpheme = row['RowType'] in ('w', 'm')
         V = int(row['FGID'][5:8])
         if V != last_V:
             glossOrderInt = 10
@@ -248,19 +250,24 @@ def create_expanded_TSV_table() -> bool:
                         'Strongs': row['Strongs'], 'CantillationHierarchy': row['CantillationHierarchy'], 'Morphology': new_morphology,
                         'WordOrMorpheme': row['WordOrMorpheme'],
                         'NoCantillations': noCants,
-                        'GlossCapitalisation': glossCapitalisation,
+                        'GlossCapitalisation': glossCapitalisation if is_word_or_morpheme else '',
                         'GlossPunctuation': '.' if new_type=='seg' and new_morphology=='x-sof-pasuq' else '',
                         'GlossOrder': str(glossOrderInt), }
         new_rows.append( newRowDict )
 
         # Prepare for next row
-        glossCapitalisation = 'S' if new_morphology=='x-sof-pasuq' else ''
+        if new_morphology == 'x-sof-pasuq':
+            glossCapitalisation = 'S'
+        elif is_word_or_morpheme:
+            glossCapitalisation = ''
+        # Notes (including KJB verse-number mappings) and section markers
+        # neither receive nor consume the pending sentence-start flag.
         last_OSIS_base_id, last_row = OSIS_base_id, newRowDict
 
     # A little check
     last_row = None
     for row in new_rows:
-        if row['RowType']=='seg' or row['RowType'].endswith( 'note' ):
+        if last_row is not None and (row['RowType']=='seg' or row['RowType'].endswith( 'note' )):
             assert 'm' not in last_row['RowType'], f"Expected 'M' in\n{last_row}\nbefore\n{row}"
         last_row = row
     state.WLC_rows = new_rows

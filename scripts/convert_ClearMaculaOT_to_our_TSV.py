@@ -36,6 +36,7 @@ CHANGELOG:
     2026-03-19 Did the minimum to get the updated Macula Hebrew files to load
     2026-05-08 Upgraded to bos_books_codes_py
     2026-10-22 Align complete Hebrew words within native verses before assigning OSHB IDs.
+    2026-10-24 Split the two-word Sharezer compound in Zechariah 7:2.
 """
 from gettext import gettext as _
 # from typing import Dict, List, Tuple
@@ -57,7 +58,7 @@ from hebrew_word_alignment import align_morphemes_by_verse
 from bible_transliterations import transliterate_Hebrew
 
 
-LAST_MODIFIED_DATE = '2026-10-22' # by RJH
+LAST_MODIFIED_DATE = '2026-10-24' # by RJH
 SHORT_PROGRAM_NAME = "convert_ClearMaculaOT_to_our_TSV"
 PROGRAM_NAME = "Extract and Apply Macula OT glosses"
 PROGRAM_VERSION = '0.61'
@@ -873,6 +874,11 @@ def loadMaculaHebrewNodesXMLGlosses() -> bool:
                             #     assert not gloss, f"{theirRef} {gloss=} {English=} {Mandarin=}"
                             assert not English and not Mandarin, f"{theirRef} {gloss=} {English=} {Mandarin=}"
                             gloss, English, Mandarin = parentElem.get('gloss'), parentElem.get('english'), parentElem.get('mandarin')
+
+                            # Split the complete name, not the Sharezer part of Nergal-Sharezer.
+                            # Each Hebrew word must receive only its own part of the compound.
+                            if gloss == 'Sharezer': gloss = 'Shar-ezer'
+                            if English == 'Sharezer': English = 'Shar-ezer'
 
                             # Here's we do some magic to split the compound glosses if possible
                             # print( f"  SPLITA {theirRef} {gloss=} {English=}")

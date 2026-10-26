@@ -588,6 +588,105 @@ all 66 books add no links and remove no addition-span numbers. Nehemiah 7:68
 remains the explicitly unsupported mapping. Raw snapshots and comparisons are
 in ignored `.cache/oet-ambiguity-20261023/`. Exports were not regenerated.
 
+### 24 October 2026 possessive apostrophe repair
+
+The RV uses a straight apostrophe as part of a word and curly single marks for
+quotations. The connector's tokenizer previously ended `houses'` before the
+apostrophe, placing a new number there and failing to recognise a number already
+placed after it. Tokens now include a final straight apostrophe, while comparison
+keys omit it for the existing vocabulary, phrase, and ambiguity rules. Curly
+quotation marks and sentence punctuation remain outside the numbered word.
+The writer also rejects a stale token ending immediately before an apostrophe.
+
+A scan of all **83 RV source files** found **244 misplaced numbers in 40 books**:
+243 possessives and Isaiah 58:9's malformed `You¦301571''ll`. The possessives
+now read like `Amorites'¦6065` in Genesis 15:16; the contraction is corrected to
+`You'll¦301571`. Genesis 1:2's already-correct `waters'¦24` is preserved.
+
+After removing the misplaced numbers, the fixed connector reproduced **236**
+links to the same LV words. Eight repeated-word cases retained their existing
+numbers after individual review against the mapped LV passage. The
+[repair ledger](connect_OET-RV_words_via_OET-LV/audits/2026-10-24-apostrophes.tsv)
+identifies each method and the evidence for those eight decisions. No source
+number changed, and wording, punctuation, and markup are preserved except for
+the doubled apostrophe in `You''ll`.
+
+All **149 tests** pass, including seven new regression tests. Replaying the
+production writer reproduces all 40 changed books exactly, and repeat selection
+does not propose any of the restored links again. Production dry runs of Genesis,
+Isaiah, and Matthew add no links and remove no addition-span numbers. No number
+remains immediately before a straight apostrophe in the raw text of the 83
+scanned RV files. The follow-up below checks across character formatting too.
+The [audit summary](connect_OET-RV_words_via_OET-LV/audits/2026-10-24-apostrophes-summary.json)
+records validation and source hashes. Raw snapshots and reports are in ignored
+`.cache/oet-apostrophes-20261024/`.
+
+### 24 October 2026 apostrophes across character formatting
+
+Genesis 24:67 exposed a separate boundary case: the source contained
+`mother¦10891\add 's death\add*`, so the earlier raw-text scan could not see the
+number interrupting the displayed word. A scan across character markers found
+**31 further cases in ten books**. These now keep the whole possessive or
+contraction together, with the same source number after it.
+
+In seven cases the supplied ending moves outside the following addition span:
+`mother's¦10891 \add death\add*`. The following supplied words and their codes
+are retained. In the other 24 cases the existing character formatting extends
+through the ending, for example `\bd Simeon's¦27791\bd*` and
+`\add *He'd¦192574\add*`. All wording and source-number sequences are unchanged.
+The [repair ledger](connect_OET-RV_words_via_OET-LV/audits/2026-10-24-apostrophe-markup.tsv)
+records every number and formatting-boundary change.
+
+The connector rejects both fragments of a word whose apostrophe ending is
+separated by character markers; those boundaries need editorial repair before
+the whole word can be linked. The writer independently checks the live text,
+so a stale token cannot bypass this protection. Real spaces after closing
+markers and curly quotation marks still end words normally.
+
+All **154 tests** pass. All 31 repaired words are recognised with their saved
+numbers, and production dry runs of all ten affected books add no links and
+remove no addition-span numbers. Removing notes and character formatting before
+scanning all **83 RV files** finds no number preceding a straight apostrophe.
+The [audit summary](connect_OET-RV_words_via_OET-LV/audits/2026-10-24-apostrophe-markup-summary.json)
+contains validation and source hashes. Snapshots and reports are in ignored
+`.cache/oet-apostrophe-markup-20261024/`.
+
+### 24 October 2026 optional plurals and other supplied endings
+
+Numbers 27:8's `daughter¦76523(s)` originated in commit `8a7e6c55`
+(“Latest word connections”): the previous text had unnumbered `daughter(s)`.
+The tokenizer stopped at the opening parenthesis, so the writer inserted the
+number before the optional plural. The connector now reads `daughter(s)` and
+forms such as `branch(es)` as complete words. It restored the same source ID as
+`daughter(s)¦76523`. Matching allows either curated number form without giving
+the expanded plural a stronger claim than the singular.
+
+A scan across character formatting also found four split endings:
+
+| Reference | Repaired form | Preserved editorial information |
+| --- | --- | --- |
+| 1 Samuel 2:27 | `\add ≈Didn't¦126355\add*` | The adapted negative question remains marked. |
+| Luke 1:70 | `\add #ages¦38484\add*` | Singular-to-plural change is marked on the whole word. |
+| Romans 14:4 | `\add #servants¦111405\add*` | Singular-to-plural change is marked on the whole word. |
+| Revelation 13:1 | `\add #names¦161482\add* \add were written\add*` | The plural change and following supplied words remain distinct. |
+
+These retain the existing source numbers and all translation wording. The
+writer now rejects a token ending before further letters or an optional plural,
+including letters reached across character markers. Detached grammatical
+endings cannot acquire their own source link. A complete stem following a
+supplied prefix, such as `\add re\add*build`, can still carry a number at the
+end of the complete word.
+
+All **161 tests** pass. Production dry runs of all five changed books add no
+links and remove no addition-span numbers. Across all **83 RV source files**,
+the scan finds no number followed by a letter, straight apostrophe, `(s)`, or
+`(es)`, including across character markers and notes. Jeremiah 26:18's
+parenthesised traditional-name alias is a separate form, not an optional ending.
+The [repair ledger](connect_OET-RV_words_via_OET-LV/audits/2026-10-24-word-endings.tsv)
+and [audit summary](connect_OET-RV_words_via_OET-LV/audits/2026-10-24-word-endings-summary.json)
+record the five repairs, validation, and source hashes. Snapshots, history, and
+production reports are in ignored `.cache/oet-optional-plural-20261024/`.
+
 ### 13 October 2026 synonym review
 
 Matthew 23:23's `weightier` had no lexical evidence for LV `heavier`.

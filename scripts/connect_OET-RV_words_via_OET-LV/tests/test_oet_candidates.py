@@ -32,11 +32,32 @@ class CandidateTests(unittest.TestCase):
         self.assertEqual(select_candidates([first, second]), [])
         self.assertEqual(select_candidates([second, first]), [])
 
+    def test_terminal_possessive_preserves_matching_evidence(self):
+        for word,lv in (("houses'",'houses'),("wives'",'wife'),("Yudas'",'Yudas'),
+                        ("fishermen'",'fishers')):
+            with self.subTest(word=word):
+                self.assertEqual(self.links(word, [(lv,7)]), [(word,7)])
+        self.assertEqual(connect.simplifyRVLVWord("houses'"), 'houses')
+        self.assertEqual(connect.simplifyRVLVWord("Sha'ul"), "sha'ul")
+        self.assertEqual(connect.simplifyRVLVWord("don't"), "don't")
+        self.assertEqual(self.links(r"\add >houses'\add*", [('houses',7)]), [])
+        self.assertEqual(self.links("houses' houses'", [('houses',7),('houses',8)]),
+                         [("houses'",7),("houses'",8)])
+        self.assertEqual(self.links("houses' houses'", [('houses',7)]), [])
+
     def test_competing_phrase_is_atomic(self):
         a, b = tokenize('alpha beta')
         phrase = Candidate(((a, 1),(b, 1)), frozenset({0}), 'phrase')
         anchor = Candidate(((b, 2),), frozenset({1}), 'anchor')
         self.assertEqual(select_candidates([phrase], [anchor]), [])
+
+    def test_optional_plural_matches_either_form_without_choosing_between_repeats(self):
+        for word, forms in (('daughter(s)', ('daughter','daughters')),
+                            ('branch(es)', ('branch','branches'))):
+            for lv in forms:
+                with self.subTest(word=word,lv=lv):
+                    self.assertEqual(self.links(word, [(lv,7)]), [(word,7)])
+            self.assertEqual(self.links(word, [(forms[0],7),(forms[1],8)]), [])
 
     def test_saved_phrase_ownership_also_blocks_unique_recovery(self):
         self.assertEqual(self.links('his¦7 him', [('of',7),('him',7)]), [])

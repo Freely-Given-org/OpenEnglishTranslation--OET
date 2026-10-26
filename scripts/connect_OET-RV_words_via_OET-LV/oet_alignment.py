@@ -25,10 +25,17 @@ class Token:
     span: tuple[int, int] | None = None
     boundary_before: bool = False
     boundary_after: bool = False
+    word_fragment: bool = False
+
+    @property
+    def match_text(self):
+        """Keep printed endings in text/offsets, but use plain table keys."""
+        return OPTIONAL_PLURAL.sub(r'\1', self.text).removesuffix("'")
 
     @property
     def linkable(self):
-        return self.code is None or self.code in {'@', '*', '%', '&', '≈', '#', '≡', '!'}
+        return (not self.word_fragment
+                and (self.code is None or self.code in {'@', '*', '%', '&', '≈', '#', '≡', '!'}))
 
 
 @dataclass(frozen=True)
@@ -43,7 +50,12 @@ class LVToken:
 
 
 MARKER = re.compile(r'\\(?P<name>\+?[a-zA-Z][a-zA-Z0-9]*)(?P<close>\*)? ?')
-WORD = re.compile(r"[^\W_]+(?:['’\-][^\W_]+)*", re.UNICODE)
+# A terminal straight apostrophe belongs to the word (houses', Yudas').
+# An optional plural ending also belongs to the word: daughter(s), box(es).
+# Curly closing quotation marks remain outside the word and its number.
+WORD = re.compile(r"[^\W_]+(?:['’\-][^\W_]+)*(?:\((?:s|es)\))?'?", re.UNICODE)
+OPTIONAL_PLURAL = re.compile(r'\((s|es)\)')
+GRAMMATICAL_ENDINGS = frozenset(('s', 'es', "n't", 'd', 'll', 're', 've', 'm', 't'))
 NOTE = re.compile(r'\\(\+?(?:f|fe|x|fig|jmp))\b.*?\\\1\*')
 ADD_CODES = '@#≈≡*<>&%+^!='
 # These additions have no corresponding source word, including uncertain forms.
@@ -80,9 +92,11 @@ def referent_pronouns(unit):
     and explicit plural descriptions can. '%' has different semantics and does
     not use this filter.
     """
-    words = [t.text.casefold().removesuffix("'s").removesuffix('’s') for t in unit]
+    words = [t.match_text.casefold().removesuffix("'s").removesuffix('’s') for t in unit]
     if 'and' in words or any(w in {'people', 'men', 'women', 'children'} for w in words):
         return PLURAL_PRONOUNS
+    if any(OPTIONAL_PLURAL.search(t.text) for t in unit):
+        return PRONOUNS  # An explicitly optional plural does not determine number.
     # Capitalisation does not make Israelis/Jews/Levites singular. Use known
     # plural nouns before the name check; an arbitrary final 's' would instead
     # misclassify individual names such as Barnabas, Silas and Lazarus.
@@ -90,7 +104,7 @@ def referent_pronouns(unit):
         return PLURAL_PRONOUNS
     if words[-1] in SINGULAR_REFERENT_HEADS:
         return PRONOUNS - PLURAL_PRONOUNS
-    if any(t.text[:1].isupper() and t.text.casefold() not in {'the', 'a', 'an', 'this', 'that', 'these', 'those'} for t in unit):
+    if any(t.text[:1].isupper() and t.match_text.casefold() not in {'the', 'a', 'an', 'this', 'that', 'these', 'those'} for t in unit):
         return PRONOUNS - PLURAL_PRONOUNS
     if words[-1].endswith('s') and not words[-1].endswith('ss'):
         return PLURAL_PRONOUNS
@@ -131,6 +145,33 @@ def _add_code_at(text, start):
         start += 1
     code = text[start:start+1]
     return (code, start+1) if code and code in ADD_CODES else ('', start)
+
+
+def _after_word_markers(text, end):
+    """Skip a number and adjacent field syntax, retaining real whitespace."""
+    number = re.match(r'¦\d+', text[end:])
+    pos = end + len(number[0]) if number else end
+    while (marker := MARKER.match(text, pos)) is not None:
+        if marker['close']:
+            pos = marker.start() + len(marker['name']) + 2
+        else:
+            pos = marker.end()
+            if marker['name'].lstrip('+') == 'add':
+                _, pos = _add_code_at(text, pos)
+    return pos
+
+
+def is_word_fragment(text, start, end):
+    """Reject unfinished words and detached apostrophe endings.
+
+    Examples include ``mother\\add 's death\\add*``, ``God\\nd*'s`` and
+    ``Did\\add n't\\add*``. Closing markers do not consume following spaces.
+    """
+    if start and text[start-1] == "'":
+        return True
+    pos = _after_word_markers(text, end)
+    return (text[pos:pos+1].isalnum() or text[pos:pos+1] == "'"
+            or OPTIONAL_PLURAL.match(text, pos) is not None)
 
 
 def unlinked_add_spans(text):
@@ -190,7 +231,8 @@ def tokenize(text, line=0, offset=0, split_names=True):
             for part in parts:
                 part_end = start + len(part)
                 tokens.append(Token(part, line, offset+start, offset+part_end,
-                                    number if part_end == word.end() else None, code, span))
+                                    number if part_end == word.end() else None, code, span,
+                                    word_fragment=is_word_fragment(masked, start, part_end)))
                 start = part_end + 1
         if marker is None:
             break
@@ -203,6 +245,16 @@ def tokenize(text, line=0, offset=0, split_names=True):
                 start = cursor
                 code, cursor = _add_code_at(masked, cursor)
                 add_stack.append((code, (line, offset+start)))
+    # The s in age\\add s\\add* is not a separate source word. An ordinary
+    # stem after a supplied prefix (\\add re\\add*build) still ends at the
+    # whole word's end and can keep its source link. Do not cross real spaces.
+    for i in range(1, len(tokens)):
+        if tokens[i].text.casefold() not in GRAMMATICAL_ENDINGS:
+            continue
+        start = tokens[i].start-offset
+        pos = _after_word_markers(masked, tokens[i-1].end-offset)
+        if pos == start or (masked[pos:pos+1] == "'" and pos+1 == start):
+            tokens[i] = replace(tokens[i], word_fragment=True)
     # Retain punctuation even though the matchable words exclude it. Mask add
     # prefixes so an uncertainty '?' is not mistaken for sentence punctuation.
     punctuation = ADD_PREFIX.sub(lambda m: ' ' * len(m[0]), word_scan)
@@ -334,7 +386,7 @@ def phrase_edges(units, columns, phrase_index, occupied):
     if not phrase_index:
         return []
     result = []
-    rv_words = [u[0].text.casefold() if len(u) == 1 and u[0].linkable
+    rv_words = [u[0].match_text.casefold() if len(u) == 1 and u[0].linkable
                 and u[0].code not in SEMANTIC_CODES | {'!', '≡'} else None for u in units]
     lv_words = [{w.casefold() for w in (c.text, *c.text.split('/'))} for c in columns]
     for i, word in enumerate(rv_words):
@@ -368,11 +420,11 @@ def linked_phrase_columns(units, columns, positions, phrase_index):
         if len(unit) != 1 or unit[0].number is None or unit[0].code in SEMANTIC_CODES | UNLINKED_ADD_CODES | {'!'}:
             continue
         number = unit[0].number
-        for rv_phrase, lv_phrase in phrase_index.get(unit[0].text.casefold(), ()):
+        for rv_phrase, lv_phrase in phrase_index.get(unit[0].match_text.casefold(), ()):
             span = units[i:i+len(rv_phrase)]
             if (len(span) != len(rv_phrase)
                     or any(len(u) != 1 or u[0].number != number or u[0].code != unit[0].code for u in span)
-                    or tuple(u[0].text.casefold() for u in span) != rv_phrase):
+                    or tuple(u[0].match_text.casefold() for u in span) != rv_phrase):
                 continue
             for j in positions[number]:
                 stop = j+len(lv_phrase)
@@ -682,7 +734,7 @@ def propose_links(tokens, columns, lexical_score, normalise, reversed_clauses=Fa
                 if pos not in occupied_columns and all(t.linkable for t in unit):
                     if (code in SEMANTIC_CODES and crosses_anchor) or (
                             col.number in distant_numbers and
-                            all(t.text.casefold() in MOVEMENT_FUNCTION_WORDS for t in unit)):
+                            all(t.match_text.casefold() in MOVEMENT_FUNCTION_WORDS for t in unit)):
                         pass # No semantic clause guess or distant function-word reuse.
                     elif code in ('@', '%'):
                         allowed = referent_pronouns(unit) if code == '@' else PRONOUNS
