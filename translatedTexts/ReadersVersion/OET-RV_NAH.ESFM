@@ -1,4 +1,4 @@
-\id NAM - Open English Translation—Readers' Version (OET-RV) v0.1.05
+\id NAM - Open English Translation—Readers' Version (OET-RV) v0.2.0
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 NAH
@@ -9,7 +9,7 @@
 \toc3 Nah.
 \mt1 Nahum
 \is1 Introduction
-\ip This document is about the destruction of Nineveh (Heb. Ninveh), the capital city of Assyria—an ancient enemy of Yisrael/Israel. It was written between 663 before Yeshua/Jesus (B.C.) and 612 before Yeshua/Jesus (B.C.) The prophet Nahum was pleased that Yahweh destroyed Nineveh, because that was a sign that God does indeed punish sinners.
+\ip This document is about the destruction of Nineveh (Heb. Ninveh), the capital city of Ashur—an ancient enemy of Yisrael/Israel. It was written between 663 before Yeshua/Jesus (B.C.) and 612 before Yeshua/Jesus (B.C.) The prophet Nahum was pleased that Yahweh destroyed Nineveh, because that was a sign that God does indeed punish sinners.
 \ip A large portion of the document is poetry, with some narrative portions also included. Unlike English poetry which can often focus on rhyme, Hebrew poetry often includes parallelism where the same thought is repeated or extended using different words. The \em OET Readers' Version\em* tries to assist the reader by starting the second line in a parallel set with the symbol \bd ≈\bd*.
 \ip It can take a little bit of effort to decipher this message—to see who's being spoken to—because it's often alternating between Yahweh declaring good news to his people, and declaring bad news to Nineveh.
 \iot Main components of this document
@@ -37,7 +37,7 @@
 \v 4 He¦373176 scolds the ocean¦373177 and¦373178 makes¦373178 it¦373178 \add ≈sand\add*.
 \q1 ≈He dries¦373178 up all¦373179 the¦373181 rivers¦373181.
 \q1 Bashan¦373184 and¦373185 Karmel¦373185 wither up.
-\q1 ≈He makes the¦373186 flowers¦373186 wilt in Lebanon¦373187.
+\q1 ≈He makes the¦373186 flowers¦373186 wilt in Levanon¦373187.
 \q1
 \v 5 The mountains¦373190 shake¦373191 \add ≈when he appears\add*,
 \q1 ≈and¦373193 the¦373193 hills¦373193 melt¦373194.
@@ -88,7 +88,7 @@
 \q1
 \v 15 \add My people,\add* look, a messenger is running across the¦373323 hills¦373323.
 \q1 He'll¦373335 be bringing good news¦373325—announcing peace¦373327.\x + \xo 1:15: \xt Isa 52:7.\x*
-\q1 So celebrate¦373328 your festivals¦373328 Yehudah¦373329, and keep your¦373330 promises¦373332,
+\q1 So celebrate¦373328 your festivals¦373328 Yehudah¦373329 \add !(Judah¦373329)\add*, and keep your¦373330 promises¦373332,
 \q1 because¦373333 that wicked \add country\add* won't¦373334 invade you again¦373336—it'll¦373343 be¦373343 destroyed.
 \c 2
 \s1 Nineveh's coming destruction
@@ -100,8 +100,8 @@
 \q2 \add ≈Be dressed for battle\add*.
 \q2 \add ≈Gather your troops together\add*.
 \m
-\v 2 Yahweh¦373365 is restoring¦373364 Yakob's¦373369 \add !(Jacob's¦373369)\add* greatness,
-\q2 like¦373370 Yisrael's¦373371 greatness \add before\add*,
+\v 2 Yahweh¦373365 is restoring¦373364 Ya'akov's¦373369 \add !(Jacob¦373369)\add* greatness,
+\q2 like¦373370 Yisrael's¦373371 \add !(Israel¦373371)\add* greatness \add before\add*,
 \q1 even though the \add ≈invaders took their valuables\add* and¦373375 destroyed¦373376 their \add ≈vineyards\add*.
 \rem /s1 Nineveh's enemies triumphant
 \q1
@@ -193,16 +193,16 @@
 \q1 Where¦373621 can I¦373622 find someone who'll comfort¦373623 \add %her¦373624\add*?
 \b
 \q1
-\v 8 Are you¦373626 better¦373626 than¦373627 Thebes¦373627 \add city\add*\f + \fr 3:8 \ft Ancient No-Amon—modern Luxor in Egypt.\f* was,
+\v 8 Are you¦373626 better¦373626 than¦373627 No¦373627 \add city\add*\f + \fr 3:8 \ft Ancient No-Amon—modern Luxor in Mitsrayim.\f* was,
 \q2 where the Nile surrounded¦373632 \add and protected\add* her¦373633?
 \q1 ≈Where the¦373637 water¦373631 was¦373638 one of¦373639 her secure \add #walls¦373639\add*.
 \q1
-\v 9 Ethiopia and¦373643 Egypt¦373643 were her strength,
+\v 9 Kush \add !(Ethiopia)\add* and¦373643 Mitsrayim¦373643 \add !(Egypt¦373643)\add* were her strength,
 \q2 and¦373644 her strength had no limit.
 \q1 Put¦373646 and¦373647 Libya were¦373648 \add %her¦373649\add* allies.
 \b
 \q1
-\v 10 Yet \add @Thebes¦373653\add* was taken as an exile¦373654—
+\v 10 Yet \add @No¦373653\add* was taken as an exile¦373654—
 \q2 ≈taken into¦373656 captivity¦373656.
 \q1 Her young children¦373658 were¦373659 dashed¦373659 to pieces¦373659 at the top of every¦373661 street¦373663.
 \q1 \add @Her¦373666 captors¦373666\add* threw¦373667 dice for her nobles¦373666.
@@ -243,7 +243,7 @@
 \q2 to some place¦373766 that¦373756 nobody knows¦373765 about.
 \b
 \q1
-\v 18 \add You,\add* king¦373771 of¦373771 Assyia,
+\v 18 \add You,\add* king¦373771 of¦373771 Ashur \add !(Assyria)\add*,
 \q2 your¦373770 shepherds¦373770 have fallen asleep.
 \q2 ≈Your¦373774 nobles¦373774 have settled¦373773 down¦373773 \add for a break\add*.
 \q1 Your¦373776 people¦373776 will be¦373775 scattered¦373775 across the¦373779 hills¦373779,

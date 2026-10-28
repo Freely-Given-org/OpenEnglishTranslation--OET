@@ -1,114 +1,114 @@
-\id JOB - Open English Translation—Readers' Version (OET-RV) v0.1.36
+\id JOB - Open English Translation—Readers' Version (OET-RV) v0.2.0
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 JOB
 \rem WORDTABLE OET-LV_OT_word_table.tsv
-\h Yob
-\toc1 Iyyov (Job)
-\toc2 Iyyov
-\toc3 Iyyov
-\mt1 Iyyov
+\h Iyov
+\toc1 Iyov (Job)
+\toc2 Iyov
+\toc3 Iyov
+\mt1 Iyov
 \mt2 (Job)
 \is1 Introduction
-\ip \bk The account of Iyyov\bk* (but commonly as known as ‘Job’ which is the English evolution of the Germanic adaptation of the Greek adaptation Ἰώβ (Iōb) of his actual Hebrew name ‘אִיּוֹב’) is an account about a godly man who was struck by a series of tragedies: all his children and their families were killed, all his extensive wealth was lost, and then he was struck with a terrible disease. By means of this seven-part account, the reader is informed about how Iyyov and his friends react concerning those tragedies. Then finally, God reveals himself to Iyyov and the others.
-\ip Near the beginning of this document, God is told by Satan that it's not good governing of his people if he always rewards those who obey him. What if people only obey God because they're after the material blessings that would always follow. This would mean that their obedience no longer comes from their hearts. Yes, that's what Satan said about Iyyov, so God allowed Satan to test Iyyov's heart to see if he'd continue to trust God in times of suffering and misery.
-\ip Iyyov's traditional friends assumed that he must be suffering because he sinned. Surely he wouldn't suffer all that if he'd been honest and righteous. None of them could understand why God might allow sickness or disease to strike someone if he was truly a righteous person, but this is too simplistic for Iyyov to accept. Therefore he challenges God to present his case. In all of that, Iyyov's faith in God isn't lost, but he desires to regain his honour as an honest and godly person.
-\ip God doesn't answer Iyyov's questions but he responds by displaying his own power and wisdom and knowledge. So then Iyyov acknowledges God as the wise creator and requests forgiveness for his angry words.
-\ip The final segment of this account explains how Iyyov was restored to health, peace, and prosperity (all the elements of ‘shalom’/‘שָׁלוֹם’), and how he actually prospered even more than before. It also shows how God was angry at Iyyov's friends, because they had so much to say when none of them actually knew why Iyyov had suffered—only Iyyov had really sensed that God and his eventual (but eternal) justice is greater than simplistic proverbs and trite beliefs.
+\ip \bk The account of Iyov\bk* (but commonly as known as ‘Job’ which is the English evolution of the Germanic adaptation of the Greek adaptation Ἰώβ (Iōb) of his actual Hebrew name ‘אִיּוֹב’) is an account about a godly man who was struck by a series of tragedies: all his children and their families were killed, all his extensive wealth was lost, and then he was struck with a terrible disease. By means of this seven-part account, the reader is informed about how Iyov and his friends react concerning those tragedies. Then finally, God reveals himself to Iyov and the others.
+\ip Near the beginning of this document, God is told by Satan that it's not good governing of his people if he always rewards those who obey him. What if people only obey God because they're after the material blessings that would always follow. This would mean that their obedience no longer comes from their hearts. Yes, that's what Satan said about Iyov, so God allowed Satan to test Iyov's heart to see if he'd continue to trust God in times of suffering and misery.
+\ip Iyov's traditional friends assumed that he must be suffering because he sinned. Surely he wouldn't suffer all that if he'd been honest and righteous. None of them could understand why God might allow sickness or disease to strike someone if he was truly a righteous person, but this is too simplistic for Iyov to accept. Therefore he challenges God to present his case. In all of that, Iyov's faith in God isn't lost, but he desires to regain his honour as an honest and godly person.
+\ip God doesn't answer Iyov's questions but he responds by displaying his own power and wisdom and knowledge. So then Iyov acknowledges God as the wise creator and requests forgiveness for his angry words.
+\ip The final segment of this account explains how Iyov was restored to health, peace, and prosperity (all the elements of ‘shalom’/‘שָׁלוֹם’), and how he actually prospered even more than before. It also shows how God was angry at Iyov's friends, because they had so much to say when none of them actually knew why Iyov had suffered—only Iyov had really sensed that God and his eventual (but eternal) justice is greater than simplistic proverbs and trite beliefs.
 \iot Main components of this account
 \io1 SECTION ONE: Introduction \ior 1:1–2:13\ior*
-\io1 SECTION TWO: Dialogues between Iyyov and his friends \ior 3:1–27:23\ior*
-\io2 a. Iyyov's complaint \ior 3:1-26\ior*
+\io1 SECTION TWO: Dialogues between Iyov and his friends \ior 3:1–27:23\ior*
+\io2 a. Iyov's complaint \ior 3:1-26\ior*
 \io2 b. The first dialogue \ior 4:1–14:22\ior*
 \io2 c. The second dialogue \ior 15:1–21:34\ior*
 \io2 d. The third dialogue \ior 22:1–27:23\ior*
 \io1 SECTION THREE: Praising wisdom \ior 28:1-28\ior*
-\io1 SECTION FOUR: Iyyov's final statement \ior 29:1–31:40\ior*
+\io1 SECTION FOUR: Iyov's final statement \ior 29:1–31:40\ior*
 \io1 SECTION FIVE: Elihu's speech \ior 32:1–37:24\ior*
-\io1 SECTION SIX: Yahweh answers Iyyov \ior 38:1–42:6\ior*
+\io1 SECTION SIX: Yahweh answers Iyov \ior 38:1–42:6\ior*
 \io1 SECTION SEVEN: The final restoration \ior 42:7-17\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
 \ms1 SECTION ONE: The introduction
 \mr (1:1–2:13)
-\s1 Iyyov's prosperous life
+\s1 Iyov's prosperous life
 \rem /s1 Prologue; Job and His Family; Satan Tests Job
 \p
-\v 1 There was \add once\add* a¦232247 man¦232247 called¦232253 Iyyov¦232252 \add (Job)\add* who lived in¦232249 the¦232249 Uts¦232251 \add !(Uz¦232251)\add* region¦232249. \add He\add* was¦232254 blameless¦232258 and righteous—both obeying God¦232261 and¦232262 avoiding evil¦232263.
+\v 1 There was \add once\add* a¦232247 man¦232247 called¦232253 Iyov¦232252 \add !(Job¦232252)\add* who lived in¦232249 the¦232249 Uts¦232251 \add !(Uz¦232251)\add* region¦232249. \add He\add* was¦232254 blameless¦232258 and righteous—both obeying God¦232261 and¦232262 avoiding evil¦232263.
 \v 2 He had seven¦232267 sons¦232268 and¦232269 three¦232269 daughters¦232270,
-\v 3 and¦232272 he¦232272 owned 7,000 sheep¦232277, 3,000 camels¦232280, 1,000 cattle¦232285, and¦232286 500 donkeys¦232288, as well as many¦232296 slaves. \add @Iyyov¦232292\add* was¦232292 \add richer\add* than \add anyone else\add* who lived in the area east¦232300 \add of the Jordan River\add*.
-\v 4 \add Iyyov's\add* sons¦232303 \add regularly\add* held feasts in their homes¦232306, and whenever any of them held a¦232305 feast¦232305, he would invite¦232310 all his¦232308 brothers and¦232309 sisters¦232312 to share the meal with¦232316 him.
-\v 5 \add Then once a feast was over\add*, Iyyov¦232324 would send¦232323 \add for his children\add* and¦232325 consecrate them¦232325—he¦232326 got up¦232328 early¦232326 in¦232327 the morning¦232327 and¦232328 offered¦232328 burnt¦232329 offerings¦232329 for each¦232331 of¦232331 them¦232331, because¦232332 Iyyov¦232334 said¦232333, “Perhaps¦232335 my¦232337 \add children\add* have¦232336 sinned¦232336 and¦232338 cursed\f + \fr 1:15 \ft Literally ‘blessed’ but it's possible that the original reading was ‘cursed’ and that scribes changed it to ‘blessed’ in order to avoid the uncomfortable concept of a person cursing God. Traditional manuscripts of the Hebrew Bible don't have a marginal notation about this (as they do in the case of 7:20), but LXX uses ‘ἐνενοήθησαν κακά’ which can be rendered as ‘have thought evil things’ and the Peshitta (Syriac) uses ‘reviled’. Many other translations also use ‘cursed’ since this is the kind of change that scribes are known to have made in similar cases.\f* God¦232339 in¦232340 their¦232340 \add #hearts¦232340\add*.” \add ≈It was Iyyov's¦232343 regular habit to\add* \add intercede for his children\add*.
-\s1 Satan's first attack on Iyyov
+\v 3 and¦232272 he¦232272 owned 7,000 sheep¦232277, 3,000 camels¦232280, 1,000 cattle¦232285, and¦232286 500 donkeys¦232288, as well as many¦232296 slaves. \add @Iyov¦232292\add* was¦232292 \add richer\add* than \add anyone else\add* who lived in the area east¦232300 \add of the Yarden\add* \add !(Jordan)\add* \add River\add*.
+\v 4 \add Iyov's\add* sons¦232303 \add regularly\add* held feasts in their homes¦232306, and whenever any of them held a¦232305 feast¦232305, he would invite¦232310 all his¦232308 brothers and¦232309 sisters¦232312 to share the meal with¦232316 him.
+\v 5 \add Then once a feast was over\add*, Iyov¦232324 would send¦232323 \add for his children\add* and¦232325 consecrate them¦232325—he¦232326 got up¦232328 early¦232326 in¦232327 the morning¦232327 and¦232328 offered¦232328 burnt¦232329 offerings¦232329 for each¦232331 of¦232331 them¦232331, because¦232332 Iyov¦232334 said¦232333, “Perhaps¦232335 my¦232337 \add children\add* have¦232336 sinned¦232336 and¦232338 cursed\f + \fr 1:15 \ft Literally ‘blessed’ but it's possible that the original reading was ‘cursed’ and that scribes changed it to ‘blessed’ in order to avoid the uncomfortable concept of a person cursing God. Traditional manuscripts of the Hebrew Bible don't have a marginal notation about this (as they do in the case of 7:20), but LXX uses ‘ἐνενοήθησαν κακά’ which can be rendered as ‘have thought evil things’ and the Peshitta (Syriac) uses ‘reviled’. Many other translations also use ‘cursed’ since this is the kind of change that scribes are known to have made in similar cases.\f* God¦232339 in¦232340 their¦232340 \add #hearts¦232340\add*.” \add ≈It was Iyov's¦232343 regular habit to\add* \add intercede for his children\add*.
+\s1 Satan's first attack on Iyov
 \rem /s1 Attack on Job's Character; Job's First Test
 \p
 \v 6 It¦232349 was¦232349 the¦232350 day¦232350 that God's sons¦232352\f + \fr 1:6 \ft It's not clear from the text who these are.\f* came¦232351 to¦232354 present¦232354 themselves¦232354 to Yahweh¦232357,\x + \xo 1:6: \xt Gen 6:2.\x* and¦232358 the¦232361 adversary¦232361 (Satan) was also¦232359 there among¦232362 them¦232362.
 \v 7 Yahweh¦232365 asked¦232364 him, “Where¦232369 have you¦232370 just come¦232370 from¦232377?”
 \p “I have come¦232377 from the¦232378 earth¦232378, where I was travelling around¦232379 \add to see what was going on\add*.” Satan replied.
 \p
-\v 8 “Have¦232387 you¦232387 \add noticed\add* my¦232391 servant¦232391 Iyyov¦232392?” Yahweh¦232383 asked¦232382. “There's¦232394 no one else like¦232395 him¦232395 on¦232396 the¦232396 \add whole\add* earth¦232396—a¦232397 blameless¦232398 and¦232399 righteous man¦232397 who¦232402 obeys me God¦232401 and¦232402 avoids \add anything\add* evil¦232403.”
+\v 8 “Have¦232387 you¦232387 \add noticed\add* my¦232391 servant¦232391 Iyov¦232392 \add !(Job¦232392)\add*?” Yahweh¦232383 asked¦232382. “There's¦232394 no one else like¦232395 him¦232395 on¦232396 the¦232396 \add whole\add* earth¦232396—a¦232397 blameless¦232398 and¦232399 righteous man¦232397 who¦232402 obeys me God¦232401 and¦232402 avoids \add anything\add* evil¦232403.”
 \p
-\v 9 “Does Iyyov¦232413 \add get\add* nothing \add back\add* for respecting¦232412 God¦232414?” Satan answered¦232405 Yahweh¦232409.
+\v 9 “Does Iyov¦232413 \add get\add* nothing \add back\add* for respecting¦232412 God¦232414?” Satan answered¦232405 Yahweh¦232409.
 \v 10 “Don't¦232416 you \add constantly protect\add* him¦232421 and¦232422 his¦232424 household¦232424 and¦232425 everything that's¦232428 his¦232433? You've¦232434 blessed¦232434 \add what he works on\add*, and¦232435 his¦232435 \add livestock have multiplied prolifically\add*.
 \v 11 However, just stretch¦232440 out¦232440 your¦232443 hand¦232443 and¦232444 \add ruin\add* everything he has, then \add we'll see that\add* he'll¦232456 curse you to¦232449 your¦232455 face¦232455.”
 \p
-\v 12 “Listen, \add ≈I'll cede you control over\add* everything he has,” Yahweh¦232459 replied¦232458. “Only¦232470 \add just\add* don't¦232472 do¦232472 \add anything\add* against \add @Iyyov himself\add*.” \add So\add* the¦232477 adversary¦232477 went¦232476 away from¦232478 Yahweh's¦232480 \add presence\add*.
-\s1 Satan destroys Iyyov's wealth and children
+\v 12 “Listen, \add ≈I'll cede you control over\add* everything he has,” Yahweh¦232459 replied¦232458. “Only¦232470 \add just\add* don't¦232472 do¦232472 \add anything\add* against \add @Iyov himself\add*.” \add So\add* the¦232477 adversary¦232477 went¦232476 away from¦232478 Yahweh's¦232480 \add presence\add*.
+\s1 Satan destroys Iyov's wealth and children
 \rem /s1 Job Loses Property and Children; Job's Children and Wealth Are Destroyed
 \p
-\v 13 \add ≈So¦232482\add* \add one\add* day¦232483 when¦232484 \add Iyyov's\add* sons¦232484 and¦232485 his¦232485 daughters¦232485 were¦232486 eating¦232486 and¦232487 drinking¦232487 wine¦232488 in¦232489 their¦232490 eldest¦232491 brother's¦232490 house¦232489,
-\v 14 a¦232493 messenger¦232493 came¦232494 to¦232495 Iyyov¦232497 and¦232498 \add reported\add*, “\add While\add* the¦232499 oxen¦232499 were¦232500 ploughing¦232501 and¦232502 the¦232502 donkeys¦232502 were¦232503 feeding \add nearby\add*,
-\v 15 the Sabeans¦232509 attacked¦232514 with \add &their\add* \add #swords¦232517\add* and¦232510 stole them¦232510 \add all\add*. They¦232514 killed¦232514 all your slaves except that I¦232518 \add managed to\add* escape¦232518 to¦232523 tell¦232523 you¦232524.”
+\v 13 \add ≈So¦232482\add* \add one\add* day¦232483 when¦232484 \add Iyov's\add* \add !(Job)\add* sons¦232484 and¦232485 his¦232485 daughters¦232485 were¦232486 eating¦232486 and¦232487 drinking¦232487 wine¦232488 in¦232489 their¦232490 eldest¦232491 brother's¦232490 house¦232489,
+\v 14 a¦232493 messenger¦232493 came¦232494 to¦232495 Iyov¦232497 and¦232498 \add reported\add*, “\add While\add* the¦232499 oxen¦232499 were¦232500 ploughing¦232501 and¦232502 the¦232502 donkeys¦232502 were¦232503 feeding \add nearby\add*,
+\v 15 raiders from Sheva¦232509 attacked¦232514 with \add &their\add* \add #swords¦232517\add* and¦232510 stole them¦232510 \add all\add*. They¦232514 killed¦232514 all your slaves except that I¦232518 \add managed to\add* escape¦232518 to¦232523 tell¦232523 you¦232524.”
 \p
 \v 16 \add While\add* he was still¦232526 speaking¦232529, another \add ≡messenger\add* came¦232531 and¦232532 said¦232532, “The¦232533 fire¦232533 of¦232533 God¦232534 fell¦232535 from¦232536 the¦232538 sky¦232538 and¦232539 burnt¦232539 up the sheep¦232540 and the \add shepherds\add*. \add Only ashes are left\add*, except that I alone¦232547 escaped¦232543 to¦232548 tell¦232548 you¦232549.”
 \p
-\v 17 \add While\add* he was still¦232551 speaking¦232554, another \add one\add* came¦232556 and¦232557 \add explained\add*, “The¦232558 Chaldeans¦232558 formed¦232559 into three¦232561 bands and¦232563 \add raided\add* the¦232566 camels¦232566 and¦232567 took¦232567 them¦232567, and¦232568 they¦232571 attacked¦232571 the¦232572 slaves with \add &their¦232574\add* \add #swords¦232574\add*, and¦232575 I'm¦232575 the only¦232576 one who escaped¦232575 to¦232580 \add come and\add* tell¦232580 you¦232581.”
+\v 17 \add While\add* he was still¦232551 speaking¦232554, another \add one\add* came¦232556 and¦232557 \add explained\add*, “The¦232558 Kasdim¦232558 \add !(Chaldeans¦232558)\add* formed¦232559 into three¦232561 bands and¦232563 \add raided\add* the¦232566 camels¦232566 and¦232567 took¦232567 them¦232567, and¦232568 they¦232571 attacked¦232571 the¦232572 slaves with \add &their¦232574\add* \add #swords¦232574\add*, and¦232575 I'm¦232575 the only¦232576 one who escaped¦232575 to¦232580 \add come and\add* tell¦232580 you¦232581.”
 \p
 \v 18 \add While\add* he was¦232585 still speaking¦232585, another \add ≡messenger\add* came¦232587 and¦232588 said¦232588, “Your¦232589 sons¦232589 and¦232590 daughters¦232590 were¦232591 eating¦232591 and¦232592 drinking¦232592 wine¦232593 in¦232594 the house¦232594 of¦232594 their¦232595 eldest¦232596 brother¦232595
 \v 19 when¦232598 \add suddenly\add* a¦232599 \add freak\add* wind¦232599 came¦232601 from¦232603 across the desert and¦232605 struck¦232605 the¦232608 house¦232608. It¦232609 \add collapsed\add* on¦232610 the¦232612 young¦232612 people and¦232613 \add killed them\add*, and¦232614 only¦232615 I alone¦232618 have escaped¦232614 to¦232619 tell¦232619 you¦232620.”
 \p
-\v 20 Then¦232622 Iyyov¦232623 stood up¦232622 and¦232624 tore¦232624 his¦232627 robe¦232627 and¦232628 shaved¦232628 his¦232631 head¦232631. Then¦232632 he¦232632 knelt¦232632 with his face to the ground¦232633 and¦232634 worshipped¦232634 \add God\add*,
+\v 20 Then¦232622 Iyov¦232623 \add !(Job¦232623)\add* stood up¦232622 and¦232624 tore¦232624 his¦232627 robe¦232627 and¦232628 shaved¦232628 his¦232631 head¦232631. Then¦232632 he¦232632 knelt¦232632 with his face to the ground¦232633 and¦232634 worshipped¦232634 \add God\add*,
 \v 21 saying¦232636, “I¦232638 came¦232638 naked from¦232640 my¦232641 mother's¦232641 womb¦232640, and¦232642 I¦232643 will¦232643 \add leave this life\add* naked. Yahweh¦232646 gave¦232647, and¦232648 Yahweh¦232648 has¦232649 taken¦232649. May¦232650 Yahweh's¦232652 \add ≈reputation¦232651\add* be blessed¦232653.”
 \p
-\v 22 \add Through\add* all¦232655 of that¦232657, Iyyov¦232661 didn't¦232662 \add disobey\add* God¦232666 or \add accuse him of being evil\add*.
+\v 22 \add Through\add* all¦232655 of that¦232657, Iyov¦232661 didn't¦232662 \add disobey\add* God¦232666 or \add accuse him of being evil\add*.
 \c 2
-\s1 Satan's second attack on Iyyov
+\s1 Satan's second attack on Iyov
 \rem /s1 Job's Second Test; Attack on Job's Health; Satan Tests Job Again
 \p
 \v 1 It¦232669 was¦232669 the¦232670 day¦232670 that God's sons¦232672 came¦232671 to¦232674 present¦232674 themselves¦232674 to Yahweh¦232677 and¦232678 the¦232681 adversary¦232681 (Satan) was also¦232679 there among¦232682 them¦232682.
 \v 2 “Where¦232693 have you¦232695 come¦232695 from?” Yahweh \add asked\add* the¦232697 adversary¦232697.
 \p “From¦232702 wandering on¦232703 the¦232703 earth¦232703 and¦232704 going¦232704 back and forth on¦232705 it¦232705,” \add he\add* answered¦232696.
 \p
-\v 3 “Have¦232712 you¦232712 \add noticed\add* my¦232716 servant¦232716 Iyyov¦232717 \add !(Job¦232717)\add*?” Yahweh¦232708 asked¦232707 Satan, “because¦232718 there's¦232719 no one like¦232720 him¦232720 on¦232721 the¦232721 earth¦232721—a¦232722 blameless¦232723 and¦232724 righteous man¦232722, \add striving to obey\add* God¦232726 and¦232727 turning¦232727 from¦232728 evil¦232728. And¦232729 he's still¦232729 holding¦232730 firmly to his¦232731 integrity¦232731, even though you¦232732 incited¦232732 me¦232732 against him¦232733, to¦232734 \add ruin\add* him¦232734 for nothing.”
+\v 3 “Have¦232712 you¦232712 \add noticed\add* my¦232716 servant¦232716 Iyov¦232717 \add !(Job¦232717)\add*?” Yahweh¦232708 asked¦232707 Satan, “because¦232718 there's¦232719 no one like¦232720 him¦232720 on¦232721 the¦232721 earth¦232721—a¦232722 blameless¦232723 and¦232724 righteous man¦232722, \add striving to obey\add* God¦232726 and¦232727 turning¦232727 from¦232728 evil¦232728. And¦232729 he's still¦232729 holding¦232730 firmly to his¦232731 integrity¦232731, even though you¦232732 incited¦232732 me¦232732 against him¦232733, to¦232734 \add ruin\add* him¦232734 for nothing.”
 \p
 \v 4 “Skin¦232743 for¦232744 skin¦232746,” replied the¦232738 adversary¦232738, “\add actually, a person will give everything they have to save their\add* life¦232752.
 \v 5 However, just \add reach out\add* and¦232759 touch¦232759 his¦232762 flesh¦232765 and \add #bones¦232762\add*, \add and see\add* if¦232766 he doesn't curse you to¦232769 your¦232771 face¦232771.”
 \p
 \v 6 “\add Listen\add*,” Yahweh¦232775 said¦232774 to¦232776 \add him\add*, “\add ≈I'll give you power over him\add*, but you \add must\add* preserve¦232785 his¦232784 life¦232784.”
 \p
-\v 7 \add ≈So¦232787\add* the¦232788 adversary¦232788 went¦232787 away from¦232789 Yahweh's¦232791 \add presence\add*, and¦232792 he¦232792 \add infected\add* Iyyov¦232795 with¦232796 bad¦232797 boils¦232796 from¦232798 the¦232798 sole¦232798 of¦232798 his¦232799 foot¦232799 to¦232800 \add the top of his head\add*.
-\v 8 \add Iyyov picked up a piece of broken pottery\add* to \add scratch\add* himself¦232808 with \add as\add* he¦232810 sat¦232811 \add down\add* in¦232812 the¦232812 middle¦232812 of a pile of ashes¦232814.
+\v 7 \add ≈So¦232787\add* the¦232788 adversary¦232788 went¦232787 away from¦232789 Yahweh's¦232791 \add presence\add*, and¦232792 he¦232792 \add infected\add* Iyov¦232795 with¦232796 bad¦232797 boils¦232796 from¦232798 the¦232798 sole¦232798 of¦232798 his¦232799 foot¦232799 to¦232800 \add the top of his head\add*.
+\v 8 \add Iyov picked up a piece of broken pottery\add* to \add scratch\add* himself¦232808 with \add as\add* he¦232810 sat¦232811 \add down\add* in¦232812 the¦232812 middle¦232812 of a pile of ashes¦232814.
 \p
 \v 9 “Are¦232819 you¦232819 still¦232819 holding¦232820 tightly onto your¦232821 integrity¦232821?” his¦232818 wife¦232818 \add asked\add* him. “\add Just\add* curse God¦232823 and¦232824 die¦232824.”
 \p
-\v 10 “You're¦232831 talking¦232831 like¦232828 a foolish¦232830 \add person\add*,” \add @Iyyov¦232831\add* \add ≈replied¦232826\add*. “Should we¦232836 \add only\add* accept¦232836 good¦232835 from¦232837 God and¦232839 not receive the bad?” In¦232844 all¦232844 of that¦232846, Iyyov¦232850 didn't sin¦232849 \add in what he said\add*.
-\s1 Iyyov's three friends come
+\v 10 “You're¦232831 talking¦232831 like¦232828 a foolish¦232830 \add person\add*,” \add @Iyov¦232831\add* \add ≈replied¦232826\add*. “Should we¦232836 \add only\add* accept¦232836 good¦232835 from¦232837 God and¦232839 not receive the bad?” In¦232844 all¦232844 of that¦232846, Iyov¦232850 didn't sin¦232849 \add in what he said\add*.
+\s1 Iyov's three friends come
 \rem /s1 Job's Friends Come; Job's Three Friends Share His Anguish; Job's Three Friends
 \p
-\v 11 \add When\add* Iyyov's¦232858 three¦232855 friends¦232857 heard¦232854 \add about all the troubles that had happened to\add* him¦232865, they¦232866 each¦232867 came¦232866 from¦232868 his¦232868 place¦232868: Elifaz¦232869 from Teman, Bildad¦232871 from Shuah, and Zofar from Naamah. They¦232875 gathered¦232875 together¦232876 to¦232877 come¦232877 to¦232878 console and¦232881 comfort¦232881 him¦232881.
+\v 11 \add When\add* Iyov's¦232858 \add !(Job¦232858)\add* three¦232855 friends¦232857 heard¦232854 \add about all the troubles that had happened to\add* him¦232865, they¦232866 each¦232867 came¦232866 from¦232868 his¦232868 place¦232868: Elifaz¦232869 from Teyman, Bildad¦232871 from Shuah, and Zofar from Naamah. They¦232875 gathered¦232875 together¦232876 to¦232877 come¦232877 to¦232878 console and¦232881 comfort¦232881 him¦232881.
 \v 12 \add but when\add* they¦232883 saw him from¦232887 a¦232887 distance¦232887, they¦232889 \add barely\add* recognised¦232889 him¦232889. They \add wailed loudly\add*, and they \add ripped their own clothes\add*, and they threw dust¦232897 \add into the air so that it would fall\add* on¦232898 their¦232900 heads¦232900. \add (All three of those were traditional signs of mourning.)\add*
-\v 13 Then¦232903 they¦232903 sat with¦232904 him¦232904 \add there\add* on the ground¦232905 for seven¦232906 days¦232907 and¦232908 seven¦232908 nights¦232909 without saying¦232912 a¦232914 \add single\add* word¦232914 to¦232913 \add @Iyyov¦232913\add* because¦232915 they¦232916 had seen¦232916 that¦232917 \add &his¦232920\add* suffering¦232920 was¦232919 extreme.
+\v 13 Then¦232903 they¦232903 sat with¦232904 him¦232904 \add there\add* on the ground¦232905 for seven¦232906 days¦232907 and¦232908 seven¦232908 nights¦232909 without saying¦232912 a¦232914 \add single\add* word¦232914 to¦232913 \add @Iyov¦232913\add* because¦232915 they¦232916 had seen¦232916 that¦232917 \add &his¦232920\add* suffering¦232920 was¦232919 extreme.
 \c 3
-\ms1 SECTION TWO: Iyyov talking with his friends
+\ms1 SECTION TWO: Iyov talking with his friends
 \mr (3:1–27:33)
-\s1 Iyyov's complaint
+\s1 Iyov's complaint
 \rem /s1 Job's Complaint to God; Job Speaks; Job's First Speech; Job Curses the Day He Was Born; Job's complaint to God
 \p
-\v 1 After¦232923 that, Iyyov¦232927 spoke¦232930 up and¦232931 cursed¦232931 \add the\add* day¦232934 \add of\add* his¦232934 \add conception\add*.\x + \xo 3:1-19: \xt Jer 20:14-18.\x*
+\v 1 After¦232923 that, Iyov¦232927 \add !(Job¦232927)\add* spoke¦232930 up and¦232931 cursed¦232931 \add the\add* day¦232934 \add of\add* his¦232934 \add conception\add*.\x + \xo 3:1-19: \xt Jer 20:14-18.\x*
 \p
 \v 2 He said¦232939:
-\sp Iyyov
+\sp Iyov
 \q1
 \v 3 May the¦232942 day¦232942 on which¦232944 I¦232944 was¦232944 born¦232944 perish¦232941,
 \q1 and¦232946 the¦232946 night¦232946 that¦232947 said¦232947, ‘A¦232949 boy has¦232948 been¦232948 conceived¦232948.’
@@ -189,11 +189,11 @@
 \v 26 I'm¦233171 not¦233173 relaxed or peaceful¦233174.
 \q1 ≈I¦233177 can't rest¦233177 \add because only\add* trouble comes¦233178.
 \c 4
-\s1 Elifaz's first response to Iyyov
+\s1 Elifaz's first response to Iyov
 \rem /s1 The First Dialogue; Eliphaz; Eliphaz's First Response to Job; Eliphaz Speaks: Job Has Sinned; First cycle of speeches
 \sr (4:1–14:22)
 \p
-\v 1 Then¦233182 Elifaz¦233183 (from Teman) \add ≈replied\add*:
+\v 1 Then¦233182 Elifaz¦233183 (from Teyman) \add ≈replied\add*:
 \sp Elifaz
 \q1
 \v 2 If \add someone\add* tries¦233187 \add to talk\add* with you¦233189, will¦233190 it wear you¦233190 out?
@@ -347,11 +347,11 @@
 \v 27 Listen to this¦233621: we've¦233622 investigated and it's true.
 \q1 Listen¦233626 to it¦233626 \add so\add* you'll¦233627 know¦233628 for¦233630 yourself.
 \c 6
-\s1 Iyyov's first response to Elifaz
+\s1 Iyov's first response to Elifaz
 \rem /s1 Job; Job Replies: My Complaint Is Just; Job's Second Speech: A Response to Eliphaz
 \p
-\v 1 Then¦233633 Iyyov¦233634 \add !(Job¦233634) responded\add*:
-\sp Iyyov
+\v 1 Then¦233633 Iyov¦233634 \add !(Job¦233634)\add* \add responded\add*:
+\sp Iyov
 \q1
 \v 2 If¦233637 only my¦233640 anguish could be¦233639 truly weighed¦233639,
 \q1 and¦233641 my¦233641 calamity¦233641 could be \add put\add* together¦233646 \add with it on the scales\add*.
@@ -408,8 +408,8 @@
 \v 18 \add Their\add* paths¦233802 twist¦233801 in their¦233803 courses,
 \q1 they¦233804 go¦233804 out into¦233805 the wasteland¦233805 and¦233806 \add end there\add*.
 \q1
-\v 19 The¦233809 \add camel\add* caravans¦233809 from Tema¦233810 look¦233808 \add for water\add*.
-\q1 The¦233811 caravans¦233811 from Sheba¦233812 keep looking forward to them¦233815.
+\v 19 The¦233809 \add camel\add* caravans¦233809 from Teyma¦233810 look¦233808 \add for water\add*.
+\q1 The¦233811 caravans¦233811 from Sheva¦233812 keep looking forward to them¦233815.
 \q1
 \v 20 They¦233817 were¦233817 distressed because¦233818 they had¦233820 been¦233820 confident¦233820.
 \q1 They've¦233821 come¦233821 to¦233823 \add the dry stream bed\add* and¦233824 were¦233824 stunned.
@@ -475,7 +475,7 @@
 \q1 They'll be¦234016 on¦234016 me¦234016 \add but\add* I'll¦234017 be¦234017 gone.
 \q1
 \v 9 \add #Clouds¦234020\add* \add just pop out of existence again\add* and¦234021 vanish¦234019.
-\q1 Similarly, the \add person\add* who¦234023 goes¦234023 down¦234023 to She'ol doesn't come¦234026 \add back\add* up¦234026 \add again\add*.
+\q1 Similarly, the \add person\add* who¦234023 goes¦234023 down¦234023 to Sheol doesn't come¦234026 \add back\add* up¦234026 \add again\add*.
 \q1
 \v 10 \add That person\add* won't¦234028 return¦234030 to¦234032 their house¦234032 again,
 \q1 and¦234033 \add before long\add* their place¦234037 won't¦234033 \add even\add* know¦234035 them again¦234036.
@@ -518,7 +518,7 @@
 \q1 For¦234150 now¦234152 I'll¦234154 lie¦234154 down¦234154 in the dust¦234153.
 \q1 You'll¦234155 search¦234155 for me¦234155 but¦234156 I'll¦234156 no longer exist.
 \c 8
-\s1 Bildad's first response to Iyyov
+\s1 Bildad's first response to Iyov
 \rem /s1 Bildad; Bildad Speaks: Job Should Repent; Bildad's First Response to Job
 \p
 \v 1 Then¦234159 Bildad¦234160 (from Shuah) answered¦234159:
@@ -593,11 +593,11 @@
 \v 22 Those¦234377 who¦234377 hate¦234377 you¦234377 will¦234378 be¦234378 \add exposed and\add* shamed¦234380,
 \q1 and¦234381 the¦234381 \add homes\add* of¦234381 wicked¦234382 \add people will cease to exist\add*.
 \c 9
-\s1 Iyyov's first response to Bildad
+\s1 Iyov's first response to Bildad
 \rem /s1 Job; Job's Third Speech: A Response to Bildad; Job Replies: There Is No Mediator
 \p
-\v 1 Then¦234386 Iyyov¦234387 answered¦234386 saying¦234388:
-\sp Iyyov
+\v 1 Then¦234386 Iyov¦234387 \add !(Job¦234387)\add* answered¦234386 saying¦234388:
+\sp Iyov
 \q1
 \v 2 \add Yes,\add* I¦234391 certainly know¦234391 that¦234392.
 \q1 \add But\add* how can a¦234398 \add person be declared innocent\add* before God¦234401?\x + \xo 9:2: \xt Yob 4:17.\x*
@@ -632,7 +632,7 @@
 \q1 and who¦234493 will¦234495 \add ask\add* him¦234496 what¦234497 he's doing¦234499?
 \q1
 \v 13 God¦234501 won't¦234502 suppress his¦234505 anger¦234505.
-\q1 Those¦234509 who¦234509 help¦234509 Rahab¦234510 lie¦234508 beneath him.
+\q1 Those¦234509 who¦234509 help¦234509 Rahav¦234510 lie¦234508 beneath him.
 \b
 \q1
 \v 14 I will¦234516 certainly answer¦234516 him¦234516.
@@ -772,7 +772,7 @@
 \v 22 the¦234941 land¦234941 of¦234941 gloom¦234945 and deep¦234946 darkness¦234946,
 \q1 disorderly and with gloomy light¦234949.
 \c 11
-\s1 Zofar's first response to Iyyov
+\s1 Zofar's first response to Iyov
 \rem /s1 Zophar Speaks: Job's Guilt Deserves Punishment; Zophar; Zophar's First Response to Job
 \p
 \v 1 Then¦234955 Zofar (from Naamah) answered¦234955:
@@ -839,11 +839,11 @@
 \q2 and¦235139 the way of¦235139 escape¦235139 will¦235140 be¦235140 \add invisible\add* to them¦235141.
 \q1 Their¦235142 hope¦235142 will¦235143 \add be limited to their last\add* gasp¦235143 of¦235143 life¦235145.
 \c 12
-\s1 Iyyov's first response to Zofar
+\s1 Iyov's first response to Zofar
 \rem /s1 Job; Job's Fourth Speech: A Response to Zophar; Job Replies: I Am a Laughingstock
 \p
-\v 1 Then¦235148 Iyyov¦235149 responded \add to Zofar\add*:
-\sp Iyyov
+\v 1 Then¦235148 Iyov¦235149 \add !(Job¦235149)\add* responded \add to Zofar\add*:
+\sp Iyov
 \q1
 \v 2 \add Ah,\add* you're¦235154 certainly ‘the¦235156 people¦235156’
 \q1 and¦235157 wisdom¦235159 will¦235158 die¦235158 with you.
@@ -921,9 +921,9 @@
 \v 25 They¦235374 grope¦235374 in the darkness¦235376 without \add any\add* light¦235379,
 \q1 and¦235380 he¦235380 makes¦235380 them¦235380 stagger¦235380 around as¦235381 if they're drunk¦235381.
 \c 13
-\s1 Iyyov argues that he hasn't sinned
+\s1 Iyov argues that he hasn't sinned
 \rem /s1 Job Wants to Argue His Case with God
-\sp Iyyov
+\sp Iyov
 \p
 \v 1 Look here¦235383, my \add #eyes¦235387\add* have¦235386 seen¦235386 all¦235385 \add that\add*,
 \q1 ≈my \add #ears¦235389\add* have¦235388 heard¦235388 it and¦235390 understood¦235390.
@@ -1086,11 +1086,11 @@
 \v 22 Only¦235873 \add %our¦235875\add* own¦235875 bodies feel the pain¦235877.
 \q1 ≈Only \add %our\add* inner \add #selves¦235878\add* mourn¦235880.
 \c 15
-\s1 Elifaz's second response to Iyyov
+\s1 Elifaz's second response to Iyov
 \rem /s1 The Second Dialogue; Eliphaz's Second Response to Job; Second cycle of speeches; Eliphaz; Eliphaz Speaks: Job Undermines Religion
 \sr (15:1–21:34)
 \p
-\v 1 Then¦235883 Elifaz¦235884 (from Teman) replied:
+\v 1 Then¦235883 Elifaz¦235884 (from Teyman) replied:
 \sp Elifaz
 \q1
 \v 2 Do wise¦235888 \add #people\add* \add just\add* answer¦235889 with knowledge¦235890 \add full\add* of¦235890 wind¦235892?
@@ -1199,11 +1199,11 @@
 \v 35 They¦236225 dream about¦236230 trouble¦236226 and encourage wickedness¦236229,
 \q1 and they¦236227 give¦236227 birth¦236227 to¦236227 deceitful¦236232 \add plots\add*.
 \c 16
-\s1 Iyyov's second response to Elifaz
+\s1 Iyov's second response to Elifaz
 \rem /s1 Job; Job's Fifth Speech: A Response to Eliphaz; Job Reaffirms His Innocence
 \p
-\v 1 Then¦236235 Iyyov¦236236 answered¦236235 \add Elifaz\add*:
-\sp Iyyov
+\v 1 Then¦236235 Iyov¦236236 \add !(Job¦236236)\add* answered¦236235 \add Elifaz\add*:
+\sp Iyov
 \q1
 \v 2 I've¦236239 heard¦236239 many¦236241 things like¦236240 that \add before\add*.
 \q1 You come to comfort¦236242, but bring trouble¦236243 \add instead\add*.
@@ -1329,7 +1329,7 @@
 \v 16 Will¦236591 they¦236591 go¦236591 down¦236591 to¦236595 the \add gates\add* of the grave?
 \q1 ≈Will¦236598 we¦236598 go¦236598 down¦236598 together¦236594 into the¦236597 ground?
 \c 18
-\s1 Bildad's second response to Iyyov
+\s1 Bildad's second response to Iyov
 \rem /s1 Bildad; Bildad's Second Response to Job; Bildad Speaks: God Punishes the Wicked
 \p
 \v 1 Then¦236601 Bildad¦236602 (from Shuah) responded \add again\add*:
@@ -1346,7 +1346,7 @@
 \q1 or the rock¦236631 removed¦236629 out of¦236632 its¦236632 place¦236632?
 \b
 \q1
-\v 5 Indeed, the¦236635 light¦236635 of¦236635 wicked¦236636 \add people\add*\f + \fr 18:5 \ft This segment is about ‘the wicked man’ (somewhat general, but also obviously referring to Iyyov), but we've generalised it into ‘wicked people’ as being more relevant to the average reader (of both sexes).\f* is¦236637 extinguished¦236637.
+\v 5 Indeed, the¦236635 light¦236635 of¦236635 wicked¦236636 \add people\add*\f + \fr 18:5 \ft This segment is about ‘the wicked man’ (somewhat general, but also obviously referring to Iyov), but we've generalised it into ‘wicked people’ as being more relevant to the average reader (of both sexes).\f* is¦236637 extinguished¦236637.
 \q1 ≈the¦236641 flame¦236641 of¦236641 \add their\add* fire¦236642 won't¦236638 shine¦236640.
 \q1
 \v 6 The¦236644 light¦236644 in¦236647 \add their\add* \add #tents¦236647\add* will go dark¦236646.
@@ -1397,11 +1397,11 @@
 \v 21 That's certainly¦236773 how the¦236776 homes of¦236776 wicked \add people end up\add*,
 \q1 ≈and¦236778 that's the¦236779 place¦236779 for \add people\add* who¦236780 don't¦236780 know¦236782 God¦236784.
 \c 19
-\s1 Iyyov's second response to Bildad
+\s1 Iyov's second response to Bildad
 \rem /s1 Job's Sixth Speech: A Response to Bildad; Job; Job Replies: I Know That My Redeemer Lives
 \p
-\v 1 Iyyov¦236788 \add ≈responded¦236787 to Bildad and¦236789 companions again\add*:
-\sp Iyyov
+\v 1 Iyov¦236788 \add !(Job¦236788)\add* \add ≈responded¦236787 to Bildad and¦236789 companions again\add*:
+\sp Iyov
 \q1
 \v 2 \add How much longer\add* will¦236794 I be tormented¦236794
 \q1 and¦236796 crushed¦236796 with¦236797 words¦236797?
@@ -1494,10 +1494,10 @@
 \q2 because¦237054 anger¦237056 brings punishment by the¦237058 sword¦237058,
 \q1 so¦237059 that¦237059 \add you\add* will know¦237060 that \add there is\add* judgement¦237061.
 \c 20
-\s1 Zofar's second response to Iyyov
+\s1 Zofar's second response to Iyov
 \rem /s1 Zophar Speaks: Wickedness Receives Just Retribution; Zophar; Zophar's Second Response to Job
 \p
-\v 1 Then Zofar (from Naamah) \add ≈responded to Iyyov\add*:
+\v 1 Then Zofar (from Naamah) \add ≈responded to Iyov\add* \add !(Job)\add*:
 \sp Zofar
 \q1
 \v 2 My anxious thoughts¦237071 \add force\add* me¦237072 to answer¦237072,
@@ -1588,11 +1588,11 @@
 \v 29 That's what God serves up to wicked¦237320 \add #people¦237319\add*,
 \q1 ≈and¦237322 the¦237322 heritage¦237322 that¦237315 God¦237324 has decreed¦237323 for them.
 \c 21
-\s1 Iyyov's second response to Zofar
+\s1 Iyov's second response to Zofar
 \rem /s1 Job; Job Replies: The Wicked Often Go Unpunished; Job's Seventh Speech: A Response to Zophar
 \p
-\v 1 Then¦237327 Iyyov¦237328 \add ≈responded¦237327 to Zofar and¦237329 the others\add*:
-\sp Iyyov
+\v 1 Then¦237327 Iyov¦237328 \add !(Job¦237328)\add* \add ≈responded¦237327 to Zofar and¦237329 the others\add*:
+\sp Iyov
 \q1
 \v 2 Listen¦237331 carefully¦237332 to my¦237333 words¦237333,
 \q1 and¦237334 let¦237334 this¦237336 be a \add #consolation¦237337\add* for you all.
@@ -1700,11 +1700,11 @@
 \v 34 \add ≈So¦237624\add* how¦237624 can vanity¦237626 be of comfort¦237625 to me¦237625?
 \q1 It's¦237628 only faithlessness that remains¦237628 from the replies that you all \add have given\add*.
 \c 22
-\s1 Elifaz's third response to Iyyov
+\s1 Elifaz's third response to Iyov
 \rem /s1 Eliphaz's Third Response to Job; Eliphaz Speaks: Job's Wickedness Is Great; The Third Dialogue; Third cycle of speeches; Eliphaz
 \sr (22:1–27:23)
 \p
-\v 1 Then¦237633 Elifaz¦237634 (from Teman) responded \add to Iyyov\add*:
+\v 1 Then¦237633 Elifaz¦237634 (from Teyman) responded \add to Iyov\add* \add !(Job)\add*:
 \sp Elifaz
 \q1
 \v 2 Can a¦237641 human¦237641 be¦237639 of¦237639 use¦237639 to¦237638 God¦237638?
@@ -1795,11 +1795,11 @@
 \v 30 He¦237904 will¦237904 \add ≈set free\add* \add those\add* who aren't¦237906 innocent¦237908,
 \q1 ≈and¦237909 they'll be¦237909 rescued¦237909 with the¦237910 cleanness¦237910 of¦237910 your¦237911 hands¦237911.
 \c 23
-\s1 Iyyov's third response to Elifaz
+\s1 Iyov's third response to Elifaz
 \rem /s1 Job; Job Replies: My Complaint Is Bitter; Job's Eighth Speech: A Response to Eliphaz
 \p
-\v 1 Then¦237914 Iyyov¦237915 responded \add to Elifaz and the others\add*:
-\sp Iyyov
+\v 1 Then¦237914 Iyov¦237915 \add !(Job¦237915)\add* responded \add to Elifaz and the others\add*:
+\sp Iyov
 \q1
 \v 2 Even today my¦237922 complaint¦237922 is¦237924 bitter.
 \q1 ≈I'm groaning¦237927 \add because my situation is so difficult\add*.
@@ -1850,7 +1850,7 @@
 \v 17 I¦238057 haven't been¦238057 silenced¦238057 \add when\add* facing¦238058 the darkness¦238060,
 \q1 or by the fog that covers¦238062 my¦238061 face.
 \c 24
-\s2 Iyyov complains about continued evil
+\s2 Iyov complains about continued evil
 \rem /s1 Job Complains of Violence on the Earth; Job Asks Why the Wicked Are Not Punished
 \p
 \v 1 Why¦238066 doesn't the¦238067 provider \add ?store up the times\add*,
@@ -1938,10 +1938,10 @@
 \v 25 If¦238320 that isn't¦238322 true, then¦238323 who¦238324 will¦238325 prove¦238325 me¦238325 a¦238325 liar¦238325
 \q1 ≈and¦238326 demonstrate that my words¦238328 \add mean\add* nothing¦238327?
 \c 25
-\s1 Bildad's third response to Iyyov
+\s1 Bildad's third response to Iyov
 \rem /s1 Bildad; Bildad Speaks: How Can a Mortal Be Righteous Before God?; Bildad's Third Response to Job
 \p
-\v 1 Then¦238331 Bildad¦238332 (from Shuah) \add ≈responded to Iyyov\add*:
+\v 1 Then¦238331 Bildad¦238332 (from Shuah) \add ≈responded to Iyov\add* \add !(Job)\add*:
 \sp Bildad
 \q1
 \v 2 Dominion¦238336 and¦238337 fear¦238337 belong to \add @God¦238338\add*.
@@ -1959,11 +1959,11 @@
 \v 6 Indeed¦238379, a¦238382 person's¦238382 \add just like\add* an \add insect\add*,
 \q1 ≈and¦238384 human¦238386 offspring \add ?are as insignificant as\add* \add #worms¦238387\add*.
 \c 26
-\s1 Iyyov's response to Bildad
+\s1 Iyov's response to Bildad
 \rem /s1 Job; Job Replies: God's Majesty Is Unsearchable; Job's Ninth Speech: A Response to Bildad
 \p
-\v 1 Then¦238390 Iyyov¦238391 responded \add to Bildad\add*:
-\sp Iyyov
+\v 1 Then¦238390 Iyov¦238391 \add !(Job¦238391)\add* responded \add to Bildad\add*:
+\sp Iyov
 \q1
 \v 2 How¦238394 have you helped¦238396 \add those\add* without power¦238399?
 \q1 ≈\add How have\add* you¦238400 saved¦238400 \add those\add* \add ≈who are weak\add*?
@@ -1978,7 +1978,7 @@
 \q1 from¦238428 beneath¦238428 the¦238429 \add #water¦238429\add* and¦238430 their inhabitants¦238430. ???
 \q1
 \v 6 The grave is¦238432 wide open before¦238434 him¦238434,
-\q1 ≈and¦238435 ABADDON¦238437 has no covering¦238436.
+\q1 ≈and¦238435 AVADON¦238437 has no covering¦238436.
 \q1
 \v 7 He¦238439 stretches¦238439 out¦238439 the¦238440 north¦238440 over¦238441 \add ≈empty space\add*.
 \q1 ≈He¦238444 hangs¦238444 the¦238445 earth¦238445 on¦238446 nothing at all.
@@ -1996,7 +1996,7 @@
 \q1 and¦238489 they're¦238489 astounded¦238489 when he scolds¦238490 them.
 \q1
 \v 12 He¦238493 stirs¦238493 up¦238493 the¦238494 sea¦238494 with his¦238492 power¦238492,
-\q1 and¦238495 using his¦238495 know-how he¦238497 smashed¦238497 RAHAB¦238498.
+\q1 and¦238495 using his¦238495 know-how he¦238497 smashed¦238497 RAHAV¦238498.
 \q1
 \v 13 By¦238500 his¦238500 breath¦238500 he makes the¦238501 skies¦238501 \add ≈clear¦238502\add*.
 \q1 His¦238504 hand¦238504 pierced¦238503 the¦238505 fleeing¦238506 snake¦238505.
@@ -2007,7 +2007,7 @@
 \c 27
 \rem /s1 Job's Final Speech; Job Maintains His Integrity
 \p
-\v 1 Then¦238530 Iyyov¦238531 continued speaking:
+\v 1 Then¦238530 Iyov¦238531 \add !(Job¦238531)\add* continued speaking:
 \q1
 \v 2 \add Although\add* God¦238538 lives¦238536, who's¦238539 taken¦238539 justice¦238540 away¦238539 from me,
 \q1 ≈and¦238541 the¦238541 provider who's¦238542 made¦238542 my soul bitter¦238542,
@@ -2082,7 +2082,7 @@
 \mr (28:1-28)
 \s1 Praising wisdom
 \rem /s1 Job Speaks of Wisdom and Understanding; Interlude: Where Wisdom Is Found; God's unfathomable wisdom; In Praise of Wisdom
-\sp Iyyov
+\sp Iyov
 \q1
 \v 1 Surely there's¦238751 a¦238753 mine¦238753 where silver¦238752 \add is extracted\add*,
 \q1 ≈and¦238754 a¦238754 place¦238754 where gold¦238755 is refined¦238756.
@@ -2141,7 +2141,7 @@
 \v 18 It's¦238919 not even worth mentioning coral and¦238920 jasper.
 \q1 ≈Yes, \bd wisdom¦238921\bd* is¦238922 \add way\add* more¦238922 expensive than¦238922 pearls.
 \q1
-\v 19 The¦238927 \add good\add* topaz¦238927 from Ethiopia¦238929 can't¦238932 be compared¦238926 with it¦238926.
+\v 19 The¦238927 \add good\add* topaz¦238927 from Kush¦238929 \add !(Ethiopia¦238929)\add* can't¦238932 be compared¦238926 with it¦238926.
 \q1 ≈It¦238933 can't be¦238933 paid¦238933 for with gold¦238930.
 \s2 Wisdom is obeying God
 \q1
@@ -2173,13 +2173,13 @@
 \q1 ‘Listen, obeying the¦239010 master¦239011—that's \bd wisdom¦239013\bd*,
 \q2 along with turning¦239014 away from¦239015 \add doing\add* evil¦239015.’\x + \xo 28:28: \xt Psa 111:10; Prv 1:7; 9:10.\x*
 \c 29
-\ms1 SECTION FOUR: Iyyov's final speech
+\ms1 SECTION FOUR: Iyov's final speech
 \mr (29:1–31:40)
-\s1 Iyyov remembers his earlier life
+\s1 Iyov remembers his earlier life
 \rem /s1 Job's final survey of his case; Job Finishes His Defense; Job Speaks of His Former Blessings; Job's Final Statement of His Case
 \p
-\v 1 Then¦239019 Iyyov¦239020 continued speaking:
-\sp Iyyov
+\v 1 Then¦239019 Iyov¦239020 \add !(Job¦239020)\add* continued speaking:
+\sp Iyov
 \q1
 \v 2 How I wish for \add my life\add* in the months¦239028 of¦239028 the past,
 \q1 ≈in the¦239031 days¦239031 when¦239032 God¦239032 watched¦239033 over¦239033 me¦239033.
@@ -2356,9 +2356,9 @@
 \v 31 \add ≈So¦239508\add* my¦239510 harp¦239510 is¦239508 used for mourning¦239509.
 \q1 ≈My¦239511 flute¦239511 \add ≈accompanies\add* those¦239513 who¦239513 are weeping¦239513.
 \c 31
-\s1 Iyyov's claims of obedience
+\s1 Iyov's claims of obedience
 \rem /s1 Job's Final Protest of Innocence
-\sp Iyyov
+\sp Iyov
 \p
 \v 1 I've¦239516 made¦239516 an agreement¦239515 with my¦239517 eyes¦239517,
 \q1 ≈\add about\add* how I'll be careful¦239519 when¦239518 I¦239519 look¦239519 at a¦239522 young¦239522 woman¦239522.
@@ -2394,7 +2394,7 @@
 \v 11 \add Yes,\add* that \add ≈would be¦239617 wicked¦239617\add*,
 \q1 and¦239618 would be¦239620 an evil¦239620 deserving \add ≈judgement¦239621\add*.
 \q1
-\v 12 It's a¦239624 fire¦239624 that¦239625 will¦239629 devour¦239629 Abaddon¦239628, ???
+\v 12 It's a¦239624 fire¦239624 that¦239625 will¦239629 devour¦239629 Avadon¦239628, ???
 \q1 and¦239630 it would uproot all¦239630 of¦239632 my¦239632 harvest¦239632. ???
 \q1
 \v 13 If¦239635 I¦239637 \add ^didn't treat my male or female servants fairly\add*,
@@ -2486,20 +2486,20 @@
 \q1
 \v 40 then let¦239918 thornbushes¦239919 grow up instead of¦239915 wheat¦239916,
 \q1 ≈and¦239920 \add ≡let¦239918\add* stinkweed \add ≡grow up\add* instead of¦239920 barley¦239922.
-\p (That finishes¦239924 Iyyov's¦239926 response.)
+\p (That finishes¦239924 Iyov's¦239926 \add !(Job¦239926)\add* response.)
 \c 32
 \ms1 SECTION FIVE: Elihu's speeches
 \mr (32:1–37:24)
 \s1 Elihu's response
 \rem /s1 The Speeches of Elihu; Speeches of Elihu; Elihu Rebukes Job's Friends; Elihu; Elihu Responds to Job's Friends
 \p
-\v 1 \add After that\add* those¦239932 three¦239930 men¦239931 stopped¦239929 answering¦239933 Iyyov¦239936, because¦239937 \add ≈they considered that he¦239938 had just been¦239939 trying to justify himself\add*.
-\v 2 Then¦239943 Elihu¦239946 (son¦239947 of¦239947 Barakel¦239949 the¦239950 Buzite¦239950, from¦239951 the¦239951 clan¦239951 of¦239951 Ram¦239952) \add ≈got angry with\add* Iyyov¦239953 because¦239956 \add @Iyyov\add* \add seemed to be\add* claiming that he¦239958 was \add ≈in the right\add* rather than¦239960 God¦239960.
+\v 1 \add After that\add* those¦239932 three¦239930 men¦239931 stopped¦239929 answering¦239933 Iyov¦239936 \add !(Job¦239936)\add*, because¦239937 \add ≈they considered that he¦239938 had just been¦239939 trying to justify himself\add*.
+\v 2 Then¦239943 Elihu¦239946 (son¦239947 of¦239947 Barakel¦239949 the¦239950 Buzite¦239950, from¦239951 the¦239951 clan¦239951 of¦239951 Ram¦239952) \add ≈got angry with\add* Iyov¦239953 because¦239956 \add @Iyov\add* \add seemed to be\add* claiming that he¦239958 was \add ≈in the right\add* rather than¦239960 God¦239960.
 \p
-\v 3 He was also¦239962 \add ≈angry¦239965\add* at \add Iyyov's\add* three¦239962 friends¦239963, because they had declared that¦239967 he was wrong, yet hadn't found¦239970 any \add reasonable justification for it\add*.
+\v 3 He was also¦239962 \add ≈angry¦239965\add* at \add Iyov's\add* three¦239962 friends¦239963, because they had declared that¦239967 he was wrong, yet hadn't found¦239970 any \add reasonable justification for it\add*.
 \v 4 Elihu¦239977 had¦239978 \add ≈waited¦239978 to speak¦239982\add* because¦239983 they were¦239984 \add all\add* older¦239984 than¦239987 him¦239987,
 \v 5 \add but\add* when¦239990 \add *he¦239991\add* had seen¦239990 that¦239992 they \add ≈didn't¦239993 really have any answer¦239994\add*, he \add ≈got angry¦239999\add*.
-\s1 Elihu's first speech to Iyyov's three friends
+\s1 Elihu's first speech to Iyov's three friends
 \p
 \v 6 \add ≈So¦240002\add* \add now\add* Elihu¦240004 (son¦240005 of¦240005 Barakel¦240007 the¦240008 Buzite¦240008) \add spoke up\add*:
 \sp Elihu
@@ -2524,13 +2524,13 @@
 \q2 while you¦240071 all searched¦240071 for¦240071 the \add right\add* words¦240072.
 \q1
 \v 12 I¦240075 gave you all my full \add ≈attention¦240075\add*, \add but\add* listen¦240076,
-\q1 none of you could refute Iyyov¦240078
+\q1 none of you could refute Iyov¦240078 \add !(Job¦240078)\add*
 \q1 ≈\add or\add* could answer¦240080 his¦240081 words¦240081.
 \q1
 \v 13 So don't tell¦240086 yourselves that you¦240086 displayed wisdom¦240088.
 \q1 It's God¦240089 who must refute him¦240090—not¦240091 any person.
 \q1
-\v 14 \add But\add* \add @Iyyov¦240097\add* hasn't directed his words against me¦240098,
+\v 14 \add But\add* \add @Iyov¦240097\add* hasn't directed his words against me¦240098,
 \q1 and¦240100 I¦240102 won't answer¦240102 him¦240102 with your answers.
 \rem /s1 Elihu's speeches to Iyyov
 \q1
@@ -2558,10 +2558,10 @@
 \v 22 I¦240177 don't¦240176 know¦240177 how to \add ≈give¦240178 fancy titles¦240178\add*.
 \q1 My maker¦240181 would¦240180 soon take¦240180 me¦240180 away¦240180.
 \c 33
-\s2 Elihu asks Iyyov to hear him out
+\s2 Elihu asks Iyov to hear him out
 \rem /s1 Elihu Rebukes Job; Elihu Presents His Case against Job
 \p
-\v 1 \add ≈So¦240183\add* now Iyyov¦240187, please¦240186 hear my¦240188 speech,
+\v 1 \add ≈So¦240183\add* now Iyov¦240187 \add !(Job¦240187)\add*, please¦240186 hear my¦240188 speech,
 \q1 ≈and¦240189 listen to all¦240189 my words.
 \q1
 \v 2 \add Listen\add*, I've¦240197 opened¦240197 my mouth¦240198.
@@ -2582,7 +2582,7 @@
 \q1
 \v 7 Listen, fear¦240240 of¦240240 me¦240240 shouldn't¦240241 terrify¦240242 you¦240242.
 \q1 ≈I won't¦240245 be¦240247 putting heavy¦240247 pressure¦240243 on¦240244 you¦240244.
-\s2 Elihu responds to Iyyov's speeches
+\s2 Elihu responds to Iyov's speeches
 \q1
 \v 8 You've¦240250 certainly spoken¦240250 in¦240251 my¦240251 hearing,
 \q1 ≈and¦240252 I've¦240254 heard¦240254 the¦240252 sound¦240252 of¦240252 the words¦240253:
@@ -2659,7 +2659,7 @@
 \q1 \add so they can\add* be¦240470 enlightened with the¦240471 light¦240471 of¦240471 life¦240472.
 \b
 \q1
-\v 31 Pay¦240474 attention¦240474, Iyyov¦240475, and listen¦240476 to¦240478 me¦240478.
+\v 31 Pay¦240474 attention¦240474, Iyov¦240475 \add !(Job¦240475)\add*, and listen¦240476 to¦240478 me¦240478.
 \q1 Stay silent¦240479 and¦240480 then I'll¦240481 speak¦240481.
 \q1
 \v 32 If¦240483 \add you have\add* words¦240487, answer¦240488 me¦240488 \add then\add*.
@@ -2681,14 +2681,14 @@
 \v 4 Let's¦240528 choose¦240528 justice¦240527 for¦240530 ourselves¦240530.
 \q1 ≈Let's¦240531 discern¦240531 among¦240532 ourselves¦240532 what¦240533 is¦240535 good¦240535.
 \q1
-\v 5 Because¦240537 Iyyov¦240540 has¦240539 \add declared\add*, ‘I'm¦240541 righteous¦240541,
+\v 5 Because¦240537 Iyov¦240540 \add !(Job¦240540)\add* has¦240539 \add declared\add*, ‘I'm¦240541 righteous¦240541,
 \q1 but¦240542 God¦240542 has¦240543 deprived me of¦240544 justice¦240544.
 \q1
 \v 6 Would¦240549 I¦240549 lie¦240549 about my \add #rights¦240548\add*?
 \q1 My¦240548 wound is¦240550 incurable¦240550 despite not¦240552 having disobeyed.’
 \b
 \q1
-\v 7 What other \add #person¦240558\add* is¦240558 like¦240559 Iyyov¦240559?
+\v 7 What other \add #person¦240558\add* is¦240558 like¦240559 Iyov¦240559?
 \q1 He¦240560 drinks¦240560 up mockery¦240562 like¦240563 \add ≡drinking\add* water¦240563.
 \q1
 \v 8 He¦240565 keeps company¦240566 with¦240567 those¦240569 who¦240569 do¦240569 evil¦240570,
@@ -2781,7 +2781,7 @@
 \v 34 \add #People¦240861\add* of¦240861 understanding tell¦240863 me¦240864
 \q1 along with wise¦240866 \add #people\add* \add who\add* listen¦240867 to¦240868 me¦240868:
 \q1
-\v 35 ‘Iyyov¦240870 speaks¦240874 without knowledge¦240873,
+\v 35 ‘Iyov¦240870 \add !(Job¦240870)\add* speaks¦240874 without knowledge¦240873,
 \q1 ≈and¦240875 his¦240875 words¦240875 lack insight¦240877.
 \q1
 \v 36 If only \add *he\add* would¦240879 be¦240880 tested¦240880 to the end—
@@ -2839,7 +2839,7 @@
 \v 15 \add ≈So¦241040\add* now¦241040 in his¦241045 anger¦241045, he hasn't visited,
 \q1 and¦241046 he¦241048 doesn't take much notice of¦241045 disobedience.
 \q1
-\v 16 \add ≈So¦241052\add* Iyyov¦241052 opens¦241054 his¦241056 mouth¦241056 \add ≈for nothing\add*.
+\v 16 \add ≈So¦241052\add* Iyov¦241052 \add !(Job¦241052)\add* opens¦241054 his¦241056 mouth¦241056 \add ≈for nothing\add*.
 \q1 ≈He \add ≈says many\add* words¦241060 \add ≈but doesn't know¦241059 what he's¦241061 talking about\add*.
 \c 36
 \s1 Elihu continues speaking
@@ -2995,7 +2995,7 @@
 \q1 or because of¦241521 his¦241521 favour¦241524 that he¦241525 causes¦241525 it¦241525 to happen.
 \b
 \q1
-\v 14 Just listen¦241527 to¦241527 this¦241528, Iyyov¦241529.
+\v 14 Just listen¦241527 to¦241527 this¦241528, Iyov¦241529 \add !(Job¦241529)\add*.
 \q1 Stand¦241530 still¦241530 and¦241531 consider¦241531 how incredible God's¦241534 actions are.
 \q1
 \v 15 Do¦241536 you¦241536 understand¦241536 how God¦241539 makes¦241541 these things happen,
@@ -3031,10 +3031,10 @@
 \c 38
 \ms1 SECTION SIX: Yahweh's speeches
 \mr (38:1–42:6)
-\s1 God answers Iyyov
+\s1 God answers Iyov
 \rem /s1 God's answer and Job's submission; The Lord Answers Job; The Lord Challenges Job; The Lord Speaks
 \p
-\v 1 Then¦241644 Yahweh¦241646 answered¦241644 Iyyov¦241649 from the¦241652 storm:
+\v 1 Then¦241644 Yahweh¦241646 answered¦241644 Iyov¦241649 \add !(Job¦241649)\add* from the¦241652 storm:
 \sp Yahweh
 \q1
 \v 2 Who¦241656 is this¦241657 giving \add ≈bad advice¦241660\add*,
@@ -3265,28 +3265,28 @@
 \v 30 Its¦242318 young¦242318 ones¦242318 feast on blood¦242322,
 \q1 and¦242323 where¦242323 there's dead¦242324 \add >bodies\add*, they'll be there¦242325.\x + \xo 39:30: \xt Mat 24:28; Luk 17:37.\x*
 \c 40
-\s1 God challenges Iyyov to answer
+\s1 God challenges Iyov to answer
 \p
-\v 1 Then¦242329 Yahweh¦242330 \add continued\add* to speak to Iyyov¦242333:
+\v 1 Then¦242329 Yahweh¦242330 \add continued\add* to speak to Iyov¦242333 \add !(Job¦242333)\add*:
 \sp Yahweh
 \q1
 \v 2 Will¦242336 the \add >person\add* who's been finding faults¦242340 \add now\add* argue with¦242337 the provider?
 \q1 ≈Let¦242343 the \add >one\add* who¦242341 \add tries to\add* correct¦242341 God¦242342, \add ≈give an answer¦242343\add*.
-\s1 Iyyov's non-answer
+\s1 Iyov's non-answer
 \rem /s1 Job Responds to the Lord; Job's Response to God
 \p
-\v 3 Then¦242346 Iyyov¦242347 answered¦242346 Yahweh¦242350:
-\sp Iyyov
+\v 3 Then¦242346 Iyov¦242347 \add !(Job¦242347)\add* answered¦242346 Yahweh¦242350:
+\sp Iyov
 \q1
 \v 4 Indeed, I'm¦242354 insignificant¦242354—what¦242355 could I¦242356 answer¦242356?
 \q1 I'll¦242358 \add just\add* put¦242358 my hand¦242357 over my¦242357 mouth¦242361.
 \q1
 \v 5 I've¦242364 spoken¦242364 once, but¦242365 I¦242366 won't answer¦242366,
 \q1 ≈and¦242367 twice, but¦242368 I¦242369 won't continue¦242369.
-\s1 Yahweh's response to Iyyov
+\s1 Yahweh's response to Iyov
 \rem /s1 God's Challenge to Job; The Lord Challenges Job Again
 \p
-\v 6 Then¦242372 Yahweh¦242374 \add again\add* spoke¦242382 to Iyyov¦242377 from¦242380 inside the storm:
+\v 6 Then¦242372 Yahweh¦242374 \add again\add* spoke¦242382 to Iyov¦242377 \add !(Job¦242377)\add* from¦242380 inside the storm:
 \sp Yahweh
 \q1
 \v 7 \add Now\add* tuck up¦242384 your robe like¦242387 a¦242387 man¦242387 \add going into battle\add*.
@@ -3339,7 +3339,7 @@
 \q1 ≈The¦242528 poplars¦242528 in the¦242530 riverbed¦242530 surround¦242527 it¦242527.
 \q1
 \v 23 If¦242539 the¦242534 river¦242534 gets violent¦242533, it¦242536 doesn't rush¦242536 out.
-\q1 ≈It¦242537 remains confident¦242537 even when the¦242542 Jordan¦242542 \add River\add* surges to¦242543 his mouth¦242545.
+\q1 ≈It¦242537 remains confident¦242537 even when the¦242542 Yarden¦242542 \add !(Jordan¦242542)\add* \add River\add* surges to¦242543 his mouth¦242545.
 \q1
 \v 24 Can anyone¦242548 capture¦242548 it¦242548 while its¦242547 eyes¦242547 \add watch\add*?
 \q1 ≈Is there anyone¦242550 who can \add make\add* a \add #snare¦242549\add* to pierce¦242550 \add &its¦242552\add* nose¦242552?
@@ -3448,11 +3448,11 @@
 \v 34 It¦242869 looks¦242869 down on all \add ≈those who think they're powerful\add*.
 \q1 ≈It's¦242870 the king¦242871 of all those who are proud¦242878.
 \c 42
-\s1 Iyyov requests God's forgiveness
+\s1 Iyov requests God's forgiveness
 \rem /s1 Job; Job Responds to the Lord; Job Is Humbled and Satisfied
 \p
-\v 1 Then¦242881 Iyyov¦242882 answered¦242881 Yahweh¦242885:
-\sp Iyyov
+\v 1 Then¦242881 Iyov¦242882 \add !(Job¦242882)\add* answered¦242881 Yahweh¦242885:
+\sp Iyov
 \q1
 \v 2 I¦242888 know¦242888 that¦242890 you can do everything¦242892,
 \q1 ≈and¦242894 no one can stop you from¦242897 doing what you¦242897 want.
@@ -3473,22 +3473,22 @@
 \q1 and¦242936 I¦242936 \add show my\add* \add ≈repentance¦242936\add* \add by sitting in dust and ashes\add*.
 \ms1 SECTION SEVEN: Final speech and restoration
 \mr (42:7-17)
-\s1 Iyyov's three friends humiliated by God
+\s1 Iyov's three friends humiliated by God
 \rem /s1 Conclusion; Conclusion: The Lord Blesses Job; Epilogue; Job's Friends Are Humiliated
 \p
-\v 7 After¦242944 Yahweh¦242946 had¦242945 said¦242945 that to¦242951 Iyyov¦242953, \add *he¦242955\add* told¦242954 Elifaz¦242958 (from Teman), “\add ≈I'm angry¦242961\add* with you¦242962 and¦242963 your two¦242963 friends¦242964, because¦242965 what you¦242967 all said¦242967 about me¦242968 wasn't right, like¦242970 what Iyyov¦242971 \add said\add*.
-\v 8 \add ≈So¦242973\add* now¦242973 get¦242974 seven¦242977 bulls¦242979 and¦242980 seven¦242980 rams¦242981 and¦242982 go¦242982 to¦242984 my servant Iyyov¦242987 and¦242988 offer¦242988 \add <them\add* as a¦242989 burnt¦242989 offering¦242989 for¦242990 yourselves¦242990. Then¦242991 my servant Iyyov¦242991 will¦242993 pray¦242993 for you¦242994 all. \add ≈I'll¦242999 do¦243001 what he asks and\add* not deal with¦243002 you¦243002 like your foolishness¦243003 \add deserves\add*, because¦243004 you¦243006 all didn't speak¦243006 accurately about me¦243007 like¦243009 Iyyov¦243010 did.”
+\v 7 After¦242944 Yahweh¦242946 had¦242945 said¦242945 that to¦242951 Iyov¦242953 \add !(Job¦242953)\add*, \add *he¦242955\add* told¦242954 Elifaz¦242958 (from Teyman), “\add ≈I'm angry¦242961\add* with you¦242962 and¦242963 your two¦242963 friends¦242964, because¦242965 what you¦242967 all said¦242967 about me¦242968 wasn't right, like¦242970 what Iyov¦242971 \add said\add*.
+\v 8 \add ≈So¦242973\add* now¦242973 get¦242974 seven¦242977 bulls¦242979 and¦242980 seven¦242980 rams¦242981 and¦242982 go¦242982 to¦242984 my servant Iyov¦242987 and¦242988 offer¦242988 \add <them\add* as a¦242989 burnt¦242989 offering¦242989 for¦242990 yourselves¦242990. Then¦242991 my servant Iyov¦242991 will¦242993 pray¦242993 for you¦242994 all. \add ≈I'll¦242999 do¦243001 what he asks and\add* not deal with¦243002 you¦243002 like your foolishness¦243003 \add deserves\add*, because¦243004 you¦243006 all didn't speak¦243006 accurately about me¦243007 like¦243009 Iyov¦243010 did.”
 \p
-\v 9 \add ≈So¦243012\add* Elifaz¦243013 (from Teman) and¦243015 Bildad¦243015 (from Shuah) and Zofar (from Naamah) went¦243012 and¦243019 did¦243019 what Yahweh had¦243021 told¦243021 them¦243022, and¦243024 Yahweh¦243025 accepted Iyyov's¦243029 \add prayer\add*.
-\s1 Iyyov's doubled restoration
+\v 9 \add ≈So¦243012\add* Elifaz¦243013 (from Teyman) and¦243015 Bildad¦243015 (from Shuah) and Zofar (from Naamah) went¦243012 and¦243019 did¦243019 what Yahweh had¦243021 told¦243021 them¦243022, and¦243024 Yahweh¦243025 accepted Iyov's¦243029 \add prayer\add*.
+\s1 Iyov's doubled restoration
 \rem /s1 Job's Fortunes Are Restored Twofold
 \p
-\v 10 After Iyyov¦243037 had prayed¦243038 for¦243039 his¦243040 friends, Yahweh¦243042 \add ≈changed¦243032 his situation\add* and¦243041 \add ≈gave\add* \add *him¦243048\add* double¦243049 \add what he had before\add*.\x + \xo 42:10: \xt Yob 1:1-3.\x*
+\v 10 After Iyov¦243037 \add !(Job¦243037)\add* had prayed¦243038 for¦243039 his¦243040 friends, Yahweh¦243042 \add ≈changed¦243032 his situation\add* and¦243041 \add ≈gave\add* \add *him¦243048\add* double¦243049 \add what he had before\add*.\x + \xo 42:10: \xt Yob 1:1-3.\x*
 \v 11 Then¦243051 all¦243053 of¦243053 his¦243055 brothers¦243055 and¦243056 sisters¦243058 and¦243060 everyone¦243060 who'd¦243062 known¦243062 him¦243062 before¦243063, came¦243051 to¦243052 his¦243067 house¦243067 and¦243064 \add ≈had a meal\add* with¦243065 him¦243065, and¦243068 they¦243068 comforted¦243070 him¦243069 and¦243070 consoled him¦243071 about all¦243073 the¦243075 \add #troubles¦243075\add* that¦243076 Yahweh¦243079 had¦243078 brought¦243078 on¦243080 him¦243080. Then¦243081 they¦243081 each gave¦243081 him¦243083 a¦243085 \add ≈silver coin\add* and¦243087 a¦243088 gold¦243089 ring¦243088.
 \p
-\v 12 Then¦243093 Yahweh¦243093 blessed¦243094 the¦243097 second part¦243097 of¦243097 Iyyov's¦243098 \add life\add* more¦243099 than¦243099 the first, and¦243100 he¦243100 \add ended up with\add* 14,000 sheep¦243106, 6,000 camels¦243109, 1,000 \add working\add* pairs¦243112 of¦243112 cows¦243113, and¦243114 1,000 female¦243115 donkeys¦243115.
+\v 12 Then¦243093 Yahweh¦243093 blessed¦243094 the¦243097 second part¦243097 of¦243097 Iyov's¦243098 \add life\add* more¦243099 than¦243099 the first, and¦243100 he¦243100 \add ended up with\add* 14,000 sheep¦243106, 6,000 camels¦243109, 1,000 \add working\add* pairs¦243112 of¦243112 cows¦243113, and¦243114 1,000 female¦243115 donkeys¦243115.
 \v 13 He¦243117 \add also\add* had seven¦243120 \add more\add* sons¦243121 and¦243122 three¦243122 \add more\add* daughters¦243123
-\v 14 who he¦243125 named¦243126 Yemimah¦243129, Ketsiah, and Keren¦243135-Happuk.
-\v 15 No one in¦243144 the whole¦243144 country¦243146 was¦243139 as beautiful¦243141 as¦243142 Iyyov's¦243143 daughters¦243142, and as well as their¦243152 brothers¦243152, their¦243149 father¦243149 gave¦243147 them¦243148 \add each a piece of land\add* as an¦243150 inheritance¦243150.
-\v 16 Iyyov¦243156 lived¦243155 another 140 years¦243162 after¦243157 \add all\add* that¦243159, and¦243161 was \add even\add* able to see¦243163 his great-grandchildren.
-\v 17 Then¦243175 Iyyov¦243176 died¦243175 \add ≈in good circumstances\add* and at a very old¦243177 age.
+\v 14 who he¦243125 named¦243126 Yemimah¦243129, Ketsiah, and Keren¦243135-Hafuk.
+\v 15 No one in¦243144 the whole¦243144 country¦243146 was¦243139 as beautiful¦243141 as¦243142 Iyov's¦243143 daughters¦243142, and as well as their¦243152 brothers¦243152, their¦243149 father¦243149 gave¦243147 them¦243148 \add each a piece of land\add* as an¦243150 inheritance¦243150.
+\v 16 Iyov¦243156 lived¦243155 another 140 years¦243162 after¦243157 \add all\add* that¦243159, and¦243161 was \add even\add* able to see¦243163 his great-grandchildren.
+\v 17 Then¦243175 Iyov¦243176 died¦243175 \add ≈in good circumstances\add* and at a very old¦243177 age.

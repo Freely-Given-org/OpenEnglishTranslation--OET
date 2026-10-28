@@ -1,4 +1,4 @@
-\id MAL - Open English Translation—Readers' Version (OET-RV) v0.1.6
+\id MAL - Open English Translation—Readers' Version (OET-RV) v0.2.0
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 MAL
@@ -18,17 +18,17 @@
 \ie
 \c 1
 \p
-\v 1 This is a message¦380162 that Yahweh¦380164 gave to¦380165 Malaki¦380169 for the Israelis¦380167:
+\v 1 This is a message¦380162 that Yahweh¦380164 gave to¦380165 Malaki¦380169 \add !(Malachi¦380169)\add* for the Israelis¦380167:
 \s1 Yahweh's love for the Israelis
 \rem /s1 The Lord's Love for Israel; Jacob Loved, Esau Hated; Religious decline and hope of recovery; Israel Preferred to Edom; The Lord's Love for Israel
 \p
 \v 2 “I¦380171 have¦380171 loved¦380171 you¦380172 all,” says¦380173 Yahweh¦380174, \add ≈but¦380175\add* you¦380175 say¦380175, “How¦380176 have¦380177 you¦380177 \add shown your\add* love¦380177 for us¦380177?”
-\p “Wasn't Esaw¦380181 Yacob's¦380182 brother¦380180?” \add ≈declares¦380183\add* Yahweh¦380185. “Yet I've¦380186 loved¦380186 Yacob¦380189\x + \xo 1:2-3: \xt Rom 9:13.\x*
-\v 3 and¦380191 \add ≈rejected\add* Esaw¦380193. I've¦380195 turned the hills¦380198 \add where Esaw lived\add* into a¦380199 wasteland¦380199 and¦380200 \add given\add* his¦380202 inheritance¦380202 to the wild jackals¦380203.”
+\p “Wasn't Esav¦380181 \add !(Esau¦380181)\add* Ya'akov's¦380182 \add !(Jacob¦380182)\add* brother¦380180?” \add ≈declares¦380183\add* Yahweh¦380185. “Yet I've¦380186 loved¦380186 Ya'akov¦380189\x + \xo 1:2-3: \xt Rom 9:13.\x*
+\v 3 and¦380191 \add ≈rejected\add* Esav¦380193. I've¦380195 turned the hills¦380198 \add where Esav lived\add* into a¦380199 wasteland¦380199 and¦380200 \add given\add* his¦380202 inheritance¦380202 to the wild jackals¦380203.”
 \p
-\v 4 If¦380206 \add Esaw's descendants in\add* Edom¦380209 say¦380208, “We've¦380210 \add ≈been¦380210 crushed¦380210\add*, but¦380211 we'll¦380211 return¦380211 and¦380212 \add ≈rebuild¦380212 what was destroyed¦380213\add*,” then army-commander Yahweh¦380216 will say¦380215, “They might build¦380219, but¦380220 I will¦380221 tear¦380221 down¦380221. Others will¦380222 call¦380222 them¦380223 ‘The country¦380224 of¦380224 wickedness¦380225’ and¦380226 ‘The¦380226 people¦380226 who Yahweh¦380230 is forever¦380233 angry¦380229 with.’
+\v 4 If¦380206 \add Esav's descendants in\add* Edom¦380209 say¦380208, “We've¦380210 \add ≈been¦380210 crushed¦380210\add*, but¦380211 we'll¦380211 return¦380211 and¦380212 \add ≈rebuild¦380212 what was destroyed¦380213\add*,” then army-commander Yahweh¦380216 will say¦380215, “They might build¦380219, but¦380220 I will¦380221 tear¦380221 down¦380221. Others will¦380222 call¦380222 them¦380223 ‘The country¦380224 of¦380224 wickedness¦380225’ and¦380226 ‘The¦380226 people¦380226 who Yahweh¦380230 is forever¦380233 angry¦380229 with.’
 \p
-\v 5 Your¦380235 own¦380235 eyes¦380235 will¦380236 see¦380236 it, and¦380237 you'll¦380238 say¦380238, ‘Yahweh¦380240 is¦380239 great¦380239 even outside Yisrael's¦380243 \add #borders¦380242\add*.’ ”
+\v 5 Your¦380235 own¦380235 eyes¦380235 will¦380236 see¦380236 it, and¦380237 you'll¦380238 say¦380238, ‘Yahweh¦380240 is¦380239 great¦380239 even outside Yisrael's¦380243 \add !(Israel¦380243)\add* \add #borders¦380242\add*.’ ”
 \s1 Second-class sacrifices
 \rem /s1 The Lord Reprimands the Priests; Unworthy Sacrifices; Blemished Sacrifices; Corruption of the Priesthood
 \p
@@ -63,7 +63,7 @@
 \rem /s1 A Call to Faithfulness; The Covenant Profaned by Judah; Judah Unfaithful; The People's Unfaithfulness to God
 \p
 \v 10 Don't¦380610 we all have one father¦380611? Didn't the one¦380612 God¦380615 create¦380617 us¦380617 all? \add So\add* why¦380618 do¦380619 we¦380619 cheat each¦380620 other, thus disrespecting the¦380623 agreement¦380623 with our¦380624 ancestors¦380624?
-\v 11 \add Our nation of\add* Yehudah¦380627 \add !(Judah¦380627)\add* has been¦380629 unfaithful \add to Yahweh\add* and done¦380629 \add ≈detestable¦380628\add* things in¦380630 Yisrael¦380630 and¦380631 in¦380631 Yerushalem¦380631. \add ≈Our men\add* have¦380634 defiled¦380634 the¦380636 temple that¦380638 Yahweh¦380637 loves¦380639 by \add ≈marrying¦380640 foreign¦380644 women who worship pagan gods¦380643\add*.
+\v 11 \add Our nation of\add* Yehudah¦380627 \add !(Judah¦380627)\add* has been¦380629 unfaithful \add to Yahweh\add* and done¦380629 \add ≈detestable¦380628\add* things in¦380630 Yisrael¦380630 \add !(Israel¦380630)\add* and¦380631 in¦380631 Yerushalem¦380631 \add !(Jerusalem¦380631)\add*. \add ≈Our men\add* have¦380634 defiled¦380634 the¦380636 temple that¦380638 Yahweh¦380637 loves¦380639 by \add ≈marrying¦380640 foreign¦380644 women who worship pagan gods¦380643\add*.
 \v 12 May Yahweh¦380647, the one who¦380649 is awake and¦380652 the one¦380652 who¦380652 answers¦380652, banish the \add #men¦380648\add* who do¦380650 this from¦380653 Yisrael, even if \add #they\add* are bringing¦380655 an¦380656 offering¦380656 to¦380657 army-commander Yahweh¦380657.
 \p
 \v 13 Secondly¦380662, you¦380663 cover¦380664 Yahweh's¦380669 altar¦380668 with tears¦380665 from all your weeping¦380670 and¦380671 groaning¦380671 because he still¦380673 ignores \add &your¦380677\add* \add #offerings¦380677\add* and¦380678 won't¦380672 accept what you all bring¦380678 to him.
@@ -81,13 +81,13 @@
 \v 1 “Listen, I'm¦380770 about¦380771 to¦380771 send¦380771 my¦380772 messenger and¦380773 he'll¦380773 prepare¦380773 the path¦380775 ahead¦380776 of me¦380776.\x + \xo 3:1: \xt Mat 11:10; Mrk 1:2; Luk 1:76; 7:27.\x* Then¦380777 the¦380782 master¦380782 who¦380784 you're¦380786 all \add ≈looking¦380787 for¦380787\add* will suddenly¦380777 come¦380778 to¦380779 his¦380781 temple¦380781, \add yes,\add* the¦380788 messenger¦380788 who¦380790 you¦380792 are¦380793 all happy about¦380796—the party to¦380796 the agreement¦380789—he'll¦380778 come¦380796,” says¦380797 army-commander Yahweh¦380798.
 \v 2 \add ≈But¦380801 who¦380801 could survive¦380802 it when he comes¦380806\add*? Who can stand¦380808 when¦380809 he appears¦380809,\x + \xo 3:2: \xt Yoel 2:11; Rev 6:17.\x* because¦380810 he'll¦380812 be¦380813 like¦380813 the¦380813 refiner's¦380814 fire¦380813 and¦380815 like¦380815 the¦380815 cleaners' \add powerful\add* soap¦380815?
 \v 3 \add @Yahweh¦380818\add* will¦380818 act as a refiner and¦380820 purifier¦380820 of silver¦380821, and¦380822 he¦380822 will¦380822 purify¦380822 Levi's¦380827 descendants¦380825 \add the priests\add*—\add yes,\add* he'll¦380828 refine¦380828 \add &you all\add* \add with fire\add* like¦380830 gold¦380830 and¦380831 silver¦380831, and¦380832 \add &you'll\add* bring¦380834 \add #offerings¦380835\add* to¦380833 \add *him¦380833\add* that are \add ≈acceptable\add*.
-\v 4 \add After that,\add* the¦380840 \add #offerings¦380840\add* of¦380840 \add the people of\add* Yehudah¦380841 and¦380842 Yerushalem¦380842 will be¦380838 pleasing¦380838 to¦380839 Yahweh¦380839, as¦380843 in \add ≈ancient¦380844 times\add*, and¦380845 as¦380845 in previous¦380846 years¦380845.
+\v 4 \add After that,\add* the¦380840 \add #offerings¦380840\add* of¦380840 \add the people of\add* Yehudah¦380841 \add !(Judah¦380841)\add* and¦380842 Yerushalem¦380842 \add !(Jerusalem¦380842)\add* will be¦380838 pleasing¦380838 to¦380839 Yahweh¦380839, as¦380843 in \add ≈ancient¦380844 times\add*, and¦380845 as¦380845 in previous¦380846 years¦380845.
 \p
 \v 5 This is what army-commander Yahweh¦380871 says¦380870, “At that time, I'll¦380848 come¦380848 to¦380849 you¦380849 all to \add ≈judge¦380850\add* you. I'll¦380851 quickly¦380854 testify against all those who¦380854 practice sorcery¦380855, \add ≡against\add* adulterers¦380856, \add ≡against\add* those who \add ≈lie in court\add*, \add ≡against\add* those who \add ≈don't pay their workers fairly\add*, \add ≡against\add* those who mistreat \add #widows¦380863\add* and¦380864 orphans¦380864, \add ≡against\add* those¦380865 who¦380865 \add ≈don't treat the foreigners¦380867 among you decently\add*, and¦380868 \add ≡against\add* those who \add ^refuse to honour\add* me¦380869.
 \s1 Giving a tenth
 \rem /s1 The Payment of Tithes; Robbing God; A Call to Repentance
 \p
-\v 6 “I¦380875 am Yahweh¦380876 and I¦380878 don't change¦380878—that's the¦380880 \add only\add* reason why you descendants¦380880 of¦380880 Yacob¦380882 haven't been destroyed.
+\v 6 “I¦380875 am Yahweh¦380876 and I¦380878 don't change¦380878—that's the¦380880 \add only\add* reason why you descendants¦380880 of¦380880 Ya'akov¦380882 \add !(Jacob¦380882)\add* haven't been destroyed.
 \v 7 Ever since the¦380886 time¦380886 when your¦380887 ancestors¦380887 were alive, you¦380888 all have¦380888 \add ≈ignored my¦380889 commands\add* and¦380890 \add ^refused to obey\add* them¦380891. \add Now\add* return¦380892 to¦380893 me¦380893—\add if you all do so,\add* I'll¦380894 return¦380894 to¦380895 you¦380895. That's what I, army-commander Yahweh¦380897, say¦380896. But¦380899 you¦380899 all ask¦380899, ‘How¦380900 can we¦380901 return¦380901 to you?’
 \rem /s1 Don't rob God
 \v 8 Can a human rob¦380903 God¦380905? \add Yes,\add* you're¦380907 all robbing¦380908 me¦380909, but¦380910 you¦380910 ask¦380910, ‘How¦380911 are we¦380912 robbing¦380912 you¦380912?’ \add By failing to give\add* a tenth plus¦380914 offerings¦380914.
@@ -114,7 +114,7 @@
 \v 2 But for¦381128 you¦381128 who respect¦381129 my¦381130 name¦381130, the sun¦381131 of¦381131 righteousness¦381132 will rise¦381127 \add ≈and¦381133 bring\add* healing¦381133. You'll¦381135 all go¦381135 out¦381135, jumping around¦381136 like¦381137 calves¦381137 \add let out of\add* \add &their¦381138\add* stall¦381138,
 \v 3 and¦381141 you'll¦381141 all trample¦381141 down¦381141 the wicked¦381142 \add >people\add*, because¦381143 they'll¦381145 \add just\add* be¦381145 ashes¦381146 under¦381147 the¦381148 soles¦381148 of¦381148 your¦381149 feet¦381149 on the¦381150 day¦381150 that I¦381152 act¦381153,” says¦381154 army-commander Yahweh¦381155.
 \p
-\v 4 “\add ≈Be sure to obey\add* the¦381161 law that¦381164 I¦381165 \add ≈gave\add* my¦381163 servant¦381163 Mosheh¦381162 at¦381167 \add ≈Mt. Sinai\add* for all¦381170 Israel¦381172—the statutes¦381173 and¦381174 the rulings.
+\v 4 “\add ≈Be sure to obey\add* the¦381161 law that¦381164 I¦381165 \add ≈gave\add* my¦381163 servant¦381163 Mosheh¦381162 \add !(Moses¦381162)\add* at¦381167 \add ≈Mt. Sinay\add* for all¦381170 Yisrael¦381172 \add !(Israel¦381172)\add*—the statutes¦381173 and¦381174 the rulings.
 \p
-\v 5 Listen, I'll¦381178 send¦381179 the¦381183 prophet¦381183 Eliyah¦381182 to¦381184 you all,\x + \xo 4:5: \xt Mat 11:14; 17:10-13; Mrk 9:11-13; Luk 1:17; Yhn 1:21.\x* \add ahead\add* of the¦381184 coming¦381185 of¦381184 the¦381186 great¦381188 \add ≈but\add* fearful day¦381186 of¦381186 \add *my¦381187\add* \add judgement\add*.
+\v 5 Listen, I'll¦381178 send¦381179 the¦381183 prophet¦381183 Eliyah¦381182 \add !(Elijah¦381182)\add* to¦381184 you all,\x + \xo 4:5: \xt Mat 11:14; 17:10-13; Mrk 9:11-13; Luk 1:17; Yhn 1:21.\x* \add ahead\add* of the¦381184 coming¦381185 of¦381184 the¦381186 great¦381188 \add ≈but\add* fearful day¦381186 of¦381186 \add *my¦381187\add* \add judgement\add*.
 \v 6 He'll¦381192 \add ≈restore harmony between fathers¦381195 and¦381199 their¦381203 children\add*, so that I¦381206 don't \add have to\add* come¦381206 and¦381207 strike¦381207 the¦381210 earth¦381210 with complete¦381211 destruction¦381211.”

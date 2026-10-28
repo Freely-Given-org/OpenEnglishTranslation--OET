@@ -1,4 +1,4 @@
-\id LAM - Open English Translation—Readers' Version (OET-RV) v0.1.08
+\id LAM - Open English Translation—Readers' Version (OET-RV) v0.2.0
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 LAM
@@ -11,7 +11,7 @@
 \mt3 commonly called
 \mt2 Lamentations
 \is1 Introduction
-\ip The document named \bk Sorrows\bk* (or in older English \bk Lamentations\bk*) is this collection of poems or sad songs describing the people's sorrow at the terrible destruction that had happened to Yerushalem, and the capture of its inhabitants 586 years before Yeshua (B.C.). However, despite the sadness displayed by these compositions, it's also possible to see hope shown through trusting Yahweh God and the hope of a better future. These poems were used by Jews\f + \fr 1:0 \ft The Jews were the descendants of Yakov (Jacob) who was later named ‘Israel’. They were named Jews because they had lived in Yudea (Judea) long ago.\f* there in worship at time of fasting and sorrow each year, until today, in order to mourn Yerushalem's destruction.
+\ip The document named \bk Sorrows\bk* (or in older English \bk Lamentations\bk*) is this collection of poems or sad songs describing the people's sorrow at the terrible destruction that had happened to Yerushalem, and the capture of its inhabitants 586 years before Yeshua (B.C.). However, despite the sadness displayed by these compositions, it's also possible to see hope shown through trusting Yahweh God and the hope of a better future. These poems were used by Yehudim\f + \fr 1:0 \ft The Yehudim were the descendants of Ya'akov (Jacob) who was later named ‘Israel’. They were named Yehudim because they had lived in Yehudah (Judea) long ago.\f* there in worship at time of fasting and sorrow each year, until today, in order to mourn Yerushalem's destruction.
 \ip Several of these sorrowful chapters are acrostic poems, i.e., the first verse starts with the first Hebrew letter (alef) and the second with the second Hebrew letter (beyt), etc. We have chosen to display those Hebrew letters to help the English reader understand that there is that acrostic background to the poem.
 \iot Main components of this document
 \io1 Yerushalem's sorrows \ior 1:1-22\ior*
@@ -41,7 +41,7 @@
 \q1 All¦331515 who¦331517 pursue¦331517 her, overtake¦331518 her in the¦331520 midst of distress.
 \qa \bd ד\bd* (Dalet)
 \q1
-\v 4 The¦331523 roads¦331523 of¦331523 Tsiyyon¦331524 \add !(Zion¦331524)\add* mourn¦331525—no one's coming¦331527 to the \add ≈scheduled festivals\add*.
+\v 4 The¦331523 roads¦331523 of¦331523 Tsiyon¦331524 \add !(Zion¦331524)\add* mourn¦331525—no one's coming¦331527 to the \add ≈scheduled festivals\add*.
 \q1 All¦331529 her gates¦331531 are¦331532 desolate¦331532. Her priests¦331533 are¦331534 groaning¦331534.
 \q1 Her young women are¦331536 grieving¦331536 and¦331539 she¦331539 makes herself bitter¦331540.
 \qa \bd ה\bd* (He)
@@ -51,12 +51,12 @@
 \q1 Her¦331557 children¦331558 \add ≈get taken away as captives¦331560 by the¦331561 enemy¦331563\add*.
 \qa \bd ו\bd* (Vav)
 \q1
-\v 6 All¦331573 her splendour¦331575 was sent out¦331566 from the daughter that's Tsiyyon¦331572.
+\v 6 All¦331573 her splendour¦331575 was sent out¦331566 from the daughter that's Tsiyon¦331572 \add !(Zion¦331572)\add*.
 \q1 Her \add ≈leaders¦331577\add* have¦331576 become¦331576 like¦331578 deer¦331578—they¦331581 can't find¦331581 a pasture¦331582
 \q1 \add ≈so¦331583\add* they¦331583 \add ≈have¦331583 very little strength¦331586 as they flee from\add* the¦331587 pursuer¦331588.
 \qa \bd ז\bd* (Zayin)
 \q1
-\v 7 Yerushalem¦331592 remembers¦331591 the¦331593 days¦331593 of¦331593 her¦331594 suffering and¦331595 her homelessness¦331595,
+\v 7 Yerushalem¦331592 \add !(Jerusalem¦331592)\add* remembers¦331591 the¦331593 days¦331593 of¦331593 her¦331594 suffering and¦331595 her homelessness¦331595,
 \q1 all¦331596 her treasures which¦331598 were¦331599 from¦331600 former days¦331600.
 \q1 When¦331602 her people¦331603 fell¦331602 into¦331604 the¦331604 hand¦331604 of¦331604 the enemy¦331606 and¦331607 there¦331607 was¦331607 no one to¦331609 help¦331608 her,
 \q1 her enemies saw¦331610 her—they¦331612 laughed¦331612 over her destruction.
@@ -101,7 +101,7 @@
 \q1
 \v 15 My master has¦331767 rejected all¦331768 my¦331770 mighty¦331770 \add ≈warriors protecting me\add*.
 \q1 He¦331774 has¦331774 \add ≈told¦331774 us exactly when he plans\add* to¦331777 destroy¦331777 my¦331778 young¦331778 men¦331778.
-\q1 My¦331781 master¦331781 has¦331780 \add ≈stomped on the grapes\add* for¦331782 Yehudah's¦331785 virgin¦331782 daughter¦331783.
+\q1 My¦331781 master¦331781 has¦331780 \add ≈stomped on the grapes\add* for¦331782 Yehudah's¦331785 \add !(Judah¦331785)\add* virgin¦331782 daughter¦331783.
 \qa \bd ע\bd* (Ayin)
 \q1
 \v 16 \add ≈As a result\add* of those¦331790 \add >things\add*, I¦331792 weep¦331793.
@@ -110,9 +110,9 @@
 \q1 My¦331805 sons¦331807 have become desolate¦331808, because¦331809 the enemy¦331811 is made mighty.”
 \qa \bd פ\bd* (Pe)
 \q1
-\v 17 Tsiyyon¦331815 has¦331814 spread¦331814 her hands¦331816 wide—there¦331817 is¦331817 no comforter¦331818 for¦331819 her¦331819.
-\q1 Yahweh¦331821 commanded¦331820 that those¦331823 surrounding¦331823 Yakov¦331822 become his¦331824 enemies¦331824.
-\q1 Yerushalem¦331826 has¦331825 become¦331825 filth¦331827 in¦331827 \add ≈the middle of them¦331828\add*.
+\v 17 Tsiyon¦331815 \add !(Zion¦331815)\add* has¦331814 spread¦331814 her hands¦331816 wide—there¦331817 is¦331817 no comforter¦331818 for¦331819 her¦331819.
+\q1 Yahweh¦331821 commanded¦331820 that those¦331823 surrounding¦331823 Ya'akov¦331822 \add !(Jacob¦331822)\add* become his¦331824 enemies¦331824.
+\q1 Yerushalem¦331826 \add !(Jerusalem¦331826)\add* has¦331825 become¦331825 filth¦331827 in¦331827 \add ≈the middle of them¦331828\add*.
 \qa \bd צ\bd* (Tsade)
 \q1
 \v 18 “Yahweh¦331833 is¦331831 surely righteous¦331831, \add ≈but\add* I¦331836 disobeyed his¦331835 command.
@@ -146,34 +146,34 @@
 \rem /s1 Zion's hope of relief after punishment; The Lord's Punishment of Jerusalem; God's Warnings Fulfilled; God's Anger at Sin
 \qa \bd א\bd* (Alef)
 \q1
-\v 1 Oh dear, how¦331940 my¦331944 master¦331944 engulfed the¦331947 daughter¦331947 that's Tsiyyon¦331949 in his anger.
-\q1 He's¦331950 thrown¦331950 Yisrael's¦331954 splendour¦331953 down from¦331951 heaven¦331951 to earth¦331952.
+\v 1 Oh dear, how¦331940 my¦331944 master¦331944 engulfed the¦331947 daughter¦331947 that's Tsiyon¦331949 \add !(Zion¦331949)\add* in his anger.
+\q1 He's¦331950 thrown¦331950 Yisrael's¦331954 \add !(Israel¦331954)\add* splendour¦331953 down from¦331951 heaven¦331951 to earth¦331952.
 \q1 And¦331955 he¦331957 hasn't remembered¦331957 the¦331958 footstool¦331958 of¦331958 his¦331960 feet¦331960 on¦331961 the day¦331961 of¦331962 his¦331962 anger¦331962.
 \qa \bd ב\bd* (Beyt)
 \q1
-\v 2 My¦331966 master¦331966 devoured—he¦331965 didn't¦331967 show compassion on all¦331971 the¦331973 pastures of¦331973 Yakov¦331974.
-\q1 In¦331976 his fury¦331976, he \add ≈knocked\add* down¦331975 the¦331977 fortifications¦331977 of¦331977 the¦331978 daughter¦331978 of¦331978 Yehudah¦331980.
+\v 2 My¦331966 master¦331966 devoured—he¦331965 didn't¦331967 show compassion on all¦331971 the¦331973 pastures of¦331973 Ya'akov¦331974 \add !(Jacob¦331974)\add*.
+\q1 In¦331976 his fury¦331976, he \add ≈knocked\add* down¦331975 the¦331977 fortifications¦331977 of¦331977 the¦331978 daughter¦331978 of¦331978 Yehudah¦331980 \add !(Judah¦331980)\add*.
 \q1 He¦331981 struck the earth¦331982 with disgrace—the¦331984 kingdom¦331984 and¦331985 its¦331985 \add ≈leaders¦331985\add*.
 \qa \bd ג\bd* (Gimel)
 \q1
 \v 3 With fierce anger¦331993 he¦331988 cut¦331988 off¦331988 \add ≈all¦331994 of Yisrael's¦331996 power\add*.
 \q1 He¦331997 \add ≈stopped¦331997 using his¦331999 strength to protect her from¦332000\add* the¦332001 enemy¦332001.
-\q1 And¦332002 he¦332002 has¦332002 burnt¦332002 Yakov¦332003—it¦332006 consumed¦332006 the surroundings like¦332004 a¦332004 fire¦332004.
+\q1 And¦332002 he¦332002 has¦332002 burnt¦332002 Ya'akov¦332003—it¦332006 consumed¦332006 the surroundings like¦332004 a¦332004 fire¦332004.
 \qa \bd ד\bd* (Dalet)
 \q1
 \v 4 He's¦332010 bent¦332010 his¦332011 bow¦332011 like¦332012 an¦332012 enemy¦332012.
 \q1 His \add ≈sword\add* hand¦332014 is posed like¦332015 an adversary.
-\q1 And¦332016 he¦332016 has¦332016 slain¦332016 all¦332017 those precious¦332018 to the¦332018 eye¦332020 in¦332021 the¦332021 tent¦332021 of¦332021 the¦332022 daughter¦332022 that's Tsiyyon¦332024.
+\q1 And¦332016 he¦332016 has¦332016 slain¦332016 all¦332017 those precious¦332018 to the¦332018 eye¦332020 in¦332021 the¦332021 tent¦332021 of¦332021 the¦332022 daughter¦332022 that's Tsiyon¦332024 \add !(Zion¦332024)\add*.
 \q1 He¦332025 has¦332025 poured¦332025 out¦332025 his¦332027 rage¦332027 like¦332026 fire¦332026.
 \qa \bd ה\bd* (He)
 \q1
-\v 5 My¦332031 master¦332031 has¦332030 become¦332030 like¦332033 an¦332033 enemy¦332033—he's¦332034 swallowed¦332034 up¦332034 Yisrael¦332035.
+\v 5 My¦332031 master¦332031 has¦332030 become¦332030 like¦332033 an¦332033 enemy¦332033—he's¦332034 swallowed¦332034 up¦332034 Yisrael¦332035 \add !(Israel¦332035)\add*.
 \q1 He¦332036 has¦332036 swallowed¦332036 up¦332036 all¦332037 her palaces¦332039—he's¦332040 destroyed¦332040 its¦332041 fortifications¦332041.
-\q1 And¦332042 he¦332042 has¦332042 multiplied¦332042 mourning¦332046 and¦332047 lamentation¦332047 within the¦332043 daughter¦332043 of¦332043 Yehudah¦332045.
+\q1 And¦332042 he¦332042 has¦332042 multiplied¦332042 mourning¦332046 and¦332047 lamentation¦332047 within the¦332043 daughter¦332043 of¦332043 Yehudah¦332045 \add !(Judah¦332045)\add*.
 \qa \bd ו\bd* (Vav)
 \q1
 \v 6 And¦332050 he¦332050 was violent¦332050 with his garden¦332051 tent—he¦332053 ruined¦332053 his¦332054 appointed¦332054 place¦332054.
-\q1 Yahweh¦332056 has¦332055 caused¦332055 the appointed¦332059 festival¦332059 and¦332060 Sabbath¦332060 to¦332055 be¦332055 forgotten¦332055 in¦332058 Tsiyyon¦332058.
+\q1 Yahweh¦332056 has¦332055 caused¦332055 the appointed¦332059 festival¦332059 and¦332060 Sabbath¦332060 to¦332055 be¦332055 forgotten¦332055 in¦332058 Tsiyon¦332058 \add !(Zion¦332058)\add*.
 \q1 And¦332061 he¦332061 has¦332061 despised¦332061 the¦332062 king¦332065 and¦332066 priest¦332066 in his \add ≈indignant¦332062\add* anger¦332064.
 \qa \bd ז\bd* (Zayin)
 \q1
@@ -182,7 +182,7 @@
 \q1 They raised a shout in¦332083 Yahweh's¦332085 house¦332083, like¦332086 on an¦332087 appointed¦332087 festival¦332087 day¦332086.
 \qa \bd ח\bd* (Het)
 \q1
-\v 8 Yahweh¦332091 planned¦332090 to¦332093 destroy¦332093 the¦332094 wall¦332094 of¦332094 the¦332095 daughter¦332095 that's Tsiyyon¦332097.
+\v 8 Yahweh¦332091 planned¦332090 to¦332093 destroy¦332093 the¦332094 wall¦332094 of¦332094 the¦332095 daughter¦332095 that's Tsiyon¦332097.
 \q1 He¦332098 stretched¦332098 out¦332098 the measuring line.
 \q1 He¦332102 didn't¦332100 withhold his¦332103 hand¦332103 from¦332104 devouring,
 \q1 and¦332105 he's¦332105 brought the \add #ramparts¦332107\add* and¦332108 wall¦332108 to mourning¦332105. Together¦332109 they¦332110 wasted away.
@@ -195,9 +195,9 @@
 \qa \bd י\bd* (Yod)
 \q1
 \v 10 They¦332134 sit¦332134 on the ground¦332135.
-\q1 The¦332137 elders¦332137 of¦332137 the¦332138 daughter¦332138 that's Tsiyyon¦332140 are¦332136 silenced¦332136.
+\q1 The¦332137 elders¦332137 of¦332137 the¦332138 daughter¦332138 that's Tsiyon¦332140 \add !(Zion¦332140)\add* are¦332136 silenced¦332136.
 \q1 They¦332141 have¦332141 thrown up dust¦332142 on¦332143 their¦332145 heads and put on¦332146 sackcloth¦332147.
-\q1 Yerushalem's¦332152 young women have¦332148 bowed their heads to the ground.
+\q1 Yerushalem's¦332152 \add !(Jerusalem¦332152)\add* young women have¦332148 bowed their heads to the ground.
 \qa \bd כ\bd* (Kaf)
 \q1
 \v 11 My¦332157 eyes¦332157 have¦332155 failed¦332155 with tears¦332156.
@@ -212,8 +212,8 @@
 \qa \bd מ\bd* (Mem)
 \q1
 \v 13 What¦332193 can I¦332195 testify¦332195 to you¦332195?
-\q1 To what¦332196 can I compare you¦332199, daughter¦332200 of¦332201 Yerushalem¦332201?
-\q1 To what¦332202 can I¦332203 liken¦332197 you¦332205, that¦332206 I¦332206 may¦332206 comfort¦332206 you¦332206, virgin¦332207 daughter¦332208 that's Tsiyyon¦332210?
+\q1 To what¦332196 can I compare you¦332199, daughter¦332200 of¦332201 Yerushalem¦332201 \add !(Jerusalem¦332201)\add*?
+\q1 To what¦332202 can I¦332203 liken¦332197 you¦332205, that¦332206 I¦332206 may¦332206 comfort¦332206 you¦332206, virgin¦332207 daughter¦332208 that's Tsiyon¦332210 \add !(Zion¦332210)\add*?
 \q1 Because¦332211 your¦332215 brokenness¦332215 is¦332213 as great¦332213 as¦332214 the sea¦332214.
 \q1 Who¦332216 can heal¦332217 you¦332219?
 \qa \bd נ\bd* (Nun)
@@ -224,7 +224,7 @@
 \qa \bd ס\bd* (Samek)
 \q1
 \v 15 All¦332246 those¦332248 passing¦332248 on the¦332249 road¦332249 clap¦332243 their hands¦332245 at you.
-\q1 They¦332250 hiss¦332250 and¦332251 shake¦332251 their¦332252 \add #heads¦332252\add* at the¦332255 daughter¦332255 of¦332255 Yerushalem¦332256.
+\q1 They¦332250 hiss¦332250 and¦332251 shake¦332251 their¦332252 \add #heads¦332252\add* at the¦332255 daughter¦332255 of¦332255 Yerushalem¦332256 \add !(Jerusalem¦332256)\add*.
 \q1 “Is¦332257 this¦332257 the¦332258 city¦332258 that¦332259 they called ‘the fullness of¦332260 beauty¦332261 \add ≈that makes the¦332265 whole world¦332265 happy\add*’?”
 \qa \bd ע\bd* (Ayin)
 \q1
@@ -243,7 +243,7 @@
 \qa \bd צ\bd* (Tsade)
 \q1
 \v 18 Their¦332311 heart¦332311 cried¦332310 out¦332310 to¦332312 my¦332314 master¦332314,
-\q1 “You \add #walls¦332315\add* of¦332315 the¦332316 daughter¦332316 that's Tsiyyon¦332318.”
+\q1 “You \add #walls¦332315\add* of¦332315 the¦332316 daughter¦332316 that's Tsiyon¦332318 \add !(Zion¦332318)\add*.”
 \q1 Like¦332320 a tearful river¦332320, let¦332331 \add &your\add* tears¦332321 flow down¦332319 day¦332322 and¦332323 night¦332323.
 \q1 Don't¦332324 \add ≈allow¦332331 yourself any relief from it¦332331\add*.
 \q1 Don't rest¦332327 your¦332334 \add #eyes¦332334\add* \add from the tears\add*.
@@ -477,7 +477,7 @@
 \v 66 Chase¦332933 after them¦332933 in¦332934 your anger¦332934,
 \q1 and¦332935 \add ≈wipe them¦332935 off the¦332937 face of¦332937 the earth\add*, Yahweh¦332938.
 \c 4
-\s1 Tsiyyon's punishment
+\s1 Tsiyon's punishment
 \rem /s1 The Punishment of Zion; God's Anger Satisfied; Jerusalem after Its Fall
 \qa \bd א\bd* (Alef)
 \q1
@@ -485,7 +485,7 @@
 \q1 The holy stones¦332948 are scattered¦332947 on the¦332951 \add #corners\add* of¦332951 every¦332952 street¦332954.
 \qa \bd ב\bd* (Beyt)
 \q1
-\v 2 The¦332957 precious¦332959 sons¦332957 of¦332957 Tsiyyon¦332958 were¦332960 \add ≈once comparable\add* with¦332961 fine gold¦332961.
+\v 2 The¦332957 precious¦332959 sons¦332957 of¦332957 Tsiyon¦332958 \add !(Zion¦332958)\add* were¦332960 \add ≈once comparable\add* with¦332961 fine gold¦332961.
 \q1 \add ≈Now\add* they're¦332963 regarded¦332963 as clay¦332966 jars¦332964—the¦332967 work¦332967 of¦332967 a¦332969 potter's¦332969 hands¦332968.
 \qa \bd ג\bd* (Gimel)
 \q1
@@ -501,7 +501,7 @@
 \q1 Those¦333012 \add once\add* \add ≈attended\add* by \add servants wearing\add* scarlet¦333014 \add now\add* embrace¦333015 \add ≈piles¦333016 of rubbish\add*.
 \qa \bd ו\bd* (Vav)
 \q1
-\v 6 The¦333020 guilt¦333020 of my¦333023 people¦333023 is greater¦333019 than¦333024 Sodom's¦333025 sin¦333024.
+\v 6 The¦333020 guilt¦333020 of my¦333023 people¦333023 is greater¦333019 than¦333024 Sedom's¦333025 sin¦333024.
 \q1 \add @That city\add* was¦333026 overthrown¦333026 in an instant¦333029,\x + \xo 4:6: \xt Gen 19:24.\x* \add ≈but¦333030 no one shed any tears about¦333032 it¦333033\add*.
 \qa \bd ז\bd* (Zayin)
 \q1
@@ -523,11 +523,11 @@
 \q1
 \v 11 Yahweh¦333094 brought his¦333097 rage¦333097 to \add ≈completion¦333093\add*.
 \q1 He¦333098 poured¦333098 out¦333098 his¦333100 fierce¦333099 anger¦333100
-\q1 and¦333101 he¦333101 kindled¦333101 a¦333103 fire¦333103 in¦333104 Tsiyyon¦333104 that consumed¦333105 its¦333106 foundations¦333106.
+\q1 and¦333101 he¦333101 kindled¦333101 a¦333103 fire¦333103 in¦333104 Tsiyon¦333104 \add !(Zion¦333104)\add* that consumed¦333105 its¦333106 foundations¦333106.
 \qa \bd ל\bd* (Lamed)
 \q1
 \v 12 None of the¦333111 kings¦333111 of¦333111 the¦333113 earth¦333113, and¦333114 none of the¦333117 world's¦333117 inhabitants¦333116, \add ever\add* believed¦333110
-\q1 that¦333118 the adversary and¦333121 enemy¦333121 would¦333119 \add ≈get through\add* Yerushalem's¦333123 gates¦333122.
+\q1 that¦333118 the adversary and¦333121 enemy¦333121 would¦333119 \add ≈get through\add* Yerushalem's¦333123 \add !(Jerusalem¦333123)\add* gates¦333122.
 \qa \bd מ\bd* (Mem)
 \q1
 \v 13 \add However,\add* the¦333126 sins¦333126 of¦333126 her¦333127 prophets¦333127 were \add even\add* more than the¦333128 disobedience of¦333128 her¦333129 priests¦333129.
@@ -540,7 +540,7 @@
 \qa \bd ס\bd* (Samek)
 \q1
 \v 15 “Away! Unclean¦333148!” they shouted¦333149 at them¦333150. “Away! Away! Don't¦333153 touch¦333155!”
-\q1 So they¦333157 fled¦333157 \add Yisrael\add*, wandering¦333160 around,
+\q1 So they¦333157 fled¦333157 \add Yisrael\add* \add !(Israel)\add*, wandering¦333160 around,
 \q1 \add but\add* it was said¦333161 among¦333162 the nations¦333162, “They¦333164 can't stay¦333165 here any longer.”
 \qa \bd ע\bd* (Ayin)
 \q1
@@ -568,12 +568,12 @@
 \q1 the one we'd¦333237 spoken¦333237 about¦333238, \add saying\add*, “We'll¦333239 live¦333239 among¦333240 the nations¦333240 under his \add ≈protection\add*.”
 \qa \bd ש\bd* (Sin/Shin)
 \q1
-\v 21 Celebrate and¦333244 be glad¦333244, Edom¦333247, living¦333248 there in¦333250 the Uz¦333251 region¦333250.
+\v 21 Celebrate and¦333244 be glad¦333244, Edom¦333247, living¦333248 there in¦333250 the Uts¦333251 \add !(Uz¦333251)\add* region¦333250.
 \q1 The cup¦333257 \add of suffering\add* will also¦333252 pass¦333255 to¦333254 you¦333254.
 \q1 You'll¦333258 get¦333258 drunk¦333258 and¦333259 go around naked¦333259.
 \qa \bd ת\bd* (Tav)
 \q1
-\v 22 \add ≈People\add* of Tsiyyon¦333267, your guilt will finish¦333262—he won't¦333268 extend your exile¦333270.
+\v 22 \add ≈People\add* of Tsiyon¦333267 \add !(Zion¦333267)\add*, your guilt will finish¦333262—he won't¦333268 extend your exile¦333270.
 \q1 ^He'll¦333271 \add ≈deal with\add* your¦333272 guilt, \add ≈people\add* of¦333273 Edom¦333275—he'll¦333276 uncover your¦333279 sins¦333279.
 \c 5
 \s1 The mercy of Yisrael
@@ -599,8 +599,8 @@
 \q1 We \add ≈work hard, yet never get¦333319 any\add* rest¦333322.
 \b
 \q1
-\v 6 We've¦333329 \add ≈made a¦333330 treaty with\add* Egypt¦333328 \add (Heb. Mitsrayim)\add*,
-\q1 ≈\add and with\add* Assyria¦333331 \add (Heb. Ashshur)\add* to¦333332 \add ≈get food¦333333\add*.
+\v 6 We've¦333329 \add ≈made a¦333330 treaty with\add* Mitsrayim¦333328 \add !(Egypt¦333328)\add*,
+\q1 ≈\add and with\add* Ashur¦333331 \add !(Assyria¦333331)\add* to¦333332 \add ≈get food¦333333\add*.
 \b
 \q1
 \v 7 Our¦333335 ancestors¦333335 sinned¦333336 \add ≈but¦333337 they're¦333337 gone now\add*.
@@ -619,8 +619,8 @@
 \q1 from¦333361 the¦333362 burning¦333362 heat¦333362 of¦333362 hunger¦333363.
 \b
 \q1
-\v 11 Women¦333365 are raped in¦333366 Tsiyyon¦333366—
-\q1 ≈young women in¦333369 Yehudah's¦333370 cities¦333369.
+\v 11 Women¦333365 are raped in¦333366 Tsiyon¦333366 \add !(Zion¦333366)\add*—
+\q1 ≈young women in¦333369 Yehudah's¦333370 \add !(Judah¦333370)\add* cities¦333369.
 \b
 \q1
 \v 12 Princes¦333372 were¦333374 hung¦333374 by¦333373 their¦333373 \add #hands¦333373\add*.
@@ -647,7 +647,7 @@
 \q1 On account of those¦333418 \add >things\add*, our¦333420 eyes¦333420 grow¦333419 dim¦333419.
 \b
 \q1
-\v 18 On¦333422 account of¦333423 Mt¦333423. Tsiyyon¦333425,
+\v 18 On¦333422 account of¦333423 Mt¦333423. Tsiyon¦333425 \add !(Zion¦333425)\add*,
 \q1 which¦333426 is¦333426 desolate¦333426 with jackals roaming over it¦333430.
 \b
 \q1
