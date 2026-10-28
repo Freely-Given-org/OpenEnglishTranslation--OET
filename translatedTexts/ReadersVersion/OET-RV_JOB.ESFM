@@ -1,4 +1,4 @@
-\id JOB - Open English Translation—Readers' Version (OET-RV) v0.2.0
+\id JOB - Open English Translation—Readers' Version (OET-RV) v0.2.2
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 JOB
@@ -475,7 +475,7 @@
 \q1 They'll be¦234016 on¦234016 me¦234016 \add but\add* I'll¦234017 be¦234017 gone.
 \q1
 \v 9 \add #Clouds¦234020\add* \add just pop out of existence again\add* and¦234021 vanish¦234019.
-\q1 Similarly, the \add person\add* who¦234023 goes¦234023 down¦234023 to Sheol doesn't come¦234026 \add back\add* up¦234026 \add again\add*.
+\q1 Similarly, the \add person\add* who¦234023 goes¦234023 down¦234023 to Sheol¦234024 doesn't come¦234026 \add back\add* up¦234026 \add again\add*.
 \q1
 \v 10 \add That person\add* won't¦234028 return¦234030 to¦234032 their house¦234032 again,
 \q1 and¦234033 \add before long\add* their place¦234037 won't¦234033 \add even\add* know¦234035 them again¦234036.
@@ -2681,14 +2681,14 @@
 \v 4 Let's¦240528 choose¦240528 justice¦240527 for¦240530 ourselves¦240530.
 \q1 ≈Let's¦240531 discern¦240531 among¦240532 ourselves¦240532 what¦240533 is¦240535 good¦240535.
 \q1
-\v 5 Because¦240537 Iyov¦240540 \add !(Job¦240540)\add* has¦240539 \add declared\add*, ‘I'm¦240541 righteous¦240541,
+\v 5 Because¦240537 Iyov¦240540 has¦240539 \add declared\add*, ‘I'm¦240541 righteous¦240541,
 \q1 but¦240542 God¦240542 has¦240543 deprived me of¦240544 justice¦240544.
 \q1
 \v 6 Would¦240549 I¦240549 lie¦240549 about my \add #rights¦240548\add*?
 \q1 My¦240548 wound is¦240550 incurable¦240550 despite not¦240552 having disobeyed.’
 \b
 \q1
-\v 7 What other \add #person¦240558\add* is¦240558 like¦240559 Iyov¦240559?
+\v 7 What other \add #person¦240558\add* is¦240558 like¦240559 Iyov¦240559 \add !(Job¦240559)\add*?
 \q1 He¦240560 drinks¦240560 up mockery¦240562 like¦240563 \add ≡drinking\add* water¦240563.
 \q1
 \v 8 He¦240565 keeps company¦240566 with¦240567 those¦240569 who¦240569 do¦240569 evil¦240570,
@@ -3290,7 +3290,7 @@
 \sp Yahweh
 \q1
 \v 7 \add Now\add* tuck up¦242384 your robe like¦242387 a¦242387 man¦242387 \add going into battle\add*.
-\q1 I¦242389 will¦242389 question¦242389 you¦242389, and¦242390 you must answer me¦242390.
+\q1 I'll¦242389 question¦242389 you¦242389, and¦242390 you must answer me¦242390.
 \q1
 \v 8 Would¦242393 you¦242393 actually invalidate¦242393 my¦242394 judgement?
 \q1 \add ≡Would¦242393 you¦242393\add* condemn¦242395 me¦242395 so¦242396 you¦242397 can \add declare yourself\add* right?
@@ -3314,7 +3314,7 @@
 \q1 that¦242447 you \em can\em* save¦242449 yourself¦242450 \add ≈with your¦242451 own strength\add*.
 \b
 \q1
-\v 15 Now look at the \bd sauropod\bd* which¦242457 I¦242459 made¦242459 \add ≈on the same day\add* as you¦242460.
+\v 15 Now look at the \bd sauropod\bd* \add !(behemoth)\add* which¦242457 I¦242459 made¦242459 \add ≈on the same day\add* as you¦242460.
 \q1 It¦242463 eats¦242463 grass¦242461 like¦242462 a cow¦242462.
 \q1
 \v 16 Notice the strength¦242468 in¦242469 his thighs¦242469,
@@ -3346,7 +3346,7 @@
 \c 41
 \rem /s1 The Lord's Challenge Continues
 \p
-\v 1 Can you¦242555 pull¦242555 \bd the sea dragon\bd* with¦242557 a¦242557 hook¦242557,\x + \xo 41:1: \xt Psa 74:14; 104:26; Isa 27:1.\x*
+\v 1 Can you¦242555 pull¦242555 \bd the sea dragon\bd* \add !(leviathan)\add* with¦242557 a¦242557 hook¦242557,\x + \xo 41:1: \xt Psa 74:14; 104:26; Isa 27:1.\x*
 \q1 ≈or tie his tongue¦242560 down with¦242558 a¦242558 rope?
 \q1
 \v 2 Can you¦242563 put¦242563 a¦242564 leash¦242564 into¦242565 its¦242565 nose¦242565,
@@ -3483,12 +3483,12 @@
 \s1 Iyov's doubled restoration
 \rem /s1 Job's Fortunes Are Restored Twofold
 \p
-\v 10 After Iyov¦243037 \add !(Job¦243037)\add* had prayed¦243038 for¦243039 his¦243040 friends, Yahweh¦243042 \add ≈changed¦243032 his situation\add* and¦243041 \add ≈gave\add* \add *him¦243048\add* double¦243049 \add what he had before\add*.\x + \xo 42:10: \xt Yob 1:1-3.\x*
+\v 10 After¦243037 Iyov¦243037 \add !(Job¦243037)\add* had prayed¦243038 for¦243039 his¦243040 friends, Yahweh¦243042 \add ≈changed¦243032 his situation\add* and¦243041 \add ≈gave\add* \add *him¦243048\add* double¦243049 \add what he had before\add*.\x + \xo 42:10: \xt Yob 1:1-3.\x*
 \v 11 Then¦243051 all¦243053 of¦243053 his¦243055 brothers¦243055 and¦243056 sisters¦243058 and¦243060 everyone¦243060 who'd¦243062 known¦243062 him¦243062 before¦243063, came¦243051 to¦243052 his¦243067 house¦243067 and¦243064 \add ≈had a meal\add* with¦243065 him¦243065, and¦243068 they¦243068 comforted¦243070 him¦243069 and¦243070 consoled him¦243071 about all¦243073 the¦243075 \add #troubles¦243075\add* that¦243076 Yahweh¦243079 had¦243078 brought¦243078 on¦243080 him¦243080. Then¦243081 they¦243081 each gave¦243081 him¦243083 a¦243085 \add ≈silver coin\add* and¦243087 a¦243088 gold¦243089 ring¦243088.
 \p
 \v 12 Then¦243093 Yahweh¦243093 blessed¦243094 the¦243097 second part¦243097 of¦243097 Iyov's¦243098 \add life\add* more¦243099 than¦243099 the first, and¦243100 he¦243100 \add ended up with\add* 14,000 sheep¦243106, 6,000 camels¦243109, 1,000 \add working\add* pairs¦243112 of¦243112 cows¦243113, and¦243114 1,000 female¦243115 donkeys¦243115.
 \v 13 He¦243117 \add also\add* had seven¦243120 \add more\add* sons¦243121 and¦243122 three¦243122 \add more\add* daughters¦243123
-\v 14 who he¦243125 named¦243126 Yemimah¦243129, Ketsiah, and Keren¦243135-Hafuk.
+\v 14 who he¦243125 named¦243126 Yemimah¦243129, Ketsiah¦243132, and¦243133 Keren¦243135-Hafuk.
 \v 15 No one in¦243144 the whole¦243144 country¦243146 was¦243139 as beautiful¦243141 as¦243142 Iyov's¦243143 daughters¦243142, and as well as their¦243152 brothers¦243152, their¦243149 father¦243149 gave¦243147 them¦243148 \add each a piece of land\add* as an¦243150 inheritance¦243150.
 \v 16 Iyov¦243156 lived¦243155 another 140 years¦243162 after¦243157 \add all\add* that¦243159, and¦243161 was \add even\add* able to see¦243163 his great-grandchildren.
 \v 17 Then¦243175 Iyov¦243176 died¦243175 \add ≈in good circumstances\add* and at a very old¦243177 age.

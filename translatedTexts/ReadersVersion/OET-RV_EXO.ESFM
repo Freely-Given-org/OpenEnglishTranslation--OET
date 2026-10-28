@@ -1,4 +1,4 @@
-\id EXO - Open English Translation—Readers' Version (OET-RV) v0.2.0
+\id EXO - Open English Translation—Readers' Version (OET-RV) v0.2.1
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 EXO
@@ -30,9 +30,9 @@
 \s1 Yisrael's descendants are driven into slavery
 \rem /s1 The Israelites Are Treated Cruelly in Egypt; The Israelites Oppressed; The Israelites in Egypt
 \p
-\v 1 These¦25401 are¦25402 the¦25402 names¦25402 of¦25402 Yisrael's¦25404 \add !(Israel¦25404)\add* descendants¦25403 who¦25405 accompanied Ya'akov \add !(Jacob)\add* when¦25410 he moved his¦25410 household¦25410 to Mitsrayim¦25406 \add !(Egypt¦25406)\add*:\x + \xo 1:1-4: \xt Gen 46:8-27.\x*
+\v 1 These¦25401 are¦25402 the¦25402 names¦25402 of¦25402 Yisrael's¦25404 \add !(Israel¦25404)\add* descendants¦25403 who¦25405 accompanied Ya'akov¦25408 \add !(Jacob¦25408)\add* when¦25410 he moved his¦25410 household¦25410 to Mitsrayim¦25406 \add !(Egypt¦25406)\add*:\x + \xo 1:1-4: \xt Gen 46:8-27.\x*
 \v 2 Re'uven¦25413, Shim'on¦25414 \add !(Simeon¦25414)\add*, Levi¦25415, Yehudah¦25416 \add !(Judah¦25416)\add*,
-\v 3 Yisakar \add !(Issachar)\add*, Zevulun¦25419, Benyamin¦25420 \add !(Benjamin¦25420)\add*,
+\v 3 Yisakar¦25418 \add !(Issachar¦25418)\add*, Zevulun¦25419, Benyamin¦25420 \add !(Benjamin¦25420)\add*,
 \v 4 Dan¦25423, Naftali¦25424 \add !(Naphtali¦25424)\add*, Gad¦25425, and¦25426 Asher¦25426.
 \v 5 \add At that time,\add* Ya'akov¦25435 had a total of seventy¦25436 descendants (including¦25438 Yosef¦25438 \add !(Joseph¦25438)\add* \add and his sons\add* who¦25432 were¦25439 \add already\add* in¦25440 Mitsrayim¦25440.)
 \p
@@ -43,7 +43,7 @@
 \v 8 \add Eventually\add* a¦25465 new¦25467 king¦25465 \add ≈came to power\add* in Mitsrayim¦25470 who¦25471 had never known¦25474 Yosef¦25477\x + \xo 1:8: \xt Acts 7:18.\x*
 \v 9 and¦25479 he¦25479 told¦25479 his¦25482 people, “Listen, those descendants of Yisrael¦25486 \add !(Israel¦25486)\add* are¦25487 becoming more¦25489 numerous¦25487 and¦25488 powerful¦25488 than¦25489 us¦25489.
 \v 10 \add So\add*, let's¦25492 deal¦25492 wisely¦25492 with them, in case they \add continue to\add* multiply¦25496. Then¦25497 if¦25498 war¦25501 was¦25502 to¦25506 break out, they could easily take the other side and¦25509 fight¦25509 against¦25511 us¦25511, and¦25512 then leave¦25512 \add &our¦25515\add* country¦25515.”\x + \xo 1:10: \xt Acts 7:19.\x*
-\v 11 Then¦25517 they¦25517 appointed¦25517 overseers¦25519 to work them in slave¦25520 gangs¦25520, and using them as¦25521 forced¦25523 labour¦25523, they built¦25524 the store¦25526 cities¦25525 at Piton and¦25531 Rameses¦25533 for Par'oh \add !(Pharaoh)\add*.
+\v 11 Then¦25517 they¦25517 appointed¦25517 overseers¦25519 to work them in slave¦25520 gangs¦25520, and using them as¦25521 forced¦25523 labour¦25523, they built¦25524 the store¦25526 cities¦25525 at Piton and¦25531 Rameses¦25533 for Par'oh¦25527 \add !(Pharaoh¦25527)\add*.
 \v 12 \add However,\add* the more they oppressed¦25536 them, the more they multiplied¦25539 and¦25540 spread¦25541 out, and¦25542 \add the more\add* the \add @Mitsrim\add* \add !(Egyptians)\add* came to dread¦25542 the¦25544 Israelis¦25545.
 \v 13 \add ≈So¦25547\add* \add they\add* made the¦25551 Israelis¦25552 work¦25547 \add long, hard hours\add*,
 \v 14 and¦25555 they¦25555 made¦25555 their¦25558 lives¦25558 bitter¦25555 with¦25559 the hard¦25560 slavery. \add They were forced to make\add* mortar¦25561 and¦25562 bricks¦25562, as well as all¦25563 kinds of slave labour¦25565 in¦25566 the¦25566 \add #fields¦25566\add*—all¦25568 the work¦25570 they¦25573 had to do was \add strenuous and tiring\add*.
@@ -102,7 +102,7 @@
 \s1 God calls Mosheh from a burning bush
 \rem /s1 God Calls Moses; Moses at the Burning Bush; Moses and the Burning Bush
 \p
-\v 1 \add One time\add* Mosheh \add !(Moses)\add* was¦26128 shepherding the¦26132 flock¦26132 of¦26132 his¦26134 father-in-law¦26134 Yitro \add !(Jethro)\add* (or Yitro¦26133, the¦26135 priest¦26135 at Midyan¦26136), and¦26137 he¦26137 led the¦26140 flock¦26140 beyond the¦26142 wilderness¦26142 and¦26143 came¦26143 to¦26144 a hill. (\add This was later known as\add* the¦26146 mountain¦26146 of¦26146 God at Horev¦26148).
+\v 1 \add One time\add* Mosheh¦26127 \add !(Moses¦26127)\add* was¦26128 shepherding the¦26132 flock¦26132 of¦26132 his¦26134 father-in-law¦26134 Yitro \add !(Jethro)\add* (or Yitro¦26133, the¦26135 priest¦26135 at Midyan¦26136), and¦26137 he¦26137 led the¦26140 flock¦26140 beyond the¦26142 wilderness¦26142 and¦26143 came¦26143 to¦26144 a hill. (\add This was later known as\add* the¦26146 mountain¦26146 of¦26146 God at Horev¦26148).
 \v 2 \add While he was there.\add* Yahweh's¦26152 messenger¦26151 appeared¦26150 to¦26153 him¦26153 in¦26154 a¦26154 flame¦26154 coming from¦26157 the¦26157 middle¦26157 of¦26157 a bush¦26158, and¦26159 as \add @Mosheh¦26159\add* looked¦26159, to his surprise \add he saw that\add* the¦26161 bush¦26161 was¦26162 burning¦26162 in the fire yet not¦26165 \add actually\add* being¦26166 burnt up.\x + \xo 3:2-10: \xt Acts 7:30-34.\x*
 \v 3 “I've got to go and see¦26173 this¦26178 amazing sight¦26176,” Mosheh¦26169 said¦26168 \add to himself\add*. “How come that¦26173 bush¦26183 isn't¦26180 burning¦26182 up?”
 \p
@@ -115,7 +115,7 @@
 \v 7 “I've¦26245 certainly noticed¦26245 the¦26248 suffering¦26248 of¦26248 my¦26249 people¦26249 in¦26251 Mitsrayim¦26251 \add !(Egypt¦26251)\add*,” Yahweh¦26243 \add continued\add*, “I've heard¦26255 their¦26254 \add #cries¦26254\add* as the \add slave drivers\add* oppress them—I'm¦26255 unmistakingly aware¦26259 of their \add #pain¦26262\add*.
 \v 8 \add ≈So¦26264\add* I've¦26264 come¦26264 down¦26264 to¦26265 set them free from¦26267 Mitsri¦26268 \add !(Egyptian¦26268)\add* \add ≈control\add* and¦26269 to¦26269 bring¦26269 them up¦26269 from¦26270 \add there\add* to¦26274 a¦26276 good¦26277 and¦26278 wide¦26278 land—a¦26281 land¦26281 flowing¦26282 with milk¦26283 and¦26284 honey¦26284. \add It's currently\add* the¦26287 place¦26287 of¦26287 the¦26288 Kena'anim¦26288 \add !(Canaanites¦26288)\add*, the¦26289 Hittim, the¦26290 Amorim, the¦26291 Perizzim, the¦26292 Hivim, and¦26293 the¦26293 Yevusim¦26293.
 \v 9 \add Yes,\add* the¦26297 cry¦26297 of¦26297 the¦26298 Israelis¦26300 has¦26301 now¦26295 \add reached\add* me¦26302 and¦26303 what's more, I've¦26305 seen¦26305 \add how much\add* the¦26308 Mitsrim \add !(Egyptians)\add* are¦26311 oppressing¦26311 them¦26312.
-\v 10 \add ≈So¦26314\add* go¦26315 now¦26314 and¦26316 I'll¦26316 send¦26316 you¦26316 to¦26317 Par'oh \add !(Pharaoh)\add* and¦26320 bring¦26320 my¦26323 people¦26324—Yisrael's¦26326 \add !(Israel¦26326)\add* descendants—out¦26320 from¦26327 Mitsrayim¦26327.”
+\v 10 \add ≈So¦26314\add* go¦26315 now¦26314 and¦26316 I'll¦26316 send¦26316 you¦26316 to¦26317 Par'oh¦26319 \add !(Pharaoh¦26319)\add* and¦26320 bring¦26320 my¦26323 people¦26324—Yisrael's¦26326 \add !(Israel¦26326)\add* descendants—out¦26320 from¦26327 Mitsrayim¦26327.”
 \p
 \v 11 “Who¦26334 am¦26335 I¦26335, that¦26336 I¦26337 should go¦26337 to¦26338 Par'oh¦26340,” Mosheh¦26330 \add asked\add* God, “and¦26341 that I¦26342 should \add be the one to\add* bring¦26342 out¦26342 the¦26345 Israelis¦26346 out from¦26347 Mitsrayim¦26347?”
 \p
@@ -158,7 +158,7 @@
 \p
 \v 13 \add But\add* \add @Mosheh\add* \add replied\add*, “Oh master¦26819, please¦26822 send¦26825 \add someone else\add*.”
 \p
-\v 14 Then¦26827 Yahweh¦26830 \add ≈got angry¦26829\add* with Mosheh¦26831 and¦26832 told¦26832 him, “Isn't¦26833 Aharon \add !(Aaron)\add* a fellow Levite¦26836 and your¦26835 brother¦26835? I¦26837 know¦26837 that¦26838 he¦26841 can speak¦26841 well¦26840, and¦26843 \add what's\add* more, he'll¦26846 come¦26847 \add from Mitsrayim\add* \add !(Egypt)\add* to¦26848 meet¦26848 you, and \add when he does, he'll be very happy\add*.
+\v 14 Then¦26827 Yahweh¦26830 \add ≈got angry¦26829\add* with Mosheh¦26831 and¦26832 told¦26832 him, “Isn't¦26833 Aharon¦26834 \add !(Aaron¦26834)\add* a fellow Levite¦26836 and your¦26835 brother¦26835? I¦26837 know¦26837 that¦26838 he¦26841 can speak¦26841 well¦26840, and¦26843 \add what's\add* more, he'll¦26846 come¦26847 \add from Mitsrayim\add* \add !(Egypt)\add* to¦26848 meet¦26848 you, and \add when he does, he'll be very happy\add*.
 \v 15 \add He'll become your speaker\add* and¦26853 you'll¦26853 be able to talk¦26853 to¦26854 him¦26854 and \add tell him what to say\add*. I'll¦26861 be¦26861 \add helping both of you speak\add* and I'll¦26868 teach¦26868 you¦26869 both what you¦26872 should do¦26872.
 \v 16 \add ≈So¦26874\add* \add in that way,\add* he'll¦26874 be¦26881 like a¦26886 mouth¦26886 for you and speak¦26874 to¦26877 the¦26880 people¦26880 for¦26885 you¦26885, and¦26887 you'll¦26888 be like God¦26891 to him.
 \v 17 \add In addition,\add* you'll¦26900 have that¦26899 staff¦26895 with you¦26897 in¦26898 order to do¦26900 those miracles¦26905.”
@@ -171,7 +171,7 @@
 \v 19 \add Meanwhile\add* Yahweh¦26937 had told¦26936 Mosheh¦26940 in¦26941 Midyan¦26941, “Leave¦26942 here and return¦26943 to Mitsrayim¦26944 because¦26945 all¦26948 those who¦26951 \add wanted to kill you\add* are \add now\add* dead.”
 \v 20 Then¦26956 Mosheh¦26957 took¦26956 his¦26960 wife¦26960 and¦26961 sons¦26963 and¦26964 put them¦26964 on¦26965 a donkey¦26967 and¦26968 returned¦26968 towards¦26969 Mitsrayim¦26970 \add with them\add*, and¦26971 Mosheh¦26972 took¦26971 the¦26975 staff¦26975 \add that God had turned into a snake\add*.
 \p
-\v 21 \add On the way,\add* Yahweh¦26980 said¦26979 to¦26981 Mosheh¦26983, “When¦26984 you¦26984 return¦26985 to¦26986 Mitsrayim¦26986, all¦26988 those miracles¦26990 that¦26991 I¦26993 gave you¦26995, you'll be able to \add demonstrate\add* them¦26995 in¦26996 front¦26996 of¦26996 Par'oh \add !(Pharaoh)\add*, but¦26998 as for me, I'm going to \add ≈make¦26999 him stubborn\add* \add so that\add* he¦27004 won't¦27003 let¦27004 \add &your¦27007\add* people¦27007 leave.
+\v 21 \add On the way,\add* Yahweh¦26980 said¦26979 to¦26981 Mosheh¦26983, “When¦26984 you¦26984 return¦26985 to¦26986 Mitsrayim¦26986, all¦26988 those miracles¦26990 that¦26991 I¦26993 gave you¦26995, you'll be able to \add demonstrate\add* them¦26995 in¦26996 front¦26996 of¦26996 Par'oh¦26997 \add !(Pharaoh¦26997)\add*, but¦26998 as for me, I'm going to \add ≈make¦26999 him stubborn\add* \add so that\add* he¦27004 won't¦27003 let¦27004 \add &your¦27007\add* people¦27007 leave.
 \v 22 \add But\add* tell¦27009 Par'oh¦27012, ‘Yahweh¦27015 has stated that Yisrael¦27018 \add !(Israel¦27018)\add* is¦27016 \add like\add* his oldest¦27017 son¦27016
 \v 23 and¦27020 \add %he¦27020\add* asked¦27020 you to let¦27022 that son go so¦27026 that¦27026 he¦27026 can serve¦27026 \add %him¦27026\add*. But¦27027 you¦27027 refused¦27027 to¦27028 let¦27028 \add @Yisrael¦27028\add* go¦27028, so \add @Yahweh¦27030\add* will kill¦27031 \em your¦27034\em* oldest¦27035 son.’ ”\x + \xo 4:23: \xt Exo 12:29.\x*
 \p
@@ -303,7 +303,7 @@
 \v 17 so¦28305 Yahweh¦28307 says¦28306, “\add Now\add* you¦28309 will¦28309 know¦28309 that¦28310 I¦28311 am¦28312 Yahweh¦28312 because¦28310 of this¦28308: See, I'm¦28314 about¦28315 to¦28315 use my staff¦28317 to strike¦28315 the¦28323 \add #water¦28323\add* in¦28325 the Nile and¦28326 it will¦28326 turn¦28326 to¦28327 blood¦28327\x + \xo 7:17: \xt Rev 16:4.\x*
 \v 18 and¦28329 the¦28329 fish¦28329 in¦28332 the river¦28332 will¦28333 die¦28333 and¦28334 the¦28335 river¦28335 will¦28334 stink¦28334. Then¦28336 \add your people\add* will¦28336 \add gag\add* to¦28338 drink¦28338 \add the\add* water¦28339 from¦28340 the¦28342 river¦28342.” ’
 \p
-\v 19 “Tell Aharon¦28353 \add !(Aaron¦28353)\add* to take¦28354 his staff¦28355 and¦28356 stretch¦28356 out¦28356 his hand¦28358 over¦28359 the¦28361 waters¦28361 of¦28361 Mitsrayim¦28362 \add !(Egypt¦28362)\add*: over¦28363 their streams¦28365, their¦28365 canals¦28369, and¦28370 their¦28372 pools¦28372, and¦28373 over¦28373 every¦28374 reservoir of their¦28377 water¦28377, and \add the water\add* will become¦28378 blood¦28380. Then¦28381 there'll be¦28381 blood¦28382 in¦28383 \add the entire country\add*—even in¦28387 wooden¦28387 or stone¦28388 containers \add of water\add*.”
+\v 19 “Tell¦28353 Aharon¦28353 \add !(Aaron¦28353)\add* to take¦28354 his staff¦28355 and¦28356 stretch¦28356 out¦28356 his hand¦28358 over¦28359 the¦28361 waters¦28361 of¦28361 Mitsrayim¦28362 \add !(Egypt¦28362)\add*: over¦28363 their streams¦28365, their¦28365 canals¦28369, and¦28370 their¦28372 pools¦28372, and¦28373 over¦28373 every¦28374 reservoir of their¦28377 water¦28377, and \add the water\add* will become¦28378 blood¦28380. Then¦28381 there'll be¦28381 blood¦28382 in¦28383 \add the entire country\add*—even in¦28387 wooden¦28387 or stone¦28388 containers \add of water\add*.”
 \p
 \v 20 \add So\add* And¦28390 Mosheh¦28393 and¦28394 Aharon¦28394 did \add exactly\add* what Yahweh¦28398 had¦28397 commanded¦28397: \add @Aharon¦28399\add* raised¦28399 the staff¦28400 and¦28401 struck¦28401 the¦28404 river¦28406, while Par'oh¦28408 and¦28409 his¦28410 servants¦28410 \add watched\add*, and¦28411 the¦28414 \add entire\add* river¦28417 turned¦28411 to¦28418 blood¦28418.
 \v 21 Then¦28420 the¦28420 fish¦28420 in¦28423 the river¦28423 died¦28424 and¦28425 the¦28426 river¦28426 stank¦28425, so¦28427 the Mitsrim \add !(Egyptians)\add* couldn't drink¦28431 water¦28432 from¦28433 the¦28435 river¦28435, and¦28436 the¦28437 blood¦28437 was all¦28438 \add over\add* Mitsrayim¦28441.
@@ -612,10 +612,10 @@
 \v 9 The Mitsrim pursued¦32044 them¦32046, then¦32047 all¦32053 of¦32053 Par'oh's¦32057 \add #horses¦32055\add* and¦32058 chariots¦32056, along with his¦32058 mounted soldiers and¦32059 his foot army¦32059, overtook¦32047 them¦32048 camping¦32049 above the¦32052 sea¦32052 above Pi¦32062-Hahirot¦32063, across from Ba'al¦32065-Zephon¦32066.
 \p
 \v 10 As \add the Mitsrim\add* approached¦32069, the¦32071 Israelis¦32073 looked back, and¦32077 \add to their horror\add*, saw¦32077 the army coming after¦32081 them¦32081. They¦32082 were¦32082 extremely¦32083 afraid¦32082 and¦32084 cried¦32084 out¦32084 to¦32088 Yahweh¦32090.
-\v 11 They¦32092 \add complained\add* to¦32093 Mosheh¦32095 \add !(Moses¦32095)\add*, “Is it because there¦32097 weren't¦32097 any graves¦32099 in¦32100 Mitsrayim¦32100 that¦32106 you¦32101 brought¦32101 us¦32101 here to¦32102 die¦32102 in¦32103 the wilderness¦32103? What¦32104 have¦32107 you¦32107 done¦32107 to¦32108 us? Why did you bring¦32109 us¦32109 out¦32109 from¦32110 Mitsrayim¦32110?
+\v 11 They¦32092 \add complained\add* to¦32093 Mosheh¦32095, “Is it because there¦32097 weren't¦32097 any graves¦32099 in¦32100 Mitsrayim¦32100 that¦32106 you¦32101 brought¦32101 us¦32101 here to¦32102 die¦32102 in¦32103 the wilderness¦32103? What¦32104 have¦32107 you¦32107 done¦32107 to¦32108 us? Why did you bring¦32109 us¦32109 out¦32109 from¦32110 Mitsrayim¦32110?
 \v 12 Isn't¦32112 this¦32114 \add exactly what we told\add* you¦32118 in¦32119 Mitsrayim¦32119 when we said¦32120, ‘\add ≈Just leave us alone\add* and let us serve¦32123 the Mitsrim’? Because¦32127 serving¦32130 the Mitsrim \add sounds a lot\add* better¦32128 to¦32129 us¦32129 than¦32134 dying¦32134 \add out here\add* in¦32135 the wilderness¦32135.”
 \p
-\v 13 Then¦32137 Mosheh¦32138 told¦32137 the¦32141 people¦32141, “You mustn't be¦32144 afraid¦32144. Stand¦32145 still and¦32146 see¦32146 how Yahweh¦32150 saves you all—he's¦32153 going to¦32154 do it today, because¦32156 any Mitsrim that¦32157 you¦32158 see¦32158 today, you'll¦32164 never, ever see¦32165 them¦32165 again¦32166.
+\v 13 Then¦32137 Mosheh¦32138 \add !(Moses¦32138)\add* told¦32137 the¦32141 people¦32141, “You mustn't be¦32144 afraid¦32144. Stand¦32145 still and¦32146 see¦32146 how Yahweh¦32150 saves you all—he's¦32153 going to¦32154 do it today, because¦32156 any Mitsrim that¦32157 you¦32158 see¦32158 today, you'll¦32164 never, ever see¦32165 them¦32165 again¦32166.
 \v 14 Yahweh¦32171 himself will¦32172 fight¦32172 for¦32173 you all—all you need to do is to remain calm¦32175.”
 \rem /s1 Escape through the Red Sea
 \v 15 Then¦32178 Yahweh¦32179 \add scolded\add* Mosheh¦32182, “Why¦32183 are¦32185 you¦32185 \add still here\add* crying¦32185 out¦32185 to¦32186 me¦32186? Talk¦32187 to¦32188 the¦32190 Israelis¦32192 and get them moving forward.
@@ -694,7 +694,7 @@
 \q1 You used your¦32645 strength¦32645 to lead them to your¦32649 \add ≈sinless\add* home.
 \q1
 \v 14 Other countries have¦32651 heard¦32651, and they¦32653 tremble¦32653.
-\q1 ≈Anguish¦32654 has¦32655 struck the¦32656 inhabitants¦32656 of¦32656 Peleshet.
+\q1 ≈Anguish¦32654 has¦32655 struck the¦32656 inhabitants¦32656 of¦32656 Peleshet¦32657.
 \q1
 \v 15 The¦32661 chiefs¦32661 of¦32661 Edom¦32662 have panicked.
 \q1 ≈Trembling¦32666 has seized¦32665 the¦32663 leaders¦32663 of¦32663 Moav¦32664 \add !(Moab¦32664)\add*.
@@ -816,18 +816,18 @@
 \rem /s1 Jethro's Visit to Moses; Jethro's Advice; Jethro Visits Moses
 \p
 \v 1 \add Now\add* Yitro¦33871 \add !(Jethro¦33871)\add*, the¦33872 priest¦33872 at Midyan¦33873 and Mosheh's¦33875 \add !(Moses¦33875)\add* father-in-law¦33874, heard¦33870 about¦33877 everything that¦33879 God¦33881 had¦33880 done¦33880 for¦33882 Mosheh¦33882 and¦33883 for¦33883 his¦33884 people¦33884 the Israelis¦33883—that¦33885 Yahweh¦33888 had¦33887 brought¦33887 \add #the Israelis¦33891\add* out¦33887 of Mitsrayim¦33892 \add !(Egypt¦33892)\add*.
-\v 2 (Yitro had \add been looking after\add* Mosheh's¦33897 wife¦33901 Tsiporah¦33900\x + \xo 18:2-3: \xt Exo 2:21-22.\x* \add and their two sons\add* after¦33903 he had sent¦33904 her¦33904 back
+\v 2 (Yitro¦33895 had \add been looking after\add* Mosheh's¦33897 wife¦33901 Tsiporah¦33900\x + \xo 18:2-3: \xt Exo 2:21-22.\x* \add and their two sons\add* after¦33903 he had sent¦33904 her¦33904 back
 \v 3 along with \add #their\add* two¦33907 sons¦33908.\x + \xo 18:3: \xt Acts 7:29.\x* One¦33911 was named¦33910 ‘Gereshom¦33912’ \add (which sounds like the Hebrew word for ‘foreigner’)\add* because¦33913 \add @Mosheh¦33914\add* had¦33914 said¦33914, “I've¦33916 been a¦33915 foreigner¦33915 living in¦33917 another country¦33917.”
-\v 4 \add Their\add* other son's name¦33920 was¦33922 ‘Eliezer¦33922’ \add (which sounds like the Hebrew word that means ‘God helps me’\add*, because¦33923 Mosheh had said, “God¦33925, who my¦33926 father¦33926 worshipped, has¦33927 helped¦33927 me and \add ≈stopped the¦33929 Mitsri\add* \add !(Egyptian)\add* \add ≈ king Par'oh¦33930\add* \add !(Pharaoh¦33930)\add* \add ≈ from killing me\add*.”))
+\v 4 \add Their\add* other son's name¦33920 was¦33922 ‘Eliezer¦33922’ \add (which sounds like the Hebrew word that means ‘God helps me’\add*, because¦33923 Mosheh had said, “God¦33925, who my¦33926 father¦33926 worshipped, has¦33927 helped¦33927 me and \add ≈stopped the¦33929 Mitsri\add* \add !(Egyptian)\add* \add ≈king Par'oh¦33930\add* \add !(Pharaoh¦33930)\add* \add ≈from killing me\add*.”))
 \p
 \v 5 \add ≈So¦33932\add* \add now\add* Mosheh's¦33935 father-in-law¦33934 brought \add @Mosheh's\add* wife¦33937 and sons¦33936 to¦33938 the¦33943 wilderness¦33943 where¦33944 \add #the people\add* were¦33947 camping¦33947 \add near\add* the¦33949 mountain¦33949 of¦33949 God.
-\v 6 \add ≈He¦33952 had sent a message ahead\add* saying¦33952, “I¦33956, your¦33957 father-in-law¦33957 Yitro, am¦33959 coming¦33959 to¦33960 you¦33960, as well as your¦33961 wife¦33961 and¦33962 \add %your\add* two¦33962 sons¦33963.”
+\v 6 \add ≈He¦33952 had sent a message ahead\add* saying¦33952, “I¦33956, your¦33957 father-in-law¦33957 Yitro¦33958, am¦33959 coming¦33959 to¦33960 you¦33960, as well as your¦33961 wife¦33961 and¦33962 \add %your\add* two¦33962 sons¦33963.”
 \v 7 \add ≈So¦33966\add* Mosheh¦33967 went¦33966 out¦33966 to¦33968 meet¦33968 his¦33969 father-in-law¦33969, and¦33970 he¦33970 bowed¦33970 down¦33970 and¦33971 kissed¦33971 him¦33973. They¦33974 asked¦33974 each¦33975 other about¦33977 their welfare¦33978, then¦33979 they¦33979 went¦33979 into¦33980 the¦33980 tent¦33980,
 \v 8 and¦33982 Mosheh¦33983 related to¦33984 his¦33984 father-in-law¦33984 all¦33986 that¦33988 Yahweh¦33990 had¦33989 done¦33989 to¦33991 Par'oh¦33991 and¦33992 to¦33992 Mitsrayim¦33992 on¦33993 account of¦33994 Yisrael¦33995 \add !(Israel¦33995)\add*, all¦33997 the¦33999 hardship¦33999 that¦34000 found them¦34001 along the way¦34002, and¦34003 about how Yahweh had¦34003 rescued¦34003 them¦34003.
-\v 9 Yitro \add ≈was very happy to hear about\add* all¦34009 the¦34011 good¦34011 \add things\add* that¦34012 Yahweh¦34015 had¦34014 done¦34014 for Yisrael¦34016 when¦34006 he¦34018 had¦34018 rescued¦34018 them out from¦34019 Mitsri¦34020 \add ≈control\add*,
+\v 9 Yitro¦34007 \add ≈was very happy to hear about\add* all¦34009 the¦34011 good¦34011 \add things\add* that¦34012 Yahweh¦34015 had¦34014 done¦34014 for Yisrael¦34016 when¦34006 he¦34018 had¦34018 rescued¦34018 them out from¦34019 Mitsri¦34020 \add ≈control\add*,
 \v 10 and¦34022 \add *he¦34023\add* said¦34022, “Bless¦34024 Yahweh¦34025, who¦34026 rescued¦34027 you¦34028 from¦34029 \add slavery\add* in Mitsrayim¦34030, and¦34031 from¦34031 Par'oh's¦34032 \add ≈power\add*.
 \v 11 Now¦34043 I¦34044 \add ≈can see¦34044\add* that¦34045 Yahweh¦34048 is¦34047 greater¦34047 than¦34049 all¦34049 the¦34051 \add other\add* gods because¦34052 of the \add this result after\add* \add @the¦34055 Mitsrim¦34055\add* \add !(Egyptians¦34055)\add* had¦34055 acted¦34055 proudly against \add @you¦34056 all¦34056\add*.”
-\v 12 Then¦34058 Mosheh's¦34061 father-in-law Yitro made a¦34062 burnt¦34062 offering¦34062 as well as sacrifices¦34063 to¦34064 God¦34064, and¦34065 Aharon¦34066 \add !(Aaron¦34066)\add* and¦34067 all¦34067 of the¦34069 Israeli¦34070 elders¦34069 came¦34065 to¦34071 eat¦34071 bread¦34073 with¦34074 Mosheh's¦34077 father-in-law \add ≈in¦34078 God's presence¦34078\add*.
+\v 12 Then¦34058 Mosheh's¦34061 father-in-law Yitro¦34059 made a¦34062 burnt¦34062 offering¦34062 as well as sacrifices¦34063 to¦34064 God¦34064, and¦34065 Aharon¦34066 \add !(Aaron¦34066)\add* and¦34067 all¦34067 of the¦34069 Israeli¦34070 elders¦34069 came¦34065 to¦34071 eat¦34071 bread¦34073 with¦34074 Mosheh's¦34077 father-in-law \add ≈in¦34078 God's presence¦34078\add*.
 \s1 Yitro's helpful administrative advice
 \rem /s1 Jethro's Wise Advice; The Appointment of Judges
 \r (Deu. 1:9-18)
@@ -1627,7 +1627,7 @@
 \p
 \v 22 \add In the spring\add* when¦42496 you¦42498 begin to¦42499 harvest the¦42500 first¦42500 wheat¦42502 crop, you must have a \it Celebration¦42503 of¦42503 Weeks¦42497\it*,\x + \xo 34:22: \xt Exo 23:16; Lev 23:15-21; Num 28:26-31.\x* and at the end of¦42505 the¦42506 year¦42506 \add in the autumn\add*, have a \it \+add Finished\+add* Harvest Celebration\it*.\x + \xo 34:22: \xt Lev 23:39-43.\x*
 \p
-\v 23 Three¦42508 times¦42509 every¦42512 year¦42510, all¦42512 your¦42514 men must¦42511 present¦42511 themselves before me—Yisrael's \add !(Israel)\add* god¦42521, the¦42518 master¦42518 Yahweh¦42520.
+\v 23 Three¦42508 times¦42509 every¦42512 year¦42510, all¦42512 your¦42514 men must¦42511 present¦42511 themselves before me—Yisrael's¦42522 \add !(Israel¦42522)\add* god¦42521, the¦42518 master¦42518 Yahweh¦42520.
 \v 24 I¦42526 will¦42526 drive¦42526 out the people groups ahead¦42528 of¦42528 you¦42528 and¦42529 expand¦42529 your¦42532 borders¦42532, and¦42533 no one will¦42535 \add ≈think of¦42539 taking\add* your¦42539 land¦42539 \add when they know that\add* you¦42540 present¦42541 yourselves to \add *me¦42545\add* three¦42547 times¦42548 a year¦42549.
 \p
 \v 25 Don't¦42551 \add wave bread\add* \add ≈that's been risen\add* when¦42560 offering a sacrifice¦42559. Don't allow any part of¦42559 the¦42564 sacrifice¦42564 for the¦42566 ‘pass-over¦42566’ celebration¦42565 to \add ≈still be there in\add* the morning¦42563.\x + \xo 34:25: \xt Exo 12:10.\x*
@@ -1694,7 +1694,7 @@
 \rem /s1 Bezalel and Oholiab; Workers to Make the Tent of the Lord's Presence
 \r (Exo. 31:1-11)
 \p
-\v 30 Then¦43253 Mosheh¦43254 \add !(Moses¦43254)\add* said¦43253 to¦43255 the¦43257 Israelis¦43258, “Listen, Yahweh¦43261 has¦43260 called¦43260 Betsalel¦43263 by name¦43262 (the son of¦43267 Hur's¦43269 son Uri¦43266, from the¦43270 tribe¦43270 of Yehudah¦43271 \add !(Judah¦43271)\add*)
+\v 30 Then¦43253 Mosheh¦43254 \add !(Moses¦43254)\add* said¦43253 to¦43255 the¦43257 Israelis¦43258, “Listen, Yahweh¦43261 has¦43260 called¦43260 Betsalel¦43263 by name¦43262 (the son of¦43267 Hur's¦43269 son Uri¦43266, from the¦43270 tribe¦43270 of¦43270 Yehudah¦43271 \add !(Judah¦43271)\add*)
 \v 31 and¦43273 he¦43273 has¦43273 filled¦43273 him¦43274 with \add *his\add* spirit¦43275, with¦43277 skill¦43277 and understanding¦43278, and¦43279 with¦43279 knowledge¦43279 and¦43280 with all¦43280 kinds of craftsmanship¦43282.
 \v 32 \add He can\add* design¦43284 designs¦43285, work¦43286 in¦43287 gold¦43287, silver¦43288, and¦43289 bronze¦43289,
 \v 33 in¦43291 cutting gemstones¦43292 for¦43296 setting, and¦43294 in¦43294 wood-carving—to¦43293 do¦43296 all¦43297 kinds of¦43299 design¦43300 and crafting.
@@ -1839,7 +1839,7 @@
 \p
 \v 21 These¦44674 are¦44675 the records \add from making\add* the \add ≈sacred tent\add* (where the \add stone\add* \add #transcripts¦44678\add* were kept). They were recorded¦44680 by the Levites¦44686 according to Mosheh's¦44684 \add !(Moses¦44684)\add* instructions \add and supervised by\add* Itamar¦44688 (a son¦44689 of¦44689 Aharon¦44691 \add !(Aaron¦44691)\add* the¦44692 priest¦44692).
 \p
-\v 22 Betsalel¦44694 (son¦44695 of¦44695 Uri¦44697 son¦44698 of¦44698 Hur¦44700, from the¦44701 tribe¦44701 of Yehudah¦44702 \add !(Judah¦44702)\add*) made¦44703 everything that¦44707 Yahweh¦44710 had¦44709 instructed¦44709 Mosheh¦44713 \add <to make\add*.
+\v 22 Betsalel¦44694 (son¦44695 of¦44695 Uri¦44697 son¦44698 of¦44698 Hur¦44700, from the¦44701 tribe¦44701 of¦44701 Yehudah¦44702 \add !(Judah¦44702)\add*) made¦44703 everything that¦44707 Yahweh¦44710 had¦44709 instructed¦44709 Mosheh¦44713 \add <to make\add*.
 \v 23 Oholiav¦44716 (son¦44717 of¦44717 Ahisamak, from the¦44720 tribe¦44720 of Dan¦44722) worked with him—he was an¦44723 engraver¦44723 and¦44724 a¦44724 designer¦44724 and an embroiderer in blue, purple¦44727, and¦44728 scarlet, and¦44730 in¦44730 fine linen¦44730.
 \p
 \v 24 The¦44735 gold¦44735 that¦44736 they used¦44736 for¦44737 the¦44739 construction of¦44739 the¦44740 sacred¦44740 tent was measured at 965kg. This was the¦44743 gold¦44743 from the¦44744 wave offering and was weighed using the official standard weights.
