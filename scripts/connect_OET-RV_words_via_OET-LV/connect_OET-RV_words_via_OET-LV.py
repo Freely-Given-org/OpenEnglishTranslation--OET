@@ -95,6 +95,7 @@ Versification: Use the explicit BOS OET-RV and OET-LV source profiles.
 
 
 CHANGELOG:
+    2026-10-29 Include DC sources, independent word tables and conservative draft metadata.
     2026-10-22 Use BOS source profiles for mapped metadata, passages and export/navigation.
     2023-07-31 Added character marker checks for each RV line
     2023-08-29 Added nomina sacra (NS) for connected words in RV
@@ -259,7 +260,7 @@ import bos_books_codes_py
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-10-22'
+LAST_MODIFIED_DATE = '2026-10-29'
 SHORT_PROGRAM_NAME = "connect_OET-RV_words_via_OET-LV"
 PROGRAM_NAME = "Connect OET-RV words to OET-LV word numbers"
 PROGRAM_VERSION = '2.0.0'
@@ -274,13 +275,14 @@ project_folderpath = scripts_folderpath.parent # Find folders relative to this m
 OET_LV_ESFM_InputFolderPath = project_folderpath.joinpath( 'derivedTexts/' )
 OET_LV_OT_ESFM_InputFolderPath = OET_LV_ESFM_InputFolderPath.joinpath( 'auto_edited_OT_ESFM/' )
 OET_LV_NT_ESFM_InputFolderPath = OET_LV_ESFM_InputFolderPath.joinpath( 'auto_edited_VLT_ESFM/' )
+OET_LV_DC_ESFM_InputFolderPath = OET_LV_ESFM_InputFolderPath.joinpath( 'auto_edited_DC_ESFM/' )
 OET_RV_ESFM_FolderPath = project_folderpath.joinpath( 'translatedTexts/ReadersVersion/' )
 assert OET_LV_OT_ESFM_InputFolderPath.is_dir()
 assert OET_LV_NT_ESFM_InputFolderPath.is_dir()
 assert OET_RV_ESFM_FolderPath.is_dir()
 
 OET_RV_NAMES_TABLE_FILEPATH = OET_RV_ESFM_FolderPath.joinpath( 'OET-RV_names_table.tsv' )
-OET_RV_NAMES_TABLE_HEADER = 'TraditionalName\tRVName\tExplained\tComment'
+OET_RV_NAMES_TABLE_HEADER = 'TraditionalName\tGrkName\tRVName\tExplained\tComment'
 assert OET_RV_NAMES_TABLE_FILEPATH.is_file()
 OET_RV_WORD_PHRASES_TABLE_FILEPATH = OET_RV_ESFM_FolderPath.joinpath( 'OET-RV_wordPhrases_table.tsv' )
 OET_RV_WORD_PHRASES_TABLE_HEADER = 'LVWord\tRVWords\tEnabled\tComment'
@@ -320,8 +322,38 @@ class State:
 state = State()
 
 
+def canonicalBookCode(book):
+    """Keep OET filenames separate from BOS's canonical book identities."""
+    return {'DAG': 'DNG', 'ES1': 'GES', 'ES2': 'LES'}.get(book, book)
+
+
+def bookSegment(book):
+    book = canonicalBookCode(book)
+    if bos_books_codes_py.is_old_testament_nr(book):
+        return 'OT'
+    if bos_books_codes_py.is_new_testament_nr(book):
+        return 'NT'
+    # The BOS deuterocanon category does not include every OET extra book.
+    if book in {'TOB', 'JDT', 'ESG', 'WIS', 'SIR', 'BAR', 'DNG', 'MA1', 'MA2',
+                'MA3', 'MA4', 'GES', 'LES', 'MAN', 'PS2'}:
+        return 'DC'
+    raise ValueError(f'No word-table segment for {book}')
+
+
+def alignmentSources():
+    """DC is optional in older checkouts; its presence never changes OT/NT tables."""
+    return (('OT', OET_LV_OT_ESFM_InputFolderPath),
+            ('DC', OET_LV_DC_ESFM_InputFolderPath),
+            ('NT', OET_LV_NT_ESFM_InputFolderPath))
+
+
+def bookFilename(bible, book, abbreviation):
+    """Use the loader's actual filename (e.g. GES is stored as OET-RV_ES1)."""
+    return getattr(bible, 'possibleFilenameDict', {}).get(book, f'{abbreviation}_{book}.ESFM')
+
+
 def loadAlignmentBible(folder, abbreviation, versification):
-    """Avoid parsing all 66 books when --books selects a subset."""
+    """Avoid parsing every book when --books selects a subset."""
     bible = ESFMBible(folder, givenAbbreviation=abbreviation, versification=versification)
     bible.loadAuxiliaryFiles = True
     options = BibleOrgSysGlobals.commandLineArguments
@@ -362,17 +394,15 @@ def main():
         options.output_dir.mkdir(parents=True, exist_ok=True)
 
     rv = loadAlignmentBible(OET_RV_ESFM_FolderPath, 'OET-RV', 'OET-RV')
-    lvOT = loadAlignmentBible(OET_LV_OT_ESFM_InputFolderPath, 'OET-LV', 'OET-LV')
-    lvNT = loadAlignmentBible(OET_LV_NT_ESFM_InputFolderPath, 'OET-LV', 'OET-LV')
+    sources = [(segment, folder, loadAlignmentBible(folder, 'OET-LV', 'OET-LV'))
+               for segment, folder in alignmentSources() if folder.is_dir()]
 
-    # Load the OT and NT word files
+    # Word numbers are independent row indices within each segment's table.
     state.wordTable, state.wordTableHeaderList = {}, {}
-    for testament in ('OT','NT'):
-        lv = lvOT if testament=='OT' else lvNT
+    for testament, input_folder_path, lv in sources:
         if not lv.books:
             continue
         BBB = next(iter(lv.books))
-        input_folder_path = OET_LV_OT_ESFM_InputFolderPath if testament=='OT' else OET_LV_NT_ESFM_InputFolderPath
         lvBookObject = lv[BBB]
         wordFileName = lvBookObject.ESFMWordTableFilename
         if wordFileName:
@@ -394,6 +424,10 @@ def main():
                     dPrint( 'Info', DEBUGGING_THIS_MODULE, f"  connect_OET_RV loaded column names were: ({len(lv.ESFMWordTables[wordFileName][0])}) {lv.ESFMWordTables[wordFileName][0]}" )
         state.wordTable[testament] = [row.split('\t') for row in lv.ESFMWordTables[wordFileName]]
         state.wordTableHeaderList[testament] = state.wordTable[testament][0]
+        if testament == 'DC':
+            required = {'Ref', 'Morphology', 'GlossStatus', 'OETGlossWords'}
+            if not required <= set(state.wordTableHeaderList[testament]):
+                raise ValueError(f'DC word table is missing columns: {required - set(state.wordTableHeaderList[testament])}')
 
     # Load the Hebrew and Greek name tables from TSV files
     loadOETRVNameTable()
@@ -408,16 +442,27 @@ def main():
     # show_fors( lv )
 
     # Connect linked words in the OET-LV to the OET-RV
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nProcessing connect words for OET OT…" )
-    numWordsOT,numWordNumberedOT = connect_OET_RV( rv, lvOT, OET_LV_OT_ESFM_InputFolderPath, 'OT' ) # OT
-    if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 1:
-        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"\nProcessing connect words for OET NT…" )
-    numWordsNT,numWordNumberedNT = connect_OET_RV( rv, lvNT, OET_LV_NT_ESFM_InputFolderPath, 'NT' ) # NT
+    totalWords = totalLinked = dcLinked = 0
+    for testament, folder, lv in sources:
+        vPrint('Quiet', DEBUGGING_THIS_MODULE, f'\nProcessing connect words for OET {testament}…')
+        words, linked = connect_OET_RV(rv, lv, folder, testament)
+        totalWords += words
+        totalLinked += linked
+        if testament == 'DC':
+            dcLinked = linked # Returned counts also work with multiprocessing.
 
     # Selected-book runs report only the books actually processed.
     if not options.books:
-        reportWordNumberPercentage( "Whole Bible", numWordsOT+numWordsNT, numWordNumberedOT+numWordNumberedNT )
+        reportWordNumberPercentage('Whole Bible', totalWords, totalLinked)
+
+    # Keep linked DC output self-contained, including output-directory previews.
+    if not options.dry_run and dcLinked:
+        destination = options.output_dir or OET_RV_ESFM_FolderPath
+        table = 'OET-LV_DC_word_table.tsv'
+        data = (OET_LV_DC_ESFM_InputFolderPath / table).read_bytes()
+        target = destination / table
+        if not target.exists() or target.read_bytes() != data:
+            target.write_bytes(data)
 
     if options.report:
         options.report.parent.mkdir(parents=True, exist_ok=True)
@@ -455,9 +500,9 @@ def loadOETRVNameTable() -> None:
 
     for line in tsvLines[1:]:
         fields = line.split( '\t' )
-        if len(fields) < 2: continue # Some editors delete trailing columns
-        traditionalName, rvName = fields[0].strip(), fields[1].strip()
-        explained = fields[2].strip() if len(fields) >= 3 else ''
+        if len(fields) < 3: continue # Some editors delete trailing columns
+        traditionalName, rvName = fields[0].strip(), fields[2].strip()
+        explained = fields[3].strip() if len(fields) >= 4 else ''
         if not traditionalName or not rvName: continue
         # The OET-RV uses straight apostrophes inside names, but the table uses curly ones, e.g., 'Sha’ul'
         state.rvNameCandidates[traditionalName.replace( '’', "'" )].add( rvName.replace( '’', "'" ) )
@@ -814,14 +859,14 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
 
     Then connect linked words in the OET-LV to the OET-RV.
 
-    testament is either 'OT' or 'NT', and is used to label the word count summaries.
+    testament is 'OT', 'DC' or 'NT', and labels the word count summaries.
 
     Returns a (numWords,numWordNumbered) tuple for this testament, i.e. how many of the OET-RV
         words of the books that we processed could have a word number, and how many of them
-        have one (see countWordsAndWordNumbers()), so that main() can add the two testaments
+        have one (see countWordsAndWordNumbers()), so that main() can add the segments
         together for a whole Bible figure.
     """
-    assert testament in ('OT','NT'), f"Bad {testament=}"
+    assert testament in ('OT','DC','NT'), f"Bad {testament=}"
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag:
         fnPrint( DEBUGGING_THIS_MODULE, f"connect_OET_RV( {rv}, {lv} {testament} )" )
 
@@ -830,6 +875,9 @@ def connect_OET_RV( rv, lv, OET_LV_ESFM_InputFolderPath, testament:str ):
     selected = BibleOrgSysGlobals.commandLineArguments.books
     for BBB in lv.books:
         if selected and BBB not in selected:
+            continue
+        if rv is not None and BBB not in rv.books:
+            logging.warning(f'Skipping OET-LV {BBB}: no corresponding RV book')
             continue
         # if BBB in ('CO1',): continue # TODO: CO1_14:33 gives an issue
         booklist_to_process.append( BBB )
@@ -910,7 +958,7 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
 
     bookAdds = bookNS = 0
 
-    lvESFMFilename = f'OET-LV_{BBB}.ESFM'
+    lvESFMFilename = bookFilename(lv, BBB, 'OET-LV')
     lvESFMFilepath = OET_LV_ESFM_InputFolderPath.joinpath( lvESFMFilename )
     with open( lvESFMFilepath, 'rt', encoding='UTF-8' ) as esfmFile:
         state.lvESFMText = esfmFile.read() # We keep the original (for later comparison)
@@ -930,7 +978,7 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
                 logger = logging.critical if ' \\x ' in line else logging.warning
                 logger( f"Double-check space after xref in {lvESFMFilename} {lineNumber}: '{line}'" )
 
-    rvESFMFilename = f'OET-RV_{BBB}.ESFM'
+    rvESFMFilename = bookFilename(rv, BBB, 'OET-RV')
     rvESFMFilepath = OET_RV_ESFM_FolderPath.joinpath( rvESFMFilename )
     with open( rvESFMFilepath, 'rt', encoding='UTF-8' ) as esfmFile:
         state.rvESFMText = esfmFile.read() # We keep the original (for later comparison)
@@ -992,6 +1040,17 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
 
     newESFMtext = '\n'.join( state.rvESFMLines ) \
                         .replace( '\\nd* \\nd ', ' ' ) # Concatenate consecutive nd fields
+    if bookSegment(BBB) == 'DC' and (bookAdds or beforeLinked):
+        declaration = r'\rem WORDTABLE OET-LV_DC_word_table.tsv'
+        if re.search(r'^\\rem (?:not )?WORDTABLE .*$', newESFMtext, re.MULTILINE):
+            newESFMtext = re.sub(r'^\\rem (?:not )?WORDTABLE .*$', lambda m: declaration,
+                                newESFMtext, flags=re.MULTILINE)
+        else:
+            first, separator, rest = newESFMtext.partition('\n')
+            newESFMtext = first + '\n' + declaration + separator + rest
+            for item in getattr(state, 'audit', ()):
+                if item['book'] == BBB:
+                    item['line'] += 1 # The new header precedes every verse.
     if newESFMtext != state.rvESFMText:
         if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.debugFlag or BibleOrgSysGlobals.verbosityLevel >= 3:
             dPrint( 'Info', DEBUGGING_THIS_MODULE, f"{BBB} ESFM text has changed {len(state.rvESFMText):,} chars -> {len(newESFMtext):,} chars" )
@@ -1027,7 +1086,8 @@ def connect_OET_RV_book( BBB:str, lv, rv, OET_LV_ESFM_InputFolderPath ):
     options = BibleOrgSysGlobals.commandLineArguments
     if options.output_dir and not options.dry_run and newESFMtext == state.rvESFMText:
         (options.output_dir / rvESFMFilename).write_text(newESFMtext, encoding='utf-8')
-    state.bookReports.append(dict(book=BBB, words=bookNumWords, before=beforeLinked,
+    state.bookReports.append(dict(book=BBB, segment=bookSegment(BBB), filename=rvESFMFilename,
+                                  words=bookNumWords, before=beforeLinked,
                                   after=bookNumWordNumbered, added=bookNumWordNumbered-beforeLinked,
                                   removed_plain_add=numUnlinkedAddSpanRemovals, # Includes < and > additions.
                                   mapping_skipped=state.mappingSkipped,
@@ -1062,15 +1122,22 @@ def iterAlignmentVerseEntries(BBB, lv, rv):
     state.unmappedLV = audit_unmapped_lv(BBB, rv, lv, state.lvESFMLines, passages)
     if state.unmappedLV:
         missing = ', '.join(f'{c}:{v}{suffix or ""}' for _,c,v,suffix in
-                            (gap['lv_reference'] for gap in state.unmappedLV))
+                            (gap['lv_reference'] for gap in state.unmappedLV[:20]))
+        if len(state.unmappedLV) > 20:
+            missing += f', … ({len(state.unmappedLV):,} total)'
         vPrint('Normal', DEBUGGING_THIS_MODULE,
                f'    WARNING: OET-LV {BBB} {missing} not represented in the RV mappings; '
                'check BOS mapping data / RV verse coverage (see unmapped_lv in --report).')
-    for issue in skipped:
+    for issue in skipped[:20]:
         refs = ', '.join(f'{b} {c}:{v}{suffix or ""}' for b,c,v,suffix in issue['rv_references'])
         diagnostics = issue.get('mapping', {}).get('diagnostics', ())
         reason = '; '.join(dict.fromkeys(d['message'] for d in diagnostics)) or issue.get('message', issue['status'])
         logging.warning(f'Skipping OET-RV {refs}: {issue["status"]}: {reason}')
+    if len(skipped) > 20:
+        logging.warning(f'OET-RV {BBB}: {len(skipped):,} passages skipped; first 20 shown. Full details are retained in --report.')
+    if bookSegment(BBB) == 'DC' and not passages:
+        vPrint('Normal', DEBUGGING_THIS_MODULE,
+               f'    {BBB}: no exact OET-RV → OET-LV passage mappings; no DC word connections made.')
     vPrint('Info', DEBUGGING_THIS_MODULE,
            f'    {BBB}: resolved {len(passages):,} RV passages (OET-RV → OET-LV); skipped {len(skipped):,}.')
     for passage in passages:
@@ -1282,7 +1349,7 @@ def matchVerseCandidates( BBB:str, c:int,v:int, lvWordList:List[str], reversedOr
     short phrase movements require strong, unambiguous lexical matches across
     a nearby linked block. Original LV punctuation fences the latter operation.
     """
-    testament = 'NT' if bos_books_codes_py.is_new_testament_nr(BBB) else 'OT'
+    testament = bookSegment(BBB)
     columns = []
     for word in lvWordList:
         number = getLVWordNumber(word)
@@ -1290,6 +1357,16 @@ def matchVerseCandidates( BBB:str, c:int,v:int, lvWordList:List[str], reversedOr
             continue
         plain = word.split('¦', 1)[0]
         row = state.wordTable[testament][number]
+        if testament == 'DC':
+            header = state.wordTableHeaderList['DC']
+            if canonicalBookCode(row[header.index('Ref')].split('_', 1)[0]) != canonicalBookCode(BBB):
+                raise ValueError(f'DC word {number} does not belong to {BBB}')
+            if row[header.index('GlossStatus')] in {'missing', 'ambiguous', 'unusable-gloss'} \
+                    or not row[header.index('OETGlossWords')]:
+                # Retain its position as an unmatchable column; omitting it
+                # would join words that are not adjacent in the Greek source.
+                columns.append(LVToken(f'⟦DC:{number}⟧', number))
+                continue
         # Hebrew transliterations can start with a modifier letter (ʼAhₐron,
         # ˊĒsāv). Inspect their first ordinary letter, not character zero.
         capitalised = any(next((ch for ch in w if ch.isalpha() and unicodedata.category(ch) != 'Lm'), '').isupper()
@@ -1299,7 +1376,7 @@ def matchVerseCandidates( BBB:str, c:int,v:int, lvWordList:List[str], reversedOr
         # gentilics (Ng), e.g. Lēviyyiy/Levites. Metadata-only '*' substitutions
         # retain the stricter proper-noun test; tables justify these spellings.
         nameEligible = capitalised and lvWordIsNoun(row, testament)
-        names = (frozenset(getLVNameSpellings(plain, ('NT','NT_OT') if testament == 'NT' else ('OT',)))
+        names = (frozenset(getLVNameSpellings(plain, ('NT','NT_OT') if testament in ('NT','DC') else ('OT',)))
                  if nameEligible and hasattr(state, 'nameTables') else frozenset())
         columns.append(LVToken(plain, number, proper, noun=lvWordIsNoun(row, testament), names=names))
     if lvVerseText is not None:
@@ -1398,6 +1475,11 @@ def lvWordIsNoun( lvWordRow:List[str], testament:str ) -> bool:
     """
     if testament == 'NT':
         return lvWordRow[state.wordTableHeaderList['NT'].index('Role')].strip() in ('N','S')
+    if testament == 'DC':
+        morphology = lvWordRow[state.wordTableHeaderList['DC'].index('Morphology')]
+        # TAGNT candidates use a different scheme from both OT and NT tables.
+        # Only unanimous noun analyses justify number-change/name evidence.
+        return bool(morphology) and all(part.strip().startswith('N-') for part in morphology.split('|'))
     morphology = lvWordRow[state.wordTableHeaderList['OT'].index('Morphology')]
     return any( part.startswith( 'N' ) for part in morphology.split( ',' ) ) # e.g. 'R,Ncfsa' is a preposition with a noun
 # end of lvWordIsNoun
@@ -1414,6 +1496,8 @@ def lvWordIsProperNoun( lvWordRow:List[str], testament:str ) -> bool:
     if testament == 'NT':
         return (lvWordRow[state.wordTableHeaderList['NT'].index('Role')].strip() == 'N'
                 and 'W' in lvWordRow[state.wordTableHeaderList['NT'].index('GlossCaps')])
+    if testament == 'DC':
+        return False # Draft metadata has no contextual proper-name classification.
     morphology = lvWordRow[state.wordTableHeaderList['OT'].index('Morphology')]
     return any(part.startswith('Np') for part in morphology.split(','))
 # end of connect_OET-RV_words_via_OET-LV.lvWordIsProperNoun
@@ -1665,7 +1749,7 @@ if __name__ == '__main__':
 
     # Configure basic Bible Organisational System (BOS) set-up
     parser = BibleOrgSysGlobals.setup( PROGRAM_NAME, PROGRAM_VERSION )
-    parser.add_argument('--books', nargs='+', metavar='BBB', help='process only these BOS book codes (e.g. RUT MRK)')
+    parser.add_argument('--books', nargs='+', metavar='BBB', help='process only these OT/DC/NT codes (e.g. RUT TOB MRK; DAG/ES1/ES2 filename aliases are accepted)')
     parser.add_argument('--dry-run', action='store_true', help='compute links and coverage without writing ESFM files')
     parser.add_argument('--output-dir', type=Path, help='write proposed ESFM books here instead of replacing source books')
     parser.add_argument('--report', type=Path, help='write coverage and proposed positional/lexical links as JSON (single process)')
@@ -1673,8 +1757,11 @@ if __name__ == '__main__':
 
     options = BibleOrgSysGlobals.commandLineArguments
     if options.books:
-        invalid = set(options.books) - {p.stem.removeprefix('OET-LV_') for folder in (OET_LV_OT_ESFM_InputFolderPath, OET_LV_NT_ESFM_InputFolderPath) for p in folder.glob('OET-LV_*.ESFM')}
-        if invalid: parser.error(f'Unknown book code(s): {", ".join(sorted(invalid))}')
+        options.books = list(dict.fromkeys(canonicalBookCode(book) for book in options.books))
+        available = {canonicalBookCode(p.stem.removeprefix('OET-LV_'))
+                     for _, folder in alignmentSources() for p in folder.glob('OET-LV_*.ESFM')}
+        invalid = set(options.books) - available
+        if invalid: parser.error(f'No OET-LV source file for book code(s): {", ".join(sorted(invalid))}')
     if options.output_dir and options.output_dir.resolve() == OET_RV_ESFM_FolderPath.resolve():
         parser.error('--output-dir must differ from the source folder')
     main()

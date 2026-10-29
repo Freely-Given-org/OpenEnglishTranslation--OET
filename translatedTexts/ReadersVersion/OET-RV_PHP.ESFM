@@ -1,48 +1,48 @@
-\id PHP - Open English Translation—Readers' Version (OET-RV) v0.1.52
+\id PHP - Open English Translation—Readers' Version (OET-RV) v0.2.1
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 PHP
 \rem WORDTABLE OET-LV_NT_word_table.tsv
-\h Philippians
-\toc1 Philippians
-\toc2 Philippians
+\h Filippaisios
+\toc1 Filippaisios
+\toc2 Filippaisios
 \toc3 Php
-\mt2 Paul's letter to the believers in
-\mt1 Philippi
+\mt2 Paulos's letter to the believers in
+\mt1 Filippou
 \is1 Introduction
-\ip Paul wrote this letter to the believers in Philippi, a province of Macedonia (Acts 16:6-40). That group of believers was the first group planted by Paul in the Roman empire in Europe, and this letter was written while he was imprisoned in Rome for his preaching of the good message about Yeshua Messiah.
-\ip The main reason for Paul's writing this letter was because he wanted to thank the believers there in Philippi for the gift that they had sent to help him in prison. His second reason for writing was so that he could encourage them and strengthen their faith despite difficulties that they would face, as well as his own difficulties. Paul advised them that they need to humble themselves like Yeshua had humbled himself when he was here on the earth. He reminds them again about the goodness and mercy of God, and how their faith in Messiah saves them. It's no longer necessary for them to be constrained by the Law of Mosheh and human beliefs. Then he wrote about the peace and happiness that God gives to those united in Messiah.
-\ip Note that Paul (or his scribe) regularly refer to the ‘messiah’ (Greek ‘Χριστὸς’) in this letter without a preceding article, i.e., no preceding ‘the’, thus he uses the word (which originally meant ‘chosen or anointed one’) as another name for Yeshua (rather than as a title—for example, compare ‘Governor’ with ‘the governor’), hence we capitalise it here as ‘Messiah’.
-\iot Main components of Paul's letter
+\ip Paulos wrote this letter to the believers in Filippou, a province of Makedonia (Acts 16:6-40). That group of believers was the first group planted by Paulos in the Romaios empire in Europe, and this letter was written while he was imprisoned in Romai for his preaching of the good message about Yeshua Messiah.
+\ip The main reason for Paulos's writing this letter was because he wanted to thank the believers there in Filippou for the gift that they had sent to help him in prison. His second reason for writing was so that he could encourage them and strengthen their faith despite difficulties that they would face, as well as his own difficulties. Paulos advised them that they need to humble themselves like Yeshua had humbled himself when he was here on the earth. He reminds them again about the goodness and mercy of God, and how their faith in Messiah saves them. It's no longer necessary for them to be constrained by the Law of Mosheh and human beliefs. Then he wrote about the peace and happiness that God gives to those united in Messiah.
+\ip Note that Paulos (or his scribe) regularly refer to the ‘messiah’ (Greek ‘Χριστὸς’) in this letter without a preceding article, i.e., no preceding ‘the’, thus he uses the word (which originally meant ‘chosen or anointed one’) as another name for Yeshua (rather than as a title—for example, compare ‘Governor’ with ‘the governor’), hence we capitalise it here as ‘Messiah’.
+\iot Main components of Paulos's letter
 \io1 Introduction \ior 1:1-11\ior*
-\io1 Paul's happiness that Messiah is being proclaimed \ior 1:12-30\ior*
+\io1 Paulos's happiness that Messiah is being proclaimed \ior 1:12-30\ior*
 \io1 Living in Messiah \ior 2:1-18\ior*
-\io1 Timothy and Epafroditus \ior 2:19-30\ior*
+\io1 Timotheos and Epafroditos \ior 2:19-30\ior*
 \io1 The warning about enemies and difficulties \ior 3:1–4:9\ior*
-\io1 Paul and his friends from Philippi \ior 4:10-20\ior*
+\io1 Paulos and his friends from Filippou \ior 4:10-20\ior*
 \io1 Concluding remarks \ior 4:21-23\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
 \rem /s1 Greetings from Paul; Salutation
 \p
-\v 1 This letter is from Paul¦130717 and¦130718 Timothy¦130719, slaves¦130720 \nd of¦130721 Messiah¦130721 Yeshua¦130722\nd*. To¦130724 all¦130724 the¦130725 believers in¦130727 \nd Messiah¦130728 Yeshua¦130729\nd* in¦130732 Philippi¦130733,\x + \xo 1:1: \xt Acts 16:12.\x* along with¦130734 \add &your¦130735\add* overseers¦130735 and¦130736 servants¦130737.
+\v 1 This letter is from Paulos¦130717 and¦130718 Timotheos¦130719, slaves¦130720 \nd of¦130721 Messiah¦130721 Yeshua¦130722\nd* \add !(Jesus¦130722; Grk. Yesus)\add*. To¦130724 all¦130724 the¦130725 believers in¦130727 \nd Messiah¦130728 Yeshua¦130729\nd* in¦130732 Filippou¦130733 \add !(Philippi¦130733)\add*,\x + \xo 1:1: \xt Acts 16:12.\x* along with¦130734 \add &your¦130735\add* overseers¦130735 and¦130736 servants¦130737.
 \p
 \v 2 ⇔May our¦130745 father¦130744 \nd God¦130743\nd* and¦130746 \add &our¦130747\add* \nd master¦130747 Yeshua¦130748 Messiah¦130749\nd* grant grace¦130738 to¦130739 you¦130739 all¦130739 and¦130740 fill you with peace¦130741.
-\s1 Paul's thanking and praying
+\s1 Paulos's thanking and praying
 \rem /s1 Paul's Prayer for His Readers; Paul's Thanksgiving and Prayer; Paul's Prayer for the Philippians
 \p
 \v 3 I¦130750 thank¦130750 my¦130753 \nd God¦130752\nd* every¦130755 time that \add I hear\add* you¦130758 mentioned¦130757
 \v 4 and every¦130761 time that I pray for¦130765 you all¦130766, I'm always¦130759 glad when I make¦130772 my¦130764 requests
 \v 5 because¦130773 the¦130778 good¦130779 message¦130779 \add united\add* us in fellowship¦130775 from¦130780 the¦130781 first¦130782 day¦130783 until¦130784 now¦130786.
-\v 6 I'm sure of this¦130789: that¦130790 the¦130791 \nd one¦130801\nd* who started¦130792 a¦130795 good¦130796 work¦130795 in¦130793 you¦130794 all¦130794 will¦130797 ensure that it's¦130797 continued through to the¦130800 day¦130800 \nd of¦130801\nd* \add the return of\add* \nd Messiah¦130801 Yeshua¦130802\nd*.
+\v 6 I'm sure of this¦130789: that¦130790 the¦130791 \nd one¦130801\nd* who started¦130792 a¦130795 good¦130796 work¦130795 in¦130793 you¦130794 all¦130794 will¦130797 ensure that it's¦130797 continued through to the¦130800 day¦130800 \nd of¦130801\nd* \add the return of\add* \nd Messiah¦130801 Yeshua¦130802\nd* \add !(Jesus¦130802; Grk. Yesus)\add*.
 \v 7 It's¦130805 right¦130806 for¦130807 me¦130807 to¦130810 be¦130810 thinking¦130810 this¦130809 about¦130811 you¦130813 because¦130814 I have¦130816 you all in¦130818 my¦130819 heart¦130820. \add You received\add* grace¦130840 along with me¦130826 so¦130827 whether I'm in¦130828 chains¦130825 or defending¦130830 and¦130831 \add ≈confirming¦130832\add* the¦130833 good¦130834 message¦130834, we are¦130843 fellow recipients.
 \v 8 \nd God¦130851 is¦130851\nd* my¦130847 witness¦130845 that I¦130854 long¦130854 for¦130854 you¦130856 with all¦130856 the¦130858 compassions¦130858 \nd of¦130859 Messiah¦130859 Yeshua¦130860\nd*.
 \p
 \v 9 And¦130862 this¦130863 is¦130864 what I'm praying¦130864: that¦130865 your¦130868 love¦130867 would grow more¦130870 and¦130871 more¦130872 with knowledge¦130876 and¦130877 all¦130878 insight¦130879
 \v 10 so that¦130881 you¦130883 all¦130883 will approve¦130882 what's of value¦130885 and so remain sincere¦130888 and¦130889 blameless until \nd Messiah¦130894\nd* \add returns\add*,
 \v 11 having¦130895 been¦130895 filled¦130895 with¦130896 the¦130896 fruit¦130896 of¦130898 righteousness¦130898 through¦130901 \nd Yeshua¦130903 Messiah¦130904\nd*, honouring and¦130908 praising¦130909 \nd God¦130911\nd*.
-\s1 Paul's happiness that Messiah is proclaimed
+\s1 Paulos's happiness that Messiah is proclaimed
 \rem /s1 Paul's Chains Advance the Gospel; Paul in prison; Paul's Present Circumstances; To Live Is Christ; Paul's Joy That Christ Is Preached
 \p
 \v 12 \add ≈Brothers¦130916 and¦130913 sisters\add*, I¦130915 want¦130915 you to¦130912 know¦130912 that¦130917 the¦130918 good¦130925 message¦130925 has¦130926 progressed¦130923 more¦130921 because of¦130924 what's happened to me,
@@ -54,7 +54,7 @@
 \v 17 The¦131000 ones who do it out of love¦131004, know¦131005 that¦131006 I¦131011 was¦131011 appointed¦131011 to defend¦131008 the¦131009 good¦131010 message¦131010.
 \p
 \v 18 ⇔What¦131012 then¦131026? I will¦131032 be¦131032 happy¦131032, excited even, as long as \nd Messiah¦131023\nd* is¦131024 being¦131024 proclaimed¦131024 in any manner¦131017, whether¦131019 their reason for doing it is suspect or¦131021 in¦131022 truth¦131022.
-\v 19 I¦131033 know¦131033 that¦131036 this¦131037 will¦131039 turn¦131039 out¦131039 to¦131040 be my SALVATION¦131041/DELIVERANCE due to your¦131044 prayers¦131045 and¦131046 from the¦131047 resources of¦131048 the¦131048 \nd spirit¦131049 of¦131051 Yeshua¦131051 Messiah¦131052\nd*,
+\v 19 I¦131033 know¦131033 that¦131036 this¦131037 will¦131039 turn¦131039 out¦131039 to¦131040 be my SALVATION¦131041/DELIVERANCE due to your¦131044 prayers¦131045 and¦131046 from the¦131047 resources of¦131048 the¦131048 \nd spirit¦131049 of¦131051 Yeshua¦131051 \+add !(Jesus¦131051; Grk. Yesus)\+add* Messiah¦131052\nd*,
 \rem /s1 Paul's Life for Christ
 \v 20 as my eager¦131055 expectation¦131055 and¦131056 hope¦131057 is that¦131059 I¦131062 won't be¦131062 ashamed¦131062 of anything, but¦131063 that \nd Messiah¦131072\nd* will¦131071 be¦131071 magnified¦131071 by¦131078 \add &my\add* life¦131079, always¦131068 in boldness¦131066 and¦131069 even now¦131070 whether¦131077 I go on to \add ≈live¦131079\add* or¦131080 to \add ≈die¦131082\add*,
 \v 21 because¦131084 to¦131083 me¦131083, to¦131086 live¦131086 is¦131086 to \add serve\add* \nd Messiah¦131087\nd*, and¦131088 to¦131090 die¦131090 is¦131090 to \add also\add* gain¦131091.
@@ -78,7 +78,7 @@
 \v 3 Don't do¦131305 anything from selfish¦131307 ambition¦131307 or in vain¦131311 conceit¦131311, but¦131312 show humility¦131314 and consider¦131316 others to be¦131319 more important than yourselves,
 \v 4 not¦131321 just looking¦131328 out¦131328 for your own \add advantage\add*, but¦131329 for what others¦131332 \add need\add*.
 \rem /s1 Christ's Humility and Exaltation
-\v 5 This¦131335 \nd is¦131338\nd* how you¦131341 all¦131341 who are also¦131343 in¦131344 \nd Messiah¦131345 Yeshua¦131346\nd* should \nd be¦131346\nd* thinking¦131338:
+\v 5 This¦131335 \nd is¦131338\nd* how you¦131341 all¦131341 who are also¦131343 in¦131344 \nd Messiah¦131345 Yeshua¦131346\nd* \add !(Jesus¦131346; Grk. Yesus)\add* should \nd be¦131346\nd* thinking¦131338:
 \v 6 \add @Yeshua\add*, though he was in¦131348 the¦131349 form¦131349 \nd of¦131350 God¦131350\nd*, didn't¦131352 \add ≈take advantage¦131353 of\add* being considered¦131354 equal¦131357 \nd with¦131358 God¦131358\nd*,
 \v 7 but¦131359 emptied¦131361 himself and becoming¦131369 like a human, took¦131364 on the¦131362 form¦131362 of¦131363 a¦131363 slave¦131363. Then in¦131365 that human¦131367 form¦131371,
 \v 8 he¦131376 humbled¦131376 himself¦131377 and became¦131378 obedient¦131379 all the way to¦131380 death¦131381, even death¦131382 on the¦131385 stake¦131385.
@@ -96,18 +96,18 @@
 \v 16 as you live out the¦131509 message¦131509 of¦131510 life¦131510, and then I'll be able to¦131513 boast¦131514 when \nd Messiah¦131518\nd* \add returns\add* because¦131519 I didn't¦131520 waste my time¦131517 or work for nothing,
 \v 17 but¦131529 even¦131531 if¦131530 I'm¦131532 \add to lose my life by\add* being¦131532 poured¦131532 out¦131532 \add like wine\add* on¦131533 your sacrifice¦131535 and¦131536 on the ministry¦131537 of¦131538 your faith¦131539, I'll¦131541 be¦131541 happy and¦131542 celebrate along with¦131544 all¦131544 of you¦131545.
 \v 18 You¦131550 all¦131550 should \add also\add* be¦131551 happy and¦131555 celebrating along with me¦131557.
-\s1 Timothy and Epafroditus
+\s1 Timotheos and Epafroditos
 \rem /s1 Paul Commends Timothy; Paul's plans; Timothy and Epaphroditus
 \p
-\v 19 I'm¦131558 hoping¦131558 in¦131560 \add the\add* \nd master¦131561 Yeshua¦131563\nd* to be able to¦131566 send¦131566 Timothy¦131564 to¦131567 you¦131567 all¦131567 soon¦131565, so that¦131568 I¦131569 can be¦131571 encouraged¦131571 when I learn¦131572 what you're¦131575 all¦131575 up to,
+\v 19 I'm¦131558 hoping¦131558 in¦131560 \add the\add* \nd master¦131561 Yeshua¦131563\nd* \add !(Jesus¦131563; Grk. Yesus)\add* to be able to¦131566 send¦131566 Timotheos¦131564 to¦131567 you¦131567 all¦131567 soon¦131565, so that¦131568 I¦131569 can be¦131571 encouraged¦131571 when I learn¦131572 what you're¦131575 all¦131575 up to,
 \v 20 because¦131577 I have no¦131576 one¦131576 \add else\add* so similar to me in spirit who¦131580 will¦131585 be¦131585 genuinely¦131581 caring¦131585 for¦131585 how you're all¦131584 doing.
 \v 21 (There's plenty who search¦131591 out what they themselves need instead of the¦131593 things \nd of¦131596 Yeshua¦131596 Messiah¦131597\nd*.
-\v 22 But¦131599 you¦131603 all¦131603 know¦131603 that¦131604 \add @Timothy\add* \add ≈has proven¦131600\add* himself and has served¦131607 with¦131608 me¦131609 in¦131611 the¦131615 good¦131617 message¦131617 like a son¦131607 serving \add &his\add* father¦131606.)
+\v 22 But¦131599 you¦131603 all¦131603 know¦131603 that¦131604 \add @Timotheos\add* \add ≈has proven¦131600\add* himself and has served¦131607 with¦131608 me¦131609 in¦131611 the¦131615 good¦131617 message¦131617 like a son¦131607 serving \add &his\add* father¦131606.)
 \v 23 So¦131622 I'll¦131623 send¦131624 him as soon as I¦131627 can sort out¦131627 what's happening to me¦131630,
 \v 24 but I'm¦131632 confident in¦131634 \add the\add* \nd master¦131635\nd* that¦131636 I myself¦131638 will¦131641 also¦131637 be¦131641 coming¦131641 soon¦131640.
 \rem /s1 Paul Commends Epaphroditus
 \p
-\v 25 Meanwhile I¦131646 thought¦131646 it was necessary¦131644 to¦131664 send¦131664 Epafroditus to¦131665 you¦131666 all¦131666. He's my brother¦131649 and¦131650 fellow-worker¦131651 and¦131652 fellow-soldier¦131653, and¦131656 your¦131655 ambassador¦131657 and¦131659 minister¦131660 to my \add #needs¦131662\add*.
+\v 25 Meanwhile I¦131646 thought¦131646 it was necessary¦131644 to¦131664 send¦131664 Epafroditos to¦131665 you¦131666 all¦131666. He's my brother¦131649 and¦131650 fellow-worker¦131651 and¦131652 fellow-soldier¦131653, and¦131656 your¦131655 ambassador¦131657 and¦131659 minister¦131660 to my \add #needs¦131662\add*.
 \v 26 He's¦131669 been¦131669 longing¦131668 to see you¦131673 all¦131673 \add again\add* and¦131676 was upset that you¦131679 heard¦131679 that¦131680 he'd¦131681 been sick
 \v 27 because¦131683 he¦131684 nearly¦131685 \add ≈died¦131686\add* from it, but¦131688 \nd God¦131690\nd* showed¦131692 mercy¦131692 to¦131692 him¦131693, and¦131696 not only¦131697 to him but¦131698 also¦131699 to me¦131700 that¦131701 I¦131707 wouldn't have¦131707 yet another hardship to go through.
 \v 28 So¦131709 I¦131710 sent¦131710 him¦131711 willingly so that¦131712 when you all see¦131713 him¦131714 again¦131715, you'll¦131716 all¦131716 be¦131716 very happy¦131716 and¦131717 I'll¦131717 be less¦131718 anxious¦131718 \add here\add*.
@@ -120,9 +120,9 @@
 \v 1 So continuing, dear \add ≈brothers¦131761 and¦131761 sisters¦131761\add*, be¦131763 happy in¦131764 \add the\add* \nd master¦131765\nd*. I'm not against writing¦131769 the¦131767 same¦131768 \add >things\add* to¦131770 you¦131770 all¦131770 \add again\add* because¦131775 it will keep you¦131775 safe¦131777.
 \rem /s1 Breaking with the Past; The Christian's goal
 \v 2 Watch¦131778 out¦131778 for¦131779 \add those\add* dogs¦131780, \add those\add* evil¦131783 workers¦131784, \add those\add* who say you must be¦131785 circumcised,\f + \fr 3:2 \ft Although it's possible that Paul had three different groups of people in mind here, it's much more likely that he used three different names to describe the one group of people.\f*
-\v 3 because¦131789 we¦131788 are¦131790 the¦131791 ‘\add ≈circumcised¦131792\add*’ ones—those \nd of¦131796\nd* us with \nd God's¦131796 spirit¦131795\nd* and who worship¦131798 and¦131799 boast¦131800 in¦131801 \nd Messiah¦131802 Yeshua¦131803\nd*. We don't¦131805 trust¦131808 in¦131806 the¦131807 physical \add dimension\add*,
+\v 3 because¦131789 we¦131788 are¦131790 the¦131791 ‘\add ≈circumcised¦131792\add*’ ones—those \nd of¦131796\nd* us with \nd God's¦131796 spirit¦131795\nd* and who worship¦131798 and¦131799 boast¦131800 in¦131801 \nd Messiah¦131802 Yeshua¦131803\nd* \add !(Jesus¦131803; Grk. Yesus)\add*. We don't¦131805 trust¦131808 in¦131806 the¦131807 physical \add dimension\add*,
 \v 4 although¦131809 I¦131810 do have¦131811 confidence¦131812 even¦131813 in¦131814 the¦131815 physical. If¦131816 anyone thinks¦131818 they are¦131818 more qualified in¦131821 terms of physical attributes, I¦131824 am more¦131825 so:
-\v 5 I \add ≈was circumcised¦131826\add* \add as a baby\add* on the¦131828 eighth day¦131828, I'm a descendent¦131830 of¦131831 Yisrael¦131831 \add !(Israel¦131831)\add* from the¦131832 tribe¦131832 of¦131833 Benyamin¦131833,\x + \xo 3:5: \xt Rom 11:1.\x* I'm more ‘Hebrew¦131834’ than most Hebrews¦131836, obeyed the¦131838 law¦131838 as member¦131839 of the Pharisee¦131839 party¦131839,\x + \xo 3:5: \xt Acts 23:6; 26:5.\x*
+\v 5 I \add ≈was circumcised¦131826\add* \add as a baby\add* on the¦131828 eighth day¦131828, I'm a descendent¦131830 of¦131831 Yisrael¦131831 \add !(Israel¦131831)\add* from the¦131832 tribe¦131832 of¦131833 Benyamin¦131833,\x + \xo 3:5: \xt Rom 11:1.\x* I'm more ‘Hebrew¦131834’ than most Ivrim¦131836 \add !(Hebrews¦131836)\add*, obeyed the¦131838 law¦131838 as member¦131839 of the Farisaios¦131839 party¦131839,\x + \xo 3:5: \xt Acts 23:6; 26:5.\x*
 \v 6 zealously¦131842 persecuted¦131843 assembled¦131845 believers,\x + \xo 3:6: \xt Acts 8:3; 22:4; 26:9-11.\x* and without fault in terms of obeying¦131847 the¦131850 law¦131850.
 \v 7 However, all of those¦131859 things which¦131854 were¦131855 considered¦131860 advantages, now because¦131861 of¦131861 \nd Messiah¦131863\nd* I consider them disadvantages.
 \v 8 In fact, I¦131868 consider everything to be a loss¦131870 to¦131871 me because¦131872 knowing¦131876 \nd Messiah¦131878 Yeshua¦131879\nd*, my¦131883 \nd master¦131882\nd*, is superior. It's because¦131885 of¦131885 him that I discard everything else, considering¦131891 it \add all\add* to be rubbish¦131892 so¦131890 that¦131894 I¦131896 can gain¦131896 Messiah
@@ -132,7 +132,7 @@
 \s1 Striving for the prize
 \rem /s1 Running toward the Goal; Pressing on Toward the Goal
 \p
-\v 12 I haven't already received¦131954 \add that\add*, or¦131955 already¦131956 reached¦131970 \add ≈perfection¦131960\add*, but¦131962 I'm¦131961 running hard to try to grab it, in¦131966 the same way that¦131967 I was grabbed by¦131971 \nd Messiah¦131973 Yeshua¦131974\nd*.
+\v 12 I haven't already received¦131954 \add that\add*, or¦131955 already¦131956 reached¦131970 \add ≈perfection¦131960\add*, but¦131962 I'm¦131961 running hard to try to grab it, in¦131966 the same way that¦131967 I was grabbed by¦131971 \nd Messiah¦131973 Yeshua¦131974\nd* \add !(Jesus¦131974; Grk. Yesus)\add*.
 \v 13 \add ≈Brothers¦131975 and¦131975 sisters¦131975\add*, I'm¦131976 not¦131979 under the illusion that I've already grabbed it¦131982, but¦131984 I¦131984 do do this one thing: forgetting¦131988 what's behind¦131987 me, and taking long strides towards what's ahead¦131991 of me,
 \v 14 I'm¦131996 running hard toward the¦131999 prize¦132000 of¦132001 being called¦132003 up to heaven by \nd God¦132005\nd* through \nd Messiah¦132007 Yeshua¦132008\nd*.
 \p
@@ -145,22 +145,22 @@
 \v 20 For¦132095 us¦132094, our citizenship¦132097 is in¦132098 \add #heaven¦132099\add* and¦132103 we're¦132105 waiting¦132105 for \add &our¦132104\add* saviour¦132104 to \add return\add* from there—\nd the¦132106 master¦132106 Yeshua¦132107 Messiah¦132108\nd*—
 \v 21 who¦132109 will¦132110 take these embarrassing bodies¦132112 of ours and make them similar¦132120 to¦132121 his resurrected body¦132122—he's capable¦132130 of doing that and to \add ≈put everything under his control\add*.
 \c 4
-\s1 Paul's final teaching
+\s1 Paulos's final teaching
 \rem /s1 Instructions
 \p
 \v 1 So¦132138 then¦132138, my dear \add ≈brothers¦132139 and¦132139 sisters¦132139\add*, my¦132140 delight¦132145 and¦132146 my crown¦132147, I miss you all, so¦132149 guard your faith in¦132151 \nd the¦132152 master¦132152\nd*, dear¦132153 ones.
 \rem /s1 Exhortations; Paul's Final Thoughts
-\v 2 Euodia¦132155 and¦132157 Syntyche¦132158, you both need to¦132162 be¦132162 thinking¦132162 the¦132160 same¦132161 way in¦132164 \add the\add* \nd master¦132165\nd*,
-\v 3 and yes¦132166, I'm¦132168 asking¦132168 you¦132170, \add &my\add* true¦132172 companion¦132173, to help¦132174 those¦132175 two women who¦132176 worked hard with me to \add share\add* the¦132178 good¦132179 message¦132179, along with Clement¦132184 and¦132185 the others who also¦132169 worked with me¦132189 and whose¦132193 names¦132195 \add are written\add* in¦132196 the¦132197 book¦132197 of¦132198 life¦132198.
+\v 2 Euodia¦132155 and¦132157 Suntuke¦132158, you both need to¦132162 be¦132162 thinking¦132162 the¦132160 same¦132161 way in¦132164 \add the\add* \nd master¦132165\nd*,
+\v 3 and yes¦132166, I'm¦132168 asking¦132168 you¦132170, \add &my\add* true¦132172 companion¦132173, to help¦132174 those¦132175 two women who¦132176 worked hard with me to \add share\add* the¦132178 good¦132179 message¦132179, along with Klemes¦132184 and¦132185 the others who also¦132169 worked with me¦132189 and whose¦132193 names¦132195 \add are written\add* in¦132196 the¦132197 book¦132197 of¦132198 life¦132198.
 \p
 \v 4 Always¦132202 be¦132199 happy in¦132200 \add the\add* \nd master¦132201\nd*. I'll¦132204 say¦132204 that again¦132203: be¦132205 happy.
 \v 5 Let¦132209 your \add ≈gentleness¦132207\add* be¦132209 visible to¦132210 everyone. The¦132213 \nd master¦132214\nd* is close¦132215.
 \v 6 Don't worry¦132217 about anything, but¦132218 \add handle\add* all¦132232 situations by letting¦132233 \nd God¦132236\nd* know¦132233 your requests¦132231—praying¦132222 and¦132223 telling \add God\add* your¦132232 needs¦132233, and also thanking¦132227 \add him\add*.
-\v 7 Then¦132237 \nd God's¦132241\nd* peace¦132239 which¦132243 is¦132244 above¦132244 \add human\add* understanding will¦132248 guard¦132248 your hearts¦132250 and¦132252 your thinking¦132254 in¦132259 \nd Messiah¦132261 Yeshua¦132262\nd*.
+\v 7 Then¦132237 \nd God's¦132241\nd* peace¦132239 which¦132243 is¦132244 above¦132244 \add human\add* understanding will¦132248 guard¦132248 your hearts¦132250 and¦132252 your thinking¦132254 in¦132259 \nd Messiah¦132261 Yeshua¦132262\nd* \add !(Jesus¦132262; Grk. Yesus)\add*.
 \p
 \v 8 \add ≈Brothers¦132265 and¦132265 sisters¦132265\add*, here's the¦132263 rest¦132264 of what you all should be¦132267 considering: anything that's true¦132268 or dignified¦132270, anything that's right¦132272 or pure¦132274, anything that's lovely¦132276 or admirable¦132278, and¦132282 anything that's virtuous or praiseworthy¦132285.
 \v 9 Continue to do everything you¦132290 all¦132290 learnt¦132290 or received¦132292 from me, and everything you¦132294 heard¦132294 or saw¦132296 in¦132297 me¦132298, and¦132301 the¦132302 \nd God¦132303\nd* of¦132305 peace¦132305 will¦132306 be¦132306 with¦132307 you¦132308 all¦132308.
-\s1 Paul's appreciation of their practical help
+\s1 Paulos's appreciation of their practical help
 \rem /s1 Acknowledgment of the Philippians' Gift; Paul's Thanks for Their Gifts; Thanks and greetings
 \p
 \v 10 I¦132309 was¦132309 extremely happy¦132309 in¦132311 \nd Yahweh¦132312\nd* once¦132316 you¦132317 all¦132317 reestablished your consideration for¦132319 my \add situation\add*. \add Well\add*, you¦132325 were¦132325 thinking¦132325 about it, but¦132327 lacked¦132326 any opportunity \add to act\add*,
@@ -169,16 +169,16 @@
 \v 13 In every¦132362 \add situation\add* I¦132363 stay strong¦132363 because of the¦132365 \add one\add* who strengthens¦132366 me¦132367.
 \p
 \v 14 However¦132369, you¦132371 all¦132371 did¦132371 well¦132370 to participate¦132372 in¦132374 my¦132373 hardships.
-\v 15 I've know¦132376 all you Philippians¦132380, that¦132381 when¦132386 I¦132387 left¦132387 Macedonia¦132389 to begin¦132383 \add preaching\add* the¦132384 good¦132385 message¦132385, no other assembly¦132392 shared¦132393 with me in¦132394 giving¦132396 and¦132397 receiving¦132398—only¦132399 you¦132401 \add there\add*.
-\v 16 Even¦132405 when¦132410 I was in¦132406 Thessalonica¦132407,\x + \xo 4:16: \xt Acts 17:1.\x* once¦132409 you¦132416 sent¦132416 me what I needed¦132414—actually twice¦132411—
+\v 15 I've know¦132376 all you Filippaisios¦132380 \add !(Philippians¦132380)\add*, that¦132381 when¦132386 I¦132387 left¦132387 Makedonia¦132389 to begin¦132383 \add preaching\add* the¦132384 good¦132385 message¦132385, no other assembly¦132392 shared¦132393 with me in¦132394 giving¦132396 and¦132397 receiving¦132398—only¦132399 you¦132401 \add there\add*.
+\v 16 Even¦132405 when¦132410 I was in¦132406 Thessalonikai¦132407,\x + \xo 4:16: \xt Acts 17:1.\x* once¦132409 you¦132416 sent¦132416 me what I needed¦132414—actually twice¦132411—
 \v 17 not¦132417 that¦132418 I¦132419 was¦132419 \add ≈looking¦132419 for¦132419\add* a gift¦132421 \add from my perspective\add*, but¦132422 because I¦132423 was thrilled to¦132428 see you¦132430 all¦132430 accumulating \add heavenly\add* rewards.
-\v 18 But¦132432 \add now\add* I've¦132431 received¦132431 everything \add I need\add*. I¦132436 have¦132436 plenty¦132435 now that Epafroditus arrived with what you¦132444 all¦132444 sent. It was like a¦132447 fragrant¦132447 sacrifice¦132448 that's acceptable¦132449 \nd to¦132452 God¦132452\nd* and which pleases¦132450 him.\x + \xo 4:18: \xt Exo 29:18.\x*
-\v 19 My¦132456 \nd God¦132455\nd* will¦132457 meet¦132457 all¦132458 of¦132460 your \add #needs¦132459\add* from his¦132466 riches¦132464 in¦132467 heaven in¦132469 \nd Messiah¦132470 Yeshua¦132471\nd*—
+\v 18 But¦132432 \add now\add* I've¦132431 received¦132431 everything \add I need\add*. I¦132436 have¦132436 plenty¦132435 now that Epafroditos arrived with what you¦132444 all¦132444 sent. It was like a¦132447 fragrant¦132447 sacrifice¦132448 that's acceptable¦132449 \nd to¦132452 God¦132452\nd* and which pleases¦132450 him.\x + \xo 4:18: \xt Exo 29:18.\x*
+\v 19 My¦132456 \nd God¦132455\nd* will¦132457 meet¦132457 all¦132458 of¦132460 your \add #needs¦132459\add* from his¦132466 riches¦132464 in¦132467 heaven in¦132469 \nd Messiah¦132470 Yeshua¦132471\nd* \add !(Jesus¦132471; Grk. Yesus)\add*—
 \v 20 may our¦132477 \nd God¦132474\nd* and¦132475 father¦132476 be¦132477 honoured throughout all the ages.
 \s1 The ending greetings
 \rem /s1 Paul's Final Greetings; Final Greetings and Benediction
 \p
-\v 21 Greet¦132487 all¦132488 of the believers \add there\add* in¦132490 \add the name of\add* \nd Messiah¦132491 Yeshua¦132492\nd*. The¦132495 \add ≈brothers¦132498 and¦132498 sisters¦132498\add* with me \add here also\add* greet you¦132494 all¦132494,
-\v 22 along with all the believers \add here\add*, especially those in Caesar's¦132510 household¦132511.
+\v 21 Greet¦132487 all¦132488 of the believers \add there\add* in¦132490 \add the name of\add* \nd Messiah¦132491 Yeshua¦132492\nd* \add !(Jesus¦132492; Grk. Yesus)\add*. The¦132495 \add ≈brothers¦132498 and¦132498 sisters¦132498\add* with me \add here also\add* greet you¦132494 all¦132494,
+\v 22 along with all the believers \add here\add*, especially those in Kaisar's¦132510 household¦132511.
 \p
 \v 23 \add May\add* the¦132512 grace¦132513 from the¦132514 \nd master¦132515 Yeshua¦132517 Messiah¦132518 be¦132518\nd* with¦132519 all¦132523 your¦132523 \add #spirits¦132521\add*. \add ≈May¦132524 it¦132524 be¦132524 so¦132524\add*.

@@ -459,6 +459,14 @@ LV_SINGLE_WORDS_TO_RV_WORD_STRINGS = (
     ('king', 'your majesty'), # RV DAN 4:22 / LV DAN 4:19
     ('knowing','sleep with'), # Mat 1:25
     ('known', 'found out'), # Mrk 15:45
+    ('loyalties', 'loyal commitment'), # CH2 6:42; collective rendering of covenant loyalties
+    ('loyalties', 'loyal kindness'), # NEH 13:14
+    ('loyalty', 'determinedly loyal'), # NEH 1:5
+    ('loyalty', 'lasting loyalty'), # JDG 8:35
+    ('loyalty', 'loyal affection'), # KI1 8:23; PSA 136:1-3
+    ('loyalty', 'loyal commitment'), # PSA 51:1; covenant_loyalty and loyalty_of_your_covenant share one ID
+    ('loyalty', 'loyal faithfulness'), # NEH 13:22
+    ('loyalty', 'loyal kindness'), # KI1 2:7
     ('members', 'body parts'),
     ('menstruation', 'menstrual period'), # RV EZE 22:10
     ('neighbouring', 'neighbouring villages'),

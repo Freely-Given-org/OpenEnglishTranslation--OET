@@ -50,10 +50,30 @@ def audit_unmapped_lv(BBB, rv, lv, lv_lines, passages):
     An inverse result is diagnostic only; it never expands a matching passage.
     """
     used = {ref for passage in passages for ref in passage.lv_references}
-    native = _indexed_references(BBB, lv_lines, index_book_lines(lv_lines))
+    # LV drafts can contain lettered labels (e.g. ESG 1:1b). The RV writer's
+    # integer-keyed line index must not collapse them into an ordinary verse.
+    native = []
+    chapter = None
+    before_verse = True
+    for line in lv_lines:
+        marker, _, text = line.partition(' ')
+        if marker == r'\c':
+            chapter, before_verse = text, True
+        elif chapter is not None and marker == r'\d' and before_verse:
+            native.append((BBB, chapter, '0', None))
+        elif chapter is not None and marker == r'\v':
+            before_verse = False
+            label = text.split(' ', 1)[0]
+            match = re.fullmatch(r'(\d+)([a-z]?)(?:-(\d+))?', label)
+            if not match or (match[2] and match[3]):
+                raise ValueError(f'Unsupported LV verse label {BBB} {chapter}:{label}')
+            first, last = int(match[1]), int(match[3] or match[1])
+            if last < first:
+                raise ValueError(f'Reversed LV verse bridge {BBB} {chapter}:{label}')
+            native.extend((BBB, chapter, str(v), match[2] or None) for v in range(first, last+1))
     return [dict(lv_reference=ref,
                  mapping=asdict(rv.convertReferencesFromVersification(lv, (ref,))))
-            for refs in native.values() for ref in refs if ref not in used]
+            for ref in dict.fromkeys(native) if ref not in used]
 
 
 def resolve_alignment_passages(BBB, rv, lv, lines):

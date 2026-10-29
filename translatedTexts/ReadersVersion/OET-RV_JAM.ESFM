@@ -1,21 +1,21 @@
-\id JAS - Open English Translation—Readers' Version (OET-RV) v0.1.52
+\id JAS - Open English Translation—Readers' Version (OET-RV) v0.2.1
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 JAM
 \rem WORDTABLE OET-LV_NT_word_table.tsv
-\h Yacob
-\toc1 Yacob (James)
-\toc2 Yacob
+\h Ya’akov
+\toc1 Ya’akov (James)
+\toc2 Ya’akov
 \toc3 Jac.
-\mt1 Yacob (James)
+\mt1 Ya’akov (James)
 \is1 Introduction
 \is2 Author
-\ip The author of this letter is commonly known as ‘James’ in English translations, but most people don't realise that his English name should be Jacob (or Yakōbos if you wanted to be closer to the Koine Greek spelling). This translation error can be traced all the way back to John Wycliffe's English translation from the Latin in the 1300's as he didn't have access to Greek New Testament manuscripts (although he did use Yacob in some parts of his New Testament when it referred to the son of Isaac). The confusion was probably due to changes in the way Latin was spoken over the centuries, and then translating the name from the historically-altered Latin instead of from the original Greek—see https://www.biblicalarchaeology.org/daily/biblical-topics/bible-versions-and-translations/james-or-jacob-in-the-bible for more details.
-\ip Note from the first sentence in the letter that Yacob addressed the letter to the twelve tribes who originated from the twelve sons of his namesake.
+\ip The author of this letter is commonly known as ‘Ya’akov’ in English translations, but most people don't realise that his English name should be Ya’akov (or Yakōbos if you wanted to be closer to the Koine Greek spelling). This translation error can be traced all the way back to Yohan Wycliffe's English translation from the Latin in the 1300's as he didn't have access to Greek New Testament manuscripts (although he did use Yacob in some parts of his New Testament when it referred to the son of Isaac). The confusion was probably due to changes in the way Latin was spoken over the centuries, and then translating the name from the historically-altered Latin instead of from the original Greek—see https://www.biblicalarchaeology.org/daily/biblical-topics/bible-versions-and-translations/james-or-jacob-in-the-bible for more details.
+\ip Note from the first sentence in the letter that Ya’akov addressed the letter to the twelve tribes who originated from the twelve sons of his namesake.
 \is2 This letter
-\ip This \bk Letter from Yacob\bk* is Yacob's collection of advice to those who believe there is a god in heaven. He wrote this to all people scattered all around the world. Yacob used examples in order to explain his advice, so that their behaviour would improve and also their daily work. He also taught on various topics like: faith, testing, suffering, showing, respect, good behaviour, watching what you say, true wisdom from God, and prayer.
+\ip This \bk Letter from Ya’akov\bk* is Ya’akov's collection of advice to those who believe there is a god in heaven. He wrote this to all people scattered all around the world. Ya’akov used examples in order to explain his advice, so that their behaviour would improve and also their daily work. He also taught on various topics like: faith, testing, suffering, showing, respect, good behaviour, watching what you say, true wisdom from God, and prayer.
 \ip He said that our faith is deficient if we don't also demonstrate it by our actions.
-\iot Main components of Yacob's letter
+\iot Main components of Ya’akov's letter
 \io1 Introduction \ior 1:1\ior*
 \io1 The faith and the wisdom/knowledge \ior 1:2-8\ior*
 \io1 The poor and the rich man \ior 1:9-11\ior*
@@ -32,7 +32,7 @@
 \c 1
 \rem /s1 Greetings from James; Salutation
 \p
-\v 1 \add This letter is from\add* Yacob¦146458,\x + \xo 1:1: \xt Mat 13:55; Mrk 6:3; Acts 15:13; Gal 1:19.\x* a¦146464 slave¦146464 for \nd God¦146459\nd* and¦146460 for \add the\add* \nd master¦146461 Yeshua¦146462 the¦146463 messiah¦146463\nd*. \add It's written\add* to¦146465 the¦146465 tribes¦146467 who have ended up \add ≈dispersed¦146471\add* \add into many nations\add*: Greetings¦146472.
+\v 1 \add This letter is from\add* Ya’akov¦146458 \add !(James¦146458; Grk. Yakobos)\add*,\x + \xo 1:1: \xt Mat 13:55; Mrk 6:3; Acts 15:13; Gal 1:19.\x* a¦146464 slave¦146464 for \nd God¦146459\nd* and¦146460 for \add the\add* \nd master¦146461 Yeshua¦146462 \+add !(Jesus¦146462; Grk. Yesus)\+add* the¦146463 messiah¦146463\nd*. \add It's written\add* to¦146465 the¦146465 tribes¦146467 who have ended up \add ≈dispersed¦146471\add* \add into many nations\add*: Greetings¦146472.
 \s1 Gaining endurance and requesting wisdom
 \rem /s1 Faith and Wisdom; Faith and Endurance; Faith under trial; Trials and Temptations
 \p
@@ -53,7 +53,7 @@
 \s1 Testing and temptation
 \rem /s1 Trial and Temptation; Testing and Tempting
 \p
-\v 12 Any person¦146622 who's¦146623 enduring¦146624 testing¦146626 circumstances is fortunate, because¦146627 once they've passed the¦146631 test, they'll receive¦146630 a crown¦146632 of¦146634 life¦146634 that¦146635 \add @Yeshua¦146636\add* promised¦146636 to¦146639 those who love¦146640 him¦146641.
+\v 12 Any person¦146622 who's¦146623 enduring¦146624 testing¦146626 circumstances is fortunate, because¦146627 once they've passed the¦146631 test, they'll receive¦146630 a crown¦146632 of¦146634 life¦146634 that¦146635 \add @Yeshua¦146636\add* \add !(Jesus¦146636; Grk. Yesus)\add* promised¦146636 to¦146639 those who love¦146640 him¦146641.
 \v 13 No¦146642 one¦146642 should¦146644 say¦146644 ‘It's \nd God¦146649\nd* tempting¦146657 me’ when they're being¦146650 tempted¦146650, because¦146652 \nd God¦146653\nd* can't be¦146655 tempted to do evil¦146656 and¦146658 he¦146659 doesn't tempt others,
 \v 14 but¦146662 rather they're being¦146663 tempted¦146663 by¦146664 their own¦146666 \add #lusts¦146667\add*. They're being¦146668 drawn¦146668 away¦146668 and¦146669 enticed¦146670 \add into what they know is wrong\add*,
 \v 15 and after the¦146672 desire¦146673 is conceived¦146674 it leads to sin¦146676, and¦146678 once the¦146677 sin¦146679 is¦146681 concluded it leads to death¦146682.
@@ -79,7 +79,7 @@
 \s1 Avoiding favouritism
 \rem /s1 Warning against Partiality; A Warning against Prejudice; Favouritism Forbidden; Love your neighbour as yourself
 \p
-\v 1 My¦146905 dear \add ≈brothers¦146904 and¦146904 sisters¦146904\add*, as you live out your faith¦146911 in our¦146914 honoured \nd master¦146913 Yeshua¦146915 the¦146916 messiah¦146916\nd*, don't¦146906 show favouritism¦146908 to others.
+\v 1 My¦146905 dear \add ≈brothers¦146904 and¦146904 sisters¦146904\add*, as you live out your faith¦146911 in our¦146914 honoured \nd master¦146913 Yeshua¦146915 \+add !(Jesus¦146915; Grk. Yesus)\+add* the¦146916 messiah¦146916\nd*, don't¦146906 show favouritism¦146908 to others.
 \v 2 For¦146920 \add example\add*, if¦146919 a¦146926 man¦146926 in¦146928 nicely cut clothes¦146929 and¦146932 wearing an expensive gold¦146927 ring¦146927 came¦146931 into¦146931 to your¦146925 meeting as well as a¦146934 poor¦146934 man¦146934 in¦146935 filthy¦146936 clothes¦146937
 \v 3 and¦146940 you¦146939 told the well-dressed one, ‘You sit¦146952 here¦146953 in this good¦146954 chair,’ while telling the¦146956 poor¦146957 \add >man\add*, ‘You stand¦146960 over here¦146961,’ or¦146962 ‘You sit¦146964 here on the¦146968 mat,’
 \v 4 wouldn't that discrimination show that you¦146976 have judged¦146981 them with¦146982 evil¦146983 motives.
@@ -105,11 +105,11 @@
 \v 18 No doubt someone¦147223 will¦147222 say¦147222, ‘Well you¦147224 have the faith¦147225 and¦147228 I¦147228 do the good deeds¦147229.’ So show¦147231 me¦147233 your¦147236 faith¦147235 without¦147237 good deeds¦147240 and¦147242 I'll¦147242 demonstrate my faith \em by¦147246\em* my¦147249 good deeds.
 \v 19 You¦147253 believe¦147254 that¦147255 there's one¦147258 \nd God¦147261\nd* and you're¦147264 right, but even¦147265 the¦147266 demons¦147267 believe¦147268 that and¦147269 shudder¦147270.
 \v 20 But¦147272 the vain¦147276 person¦147275 \add still\add* wants¦147271 to¦147273 know¦147273 if faith¦147279 without good deeds¦147282 is¦147285 wasted?
-\v 21 Wasn't our¦147289 ancestor Abraham¦147286 considered right with God due to \add &his¦147287\add* \em actions¦147292\em* when he offered¦147294 up¦147294 his¦147298 son¦147297 Isaac¦147295 on¦147299 the¦147300 altar¦147301?\x + \xo 2:21: \xt Gen 22:1-14.\x*
+\v 21 Wasn't our¦147289 ancestor Avraham¦147286 considered right with God due to \add &his¦147287\add* \em actions¦147292\em* when he offered¦147294 up¦147294 his¦147298 son¦147297 Yitshak¦147295 \add !(Isaac¦147295)\add* on¦147299 the¦147300 altar¦147301?\x + \xo 2:21: \xt Gen 22:1-14.\x*
 \v 22 So his¦147304 faith¦147305 was¦147306 working¦147306 together¦147306 with¦147308 his¦147310 actions, and¦147311 it was by¦147312 his¦147313 actions¦147314 that¦147303 his¦147315 faith¦147316 was¦147317 perfected¦147317.
-\v 23 This fulfilled¦147319 the¦147320 scripture¦147321 that¦147322 says¦147323, ‘Abraham¦147326 believed¦147324 in¦147327 \nd God¦147328\nd* and¦147329 so he was¦147330 consider¦147330 to¦147331 \add ≈be right¦147333\add* with God,\x + \xo 2:23: \xt Gen 15:6.\x* and¦147334 was¦147337 called¦147337 a¦147335 friend¦147335 \nd of¦147336 God¦147336\nd*.’\x + \xo 2:23: \xt 2Ch 20:7; Isa 41:8.\x*
+\v 23 This fulfilled¦147319 the¦147320 scripture¦147321 that¦147322 says¦147323, ‘Avraham¦147326 believed¦147324 in¦147327 \nd God¦147328\nd* and¦147329 so he was¦147330 consider¦147330 to¦147331 \add ≈be right¦147333\add* with God,\x + \xo 2:23: \xt Gen 15:6.\x* and¦147334 was¦147337 called¦147337 a¦147335 friend¦147335 \nd of¦147336 God¦147336\nd*.’\x + \xo 2:23: \xt 2Ch 20:7; Isa 41:8.\x*
 \v 24 So you¦147338 can see¦147338 that¦147341 a¦147345 person¦147345 is considered right with God due to \add &his\add* actions¦147343, and¦147346 not¦147347 just by¦147348 \add &their\add* ‘faith¦147349’.
-\v 25 Similarly¦147352 the¦147356 prostitute¦147357 Rahab¦147355 was made right by¦147359 \add &her\add* actions¦147360 when she welcomed¦147362 the¦147363 \add Hebrew\add* messengers¦147365 and¦147366 then helped them get away by¦147367 a different¦147367 route.\x + \xo 2:25: \xt Josh 2:1-21.\x*
+\v 25 Similarly¦147352 the¦147356 prostitute¦147357 Rahav¦147355 was made right by¦147359 \add &her\add* actions¦147360 when she welcomed¦147362 the¦147363 \add Hebrew\add* messengers¦147365 and¦147366 then helped them get away by¦147367 a different¦147367 route.\x + \xo 2:25: \xt Josh 2:1-21.\x*
 \v 26 Just like¦147370 a body¦147373 is dead once the¦147380 spirit¦147375 has departed, so¦147378 too faith¦147381 is dead if it's not demonstrated by good deeds¦147384.
 \c 3
 \s1 The tongue
@@ -177,22 +177,22 @@
 \s1 Wait patiently
 \rem /s1 Patience and Prayer; Patience in Suffering
 \p
-\v 7 So¦148158 my \add ≈fellow¦148159 believers¦148159\add*, be¦148157 patient¦148157 until¦148160 the¦148161 return¦148162 of¦148163 \add Yeshua\add* \add &our¦148163\add* \nd master¦148164\nd*. You see¦148165 how \add #farmers¦148167\add* look forward to the¦148169 fruit¦148171 to be ready—waiting¦148168 patiently¦148174 even while they monitor the¦148184 early¦148184 and¦148185 the late¦148186 rains¦148186.
+\v 7 So¦148158 my \add ≈fellow¦148159 believers¦148159\add*, be¦148157 patient¦148157 until¦148160 the¦148161 return¦148162 of¦148163 \add Yeshua\add* \add !(Jesus; Grk. Yesus)\add* \add &our¦148163\add* \nd master¦148164\nd*. You see¦148165 how \add #farmers¦148167\add* look forward to the¦148169 fruit¦148171 to be ready—waiting¦148168 patiently¦148174 even while they monitor the¦148184 early¦148184 and¦148185 the late¦148186 rains¦148186.
 \v 8 All of you should be¦148187 patient¦148187 too, and¦148189 encourage¦148191 each¦148194 other \add in your faith\add* because¦148195 the \nd master's¦148199\nd* return¦148197 is closer now.
 \p
 \v 9 And don't¦148201 moan¦148202 about each other, my \add ≈fellow¦148203 believers¦148203\add*, so that¦148208 you¦148210 all¦148210 won't be¦148210 judged¦148210 for it, because truly, the¦148213 judge¦148214 is just outside about to come in the¦148216 doors¦148217.
 \v 10 ⇔Look at the prophets¦148233 who¦148234 spoke¦148235 out \nd the¦148239\nd* messages from \nd Yahweh¦148239\nd*—they're good \add #examples¦148219\add* of¦148225 suffering and¦148228 patience¦148230 \add for you to follow\add*
-\v 11 and now we¦148241 consider¦148241 them as heroes for their endurance¦148246. You¦148248 all¦148248 heard¦148248 about Yob's¦148247 endurance\x + \xo 5:11: \xt Yob 1:21-22; 2:10.\x* and¦148249 then you yourselves witnessed what happened to \add Yeshua\add* \add &our\add* \nd master¦148252\nd*, and you¦148253 saw¦148253 his compassion¦148255 and¦148259 mercy.\x + \xo 5:11: \xt Psa 103:8.\x*
+\v 11 and now we¦148241 consider¦148241 them as heroes for their endurance¦148246. You¦148248 all¦148248 heard¦148248 about Iyov's¦148247 \add !(Job¦148247)\add* endurance\x + \xo 5:11: \xt Yob 1:21-22; 2:10.\x* and¦148249 then you yourselves witnessed what happened to \add Yeshua\add* \add &our\add* \nd master¦148252\nd*, and you¦148253 saw¦148253 his compassion¦148255 and¦148259 mercy.\x + \xo 5:11: \xt Psa 103:8.\x*
 \p
 \v 12 But¦148264 most importantly, \add ≈brothers¦148265 and¦148265 sisters¦148265\add*, don't¦148267 swear¦148268 by¦148271 heaven¦148271 or earth¦148274 or by any¦148277 other¦148276 kind of oath¦148278 but¦148281 \add simply\add* be¦148280 honest so that¦148292 ‘yes¦148286’ means yes¦148287 and¦148288 ‘no¦148290’ means no¦148291,\x + \xo 5:12: \xt Mat 5:34-37.\x* then you won't¦148293 end up getting \add ≈judged¦148296\add*.
 \s1 The power of prayer and restoration
 \rem /s1 The Prayer of Faith; The Power of Prayer
 \p
 \v 13 Is¦148298 anyone¦148299 among¦148300 you¦148301 going through hard times? If so, they should¦148302 be¦148302 praying¦148302. Is¦148303 anyone¦148304 feeling cheerful¦148303? If so, they should¦148307 be¦148307 singing¦148307 praises¦148307.
-\v 14 Is¦148308 anyone¦148309 among¦148311 you¦148312 sick? If so, that person should¦148313 call¦148313 the¦148314 leaders¦148315 \add of the assembly\add* and¦148318 get them¦148319 to anoint¦148323 them with¦148325 oil¦148325\x + \xo 5:14: \xt Mrk 6:13.\x* and to pray¦148319 for them in¦148326 the¦148327 \add ≈name¦148328 and authority\add* of¦148329 \add Yeshua\add* \add &our¦148329\add* \nd master¦148330\nd*.
+\v 14 Is¦148308 anyone¦148309 among¦148311 you¦148312 sick? If so, that person should¦148313 call¦148313 the¦148314 leaders¦148315 \add of the assembly\add* and¦148318 get them¦148319 to anoint¦148323 them with¦148325 oil¦148325\x + \xo 5:14: \xt Mrk 6:13.\x* and to pray¦148319 for them in¦148326 the¦148327 \add ≈name¦148328 and authority\add* of¦148329 \add Yeshua\add* \add !(Jesus; Grk. Yesus)\add* \add &our¦148329\add* \nd master¦148330\nd*.
 \v 15 Then¦148331 that declaration of¦148335 faith¦148335 will¦148336 save¦148336 the¦148337 weak person and¦148339 the¦148342 \nd master¦148343\nd* will¦148340 lift¦148340 him¦148341/her up, and¦148344 if¦148344 they've sinned, then \add &their\add* sins¦148345 will¦148348 also be¦148348 forgiven¦148348.
 \v 16 So¦148351 confess¦148350 your¦148353 sins¦148355 to each other and¦148357 pray¦148358 for¦148360 each other so¦148362 that¦148362 all¦148363 of you can be¦148363 healed¦148363, because when an obedient believer prays, it has a¦148367 real effect.
-\v 17 Eliyah¦148369 was a¦148370 person¦148370 just similar¦148372 to¦148373 us¦148373, and¦148374 when he¦148376 prayed¦148376 for¦148378 the rain to stop, it stopped, and¦148380 it¦148382 didn't rain¦148382 again for three¦148388 and a half years¦148386.\x + \xo 5:17: \xt 1Ki 17:1; 18:1.\x*
+\v 17 Eliyah¦148369 \add !(Elijah¦148369)\add* was a¦148370 person¦148370 just similar¦148372 to¦148373 us¦148373, and¦148374 when he¦148376 prayed¦148376 for¦148378 the rain to stop, it stopped, and¦148380 it¦148382 didn't rain¦148382 again for three¦148388 and a half years¦148386.\x + \xo 5:17: \xt 1Ki 17:1; 18:1.\x*
 \v 18 Then¦148392 he¦148394 prayed¦148394 again, and¦148395 the¦148396 rain¦148398 came down from the sky¦148397 and¦148402 the¦148403 land¦148404 sprouted¦148405 and started to bear fruit¦148407 again.\x + \xo 5:18: \xt 1Ki 18:42-45.\x*
 \rem /s1 Restore Wandering Believers
 \p

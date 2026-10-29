@@ -1,24 +1,24 @@
-\id 1CO - Open English Translation—Readers' Version (OET-RV) v0.1.62
+\id 1CO - Open English Translation—Readers' Version (OET-RV) v0.2.1
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 CO1
 \rem WORDTABLE OET-LV_NT_word_table.tsv
-\h 1 Corinthians
-\toc1 1 Corinthians
-\toc2 1 Corinthians
+\h 1 Korinthios
+\toc1 1 Korinthios
+\toc2 1 Korinthios
 \toc3 1 Cor.
-\mt2 Paul's first letter to the believers in
-\mt1 Corinth
+\mt2 Paulos's first letter to the believers in
+\mt1 Korinthos
 \is1 Introduction
-\ip This is Paul's first letter to the believers in Corinth that we have in our Bibles, but could easily have been his second letter to them. We deduce this from his reference to other letters, e.g., see https://www.GotQuestions.org/how-many-letters-Corinthians.html, but we don't have copies of them.
-\ip In this letter from Paul to the believers in Corinth, he wrote about his time preaching in Ephesus. He wrote this in order to help with problems experienced by various groups of believers that he founded there in Corinth. Corinth was the mother city of province of Achaia and Achaia was a province of Rome. At that time, Corinth was a large city that Greeks, Romans, and Jews all lived in, and because it was at the edge of the ocean, many buyers and sellers travelled there to board ships. So the city became famous because of its wealth, and many religions thrived there. There was also a lot of sexual immorality there as well as other ancient traditions. Paul lived there for almost two years in order to preach, and many people believed (Acts 18).
-\ip After around three years had passed while Paul was there in Ephesus preaching, he received a letter from the believers in Corinth (1 Cor. 7:1). Again he heard about the persecution of the believers and of other problems that faced the assembly of believers. In this letter, he advised them about those, and stressed to need to removal sexual offenders from their assembly. Then he answered questions concerning marriage, widows, spiritual gifts, and the dead coming back to life.
+\ip This is Paulos's first letter to the believers in Korinthos that we have in our Bibles, but could easily have been his second letter to them. We deduce this from his reference to other letters, e.g., see https://www.GotQuestions.org/how-many-letters-Corinthians.html, but we don't have copies of them.
+\ip In this letter from Paulos to the believers in Korinthos, he wrote about his time preaching in Efesos. He wrote this in order to help with problems experienced by various groups of believers that he founded there in Korinthos. Korinthos was the mother city of province of Akaia and Akaia was a province of Romai. At that time, Korinthos was a large city that Hellains, Romaios, and Yehudim all lived in, and because it was at the edge of the ocean, many buyers and sellers travelled there to board ships. So the city became famous because of its wealth, and many religions thrived there. There was also a lot of sexual immorality there as well as other ancient traditions. Paulos lived there for almost two years in order to preach, and many people believed (Acts 18).
+\ip After around three years had passed while Paulos was there in Efesos preaching, he received a letter from the believers in Korinthos (1 Cor. 7:1). Again he heard about the persecution of the believers and of other problems that faced the assembly of believers. In this letter, he advised them about those, and stressed to need to removal sexual offenders from their assembly. Then he answered questions concerning marriage, widows, spiritual gifts, and the dead coming back to life.
 \ip In chapter 13, it tells how love is an amazing gift from God to his people, in fact that's the overall theme of this document.
 \ip It's helpful to understand that this letter (and most Biblical documents) were dictated to scribes (who didn't have word processors) so in terms of sentence structure, the discourses are often not edited or placed in their time sequences more correctly as we would do with modern documents, but rather we notice a lot of long, rambling, run-on sentences (like this one) which we sometimes break into shorter sentences to help our readers, but try not to do it too often as it tends to remove the connections between the thoughts and can even lead to the bad habit of people quoting verses out of the context in which they were written.
-\iot Main components of Paul's letter
+\iot Main components of Paulos's letter
 \io1 Introduction \ior 1:1-9\ior*
 \io1 Divisions in the assembly \ior 1:10–4:21\ior*
-\io1 Paul scolds the assembly about sexual immorality \ior 5:1-13\ior*
+\io1 Paulos scolds the assembly about sexual immorality \ior 5:1-13\ior*
 \io1 Handling persecution \ior 6:1-11\ior*
 \io1 Use of expulsion as believers \ior 6:12-20\ior*
 \io1 Answers about marriage \ior 7:1-40\ior*
@@ -27,22 +27,22 @@
 \io1 Proper celebration of the master's dinner \ior 11:17-34\ior*
 \io1 Giftings given by the spirit and their use within the assembly \ior 12:1–14:40\ior*
 \io1 The coming to life of the messiah and of believers \ior 15:1-58\ior*
-\io1 The collection of aid for Christians in Yudea \ior 16:1-4\ior*
-\io1 Paul's future plans and conclusion \ior 16:5-24\ior*
+\io1 The collection of aid for Christians in Yehudah \ior 16:1-4\ior*
+\io1 Paulos's future plans and conclusion \ior 16:5-24\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \ie
 \c 1
 \rem /s1 Greetings from Paul; Salutation
 \p
-\v 1 \add This letter is from\add* Paul¦113002, a¦113003 missionary¦113004 \nd of¦113005 Messiah¦113005 Yeshua¦113006\nd* by¦113008 \nd God's¦113010\nd* will, and¦113011 from our¦113013 brother¦113014, Sosthenes¦113012.
+\v 1 \add This letter is from\add* Paulos¦113002, a¦113003 missionary¦113004 \nd of¦113005 Messiah¦113005 Yeshua¦113006\nd* \add !(Jesus¦113006; Grk. Yesus)\add* by¦113008 \nd God's¦113010\nd* will, and¦113011 from our¦113013 brother¦113014, Sosthenes¦113012.
 \p
-\v 2 \add It's written\add* to¦113015 \nd God's¦113018\nd* assembly¦113016 there in Corinth¦113030\x + \xo 1:2: \xt Acts 18:1.\x*—to those believers in \nd Messiah¦113025 Yeshua¦113026\nd* who've been declared guiltless \add and\add* who've been called¦113031 to live holy¦113032 lives, along with¦113033 all¦113034 those who appeal to the \add ≈power\add* of¦113039 our¦113041 and their¦113047 \nd master¦113040 Yeshua¦113042 Messiah¦113043\nd*, everywhere¦113045.
+\v 2 \add It's written\add* to¦113015 \nd God's¦113018\nd* assembly¦113016 there in Korinthos¦113030\x + \xo 1:2: \xt Acts 18:1.\x*—to those believers in \nd Messiah¦113025 Yeshua¦113026\nd* who've been declared guiltless \add and\add* who've been called¦113031 to live holy¦113032 lives, along with¦113033 all¦113034 those who appeal to the \add ≈power\add* of¦113039 our¦113041 and their¦113047 \nd master¦113040 Yeshua¦113042 Messiah¦113043\nd*, everywhere¦113045.
 \p
 \v 3 Grace¦113051 and¦113053 peace¦113054 to¦113052 you¦113052 all¦113052 from¦113055 \nd God¦113056\nd* our¦113058 father¦113057 and¦113059 from \nd the¦113060 master¦113060 Yeshua¦113061 Messiah¦113062\nd*.
-\s1 Paul thanks God for what he's done
+\s1 Paulos thanks God for what he's done
 \rem /s1 Paul Gives Thanks to God; Blessings in Christ; Thanksgiving
 \p
-\v 4 I¦113063 always¦113067 thank¦113063 my¦113066 \nd God¦113065\nd* for you¦113069 because¦113070 of \add *his\add* grace¦113072 that¦113076 he's given¦113077 you¦113078 in¦113079 \nd Messiah¦113080 Yeshua¦113081\nd*—
+\v 4 I¦113063 always¦113067 thank¦113063 my¦113066 \nd God¦113065\nd* for you¦113069 because¦113070 of \add *his\add* grace¦113072 that¦113076 he's given¦113077 you¦113078 in¦113079 \nd Messiah¦113080 Yeshua¦113081\nd* \add !(Jesus¦113081; Grk. Yesus)\add*—
 \v 5 \add ≡thanking him\add* that¦113082 through him, you've¦113085 all¦113085 been¦113085 enriched¦113085 in¦113086 every way: in¦113089 all¦113090 speech¦113091 and¦113092 in all¦113093 knowledge¦113094
 \v 6 as¦113095 \add &our¦113096\add* testimony¦113097 about¦113098 the¦113098 \nd messiah¦113100\nd*\f + \fr 1:6 \ft Or alternatively: as the messiah's testimony…\f* was¦113101 confirmed¦113101 in¦113102 you¦113103 all¦113103
 \v 7 so¦113104 that you¦113105 all¦113105 aren't¦113106 missing¦113107 out on any \add spiritual\add* gift¦113110 as you eagerly¦113111 wait¦113111 for our¦113116 \nd master¦113115 Yeshua¦113117 Messiah¦113118\nd* to \add ≈be revealed¦113113\add*.
@@ -51,14 +51,14 @@
 \s1 Follow Yeshua, not your leaders
 \rem /s1 True and false wisdom; Divisions in the Church
 \p
-\v 10 Now \add ≈brothers¦113169 and¦113167 sisters\add*, I¦113166 appeal to you¦113168 in the¦113171 name¦113172 of¦113173 our¦113175 \nd master¦113174 Yeshua¦113176 Messiah¦113177\nd*, that¦113178 you¦113181 all¦113181 agree together \add so\add* that there'll be no divisions¦113188 among¦113186 you¦113187, but¦113191 rather that you'll¦113190 be¦113190 united in¦113193 your thinking and¦113197 in¦113198 your purpose,
-\v 11 because¦113203, my¦113208 \add ≈brothers¦113207 and¦113207 sisters¦113207\add*, it's¦113202 been¦113202 made¦113202 clear to¦113204 me¦113204 by¦113210 some from Chloe's¦113212 household, that¦113213 you¦113216 are¦113217 quarrelling¦113214 among¦113215 yourselves.
-\v 12 What I¦113218 am¦113218 talking¦113218 about is how many¦113223 of¦113223 you¦113223 are claiming that you belong to Paul's¦113228 group, \add for example,\add* or that you belong to Apollos'¦113231 group,\x + \xo 1:12: \xt Acts 18:24.\x* or that you belong to Cephas'¦113234 group, or that you belong to \nd Messiah's¦113237\nd* group.
-\v 13 Has \nd the¦113241 messiah¦113241\nd* been¦113239 divided¦113239? Was it Paul¦113244 who was¦113245 executed¦113245 for¦113247 you¦113248? Or¦113249 were¦113254 you immersed¦113254 \add in water\add* in¦113250 the¦113251 Paul's¦113253 name¦113252?
+\v 10 Now \add ≈brothers¦113169 and¦113167 sisters\add*, I¦113166 appeal to you¦113168 in the¦113171 name¦113172 of¦113173 our¦113175 \nd master¦113174 Yeshua¦113176 \+add !(Jesus¦113176; Grk. Yesus)\+add* Messiah¦113177\nd*, that¦113178 you¦113181 all¦113181 agree together \add so\add* that there'll be no divisions¦113188 among¦113186 you¦113187, but¦113191 rather that you'll¦113190 be¦113190 united in¦113193 your thinking and¦113197 in¦113198 your purpose,
+\v 11 because¦113203, my¦113208 \add ≈brothers¦113207 and¦113207 sisters¦113207\add*, it's¦113202 been¦113202 made¦113202 clear to¦113204 me¦113204 by¦113210 some from Kloe's¦113212 household, that¦113213 you¦113216 are¦113217 quarrelling¦113214 among¦113215 yourselves.
+\v 12 What I¦113218 am¦113218 talking¦113218 about is how many¦113223 of¦113223 you¦113223 are claiming that you belong to Paulos's¦113228 group, \add for example,\add* or that you belong to Apollos'¦113231 group,\x + \xo 1:12: \xt Acts 18:24.\x* or that you belong to Kefa'¦113234 \add !(Cephas¦113234; Grk. Kefas)\add* group, or that you belong to \nd Messiah's¦113237\nd* group.
+\v 13 Has \nd the¦113241 messiah¦113241\nd* been¦113239 divided¦113239? Was it Paulos¦113244 who was¦113245 executed¦113245 for¦113247 you¦113248? Or¦113249 were¦113254 you immersed¦113254 \add in water\add* in¦113250 the¦113251 Paulos's¦113253 name¦113252?
 \p
-\v 14 I¦113255 thank¦113255 God that¦113259 I didn't¦113264 immerse¦113262 any of¦113261 you¦113261 other than Crispus¦113265\x + \xo 1:14: \xt Acts 18:8.\x* and¦113266 Gaius¦113267,\x + \xo 1:14: \xt Acts 19:29; Rom 16:23.\x*
+\v 14 I¦113255 thank¦113255 God that¦113259 I didn't¦113264 immerse¦113262 any of¦113261 you¦113261 other than Krispos¦113265\x + \xo 1:14: \xt Acts 18:8.\x* and¦113266 Gaios¦113267,\x + \xo 1:14: \xt Acts 19:29; Rom 16:23.\x*
 \v 15 so that¦113268 no one can say¦113271 that¦113274 I had immersed¦113280 you into¦113275 my¦113277 \add own\add* name¦113278.
-\v 16 (\add Oh yes,\add* I¦113281 also¦113283 immersed Stephanas¦113285 and his household¦113286,\x + \xo 1:16: \xt 1Cor 16:15.\x* but I¦113289 don't¦113288 think I¦113293 immersed¦113293 anyone else.)
+\v 16 (\add Oh yes,\add* I¦113281 also¦113283 immersed Stefanas¦113285 and his household¦113286,\x + \xo 1:16: \xt 1Cor 16:15.\x* but I¦113289 don't¦113288 think I¦113293 immersed¦113293 anyone else.)
 \v 17 Because¦113295 \nd Messiah\nd* didn't¦113294 send¦113296 me¦113298 to¦113301 immerse¦113301 people \add in water\add*, but¦113302 to¦113303 preach¦113303 the good¦113303 message¦113303—\add but\add* not¦113305 with words of wisdom¦113307 just in¦113309 case the¦113312 messiah's \add execution on the\add* post¦113313 gets deprived of¦113314 importance.
 \s1 The messiah is God's power and wisdom
 \rem /s1 Christ the Power and Wisdom of God; The Wisdom of God
@@ -71,23 +71,23 @@
 \v 20 Where¦113348 is¦113348 the¦113349 wise¦113349 \add person\add*? Where¦113350 is¦113350 the¦113351 scholar? Where¦113352 is¦113352 the¦113353 debater¦113353 of¦113355 this¦113356 age¦113355?\x + \xo 1:20: \xt Yob 12:17; Isa 19:12; 33:18.\x* Hasn't \nd God¦113360\nd* turned the¦113361 wisdom¦113362 of¦113363 the¦113363 world¦113364 into \add ≈foolishness¦113358\add*?\x + \xo 1:20: \xt Isa 44:25.\x*
 \p
 \v 21 Because¦113367 since¦113366 the¦113376 world¦113377, in \nd God's¦113373\nd* wisdom, didn't¦113374 know¦113375 \add about\add* God through¦113378 \add their\add* wisdom¦113380, \nd God¦113382\nd* was pleased¦113383 to¦113391 save¦113391 those who believe¦113393 through the¦113392 ‘\add ≈foolish¦113388\add*’ message that was preached.
-\v 22 Jews¦113396 ask¦113399 for miraculous signs¦113397 and¦113401 Greeks¦113402 search¦113405 for wisdom¦113403,
-\v 23 but¦113407 we¦113406 preach \add about how\add* \nd Messiah¦113409\nd* was¦113410 executed¦113410—something the¦113411 Jews¦113411 can't logic out, and which the¦113416 Greeks see as \add total\add* foolishness¦113417.
-\v 24 Yet to¦113418 those¦113418 who \add God\add* calls¦113422, whether Jews¦113423 or Greeks¦113426, \nd Messiah¦113427\nd* is \add both\add* \nd God's¦113429\nd* power¦113430 and¦113432 his wisdom¦113434,
+\v 22 Yehudim¦113396 \add !(Jews¦113396)\add* ask¦113399 for miraculous signs¦113397 and¦113401 Hellains¦113402 \add !(Greeks¦113402)\add* search¦113405 for wisdom¦113403,
+\v 23 but¦113407 we¦113406 preach \add about how\add* \nd Messiah¦113409\nd* was¦113410 executed¦113410—something the¦113411 Yehudim¦113411 can't logic out, and which the¦113416 Hellains see as \add total\add* foolishness¦113417.
+\v 24 Yet to¦113418 those¦113418 who \add God\add* calls¦113422, whether Yehudim¦113423 or Hellains¦113426, \nd Messiah¦113427\nd* is \add both\add* \nd God's¦113429\nd* power¦113430 and¦113432 his wisdom¦113434,
 \v 25 because¦113436 \nd God's¦113440\nd* \add ≈foolishness¦113438\add* is better than¦113441 humankind's¦113443 wisdom, and¦113445 \nd God's¦113449\nd* weakness is greater than¦113450 humankind's¦113452 strength.
 \p
 \v 26 So \add ≈brothers¦113459 and¦113459 sisters¦113459\add*, think about how \add God\add* called¦113457 you¦113458. Not¦113461 many¦113462 of you were wise¦113463 by human standards, not¦113466 many¦113467 were powerful¦113468, and not¦113469 many¦113470 were of noble¦113471 birth,
 \v 27 but¦113472 \nd God\nd* chose the¦113473 foolish¦113474 \add >things\add* of¦113475 the¦113475 world¦113476 to shame those \add considered to be\add* wise¦113483, and¦113485 \add *he\add* chose the¦113486 weak¦113487 \add >things\add* of¦113488 the¦113488 world¦113489 to shame those \add considered to be\add* strong¦113496.
 \v 28 \add *He\add* chose¦113506 the¦113507 lowly and despised¦113505 things of¦113501 the¦113501 world¦113502, and¦113503 the¦113504 things that are not¦113511, to nullify¦113517 the things that are¦113516,
 \v 29 so¦113518 that¦113518 no human can boast¦113520 to \nd God¦113526\nd*.
-\v 30 But¦113529 because of¦113527 him¦113528, you¦113530 are¦113531 in¦113532 \nd Messiah¦113533 Yeshua¦113534\nd*, who¦113535 was¦113536 made to become¦113536 wisdom¦113538 from¦113541 \nd God¦113542\nd* for us, and to become righteousness¦113543, and also sanctification and redemption¦113548,
+\v 30 But¦113529 because of¦113527 him¦113528, you¦113530 are¦113531 in¦113532 \nd Messiah¦113533 Yeshua¦113534\nd* \add !(Jesus¦113534; Grk. Yesus)\add*, who¦113535 was¦113536 made to become¦113536 wisdom¦113538 from¦113541 \nd God¦113542\nd* for us, and to become righteousness¦113543, and also sanctification and redemption¦113548,
 \v 31 so that¦113549, as¦113550 per the¦113552 scriptures: ‘Let¦113556 anyone who boasts, boast about \nd Yahweh¦113555\nd*.’\x + \xo 1:31: \xt Jer 9:24.\x*
 \c 2
-\s1 Paul's preaching based on God's power
+\s1 Paulos's preaching based on God's power
 \rem /s1 Proclaiming Christ Crucified; The Message about the Crucified Christ; Paul Preaches Wisdom
 \p
 \v 1 \add ≈Brothers¦113561 and¦113557 sisters\add*, when I¦113557 visited you¦113560 all¦113560, I didn't¦113563 try to¦113564 impress you with flowery words¦113566 or¦113568 great wisdom¦113569 when I taught you¦113571 \nd about¦113576 God's¦113576\nd* \add incredible plan\add*,
-\v 2 because¦113578 I¦113579 had decided \add in advance\add* to¦113582 display knowledge¦113582 about nothing else other than \nd Yeshua¦113588 Messiah¦113589\nd* and¦113590 his execution¦113592.
+\v 2 because¦113578 I¦113579 had decided \add in advance\add* to¦113582 display knowledge¦113582 about nothing else other than \nd Yeshua¦113588 \+add !(Jesus¦113588; Grk. Yesus)\+add* Messiah¦113589\nd* and¦113590 his execution¦113592.
 \v 3 And¦113593 so I¦113593 \add came\add* to you¦113609 all¦113609 in¦113596 weakness¦113597 and¦113598 fear¦113600 and¦113601 with a lot of trembling¦113603,\x + \xo 2:3: \xt Acts 18:9.\x*
 \v 4 and¦113610 my¦113613 message¦113612 and¦113614 my¦113617 preaching wasn't delivered with persuasive¦113620 words of¦113623 wisdom¦113623, but¦113626 \add rather\add* \add ≈demonstrating¦113628\add* \add &God's¦113629\add* \nd spirit¦113629\nd* and¦113630 power¦113631,
 \v 5 so that¦113632 your¦113635 faith¦113634 wouldn't be¦113637 based on human¦113640 wisdom¦113639, but¦113641 on \nd God's¦113644\nd* power¦113643.
@@ -120,16 +120,16 @@
 \v 1 \add ≈So¦113873\add* \add ≈brothers¦113876 and¦113876 sisters¦113876\add*, because you were¦113878 baby Christians \add when I visited\add*, I wasn't able¦113878 to¦113879 speak¦113879 to¦113880 you¦113880 all¦113880 like¦113882 spiritual¦113884 \add people\add*, but¦113885 \add only\add* like worldly \add people\add*.
 \v 2 I¦113895 gave¦113895 you all milk¦113893 to¦113895 drink¦113895, because you weren't ready for solid food¦113898, in fact, you¦113901 still¦113906 aren't\x + \xo 3:2: \xt Heb 5:12-13.\x*
 \v 3 because¦113910 you're still¦113909 worldly, because¦113916 \add seeing\add* the jealousy¦113919 and¦113920 dissension among¦113917 you¦113928 \add tells us\add* that you're all¦113928 still worldly and¦113929 just living by human¦113931 \add values\add*.
-\v 4 Yes, when¦113933 one¦113938 person says¦113935, ‘I¦113937 follow Paul¦113940,’ and another¦113941 person says, ‘I¦113944 follow Apollos¦113945’,\x + \xo 3:4: \xt 1Cor 1:12.\x* doesn't that show that you're¦113950 \add just\add* worldly?
+\v 4 Yes, when¦113933 one¦113938 person says¦113935, ‘I¦113937 follow Paulos¦113940,’ and another¦113941 person says, ‘I¦113944 follow Apollos¦113945’,\x + \xo 3:4: \xt 1Cor 1:12.\x* doesn't that show that you're¦113950 \add just\add* worldly?
 \p
-\v 5 Indeed, who's Apollos¦113955? Who's Paul¦113961? We're just servants¦113965 \add who brought you all the message\add* when¦113959 you¦113968 believed¦113968, each¦113970 one as¦113971 the¦113972 \nd master¦113973\nd* led them.\f + \fr 3:5 \ft (NEEDS MORE RESEARCH BUT) It seems unclear here who the final part of the verse is referring to: a/ those who brought the message, or b/ those who received it. (We've chosen b/ in the OET-RV rendering.)\f*
+\v 5 Indeed, who's Apollos¦113955? Who's Paulos¦113961? We're just servants¦113965 \add who brought you all the message\add* when¦113959 you¦113968 believed¦113968, each¦113970 one as¦113971 the¦113972 \nd master¦113973\nd* led them.\f + \fr 3:5 \ft (NEEDS MORE RESEARCH BUT) It seems unclear here who the final part of the verse is referring to: a/ those who brought the message, or b/ those who received it. (We've chosen b/ in the OET-RV rendering.)\f*
 \v 6 I¦113975 planted¦113976 \add the seed\add*\x + \xo 3:6: \xt Acts 18:4-11.\x* and Apollos¦113977 watered it,\x + \xo 3:6: \xt Acts 18:24-28.\x* but¦113979 \nd God¦113981\nd* made it grow¦113982.
 \v 7 That means that neither¦113984 the¦113985 planter¦113986 or the waterer counts for anything¦113988, only the grower, \nd God¦113996\nd*.
 \v 8 The¦113997 planter¦113998 and¦114000 the¦114001 waterer work together, and each¦114005 of them will¦114010 be¦114010 rewarded¦114009 for their work¦114015,
 \v 9 because¦114017 we¦114018 are¦114018 \nd God's\nd* co-workers.
 \p You¦114024 all¦114024 are¦114024 God's field¦114021, or \add in a different image,\add* \add *his\add* building¦114023.
 \v 10 Using the \add gifts\add* that¦114030 \nd God¦114029\nd* has¦114031 given¦114031 me¦114032 as¦114033 a¦114034 wise¦114034 master-builder, I¦114038 laid¦114038 down a foundation¦114036 and then someone else is¦114041 building¦114041 on¦114041 it¦114041. But¦114043 they need to \add ≈take care\add* \nd about¦114029\nd* how¦114045 they build¦114046 on¦114046 it
-\v 11 because¦114048 no¦114050 one¦114050 can lay¦114052 a different¦114049 foundation than the¦114054 one already laid down, and that¦114056 foundation is¦114057 \nd Yeshua¦114058 Messiah¦114060\nd*.
+\v 11 because¦114048 no¦114050 one¦114050 can lay¦114052 a different¦114049 foundation than the¦114054 one already laid down, and that¦114056 foundation is¦114057 \nd Yeshua¦114058 \+add !(Jesus¦114058; Grk. Yesus)\+add* Messiah¦114060\nd*.
 \v 12 Now if¦114061 anyone¦114063 builds¦114064 on \add top of\add* the¦114066 foundation¦114067 with gold¦114070, silver¦114073, precious¦114075 stones¦114074, wood¦114076, hay, or straw¦114078,
 \v 13 then¦114092 their work¦114081 will¦114083 become¦114083 obvious because¦114085 it will¦114087 be¦114087 revealed¦114091 on the¦114084 day¦114086 \add of judgement\add* because¦114088 it¦114091 will be¦114091 shown¦114091 up by fire. The¦114098 fire¦114099 will¦114101 expose what¦114096 sort of \add building\add* their work \add created\add*:
 \v 14 if¦114102 anyone's¦114103 work¦114105 that¦114107 they built¦114108 survives the fire, \add those people\add* will¦114110 be¦114110 rewarded¦114109,
@@ -142,7 +142,7 @@
 \v 19 because¦114182 this¦114186 world's¦114185 wisdom¦114183 is foolishness¦114187 with¦114188 \nd God¦114190\nd*, because¦114193 as it's¦114192 written¦114192: ‘He catches¦114195 out the¦114196 wise¦114197 in¦114198 their¦114201 craftiness¦114200.’\x + \xo 3:19: \xt Yob 5:13.\x*
 \v 20 And¦114202 further¦114203: ‘\nd Yahweh¦114204\nd* knows¦114205 that¦114211 the¦114206 thoughts of¦114209 wise¦114210 \add >people\add* are¦114212 useless¦114213.’\x + \xo 3:20: \xt Psa 94:11.\x*
 \v 21 So¦114214 then¦114214, don't let¦114216 anyone¦114215 boast¦114216 about people¦114218, because¦114220 everything \add already\add* belongs to all¦114219 of¦114221 you¦114221.
-\v 22 \add Don't boast about\add* Paul¦114224 or¦114225 Apollos¦114226 or¦114227 Cephas¦114228, or¦114229 the¦114230 world¦114230 or¦114231 life¦114232 or¦114233 death¦114234, or¦114235 the present¦114236 or¦114237 the future. All¦114239 of¦114241 them belong to you¦114241,
+\v 22 \add Don't boast about\add* Paulos¦114224 or¦114225 Apollos¦114226 or¦114227 Kefa¦114228 \add !(Cephas¦114228; Grk. Kefas)\add*, or¦114229 the¦114230 world¦114230 or¦114231 life¦114232 or¦114233 death¦114234, or¦114235 the present¦114236 or¦114237 the future. All¦114239 of¦114241 them belong to you¦114241,
 \v 23 and¦114245 you¦114244 belong to \nd Messiah¦114246\nd*, and¦114248 \nd Messiah¦114247\nd* belongs to \nd God¦114249\nd*.
 \c 4
 \s1 Status of the missionaries
@@ -166,9 +166,9 @@
 \rem /s1 Fatherly Admonition
 \p
 \v 14 I'm not¦114485 writing¦114488 this to shame you¦114487 all¦114487, but¦114490 to correct you as¦114491 if you were my¦114493 \add own\add* dear¦114494 children¦114492,
-\v 15 because¦114499 if¦114498 you¦114502 all¦114502 would have¦114502 thousands¦114500 of guardians in¦114503 \nd Messiah¦114504\nd*, yet you wouldn't have many¦114507 ‘fathers¦114508’, because¦114510 I fathered you in¦114509 \nd Messiah¦114511 Yeshua¦114512\nd* by means of the¦114514 good¦114515 message¦114515.
+\v 15 because¦114499 if¦114498 you¦114502 all¦114502 would have¦114502 thousands¦114500 of guardians in¦114503 \nd Messiah¦114504\nd*, yet you wouldn't have many¦114507 ‘fathers¦114508’, because¦114510 I fathered you in¦114509 \nd Messiah¦114511 Yeshua¦114512\nd* \add !(Jesus¦114512; Grk. Yesus)\add* by means of the¦114514 good¦114515 message¦114515.
 \v 16 That's why I¦114519 urge¦114519 you¦114521 all¦114521 to imitate¦114522 me¦114523,\x + \xo 4:16: \xt 1Cor 11:1; Php 3:17.\x*
-\v 17 and that's why I¦114528 sent¦114528 Timothy¦114530 to¦114529 \add visit\add* you¦114529. He's like my¦114534 own dear¦114536 son¦114535 in¦114539 \nd Yahweh¦114540\nd*, and he'll remind¦114543 you¦114542 all¦114542 about¦114544 my¦114546 ways¦114545 in¦114548 \nd Messiah¦114549 Yeshua¦114550\nd*, just¦114526 like¦114551 I¦114556 teach¦114556 everywhere¦114552 in¦114553 every¦114554 church¦114555.
+\v 17 and that's why I¦114528 sent¦114528 Timotheos¦114530 to¦114529 \add visit\add* you¦114529. He's like my¦114534 own dear¦114536 son¦114535 in¦114539 \nd Yahweh¦114540\nd*, and he'll remind¦114543 you¦114542 all¦114542 about¦114544 my¦114546 ways¦114545 in¦114548 \nd Messiah¦114549 Yeshua¦114550\nd*, just¦114526 like¦114551 I¦114556 teach¦114556 everywhere¦114552 in¦114553 every¦114554 church¦114555.
 \p
 \v 18 \add Now\add* some¦114565 of you have become arrogant¦114564, as if I'm not¦114558 able to come¦114559 back to¦114562 see you¦114563 all¦114563,
 \v 19 but¦114567 if¦114571 the¦114572 \nd master¦114573\nd* allows it, I'll¦114566 come¦114566 and visit you¦114570 all¦114570 \add again\add* soon¦114568. Then¦114575 I¦114576 won't¦114577 just see what any puffed-up people are¦114581 \em saying\em*, but¦114582 I'll also see what \em power¦114584\em* they have,
@@ -181,7 +181,7 @@
 \v 1 Actually¦114610, we've been¦114611 hearing¦114611 that there's sexual immorality there among¦114613 you¦114614 all¦114614, and¦114616 so¦114625 bad that¦114619 even¦114620 non-believers don't¦114620 do it: a man is sleeping with his¦114629 step-mother!\x + \xo 5:1: \xt Deu 22:30.\x*
 \v 2 Then¦114632 instead¦114638 of being upset, you¦114639 all¦114639 \add seem\add* proud of it. This¦114649 man should¦114641 have been¦114641 expelled out¦114643 of¦114643 your¦114645 \add group\add*,
 \v 3 because even though I'm not there physically, I¦114652 am present in the spirit¦114662, and I've already¦114663 made my \add ≈judgement¦114664\add* about the man¦114653 who's doing this¦114669, as¦114665 if I were¦114666 present¦114666.
-\v 4 When¦114681 you assemble together¦114679 in¦114671 the¦114672 name¦114673 of¦114674 our \nd master¦114675 Yeshua¦114677\nd*, my spirit¦114684 \add is there\add* along with¦114685 the¦114688 \nd master¦114689 Yeshua's¦114691\nd* power¦114687,
+\v 4 When¦114681 you assemble together¦114679 in¦114671 the¦114672 name¦114673 of¦114674 our \nd master¦114675 Yeshua¦114677\nd* \add !(Jesus¦114677; Grk. Yesus)\add*, my spirit¦114684 \add is there\add* along with¦114685 the¦114688 \nd master¦114689 Yeshua's¦114691\nd* power¦114687,
 \v 5 \add then you should\add* hand¦114693 this man over¦114693 to¦114698 Satan¦114698 to \add punish\add* his¦114701 body¦114702, so that¦114703 his¦114704 spirit¦114705 can be¦114706 saved¦114706 for when the \nd master¦114711\nd* \add returns\add*.
 \p
 \v 6 It isn't¦114715 good¦114716 how you¦114719 all¦114719 boast¦114718. Don't¦114720 you¦114721 realise that¦114722 a¦114723 little¦114723 bit of yeast¦114724 can raise a whole¦114725 loaf \add of bread\add*?\x + \xo 5:6: \xt Gal 5:9.\x*
@@ -212,7 +212,7 @@
 \p
 \v 9 Or¦114994 don't¦114995 you¦114996 all¦114996 know¦114996 that¦114997 \add ≈those who disobey\add* \nd God¦115001\nd* won't¦115003 inherit¦115004 his kingdom¦115002? Don't¦115005 let yourselves be¦115006 deceived¦115006: those who are sexually¦115008 immoral¦115008 or idolaters¦115010 or adulterers¦115012, or men who submit to or perform homosexual acts,
 \v 10 or thieves¦115019 or the greedy, or drunkards¦115028 or slanderers or swindlers¦115032, will¦115036 inherit¦115036 \nd God's¦115034\nd* kingdom¦115033.
-\v 11 Now some¦115039 of you¦115040 all¦115040 were¦115040 like that, but¦115041 now you've¦115042 been washed¦115042 and declared guiltless, and been declared innocent by the¦115048 \add ≈authority\add* of¦115050 the¦115050 \nd master¦115051 Yeshua¦115053 Messiah¦115054\nd*, and¦115055 by¦115056 our¦115061 \nd god's¦115060 spirit¦115058\nd*.
+\v 11 Now some¦115039 of you¦115040 all¦115040 were¦115040 like that, but¦115041 now you've¦115042 been washed¦115042 and declared guiltless, and been declared innocent by the¦115048 \add ≈authority\add* of¦115050 the¦115050 \nd master¦115051 Yeshua¦115053 \+add !(Jesus¦115053; Grk. Yesus)\+add* Messiah¦115054\nd*, and¦115055 by¦115056 our¦115061 \nd god's¦115060 spirit¦115058\nd*.
 \s1 Avoid sexual immorality
 \rem /s1 Glorify God in Body and Spirit; Use Your Bodies for God's Glory
 \p
@@ -297,7 +297,7 @@
 \p
 \v 4 Now \add back to\add* eating \add food\add* that's been offered to idols¦116053, we¦116054 know¦116054 that there's¦116061 \add ^only one\add* \nd God¦116063\nd* and so worldly¦116059 idols are \add really\add* nothing¦116056 \add at all\add*.
 \v 5 Even¦116068 though there¦116071 are¦116071 many so-called ‘gods¦116073’ and¦116086 ‘masters¦116087’ \add said to\add* live in¦116075 the \add #heavens¦116076\add* or¦116077 earth¦116080,
-\v 6 we know there's \add only\add* one¦116091 \nd God¦116092\nd*, who is the¦116094 Father¦116095 who¦116097 created everything and¦116100 we¦116101 exist \add to honour him\add*. And¦116104 we only have one¦116105 \nd master¦116106\nd*, \nd Yeshua¦116107 Messiah¦116108\nd* who¦116110 created everything and¦116114 \add is also the source of our existence\add*.
+\v 6 we know there's \add only\add* one¦116091 \nd God¦116092\nd*, who is the¦116094 Father¦116095 who¦116097 created everything and¦116100 we¦116101 exist \add to honour him\add*. And¦116104 we only have one¦116105 \nd master¦116106\nd*, \nd Yeshua¦116107 \+add !(Jesus¦116107; Grk. Yesus)\+add* Messiah¦116108\nd* who¦116110 created everything and¦116114 \add is also the source of our existence\add*.
 \p
 \v 7 But¦116118 not¦116119 everyone¦116121 knows¦116123 this. Some¦116124 people have been so used to \add trusting\add* idols that \add even now as believers\add* when they eat¦116138 food¦116138 that's been sacrificed¦116136 to idols, \add they still think it's wrong\add* and¦116139 so their¦116142 weak¦116144 \add #consciences¦116141\add* become defiled¦116146.
 \v 8 But¦116148 food¦116147 doesn't bring us¦116150 closer \nd to¦116155 God¦116155\nd*—what we eat makes us no better or worse off \add spiritually\add*.
@@ -311,16 +311,16 @@
 \s1 The missionary's responsibilities
 \rem /s1 Paul Gives Up His Rights; Rights and Duties of an Apostle; The Rights of an Apostle
 \p
-\v 1 Aren't¦116263 I¦116264 free¦116265? Aren't¦116267 I¦116268 a missionary¦116269? Haven't I¦116277 seen¦116277 \nd Yeshua¦116272\nd* our¦116276 \nd master¦116275\nd*? Aren't¦116278 you¦116282 all¦116282 \add the result of\add* my¦116281 work¦116280 for \nd Yahweh¦116285\nd*?
+\v 1 Aren't¦116263 I¦116264 free¦116265? Aren't¦116267 I¦116268 a missionary¦116269? Haven't I¦116277 seen¦116277 \nd Yeshua¦116272\nd* \add !(Jesus¦116272; Grk. Yesus)\add* our¦116276 \nd master¦116275\nd*? Aren't¦116278 you¦116282 all¦116282 \add the result of\add* my¦116281 work¦116280 for \nd Yahweh¦116285\nd*?
 \v 2 If¦116286 I'm not a missionary to¦116287 others¦116287, at least I¦116289 am¦116289 to¦116293 all¦116293 of you¦116302, because you're \nd the¦116305\nd* proof that I'm a missionary for \nd Yahweh¦116305\nd*.
 \v 3 That's my¦116307 defence¦116308 to¦116309 those who are¦116313 questioning my role.
 \p
 \v 4 Don't we¦116317 have¦116317 a right¦116318 to¦116319 eat¦116319 and¦116320 drink¦116321?
-\v 5 Don't we¦116324 have¦116324 a right¦116325 to¦116328 take¦116328 along¦116328 a believing wife¦116327 like¦116329 the rest of the missionaries¦116333 and¦116334 the¦116337 \nd master's¦116338\nd* brothers¦116336 and¦116339 Peter?
+\v 5 Don't we¦116324 have¦116324 a right¦116325 to¦116328 take¦116328 along¦116328 a believing wife¦116327 like¦116329 the rest of the missionaries¦116333 and¦116334 the¦116337 \nd master's¦116338\nd* brothers¦116336 and¦116339 Kefa \add !(Peter; Grk. Petros)\add*?
 \v 6 Or¦116341 it is only¦116342 Barnabas¦116345 and I who have¦116347 to¦116351 work¦116351 \add to support ourselves\add*?
 \v 7 What soldier¦116353 has to¦116354 pay his own¦116354 expenses? Who¦116357 plants¦116358 a¦116359 vineyard¦116359 and¦116360 isn't¦116367 \add allowed\add* to eat¦116368 its¦116366 fruit¦116365? Or¦116369 who¦116370 shepherds¦116371 a¦116372 flock¦116372 and¦116373 isn't \add allowed\add* to drink the¦116375 milk¦116376 \add they produce\add*?
 \p
-\v 8 Am¦116385 I \add just\add* saying¦116385 this from a human¦116383 perspective? Doesn't \add &Mosheh's¦116390\add* law¦116391 also¦116389 teach that?
+\v 8 Am¦116385 I \add just\add* saying¦116385 this from a human¦116383 perspective? Doesn't \add &Mosheh's¦116390\add* \add !(Moses¦116390)\add* law¦116391 also¦116389 teach that?
 \v 9 \add *He\add* wrote¦116400 in¦116395 those \add #laws¦116399\add*: ‘Don't¦116401 prevent the ox¦116404 from eating when it's¦116400 \add working to\add* thresh¦116405 the grain.’\x + \xo 9:9: \xt Deu 25:4; 1Tim 5:18.\x*
 \v 10 \add ^Isn't\add* he¦116416 saying¦116416 that on \em our\em* behalf? \add Yes,\add* it¦116420 was¦116420 written¦116420 for our sake \add saying\add* that¦116421 anyone who's ploughing \add a field\add* should expect \add to be paid\add*, and¦116430 anyone who threshes¦116432 \add the grain\add* should expect a share of the¦116431 harvest.
 \v 11 If¦116442 we¦116443 sowed¦116448 spiritual¦116447 \add >things\add* among you, is it too much to expect a¦116449 material¦116454 ‘harvest¦116455’ from¦116452 you¦116452?\x + \xo 9:11: \xt Rom 15:27.\x*
@@ -335,7 +335,7 @@
 \v 18 So¦116588, what's¦116587 my¦116590 reward¦116593? It's preaching¦116595 the¦116598 good¦116599 message¦116599 and \add the privilege of\add* doing it free of charge¦116596, so as not¦116604 to \add ≈take advantage of\add* the right that the¦116612 good¦116613 message¦116613 \add gives me\add*.
 \p
 \v 19 Although I have no obligation to¦116619 any person, I made myself¦116620 a slave of everyone in¦116622 order¦116622 to win over as many as possible.
-\v 20 To¦116628 the¦116628 Jews¦116629, I behave like¦116630 the Jew¦116631 \add that I am\add* in¦116632 order¦116632 to win¦116634 them. To¦116635 those under¦116636 the¦116637 \add traditional\add* rules, I behave like¦116638 one of them (although I myself¦116644 am¦116643 not under¦116645 those rules) in¦116647 order¦116647 to win¦116651 them over.
+\v 20 To¦116628 the¦116628 Yehudim¦116629 \add !(Jews¦116629)\add*, I behave like¦116630 the Yehudi¦116631 \add !(Jew¦116631)\add* \add that I am\add* in¦116632 order¦116632 to win¦116634 them. To¦116635 those under¦116636 the¦116637 \add traditional\add* rules, I behave like¦116638 one of them (although I myself¦116644 am¦116643 not under¦116645 those rules) in¦116647 order¦116647 to win¦116651 them over.
 \v 21 To¦116652 those outside \add our religious\add* rules, I behave like¦116654 them (although not¦116656 so far as to disobey \nd God's¦116659\nd* law, because I'm under \nd Messiah's¦116663\nd* law) in¦116665 order¦116665 to win¦116666 them over.
 \v 22 To¦116670 the weak, I become weak to win¦116677 them over. \add Yes,\add* I've¦116680 become¦116680 all things to all people so\f + \fr 9:27 \ft TODO: Investigate why so many other translations translate πάντως something like ‘by all means’ here (whereas our OET-LV gloss is ‘certainly’).\f* that¦116684 I¦116687 might¦116687 be certain¦116685 of saving¦116687 some¦116686.
 \p
@@ -349,7 +349,7 @@
 \rem /s1 Warnings against Idols; Warnings From Israel's History; Warnings against Idolatry
 \p
 \v 1 Now \add ≈brothers¦116769 and¦116769 sisters¦116769\add*, I¦116764 don't want¦116764 you¦116767 all¦116767 to¦116768 be¦116768 \add ^ignorant\add* about how our¦116773 \add Jewish\add* ancestors¦116772 sheltered under¦116775 the¦116776 cloud¦116777\x + \xo 10:1: \xt Exo 13:21-22.\x* and¦116779 then they all¦116780 passed¦116784 through¦116781 the¦116782 sea¦116783,\x + \xo 10:1: \xt Exo 14:22-29.\x*
-\v 2 \add ≈so¦116785\add* they were all¦116786 immersed¦116793 ‘into¦116787 Mosheh¦116791’ in¦116796 \add both\add* the¦116797 cloud¦116798 and¦116799 the¦116801 sea¦116802.
+\v 2 \add ≈so¦116785\add* they were all¦116786 immersed¦116793 ‘into¦116787 Mosheh¦116791’ \add !(Moses¦116791)\add* in¦116796 \add both\add* the¦116797 cloud¦116798 and¦116799 the¦116801 sea¦116802.
 \v 3 They all¦116804 ate¦116810 the¦116805 same¦116806 supernatural food¦116809\x + \xo 10:3: \xt Exo 16:35.\x*
 \v 4 and¦116812 they all¦116813 drank the¦116814 same¦116815 supernatural drink¦116819, because¦116822 they¦116820 drank¦116820 from a¦116824 supernatural rock that followed¦116825 them¦116825,\x + \xo 10:4: \xt Exo 17:6; Num 20:11.\x* and¦116829 that rock¦116830 was¦116831 the¦116832 \nd messiah¦116833\nd*.
 \v 5 Despite that, \nd God¦116842\nd* wasn't \add very\add* happy with¦116836 most of¦116839 them¦116839, and they¦116843 \add ≈ended up dying\add* in¦116845 the¦116846 wilderness¦116847.\x + \xo 10:5: \xt Num 14:29-30.\x*
@@ -390,7 +390,7 @@
 \v 30 As long as I've¦117253 \add ≈thanked¦117254\add* \add God\add* for¦117258 what¦117259 I eat, why¦117256 should I then criticise it?
 \p
 \v 31 So¦117263 whether¦117262 you're¦117264 eating¦117264 or¦117265 drinking¦117266 or¦117267 doing¦117269 whatever, always ensure that \nd God¦117273\nd* gets honoured.
-\v 32 Try not to¦117278 offend the Jews¦117278 or the Greeks¦117281 or the people in \nd God's¦117286\nd* assembly¦117284,
+\v 32 Try not to¦117278 offend the Yehudim¦117278 \add !(Jews¦117278)\add* or the Hellains¦117281 \add !(Greeks¦117281)\add* or the people in \nd God's¦117286\nd* assembly¦117284,
 \v 33 just like¦117287 I¦117288 \add work to\add* please¦117291 everyone—not¦117292 for my own benefit¦117296 but¦117298 rather, trying¦117293 to benefit¦117299 everyone else so that¦117302 they¦117303 might¦117303 get saved¦117303.
 \c 11
 \nb
@@ -447,7 +447,7 @@
 \p
 \v 1 ⇔Now \add ≈brothers¦117890 and¦117890 sisters¦117890\add*, I¦117892 don't want¦117892 you¦117893 all¦117893 to¦117894 be¦117894 \add ^ignorant\add* about¦117886 spiritual¦117889 \add matters\add*.
 \v 2 You¦117895 all¦117895 know¦117895 that¦117896 when¦117897 you¦117899 were¦117899 \add still\add* pagans¦117898, you¦117907 were¦117907 enticed and led astray in front of idols¦117902 that \add ^can't even speak\add*.
-\v 3 So¦117909 now I'm¦117910 informing¦117910 you¦117911 all¦117911 that¦117912 a person who curses¦117919 Yeshua, doesn't speak with \nd the¦117915\nd* power \nd of¦117916 God's¦117916\nd* spirit. On the other hand, a person who says¦117918 that \nd Yeshua¦117920\nd* is¦117924 \nd Yahweh¦117926\nd* must \nd be¦117926\nd* speaking¦117917 with \add the power of\add* \nd the¦117933\nd* holy¦117934 spirit.
+\v 3 So¦117909 now I'm¦117910 informing¦117910 you¦117911 all¦117911 that¦117912 a person who curses¦117919 Yeshua \add !(Jesus; Grk. Yesus)\add*, doesn't speak with \nd the¦117915\nd* power \nd of¦117916 God's¦117916\nd* spirit. On the other hand, a person who says¦117918 that \nd Yeshua¦117920\nd* is¦117924 \nd Yahweh¦117926\nd* must \nd be¦117926\nd* speaking¦117917 with \add the power of\add* \nd the¦117933\nd* holy¦117934 spirit.
 \p
 \v 4 Now there¦117938 are varieties of¦117937 gifts¦117937, but¦117940 the¦117939 same¦117941 \nd spirit¦117942\nd*,\x + \xo 12:4-11: \xt Rom 12:6-8.\x*
 \v 5 and¦117943 there¦117946 are¦117946 varieties of ministries, but¦117947 the¦117948 same¦117949 \nd master¦117950\nd*.
@@ -461,7 +461,7 @@
 \rem /s1 One Body with Many Members; One Body with Many Parts
 \p
 \v 12 Just¦118050 like¦118050 a \add human\add* body¦118053 is¦118055 a unit but¦118056 has many¦118059 parts which are¦118061 all¦118062 components, no matter how many¦118070, making up that one¦118072 body¦118074, so¦118075 too is¦118076 the¦118077 \nd messiah¦118079\nd*.\x + \xo 12:12: \xt Rom 12:4-5.\x*
-\v 13 \add Yes,\add* in¦118082 one¦118083 \nd spirit¦118084\nd* we¦118085 were all¦118086 immersed¦118090 into¦118087 one¦118088 body¦118089, whether¦118091 \add we were\add* Jews¦118092 or¦118093 Greeks¦118094, whether slaves¦118096 or¦118097 free¦118098, and¦118099 we all¦118100 were¦118105 given¦118105 one¦118102 \nd spirit¦118103\nd* to¦118105 drink¦118105. MEANING?
+\v 13 \add Yes,\add* in¦118082 one¦118083 \nd spirit¦118084\nd* we¦118085 were all¦118086 immersed¦118090 into¦118087 one¦118088 body¦118089, whether¦118091 \add we were\add* Yehudim¦118092 \add !(Jews¦118092)\add* or¦118093 Hellains¦118094 \add !(Greeks¦118094)\add*, whether slaves¦118096 or¦118097 free¦118098, and¦118099 we all¦118100 were¦118105 given¦118105 one¦118102 \nd spirit¦118103\nd* to¦118105 drink¦118105. MEANING?
 \p
 \v 14 \add Yes,\add* indeed the¦118109 body¦118110 is¦118112 not¦118111 one¦118113 part¦118114, but¦118115 many¦118116.
 \v 15 If¦118117 \add &your¦118119\add* foot¦118120 said¦118118, “Since¦118121 I'm not¦118122 a¦118124 hand¦118124, I'm not¦118125 part of¦118127 the¦118128 body¦118129,” that¦118132 wouldn't make it¦118134 any less a part of¦118136 the¦118137 body¦118138,
@@ -536,7 +536,7 @@
 \v 19 but¦118936 with the¦118938 assembly¦118938, I'd¦118939 prefer to¦118949 speak¦118949 five¦118940 words¦118941 with¦118944 my¦118948 mind¦118946 so that¦118950 I¦118953 can instruct¦118953 others¦118952, rather than¦118954 thousands¦118955 of words¦118956 in¦118957 another language¦118958.
 \p
 \v 20 \add ≈Brothers¦118959 and¦118959 sisters¦118959\add*, don't¦118960 be¦118962 childish in¦118963 your¦118963 thinking¦118964. You all can be¦118968 like¦118968 infants with respect to \em evil¦118967\em*, but¦118970 \add in everything else\add*, be mature¦118972 in¦118969 your¦118969 thinking¦118971.
-\v 21 \add The prophet Yeshayah\add* wrote¦118978:
+\v 21 \add The prophet Yeshayah\add* \add !(Isaiah)\add* wrote¦118978:
 \q1 ‘I'll¦118988 speak¦118988 to¦118990 this¦118991 nation
 \q2 through¦118981 foreign¦118982 languages¦118982 and¦118983 strangers' lips¦118985,
 \q1 but¦118992 even¦118993 then they¦118996 won't¦118993 listen¦118996 to¦118996 me¦118997,’
@@ -558,7 +558,7 @@
 \v 32 The prophet's spirits¦119183 \add ≈are¦119186 under the control of¦119184\add* the prophets,
 \v 33 because¦119188 \nd God¦119194\nd* isn't¦119187 \add a god\add* of¦119192 disorder, but¦119195 of¦119196 peace¦119196.
 \p As¦119197 in¦119198 all¦119199 the¦119200 assemblies¦119201 of¦119202 believers,
-\v 34 the¦119204 women¦119205 should¦119210 stay silent¦119210 in¦119207 the¦119208 assemblies¦119209, because¦119212 they're not¦119211 permitted¦119214 to¦119215 speak¦119216, but¦119217 must be¦119219 in submission as¦119222 \add &Mosheh's¦119224\add* law¦119225 says¦119226.
+\v 34 the¦119204 women¦119205 should¦119210 stay silent¦119210 in¦119207 the¦119208 assemblies¦119209, because¦119212 they're not¦119211 permitted¦119214 to¦119215 speak¦119216, but¦119217 must be¦119219 in submission as¦119222 \add &Mosheh's¦119224\add* \add !(Moses¦119224)\add* law¦119225 says¦119226.
 \v 35 But¦119228 if¦119227 they¦119233 want¦119233 to know more about anything¦119229, they should¦119240 ask¦119240 their¦119237 own¦119238 husbands¦119239 at home¦119236, because¦119242 it's¦119243 shameful¦119241 for¦119245 a¦119245 woman¦119245 to¦119246 speak¦119246 in¦119247 the¦119248 assembly¦119248.
 \p
 \v 36 Did \nd God's¦119257\nd* message¦119255 \em originate\em* from¦119251 you¦119252 all¦119252, or¦119259 did it only¦119262 \em come¦119258\em* to¦119260 you¦119261?
@@ -576,9 +576,9 @@
 \p
 \v 3 \add Yes,\add* first¦119349 of all, I¦119345 passed onto you¦119347 all¦119347 what¦119350 I¦119352 \add myself\add* had received¦119352: that¦119353 \nd Messiah¦119354\nd* died¦119355 for¦119356 our¦119359 sins¦119358 as the¦119361 scriptures¦119362 \add had predicted\add*,\x + \xo 15:3: \xt Isa 53:5-12.\x*
 \v 4 and¦119363 that¦119364 he¦119365 was¦119365 buried¦119365 and¦119366 then \add ≈brought back to life\add* on¦119369 the¦119372 third¦119373 day¦119371 as per the¦119375 scriptures¦119376 \add again\add*,\x + \xo 15:4: \xt Psa 16:8-10; Mat 12:40; Acts 2:24-32.\x*
-\v 5 and¦119377 that¦119378 he¦119379 was¦119379 seen¦119379 by¦119380 Cephas¦119380\x + \xo 15:5: \xt Luk 24:34.\x* and then by the¦119383 twelve¦119384.\x + \xo 15:5: \xt Mat 28:16-17; Mrk 16:14; Luk 24:36; Yhn 20:19.\x*
+\v 5 and¦119377 that¦119378 he¦119379 was¦119379 seen¦119379 by¦119380 Kefa¦119380 \add !(Cephas¦119380; Grk. Kefas)\add*\x + \xo 15:5: \xt Luk 24:34.\x* and then by the¦119383 twelve¦119384.\x + \xo 15:5: \xt Mat 28:16-17; Mrk 16:14; Luk 24:36; Yhn 20:19.\x*
 \v 6 Then¦119385 he¦119386 was¦119386 seen¦119386 by¦119387 more than 500 believers¦119389 at¦119390 once¦119390—most of¦119391 whom¦119392 are¦119395 still living, although some¦119398 have already \add ≈passed away\add*.
-\v 7 Then¦119402 he¦119403 was¦119403 seen¦119403 by¦119404 Yacob¦119404, and then by all¦119409 the¦119407 ambassadors¦119408.
+\v 7 Then¦119402 he¦119403 was¦119403 seen¦119403 by¦119404 Ya’akov¦119404 \add !(James¦119404; Grk. Yakobos)\add*, and then by all¦119409 the¦119407 ambassadors¦119408.
 \p
 \v 8 Then¦119411 last of¦119412 all¦119412, as¦119413 if I'd been born at the¦119414 wrong time, he¦119416 appeared¦119416 to me also¦119417,\x + \xo 15:8: \xt Acts 9:3-6.\x*
 \v 9 because¦119419 I'm¦119418 the¦119421 least¦119422 of¦119423 the¦119423 ambassadors¦119424—quite unworthy of that¦119425 title because¦119431 I¦119432 persecuted¦119432 \nd God's¦119436\nd* assembly¦119434.\x + \xo 15:9: \xt Acts 8:3.\x*
@@ -608,8 +608,8 @@
 \p
 \v 29 Otherwise¦119758, what¦119759 will¦119760 the people do¦119760 who¦119761 are¦119761 being¦119762 immersed¦119762 \add in water\add* for¦119763 the¦119764 dead¦119765? If¦119766 the¦119768 dead¦119768 don't¦119769 \add ≈come back to life\add*, why¦119771 would they¦119773 get immersed¦119773 for¦119774 them¦119775? TODO: WHAT'S THIS ABOUT?
 \v 30 \add As for us,\add* why¦119778 do we¦119780 \add place ourselves\add* in danger¦119781 all¦119782 the time¦119783?
-\v 31 I'm¦119786 dying¦119786 every¦119784 day¦119785 by¦119788 your¦119791 boasting¦119792 \add ≈brothers¦119793 and¦119793 sisters¦119793\add*, which¦119794 I¦119795 have¦119795 in¦119796 \nd Messiah¦119797 Yeshua¦119798\nd* our¦119801 \nd master¦119800\nd*. TODO: WHAT DOES THIS MEAN?
-\v 32 If¦119802 I¦119805 fought¦119805 with wild¦119805 animals¦119805 at Ephesus¦119807 for human¦119804 \add purposes\add*, what¦119808 did I gain¦119811? If¦119812 the¦119813 dead¦119813 aren't¦119814 \add ≈brought back to life\add*, then ‘Let's eat¦119816 and¦119817 drink¦119818, because¦119820 tomorrow¦119819 we'll¦119821 die¦119821 \add anyway\add*.’\x + \xo 15:32: \xt Isa 22:13.\x*
+\v 31 I'm¦119786 dying¦119786 every¦119784 day¦119785 by¦119788 your¦119791 boasting¦119792 \add ≈brothers¦119793 and¦119793 sisters¦119793\add*, which¦119794 I¦119795 have¦119795 in¦119796 \nd Messiah¦119797 Yeshua¦119798\nd* \add !(Jesus¦119798; Grk. Yesus)\add* our¦119801 \nd master¦119800\nd*. TODO: WHAT DOES THIS MEAN?
+\v 32 If¦119802 I¦119805 fought¦119805 with wild¦119805 animals¦119805 at Efesos¦119807 for human¦119804 \add purposes\add*, what¦119808 did I gain¦119811? If¦119812 the¦119813 dead¦119813 aren't¦119814 \add ≈brought back to life\add*, then ‘Let's eat¦119816 and¦119817 drink¦119818, because¦119820 tomorrow¦119819 we'll¦119821 die¦119821 \add anyway\add*.’\x + \xo 15:32: \xt Isa 22:13.\x*
 \p
 \v 33 Don't¦119822 be¦119823 fooled: ‘Evil¦119828 conversations¦119827 corrupt¦119824 good¦119826 character¦119825.’
 \v 34 Sober¦119829 up¦119829 as you should, and¦119831 stop sinning¦119833, because¦119835 some¦119837 of you are \add quite\add* \add ≈ignorant¦119834\add* \nd about¦119836 God¦119836\nd*. (I¦119842 say¦119842 that to¦119839 your shame¦119840.)
@@ -646,7 +646,7 @@
 \q1 \add Yes\add* death, where¦120190 is¦120190 your¦120191 sting¦120194?’\x + \xo 15:55: \xt Hos 13:14 (LXX).\x*
 \m
 \v 56 Sin is the¦120202 sting¦120202 of¦120204 death¦120204, and sin's power¦120210 is¦120212 The¦120213 Law¦120214,
-\v 57 but¦120216 \add ≈be thankful¦120218\add* \nd to¦120217 God¦120217\nd* because it's him who gives¦120220 us¦120222 the¦120223 victory¦120224 through¦120225 our¦120228 \nd master¦120227 Yeshua¦120229 Messiah¦120230\nd*.
+\v 57 but¦120216 \add ≈be thankful¦120218\add* \nd to¦120217 God¦120217\nd* because it's him who gives¦120220 us¦120222 the¦120223 victory¦120224 through¦120225 our¦120228 \nd master¦120227 Yeshua¦120229 \+add !(Jesus¦120229; Grk. Yesus)\+add* Messiah¦120230\nd*.
 \p
 \v 58 Therefore my¦120233 dear¦120234 \add ≈brothers¦120232 and¦120232 sisters¦120232\add*, be strong and stand firm¦120236, always¦120246 doing the \nd master's\nd* work enthusiastically, knowing¦120247 that¦120248 your¦120251 work for \nd Yahweh\nd* isn't¦120252 wasted.
 \c 16
@@ -655,19 +655,19 @@
 \p
 \v 1 Now concerning¦120257 the¦120259 fund-raising for¦120263 the believers:\x + \xo 16:1: \xt Rom 15:25-26.\x* You¦120274 all¦120274 must do the same as¦120266 what I¦120267 got the¦120268 assemblies¦120269 in Galatia¦120271 to do¦120275.
 \v 2 Every¦120276 Sunday¦120277, each¦120281 one of¦120282 you¦120282 should¦120285 put¦120285 something aside from whatever¦120287 you've earnt, so that¦120293 when¦120295 I¦120296 come¦120296 we won't¦120294 need any collections¦120298 then¦120297.
-\v 3 Then¦120302, when¦120301 I¦120303 arrive¦120303, I'll¦120312 \add write\add* letters¦120310 to send¦120312 with those¦120311 you recommend to¦120313 take¦120313 to¦120317 Jerusalem¦120318 with your¦120316 gift,
+\v 3 Then¦120302, when¦120301 I¦120303 arrive¦120303, I'll¦120312 \add write\add* letters¦120310 to send¦120312 with those¦120311 you recommend to¦120313 take¦120313 to¦120317 Yerushalem¦120318 \add !(Jerusalem¦120318)\add* with your¦120316 gift,
 \v 4 but¦120321 if¦120320 it's¦120324 appropriate for me to¦120327 go¦120327 as well, then they¦120330 can travel with¦120328 me¦120329.
 \s1 Instructions for travellers
 \rem /s1 Plans for Travel; Personal Requests; Paul's Final Instructions; Paul's Plans
 \p
-\v 5 After I've¦120332 been¦120332 to¦120334 Macedonia¦120337 I'll come¦120332 there. \add Yes,\add* I'm¦120342 going through¦120338 Macedonia¦120339,\x + \xo 16:5: \xt Acts 19:21.\x*
+\v 5 After I've¦120332 been¦120332 to¦120334 Makedonia¦120337 I'll come¦120332 there. \add Yes,\add* I'm¦120342 going through¦120338 Makedonia¦120339,\x + \xo 16:5: \xt Acts 19:21.\x*
 \v 6 but¦120345 perhaps I'll spend some time with¦120343 you¦120344—maybe even the whole¦120344 winter¦120351. That¦120352 way, you¦120353 all¦120353 could help me¦120354 on my way wherever¦120356 I¦120358 decide to go¦120358 next,
 \v 7 because¦120361 I¦120360 don't¦120359 want¦120360 to¦120367 see¦120367 you¦120362 all¦120362 now¦120363 \add just\add* in¦120365 passing¦120366, but I'd¦120368 like to¦120373 stay¦120373 with¦120374 you¦120375 all¦120375 for a some time¦120371 if¦120376 the¦120377 \nd master¦120378\nd* permits¦120380.
 \p
-\v 8 But¦120382 I'll¦120381 stay¦120381 \add here\add* at Ephesus¦120384 until¦120385 the¦120386 Pentecost¦120387 celebrations\x + \xo 16:8: \xt Lev 23:15-21; Deu 16:9-11.\x*
+\v 8 But¦120382 I'll¦120381 stay¦120381 \add here\add* at Efesos¦120384 until¦120385 the¦120386 Pentecost¦120387 celebrations\x + \xo 16:8: \xt Lev 23:15-21; Deu 16:9-11.\x*
 \v 9 because¦120389 a¦120388 wide door¦120388 has¦120391 opened¦120391 for me to be effective \add here\add*, even though many¦120397 are¦120397 opposing¦120396 \add me\add*.
 \p
-\v 10 Now if¦120398 Timothy¦120401\x + \xo 16:10: \xt 1Cor 4:17.\x* arrives¦120400, make sure that¦120403 he¦120405 has nothing for¦120409 him to be afraid \nd of¦120411\nd* there, because he's¦120412 doing¦120412 \nd Yahweh's\nd* work¦120410 just like¦120413 me.
+\v 10 Now if¦120398 Timotheos¦120401\x + \xo 16:10: \xt 1Cor 4:17.\x* arrives¦120400, make sure that¦120403 he¦120405 has nothing for¦120409 him to be afraid \nd of¦120411\nd* there, because he's¦120412 doing¦120412 \nd Yahweh's\nd* work¦120410 just like¦120413 me.
 \v 11 So don't¦120417 let anyone¦120418 despise¦120421 him¦120420, but¦120423 help him¦120424 on his way in¦120425 peace¦120426, so that¦120427 he¦120428 can come¦120428 to¦120429 me¦120430 because¦120432 I'm¦120431 expecting¦120431 him¦120433 along with¦120434 the¦120435 brothers¦120436.
 \p
 \v 12 And then concerning¦120437 the¦120440 brother¦120441 Apollos¦120439, I¦120446 strongly urged¦120446 him¦120447 to go to you¦120451 with¦120452 the¦120453 brothers¦120454. He¦120462 didn't¦120457 want to go at the present time, but¦120464 he'll¦120463 go when¦120465 he¦120467 has¦120467 \add another\add* opportunity¦120467.
@@ -677,10 +677,10 @@
 \v 13 Stay alert¦120468 and stay grounded in¦120470 the¦120471 faith¦120472. Be strong¦120475 and courageous.
 \v 14 Everything you¦120477 do, do in¦120478 love¦120479.
 \p
-\v 15 Now \add ≈brothers¦120484 and¦120484 sisters¦120484\add*, you¦120485 all¦120485 know¦120485 that¦120493 Stephanas'¦120488 \add ≈family¦120487\add*\x + \xo 16:15: \xt 1Cor 1:16.\x* were¦120494 the¦120495 first¦120495 ones in Achaia¦120498 to believe, and¦120499 \add since then\add* they've devoted themselves to¦120500 serving¦120501 the¦120502 believers, so I urge¦120481 you¦120483 all¦120483
+\v 15 Now \add ≈brothers¦120484 and¦120484 sisters¦120484\add*, you¦120485 all¦120485 know¦120485 that¦120493 Stefanas'¦120488 \add ≈family¦120487\add*\x + \xo 16:15: \xt 1Cor 1:16.\x* were¦120494 the¦120495 first¦120495 ones in Akaia¦120498 to believe, and¦120499 \add since then\add* they've devoted themselves to¦120500 serving¦120501 the¦120502 believers, so I urge¦120481 you¦120483 all¦120483
 \v 16 to submit¦120509 yourselves to¦120511 people¦120511 like them, \add in fact\add* to¦120513 everyone¦120513 who works¦120515 and¦120516 cooperates.
 \p
-\v 17 I'm¦120518 pleased that Stefanas¦120523, Fortunatus¦120525, and¦120526 Achaicus¦120527 came¦120522 because¦120528 they've given what you¦120531 all¦120531 couldn't,
+\v 17 I'm¦120518 pleased that Stefanas¦120523, Fortunatos¦120525, and¦120526 Akaikos¦120527 came¦120522 because¦120528 they've given what you¦120531 all¦120531 couldn't,
 \v 18 because¦120537 they¦120536 refreshed¦120536 my¦120539 spirit¦120540 and¦120541 yours also, so you¦120543 should show appreciation to such¦120547 people¦120547.
 \rem /s1 Paul's Final Greetings
 \p
@@ -688,11 +688,11 @@
 \v 20 All¦120572 the¦120573 \add ≈brothers¦120574 and¦120574 sisters¦120574\add* here send their greetings¦120571.
 \p Greet¦120576 each other with¦120578 an innocent kiss¦120579.
 \p
-\v 21 \sig I, Paul¦120586, am¦120582 sending this greeting¦120582 in my¦120584 own handwriting¦120585.\sig*
+\v 21 \sig I, Paulos¦120586, am¦120582 sending this greeting¦120582 in my¦120584 own handwriting¦120585.\sig*
 \p
 \v 22 \sig If¦120588 there's anyone¦120589 there who doesn't love¦120591 the¦120592 \nd master¦120593\nd*, let¦120596 him be¦120596 cursed¦120597.\sig*
 \p \sig Come, master!\sig*
 \p
-\v 23 \sig May the¦120602 grace¦120603 from \+add &our¦120604\+add* \+nd master¦120605 Yeshua¦120607\+nd* be with¦120609 all¦120610 of you.\sig*
+\v 23 \sig May the¦120602 grace¦120603 from \+add &our¦120604\+add* \+nd master¦120605 Yeshua¦120607\+nd* \+add !(Jesus¦120607; Grk. Yesus)\+add* be with¦120609 all¦120610 of you.\sig*
 \p
 \v 24 \sig My¦120613 love¦120612 to all¦120615 of¦120616 you¦120616 in¦120617 \+nd Messiah¦120618 Yeshua¦120619\+nd*. \+add ≈May¦120620 it¦120620 be¦120620 so¦120620\+add*.\sig*

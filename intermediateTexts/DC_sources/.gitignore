@@ -1,0 +1,5 @@
+# Re-download these exact snapshots using scripts/DC/source_manifest.json.
+*
+!.gitignore
+# eBible's URL is mutable; retain this modest snapshot for reproducibility.
+!grcbrent_usfm.zip

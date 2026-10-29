@@ -2,6 +2,7 @@
 import logging
 from pathlib import Path
 import tempfile
+from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 import bos_books_codes_py
@@ -44,6 +45,51 @@ class VersificationTests(unittest.TestCase):
 
     def text(self, passage):
         return ' '.join(e.getCleanText() for e in passage.lv_entries if e.getMarker() in ('v~', 'd'))
+
+    def test_dc_links_follow_an_explicit_mapping_not_equal_verse_labels(self):
+        engine = VersificationMappingEngine({'maxVerses': {'TOB': [2]}}, {
+            'OET-RV': {'maxVerses': {'TOB': [1]}, 'mappedVerses': {'TOB 1:1': 'TOB 1:2'}},
+            'OET-LV': {'maxVerses': {'TOB': [2]}, 'identityBooks': {'TOB': 'TOB'}},
+        })
+        rv_text = '\\c 1\n\\v 1 bread'
+        lv_text = '\\c 1\n\\v 1 wrong¦1\n\\v 2 bread¦2'
+        rv = self.bible('TOB', rv_text, 'OET-RV')
+        lv = self.bible('TOB', lv_text, 'OET-LV')
+        connect.state.rvESFMLines = rv_text.splitlines()
+        connect.state.lvESFMLines = lv_text.splitlines()
+        connect.state.rvLineIndex = connect.index_book_lines(connect.state.rvESFMLines)
+        connect.state.rvTokenCache = {}
+        connect.state.audit = []
+        connect.state.wordTableHeaderList = {'DC': ['Ref', 'Morphology', 'GlossStatus', 'OETGlossWords']}
+        connect.state.wordTable = {'DC': [[], ['TOB_1:1w1', '', 'editorial', 'wrong'],
+                                        ['TOB_1:2w1', 'N-ASM', 'form-lexical', 'bread']]}
+        with patch.object(bv, 'get_default_mapping_engine', return_value=engine), \
+             patch.object(connect.BibleOrgSysGlobals, 'commandLineArguments', SimpleNamespace(report=True)):
+            passages = list(connect.iterAlignmentVerseEntries('TOB', lv, rv))
+            self.assertEqual(len(passages), 1)
+            self.assertEqual(connect.connect_OET_RV_Verse('TOB', *passages[0]), (1,0))
+        self.assertEqual(connect.state.rvESFMLines[-1], r'\v 1 bread¦2')
+        self.assertEqual(connect.state.unmappedLV[0]['lv_reference'], ('TOB', '1', '1', None))
+
+    def test_dc_without_a_reviewed_lv_profile_is_not_paired_by_label(self):
+        # This explicitly unsupported fixture stays meaningful after BOS adds DC.
+        engine = VersificationMappingEngine({'maxVerses': {'TOB': [1]}}, {
+            'OET-RV': {'maxVerses': {'TOB': [1]}, 'identityBooks': {'TOB': 'TOB'}},
+            'OET-LV': {'maxVerses': {}},
+        })
+        rv = self.bible('TOB', '\\c 1\n\\v 1 bread', 'OET-RV')
+        lv = self.bible('TOB', '\\c 1\n\\v 1 bread¦1', 'OET-LV')
+        with patch.object(bv, 'get_default_mapping_engine', return_value=engine):
+            passages, skipped = resolve_alignment_passages('TOB', rv, lv, ['\\c 1', '\\v 1 bread'])
+        self.assertEqual(passages, [])
+        self.assertEqual(len(skipped), 1)
+
+    def test_lv_audit_keeps_lettered_dc_verses_separate(self):
+        rv = self.bible('ESG', '\\c 1\n\\v 1 ordinary', 'OET-RV')
+        lv = self.bible('ESG', '\\c 1\n\\v 1 ordinary¦1\n\\v 1b addition¦2', 'OET-LV')
+        gaps = audit_unmapped_lv('ESG', rv, lv, ['\\c 1', '\\v 1 ordinary¦1', '\\v 1b addition¦2'], [])
+        self.assertEqual([gap['lv_reference'] for gap in gaps],
+                         [('ESG', '1', '1', None), ('ESG', '1', '1', 'b')])
 
     def test_genesis_chapter_boundary_uses_rv_coordinates(self):
         passages, skipped = self.resolve('GEN', '\\c 31\n\\v 54 Feast\n\\v 55 Farewell\n\\c 32\n\\v 1 Journey',

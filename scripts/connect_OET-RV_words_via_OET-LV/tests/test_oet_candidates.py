@@ -19,6 +19,32 @@ class CandidateTests(unittest.TestCase):
             connect.scoreAlignedWords, connect.simplifyRVLVWord, connect.numberVariants,
             phrase_index=connect.ALIGNED_PHRASE_INDEX, directional_index=connect.DIRECTIONAL_WORD_INDEX, **kwargs)]
 
+    def test_covenant_loyalty_phrases_complete_compatible_links(self):
+        for gloss in ('loyalty', 'loyalties'):
+            for phrase in ('loyal commitment', 'loyal kindness'):
+                with self.subTest(gloss=gloss, phrase=phrase):
+                    columns = [('covenant',7),(gloss,7)]
+                    first, last = phrase.split()
+                    self.assertEqual(self.links(phrase, columns), [(first,7),(last,7)])
+                    self.assertEqual(self.links(f'{first}¦7 {last}', columns), [(last,7)])
+        # The gloss order varies with Hebrew possessive suffixes.
+        self.assertEqual(self.links('your¦7 loyal¦7 commitment',
+                         [('loyalty',7),('of',7),('your',7),('covenant',7)]), [('commitment',7)])
+        self.assertEqual(self.links('loyal affection', [('loyalty',7)]), [('loyal',7),('affection',7)])
+
+    def test_covenant_loyalty_phrases_do_not_guess_or_cross_exclusions(self):
+        self.assertEqual(self.links('loyal commitment', [('loyalty',7),('loyalty',8)]), [])
+        self.assertEqual(self.links('loyal¦8 commitment', [('loyalty',7)]), [])
+        self.assertEqual(self.links(r'loyal¦7 \add commitment\add*', [('loyalty',7)]), [])
+        self.assertEqual(self.links('commitment', [('loyalty',7)]), [])
+        self.assertEqual(self.links('loyal commitment', [('covenant',7)]), [])
+        # Distinct literal counterparts retain their own source numbers.
+        self.assertEqual(self.links('loyal faithfulness', [('loyalty',7),('faithfulness',8)]),
+                         [('loyal',7),('faithfulness',8)])
+        # PSA 88:11 already assigns the source to a later phrase; do not reuse it.
+        self.assertEqual(self.links('loyal commitment in the grave¦2—your¦3 loyalty¦3',
+                         [('grave',2),('loyalty',3),('your',3),('faithfulness',4)]), [])
+
     def test_provider_order_does_not_resolve_conflicts(self):
         a, b, c = tokenize('alpha beta gamma')
         contextual = Candidate(((a, 1),), frozenset({0}), 'context', 3)

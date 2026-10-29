@@ -1,108 +1,108 @@
-\id JOB - Open English Translation—Readers’ Version (OET-RV) v0.1.34
+\id JOB - Open English Translation—Readers’ Version (OET-RV) v0.2.0
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 JOB
 \rem WORDTABLE OET-LV_OT_word_table.tsv
-\h Yob
-\toc1 Iyyov (Job)
-\toc2 Iyyov
-\toc3 Iyyov
-\mt1 Iyyov
+\h Iyov
+\toc1 Iyov (Job)
+\toc2 Iyov
+\toc3 Iyov
+\mt1 Iyov
 \mt2 (Job)
 \is1 Introduction
-\ip \bk The account of Iyyov\bk* (but commonly as known as ‘Job’ which is the English evolution of the Germanic adaptation of the Greek adaptation Ἰώβ (Iōb) of his actual Hebrew name ‘אִיּוֹב’) is an account about a godly man who was struck by a series of tragedies: all his children and their families were killed, all his extensive wealth was lost, and then he was struck with a terrible disease. By means of this seven-part account, the reader is informed about how Iyyov and his friends react concerning those tragedies. Then finally, God reveals himself to Iyyov and the others.
-\ip Near the beginning of this document, God is told by Satan that it’s not good governing of his people if he always rewards those who obey him. What if people only obey God because they’re after the material blessings that would always follow. This would mean that their obedience no longer comes from their hearts. Yes, that’s what Satan said about Iyyov, so God allowed Satan to test Iyyov’s heart to see if he’d continue to trust God in times of suffering and misery.
-\ip Iyyov’s traditional friends assumed that he must be suffering because he sinned. Surely he wouldn’t suffer all that if he’d been honest and righteous. None of them could understand why God might allow sickness or disease to strike someone if he was truly a righteous person, but this is too simplistic for Iyyov to accept. Therefore he challenges God to present his case. In all of that, Iyyov’s faith in God isn’t lost, but he desires to regain his honour as an honest and godly person.
-\ip God doesn’t answer Iyyov’s questions but he responds by displaying his own power and wisdom and knowledge. So then Iyyov acknowledges God as the wise creator and requests forgiveness for his angry words.
-\ip The final segment of this account explains how Iyyov was restored to health, peace, and prosperity (all the elements of ‘shalom’/‘שָׁלוֹם’), and how he actually prospered even more than before. It also shows how God was angry at Iyyov’s friends, because they had so much to say when none of them actually knew why Iyyov had suffered—only Iyyov had really sensed that God and his eventual (but eternal) justice is greater than simplistic proverbs and trite beliefs.
+\ip \bk The account of Iyov\bk* (but commonly as known as ‘Job’ which is the English evolution of the Germanic adaptation of the Greek adaptation Ἰώβ (Iōb) of his actual Hebrew name ‘אִיּוֹב’) is an account about a godly man who was struck by a series of tragedies: all his children and their families were killed, all his extensive wealth was lost, and then he was struck with a terrible disease. By means of this seven-part account, the reader is informed about how Iyov and his friends react concerning those tragedies. Then finally, God reveals himself to Iyov and the others.
+\ip Near the beginning of this document, God is told by Satan that it’s not good governing of his people if he always rewards those who obey him. What if people only obey God because they’re after the material blessings that would always follow. This would mean that their obedience no longer comes from their hearts. Yes, that’s what Satan said about Iyov, so God allowed Satan to test Iyov’s heart to see if he’d continue to trust God in times of suffering and misery.
+\ip Iyov’s traditional friends assumed that he must be suffering because he sinned. Surely he wouldn’t suffer all that if he’d been honest and righteous. None of them could understand why God might allow sickness or disease to strike someone if he was truly a righteous person, but this is too simplistic for Iyov to accept. Therefore he challenges God to present his case. In all of that, Iyov’s faith in God isn’t lost, but he desires to regain his honour as an honest and godly person.
+\ip God doesn’t answer Iyov’s questions but he responds by displaying his own power and wisdom and knowledge. So then Iyov acknowledges God as the wise creator and requests forgiveness for his angry words.
+\ip The final segment of this account explains how Iyov was restored to health, peace, and prosperity (all the elements of ‘shalom’/‘שָׁלוֹם’), and how he actually prospered even more than before. It also shows how God was angry at Iyov’s friends, because they had so much to say when none of them actually knew why Iyov had suffered—only Iyov had really sensed that God and his eventual (but eternal) justice is greater than simplistic proverbs and trite beliefs.
 \iot Main components of this account
 \io1 SECTION ONE: Introduction \ior 1:1–2:13\ior*
-\io1 SECTION TWO: Dialogues between Iyyov and his friends \ior 3:1–27:23\ior*
-\io2 a. Iyyov’s complaint \ior 3:1-26\ior*
+\io1 SECTION TWO: Dialogues between Iyov and his friends \ior 3:1–27:23\ior*
+\io2 a. Iyov’s complaint \ior 3:1-26\ior*
 \io2 b. The first dialogue \ior 4:1–14:22\ior*
 \io2 c. The second dialogue \ior 15:1–21:34\ior*
 \io2 d. The third dialogue \ior 22:1–27:23\ior*
 \io1 SECTION THREE: Praising wisdom \ior 28:1-28\ior*
-\io1 SECTION FOUR: Iyyov’s final statement \ior 29:1–31:40\ior*
+\io1 SECTION FOUR: Iyov’s final statement \ior 29:1–31:40\ior*
 \io1 SECTION FIVE: Elihu’s speech \ior 32:1–37:24\ior*
-\io1 SECTION SIX: Yahweh answers Iyyov \ior 38:1–42:6\ior*
+\io1 SECTION SIX: Yahweh answers Iyov \ior 38:1–42:6\ior*
 \io1 SECTION SEVEN: The final restoration \ior 42:7-17\ior*
 \rem This is still an early look into the unpolished text of the Open English Translation of the Bible. Please double-check the text in advance before using in public.
 \rem NOTE: This USFM file was exported from the ESFM source file with some loss of features, so don’t edit this derived file.
 \c 1
 \ms1 SECTION ONE: The introduction
 \mr (1:1–2:13)
-\s1 Iyyov’s prosperous life
+\s1 Iyov’s prosperous life
 \p
-\v 1 There was \add once\add* a man called Iyyov \add (Job)\add* who lived in the Uts \add (Uz)\add* region. \add He\add* was blameless and righteous—both obeying God and avoiding evil.
+\v 1 There was \add once\add* a man called Iyov \add (Job)\add* who lived in the Uts \add (Uz)\add* region. \add He\add* was blameless and righteous—both obeying God and avoiding evil.
 \v 2 He had seven sons and three daughters,
-\v 3 and he owned 7,000 sheep, 3,000 camels, 1,000 cattle, and 500 donkeys, as well as many slaves. \add Iyyov\add* was \add richer\add* than \add anyone else\add* who lived in the area east \add of the Jordan River\add*.
-\v 4 \add Iyyov’s\add* sons \add regularly\add* held feasts in their homes, and whenever any of them held a feast, he would invite all his brothers and sisters to share the meal with him.
-\v 5 \add Then once a feast was over\add*, Iyyov would send \add for his children\add* and consecrate them—he got up early in the morning and offered burnt offerings for each of them, because Iyyov said, “Perhaps my \add children\add* have sinned and cursed\f + \fr 1:15 \ft Literally ‘blessed’ but it’s possible that the original reading was ‘cursed’ and that scribes changed it to ‘blessed’ in order to avoid the uncomfortable concept of a person cursing God. Traditional manuscripts of the Hebrew Bible don’t have a marginal notation about this (as they do in the case of 7:20), but LXX uses ‘ἐνενοήθησαν κακά’ which can be rendered as ‘have thought evil things’ and the Peshitta (Syriac) uses ‘reviled’. Many other translations also use ‘cursed’ since this is the kind of change that scribes are known to have made in similar cases.\f* God in their \add hearts\add*.” \add It was Iyyov’s regular habit to\add* \add intercede for his children\add*.
-\s1 Satan’s first attack on Iyyov
+\v 3 and he owned 7,000 sheep, 3,000 camels, 1,000 cattle, and 500 donkeys, as well as many slaves. \add Iyov\add* was \add richer\add* than \add anyone else\add* who lived in the area east \add of the Yarden\add* \add (Jordan)\add* \add River\add*.
+\v 4 \add Iyov’s\add* sons \add regularly\add* held feasts in their homes, and whenever any of them held a feast, he would invite all his brothers and sisters to share the meal with him.
+\v 5 \add Then once a feast was over\add*, Iyov would send \add for his children\add* and consecrate them—he got up early in the morning and offered burnt offerings for each of them, because Iyov said, “Perhaps my \add children\add* have sinned and cursed\f + \fr 1:15 \ft Literally ‘blessed’ but it’s possible that the original reading was ‘cursed’ and that scribes changed it to ‘blessed’ in order to avoid the uncomfortable concept of a person cursing God. Traditional manuscripts of the Hebrew Bible don’t have a marginal notation about this (as they do in the case of 7:20), but LXX uses ‘ἐνενοήθησαν κακά’ which can be rendered as ‘have thought evil things’ and the Peshitta (Syriac) uses ‘reviled’. Many other translations also use ‘cursed’ since this is the kind of change that scribes are known to have made in similar cases.\f* God in their \add hearts\add*.” \add It was Iyov’s regular habit to\add* \add intercede for his children\add*.
+\s1 Satan’s first attack on Iyov
 \p
 \v 6 It was the day that God’s sons\f + \fr 1:6 \ft It’s not clear from the text who these are.\f* came to present themselves to Yahweh,\x + \xo 1:6: \xt Gen 6:2.\x* and the adversary (Satan) was also there among them.
 \v 7 Yahweh asked him, “Where have you just come from?”
 \p “I have come from the earth, where I was travelling around \add to see what was going on\add*.” Satan replied.
 \p
-\v 8 “Have you \add noticed\add* my servant Iyyov?” Yahweh asked. “There’s no one else like him on the \add whole\add* earth—a blameless and righteous man who obeys me God and avoids \add anything\add* evil.”
+\v 8 “Have you \add noticed\add* my servant Iyov \add (Job)\add*?” Yahweh asked. “There’s no one else like him on the \add whole\add* earth—a blameless and righteous man who obeys me God and avoids \add anything\add* evil.”
 \p
-\v 9 “Does Iyyov \add get\add* nothing \add back\add* for respecting God?” Satan answered Yahweh.
+\v 9 “Does Iyov \add get\add* nothing \add back\add* for respecting God?” Satan answered Yahweh.
 \v 10 “Don’t you \add constantly protect\add* him and his household and everything that’s his? You’ve blessed \add what he works on\add*, and his \add livestock have multiplied prolifically\add*.
 \v 11 However, just stretch out your hand and \add ruin\add* everything he has, then \add we’ll see that\add* he’ll curse you to your face.”
 \p
-\v 12 “Listen, \add I’ll cede you control over\add* everything he has,” Yahweh replied. “Only \add just\add* don’t do \add anything\add* against \add Iyyov himself\add*.” \add So\add* the adversary went away from Yahweh’s \add presence\add*.
-\s1 Satan destroys Iyyov’s wealth and children
+\v 12 “Listen, \add I’ll cede you control over\add* everything he has,” Yahweh replied. “Only \add just\add* don’t do \add anything\add* against \add Iyov himself\add*.” \add So\add* the adversary went away from Yahweh’s \add presence\add*.
+\s1 Satan destroys Iyov’s wealth and children
 \p
-\v 13 \add So\add* \add one\add* day when \add Iyyov’s\add* sons and his daughters were eating and drinking wine in their eldest brother’s house,
-\v 14 a messenger came to Iyyov and \add reported\add*, “\add While\add* the oxen were ploughing and the donkeys were feeding \add nearby\add*,
-\v 15 the Sabeans attacked with \add their\add* \add swords\add* and stole them \add all\add*. They killed all your slaves except that I \add managed to\add* escape to tell you.”
+\v 13 \add So\add* \add one\add* day when \add Iyov’s\add* \add (Job)\add* sons and his daughters were eating and drinking wine in their eldest brother’s house,
+\v 14 a messenger came to Iyov and \add reported\add*, “\add While\add* the oxen were ploughing and the donkeys were feeding \add nearby\add*,
+\v 15 raiders from Sheva attacked with \add their\add* \add swords\add* and stole them \add all\add*. They killed all your slaves except that I \add managed to\add* escape to tell you.”
 \p
 \v 16 \add While\add* he was still speaking, another \add messenger\add* came and said, “The fire of God fell from the sky and burnt up the sheep and the \add shepherds\add*. \add Only ashes are left\add*, except that I alone escaped to tell you.”
 \p
-\v 17 \add While\add* he was still speaking, another \add one\add* came and \add explained\add*, “The Chaldeans formed into three bands and \add raided\add* the camels and took them, and they attacked the slaves with \add their\add* \add swords\add*, and I’m the only one who escaped to \add come and\add* tell you.”
+\v 17 \add While\add* he was still speaking, another \add one\add* came and \add explained\add*, “The Kasdim \add (Chaldeans)\add* formed into three bands and \add raided\add* the camels and took them, and they attacked the slaves with \add their\add* \add swords\add*, and I’m the only one who escaped to \add come and\add* tell you.”
 \p
 \v 18 \add While\add* he was still speaking, another \add messenger\add* came and said, “Your sons and daughters were eating and drinking wine in the house of their eldest brother
 \v 19 when \add suddenly\add* a \add freak\add* wind came from across the desert and struck the house. It \add collapsed\add* on the young people and \add killed them\add*, and only I alone have escaped to tell you.”
 \p
-\v 20 Then Iyyov stood up and tore his robe and shaved his head. Then he knelt with his face to the ground and worshipped \add God\add*,
+\v 20 Then Iyov \add (Job)\add* stood up and tore his robe and shaved his head. Then he knelt with his face to the ground and worshipped \add God\add*,
 \v 21 saying, “I came naked from my mother’s womb, and I will \add leave this life\add* naked. Yahweh gave, and Yahweh has taken. May Yahweh’s \add reputation\add* be blessed.”
 \p
-\v 22 \add Through\add* all of that, Iyyov didn’t \add disobey\add* God or \add accuse him of being evil\add*.
+\v 22 \add Through\add* all of that, Iyov didn’t \add disobey\add* God or \add accuse him of being evil\add*.
 \c 2
-\s1 Satan’s second attack on Iyyov
+\s1 Satan’s second attack on Iyov
 \p
 \v 1 It was the day that God’s sons came to present themselves to Yahweh and the adversary (Satan) was also there among them.
 \v 2 “Where have you come from?” Yahweh \add asked\add* the adversary.
 \p “From wandering on the earth and going back and forth on it,” \add he\add* answered.
 \p
-\v 3 “Have you \add noticed\add* my servant Iyyov \add (Job)\add*?” Yahweh asked Satan, “because there’s no one like him on the earth—a blameless and righteous man, \add striving to obey\add* God and turning from evil. And he’s still holding firmly to his integrity, even though you incited me against him, to \add ruin\add* him for nothing.”
+\v 3 “Have you \add noticed\add* my servant Iyov \add (Job)\add*?” Yahweh asked Satan, “because there’s no one like him on the earth—a blameless and righteous man, \add striving to obey\add* God and turning from evil. And he’s still holding firmly to his integrity, even though you incited me against him, to \add ruin\add* him for nothing.”
 \p
 \v 4 “Skin for skin,” replied the adversary, “\add actually, a person will give everything they have to save their\add* life.
 \v 5 However, just \add reach out\add* and touch his flesh and \add bones\add*, \add and see\add* if he doesn’t curse you to your face.”
 \p
 \v 6 “\add Listen\add*,” Yahweh said to \add him\add*, “\add I’ll give you power over him\add*, but you \add must\add* preserve his life.”
 \p
-\v 7 \add So\add* the adversary went away from Yahweh’s \add presence\add*, and he \add infected\add* Iyyov with bad boils from the sole of his foot to \add the top of his head\add*.
-\v 8 \add Iyyov picked up a piece of broken pottery\add* to \add scratch\add* himself with \add as\add* he sat \add down\add* in the middle of a pile of ashes.
+\v 7 \add So\add* the adversary went away from Yahweh’s \add presence\add*, and he \add infected\add* Iyov with bad boils from the sole of his foot to \add the top of his head\add*.
+\v 8 \add Iyov picked up a piece of broken pottery\add* to \add scratch\add* himself with \add as\add* he sat \add down\add* in the middle of a pile of ashes.
 \p
 \v 9 “Are you still holding tightly onto your integrity?” his wife \add asked\add* him. “\add Just\add* curse God and die.”
 \p
-\v 10 “You’re talking like a foolish \add person\add*,” \add Iyyov\add* \add replied\add*. “Should we \add only\add* accept good from God and not receive the bad?” In all of that, Iyyov didn’t sin \add in what he said\add*.
-\s1 Iyyov’s three friends come
+\v 10 “You’re talking like a foolish \add person\add*,” \add Iyov\add* \add replied\add*. “Should we \add only\add* accept good from God and not receive the bad?” In all of that, Iyov didn’t sin \add in what he said\add*.
+\s1 Iyov’s three friends come
 \p
-\v 11 \add When\add* Iyyov’s three friends heard \add about all the troubles that had happened to\add* him, they each came from his place: Elifaz from Teman, Bildad from Shuah, and Zofar from Naamah. They gathered together to come to console and comfort him.
+\v 11 \add When\add* Iyov’s \add (Job)\add* three friends heard \add about all the troubles that had happened to\add* him, they each came from his place: Elifaz from Teyman, Bildad from Shuah, and Zofar from Naamah. They gathered together to come to console and comfort him.
 \v 12 \add but when\add* they saw him from a distance, they \add barely\add* recognised him. They \add wailed loudly\add*, and they \add ripped their own clothes\add*, and they threw dust \add into the air so that it would fall\add* on their heads. \add (All three of those were traditional signs of mourning.)\add*
-\v 13 Then they sat with him \add there\add* on the ground for seven days and seven nights without saying a \add single\add* word to \add Iyyov\add* because they had seen that \add his\add* suffering was extreme.
+\v 13 Then they sat with him \add there\add* on the ground for seven days and seven nights without saying a \add single\add* word to \add Iyov\add* because they had seen that \add his\add* suffering was extreme.
 \c 3
-\ms1 SECTION TWO: Iyyov talking with his friends
+\ms1 SECTION TWO: Iyov talking with his friends
 \mr (3:1–27:33)
-\s1 Iyyov’s complaint
+\s1 Iyov’s complaint
 \p
-\v 1 After that, Iyyov spoke up and cursed \add the\add* day \add of\add* his \add conception\add*.\x + \xo 3:1-19: \xt Jer 20:14-18.\x*
+\v 1 After that, Iyov \add (Job)\add* spoke up and cursed \add the\add* day \add of\add* his \add conception\add*.\x + \xo 3:1-19: \xt Jer 20:14-18.\x*
 \p
 \v 2 He said:
-\sp Iyyov
+\sp Iyov
 \q1
 \v 3 May the day on which I was born perish,
 \q1 and the night that said, ‘A boy has been conceived.’
@@ -183,10 +183,10 @@
 \v 26 I’m not relaxed or peaceful.
 \q1 I can’t rest \add because only\add* trouble comes.
 \c 4
-\s1 Elifaz’s first response to Iyyov
+\s1 Elifaz’s first response to Iyov
 \sr (4:1–14:22)
 \p
-\v 1 Then Elifaz (from Teman) \add replied\add*:
+\v 1 Then Elifaz (from Teyman) \add replied\add*:
 \sp Elifaz
 \q1
 \v 2 If \add someone\add* tries \add to talk\add* with you, will it wear you out?
@@ -339,10 +339,10 @@
 \v 27 Listen to this: we’ve investigated and it’s true.
 \q1 Listen to it \add so\add* you’ll know for yourself.
 \c 6
-\s1 Iyyov’s first response to Elifaz
+\s1 Iyov’s first response to Elifaz
 \p
-\v 1 Then Iyyov \add (Job) responded\add*:
-\sp Iyyov
+\v 1 Then Iyov \add (Job)\add* \add responded\add*:
+\sp Iyov
 \q1
 \v 2 If only my anguish could be truly weighed,
 \q1 and my calamity could be \add put\add* together \add with it on the scales\add*.
@@ -399,8 +399,8 @@
 \v 18 \add Their\add* paths twist in their courses,
 \q1 they go out into the wasteland and \add end there\add*.
 \q1
-\v 19 The \add camel\add* caravans from Tema look \add for water\add*.
-\q1 The caravans from Sheba keep looking forward to them.
+\v 19 The \add camel\add* caravans from Teyma look \add for water\add*.
+\q1 The caravans from Sheva keep looking forward to them.
 \q1
 \v 20 They were distressed because they had been confident.
 \q1 They’ve come to \add the dry stream bed\add* and were stunned.
@@ -464,7 +464,7 @@
 \q1 They’ll be on me \add but\add* I’ll be gone.
 \q1
 \v 9 \add Clouds\add* \add just pop out of existence again\add* and vanish.
-\q1 Similarly, the \add person\add* who goes down to She’ol doesn’t come \add back\add* up \add again\add*.
+\q1 Similarly, the \add person\add* who goes down to Sheol doesn’t come \add back\add* up \add again\add*.
 \q1
 \v 10 \add That person\add* won’t return to their house again,
 \q1 and \add before long\add* their place won’t \add even\add* know them again.
@@ -507,7 +507,7 @@
 \q1 For now I’ll lie down in the dust.
 \q1 You’ll search for me but I’ll no longer exist.
 \c 8
-\s1 Bildad’s first response to Iyyov
+\s1 Bildad’s first response to Iyov
 \p
 \v 1 Then Bildad (from Shuah) answered:
 \sp Bildad
@@ -581,10 +581,10 @@
 \v 22 Those who hate you will be \add exposed and\add* shamed,
 \q1 and the \add homes\add* of wicked \add people will cease to exist\add*.
 \c 9
-\s1 Iyyov’s first response to Bildad
+\s1 Iyov’s first response to Bildad
 \p
-\v 1 Then Iyyov answered saying:
-\sp Iyyov
+\v 1 Then Iyov \add (Job)\add* answered saying:
+\sp Iyov
 \q1
 \v 2 \add Yes,\add* I certainly know that.
 \q1 \add But\add* how can a \add person be declared innocent\add* before God?\x + \xo 9:2: \xt Yob 4:17.\x*
@@ -619,7 +619,7 @@
 \q1 and who will \add ask\add* him what he’s doing?
 \q1
 \v 13 God won’t suppress his anger.
-\q1 Those who help Rahab lie beneath him.
+\q1 Those who help Rahav lie beneath him.
 \b
 \q1
 \v 14 I will certainly answer him.
@@ -758,7 +758,7 @@
 \v 22 the land of gloom and deep darkness,
 \q1 disorderly and with gloomy light.
 \c 11
-\s1 Zofar’s first response to Iyyov
+\s1 Zofar’s first response to Iyov
 \p
 \v 1 Then Zofar (from Naamah) answered:
 \sp Zofar
@@ -824,10 +824,10 @@
 \q2 and the way of escape will be \add invisible\add* to them.
 \q1 Their hope will \add be limited to their last\add* gasp of life.
 \c 12
-\s1 Iyyov’s first response to Zofar
+\s1 Iyov’s first response to Zofar
 \p
-\v 1 Then Iyyov responded \add to Zofar\add*:
-\sp Iyyov
+\v 1 Then Iyov \add (Job)\add* responded \add to Zofar\add*:
+\sp Iyov
 \q1
 \v 2 \add Ah,\add* you’re certainly ‘the people’
 \q1 and wisdom will die with you.
@@ -905,8 +905,8 @@
 \v 25 They grope in the darkness without \add any\add* light,
 \q1 and he makes them stagger around as if they’re drunk.
 \c 13
-\s1 Iyyov argues that he hasn’t sinned
-\sp Iyyov
+\s1 Iyov argues that he hasn’t sinned
+\sp Iyov
 \p
 \v 1 Look here, my \add eyes\add* have seen all \add that\add*,
 \q1 my \add ears\add* have heard it and understood.
@@ -1068,10 +1068,10 @@
 \v 22 Only \add our\add* own bodies feel the pain.
 \q1 Only \add our\add* inner \add selves\add* mourn.
 \c 15
-\s1 Elifaz’s second response to Iyyov
+\s1 Elifaz’s second response to Iyov
 \sr (15:1–21:34)
 \p
-\v 1 Then Elifaz (from Teman) replied:
+\v 1 Then Elifaz (from Teyman) replied:
 \sp Elifaz
 \q1
 \v 2 Do wise \add people\add* \add just\add* answer with knowledge \add full\add* of wind?
@@ -1180,10 +1180,10 @@
 \v 35 They dream about trouble and encourage wickedness,
 \q1 and they give birth to deceitful \add plots\add*.
 \c 16
-\s1 Iyyov’s second response to Elifaz
+\s1 Iyov’s second response to Elifaz
 \p
-\v 1 Then Iyyov answered \add Elifaz\add*:
-\sp Iyyov
+\v 1 Then Iyov \add (Job)\add* answered \add Elifaz\add*:
+\sp Iyov
 \q1
 \v 2 I’ve heard many things like that \add before\add*.
 \q1 You come to comfort, but bring trouble \add instead\add*.
@@ -1308,7 +1308,7 @@
 \v 16 Will they go down to the \add gates\add* of the grave?
 \q1 Will we go down together into the ground?
 \c 18
-\s1 Bildad’s second response to Iyyov
+\s1 Bildad’s second response to Iyov
 \p
 \v 1 Then Bildad (from Shuah) responded \add again\add*:
 \sp Bildad
@@ -1324,7 +1324,7 @@
 \q1 or the rock removed out of its place?
 \b
 \q1
-\v 5 Indeed, the light of wicked \add people\add*\f + \fr 18:5 \ft This segment is about ‘the wicked man’ (somewhat general, but also obviously referring to Iyyov), but we’ve generalised it into ‘wicked people’ as being more relevant to the average reader (of both sexes).\f* is extinguished.
+\v 5 Indeed, the light of wicked \add people\add*\f + \fr 18:5 \ft This segment is about ‘the wicked man’ (somewhat general, but also obviously referring to Iyov), but we’ve generalised it into ‘wicked people’ as being more relevant to the average reader (of both sexes).\f* is extinguished.
 \q1 the flame of \add their\add* fire won’t shine.
 \q1
 \v 6 The light in \add their\add* \add tents\add* will go dark.
@@ -1375,10 +1375,10 @@
 \v 21 That’s certainly how the homes of wicked \add people end up\add*,
 \q1 and that’s the place for \add people\add* who don’t know God.
 \c 19
-\s1 Iyyov’s second response to Bildad
+\s1 Iyov’s second response to Bildad
 \p
-\v 1 Iyyov \add responded to Bildad and companions again\add*:
-\sp Iyyov
+\v 1 Iyov \add (Job)\add* \add responded to Bildad and companions again\add*:
+\sp Iyov
 \q1
 \v 2 \add How much longer\add* will I be tormented
 \q1 and crushed with words?
@@ -1471,9 +1471,9 @@
 \q2 because anger brings punishment by the sword,
 \q1 so that \add you\add* will know that \add there is\add* judgement.
 \c 20
-\s1 Zofar’s second response to Iyyov
+\s1 Zofar’s second response to Iyov
 \p
-\v 1 Then Zofar (from Naamah) \add responded to Iyyov\add*:
+\v 1 Then Zofar (from Naamah) \add responded to Iyov\add* \add (Job)\add*:
 \sp Zofar
 \q1
 \v 2 My anxious thoughts \add force\add* me to answer,
@@ -1564,10 +1564,10 @@
 \v 29 That’s what God serves up to wicked \add people\add*,
 \q1 and the heritage that God has decreed for them.
 \c 21
-\s1 Iyyov’s second response to Zofar
+\s1 Iyov’s second response to Zofar
 \p
-\v 1 Then Iyyov \add responded to Zofar and the others\add*:
-\sp Iyyov
+\v 1 Then Iyov \add (Job)\add* \add responded to Zofar and the others\add*:
+\sp Iyov
 \q1
 \v 2 Listen carefully to my words,
 \q1 and let this be a \add consolation\add* for you all.
@@ -1675,10 +1675,10 @@
 \v 34 \add So\add* how can vanity be of comfort to me?
 \q1 It’s only faithlessness that remains from the replies that you all \add have given\add*.
 \c 22
-\s1 Elifaz’s third response to Iyyov
+\s1 Elifaz’s third response to Iyov
 \sr (22:1–27:23)
 \p
-\v 1 Then Elifaz (from Teman) responded \add to Iyyov\add*:
+\v 1 Then Elifaz (from Teyman) responded \add to Iyov\add* \add (Job)\add*:
 \sp Elifaz
 \q1
 \v 2 Can a human be of use to God?
@@ -1722,7 +1722,7 @@
 \q1 He walks around \add way up there\add* on top of the \add heavens\add*.’
 \q1
 \v 15 Will you stay on the ancient \add paths\add*,
-\q1 on which \add wicked\add* \add people regularly\add* tred?
+\q1 on which \add wicked\add* \add people regularly\add* tread?
 \q1
 \v 16 They were captured at an inappropriate time—
 \q1 a torrent \add of water\add* poured over their \add foundations\add*.
@@ -1769,10 +1769,10 @@
 \v 30 He will \add set free\add* \add those\add* who aren’t innocent,
 \q1 and they’ll be rescued with the cleanness of your hands.
 \c 23
-\s1 Iyyov’s third response to Elifaz
+\s1 Iyov’s third response to Elifaz
 \p
-\v 1 Then Iyyov responded \add to Elifaz and the others\add*:
-\sp Iyyov
+\v 1 Then Iyov \add (Job)\add* responded \add to Elifaz and the others\add*:
+\sp Iyov
 \q1
 \v 2 Even today my complaint is bitter.
 \q1 I’m groaning \add because my situation is so difficult\add*.
@@ -1823,7 +1823,7 @@
 \v 17 I haven’t been silenced \add when\add* facing the darkness,
 \q1 or by the fog that covers my face.
 \c 24
-\s2 Iyyov complains about continued evil
+\s2 Iyov complains about continued evil
 \p
 \v 1 Why doesn’t the provider \add store up the times\add*,
 \q1 and those who know him \add never see him age\add*?
@@ -1910,9 +1910,9 @@
 \v 25 If that isn’t true, then who will prove me a liar
 \q1 and demonstrate that my words \add mean\add* nothing?
 \c 25
-\s1 Bildad’s third response to Iyyov
+\s1 Bildad’s third response to Iyov
 \p
-\v 1 Then Bildad (from Shuah) \add responded to Iyyov\add*:
+\v 1 Then Bildad (from Shuah) \add responded to Iyov\add* \add (Job)\add*:
 \sp Bildad
 \q1
 \v 2 Dominion and fear belong to \add God\add*.
@@ -1930,10 +1930,10 @@
 \v 6 Indeed, a person’s \add just like\add* an \add insect\add*,
 \q1 and human offspring \add are as insignificant as\add* \add worms\add*.
 \c 26
-\s1 Iyyov’s response to Bildad
+\s1 Iyov’s response to Bildad
 \p
-\v 1 Then Iyyov responded \add to Bildad\add*:
-\sp Iyyov
+\v 1 Then Iyov \add (Job)\add* responded \add to Bildad\add*:
+\sp Iyov
 \q1
 \v 2 How have you helped \add those\add* without power?
 \q1 \add How have\add* you saved \add those\add* \add who are weak\add*?
@@ -1948,7 +1948,7 @@
 \q1 from beneath the \add water\add* and their inhabitants. ???
 \q1
 \v 6 The grave is wide open before him,
-\q1 and ABADDON has no covering.
+\q1 and AVADON has no covering.
 \q1
 \v 7 He stretches out the north over \add empty space\add*.
 \q1 He hangs the earth on nothing at all.
@@ -1966,7 +1966,7 @@
 \q1 and they’re astounded when he scolds them.
 \q1
 \v 12 He stirs up the sea with his power,
-\q1 and using his know-how he smashed RAHAB.
+\q1 and using his know-how he smashed RAHAV.
 \q1
 \v 13 By his breath he makes the skies \add clear\add*.
 \q1 His hand pierced the fleeing snake.
@@ -1976,7 +1976,7 @@
 \q1 And who can interpret the thunder of his power?
 \c 27
 \p
-\v 1 Then Iyyov continued speaking:
+\v 1 Then Iyov \add (Job)\add* continued speaking:
 \q1
 \v 2 \add Although\add* God lives, who’s taken justice away from me,
 \q1 and the provider who’s made my soul bitter,
@@ -2050,7 +2050,7 @@
 \ms1 SECTION THREE:
 \mr (28:1-28)
 \s1 Praising wisdom
-\sp Iyyov
+\sp Iyov
 \q1
 \v 1 Surely there’s a mine where silver \add is extracted\add*,
 \q1 and a place where gold is refined.
@@ -2109,7 +2109,7 @@
 \v 18 It’s not even worth mentioning coral and jasper.
 \q1 Yes, \bd wisdom\bd* is \add way\add* more expensive than pearls.
 \q1
-\v 19 The \add good\add* topaz from Ethiopia can’t be compared with it.
+\v 19 The \add good\add* topaz from Kush \add (Ethiopia)\add* can’t be compared with it.
 \q1 It can’t be paid for with gold.
 \s2 Wisdom is obeying God
 \q1
@@ -2141,12 +2141,12 @@
 \q1 ‘Listen, obeying the master—that’s \bd wisdom\bd*,
 \q2 along with turning away from \add doing\add* evil.’\x + \xo 28:28: \xt Psa 111:10; Prv 1:7; 9:10.\x*
 \c 29
-\ms1 SECTION FOUR: Iyyov’s final speech
+\ms1 SECTION FOUR: Iyov’s final speech
 \mr (29:1–31:40)
-\s1 Iyyov remembers his earlier life
+\s1 Iyov remembers his earlier life
 \p
-\v 1 Then Iyyov continued speaking:
-\sp Iyyov
+\v 1 Then Iyov \add (Job)\add* continued speaking:
+\sp Iyov
 \q1
 \v 2 How I wish for \add my life\add* in the months of the past,
 \q1 in the days when God watched over me.
@@ -2322,8 +2322,8 @@
 \v 31 \add So\add* my harp is used for mourning.
 \q1 My flute \add accompanies\add* those who are weeping.
 \c 31
-\s1 Iyyov’s claims of obedience
-\sp Iyyov
+\s1 Iyov’s claims of obedience
+\sp Iyov
 \p
 \v 1 I’ve made an agreement with my eyes,
 \q1 \add about\add* how I’ll be careful when I look at a young woman.
@@ -2359,7 +2359,7 @@
 \v 11 \add Yes,\add* that \add would be wicked\add*,
 \q1 and would be an evil deserving \add judgement\add*.
 \q1
-\v 12 It’s a fire that will devour Abaddon, ???
+\v 12 It’s a fire that will devour Avadon, ???
 \q1 and it would uproot all of my harvest. ???
 \q1
 \v 13 If I \add didn’t treat my male or female servants fairly\add*,
@@ -2451,19 +2451,19 @@
 \q1
 \v 40 then let thornbushes grow up instead of wheat,
 \q1 and \add let\add* stinkweed \add grow up\add* instead of barley.
-\p (That finishes Iyyov’s response.)
+\p (That finishes Iyov’s \add (Job)\add* response.)
 \c 32
 \ms1 SECTION FIVE: Elihu’s speeches
 \mr (32:1–37:24)
 \s1 Elihu’s response
 \p
-\v 1 \add After that\add* those three men stopped answering Iyyov, because \add they considered that he had just been trying to justify himself\add*.
-\v 2 Then Elihu (son of Barakel the Buzite, from the clan of Ram) \add got angry with\add* Iyyov because \add Iyyov\add* \add seemed to be\add* claiming that he was \add in the right\add* rather than God.
+\v 1 \add After that\add* those three men stopped answering Iyov \add (Job)\add*, because \add they considered that he had just been trying to justify himself\add*.
+\v 2 Then Elihu (son of Barakel the Buzite, from the clan of Ram) \add got angry with\add* Iyov because \add Iyov\add* \add seemed to be\add* claiming that he was \add in the right\add* rather than God.
 \p
-\v 3 He was also \add angry\add* at \add Iyyov’s\add* three friends, because they had declared that he was wrong, yet hadn’t found any \add reasonable justification for it\add*.
+\v 3 He was also \add angry\add* at \add Iyov’s\add* three friends, because they had declared that he was wrong, yet hadn’t found any \add reasonable justification for it\add*.
 \v 4 Elihu had \add waited to speak\add* because they were \add all\add* older than him,
 \v 5 \add but\add* when \add he\add* had seen that they \add didn’t really have any answer\add*, he \add got angry\add*.
-\s1 Elihu’s first speech to Iyyov’s three friends
+\s1 Elihu’s first speech to Iyov’s three friends
 \p
 \v 6 \add So\add* \add now\add* Elihu (son of Barakel the Buzite) \add spoke up\add*:
 \sp Elihu
@@ -2488,13 +2488,13 @@
 \q2 while you all searched for the \add right\add* words.
 \q1
 \v 12 I gave you all my full \add attention\add*, \add but\add* listen,
-\q1 none of you could refute Iyyov
+\q1 none of you could refute Iyov \add (Job)\add*
 \q1 \add or\add* could answer his words.
 \q1
 \v 13 So don’t tell yourselves that you displayed wisdom.
 \q1 It’s God who must refute him—not any person.
 \q1
-\v 14 \add But\add* \add Iyyov\add* hasn’t directed his words against me,
+\v 14 \add But\add* \add Iyov\add* hasn’t directed his words against me,
 \q1 and I won’t answer him with your answers.
 \q1
 \v 15 They’re dismayed and can’t answer again.
@@ -2521,9 +2521,9 @@
 \v 22 I don’t know how to \add give fancy titles\add*.
 \q1 My maker would soon take me away.
 \c 33
-\s2 Elihu asks Iyyov to hear him out
+\s2 Elihu asks Iyov to hear him out
 \p
-\v 1 \add So\add* now Iyyov, please hear my speech,
+\v 1 \add So\add* now Iyov \add (Job)\add*, please hear my speech,
 \q1 and listen to all my words.
 \q1
 \v 2 \add Listen\add*, I’ve opened my mouth.
@@ -2544,7 +2544,7 @@
 \q1
 \v 7 Listen, fear of me shouldn’t terrify you.
 \q1 I won’t be putting heavy pressure on you.
-\s2 Elihu responds to Iyyov’s speeches
+\s2 Elihu responds to Iyov’s speeches
 \q1
 \v 8 You’ve certainly spoken in my hearing,
 \q1 and I’ve heard the sound of the words:
@@ -2621,7 +2621,7 @@
 \q1 \add so they can\add* be enlightened with the light of life.
 \b
 \q1
-\v 31 Pay attention, Iyyov, and listen to me.
+\v 31 Pay attention, Iyov \add (Job)\add*, and listen to me.
 \q1 Stay silent and then I’ll speak.
 \q1
 \v 32 If \add you have\add* words, answer me \add then\add*.
@@ -2642,14 +2642,14 @@
 \v 4 Let’s choose justice for ourselves.
 \q1 Let’s discern among ourselves what is good.
 \q1
-\v 5 Because Iyyov has \add declared\add*, ‘I’m righteous,
+\v 5 Because Iyov \add (Job)\add* has \add declared\add*, ‘I’m righteous,
 \q1 but God has deprived me of justice.
 \q1
 \v 6 Would I lie about my \add rights\add*?
 \q1 My wound is incurable despite not having disobeyed.’
 \b
 \q1
-\v 7 What other \add person\add* is like Iyyov?
+\v 7 What other \add person\add* is like Iyov?
 \q1 He drinks up mockery like \add drinking\add* water.
 \q1
 \v 8 He keeps company with those who do evil,
@@ -2742,7 +2742,7 @@
 \v 34 \add People\add* of understanding tell me
 \q1 along with wise \add people\add* \add who\add* listen to me:
 \q1
-\v 35 ‘Iyyov speaks without knowledge,
+\v 35 ‘Iyov \add (Job)\add* speaks without knowledge,
 \q1 and his words lack insight.
 \q1
 \v 36 If only \add he\add* would be tested to the end—
@@ -2799,7 +2799,7 @@
 \v 15 \add So\add* now in his anger, he hasn’t visited,
 \q1 and he doesn’t take much notice of disobedience.
 \q1
-\v 16 \add So\add* Iyyov opens his mouth \add for nothing\add*.
+\v 16 \add So\add* Iyov \add (Job)\add* opens his mouth \add for nothing\add*.
 \q1 He \add says many\add* words \add but doesn’t know what he’s talking about\add*.
 \c 36
 \s1 Elihu continues speaking
@@ -2952,7 +2952,7 @@
 \q1 or because of his favour that he causes it to happen.
 \b
 \q1
-\v 14 Just listen to this, Iyyov.
+\v 14 Just listen to this, Iyov \add (Job)\add*.
 \q1 Stand still and consider how incredible God’s actions are.
 \q1
 \v 15 Do you understand how God makes these things happen,
@@ -2988,9 +2988,9 @@
 \c 38
 \ms1 SECTION SIX: Yahweh’s speeches
 \mr (38:1–42:6)
-\s1 God answers Iyyov
+\s1 God answers Iyov
 \p
-\v 1 Then Yahweh answered Iyyov from the storm:
+\v 1 Then Yahweh answered Iyov \add (Job)\add* from the storm:
 \sp Yahweh
 \q1
 \v 2 Who is this giving \add bad advice\add*,
@@ -3176,9 +3176,9 @@
 \q1 without worrying that her egg-laying might all be wasted.
 \q1
 \v 17 \add Yes,\add* God \add didn’t give her much\add* wisdom,
-\q1 and he didn’t \add fill her with much\add* understanding.
+\q1 and he didn’t \add fill her with much\add* understanding,
 \q1
-\v 18 But it \add doesn’t stop\add* her flapping her wings.
+\v 18 but it \add doesn’t stop\add* her flapping her wings.
 \q1 She laughs at the horse and its rider.
 \b
 \q1
@@ -3209,7 +3209,7 @@
 \q1 \add and why\add* it spreads its wings to \add migrate\add* south?
 \q1
 \v 27 Is it your command that sends the eagle flying upwards,
-\q1 and \add tells it\add* to build it nest up so high?
+\q1 and \add tells it\add* to build its nest up so high?
 \q1
 \v 28 It lives on a cliff,
 \q1 and spends the night in \add its\add* fortress among the sharp rocks.
@@ -3220,26 +3220,26 @@
 \v 30 Its young ones feast on blood,
 \q1 and where there’s dead \add bodies\add*, they’ll be there.\x + \xo 39:30: \xt Mat 24:28; Luk 17:37.\x*
 \c 40
-\s1 God challenges Iyyov to answer
+\s1 God challenges Iyov to answer
 \p
-\v 1 Then Yahweh \add continued\add* to speak to Iyyov:
+\v 1 Then Yahweh \add continued\add* to speak to Iyov \add (Job)\add*:
 \sp Yahweh
 \q1
 \v 2 Will the \add person\add* who’s been finding faults \add now\add* argue with the provider?
 \q1 Let the \add one\add* who \add tries to\add* correct God, \add give an answer\add*.
-\s1 Iyyov’s non-answer
+\s1 Iyov’s non-answer
 \p
-\v 3 Then Iyyov answered Yahweh:
-\sp Iyyov
+\v 3 Then Iyov \add (Job)\add* answered Yahweh:
+\sp Iyov
 \q1
 \v 4 Indeed, I’m insignificant—what could I answer?
 \q1 I’ll \add just\add* put my hand over my mouth.
 \q1
 \v 5 I’ve spoken once, but I won’t answer,
 \q1 and twice, but I won’t continue.
-\s1 Yahweh’s response to Iyyov
+\s1 Yahweh’s response to Iyov
 \p
-\v 6 Then Yahweh \add again\add* spoke to Iyyov from inside the storm:
+\v 6 Then Yahweh \add again\add* spoke to Iyov \add (Job)\add* from inside the storm:
 \sp Yahweh
 \q1
 \v 7 \add Now\add* tuck up your robe like a man \add going into battle\add*.
@@ -3292,7 +3292,7 @@
 \q1 The poplars in the riverbed surround it.
 \q1
 \v 23 If the river gets violent, it doesn’t rush out.
-\q1 It remains confident even when the Jordan \add River\add* surges to his mouth.
+\q1 It remains confident even when the Yarden \add (Jordan)\add* \add River\add* surges to his mouth.
 \q1
 \v 24 Can anyone capture it while its eyes \add watch\add*?
 \q1 Is there anyone who can \add make\add* a \add snare\add* to pierce \add its\add* nose?
@@ -3400,10 +3400,10 @@
 \v 34 It looks down on all \add those who think they’re powerful\add*.
 \q1 It’s the king of all those who are proud.
 \c 42
-\s1 Iyyov requests God’s forgiveness
+\s1 Iyov requests God’s forgiveness
 \p
-\v 1 Then Iyyov answered Yahweh:
-\sp Iyyov
+\v 1 Then Iyov \add (Job)\add* answered Yahweh:
+\sp Iyov
 \q1
 \v 2 I know that you can do everything,
 \q1 and no one can stop you from doing what you want.
@@ -3424,20 +3424,20 @@
 \q1 and I \add show my\add* \add repentance\add* \add by sitting in dust and ashes\add*.
 \ms1 SECTION SEVEN: Final speech and restoration
 \mr (42:7-17)
-\s1 Iyyov’s three friends humiliated by God
+\s1 Iyov’s three friends humiliated by God
 \p
-\v 7 After Yahweh had said that to Iyyov, \add he\add* told Elifaz (from Teman), “\add I’m angry\add* with you and your two friends, because what you all said about me wasn’t right, like what Iyyov \add said\add*.
-\v 8 \add So\add* now get seven bulls and seven rams and go to my servant Iyyov and offer \add them\add* as a burnt offering for yourselves. Then my servant Iyyov will pray for you all. \add I’ll do what he asks and\add* not deal with you like your foolishness \add deserves\add*, because you all didn’t speak accurately about me like Iyyov did.”
+\v 7 After Yahweh had said that to Iyov \add (Job)\add*, \add he\add* told Elifaz (from Teyman), “\add I’m angry\add* with you and your two friends, because what you all said about me wasn’t right, like what Iyov \add said\add*.
+\v 8 \add So\add* now get seven bulls and seven rams and go to my servant Iyov and offer \add them\add* as a burnt offering for yourselves. Then my servant Iyov will pray for you all. \add I’ll do what he asks and\add* not deal with you like your foolishness \add deserves\add*, because you all didn’t speak accurately about me like Iyov did.”
 \p
-\v 9 \add So\add* Elifaz (from Teman) and Bildad (from Shuah) and Zofar (from Naamah) went and did what Yahweh had told them, and Yahweh accepted Iyyov’s \add prayer\add*.
-\s1 Iyyov’s doubled restoration
+\v 9 \add So\add* Elifaz (from Teyman) and Bildad (from Shuah) and Zofar (from Naamah) went and did what Yahweh had told them, and Yahweh accepted Iyov’s \add prayer\add*.
+\s1 Iyov’s doubled restoration
 \p
-\v 10 After Iyyov had prayed for his friends, Yahweh \add changed his situation\add* and \add gave\add* \add him\add* double \add what he had before\add*.\x + \xo 42:10: \xt Yob 1:1-3.\x*
+\v 10 After Iyov \add (Job)\add* had prayed for his friends, Yahweh \add changed his situation\add* and \add gave\add* \add him\add* double \add what he had before\add*.\x + \xo 42:10: \xt Yob 1:1-3.\x*
 \v 11 Then all of his brothers and sisters and everyone who’d known him before, came to his house and \add had a meal\add* with him, and they comforted him and consoled him about all the \add troubles\add* that Yahweh had brought on him. Then they each gave him a \add silver coin\add* and a gold ring.
 \p
-\v 12 Then Yahweh blessed the second part of Iyyov’s \add life\add* more than the first, and he \add ended up with\add* 14,000 sheep, 6,000 camels, 1,000 \add working\add* pairs of cows, and 1,000 female donkeys.
+\v 12 Then Yahweh blessed the second part of Iyov’s \add life\add* more than the first, and he \add ended up with\add* 14,000 sheep, 6,000 camels, 1,000 \add working\add* pairs of cows, and 1,000 female donkeys.
 \v 13 He \add also\add* had seven \add more\add* sons and three \add more\add* daughters
-\v 14 who he named Yemimah, Ketsiah, and Keren-Happuk.
-\v 15 No one in the whole country was as beautiful as Iyyov’s daughters, and as well as their brothers, their father gave them \add each a piece of land\add* as an inheritance.
-\v 16 Iyyov lived another 140 years after \add all\add* that, and was \add even\add* able to see his great-grandchildren.
-\v 17 Then Iyyov died \add in good circumstances\add* and at a very old age.
+\v 14 who he named Yemimah, Ketsiah, and Keren-Hafuk.
+\v 15 No one in the whole country was as beautiful as Iyov’s daughters, and as well as their brothers, their father gave them \add each a piece of land\add* as an inheritance.
+\v 16 Iyov lived another 140 years after \add all\add* that, and was \add even\add* able to see his great-grandchildren.
+\v 17 Then Iyov died \add in good circumstances\add* and at a very old age.

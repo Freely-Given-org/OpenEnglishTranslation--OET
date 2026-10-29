@@ -1,18 +1,18 @@
-\id 2PE - Open English Translation—Readers' Version (OET-RV) v0.1.55
+\id 2PE - Open English Translation—Readers' Version (OET-RV) v0.2.1
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 PE2
 \rem WORDTABLE OET-LV_NT_word_table.tsv
-\h 2 Peter
-\toc1 2 Peter
-\toc2 2 Peter
+\h 2 Kefa
+\toc1 2 Kefa
+\toc2 2 Kefa
 \toc3 2 Ptr
 \mt2 The first letter from
-\mt1 Simon ‘the Rock’ (Peter)
+\mt1 Shim’on ‘the Rock’ (Peter)
 \is1 Introduction
-\ip \bk The second letter from Simon ‘the rock Peter’\bk* was sent to believers in various towns of Asia Minor (also called Anatolia, now part of modern Turkey) (1 Peter 1:1, 2 Peter 3:1). His purpose of writing this was to contradict the work of false teachers, and to scold the people for their bad behaviour as a result of following that teaching. Therefore he encouraged them to not believe that teaching because they should only believe the teaching concerning the messiah. They also need to be adding the following to their faith: good behaviour, wisdom/knowledge, self-control, patience, obeying God, and loving others.
-\ip Those people taught that the messiah would not return since it had already been quite a while and he hadn't yet returned. But Simon answered by saying that the messiah would certainly return, but God doesn't want to punish everyone, but desires that people would turn away from their sins.
-\iot Main components of Peter's letter
+\ip \bk The second letter from Shim’on ‘the rock Kefa’\bk* was sent to believers in various towns of Asia Minor (also called Anatolia, now part of modern Turkey) (1 Peter 1:1, 2 Peter 3:1). His purpose of writing this was to contradict the work of false teachers, and to scold the people for their bad behaviour as a result of following that teaching. Therefore he encouraged them to not believe that teaching because they should only believe the teaching concerning the messiah. They also need to be adding the following to their faith: good behaviour, wisdom/knowledge, self-control, patience, obeying God, and loving others.
+\ip Those people taught that the messiah would not return since it had already been quite a while and he hadn't yet returned. But Shim’on answered by saying that the messiah would certainly return, but God doesn't want to punish everyone, but desires that people would turn away from their sins.
+\iot Main components of Kefa's letter
 \io1 Introduction \ior 1:1-2\ior*
 \io1 The calling of Christians \ior 1:3-21\ior*
 \io1 False teachers \ior 2:1-22\ior*
@@ -22,7 +22,7 @@
 \c 1
 \rem /s1 Salutation; Greetings from Peter
 \p
-\v 1 This \add letter is from\add* Simon¦150466 Peter¦150468 (Grk: \add !Simeon Petros\add*), a¦150469 slave¦150469 and¦150470 messenger \nd of¦150472 Yeshua¦150472 the¦150473 messiah¦150473\nd* (Grk: \add !Yesou Christos\add*), writing to¦150474 those who have¦150477 faith¦150478 in¦150480 the¦150481 sinlessness of¦150483 our \nd God¦150485\nd* and¦150487 saviour¦150488 \nd Yeshua¦150490 Messiah¦150491\nd* that's just as precious as our faith.
+\v 1 This \add letter is from\add* Shim’on¦150466 \add !(Simon¦150466)\add* Kefa¦150468 \add !(Peter¦150468; Grk. Petros)\add* , a¦150469 slave¦150469 and¦150470 messenger \nd of¦150472 Yeshua¦150472 \+add !(Jesus¦150472; Grk. Yesus)\+add* the¦150473 messiah¦150473\nd* \add !(Grk. Christos)\add*, writing to¦150474 those who have¦150477 faith¦150478 in¦150480 the¦150481 sinlessness of¦150483 our \nd God¦150485\nd* and¦150487 saviour¦150488 \nd Yeshua¦150490 Messiah¦150491\nd* that's just as precious as our faith.
 \p
 \v 2 May you experience much grace¦150492 and¦150494 peace¦150495 through your knowledge¦150498 \nd of¦150500 God¦150500\nd* and¦150501 \nd Yeshua¦150502\nd* our¦150506 \nd master¦150505\nd*.
 \s1 God's calling
@@ -33,7 +33,7 @@
 \v 5 For this¦150577 same¦150575 reason, work hard to apply your¦150588 faith¦150587 adding moral excellence, and¦150592 to that excellence add knowledge¦150596;
 \v 6 to that knowledge¦150600 add self-control¦150602; to that self-control¦150606 add endurance¦150608; to that endurance¦150612 add godliness¦150614;
 \v 7 to that godliness¦150619 add brotherly¦150621 concern; and¦150623 to the¦150624 brotherly¦150625 concern add selfless love.
-\v 8 Because¦150629 if these¦150628 \add >things\add* are part of you¦150630 and¦150633 continually increasing, your knowledge¦150648 of¦150643 our¦150645 \nd master¦150644 Yeshua¦150646 Messiah¦150647\nd* won't become useless or unproductive.
+\v 8 Because¦150629 if these¦150628 \add >things\add* are part of you¦150630 and¦150633 continually increasing, your knowledge¦150648 of¦150643 our¦150645 \nd master¦150644 Yeshua¦150646 \+add !(Jesus¦150646; Grk. Yesus)\+add* Messiah¦150647\nd* won't become useless or unproductive.
 \v 9 But if these¦150653 \add >things\add* aren't¦150651 part of someone, that person is¦150655 shortsighted as if they've forgotten¦150657 that prior cleansing of their sins¦150665.
 \p
 \v 10 So¦150666 then fellow Christians, work hard to¦150683 make¦150683 your calling¦150680 and¦150681 election certain—that way you¦150677 will never¦150688 fall away—
@@ -63,7 +63,7 @@
 \p
 \v 4 Because¦150989 if¦150988 \nd God¦150991\nd* didn't¦150994 spare¦150995 the¦150992 messengers¦150992 when they sinned¦150993, but¦150996 chained them¦151001 in darkness¦150999 and kept¦151005 them¦151002 to be delivered to judgement¦151004 in due course,\x + \xo 2:4: \xt Yud 6.\x*
 \v 5 and¦151009 if he¦151013 didn't¦151012 spare¦151013 the¦151010 ancient¦151010 world¦151011 but¦151014 only preserved¦151019 the¦151015 eight including Noah¦151016 the proclaimer¦151018 of¦151017 righteousness¦151017 when the¦151020 flood¦151020 came on the¦151023 ungodly¦151023 world,\x + \xo 2:5: \xt Gen 6:1–7:24.\x*
-\v 6 and¦151025 if he reduced¦151031 the¦151026 cities¦151026 of¦151027 Sodom¦151027 and¦151028 Amorah¦151029 \add !(Gomorrah¦151029)\add* to¦151031 ashes¦151031 by a catastrophe\x + \xo 2:6: \xt Gen 19:24.\x* which condemned¦151033 them¦151033 to being an¦151034 example¦151034 of¦151038 what the ungodly¦151039 will become,
+\v 6 and¦151025 if he reduced¦151031 the¦151026 cities¦151026 of¦151027 Sedom¦151027 and¦151028 Amorah¦151029 \add !(Gomorrah¦151029)\add* to¦151031 ashes¦151031 by a catastrophe\x + \xo 2:6: \xt Gen 19:24.\x* which condemned¦151033 them¦151033 to being an¦151034 example¦151034 of¦151038 what the ungodly¦151039 will become,
 \v 7 and¦151042 if he saved¦151055 the righteous¦151043 man Lot¦151044 who was¦151045 distressed¦151045 by¦151047 the¦151048 gross immorality of the¦151049 lawless¦151050 \add >people\add*\x + \xo 2:7: \xt Gen 19:1-16.\x*
 \v 8 and whose righteous¦151061 soul¦151068 was tormented¦151072 by seeing¦151056 and¦151058 hearing¦151059 their \add ≈lawlessness¦151070\add* day¦151065 after day¦151067,
 \v 9 then \nd the¦151074 master¦151074\nd* knows¦151073 how to¦151079 rescue¦151079 godly¦151075 \add >people\add* from their trials, and knows how to¦151089 keep¦151089 the¦151081 unrighteous¦151081 \add >people\add* to¦151085 be¦151088 punished¦151088 at the¦151086 day¦151086 of¦151087 judgement¦151087,
@@ -73,13 +73,13 @@
 \v 12 But¦151131 these¦151129 men act like¦151132 unthinking animals¦151134 that are¦151136 born¦151136 to be captured¦151140 and¦151141 destroyed when they slander¦151147 concerning things they¦151145 know¦151145 nothing about¦151152, and¦151153 they¦151155 will¦151155 bring about their¦151152 own destruction.
 \v 13 The harm they did¦151157 will lead to their own harm as¦151159 payment as¦151161 their indulgence in¦151166 broad daylight¦151167. They've become spots and¦151171 blemishes¦151172 as they feast¦151180 together with you¦151181 yet take joy in their deception.
 \v 14 Their eyes¦151182 are full¦151184 of¦151185 lust for adultery¦151185 and¦151186 never cease to sin¦151188, and having¦151197 trained¦151194 \add &their¦151193\add* \add #hearts¦151193\add* in¦151195 greed¦151195 they entice¦151190 unstable¦151192 people¦151191 to become their cursed¦151198 offspring.
-\v 15 They have¦151200 left¦151200 the¦151203 right¦151203 path¦151204 and gone astray, following¦151206 the¦151207 path¦151208 of¦151212 Bosor's¦151212 son Balaam¦151210 who¦151213 loved¦151216 the¦151214 \add #wages¦151214\add* of¦151215 unrighteousness¦151215,\x + \xo 2:15-16: \xt Num 22:4-35.\x*
+\v 15 They have¦151200 left¦151200 the¦151203 right¦151203 path¦151204 and gone astray, following¦151206 the¦151207 path¦151208 of¦151212 Be'or's¦151212 son Bil'am¦151210 \add !(Balaam¦151210)\add* who¦151213 loved¦151216 the¦151214 \add #wages¦151214\add* of¦151215 unrighteousness¦151215,\x + \xo 2:15-16: \xt Num 22:4-35.\x*
 \v 16 but¦151219 he¦151220 was scolded¦151218 for¦151221 his sin when a¦151223 \add normally\add* dumb¦151224 donkey¦151223 spoke¦151229 to him with a¦151227 man's¦151227 voice¦151228 to stop his madness.
 \p
 \v 17 These¦151235 men are¦151236 like waterless¦151238 fountains¦151237 and¦151239 like mists¦151240 driven¦151244 by¦151242 \add #storms¦151243\add*, and the gloomy darkness is¦151252 reserved for¦151245 them
 \v 18 because¦151254 they speak¦151257 vane and inflated words¦151253 to entice¦151258 people¦151261 to¦151262 fleshly lusts¦151260. Those who have just escaped¦151267 from¦151267 the¦151270 errors of their living
 \v 19 are promised¦151277 freedom¦151275, but they¦151278 themselves have become slaves¦151279 to corruption¦151283, because¦151285 whatever¦151284 a person has¦151287 been¦151287 defeated¦151287 by¦151288 is¦151290 what¦151284 they become a slave to.
-\v 20 Because¦151292 if¦151291 they have¦151293 escaped¦151293 the¦151294 defilements¦151295 of¦151296 the¦151296 world¦151297 by their knowledge¦151299 of¦151300 \add &our¦151300\add* \nd master¦151301\nd* and¦151303 saviour¦151304 \nd Yeshua¦151305 Messiah¦151306\nd* and¦151308 yet get¦151312 entangled¦151310 again¦151309, they¦151311 are¦151311 defeated¦151311 and have ended¦151315 up worse¦151317 off than¦151317 at the¦151318 beginning.
+\v 20 Because¦151292 if¦151291 they have¦151293 escaped¦151293 the¦151294 defilements¦151295 of¦151296 the¦151296 world¦151297 by their knowledge¦151299 of¦151300 \add &our¦151300\add* \nd master¦151301\nd* and¦151303 saviour¦151304 \nd Yeshua¦151305 \+add !(Jesus¦151305; Grk. Yesus)\+add* Messiah¦151306\nd* and¦151308 yet get¦151312 entangled¦151310 again¦151309, they¦151311 are¦151311 defeated¦151311 and have ended¦151315 up worse¦151317 off than¦151317 at the¦151318 beginning.
 \v 21 It¦151322 would have been¦151322 better¦151320 not¦151325 to¦151327 have¦151327 known¦151327 the¦151328 way¦151329 of¦151331 righteousness¦151331, than¦151332 having¦151333 known¦151333 it¦151333 and to¦151338 turn¦151338 back from¦151341 the¦151342 holy¦151345 instruction¦151346 that was¦151343 passed¦151343 on to¦151344 them¦151344.
 \v 22 The proverb¦151353 is correct in what it says and has¦151347 happened¦151347 to¦151349 them¦151349: “A¦151354 dog¦151354 returns¦151355 to¦151356 its¦151357 own¦151358 vomit¦151359,”\x + \xo 2:22: \xt Prv 26:11.\x* and¦151360 “A¦151361 sow¦151361 that's been washed¦151362 wallows¦151364 in¦151366 the¦151366 mud¦151366 again.”
 \c 3
@@ -104,9 +104,9 @@
 \rem /s1 Final Exhortation and Doxology
 \p
 \v 14 And so¦151648 dear¦151649 friends¦151649, while you await¦151651 these¦151650 events be¦151652 eager and¦151655 found¦151659 to¦151659 be¦151659 at peace¦151661 with him—spotless¦151654 and blameless¦151657.
-\v 15 And¦151662 consider¦151669 the¦151663 patience¦151667 of¦151664 our¦151666 \nd master¦151665\nd* as leading to salvation¦151668 as¦151671 our¦151675 dear¦151674 brother¦151676 Paul¦151677 wrote¦151684 to¦151678 you using the¦151679 wisdom¦151683 that has¦151681 been¦151681 given¦151681 to¦151682 him¦151682.
+\v 15 And¦151662 consider¦151669 the¦151663 patience¦151667 of¦151664 our¦151666 \nd master¦151665\nd* as leading to salvation¦151668 as¦151671 our¦151675 dear¦151674 brother¦151676 Paulos¦151677 wrote¦151684 to¦151678 you using the¦151679 wisdom¦151683 that has¦151681 been¦151681 given¦151681 to¦151682 him¦151682.
 \v 16 He speaks¦151692 in¦151688 all¦151689 \add &his\add* letters¦151691 concerning¦151696 these¦151697 \add >things\add*, some¦151704 of which¦151699 are¦151701 hard¦151703 to¦151703 understand¦151703 and which¦151705 ignorant¦151707 and¦151708 unstable¦151709 \add >people\add* twist¦151710 just like¦151712 \add ≡they twist\add* the¦151714 other¦151715 scriptures¦151716 to¦151717 their¦151718 own¦151719 destruction¦151722.
 \rem /s1 Peter's Final Words
 \p
 \v 17 So¦151724 knowing¦151726 this in advance dear¦151725 friends¦151725, guard¦151728 yourselves in¦151729 case you¦151737 fall¦151737 from¦151737 your¦151738 own¦151739 stable position with¦151731 the¦151731 same errors as the¦151732 lawless¦151733 ones.
-\v 18 Rather grow¦151741 in¦151744 the grace¦151745 and¦151746 knowledge¦151747 of¦151748 our¦151750 \nd master¦151749\nd* and¦151751 saviour¦151752 \nd Yeshua¦151753 Messiah¦151754\nd*. May the¦151756 glory¦151757 be his, both¦151758 now¦151759 and¦151760 through the¦151762 \add #days¦151762\add* of¦151763 eternity¦151763. \add ≈May¦151764 it¦151764 be¦151764 so¦151764\add*.
+\v 18 Rather grow¦151741 in¦151744 the grace¦151745 and¦151746 knowledge¦151747 of¦151748 our¦151750 \nd master¦151749\nd* and¦151751 saviour¦151752 \nd Yeshua¦151753 \+add !(Jesus¦151753; Grk. Yesus)\+add* Messiah¦151754\nd*. May the¦151756 glory¦151757 be his, both¦151758 now¦151759 and¦151760 through the¦151762 \add #days¦151762\add* of¦151763 eternity¦151763. \add ≈May¦151764 it¦151764 be¦151764 so¦151764\add*.

@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-10-29",
+  "step_commit": "be4191f0082aeedddb0eff0c02c966292b2bd641",
+  "openscriptures_commit": "dd5a2fd530ab3c6b748c174cec38966c356d8111",
+  "files": [
+    {
+      "filename": "grcbrent_usfm.zip",
+      "url": "https://ebible.org/Scriptures/grcbrent_usfm.zip",
+      "sha256": "e8a6051afa366ff63c0c161fa5d5c8412de0e9fcfc7ba1a03e7d3b2eb02572ea",
+      "bytes": 1729129,
+      "license": "Public Domain",
+      "attribution": "Brenton Greek Septuagint, eBible.org; source files dated 2026-04-08"
+    },
+    {
+      "filename": "STEPBible-README.md",
+      "url": "https://raw.githubusercontent.com/STEPBible/STEPBible-Data/be4191f0082aeedddb0eff0c02c966292b2bd641/README.md",
+      "sha256": "261d5157c0ffeadeedad3f734db945a4c3642e3e4ce5fa28002985b6c52437b1",
+      "bytes": 14495,
+      "license": "CC-BY-4.0",
+      "attribution": "STEPBible.org, based on work at Tyndale House Cambridge"
+    },
+    {
+      "filename": "TBESG.txt",
+      "url": "https://raw.githubusercontent.com/STEPBible/STEPBible-Data/be4191f0082aeedddb0eff0c02c966292b2bd641/Lexicons/TBESG%20-%20Translators%20Brief%20lexicon%20of%20Extended%20Strongs%20for%20Greek%20-%20STEPBible.org%20CC%20BY.txt",
+      "sha256": "312f723d7b8ef263bbdfb0451c9b8057125804dfff390b6f8544cff2a84b57f4",
+      "bytes": 4736912,
+      "license": "CC-BY-4.0",
+      "attribution": "STEPBible.org, based on work at Tyndale House Cambridge"
+    },
+    {
+      "filename": "TAGNT-Mat-Jhn.txt",
+      "url": "https://raw.githubusercontent.com/STEPBible/STEPBible-Data/be4191f0082aeedddb0eff0c02c966292b2bd641/Translators%20Amalgamated%20OT%2BNT/TAGNT%20Mat-Jhn%20-%20Translators%20Amalgamated%20Greek%20NT%20-%20STEPBible.org%20CC-BY.txt",
+      "sha256": "ab8eaaeb68e17a1dcfa34e1e9350358f22f03bc2a97244d848750ad81044bc8e",
+      "bytes": 14189032,
+      "license": "CC-BY-4.0",
+      "attribution": "STEPBible.org, based on work at Tyndale House Cambridge"
+    },
+    {
+      "filename": "TAGNT-Act-Rev.txt",
+      "url": "https://raw.githubusercontent.com/STEPBible/STEPBible-Data/be4191f0082aeedddb0eff0c02c966292b2bd641/Translators%20Amalgamated%20OT%2BNT/TAGNT%20Act-Rev%20-%20Translators%20Amalgamated%20Greek%20NT%20-%20STEPBible.org%20CC-BY.txt",
+      "sha256": "524e32375361e6d3fa2f7ef00b87605fdc4317a762f395651a05fdc31ad031b7",
+      "bytes": 15939932,
+      "license": "CC-BY-4.0",
+      "attribution": "STEPBible.org, based on work at Tyndale House Cambridge"
+    },
+    {
+      "filename": "OpenScriptures-README.md",
+      "url": "https://raw.githubusercontent.com/openscriptures/GreekResources/dd5a2fd530ab3c6b748c174cec38966c356d8111/README.md",
+      "sha256": "3e7f9d9202a4c09f604ba7a79be15df919e9d32901b14b968ded89756bfadf18",
+      "bytes": 1711,
+      "license": "CC-BY-4.0",
+      "attribution": "Open Scriptures Septuagint Project"
+    },
+    {
+      "filename": "GreekWordList.js",
+      "url": "https://raw.githubusercontent.com/openscriptures/GreekResources/dd5a2fd530ab3c6b748c174cec38966c356d8111/GreekWordList.js",
+      "sha256": "84703d5de9fae423c141ff374ffab73fcda288d0a400fcd500445302a5dbe483",
+      "bytes": 1662647,
+      "license": "CC-BY-4.0",
+      "attribution": "Open Scriptures Septuagint Project"
+    },
+    {
+      "filename": "GreekWordList.md",
+      "url": "https://raw.githubusercontent.com/openscriptures/GreekResources/dd5a2fd530ab3c6b748c174cec38966c356d8111/GreekWordList.md",
+      "sha256": "4d143a9503aa6b63425be919461eb1fca8ef46512a20fe48b25014db45d1516e",
+      "bytes": 3072,
+      "license": "CC-BY-4.0",
+      "attribution": "Open Scriptures Septuagint Project"
+    },
+    {
+      "filename": "tlg0527.tlg035.1st1K-grc1.xml",
+      "url": "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/ed91552c52530c8f5a3ddf2dd767e899372a804c/data/tlg0527/tlg035/tlg0527.tlg035.1st1K-grc1.xml",
+      "sha256": "539ddb781c11a4cc5e8d954f872e11a37711d9dd8a4a4851f803a14494fd067e",
+      "bytes": 105648,
+      "license": "CC-BY-SA-4.0",
+      "attribution": "Open Greek and Latin / First1KGreek; Harvard College Library; Digital Divide Data transcription of H. B. Swete, The Old Testament in Greek, volume III (1905)"
+    },
+    {
+      "filename": "tlg0527.tlg028.1st1K-grc1.xml",
+      "url": "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/ed91552c52530c8f5a3ddf2dd767e899372a804c/data/tlg0527/tlg028/tlg0527.tlg028.1st1K-grc1.xml",
+      "sha256": "5155ba48f1474ef03abeea7a1a74e39b28cc54b4e8159c13208084f80d9b99a8",
+      "bytes": 91500,
+      "license": "CC-BY-SA-4.0",
+      "attribution": "Open Greek and Latin / First1KGreek; Harvard College Library; Digital Divide Data transcription of H. B. Swete, The Old Testament in Greek, volume III (1905)"
+    }
+  ],
+  "first1kgreek_commit": "ed91552c52530c8f5a3ddf2dd767e899372a804c"
+}

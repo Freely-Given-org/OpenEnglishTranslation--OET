@@ -1,4 +1,4 @@
-\id JOS - Open English Translation—Readers' Version (OET-RV) v0.2.1
+\id JOS - Open English Translation—Readers' Version (OET-RV) v0.2.2
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 JOS
@@ -10,7 +10,7 @@
 \mt1 Yehoshua
 \mt2 (Joshua)
 \is1 Introduction
-\ip This account about Yehoshua, traditionally ‘Joshua’ in English (after ‘I’ and then ‘J’ changed over the centuries from a ‘Y’ sound), tells how the Israelis invaded Kena'an and took control of the land. Yehoshua led them forward now after replacing Mosheh (Moses) when he passed away somewhere on a mountain. Some of the main events described in this document include: their crossing the Yarden river, the demolition of Yeriho (traditionally ‘Jericho’), the war at Ay, the allocation of blocks of land to the various Israeli tribes and others, and the renewal of the agreement between God and his people.
+\ip This account about Yehoshua, traditionally ‘Yehoshua’ in English (after ‘I’ and then ‘J’ changed over the centuries from a ‘Y’ sound), tells how the Israelis invaded Kena'an and took control of the land. Yehoshua led them forward now after replacing Mosheh (Moses) when he passed away somewhere on a mountain. Some of the main events described in this document include: their crossing the Yarden river, the demolition of Yeriho (traditionally ‘Jericho’), the war at Ay, the allocation of blocks of land to the various Israeli tribes and others, and the renewal of the agreement between God and his people.
 \ip The most well-known saying in this account is, “…choose for yourselves today who you will serve… But as for me and my household, we will serve Yahweh.” (24:15).
 \iot Main components of this account
 \io1 The defeat of the Kena'anim \ior 1:1–12:24\ior*
@@ -32,7 +32,7 @@
 \v 1 After¦99058 the¦99059 death¦99059 of¦99059 Yahweh's servant Mosheh \add !(Moses)\add*, Yahweh spoke¦99063 to¦99065 Mosheh's servant Yehoshua¦99067 \add !(Joshua¦99067)\add* (the¦99068 son¦99068 of¦99068 Nun¦99070), saying¦99073,
 \v 2 “Now¦99078 that¦99084 my¦99076 servant¦99076 Mosheh¦99075 is dead, you¦99085 and¦99086 all¦99086 \add #these\add* people¦99088 \add ≈should pack up\add* \add and\add* cross¦99080 over this¦99089 \add River\add* Yarden¦99083 \add !(Jordan¦99083)\add* \add to go\add* to¦99090 the¦99092 land¦99092 that¦99093 I¦99094 am¦99095 about¦99095 to¦99095 give¦99095 to¦99096 them¦99096—to¦99097 Yisrael's¦99098 \add !(Israel¦99098)\add* descendants.
 \v 3 I'll¦99110 give¦99110 you all every¦99100 place¦99102 that¦99103 the¦99105 \add #soles¦99105\add* of¦99105 your¦99107 \add #feet¦99107\add* tread¦99104 on¦99108, just¦99111 like¦99111 I¦99112 told¦99112 Mosheh¦99115.\x + \xo 1:3-5: \xt Deu 11:24-25.\x*
-\v 4 Your \add ≈territory¦99137 will extend\add* from¦99117 the¦99117 wilderness¦99117 \add in the south\add* to the¦99118 Levanon¦99118 \add mountains in the north\add*, and¦99120 from the large¦99123 Perat¦99126 \add !(Euphrates¦99126)\add* River \add in the east\add*, and¦99130 \add ≈right to¦99130 the¦99132 Mediterranean\add* sea¦99132 \add ≈in the west\add*, including all¦99127 of¦99134 the¦99135 Hittim'¦99129 land¦99128.
+\v 4 Your \add ≈territory¦99137 will extend\add* from¦99117 the¦99117 wilderness¦99117 \add in the south\add* to the¦99118 Levanon¦99118 \add mountains in the north\add*, and¦99120 from the large¦99123 Perat¦99126 \add !(Euphrates¦99126)\add* River \add in the east\add*, and¦99130 \add ≈right to¦99130 the¦99132 Mediterranean\add* sea¦99132 \add ≈in the west\add*, including all¦99127 of¦99134 the¦99135 Hitim'¦99129 land¦99128.
 \v 5 No man will¦99141 \add ≈be able to¦99143 challenge your leadership as long as you live¦99146\add*—I'll be with you just¦99147 as¦99147 I¦99148 was¦99148 with¦99149 Mosheh¦99151—I¦99152 won't¦99154 fail you¦99155 or abandon¦99157 you¦99157.\x + \xo 1:5: \xt Deu 31:6,8; Heb 13:5.\x*
 \v 6 Be¦99159 strong¦99159 and¦99160 be¦99160 courageous¦99160, for¦99161 you yourself will¦99163 \add ≈lead\add* \add #these\add* people¦99166 to¦99163 inherit¦99163 the land¦99170 that¦99171 I¦99173 promised¦99173 their¦99174 ancestors¦99174 that I'd give¦99175 to¦99176 them¦99176.\x + \xo 1:6: \xt Deu 31:6-7,23.\x*
 \v 7 Just¦99178 be¦99179 strong¦99179 and¦99180 very¦99181 courageous¦99180—making sure that¦99187 you¦99188 \add ≈obey everything\add* that my¦99190 servant¦99190 Mosheh¦99189 instructed¦99188 you. Don't¦99191 turn¦99193 away to the right¦99195 or to the left¦99196 from it, so¦99197 that¦99197 you'll¦99198 be wise in¦99199 every¦99199 \add ≈situation that you¦99201 end up in\add*.
@@ -105,7 +105,7 @@
 \v 8 Tell¦100098 the¦100093 priests¦100093 who¦100094 are carrying¦100094 the¦100095 \add sacred\add* chest¦100095 that as soon as \add %they¦100099\add* come¦100099 to¦100100 the¦100102 edge¦100102 of¦100102 the river, \add %they\add* should \add ≈go in¦100105 just¦100099 a little and then stop there\add*.”
 \p
 \v 9 Then¦100109 Yehoshua¦100110 told¦100109 the¦100113 Israelis¦100114, “\add ≈Gather around\add* here and¦100117 listen¦100117 to your¦100122 god¦100122 Yahweh's¦100121 \add #message¦100120\add*.”
-\v 10 \add *He¦100125\add* told¦100124 \add <them\add*, “This¦100126 is how you'll¦100127 all know¦100127 that¦100128 God¦100129, who can do anything, is¦100131 among¦100131 you. With your¦100131 own eyes, you'll all see how he'll¦100133 take away the land from¦100134 the¦100137 Kena'anim¦100137 \add !(Canaanites¦100137)\add*, the¦100140 Hittim, the¦100143 Hivim¦100143, the¦100146 Perizzim, the¦100149 Girgashim¦100149, the¦100150 Amorim, and¦100151 the¦100151 Yevusim¦100151.
+\v 10 \add *He¦100125\add* told¦100124 \add <them\add*, “This¦100126 is how you'll¦100127 all know¦100127 that¦100128 God¦100129, who can do anything, is¦100131 among¦100131 you. With your¦100131 own eyes, you'll all see how he'll¦100133 take away the land from¦100134 the¦100137 Kena'anim¦100137 \add !(Canaanites¦100137)\add*, the¦100140 Hitim, the¦100143 Hivim¦100143, the¦100146 Perizim, the¦100149 Girgashim¦100149, the¦100150 Amorim, and¦100151 the¦100151 Yevusim¦100151.
 \v 11 Listen, the¦100154 \add sacred\add* chest¦100154 containing the¦100155 slabs that belongs to the¦100156 master¦100156 who \add owns\add* the¦100159 whole¦100157 world¦100159, is¦100160 about¦100160 to¦100160 \add be taken\add* across the Yarden¦100162 \add !(Jordan¦100162)\add* \add ≈in¦100161 front¦100161 of¦100161\add* you¦100161.
 \v 12 \add ≈So¦100164\add* now¦100164, \add ≈select¦100165 one man¦100169 from¦100170 each of¦100170 your twelve tribes¦100178\add*,
 \v 13 and¦100180 as soon as the \add ≈priests¦100184 carrying¦100185 the¦100186 sacred chest¦100186 go into¦100192 the Yarden¦100193, as soon as their feet¦100183 touch the¦100194 water¦100194, the¦100195 river water on the¦100197 upstream side\add* will¦100200 pile up in a¦100201 heap¦100201.”
@@ -145,13 +145,13 @@
 \v 19 The¦100677 people¦100677 had come¦100678 up¦100678 from¦100679 the river valley \add ≈around the end of March\add* and¦100685 they¦100685 camped¦100685 east¦100688 of¦100688 Yeriho¦100689 at Gilgal¦100686,
 \v 20 which¦100696 was \add *where\add* \add #they¦100697\add* had¦100697 set¦100701 up¦100701 the \add monument of\add* twelve boulders¦100694.
 \v 21 Then¦100705 \add @Yehoshua¦100705\add* told¦100705 the¦100708 Israelis¦100709, “\add ≈In the future\add* when your¦100713 descendants¦100713 ask¦100718 why these¦100721 boulders¦100720 are here,
-\v 22 tell¦100727 them that this¦100734 is where Yisrael¦100730 \add !(Israel¦100730)\add* crossed¦100729 the¦100733 Yarden¦100733 \add River\add* on dry land¦100728.
+\v 22 tell¦100727 them that this¦100734 is where Yisrael¦100730 crossed¦100729 the¦100733 Yarden¦100733 \add River\add* on dry land¦100728.
 \v 23 Your god Yahweh¦100739 dried¦100738 up¦100738 the¦100743 river \add #water¦100743\add* ahead¦100745 of¦100745 you¦100745 until¦100746 you'd¦100748 all crossed¦100748 over¦100748, just¦100749 as¦100749 \add *he¦100751\add* had done¦100750 when he¦100758 dried¦100758 up¦100758 the Red Sea¦100753 before¦100759 we¦100762 crossed¦100762 over¦100762.
 \v 24 Yahweh did that so¦100764 that all¦100766 the¦100768 peoples¦100768 in the¦100769 world¦100769 would know¦100765 that¦100774 \add *he\add* is¦100775 powerful¦100775, \add and\add* so¦100777 that¦100777 you'll¦100778 always all respect¦100778 \add *him¦100781\add*.
 \c 5
 \rem /s1 The New Generation Circumcised; Circumcision at Gilgal
 \p
-\v 1 When¦100788 all¦100790 the¦100793 Amori¦100793 kings who¦100794 were¦100795 on¦100795 the¦100795 \add west\add* side¦100795 of¦100795 the¦100796 Yarden¦100796 (towards the ocean) and¦100798 all¦100798 the¦100800 Kena'ani¦100801 \add !(Canaanite¦100801)\add* kings (beside the¦100805 ocean¦100805) heard¦100789 how¦100807 Yahweh¦100810 had¦100809 dried¦100809 up¦100809 the¦100813 \add #water¦100813\add* in the¦100814 Yarden¦100814 \add River\add* until¦100819 \add @the¦100821 Israelis¦100821\add* had¦100821 crossed¦100821 over¦100821, they \add ≈trembled with fear\add* and¦100823 \add ≈lost their¦100824 nerve to stand against\add* Yisrael¦100834.
+\v 1 When¦100788 all¦100790 the¦100793 Amori¦100793 kings who¦100794 were¦100795 on¦100795 the¦100795 \add west\add* side¦100795 of¦100795 the¦100796 Yarden¦100796 (towards the ocean) and¦100798 all¦100798 the¦100800 Kena'ani¦100801 \add !(Canaanite¦100801)\add* kings (beside the¦100805 ocean¦100805) heard¦100789 how¦100807 Yahweh¦100810 had¦100809 dried¦100809 up¦100809 the¦100813 \add #water¦100813\add* in the¦100814 Yarden¦100814 \add River\add* until¦100819 \add @the¦100821 Israelis¦100821\add* had¦100821 crossed¦100821 over¦100821, they \add ≈trembled with fear\add* and¦100823 \add ≈lost their¦100824 nerve to stand against\add* Yisrael¦100834 \add !(Israel¦100834)\add*.
 \s1 Circumcising the males and celebrating ‘pass-over’ at Gilgal
 \rem /s1 The Circumcision at Gilgal; Israel Reestablishes Covenant Ceremonies
 \s4 Promised land
@@ -253,7 +253,7 @@
 \rem /s1 Achan's Sin
 \p
 \v 16 \add ≈So¦102081\add* Yehoshua¦102082 got up early¦102081 the next morning¦102083 and¦102084 \add ≈ordered each tribe to¦102088 come¦102084 forward singly\add*, and¦102089 the¦102090 tribe¦102090 of¦102090 Yehudah¦102091 \add !(Judah¦102091)\add* was \add ≈singled out\add*.
-\v 17 Then each of the clans came forward and¦102102 the Zerahite¦102106 clan was \add ≈singled out\add*, and¦102108 when their families came forwards, Zavdi's¦102109 household was¦102108 \add ≈singled out\add*.
+\v 17 Then each of the clans came forward and¦102102 the Zarhi¦102106 clan was \add ≈singled out\add*, and¦102108 when their families came forwards, Zavdi's¦102109 household was¦102108 \add ≈singled out\add*.
 \v 18 When¦102111 everyone in that \add ≈extended family¦102114\add* came¦102111 forward, Akan¦102117 (son¦102118 of¦102118 Karmi¦102120, son¦102121 of¦102121 Zavdi¦102123, son¦102124 of¦102124 Zerah¦102126, from the¦102127 tribe¦102127 of¦102127 Yehudah¦102128) was¦102116 \add ≈singled out\add*.
 \v 19 Then¦102130 Yehoshua¦102131 told¦102130 Akan¦102134, “My¦102135 son¦102135, now \add ≈honour¦102139\add* Yahweh¦102140 the¦102141 god¦102141 of¦102141 Yisrael¦102142 and¦102143 give¦102143 thanks to¦102145 him¦102145. And¦102147 tell¦102147 me¦102150 now what¦102151 you've¦102152 done¦102152—don't¦102153 hide¦102155 it from¦102156 me¦102156.”
 \p
@@ -316,11 +316,11 @@
 \v 34 Then¦103042 \add @Yehoshua¦103045\add* read¦103045 all¦103048 the¦103051 law¦103051, \add including\add* the¦103052 \add #blessings¦103052\add* and¦103053 the¦103053 \add #curses¦103053\add*, as per everything¦103054 that's written¦103056 in¦103057 the¦103057 book¦103057 of¦103057 the¦103058 law¦103058.
 \v 35 \add *He\add* \add ≈read¦103072 out every¦103064 single word that¦103065 Mosheh¦103068 had¦103067 written\add*, \add ≈in¦103074 front¦103074 of¦103074\add* the¦103077 entire assembly¦103077 of¦103077 Yisrael¦103078, including¦103079 the¦103079 women¦103079, children, and foreigners living among¦103083 them.
 \c 9
-\s1 The Gibeonites deceive Yehoshua
+\s1 The Givonim deceive Yehoshua
 \rem /s1 The Gibeonites Save Themselves by Trickery; The Gibeonite Deception; The Gibeonites Deceive Israel; The Gibeonites Deceive Joshua
 \s4 Promised land
 \p
-\v 1 \add ≈There were¦103086 several kings¦103090 who¦103091 ruled in regions on¦103092 this west side¦103092 of¦103092 the¦103093 Yarden¦103093\add* \add !(Jordan¦103093)\add* \add ≈—the Hittim and¦103105 Amorim, the Kena'anim¦103106\add* \add !(Canaanites¦103106)\add* \add ≈and Perizzim, the Hivim¦103108 and¦103109 the¦103109 Yevusim¦103109. Some were in the hill country¦103094, some in¦103095 the lowlands, and¦103096 some along the¦103097 Mediterranean coast¦103097 south of Levanon¦103103\add*. \add When\add* \add *they\add* heard¦103087 about \add @what had happened at Ay\add*,
+\v 1 \add ≈There were¦103086 several kings¦103090 who¦103091 ruled in regions on¦103092 this west side¦103092 of¦103092 the¦103093 Yarden¦103093\add* \add !(Jordan¦103093)\add* \add ≈—the Hitim and¦103105 Amorim, the Kena'anim¦103106\add* \add !(Canaanites¦103106)\add* \add ≈and Perizim, the Hivim¦103108 and¦103109 the¦103109 Yevusim¦103109. Some were in the hill country¦103094, some in¦103095 the lowlands, and¦103096 some along the¦103097 Mediterranean coast¦103097 south of Levanon¦103103\add*. \add When\add* \add *they\add* heard¦103087 about \add @what had happened at Ay\add*,
 \v 2 they¦103111 \add ≈formed an alliance\add* to¦103113 fight¦103113 \add together\add* against Yehoshua¦103116 \add !(Joshua¦103116)\add* and¦103117 Yisrael¦103119 \add !(Israel¦103119)\add*.
 \p
 \v 3 \add ≈However,\add* when¦103124 \add the people who\add* live¦103124 in Giveon¦103125 heard¦103126 what Yehoshua¦103130 had¦103129 done¦103129 to¦103131 Yeriho¦103131 \add !(Jericho¦103131)\add* and¦103132 Ay¦103132,
@@ -348,7 +348,7 @@
 \p \add ≈All¦103395 the¦103397 Israelis\add* grumbled¦103394 against their leaders¦103400 for making that treaty,
 \v 19 \add ≈but¦103402\add* \add &their¦103405\add* leaders¦103405 told¦103402 \add *them\add*, “We ourselves have¦103412 promised¦103412 them¦103413 by¦103414 \add *our¦103414\add* God¦103415 Yahweh¦103414 \add ≈so¦103417\add* now¦103417 we¦103419 can't¦103418 touch¦103420 them¦103421.
 \v 20 We're¦103424 \add ≈forced now to¦103425 let¦103426 them live¦103426, otherwise God's anger¦103432 would¦103430 be¦103430 against¦103431 us¦103431 for breaking our promise¦103435\add* to¦103439 them¦103439.
-\v 21 \add ≈So¦103441\add* we'll let¦103444 them¦103444 live¦103444 \add but make them our slaves\add*.” \add ≈As a result of that,\add* \add @the Gibeonites\add* became woodcutters and¦103448 water-carriers for all¦103451 the¦103453 \add ≈Israelis\add*.
+\v 21 \add ≈So¦103441\add* we'll let¦103444 them¦103444 live¦103444 \add but make them our slaves\add*.” \add ≈As a result of that,\add* \add @the Givonim\add* became woodcutters and¦103448 water-carriers for all¦103451 the¦103453 \add ≈Israelis\add*.
 \p
 \v 22 Then¦103459 Yehoshua¦103461 \add !(Joshua¦103461)\add* summoned¦103459 them¦103460 and¦103462 asked them¦103463, “Why did¦103466 you¦103466 all deceive¦103466 us¦103467 \add ≈by telling¦103468 us that you¦103471 lived¦103475 far away when¦103473 really you¦103473 were¦103475 very¦103472 close\add*?
 \v 23 \add ≈Because of that,\add* you're¦103479 all cursed¦103478 and¦103480 you'll always be¦103482 \add &our¦103484\add* \add #slaves¦103484\add*—you'll all be the woodcutters and water-carriers for¦103490 the¦103490 house¦103490 of¦103490 my¦103491 god¦103491.”
@@ -362,9 +362,9 @@
 \rem /s1 The Amorites Are Defeated; The Sun Stands Still; The conquest of the south; Israel Defeats the Southern Kings
 \s4 Promised land
 \p
-\v 1 \add ≈Once\add* King Adoni¦103582-Tsedek¦103584 of¦103585 Yerushalem¦103586 \add !(Jerusalem¦103586)\add* heard¦103581 that¦103587 Yehoshua¦103590 \add !(Joshua¦103590)\add* had¦103589 captured¦103589 Ay¦103593 and¦103594 completely¦103594 destroyed¦103594 it¦103594, and¦103598 that he'd treated the king¦103598 of¦103598 Ay the same as he¦103601 had¦103601 treated the king¦103603 of¦103603 Yeriho¦103597 \add !(Jericho¦103597)\add*, and¦103604 he heard that the¦103606 Gibeonites had¦103605 made¦103605 peace¦103605 with¦103608 Yisrael¦103610 \add !(Israel¦103610)\add* and¦103611 were¦103611 \add now working for\add* them,
+\v 1 \add ≈Once\add* King Adoni¦103582-Tsedek¦103584 of¦103585 Yerushalem¦103586 \add !(Jerusalem¦103586)\add* heard¦103581 that¦103587 Yehoshua¦103590 \add !(Joshua¦103590)\add* had¦103589 captured¦103589 Ay¦103593 and¦103594 completely¦103594 destroyed¦103594 it¦103594, and¦103598 that he'd treated the king¦103598 of¦103598 Ay the same as he¦103601 had¦103601 treated the king¦103603 of¦103603 Yeriho¦103597 \add !(Jericho¦103597)\add*, and¦103604 he heard that the¦103606 Givonim had¦103605 made¦103605 peace¦103605 with¦103608 Yisrael¦103610 \add !(Israel¦103610)\add* and¦103611 were¦103611 \add now working for\add* them,
 \v 2 \add @the¦103614 people¦103614 of¦103614 Yerushalem¦103614\add* were¦103614 very¦103615 afraid¦103614 because¦103616 Giveon¦103619 had been¦103617 a¦103617 powerful¦103618 city¦103621, stronger than¦103626 Ay¦103628, and¦103629 all¦103629 its¦103624 warriors¦103631 were¦103632 powerful.
-\v 3 \add ≈So¦103634\add* King Adoni¦103635-Tsedek¦103637 sent¦103634 to¦103640 King Hoham¦103642 of¦103643 Hevron¦103645, King Piram¦103648 of¦103649 Yarmut¦103651, King Yafia¦103654 of¦103655 Lakish¦103657, and¦103658 King Devir¦103660 of¦103661 Eglon¦103663, saying¦103664,
+\v 3 \add ≈So¦103634\add* King Adoni¦103635-Tsedek¦103637 sent¦103634 to¦103640 King Hoham¦103642 of¦103643 Hevron¦103645, King Pir’am¦103648 of¦103649 Yarmut¦103651, King Yafia¦103654 of¦103655 Lakish¦103657, and¦103658 King Devir¦103660 of¦103661 Eglon¦103663, saying¦103664,
 \v 4 “Come¦103666 \add ≈here\add* and¦103669 help¦103669 me¦103669. We'll attack¦103670 Giveon¦103673 because¦103674 they've made¦103676 peace¦103676 with¦103677 Yehoshua¦103679 and¦103680 \add ≈the¦103682 Israelis¦103683\add*.”
 \v 5 \add ≈So\add* those five¦103687 Amori¦103690 kings¦103691 (from Yerushalem¦103692, Hevron¦103695, Yarmut¦103698, Lakish¦103701, and Eglon¦103704) joined together to go¦103686 to Giveon¦103712 and¦103706 their¦103708 \add armies\add* camped¦103709 there to fight¦103713 against it¦103714.
 \p
@@ -373,12 +373,12 @@
 \v 8 and¦103764 Yahweh¦103765 told¦103764 \add *him¦103768\add*, “Don't¦103769 be¦103771 afraid¦103771 of them¦103772, because¦103773 \add ≈you'll have¦103775 the victory over them¦103775\add*—none of them¦103780 will¦103778 be able to stand¦103778 against you.”
 \p
 \v 9 Yehoshua¦103785 \add and his men\add* spent the¦103789 night¦103789 moving in, and then \add ≈surprised the¦103793 alliance\add*,
-\v 10 and¦103795 Yahweh¦103796 confused¦103795 them¦103795 \add ≈as the¦103797 Israelis¦103798 approached\add* and¦103799 \add caused them\add* to be badly defeated¦103799 at¦103803 Giveon¦103803. Then¦103804 \add #they\add* chased¦103804 them¦103804 on the road going to Beyt¦103807-Horon¦103809 and¦103810 killed¦103810 them¦103810 as far as Azekah¦103813 and¦103814 Makkedah¦103816.
+\v 10 and¦103795 Yahweh¦103796 confused¦103795 them¦103795 \add ≈as the¦103797 Israelis¦103798 approached\add* and¦103799 \add caused them\add* to be badly defeated¦103799 at¦103803 Giveon¦103803. Then¦103804 \add #they\add* chased¦103804 them¦103804 on the road going to Beyt¦103807-Horon¦103809 and¦103810 killed¦103810 them¦103810 as far as Azekah¦103813 and¦103814 Makedah¦103816.
 \v 11 As they fled¦103819 from¦103821 the Israelis¦103822 on the¦103824 slope down from Beyt¦103825-Horon¦103827 heading towards Azekah¦103838, Yahweh¦103828 hurled¦103829 large¦103832 hailstones down on¦103830 them¦103830 from¦103833 the¦103835 sky¦103835 and¦103839 they¦103839 died¦103839—\add actually\add* more¦103846 of them¦103841 died¦103843 from the¦103845 hail¦103845 than¦103846 were killed¦103847 with¦103850 \add #swords¦103850\add* by the¦103848 \add ≈Israelis¦103849\add*.
 \p
 \v 12 Then¦103853 Yehoshua¦103855 spoke¦103854 to¦103856 Yahweh¦103856 on¦103857 the day¦103857 that \add ≈he gave¦103858 them victory over the¦103862 Amorim¦103862\add*, and \add ≈in¦103863 front¦103863 of¦103863 the¦103864 Israelis¦103865\add* he¦103866 said¦103866,
 \q1 “Sun¦103870, stay still¦103872 over Giveon¦103871,
-\q1 ≈and¦103873 moon¦103873, over the¦103874 Ayyalon¦103875 Valley¦103874.
+\q1 ≈and¦103873 moon¦103873, over the¦103874 Ayalon¦103875 Valley¦103874.
 \m
 \v 13 Then¦103877 the¦103878 sun¦103878 stood still¦103877 and¦103879 the¦103879 moon¦103879 stood¦103880 still¦103880 until¦103881 the¦103884 nation¦103884 had avenged¦103883 themselves of their enemies¦103885. (Isn't¦103886 that written¦103889 about¦103902 in the¦103892 Jashar scroll¦103892?\x + \xo 10:13: \xt 2Sam 1:18.\x* The¦103893 sun¦103895 stood¦103894 still¦103894 in¦103896 the¦103896 middle¦103896 of¦103896 the¦103897 sky¦103897 and¦103898 it¦103900 didn't hurry¦103900 to¦103901 go¦103901 around¦103902 for almost a¦103902 whole day¦103902.
 \v 14 There had¦103906 never before¦103909 been¦103906 a day¦103907 like that¦103908, and¦103910 nothing like it¦103910 since then, when Yahweh¦103912 listened¦103911 to¦103913 a¦103914 man's¦103914 voice¦103913, because¦103915 \add *he¦103916\add* was¦103917 fighting¦103917 for¦103918 Yisrael¦103918.)
@@ -388,12 +388,12 @@
 \rem /s1 Five Amorite Kings Killed; Five Kings Defeated; Joshua Kills the Five Southern Kings; Joshua Captures the Five Amorite Kings
 \s4 Promised land
 \p
-\v 16 \add ≈Meanwhile\add* those¦103935 five¦103933 kings¦103934 had fled¦103932 away and¦103936 hidden¦103936 at¦103938 Makkedah¦103938 in a cave¦103937,
-\v 17 and¦103940 Yehoshua¦103941 \add !(Joshua¦103941)\add* was¦103940 told¦103940, “The¦103944 five¦103944 kings¦103945 have¦103943 been¦103943 found¦103943 hiding¦103946 in¦103947 the cave¦103947 at¦103948 Makkedah¦103948.”
+\v 16 \add ≈Meanwhile\add* those¦103935 five¦103933 kings¦103934 had fled¦103932 away and¦103936 hidden¦103936 at¦103938 Makedah¦103938 in a cave¦103937,
+\v 17 and¦103940 Yehoshua¦103941 \add !(Joshua¦103941)\add* was¦103940 told¦103940, “The¦103944 five¦103944 kings¦103945 have¦103943 been¦103943 found¦103943 hiding¦103946 in¦103947 the cave¦103947 at¦103948 Makedah¦103948.”
 \v 18 Yehoshua¦103951 said¦103950, “Roll¦103952 large¦103954 rocks¦103953 across the¦103957 mouth¦103957 of¦103957 the¦103958 cave¦103958 and¦103959 assign¦103959 men¦103961 to¦103962 guard¦103962 them¦103962 there,
 \v 19 but¦103964 \add the rest of you,\add* don't¦103965 stay¦103967 there. Chase¦103968 after¦103969 your¦103970 enemies¦103970 and¦103971 attack¦103971 them¦103972 from behind. Don't¦103973 let¦103975 them¦103975 get into¦103977 their¦103979 cities¦103979, because¦103980 your¦103983 god¦103983 Yahweh¦103982 \add ≈wants you all to defeat them\add*.
 \v 20 \add ≈So¦103986\add* Yehoshua¦103988 and¦103989 \add ≈the¦103989 Israelis¦103990\add* finished¦103998 \add ≈most of them¦104001 off\add*, although \add ≈some did manage to escape and¦104002 get back\add* into¦104003 their \add ≈fortified¦104006\add* cities¦104005.
-\v 21 Then¦104008 all¦104009 the¦104011 people¦104011 returned¦104008 to¦104012 Yehoshua¦104017 in the¦104014 camp¦104014 at Makkedah¦104018. \add After that,\add* no one dared to¦104023 criticise the¦104023 \add ≈Israelis¦104024\add*.
+\v 21 Then¦104008 all¦104009 the¦104011 people¦104011 returned¦104008 to¦104012 Yehoshua¦104017 in the¦104014 camp¦104014 at Makedah¦104018. \add After that,\add* no one dared to¦104023 criticise the¦104023 \add ≈Israelis¦104024\add*.
 \p
 \v 22 Then¦104030 Yehoshua¦104031 said¦104030, “Open¦104032 up the¦104036 cave¦104036 and¦104037 bring¦104037 those¦104043 five¦104041 kings¦104042 to me.”
 \v 23 They¦104048 did¦104048 it and¦104050 brought¦104050 the¦104054 five¦104054 kings¦104055 out¦104050 from¦104057 the¦104059 cave¦104059—the¦104062 kings¦104062 of¦104062 Yerushalem¦104063 \add !(Jerusalem¦104063)\add*, Hevron¦104067, Yarmut¦104071, Lakish¦104075, and Eglon¦104079.
@@ -405,10 +405,10 @@
 \rem /s1 Israel Destroys the Southern Cities; Joshua Captures More Amorite Territory
 \s4 Promised land
 \p
-\v 28 Then¦104199 Yehoshua¦104203 \add !(Joshua¦104203)\add* captured¦104202 Makkedah that¦104205 \add same\add* day¦104204. \add #They\add* killed¦104206 \add ≈the king¦104212 and¦104215 everyone¦104217 else in the city\add*, leaving¦104224 no \add #survivors¦104225\add*, and¦104226 \add @Yehoshua¦104226\add* did¦104226 the same to¦104227 the¦104227 king¦104227 of¦104227 Makkedah¦104228 as¦104229 he'd¦104230 done¦104230 to¦104231 the¦104231 king¦104231 of¦104231 Yeriho¦104232 \add !(Jericho¦104232)\add*.\f + \fr 10:28 \ft We're not actually given any details about what happened to the king of Yeriho/Jericho.\f*
+\v 28 Then¦104199 Yehoshua¦104203 \add !(Joshua¦104203)\add* captured¦104202 Makedah that¦104205 \add same\add* day¦104204. \add #They\add* killed¦104206 \add ≈the king¦104212 and¦104215 everyone¦104217 else in the city\add*, leaving¦104224 no \add #survivors¦104225\add*, and¦104226 \add @Yehoshua¦104226\add* did¦104226 the same to¦104227 the¦104227 king¦104227 of¦104227 Makedah¦104228 as¦104229 he'd¦104230 done¦104230 to¦104231 the¦104231 king¦104231 of¦104231 Yeriho¦104232 \add !(Jericho¦104232)\add*.\f + \fr 10:28 \ft We're not actually given any details about what happened to the king of Yeriho/Jericho.\f*
 \rem /s1 Southern Cities Conquered
 \p
-\v 29 Then¦104234 Yehoshua¦104235 and¦104236 all¦104236 Yisrael¦104238 \add !(Israel¦104238)\add* went¦104234 \add southwest\add* from¦104240 Makkedah¦104240 to Livnah¦104241 and¦104242 fought¦104242 against \add *it¦104245\add*.
+\v 29 Then¦104234 Yehoshua¦104235 and¦104236 all¦104236 Yisrael¦104238 \add !(Israel¦104238)\add* went¦104234 \add southwest\add* from¦104240 Makedah¦104240 to Livnah¦104241 and¦104242 fought¦104242 against \add *it¦104245\add*.
 \v 30 Yahweh¦104248 also¦104249 \add ≈allowed Yisrael¦104253 to conquer\add* it and¦104255 its king, and¦104258 \add @Yehoshua¦104258\add* \add again\add* \add ≈killed¦104258 everyone¦104264 in the city\add*, leaving¦104272 no \add #survivors¦104274\add*, and¦104275 he¦104275 did¦104275 the same to¦104276 the king¦104276 of¦104276 \add @Livnah¦104276\add* as¦104277 he'd¦104278 done¦104278 to¦104279 the¦104279 king¦104279 of¦104279 Yeriho¦104280.
 \p
 \v 31 Then¦104283 Yehoshua¦104284 and¦104285 all¦104285 Yisrael¦104287 went¦104283 \add south\add* from¦104289 Livnah¦104289 to¦104290 Lakish¦104290, \add ≈where\add* they took a position against \add @the¦104291 city¦104291\add* and¦104293 fought¦104293 against¦104294 it¦104294.
@@ -435,7 +435,7 @@
 \p
 \v 1 \add ≈Now when¦104562\add* King Yavin¦104564 of¦104565 Hatsor¦104567 heard¦104563 \add <about all that\add*, he¦104568 sent¦104568 to¦104569 King Yovav¦104571 of¦104572 Madon¦104573 and¦104574 the¦104576 kings¦104576 of¦104576 Shimron¦104577 and¦104578 Akshaf¦104581,
 \v 2 as well as the¦104585 kings¦104585 from¦104587 the¦104587 hill country¦104588 in the north¦104587 and¦104589 in¦104589 \add ≈the rift valley plains\add* south¦104590 of¦104590 \add Lake\add* Galil, and¦104592 in¦104592 the lowlands and¦104593 in the¦104593 heights¦104593 of¦104593 Dor¦104594 in the¦104595 west¦104595,
-\v 3 and \add ≡the kings of\add* the¦104597 Kena'anim¦104597 \add !(Canaanites¦104597)\add* both east¦104598 and¦104599 west¦104599, and the Amorim, Hittim, Perizzim, and the Yevusim¦104603 who lived in¦104604 the hill country¦104604, and¦104605 to the¦104605 Hivim by \add Mt.\add* Hermon¦104607 in¦104608 the¦104609 Mitspah¦104609 region¦104608.
+\v 3 and \add ≡the kings of\add* the¦104597 Kena'anim¦104597 \add !(Canaanites¦104597)\add* both east¦104598 and¦104599 west¦104599, and the Amorim, Hitim, Perizim, and the Yevusim¦104603 who lived in¦104604 the hill country¦104604, and¦104605 to the¦104605 Hivim by \add Mt.\add* Hermon¦104607 in¦104608 the¦104609 Mitspah¦104609 region¦104608.
 \v 4 \add ≈So¦104611\add* they¦104611 \add all\add* came¦104611 out¦104611 with their warriors—so¦104613 many¦104613 people¦104613 that¦104621 they were as many as the \add grains of\add* sand¦104620 on¦104622 the seashore¦104626, along with many horses¦104628 and¦104629 chariots¦104629.
 \v 5 All¦104635 those¦104637 kings¦104636 gathered¦104634 together¦104640 at the time they'd¦104638 specified and¦104639 took up positions at the¦104643 Merom¦104644 stream to¦104645 fight¦104645 against Yisrael¦104648 \add !(Israel¦104648)\add*.
 \p
@@ -461,7 +461,7 @@
 \v 19 No city¦104969 made¦104971 peace¦104971 with \add ≈the¦104974 Israelis¦104975\add* except¦104976 for the¦104977 Hivim¦104977 who lived¦104978 in Giveon¦104979—all the¦104982 rest were taken¦104983 in¦104984 battle¦104984
 \v 20 because¦104986 it¦104990 was¦104990 Yahweh who'd \add ≈made them stubborn\add* so they'd fight¦104996 against Yisrael¦104999 and be completely¦105001 destroyed without any \add ≈mercy\add*. \add Yes,\add* they were annihilated just¦105010 as¦105010 Yahweh¦105012 had¦105011 instructed¦105011 Mosheh¦105015 \add !(Moses¦105015)\add*.\x + \xo 11:20: \xt Deu 7:16.\x*
 \p
-\v 21 At¦105020 that¦105021 time¦105020, Yehoshua \add also\add* went¦105018 and¦105022 exterminated the¦105025 Anakim¦105025 from¦105026 the¦105028 hill¦105028 country¦105028, from¦105029 Hevron¦105031, Devir¦105034, Anab¦105037, and¦105038 all¦105038 the¦105039 hill¦105039 country¦105039 of¦105039 Yehudah¦105040 \add !(Judah¦105040)\add* and¦105041 Yisrael¦105043. \add *He\add* completely¦105047 destroyed¦105047 them¦105047 from their¦105046 cities¦105046.
+\v 21 At¦105020 that¦105021 time¦105020, Yehoshua \add also\add* went¦105018 and¦105022 exterminated the¦105025 Anakim¦105025 from¦105026 the¦105028 hill¦105028 country¦105028, from¦105029 Hevron¦105031, Devir¦105034, Anav¦105037, and¦105038 all¦105038 the¦105039 hill¦105039 country¦105039 of¦105039 Yehudah¦105040 \add !(Judah¦105040)\add* and¦105041 Yisrael¦105043. \add *He\add* completely¦105047 destroyed¦105047 them¦105047 from their¦105046 cities¦105046.
 \v 22 No \add ≈descendants of Anak\add* were¦105052 left¦105052 in¦105054 Yisrael¦105056, except that \add some\add* remained¦105061 in¦105058 Azah¦105058 \add !(Gaza¦105058)\add*, in¦105059 Gat¦105059, and¦105060 in¦105060 Ashdod¦105060.
 \p
 \v 23 Yehoshua¦105064 captured¦105063 the¦105069 entire region, just as Yahweh¦105073 had¦105072 told¦105072 Mosheh¦105076, and¦105077 Yehoshua gave¦105077 it¦105077 as an¦105079 inheritance¦105079 to¦105080 Yisrael¦105080, divided into portions according¦105081 to¦105081 their¦105081 tribes¦105082, and¦105083 then the¦105083 region \add ≈was¦105084 peaceful¦105084\add*.
@@ -471,11 +471,11 @@
 \s4 Promised land
 \p
 \v 1 These¦105088 are¦105090 the¦105090 kings¦105090 in the¦105091 region¦105091 who¦105092 the¦105094 \add ≈Israelis¦105096 defeated¦105093\add* on¦105101 the¦105101 eastern side¦105101 of¦105101 the¦105102 Yarden¦105102 \add !(Jordan¦105102)\add* \add river\add* and took¦105097 possession¦105097 of¦105097 their¦105100 land from¦105105 the¦105105 Arnon¦105106 riverbed \add in the south\add* to¦105107 Mt¦105109. Hermon¦105110 \add in the north\add*, including¦105111 all¦105111 of the¦105113 eastern¦105114 \add ≈rift valley plains\add*:\x + \xo 12:1-5: \xt Num 21:21-35; Deu 2:26–3:11.\x*
-\v 2 King¦105117 Sihon¦105116 of¦105117 the¦105118 Amorim¦105118 who¦105119 lived¦105119 in¦105120 Heshbon¦105120 and ruled¦105121 \add over\add* Aroer¦105122 (on¦105124 the¦105126 edge¦105126 of¦105126 the¦105128 Arnon¦105129 riverbed¦105131) and¦105132 \add over\add* half¦105132 of¦105132 Gilead¦105133 up to¦105134 the Yabok¦105135 riverbed¦105136 \add which formed\add* the¦105137 border¦105137 with the¦105138 Ammonim,
-\v 3 as well as the \add ≈eastern rift valley plains\add* down to Lake Galil and¦105147 to¦105147 the¦105148 Sea¦105148 of¦105148 Aravah¦105149 (\add also called\add* the¦105150 Dead Sea¦105150 or the¦105152 Salt¦105152 Sea), the road to Beyt¦105155-Hyeshimot¦105156 and¦105157 the¦105157 area southward¦105157 below the¦105159 slopes¦105159 of¦105159 \add Mt.\add* Pisgah¦105160.
+\v 2 King¦105117 Sihon¦105116 of¦105117 the¦105118 Amorim¦105118 who¦105119 lived¦105119 in¦105120 Heshbon¦105120 and ruled¦105121 \add over\add* Aroer¦105122 (on¦105124 the¦105126 edge¦105126 of¦105126 the¦105128 Arnon¦105129 riverbed¦105131) and¦105132 \add over\add* half¦105132 of¦105132 Gilead¦105133 up to¦105134 the Yabok¦105135 riverbed¦105136 \add which formed\add* the¦105137 border¦105137 with the¦105138 Amonim,
+\v 3 as well as the \add ≈eastern rift valley plains\add* down to Lake Galil and¦105147 to¦105147 the¦105148 Sea¦105148 of¦105148 Aravah¦105149 (\add also called\add* the¦105150 Dead Sea¦105150 or the¦105152 Salt¦105152 Sea), the road to Beyt¦105155-Hayeshimot¦105156 and¦105157 the¦105157 area southward¦105157 below the¦105159 slopes¦105159 of¦105159 \add Mt.\add* Pisgah¦105160.
 \p
 \v 4 \add The Israelis also defeated\add* King¦105164 Og¦105163 from Bashan¦105165, \add ≈one¦105166 of¦105166 the few remaining\add* Refaim¦105167, who¦105168 lived¦105168 in¦105169 Ashtarot¦105169 and¦105170 at Edre'i¦105170,
-\v 5 and¦105172 ruled¦105172 over¦105173 Mt¦105173. Hermon¦105174, Salkah¦105175, all¦105176 of Bashan¦105178 to¦105179 the¦105181 border¦105181 of¦105181 the Geshurim and Maakatim, as well as half¦105184 of¦105184 Gilead¦105185 to the¦105186 border¦105186 with King¦105188 Sihon¦105187 from Heshbon¦105190.
+\v 5 and¦105172 ruled¦105172 over¦105173 Mt¦105173. Hermon¦105174, Salkah¦105175, all¦105176 of Bashan¦105178 to¦105179 the¦105181 border¦105181 of¦105181 the Geshurim and Ma’akatim, as well as half¦105184 of¦105184 Gilead¦105185 to the¦105186 border¦105186 with King¦105188 Sihon¦105187 from Heshbon¦105190.
 \p
 \v 6 Yahweh's servant Mosheh \add !(Moses)\add* and¦105196 the¦105196 \add ≈Israelis¦105197\add* had \add ≈defeated¦105198 them¦105198\add* and¦105199 Mosheh had given¦105199 \add @that¦105199 region¦105199\add* as a¦105204 possession¦105204 to¦105205 the \add descendants of\add* Re'uven and¦105206 Gad and¦105207 to¦105207 the half-tribe of Menasheh¦105209 \add !(Manasseh¦105209)\add*.\x + \xo 12:6: \xt Num 32:33; Deu 3:12.\x*
 \s1 The kings defeated by Yehoshua
@@ -483,20 +483,20 @@
 \s4 Promised land
 \p
 \v 7 These¦105212 are¦105213 the¦105213 kings¦105213 in the¦105214 region¦105214 that Yehoshua¦105217 \add !(Joshua¦105217)\add* and¦105218 the¦105218 \add ≈Israelis¦105219 defeated¦105216\add* on¦105220 the¦105220 western¦105222 side¦105220 of¦105220 the¦105221 Yarden¦105221 \add !(Jordan¦105221)\add* \add river\add* from¦105223 Ba'al¦105223-Gad¦105224 in¦105225 the Levanon¦105226 valley¦105225 to¦105227 Mt¦105229. Halak¦105230 which¦105231 goes¦105231 up¦105231 toward Se'ir¦105232. Yehoshua¦105234 \add ≈divided up\add* \add @that region\add* as a¦105237 possession¦105237 to¦105235 the¦105235 \add various\add* tribes¦105235 of¦105235 Yisrael¦105236 \add !(Israel¦105236)\add*,
-\v 8 as well as the hill country¦105240, the lowlands, the \add ≈rift valley\add*, the slopes¦105243, the wilderness¦105244 and¦105245 the Negev¦105245—\add the land of\add* the Hittim, Amorim¦105247, Kena'anim¦105248 \add !(Canaanites¦105248)\add*, Perizzim, Hivim¦105250, and¦105251 the¦105251 Yevusim¦105251:
+\v 8 as well as the hill country¦105240, the lowlands, the \add ≈rift valley\add*, the slopes¦105243, the wilderness¦105244 and¦105245 the Negev¦105245—\add the land of\add* the Hitim, Amorim¦105247, Kena'anim¦105248 \add !(Canaanites¦105248)\add*, Perizim, Hivim¦105250, and¦105251 the¦105251 Yevusim¦105251:
 \v 9 the¦105254 king¦105254 of¦105254 Yeriho¦105255 \add !(Jericho¦105255)\add*, the¦105257 king¦105257 of¦105257 Ay¦105258 (near Beyt¦105262-El¦105264 \add !(Bethel¦105262)\add*),
 \v 10 the¦105267 king¦105267 of¦105267 Yerushalem¦105268 \add !(Jerusalem¦105268)\add*, the¦105270 king¦105270 of¦105270 Hevron¦105271,
 \v 11 the¦105274 king¦105274 of¦105274 Yarmut¦105275, the¦105277 king¦105277 of¦105277 Lakish¦105278,
 \v 12 the¦105281 king¦105281 of¦105281 Eglon¦105282, the¦105284 king¦105284 of¦105284 Gezer¦105285,
 \v 13 the¦105288 king¦105288 of¦105288 Devir¦105289, the¦105291 king¦105291 of¦105291 Geder¦105292,
 \v 14 the¦105295 king¦105295 of¦105295 Hormah¦105296, the¦105298 king¦105298 of¦105298 Arad¦105299,
-\v 15 the¦105302 king¦105302 of¦105302 Livnah¦105303, the¦105305 king¦105305 of¦105305 Adullam¦105306,
-\v 16 the¦105309 king¦105309 of¦105309 Makkedah¦105310, the¦105312 king¦105312 of¦105312 Beyt¦105313-El¦105315,
+\v 15 the¦105302 king¦105302 of¦105302 Livnah¦105303, the¦105305 king¦105305 of¦105305 Adulam¦105306,
+\v 16 the¦105309 king¦105309 of¦105309 Makedah¦105310, the¦105312 king¦105312 of¦105312 Beyt¦105313-El¦105315,
 \v 17 the¦105318 king¦105318 of¦105318 Tapuah¦105319, the¦105321 king¦105321 of¦105321 Hefer¦105322,
 \v 18 the¦105325 king¦105325 of¦105325 Afek¦105326, the¦105328 king¦105328 of¦105329 Lasharon,
 \v 19 the¦105332 king¦105332 of¦105332 Madon¦105333, the¦105335 king¦105335 of¦105335 Hatsor¦105336,
 \v 20 the¦105339 king¦105339 of¦105339 Shimron¦105341 Meron, the¦105343 king¦105343 of¦105343 Akshaf¦105344,
-\v 21 the¦105347 king¦105347 of¦105347 Taanak¦105348, the¦105350 king¦105350 of¦105350 Megiddon¦105351,
+\v 21 the¦105347 king¦105347 of¦105347 Ta’anak¦105348, the¦105350 king¦105350 of¦105350 Megidon¦105351,
 \v 22 the¦105354 king¦105354 of¦105354 Kedesh¦105355, the¦105357 king¦105357 of¦105357 Yakeneam¦105359 in Karmel¦105360,
 \v 23 the¦105363 king¦105363 of¦105363 Dor¦105364 of¦105365 Nafoth Dor¦105366, the¦105368 king¦105368 of¦105368 Goyim¦105370 in Gilgal¦105371,
 \v 24 and the¦105374 king¦105374 of¦105374 Tirtsah¦105375—a total¦105377 of¦105377 thirty-one kings¦105379.
@@ -507,10 +507,10 @@
 \p
 \v 1 Now the years had passed and¦105384 Yehoshua¦105384 \add !(Joshua¦105384)\add* had grown old, and¦105388 Yahweh¦105389 said¦105388 to¦105390 him¦105390, “You're¦105392 old¦105392 \add now\add* and¦105395 \add ≈there's still a lot of land¦105395 that needs to¦105400 be captured\add*.
 \v 2 This¦105402 is the¦105403 remaining¦105404 land¦105403: all¦105405 the¦105407 territories¦105407 of¦105407 the¦105408 Pelishtim¦105408, and¦105409 all¦105409 of the¦105411 Geshurim,
-\v 3 from¦105413 Shihor¦105415 (\add ≈east\add* of¦105420 Mitsrayim¦105421 \add !(Egypt¦105421)\add*) and¦105422 as far as the¦105423 border¦105423 of¦105423 Ekron¦105424 to¦105426 the north¦105425 (it's¦105427 considered¦105427 to be¦105427 Kena'ani¦105426 \add !(Canaanite¦105426)\add*), the¦105428 five¦105428 rulers¦105430 of¦105430 the¦105431 Pelishtim¦105431 (in Azah \add !(Gaza)\add*, Ashdod, Ashkelon, Gat, and Ekron), and the¦105437 Avvim¦105437.
-\v 4 In the¦105439 south¦105439: all¦105440 the¦105442 land¦105442 of¦105442 the¦105443 Kena'anim \add !(Canaanites)\add*, and¦105444 a¦105444 Mearah that¦105445 \add belongs to\add* the Tsidonim¦105446, as far as Afek¦105449, as far as the¦105451 border¦105451 of¦105451 the¦105452 Amorim¦105452,
+\v 3 from¦105413 Shihor¦105415 (\add ≈east\add* of¦105420 Mitsrayim¦105421 \add !(Egypt¦105421)\add*) and¦105422 as far as the¦105423 border¦105423 of¦105423 Ekron¦105424 to¦105426 the north¦105425 (it's¦105427 considered¦105427 to be¦105427 Kena'ani¦105426 \add !(Canaanite¦105426)\add*), the¦105428 five¦105428 rulers¦105430 of¦105430 the¦105431 Pelishtim¦105431 (in Azah \add !(Gaza)\add*, Ashdod, Ashkelon, Gat, and Ekron), and the¦105437 Avim¦105437.
+\v 4 In the¦105439 south¦105439: all¦105440 the¦105442 land¦105442 of¦105442 the¦105443 Kena'anim \add !(Canaanites)\add*, and¦105444 a¦105444 Me’arah that¦105445 \add belongs to\add* the Tsidonim¦105446 \add !(Sidonians¦105446)\add*, as far as Afek¦105449, as far as the¦105451 border¦105451 of¦105451 the¦105452 Amorim¦105452,
 \v 5 plus¦105454 the¦105454 land¦105454 of¦105455 the¦105455 Givlim, all¦105456 Levanon¦105458 towards the east, from¦105461 Ba'al¦105461-Gad¦105462 below Mt¦105464. Hermon¦105466 as far as Levo¦105468-Hamat¦105469.
-\v 6 I myself will¦105486 \add ≈drive¦105486 out\add* all¦105471 those who live¦105473 in the¦105474 hill¦105474 country¦105474 from¦105475 Levanon¦105477 as far as Misrefot-Maim¦105481, and all¦105482 the¦105484 Tsidonim¦105484. \add ≈Make¦105491 sure that it's¦105491 given\add* to¦105492 \add ≈the Israelis¦105492\add* as an¦105493 inheritance¦105493, just¦105494 as¦105494 I¦105495 instructed¦105495 you¦105495.\x + \xo 13:6: \xt Num 33:54.\x*
+\v 6 I myself will¦105486 \add ≈drive¦105486 out\add* all¦105471 those who live¦105473 in the¦105474 hill¦105474 country¦105474 from¦105475 Levanon¦105477 as far as Misrefot-Mayim¦105481, and all¦105482 the¦105484 Tsidonim¦105484. \add ≈Make¦105491 sure that it's¦105491 given\add* to¦105492 \add ≈the Israelis¦105492\add* as an¦105493 inheritance¦105493, just¦105494 as¦105494 I¦105495 instructed¦105495 you¦105495.\x + \xo 13:6: \xt Num 33:54.\x*
 \v 7 All that¦105502 land¦105501 should be divided up as an¦105503 inheritance¦105503 for the¦105504 nine¦105504 tribes¦105505 plus¦105506 \add half of\add* the¦105506 half-tribe of¦105506 Menasheh¦105508 \add !(Manasseh¦105508)\add*.
 \s1 Division of the land east of the Yarden
 \rem /s1 The Land Divided East of the Jordan; Division of the Land East of the Jordan; Land distributed east of Jordan; The Division of the Territory East of the Jordan; The Territory East of the Jordan
@@ -518,10 +518,10 @@
 \p
 \v 8 \add ≈Along with¦105510 the other\add* \add half of\add* \add @the¦105510 half-tribe¦105510 of¦105510 Menasheh¦105510\add* \add !(Manasseh¦105510)\add*, the¦105511 \add ≈tribes of Re'uven and¦105512 Gad\add* had¦105513 taken their¦105514 inheritance¦105514 on¦105519 the¦105519 other¦105519 (eastern¦105521) side¦105519 of¦105519 the¦105520 Yarden¦105520 \add !(Jordan¦105520)\add* as¦105522 \add ≈approved\add* by Yahweh's¦105527 servant¦105526 Mosheh \add !(Moses)\add*,\x + \xo 13:8: \xt Num 32:33; Deu 3:12.\x*
 \v 9 from¦105529 Aroer¦105529, which¦105530 is¦105531 on¦105531 the¦105533 edge¦105533 of¦105533 the¦105535 Arnon¦105536 riverbed, and¦105537 the¦105537 city¦105537 that's¦105538 in¦105539 the¦105539 middle¦105539 of¦105541 the¦105541 valley¦105541, and¦105542 all¦105542 the¦105544 plateau¦105544 \add ≈near\add* Meydeva¦105545, to¦105546 Divon¦105548.
-\v 10 \add Also,\add* all¦105550 the¦105551 cities¦105551 of¦105551 King¦105553 Sihon¦105552 of¦105553 the¦105554 Amorim¦105554 who¦105555 ruled¦105556 in¦105557 Heshbon¦105557, as far as the¦105560 border¦105560 with the¦105561 Ammonim,
-\v 11 and¦105564 Gilead¦105564, and¦105565 the¦105565 territory¦105565 of¦105565 the¦105566 Geshurim and¦105567 the¦105567 Maakatim, and¦105568 all¦105568 Mt¦105569. Hermon¦105570, and¦105571 all¦105571 the¦105573 Bashan¦105573 as far as Salkah¦105576,
+\v 10 \add Also,\add* all¦105550 the¦105551 cities¦105551 of¦105551 King¦105553 Sihon¦105552 of¦105553 the¦105554 Amorim¦105554 who¦105555 ruled¦105556 in¦105557 Heshbon¦105557, as far as the¦105560 border¦105560 with the¦105561 Amonim,
+\v 11 and¦105564 Gilead¦105564, and¦105565 the¦105565 territory¦105565 of¦105565 the¦105566 Geshurim and¦105567 the¦105567 Ma’akatim, and¦105568 all¦105568 Mt¦105569. Hermon¦105570, and¦105571 all¦105571 the¦105573 Bashan¦105573 as far as Salkah¦105576,
 \v 12 all¦105578 the¦105580 kingdom¦105580 of¦105580 Og¦105581 in¦105582 the Bashan¦105582, who¦105583 reigned¦105585 in¦105586 Ashtarot¦105586 and¦105587 in¦105587 Edre'i¦105587 (what remained from the¦105590 remnant¦105590 of¦105590 the¦105591 Refaim¦105591). Mosheh¦105593 \add ≈had¦105592 attacked¦105592 them¦105592 and¦105594 captured their lands\add*.
-\v 13 \add ≈But¦105596\add* the \add ≈Israelis¦105599\add* didn't¦105596 \add ≈capture the land of\add* the¦105602 Geshurim or the¦105605 Maakatim and¦105606 \add ≈so those peoples¦105598\add* live¦105606 \add ≈among¦105609 the¦105609 Israelis¦105610\add* to this¦105613 day¦105612.
+\v 13 \add ≈But¦105596\add* the \add ≈Israelis¦105599\add* didn't¦105596 \add ≈capture the land of\add* the¦105602 Geshurim or the¦105605 Ma’akatim and¦105606 \add ≈so those peoples¦105598\add* live¦105606 \add ≈among¦105609 the¦105609 Israelis¦105610\add* to this¦105613 day¦105612.
 \rem /s1 An Inheritance for the Tribe of Levi
 \p
 \v 14 The only¦105615 tribe¦105616 that didn't¦105618 receive an¦105620 inheritance¦105620 was the¦105621 tribe of¦105621 Levi because the¦105623 offerings¦105621 given¦105619 to Yisrael's¦105624 \add !(Israel¦105624)\add* god¦105623 Yahweh¦105622 are their inheritance¦105626, just¦105627 like¦105627 he'd¦105628 told¦105628 them.\x + \xo 13:14: \xt Deu 18:1.\x*
@@ -532,10 +532,10 @@
 \v 15 This was the land that Mosheh¦105634 \add !(Moses¦105634)\add* gave¦105633 to¦105635 the¦105635 tribe¦105635 of¦105635 Re'uven¦105638, according to¦105639 their¦105639 clans¦105639:
 \v 16 The¦105643 area from¦105644 Aroer¦105644 (on¦105646 the¦105648 edge¦105648 of¦105648 the¦105650 Arnon¦105651 riverbed) along to the¦105652 town¦105652 in¦105654 the¦105654 middle¦105654 of¦105656 the¦105656 valley¦105656, \add ≈to\add* the¦105659 plateau¦105659 \add ≈near\add* Meydeva¦105662,
 \v 17 Heshbon¦105664 and¦105665 all¦105665 its¦105667 cities¦105667 on the plateau¦105669, \add including\add* Divon¦105670, Bamot¦105671-Ba'al¦105672, Beyt¦105673-Ba'al¦105674-Me'on,
-\v 18 Yahats¦105677, Kedemot¦105678, Mofaat¦105679,
-\v 19 Kiryatayim¦105681, Sibmah¦105682, and¦105683 Zeret-Shahar¦105684 on¦105685 the¦105685 hill¦105685 \add ≈within\add* the¦105686 valley¦105686.
-\v 20 \add It also includes\add* Beyt¦105688-Pe'or, the¦105690 slopes¦105690 of¦105690 the¦105691 Pisgah¦105691, Beyt¦105692-Hyeshimot,
-\v 21 and¦105695 all¦105695 the¦105696 cities¦105696 \add ≈on\add* the¦105697 plateau¦105697, and¦105698 all¦105698 the¦105700 kingdom¦105700 of¦105700 Sihon¦105701 (the¦105702 king¦105702 of¦105702 the¦105703 Amorim¦105703 who¦105704 had reigned¦105705 in¦105706 Heshbon¦105706) who¦105707 Mosheh¦105709 had¦105708 \add ≈defeated¦105708\add*, he and¦105712 the¦105714 leaders¦105714 of¦105714 Midyan¦105715: Evi¦105718 and¦105719 Rekem¦105721 and¦105722 Tsur¦105724 and¦105725 Hur¦105727 and¦105728 Reba¦105730 (the¦105731 princes¦105731 of¦105731 Sihon¦105732 who¦105733 had lived¦105733 in the¦105734 land¦105734).
+\v 18 Yahats¦105677, Kedemot¦105678, Mofa’at¦105679,
+\v 19 Kiryatayim¦105681, Sivmah¦105682, and¦105683 Tseret-Hashahar¦105684 on¦105685 the¦105685 hill¦105685 \add ≈within\add* the¦105686 valley¦105686.
+\v 20 \add It also includes\add* Beyt¦105688-Pe'or, the¦105690 slopes¦105690 of¦105690 the¦105691 Pisgah¦105691, Beyt¦105692-Hayeshimot,
+\v 21 and¦105695 all¦105695 the¦105696 cities¦105696 \add ≈on\add* the¦105697 plateau¦105697, and¦105698 all¦105698 the¦105700 kingdom¦105700 of¦105700 Sihon¦105701 (the¦105702 king¦105702 of¦105702 the¦105703 Amorim¦105703 who¦105704 had reigned¦105705 in¦105706 Heshbon¦105706) who¦105707 Mosheh¦105709 had¦105708 \add ≈defeated¦105708\add*, he and¦105712 the¦105714 leaders¦105714 of¦105714 Midyan¦105715: Evi¦105718 and¦105719 Rekem¦105721 and¦105722 Tsur¦105724 and¦105725 Hur¦105727 and¦105728 Reva¦105730 (the¦105731 princes¦105731 of¦105731 Sihon¦105732 who¦105733 had lived¦105733 in the¦105734 land¦105734).
 \v 22 The¦105744 \add ≈Israelis¦105746\add* also¦105736 killed¦105743 Bil'am¦105738 \add !(Balaam¦105738)\add* (Be'or's¦105741 son¦105739 who practiced \add ≈divination¦105742\add*) \add ≈along with¦105747 others\add*.
 \v 23 The¦105753 border¦105753 for Re'uven's¦105755 descendants was the¦105756 Yarden¦105756 \add !(Jordan¦105756)\add* \add River\add*. So¦105757 that¦105758 was¦105759 the¦105759 inheritance¦105759 of¦105759 Re'uven's¦105762 descendants—all the¦105764 cities¦105764 and¦105765 their villages¦105765 allocated to their¦105765 clans¦105763.
 \s1 The area assigned to Gad's descendants
@@ -543,9 +543,9 @@
 \s4 Promised land
 \p
 \v 24 This was the land that Mosheh¦105769 \add !(Moses¦105769)\add* gave¦105768 to¦105770 the¦105770 tribe¦105770 of¦105770 Gad, according to their¦105776 clans¦105776:
-\v 25 It¦105778 included Yazer¦105781 and¦105782 all¦105782 the¦105784 cities¦105784 of¦105784 Gilead¦105785 and¦105786 half¦105786 of¦105786 the¦105787 land¦105787 \add ≈where the¦105788 Ammonim had lived\add* as far as Aroer¦105792 \add ≈opposite\add* Rabah¦105797,
-\v 26 then¦105799 from¦105799 Heshbon¦105799 to¦105800 Ramat-Mitspah¦105803 and¦105804 Betonim¦105804, and¦105805 from¦105805 Mahanayim¦105805 to¦105806 the¦105808 Devir border¦105808.
-\v 27 \add ≈Also¦105811\add* in¦105811 the valley¦105811, Beyt¦105812-Haram¦105813, Beyt¦105814-Nimrah¦105815, Sukkot¦105816, Zafon, and¦105817 the¦105818 rest¦105818 of¦105818 the¦105819 kingdom¦105819 of¦105819 Sihon¦105820 (the¦105821 king¦105821 of¦105821 Heshbon¦105822), with the¦105823 Yarden¦105823 \add !(Jordan¦105823)\add* and¦105824 the border¦105824, as far as the¦105827 end¦105827 of¦105827 Lake¦105828 Galil, eastward¦105833 beyond the¦105832 Yarden¦105832 \add River\add*.
+\v 25 It¦105778 included Yazer¦105781 and¦105782 all¦105782 the¦105784 cities¦105784 of¦105784 Gilead¦105785 and¦105786 half¦105786 of¦105786 the¦105787 land¦105787 \add ≈where the¦105788 Amonim had lived\add* as far as Aroer¦105792 \add ≈opposite\add* Rabah¦105797,
+\v 26 then¦105799 from¦105799 Heshbon¦105799 to¦105800 Ramat-Hamitspeh¦105803 and¦105804 Betonim¦105804, and¦105805 from¦105805 Mahanayim¦105805 to¦105806 the¦105808 Devir border¦105808.
+\v 27 \add ≈Also¦105811\add* in¦105811 the valley¦105811, Beyt¦105812-Haram¦105813, Beyt¦105814-Nimrah¦105815, Sukot¦105816, Tsafon, and¦105817 the¦105818 rest¦105818 of¦105818 the¦105819 kingdom¦105819 of¦105819 Sihon¦105820 (the¦105821 king¦105821 of¦105821 Heshbon¦105822), with the¦105823 Yarden¦105823 \add !(Jordan¦105823)\add* and¦105824 the border¦105824, as far as the¦105827 end¦105827 of¦105827 Lake¦105828 Galil, eastward¦105833 beyond the¦105832 Yarden¦105832 \add River\add*.
 \v 28 So that¦105835 was¦105836 the¦105836 inheritance¦105836 of¦105836 Gad's¦105839 descendants¦105837—all the¦105841 cities¦105841 and¦105842 their villages¦105842 allocated to their¦105842 clans¦105840.
 \s1 The area assigned to Menasheh's descendants
 \rem /s1 The Territory of the Half-Tribe of Manasseh (East); The Territory Assigned to East Manasseh; The Land Given to the Half-Tribe of Manasseh
@@ -571,7 +571,7 @@
 \rem /s1 Hebron Allotted to Caleb; Caleb Requests His Land; Hebron Is Given to Caleb; Hebron Given to Caleb
 \s4 Promised land
 \p
-\v 6 \add ≈Leaders from the¦106025 tribe of¦106025\add* Yehudah¦106027 \add !(Judah¦106027)\add* approached¦106024 Yehoshua¦106030 \add !(Joshua¦106030)\add* at¦106031 Gilgal¦106031 and¦106032 Kalev¦106034 \add !(Caleb¦106034)\add* (son¦106035 of¦106035 Yefunneh¦106037 the¦106038 Kenizzite¦106038) said¦106032 to¦106033 him¦106033, “You yourself know¦106040 what Yahweh¦106047 told¦106046 the¦106051 man¦106051 of¦106051 God¦106050 Mosheh¦106050 \add !(Moses¦106050)\add* at¦106058 Kadesh¦106058-Barnea¦106059 about me and you.\x + \xo 14:6: \xt Num 14:30.\x*
+\v 6 \add ≈Leaders from the¦106025 tribe of¦106025\add* Yehudah¦106027 \add !(Judah¦106027)\add* approached¦106024 Yehoshua¦106030 \add !(Joshua¦106030)\add* at¦106031 Gilgal¦106031 and¦106032 Kalev¦106034 \add !(Caleb¦106034)\add* (son¦106035 of¦106035 Yefuneh¦106037 the¦106038 Kenizi¦106038) said¦106032 to¦106033 him¦106033, “You yourself know¦106040 what Yahweh¦106047 told¦106046 the¦106051 man¦106051 of¦106051 God¦106050 Mosheh¦106050 \add !(Moses¦106050)\add* at¦106058 Kadesh¦106058-Barnea¦106059 about me and you.\x + \xo 14:6: \xt Num 14:30.\x*
 \v 7 I was¦106061 \add ≈forty¦106063 years¦106064 old\add* when¦106066 Yahweh's¦106070 servant¦106068 Mosheh¦106067 sent¦106066 me¦106071 from¦106072 Kadesh¦106072-Barnea¦106073 to¦106074 spy¦106074 out¦106074 the¦106077 land¦106077, and¦106078 I¦106078 brought¦106078 back¦106078 \add ≈an honest report\add*.\x + \xo 14:7: \xt Num 13:1-30.\x*
 \v 8 \add ≈The other men\add* who¦106087 went¦106088 made the \add ≈people¦106094 terrified\add*, \add ≈but¦106095\add* I \add ≈remained loyal to\add* my¦106099 god¦106099 Yahweh¦106098.
 \v 9 Mosheh¦106102 \add ≈promised¦106101 me\add* that day¦106103, saying¦106105, ‘The¦106109 land¦106109 \add ≈that¦106110 you walked on¦106113\add* will¦106115 certainly be for an¦106116 inheritance¦106116 for you and¦106117 your¦106117 sons¦106117 \add ≈forever¦106120\add*, because¦106121 you¦106122 were \add ≈completely loyal to\add* my¦106125 god¦106125 Yahweh¦106124.’\x + \xo 14:9: \xt Num 14:24.\x*
@@ -579,8 +579,8 @@
 \v 11 I'm still¦106164 as strong¦106166 today as¦106167 \add I was\add* on¦106168 the day¦106168 that Mosheh¦106171 sent¦106169 me¦106170. \add ≈Just like¦106172 I could fight back then¦106173, I can still fight¦106176 or travel¦106177 just the same\add*.
 \v 12 \add ≈So¦106180\add* now¦106180, please give¦106181 me¦106183 that hill¦106186 country¦106186 that¦106188 Yahweh¦106191 \add ≈promised\add* that day, because¦106194 you yourself heard¦106197 \add ≈me say\add* that the Anakim¦106202 lived there¦106203 in fortified¦106206 cities¦106204. \add So now,\add* perhaps¦106207 Yahweh¦106208 will¦106209 help me¦106209 to take them¦106210 over just¦106211 as¦106211 \add *he¦106213\add* said¦106212.”
 \p
-\v 13 \add ≈So¦106215\add* Yehoshua¦106216 blessed¦106215 Yefunneh's¦106224 son¦106222 \add @Kalev¦106215\add* and¦106217 gave¦106217 him Hevron¦106220 as his inheritance¦106225.
-\v 14 Because of that¦106243, Hevron¦106232 belongs¦106230 to¦106233 Kalev¦106233 (Yefunneh¦106236 the¦106237 Kenizzite's¦106237 son¦106234) as an¦106238 inheritance¦106238 until¦106239 this¦106241 day¦106240, because¦106242 he¦106244 was \add ≈completely loyal to\add* Yisrael's¦106248 god¦106247 Yahweh¦106246.
+\v 13 \add ≈So¦106215\add* Yehoshua¦106216 blessed¦106215 Yefuneh's¦106224 son¦106222 \add @Kalev¦106215\add* and¦106217 gave¦106217 him Hevron¦106220 as his inheritance¦106225.
+\v 14 Because of that¦106243, Hevron¦106232 belongs¦106230 to¦106233 Kalev¦106233 (Yefuneh¦106236 the¦106237 Kenizi's¦106237 son¦106234) as an¦106238 inheritance¦106238 until¦106239 this¦106241 day¦106240, because¦106242 he¦106244 was \add ≈completely loyal to\add* Yisrael's¦106248 god¦106247 Yahweh¦106246.
 \v 15 (Hevron¦106251 used to be¦106253 called¦106250 Kiryat¦106253-Arba¦106254—\add @Arba\add* had been a \add ≈brave warrior\add* among¦106257 the Anakim¦106257.)
 \p Then¦106259 there was¦106260 a time of no more war¦106261 in that region.
 \c 15
@@ -591,25 +591,25 @@
 \v 1 \add This was the land\add* that was¦106264 assigned to Yehudah's¦106268 \add !(Judah¦106268)\add* descendants¦106267 according to¦106269 their¦106269 clans¦106269:
 \p It went from the Tsin¦106276 \add !(Zin¦106276)\add* wilderness¦106274 in the south¦106277 to¦106277 the¦106272 border¦106272 with Edom¦106273,
 \v 2 and¦106281 their southern border¦106283 was the¦106284 south-facing bay at the¦106285 end¦106285 of¦106285 the¦106286 \add ≈Dead Sea¦106286\add* \add (also called the Salt Sea)\add*.
-\v 3 \add From there\add* it¦106294 went¦106294 south¦106297 of¦106298 the¦106298 Scorpion¦106299 Pass¦106300, across to¦106301 Tsin¦106301, \add ≈climbed\add* up¦106302 to Kadesh¦106304-Barnea¦106305, crossed to Hetsron¦106307, went¦106308 to¦106309 Addar¦106309, and¦106310 around to¦106311 Karka¦106311.
+\v 3 \add From there\add* it¦106294 went¦106294 south¦106297 of¦106298 the¦106298 Scorpion¦106299 Pass¦106300, across to¦106301 Tsin¦106301, \add ≈climbed\add* up¦106302 to Kadesh¦106304-Barnea¦106305, crossed to Hetsron¦106307, went¦106308 to¦106309 Adar¦106309, and¦106310 around to¦106311 Karka¦106311.
 \v 4 Then¦106313 it¦106313 crosses to¦106314 Atsmon¦106314 and¦106315 out¦106315 to the¦106316 Mitsri¦106317 \add !(Egyptian¦106317)\add* riverbed¦106316 and¦106318 \add ≈finishes\add* at¦106322 the \add Mediterranean\add* sea. That¦106323 will¦106325 be¦106325 their southern¦106328 border¦106327.
 \p
 \v 5 The¦106330 eastern¦106331 border¦106330 was¦106332 the¦106332 \add ≈Dead Sea¦106332\add* as far as the¦106336 end¦106336 of¦106336 the¦106337 Yarden¦106337 \add !(Jordan¦106337)\add*.
 \p The¦106338 northern¦106340 border¦106338 \add starts\add* at the top of the \add ≈Dead Sea¦106342\add* where the¦106344 Yarden¦106344 \add river\add* enters it
-\v 6 then¦106346 to Beyt¦106348-Hoglah¦106349 and¦106350 \add further\add* north¦106351 to Beyt¦106352-Aravah to the¦106356 Stone¦106356 of¦106356 Bohan¦106358 (Re'uven's¦106360 son¦106360).
-\v 7 Then¦106362 the¦106363 border¦106363 went¦106362 to¦106365 Devir¦106365 from¦106366 the¦106366 Akor¦106367 Valley¦106366, and¦106368 to¦106368 the north¦106368, turning¦106369 to¦106370 the¦106372 Gilgal¦106372, which¦106373 is¦106375 in front of the Adummim¦106377 pass which¦106378 is¦106379 from¦106379 the¦106379 south¦106379 of¦106380 the riverbed¦106380, then¦106381 the¦106382 border¦106382 passed¦106381 over to¦106383 the¦106385 waters¦106385 of¦106385 Eyn¦106388-Shemesh and¦106389 it¦106390 ends at Eyn¦106393-Rogel¦106394.
-\v 8 \add ≈From there\add* the¦106397 border¦106397 went¦106396 up¦106396 the¦106398 valley¦106398 of¦106398 Ben¦106398 Hinnom¦106399 to¦106402 the¦106404 edge of¦106404 the¦106405 Yevusi¦106405 region from¦106406 the¦106406 south¦106406 (that¦106407 is¦106408 Yerushalem¦106408 \add !(Jerusalem¦106408)\add*). Then¦106409 the¦106410 border¦106410 went¦106409 to¦106411 the¦106413 head of¦106413 the¦106414 hill¦106414 opposite the Hinnom valley to the west¦106422, which¦106423 is¦106424 at¦106424 the¦106424 end¦106424 of¦106424 the¦106425 valley¦106425 of¦106425 the Refaim¦106427 to¦106428 the north¦106428.
+\v 6 then¦106346 to Beyt¦106348-Hoglah¦106349 and¦106350 \add further\add* north¦106351 to Beyt¦106352-Ha’aravah to the¦106356 Stone¦106356 of¦106356 Bohan¦106358 (Re'uven's¦106360 son¦106360).
+\v 7 Then¦106362 the¦106363 border¦106363 went¦106362 to¦106365 Devir¦106365 from¦106366 the¦106366 Akor¦106367 Valley¦106366, and¦106368 to¦106368 the north¦106368, turning¦106369 to¦106370 the¦106372 Gilgal¦106372, which¦106373 is¦106375 in front of the Adumim¦106377 pass which¦106378 is¦106379 from¦106379 the¦106379 south¦106379 of¦106380 the riverbed¦106380, then¦106381 the¦106382 border¦106382 passed¦106381 over to¦106383 the¦106385 waters¦106385 of¦106385 Eyn¦106388-Shemesh and¦106389 it¦106390 ends at Eyn¦106393-Rogel¦106394.
+\v 8 \add ≈From there\add* the¦106397 border¦106397 went¦106396 up¦106396 the¦106398 valley¦106398 of¦106398 Ben¦106398 Hinom¦106399 to¦106402 the¦106404 edge of¦106404 the¦106405 Yevusi¦106405 region from¦106406 the¦106406 south¦106406 (that¦106407 is¦106408 Yerushalem¦106408 \add !(Jerusalem¦106408)\add*). Then¦106409 the¦106410 border¦106410 went¦106409 to¦106411 the¦106413 head of¦106413 the¦106414 hill¦106414 opposite the Hinom valley to the west¦106422, which¦106423 is¦106424 at¦106424 the¦106424 end¦106424 of¦106424 the¦106425 valley¦106425 of¦106425 the Refaim¦106427 to¦106428 the north¦106428.
 \v 9 \add ≈From there\add* the¦106431 border¦106431 turned¦106430 from¦106432 the¦106432 head of¦106432 the¦106433 hill¦106433 to¦106434 the¦106436 Neftoah spring¦106436 and¦106439 went¦106439 out¦106439 to¦106440 the¦106442 cities¦106442 of¦106442 Mt¦106443. Efron¦106445, then¦106446 the¦106447 border¦106447 turned¦106446 to Ba'alah¦106448 (\add ≈now called\add* Kiryat¦106450-Yearim¦106451).
-\v 10 Then¦106453 the¦106454 border¦106454 went around from¦106455 Ba'alah¦106455 to the west¦106456 to Mt¦106459. Se'ir¦106460, and¦106461 passed¦106461 over to¦106462 the¦106464 shoulder of¦106464 Mt¦106465. Yearim¦106467 from¦106468 the north¦106468 (\add ≈also called\add* Kesalon¦106470), and¦106471 went¦106471 down¦106471 to Beyt¦106472-Shemesh¦106474, and¦106475 passed¦106475 over to Timnah¦106476.
-\v 11 \add ≈From there\add* the¦106479 border¦106479 went¦106478 out¦106478 to¦106480 the¦106482 shoulder of¦106482 Ekron¦106483 to¦106484 the north¦106484, then¦106485 turned¦106485 toward Shikkeron¦106487 and¦106488 passed¦106488 over to Mt¦106489. Ba'alah¦106491, and¦106492 went¦106492 out¦106492 to Yabneel, then¦106494 the border¦106496 ended at¦106497 the sea.
+\v 10 Then¦106453 the¦106454 border¦106454 went around from¦106455 Ba'alah¦106455 to the west¦106456 to Mt¦106459. Se'ir¦106460, and¦106461 passed¦106461 over to¦106462 the¦106464 shoulder of¦106464 Mt¦106465. Yearim¦106467 from¦106468 the north¦106468 (\add ≈also called\add* Kesalon¦106470), and¦106471 went¦106471 down¦106471 to Beyt¦106472-Shemesh¦106474 \add !(Heliopolis¦106472)\add*, and¦106475 passed¦106475 over to Timnah¦106476.
+\v 11 \add ≈From there\add* the¦106479 border¦106479 went¦106478 out¦106478 to¦106480 the¦106482 shoulder of¦106482 Ekron¦106483 to¦106484 the north¦106484, then¦106485 turned¦106485 toward Shikeron¦106487 and¦106488 passed¦106488 over to Mt¦106489. Ba'alah¦106491, and¦106492 went¦106492 out¦106492 to Yavne’el, then¦106494 the border¦106496 ended at¦106497 the sea.
 \v 12 The¦106499 western border¦106499 was¦106501 the¦106501 \add ≈Mediterranean\add* Sea¦106501. Those were¦106505 the¦106505 borders¦106505 of¦106505 \add the land given to\add* Yehudah's¦106508 \add !(Judah¦106508)\add* descendants¦106506 to be allocated to their¦106510 clans¦106510.
 \s1 Kalev defeats Hevron and Devir
 \rem /s1 The Land Given to Caleb; Caleb Occupies His Portion; Caleb Conquers Hebron and Debir
 \s4 Promised land
 \r (Jdg. 1:11-15)
 \p
-\v 13 Yahweh¦106525 had instructed Yehoshua¦106526 \add !(Joshua¦106526)\add* to¦106512 give¦106516 \add this\add* block of land to Kalev¦106512 \add !(Caleb¦106512)\add* (Yefunneh's¦106515 son¦106513): Kiryat¦106529-Arba¦106530 (\add ≈now called\add* Hevron¦106534—Arba was Anak's¦106532 father¦106531).\x + \xo 15:13-14: \xt Jdg 1:20.\x*
-\v 14 Kalev¦106538 captured \add the land\add* from Anak's three¦106541 sons¦106542—Sheshay¦106546, Ahiman¦106549, and¦106550 Talimay¦106552,
+\v 13 Yahweh¦106525 had instructed Yehoshua¦106526 \add !(Joshua¦106526)\add* to¦106512 give¦106516 \add this\add* block of land to Kalev¦106512 \add !(Caleb¦106512)\add* (Yefuneh's¦106515 son¦106513): Kiryat¦106529-Arba¦106530 (\add ≈now called\add* Hevron¦106534—Arba was Anak's¦106532 father¦106531).\x + \xo 15:13-14: \xt Jdg 1:20.\x*
+\v 14 Kalev¦106538 captured \add the land\add* from Anak's three¦106541 sons¦106542—Sheshay¦106546, Ahiman¦106549, and¦106550 Talmay¦106552,
 \v 15 then¦106556 from¦106557 there¦106557, he \add ≈battled against¦106558\add* Devir (formerly¦106565 called¦106562 Kiryat¦106566-Sefer)
 \v 16 ⇔and¦106570 \add *he¦106571\add* said¦106570, “I'll¦106581 give¦106581 my¦106586 daughter¦106586 Aksah¦106585 to marry \add ≈to the man who¦106572 attacks¦106574\add* Kiryat¦106577-Sefer and¦106580 captures¦106580 it.”
 \v 17 Then¦106589 Otniel¦106590 (Kenaz's¦106593 son¦106591 and Kalev's¦106595 brother¦106594) captured¦106589 \add @the city\add*, \add ≈so¦106596\add* \add @Kalev¦106596\add* gave¦106596 his¦106602 daughter¦106602 Aksah¦106601 to¦106598 him¦106598 for¦106603 a¦106603 wife¦106603.
@@ -620,32 +620,32 @@
 \s4 Promised land
 \p
 \v 20 This¦106648 is¦106649 Yehudah's¦106653 \add !(Judah¦106653)\add* inheritance¦106649 according to¦106654 their¦106654 clans¦106654:
-\v 21 The¦106657 cities¦106657 at the edge of Yehudah's¦106662 block toward the¦106665 border¦106665 with Edom¦106666 in¦106667 Negev were¦106656 Kavtseel¦106668, Eder¦106669, Yagur,
-\v 22 Kinah¦106672, Dimonah¦106673, Adadah¦106674,
-\v 23 Kedesh¦106676, Hatsor¦106677, Ithnan¦106678,
+\v 21 The¦106657 cities¦106657 at the edge of Yehudah's¦106662 block toward the¦106665 border¦106665 with Edom¦106666 in¦106667 Negev were¦106656 Kavtse’el¦106668, Eder¦106669, Yagur,
+\v 22 Kinah¦106672, Dimonah¦106673, Ad’adah¦106674,
+\v 23 Kedesh¦106676, Hatsor¦106677, Yitnan¦106678,
 \v 24 Zif¦106680, Telem¦106681, Be'alot¦106682,
-\v 25 Hatsor¦106684-Hadattah¦106686, Keriyot¦106687-Hetsron¦106688 (\add ≈also called\add* Hatsor¦106690),
+\v 25 Hatsor¦106684-Hadatah¦106686, Keriyot¦106687-Hetsron¦106688 (\add ≈also called\add* Hatsor¦106690),
 \v 26 Amam¦106692, Shema¦106693, Moladah¦106694,
-\v 27 Hatsar¦106696-Gaddah¦106697, Heshmon¦106698, Beyt¦106699-Pelet¦106700,
-\v 28 Hatsar¦106702-Shual¦106703, Be'er¦106704-Sheva¦106704 \add !(Beersheba¦106704)\add*, and¦106706 Biziothiah¦106706,
+\v 27 Hatsar¦106696-Gadah¦106697, Heshmon¦106698, Beyt¦106699-Pelet¦106700,
+\v 28 Hatsar¦106702-Shual¦106703, Be'er¦106704-Sheva¦106704 \add !(Beersheba¦106704)\add*, and¦106706 Bizyoteyah¦106706,
 \v 29 Ba'alah¦106708, Iyim¦106709, Etsem¦106710,
 \v 30 Eltolad¦106712, Kesil¦106713, Hormah¦106714,
-\v 31 Tsiklag¦106716, Madmannah¦106717, Sansannah¦106718,
-\v 32 Lebaot, Shilhim¦106721, Ayin¦106722, and¦106723 Rimmon¦106723—\add ≈a total¦106724 of¦106724\add* twenty-nine cities¦106726 as well as their¦106729 villages¦106729.
+\v 31 Tsiklag¦106716, Madmanah¦106717, Sansanah¦106718,
+\v 32 Leva’ot, Shilhim¦106721, Ayin¦106722, and¦106723 Rimon¦106723—\add ≈a total¦106724 of¦106724\add* twenty-nine cities¦106726 as well as their¦106729 villages¦106729.
 \p
 \v 33 \add Then down\add* in¦106732 the lowlands were Eshtaol¦106733, Tsor'ah¦106734, Ashnah¦106735,
-\v 34 Zanoah¦106737, Eyn¦106738-Gannim¦106739, Tapuah¦106740, Enam¦106741,
-\v 35 Yarmut¦106743, Adullam¦106744, Sokoh¦106745, Azekah¦106746,
-\v 36 Shaarayim¦106748, Adithaim¦106749, and¦106750 Gederah¦106750 (\add also called\add* Gederothaim¦106751)—\add ≈a total of\add* fourteen cities¦106752 as well as their \add surrounding\add* villages¦106756.
+\v 34 Zanoah¦106737, Eyn¦106738-Ganim¦106739, Tapuah¦106740, Eynam¦106741,
+\v 35 Yarmut¦106743, Adulam¦106744, Sokoh¦106745, Azekah¦106746,
+\v 36 Sha’arayim¦106748, Aditayim¦106749, and¦106750 Gederah¦106750 (\add also called\add* Gederotayim¦106751)—\add ≈a total of\add* fourteen cities¦106752 as well as their \add surrounding\add* villages¦106756.
 \p
-\v 37 \add Also\add* Zenan¦106758, Hadashah¦106759, Migdal¦106760-Gad¦106762,
-\v 38 Dilean¦106764, Mitspah¦106765, Yaketeel¦106766,
+\v 37 \add Also\add* Tsenan¦106758, Hadashah¦106759, Migdal¦106760-Gad¦106762,
+\v 38 Dil’an¦106764, Mitspah¦106765, Yakete’el¦106766,
 \v 39 Lakish¦106768, Batsekat¦106769, Eglon¦106770,
-\v 40 Kabbon, Lahmas¦106773, Kitlish¦106774,
-\v 41 Gederot¦106776, Beyt¦106777-Dagon¦106779, Naamah¦106780, and¦106781 Makkedah¦106781—sixteen cities¦106782 as well as their¦106786 villages¦106786.
+\v 40 Kabon, Lahmam¦106773, Kitlish¦106774,
+\v 41 Gederot¦106776, Beyt¦106777-Dagon¦106779, Na’amah¦106780, and¦106781 Makedah¦106781—sixteen cities¦106782 as well as their¦106786 villages¦106786.
 \p
 \v 42 \add Also\add* Livnah¦106789, Eter¦106790, Ashan¦106791,
-\v 43 Yiftah \add !(Jephthah)\add*, Ashnah¦106794, Nezib¦106795,
+\v 43 Yiftah \add !(Jephthah)\add*, Ashnah¦106794, Netsiv¦106795,
 \v 44 Ke'ilah¦106797, Akziv¦106798, and¦106799 Mareshah¦106799—nine¦106801 cities¦106800 as well as their¦106802 villages¦106802.
 \p
 \v 45 \add Also\add* Ekron¦106804 with its¦106805 towns and¦106806 villages¦106806
@@ -653,26 +653,26 @@
 \p
 \v 47 \add Also\add* Ashdod¦106819 and its¦106820 towns and¦106821 its villages, Azah¦106822 \add !(Gaza¦106822)\add* and its¦106823 towns and¦106824 its villages, as far as the¦106827 riverbed¦106827 of¦106827 Mitsrayim¦106828 \add !(Egypt¦106828)\add* and¦106829 the¦106829 \add ≈Mediterranean\add* sea¦106829 and the border¦106832.
 \p
-\v 48 \add Also\add* in¦106835 the hill country¦106835: Shamir¦106836, Yattir¦106837, Sokoh¦106838,
-\v 49 Dannah¦106840, Kiryat¦106841-Sannah¦106843 (\add ≈also called\add* Devir¦106845),
-\v 50 Anab¦106847, Eshtemoa¦106848, Anim¦106849,
+\v 48 \add Also\add* in¦106835 the hill country¦106835: Shamir¦106836, Yatir¦106837, Sokoh¦106838,
+\v 49 Danah¦106840, Kiryat¦106841-Sanah¦106843 (\add ≈also called\add* Devir¦106845),
+\v 50 Anav¦106847, Eshtemoa¦106848, Anim¦106849,
 \v 51 Goshen¦106851, Holon¦106852, and¦106853 Giloh¦106853—eleven cities¦106854 as well as their¦106858 villages¦106858.
 \p
-\v 52 \add Also\add* Aravi¦106860, Dumah, Eshan¦106862,
-\v 53 Yanim, Beyt¦106866-Tapuah¦106868, Afekah,
-\v 54 Humtah¦106871, and¦106872 Kiryat¦106872-Arba (\add ≈also called\add* Hevron¦106875) and¦106876 Zior¦106876—nine¦106878 cities¦106877 as well as their¦106879 villages¦106879.
+\v 52 \add Also\add* Aravi¦106860, Dumah, Esh’an¦106862,
+\v 53 Yanum, Beyt¦106866-Tapuah¦106868, Afekah,
+\v 54 Humtah¦106871, and¦106872 Kiryat¦106872-Arba (\add ≈also called\add* Hevron¦106875) and¦106876 Tsi’or¦106876—nine¦106878 cities¦106877 as well as their¦106879 villages¦106879.
 \p
-\v 55 \add Also\add* Maeon¦106882, Karmel¦106884, Zif¦106885, Yuttah,
+\v 55 \add Also\add* Maeon¦106882, Karmel¦106884, Zif¦106885, Yutah,
 \v 56 Yizre'el¦106888 \add !(Jezreel¦106888)\add*, Yakedeam¦106889, Zanoah¦106890,
 \v 57 Kayin¦106892 \add !(Cain¦106892)\add*, Giveah¦106893, and¦106894 Timnah¦106894—ten¦106896 cities¦106895 as well as their¦106897 villages¦106897.
 \p
 \v 58 \add Also\add* Halhul¦106899, Beyt¦106900-Tsur¦106902, Gedor¦106903,
-\v 59 Maarat, Beyt¦106906-Anot, and¦106909 Eltekon¦106909—six¦106911 cities¦106910 as well as their¦106912 villages¦106912.
+\v 59 Ma’arat, Beyt¦106906-Anot, and¦106909 Eltekon¦106909—six¦106911 cities¦106910 as well as their¦106912 villages¦106912.
 \p
 \v 60 \add Also\add* Kiryat¦106914-Ba'al¦106916 (\add ≈also called\add* Kiryat¦106918-Yearim¦106919) and¦106920 Rabah¦106920—two¦106922 cities¦106921 as well as their¦106923 villages¦106923.
 \p
-\v 61 In¦106926 the wilderness¦106926, Beyt¦106927-Aravah¦106928, Middin¦106929, Secacah¦106930,
-\v 62 Nibshan¦106932, the¦106933 City¦106933 of¦106933 Salt¦106935, and¦106936 Eyn¦106936-Gedi¦106937—six¦106939 cities¦106938 as well as their¦106940 villages¦106940.
+\v 61 In¦106926 the wilderness¦106926, Beyt¦106927-Ha’aravah¦106928, Midin¦106929, Sekakah¦106930,
+\v 62 Nivshan¦106932, the¦106933 Ir¦106933-Hamelah¦106935, and¦106936 Eyn¦106936-Gedi¦106937—six¦106939 cities¦106938 as well as their¦106940 villages¦106940.
 \p
 \v 63 \add ≈But¦106942\add* Yehudah's \add !(Judah)\add* descendants weren't able¦106949 to defeat the¦106944 Yevusim¦106944 who lived¦106945 in Yerushalem¦106946 \add !(Jerusalem¦106946)\add*, so \add *they¦106953\add* have lived¦106955 among the¦106959 tribe of¦106959 Yehudah¦106960 to this¦106964 day¦106963.\x + \xo 15:63: \xt Jdg 1:21; 2Sam 5:6; 1Ch 11:4.\x*
 \c 16
@@ -690,9 +690,9 @@
 \rem /s1 Ephraim
 \s4 Promised land
 \p
-\v 5 The¦107025 allotment for Efrayim's¦107028 \add !(Ephraim¦107028)\add* descendants¦107026 according to¦107029 their¦107029 clans¦107029 was¦107030 at Atarot¦107034-Addar¦107035 in the east¦107033, going as far as Upper¦107040 Beyt¦107038-Horon¦107039
-\v 6 and¦107042 out¦107042 to¦107044 the \add ≈Mediterranean\add*. From¦107046 Mikmetat in the¦107046 north¦107046, the¦107048 border¦107048 went¦107042 eastward¦107049 toward Taanat-Shiloh¦107051 then¦107052 further east¦107054 to¦107055 Yanoah¦107055.
-\v 7 From¦107058 Yanoah¦107058 it went to Atarot¦107059 and¦107060 Naarah¦107060, reached¦107061 Yeriho¦107062 \add !(Jericho¦107062)\add* then¦107063 came out¦107063 at the¦107064 Yarden¦107064 \add !(Jordan¦107064)\add*.
+\v 5 The¦107025 allotment for Efrayim's¦107028 \add !(Ephraim¦107028)\add* descendants¦107026 according to¦107029 their¦107029 clans¦107029 was¦107030 at Atrot¦107034-Adar¦107035 in the east¦107033, going as far as Upper¦107040 Beyt¦107038-Horon¦107039
+\v 6 and¦107042 out¦107042 to¦107044 the \add ≈Mediterranean\add*. From¦107046 Mikmetat in the¦107046 north¦107046, the¦107048 border¦107048 went¦107042 eastward¦107049 toward Ta’anat-Shiloh¦107051 then¦107052 further east¦107054 to¦107055 Yanoah¦107055.
+\v 7 From¦107058 Yanoah¦107058 it went to Atarot¦107059 and¦107060 Na’arah¦107060, reached¦107061 Yeriho¦107062 \add !(Jericho¦107062)\add* then¦107063 came out¦107063 at the¦107064 Yarden¦107064 \add !(Jordan¦107064)\add*.
 \v 8 \add The northern border went\add* from¦107066 Tapuah¦107066 to¦107069 the¦107070 Kanah¦107071 riverbed¦107070 and¦107072 then out to¦107074 the¦107074 \add ≈Mediterranean\add*. That¦107075 was¦107076 the¦107076 inheritance¦107076 of Efrayim's¦107080 descendants¦107078 according to¦107081 their¦107081 clans¦107081,
 \v 9 \add ≈although\add* some of the¦107083 cities¦107083 with their¦107095 villages¦107095 for¦107085 Efrayim's¦107086 descendants were \add actually\add* inside the territory assigned to Menasheh's¦107091 \add !(Manasseh¦107091)\add* descendants.
 \v 10 \add ≈But¦107097\add* they¦107098 didn't¦107097 \add ≈capture the land of\add* the¦107101 Kena'anim¦107101 \add !(Canaanites¦107101)\add* who¦107102 lived¦107102 in¦107103 Gezer¦107103, so¦107104 they've lived¦107104 within¦107106 Efrayim¦107107 to this¦107111 day¦107110 and¦107112 were¦107112 forced to¦107113 serve as labourers¦107115.\x + \xo 16:10: \xt Jdg 1:29.\x*
@@ -712,7 +712,7 @@
 \v 8 (The¦107290 Tapuah¦107291 \em land¦107290\em* was for Menasheh, but¦107292 Tapuah¦107292 \add town\add* was for Efrayim¦107298 \add !(Ephraim¦107298)\add*.)
 \v 9 Then¦107300 the¦107301 border¦107301 went¦107300 south¦107304 to¦107304 the¦107304 Kanah¦107303 riverbed¦107305—the cities there belonged¦107308 to¦107308 Efrayim¦107308 even though they were inside Menasheh's¦107311 land—then¦107312 the¦107312 border¦107312 stayed on the¦107314 north¦107314 side of¦107314 the riverbed¦107315 and¦107316 extended to¦107318 the¦107318 \add ≈Mediterranean\add*.
 \v 10 \add So\add* the south¦107320 was for Efrayim¦107321 and¦107322 the north¦107322 was for Menasheh¦107323, and¦107324 the¦107325 sea¦107325 was the \add western\add* border¦107326, meeting Asher¦107327 from¦107329 the¦107329 north¦107329 and¦107330 Yisakar¦107330 \add !(Issachar¦107330)\add* from¦107331 the¦107331 east¦107331.
-\v 11 Menasheh¦107334 was allocated \add cities\add* inside \add both\add* Yisakar's¦107335 and¦107336 Asher's¦107336 \add territories\add*: Beyt¦107337-Shan¦107339, Yivleam¦107341, Dor¦107346, Endor¦107351, Taanak¦107354, and Megiddon¦107357 along with their \add ≈surrounding towns\add*.\f + \fr 17:11 \ft We've omitted the final Hebrew phrase here (the three of Nafet) since it's unclear what it means (plus it's not considered to be a vital point in the narrative).\f*
+\v 11 Menasheh¦107334 was allocated \add cities\add* inside \add both\add* Yisakar's¦107335 and¦107336 Asher's¦107336 \add territories\add*: Beyt¦107337-Shean¦107339, Yivleam¦107341, Dor¦107346, Eyn-Dor¦107351, Ta’anak¦107354, and Megidon¦107357 along with their \add ≈surrounding towns\add*.\f + \fr 17:11 \ft We've omitted the final Hebrew phrase here (the three of Nafet) since it's unclear what it means (plus it's not considered to be a vital point in the narrative).\f*
 \v 12 \add ≈But¦107362\add* Menasheh's¦107365 descendants¦107364 weren't able¦107363 to¦107366 take¦107366 possession¦107366 of¦107366 those¦107370 cities¦107369, \add ≈so¦107371\add* the¦107372 Kena'anim¦107372 \add !(Canaanites¦107372)\add* continued to¦107373 live¦107373 in the region.\x + \xo 17:12-13: \xt Jdg 1:27-28.\x*
 \v 13 \add ≈When¦107377 the¦107380 Israelis¦107381 strengthened¦107379 their position\add*, they¦107382 were able to¦107386 force¦107386 those Kena'anim to work¦107386 for them, \add ≈but¦107387\add* they weren't able to \add ≈drive them out\add*.
 \s1 Efrayim and Menasheh's descendants are given additional land
@@ -721,9 +721,9 @@
 \p
 \v 14 Then¦107392 the¦107393 \add two\add* \add ≈half-tribes of¦107393 Efrayim\add* \add !(Ephraim)\add* \add ≈and Menasheh\add* \add !(Manasseh)\add* asked¦107398 Yehoshua¦107397 \add !(Joshua¦107397)\add*, “Why¦107399 have¦107400 you¦107400 \add only\add* given¦107400 to¦107401 \add #us\add* one measured allocation as an¦107402 inheritance¦107402 when \add #we're\add* \add very\add* numerous¦107410 \add because\add* Yahweh¦107418 has¦107417 \add ≈already\add* blessed¦107417 \add #us\add*?”
 \p
-\v 15 “If \add ≈there's so¦107420 many of you\add*,” Yehoshua¦107422 \add ≈answered¦107420\add*, “and if¦107423 Efrayim's¦107444 hill-country is¦107425 too small for you¦107428, go¦107429 into the¦107431 forested¦107431 area¦107442 of¦107436 the¦107436 Perizzim and¦107437 the¦107437 Refaim¦107437 and clear some land¦107435 for¦107441 yourselves there.”
+\v 15 “If \add ≈there's so¦107420 many of you\add*,” Yehoshua¦107422 \add ≈answered¦107420\add*, “and if¦107423 Efrayim's¦107444 hill-country is¦107425 too small for you¦107428, go¦107429 into the¦107431 forested¦107431 area¦107442 of¦107436 the¦107436 Perizim and¦107437 the¦107437 Refaim¦107437 and clear some land¦107435 for¦107441 yourselves there.”
 \p
-\v 16 “The¦107447 hill¦107453 country¦107453 \add certainly\add* isn't¦107449 big enough for¦107452 \add all of\add* us¦107452,” \add *they\add* responded¦107446, “plus¦107454 the¦107458 Kena'anim \add !(Canaanites)\add* living¦107459 in¦107460 the¦107462 Yizre'el¦107470 \add !(Jezreel¦107470)\add* valley¦107462 and in Beyt-Shan and the¦107469 surrounding towns have iron¦107455 chariots¦107454.”
+\v 16 “The¦107447 hill¦107453 country¦107453 \add certainly\add* isn't¦107449 big enough for¦107452 \add all of\add* us¦107452,” \add *they\add* responded¦107446, “plus¦107454 the¦107458 Kena'anim \add !(Canaanites)\add* living¦107459 in¦107460 the¦107462 Yizre'el¦107470 \add !(Jezreel¦107470)\add* valley¦107462 and in Beyt-Shean and the¦107469 surrounding towns have iron¦107455 chariots¦107454.”
 \p
 \v 17 \add ≈So¦107472\add* Yehoshua¦107473 told¦107472 the¦107476 \add ≈half-tribes of¦107476 Efrayim¦107478 and¦107479 Menasheh¦107479\add*, “\add Yes\add*, there's a¦107481 lot¦107492 of you¦107484 and¦107485 you're very powerful. One¦107493 land allotment \add ≈wouldn't be enough for¦107487 you¦107487\add*
 \v 18 \add ≈so\add* the¦107496 hill¦107496 country¦107496 will¦107497 be¦107502 yours \add as well\add*. \add ≈However\add*, it's a forest¦107502 and¦107504 you'll¦107504 have to clear it to¦107506 the borders¦107507. You'll¦107510 \add need to\add* drive¦107510 out the¦107513 Kena'anim¦107513 even if they are¦107519 strong¦107519 and with iron¦107516 chariots¦107515.”
@@ -747,26 +747,26 @@
 \rem /s1 The Land Given to Benjamin; The Territory of Benjamin; Allotment for Benjamin; The Territory Assigned to Benjamin
 \s4 Promised land
 \p
-\v 11 The¦107726 tribe¦107726 of¦107726 Benyamin¦107729 \add !(Benjamin¦107729)\add* won the \add first\add* draw and¦107731 the¦107732 area for their¦107733 clans¦107730 was between¦107734 the¦107735 land assigned to Yehudah¦107736 \add !(Judah¦107736)\add* and that assigned to \add ≈Efrayim\add* \add !(Ephraim)\add* \add ≈and Menasheh\add* \add !(Manasseh)\add*.
+\v 11 The¦107726 tribe¦107726 of¦107726 Benyamin¦107729 won the \add first\add* draw and¦107731 the¦107732 area for their¦107733 clans¦107730 was between¦107734 the¦107735 land assigned to Yehudah¦107736 \add !(Judah¦107736)\add* and that assigned to \add ≈Efrayim\add* \add !(Ephraim)\add* \add ≈and Menasheh\add* \add !(Manasseh)\add*.
 \v 12 Their northern border¦107743 went from¦107746 the¦107748 Yarden¦107748 \add !(Jordan¦107748)\add* then¦107749 to¦107751 the¦107753 northern side¦107744 of¦107753 Yeriho¦107754 \add !(Jericho¦107754)\add* and¦107756 up¦107756 into¦107757 the hill country¦107757 to¦107758 the west¦107758, coming out in the¦107762 wilderness¦107762 at Beyt¦107763-Aven¦107764.
-\v 13 Then¦107766 it¦107766 went¦107766 across towards Luz (\add ≈now called\add* Beyt¦107776-El¦107778 \add !(Bethel¦107776)\add*) to the¦107780 southern edge then downhill towards Atarot¦107781-Addar¦107782 beside the¦107785 hill¦107785 south¦107787 of¦107788 lower¦107791 Beyt¦107788-Horon¦107790.
+\v 13 Then¦107766 it¦107766 went¦107766 across towards Luz (\add ≈now called\add* Beyt¦107776-El¦107778 \add !(Bethel¦107776)\add*) to the¦107780 southern edge then downhill towards Atrot¦107781-Adar¦107782 beside the¦107785 hill¦107785 south¦107787 of¦107788 lower¦107791 Beyt¦107788-Horon¦107790.
 \v 14 Then¦107793 the¦107794 western border¦107794 turned¦107795 from¦107800 that¦107803 hill¦107802 and went south¦107810, coming out at Kiryat¦107816-Ba'al¦107818 (\add ≈also called\add* Kiryat¦107820-Yearim¦107821—a town¦107822 belonging to Yehudah¦107824) thus forming the¦107826 western side¦107826.
 \v 15 The¦107830 southern¦107832 border¦107837 went¦107836 west¦107838 from¦107833 Kiryat¦107835-Yearim to¦107840 the¦107842 spring¦107842 at Neftoah,
-\v 16 then¦107846 downhill to¦107848 the Ben¦107856-Hinnom¦107857 valley¦107859 (in¦107861 the¦107861 valley¦107861 of¦107861 the Refaim¦107862 to the north¦107863) then¦107864 downhill to Hinnom valley¦107865 to¦107867 the¦107869 edge of¦107869 the¦107870 Yevusim¦107870 and downhill to Eyn¦107873-Rogel¦107874.
-\v 17 Then¦107876 it¦107876 turned¦107876 northward¦107877 and¦107878 went¦107878 \add west\add* to Eyn¦107879-Shemesh¦107880 and¦107881 across to¦107882 Gelilot¦107884 opposite¦107887 the¦107888 Adummim¦107889 pass, before going¦107890 downhill to the¦107891 Stone¦107891 of¦107891 Bohan¦107893 (Re'uven's¦107895 son¦107895).
+\v 16 then¦107846 downhill to¦107848 the Ben¦107856-Hinom¦107857 valley¦107859 (in¦107861 the¦107861 valley¦107861 of¦107861 the Refaim¦107862 to the north¦107863) then¦107864 downhill to Hinom valley¦107865 to¦107867 the¦107869 edge of¦107869 the¦107870 Yevusim¦107870 and downhill to Eyn¦107873-Rogel¦107874.
+\v 17 Then¦107876 it¦107876 turned¦107876 northward¦107877 and¦107878 went¦107878 \add west\add* to Eyn¦107879-Shemesh¦107880 and¦107881 across to¦107882 Gelilot¦107884 opposite¦107887 the¦107888 Adumim¦107889 pass, before going¦107890 downhill to the¦107891 Stone¦107891 of¦107891 Bohan¦107893 (Re'uven's¦107895 son¦107895).
 \v 18 It¦107897 extended over to¦107898 the¦107900 northern¦107904 slope¦107900 of¦107900 the¦107903 Yarden valley and¦107905 then downhill into¦107906 the¦107906 \add actual\add* valley.
 \v 19 \add *It\add* then¦107908 went¦107908 \add east\add* to¦107910 the¦107912 northern slope¦107912 of¦107912 Beyt¦107913-Hoglah¦107915 before coming out at¦107929 the¦107932 \add ≈north end¦107932\add* of¦107925 the¦107926 \add ≈Dead Sea¦107926\add* \add (also called the Salt Sea)\add* where the¦107933 Yarden¦107933 \add river\add* flows into¦107934 it. That¦107935 was¦107936 the southern boundary
 \v 20 and¦107939 the¦107939 Yarden¦107939 borders¦107940 it¦107942 on the¦107943 east¦107945. Those were¦107947 the¦107947 borders of¦107947 Benyamin's¦107949 descendants'¦107948 inheritance¦107947 according to their¦107952 clans¦107952.
 \rem /s1 The Towns Given to Benjamin
 \p
-\v 21 The¦107955 cities¦107955 allocated to¦107956 Benyamin's¦107958 descendants¦107957 and their¦107959 clans¦107959 were: Yeriho¦107960 \add !(Jericho¦107960)\add*, Beyt¦107961-Hoglah¦107963, Emek¦107964-Keziz¦107965,
-\v 22 Beyt¦107967-Aravah, Tsemarayim¦107969, Beyt¦107970-El¦107972 \add !(Bethel¦107970)\add*,
-\v 23 Avvim¦107974, Parah¦107975, Ofrah¦107976,
-\v 24 Kefar-Ammoni¦107978, Ofni, and Geva¦107982—a total of twelve cities¦107983 as well as their \add surrounding\add* villages¦107987.
+\v 21 The¦107955 cities¦107955 allocated to¦107956 Benyamin's¦107958 descendants¦107957 and their¦107959 clans¦107959 were: Yeriho¦107960 \add !(Jericho¦107960)\add*, Beyt¦107961-Hoglah¦107963, Emek¦107964-Ketsits¦107965,
+\v 22 Beyt¦107967-Ha’aravah, Tsemarayim¦107969, Beyt¦107970-El¦107972 \add !(Bethel¦107970)\add*,
+\v 23 Avim¦107974, Parah¦107975, Ofrah¦107976,
+\v 24 Kefar-Ha’amoni¦107978, Ofni, and Geva¦107982—a total of twelve cities¦107983 as well as their \add surrounding\add* villages¦107987.
 \v 25 \add Also\add* Giveon¦107989, Ramah¦107990, Be'erot¦107991,
-\v 26 Mitspah¦107993, Kefirah¦107994, Mozah¦107995,
-\v 27 Rekem¦107997, Irpeel¦107998, Taralah¦107999,
-\v 28 Zelah, Haelef, Yevus (\add ≈now called\add* Yerushalem¦108006 \add !(Jerusalem¦108006)\add*), Giveah¦108007, and Kiryat¦108008—\add a total of\add* fourteen cities¦108009 as well as their \add surrounding\add* villages¦108013. Those were¦108015 Benyamin's¦108018 descendants'¦108016 inheritance¦108015 according to¦108019 their¦108019 clans¦108019.
+\v 26 Mitspah¦107993, Kefirah¦107994, Motsah¦107995,
+\v 27 Rekem¦107997, Yirpe’el¦107998, Tar’alah¦107999,
+\v 28 Tsela, Haelef, Yevus (\add ≈now called\add* Yerushalem¦108006 \add !(Jerusalem¦108006)\add*), Giveah¦108007, and Kiryat¦108008—\add a total of\add* fourteen cities¦108009 as well as their \add surrounding\add* villages¦108013. Those were¦108015 Benyamin's¦108018 descendants'¦108016 inheritance¦108015 according to¦108019 their¦108019 clans¦108019.
 \c 19
 \s1 The allocation to Shim'on's descendants
 \rem /s1 The Territory Assigned to Simeon; The Land Given to Simeon; The Territory of Simeon; Allotment for Simeon
@@ -776,10 +776,10 @@
 \v 2 \add @Shim'on's¦108039\add* inheritance¦108041 \add ≈included\add*: Be'er¦108042-Sheva¦108042 \add !(Beersheba¦108042)\add*,\f + \fr 19:2 \ft TC: Ancient manuscripts differ, with some adding Sheva (possibly a mistaken reduplication) or Shema here (but that would make the total number wrong that's given in v6).\f* Moladah¦108046,\x + \xo 19:2-8: \xt 1Ch 4:28-33.\x*
 \v 3 Hatsar¦108048-Shual¦108049, Balah¦108050, Etsem¦108051,
 \v 4 Eltolad¦108053, Betul¦108054, Hormah¦108055,
-\v 5 Tsiklag¦108057, Beyt¦108058-Markabot. Hatsarsusah,
-\v 6 Beyt¦108064-Lebaot, and¦108066 Sharuhen¦108066—thirteen cities¦108067 as well as their \add surrounding\add* villages¦108071.
+\v 5 Tsiklag¦108057, Beyt¦108058-Hamarkavot. Hatsar-Susah,
+\v 6 Beyt¦108064-Leva’ot, and¦108066 Sharuhen¦108066—thirteen cities¦108067 as well as their \add surrounding\add* villages¦108071.
 \p
-\v 7 \add Also\add* Ayin¦108073, Rimmon¦108075, Eter¦108076, and¦108077 Asha—four¦108079 cities¦108078 as well as their \add surrounding\add* villages¦108080,
+\v 7 \add Also\add* Ayin¦108073, Rimon¦108075, Eter¦108076, and¦108077 Asha—four¦108079 cities¦108078 as well as their \add surrounding\add* villages¦108080,
 \v 8 and¦108082 all¦108082 the¦108084 \add further\add* villages¦108084 around¦108086 those¦108088 cities¦108087 as far as Ba'alat-Be'er¦108092 (\add also called\add* Ramah¦108093 of the Negev¦108094). That¦108095 was¦108096 Shim'on's¦108100 descendants'¦108098 inheritance¦108096 according to¦108101 their¦108101 clans¦108101.
 \v 9 This \add took away\add* some of Yehudah's¦108105 inheritance¦108106 and gave it to Shim'on's descendants¦108107 because¦108109 Yehudah's¦108115 \add initial\add* area was more than¦108117 \add ≈they¦108118 needed\add*.
 \s1 The allocation to Zevulun's descendants
@@ -789,9 +789,9 @@
 \v 10 The¦108128 third¦108128 draw¦108127 went to Zevulun's¦108130 descendants¦108129 according to¦108131 their¦108131 clans¦108131. The¦108133 \add southern\add* border¦108133 for their¦108134 inheritance¦108134 \add ≈started\add* at Sarid¦108137
 \v 11 and¦108139 went¦108139 \add west\add* to¦108142 Maralah¦108143 and¦108144 Dabeshet¦108145 then¦108146 to¦108147 the¦108149 riverbed¦108149 facing¦108153 Yakeneam¦108154.
 \v 12 \add Also\add* from¦108157 Sarid¦108157 it went toward the east¦108158 beside the¦108163 border¦108163 with Kislot-Tavor and¦108166 then on to¦108167 Davrat¦108169 and¦108170 then to Yafia¦108171.
-\v 13 From¦108173 there¦108173 it¦108174 extended east to¦108177 Gittah-Hefer¦108178 and Ittah-Katsin and \add north\add* to Rimmon¦108182 before turning¦108183 to Neah¦108184.
-\v 14 Then¦108186 \add *it\add* passed north¦108189 of¦108189 Hannaton ending¦108192 at Yiftah-El¦108196 valley¦108193.
-\v 15 \add It included the cities of\add* Kattat, Nahalal¦108199, Shimron¦108200, Idalah¦108201, and¦108202 Beyt¦108202-Lehem¦108203 \add !(Bethlehem)\add*—\add a total of\add* twelve cities¦108204 as well as their \add surrounding\add* villages¦108208.
+\v 13 From¦108173 there¦108173 it¦108174 extended east to¦108177 Gat-Hahefer¦108178 and Et-Katsin and \add north\add* to Rimon¦108182 before turning¦108183 to Ne’ah¦108184.
+\v 14 Then¦108186 \add *it\add* passed north¦108189 of¦108189 Hanaton ending¦108192 at Yiftah-El¦108196 valley¦108193.
+\v 15 \add It included the cities of\add* Katat, Nahalal¦108199, Shimron¦108200, Yid’alah¦108201, and¦108202 Beyt¦108202-Lehem¦108203 \add !(Bethlehem¦108202)\add*—\add a total of\add* twelve cities¦108204 as well as their \add surrounding\add* villages¦108208.
 \v 16 That¦108210 was¦108211 Zevulun's¦108214 descendants'¦108212 inheritance¦108211 according to¦108215 their¦108215 clans¦108215, \add including\add* those¦108217 cities¦108216 as well as their \add surrounding\add* villages¦108218.
 \s1 The allocation to Yisakar's descendants
 \rem /s1 The Territory Assigned to Issachar; Allotment for Issachar; The Territory of Issachar; The Land Given to Issachar
@@ -799,10 +799,10 @@
 \p
 \v 17 The¦108224 fourth¦108224 draw¦108223 went¦108222 to Yisakar's¦108226 \add !(Issachar¦108226)\add* descendants¦108225 according to¦108227 their¦108227 clans¦108227.
 \v 18 \add ≈Their¦108230 land\add* \add included the cities of\add* Yizre'el¦108231 \add !(Jezreel¦108231)\add*, Kesulot, Shunem¦108233,
-\v 19 Hafaraim, Shion¦108236, Anaharat,
-\v 20 Rabbit, Kishyon¦108240, Ebets,
-\v 21 Remet, Eyn¦108244-Gannim¦108246, Eyn¦108247-Haddah¦108248, and¦108249 Beyt¦108249-Pazzets.
-\v 22 The¦108253 border¦108253 \add of their allotment\add* met with Tavor¦108254, Shahazumah, and¦108257 Beyt¦108257-Shemesh¦108258, coming out \add in the east\add* at the¦108262 Yarden¦108262 \add !(Jordan¦108262)\add*—\add a total of\add* sixteen cities¦108263 as well as their \add surrounding\add* villages¦108267.
+\v 19 Hafarayim, Shi’on¦108236, Anaharat,
+\v 20 Rabbit, Kishyon¦108240, Evets,
+\v 21 Remet, Eyn¦108244-Ganim¦108246, Eyn¦108247-Hadah¦108248, and¦108249 Beyt¦108249-Patsets.
+\v 22 The¦108253 border¦108253 \add of their allotment\add* met with Tavor¦108254, Shahatsimah, and¦108257 Beyt¦108257-Shemesh¦108258 \add !(Heliopolis¦108257)\add*, coming out \add in the east\add* at the¦108262 Yarden¦108262 \add !(Jordan¦108262)\add*—\add a total of\add* sixteen cities¦108263 as well as their \add surrounding\add* villages¦108267.
 \v 23 That¦108269 was¦108270 Yisakar's¦108274 descendants'¦108272 inheritance¦108270 according to¦108275 their¦108275 clans¦108275, \add including\add* those cities¦108276 as well as their \add surrounding\add* villages¦108277.
 \s1 The allocation to Asher's descendants
 \rem /s1 The Territory of Asher; Allotment for Asher; The Land Given to Asher; The Territory Assigned to Asher
@@ -810,23 +810,23 @@
 \p
 \v 24 The¦108282 fifth¦108282 draw¦108281 went¦108280 to Asher's¦108286 descendants¦108284 according to¦108287 their¦108287 clans¦108287.
 \v 25 \add ≈Their¦108290 land\add* \add included the cities of\add* Helkat, Hali¦108292, Beten¦108293, Akshaf¦108294,
-\v 26 Allammelek, Amad¦108297, and¦108298 Mishal¦108298. Their \add western\add* \add @border¦108299\add* started at \add Mt.\add* Karmel¦108300 and¦108302 Shihorlibnat
+\v 26 Alamelek, Am’ad¦108297, and¦108298 Mish’al¦108298. Their \add western\add* \add @border¦108299\add* started at \add Mt.\add* Karmel¦108300 and¦108302 Shihor-Livnat
 \v 27 and¦108305 turned¦108305 back¦108305 to the east to Beyt¦108308-Dagon¦108309 and¦108310 the border with Zevulun¦108311 and¦108312 the¦108312 Yiftah-El¦108313 valley¦108315 to the north¦108316. Then it¦108320 went¦108320 to¦108316 Beyt¦108317-Emek¦108318 and¦108319 Neiel¦108319 and¦108320 north to¦108321 Kavul¦108323,
-\v 28 Avdon, Rehov¦108327, Hammon¦108328 and¦108329 Kanah¦108329, as far as Greater¦108332 Tsidon¦108331 \add !(Sidon¦108331)\add*.
+\v 28 Avdon, Rehov¦108327, Hamon¦108328 and¦108329 Kanah¦108329, as far as Greater¦108332 Tsidon¦108331 \add !(Sidon¦108331)\add*.
 \v 29 The border then¦108334 turned¦108334 back¦108334 to Ramah¦108336 and¦108337 to¦108337 the¦108339 \add ≈fortified¦108340\add* city¦108339 of¦108339 Tsor¦108342 \add !(Tyre¦108342)\add* and¦108343 turns¦108343 \add ≈west\add* to Hosah¦108345 coming out at the \add @Mediterranean\add* near Akziv¦108351.
-\v 30 \add It also included\add* Ummah, Afek¦108354, and¦108355 Rehov¦108355—\add a total of\add* twenty-two cities¦108356 as well as their \add surrounding\add* villages¦108359.
+\v 30 \add It also included\add* Umah, Afek¦108354, and¦108355 Rehov¦108355—\add a total of\add* twenty-two cities¦108356 as well as their \add surrounding\add* villages¦108359.
 \v 31 That¦108361 was¦108362 Asher's¦108366 descendants'¦108364 inheritance¦108362 according to¦108367 their¦108367 clans¦108367, \add including\add* those¦108369 cities¦108368 as well as their \add surrounding\add* villages¦108370.
 \s1 The allocation to Naftali's descendants
 \rem /s1 Allotment for Naphtali; The Territory Assigned to Naphtali; The Territory of Naphtali; The Land Given to Naphtali
 \s4 Promised land
 \p
 \v 32 The¦108377 sixth¦108377 draw¦108376 went¦108375 to Naftali's¦108379 \add !(Naphtali¦108379)\add* descendants according to¦108380 their¦108380 clans¦108380.
-\v 33 Their¦108383 border¦108383 started in Helef (where there was¦108382 an oak tree¦108385 at Tsaanannim¦108386) then¦108387 Adami¦108387-Nekeb¦108388 and Yabneel and on to¦108390 Lakkum¦108392 before exiting at the¦108395 Yarden¦108395 \add !(Jordan¦108395)\add*.
-\v 34 Then¦108397 \add *it\add* turned¦108397 west¦108399 to¦108399 Aznot-Tavor¦108401 and¦108402 from¦108403 there¦108403 to¦108404 Hukkok¦108404, meeting \add the border\add* with Zevulun¦108406 on the¦108407 south¦108407, \add the border\add* with Asher¦108408 on the¦108410 west¦108410, and¦108411 \add the border\add* with Yehudah¦108411 \add !(Judah¦108411)\add* on the east.
-\v 35 The¦108416 \add ≈fortified¦108417\add* cities¦108416 were¦108418 Tsiddim, Tser, Hammat¦108420, Rakkat, Kinneret¦108422,
+\v 33 Their¦108383 border¦108383 started in Helef (where there was¦108382 an oak tree¦108385 at Tsa’ananim¦108386) then¦108387 Adami¦108387-Nekev¦108388 and Yavne’el and on to¦108390 Lakum¦108392 before exiting at the¦108395 Yarden¦108395 \add !(Jordan¦108395)\add*.
+\v 34 Then¦108397 \add *it\add* turned¦108397 west¦108399 to¦108399 Aznot-Tavor¦108401 and¦108402 from¦108403 there¦108403 to¦108404 Hukok¦108404, meeting \add the border\add* with Zevulun¦108406 on the¦108407 south¦108407, \add the border\add* with Asher¦108408 on the¦108410 west¦108410, and¦108411 \add the border\add* with Yehudah¦108411 \add !(Judah¦108411)\add* on the east.
+\v 35 The¦108416 \add ≈fortified¦108417\add* cities¦108416 were¦108418 Tsidim, Tser, Hamat¦108420, Rakat, Kineret¦108422,
 \v 36 Admah¦108424, Ramah¦108425, Hatsor¦108426,
 \v 37 Kedesh¦108428, Edre'i¦108429, Eyn¦108430-Hatsor,
-\v 38 Yiron¦108433, Migdal¦108434-El¦108436, Horem¦108437, Beyt¦108438-Anat, and¦108441 Beyt¦108441-Shemesh¦108442—\add a total of\add* nineteen cities¦108443 as well as their \add surrounding\add* villages¦108447.
+\v 38 Yir’on¦108433, Migdal¦108434-El¦108436, Horem¦108437, Beyt¦108438-Anat, and¦108441 Beyt¦108441-Shemesh¦108442 \add !(Heliopolis¦108441)\add*—\add a total of\add* nineteen cities¦108443 as well as their \add surrounding\add* villages¦108447.
 \v 39 That¦108449 was¦108450 Naftali's¦108454 descendants'¦108452 inheritance¦108450 according to¦108455 their¦108455 clans¦108455, \add including\add* those cities¦108456 as well as their \add surrounding\add* villages¦108457.
 \s1 The allocation to Dan's descendants
 \rem /s1 The Land Given to Dan; Allotment for Dan; The Territory of Dan; The Territory Assigned to Dan
@@ -834,11 +834,11 @@
 \p
 \v 40 The \add final\add* seventh¦108467 draw¦108466 went¦108465 to Dan's¦108463 descendants¦108461 according to¦108464 their¦108464 clans¦108464.
 \v 41 \add ≈Their¦108471 land\add* \add included the cities of\add* Tsor'ah¦108472, Eshtaol¦108473, Ir-Shemesh,
-\v 42 Shaalabbin¦108477, Ayyalon¦108478, and¦108479 Yitlah,
+\v 42 Sha’alvim¦108477, Ayalon¦108478, and¦108479 Yitlah,
 \v 43 Eylon¦108481, Timnah¦108482, Ekron¦108483,
-\v 44 Eltekeh¦108485, Gibton¦108486, Ba'alat,
-\v 45 Yehud, Bene-Berak¦108492, Gat¦108493-Rimmon¦108495,
-\v 46 Meyarkon, Rakkon¦108499, and the¦108502 area opposite¦108503 Yafo¦108504 \add !(Joppa¦108504)\add*.
+\v 44 Elteke¦108485, Gibton¦108486, Ba'alat,
+\v 45 Yehud, Beney-Berak¦108492, Gat¦108493-Rimon¦108495,
+\v 46 Mey-Hayarkon, Rakon¦108499, and the¦108502 area opposite¦108503 Yafo¦108504 \add !(Joppa¦108504)\add*.
 \v 47 Dan's border¦108507 went¦108506 out¦108506 from¦108512 them¦108512.\f + \fr 19:47 \ft Translations vary widely here because we're not sure what is meant by the literal rendering that we've kept here.\f* Then¦108513 Dan's¦108516 descendants battled against Leshem¦108520 and¦108521 captured¦108521 it¦108522 and¦108524 \add ≈slaughtered their inhabitants\add*. \add ≈So¦108529\add* they¦108529 took¦108529 it¦108530 over and¦108531 settled in¦108532 Leshem \add ≈but¦108533\add* they¦108533 renamed it to ‘Dan’ after their¦108538 ancestor¦108538.\x + \xo 19:47: \xt Jdg 18:27-29.\x*
 \v 48 That¦108540 was¦108541 Dan's¦108545 descendants'¦108543 inheritance¦108541 according to¦108546 their¦108546 clans¦108546, \add including\add* those¦108548 cities¦108547 as well as their \add surrounding\add* villages¦108549.
 \s1 Yehoshua's allocation
@@ -874,7 +874,7 @@
 \v 2 at Shiloh¦108872 (in¦108873 the Kena'an¦108874 \add !(Canaan¦108874)\add* region¦108873) and told¦108875 them, “Yahweh¦108876 said¦108875 \add ≈through¦108878\add* Mosheh¦108880 \add !(Moses¦108880)\add* \add ≈that we should be given¦108881 cities¦108884 to¦108885 live¦108885 in¦108885, along with their¦108886 surrounding fields\add* for¦108887 our¦108887 livestock¦108887.”\x + \xo 21:2: \xt Num 35:1-8.\x*
 \v 3 \add ≈So¦108889 the¦108890 Israeli¦108892\add* \add leaders\add* gave¦108889 these¦108902 cities¦108901 and the fields around them to¦108893 the Levites¦108893 for their¦108894 inheritance¦108894 \add ≈as Yahweh¦108898 had instructed\add*:
 \p
-\v 4 The¦108908 first draw¦108908 went¦108907 to those of¦108909 the¦108909 Kohat clans¦108909 \add who were\add* descendants¦108912 of¦108912 Aharon¦108913 \add !(Aaron¦108913)\add* the¦108914 priest¦108914 (from the¦108917 Levites¦108917). They were allocated thirteen cities¦108925 in the¦108918 regions occupied by Yehudah¦108919 \add !(Judah¦108919)\add*, Shim'on \add !(Simeon)\add*, and Benyamin¦108923 \add !(Benjamin¦108923)\add*.
+\v 4 The¦108908 first draw¦108908 went¦108907 to those of¦108909 the¦108909 Kohat clans¦108909 \add who were\add* descendants¦108912 of¦108912 Aharon¦108913 \add !(Aaron¦108913)\add* the¦108914 priest¦108914 (from the¦108917 Levites¦108917). They were allocated thirteen cities¦108925 in the¦108918 regions occupied by Yehudah¦108919 \add !(Judah¦108919)\add*, Shim'on \add !(Simeon)\add*, and Benyamin¦108923.
 \v 5 The¦108930 remaining¦108932 Kohat¦108931 \add ≈clans¦108933\add* were \add allocated\add* ten¦108945 cities¦108944 in the¦108934 regions occupied by Efrayim¦108936 \add !(Ephraim¦108936)\add*, Dan¦108939, and¦108940 the Menasheh¦108942 \add !(Manasseh¦108942)\add* half-tribe.
 \p
 \v 6 The¦108948 Gereshon¦108949 \add ≈clans¦108950\add* were \add allocated\add* thirteen cities¦108964 in the¦108951 regions occupied by Yisakar¦108953 \add !(Issachar¦108953)\add*, Asher¦108956, Naftali¦108958 \add !(Naphtali¦108958)\add*, and¦108959 by the Menasheh¦108961 half-tribe in¦108962 the Bashan¦108962 \add region\add*.
@@ -886,35 +886,35 @@
 \v 9 ⇔These¦109013 are the \add #names¦109018\add* of the¦109012 cities¦109012 \add ≈allocated by the Israeli leaders (from the regions occupied by\add* Yehudah¦109007 and¦109008 Shim'on¦109010)
 \v 10 that were¦109020 given to¦109021 the Levite¦109026 Kohat clans¦109023 since¦109027 \add ≈they were selected first¦109031 in the¦109030 draw¦109030\add*:
 \v 11 Kiryat¦109037-Arba¦109038 and¦109045 the surrounding¦109048 fields (\add ≈now called\add* Hevron¦109042—Arba was the¦109039 father¦109039 of¦109039 Anak¦109040) in¦109043 Yehudah's¦109044 hill¦109043 country¦109043
-\v 12 (although the¦109052 surrounding countryside¦109052 and¦109054 villages¦109056 had already been given¦109057 to¦109058 Yefunneh's¦109061 son¦109059 Kalev¦109058 \add !(Caleb¦109058)\add*).
+\v 12 (although the¦109052 surrounding countryside¦109052 and¦109054 villages¦109056 had already been given¦109057 to¦109058 Yefuneh's¦109061 son¦109059 Kalev¦109058 \add !(Caleb¦109058)\add*).
 \v 13 \add ≈So¦109065\add* Hevron¦109077 was given¦109069 to¦109065 the¦109065 descendants¦109065 of¦109065 Aharon¦109067 \add !(Aaron¦109067)\add* the¦109068 priest¦109068 and assigned as a refuge¦109073 city¦109072 (for anyone who \add accidentally\add* kills¦109074 someone) along with the surrounding fields, along with Livnah¦109083,
-\v 14 Yattir¦109090, Eshtemoa¦109096,
+\v 14 Yatir¦109090, Eshtemoa¦109096,
 \v 15 Holon¦109103, Devir¦109109,
-\v 16 Ayin¦109116, Yuttah, and Beyt¦109128-Shemesh¦109129, all with their surrounding fields—\add a total of\add* nine¦109134 cities¦109133 from¦109135 within Yehudah and Shim'on's \add territories\add*.
-\v 17 From¦109141 Benyamin's¦109142 \add !(Benjamin¦109142)\add* \add territories\add*, \add the Israeli leaders\add* \add ≈assigned\add* Giveon¦109145, Geva¦109151,
+\v 16 Ayin¦109116, Yutah, and Beyt¦109128-Shemesh¦109129 \add !(Heliopolis¦109128)\add*, all with their surrounding fields—\add a total of\add* nine¦109134 cities¦109133 from¦109135 within Yehudah and Shim'on's \add territories\add*.
+\v 17 From¦109141 Benyamin's¦109142 \add territories\add*, \add the Israeli leaders\add* \add ≈assigned\add* Giveon¦109145, Geva¦109151,
 \v 18 Anatot¦109158, and Almon¦109164—four¦109169 cities¦109168 and their surrounding fields.
 \v 19 \add Thus\add* the¦109174 descendants¦109174 of¦109174 Aharon¦109176 the¦109177 priests¦109177 \add received\add* thirteen cities¦109181 with their¦109182 surrounding fields.
 \p
 \v 20 The \add other\add* Levite¦109189 Kohat¦109192 clans¦109185 were¦109193 allocated cities¦109194 from¦109196 \add ≈within Efrayim's¦109197\add* \add !(Ephraim¦109197)\add* \add ≈territory\add*:
 \v 21 Shekem¦109208 (which was assigned as a refuge¦109204 city¦109203 for anyone who \add accidentally\add* kills¦109205 someone), Gezer¦109216,
-\v 22 Kibzaim¦109223, and Beyt¦109229-Horon¦109230—four¦109235 cities¦109234 with their surrounding fields.
+\v 22 Kivtsayim¦109223, and Beyt¦109229-Horon¦109230—four¦109235 cities¦109234 with their surrounding fields.
 \v 23 From¦109238 Dan's¦109240 \add territory\add*, they were allocated Elteke, Gibton¦109249,
-\v 24 Ayyalon¦109256, and¦109257 Gat¦109262-Rimmon¦109264—four¦109269 cities¦109268 with their surrounding fields.
-\v 25 From¦109272 the Menasheh¦109274 half-tribe's \add territory\add*, they were allocated Taanak¦109277 and Gat¦109283-Rimmon¦109285—two¦109290 cities¦109289 with their surrounding fields.
+\v 24 Ayalon¦109256, and¦109257 Gat¦109262-Rimon¦109264—four¦109269 cities¦109268 with their surrounding fields.
+\v 25 From¦109272 the Menasheh¦109274 half-tribe's \add territory\add*, they were allocated Ta’anak¦109277 and Gat¦109283-Rimon¦109285—two¦109290 cities¦109289 with their surrounding fields.
 \v 26 ⇔\add Thus\add* the¦109298 \add other\add* Levite Kohat¦109300 clans¦109297 \add received\add* ten¦109295 cities¦109294 with their¦109296 surrounding fields.
 \p
-\v 27 The¦109304 Levite¦109307 Gereshon¦109305 clans¦109306 were allocated cities from¦109308 \add ≈within the Menasheh¦109310\add* \add !(Manasseh¦109310)\add* \add ≈half-tribe's territory\add*: Golan¦109318 in¦109320 the Bashan¦109320 (which was assigned as a refuge¦109314 city¦109313 for anyone who \add accidentally\add* kills¦109315 someone) and Be'eshtarah—two¦109331 cities with their surrounding fields.
+\v 27 The¦109304 Levite¦109307 Gereshon¦109305 clans¦109306 were allocated cities from¦109308 \add ≈within the Menasheh¦109310\add* \add !(Manasseh¦109310)\add* \add ≈half-tribe's territory\add*: Golan¦109318 in¦109320 the Bashan¦109320 (which was assigned as a refuge¦109314 city¦109313 for anyone who \add accidentally\add* kills¦109315 someone) and Be’eshterah—two¦109331 cities with their surrounding fields.
 \v 28 From¦109334 Yisakar's¦109335 \add !(Issachar¦109335)\add* \add territory\add*, they were allocated Kishyon¦109338, Davrat¦109344,
-\v 29 Yarmut¦109351, and¦109352 Eyn¦109357-Gannim¦109358—four¦109363 cities¦109362 with their surrounding fields.
-\v 30 From¦109366 Asher's¦109367 \add territory\add*, they were allocated Mishal¦109370, Avdon¦109376,
+\v 29 Yarmut¦109351, and¦109352 Eyn¦109357-Ganim¦109358—four¦109363 cities¦109362 with their surrounding fields.
+\v 30 From¦109366 Asher's¦109367 \add territory\add*, they were allocated Mish’al¦109370, Avdon¦109376,
 \v 31 Helkat, and Rehov¦109389—four¦109394 cities¦109393 with their surrounding fields.
-\v 32 From¦109397 Naftali's¦109398 \add !(Naphtali¦109398)\add* \add territory\add*, they were allocated Kedesh¦109407 in¦109408 the Galil¦109408 (which was assigned as a refuge¦109403 city¦109401 for anyone who \add accidentally\add* kills¦109404 someone), Hammot-Dor¦109415, and Kartan¦109421—three¦109426 cities¦109425 with their surrounding fields.
+\v 32 From¦109397 Naftali's¦109398 \add !(Naphtali¦109398)\add* \add territory\add*, they were allocated Kedesh¦109407 in¦109408 the Galil¦109408 (which was assigned as a refuge¦109403 city¦109401 for anyone who \add accidentally\add* kills¦109404 someone), Hamot-Dor¦109415, and Kartan¦109421—three¦109426 cities¦109425 with their surrounding fields.
 \v 33 \add Thus\add* the Levite Gereshon \add #clan¦109432\add* \add received\add* thirteen cities¦109436 with their¦109437 surrounding fields.
 \p
 \v 34 The¦109441 remaining¦109445 Levite¦109444 Merari¦109443 clans¦109440 were allocated \add ≡cities\add* from¦109446 \add ≈within Zevulun's¦109448 territory\add*: Yakeneam¦109451, Kartah¦109457,
 \v 35 Dimnah¦109464, and¦109465 Nahalal¦109470—four¦109475 cities¦109474 with their surrounding fields.
 \v 36 From¦109477 Re'uven's¦109478 \add territory\add*, they were allocated Betser¦109481, Yahats¦109487,
-\v 37 Kedemot¦109494, and Mofaat¦109500—four¦109505 cities¦109504 with their surrounding fields.
+\v 37 Kedemot¦109494, and Mofa’at¦109500—four¦109505 cities¦109504 with their surrounding fields.
 \v 38 From¦109508 Gad's¦109510 \add territory\add*, they were allocated Ramot¦109518 in¦109519 the Gilead¦109519 (which was assigned as a refuge¦109514 city¦109513 for anyone who \add accidentally\add* kills¦109515 someone), Mahanayim¦109525,
 \v 39 Heshbon¦109532, and¦109533 Yazer¦109538—four¦109545 cities¦109544 with their surrounding fields.
 \v 40 \add Thus\add* the Levite¦109555 Merari¦109551 clan¦109552 \add received\add* twelve cities in the¦109554 draw¦109557, along with their¦109557 surrounding fields.
@@ -1004,7 +1004,7 @@
 \s4 Promised land
 \p
 \v 1 Then¦110866 Yehoshua¦110867 \add !(Joshua¦110867)\add* assembled¦110866 all¦110870 the¦110872 tribes¦110872 of¦110872 Yisrael¦110873 \add !(Israel¦110873)\add* at Shekem¦110874. He¦110875 summoned¦110875 their elders¦110876, leaders¦110878, judges¦110879, and¦110880 officers¦110880, and¦110881 they¦110881 presented¦110881 themselves¦110881 before¦110882 God,
-\v 2 and¦110885 Yehoshua¦110886 told¦110885 all¦110889 the¦110891 people¦110891, “Yahweh¦110895, the¦110896 god¦110896 of¦110896 Yisrael¦110897 says¦110894: Your¦110901 ancestors¦110901 \add including\add* Terah¦110903 the¦110904 father¦110904 of¦110904 Avraham¦110905 \add !(Abraham¦110905)\add* and¦110906 Nahor¦110907,\x + \xo 24:2: \xt Gen 11:27.\x* lived¦110900 beyond the \add Perat\add* \add !(Euphrates)\add* river¦110899 from¦110902 long¦110902 ago¦110902, \add ≈but¦110908\add* they¦110908 \add ≈worshipped¦110908\add* other gods¦110909.
+\v 2 and¦110885 Yehoshua¦110886 told¦110885 all¦110889 the¦110891 people¦110891, “Yahweh¦110895, the¦110896 god¦110896 of¦110896 Yisrael¦110897 says¦110894: Your¦110901 ancestors¦110901 \add including\add* Terah¦110903 the¦110904 father¦110904 of¦110904 Avraham¦110905 and¦110906 Nahor¦110907,\x + \xo 24:2: \xt Gen 11:27.\x* lived¦110900 beyond the \add Perat\add* \add !(Euphrates)\add* river¦110899 from¦110902 long¦110902 ago¦110902, \add ≈but¦110908\add* they¦110908 \add ≈worshipped¦110908\add* other gods¦110909.
 \v 3 Then¦110912 I¦110912 took¦110912 your¦110915 ancestor¦110915 Avraham¦110918 from¦110919 beyond the¦110920 river¦110920 and¦110921 brought¦110921 him¦110922 \add ≈across\add* all¦110923 the¦110925 land¦110925 of¦110925 Kena'an¦110926 \add !(Canaan¦110926)\add*,\x + \xo 24:3: \xt Gen 12:1-9.\x* and¦110927 I¦110927 multiplied¦110927 his¦110931 \add ≈descendants\add*, \add ≈including¦110932\add* giving¦110932 him¦110934 Yitshak¦110937 \add !(Isaac¦110937)\add*.\x + \xo 24:3: \xt Gen 21:1-3.\x*
 \v 4 Then¦110939 I¦110939 gave¦110939 Ya'akov¦110943 \add !(Jacob¦110943)\add* and¦110944 Esav¦110946 \add !(Esau¦110946)\add* to Yitshak¦110940,\x + \xo 24:4: \xt Gen 25:24-26.\x* and¦110947 I¦110947 gave¦110947 Esav¦110948 the¦110951 hill¦110951 country of¦110951 Se'ir¦110952\x + \xo 24:4: \xt Gen 36:8; Deu 2:5.\x* \add ≈but¦110955\add* Ya'akov¦110955 and¦110956 his¦110956 sons¦110956 went¦110957 down¦110957 to Mitsrayim¦110958 \add !(Egypt¦110958)\add*.\x + \xo 24:4: \xt Gen 46:1-7.\x*
 \v 5 I¦110960 sent¦110960 Mosheh¦110963 \add !(Moses¦110963)\add* and¦110964 Aharon¦110966 \add !(Aaron¦110966)\add* and¦110967 I¦110967 damaged Mitsrayim¦110970 internally, and¦110974 then I¦110975 brought¦110975 you all out¦110975 \add again\add*.\x + \xo 24:5: \xt Exo 3:1–12:42.\x*
@@ -1014,7 +1014,7 @@
 \v 8 “\add After that,\add* I¦111023 brought¦111023 you¦111025 to¦111026 the¦111028 region¦111028 of¦111028 the¦111029 Amorim¦111029 who¦111030 lived¦111030 on¦111031 the¦111031 \add ≈eastern\add* side¦111031 of¦111031 the¦111032 Yarden¦111032 \add !(Jordan¦111032)\add*, and¦111033 they¦111033 battled¦111033 against you¦111034 all, \add ≈but¦111035 I¦111035 gave¦111035 you victory over them¦111036\add* and¦111042 I¦111042 destroyed¦111042 them¦111042 from¦111043 \add ≈ahead¦111043 of¦111043 you\add* and you all took¦111038 over their¦111041 land.\x + \xo 24:8: \xt Num 21:21-35.\x*
 \v 9 Then¦111045 (Tsipor's¦111049 son) King¦111050 Balak¦111046 of¦111050 Moav¦111051 \add !(Moab¦111051)\add* \add ≈prepared his warriors\add* and¦111052 fought¦111052 against¦111053 \add *you¦111053 all¦111053\add* and he \add ≈summoned¦111055\add* (Be'or's¦111059 son) Bil'am¦111056 \add !(Balaam¦111056)\add* to¦111060 curse¦111060 you¦111061.\x + \xo 24:9-10: \xt Num 22:1–24:25.\x*
 \v 10 \add ≈But¦111063\add* I¦111064 wasn't willing¦111064 to¦111065 listen¦111065 to¦111066 Bil'am¦111066, \add ≈so¦111067 instead,\add* he¦111067 blessed¦111067 you¦111069 all repeatedly and¦111070 I¦111070 rescued¦111070 you¦111071 from¦111072 \add ≈King Balak\add*.
-\v 11 Then¦111074 you¦111074 crossed¦111074 over¦111074 the¦111077 Yarden¦111077 \add river\add*\x + \xo 24:11: \xt Josh 3:14-17.\x* and¦111078 \add ≈arrived¦111078 at\add* Yeriho¦111081 \add !(Jericho¦111081)\add*. The¦111084 men of¦111084 Yeriho¦111086 fought¦111082 against¦111083 you¦111083 all,\x + \xo 24:11: \xt Josh 6:1-21.\x* \add as did\add* the¦111087 Amorim¦111087, the¦111088 Perizzim, the¦111089 Kena'anim¦111089 \add !(Canaanites¦111089)\add*, the¦111090 Hittim, the¦111091 Girgashim, the¦111092 Hivim¦111092, and¦111093 the¦111093 Yevusim¦111093 \add ≈but¦111094 I¦111094 helped you all to defeat them¦111095\add*.
+\v 11 Then¦111074 you¦111074 crossed¦111074 over¦111074 the¦111077 Yarden¦111077 \add river\add*\x + \xo 24:11: \xt Josh 3:14-17.\x* and¦111078 \add ≈arrived¦111078 at\add* Yeriho¦111081 \add !(Jericho¦111081)\add*. The¦111084 men of¦111084 Yeriho¦111086 fought¦111082 against¦111083 you¦111083 all,\x + \xo 24:11: \xt Josh 6:1-21.\x* \add as did\add* the¦111087 Amorim¦111087, the¦111088 Perizim, the¦111089 Kena'anim¦111089 \add !(Canaanites¦111089)\add*, the¦111090 Hitim, the¦111091 Girgashim, the¦111092 Hivim¦111092, and¦111093 the¦111093 Yevusim¦111093 \add ≈but¦111094 I¦111094 helped you all to defeat them¦111095\add*.
 \v 12 I¦111098 sent¦111098 \add #hornets¦111102\add*\f + \fr 24:12 \ft The Hebrew word ‘צִרְעָה’ (‘hornet’, but pluralised here in the OET-RV) may have some non-literal meaning here, e.g., ‘panic’, or it may be a general reference to any manifestation of God's anger.\f* \add ≈ahead¦111099 of you¦111099 all\add* and¦111103 they drove¦111103 out¦111103 the¦111106 two¦111106 Amori¦111108 kings¦111107\x + \xo 24:12: \xt Exo 23:28; Deu 7:20.\x*—it wasn't your¦111110 \add #swords¦111110\add* or \add #bows¦111112\add* that did it.
 \v 13 \add ≈So¦111114\add* I¦111114 gave¦111114 you¦111115 all a¦111116 land¦111116 which¦111118 you¦111121 didn't \add ≈earn yourselves\add* and¦111123 cities¦111123 to live¦111128 in that¦111124 you¦111127 all didn't build¦111127 yourselves. You all are¦111129 \add ≈benefitting from\add* vineyards¦111130 and¦111131 olive¦111131 groves¦111131 that¦111132 you¦111135 didn't plant¦111135.”\x + \xo 24:13: \xt Deu 6:10-11.\x*
 \p
@@ -1046,7 +1046,7 @@
 \s4 Promised land
 \p
 \v 29 After¦111466 all that, Nun's¦111473 son and¦111469 Yahweh's¦111475 servant¦111474 Yehoshua¦111470 \add !(Joshua¦111470)\add* died¦111469 at the¦111471 age¦111480 of 110.
-\v 30 They buried¦111482 him¦111483 in¦111484 his¦111485 allotted property at¦111486 Timnat-Serah¦111488 which¦111489 is¦111490 in¦111490 the¦111490 Efrayim¦111492 \add !(Ephraim¦111492)\add* hill¦111490 country¦111490 north¦111493 of¦111493 Mt¦111494. Gaash¦111496.\x + \xo 24:30: \xt Josh 19:49-50.\x*
+\v 30 They buried¦111482 him¦111483 in¦111484 his¦111485 allotted property at¦111486 Timnat-Serah¦111488 which¦111489 is¦111490 in¦111490 the¦111490 Efrayim¦111492 \add !(Ephraim¦111492)\add* hill¦111490 country¦111490 north¦111493 of¦111493 Mt¦111494. Ga’ash¦111496.\x + \xo 24:30: \xt Josh 19:49-50.\x*
 \p
 \v 31 The \add ≈Israelis¦111499\add* had served¦111498 Yahweh¦111502 all¦111503 through Yehoshua's¦111505 lifetime and¦111506 throughout the¦111508 lifetimes¦111508 of¦111508 the¦111509 elders¦111509 who¦111510 lived longer than Yehoshua¦111514 and¦111515 who had experienced¦111516 everything that¦111515 Yahweh¦111521 had¦111523 done¦111523 for¦111524 Yisrael¦111524 \add !(Israel¦111524)\add*.
 \p

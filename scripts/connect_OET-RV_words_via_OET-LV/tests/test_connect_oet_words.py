@@ -10,7 +10,7 @@ from types import SimpleNamespace
 import sys
 import tempfile
 import unittest
-from unittest.mock import Mock, patch
+from unittest.mock import MagicMock, Mock, patch
 from BibleOrgSys.Reference.BibleVersificationMappings import get_default_mapping_engine
 
 CONNECTOR_DIR = Path(__file__).resolve().parents[1]
@@ -136,6 +136,68 @@ class BookPassTests(unittest.TestCase):
         self.assertEqual([row['pass_additions'] for row in connect.state.bookReports], [[1, 1, 1, 0], [0]])
         self.assertEqual([row['links_added'] for row in connect.state.bookReports], [3, 0])
 
+    def test_dc_output_keeps_filename_alias_and_declares_its_own_table(self):
+        self.write_book('GES')
+        for folder, abbreviation, bible in ((self.rv_folder, 'OET-RV', self.rv),
+                                             (self.lv_folder, 'OET-LV', self.lv)):
+            filename = f'{abbreviation}_ES1.ESFM'
+            (folder / f'{abbreviation}_GES.ESFM').rename(folder / filename)
+            bible.possibleFilenameDict = {'GES': filename}
+        path = self.rv_folder / 'OET-RV_ES1.ESFM'
+        path.write_text(path.read_text().replace('\\c 1',
+            '\\rem not WORDTABLE OET-LV_OT_word_table.tsv\n\\c 1'))
+        self.options.books = ['GES']
+        self.options.dry_run = False
+        self.options.output_dir = self.output
+        original = path.read_bytes()
+        connect.connect_OET_RV_book('GES', self.lv, self.rv, self.lv_folder)
+        result = (self.output / 'OET-RV_ES1.ESFM').read_text()
+        self.assertIn(r'\rem WORDTABLE OET-LV_DC_word_table.tsv', result)
+        self.assertIn('bread¦1 Beth¦2-El¦3', result)
+        self.assertEqual(path.read_bytes(), original)
+        self.assertEqual(connect.state.bookReports[0]['segment'], 'DC')
+        self.assertFalse((self.output / 'OET-RV_GES.ESFM').exists())
+
+
+class SegmentTests(unittest.TestCase):
+    def test_extra_books_and_filename_aliases_use_dc(self):
+        for book in ('DAG', 'DNG', 'ES1', 'GES', 'ES2', 'LES', 'MA3', 'MA4', 'PS2', 'TOB'):
+            with self.subTest(book=book):
+                self.assertEqual(connect.bookSegment(book), 'DC')
+        self.assertEqual(connect.bookSegment('RUT'), 'OT')
+        self.assertEqual(connect.bookSegment('MRK'), 'NT')
+        with self.assertRaises(ValueError):
+            connect.bookSegment('FRT')
+
+    def test_main_keeps_three_word_tables_separate_and_sums_all_segments(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            folder = Path(temporary)
+            sources = [(segment, folder) for segment in ('OT', 'DC', 'NT')]
+            bibles = [MagicMock() for _ in sources]
+            for (segment, _), bible in zip(sources, bibles):
+                filename = f'OET-LV_{segment}_word_table.tsv'
+                bible.books = {dict(OT='RUT', DC='TOB', NT='MRK')[segment]: True}
+                bible.__getitem__.return_value = SimpleNamespace(ESFMWordTableFilename=filename)
+                bible.ESFMWordTables = {filename: [
+                    'Ref\tMorphology\tGlossStatus\tOETGlossWords', f'{segment}\tN-NSM\teditorial\tbread']}
+            options = SimpleNamespace(books=None, report=None, dry_run=True, output_dir=None)
+            with patch.object(connect, 'state', connect.State()), \
+                 patch.object(connect, 'alignmentSources', return_value=sources), \
+                 patch.object(connect, 'loadAlignmentBible', side_effect=[MagicMock(), *bibles]), \
+                 patch.object(connect, 'loadOETRVNameTable'), \
+                 patch.object(connect, 'loadHebGrkNameTables'), \
+                 patch.object(connect, 'loadOETRVWordPhraseTable'), \
+                 patch.object(connect, 'connect_OET_RV', side_effect=[(10, 3), (20, 4), (30, 5)]) as run, \
+                 patch.object(connect, 'reportWordNumberPercentage') as report, \
+                 patch.object(connect, 'vPrint'), \
+                 patch.object(connect.BibleOrgSysGlobals, 'introduceProgram'), \
+                 patch.object(connect.BibleOrgSysGlobals, 'commandLineArguments', options):
+                connect.main()
+                self.assertEqual([call.args[-1] for call in run.call_args_list], ['OT', 'DC', 'NT'])
+                self.assertEqual({key: rows[1][0] for key, rows in connect.state.wordTable.items()},
+                                 {'OT': 'OT', 'DC': 'DC', 'NT': 'NT'})
+                report.assert_called_once_with('Whole Bible', 60, 12)
+
 
 class MatchingOrderTests(unittest.TestCase):
     def test_all_matching_goes_through_one_selection_boundary(self):
@@ -153,6 +215,7 @@ class MatchingOrderTests(unittest.TestCase):
 class PassSummaryTests(unittest.TestCase):
     def test_testament_summaries_in_serial_and_multiprocessing_runs(self):
         for testament, books in (('OT', ['RUT', 'JNA', 'OBA', 'HAG']),
+                                 ('DC', ['TOB', 'MAN', 'PS2', 'MA4']),
                                  ('NT', ['MRK', 'PHM', 'JN2', 'JN3'])):
             for processes in (1, 4):
                 for passes in ((1, 3, 2, 1), (1, 1, 1, 1)):
@@ -200,6 +263,27 @@ class EditingTests(unittest.TestCase):
         connect.state.rvESFMLines=list(lines)
         connect.state.rvLineIndex=connect.index_book_lines(lines)
         connect.state.rvTokenCache={}
+
+    def test_dc_matching_uses_its_own_table_without_ot_or_nt_metadata(self):
+        connect.state.wordTableHeaderList = {'DC': ['Ref', 'Morphology', 'GlossStatus', 'OETGlossWords']}
+        connect.state.wordTable = {'DC': [[], ['TOB_1:1w1', 'N-ASM', 'form-lexical', 'bread']]}
+        self.book(r'\c 1', r'\v 1 bread')
+        self.assertEqual(connect.matchVerseCandidates('TOB', 1, 1, ['bread¦1'], False), (1,0))
+        self.assertEqual(connect.state.rvESFMLines[1], r'\v 1 bread¦1')
+        self.assertEqual(connect.matchVerseCandidates('TOB', 1, 1, ['bread¦1'], False), (0,0))
+        self.assertFalse(connect.lvWordIsProperNoun(connect.state.wordTable['DC'][1], 'DC'))
+        for morphology, expected in [('N-NSM | N-ASM', True), ('N-NSM | V-PAM-2S', False), ('', False)]:
+            with self.subTest(morphology=morphology):
+                self.assertEqual(connect.lvWordIsNoun(['TOB_1:1w1', morphology, 'editorial', 'bread'], 'DC'), expected)
+
+    def test_unresolved_dc_gloss_cannot_link_or_use_another_books_row(self):
+        connect.state.wordTableHeaderList = {'DC': ['Ref', 'Morphology', 'GlossStatus', 'OETGlossWords']}
+        connect.state.wordTable = {'DC': [[], ['TOB_1:1w1', '', 'ambiguous', '']]}
+        self.book(r'\c 1', r'\v 1 bread')
+        self.assertEqual(connect.matchVerseCandidates('TOB', 1, 1, ['bread¦1'], False), (0,0))
+        connect.state.wordTable['DC'][1] = ['JDT_1:1w1', 'N-NSM', 'editorial', 'bread']
+        with self.assertRaisesRegex(ValueError, 'does not belong to TOB'):
+            connect.matchVerseCandidates('TOB', 1, 1, ['bread¦1'], False)
 
     def test_spelling_only_rejects_repeats_across_lines(self):
         self.book(r'\c 1', r'\v 1 the son', r'\q1 the father')
@@ -361,6 +445,14 @@ class EditingTests(unittest.TestCase):
         self.assertEqual(connect.matchVerseCandidates('MRK',1,1,['you¦2','all¦2'],False), (1,0))
         self.assertEqual(connect.state.rvESFMLines[1],r'\v 1 you¦2 all¦2 and \add you all\add*')
         self.assertEqual(connect.matchVerseCandidates('MRK',1,1,['you¦2','all¦2'],False), (0,0))
+
+    def test_loyal_commitment_completes_the_source_link_once(self):
+        self.book(r'\c 51', r'\v 1 because of¦2 your¦2 loyal¦2 commitment.')
+        lv = ['according¦2','to¦2','of¦2','your¦2','covenant¦2','loyalty¦2']
+        self.assertEqual(connect.matchVerseCandidates('PSA',51,1,lv,False), (1,0))
+        self.assertEqual(connect.state.rvESFMLines[1],
+                         r'\v 1 because of¦2 your¦2 loyal¦2 commitment¦2.')
+        self.assertEqual(connect.matchVerseCandidates('PSA',51,1,lv,False), (0,0))
 
     def test_compound_name_can_be_numbered_as_a_whole(self):
         self.book(r'\c 1', r'\v 1 Tiglat-Pileser')

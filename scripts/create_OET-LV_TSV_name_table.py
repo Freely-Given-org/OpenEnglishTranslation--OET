@@ -97,6 +97,8 @@ def load_OET_LV_OT_names() -> bool:
 
     dict_reader = DictReader(initialTSVLines, delimiter='\t' )
     for n, row in enumerate(dict_reader):
+        # Only active Hebrew source-name rules belong in the OT names index.
+        if row['Tags'].startswith('#') or 'H' not in row['Tags']: continue
         if not row['Search'] or not row['Replace']: continue
         if '\\sup' in row['Replace']: continue
 

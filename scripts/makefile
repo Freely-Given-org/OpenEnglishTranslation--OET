@@ -1,8 +1,9 @@
 # OET makefile
 #
-# Last updated: 2026-10-23
+# Last updated: 2026-10-29
 #
 # CHANGELOG:
+#   2026-10-29 Add reproducible draft DC lexical-gloss ESFM build and checks.
 #   2026-10-23 Correct HTML book dependencies and track converter completion.
 #   2026-10-22 Rebuild mapped exports/HTML when helpers or BOS profiles change.
 #	2025-12-08 Copy OET LV OT & NT word tables into BSB and MSB folders
@@ -48,6 +49,8 @@ RV_HTML := $(patsubst %,../exportedFiles/simpleHTML/ReadersVersion/%.html,$(HTML
 RV_ESFM := $(RV_ESFM_SOURCE)
 final_LV_OT_ESFM := $(patsubst %,../derivedTexts/auto_edited_OT_ESFM/OET-LV_%.ESFM,$(ESFM_OT_BOOKS))
 final_LV_NT_ESFM := $(patsubst %,../derivedTexts/auto_edited_VLT_ESFM/OET-LV_%.ESFM,$(ESFM_NT_BOOKS))
+# Existing DC drafts participate in RV linking; older checkouts can omit them.
+connector_DC_inputs := $(wildcard ../derivedTexts/auto_edited_DC_ESFM/OET-LV_*.ESFM ../derivedTexts/auto_edited_DC_ESFM/OET-LV_DC_word_table.tsv)
 
 LV_names_TSV_table := ../derivedTexts/OET-LV_names_table.tsv
 LV_ESFM := $(final_LV_OT_ESFM) $(final_LV_NT_ESFM)
@@ -119,11 +122,27 @@ RV_word_tables_sentinel := ../translatedTexts/ReadersVersion/.word_tables_sentin
 
 ALL: BOTH $(sideBySide_HTML) $(derived_USFM) $(derived_VREFs)
 BOTH: LV RV
-LV: LV_OT LV_NT $(LV_names_TSV_table)
+LV: LV_OT LV_NT LV_DC $(LV_names_TSV_table)
 
 LV_OT: $(LV_OT_HTML)
 LV_NT: $(LV_NT_HTML) $(Clear_Bible_NT_lowfat_TSV)
 RV: $(RV_HTML)
+
+#=== Draft LV deuterocanonical books =======================
+# This stdlib-only stage creates draft ESFM and its own DC word table. It does
+# not add unreviewed lexical glosses to the existing HTML/USFM/VREF exports.
+# A cached, checksum-pinned build is offline; only missing source files download.
+DC_PYTHON ?= python3
+.PHONY: LV_DC DC_sources check_DC
+DC_sources:
+	@$(DC_PYTHON) build_OET-LV_DC.py fetch
+
+LV_DC: DC_sources
+	@$(DC_PYTHON) build_OET-LV_DC.py build
+
+check_DC: LV_DC
+	@$(DC_PYTHON) -m unittest discover -s tests -p 'test_dc_pipeline.py'
+	@$(DC_PYTHON) build_OET-LV_DC.py check
 
 #=== LV stuff =======================
 
@@ -237,7 +256,7 @@ $(final_RV_OT_word_tables): $(RV_word_tables_sentinel)
 RV_sentinel := ../translatedTexts/ReadersVersion/.connected_sentinel
 RV_HTML_sentinel := ../exportedFiles/simpleHTML/ReadersVersion/.html_sentinel
 
-$(RV_sentinel): $(LV_ESFM) $(RV_ESFM) $(CONNECTOR_PY) $(BOS_mapping_data) $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
+$(RV_sentinel): $(LV_ESFM) $(connector_DC_inputs) $(RV_ESFM) $(CONNECTOR_PY) $(BOS_mapping_data) $(expanded_NT_wordtable) $(final_RV_OT_word_tables) $(BTranslit) $(GreekTranslit)
 	@echo "\n\nConnect OET-RV words to OET-LV word numbers (in full mode)…\n"
 	@$(UVrun) connect_OET-RV_words_via_OET-LV/connect_OET-RV_words_via_OET-LV.py
 	@touch $@

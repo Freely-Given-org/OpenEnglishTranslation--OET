@@ -59,7 +59,7 @@ assert OET_LV_NAMES_TSV_FILEPATH.is_file()
 EXPECTED_OET_LV_NAMES_TSV_HEADER = 'TraditionalName\tLVName'
 OET_RV_NAMES_TSV_FILEPATH = project_folderpath.joinpath( 'translatedTexts/ReadersVersion/OET-RV_names_table.tsv' )
 assert OET_RV_NAMES_TSV_FILEPATH.is_file()
-EXPECTED_OET_RV_NAMES_TSV_HEADER = 'TraditionalName\tRVName\tExplained\tComment'
+EXPECTED_OET_RV_NAMES_TSV_HEADER = 'TraditionalName\tGrkName\tRVName\tExplained\tComment'
 
 TED_Dict_folderpath1 = Path( '../../../Documents/RobH123/TED_Dict/sourceDicts/')
 TED_Dict_folderpath2 = Path( '../../../RobH123/TED_Dict/sourceDicts/')

@@ -1,4 +1,4 @@
-\id AMO - Open English Translation—Readers’ Version (OET-RV) v0.1.60
+\id AMO - Open English Translation—Readers’ Version (OET-RV) v0.2.0
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 AMO
@@ -10,7 +10,7 @@
 \mt1 Amos
 \mt2 (Heb. Amots)
 \is1 Introduction
-\ip Amos (Heb. Amots) was a shepherd before he became a prophet. There grew up in Tekoa in the province of Yehudah (Judah), but Yahweh commanded him to go to Beyt-El (Bethel) in Yisra’el (Israel) in order to preach there. (Yisra’el is north of Yehudah.) These events happened around 800 before Yeshua/Jesus (B.C.) He proclaimed God’s curses on Syria, Philistia, Pinisia, Edom, Amon, Moab, and even Yehudah. At that time, the people were prospering and there was no famine like in some other nations, and Yisrael had widened their border. But Amos saw how the rich people prospered because they took advantage of the poor and even abused them through the courts. They had stopped obeying Yahweh’ instructions and commands, so Amos didn’t hesitate to tell them how Yahweh would punish them and their country. He encouraged them to maintain true justice in their courts, because what if God might just be gracious towards the people remaining in their country (5:15).
+\ip Amos/Amos was a shepherd before he became a prophet. There grew up in Tekoa in the province of Yehudah (Judah), but Yahweh commanded him to go to Beyt-El (Bethel) in Yisrael (Israel) in order to preach there. (Yisrael is north of Yehudah.) These events happened around 800 before Yeshua/Jesus (B.C.) He proclaimed God’s curses on Aram, Peleshet, Pinisia, Edom, Amon, Moav, and even Yehudah. At that time, the people were prospering and there was no famine like in some other nations, and Yisrael had widened their border. But Amos saw how the rich people prospered because they took advantage of the poor and even abused them through the courts. They had stopped obeying Yahweh’ instructions and commands, so Amos didn’t hesitate to tell them how Yahweh would punish them and their country. He encouraged them to maintain true justice in their courts, because what if God might just be gracious towards the people remaining in their country (5:15).
 \iot Main components of this document
 \io1 The punishment of nations near Yisrael \ior 1:1–2:5\ior*
 \io1 The punishment of Yisrael \ior 2:6–6:14\ior*
@@ -19,42 +19,42 @@
 \rem NOTE: This USFM file was exported from the ESFM source file with some loss of features, so don’t edit this derived file.
 \c 1
 \p
-\v 1 \add This is\add* the \add message\add* that Amos (who was among the shepherds in Tekoa) saw concerning Yisra’el \add (Israel)\add* in the days of King Uzziyah of Yehudah \add (Judah)\add*,\x + \xo 1:1: \xt 2Ki 15:1-7; 2Ch 26:1-23.\x* and also in the days of Yoash’s son King Yaraveam \add (Jeroboam)\add* of Yisrael,\x + \xo 1:1: \xt 2Ki 14:23-29.\x* two years before the earthquake.
+\v 1 \add This is\add* the \add message\add* that Amos (who was among the shepherds in Tekoa) saw concerning Yisrael \add (Israel)\add* in the days of King Uziyah of Yehudah \add (Judah)\add*,\x + \xo 1:1: \xt 2Ki 15:1-7; 2Ch 26:1-23.\x* and also in the days of Yoash’s son King Yarov’am \add (Jeroboam)\add* of Yisrael,\x + \xo 1:1: \xt 2Ki 14:23-29.\x* two years before the earthquake.
 \q1
 \v 2 \add Amos\add* said,
-\q1 “Yahweh will \add shout loudly\add* from Tsiyyon \add (Zion)\add*.
+\q1 “Yahweh will \add shout loudly\add* from Tsiyon \add (Zion)\add*.
 \q1 He will raise his voice from Yerushalem \add (Jerusalem)\add*.\x + \xo 1:2: \xt Yoel 3:16.\x*
 \q1 The shepherds’ pastures will \add brown off\add*.
-\q1 The top of \add Mt.\add* Carmel will dry up.”
+\q1 The top of \add Mt.\add* Karmel will dry up.”
 \s1 Judgement of Yisrael’s neighbours
-\s2 Syria
+\s2 Aram
 \p
 \v 3 This is what Yahweh says:
-\q1 “\add Even if Damascus was three or four sins below the threshold\add*,
+\q1 “\add Even if Damesek\add* \add (Damascus)\add* \add was three or four sins below the threshold\add*,
 \q1 I wouldn’t turn away \add their\add* punishment,
 \q1 for \add the cruel things they did to the people of\add* Gilead.\x + \xo 1:3-5: \xt Isa 17:1-3; Jer 49:23-27; Zech 9:1.\x*
 \q1
 \v 4 I’ll send a fire into \add King\add* Hazael’s house,
 \q1 and it will devour \add King\add* Ben-Hadad’s fortresses.
 \q1
-\v 5 I’ll smash the gate \add bars\add* of Damascus
+\v 5 I’ll smash the gate \add bars\add* of Damesek
 \q1 and \add eliminate the ruler\add* of the Aven Valley,
 \q1 and also the \add leader of\add* Beyt-Eden.
-\q1 The people of Aram will go in captivity to Kir,”
+\q1 The people of Aram \add (Syria)\add* will go in captivity to Kir,”
 \mi says Yahweh.
-\s2 Philistia
+\s2 Peleshet
 \p
 \v 6 This is what Yahweh says:
-\q1 “\add Even if\add* Azzah \add (Gaza)\add* was \add three or four sins below the threshold\add*,
+\q1 “\add Even if\add* Azah \add (Gaza)\add* was \add three or four sins below the threshold\add*,
 \q1 I wouldn’t turn away \add their\add* punishment,
 \q1 because they \add carried a whole people group away as captives\add*,
 \q1 to hand them over to Edom.\x + \xo 1:6-8: \xt Isa 14:29-31; Jer 47:1-7; Eze 25:15-17; Yoel 3:4-8; Zeph 2:4-7; Zech 9:5-7.\x*
-\v 7 I’ll send fire onto Azzah’s \add walls\add*,
+\v 7 I’ll send fire onto Azah’s \add walls\add*,
 \q1 and it’ll devour her fortresses.
 \v 8 I will cut off those from Ashdod
 \q1 and the \add ruler of\add* Ashkelon.
 \q1 I’ll \add cause problems for\add* Ekron,
-\q1 and the rest of the Philistines will \add die\add*,”
+\q1 and the rest of the Pelishtim will \add die\add*,”
 \q1 says Yahweh the master.
 \s2 Tsor
 \p
@@ -76,11 +76,11 @@
 \q1 and his rage lasted forever.\x + \xo 1:11-12: \xt Isa 34:5-17; 63:1-6; Jer 49:7-22; Eze 25:12-14; 35:1-15; Oba 1-14; Mal 1:2-5.\x*
 \q1
 \v 12 I’ll send fire on Teyman,
-\q1 and it’ll devour Botsrah’s fortresses.”
+\q1 and it’ll devour Batserah’s fortresses.”
 \s2 Ammon
 \p
 \v 13 This is what Yahweh says,
-\q1 “\add Even if\add* the Ammonites were \add three or four sins below the threshold\add*,
+\q1 “\add Even if\add* the Ammonim were \add three or four sins below the threshold\add*,
 \q1 I wouldn’t turn away \add their\add* punishment,
 \q1 because they ripped open the pregnant women of Gilead,
 \q1 \add in order to grab territory\add*.\x + \xo 1:13-15: \xt Jer 49:1-6; Eze 21:28-32; 25:1-7; Zeph 2:8-11.\x*
@@ -93,16 +93,16 @@
 \v 15 Their king will go into captivity along with his officials,”
 \mi says Yahweh.
 \c 2
-\s2 Moab
+\s2 Moav
 \p
 \v 1 This is what Yahweh says:
-\q1 “\add Even if\add* Moab was \add three or four sins below the threshold\add*,
+\q1 “\add Even if\add* Moav \add (Moab)\add* was \add three or four sins below the threshold\add*,
 \q1 I wouldn’t turn away its punishment,
 \q1 because he \add completely burnt up\add* the bones of Edom’s king.\x + \xo 2:1-3: \xt Isa 15:1–16:14; 25:10-12; Jer 48:1-47; Eze 25:8-11; Zeph 2:8-11.\x*
 \q1
-\v 2 I’ll send fire on Moab,
-\q1 and it will devour Keriot’s fortresses.
-\q1 Moab will die in an uproar—
+\v 2 I’ll send fire on Moav,
+\q1 and it will devour Keriyot’s fortresses.
+\q1 Moav will die in an uproar—
 \q1 with shouting and the sound of the horn.
 \v 3 I’ll \add wipe out\add* her judge,
 \q1 and I’ll kill all the \add leaders\add* along with him,”
@@ -111,19 +111,19 @@
 \s4 Southern kingdom
 \p
 \v 4 This is what Yahweh says:
-\q1 “\add Even if\add* Yehudah was \add three or four sins below the threshold\add*,
+\q1 “\add Even if\add* Yehudah \add (Judah)\add* was \add three or four sins below the threshold\add*,
 \q1 I wouldn’t turn away its punishment,
 \q1 because they rejected Yahweh’s instructions
 \q1 and didn’t keep his regulations.
 \q1 Their lies caused them to go astray,
 \q1 \add just like their ancestors had done\add*.
 \v 5 I’ll send fire on Yehudah,
-\q1 and it’ll devour Yerushalem’s fortresses.”
+\q1 and it’ll devour Yerushalem’s \add (Jerusalem)\add* fortresses.”
 \s1 Yisrael’s punishment
 \s4 Northern kingdom
 \p
 \v 6 This is what Yahweh says:
-\q1 “\add Even if\add* Yisrael was \add three or four sins below the threshold\add*,
+\q1 “\add Even if\add* Yisrael \add (Israel)\add* was \add three or four sins below the threshold\add*,
 \q1 I wouldn’t turn away its punishment,
 \q1 because they sold the innocent for silver
 \q1 and the needy for a pair of sandals.
@@ -134,14 +134,14 @@
 \v 8 They lie down beside every altar on clothes taken \add from the poor\add* as pledges,
 \q1 and in the house of their god they drink the wine of those who were fined.
 \p
-\v 9 Yet I destroyed the Amorites before them.
+\v 9 Yet I destroyed the Amorim before them.
 \q1 \add They were as tall as\add* of cedars
 \q1 \add and\add* as strong as oaks.
 \q1 Yet I destroyed \add their\add* fruit \add up\add* high
 \q1 and \add their\add* roots \add down\add* below.\x + \xo 2:9: \xt Deu 3:8-11.\x*
-\v 10 Also, I brought you all out of Egypt \add (Heb. Mitsrayim)\add*
+\v 10 Also, I brought you all out of Mitsrayim \add (Egypt)\add*
 \q1 and led you forty years in the wilderness
-\q1 \add so you all could\add* \add possess\add* the land of the Amorites.
+\q1 \add so you all could\add* \add possess\add* the land of the Amorim.
 \q1
 \v 11 I raised prophets up from among your sons
 \q1 and \add devoted\add* Nazirites from your young men.\x + \xo 2:11: \xt Num 6:1-8.\x*
@@ -166,7 +166,7 @@
 \mi That is Yahweh’s declaration.
 \c 3
 \p
-\v 1 Hear this message that Yahweh has spoken against you, people of Yisrael, against \add Yakob’s descendants\add* that I brought out of Egypt saying:
+\v 1 Hear this message that Yahweh has spoken against you, people of Yisrael \add (Israel)\add*, against \add Ya’akov’s\add* \add (Jacob)\add* \add descendants\add* that I brought out of Mitsrayim \add (Egypt)\add* saying:
 \v 2 “I have chosen only you from all the families of the earth, therefore I’ll punish you all for all your sins.”
 \s1 Cause and effect
 \s4 Northern kingdom
@@ -190,8 +190,8 @@
 \s4 Northern kingdom
 \q1
 \v 9 Proclaim this in the fortresses at Ashdod,
-\q1 and in the strongholds in Egypt,
-\q1 saying, “Assemble yourselves on Shomron’s mountains
+\q1 and in the strongholds in Mitsrayim \add (Egypt)\add*,
+\q1 saying, “Assemble yourselves on Shomron’s \add (Samaria)\add* mountains
 \q1 and see what great confusion is in her,
 \q1 and what oppression is in her.
 \q1
@@ -205,16 +205,16 @@
 \p
 \v 12 This is what Yahweh says:
 \q1 “\add Just\add* as the shepherd rescues out of the lion’s mouth two legs only, or a piece of an ear,
-\q1 so will the \add Israelis\add* who live in Shomron be rescued with only the corner of a couch or a piece of a bed.”
-\v 13 \add Take notice\add* \add of this\add* and testify against Yakob’s descendants.
+\q1 so will the \add Israelis\add* who live in Shomron \add (Samaria)\add* be rescued with only the corner of a couch or a piece of a bed.”
+\v 13 \add Take notice\add* \add of this\add* and testify against Ya’akov’s \add (Jacob)\add* descendants.
 \mi That is the declaration of the master Yahweh, army commander God.
 \p
-\v 14 “On the day that I bring punishment for Yisrael’s sins to her, I’ll also bring punishment on the altars of Beyt-El. The altar’s horns will be cut off and fall to the ground.\x + \xo 3:14: \xt 2Ki 23:15.\x*
+\v 14 “On the day that I bring punishment for Yisrael’s \add (Israel)\add* sins to her, I’ll also bring punishment on the altars of Beyt-El \add (Bethel)\add*. The altar’s horns will be cut off and fall to the ground.\x + \xo 3:14: \xt 2Ki 23:15.\x*
 \v 15 I’ll destroy the winter house along with the summer house. The houses of ivory will perish, and the large houses will vanish.
 \mi That is Yahweh’s declaration.”
 \c 4
 \p
-\v 1 Listen to this message, you \add women like the\add* cows of Bashan on Shomron’s mountain—
+\v 1 Listen to this message, you \add women like the\add* cows of Bashan on Shomron’s \add (Samaria)\add* mountain—
 \q1 you who oppress the poor,
 \q1 you who crush the needy,
 \q1 you who say to \add your\add* husbands,
@@ -231,7 +231,7 @@
 \s1 The arguing of Israelis
 \s4 Northern kingdom
 \q1
-\v 4 “Go to \add the worship centre at\add* Beyt-El and sin,
+\v 4 “Go to \add the worship centre at\add* Beyt-El \add (Bethel)\add* and sin,
 \q1 to \add the one at\add* Gilgal and multiply sin.
 \q1 Bring your sacrifices every morning,
 \q1 your tithes every three days.
@@ -266,18 +266,18 @@
 \q1 Yet you all haven’t returned to me.
 \mi That is Yahweh’s declaration.
 \q1
-\v 10 I sent \add deadly diseases\add* onto you \add similar to what I did in\add* Egypt \add (Heb. Mitsrayim)\add*.
+\v 10 I sent \add deadly diseases\add* onto you \add similar to what I did in\add* Mitsrayim \add (Egypt)\add*.
 \q1 I killed your young men with the sword, carried away your horses,
 \q1 and made the stench of your camp \add reach your noses\add*.
 \q1 Yet you all haven’t returned to me.
 \mi That is Yahweh’s declaration.
 \q1
-\v 11 I overthrew \add cities\add* among you, \add just\add* like when God overthrew Sodom and Amorah \add (Gomorrah)\add*.\x + \xo 4:11: \xt Gen 19:24.\x*
+\v 11 I overthrew \add cities\add* among you, \add just\add* like when God overthrew Sedom and Amorah \add (Gomorrah)\add*.\x + \xo 4:11: \xt Gen 19:24.\x*
 \q1 You were like a burning stick snatched out of the fire.
 \q1 Yet you all haven’t returned to me.
 \mi That is Yahweh’s declaration.
 \q1
-\v 12 Therefore I’ll do something terrible to you, Yisrael,
+\v 12 Therefore I’ll do something terrible to you, Yisrael \add (Israel)\add*,
 \q1 \add and\add* because I’ll do something terrible to you,
 \q1 prepare to meet your god, Yisrael.
 \q1
@@ -290,7 +290,7 @@
 \s1 Encouraging repentance from sin
 \s4 Northern kingdom
 \p
-\v 1 Hear this message \add of mourning\add* over you that I take up, \add people\add* of Yisrael:
+\v 1 Hear this message \add of mourning\add* over you that I take up, \add people\add* of Yisrael \add (Israel)\add*:
 \q1
 \v 2 The virgin Yisrael has fallen—she won’t rise again.
 \q1 She’s abandoned on her land—there’s no one to \add help\add* her up,
@@ -302,14 +302,14 @@
 \v 4 This is what Yahweh says to the \add people\add* of Yisrael:
 \q1 “Seek me and live!
 \q1
-\v 5 Don’t seek Beyt-El \add (which means ‘God’s house’)\add*
+\v 5 Don’t seek Beyt-El \add (Bethel)\add* \add (which means ‘God’s house’)\add*
 \q1 or enter Gilgal;
-\q1 Don’t journey \add down\add* to Be’er-Sheva.
+\q1 Don’t journey \add down\add* to Be’er-Sheva \add (Beersheba)\add*.
 \q1 Because Gilgal will surely go into captivity,
 \q1 and Beyt-El will become nothing.
 \p
 \v 6 Seek Yahweh and live,
-\q1 or he will break out like fire \add among Yosef’s descendants\add*.
+\q1 or he will break out like fire \add among Yosef’s\add* \add (Joseph)\add* \add descendants\add*.
 \q1 It will devour, and there’ll be no one to quench it in Beyt-El.
 \q1
 \v 7 Those people turn justice into \add a bitter thing\add*
@@ -346,7 +346,7 @@
 \q1 just like you’ve all been saying.
 \q1
 \v 15 Hate evil, love good, and establish justice \add at the community centre\add*.
-\q1 Perhaps Yahweh, the god \add with armies\add*, will be gracious to the remnant of Yosef’s \add descendants\add*.
+\q1 Perhaps Yahweh, the god \add with armies\add*, will be gracious to the remnant of Yosef’s \add (Joseph)\add* \add descendants\add*.
 \p
 \v 16 Therefore, this is what Yahweh says, the god \add with armies\add*, my master,
 \q1 “Wailing will be in all the squares,
@@ -380,23 +380,23 @@
 \v 24 Instead, let justice flow like water,
 \q1 and righteousness like a constantly flowing stream.
 \p
-\v 25 \add You descendants\add* of Yisrael,
+\v 25 \add You descendants\add* of Yisrael \add (Israel)\add*,
 \q1 did you bring me sacrifices and offerings in the wilderness for forty years?\x + \xo 5:25-27: \xt Acts 7:42-43.\x*
 \q1
 \v 26 You’ve all lifted up the images of Sikkut, your king,
 \q1 and Kiyyun, your star \add god\add* that you made for yourselves.
-\v 27 Therefore I will exile you \add far\add* beyond Damascus,”
+\v 27 Therefore I will exile you \add far\add* beyond Damesek \add (Damascus)\add*,”
 \mi says Yahweh, whose name is the god \add with armies\add*.
 \c 6
 \s1 Exile for the complacent
 \s4 Northern kingdom
 \q1
-\v 1 Those who are at ease in Tsiyyon \add (Zion)\add* \add won’t end well\add*,
+\v 1 Those who are at ease in Tsiyon \add (Zion)\add* \add won’t end well\add*,
 \q1 nor will those who feel secure in the hill country of Shomron \add (Samaria)\add*—
 \q1 the notable men of the best of the nations—
-\q1 the ones who \add Israel’s descendants\add* come to for help!
+\q1 the ones who \add Yisrael’s\add* \add (Israel)\add* \add descendants\add* come to for help!
 \q1
-\v 2 “Go to Kalneh and look.
+\v 2 “Go to Keleneh and look.
 \q1 From there go to Hamat-Rabah.
 \q1 Then go down to the Philistine \add city of\add* Gat.
 \q1 Are they better than your two kingdoms?
@@ -415,14 +415,14 @@
 \q1
 \v 6 They drink bowls of wine
 \q1 and anoint themselves with the finest oils,
-\q1 but they don’t grieve over \add Israel’s\add* ruin.
+\q1 but they don’t grieve over \add Yisrael’s\add* \add (Israel)\add* ruin.
 \q1
 \v 7 Therefore, they’ll go into exile now with the first exiles,
 \q1 and the feasts of those who lounged about will \add come to an end\add*.
 \p
 \v 8 This is the declaration of Yahweh, the god \add with armies\add*:
 \q1 “\add I\add*, the master Yahweh, have sworn by \add myself\add*
-\q1 that I detest \add Israel’s\add* pride.
+\q1 that I detest \add Yisrael’s\add* pride.
 \q1 I hate \add their\add* fortresses,
 \q1 therefore I’ll hand the city\f + \fr 6:8 \ft Probably Shomron (Samaria).\f* over with everything that’s in it.”
 \p
@@ -439,19 +439,19 @@
 \q1 and the results of \add doing what’s right\add*, into bitterness,
 \q1
 \v 13 you who celebrate about \add capturing\add* Lo-Debar—
-\q1 who say, “Didn’t we take Karnaim by our own strength?”
+\q1 who say, “Didn’t we take Karnayim by our own strength?”
 \q1
-\v 14 Therefore, listen, I’ll raise up a nation against you \add people\add* of Yisrael.
+\v 14 Therefore, listen, I’ll raise up a nation against you \add people\add* of Yisrael \add (Israel)\add*.
 \mi That’s the declaration of Yahweh, the god \add with armies\add*.
 \q1 They’ll afflict you
-\q1 from Lebo-Hamat to the brook in the Aravah.”
+\q1 from Levo-Hamat to the brook in the Aravah.”
 \c 7
 \s1 The locusts vision
 \s4 Northern kingdom
 \p
 \v 1 This is what my master Yahweh showed me:
 \m Listen, he formed a locust swarm when the spring crop began to come up, and oh no, it was the late crop after the king’s \add initial\add* harvest.
-\v 2 When they’d finished eating \add everything green across\add* the land, then I \add asked\add*, “My master Yahweh, please forgive \add me\add*. How will \add Yisrael survive because it’s only a small\add* \add country\add*?”
+\v 2 When they’d finished eating \add everything green across\add* the land, then I \add asked\add*, “My master Yahweh, please forgive \add me\add*. How will \add Yisrael\add* \add (Israel)\add* \add survive because it’s only a small\add* \add country\add*?”
 \p
 \v 3 \add So\add* Yahweh \add backed off\add* from that and said that \add he\add* wouldn’t do it.
 \s1 The wildfire vision
@@ -459,7 +459,7 @@
 \p
 \v 4 This is what my master Yahweh showed me:
 \m Listen, my master Yahweh called on fire to judge \add the country\add*. It \add dried up\add* the vast, deep water under the earth and \add also would have\add* devoured the land
-\v 5 \add except\add* I said, “My master Yahweh, please stop. How will \add Israel\add* survive because it’s so small?”
+\v 5 \add except\add* I said, “My master Yahweh, please stop. How will \add Yisrael\add* \add (Israel)\add* survive because it’s so small?”
 \p
 \v 6 \add So\add* Yahweh also \add backed off\add* from that and said that \add he\add* wouldn’t do it.
 \s1 The plumb-line vision
@@ -469,22 +469,22 @@
 \m Listen, my master stood on a wall holding a plumb-line
 \v 8 and \add he\add* \add asked\add* me, “Amos, what do you see?”
 \p “A plumb line,” I \add answered\add*.
-\p “Listen, I’ll \add drop\add* a plumb-line \add down to check out\add* my people Yisrael,” my master said. “Never again will I spare them.
-\v 9 The \add hilltop shrines\add* of Yitsak \add (Isaac)\add* will be destroyed.
+\p “Listen, I’ll \add drop\add* a plumb-line \add down to check out\add* my people Yisrael \add (Israel)\add*,” my master said. “Never again will I spare them.
+\v 9 The \add hilltop shrines\add* of Yitshak \add (Isaac)\add* will be destroyed.
 \q1 Yisrael’s sanctuaries will be ruined,
-\q1 and I’ll \add take action\add* against the house of Yaraveam \add (Jeroboam)\add* with the sword.”
+\q1 and I’ll \add take action\add* against the house of Yarov’am \add (Jeroboam)\add* with the sword.”
 \s1 Amos and Amasiyas
 \s4 Both kingdoms
 \p
-\v 10 Then Amatsyah, the priest at Beyt-El \add (Bethel)\add*, sent a message to Yisrael’s King Yaraveam, saying: “Amos has conspired against you \add right among the Israeli people\add*. The \add country can’t handle\add* all his messages.
-\v 11 Amos is saying that \add you,\add* Yaraveam, will die by the sword and that Yisrael will definitely \add get taken\add* into exile away from this land.”
+\v 10 Then Amatsyah, the priest at Beyt-El \add (Bethel)\add*, sent a message to Yisrael’s \add (Israel)\add* King Yarov’am \add (Jeroboam)\add*, saying: “Amos has conspired against you \add right among the Israeli people\add*. The \add country can’t handle\add* all his messages.
+\v 11 Amos is saying that \add you,\add* Yarov’am, will die by the sword and that Yisrael will definitely \add get taken\add* into exile away from this land.”
 \p
-\v 12 Amatsyah \add ordered\add* Amos, “Hey prophet! Go \add and\add* run yourself back to the Yehudah \add region\add*, and \add earn your living\add* and prophesy there.
+\v 12 Amatsyah \add ordered\add* Amos, “Hey prophet! Go \add and\add* run yourself back to the Yehudah \add (Judah)\add* \add region\add*, and \add earn your living\add* and prophesy there.
 \v 13 \add But\add* you must never again prophesy here at Beyt-El because it’s the king’s sanctuary, and it’s the royal residence.”
 \p
 \v 14 “I’m not a prophet,” Amos answered \add the priest\add*. “Nor am I a prophet’s son, because I’m a herdsman, plus I \add take care of\add* \add an orchard\add*.
 \v 15 But Yahweh took me from \add looking after\add* the flock and told me, ‘Go, prophesy to my people Yisrael.’
-\v 16 \add So\add* now listen to Yahweh’s message: You say, ‘Don’t prophesy against Yisrael, and don’t speak out against Yitsak’s \add descendants\add*.’
+\v 16 \add So\add* now listen to Yahweh’s message: You say, ‘Don’t prophesy against Yisrael, and don’t speak out against Yitshak’s \add (Isaac)\add* \add descendants\add*.’
 \v 17 Therefore this is what Yahweh says:
 \q1 Your wife will become a prostitute in the city.
 \q1 Your sons and daughters will \add die\add* by the sword.
@@ -498,7 +498,7 @@
 \v 1 This is what my master Yahweh showed me: See this basketful of summer fruit.
 \v 2 Then he \add asked\add*, “What do you see, Amos?”
 \p “A basket of summer fruit,” I said.
-\p Then Yahweh told me, “The end has come for my people Yisrael. I won’t spare them any longer.
+\p Then Yahweh told me, “The end has come for my people Yisrael \add (Israel)\add*. I won’t spare them any longer.
 \v 3 The songs of the temple will become wailings on that day.”
 \mi That’s the declaration of my master Yahweh.
 \q1 “Many dead bodies—they’re thrown everywhere.
@@ -518,13 +518,13 @@
 \q1 \add We can\add* buy the poor \add people\add* with \add cash\add*,
 \q1 and the needy \add people\add* for a pair of sandals.”
 \p
-\v 7 Yahweh has \add made an oath\add* on Yakob’s pride,
+\v 7 Yahweh has \add made an oath\add* on Ya’akov’s \add (Jacob)\add* pride,
 \q1 “I certainly won’t ever forget any of their \add evil\add* actions.
 \q1
 \v 8 Won’t the land \add itself\add* quake due to this \add behaviour\add*,
 \q1 and every one who lives in it mourn?
 \q1 All of \add the ground\add* will come up like the Nile River \add after the rains\add*,
-\q1 and it will be tossed about then settle again, like Egypt’s river.
+\q1 and it will be tossed about then settle again, like Mitsrayim’s \add (Egypt)\add* river.
 \p
 \v 9 This is the declaration of my master Yahweh:
 \q1 “It will come \add at that time\add* that I’ll make the sun set at noon,
@@ -551,7 +551,7 @@
 \q1
 \v 14 Those who swear by the guilt of Shomron \add (Samaria)\add*
 \q1 and say, ‘As your \add god\add* lives, Dan,’
-\q1 and, ‘As the road to Beer-Sheva exists’—
+\q1 and, ‘As the road to Be’er-Sheva \add (Beersheba)\add* exists’—
 \q1 they will \add die\add* and never \add live\add* again.”
 \c 9
 \s1 Yahweh’s judgement on Yisrael
@@ -567,7 +567,7 @@
 \v 2 Though they dig \add down\add* \add towards\add* Sheol, my hand will reach in there and pluck them out.
 \q1 Though they climb up to \add heaven\add*, I’ll bring them \add back\add* down from there.
 \q1
-\v 3 Even if they hide on the top of \add Mt.\add* Carmel, I’ll search there and take them.
+\v 3 Even if they hide on the top of \add Mt.\add* Karmel, I’ll search there and take them.
 \q1 Though they’re hidden from my sight at the bottom of the sea, I’ll \add give orders\add* to the serpent there \add to\add* bite them.
 \q1
 \v 4 Though they go into captivity, driven ahead by their enemies, I’ll \add give orders\add* there to the sword \add to\add* kill them.
@@ -576,7 +576,7 @@
 \v 5 Master \add and\add* Commander-in-chief Yahweh touches the land and it melts.
 \q1 All who live in it mourn.
 \q1 All of it will rise up like the Nile River,
-\q1 then \add go down\add* again like Egypt’s river.
+\q1 then \add go down\add* again like Mitsrayim’s \add (Egypt)\add* river.
 \q1
 \v 6 He builds his steps in the heavens,
 \q1 and has established his vault over the earth.
@@ -585,14 +585,14 @@
 \q1 Yahweh is his name.
 \p
 \v 7 This is Yahweh’s declaration:
-\q1 “Aren’t you all like Ethiopia’s sons \add (Heb. Kush)\add* to me, you \add Israelis\add*?
-\q1 Didn’t I bring Yisrael out of Egypt,
-\q1 the Philistines from Crete,
+\q1 “Aren’t you all like Kush’s \add (Ethiopia)\add* sons to me, you \add Israelis\add*?
+\q1 Didn’t I bring Yisrael \add (Israel)\add* out of Mitsrayim \add (Egypt)\add*,
+\q1 the Pelishtim from Crete,
 \q1 and the Arameans from Kir?
 \q1
 \v 8 Listen, the eyes of my master Yahweh are on the sinful kingdom \add of Yisrael\add*,
 \q1 and I will destroy it from the face of the earth,
-\q1 except that I won’t totally \add wipe out Yakob’s descendants\add*.
+\q1 except that I won’t totally \add wipe out Ya’akov’s\add* \add (Jacob)\add* \add descendants\add*.
 \mi That is Yahweh’s declaration.
 \p
 \v 9 Because, listen, I will give a command,
@@ -617,7 +617,7 @@
 \q1 The mountains will drip sweet wine,
 \q1 and all the hills will flow with it.
 \q1
-\v 14 I’ll bring my people Yisrael back from captivity.
+\v 14 I’ll bring my people Yisrael \add (Israel)\add* back from captivity.
 \q1 They’ll build the ruined cities and inhabit them.
 \q1 They’ll plant vineyards and drink their wine,
 \q1 and they’ll make gardens and eat their fruit.

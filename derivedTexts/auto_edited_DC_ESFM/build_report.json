@@ -1,0 +1,372 @@
+{
+  "schema_version": 1,
+  "status": "lexical draft; not a completed translation",
+  "source_manifest_sha256": "351607c0d21d9949828611629c2ff97136749b0a0ef43f9773aa476560d7fe72",
+  "overrides_sha256": "5bfaa25539184d130632dbd741ea0ed201d2321f685128a750cfeb33b373c463",
+  "books": {
+    "TOB": {
+      "words": 5470,
+      "glossed": 4429,
+      "unresolved": 1041,
+      "lexical_coverage_percent": 80.97,
+      "statuses": {
+        "unaccented-candidate": 79,
+        "form-lexical": 4273,
+        "missing": 770,
+        "ambiguous": 267,
+        "headword-lexical": 77,
+        "unusable-gloss": 4
+      },
+      "chapters": 14,
+      "verse_segments": 245,
+      "prologue_segments": 0
+    },
+    "JDT": {
+      "words": 9158,
+      "glossed": 7418,
+      "unresolved": 1740,
+      "lexical_coverage_percent": 81.0,
+      "statuses": {
+        "missing": 1328,
+        "form-lexical": 7190,
+        "ambiguous": 410,
+        "headword-lexical": 90,
+        "unaccented-candidate": 138,
+        "unusable-gloss": 2
+      },
+      "chapters": 16,
+      "verse_segments": 339,
+      "prologue_segments": 0
+    },
+    "ESG": {
+      "words": 5804,
+      "glossed": 4476,
+      "unresolved": 1328,
+      "lexical_coverage_percent": 77.12,
+      "statuses": {
+        "missing": 1096,
+        "form-lexical": 4319,
+        "ambiguous": 232,
+        "headword-lexical": 81,
+        "unaccented-candidate": 76
+      },
+      "chapters": 10,
+      "verse_segments": 252,
+      "prologue_segments": 0
+    },
+    "WIS": {
+      "words": 6926,
+      "glossed": 5152,
+      "unresolved": 1774,
+      "lexical_coverage_percent": 74.39,
+      "statuses": {
+        "unaccented-candidate": 122,
+        "form-lexical": 4853,
+        "missing": 1592,
+        "ambiguous": 182,
+        "headword-lexical": 177
+      },
+      "chapters": 19,
+      "verse_segments": 436,
+      "prologue_segments": 0
+    },
+    "SIR": {
+      "words": 18604,
+      "glossed": 14309,
+      "unresolved": 4295,
+      "lexical_coverage_percent": 76.91,
+      "statuses": {
+        "unaccented-candidate": 324,
+        "form-lexical": 13584,
+        "ambiguous": 860,
+        "missing": 3413,
+        "headword-lexical": 401,
+        "unusable-gloss": 22
+      },
+      "chapters": 51,
+      "verse_segments": 1362,
+      "prologue_segments": 8
+    },
+    "BAR": {
+      "words": 3895,
+      "glossed": 3146,
+      "unresolved": 749,
+      "lexical_coverage_percent": 80.77,
+      "statuses": {
+        "form-lexical": 3052,
+        "ambiguous": 162,
+        "missing": 587,
+        "unaccented-candidate": 51,
+        "headword-lexical": 43
+      },
+      "chapters": 6,
+      "verse_segments": 213,
+      "prologue_segments": 0
+    },
+    "DAG": {
+      "words": 12333,
+      "glossed": 9940,
+      "unresolved": 2393,
+      "lexical_coverage_percent": 80.6,
+      "statuses": {
+        "form-lexical": 9590,
+        "missing": 1671,
+        "ambiguous": 719,
+        "unaccented-candidate": 169,
+        "headword-lexical": 181,
+        "unusable-gloss": 3
+      },
+      "chapters": 14,
+      "verse_segments": 528,
+      "prologue_segments": 0
+    },
+    "MA1": {
+      "words": 18378,
+      "glossed": 14534,
+      "unresolved": 3844,
+      "lexical_coverage_percent": 79.08,
+      "statuses": {
+        "form-lexical": 14197,
+        "missing": 2969,
+        "ambiguous": 867,
+        "headword-lexical": 198,
+        "unaccented-candidate": 139,
+        "unusable-gloss": 8
+      },
+      "chapters": 16,
+      "verse_segments": 924,
+      "prologue_segments": 0
+    },
+    "MA2": {
+      "words": 11979,
+      "glossed": 8544,
+      "unresolved": 3435,
+      "lexical_coverage_percent": 71.32,
+      "statuses": {
+        "unaccented-candidate": 125,
+        "form-lexical": 8272,
+        "ambiguous": 348,
+        "missing": 3083,
+        "headword-lexical": 147,
+        "unusable-gloss": 4
+      },
+      "chapters": 15,
+      "verse_segments": 555,
+      "prologue_segments": 0
+    },
+    "MA3": {
+      "words": 5115,
+      "glossed": 3587,
+      "unresolved": 1528,
+      "lexical_coverage_percent": 70.13,
+      "statuses": {
+        "form-lexical": 3451,
+        "unaccented-candidate": 80,
+        "missing": 1398,
+        "ambiguous": 128,
+        "headword-lexical": 56,
+        "unusable-gloss": 2
+      },
+      "chapters": 7,
+      "verse_segments": 228,
+      "prologue_segments": 0
+    },
+    "MA4": {
+      "words": 7871,
+      "glossed": 5667,
+      "unresolved": 2204,
+      "lexical_coverage_percent": 72.0,
+      "statuses": {
+        "missing": 1962,
+        "form-lexical": 5331,
+        "unaccented-candidate": 177,
+        "headword-lexical": 159,
+        "ambiguous": 239,
+        "unusable-gloss": 3
+      },
+      "chapters": 18,
+      "verse_segments": 483,
+      "prologue_segments": 0
+    },
+    "ES1": {
+      "words": 8928,
+      "glossed": 6854,
+      "unresolved": 2074,
+      "lexical_coverage_percent": 76.77,
+      "statuses": {
+        "form-lexical": 6571,
+        "ambiguous": 475,
+        "missing": 1599,
+        "unaccented-candidate": 136,
+        "headword-lexical": 147
+      },
+      "chapters": 9,
+      "verse_segments": 448,
+      "prologue_segments": 0
+    },
+    "MAN": {
+      "words": 318,
+      "glossed": 264,
+      "unresolved": 54,
+      "lexical_coverage_percent": 83.02,
+      "statuses": {
+        "unaccented-candidate": 9,
+        "missing": 47,
+        "form-lexical": 249,
+        "ambiguous": 7,
+        "headword-lexical": 6
+      },
+      "chapters": 1,
+      "verse_segments": 15,
+      "prologue_segments": 0
+    },
+    "PS2": {
+      "words": 117,
+      "glossed": 94,
+      "unresolved": 23,
+      "lexical_coverage_percent": 80.34,
+      "statuses": {
+        "form-lexical": 87,
+        "headword-lexical": 5,
+        "ambiguous": 10,
+        "missing": 13,
+        "unaccented-candidate": 2
+      },
+      "chapters": 1,
+      "verse_segments": 7,
+      "prologue_segments": 0
+    },
+    "PSS": {
+      "words": 4830,
+      "glossed": 3900,
+      "unresolved": 930,
+      "lexical_coverage_percent": 80.75,
+      "statuses": {
+        "missing": 708,
+        "form-lexical": 3736,
+        "unaccented-candidate": 124,
+        "ambiguous": 222,
+        "headword-lexical": 40
+      },
+      "chapters": 18,
+      "verse_segments": 332,
+      "prologue_segments": 0
+    },
+    "ODE": {
+      "words": 4159,
+      "glossed": 3451,
+      "unresolved": 708,
+      "lexical_coverage_percent": 82.98,
+      "statuses": {
+        "missing": 575,
+        "form-lexical": 3285,
+        "headword-lexical": 61,
+        "unaccented-candidate": 105,
+        "ambiguous": 132,
+        "unusable-gloss": 1
+      },
+      "chapters": 14,
+      "verse_segments": 275,
+      "prologue_segments": 0
+    }
+  },
+  "words": 123885,
+  "glossed": 95765,
+  "unsupported_books": {
+    "ES2": "No complete Greek source in Brenton. English 2 Esdras (Latin 4 Esdras) needs a separately selected witness and glossing pipeline; LXX Esdras B is Ezra-Nehemiah, not this book."
+  },
+  "rv_label_differences": 270,
+  "source_review_tokens": 7,
+  "limitations": [
+    "Lexical glosses do not supply inflection, syntax, or contextual sense.",
+    "TAGNT form analyses are candidates transferred from NT forms, not DC morphology annotations.",
+    "Unaccented matches are explicitly marked candidates, not verified lemmatisation.",
+    "Brenton source spelling and verse labels are not silently corrected.",
+    "PSS/ODE use an unreviewed Swete/First1KGreek transcription, with visible OCR errors retained.",
+    "ODE keeps Swete order: IV(a)/IV(b) use chapter 4 with a/b suffixes; XIV uses 47 XML lines as local verse segments, not Rahlfs references or printed line numbers.",
+    "Equal RV/source verse labels do not prove content alignment.",
+    "Word numbers are 1-based data rows, excluding the header, and rebuild with the complete fixed book order."
+  ],
+  "source_files": [
+    {
+      "filename": "grcbrent_usfm.zip",
+      "url": "https://ebible.org/Scriptures/grcbrent_usfm.zip",
+      "sha256": "e8a6051afa366ff63c0c161fa5d5c8412de0e9fcfc7ba1a03e7d3b2eb02572ea",
+      "bytes": 1729129,
+      "license": "Public Domain",
+      "attribution": "Brenton Greek Septuagint, eBible.org; source files dated 2026-04-08"
+    },
+    {
+      "filename": "STEPBible-README.md",
+      "url": "https://raw.githubusercontent.com/STEPBible/STEPBible-Data/be4191f0082aeedddb0eff0c02c966292b2bd641/README.md",
+      "sha256": "261d5157c0ffeadeedad3f734db945a4c3642e3e4ce5fa28002985b6c52437b1",
+      "bytes": 14495,
+      "license": "CC-BY-4.0",
+      "attribution": "STEPBible.org, based on work at Tyndale House Cambridge"
+    },
+    {
+      "filename": "TBESG.txt",
+      "url": "https://raw.githubusercontent.com/STEPBible/STEPBible-Data/be4191f0082aeedddb0eff0c02c966292b2bd641/Lexicons/TBESG%20-%20Translators%20Brief%20lexicon%20of%20Extended%20Strongs%20for%20Greek%20-%20STEPBible.org%20CC%20BY.txt",
+      "sha256": "312f723d7b8ef263bbdfb0451c9b8057125804dfff390b6f8544cff2a84b57f4",
+      "bytes": 4736912,
+      "license": "CC-BY-4.0",
+      "attribution": "STEPBible.org, based on work at Tyndale House Cambridge"
+    },
+    {
+      "filename": "TAGNT-Mat-Jhn.txt",
+      "url": "https://raw.githubusercontent.com/STEPBible/STEPBible-Data/be4191f0082aeedddb0eff0c02c966292b2bd641/Translators%20Amalgamated%20OT%2BNT/TAGNT%20Mat-Jhn%20-%20Translators%20Amalgamated%20Greek%20NT%20-%20STEPBible.org%20CC-BY.txt",
+      "sha256": "ab8eaaeb68e17a1dcfa34e1e9350358f22f03bc2a97244d848750ad81044bc8e",
+      "bytes": 14189032,
+      "license": "CC-BY-4.0",
+      "attribution": "STEPBible.org, based on work at Tyndale House Cambridge"
+    },
+    {
+      "filename": "TAGNT-Act-Rev.txt",
+      "url": "https://raw.githubusercontent.com/STEPBible/STEPBible-Data/be4191f0082aeedddb0eff0c02c966292b2bd641/Translators%20Amalgamated%20OT%2BNT/TAGNT%20Act-Rev%20-%20Translators%20Amalgamated%20Greek%20NT%20-%20STEPBible.org%20CC-BY.txt",
+      "sha256": "524e32375361e6d3fa2f7ef00b87605fdc4317a762f395651a05fdc31ad031b7",
+      "bytes": 15939932,
+      "license": "CC-BY-4.0",
+      "attribution": "STEPBible.org, based on work at Tyndale House Cambridge"
+    },
+    {
+      "filename": "OpenScriptures-README.md",
+      "url": "https://raw.githubusercontent.com/openscriptures/GreekResources/dd5a2fd530ab3c6b748c174cec38966c356d8111/README.md",
+      "sha256": "3e7f9d9202a4c09f604ba7a79be15df919e9d32901b14b968ded89756bfadf18",
+      "bytes": 1711,
+      "license": "CC-BY-4.0",
+      "attribution": "Open Scriptures Septuagint Project"
+    },
+    {
+      "filename": "GreekWordList.js",
+      "url": "https://raw.githubusercontent.com/openscriptures/GreekResources/dd5a2fd530ab3c6b748c174cec38966c356d8111/GreekWordList.js",
+      "sha256": "84703d5de9fae423c141ff374ffab73fcda288d0a400fcd500445302a5dbe483",
+      "bytes": 1662647,
+      "license": "CC-BY-4.0",
+      "attribution": "Open Scriptures Septuagint Project"
+    },
+    {
+      "filename": "GreekWordList.md",
+      "url": "https://raw.githubusercontent.com/openscriptures/GreekResources/dd5a2fd530ab3c6b748c174cec38966c356d8111/GreekWordList.md",
+      "sha256": "4d143a9503aa6b63425be919461eb1fca8ef46512a20fe48b25014db45d1516e",
+      "bytes": 3072,
+      "license": "CC-BY-4.0",
+      "attribution": "Open Scriptures Septuagint Project"
+    },
+    {
+      "filename": "tlg0527.tlg035.1st1K-grc1.xml",
+      "url": "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/ed91552c52530c8f5a3ddf2dd767e899372a804c/data/tlg0527/tlg035/tlg0527.tlg035.1st1K-grc1.xml",
+      "sha256": "539ddb781c11a4cc5e8d954f872e11a37711d9dd8a4a4851f803a14494fd067e",
+      "bytes": 105648,
+      "license": "CC-BY-SA-4.0",
+      "attribution": "Open Greek and Latin / First1KGreek; Harvard College Library; Digital Divide Data transcription of H. B. Swete, The Old Testament in Greek, volume III (1905)"
+    },
+    {
+      "filename": "tlg0527.tlg028.1st1K-grc1.xml",
+      "url": "https://raw.githubusercontent.com/OpenGreekAndLatin/First1KGreek/ed91552c52530c8f5a3ddf2dd767e899372a804c/data/tlg0527/tlg028/tlg0527.tlg028.1st1K-grc1.xml",
+      "sha256": "5155ba48f1474ef03abeea7a1a74e39b28cc54b4e8159c13208084f80d9b99a8",
+      "bytes": 91500,
+      "license": "CC-BY-SA-4.0",
+      "attribution": "Open Greek and Latin / First1KGreek; Harvard College Library; Digital Divide Data transcription of H. B. Swete, The Old Testament in Greek, volume III (1905)"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-\id LEV - Open English Translation—Readers’ Version (OET-RV) v0.1.06
+\id LEV - Open English Translation—Readers’ Version (OET-RV) v0.2.0
 \usfm 3.0
 \ide UTF-8
 \rem ESFM v0.6 LEV
@@ -13,7 +13,7 @@
 \mt1 Leviticus
 \is1 Introduction
 \ip The Latin word \bk Leviticus\bk* means ‘concerning the Levites’, who were the tribe of workers and priests who God chose to serve him at the altar and in other religious ceremonies. Hebrew readers call this document ‘Vayikrā’ which is the first word in the Hebrew and means ‘And he called’ (Yahweh called Mosheh/Moses). Some European and other translations call it ‘The third book of Mosheh/Moses’.
-\ip It’s presumed that Mosheh wrote this document down while they were all camped there at Mt. Sinai as mentioned in a few places: 1:1, 4:1, 6:1,24, and of 8:1.
+\ip It’s presumed that Mosheh wrote this document down while they were all camped there at Mt. Sinay as mentioned in a few places: 1:1, 4:1, 6:1,24, and of 8:1.
 \ip This document focuses on the proper values and behaviour that the Israelis should observe as Yahweh’s chosen and sacred people. That involved staying ‘clean’ as per Yahweh’s values by carefully following his detailed instructions, and by avoiding wickedness.
 \ip Some of the instructions apply particularly to the priests (Aharon’s/Aaron’s descendants) and to the remainder of their own tribe (the Levites that this document is often named after) who served the priests in their sacred ceremonies.
 \iot Main components of this account
@@ -31,7 +31,7 @@
 \v 2 “Tell the \add Israelis\add* that when anyone presents an offering to Yahweh, it must be presented from \add their\add* \add own\add* herd or flock.
 \v 3 If it’s from the herd, it must be a bull with \add no defects\add*. It must be presented \add in front of\add* the entrance to the \add sacred\add* tent to \add be acceptable\add* to Yahweh.
 \v 4 \add The owner\add* must place his hand on the head of that offering to be burnt, and then it will be accepted \add make him right with Yahweh\add*.
-\v 5 Then he must slaughter the \add bull in front\add* of Yahweh, and the priests (Aharon’s \add (Aaron’s)\add* descendants), must present the blood and splash it all around the altar which is by the entrance of the \add sacred\add* tent.
+\v 5 Then he must slaughter the \add bull in front\add* of Yahweh, and the priests (Aharon’s \add (Aaron)\add* descendants), must present the blood and splash it all around the altar which is by the entrance of the \add sacred\add* tent.
 \v 6 Then \add the presenter\add* must skin the \add bull\add* and cut it into pieces,
 \v 7 \add Meanwhile,\add* the priest Aharon’s sons must put fire on the altar and arrange wood on the fire,
 \v 8 and then \add they\add* must arrange the pieces (including the head and the fat portions) on top of the burning wood on the altar.
@@ -50,7 +50,7 @@
 \s1 Procedures for grain offerings
 \p
 \v 1 “When someone presents a grain offering to Yahweh, it must be as fine, wheat flour \add mixed with\add* \add olive\add*, and with frankincense added to the top of it.
-\v 2 It must be taken to the priest Aharon’s sons who will take it \add from them\add*, then take a handful out, being sure to get flour, oil, and some frankincense, and \add throw that memorial portion onto\add* the altar to get completely burnt up as a pleasing aroma for Yahweh.
+\v 2 It must be taken to the priest Aharon’s \add (Aaron)\add* sons who will take it \add from them\add*, then take a handful out, being sure to get flour, oil, and some frankincense, and \add throw that memorial portion onto\add* the altar to get completely burnt up as a pleasing aroma for Yahweh.
 \v 3 Then the rest of that grain offering will be for Aharon and his sons—it’s a very sacred part from the gifts for Yahweh.
 \p
 \v 4 “When \add someone\add* presents something baked as \add their\add* grain offering, it must be baked without leaven: either wheat flour mixed with \add olive\add* oil and baked into flat buns, or else wheat flour biscuits with \add olive\add* oil \add spread on top\add*.
@@ -73,7 +73,7 @@
 \s1 Procedures for peace offerings
 \p
 \v 1 “\add Now\add* if it’s a sacrifice for a peace offering, if it’s from the \bd herd\bd*, then either a male or female can be presented to Yahweh \add as long as it has no defects\add*.
-\v 2 \add The presenter\add* must lay their hand on the head of the \add bull or cow\add*, then he must slaughter it \add in front of\add* the \add sacred\add* tent. Then the \add priest\add* Aharon’s sons will splash the blood on the altar \add on each side\add*.
+\v 2 \add The presenter\add* must lay their hand on the head of the \add bull or cow\add*, then he must slaughter it \add in front of\add* the \add sacred\add* tent. Then the \add priest\add* Aharon’s \add (Aaron)\add* sons will splash the blood on the altar \add on each side\add*.
 \v 3 From that peace offering, he must present the fat covering the innards and which is part of the innards as a gift to Yahweh,
 \v 4 \add along with both\add* kidneys and the fat that’s attached to them, and the lobe on the liver (all of which need to be removed \add from the animal\add*).
 \v 5 Then Aharon’s sons must burn them on the wood \add that’s burning\add* on the altar as a gift—to become smoke as a pleasing aroma for Yahweh.
@@ -177,7 +177,7 @@
 \v 7 and the priest will make \add the presenter\add* \add right with Yahweh\add* after whatever that transgression was to make them guilty, and they’ll be forgiven.
 \s1 The fire and the ashes
 \p
-\v 8 Then Yahweh told Mosheh,
+\v 8 Then Yahweh told Mosheh \add (Moses)\add*,
 \v 9 “Tell Aharon \add (Aaron)\add* and his sons that these are the \add regulations\add* for the burnt \add offerings\add*: The burnt offering must remain on the altar’s hearth, on the altar all night until the morning and the fire \add must be kept burning\add* on it.
 \v 10 Then the priest must \add put on\add* his linen underwear and linen robe and \add remove\add* the fatty \add ashes\add* from the burnt \add offerings\add* on the altar, and pile them beside \add it\add*.
 \v 11 \add After that\add*, he’ll \add get changed again into his regular\add* clothes and take \add those\add* \add ashes\add* outside the camp to a ‘clean’ place.
@@ -185,22 +185,22 @@
 \v 13 \add Yes,\add* the fire must burn continually on the altar—never going out.
 \s1 Procedures for the grain offering
 \p
-\v 14 “Here’s the regulations for the grain offering: Aharon’s sons must present it \add before\add* Yahweh \add in front\add* of the altar.
+\v 14 “Here’s the regulations for the grain offering: Aharon’s \add (Aaron)\add* sons must present it \add before\add* Yahweh \add in front\add* of the altar.
 \v 15 \add The priest\add* must take a handful of the flour from that grain offering, being sure it includes some of the oil and the incense, and burn it on the altar as a memorial portion to become a pleasing aroma for Yahweh.
 \v 16 The remainder \add of that flour\add* will be \add used as food\add* for Aharon and his sons—they must eat the flat bread in a sacred place, i.e., in the courtyard of the \add sacred\add* tent.
 \v 17 It must not be baked with any rising agent. I give that to them from \add what’s given to me\add*. It’s \add very\add* sacred just like the sin offering and the guilt offering.
 \v 18 Any of Aharon’s male descendants can eat it—it’ll be their portion from Yahweh’s gifts throughout the generations. Anyone who touches \add Yahweh’s gifts\add* will become sacred \add themself\add*.”
 \s1 Procedures for the ordination offering
 \p
-\v 19 Then Yahweh told Mosheh,
-\v 20 “On the day when one of Aharon’s male descendants is consecrated \add as a priest\add*, this is what he must present to Yahweh: a continual grain offering of a kilogram of fine wheat flour—half for the morning and half for the evening.
+\v 19 Then Yahweh told Mosheh \add (Moses)\add*,
+\v 20 “On the day when one of Aharon’s \add (Aaron)\add* male descendants is consecrated \add as a priest\add*, this is what he must present to Yahweh: a continual grain offering of a kilogram of fine wheat flour—half for the morning and half for the evening.
 \v 21 It must be mixed with \add olive\add* oil then cooked with oil on a flat pan. It must then be broken into pieces and presented as a grain offering to make a pleasing aroma for Yahweh.
 \v 22 The priest who’s next in line to become \add high\add* priest must offer it and it must be completely burnt for Yahweh. This is a permanent regulation.
 \v 23 Any grain offering by a priest must be completely burnt—it must not be eaten.”
 \s1 Procedures for the sin offering
 \p
-\v 24 Then Yahweh told Mosheh,
-\v 25 “Tell Aharon and his sons that these are the \add regulations\add* for the sin \add offerings\add*: The sin offering must be slaughtered \add in front\add* of Yahweh at the place where the burnt \add offerings\add* are slaughtered. It’s a \add very\add* sacred \add activity\add*.
+\v 24 Then Yahweh told Mosheh \add (Moses)\add*,
+\v 25 “Tell Aharon \add (Aaron)\add* and his sons that these are the \add regulations\add* for the sin \add offerings\add*: The sin offering must be slaughtered \add in front\add* of Yahweh at the place where the burnt \add offerings\add* are slaughtered. It’s a \add very\add* sacred \add activity\add*.
 \v 26 The priest who offers the sin offering \add must be the one to eat it\add*. It must be eaten in a sacred place, i.e., in the courtyard of the \add sacred\add* tent.
 \v 27 Everything that touches the \add animal’s\add* body will become sacred. Anyone who \add gets the blood on their\add* clothes, must wash them in a sacred place.
 \v 28 Any clay pot that it’s been boiled in, must then be shattered, but if it’s boiled in a bronze pot, then that must be scoured and rinsed with water.
@@ -219,14 +219,14 @@
 \p
 \v 8 “Whenever a priest presents someone’s burnt offering, the skin of the animal that was presented belongs to that priest.
 \v 9 Any grain offering that’s baked in an oven, or cooked in a pan or on a griddle, will belong to the priest who presents it.
-\v 10 Any grain offering that’s either dry or mixed with oil, belongs to all of Aharon’s male descendants \add without any distinction\add*.
+\v 10 Any grain offering that’s either dry or mixed with oil, belongs to all of Aharon’s \add (Aaron)\add* male descendants \add without any distinction\add*.
 \s1 Procedures for the peace offering
 \p
 \v 11 “Then these are the \add regulations\add* for sacrificing peace offerings to present to Yahweh:
 \v 12 If it’s presented \add from thankfulness\add*, then the sacrifice \add must be accompanied by\add* thanksgiving flat bread buns (\add made from flour\add* mixed with \add olive\add* oil), and flat biscuits smeared with oil, and buns \add made from\add* fine wheat flour mixed with oil,
 \v 13 \add plus\add* risen bread rolls. \add All that\add* must accompany the peace offering \add from thankfulness\add*.
 \v 14 Then he must present one of each \add kind of bread\add* as a contribution to Yahweh. Those will belong to the priest who splashes the blood for the peace offerings.
-\v 15 The meat of the thankfulness sacrifice of those peace offerings must be eaten the \add same day that it’s offered—none of can be left\add* until morning.
+\v 15 The meat of the thankfulness sacrifice of those peace offerings must be eaten the \add same day that it’s offered—none of it can be left\add* until morning.
 \v 16 \add However,\add* if the sacrificed offering is a vow or freewill offering, then it can be eaten that same day and \add also\add* the next day,
 \v 17 \add but\add* any left-over meat must be burnt up on the fire on the third day.
 \v 18 If any of that meat from the sacrifice was eaten on the third day, the presenter won’t be accepted and \add they won’t be forgiven\add*. It is spoilt, and anyone who eats any of it will bear their own \add guilt\add*.
@@ -235,7 +235,7 @@
 \v 21 \add Similarly,\add* when a person touches anything ‘unclean’ (e.g., human uncleanness, or an unclean animal, or a detestable creature), and then they eat some of the meat of the sacrifice for a peace offering that \add now\add* belongs to Yahweh, that \add person\add* must be cut off from \add the community\add*.
 \s1 Don’t eat fat or blood
 \p
-\v 22 Then Yahweh told Mosheh,
+\v 22 Then Yahweh told Mosheh \add (Moses)\add*,
 \v 23 “Tell the \add Israelis\add* that you all must not eat the fat from \add cattle or sheep or goats\add*,
 \v 24 plus you all definitely must not eat the fat from an animal \add that died naturally or was killed by wild animals although you can use it for other purposes\add*.
 \v 25 Anyone who does eat the fat from an animal presented as a gift to Yahweh must be cut off from \add the community\add*.
@@ -244,10 +244,10 @@
 \v 27 Any person who does eat blood must be cut off from \add the community\add*.”
 \s1 The priests’ portions
 \p
-\v 28 Then Yahweh told Mosheh,
+\v 28 Then Yahweh told Mosheh \add (Moses)\add*,
 \v 29 “Tell the \add Israelis\add* that anyone who offers a peace offering to Yahweh must take \add some of it as\add* his peace offering to Yahweh.
 \v 30 They must \add personally carry\add* Yahweh’s gift \add which will be\add* the breast with \add its\add* fat and raise it \add in front\add* of Yahweh as a wave offering,
-\v 31 and the priest must burn that fat up on the altar \add but\add* the breast will be for Aharon and his sons.
+\v 31 and the priest must burn that fat up on the altar \add but\add* the breast will be for Aharon \add (Aaron)\add* and his sons.
 \v 32 The right thigh from the sacrifices of your peace offerings must be given to the priest—
 \v 33 whichever \add priest (Aharon’s descendant) who handled\add* the blood of the peace offerings and the fat, that right thigh will be his portion
 \v 34 because I took the breast from the wave offering and the thigh from the contribution of the \add Israelis’\add* peace offerings, and I gave them to Aharon the priest and his sons as an ongoing portion from the \add Israeli people\add*.
@@ -255,7 +255,7 @@
 \v 36 Yahweh commanded them to be given to them \add back\add* on the day when he anointed them out of all the \add Israeli people\add* \add and made it\add* a permanent regulation for \add future\add* generations.
 \p
 \v 37 \add Those are the regulations\add* for the burnt \add offerings\add*, the grain \add offerings\add*, the sin \add offerings\add*, the guilt \add offerings\add*, the ordination \add offerings\add*, and the peace \add offerings\add*
-\v 38 that Yahweh \add gave to\add* Mosheh at Mt. Sinai on the day when he ordered the \add Israelis\add* to present their offerings to Yahweh \add when they were there\add* in the Sinai wilderness.
+\v 38 that Yahweh \add gave to\add* Mosheh at Mt. Sinay on the day when he ordered the \add Israelis\add* to present their offerings to Yahweh \add when they were there\add* in the Sinay wilderness.
 \c 8
 \s1 Ordination of Aharon and his sons
 \r (Exo. 29:1-37)
@@ -307,7 +307,7 @@
 \c 9
 \s1 The priests start their duties
 \p
-\v 1 On the eighth day, Mosheh summoned Aharon and his sons, along with Yisrael’s elders,
+\v 1 On the eighth day, Mosheh \add (Moses)\add* summoned Aharon \add (Aaron)\add* and his sons, along with Yisrael’s \add (Israel)\add* elders,
 \v 2 and he told Aharon, “Get a healthy, \add young\add*, male calf for a sin offering for yourself, and a ram \add without defects\add* for a burnt offering, and present them to Yahweh.
 \v 3 Then tell the \add Israeli people\add* to take a male goat for a sin offering, and a calf and a lamb, both a year old and \add without defects\add* for a burnt offering,
 \v 4 as well as a bull and a ram to sacrifice to Yahweh as peace offerings, and a grain offering mixed will oil, because Yahweh will appear to you all today.”
@@ -331,7 +331,7 @@
 \v 18 Then \add Aharon\add* slaughtered the bull and the ram \add which\add* were the people’s peace \add offering\add*, and \add his\add* sons brought the blood to him and he splashed it on \add each side of\add* the altar.\x + \xo 9:18: \xt Lev 3:1-11.\x*
 \v 19 He took the fat from the bull and the ram, including \add their\add* fatty \add tails\add* and \add the fat\add* covering the innards, the kidneys, and the lobe of the liver,
 \v 20 and placed it \add all\add* on top of \add those animals\add* breast \add meat\add*, then burnt up \add the fat\add* on the altar.
-\v 21 \add Finally,\add* \add he\add* raised the breast \add meat\add* and the right thigh as a wave offering \add in front\add* of Yahweh, just as Mosheh had \add instructed\add*.
+\v 21 \add Finally,\add* \add he\add* raised the breast \add meat\add* and the right thigh as a wave offering \add in front\add* of Yahweh, just as Mosheh \add (Moses)\add* had \add instructed\add*.
 \p
 \v 22 Then Aharon raised his \add arms\add* towards the people and blessed them,\x + \xo 9:22: \xt Num 6:22-26.\x* and then he \add stepped\add* down, \add having finished\add* making the sin offering, the burnt offering, and the peace offerings.
 \v 23 Mosheh and Aharon entered the \add sacred\add* tent, and \add when\add* they came \add back\add* out, they blessed the people and Yahweh’s \add brilliance\add* appeared to all the people.
@@ -339,21 +339,21 @@
 \c 10
 \s1 Nadav and Avihu get destroyed
 \p
-\v 1 Then two of Aharon’s sons, Nadav and Avihu each took their \add incense-burning pans\add* and put fire in them, and put incense on \add the fire\add*, \add thus offering unauthorised\add* fire to Yahweh that he hadn’t instructed them to do.
+\v 1 Then two of Aharon’s \add (Aaron)\add* sons, Nadav and Avihu each took their \add incense-burning pans\add* and put fire in them, and put incense on \add the fire\add*, \add thus offering unauthorised\add* fire to Yahweh that he hadn’t instructed them to do.
 \v 2 \add So\add* flames \add shot out\add* from Yahweh’s front and consumed then \add so\add* they died \add there\add* \add in front\add* of Yahweh.
-\v 3 Then Mosheh told Aharon, “That’s what Yahweh \add meant when he said\add*, ‘I will \add reveal\add* my \add holiness\add* to those who approach me, then I’ll be honoured \add in the sight of\add* all the people.’ ”
+\v 3 Then Mosheh \add (Moses)\add* told Aharon, “That’s what Yahweh \add meant when he said\add*, ‘I will \add reveal\add* my \add holiness\add* to those who approach me, then I’ll be honoured \add in the sight of\add* all the people.’ ”
 \p
-\v 4 Then Mosheh \add summoned\add* Mishael and Elitsafan, the sons of Aharon’s Uncle Uzziyel, and told them, “\add Come and help by carrying\add* your cousins’ \add bodies\add* from the sacred place \add here\add* to a place outside the camp.”
+\v 4 Then Mosheh \add summoned\add* Mishael and Elitsafan, the sons of Aharon’s Uncle Uziel, and told them, “\add Come and help by carrying\add* your cousins’ \add bodies\add* from the sacred place \add here\add* to a place outside the camp.”
 \v 5 \add So\add* they \add came\add* and carried the two corpses by their clothes to a place outside the camp just as Mosheh had told them to do.
 \p
 \v 6 Then Mosheh told Aharon and his sons Eleazar and Itamar, “Don’t \add leave your hair\add* loose, and don’t tear your clothes, so that you won’t die and \add so that\add* \add Yahweh\add* won’t be angry at the entire community. But \add meanwhile\add*, all the \add Israelis\add* must \add mourn\add* because Yahweh \add was angry enough to burn\add* \add those two\add*.
 \v 7 \add Also,\add* don’t leave the entrance to the \add sacred\add* tent, as you might die because you all \add still\add* have Yahweh’s anointing oil on you.” \add So\add* they did \add everything that Mosheh said\add*.
 \s1 Instructions for priests
 \p
-\v 8 Then Yahweh told Aharon,
+\v 8 Then Yahweh told Aharon \add (Aaron)\add*,
 \v 9 “\add Neither\add* you or your sons should drink wine or strong drink when you’re \add going to\add* go into the \add sacred\add* tent so that you won’t die. This regulation is permanent \add and for future\add* generations.
 \v 10 You must \add carefully\add* \add distinguish\add* between what’s sacred and what’s common, and what’s ‘unclean’ and ‘clean’.
-\v 11 and you must teach the \add Israelis\add* all the instructions that Yahweh has \add given\add* them \add via\add* Mosheh.”
+\v 11 and you must teach the \add Israelis\add* all the instructions that Yahweh has \add given\add* them \add via\add* Mosheh \add (Moses)\add*.”
 \p
 \v 12 Then Mosheh told Aharon and his \add remaining\add* sons Eleazar and Itamar, “Take the remainder of the grain offering after \add the memorial portion has been given\add* to Yahweh, and eat that \add flat bread\add* \add there\add* beside the altar, because it’s \add very sacred\add*.\x + \xo 10:12-13: \xt Lev 6:14-18.\x*
 \v 13 You all must eat it in a sacred place, because it’s the portion for you and your sons from the gifts to Yahweh, because that’s what I’ve been instructed.
@@ -370,7 +370,7 @@
 \s1 Creatures that may be eaten
 \r (Deu. 14:3-21)
 \p
-\v 1 Then Yahweh told Mosheh and Aharon:
+\v 1 Then Yahweh told Mosheh \add (Moses)\add* and Aharon \add (Aaron)\add*:
 \p
 \v 2 Tell the \add Israelis\add* that \add the following\add* \add creatures\add* on the earth are the ones that you all can eat:
 \v 3 You all can eat any animal that has hooves \add which are completely split in two\add* and that \add also\add* \add chew\add* the cud.
@@ -406,7 +406,7 @@
 \v 29 These are the ‘unclean’ creatures from the ones that swarm on the ground: \add rats, mice, lizards\add*
 \v 30 of any kind, \add geckos, skinks, and chameleons\add*.
 \v 31 Out of all the swarming \add things\add*, those are ‘unclean’ for you—anyone who touches them when they’ve \add died\add* will be ‘unclean’ until the evening.
-\v 32 \add Also,\add* anything that \add their dead bodies\add* fall on will become ‘unclean’, whether it’s a wooden. cloth, leader, or sackcloth object, or any container used for work, \add so then\add* it must be immersed in water and it will be ‘unclean’ until the evening when it will become ‘clean’ \add again\add*.
+\v 32 \add Also,\add* anything that \add their dead bodies\add* fall on will become ‘unclean’, whether it’s a wooden, cloth, leather, or sackcloth object, or any container used for work, \add so then\add* it must be immersed in water and it will be ‘unclean’ until the evening when it will become ‘clean’ \add again\add*.
 \v 33 \add If\add* one of \add those creatures\add* falls into a clay container, everything in it will become ‘unclean’ and you must break \add that container\add*.
 \v 34 If water from \add that container\add* got onto any food, it will become ‘unclean’, and any drink \add take\add* from that container will be ‘unclean’.
 \v 35 Anything that the dead body of one of \add those creatures\add* falls onto will become ‘unclean’—any oven or stove must be smashed. They have become ‘unclean’ \add and would always remain so\add*.
@@ -421,14 +421,14 @@
 \v 42 Everything that \add moves\add* on its belly, and any swarming thing that moves along the ground on four or more feet mustn’t be eaten because they’re detestable.
 \v 43 Don’t make yourselves detestable with any of those swarming creatures, and don’t make yourselves ‘unclean’ by \add touching or eating\add* them,
 \v 44 because I am your god Yahweh. You all must keep yourselves holy, and you’re a holy \add people\add* because I’m holy.\x + \xo 11:44: \xt Lev 19:2; 1Pe 1:16.\x* \add So\add* don’t make yourselves ‘unclean’ with any swarming creatures that creep across the ground
-\v 45 because I am Yahweh, the one who brought you all out of Egypt to be your god, and you must be holy because I am holy.
+\v 45 because I am Yahweh, the one who brought you all out of Mitsrayim \add (Egypt)\add* to be your god, and you must be holy because I am holy.
 \p
 \v 46 The \add above\add* are the regulations about livestock, \add birds\add*, creatures that move in the \add water\add*, and creatures that swarm across the ground,
 \v 47 to \add distinguish\add* between the ‘unclean’ and the ‘clean’, i.e., those that can be eaten and those that must not be eaten.
 \c 12
 \s1 Purification after giving birth
 \p
-\v 1 Then Yahweh told Mosheh:
+\v 1 Then Yahweh told Mosheh \add (Moses)\add*:
 \p
 \v 2 Tell the \add Israelis\add* that when a woman gets pregnant and then gives birth to a boy, she will then be ‘unclean’ for seven days similar to how her impurity during her \add monthly period\add* makes her ‘unclean’.
 \v 3 Then on the eighth day, \add the baby boy’s\add* foreskin must be circumcised.\x + \xo 12:3: \xt Gen 17:12; Luk 2:21.\x*
@@ -443,7 +443,7 @@
 \c 13
 \s1 Regulations about skin diseases
 \p
-\v 1 Then Yahweh told Mosheh and Aharon:
+\v 1 Then Yahweh told Mosheh \add (Moses)\add* and Aharon \add (Aaron)\add*:
 \p
 \v 2 If \add someone discovers\add* a raised area on their skin, or a scab or a bright spot, and it seems like an infectious skin disease, then \add that person\add* should be taken to a priest (Aharon or one of his sons),
 \v 3 and the priest must \add examine\add* their skin. If the hair in the infected \add spot\add* has turned white and the infection appears to be deeper under the skin, then it’s \add confirmed as\add* an infectious skin disease and \add so\add* the priest must pronounce the person as ‘unclean’.
@@ -477,12 +477,12 @@
 \v 28 \add But\add* if the bright spot hasn’t spread on the skin, and it faded \add more\add*, then it was \add just\add* swelling from the burn. Then the priest will pronounce \add that person\add* to be ‘clean’ because it was \add just\add* the scar \add caused by\add* \add their\add* burn.
 \p
 \v 29 If a man or woman has an infection in \add their\add* \add scalp\add* or \add under\add* \add their\add* beard,
-\v 30 then the priest should inspect the infection. If it appears to be more than skin deep, and there’s any thin yellow \add hairs\add* in it, then the priest must pronounce \add that person\add* as ‘unclean’ \add because\add* it’s a \add itchy and infectious\add* skin infection on the \add scalp or face\add*.
+\v 30 then the priest should inspect the infection. If it appears to be more than skin deep, and there’s any thin yellow \add hairs\add* in it, then the priest must pronounce \add that person\add* as ‘unclean’ \add because\add* it’s an \add itchy and infectious\add* skin infection on the \add scalp or face\add*.
 \v 31 \add However,\add* if the priest notices an itchy infection yet it’s only skin deep and there’s no black hair on it, then he should quarantine that person for seven days.
 \v 32 On the seventh day, the priest will re-examine \add that person\add* and if the spot hasn’t widened and \add still\add* only appears to be skin deep,
 \v 33 then \add that person\add* should shave \add their head\add*, and then the priest should quarantine them for a further seven days.
 \v 34 Then \add again\add* on the seventh day, the priest will inspect it, and if the spot hasn’t widened after being shaved and it doesn’t seem to be more than skin deep, then the priest can pronounce \add that person\add* as ‘clean’ \add once\add* they’ve washed their clothes.
-\v 35 \add However,\add* it is did spread on their skin after \add that\add*,
+\v 35 \add However,\add* if it did spread on their skin after \add that\add*,
 \v 36 then the priest must inspect it \add again\add*, and if it’s spread then \add that person\add* is ‘unclean’ (whether or not there’s any yellow hair).
 \v 37 \add But\add* if it seems that the spot \add hasn’t spread\add* and dark hair is growing in it again, then \add that person’s\add* \add not infectious\add* and the priest can pronounce them as ‘clean’.
 \p
@@ -517,7 +517,7 @@
 \c 14
 \s1 Purification after a skin disease
 \p
-\v 1 Then Yahweh told Mosheh:
+\v 1 Then Yahweh told Mosheh \add (Moses)\add*:
 \p
 \v 2 These are the regulations for the purification of a person who had a skin disease. They must be taken to a priest\x + \xo 14:2: \xt Mat 8:4; Mrk 1:44; Luk 5:14; 17:14.\x*
 \v 3 \add who’ll\add* go outside the camp \add to meet them\add*. The priest must inspect \add that person\add*, and if the skin disease has indeed left them,
@@ -555,9 +555,9 @@
 \v 32 \add The above\add* are the regulations for anyone who has a skin disease \add but who couldn’t afford the regular purification offerings\add*.
 \s1 Treating contaminated homes
 \p
-\v 33 Then Yahweh told Mosheh and Aharon:
+\v 33 Then Yahweh told Mosheh \add (Moses)\add* and Aharon \add (Aaron)\add*:
 \p
-\v 34 “\add When\add* you enter into the land of Kanaan which I’m giving you all as a possession, and if I \add cause\add* an infection in one your homes in \add that\add* land,
+\v 34 “\add When\add* you enter into the land of Kena’an \add (Canaan)\add* which I’m giving you all as a possession, and if I \add cause\add* an infection in one of your homes in \add that\add* land,
 \v 35 then the homeowner must go and inform the priest that something like an infection has appeared in their house.
 \v 36 The priest must order that everything be removed out of the house before \add he\add* comes to \add inspect it\add* \add so that\add* it won’t all be pronounced as ‘unclean’. After \add that’s done\add*, he’ll go to see the house
 \v 37 and \add examine\add* the growth. If the growth is greenish or reddish and seems more than surface deep,
@@ -587,7 +587,7 @@
 \c 15
 \s1 Dealing with bodily discharges
 \p
-\v 1 Then Yahweh told Mosheh and Aaron:
+\v 1 Then Yahweh told Mosheh \add (Moses)\add* and Aharon \add (Aaron)\add*:
 \p
 \v 2 Tell the \add Israelis\add* that whenever any man has a discharge from his \add genitals\add*, then he becomes ‘unclean’.
 \v 3 He becomes ‘\add unclean\add*’ whether his body secretes the flow or if it’s blocked—either way he’s ‘\add unclean\add*’.
@@ -630,7 +630,7 @@
 \c 16
 \s1 The day for making things right
 \p
-\v 1 Yahweh spoke to Mosheh after the death of two of Aharon’s sons when they approached Yahweh \add wrongly\add* and died,
+\v 1 Yahweh spoke to Mosheh \add (Moses)\add* after the death of two of Aharon’s \add (Aaron)\add* sons when they approached Yahweh \add wrongly\add* and died,
 \v 2 and \add he\add* told Mosheh:
 \p Tell your brother Aharon that if he doesn’t \add want to\add* die, then he mustn’t \add just\add* enter the \add holiest room\add* inside the curtain\x + \xo 16:2: \xt Heb 6:19.\x* at any old time. The atonement lid is on the \add sacred\add* box, and I will appear in a cloud over \add that\add* lid.
 \p
@@ -656,8 +656,8 @@
 \v 19 Then he must \add flick\add* blood on to it seven times with his finger, thus purifying it and \add removing\add* the uncleanness of the \add Israeli people from it\add*.
 \s1 The goat taking the blame
 \p
-\v 20 \add When\add* \add Aharon\add* has finished purifying the sacred \add room\add*, the \add sacred\add* tent, and the altar, then he should present the live goat.
-\v 21 \add He\add* must place \add both\add* his hands on the goat’s head, and confess all of Israel’s \add disobedience, rebellion, and shortcomings\add*—\add symbolically\add* placing them onto the goat’s head, and then he must choose a man \add that’s nearby\add* to take it into the wilderness.
+\v 20 \add When\add* \add Aharon\add* \add (Aaron)\add* has finished purifying the sacred \add room\add*, the \add sacred\add* tent, and the altar, then he should present the live goat.
+\v 21 \add He\add* must place \add both\add* his hands on the goat’s head, and confess all of Yisrael’s \add (Israel)\add* \add disobedience, rebellion, and shortcomings\add*—\add symbolically\add* placing them onto the goat’s head, and then he must choose a man \add that’s nearby\add* to take it into the wilderness.
 \v 22 Then he’ll release the goat there in the wilderness, and the goat will carry all their sins into that barren land.
 \p
 \v 23 Then Aharon must enter the \add sacred\add* tent and take off the linen \add garment\add* that he’d put on as he’d entered into the sacred \add room\add* and leave them there.\x + \xo 16:23: \xt Eze 44:19.\x*
@@ -675,13 +675,13 @@
 \v 32 The priest \add who’s anointed and ordained to succeed\add* his father \add as high priest\add* must \add be the one to\add* make atonement, and he must be wearing \add his\add* \add sacred\add* linen clothes.
 \v 33 He will \add first\add* \add purify\add* the \add sacred room\add* and the \add sacred\add* tent, and the altar, and then \add make all the priests right with Yahweh\add* and \add finally,\add* the \add entire community\add*.
 \v 34 That will become a permanent regulation every year to \add make all the Israelis right with Yahweh because of\add* their sins.
-\p \add So\add* Mosheh did exactly as Yahweh had instructed him.
+\p \add So\add* Mosheh \add (Moses)\add* did exactly as Yahweh had instructed him.
 \c 17
 \s1 Slaughtering animals
 \p
-\v 1 Then Yahweh told Mosheh:
+\v 1 Then Yahweh told Mosheh \add (Moses)\add*:
 \p
-\v 2 Tell Aharon and his sons and all the \add Israelis\add* that \add these are the instructions from\add* Yahweh:
+\v 2 Tell Aharon \add (Aaron)\add* and his sons and all the \add Israelis\add* that \add these are the instructions from\add* Yahweh:
 \v 3 \add No Israeli is allowed to\add* slaughter a bull or lamb or goat \add either\add* inside the camp or outside \add it\add*.
 \v 4 \add If they’re not taken\add* to the entrance to the \add sacred\add* tent to be presented as an offering to Yahweh \add in front\add* of \add his\add* residence, then that person \add will be held guilty\add* of its blood—they’ve shed blood so they must be cut off from his people.
 \v 5 The \add Israelis\add* \add must stop\add* sacrificing their \add animals\add* in the countryside, and \add instead\add* bring them to Yahweh at the entrance to the \add sacred\add* tent, \add i.e., they must\add* bring them to the priest and sacrifice them as peace offerings to Yahweh.
@@ -704,10 +704,10 @@
 \c 18
 \s1 Sexual relationships
 \p
-\v 1 Then Yahweh told Mosheh:
+\v 1 Then Yahweh told Mosheh \add (Moses)\add*:
 \p
 \v 2 Tell the \add Israeli\add* that I am their god Yahweh.
-\v 3 \add They mustn’t behave as if they’re still there in\add* Egypt, nor should they \add behave like the Canaanites that were living\add* in the land that I’m taking you all into, and don’t \add emulate their customs and practices\add*.
+\v 3 \add They mustn’t behave as if they’re still there in\add* Mitsrayim \add (Egypt)\add*, nor should they \add behave like the Kena’anim\add* \add (Canaanites)\add* \add that were living\add* in the land that I’m taking you all into, and don’t \add emulate their customs and practices\add*.
 \v 4 You all must \add imbibe my values and follow my instructions\add*. I am your god Yahweh.
 \v 5 You all must \add follow my instructions and my values\add*—those who do so will live.\x + \xo 18:5: \xt Neh 9:29; Eze 18:9; 20:11-13; Luk 10:28; Rom 10:5; Gal 3:12.\x* I am your god Yahweh.
 \p
@@ -741,7 +741,7 @@
 \c 19
 \s1 Various moral imperatives
 \p
-\v 1 Then Yahweh told Mosheh:
+\v 1 Then Yahweh told Mosheh \add (Moses)\add*:
 \p
 \v 2 Tell the \add entire Israeli community\add* that they must \add be separate from others\add*, because I, your god Yahweh, am holy \add (i.e., separated from impurity)\add*.\x + \xo 19:2: \xt Lev 11:44-45; 1Pe 1:16.\x*
 \v 3 Everyone must \add respect and obey\add* their \add parents\add*,\x + \xo 19:3: \xt Exo 20:12; Deu 5:16.\x* and observe my rest days.\x + \xo 19:3: \xt Exo 20:8; Deu 5:12.\x* I am your god Yahweh.
@@ -790,17 +790,17 @@
 \v 32 Stand up for those with grey hair, and honour the \add presence\add* of the elderly. \add Honour and respect\add* your god. I am Yahweh.
 \p
 \v 33 Don’t \add take advantage of\add* \add foreigners\add* when they stay in your land\x + \xo 19:33-34: \xt Exo 22:21; Deu 24:17-18; 27:19.\x*—
-\v 34 you all must treat \add foreigners\add* the same as native-born \add Israelis\add* and love them like you \add love\add* yourselves, because you were all foreigners in Egypt \add (Heb. Mitsrayim)\add*. I am your god Yahweh.
+\v 34 you all must treat \add foreigners\add* the same as native-born \add Israelis\add* and love them like you \add love\add* yourselves, because you were all foreigners in Mitsrayim \add (Egypt)\add*. I am your god Yahweh.
 \p
 \v 35 Don’t allow injustice \add either\add* in \add judging cases\add*, \add or by trading with rigged\add* \add weights\add* and \add measures\add*\x + \xo 19:35-36: \xt Deu 25:13-16; Prv 20:10; Eze 45:10.\x*—
-\v 36 your scales and weights and measuring containers must be honest. I am your god Yahweh who brought you all out of Egypt \add (Heb. Mitsrayim)\add*.
+\v 36 your scales and weights and measuring containers must be honest. I am your god Yahweh who brought you all out of Mitsrayim.
 \v 37 You all must \add obey my instructions and decisions\add* and \add stick to\add* them. I am Yahweh.
 \c 20
 \s1 Penalties for disobedience
 \p
-\v 1 Then Yahweh told Mosheh:
+\v 1 Then Yahweh told Mosheh \add (Moses)\add*:
 \p
-\v 2 Tell the \add Israeli people\add* that if any of them, or any foreigner staying in Yisrael, gives any of their \add children\add* to Molek, then \add that person\add* must \add definitely be executed\add*—the people must do it by throwing rocks at them.
+\v 2 Tell the \add Israeli people\add* that if any of them, or any foreigner staying in Yisrael \add (Israel)\add*, gives any of their \add children\add* to Molek, then \add that person\add* must \add definitely be executed\add*—the people must do it by throwing rocks at them.
 \v 3 \add Yes,\add* I myself will \add personally punish\add* that person and cut them off from the people for giving their \add child\add* to Molek and so making my sanctuary ‘unclean’ and profaning my \add sacred\add* name.
 \v 4 If the people of the land \add just\add* hides their eyes from \add seeing\add* anyone offering their \add child\add* to Molek so they don’t have to execute \add that person\add*,
 \v 5 then I’ll \add also\add* remove that \add other\add* person and their clan. I’ll cut them off from their people, along with anyone else who practises prostitution by prostituting themselves to Molek.
@@ -837,8 +837,8 @@
 \c 21
 \s1 Stricter instructions for priests
 \p
-\v 1 Then Yahweh told Mosheh:
-\p Tell Aharon’s descendants the priests that they must not defile themselves among the \add Israelis\add*, by touching anything that’s not living
+\v 1 Then Yahweh told Mosheh \add (Moses)\add*:
+\p Tell Aharon’s \add (Aaron)\add* descendants the priests that they must not defile themselves among the \add Israelis\add*, by touching anything that’s not living
 \v 2 apart from the body of a close relative like a \add parent, child,\add* brother
 \v 3 or \add unmarried\add* sister—the priest can become ‘unclean’ by means of one of them.
 \v 4 He must not make himself ‘unclean’ \add if it’s the death of\add* \add a relative only by marriage\add*.
@@ -856,9 +856,9 @@
 \v 14 he mustn’t take a widow or a divorced woman, or a defiled prostitute. He can only \add marry\add* an unmarried, \add Israeli\add* girl,
 \v 15 then he won’t profane his offspring among his relatives, because I am Yahweh who sets him apart as ‘holy’.
 \p
-\v 16 Then Yahweh told Mosheh,
+\v 16 Then Yahweh told Mosheh \add (Moses)\add*,
 \p
-\v 17 Tell Aharon that \add none of his descendants\add* who have a \add deformity\add* should ever approach to present the food for his god.
+\v 17 Tell Aharon \add (Aaron)\add* that \add none of his descendants\add* who have a \add deformity\add* should ever approach to present the food for his god.
 \v 18 \add Yes,\add* no man who has a \add deformity\add* must approach \add to offer a sacrifice\add*, i.e., no one who’s blind, lame, mutilated, or \add with a swelling\add*,
 \v 19 or with a broken foot or hand,
 \v 20 or a hunchback or dwarf, or with an eye defect, with a scab or rash, or anyone with a crushed testicle.
@@ -866,13 +866,13 @@
 \v 22 However, they can eat those gifts for God, including the sacred and very sacred \add portions\add*.
 \v 23 \add Despite that,\add* they mustn’t enter past the curtain or approach the altar if they have a defect on \add their body\add*. They mustn’t profane my sanctuary because I am Yahweh who sets them apart as ‘holy’.
 \p
-\v 24 \add So\add* Mosheh told \add all\add* that to Aharon and his sons, and all the \add Israelis\add*.
+\v 24 \add So\add* Mosheh \add (Moses)\add* told \add all\add* that to Aharon and his sons, and all the \add Israelis\add*.
 \c 22
 \s1 Offerings to Yahweh become sacred
 \p
-\v 1 Then Yahweh told Mosheh:
+\v 1 Then Yahweh told Mosheh \add (Moses)\add*:
 \p
-\v 2 Tell Aharon and his sons that they must \add carefully honour\add* the holy things \add offered\add* by the \add Israeli\add* people, and they mustn’t profane my holy \add reputation\add*. I am Yahweh.
+\v 2 Tell Aharon \add (Aaron)\add* and his sons that they must \add carefully honour\add* the holy things \add offered\add* by the \add Israeli\add* people, and they mustn’t profane my holy \add reputation\add*. I am Yahweh.
 \v 3 Tell them that \add throughout\add* the generations, any \add of your descendants\add* who is ‘\add unclean\add*’ and approaches things that have become holy because the people have consecrated them to Yahweh, \add that person\add* will be cut off from me. I am Yahweh.
 \p
 \v 4 Any man who’s a descendant of Aharon, if he has a skin disease or a discharge, he mustn’t eat any of the sacred \add food\add* until he’s ‘clean’ \add again\add*. \add The same applies if\add* he’s touched any ‘unclean’ corpse, anyone who’s had a seminal emission,
@@ -893,9 +893,9 @@
 \v 15 \add So\add* \add in summary\add*, \add the priests\add* must not profane the sacred things \add contributed by\add* the \add Israelis\add* and which they’ve \add offered\add* to Yahweh
 \v 16 or else they’ll cause themselves to bear the guilt from their disobedience concerning eating sacred \add food\add*, because I am Yahweh who has separated them to be sacred.
 \p
-\v 17 The Yahweh told Mosheh:
+\v 17 The Yahweh told Mosheh \add (Moses)\add*:
 \p
-\v 18 Tell Aharon and his sons, and all the \add Israelis\add* that any \add Israeli\add* or outsider \add residing\add* in Yisrael, when they present their burnt offering to Yahweh, whether it’s for a \add vow\add* or for a freewill offering,
+\v 18 Tell Aharon \add (Aaron)\add* and his sons, and all the \add Israelis\add* that any \add Israeli\add* or outsider \add residing\add* in Yisrael \add (Israel)\add*, when they present their burnt offering to Yahweh, whether it’s for a \add vow\add* or for a freewill offering,
 \v 19 to \add be accepted\add* it must be a male with \add no defects\add*, whether it’s a cow, or a sheep, or a \add goat\add*.
 \v 20 Anything that has a defect must \em not\em* be presented because it \add wouldn’t be acceptable\add* on your behalf.\x + \xo 22:20: \xt Deu 17:1.\x*
 \v 21 \add When someone\add* presents a sacrifice of peace offerings to Yahweh to fulfill a vow or as a freewill offering from the herd or the flock, to \add be accepted\add* it must \add flawless with no defects\add*—
@@ -905,7 +905,7 @@
 \p
 \v 25 You all mustn’t present any of those \add animals raised\add* by \add foreigners\add* to your god because they’ve been ruined and are defective,\f + \fr 22:25 \ft Could this be related to the fact that they’d been neutered (as per v24 in the Septuagint)???\f* \add so\add* they won’t be accepted for you.
 \p
-\v 26 Then Yahweh told Mosheh:
+\v 26 Then Yahweh told Mosheh \add (Moses)\add*:
 \p
 \v 27 A \add newborn\add* calf or lamb or goat must \add remain with\add* its mother for seven days—it can be offered as a sacrifice to Yahweh from the eighth day onwards,
 \v 28 \add but\add* you mustn’t slaughter a cow or a sheep and its \add offspring\add* on \add the same\add* day.
@@ -914,11 +914,11 @@
 \p
 \v 31 You all must \add record my instructions and follow\add* them. I am Yahweh.
 \v 32 You mustn’t profane the \add reputation\add* of my holiness, and I will demonstrate my holiness among the Israeli people. I am Yahweh who separates you all to be sacred—
-\v 33 who brought you all out of Egypt \add (Heb. Mitsrayim)\add* to be your god. I am Yahweh.
+\v 33 who brought you all out of Mitsrayim \add (Egypt)\add* to be your god. I am Yahweh.
 \c 23
 \s1 The scheduled festivals
 \p
-\v 1 Then Yahweh told Mosheh:
+\v 1 Then Yahweh told Mosheh \add (Moses)\add*:
 \p
 \v 2 Tell the \add Israelis\add* that they must proclaim Yahweh’s scheduled festivals as \add sacred\add* assemblies \add at the given times\add*.
 \s2 The rest day
@@ -936,7 +936,7 @@
 \v 8 For seven days you all must present \add offerings\add* to Yahweh, then the seventh day is \add another\add* \add sacred\add* assembly—\add again\add* no \add regular\add* work may be done \add that day\add*.
 \s1 The firstfruits festival
 \p
-\v 9 Then Yahweh told Mosheh:
+\v 9 Then Yahweh told Mosheh \add (Moses)\add*:
 \p
 \v 10 Tell the \add Israelis\add* that when you enter the land that I’m giving you all, and you harvest \add your grain crops\add*, then you all must bring a sheaf of the first \add part\add* of your harvest to a priest,
 \v 11 and he will wave the sheaf \add in front\add* of Yahweh \add to be accepted for you\add*. That must be done the day after the rest day.
@@ -958,13 +958,13 @@
 \s1 The new year festival
 \r (Num. 29:1-6)
 \p
-\v 23 Then Yahweh told Mosheh,
+\v 23 Then Yahweh told Mosheh \add (Moses)\add*,
 \v 24 “Tell the \add Israelis\add* that on the 1st of the seventh month \add (Tishrei = September/October) each year\add*, you must have a \add public holiday\add* with a loud \add trumpet\add* blast announcing the \add sacred\add* assembly.
 \v 25 You all must not do any \add regular\add* work on that day, and you all must present a fire-offering to Yahweh.”
 \s1 The day of atonement
 \r (Num. 29:7-11)
 \p
-\v 26 Then Yahweh told Mosheh,
+\v 26 Then Yahweh told Mosheh \add (Moses)\add*,
 \v 27 “The 10th of that seventh month is a day \add for making things right\add* \add with Yahweh\add*.\x + \xo 23:27: \xt Lev 16:29-34.\x* You all \add must hold a sacred assembly\add* and humble \add yourselves\add* and present a fire-offering to Yahweh.
 \v 28 You mustn’t do any work on that particular day because it’s the day for \add making yourselves right\add* in front of your god Yahweh,
 \v 29 because anyone who doesn’t humble themself on that day will be cut off from their people.
@@ -974,7 +974,7 @@
 \s1 The celebration in shelters
 \r (Num. 29:12-40)
 \p
-\v 33 Then Yahweh told Mosheh:
+\v 33 Then Yahweh told Mosheh \add (Moses)\add*:
 \p
 \v 34 Tell the \add Israelis\add* that \add starting\add* on the 15th of the seventh month \add (of Tishrei—around September/October)\add*, there will be a celebration in shelters to \add honour\add* Yahweh.\x + \xo 23:34: \xt Deu 16:13-15.\x*
 \v 35 The first day will be a \add sacred\add* assembly—you all mustn’t do any \add regular\add* work.
@@ -987,17 +987,17 @@
 \v 40 On that first day, you’ll all bring the fruit from your trees, along with palm branches, leafy branches, and willow \add branches\add* from \add beside\add* the \add creeks\add*, and you’ll all \add happily celebrate\add* \add in front\add* of your god Yahweh for seven days.
 \v 41 Do that for seven days each year as a festival to \add honour\add* Yahweh. you all must celebrate it in the seventh month. That’s a permanent rule that will continue \add throughout\add* the generations.
 \v 42 You all must live in shelters for seven days—all you native-born \add Israelis\add*,
-\v 43 so that the \add future\add* generations will know that I made \add their ancestors\add* live in shelters when I brought them out of Egypt \add (Heb. Mitsrayim)\add*. I am your god Yahweh.
+\v 43 so that the \add future\add* generations will know that I made \add their ancestors\add* live in shelters when I brought them out of Mitsrayim \add (Egypt)\add*. I am your god Yahweh.
 \p
-\v 44 \add So\add* Mosheh \add passed\add* all those \add scheduled dates\add* from Yahweh, on to the \add Israelis\add*.
+\v 44 \add So\add* Mosheh \add (Moses)\add* \add passed\add* all those \add scheduled dates\add* from Yahweh, on to the \add Israelis\add*.
 \c 24
 \s1 Oil for the lamps
 \r (Exo. 27:20-21)
 \p
-\v 1 Then Yahweh told Mosheh:
+\v 1 Then Yahweh told Mosheh \add (Moses)\add*:
 \p
 \v 2 Order the \add Israelis\add* to bring you pressed olive oil that’s pure, to \add supply\add* \add lamps\add* \add to give\add* continual light.
-\v 3 \add The high priest\add* (Aharon) \add must take care of\add* \add them\add* from evening until the morning \add to burn\add* continually \add in front\add* of Yahweh. That’s a permanent requirement that will continue \add throughout\add* the generations.
+\v 3 \add The high priest\add* (Aharon \add (Aaron)\add*) \add must take care of\add* \add them\add* from evening until the morning \add to burn\add* continually \add in front\add* of Yahweh. That’s a permanent requirement that will continue \add throughout\add* the generations.
 \v 4 He will arrange the lamps continually on the lampstand \add in front\add* of Yahweh.
 \s1 The bread offered there to God
 \p
@@ -1005,11 +1005,11 @@
 \v 6 \add Arrange\add* the loaves into two rows of six loaves on the pure table \add in front\add* of Yahweh,
 \v 7 and put pure frankincense \add with\add* each row to be a memorial portion for the bread as a gift to Yahweh.
 \v 8 \add Every\add* rest day \add it will be placed\add* \add in front\add* of Yahweh \add representing\add* the \add ongoing\add* agreement with the \add Israelis\add*.
-\v 9 \add Afterwards,\add* it will belong to Aharon and his sons, and they must eat it in a sacred area\x + \xo 24:9: \xt Mat 12:4; Mrk 2:26; Luk 6:4.\x* because it’s a \add very\add* sacred part of the gifts for Yahweh. That’s a permanent rule.
+\v 9 \add Afterwards,\add* it will belong to Aharon \add (Aaron)\add* and his sons, and they must eat it in a sacred area\x + \xo 24:9: \xt Mat 12:4; Mrk 2:26; Luk 6:4.\x* because it’s a \add very\add* sacred part of the gifts for Yahweh. That’s a permanent rule.
 \s1 Execution for cursing Yahweh
 \p
-\v 10 \add Once\add* there was an Israeli woman and an Egyptian man \add who had\add* a son who \add lived among the Israelis\add*, and he \add got into a fight\add* with an Israeli man.
-\v 11 Then that son of the Israeli woman slandered \add Yahweh’s\add* name and cursed, and \add so\add* the people took him to Mosheh. (The mother was Shelomit, a daughter of Dibri from the Dan tribe.)
+\v 10 \add Once\add* there was an Israeli woman and an Mitsri \add (Egyptian)\add* man \add who had\add* a son who \add lived among the Israelis\add*, and he \add got into a fight\add* with an Israeli man.
+\v 11 Then that son of the Israeli woman slandered \add Yahweh’s\add* name and cursed, and \add so\add* the people took him to Mosheh \add (Moses)\add*. (The mother was Shelomit, a daughter of Dibri from the Dan tribe.)
 \v 12 They \add held\add* him in custody \add while waiting for Yahweh’s decision\add*.
 \p
 \v 13 Then Yahweh told Mosheh:
@@ -1026,12 +1026,12 @@
 \v 21 Anyone who kills \add someone else’s\add* animal must \add replace\add* it, \add but\add* anyone who kills \add another\add* person must be executed.
 \v 22 There’s \add only\add* one \add set of\add* regulations for \add both\add* the foreigner and the native-born \add citizen\add*\x + \xo 24:22: \xt Num 15:16.\x* because I am your god Yahweh.
 \p
-\v 23 Mosheh \add passed\add* \add all that\add* onto the \add people\add*, and they took the \add man who had cursed\add* \add Yahweh\add* outside the camp \add where\add* they \add executed him with rocks\add*. The Israelis did exactly what Yahweh had commanded \add them\add* via Mosheh.
+\v 23 Mosheh \add (Moses)\add* \add passed\add* \add all that\add* onto the \add people\add*, and they took the \add man who had cursed\add* \add Yahweh\add* outside the camp \add where\add* they \add executed him with rocks\add*. The Israelis did exactly what Yahweh had commanded \add them\add* via Mosheh.
 \c 25
 \s1 The rest year
 \r (Deu. 15:1-11)
 \p
-\v 1 Then on Mt. Sinai, Yahweh told Mosheh:
+\v 1 Then on Mt. Sinay, Yahweh told Mosheh \add (Moses)\add*:
 \p
 \v 2 Tell the \add Israelis\add* that when you all enter the land that I’m giving you, the land must \add observe\add* a \add rest year\add* for Yahweh.
 \v 3 You can \add plant your crops\add*, prune your \add grapevines\add*, and \add harvest\add* \add all\add* its produce for six years,
@@ -1080,13 +1080,13 @@
 \v 35 If \add a fellow citizen\add* becomes poor and \add is unable to survive\add* beside you, then you must \add support\add* \add that person\add* and \add allow him to live with you like a foreigner might\add*.\x + \xo 25:35: \xt Deu 15:7-8.\x*
 \v 36 You mustn’t \add charge\add* \add that person\add* any interest \add or make a profit from him\add*, \add but\add* you must \add respect and obey\add* your god, and your \add fellow citizen\add* can \add continue\add* to live with you.
 \v 37 \add If you loan him money\add*, don’t \add charge\add* interest \add or make a profit from his\add* food.\x + \xo 25:37: \xt Exo 22:25; Deu 23:19-20.\x*
-\v 38 I am your god Yahweh who brought you all out of Egypt \add (Heb. Mitsrayim)\add* to give you the Kanaan \add region\add* \add and\add* to be your god.
+\v 38 I am your god Yahweh who brought you all out of Mitsrayim \add (Egypt)\add* to give you the Kena’an \add (Canaan)\add* \add region\add* \add and\add* to be your god.
 \s1 Treatment of slaves
 \p
 \v 39 If \add a fellow citizen\add* becomes poor and selling himself to you, don’t \add force him to work like a slave\add*\x + \xo 25:39-46: \xt Exo 21:2-6; Deu 15:12-18.\x*—
 \v 40 \add treat him\add* like a hired worker or a temporary resident. He can work with you until the \add restoration celebration\add* year
 \v 41 \add when he must be released\add* \add along with\add* his children, and he can return to his family, and to \add his clan’s land\add*,
-\v 42 because they are my slaves that I brought out of Egypt so they mustn’t be sold \add again\add* as \add slaves\add*.
+\v 42 because they are my slaves that I brought out of Mitsrayim \add (Egypt)\add* so they mustn’t be sold \add again\add* as \add slaves\add*.
 \v 43 Don’t rule \add harshly\add* over \add them\add* \add but rather\add*, \add respect and obey\add* your god.
 \v 44 \add If you want to have\add* male or female slaves, they you can buy them from the surrounding countries,
 \v 45 or else from the children or \add clans\add* of the foreigners who are living among you—you all can \add own them\add*
@@ -1100,7 +1100,7 @@
 \v 52 \add but\add* if it’s only a few years \add to go\add*, \add the price for his freedom would be proportionally smaller\add*.
 \v 53 While he works for \add the foreign master\add*, he must be treated like an annual hired worker. \add You others must ensure that he’s not treated\add* \add harshly\add*.
 \v 54 Then even if he’s not \add bought out\add*, he and his children must be released in the \add restoration celebration\add* year
-\v 55 because the \add Israelis\add* are my slaves—my slaves because I brought them out of Egypt. I am your god Yahweh.
+\v 55 because the \add Israelis\add* are my slaves—my slaves because I brought them out of Mitsrayim \add (Egypt)\add*. I am your god Yahweh.
 \c 26
 \s1 Obedience will lead to prosperity
 \r (Deu. 7:12-24; 28:1-14)
@@ -1120,7 +1120,7 @@
 \v 10 You’ll all \add still\add* \add be eating the previous year’s grain\add* when the new harvest \add starts\add*, and you’ll have to \add move\add* out \add that left-over grain\add* \add to make room for the new\add*.
 \v 11 Then I’ll put my residence among you all and won’t \add reject\add* you,
 \v 12 and I’ll walk among you and be your god, and you’ll all be my people.
-\v 13 I am your god Yahweh who brought you all out from being slaves in Egypt, and I broke the \add chains off you\add* \add so that you all could walk with heads erect\add*.
+\v 13 I am your god Yahweh who brought you all out from being slaves in Mitsrayim \add (Egypt)\add*, and I broke the \add chains off you\add* \add so that you all could walk with heads erect\add*.
 \s1 Punishments for disobedience
 \r (Deu. 28:15-68)
 \p
@@ -1134,7 +1134,7 @@
 \v 20 Your \add energy spent working\add* your land will be \add just\add* wasted \add as\add* your land won’t \add produce its crops\add*, and the \add trees\add* won’t \add produce any fruit\add*.
 \p
 \v 21 Then if you’re all \add still\add* \add being contrary\add* and unwilling to listen to me, then I’ll \add send\add* seven times more \add deadly diseases\add* according to your \add disobedience\add*.
-\v 22 Then I’ll send in the wild animals \add to\add* make you childless and to cut back your \add livestocks\add*, \add thus diminishing your numbers\add* and \add leaving\add* your roads desolate.
+\v 22 Then I’ll send in the wild animals \add to\add* make you childless and to cut back your \add livestock\add*, \add thus diminishing your numbers\add* and \add leaving\add* your roads desolate.
 \p
 \v 23 Then \add after that\add* if you all \add still\add* \add won’t accept my discipline\add* and \add continue to oppose\add* me,
 \v 24 then I myself will \add oppose\add* you all and \add punish\add* you all seven times over for your \add disobedience\add*.
@@ -1159,16 +1159,16 @@
 \p
 \v 40 \add However,\add* if they confess their wickedness and their ancestors’ wickedness, that they’ve disobeyed and neglected me, and \add been hostile towards\add* me,
 \v 41 (and that I became hostile toward them and took their into their enemies’ countries,) and humble their \add undisciplined\add* \add hearts\add* and \add admit their disobedience\add*,
-\v 42 then I’ll remember my agreements with Yakov \add (Jacob)\add* and with Yitshak \add (Isaac)\add* and with Avraham, and I’ll remember \add this\add* land.
+\v 42 then I’ll remember my agreements with Ya’akov \add (Jacob)\add* and with Yitshak \add (Isaac)\add* and with Avraham \add (Abraham)\add*, and I’ll remember \add this\add* land.
 \v 43 The land \add here\add* will have been deserted by them and will have enjoyed its \add times of rest\add*, and they’ll accept their wickedness because they rejected my \add values\add* and they \add really\add* detested my regulations.
 \v 44 \add Despite that\add*, I won’t reject them in their enemies’ countries, and I won’t detest them enough to completely destroy them \add and\add* to break my agreement with them, because I am their god Yahweh.
-\v 45 I’ll remember the \add earlier\add* agreement with their ancestors that I brought out of Egypt while all the nations watched me be their god. I am Yahweh.
+\v 45 I’ll remember the \add earlier\add* agreement with their ancestors that I brought out of Mitsrayim \add (Egypt)\add* while all the nations watched me be their god. I am Yahweh.
 \p
-\v 46 \add The above\add* are the \add instructions and values and rules\add* that Yahweh \add instilled\add* between him and the \add Israelis\add* through Mosheh \add (Moses)\add* there at Mt. Sinai.
+\v 46 \add The above\add* are the \add instructions and values and rules\add* that Yahweh \add instilled\add* between him and the \add Israelis\add* through Mosheh \add (Moses)\add* there at Mt. Sinay.
 \c 27
 \s1 Valuations of vows to Yahweh
 \p
-\v 1 Then Yahweh told Mosheh:
+\v 1 Then Yahweh told Mosheh \add (Moses)\add*:
 \p
 \v 2 Tell the \add Israelis\add* that when someone makes a special vow \add to offer someone\add* to Yahweh,
 \v 3 a man between twenty and sixty will be valued at fifty silver \add coins\add* (according to the sanctuary standard weights)
@@ -1213,4 +1213,4 @@
 \v 32 Every tenth animal of the \add mustered domestic\add* cattle and sheep and goats, is sacred to Yahweh.
 \v 33 \add The herder\add* mustn’t pick out good or bad ones, or make substitutions. (If a substitution was made, both animals then become sacred and must not be \add bought back\add*.)
 \p
-\v 34 \add The above\add* are the \add instructions and rules\add* that Yahweh \add gave\add* Mosheh at Mt. Sinai for the \add Israelis\add*.
+\v 34 \add The above\add* are the \add instructions and rules\add* that Yahweh \add gave\add* Mosheh \add (Moses)\add* at Mt. Sinay for the \add Israelis\add*.

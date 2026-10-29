@@ -107,6 +107,19 @@ This is how we currently form the 27 New Testament files for the OET-LV-NT:
 - echo Do programmed word and other substitutions to the USFM files
 - ../../ScriptedBibleEditor/Python/ScriptedBibleEditor.py ScriptedVLTUpdates -qe
 
+## Deuterocanonical lexical drafts
+
+`make LV_DC` downloads pinned open source text/lexical data and creates 16 draft
+DC ESFM books with their own linked word table. `make check_DC` checks source
+preservation, links, editorial overrides, and the conversion tests. This stage
+is also included in `make LV`. These are incomplete dictionary-gloss drafts,
+not publication-ready translations; ES2 needs a separate source route, and the
+existing HTML/USFM/VREF exports still cover the original 66 LV books.
+This includes PSS (18 chapters) and ODE (14 chapters), from the openly licensed
+Swete/First1KGreek transcription. ODE retains Swete's arrangement and documented
+local verse labels; its chapter count does not imply another edition's numbering.
+See [DC/README.md](DC/README.md) for sources, coverage, and the editing workflow.
+
 ## For both
 
 - ./convert_OET-LV_to_simple_HTML.py # USFM files ➔ simple HTML (incl. index) files
@@ -206,7 +219,7 @@ uv run --project scripts scripts/connect_OET-RV_words_via_OET-LV/connect_OET-RV_
 # Preview selected books without writing any ESFM files (JNA is Jonah).
 uv run --project scripts scripts/connect_OET-RV_words_via_OET-LV/connect_OET-RV_words_via_OET-LV.py -1 --books RUT JNA MRK PHM --dry-run --report /tmp/oet-links.json
 
-# Produce reviewable copies of all 66 books and an audit of proposed links.
+# Produce reviewable copies of all available OT/DC/NT books and an audit of proposed links.
 uv run --project scripts scripts/connect_OET-RV_words_via_OET-LV/connect_OET-RV_words_via_OET-LV.py -1 --output-dir /tmp/oet-linked-books --report /tmp/oet-links.json
 
 # Run the regression tests.
@@ -221,6 +234,30 @@ pickle files. An output directory contains ESFM proposals, not a complete
 standalone build with auxiliary tables. `--report` uses one process so the
 JSON can collect all books and accepted links deterministically. Normal BOS
 logging/settings files may still be created during a dry run.
+
+The connector includes available `auto_edited_DC_ESFM` books as a separate DC
+segment, between OT and NT. `--books TOB MAN` selects DC books just like OT/NT;
+the filename codes `DAG` and `ES1` are also accepted (BOS calls them `DNG` and
+`GES`). ES2 is not available until an LV source is built. Older checkouts without
+the DC directory still process OT and NT. DC word numbers use only the DC table,
+never the same row number in an OT/NT table. Linked DC output declares and copies
+`OET-LV_DC_word_table.tsv`, including when using `--output-dir`.
+
+**29 October 2026 validation:** all 14 DC drafts and their 114,896 source words
+load successfully. The installed BOS `OET-LV` profile still covers only 66 books,
+so this run leaves all 5,961 stored RV DC passages unlinked and reports the 6,035
+unused LV verse labels, preserving lettered labels such as ESG 1:1b. The newer
+RV DC mappings alone are insufficient: the Brenton-based LV drafts also need
+an explicit reviewed source profile. No same-number fallback is used. Once BOS
+provides those mappings, the existing passage matcher will process them.
+Unresolved lexical drafts cannot supply candidates; DC noun evidence requires
+all available analyses to be nouns, and no proper-name or nomina-sacra flags are
+invented from capitalisation. Regression tests include a shifted DC mapping,
+independent word tables, filename aliases, unknown mappings, and lettered verses.
+All 172 connector tests pass; a mixed Ruth/Manasseh/Mark dry run preserves the
+original connector's Ruth/Mark results exactly. The
+[DC support audit](connect_OET-RV_words_via_OET-LV/audits/2026-10-29-dc-support-summary.json)
+records per-book gaps and validation. No RV source text was changed.
 
 `-1` is the digit one, also spelled `--single`. BOS sets the process count to
 one before loading the Bibles, so it disables multiprocessing in both loading
@@ -686,6 +723,35 @@ The [repair ledger](connect_OET-RV_words_via_OET-LV/audits/2026-10-24-word-endin
 and [audit summary](connect_OET-RV_words_via_OET-LV/audits/2026-10-24-word-endings-summary.json)
 record the five repairs, validation, and source hashes. Snapshots, history, and
 production reports are in ignored `.cache/oet-optional-plural-20261024/`.
+
+### 26 October 2026 covenant-loyalty phrases
+
+Eight phrase entries now connect LV `loyalty`/`loyalties` to RV `loyal
+commitment`, `loyal kindness`, `loyal affection`, `loyal faithfulness`,
+`lasting loyalty`, and `determinedly loyal`. The LV components of
+`covenant_loyalty`, `loyalty_of_your_covenant`, and the other possessive forms
+share one source number, so the existing phrase matcher can complete these
+links without a new matching rule. A partially linked phrase keeps its saved
+number; competing sources, conflicting saved links, and excluded supplied
+words still prevent automatic connections.
+
+The update added **195 word numbers in 181 verses across 18 books**: 182 in
+`loyal commitment` and 13 in the other phrases. Psalm 51:1 now has
+`loyal¦251968 commitment¦251968`. All existing numbers, wording, and markup
+were preserved. A production preview matched every reviewed addition exactly,
+and all **164 regression tests** pass, including phrase completion,
+idempotence, ambiguous sources, and preservation of distinct literal matches.
+A final production dry run across all 18 changed books added and removed zero
+numbers.
+
+Five cases remain unchanged. The current LV variant readings at Lamentations
+3:32, Nehemiah 9:17, Psalms 59:10 and 106:45 lack the loyalty gloss. Psalm
+88:11 already assigns source 259003 to the later `loyalty`; that saved link
+needs review before the earlier `loyal commitment` can be connected.
+The [link ledger](connect_OET-RV_words_via_OET-LV/audits/2026-10-26-loyalty-links.tsv)
+and [audit summary](connect_OET-RV_words_via_OET-LV/audits/2026-10-26-loyalty-summary.json)
+record the additions, remaining cases, and source hashes. Snapshots and
+production reports are in ignored `.cache/oet-loyalty-20261026/`.
 
 ### 13 October 2026 synonym review
 
