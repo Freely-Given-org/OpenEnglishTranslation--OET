@@ -118,6 +118,8 @@ existing HTML/USFM/VREF exports still cover the original 66 LV books.
 This includes PSS (18 chapters) and ODE (14 chapters), from the openly licensed
 Swete/First1KGreek transcription. ODE retains Swete's arrangement and documented
 local verse labels; its chapter count does not imply another edition's numbering.
+Recognised names use the existing NT Greek transliterator. Draft alternatives and
+inferred matches are listed for review; the article τοῦ defaults to `of_the`.
 See [DC/README.md](DC/README.md) for sources, coverage, and the editing workflow.
 
 ## For both

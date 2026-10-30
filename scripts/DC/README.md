@@ -6,17 +6,18 @@ creates a source-linked word table, applies persistent editorial overrides, and
 generates 16 draft ESFM books. Grammar, contextual senses, English word order,
 OET terminology and names, and alignment to the RV still need editorial work.
 
-The initial build of 2026-10-29 has 114,896 Greek words, of which 88,414 (76.95%)
-receive automatic lexical glosses. Missing or ambiguous words remain visible as
-`⟦GreekWord¦number⟧`. A gloss is a dictionary aid, not an assertion that the word
-has been correctly translated in its verse. In particular, `to be`, `I/we`, and
-`the/this/who` are upstream lexical glosses, not inflected English renderings.
+The current draft has 123,885 source tokens: 104,215 (84.12%) have a draft
+English gloss, gloss alternatives, or name transliteration; 19,670 remain visible
+as `⟦GreekWord¦number⟧`. This is 6,445 more filled occurrences than the preceding
+97,770-token draft. All source tokens, punctuation, references and word numbers
+are unchanged. The report separates the statuses, including 4,012 name
+transliterations and 3,232 sets of lexical alternatives. Coverage is not a measure
+of translation accuracy. In particular, `to be`, `I/we`, and `the/this/who` are
+upstream dictionary aids, not inflected English renderings.
 
-The PSS/ODE expansion adds Psalms of Solomon (18 chapters, 4,830 source tokens,
-80.75% glossed) and Biblical Odes (14 chapters, 4,159 source tokens, 82.98%
-glossed). The combined build has 123,885 source tokens and 95,765 lexical glosses.
-These two books are appended to the word table, preserving all original 114,896
-word numbers and the bytes of the original 14 ESFM files. Here `DC` is a project
+The original 14 books contained 114,896 source tokens. Psalms of Solomon
+(PSS, 18 chapters, 4,830 tokens) and Biblical Odes (ODE, 14 chapters, 4,159 tokens)
+were appended, preserving the original word numbers. Here `DC` is a project
 umbrella for the explicitly listed books, not a declaration of a particular canon.
 
 ## Run it
@@ -30,24 +31,37 @@ make -C scripts check_DC
 
 From the `scripts/` directory, use `make LV_DC` and `make check_DC`.
 `LV` (and therefore `BOTH`/`ALL`) now includes this stage. It is deliberately
-separate from the current 66-book HTML, clean USFM, VREF, and name-table pipelines.
+separate from the current 66-book HTML, clean USFM, and VREF pipelines.
 Those exporters do not yet support these draft DC word tables and source
 versifications. Building DC does not edit the RV or rebuild OT/NT files.
+The shared `derivedTexts/OET-LV_names_table.tsv` now includes the emitted DC
+name spellings. Its make target waits for `LV_DC`, then merges OT/NT names with
+`name-transliteration` and `name-transliteration-candidate` spellings from the DC
+word table. These are intentional transliterations for spelling checks; candidate
+identifications still require review in the DC table and `draft_gloss_review.tsv`.
+DC-only rows leave `TraditionalName` empty where no mapping is supplied. Ordinary
+lexical glosses and unresolved Greek are not added to the names table.
+Run `make -C scripts ../derivedTexts/OET-LV_names_table.tsv` to refresh it alone
+(including the prerequisite DC build), then rebuild the OBD TEST pages. Unchanged
+names-table content retains its timestamp.
 The RV word connector now loads available DC drafts and their independent word
 table, but only links passages with an exact, explicit BOS mapping. On 2026-10-29
 the BOS LV profile still lacks DC, so all DC passages are reported as unlinked;
 the existing RV DC profile does not establish the LV source boundaries.
 
-Only Python's standard library is required (Python 3.10 or later); there is no
-new dependency installation. Override `DC_PYTHON` if needed.
+The build uses the existing NT dependency `bible-transliterations`, calling its
+`transliterate_Greek` function directly. The makefile uses `scripts/.venv/bin/python`
+when present, otherwise the project's existing `uv run python` setup. Override
+`DC_PYTHON` with another interpreter that has that dependency if needed. Source
+downloads themselves still use only the Python standard library.
 
 ```sh
 # Download only missing inputs; verify every cached file against the manifest:
 make -C scripts DC_sources
 
 # Explicitly offline build/check, independent of the current working directory:
-python3 scripts/build_OET-LV_DC.py build
-python3 scripts/build_OET-LV_DC.py check
+scripts/.venv/bin/python scripts/build_OET-LV_DC.py build
+scripts/.venv/bin/python scripts/build_OET-LV_DC.py check
 ```
 
 `fetch` alone uses the network. A normal `make LV_DC` verifies the cache and only
@@ -68,7 +82,7 @@ kept under `intermediateTexts/DC_sources/`.
 | [Brenton Greek Septuagint, eBible.org](https://ebible.org/grcbrent/) | [Public domain](https://ebible.org/grcbrent/copyright.htm) | Greek source text, punctuation, and source verse labels; source files dated 2026-04-08 |
 | [Open Greek and Latin / First1KGreek](https://github.com/OpenGreekAndLatin/First1KGreek/tree/ed91552c52530c8f5a3ddf2dd767e899372a804c/data/tlg0527) | CC BY-SA 4.0, as specified in each XML header; Harvard College Library and Digital Divide Data | PSS and ODE: transcription of H. B. Swete, *The Old Testament in Greek*, volume III (1905); original TEI files retain attribution, apparatus and source-scan links |
 | [STEPBible TBESG and TAGNT](https://github.com/STEPBible/STEPBible-Data) | CC BY 4.0; STEPBible.org, based on work at Tyndale House Cambridge | English dictionary glosses; attested NT surface forms, lemma candidates and possible morphology |
-| [Open Scriptures Greek Word List](https://github.com/openscriptures/GreekResources) | CC BY 4.0; credit the Open Scriptures Septuagint Project | Additional headword definitions when TBESG has no entry |
+| [Open Scriptures Greek Word List](https://github.com/openscriptures/GreekResources) | CC BY 4.0; credit the Open Scriptures Septuagint Project | Additional headword definitions, spelling aliases, and proper-name recognition |
 
 Changes to those data consist of lexical matching, book assembly below,
 normalisation for lookup, OET overrides, and conversion into TSV/ESFM. For Swete,
@@ -188,23 +202,49 @@ WEBBE text is relabelled as an original-language source.
 
 ## Gloss selection
 
-1. Look up the accented surface form in TAGNT's attested word forms. Reuse its
-   **dictionary gloss**, never an NT verse's contextual English translation or
-   person identification. Different possible morphology analyses are retained.
-2. Otherwise look for an exact dictionary headword in TBESG, supplemented by
-   Open Scriptures definitions.
-3. Otherwise try an unaccented lookup, explicitly marked `unaccented-candidate`.
-   This helps with the source's capitalised openings; it is not verified morphology.
-4. Select only a unique lemma/gloss pair with a usable English gloss. Compound
-   TAGNT analysis strings are marked `unusable-gloss`; conflicting candidates are
-   retained for review instead of choosing the most frequent one. No stemming, inferred
-   translation, or generated gloss is silently inserted.
-5. Apply global form overrides, followed by occurrence-specific overrides.
+1. Look up the accented surface form in TAGNT, including its explicit single-word
+   spelling variants. Reuse its **dictionary gloss**, not an NT verse's contextual
+   translation. Candidate morphology and source spellings remain reviewable.
+2. If there is no exact form, try omission of movable nu in supported attested
+   verb/dative-plural forms, then a dictionary headword (TBESG, supplemented by
+   Open Scriptures and its explicit spelling aliases). Movable-nu matches are
+   labelled `movable-nu-candidate`.
+3. Otherwise try unaccented forms/headwords, marked `unaccented-candidate`.
+4. Recognise names using proper-name lemmas/flags and Open Scriptures `Np`
+   entries, including entries with **no English definition**. Additional reviewed
+   spellings are in [`proper_name_aliases.tsv`](proper_name_aliases.tsv). Names
+   use the same installed `bible_transliterations.transliterate_Greek` function as
+   the NT. For example, Τωβιὴλ becomes `Tōbiaʸl` and Νινευή becomes `Nineuaʸ`.
+5. Limited inflections of recognised name headwords may supply additional
+   **name candidates**, labelled `name-transliteration-candidate`. They require
+   source capitalisation and cannot displace ordinary lexical evidence. Even
+   direct name recognition requires a capitalised source form: capitals alone
+   are insufficient, and lower-case common lemmas such as ὡς must not become
+   names merely because an unaccented dictionary name resembles them.
+6. When several English lexical aids are possible, emit slash-separated
+   alternatives (`draft-alternatives`) and preserve every candidate. No frequency
+   vote selects a contextual sense. For lower-case source words with both name
+   and common-word analyses, prefer the common-word glosses, explicitly marked
+   `common-word-candidate`. Compound Greek analysis strings are never printed as
+   English; a whole-word headword gloss can supply a `headword-fallback-candidate`.
+7. Apply global form overrides, followed by occurrence-specific overrides.
 
 Matching normalises Unicode, case, final sigma, apostrophe variants, and the
-contextual grave/acute alternation. Accents and breathings remain significant
-in the first two passes. Possible morphology is the upstream TAGNT notation,
-not the CNTR NT table format and not contextual DC parsing.
+contextual grave/acute alternation. Accents and breathings remain significant in
+exact lookups. NT morphology describes the **attested NT form**, not an annotated
+DC occurrence. Inferred name endings do not establish contextual morphology or
+person identity. Name output transliterates the **source form**, retaining Greek
+case endings; canonical OET name selection and Hebrew restoration remain editorial
+work. The report records the installed transliterator version and implementation
+hash, along with the name-alias and editorial-override hashes.
+
+The earlier build skipped proper names without definitions and rejected all
+conflicting lexical candidates. Those restrictions caused many avoidable Greek
+placeholders. The current build fills those cases without presenting a guessed
+sense as settled. Remaining placeholders largely need broader Greek inflection
+coverage or source-spelling review; this is not a complete LXX morphological
+analyser. A name recognition/inflection candidate can still be wrong in context;
+all such output is listed for review, and corrections belong in the override file.
 
 The source's spelling errors are preserved and exposed, e.g. MAN 1:1
 `παντοκράτωπ`. They should be investigated against an edition, not fixed by
@@ -221,10 +261,13 @@ Greek middle stops to semicolons and question marks to English question marks.
   status counts, source provenance, and unsupported-book explanation.
 - `intermediateTexts/glossed_DC/source_verses.tsv`: assembled Greek verses with
   original source references and filenames.
-- `intermediateTexts/glossed_DC/unresolved_words.tsv`: every missing or ambiguous
-  occurrence (also unusable compound glosses), including available candidates.
+- `intermediateTexts/glossed_DC/unresolved_words.tsv`: every occurrence still
+  lacking a usable English gloss or recognised name, including available candidates.
 - `intermediateTexts/glossed_DC/review_by_frequency.tsv`: unresolved forms ordered
   by frequency, with first-occurrence references.
+- `intermediateTexts/glossed_DC/draft_gloss_review.tsv`: filled gloss alternatives,
+  inferred matches, and all name transliterations, grouped by form/gloss/status
+  with frequency and first occurrence. Full evidence is in the word table.
 - `intermediateTexts/glossed_DC/rv_verse_label_differences.tsv`: labels requiring
   investigation before RV alignment.
 - `intermediateTexts/glossed_DC/source_text_review.tsv`: source tokens containing
@@ -246,8 +289,17 @@ four tab-separated columns: `Ref`, `GreekWord`, `Gloss`, and `Note`.
 `LexiconGloss` retains the selected upstream dictionary aid;
 `OETGlossWords` contains the effective output; `GlossSource` and `GlossStatus`
 identify overrides and automatic matching. `Candidates` preserves alternatives.
-The initial overrides file is intentionally empty: no unreviewed lexical choices
-are disguised as OET editorial decisions.
+The default for `τοῦ` is now **`of_the`**, as requested, covering 1,982 occurrences.
+The exceptional TAGNT pronoun analysis remains in `Candidates`; occurrence
+corrections can handle contextual exceptions. The earlier `Τωβίτ` → `Tobit`
+override has been removed so the name follows the NT Greek transliterator
+(`Tōbit`) alongside the other names.
+
+The review also corrected common words which resemble names: Βάλλων in SIR 22:20
+is `throwing`, not a form of Βαλλα; the DC forms of τύραννος are `tyrant`/`tyrants`,
+not the NT person Tyrannus. These persistent editorial defaults demonstrate how
+to correct recognition without modifying generated files. No source spelling
+is changed by an override.
 
 Each `¦number` points to a 1-based data row in the **DC** table, excluding its
 header. It is independent of OT and NT word tables. A multiword English gloss
@@ -257,13 +309,15 @@ downstream words; never retain old links against a rebuilt table.
 
 The checks verify input hashes, source reconstruction, word-reference uniqueness
 and sequence, original source references, ESFM/table agreement, every word link,
-and report freshness. Unit tests cover ambiguous homographs, paragraph content,
+and report freshness (including name aliases and the installed transliterator).
+Unit tests cover name/common-word collisions, movable nu, English alternatives,
+NT name spellings, ambiguous homographs, paragraph content,
 lettered verses, the real book assembly, prologue handling, TEI apparatus exclusion,
 PSS/ODE chapter inventories, Ode XIV completeness, checksums, and override
 failure cases. They verify the conversion machinery, not translation accuracy.
 The installed BibleOrgSys loader was also checked against all 16 books and the
 complete 123,885-word auxiliary table, including PSS 18:14, ODE 4:9a/9b and ODE
-14:47. All 27 conversion tests pass. The connector uses canonical BOS identities
+14:47. All 34 conversion tests pass. The connector uses canonical BOS identities
 (`DNG`/`GES`) internally while preserving the repository's `DAG`/`ES1` filenames,
 and keeps lettered LV labels distinct in its audit. General DC export support
 will need to account for these book identities and source boundaries as well.

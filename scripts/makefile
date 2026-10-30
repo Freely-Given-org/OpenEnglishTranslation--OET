@@ -1,6 +1,6 @@
 # OET makefile
 #
-# Last updated: 2026-10-29
+# Last updated: 2026-10-30
 #
 # CHANGELOG:
 #   2026-10-29 Add reproducible draft DC lexical-gloss ESFM build and checks.
@@ -12,6 +12,7 @@
 #   2026-07-13 Removed absolute filepaths (for word-table copies) to work on laptop
 #   2026-09-22 Added VPL export and rebuild of OET MCP database (both after vref export)
 #   2026-10-11 connect_OET-RV_words_via_OET-LV.py moved into its own folder
+#   2026-10-30 Refresh the shared LV names table after DC generation, including parallel builds.
 #
 
 BOS_mapping_data := $(wildcard ../../BibleOrgSys/BibleOrgSys/DataFiles/VersificationMappings/*.json)
@@ -129,10 +130,10 @@ LV_NT: $(LV_NT_HTML) $(Clear_Bible_NT_lowfat_TSV)
 RV: $(RV_HTML)
 
 #=== Draft LV deuterocanonical books =======================
-# This stdlib-only stage creates draft ESFM and its own DC word table. It does
+# This stage reuses the NT transliterator and creates its own DC word table. It does
 # not add unreviewed lexical glosses to the existing HTML/USFM/VREF exports.
 # A cached, checksum-pinned build is offline; only missing source files download.
-DC_PYTHON ?= python3
+DC_PYTHON ?= $(if $(wildcard .venv/bin/python),.venv/bin/python,$(UVrun) python)
 .PHONY: LV_DC DC_sources check_DC
 DC_sources:
 	@$(DC_PYTHON) build_OET-LV_DC.py fetch
@@ -146,8 +147,10 @@ check_DC: LV_DC
 
 #=== LV stuff =======================
 
-$(LV_names_TSV_table): ScriptedOTUpdates/restoreNames.commandTable.tsv ScriptedVLTUpdates/OTNames.commandTable.tsv ScriptedVLTUpdates/NTNames.commandTable.tsv create_OET-LV_TSV_name_table.py
-	@echo "\n\nCreate OET-LV TSV names table from command tables…\n"
+# LV_DC is phony: check current sources/transliterator first, then collect names.
+# The generator preserves the output timestamp when all spellings are unchanged.
+$(LV_names_TSV_table): LV_DC ScriptedOTUpdates/restoreNames.commandTable.tsv ScriptedVLTUpdates/OTNames.commandTable.tsv ScriptedVLTUpdates/NTNames.commandTable.tsv create_OET-LV_TSV_name_table.py
+	@echo "\n\nCreate OET-LV TSV names table from OT/NT command tables and DC word table…\n"
 	@$(UVrun) create_OET-LV_TSV_name_table.py
 
 LV_HTML_sentinel := ../exportedFiles/simpleHTML/LiteralVersion/.html_sentinel

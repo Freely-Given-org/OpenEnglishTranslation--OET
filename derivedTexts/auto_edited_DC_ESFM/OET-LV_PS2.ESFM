@@ -5,9 +5,10 @@
 \rem WORDTABLE OET-LV_DC_word_table.tsv
 \rem DRAFT: automatic dictionary glosses in Greek order; grammar and context are unreviewed.
 \rem Unresolved words are enclosed in ⟦ ⟧. These files are not publication-ready translations.
+\rem Names use the NT Greek transliterator; slash-separated gloss alternatives need contextual review.
 \rem Source: Brenton Greek Septuagint (eBible.org), Public Domain.
 \rem Glosses/forms: STEPBible.org (Tyndale House Cambridge), CC BY 4.0;
-\rem additional headword definitions: Open Scriptures Septuagint Project, CC BY 4.0.
+\rem additional headwords and name recognition: Open Scriptures Septuagint Project, CC BY 4.0.
 \rem Changes: lexical lookup, source-based book assembly, OET editorial overrides, ESFM conversion.
 \rem Source verse labels are retained except documented book assembly and Sirach prologue handling.
 \rem No verse or word alignment to OET-RV is asserted. See build_report.json and scripts/DC/README.md.
@@ -19,10 +20,10 @@
 \c 1
 \cp 151
 \p
-\v 1 this/he/she/it¦114780 the/this/who¦114781 psalm¦114782 separately¦114783_written¦114783 toward¦114784 David¦114785, and¦114786 outside¦114787 ⟦τοῦ¦114788⟧ number¦114789, when¦114790 ⟦ἐμονομάχησε¦114791⟧ the/this/who¦114792 ⟦Γολιάδ¦114793⟧. small¦114794 to¦114795_be¦114795 in/on/among¦114796 the/this/who¦114797 brother¦114798 I/we¦114799, and¦114800 new¦114801 in/on/among¦114802 the/this/who¦114803 house¦114804 ⟦τοῦ¦114805⟧ father¦114806 I/we¦114807, ⟦ἐποίμαινον¦114808⟧ the/this/who¦114809 sheep¦114810 ⟦τοῦ¦114811⟧ father¦114812 I/we¦114813.
-\v 2 ⟦Αἱ¦114814⟧ hand¦114815 I/we¦114816 to¦114817_do/make¦114817 an¦114818_instrument¦114818, and¦114819 the/this/who¦114820 ⟦δάκτυλοί¦114821⟧ I/we¦114822 ⟦ἥρμοσαν¦114823⟧ a¦114824_psaltery¦114824.
-\v 3 and¦114825 ⟦τίς¦114826⟧ to¦114827_report¦114827 the/this/who¦114828 lord¦114829 I/we¦114830? he/she/it/self¦114831 lord¦114832, he/she/it/self¦114833 ⟦εἰσακούει¦114834⟧.
-\v 4 he/she/it/self¦114835 to¦114836_send¦114836_out/away¦114836 the/this/who¦114837 angel¦114838 ⟦αὐτοῦ¦114839⟧, and¦114840 ⟦ᾖρέ¦114841⟧ I/we¦114842 out¦114843_from¦114843 the/this/who¦114844 sheep¦114845 ⟦τοῦ¦114846⟧ father¦114847 I/we¦114848, and¦114849 ⟦ἔχρισέ¦114850⟧ I/we¦114851 in/on/among¦114852 the/this/who¦114853 olive¦114854_oil¦114854 the/this/who¦114855 ⟦χρίσεως¦114856⟧ ⟦αὐτοῦ¦114857⟧.
+\v 1 this/he/she/it¦114780 the/this/who¦114781 psalm¦114782 separately¦114783_written¦114783 toward¦114784 Dawid¦114785, and¦114786 outside¦114787 of¦114788_the¦114788 number¦114789, when¦114790 ⟦ἐμονομάχησε¦114791⟧ the/this/who¦114792 Goliad¦114793. small¦114794 to¦114795_be¦114795 in/on/among¦114796 the/this/who¦114797 brother¦114798 I/we¦114799, and¦114800 new¦114801 in/on/among¦114802 the/this/who¦114803 house¦114804 of¦114805_the¦114805 father¦114806 I/we¦114807, ⟦ἐποίμαινον¦114808⟧ the/this/who¦114809 sheep¦114810 of¦114811_the¦114811 father¦114812 I/we¦114813.
+\v 2 the/this/who/which¦114814 hand¦114815 I/we¦114816 to¦114817_do/make¦114817 an¦114818_instrument¦114818, and¦114819 the/this/who¦114820 ⟦δάκτυλοί¦114821⟧ I/we¦114822 ⟦ἥρμοσαν¦114823⟧ a¦114824_psaltery¦114824.
+\v 3 and¦114825 one/which¦114826? to¦114827_report¦114827 the/this/who¦114828 lord¦114829 I/we¦114830? he/she/it/self¦114831 lord¦114832, he/she/it/self¦114833 ⟦εἰσακούει¦114834⟧.
+\v 4 he/she/it/self¦114835 to¦114836_send¦114836_out/away¦114836 the/this/who¦114837 angel¦114838 he/she/it/self/my/your/him-self/there¦114839, and¦114840 to¦114841_take¦114841_up¦114841 I/we¦114842 out¦114843_from¦114843 the/this/who¦114844 sheep¦114845 of¦114846_the¦114846 father¦114847 I/we¦114848, and¦114849 to¦114850_anoint¦114850 I/we¦114851 in/on/among¦114852 the/this/who¦114853 olive¦114854_oil¦114854 the/this/who¦114855 ⟦χρίσεως¦114856⟧ he/she/it/self/my/your/him-self/there¦114857.
 \v 5 the/this/who¦114858 brother¦114859 I/we¦114860 good¦114861 and¦114862 great¦114863, and¦114864 no¦114865 to¦114866_delight¦114866 in/on/among¦114867 he/she/it/self¦114868 lord¦114869.
-\v 6 to¦114870_go¦114870_out¦114870 toward¦114871 ⟦συνάντησιν¦114872⟧ the/this/who¦114873 foreigner¦114874, and¦114875 ⟦ἐπικατηράσατό¦114876⟧ I/we¦114877 in/on/among¦114878 the/this/who¦114879 ⟦εἰδώλοις¦114880⟧ ⟦αὐτοῦ¦114881⟧;
-\v 7 I/we¦114882 but/and¦114883 to¦114884_draw¦114884 the/this/who¦114885 from¦114886_with¦114886 ⟦αὐτοῦ¦114887⟧ sword¦114888, to¦114889_behead¦114889 he/she/it/self¦114890, and¦114891 ⟦ᾖρα¦114892⟧ disgrace¦114893 out¦114894_from¦114894 son¦114895 Israel¦114896.
+\v 6 to¦114870_go¦114870_out¦114870 toward¦114871 ⟦συνάντησιν¦114872⟧ the/this/who¦114873 foreigner¦114874, and¦114875 ⟦ἐπικατηράσατό¦114876⟧ I/we¦114877 in/on/among¦114878 the/this/who¦114879 ⟦εἰδώλοις¦114880⟧ he/she/it/self/my/your/him-self/there¦114881;
+\v 7 I/we¦114882 but/and¦114883 to¦114884_draw¦114884 the/this/who¦114885 from¦114886_with¦114886 he/she/it/self/my/your/him-self/there¦114887 sword¦114888, to¦114889_behead¦114889 he/she/it/self¦114890, and¦114891 ⟦ᾖρα¦114892⟧ disgrace¦114893 out¦114894_from¦114894 son¦114895 Israaʸl¦114896.

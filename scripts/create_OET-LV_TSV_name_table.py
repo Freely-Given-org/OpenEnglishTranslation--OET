@@ -5,7 +5,7 @@
 #
 # create_OET-LV_TSV_name_table.py
 #
-# Script to create TSV table of names for OET-LV from the ScriptedBibleEditor OT & NT command tables.
+# Create OET-LV names from the OT/NT command tables and DC word table.
 #
 # Copyright (C) 2025-2026 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+OET@gmail.com>
@@ -14,13 +14,14 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 """
-Script to spell check the Open English Translation of the Bible.
+Create the shared OET-LV spelling-check names table.
 
 CHANGELOG:
     2024-03-13 Added check for duplicated words
     2025-03-10 Added support for a few more internal USFM markers
     2025-10-10 Added support for (OET) LV & RV names tables
     2026-10-21 Transliterate all NT name alternatives according to their script (including both Greek forms of Obed)
+    2026-10-30 Include emitted DC name transliterations and preserve unchanged output timestamps.
 """
 from gettext import gettext as _
 # from typing import List, Tuple, Optional
@@ -35,10 +36,10 @@ from BibleOrgSys.BibleOrgSysGlobals import vPrint, fnPrint, dPrint
 from bible_transliterations import transliterate_Hebrew, transliterate_Greek
 
 
-LAST_MODIFIED_DATE = '2026-10-21' # by RJH
+LAST_MODIFIED_DATE = '2026-10-30' # by RJH
 SHORT_PROGRAM_NAME = "create_OET-LV_TSV_name_table"
 PROGRAM_NAME = "Make OET-LV name table"
-PROGRAM_VERSION = '0.22'
+PROGRAM_VERSION = '0.23'
 PROGRAM_NAME_VERSION = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 DEBUGGING_THIS_MODULE = False
@@ -47,9 +48,9 @@ DEBUGGING_THIS_MODULE = False
 project_folderpath = Path(__file__).parent.parent # Find folders relative to this module
 FG_folderpath = project_folderpath.parent # Path to find parallel Freely-Given.org repos
 
-OET_LV_OT_Names_Filepath = Path( 'ScriptedOTUpdates/restoreNames.commandTable.tsv' )
+OET_LV_OT_Names_Filepath = Path(__file__).parent / 'ScriptedOTUpdates/restoreNames.commandTable.tsv'
 assert OET_LV_OT_Names_Filepath.is_file()
-OET_LV_NT_FolderPath = Path( 'ScriptedVLTUpdates/' )
+OET_LV_NT_FolderPath = Path(__file__).parent / 'ScriptedVLTUpdates'
 assert OET_LV_NT_FolderPath.is_dir()
 OET_LV_NT_OT_Filepath = OET_LV_NT_FolderPath.joinpath( 'OTNames.commandTable.tsv' )
 OET_LV_NT_NT_Filepath = OET_LV_NT_FolderPath.joinpath( 'NTNames.commandTable.tsv' )
@@ -58,8 +59,9 @@ assert OET_LV_NT_NT_Filepath.is_file()
 EXPECTED_COMMAND_TABLE_HEADER = 'Tags	IBooks	EBooks	IMarkers	EMarkers	IRefs	ERefs	PreText	SCase	Search	PostText	RCase	Replace	Name	Comment'
 
 OET_LV_NAMES_TSV_OUTPUT_FILEPATH = project_folderpath.joinpath( 'derivedTexts/OET-LV_names_table.tsv' )
-assert OET_LV_NAMES_TSV_OUTPUT_FILEPATH.is_file()
 OET_LV_NAMES_TSV_HEADER = 'TraditionalName\tLVName'
+OET_LV_DC_WORD_TABLE_FILEPATH = project_folderpath / 'derivedTexts/auto_edited_DC_ESFM/OET-LV_DC_word_table.tsv'
+DC_NAME_STATUSES = {'name-transliteration', 'name-transliteration-candidate'}
 
 # Globals
 
@@ -71,7 +73,7 @@ def main():
     """
     BibleOrgSysGlobals.introduceProgram( __name__, PROGRAM_NAME_VERSION, LAST_MODIFIED_DATE )
 
-    if load_OET_LV_OT_names() and load_OET_LV_NT_names():
+    if load_OET_LV_OT_names() and load_OET_LV_NT_names() and load_OET_LV_DC_names():
         create_OET_LV_name_table()
 # end of create_OET-LV_TSV_name_table.main
 
@@ -176,22 +178,53 @@ def load_OET_LV_NT_names() -> bool:
 # end of spellCheckEnglish.load_OET_RV_names
 
 
+OET_LV_DC_NAMES_SET = set()
+def load_OET_LV_DC_names() -> bool:
+    """Accept intentional DC transliterations, retaining candidate status in the source table.
+
+    Read the emitted spelling rather than transliterating again or accepting every
+    capitalised gloss. A blank traditional name means no mapping has been supplied.
+    """
+    if not OET_LV_DC_WORD_TABLE_FILEPATH.is_file():
+        raise FileNotFoundError(f'Missing DC word table {OET_LV_DC_WORD_TABLE_FILEPATH}; run make LV_DC in scripts/.')
+    names = set()
+    with OET_LV_DC_WORD_TABLE_FILEPATH.open(encoding='utf-8-sig', newline='') as source:
+        reader = DictReader(source, delimiter='\t')
+        if not {'Ref', 'OETGlossWords', 'GlossStatus'} <= set(reader.fieldnames or ()):
+            raise ValueError(f'Unexpected DC word-table columns in {OET_LV_DC_WORD_TABLE_FILEPATH}')
+        for row in reader:
+            if row['GlossStatus'] not in DC_NAME_STATUSES:
+                continue
+            name = row['OETGlossWords']
+            if not name or any(c.isspace() or c in '¦_<>⟦⟧' for c in name) or re.search('[\u0370-\u03ff\u1f00-\u1fff]', name):
+                raise ValueError(f'Invalid DC name spelling {name!r} at {row["Ref"]} in {OET_LV_DC_WORD_TABLE_FILEPATH}')
+            names.add(('', name))
+    OET_LV_DC_NAMES_SET.clear()
+    OET_LV_DC_NAMES_SET.update(names)
+    vPrint('Normal', DEBUGGING_THIS_MODULE, f'  Loaded {len(names):,} OET-LV DC name spellings.')
+    return True
+# end of create_OET-LV_TSV_name_table.load_OET_LV_DC_names
+
+
 def create_OET_LV_name_table() -> bool:
     """
     """
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"Create OET-LV TSV name table…" )
 
-    combinedSet = OET_LV_OT_NAMES_SET
-    combinedSet.update( OET_LV_NT_NAMES_SET )
+    combinedSet = OET_LV_OT_NAMES_SET | OET_LV_NT_NAMES_SET
+    existingSpellings = {name for _, name in combinedSet}
+    combinedSet.update(pair for pair in OET_LV_DC_NAMES_SET if pair[1] not in existingSpellings)
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Have a total of {len(combinedSet):,} OET-LV names." )
 
-    with open( OET_LV_NAMES_TSV_OUTPUT_FILEPATH, 'wt', encoding='utf-8' ) as outputFile:
-        outputFile.write( f"{OET_LV_NAMES_TSV_HEADER}\n" )
-        for engName, origLanguageName in sorted( combinedSet ):
-            # print( f"{engName=} {origLanguageName=}" )
-            outputFile.write( f"{engName}\t{origLanguageName}\n" )
+    outputText = f'{OET_LV_NAMES_TSV_HEADER}\n' + ''.join(
+        f'{engName}\t{origLanguageName}\n' for engName, origLanguageName in sorted(combinedSet))
+    # The make target follows the always-checked DC build. Avoid timestamp churn
+    # when its input checks find no change to any emitted name.
+    if not OET_LV_NAMES_TSV_OUTPUT_FILEPATH.is_file() \
+    or OET_LV_NAMES_TSV_OUTPUT_FILEPATH.read_text(encoding='utf-8') != outputText:
+        OET_LV_NAMES_TSV_OUTPUT_FILEPATH.write_text(outputText, encoding='utf-8')
 
     if (DEBUGGING_THIS_MODULE) or BibleOrgSysGlobals.verbosityLevel >= 2:
         vPrint( 'Normal', DEBUGGING_THIS_MODULE, f"  Wrote {len(combinedSet):,} OET-LV names to {OET_LV_NAMES_TSV_OUTPUT_FILEPATH.name}." )

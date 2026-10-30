@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: GPL-3.0-or-later
-"""Reproducible, explicitly provisional DC lexical glosses (Python stdlib only).
+"""Reproducible, explicitly provisional DC lexical glosses.
 
 fetch downloads checksum-pinned inputs; build is offline; check verifies outputs.
 See DC/README.md for the textual basis, limitations, and editorial workflow.
@@ -11,6 +11,7 @@ import argparse
 import csv
 import hashlib
 import html
+import importlib.metadata
 import json
 import re
 import sys
@@ -29,6 +30,7 @@ CACHE = ROOT / 'intermediateTexts/DC_sources'
 INTERMEDIATE = ROOT / 'intermediateTexts/glossed_DC'
 OUTPUT = ROOT / 'derivedTexts/auto_edited_DC_ESFM'
 OVERRIDES = SCRIPT_DIR / 'DC/gloss_overrides.tsv'
+NAME_ALIASES = SCRIPT_DIR / 'DC/proper_name_aliases.tsv'
 RV = ROOT / 'translatedTexts/ReadersVersion'
 TABLE = 'OET-LV_DC_word_table.tsv'
 
@@ -58,6 +60,7 @@ TEI_SOURCES = {
 }
 TEI_NS = '{http://www.tei-c.org/ns/1.0}'
 SOURCE_REVIEW_FIELDS = ['Ref', 'GreekWord', 'Reason', 'SourceRef', 'SourceFile']
+DRAFT_REVIEW_FIELDS = ['GreekWord', 'Gloss', 'Status', 'Occurrences', 'FirstRef']
 FIELDS = ['Ref', 'GreekWord', 'Lemma', 'Morphology', 'LexiconGloss',
           'OETGlossWords', 'GlossStatus', 'GlossSource', 'Candidates',
           'SourceRef', 'SourceFile', 'Before', 'After']
@@ -154,6 +157,56 @@ class Candidate:
     gloss: str
     source: str
     morphology: str = ''
+    proper_name: bool = False
+
+
+def greek_transliterator():
+    """Use the same installed implementation as the NT build, without copying it."""
+    try:
+        import bible_transliterations
+    except ImportError as error:
+        raise ValueError('The NT bible-transliterations dependency is required. Run make -C scripts LV_DC '
+                         'with the project Python environment (or set DC_PYTHON).') from error
+    return bible_transliterations.transliterate_Greek
+
+
+def transliteration_info() -> dict:
+    greek_transliterator()  # Give the same actionable error if unavailable.
+    from bible_transliterations import bible_transliterations as implementation
+    return dict(package='bible-transliterations', version=importlib.metadata.version('bible-transliterations'),
+                implementation_sha256=hashlib.sha256(Path(implementation.__file__).read_bytes()).hexdigest())
+
+
+def usable_gloss(gloss: str) -> bool:
+    return bool(re.search('[A-Za-z]', gloss)) and not re.search(r'[=+\u0370-\u03ff\u1f00-\u1fff]', gloss)
+
+
+def optional_nu_form(word: str, morphology: str) -> str | None:
+    """Omit movable nu only in supported attested morphology, never stem blindly."""
+    bare = normalise(word, unaccented=True)
+    verb = morphology.startswith('V-') and morphology.endswith(('3S', '3P'))
+    dative_plural = bool(re.fullmatch(r'(?:N|A|T|P)-DP[MFN](?:-[A-Z]+)?', morphology))
+    if (bare.endswith('εν') and verb) or (bare.endswith('σιν') and (verb or dative_plural)):
+        return word[:-1]
+    return None
+
+
+def name_inflections(lemma: str) -> set[str]:
+    """Limited name-form candidates; used only behind ordinary lexical evidence.
+
+    This is name recognition, not a contextual morphology or identity assignment.
+    Every generated form retains the dictionary headword and a candidate status.
+    """
+    bare = normalise(lemma, unaccented=True)
+    if bare.endswith('οσ'):
+        return {bare[:-2] + ending for ending in ('ου', 'ω', 'ον', 'ε', 'οι', 'ων', 'οισ', 'ουσ')}
+    if bare.endswith('ησ'):
+        return {bare[:-2] + ending for ending in ('ου', 'η', 'ην', 'αι', 'ων', 'αισ', 'ασ')}
+    if bare.endswith('ασ'):
+        return {bare[:-2] + ending for ending in ('ου', 'α', 'αν', 'αι', 'ων', 'αισ', 'ασ')}
+    if bare.endswith('α'):
+        return {bare[:-1] + ending for ending in ('ασ', 'α', 'αν', 'αι', 'ων', 'αισ')}
+    return set()
 
 
 class Lexicon:
@@ -162,14 +215,43 @@ class Lexicon:
         self.lemmas: dict[str, set[Candidate]] = defaultdict(set)
         self.bare_forms: dict[str, set[Candidate]] = defaultdict(set)
         self.bare_lemmas: dict[str, set[Candidate]] = defaultdict(set)
+        self.nu_forms: dict[str, set[Candidate]] = defaultdict(set)
+        self.bare_nu_forms: dict[str, set[Candidate]] = defaultdict(set)
+        self.names: dict[str, set[Candidate]] = defaultdict(set)
+        self.inflected_names: dict[str, set[Candidate]] = defaultdict(set)
+        self.transliterate = None
 
     def add(self, word: str, candidate: Candidate, *, form=False) -> None:
         (self.forms if form else self.lemmas)[normalise(word)].add(candidate)
         (self.bare_forms if form else self.bare_lemmas)[normalise(word, unaccented=True)].add(candidate)
+        if candidate.proper_name:
+            self.names[normalise(word, unaccented=True)].add(candidate)
+        if form and (short := optional_nu_form(word, candidate.morphology)):
+            self.nu_forms[normalise(short)].add(candidate)
+            self.bare_nu_forms[normalise(short, unaccented=True)].add(candidate)
+
+    def add_name(self, word: str, lemma: str, source: str) -> None:
+        candidate = Candidate(lemma, '', source, proper_name=True)
+        self.names[normalise(word, unaccented=True)].add(candidate)
+        for form in name_inflections(lemma):
+            self.inflected_names[form].add(candidate)
 
     @classmethod
-    def load(cls, cache: Path) -> Lexicon:
+    def load(cls, cache: Path, name_aliases: Path = NAME_ALIASES) -> Lexicon:
         lexicon = cls()
+        lexicon.transliterate = greek_transliterator()
+        text = (cache / 'GreekWordList.js').read_text(encoding='utf-8-sig')
+        # Data only: never execute downloaded JavaScript.
+        data = json.loads(text.split('greekWordList = ', 1)[1].strip().removesuffix(';'))
+        proper_keys = {normalise(e['lemma'], unaccented=True) for e in data.values() if e.get('pos') == 'Np'}
+        def is_name(lemma, morphology=''):
+            # The upstream lemma's case matters: Ως is a name, ὡς is not;
+            # Στέφανος is Stephen, στέφανος is a crown. TAGNT has an occasional
+            # erroneous proper-name morphology flag on a lower-case common lemma.
+            return any(part.strip() and part.strip()[0].isupper()
+                       and (bool(re.fullmatch(r'N-[A-Z]+-(?:P|L|PG)', morphology))
+                            or normalise(part, unaccented=True) in proper_keys)
+                       for part in lemma.split(','))
         count = 0
         for line in (cache / 'TBESG.txt').read_text(encoding='utf-8-sig').splitlines():
             if not re.match(r'^G\d+\t', line):
@@ -180,7 +262,8 @@ class Lexicon:
             for lemma in fields[3].split(','):
                 lemma = lemma.strip()
                 if lemma:
-                    lexicon.add(lemma, Candidate(lemma, clean_gloss(fields[6]), 'STEPBible TBESG'))
+                    lexicon.add(lemma, Candidate(lemma, clean_gloss(fields[6]), 'STEPBible TBESG',
+                                                proper_name=is_name(lemma)))
             count += 1
         if count < 5000:
             raise ValueError('TBESG lexicon is unexpectedly small')
@@ -200,48 +283,124 @@ class Lexicon:
                     continue
                 lemma, gloss = fields[4].split('=', 1)
                 morphology = fields[3].split('=', 1)[1]
-                lexicon.add(words[0].group(), Candidate(lemma, clean_gloss(gloss), 'STEPBible TAGNT lexical gloss', morphology), form=True)
+                candidate = Candidate(lemma, clean_gloss(gloss), 'STEPBible TAGNT lexical gloss',
+                                      morphology, is_name(lemma, morphology))
+                lexicon.add(words[0].group(), candidate, form=True)
+                # Only explicit single-word spelling variants share this analysis.
+                # Meaning variants in the preceding field require separate parsing.
+                if len(fields) > 7:
+                    for variant in fields[7].split(';'):
+                        spelling = variant.split(':', 1)[-1].strip()
+                        variant_words = list(WORD_RE.finditer(spelling))
+                        if ':' in variant and len(variant_words) == 1 and not re.search('[A-Za-z]', spelling):
+                            lexicon.add(variant_words[0].group(), Candidate(
+                                lemma, clean_gloss(gloss), 'STEPBible TAGNT spelling variant',
+                                morphology, candidate.proper_name), form=True)
                 count += 1
         if count < 130000:
             raise ValueError('TAGNT form inventory is unexpectedly small')
-        text = (cache / 'GreekWordList.js').read_text(encoding='utf-8-sig')
-        # Data only: never execute the downloaded JavaScript.
-        data = json.loads(text.split('greekWordList = ', 1)[1].strip().removesuffix(';'))
         for entry in data.values():
-            if entry.get('lemma') and entry.get('def') and normalise(entry['lemma']) not in lexicon.lemmas:
-                lexicon.add(entry['lemma'], Candidate(entry['lemma'], clean_gloss(entry['def']), 'Open Scriptures Greek Word List'))
+            lemma = entry.get('lemma')
+            target, visited = entry, set()
+            while target.get('v') and not target.get('def'):
+                key = target['v']
+                if key in visited or key not in data:
+                    break
+                visited.add(key)
+                target = data[key]
+            proper = entry.get('pos', target.get('pos')) == 'Np'
+            if lemma and proper:
+                lexicon.add_name(lemma, lemma, 'Open Scriptures Greek Word List: Np')
+            if lemma and target.get('def') and normalise(lemma) not in lexicon.lemmas:
+                lexicon.add(lemma, Candidate(target['lemma'], clean_gloss(target['def']),
+                                             'Open Scriptures Greek Word List', proper_name=proper))
+        with name_aliases.open(encoding='utf-8', newline='') as source:
+            reader = csv.DictReader(source, delimiter='\t', quoting=csv.QUOTE_NONE)
+            if reader.fieldnames != ['GreekWord', 'Lemma', 'Note']:
+                raise ValueError('Unexpected proper-name alias columns')
+            seen = set()
+            for row in reader:
+                key = normalise(row['GreekWord'], unaccented=True)
+                if key in seen or not all(row.values()) or None in row:
+                    raise ValueError('Duplicate or incomplete proper-name alias')
+                seen.add(key)
+                lexicon.add_name(row['GreekWord'], row['Lemma'], 'OET name recognition: ' + row['Note'])
         return lexicon
 
     def lookup(self, word: str) -> dict:
         key = normalise(word)
+        bare = normalise(word, unaccented=True)
         candidates = self.forms.get(key)
         method = 'form-lexical'
+        if not candidates:
+            candidates = self.nu_forms.get(key)
+            method = 'movable-nu-candidate'
         if not candidates:
             candidates = self.lemmas.get(key)
             method = 'headword-lexical'
         if not candidates:
             # Missing accents, particularly all-capital openings, are common in
             # Brenton. Candidates remain marked as inference even when unique.
-            bare = normalise(word, unaccented=True)
-            candidates = self.bare_forms.get(bare) or self.bare_lemmas.get(bare)
+            candidates = self.bare_forms.get(bare) or self.bare_nu_forms.get(bare) or self.bare_lemmas.get(bare)
             method = 'unaccented-candidate'
+        candidates = set(candidates or ())
+        name_candidates = self.names.get(bare, set())
+        name_method = 'name-transliteration'
+        if not name_candidates and word[0].isupper():
+            name_candidates = self.inflected_names.get(bare, set())
+            name_method = 'name-transliteration-candidate'
+        # Capitalisation alone is never evidence of a name. A proposed name
+        # inflection must not displace an ordinary attested word/gloss.
+        if (name_candidates and word[0].isupper() and not any(not c.proper_name for c in candidates)
+                and not re.search('[A-Za-z]', word)):
+            candidates.update(name_candidates)
+            transliterate = self.transliterate or greek_transliterator()
+            spelling = word.capitalize() if word.isupper() else word
+            gloss = transliterate(unicodedata.normalize('NFC', spelling))
+            if re.search(r'[\u0370-\u03ff\u1f00-\u1fff]', gloss):
+                raise ValueError(f'Incomplete Greek name transliteration: {word}')
+            return self.result(candidates, gloss, name_method,
+                               extra_source='bible_transliterations.transliterate_Greek (NT system)',
+                               name=True)
         if not candidates:
             return dict(Lemma='', Morphology='', LexiconGloss='', OETGlossWords='',
                         GlossStatus='missing', GlossSource='', Candidates='')
+        usable = {c for c in candidates if usable_gloss(c.gloss)}
+        ordinary = {c for c in usable if not c.proper_name}
+        if not word[0].isupper() and ordinary and ordinary != usable:
+            usable = ordinary
+            method = 'common-word-candidate'
+        if not usable:
+            # A compound TAGNT analysis is not an English gloss, but a whole-word
+            # dictionary entry may supply one. Keep the original evidence too.
+            fallback = self.lemmas.get(key, set())
+            usable = {c for c in fallback if usable_gloss(c.gloss)}
+            if usable:
+                candidates.update(fallback)
+                method = 'headword-fallback-candidate'
+        pairs = {(normalise(c.lemma), c.gloss) for c in usable}
+        glosses = sorted({c.gloss for c in usable})
+        # Supply readable draft alternatives rather than hiding known English.
+        # No majority vote or contextual sense selection is implied by the order.
+        gloss = '/'.join(glosses)
+        status = method if len(pairs) == 1 else 'draft-alternatives' if usable else 'unusable-gloss'
+        return self.result(candidates, gloss, status)
+
+    @staticmethod
+    def result(candidates, gloss, status, *, extra_source='', name=False) -> dict:
         candidates = sorted(candidates)
         pairs = {(normalise(c.lemma), c.gloss) for c in candidates}
-        chosen = candidates[0]
-        # TAGNT occasionally combines analyses in a single field (e.g.
-        # lemma=gloss + another_lemma=gloss). Do not emit that as English.
-        usable_gloss = bool(re.search('[A-Za-z]', chosen.gloss)) and not re.search(r'[=+\u0370-\u03ff\u1f00-\u1fff]', chosen.gloss)
-        unambiguous = len(pairs) == 1 and usable_gloss
-        gloss = chosen.gloss if unambiguous else ''
-        return dict(Lemma=chosen.lemma if unambiguous else '',
+        unambiguous = len(pairs) == 1 and bool(gloss) and not name
+        sources = {c.source for c in candidates}
+        if extra_source:
+            sources.add(extra_source)
+        return dict(Lemma=candidates[0].lemma if unambiguous else '',
                     Morphology=' | '.join(sorted({c.morphology for c in candidates if c.morphology})) if unambiguous else '',
-                    LexiconGloss=gloss, OETGlossWords=gloss,
-                    GlossStatus=method if unambiguous else 'ambiguous' if len(pairs) > 1 else 'unusable-gloss',
-                    GlossSource='; '.join(sorted({c.source for c in candidates})),
-                    Candidates=json.dumps([dict(lemma=c.lemma, gloss=c.gloss, morphology=c.morphology, source=c.source) for c in candidates], ensure_ascii=False))
+                    LexiconGloss='' if name else gloss, OETGlossWords=gloss,
+                    GlossStatus=status, GlossSource='; '.join(sorted(sources)),
+                    Candidates=json.dumps([dict(lemma=c.lemma, gloss=c.gloss, morphology=c.morphology,
+                                                source=c.source, proper_name=c.proper_name)
+                                           for c in candidates], ensure_ascii=False))
 
 
 @dataclass
@@ -522,9 +681,10 @@ def render_books(verses: dict, rows: list[dict]) -> dict[str, str]:
                  f'\\rem ESFM v0.6 {book}', f'\\rem WORDTABLE {TABLE}',
                  '\\rem DRAFT: automatic dictionary glosses in Greek order; grammar and context are unreviewed.',
                  '\\rem Unresolved words are enclosed in ⟦ ⟧. These files are not publication-ready translations.',
+                 '\\rem Names use the NT Greek transliterator; slash-separated gloss alternatives need contextual review.',
                  '\\rem Source: ' + source,
                  '\\rem Glosses/forms: STEPBible.org (Tyndale House Cambridge), CC BY 4.0;',
-                 '\\rem additional headword definitions: Open Scriptures Septuagint Project, CC BY 4.0.',
+                 '\\rem additional headwords and name recognition: Open Scriptures Septuagint Project, CC BY 4.0.',
                  '\\rem Changes: lexical lookup, source-based book assembly, OET editorial overrides, ESFM conversion.',
                  '\\rem Source verse labels are retained except documented book assembly and Sirach prologue handling.',
                  '\\rem No verse or word alignment to OET-RV is asserted. See build_report.json and scripts/DC/README.md.',
@@ -586,11 +746,24 @@ def source_review(rows: list[dict]) -> list[dict]:
             for r in rows if re.search('[A-Za-z]', r['GreekWord'])]
 
 
+def draft_review(rows: list[dict]) -> list[dict]:
+    """Keep filled but uncertain glosses and every transliteration reviewable."""
+    counts, first_refs = Counter(), {}
+    for row in rows:
+        status = row['GlossStatus']
+        if row['OETGlossWords'] and ('candidate' in status or status.startswith('name-') or status == 'draft-alternatives'):
+            key = (row['GreekWord'], row['OETGlossWords'], status)
+            counts[key] += 1
+            first_refs.setdefault(key, row['Ref'])
+    return [dict(GreekWord=word, Gloss=gloss, Status=status, Occurrences=count, FirstRef=first_refs[(word, gloss, status)])
+            for (word, gloss, status), count in counts.most_common()]
+
+
 def build(args) -> None:
     manifest = load_manifest(args.manifest)
     sources(manifest, args.cache)
     verses = load_verses(args.cache)
-    rows = make_rows(verses, Lexicon.load(args.cache), read_overrides(args.overrides))
+    rows = make_rows(verses, Lexicon.load(args.cache, args.name_aliases), read_overrides(args.overrides))
     rendered = render_books(verses, rows)
     differences = audit_rv(verses, args.rv_dir)
     per_book = {}
@@ -598,7 +771,7 @@ def build(args) -> None:
         selected = [r for r in rows if r['Ref'].startswith(book + '_')]
         glossed = sum(bool(r['OETGlossWords']) for r in selected)
         per_book[book] = dict(words=len(selected), glossed=glossed, unresolved=len(selected) - glossed,
-                              lexical_coverage_percent=round(100 * glossed / len(selected), 2),
+                              draft_coverage_percent=round(100 * glossed / len(selected), 2),
                               statuses=dict(Counter(r['GlossStatus'] for r in selected)),
                               chapters=len({v.chapter for v in verses[book] if v.chapter}),
                               verse_segments=sum(v.chapter != 0 for v in verses[book]),
@@ -606,13 +779,18 @@ def build(args) -> None:
     report = dict(schema_version=1, status='lexical draft; not a completed translation',
                   source_manifest_sha256=hashlib.sha256(args.manifest.read_bytes()).hexdigest(),
                   overrides_sha256=hashlib.sha256(args.overrides.read_bytes()).hexdigest(),
+                  name_aliases_sha256=hashlib.sha256(args.name_aliases.read_bytes()).hexdigest(),
+                  transliteration=transliteration_info(),
                   books=per_book, words=len(rows), glossed=sum(bool(r['OETGlossWords']) for r in rows),
+                  statuses=dict(Counter(r['GlossStatus'] for r in rows)),
                   unsupported_books={'ES2': 'No complete Greek source in Brenton. English 2 Esdras (Latin 4 Esdras) needs a separately selected witness and glossing pipeline; LXX Esdras B is Ezra-Nehemiah, not this book.'},
                   rv_label_differences=len(differences),
                   source_review_tokens=len(source_review(rows)),
                   limitations=['Lexical glosses do not supply inflection, syntax, or contextual sense.',
                                'TAGNT form analyses are candidates transferred from NT forms, not DC morphology annotations.',
                                'Unaccented matches are explicitly marked candidates, not verified lemmatisation.',
+                               'Names use the NT Greek transliterator on the source form; inferred name endings remain candidates, without assigning contextual morphology or person identity.',
+                               'Draft coverage includes transliterations and slash-separated dictionary alternatives, not just single lexical glosses.',
                                'Brenton source spelling and verse labels are not silently corrected.',
                                'PSS/ODE use an unreviewed Swete/First1KGreek transcription, with visible OCR errors retained.',
                                'ODE keeps Swete order: IV(a)/IV(b) use chapter 4 with a/b suffixes; XIV uses 47 XML lines as local verse segments, not Rahlfs references or printed line numbers.',
@@ -637,13 +815,14 @@ def build(args) -> None:
     write_if_changed(args.intermediate / 'review_by_frequency.tsv', tsv_text(['GreekWord', 'Status', 'Occurrences', 'FirstRef'], review))
     write_if_changed(args.intermediate / 'rv_verse_label_differences.tsv', tsv_text(['Book', 'Ref', 'Status'], differences))
     write_if_changed(args.intermediate / 'source_text_review.tsv', tsv_text(SOURCE_REVIEW_FIELDS, source_review(rows)))
+    write_if_changed(args.intermediate / 'draft_gloss_review.tsv', tsv_text(DRAFT_REVIEW_FIELDS, draft_review(rows)))
     source_rows = [dict(Ref=f'{v.book}_{v.chapter}:{v.verse}', SourceRef=v.source_ref,
                         SourceFile=v.source_file, GreekText=v.text)
                    for items in verses.values() for v in items]
     write_if_changed(args.intermediate / 'source_verses.tsv', tsv_text(['Ref', 'SourceRef', 'SourceFile', 'GreekText'], source_rows))
     check(args)
     for book, summary in per_book.items():
-        print(f"{book}: {summary['glossed']:,}/{summary['words']:,} words have draft lexical glosses ({summary['lexical_coverage_percent']}%)")
+        print(f"{book}: {summary['glossed']:,}/{summary['words']:,} words have draft glosses/names ({summary['draft_coverage_percent']}%)")
     print('ES2: no output; requires a separately selected source witness and glossing pipeline.')
 
 
@@ -687,6 +866,8 @@ def check(args) -> None:
     report = json.loads((args.output / 'build_report.json').read_text(encoding='utf-8'))
     if report['words'] != len(rows) or report['glossed'] != sum(bool(r['OETGlossWords']) for r in rows):
         raise ValueError('Coverage report does not match word table')
+    if report.get('statuses') != dict(Counter(r['GlossStatus'] for r in rows)):
+        raise ValueError('Gloss status report does not match word table')
     if set(report['books']) != set(verses) or any(
             report['books'][book]['chapters'] != len({v.chapter for v in items if v.chapter})
             for book, items in verses.items()):
@@ -695,8 +876,13 @@ def check(args) -> None:
         raise ValueError('Source transcription review count does not match word table')
     if (args.intermediate / 'source_text_review.tsv').read_text(encoding='utf-8') != tsv_text(SOURCE_REVIEW_FIELDS, source_review(rows)):
         raise ValueError('Source transcription review does not match word table')
+    if (args.intermediate / 'draft_gloss_review.tsv').read_text(encoding='utf-8') != tsv_text(DRAFT_REVIEW_FIELDS, draft_review(rows)):
+        raise ValueError('Draft gloss review does not match word table')
     if report['source_manifest_sha256'] != hashlib.sha256(args.manifest.read_bytes()).hexdigest() or report['overrides_sha256'] != hashlib.sha256(args.overrides.read_bytes()).hexdigest():
         raise ValueError('Outputs are stale: sources or overrides changed; rebuild LV_DC')
+    if (report.get('name_aliases_sha256') != hashlib.sha256(args.name_aliases.read_bytes()).hexdigest()
+            or report.get('transliteration') != transliteration_info()):
+        raise ValueError('Outputs are stale: name recognition or NT transliterator changed; rebuild LV_DC')
     print(f'Checked {len(BOOKS)} DC ESFM files, {len(rows):,} source words, and all word-table links.')
 
 
@@ -704,7 +890,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('command', choices=['fetch', 'build', 'check'])
     for name, default in [('manifest', MANIFEST), ('cache', CACHE), ('intermediate', INTERMEDIATE),
-                          ('output', OUTPUT), ('overrides', OVERRIDES), ('rv-dir', RV)]:
+                          ('output', OUTPUT), ('overrides', OVERRIDES), ('name-aliases', NAME_ALIASES), ('rv-dir', RV)]:
         parser.add_argument('--' + name, type=Path, default=default)
     args = parser.parse_args()
     try:

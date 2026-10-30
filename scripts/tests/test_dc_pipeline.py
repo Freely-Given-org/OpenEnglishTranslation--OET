@@ -72,20 +72,71 @@ class GlossTests(unittest.TestCase):
         self.assertNotEqual(dc.normalise('ἡ'), dc.normalise('ἤ'))
         self.assertNotEqual(dc.normalise('εἰ'), dc.normalise('εἷ'))
 
-    def test_unaccented_homographs_remain_unresolved(self):
+    def test_unaccented_homographs_keep_both_english_alternatives(self):
         lexicon = dc.Lexicon()
         lexicon.add('ἡ', dc.Candidate('ὁ', 'the', 'test'), form=True)
         lexicon.add('ἤ', dc.Candidate('ἤ', 'or', 'test'), form=True)
         result = lexicon.lookup('Η')
-        self.assertEqual(result['GlossStatus'], 'ambiguous')
-        self.assertEqual(result['OETGlossWords'], '')
+        self.assertEqual(result['GlossStatus'], 'draft-alternatives')
+        self.assertEqual(result['OETGlossWords'], 'or/the')
+        self.assertEqual(result['Lemma'], '')
+        self.assertEqual(len(json.loads(result['Candidates'])), 2)
         self.assertEqual(lexicon.lookup('ἡ')['OETGlossWords'], 'the')
 
     def test_conflicting_lemmas_never_choose_most_common(self):
         lexicon = dc.Lexicon()
         lexicon.add('form', dc.Candidate('lemma1', 'one', 'test'), form=True)
         lexicon.add('form', dc.Candidate('lemma2', 'two', 'test'), form=True)
-        self.assertEqual(lexicon.lookup('form')['OETGlossWords'], '')
+        self.assertEqual(lexicon.lookup('form')['OETGlossWords'], 'one/two')
+
+    def test_name_requires_evidence_not_just_a_capital(self):
+        lexicon = dc.Lexicon()
+        self.assertEqual(lexicon.lookup('Ἄγνωστον')['GlossStatus'], 'missing')
+        lexicon.add_name('Φίλος', 'Φίλος', 'name fixture')
+        lexicon.add('φίλον', dc.Candidate('φίλος', 'friend', 'ordinary word'), form=True)
+        self.assertEqual(lexicon.lookup('Φίλον')['OETGlossWords'], 'friend')
+
+    def test_name_forms_use_nt_transliterator_and_preserve_evidence(self):
+        lexicon = dc.Lexicon()
+        lexicon.add_name('Τωβιηλ', 'Τωβιηλ', 'name fixture')
+        lexicon.add_name('Ὀλοφέρνης', 'Ὀλοφέρνης', 'name fixture')
+        result = lexicon.lookup('Τωβιὴλ')
+        self.assertEqual(result['OETGlossWords'], 'Tōbiaʸl')
+        self.assertEqual(result['OETGlossWords'], dc.greek_transliterator()('Τωβιὴλ'))
+        self.assertEqual(result['GlossStatus'], 'name-transliteration')
+        self.assertEqual(result['LexiconGloss'], '')
+        self.assertTrue(json.loads(result['Candidates'])[0]['proper_name'])
+        self.assertEqual(lexicon.lookup('Ὀλοφέρνου')['GlossStatus'], 'name-transliteration-candidate')
+        self.assertEqual(lexicon.lookup('Ὀλοφέρνου')['Lemma'], '')
+
+    def test_mixed_latin_source_error_is_not_transliterated_as_a_name(self):
+        lexicon = dc.Lexicon()
+        lexicon.add_name('Τωβiηλ', 'Τωβiηλ', 'bad source fixture')
+        self.assertEqual(lexicon.lookup('Τωβiηλ')['GlossStatus'], 'missing')
+
+    def test_movable_nu_requires_supported_morphology(self):
+        lexicon = dc.Lexicon()
+        lexicon.add('ἐποίησεν', dc.Candidate('ποιέω', 'to do/make', 'test', 'V-AAI-3S'), form=True)
+        lexicon.add('πᾶσιν', dc.Candidate('πᾶς', 'all', 'test', 'A-DPM'), form=True)
+        lexicon.add('μέν', dc.Candidate('μέν', 'indeed', 'test', 'PRT'), form=True)
+        self.assertEqual(lexicon.lookup('ἐποίησε')['OETGlossWords'], 'to do/make')
+        self.assertEqual(lexicon.lookup('πᾶσι')['GlossStatus'], 'movable-nu-candidate')
+        self.assertEqual(lexicon.lookup('μέ')['GlossStatus'], 'missing')
+
+    def test_compound_analysis_can_use_whole_word_headword_gloss(self):
+        lexicon = dc.Lexicon()
+        lexicon.add('μήποτε', dc.Candidate('μή', 'lest + πότε=when', 'compound'), form=True)
+        lexicon.add('μήποτε', dc.Candidate('μήποτε', 'lest', 'headword'))
+        result = lexicon.lookup('μήποτε')
+        self.assertEqual(result['OETGlossWords'], 'lest')
+        self.assertEqual(result['GlossStatus'], 'headword-fallback-candidate')
+        self.assertEqual(len(json.loads(result['Candidates'])), 2)
+
+    def test_draft_review_includes_filled_alternatives_and_names(self):
+        rows = [dict(Ref='TOB_1:1w1', GreekWord='Τωβιὴλ', OETGlossWords='Tōbiaʸl', GlossStatus='name-transliteration'),
+                dict(Ref='TOB_1:1w2', GreekWord='Η', OETGlossWords='or/the', GlossStatus='draft-alternatives'),
+                dict(Ref='TOB_1:1w3', GreekWord='ἄγνωστον', OETGlossWords='', GlossStatus='missing')]
+        self.assertEqual([r['GreekWord'] for r in dc.draft_review(rows)], ['Τωβιὴλ', 'Η'])
 
     def test_missing_word_remains_visible_and_linked(self):
         row = dict(OETGlossWords='', GreekWord='ἄγνωστον', Before='', After=';')
@@ -188,6 +239,21 @@ class OverrideTests(unittest.TestCase):
 
 
 class CachedSourceTests(unittest.TestCase):
+    @unittest.skipUnless(HAVE_SOURCES, 'downloaded lexical source integration check')
+    def test_real_names_and_article_default(self):
+        lexicon = dc.Lexicon.load(dc.CACHE)
+        verses = {'TOB': [dc.Verse('TOB', 1, '1', 'Τωβὶτ τοῦ Τωβιὴλ Νινευή', 'TOB_1:1', 'fixture')]}
+        article_override = {k: v for k, v in dc.read_overrides(dc.OVERRIDES).items() if k[1] == dc.normalise('τοῦ')}
+        rows = dc.make_rows(verses, lexicon, article_override)
+        self.assertEqual([r['OETGlossWords'] for r in rows], ['Tōbit', 'of_the', 'Tōbiaʸl', 'Nineuaʸ'])
+        self.assertEqual(rows[1]['GlossStatus'], 'editorial')
+        self.assertGreater(len(json.loads(rows[1]['Candidates'])), 1)
+        self.assertEqual(dc.render_word(rows[1], 4), 'of¦4_the¦4 ')
+        for word in ['Ναβουχοδονόσορ', 'Ἐσθὴρ', 'Μαρδοχαῖος', 'Ἰουδὶθ']:
+            self.assertTrue(lexicon.lookup(word)['GlossStatus'].startswith('name-transliteration'), word)
+        for word, gloss in [('ὡς', 'which/how'), ('Ὡς', 'which/how'), ('στέφανον', 'crown')]:
+            self.assertEqual(lexicon.lookup(word)['OETGlossWords'], gloss)
+
     @unittest.skipUnless(HAVE_SOURCES, 'downloaded source integration check')
     def test_real_book_assembly_and_sirach_prologue(self):
         dc.sources(dc.load_manifest(dc.MANIFEST), dc.CACHE)
