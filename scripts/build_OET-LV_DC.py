@@ -14,7 +14,10 @@ import html
 import importlib.metadata
 import json
 import re
+import subprocess
 import sys
+import tempfile
+import tomllib
 import unicodedata
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -31,6 +34,12 @@ INTERMEDIATE = ROOT / 'intermediateTexts/glossed_DC'
 OUTPUT = ROOT / 'derivedTexts/auto_edited_DC_ESFM'
 OVERRIDES = SCRIPT_DIR / 'DC/gloss_overrides.tsv'
 NAME_ALIASES = SCRIPT_DIR / 'DC/proper_name_aliases.tsv'
+SPELLING_DIR = SCRIPT_DIR / 'ScriptedDCUpdates'
+EDITOR = ROOT.parent / 'ScriptedBibleEditor/Rust/scripted_bible_editor/target/release/scripted_bible_editor'
+EDITOR_CONTROL = 'ScriptedBibleEditor.control.toml'
+SPELLING_TABLE = 'changeFromUSSpelling.commandTable.tsv'
+# Repository filenames use older aliases; the editor enumerates canonical BOS codes.
+EDITOR_BOOK_CODES = {'DAG': 'DNG', 'ES1': 'GES'}
 RV = ROOT / 'translatedTexts/ReadersVersion'
 TABLE = 'OET-LV_DC_word_table.tsv'
 
@@ -61,6 +70,7 @@ TEI_SOURCES = {
 TEI_NS = '{http://www.tei-c.org/ns/1.0}'
 SOURCE_REVIEW_FIELDS = ['Ref', 'GreekWord', 'Reason', 'SourceRef', 'SourceFile']
 DRAFT_REVIEW_FIELDS = ['GreekWord', 'Gloss', 'Status', 'Occurrences', 'FirstRef']
+SPELLING_REVIEW_FIELDS = ['Ref', 'GreekWord', 'BeforeGloss', 'AfterGloss']
 FIELDS = ['Ref', 'GreekWord', 'Lemma', 'Morphology', 'LexiconGloss',
           'OETGlossWords', 'GlossStatus', 'GlossSource', 'Candidates',
           'SourceRef', 'SourceFile', 'Before', 'After']
@@ -685,7 +695,7 @@ def render_books(verses: dict, rows: list[dict]) -> dict[str, str]:
                  '\\rem Source: ' + source,
                  '\\rem Glosses/forms: STEPBible.org (Tyndale House Cambridge), CC BY 4.0;',
                  '\\rem additional headwords and name recognition: Open Scriptures Septuagint Project, CC BY 4.0.',
-                 '\\rem Changes: lexical lookup, source-based book assembly, OET editorial overrides, ESFM conversion.',
+                 '\\rem Changes: lexical lookup, source-based book assembly, OET overrides, ScriptedBibleEditor spelling, ESFM conversion.',
                  '\\rem Source verse labels are retained except documented book assembly and Sirach prologue handling.',
                  '\\rem No verse or word alignment to OET-RV is asserted. See build_report.json and scripts/DC/README.md.',
                  f'\\h {title}', f'\\toc1 {title}', f'\\toc2 {title}', f'\\toc3 {book}', f'\\mt1 {title}']
@@ -759,12 +769,125 @@ def draft_review(rows: list[dict]) -> list[dict]:
             for (word, gloss, status), count in counts.most_common()]
 
 
+def spelling_inputs(editor: Path, folder: Path) -> dict:
+    """Validate the spelling-only contract before handing files to the editor."""
+    control = tomllib.loads((folder / EDITOR_CONTROL).read_text(encoding='utf-8'))
+    expected = dict(inputFolder='input', outputFolder='output',
+                    inputFilenameTemplate='BBB_gloss.ESFM', outputFilenameTemplate='OET-LV_BBB.ESFM',
+                    clearOutputFolder=False, createOutputFolder=True, insertSBEditorRemLine=False,
+                    handleESFMWordNumbers=True, applyOrder='AllTablesFirst',
+                    commandTables={'changeFromUSSpelling': SPELLING_TABLE})
+    if any(control.get(key) != value for key, value in expected.items()):
+        raise ValueError('DC spelling control must retain its staging paths, templates, and spelling-only table')
+    table = (folder / SPELLING_TABLE).read_text(encoding='utf-8')
+    header = 'Tags IBooks EBooks IMarkers EMarkers IRefs ERefs PreText SCase Search PostText RCase Replace Name Comment'.split()
+    lines = [line for line in table.splitlines() if line and not line.startswith('#')]
+    if not lines or lines[0].split('\t') != header:
+        raise ValueError('Unexpected DC spelling command-table header')
+    for line in lines[1:]:
+        fields = line.split('\t')
+        if (len(fields) != 15 or fields[3] != 'v,ip'
+                or any(fields[i] for i in (0, 1, 2, 4, 5, 6, 7, 8, 10, 11))
+                or not all(re.fullmatch('[A-Za-z]+', fields[i]) for i in (9, 12))):
+            raise ValueError('DC spelling rules must be literal English letter substitutions on v,ip lines')
+    if not editor.is_file():
+        raise ValueError(f'Missing ScriptedBibleEditor: {editor}; run make -C scripts LV_DC to build it')
+    return dict(editor='ScriptedBibleEditor', editor_sha256=hashlib.sha256(editor.read_bytes()).hexdigest(),
+                control_sha256=hashlib.sha256((folder / EDITOR_CONTROL).read_bytes()).hexdigest(),
+                table=SPELLING_TABLE, table_sha256=hashlib.sha256((folder / SPELLING_TABLE).read_bytes()).hexdigest(),
+                rules=len(lines) - 1)
+
+
+def run_spelling_editor(rendered: dict[str, str], rows: list[dict], editor: Path, folder: Path) -> dict[str, str]:
+    """Run the actual OT/NT editor, without exposing final files to partial edits."""
+    spelling_inputs(editor, folder)
+    with tempfile.TemporaryDirectory(prefix='oet-dc-spelling-') as temporary:
+        staging = Path(temporary)
+        for name in (EDITOR_CONTROL, SPELLING_TABLE):
+            (staging / name).write_bytes((folder / name).read_bytes())
+        (staging / 'input').mkdir()
+        (staging / 'output').mkdir()
+        for book, text in rendered.items():
+            bos = EDITOR_BOOK_CODES.get(book, book)
+            (staging / 'input' / f'{bos}_gloss.ESFM').write_text(text, encoding='utf-8')
+            # The Rust editor deliberately emits only changed books.
+            (staging / 'output' / f'OET-LV_{bos}.ESFM').write_text(text, encoding='utf-8')
+        (staging / 'input' / TABLE).write_text(tsv_text(FIELDS, rows), encoding='utf-8')
+        result = subprocess.run([str(editor.resolve()), str(staging / EDITOR_CONTROL), '--silent', '--errors'],
+                                capture_output=True, text=True)
+        if result.returncode:
+            raise ValueError(f'ScriptedBibleEditor failed ({result.returncode}): {result.stderr[-2000:]}')
+        return {book: (staging / 'output' / f'OET-LV_{EDITOR_BOOK_CODES.get(book, book)}.ESFM').read_text(encoding='utf-8')
+                for book in rendered}
+
+
+def reconcile_spelling(rendered: dict[str, str], edited: dict[str, str], rows: list[dict]) -> tuple[list[dict], list[dict]]:
+    """Recover edited glosses using the unchanged word links and punctuation.
+
+    Only English letter runs within an existing gloss may change. Source Greek,
+    names, separators, links, verse labels, headers and word order must agree.
+    This reads the editor's result; it does not reimplement its substitutions.
+    """
+    if set(rendered) != set(edited):
+        raise ValueError('ScriptedBibleEditor book inventory changed')
+    output = [dict(row) for row in rows]
+    audit = []
+    by_book = defaultdict(list)
+    for number, row in enumerate(rows, 1):
+        by_book[row['Ref'].split('_', 1)[0]].append((number, row))
+    for book, original in rendered.items():
+        revised = edited[book]
+        if revised == original:
+            continue
+        old_pos = new_pos = 0
+        for number, row in by_book[book]:
+            word = render_word(row, number)
+            start = original.find(word, old_pos)
+            if start < 0:
+                raise ValueError(f'Cannot locate rendered word: {row["Ref"]}')
+            prefix = original[old_pos:start]
+            if not revised.startswith(prefix, new_pos):
+                raise ValueError(f'Spelling edit changed structure before {row["Ref"]}')
+            new_pos += len(prefix)
+            if revised.startswith(word, new_pos):
+                new_pos += len(word)
+            else:
+                if not row['OETGlossWords'] or row['GlossStatus'].startswith('name-transliteration'):
+                    raise ValueError(f'Spelling edit changed protected Greek/name at {row["Ref"]}')
+                pattern = '([A-Za-z]+)'.join(re.escape(part) for part in re.split('[A-Za-z]+', word))
+                match = re.compile(pattern).match(revised, new_pos)
+                if not match:
+                    raise ValueError(f'Spelling edit changed word links, separators or punctuation at {row["Ref"]}')
+                letters = iter(match.groups())
+                if len(match.groups()) != len(re.findall('[A-Za-z]+', row['OETGlossWords'])):
+                    raise ValueError(f'Spelling edit outside English gloss at {row["Ref"]}')
+                gloss = re.sub('[A-Za-z]+', lambda _: next(letters), row['OETGlossWords'])
+                output[number - 1]['OETGlossWords'] = gloss
+                output[number - 1]['GlossSource'] += '; spelling: ScriptedBibleEditor/' + SPELLING_TABLE
+                audit.append(dict(Ref=row['Ref'], GreekWord=row['GreekWord'],
+                                  BeforeGloss=row['OETGlossWords'], AfterGloss=gloss))
+                new_pos = match.end()
+            old_pos = start + len(word)
+        if revised[new_pos:] != original[old_pos:]:
+            raise ValueError(f'Spelling edit changed the end of {book}')
+    return output, audit
+
+
 def build(args) -> None:
     manifest = load_manifest(args.manifest)
     sources(manifest, args.cache)
     verses = load_verses(args.cache)
     rows = make_rows(verses, Lexicon.load(args.cache, args.name_aliases), read_overrides(args.overrides))
     rendered = render_books(verses, rows)
+    spelling = spelling_inputs(args.editor, args.spelling_dir)
+    print('Applying the DC spelling table with ScriptedBibleEditor…', flush=True)
+    edited = run_spelling_editor(rendered, rows, args.editor, args.spelling_dir)
+    rows, spelling_changes = reconcile_spelling(rendered, edited, rows)
+    rendered = render_books(verses, rows)
+    if rendered != edited:
+        raise ValueError('Edited ESFM and synchronised DC word table disagree')
+    spelling['changed_words'] = len(spelling_changes)
+    spelling['changed_books'] = len({row['Ref'].split('_', 1)[0] for row in spelling_changes})
     differences = audit_rv(verses, args.rv_dir)
     per_book = {}
     for book in BOOKS:
@@ -781,6 +904,7 @@ def build(args) -> None:
                   overrides_sha256=hashlib.sha256(args.overrides.read_bytes()).hexdigest(),
                   name_aliases_sha256=hashlib.sha256(args.name_aliases.read_bytes()).hexdigest(),
                   transliteration=transliteration_info(),
+                  spelling=spelling,
                   books=per_book, words=len(rows), glossed=sum(bool(r['OETGlossWords']) for r in rows),
                   statuses=dict(Counter(r['GlossStatus'] for r in rows)),
                   unsupported_books={'ES2': 'No complete Greek source in Brenton. English 2 Esdras (Latin 4 Esdras) needs a separately selected witness and glossing pipeline; LXX Esdras B is Ezra-Nehemiah, not this book.'},
@@ -816,6 +940,7 @@ def build(args) -> None:
     write_if_changed(args.intermediate / 'rv_verse_label_differences.tsv', tsv_text(['Book', 'Ref', 'Status'], differences))
     write_if_changed(args.intermediate / 'source_text_review.tsv', tsv_text(SOURCE_REVIEW_FIELDS, source_review(rows)))
     write_if_changed(args.intermediate / 'draft_gloss_review.tsv', tsv_text(DRAFT_REVIEW_FIELDS, draft_review(rows)))
+    write_if_changed(args.intermediate / 'spelling_changes.tsv', tsv_text(SPELLING_REVIEW_FIELDS, spelling_changes))
     source_rows = [dict(Ref=f'{v.book}_{v.chapter}:{v.verse}', SourceRef=v.source_ref,
                         SourceFile=v.source_file, GreekText=v.text)
                    for items in verses.values() for v in items]
@@ -868,6 +993,8 @@ def check(args) -> None:
         raise ValueError('Coverage report does not match word table')
     if report.get('statuses') != dict(Counter(r['GlossStatus'] for r in rows)):
         raise ValueError('Gloss status report does not match word table')
+    if (args.intermediate / TABLE).read_bytes() != (args.output / TABLE).read_bytes():
+        raise ValueError('Intermediate and final DC word tables disagree')
     if set(report['books']) != set(verses) or any(
             report['books'][book]['chapters'] != len({v.chapter for v in items if v.chapter})
             for book, items in verses.items()):
@@ -883,6 +1010,25 @@ def check(args) -> None:
     if (report.get('name_aliases_sha256') != hashlib.sha256(args.name_aliases.read_bytes()).hexdigest()
             or report.get('transliteration') != transliteration_info()):
         raise ValueError('Outputs are stale: name recognition or NT transliterator changed; rebuild LV_DC')
+    spelling = report.get('spelling', {})
+    if any(spelling.get(key) != value for key, value in spelling_inputs(args.editor, args.spelling_dir).items()):
+        raise ValueError('Outputs are stale: spelling table, control or ScriptedBibleEditor changed; rebuild LV_DC')
+    with (args.intermediate / 'spelling_changes.tsv').open(encoding='utf-8', newline='') as source:
+        reader = csv.DictReader(source, delimiter='\t', quoting=csv.QUOTE_NONE)
+        if reader.fieldnames != SPELLING_REVIEW_FIELDS:
+            raise ValueError('Unexpected spelling audit columns')
+        changes = list(reader)
+    indexed = {row['Ref']: row for row in rows}
+    changed_refs = {row['Ref'] for row in changes}
+    if (len(changed_refs) != len(changes) or spelling.get('changed_words') != len(changes)
+            or spelling.get('changed_books') != len({ref.split('_', 1)[0] for ref in changed_refs})
+            or changed_refs != {row['Ref'] for row in rows if '; spelling: ScriptedBibleEditor/' in row['GlossSource']}):
+        raise ValueError('Spelling audit coverage does not match word table')
+    for change in changes:
+        row = indexed[change['Ref']]
+        if (change['GreekWord'] != row['GreekWord'] or change['AfterGloss'] != row['OETGlossWords']
+                or change['BeforeGloss'] == change['AfterGloss']):
+            raise ValueError(f'Spelling audit does not match {change["Ref"]}')
     print(f'Checked {len(BOOKS)} DC ESFM files, {len(rows):,} source words, and all word-table links.')
 
 
@@ -890,7 +1036,8 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('command', choices=['fetch', 'build', 'check'])
     for name, default in [('manifest', MANIFEST), ('cache', CACHE), ('intermediate', INTERMEDIATE),
-                          ('output', OUTPUT), ('overrides', OVERRIDES), ('name-aliases', NAME_ALIASES), ('rv-dir', RV)]:
+                          ('output', OUTPUT), ('overrides', OVERRIDES), ('name-aliases', NAME_ALIASES), ('rv-dir', RV),
+                          ('editor', EDITOR), ('spelling-dir', SPELLING_DIR)]:
         parser.add_argument('--' + name, type=Path, default=default)
     args = parser.parse_args()
     try:

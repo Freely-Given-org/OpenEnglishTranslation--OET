@@ -157,6 +157,90 @@ class GlossTests(unittest.TestCase):
         self.assertEqual(dc.render_word(row, 9), 'to¦9_be¦9;')
 
 
+class SpellingTests(unittest.TestCase):
+    def fixture(self, books=('TOB',), gloss='to labor/honor'):
+        lexicon = dc.Lexicon()
+        lexicon.add('πόνος', dc.Candidate('πόνος', gloss, 'upstream fixture'))
+        verses = {book: [dc.Verse(book, 1, '1', 'πόνος·', f'{book}_1:1', 'fixture')]
+                  for book in books}
+        if 'SIR' in books:
+            verses['SIR'].insert(0, dc.Verse('SIR', 0, '1', 'πόνος.', 'SIR_1:1', 'fixture'))
+        rows = dc.make_rows(verses, lexicon, {})
+        return verses, rows, dc.render_books(verses, rows)
+
+    def test_reconciliation_keeps_links_separators_and_dictionary_evidence(self):
+        verses, rows, original = self.fixture(gloss='to labor/hard_labor')
+        edited = {b: t.replace('labor', 'labour') for b, t in original.items()}
+        revised, audit = dc.reconcile_spelling(original, edited, rows)
+        self.assertEqual(revised[0]['OETGlossWords'], 'to labour/hard_labour')
+        self.assertEqual(revised[0]['LexiconGloss'], 'to labor/hard_labor')
+        self.assertEqual(revised[0]['Candidates'], rows[0]['Candidates'])
+        self.assertEqual(rows[0]['OETGlossWords'], 'to labor/hard_labor')
+        self.assertEqual(dc.render_books(verses, revised), edited)
+        self.assertEqual(audit, [dict(Ref='TOB_1:1w1', GreekWord='πόνος',
+                                     BeforeGloss='to labor/hard_labor', AfterGloss='to labour/hard_labour')])
+
+    def test_structural_editor_changes_are_rejected(self):
+        _, rows, original = self.fixture()
+        text = original['TOB']
+        for changed in [text.replace('¦1', '¦9'), text.replace('\\v 1 ', '\\v 2 '),
+                        text.replace('_labor', ' labor'), text.replace(';\n', '.\n'),
+                        text + '\\v 2 unexpected\n']:
+            with self.subTest(changed=changed[-90:]), self.assertRaises(ValueError):
+                dc.reconcile_spelling(original, {'TOB': changed}, rows)
+
+    def test_greek_and_transliterated_names_are_protected(self):
+        for gloss, status, greek, old, new in [('', 'missing', 'ΕBOΗΣA', 'BO', 'BOU'),
+                                              ('Labor', 'name-transliteration', 'Λαβορ', 'Labor', 'Labour')]:
+            row = dict(Ref='TOB_1:1w1', GreekWord=greek, OETGlossWords=gloss,
+                       GlossStatus=status, GlossSource='fixture', Before='', After='.')
+            original = {'TOB': dc.render_word(row, 1)}
+            with self.subTest(status=status), self.assertRaisesRegex(ValueError, 'protected Greek/name'):
+                dc.reconcile_spelling(original, {'TOB': original['TOB'].replace(old, new)}, [row])
+
+    @unittest.skipUnless(dc.EDITOR.is_file(), 'installed ScriptedBibleEditor integration check')
+    def test_real_editor_handles_all_dc_codes_and_sirach_prologue(self):
+        verses, rows, original = self.fixture(dc.BOOKS)
+        edited = dc.run_spelling_editor(original, rows, dc.EDITOR, dc.SPELLING_DIR)
+        revised, audit = dc.reconcile_spelling(original, edited, rows)
+        self.assertEqual(len(audit), len(dc.BOOKS) + 1)
+        self.assertTrue(all(row['OETGlossWords'] == 'to labour/honour' for row in revised))
+        self.assertEqual(dc.render_books(verses, revised), edited)
+        self.assertIn('\\ip to¦', edited['SIR'])
+
+    @unittest.skipUnless(dc.EDITOR.is_file(), 'installed ScriptedBibleEditor integration check')
+    def test_real_editor_preserves_books_with_no_spelling_changes(self):
+        _, rows, original = self.fixture(gloss='work')
+        self.assertEqual(dc.run_spelling_editor(original, rows, dc.EDITOR, dc.SPELLING_DIR), original)
+
+    def test_editor_failure_is_not_accepted_as_an_unchanged_result(self):
+        _, rows, original = self.fixture()
+        with tempfile.TemporaryDirectory() as temp:
+            editor = Path(temp) / 'failing-editor'
+            editor.write_text('#!/bin/sh\nexit 9\n')
+            editor.chmod(0o755)
+            with self.assertRaisesRegex(ValueError, 'ScriptedBibleEditor failed \\(9\\)'):
+                dc.run_spelling_editor(original, rows, editor, dc.SPELLING_DIR)
+
+    def test_spelling_control_cannot_write_outside_staging(self):
+        with tempfile.TemporaryDirectory() as temp:
+            folder = Path(temp)
+            text = (dc.SPELLING_DIR / dc.EDITOR_CONTROL).read_text()
+            (folder / dc.EDITOR_CONTROL).write_text(text.replace('outputFolder = "output"', 'outputFolder = "../elsewhere"'))
+            with self.assertRaisesRegex(ValueError, 'staging paths'):
+                dc.spelling_inputs(dc.EDITOR, folder)
+
+    def test_bad_spelling_command_fails_instead_of_being_silently_skipped(self):
+        with tempfile.TemporaryDirectory() as temp:
+            folder = Path(temp)
+            for name in (dc.EDITOR_CONTROL, dc.SPELLING_TABLE):
+                (folder / name).write_bytes((dc.SPELLING_DIR / name).read_bytes())
+            with (folder / dc.SPELLING_TABLE).open('a') as output:
+                output.write('malformed row\n')
+            with self.assertRaisesRegex(ValueError, 'literal English letter substitutions'):
+                dc.spelling_inputs(dc.EDITOR, folder)
+
+
 class SweteTests(unittest.TestCase):
     def fixture(self):
         chapters = ''.join(f'<div subtype="chapter" n="{n}"><head>Title</head>'

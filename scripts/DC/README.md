@@ -54,6 +54,9 @@ The build uses the existing NT dependency `bible-transliterations`, calling its
 when present, otherwise the project's existing `uv run python` setup. Override
 `DC_PYTHON` with another interpreter that has that dependency if needed. Source
 downloads themselves still use only the Python standard library.
+The DC target also depends on the same ScriptedBibleEditor executable as OT/NT;
+make builds it when necessary and passes it to the builder via `--editor`.
+The direct commands below require that executable to have been built already.
 
 ```sh
 # Download only missing inputs; verify every cached file against the manifest:
@@ -70,6 +73,38 @@ unchanged files retain their modification times. The lightweight DC target runs
 the build on every invocation, so deleted outputs are restored and corrections
 are always picked up, including with `make -j`. No completion stamp can hide a
 missing book or word table.
+
+### English spelling stage
+
+[`ScriptedDCUpdates/changeFromUSSpelling.commandTable.tsv`](../ScriptedDCUpdates/changeFromUSSpelling.commandTable.tsv)
+contains the DC spelling rules, initially combined from the OT and NT tables.
+Its 92 explicit lower-case/initial-capital commands include `labor` → `labour`,
+`honor` → `honour`, and `judgment` → `judgement`. Rules apply to `v` and `ip`
+lines, including Sirach's prologue. The table is maintained separately; later
+OT/NT rule changes are not automatically imported.
+
+Every build renders the draft books into a temporary folder, then runs the real
+ScriptedBibleEditor with the adjacent `ScriptedBibleEditor.control.toml` and
+spelling table. The control's `input`/`output` paths refer to that staging folder,
+so invoke this step through `make LV_DC` or the DC builder. The Rust editor writes
+only changed books; the builder supplies originals for the other books. Temporary
+filenames use BOS `DNG`/`GES`, while final repository filenames remain `DAG`/`ES1`.
+
+The builder reads the edited ESFM back through its word links and updates
+`OETGlossWords` in both word-table copies. It does not run a second replacement
+implementation. Original `LexiconGloss` and `Candidates` retain the downloaded
+dictionary spellings; `GlossSource` records the spelling stage on changed rows.
+Only English letters within existing glosses may change. A changed Greek token,
+transliterated name, word link, separator, punctuation, or verse/header structure
+fails the build before final files are written. Spelling rules therefore use
+literal English letter fragments with `IMarkers` set to `v,ip`; other command
+features need a separate, appropriately validated editing stage.
+
+`spelling_changes.tsv` records each changed occurrence. The first spelling build
+corrected 231 glosses in 15 books; coverage and all 123,885 word numbers are
+unchanged. `build_report.json` records the command-table/control hashes, editor
+binary hash, and change counts. `check_DC` rejects stale spelling inputs and
+checks that the edited ESFM, both word tables, and audit agree.
 
 ## Sources and attribution
 
@@ -258,7 +293,7 @@ Greek middle stops to semicolons and question marks to English question marks.
 - `derivedTexts/auto_edited_DC_ESFM/OET-LV_DC_word_table.tsv`: linked word table;
   the same table is under `intermediateTexts/glossed_DC/`.
 - `derivedTexts/auto_edited_DC_ESFM/build_report.json`: coverage per book,
-  status counts, source provenance, and unsupported-book explanation.
+  status counts, source/editor provenance, spelling changes, and unsupported-book explanation.
 - `intermediateTexts/glossed_DC/source_verses.tsv`: assembled Greek verses with
   original source references and filenames.
 - `intermediateTexts/glossed_DC/unresolved_words.tsv`: every occurrence still
@@ -272,6 +307,8 @@ Greek middle stops to semicolons and question marks to English question marks.
   investigation before RV alignment.
 - `intermediateTexts/glossed_DC/source_text_review.tsv`: source tokens containing
   Latin letters, requiring inspection of the printed edition.
+- `intermediateTexts/glossed_DC/spelling_changes.tsv`: reference, Greek word,
+  and English gloss before/after ScriptedBibleEditor.
 
 Edit [`gloss_overrides.tsv`](gloss_overrides.tsv), not a generated file. It has
 four tab-separated columns: `Ref`, `GreekWord`, `Gloss`, and `Note`.
@@ -309,15 +346,19 @@ downstream words; never retain old links against a rebuilt table.
 
 The checks verify input hashes, source reconstruction, word-reference uniqueness
 and sequence, original source references, ESFM/table agreement, every word link,
-and report freshness (including name aliases and the installed transliterator).
+and report freshness (including name aliases, the installed transliterator,
+the spelling table/control, and ScriptedBibleEditor).
 Unit tests cover name/common-word collisions, movable nu, English alternatives,
 NT name spellings, ambiguous homographs, paragraph content,
 lettered verses, the real book assembly, prologue handling, TEI apparatus exclusion,
 PSS/ODE chapter inventories, Ode XIV completeness, checksums, and override
-failure cases. They verify the conversion machinery, not translation accuracy.
+failure cases. Spelling tests run the actual editor on all 16 BOS book codes,
+Sirach's prologue and unchanged books, and reject broken links/structure,
+changes to Greek/names, unsafe control paths, malformed rules and editor failure.
+They verify the conversion machinery, not translation accuracy.
 The installed BibleOrgSys loader was also checked against all 16 books and the
 complete 123,885-word auxiliary table, including PSS 18:14, ODE 4:9a/9b and ODE
-14:47. All 34 conversion tests pass. The connector uses canonical BOS identities
+14:47. All 42 conversion tests pass. The connector uses canonical BOS identities
 (`DNG`/`GES`) internally while preserving the repository's `DAG`/`ES1` filenames,
 and keeps lettered LV labels distinct in its audit. General DC export support
 will need to account for these book identities and source boundaries as well.

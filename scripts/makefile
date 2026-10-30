@@ -115,6 +115,7 @@ GreekTranslit := ../../BibleTransliterations/sourceTables/Greek.tsv
 
 scripted_OT_updates := $(wildcard ScriptedOTUpdates/*)
 scripted_NT_updates := $(wildcard ScriptedVLTUpdates/*)
+scripted_DC_updates := $(wildcard ScriptedDCUpdates/*)
 
 sideBySide_sentinel := ../exportedFiles/simpleHTML/SideBySide/.sentinel
 RV_word_tables_sentinel := ../translatedTexts/ReadersVersion/.word_tables_sentinel
@@ -138,12 +139,12 @@ DC_PYTHON ?= $(if $(wildcard .venv/bin/python),.venv/bin/python,$(UVrun) python)
 DC_sources:
 	@$(DC_PYTHON) build_OET-LV_DC.py fetch
 
-LV_DC: DC_sources
-	@$(DC_PYTHON) build_OET-LV_DC.py build
+LV_DC: DC_sources $(SBE) $(scripted_DC_updates)
+	@$(DC_PYTHON) build_OET-LV_DC.py build --editor "$(SBE)"
 
 check_DC: LV_DC
 	@$(DC_PYTHON) -m unittest discover -s tests -p 'test_dc_pipeline.py'
-	@$(DC_PYTHON) build_OET-LV_DC.py check
+	@$(DC_PYTHON) build_OET-LV_DC.py check --editor "$(SBE)"
 
 #=== LV stuff =======================
 

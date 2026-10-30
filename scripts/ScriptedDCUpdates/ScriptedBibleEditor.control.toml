@@ -1,0 +1,16 @@
+# The DC builder copies this control and table into a temporary staging folder.
+# Only the input/output folders there are used; final files are published after validation.
+title = "ScriptedBibleEditor OET-LV-DC spelling"
+inputFolder = "input"
+inputFilenameTemplate = "BBB_gloss.ESFM"
+outputFolder = "output"
+outputFilenameTemplate = "OET-LV_BBB.ESFM"
+# The Rust editor writes only changed books. The builder seeds output with originals.
+clearOutputFolder = false
+createOutputFolder = true
+insertSBEditorRemLine = false
+handleESFMWordNumbers = true
+applyOrder = "AllTablesFirst"
+
+[commandTables]
+changeFromUSSpelling = "changeFromUSSpelling.commandTable.tsv"

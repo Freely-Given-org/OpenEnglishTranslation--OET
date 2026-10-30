@@ -9,6 +9,16 @@
     "version": "0.8.0",
     "implementation_sha256": "ee84ce620135a07347554bc630467d9d02db51b5fc1756bf7cebb4b3f0cfff5a"
   },
+  "spelling": {
+    "editor": "ScriptedBibleEditor",
+    "editor_sha256": "dda59e4eda194aff35f7a61d99cd643841869d8a99d823df3525904d1e8c24f4",
+    "control_sha256": "6ab8dfa7e83725e8f9dbc873bd0442344c349b43159126d77100650df592a0f5",
+    "table": "changeFromUSSpelling.commandTable.tsv",
+    "table_sha256": "4499486a013cc0c8dbb8a4d9ceef2163a66ebe3e02097efd7909442334c43535",
+    "rules": 92,
+    "changed_words": 231,
+    "changed_books": 15
+  },
   "books": {
     "TOB": {
       "words": 5470,

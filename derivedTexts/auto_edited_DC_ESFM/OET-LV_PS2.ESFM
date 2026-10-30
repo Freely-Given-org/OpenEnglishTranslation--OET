@@ -9,7 +9,7 @@
 \rem Source: Brenton Greek Septuagint (eBible.org), Public Domain.
 \rem Glosses/forms: STEPBible.org (Tyndale House Cambridge), CC BY 4.0;
 \rem additional headwords and name recognition: Open Scriptures Septuagint Project, CC BY 4.0.
-\rem Changes: lexical lookup, source-based book assembly, OET editorial overrides, ESFM conversion.
+\rem Changes: lexical lookup, source-based book assembly, OET overrides, ScriptedBibleEditor spelling, ESFM conversion.
 \rem Source verse labels are retained except documented book assembly and Sirach prologue handling.
 \rem No verse or word alignment to OET-RV is asserted. See build_report.json and scripts/DC/README.md.
 \h Psalm 151
