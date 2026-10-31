@@ -1,0 +1,2 @@
+# Preserve the exact bytes of checksum-pinned source snapshots on every platform.
+*.html -text

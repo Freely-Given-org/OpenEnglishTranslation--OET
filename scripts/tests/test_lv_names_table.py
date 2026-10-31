@@ -80,6 +80,7 @@ class LVNamesTests(unittest.TestCase):
         for relative in ('ScriptedOTUpdates/restoreNames.commandTable.tsv',
                          'ScriptedVLTUpdates/OTNames.commandTable.tsv',
                          'ScriptedVLTUpdates/NTNames.commandTable.tsv',
+                         'build_OET-LV_DC.py', 'DC/source_manifest.json', 'DC/LAO_latin_glosses.tsv',
                          'create_OET-LV_TSV_name_table.py'):
             path = scripts / relative
             path.parent.mkdir(exist_ok=True)
@@ -104,7 +105,7 @@ else:
             (self.root / 'desired').write_text(spelling)
             result = subprocess.run(['make', '-f', str(SCRIPTS / 'makefile'), '-j4', target, 'LV_DC',
                 f'UVrun={sys.executable} {driver}', f'DC_PYTHON={sys.executable} {driver}',
-                f'BTRANSLIT_RUST_DIR={self.root}', f'SBE_RUST_DIR={self.root}'],
+                f'BTRANSLIT_RUST_DIR={self.root}', f'SBE_RUST_DIR={self.root}', f'SBE={driver}'],
                 cwd=scripts, capture_output=True, text=True, timeout=30)
             self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
             self.assertEqual((scripts / target).read_text(), spelling)

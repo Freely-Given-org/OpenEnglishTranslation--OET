@@ -1,0 +1,4135 @@
+[
+  {
+    "reference": "MAT 11:5",
+    "rv_lines": [
+      "\\wj people who were blind¦6493 can see¦6494 now, lame¦6496 \\+add >people\\+add* are¦6497 \\+add now\\+add* walking¦6497, people with leprosy are¦6499 ‘clean¦6499’, deaf¦6501 \\+add >people\\+add* can \\+add now\\+add* hear¦6502, dead¦6504 \\+add >people\\+add* have been¦6505 \\+add ≈brought back to life\\+add*, and¦6506 the good¦6508 message¦6508 is being declared¦6508 to poor¦6507 people.\\wj*\\x + \\xo 11:5: a \\xt Isa 35:5-6; \\xo b \\xt Isa 61:1.\\x*"
+    ],
+    "columns": [
+      {
+        "text": "blind",
+        "number": 6493,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "are",
+        "number": 6494,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "receiving",
+        "number": 6494,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "sight",
+        "number": 6494,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 6495,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "lame",
+        "number": 6496,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "are",
+        "number": 6497,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "walking",
+        "number": 6497,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "lepers",
+        "number": 6498,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "are",
+        "number": 6499,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "being",
+        "number": 6499,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "cleansed",
+        "number": 6499,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 6500,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "deaf",
+        "number": 6501,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "are",
+        "number": 6502,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "hearing",
+        "number": 6502,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 6503,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "dead",
+        "number": 6504,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "are",
+        "number": 6505,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "being",
+        "number": 6505,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "raised",
+        "number": 6505,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 6506,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "poor",
+        "number": 6507,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "are",
+        "number": 6508,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "being",
+        "number": 6508,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "good",
+        "number": 6508,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "message",
+        "number": 6508,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "preached",
+        "number": 6508,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      }
+    ],
+    "expected": [
+      [
+        "leprosy",
+        6498
+      ]
+    ]
+  },
+  {
+    "reference": "MAT 8:2",
+    "rv_lines": [
+      "and¦4119 then a¦4121 man with leprosy approached¦4122 him and knelt down in front of him and asked¦4126, “\\nd Master¦4127\\nd*, if¦4128 you're¦4129 willing¦4129, you're¦4130 able¦4130 to¦4132 \\add ≈get rid of\\add* this disease.”"
+    ],
+    "columns": [
+      {
+        "text": "And",
+        "number": 4119,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "see",
+        "number": 4120,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "a",
+        "number": 4121,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "leper",
+        "number": 4121,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "having",
+        "number": 4122,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "approached",
+        "number": 4122,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "was",
+        "number": 4124,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "prostrating",
+        "number": 4124,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "to",
+        "number": 4125,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "him",
+        "number": 4125,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "saying",
+        "number": 4126,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "master",
+        "number": 4127,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": true,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "if",
+        "number": 4128,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "you",
+        "number": 4129,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "may",
+        "number": 4129,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "be",
+        "number": 4129,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "willing",
+        "number": 4129,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "you",
+        "number": 4130,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "are",
+        "number": 4130,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "being",
+        "number": 4130,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "able",
+        "number": 4130,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "to",
+        "number": 4132,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "cleanse",
+        "number": 4132,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "me",
+        "number": 4131,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      }
+    ],
+    "expected": [
+      [
+        "leprosy",
+        4121
+      ]
+    ]
+  },
+  {
+    "reference": "MAT 26:12",
+    "rv_lines": [
+      "\\wj This¦18655 woman¦18655 put¦18652 this¦18658 lotion¦18657 on¦18659 my¦18662 body¦18661 in a sense as a burial \\+add spice\\+add*.\\wj*"
+    ],
+    "columns": [
+      {
+        "text": "For/Because",
+        "number": 18654,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "this",
+        "number": 18655,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "woman",
+        "number": 18655,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "having",
+        "number": 18652,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "put",
+        "number": 18652,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 18656,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "on",
+        "number": 18657,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "this",
+        "number": 18658,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "ointment",
+        "number": 18657,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "on",
+        "number": 18659,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 18660,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "body",
+        "number": 18661,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "of",
+        "number": 18662,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "me",
+        "number": 18662,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "because/for",
+        "number": 18663,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "did",
+        "number": 18667,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "it",
+        "number": 18667,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "that",
+        "number": 18664,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "to",
+        "number": 18665,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "bury",
+        "number": 18665,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "me",
+        "number": 18666,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      }
+    ],
+    "expected": [
+      [
+        "burial",
+        18665
+      ]
+    ]
+  },
+  {
+    "reference": "MRK 1:40",
+    "rv_lines": [
+      "\\add ≈One day,\\add* a¦22493 \\add ≈man with leprosy\\add* came¦22490 to¦22491 \\add @Yeshua\\add* asking¦22501 him¦22502, “\\add ≈I know that¦22504 you¦22506 could¦22506 heal me if¦22505 you¦22508 wanted to¦22511\\add*.”"
+    ],
+    "columns": [
+      {
+        "text": "And",
+        "number": 22489,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "a",
+        "number": 22493,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "leper",
+        "number": 22493,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "is",
+        "number": 22490,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "coming",
+        "number": 22490,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "to",
+        "number": 22491,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "him",
+        "number": 22492,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "imploring",
+        "number": 22495,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "him",
+        "number": 22496,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "saying",
+        "number": 22501,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "to",
+        "number": 22502,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "him",
+        "number": 22502,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "that",
+        "number": 22504,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "If",
+        "number": 22505,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "you",
+        "number": 22506,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "may",
+        "number": 22506,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "be",
+        "number": 22506,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "willing",
+        "number": 22506,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "you",
+        "number": 22508,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "are",
+        "number": 22508,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "being",
+        "number": 22508,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "able",
+        "number": 22508,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "to",
+        "number": 22511,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "cleanse",
+        "number": 22511,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "me",
+        "number": 22510,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      }
+    ],
+    "expected": [
+      [
+        "leprosy",
+        22493
+      ]
+    ]
+  },
+  {
+    "reference": "MRK 9:25",
+    "rv_lines": [
+      "Then¦29782 \\nd Yeshua¦29784\\nd* \\add ≈noticing\\add* that¦29785 a¦29789 \\add big\\add* crowd¦29789 \\add ≈was¦29787 quickly forming\\add*, scolded¦29790 the \\add ≈evil\\add* spirit, “\\wj \\+add ≈You spirit who causes muteness and deafness\\+add*, \\+add ≈leave\\+add* \\+add @this boy\\+add* \\+add now\\+add* and \\+add ≈never return¦29816 to¦29817\\+add* him¦29818.\\wj*”"
+    ],
+    "columns": [
+      {
+        "text": "And",
+        "number": 29782,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 29783,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "Yaʸsous",
+        "number": 29784,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": [
+          "yaisous",
+          "yasous",
+          "yehoshua",
+          "yeshua",
+          "yesus",
+          "yoshua"
+        ]
+      },
+      {
+        "text": "having",
+        "number": 29780,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "seen",
+        "number": 29780,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "that",
+        "number": 29785,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "a",
+        "number": 29789,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "crowd",
+        "number": 29789,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "is",
+        "number": 29787,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "running",
+        "number": 29787,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "together",
+        "number": 29787,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "he",
+        "number": 29790,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "gave",
+        "number": 29790,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "rebuke",
+        "number": 29790,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "to",
+        "number": 29791,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 29791,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 29793,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "unclean",
+        "number": 29794,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "spirit",
+        "number": 29792,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "saying",
+        "number": 29795,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "to",
+        "number": 29797,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "it",
+        "number": 29797,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "-",
+        "number": 29800,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "Mute",
+        "number": 29801,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 29802,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "deaf",
+        "number": 29803,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "spirit",
+        "number": 29804,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "I",
+        "number": 29805,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "am",
+        "number": 29808,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "commanding",
+        "number": 29808,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "to",
+        "number": 29809,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "you",
+        "number": 29809,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "come",
+        "number": 29810,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "out",
+        "number": 29810,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "out",
+        "number": 29812,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "of",
+        "number": 29812,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "him",
+        "number": 29813,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 29814,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "no",
+        "number": 29815,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "longer",
+        "number": 29815,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "you",
+        "number": 29816,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "may",
+        "number": 29816,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "come",
+        "number": 29816,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "in",
+        "number": 29816,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "into",
+        "number": 29817,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "him",
+        "number": 29818,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      }
+    ],
+    "expected": [
+      [
+        "muteness",
+        29801
+      ],
+      [
+        "deafness",
+        29803
+      ]
+    ]
+  },
+  {
+    "reference": "LUK 7:22",
+    "rv_lines": [
+      "\\add ≈so\\add* then he¦44185 answered¦44185 them¦44186, “\\wj Go¦44187 and tell¦44185 Yohan¦44190 everything that you've¦44192 seen¦44192 and¦44197 heard¦44199 here: how blind¦44205 people can see¦44206 again, lame¦44208 people are¦44209 walking¦44209 \\+add now\\+add*, people with leprosy are¦44211 clear¦44211, some dead¦44215 have \\+add ≈come back to life\\+add*, and the good¦44219 message¦44219 is being preached¦44219 to the poor¦44218.\\wj*\\x + \\xo 7:22: a \\xt Isa 35:5-6; \\xo b \\xt Isa 61:1.\\x*"
+    ],
+    "columns": [
+      {
+        "text": "And",
+        "number": 44181,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "answering",
+        "number": 44182,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "he",
+        "number": 44185,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "said",
+        "number": 44185,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "to",
+        "number": 44186,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "them",
+        "number": 44186,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "Having",
+        "number": 44187,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "been",
+        "number": 44187,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "gone",
+        "number": 44187,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "report",
+        "number": 44189,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "to",
+        "number": 44190,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "Yōannaʸs",
+        "number": 44190,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": [
+          "john",
+          "yoannais",
+          "yoannas",
+          "yohan",
+          "yohn"
+        ]
+      },
+      {
+        "text": "what",
+        "number": 44191,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": ">things",
+        "number": 44191,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "you",
+        "number": 44192,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "all",
+        "number": 44192,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "saw",
+        "number": 44192,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 44197,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "you",
+        "number": 44199,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "all",
+        "number": 44199,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "heard",
+        "number": 44199,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "blind",
+        "number": 44205,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "are",
+        "number": 44206,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "receiving",
+        "number": 44206,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "sight",
+        "number": 44206,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "lame",
+        "number": 44208,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "are",
+        "number": 44209,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "walking",
+        "number": 44209,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "lepers",
+        "number": 44210,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "are",
+        "number": 44211,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "being",
+        "number": 44211,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "cleansed",
+        "number": 44211,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 44212,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "deaf",
+        "number": 44213,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "are",
+        "number": 44214,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "hearing",
+        "number": 44214,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "dead",
+        "number": 44215,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "are",
+        "number": 44216,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "being",
+        "number": 44216,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "raised",
+        "number": 44216,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "poor",
+        "number": 44218,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "are",
+        "number": 44219,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "being",
+        "number": 44219,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "good",
+        "number": 44219,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "message",
+        "number": 44219,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "preached",
+        "number": 44219,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      }
+    ],
+    "expected": [
+      [
+        "leprosy",
+        44210
+      ]
+    ]
+  },
+  {
+    "reference": "LUK 2:52",
+    "rv_lines": [
+      "and¦39654 so \\nd Yeshua¦39656\\nd* continued to grow wiser and¦39662 taller, and¦39665 in¦39660 favour¦39666 with¦39667 both \\nd God¦39668\\nd* and¦39670 the people¦39672.\\x + \\xo 2:52: \\xt 1Sam 2:26; Prv 3:4.\\x*"
+    ],
+    "columns": [
+      {
+        "text": "And",
+        "number": 39654,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "Yaʸsous",
+        "number": 39656,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": [
+          "yaisous",
+          "yasous",
+          "yehoshua",
+          "yeshua",
+          "yesus",
+          "yoshua"
+        ]
+      },
+      {
+        "text": "was",
+        "number": 39657,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "progressing",
+        "number": 39657,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 39659,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "in",
+        "number": 39660,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "wisdom",
+        "number": 39660,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 39662,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "stature",
+        "number": 39663,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 39665,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "favour",
+        "number": 39666,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "with",
+        "number": 39667,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "god",
+        "number": 39668,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 39670,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "people",
+        "number": 39672,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      }
+    ],
+    "expected": [
+      [
+        "wiser",
+        39660
+      ]
+    ]
+  },
+  {
+    "reference": "KI2 2:23",
+    "rv_lines": [
+      "From¦172704 there¦172704 \\add @Elisha\\add* went to Beyt¦172705-El¦172707, and¦172708 as he¦172708 was¦172710 going¦172710 up¦172710 on¦172711 the road¦172711, \\add some\\add* young¦172713 men came¦172714 out¦172714 from¦172715 the¦172717 city¦172717, and¦172718 \\add ≈started\\add* mocking him¦172720, saying¦172721, “\\add ≈Keep moving, baldy. Keep moving, baldy\\add*.”"
+    ],
+    "columns": [
+      {
+        "text": "and",
+        "number": 172703,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "he/it",
+        "number": 172703,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "ascended",
+        "number": 172703,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "from",
+        "number": 172704,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "there",
+        "number": 172704,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "Bēyt-",
+        "number": 172705,
+        "proper": true,
+        "boundary_before": true,
+        "boundary_after": true,
+        "noun": true,
+        "names": [
+          "bet",
+          "beth",
+          "beyt"
+        ]
+      },
+      {
+        "text": "ʼēl",
+        "number": 172707,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 172708,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "he",
+        "number": 172708,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "was",
+        "number": 172710,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "going",
+        "number": 172710,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "up",
+        "number": 172710,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "on",
+        "number": 172711,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "way",
+        "number": 172711,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 172712,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "lads",
+        "number": 172712,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "young",
+        "number": 172713,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "they",
+        "number": 172714,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "came",
+        "number": 172714,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "out",
+        "number": 172714,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "from",
+        "number": 172715,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 172717,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "city",
+        "number": 172717,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 172718,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "they",
+        "number": 172718,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "derided",
+        "number": 172718,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "in",
+        "number": 172720,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "him/it",
+        "number": 172720,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 172721,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "they",
+        "number": 172721,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "said",
+        "number": 172721,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "to",
+        "number": 172722,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "him/it",
+        "number": 172722,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "go",
+        "number": 172723,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "up",
+        "number": 172723,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "Oh",
+        "number": 172724,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "bald",
+        "number": 172724,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "man",
+        "number": 172724,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "go",
+        "number": 172725,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "up",
+        "number": 172725,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "Oh",
+        "number": 172726,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "bald",
+        "number": 172726,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "man",
+        "number": 172726,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      }
+    ],
+    "expected": [
+      [
+        "baldy",
+        172724
+      ],
+      [
+        "baldy",
+        172726
+      ]
+    ]
+  },
+  {
+    "reference": "JDE 1:13",
+    "rv_lines": [
+      "like wild¦155044 waves¦155042 in the¦155046 ocean¦155046 that foam¦155048 in their own shame¦155051 or like \\add unreliable\\add* wandering¦155053 stars¦155052 that are¦155062 already doomed to¦155054 the darkest darkness in the next age¦155061."
+    ],
+    "columns": [
+      {
+        "text": "wild",
+        "number": 155044,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "waves",
+        "number": 155042,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "of",
+        "number": 155046,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 155046,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "sea",
+        "number": 155046,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "foaming",
+        "number": 155048,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "out",
+        "number": 155048,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 155049,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "shame",
+        "number": 155051,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "of",
+        "number": 155050,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "themselves",
+        "number": 155050,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "wandering",
+        "number": 155053,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "stars",
+        "number": 155052,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "to",
+        "number": 155054,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "whom",
+        "number": 155054,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 155055,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "darkness",
+        "number": 155056,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "of",
+        "number": 155058,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 155057,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "darkness",
+        "number": 155058,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "has",
+        "number": 155062,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "been",
+        "number": 155062,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "kept",
+        "number": 155062,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "to",
+        "number": 155059,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 155061,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "age",
+        "number": 155061,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      }
+    ],
+    "expected": [
+      [
+        "darkest",
+        155056
+      ],
+      [
+        "darkness",
+        155058
+      ]
+    ]
+  },
+  {
+    "reference": "REV 9:20",
+    "rv_lines": [
+      "\\add However,\\add* the¦159873 rest¦159874 of¦159875 humankind that¦159877 hadn't been¦159879 killed¦159879 by¦159880 those¦159884 disasters¦159882, didn't¦159886 repent¦159888 of their¦159894 actions¦159891 and didn't¦159896 stop worshipping demons¦159900 and¦159901 idols¦159903 \\add made\\add* of gold and¦159906 silver¦159908 and¦159909 bronze¦159911 and¦159912 stone¦159915 and¦159916 wood—idols that¦159920 can't see¦159922, can't hear¦159926, and can't walk¦159928.\\x + \\xo 9:20: \\xt Psa 115:4-7; 135:15-17; Dan 5:23.\\x*"
+    ],
+    "columns": [
+      {
+        "text": "And",
+        "number": 159872,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 159873,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "rest",
+        "number": 159874,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "of",
+        "number": 159875,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 159875,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "people",
+        "number": 159876,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "who",
+        "number": 159877,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "not",
+        "number": 159878,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "were",
+        "number": 159879,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "killed",
+        "number": 159879,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "off",
+        "number": 159879,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "by",
+        "number": 159880,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 159881,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "plagues",
+        "number": 159882,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "these",
+        "number": 159884,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "not",
+        "number": 159886,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "even",
+        "number": 159886,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "they",
+        "number": 159888,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "repented",
+        "number": 159888,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "of",
+        "number": 159889,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 159890,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "works",
+        "number": 159891,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "of",
+        "number": 159892,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 159892,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "hands",
+        "number": 159893,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "of",
+        "number": 159894,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "them",
+        "number": 159894,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "in",
+        "number": 159895,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "order",
+        "number": 159895,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "that",
+        "number": 159895,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "not",
+        "number": 159896,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "they",
+        "number": 159898,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "will",
+        "number": 159898,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "be",
+        "number": 159898,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "prostrating",
+        "number": 159898,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "before",
+        "number": 159899,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 159899,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "demons",
+        "number": 159900,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 159901,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 159902,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "idols",
+        "number": 159903,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 159904,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "golden",
+        "number": 159905,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 159906,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 159907,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "silver",
+        "number": 159908,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 159909,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 159910,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "bronze",
+        "number": 159911,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 159912,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 159913,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "stone",
+        "number": 159915,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 159916,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 159917,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "wooden",
+        "number": 159919,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "which",
+        "number": 159920,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "neither",
+        "number": 159921,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "to",
+        "number": 159922,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "be",
+        "number": 159922,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "seeing",
+        "number": 159922,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "are",
+        "number": 159923,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "being",
+        "number": 159923,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "able",
+        "number": 159923,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "nor",
+        "number": 159925,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "to",
+        "number": 159926,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "be",
+        "number": 159926,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "hearing",
+        "number": 159926,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "nor",
+        "number": 159927,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "to",
+        "number": 159928,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "be",
+        "number": 159928,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "walking",
+        "number": 159928,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      }
+    ],
+    "expected": [
+      [
+        "gold",
+        159905
+      ],
+      [
+        "wood",
+        159919
+      ]
+    ]
+  },
+  {
+    "reference": "JER 22:19",
+    "rv_lines": [
+      "He'll¦313996 be buried¦313996 \\add ≈just like a¦313995 donkey¦313995 would¦313996 be¦313996\\add*—",
+      "dragged¦313997 away and¦313998 thrown¦313998 \\add somewhere\\add* outside¦313998 Yerushalem's¦314001 gates¦314000."
+    ],
+    "columns": [
+      {
+        "text": "the",
+        "number": 313994,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "burial",
+        "number": 313994,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "of",
+        "number": 313994,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "a",
+        "number": 313995,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "donkey",
+        "number": 313995,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "he",
+        "number": 313996,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "will",
+        "number": 313996,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "be",
+        "number": 313996,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "buried",
+        "number": 313996,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "people",
+        "number": 313997,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "will",
+        "number": 313997,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "drag",
+        "number": 313997,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "him",
+        "number": 313997,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 313998,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "people",
+        "number": 313998,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "will",
+        "number": 313998,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "throw",
+        "number": 313998,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "him",
+        "number": 313998,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "out",
+        "number": 313998,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "from",
+        "number": 313999,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "beyond",
+        "number": 313999,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "to",
+        "number": 314000,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 314000,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "gates",
+        "number": 314000,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "of",
+        "number": 314000,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "Yərūshālam/Jerusalem",
+        "number": 314001,
+        "proper": true,
+        "boundary_before": true,
+        "boundary_after": true,
+        "noun": true,
+        "names": [
+          "hierousalaim",
+          "jerusalem",
+          "yerusalem",
+          "yerusalemites",
+          "yerushalem",
+          "yərushalam"
+        ]
+      }
+    ],
+    "expected": [
+      [
+        "buried",
+        313996
+      ]
+    ]
+  },
+  {
+    "reference": "PRO 14:7",
+    "rv_lines": [
+      "Go¦272934 away from¦272935 where a¦272937 fool¦272937 is,",
+      "→\\add ≈otherwise\\add* you¦272940 won't¦272938 find knowledgable¦272943 lips¦272941."
+    ],
+    "columns": [
+      {
+        "text": "Go",
+        "number": 272934,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "from",
+        "number": 272935,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "before",
+        "number": 272935,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "to",
+        "number": 272936,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "a",
+        "number": 272936,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "person",
+        "number": 272936,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "a",
+        "number": 272937,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "fool",
+        "number": 272937,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 272938,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "not",
+        "number": 272938,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "you",
+        "number": 272940,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "have",
+        "number": 272940,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "known",
+        "number": 272940,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "lips",
+        "number": 272941,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "of",
+        "number": 272941,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "knowledge",
+        "number": 272943,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      }
+    ],
+    "expected": [
+      [
+        "knowledgable",
+        272943
+      ]
+    ]
+  },
+  {
+    "reference": "ECC 10:10",
+    "rv_lines": [
+      "If¦281534 \\add &your¦281537\\add* iron¦281537 axe¦281537 head gets blunt¦281536 and¦281538 \\add the owner\\add* doesn't sharpen¦281542 it,",
+      "then¦281543 he has to use lots of strength¦281543,",
+      "\\add ≈so¦281545 use wisdom¦281549 if you want to¦281546 succeed¦281546\\add*."
+    ],
+    "columns": [
+      {
+        "text": "If",
+        "number": 281534,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 281537,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "iron",
+        "number": 281537,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "axe",
+        "number": 281537,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "it",
+        "number": 281536,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "is",
+        "number": 281536,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "blunt",
+        "number": 281536,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 281538,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "he",
+        "number": 281538,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "not",
+        "number": 281539,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "faces",
+        "number": 281541,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "he",
+        "number": 281542,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "has",
+        "number": 281542,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "sharpened",
+        "number": 281542,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 281543,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "strengths",
+        "number": 281543,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "he",
+        "number": 281544,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "will",
+        "number": 281544,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "make",
+        "number": 281544,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "strong",
+        "number": 281544,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "and",
+        "number": 281545,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "is",
+        "number": 281545,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "an",
+        "number": 281545,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "advantage",
+        "number": 281545,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "of",
+        "number": 281545,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "to",
+        "number": 281546,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "give",
+        "number": 281546,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "success",
+        "number": 281546,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "wisdom",
+        "number": 281549,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      }
+    ],
+    "expected": [
+      [
+        "strength",
+        281543
+      ]
+    ]
+  },
+  {
+    "reference": "DEU 22:20",
+    "rv_lines": [
+      "\\add ≈However,\\add* if¦92635 \\add @the¦92638 accusation¦92638\\add* was¦92638 true and the young woman¦92645 \\add ≈hadn't been¦92643 a virgin¦92644\\add*,"
+    ],
+    "columns": [
+      {
+        "text": "and",
+        "number": 92635,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "if",
+        "number": 92635,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "truth",
+        "number": 92637,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 92639,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "message",
+        "number": 92639,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "the",
+        "number": 92640,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "this",
+        "number": 92640,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "it",
+        "number": 92638,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "was",
+        "number": 92638,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "not",
+        "number": 92641,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": true,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "virginities",
+        "number": 92644,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": true,
+        "noun": true,
+        "names": []
+      },
+      {
+        "text": "they",
+        "number": 92643,
+        "proper": false,
+        "boundary_before": true,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "were",
+        "number": 92643,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "found",
+        "number": 92643,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": false,
+        "names": []
+      },
+      {
+        "text": "mmm",
+        "number": 92645,
+        "proper": false,
+        "boundary_before": false,
+        "boundary_after": false,
+        "noun": true,
+        "names": []
+      }
+    ],
+    "expected": [
+      [
+        "been",
+        92643
+      ]
+    ],
+    "expected_fresh": [
+      [
+        "been",
+        null
+      ]
+    ],
+    "note": "Fresh alignment now abstains on the reordered auxiliary rather than borrowing the exact was belonging to an earlier occurrence. Existing reviewed links remain immutable."
+  }
+]
